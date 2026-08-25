@@ -4,7 +4,7 @@ FileSelectorResult是ArkWeb组件中用于通知Web组件文件选择结果的�
 
 **起始版本：** 9
 
-<!--Device-unnamed-declare class FileSelectorResult--><!--Device-unnamed-declare class FileSelectorResult-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -23,9 +23,9 @@ FileSelectorResult的构造函数。
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-FileSelectorResult-constructor()--><!--Device-FileSelectorResult-constructor()-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -39,15 +39,14 @@ handleFileList(fileList: Array<string>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-FileSelectorResult-handleFileList(fileList: Array<string>): void--><!--Device-FileSelectorResult-handleFileList(fileList: Array<string>): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| fileList | Array&lt;string&gt; | 是 | 文件URI字符串数组，用于向Web组件传递用户选择的文件路径。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [fileList](../../apis-core-file-kit/arkts-apis/arkts-corefile-system-file-filelistresponse-depr-i.md) | Array & lt;string & gt; | 是 |

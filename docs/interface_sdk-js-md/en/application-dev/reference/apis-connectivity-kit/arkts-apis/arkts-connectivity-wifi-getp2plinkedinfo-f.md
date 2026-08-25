@@ -16,21 +16,21 @@ Obtains information about a P2P connection.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getP2pLinkedInfo](arkts-connectivity-wifimanager-getp2plinkedinfo-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
-<!--Device-wifi-function getP2pLinkedInfo(): Promise<WifiP2pLinkedInfo>--><!--Device-wifi-function getP2pLinkedInfo(): Promise<WifiP2pLinkedInfo>-End-->
-
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;WifiP2pLinkedInfo&gt; | Returns the P2P connection information. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;WifiP2pLinkedInfo & gt; |
 
 **Examples**
 
@@ -61,23 +61,22 @@ Obtains information about a P2P connection.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getP2pLinkedInfo](arkts-connectivity-wifimanager-getp2plinkedinfo-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
-<!--Device-wifi-function getP2pLinkedInfo(callback: AsyncCallback<WifiP2pLinkedInfo>): void--><!--Device-wifi-function getP2pLinkedInfo(callback: AsyncCallback<WifiP2pLinkedInfo>): void-End-->
-
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pLinkedInfo&gt; | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pLinkedInfo&gt; | Yes |
 
 **Examples**
 
 See [getP2pLinkedInfo](#getp2plinkedinfo)
-

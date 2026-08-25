@@ -4,7 +4,7 @@ Describes the letter spacing style.
 
 **Since:** 12
 
-<!--Device-unnamed-declare class LetterSpacingStyle--><!--Device-unnamed-declare class LetterSpacingStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,19 +23,19 @@ A constructor used to create a text letter spacing style.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-LetterSpacingStyle-constructor(value: LengthMetrics)--><!--Device-LetterSpacingStyle-constructor(value: LengthMetrics)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | LengthMetrics | Yes | Letter spacing options. This API does not work if **unit** of **LengthMetrics** is percent. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes |
 
 ## letterSpacing
 
@@ -49,11 +49,10 @@ Letter spacing.Unit: vp
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-LetterSpacingStyle-readonly letterSpacing: number--><!--Device-LetterSpacingStyle-readonly letterSpacing: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

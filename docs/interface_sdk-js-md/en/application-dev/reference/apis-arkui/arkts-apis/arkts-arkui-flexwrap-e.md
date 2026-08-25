@@ -4,7 +4,7 @@ FlexWrap enumeration description
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum FlexWrap--><!--Device-unnamed-declare enum FlexWrap-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ The Flex container has a single row/column layout of elements, and children are 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-FlexWrap-NoWrap--><!--Device-FlexWrap-NoWrap-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ The elements of the Flex container are arranged in multiple rows or columns, and
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-FlexWrap-Wrap--><!--Device-FlexWrap-Wrap-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ The elements of the Flex container are arranged in reverse multiple rows/columns
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-FlexWrap-WrapReverse--><!--Device-FlexWrap-WrapReverse-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

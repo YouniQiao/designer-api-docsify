@@ -4,13 +4,12 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Environment](arkts-arkui-environment-environment-c.md) | Defines the Environment interface. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Environment](arkts-arkui-environment-environment-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [EnvPropsOptions](arkts-arkui-environment-envpropsoptions-i.md) | Defining the EnvPropsOptions interface |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [EnvPropsOptions](arkts-arkui-environment-envpropsoptions-i.md) |

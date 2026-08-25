@@ -1,12 +1,10 @@
 # DragStatus
 
-Defines the Drag Status.@enum { number }
+Describes the dragging start and end states.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-dragController-const enum DragStatus--><!--Device-dragController-const enum DragStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,15 +14,15 @@ Defines the Drag Status.@enum { number }
 STARTED = 0
 ```
 
-Drag has started.
+Dragging is started.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragStatus-STARTED = 0--><!--Device-DragStatus-STARTED = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,15 +32,14 @@ Drag has started.
 ENDED = 1
 ```
 
-Drag has ended.
+Dragging ends.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragStatus-ENDED = 1--><!--Device-DragStatus-ENDED = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

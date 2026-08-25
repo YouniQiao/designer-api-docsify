@@ -2,9 +2,9 @@
 
 Parameters for target searching.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-mechanicManager-export interface SearchParams--><!--Device-mechanicManager-export interface SearchParams-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -26,11 +26,10 @@ Search direction.
 
 **Type:** [SearchDirection](arkts-mechanic-mechanicmanager-searchdirection-e-sys.md)
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-SearchParams-direction: SearchDirection--><!--Device-SearchParams-direction: SearchDirection-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
-

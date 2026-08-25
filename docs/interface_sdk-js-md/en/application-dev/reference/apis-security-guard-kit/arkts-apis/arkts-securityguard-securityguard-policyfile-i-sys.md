@@ -4,7 +4,7 @@ Provides policy file information.@interface PolicyFile
 
 **Since:** 12
 
-<!--Device-securityGuard-interface PolicyFile--><!--Device-securityGuard-interface PolicyFile-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -28,7 +28,7 @@ The policy file descriptor.
 
 **Since:** 12
 
-<!--Device-PolicyFile-fd: number--><!--Device-PolicyFile-fd: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -46,9 +46,8 @@ The policy file name.
 
 **Since:** 12
 
-<!--Device-PolicyFile-name: string--><!--Device-PolicyFile-name: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
-

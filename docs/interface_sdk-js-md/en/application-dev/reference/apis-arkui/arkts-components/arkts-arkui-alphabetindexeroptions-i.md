@@ -10,7 +10,7 @@ Defines the options of the **AlphabetIndexer** component.
 
 **Since:** 18
 
-<!--Device-unnamed-interface AlphabetIndexerOptions--><!--Device-unnamed-interface AlphabetIndexerOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,9 +31,9 @@ Array of index items.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-AlphabetIndexerOptions-arrayValue: Array<string>--><!--Device-AlphabetIndexerOptions-arrayValue: Array<string>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,9 +49,8 @@ Index of the initial selected item. If the value is out of range, the default va
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-AlphabetIndexerOptions-selected: number--><!--Device-AlphabetIndexerOptions-selected: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

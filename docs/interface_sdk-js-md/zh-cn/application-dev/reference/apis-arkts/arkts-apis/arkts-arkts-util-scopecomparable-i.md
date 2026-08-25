@@ -4,7 +4,7 @@
 
 **起始版本：** 7
 
-<!--Device-util-interface ScopeComparable--><!--Device-util-interface ScopeComparable-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -24,23 +24,23 @@ compareTo(other: ScopeComparable): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
-<!--Device-ScopeComparable-compareTo(other: ScopeComparable): boolean--><!--Device-ScopeComparable-compareTo(other: ScopeComparable): boolean-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [ScopeComparable](arkts-arkts-util-scopecomparable-i.md) | 是 | 与当前值进行比较的另一个值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [ScopeComparable](arkts-arkts-util-scopecomparable-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 检查结果。如果当前值大于等于输入值，则返回 **true**；否则返回 **false**。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -99,4 +99,3 @@ class Temperature implements util.ScopeComparable<Temperature> {
   }
 }
 ```
-

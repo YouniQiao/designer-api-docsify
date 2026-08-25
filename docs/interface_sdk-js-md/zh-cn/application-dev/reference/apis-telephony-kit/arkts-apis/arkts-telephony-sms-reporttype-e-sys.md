@@ -2,9 +2,9 @@
 
 报告类型。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-sms-export enum ReportType--><!--Device-sms-export enum ReportType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -18,9 +18,9 @@ MMS_YES = 128
 
 YES
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-ReportType-MMS_YES = 128--><!--Device-ReportType-MMS_YES = 128-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -34,11 +34,10 @@ MMS_NO = 129
 
 NO
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-ReportType-MMS_NO = 129--><!--Device-ReportType-MMS_NO = 129-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
-

@@ -13,11 +13,11 @@ Defines the transition effect by setting parameters in the struct.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 10
 
 **Substitutes:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
-
-<!--Device-unnamed-declare interface TransitionOptions--><!--Device-unnamed-declare interface TransitionOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -39,11 +39,11 @@ Opacity of the component during transition, which is the value of the start poin
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 10
 
 **Substitutes:** [opacity](arkts-arkui-transitioneffect-c.md#opacity)
-
-<!--Device-TransitionOptions-opacity?: number--><!--Device-TransitionOptions-opacity?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,11 +60,11 @@ Rotation of the component during transition, which is the value of the start poi
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 10
 
 **Substitutes:** [rotate](arkts-arkui-transitioneffect-c.md#rotate)
-
-<!--Device-TransitionOptions-rotate?: RotateOptions--><!--Device-TransitionOptions-rotate?: RotateOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,11 +82,11 @@ Scaling of the component during transition, which is the value of the start poin
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 10
 
 **Substitutes:** [scale](arkts-arkui-transitioneffect-c.md#scale)
-
-<!--Device-TransitionOptions-scale?: ScaleOptions--><!--Device-TransitionOptions-scale?: ScaleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -105,11 +105,11 @@ Translation of the component during transition, which is the value of the start 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 10
 
 **Substitutes:** [translate](arkts-arkui-transitioneffect-c.md#translate)
-
-<!--Device-TransitionOptions-translate?: TranslateOptions--><!--Device-TransitionOptions-translate?: TranslateOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,11 +126,10 @@ Transition type.Default value: **TransitionType.All**
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 10
 
 **Substitutes:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
-<!--Device-TransitionOptions-type?: TransitionType--><!--Device-TransitionOptions-type?: TransitionType-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

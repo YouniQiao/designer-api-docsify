@@ -12,11 +12,11 @@ Construct the ability component. Called when the ability component is used.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** UIExtensionComponentInterface
-
-<!--Device-AbilityComponentInterface-(value: { want: import('../api/@ohos.app.ability.Want').default }): AbilityComponentAttribute--><!--Device-AbilityComponentInterface-(value: { want: import('../api/@ohos.app.ability.Want').default }): AbilityComponentAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,9 +24,8 @@ Construct the ability component. Called when the ability component is used.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | { want: import('../api/@ohos.app.ability.Want').default } | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | { want: import('../api/@ohos.app.ability.Want').default } | Yes |
 
 ## Summary
-

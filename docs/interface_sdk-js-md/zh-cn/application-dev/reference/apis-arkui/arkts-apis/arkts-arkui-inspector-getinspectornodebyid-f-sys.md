@@ -15,11 +15,11 @@ declare function getInspectorNodeById(id: number): object
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** getInspectorByKey
-
-<!--Device-unnamed-declare function getInspectorNodeById(id: number): object--><!--Device-unnamed-declare function getInspectorNodeById(id: number): object-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,13 +27,12 @@ declare function getInspectorNodeById(id: number): object
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| id | number | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| id | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| object |  |
-
+| 类型 |
+| --- |
+| object |

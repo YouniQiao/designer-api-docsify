@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-advertising-interface ServiceData--><!--Device-advertising-interface ServiceData-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -26,9 +26,9 @@ serviceData: ArrayBuffer
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-ServiceData-serviceData: ArrayBuffer--><!--Device-ServiceData-serviceData: ArrayBuffer-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -44,9 +44,8 @@ serviceUuid: string
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ServiceData-serviceUuid: string--><!--Device-ServiceData-serviceUuid: string-End-->
-
 **系统能力：** SystemCapability.Communication.NearLink.Base
-

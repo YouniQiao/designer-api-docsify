@@ -16,25 +16,25 @@ function getEnvironmentVar(name: string): string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getEnvironmentVar](arkts-arkts-process-processmanager-c.md#getenvironmentvar)
-
-<!--Device-process-function getEnvironmentVar(name: string): string--><!--Device-process-function getEnvironmentVar(name: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 环境变量名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回环境变量名对应的值。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -48,4 +48,3 @@ let processManager = new process.ProcessManager();
 // 获取PATH环境变量的值
 let pres = processManager.getEnvironmentVar("PATH");
 ```
-

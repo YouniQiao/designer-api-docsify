@@ -1,8 +1,6 @@
 # WeakMap
 
-**Since:** -1
-
-<!--Device-unnamed-interface WeakMap--><!--Device-unnamed-interface WeakMap-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,60 +15,54 @@ delete(key: K): boolean
 
 Removes the specified element from the WeakMap.
 
-**Since:** -1
-
-<!--Device-WeakMap-delete(key: K): boolean--><!--Device-WeakMap-delete(key: K): boolean-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | K | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## get
 
 ```TypeScript
 get(key: K): V | undefined
 ```
 
-**Since:** -1
-
-<!--Device-WeakMap-get(key: K): V | undefined--><!--Device-WeakMap-get(key: K): V | undefined-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | K | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## has
 
 ```TypeScript
 has(key: K): boolean
 ```
 
-**Since:** -1
-
-<!--Device-WeakMap-has(key: K): boolean--><!--Device-WeakMap-has(key: K): boolean-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | K | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## set
 
 ```TypeScript
@@ -79,18 +71,16 @@ set(key: K, value: V): this
 
 Adds a new element with a specified key and value.
 
-**Since:** -1
-
-<!--Device-WeakMap-set(key: K, value: V): this--><!--Device-WeakMap-set(key: K, value: V): this-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | K | Yes |  |
-| value | V | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
+| value | V | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

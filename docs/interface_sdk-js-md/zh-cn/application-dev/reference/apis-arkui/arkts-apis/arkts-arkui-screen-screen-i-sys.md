@@ -2,9 +2,9 @@
 
 [物理屏](../../../displaymanager/display-terminology.md#物理屏)屏幕实例。下列API示例中都需先使用[getAllScreens()](arkts-arkui-screen-getallscreens-f-sys.md)、 [createVirtualScreen()](arkts-arkui-screen-createvirtualscreen-f-sys.md) 中的任一方法获取到Screen实例，再通过此实例调用对应方法。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-screen-interface Screen--><!--Device-screen-interface Screen-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -18,15 +18,21 @@ import { screen } from '@kit.ArkUI';
 
 ## setDensityDpi
 
+ArkTS-Dyn:
+```TypeScript
+setDensityDpi(densityDpi: number, callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setDensityDpi(densityDpi: double, callback: AsyncCallback<void>): void
 ```
 
 设置屏幕的像素密度，使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Screen-setDensityDpi(densityDpi: double, callback: AsyncCallback<void>): void--><!--Device-Screen-setDensityDpi(densityDpi: double, callback: AsyncCallback<void>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -34,18 +40,18 @@ setDensityDpi(densityDpi: double, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| densityDpi | double | 是 | 像素密度。支持的输入范围为[80, 640]，该参数仅支持整数输入。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置屏幕的像素密度成功，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| densityDpi | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
 **示例**
 
@@ -191,15 +197,21 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 
 ## setDensityDpi
 
+ArkTS-Dyn:
+```TypeScript
+setDensityDpi(densityDpi: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 setDensityDpi(densityDpi: double): Promise<void>
 ```
 
 设置屏幕的像素密度，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Screen-setDensityDpi(densityDpi: double): Promise<void>--><!--Device-Screen-setDensityDpi(densityDpi: double): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -207,23 +219,23 @@ setDensityDpi(densityDpi: double): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| densityDpi | double | 是 | 像素密度。支持的输入范围为[80, 640]，该参数仅支持整数输入。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| densityDpi | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
 **示例**
 
@@ -237,9 +249,9 @@ setOrientation(orientation: Orientation, callback: AsyncCallback<void>): void
 
 设置屏幕方向，使用callback异步回调。当设置的方向符合[应用旋转策略](../../../quick-start/module-configuration-file.md#abilities标签)（可通过配置 module.json5文件中abilities标签的orientation字段设置应用旋转策略）时，屏幕方向才会发生改变；当设置方向不符合应用旋转策略时，屏幕方向不会发生变化，且接口不会抛异常。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Screen-setOrientation(orientation: Orientation, callback: AsyncCallback<void>): void--><!--Device-Screen-setOrientation(orientation: Orientation, callback: AsyncCallback<void>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -247,18 +259,18 @@ setOrientation(orientation: Orientation, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| orientation | Orientation | 是 | 屏幕方向。orientation值必须来自Orientation枚举方向。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置屏幕方向成功，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [orientation](#orientation) | [Orientation](#orientation) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
 **示例**
 
@@ -461,9 +473,9 @@ setOrientation(orientation: Orientation): Promise<void>
 
 设置屏幕方向，使用Promise异步回调。当设置的方向符合[应用旋转策略](../../../quick-start/module-configuration-file.md#abilities标签)（可通过配置 module.json5文件中abilities标签的orientation字段设置应用旋转策略）时，屏幕方向才会发生改变；当设置方向不符合应用旋转策略时，屏幕方向不会发生变化，且接口不会抛异常。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Screen-setOrientation(orientation: Orientation): Promise<void>--><!--Device-Screen-setOrientation(orientation: Orientation): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -471,23 +483,23 @@ setOrientation(orientation: Orientation): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| orientation | Orientation | 是 | 屏幕方向。orientation值必须来自Orientation枚举方向。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [orientation](#orientation) | [Orientation](#orientation) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
 **示例**
 
@@ -503,9 +515,9 @@ setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Screen-setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions): Promise<void>--><!--Device-Screen-setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions): Promise<void>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -513,24 +525,24 @@ setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| orientation | Orientation | 是 | 屏幕方向。方向值必须来自方向枚举值。 |
-| orientationOptions | [OrientationOptions](arkts-arkui-screen-orientationoptions-i-sys.md) | 否 | Options of setting orientation. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [orientation](#orientation) | [Orientation](#orientation) | 是 |
+| orientationOptions | [OrientationOptions](arkts-arkui-screen-orientationoptions-i-sys.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause: The screen is not a wired external display in extended mode. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
 **示例**
 
@@ -538,15 +550,21 @@ setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions
 
 ## setScreenActiveMode
 
+ArkTS-Dyn:
+```TypeScript
+setScreenActiveMode(modeIndex: number, callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setScreenActiveMode(modeIndex: long, callback: AsyncCallback<void>): void
 ```
 
 设置屏幕当前显示模式，使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Screen-setScreenActiveMode(modeIndex: long, callback: AsyncCallback<void>): void--><!--Device-Screen-setScreenActiveMode(modeIndex: long, callback: AsyncCallback<void>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -554,18 +572,18 @@ setScreenActiveMode(modeIndex: long, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| modeIndex | long | 是 | 模式索引。模式索引的当前值和值的范围，会根据屏幕当前分辨率、刷新率和设备硬件差异产生变化，该参数仅支持整数输入。索引为screen中 [ScreenModeInfo](arkts-arkui-screen-screenmodeinfo-i-sys.md)属性的模式id。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置屏幕当前显示模式成功，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| modeIndex | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
 **示例**
 
@@ -711,15 +729,21 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 
 ## setScreenActiveMode
 
+ArkTS-Dyn:
+```TypeScript
+setScreenActiveMode(modeIndex: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 setScreenActiveMode(modeIndex: long): Promise<void>
 ```
 
 设置屏幕当前显示模式，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Screen-setScreenActiveMode(modeIndex: long): Promise<void>--><!--Device-Screen-setScreenActiveMode(modeIndex: long): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -727,23 +751,23 @@ setScreenActiveMode(modeIndex: long): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| modeIndex | long | 是 | 模式索引。模式索引的当前值和值的范围，会根据屏幕当前分辨率、刷新率和设备硬件差异产生变化，该参数仅支持整数输入。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| modeIndex | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
 **示例**
 
@@ -757,11 +781,11 @@ readonly activeModeIndex: long
 
 当前屏幕所处模式索引。模式索引的当前值和值的范围，会根据屏幕当前分辨率、刷新率和设备硬件差异产生变化。该参数为整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Screen-readonly activeModeIndex: long--><!--Device-Screen-readonly activeModeIndex: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -775,11 +799,11 @@ readonly id: long
 
 屏幕的id，该参数应为整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Screen-readonly id: long--><!--Device-Screen-readonly id: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -795,9 +819,9 @@ readonly orientation: Orientation
 
 **类型：** Orientation
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Screen-readonly orientation: Orientation--><!--Device-Screen-readonly orientation: Orientation-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -811,11 +835,11 @@ readonly parent: long
 
 屏幕所属群组的id，该参数为整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Screen-readonly parent: long--><!--Device-Screen-readonly parent: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -829,11 +853,11 @@ readonly rsId: long
 
 屏幕端口的id，该参数为整数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-Screen-readonly rsId: long--><!--Device-Screen-readonly rsId: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -851,9 +875,9 @@ readonly screenType?: ScreenType
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Screen-readonly screenType?: ScreenType--><!--Device-Screen-readonly screenType?: ScreenType-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -869,9 +893,9 @@ readonly serialNumber?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-Screen-readonly serialNumber?: string--><!--Device-Screen-readonly serialNumber?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -887,9 +911,9 @@ readonly sourceMode: ScreenSourceMode
 
 **类型：** [ScreenSourceMode](arkts-arkui-screen-screensourcemode-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Screen-readonly sourceMode: ScreenSourceMode--><!--Device-Screen-readonly sourceMode: ScreenSourceMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -905,11 +929,10 @@ readonly supportedModeInfo: Array<ScreenModeInfo>
 
 **类型：** Array&lt;[ScreenModeInfo](arkts-arkui-screen-screenmodeinfo-i-sys.md)&gt;
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Screen-readonly supportedModeInfo: Array<ScreenModeInfo>--><!--Device-Screen-readonly supportedModeInfo: Array<ScreenModeInfo>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
-

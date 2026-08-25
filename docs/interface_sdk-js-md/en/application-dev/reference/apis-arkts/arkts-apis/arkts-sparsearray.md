@@ -9,7 +9,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [SparseArray](arkts-arkts-sparsearray-c.md) | SparseArray is a sparse array implementation that uses Map as the underlying storage. It only stores non-undefined values, making it memory-efficient for arrays with many empty slots. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SparseArray](arkts-arkts-sparsearray-c.md) |

@@ -16,17 +16,15 @@ function technology(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-batteryInfo-function technology(): string--><!--Device-batteryInfo-function technology(): string-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回当前设备电池的技术型号。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -35,4 +33,3 @@ function technology(): string
 let result = batteryInfo.technology();
 console.info("The result is: " + result);
 ```
-

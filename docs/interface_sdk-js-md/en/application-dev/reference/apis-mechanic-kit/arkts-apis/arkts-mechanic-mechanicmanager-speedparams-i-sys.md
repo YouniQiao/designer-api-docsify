@@ -4,7 +4,7 @@ Parameters for moving or turning at a speed.
 
 **Since:** 26.0.0
 
-<!--Device-mechanicManager-export interface SpeedParams--><!--Device-mechanicManager-export interface SpeedParams-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -24,11 +24,11 @@ angle: double
 
 Turning angle, unit degree.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 
-<!--Device-SpeedParams-angle: double--><!--Device-SpeedParams-angle: double-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -46,7 +46,7 @@ Movement mode.
 
 **Since:** 26.0.0
 
-<!--Device-SpeedParams-mode?: MarchingMode--><!--Device-SpeedParams-mode?: MarchingMode-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -60,13 +60,12 @@ speed: int
 
 Turning or moving speed, unit cm. The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
-<!--Device-SpeedParams-speed: int--><!--Device-SpeedParams-speed: int-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
-

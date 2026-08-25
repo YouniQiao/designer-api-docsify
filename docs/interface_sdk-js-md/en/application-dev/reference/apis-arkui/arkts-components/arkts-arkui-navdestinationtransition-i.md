@@ -4,7 +4,7 @@ Defines a custom transition animation for the **NavDestination** component.
 
 **Since:** 15
 
-<!--Device-unnamed-declare interface NavDestinationTransition--><!--Device-unnamed-declare interface NavDestinationTransition-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Curve type of the animation.Default value: Curve.EaseInOut](ts-appendix-enums.md
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-NavDestinationTransition-curve?: Curve--><!--Device-NavDestinationTransition-curve?: Curve-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ Delay of the transition animation.Default value: **0** (in milliseconds)
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-NavDestinationTransition-delay?: number--><!--Device-NavDestinationTransition-delay?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,11 +65,11 @@ Duration of the transition animation.Default value: **1000** (in milliseconds)
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-NavDestinationTransition-duration?: number--><!--Device-NavDestinationTransition-duration?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,11 +85,11 @@ Closure function specifying the transition animation. The system generates the c
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-NavDestinationTransition-event: Callback<void>--><!--Device-NavDestinationTransition-event: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -105,11 +105,10 @@ Callback triggered when the transition animation ends.
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
-<!--Device-NavDestinationTransition-onTransitionEnd?: Callback<void>--><!--Device-NavDestinationTransition-onTransitionEnd?: Callback<void>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

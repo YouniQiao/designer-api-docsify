@@ -1,0 +1,84 @@
+# RichEditorImageSpanStyle
+
+图片样式。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## layoutStyle
+
+```TypeScript
+layoutStyle?: RichEditorLayoutStyle
+```
+
+图片布局样式。默认值：{"borderRadius":"","margin":""}
+
+**类型：** [RichEditorLayoutStyle](arkts-arkui-richeditor-richeditorlayoutstyle-i.md)
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## objectFit
+
+```TypeScript
+objectFit?: ImageFit
+```
+
+图片缩放类型。默认值：ImageFit.Cover。
+
+**类型：** [ImageFit](arkts-arkui-imagefit-e.md)
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## size
+
+```TypeScript
+size?: [
+        Dimension,
+        Dimension
+    ]
+```
+
+图片宽度和高度，默认单位为vp。默认值：与objectFit的值相关，不同的objectFit值有不同的默认尺寸。objectFit的值为Cover时， 图片高度为组件高度减去组件上下内边距，宽度为组件宽度减去组件左右内边距。不支持以Percentage形式设置。
+
+**类型：** [         Dimension,         Dimension     ]
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## verticalAlign
+
+```TypeScript
+verticalAlign?: ImageSpanAlignment
+```
+
+图片垂直对齐方式。默认值：ImageSpanAlignment.BOTTOM
+
+**类型：** [ImageSpanAlignment](arkts-arkui-imagespanalignment-e.md)
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full

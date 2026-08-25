@@ -4,7 +4,7 @@ CommonMethod.
 
 **起始版本：** 11
 
-<!--Device-unnamed-declare class CommonMethod--><!--Device-unnamed-declare class CommonMethod-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,26 +23,26 @@ advancedBlendMode(effect: BlendMode | Blender, type?: BlendApplyType): T
 
 **起始版本：** 13
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **卡片能力：** 从API版本13开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-CommonMethod-advancedBlendMode(effect: BlendMode | Blender, type?: BlendApplyType): T--><!--Device-CommonMethod-advancedBlendMode(effect: BlendMode | Blender, type?: BlendApplyType): T-End-->
 
 **系统接口：** 此接口为系统接口。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| effect | [BlendMode](arkts-arkui-blendmode-e.md) \| [Blender](arkts-arkui-blender-t-sys.md) | 是 | 入参类型为BlendMode时表示混合模式。<br/>默认值：BlendMode.NONE <br/>入参类型为Blender时表示混合器类型，用于描 述混合效果。<br/>需要使用uiEffect模块中的方法创建Blender实例。例如： uiEffect.createBrightnessBlender。 使用自定义object作为入参不会生效。 |
-| type | [BlendApplyType](arkts-arkui-blendapplytype-e.md) | 否 | blendMode实现方式是否离屏。<br/>默认值：BlendApplyType.FAST<br/>**说明：**<br/>1. 设置为 BlendApplyType.FAST，不离屏。<br/>2. 设置为BlendApplyType.OFFSCREEN，会创建当前组件大小的离屏画布，再将当前组件（含子组件）的内容绘制到离屏画布上，再用指定的混合模式与下方 画布已有内容进行混合。<br/>3. 不离屏情况下对文字类组件中emoji表情不生效。<br/>4. 相比BlendApplyType.OFFSCREEN，设置为 BlendApplyType.OFFSCREEN_WITH_BACKGROUND，系统在创建与当前组件大小一致的离屏画布时，会先复制一份带有背景的画布作为初始化底色（BlendApplyType.OFFSCREEN类型的画 布初始为透明背景），随后在此基础上进行混合操作。两者在其他功能特性上保持一致。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| effect | [BlendMode](arkts-arkui-blendmode-e.md) \| [Blender](arkts-arkui-blender-t-sys.md) | 是 |
+| type | [BlendApplyType](arkts-arkui-blendapplytype-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 返回当前组件。 |
+| 类型 |
+| --- |
+| T |
 
 ## constructor
 
@@ -54,9 +54,9 @@ constructor.
 
 **起始版本：** 9
 
-**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-CommonMethod-constructor()--><!--Device-CommonMethod-constructor()-End-->
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -91,23 +91,23 @@ edgeLight(params: EdgeLightParams | undefined): T
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-CommonMethod-edgeLight(params: EdgeLightParams | undefined): T--><!--Device-CommonMethod-edgeLight(params: EdgeLightParams | undefined): T-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统接口：** 此接口为系统接口。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| params | [EdgeLightParams](arkts-arkui-edgelightparams-i-sys.md) \| undefined | 是 | 定义边缘流光效果的位置、长度、强度、颜色和厚度。<br/>当params的值为undefined时，移除边缘流光效果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| params | [EdgeLightParams](arkts-arkui-edgelightparams-i-sys.md) \| undefined | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 返回当前组件。 |
+| 类型 |
+| --- |
+| T |
 
 ## excludeFromRenderGroup
 
@@ -127,23 +127,23 @@ excludeFromRenderGroup(exclude: boolean | undefined): T
 
 **起始版本：** 22
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
-<!--Device-CommonMethod-excludeFromRenderGroup(exclude: boolean | undefined): T--><!--Device-CommonMethod-excludeFromRenderGroup(exclude: boolean | undefined): T-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统接口：** 此接口为系统接口。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| exclude | boolean \| undefined | 是 | 设置当前组件及其子组件是否从祖先组件的节点组中剔除。<br/>true表示当前组件及其子组件从祖先组件的节点组中剔除，不属于祖先组件的节点组； false表示当前组件及其子组件归属于祖先组件的节点组。<br/>当exclude的值为undefined时，按false处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| exclude | boolean \| undefined | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 返回当前组件。 |
+| 类型 |
+| --- |
+| T |
 
 ## spatialEffect
 
@@ -155,11 +155,11 @@ spatialEffect(params: SpatialEffectParams | undefined): T
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CommonMethod-spatialEffect(params: SpatialEffectParams | undefined): T--><!--Device-CommonMethod-spatialEffect(params: SpatialEffectParams | undefined): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -167,15 +167,47 @@ spatialEffect(params: SpatialEffectParams | undefined): T
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| params | [SpatialEffectParams](arkts-arkui-spatialeffectparams-i-sys.md) \| undefined | 是 | 空间效果参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| params | [SpatialEffectParams](arkts-arkui-spatialeffectparams-i-sys.md) \| undefined | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T |  |
+| 类型 |
+| --- |
+| T |
+
+## systemMaterial
+
+```TypeScript
+systemMaterial(material: SystemUiMaterial | undefined): T
+```
+
+Set system-styled materials for the component. The material effect behaves differently on devices with different level of computing powers. On devices with lower computing power, it affects attributes such as the backgroundColor, borderWidth, borderColor, shadow. On devices with higher computing power, it adds a filter effect at the system material layer, which can produce an effect similar to glass.
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| material | [SystemUiMaterial](arkts-arkui-systemuimaterial-t-sys.md) \| undefined | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| T |
 
 ## useUnionEffect
 
@@ -187,9 +219,9 @@ useUnionEffect(value: boolean | undefined): T
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
-<!--Device-CommonMethod-useUnionEffect(value: boolean | undefined): T--><!--Device-CommonMethod-useUnionEffect(value: boolean | undefined): T-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -197,15 +229,15 @@ useUnionEffect(value: boolean | undefined): T
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean \| undefined | 是 | Whether the component participates in the fusion effect of the ancestor component **UnionEffectContainer**.<br>The value **true** means that the component participates in the fusion effect of the ancestor component **UnionEffectContainer**, and **false** means the opposite. <br>Default value: **false**. Undefined means to default value. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | boolean \| undefined | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | return the component attribute. |
+| 类型 |
+| --- |
+| T |
 
 ## useUnionEffect
 
@@ -217,9 +249,9 @@ useUnionEffect(value: boolean | undefined, options?: GravityCenterOptions): T
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-CommonMethod-useUnionEffect(value: boolean | undefined, options?: GravityCenterOptions): T--><!--Device-CommonMethod-useUnionEffect(value: boolean | undefined, options?: GravityCenterOptions): T-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -227,14 +259,13 @@ useUnionEffect(value: boolean | undefined, options?: GravityCenterOptions): T
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean \| undefined | 是 | 组件是否参与融合效果祖先组件**UnionEffectContainer**.<br>值为**true**表示组件参与在祖先组件**UnionEffectContainer**的融合效果中，而**false**表示相反。 <br>值为**t rue**表示该组件参与祖先组件**UnionEffectContainer**的融合效果，**false**表示相反。 |
-| options | [GravityCenterOptions](arkts-arkui-gravitycenteroptions-i-sys.md) | 否 | 引力中心参数。 需要配合UnionMode.GRAVITY_UNION使用。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | boolean \| undefined | 是 |
+| options | [GravityCenterOptions](arkts-arkui-gravitycenteroptions-i-sys.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 返回组件属性。 |
-
+| 类型 |
+| --- |
+| T |

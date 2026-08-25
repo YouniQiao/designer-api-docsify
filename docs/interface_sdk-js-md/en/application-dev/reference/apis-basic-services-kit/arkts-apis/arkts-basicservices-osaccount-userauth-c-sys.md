@@ -2,9 +2,9 @@
 
 Provides APIs for user authentication.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-osAccount-class UserAuth--><!--Device-osAccount-class UserAuth-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -29,11 +29,11 @@ auth(
 
 Performs authentication of the current user.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
-
-<!--Device-UserAuth-auth(      challenge: Uint8Array,      authType: AuthType,      authTrustLevel: AuthTrustLevel,      callback: IUserAuthCallback    ): Uint8Array--><!--Device-UserAuth-auth(      challenge: Uint8Array,      authType: AuthType,      authTrustLevel: AuthTrustLevel,      callback: IUserAuthCallback    ): Uint8Array-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -41,45 +41,45 @@ Performs authentication of the current user.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| challenge | Uint8Array | Yes | Challenge value, which is a random number used to improve security. |
-| authType | AuthType | Yes | Authentication credential type. |
-| authTrustLevel | AuthTrustLevel | Yes | Trust level of the authentication result. |
-| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| challenge | Uint8Array | Yes |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes |
+| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint8Array | ID of the context for canceling the authentication. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Uint8Array |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid challenge, authType or authTrustLevel. |
-| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception.<br>**Applicable version:** 12 and later |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 20 and later |
-| 12300090 | Cross-device capability not supported.<br>**Applicable version:** 20 and later |
-| 12300091 | Cross-device communication failed.<br>**Applicable version:** 20 and later |
-| [12300101](../errorcode-account.md#12300101-incorrect-credential) | The credential is incorrect. |
-| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
-| [12300105](../errorcode-account.md#12300105-trust-level-not-supported) | The trust level is not supported. |
-| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
-| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
-| [12300110](../errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The authentication time out. |
-| [12300112](../errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
-| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | The authentication service does not exist.<br>**Applicable version:** 12 and later |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally.<br>**Applicable version:** 12 and later |
-| [12300117](../errorcode-account.md#12300117-pin-expired) | PIN is expired.<br>**Applicable version:** 12 and later |
-| 12300119 | Multi-factor authentication failed.<br>**Applicable version:** 20 and later |
-| [12300120](../errorcode-account.md#12300120-credential-expired) | The credentials are no longer valid.<br>**Applicable version:** 23 and later |
-| 12300211 | Server unreachable.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
+| [12300013](../errorcode-account.md#12300013-network-exception) |
+| 12300020 |
+| 12300090 |
+| 12300091 |
+| [12300101](../errorcode-account.md#12300101-incorrect-credential) |
+| [12300102](../errorcode-account.md#12300102-credential-not-found) |
+| [12300105](../errorcode-account.md#12300105-trust-level-not-supported) |
+| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) |
+| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) |
+| [12300110](../errorcode-account.md#12300110-authentication-locked) |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) |
+| [12300112](../errorcode-account.md#12300112-authentication-service-does-not-respond) |
+| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300117](../errorcode-account.md#12300117-pin-expired) |
+| 12300119 |
+| [12300120](../errorcode-account.md#12300120-credential-expired) |
+| 12300211 |
 
 **Examples**
 
@@ -237,11 +237,11 @@ auth(
 
 Starts user authentication based on the specified challenge value, authentication type (PIN, facial, or fingerprint authentication), authentication trust level, and optional parameters (such as the account ID and authentication intent).
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
-
-<!--Device-UserAuth-auth(      challenge: Uint8Array,      authType: AuthType,      authTrustLevel: AuthTrustLevel,      options: AuthOptions,      callback: IUserAuthCallback    ): Uint8Array--><!--Device-UserAuth-auth(      challenge: Uint8Array,      authType: AuthType,      authTrustLevel: AuthTrustLevel,      options: AuthOptions,      callback: IUserAuthCallback    ): Uint8Array-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -249,47 +249,47 @@ Starts user authentication based on the specified challenge value, authenticatio
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| challenge | Uint8Array | Yes | Challenge value, which is a random number used to prevent replay attacks and improve security. |
-| authType | AuthType | Yes | Authentication credential type. |
-| authTrustLevel | AuthTrustLevel | Yes | Trust level of the authentication result. |
-| options | [AuthOptions](arkts-basicservices-osaccount-authoptions-i-sys.md) | Yes | Optional parameters for the authentication. |
-| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| challenge | Uint8Array | Yes |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes |
+| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes |
+| options | [AuthOptions](arkts-basicservices-osaccount-authoptions-i-sys.md) | Yes |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint8Array | ID of the context for canceling the authentication. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Uint8Array |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid challenge, authType, authTrustLevel or options. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception. |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 20 and later |
-| 12300090 | Cross-device capability not supported.<br>**Applicable version:** 20 and later |
-| 12300091 | Cross-device communication failed.<br>**Applicable version:** 20 and later |
-| [12300101](../errorcode-account.md#12300101-incorrect-credential) | The credential is incorrect. |
-| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
-| [12300105](../errorcode-account.md#12300105-trust-level-not-supported) | The trust level is not supported. |
-| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
-| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
-| [12300110](../errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The authentication timeout. |
-| [12300112](../errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
-| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | The authentication service does not exist. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
-| [12300117](../errorcode-account.md#12300117-pin-expired) | PIN is expired. |
-| 12300119 | Multi-factor authentication failed.<br>**Applicable version:** 20 and later |
-| [12300120](../errorcode-account.md#12300120-credential-expired) | The credentials are no longer valid.<br>**Applicable version:** 23 and later |
-| 12300211 | Server unreachable. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
+| [12300003](../errorcode-account.md#12300003-account-not-found) |
+| [12300013](../errorcode-account.md#12300013-network-exception) |
+| 12300020 |
+| 12300090 |
+| 12300091 |
+| [12300101](../errorcode-account.md#12300101-incorrect-credential) |
+| [12300102](../errorcode-account.md#12300102-credential-not-found) |
+| [12300105](../errorcode-account.md#12300105-trust-level-not-supported) |
+| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) |
+| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) |
+| [12300110](../errorcode-account.md#12300110-authentication-locked) |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) |
+| [12300112](../errorcode-account.md#12300112-authentication-service-does-not-respond) |
+| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300117](../errorcode-account.md#12300117-pin-expired) |
+| 12300119 |
+| [12300120](../errorcode-account.md#12300120-credential-expired) |
+| 12300211 |
 
 **Examples**
 
@@ -297,6 +297,18 @@ See [auth](#auth)
 
 ## authUser
 
+ArkTS-Dyn:
+```TypeScript
+authUser(
+      userId: number,
+      challenge: Uint8Array,
+      authType: AuthType,
+      authTrustLevel: AuthTrustLevel,
+      callback: IUserAuthCallback
+    ): Uint8Array
+```
+
+ArkTS-Sta:
 ```TypeScript
 authUser(
       userId: int,
@@ -309,11 +321,11 @@ authUser(
 
 Performs authentication of the specified user. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
-
-<!--Device-UserAuth-authUser(      userId: int,      challenge: Uint8Array,      authType: AuthType,      authTrustLevel: AuthTrustLevel,      callback: IUserAuthCallback    ): Uint8Array--><!--Device-UserAuth-authUser(      userId: int,      challenge: Uint8Array,      authType: AuthType,      authTrustLevel: AuthTrustLevel,      callback: IUserAuthCallback    ): Uint8Array-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -321,47 +333,47 @@ Performs authentication of the specified user. This API uses an asynchronous cal
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| userId | int | Yes | User ID. |
-| challenge | Uint8Array | Yes | Challenge value, which is a random number used to improve security. |
-| authType | AuthType | Yes | Authentication credential type. |
-| authTrustLevel | AuthTrustLevel | Yes | Trust level of the authentication result. |
-| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| challenge | Uint8Array | Yes |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes |
+| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint8Array | ID of the context for canceling the authentication. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Uint8Array |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid challenge, authType or authTrustLevel. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
-| [12300013](../errorcode-account.md#12300013-network-exception) | Network exception.<br>**Applicable version:** 12 and later |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 20 and later |
-| 12300090 | Cross-device capability not supported.<br>**Applicable version:** 20 and later |
-| 12300091 | Cross-device communication failed.<br>**Applicable version:** 20 and later |
-| [12300101](../errorcode-account.md#12300101-incorrect-credential) | The credential is incorrect. |
-| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
-| [12300105](../errorcode-account.md#12300105-trust-level-not-supported) | The trust level is not supported. |
-| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
-| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
-| [12300110](../errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The authentication timeout. |
-| [12300112](../errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
-| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | The authentication service does not exist.<br>**Applicable version:** 12 and later |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally.<br>**Applicable version:** 12 and later |
-| [12300117](../errorcode-account.md#12300117-pin-expired) | PIN is expired.<br>**Applicable version:** 12 and later |
-| 12300119 | Multi-factor authentication failed.<br>**Applicable version:** 20 and later |
-| [12300120](../errorcode-account.md#12300120-credential-expired) | The credentials are no longer valid.<br>**Applicable version:** 23 and later |
-| 12300211 | Server unreachable.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
+| [12300003](../errorcode-account.md#12300003-account-not-found) |
+| [12300013](../errorcode-account.md#12300013-network-exception) |
+| 12300020 |
+| 12300090 |
+| 12300091 |
+| [12300101](../errorcode-account.md#12300101-incorrect-credential) |
+| [12300102](../errorcode-account.md#12300102-credential-not-found) |
+| [12300105](../errorcode-account.md#12300105-trust-level-not-supported) |
+| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) |
+| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) |
+| [12300110](../errorcode-account.md#12300110-authentication-locked) |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) |
+| [12300112](../errorcode-account.md#12300112-authentication-service-does-not-respond) |
+| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300117](../errorcode-account.md#12300117-pin-expired) |
+| 12300119 |
+| [12300120](../errorcode-account.md#12300120-credential-expired) |
+| 12300211 |
 
 **Examples**
 
@@ -394,11 +406,11 @@ cancelAuth(contextID: Uint8Array): void
 
 Cancels an authentication.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
-
-<!--Device-UserAuth-cancelAuth(contextID: Uint8Array): void--><!--Device-UserAuth-cancelAuth(contextID: Uint8Array): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -406,19 +418,19 @@ Cancels an authentication.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| contextID | Uint8Array | Yes | ID of the authentication context. The context ID is dynamically generated. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| contextID | Uint8Array | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid contextId. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
 
 **Examples**
 
@@ -450,9 +462,9 @@ constructor()
 
 A constructor used to create an instance for user authentication.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-UserAuth-constructor()--><!--Device-UserAuth-constructor()-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -460,9 +472,9 @@ A constructor used to create an instance for user authentication.
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -480,17 +492,23 @@ let userIDM = new osAccount.UserIdentityManager();
 
 ## getAvailableStatus
 
+ArkTS-Dyn:
+```TypeScript
+getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): int
 ```
 
 Obtains the available status of the authentication capability corresponding to the specified authentication type and trust level.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
-
-<!--Device-UserAuth-getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): int--><!--Device-UserAuth-getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): int-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -498,27 +516,27 @@ Obtains the available status of the authentication capability corresponding to t
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| authType | AuthType | Yes | Authentication credential type. |
-| authTrustLevel | AuthTrustLevel | Yes | Trust level of the authentication. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes |
+| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Available status of the authentication capability. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid authType or authTrustLevel. |
-| [12300117](../errorcode-account.md#12300117-pin-expired) | PIN is expired. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
+| [12300117](../errorcode-account.md#12300117-pin-expired) |
 
 **Examples**
 
@@ -545,11 +563,11 @@ getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorPropert
 
 Obtains the executor property based on the request. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
-
-<!--Device-UserAuth-getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorProperty>): void--><!--Device-UserAuth-getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorProperty>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -557,21 +575,21 @@ Obtains the executor property based on the request. This API uses an asynchronou
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| request | [GetPropertyRequest](arkts-basicservices-osaccount-getpropertyrequest-i-sys.md) | Yes | Request information, including the authentication credential type and property list. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[ExecutorProperty](arkts-basicservices-osaccount-executorproperty-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the executor property information obtained. Otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| request | [GetPropertyRequest](arkts-basicservices-osaccount-getpropertyrequest-i-sys.md) | Yes |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[ExecutorProperty](arkts-basicservices-osaccount-executorproperty-i-sys.md)&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid request. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
+| [12300003](../errorcode-account.md#12300003-account-not-found) |
+| 12300020 |
 
 **Examples**
 
@@ -635,11 +653,11 @@ getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>
 
 Obtains the executor property based on the request. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
-
-<!--Device-UserAuth-getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>--><!--Device-UserAuth-getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -647,26 +665,26 @@ Obtains the executor property based on the request. This API uses a promise to r
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| request | [GetPropertyRequest](arkts-basicservices-osaccount-getpropertyrequest-i-sys.md) | Yes | Request information, including the authentication credential type and property list. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| request | [GetPropertyRequest](arkts-basicservices-osaccount-getpropertyrequest-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[ExecutorProperty](arkts-basicservices-osaccount-executorproperty-i-sys.md)&gt; | Promise used to return the executor property. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[ExecutorProperty](arkts-basicservices-osaccount-executorproperty-i-sys.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid request. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
+| [12300003](../errorcode-account.md#12300003-account-not-found) |
+| 12300020 |
 
 **Examples**
 
@@ -680,11 +698,11 @@ getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>
 
 Obtains the specified property information of the associated executor based on the credential ID. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
-
-<!--Device-UserAuth-getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>): Promise<ExecutorProperty>--><!--Device-UserAuth-getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>): Promise<ExecutorProperty>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -692,27 +710,27 @@ Obtains the specified property information of the associated executor based on t
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| credentialId | Uint8Array | Yes | Credential ID. |
-| keys | Array&lt;[GetPropertyType](arkts-basicservices-osaccount-getpropertytype-e-sys.md)&gt; | Yes | Property type array to be queried. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| credentialId | Uint8Array | Yes |
+| keys | Array&lt;[GetPropertyType](arkts-basicservices-osaccount-getpropertytype-e-sys.md)&gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[ExecutorProperty](arkts-basicservices-osaccount-executorproperty-i-sys.md)&gt; | Promise used to return the executor attributes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[ExecutorProperty](arkts-basicservices-osaccount-executorproperty-i-sys.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid keys. |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
-| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
+| 12300020 |
+| [12300102](../errorcode-account.md#12300102-credential-not-found) |
 
 **Examples**
 
@@ -755,15 +773,21 @@ async function getProperty() {
 
 ## getVersion
 
+ArkTS-Dyn:
+```TypeScript
+getVersion(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getVersion(): int
 ```
 
 Obtains this version number.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-UserAuth-getVersion(): int--><!--Device-UserAuth-getVersion(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -771,15 +795,15 @@ Obtains this version number.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Version number obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -797,11 +821,11 @@ prepareRemoteAuth(remoteNetworkId: string): Promise<void>
 
 Prepares for remote authentication. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
-
-<!--Device-UserAuth-prepareRemoteAuth(remoteNetworkId: string): Promise<void>--><!--Device-UserAuth-prepareRemoteAuth(remoteNetworkId: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -809,27 +833,27 @@ Prepares for remote authentication. This API uses a promise to return the result
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| remoteNetworkId | string | Yes | Remote network ID. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| remoteNetworkId | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid remoteNetworkId. |
-| 12300090 | Cross-device capability not supported.<br>**Applicable version:** 20 and later |
-| 12300091 | Cross-device communication failed.<br>**Applicable version:** 20 and later |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | Operation timeout.<br>**Applicable version:** 20 and later |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
+| 12300090 |
+| 12300091 |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) |
 
 **Examples**
 
@@ -864,11 +888,11 @@ setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void
 
 Sets the property for the initialization algorithm. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
-
-<!--Device-UserAuth-setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void--><!--Device-UserAuth-setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -876,20 +900,20 @@ Sets the property for the initialization algorithm. This API uses an asynchronou
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| request | [SetPropertyRequest](arkts-basicservices-osaccount-setpropertyrequest-i-sys.md) | Yes | Request information, including the authentication credential type and the key value to set. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| request | [SetPropertyRequest](arkts-basicservices-osaccount-setpropertyrequest-i-sys.md) | Yes |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid request. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
 
 **Examples**
 
@@ -945,11 +969,11 @@ setProperty(request: SetPropertyRequest): Promise<void>
 
 Sets the property for the initialization algorithm. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
-
-<!--Device-UserAuth-setProperty(request: SetPropertyRequest): Promise<void>--><!--Device-UserAuth-setProperty(request: SetPropertyRequest): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -957,27 +981,26 @@ Sets the property for the initialization algorithm. This API uses a promise to r
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| request | [SetPropertyRequest](arkts-basicservices-osaccount-setpropertyrequest-i-sys.md) | Yes | Request information, including the authentication credential type and the key value to set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| request | [SetPropertyRequest](arkts-basicservices-osaccount-setpropertyrequest-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid request. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
 
 **Examples**
 
 See [setProperty](#setproperty)
-

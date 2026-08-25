@@ -9,7 +9,7 @@ type DomainPluginAuthWithTokenFunc = (domainAccountInfo: DomainAccountInfo,
 
 **起始版本：** 23
 
-<!--Device-osAccount-type DomainPluginAuthWithTokenFunc = (domainAccountInfo: DomainAccountInfo,    token: Uint8Array, callback: IUserAuthCallback) => void--><!--Device-osAccount-type DomainPluginAuthWithTokenFunc = (domainAccountInfo: DomainAccountInfo,    token: Uint8Array, callback: IUserAuthCallback) => void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -17,11 +17,11 @@ type DomainPluginAuthWithTokenFunc = (domainAccountInfo: DomainAccountInfo,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 表示域账号信息。 |
-| token | Uint8Array | 是 | 表示PIN码或生物识别认证成功时生成的授权令牌。 |
-| callback | IUserAuthCallback | 是 | 表示认证结果回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [domainAccountInfo](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 |
+| token | Uint8Array | 是 |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | 是 |
 
 **示例**
 
@@ -69,4 +69,3 @@ try {
   console.error(`registerPlugin code is ${err.code}, message is ${err.message}`);
 }
 ```
-

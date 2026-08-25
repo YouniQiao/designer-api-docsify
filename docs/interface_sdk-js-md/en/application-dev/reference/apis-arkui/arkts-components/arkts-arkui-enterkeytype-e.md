@@ -4,7 +4,7 @@ Type of the Enter key.
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum EnterKeyType--><!--Device-unnamed-declare enum EnterKeyType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ The Enter key is labeled "Go."
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-EnterKeyType-Go = 2--><!--Device-EnterKeyType-Go = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,9 @@ The Enter key is labeled "Search."
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-EnterKeyType-Search = 3--><!--Device-EnterKeyType-Search = 3-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,9 +50,9 @@ The Enter key is labeled "Send."
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-EnterKeyType-Send = 4--><!--Device-EnterKeyType-Send = 4-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,9 +66,9 @@ The Enter key is labeled "Next."
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-EnterKeyType-Next = 5--><!--Device-EnterKeyType-Next = 5-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,9 +82,9 @@ The Enter key is labeled "Done."
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-EnterKeyType-Done = 6--><!--Device-EnterKeyType-Done = 6-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,11 +98,11 @@ The Enter key is labeled "Previous."
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-EnterKeyType-PREVIOUS = 7--><!--Device-EnterKeyType-PREVIOUS = 7-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,11 +116,10 @@ The Enter key is labeled "New Line."
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-EnterKeyType-NEW_LINE = 8--><!--Device-EnterKeyType-NEW_LINE = 8-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

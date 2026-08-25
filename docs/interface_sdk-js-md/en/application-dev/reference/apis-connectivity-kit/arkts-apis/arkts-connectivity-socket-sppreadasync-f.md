@@ -9,36 +9,36 @@ import { socket } from '@kit.ConnectivityKit';
 ## sppReadAsync
 
 ```TypeScript
-function sppReadAsync(clientSocket: int): Promise<ArrayBuffer>
+function sppReadAsync(clientSocket: number): Promise<ArrayBuffer>
 ```
 
 Asynchronous interface for reading data from the socket.
 
 **Since:** 18
 
-<!--Device-socket-function sppReadAsync(clientSocket: int): Promise<ArrayBuffer>--><!--Device-socket-function sppReadAsync(clientSocket: int): Promise<ArrayBuffer>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| clientSocket | int | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-socket-sppaccept-f.md) or [sppConnect](arkts-connectivity-socket-sppconnect-f.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| clientSocket | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Returns the promise object, used to get the spp read data. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;ArrayBuffer & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2901054 | IO error. |
-| 2900099 | Operation failed. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| 2901054 |
+| 2900099 |
 
 **Examples**
 
@@ -63,4 +63,3 @@ async function readAsync(clientNumber: number) {
   }
 }
 ```
-

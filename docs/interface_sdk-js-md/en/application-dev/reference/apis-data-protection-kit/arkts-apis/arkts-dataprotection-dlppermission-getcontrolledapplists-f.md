@@ -20,25 +20,24 @@ Obtains the list of applications controlled by enterprise DLP for the current us
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Required permissions:** ohos.permission.DLP_POLICY_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-dlpPermission-function getControlledAppLists(): Promise<Array<string>>--><!--Device-dlpPermission-function getControlledAppLists(): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the list of applications controlled by enterprise DLP for the current user. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |

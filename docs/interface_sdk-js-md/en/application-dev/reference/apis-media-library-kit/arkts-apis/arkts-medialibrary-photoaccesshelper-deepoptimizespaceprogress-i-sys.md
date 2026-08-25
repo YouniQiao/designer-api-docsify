@@ -4,7 +4,7 @@ Defines the DeepOptimizeSpaceProgress data structure.
 
 **Since:** 26.0.0
 
-<!--Device-photoAccessHelper-interface DeepOptimizeSpaceProgress--><!--Device-photoAccessHelper-interface DeepOptimizeSpaceProgress-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -24,13 +24,13 @@ progress: int
 
 The percentage of deep optimize space state. Unit: Percentage, The value range is all integers, Value range: [0, 100].
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-DeepOptimizeSpaceProgress-progress: int--><!--Device-DeepOptimizeSpaceProgress-progress: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -48,11 +48,10 @@ The current deep optimize space state.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-DeepOptimizeSpaceProgress-state: DeepOptimizeState--><!--Device-DeepOptimizeSpaceProgress-state: DeepOptimizeState-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

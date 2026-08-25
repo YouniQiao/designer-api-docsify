@@ -4,7 +4,7 @@ Defines the supported AI session types.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare enum AISessionType--><!--Device-unnamed-declare enum AISessionType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,9 +18,9 @@ Translation model.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-AISessionType-TRANSLATOR = 1--><!--Device-AISessionType-TRANSLATOR = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -34,9 +34,9 @@ Language detection model.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-AISessionType-LANGUAGE_DETECTOR = 2--><!--Device-AISessionType-LANGUAGE_DETECTOR = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -50,9 +50,9 @@ Content summary generation model.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-AISessionType-SUMMARIZER = 3--><!--Device-AISessionType-SUMMARIZER = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -66,9 +66,9 @@ Writing assistant model.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-AISessionType-WRITER = 4--><!--Device-AISessionType-WRITER = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -82,9 +82,9 @@ Content rewriting assistant model.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-AISessionType-REWRITER = 5--><!--Device-AISessionType-REWRITER = 5-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -98,9 +98,9 @@ Prompt model.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-AISessionType-PROMPT = 6--><!--Device-AISessionType-PROMPT = 6-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -114,9 +114,8 @@ Content proofreading assistant model.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AISessionType-PROOFREADER = 7--><!--Device-AISessionType-PROOFREADER = 7-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

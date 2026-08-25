@@ -16,34 +16,34 @@ Queries the APN ID. This API is suitable for enterprise mobile network configura
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APN
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-networkManager-function queryApn(admin: Want, apnInfo: Record<string, string>): Array<string>--><!--Device-networkManager-function queryApn(admin: Want, apnInfo: Record<string, string>): Array<string>-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| apnInfo | Record&lt;string, string&gt; | Yes | APN information. After the setting, the system filters the APN configurations based on the specified conditions and returns the list of APN IDs that meet the conditions. <br>- **apnName**: APN identifier, which is optional. <br>- **mcc**: 3-digit mobile country code (MCC), which is optional. <br>- **mnc**: 2-digit or 3-digit mobile network code (MNC), which is optional. <br>- **apn**: access point name, which is optional. <br>- **type**: APN service type, which is optional. <br>- **user**: user name for APN authentication, which is optional. <br>- **proxy**: address of the proxy server for a common data connection, which is optional. <br>- **mmsproxy**: dedicated proxy address of the MMS service, which is optional. <br>- **authType**: authentication protocol type of the APN, which is optional. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+| apnInfo | Record & lt;string, string & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;string&gt; | APN ID obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| Error Code ID |
+| --- |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 **Examples**
 
@@ -100,36 +100,35 @@ Queries the APN parameter information. This API is suitable for enterprise mobil
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APN
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-networkManager-function queryApn(admin: Want, apnId: string): Record<string, string>--><!--Device-networkManager-function queryApn(admin: Want, apnId: string): Record<string, string>-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| apnId | string | Yes | Specified APN ID. After the setting, the system queries the detailed parameter settings corresponding to the APN ID. You can obtain device information using [networkManager.queryApn](#queryapn). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+| apnId | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Record&lt;string, string&gt; | APN parameter information of the specified APN ID. <br>- **apnName**: APN identifier. <br>- **mcc**: 3-digit mobile country code (MCC). <br>- **mnc**: 2-digit or 3-digit mobile network code (MNC). <br>- **apn**: access point name. <br>- **type**: APN service type. <br>- **user**: user name for APN authentication. <br>- **proxy**: address of the proxy server for a common data connection. <br>- **mmsproxy**: dedicated proxy address of the MMS service. <br>- **authType**: authentication protocol type of the APN. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Record & lt;string, string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| Error Code ID |
+| --- |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 **Examples**
 
 See [queryApn](#queryapn)
-

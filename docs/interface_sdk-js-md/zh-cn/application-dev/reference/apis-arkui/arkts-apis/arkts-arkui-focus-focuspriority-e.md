@@ -4,9 +4,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export declare enum FocusPriority--><!--Device-unnamed-export declare enum FocusPriority-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +18,9 @@ AUTO = 0
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-FocusPriority-AUTO = 0--><!--Device-FocusPriority-AUTO = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +34,9 @@ PRIOR = 2000
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-FocusPriority-PRIOR = 2000--><!--Device-FocusPriority-PRIOR = 2000-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,11 +50,8 @@ PREVIOUS = 3000
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-FocusPriority-PREVIOUS = 3000--><!--Device-FocusPriority-PREVIOUS = 3000-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,7 +4,7 @@ Enumerates the SE service states.
 
 **Since:** 10
 
-<!--Device-omapi-enum ServiceState--><!--Device-omapi-enum ServiceState-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.SecureElement
 
@@ -18,7 +18,7 @@ The SE service is disconnected.
 
 **Since:** 10
 
-<!--Device-ServiceState-DISCONNECTED = 0--><!--Device-ServiceState-DISCONNECTED = 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.SecureElement
 
@@ -32,7 +32,6 @@ The SE service is connected.
 
 **Since:** 10
 
-<!--Device-ServiceState-CONNECTED = 1--><!--Device-ServiceState-CONNECTED = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.SecureElement
-

@@ -4,7 +4,7 @@ HttpAuthHandler is a handler class used by the Web component to process HTTP aut
 
 **Since:** 9
 
-<!--Device-unnamed-declare class HttpAuthHandler--><!--Device-unnamed-declare class HttpAuthHandler-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -23,9 +23,9 @@ Cancels HTTP authentication as requested by the user.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-HttpAuthHandler-cancel(): void--><!--Device-HttpAuthHandler-cancel(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -62,24 +62,24 @@ Performs HTTP authentication with the user name and password provided by the use
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-HttpAuthHandler-confirm(userName: string, password: string): boolean--><!--Device-HttpAuthHandler-confirm(userName: string, password: string): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| userName | string | Yes | HTTP authentication user name, which must be a non-empty string. |
-| password | string | Yes | HTTP authentication password, which must be a non-empty string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| userName | string | Yes |
+| password | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if authentication succeeds; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## constructor
 
@@ -91,9 +91,9 @@ Constructs an **HttpAuthHandler**.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-HttpAuthHandler-constructor()--><!--Device-HttpAuthHandler-constructor()-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -107,15 +107,14 @@ Checks whether the credentials stored for the current host are applicable. The c
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-HttpAuthHandler-isHttpAuthInfoSaved(): boolean--><!--Device-HttpAuthHandler-isHttpAuthInfoSaved(): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the stored credentials are applicable; false otherwise. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

@@ -4,7 +4,7 @@ Sets the expected frame rate range for an animation.
 
 **Since:** 11
 
-<!--Device-unnamed-declare interface ExpectedFrameRateRange--><!--Device-unnamed-declare interface ExpectedFrameRateRange-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Expected optimal frame rate, in fps.The value range is [**min**, **max**]. When 
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ExpectedFrameRateRange-expected: number--><!--Device-ExpectedFrameRateRange-expected: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ Expected maximum frame rate, in fps.The value range is [**min**, Maximum frame r
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ExpectedFrameRateRange-max: number--><!--Device-ExpectedFrameRateRange-max: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,11 +65,10 @@ Expected minimum frame rate, in fps.The value range is [0, Maximum frame rate of
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ExpectedFrameRateRange-min: number--><!--Device-ExpectedFrameRateRange-min: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

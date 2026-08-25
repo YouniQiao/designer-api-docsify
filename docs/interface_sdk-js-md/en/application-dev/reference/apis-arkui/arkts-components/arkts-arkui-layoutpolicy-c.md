@@ -21,7 +21,7 @@ Enumerates the layout policies for component width and height.
 
 **Since:** 15
 
-<!--Device-unnamed-declare class LayoutPolicy--><!--Device-unnamed-declare class LayoutPolicy-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,13 +42,13 @@ When the component adapts to its child components (content), its size equals the
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
-
-<!--Device-LayoutPolicy-static readonly fixAtIdealSize: LayoutPolicy--><!--Device-LayoutPolicy-static readonly fixAtIdealSize: LayoutPolicy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,13 +64,13 @@ When the component adapts to the parent component's layout, its size equals the 
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 15.
-
-<!--Device-LayoutPolicy-static readonly matchParent: LayoutPolicy--><!--Device-LayoutPolicy-static readonly matchParent: LayoutPolicy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,13 +86,12 @@ When the component adapts to its child components (content), its size equals the
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
 
-<!--Device-LayoutPolicy-static readonly wrapContent: LayoutPolicy--><!--Device-LayoutPolicy-static readonly wrapContent: LayoutPolicy-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

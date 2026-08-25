@@ -4,7 +4,7 @@ HTTP拦截器接口。用户可以实现此接口来定义拦截处理函数。
 
 **起始版本：** 22
 
-<!--Device-http-export interface HttpInterceptor--><!--Device-http-export interface HttpInterceptor-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -24,24 +24,24 @@ interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Pro
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
-<!--Device-HttpInterceptor-interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Promise<ChainContinue>--><!--Device-HttpInterceptor-interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Promise<ChainContinue>-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| reqContext | [HttpRequestContext](arkts-network-http-httprequestcontext-i.md) | 是 | the context of the target HTTP request. |
-| rspContext | HttpResponse | 是 | the context of the target HTTP response. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| reqContext | [HttpRequestContext](arkts-network-http-httprequestcontext-i.md) | 是 |
+| rspContext | [HttpResponse](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-httpresponse-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[ChainContinue](arkts-network-http-chaincontinue-t.md)&gt; | 继续HTTP处理或终止并返回HTTP响应。 |
+| 类型 |
+| --- |
+| Promise&lt;[ChainContinue](arkts-network-http-chaincontinue-t.md)&gt; |
 
 **示例**
 
@@ -75,9 +75,8 @@ The type of this interceptor. It defines when this intercptor would be called.
 
 **起始版本：** 22
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
+
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
-<!--Device-HttpInterceptor-interceptorType: InterceptorType--><!--Device-HttpInterceptor-interceptorType: InterceptorType-End-->
-
 **系统能力：** SystemCapability.Communication.NetStack
-

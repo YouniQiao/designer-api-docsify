@@ -16,20 +16,20 @@ function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDial
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** showDialog
-
-<!--Device-prompt-function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>): void--><!--Device-prompt-function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | ShowDialogOptions | 是 | 页面显示对话框信息描述。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ShowDialogSuccessResponse&gt; | 是 | 对话框响应结果回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ShowDialogSuccessResponse&gt; | 是 |
 
 **示例**
 
@@ -92,27 +92,26 @@ function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessRespon
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** showDialog
-
-<!--Device-prompt-function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>--><!--Device-prompt-function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | ShowDialogOptions | 是 | 对话框选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;ShowDialogSuccessResponse&gt; | 对话框响应结果。 |
+| 类型 |
+| --- |
+| Promise & lt;ShowDialogSuccessResponse & gt; |
 
 **示例**
 
 参见 [showDialog](#showdialog)
-

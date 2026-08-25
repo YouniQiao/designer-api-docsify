@@ -2,9 +2,9 @@
 
 Enumerates the usage statuses of a widget.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-formInfo-enum FormUsageState--><!--Device-formInfo-enum FormUsageState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -18,9 +18,9 @@ USED = 0
 
 The widget is in use.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-FormUsageState-USED = 0--><!--Device-FormUsageState-USED = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -34,11 +34,10 @@ UNUSED = 1
 
 The widget is not in use.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-FormUsageState-UNUSED = 1--><!--Device-FormUsageState-UNUSED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
-

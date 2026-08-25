@@ -2,9 +2,9 @@
 
 Describes the scanned Wi-Fi information.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-wifiManager-interface WifiScanInfo--><!--Device-wifiManager-interface WifiScanInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -22,11 +22,11 @@ band: int
 
 Frequency band, 1: 2.4G, 2: 5G
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-WifiScanInfo-band: int--><!--Device-WifiScanInfo-band: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -40,11 +40,11 @@ Wi-Fi bssid(MAC): the length is 6
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WifiScanInfo-bssid: string--><!--Device-WifiScanInfo-bssid: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -58,11 +58,11 @@ Wi-Fi bssid type
 
 **Type:** [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md)
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WifiScanInfo-bssidType: DeviceAddressType--><!--Device-WifiScanInfo-bssidType: DeviceAddressType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -76,9 +76,9 @@ Hotspot capability
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-WifiScanInfo-capabilities: string--><!--Device-WifiScanInfo-capabilities: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -90,11 +90,11 @@ centerFrequency0: int
 
 Center frequency 0.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-WifiScanInfo-centerFrequency0: int--><!--Device-WifiScanInfo-centerFrequency0: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -106,11 +106,11 @@ centerFrequency1: int
 
 Center frequency 1.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-WifiScanInfo-centerFrequency1: int--><!--Device-WifiScanInfo-centerFrequency1: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -122,11 +122,11 @@ channelWidth: int
 
 Channel width
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-WifiScanInfo-channelWidth: int--><!--Device-WifiScanInfo-channelWidth: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -138,13 +138,13 @@ frequency: int
 
 Frequency
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WifiScanInfo-frequency: int--><!--Device-WifiScanInfo-frequency: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -158,9 +158,9 @@ Information elements.
 
 **Type:** Array&lt;[WifiInfoElem](arkts-connectivity-wifimanager-wifiinfoelem-i.md)&gt;
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-WifiScanInfo-infoElems: Array<WifiInfoElem>--><!--Device-WifiScanInfo-infoElems: Array<WifiInfoElem>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -174,9 +174,9 @@ Whether the Wi-Fi hotspot is HiLink network.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-WifiScanInfo-isHiLinkNetwork: boolean--><!--Device-WifiScanInfo-isHiLinkNetwork: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -188,13 +188,13 @@ rssi: int
 
 Received signal strength indicator (RSSI)
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WifiScanInfo-rssi: int--><!--Device-WifiScanInfo-rssi: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -208,11 +208,11 @@ Security type: reference definition of WifiSecurityType
 
 **Type:** WifiSecurityType
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WifiScanInfo-securityType: WifiSecurityType--><!--Device-WifiScanInfo-securityType: WifiSecurityType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -226,11 +226,11 @@ Wi-Fi SSID: the maximum length is 32
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WifiScanInfo-ssid: string--><!--Device-WifiScanInfo-ssid: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -244,9 +244,9 @@ Supported wifi category
 
 **Type:** [WifiCategory](arkts-connectivity-wifimanager-wificategory-e.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-WifiScanInfo-supportedWifiCategory: WifiCategory--><!--Device-WifiScanInfo-supportedWifiCategory: WifiCategory-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -258,11 +258,10 @@ timestamp: long
 
 Time stamp
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-WifiScanInfo-timestamp: long--><!--Device-WifiScanInfo-timestamp: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
-

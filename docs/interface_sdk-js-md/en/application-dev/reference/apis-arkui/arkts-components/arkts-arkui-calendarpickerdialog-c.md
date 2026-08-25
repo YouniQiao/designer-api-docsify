@@ -4,7 +4,7 @@ A calendar picker dialog box is a dialog box that allows users to select a date 
 
 **Since:** 10
 
-<!--Device-unnamed-declare class CalendarPickerDialog--><!--Device-unnamed-declare class CalendarPickerDialog-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,17 +23,16 @@ Defines a calendar picker dialog box.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-CalendarPickerDialog-static show(options?: CalendarDialogOptions): void--><!--Device-CalendarPickerDialog-static show(options?: CalendarDialogOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [CalendarDialogOptions](arkts-arkui-calendardialogoptions-i.md) | No | Parameters of the calendar picker dialog box. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [CalendarDialogOptions](arkts-arkui-calendardialogoptions-i.md) | No |

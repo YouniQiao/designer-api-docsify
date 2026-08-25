@@ -4,9 +4,9 @@ Describes the humidity sensor data. It extends from [Response](arkts-sensorservi
 
 **Inheritance/Implementation:** HumidityResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sensor-interface HumidityResponse--><!--Device-sensor-interface HumidityResponse-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -24,11 +24,10 @@ humidity: double
 
 Ambient relative humidity, in a percentage (%).
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-HumidityResponse-humidity: double--><!--Device-HumidityResponse-humidity: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
-

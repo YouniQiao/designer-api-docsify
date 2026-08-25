@@ -8,22 +8,21 @@ type QueryPlaylistEvent = (pageIndex: int, sort: Sort) => Promise<PageMediaEntit
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-avMusicTemplate-type QueryPlaylistEvent = (pageIndex: int, sort: Sort) => Promise<PageMediaEntity>--><!--Device-avMusicTemplate-type QueryPlaylistEvent = (pageIndex: int, sort: Sort) => Promise<PageMediaEntity>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pageIndex | int | 是 | 页面的索引。 |
-| sort | [Sort](arkts-avsession-avmusictemplate-sort-e.md) | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pageIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| sort | [Sort](arkts-avsession-avmusictemplate-sort-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | Promise对象，返回查询的播放列表的分页对象。 |
-
+| 类型 |
+| --- |
+| Promise&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; |

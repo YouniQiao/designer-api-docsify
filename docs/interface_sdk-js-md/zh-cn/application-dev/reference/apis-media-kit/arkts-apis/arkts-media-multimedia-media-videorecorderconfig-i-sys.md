@@ -2,9 +2,9 @@
 
 视频录制配置定义。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-interface VideoRecorderConfig--><!--Device-unnamed-interface VideoRecorderConfig-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -26,9 +26,9 @@ audioSourceType?: AudioSourceType
 
 **类型：** [AudioSourceType](arkts-media-multimedia-media-audiosourcetype-e.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-VideoRecorderConfig-audioSourceType?: AudioSourceType--><!--Device-VideoRecorderConfig-audioSourceType?: AudioSourceType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -44,9 +44,9 @@ location?: Location
 
 **类型：** [Location](arkts-media-multimedia-media-location-i.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-VideoRecorderConfig-location?: Location--><!--Device-VideoRecorderConfig-location?: Location-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -62,9 +62,9 @@ profile: VideoRecorderProfile
 
 **类型：** [VideoRecorderProfile](arkts-media-multimedia-media-videorecorderprofile-i-sys.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-VideoRecorderConfig-profile: VideoRecorderProfile--><!--Device-VideoRecorderConfig-profile: VideoRecorderProfile-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -78,11 +78,11 @@ rotation?: int
 
 设置视频输出文件中的旋转角度，用于文件播放。仅mp4格式支持。 旋转角度取值为{0, 90, 180, 270}，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-VideoRecorderConfig-rotation?: int--><!--Device-VideoRecorderConfig-rotation?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -98,9 +98,9 @@ url: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-VideoRecorderConfig-url: string--><!--Device-VideoRecorderConfig-url: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -116,11 +116,10 @@ videoSourceType: VideoSourceType
 
 **类型：** [VideoSourceType](arkts-media-multimedia-media-videosourcetype-e.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-VideoRecorderConfig-videoSourceType: VideoSourceType--><!--Device-VideoRecorderConfig-videoSourceType: VideoSourceType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
-

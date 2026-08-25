@@ -4,7 +4,7 @@ PrefetchOptions是ArkWeb框架中用于自定义网页预取行为的配置类�
 
 **起始版本：** 21
 
-<!--Device-webview-class PrefetchOptions--><!--Device-webview-class PrefetchOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -24,7 +24,7 @@ PrefetchOptions的构造函数。
 
 **起始版本：** 21
 
-<!--Device-PrefetchOptions-constructor()--><!--Device-PrefetchOptions-constructor()-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -181,7 +181,7 @@ ignoreCacheControlNoStore: boolean
 
 **起始版本：** 21
 
-<!--Device-PrefetchOptions-ignoreCacheControlNoStore: boolean--><!--Device-PrefetchOptions-ignoreCacheControlNoStore: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -197,7 +197,6 @@ minTimeBetweenPrefetchesMs: number
 
 **起始版本：** 21
 
-<!--Device-PrefetchOptions-minTimeBetweenPrefetchesMs: number--><!--Device-PrefetchOptions-minTimeBetweenPrefetchesMs: number-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-

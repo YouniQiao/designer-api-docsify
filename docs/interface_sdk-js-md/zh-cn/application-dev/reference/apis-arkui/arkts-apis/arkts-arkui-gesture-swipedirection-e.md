@@ -4,9 +4,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export declare enum SwipeDirection--><!--Device-unnamed-export declare enum SwipeDirection-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +18,9 @@ None
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SwipeDirection-None--><!--Device-SwipeDirection-None-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +34,9 @@ Horizontal
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SwipeDirection-Horizontal--><!--Device-SwipeDirection-Horizontal-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,11 +50,9 @@ Vertical
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SwipeDirection-Vertical--><!--Device-SwipeDirection-Vertical-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,11 +66,8 @@ All
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-SwipeDirection-All--><!--Device-SwipeDirection-All-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

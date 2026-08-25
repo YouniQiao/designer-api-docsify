@@ -15,13 +15,13 @@ function enableDistributed(enable: boolean, callback: AsyncCallback<void>): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [setDistributedEnable](arkts-notification-notificationmanager-setdistributedenable-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
-
-<!--Device-notification-function enableDistributed(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-notification-function enableDistributed(enable: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -29,10 +29,10 @@ function enableDistributed(enable: boolean, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enable | boolean | 是 | 是否支持。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置设备是否支持分布式通知的回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enable | boolean | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **示例**
 
@@ -74,13 +74,13 @@ function enableDistributed(enable: boolean): Promise<void>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [setDistributedEnable](arkts-notification-notificationmanager-setdistributedenable-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
-
-<!--Device-notification-function enableDistributed(enable: boolean): Promise<void>--><!--Device-notification-function enableDistributed(enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -88,17 +88,16 @@ function enableDistributed(enable: boolean): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enable | boolean | 是 | 是否支持。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enable | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
 参见 [enableDistributed](#enabledistributed)
-

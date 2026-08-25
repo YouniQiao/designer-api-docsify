@@ -6,7 +6,7 @@ Implements imaging mode.
 
 **起始版本：** 26.0.0
 
-<!--Device-camera-interface ImagingMode--><!--Device-camera-interface ImagingMode-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -28,9 +28,9 @@ Gets current imaging mode.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-ImagingMode-getImagingMode(): CameraImagingMode--><!--Device-ImagingMode-getImagingMode(): CameraImagingMode-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -38,16 +38,16 @@ Gets current imaging mode.
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [CameraImagingMode](arkts-camera-camera-cameraimagingmode-e-sys.md) | The current imaging mode. |
+| 类型 |
+| --- |
+| [CameraImagingMode](arkts-camera-camera-cameraimagingmode-e-sys.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 ## setImagingMode
 
@@ -59,9 +59,9 @@ Sets imaging mode.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-ImagingMode-setImagingMode(mode: CameraImagingMode): void--><!--Device-ImagingMode-setImagingMode(mode: CameraImagingMode): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -69,14 +69,13 @@ Sets imaging mode.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mode | [CameraImagingMode](arkts-camera-camera-cameraimagingmode-e-sys.md) | 是 | Target imaging mode. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mode | [CameraImagingMode](arkts-camera-camera-cameraimagingmode-e-sys.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |

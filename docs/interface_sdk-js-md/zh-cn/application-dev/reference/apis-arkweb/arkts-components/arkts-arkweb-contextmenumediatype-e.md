@@ -4,7 +4,7 @@
 
 **起始版本：** 9
 
-<!--Device-unnamed-declare enum ContextMenuMediaType--><!--Device-unnamed-declare enum ContextMenuMediaType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -18,9 +18,9 @@ None = 0
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-ContextMenuMediaType-None = 0--><!--Device-ContextMenuMediaType-None = 0-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -34,9 +34,8 @@ Image = 1
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ContextMenuMediaType-Image = 1--><!--Device-ContextMenuMediaType-Image = 1-End-->
-
 **系统能力：** SystemCapability.Web.Webview.Core
-

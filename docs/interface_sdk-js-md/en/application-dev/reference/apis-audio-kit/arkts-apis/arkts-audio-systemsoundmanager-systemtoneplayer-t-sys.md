@@ -6,13 +6,12 @@ type SystemTonePlayer = _SystemTonePlayer
 
 SystemTone player object.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-systemSoundManager-type SystemTonePlayer = _SystemTonePlayer--><!--Device-systemSoundManager-type SystemTonePlayer = _SystemTonePlayer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
 
 **Property type:** _SystemTonePlayer
-

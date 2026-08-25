@@ -2,9 +2,9 @@
 
 为备份恢复提供可选配置参数。@interface BackupParams
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-backup-interface BackupParams--><!--Device-backup-interface BackupParams-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -26,11 +26,10 @@ parameters?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-BackupParams-parameters?: string--><!--Device-BackupParams-parameters?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
-

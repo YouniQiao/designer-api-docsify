@@ -16,32 +16,32 @@ Creates a MediaKeySystem instance.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-drm-function createMediaKeySystem(name: string): MediaKeySystem--><!--Device-drm-function createMediaKeySystem(name: string): MediaKeySystem-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | DRM solution name, for example, **"com.clearplay.drm"**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [MediaKeySystem](arkts-drm-drm-mediakeysystem-i.md) | MediaKeySystem instance. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [MediaKeySystem](arkts-drm-drm-mediakeysystem-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-| [24700103](../errorcode-drm.md#24700103-too-many-mediakeysystem-instances) | Meet max MediaKeySystem num limit. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| [24700103](../errorcode-drm.md#24700103-too-many-mediakeysystem-instances) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
 
 **Examples**
 
@@ -67,32 +67,31 @@ Creates a MediaKeySystem instance.
 
 **Since:** 23
 
-<!--Device-drm-function createMediaKeySystem(name: string): MediaKeySystem | undefined--><!--Device-drm-function createMediaKeySystem(name: string): MediaKeySystem | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Used to point a Digital Right Management solution. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [MediaKeySystem](arkts-drm-drm-mediakeysystem-i.md) \| undefined | The MediaKeySystem instance or undefined. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [MediaKeySystem](arkts-drm-drm-mediakeysystem-i.md) \| undefined |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-| [24700103](../errorcode-drm.md#24700103-too-many-mediakeysystem-instances) | Meet max MediaKeySystem num limit. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| [24700103](../errorcode-drm.md#24700103-too-many-mediakeysystem-instances) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
 
 **Examples**
 
 See [createMediaKeySystem](#createmediakeysystem)
-

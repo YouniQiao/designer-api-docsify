@@ -7,9 +7,9 @@
 > - 本模块使用屏幕物理像素单位px。&gt;
 > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-drawing-class Region--><!--Device-drawing-class Region-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -27,9 +27,9 @@ constructor()
 
 构造一个区域对象。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Region-constructor()--><!--Device-Region-constructor()-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -325,17 +325,17 @@ constructor(region: Region)
 
 拷贝一个区域对象。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Region-constructor(region: Region)--><!--Device-Region-constructor(region: Region)-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| region | Region | 是 | 用于拷贝的区域。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | 是 |
 
 **示例**
 
@@ -343,26 +343,32 @@ constructor(region: Region)
 
 ## constructor
 
+ArkTS-Dyn:
+```TypeScript
+constructor(left: number, top: number, right: number, bottom: number)
+```
+
+ArkTS-Sta:
 ```TypeScript
 constructor(left: int, top: int, right: int, bottom: int)
 ```
 
 构造矩形区域。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Region-constructor(left: int, top: int, right: int, bottom: int)--><!--Device-Region-constructor(left: int, top: int, right: int, bottom: int)-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| left | int | 是 | 矩形区域的左侧位置（矩形左上角横坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
-| top | int | 是 | 矩形区域的顶部位置（矩形左上角纵坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
-| right | int | 是 | 矩形区域的右侧位置（矩形右下角横坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
-| bottom | int | 是 | 矩形区域的底部位置（矩形右下角纵坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| left | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| top | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| right | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| bottom | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **示例**
 
@@ -378,15 +384,15 @@ getBoundaryPath(): Path
 
 **起始版本：** 20
 
-<!--Device-Region-getBoundaryPath(): Path--><!--Device-Region-getBoundaryPath(): Path-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Path | 返回当前区域边界的路径。 |
+| 类型 |
+| --- |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) |
 
 **示例**
 
@@ -406,15 +412,15 @@ getBoundaryPath(): Path | undefined
 
 **起始版本：** 24
 
-<!--Device-Region-getBoundaryPath(): Path | undefined--><!--Device-Region-getBoundaryPath(): Path | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Path \| undefined | 返回当前区域边界的路径。 |
+| 类型 |
+| --- |
+| Path \| undefined |
 
 **示例**
 
@@ -430,15 +436,15 @@ getBounds(): common2D.Rect
 
 **起始版本：** 20
 
-<!--Device-Region-getBounds(): common2D.Rect--><!--Device-Region-getBounds(): common2D.Rect-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| common2D.Rect | 返回当前区域的边界矩形。 |
+| 类型 |
+| --- |
+| common2D.Rect |
 
 **示例**
 
@@ -521,15 +527,15 @@ getBounds(): common2D.Rect | undefined
 
 **起始版本：** 24
 
-<!--Device-Region-getBounds(): common2D.Rect | undefined--><!--Device-Region-getBounds(): common2D.Rect | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| common2D.Rect \| undefined | 返回当前区域的边界矩形。 |
+| 类型 |
+| --- |
+| common2D.Rect \| undefined |
 
 **示例**
 
@@ -543,17 +549,17 @@ isComplex(): boolean
 
 判断当前区域是否包含多个矩形。
 
-**起始版本：** 24
+**起始版本：** 20
 
-<!--Device-Region-isComplex(): boolean--><!--Device-Region-isComplex(): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回当前区域是否包含多个矩形的结果。true表示当前区域包含多个矩形，false表示当前区域不包含多个矩形。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -588,17 +594,17 @@ isEmpty(): boolean
 
 判断当前区域是否为空。
 
-**起始版本：** 24
+**起始版本：** 20
 
-<!--Device-Region-isEmpty(): boolean--><!--Device-Region-isEmpty(): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回当前区域是否为空的结果。true表示当前区域为空，false表示当前区域不为空。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -672,23 +678,23 @@ isEqual(other: Region): boolean
 
 判断指定区域是否与当前区域相等。
 
-**起始版本：** 24
+**起始版本：** 20
 
-<!--Device-Region-isEqual(other: Region): boolean--><!--Device-Region-isEqual(other: Region): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Region | 是 | 用于与当前区域进行比较的其他区域对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [Region](arkts-arkgraphics2d-drawing-region-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回其他区域是否与当前区域相等的结果。true表示相等，false表示不相等。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -801,36 +807,42 @@ class DrawingRenderNode extends RenderNode {
 
 ## isPointContained
 
+ArkTS-Dyn:
+```TypeScript
+isPointContained(x: number, y:number): boolean
+```
+
+ArkTS-Sta:
 ```TypeScript
 isPointContained(x: int, y:int): boolean
 ```
 
 判断测试点是否在区域内。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Region-isPointContained(x: int, y:int): boolean--><!--Device-Region-isPointContained(x: int, y:int): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| x | int | 是 | 测试点的x轴坐标。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| y | int | 是 | 测试点的y轴坐标。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| x | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| y | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回测试点是否在区域内的结果。true表示测试点在区域内，false表示测试点不在区域内。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -867,17 +879,17 @@ isRect(): boolean
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-Region-isRect(): boolean--><!--Device-Region-isRect(): boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回当前区域是否等同于单个矩形的结果。true表示当前区域等同于单个矩形，false表示当前区域不等同于单个矩形。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -933,29 +945,29 @@ isRegionContained(other: Region): boolean
 
 判断其他区域是否在当前区域内。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Region-isRegionContained(other: Region): boolean--><!--Device-Region-isRegionContained(other: Region): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Region | 是 | 用于判断是否在当前区域内的其他区域对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [Region](arkts-arkgraphics2d-drawing-region-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回其他区域是否在当前区域内的结果。true表示其他区域在当前区域内，false表示其他区域不在当前区域内。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -986,24 +998,30 @@ class DrawingRenderNode extends RenderNode {
 
 ## offset
 
+ArkTS-Dyn:
+```TypeScript
+offset(dx: number, dy: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 offset(dx: int, dy: int): void
 ```
 
 对区域进行平移。
 
-**起始版本：** 24
+**起始版本：** 20
 
-<!--Device-Region-offset(dx: int, dy: int): void--><!--Device-Region-offset(dx: int, dy: int): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dx | int | 是 | x轴方向平移量，正数往x轴正方向平移，负数往x轴负方向平移，该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| dy | int | 是 | y轴方向平移量，正数往y轴正方向平移，负数往y轴负方向平移，该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dx | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| dy | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **示例**
 
@@ -1078,30 +1096,30 @@ op(region: Region, regionOp: RegionOp): boolean
 
 将当前区域与指定区域进行运算，并替换为运算结果。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Region-op(region: Region, regionOp: RegionOp): boolean--><!--Device-Region-op(region: Region, regionOp: RegionOp): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| region | Region | 是 | 用于与当前区域进行运算的指定区域对象。 |
-| regionOp | [RegionOp](arkts-arkgraphics2d-drawing-regionop-e.md) | 是 | 区域运算操作类型。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | 是 |
+| regionOp | [RegionOp](arkts-arkgraphics2d-drawing-regionop-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回区域运算结果是否成功替换当前区域的结果。true表示区域运算结果替换当前区域成功，false表示区域运算结果替换当前区域失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1168,6 +1186,12 @@ class DrawingRenderNode extends RenderNode {
 
 ## quickContains
 
+ArkTS-Dyn:
+```TypeScript
+quickContains(left: number, top: number, right: number, bottom: number): boolean
+```
+
+ArkTS-Sta:
 ```TypeScript
 quickContains(left: int, top: int, right: int, bottom: int): boolean
 ```
@@ -1176,26 +1200,26 @@ quickContains(left: int, top: int, right: int, bottom: int): boolean
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-Region-quickContains(left: int, top: int, right: int, bottom: int): boolean--><!--Device-Region-quickContains(left: int, top: int, right: int, bottom: int): boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| left | int | 是 | 矩形区域的左侧位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| top | int | 是 | 矩形区域的顶部位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| right | int | 是 | 矩形区域的右侧位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| bottom | int | 是 | 矩形区域的底部位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| left | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| top | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| right | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| bottom | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回判断结果。true表示当前区域等同于单个矩形且包含指定矩形，false表示当前区域不等同于单个矩形或不包含指定矩形。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -1227,38 +1251,44 @@ class DrawingRenderNode extends RenderNode {
 
 ## quickReject
 
+ArkTS-Dyn:
+```TypeScript
+quickReject(left: number, top: number, right: number, bottom: number): boolean
+```
+
+ArkTS-Sta:
 ```TypeScript
 quickReject(left: int, top: int, right: int, bottom: int): boolean
 ```
 
 快速判断矩形和区域是否不相交。实际上比较的是矩形和区域的外接矩形是否不相交，因此当外接矩形相交但实际区域不相交时，会返回false（即误判为相交）。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Region-quickReject(left: int, top: int, right: int, bottom: int): boolean--><!--Device-Region-quickReject(left: int, top: int, right: int, bottom: int): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| left | int | 是 | 矩形区域的左侧位置（矩形左上角横坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| top | int | 是 | 矩形区域的顶部位置（矩形左上角纵坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| right | int | 是 | 矩形区域的右侧位置（矩形右下角横坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| bottom | int | 是 | 矩形区域的底部位置（矩形右下角纵坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| left | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| top | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| right | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| bottom | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回矩形是否与区域不相交的结果。true表示矩形与区域不相交，false表示矩形与区域相交。当矩形与区域仅点或边相交时，也返回true。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1318,23 +1348,23 @@ quickRejectRegion(region: Region): boolean
 
 判断当前区域是否与指定区域不相交。实际上比较的是两个区域的外接矩形是否不相交，因此当外接矩形相交但实际区域不相交时，会返回false（即误判为相交）。
 
-**起始版本：** 24
+**起始版本：** 20
 
-<!--Device-Region-quickRejectRegion(region: Region): boolean--><!--Device-Region-quickRejectRegion(region: Region): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| region | Region | 是 | 用于判断是否与当前区域不相交的指定区域对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回当前区域与另一个区域是否不相交的结果。true表示不相交，false表示相交。当两个区域仅点或边相交时，也返回true。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -1369,9 +1399,9 @@ setEmpty(): void
 
 设置当前区域为空。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Region-setEmpty(): void--><!--Device-Region-setEmpty(): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1429,30 +1459,30 @@ setPath(path: Path, clip: Region): boolean
 
 设置一个与裁剪区域内路径轮廓相匹配的区域。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Region-setPath(path: Path, clip: Region): boolean--><!--Device-Region-setPath(path: Path, clip: Region): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | Path | 是 | 用于设置区域轮廓的路径对象。 |
-| clip | Region | 是 | 裁剪区域对象，用于限定路径轮廓的有效范围，仅路径在裁剪区域内的部分会被用于设置区域。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 |
+| clip | [Region](arkts-arkgraphics2d-drawing-region-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回设置区域是否成功的结果。true表示设置成功，false表示设置失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1510,38 +1540,44 @@ class DrawingRenderNode extends RenderNode {
 
 ## setRect
 
+ArkTS-Dyn:
+```TypeScript
+setRect(left: number, top: number, right: number, bottom: number): boolean
+```
+
+ArkTS-Sta:
 ```TypeScript
 setRect(left: int, top: int, right: int, bottom: int): boolean
 ```
 
 设置一个矩形区域。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Region-setRect(left: int, top: int, right: int, bottom: int): boolean--><!--Device-Region-setRect(left: int, top: int, right: int, bottom: int): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| left | int | 是 | 矩形区域的左侧位置（矩形左上角横坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| top | int | 是 | 矩形区域的顶部位置（矩形左上角纵坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| right | int | 是 | 矩形区域的右侧位置（矩形右下角横坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
-| bottom | int | 是 | 矩形区域的底部位置（矩形右下角纵坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| left | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| top | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| right | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| bottom | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回设置矩形区域是否成功的结果。true表示设置矩形区域成功，false表示设置矩形区域失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1629,17 +1665,17 @@ setRegion(region: Region): void
 
 设置当前区域为指定区域。
 
-**起始版本：** 24
+**起始版本：** 20
 
-<!--Device-Region-setRegion(region: Region): void--><!--Device-Region-setRegion(region: Region): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| region | Region | 是 | 用于设置当前区域内容的源区域对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | 是 |
 
 **示例**
 
@@ -1663,4 +1699,3 @@ class DrawingRenderNode extends RenderNode {
   }
 }
 ```
-

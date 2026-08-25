@@ -16,6 +16,8 @@ Obtains the list of Bluetooth devices that have been paired with the current dev
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** [getPairedDevices](arkts-connectivity-connection-getpaireddevices-f.md)
@@ -24,25 +26,23 @@ Obtains the list of Bluetooth devices that have been paired with the current dev
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
-<!--Device-bluetoothManager-function getPairedDevices(): Array<string>--><!--Device-bluetoothManager-function getPairedDevices(): Array<string>-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;string&gt; | Returns a list of paired Bluetooth devices's address. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2900001 | Service stopped. |
-| 2900003 | Bluetooth disabled. |
-| 2900099 | Operation failed. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| 2900001 |
+| 2900003 |
+| 2900099 |
 
 **Examples**
 
@@ -54,4 +54,3 @@ try {
     console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
 }
 ```
-

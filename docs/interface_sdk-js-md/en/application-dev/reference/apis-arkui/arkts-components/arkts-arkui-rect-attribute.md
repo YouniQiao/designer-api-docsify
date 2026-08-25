@@ -6,7 +6,7 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 7
 
-<!--Device-unnamed-declare class RectAttribute--><!--Device-unnamed-declare class RectAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,19 +25,19 @@ Sets the radius of the rounded corner. The value must be greater than or equal t
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-RectAttribute-radius(value: Length | Array<any>): RectAttribute--><!--Device-RectAttribute-radius(value: Length | Array<any>): RectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Length \| Array&lt;any&gt; | Yes | Radius of the rounded corner. You can set separate radii for the four rounded corners.<br>Default value: **0**<br>Default unit: vp<br>Invalid values **undefined** and **null** are treated as **[[0, 0], [0, 0], [0, 0], [0, 0]]**.<br>**Since:** 20 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | Length \| Array & lt;any & gt; | Yes |
 
 ## radiusHeight
 
@@ -49,19 +49,19 @@ Sets the height of the rounded corner. The width and height are the same when on
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-RectAttribute-radiusHeight(value: Length): RectAttribute--><!--Device-RectAttribute-radiusHeight(value: Length): RectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Length | Yes | Height of the rounded corner. The value must be greater than or equal to 0.<br>Default value: **0**<br>Default unit: vp<br>The **undefined** value is invalid and treated as the default value.<br>**Since:** 20 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
 
 ## radiusWidth
 
@@ -73,17 +73,16 @@ Sets the width of the rounded corner. The width and height are the same when onl
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-RectAttribute-radiusWidth(value: Length): RectAttribute--><!--Device-RectAttribute-radiusWidth(value: Length): RectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Length | Yes | Width of the rounded corner. The value must be greater than or equal to 0.<br>Default value: **0**<br>Default unit: vp<br>The **undefined** value is invalid and treated as the default value.<br>**Since:** 20 |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |

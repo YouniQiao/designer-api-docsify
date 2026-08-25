@@ -17,15 +17,14 @@ Requests the recreation of the Hyper Snap process snapshot for the application.W
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-hyperSnapManager-function requestRebuildHyperSnap(): void--><!--Device-hyperSnapManager-function requestRebuildHyperSnap(): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 16000150 | Failed to send request to system service. |
-
+| Error Code ID |
+| --- |
+| 16000150 |

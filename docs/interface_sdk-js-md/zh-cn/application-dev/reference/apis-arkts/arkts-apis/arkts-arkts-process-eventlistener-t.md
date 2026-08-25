@@ -8,15 +8,14 @@ type EventListener = (evt: Object) => void
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-process-type EventListener = (evt: Object) => void--><!--Device-process-type EventListener = (evt: Object) => void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| evt | Object | 是 | 用户事件。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| evt | Object | 是 |

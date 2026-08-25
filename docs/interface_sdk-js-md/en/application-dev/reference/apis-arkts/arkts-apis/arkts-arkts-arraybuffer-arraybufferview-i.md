@@ -4,9 +4,7 @@ Interface representing a view of an ArrayBuffer.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export interface ArrayBufferView--><!--Device-unnamed-export interface ArrayBufferView-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,11 +25,9 @@ The ArrayBuffer instance referenced by the array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBufferView-readonly buffer: ArrayBuffer--><!--Device-ArrayBufferView-readonly buffer: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -47,11 +43,9 @@ The length in bytes of the array. The value must be an integer greater than or e
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBufferView-readonly byteLength: int--><!--Device-ArrayBufferView-readonly byteLength: int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -67,11 +61,8 @@ The offset in bytes of the array. The value must be an integer greater than or e
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ArrayBufferView-readonly byteOffset: int--><!--Device-ArrayBufferView-readonly byteOffset: int-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

@@ -2,9 +2,9 @@
 
 Defines the scanner parameters.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-scan-interface ScannerParameter--><!--Device-scan-interface ScannerParameter-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -22,11 +22,11 @@ optionConstraintInt?: int[]
 
 Integer constraints of the option.
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScannerParameter-optionConstraintInt?: int[]--><!--Device-ScannerParameter-optionConstraintInt?: int[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -40,9 +40,9 @@ Range constraint of the option.
 
 **Type:** Range
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScannerParameter-optionConstraintRange?: Range--><!--Device-ScannerParameter-optionConstraintRange?: Range-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -56,9 +56,9 @@ String constraints of the option.
 
 **Type:** string[]
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScannerParameter-optionConstraintString?: string[]--><!--Device-ScannerParameter-optionConstraintString?: string[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -72,9 +72,9 @@ Constraint type of the option.
 
 **Type:** [ConstraintType](arkts-basicservices-scan-constrainttype-e.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScannerParameter-optionConstraintType: ConstraintType--><!--Device-ScannerParameter-optionConstraintType: ConstraintType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -88,9 +88,9 @@ Option description.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScannerParameter-optionDesc: string--><!--Device-ScannerParameter-optionDesc: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -102,11 +102,11 @@ optionIndex: int
 
 Option index.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScannerParameter-optionIndex: int--><!--Device-ScannerParameter-optionIndex: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -120,9 +120,9 @@ Option name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScannerParameter-optionName: string--><!--Device-ScannerParameter-optionName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -136,9 +136,9 @@ Option title.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScannerParameter-optionTitle: string--><!--Device-ScannerParameter-optionTitle: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -152,9 +152,9 @@ Option value type.
 
 **Type:** [OptionValueType](arkts-basicservices-scan-optionvaluetype-e.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScannerParameter-optionType: OptionValueType--><!--Device-ScannerParameter-optionType: OptionValueType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -168,9 +168,8 @@ Physical unit of the option.
 
 **Type:** [PhysicalUnit](arkts-basicservices-scan-physicalunit-e.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScannerParameter-optionUnit: PhysicalUnit--><!--Device-ScannerParameter-optionUnit: PhysicalUnit-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
-

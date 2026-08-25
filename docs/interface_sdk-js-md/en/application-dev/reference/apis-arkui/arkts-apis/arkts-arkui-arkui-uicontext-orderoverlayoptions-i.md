@@ -4,7 +4,7 @@ Options for opening an overlay with order.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export interface OrderOverlayOptions--><!--Device-unnamed-export interface OrderOverlayOptions-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,11 +29,11 @@ The display mode of the overlay.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OrderOverlayOptions-levelMode?: LevelMode--><!--Device-OrderOverlayOptions-levelMode?: LevelMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,11 +49,11 @@ The display order of the overlay.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OrderOverlayOptions-levelOrder?: LevelOrder--><!--Device-OrderOverlayOptions-levelOrder?: LevelOrder-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,15 +65,14 @@ levelUniqueId?: int
 
 The uniqueId of any node in the router or navigation page.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-OrderOverlayOptions-levelUniqueId?: int--><!--Device-OrderOverlayOptions-levelUniqueId?: int-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

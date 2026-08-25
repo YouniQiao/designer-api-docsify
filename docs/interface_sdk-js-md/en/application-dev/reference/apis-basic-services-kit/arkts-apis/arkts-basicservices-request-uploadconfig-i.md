@@ -2,9 +2,9 @@
 
 Describes the configuration of an upload task.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-request-interface UploadConfig--><!--Device-request-interface UploadConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -22,11 +22,11 @@ begins?: long
 
 File start point to read when the upload task begins, in bytes. The default value is **0**. The value is a closed interval, indicating that the file is read from the beginning.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-UploadConfig-begins?: long--><!--Device-UploadConfig-begins?: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -40,9 +40,9 @@ Form data in the request body.
 
 **Type:** Array&lt;RequestData&gt;
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-UploadConfig-data: Array<RequestData>--><!--Device-UploadConfig-data: Array<RequestData>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -54,11 +54,11 @@ ends?: long
 
 File end point to read when the upload task ends, in bytes. The default value is **-1**. The value is a closed interval, indicating that the file is read till the end.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-UploadConfig-ends?: long--><!--Device-UploadConfig-ends?: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -72,25 +72,25 @@ List of files to upload. The files are submitted in multipart/form-data format.
 
 **Type:** Array&lt;File&gt;
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-UploadConfig-files: Array<File>--><!--Device-UploadConfig-files: Array<File>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Upload
 
 ## header
 
 ```TypeScript
-header: Record<string, string>
+header: Object
 ```
 
-Adds an HTTP or HTTPS header to be included with the upload request.
+HTTP or HTTPS header added to an upload request.
 
-**Type:** Record&lt;string, string&gt;
+**Type:** Object
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-UploadConfig-header: Record<string, string>--><!--Device-UploadConfig-header: Record<string, string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -102,11 +102,11 @@ index?: int
 
 Path index of the task. The default value is **0**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-UploadConfig-index?: int--><!--Device-UploadConfig-index?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -120,9 +120,9 @@ HTTP request method. The value can be **POST** or **PUT**. The default value is 
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-UploadConfig-method: string--><!--Device-UploadConfig-method: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -136,9 +136,8 @@ Resource URL. From API version 6 to 14, the value contains a maximum of 2048 cha
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-UploadConfig-url: string--><!--Device-UploadConfig-url: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Upload
-

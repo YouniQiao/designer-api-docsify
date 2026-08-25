@@ -4,11 +4,11 @@ Enumerates the data types.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** ValueType
-
-<!--Device-distributedData-enum ValueType--><!--Device-distributedData-enum ValueType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -22,11 +22,11 @@ String.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** STRING
-
-<!--Device-ValueType-STRING = 0--><!--Device-ValueType-STRING = 0-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -40,11 +40,11 @@ Integer.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** INTEGER
-
-<!--Device-ValueType-INTEGER = 1--><!--Device-ValueType-INTEGER = 1-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -58,11 +58,11 @@ Float (single-precision floating point).
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** FLOAT
-
-<!--Device-ValueType-FLOAT = 2--><!--Device-ValueType-FLOAT = 2-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -76,11 +76,11 @@ Byte array.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** BYTE_ARRAY
-
-<!--Device-ValueType-BYTE_ARRAY = 3--><!--Device-ValueType-BYTE_ARRAY = 3-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -94,11 +94,11 @@ Boolean.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** BOOLEAN
-
-<!--Device-ValueType-BOOLEAN = 4--><!--Device-ValueType-BOOLEAN = 4-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -112,11 +112,10 @@ Double (double-precision floating point).
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** DOUBLE
 
-<!--Device-ValueType-DOUBLE = 5--><!--Device-ValueType-DOUBLE = 5-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
-

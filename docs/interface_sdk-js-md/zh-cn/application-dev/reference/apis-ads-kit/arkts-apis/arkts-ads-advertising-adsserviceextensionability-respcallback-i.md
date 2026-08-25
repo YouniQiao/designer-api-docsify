@@ -4,7 +4,7 @@
 
 **起始版本：** 11
 
-<!--Device-unnamed-export interface RespCallback--><!--Device-unnamed-export interface RespCallback-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -14,7 +14,7 @@
 import { AdsServiceExtensionAbility, RespCallback } from '@kit.AdsKit';
 ```
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (respData: Map<string, Array<advertising.Advertisement>>): void
@@ -24,15 +24,15 @@ import { AdsServiceExtensionAbility, RespCallback } from '@kit.AdsKit';
 
 **起始版本：** 11
 
-<!--Device-RespCallback-(respData: Map<string, Array<advertising.Advertisement>>): void--><!--Device-RespCallback-(respData: Map<string, Array<advertising.Advertisement>>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| respData | Map&lt;string, Array&lt;advertising.Advertisement&gt;&gt; | 是 | 广告请求回调数据，是以广告位ID为键， 存储请求到的广告内容的映射集合。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| respData | Map & lt;string, Array & lt;advertising.Advertisement & gt; & gt; | 是 |
 
 **示例**
 
@@ -46,4 +46,3 @@ function setRespCallback(respCallback: RespCallback) {
   respCallback(respData);
 }
 ```
-

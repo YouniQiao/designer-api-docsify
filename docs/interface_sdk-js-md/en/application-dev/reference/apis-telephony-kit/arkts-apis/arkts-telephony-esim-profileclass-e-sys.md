@@ -2,9 +2,9 @@
 
 Enumerates the profile classes.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-eSIM-export enum ProfileClass--><!--Device-eSIM-export enum ProfileClass-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -18,9 +18,9 @@ PROFILE_CLASS_UNSPECIFIED = -1
 
 Profile class unspecified.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ProfileClass-PROFILE_CLASS_UNSPECIFIED = -1--><!--Device-ProfileClass-PROFILE_CLASS_UNSPECIFIED = -1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -34,9 +34,9 @@ PROFILE_CLASS_TEST = 0
 
 Test profile.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ProfileClass-PROFILE_CLASS_TEST = 0--><!--Device-ProfileClass-PROFILE_CLASS_TEST = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -50,9 +50,9 @@ PROFILE_CLASS_PROVISIONING = 1
 
 Profile preloaded to the eUICC.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ProfileClass-PROFILE_CLASS_PROVISIONING = 1--><!--Device-ProfileClass-PROFILE_CLASS_PROVISIONING = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -66,11 +66,10 @@ PROFILE_CLASS_OPERATIONAL = 2
 
 Profile that can be preloaded or downloaded.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ProfileClass-PROFILE_CLASS_OPERATIONAL = 2--><!--Device-ProfileClass-PROFILE_CLASS_OPERATIONAL = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
-

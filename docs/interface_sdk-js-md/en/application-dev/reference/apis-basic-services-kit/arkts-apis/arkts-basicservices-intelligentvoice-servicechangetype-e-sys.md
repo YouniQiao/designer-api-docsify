@@ -2,9 +2,9 @@
 
 Enumerates service change type. @enum {number}
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-intelligentVoice-enum ServiceChangeType--><!--Device-intelligentVoice-enum ServiceChangeType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -18,11 +18,10 @@ SERVICE_UNAVAILABLE = 0
 
 Service unavailable.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ServiceChangeType-SERVICE_UNAVAILABLE = 0--><!--Device-ServiceChangeType-SERVICE_UNAVAILABLE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
-

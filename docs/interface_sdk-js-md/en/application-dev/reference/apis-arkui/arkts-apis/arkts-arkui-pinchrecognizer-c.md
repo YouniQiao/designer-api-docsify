@@ -6,7 +6,7 @@ Implements a pinch gesture recognizer. Inherits from [GestureRecognizer](arkts-a
 
 **Since:** 18
 
-<!--Device-unnamed-declare class PinchRecognizer--><!--Device-unnamed-declare class PinchRecognizer-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,17 +25,16 @@ Obtains the minimum distance required for the pinch gesture to be recognized.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-PinchRecognizer-getDistance(): number--><!--Device-PinchRecognizer-getDistance(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Minimum distance required for the pinch gesture to be recognized, in vp. <br>Value range: [0, +∞) |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |

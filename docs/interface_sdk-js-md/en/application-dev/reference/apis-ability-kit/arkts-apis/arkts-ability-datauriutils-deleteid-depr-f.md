@@ -15,25 +15,25 @@ Deletes the ID from the end of a given URI.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [deleteId](arkts-ability-datauriutils-deleteid-f.md)
-
-<!--Device-dataUriUtils-function deleteId(uri: string): string--><!--Device-dataUriUtils-function deleteId(uri: string): string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | URI object from which the ID is to be deleted. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | URI object with the ID deleted. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -42,4 +42,3 @@ import dataUriUtils from '@ohos.ability.dataUriUtils';
 
 let uri = dataUriUtils.deleteId('com.example.dataUriUtils/1221');
 ```
-

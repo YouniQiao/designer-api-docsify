@@ -4,9 +4,7 @@ Defines LineHeightStyle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare class LineHeightStyle--><!--Device-unnamed-export declare class LineHeightStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,19 +18,17 @@ constructor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-LineHeightStyle-constructor(lineHeight: LengthMetrics)--><!--Device-LineHeightStyle-constructor(lineHeight: LengthMetrics)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | line height value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [lineHeight](#lineheight) | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes |
 
 ## constructor
 
@@ -44,20 +40,18 @@ constructor.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-LineHeightStyle-constructor(lineHeight: LengthMetrics, lineHeightMultiple: double)--><!--Device-LineHeightStyle-constructor(lineHeight: LengthMetrics, lineHeightMultiple: double)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | line height value. |
-| lineHeightMultiple | double | Yes | line height multiple value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [lineHeight](#lineheight) | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes |
+| [lineHeightMultiple](#lineheightmultiple) | double | Yes |
 
 ## lineHeight
 
@@ -71,11 +65,9 @@ Get the lineHeight value of the StyledString. The unit is vp.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-LineHeightStyle-readonly lineHeight: double--><!--Device-LineHeightStyle-readonly lineHeight: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -91,11 +83,8 @@ Get the lineHeightMultiple value of the StyledString. The unit is vp.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-LineHeightStyle-readonly lineHeightMultiple?: double--><!--Device-LineHeightStyle-readonly lineHeightMultiple?: double-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

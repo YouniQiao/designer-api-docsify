@@ -4,7 +4,7 @@ For details about how to use LocalStorage on the UI, see [LocalStorage: UI State
 
 **Since:** 9
 
-<!--Device-unnamed-declare class LocalStorage--><!--Device-unnamed-declare class LocalStorage-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,19 +23,19 @@ Deletes all properties from [LocalStorage](../../../ui/state-management/arkts-lo
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-LocalStorage-clear(): boolean--><!--Device-LocalStorage-clear(): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -60,19 +60,19 @@ Creates a [LocalStorage](../../../ui/state-management/arkts-localstorage.md) ins
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-LocalStorage-constructor(initializingProperties?: Object)--><!--Device-LocalStorage-constructor(initializingProperties?: Object)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| initializingProperties | Object | No | Properties and values used to initialize the **LocalStorage** instance. **initializingProperties** cannot be set to **undefined**. The default value is an empty object, meaning no properties are added to LocalStorage during initialization. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| initializingProperties | Object | No |
 
 **Examples**
 
@@ -99,25 +99,25 @@ of **SubscribedAbstractProperty** returned by **link**, **prop**, **setAndLink**
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-LocalStorage-delete(propName: string): boolean--><!--Device-LocalStorage-delete(propName: string): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| propName | string | Yes | Property name in LocalStorage. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| propName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** if the operation fails. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -150,25 +150,25 @@ Obtains the value of the property corresponding to **propName** from [LocalStora
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-LocalStorage-get<T>(propName: string): T | undefined--><!--Device-LocalStorage-get<T>(propName: string): T | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| propName | string | Yes | Property name in LocalStorage. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| propName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T \| undefined | Value of the property corresponding to **propName** in LocalStorage, or **undefined** if it does not exist. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| T \| undefined |
 
 **Examples**
 
@@ -205,6 +205,8 @@ Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) i
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** [getShared](#getshared)
@@ -213,15 +215,13 @@ Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) i
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-LocalStorage-static GetShared(): LocalStorage--><!--Device-LocalStorage-static GetShared(): LocalStorage-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [LocalStorage](arkts-arkui-localstorage-c.md) | LocalStorage** instance. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [LocalStorage](arkts-arkui-localstorage-c.md) |
 
 **Examples**
 
@@ -240,14 +240,16 @@ Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) i
 > **NOTE：**
 
 > Since API version 12, you can use the
-> [getSharedLocalStorage](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)
-> API in [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to specify the UI execution context.
+> [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)
+> API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to specify the UI execution context.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 18
 
-**Substitutes:** [getSharedLocalStorage](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)
+**Substitutes:** [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -255,15 +257,13 @@ Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) i
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
-<!--Device-LocalStorage-static getShared(): LocalStorage--><!--Device-LocalStorage-static getShared(): LocalStorage-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [LocalStorage](arkts-arkui-localstorage-c.md) | LocalStorage** instance. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [LocalStorage](arkts-arkui-localstorage-c.md) |
 
 ## has
 
@@ -275,25 +275,25 @@ Checks whether the property corresponding to **propName** exists in [LocalStorag
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-LocalStorage-has(propName: string): boolean--><!--Device-LocalStorage-has(propName: string): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| propName | string | Yes | Property name in LocalStorage. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| propName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the property exists in LocalStorage; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -317,19 +317,19 @@ Obtains all property names in [LocalStorage](../../../ui/state-management/arkts-
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-LocalStorage-keys(): IterableIterator<string>--><!--Device-LocalStorage-keys(): IterableIterator<string>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;string&gt; | All property names in LocalStorage. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;string & gt; |
 
 **Examples**
 
@@ -367,25 +367,25 @@ Establishes a two-way data binding with the property corresponding to **propName
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-LocalStorage-link<T>(propName: string): SubscribedAbstractProperty<T>--><!--Device-LocalStorage-link<T>(propName: string): SubscribedAbstractProperty<T>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| propName | string | Yes | Property name in LocalStorage. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| propName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Returns the **SubscribedAbstractProperty&lt;T&gt;** instance if the given property exists in LocalStorage; returns **undefined** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
 
 **Examples**
 
@@ -414,25 +414,25 @@ Establishes a one-way data binding with the property corresponding to **propName
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-LocalStorage-prop<S>(propName: string): SubscribedAbstractProperty<S>--><!--Device-LocalStorage-prop<S>(propName: string): SubscribedAbstractProperty<S>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| propName | string | Yes | Property name in LocalStorage. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| propName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;S&gt; | Instance of **SubscribedAbstractProperty&lt;S&gt;** and one-way bound data of the given property in LocalStorage. If the given property does not exist in LocalStorage, **undefined** is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;S&gt; |
 
 **Examples**
 
@@ -461,23 +461,23 @@ Returns a reference to the property corresponding to **propName** in [LocalStora
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-LocalStorage-public ref<T>(propName: string): AbstractProperty<T> | undefined--><!--Device-LocalStorage-public ref<T>(propName: string): AbstractProperty<T> | undefined-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| propName | string | Yes | Property name in LocalStorage. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| propName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; \| undefined | A reference to the property in LocalStorage, or **undefined** if the property does not exist. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; \| undefined |
 
 **Examples**
 
@@ -515,26 +515,26 @@ Sets the value of the property corresponding to **propName** in [LocalStorage](.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-LocalStorage-set<T>(propName: string, newValue: T): boolean--><!--Device-LocalStorage-set<T>(propName: string, newValue: T): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| propName | string | Yes | Property name in LocalStorage. |
-| newValue | T | Yes | Property value. Since API version 12, the value can be **null** or **undefined**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| propName | string | Yes |
+| newValue | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **false** if the property corresponding to **propName** does not exist in LocalStorage. Returns **true** if the operation is successful. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -605,26 +605,26 @@ Similar to the [link](#link) API, establishes a two-way data binding with the pr
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-LocalStorage-setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>--><!--Device-LocalStorage-setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| propName | string | Yes | Property name in LocalStorage. |
-| defaultValue | T | Yes | Default value used to initialize the property corresponding to **propName** in LocalStorage if **propName** does not exist. Since API version 12, **defaultValue** can be **null** or **undefined**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| propName | string | Yes |
+| defaultValue | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Instance of **SubscribedAbstractProperty&lt;T&gt;** and two-way bound data of the given property in LocalStorage. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
 
 **Examples**
 
@@ -660,26 +660,26 @@ Similar to the [prop](#prop) API, establishes a one-way data binding with the pr
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-LocalStorage-setAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractProperty<S>--><!--Device-LocalStorage-setAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractProperty<S>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| propName | string | Yes | Property name in LocalStorage. |
-| defaultValue | S | Yes | Default value used to initialize the property corresponding to **propName** in LocalStorage if **propName** does not exist. Since API version 12, **defaultValue** can be **null** or **undefined**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| propName | string | Yes |
+| defaultValue | S | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;S&gt; | Instance of **SubscribedAbstractProperty&lt;S&gt;** and one-way bound data of the given property in LocalStorage. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;S&gt; |
 
 **Examples**
 
@@ -713,24 +713,24 @@ Similar to the [ref](arkts-arkui-appstorage-c.md#ref) API, returns a reference t
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-LocalStorage-public setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>--><!--Device-LocalStorage-public setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| propName | string | Yes | Property name in LocalStorage. |
-| defaultValue | T | Yes | Default value used to initialize the property corresponding to **propName** in LocalStorage if **propName** does not exist. The value can be **null** or **undefined**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| propName | string | Yes |
+| defaultValue | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; | Instance of **AbstractProperty&lt;T&gt;**, which is a reference to the property in LocalStorage corresponding to **propName**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; |
 
 **Examples**
 
@@ -766,26 +766,26 @@ Sets the value of the property corresponding to **propName** in [LocalStorage](.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-LocalStorage-setOrCreate<T>(propName: string, newValue: T): boolean--><!--Device-LocalStorage-setOrCreate<T>(propName: string, newValue: T): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| propName | string | Yes | Property name in LocalStorage. |
-| newValue | T | Yes | Property value. Since API version 12, the value can be **null** or **undefined**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| propName | string | Yes |
+| newValue | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the property corresponding to **propName** exists and its value is updated to the value of **newValue**, <br>or if **propName** is created with the value of **newValue**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -811,19 +811,19 @@ Obtains the number of properties in [LocalStorage](../../../ui/state-management/
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-LocalStorage-size(): number--><!--Device-LocalStorage-size(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Number of properties in LocalStorage. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -837,4 +837,3 @@ let para: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(para);
 let res: number = storage.size(); // 1
 ```
-

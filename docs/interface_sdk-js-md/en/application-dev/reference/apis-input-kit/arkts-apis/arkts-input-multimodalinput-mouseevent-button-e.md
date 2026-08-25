@@ -2,9 +2,9 @@
 
 Enumerates mouse buttons.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export declare enum Button--><!--Device-unnamed-export declare enum Button-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -16,9 +16,9 @@ LEFT = 0
 
 Left button.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Button-LEFT = 0--><!--Device-Button-LEFT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -30,9 +30,9 @@ MIDDLE = 1
 
 Middle button.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Button-MIDDLE = 1--><!--Device-Button-MIDDLE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -44,9 +44,9 @@ RIGHT = 2
 
 Right button
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Button-RIGHT = 2--><!--Device-Button-RIGHT = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -58,9 +58,9 @@ SIDE = 3
 
 Side button.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Button-SIDE = 3--><!--Device-Button-SIDE = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -72,9 +72,9 @@ EXTRA = 4
 
 Extended button.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Button-EXTRA = 4--><!--Device-Button-EXTRA = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -86,9 +86,9 @@ FORWARD = 5
 
 Forward button.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Button-FORWARD = 5--><!--Device-Button-FORWARD = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -100,9 +100,9 @@ BACK = 6
 
 Back button.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Button-BACK = 6--><!--Device-Button-BACK = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -114,9 +114,8 @@ TASK = 7
 
 Task button.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Button-TASK = 7--><!--Device-Button-TASK = 7-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
-

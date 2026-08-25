@@ -6,7 +6,7 @@ Provides APIs for obtaining and modifying **Preferences** instances. **Preferenc
 
 **Since:** 12
 
-<!--Device-sendablePreferences-interface Preferences--><!--Device-sendablePreferences-interface Preferences-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -26,23 +26,23 @@ Clears this **Preferences** instance. This API uses a promise to return the resu
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Preferences-clear(): Promise<void>--><!--Device-Preferences-clear(): Promise<void>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 **Examples**
 
@@ -67,17 +67,17 @@ Clears this **Preferences** instance. This API returns the result synchronously.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Preferences-clearSync(): void--><!--Device-Preferences-clearSync(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 **Examples**
 
@@ -95,30 +95,30 @@ Deletes a KV pair from this **Preferences** instance. This API uses a promise to
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Preferences-delete(key: string): Promise<void>--><!--Device-Preferences-delete(key: string): Promise<void>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Key to be deleted. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](arkts-data-sendablepreferences.md#constants). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 **Examples**
 
@@ -143,24 +143,24 @@ Deletes a KV pair from this **Preferences** instance. This API returns the resul
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Preferences-deleteSync(key: string): void--><!--Device-Preferences-deleteSync(key: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Key to be deleted. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](arkts-data-sendablepreferences.md#constants). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 **Examples**
 
@@ -178,23 +178,23 @@ Flushes the data in this **Preferences** instance to the persistent file. This A
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Preferences-flush(): Promise<void>--><!--Device-Preferences-flush(): Promise<void>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 **Examples**
 
@@ -219,17 +219,17 @@ Flushes the data in the cached **Preferences** instance to the persistent file.
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
-<!--Device-Preferences-flushSync(): void--><!--Device-Preferences-flushSync(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 **Examples**
 
@@ -247,31 +247,31 @@ Obtains the value of a key from this **Preferences** instance. This API uses a p
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Preferences-get(key: string, defValue: lang.ISendable): Promise<lang.ISendable>--><!--Device-Preferences-get(key: string, defValue: lang.ISendable): Promise<lang.ISendable>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Key to be obtained. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](arkts-data-sendablepreferences.md#constants). |
-| defValue | lang.ISendable | Yes | Default value to be returned. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| defValue | lang.ISendable | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;lang.ISendable&gt; | Promise used to return the value obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;lang.ISendable & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 **Examples**
 
@@ -298,23 +298,23 @@ Obtains all KV pairs from this **Preferences** instance. This API uses a promise
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Preferences-getAll(): Promise<lang.ISendable>--><!--Device-Preferences-getAll(): Promise<lang.ISendable>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;lang.ISendable&gt; | Promise used to return the KV pairs obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;lang.ISendable & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 **Examples**
 
@@ -342,23 +342,23 @@ Obtains all KV pairs from this **Preferences** instance. This API returns the re
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Preferences-getAllSync(): lang.ISendable--><!--Device-Preferences-getAllSync(): lang.ISendable-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| lang.ISendable | All KV pairs obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| lang.ISendable |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 **Examples**
 
@@ -381,31 +381,31 @@ Obtains the value of a key from this **Preferences** instance. This API returns 
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Preferences-getSync(key: string, defValue: lang.ISendable): lang.ISendable--><!--Device-Preferences-getSync(key: string, defValue: lang.ISendable): lang.ISendable-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Key to be obtained. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](arkts-data-sendablepreferences.md#constants). |
-| defValue | lang.ISendable | Yes | Default value to be returned. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| defValue | lang.ISendable | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| lang.ISendable | Value obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| lang.ISendable |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 **Examples**
 
@@ -424,30 +424,30 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Preferences-has(key: string): Promise<boolean>--><!--Device-Preferences-has(key: string): Promise<boolean>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Key to be checked. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](arkts-data-sendablepreferences.md#constants). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the **Preferences** instance contains the KV pair; the value **false** means the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 **Examples**
 
@@ -476,30 +476,30 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Preferences-hasSync(key: string): boolean--><!--Device-Preferences-hasSync(key: string): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Key to be checked. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](arkts-data-sendablepreferences.md#constants). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | The value **true** means the **Preferences** instance contains the KV pair; the value **false** means the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 **Examples**
 
@@ -522,25 +522,25 @@ Unsubscribes from data changes.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Preferences-off(type: 'change', callback?: Callback<string>): void--><!--Device-Preferences-off(type: 'change', callback?: Callback<string>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'change' | Yes | Event type. The value is **'change'**, which indicates data changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'change' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 **Examples**
 
@@ -560,6 +560,54 @@ preferences.flush().then(() => {
 });
 ```
 
+## off('multiProcessChange')
+
+```TypeScript
+off(type: 'multiProcessChange', callback?: Callback<string>): void
+```
+
+Unsubscribes from inter-process data changes. This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-sendablepreferences-options-i.md). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
+
+**Since:** 12
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'multiProcessChange' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+};
+preferences.on('multiProcessChange', observer);
+preferences.putSync('startup', 'auto');
+preferences.flush().then(() => {
+  console.info("Succeeded in flushing.");
+  preferences.off('multiProcessChange', observer);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## off('dataChange')
 
 ```TypeScript
@@ -570,26 +618,26 @@ Unsubscribes from changes of specific data.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Preferences-off(type: 'dataChange', keys: Array<string>, callback?: Callback<lang.ISendable>): void--><!--Device-Preferences-off(type: 'dataChange', keys: Array<string>, callback?: Callback<lang.ISendable>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
-| keys | Array&lt;string&gt; | Yes | Keys to be unsubscribed from. If this parameter is not specified, this API unsubscribes from the changes of all keys. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the changes of the specified data. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'dataChange' | Yes |
+| keys | Array & lt;string & gt; | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 **Examples**
 
@@ -612,54 +660,6 @@ preferences.flush().then(() => {
 });
 ```
 
-## off('multiProcessChange')
-
-```TypeScript
-off(type: 'multiProcessChange', callback?: Callback<string>): void
-```
-
-Unsubscribes from inter-process data changes. This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-sendablepreferences-options-i.md). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Preferences-off(type: 'multiProcessChange', callback?: Callback<string>): void--><!--Device-Preferences-off(type: 'multiProcessChange', callback?: Callback<string>): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'multiProcessChange' | Yes | Event type. The value is **'multiProcessChange'**, which indicates inter- process data changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-};
-preferences.on('multiProcessChange', observer);
-preferences.putSync('startup', 'auto');
-preferences.flush().then(() => {
-  console.info("Succeeded in flushing.");
-  preferences.off('multiProcessChange', observer);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## on('change')
 
 ```TypeScript
@@ -670,25 +670,25 @@ Subscribes to data changes. The registered callback will be invoked to return th
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Preferences-on(type: 'change', callback: Callback<string>): void--><!--Device-Preferences-on(type: 'change', callback: Callback<string>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'change' | Yes | Event type. The value is **'change'**, which indicates data changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback used to return the key whose value is changed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'change' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 **Examples**
 
@@ -707,6 +707,54 @@ preferences.flush().then(() => {
 });
 ```
 
+## on('multiProcessChange')
+
+```TypeScript
+on(type: 'multiProcessChange', callback: Callback<string>): void
+```
+
+Subscribes to data changes between processes. When multiple processes hold the same preference file, calling [flush](#flush) in any process (including the current process) will trigger the callback in this API. This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-sendablepreferences-options-i.md). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
+
+**Since:** 12
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'multiProcessChange' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [15500019](../errorcode-preferences.md#15500019-failed-to-obtain-the-subscription-service) |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+};
+preferences.on('multiProcessChange', observer);
+preferences.putSync('startup', 'manual');
+preferences.flush().then(() => {
+  console.info("Succeeded in flushing.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## on('dataChange')
 
 ```TypeScript
@@ -717,26 +765,26 @@ Subscribes to changes of specific data. The registered callback will be invoked 
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Preferences-on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>): void--><!--Device-Preferences-on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
-| keys | Array&lt;string&gt; | Yes | Keys to be observed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | Yes | Callback used to return the KV pairs changed. The keys are the keys observed, and the values are the new values. The values support the following types: number, string, boolean, bigint, and serializable object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'dataChange' | Yes |
+| keys | Array & lt;string & gt; | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 **Examples**
 
@@ -758,54 +806,6 @@ preferences.flush().then(() => {
 });
 ```
 
-## on('multiProcessChange')
-
-```TypeScript
-on(type: 'multiProcessChange', callback: Callback<string>): void
-```
-
-Subscribes to data changes between processes. When multiple processes hold the same preference file, calling [flush](#flush) in any process (including the current process) will trigger the callback in this API. This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-sendablepreferences-options-i.md). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Preferences-on(type: 'multiProcessChange', callback: Callback<string>): void--><!--Device-Preferences-on(type: 'multiProcessChange', callback: Callback<string>): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'multiProcessChange' | Yes | Event type. The value is **'multiProcessChange'**, which indicates inter- process data changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback used to return the key whose value is changed. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
-| [15500019](../errorcode-preferences.md#15500019-failed-to-obtain-the-subscription-service) | Failed to obtain the subscription service. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-};
-preferences.on('multiProcessChange', observer);
-preferences.putSync('startup', 'manual');
-preferences.flush().then(() => {
-  console.info("Succeeded in flushing.");
-}).catch((err: BusinessError) => {
-  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## put
 
 ```TypeScript
@@ -816,31 +816,31 @@ Writes data to this **Preferences** instance. This API uses a promise to return 
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Preferences-put(key: string, value: lang.ISendable): Promise<void>--><!--Device-Preferences-put(key: string, value: lang.ISendable): Promise<void>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Key to be modified. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](arkts-data-sendablepreferences.md#constants). |
-| value | lang.ISendable | Yes | Value to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| value | lang.ISendable | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 **Examples**
 
@@ -865,29 +865,28 @@ Writes data to this **Preferences** instance. This API returns the result synchr
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Preferences-putSync(key: string, value: lang.ISendable): void--><!--Device-Preferences-putSync(key: string, value: lang.ISendable): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Key to be modified. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](arkts-data-sendablepreferences.md#constants). |
-| value | lang.ISendable | Yes | Value to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| value | lang.ISendable | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 **Examples**
 
 ```TypeScript
 preferences.putSync('startup', 'auto');
 ```
-

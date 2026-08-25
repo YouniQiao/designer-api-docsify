@@ -2,9 +2,9 @@
 
 提供对接共享云服务的类。开发者需要继承此类并实现类的接口，系统内部通过该类的接口连接并使用共享云服务，实现端云共享的发起、取消或退出等能力。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-cloudExtension-export interface ShareCenter--><!--Device-cloudExtension-export interface ShareCenter-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -18,6 +18,17 @@ import { cloudExtension } from '@kit.ArkData';
 
 ## changeConfirmation
 
+ArkTS-Dyn:
+```TypeScript
+changeConfirmation(
+      userId: number,
+      bundleName: string,
+      sharingResource: string,
+      state: cloudData.sharing.State
+    ): Promise<Result<void>>
+```
+
+ArkTS-Sta:
 ```TypeScript
 changeConfirmation(
       userId: int,
@@ -29,9 +40,9 @@ changeConfirmation(
 
 更改端云共享邀请。更改共享邀请时，需指定当前更改共享邀请的应用、共享数据的共享资源标识以及更改的状态，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ShareCenter-changeConfirmation(      userId: int,      bundleName: string,      sharingResource: string,      state: cloudData.sharing.State    ): Promise<Result<void>>--><!--Device-ShareCenter-changeConfirmation(      userId: int,      bundleName: string,      sharingResource: string,      state: cloudData.sharing.State    ): Promise<Result<void>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -39,18 +50,18 @@ changeConfirmation(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| userId | int | 是 | 表示用户账号ID。 |
-| bundleName | string | 是 | 应用包名。 |
-| sharingResource | string | 是 | 端云共享资源标识。 |
-| state | cloudData.sharing.State | 是 | 共享邀请的更改状态。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| bundleName | string | 是 |
+| sharingResource | string | 是 |
+| state | cloudData.sharing.State | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Result&lt;void&gt;&gt; | Promise对象，返回更改共享邀请的结果。 |
+| 类型 |
+| --- |
+| Promise & lt;Result & lt;void & gt; & gt; |
 
 **示例**
 
@@ -100,6 +111,17 @@ export default class MyShareCenter implements cloudExtension.ShareCenter {
 
 ## changePrivilege
 
+ArkTS-Dyn:
+```TypeScript
+changePrivilege(
+      userId: number,
+      bundleName: string,
+      sharingResource: string,
+      participants: Array<cloudData.sharing.Participant>
+    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>
+```
+
+ArkTS-Sta:
 ```TypeScript
 changePrivilege(
       userId: int,
@@ -111,9 +133,9 @@ changePrivilege(
 
 更改已共享数据的操作权限。更改权限时，需指定当前更改权限的应用、更改权限数据的资源标识和更改权限的参与者，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ShareCenter-changePrivilege(      userId: int,      bundleName: string,      sharingResource: string,      participants: Array<cloudData.sharing.Participant>    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>--><!--Device-ShareCenter-changePrivilege(      userId: int,      bundleName: string,      sharingResource: string,      participants: Array<cloudData.sharing.Participant>    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -121,18 +143,18 @@ changePrivilege(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| userId | int | 是 | 表示用户账号ID。 |
-| bundleName | string | 是 | 应用包名。 |
-| sharingResource | string | 是 | 端云共享资源标识。 |
-| participants | Array&lt;cloudData.sharing.Participant&gt; | 是 | 端云共享参与者。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| bundleName | string | 是 |
+| sharingResource | string | 是 |
+| participants | Array & lt;cloudData.sharing.Participant & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; | Promise对象，返回更改权限的结果。 |
+| 类型 |
+| --- |
+| Promise & lt;Result & lt;Array & lt;Result & lt;cloudData.sharing.Participant & gt; & gt; & gt; & gt; |
 
 **示例**
 
@@ -202,6 +224,17 @@ export default class MyShareCenter implements cloudExtension.ShareCenter {
 
 ## confirmInvitation
 
+ArkTS-Dyn:
+```TypeScript
+confirmInvitation(
+      userId: number,
+      bundleName: string,
+      invitationCode: string,
+      state: cloudData.sharing.State
+    ): Promise<Result<string>>
+```
+
+ArkTS-Sta:
 ```TypeScript
 confirmInvitation(
       userId: int,
@@ -213,9 +246,9 @@ confirmInvitation(
 
 被邀请者确认端云共享邀请。确认时，需指定当前确认邀请的应用、共享数据的邀请码以及确认状态，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ShareCenter-confirmInvitation(      userId: int,      bundleName: string,      invitationCode: string,      state: cloudData.sharing.State    ): Promise<Result<string>>--><!--Device-ShareCenter-confirmInvitation(      userId: int,      bundleName: string,      invitationCode: string,      state: cloudData.sharing.State    ): Promise<Result<string>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -223,18 +256,18 @@ confirmInvitation(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| userId | int | 是 | 表示用户账号ID。 |
-| bundleName | string | 是 | 应用包名。 |
-| invitationCode | string | 是 | 端云共享邀请码。 |
-| state | cloudData.sharing.State | 是 | 共享邀请的确认状态。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| bundleName | string | 是 |
+| invitationCode | string | 是 |
+| state | cloudData.sharing.State | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Result&lt;string&gt;&gt; | Promise对象，返回确认端云共享邀请数据的共享资源标识。 |
+| 类型 |
+| --- |
+| Promise & lt;Result & lt;string & gt; & gt; |
 
 **示例**
 
@@ -286,15 +319,21 @@ export default class MyShareCenter implements cloudExtension.ShareCenter {
 
 ## exit
 
+ArkTS-Dyn:
+```TypeScript
+exit(userId: number, bundleName: string, sharingResource: string): Promise<Result<void>>
+```
+
+ArkTS-Sta:
 ```TypeScript
 exit(userId: int, bundleName: string, sharingResource: string): Promise<Result<void>>
 ```
 
 退出端云共享。退出共享时，需指定当前退出共享的应用以及退出共享数据的资源标识，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ShareCenter-exit(userId: int, bundleName: string, sharingResource: string): Promise<Result<void>>--><!--Device-ShareCenter-exit(userId: int, bundleName: string, sharingResource: string): Promise<Result<void>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -302,17 +341,17 @@ exit(userId: int, bundleName: string, sharingResource: string): Promise<Result<v
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| userId | int | 是 | 表示用户账号ID。 |
-| bundleName | string | 是 | 应用包名。 |
-| sharingResource | string | 是 | 端云共享资源标识。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| bundleName | string | 是 |
+| sharingResource | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Result&lt;void&gt;&gt; | Promise对象，返回退出共享的结果。 |
+| 类型 |
+| --- |
+| Promise & lt;Result & lt;void & gt; & gt; |
 
 **示例**
 
@@ -386,6 +425,16 @@ export default class MyShareCenter implements cloudExtension.ShareCenter {
 
 ## queryParticipants
 
+ArkTS-Dyn:
+```TypeScript
+queryParticipants(
+      userId: number,
+      bundleName: string,
+      sharingResource: string
+    ): Promise<Result<Array<cloudData.sharing.Participant>>>
+```
+
+ArkTS-Sta:
 ```TypeScript
 queryParticipants(
       userId: int,
@@ -396,9 +445,9 @@ queryParticipants(
 
 查询当前端云共享的参与者。查询时，需指定当前查询参与者的应用、查询参与者数据的资源标识，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ShareCenter-queryParticipants(      userId: int,      bundleName: string,      sharingResource: string    ): Promise<Result<Array<cloudData.sharing.Participant>>>--><!--Device-ShareCenter-queryParticipants(      userId: int,      bundleName: string,      sharingResource: string    ): Promise<Result<Array<cloudData.sharing.Participant>>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -406,17 +455,17 @@ queryParticipants(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| userId | int | 是 | 表示用户账号ID。 |
-| bundleName | string | 是 | 应用包名。 |
-| sharingResource | string | 是 | 端云共享资源标识。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| bundleName | string | 是 |
+| sharingResource | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Result&lt;Array&lt;cloudData.sharing.Participant&gt;&gt;&gt; | Promise对象，返回查询共享参与者的结果。 |
+| 类型 |
+| --- |
+| Promise & lt;Result & lt;Array & lt;cloudData.sharing.Participant & gt; & gt; & gt; |
 
 **示例**
 
@@ -526,6 +575,16 @@ export default class MyShareCenter implements cloudExtension.ShareCenter {
 
 ## queryParticipantsByInvitation
 
+ArkTS-Dyn:
+```TypeScript
+queryParticipantsByInvitation(
+      userId: number,
+      bundleName: string,
+      invitationCode: string
+    ): Promise<Result<Array<cloudData.sharing.Participant>>>
+```
+
+ArkTS-Sta:
 ```TypeScript
 queryParticipantsByInvitation(
       userId: int,
@@ -536,9 +595,9 @@ queryParticipantsByInvitation(
 
 根据邀请码查询端云共享参与者。查询时，需指定当前查询参与者的应用、共享数据的邀请码，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ShareCenter-queryParticipantsByInvitation(      userId: int,      bundleName: string,      invitationCode: string    ): Promise<Result<Array<cloudData.sharing.Participant>>>--><!--Device-ShareCenter-queryParticipantsByInvitation(      userId: int,      bundleName: string,      invitationCode: string    ): Promise<Result<Array<cloudData.sharing.Participant>>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -546,17 +605,17 @@ queryParticipantsByInvitation(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| userId | int | 是 | 表示用户账号ID。 |
-| bundleName | string | 是 | 应用包名。 |
-| invitationCode | string | 是 | 端云共享邀请码。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| bundleName | string | 是 |
+| invitationCode | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Result&lt;Array&lt;cloudData.sharing.Participant&gt;&gt;&gt; | Promise对象，返回根据邀请码查询共享参与者的结果。 |
+| 类型 |
+| --- |
+| Promise & lt;Result & lt;Array & lt;cloudData.sharing.Participant & gt; & gt; & gt; |
 
 **示例**
 
@@ -689,6 +748,17 @@ export default class MyShareCenter implements cloudExtension.ShareCenter {
 
 ## share
 
+ArkTS-Dyn:
+```TypeScript
+share(
+      userId: number,
+      bundleName: string,
+      sharingResource: string,
+      participants: Array<cloudData.sharing.Participant>
+    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>
+```
+
+ArkTS-Sta:
 ```TypeScript
 share(
       userId: int,
@@ -700,9 +770,9 @@ share(
 
 发起端云共享邀请。共享邀请时，需指定当前发起共享的应用、共享数据的资源标识和共享参与者，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ShareCenter-share(      userId: int,      bundleName: string,      sharingResource: string,      participants: Array<cloudData.sharing.Participant>    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>--><!--Device-ShareCenter-share(      userId: int,      bundleName: string,      sharingResource: string,      participants: Array<cloudData.sharing.Participant>    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -710,18 +780,18 @@ share(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| userId | int | 是 | 表示用户账号ID。 |
-| bundleName | string | 是 | 应用包名。 |
-| sharingResource | string | 是 | 端云共享资源的标识。 |
-| participants | Array&lt;cloudData.sharing.Participant&gt; | 是 | 端云共享参与者。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| bundleName | string | 是 |
+| sharingResource | string | 是 |
+| participants | Array & lt;cloudData.sharing.Participant & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; | Promise对象，返回发起共享的结果。 |
+| 类型 |
+| --- |
+| Promise & lt;Result & lt;Array & lt;Result & lt;cloudData.sharing.Participant & gt; & gt; & gt; & gt; |
 
 **示例**
 
@@ -813,6 +883,17 @@ export default class MyShareCenter implements cloudExtension.ShareCenter {
 
 ## unshare
 
+ArkTS-Dyn:
+```TypeScript
+unshare(
+      userId: number,
+      bundleName: string,
+      sharingResource: string,
+      participants: Array<cloudData.sharing.Participant>
+    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>
+```
+
+ArkTS-Sta:
 ```TypeScript
 unshare(
       userId: int,
@@ -824,9 +905,9 @@ unshare(
 
 取消端云共享。取消共享时，需指定当前取消共享的应用、取消共享数据的资源标识和取消共享的参与者，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ShareCenter-unshare(      userId: int,      bundleName: string,      sharingResource: string,      participants: Array<cloudData.sharing.Participant>    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>--><!--Device-ShareCenter-unshare(      userId: int,      bundleName: string,      sharingResource: string,      participants: Array<cloudData.sharing.Participant>    ): Promise<Result<Array<Result<cloudData.sharing.Participant>>>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -834,18 +915,18 @@ unshare(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| userId | int | 是 | 表示用户账号ID。 |
-| bundleName | string | 是 | 应用包名。 |
-| sharingResource | string | 是 | 端云共享数据的资源标识。 |
-| participants | Array&lt;cloudData.sharing.Participant&gt; | 是 | 端云共享参与者。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| bundleName | string | 是 |
+| sharingResource | string | 是 |
+| participants | Array & lt;cloudData.sharing.Participant & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; | Promise对象，返回取消共享的结果。 |
+| 类型 |
+| --- |
+| Promise & lt;Result & lt;Array & lt;Result & lt;cloudData.sharing.Participant & gt; & gt; & gt; & gt; |
 
 **示例**
 
@@ -934,4 +1015,3 @@ export default class MyShareCenter implements cloudExtension.ShareCenter {
   }
 }
 ```
-

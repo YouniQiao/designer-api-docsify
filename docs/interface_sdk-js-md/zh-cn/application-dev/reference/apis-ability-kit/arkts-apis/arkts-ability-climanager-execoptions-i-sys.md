@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-cliManager-interface ExecOptions--><!--Device-cliManager-interface ExecOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -30,9 +30,9 @@ background?: boolean
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-ExecOptions-background?: boolean--><!--Device-ExecOptions-background?: boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -41,20 +41,20 @@ background?: boolean
 ## timeout
 
 ```TypeScript
-timeout?: long
+timeout?: number
 ```
 
 任务执行超时时长。取值范围：0 ~ 1800。默认值：1800。单位：s。
 
-**类型：** long
+**类型：** number
 
 **默认值：** 1800
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-ExecOptions-timeout?: long--><!--Device-ExecOptions-timeout?: long-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -63,22 +63,21 @@ timeout?: long
 ## yieldMs
 
 ```TypeScript
-yieldMs?: long
+yieldMs?: number
 ```
 
 任务前台执行时长。取值范围：0 ~ 1000 * timeout。默认值：0。单位：ms。
 
-**类型：** long
+**类型：** number
 
 **默认值：** 0
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-ExecOptions-yieldMs?: long--><!--Device-ExecOptions-yieldMs?: long-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
-

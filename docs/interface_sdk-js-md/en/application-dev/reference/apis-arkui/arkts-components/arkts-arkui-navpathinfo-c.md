@@ -4,7 +4,7 @@ Provides the navigation page information.
 
 **Since:** 10
 
-<!--Device-unnamed-declare class NavPathInfo--><!--Device-unnamed-declare class NavPathInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,22 +23,22 @@ Creates a **NavPathInfo** object.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-NavPathInfo-constructor(name: string, param: unknown, onPop?: import('../api/@ohos.base').Callback<PopInfo>, isEntry?: boolean)--><!--Device-NavPathInfo-constructor(name: string, param: unknown, onPop?: import('../api/@ohos.base').Callback<PopInfo>, isEntry?: boolean)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the navigation destination page. The name matches the name in the following route tables:<br>1. Custom route table, which is passed via the [navDestination](arkts-arkui-navigation-attribute.md#navdestination) method.<br>2. System route table, which is set by **name** in **routerMap**. For details, please refer to [Example 2: Using NavPathStack APIs](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-2-using-navpathstack-apis). |
-| param | unknown | Yes | Detailed parameters for the custom **NavDestination** page. The **unknown** type can be replaced with a user-defined type. |
-| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | No | Callback returned when [pop](arkts-arkui-navpathstack-c.md#pop), [popToName](arkts-arkui-navpathstack-c.md#poptoname), or [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex) is called on the navigation destination page. It is triggered only when the **result** parameter is set in [pop](arkts-arkui-navpathstack-c.md#pop), [popToName](arkts-arkui-navpathstack-c.md#poptoname), or [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex).<br>**Since:** 11 |
-| isEntry | boolean | No | Whether the navigation destination page is the entry page.<br>**true**: yes; **false**: no<br>Default value: **false**<br>The value of this parameter is reviewed or reset under the following conditions:<br>1. A global return event is triggered on the current navigation destination page.<br> 2. The application is switched to the background.<br>**NOTE：**<br>The navigation destination page serving as an entry does not respond to the in-app global back events; instead, it directly triggers the global back event between applications.<br>**Since:** 12 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [name](#name) | string | Yes |
+| [param](#param) | unknown | Yes |
+| [onPop](#onpop) | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | No |
+| [isEntry](#isentry) | boolean | No |
 
 ## isEntry
 
@@ -56,11 +56,11 @@ Whether the navigation destination page is the entry page.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NavPathInfo-isEntry?: boolean--><!--Device-NavPathInfo-isEntry?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,11 +78,11 @@ Name of the navigation destination page. The name matches the name in the follow
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-NavPathInfo-name: string--><!--Device-NavPathInfo-name: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,11 +98,11 @@ Unique ID of the navigation destination page. This ID is system-generated and gl
 
 **Since:** 19
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-NavPathInfo-navDestinationId?: string--><!--Device-NavPathInfo-navDestinationId?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -118,11 +118,11 @@ Callback returned when [pop](arkts-arkui-navpathstack-c.md#pop), [popToName](ark
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NavPathInfo-onPop?: import('../api/@ohos.base').Callback<PopInfo>--><!--Device-NavPathInfo-onPop?: import('../api/@ohos.base').Callback<PopInfo>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,11 +138,10 @@ Detailed parameters for the custom **NavDestination** page. The **unknown** type
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-NavPathInfo-param?: unknown--><!--Device-NavPathInfo-param?: unknown-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

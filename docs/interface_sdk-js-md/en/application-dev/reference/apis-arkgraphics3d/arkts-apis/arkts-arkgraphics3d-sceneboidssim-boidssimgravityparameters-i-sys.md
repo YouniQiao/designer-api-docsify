@@ -4,7 +4,7 @@ Attraction field parameters, used to configure the attraction field in the scene
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export interface BoidsSimGravityParameters--><!--Device-unnamed-export interface BoidsSimGravityParameters-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,13 +18,13 @@ accelerationMag?: double
 
 The magnitude of the attraction acceleration applied to the individual, with the direction pointing toward the attraction field entity. Value &gt;= 0. Default value: 0.0.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-BoidsSimGravityParameters-accelerationMag?: double--><!--Device-BoidsSimGravityParameters-accelerationMag?: double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -38,15 +38,14 @@ radius?: double
 
 The radius of the attraction field. Only individuals strictly within this distance are attracted (boundary force is 0). Value &gt;= 0. Default value: 0.0.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-BoidsSimGravityParameters-radius?: double--><!--Device-BoidsSimGravityParameters-radius?: double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
-

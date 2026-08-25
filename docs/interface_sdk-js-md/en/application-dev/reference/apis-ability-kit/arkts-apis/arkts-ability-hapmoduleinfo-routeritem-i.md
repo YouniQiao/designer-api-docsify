@@ -2,9 +2,9 @@
 
 Describes the router table configuration of the module.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface RouterItem--><!--Device-unnamed-export interface RouterItem-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -18,11 +18,11 @@ Function decorated by @Builder. The function describes the UI of the page.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-RouterItem-readonly buildFunction: string--><!--Device-RouterItem-readonly buildFunction: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -36,11 +36,11 @@ Any type of custom data in the [routing table configuration file](../../../quick
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-RouterItem-readonly customData: string--><!--Device-RouterItem-readonly customData: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -54,11 +54,11 @@ User-defined string in the [routing table configuration file](../../../quick-sta
 
 **Type:** Array&lt;[DataItem](arkts-ability-hapmoduleinfo-dataitem-i.md)&gt;
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-RouterItem-readonly data: Array<DataItem>--><!--Device-RouterItem-readonly data: Array<DataItem>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -72,11 +72,11 @@ Name of the page to be redirected to.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-RouterItem-readonly name: string--><!--Device-RouterItem-readonly name: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -90,11 +90,10 @@ Path of the page in the module.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-RouterItem-readonly pageSourceFile: string--><!--Device-RouterItem-readonly pageSourceFile: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
-

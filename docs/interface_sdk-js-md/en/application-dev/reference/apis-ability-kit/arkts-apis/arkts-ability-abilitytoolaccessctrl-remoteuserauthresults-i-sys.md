@@ -4,7 +4,7 @@ Remote user authorization results.
 
 **Since:** 26.1.0
 
-<!--Device-abilityToolAccessCtrl-interface RemoteUserAuthResults--><!--Device-abilityToolAccessCtrl-interface RemoteUserAuthResults-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -27,7 +27,7 @@ Permission query information.
 
 **Since:** 26.1.0
 
-<!--Device-RemoteUserAuthResults-permissionQuery: PermissionQuery--><!--Device-RemoteUserAuthResults-permissionQuery: PermissionQuery-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -45,9 +45,8 @@ Authorization result list.
 
 **Since:** 26.1.0
 
-<!--Device-RemoteUserAuthResults-results: RemoteUserAuthItem[]--><!--Device-RemoteUserAuthResults-results: RemoteUserAuthItem[]-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
-

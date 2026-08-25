@@ -12,9 +12,9 @@ Called when the RootScene is used.
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-RootSceneInterface-(session: RootSceneSession): RootSceneAttribute--><!--Device-RootSceneInterface-(session: RootSceneSession): RootSceneAttribute-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,14 +22,13 @@ Called when the RootScene is used.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| session | [RootSceneSession](arkts-arkui-rootscenesession-i.md) | Yes | indicates the session of RootScene. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| session | [RootSceneSession](arkts-arkui-rootscenesession-i.md) | Yes |
 
 ## Summary
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |

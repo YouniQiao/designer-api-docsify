@@ -16,11 +16,11 @@ function enableAbilityWithCallback(name: string, capability: Array<accessibility
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-config-function enableAbilityWithCallback(name: string, capability: Array<accessibility.Capability>, connectCallback: ConnectCallback): Promise<void>--><!--Device-config-function enableAbilityWithCallback(name: string, capability: Array<accessibility.Capability>, connectCallback: ConnectCallback): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -28,26 +28,26 @@ function enableAbilityWithCallback(name: string, capability: Array<accessibility
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 辅助扩展应用的名称，格式为：'bundleName/abilityName'。 |
-| capability | Array&lt;accessibility.Capability&gt; | 是 | 辅助扩展应用的能力属性。 |
-| connectCallback | [ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md) | 是 | 辅助扩展应用连接断开时调用的回调函数，用于监听辅助扩展的断开连接事件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| capability | Array & lt;accessibility.Capability & gt; | 是 |
+| connectCallback | [ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [9300001](../errorcode-accessibility.md#9300001-输入无效的包名称或者ability名称) | Invalid bundle name or ability name. |
-| [9300002](../errorcode-accessibility.md#9300002-目标ability已启用) | Target ability already enabled. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [9300001](../errorcode-accessibility.md#9300001-输入无效的包名称或者ability名称) |
+| [9300002](../errorcode-accessibility.md#9300002-目标ability已启用) |
 
 **示例**
 
@@ -69,4 +69,3 @@ config.enableAbilityWithCallback(name, capability, connectCallback).then(() => {
   console.error(`Failed to enable ability. Code: ${err.code}, message: ${err.message}`);
 });
 ```
-

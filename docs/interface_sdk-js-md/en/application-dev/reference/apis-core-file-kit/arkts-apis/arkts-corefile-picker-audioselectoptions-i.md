@@ -4,9 +4,9 @@ Defines options for selecting audio clips.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-picker-interface AudioSelectOptions--><!--Device-picker-interface AudioSelectOptions-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -15,4 +15,3 @@ Defines options for selecting audio clips.
 ```TypeScript
 import { picker } from '@kit.CoreFileKit';
 ```
-

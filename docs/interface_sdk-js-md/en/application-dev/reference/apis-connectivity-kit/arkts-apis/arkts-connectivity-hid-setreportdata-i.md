@@ -4,7 +4,7 @@ Describe the SET_REPORT data is received from remote host.
 
 **Since:** 23
 
-<!--Device-hid-interface SetReportData--><!--Device-hid-interface SetReportData-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -26,27 +26,27 @@ data of SET_REPORT data.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-SetReportData-data: Uint8Array--><!--Device-SetReportData-data: Uint8Array-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## id
 
 ```TypeScript
-id: int
+id: number
 ```
 
 id of SET_REPORT data.
 
-**Type:** int
+**Type:** number
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-SetReportData-id: int--><!--Device-SetReportData-id: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -62,9 +62,8 @@ reportType of SET_REPORT data.
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SetReportData-type: ReportType--><!--Device-SetReportData-type: ReportType-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

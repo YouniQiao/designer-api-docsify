@@ -2,9 +2,9 @@
 
 Defines the filter criteria.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-agent-interface Filter--><!--Device-agent-interface Filter-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -25,9 +25,9 @@ Task action.
 
 **Type:** Action
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Filter-action?: Action--><!--Device-Filter-action?: Action-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -39,11 +39,11 @@ after?: long
 
 Unix timestamp of the start time, in milliseconds. The default value is the invoking time minus 24 hours.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Filter-after?: long--><!--Device-Filter-after?: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -55,11 +55,11 @@ before?: long
 
 Unix timestamp of the end time, in milliseconds. The default value is the invoking time.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Filter-before?: long--><!--Device-Filter-before?: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -74,9 +74,9 @@ Task mode.
 
 **Type:** [Mode](arkts-basicservices-agent-mode-e.md)
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Filter-mode?: Mode--><!--Device-Filter-mode?: Mode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -90,9 +90,8 @@ Task state. If this parameter is not set, all tasks are queried.
 
 **Type:** State
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Filter-state?: State--><!--Device-Filter-state?: State-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
-

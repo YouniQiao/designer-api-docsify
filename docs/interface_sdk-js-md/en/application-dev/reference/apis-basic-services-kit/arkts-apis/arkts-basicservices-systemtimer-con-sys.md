@@ -8,9 +8,9 @@ const TIMER_TYPE_EXACT: int
 
 Exact type. (If the system time is changed, the offset may be 1s at most.)
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-systemTimer-const TIMER_TYPE_EXACT: int--><!--Device-systemTimer-const TIMER_TYPE_EXACT: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -24,9 +24,9 @@ const TIMER_TYPE_IDLE: int
 
 Idle timer type (supported only for system services).
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-systemTimer-const TIMER_TYPE_IDLE: int--><!--Device-systemTimer-const TIMER_TYPE_IDLE: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -40,9 +40,9 @@ const TIMER_TYPE_REALTIME: int
 
 CPU time type. (The start time of the timer cannot be later than the current system time.)
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-systemTimer-const TIMER_TYPE_REALTIME: int--><!--Device-systemTimer-const TIMER_TYPE_REALTIME: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -56,11 +56,10 @@ const TIMER_TYPE_WAKEUP: int
 
 Wakeup type. (If the wakeup type is not set, the system does not wake up until it exits the sleep state.)
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-systemTimer-const TIMER_TYPE_WAKEUP: int--><!--Device-systemTimer-const TIMER_TYPE_WAKEUP: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
 **System API:** This is a system API.
-

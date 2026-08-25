@@ -2,9 +2,9 @@
 
 表示用于设置属性的选项。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-appAccount-interface SetPropertiesOptions--><!--Device-appAccount-interface SetPropertiesOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -17,32 +17,31 @@ import { appAccount } from '@kit.BasicServicesKit';
 ## parameters
 
 ```TypeScript
-parameters?: Record<string, RecordData>
+parameters?: Record<string, Object>
 ```
 
 自定义参数对象，默认为空。
 
-**类型：** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, Object&gt;
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SetPropertiesOptions-parameters?: Record<string, RecordData>--><!--Device-SetPropertiesOptions-parameters?: Record<string, RecordData>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## properties
 
 ```TypeScript
-properties?: Record<string, RecordData>
+properties?: Record<string, Object>
 ```
 
 属性对象，默认为空。
 
-**类型：** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, Object&gt;
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SetPropertiesOptions-properties?: Record<string, RecordData>--><!--Device-SetPropertiesOptions-properties?: Record<string, RecordData>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
-

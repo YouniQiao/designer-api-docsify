@@ -16,30 +16,30 @@ function compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): 
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-fastbuffer-function compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): -1 | 0 | 1--><!--Device-fastbuffer-function compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): -1 | 0 | 1-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buf1 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | 是 | 待比较的第一个对象。 |
-| buf2 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | 是 | 待比较的第二个对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buf1 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | 是 |
+| buf2 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| -1 \| 0 \| 1 | 如果buf1与buf2相同，则返回0。<br/>如果排序时buf1位于buf2之后，则返回1。<br/>如果排序时buf1位于buf2之前，则返回-1。 |
+| 类型 |
+| --- |
+| -1 \| 0 \| 1 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| 错误码ID |
+| --- |
+| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) |
 
 **示例**
 
@@ -70,4 +70,3 @@ console.info(buf1.compare(buf2, 0, 6, 4).toString());
 console.info(buf1.compare(buf2, 5, 6, 5).toString());
 // 输出结果：1
 ```
-

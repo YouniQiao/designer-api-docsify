@@ -4,7 +4,7 @@ NativeMediaPlayerSurfaceInfo uses enableNativeMediaPlayer to configure the surfa
 
 **Since:** 12
 
-<!--Device-webview-class NativeMediaPlayerSurfaceInfo--><!--Device-webview-class NativeMediaPlayerSurfaceInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -26,9 +26,9 @@ ID of the surface, which is the surfaceId of the NativeImage used for same-layer
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-NativeMediaPlayerSurfaceInfo-id: string--><!--Device-NativeMediaPlayerSurfaceInfo-id: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -40,11 +40,10 @@ rect: RectEvent
 
 Position information of the surface, used to specify the display position and size of the surface during same- layer rendering.
 
-**Type:** [RectEvent](../../apis-default/arkts-apis/arkts-webview-rectevent-i.md)
+**Type:** [RectEvent](arkts-arkweb-webview-rectevent-i.md)
 
 **Since:** 12
 
-<!--Device-NativeMediaPlayerSurfaceInfo-rect: RectEvent--><!--Device-NativeMediaPlayerSurfaceInfo-rect: RectEvent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

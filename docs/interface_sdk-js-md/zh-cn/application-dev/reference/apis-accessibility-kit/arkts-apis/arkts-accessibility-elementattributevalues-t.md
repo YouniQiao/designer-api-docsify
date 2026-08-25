@@ -8,7 +8,7 @@ export type ElementAttributeValues = _ElementAttributeValues
 
 **起始版本：** 10
 
-<!--Device-unnamed-export type ElementAttributeValues = _ElementAttributeValues--><!--Device-unnamed-export type ElementAttributeValues = _ElementAttributeValues-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -21,4 +21,3 @@ import { ElementAttributeValues } from '@kit.AccessibilityKit';
 
 let elementAttributeValues: ElementAttributeValues;
 ```
-

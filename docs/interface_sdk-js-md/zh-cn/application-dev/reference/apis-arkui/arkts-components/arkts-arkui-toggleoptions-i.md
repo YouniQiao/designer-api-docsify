@@ -7,7 +7,7 @@ Toggle组件的配置信息。
 
 **起始版本：** 18
 
-<!--Device-unnamed-declare interface ToggleOptions--><!--Device-unnamed-declare interface ToggleOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +28,11 @@ isOn?: boolean
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ToggleOptions-isOn?: boolean--><!--Device-ToggleOptions-isOn?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,11 +48,10 @@ type: ToggleType
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-ToggleOptions-type: ToggleType--><!--Device-ToggleOptions-type: ToggleType-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

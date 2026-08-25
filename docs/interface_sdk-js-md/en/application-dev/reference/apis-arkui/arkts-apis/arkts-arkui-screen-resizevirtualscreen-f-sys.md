@@ -16,7 +16,7 @@ Resizes the virtual screen. This API uses a promise to return the result.
 
 **Since:** 24
 
-<!--Device-screen-function resizeVirtualScreen(screenId:long, width: long, height: long): Promise<void>--><!--Device-screen-function resizeVirtualScreen(screenId:long, width: long, height: long): Promise<void>-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -24,27 +24,27 @@ Resizes the virtual screen. This API uses a promise to return the result.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| screenId | long | Yes | ID of the virtual screen to be resized. The value is a positive integer within the range of [1000, 2147483647]. If the value is not within the valid range, error code 1400004 is returned. |
-| width | long | Yes | New width of the virtual screen, in px. The value is a positive integer within the range of [1, 65536]. If the value is not within the valid range, error code 1400004 is returned. |
-| height | long | Yes | New height of the virtual screen, in px. The value is a positive integer within the range of [1, 65536]. If the value is not within the valid range, error code 1400004 is returned. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| screenId | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| width | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| height | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
-| [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [1400004](../errorcode-display.md#1400004-parameter-error) |
 
 **Examples**
 
@@ -60,4 +60,3 @@ screen.resizeVirtualScreen(screenId, width, height).then(() => {
   console.error(`Failed to set screen area mirroring. Code:${err.code}, message is ${err.message}`);
 });
 ```
-

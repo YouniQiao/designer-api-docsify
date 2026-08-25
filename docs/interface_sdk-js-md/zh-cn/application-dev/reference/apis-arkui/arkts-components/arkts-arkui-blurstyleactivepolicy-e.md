@@ -4,7 +4,7 @@
 
 **起始版本：** 14
 
-<!--Device-unnamed-declare enum BlurStyleActivePolicy--><!--Device-unnamed-declare enum BlurStyleActivePolicy-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ FOLLOWS_WINDOW_ACTIVE_STATE = 0
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BlurStyleActivePolicy-FOLLOWS_WINDOW_ACTIVE_STATE = 0--><!--Device-BlurStyleActivePolicy-FOLLOWS_WINDOW_ACTIVE_STATE = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ ALWAYS_ACTIVE = 1
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BlurStyleActivePolicy-ALWAYS_ACTIVE = 1--><!--Device-BlurStyleActivePolicy-ALWAYS_ACTIVE = 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ ALWAYS_INACTIVE = 2
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
-<!--Device-BlurStyleActivePolicy-ALWAYS_INACTIVE = 2--><!--Device-BlurStyleActivePolicy-ALWAYS_INACTIVE = 2-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

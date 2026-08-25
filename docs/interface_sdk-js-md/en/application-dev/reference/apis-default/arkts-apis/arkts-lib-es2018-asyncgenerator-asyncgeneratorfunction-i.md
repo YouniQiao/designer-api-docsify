@@ -1,37 +1,13 @@
 # AsyncGeneratorFunction
 
-**Since:** -1
-
-<!--Device-unnamed-interface AsyncGeneratorFunction--><!--Device-unnamed-interface AsyncGeneratorFunction-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
-
-```TypeScript
-new (...args: any[]): AsyncGenerator
-```
-
-Creates a new AsyncGenerator object.
-
-**Since:** -1
-
-<!--Device-AsyncGeneratorFunction-new (...args: any[]): AsyncGenerator--><!--Device-AsyncGeneratorFunction-new (...args: any[]): AsyncGenerator-End-->
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| args | any[] | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-## constructor
+## [[Call]]
 
 ```TypeScript
 (...args: any[]): AsyncGenerator
@@ -39,20 +15,38 @@ Creates a new AsyncGenerator object.
 
 Creates a new AsyncGenerator object.
 
-**Since:** -1
-
-<!--Device-AsyncGeneratorFunction-(...args: any[]): AsyncGenerator--><!--Device-AsyncGeneratorFunction-(...args: any[]): AsyncGenerator-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| args | any[] | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | any[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+## [[Construct]]
+
+```TypeScript
+new (...args: any[]): AsyncGenerator
+```
+
+Creates a new AsyncGenerator object.
+
+**ArkTS mode:** 
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | any[] | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## length
 
 ```TypeScript
@@ -63,9 +57,7 @@ The length of the arguments.
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-AsyncGeneratorFunction-readonly length: number--><!--Device-AsyncGeneratorFunction-readonly length: number-End-->
+**ArkTS mode:** 
 
 ## name
 
@@ -77,9 +69,7 @@ Returns the name of the function.
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-AsyncGeneratorFunction-readonly name: string--><!--Device-AsyncGeneratorFunction-readonly name: string-End-->
+**ArkTS mode:** 
 
 ## prototype
 
@@ -91,7 +81,4 @@ A reference to the prototype.
 
 **Type:** AsyncGenerator
 
-**Since:** -1
-
-<!--Device-AsyncGeneratorFunction-readonly prototype: AsyncGenerator--><!--Device-AsyncGeneratorFunction-readonly prototype: AsyncGenerator-End-->
-
+**ArkTS mode:** 

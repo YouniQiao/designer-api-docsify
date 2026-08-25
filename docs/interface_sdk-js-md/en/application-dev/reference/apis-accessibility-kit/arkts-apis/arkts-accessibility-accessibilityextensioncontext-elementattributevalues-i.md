@@ -4,7 +4,7 @@ Provides attribute names and value types of a node element.
 
 **Since:** 9
 
-<!--Device-unnamed-export interface ElementAttributeValues--><!--Device-unnamed-export interface ElementAttributeValues-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -20,39 +20,39 @@ Whether the element is in the accessibility focus state. The value **true** indi
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-accessibilityFocused: boolean--><!--Device-ElementAttributeValues-accessibilityFocused: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## accessibilityNextFocusId
 
 ```TypeScript
-accessibilityNextFocusId?: long
+accessibilityNextFocusId?: number
 ```
 
 ID of the next component to be focused. This attribute value set by the user on the control can be obtained from the AccessibilityElement object queried through findElement('elementId'). The default value is **-1**.
 
-**Type:** long
+**Type:** number
 
 **Since:** 18
 
-<!--Device-ElementAttributeValues-accessibilityNextFocusId?: long--><!--Device-ElementAttributeValues-accessibilityNextFocusId?: long-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## accessibilityPreviousFocusId
 
 ```TypeScript
-accessibilityPreviousFocusId?: long
+accessibilityPreviousFocusId?: number
 ```
 
 ID of the previously focused component. This attribute value set by the user on the control can be obtained from the AccessibilityElement object queried through findElement('elementId'). The default value is **-1**.
 
-**Type:** long
+**Type:** number
 
 **Since:** 18
 
-<!--Device-ElementAttributeValues-accessibilityPreviousFocusId?: long--><!--Device-ElementAttributeValues-accessibilityPreviousFocusId?: long-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -68,7 +68,7 @@ Whether the element is scrollable in accessibility mode. This attribute takes pr
 
 **Since:** 18
 
-<!--Device-ElementAttributeValues-accessibilityScrollable?: boolean--><!--Device-ElementAttributeValues-accessibilityScrollable?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -84,7 +84,7 @@ Accessibility text information of an element.
 
 **Since:** 12
 
-<!--Device-ElementAttributeValues-accessibilityText: string--><!--Device-ElementAttributeValues-accessibilityText: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -100,7 +100,7 @@ Bundle name.
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-bundleName: string--><!--Device-ElementAttributeValues-bundleName: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -116,7 +116,7 @@ Whether the element is checkable. The value **true** indicates that the element 
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-checkable: boolean--><!--Device-ElementAttributeValues-checkable: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -132,7 +132,7 @@ Whether the element is checked. The value **true** indicates that the element is
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-checked: boolean--><!--Device-ElementAttributeValues-checked: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -148,7 +148,7 @@ All child elements.
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-children: Array<AccessibilityElement>--><!--Device-ElementAttributeValues-children: Array<AccessibilityElement>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -164,23 +164,23 @@ Whether the element is clickable. The value **true** indicates that the element 
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-clickable: boolean--><!--Device-ElementAttributeValues-clickable: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## componentId
 
 ```TypeScript
-componentId: long
+componentId: number
 ```
 
 ID of the component to which the element belongs.Default value: **-1**.
 
-**Type:** long
+**Type:** number
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-componentId: long--><!--Device-ElementAttributeValues-componentId: long-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -196,7 +196,7 @@ Component type of the element, for example, 'Button' for the Button component an
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-componentType: string--><!--Device-ElementAttributeValues-componentType: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -212,23 +212,23 @@ List of contents. Set this parameter based on site requirements. No special rest
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-contents: Array<string>--><!--Device-ElementAttributeValues-contents: Array<string>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## currentIndex
 
 ```TypeScript
-currentIndex: int
+currentIndex: number
 ```
 
 Index of the current item. The value range is greater than or equal to 0. The default value is **0**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-currentIndex: int--><!--Device-ElementAttributeValues-currentIndex: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -244,7 +244,7 @@ Custom component type. Corresponds to the [AccessibilityRoleType](../../apis-ark
 
 **Since:** 18
 
-<!--Device-ElementAttributeValues-customComponentType?: string--><!--Device-ElementAttributeValues-customComponentType?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -260,7 +260,7 @@ Description of the element. Set this parameter based on site requirements. No sp
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-description: string--><!--Device-ElementAttributeValues-description: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -276,23 +276,23 @@ Whether the element is editable. The value **true** indicates that the element i
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-editable: boolean--><!--Device-ElementAttributeValues-editable: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## endIndex
 
 ```TypeScript
-endIndex: int
+endIndex: number
 ```
 
 List index of the last displayed item on the screen. The value range is greater than or equal to 0. The default value is **0**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-endIndex: int--><!--Device-ElementAttributeValues-endIndex: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -308,7 +308,7 @@ Error status.
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-error: string--><!--Device-ElementAttributeValues-error: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -325,7 +325,7 @@ Extended attribute used to define properties of specific components. The default
 
 **Since:** 18
 
-<!--Device-ElementAttributeValues-extraInfo?: string--><!--Device-ElementAttributeValues-extraInfo?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -341,7 +341,7 @@ Whether the element is focusable. The value **true** indicates that the element 
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-focusable: boolean--><!--Device-ElementAttributeValues-focusable: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -357,7 +357,7 @@ Hint text.
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-hintText: string--><!--Device-ElementAttributeValues-hintText: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -373,23 +373,23 @@ Touchable area of an element.
 
 **Since:** 12
 
-<!--Device-ElementAttributeValues-hotArea: Rect--><!--Device-ElementAttributeValues-hotArea: Rect-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## inputType
 
 ```TypeScript
-inputType: int
+inputType: number
 ```
 
 Type of the input text. Different values correspond to different input modes: **0** indicates no specific type; **1** indicates text; **2** indicates email; **3** indicates date; **4** indicates time; **5** indicates number; **6** indicates password; **7** indicates phone number; **8** indicates username; **9** indicates new password. The default value is **0**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-inputType: int--><!--Device-ElementAttributeValues-inputType: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -405,7 +405,7 @@ Alias of the element.
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-inspectorKey: string--><!--Device-ElementAttributeValues-inspectorKey: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -421,7 +421,7 @@ Whether the element is active. The value **true** indicates that the element is 
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-isActive: boolean--><!--Device-ElementAttributeValues-isActive: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -437,7 +437,7 @@ Whether the element is enabled. The value **true** indicates that the element is
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-isEnable: boolean--><!--Device-ElementAttributeValues-isEnable: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -453,7 +453,7 @@ Whether the element is focused. The value **true** indicates that the element is
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-isFocused: boolean--><!--Device-ElementAttributeValues-isFocused: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -469,7 +469,7 @@ Whether the element is a hint. The value **true** indicates that the element is 
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-isHint: boolean--><!--Device-ElementAttributeValues-isHint: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -485,7 +485,7 @@ Whether the element is a password. The value **true** indicates that the element
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-isPassword: boolean--><!--Device-ElementAttributeValues-isPassword: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -501,23 +501,23 @@ Whether the element is visible. The value **true** indicates that the element is
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-isVisible: boolean--><!--Device-ElementAttributeValues-isVisible: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## itemCount
 
 ```TypeScript
-itemCount: int
+itemCount: number
 ```
 
 Total number of items. The value range is greater than or equal to 0. The default value is **0**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-itemCount: int--><!--Device-ElementAttributeValues-itemCount: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -533,23 +533,23 @@ Content of the last item in a list or scrollable control.
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-lastContent: string--><!--Device-ElementAttributeValues-lastContent: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## layer
 
 ```TypeScript
-layer: int
+layer: number
 ```
 
 Display layer of the element. The value range is greater than or equal to 0. The default value is **0**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-layer: int--><!--Device-ElementAttributeValues-layer: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -565,39 +565,39 @@ Whether the element is long-clickable. The value **true** indicates that the ele
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-longClickable: boolean--><!--Device-ElementAttributeValues-longClickable: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## offset
 
 ```TypeScript
-offset: double
+offset: number
 ```
 
 For scrollable components such as **List** and **Grid**, this attribute indicates the pixel offset of the content area relative to the top coordinate of the component. The unit is pixel (px).Default value: **0**.
 
-**Type:** double
+**Type:** number
 
 **Since:** 12
 
-<!--Device-ElementAttributeValues-offset: double--><!--Device-ElementAttributeValues-offset: double-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## pageId
 
 ```TypeScript
-pageId: int
+pageId: number
 ```
 
 Page ID. The default value is **-1**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-pageId: int--><!--Device-ElementAttributeValues-pageId: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -613,7 +613,7 @@ Parent element of the element.
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-parent: AccessibilityElement--><!--Device-ElementAttributeValues-parent: AccessibilityElement-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -629,7 +629,7 @@ Whether the element supports multiple lines of text. The value **true** indicate
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-pluralLineSupported: boolean--><!--Device-ElementAttributeValues-pluralLineSupported: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -645,7 +645,7 @@ Rectangular area of the element, including position and size information.
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-rect: Rect--><!--Device-ElementAttributeValues-rect: Rect-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -661,7 +661,7 @@ Resource name of the element.
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-resourceName: string--><!--Device-ElementAttributeValues-resourceName: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -677,7 +677,7 @@ Root node element of the window element.
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-rootElement: AccessibilityElement--><!--Device-ElementAttributeValues-rootElement: AccessibilityElement-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -693,7 +693,7 @@ Display area of the element.
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-screenRect: Rect--><!--Device-ElementAttributeValues-screenRect: Rect-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -709,7 +709,7 @@ Whether the element is scrollable. The value **true** indicates that the element
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-scrollable: boolean--><!--Device-ElementAttributeValues-scrollable: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -725,23 +725,23 @@ Whether the element is selected. The value **true** indicates that the element i
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-selected: boolean--><!--Device-ElementAttributeValues-selected: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## startIndex
 
 ```TypeScript
-startIndex: int
+startIndex: number
 ```
 
 List index of the first item on the screen. The value range is greater than or equal to 0. The default value is **0**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-startIndex: int--><!--Device-ElementAttributeValues-startIndex: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -757,23 +757,23 @@ Text of the element.
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-text: string--><!--Device-ElementAttributeValues-text: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## textLengthLimit
 
 ```TypeScript
-textLengthLimit: int
+textLengthLimit: number
 ```
 
 Maximum length limit of the element text. The value range is greater than or equal to 0. The default value is **0**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-textLengthLimit: int--><!--Device-ElementAttributeValues-textLengthLimit: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -789,7 +789,7 @@ Granularity of movement when the text is read.
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-textMoveUnit: accessibility.TextMoveUnit--><!--Device-ElementAttributeValues-textMoveUnit: accessibility.TextMoveUnit-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -805,7 +805,7 @@ Accessibility text type of an element, which is configured by the **accessibilit
 
 **Since:** 12
 
-<!--Device-ElementAttributeValues-textType: string--><!--Device-ElementAttributeValues-textType: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -821,7 +821,7 @@ Action that triggers the element event.
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-triggerAction: accessibility.Action--><!--Device-ElementAttributeValues-triggerAction: accessibility.Action-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -837,71 +837,70 @@ Window type of the element.
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-type: WindowType--><!--Device-ElementAttributeValues-type: WindowType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## valueMax
 
 ```TypeScript
-valueMax: double
+valueMax: number
 ```
 
 Maximum value.Default value: **0**.
 
-**Type:** double
+**Type:** number
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-valueMax: double--><!--Device-ElementAttributeValues-valueMax: double-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## valueMin
 
 ```TypeScript
-valueMin: double
+valueMin: number
 ```
 
 Minimum value.Default value: **0**.
 
-**Type:** double
+**Type:** number
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-valueMin: double--><!--Device-ElementAttributeValues-valueMin: double-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## valueNow
 
 ```TypeScript
-valueNow: double
+valueNow: number
 ```
 
 Current value.Default value: **0**.
 
-**Type:** double
+**Type:** number
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-valueNow: double--><!--Device-ElementAttributeValues-valueNow: double-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## windowId
 
 ```TypeScript
-windowId: int
+windowId: number
 ```
 
 Window ID.Default value: **-1**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 9
 
-<!--Device-ElementAttributeValues-windowId: int--><!--Device-ElementAttributeValues-windowId: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
-

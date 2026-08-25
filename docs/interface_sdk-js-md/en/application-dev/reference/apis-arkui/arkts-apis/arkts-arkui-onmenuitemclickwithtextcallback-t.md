@@ -8,24 +8,23 @@ Invoke upon clicking an item, capable of intercepting the default system menu ex
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-unnamed-export type OnMenuItemClickWithTextCallback = (menuItem: TextMenuItem, value: string) => boolean--><!--Device-unnamed-export type OnMenuItemClickWithTextCallback = (menuItem: TextMenuItem, value: string) => boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| menuItem | TextMenuItem | Yes | current clicked menu item. |
-| value | string | Yes | selected text content. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| menuItem | [TextMenuItem](arkts-arkui-textmenuitem-i.md) | Yes |
+| value | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Return true if the event is consumed; false otherwise. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

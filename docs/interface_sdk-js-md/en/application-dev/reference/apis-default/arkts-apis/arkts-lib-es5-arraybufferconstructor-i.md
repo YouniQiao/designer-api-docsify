@@ -1,54 +1,48 @@
 # ArrayBufferConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface ArrayBufferConstructor--><!--Device-unnamed-interface ArrayBufferConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
+## [[Construct]]
 
 ```TypeScript
 new(byteLength: number): ArrayBuffer
 ```
 
-**Since:** -1
-
-<!--Device-ArrayBufferConstructor-new(byteLength: number): ArrayBuffer--><!--Device-ArrayBufferConstructor-new(byteLength: number): ArrayBuffer-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteLength | number | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| byteLength | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## isView
 
 ```TypeScript
 isView(arg: any): arg is ArrayBufferView
 ```
 
-**Since:** -1
-
-<!--Device-ArrayBufferConstructor-isView(arg: any): arg is ArrayBufferView--><!--Device-ArrayBufferConstructor-isView(arg: any): arg is ArrayBufferView-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arg | any | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arg | any | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## prototype
 
 ```TypeScript
@@ -57,7 +51,4 @@ readonly prototype: ArrayBuffer
 
 **Type:** ArrayBuffer
 
-**Since:** -1
-
-<!--Device-ArrayBufferConstructor-readonly prototype: ArrayBuffer--><!--Device-ArrayBufferConstructor-readonly prototype: ArrayBuffer-End-->
-
+**ArkTS mode:** 

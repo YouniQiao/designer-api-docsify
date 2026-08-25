@@ -2,9 +2,9 @@
 
 枚举，空间化设备类型。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-audio-enum AudioSpatialDeviceType--><!--Device-audio-enum AudioSpatialDeviceType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -18,9 +18,9 @@ SPATIAL_DEVICE_TYPE_NONE = 0
 
 无空间化设备类型。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_NONE = 0--><!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_NONE = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -34,9 +34,9 @@ SPATIAL_DEVICE_TYPE_IN_EAR_HEADPHONE = 1
 
 入耳式耳机。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_IN_EAR_HEADPHONE = 1--><!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_IN_EAR_HEADPHONE = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -50,9 +50,9 @@ SPATIAL_DEVICE_TYPE_HALF_IN_EAR_HEADPHONE = 2
 
 半入耳式耳机。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_HALF_IN_EAR_HEADPHONE = 2--><!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_HALF_IN_EAR_HEADPHONE = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -66,9 +66,9 @@ SPATIAL_DEVICE_TYPE_OVER_EAR_HEADPHONE = 3
 
 头戴式耳机。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_OVER_EAR_HEADPHONE = 3--><!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_OVER_EAR_HEADPHONE = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -82,9 +82,9 @@ SPATIAL_DEVICE_TYPE_GLASSES = 4
 
 眼镜式耳机。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_GLASSES = 4--><!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_GLASSES = 4-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -98,11 +98,10 @@ SPATIAL_DEVICE_TYPE_OTHERS = 5
 
 其他空间化设备类型。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_OTHERS = 5--><!--Device-AudioSpatialDeviceType-SPATIAL_DEVICE_TYPE_OTHERS = 5-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
-

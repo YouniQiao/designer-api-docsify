@@ -16,36 +16,36 @@ function batchRemove(assetsToBeRemoved: Array<AssetMap>): Promise<void>
 
 **起始版本：** 26.0.0
 
-<!--Device-asset-function batchRemove(assetsToBeRemoved: Array<AssetMap>): Promise<void>--><!--Device-asset-function batchRemove(assetsToBeRemoved: Array<AssetMap>): Promise<void>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Asset
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| assetsToBeRemoved | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | 是 | 待删除关键资产的搜索条件数组，如别名、访问控制属性、自定义数据等。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| assetsToBeRemoved | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24000001](../errorcode-asset.md#24000001-关键资产服务不可用) | The ASSET service is unavailable. |
-| [24000006](../errorcode-asset.md#24000006-系统内存不足) | Insufficient memory. |
-| [24000007](../errorcode-asset.md#24000007-关键资产损坏) | The asset is corrupted. |
-| [24000008](../errorcode-asset.md#24000008-数据库操作失败) | The database operation failed. |
-| [24000010](../errorcode-asset.md#24000010-进程通信错误) | IPC failed. |
-| [24000011](../errorcode-asset.md#24000011-包管理服务异常) | Calling the Bundle Manager service failed. |
-| [24000012](../errorcode-asset.md#24000012-账号系统服务异常) | Calling the OS Account service failed. |
-| [24000013](../errorcode-asset.md#24000013-访问控制服务异常) | Calling the Access Token service failed. |
-| [24000015](../errorcode-asset.md#24000015-获取系统时间失败) | Getting the system time failed. |
-| [24000019](../errorcode-asset.md#24000019-属性值不一致) | Each value of [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#require_attr_encrypted) in the array is not consistent. |
+| 错误码ID |
+| --- |
+| [24000001](../errorcode-asset.md#24000001-关键资产服务不可用) |
+| [24000006](../errorcode-asset.md#24000006-系统内存不足) |
+| [24000007](../errorcode-asset.md#24000007-关键资产损坏) |
+| [24000008](../errorcode-asset.md#24000008-数据库操作失败) |
+| [24000010](../errorcode-asset.md#24000010-进程通信错误) |
+| [24000011](../errorcode-asset.md#24000011-包管理服务异常) |
+| [24000012](../errorcode-asset.md#24000012-账号系统服务异常) |
+| [24000013](../errorcode-asset.md#24000013-访问控制服务异常) |
+| [24000015](../errorcode-asset.md#24000015-获取系统时间失败) |
+| [24000019](../errorcode-asset.md#24000019-属性值不一致) |
 
 **示例**
 
@@ -71,4 +71,3 @@ asset.batchRemove(assetsToBeRemoved).then(() => {
   console.info(`Succeeded in batch removing Asset.`);
 });
 ```
-

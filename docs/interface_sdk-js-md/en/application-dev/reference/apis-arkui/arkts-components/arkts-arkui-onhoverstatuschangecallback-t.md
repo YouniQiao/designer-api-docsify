@@ -8,17 +8,16 @@ Defines the current callback invoked when the hover state of the device changes.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-unnamed-declare type OnHoverStatusChangeCallback = (param: HoverEventParam) => void--><!--Device-unnamed-declare type OnHoverStatusChangeCallback = (param: HoverEventParam) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| param | [HoverEventParam](arkts-arkui-hovereventparam-i.md) | Yes | Parameters related to the hover state of the device, including the fold state, hover state, application orientation, and window mode enumeration of the device. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| param | [HoverEventParam](arkts-arkui-hovereventparam-i.md) | Yes |

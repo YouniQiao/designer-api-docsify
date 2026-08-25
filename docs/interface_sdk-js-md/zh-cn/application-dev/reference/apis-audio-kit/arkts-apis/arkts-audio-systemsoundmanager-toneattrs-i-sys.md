@@ -2,9 +2,9 @@
 
 管理铃声属性。在调用ToneAttrs&lt;sup&gt;12+&lt;/sup&gt;的接口前，需要先通过 [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f-sys.md)或 [getDefaultRingtoneAttrs](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getdefaultringtoneattrs)、 [getRingtoneAttrList](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getringtoneattrlist)等方法获取实例。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-systemSoundManager-interface ToneAttrs--><!--Device-systemSoundManager-interface ToneAttrs-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -18,15 +18,21 @@ import { systemSoundManager } from '@kit.AudioKit';
 
 ## getCategory
 
+ArkTS-Dyn:
+```TypeScript
+getCategory(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getCategory(): int
 ```
 
 获取铃声类别。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ToneAttrs-getCategory(): int--><!--Device-ToneAttrs-getCategory(): int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -34,15 +40,15 @@ getCategory(): int
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 铃声类别，取值参考铃声类别的常量。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -58,9 +64,9 @@ getCustomizedType(): ToneCustomizedType
 
 获取铃声自定义类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ToneAttrs-getCustomizedType(): ToneCustomizedType--><!--Device-ToneAttrs-getCustomizedType(): ToneCustomizedType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -68,15 +74,15 @@ getCustomizedType(): ToneCustomizedType
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ToneCustomizedType](arkts-audio-systemsoundmanager-tonecustomizedtype-e-sys.md) | 定制铃音类型。 |
+| 类型 |
+| --- |
+| [ToneCustomizedType](arkts-audio-systemsoundmanager-tonecustomizedtype-e-sys.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -92,9 +98,9 @@ getFileName(): string
 
 获取铃声文件名。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ToneAttrs-getFileName(): string--><!--Device-ToneAttrs-getFileName(): string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -102,15 +108,15 @@ getFileName(): string
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 文件名。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -130,9 +136,9 @@ getMediaType():MediaType
 
 获取铃声类型。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-ToneAttrs-getMediaType():MediaType--><!--Device-ToneAttrs-getMediaType():MediaType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -140,15 +146,15 @@ getMediaType():MediaType
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| MediaType | 媒体类型，如果应用未调用过setMediaType设置mediatype，则此函数返回的默认值为AUDIO。 |
+| 类型 |
+| --- |
+| [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediatype-e.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -164,9 +170,9 @@ getTitle(): string
 
 获取铃声标题。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ToneAttrs-getTitle(): string--><!--Device-ToneAttrs-getTitle(): string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -174,15 +180,15 @@ getTitle(): string
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 标题。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -202,9 +208,9 @@ getUri(): string
 
 获取铃声资源路径。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ToneAttrs-getUri(): string--><!--Device-ToneAttrs-getUri(): string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -212,15 +218,15 @@ getUri(): string
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | uri（如：'/data/storage/el2/base/RingTone/alarms/test.ogg'）。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -234,15 +240,21 @@ toneHapticsAttrs.getUri();
 
 ## setCategory
 
+ArkTS-Dyn:
+```TypeScript
+setCategory(category: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setCategory(category: int): void
 ```
 
 设置铃声类别。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ToneAttrs-setCategory(category: int): void--><!--Device-ToneAttrs-setCategory(category: int): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -250,16 +262,16 @@ setCategory(category: int): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| category | int | 是 | 铃声类别，取值参考铃声类别的常量。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| category | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -277,9 +289,9 @@ setFileName(name: string): void
 
 设置铃声文件名。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ToneAttrs-setFileName(name: string): void--><!--Device-ToneAttrs-setFileName(name: string): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -287,16 +299,16 @@ setFileName(name: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 铃声的文件名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -314,9 +326,9 @@ setMediaType(type:MediaType):void
 
 设置铃声类型。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-ToneAttrs-setMediaType(type:MediaType):void--><!--Device-ToneAttrs-setMediaType(type:MediaType):void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -324,15 +336,15 @@ setMediaType(type:MediaType):void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | MediaType | 是 | 媒体类型。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediatype-e.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -350,9 +362,9 @@ setTitle(title: string): void
 
 设置铃声标题。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ToneAttrs-setTitle(title: string): void--><!--Device-ToneAttrs-setTitle(title: string): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -360,16 +372,16 @@ setTitle(title: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| title | string | 是 | 铃声的标题。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| title | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -378,4 +390,3 @@ let toneAttrs = systemSoundManager.createCustomizedToneAttrs();
 let title = 'text';
 toneAttrs.setTitle(title);
 ```
-

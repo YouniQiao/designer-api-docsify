@@ -14,9 +14,9 @@ function getPointerSpeed(callback: AsyncCallback<int>): void
 
 获取鼠标移动速度，使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-pointer-function getPointerSpeed(callback: AsyncCallback<int>): void--><!--Device-pointer-function getPointerSpeed(callback: AsyncCallback<int>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -24,16 +24,16 @@ function getPointerSpeed(callback: AsyncCallback<int>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当获取鼠标移动速度成功，err为undefined，number为鼠标移动速度，取值范围[1, 20]；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -168,9 +168,9 @@ function getPointerSpeed(): Promise<int>
 
 获取当前鼠标移动速度，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-pointer-function getPointerSpeed(): Promise<int>--><!--Device-pointer-function getPointerSpeed(): Promise<int>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -178,17 +178,16 @@ function getPointerSpeed(): Promise<int>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise对象，返回鼠标移动速度。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
 参见 [getPointerSpeed](#getpointerspeed)
-

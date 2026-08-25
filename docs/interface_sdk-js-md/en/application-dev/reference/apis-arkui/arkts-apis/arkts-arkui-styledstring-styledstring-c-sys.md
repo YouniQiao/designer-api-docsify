@@ -4,9 +4,7 @@ StyledString
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare class StyledString--><!--Device-unnamed-export declare class StyledString-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,11 +19,9 @@ Returns ArrayBuffer from the serialized styled string.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StyledString-static marshalling(styledString: StyledString, callback: StyledStringMarshallCallback):        ArrayBuffer | undefined--><!--Device-StyledString-static marshalling(styledString: StyledString, callback: StyledStringMarshallCallback):        ArrayBuffer | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,16 +29,16 @@ Returns ArrayBuffer from the serialized styled string.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | Yes | StyledString parameter. |
-| callback | [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | Yes | When marshalling StyledStringMarshingValue, will trigger this callback to get ArrayBuffer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | Yes |
+| callback | [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ArrayBuffer \| undefined |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArrayBuffer \| undefined |
 
 ## marshalling
 
@@ -54,11 +50,9 @@ Returns ArrayBuffer from the serialized styled string.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StyledString-static marshalling(styledString: StyledString): ArrayBuffer | undefined--><!--Device-StyledString-static marshalling(styledString: StyledString): ArrayBuffer | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,15 +60,15 @@ Returns ArrayBuffer from the serialized styled string.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | Yes | StyledString parameter. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ArrayBuffer \| undefined |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArrayBuffer \| undefined |
 
 ## unmarshalling
 
@@ -87,11 +81,9 @@ Returns StyledString from the deserialized ArrayBuffer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StyledString-static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallback):        Promise<StyledString | undefined>--><!--Device-StyledString-static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallback):        Promise<StyledString | undefined>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -99,23 +91,23 @@ Returns StyledString from the deserialized ArrayBuffer.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | The buffer will be deserialized to a StyledString. |
-| callback | [StyledStringUnmarshallCallback](arkts-arkui-styledstringunmarshallcallback-t-sys.md) | Yes | When unmarshalling ArrayBuffer, will trigger this callback to get StyledStringMarshingValue. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buffer | ArrayBuffer | Yes |
+| callback | [StyledStringUnmarshallCallback](arkts-arkui-styledstringunmarshallcallback-t-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[StyledString](arkts-arkui-styledstring-styledstring-c.md) \| undefined&gt; |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-styledstring-c.md) \| undefined & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) | Styled string decode error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) |
 
 ## unmarshalling
 
@@ -127,11 +119,9 @@ Returns StyledString from the deserialized ArrayBuffer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StyledString-static unmarshalling(buffer: ArrayBuffer): Promise<StyledString | undefined>--><!--Device-StyledString-static unmarshalling(buffer: ArrayBuffer): Promise<StyledString | undefined>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -139,20 +129,19 @@ Returns StyledString from the deserialized ArrayBuffer.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | The buffer will be deserialized to a StyledString. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buffer | ArrayBuffer | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[StyledString](arkts-arkui-styledstring-styledstring-c.md) \| undefined&gt; |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-styledstring-c.md) \| undefined & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) | Styled string decode error. |
-
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) |

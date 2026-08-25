@@ -4,7 +4,7 @@ Provides information related to the upcoming scroll action, including the index 
 
 **Since:** 15
 
-<!--Device-unnamed-declare interface SwiperContentWillScrollResult--><!--Device-unnamed-declare interface SwiperContentWillScrollResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,13 +25,13 @@ Index of the page that will be displayed in the scroll direction.
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 15.
-
-<!--Device-SwiperContentWillScrollResult-comingIndex: number--><!--Device-SwiperContentWillScrollResult-comingIndex: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,13 +47,13 @@ Index of the current page. During a finger swipe, this value remains constant as
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 15.
-
-<!--Device-SwiperContentWillScrollResult-currentIndex: number--><!--Device-SwiperContentWillScrollResult-currentIndex: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,13 +69,12 @@ Displacement of the scroll action, which is signed to indicate different swipe d
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 15.
 
-<!--Device-SwiperContentWillScrollResult-offset: number--><!--Device-SwiperContentWillScrollResult-offset: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

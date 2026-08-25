@@ -4,9 +4,7 @@ Environment具体使用说明，详见[Environment(设备环境查询)](../../..
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export declare class Environment--><!--Device-unnamed-export declare class Environment-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,26 +18,24 @@ static envProp<T>(key: string, value: T): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Environment-static envProp<T>(key: string, value: T): boolean--><!--Device-Environment-static envProp<T>(key: string, value: T): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | string | 是 | 环境变量名称，支持的范围详见内置环境变量说明。 |
-| value | T | 是 | 查询不到环境变量key时，则使用value作为默认值存入AppStorage中。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | string | 是 |
+| value | T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果key对应的属性在AppStorage中存在，则返回false。不存在则在AppStorage中用value作为默认值创建key对应的属性，返回true。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## envProps
 
@@ -51,19 +47,17 @@ static envProps(props: EnvPropsOptions[]): void
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Environment-static envProps(props: EnvPropsOptions[]): void--><!--Device-Environment-static envProps(props: EnvPropsOptions[]): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| props | [EnvPropsOptions](arkts-arkui-environment-envpropsoptions-i.md)[] | 是 | 系统环境变量和默认值的键值对的数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| props | [EnvPropsOptions](arkts-arkui-environment-envpropsoptions-i.md)[] | 是 |
 
 ## keys
 
@@ -75,17 +69,14 @@ static keys(): Array<string>
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Environment-static keys(): Array<string>--><!--Device-Environment-static keys(): Array<string>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;string&gt; | 返回关联的系统项数组。 |
-
+| 类型 |
+| --- |
+| Array & lt;string & gt; |

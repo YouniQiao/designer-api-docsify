@@ -4,9 +4,7 @@ Unicode string
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-unnamed-export class String--><!--Device-unnamed-export class String-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,25 +23,23 @@ Returns an instance of string at passed index.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-$_get(index: int): string--><!--Device-String-$_get(index: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | index to look at <br>The value range is all integers. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | string value at index |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## $_invoke
 
@@ -55,19 +51,17 @@ Creates a new instance of a string
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-static $_invoke(): string--><!--Device-String-static $_invoke(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A new string instance |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## $_invoke
 
@@ -79,25 +73,23 @@ Creates a new instance of a string from boolean
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-static $_invoke(value: boolean): string--><!--Device-String-static $_invoke(value: boolean): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | boolean | Yes | The value to be converted to a string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A new string instance |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## $_invoke
 
@@ -109,25 +101,23 @@ Creates a new instance of a string from byte
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-static $_invoke(value: byte): string--><!--Device-String-static $_invoke(value: byte): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | byte | Yes | The value to be converted to a string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A new string instance |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## $_invoke
 
@@ -139,25 +129,23 @@ Creates a new instance of a string from char
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-static $_invoke(value: char): string--><!--Device-String-static $_invoke(value: char): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | The value to be converted to a string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A new string instance |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## $_invoke
 
@@ -169,25 +157,23 @@ Creates a new instance of a string from short
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-static $_invoke(value: short): string--><!--Device-String-static $_invoke(value: short): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | short | Yes | The value to be converted to a string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A new string instance |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## $_invoke
 
@@ -199,25 +185,23 @@ Creates a new instance of a string from int
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-static $_invoke(value: int): string--><!--Device-String-static $_invoke(value: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | int | Yes | The value to be converted to a string <br>The value range is all integers. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A new string instance |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## $_invoke
 
@@ -229,25 +213,23 @@ Creates a new instance of a string from long
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-static $_invoke(value: long): string--><!--Device-String-static $_invoke(value: long): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | long | Yes | The value to be converted to a string |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A new string instance |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## $_invoke
 
@@ -259,25 +241,23 @@ Creates a new instance of a string from float
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-static $_invoke(value: float): string--><!--Device-String-static $_invoke(value: float): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | float | Yes | The value to be converted to a string |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A new string instance |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## $_invoke
 
@@ -289,25 +269,23 @@ Creates a new instance of a string from double
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-static $_invoke(value: double): string--><!--Device-String-static $_invoke(value: double): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | The value to be converted to a string |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A new string instance |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## $_invoke
 
@@ -319,25 +297,23 @@ Creates a new instance of a string
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-static $_invoke(value: Any): string--><!--Device-String-static $_invoke(value: Any): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Any | Yes | The value to be converted to a string. Can be an Object or null. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | Any | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A new string instance |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## $_iterator
 
@@ -349,19 +325,17 @@ Returns an iterator for this string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public $_iterator(): IterableIterator<string>--><!--Device-String-public $_iterator(): IterableIterator<string>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;string&gt; | an iterator for this string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;string & gt; |
 
 ## anchor
 
@@ -373,25 +347,23 @@ The anchor() method creates a string that embeds a string in an &lt;a&gt; elemen
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public anchor(name: string): string--><!--Device-String-public anchor(name: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | name of the anchor. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string beginning with an &lt;a name="name"&gt; start tag (double quotes in name are replaced with &quot;), then the text str, and then an &lt;/a&gt; end tag. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## at
 
@@ -403,25 +375,23 @@ The at() method takes an integer value and returns a new string consisting of th
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public at(index: int): string | undefined--><!--Device-String-public at(index: int): string | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | Converted at element. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string \| undefined | A string consisting of the single UTF-16 code unit located at the specified position. Returns undefined if the given index can not be found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string \| undefined |
 
 ## big
 
@@ -433,19 +403,17 @@ The big() method creates a string that embeds a string in a &lt;big&gt; element 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public big(): string--><!--Device-String-public big(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string embeds in &lt;big&gt; element |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## blink
 
@@ -457,19 +425,17 @@ The blink() method creates a string that embeds a string in a &lt;blink&gt; elem
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public blink(): string--><!--Device-String-public blink(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string embeds in &lt;blink&gt; element |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## bold
 
@@ -481,19 +447,17 @@ The bold() method creates a string that embeds a string in a &lt;bold&gt; elemen
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public bold(): string--><!--Device-String-public bold(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string embeds in &lt;b&gt; element |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## charAt
 
@@ -505,25 +469,23 @@ Getter for char at some index
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public charAt(index: int): char--><!--Device-String-public charAt(index: int): char-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | index in char array inside string. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| char | char value at index |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| char |
 
 ## charCodeAt
 
@@ -535,25 +497,23 @@ The charCodeAt() method returns an integer between 0 and 65535 representing the 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public charCodeAt(index: int): int--><!--Device-String-public charCodeAt(index: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | subscript. The value must be an integer within [0, string.length-1]. <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | The UTF-16 code unit value at the specified index. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## codePointAt
 
@@ -565,25 +525,23 @@ Gets the codepoint at the specified index in this string. Is similar to charAt(i
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public codePointAt(index: int): int | undefined--><!--Device-String-public codePointAt(index: int): int | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | index of the potential surrogate pair. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int \| undefined | the codepoint at the specified index |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int \| undefined |
 
 ## codePointCount
 
@@ -595,26 +553,24 @@ Returns the amount of full codepoints between begin and end indexes. Characters 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public codePointCount(begin: int, end: int): int--><!--Device-String-public codePointCount(begin: int, end: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| begin | int | Yes | index to start from. <br>The value must be an integer greater than or equal to 0. |
-| end | int | Yes | past the ending index. <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| begin | int | Yes |
+| end | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | the amount of completed codepoints |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## codePointCount
 
@@ -626,26 +582,24 @@ Returns the amount of full codepoints between begin and end indexes. Characters 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public codePointCount(begin: double, end: double): double--><!--Device-String-public codePointCount(begin: double, end: double): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| begin | double | Yes | index to start from. |
-| end | double | Yes | past the ending index. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| begin | double | Yes |
+| end | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | the amount of completed codepoints |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## compareTo
 
@@ -657,25 +611,23 @@ Lexicographical comparison between this string and another one. The result is le
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public compareTo(other: string): int--><!--Device-String-public compareTo(other: string): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | string | Yes | string to compare with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | the comparison result |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## concat
 
@@ -687,25 +639,23 @@ Concatenation of this and array of strings.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public concat(s: string): string--><!--Device-String-public concat(s: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| s | string | Yes | strings to concat with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| s | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new string which is a concatenation of this + strings[0] + ... + strings[string.length - 1] |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## concat
 
@@ -717,26 +667,24 @@ Concatenation of this and two strings.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-concat(s1: string, s2: string): string--><!--Device-String-concat(s1: string, s2: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| s1 | string | Yes |  |
-| s2 | string | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| s1 | string | Yes |
+| s2 | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Concatenated string. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## concat
 
@@ -748,27 +696,25 @@ Concatenation of this and three strings.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-concat(s1: string, s2: string, s3: string): string--><!--Device-String-concat(s1: string, s2: string, s3: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| s1 | string | Yes |  |
-| s2 | string | Yes |  |
-| s3 | string | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| s1 | string | Yes |
+| s2 | string | Yes |
+| s3 | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Concatenated string. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## concat
 
@@ -780,25 +726,23 @@ Concatenation of this and array of strings.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public concat(...strings: string[]): string--><!--Device-String-public concat(...strings: string[]): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| strings | string[] | Yes | strings to concat with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| strings | string[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new string which is a concatenation |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## constructor
 
@@ -810,11 +754,9 @@ Constructs an empty string
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-constructor()--><!--Device-String-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -828,19 +770,17 @@ Constructs string from chars array initializer
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-constructor(data: FixedArray<char>)--><!--Device-String-constructor(data: FixedArray<char>)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | FixedArray&lt;char&gt; | Yes | initializer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | FixedArray & lt;char & gt; | Yes |
 
 ## constructor
 
@@ -852,19 +792,17 @@ Constructs string from another string
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-constructor(otherStr: string)--><!--Device-String-constructor(otherStr: string)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| otherStr | string | Yes | initializer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| otherStr | string | Yes |
 
 ## constructor
 
@@ -876,19 +814,17 @@ Constructs string from Any
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-constructor(object: Any)--><!--Device-String-constructor(object: Any)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| object | Any | Yes | initializer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| object | Any | Yes |
 
 ## contains
 
@@ -900,26 +836,24 @@ Checks if this string contains the specified string. The search starts from spec
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public contains(str: string, fromIndex: int): boolean--><!--Device-String-public contains(str: string, fromIndex: int): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| str | string | Yes | string to search. <br>The minimum length is 0. |
-| fromIndex | int | Yes | index to start search from. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| str | string | Yes |
+| fromIndex | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if this string contains str and false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## contains
 
@@ -931,26 +865,24 @@ Checks if this string contains the specified string. The search starts from spec
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public contains(str: string, fromIndex: double): boolean--><!--Device-String-public contains(str: string, fromIndex: double): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| str | string | Yes | string to search. |
-| fromIndex | double | Yes | index to start search from. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| str | string | Yes |
+| fromIndex | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if this string contains str and false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## contentEquals
 
@@ -962,25 +894,23 @@ Compares the given StringBuilder to this string. The result is true if the Strin
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public contentEquals(sb: StringBuilder): boolean--><!--Device-String-public contentEquals(sb: StringBuilder): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sb | [StringBuilder](arkts-arkts-stringbuilder-c.md) | Yes | StringBuilder to compare to. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sb | [StringBuilder](arkts-arkts-stringbuilder-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if StringBuilder has the same string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## endsWith
 
@@ -992,26 +922,24 @@ Checks that this string ends with the specified suffix.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public endsWith(suffix: string, endPosition?: int): boolean--><!--Device-String-public endsWith(suffix: string, endPosition?: int): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| suffix | string | Yes | suffix string. |
-| endPosition | int | No | at which suffix is expected to be found. Defaults to str.length. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| suffix | string | Yes |
+| endPosition | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the string ends with the specified suffix; false otherwise (including when suffix is longer than the substring being checked) |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## equals
 
@@ -1023,25 +951,23 @@ Checks equality of this string and another Object as string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public equals(to: Any): boolean--><!--Device-String-public equals(to: Any): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| to | Any | Yes | another object to compare. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| to | Any | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if strings are equal and false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## fixed
 
@@ -1053,19 +979,17 @@ The fixed() method creates a string that embeds a string in a &lt;tt&gt; element
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public fixed(): string--><!--Device-String-public fixed(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string embeds in &lt;tt&gt; element |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## fontcolor
 
@@ -1077,25 +1001,23 @@ The fontcolor() method creates a string that embeds a string in a &lt;font&gt; e
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public fontcolor(color: string): string--><!--Device-String-public fontcolor(color: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| color | string | Yes | color to use. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| color | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string embeds in &lt;font&gt; element with color attribute |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## fontsize
 
@@ -1107,25 +1029,23 @@ The fontsize() method creates a string that embeds a string in a &lt;font&gt; el
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public fontsize(size: int): string--><!--Device-String-public fontsize(size: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | int | Yes | size to use. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| size | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string embeds in &lt;font&gt; element with size attribute |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## fontsize
 
@@ -1137,25 +1057,23 @@ The fontsize() method creates a string that embeds a string in a &lt;font&gt; el
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public fontsize(size: string): string--><!--Device-String-public fontsize(size: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | string | Yes | size to use. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| size | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string embeds in &lt;font&gt; element with size attribute |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## fromCharCode
 
@@ -1167,25 +1085,23 @@ The string.fromCharCode() static method returns a string created from the specif
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public static fromCharCode(code: int): string--><!--Device-String-public static fromCharCode(code: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| code | int | Yes | is a number between 0 and 65535 (0xFFFF) representing a UTF-16 code unit or NaN. <br>The value range is all integers. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| code | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | string consisting of the specified UTF-16 code unit. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## fromCharCode
 
@@ -1197,25 +1113,23 @@ The string.fromCharCode() static method returns a string created from the specif
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public static fromCharCode(...codes: int[]): string--><!--Device-String-public static fromCharCode(...codes: int[]): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| codes | int[] | Yes | are numbers between 0 and 65535 (0xFFFF) representing a UTF-16 code unit or NaN. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| codes | int[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | string consisting of the specified UTF-16 code units. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## fromCodePoint
 
@@ -1227,25 +1141,23 @@ The string.fromCodePoint() static method returns a string created by using the s
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public static fromCodePoint(...codePoints: int[]): string--><!--Device-String-public static fromCodePoint(...codePoints: int[]): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| codePoints | int[] | Yes | are integers between 0 and 0x10FFFF (inclusive) representing a Unicode code point. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| codePoints | int[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | string created by using the specified sequence of code points |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## getBytes
 
@@ -1257,26 +1169,24 @@ Gets the byte sequence that is representing the part of this string between begi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public getBytes(begin: int, end: int): byte[]--><!--Device-String-public getBytes(begin: int, end: int): byte[]-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| begin | int | Yes | index to start from. <br>The value must be an integer greater than or equal to 0. |
-| end | int | Yes | past the ending index. <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| begin | int | Yes |
+| end | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| byte[] | byte[] array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| byte[] |
 
 ## getChars
 
@@ -1288,19 +1198,17 @@ Gets the full char sequence that is representing this string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public getChars(): char[]--><!--Device-String-public getChars(): char[]-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| char[] | char[] array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| char[] |
 
 ## getChars
 
@@ -1312,26 +1220,24 @@ Gets the char sequence that is representing the part of this string between begi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public getChars(begin: int, end: int): char[]--><!--Device-String-public getChars(begin: int, end: int): char[]-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| begin | int | Yes | index to start from. <br>The value should be an integer. |
-| end | int | Yes | past the ending index. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| begin | int | Yes |
+| end | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| char[] | char[] array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| char[] |
 
 ## getLength
 
@@ -1343,19 +1249,17 @@ Length of this string
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-getLength(): int--><!--Device-String-getLength(): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | length of this string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## getSubstitution
 
@@ -1368,30 +1272,28 @@ Resolves the replacement template string by parsing special substitution pattern
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-static getSubstitution(matched: string, str: string, position: int, captures: string[],        namedCaptures: Record<string, string | undefined> | undefined, replacement: string): string--><!--Device-String-static getSubstitution(matched: string, str: string, position: int, captures: string[],        namedCaptures: Record<string, string | undefined> | undefined, replacement: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| matched | string | Yes | matched string, which is the complete substring matched by the regular expression. |
-| str | string | Yes | the original full string on which the replacement operation is being performed. |
-| position | int | Yes | the zero-based start index of the matched substring within the original string str. <br>The value must be an integer greater than or equal to 0. |
-| captures | string[] | Yes | an array of capture group matches. |
-| namedCaptures | Record&lt;string, string \| undefined&gt; \| undefined | Yes | a mapping object for named capturing groups. |
-| replacement | string | Yes | the replacement template string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| matched | string | Yes |
+| str | string | Yes |
+| position | int | Yes |
+| captures | string[] | Yes |
+| namedCaptures | Record & lt;string, string \ | undefined & gt; \ | undefined | Yes |
+| replacement | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the final replacement string after parsing all substitution patterns in the replacement template. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## includes
 
@@ -1403,26 +1305,24 @@ The includes() method performs a case-sensitive search to determine whether one 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public includes(searchString: string, position?: int): boolean--><!--Device-String-public includes(searchString: string, position?: int): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchString | string | Yes | to be searched. |
-| position | int | No | within the string at which to begin searching for searchString. Defaults to 0, meaning the search starts from the beginning of the string. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchString | string | Yes |
+| position | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the search string is found anywhere within the given string, including when searchString is an empty string; otherwise, false |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## indexOf
 
@@ -1434,25 +1334,23 @@ Finds the first occurrence of a character in this string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public indexOf(ch: char): int--><!--Device-String-public indexOf(ch: char): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| ch | char | Yes | the character to search for from the beginning of the string. The character must be a valid UTF-16 code unit (0 to 65535). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| ch | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | index of the character from the beginning of this string, or -1 if not found |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## indexOf
 
@@ -1464,26 +1362,24 @@ Finds the first occurrence of a character in this string at position &gt;= fromI
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public indexOf(ch: char, fromIndex: int): int--><!--Device-String-public indexOf(ch: char, fromIndex: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| ch | char | Yes | the character to search for from the beginning of the string. The character must be a valid UTF-16 code unit (0 to 65535). |
-| fromIndex | int | Yes | to start searching from. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| ch | char | Yes |
+| fromIndex | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | index of the character from the beginning of this string, or -1 if not found |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## indexOf
 
@@ -1495,26 +1391,24 @@ Finds the first occurrence of another string in this string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public indexOf(str: string, fromIndex?: int): int--><!--Device-String-public indexOf(str: string, fromIndex?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| str | string | Yes | the substring to search for within this string. If an empty string is provided, returns fromIndex (or 0 if fromIndex is undefined). |
-| fromIndex | int | No | to start searching from. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| str | string | Yes |
+| fromIndex | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | index of the str from the beginning of this string, or -1 if not found |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## isCompressed
 
@@ -1526,19 +1420,17 @@ Check if a string is compressed
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public isCompressed(): boolean--><!--Device-String-public isCompressed(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true - if s is compressed, false - otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isEmpty
 
@@ -1550,19 +1442,17 @@ Checks if this string is empty
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public isEmpty(): boolean--><!--Device-String-public isEmpty(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if empty and false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isWellFormed
 
@@ -1574,19 +1464,17 @@ The isWellFormed() method of string values returns a boolean indicating whether 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public isWellFormed(): boolean--><!--Device-String-public isWellFormed(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if this string contains any lone surrogates, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## italics
 
@@ -1598,19 +1486,17 @@ The italics() method creates a string that embeds a string in a &lt;i&gt; elemen
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public italics(): string--><!--Device-String-public italics(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string embeds in &lt;i&gt; element |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## join
 
@@ -1622,26 +1508,24 @@ Concatenates the specified string array by inserting the specified separator bet
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public static join(strings: string[], delim: string): string--><!--Device-String-public static join(strings: string[], delim: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| strings | string[] | Yes | string array. |
-| delim | string | Yes | separator between all elements. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| strings | string[] | Yes |
+| delim | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | newly created string from string array and delimiter |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## join
 
@@ -1653,28 +1537,26 @@ Concatenates the specified string array by inserting the specified prefix before
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public static join(strings: string[], delim: string, prefix: string, suffix: string): string--><!--Device-String-public static join(strings: string[], delim: string, prefix: string, suffix: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| strings | string[] | Yes | string array. |
-| delim | string | Yes | separator between all elements. |
-| prefix | string | Yes | prefix before each element. |
-| suffix | string | Yes | suffix after each element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| strings | string[] | Yes |
+| delim | string | Yes |
+| prefix | string | Yes |
+| suffix | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | newly created string from string array, prefix, suffix and delimiter |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## lastIndexOf
 
@@ -1686,26 +1568,24 @@ Finds the last occurrence of a character in this string at position &lt;= fromIn
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public lastIndexOf(ch: char, fromIndex: int): int--><!--Device-String-public lastIndexOf(ch: char, fromIndex: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| ch | char | Yes | the character to search for from the end of the string. |
-| fromIndex | int | Yes | to start searching from. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| ch | char | Yes |
+| fromIndex | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | index of the character from the beginning of this string, or -1 if not found |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## lastIndexOf
 
@@ -1717,25 +1597,23 @@ Finds the last occurrence of a character in this string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public lastIndexOf(ch: char): int--><!--Device-String-public lastIndexOf(ch: char): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| ch | char | Yes | the character to search for from the end of the string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| ch | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | index of the character from the beginning of this string, or -1 if not found |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## lastIndexOf
 
@@ -1747,26 +1625,24 @@ Finds the last occurrence of another string in this string. If fromIndex is unde
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public lastIndexOf(str: string, fromIndex?: int): int--><!--Device-String-public lastIndexOf(str: string, fromIndex?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| str | string | Yes | the substring to search for within this string. |
-| fromIndex | int | No | position to start searching backwards from. If undefined, searches from the end of the string. If &gt;= string length, searches from the end. If negative, returns -1. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| str | string | Yes |
+| fromIndex | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | index of the str from the beginning of this string, or -1 if not found |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## link
 
@@ -1778,25 +1654,23 @@ The link() method creates a string that embeds a string in an &lt;a&gt; element 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public link(link: string): string--><!--Device-String-public link(link: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| link | string | Yes | URL to link to. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [link](#link) | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string embeds in &lt;a&gt; element with href attribute |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## localeCompare
 
@@ -1808,27 +1682,25 @@ Comparison between this string and another one based on locale and options. The 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public localeCompare(that: string, locale?: string | string[], options?: Intl.CollatorOptions): int--><!--Device-String-public localeCompare(that: string, locale?: string | string[], options?: Intl.CollatorOptions): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| that | string | Yes | string to compare with. |
-| locale | string \| string[] | No | string representing the BCP47 language tag. |
-| options | Intl.CollatorOptions | No | Intl.CollatorOptions contains comparison options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| that | string | Yes |
+| locale | string \| string[] | No |
+| options | Intl.CollatorOptions | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | the comparison result |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## match
 
@@ -1840,25 +1712,23 @@ Retrieves the result of matching a string against a regular expression
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public match(implicitRegExp: string): RegExpMatchArray | null--><!--Device-String-public match(implicitRegExp: string): RegExpMatchArray | null-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| implicitRegExp | string | Yes | a regular expression object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| implicitRegExp | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| RegExpMatchArray \| null | If the regexp.global is true, all results matching the complete regular expression will be returned, but capturing groups are not included Otherwise, only the first complete match and its related capturing groups are returned |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| RegExpMatchArray \| null |
 
 ## match
 
@@ -1870,25 +1740,23 @@ Retrieves the result of matching a string against a regular expression
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public match(regexp: RegExp): RegExpMatchArray | null--><!--Device-String-public match(regexp: RegExp): RegExpMatchArray | null-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| regexp | RegExp | Yes | a regular expression object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| regexp | RegExp | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| RegExpMatchArray \| null | If the regexp.global is true, all results matching the complete regular expression will be returned, but capturing groups are not included Otherwise, only the first complete match and its related capturing groups are returned |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| RegExpMatchArray \| null |
 
 ## match
 
@@ -1900,25 +1768,23 @@ Retrieves the result of matching a string against a regular expression
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public match(regexp: string | RegExp): RegExpMatchArray | null--><!--Device-String-public match(regexp: string | RegExp): RegExpMatchArray | null-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| regexp | string \| RegExp | Yes | a regular expression object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| regexp | string \| RegExp | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| RegExpMatchArray \| null | If the regexp.global is true, all results matching the complete regular expression will be returned, but capturing groups are not included Otherwise, only the first complete match and its related capturing groups are returned |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| RegExpMatchArray \| null |
 
 ## matchAll
 
@@ -1930,25 +1796,23 @@ Returns an iterator of all results matching a string against a regular expressio
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public matchAll(reg: RegExp): IterableIterator<RegExpMatchArray>--><!--Device-String-public matchAll(reg: RegExp): IterableIterator<RegExpMatchArray>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| reg | RegExp | Yes | a regular expression object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| reg | RegExp | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;RegExpMatchArray&gt; | an iterator of all results matching |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;RegExpMatchArray & gt; |
 
 ## normalize
 
@@ -1960,25 +1824,23 @@ The normalize() method of string values returns the Unicode Normalization Form o
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public normalize(form?: string): string--><!--Device-String-public normalize(form?: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| form | string | No | is 'NFC' or 'NFD' or 'NFKC' or 'NFKD'. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [form](../../apis-ability-kit/arkts-apis/arkts-ability-insightintentdriver-subintentinfoforconfiguration-i-sys.md) | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the Unicode Normalization Form of the string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## padEnd
 
@@ -1990,25 +1852,23 @@ The padEnd() method pads the current string with a given string (repeated, if ne
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public padEnd(maxLength: int): string--><!--Device-String-public padEnd(maxLength: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| maxLength | int | Yes | of the resulting string once the current str has been padded. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| maxLength | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | string with the padString applied at the end of the current str |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## padEnd
 
@@ -2020,26 +1880,24 @@ The padEnd() method pads the current string with a given string (repeated, if ne
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public padEnd(maxLength: int, ch: char): string--><!--Device-String-public padEnd(maxLength: int, ch: char): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| maxLength | int | Yes | of the resulting string once the current str has been padded. <br>The value should be an integer. |
-| ch | char | Yes | to pad the current str with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| maxLength | int | Yes |
+| ch | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | string with the padString applied at the end of the current str |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## padEnd
 
@@ -2051,26 +1909,24 @@ The padEnd() method pads the current string with a given string (repeated, if ne
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public padEnd(maxLength: int, fillString?: string): string--><!--Device-String-public padEnd(maxLength: int, fillString?: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| maxLength | int | Yes | of the resulting string once the current str has been padded. <br>The value range is all integers. |
-| fillString | string | No | to pad the current str with. If not specified, defaults to space character (U+0020). If the fillString is an empty string, no padding occurs. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| maxLength | int | Yes |
+| fillString | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | string with the padString applied at the end of the current str |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## padLeft
 
@@ -2082,26 +1938,24 @@ Creates a new string of a specified length in which the beginning of this string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public padLeft(pad: char, count: int): string--><!--Device-String-public padLeft(pad: char, count: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pad | char | Yes | the character to use for padding (repeated as needed to fill). The character must be a valid UTF-16 code unit (0 to 65535). |
-| count | int | Yes | the target length of the resulting string. If count &lt;= current string length, returns a copy of the original string. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| pad | char | Yes |
+| count | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new string with padding at the beginning |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## padRight
 
@@ -2113,26 +1967,24 @@ Creates a new string of a specified length in which the end of this string is pa
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public padRight(pad: char, count: int): string--><!--Device-String-public padRight(pad: char, count: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pad | char | Yes | the character to use for padding (repeated as needed to fill). The character must be a valid UTF-16 code unit (0 to 65535). |
-| count | int | Yes | the target length of the resulting string. If count &lt;= current string length, returns a copy of the original string. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| pad | char | Yes |
+| count | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new string with padding at the end |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## padStart
 
@@ -2144,26 +1996,24 @@ The padStart() method pads the current string with another string (multiple time
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public padStart(maxLength: int, ch: char): string--><!--Device-String-public padStart(maxLength: int, ch: char): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| maxLength | int | Yes | The target length of the resulting string. If less than or equal to the current string length, returns a copy of the original string. <br>The value range is all integers. |
-| ch | char | Yes | The character to use for padding (repeated as needed). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| maxLength | int | Yes |
+| ch | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A new string padded with the specified character from the start. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## padStart
 
@@ -2175,26 +2025,24 @@ The padStart() method pads the current string with another string (multiple time
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public padStart(maxLength: int, fillString?: string): string--><!--Device-String-public padStart(maxLength: int, fillString?: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| maxLength | int | Yes | The target length of the resulting string. If less than or equal to the current string length, returns a copy of the original string. <br>The value should be an integer. |
-| fillString | string | No | The string to pad with. Defaults to space character (U+0020) if not specified. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| maxLength | int | Yes |
+| fillString | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A new string padded with the specified string from the start. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## repeat
 
@@ -2206,25 +2054,23 @@ Repeats this string count times, i.e. a = 'A', a.repeat(2) == 'AA'
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public repeat(count: int): string--><!--Device-String-public repeat(count: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| count | int | Yes | number of repetitions of this string. <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| count | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | this string that is repeated count times |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## replace
 
@@ -2236,26 +2082,24 @@ Returns a new string with one, some, or all matches of a pattern replaced by a r
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public replace(searchValue: RegExp, replaceValue: string): string--><!--Device-String-public replace(searchValue: RegExp, replaceValue: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchValue | RegExp | Yes | pattern which can be a string or RegExp. |
-| replaceValue | string | Yes | replacement string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchValue | RegExp | Yes |
+| replaceValue | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | a new replaced string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## replace
 
@@ -2267,26 +2111,24 @@ Returns a new string with one, some, or all matches of a pattern replaced by a r
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public replace(searchValue: string, replaceValue: string): string--><!--Device-String-public replace(searchValue: string, replaceValue: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchValue | string | Yes | pattern which can be a string or RegExp. |
-| replaceValue | string | Yes | replacement string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchValue | string | Yes |
+| replaceValue | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | a new replaced string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## replace
 
@@ -2298,26 +2140,24 @@ Returns a new string with one, some, or all matches of a pattern replaced by a r
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public replace(searchValue: string | RegExp, replaceValue: string): string--><!--Device-String-public replace(searchValue: string | RegExp, replaceValue: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchValue | string \| RegExp | Yes | pattern which can be a string or RegExp. |
-| replaceValue | string | Yes | replacement string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchValue | string \| RegExp | Yes |
+| replaceValue | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | a new replaced string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## replace
 
@@ -2329,26 +2169,24 @@ Returns a new string with one, some, or all matches of a pattern replaced by a r
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public replace(searchValue: RegExp, replacer: (substr: string, args: (Object | undefined)[]) => string): string--><!--Device-String-public replace(searchValue: RegExp, replacer: (substr: string, args: (Object | undefined)[]) => string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchValue | RegExp | Yes | pattern which can be a string or RegExp. |
-| replacer | (substr: string, args: (Object \| undefined)[]) =&gt; string | Yes | replacement function. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchValue | RegExp | Yes |
+| replacer | (substr: string, args: (Object \| undefined)[]) = & gt; string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | a new replaced string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## replace
 
@@ -2360,26 +2198,24 @@ Returns a new string with one, some, or all matches of a pattern replaced by a r
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public replace(searchValue: string, replacer: (substr: string, args: (Object | undefined)[]) => string): string--><!--Device-String-public replace(searchValue: string, replacer: (substr: string, args: (Object | undefined)[]) => string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchValue | string | Yes | pattern which can be a string or RegExp. |
-| replacer | (substr: string, args: (Object \| undefined)[]) =&gt; string | Yes | replacement function. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchValue | string | Yes |
+| replacer | (substr: string, args: (Object \| undefined)[]) = & gt; string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | a new replaced string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## replace
 
@@ -2392,26 +2228,24 @@ Returns a new string with one, some, or all matches of a pattern replaced by a r
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public replace(searchValue: string | RegExp, replacer: (substr: string,         args: (Object | undefined)[]) => string): string--><!--Device-String-public replace(searchValue: string | RegExp, replacer: (substr: string,         args: (Object | undefined)[]) => string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchValue | string \| RegExp | Yes | pattern which can be a string or RegExp. |
-| replacer | (substr: string,          args: (Object \| undefined)[]) =&gt; string | Yes | replacement function. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchValue | string \| RegExp | Yes |
+| replacer | (substr: string,          args: (Object \| undefined)[]) = & gt; string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | a new replaced string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## replaceAll
 
@@ -2423,26 +2257,24 @@ Returns a new string with all matches of a pattern replaced by a replacement
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public replaceAll(searchValue: RegExp, replaceValue: string): string--><!--Device-String-public replaceAll(searchValue: RegExp, replaceValue: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchValue | RegExp | Yes | pattern which can be a string or RegExp. |
-| replaceValue | string | Yes | replacement string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchValue | RegExp | Yes |
+| replaceValue | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | a new replaced string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## replaceAll
 
@@ -2454,26 +2286,24 @@ Returns a new string with all matches of a pattern replaced by a replacement
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public replaceAll(searchValue: string, replaceValue: string): string--><!--Device-String-public replaceAll(searchValue: string, replaceValue: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchValue | string | Yes | pattern which can be a string or RegExp. |
-| replaceValue | string | Yes | replacement string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchValue | string | Yes |
+| replaceValue | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | a new replaced string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## replaceAll
 
@@ -2485,26 +2315,24 @@ Returns a new string with all matches of a pattern replaced by a replacement
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public replaceAll(searchValue: string | RegExp, replaceValue: string): string--><!--Device-String-public replaceAll(searchValue: string | RegExp, replaceValue: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchValue | string \| RegExp | Yes | pattern which can be a string or RegExp. |
-| replaceValue | string | Yes | replacement string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchValue | string \| RegExp | Yes |
+| replaceValue | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | a new replaced string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## replaceAll
 
@@ -2516,26 +2344,24 @@ Returns a new string with all matches of a pattern replaced by a replacement
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public replaceAll(searchValue: RegExp, replacer: (substr: string, args: (Object | undefined)[]) => string): string--><!--Device-String-public replaceAll(searchValue: RegExp, replacer: (substr: string, args: (Object | undefined)[]) => string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchValue | RegExp | Yes | pattern which can be a string or RegExp. |
-| replacer | (substr: string, args: (Object \| undefined)[]) =&gt; string | Yes | replacement function. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchValue | RegExp | Yes |
+| replacer | (substr: string, args: (Object \| undefined)[]) = & gt; string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | a new replaced string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## replaceAll
 
@@ -2547,26 +2373,24 @@ Returns a new string with all matches of a pattern replaced by a replacement
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public replaceAll(searchValue: string, replacer: (substr: string, args: (Object | undefined)[]) => string): string--><!--Device-String-public replaceAll(searchValue: string, replacer: (substr: string, args: (Object | undefined)[]) => string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchValue | string | Yes | pattern which can be a string or RegExp. |
-| replacer | (substr: string, args: (Object \| undefined)[]) =&gt; string | Yes | replacement function. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchValue | string | Yes |
+| replacer | (substr: string, args: (Object \| undefined)[]) = & gt; string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | a new replaced string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## replaceAll
 
@@ -2579,26 +2403,24 @@ Returns a new string with all matches of a pattern replaced by a replacement
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public replaceAll(searchValue: string | RegExp, replacer: (substr: string,        args: (Object | undefined)[]) => string): string--><!--Device-String-public replaceAll(searchValue: string | RegExp, replacer: (substr: string,        args: (Object | undefined)[]) => string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchValue | string \| RegExp | Yes | pattern which can be a string or RegExp. |
-| replacer | (substr: string,         args: (Object \| undefined)[]) =&gt; string | Yes | replacement function. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchValue | string \| RegExp | Yes |
+| replacer | (substr: string,         args: (Object \| undefined)[]) = & gt; string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | a new replaced string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## replaceChar
 
@@ -2610,26 +2432,24 @@ Replaces all occurrences of the specified character with another specified chara
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public replaceChar(oldCh: char, newCh: char): string--><!--Device-String-public replaceChar(oldCh: char, newCh: char): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| oldCh | char | Yes | character which occurrences will be replaced. |
-| newCh | char | Yes | character to replace. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| oldCh | char | Yes |
+| newCh | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new string with replaced characters |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## search
 
@@ -2641,25 +2461,23 @@ Executes a search for a match between a regular expression and this string objec
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public search(implicitRegExp: string): int--><!--Device-String-public search(implicitRegExp: string): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| implicitRegExp | string | Yes | a regular expression object or implicit regular expression. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| implicitRegExp | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | the index of the first match between the regular expression and the given string. The return value range is [-1, string.length - 1]: - Returns -1 if no match was found. - Returns a non-negative integer (0 to string.length - 1) representing the index of the first matched substring. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## search
 
@@ -2671,25 +2489,23 @@ Executes a search for a match between a regular expression and this string objec
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public search(regexp: RegExp): int--><!--Device-String-public search(regexp: RegExp): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| regexp | RegExp | Yes | a regular expression object or implicit regular expression. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| regexp | RegExp | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | the index of the first match between the regular expression and the given string, or -1 if no match was found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## search
 
@@ -2701,25 +2517,23 @@ Executes a search for a match between a regular expression and this string objec
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public search(regexp: string | RegExp): int--><!--Device-String-public search(regexp: string | RegExp): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| regexp | string \| RegExp | Yes | a regular expression object or implicit regular expression. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| regexp | string \| RegExp | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | the index of the first match between the regular expression and the given string, or -1 if no match was found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## slice
 
@@ -2731,26 +2545,24 @@ The slice() method extracts a section of a string and returns it as a new string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public slice(begin?: int, end?: int): string--><!--Device-String-public slice(begin?: int, end?: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| begin | int | No | Start index. <br>The value should be an integer. |
-| end | int | No | End index. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| begin | int | No |
+| end | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | extracted section of the string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## small
 
@@ -2762,19 +2574,17 @@ The small() method creates a string that embeds a string in a &lt;small&gt; elem
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public small(): string--><!--Device-String-public small(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string embeds in &lt;small&gt; element |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## split
 
@@ -2786,26 +2596,24 @@ Splits this string by separator and returns an ordered array of substrings. The 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public split(separator: string, limit?: int): string[]--><!--Device-String-public split(separator: string, limit?: int): string[]-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| separator | string | Yes | string to split by. |
-| limit | int | No | max length of the returned array. Int.MAX_VALUE if it's negative. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| separator | string | Yes |
+| limit | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string[] | string array contains substrings from this string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string[] |
 
 ## split
 
@@ -2817,26 +2625,24 @@ Splits this string by RegExp separator and returns an ordered array of substring
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public split(separator: RegExp, limit?: int): string[]--><!--Device-String-public split(separator: RegExp, limit?: int): string[]-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| separator | RegExp | Yes | RegExp to split by. |
-| limit | int | No | max length of the returned array. If it's negative then there is no limit. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| separator | RegExp | Yes |
+| limit | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string[] | string array contains substrings from this string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string[] |
 
 ## split
 
@@ -2848,26 +2654,24 @@ Splits this string by separator and returns an ordered array of substrings.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public split(separator: string | RegExp, limit?: int): string[]--><!--Device-String-public split(separator: string | RegExp, limit?: int): string[]-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| separator | string \| RegExp | Yes | string or RegExp to split by. |
-| limit | int | No | max length of the returned array. If it's negative then there is no limit. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| separator | string \| RegExp | Yes |
+| limit | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string[] | string array contains substrings from this string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string[] |
 
 ## startsWith
 
@@ -2879,26 +2683,24 @@ Checks that the substring of this string that starts from the specified index st
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public startsWith(prefix: string, fromIndex?: int): boolean--><!--Device-String-public startsWith(prefix: string, fromIndex?: int): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| prefix | string | Yes | prefix string. |
-| fromIndex | int | No | index to start from (defaults to 0). <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| prefix | string | Yes |
+| fromIndex | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the substring begins with the specified prefix; false otherwise (including when prefix is longer than the substring). |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## strike
 
@@ -2910,19 +2712,17 @@ The strike() method creates a string that embeds a string in a &lt;strike&gt; el
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public strike(): string--><!--Device-String-public strike(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string embeds in &lt;strike&gt; element |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## sub
 
@@ -2934,19 +2734,17 @@ The sub() method creates a string that embeds a string in a &lt;sub&gt; element 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public sub(): string--><!--Device-String-public sub(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string embeds in &lt;sub&gt; element |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## substr
 
@@ -2958,26 +2756,24 @@ The substr() method returns a portion of the string, starting at the specified i
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public substr(begin: int, length?: int): string--><!--Device-String-public substr(begin: int, length?: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| begin | int | Yes | is index of the first character to include in the returned substring. <br>The value should be an integer. |
-| length | int | No | number of characters to extract. Defaults to the remaining characters from `begin` to the end of the string if not specified. <br>The value range is all integers. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| begin | int | Yes |
+| [length](#length) | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new string containing the specified part of the given string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## substring
 
@@ -2989,25 +2785,23 @@ Selects a substring of this string, starting at a specified index and ending at 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public substring(begin: int): string--><!--Device-String-public substring(begin: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| begin | int | Yes | to start substring. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| begin | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new string which is a substring of this string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## substring
 
@@ -3019,26 +2813,24 @@ Selects a substring of this string, starting at a specified index and ending at 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public substring(begin: int, end: int): string--><!--Device-String-public substring(begin: int, end: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| begin | int | Yes | to start substring. <br>The value should be an integer. |
-| end | int | Yes | to end before at. <br>The value range is all integers. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| begin | int | Yes |
+| end | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new string which is a substring of this string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## sup
 
@@ -3050,19 +2842,17 @@ The sup() method creates a string that embeds a string in a &lt;sup&gt; element 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public sup(): string--><!--Device-String-public sup(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string embeds in &lt;sup&gt; element |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toLocaleLowerCase
 
@@ -3074,25 +2864,23 @@ The toLocaleLowerCase() method returns the calling string value converted to low
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public toLocaleLowerCase(locale: string): string--><!--Device-String-public toLocaleLowerCase(locale: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locale | string | Yes | locale to use. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locale | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new string in lower case |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toLocaleLowerCase
 
@@ -3104,25 +2892,23 @@ The toLocaleLowerCase() method returns the calling string value converted to low
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public toLocaleLowerCase(locale: string[]): string--><!--Device-String-public toLocaleLowerCase(locale: string[]): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locale | string[] | Yes | locale to use. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locale | string[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new string in lower case |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toLocaleLowerCase
 
@@ -3134,19 +2920,17 @@ The toLocaleLowerCase() method returns the calling string value converted to low
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public toLocaleLowerCase(): string--><!--Device-String-public toLocaleLowerCase(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new string in lower case |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toLocaleUpperCase
 
@@ -3158,25 +2942,23 @@ The toLocaleUpperCase() method returns the calling string value converted to upp
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public toLocaleUpperCase(locale: string): string--><!--Device-String-public toLocaleUpperCase(locale: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locale | string | Yes | locale to use. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locale | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new string in upper case |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toLocaleUpperCase
 
@@ -3188,25 +2970,23 @@ The toLocaleUpperCase() method returns the calling string value converted to upp
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public toLocaleUpperCase(locale: string[]): string--><!--Device-String-public toLocaleUpperCase(locale: string[]): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locale | string[] | Yes | locale to use. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locale | string[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new string in upper case |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toLocaleUpperCase
 
@@ -3218,19 +2998,17 @@ The toLocaleUpperCase() method returns the calling string value converted to upp
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public toLocaleUpperCase(): string--><!--Device-String-public toLocaleUpperCase(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new string in upper case |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toLowerCase
 
@@ -3242,19 +3020,17 @@ Creates new string similar to this string but with all characters in lower case.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public toLowerCase(): string--><!--Device-String-public toLowerCase(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new string with all characters in lower case |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -3266,19 +3042,17 @@ The toString() method returns the string representation of the given string in t
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public toString(): string--><!--Device-String-public toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | a copy of the original string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toUpperCase
 
@@ -3290,19 +3064,17 @@ Creates new string similar to this string but with all characters in upper case.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public toUpperCase(): string--><!--Device-String-public toUpperCase(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new string with all characters in upper case |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toWellFormed
 
@@ -3314,19 +3086,17 @@ The toWellFormed() method of string values returns a string where all lone surro
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public toWellFormed(): string--><!--Device-String-public toWellFormed(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | a well-formed string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## trim
 
@@ -3338,19 +3108,17 @@ Trims all whitespaces from the beginning and end of this string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public trim(): string--><!--Device-String-public trim(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new trimmed string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## trim
 
@@ -3362,25 +3130,23 @@ Trims all specified characters from the beginning and end of this string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public trim(remove: char[]): string--><!--Device-String-public trim(remove: char[]): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| remove | char[] | Yes | that contains the characters to trim. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| remove | char[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new trimmed string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## trimEnd
 
@@ -3392,19 +3158,17 @@ The trimEnd() method removes whitespace from the end of a string and returns a n
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public trimEnd(): string--><!--Device-String-public trimEnd(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new string with whitespace removed from the end |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## trimLeft
 
@@ -3416,19 +3180,17 @@ Trims all whitespaces from the beginning of this string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public trimLeft(): string--><!--Device-String-public trimLeft(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new left trimmed string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## trimLeft
 
@@ -3440,25 +3202,23 @@ Trims all specified characters from the beginning this string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public trimLeft(remove: char[]): string--><!--Device-String-public trimLeft(remove: char[]): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| remove | char[] | Yes | that contains the characters to trim. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| remove | char[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new left trimmed string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## trimRight
 
@@ -3470,19 +3230,17 @@ Trims all whitespaces from the end of this string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public trimRight(): string--><!--Device-String-public trimRight(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new right trimmed string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## trimRight
 
@@ -3494,25 +3252,23 @@ Trims all specified characters from the end of this string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public trimRight(remove: char[]): string--><!--Device-String-public trimRight(remove: char[]): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| remove | char[] | Yes | that contains the characters to trim. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| remove | char[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new right trimmed string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## trimStart
 
@@ -3524,17 +3280,32 @@ The trimStart() method removes whitespace from the beginning of a string and ret
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-String-public trimStart(): string--><!--Device-String-public trimStart(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | new string with whitespace removed from the beginning |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
+## length
+
+```TypeScript
+get length(): int
+```
+
+Length of this string
+
+**Type:** int
+
+**Since:** 24
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang

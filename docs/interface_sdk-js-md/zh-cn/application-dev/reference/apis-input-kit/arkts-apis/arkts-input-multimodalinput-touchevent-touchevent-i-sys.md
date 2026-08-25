@@ -4,9 +4,9 @@
 
 **继承/实现关系：** TouchEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-export declare interface TouchEvent--><!--Device-unnamed-export declare interface TouchEvent-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -26,9 +26,9 @@ fixedMode?: FixedMode
 
 **类型：** [FixedMode](arkts-input-multimodalinput-touchevent-fixedmode-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-TouchEvent-fixedMode?: FixedMode--><!--Device-TouchEvent-fixedMode?: FixedMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -44,11 +44,10 @@ isInject?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-TouchEvent-isInject?: boolean--><!--Device-TouchEvent-isInject?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **系统接口：** 此接口为系统接口。
-

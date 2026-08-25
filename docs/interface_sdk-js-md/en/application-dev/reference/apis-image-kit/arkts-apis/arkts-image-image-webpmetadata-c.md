@@ -4,7 +4,7 @@ WebP metadata.
 
 **Since:** 24
 
-<!--Device-image-class WebPMetadata--><!--Device-image-class WebPMetadata-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -22,13 +22,13 @@ readonly canvasHeight?: int
 
 Canvas Height. Unit: px, The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-WebPMetadata-readonly canvasHeight?: int--><!--Device-WebPMetadata-readonly canvasHeight?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -40,13 +40,13 @@ readonly canvasWidth?: int
 
 Canvas Width. Unit: px, The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-WebPMetadata-readonly canvasWidth?: int--><!--Device-WebPMetadata-readonly canvasWidth?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -58,13 +58,13 @@ readonly delayTime?: int
 
 Delay of each frame. Unit: ms, The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-WebPMetadata-readonly delayTime?: int--><!--Device-WebPMetadata-readonly delayTime?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -76,13 +76,13 @@ readonly loopCount?: int
 
 Loop count.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-WebPMetadata-readonly loopCount?: int--><!--Device-WebPMetadata-readonly loopCount?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -94,13 +94,12 @@ readonly unclampedDelayTime?: int
 
 Unclamped delay of each frame. Unit: ms, The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WebPMetadata-readonly unclampedDelayTime?: int--><!--Device-WebPMetadata-readonly unclampedDelayTime?: int-End-->
-
 **System capability:** SystemCapability.Multimedia.Image.Core
-

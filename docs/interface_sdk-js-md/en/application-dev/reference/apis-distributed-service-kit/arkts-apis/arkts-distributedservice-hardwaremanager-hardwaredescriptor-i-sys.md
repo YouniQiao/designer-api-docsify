@@ -2,9 +2,9 @@
 
 Represents the distributed hardware information.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-hardwareManager-interface HardwareDescriptor--><!--Device-hardwareManager-interface HardwareDescriptor-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
@@ -26,11 +26,11 @@ Source device. If this parameter is not specified, it indicates all source devic
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_DISTRIBUTED_HARDWARE
-
-<!--Device-HardwareDescriptor-srcNetworkId?: string--><!--Device-HardwareDescriptor-srcNetworkId?: string-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
@@ -46,13 +46,12 @@ Type of the distributed hardware.
 
 **Type:** [DistributedHardwareType](arkts-distributedservice-hardwaremanager-distributedhardwaretype-e-sys.md)
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_DISTRIBUTED_HARDWARE
-
-<!--Device-HardwareDescriptor-type: DistributedHardwareType--><!--Device-HardwareDescriptor-type: DistributedHardwareType-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **System API:** This is a system API.
-

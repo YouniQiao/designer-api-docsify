@@ -14,32 +14,32 @@ function acceptConnect(sessionId: int, token: string): Promise<void>
 
 Accepts the UIAbility connection after a collaboration session is set up and the session ID is obtained.
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-abilityConnectionManager-function acceptConnect(sessionId: int, token: string): Promise<void>--><!--Device-abilityConnectionManager-function acceptConnect(sessionId: int, token: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sessionId | int | Yes | ID of the collaboration session. |
-| token | string | Yes | Token value passed by the application on device A. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sessionId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| token | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -95,4 +95,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

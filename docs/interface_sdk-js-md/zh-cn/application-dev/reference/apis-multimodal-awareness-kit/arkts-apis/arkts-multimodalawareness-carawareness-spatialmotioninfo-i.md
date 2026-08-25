@@ -4,7 +4,7 @@
 
 **起始版本：** 26.1.0
 
-<!--Device-carAwareness-export interface SpatialMotionInfo--><!--Device-carAwareness-export interface SpatialMotionInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -26,9 +26,9 @@ event: number
 
 **起始版本：** 26.1.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
-<!--Device-SpatialMotionInfo-event: number--><!--Device-SpatialMotionInfo-event: number-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -44,9 +44,9 @@ pointX: number
 
 **起始版本：** 26.1.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
-<!--Device-SpatialMotionInfo-pointX: number--><!--Device-SpatialMotionInfo-pointX: number-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -62,9 +62,9 @@ pointY: number
 
 **起始版本：** 26.1.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
-<!--Device-SpatialMotionInfo-pointY: number--><!--Device-SpatialMotionInfo-pointY: number-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -80,9 +80,8 @@ timestamp: number
 
 **起始版本：** 26.1.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-SpatialMotionInfo-timestamp: number--><!--Device-SpatialMotionInfo-timestamp: number-End-->
-
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
-

@@ -4,7 +4,7 @@ Struct for distributed device identification.@interface DeviceIdentification
 
 **Since:** 24
 
-<!--Device-distributedDeviceManager-interface DeviceIdentification--><!--Device-distributedDeviceManager-interface DeviceIdentification-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -28,9 +28,9 @@ Anonymized device ID for application.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-DeviceIdentification-deviceId: string--><!--Device-DeviceIdentification-deviceId: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -48,13 +48,12 @@ Unique device ID (UDID).
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.ACCESS_SERVICE_DM and ohos.permission.sec.ACCESS_UDID
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DeviceIdentification-udid: string--><!--Device-DeviceIdentification-udid: string-End-->
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
-

@@ -10,9 +10,7 @@
 
 **起始版本：** 10
 
-**装饰器类型：** @Component
-
-<!--Device-unnamed-export declare struct ProgressButton--><!--Device-unnamed-export declare struct ProgressButton-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,6 +20,22 @@
 import { ProgressButton } from '@kit.ArkUI';
 ```
 
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## clickCallback
 
 ```TypeScript
@@ -30,15 +44,13 @@ clickCallback: () => void
 
 下载按钮的点击回调。
 
-**类型：** () =&gt; void
-
 **起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ProgressButton-clickCallback: () => void--><!--Device-ProgressButton-clickCallback: () => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,13 +66,11 @@ colorOptions?: ProgressButtonColorOptions
 
 **起始版本：** 18
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ProgressButton-@Prop  colorOptions?: ProgressButtonColorOptions--><!--Device-ProgressButton-@Prop  colorOptions?: ProgressButtonColorOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -77,13 +87,11 @@ content: ResourceStr
 
 **起始版本：** 10
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ProgressButton-@Prop  content: ResourceStr--><!--Device-ProgressButton-@Prop  content: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -99,13 +107,11 @@ enable: boolean
 
 **起始版本：** 10
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ProgressButton-@Prop  enable: boolean--><!--Device-ProgressButton-@Prop  enable: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -121,13 +127,11 @@ progress: number
 
 **起始版本：** 10
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ProgressButton-@Prop  progress: number--><!--Device-ProgressButton-@Prop  progress: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -143,13 +147,11 @@ progressButtonRadius?: LengthMetrics
 
 **起始版本：** 18
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ProgressButton-@Prop  progressButtonRadius?: LengthMetrics--><!--Device-ProgressButton-@Prop  progressButtonRadius?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -165,11 +167,10 @@ progressButtonWidth?: Length
 
 **起始版本：** 10
 
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ProgressButton-progressButtonWidth?: Length--><!--Device-ProgressButton-progressButtonWidth?: Length-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

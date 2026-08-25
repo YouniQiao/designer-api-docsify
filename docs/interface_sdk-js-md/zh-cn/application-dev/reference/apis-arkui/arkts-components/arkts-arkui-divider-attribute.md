@@ -6,7 +6,7 @@
 
 **起始版本：** 7
 
-<!--Device-unnamed-declare class DividerAttribute--><!--Device-unnamed-declare class DividerAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,19 +25,19 @@ color(value: ResourceColor)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DividerAttribute-color(value: ResourceColor): DividerAttribute--><!--Device-DividerAttribute-color(value: ResourceColor): DividerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceColor | 是 | 分割线颜色。<br/>默认值：'#33182431' &lt;br /&gt;非法值：按默认值处理。 <br/>支持通过 WithTheme设置通用分割线颜色。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
 
 ## lineCap
 
@@ -49,19 +49,19 @@ lineCap(value: LineCapStyle)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DividerAttribute-lineCap(value: LineCapStyle): DividerAttribute--><!--Device-DividerAttribute-lineCap(value: LineCapStyle): DividerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | LineCapStyle | 是 | 分割线的端点样式。<br/>默认值：LineCapStyle.Butt &lt;br /&gt;非法值：按默认值处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [LineCapStyle](../arkts-apis/arkts-arkui-enums-linecapstyle-e.md) | 是 |
 
 ## strokeWidth
 
@@ -80,19 +80,19 @@ strokeWidth(value: number | string)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DividerAttribute-strokeWidth(value: number | string): DividerAttribute--><!--Device-DividerAttribute-strokeWidth(value: number | string): DividerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number \| string | 是 | 分割线宽度。<br/>默认值：1px &lt;br /&gt;非法值：按默认值处理。 <br/>单位：vp |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number \| string | 是 |
 
 ## vertical
 
@@ -104,17 +104,16 @@ vertical(value: boolean)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DividerAttribute-vertical(value: boolean): DividerAttribute--><!--Device-DividerAttribute-vertical(value: boolean): DividerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean | 是 | 使用水平分割线还是垂直分割线。<br/>false：水平分割线；true：垂直分割线。<br/>默认值：false &lt;br /&gt;非法值：按默认值处理。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | boolean | 是 |

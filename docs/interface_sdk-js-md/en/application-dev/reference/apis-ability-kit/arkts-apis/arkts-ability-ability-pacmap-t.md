@@ -6,14 +6,13 @@ export type PacMap = _PacMap
 
 Defines the level-2 module PacMap.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** 
 - API version 11 and later: This API can be used in both the stage model and FA model.
 
-<!--Device-ability-export type PacMap = _PacMap--><!--Device-ability-export type PacMap = _PacMap-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Property type:** _PacMap
-

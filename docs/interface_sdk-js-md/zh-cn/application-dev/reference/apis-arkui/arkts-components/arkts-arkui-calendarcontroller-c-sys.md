@@ -4,9 +4,9 @@ Calendar controller.
 
 **起始版本：** 7
 
-**废弃版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-unnamed-declare class CalendarController--><!--Device-unnamed-declare class CalendarController-End-->
+**废弃版本：** 20
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,11 @@ Back to day.
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-CalendarController-backToToday()--><!--Device-CalendarController-backToToday()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,11 +47,11 @@ Constructor.
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-CalendarController-constructor()--><!--Device-CalendarController-constructor()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,11 +67,11 @@ To the specified element.
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-CalendarController-goTo(value: { year: number; month: number; day: number })--><!--Device-CalendarController-goTo(value: { year: number; month: number; day: number })-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -79,7 +79,6 @@ To the specified element.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | { year: number; month: number; day: number } | 是 |  |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | { year: number; month: number; day: number } | 是 |

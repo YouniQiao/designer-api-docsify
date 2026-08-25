@@ -2,9 +2,9 @@
 
 连接的结果。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-abilityConnectionManager-interface ConnectResult--><!--Device-abilityConnectionManager-interface ConnectResult-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -24,11 +24,11 @@ errorCode?: ConnectErrorCode
 
 **类型：** [ConnectErrorCode](arkts-distributedservice-abilityconnectionmanager-connecterrorcode-e.md)
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ConnectResult-errorCode?: ConnectErrorCode--><!--Device-ConnectResult-errorCode?: ConnectErrorCode-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -42,11 +42,11 @@ true表示连接成功，false表示连接失败。
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ConnectResult-isConnected: boolean--><!--Device-ConnectResult-isConnected: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -60,11 +60,10 @@ reason?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ConnectResult-reason?: string--><!--Device-ConnectResult-reason?: string-End-->
-
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
-

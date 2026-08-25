@@ -4,7 +4,7 @@ Defines the align rule options of relative container.
 
 **Since:** 9
 
-<!--Device-unnamed-declare interface AlignRuleOption--><!--Device-unnamed-declare interface AlignRuleOption-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,13 +27,13 @@ Offset of the component under the anchor constraints. The value is the ratio of 
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-AlignRuleOption-bias?: Bias--><!--Device-AlignRuleOption-bias?: Bias-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,11 +49,11 @@ Top alignment. In versions earlier than API version 23, the input parameter type
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-AlignRuleOption-bottom?: VerticalAlignParam--><!--Device-AlignRuleOption-bottom?: VerticalAlignParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,11 +69,11 @@ Center alignment in the vertical direction. In versions earlier than API version
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-AlignRuleOption-center?: VerticalAlignParam--><!--Device-AlignRuleOption-center?: VerticalAlignParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -89,11 +89,11 @@ Left alignment. In versions earlier than API version 23, the input parameter typ
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-AlignRuleOption-left?: HorizontalAlignParam--><!--Device-AlignRuleOption-left?: HorizontalAlignParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -109,11 +109,11 @@ Center alignment in the horizontal direction. In versions earlier than API versi
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-AlignRuleOption-middle?: HorizontalAlignParam--><!--Device-AlignRuleOption-middle?: HorizontalAlignParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -129,11 +129,11 @@ Right alignment. In versions earlier than API version 23, the input parameter ty
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-AlignRuleOption-right?: HorizontalAlignParam--><!--Device-AlignRuleOption-right?: HorizontalAlignParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -149,11 +149,10 @@ Top alignment. In versions earlier than API version 23, the input parameter type
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-AlignRuleOption-top?: VerticalAlignParam--><!--Device-AlignRuleOption-top?: VerticalAlignParam-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

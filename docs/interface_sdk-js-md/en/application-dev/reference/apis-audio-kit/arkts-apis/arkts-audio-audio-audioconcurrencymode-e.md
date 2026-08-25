@@ -2,9 +2,9 @@
 
 Enumerates the audio concurrency modes.@enum { int } [since 12 - 24]
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-audio-enum AudioConcurrencyMode--><!--Device-audio-enum AudioConcurrencyMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -16,11 +16,11 @@ CONCURRENCY_DEFAULT = 0
 
 Uses the system strategy by default.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-AudioConcurrencyMode-CONCURRENCY_DEFAULT = 0--><!--Device-AudioConcurrencyMode-CONCURRENCY_DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -32,11 +32,11 @@ CONCURRENCY_MIX_WITH_OTHERS = 1
 
 Concurrent with other audio streams, that is, audio mixing.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-AudioConcurrencyMode-CONCURRENCY_MIX_WITH_OTHERS = 1--><!--Device-AudioConcurrencyMode-CONCURRENCY_MIX_WITH_OTHERS = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -48,11 +48,11 @@ CONCURRENCY_DUCK_OTHERS = 2
 
 Ducks other audio streams.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-AudioConcurrencyMode-CONCURRENCY_DUCK_OTHERS = 2--><!--Device-AudioConcurrencyMode-CONCURRENCY_DUCK_OTHERS = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -64,11 +64,10 @@ CONCURRENCY_PAUSE_OTHERS = 3
 
 Pauses other audio streams.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-AudioConcurrencyMode-CONCURRENCY_PAUSE_OTHERS = 3--><!--Device-AudioConcurrencyMode-CONCURRENCY_PAUSE_OTHERS = 3-End-->
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
-

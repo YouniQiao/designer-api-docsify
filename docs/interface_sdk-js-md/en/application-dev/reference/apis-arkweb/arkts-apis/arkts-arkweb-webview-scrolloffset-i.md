@@ -4,7 +4,7 @@ Represents the current scrolling offset of a web page.
 
 **Since:** 13
 
-<!--Device-webview-interface ScrollOffset--><!--Device-webview-interface ScrollOffset-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -26,9 +26,9 @@ Horizontal scroll offset of the web page. The value is the difference between th
 
 **Since:** 13
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
-<!--Device-ScrollOffset-x: number--><!--Device-ScrollOffset-x: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -44,9 +44,8 @@ Vertical scroll offset of the web page. The value is the difference between the 
 
 **Since:** 13
 
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
-<!--Device-ScrollOffset-y: number--><!--Device-ScrollOffset-y: number-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

@@ -4,7 +4,7 @@ Represents Wi-Fi access information containing Service Set Identifier (SSID) and
 
 **Since:** 19
 
-<!--Device-wifiManager-interface WifiAccessInfo--><!--Device-wifiManager-interface WifiAccessInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -29,9 +29,9 @@ This property is optional when the [addDisallowedWifiList](arkts-mdm-wifimanager
 
 **Since:** 19
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
-<!--Device-WifiAccessInfo-bssid?: string--><!--Device-WifiAccessInfo-bssid?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -47,9 +47,8 @@ Name of the Wi-Fi hotspot. The encoding format is UTF-8 and the maximum length i
 
 **Since:** 19
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WifiAccessInfo-ssid: string--><!--Device-WifiAccessInfo-ssid: string-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

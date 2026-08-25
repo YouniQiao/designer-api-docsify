@@ -11,8 +11,7 @@ import { FenceExtensionContext } from '@kit.LocationKit';
 <!--Del-->
 ### Classes(System API)
 
-| Name | Description |
-| --- | --- |
-| [FenceExtensionContext](arkts-location-app-ability-fenceextensioncontext-fenceextensioncontext-c-sys.md) | class of static subscriber extension context.@extends ExtensionContext |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FenceExtensionContext](arkts-location-app-ability-fenceextensioncontext-fenceextensioncontext-c-sys.md) |
 <!--DelEnd-->
-

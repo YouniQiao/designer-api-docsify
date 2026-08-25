@@ -4,7 +4,7 @@ The XmlSAXParser provides the capability of parsing XML in a streaming manner.
 
 **Since:** 24
 
-<!--Device-xml-class XmlSAXParser--><!--Device-xml-class XmlSAXParser-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -24,20 +24,20 @@ Creates and returns an XmlSAXParser instance.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-XmlSAXParser-constructor(inputStream: stream.Readable, encoding?: string)--><!--Device-XmlSAXParser-constructor(inputStream: stream.Readable, encoding?: string)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| inputStream | stream.Readable | Yes | An instance, of stream.Readable for the new XmlSAXParser. |
-| encoding | string | No | [encoding='utf8'] this is its encoding. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| inputStream | stream.Readable | Yes |
+| encoding | string | No |
 
 **Examples**
 
@@ -69,19 +69,19 @@ Creates and returns an XmlSAXParser instance.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-XmlSAXParser-parse(xmlSAXHandler: XmlSAXHandler): void--><!--Device-XmlSAXParser-parse(xmlSAXHandler: XmlSAXHandler): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| xmlSAXHandler | [XmlSAXHandler](arkts-arkts-xml-xmlsaxhandler-i.md) | Yes | The simple API for XML handler. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| xmlSAXHandler | [XmlSAXHandler](arkts-arkts-xml-xmlsaxhandler-i.md) | Yes |
 
 **Examples**
 
@@ -114,4 +114,3 @@ that.parse(options);
 // title
 // note
 ```
-

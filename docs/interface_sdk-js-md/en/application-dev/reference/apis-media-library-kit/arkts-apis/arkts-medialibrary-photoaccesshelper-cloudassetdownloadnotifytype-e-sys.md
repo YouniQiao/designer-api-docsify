@@ -2,9 +2,9 @@
 
 Enumerates the types of events reported during a cloud asset download.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-photoAccessHelper-enum CloudAssetDownloadNotifyType--><!--Device-photoAccessHelper-enum CloudAssetDownloadNotifyType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ DOWNLOAD_PROGRESS = 0
 
 Fired when download progress is updated.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_PROGRESS = 0--><!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_PROGRESS = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,9 @@ DOWNLOAD_FINISHED = 1
 
 Fired when a download completes successfully.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_FINISHED = 1--><!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_FINISHED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,9 +50,9 @@ DOWNLOAD_FAILED = 2
 
 Fired when a download fails.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_FAILED = 2--><!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_FAILED = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -66,9 +66,9 @@ DOWNLOAD_ASSET_DELETED = 3
 
 Fired when a downloaded asset is deleted.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_ASSET_DELETED = 3--><!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_ASSET_DELETED = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -82,9 +82,9 @@ DOWNLOAD_AUTO_PAUSED = 4
 
 Fired when the system automatically pauses a download.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_AUTO_PAUSED = 4--><!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_AUTO_PAUSED = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -98,9 +98,9 @@ DOWNLOAD_AUTO_RESUMED = 5
 
 Fired when the system automatically resumes a download.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_AUTO_RESUMED = 5--><!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_AUTO_RESUMED = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -114,11 +114,10 @@ DOWNLOAD_REFRESHED = 6
 
 Fired when the download status is refreshed.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_REFRESHED = 6--><!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_REFRESHED = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

@@ -16,35 +16,35 @@ function loadModelFromFile(
 
 Create a Model instance from file path
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-mindSporeLite-function loadModelFromFile(    model: string,    context?: Context): Promise<Model>--><!--Device-mindSporeLite-function loadModelFromFile(    model: string,    context?: Context): Promise<Model>-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| model | string | Yes | model indicates model path to be loaded |
-| context | Context | No | context indicates model context information |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| model | string | Yes |
+| context | [Context](arkts-mindsporelite-mindsporelite-context-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | the promise returned by the function. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 1000000 | Model path error. Possible causes: 1. The model path is null; 2. The model path does not exist. |
-| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
-| 1000002 | Failed to create native model. Possible causes: 1. Insufficient permission to access the model path; 2. The model file is corrupted. |
-| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd. |
+| Error Code ID |
+| --- |
+| 1000000 |
+| 1000001 |
+| 1000002 |
+| 1000003 |
 
 **Examples**
 
@@ -96,29 +96,29 @@ function loadModelFromFile(
 
 Create a Model instance from file path.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-mindSporeLite-function loadModelFromFile(    model: string, callback: Callback<Model>): void--><!--Device-mindSporeLite-function loadModelFromFile(    model: string, callback: Callback<Model>): void-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| model | string | Yes | model indicates model path to be loaded |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| model | string | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 1000000 | Model path error. Possible causes: 1. The model path is null; 2. The model path does not exist. |
-| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
-| 1000002 | Failed to create native model. Possible causes: 1. Insufficient permission to access the model path; 2. The model file is corrupted. |
-| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd. |
+| Error Code ID |
+| --- |
+| 1000000 |
+| 1000001 |
+| 1000002 |
+| 1000003 |
 
 **Examples**
 
@@ -135,32 +135,31 @@ function loadModelFromFile(
 
 Create a Model instance from file path.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-mindSporeLite-function loadModelFromFile(    model: string,    context: Context, callback: Callback<Model>): void--><!--Device-mindSporeLite-function loadModelFromFile(    model: string,    context: Context, callback: Callback<Model>): void-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| model | string | Yes | model indicates model path to be loaded |
-| context | Context | Yes | context indicates model context information |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| model | string | Yes |
+| context | [Context](arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 1000000 | Model path error. Possible causes: 1. The model path is null; 2. The model path does not exist. |
-| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect. |
-| 1000002 | Failed to create native model. Possible causes: 1. Insufficient permission to access the model path; 2. The model file is corrupted. |
-| 1000003 | Error in model loading method. Possible causes: 1. The loading method must be path, buffer, or fd. |
+| Error Code ID |
+| --- |
+| 1000000 |
+| 1000001 |
+| 1000002 |
+| 1000003 |
 
 **Examples**
 
 See [loadModelFromFile](#loadmodelfromfile)
-

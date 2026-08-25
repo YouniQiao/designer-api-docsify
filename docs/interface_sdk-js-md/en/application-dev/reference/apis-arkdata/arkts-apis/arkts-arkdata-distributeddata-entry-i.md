@@ -4,11 +4,11 @@ Defines the KV pairs stored in the KV store.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** Entry
-
-<!--Device-distributedData-interface Entry--><!--Device-distributedData-interface Entry-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -29,11 +29,11 @@ Key of the KV pair stored in the KV store.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** key
-
-<!--Device-Entry-key: string--><!--Device-Entry-key: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -49,11 +49,10 @@ Value of the KV pair stored in the KV store.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** value
 
-<!--Device-Entry-value: Value--><!--Device-Entry-value: Value-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
-

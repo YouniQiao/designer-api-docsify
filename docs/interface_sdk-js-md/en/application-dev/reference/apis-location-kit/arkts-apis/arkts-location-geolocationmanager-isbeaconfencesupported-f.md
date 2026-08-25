@@ -14,19 +14,19 @@ function isBeaconFenceSupported(): boolean
 
 Check whether the BeaconFence service is supported.
 
-**Since:** 26.1.0
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
 
-<!--Device-geoLocationManager-function isBeaconFenceSupported(): boolean--><!--Device-geoLocationManager-function isBeaconFenceSupported(): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -39,4 +39,3 @@ try {
   console.error("errCode:" + err.code + ", message:" + err.message);
 }
 ```
-

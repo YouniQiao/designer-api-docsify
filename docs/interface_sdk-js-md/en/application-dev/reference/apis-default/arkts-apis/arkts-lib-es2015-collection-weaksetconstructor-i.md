@@ -1,34 +1,30 @@
 # WeakSetConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface WeakSetConstructor--><!--Device-unnamed-interface WeakSetConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
+## [[Construct]]
 
 ```TypeScript
 new <T extends object = object>(values?: readonly T[] | null): WeakSet<T>
 ```
 
-**Since:** -1
-
-<!--Device-WeakSetConstructor-new <T extends object = object>(values?: readonly T[] | null): WeakSet<T>--><!--Device-WeakSetConstructor-new <T extends object = object>(values?: readonly T[] | null): WeakSet<T>-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| values | readonly T[] \| null | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| values | readonly T[] \| null | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## prototype
 
 ```TypeScript
@@ -37,7 +33,4 @@ readonly prototype: WeakSet<object>
 
 **Type:** WeakSet&lt;object&gt;
 
-**Since:** -1
-
-<!--Device-WeakSetConstructor-readonly prototype: WeakSet<object>--><!--Device-WeakSetConstructor-readonly prototype: WeakSet<object>-End-->
-
+**ArkTS mode:** 

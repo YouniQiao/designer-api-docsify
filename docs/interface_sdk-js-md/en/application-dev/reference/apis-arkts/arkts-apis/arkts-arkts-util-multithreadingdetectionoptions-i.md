@@ -4,7 +4,7 @@ Multi-thread detection functional parameter configuration
 
 **Since:** 26.0.0
 
-<!--Device-util-interface MultithreadingDetectionOptions--><!--Device-util-interface MultithreadingDetectionOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,9 +26,9 @@ If abort is **true**, the application will crash, if abort is **false**, the app
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-MultithreadingDetectionOptions-abort?: boolean--><!--Device-MultithreadingDetectionOptions-abort?: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -44,9 +44,9 @@ The sampling frequency of multi-thread detection The value must be an integer, m
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-MultithreadingDetectionOptions-frequency?: number--><!--Device-MultithreadingDetectionOptions-frequency?: number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -62,9 +62,8 @@ The interval of multi-thread detection(min) Errors will be reported again only i
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MultithreadingDetectionOptions-interval?: number--><!--Device-MultithreadingDetectionOptions-interval?: number-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

@@ -10,15 +10,14 @@ Cancels the interval set by " setInterval()".
 
 **Since:** 5
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-unnamed-export declare function clearInterval(intervalID?: number): void--><!--Device-unnamed-export declare function clearInterval(intervalID?: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| intervalID | number | No | Indicates the timer ID returned by "setInterval()". |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| intervalID | number | No |

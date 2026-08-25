@@ -8,16 +8,15 @@ Defines the content of the **NavDestination** component.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-unnamed-export type NavDestinationBuilder = (name: string, param?: Object) => void--><!--Device-unnamed-export type NavDestinationBuilder = (name: string, param?: Object) => void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the NavDestination page. |
-| param | Object | No | Settings of the NavDestination page. The default value is undefined. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| param | Object | No |

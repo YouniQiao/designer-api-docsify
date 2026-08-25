@@ -2,9 +2,9 @@
 
 Enumerates the progress indicator options.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-unifiedDataChannel-enum ProgressIndicator--><!--Device-unifiedDataChannel-enum ProgressIndicator-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -16,13 +16,13 @@ NONE = 0
 
 Do not use the default progress indicator.
 
-**Since:** 23
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-ProgressIndicator-NONE = 0--><!--Device-ProgressIndicator-NONE = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -34,13 +34,12 @@ DEFAULT = 1
 
 Use the default progress indicator. If data is obtained within 500 ms, the default progress bar is not started.
 
-**Since:** 23
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-ProgressIndicator-DEFAULT = 1--><!--Device-ProgressIndicator-DEFAULT = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-

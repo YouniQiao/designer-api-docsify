@@ -14,18 +14,18 @@ function watch(obj: object, msg: string): void
 
 注册待检测泄漏的对象。
 
-**起始版本：** 26.1.0
+**起始版本：** 12
 
-<!--Device-jsLeakWatcher-function watch(obj: object, msg: string): void--><!--Device-jsLeakWatcher-function watch(obj: object, msg: string): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为26.1.0。
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| obj | object | 是 | 需要检测的对象。<br>**说明：**可传入任何非null的ArkTS对象，不支持undefined和基本类型。 |
-| msg | string | 是 | 自定义对象信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| obj | object | 是 |
+| msg | string | 是 |
 
 **示例**
 
@@ -33,4 +33,3 @@ function watch(obj: object, msg: string): void
 let obj:Object = new Object();
 jsLeakWatcher.watch(obj, "Trace Object");
 ```
-

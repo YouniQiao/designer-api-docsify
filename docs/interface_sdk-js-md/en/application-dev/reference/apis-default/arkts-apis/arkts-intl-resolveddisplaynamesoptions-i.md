@@ -1,8 +1,6 @@
 # ResolvedDisplayNamesOptions
 
-**Since:** -1
-
-<!--Device-Intl-interface ResolvedDisplayNamesOptions--><!--Device-Intl-interface ResolvedDisplayNamesOptions-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,9 +15,7 @@ fallback: DisplayNamesFallback
 
 **Type:** DisplayNamesFallback
 
-**Since:** -1
-
-<!--Device-ResolvedDisplayNamesOptions-fallback: DisplayNamesFallback--><!--Device-ResolvedDisplayNamesOptions-fallback: DisplayNamesFallback-End-->
+**ArkTS mode:** 
 
 ## languageDisplay
 
@@ -29,9 +25,7 @@ languageDisplay?: DisplayNamesLanguageDisplay
 
 **Type:** DisplayNamesLanguageDisplay
 
-**Since:** -1
-
-<!--Device-ResolvedDisplayNamesOptions-languageDisplay?: DisplayNamesLanguageDisplay--><!--Device-ResolvedDisplayNamesOptions-languageDisplay?: DisplayNamesLanguageDisplay-End-->
+**ArkTS mode:** 
 
 ## locale
 
@@ -41,9 +35,7 @@ locale: UnicodeBCP47LocaleIdentifier
 
 **Type:** UnicodeBCP47LocaleIdentifier
 
-**Since:** -1
-
-<!--Device-ResolvedDisplayNamesOptions-locale: UnicodeBCP47LocaleIdentifier--><!--Device-ResolvedDisplayNamesOptions-locale: UnicodeBCP47LocaleIdentifier-End-->
+**ArkTS mode:** 
 
 ## style
 
@@ -53,9 +45,7 @@ style: RelativeTimeFormatStyle
 
 **Type:** RelativeTimeFormatStyle
 
-**Since:** -1
-
-<!--Device-ResolvedDisplayNamesOptions-style: RelativeTimeFormatStyle--><!--Device-ResolvedDisplayNamesOptions-style: RelativeTimeFormatStyle-End-->
+**ArkTS mode:** 
 
 ## type
 
@@ -65,7 +55,4 @@ type: DisplayNamesType
 
 **Type:** DisplayNamesType
 
-**Since:** -1
-
-<!--Device-ResolvedDisplayNamesOptions-type: DisplayNamesType--><!--Device-ResolvedDisplayNamesOptions-type: DisplayNamesType-End-->
-
+**ArkTS mode:** 

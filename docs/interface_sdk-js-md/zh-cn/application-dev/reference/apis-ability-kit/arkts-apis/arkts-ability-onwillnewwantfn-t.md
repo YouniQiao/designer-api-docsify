@@ -8,17 +8,16 @@ type OnWillNewWantFn = (ability: UIAbility) => void
 
 **起始版本：** 23
 
-<!--Device-unnamed-type OnWillNewWantFn = (ability: UIAbility) => void--><!--Device-unnamed-type OnWillNewWantFn = (ability: UIAbility) => void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 当前Ability对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
 
 **示例**
 
 参见AbilityLifecycleCallback使用示例。
-

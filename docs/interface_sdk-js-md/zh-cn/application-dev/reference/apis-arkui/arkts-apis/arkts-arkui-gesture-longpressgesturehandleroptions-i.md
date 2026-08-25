@@ -6,9 +6,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export interface LongPressGestureHandlerOptions--><!--Device-unnamed-export interface LongPressGestureHandlerOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,11 +22,9 @@ allowableMovement?: double
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LongPressGestureHandlerOptions-allowableMovement?: double--><!--Device-LongPressGestureHandlerOptions-allowableMovement?: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +41,9 @@ duration?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LongPressGestureHandlerOptions-duration?: int--><!--Device-LongPressGestureHandlerOptions-duration?: int-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,11 +60,9 @@ fingers?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LongPressGestureHandlerOptions-fingers?: int--><!--Device-LongPressGestureHandlerOptions-fingers?: int-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,11 +78,8 @@ repeat?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-LongPressGestureHandlerOptions-repeat?: boolean--><!--Device-LongPressGestureHandlerOptions-repeat?: boolean-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

@@ -9,7 +9,7 @@ import { netFirewall } from '@kit.NetworkKit';
 ## getNetFirewallRules
 
 ```TypeScript
-function getNetFirewallRules(userId: int, requestParam: RequestParam): Promise<FirewallRulePage>
+function getNetFirewallRules(userId: number, requestParam: RequestParam): Promise<FirewallRulePage>
 ```
 
 Obtains firewall rules by user ID. You need to specify the pagination query parameter when calling this API. Currently, firewall rules can be sorted by name. This API uses a promise to return the result.  
@@ -17,35 +17,35 @@ Obtains firewall rules by user ID. You need to specify the pagination query para
 
 **Since:** 15
 
-**Required permissions:** ohos.permission.GET_NET_FIREWALL
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
-<!--Device-netFirewall-function getNetFirewallRules(userId: int, requestParam: RequestParam): Promise<FirewallRulePage>--><!--Device-netFirewall-function getNetFirewallRules(userId: int, requestParam: RequestParam): Promise<FirewallRulePage>-End-->
+**Required permissions:** ohos.permission.GET_NET_FIREWALL
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| userId | int | Yes | System user ID, which must exist. |
-| requestParam | [RequestParam](arkts-network-netfirewall-requestparam-i.md) | Yes | Pagination query parameter. The **orderField** field can be sorted only by firewall rule name. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| userId | number | Yes |
+| requestParam | [RequestParam](arkts-network-netfirewall-requestparam-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[FirewallRulePage](arkts-network-netfirewall-firewallrulepage-i.md)&gt; | Promise used to return the result, which is list of firewall rules. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[FirewallRulePage](arkts-network-netfirewall-firewallrulepage-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Operation failed. Cannot connect to service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [29400000](../errorcode-net-netfirewall.md#29400000-specified-user-does-not-exist) | The specified user does not exist. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [29400000](../errorcode-net-netfirewall.md#29400000-specified-user-does-not-exist) |
 
 **Examples**
 
@@ -65,4 +65,3 @@ netFirewall.getNetFirewallRules(100, ruleParam).then((result: netFirewall.Firewa
   console.error("get firewall rules failed: " + JSON.stringify(error));
 });
 ```
-

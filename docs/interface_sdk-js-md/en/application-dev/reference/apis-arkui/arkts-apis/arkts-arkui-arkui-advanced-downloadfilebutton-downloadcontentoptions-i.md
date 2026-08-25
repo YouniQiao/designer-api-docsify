@@ -4,7 +4,7 @@ Defines the download content options.@interface DownloadContentOptions
 
 **Since:** 12
 
-<!--Device-unnamed-export interface DownloadContentOptions--><!--Device-unnamed-export interface DownloadContentOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,9 +26,9 @@ DownloadFileButton icon Style.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-DownloadContentOptions-icon?: DownloadIconStyle--><!--Device-DownloadContentOptions-icon?: DownloadIconStyle-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,9 +44,8 @@ DownloadFileButton description.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-DownloadContentOptions-text?: DownloadDescription--><!--Device-DownloadContentOptions-text?: DownloadDescription-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,7 +4,7 @@ Defines the asset analysis result.
 
 **Since:** 24
 
-<!--Device-photoAccessHelper-interface AnalysisResult--><!--Device-photoAccessHelper-interface AnalysisResult-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -24,15 +24,14 @@ result: int
 
 Result code of asset analysis.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-AnalysisResult-result: int--><!--Device-AnalysisResult-result: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

@@ -10,11 +10,11 @@ The module provides APIs for the Home Screen application.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [launcherBundleManager](arkts-bundle-launcherbundlemanager.md)
-
-<!--Device-unnamed-declare namespace innerBundleManager--><!--Device-unnamed-declare namespace innerBundleManager-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -31,17 +31,16 @@ import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md) | Obtains an array of the launcher ability information based on a given bundle name. This API uses an asynchronous callback to return the result. |
-| [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md) | Obtains an array of the launcher ability information based on a given bundle name. This API uses a promise to return the result. |
-| [on_BundleStatusChange](arkts-ability-innerbundlemanager-onbundlestatuschange-f-sys.md#onbundlestatuschange) | Registers a callback to receive bundle status changes. This API uses an asynchronous callback to return the result. |
-| [on_BundleStatusChange](arkts-ability-innerbundlemanager-onbundlestatuschange-f-sys.md#onbundlestatuschange) | Registers a callback to receive bundle status changes. This API uses an asynchronous callback to return the result. |
-| [off_BundleStatusChange](arkts-ability-innerbundlemanager-offbundlestatuschange-f-sys.md#offbundlestatuschange) | Unregisters the callback that receives bundle status changes. This API uses an asynchronous callback to return the result. |
-| [off_BundleStatusChange](arkts-ability-innerbundlemanager-offbundlestatuschange-f-sys.md#offbundlestatuschange) | Unregisters the callback that receives bundle status changes. This API uses an asynchronous callback to return the result. |
-| [getAllLauncherAbilityInfos](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md) | Obtains the information about all launcher abilities. This API uses an asynchronous callback to return the result. |
-| [getAllLauncherAbilityInfos](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md) | Obtains the information about all launcher abilities. This API uses a promise to return the result. |
-| [getShortcutInfos](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md) | Obtains an array of the shortcut information based on a given bundle name. This API uses an asynchronous callback to return the result. |
-| [getShortcutInfos](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md) | Obtains an array of the shortcut information based on a given bundle name. This API uses a promise to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md) |
+| [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md) |
+| [on](arkts-ability-innerbundlemanager-on-f-sys.md#onbundlestatuschange) |
+| [on](arkts-ability-innerbundlemanager-on-f-sys.md#onbundlestatuschange) |
+| [off](arkts-ability-innerbundlemanager-off-f-sys.md#offbundlestatuschange) |
+| [off](arkts-ability-innerbundlemanager-off-f-sys.md#offbundlestatuschange) |
+| [getAllLauncherAbilityInfos](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md) |
+| [getAllLauncherAbilityInfos](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md) |
+| [getShortcutInfos](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md) |
+| [getShortcutInfos](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md) |
 <!--DelEnd-->
-

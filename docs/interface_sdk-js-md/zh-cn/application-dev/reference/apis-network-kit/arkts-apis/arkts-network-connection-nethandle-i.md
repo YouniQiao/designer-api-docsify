@@ -2,9 +2,9 @@
 
 网络句柄。在调用NetHandle的方法之前，需要先获取NetHandle对象。例如可通过[getDefaultNet](arkts-network-connection-getdefaultnet-f.md)获取系统当前默认网络的网络句柄。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-connection-export interface NetHandle--><!--Device-connection-export interface NetHandle-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -24,25 +24,25 @@ bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): v
 
 **起始版本：** 9
 
-<!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): void--><!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| socketParam | TCPSocket \| UDPSocket | 是 | 待绑定的TCPSocket或UDPSocket对象。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当TCPSocket或UDPSocket成功绑定到当前网络，error为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| socketParam | TCPSocket \| [UDPSocket](arkts-network-socket-udpsocket-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
 **示例**
 
@@ -171,30 +171,30 @@ bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>
 
 **起始版本：** 9
 
-<!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>--><!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| socketParam | TCPSocket \| UDPSocket | 是 | 待绑定的TCPSocket或UDPSocket对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| socketParam | TCPSocket \| [UDPSocket](arkts-network-socket-udpsocket-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
 **示例**
 
@@ -210,28 +210,28 @@ getAddressByName(host: string, callback: AsyncCallback<NetAddress>): void
 
 **起始版本：** 8
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-NetHandle-getAddressByName(host: string, callback: AsyncCallback<NetAddress>): void--><!--Device-NetHandle-getAddressByName(host: string, callback: AsyncCallback<NetAddress>): void-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| host | string | 是 | 需要解析的主机名。例如："www.example.com"。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | 是 | 回调函数。当使用对应网络解析主机名获取第一个IP地址成功，error为undefined，data为获取的第一个IP地址；否则为错 误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| host | string | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
 **示例**
 
@@ -323,33 +323,33 @@ getAddressByName(host: string): Promise<NetAddress>
 
 **起始版本：** 8
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-NetHandle-getAddressByName(host: string): Promise<NetAddress>--><!--Device-NetHandle-getAddressByName(host: string): Promise<NetAddress>-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| host | string | 是 | 需要解析的主机名。例如："www.example.com"。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| host | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;NetAddress&gt; | Promise对象，返回获取到的第一个IP地址。 |
+| 类型 |
+| --- |
+| Promise & lt;NetAddress & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
 **示例**
 
@@ -365,30 +365,30 @@ getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddress>>): vo
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **需要权限：** ohos.permission.INTERNET
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NetHandle-getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddress>>): void--><!--Device-NetHandle-getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddress>>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| host | string | 是 | 需要解析的主机名。例如："www.example.com"。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NetAddress&gt;&gt; | 是 | 回调函数。当使用对应网络解析主机名成功获取所有IP地址，error为undefined，data为获取到的所有IP地 址；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| host | string | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NetAddress&gt;&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
 **示例**
 
@@ -477,35 +477,35 @@ getAddressesByName(host: string): Promise<Array<NetAddress>>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **需要权限：** ohos.permission.INTERNET
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NetHandle-getAddressesByName(host: string): Promise<Array<NetAddress>>--><!--Device-NetHandle-getAddressesByName(host: string): Promise<Array<NetAddress>>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| host | string | 是 | 需要解析的主机名。例如："www.example.com"。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| host | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;NetAddress&gt;&gt; | Promise对象，返回所有IP地址。 |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;NetAddress & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
 **示例**
 
@@ -521,35 +521,35 @@ getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise<Arra
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **需要权限：** ohos.permission.INTERNET
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NetHandle-getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise<Array<NetAddress>>--><!--Device-NetHandle-getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise<Array<NetAddress>>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| host | string | 是 | 需要解析的主机名。例如："www.example.com"。 |
-| option | [QueryOptions](arkts-network-connection-queryoptions-i.md) | 否 | 需要查询的IP类型。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| host | string | 是 |
+| option | [QueryOptions](arkts-network-connection-queryoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;NetAddress&gt;&gt; | Promise对象，返回查询到的IP地址。返回值中的port字段固定为0，无需关注。 |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;NetAddress & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
 **示例**
 
@@ -595,13 +595,12 @@ netId: int
 
 网络ID，取值为0代表没有默认网络，其余有效取值必须大于等于100。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-NetHandle-netId: int--><!--Device-NetHandle-netId: int-End-->
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
-

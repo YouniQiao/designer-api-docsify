@@ -24,9 +24,9 @@ UIExtensionComponent(
 
 **起始版本：** 10
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-UIExtensionComponentInterface-(    want: import('../api/@ohos.app.ability.Want').default,    options?: UIExtensionOptions  ): UIExtensionComponentAttribute--><!--Device-UIExtensionComponentInterface-(    want: import('../api/@ohos.app.ability.Want').default,    options?: UIExtensionOptions  ): UIExtensionComponentAttribute-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,26 +34,26 @@ UIExtensionComponent(
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | import('../api/@ohos.app.ability.Want').default | 是 | 表示UIExtensionAbility的want |
-| options | [UIExtensionOptions](arkts-arkui-uiextensionoptions-i-sys.md) | 否 | UIExtensionComponentAttribute的构造配置 |
+| 参数名 | [类型](#类型) | 必填 |
+| --- | --- | --- |
+| want | import('../api/@ohos.app.ability.Want').default | 是 |
+| options | [UIExtensionOptions](arkts-arkui-uiextensionoptions-i-sys.md) | 否 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [TerminationInfo](arkts-arkui-terminationinfo-i-sys.md) | 用于表示被拉起的UIExtensionAbility通过调用terminateSelfWithResult或者terminateSelf正常退出时的返回结果。 |
+| 名称 |
+| --- |
+| [TerminationInfo](arkts-arkui-terminationinfo-i-sys.md) |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
+| 名称 |
+| --- |
+| [ReceiveCallback](arkts-arkui-receivecallback-t-sys.md) |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-
+| 名称 |
+| --- |

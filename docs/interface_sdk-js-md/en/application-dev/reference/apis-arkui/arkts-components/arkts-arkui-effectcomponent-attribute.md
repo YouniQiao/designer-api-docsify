@@ -6,7 +6,7 @@ The universal attributes are supported. Currently, this component only works wit
 
 **Since:** 10
 
-<!--Device-unnamed-declare class EffectComponentAttribute--><!--Device-unnamed-declare class EffectComponentAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,4 +16,3 @@ The universal attributes are supported. Currently, this component only works wit
 
 ```TypeScript
 ```
-

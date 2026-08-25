@@ -4,7 +4,7 @@
 
 **起始版本：** 20
 
-<!--Device-unnamed-export interface GestureObserverConfigs--><!--Device-unnamed-export interface GestureObserverConfigs-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,11 +29,10 @@ actionPhases: Array<GestureActionPhase>
 
 **起始版本：** 20
 
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
-<!--Device-GestureObserverConfigs-actionPhases: Array<GestureActionPhase>--><!--Device-GestureObserverConfigs-actionPhases: Array<GestureActionPhase>-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

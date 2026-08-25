@@ -2,9 +2,9 @@
 
 StartOptions can be used as an input parameter for APIs used to launch a UIAbility (for example, [startAbility()](arkts-ability-uiabilitycontext-c.md#startability)). It specifies the options for starting the target UIAbility, including but not limited to the window mode and the display where the target UIAbility is started.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-declare class StartOptions--><!--Device-unnamed-declare class StartOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -24,13 +24,13 @@ Operation class used to handle the result of an application launch request.
 
 **Type:** [CompletionHandler](arkts-ability-app-ability-completionhandler-completionhandler-c.md)
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-StartOptions-completionHandler?: CompletionHandler--><!--Device-StartOptions-completionHandler?: CompletionHandler-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -44,15 +44,15 @@ Display ID, which is an integer greater than or equal to -1.
 - The value **-1** means the current screen. - The value **0** means the primary screen. - A positive integer means a specific screen with that ID.  
 **NOTE：**Starting from API version 14, the default value is **-1**, indicating the current screen.In versions earlier than API version 14, the default value is **0**, indicating the primary screen.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-StartOptions-displayId?: long--><!--Device-StartOptions-displayId?: long-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -69,11 +69,11 @@ Whether to hide the starting window for the UIAbility of the current application
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StartOptions-hideStartWindow?: boolean--><!--Device-StartOptions-hideStartWindow?: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -86,13 +86,13 @@ maxWindowHeight?: int
 Maximum height of the window, in vp. You can call getWindowLimitsVP to obtain the size limit of the current window.  
 **Constraints**:This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 17
+
+**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StartOptions-maxWindowHeight?: int--><!--Device-StartOptions-maxWindowHeight?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -105,13 +105,13 @@ maxWindowWidth?: int
 Maximum width of the window, in vp. You can call getWindowLimitsVP to obtain the size limit of the current window.  
 **Constraints**:This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 17
+
+**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StartOptions-maxWindowWidth?: int--><!--Device-StartOptions-maxWindowWidth?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -124,13 +124,13 @@ minWindowHeight?: int
 Minimum height of the window, in vp. You can call getWindowLimitsVP to obtain the size limit of the current window.  
 **Constraints**:This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 17
+
+**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StartOptions-minWindowHeight?: int--><!--Device-StartOptions-minWindowHeight?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -143,13 +143,13 @@ minWindowWidth?: int
 Minimum width of the window, in vp. You can call getWindowLimitsVP to obtain the size limit of the current window.  
 **Constraints**:This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 17
+
+**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StartOptions-minWindowWidth?: int--><!--Device-StartOptions-minWindowWidth?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -168,11 +168,11 @@ Process mode of the UIAbility after it is started.
 
 **Type:** contextConstant.ProcessMode
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StartOptions-processMode?: contextConstant.ProcessMode--><!--Device-StartOptions-processMode?: contextConstant.ProcessMode-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -188,9 +188,9 @@ The type of split ratio preference.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-StartOptions-splitRatio?: window.SplitRatioPreference--><!--Device-StartOptions-splitRatio?: window.SplitRatioPreference-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -209,11 +209,11 @@ Visibility status of the UIAbility after it is started. If the target UIAbility 
 
 **Type:** contextConstant.StartupVisibility
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StartOptions-startupVisibility?: contextConstant.StartupVisibility--><!--Device-StartOptions-startupVisibility?: contextConstant.StartupVisibility-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -229,11 +229,11 @@ Background color of the window for the UIAbility of the current application upon
 
 **Type:** string
 
-**Since:** 23
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StartOptions-startWindowBackgroundColor?: string--><!--Device-StartOptions-startWindowBackgroundColor?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -249,11 +249,11 @@ Icon displayed on the starting window for the UIAbility of the current applicati
 
 **Type:** image.PixelMap
 
-**Since:** 23
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StartOptions-startWindowIcon?: image.PixelMap--><!--Device-StartOptions-startWindowIcon?: image.PixelMap-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -270,11 +270,11 @@ When **FULL_SCREEN** and **SPLIT** are both configured for a [freeform window](.
 
 **Type:** Array&lt;bundleManager.SupportWindowMode&gt;
 
-**Since:** 23
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StartOptions-supportWindowModes?: Array<bundleManager.SupportWindowMode>--><!--Device-StartOptions-supportWindowModes?: Array<bundleManager.SupportWindowMode>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -288,11 +288,11 @@ Parameters for the window for the UIAbility upon startup.
 
 **Type:** window.WindowCreateParams
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StartOptions-windowCreateParams?: window.WindowCreateParams--><!--Device-StartOptions-windowCreateParams?: window.WindowCreateParams-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -302,16 +302,16 @@ Parameters for the window for the UIAbility upon startup.
 windowHeight?: int
 ```
 
-Window height, in px.The value range is [**minWindowHeight**, **maxWindowHeight**], with the unit being vp. You can call [vp2px](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#vp2px) to convert it to the corresponding px value.  
+Window height, in px.The value range is [**minWindowHeight**, **maxWindowHeight**], with the unit being vp. You can call [vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert it to the corresponding px value.  
 **Constraints**:This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StartOptions-windowHeight?: int--><!--Device-StartOptions-windowHeight?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -324,13 +324,13 @@ windowLeft?: int
 Distance the window moves along the x-axis, with the top-left vertex of the screen specified by **displayId** as the starting point. The unit is px. A positive value means moving to the right, and a negative value means moving to the left. The value is an integer. Non-integer values will be rounded down. When the top-left vertex of the window exceeds the screen area of the specified **displayId**, the window is restricted to be visible only within the screen range of the specified **displayId**. When configuring this field, you are advised to configure **windowTop** at the same time.  
 **Constraints**:This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StartOptions-windowLeft?: int--><!--Device-StartOptions-windowLeft?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -342,13 +342,13 @@ windowMode?: int
 
 Window mode for the UIAbility upon startup. For details, see [WindowMode](arkts-ability-abilityconstant-windowmode-e.md).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StartOptions-windowMode?: int--><!--Device-StartOptions-windowMode?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -361,13 +361,13 @@ windowTop?: int
 Distance the window moves along the y-axis, with the top-left vertex of the screen specified by **displayId** as the starting point. The unit is px. A positive value means moving downward, and a negative value means moving upward. The value is an integer. Non-integer values will be rounded down. When the top of the window exceeds the screen area of the specified **displayId**, the window is restricted to be visible only within the screen range of the specified **displayId**. When configuring this field, you are advised to also configure **windowLeft**.  
 **Constraints**:This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StartOptions-windowTop?: int--><!--Device-StartOptions-windowTop?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -377,16 +377,16 @@ Distance the window moves along the y-axis, with the top-left vertex of the scre
 windowWidth?: int
 ```
 
-Window width, in px.The value range is [**minWindowWidth**, **maxWindowWidth**], with the unit being vp. You can call [vp2px](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#vp2px) to convert it to the corresponding px value.  
+Window width, in px.The value range is [**minWindowWidth**, **maxWindowWidth**], with the unit being vp. You can call [vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert it to the corresponding px value.  
 **Constraints**:This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StartOptions-windowWidth?: int--><!--Device-StartOptions-windowWidth?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -403,11 +403,11 @@ Whether animation effects are used for the UIAbility upon startup. **true** if u
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StartOptions-withAnimation?: boolean--><!--Device-StartOptions-withAnimation?: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -526,4 +526,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

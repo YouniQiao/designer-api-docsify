@@ -4,7 +4,7 @@ ArrowPointPosition enumeration description
 
 **Since:** 11
 
-<!--Device-unnamed-declare enum ArrowPointPosition--><!--Device-unnamed-declare enum ArrowPointPosition-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Target start position
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ArrowPointPosition-START = 'Start'--><!--Device-ArrowPointPosition-START = 'Start'-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Target center position
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ArrowPointPosition-CENTER = 'Center'--><!--Device-ArrowPointPosition-CENTER = 'Center'-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ Target end position
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ArrowPointPosition-END = 'End'--><!--Device-ArrowPointPosition-END = 'End'-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

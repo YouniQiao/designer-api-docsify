@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-effectKit-enum PictureLightDegree--><!--Device-effectKit-enum PictureLightDegree-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -20,11 +20,11 @@ UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE = 0
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-PictureLightDegree-UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE = 0--><!--Device-PictureLightDegree-UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -40,11 +40,11 @@ EXTREMELY_LIGHT_COLOR_PICTURE = 1
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-PictureLightDegree-EXTREMELY_LIGHT_COLOR_PICTURE = 1--><!--Device-PictureLightDegree-EXTREMELY_LIGHT_COLOR_PICTURE = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -60,11 +60,11 @@ LIGHT_COLOR_PICTURE = 2
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-PictureLightDegree-LIGHT_COLOR_PICTURE = 2--><!--Device-PictureLightDegree-LIGHT_COLOR_PICTURE = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -80,11 +80,11 @@ DARK_COLOR_PICTURE = 3
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-PictureLightDegree-DARK_COLOR_PICTURE = 3--><!--Device-PictureLightDegree-DARK_COLOR_PICTURE = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -100,11 +100,11 @@ EXTREMELY_DARK_COLOR_PICTURE = 4
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-PictureLightDegree-EXTREMELY_DARK_COLOR_PICTURE = 4--><!--Device-PictureLightDegree-EXTREMELY_DARK_COLOR_PICTURE = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -120,11 +120,11 @@ FLOWERY_PICTURE = 5
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-PictureLightDegree-FLOWERY_PICTURE = 5--><!--Device-PictureLightDegree-FLOWERY_PICTURE = 5-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -140,13 +140,12 @@ EXTREMELY_FLOWERY_PICTURE = 6
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-PictureLightDegree-EXTREMELY_FLOWERY_PICTURE = 6--><!--Device-PictureLightDegree-EXTREMELY_FLOWERY_PICTURE = 6-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
-

@@ -10,11 +10,11 @@ const DISTRIBUTED_SERVICE_START: string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** DISTRIBUTED_SERVICE_START
-
-<!--Device-Event-const DISTRIBUTED_SERVICE_START: string--><!--Device-Event-const DISTRIBUTED_SERVICE_START: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -28,11 +28,11 @@ const USER_LOGIN: string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** USER_LOGIN
-
-<!--Device-Event-const USER_LOGIN: string--><!--Device-Event-const USER_LOGIN: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -46,11 +46,10 @@ const USER_LOGOUT: string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** USER_LOGOUT
 
-<!--Device-Event-const USER_LOGOUT: string--><!--Device-Event-const USER_LOGOUT: string-End-->
-
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-

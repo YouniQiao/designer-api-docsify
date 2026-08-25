@@ -6,11 +6,11 @@ Defines StepperItem Modifier@extends StepperItemAttribute @implements AttributeM
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Deprecated since:** 22
 
-**Substitutes:** [SwiperModifier](../../apis-default/arkts-apis/arkts-swipermodifier-c.md)
-
-<!--Device-unnamed-export declare class StepperItemModifier--><!--Device-unnamed-export declare class StepperItemModifier-End-->
+**Substitutes:** [SwiperModifier](arkts-arkui-swipermodifier-c.md)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,6 +24,8 @@ Defines the normal update attribute function.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Deprecated since:** 22
 
 **Substitutes:** applyNormalAttribute
@@ -32,13 +34,10 @@ Defines the normal update attribute function.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-StepperItemModifier-applyNormalAttribute?(instance: StepperItemAttribute): void--><!--Device-StepperItemModifier-applyNormalAttribute?(instance: StepperItemAttribute): void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| instance | [StepperItemAttribute](../arkts-components/arkts-arkui-stepperitem-attribute.md) | Yes |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| instance | [StepperItemAttribute](../arkts-components/arkts-arkui-stepperitem-attribute.md) | Yes |

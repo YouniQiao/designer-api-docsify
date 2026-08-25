@@ -9,7 +9,6 @@ import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 ## PopupV2
 
 ```TypeScript
-@Builder
 export declare function PopupV2(options: PopupV2InitInfo): void
 ```
 
@@ -17,17 +16,14 @@ Build function of PopupV2. This component is implemented based on state manageme
 
 **Since:** 26.0.0
 
-**Decorator:** @Builder
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-unnamed-@Builderexport declare function PopupV2(options: PopupV2InitInfo): void--><!--Device-unnamed-@Builderexport declare function PopupV2(options: PopupV2InitInfo): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [PopupV2InitInfo](arkts-arkui-arkui-advanced-popupv2-popupv2initinfo-i.md) | Yes | popup option. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [PopupV2InitInfo](arkts-arkui-arkui-advanced-popupv2-popupv2initinfo-i.md) | Yes |

@@ -16,9 +16,9 @@ function getDeviceFunctions(): FunctionType
 
 **起始版本：** 12
 
-**需要权限：** ohos.permission.MANAGE_USB_CONFIG
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-usbManager-function getDeviceFunctions(): FunctionType--><!--Device-usbManager-function getDeviceFunctions(): FunctionType-End-->
+**需要权限：** ohos.permission.MANAGE_USB_CONFIG
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -26,17 +26,17 @@ function getDeviceFunctions(): FunctionType
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| FunctionType | 当前的USB功能列表的数字组合掩码。 |
+| 类型 |
+| --- |
+| [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 18+ |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Normal application do not have permission to use system api. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 **示例**
 
@@ -56,9 +56,9 @@ Obtains the numeric mask combination for the current USB function list in Device
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.MANAGE_USB_CONFIG
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-usbManager-function getDeviceFunctions(): int--><!--Device-usbManager-function getDeviceFunctions(): int-End-->
+**需要权限：** ohos.permission.MANAGE_USB_CONFIG
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -66,20 +66,19 @@ Obtains the numeric mask combination for the current USB function list in Device
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | the numeric mask combination for the current USB function list in FunctionType. |
+| 类型 |
+| --- |
+| int |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Normal application do not have permission to use system api. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-权限校验失败) |  |
-| [14400004](../errorcode-usb.md#14400004-服务异常) |  |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [14400004](../errorcode-usb.md#14400004-服务异常) |
 
 **示例**
 
 参见 [getDeviceFunctions](#getdevicefunctions)
-

@@ -2,9 +2,9 @@
 
 趣味交互卡片配置参数。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-formInfo-interface FunInteractionParams--><!--Device-formInfo-interface FunInteractionParams-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -26,9 +26,9 @@ abilityName?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-FunInteractionParams-abilityName?: string--><!--Device-FunInteractionParams-abilityName?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -43,11 +43,11 @@ keepStateDuration?: int
 趣味交互场景无交互时，激活态保持时长。默认值为10000，单位ms。取值为(0,60000]的整数，超过取值范围则取最大值60000。  
 **说明：** 在API版本26.0.0之前该字段为(0,10000]的整数，超过取值范围则取默认值10000。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-FunInteractionParams-keepStateDuration?: int--><!--Device-FunInteractionParams-keepStateDuration?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -63,9 +63,9 @@ subBundleName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-FunInteractionParams-subBundleName: string--><!--Device-FunInteractionParams-subBundleName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -81,11 +81,10 @@ targetBundleName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-FunInteractionParams-targetBundleName: string--><!--Device-FunInteractionParams-targetBundleName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
-

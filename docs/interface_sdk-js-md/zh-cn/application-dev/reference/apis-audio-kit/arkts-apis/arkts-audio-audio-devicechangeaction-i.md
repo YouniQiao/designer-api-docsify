@@ -2,9 +2,9 @@
 
 描述设备连接状态变化和设备信息。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-audio-interface DeviceChangeAction--><!--Device-audio-interface DeviceChangeAction-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -24,9 +24,9 @@ deviceDescriptors: AudioDeviceDescriptors
 
 **类型：** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-DeviceChangeAction-deviceDescriptors: AudioDeviceDescriptors--><!--Device-DeviceChangeAction-deviceDescriptors: AudioDeviceDescriptors-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -40,9 +40,8 @@ type: DeviceChangeType
 
 **类型：** [DeviceChangeType](arkts-audio-audio-devicechangetype-e.md)
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-DeviceChangeAction-type: DeviceChangeType--><!--Device-DeviceChangeAction-type: DeviceChangeType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
-

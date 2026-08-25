@@ -4,7 +4,7 @@ View model @interface ViewModel
 
 **Since:** 4
 
-<!--Device-unnamed-export interface ViewModel--><!--Device-unnamed-export interface ViewModel-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -18,24 +18,24 @@ Displays content based on the current system language and a path of the language
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-ViewModel-$t(path: string, param?: object | Array<any>): string--><!--Device-ViewModel-$t(path: string, param?: object | Array<any>): string-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| path | string | Yes | Path of the language resource key |
-| param | object \| Array&lt;any&gt; | No | Content used to replace placeholders during runtime. There are two types of placeholders available: 1. Named placeholder, for example, {name}. The actual content must be of the object type, for example, \\$t('strings.object', {name: 'Hello world'}). 2. Digit placeholder, for example, {0}. The actual content must be of the array type, for example, \\$t('strings.array', ['Hello world']). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| path | string | Yes |
+| param | object \| Array & lt;any & gt; | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | content to display |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## $refs
 
@@ -49,9 +49,8 @@ An object that holds all DOM elements and component instances that have been reg
 
 **Since:** 4
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-ViewModel-$refs: ElementReferences--><!--Device-ViewModel-$refs: ElementReferences-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
-

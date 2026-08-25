@@ -4,7 +4,7 @@ Socket的连接信息。
 
 **起始版本：** 7
 
-<!--Device-socket-export interface SocketRemoteInfo--><!--Device-socket-export interface SocketRemoteInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -26,7 +26,7 @@ address: string
 
 **起始版本：** 7
 
-<!--Device-SocketRemoteInfo-address: string--><!--Device-SocketRemoteInfo-address: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -44,39 +44,38 @@ family: 'IPv4' | 'IPv6'
 
 **起始版本：** 7
 
-<!--Device-SocketRemoteInfo-family: 'IPv4' | 'IPv6'--><!--Device-SocketRemoteInfo-family: 'IPv4' | 'IPv6'-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## port
 
 ```TypeScript
-port: int
+port: number
 ```
 
 端口号，范围0~65535。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 7
 
-<!--Device-SocketRemoteInfo-port: int--><!--Device-SocketRemoteInfo-port: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## size
 
 ```TypeScript
-size: int
+size: number
 ```
 
 服务器响应信息的字节长度。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 7
 
-<!--Device-SocketRemoteInfo-size: int--><!--Device-SocketRemoteInfo-size: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
-

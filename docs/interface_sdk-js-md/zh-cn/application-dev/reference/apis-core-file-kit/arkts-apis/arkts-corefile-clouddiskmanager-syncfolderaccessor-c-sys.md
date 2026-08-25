@@ -2,9 +2,9 @@
 
 同步根管理类，负责为系统文件管理应用提供获取三方网盘注册的同步根信息的能力。
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-cloudDiskManager-class SyncFolderAccessor--><!--Device-cloudDiskManager-class SyncFolderAccessor-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
@@ -24,11 +24,11 @@ constructor()
 
 SyncFolderAccessor的构造函数，用于获取SyncFolderAccessor类的实例。
 
-**起始版本：** 23
+**起始版本：** 21
+
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_CLOUD_DISK_INFO
-
-<!--Device-SyncFolderAccessor-constructor()--><!--Device-SyncFolderAccessor-constructor()-End-->
 
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
@@ -36,10 +36,10 @@ SyncFolderAccessor的构造函数，用于获取SyncFolderAccessor类的实例�
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. application which is not a system application uses system API. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -73,11 +73,11 @@ getAllSyncFolders(): Promise<Array<SyncFolder>>
 
 获取所有注册的同步根信息。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 21
+
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_CLOUD_DISK_INFO
-
-<!--Device-SyncFolderAccessor-getAllSyncFolders(): Promise<Array<SyncFolder>>--><!--Device-SyncFolderAccessor-getAllSyncFolders(): Promise<Array<SyncFolder>>-End-->
 
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
@@ -85,20 +85,20 @@ getAllSyncFolders(): Promise<Array<SyncFolder>>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[SyncFolder](arkts-corefile-clouddiskmanager-syncfolder-i-sys.md)&gt;&gt; | Promise对象。返回所有网盘应用的同步根列表。 |
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;[SyncFolder](arkts-corefile-clouddiskmanager-syncfolder-i-sys.md)&gt;&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Device not supported. |
-| [34400003](../errorcode-clouddiskmanager-sys.md#34400003-ipc通信失败) | IPC communication failed. |
-| [34400014](../errorcode-clouddiskmanager-sys.md#34400014-系统内部错误) | Temporary failure. Retry is recommended (e.g., network issues). |
-| [34400015](../errorcode-clouddiskmanager-sys.md#34400015-当前设备不允许使用云盘功能) | Cloud disk is not allowed on this device. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [34400003](../errorcode-clouddiskmanager-sys.md#34400003-ipc通信失败) |
+| [34400014](../errorcode-clouddiskmanager-sys.md#34400014-系统内部错误) |
+| [34400015](../errorcode-clouddiskmanager-sys.md#34400015-当前设备不允许使用云盘功能) |
 
 **示例**
 
@@ -162,4 +162,3 @@ try {
   console.error(`${TAG}getAllSyncFolders failed. Code: ${error.code}, message: ${error.message}`);
 }
 ```
-

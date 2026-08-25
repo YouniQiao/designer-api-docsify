@@ -2,9 +2,9 @@
 
 Enumerates the authentication credential types.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-osAccount-enum AuthType--><!--Device-osAccount-enum AuthType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -18,9 +18,9 @@ PIN = 1
 
 PIN authentication.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-AuthType-PIN = 1--><!--Device-AuthType-PIN = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -34,9 +34,9 @@ FACE = 2
 
 Facial authentication.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-AuthType-FACE = 2--><!--Device-AuthType-FACE = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -50,9 +50,9 @@ FINGERPRINT = 4
 
 Fingerprint authentication.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-AuthType-FINGERPRINT = 4--><!--Device-AuthType-FINGERPRINT = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -66,9 +66,9 @@ RECOVERY_KEY = 8
 
 Key recovery type.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AuthType-RECOVERY_KEY = 8--><!--Device-AuthType-RECOVERY_KEY = 8-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -82,9 +82,9 @@ PRIVATE_PIN = 16
 
 Private PIN type.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-AuthType-PRIVATE_PIN = 16--><!--Device-AuthType-PRIVATE_PIN = 16-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -100,7 +100,7 @@ Companion device authentication.
 
 **Since:** 23
 
-<!--Device-AuthType-COMPANION_DEVICE = 64--><!--Device-AuthType-COMPANION_DEVICE = 64-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -116,9 +116,9 @@ Custom authentication.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AuthType-CUSTOM = 128--><!--Device-AuthType-CUSTOM = 128-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -132,11 +132,10 @@ DOMAIN = 1024
 
 Domain authentication.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-AuthType-DOMAIN = 1024--><!--Device-AuthType-DOMAIN = 1024-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-

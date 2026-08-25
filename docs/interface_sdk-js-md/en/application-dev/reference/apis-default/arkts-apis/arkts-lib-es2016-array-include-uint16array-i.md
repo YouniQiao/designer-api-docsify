@@ -1,8 +1,6 @@
 # Uint16Array
 
-**Since:** -1
-
-<!--Device-unnamed-interface Uint16Array--><!--Device-unnamed-interface Uint16Array-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,18 +15,16 @@ includes(searchElement: number, fromIndex?: number): boolean
 
 Determines whether an array includes a certain element, returning true or false as appropriate.
 
-**Since:** -1
-
-<!--Device-Uint16Array-includes(searchElement: number, fromIndex?: number): boolean--><!--Device-Uint16Array-includes(searchElement: number, fromIndex?: number): boolean-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | number | Yes |  |
-| fromIndex | number | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | number | Yes |
+| fromIndex | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

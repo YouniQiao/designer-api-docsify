@@ -4,7 +4,7 @@ Enum for distance measurement technology types.@enum { int } TechnologyType
 
 **Since:** 23
 
-<!--Device-spatialAwareness-export enum TechnologyType--><!--Device-spatialAwareness-export enum TechnologyType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
@@ -20,9 +20,9 @@ indicates Bluetooth Low Energy (BLE) technology
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-TechnologyType-BLE_RSSI = 0--><!--Device-TechnologyType-BLE_RSSI = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
@@ -38,9 +38,9 @@ indicates Wi-Fi technology
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-TechnologyType-WIFI_RSSI = 1--><!--Device-TechnologyType-WIFI_RSSI = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
@@ -56,9 +56,9 @@ indicates ultrasound technology
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-TechnologyType-ULTRASOUND = 2--><!--Device-TechnologyType-ULTRASOUND = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
@@ -74,9 +74,9 @@ indicates NearLink technology
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-TechnologyType-NEAR_LINK = 3--><!--Device-TechnologyType-NEAR_LINK = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
@@ -92,11 +92,10 @@ indicates Wi-Fi and Bluetooth technology
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-TechnologyType-WIFI_BLE_RSSI = 4--><!--Device-TechnologyType-WIFI_BLE_RSSI = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **System API:** This is a system API.
-

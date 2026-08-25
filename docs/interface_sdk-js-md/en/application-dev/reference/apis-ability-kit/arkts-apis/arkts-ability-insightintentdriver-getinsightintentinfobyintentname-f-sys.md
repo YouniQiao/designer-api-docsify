@@ -14,13 +14,13 @@ function getInsightIntentInfoByIntentName(bundleName: string, moduleName: string
 
 Obtains the intent information on the current device based on the bundle name, module name, and intent name. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-insightIntentDriver-function getInsightIntentInfoByIntentName(bundleName: string, moduleName: string, intentName: string, intentFlags: int): Promise<InsightIntentInfo>--><!--Device-insightIntentDriver-function getInsightIntentInfoByIntentName(bundleName: string, moduleName: string, intentName: string, intentFlags: int): Promise<InsightIntentInfo>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -28,26 +28,26 @@ Obtains the intent information on the current device based on the bundle name, m
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application.<br>**NOTE：**<br> If the bundle name does not exist, an empty object is returned. |
-| moduleName | string | Yes | Module name.<br>**NOTE：**<br> If the module name does not exist, an empty object is returned. |
-| intentName | string | Yes | Intent name.<br>**NOTE：**<br> If the intent name does not exist, an empty object is returned. |
-| intentFlags | int | Yes | Flag of the intent information ([InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)). It is used to query full or brief intent information. For details, see [GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bundleName | string | Yes |
+| moduleName | string | Yes |
+| intentName | string | Yes |
+| [intentFlags](arkts-ability-insightintentdriver-insightintentinfofilter-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)&gt; | Promise used to return the InsightIntentInfo object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service fails to communicate with the dependency module. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
 
 **Examples**
 
@@ -74,4 +74,3 @@ import { insightIntentDriver } from '@kit.AbilityKit';
     }
   }
 ```
-

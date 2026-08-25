@@ -14,17 +14,17 @@ function getMaxSimCount(): int
 
 获取卡槽数量。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-sim-function getMaxSimCount(): int--><!--Device-sim-function getMaxSimCount(): int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 卡槽数量。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -33,4 +33,3 @@ import { sim } from '@kit.TelephonyKit';
 
 console.info("Result: "+ sim.getMaxSimCount());
 ```
-

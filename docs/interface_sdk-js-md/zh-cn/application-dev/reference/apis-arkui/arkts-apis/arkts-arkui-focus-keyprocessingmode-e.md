@@ -4,9 +4,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export declare enum KeyProcessingMode--><!--Device-unnamed-export declare enum KeyProcessingMode-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +18,9 @@ FOCUS_NAVIGATION = 0
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-KeyProcessingMode-FOCUS_NAVIGATION = 0--><!--Device-KeyProcessingMode-FOCUS_NAVIGATION = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +34,8 @@ ANCESTOR_EVENT = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-KeyProcessingMode-ANCESTOR_EVENT = 1--><!--Device-KeyProcessingMode-ANCESTOR_EVENT = 1-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

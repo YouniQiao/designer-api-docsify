@@ -4,7 +4,7 @@
 
 **起始版本：** 18
 
-<!--Device-unnamed-export declare enum MixMode--><!--Device-unnamed-export declare enum MixMode-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ AVERAGE = 1
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
-<!--Device-MixMode-AVERAGE = 1--><!--Device-MixMode-AVERAGE = 1-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,9 @@ CROSS = 2
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
-<!--Device-MixMode-CROSS = 2--><!--Device-MixMode-CROSS = 2-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,9 +50,8 @@ TOWARDS = 3
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MixMode-TOWARDS = 3--><!--Device-MixMode-TOWARDS = 3-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

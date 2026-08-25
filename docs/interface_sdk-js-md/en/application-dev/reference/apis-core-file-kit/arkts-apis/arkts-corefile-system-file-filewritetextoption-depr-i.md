@@ -4,9 +4,9 @@ Defines the options used in writeText().
 
 **Since:** 3
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface FileWriteTextOption--><!--Device-unnamed-export interface FileWriteTextOption-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -14,6 +14,61 @@ Defines the options used in writeText().
 
 ```TypeScript
 ```
+
+## complete
+
+```TypeScript
+complete?: () => void
+```
+
+Callback invoked when the API call is complete.
+
+**Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
+**Deprecated since:** 10
+
+**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
+
+## fail
+
+```TypeScript
+fail?: (data: string, code: number) => void
+```
+
+Callback invoked when the API call fails. **data** indicates the error information. **code** indicates the returned error code: **202**: invalid parameter **300**: I/O error
+
+**Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
+**Deprecated since:** 10
+
+**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | string | Yes |
+| code | number | Yes |
+
+## success
+
+```TypeScript
+success?: () => void
+```
+
+Callback invoked when the API call is successful.
+
+**Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
+**Deprecated since:** 10
+
+**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## append
 
@@ -27,27 +82,9 @@ Whether to enable the append mode. The default value is **false**. The value **t
 
 **Since:** 3
 
-**Deprecated since:** 10
-
-<!--Device-FileWriteTextOption-append?: boolean--><!--Device-FileWriteTextOption-append?: boolean-End-->
-
-**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
-
-## complete
-
-```TypeScript
-complete?: () => void
-```
-
-Callback invoked when the API call is complete.
-
-**Type:** () =&gt; void
-
-**Since:** 3
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
-
-<!--Device-FileWriteTextOption-complete?: () => void--><!--Device-FileWriteTextOption-complete?: () => void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -63,45 +100,9 @@ Encoding format. The default format is **UTF-8**.
 
 **Since:** 3
 
-**Deprecated since:** 10
-
-<!--Device-FileWriteTextOption-encoding?: string--><!--Device-FileWriteTextOption-encoding?: string-End-->
-
-**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
-
-## fail
-
-```TypeScript
-fail?: (data: string, code: number) => void
-```
-
-Callback invoked when the API call fails. **data** indicates the error information. **code** indicates the returned error code: **202**: invalid parameter **300**: I/O error
-
-**Type:** (data: string, code: number) =&gt; void
-
-**Since:** 3
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
-
-<!--Device-FileWriteTextOption-fail?: (data: string, code: number) => void--><!--Device-FileWriteTextOption-fail?: (data: string, code: number) => void-End-->
-
-**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
-
-## success
-
-```TypeScript
-success?: () => void
-```
-
-Callback invoked when the API call is successful.
-
-**Type:** () =&gt; void
-
-**Since:** 3
-
-**Deprecated since:** 10
-
-<!--Device-FileWriteTextOption-success?: () => void--><!--Device-FileWriteTextOption-success?: () => void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -117,9 +118,9 @@ String to write into the file.
 
 **Since:** 3
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-FileWriteTextOption-text: string--><!--Device-FileWriteTextOption-text: string-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -137,9 +138,8 @@ URI of a local file. If it does not exist, a file will be created. Restricted by
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 10
 
-<!--Device-FileWriteTextOption-uri: string--><!--Device-FileWriteTextOption-uri: string-End-->
-
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
-

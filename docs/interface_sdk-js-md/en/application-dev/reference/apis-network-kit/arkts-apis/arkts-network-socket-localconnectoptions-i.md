@@ -4,7 +4,7 @@ Defines local socket connection parameters.
 
 **Since:** 11
 
-<!--Device-socket-export interface LocalConnectOptions--><!--Device-socket-export interface LocalConnectOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -26,23 +26,22 @@ Address of the local socket file.
 
 **Since:** 11
 
-<!--Device-LocalConnectOptions-address: LocalAddress--><!--Device-LocalConnectOptions-address: LocalAddress-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## timeout
 
 ```TypeScript
-timeout?: int
+timeout?: number
 ```
 
 Timeout duration of the local socket connection, in ms. **Default value**: 0 You need to manually set this parameter for your application. The recommended value is **5000**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 11
 
-<!--Device-LocalConnectOptions-timeout?: int--><!--Device-LocalConnectOptions-timeout?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
-

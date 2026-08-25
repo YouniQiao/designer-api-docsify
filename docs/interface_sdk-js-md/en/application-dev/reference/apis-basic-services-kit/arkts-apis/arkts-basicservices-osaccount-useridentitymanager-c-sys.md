@@ -2,9 +2,9 @@
 
 Provides APIs for user IDM.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-osAccount-class UserIdentityManager--><!--Device-osAccount-class UserIdentityManager-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -24,11 +24,11 @@ addCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 
 Adds credential information, including the credential type, subtype, and token (if a non-PIN credential is added).
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
-
-<!--Device-UserIdentityManager-addCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void--><!--Device-UserIdentityManager-addCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -36,30 +36,30 @@ Adds credential information, including the credential type, subtype, and token (
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| credentialInfo | [CredentialInfo](arkts-basicservices-osaccount-credentialinfo-i-sys.md) | Yes | Credential information to add. |
-| callback | [IIdmCallback](arkts-basicservices-osaccount-iidmcallback-i-sys.md) | Yes | Callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| credentialInfo | [CredentialInfo](arkts-basicservices-osaccount-credentialinfo-i-sys.md) | Yes |
+| callback | [IIdmCallback](arkts-basicservices-osaccount-iidmcallback-i-sys.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid credentialInfo, i.e. authType or authSubType. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
-| 12300090 | Cross-device capability not supported.<br>**Applicable version:** 23 and later |
-| 12300091 | Cross-device communication failed.<br>**Applicable version:** 23 and later |
-| [12300101](../errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
-| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
-| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation timeout. |
-| [12300115](../errorcode-account.md#12300115-user-authentication-passwords-reached-the-limit) | The number of credentials reaches the upper limit. |
-| [12300116](../errorcode-account.md#12300116-failed-to-verify-the-credential-complexity) | Credential complexity verification failed.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
+| [12300003](../errorcode-account.md#12300003-account-not-found) |
+| [12300008](../errorcode-account.md#12300008-restricted-account) |
+| 12300020 |
+| 12300090 |
+| 12300091 |
+| [12300101](../errorcode-account.md#12300101-incorrect-credential) |
+| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) |
+| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) |
+| [12300115](../errorcode-account.md#12300115-user-authentication-passwords-reached-the-limit) |
+| [12300116](../errorcode-account.md#12300116-failed-to-verify-the-credential-complexity) |
 
 **Examples**
 
@@ -103,11 +103,11 @@ cancel(challenge: Uint8Array): void
 
 Cancels an entry based on the challenge value.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
-
-<!--Device-UserIdentityManager-cancel(challenge: Uint8Array): void--><!--Device-UserIdentityManager-cancel(challenge: Uint8Array): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -115,19 +115,19 @@ Cancels an entry based on the challenge value.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| challenge | Uint8Array | Yes | Challenge value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| challenge | Uint8Array | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid challenge. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
 
 **Examples**
 
@@ -146,17 +146,23 @@ try {
 
 ## closeSession
 
+ArkTS-Dyn:
+```TypeScript
+closeSession(accountId?: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 closeSession(accountId?: int): void
 ```
 
 Closes this session to terminate IDM.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
-
-<!--Device-UserIdentityManager-closeSession(accountId?: int): void--><!--Device-UserIdentityManager-closeSession(accountId?: int): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -164,20 +170,20 @@ Closes this session to terminate IDM.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| accountId | int | No | OS account ID, which is left blank by default. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types.<br>**Applicable version:** 12 and later |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally.<br>**Applicable version:** 12 and later |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300003](../errorcode-account.md#12300003-account-not-found) |
+| [12300008](../errorcode-account.md#12300008-restricted-account) |
 
 **Examples**
 
@@ -195,9 +201,9 @@ constructor()
 
 A **constructor()** used to create an instance for user IDM.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-UserIdentityManager-constructor()--><!--Device-UserIdentityManager-constructor()-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -205,9 +211,9 @@ A **constructor()** used to create an instance for user IDM.
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -231,11 +237,11 @@ delCred(credentialId: Uint8Array, token: Uint8Array, callback: IIdmCallback): vo
 
 Deletes user credential information.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
-
-<!--Device-UserIdentityManager-delCred(credentialId: Uint8Array, token: Uint8Array, callback: IIdmCallback): void--><!--Device-UserIdentityManager-delCred(credentialId: Uint8Array, token: Uint8Array, callback: IIdmCallback): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -243,23 +249,23 @@ Deletes user credential information.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| credentialId | Uint8Array | Yes | Credential ID. |
-| token | Uint8Array | Yes | Authentication token. |
-| callback | [IIdmCallback](arkts-basicservices-osaccount-iidmcallback-i-sys.md) | Yes | Callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| credentialId | Uint8Array | Yes |
+| token | Uint8Array | Yes |
+| callback | [IIdmCallback](arkts-basicservices-osaccount-iidmcallback-i-sys.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid credentialId. |
-| [12300101](../errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
-| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
+| [12300101](../errorcode-account.md#12300101-incorrect-credential) |
+| [12300102](../errorcode-account.md#12300102-credential-not-found) |
 
 **Examples**
 
@@ -290,11 +296,11 @@ delUser(token: Uint8Array, callback: IIdmCallback): void
 
 Deletes a user with an authentication token. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
-
-<!--Device-UserIdentityManager-delUser(token: Uint8Array, callback: IIdmCallback): void--><!--Device-UserIdentityManager-delUser(token: Uint8Array, callback: IIdmCallback): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -302,20 +308,20 @@ Deletes a user with an authentication token. This API uses an asynchronous callb
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| token | Uint8Array | Yes | Authentication token. |
-| callback | [IIdmCallback](arkts-basicservices-osaccount-iidmcallback-i-sys.md) | Yes | Callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| token | Uint8Array | Yes |
+| callback | [IIdmCallback](arkts-basicservices-osaccount-iidmcallback-i-sys.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300101](../errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300101](../errorcode-account.md#12300101-incorrect-credential) |
 
 **Examples**
 
@@ -345,11 +351,11 @@ getAuthInfo(callback: AsyncCallback<Array<EnrolledCredInfo>>): void
 
 Obtains authentication information. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.USE_USER_IDM
-
-<!--Device-UserIdentityManager-getAuthInfo(callback: AsyncCallback<Array<EnrolledCredInfo>>): void--><!--Device-UserIdentityManager-getAuthInfo(callback: AsyncCallback<Array<EnrolledCredInfo>>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -357,18 +363,18 @@ Obtains authentication information. This API uses an asynchronous callback to re
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is information about all registered credentials of the user. Otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| 12300020 |
 
 **Examples**
 
@@ -453,11 +459,11 @@ getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>
 
 Obtains authentication information of the specified type. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.USE_USER_IDM
-
-<!--Device-UserIdentityManager-getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>): void--><!--Device-UserIdentityManager-getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -465,20 +471,20 @@ Obtains authentication information of the specified type. This API uses an async
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| authType | AuthType | Yes | Authentication credential type. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the information about all enrolled credentials of the specified type. Otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
+| 12300020 |
 
 **Examples**
 
@@ -492,11 +498,11 @@ getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>
 
 Obtains authentication information. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.USE_USER_IDM
-
-<!--Device-UserIdentityManager-getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>--><!--Device-UserIdentityManager-getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -504,25 +510,25 @@ Obtains authentication information. This API uses a promise to return the result
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| authType | AuthType | Yes | Authentication type, which indicates that information about all authentication types is obtained. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | Promise used to return the information about all the enrolled credentials of the specified type. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
+| 12300020 |
 
 **Examples**
 
@@ -536,11 +542,11 @@ getAuthInfo(options?: GetAuthInfoOptions): Promise<Array<EnrolledCredInfo>>
 
 Obtains authentication information. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.USE_USER_IDM
-
-<!--Device-UserIdentityManager-getAuthInfo(options?: GetAuthInfoOptions): Promise<Array<EnrolledCredInfo>>--><!--Device-UserIdentityManager-getAuthInfo(options?: GetAuthInfoOptions): Promise<Array<EnrolledCredInfo>>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -548,26 +554,26 @@ Obtains authentication information. This API uses a promise to return the result
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [GetAuthInfoOptions](arkts-basicservices-osaccount-getauthinfooptions-i-sys.md) | No | Optional parameters for obtaining authentication information. This parameter is left empty by default, indicating that all enrolled credential information of the current user is obtained. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [GetAuthInfoOptions](arkts-basicservices-osaccount-getauthinfooptions-i-sys.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | Promise used to return the information about all the enrolled credentials of the specified type. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid options. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
+| [12300003](../errorcode-account.md#12300003-account-not-found) |
+| 12300020 |
 
 **Examples**
 
@@ -575,17 +581,23 @@ See [getAuthInfo](#getauthinfo)
 
 ## getEnrolledId
 
+ArkTS-Dyn:
+```TypeScript
+getEnrolledId(authType: AuthType, accountId?: number): Promise<Uint8Array>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getEnrolledId(authType: AuthType, accountId?: int): Promise<Uint8Array>
 ```
 
 Obtains the ID of the enrolled credential based on the credential type and account ID (optional). This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.USE_USER_IDM
-
-<!--Device-UserIdentityManager-getEnrolledId(authType: AuthType, accountId?: int): Promise<Uint8Array>--><!--Device-UserIdentityManager-getEnrolledId(authType: AuthType, accountId?: int): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -593,29 +605,29 @@ Obtains the ID of the enrolled credential based on the credential type and accou
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| authType | AuthType | Yes | Credential type. |
-| accountId | int | No | OS account ID, which is left blank by default. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes |
+| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the credential ID obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Uint8Array & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
-| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
-| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
+| [12300003](../errorcode-account.md#12300003-account-not-found) |
+| 12300020 |
+| [12300102](../errorcode-account.md#12300102-credential-not-found) |
+| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) |
 
 **Examples**
 
@@ -647,9 +659,9 @@ Unsubscribes from credential change events. If no callback is not specified, thi
 
 **Since:** 23
 
-**Required permissions:** ohos.permission.USE_USER_IDM
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-UserIdentityManager-offCredentialChanged(callback?: Callback<CredentialChangeInfo>): void--><!--Device-UserIdentityManager-offCredentialChanged(callback?: Callback<CredentialChangeInfo>): void-End-->
+**Required permissions:** ohos.permission.USE_USER_IDM
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -657,17 +669,17 @@ Unsubscribes from credential change events. If no callback is not specified, thi
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | No | Callback used to listen for the credential change events. The default value is **undefined**, indicating that all subscription records are unregistered. If the value is not undefined, only the subscription records related to the specified callback are unregistered. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
 
 **Examples**
 
@@ -713,9 +725,9 @@ Subscribes to one or more credential change events. This API uses a callback to 
 
 **Since:** 23
 
-**Required permissions:** ohos.permission.USE_USER_IDM
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-UserIdentityManager-onCredentialChanged(credentialTypes: AuthType[], callback: Callback<CredentialChangeInfo>): void--><!--Device-UserIdentityManager-onCredentialChanged(credentialTypes: AuthType[], callback: Callback<CredentialChangeInfo>): void-End-->
+**Required permissions:** ohos.permission.USE_USER_IDM
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -723,20 +735,20 @@ Subscribes to one or more credential change events. This API uses a callback to 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| credentialTypes | AuthType[] | Yes | Credential types subscribed. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | Yes | Callback used to listen for the credential change events. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| credentialTypes | [AuthType[]](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | One or more credential types are invalid. |
-| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | One or more credential types are not supported. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
+| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) |
 
 **Examples**
 
@@ -772,11 +784,11 @@ openSession(callback: AsyncCallback<Uint8Array>): void
 
 Opens a session to obtain the challenge value. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
-
-<!--Device-UserIdentityManager-openSession(callback: AsyncCallback<Uint8Array>): void--><!--Device-UserIdentityManager-openSession(callback: AsyncCallback<Uint8Array>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -784,18 +796,18 @@ Opens a session to obtain the challenge value. This API uses an asynchronous cal
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the challenge value obtained. Otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
 
 **Examples**
 
@@ -836,17 +848,23 @@ try {
 
 ## openSession
 
+ArkTS-Dyn:
+```TypeScript
+openSession(accountId?: number): Promise<Uint8Array>
+```
+
+ArkTS-Sta:
 ```TypeScript
 openSession(accountId?: int): Promise<Uint8Array>
 ```
 
 Opens a session. This API returns a challenge value, which can be used to determine whether the subsequent identity authentication is in this session. This can prevent replay attacks. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
-
-<!--Device-UserIdentityManager-openSession(accountId?: int): Promise<Uint8Array>--><!--Device-UserIdentityManager-openSession(accountId?: int): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -854,25 +872,25 @@ Opens a session. This API returns a challenge value, which can be used to determ
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| accountId | int | No | OS account ID, which is left blank by default. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the challenge value obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Uint8Array & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
-| [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300003](../errorcode-account.md#12300003-account-not-found) |
+| [12300008](../errorcode-account.md#12300008-restricted-account) |
 
 **Examples**
 
@@ -886,11 +904,11 @@ updateCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 
 Updates credential information. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
-
-<!--Device-UserIdentityManager-updateCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void--><!--Device-UserIdentityManager-updateCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -898,26 +916,26 @@ Updates credential information. This API uses an asynchronous callback to return
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| credentialInfo | [CredentialInfo](arkts-basicservices-osaccount-credentialinfo-i-sys.md) | Yes | Credential information to add. |
-| callback | [IIdmCallback](arkts-basicservices-osaccount-iidmcallback-i-sys.md) | Yes | Callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| credentialInfo | [CredentialInfo](arkts-basicservices-osaccount-credentialinfo-i-sys.md) | Yes |
+| callback | [IIdmCallback](arkts-basicservices-osaccount-iidmcallback-i-sys.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid credentialInfo, i.e. authType or authSubType. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
-| [12300101](../errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
-| [12300102](../errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
-| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
-| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
-| [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
-| [12300116](../errorcode-account.md#12300116-failed-to-verify-the-credential-complexity) | Credential complexity verification failed.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
+| [12300003](../errorcode-account.md#12300003-account-not-found) |
+| [12300101](../errorcode-account.md#12300101-incorrect-credential) |
+| [12300102](../errorcode-account.md#12300102-credential-not-found) |
+| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) |
+| [12300109](../errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) |
+| [12300111](../errorcode-account.md#12300111-authentication-timed-out) |
+| [12300116](../errorcode-account.md#12300116-failed-to-verify-the-credential-complexity) |
 
 **Examples**
 
@@ -962,4 +980,3 @@ userIDM.openSession((err: BusinessError, challenge: Uint8Array) => {
   });
 });
 ```
-

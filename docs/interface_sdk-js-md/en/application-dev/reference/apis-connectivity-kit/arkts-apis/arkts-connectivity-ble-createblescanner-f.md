@@ -14,21 +14,21 @@ function createBleScanner(): BleScanner
 
 Create a ble scanner instance. Each ble scanner instance can be independently started or stopped.
 
-**Since:** 23
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-ble-function createBleScanner(): BleScanner--><!--Device-ble-function createBleScanner(): BleScanner-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BleScanner](arkts-connectivity-ble-blescanner-i.md) | Returns the promise object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [BleScanner](arkts-connectivity-ble-blescanner-i.md) |
 
 **Examples**
 
@@ -38,4 +38,3 @@ import { ble } from '@kit.ConnectivityKit';
 let bleScanner: ble.BleScanner = ble.createBleScanner();
 console.info('create bleScanner success');
 ```
-

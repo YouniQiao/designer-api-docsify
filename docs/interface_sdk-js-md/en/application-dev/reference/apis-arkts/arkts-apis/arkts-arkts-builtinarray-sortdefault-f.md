@@ -16,20 +16,17 @@ Sorts elements of `arr` using default sort.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function sort_default<T>(arr: FixedArray<T>, arrStr: FixedArray<buffStr>, startIndex: int, endIndex: int):     void--><!--Device-unnamed-export function sort_default<T>(arr: FixedArray<T>, arrStr: FixedArray<buffStr>, startIndex: int, endIndex: int):     void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | FixedArray&lt;T&gt; | Yes | The array to sort. |
-| arrStr | FixedArray&lt;buffStr&gt; | Yes | Stringified array for comparison. |
-| startIndex | int | Yes | The start index of sorting range. <br>The value should be an integer. |
-| endIndex | int | Yes | The end index of sorting range. <br>The value should be an integer. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | FixedArray & lt;T & gt; | Yes |
+| arrStr | FixedArray & lt;buffStr & gt; | Yes |
+| startIndex | int | Yes |
+| endIndex | int | Yes |

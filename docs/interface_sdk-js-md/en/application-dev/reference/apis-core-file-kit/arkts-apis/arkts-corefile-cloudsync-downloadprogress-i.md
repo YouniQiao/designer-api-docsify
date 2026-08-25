@@ -2,9 +2,9 @@
 
 Represents information about the download progress of a cloud file.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-cloudSync-interface DownloadProgress--><!--Device-cloudSync-interface DownloadProgress-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -24,9 +24,9 @@ Download error type.
 
 **Type:** [DownloadErrorType](arkts-corefile-cloudsync-downloaderrortype-e.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DownloadProgress-error: DownloadErrorType--><!--Device-DownloadProgress-error: DownloadErrorType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -38,11 +38,11 @@ processed: long
 
 Size of the downloaded data, in bytes. The value range is [0, 9223372036854775807].
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DownloadProgress-processed: long--><!--Device-DownloadProgress-processed: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -54,11 +54,11 @@ size: long
 
 Size of the cloud file, in bytes. The value range is [0, 9223372036854775807].
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DownloadProgress-size: long--><!--Device-DownloadProgress-size: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -72,9 +72,9 @@ File download state.
 
 **Type:** State
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DownloadProgress-state: State--><!--Device-DownloadProgress-state: State-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -88,9 +88,8 @@ URI of the cloud file.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DownloadProgress-uri: string--><!--Device-DownloadProgress-uri: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-

@@ -8,9 +8,9 @@ This module encapsulates the data and attributes carried when a common event is 
 > carried in common events. The **subscriberPermissions** and **bundleName** parameters
 > of this module can be used to restrict the receiving scope of common events.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-export interface CommonEventPublishData--><!--Device-unnamed-export interface CommonEventPublishData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -24,11 +24,11 @@ Bundle name of the subscriber, which is used to specify the subscriber to whom t
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-CommonEventPublishData-bundleName?: string--><!--Device-CommonEventPublishData-bundleName?: string-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -40,15 +40,15 @@ code?: int
 
 Common event data transferred by the publisher. The default value is **0**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Default:** 0
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-CommonEventPublishData-code?: int--><!--Device-CommonEventPublishData-code?: int-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -62,11 +62,11 @@ Common event data transferred by the publisher. The value is a string and cannot
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-CommonEventPublishData-data?: string--><!--Device-CommonEventPublishData-data?: string-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -83,9 +83,9 @@ Whether the common event is an ordered one. The default value is **false**.
 
 **Default:** false
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-CommonEventPublishData-isOrdered?: boolean--><!--Device-CommonEventPublishData-isOrdered?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -104,27 +104,29 @@ Only system applications and system services are allowed to send sticky events.
 
 **Default:** false
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.COMMONEVENT_STICKY
-
-<!--Device-CommonEventPublishData-isSticky?: boolean--><!--Device-CommonEventPublishData-isSticky?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
 ## parameters
 
 ```TypeScript
-parameters?: Record<string, RecordData>
+parameters?: { [key: string]: any }
 ```
 
 Additional information about the common event transferred by the publisher. Custom parameters are configured in a key-value pair format. This parameter is left empty by default.
 
-**Type:** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
+**Type:** { [key: string]: any }
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-CommonEventPublishData-parameters?: Record<string, RecordData>--><!--Device-CommonEventPublishData-parameters?: Record<string, RecordData>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -138,11 +140,10 @@ Subscriber permissions. Only subscribers with the specified permissions can rece
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-CommonEventPublishData-subscriberPermissions?: Array<string>--><!--Device-CommonEventPublishData-subscriberPermissions?: Array<string>-End-->
-
 **System capability:** SystemCapability.Notification.CommonEvent
-

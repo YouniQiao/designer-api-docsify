@@ -6,7 +6,7 @@ Inherits from [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseop
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface AlertDialogButtonOptions--><!--Device-unnamed-declare interface AlertDialogButtonOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,10 @@ Whether the button responds to the **Enter** key by default when the dialog box 
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AlertDialogButtonOptions-primary?: boolean--><!--Device-AlertDialogButtonOptions-primary?: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

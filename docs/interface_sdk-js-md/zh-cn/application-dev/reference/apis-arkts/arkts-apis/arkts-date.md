@@ -9,7 +9,6 @@
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [Date](arkts-arkts-date-c.md) | 与JS Date API兼容的类。 |
-
+| 名称 |
+| --- |
+| [Date](arkts-arkts-date-c.md) |

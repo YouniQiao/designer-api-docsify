@@ -2,9 +2,9 @@
 
 Describes the control type value.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-connection-enum ControlTypeValue--><!--Device-connection-enum ControlTypeValue-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -18,11 +18,11 @@ DISABLE = 0
 
 Indicates the action of disable.
 
-**Since:** 23
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ControlTypeValue-DISABLE = 0--><!--Device-ControlTypeValue-DISABLE = 0-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -36,11 +36,11 @@ ENABLE = 1
 
 Indicates the action of enable.
 
-**Since:** 23
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ControlTypeValue-ENABLE = 1--><!--Device-ControlTypeValue-ENABLE = 1-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -54,13 +54,12 @@ QUERY = 2
 
 Indicates the action of query.
 
-**Since:** 23
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ControlTypeValue-QUERY = 2--><!--Device-ControlTypeValue-QUERY = 2-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
-

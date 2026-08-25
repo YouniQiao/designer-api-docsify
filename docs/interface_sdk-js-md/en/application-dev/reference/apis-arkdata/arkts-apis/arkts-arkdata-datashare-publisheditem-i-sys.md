@@ -2,9 +2,9 @@
 
 Defines the data to publish.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-dataShare-interface PublishedItem--><!--Device-dataShare-interface PublishedItem-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -26,11 +26,11 @@ Data to publish. If the data to publish exceeds 20 KB, you are advised to use th
 
 **Type:** string \| ArrayBuffer
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PublishedItem-data: string | ArrayBuffer--><!--Device-PublishedItem-data: string | ArrayBuffer-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -46,11 +46,11 @@ Key of the data to publish.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PublishedItem-key: string--><!--Device-PublishedItem-key: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -66,13 +66,12 @@ Subscriber ID.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PublishedItem-subscriberId: string--><!--Device-PublishedItem-subscriberId: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **System API:** This is a system API.
-

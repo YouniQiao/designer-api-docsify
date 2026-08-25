@@ -16,9 +16,9 @@ function getStringFromFunctions(funcs: FunctionType): string
 
 **起始版本：** 12
 
-**需要权限：** ohos.permission.MANAGE_USB_CONFIG
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-usbManager-function getStringFromFunctions(funcs: FunctionType): string--><!--Device-usbManager-function getStringFromFunctions(funcs: FunctionType): string-End-->
+**需要权限：** ohos.permission.MANAGE_USB_CONFIG
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -26,24 +26,24 @@ function getStringFromFunctions(funcs: FunctionType): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| funcs | FunctionType | 是 | 功能列表对应的数字掩码，可通过位运算组合多个功能。部分功能值当前暂不支持，具体参见 [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| funcs | [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换后的字符串形式的功能列表。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 18+ |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Normal application do not have permission to use system api. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified.<br>2.Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 **示例**
 
@@ -63,9 +63,9 @@ Converts the numeric mask combination of a given USB function list to a string d
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.MANAGE_USB_CONFIG
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-usbManager-function getStringFromFunctions(funcs: int): string--><!--Device-usbManager-function getStringFromFunctions(funcs: int): string-End-->
+**需要权限：** ohos.permission.MANAGE_USB_CONFIG
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -73,25 +73,24 @@ Converts the numeric mask combination of a given USB function list to a string d
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| funcs | int | 是 | numeric mask combination of the function list. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| funcs | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | descriptor of the supported function list. |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Normal application do not have permission to use system api. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-权限校验失败) |  |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
 参见 [getStringFromFunctions](#getstringfromfunctions)
-

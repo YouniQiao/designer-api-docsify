@@ -14,9 +14,9 @@ function getAppPowerPercent(uid: int): double
 
 获取应用的耗电百分比，该百分比表示应用耗电量占总耗电量的比例。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-batteryStats-function getAppPowerPercent(uid: int): double--><!--Device-batteryStats-function getAppPowerPercent(uid: int): double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
@@ -24,23 +24,23 @@ function getAppPowerPercent(uid: int): double
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uid | int | 是 | 应用的UID，用于指定查询耗电百分比的目标应用。 可通过[bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md)等接口获取应用UID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uid | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | UID对应应用的耗电百分比，取值范围是[0.00，1.00]。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [4600101](../errorcode-batteryStatistics.md#4600101-连接服务失败) | Failed to connect to the service. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [4600101](../errorcode-batteryStatistics.md#4600101-连接服务失败) |
 
 **示例**
 
@@ -52,4 +52,3 @@ try {
     console.error('get battery statistics percent of app failed, err: ' + err);
 }
 ```
-

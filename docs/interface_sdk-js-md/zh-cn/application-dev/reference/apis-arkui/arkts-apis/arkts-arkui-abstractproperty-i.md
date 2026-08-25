@@ -7,7 +7,7 @@ AbstractProperty是AppStorage/LocalStorage中属性的引用，提供读取、�
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare interface AbstractProperty--><!--Device-unnamed-declare interface AbstractProperty-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,17 +26,17 @@ get(): T
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-AbstractProperty-get(): T--><!--Device-AbstractProperty-get(): T-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | AppStorage/LocalStorage中所引用属性的数据。 |
+| 类型 |
+| --- |
+| T |
 
 **示例**
 
@@ -73,17 +73,17 @@ info(): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-AbstractProperty-info(): string--><!--Device-AbstractProperty-info(): string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | AppStorage/LocalStorage中所引用属性的属性名。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -109,17 +109,17 @@ set(newValue: T): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-AbstractProperty-set(newValue: T): void--><!--Device-AbstractProperty-set(newValue: T): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| newValue | T | 是 | AppStorage/LocalStorage中所引用属性的新值，可以为null或undefined。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| newValue | T | 是 |
 
 **示例**
 
@@ -170,4 +170,3 @@ prop4.set(dateValue);
 prop2.set(null);
 prop3.set(undefined);
 ```
-

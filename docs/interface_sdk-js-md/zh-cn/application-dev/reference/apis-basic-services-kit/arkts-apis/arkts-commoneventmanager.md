@@ -19,9 +19,9 @@
 3. 处理完成后调用`finishCommonEvent`，触发事件向下一优先级订阅者投递；若需中止后续投递，可调用
 `abortCommonEvent`标记事件为中止状态。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-declare namespace commonEventManager--><!--Device-unnamed-declare namespace commonEventManager-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -35,52 +35,51 @@ import { commonEventManager } from '@kit.BasicServicesKit';
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md) | 创建订阅者。使用callback异步回调。 |
-| [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md) | 创建订阅者。使用Promise异步回调。 |
-| [createSubscriberSync](arkts-basicservices-commoneventmanager-createsubscribersync-f.md) | 同步创建订阅者的接口。 |
-| [publish](arkts-basicservices-commoneventmanager-publish-f.md) | 发布公共事件。使用callback异步回调。 |
-| [publish](arkts-basicservices-commoneventmanager-publish-f.md) | 发布公共事件。使用callback异步回调。 |
-| [subscribe](arkts-basicservices-commoneventmanager-subscribe-f.md) | 订阅公共事件。使用callback异步回调。 |
-| [subscribeToEvent](arkts-basicservices-commoneventmanager-subscribetoevent-f.md) | 订阅公共事件，并返回订阅成功或失败信息。使用Promise异步回调。 |
-| [unsubscribe](arkts-basicservices-commoneventmanager-unsubscribe-f.md) | 取消订阅公共事件。使用callback异步回调。 |
+| 名称 |
+| --- |
+| [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md) |
+| [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md) |
+| [createSubscriberSync](arkts-basicservices-commoneventmanager-createsubscribersync-f.md) |
+| [publish](arkts-basicservices-commoneventmanager-publish-f.md) |
+| [publish](arkts-basicservices-commoneventmanager-publish-f.md) |
+| [subscribe](arkts-basicservices-commoneventmanager-subscribe-f.md) |
+| [subscribeToEvent](arkts-basicservices-commoneventmanager-subscribetoevent-f.md) |
+| [unsubscribe](arkts-basicservices-commoneventmanager-unsubscribe-f.md) |
 
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md) | 向指定用户发布公共事件。使用callback异步回调。 |
-| [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md) | 向指定用户发布公共事件并指定发布信息。使用callback异步回调。 |
-| [removeStickyCommonEvent](arkts-basicservices-commoneventmanager-removestickycommonevent-f-sys.md) | 移除粘性公共事件。使用callback异步回调。 |
-| [removeStickyCommonEvent](arkts-basicservices-commoneventmanager-removestickycommonevent-f-sys.md) | 移除已发布的粘性公共事件。使用Promise异步回调。 |
-| [setStaticSubscriberState](arkts-basicservices-commoneventmanager-setstaticsubscriberstate-f-sys.md) | 为当前应用设置静态订阅事件使能或去使能状态。使用callback异步回调。 |
-| [setStaticSubscriberState](arkts-basicservices-commoneventmanager-setstaticsubscriberstate-f-sys.md) | 为当前应用设置静态订阅事件使能或去使能状态。使用Promise异步回调。 |
-| [setStaticSubscriberState](arkts-basicservices-commoneventmanager-setstaticsubscriberstate-f-sys.md) | 设置当前应用的静态订阅公共事件的使能状态。使用Promise异步回调。 |
-| [setStaticSubscriberState](arkts-basicservices-commoneventmanager-setstaticsubscriberstate-f-sys.md) | 为当前应用设置静态订阅事件的使能状态，并且记录事件名称。使用Promise异步回调。 |
+| 名称 |
+| --- |
+| [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md) |
+| [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md) |
+| [removeStickyCommonEvent](arkts-basicservices-commoneventmanager-removestickycommonevent-f-sys.md) |
+| [removeStickyCommonEvent](arkts-basicservices-commoneventmanager-removestickycommonevent-f-sys.md) |
+| [setStaticSubscriberState](arkts-basicservices-commoneventmanager-setstaticsubscriberstate-f-sys.md) |
+| [setStaticSubscriberState](arkts-basicservices-commoneventmanager-setstaticsubscriberstate-f-sys.md) |
+| [setStaticSubscriberState](arkts-basicservices-commoneventmanager-setstaticsubscriberstate-f-sys.md) |
+| [setStaticSubscriberState](arkts-basicservices-commoneventmanager-setstaticsubscriberstate-f-sys.md) |
 <!--DelEnd-->
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-| [Support](arkts-basicservices-commoneventmanager-support-e.md) | 系统公共事件是指由系统服务或系统应用发布的事件，订阅这些公共事件需要特定的权限，并使用相应的事件值。 |
+| 名称 |
+| --- |
+| [Support](arkts-basicservices-commoneventmanager-support-e.md) |
 
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [Support](arkts-basicservices-commoneventmanager-support-e-sys.md) | 系统公共事件是指由系统服务或系统应用发布的事件，订阅这些公共事件需要特定的权限，并使用相应的事件值。 |
+| 名称 |
+| --- |
+| [Support](arkts-basicservices-commoneventmanager-support-e-sys.md) |
 <!--DelEnd-->
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-| [CommonEventData](arkts-basicservices-commoneventmanager-commoneventdata-t.md) | 表示公共事件的数据。 |
-| [CommonEventPublishData](arkts-basicservices-commoneventmanager-commoneventpublishdata-t.md) | 描述公共事件内容和属性。 |
-| [CommonEventSubscribeInfo](arkts-basicservices-commoneventmanager-commoneventsubscribeinfo-t.md) | 描述公共事件订阅者的信息。 |
-| [CommonEventSubscriber](arkts-basicservices-commoneventmanager-commoneventsubscriber-t.md) | 描述公共事件的订阅者。 |
-
+| 名称 |
+| --- |
+| [CommonEventData](arkts-basicservices-commoneventmanager-commoneventdata-t.md) |
+| [CommonEventPublishData](arkts-basicservices-commoneventmanager-commoneventpublishdata-t.md) |
+| [CommonEventSubscribeInfo](arkts-basicservices-commoneventmanager-commoneventsubscribeinfo-t.md) |
+| [CommonEventSubscriber](arkts-basicservices-commoneventmanager-commoneventsubscriber-t.md) |

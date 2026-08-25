@@ -4,7 +4,7 @@ Enumerates the types of user authentication supported by an asset.
 
 **Since:** 11
 
-<!--Device-asset-enum AuthType--><!--Device-asset-enum AuthType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -18,9 +18,8 @@ Private PIN type, supports only system applications.
 
 **Since:** 26.0.0
 
-<!--Device-AuthType-PRIVATE_PIN = 0x100--><!--Device-AuthType-PRIVATE_PIN = 0x100-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
-

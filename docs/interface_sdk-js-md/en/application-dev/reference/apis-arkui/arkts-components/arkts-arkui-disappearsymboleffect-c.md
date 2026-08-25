@@ -6,7 +6,7 @@ Defines DisappearSymbolEffect class, which inherits from **SymbolEffect**.
 
 **Since:** 12
 
-<!--Device-unnamed-declare class DisappearSymbolEffect--><!--Device-unnamed-declare class DisappearSymbolEffect-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,21 +25,21 @@ A constructor used to create an **AppearSymbolEffect** instance, which comes wit
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-DisappearSymbolEffect-constructor(scope?: EffectScope)--><!--Device-DisappearSymbolEffect-constructor(scope?: EffectScope)-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.<br>Default value: **EffectScope.LAYER |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [scope](#scope) | [EffectScope](arkts-arkui-effectscope-e.md) | No |
 
 ## scope
 
@@ -53,13 +53,12 @@ Effect scope.Default value: **EffectScope.LAYER**
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-DisappearSymbolEffect-scope?: EffectScope--><!--Device-DisappearSymbolEffect-scope?: EffectScope-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

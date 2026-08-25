@@ -2,9 +2,9 @@
 
 Enum for effect suggestion.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-camera-enum EffectSuggestionType--><!--Device-camera-enum EffectSuggestionType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -18,9 +18,9 @@ EFFECT_SUGGESTION_NONE = 0
 
 None.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EffectSuggestionType-EFFECT_SUGGESTION_NONE = 0--><!--Device-EffectSuggestionType-EFFECT_SUGGESTION_NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -34,9 +34,9 @@ EFFECT_SUGGESTION_PORTRAIT = 1
 
 Portrait.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EffectSuggestionType-EFFECT_SUGGESTION_PORTRAIT = 1--><!--Device-EffectSuggestionType-EFFECT_SUGGESTION_PORTRAIT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -50,9 +50,9 @@ EFFECT_SUGGESTION_FOOD = 2
 
 Food.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EffectSuggestionType-EFFECT_SUGGESTION_FOOD = 2--><!--Device-EffectSuggestionType-EFFECT_SUGGESTION_FOOD = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -66,9 +66,9 @@ EFFECT_SUGGESTION_SKY = 3
 
 Sky.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EffectSuggestionType-EFFECT_SUGGESTION_SKY = 3--><!--Device-EffectSuggestionType-EFFECT_SUGGESTION_SKY = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -82,9 +82,9 @@ EFFECT_SUGGESTION_SUNRISE_SUNSET = 4
 
 Sunrise and sunset.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EffectSuggestionType-EFFECT_SUGGESTION_SUNRISE_SUNSET = 4--><!--Device-EffectSuggestionType-EFFECT_SUGGESTION_SUNRISE_SUNSET = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -98,11 +98,10 @@ EFFECT_SUGGESTION_STAGE = 5
 
 Stage.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-EffectSuggestionType-EFFECT_SUGGESTION_STAGE = 5--><!--Device-EffectSuggestionType-EFFECT_SUGGESTION_STAGE = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

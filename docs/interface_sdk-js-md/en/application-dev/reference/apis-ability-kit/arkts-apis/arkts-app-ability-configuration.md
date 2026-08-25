@@ -10,7 +10,6 @@ import { Configuration } from '@kit.AbilityKit';
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | The module defines the environment variables for the application runtime, including language, dark/light color mode, screen orientation, and font size. You can subscribe to these environment variables to adapt to different user preferences and enhance the interaction experience. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) |

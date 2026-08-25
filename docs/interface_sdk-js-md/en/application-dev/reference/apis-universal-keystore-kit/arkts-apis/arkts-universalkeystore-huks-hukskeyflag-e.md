@@ -4,7 +4,7 @@ Enumerates the key generation modes.
 
 **Since:** 8
 
-<!--Device-huks-export enum HuksKeyFlag--><!--Device-huks-export enum HuksKeyFlag-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -18,9 +18,9 @@ Import a key using an API.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HuksKeyFlag-HUKS_KEY_FLAG_IMPORT_KEY = 1--><!--Device-HuksKeyFlag-HUKS_KEY_FLAG_IMPORT_KEY = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -34,9 +34,9 @@ Generate a key by using an API.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HuksKeyFlag-HUKS_KEY_FLAG_GENERATE_KEY = 2--><!--Device-HuksKeyFlag-HUKS_KEY_FLAG_GENERATE_KEY = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -50,9 +50,9 @@ Generate a key by using a key agreement API.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HuksKeyFlag-HUKS_KEY_FLAG_AGREE_KEY = 3--><!--Device-HuksKeyFlag-HUKS_KEY_FLAG_AGREE_KEY = 3-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -66,9 +66,8 @@ Derive a key by using an API.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-HuksKeyFlag-HUKS_KEY_FLAG_DERIVE_KEY = 4--><!--Device-HuksKeyFlag-HUKS_KEY_FLAG_DERIVE_KEY = 4-End-->
-
 **System capability:** SystemCapability.Security.Huks.Core
-

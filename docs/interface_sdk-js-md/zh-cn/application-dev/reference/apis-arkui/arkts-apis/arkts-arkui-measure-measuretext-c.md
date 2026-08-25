@@ -4,7 +4,7 @@
 
 **起始版本：** 9
 
-<!--Device-unnamed-export default class MeasureText--><!--Device-unnamed-export default class MeasureText-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,27 +35,27 @@ static measureText(options: MeasureOptions): number
 
 **起始版本：** 9
 
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+
 **废弃版本：** 18
 
 **替代接口：** measureText
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MeasureText-static measureText(options: MeasureOptions): number--><!--Device-MeasureText-static measureText(options: MeasureOptions): number-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | 是 | 被计算文本描述信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 文本宽度。<br/>单位：px |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -102,6 +102,8 @@ static measureTextSize(options: MeasureOptions): SizeOptions
 
 **起始版本：** 10
 
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
 **废弃版本：** 18
 
 **替代接口：** measureTextSize
@@ -110,21 +112,19 @@ static measureTextSize(options: MeasureOptions): SizeOptions
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MeasureText-static measureTextSize(options: MeasureOptions): SizeOptions--><!--Device-MeasureText-static measureTextSize(options: MeasureOptions): SizeOptions-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | 是 | 被计算文本描述信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SizeOptions](../../apis-default/arkts-apis/arkts-units-sizeoptions-i.md) | 返回文本所占布局宽度和高度。<br/>**说明:** <br/>文本宽度以及高度返回值单位均为px。 |
+| 类型 |
+| --- |
+| [SizeOptions](arkts-arkui-units-sizeoptions-i.md) |
 
 **示例**
 
@@ -152,4 +152,3 @@ struct Index {
   }
 }
 ```
-

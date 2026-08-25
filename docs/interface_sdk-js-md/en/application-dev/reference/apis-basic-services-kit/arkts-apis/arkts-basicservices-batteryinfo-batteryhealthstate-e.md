@@ -1,12 +1,10 @@
 # BatteryHealthState
 
-Enumerates battery health states.@enum { int }
+Enumerates battery health states.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-batteryInfo-export enum BatteryHealthState--><!--Device-batteryInfo-export enum BatteryHealthState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -18,11 +16,9 @@ UNKNOWN
 
 Unknown state.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-BatteryHealthState-UNKNOWN--><!--Device-BatteryHealthState-UNKNOWN-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -34,11 +30,9 @@ GOOD
 
 The battery is in the healthy state.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-BatteryHealthState-GOOD--><!--Device-BatteryHealthState-GOOD-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -50,11 +44,9 @@ OVERHEAT
 
 The battery is overheated.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-BatteryHealthState-OVERHEAT--><!--Device-BatteryHealthState-OVERHEAT-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -66,11 +58,9 @@ OVERVOLTAGE
 
 The battery voltage is over high.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-BatteryHealthState-OVERVOLTAGE--><!--Device-BatteryHealthState-OVERVOLTAGE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -82,11 +72,9 @@ COLD
 
 The battery temperature is low.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-BatteryHealthState-COLD--><!--Device-BatteryHealthState-COLD-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -98,11 +86,8 @@ DEAD
 
 The battery is dead.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-BatteryHealthState-DEAD--><!--Device-BatteryHealthState-DEAD-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
-

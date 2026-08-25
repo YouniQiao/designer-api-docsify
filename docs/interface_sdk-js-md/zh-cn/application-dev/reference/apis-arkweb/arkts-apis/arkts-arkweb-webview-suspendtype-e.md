@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-webview-enum SuspendType--><!--Device-webview-enum SuspendType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -18,7 +18,7 @@ ENTER_BACK_FORWARD_CACHE = 0
 
 **起始版本：** 12
 
-<!--Device-SuspendType-ENTER_BACK_FORWARD_CACHE = 0--><!--Device-SuspendType-ENTER_BACK_FORWARD_CACHE = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -32,7 +32,7 @@ ENTER_BACKGROUND = 1
 
 **起始版本：** 12
 
-<!--Device-SuspendType-ENTER_BACKGROUND = 1--><!--Device-SuspendType-ENTER_BACKGROUND = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -46,7 +46,6 @@ AUTO_CLEANUP = 2
 
 **起始版本：** 12
 
-<!--Device-SuspendType-AUTO_CLEANUP = 2--><!--Device-SuspendType-AUTO_CLEANUP = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-

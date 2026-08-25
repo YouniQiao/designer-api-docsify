@@ -16,13 +16,13 @@ Obtains the installation package. This API uses an asynchronous callback to retu
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** null
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
-
-<!--Device-bundle-function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void--><!--Device-bundle-function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -30,9 +30,9 @@ Obtains the installation package. This API uses an asynchronous callback to retu
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInstaller](arkts-ability-bundleinstaller-bundleinstaller-depr-i-sys.md)&gt; | Yes | Callback used to return the installation package. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInstaller](arkts-ability-bundleinstaller-bundleinstaller-depr-i-sys.md)&gt; | Yes |
 
 **Examples**
 
@@ -70,13 +70,13 @@ Obtains the installation package. This API uses a promise to return the result.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** null
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
-
-<!--Device-bundle-function getBundleInstaller(): Promise<BundleInstaller>--><!--Device-bundle-function getBundleInstaller(): Promise<BundleInstaller>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -84,11 +84,10 @@ Obtains the installation package. This API uses a promise to return the result.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[BundleInstaller](arkts-ability-bundleinstaller-bundleinstaller-depr-i-sys.md)&gt; | Promise used to return the installation package. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[BundleInstaller](arkts-ability-bundleinstaller-bundleinstaller-depr-i-sys.md)&gt; |
 
 **Examples**
 
 See [getBundleInstaller](#getbundleinstaller)
-

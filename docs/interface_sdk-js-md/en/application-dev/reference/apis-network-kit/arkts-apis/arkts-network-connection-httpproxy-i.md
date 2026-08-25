@@ -2,9 +2,9 @@
 
 Represents the HTTP proxy configuration.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-connection-export interface HttpProxy--><!--Device-connection-export interface HttpProxy-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -27,11 +27,11 @@ For example, if **ample.com** is set in the host name list, **ample.com**, **www
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-HttpProxy-exclusionList: Array<string>--><!--Device-HttpProxy-exclusionList: Array<string>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -45,11 +45,11 @@ Host name of the proxy server.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-HttpProxy-host: string--><!--Device-HttpProxy-host: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -63,9 +63,9 @@ Password of the user who uses the proxy.Note: The setting takes effect only when
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HttpProxy-password?: string--><!--Device-HttpProxy-password?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -77,13 +77,13 @@ port: int
 
 Host port. The value range is [0, 65535].
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-HttpProxy-port: int--><!--Device-HttpProxy-port: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -97,9 +97,8 @@ Name of the user who uses the proxy.Note: This parameter takes effect only when 
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HttpProxy-username?: string--><!--Device-HttpProxy-username?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
-

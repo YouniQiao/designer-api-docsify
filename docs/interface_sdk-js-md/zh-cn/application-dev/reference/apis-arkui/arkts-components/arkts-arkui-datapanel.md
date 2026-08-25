@@ -17,29 +17,28 @@ DataPanel(options: DataPanelOptions)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DataPanelInterface-(options: DataPanelOptions): DataPanelAttribute--><!--Device-DataPanelInterface-(options: DataPanelOptions): DataPanelAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [DataPanelOptions](arkts-arkui-datapaneloptions-i.md) | 是 | 数据面板配置选项，用于设置数据面板的数据值列表、最大值和数据面板类型。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [DataPanelOptions](arkts-arkui-datapaneloptions-i.md) | 是 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
+| 名称 |
+| --- |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-
+| 名称 |
+| --- |

@@ -4,7 +4,7 @@ Defines the range of the **RichEditor**.
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface RichEditorRange--><!--Device-unnamed-declare interface RichEditorRange-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,11 @@ End position of the span whose style needs to be updated. If this parameter is l
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RichEditorRange-end?: number--><!--Device-RichEditorRange-end?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,11 +49,10 @@ Start position of the span whose style needs to be updated. If this parameter is
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-RichEditorRange-start?: number--><!--Device-RichEditorRange-start?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

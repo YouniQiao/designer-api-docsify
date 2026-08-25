@@ -4,7 +4,7 @@ WebviewController is the core controller for various behaviors of the **Web** co
 
 **Since:** 9
 
-<!--Device-webview-class WebviewController--><!--Device-webview-class WebviewController-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -20,37 +20,37 @@ import { webview } from '@kit.ArkWeb';
 accessBackward(): boolean
 ```
 
-Checks whether going to the previous page can be performed on the current page.You can use [getBackForwardEntries](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getbackforwardentries) to obtain the historical information list of the current WebView and use [accessStep](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#accessstep) to determine whether to move forward or backward based on the specified number of steps.
+Checks whether going to the previous page can be performed on the current page.You can use [getBackForwardEntries](#getbackforwardentries) to obtain the historical information list of the current WebView and use [accessStep](#accessstep) to determine whether to move forward or backward based on the specified number of steps.
 
 > **NOTE：**&gt;
-> If [setCustomUserAgent](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setcustomuseragent) is called when the **Web**
+> If [setCustomUserAgent](#setcustomuseragent) is called when the **Web**
 > component is loaded for the first time, the value of **accessBackward** may be **false** when there are
 > multiple historical entries. That is, there is no backward entry. You are advised to call the
 > **setCustomUserAgent** method to set a user agent before using **loadUrl** to load a specific page.&gt;
 > Causes: When the **Web** component is loaded for the first time, calling
-> [setCustomUserAgent](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setcustomuseragent) causes the component to reload and
+> [setCustomUserAgent](#setcustomuseragent) causes the component to reload and
 > retain the initial history entry. Then the new entry replaces the initial history entry and no new history
 > entry is generated. As a result, the value of **accessBackward** is false.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-accessBackward(): boolean--><!--Device-WebviewController-accessBackward(): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true** is returned if going to the previous page can be performed on the current page. Otherwise, **false** is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -87,27 +87,27 @@ struct WebComponent {
 accessForward(): boolean
 ```
 
-Checks whether going to the next page can be performed on the current page.You can use [getBackForwardEntries](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getbackforwardentries) to obtain the historical information list of the current WebView and use [accessStep](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#accessstep) to determine whether to move forward or backward based on the specified number of steps.
+Checks whether going to the next page can be performed on the current page.You can use [getBackForwardEntries](#getbackforwardentries) to obtain the historical information list of the current WebView and use [accessStep](#accessstep) to determine whether to move forward or backward based on the specified number of steps.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-accessForward(): boolean--><!--Device-WebviewController-accessForward(): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true** is returned if going to the next page can be performed on the current page; otherwise, **false** is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -148,30 +148,30 @@ Checks whether a specific number of steps forward or backward can be performed o
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-accessStep(step: number): boolean--><!--Device-WebviewController-accessStep(step: number): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| step | number | Yes | Number of the steps to take. A positive number means to move forward, and a negative number means to move backward. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| step | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether a specific number of steps forward or backward can be performed on the current page. <br>**true** is returned if a specific number of steps forward or backward can be performed on the current page; otherwise, **false** is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -213,24 +213,24 @@ Adds a list of domain names that bypass intelligent tracking prevention.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void--><!--Device-WebviewController-static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| hostList | Array&lt;string&gt; | Yes | List of domain names that bypass intelligent tracking prevention. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| hostList | Array & lt;string & gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -282,22 +282,22 @@ Sets the bottom avoidance height of the visible viewport on the web page.
 
 **Since:** 20
 
-<!--Device-WebviewController-avoidVisibleViewportBottom(avoidHeight: number): void--><!--Device-WebviewController-avoidVisibleViewportBottom(avoidHeight: number): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| avoidHeight | number | Yes | Bottom avoidance height of the visible viewport on the web page. <br>Unit: vp. <br>Value range: [0, height of the **Web** component] <br>If the value is less than 0, the value **0** is used. If the value is greater than the height of the **Web** component, the height of the **Web** component is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| avoidHeight | number | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | This functionality is not supported. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -346,24 +346,24 @@ Performs a specific number of steps forward or backward on the current page base
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-backOrForward(step: number): void--><!--Device-WebviewController-backOrForward(step: number): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| step | number | Yes | Number of the steps to take. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| step | number | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -400,21 +400,21 @@ struct WebComponent {
 backward(): void
 ```
 
-Moves to the previous page based on the history stack. This API is generally used together with [accessBackward](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#accessbackward).
+Moves to the previous page based on the history stack. This API is generally used together with [accessBackward](#accessbackward).
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-backward(): void--><!--Device-WebviewController-backward(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -457,21 +457,21 @@ Clears the blankless loading cache of the page with a specified key value.In an 
 
 **Since:** 20
 
-<!--Device-WebviewController-static clearBlanklessLoadingCache(keys?: Array<string>) : void--><!--Device-WebviewController-static clearBlanklessLoadingCache(keys?: Array<string>) : void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | No | Key value list on the pages using the blankless optimization solution. The **key** value has been specified in [getBlanklessInfoWithKey](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getblanklessinfowithkey).<br>Default value: key list of all pages cached by the blankless optimization solution.<br>Valid value range: The key length cannot exceed 2048 characters, and the number of keys must be less than or equal to 100. The key value is the same as that input to the **Web** component during page loading.<br>Invalid value setting behavior: If **undefined** or **null** is passed, error code **401** is thrown. If the key length exceeds 2048, the key does not take effect. If the key length exceeds 100, the first 100 values are used. If the key is empty, the default value is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| keys | Array & lt;string & gt; | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |  |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -512,17 +512,17 @@ Clears the user operation corresponding to the client certificate request event 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-clearClientAuthenticationCache(): void--><!--Device-WebviewController-clearClientAuthenticationCache(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -562,17 +562,17 @@ Clears the browsing history. You are not advised to call **clearHistory()** in *
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-clearHistory(): void--><!--Device-WebviewController-clearHistory(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -612,23 +612,23 @@ Clears the IP address of a specified host after domain name resolution.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static clearHostIP(hostName: string): void--><!--Device-WebviewController-static clearHostIP(hostName: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| hostName | string | Yes | Domain name of the host whose DNS records are to be cleared. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| hostName | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -677,17 +677,17 @@ Deletes all domain names from the list of domain names added through the **addIn
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static clearIntelligentTrackingPreventionBypassingList(): void--><!--Device-WebviewController-static clearIntelligentTrackingPreventionBypassingList(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -718,21 +718,21 @@ struct WebComponent {
 clearMatches(): void
 ```
 
-Clears the matches found through [searchAllAsync](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#searchallasync).
+Clears the matches found through [searchAllAsync](#searchallasync).
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-clearMatches(): void--><!--Device-WebviewController-clearMatches(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -768,21 +768,21 @@ struct WebComponent {
 static clearPrefetchedResource(cacheKeyList: Array<string>): void
 ```
 
-Clears the cache of prefetched resources based on the specified cache key list. The cache key in the input parameter must be the prefetched resource cache key specified by [prefetchResource](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#prefetchresource).
+Clears the cache of prefetched resources based on the specified cache key list. The cache key in the input parameter must be the prefetched resource cache key specified by [prefetchResource](#prefetchresource).
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static clearPrefetchedResource(cacheKeyList: Array<string>): void--><!--Device-WebviewController-static clearPrefetchedResource(cacheKeyList: Array<string>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| cacheKeyList | Array&lt;string&gt; | Yes | Key used to query the cache of prefetched resources. The value can contain only letters and digits. If this parameter is not passed or is left empty, **url** is used by default. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| cacheKeyList | Array & lt;string & gt; | Yes |
 
 **Examples**
 
@@ -831,9 +831,9 @@ Clears all WebSchemeHandlers that are set in the application and used to interce
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static clearServiceWorkerWebSchemeHandler(): void--><!--Device-WebviewController-static clearServiceWorkerWebSchemeHandler(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -870,17 +870,17 @@ Clears the user operation corresponding to the SSL certificate error event recor
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-clearSslCache(): void--><!--Device-WebviewController-clearSslCache(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -920,17 +920,17 @@ Clears all WebSchemeHandlers set for the **Web** component.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-clearWebSchemeHandler(): void--><!--Device-WebviewController-clearWebSchemeHandler(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -970,17 +970,17 @@ Closes all full-screen videos on a web page.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-closeAllMediaPresentations(): void--><!--Device-WebviewController-closeAllMediaPresentations(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -1020,17 +1020,17 @@ Disables the camera capture of the current web page.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-closeCamera(): void--><!--Device-WebviewController-closeCamera(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -1059,17 +1059,17 @@ Constructs a **WebviewController** object.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-constructor(webTag?: string)--><!--Device-WebviewController-constructor(webTag?: string)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| webTag | string | No | Name of the **Web** component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| webTag | string | No |
 
 **Examples**
 
@@ -1203,25 +1203,25 @@ Obtains the data stream of a specified web page using an asynchronous callback.
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-createPdf(configuration: PdfConfiguration, callback: AsyncCallback<PdfData>): void--><!--Device-WebviewController-createPdf(configuration: PdfConfiguration, callback: AsyncCallback<PdfData>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| configuration | [PdfConfiguration](../../apis-default/arkts-apis/arkts-webview-pdfconfiguration-i.md) | Yes | Parameters required for creating a PDF file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PdfData](../../apis-default/arkts-apis/arkts-webview-pdfdata-c.md)&gt; | Yes | Callback used to return the data stream of an online PDF file. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| configuration | [PdfConfiguration](arkts-arkweb-webview-pdfconfiguration-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PdfData](arkts-arkweb-webview-pdfdata-c.md)&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid input parameter. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -1338,30 +1338,30 @@ Obtains the data stream of a specified web page using a promise.
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-createPdf(configuration: PdfConfiguration): Promise<PdfData>--><!--Device-WebviewController-createPdf(configuration: PdfConfiguration): Promise<PdfData>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| configuration | [PdfConfiguration](../../apis-default/arkts-apis/arkts-webview-pdfconfiguration-i.md) | Yes | Parameters required for creating a PDF file. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| configuration | [PdfConfiguration](arkts-arkweb-webview-pdfconfiguration-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[PdfData](../../apis-default/arkts-apis/arkts-webview-pdfdata-c.md)&gt; | Promise used to return the result. It returns a web page PDF data stream (a PdfData object containing PDF binary data represented as an ArrayBuffer). |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[PdfData](arkts-arkweb-webview-pdfdata-c.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid input parameter. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -1377,30 +1377,30 @@ Creates web message ports.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>--><!--Device-WebviewController-createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isExtentionType | boolean | No | Whether to use the extended interface. <br>The value **true** means to use the extended interface, and **false** means the opposite. <br>Default value: **false**. <br>If **undefined** or **null** is passed, error code **401** will be thrown.<br>**Since:** 10 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [isExtentionType](arkts-arkweb-webview-webmessageport-i.md) | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;[WebMessagePort](../../apis-default/arkts-apis/arkts-webview-webmessageport-i.md)&gt; | List of web message ports. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed.<br>**Applicable version:** 10 and later |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -1416,28 +1416,28 @@ Creates a **PrintDocumentAdapter** instance to provide content for printing.
 
 **Since:** 11
 
-<!--Device-WebviewController-createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter--><!--Device-WebviewController-createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| jobName | string | Yes | Name of the file to print. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [jobName](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-print-printjobdata-i.md) | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| print.PrintDocumentAdapter | Adapter for the print document, which controls the print behavior and print task. It can print the current web page content through the print service. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| print.PrintDocumentAdapter |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -1478,24 +1478,24 @@ Grants the cross-domain request and fetch request permissions for custom protoco
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static customizeSchemes(schemes: Array<WebCustomScheme>): void--><!--Device-WebviewController-static customizeSchemes(schemes: Array<WebCustomScheme>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| schemes | Array&lt;[WebCustomScheme](../../apis-default/arkts-apis/arkts-webview-webcustomscheme-i.md)&gt; | Yes | Array of up to 10 custom schemes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| schemes | Array&lt;[WebCustomScheme](arkts-arkweb-webview-webcustomscheme-i.md)&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [17100020](../errorcode-webview.md#17100020-failed-to-register-custom-schemes) | Failed to register custom schemes.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100020](../errorcode-webview.md#17100020-failed-to-register-custom-schemes) |
 
 **Examples**
 
@@ -1575,25 +1575,25 @@ Grants the cross-domain request and fetch request permissions for custom protoco
 
 **Since:** 21
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: boolean): void--><!--Device-WebviewController-static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: boolean): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| schemes | Array&lt;[WebCustomScheme](../../apis-default/arkts-apis/arkts-webview-webcustomscheme-i.md)&gt; | Yes | Array of up to 10 custom schemes. |
-| lazyInitWebEngine | boolean | Yes | Whether to skip WebEngine initialization in the API. <br>The value **true** means to skip the WebEngine initialization and store the registered schemes temporarily. When the WebEngine is initialized, the schemes are transferred to the WebEngine. The value false means to initialize the WebEngine automatically in the API. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| schemes | Array&lt;[WebCustomScheme](arkts-arkweb-webview-webcustomscheme-i.md)&gt; | Yes |
+| lazyInitWebEngine | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100020](../errorcode-webview.md#17100020-failed-to-register-custom-schemes) | Failed to register custom schemes. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. The length of the schemes array is greater than 10. 2. The character length of the scheme is greater than 32. 3. The character in the scheme is not within the allowed range of lowercase English letters, numbers, and the symbols ".", "+", "-". |
+| Error Code ID |
+| --- |
+| [17100020](../errorcode-webview.md#17100020-failed-to-register-custom-schemes) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -1605,29 +1605,29 @@ See [customizeSchemes](#customizeschemes)
 deleteJavaScriptRegister(name: string): void
 ```
 
-Deletes a JavaScript object with the specified name on the application side that is registered with the window using [registerJavaScriptProxy](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#registerjavascriptproxy) or javaScriptProxy. The deletion takes effect after the page is reloaded.
+Deletes a JavaScript object with the specified name on the application side that is registered with the window using [registerJavaScriptProxy](#registerjavascriptproxy) or javaScriptProxy. The deletion takes effect after the page is reloaded.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-deleteJavaScriptRegister(name: string): void--><!--Device-WebviewController-deleteJavaScriptRegister(name: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the registered JavaScript object, which can be used to invoke the corresponding object on the application side from the web side. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [17100008](../errorcode-webview.md#17100008-deleting-a-javascriptproxy-that-does-not-exist) | Failed to delete JavaScriptProxy because it does not exist. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100008](../errorcode-webview.md#17100008-deleting-a-javascriptproxy-that-does-not-exist) |
 
 **Examples**
 
@@ -1724,25 +1724,25 @@ Enables ad blocking.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-enableAdsBlock(enable: boolean): void--><!--Device-WebviewController-enableAdsBlock(enable: boolean): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable ad blocking. <br>The value **true** means to enable ad blocking, and **false** means the opposite. <br>Default value: **false**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enable | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Parameter string is too long. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -1784,22 +1784,22 @@ Disables specific web engine capabilities by configuring security feature option
 > **NOTE：**&gt;
 > - This API is a global static API. It only needs to be called once during the entire app lifecycle and does not
 > need to be called repeatedly.&gt;
-> - It must be called before [initializeWebEngine()](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#initializewebengine).
+> - It must be called before [initializeWebEngine()](#initializewebengine).
 > Otherwise, the setting does not take effect.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-WebviewController-static enableAdvancedSecurityMode(securityParams: SecurityParams): void--><!--Device-WebviewController-static enableAdvancedSecurityMode(securityParams: SecurityParams): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| securityParams | [SecurityParams](../../apis-default/arkts-apis/arkts-webview-securityparams-i.md) | Yes | Security feature option configuration. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| securityParams | [SecurityParams](arkts-arkweb-webview-securityparams-i.md) | Yes |
 
 ## enableBackForwardCache
 
@@ -1807,19 +1807,19 @@ Disables specific web engine capabilities by configuring security feature option
 static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void
 ```
 
-Enables the back-forward cache of a **Web** component. You can specify whether to add a specific page to the back -forward cache.This API must be called before [initializeWebEngine()](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#initializewebengine) initializes the kernel.
+Enables the back-forward cache of a **Web** component. You can specify whether to add a specific page to the back -forward cache.This API must be called before [initializeWebEngine()](#initializewebengine) initializes the kernel.
 
 **Since:** 12
 
-<!--Device-WebviewController-static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void--><!--Device-WebviewController-static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| features | [BackForwardCacheSupportedFeatures](../../apis-default/arkts-apis/arkts-webview-backforwardcachesupportedfeatures-c.md) | Yes | Features of the pages, which allow them to be added to the back-forward cache. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| features | [BackForwardCacheSupportedFeatures](arkts-arkweb-webview-backforwardcachesupportedfeatures-c.md) | Yes |
 
 **Examples**
 
@@ -1854,25 +1854,25 @@ Enables intelligent tracking prevention.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-enableIntelligentTrackingPrevention(enable: boolean): void--><!--Device-WebviewController-enableIntelligentTrackingPrevention(enable: boolean): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable intelligent tracking prevention. <br>The value **true** means to enable intelligent tracking prevention, and **false** means the opposite. <br>Default value: **false**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enable | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -1916,15 +1916,15 @@ Sets the private network access check feature.After this feature is enabled, the
 
 **Since:** 20
 
-<!--Device-WebviewController-static enablePrivateNetworkAccess(enable: boolean): void--><!--Device-WebviewController-static enablePrivateNetworkAccess(enable: boolean): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable the private network access check feature. The value **true** means to enable the private network access check feature, and **false** means the opposite. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enable | boolean | Yes |
 
 **Examples**
 
@@ -1961,23 +1961,23 @@ Enables the safe browsing feature. This feature is forcibly enabled and cannot b
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-enableSafeBrowsing(enable: boolean): void--><!--Device-WebviewController-enableSafeBrowsing(enable: boolean): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable the safe browsing feature. <br>The value **true** means to enable the safe browsing feature, and **false** means the opposite. <br>Default value: **false**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enable | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -2018,9 +2018,9 @@ Enables the full drawing capability for the web page. This API works only during
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static enableWholeWebPageDrawing(): void--><!--Device-WebviewController-static enableWholeWebPageDrawing(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -2069,30 +2069,30 @@ Executes `AIPageCommand` asynchronously. This API uses a promise to return the r
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-WebviewController-executeAIPageCommand(command: string): Promise<string>--><!--Device-WebviewController-executeAIPageCommand(command: string): Promise<string>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| command | string | Yes | Command parameter in JSON format. The parameter format varies for different commands. For query commands, see [AIPageCommand](../../../reference/apis-arkweb/arkts-apis-webview-AIPageCommand.md). For interaction commands, see [AIPageInteraction](../../../reference/apis-arkweb/arkts-apis-webview-AIPageInteraction.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| command | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Promise used to return the command execution result in JSON format. The return format varies for different commands. When a command cannot be dispatched or has no return value, an empty string is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [17100024](../errorcode-webview.md#17100024-aipagecommand-format-error) | Command format error. The command parameter does not conform to the JSON format requirements. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100024](../errorcode-webview.md#17100024-aipagecommand-format-error) |
 
 ## forward
 
@@ -2100,21 +2100,21 @@ Executes `AIPageCommand` asynchronously. This API uses a promise to return the r
 forward(): void
 ```
 
-Moves forward by one page in the history stack. Generally used together with [accessForward](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#accessforward).
+Moves forward by one page in the history stack. Generally used together with [accessForward](#accessforward).
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-forward(): void--><!--Device-WebviewController-forward(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -2154,15 +2154,15 @@ Obtains the current ArkWeb kernel version.
 
 **Since:** 20
 
-<!--Device-WebviewController-static getActiveWebEngineVersion(): ArkWebEngineVersion--><!--Device-WebviewController-static getActiveWebEngineVersion(): ArkWebEngineVersion-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ArkWebEngineVersion](../../apis-default/arkts-apis/arkts-webview-arkwebengineversion-e.md) | The ArkWeb kernel version defined by [ArkWebEngineVersion]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ArkWebEngineVersion](arkts-arkweb-webview-arkwebengineversion-e.md) |
 
 **Examples**
 
@@ -2178,15 +2178,15 @@ Checks whether the current **WebViewController** is bound to a **Web** component
 
 **Since:** 20
 
-<!--Device-WebviewController-getAttachState(): ControllerAttachState--><!--Device-WebviewController-getAttachState(): ControllerAttachState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ControllerAttachState](../../apis-default/arkts-apis/arkts-webview-controllerattachstate-e.md) | Attach status of **WebViewController** and the **Web** component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md) |
 
 ## getBackForwardEntries
 
@@ -2203,23 +2203,23 @@ Obtains the historical information list of the current WebView.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-getBackForwardEntries(): BackForwardList--><!--Device-WebviewController-getBackForwardEntries(): BackForwardList-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BackForwardList](../../apis-default/arkts-apis/arkts-webview-backforwardlist-i.md) | The history list of the current WebView. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [BackForwardList](arkts-arkweb-webview-backforwardlist-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -2255,16 +2255,16 @@ struct WebComponent {
 getBlanklessInfoWithKey(key: string) : BlanklessInfo
 ```
 
-Obtains the prediction information about blankless loading (for details, see [BlanklessInfo](../../apis-default/arkts-apis/arkts-webview-blanklessinfo-i.md)) and starts to generate the loading transition frame. The application determines whether to enable blankless loading based on the information. This API must be used together with the [setBlanklessLoadingWithKey](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setblanklessloadingwithkey) API before the page loading API is triggered or in **onLoadIntercept**, and after the **WebViewController** is bound to the **Web** component.
+Obtains the prediction information about blankless loading (for details, see [BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md)) and starts to generate the loading transition frame. The application determines whether to enable blankless loading based on the information. This API must be used together with the [setBlanklessLoadingWithKey](#setblanklessloadingwithkey) API before the page loading API is triggered or in **onLoadIntercept**, and after the **WebViewController** is bound to the **Web** component.
 
 > **NOTE：**&gt;
 > - The default size of the persistent cache capacity is 30 MB (about 30 pages). You can set the cache capacity
-> by calling [setBlanklessLoadingCacheCapacity](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setblanklessloadingcachecapacity)
+> by calling [setBlanklessLoadingCacheCapacity](#setblanklessloadingcachecapacity)
 > . For details, see the description of this API. When the maximum capacity is exceeded, the cache is updated
 > based on the Least Recently Used (LRU) mechanism. The persistent cache data that has been stored for more than
 > seven days is automatically cleared. After the cache is cleared, the optimization effect appears when the page
 > is loaded for the third time.&gt;
-> - If the snapshot similarity (**similarity** in [BlanklessInfo](../../apis-default/arkts-apis/arkts-webview-blanklessinfo-i.md))
+> - If the snapshot similarity (**similarity** in [BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md))
 > is extremely low, check whether the **key** value is correct.&gt;
 > - After this API is called, page loading snapshot detection and transition frame generation calculation are
 > enabled, which generates certain resource overhead.&gt;
@@ -2279,27 +2279,27 @@ Obtains the prediction information about blankless loading (for details, see [Bl
 
 **Since:** 20
 
-<!--Device-WebviewController-getBlanklessInfoWithKey(key: string) : BlanklessInfo--><!--Device-WebviewController-getBlanklessInfoWithKey(key: string) : BlanklessInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Key value that uniquely identifies the page.<br>The value cannot be empty and can contain a maximum of 2048 characters.<br>Invalid values do not take effect. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BlanklessInfo](../../apis-default/arkts-apis/arkts-webview-blanklessinfo-i.md) | Prediction information about blankless loading, including the first screen similarity and first screen loading duration. The application determines whether to enable blankless loading based on the prediction information. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |  |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -2348,23 +2348,23 @@ Obtains the certificate information of this website. When the **Web** component 
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-getCertificate(): Promise<Array<cert.X509Cert>>--><!--Device-WebviewController-getCertificate(): Promise<Array<cert.X509Cert>>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;cert.X509Cert&gt;&gt; | Promise used to obtain the X.509 certificate array of the current HTTPS website. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Array & lt;cert.X509Cert & gt; & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -2652,24 +2652,24 @@ Obtains the certificate information of the current website. When the **Web** com
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void--><!--Device-WebviewController-getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | Yes | Callback used to obtain the X.509 certificate array of the current website. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -2685,23 +2685,23 @@ Obtains a custom user agent.For details about the default **User-Agent**, see [D
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-getCustomUserAgent(): string--><!--Device-WebviewController-getCustomUserAgent(): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Information about the custom user agent. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -2743,15 +2743,15 @@ Obtains the default user agent.This API can be called only in the UI thread.For 
 
 **Since:** 14
 
-<!--Device-WebviewController-static getDefaultUserAgent(): string--><!--Device-WebviewController-static getDefaultUserAgent(): string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Default **User-Agent** string of ArkWeb. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -2780,21 +2780,21 @@ Queries whether the default error page is enabled.
 
 **Since:** 20
 
-<!--Device-WebviewController-getErrorPageEnabled(): boolean--><!--Device-WebviewController-getErrorPageEnabled(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the default error page is enabled. <br>The value true indicates that the default error page is enabled, and false indicates the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -2829,23 +2829,23 @@ Obtains the favicon of this page.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-getFavicon(): image.PixelMap--><!--Device-WebviewController-getFavicon(): image.PixelMap-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| image.PixelMap | PixelMap** object of the favicon of the page. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| image.PixelMap |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -2887,27 +2887,27 @@ Obtains the element type of the area being clicked.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 18
 
-**Substitutes:** [getLastHitTest](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getlasthittest)
+**Substitutes:** [getLastHitTest](#getlasthittest)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WebviewController-getHitTest(): WebHitTestType--><!--Device-WebviewController-getHitTest(): WebHitTestType-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WebHitTestType](../../apis-default/arkts-apis/arkts-webview-webhittesttype-e.md) | Element type of the area being clicked. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WebHitTestType](arkts-arkweb-webview-webhittesttype-e.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -2948,27 +2948,27 @@ Obtains the element information of the area being clicked.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 18
 
-**Substitutes:** [getLastHitTest](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getlasthittest)
+**Substitutes:** [getLastHitTest](#getlasthittest)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WebviewController-getHitTestValue(): HitTestValue--><!--Device-WebviewController-getHitTestValue(): HitTestValue-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [HitTestValue](../../apis-default/arkts-apis/arkts-webview-hittestvalue-i.md) | Element information of the area being clicked. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [HitTestValue](arkts-arkweb-webview-hittestvalue-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -3010,21 +3010,21 @@ Obtains the element information of the area being clicked last time.
 
 **Since:** 18
 
-<!--Device-WebviewController-getLastHitTest(): HitTestValue--><!--Device-WebviewController-getLastHitTest(): HitTestValue-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [HitTestValue](../../apis-default/arkts-apis/arkts-webview-hittestvalue-i.md) | Element information of the area being clicked. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [HitTestValue](arkts-arkweb-webview-hittestvalue-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -3062,27 +3062,27 @@ struct WebComponent {
 getLastJavascriptProxyCallingFrameUrl(): string
 ```
 
-Injects a JavaScript object into the window object through [registerJavaScriptProxy](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#registerjavascriptproxy) or javaScriptProxy. This API obtains the URL of the frame that last called the injected object.
+Injects a JavaScript object into the window object through [registerJavaScriptProxy](#registerjavascriptproxy) or javaScriptProxy. This API obtains the URL of the frame that last called the injected object.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-getLastJavascriptProxyCallingFrameUrl(): string--><!--Device-WebviewController-getLastJavascriptProxyCallingFrameUrl(): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | URL of the frame of the last injected object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -3209,6 +3209,34 @@ HTML file to be loaded:
 </html>
 ```
 
+## getLastPostMessageURL
+
+```TypeScript
+getLastPostMessageURL(): string
+```
+
+Gets URL of frame that sent the last postMessage to native application.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+
 ## getMediaPlaybackState
 
 ```TypeScript
@@ -3219,23 +3247,23 @@ Queries the audio and video playback status of the current web page.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-getMediaPlaybackState(): MediaPlaybackState--><!--Device-WebviewController-getMediaPlaybackState(): MediaPlaybackState-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [MediaPlaybackState](../../apis-default/arkts-apis/arkts-webview-mediaplaybackstate-e.md) | Playback control status of the current web page. The options are **NONE**, **PLAYING**, **PAUSED**, and **STOPPED**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [MediaPlaybackState](arkts-arkweb-webview-mediaplaybackstate-e.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -3271,27 +3299,27 @@ struct WebComponent {
 getOriginalUrl(): string
 ```
 
-Obtains the original URL of the current page.Risk warning: If you want to obtain the URL for JavaScriptProxy communication API authentication, use [getLastJavascriptProxyCallingFrameUrl&lt;sup&gt;12+&lt;/sup&gt;](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getlastjavascriptproxycallingframeurl).
+Obtains the original URL of the current page.Risk warning: If you want to obtain the URL for JavaScriptProxy communication API authentication, use [getLastJavascriptProxyCallingFrameUrl&lt;sup&gt;12+&lt;/sup&gt;](#getlastjavascriptproxycallingframeurl).
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-getOriginalUrl(): string--><!--Device-WebviewController-getOriginalUrl(): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Original URL address of the current page. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -3332,23 +3360,23 @@ Obtains the height of this web page. For details, see [Obtaining the Web Page Co
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-getPageHeight(): number--><!--Device-WebviewController-getPageHeight(): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Height of the current web page. Unit: vp |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -3389,21 +3417,21 @@ Obtains the current scrolling offset of the web page (excluding the over-scrolli
 
 **Since:** 20
 
-<!--Device-WebviewController-getPageOffset(): ScrollOffset--><!--Device-WebviewController-getPageOffset(): ScrollOffset-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ScrollOffset | Current scroll offset of the web page (excluding over-scroll offset), which contains x and y coordinates, in vp. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ScrollOffset](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-scrolloffset-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -3476,23 +3504,23 @@ Obtains whether the web page background is printed.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-getPrintBackground(): boolean--><!--Device-WebviewController-getPrintBackground(): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether to print the web page background. <br>The value **true** means to print the web page background; **false** means not to print the web page background. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -3532,21 +3560,21 @@ Obtains the loading progress of the current web page.
 
 **Since:** 20
 
-<!--Device-WebviewController-getProgress() : number--><!--Device-WebviewController-getProgress() : number-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Loading progress of the current page. The value range is [0, 100]. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -3580,17 +3608,17 @@ Obtains the ArkWeb render subprocess mode.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static getRenderProcessMode(): RenderProcessMode--><!--Device-WebviewController-static getRenderProcessMode(): RenderProcessMode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [RenderProcessMode](../../apis-default/arkts-apis/arkts-webview-renderprocessmode-e.md) | Render subprocess mode. <br>You can call **getRenderProcessMode()** to obtain the ArkWeb child render process mode of the current device. The enumerated value **0** indicates the single child render process mode, and **1** indicates the multi-child render process mode. <br>If the obtained value is not an enumerated value of **RenderProcessMode**, the multi-render subprocess mode is used by default. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [RenderProcessMode](arkts-arkweb-webview-renderprocessmode-e.md) |
 
 **Examples**
 
@@ -3626,23 +3654,23 @@ Obtains whether this web page is scrollable.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-getScrollable(): boolean--><!--Device-WebviewController-getScrollable(): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether this web page is scrollable. <br>The value **true** indicates that this web page is scrollable, and **false** indicates the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -3683,17 +3711,17 @@ Obtains the current scrolling offset (including the over-scrolling offset) of th
 
 **Since:** 13
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-getScrollOffset(): ScrollOffset--><!--Device-WebviewController-getScrollOffset(): ScrollOffset-End-->
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ScrollOffset | Current scroll offset of the web page (including the overscroll offset), containing x and y coordinates, in vp. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ScrollOffset](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-scrolloffset-i.md) |
 
 **Examples**
 
@@ -3785,23 +3813,23 @@ Obtains the security level of this web page.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-getSecurityLevel(): SecurityLevel--><!--Device-WebviewController-getSecurityLevel(): SecurityLevel-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| SecurityLevel | Security level of the web page. The value can be **NONE**, **SECURE**, **WARNING**, or **DANGEROUS**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityLevel](../../apis-arkdata/arkts-apis/arkts-arkdata-distributedkvstore-securitylevel-e.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -3837,15 +3865,15 @@ Queries the currently effective site isolation mode.
 
 **Since:** 21
 
-<!--Device-WebviewController-static getSiteIsolationMode(): SiteIsolationMode--><!--Device-WebviewController-static getSiteIsolationMode(): SiteIsolationMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SiteIsolationMode](../../apis-default/arkts-apis/arkts-webview-siteisolationmode-e.md) | Site isolation mode. <br>getSiteIsolationMode() queries the currently effective site isolation mode. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SiteIsolationMode](arkts-arkweb-webview-siteisolationmode-e.md) |
 
 **Examples**
 
@@ -3881,23 +3909,23 @@ Queries whether the subframe error page feature is enabled.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-WebviewController-getSubframeErrorPageEnabled(): boolean--><!--Device-WebviewController-getSubframeErrorPageEnabled(): boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns whether the subframe error page feature is enabled. <br>- **true**: The subframe error page feature is enabled (that is, both **enable** and **includeSubframe** are **true**). <br>- **false**: The subframe error page feature is not enabled (including the case where the error page feature is not enabled, or the error page feature is enabled but the subframe error page feature is not enabled). |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getSurfaceId
 
@@ -3913,17 +3941,17 @@ Obtains the ID of the surface corresponding to ArkWeb. The ID can be used to cap
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-getSurfaceId(): string--><!--Device-WebviewController-getSurfaceId(): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | ID of the surface held by ArkWeb. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -3973,23 +4001,23 @@ Obtains the title of the current web page.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-getTitle(): string--><!--Device-WebviewController-getTitle(): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Title of the current web page. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -4030,23 +4058,23 @@ Obtains the URL of the current page.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-getUrl(): string--><!--Device-WebviewController-getUrl(): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | URL address of the current page. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -4140,23 +4168,23 @@ Obtains the default user agent of this web page.For details about the default **
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-getUserAgent(): string--><!--Device-WebviewController-getUserAgent(): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Default user agent. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -4230,15 +4258,15 @@ Queries whether the User-Agent Client Hints feature is currently enabled.
 
 **Since:** 24
 
-<!--Device-WebviewController-static getUserAgentClientHintsEnabled(): boolean--><!--Device-WebviewController-static getUserAgentClientHintsEnabled(): boolean-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the User-Agent Client Hints feature is enabled. The value **true** indicates enabled, and **false** indicates disabled. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -4254,21 +4282,21 @@ Obtains the UserAgentMetadata information of a user agent.
 
 **Since:** 24
 
-<!--Device-WebviewController-getUserAgentMetadata(userAgent: string): UserAgentMetadata--><!--Device-WebviewController-getUserAgentMetadata(userAgent: string): UserAgentMetadata-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| userAgent | string | Yes | Information about the custom user agent. You can use [getUserAgent](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getuseragent) to obtain the current default user agent. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| userAgent | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [UserAgentMetadata](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md) | [UserAgentMetadata]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [UserAgentMetadata](arkts-arkweb-webview-useragentmetadata-c.md) |
 
 **Examples**
 
@@ -4284,23 +4312,23 @@ Obtains the index value of the **Web** component, which can be used for managing
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-getWebId(): number--><!--Device-WebviewController-getWebId(): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Index of the Web component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -4341,24 +4369,24 @@ Checks whether this page contains images. This API uses a promise to return the 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-hasImage(): Promise<boolean>--><!--Device-WebviewController-hasImage(): Promise<boolean>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. <br> The value **true** indicates that this page contains images, and the value **false** indicates the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -4434,24 +4462,24 @@ Checks whether this page contains images. This API uses an asynchronous callback
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-hasImage(callback: AsyncCallback<boolean>): void--><!--Device-WebviewController-hasImage(callback: AsyncCallback<boolean>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. <br> The value **true** indicates that this page contains images, and the value **false** indicates the opposite. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -4471,9 +4499,9 @@ Loads the dynamic library file of the web engine through this API before the **W
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static initializeWebEngine(): void--><!--Device-WebviewController-static initializeWebEngine(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -4505,23 +4533,23 @@ Injects local offline resources to the memory cache to improve the initial page 
 
 **Since:** 12
 
-<!--Device-WebviewController-injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void--><!--Device-WebviewController-injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| resourceMaps | Array&lt;[OfflineResourceMap](../../apis-default/arkts-apis/arkts-webview-offlineresourcemap-i.md)&gt; | Yes | Configuration object for local offline resources. A maximum of 30 resources can be injected in a single call, with a maximum size of 10 MB per individual resource. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| resourceMaps | Array&lt;[OfflineResourceMap](arkts-arkweb-webview-offlineresourcemap-i.md)&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024.<br>**Applicable version:** 22 and later |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 **Examples**
 
@@ -4778,15 +4806,15 @@ Checks whether the system is using the evergreen kernel, that is, the latest ker
 
 **Since:** 23
 
-<!--Device-WebviewController-static isActiveWebEngineEvergreen(): boolean--><!--Device-WebviewController-static isActiveWebEngineEvergreen(): boolean-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the system is using the evergreen kernel. If the system is using the evergreen kernel, **true** is returned. Otherwise, **false** is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -4818,23 +4846,23 @@ Checks whether ad blocking is enabled.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-isAdsBlockEnabled(): boolean--><!--Device-WebviewController-isAdsBlockEnabled(): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true** is returned if ad blocking is enabled; otherwise, **false** is returned. <br>Default value: **false**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -4871,27 +4899,27 @@ struct WebComponent {
 isAdsBlockEnabledForCurPage(): boolean
 ```
 
-Checks whether ad blocking is enabled on this web page.After ads blocking is enabled for the **Web** component, this feature is enabled for all web pages by default. You can call [addAdsBlockDisallowedList](../../apis-default/arkts-apis/arkts-webview-adsblockmanager-c.md#addadsblockdisallowedlist) to disable the feature for specific domains.
+Checks whether ad blocking is enabled on this web page.After ads blocking is enabled for the **Web** component, this feature is enabled for all web pages by default. You can call [addAdsBlockDisallowedList](arkts-arkweb-webview-adsblockmanager-c.md#addadsblockdisallowedlist) to disable the feature for specific domains.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-isAdsBlockEnabledForCurPage(): boolean--><!--Device-WebviewController-isAdsBlockEnabledForCurPage(): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true** is returned if ad blocking is enabled; otherwise, **false** is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -4928,19 +4956,19 @@ struct WebComponent {
 static isAutoPreconnectEnabled(): boolean
 ```
 
-Queries the automatic preconnection status of the Web kernel.If the automatic preconnection status of the Web kernel is not set by using [setAutoPreconnect](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setautopreconnect), automatic preconnection is enabled by default, and **true** is returned.
+Queries the automatic preconnection status of the Web kernel.If the automatic preconnection status of the Web kernel is not set by using [setAutoPreconnect](#setautopreconnect), automatic preconnection is enabled by default, and **true** is returned.
 
 **Since:** 21
 
-<!--Device-WebviewController-static isAutoPreconnectEnabled(): boolean--><!--Device-WebviewController-static isAutoPreconnectEnabled(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether auto preconnection is enabled for the Web kernel. The value **true** indicates that the private network access check feature is enabled, and **false** indicates the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -4977,23 +5005,23 @@ Checks whether this Webview is in incognito mode.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-isIncognitoMode(): boolean--><!--Device-WebviewController-isIncognitoMode(): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the Webview is in incognito mode. <br>The value **true** indicates that incognito mode is enabled for WebView, and **false** indicates the opposite. <br>Default value: **false**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -5034,24 +5062,24 @@ Obtains whether the **Web** component has enabled intelligent tracking preventio
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-isIntelligentTrackingPreventionEnabled(): boolean--><!--Device-WebviewController-isIntelligentTrackingPreventionEnabled(): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the Web component has enabled the smart anti-tracking feature. <br>The value **true** indicates that the smart anti-tracking feature is enabled, and **false** indicates that it is not enabled. <br>Default value: **false |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -5095,15 +5123,15 @@ Obtains whether the private network access check feature is enabled for the **We
 
 **Since:** 20
 
-<!--Device-WebviewController-static isPrivateNetworkAccessEnabled(): boolean--><!--Device-WebviewController-static isPrivateNetworkAccessEnabled(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the private network access check feature is enabled for the **Web** component. The value **true** indicates that the private network access check feature is enabled, and **false** indicates the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -5147,17 +5175,17 @@ Checks whether the safe browsing feature is enabled for this web page.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-isSafeBrowsingEnabled(): boolean--><!--Device-WebviewController-isSafeBrowsingEnabled(): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the safe browsing feature is enabled for this web page. <br>The value **true** indicates that the safe browsing feature is enabled, and **false** indicates the opposite. <br>Default value: **false**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -5205,29 +5233,29 @@ Loads specified data.When both **baseUrl** and **historyUrl** are empty:If **enc
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-loadData(data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string): void--><!--Device-WebviewController-loadData(data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | string | Yes | String obtained after being base64 or URL encoded. |
-| mimeType | string | Yes | Media type (MIME). |
-| encoding | string | Yes | Encoding type, which can be base64 or URL. |
-| baseUrl | string | No | URL (HTTP/HTTPS/data compliant), which is assigned by the **Web** component to **window.origin**. If a large number of HTML files need to be loaded, set this parameter to **data**. <br>If **undefined** or **null** is passed, error code **401** will be thrown. |
-| historyUrl | string | No | URL used for historical records. If this parameter is not empty, historical records are managed based on this URL. This parameter is invalid when **baseUrl** is left empty. <br>If **undefined** or **null** is passed, error code **401** will be thrown. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | string | Yes |
+| mimeType | string | Yes |
+| encoding | string | Yes |
+| baseUrl | string | No |
+| [historyUrl](arkts-arkweb-webview-historyitem-i.md) | string | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048.<br>**Applicable version:** 9 - 10 |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 **Examples**
 
@@ -5405,27 +5433,27 @@ Loads a specified URL.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-loadUrl(url: string | Resource, headers?: Array<WebHeader>): void--><!--Device-WebviewController-loadUrl(url: string | Resource, headers?: Array<WebHeader>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | URL to load. |
-| headers | Array&lt;WebHeader&gt; | No | Additional HTTP request header of the URL. <br>Default value: **[]**. <br>If **undefined** or **null** is passed, error code **401** will be thrown. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| url | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| headers | Array & lt;WebHeader & gt; | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid. |
-| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) | Invalid resource path or file type. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) |
 
 **Examples**
 
@@ -5594,16 +5622,36 @@ Deregisters the attach state event of **WebViewController**. After the deregistr
 
 **Since:** 20
 
-<!--Device-WebviewController-off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachState>): void--><!--Device-WebviewController-off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachState>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'controllerAttachStateChange' | Yes | Attach state event of **WebViewController**, whose value is fixed to **controllerAttachStateChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](../../apis-default/arkts-apis/arkts-webview-controllerattachstate-e.md)&gt; | No | Callback triggered when the attach state of **WebViewController** changes. By default, this parameter is left blank. If **Callback** is specified, only the specified callback is deregistered. Otherwise, all callbacks will be deregistered. <br>If **null** or **undefined** is passed, error code **401** is thrown. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'controllerAttachStateChange' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | No |
+
+## offControllerAttachStateChange
+
+```TypeScript
+offControllerAttachStateChange(callback?: Callback<ControllerAttachState>): void
+```
+
+Unregister the callback for controller attach state change.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | No |
 
 ## on('controllerAttachStateChange')
 
@@ -5615,16 +5663,16 @@ Registers the attach state event of **WebViewController**, which obtains the att
 
 **Since:** 20
 
-<!--Device-WebviewController-on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState>): void--><!--Device-WebviewController-on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'controllerAttachStateChange' | Yes | Attach state event of **WebViewController**, whose value is fixed to **controllerAttachStateChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](../../apis-default/arkts-apis/arkts-webview-controllerattachstate-e.md)&gt; | Yes | Callback triggered when the attach state of **WebViewController** changes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'controllerAttachStateChange' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | Yes |
 
 ## onActive
 
@@ -5636,17 +5684,17 @@ Called when the **Web** component enters the active state.The application can in
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-onActive(): void--><!--Device-WebviewController-onActive(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -5676,6 +5724,26 @@ struct WebComponent {
 }
 ```
 
+## onControllerAttachStateChange
+
+```TypeScript
+onControllerAttachStateChange(callback: Callback<ControllerAttachState>): void
+```
+
+Register the callback for controller attach state change.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | Yes |
+
 ## onCreateNativeMediaPlayer
 
 ```TypeScript
@@ -5686,17 +5754,17 @@ Registers a callback function. After enableNativeMediaPlayer is used to enable t
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void--><!--Device-WebviewController-onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [CreateNativeMediaPlayerCallback](../../apis-default/arkts-apis/arkts-webview-createnativemediaplayercallback-t.md) | Yes | Callback when the application takes over media playback on the web page. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md) | Yes |
 
 **Examples**
 
@@ -5912,21 +5980,21 @@ function shouldHandle(mediaInfo: webview.MediaInfo) {
 onInactive(): void
 ```
 
-Called when the **Web** component enters the inactive state. You can implement the behavior to perform after the application loses focus.When this API is called, any content that can be safely paused, such as animations and geographical locations, is paused as much as possible. However, the JavaScript is not paused. To pause the JavaScript globally, use [pauseAllTimers](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#pausealltimers). To reactivate the **Web** component, use [onActive](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#onactive).
+Called when the **Web** component enters the inactive state. You can implement the behavior to perform after the application loses focus.When this API is called, any content that can be safely paused, such as animations and geographical locations, is paused as much as possible. However, the JavaScript is not paused. To pause the JavaScript globally, use [pauseAllTimers](#pausealltimers). To reactivate the **Web** component, use [onActive](#onactive).
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-onInactive(): void--><!--Device-WebviewController-onInactive(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -5966,24 +6034,24 @@ Scrolls the page down by half the viewport or jumps to the bottom of the page.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-pageDown(bottom: boolean): void--><!--Device-WebviewController-pageDown(bottom: boolean): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bottom | boolean | Yes | Whether to jump to the bottom of the page. <br>The value **false** means to scroll the page down by half the viewport, and the value **true** means to jump to the bottom of the page. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bottom | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -6058,24 +6126,24 @@ Scrolls the page up by half the viewport or jumps to the top of the page.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-pageUp(top: boolean): void--><!--Device-WebviewController-pageUp(top: boolean): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| top | boolean | Yes | Whether to jump to the top of the page. <br>The value **false** means to scroll the page up by half the viewport, and the value **true** means to jump to the top of the page. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| top | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -6148,17 +6216,17 @@ Pauses all audio and video on a web page.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-pauseAllMedia(): void--><!--Device-WebviewController-pauseAllMedia(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -6194,21 +6262,21 @@ struct WebComponent {
 static pauseAllTimers(): void
 ```
 
-Pauses all WebView timers. While the timers are paused, timer operations such as setInterval and setTimeout in the web page are suspended. It is recommended to pause timers when the app enters the background and resume them when the app returns to the foreground, so as to save resources. This API can be used in pair with [resumeAllTimers](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#resumealltimers)() to avoid timer state confusion.
+Pauses all WebView timers. While the timers are paused, timer operations such as setInterval and setTimeout in the web page are suspended. It is recommended to pause timers when the app enters the background and resume them when the app returns to the foreground, so as to save resources. This API can be used in pair with [resumeAllTimers](#resumealltimers)() to avoid timer state confusion.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static pauseAllTimers(): void--><!--Device-WebviewController-static pauseAllTimers(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -6278,15 +6346,15 @@ Pauses microphone capture on the current web page.
 
 **Since:** 23
 
-<!--Device-WebviewController-pauseMicrophone(): void--><!--Device-WebviewController-pauseMicrophone(): void-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -6302,26 +6370,26 @@ Sends a web message to an HTML window.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-postMessage(name: string, ports: Array<WebMessagePort>, uri: string): void--><!--Device-WebviewController-postMessage(name: string, ports: Array<WebMessagePort>, uri: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the message to send. |
-| ports | Array&lt;[WebMessagePort](../../apis-default/arkts-apis/arkts-webview-webmessageport-i.md)&gt; | Yes | Message ports for sending the message. |
-| uri | string | Yes | URI for receiving the message. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| ports | Array&lt;[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)&gt; | Yes |
+| uri | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -6467,30 +6535,30 @@ function PostMsgToEts(data) {
 postUrl(url: string, postData: ArrayBuffer): void
 ```
 
-Loads a URL with postData using the "POST" method. If the URL is not a network URL, the [loadUrl](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#loadurl) method is used to load the URL, and the postData parameter is ignored.
+Loads a URL with postData using the "POST" method. If the URL is not a network URL, the [loadUrl](#loadurl) method is used to load the URL, and the postData parameter is ignored.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-postUrl(url: string, postData: ArrayBuffer): void--><!--Device-WebviewController-postUrl(url: string, postData: ArrayBuffer): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string | Yes | URL to load. |
-| postData | ArrayBuffer | Yes | Data to transfer using the POST method. The request must be encoded in "application/x-www-form-urlencoded" format. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| url | string | Yes |
+| postData | ArrayBuffer | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 **Examples**
 
@@ -6548,30 +6616,30 @@ Precompiles JavaScript to generate the bytecode cache or update the existing byt
 
 **Since:** 12
 
-<!--Device-WebviewController-precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise<number>--><!--Device-WebviewController-precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise<number>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string | Yes | Network address corresponding to the local JavaScript file, that is, the network address used when the service web page requests the server version of the file. The network address supports only the HTTP and HTTPS protocols and contains a maximum of 2048 characters. If the cache corresponding to the network address is invalid, the service web page requests the corresponding resource through the network. |
-| script | string \| Uint8Array | Yes | Text content of the local JavaScript. The content cannot be empty. |
-| cacheOptions | [CacheOptions](../../apis-default/arkts-apis/arkts-webview-cacheoptions-i.md) | Yes | Whether to update the bytecode cache. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| url | string | Yes |
+| script | string \| Uint8Array | Yes |
+| cacheOptions | [CacheOptions](arkts-arkweb-webview-cacheoptions-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;number&gt; | Promise used to return the error code for generating the bytecode cache. The value **0** indicates no error, and the value **-1** indicates an internal error. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -6802,25 +6870,25 @@ Prefetches resources in the background for a page that is likely to be accessed 
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void--><!--Device-WebviewController-prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string | Yes | URL to preload. |
-| additionalHeaders | Array&lt;WebHeader&gt; | No | Additional HTTP request headers for the URL. <br>Default value: [] |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| url | string | Yes |
+| additionalHeaders | Array & lt;WebHeader & gt; | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024.<br>**Applicable version:** 22 and later |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 **Examples**
 
@@ -6901,24 +6969,24 @@ Prefetches resources in the background for a page that is likely to be accessed 
 
 **Since:** 21
 
-<!--Device-WebviewController-prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?: PrefetchOptions): void--><!--Device-WebviewController-prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?: PrefetchOptions): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string | Yes | URL to preload. |
-| additionalHeaders | Array&lt;WebHeader&gt; | No | Additional HTTP request headers for the URL. <br>Default value: [] |
-| prefetchOptions | [PrefetchOptions](../../apis-default/arkts-apis/arkts-webview-prefetchoptions-c.md) | No | Options for customizing the prefetch behavior. <br>The minimum interval between two prefetches is 500 ms. By default, Cache-Control: no-store in the response header is not ignored. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| url | string | Yes |
+| additionalHeaders | Array & lt;WebHeader & gt; | No |
+| prefetchOptions | [PrefetchOptions](arkts-arkweb-webview-prefetchoptions-c.md) | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024.<br>**Applicable version:** 22 and later |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 **Examples**
 
@@ -6931,31 +6999,31 @@ static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeade
                             cacheValidTime?: number): void
 ```
 
-Prefetches resource requests based on specified request information and additional HTTP request headers, saves them to the memory cache, and specifies the cache key and validity period to accelerate loading. Currently, only POST requests with Content-Type of application/x-www-form-urlencoded are supported. A maximum of six POST requests can be prefetched. To prefetch a seventh one, use [clearPrefetchedResource](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#clearprefetchedresource) to clear unnecessary POST request caches. Otherwise, the earliest prefetched POST cache is automatically cleared. To use the prefetched resource cache, developers need to add the key-value pair "ArkWebPostCacheKey" to the request header of the actual POST request, with the value being the cacheKey of the corresponding cache.Resources in the memory cache are automatically managed by the kernel. When too many resources are injected, causing excessive memory pressure, the kernel automatically releases unused resources. However, injecting a large number of resources into the memory cache should still be avoided.
+Prefetches resource requests based on specified request information and additional HTTP request headers, saves them to the memory cache, and specifies the cache key and validity period to accelerate loading. Currently, only POST requests with Content-Type of application/x-www-form-urlencoded are supported. A maximum of six POST requests can be prefetched. To prefetch a seventh one, use [clearPrefetchedResource](#clearprefetchedresource) to clear unnecessary POST request caches. Otherwise, the earliest prefetched POST cache is automatically cleared. To use the prefetched resource cache, developers need to add the key-value pair "ArkWebPostCacheKey" to the request header of the actual POST request, with the value being the cacheKey of the corresponding cache.Resources in the memory cache are automatically managed by the kernel. When too many resources are injected, causing excessive memory pressure, the kernel automatically releases unused resources. However, injecting a large number of resources into the memory cache should still be avoided.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeader>, cacheKey?: string,                            cacheValidTime?: number): void--><!--Device-WebviewController-static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeader>, cacheKey?: string,                            cacheValidTime?: number): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| request | RequestInfo | Yes | Information about the prefetched request. |
-| additionalHeaders | Array&lt;WebHeader&gt; | No | Additional HTTP request header of the prefetched request. <br>If **undefined** or **null** is passed, error code **401** will be thrown. |
-| cacheKey | string | No | Key used to query the cache of prefetched resources. The value can contain only letters and digits. If this parameter is not passed or is left empty, **url** is used by default. <br>If **undefined** or **null** is passed, error code **401** will be thrown. |
-| cacheValidTime | number | No | Validity period of the prefetched resource cache. <br>Value range: (0, 2147483647]. <br>Default value: 300s. <br>Unit: s. <br>If undefined or null is passed in, an exception with error code 401 is thrown. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| request | [RequestInfo](../../apis-ability-kit/arkts-apis/arkts-ability-dialogrequest-requestinfo-i.md) | Yes |
+| additionalHeaders | Array & lt;WebHeader & gt; | No |
+| cacheKey | string | No |
+| cacheValidTime | number | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024.<br>**Applicable version:** 22 and later |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 **Examples**
 
@@ -6996,26 +7064,26 @@ Preconnects to a URL. Call this API before loading the URL. It only performs DNS
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: number): void--><!--Device-WebviewController-static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: number): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string | Yes | URL for preconnection. |
-| preconnectable | boolean | Yes | Whether to perform preconnection. If the value is **true**, DNS resolution and socket connection preconnection are performed for the URL. If the value is **false**, no preconnection operation is performed. |
-| numSockets | number | Yes | Number of sockets to be preconnected. The value must be greater than 0. A maximum of six socket connections are allowed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| url | string | Yes |
+| preconnectable | boolean | Yes |
+| numSockets | number | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024.<br>**Applicable version:** 22 and later |
-| [17100013](../errorcode-webview.md#17100013-invalid-number-of-sockets-during-preconnection) | The number of preconnect sockets is invalid. |
+| Error Code ID |
+| --- |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [17100013](../errorcode-webview.md#17100013-invalid-number-of-sockets-during-preconnection) |
 
 **Examples**
 
@@ -7046,17 +7114,17 @@ Called when the **Web** component refreshes the web page.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-refresh(): void--><!--Device-WebviewController-refresh(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -7122,21 +7190,21 @@ Notifies the **Web** component to refresh the web page. You can choose whether t
 
 **Since:** 24
 
-<!--Device-WebviewController-refresh(ignoreCache: boolean): void--><!--Device-WebviewController-refresh(ignoreCache: boolean): void-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| ignoreCache | boolean | Yes | Whether to ignore cache refresh when the **Web** component refreshes the web page. <br>The value **true** means to ignore the cache refresh, and **false** means the opposite. <br>**NOTE：**<br>If **undefined** or **null** is passed in, the value is **false**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| ignoreCache | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -7173,28 +7241,28 @@ Registers a proxy for interaction between the application and web pages loaded b
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-registerJavaScriptProxy(jsObject: object, name: string, methodList: Array<string>,        asyncMethodList?: Array<string>, permission?: string): void--><!--Device-WebviewController-registerJavaScriptProxy(jsObject: object, name: string, methodList: Array<string>,        asyncMethodList?: Array<string>, permission?: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| jsObject | object | Yes | Application-side JavaScript object to be registered. Methods and attributes can be declared separately, but cannot be registered and used at the same time. If an object contains only attributes, HTML5 can access the attributes in the object. If an object contains only methods, HTML5 can access the methods in the object. <br>1. The parameter and return value can be any of the following types: <br>string, number, boolean. <br>2. Dictionary or Array, with a maximum of 10 nested layers and 10,000 data records per layer. <br>3. Object, which must contain the **methodNameListForJsProxy:[fun1, fun2]** attribute, where **fun1** and **fun2** are methods that can be called. <br>4. The parameter also supports Function and Promise. Their callback cannot have return values. <br>5. The return value supports Promise. Its callback cannot have a return value. |
-| name | string | Yes | Name of the object to be registered, which is the same as that invoked in the window. After registration, the window can use this name to access the JavaScript object at the application side. |
-| methodList | Array&lt;string&gt; | Yes | Synchronous methods of the JavaScript object to be registered at the application side. |
-| asyncMethodList | Array&lt;string&gt; | No | Asynchronous methods of the JavaScript object to be registered at the application side. The default value is null. Asynchronous methods cannot obtain return values. <br>If **undefined** or **null** is passed, error code **401** will be thrown.<br>**Since:** 12 |
-| permission | string | No | JSON string, which is empty by default. This string is used to configure JSBridge permission control and define the URL trustlist at the object and method levels. <br>1. The **scheme** and **host** parameters cannot be empty. The **host** does not support wildcards and can contain only complete host names. <br>2. You can configure only the object-level trustlist, which takes effect for all JSBridge methods. <br>3. If method-level trustlists are configured for JSBridge method A, the intersection of object-level and method-level trustlists takes effect. <br>If **undefined** or **null** is passed, error code **401** will be thrown.<br>**Since:** 12 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [jsObject](arkts-arkweb-web-javascriptproxy-i.md) | object | Yes |
+| name | string | Yes |
+| methodList | Array & lt;string & gt; | Yes |
+| asyncMethodList | Array & lt;string & gt; | No |
+| permission | string | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -7347,21 +7415,21 @@ Removes all resource caches generated by Webview (including private mode) in the
 
 **Since:** 18
 
-<!--Device-WebviewController-static removeAllCache(clearRom: boolean): void--><!--Device-WebviewController-static removeAllCache(clearRom: boolean): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| clearRom | boolean | Yes | Whether to clear the cache files in both ROM and RAM. If this parameter is set to **true**, the cache files in both ROM and RAM are cleared. If this parameter is set to **false**, only the cache files in RAM are cleared. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| clearRom | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -7401,24 +7469,24 @@ Removes all resource caches generated by Webview in the app.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-removeCache(clearRom: boolean): void--><!--Device-WebviewController-removeCache(clearRom: boolean): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| clearRom | boolean | Yes | Whether to clear the cache files in both ROM and RAM. If this parameter is set to **true**, the cache files in both ROM and RAM are cleared. If this parameter is set to **false**, only the cache files in RAM are cleared. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| clearRom | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -7458,24 +7526,24 @@ Deletes the domain names from the list of domain names added through the **addIn
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static removeIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void--><!--Device-WebviewController-static removeIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| hostList | Array&lt;string&gt; | Yes | List of domain names that bypass intelligent tracking prevention. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| hostList | Array & lt;string & gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -7516,17 +7584,17 @@ Requests focus for the specified component.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-requestFocus(): void--><!--Device-WebviewController-requestFocus(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -7566,28 +7634,28 @@ Restores the page status history from the serialized data of the current WebView
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-restoreWebState(state: Uint8Array) : void--><!--Device-WebviewController-restoreWebState(state: Uint8Array) : void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| state | Uint8Array | Yes | Serialized data of the page status history. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| state | Uint8Array | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
-To perform operations on files, you must first import the fs module. For details, see File Management.
+To perform operations on files, you must first import the fs module. For details, see [File Management](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileio-n.md).
 
 ```TypeScript
 // xxx.ets
@@ -7657,17 +7725,17 @@ Resumes the playback of the audio and video that are paused by the pauseAllMedia
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-resumeAllMedia(): void--><!--Device-WebviewController-resumeAllMedia(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -7707,17 +7775,17 @@ Resumes all timers that are paused from the **pauseAllTimers()** API.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static resumeAllTimers(): void--><!--Device-WebviewController-static resumeAllTimers(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -7786,15 +7854,15 @@ Resumes microphone capture on the current web page. Before using the microphone 
 
 **Since:** 23
 
-<!--Device-WebviewController-resumeMicrophone(): void--><!--Device-WebviewController-resumeMicrophone(): void-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -7931,31 +7999,31 @@ Executes a JavaScript script asynchronously in the context of the current page. 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-runJavaScript(script: string): Promise<string>--><!--Device-WebviewController-runJavaScript(script: string): Promise<string>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| script | string | Yes | JavaScript script. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| script | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Promise used to return the result if the operation is successful and null otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) | Calling a JS method that returns an empty ArrayBuffer via runJavaScript. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) |
 
 **Examples**
 
@@ -8098,26 +8166,26 @@ Executes a JavaScript script asynchronously in the context of the current page. 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-runJavaScript(script: string, callback: AsyncCallback<string>): void--><!--Device-WebviewController-runJavaScript(script: string, callback: AsyncCallback<string>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| script | string | Yes | JavaScript script. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. **null** is returned if the JavaScript script fails to be executed or no value is returned. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| script | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) | Calling a JS method that returns an empty ArrayBuffer via runJavaScript. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) |
 
 **Examples**
 
@@ -8137,30 +8205,30 @@ Executes a JavaScript script asynchronously and returns the script execution res
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>--><!--Device-WebviewController-runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| script | string \| ArrayBuffer | Yes | JavaScript script.<br>**Since:** 12 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| script | string \| ArrayBuffer | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[JsMessageExt](../../apis-default/arkts-apis/arkts-webview-jsmessageext-c.md)&gt; | Promise used to return the script execution result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -8557,25 +8625,25 @@ Executes a JavaScript script. This API uses an asynchronous callback to return t
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessageExt>): void--><!--Device-WebviewController-runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessageExt>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| script | string \| ArrayBuffer | Yes | JavaScript script.<br>**Since:** 12 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[JsMessageExt](../../apis-default/arkts-apis/arkts-webview-jsmessageext-c.md)&gt; | Yes | Callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| script | string \| ArrayBuffer | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md)&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -8591,26 +8659,26 @@ Scrolls the page by the specified amount within a specified period.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-scrollBy(deltaX: number, deltaY: number, duration?: number): void--><!--Device-WebviewController-scrollBy(deltaX: number, deltaY: number, duration?: number): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| deltaX | number | Yes | Amount to scroll by along the x-axis. The positive direction is rightward. <br>Unit: vp |
-| deltaY | number | Yes | Amount to scroll by along the y-axis. The positive direction is downward. <br>Unit: vp |
-| duration | number | No | Scrolling animation duration, <br>in milliseconds. <br>If no value is input or the input value is a negative number or 0, the animation is disabled. <br>If **null** or **undefined** is passed, error code **401** is thrown.<br>**Since:** 14 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| deltaX | number | Yes |
+| deltaY | number | Yes |
+| duration | number | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -8682,29 +8750,29 @@ Scrolls the page by the specified amount and returns value to indicate whether t
 
 **Since:** 12
 
-<!--Device-WebviewController-scrollByWithResult(deltaX: number, deltaY: number): boolean--><!--Device-WebviewController-scrollByWithResult(deltaX: number, deltaY: number): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| deltaX | number | Yes | Amount to scroll by along the x-axis. The positive direction is rightward. <br>Unit: vp |
-| deltaY | number | Yes | Amount to scroll by along the y-axis. The positive direction is downward. <br>Unit: vp |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| deltaX | number | Yes |
+| deltaY | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | The value **true** indicates that the current web page can be scrolled, and **false** indicates that the current web page cannot be scrolled. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -8769,26 +8837,26 @@ Scrolls the page to the specified absolute position within a specified period.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-scrollTo(x: number, y: number, duration?: number): void--><!--Device-WebviewController-scrollTo(x: number, y: number, duration?: number): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | number | Yes | X coordinate of the absolute position. If the value is a negative number, the value 0 is used. <br>Unit: vp |
-| y | number | Yes | Y coordinate of the absolute position. If the value is a negative number, the value 0 is used. <br>Unit: vp |
-| duration | number | No | Scrolling animation duration, <br>in milliseconds. <br>If no value is input or the input value is a negative number or 0, the animation is disabled. <br>If **null** or **undefined** is passed, error code **401** is thrown.<br>**Since:** 14 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | number | Yes |
+| y | number | Yes |
+| duration | number | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -8860,24 +8928,24 @@ Searches the web page for content that matches the keyword specified by **'searc
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-searchAllAsync(searchString: string): void--><!--Device-WebviewController-searchAllAsync(searchString: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchString | string | Yes | Search keyword. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchString | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -8936,24 +9004,24 @@ Searches for and highlights the next match.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-searchNext(forward: boolean): void--><!--Device-WebviewController-searchNext(forward: boolean): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| forward | boolean | Yes | Whether to search forward or backward. <br>The value **true** indicates a forward search, and the value **false** indicates a backward search. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [forward](#forward) | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -8993,27 +9061,27 @@ Serializes the page status history of the current WebView.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-serializeWebState(): Uint8Array--><!--Device-WebviewController-serializeWebState(): Uint8Array-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint8Array | Serialized data of the page state history of the current WebView. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Uint8Array |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
-To perform operations on files, you must first import the fs module. For details, see File Management.
+To perform operations on files, you must first import the fs module. For details, see [File Management](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileio-n.md).
 
 ```TypeScript
 // xxx.ets
@@ -9079,15 +9147,15 @@ Sets the ArkWeb kernel version. If the system does not support the specified ver
 
 **Since:** 20
 
-<!--Device-WebviewController-static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void--><!--Device-WebviewController-static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| engineVersion | [ArkWebEngineVersion](../../apis-default/arkts-apis/arkts-webview-arkwebengineversion-e.md) | Yes | ArkWeb kernel version. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| engineVersion | [ArkWebEngineVersion](arkts-arkweb-webview-arkwebengineversion-e.md) | Yes |
 
 **Examples**
 
@@ -9116,19 +9184,19 @@ export default class EntryAbility extends UIAbility {
 static setAppCustomUserAgent(userAgent: string) : void
 ```
 
-Sets the application-level custom user agent, which will overwrite the system user agent and take effect for all **Web** components in the application.If you need to set the application-level custom user agent, you are advised to call the **setAppCustomUserAgent** method to set the **User-Agent** before creating the **Web** component, and then create the **Web** component with the specified src or load the page using [loadUrl](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#loadurl).For details about the default **User-Agent** definition, application scenarios, and API priorities, see [Developing User-Agent](../../../web/web-default-userAgent.md).
+Sets the application-level custom user agent, which will overwrite the system user agent and take effect for all **Web** components in the application.If you need to set the application-level custom user agent, you are advised to call the **setAppCustomUserAgent** method to set the **User-Agent** before creating the **Web** component, and then create the **Web** component with the specified src or load the page using [loadUrl](#loadurl).For details about the default **User-Agent** definition, application scenarios, and API priorities, see [Developing User-Agent](../../../web/web-default-userAgent.md).
 
 **Since:** 20
 
-<!--Device-WebviewController-static setAppCustomUserAgent(userAgent: string) : void--><!--Device-WebviewController-static setAppCustomUserAgent(userAgent: string) : void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| userAgent | string | Yes | Information about the custom user agent. It is recommended that you obtain the current default user agent through [getDefaultUserAgent](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getdefaultuseragent) and then customize the obtained user agent. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| userAgent | string | Yes |
 
 **Examples**
 
@@ -9171,24 +9239,24 @@ Mutes the web page. Typical use cases include: the app needs to control the web 
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-setAudioMuted(mute: boolean): void--><!--Device-WebviewController-setAudioMuted(mute: boolean): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mute | boolean | Yes | Whether to mute the web page. <br>The value **true** means to mute the web page, and **false** means the opposite. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mute | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -9223,19 +9291,19 @@ struct WebComponent {
 static setAutoPreconnect(enabled: boolean): void
 ```
 
-Sets the automatic preconnection status of the Web kernel. If this API is not set, automatic preconnection is enabled by default.This API must be called before [initializeWebEngine()](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#initializewebengine) initializes the kernel or a **Web** component is created. If any **Web** component has been loaded, the setting does not take effect.
+Sets the automatic preconnection status of the Web kernel. If this API is not set, automatic preconnection is enabled by default.This API must be called before [initializeWebEngine()](#initializewebengine) initializes the kernel or a **Web** component is created. If any **Web** component has been loaded, the setting does not take effect.
 
 **Since:** 21
 
-<!--Device-WebviewController-static setAutoPreconnect(enabled: boolean): void--><!--Device-WebviewController-static setAutoPreconnect(enabled: boolean): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable automatic preconnection of the Web kernel. The value **true** means to enable the private network access check feature, and **false** means the opposite. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enabled | boolean | Yes |
 
 **Examples**
 
@@ -9263,21 +9331,21 @@ Sets the back-forward cache options of the **Web** component.
 
 **Since:** 12
 
-<!--Device-WebviewController-setBackForwardCacheOptions(options: BackForwardCacheOptions): void--><!--Device-WebviewController-setBackForwardCacheOptions(options: BackForwardCacheOptions): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [BackForwardCacheOptions](../../apis-default/arkts-apis/arkts-webview-backforwardcacheoptions-c.md) | Yes | Options to control the back-forward cache of the **Web** component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [BackForwardCacheOptions](arkts-arkweb-webview-backforwardcacheoptions-c.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -9324,27 +9392,27 @@ Sets the persistent cache capacity of the blankless loading solution and returns
 
 **Since:** 20
 
-<!--Device-WebviewController-static setBlanklessLoadingCacheCapacity(capacity: number) : number--><!--Device-WebviewController-static setBlanklessLoadingCacheCapacity(capacity: number) : number-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| capacity | number | Yes | Persistent cache capacity, in MB. The maximum value is 100 MB.<br>The value ranges from 0 to 100. If this parameter is set to **0**, no cache capacity is available and the functionality is disabled globally.<br>When a value less than 0 is set, the value **0** takes effect. When a value greater than 100 is set, the value **100** takes effect. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| capacity | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Effective value that ranges from 0 MB to 100 MB. <br>When a value less than 0 is set, the value **0** takes effect. When a value greater than 100 is set, the value **100** takes effect. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |  |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -9375,11 +9443,11 @@ export default class EntryAbility extends UIAbility {
 setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCode
 ```
 
-Sets whether to enable blankless loading. This API must be used together with [getBlanklessInfoWithKey](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getblanklessinfowithkey).
+Sets whether to enable blankless loading. This API must be used together with [getBlanklessInfoWithKey](#getblanklessinfowithkey).
 
 > **NOTE：**&gt;
 > - This API must be called after the page loading API is triggered. Other restrictions are the same as those of
-> [getBlanklessInfoWithKey](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getblanklessinfowithkey).&gt;
+> [getBlanklessInfoWithKey](#getblanklessinfowithkey).&gt;
 > - The page must be loaded in the component that calls this API.&gt;
 > - When the similarity is low, the system will deem the scene change too abrupt and frame insertion will fail.&gt;
 > - Add the **ohos.permission.INTERNET** and **ohos.permission.GET_NETWORK_INFO** permissions to **module.json5**
@@ -9388,28 +9456,28 @@ Sets whether to enable blankless loading. This API must be used together with [g
 
 **Since:** 20
 
-<!--Device-WebviewController-setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCode--><!--Device-WebviewController-setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Key value that uniquely identifies the page. This value must be the same as the **key** value of the **getBlanklessInfoWithKey** API.<br>The value cannot be empty and can contain a maximum of 2048 characters.<br>When an invalid value is set, the error code **WebBlanklessErrorCode** is returned, and the API does not take effect. |
-| is_start | boolean | Yes | Whether to enable frame interpolation. The value **true** means to enable frame interpolation, and **false** means the opposite.<br>If **undefined** or **null** is passed in, the value is **false**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| is_start | boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WebBlanklessErrorCode](../../apis-default/arkts-apis/arkts-webview-webblanklesserrorcode-e.md) | Whether the API is successfully called. For details, see [WebBlanklessErrorCode]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) |  |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -9455,11 +9523,11 @@ setBlanklessLoadingWithParams(key: string,
       param: BlanklessLoadingParam) : WebBlanklessErrorCode
 ```
 
-Sets the configuration parameters for frame interpolation during blankless loading. This API must be used with [getBlanklessInfoWithKey](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getblanklessinfowithkey). Compared with [setBlanklessLoadingWithKey](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setblanklessloadingwithkey), this API supports more parameter settings for frame interpolation during blankless loading, including the frame interpolation duration, cache data validity period, and custom callback after frame interpolation is complete.
+Sets the configuration parameters for frame interpolation during blankless loading. This API must be used with [getBlanklessInfoWithKey](#getblanklessinfowithkey). Compared with [setBlanklessLoadingWithKey](#setblanklessloadingwithkey), this API supports more parameter settings for frame interpolation during blankless loading, including the frame interpolation duration, cache data validity period, and custom callback after frame interpolation is complete.
 
 > **NOTE：**&gt;
 > - This API must be called after the page loading API is triggered. Other restrictions are the same as those of
-> [getBlanklessInfoWithKey](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getblanklessinfowithkey).&gt;
+> [getBlanklessInfoWithKey](#getblanklessinfowithkey).&gt;
 > - The page must be loaded in the component that calls this API.&gt;
 > - When the similarity is low, the system will deem the scene change too abrupt and frame insertion will fail.&gt;
 > - Add the **ohos.permission.INTERNET** and **ohos.permission.GET_NETWORK_INFO** permissions to
@@ -9468,30 +9536,30 @@ Sets the configuration parameters for frame interpolation during blankless loadi
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-WebviewController-setBlanklessLoadingWithParams(key: string,      param: BlanklessLoadingParam) : WebBlanklessErrorCode--><!--Device-WebviewController-setBlanklessLoadingWithParams(key: string,      param: BlanklessLoadingParam) : WebBlanklessErrorCode-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Key value that uniquely identifies the page. This value must be the same as the **key** value of the **getBlanklessInfoWithKey** API. <br>The value cannot be empty and can contain a maximum of 2048 characters. <br>When an invalid value is set, the error code **WebBlanklessErrorCode** is returned, and the API does not take effect. |
-| param | [BlanklessLoadingParam](../../apis-default/arkts-apis/arkts-webview-blanklessloadingparam-i.md) | Yes | Parameters for frame interpolation of blankless loading. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| param | [BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WebBlanklessErrorCode](../../apis-default/arkts-apis/arkts-webview-webblanklesserrorcode-e.md) | API calling result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -9545,23 +9613,23 @@ Sets the network connection timeout interval. You can use the **onErrorReceive**
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static setConnectionTimeout(timeout: number): void--><!--Device-WebviewController-static setConnectionTimeout(timeout: number): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| timeout | number | Yes | Socket connection timeout duration, in seconds. The value must be a positive integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| timeout | number | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -9619,24 +9687,24 @@ Sets a custom user agent, which will overwrite the default user agent.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-setCustomUserAgent(userAgent: string): void--><!--Device-WebviewController-setCustomUserAgent(userAgent: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| userAgent | string | Yes | Information about the custom user agent. It is recommended that you obtain the current default user agent through [getUserAgent](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getuseragent) and then customize the obtained user agent. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| userAgent | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -9678,23 +9746,23 @@ Sets a **WebDownloadDelegate** for the current **Web** component. The delegate i
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-setDownloadDelegate(delegate: WebDownloadDelegate): void--><!--Device-WebviewController-setDownloadDelegate(delegate: WebDownloadDelegate): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| delegate | [WebDownloadDelegate](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md) | Yes | Delegate used to receive the download progress. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| delegate | [WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -9822,21 +9890,21 @@ Sets whether to enable the default error page.When this API is set to true, if a
 
 **Since:** 20
 
-<!--Device-WebviewController-setErrorPageEnabled(enable: boolean): void--><!--Device-WebviewController-setErrorPageEnabled(enable: boolean): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable the default error page. The value **true** means to enable the default error page, and **false** means the opposite. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enable | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -9873,7 +9941,7 @@ Sets whether to enable the mainframe error page feature, and controls whether to
 > - When **enable** is set to **false**, the error page feature for both mainframe and subframe is disabled
 > regardless of the value of **includeSubframe**.&gt;
 > - When **includeSubframe** is set to **false**, the behavior of this API is the same as that of
-> [setErrorPageEnabled](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#seterrorpageenabled)&lt;sup&gt;20+&lt;/sup&gt;, that
+> [setErrorPageEnabled](#seterrorpageenabled)&lt;sup&gt;20+&lt;/sup&gt;, that
 > is, only the mainframe error page feature is enabled, and the subframe error page feature is not enabled.&gt;
 > - You can use errorPageEvent.request.isMainFrame() to determine whether
 > the error source is a mainframe or a subframe, so as to set the corresponding custom error page in the
@@ -9881,24 +9949,24 @@ Sets whether to enable the mainframe error page feature, and controls whether to
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-WebviewController-setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void--><!--Device-WebviewController-setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable the mainframe error page feature. The value **true** means to enable it, and **false** means the opposite. When enabled, an error page is displayed when a mainframe loading error occurs. |
-| includeSubframe | boolean | Yes | Whether to also enable the subframe error page feature. The value **true** means to enable it, and **false** means the opposite. When enabled, an error page is also displayed when a subframe loading error occurs. This parameter takes effect only when **enable** is **true**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enable | boolean | Yes |
+| includeSubframe | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -9914,25 +9982,25 @@ Sets the IP address of the host after domain name resolution.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static setHostIP(hostName: string, address: string, aliveTime: number): void--><!--Device-WebviewController-static setHostIP(hostName: string, address: string, aliveTime: number): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| hostName | string | Yes | Domain name of the host whose DNS records are to be added. |
-| address | string | Yes | Host domain name resolution address (IPv4 and IPv6). |
-| aliveTime | number | Yes | Cache validity period, in seconds. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| hostName | string | Yes |
+| address | string | Yes |
+| aliveTime | number | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -9948,24 +10016,24 @@ Sets how the **Web** component uses HTTPDNS for DNS resolution.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static setHttpDns(secureDnsMode: SecureDnsMode, secureDnsConfig: string): void--><!--Device-WebviewController-static setHttpDns(secureDnsMode: SecureDnsMode, secureDnsConfig: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| secureDnsMode | [SecureDnsMode](../../apis-default/arkts-apis/arkts-webview-securednsmode-e.md) | Yes | Mode in which HTTPDNS is used. |
-| secureDnsConfig | string | Yes | Information about the HTTPDNS server to use, which must use HTTPS. Only one HTTPDNS server can be configured. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| secureDnsMode | [SecureDnsMode](arkts-arkweb-webview-securednsmode-e.md) | Yes |
+| secureDnsConfig | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -10000,24 +10068,24 @@ Sets the **window.navigator.onLine** attribute in JavaScript.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-setNetworkAvailable(enable: boolean): void--><!--Device-WebviewController-setNetworkAvailable(enable: boolean): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable the **window.navigator.onLine** attribute. <br>The value **true** indicates that the **window.navigator.onLine** attribute is enabled, and the value **false** indicates the opposite. <br>Default value: **true**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enable | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -10093,22 +10161,22 @@ Sets a path list. When the file protocol accesses resources in the path list, cr
 
 **Since:** 12
 
-<!--Device-WebviewController-setPathAllowingUniversalAccess(pathList: Array<string>): void--><!--Device-WebviewController-setPathAllowingUniversalAccess(pathList: Array<string>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pathList | Array&lt;string&gt; | Yes | The path list. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| pathList | Array & lt;string & gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Parameter string is too long. <br>3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -10212,24 +10280,24 @@ Sets whether to print the background of a web page. If the setting of this API i
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-setPrintBackground(enable: boolean): void--><!--Device-WebviewController-setPrintBackground(enable: boolean): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to print the web page background. <br>The value **true** means to print the web page background, and **false** means the opposite. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enable | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -10268,23 +10336,23 @@ Sets the ArkWeb rendering subprocess mode. You can select the appropriate mode b
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static setRenderProcessMode(mode: RenderProcessMode): void--><!--Device-WebviewController-static setRenderProcessMode(mode: RenderProcessMode): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | [RenderProcessMode](../../apis-default/arkts-apis/arkts-webview-renderprocessmode-e.md) | Yes | Render subprocess mode. <br>You can call [getRenderProcessMode()](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getrenderprocessmode) to view the ArkWeb rendering subprocess mode of the current device. The enumerated value **0** indicates the single render subprocess mode, and **1** indicates the multi-render subprocess mode. <br>By default, mobile phones use the single render subprocess mode, and tablets and PCs/2in1 devices use the multi-render subprocess mode. <br>If an invalid number other than the enumerated value of **RenderProcessMode** is passed, the multi-render subprocess mode is used by default. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mode | [RenderProcessMode](arkts-arkweb-webview-renderprocessmode-e.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -10324,25 +10392,25 @@ Sets whether this web page is scrollable.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-setScrollable(enable: boolean, type?: ScrollType): void--><!--Device-WebviewController-setScrollable(enable: boolean, type?: ScrollType): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enable | boolean | Yes | Whether this web page is scrollable. <br>The value **true** indicates that this web page is scrollable, and **false** indicates the opposite. <br>Default value: **true**. |
-| type | [ScrollType](../../apis-default/arkts-apis/arkts-webview-scrolltype-e.md) | No | Scrolling type supported by the web page. The default value is supported. <br> - If the value of **enable** is set to **false**, the specified **ScrollType** is disabled. If **ScrollType** is set to the default value, all scrolling types are disabled. <br> - If the value of **enable** is set to **true**, all scrolling types are enabled regardless of the value of **ScrollType**. <br>If **null** or **undefined** is passed, error code **401** is thrown. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enable | boolean | Yes |
+| type | [ScrollType](arkts-arkweb-webview-scrolltype-e.md) | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -10378,7 +10446,7 @@ struct WebComponent {
 static setScrollbarMode(scrollbarMode: ScrollbarMode): void
 ```
 
-Sets the global scrollbar mode in the web page. When this API is not explicitly called, [ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](../../apis-default/arkts-apis/arkts-webview-scrollbarmode-e.md) is used by default, indicating that the scroll bar is not always displayed.
+Sets the global scrollbar mode in the web page. When this API is not explicitly called, [ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](arkts-arkweb-webview-scrollbarmode-e.md) is used by default, indicating that the scroll bar is not always displayed.
 
 > **NOTE：**&gt;
 > - You can set whether to always display the web scrollbar of the current application based on the scrollbar
@@ -10389,15 +10457,15 @@ Sets the global scrollbar mode in the web page. When this API is not explicitly 
 
 **Since:** 23
 
-<!--Device-WebviewController-static setScrollbarMode(scrollbarMode: ScrollbarMode): void--><!--Device-WebviewController-static setScrollbarMode(scrollbarMode: ScrollbarMode): void-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| scrollbarMode | [ScrollbarMode](../../apis-default/arkts-apis/arkts-webview-scrollbarmode-e.md) | Yes | Scroll bar mode. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| scrollbarMode | [ScrollbarMode](arkts-arkweb-webview-scrollbarmode-e.md) | Yes |
 
 **Examples**
 
@@ -10456,24 +10524,24 @@ Sets a WebSchemeHandler for all **Web** components of the current app, used to i
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static setServiceWorkerWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void--><!--Device-WebviewController-static setServiceWorkerWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| scheme | string | Yes | Protocol to be intercepted. |
-| handler | [WebSchemeHandler](../../apis-default/arkts-apis/arkts-webview-webschemehandler-c.md) | Yes | Interceptor that intercepts this protocol. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| scheme | string | Yes |
+| handler | [WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -10510,7 +10578,7 @@ struct WebComponent {
 static setSiteIsolationMode(mode: SiteIsolationMode): void
 ```
 
-Sets the site isolation mode. The site isolation mechanism isolates websites from different origins in different rendering processes to reduce the cross-domain attack surface. For example, on devices such as PCs, when site isolation mode is not enabled, the original process model assigns one rendering process per tab. After site isolation is enabled, iframes from different origins within a tab can run in independent rendering processes.For third-party applications that load only trusted web pages, you can disable this functionality to improve performance, reduce memory usage, and reduce interception of cross-domain access. The default value varies according to the device. [SiteIsolationMode.STRICT](../../apis-default/arkts-apis/arkts-webview-siteisolationmode-e.md) is used for PCs and tablets, and [SiteIsolationMode.PARTIAL](../../apis-default/arkts-apis/arkts-webview-siteisolationmode-e.md) is used for phones. In [Secure Shield mode](../../../web/web-secure-shield-mode.md), strict site isolation is used.
+Sets the site isolation mode. The site isolation mechanism isolates websites from different origins in different rendering processes to reduce the cross-domain attack surface. For example, on devices such as PCs, when site isolation mode is not enabled, the original process model assigns one rendering process per tab. After site isolation is enabled, iframes from different origins within a tab can run in independent rendering processes.For third-party applications that load only trusted web pages, you can disable this functionality to improve performance, reduce memory usage, and reduce interception of cross-domain access. The default value varies according to the device. [SiteIsolationMode.STRICT](arkts-arkweb-webview-siteisolationmode-e.md) is used for PCs and tablets, and [SiteIsolationMode.PARTIAL](arkts-arkweb-webview-siteisolationmode-e.md) is used for phones. In [Secure Shield mode](../../../web/web-secure-shield-mode.md), strict site isolation is used.
 
 > **NOTE：**&gt;
 > Strict site isolation cannot be set in single-process mode.&gt;
@@ -10518,21 +10586,21 @@ Sets the site isolation mode. The site isolation mechanism isolates websites fro
 
 **Since:** 21
 
-<!--Device-WebviewController-static setSiteIsolationMode(mode: SiteIsolationMode): void--><!--Device-WebviewController-static setSiteIsolationMode(mode: SiteIsolationMode): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | [SiteIsolationMode](../../apis-default/arkts-apis/arkts-webview-siteisolationmode-e.md) | Yes | Site isolation mode. <br>The default value depends on the device type and device mode. For PCs and tablets, strict site isolation is used by default. For phones, partial site isolation is used by default. In Secure Shield mode, strict site isolation is used by default. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mode | [SiteIsolationMode](arkts-arkweb-webview-siteisolationmode-e.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. Possible causes: 1. Site Isolation mode is already set by the developer. 2. Site Isolation mode cannot be strict in single-render-process mode. 3. Site Isolation mode cannot be changed while Secure Shield mode is active. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -10572,15 +10640,15 @@ Sets the timeout interval for used sockets to stay idle in the **Web** component
 
 **Since:** 21
 
-<!--Device-WebviewController-static setSocketIdleTimeout(timeout: number): void--><!--Device-WebviewController-static setSocketIdleTimeout(timeout: number): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| timeout | number | Yes | Timeout interval for used sockets to stay idle in the **Web** component, in seconds. <br>Value range: [30, 300]. <br>If the value is less than 30, the value **30** takes effect. If the value is greater than 300, the value **300** takes effect. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| timeout | number | Yes |
 
 **Examples**
 
@@ -10607,21 +10675,21 @@ Sets the automatic control mode of the soft keyboard. When this API is not expli
 
 **Since:** 22
 
-<!--Device-WebviewController-setSoftKeyboardBehaviorMode(mode: WebSoftKeyboardBehaviorMode): void--><!--Device-WebviewController-setSoftKeyboardBehaviorMode(mode: WebSoftKeyboardBehaviorMode): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | [WebSoftKeyboardBehaviorMode](../../apis-default/arkts-apis/arkts-webview-websoftkeyboardbehaviormode-e.md) | Yes | Behavior mode of the web soft keyboard. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mode | [WebSoftKeyboardBehaviorMode](arkts-arkweb-webview-websoftkeyboardbehaviormode-e.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -10656,24 +10724,24 @@ Sets a URL trust list for the Web. Only URLs in the trust list are allowed to be
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 24.
 
-<!--Device-WebviewController-setUrlTrustList(urlTrustList: string): void--><!--Device-WebviewController-setUrlTrustList(urlTrustList: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| urlTrustList | string | Yes | URL whitelist, configured in JSON format. The maximum size is 10 MB.<br/>The whitelist setting API uses an overwrite mode. When the API is called multiple times, the last setting takes effect.<br/>When this parameter is set to an empty string, the whitelist is canceled and access to all URLs is allowed. <br/>JSON format example: <br/>{<br>  "UrlPermissionList": [<br/>    {<br/>      "scheme": "https", <br/>      "host": "www.example1.com", <br/>      "port": 443, <br/>      "path": "pathA/pathB"<br/>    }, <br/>    {<br/>      "scheme": "http", <br/>      "host": "www.example2.com", <br/>      "port": 80, <br/>      "path": "test1/test2/test3"<br/>    } <br/>  ] <br/>} |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| urlTrustList | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Parameter string is too long. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -10819,26 +10887,26 @@ setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcar
 
 Sets a URL trust list for the Web. Only URLs in the trust list are allowed to be loaded or navigated to. Otherwise, they are intercepted and an alert page is displayed. This API extends the control over opaque origin URLs and wildcard rules.
 
-**Since:** 24
+**Since:** 23
 
-<!--Device-WebviewController-setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcard: boolean): void--><!--Device-WebviewController-setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcard: boolean): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| urlTrustList | string | Yes | URL whitelist configured in JSON format, with a maximum size of 10 MB.<br/>The whitelist setting uses an overwrite mode. When this API is called multiple times, the last setting takes effect.<br/>When this parameter is set to an empty string, the whitelist is canceled and all URLs are allowed. <br/>JSON format example: <br/>{<br>  "UrlPermissionList": [<br/>    {<br/>      "scheme": "https", <br/>      "host": "www.example1.com", <br/>      "port": 443, <br/>      "path": "pathA/pathB"<br/>    }, <br/>    {<br/>      "scheme": "http", <br/>      "host": "www.example2.com", <br/>      "port": 80, <br/>      "path": "test1/test2/test3"<br/>    } <br/>  ] <br/>} |
-| allowOpaqueOrigin | boolean | Yes | Whether to allow loadUrl to directly load [opaque origin URLs](https://mdn.org.cn/en-US/docs/Web/URI/Reference/Schemes) such as javascript/data. The value **true** means allowed, and **false** means not allowed. |
-| supportWildcard | boolean | Yes | Whether to support wildcard matching for **host** and **path**. For example, to allow access to **a.example.com** and **b.example.com** when ***.example.com** is configured in the trustlist. **true** to support, and **false** otherwise. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| urlTrustList | string | Yes |
+| allowOpaqueOrigin | boolean | Yes |
+| supportWildcard | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Initialization error. The WebviewController must be associated with a Web component. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -10860,15 +10928,15 @@ Sets whether to enable the User-Agent Client Hints feature.
 
 **Since:** 24
 
-<!--Device-WebviewController-static setUserAgentClientHintsEnabled(enabled: boolean): void--><!--Device-WebviewController-static setUserAgentClientHintsEnabled(enabled: boolean): void-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable the User-Agent Client Hints feature.<br/>The value **true** means enabled, and **false** means disabled. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enabled | boolean | Yes |
 
 **Examples**
 
@@ -10961,20 +11029,20 @@ struct WebComponent {
 static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void
 ```
 
-Sets a custom user agent for a specific website, which overwrites the system user agent and takes effect for all **Web** components in the application.To set a custom user agent for a specific website, you are advised to call the **setUserAgentForHosts** method to set **User-Agent** before creating a **Web** component, and then create a **Web** component with a specified src or use [loadUrl](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#loadurl) to load a specific page.For details about the default **User-Agent** definition, application scenarios, and API priorities, see [Developing User-Agent](../../../web/web-default-userAgent.md).
+Sets a custom user agent for a specific website, which overwrites the system user agent and takes effect for all **Web** components in the application.To set a custom user agent for a specific website, you are advised to call the **setUserAgentForHosts** method to set **User-Agent** before creating a **Web** component, and then create a **Web** component with a specified src or use [loadUrl](#loadurl) to load a specific page.For details about the default **User-Agent** definition, application scenarios, and API priorities, see [Developing User-Agent](../../../web/web-default-userAgent.md).
 
 **Since:** 20
 
-<!--Device-WebviewController-static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void--><!--Device-WebviewController-static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| userAgent | string | Yes | Information about the custom user agent. It is recommended that you obtain the current default user agent through [getDefaultUserAgent](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getdefaultuseragent) and then customize the obtained user agent. |
-| hosts | Array&lt;string&gt; | Yes | List of domain names related to the custom user agent. Only the latest list is retained each time the API is called. The maximum number of entries is 20,000, and the excessive entries are automatically truncated. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| userAgent | string | Yes |
+| hosts | Array & lt;string & gt; | Yes |
 
 **Examples**
 
@@ -11033,16 +11101,16 @@ Sets the **UserAgentMetadata** corresponding to the **User-Agent**.
 
 **Since:** 24
 
-<!--Device-WebviewController-setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void--><!--Device-WebviewController-setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| userAgent | string | Yes | Information about the custom user agent. You can use [getUserAgent](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getuseragent) to obtain the current default user agent. |
-| metaData | [UserAgentMetadata](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md) | Yes | UserAgentMetadata** corresponding to the user agent. You can use [getUserAgentMetadata](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getuseragentmetadata) to obtain the current default value and then modify it using the corresponding method. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| userAgent | string | Yes |
+| metaData | [UserAgentMetadata](arkts-arkweb-webview-useragentmetadata-c.md) | Yes |
 
 **Examples**
 
@@ -11058,23 +11126,23 @@ Sets whether to enable web debugging. For details, see [Debugging Frontend Pages
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean): void--><!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| webDebuggingAccess | boolean | Yes | Sets whether to enable web debugging. <br>The value **true** means to enable web debugging, and **false** means the opposite. <br>Default value: **false**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| webDebuggingAccess | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -11137,26 +11205,26 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void
 ```
 
 Sets whether to enable wireless web debugging. By default, wireless web debugging is disabled.  
-* If no port is specified, this API is equivalent to the [setWebDebuggingAccess](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setwebdebuggingaccess) API. In this case, ArkWeb starts a local domain socket listener. * When a port is specified, ArkWeb starts a TCP socket listener. In this case, you can debug the web page wirelessly. For details, see [Wireless Debugging](../../../web/web-debugging-with-devtools.md#wireless-debugging).A port number smaller than 1024 is a well-known or system port and can be enabled only with privileges in the operating system. Therefore, the value of port must be greater than 1024. Otherwise, the API throws an exception.NOTE: Enabling web debugging allows users to check and modify the internal status of the web page, which poses security risks. Therefore, you are advised not to enable this feature in the officially released version of the application.
+* If no port is specified, this API is equivalent to the [setWebDebuggingAccess](#setwebdebuggingaccess) API. In this case, ArkWeb starts a local domain socket listener. * When a port is specified, ArkWeb starts a TCP socket listener. In this case, you can debug the web page wirelessly. For details, see [Wireless Debugging](../../../web/web-debugging-with-devtools.md#wireless-debugging).A port number smaller than 1024 is a well-known or system port and can be enabled only with privileges in the operating system. Therefore, the value of port must be greater than 1024. Otherwise, the API throws an exception.NOTE: Enabling web debugging allows users to check and modify the internal status of the web page, which poses security risks. Therefore, you are advised not to enable this feature in the officially released version of the application.
 
 **Since:** 20
 
-<!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void--><!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| webDebuggingAccess | boolean | Yes | Sets whether to enable web debugging. <br>The value **true** indicates that web page debugging is enabled, and **false** indicates the opposite. |
-| port | number | Yes | Specifies the TCP port number of the DevTools service. If no port is specified, this API is equivalent to the [setWebDebuggingAccess] (#setwebdebuggingaccess) API. <br>Value range: (1024, 65535] <br>If the value of port is within the range of [0, 1024], the **BusinessError** exception is thrown. The error code is **17100023**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| webDebuggingAccess | boolean | Yes |
+| port | number | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100023](../errorcode-webview.md#17100023-port-number-not-allowed) | The port number is not within the allowed range. |
+| Error Code ID |
+| --- |
+| [17100023](../errorcode-webview.md#17100023-port-number-not-allowed) |
 
 **Examples**
 
@@ -11168,28 +11236,28 @@ See [setWebDebuggingAccess](#setwebdebuggingaccess)
 static setWebDestroyMode(mode: WebDestroyMode): void
 ```
 
-Sets the destroy mode of the **Web** component. The destroy mode of the **Web** component affects the time when web kernel resources, such as the JavaScript running context and rendering context, are released. The default value is [WebDestroyMode.NORMAL_MODE](../../apis-default/arkts-apis/arkts-webview-webdestroymode-e.md) (normal mode), indicating that the system determines the destroy time. You can set [WebDestroyMode.FAST_MODE](../../apis-default/arkts-apis/arkts-webview-webdestroymode-e.md) (fast mode) to destroy resources immediately, improving performance in specific scenarios.
+Sets the destroy mode of the **Web** component. The destroy mode of the **Web** component affects the time when web kernel resources, such as the JavaScript running context and rendering context, are released. The default value is [WebDestroyMode.NORMAL_MODE](arkts-arkweb-webview-webdestroymode-e.md) (normal mode), indicating that the system determines the destroy time. You can set [WebDestroyMode.FAST_MODE](arkts-arkweb-webview-webdestroymode-e.md) (fast mode) to destroy resources immediately, improving performance in specific scenarios.
 
 > **NOTE：**&gt;
-> [WebDestroyMode.FAST_MODE](../../apis-default/arkts-apis/arkts-webview-webdestroymode-e.md) changes the time when the **Web** component is
+> [WebDestroyMode.FAST_MODE](arkts-arkweb-webview-webdestroymode-e.md) changes the time when the **Web** component is
 > destroyed. When it is used, pay attention to the incorrect implementation that depends on the destroy time of
 > the **Web** component. For example, when a **WebViewController** is called in fast mode rather than using
-> [WebDestroyMode.NORMAL_MODE](../../apis-default/arkts-apis/arkts-webview-webdestroymode-e.md), the unbinding exception (**17100001**) is more
+> [WebDestroyMode.NORMAL_MODE](arkts-arkweb-webview-webdestroymode-e.md), the unbinding exception (**17100001**) is more
 > likely to be triggered. In this case, the application needs to capture the exception, or use
-> [getAttachState](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getattachstate) to obtain the attach state to avoid stability
+> [getAttachState](#getattachstate) to obtain the attach state to avoid stability
 > problems.
 
 **Since:** 20
 
-<!--Device-WebviewController-static setWebDestroyMode(mode: WebDestroyMode): void--><!--Device-WebviewController-static setWebDestroyMode(mode: WebDestroyMode): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | [WebDestroyMode](../../apis-default/arkts-apis/arkts-webview-webdestroymode-e.md) | Yes | Destroy mode of the **Web** component. <br>Default value: **WebDestroyMode.NORMAL_MODE |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mode | [WebDestroyMode](arkts-arkweb-webview-webdestroymode-e.md) | Yes |
 
 **Examples**
 
@@ -11215,29 +11283,29 @@ export default class EntryAbility extends UIAbility {
 setWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void
 ```
 
-Sets a [WebSchemeHandler](../../apis-default/arkts-apis/arkts-webview-webschemehandler-c.md) for the **Web** component. The [WebSchemeHandler](../../apis-default/arkts-apis/arkts-webview-webschemehandler-c.md) class is used to intercept requests of a specified scheme.
+Sets a [WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md) for the **Web** component. The [WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md) class is used to intercept requests of a specified scheme.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-setWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void--><!--Device-WebviewController-setWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| scheme | string | Yes | Protocol to be intercepted. |
-| handler | [WebSchemeHandler](../../apis-default/arkts-apis/arkts-webview-webschemehandler-c.md) | Yes | Interceptor that intercepts this protocol. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| scheme | string | Yes |
+| handler | [WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -11278,25 +11346,25 @@ Simulates a slide-to-scroll action on the page at the specified velocity.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-slideScroll(vx: number, vy: number): void--><!--Device-WebviewController-slideScroll(vx: number, vy: number): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| vx | number | Yes | Horizontal velocity component of swipe scrolling, where rightward is the positive direction. <br>Unit: vp/s. |
-| vy | number | Yes | Vertical velocity component of swipe scrolling, where downward is the positive direction. <br>Unit: vp/s. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| vx | number | Yes |
+| vy | number | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -11360,17 +11428,17 @@ Enables the camera capture of the current web page. Before using the camera, add
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-startCamera(): void--><!--Device-WebviewController-startCamera(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -11493,24 +11561,24 @@ Uses the download capability of the **Web** component to download a specified UR
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-startDownload(url: string): void--><!--Device-WebviewController-startDownload(url: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string | Yes | Download URL. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| url | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024.<br>**Applicable version:** 22 and later |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 **Examples**
 
@@ -11559,17 +11627,17 @@ Stops page loading.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-stop(): void--><!--Device-WebviewController-stop(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -11609,17 +11677,17 @@ Stops all audio and video on a web page.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-stopAllMedia(): void--><!--Device-WebviewController-stopAllMedia(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -11659,17 +11727,17 @@ Stops the camera capture of the current web page.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-stopCamera(): void--><!--Device-WebviewController-stopCamera(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -11685,15 +11753,15 @@ Stops microphone capture on the current web page.
 
 **Since:** 23
 
-<!--Device-WebviewController-stopMicrophone(): void--><!--Device-WebviewController-stopMicrophone(): void-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -11709,32 +11777,32 @@ Stores this web page. This API uses a promise to return the result.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-storeWebArchive(baseName: string, autoName: boolean): Promise<string>--><!--Device-WebviewController-storeWebArchive(baseName: string, autoName: boolean): Promise<string>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| baseName | string | Yes | Save path of the web page. The value cannot be null. |
-| autoName | boolean | Yes | Whether to automatically generate a file name. <br>The value **false** means the file is stored with the name specified by baseName, and **true** means the file name is automatically generated based on the current URL and stored in the directory specified by baseName. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| baseName | string | Yes |
+| autoName | boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Promise used to return the save path if the operation is successful and null otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) | Invalid resource path or file type. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) |
 
 **Examples**
 
@@ -11816,27 +11884,27 @@ Stores this web page. This API uses an asynchronous callback to return the resul
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<string>): void--><!--Device-WebviewController-storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<string>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| baseName | string | Yes | Save path of the web page. The value cannot be null. |
-| autoName | boolean | Yes | Whether to automatically generate a file name. <br>The value **false** means the file is stored with the file name specified by **baseName**, and **true** means the file name is automatically generated based on the current URL and stored in the directory specified by **baseName**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the save path if the operation is successful and null otherwise. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| baseName | string | Yes |
+| autoName | boolean | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3. Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) | Invalid resource path or file type. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) |
 
 **Examples**
 
@@ -11852,21 +11920,21 @@ Terminates this render process.Calling this API will destroy the associated rend
 
 **Since:** 12
 
-<!--Device-WebviewController-terminateRenderProcess(): boolean--><!--Device-WebviewController-terminateRenderProcess(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the render process is terminated. <br>The value **true** indicates that the render process can be destroyed or has been destroyed, and **false** indicates the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 **Examples**
 
@@ -11902,23 +11970,23 @@ Clears the cache occupied by **Web** component based on the specified memory pre
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static trimMemoryByPressureLevel(level: PressureLevel): void--><!--Device-WebviewController-static trimMemoryByPressureLevel(level: PressureLevel): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| level | [PressureLevel](../../apis-default/arkts-apis/arkts-webview-pressurelevel-e.md) | Yes | Pressure level of the memory to be cleared. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| level | [PressureLevel](arkts-arkweb-webview-pressurelevel-e.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Parameter string is too long. <br>3.Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -11957,25 +12025,25 @@ struct WebComponent {
 waitForAttached(timeout: number): Promise<ControllerAttachState>
 ```
 
-Asynchronously waits for the **WebViewController** to be attached to the **Web** component. If the attachment is complete or times out, a callback is triggered to return the current [ControllerAttachState](../../apis-default/arkts-apis/arkts-webview-controllerattachstate-e.md) through a promise.
+Asynchronously waits for the **WebViewController** to be attached to the **Web** component. If the attachment is complete or times out, a callback is triggered to return the current [ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md) through a promise.
 
 **Since:** 20
 
-<!--Device-WebviewController-waitForAttached(timeout: number): Promise<ControllerAttachState>--><!--Device-WebviewController-waitForAttached(timeout: number): Promise<ControllerAttachState>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| timeout | number | Yes | Asynchronous waiting duration. <br>Value range: [0, 65535] <br>Unit: ms. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| timeout | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[ControllerAttachState](../../apis-default/arkts-apis/arkts-webview-controllerattachstate-e.md)&gt; | Promise used to return the current [ControllerAttachState]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; |
 
 **Examples**
 
@@ -12026,23 +12094,23 @@ Warms up ServiceWorker to improve the loading speed of the first screen page (on
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-static warmupServiceWorker(url: string): void--><!--Device-WebviewController-static warmupServiceWorker(url: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string | Yes | URL of the ServiceWorker to preload. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| url | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024.<br>**Applicable version:** 22 and later |
+| Error Code ID |
+| --- |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
 **Examples**
 
@@ -12079,18 +12147,18 @@ Obtains the full drawing result of the web page.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): void--><!--Device-WebviewController-webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| info | [SnapshotInfo](../../apis-default/arkts-apis/arkts-webview-snapshotinfo-i.md) | Yes | Information for obtaining the full drawing result. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SnapshotResult](../../apis-default/arkts-apis/arkts-webview-snapshotresult-i.md)&gt; | Yes | Callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| info | [SnapshotInfo](arkts-arkweb-webview-snapshotinfo-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SnapshotResult](arkts-arkweb-webview-snapshotresult-i.md)&gt; | Yes |
 
 **Examples**
 
@@ -12139,25 +12207,25 @@ Zooms in or out of this web page. This API is effective only when zoomAccess is 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-zoom(factor: number): void--><!--Device-WebviewController-zoom(factor: number): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| factor | number | Yes | Relative zoom ratio. The value must be greater than 0. The value **1** indicates that the page is not zoomed. A value smaller than **1** indicates zoom-out, and a value greater than **1** indicates zoom-in. <br>Value range: (0, 100] |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [factor](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | number | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [17100004](../errorcode-webview.md#17100004-function-not-enabled) | Function not enabled. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100004](../errorcode-webview.md#17100004-function-not-enabled) |
 
 **Examples**
 
@@ -12199,18 +12267,18 @@ Zooms in on this web page by 25%.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-zoomIn(): void--><!--Device-WebviewController-zoomIn(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [17100004](../errorcode-webview.md#17100004-function-not-enabled) | Function not enabled. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100004](../errorcode-webview.md#17100004-function-not-enabled) |
 
 **Examples**
 
@@ -12250,18 +12318,18 @@ Zooms out of this web page by 20%.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebviewController-zoomOut(): void--><!--Device-WebviewController-zoomOut(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [17100004](../errorcode-webview.md#17100004-function-not-enabled) | Function not enabled. |
+| Error Code ID |
+| --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100004](../errorcode-webview.md#17100004-function-not-enabled) |
 
 **Examples**
 
@@ -12290,4 +12358,3 @@ struct WebComponent {
   }
 }
 ```
-

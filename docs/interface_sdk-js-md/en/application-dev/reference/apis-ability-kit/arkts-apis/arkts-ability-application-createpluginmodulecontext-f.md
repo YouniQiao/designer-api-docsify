@@ -14,27 +14,27 @@ export function createPluginModuleContext(context: Context, pluginBundleName: st
 
 Creates the context of a plugin under the current application based on the context, plugin bundle name, and plugin module name, so as to obtain the basic information about the plugin. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 19
+
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-application-export function createPluginModuleContext(context: Context, pluginBundleName: string, pluginModuleName: string): Promise<Context>--><!--Device-application-export function createPluginModuleContext(context: Context, pluginBundleName: string, pluginModuleName: string): Promise<Context>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | Yes | Application context. |
-| pluginBundleName | string | Yes | Bundle name of the plugin. |
-| pluginModuleName | string | Yes | Module name of the plugin. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [Context](arkts-ability-context-c.md) | Yes |
+| [pluginBundleName](arkts-ability-pluginbundleinfo-i.md) | string | Yes |
+| pluginModuleName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[Context](arkts-ability-context-c.md)&gt; | Promise used to return the context created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[Context](arkts-ability-context-c.md)&gt; |
 
 **Examples**
 
@@ -64,4 +64,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

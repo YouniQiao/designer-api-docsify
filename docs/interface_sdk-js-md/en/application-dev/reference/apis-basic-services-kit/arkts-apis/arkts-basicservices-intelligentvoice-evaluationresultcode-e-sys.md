@@ -2,9 +2,9 @@
 
 Enumerates evaluation result code. @enum {number}
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-intelligentVoice-enum EvaluationResultCode--><!--Device-intelligentVoice-enum EvaluationResultCode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -18,9 +18,9 @@ UNKNOWN = 0
 
 Unknown.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EvaluationResultCode-UNKNOWN = 0--><!--Device-EvaluationResultCode-UNKNOWN = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -34,9 +34,9 @@ PASS = 1
 
 Pass.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EvaluationResultCode-PASS = 1--><!--Device-EvaluationResultCode-PASS = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -50,9 +50,9 @@ WORD_EMPTY = 2
 
 Word is empty.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EvaluationResultCode-WORD_EMPTY = 2--><!--Device-EvaluationResultCode-WORD_EMPTY = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -66,9 +66,9 @@ CHINESE_ONLY = 3
 
 Only chinese is supported.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EvaluationResultCode-CHINESE_ONLY = 3--><!--Device-EvaluationResultCode-CHINESE_ONLY = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -82,9 +82,9 @@ INVALID_LENGTH = 4
 
 Invalid length.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EvaluationResultCode-INVALID_LENGTH = 4--><!--Device-EvaluationResultCode-INVALID_LENGTH = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -98,9 +98,9 @@ UNUSUAL_WORD = 5
 
 Unusual word.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EvaluationResultCode-UNUSUAL_WORD = 5--><!--Device-EvaluationResultCode-UNUSUAL_WORD = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -114,9 +114,9 @@ CONSECUTIVE_SAME_WORD = 6
 
 Consecutive same word.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EvaluationResultCode-CONSECUTIVE_SAME_WORD = 6--><!--Device-EvaluationResultCode-CONSECUTIVE_SAME_WORD = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -130,9 +130,9 @@ TOO_FEW_PHONEMES = 7
 
 Too few phonemes.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EvaluationResultCode-TOO_FEW_PHONEMES = 7--><!--Device-EvaluationResultCode-TOO_FEW_PHONEMES = 7-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -146,9 +146,9 @@ TOO_MANY_PHONEMES = 8
 
 Too many phonemes.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EvaluationResultCode-TOO_MANY_PHONEMES = 8--><!--Device-EvaluationResultCode-TOO_MANY_PHONEMES = 8-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -162,9 +162,9 @@ COMMON_INSTRUCTION = 9
 
 Contain common instruction.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EvaluationResultCode-COMMON_INSTRUCTION = 9--><!--Device-EvaluationResultCode-COMMON_INSTRUCTION = 9-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -178,9 +178,9 @@ COMMON_SPOKEN_LANGUAGE = 10
 
 Contain common spoken language.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EvaluationResultCode-COMMON_SPOKEN_LANGUAGE = 10--><!--Device-EvaluationResultCode-COMMON_SPOKEN_LANGUAGE = 10-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -194,9 +194,9 @@ SENSITIVE_WORD = 11
 
 Contain sensitive word.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EvaluationResultCode-SENSITIVE_WORD = 11--><!--Device-EvaluationResultCode-SENSITIVE_WORD = 11-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -210,9 +210,9 @@ NO_INITIAL_CONSONANT = 12
 
 Two consecutive words without initial consonant.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EvaluationResultCode-NO_INITIAL_CONSONANT = 12--><!--Device-EvaluationResultCode-NO_INITIAL_CONSONANT = 12-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -226,11 +226,10 @@ REPEATED_PHONEME = 13
 
 Contain repeated phoneme.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EvaluationResultCode-REPEATED_PHONEME = 13--><!--Device-EvaluationResultCode-REPEATED_PHONEME = 13-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
-

@@ -4,9 +4,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-unnamed-export declare interface TextLayoutOptions--><!--Device-unnamed-export declare interface TextLayoutOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +20,8 @@ constraintWidth?: LengthMetrics
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-TextLayoutOptions-constraintWidth?: LengthMetrics--><!--Device-TextLayoutOptions-constraintWidth?: LengthMetrics-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

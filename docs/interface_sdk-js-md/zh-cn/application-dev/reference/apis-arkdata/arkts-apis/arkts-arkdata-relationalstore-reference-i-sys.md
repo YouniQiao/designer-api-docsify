@@ -2,9 +2,9 @@
 
 记录表之间通过表字段指定的关联关系。其中表a关联到表b，称a为b关联的子表，b为a关联的父表。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-relationalStore-interface Reference--><!--Device-relationalStore-interface Reference-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -26,9 +26,9 @@ refFields: Record<string, string>
 
 **类型：** Record&lt;string, string&gt;
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-Reference-refFields: Record<string, string>--><!--Device-Reference-refFields: Record<string, string>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -44,9 +44,9 @@ sourceTable: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-Reference-sourceTable: string--><!--Device-Reference-sourceTable: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -62,11 +62,10 @@ targetTable: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-Reference-targetTable: string--><!--Device-Reference-targetTable: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **系统接口：** 此接口为系统接口。
-

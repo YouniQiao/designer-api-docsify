@@ -4,9 +4,7 @@ ChipV2Label定义文本属性类。
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @ObservedV2
-
-<!--Device-unnamed-export declare class ChipV2Label--><!--Device-unnamed-export declare class ChipV2Label-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,19 +24,19 @@ ChipV2Label的构造函数。
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipV2Label-constructor(config: ChipV2LabelConfig)--><!--Device-ChipV2Label-constructor(config: ChipV2LabelConfig)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| config | [ChipV2LabelConfig](arkts-arkui-arkui-advanced-chipv2-chipv2labelconfig-i.md) | 是 | 文本属性配置，用于设置ChipV2的文本显示属性，包含text、fontSize、fontColor、activatedFontColor、 fontFamily等配置项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| config | [ChipV2LabelConfig](arkts-arkui-arkui-advanced-chipv2-chipv2labelconfig-i.md) | 是 |
 
 ## activatedFontColor
 
@@ -52,13 +50,11 @@ ChipV2激活时的文字颜色。默认值：\$r('sys.color.chip_activated_fontc
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipV2Label-@Trace  public activatedFontColor?: ColorMetrics--><!--Device-ChipV2Label-@Trace  public activatedFontColor?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,13 +70,11 @@ public fontColor?: ColorMetrics
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipV2Label-@Trace  public fontColor?: ColorMetrics--><!--Device-ChipV2Label-@Trace  public fontColor?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,13 +90,11 @@ public fontFamily?: string
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipV2Label-@Trace  public fontFamily?: string--><!--Device-ChipV2Label-@Trace  public fontFamily?: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -118,13 +110,11 @@ public fontSize?: LengthMetrics
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipV2Label-@Trace  public fontSize?: LengthMetrics--><!--Device-ChipV2Label-@Trace  public fontSize?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -140,13 +130,11 @@ public labelMargin?: ChipV2LabelMarginConfig
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipV2Label-@Trace  public labelMargin?: ChipV2LabelMarginConfig--><!--Device-ChipV2Label-@Trace  public labelMargin?: ChipV2LabelMarginConfig-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -162,13 +150,11 @@ public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipV2Label-@Trace  public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig--><!--Device-ChipV2Label-@Trace  public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -184,13 +170,11 @@ public modifier?: TextModifier
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipV2Label-@Trace  public modifier?: TextModifier--><!--Device-ChipV2Label-@Trace  public modifier?: TextModifier-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -206,13 +190,10 @@ public text: string
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ChipV2Label-@Trace  public text: string--><!--Device-ChipV2Label-@Trace  public text: string-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

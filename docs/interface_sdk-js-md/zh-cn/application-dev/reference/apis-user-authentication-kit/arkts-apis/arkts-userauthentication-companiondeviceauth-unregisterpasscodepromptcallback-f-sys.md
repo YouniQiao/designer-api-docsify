@@ -16,11 +16,11 @@ function unregisterPasscodePromptCallback(): void
 
 **起始版本：** 26.1.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-companionDeviceAuth-function unregisterPasscodePromptCallback(): void--><!--Device-companionDeviceAuth-function unregisterPasscodePromptCallback(): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -28,9 +28,8 @@ function unregisterPasscodePromptCallback(): void
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
-
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) |

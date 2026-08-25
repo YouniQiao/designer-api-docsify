@@ -4,9 +4,9 @@ Material resource, which inherits from SceneResource.@extends SceneResource @int
 
 **Inheritance/Implementation:** Material extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface Material--><!--Device-unnamed-export interface Material-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,11 +18,11 @@ alphaCutoff?: double
 
 Threshold of the alpha channel. If the alpha of a pixel is greater than or equal to this threshold, the pixel is rendered; otherwise, the pixel is not rendered. Setting a value less than 1 enables this mode. The value range is [0, 1]. The default value is 1.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Material-alphaCutoff?: double--><!--Device-Material-alphaCutoff?: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -38,9 +38,9 @@ Whether the material is transparent. The default value is false.
 
 **Default:** undefined
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Material-blend?: Blend--><!--Device-Material-blend?: Blend-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -54,9 +54,9 @@ Culling mode of the material, which can be used to determine whether to cull fro
 
 **Type:** [CullMode](arkts-arkgraphics3d-sceneresources-cullmode-e.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Material-cullMode?: CullMode--><!--Device-Material-cullMode?: CullMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -70,9 +70,9 @@ Material type.
 
 **Type:** [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Material-readonly materialType: MaterialType--><!--Device-Material-readonly materialType: MaterialType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -90,7 +90,7 @@ Polygon drawing mode of the model. The default value is FILL.
 
 **Since:** 23
 
-<!--Device-Material-polygonMode?: PolygonMode--><!--Device-Material-polygonMode?: PolygonMode-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -104,9 +104,9 @@ Rendering order, which determines the rendering sequence of materials in the ren
 
 **Type:** [RenderSort](arkts-arkgraphics3d-sceneresources-rendersort-i.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Material-renderSort?: RenderSort--><!--Device-Material-renderSort?: RenderSort-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -120,9 +120,8 @@ Whether the material receives shadows. true if the material receives shadows, fa
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Material-shadowReceiver?: boolean--><!--Device-Material-shadowReceiver?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

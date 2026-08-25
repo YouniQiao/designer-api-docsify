@@ -1,18 +1,17 @@
 # AbilityForegroundStateObserver (System API)
 
 ```TypeScript
-export type AbilityForegroundStateObserver = _AbilityForegroundStateObserver
+export type AbilityForegroundStateObserver = _AbilityForegroundStateObserver.default
 ```
 
-The ability foreground state observer.
+Defines the level-2 module AbilityForegroundStateObserver.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-abilityManager-export type AbilityForegroundStateObserver = _AbilityForegroundStateObserver--><!--Device-abilityManager-export type AbilityForegroundStateObserver = _AbilityForegroundStateObserver-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
 
-**Property type:** _AbilityForegroundStateObserver
-
+**Property type:** _AbilityForegroundStateObserver.default

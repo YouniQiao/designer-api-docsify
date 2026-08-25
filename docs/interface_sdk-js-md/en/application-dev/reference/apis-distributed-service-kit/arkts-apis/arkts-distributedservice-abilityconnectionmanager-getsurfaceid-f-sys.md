@@ -14,11 +14,11 @@ function getSurfaceId(streamId: int, param: SurfaceParam): string
 
 Obtains the transmission surface.
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-abilityConnectionManager-function getSurfaceId(streamId: int, param: SurfaceParam): string--><!--Device-abilityConnectionManager-function getSurfaceId(streamId: int, param: SurfaceParam): string-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -26,23 +26,23 @@ Obtains the transmission surface.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| streamId | int | Yes | Indicates the ID of a transport stream. |
-| param | [SurfaceParam](arkts-distributedservice-abilityconnectionmanager-surfaceparam-i-sys.md) | Yes | Surface Parameters |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| streamId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| param | [SurfaceParam](arkts-distributedservice-abilityconnectionmanager-surfaceparam-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Returns the ID of a surface. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -61,4 +61,3 @@ abilityConnectionManager.createStream(sessionId ,{name: 'receive', role: 0}).the
   let surfaceId = abilityConnectionManager.getSurfaceId(streamId, surfaceParam);
 })
 ```
-

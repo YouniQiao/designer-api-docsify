@@ -14,27 +14,26 @@ function getDefaultInputMethod(): InputMethodProperty
 
 Obtains the default input method.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-inputMethod-function getDefaultInputMethod(): InputMethodProperty--><!--Device-inputMethod-function getDefaultInputMethod(): InputMethodProperty-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Default input method. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| Error Code ID |
+| --- |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 **Examples**
 
 ```TypeScript
 let defaultIme: inputMethod.InputMethodProperty = inputMethod.getDefaultInputMethod();
 ```
-

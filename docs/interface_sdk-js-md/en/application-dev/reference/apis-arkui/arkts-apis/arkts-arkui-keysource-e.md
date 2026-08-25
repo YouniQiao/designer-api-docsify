@@ -4,7 +4,7 @@ Sets the device type that triggers the button event.
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum KeySource--><!--Device-unnamed-declare enum KeySource-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ Unknown input device.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-KeySource-Unknown--><!--Device-KeySource-Unknown-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,9 @@ The input device is a keyboard.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-KeySource-Keyboard--><!--Device-KeySource-Keyboard-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,11 +50,10 @@ The input device is a joystick.
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
-<!--Device-KeySource-JOYSTICK--><!--Device-KeySource-JOYSTICK-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

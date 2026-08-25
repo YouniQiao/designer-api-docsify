@@ -4,9 +4,7 @@ Defines keyboard appearance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare enum KeyboardAppearance--><!--Device-unnamed-export declare enum KeyboardAppearance-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +18,9 @@ Default appearance mode, don't adopt immersive styles
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-KeyboardAppearance-NONE_IMMERSIVE = 0--><!--Device-KeyboardAppearance-NONE_IMMERSIVE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +34,9 @@ Immersive mode
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-KeyboardAppearance-IMMERSIVE = 1--><!--Device-KeyboardAppearance-IMMERSIVE = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,11 +50,9 @@ Light immersive style
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-KeyboardAppearance-LIGHT_IMMERSIVE = 2--><!--Device-KeyboardAppearance-LIGHT_IMMERSIVE = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,11 +66,8 @@ Dark immersive style
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-KeyboardAppearance-DARK_IMMERSIVE = 3--><!--Device-KeyboardAppearance-DARK_IMMERSIVE = 3-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

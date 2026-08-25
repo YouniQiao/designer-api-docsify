@@ -4,7 +4,7 @@ Defines the options for the more button menu.
 
 **Since:** 19
 
-<!--Device-unnamed-declare interface MoreButtonOptions--><!--Device-unnamed-declare interface MoreButtonOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Background blur style of the more button menu. If this parameter is not set, bac
 
 **Since:** 19
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-MoreButtonOptions-backgroundBlurStyle?: BlurStyle--><!--Device-MoreButtonOptions-backgroundBlurStyle?: BlurStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,11 +46,11 @@ Options for the title bar background blur style.
 
 **Since:** 19
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-MoreButtonOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions--><!--Device-MoreButtonOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,11 +67,10 @@ Title bar background properties, including blur radius, brightness, saturation, 
 
 **Since:** 19
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-MoreButtonOptions-backgroundEffect?: BackgroundEffectOptions--><!--Device-MoreButtonOptions-backgroundEffect?: BackgroundEffectOptions-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

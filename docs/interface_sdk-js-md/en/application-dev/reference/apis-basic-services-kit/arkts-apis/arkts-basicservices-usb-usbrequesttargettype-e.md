@@ -4,11 +4,11 @@ Enumerates request target types.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [USBRequestTargetType](arkts-basicservices-usbmanager-usbrequesttargettype-e.md)
-
-<!--Device-usb-export enum USBRequestTargetType--><!--Device-usb-export enum USBRequestTargetType-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -22,11 +22,11 @@ Device.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [USB_REQUEST_TARGET_DEVICE](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#usb_request_target_device)
-
-<!--Device-USBRequestTargetType-USB_REQUEST_TARGET_DEVICE = 0--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_DEVICE = 0-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -40,11 +40,11 @@ Interface.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [USB_REQUEST_TARGET_INTERFACE](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#usb_request_target_interface)
-
-<!--Device-USBRequestTargetType-USB_REQUEST_TARGET_INTERFACE = 1--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_INTERFACE = 1-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -58,11 +58,11 @@ Endpoint.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [USB_REQUEST_TARGET_ENDPOINT](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#usb_request_target_endpoint)
-
-<!--Device-USBRequestTargetType-USB_REQUEST_TARGET_ENDPOINT = 2--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_ENDPOINT = 2-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -76,11 +76,10 @@ Other.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [USB_REQUEST_TARGET_OTHER](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#usb_request_target_other)
 
-<!--Device-USBRequestTargetType-USB_REQUEST_TARGET_OTHER = 3--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_OTHER = 3-End-->
-
 **System capability:** SystemCapability.USB.USBManager
-

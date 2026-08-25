@@ -4,7 +4,7 @@ Define some common extra keys used in different scenarios.
 
 **Since:** 26.0.0
 
-<!--Device-avSession-enum ExtraKey--><!--Device-avSession-enum ExtraKey-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -18,11 +18,11 @@ Set required abilities to the system.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ExtraKey-REQUIRE_ABILITY_LIST = 'requireAbilityList'--><!--Device-ExtraKey-REQUIRE_ABILITY_LIST = 'requireAbilityList'-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -36,11 +36,11 @@ Informs the system that the app supports URL casting.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ExtraKey-SUPPORT_URL_CASTING = 'url-cast'--><!--Device-ExtraKey-SUPPORT_URL_CASTING = 'url-cast'-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -54,11 +54,11 @@ Key for DLNA CurrentURIMetadata extra parameter.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ExtraKey-DLNA_CURRENT_URI_METADATA = 'CurrentURIMetadata'--><!--Device-ExtraKey-DLNA_CURRENT_URI_METADATA = 'CurrentURIMetadata'-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -72,11 +72,10 @@ Key for DLNA DIDL-Lite extra parameter.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ExtraKey-DLNA_DIDL_LITE = 'DIDL-Lite'--><!--Device-ExtraKey-DLNA_DIDL_LITE = 'DIDL-Lite'-End-->
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
-

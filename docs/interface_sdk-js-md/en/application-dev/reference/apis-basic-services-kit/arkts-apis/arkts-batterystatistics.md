@@ -5,9 +5,9 @@ The **batteryStatistics** module provides APIs for querying software and hardwar
 > **NOTE：**&gt;
 > - The APIs provided by this module are system APIs.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-unnamed-declare namespace batteryStats--><!--Device-unnamed-declare namespace batteryStats-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
 
@@ -24,29 +24,28 @@ import { batteryStats } from '@kit.BasicServicesKit';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [getAppPowerPercent](arkts-basicservices-batterystats-getapppowerpercent-f-sys.md) | Obtains the proportion of the power consumption of an application. |
-| [getAppPowerValue](arkts-basicservices-batterystats-getapppowervalue-f-sys.md) | Obtains the power consumption of an application, in unit of mAh. |
-| [getBatteryStats](arkts-basicservices-batterystats-getbatterystats-f-sys.md) | Obtains the power consumption information list. This API uses a promise to return the result. |
-| [getBatteryStats](arkts-basicservices-batterystats-getbatterystats-f-sys.md) | Obtains the power consumption information list. This API uses an asynchronous callback to return the result. |
-| [getHardwareUnitPowerPercent](arkts-basicservices-batterystats-gethardwareunitpowerpercent-f-sys.md) | Obtains the proportion of the power consumption of a hardware unit according to the power consumption type. |
-| [getHardwareUnitPowerValue](arkts-basicservices-batterystats-gethardwareunitpowervalue-f-sys.md) | Obtains the power consumption of a hardware unit according to the consumption type, in unit of mAh. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getAppPowerPercent](arkts-basicservices-batterystats-getapppowerpercent-f-sys.md) |
+| [getAppPowerValue](arkts-basicservices-batterystats-getapppowervalue-f-sys.md) |
+| [getBatteryStats](arkts-basicservices-batterystats-getbatterystats-f-sys.md) |
+| [getBatteryStats](arkts-basicservices-batterystats-getbatterystats-f-sys.md) |
+| [getHardwareUnitPowerPercent](arkts-basicservices-batterystats-gethardwareunitpowerpercent-f-sys.md) |
+| [getHardwareUnitPowerValue](arkts-basicservices-batterystats-gethardwareunitpowervalue-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [BatteryStatsInfo](arkts-basicservices-batterystats-batterystatsinfo-i-sys.md) | Describes the device power consumption information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BatteryStatsInfo](arkts-basicservices-batterystats-batterystatsinfo-i-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [ConsumptionType](arkts-basicservices-batterystats-consumptiontype-e-sys.md) | Enumerates power consumption types. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ConsumptionType](arkts-basicservices-batterystats-consumptiontype-e-sys.md) |
 <!--DelEnd-->
-

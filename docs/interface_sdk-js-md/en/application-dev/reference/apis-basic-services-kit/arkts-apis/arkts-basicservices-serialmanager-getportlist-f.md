@@ -14,17 +14,17 @@ function getPortList(): Readonly<SerialPort>[]
 
 Obtains the serial port device list, including the device name and port number.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-serialManager-function getPortList(): Readonly<SerialPort>[]--><!--Device-serialManager-function getPortList(): Readonly<SerialPort>[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Readonly&lt;SerialPort&gt;[] | Serial port information list. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Readonly & lt;SerialPort & gt;[] |
 
 **Examples**
 
@@ -45,4 +45,3 @@ function getPortList() {
   let portId: number = portList[0].portId;
 }
 ```
-

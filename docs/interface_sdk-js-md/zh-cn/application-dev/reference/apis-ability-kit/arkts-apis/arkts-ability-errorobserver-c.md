@@ -1,10 +1,10 @@
 # ErrorObserver
 
-定义异常监听，可以作为 [errorManager.on('error')](arkts-ability-errormanager-onerror-f.md#onerror) 的入参监听当前应用发生的异常。通过异常监听，开发者可以及时捕获和处理应用运行时的未捕获异常及JS层上报的异常，提升应用的稳定性和用户体验。
+定义异常监听，可以作为 [errorManager.on('error')](arkts-ability-errormanager-on-f.md#onerror) 的入参监听当前应用发生的异常。通过异常监听，开发者可以及时捕获和处理应用运行时的未捕获异常及JS层上报的异常，提升应用的稳定性和用户体验。
 
 **起始版本：** 9
 
-<!--Device-unnamed-export default class ErrorObserver--><!--Device-unnamed-export default class ErrorObserver-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -18,17 +18,17 @@ onException?(errObject: Error): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-ErrorObserver-onException?(errObject: Error): void--><!--Device-ErrorObserver-onException?(errObject: Error): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| errObject | Error | 是 | 有关异常事件名字、消息和错误堆栈信息的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| errObject | Error | 是 |
 
 **示例**
 
@@ -66,17 +66,17 @@ onUnhandledException(errMsg: string): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-ErrorObserver-onUnhandledException(errMsg: string): void--><!--Device-ErrorObserver-onUnhandledException(errMsg: string): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| errMsg | string | 是 | 有关异常的消息和错误堆栈跟踪。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| errMsg | string | 是 |
 
 **示例**
 
@@ -96,4 +96,3 @@ try {
   console.error(`registerErrorObserver failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
 }
 ```
-

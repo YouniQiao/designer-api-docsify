@@ -16,29 +16,29 @@ function getTypeDescriptor(typeId: string): TypeDescriptor
 
 **起始版本：** 11
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-uniformTypeDescriptor-function getTypeDescriptor(typeId: string): TypeDescriptor--><!--Device-uniformTypeDescriptor-function getTypeDescriptor(typeId: string): TypeDescriptor-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| typeId | string | 是 | [标准化数据类型ID]。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [typeId](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | 返回标准化数据类型描述类对象。如果要查询的标准化数据类型不存在，则返回null。 |
+| 类型 |
+| --- |
+| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -106,31 +106,30 @@ function getTypeDescriptor(typeId: string): TypeDescriptor | null
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-uniformTypeDescriptor-function getTypeDescriptor(typeId: string): TypeDescriptor | null--><!--Device-uniformTypeDescriptor-function getTypeDescriptor(typeId: string): TypeDescriptor | null-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| typeId | string | 是 | [标准化数据类型ID]。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [typeId](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) \| null | 返回标准化数据类型描述类对象。如果要查询的标准化数据类型不存在，则返回null。 |
+| 类型 |
+| --- |
+| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) \| null |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
 参见 [getTypeDescriptor](#gettypedescriptor)
-

@@ -8,9 +8,9 @@ Implements a matrix. A 3 x 3 matrix is shown as below. Elements in the matrix fr
 > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-drawing-class Matrix--><!--Device-drawing-class Matrix-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -28,9 +28,9 @@ constructor()
 
 Creates a **Matrix** object.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Matrix-constructor()--><!--Device-Matrix-constructor()-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -223,17 +223,17 @@ constructor(matrix: Matrix)
 
 Copies a matrix.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Matrix-constructor(matrix: Matrix)--><!--Device-Matrix-constructor(matrix: Matrix)-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix to be copied. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
 
 **Examples**
 
@@ -249,15 +249,15 @@ Obtains all element values of this matrix.
 
 **Since:** 12
 
-<!--Device-Matrix-getAll(): Array<number>--><!--Device-Matrix-getAll(): Array<number>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;number&gt; | Array of matrix values obtained. The length is 9. Each value is a floating point number. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;number & gt; |
 
 **Examples**
 
@@ -278,15 +278,15 @@ Obtains all element values of this matrix.
 
 **Since:** 23
 
-<!--Device-Matrix-getAll(): Array<double> | undefined--><!--Device-Matrix-getAll(): Array<double> | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;double&gt; \| undefined | nine scalar values contained by Matrix. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;double & gt; \ | undefined |
 
 **Examples**
 
@@ -294,35 +294,41 @@ See [getAll](#getall)
 
 ## getValue
 
+ArkTS-Dyn:
+```TypeScript
+getValue(index: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getValue(index: int): double
 ```
 
 Obtains a matrix value of a given index, which ranges from 0 to 8.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Matrix-getValue(index: int): double--><!--Device-Matrix-getValue(index: int): double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | Index. The value is an integer ranging from 0 to 8. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | Value obtained, which is an integer. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -343,29 +349,29 @@ invert(matrix: Matrix): boolean
 
 Inverts this matrix and returns the result.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Matrix-invert(matrix: Matrix): boolean--><!--Device-Matrix-invert(matrix: Matrix): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix** object used to store the inverted matrix. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** means that the matrix is revertible and the **matrix** object is set to its inverse, and **false** means that the matrix is not revertible and the **matrix** object remains unchanged. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -391,17 +397,17 @@ isAffine(): boolean
 
 Checks whether the existing matrix is an affine matrix, which includes transformations such as translation, rotation, and scaling.
 
-**Since:** 24
+**Since:** 20
 
-<!--Device-Matrix-isAffine(): boolean--><!--Device-Matrix-isAffine(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the existing matrix is an affine matrix. **true** means yes; **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -422,29 +428,29 @@ isEqual(matrix: Matrix): boolean
 
 Checks whether two **OH_Drawing_Matrix** objects are equal.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Matrix-isEqual(matrix: Matrix): boolean--><!--Device-Matrix-isEqual(matrix: Matrix): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix to compare. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Comparison result of the two matrices. The value **true** means that the two matrices are equal, and **false** means the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -509,17 +515,17 @@ isIdentity(): boolean
 
 Checks whether an **OH_Drawing_Matrix** object is an identity matrix:
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Matrix-isIdentity(): boolean--><!--Device-Matrix-isIdentity(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** means that the matrix is an identity matrix, and **false** means the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -544,27 +550,27 @@ Maps a source point array to a destination point array by means of matrix transf
 
 **Since:** 12
 
-<!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point>--><!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | Array&lt;common2D.Point&gt; | Yes | Array of source points. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | Array & lt;common2D.Point & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;common2D.Point&gt; | Array of points obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;common2D.Point & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -591,27 +597,27 @@ Maps a source point array to a destination point array by means of matrix transf
 
 **Since:** 23
 
-<!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point> | undefined--><!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point> | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | Array&lt;common2D.Point&gt; | Yes | Array of source points. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | Array & lt;common2D.Point & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;common2D.Point&gt; \| undefined | Return mapped points array. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;common2D.Point & gt; \ | undefined |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -619,29 +625,35 @@ See [mapPoints](#mappoints)
 
 ## mapRadius
 
+ArkTS-Dyn:
+```TypeScript
+mapRadius(radius: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 mapRadius(radius: double): double
 ```
 
 Returns the average radius of the ellipse formed after a circle with the specified **radius** is mapped by the existing matrix. The square of the average radius is the product of the major axis length and minor axis length of the ellipse. If the matrix contains perspective transformation, the result is meaningless.
 
-**Since:** 24
+**Since:** 20
 
-<!--Device-Matrix-mapRadius(radius: double): double--><!--Device-Matrix-mapRadius(radius: double): double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| radius | double | Yes | Radius of the circle used for calculation. The value is a floating point number. The absolute value is used if the number is negative. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| radius | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | Average radius after transformation. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **Examples**
 
@@ -662,30 +674,30 @@ mapRect(dst: common2D.Rect, src: common2D.Rect): boolean
 
 Sets the destination rectangle to the bounding rectangle of the shape obtained after transforming the source rectangle with a matrix transformation. As shown in the figure below, the blue rectangle represents the source rectangle, and the yellow rectangle is the shape obtained after a matrix transformation is applied to the source rectangle. Since the edges of the yellow rectangle are not aligned with the coordinate axes, it cannot be represented by a rectangle object. To address this issue, a destination rectangle (black rectangle) is defined as the bounding rectangle.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Matrix-mapRect(dst: common2D.Rect, src: common2D.Rect): boolean--><!--Device-Matrix-mapRect(dst: common2D.Rect, src: common2D.Rect): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dst | common2D.Rect | Yes | Rectangle** object, which is used to store the bounding rectangle. |
-| src | common2D.Rect | Yes | Source rectangle. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | common2D.Rect | Yes |
+| src | common2D.Rect | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** means that the shape retains a rectangular form, and **false** means the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -708,17 +720,17 @@ postConcat(matrix: Matrix): void
 
 Right-multiply the existing matrix by another matrix.
 
-**Since:** 24
+**Since:** 20
 
-<!--Device-Matrix-postConcat(matrix: Matrix): void--><!--Device-Matrix-postConcat(matrix: Matrix): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix used for calculation. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
 
 **Examples**
 
@@ -740,31 +752,37 @@ matrix1.postConcat(matrix2);
 
 ## postRotate
 
+ArkTS-Dyn:
+```TypeScript
+postRotate(degree: number, px: number, py: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 postRotate(degree: double, px: double, py: double): void
 ```
 
 Post multiplies this matrix by a matrix that is derived from an identity matrix after it has been rotated by a given degree around the rotation point (px, py).
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Matrix-postRotate(degree: double, px: double, py: double): void--><!--Device-Matrix-postRotate(degree: double, px: double, py: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| degree | double | Yes | Angle to rotate, in degrees. A positive number indicates a clockwise rotation, and a negative number indicates a counterclockwise rotation. The value is a floating point number. |
-| px | double | Yes | X coordinate of the rotation point. The value is a floating point number. |
-| py | double | Yes | Y coordinate of the rotation point. The value is a floating point number. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| degree | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| py | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -781,32 +799,38 @@ console.info("matrix= "+matrix.getAll().toString());
 
 ## postScale
 
+ArkTS-Dyn:
+```TypeScript
+postScale(sx: number, sy: number, px: number, py: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 postScale(sx: double, sy: double, px: double, py: double): void
 ```
 
 Post multiplies this matrix by a matrix that is derived from an identity matrix after it has been scaled with the coefficient (sx, sy) at the scale point (px, py).
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Matrix-postScale(sx: double, sy: double, px: double, py: double): void--><!--Device-Matrix-postScale(sx: double, sy: double, px: double, py: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sx | double | Yes | Scale coefficient along the X axis. If a negative number is passed in, the matrix is mirrored around y = px before being scaled. The value is a floating point number. |
-| sy | double | Yes | Scale coefficient along the Y axis. If a negative number is passed in, the matrix is mirrored around x = py before being scaled. The value is a floating point number. |
-| px | double | Yes | X coordinate of the scale point. The value is a floating point number. |
-| py | double | Yes | Y coordinate of the scale point. The value is a floating point number. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sx | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| sy | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| py | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -824,26 +848,32 @@ console.info("matrix= "+matrix.getAll().toString());
 
 ## postSkew
 
+ArkTS-Dyn:
+```TypeScript
+postSkew(kx: number, ky: number, px: number, py: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 postSkew(kx: double, ky: double, px: double, py: double): void
 ```
 
 Right-multiply the existing matrix by a skew transformation matrix.
 
-**Since:** 24
+**Since:** 20
 
-<!--Device-Matrix-postSkew(kx: double, ky: double, px: double, py: double): void--><!--Device-Matrix-postSkew(kx: double, ky: double, px: double, py: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| kx | double | Yes | Amount of tilt on the X axis. The value is a floating point number. A positive number tilts the drawing rightwards along the positive direction of the Y axis, and a negative number tilts the drawing leftwards along the positive direction of the Y axis. |
-| ky | double | Yes | Amount of tilt on the Y axis. The value is a floating point number. A positive number tilts the drawing downwards along the positive direction of the X axis, and a negative number tilts the drawing upwards along the positive direction of the X axis. |
-| px | double | Yes | X coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center to the right of the coordinate origin, while a negative value places the center to the left. |
-| py | double | Yes | Y coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center below the coordinate origin, while a negative value places the center above the coordinate origin. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| kx | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| ky | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| py | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Examples**
 
@@ -856,30 +886,36 @@ matrix.postSkew(2.0, 1.0, 2.0, 1.0);
 
 ## postTranslate
 
+ArkTS-Dyn:
+```TypeScript
+postTranslate(dx: number, dy: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 postTranslate(dx: double, dy: double): void
 ```
 
 Post multiplies this matrix by a matrix that is derived from an identity matrix after it has been translated by a given distance (dx, dy).
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Matrix-postTranslate(dx: double, dy: double): void--><!--Device-Matrix-postTranslate(dx: double, dy: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dx | double | Yes | Horizontal distance to translate. A positive number indicates a translation towards the positive direction of the X axis, and a negative number indicates a translation towards the negative direction of the X axis. The value is a floating point number. |
-| dy | double | Yes | Vertical distance to translate. A positive number indicates a translation towards the positive direction of the Y axis, and a negative number indicates a translation towards the negative direction of the Y axis. The value is a floating point number. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dx | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| dy | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -901,23 +937,23 @@ preConcat(matrix: Matrix): void
 
 Preconcats the existing matrix with the passed-in matrix.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Matrix-preConcat(matrix: Matrix): void--><!--Device-Matrix-preConcat(matrix: Matrix): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix** object, which is on the right of a multiplication expression. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -933,31 +969,37 @@ matrix1.preConcat(matrix2);
 
 ## preRotate
 
+ArkTS-Dyn:
+```TypeScript
+preRotate(degree: number, px: number, py: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 preRotate(degree: double, px: double, py: double): void
 ```
 
 Premultiplies this matrix by a matrix that is derived from an identity matrix after it has been rotated by a given degree around the rotation point (px, py).
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Matrix-preRotate(degree: double, px: double, py: double): void--><!--Device-Matrix-preRotate(degree: double, px: double, py: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| degree | double | Yes | Angle to rotate, in degrees. A positive number indicates a clockwise rotation, and a negative number indicates a counterclockwise rotation. The value is a floating point number. |
-| px | double | Yes | X coordinate of the rotation point. The value is a floating point number. |
-| py | double | Yes | Y coordinate of the rotation point. The value is a floating point number. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| degree | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| py | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -974,32 +1016,38 @@ console.info("matrix= "+matrix.getAll().toString());
 
 ## preScale
 
+ArkTS-Dyn:
+```TypeScript
+preScale(sx: number, sy: number, px: number, py: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 preScale(sx: double, sy: double, px: double, py: double): void
 ```
 
 Premultiplies this matrix by a matrix that is derived from an identity matrix after it has been scaled with the coefficient (sx, sy) at the scale point (px, py).
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Matrix-preScale(sx: double, sy: double, px: double, py: double): void--><!--Device-Matrix-preScale(sx: double, sy: double, px: double, py: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sx | double | Yes | Scale coefficient along the X axis. If a negative number is passed in, the matrix is mirrored around y = px before being scaled. The value is a floating point number. |
-| sy | double | Yes | Scale coefficient along the Y axis. If a negative number is passed in, the matrix is mirrored around x = py before being scaled. The value is a floating point number. |
-| px | double | Yes | X coordinate of the scale point. The value is a floating point number. |
-| py | double | Yes | Y coordinate of the scale point. The value is a floating point number. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sx | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| sy | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| py | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -1017,26 +1065,32 @@ console.info("matrix"+matrix.getAll().toString());
 
 ## preSkew
 
+ArkTS-Dyn:
+```TypeScript
+preSkew(kx: number, ky: number, px: number, py: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 preSkew(kx: double, ky: double, px: double, py: double): void
 ```
 
 Left-multiply the existing matrix by a skew transformation matrix.
 
-**Since:** 24
+**Since:** 20
 
-<!--Device-Matrix-preSkew(kx: double, ky: double, px: double, py: double): void--><!--Device-Matrix-preSkew(kx: double, ky: double, px: double, py: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| kx | double | Yes | Amount of tilt on the X axis. The value is a floating point number. A positive number tilts the drawing rightwards along the positive direction of the Y axis, and a negative number tilts the drawing leftwards along the positive direction of the Y axis. |
-| ky | double | Yes | Amount of tilt on the Y axis. The value is a floating point number. A positive number tilts the drawing downwards along the positive direction of the X axis, and a negative number tilts the drawing upwards along the positive direction of the X axis. |
-| px | double | Yes | X coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center to the right of the coordinate origin, while a negative value places the center to the left. |
-| py | double | Yes | Y coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center below the coordinate origin, while a negative value places the center above the coordinate origin. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| kx | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| ky | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| py | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Examples**
 
@@ -1049,30 +1103,36 @@ matrix.preSkew(2.0, 1.0, 2.0, 1.0);
 
 ## preTranslate
 
+ArkTS-Dyn:
+```TypeScript
+preTranslate(dx: number, dy: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 preTranslate(dx: double, dy: double): void
 ```
 
 Premultiplies this matrix by a matrix that is derived from an identity matrix after it has been translated by a given distance (dx, dy).
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Matrix-preTranslate(dx: double, dy: double): void--><!--Device-Matrix-preTranslate(dx: double, dy: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dx | double | Yes | Horizontal distance to translate. A positive number indicates a translation towards the positive direction of the X axis, and a negative number indicates a translation towards the negative direction of the X axis. The value is a floating point number. |
-| dy | double | Yes | Vertical distance to translate. A positive number indicates a translation towards the positive direction of the Y axis, and a negative number indicates a translation towards the negative direction of the Y axis. The value is a floating point number. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dx | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| dy | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -1094,17 +1154,17 @@ rectStaysRect(): boolean
 
 Checks whether a rectangle stays a rectangle after being mapped by a matrix.
 
-**Since:** 24
+**Since:** 20
 
-<!--Device-Matrix-rectStaysRect(): boolean--><!--Device-Matrix-rectStaysRect(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether a rectangle stays a rectangle after being mapped by a matrix. **true** means yes; false otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -1126,9 +1186,9 @@ reset(): void
 
 Resets this matrix to an identity matrix.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Matrix-reset(): void--><!--Device-Matrix-reset(): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -1174,18 +1234,18 @@ setConcat(matrixA: Matrix, matrixB: Matrix): void
 
 Updates the existing matrix with the product of two matrices.
 
-**Since:** 24
+**Since:** 20
 
-<!--Device-Matrix-setConcat(matrixA: Matrix, matrixB: Matrix): void--><!--Device-Matrix-setConcat(matrixA: Matrix, matrixB: Matrix): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| matrixA | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix A used for calculation. |
-| matrixB | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix B used for calculation. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| matrixA | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
+| matrixB | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
 
 **Examples**
 
@@ -1201,29 +1261,35 @@ matrix1.setConcat(matrix2, matrix1);
 
 ## setMatrix
 
+ArkTS-Dyn:
+```TypeScript
+setMatrix(values: Array<number>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setMatrix(values: Array<double>): void
 ```
 
 Sets parameters for this matrix.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Matrix-setMatrix(values: Array<double>): void--><!--Device-Matrix-setMatrix(values: Array<double>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| values | Array&lt;double&gt; | Yes | Floating-point array that holds the parameter values, with the array length set to 9. The values in the array respectively represent a horizontal scale coefficient, a horizontal skew coefficient, a horizontal translation coefficient, a vertical skew coefficient, a vertical scale coefficient, a vertical translation coefficient, an X-axis perspective coefficient, a Y-axis perspective coefficient, and a perspective scale coefficient, in ascending order of indexes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| values | ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;double & gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -1261,23 +1327,29 @@ matrix1.setMatrix(matrix2);
 
 ## setMatrix
 
+ArkTS-Dyn:
+```TypeScript
+setMatrix(matrix: Array<number> | Matrix): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setMatrix(matrix: Array<double> | Matrix): void
 ```
 
 Updates the existing matrix with another matrix.
 
-**Since:** 24
+**Since:** 20
 
-<!--Device-Matrix-setMatrix(matrix: Array<double> | Matrix): void--><!--Device-Matrix-setMatrix(matrix: Array<double> | Matrix): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| matrix | Array&lt;double&gt; \| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Array or matrix for the update. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | ArkTS-Dyn: Array & lt;number & gt; \ | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md)  <br>ArkTS-Sta：Array&lt;double&gt; \| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
 
 **Examples**
 
@@ -1285,37 +1357,43 @@ See [setMatrix](#setmatrix)
 
 ## setPolyToPoly
 
+ArkTS-Dyn:
+```TypeScript
+setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: number): boolean
+```
+
+ArkTS-Sta:
 ```TypeScript
 setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int): boolean
 ```
 
 Sets this matrix to a transformation matrix that maps the source point array to the destination point array. Both the number of source points and that of destination points must be in the range [0, 4].
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Matrix-setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int): boolean--><!--Device-Matrix-setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | Array&lt;common2D.Point&gt; | Yes | Array of source points. The array length must be the same as the value of **count**. |
-| dst | Array&lt;common2D.Point&gt; | Yes | Array of destination points. The array length must be the same as the value of **count**. |
-| count | int | Yes | Number of points in each array. The value is an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | Array & lt;common2D.Point & gt; | Yes |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | Array & lt;common2D.Point & gt; | Yes |
+| count | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** means that the setting is successful, and **false** means the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -1338,31 +1416,31 @@ setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): b
 
 Sets this matrix to a transformation matrix that maps a source rectangle to a destination rectangle.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Matrix-setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): boolean--><!--Device-Matrix-setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | common2D.Rect | Yes | Source rectangle. |
-| dst | common2D.Rect | Yes | Destination rectangle. |
-| scaleToFit | [ScaleToFit](arkts-arkgraphics2d-drawing-scaletofit-e.md) | Yes | Mapping mode from the source rectangle to the target rectangle. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | common2D.Rect | Yes |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | common2D.Rect | Yes |
+| scaleToFit | [ScaleToFit](arkts-arkgraphics2d-drawing-scaletofit-e.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** means that the matrix can represent the mapping, and **false** means the opposite. If either the width or the height of the source rectangle is less than or equal to 0, the API returns **false** and sets the matrix to an identity matrix. If either the width or height of the destination rectangle is less than or equal to 0, the API returns **true** and sets the matrix to a matrix with all values **0**, except for a perspective scaling coefficient of **1**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -1380,31 +1458,37 @@ if (matrix.setRectToRect(src, dst, scaleToFit)) {
 
 ## setRotation
 
+ArkTS-Dyn:
+```TypeScript
+setRotation(degree: number, px: number, py: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setRotation(degree: double, px: double, py: double): void
 ```
 
 Sets this matrix as an identity matrix and rotates it by a given degree around the rotation point (px, py).
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Matrix-setRotation(degree: double, px: double, py: double): void--><!--Device-Matrix-setRotation(degree: double, px: double, py: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| degree | double | Yes | Angle to rotate, in degrees. A positive number indicates a clockwise rotation, and a negative number indicates a counterclockwise rotation. The value is a floating point number. |
-| px | double | Yes | X coordinate of the rotation point. The value is a floating point number. |
-| py | double | Yes | Y coordinate of the rotation point. The value is a floating point number. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| degree | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| py | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -1417,32 +1501,38 @@ matrix.setRotation(90, 100, 100);
 
 ## setScale
 
+ArkTS-Dyn:
+```TypeScript
+setScale(sx: number, sy: number, px: number, py: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setScale(sx: double, sy: double, px: double, py: double): void
 ```
 
 Sets this matrix as an identity matrix and scales it with the coefficients (sx, sy) at the scale point (px, py).
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Matrix-setScale(sx: double, sy: double, px: double, py: double): void--><!--Device-Matrix-setScale(sx: double, sy: double, px: double, py: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sx | double | Yes | Scale coefficient along the X axis. If a negative number is passed in, the matrix is mirrored around y = px before being scaled. The value is a floating point number. |
-| sy | double | Yes | Scale coefficient along the Y axis. If a negative number is passed in, the matrix is mirrored around x = py before being scaled. The value is a floating point number. |
-| px | double | Yes | X coordinate of the scale point. The value is a floating point number. |
-| py | double | Yes | Y coordinate of the scale point. The value is a floating point number. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sx | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| sy | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| py | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -1455,26 +1545,32 @@ matrix.setScale(100, 100, 150, 150);
 
 ## setSinCos
 
+ArkTS-Dyn:
+```TypeScript
+setSinCos(sinValue: number, cosValue: number, px: number, py: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setSinCos(sinValue: double, cosValue: double, px: double, py: double): void
 ```
 
 Sets the matrix to rotate around the rotation center (px, py) with the specified sine and cosine values.
 
-**Since:** 24
+**Since:** 20
 
-<!--Device-Matrix-setSinCos(sinValue: double, cosValue: double, px: double, py: double): void--><!--Device-Matrix-setSinCos(sinValue: double, cosValue: double, px: double, py: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sinValue | double | Yes | Sine value of the rotation angle. Only if the sum of the squares of the sine and cosine values is **1**, the rotation transformation is performed. Otherwise, the matrix may contain other transformations such as translation and scaling. |
-| cosValue | double | Yes | Cosine value of the rotation angle. Only if the sum of the squares of the sine and cosine values is **1**, the rotation transformation is performed. Otherwise, the matrix may contain other transformations such as translation and scaling. |
-| px | double | Yes | X coordinate of the rotation center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center to the right of the coordinate origin, while a negative value places the center to the left. |
-| py | double | Yes | Y coordinate of the rotation center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center below the coordinate origin, while a negative value places the center above the coordinate origin. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sinValue | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| cosValue | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| py | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Examples**
 
@@ -1488,26 +1584,32 @@ matrix.setSinCos(0, 1, 1, 0);
 
 ## setSkew
 
+ArkTS-Dyn:
+```TypeScript
+setSkew(kx: number, ky: number, px: number, py: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setSkew(kx: double, ky: double, px: double, py: double): void
 ```
 
 Sets the skew coefficients of a matrix.
 
-**Since:** 24
+**Since:** 20
 
-<!--Device-Matrix-setSkew(kx: double, ky: double, px: double, py: double): void--><!--Device-Matrix-setSkew(kx: double, ky: double, px: double, py: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| kx | double | Yes | Amount of tilt on the X axis. The value is a floating point number. A positive number tilts the drawing rightwards along the positive direction of the Y axis, and a negative number tilts the drawing leftwards along the positive direction of the Y axis. |
-| ky | double | Yes | Amount of tilt on the Y axis. The value is a floating point number. A positive number tilts the drawing downwards along the positive direction of the X axis, and a negative number tilts the drawing upwards along the positive direction of the X axis. |
-| px | double | Yes | X coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center to the right of the coordinate origin, while a negative value places the center to the left. |
-| py | double | Yes | Y coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center below the coordinate origin, while a negative value places the center above the coordinate origin. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| kx | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| ky | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| py | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Examples**
 
@@ -1521,30 +1623,36 @@ matrix.setSkew(2, 0.5, 0.5, 2);
 
 ## setTranslation
 
+ArkTS-Dyn:
+```TypeScript
+setTranslation(dx: number, dy: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setTranslation(dx: double, dy: double): void
 ```
 
 Sets this matrix as an identity matrix and translates it by a given distance (dx, dy).
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Matrix-setTranslation(dx: double, dy: double): void--><!--Device-Matrix-setTranslation(dx: double, dy: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dx | double | Yes | Horizontal distance to translate. A positive number indicates a translation towards the positive direction of the X axis, and a negative number indicates a translation towards the negative direction of the X axis. The value is a floating point number. |
-| dy | double | Yes | Vertical distance to translate. A positive number indicates a translation towards the positive direction of the Y axis, and a negative number indicates a translation towards the negative direction of the Y axis. The value is a floating point number. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dx | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| dy | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -1554,4 +1662,3 @@ import { drawing } from '@kit.ArkGraphics2D';
 let matrix = new drawing.Matrix();
 matrix.setTranslation(100, 100);
 ```
-

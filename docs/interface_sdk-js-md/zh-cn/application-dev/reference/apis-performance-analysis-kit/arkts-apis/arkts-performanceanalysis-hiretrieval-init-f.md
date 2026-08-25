@@ -16,15 +16,14 @@ function init(): void
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-hiRetrieval-function init(): void--><!--Device-hiRetrieval-function init(): void-End-->
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiRetrieval
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 36000002 | Multi-instance applications not supported error. Possibly caused by invoking this function in a multi-instance application. |
-
+| 错误码ID |
+| --- |
+| 36000002 |

@@ -4,7 +4,7 @@ Defines the input method client type bound to an input component.
 
 **Since:** 20
 
-<!--Device-unnamed-declare interface IMEClient--><!--Device-unnamed-declare interface IMEClient-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,19 +23,19 @@ Sets the extension configuration of an input method.
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-IMEClient-setExtraConfig(config: InputMethodExtraConfig): void--><!--Device-IMEClient-setExtraConfig(config: InputMethodExtraConfig): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| config | [InputMethodExtraConfig](arkts-arkui-inputmethodextraconfig-t.md) | Yes | Extension configuration of an input method. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| config | [InputMethodExtraConfig](arkts-arkui-inputmethodextraconfig-t.md) | Yes |
 
 ## nodeId
 
@@ -49,11 +49,10 @@ Unique ID of the current input component. The value must be greater than or equa
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-IMEClient-nodeId: number--><!--Device-IMEClient-nodeId: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

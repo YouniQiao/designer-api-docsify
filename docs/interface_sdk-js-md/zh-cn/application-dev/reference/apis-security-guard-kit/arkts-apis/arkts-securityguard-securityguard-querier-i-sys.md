@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-securityGuard-interface Querier--><!--Device-securityGuard-interface Querier-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 
@@ -24,11 +24,9 @@ onComplete: () => void
 
 获取数据结束时触发。
 
-**类型：** () =&gt; void
-
 **起始版本：** 12
 
-<!--Device-Querier-onComplete: () => void--><!--Device-Querier-onComplete: () => void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 
@@ -42,15 +40,19 @@ onError: (message: string) => void
 
 查询存在失败时触发。
 
-**类型：** (message: string) =&gt; void
-
 **起始版本：** 12
 
-<!--Device-Querier-onError: (message: string) => void--><!--Device-Querier-onError: (message: string) => void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 
 **系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| message | string | 是 |
 
 ## onQuery
 
@@ -60,13 +62,16 @@ onQuery: (events: Array<SecurityEvent>) => void
 
 返回数据时触发。
 
-**类型：** (events: Array&lt;[SecurityEvent](arkts-securityguard-securityguard-securityevent-i-sys.md)&gt;) =&gt; void
-
 **起始版本：** 12
 
-<!--Device-Querier-onQuery: (events: Array<SecurityEvent>) => void--><!--Device-Querier-onQuery: (events: Array<SecurityEvent>) => void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 
 **系统接口：** 此接口为系统接口。
 
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| events | Array&lt;[SecurityEvent](arkts-securityguard-securityguard-securityevent-i-sys.md)&gt; | 是 |

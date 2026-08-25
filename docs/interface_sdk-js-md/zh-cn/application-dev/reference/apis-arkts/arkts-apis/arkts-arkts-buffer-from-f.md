@@ -14,25 +14,25 @@ function from(array: double[]): Buffer
 
 根据指定数组创建新的Buffer对象，数组中的每个元素作为对应位置的字节存储。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-buffer-function from(array: double[]): Buffer--><!--Device-buffer-function from(array: double[]): Buffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| array | double[] | 是 | 由0~255范围内的整数组成的数组，用于根据数组内容创建新的Buffer对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| array | ArkTS-Dyn: number[]<br>ArkTS-Sta：double[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Buffer | 新的Buffer对象。 |
+| 类型 |
+| --- |
+| Buffer |
 
 **示例**
 
@@ -105,31 +105,31 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-buffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): Buffer--><!--Device-buffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): Buffer-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| arrayBuffer | ArrayBuffer \| SharedArrayBuffer | 是 | 用于创建Buffer的ArrayBuffer或SharedArrayBuffer对象。 |
-| byteOffset | number | 否 | 字节偏移量。指定从arrayBuffer起始位置偏移的字节数，创建的Buffer从该偏移位置开始。默认值：0。 |
-| length | number | 否 | 字节长度， 默认值:（arrayBuffer.byteLength - byteOffset）。在传入null时字节长度为0。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [arrayBuffer](arkts-arkts-buffer-blob-c.md) | ArrayBuffer \| SharedArrayBuffer | 是 |
+| byteOffset | number | 否 |
+| length | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Buffer | 返回一个Buffer对象，该对象与入参对象`arrayBuffer`共享相同的内存区域。 |
+| 类型 |
+| --- |
+| Buffer |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[byteOffset/length]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [byteOffset/length] |
+| 错误码ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 **示例**
 
@@ -146,31 +146,31 @@ function from(arrayBuffer: ArrayBuffer, byteOffset?: int, length?: int): Buffer
 
 **起始版本：** 23
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-buffer-function from(arrayBuffer: ArrayBuffer, byteOffset?: int, length?: int): Buffer--><!--Device-buffer-function from(arrayBuffer: ArrayBuffer, byteOffset?: int, length?: int): Buffer-End-->
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| arrayBuffer | ArrayBuffer | 是 | 用于创建视图的ArrayBuffer。 |
-| byteOffset | int | 否 | byteOffset [byteOffset = 0] 暴露的第一个字节的索引。 该值应为整数。 |
-| length | int | 否 | length [length = arrayBuffer.byteLength - byteOffset] 暴露的字节数。 该值应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [arrayBuffer](arkts-arkts-buffer-blob-c.md) | ArrayBuffer | 是 |
+| byteOffset | int | 否 |
+| length | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Buffer | 返回ArrayBuffer的视图。 |
+| 类型 |
+| --- |
+| Buffer |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[byteOffset/length]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [byteOffset/length] |
+| 错误码ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 **示例**
 
@@ -185,25 +185,25 @@ function from(buffer: Buffer | Uint8Array): Buffer
 
 当入参为Buffer对象时，创建新的Buffer对象并复制入参Buffer对象的数据，然后返回新对象。 基于Uint8Array对象的内存创建新的Buffer对象并返回，新Buffer与原Uint8Array共享同一底层ArrayBuffer内存区域。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-buffer-function from(buffer: Buffer | Uint8Array): Buffer--><!--Device-buffer-function from(buffer: Buffer | Uint8Array): Buffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | Buffer \| Uint8Array | 是 | 用于创建新Buffer的Buffer或Uint8Array对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [buffer](arkts-buffer.md) | Buffer \| Uint8Array | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Buffer | 新的Buffer对象。 |
+| 类型 |
+| --- |
+| Buffer |
 
 **示例**
 
@@ -218,27 +218,27 @@ function from(object: Object, offsetOrEncoding: int | string, length: int): Buff
 
 根据指定的`object`类型数据，创建新的Buffer对象。当object的valueOf()返回ArrayBuffer时，按字节偏移量和长度创建Buffer；其他类型则根据编码格式将对象值转换为Buffer。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-buffer-function from(object: Object, offsetOrEncoding: int | string, length: int): Buffer--><!--Device-buffer-function from(object: Object, offsetOrEncoding: int | string, length: int): Buffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| object | Object | 是 | 支持Symbol.toPrimitive或valueOf()的对象，valueOf()或Symbol.toPrimitive的返回值支持string和ArrayBuffer等类型。 |
-| offsetOrEncoding | int \| string | 是 | 字节偏移量或编码格式。当object的valueOf()返回值为ArrayBuffer时，作为字节偏移量；其他情况下作为编码格式。 |
-| length | int | 是 | 字节长度（此入参仅在object的valueOf()返回值为ArrayBuffer时生效，取值范围：0 &lt;= length &lt;= ArrayBuffer.byteLength，超出范 围时报错: 10200001）。其他情况下可填任意number类型值，该参数不会对结果产生影响。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| object | Object | 是 |
+| offsetOrEncoding | ArkTS-Dyn: number \| string<br>ArkTS-Sta：int \ | string | 是 |
+| length | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Buffer | 返回新的Buffer对象。 |
+| 类型 |
+| --- |
+| Buffer |
 
 **示例**
 
@@ -253,28 +253,27 @@ function from(string: String, encoding?: BufferEncoding): Buffer
 
 根据指定编码格式的字符串，创建新的Buffer对象，字符串按编码格式转换为字节序列存入Buffer。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-buffer-function from(string: String, encoding?: BufferEncoding): Buffer--><!--Device-buffer-function from(string: String, encoding?: BufferEncoding): Buffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| string | String | 是 | 要编码创建Buffer对象的字符串内容。 |
-| encoding | BufferEncoding | 否 | 编码格式。默认值：'utf8'。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| string | String | 是 |
+| encoding | BufferEncoding | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Buffer | 返回新的Buffer对象。 |
+| 类型 |
+| --- |
+| Buffer |
 
 **示例**
 
 参见 [from](#from)
-

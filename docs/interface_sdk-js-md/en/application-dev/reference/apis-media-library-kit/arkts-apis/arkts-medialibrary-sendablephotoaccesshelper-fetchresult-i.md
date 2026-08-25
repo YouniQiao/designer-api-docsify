@@ -6,7 +6,7 @@ Provides APIs to manage the file retrieval result.
 
 **Since:** 12
 
-<!--Device-sendablePhotoAccessHelper-interface FetchResult--><!--Device-sendablePhotoAccessHelper-interface FetchResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,15 +26,15 @@ Closes this FetchResult instance to invalidate it. After this instance is closed
 
 **Since:** 12
 
-<!--Device-FetchResult-close(): void--><!--Device-FetchResult-close(): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 14000011 | Internal system error |
+| Error Code ID |
+| --- |
+| 14000011 |
 
 **Examples**
 
@@ -71,21 +71,21 @@ Obtains all the file assets in the result set. This API uses a promise to return
 
 **Since:** 12
 
-<!--Device-FetchResult-getAllObjects(): Promise<Array<T>>--><!--Device-FetchResult-getAllObjects(): Promise<Array<T>>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;T&gt;&gt; | Promise used to return all the assets in the result set. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Array & lt;T & gt; & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 14000011 | Internal system error |
+| Error Code ID |
+| --- |
+| 14000011 |
 
 **Examples**
 
@@ -118,21 +118,21 @@ Obtains the total number of files in the result set.
 
 **Since:** 12
 
-<!--Device-FetchResult-getCount(): number--><!--Device-FetchResult-getCount(): number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Total number of files obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 14000011 | Internal system error |
+| Error Code ID |
+| --- |
+| 14000011 |
 
 **Examples**
 
@@ -165,21 +165,21 @@ Obtains the first asset in the result set. This API uses a promise to return the
 
 **Since:** 12
 
-<!--Device-FetchResult-getFirstObject(): Promise<T>--><!--Device-FetchResult-getFirstObject(): Promise<T>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;T&gt; | Promise used to return the first object in the result set. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;T & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 14000011 | Internal system error |
+| Error Code ID |
+| --- |
+| 14000011 |
 
 **Examples**
 
@@ -212,21 +212,21 @@ Obtains the last asset in the result set. This API uses a promise to return the 
 
 **Since:** 12
 
-<!--Device-FetchResult-getLastObject(): Promise<T>--><!--Device-FetchResult-getLastObject(): Promise<T>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;T&gt; | Promise used to return the last object in the result set. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;T & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 14000011 | Internal system error |
+| Error Code ID |
+| --- |
+| 14000011 |
 
 **Examples**
 
@@ -259,21 +259,21 @@ Obtains the next asset in the result set. This API uses a promise to return the 
 
 **Since:** 12
 
-<!--Device-FetchResult-getNextObject(): Promise<T>--><!--Device-FetchResult-getNextObject(): Promise<T>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;T&gt; | Promise used to return the next object in the result set. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;T & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 14000011 | Internal system error |
+| Error Code ID |
+| --- |
+| 14000011 |
 
 **Examples**
 
@@ -307,28 +307,28 @@ Obtains the asset with the given index in the result set. This API uses a promis
 
 **Since:** 12
 
-<!--Device-FetchResult-getObjectByPosition(index: number): Promise<T>--><!--Device-FetchResult-getObjectByPosition(index: number): Promise<T>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | number | Yes | Index of the asset to obtain. The value starts from **0**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;T&gt; | Promise used to return the asset obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;T & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000011 | Internal system error |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| 14000011 |
 
 **Examples**
 
@@ -361,21 +361,21 @@ Checks whether the cursor is in the last row of the result set.
 
 **Since:** 12
 
-<!--Device-FetchResult-isAfterLast(): boolean--><!--Device-FetchResult-isAfterLast(): boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the cursor is in the last row of the result set; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 14000011 | Internal system error |
+| Error Code ID |
+| --- |
+| 14000011 |
 
 **Examples**
 
@@ -402,4 +402,3 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
   }
 }
 ```
-

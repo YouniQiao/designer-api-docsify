@@ -1,10 +1,10 @@
 # WebDownloadDelegate
 
-WebDownloadDelegate is a delegate class in the ArkWeb framework used to listen for and handle download task events of the Web component. When a web page in the Web component triggers a file download (for example, when the user taps a download link or the **startDownload** method is called), the download task state changes are notified to the app through the callback APIs of this class. Developers register a **WebDownloadDelegate** instance with the Web component through **setDownloadDelegate** to take over the complete lifecycle management of the download process.WebDownloadDelegate defines four download lifecycle callbacks: [onBeforeDownload](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md#onbeforedownload) is invoked before the download starts, and the app must call [WebDownloadItem.start](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md#start) in this callback and specify a download path; otherwise, the download remains in the PENDING state. [onDownloadUpdated](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md#ondownloadupdated) is invoked during the download process, providing updated information such as the download progress (percentage) and the number of bytes received. [onDownloadFinish](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md#ondownloadfinish) is invoked when the download is complete. [onDownloadFailed](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md#ondownloadfailed) is invoked when the download fails, and the failed task can be saved through [WebDownloadItem.serialize](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md#serialize) for later recovery.
+WebDownloadDelegate is a delegate class in the ArkWeb framework used to listen for and handle download task events of the Web component. When a web page in the Web component triggers a file download (for example, when the user taps a download link or the **startDownload** method is called), the download task state changes are notified to the app through the callback APIs of this class. Developers register a **WebDownloadDelegate** instance with the Web component through **setDownloadDelegate** to take over the complete lifecycle management of the download process.WebDownloadDelegate defines four download lifecycle callbacks: [onBeforeDownload](#onbeforedownload) is invoked before the download starts, and the app must call [WebDownloadItem.start](arkts-arkweb-webview-webdownloaditem-c.md#start) in this callback and specify a download path; otherwise, the download remains in the PENDING state. [onDownloadUpdated](#ondownloadupdated) is invoked during the download process, providing updated information such as the download progress (percentage) and the number of bytes received. [onDownloadFinish](#ondownloadfinish) is invoked when the download is complete. [onDownloadFailed](#ondownloadfailed) is invoked when the download fails, and the failed task can be saved through [WebDownloadItem.serialize](arkts-arkweb-webview-webdownloaditem-c.md#serialize) for later recovery.
 
 **Since:** 11
 
-<!--Device-webview-class WebDownloadDelegate--><!--Device-webview-class WebDownloadDelegate-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -24,26 +24,26 @@ Invoked to notify the app before the download starts. The app must call **WebDow
 
 > **NOTE：**&gt;
 > For a download task in the PENDING state, the file is first saved to a temporary directory. After
-> [WebDownloadItem.start](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md#start) is called and the target path is specified, the
+> [WebDownloadItem.start](arkts-arkweb-webview-webdownloaditem-c.md#start) is called and the target path is specified, the
 > temporary file is renamed to the target file name, and the remaining part of the download is saved directly to
 > the target path. To avoid generating a temporary file before **WebDownloadItem.start** is called, you can first
-> cancel the current download task through [WebDownloadItem.cancel](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md#cancel), and
-> then use [WebDownloadManager.resumeDownload](../../apis-default/arkts-apis/arkts-webview-webdownloadmanager-c.md#resumedownload) to resume the
+> cancel the current download task through [WebDownloadItem.cancel](arkts-arkweb-webview-webdownloaditem-c.md#cancel), and
+> then use [WebDownloadManager.resumeDownload](arkts-arkweb-webview-webdownloadmanager-c.md#resumedownload) to resume the
 > canceled download task.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
-<!--Device-WebDownloadDelegate-onBeforeDownload(callback: Callback<WebDownloadItem>): void--><!--Device-WebDownloadDelegate-onBeforeDownload(callback: Callback<WebDownloadItem>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md)&gt; | Yes | Callback invoked before the download starts. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes |
 
 **Examples**
 
@@ -143,17 +143,17 @@ Callback invoked when the download fails. The app can obtain detailed informatio
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
-<!--Device-WebDownloadDelegate-onDownloadFailed(callback: Callback<WebDownloadItem>): void--><!--Device-WebDownloadDelegate-onDownloadFailed(callback: Callback<WebDownloadItem>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md)&gt; | Yes | Callback for the download failure. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes |
 
 **Examples**
 
@@ -253,17 +253,17 @@ Callback invoked when the download is complete. The app can obtain the informati
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
-<!--Device-WebDownloadDelegate-onDownloadFinish(callback: Callback<WebDownloadItem>): void--><!--Device-WebDownloadDelegate-onDownloadFinish(callback: Callback<WebDownloadItem>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md)&gt; | Yes | Callback invoked when the download is complete. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes |
 
 **Examples**
 
@@ -363,17 +363,17 @@ Callback invoked during the download process. The app can obtain information suc
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
-<!--Device-WebDownloadDelegate-onDownloadUpdated(callback: Callback<WebDownloadItem>): void--><!--Device-WebDownloadDelegate-onDownloadUpdated(callback: Callback<WebDownloadItem>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md)&gt; | Yes | Callback used to return the download update. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes |
 
 **Examples**
 
@@ -462,4 +462,3 @@ struct WebComponent {
   }
 }
 ```
-

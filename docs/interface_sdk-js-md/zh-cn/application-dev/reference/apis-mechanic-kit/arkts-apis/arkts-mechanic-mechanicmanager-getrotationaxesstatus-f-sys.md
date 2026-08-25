@@ -14,9 +14,9 @@ function getRotationAxesStatus(mechId: int): RotationAxesStatus
 
 获取当前转轴状态
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-mechanicManager-function getRotationAxesStatus(mechId: int): RotationAxesStatus--><!--Device-mechanicManager-function getRotationAxesStatus(mechId: int): RotationAxesStatus-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -24,23 +24,23 @@ function getRotationAxesStatus(mechId: int): RotationAxesStatus
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mechId | int | 是 | 机械设备ID |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mechId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RotationAxesStatus](arkts-mechanic-mechanicmanager-rotationaxesstatus-i-sys.md) | Rotation axis status. |
+| 类型 |
+| --- |
+| [RotationAxesStatus](arkts-mechanic-mechanicmanager-rotationaxesstatus-i-sys.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) |
+| [33300002](../errorcode-mechanic.md#33300002-设备未连接) |
 
 **示例**
 
@@ -49,4 +49,3 @@ console.info('Query the rotation axis status');
 let axisStatus: mechanicManager.RotationAxesStatus = mechanicManager.getRotationAxesStatus(0);
 console.info(`'Query the rotation axis status successfully, axis state:' ${axisStatus}`);
 ```
-

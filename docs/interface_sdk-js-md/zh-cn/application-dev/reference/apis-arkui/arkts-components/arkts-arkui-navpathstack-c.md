@@ -12,7 +12,7 @@ Navigation导航控制器，以栈的数据结构管理Navigation中所有的子
 
 **起始版本：** 10
 
-<!--Device-unnamed-declare class NavPathStack--><!--Device-unnamed-declare class NavPathStack-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,19 +31,19 @@ clear(animated?: boolean): void
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-clear(animated?: boolean): void--><!--Device-NavPathStack-clear(animated?: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| animated | boolean | 否 | 是否支持转场动画。<br/>true：支持转场动画；false：不支持转场动画。<br/>默认值：true<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| animated | boolean | 否 |
 
 ## constructor
 
@@ -55,11 +55,11 @@ constructor()
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-constructor()--><!--Device-NavPathStack-constructor()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,19 +73,19 @@ disableAnimation(value: boolean): void
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-disableAnimation(value: boolean): void--><!--Device-NavPathStack-disableAnimation(value: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean | 是 | 是否关闭转场动画，<br/>默认值：false<br/>true：关闭转场动画。<br/>false：不关闭转场动画。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | boolean | 是 |
 
 ## getAllPathName
 
@@ -97,19 +97,19 @@ getAllPathName(): Array<string>
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-getAllPathName(): Array<string>--><!--Device-NavPathStack-getAllPathName(): Array<string>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;string&gt; | 返回栈中所有NavDestination页面的名称，数组元素按页面在栈中的索引从0开始顺序排列。 |
+| 类型 |
+| --- |
+| Array & lt;string & gt; |
 
 ## getIndexByName
 
@@ -121,25 +121,25 @@ getIndexByName(name: string): Array<number>
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-getIndexByName(name: string): Array<number>--><!--Device-NavPathStack-getIndexByName(name: string): Array<number>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | NavDestination页面名称。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;number&gt; | 返回全部名为name的NavDestination页面的位置索引。 当路由栈中不存在此name，返回空数组。索引取值范围为[0, 路由栈大小-1] |
+| 类型 |
+| --- |
+| Array & lt;number & gt; |
 
 ## getParamByIndex
 
@@ -151,25 +151,25 @@ getParamByIndex(index: number): unknown | undefined
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-getParamByIndex(index: number): unknown | undefined--><!--Device-NavPathStack-getParamByIndex(index: number): unknown | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | number | 是 | NavDestination页面的位置索引。 索引值从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| unknown \| undefined | unknown**: parameter information of the corresponding navigation destination page. **unknown** can represent a user-defined type. <br>**undefined**: an invalid index is provided. |
+| 类型 |
+| --- |
+| unknown \| undefined |
 
 ## getParamByName
 
@@ -181,25 +181,25 @@ getParamByName(name: string): Array<unknown>
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-getParamByName(name: string): Array<unknown>--><!--Device-NavPathStack-getParamByName(name: string): Array<unknown>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | NavDestination页面名称。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;unknown&gt; | 返回全部名为name的NavDestination页面的参数信息数组，数组元素按页面索引从小到大排序，每个元素为对应页面的参数信息，具体内容由开发者自定义。 |
+| 类型 |
+| --- |
+| Array & lt;unknown & gt; |
 
 ## getParent
 
@@ -211,19 +211,19 @@ getParent(): NavPathStack | null
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-getParent(): NavPathStack | null--><!--Device-NavPathStack-getParent(): NavPathStack | null-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [NavPathStack](arkts-arkui-navpathstack-c.md) \| null | Navigation path stack of the outer **Navigation** component in which the current **Navigation** component is nested. If there is no outer **Navigation** component., **null** is returned. |
+| 类型 |
+| --- |
+| [NavPathStack](arkts-arkui-navpathstack-c.md) \| null |
 
 ## getPathStack
 
@@ -235,19 +235,19 @@ getPathStack(): Array<NavPathInfo>
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-getPathStack(): Array<NavPathInfo>--><!--Device-NavPathStack-getPathStack(): Array<NavPathInfo>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[NavPathInfo](arkts-arkui-navpathinfo-c.md)&gt; | 当前路由栈中的路由页面信息数组。 |
+| 类型 |
+| --- |
+| Array&lt;[NavPathInfo](arkts-arkui-navpathinfo-c.md)&gt; |
 
 ## moveIndexToTop
 
@@ -259,20 +259,20 @@ moveIndexToTop(index: number, animated?: boolean): void
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-moveIndexToTop(index: number, animated?: boolean): void--><!--Device-NavPathStack-moveIndexToTop(index: number, animated?: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | number | 是 | NavDestination页面的位置索引。索引值从0开始。 |
-| animated | boolean | 否 | 是否支持转场动画。<br/>true：支持转场动画；false：不支持转场动画。<br/>默认值：true<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
+| animated | boolean | 否 |
 
 ## moveToTop
 
@@ -284,26 +284,26 @@ moveToTop(name: string, animated?: boolean): number
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-moveToTop(name: string, animated?: boolean): number--><!--Device-NavPathStack-moveToTop(name: string, animated?: boolean): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | NavDestination页面名称。 |
-| animated | boolean | 否 | 是否支持转场动画。<br/>true：支持转场动画；false：不支持转场动画。<br/>默认值：true<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| animated | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 如果栈中存在名为name的NavDestination页面，则返回由栈底开始第一个名为name的NavDestination页面的当前索引，否则返回-1。 |
+| 类型 |
+| --- |
+| number |
 
 ## pop
 
@@ -334,25 +334,25 @@ pop(animated?: boolean): NavPathInfo | undefined
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-pop(animated?: boolean): NavPathInfo | undefined--><!--Device-NavPathStack-pop(animated?: boolean): NavPathInfo | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| animated | boolean | 否 | 是否支持转场动画。<br/>true：支持转场动画；false：不支持转场动画。<br/>默认值：true<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| animated | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [NavPathInfo](arkts-arkui-navpathinfo-c.md) \| undefined | NavPathInfo**: information about the navigation destination page at the top of the stack. <br>**undefined**: the routing stack is empty. |
+| 类型 |
+| --- |
+| [NavPathInfo](arkts-arkui-navpathinfo-c.md) \| undefined |
 
 ## pop
 
@@ -383,26 +383,26 @@ pop(result: Object, animated?: boolean): NavPathInfo | undefined
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-pop(result: Object, animated?: boolean): NavPathInfo | undefined--><!--Device-NavPathStack-pop(result: Object, animated?: boolean): NavPathInfo | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| result | Object | 是 | 页面自定义处理结果。不支持boolean类型。 |
-| animated | boolean | 否 | 是否支持转场动画。<br/>true：支持转场动画；false：不支持转场动画。<br/>默认值：true |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| result | Object | 是 |
+| animated | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [NavPathInfo](arkts-arkui-navpathinfo-c.md) \| undefined | NavPathInfo**: information about the navigation destination page at the top of the stack. <br>**undefined**: the routing stack is empty. |
+| 类型 |
+| --- |
+| [NavPathInfo](arkts-arkui-navpathinfo-c.md) \| undefined |
 
 ## popToIndex
 
@@ -414,20 +414,20 @@ popToIndex(index: number, animated?: boolean): void
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-popToIndex(index: number, animated?: boolean): void--><!--Device-NavPathStack-popToIndex(index: number, animated?: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | number | 是 | NavDestination页面的位置索引。索引值从0开始。 |
-| animated | boolean | 否 | 是否支持转场动画。<br/>true：支持转场动画；false：不支持转场动画。<br/>默认值：true<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
+| animated | boolean | 否 |
 
 ## popToIndex
 
@@ -439,21 +439,21 @@ popToIndex(index: number, result: Object, animated?: boolean): void
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-popToIndex(index: number, result: Object, animated?: boolean): void--><!--Device-NavPathStack-popToIndex(index: number, result: Object, animated?: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | number | 是 | NavDestination页面的位置索引。索引值从0开始。 |
-| result | Object | 是 | 页面自定义处理结果。不支持boolean类型。 |
-| animated | boolean | 否 | 是否支持转场动画。<br/>true：支持转场动画；false：不支持转场动画。<br/>默认值：true |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
+| result | Object | 是 |
+| animated | boolean | 否 |
 
 ## popToName
 
@@ -465,26 +465,26 @@ popToName(name: string, animated?: boolean): number
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-popToName(name: string, animated?: boolean): number--><!--Device-NavPathStack-popToName(name: string, animated?: boolean): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | NavDestination页面名称。 |
-| animated | boolean | 否 | 是否支持转场动画。<br/>true：支持转场动画；false：不支持转场动画。<br/>默认值：true<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| animated | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 如果栈中存在名为name的NavDestination页面，则返回由栈底开始第一个名为name的NavDestination页面的索引，否则返回-1。 |
+| 类型 |
+| --- |
+| number |
 
 ## popToName
 
@@ -496,27 +496,27 @@ popToName(name: string, result: Object, animated?: boolean): number
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-popToName(name: string, result: Object, animated?: boolean): number--><!--Device-NavPathStack-popToName(name: string, result: Object, animated?: boolean): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | NavDestination页面名称。 |
-| result | Object | 是 | 页面自定义处理结果。不支持boolean类型。 |
-| animated | boolean | 否 | 是否支持转场动画。<br/>true：支持转场动画；false：不支持转场动画。<br/>默认值：true |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| result | Object | 是 |
+| animated | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 如果栈中存在名为name的NavDestination页面，则返回由栈底开始第一个名为name的NavDestination页面的索引，否则返回-1。 |
+| 类型 |
+| --- |
+| number |
 
 ## pushDestination
 
@@ -528,35 +528,35 @@ pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>--><!--Device-NavPathStack-pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
-| animated | boolean | 否 | 是否支持转场动画。<br/>true：支持转场动画；false：不支持转场动画。<br/>默认值：true |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 |
+| animated | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 异步返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) |
+| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
 
 ## pushDestination
 
@@ -568,35 +568,35 @@ pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>--><!--Device-NavPathStack-pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
-| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | 否 | 路由栈操作选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 |
+| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 异常返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) |
+| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
 
 ## pushDestinationByName
 
@@ -608,36 +608,36 @@ pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<void>--><!--Device-NavPathStack-pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | NavDestination页面名称。 |
-| param | Object | 是 | 开发者设置的NavDestination页面详细参数。 |
-| animated | boolean | 否 | 是否支持转场动画。<br/>true：支持转场动画；false：不支持转场动画。<br/>默认值：true |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| param | Object | 是 |
+| animated | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 异常返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) |
+| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
 
 ## pushDestinationByName
 
@@ -649,37 +649,37 @@ pushDestinationByName(name: string, param: Object, onPop: import('../api/@ohos.b
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-pushDestinationByName(name: string, param: Object, onPop: import('../api/@ohos.base').Callback<PopInfo>, animated?: boolean): Promise<void>--><!--Device-NavPathStack-pushDestinationByName(name: string, param: Object, onPop: import('../api/@ohos.base').Callback<PopInfo>, animated?: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | NavDestination页面名称。 |
-| param | Object | 是 | 开发者设置的NavDestination页面详细参数。 |
-| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | 是 | Callback回调，用于页面出栈时处理返回结果。仅 [pop](#pop)、 [popToName](#poptoname)、 [popToIndex](#poptoindex)中设置result参数后触发。 |
-| animated | boolean | 否 | 是否支持转场动画。<br/>true：支持转场动画；false：不支持转场动画。<br/>默认值：true |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| param | Object | 是 |
+| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | 是 |
+| animated | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 异常返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) |
+| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
 
 ## pushPath
 
@@ -691,20 +691,20 @@ pushPath(info: NavPathInfo, animated?: boolean): void
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-pushPath(info: NavPathInfo, animated?: boolean): void--><!--Device-NavPathStack-pushPath(info: NavPathInfo, animated?: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
-| animated | boolean | 否 | 是否支持转场动画。<br/>true：支持转场动画；false：不支持转场动画。<br/>传入参数非法时，按true处理。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 |
+| animated | boolean | 否 |
 
 ## pushPath
 
@@ -716,20 +716,20 @@ pushPath(info: NavPathInfo, options?: NavigationOptions): void
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-pushPath(info: NavPathInfo, options?: NavigationOptions): void--><!--Device-NavPathStack-pushPath(info: NavPathInfo, options?: NavigationOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
-| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | 否 | 路由栈操作选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 |
+| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | 否 |
 
 ## pushPathByName
 
@@ -741,21 +741,21 @@ pushPathByName(name: string, param: unknown, animated?: boolean): void
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-pushPathByName(name: string, param: unknown, animated?: boolean): void--><!--Device-NavPathStack-pushPathByName(name: string, param: unknown, animated?: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | NavDestination页面名称。 |
-| param | unknown | 是 | 开发者设置的NavDestination页面详细参数，unknown可以是用户自定义的类型。 |
-| animated | boolean | 否 | 是否支持转场动画。<br/>true：支持转场动画；false：不支持转场动画。<br/>默认值：true<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| param | unknown | 是 |
+| animated | boolean | 否 |
 
 ## pushPathByName
 
@@ -767,22 +767,22 @@ pushPathByName(name: string, param: Object, onPop: import('../api/@ohos.base').C
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-pushPathByName(name: string, param: Object, onPop: import('../api/@ohos.base').Callback<PopInfo>, animated?: boolean): void--><!--Device-NavPathStack-pushPathByName(name: string, param: Object, onPop: import('../api/@ohos.base').Callback<PopInfo>, animated?: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | NavDestination页面名称。 |
-| param | Object | 是 | 开发者设置的NavDestination页面详细参数。 |
-| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | 是 | Callback回调，用于页面出栈时触发该回调处理返回结果。仅 [pop](#pop)、 [popToName](#poptoname)、 [popToIndex](#poptoindex)中设置result参数后触发。 |
-| animated | boolean | 否 | 是否支持转场动画。<br/>true：支持转场动画；false：不支持转场动画。<br/>默认值：true |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| param | Object | 是 |
+| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | 是 |
+| animated | boolean | 否 |
 
 ## removeByIndexes
 
@@ -794,25 +794,25 @@ removeByIndexes(indexes: Array<number>): number
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-removeByIndexes(indexes: Array<number>): number--><!--Device-NavPathStack-removeByIndexes(indexes: Array<number>): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| indexes | Array&lt;number&gt; | 是 | 待删除NavDestination页面的索引值数组。索引值从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| indexes | Array & lt;number & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回删除的NavDestination页面数量。 |
+| 类型 |
+| --- |
+| number |
 
 ## removeByName
 
@@ -824,25 +824,25 @@ removeByName(name: string): number
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-removeByName(name: string): number--><!--Device-NavPathStack-removeByName(name: string): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 删除的NavDestination页面的名字。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回删除的NavDestination页面数量。 |
+| 类型 |
+| --- |
+| number |
 
 ## removeByNavDestinationId
 
@@ -850,29 +850,29 @@ removeByName(name: string): number
 removeByNavDestinationId(navDestinationId: string): boolean
 ```
 
-将路由栈内指定navDestinationId的NavDestination页面删除。navDestinationId可以在NavDestination的 onReady回调中获取，也可以在 [NavDestinationInfo](../../apis-default/arkts-apis/arkts-uiobserver-navdestinationinfo-i.md)中获取。
+将路由栈内指定navDestinationId的NavDestination页面删除。navDestinationId可以在NavDestination的 onReady回调中获取，也可以在 [NavDestinationInfo](../arkts-apis/arkts-arkui-uiobserver-navdestinationinfo-i.md)中获取。
 
 **起始版本：** 12
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-NavPathStack-removeByNavDestinationId(navDestinationId: string): boolean--><!--Device-NavPathStack-removeByNavDestinationId(navDestinationId: string): boolean-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| navDestinationId | string | 是 | 删除的NavDestination页面的唯一标识符navDestinationId。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| navDestinationId | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回是否成功删除该页面，<br/>true：删除成功。<br/>false：删除失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## replaceDestination
 
@@ -884,35 +884,35 @@ replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>--><!--Device-NavPathStack-replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
-| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | 否 | 路由栈操作选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 |
+| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 异常返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) |
+| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
 
 ## replacePath
 
@@ -924,20 +924,20 @@ replacePath(info: NavPathInfo, animated?: boolean): void
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-replacePath(info: NavPathInfo, animated?: boolean): void--><!--Device-NavPathStack-replacePath(info: NavPathInfo, animated?: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 | 新栈顶页面参数信息。 |
-| animated | boolean | 否 | 是否支持转场动画。<br/>true：支持转场动画；false：不支持转场动画。<br/>默认值：true |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 |
+| animated | boolean | 否 |
 
 ## replacePath
 
@@ -949,20 +949,20 @@ replacePath(info: NavPathInfo, options?: NavigationOptions): void
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-replacePath(info: NavPathInfo, options?: NavigationOptions): void--><!--Device-NavPathStack-replacePath(info: NavPathInfo, options?: NavigationOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 | 新栈顶页面参数信息。 |
-| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | 否 | 路由栈操作选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 |
+| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | 否 |
 
 ## replacePathByName
 
@@ -974,21 +974,21 @@ replacePathByName(name: string, param: Object, animated?: boolean): void
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-replacePathByName(name: string, param: Object, animated?: boolean): void--><!--Device-NavPathStack-replacePathByName(name: string, param: Object, animated?: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | NavDestination页面名称。 |
-| param | Object | 是 | 开发者设置的NavDestination页面详细参数。 |
-| animated | boolean | 否 | 是否支持转场动画。<br/>true：支持转场动画；false：不支持转场动画。<br/>默认值：true |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| param | Object | 是 |
+| animated | boolean | 否 |
 
 ## setInterception
 
@@ -1000,19 +1000,19 @@ setInterception(interception: NavigationInterception): void
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-setInterception(interception: NavigationInterception): void--><!--Device-NavPathStack-setInterception(interception: NavigationInterception): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| interception | [NavigationInterception](arkts-arkui-navigationinterception-i.md) | 是 | 设置Navigation跳转拦截对象。设置后，可在页面跳转前/后执行自定义回调，允许操作栈或拦截跳转。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| interception | [NavigationInterception](arkts-arkui-navigationinterception-i.md) | 是 |
 
 ## setPathStack
 
@@ -1031,20 +1031,20 @@ setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void--><!--Device-NavPathStack-setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pathStack | Array&lt;[NavPathInfo](arkts-arkui-navpathinfo-c.md)&gt; | 是 | 设置当前路由栈中的路由页面信息数组。设置后，将当前路由栈更新为指定内容，并实现路由转场。开发者可在原有栈的基础上批量添加或删除页面。<br/>**说明：**<br/>数组长度无限制。 |
-| animated | boolean | 否 | 是否开启转场动画。<br/>true：开启转场动画；false：不开启转场动画。&lt;br /&gt; 默认值：true |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pathStack | Array&lt;[NavPathInfo](arkts-arkui-navpathinfo-c.md)&gt; | 是 |
+| animated | boolean | 否 |
 
 ## size
 
@@ -1056,17 +1056,16 @@ size(): number
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavPathStack-size(): number--><!--Device-NavPathStack-size(): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | Stack size. <br>Value range: [0, +∞) |
-
+| 类型 |
+| --- |
+| number |

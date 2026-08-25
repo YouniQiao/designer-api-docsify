@@ -16,9 +16,9 @@ function setProxyMode(mode: ProxyMode): Promise<void>
 
 **起始版本：** 20
 
-**需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-connection-function setProxyMode(mode: ProxyMode): Promise<void>--><!--Device-connection-function setProxyMode(mode: ProxyMode): Promise<void>-End-->
+**需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -26,22 +26,22 @@ function setProxyMode(mode: ProxyMode): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mode | [ProxyMode](arkts-network-connection-proxymode-e-sys.md) | 是 | 指定的代理模式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mode | [ProxyMode](arkts-network-connection-proxymode-e-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -55,4 +55,3 @@ connection.setProxyMode(connection.ProxyMode.PROXY_MODE_AUTO).then(() => {
     console.error("Error setting proxy mode:", error);
 });
 ```
-

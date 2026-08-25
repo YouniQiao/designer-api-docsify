@@ -2,9 +2,9 @@
 
 VM内存信息。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-hidebug-interface VMMemoryInfo--><!--Device-hidebug-interface VMMemoryInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -24,9 +24,9 @@ allArraySize: bigint
 
 **类型：** bigint
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-VMMemoryInfo-allArraySize: bigint--><!--Device-VMMemoryInfo-allArraySize: bigint-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -40,9 +40,9 @@ heapUsed: bigint
 
 **类型：** bigint
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-VMMemoryInfo-heapUsed: bigint--><!--Device-VMMemoryInfo-heapUsed: bigint-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -56,9 +56,8 @@ totalHeap: bigint
 
 **类型：** bigint
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-VMMemoryInfo-totalHeap: bigint--><!--Device-VMMemoryInfo-totalHeap: bigint-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
-

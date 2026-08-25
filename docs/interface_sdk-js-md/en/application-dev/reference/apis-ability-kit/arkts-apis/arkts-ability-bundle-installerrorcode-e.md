@@ -7,9 +7,9 @@
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-bundle-export enum InstallErrorCode--><!--Device-bundle-export enum InstallErrorCode-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -23,9 +23,9 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-InstallErrorCode-SUCCESS = 0--><!--Device-InstallErrorCode-SUCCESS = 0-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -39,9 +39,9 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE = 1--><!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE = 1-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -55,9 +55,9 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_ABORTED = 2--><!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_ABORTED = 2-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -71,9 +71,9 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_INVALID = 3--><!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_INVALID = 3-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -87,9 +87,9 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_CONFLICT = 4--><!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_CONFLICT = 4-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -103,9 +103,9 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_STORAGE = 5--><!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_STORAGE = 5-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -119,9 +119,9 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_INCOMPATIBLE = 6--><!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_INCOMPATIBLE = 6-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -135,9 +135,9 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-InstallErrorCode-STATUS_UNINSTALL_FAILURE = 7--><!--Device-InstallErrorCode-STATUS_UNINSTALL_FAILURE = 7-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -151,9 +151,9 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-InstallErrorCode-STATUS_UNINSTALL_FAILURE_BLOCKED = 8--><!--Device-InstallErrorCode-STATUS_UNINSTALL_FAILURE_BLOCKED = 8-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -167,9 +167,9 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-InstallErrorCode-STATUS_UNINSTALL_FAILURE_ABORTED = 9--><!--Device-InstallErrorCode-STATUS_UNINSTALL_FAILURE_ABORTED = 9-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -183,9 +183,9 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-InstallErrorCode-STATUS_UNINSTALL_FAILURE_CONFLICT = 10--><!--Device-InstallErrorCode-STATUS_UNINSTALL_FAILURE_CONFLICT = 10-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -199,9 +199,9 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_DOWNLOAD_TIMEOUT = 0x0B--><!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_DOWNLOAD_TIMEOUT = 0x0B-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -215,9 +215,9 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_DOWNLOAD_FAILED = 0x0C--><!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_DOWNLOAD_FAILED = 0x0C-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -231,9 +231,9 @@ No uninstallation permission.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-InstallErrorCode-STATUS_RECOVER_FAILURE_INVALID = 0x0D--><!--Device-InstallErrorCode-STATUS_RECOVER_FAILURE_INVALID = 0x0D-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -247,9 +247,9 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-InstallErrorCode-STATUS_ABILITY_NOT_FOUND = 0x40--><!--Device-InstallErrorCode-STATUS_ABILITY_NOT_FOUND = 0x40-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -263,9 +263,9 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-InstallErrorCode-STATUS_BMS_SERVICE_ERROR = 0x41--><!--Device-InstallErrorCode-STATUS_BMS_SERVICE_ERROR = 0x41-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -279,9 +279,9 @@ No uninstallation permission.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-InstallErrorCode-STATUS_FAILED_NO_SPACE_LEFT = 0x42--><!--Device-InstallErrorCode-STATUS_FAILED_NO_SPACE_LEFT = 0x42-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -295,9 +295,9 @@ No uninstallation permission.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-InstallErrorCode-STATUS_GRANT_REQUEST_PERMISSIONS_FAILED = 0x43--><!--Device-InstallErrorCode-STATUS_GRANT_REQUEST_PERMISSIONS_FAILED = 0x43-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -311,9 +311,9 @@ No uninstallation permission.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-InstallErrorCode-STATUS_INSTALL_PERMISSION_DENIED = 0x44--><!--Device-InstallErrorCode-STATUS_INSTALL_PERMISSION_DENIED = 0x44-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -327,9 +327,8 @@ No uninstallation permission.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-<!--Device-InstallErrorCode-STATUS_UNINSTALL_PERMISSION_DENIED = 0x45--><!--Device-InstallErrorCode-STATUS_UNINSTALL_PERMISSION_DENIED = 0x45-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework
-

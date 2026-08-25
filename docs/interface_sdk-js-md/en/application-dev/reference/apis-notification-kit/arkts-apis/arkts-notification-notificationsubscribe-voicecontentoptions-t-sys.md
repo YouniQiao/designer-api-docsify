@@ -8,13 +8,12 @@ Describes the properties of the voice content options for notification subscript
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-notificationSubscribe-export type VoiceContentOptions = _VoiceContentOptions--><!--Device-notificationSubscribe-export type VoiceContentOptions = _VoiceContentOptions-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
 
 **Property type:** _VoiceContentOptions
-

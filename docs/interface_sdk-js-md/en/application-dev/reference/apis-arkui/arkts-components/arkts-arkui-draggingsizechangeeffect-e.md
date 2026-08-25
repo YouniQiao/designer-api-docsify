@@ -4,7 +4,7 @@ Enumerates the transition effects for switching between the floating image (set 
 
 **Since:** 19
 
-<!--Device-unnamed-declare enum DraggingSizeChangeEffect--><!--Device-unnamed-declare enum DraggingSizeChangeEffect-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Direct transition from the menu preview to the final drag preview image upon dra
 
 **Since:** 19
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-DraggingSizeChangeEffect-DEFAULT = 0--><!--Device-DraggingSizeChangeEffect-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Smooth size transition from the menu preview to the final drag preview. Disabled
 
 **Since:** 19
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-DraggingSizeChangeEffect-SIZE_TRANSITION = 1--><!--Device-DraggingSizeChangeEffect-SIZE_TRANSITION = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ Gradual transition from the menu preview to the final drag preview with opacity 
 
 **Since:** 19
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-DraggingSizeChangeEffect-SIZE_CONTENT_TRANSITION = 2--><!--Device-DraggingSizeChangeEffect-SIZE_CONTENT_TRANSITION = 2-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

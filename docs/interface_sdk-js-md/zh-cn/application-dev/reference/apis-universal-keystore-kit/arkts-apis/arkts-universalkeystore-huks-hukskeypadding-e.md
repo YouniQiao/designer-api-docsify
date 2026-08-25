@@ -4,7 +4,7 @@
 
 **起始版本：** 8
 
-<!--Device-huks-export enum HuksKeyPadding--><!--Device-huks-export enum HuksKeyPadding-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -18,9 +18,9 @@ HUKS_PADDING_NONE = 0
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-HuksKeyPadding-HUKS_PADDING_NONE = 0--><!--Device-HuksKeyPadding-HUKS_PADDING_NONE = 0-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -34,9 +34,9 @@ HUKS_PADDING_OAEP = 1
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-HuksKeyPadding-HUKS_PADDING_OAEP = 1--><!--Device-HuksKeyPadding-HUKS_PADDING_OAEP = 1-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -52,9 +52,9 @@ HUKS_PADDING_PSS = 2
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-HuksKeyPadding-HUKS_PADDING_PSS = 2--><!--Device-HuksKeyPadding-HUKS_PADDING_PSS = 2-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -70,9 +70,9 @@ HUKS_PADDING_PKCS1_V1_5 = 3
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-HuksKeyPadding-HUKS_PADDING_PKCS1_V1_5 = 3--><!--Device-HuksKeyPadding-HUKS_PADDING_PKCS1_V1_5 = 3-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -88,9 +88,9 @@ HUKS_PADDING_PKCS5 = 4
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-HuksKeyPadding-HUKS_PADDING_PKCS5 = 4--><!--Device-HuksKeyPadding-HUKS_PADDING_PKCS5 = 4-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -106,9 +106,9 @@ HUKS_PADDING_PKCS7 = 5
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-HuksKeyPadding-HUKS_PADDING_PKCS7 = 5--><!--Device-HuksKeyPadding-HUKS_PADDING_PKCS7 = 5-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -122,9 +122,9 @@ HUKS_PADDING_ISO_IEC_9796_2 = 6
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-HuksKeyPadding-HUKS_PADDING_ISO_IEC_9796_2 = 6--><!--Device-HuksKeyPadding-HUKS_PADDING_ISO_IEC_9796_2 = 6-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -138,9 +138,8 @@ HUKS_PADDING_ISO_IEC_9797_1 = 7
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-HuksKeyPadding-HUKS_PADDING_ISO_IEC_9797_1 = 7--><!--Device-HuksKeyPadding-HUKS_PADDING_ISO_IEC_9797_1 = 7-End-->
-
 **系统能力：** SystemCapability.Security.Huks.Core
-

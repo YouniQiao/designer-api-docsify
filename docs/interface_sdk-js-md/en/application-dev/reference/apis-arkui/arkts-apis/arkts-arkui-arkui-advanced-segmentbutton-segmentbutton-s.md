@@ -7,9 +7,7 @@
 
 **Since:** 11
 
-**Decorator:** @Component
-
-<!--Device-unnamed-declare struct SegmentButton--><!--Device-unnamed-declare struct SegmentButton-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,6 +16,22 @@
 ```TypeScript
 import { SegmentButton, SegmentButtonOptions, SegmentButtonItemOptionsArray, TabSegmentButtonOptions, TabSegmentButtonConstructionOptions, CapsuleSegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonTextItem, SegmentButtonIconItem, SegmentButtonIconTextItem, DimensionNoPercentage, CommonSegmentButtonOptions, ItemRestriction, SegmentButtonItemTuple, SegmentButtonItemArray, SegmentButtonItemOptionsConstructorOptions, SegmentButtonItemOptions, BorderRadiusMode } from '@kit.ArkUI';
 ```
+
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableStateAnimation
 
@@ -34,13 +48,11 @@ Whether to enable property animation for the segment button when the **selectedI
 
 **Since:** 24
 
-**Decorator:** @Prop
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-SegmentButton-@Prop  enableStateAnimation: boolean--><!--Device-SegmentButton-@Prop  enableStateAnimation: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,13 +68,11 @@ Maximum font scale for the text in the **SegmentButton**.Value range: [1, 2]Valu
 
 **Since:** 14
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-SegmentButton-@Prop  maxFontScale: number | Resource--><!--Device-SegmentButton-@Prop  maxFontScale: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,11 +88,11 @@ Callback function triggered when a segment button option is tapped. The subscrip
 
 **Since:** 13
 
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-SegmentButton-onItemClicked?: Callback<number>--><!--Device-SegmentButton-onItemClicked?: Callback<number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,17 +104,15 @@ options: SegmentButtonOptions
 
 Options of the **SegmentButton** component.
 
-**Type:** [SegmentButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md)
+**Type:** [SegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md)
 
 **Since:** 11
 
-**Decorator:** @ObjectLink
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SegmentButton-@ObjectLink  options: SegmentButtonOptions--><!--Device-SegmentButton-@ObjectLink  options: SegmentButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -122,13 +130,10 @@ Indexes of selected items of the **SegmentButton**. The index is zero-based and 
 
 **Since:** 11
 
-**Decorator:** @Link
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-SegmentButton-@Link  selectedIndexes: number[]--><!--Device-SegmentButton-@Link  selectedIndexes: number[]-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 Enumerates the available device types for communication. @enum { int }
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-audio-enum CommunicationDeviceType--><!--Device-audio-enum CommunicationDeviceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
@@ -16,9 +16,8 @@ SPEAKER = 2
 
 Speaker.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-CommunicationDeviceType-SPEAKER = 2--><!--Device-CommunicationDeviceType-SPEAKER = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
-

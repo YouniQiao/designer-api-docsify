@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-mechanicManager-export enum MarchingMode--><!--Device-mechanicManager-export enum MarchingMode-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -20,7 +20,7 @@ TURN_THEN_MOVE = 0
 
 **起始版本：** 26.0.0
 
-<!--Device-MarchingMode-TURN_THEN_MOVE = 0--><!--Device-MarchingMode-TURN_THEN_MOVE = 0-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -36,9 +36,8 @@ TURNING_MOVING = 1
 
 **起始版本：** 26.0.0
 
-<!--Device-MarchingMode-TURNING_MOVING = 1--><!--Device-MarchingMode-TURNING_MOVING = 1-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
-

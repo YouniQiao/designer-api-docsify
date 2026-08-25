@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [AlphabetIndexerModifier](arkts-arkui-alphabetindexermodifier-c.md) | Defines AlphabetIndexer Modifier@extends AlphabetIndexerAttribute @implements AttributeModifier&lt;AlphabetIndexerAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AlphabetIndexerModifier](arkts-arkui-alphabetindexermodifier-c.md) |

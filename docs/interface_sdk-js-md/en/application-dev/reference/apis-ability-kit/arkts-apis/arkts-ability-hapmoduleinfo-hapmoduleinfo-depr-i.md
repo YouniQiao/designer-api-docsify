@@ -8,11 +8,11 @@ The HapModuleInfo module provides information about an HAP module. Unless otherw
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [HapModuleInfo](#hapmoduleinfo)
-
-<!--Device-unnamed-export interface HapModuleInfo--><!--Device-unnamed-export interface HapModuleInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -30,11 +30,11 @@ Ability information.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** abilitiesInfo
-
-<!--Device-HapModuleInfo-readonly abilityInfo: Array<AbilityInfo>--><!--Device-HapModuleInfo-readonly abilityInfo: Array<AbilityInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -52,9 +52,9 @@ Module background image.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-HapModuleInfo-readonly backgroundImg: string--><!--Device-HapModuleInfo-readonly backgroundImg: string-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -72,11 +72,11 @@ Module description.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** description
-
-<!--Device-HapModuleInfo-readonly description: string--><!--Device-HapModuleInfo-readonly description: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -94,11 +94,11 @@ Module description ID.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** descriptionId
-
-<!--Device-HapModuleInfo-readonly descriptionId: number--><!--Device-HapModuleInfo-readonly descriptionId: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -116,11 +116,11 @@ Device types supported by the module.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** deviceTypes
-
-<!--Device-HapModuleInfo-readonly deviceTypes: Array<string>--><!--Device-HapModuleInfo-readonly deviceTypes: Array<string>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -138,11 +138,11 @@ Module icon.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** icon
-
-<!--Device-HapModuleInfo-readonly icon: string--><!--Device-HapModuleInfo-readonly icon: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -160,11 +160,11 @@ Module icon ID.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** iconId
-
-<!--Device-HapModuleInfo-readonly iconId: number--><!--Device-HapModuleInfo-readonly iconId: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -182,11 +182,11 @@ Whether installation-free is supported. **true** if supported, **false** otherwi
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** installationFree
-
-<!--Device-HapModuleInfo-readonly installationFree: boolean--><!--Device-HapModuleInfo-readonly installationFree: boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -204,11 +204,11 @@ Module label.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** label
-
-<!--Device-HapModuleInfo-readonly label: string--><!--Device-HapModuleInfo-readonly label: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -226,11 +226,11 @@ Module label ID.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** labelId
-
-<!--Device-HapModuleInfo-readonly labelId: number--><!--Device-HapModuleInfo-readonly labelId: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -248,9 +248,9 @@ Name of the main ability.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-HapModuleInfo-readonly mainAbilityName: string--><!--Device-HapModuleInfo-readonly mainAbilityName: string-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -268,11 +268,11 @@ Module name.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** name
-
-<!--Device-HapModuleInfo-readonly moduleName: string--><!--Device-HapModuleInfo-readonly moduleName: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -290,11 +290,11 @@ Module name.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** name
-
-<!--Device-HapModuleInfo-readonly name: string--><!--Device-HapModuleInfo-readonly name: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -312,9 +312,9 @@ Capabilities required for module running.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-HapModuleInfo-readonly reqCapabilities: Array<string>--><!--Device-HapModuleInfo-readonly reqCapabilities: Array<string>-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -332,9 +332,8 @@ Running modes supported by the module.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-<!--Device-HapModuleInfo-readonly supportedModes: number--><!--Device-HapModuleInfo-readonly supportedModes: number-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework
-

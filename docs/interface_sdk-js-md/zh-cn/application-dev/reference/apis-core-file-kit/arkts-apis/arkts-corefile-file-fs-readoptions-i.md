@@ -4,7 +4,7 @@
 
 **起始版本：** 11
 
-<!--Device-unnamed-export interface ReadOptions--><!--Device-unnamed-export interface ReadOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -28,9 +28,9 @@ length?: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
-<!--Device-ReadOptions-length?: number--><!--Device-ReadOptions-length?: number-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -46,9 +46,8 @@ offset?: number
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ReadOptions-offset?: number--><!--Device-ReadOptions-offset?: number-End-->
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
-

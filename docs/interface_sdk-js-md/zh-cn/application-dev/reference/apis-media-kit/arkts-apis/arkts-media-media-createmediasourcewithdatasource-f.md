@@ -16,25 +16,25 @@ function createMediaSourceWithDataSource(dataSrc: AVDataSrcDescriptor): MediaSou
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-media-function createMediaSourceWithDataSource(dataSrc: AVDataSrcDescriptor): MediaSource | undefined--><!--Device-media-function createMediaSourceWithDataSource(dataSrc: AVDataSrcDescriptor): MediaSource | undefined-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dataSrc | [AVDataSrcDescriptor](arkts-media-multimedia-media-avdatasrcdescriptor-i.md) | 是 | 流式媒体资源描述符。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dataSrc | [AVDataSrcDescriptor](arkts-media-multimedia-media-avdatasrcdescriptor-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) \| undefined | 返回MediaSource，用于媒体资源设置。 |
+| 类型 |
+| --- |
+| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) \| undefined |
 
 **示例**
 
@@ -61,4 +61,3 @@ let dataSrc: media.AVDataSrcDescriptor = {
 }
 let mediaSource : media.MediaSource | undefined = media.createMediaSourceWithDataSource(dataSrc);
 ```
-

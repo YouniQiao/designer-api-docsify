@@ -2,9 +2,9 @@
 
 应用协同信息。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-abilityConnectionManager-interface PeerInfo--><!--Device-abilityConnectionManager-interface PeerInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -24,11 +24,11 @@ abilityName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PeerInfo-abilityName: string--><!--Device-PeerInfo-abilityName: string-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -42,11 +42,11 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PeerInfo-bundleName: string--><!--Device-PeerInfo-bundleName: string-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -60,11 +60,11 @@ deviceId: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PeerInfo-deviceId: string--><!--Device-PeerInfo-deviceId: string-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -78,11 +78,11 @@ moduleName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PeerInfo-moduleName: string--><!--Device-PeerInfo-moduleName: string-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -96,11 +96,10 @@ serviceName?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-PeerInfo-serviceName?: string--><!--Device-PeerInfo-serviceName?: string-End-->
-
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
-

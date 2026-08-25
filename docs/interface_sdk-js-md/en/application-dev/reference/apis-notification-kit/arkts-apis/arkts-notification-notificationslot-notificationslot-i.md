@@ -2,9 +2,9 @@
 
 The **NotificationSlot** module provides APIs for defining the notification slots. The notification reminder modes vary according to notification slots.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-export interface NotificationSlot--><!--Device-unnamed-export interface NotificationSlot-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -19,9 +19,9 @@ Whether to display the badge. The default value is **true**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationSlot-badgeFlag?: boolean--><!--Device-NotificationSlot-badgeFlag?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -36,9 +36,9 @@ Whether to bypass Do Not Disturb mode in the system. The default value is **fals
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationSlot-bypassDnd?: boolean--><!--Device-NotificationSlot-bypassDnd?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -52,9 +52,9 @@ Description of the notification channel. The size cannot exceed 243 bytes, and t
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationSlot-desc?: string--><!--Device-NotificationSlot-desc?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -69,9 +69,9 @@ Whether to allow notifications of this slot type to be published.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-NotificationSlot-readonly enabled?: boolean--><!--Device-NotificationSlot-readonly enabled?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -87,11 +87,11 @@ Notification level.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Substitutes:** [notificationLevel](#notificationlevel)
-
-<!--Device-NotificationSlot-level?: notification.SlotLevel--><!--Device-NotificationSlot-level?: notification.SlotLevel-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -103,11 +103,11 @@ lightColor?: int
 
 Indicator color of the notification. This is a reserved capability and is not supported currently.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationSlot-lightColor?: int--><!--Device-NotificationSlot-lightColor?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -122,9 +122,9 @@ Whether to enable the light. The default value is **false**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationSlot-lightEnabled?: boolean--><!--Device-NotificationSlot-lightEnabled?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -136,11 +136,11 @@ lockscreenVisibility?: int
 
 Mode for displaying the notification on the lock screen. This is a reserved capability and is not supported currently.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationSlot-lockscreenVisibility?: int--><!--Device-NotificationSlot-lockscreenVisibility?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -154,9 +154,9 @@ Notification level, which is used to describe the display priority and alert int
 
 **Type:** notificationManager.SlotLevel
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-NotificationSlot-notificationLevel?: notificationManager.SlotLevel--><!--Device-NotificationSlot-notificationLevel?: notificationManager.SlotLevel-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -170,9 +170,9 @@ Slot type. Different slot types have different notification reminder types.
 
 **Type:** notificationManager.SlotType
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationSlot-notificationType?: notificationManager.SlotType--><!--Device-NotificationSlot-notificationType?: notificationManager.SlotType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -186,9 +186,9 @@ File name of the custom ringtone for notifications from this channel. The file i
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationSlot-sound?: string--><!--Device-NotificationSlot-sound?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -204,11 +204,11 @@ Channel type.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 11
 
 **Substitutes:** [notificationType](#notificationtype)
-
-<!--Device-NotificationSlot-type?: notification.SlotType--><!--Device-NotificationSlot-type?: notification.SlotType-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -223,9 +223,9 @@ Whether to enable vibration. The default value is **false**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationSlot-vibrationEnabled?: boolean--><!--Device-NotificationSlot-vibrationEnabled?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -237,11 +237,10 @@ vibrationValues?: Array<long>
 
 Vibration mode of the notification. This is a reserved capability and is not supported currently.
 
-**Type:** Array&lt;long&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt;
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationSlot-vibrationValues?: Array<long>--><!--Device-NotificationSlot-vibrationValues?: Array<long>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
-

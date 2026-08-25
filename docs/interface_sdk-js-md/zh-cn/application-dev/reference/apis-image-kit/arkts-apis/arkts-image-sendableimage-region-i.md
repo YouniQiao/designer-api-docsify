@@ -6,7 +6,7 @@
 
 **起始版本：** 12
 
-<!--Device-sendableImage-interface Region--><!--Device-sendableImage-interface Region-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -28,11 +28,11 @@ size: Size
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-Region-size: Size--><!--Device-Region-size: Size-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -48,11 +48,11 @@ x: number
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-Region-x: number--><!--Device-Region-x: number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -68,11 +68,10 @@ y: number
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-Region-y: number--><!--Device-Region-y: number-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
-

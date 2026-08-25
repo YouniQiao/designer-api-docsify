@@ -4,7 +4,7 @@ Enumerates the EAP authentication results.​
 
 **Since:** 20
 
-<!--Device-eap-enum CustomResult--><!--Device-eap-enum CustomResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -18,7 +18,7 @@ The authentication process ends with a failed result.
 
 **Since:** 20
 
-<!--Device-CustomResult-RESULT_FAIL = 0--><!--Device-CustomResult-RESULT_FAIL = 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -32,7 +32,7 @@ The authentication is successful, and the process proceeds to the next step.
 
 **Since:** 20
 
-<!--Device-CustomResult-RESULT_NEXT = 1--><!--Device-CustomResult-RESULT_NEXT = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -46,7 +46,6 @@ The authentication process ends with a successful result.
 
 **Since:** 20
 
-<!--Device-CustomResult-RESULT_FINISH = 2--><!--Device-CustomResult-RESULT_FINISH = 2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
-

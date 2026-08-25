@@ -1,18 +1,27 @@
 # Rounding
 
 ```TypeScript
-type Rounding = int
+type Rounding = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
 ```
 
 表示可设置的舍入类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-unnamed-type Rounding = int--><!--Device-unnamed-type Rounding = int-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
-**属性类型：** int
-
+| 类型 |
+| --- |
+| 0 |
+| 1 |
+| 2 |
+| 3 |
+| 4 |
+| 5 |
+| 6 |
+| 7 |
+| 8 |

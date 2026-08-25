@@ -21,24 +21,24 @@ Instructs the device selection module to update the device connection state. Thi
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-continuationManager-function updateConnectStatus(    token: number,    deviceId: string,    status: DeviceConnectState,    callback: AsyncCallback<void>  ): void--><!--Device-continuationManager-function updateConnectStatus(    token: number,    deviceId: string,    status: DeviceConnectState,    callback: AsyncCallback<void>  ): void-End-->
-
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| token | number | Yes | Token obtained after the registration of the continuation management service. |
-| deviceId | string | Yes | Device ID. |
-| status | [DeviceConnectState](arkts-ability-continuationmanager-deviceconnectstate-e.md) | Yes | Device connection state. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the state is updated, **err** is **undefined**; otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| token | number | Yes |
+| deviceId | string | Yes |
+| status | [DeviceConnectState](arkts-ability-continuationmanager-deviceconnectstate-e.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Examples**
 
@@ -82,31 +82,30 @@ Instructs the device selection module to update the device connection state. Thi
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-continuationManager-function updateConnectStatus(token: number, deviceId: string, status: DeviceConnectState): Promise<void>--><!--Device-continuationManager-function updateConnectStatus(token: number, deviceId: string, status: DeviceConnectState): Promise<void>-End-->
-
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| token | number | Yes | Token obtained after the registration of the continuation management service. |
-| deviceId | string | Yes | Device ID. |
-| status | [DeviceConnectState](arkts-ability-continuationmanager-deviceconnectstate-e.md) | Yes | Device connection state. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| token | number | Yes |
+| deviceId | string | Yes |
+| status | [DeviceConnectState](arkts-ability-continuationmanager-deviceconnectstate-e.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Examples**
 
 See [updateConnectStatus](#updateconnectstatus)
-

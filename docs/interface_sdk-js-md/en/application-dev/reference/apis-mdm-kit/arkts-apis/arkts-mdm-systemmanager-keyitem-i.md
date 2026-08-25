@@ -4,7 +4,7 @@ Enumerates other key information. This refers to the information of other keys t
 
 **Since:** 23
 
-<!--Device-systemManager-interface KeyItem--><!--Device-systemManager-interface KeyItem-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -26,9 +26,9 @@ Time when the key action occurs. The value is a microsecond-level timestamp afte
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-KeyItem-downTime: number--><!--Device-KeyItem-downTime: number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -44,9 +44,9 @@ Key code.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-KeyItem-keyCode: KeyCode--><!--Device-KeyItem-keyCode: KeyCode-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -62,9 +62,8 @@ Key action. It indicates whether the key is pressed: **true** for pressed; **fal
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-KeyItem-pressed: boolean--><!--Device-KeyItem-pressed: boolean-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

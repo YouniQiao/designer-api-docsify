@@ -4,7 +4,7 @@ Enumerates the states of a file memory link.
 
 **Since:** 24
 
-<!--Device-photoAccessHelper-enum AppLinkState--><!--Device-photoAccessHelper-enum AppLinkState-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -20,9 +20,9 @@ Whether the file has a memory link cannot be determined.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-AppLinkState-DEFAULT = 0--><!--Device-AppLinkState-DEFAULT = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -38,9 +38,9 @@ The file does not have a memory link.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-AppLinkState-HAS_NO_LINK = 1--><!--Device-AppLinkState-HAS_NO_LINK = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -56,11 +56,10 @@ The file has a memory link.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-AppLinkState-HAS_LINK = 2--><!--Device-AppLinkState-HAS_LINK = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

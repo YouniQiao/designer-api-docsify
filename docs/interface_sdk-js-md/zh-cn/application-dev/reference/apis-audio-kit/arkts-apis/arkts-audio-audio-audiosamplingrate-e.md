@@ -2,9 +2,9 @@
 
 表示音频采样率的枚举（具体设备支持的采样率规格会存在差异）。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-audio-enum AudioSamplingRate--><!--Device-audio-enum AudioSamplingRate-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -16,9 +16,9 @@ SAMPLE_RATE_8000 = 8000
 
 采样率为8000。单位为赫兹（Hz）。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-AudioSamplingRate-SAMPLE_RATE_8000 = 8000--><!--Device-AudioSamplingRate-SAMPLE_RATE_8000 = 8000-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -30,9 +30,9 @@ SAMPLE_RATE_11025 = 11025
 
 采样率为11025。单位为赫兹（Hz）。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-AudioSamplingRate-SAMPLE_RATE_11025 = 11025--><!--Device-AudioSamplingRate-SAMPLE_RATE_11025 = 11025-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -44,9 +44,9 @@ SAMPLE_RATE_12000 = 12000
 
 采样率为12000。单位为赫兹（Hz）。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-AudioSamplingRate-SAMPLE_RATE_12000 = 12000--><!--Device-AudioSamplingRate-SAMPLE_RATE_12000 = 12000-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -58,9 +58,9 @@ SAMPLE_RATE_16000 = 16000
 
 采样率为16000。单位为赫兹（Hz）。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-AudioSamplingRate-SAMPLE_RATE_16000 = 16000--><!--Device-AudioSamplingRate-SAMPLE_RATE_16000 = 16000-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -72,9 +72,9 @@ SAMPLE_RATE_22050 = 22050
 
 采样率为22050。单位为赫兹（Hz）。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-AudioSamplingRate-SAMPLE_RATE_22050 = 22050--><!--Device-AudioSamplingRate-SAMPLE_RATE_22050 = 22050-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -86,9 +86,9 @@ SAMPLE_RATE_24000 = 24000
 
 采样率为24000。单位为赫兹（Hz）。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-AudioSamplingRate-SAMPLE_RATE_24000 = 24000--><!--Device-AudioSamplingRate-SAMPLE_RATE_24000 = 24000-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -100,9 +100,9 @@ SAMPLE_RATE_32000 = 32000
 
 采样率为32000。单位为赫兹（Hz）。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-AudioSamplingRate-SAMPLE_RATE_32000 = 32000--><!--Device-AudioSamplingRate-SAMPLE_RATE_32000 = 32000-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -114,9 +114,9 @@ SAMPLE_RATE_44100 = 44100
 
 采样率为44100。单位为赫兹（Hz）。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-AudioSamplingRate-SAMPLE_RATE_44100 = 44100--><!--Device-AudioSamplingRate-SAMPLE_RATE_44100 = 44100-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -128,9 +128,9 @@ SAMPLE_RATE_48000 = 48000
 
 采样率为48000。单位为赫兹（Hz）。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-AudioSamplingRate-SAMPLE_RATE_48000 = 48000--><!--Device-AudioSamplingRate-SAMPLE_RATE_48000 = 48000-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -142,9 +142,9 @@ SAMPLE_RATE_64000 = 64000
 
 采样率为64000。单位为赫兹（Hz）。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-AudioSamplingRate-SAMPLE_RATE_64000 = 64000--><!--Device-AudioSamplingRate-SAMPLE_RATE_64000 = 64000-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -156,9 +156,9 @@ SAMPLE_RATE_88200 = 88200
 
 采样率为88200。单位为赫兹（Hz）。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AudioSamplingRate-SAMPLE_RATE_88200 = 88200--><!--Device-AudioSamplingRate-SAMPLE_RATE_88200 = 88200-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -170,9 +170,9 @@ SAMPLE_RATE_96000 = 96000
 
 采样率为96000。单位为赫兹（Hz）。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-AudioSamplingRate-SAMPLE_RATE_96000 = 96000--><!--Device-AudioSamplingRate-SAMPLE_RATE_96000 = 96000-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -184,9 +184,9 @@ SAMPLE_RATE_176400 = 176400
 
 采样率为176400。单位为赫兹（Hz）。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AudioSamplingRate-SAMPLE_RATE_176400 = 176400--><!--Device-AudioSamplingRate-SAMPLE_RATE_176400 = 176400-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -198,9 +198,9 @@ SAMPLE_RATE_192000 = 192000
 
 采样率为192000。单位为赫兹（Hz）。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AudioSamplingRate-SAMPLE_RATE_192000 = 192000--><!--Device-AudioSamplingRate-SAMPLE_RATE_192000 = 192000-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -216,9 +216,8 @@ SAMPLE_RATE_384000 = 384000
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AudioSamplingRate-SAMPLE_RATE_384000 = 384000--><!--Device-AudioSamplingRate-SAMPLE_RATE_384000 = 384000-End-->
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
-

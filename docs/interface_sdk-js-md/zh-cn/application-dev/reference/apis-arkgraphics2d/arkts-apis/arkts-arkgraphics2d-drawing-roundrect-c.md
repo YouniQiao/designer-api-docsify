@@ -7,9 +7,9 @@
 > - 本模块使用屏幕物理像素单位px。&gt;
 > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-drawing-class RoundRect--><!--Device-drawing-class RoundRect-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -27,17 +27,17 @@ constructor(roundRect: RoundRect)
 
 拷贝一个圆角矩形。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-RoundRect-constructor(roundRect: RoundRect)--><!--Device-RoundRect-constructor(roundRect: RoundRect)-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| roundRect | RoundRect | 是 | 用于拷贝的圆角矩形。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | 是 |
 
 **示例**
 
@@ -325,31 +325,37 @@ let typefaceArgument = new drawing.TypefaceArguments();
 
 ## constructor
 
+ArkTS-Dyn:
+```TypeScript
+constructor(rect: common2D.Rect, xRadii: number, yRadii: number)
+```
+
+ArkTS-Sta:
 ```TypeScript
 constructor(rect: common2D.Rect, xRadii: double, yRadii: double)
 ```
 
 构造一个圆角矩形对象，当且仅当xRadii和yRadii均大于0时，圆角生效，否则只会构造一个矩形。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-RoundRect-constructor(rect: common2D.Rect, xRadii: double, yRadii: double)--><!--Device-RoundRect-constructor(rect: common2D.Rect, xRadii: double, yRadii: double)-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 需要创建的圆角矩形区域。 |
-| xRadii | double | 是 | x轴方向的圆角半径，该参数为浮点数，取值大于0时圆角生效，小于等于0时圆角不生效。 单位为物理像素px。 |
-| yRadii | double | 是 | y轴方向的圆角半径，该参数为浮点数，取值大于0时圆角生效，小于等于0时圆角不生效。 单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| rect | common2D.Rect | 是 |
+| xRadii | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| yRadii | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -365,27 +371,27 @@ getCorner(pos: CornerPos): common2D.Point
 
 **起始版本：** 12
 
-<!--Device-RoundRect-getCorner(pos: CornerPos): common2D.Point--><!--Device-RoundRect-getCorner(pos: CornerPos): common2D.Point-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pos | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) | 是 | 圆角位置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pos | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| common2D.Point | 返回一个点，其横坐标表示圆角x轴方向上的半径，纵坐标表示y轴方向上的半径。 |
+| 类型 |
+| --- |
+| common2D.Point |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -423,27 +429,27 @@ getCorner(pos: CornerPos): common2D.Point | undefined
 
 **起始版本：** 23
 
-<!--Device-RoundRect-getCorner(pos: CornerPos): common2D.Point | undefined--><!--Device-RoundRect-getCorner(pos: CornerPos): common2D.Point | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pos | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) | 是 | 圆角位置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pos | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| common2D.Point \| undefined | 返回一个点，其横坐标表示圆角x轴方向上的半径，纵坐标表示y轴方向上的半径。 获取失败时返回undefined。 |
+| 类型 |
+| --- |
+| common2D.Point \| undefined |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -451,30 +457,36 @@ getCorner(pos: CornerPos): common2D.Point | undefined
 
 ## offset
 
+ArkTS-Dyn:
+```TypeScript
+offset(dx: number, dy: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 offset(dx: double, dy: double): void
 ```
 
 将圆角矩形沿x轴方向平移dx、沿y轴方向平移dy。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-RoundRect-offset(dx: double, dy: double): void--><!--Device-RoundRect-offset(dx: double, dy: double): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dx | double | 是 | 表示x轴方向上的偏移量。正数表示向x轴正方向平移，负数表示向x轴负方向平移，该参数为浮点数。单位为物理像素px。 |
-| dy | double | 是 | 表示y轴方向上的偏移量。正数表示向y轴正方向平移，负数表示向y轴负方向平移，该参数为浮点数。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dx | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| dy | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -543,31 +555,37 @@ roundRect.offset(100, 100);
 
 ## setCorner
 
+ArkTS-Dyn:
+```TypeScript
+setCorner(pos: CornerPos, x: number, y: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setCorner(pos: CornerPos, x: double, y: double): void
 ```
 
 设置圆角矩形中指定圆角位置的圆角半径。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-RoundRect-setCorner(pos: CornerPos, x: double, y: double): void--><!--Device-RoundRect-setCorner(pos: CornerPos, x: double, y: double): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pos | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) | 是 | 圆角位置。 |
-| x | double | 是 | x轴方向的圆角半径，该参数为浮点数，取值大于0时该圆角半径设置生效，小于等于0时该圆角半径设置不生效。 单位为物理像素px。 |
-| y | double | 是 | y轴方向的圆角半径，该参数为浮点数，取值大于0时该圆角半径设置生效，小于等于0时该圆角半径设置不生效。 单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pos | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) | 是 |
+| x | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| y | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -577,4 +595,3 @@ import { drawing } from '@kit.ArkGraphics2D';
 let roundRect: drawing.RoundRect = new drawing.RoundRect({ left: 0.0, top: 0.0, right: 300.0, bottom: 300.0 }, 50.0, 50.0);
 roundRect.setCorner(drawing.CornerPos.TOP_LEFT_POS, 150.0, 150.0);
 ```
-

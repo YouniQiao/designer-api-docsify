@@ -4,7 +4,7 @@
 
 **起始版本：** 26.1.0
 
-<!--Device-carAwareness-export interface RealTimeWeatherInfo--><!--Device-carAwareness-export interface RealTimeWeatherInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -26,9 +26,9 @@ timestamp: number
 
 **起始版本：** 26.1.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
-<!--Device-RealTimeWeatherInfo-timestamp: number--><!--Device-RealTimeWeatherInfo-timestamp: number-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -44,9 +44,8 @@ weather: number
 
 **起始版本：** 26.1.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-RealTimeWeatherInfo-weather: number--><!--Device-RealTimeWeatherInfo-weather: number-End-->
-
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
-

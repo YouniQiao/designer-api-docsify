@@ -15,11 +15,11 @@ declare function getInspectorNodes(): object
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** getInspectorTree
-
-<!--Device-unnamed-declare function getInspectorNodes(): object--><!--Device-unnamed-declare function getInspectorNodes(): object-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,7 +27,6 @@ declare function getInspectorNodes(): object
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| object |  |
-
+| 类型 |
+| --- |
+| object |

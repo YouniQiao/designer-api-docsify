@@ -2,9 +2,9 @@
 
 Defines the touch point information.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export declare interface Touch--><!--Device-unnamed-export declare interface Touch-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -22,13 +22,13 @@ blobId?: int
 
 Touch point attribute ID. Currently, only single-finger touch is supported. The value **1** indicates left-hand touch, and the value **2** indicates right-hand touch.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-Touch-blobId?: int--><!--Device-Touch-blobId?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -42,11 +42,11 @@ fixedDisplayX?: int
 
 Corrected value of the screenX coordinate in one-hand mode, in px.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-Touch-fixedDisplayX?: int--><!--Device-Touch-fixedDisplayX?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -60,13 +60,12 @@ fixedDisplayY?: int
 
 Corrected value of the screenY coordinate in one-hand mode, in px.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-Touch-fixedDisplayY?: int--><!--Device-Touch-fixedDisplayY?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 **System API:** This is a system API.
-

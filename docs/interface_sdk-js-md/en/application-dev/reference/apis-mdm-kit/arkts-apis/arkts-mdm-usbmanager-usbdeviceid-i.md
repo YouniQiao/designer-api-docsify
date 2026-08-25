@@ -4,7 +4,7 @@ Represents the USB device identity information.
 
 **Since:** 12
 
-<!--Device-usbManager-export interface UsbDeviceId--><!--Device-usbManager-export interface UsbDeviceId-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -26,9 +26,9 @@ Product ID.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-UsbDeviceId-productId: number--><!--Device-UsbDeviceId-productId: number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -44,9 +44,8 @@ Vendor ID.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UsbDeviceId-vendorId: number--><!--Device-UsbDeviceId-vendorId: number-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

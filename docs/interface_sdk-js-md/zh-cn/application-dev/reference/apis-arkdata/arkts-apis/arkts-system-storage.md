@@ -17,9 +17,9 @@
  通过索引读取缓存中存储的值。
  **系统能力：**  SystemCapability.DistributedDataManager.Preferences.Core.Lite
  **参数：**
- | 参数名  | 类型                    | 必填 | 说明       |
- | ------- | -------------------- | ---- | ---------- |
- | options | [GetStorageOptions](arkts-arkdata-system-storage-getstorageoptions-i.md) | 是   | 接口配置信息。 |
+| 参数名  | 类型                    | 必填 |
+| ------- | -------------------- | ---- |
+| options | [GetStorageOptions](arkts-arkdata-system-storage-getstorageoptions-i.md) | 是   |
  **示例：**
  ArkTS示例：
  ```js
@@ -100,9 +100,9 @@
  修改缓存中索引对应的值。
  **系统能力：**  SystemCapability.DistributedDataManager.Preferences.Core.Lite
  **参数：**
- | 参数名  | 类型                   | 必填 | 说明       |
- | ------- | ------------------- | ---- | ---------- |
- | options | [SetStorageOptions](arkts-arkdata-system-storage-setstorageoptions-i.md) | 是   | 接口配置信息。 |
+| 参数名  | 类型                   | 必填 |
+| ------- | ------------------- | ---- |
+| options | [SetStorageOptions](arkts-arkdata-system-storage-setstorageoptions-i.md) | 是   |
  **示例：**
  ArkTS示例：
  ```js
@@ -182,9 +182,9 @@
  清空缓存中存储的键值对。
  **系统能力：**  SystemCapability.DistributedDataManager.Preferences.Core.Lite
  **参数：**
- | 参数名  | 类型                                        | 必填 | 说明           |
- | ------- | ------------------------------------------- | ---- | -------------- |
- | options | [ClearStorageOptions](arkts-arkdata-system-storage-clearstorageoptions-i.md) | 否   | 接口配置信息。 |
+| 参数名  | 类型                                        | 必填 |
+| ------- | ------------------------------------------- | ---- |
+| options | [ClearStorageOptions](arkts-arkdata-system-storage-clearstorageoptions-i.md) | 否   |
  **示例：**
  ArkTS示例：
  ```js
@@ -262,9 +262,9 @@
  删除缓存中索引对应的键值对。
  **系统能力：**  SystemCapability.DistributedDataManager.Preferences.Core.Lite
  **参数：**
- | 参数名  | 类型                                          | 必填 | 说明           |
- | ------- | --------------------------------------------- | ---- | -------------- |
- | options | [DeleteStorageOptions](arkts-arkdata-system-storage-deletestorageoptions-i.md) | 是   | 接口配置信息。 |
+| 参数名  | 类型                                          | 必填 |
+| ------- | --------------------------------------------- | ---- |
+| options | [DeleteStorageOptions](arkts-arkdata-system-storage-deletestorageoptions-i.md) | 是   |
  **示例：**
  ArkTS示例：
  ```js
@@ -348,16 +348,15 @@
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [Storage(数据存储)](arkts-arkdata-system-storage-storage-c.md) |  |
+| 名称 |
+| --- |
+| [Storage(数据存储)](arkts-arkdata-system-storage-storage-c.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [ClearStorageOptions(数据存储)](arkts-arkdata-system-storage-clearstorageoptions-i.md) |  |
-| [DeleteStorageOptions(数据存储)](arkts-arkdata-system-storage-deletestorageoptions-i.md) |  |
-| [GetStorageOptions(数据存储)](arkts-arkdata-system-storage-getstorageoptions-i.md) |  |
-| [SetStorageOptions(数据存储)](arkts-arkdata-system-storage-setstorageoptions-i.md) |  |
-
+| 名称 |
+| --- |
+| [ClearStorageOptions(数据存储)](arkts-arkdata-system-storage-clearstorageoptions-i.md) |
+| [DeleteStorageOptions(数据存储)](arkts-arkdata-system-storage-deletestorageoptions-i.md) |
+| [GetStorageOptions(数据存储)](arkts-arkdata-system-storage-getstorageoptions-i.md) |
+| [SetStorageOptions(数据存储)](arkts-arkdata-system-storage-setstorageoptions-i.md) |

@@ -4,7 +4,7 @@ Enumerates the response types of the menu.
 
 **Since:** 13
 
-<!--Device-unnamed-declare enum WebResponseType--><!--Device-unnamed-declare enum WebResponseType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,7 +18,7 @@ The menu is displayed when the component is long-pressed.
 
 **Since:** 13
 
-<!--Device-WebResponseType-LONG_PRESS = 1--><!--Device-WebResponseType-LONG_PRESS = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,7 +32,6 @@ The menu is displayed when the component is right-clicked.
 
 **Since:** 21
 
-<!--Device-WebResponseType-RIGHT_CLICK = 2--><!--Device-WebResponseType-RIGHT_CLICK = 2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

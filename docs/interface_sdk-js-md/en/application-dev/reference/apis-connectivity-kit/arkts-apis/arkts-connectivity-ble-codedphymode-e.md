@@ -4,7 +4,7 @@ Coded phy mode for advertising or connection.
 
 **Since:** 23
 
-<!--Device-ble-enum CodedPhyMode--><!--Device-ble-enum CodedPhyMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -18,9 +18,9 @@ Use coded S2 phy for advertising or connection.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-CodedPhyMode-BLE_PHY_CODED_S2 = 1--><!--Device-CodedPhyMode-BLE_PHY_CODED_S2 = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -34,9 +34,8 @@ Use coded S8 phy for advertising or connection.
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CodedPhyMode-BLE_PHY_CODED_S8 = 2--><!--Device-CodedPhyMode-BLE_PHY_CODED_S8 = 2-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

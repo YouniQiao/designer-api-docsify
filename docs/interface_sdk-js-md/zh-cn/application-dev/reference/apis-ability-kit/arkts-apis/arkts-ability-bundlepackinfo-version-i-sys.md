@@ -2,9 +2,9 @@
 
 包的版本。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-export interface Version--><!--Device-unnamed-export interface Version-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -18,11 +18,11 @@ readonly code: int
 
 标识应用的版本号，值为32位非负整数。此数字仅用于确定某个版本是否比另一个版本更新，数值越大表示版本越高。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Version-readonly code: int--><!--Device-Version-readonly code: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -36,11 +36,11 @@ readonly minCompatibleVersionCode: int
 
 能够兼容的最低历史版本号，用于跨设备兼容性判断。该值为32位整型数值，非负整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Version-readonly minCompatibleVersionCode: int--><!--Device-Version-readonly minCompatibleVersionCode: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -56,11 +56,10 @@ readonly name: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Version-readonly name: string--><!--Device-Version-readonly name: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
-

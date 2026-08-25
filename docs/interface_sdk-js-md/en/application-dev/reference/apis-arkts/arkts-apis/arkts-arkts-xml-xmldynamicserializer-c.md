@@ -2,9 +2,9 @@
 
 The XmlDynamicSerializer interface is used to dynamically generate an xml file.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-xml-class XmlDynamicSerializer--><!--Device-xml-class XmlDynamicSerializer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -22,26 +22,26 @@ addEmptyElement(name: string): void
 
 Add an empty element.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-XmlDynamicSerializer-addEmptyElement(name: string): void--><!--Device-XmlDynamicSerializer-addEmptyElement(name: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| Error Code ID |
+| --- |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 **Examples**
 
@@ -75,25 +75,25 @@ constructor(encoding?: string)
 
 A parameterized constructor used to create a new XmlDynamicSerializer instance. The input parameter is an encoding format of string type.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-XmlDynamicSerializer-constructor(encoding?: string)--><!--Device-XmlDynamicSerializer-constructor(encoding?: string)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| encoding | string | No | [encoding='utf8'] this is its encoding, only support utf-8. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| encoding | string | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200066](../errorcode-utils.md#10200066-incorrect-encoding-format) | Incorrect encoding format, only support utf-8. |
+| Error Code ID |
+| --- |
+| [10200066](../errorcode-utils.md#10200066-incorrect-encoding-format) |
 
 **Examples**
 
@@ -123,20 +123,20 @@ endElement(): void
 
 Writes end tag of the element.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-XmlDynamicSerializer-endElement(): void--><!--Device-XmlDynamicSerializer-endElement(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200065](../errorcode-utils.md#10200065-mismatched-element-start-and-end-tags) | There is no match between the startElement and the endElement. |
+| Error Code ID |
+| --- |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200065](../errorcode-utils.md#10200065-mismatched-element-start-and-end-tags) |
 
 **Examples**
 
@@ -175,19 +175,19 @@ getOutput(): ArrayBuffer
 
 Get an ArrayBuffer from a XmlDynamicSerializer instance.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-XmlDynamicSerializer-getOutput(): ArrayBuffer--><!--Device-XmlDynamicSerializer-getOutput(): ArrayBuffer-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ArrayBuffer | Returns ArrayBuffer result from a XmlDynamicSerializer instance. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArrayBuffer |
 
 **Examples**
 
@@ -212,28 +212,28 @@ setAttributes(name: string, value: string): void
 
 Write an attribute to xml element.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-XmlDynamicSerializer-setAttributes(name: string, value: string): void--><!--Device-XmlDynamicSerializer-setAttributes(name: string, value: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Key name of the attribute. Cannot be an empty string. |
-| value | string | Yes | Values of attribute. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| value | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) | Illegal position for xml. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| Error Code ID |
+| --- |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 **Examples**
 
@@ -271,26 +271,26 @@ setCdata(text: string): void
 
 Writes the CDATA.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-XmlDynamicSerializer-setCdata(text: string): void--><!--Device-XmlDynamicSerializer-setCdata(text: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| text | string | Yes | Values of CDATA. Cannot be an empty string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| text | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| Error Code ID |
+| --- |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 **Examples**
 
@@ -313,26 +313,26 @@ setComment(text: string): void
 
 Writes the comment to xml.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-XmlDynamicSerializer-setComment(text: string): void--><!--Device-XmlDynamicSerializer-setComment(text: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| text | string | Yes | Values of comment. Cannot be an empty string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| text | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| Error Code ID |
+| --- |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 **Examples**
 
@@ -366,20 +366,20 @@ setDeclaration(): void
 
 Writes xml declaration with encoding. For example: &lt;?xml version="1.0" encoding="utf-8"?&gt;.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-XmlDynamicSerializer-setDeclaration(): void--><!--Device-XmlDynamicSerializer-setDeclaration(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) | Illegal position for xml. |
+| Error Code ID |
+| --- |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) |
 
 **Examples**
 
@@ -414,26 +414,26 @@ setDocType(text: string): void
 
 Writes the DOCTYPE.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-XmlDynamicSerializer-setDocType(text: string): void--><!--Device-XmlDynamicSerializer-setDocType(text: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| text | string | Yes | Values of docType. Cannot be an empty string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| text | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| Error Code ID |
+| --- |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 **Examples**
 
@@ -467,27 +467,27 @@ setNamespace(prefix: string, namespace: string): void
 
 Writes the namespace of the current element tag.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-XmlDynamicSerializer-setNamespace(prefix: string, namespace: string): void--><!--Device-XmlDynamicSerializer-setNamespace(prefix: string, namespace: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| prefix | string | Yes | Values name of the prefix. Cannot be an empty string. |
-| namespace | string | Yes | Values of namespace. Cannot be an empty string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| prefix | string | Yes |
+| namespace | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| Error Code ID |
+| --- |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 **Examples**
 
@@ -526,26 +526,26 @@ setText(text: string): void
 
 Writes the text to xml element.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-XmlDynamicSerializer-setText(text: string): void--><!--Device-XmlDynamicSerializer-setText(text: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| text | string | Yes | Values of text. Cannot be an empty string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| text | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| Error Code ID |
+| --- |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 **Examples**
 
@@ -585,26 +585,26 @@ startElement(name: string): void
 
 Writes a element start tag with the given name.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-XmlDynamicSerializer-startElement(name: string): void--><!--Device-XmlDynamicSerializer-startElement(name: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| Error Code ID |
+| --- |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 **Examples**
 
@@ -634,4 +634,3 @@ let uint8 = new Uint8Array(arrayBuffer);
 let result = util.TextDecoder.create().decodeToString(uint8);
 console.info(result); // <note>Happy</note>
 ```
-

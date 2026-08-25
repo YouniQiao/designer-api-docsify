@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-avMusicTemplate-interface SearchPlayVideoInfo--><!--Device-avMusicTemplate-interface SearchPlayVideoInfo-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -26,9 +26,9 @@ entityId: string
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-SearchPlayVideoInfo-entityId: string--><!--Device-SearchPlayVideoInfo-entityId: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -44,9 +44,9 @@ episodeId?: string
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-SearchPlayVideoInfo-episodeId?: string--><!--Device-SearchPlayVideoInfo-episodeId?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -58,13 +58,13 @@ episodeNumber?: int
 
 视频的剧集序号。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-SearchPlayVideoInfo-episodeNumber?: int--><!--Device-SearchPlayVideoInfo-episodeNumber?: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -80,9 +80,8 @@ extras?: string
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-SearchPlayVideoInfo-extras?: string--><!--Device-SearchPlayVideoInfo-extras?: string-End-->
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-

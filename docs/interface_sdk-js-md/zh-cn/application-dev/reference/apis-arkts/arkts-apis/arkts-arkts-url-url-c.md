@@ -2,9 +2,9 @@
 
 用于解析和构造完整URL。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-url-class URL--><!--Device-url-class URL-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -24,20 +24,20 @@ URL的构造函数。与parseURL方法功能相同，但parseURL为静态工厂�
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [parseURL](#parseurl)
-
-<!--Device-URL-constructor(url: string, base?: string | URL)--><!--Device-URL-constructor(url: string, base?: string | URL)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| url | string | 是 | 一个表示绝对URL或相对URL的字符串，必须是合法的URL格式。 <br/>如果url是相对URL，则需要指定base，用于解析最终的URL。 <br/>如果 url是绝对URL，则给定的base将不会生效。 |
-| base | string \| URL | 否 | 入参字符串或者对象，默认值是undefined。<br>- string：表示基础URL的字符串， 当url为相对URL时需为合法URL格式。<br>- URL：已解析的URL对象，用作相对URL解析的基础地址。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [url](arkts-url.md) | string | 是 |
+| base | string \| URL | 否 |
 
 **示例**
 
@@ -111,11 +111,11 @@ constructor()
 
 URL的无参构造函数，不建议直接调用。请使用parseURL方法创建URL对象。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-URL-constructor()--><!--Device-URL-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -136,32 +136,32 @@ static parseURL(url: string, base?: string | URL): URL
 > url内容为相对路径格式时，会相对于base的当前目录进行解析，包括base中path字段最后一个斜杠前的所有路径片段，
 > 但不包括其后的部分（参照示例中url1）。url内容为指向根目录的格式时，会相对于base的原始地址（origin）进行解析（参照示例中url2）。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-URL-static parseURL(url: string, base?: string | URL): URL--><!--Device-URL-static parseURL(url: string, base?: string | URL): URL-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| url | string | 是 | 一个表示绝对URL或相对URL的字符串。 <br/>如果 url 是相对URL，则需要指定 base，用于解析最终的URL。 <br/>如果 url 是绝对URL，则给定的 base 将不会生效。 |
-| base | string \| URL | 否 | 入参字符串或者对象，默认值是undefined。<br/>- string：字符串。当第一个参数是相对URL时，该参数需符合URL标准。<br/>- URL：URL对象。<br/>- 在url是相对URL时使用，url为绝对URL时此参数不会生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [url](arkts-url.md) | string | 是 |
+| base | string \| URL | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| URL | 返回解析后的URL对象，包含URL的各组成部分（如协议、主机和路径等属性）。 |
+| 类型 |
+| --- |
+| URL |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200002](../errorcode-utils.md#10200002-参数解析错误) | Invalid url string. |
+| 错误码ID |
+| --- |
+| [10200002](../errorcode-utils.md#10200002-参数解析错误) |
 
 **示例**
 
@@ -188,19 +188,19 @@ toJSON(): string
 
 将解析过后的URL转化为JSON字符串。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-URL-toJSON(): string--><!--Device-URL-toJSON(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | URL对象的JSON序列化字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -219,19 +219,19 @@ toString(): string
 
 将解析过后的URL转化为字符串，返回值与URL的href属性值相同。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-URL-toString(): string--><!--Device-URL-toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 解析后的URL序列化字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -270,9 +270,9 @@ hash: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
-<!--Device-URL-hash: string--><!--Device-URL-hash: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -288,9 +288,9 @@ host: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
-<!--Device-URL-host: string--><!--Device-URL-host: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -306,9 +306,9 @@ hostname: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
-<!--Device-URL-hostname: string--><!--Device-URL-hostname: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -324,9 +324,9 @@ href: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
-<!--Device-URL-href: string--><!--Device-URL-href: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -342,9 +342,9 @@ readonly origin: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
-<!--Device-URL-readonly origin: string--><!--Device-URL-readonly origin: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -360,9 +360,9 @@ readonly params: URLParams
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
-<!--Device-URL-readonly params: URLParams--><!--Device-URL-readonly params: URLParams-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -378,9 +378,9 @@ password: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
-<!--Device-URL-password: string--><!--Device-URL-password: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -396,9 +396,9 @@ pathname: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
-<!--Device-URL-pathname: string--><!--Device-URL-pathname: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -418,9 +418,9 @@ port: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
-<!--Device-URL-port: string--><!--Device-URL-port: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -436,9 +436,9 @@ protocol: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
-<!--Device-URL-protocol: string--><!--Device-URL-protocol: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -454,9 +454,9 @@ search: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
-<!--Device-URL-search: string--><!--Device-URL-search: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -472,11 +472,11 @@ readonly searchParams: URLSearchParams
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [URLParams](arkts-arkts-url-urlparams-c.md)
-
-<!--Device-URL-readonly searchParams: URLSearchParams--><!--Device-URL-readonly searchParams: URLSearchParams-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -492,9 +492,8 @@ username: string
 
 **起始版本：** 7
 
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-URL-username: string--><!--Device-URL-username: string-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

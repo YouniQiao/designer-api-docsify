@@ -2,9 +2,9 @@
 
 Provides the API to obtain the color effects supported.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-camera-interface ColorEffectQuery--><!--Device-camera-interface ColorEffectQuery-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -24,9 +24,9 @@ getSupportedColorEffects(): Array<ColorEffectType>
 
 Obtains the supported color effects.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ColorEffectQuery-getSupportedColorEffects(): Array<ColorEffectType>--><!--Device-ColorEffectQuery-getSupportedColorEffects(): Array<ColorEffectType>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -34,16 +34,16 @@ Obtains the supported color effects.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;[ColorEffectType](arkts-camera-camera-coloreffecttype-e-sys.md)&gt; | Array of color effects supported. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;[ColorEffectType](arkts-camera-camera-coloreffecttype-e-sys.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 **Examples**
 
@@ -53,4 +53,3 @@ function getSupportedColorEffects(session: camera.PhotoSessionForSys): Array<cam
   return colorEffects;
 }
 ```
-

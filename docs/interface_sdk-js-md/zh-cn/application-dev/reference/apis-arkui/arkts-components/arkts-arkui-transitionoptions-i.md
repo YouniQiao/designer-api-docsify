@@ -11,11 +11,11 @@ TransitionOptions通过指定结构体内的参数来指定转场效果。
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
-
-<!--Device-unnamed-declare interface TransitionOptions--><!--Device-unnamed-declare interface TransitionOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -37,11 +37,11 @@ opacity?: number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [opacity](arkts-arkui-transitioneffect-c.md#opacity)
-
-<!--Device-TransitionOptions-opacity?: number--><!--Device-TransitionOptions-opacity?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,11 +62,11 @@ rotate?: RotateOptions
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [rotate](arkts-arkui-transitioneffect-c.md#rotate)
-
-<!--Device-TransitionOptions-rotate?: RotateOptions--><!--Device-TransitionOptions-rotate?: RotateOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,11 +88,11 @@ scale?: ScaleOptions
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [scale](arkts-arkui-transitioneffect-c.md#scale)
-
-<!--Device-TransitionOptions-scale?: ScaleOptions--><!--Device-TransitionOptions-scale?: ScaleOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -111,11 +111,11 @@ translate?: TranslateOptions
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [translate](arkts-arkui-transitioneffect-c.md#translate)
-
-<!--Device-TransitionOptions-translate?: TranslateOptions--><!--Device-TransitionOptions-translate?: TranslateOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -132,11 +132,10 @@ type?: TransitionType
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
-<!--Device-TransitionOptions-type?: TransitionType--><!--Device-TransitionOptions-type?: TransitionType-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

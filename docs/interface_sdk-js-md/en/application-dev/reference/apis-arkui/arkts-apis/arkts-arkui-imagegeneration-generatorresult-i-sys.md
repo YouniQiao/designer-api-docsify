@@ -4,9 +4,7 @@ The result of AI-generated images@interface GeneratorResult
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-imageGeneration-interface GeneratorResult--><!--Device-imageGeneration-interface GeneratorResult-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +28,9 @@ Decoded data of AI-generated images.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeneratorResult-image?: image.PixelMap--><!--Device-GeneratorResult-image?: image.PixelMap-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,11 +48,9 @@ Statistics of AI-generated image tasks.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeneratorResult-statistic: TaskStatistic--><!--Device-GeneratorResult-statistic: TaskStatistic-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,13 +68,10 @@ The path information of AI-generated images.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeneratorResult-url?: string--><!--Device-GeneratorResult-url?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

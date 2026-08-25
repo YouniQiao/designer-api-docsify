@@ -2,9 +2,9 @@
 
 定义扫描仪参数的接口。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-scan-interface ScannerParameter--><!--Device-scan-interface ScannerParameter-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -22,11 +22,11 @@ optionConstraintInt?: int[]
 
 选项整数约束。
 
-**类型：** int[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-ScannerParameter-optionConstraintInt?: int[]--><!--Device-ScannerParameter-optionConstraintInt?: int[]-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -40,9 +40,9 @@ optionConstraintRange?: Range
 
 **类型：** Range
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-ScannerParameter-optionConstraintRange?: Range--><!--Device-ScannerParameter-optionConstraintRange?: Range-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -56,9 +56,9 @@ optionConstraintString?: string[]
 
 **类型：** string[]
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-ScannerParameter-optionConstraintString?: string[]--><!--Device-ScannerParameter-optionConstraintString?: string[]-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -72,9 +72,9 @@ optionConstraintType: ConstraintType
 
 **类型：** [ConstraintType](arkts-basicservices-scan-constrainttype-e.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-ScannerParameter-optionConstraintType: ConstraintType--><!--Device-ScannerParameter-optionConstraintType: ConstraintType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -88,9 +88,9 @@ optionDesc: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-ScannerParameter-optionDesc: string--><!--Device-ScannerParameter-optionDesc: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -102,11 +102,11 @@ optionIndex: int
 
 选项索引。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-ScannerParameter-optionIndex: int--><!--Device-ScannerParameter-optionIndex: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -120,9 +120,9 @@ optionName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-ScannerParameter-optionName: string--><!--Device-ScannerParameter-optionName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -136,9 +136,9 @@ optionTitle: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-ScannerParameter-optionTitle: string--><!--Device-ScannerParameter-optionTitle: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -152,9 +152,9 @@ optionType: OptionValueType
 
 **类型：** [OptionValueType](arkts-basicservices-scan-optionvaluetype-e.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-ScannerParameter-optionType: OptionValueType--><!--Device-ScannerParameter-optionType: OptionValueType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -168,9 +168,8 @@ optionUnit: PhysicalUnit
 
 **类型：** [PhysicalUnit](arkts-basicservices-scan-physicalunit-e.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-ScannerParameter-optionUnit: PhysicalUnit--><!--Device-ScannerParameter-optionUnit: PhysicalUnit-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
-

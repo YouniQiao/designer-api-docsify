@@ -4,7 +4,7 @@ Enumerates the properties available for the metadata of a WebP image.
 
 **Since:** 24
 
-<!--Device-image-enum WebPPropertyKey--><!--Device-image-enum WebPPropertyKey-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -18,9 +18,9 @@ Canvas Width.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-WebPPropertyKey-CANVAS_WIDTH = 'WebPCanvasWidth'--><!--Device-WebPPropertyKey-CANVAS_WIDTH = 'WebPCanvasWidth'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -34,9 +34,9 @@ Canvas Height.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-WebPPropertyKey-CANVAS_HEIGHT = 'WebPCanvasHeight'--><!--Device-WebPPropertyKey-CANVAS_HEIGHT = 'WebPCanvasHeight'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -50,9 +50,9 @@ Delay of each frame in milliseconds.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-WebPPropertyKey-DELAY_TIME = 'WebPDelayTime'--><!--Device-WebPPropertyKey-DELAY_TIME = 'WebPDelayTime'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -66,9 +66,9 @@ Unclamped delay of each frame in milliseconds.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-WebPPropertyKey-UNCLAMPED_DELAY_TIME = 'WebPUnclampedDelayTime'--><!--Device-WebPPropertyKey-UNCLAMPED_DELAY_TIME = 'WebPUnclampedDelayTime'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -82,9 +82,8 @@ Loop count.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WebPPropertyKey-LOOP_COUNT = 'WebPLoopCount'--><!--Device-WebPPropertyKey-LOOP_COUNT = 'WebPLoopCount'-End-->
-
 **System capability:** SystemCapability.Multimedia.Image.Core
-

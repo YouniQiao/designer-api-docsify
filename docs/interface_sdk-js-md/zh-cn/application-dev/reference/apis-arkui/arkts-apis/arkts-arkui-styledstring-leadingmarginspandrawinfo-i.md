@@ -4,9 +4,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-unnamed-export declare interface LeadingMarginSpanDrawInfo--><!--Device-unnamed-export declare interface LeadingMarginSpanDrawInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +20,9 @@ baseline: double
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LeadingMarginSpanDrawInfo-baseline: double--><!--Device-LeadingMarginSpanDrawInfo-baseline: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,11 +38,9 @@ bottom: double
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LeadingMarginSpanDrawInfo-bottom: double--><!--Device-LeadingMarginSpanDrawInfo-bottom: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,11 +56,9 @@ direction: TextDirection
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LeadingMarginSpanDrawInfo-direction: TextDirection--><!--Device-LeadingMarginSpanDrawInfo-direction: TextDirection-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,11 +74,9 @@ end: int
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LeadingMarginSpanDrawInfo-end: int--><!--Device-LeadingMarginSpanDrawInfo-end: int-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -102,11 +92,9 @@ first: boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LeadingMarginSpanDrawInfo-first: boolean--><!--Device-LeadingMarginSpanDrawInfo-first: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -122,11 +110,9 @@ start: int
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LeadingMarginSpanDrawInfo-start: int--><!--Device-LeadingMarginSpanDrawInfo-start: int-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -142,11 +128,9 @@ top: double
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LeadingMarginSpanDrawInfo-top: double--><!--Device-LeadingMarginSpanDrawInfo-top: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -162,11 +146,8 @@ x: double
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-LeadingMarginSpanDrawInfo-x: double--><!--Device-LeadingMarginSpanDrawInfo-x: double-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 Ability类是应用生命周期调度的基本单元，是[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)和 [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)的基类，提供系统配置更新回调和系统内存级别变化回调能力。该基类不支持开发者直接继 承，开发者应根据具体的业务场景选择使用[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)或 [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)，相关指南参见 [Ability Kit简介](../../../application-models/abilitykit-overview.md)。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-declare class Ability--><!--Device-unnamed-declare class Ability-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -27,21 +27,21 @@ onConfigurationUpdate(newConfig: Configuration): void
 > 应用的语言，即便系统语言发生变化，系统也不再触发onConfigurationUpdate回调。详见
 > [使用场景](../../../application-models/subscribe-system-environment-variable-changes.md#使用场景)。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-Ability-onConfigurationUpdate(newConfig: Configuration): void--><!--Device-Ability-onConfigurationUpdate(newConfig: Configuration): void-End-->
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| newConfig | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | 是 | 表示更新后的配置信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| newConfig | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | 是 |
 
 **示例**
 
@@ -67,21 +67,21 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 > **说明：**&gt;
 > onMemoryLevel回调运行在当前进程的主线程中，如果在该回调中做耗时的UI组件释放，会阻塞主线程任务，因此不建议在该回调中释放UI组件。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-Ability-onMemoryLevel(level: AbilityConstant.MemoryLevel): void--><!--Device-Ability-onMemoryLevel(level: AbilityConstant.MemoryLevel): void-End-->
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| level | AbilityConstant.MemoryLevel | 是 | 整机可用内存级别，对应的触发场景详见 [AbilityConstant.MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| level | AbilityConstant.MemoryLevel | 是 |
 
 **示例**
 
@@ -96,4 +96,3 @@ class MyUIAbility extends UIAbility {
   }
 }
 ```
-

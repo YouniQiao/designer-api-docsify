@@ -15,23 +15,20 @@ This feature is no longer recommended. Though some browsers might still support 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function escape(str: string): string--><!--Device-unnamed-export function escape(str: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| str | string | Yes | a string to be encoded |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| str | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | a new string in which certain characters have been replaced by hexadecimal escape sequences. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |

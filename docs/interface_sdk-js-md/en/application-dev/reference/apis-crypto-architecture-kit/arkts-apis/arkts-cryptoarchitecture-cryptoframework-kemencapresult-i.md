@@ -4,7 +4,7 @@ Represents the encapsulation result of the KEM.
 
 **Since:** 26.0.0
 
-<!--Device-cryptoFramework-interface KemEncapResult--><!--Device-cryptoFramework-interface KemEncapResult-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
 
@@ -26,11 +26,11 @@ Indicates the shared secret key of the KEM.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-KemEncapResult-sharedSecret: Uint8Array--><!--Device-KemEncapResult-sharedSecret: Uint8Array-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
 
@@ -46,11 +46,10 @@ Indicates the wrapped key of the KEM, which is the ciphertext of the KEM.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-KemEncapResult-wrappedKey: Uint8Array--><!--Device-KemEncapResult-wrappedKey: Uint8Array-End-->
-
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
-

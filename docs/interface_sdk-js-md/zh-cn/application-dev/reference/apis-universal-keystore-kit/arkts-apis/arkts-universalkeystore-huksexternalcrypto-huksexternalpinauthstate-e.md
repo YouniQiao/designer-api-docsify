@@ -4,7 +4,7 @@
 
 **起始版本：** 22
 
-<!--Device-huksExternalCrypto-export enum HuksExternalPinAuthState--><!--Device-huksExternalCrypto-export enum HuksExternalPinAuthState-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -18,7 +18,7 @@ Ukey PIN未认证。
 
 **起始版本：** 22
 
-<!--Device-HuksExternalPinAuthState-HUKS_EXT_CRYPTO_PIN_NO_AUTH = 0--><!--Device-HuksExternalPinAuthState-HUKS_EXT_CRYPTO_PIN_NO_AUTH = 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -32,7 +32,7 @@ PIN认证成功
 
 **起始版本：** 22
 
-<!--Device-HuksExternalPinAuthState-HUKS_EXT_CRYPTO_PIN_AUTH_SUCCEEDED = 1--><!--Device-HuksExternalPinAuthState-HUKS_EXT_CRYPTO_PIN_AUTH_SUCCEEDED = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -46,7 +46,6 @@ UKey PIN码已锁定
 
 **起始版本：** 22
 
-<!--Device-HuksExternalPinAuthState-HUKS_EXT_CRYPTO_PIN_LOCKED = 2--><!--Device-HuksExternalPinAuthState-HUKS_EXT_CRYPTO_PIN_LOCKED = 2-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
-

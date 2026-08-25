@@ -4,9 +4,9 @@ Represents the information returned when the move operation fails. If the operat
 
 **Since:** 11
 
-**Deprecated since:** 23
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-fileAccess-interface MoveResult--><!--Device-fileAccess-interface MoveResult-End-->
+**Deprecated since:** 23
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -30,13 +30,13 @@ URI of the conflicting file. If the error is not caused by a file conflict, **de
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MoveResult-destUri: string--><!--Device-MoveResult-destUri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -54,13 +54,13 @@ Error code. For details about the error codes, see [File Management Error Codes]
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MoveResult-errCode: number--><!--Device-MoveResult-errCode: number-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -78,13 +78,13 @@ Error message.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MoveResult-errMsg: string--><!--Device-MoveResult-errMsg: string-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -102,15 +102,14 @@ URI of the source file or directory.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MoveResult-sourceUri: string--><!--Device-MoveResult-sourceUri: string-End-->
-
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
-

@@ -6,7 +6,7 @@ BounceSymbolEffect继承自父类SymbolEffect。
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare class BounceSymbolEffect--><!--Device-unnamed-declare class BounceSymbolEffect-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,22 +25,22 @@ ScaleSymbolEffect的构造函数，缩放动效。
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-BounceSymbolEffect-constructor(scope?: EffectScope, direction?: EffectDirection)--><!--Device-BounceSymbolEffect-constructor(scope?: EffectScope, direction?: EffectDirection)-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| scope | [EffectScope](arkts-arkui-effectscope-e.md) | 否 | 动效范围。具体枚举值及说明请参考EffectScope枚举说明。 <br>默认值：EffectScope.LAYER |
-| direction | [EffectDirection](arkts-arkui-effectdirection-e.md) | 否 | 动效方向。具体枚举值及说明请参考EffectDirection枚举说明。 <br>默认值：EffectDirection.DOWN |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [scope](#scope) | [EffectScope](arkts-arkui-effectscope-e.md) | 否 |
+| [direction](#direction) | [EffectDirection](arkts-arkui-effectdirection-e.md) | 否 |
 
 ## direction
 
@@ -54,13 +54,13 @@ direction?: EffectDirection
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-BounceSymbolEffect-direction?: EffectDirection--><!--Device-BounceSymbolEffect-direction?: EffectDirection-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,13 +76,12 @@ scope?: EffectScope
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-BounceSymbolEffect-scope?: EffectScope--><!--Device-BounceSymbolEffect-scope?: EffectScope-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

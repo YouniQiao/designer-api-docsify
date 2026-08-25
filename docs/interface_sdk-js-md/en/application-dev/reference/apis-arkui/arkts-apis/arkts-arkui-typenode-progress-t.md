@@ -8,13 +8,12 @@ Represents a FrameNode of the **Progress** type. This type of node does not allo
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-typeNode-type Progress = TypedFrameNode<ProgressInterface, ProgressAttribute>--><!--Device-typeNode-type Progress = TypedFrameNode<ProgressInterface, ProgressAttribute>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;ProgressInterface, ProgressAttribute&gt;
-
+**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;ProgressInterface, ProgressAttribute&gt;

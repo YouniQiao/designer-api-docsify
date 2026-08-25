@@ -2,9 +2,9 @@
 
 高级音频编码（AAC）类型枚举。
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-unnamed-enum AacProfile--><!--Device-unnamed-enum AacProfile-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -16,11 +16,11 @@ AAC_LC = 0
 
 表示AAC Low-Complexity类型。
 
-**起始版本：** 23
+**起始版本：** 22
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
-<!--Device-AacProfile-AAC_LC = 0--><!--Device-AacProfile-AAC_LC = 0-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -32,11 +32,11 @@ AAC_HE = 1
 
 表示AAC High-Efficiency类型。
 
-**起始版本：** 23
+**起始版本：** 22
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
-<!--Device-AacProfile-AAC_HE = 1--><!--Device-AacProfile-AAC_HE = 1-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -48,11 +48,10 @@ AAC_HE_V2 = 2
 
 表示AAC High-Efficiency version 2类型。
 
-**起始版本：** 23
+**起始版本：** 22
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
-<!--Device-AacProfile-AAC_HE_V2 = 2--><!--Device-AacProfile-AAC_HE_V2 = 2-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
-

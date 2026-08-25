@@ -2,9 +2,9 @@
 
 查询应用历史流量参数信息。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-statistics-export interface UidInfo--><!--Device-statistics-export interface UidInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -26,9 +26,9 @@ ifaceInfo: IfaceInfo
 
 **类型：** [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-UidInfo-ifaceInfo: IfaceInfo--><!--Device-UidInfo-ifaceInfo: IfaceInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -42,13 +42,12 @@ uid: int
 
 需查询的应用 uid。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-UidInfo-uid: int--><!--Device-UidInfo-uid: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
-

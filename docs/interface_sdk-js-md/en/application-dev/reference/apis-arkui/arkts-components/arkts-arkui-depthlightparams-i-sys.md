@@ -4,7 +4,7 @@ Lighting parameters struct.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare interface DepthLightParams--><!--Device-unnamed-declare interface DepthLightParams-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,11 @@ Light color.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-DepthLightParams-color: DepthColorRGB--><!--Device-DepthLightParams-color: DepthColorRGB-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,11 +49,11 @@ Light direction vector.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-DepthLightParams-direction: DepthVector3--><!--Device-DepthLightParams-direction: DepthVector3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,22 +62,21 @@ Light direction vector.
 ## intensity
 
 ```TypeScript
-intensity: double
+intensity: number
 ```
 
 Light intensity.
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-DepthLightParams-intensity: double--><!--Device-DepthLightParams-intensity: double-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

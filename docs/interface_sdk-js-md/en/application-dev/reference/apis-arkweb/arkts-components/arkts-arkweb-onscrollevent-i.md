@@ -4,7 +4,7 @@ Defines the callback information triggered when the scrollbar scrolls to a speci
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface OnScrollEvent--><!--Device-unnamed-declare interface OnScrollEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -25,9 +25,9 @@ Position of the scrollbar on the x-axis relative to the leftmost of the web page
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-OnScrollEvent-xOffset: number--><!--Device-OnScrollEvent-xOffset: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -43,9 +43,8 @@ Position of the scrollbar on the y-axis relative to the top of the web page.Unit
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-OnScrollEvent-yOffset: number--><!--Device-OnScrollEvent-yOffset: number-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

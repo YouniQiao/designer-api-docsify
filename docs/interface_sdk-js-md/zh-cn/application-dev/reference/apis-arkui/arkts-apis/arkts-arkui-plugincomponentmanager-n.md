@@ -1,10 +1,10 @@
-# pluginComponentManager
+# pluginComponentManager(PluginComponentManager)
 
 插件组件管理器，提供插件组件的请求、推送和事件监听等管理能力。
 
 **起始版本：** 8
 
-<!--Device-unnamed-declare namespace pluginComponentManager--><!--Device-unnamed-declare namespace pluginComponentManager-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,44 +18,43 @@ import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [push](arkts-arkui-plugincomponentmanager-push-f.md) | 组件提供方向组件使用方主动发送组件和数据。适用于提供方数据更新后需主动通知使用方刷新显示的场景。 |
-| [request](arkts-arkui-plugincomponentmanager-request-f.md) | 组件使用方向组件提供方主动请求组件。适用于使用方需按需获取提供方组件及数据的场景。 |
-| [on_string](arkts-arkui-plugincomponentmanager-onstring-f.md#on_string) | 提供方监听"request"类型的事件，给使用方返回通过request接口主动请求的数据；使用方监听"push"类型的事件，接收提供方通过push接口主动推送的数据。 |
+| 名称 |
+| --- |
+| [push(PluginComponentManager)](arkts-arkui-plugincomponentmanager-push-f.md) |
+| [request(PluginComponentManager)](arkts-arkui-plugincomponentmanager-request-f.md) |
+| [on(PluginComponentManager)](arkts-arkui-plugincomponentmanager-on-f.md) |
 
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [push](arkts-arkui-plugincomponentmanager-push-f-sys.md) | 组件提供方向组件使用方主动发送组件与数据。组件使用方需通过onPush事件监听接收数据。 |
-| [request](arkts-arkui-plugincomponentmanager-request-f-sys.md) | 组件使用方向组件提供方主动请求组件。组件提供方需通过onRequest事件监听响应请求，并通过回调返回组件模板信息。 |
+| 名称 |
+| --- |
+| [push(PluginComponentManager)](arkts-arkui-plugincomponentmanager-push-f-sys.md) |
+| [request(PluginComponentManager)](arkts-arkui-plugincomponentmanager-request-f-sys.md) |
 <!--DelEnd-->
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [PushParameters](arkts-arkui-plugincomponentmanager-pushparameters-i.md) | 使用pluginComponentManager.push方法时需要传递的参数。 |
-| [RequestParameters](arkts-arkui-plugincomponentmanager-requestparameters-i.md) | 使用pluginComponentManager.request方法时需要传递的参数。 |
-| [RequestCallbackParameters](arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md) | pluginComponentManager.request方法接收到的回调结果。 |
-| [RequestEventResult](arkts-arkui-plugincomponentmanager-requesteventresult-i.md) | 注册request监听方法后，接收到请求事件时回应请求的数据类型。 |
+| 名称 |
+| --- |
+| [PushParameters(PluginComponentManager)](arkts-arkui-plugincomponentmanager-pushparameters-i.md) |
+| [RequestParameters(PluginComponentManager)](arkts-arkui-plugincomponentmanager-requestparameters-i.md) |
+| [RequestCallbackParameters(PluginComponentManager)](arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md) |
+| [RequestEventResult(PluginComponentManager)](arkts-arkui-plugincomponentmanager-requesteventresult-i.md) |
 
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [PushParameterForStage](arkts-arkui-plugincomponentmanager-pushparameterforstage-i-sys.md) | 用于设置Stage模型下使用pluginComponentManager.push方法时需要传递的参数。 |
-| [RequestParameterForStage](arkts-arkui-plugincomponentmanager-requestparameterforstage-i-sys.md) | 用于设置Stage模型下使用pluginComponentManager.request方法时需要传递的参数。 |
+| 名称 |
+| --- |
+| [PushParameterForStage(PluginComponentManager)](arkts-arkui-plugincomponentmanager-pushparameterforstage-i-sys.md) |
+| [RequestParameterForStage(PluginComponentManager)](arkts-arkui-plugincomponentmanager-requestparameterforstage-i-sys.md) |
 <!--DelEnd-->
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-| [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md) | 以键值对形式存储信息，符合JSON格式。 |
-| [OnPushEventCallback](arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md) | 对应push事件的监听回调函数。 |
-| [OnRequestEventCallback](arkts-arkui-plugincomponentmanager-onrequesteventcallback-t.md) | 对应request事件的监听回调函数。 |
-
+| 名称 |
+| --- |
+| [KVObject(PluginComponentManager)](arkts-arkui-plugincomponentmanager-kvobject-t.md) |
+| [OnPushEventCallback(PluginComponentManager)](arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md) |
+| [OnRequestEventCallback(PluginComponentManager)](arkts-arkui-plugincomponentmanager-onrequesteventcallback-t.md) |

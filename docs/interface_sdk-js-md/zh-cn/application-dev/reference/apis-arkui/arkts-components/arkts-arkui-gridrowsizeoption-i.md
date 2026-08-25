@@ -4,7 +4,7 @@
 
 **起始版本：** 9
 
-<!--Device-unnamed-declare interface GridRowSizeOption--><!--Device-unnamed-declare interface GridRowSizeOption-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ lg?: Length
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-GridRowSizeOption-lg?: Length--><!--Device-GridRowSizeOption-lg?: Length-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ md?: Length
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-GridRowSizeOption-md?: Length--><!--Device-GridRowSizeOption-md?: Length-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,11 +65,11 @@ sm?: Length
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-GridRowSizeOption-sm?: Length--><!--Device-GridRowSizeOption-sm?: Length-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,11 +85,11 @@ xl?: Length
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-GridRowSizeOption-xl?: Length--><!--Device-GridRowSizeOption-xl?: Length-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -105,11 +105,11 @@ xs?: Length
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-GridRowSizeOption-xs?: Length--><!--Device-GridRowSizeOption-xs?: Length-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -125,11 +125,10 @@ xxl?: Length
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-GridRowSizeOption-xxl?: Length--><!--Device-GridRowSizeOption-xxl?: Length-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

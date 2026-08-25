@@ -2,9 +2,9 @@
 
 Save the time information of the incremental backup. IncrementalBackupTime is useful when doing IPC with the backup service.@interface IncrementalBackupTime
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-backup-interface IncrementalBackupTime--><!--Device-backup-interface IncrementalBackupTime-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -26,9 +26,9 @@ Indicates the name of a bundle.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-IncrementalBackupTime-bundleName: string--><!--Device-IncrementalBackupTime-bundleName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -42,13 +42,12 @@ lastIncrementalTime: long
 
 Time of the last incremental backup
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-IncrementalBackupTime-lastIncrementalTime: long--><!--Device-IncrementalBackupTime-lastIncrementalTime: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
-

@@ -2,9 +2,9 @@
 
 指示传感器信息。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-sensor-interface Sensor--><!--Device-sensor-interface Sensor-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -22,11 +22,11 @@ deviceId?: int
 
 设备ID。-1表示本地设备，其它值表示远程设备。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-Sensor-deviceId?: int--><!--Device-Sensor-deviceId?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -40,9 +40,9 @@ deviceName?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-Sensor-deviceName?: string--><!--Device-Sensor-deviceName?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -56,9 +56,9 @@ firmwareVersion:string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Sensor-firmwareVersion:string--><!--Device-Sensor-firmwareVersion:string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -72,9 +72,9 @@ hardwareVersion:string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Sensor-hardwareVersion:string--><!--Device-Sensor-hardwareVersion:string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -88,9 +88,9 @@ isLocalSensor?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-Sensor-isLocalSensor?: boolean--><!--Device-Sensor-isLocalSensor?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -106,7 +106,7 @@ isMockSensor?: boolean
 
 **起始版本：** 23
 
-<!--Device-Sensor-isMockSensor?: boolean--><!--Device-Sensor-isMockSensor?: boolean-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -118,11 +118,11 @@ maxRange:double
 
 传感器最大测量范围。单位：取决于具体传感器类型（如加速度传感器为m/s²）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Sensor-maxRange:double--><!--Device-Sensor-maxRange:double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -134,11 +134,11 @@ maxSamplePeriod:long
 
 传感器最大采样周期。单位：ns（纳秒）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Sensor-maxSamplePeriod:long--><!--Device-Sensor-maxSamplePeriod:long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -150,11 +150,11 @@ minSamplePeriod:long
 
 传感器最小采样周期。单位：ns（纳秒）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Sensor-minSamplePeriod:long--><!--Device-Sensor-minSamplePeriod:long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -166,11 +166,11 @@ power:double
 
 传感器估计功耗。单位：mA（毫安）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Sensor-power:double--><!--Device-Sensor-power:double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -182,11 +182,11 @@ precision:double
 
 传感器精度。单位：取决于具体传感器类型。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Sensor-precision:double--><!--Device-Sensor-precision:double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -198,11 +198,11 @@ sensorId:int
 
 传感器类型ID，对应[SensorId](arkts-sensorservice-sensor-sensorid-e.md)枚举值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Sensor-sensorId:int--><!--Device-Sensor-sensorId:int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -214,11 +214,11 @@ sensorIndex?: int
 
 传感器索引，同一类型传感器可能有多个实例，通过sensorIndex区分。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-Sensor-sensorIndex?: int--><!--Device-Sensor-sensorIndex?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -232,9 +232,9 @@ sensorName:string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Sensor-sensorName:string--><!--Device-Sensor-sensorName:string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -248,9 +248,8 @@ vendorName:string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Sensor-vendorName:string--><!--Device-Sensor-vendorName:string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
-

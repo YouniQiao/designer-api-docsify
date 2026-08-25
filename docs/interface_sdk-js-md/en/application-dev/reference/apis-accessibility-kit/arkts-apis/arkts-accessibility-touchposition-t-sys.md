@@ -8,13 +8,12 @@ Touch tap position. For details, see [TouchPosition](arkts-accessibility-accessi
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-unnamed-export type TouchPosition = _TouchPosition--><!--Device-unnamed-export type TouchPosition = _TouchPosition-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
 
 **Property type:** _TouchPosition
-

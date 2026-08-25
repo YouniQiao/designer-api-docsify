@@ -4,7 +4,7 @@ Wi-Fi的SSID和BSSID信息。
 
 **起始版本：** 19
 
-<!--Device-wifiManager-interface WifiAccessInfo--><!--Device-wifiManager-interface WifiAccessInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -26,9 +26,9 @@ Wi-Fi热点的MAC地址，例如：00:11:22:33:44:55。获取方式如下：打�
 
 **起始版本：** 19
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
-<!--Device-WifiAccessInfo-bssid?: string--><!--Device-WifiAccessInfo-bssid?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -44,9 +44,8 @@ Wi-Fi热点名称，编码格式为UTF-8，最大长度为32字节（中文字�
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-WifiAccessInfo-ssid: string--><!--Device-WifiAccessInfo-ssid: string-End-->
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
-

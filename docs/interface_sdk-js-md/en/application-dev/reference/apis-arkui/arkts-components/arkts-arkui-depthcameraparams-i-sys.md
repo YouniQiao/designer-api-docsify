@@ -4,7 +4,7 @@ Camera parameters struct.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare interface DepthCameraParams--><!--Device-unnamed-declare interface DepthCameraParams-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,11 @@ Camera buffer crop parameters.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-DepthCameraParams-cameraBufferCrop?: CameraBufferCrop--><!--Device-DepthCameraParams-cameraBufferCrop?: CameraBufferCrop-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,11 +49,11 @@ Camera position in 3D space.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-DepthCameraParams-position: DepthVector3--><!--Device-DepthCameraParams-position: DepthVector3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -71,11 +71,11 @@ Camera rotation as quaternion (x, y, z, w). Represents the orientation of the ca
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-DepthCameraParams-quaternion: DepthVector4--><!--Device-DepthCameraParams-quaternion: DepthVector4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,20 +84,20 @@ Camera rotation as quaternion (x, y, z, w). Represents the orientation of the ca
 ## yFov
 
 ```TypeScript
-yFov: double
+yFov: number
 ```
 
 Vertical field of view in radians.
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-DepthCameraParams-yFov: double--><!--Device-DepthCameraParams-yFov: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -106,20 +106,20 @@ Vertical field of view in radians.
 ## zFar
 
 ```TypeScript
-zFar: double
+zFar: number
 ```
 
 Far clipping plane distance.
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-DepthCameraParams-zFar: double--><!--Device-DepthCameraParams-zFar: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -128,22 +128,21 @@ Far clipping plane distance.
 ## zNear
 
 ```TypeScript
-zNear: double
+zNear: number
 ```
 
 Near clipping plane distance.
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-DepthCameraParams-zNear: double--><!--Device-DepthCameraParams-zNear: double-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

@@ -16,13 +16,13 @@ Sets the name of the Wi-Fi P2P device.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** setP2pDeviceName
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
-
-<!--Device-wifi-function setDeviceName(devName: string): boolean--><!--Device-wifi-function setDeviceName(devName: string): boolean-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -30,15 +30,15 @@ Sets the name of the Wi-Fi P2P device.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| devName | string | Yes | Indicates the name to be set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| devName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -52,4 +52,3 @@ try {
     console.error("failed:" + JSON.stringify(error));
 }
 ```
-

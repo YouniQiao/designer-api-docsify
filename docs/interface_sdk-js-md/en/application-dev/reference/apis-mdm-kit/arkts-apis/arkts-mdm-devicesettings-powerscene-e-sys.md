@@ -4,7 +4,7 @@ Defines the scenario to which the power policy applies.
 
 **Since:** 11
 
-<!--Device-deviceSettings-enum PowerScene--><!--Device-deviceSettings-enum PowerScene-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -20,11 +20,10 @@ Timeout scenario.
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-PowerScene-TIME_OUT = 0--><!--Device-PowerScene-TIME_OUT = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
-

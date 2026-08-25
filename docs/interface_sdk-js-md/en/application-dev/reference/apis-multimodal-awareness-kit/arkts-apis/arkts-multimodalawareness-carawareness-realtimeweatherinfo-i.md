@@ -4,7 +4,7 @@ Interface for realtime weather response info.
 
 **Since:** 26.1.0
 
-<!--Device-carAwareness-export interface RealTimeWeatherInfo--><!--Device-carAwareness-export interface RealTimeWeatherInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -26,9 +26,9 @@ Indicates timestamp . Unit: milliseconds.
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
-<!--Device-RealTimeWeatherInfo-timestamp: number--><!--Device-RealTimeWeatherInfo-timestamp: number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -44,9 +44,8 @@ Indicates current weather.
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RealTimeWeatherInfo-weather: number--><!--Device-RealTimeWeatherInfo-weather: number-End-->
-
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
-

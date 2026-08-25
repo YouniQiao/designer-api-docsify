@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-export interface GroupInfo--><!--Device-unnamed-export interface GroupInfo-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -22,9 +22,9 @@ groupTitle?: string
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-GroupInfo-groupTitle?: string--><!--Device-GroupInfo-groupTitle?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -43,11 +43,10 @@ isGroupIcon?: boolean
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-GroupInfo-isGroupIcon?: boolean--><!--Device-GroupInfo-isGroupIcon?: boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
-

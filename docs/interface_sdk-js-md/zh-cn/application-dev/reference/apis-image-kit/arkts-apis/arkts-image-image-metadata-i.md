@@ -5,9 +5,9 @@ Metadata类，用于存储图像的元数据。目前支持的元数据类型可
 > **说明：**&gt;
 > - 本Interface首批接口从API version 13开始支持。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-image-interface Metadata--><!--Device-image-interface Metadata-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -27,15 +27,15 @@ clone(): Promise<Metadata>
 
 **起始版本：** 13
 
-<!--Device-Metadata-clone(): Promise<Metadata>--><!--Device-Metadata-clone(): Promise<Metadata>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Metadata&gt; | Promise对象，成功返回元数据实例。 |
+| 类型 |
+| --- |
+| Promise & lt;Metadata & gt; |
 
 **示例**
 
@@ -333,15 +333,15 @@ Obtains a clone of metadata. This method uses a promise to return the metadata.
 
 **起始版本：** 23
 
-<!--Device-Metadata-clone(): Promise<Metadata | undefined>--><!--Device-Metadata-clone(): Promise<Metadata | undefined>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Metadata \| undefined&gt; | A Promise instance used to return the metadata. |
+| 类型 |
+| --- |
+| Promise & lt;Metadata \ | undefined & gt; |
 
 **示例**
 
@@ -357,15 +357,15 @@ getAllProperties(): Promise<Record<string, string | null>>
 
 **起始版本：** 13
 
-<!--Device-Metadata-getAllProperties(): Promise<Record<string, string | null>>--><!--Device-Metadata-getAllProperties(): Promise<Record<string, string | null>>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise对象，返回元数据拥有的所有属性的值。 |
+| 类型 |
+| --- |
+| Promise & lt;Record & lt;string, string \ | null & gt; & gt; |
 
 **示例**
 
@@ -638,15 +638,15 @@ Obtains the value of all properties in an image. This method uses a promise to r
 
 **起始版本：** 23
 
-<!--Device-Metadata-getAllProperties(): Promise<Record<string, string|null> | undefined>--><!--Device-Metadata-getAllProperties(): Promise<Record<string, string|null> | undefined>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt; \| undefined&gt; | Array of Records instance used to return the property values. |
+| 类型 |
+| --- |
+| Promise & lt;Record & lt;string, string \ | null & gt; \ | undefined & gt; |
 
 **示例**
 
@@ -662,17 +662,17 @@ getBlob(): Promise<ArrayBuffer>
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-Metadata-getBlob(): Promise<ArrayBuffer>--><!--Device-Metadata-getBlob(): Promise<ArrayBuffer>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise对象，返回元数据的二进制数据。 |
+| 类型 |
+| --- |
+| Promise & lt;ArrayBuffer & gt; |
 
 **示例**
 
@@ -927,30 +927,30 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 获取图像中属性的值。使用Promise异步回调。如要查询属性值信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)、[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md)、 [GifPropertyKey](arkts-image-image-gifpropertykey-e.md)和[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-Metadata-getProperties(key: Array<string>): Promise<Record<string, string | null>>--><!--Device-Metadata-getProperties(key: Array<string>): Promise<Record<string, string | null>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | Array&lt;string&gt; | 是 | 要获取其值的属性的名称。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise对象，返回元数据要获取的属性的值，如获取失败则返回错误码。 |
+| 类型 |
+| --- |
+| Promise & lt;Record & lt;string, string \ | null & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
 
 **示例**
 
@@ -1214,29 +1214,29 @@ setBlob(blob: ArrayBuffer): Promise<void>
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-Metadata-setBlob(blob: ArrayBuffer): Promise<void>--><!--Device-Metadata-setBlob(blob: ArrayBuffer): Promise<void>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blob | ArrayBuffer | 是 | 要替换的二进制数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| blob | ArrayBuffer | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
+| 错误码ID |
+| --- |
+| [7600206](../errorcode-image.md#7600206-无效参数) |
 
 **示例**
 
@@ -1531,30 +1531,30 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 批量设置图片元数据中的指定属性的值。使用Promise异步回调。如要查询属性值信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)、[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md)、 [GifPropertyKey](arkts-image-image-gifpropertykey-e.md)和[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-Metadata-setProperties(records: Record<string, string | null>): Promise<void>--><!--Device-Metadata-setProperties(records: Record<string, string | null>): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | 是 | 要修改的属性和值的数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| records | Record & lt;string, string \ | null & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，如获取失败则返回错误码。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
 
 **示例**
 
@@ -1835,4 +1835,3 @@ async function heifsMetadataSetProperties(context: common.UIAbilityContext) {
   }
 }
 ```
-

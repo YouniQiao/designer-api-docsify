@@ -1,12 +1,10 @@
 # DragEventParam
 
-拖拽结束返回结果的回调。@interface DragEventParam
+拖拽结束返回结果的回调。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-dragController-interface DragEventParam--><!--Device-dragController-interface DragEventParam-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,17 +20,17 @@ import { dragController } from '@kit.ArkUI';
 event: DragEvent
 ```
 
-当前状态所对应的拖拽事件。通过dragController发起的dragEvent仅支持获取result和behavior，且用于拖拽结束状态。
+拖拽事件信息，仅包括拖拽结果。
 
 **类型：** DragEvent
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DragEventParam-event: DragEvent--><!--Device-DragEventParam-event: DragEvent-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,13 +44,12 @@ extraParams: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DragEventParam-extraParams: string--><!--Device-DragEventParam-extraParams: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

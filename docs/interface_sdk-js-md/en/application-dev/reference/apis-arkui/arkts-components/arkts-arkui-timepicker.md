@@ -17,32 +17,33 @@ Creates a time picker, which uses the 24-hour time format by default.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-TimePickerInterface-(options?: TimePickerOptions): TimePickerAttribute--><!--Device-TimePickerInterface-(options?: TimePickerOptions): TimePickerAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [TimePickerOptions](arkts-arkui-timepickeroptions-i.md) | No | Parameters of the time picker. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [TimePickerOptions](arkts-arkui-timepickeroptions-i.md) | No |
 
 ## Summary
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DateTimeOptions](arkts-arkui-datetimeoptions-t.md) |
+| [OnTimePickerChangeCallback](arkts-arkui-ontimepickerchangecallback-t.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |

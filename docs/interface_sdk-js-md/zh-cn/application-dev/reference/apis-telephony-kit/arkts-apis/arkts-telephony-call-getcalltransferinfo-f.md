@@ -16,36 +16,36 @@ function getCallTransferInfo(type: CallTransferType, number: string): Promise<Ca
 
 **起始版本：** 26.0.0
 
-**需要权限：** ohos.permission.GET_CALL_TRANSFER_INFO
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-call-function getCallTransferInfo(type: CallTransferType, number: string): Promise<CallTransferResult>--><!--Device-call-function getCallTransferInfo(type: CallTransferType, number: string): Promise<CallTransferResult>-End-->
+**需要权限：** ohos.permission.GET_CALL_TRANSFER_INFO
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [CallTransferType](arkts-telephony-call-calltransfertype-e-sys.md) | 是 | 指示要获取哪种类型的呼叫转移。 |
-| number | string | 是 | 指示用于获取呼叫转移状态的号码。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [CallTransferType](arkts-telephony-call-calltransfertype-e.md) | 是 |
+| number | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[CallTransferResult](arkts-telephony-call-calltransferresult-i-sys.md)&gt; | Promise对象，返回呼叫转移结果。 |
+| 类型 |
+| --- |
+| Promise&lt;[CallTransferResult](arkts-telephony-call-calltransferresult-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
-| [8401002](../errorcode-telephony.md#8401002-输入号码错误) | Invalid input call number. |
-| [8401003](../errorcode-telephony.md#8401003-操作频繁) | Operation too frequent. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
+| [8401002](../errorcode-telephony.md#8401002-输入号码错误) |
+| [8401003](../errorcode-telephony.md#8401003-操作频繁) |
 
 **示例**
 
@@ -86,4 +86,3 @@ call.getCallTransferInfo(0, call.CallTransferType.TRANSFER_TYPE_BUSY).then((data
     console.error(`getCallTransferInfo fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
-

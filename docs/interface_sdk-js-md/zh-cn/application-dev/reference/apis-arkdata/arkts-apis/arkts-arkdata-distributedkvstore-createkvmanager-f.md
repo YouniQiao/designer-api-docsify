@@ -14,31 +14,31 @@ function createKVManager(config: KVManagerConfig): KVManager
 
 创建一个KVManager对象实例，用于管理数据库对象。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-distributedKVStore-function createKVManager(config: KVManagerConfig): KVManager--><!--Device-distributedKVStore-function createKVManager(config: KVManagerConfig): KVManager-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| config | KVManagerConfig | 是 | 提供KVManager实例的配置信息，包括应用的上下文和调用方的包名（不能为空）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| KVManager | 返回创建的KVManager对象实例。 |
+| 类型 |
+| --- |
+| [KVManager](arkts-arkdata-distributeddata-kvmanager-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -100,4 +100,3 @@ if (kvManager !== undefined) {
   // ...
 }
 ```
-

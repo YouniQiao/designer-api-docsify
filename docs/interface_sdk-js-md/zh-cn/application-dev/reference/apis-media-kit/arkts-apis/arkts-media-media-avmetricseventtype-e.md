@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-media-enum AVMetricsEventType--><!--Device-media-enum AVMetricsEventType-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -18,7 +18,7 @@ AV_METRICS_EVENT_STALLING = 1
 
 **起始版本：** 23
 
-<!--Device-AVMetricsEventType-AV_METRICS_EVENT_STALLING = 1--><!--Device-AVMetricsEventType-AV_METRICS_EVENT_STALLING = 1-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -32,7 +32,7 @@ AV_METRICS_EVENT_LIP_ASYNC = 2
 
 **起始版本：** 26.0.0
 
-<!--Device-AVMetricsEventType-AV_METRICS_EVENT_LIP_ASYNC = 2--><!--Device-AVMetricsEventType-AV_METRICS_EVENT_LIP_ASYNC = 2-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -46,7 +46,7 @@ AV_METRICS_EVENT_LOADINGRATE_CHANGE = 3
 
 **起始版本：** 26.0.0
 
-<!--Device-AVMetricsEventType-AV_METRICS_EVENT_LOADINGRATE_CHANGE = 3--><!--Device-AVMetricsEventType-AV_METRICS_EVENT_LOADINGRATE_CHANGE = 3-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -60,7 +60,7 @@ AV_METRICS_EVENT_LOADING_ERROR = 4
 
 **起始版本：** 26.0.0
 
-<!--Device-AVMetricsEventType-AV_METRICS_EVENT_LOADING_ERROR = 4--><!--Device-AVMetricsEventType-AV_METRICS_EVENT_LOADING_ERROR = 4-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -74,7 +74,7 @@ AV_METRICS_EVENT_CONTENT_CHANGED = 5
 
 **起始版本：** 26.0.0
 
-<!--Device-AVMetricsEventType-AV_METRICS_EVENT_CONTENT_CHANGED = 5--><!--Device-AVMetricsEventType-AV_METRICS_EVENT_CONTENT_CHANGED = 5-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -88,7 +88,7 @@ AV_METRICS_EVENT_CONTENT_DISCONTINUITY = 6
 
 **起始版本：** 26.0.0
 
-<!--Device-AVMetricsEventType-AV_METRICS_EVENT_CONTENT_DISCONTINUITY = 6--><!--Device-AVMetricsEventType-AV_METRICS_EVENT_CONTENT_DISCONTINUITY = 6-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -102,7 +102,6 @@ AV_METRICS_EVENT_AUDIO_ABNORMAL = 7
 
 **起始版本：** 26.0.0
 
-<!--Device-AVMetricsEventType-AV_METRICS_EVENT_AUDIO_ABNORMAL = 7--><!--Device-AVMetricsEventType-AV_METRICS_EVENT_AUDIO_ABNORMAL = 7-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
-

@@ -8,11 +8,11 @@ Custom menu extension item.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Deprecated since:** 20
 
 **Substitutes:** [editMenuOptions](arkts-arkweb-web-attribute.md#editmenuoptions)
-
-<!--Device-unnamed-declare interface ExpandedMenuItemOptions--><!--Device-unnamed-declare interface ExpandedMenuItemOptions-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -29,9 +29,9 @@ action: (selectedText: {plainText: string}) => void
 
 Callback invoked when the user selects a menu extension item. The callback parameter **selectedText** contains the **plainText** field, which indicates the text content selected by the user.
 
-**Type:** (selectedText: {plainText: string}) =&gt; void
-
 **Since:** 12
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Deprecated since:** 20
 
@@ -39,9 +39,13 @@ Callback invoked when the user selects a menu extension item. The callback param
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ExpandedMenuItemOptions-action: (selectedText: {plainText: string}) => void--><!--Device-ExpandedMenuItemOptions-action: (selectedText: {plainText: string}) => void-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| selectedText | {plainText: string} | Yes |
 
 ## content
 
@@ -55,13 +59,13 @@ Display content.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Deprecated since:** 20
 
 **Substitutes:** EditMenuOptions
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ExpandedMenuItemOptions-content: ResourceStr--><!--Device-ExpandedMenuItemOptions-content: ResourceStr-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -77,13 +81,12 @@ Display icon. The default value is empty, and no icon is displayed.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Deprecated since:** 20
 
 **Substitutes:** EditMenuOptions
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ExpandedMenuItemOptions-startIcon?: ResourceStr--><!--Device-ExpandedMenuItemOptions-startIcon?: ResourceStr-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

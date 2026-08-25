@@ -4,7 +4,7 @@ Result object containing batch operation,including [batchAdd](arkts-assetstore-a
 
 **Since:** 26.0.0
 
-<!--Device-asset-interface BatchResult--><!--Device-asset-interface BatchResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -26,7 +26,7 @@ Failed count of the batch operation, 0 means all success.
 
 **Since:** 26.0.0
 
-<!--Device-BatchResult-failedCount: number--><!--Device-BatchResult-failedCount: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -42,7 +42,6 @@ An array of error details for assets that failed in the batch operation, includi
 
 **Since:** 26.0.0
 
-<!--Device-BatchResult-failedErrorInfos: Array<BatchErrInfo>--><!--Device-BatchResult-failedErrorInfos: Array<BatchErrInfo>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
-

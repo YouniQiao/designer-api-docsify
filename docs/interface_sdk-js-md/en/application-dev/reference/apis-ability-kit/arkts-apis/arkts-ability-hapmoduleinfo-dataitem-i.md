@@ -2,9 +2,9 @@
 
 Describes the user-defined data in the routing table configuration of the module.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface DataItem--><!--Device-unnamed-export interface DataItem-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -18,11 +18,11 @@ Key of the user-defined data.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-DataItem-readonly key: string--><!--Device-DataItem-readonly key: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -36,11 +36,10 @@ Value of the user-defined data.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-DataItem-readonly value: string--><!--Device-DataItem-readonly value: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
-

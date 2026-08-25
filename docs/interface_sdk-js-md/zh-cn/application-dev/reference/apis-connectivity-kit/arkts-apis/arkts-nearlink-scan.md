@@ -1,12 +1,12 @@
-# @ohos.nearlink.scan
+# @ohos.nearlink.scan(星闪扫描能力)
 
 本模块提供了星闪扫描模式的定义。
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-unnamed-declare namespace scan--><!--Device-unnamed-declare namespace scan-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -20,32 +20,31 @@ import { scan } from '@kit.ConnectivityKit';
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [offDeviceFound](arkts-connectivity-scan-offdevicefound-f.md) | 取消订阅星闪扫描结果。使用callback异步回调。 |
-| [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md) | 订阅星闪扫描结果。使用callback异步回调。应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。 |
-| [startScan](arkts-connectivity-scan-startscan-f.md) | 发起星闪扫描。使用Promise异步回调。需先调用scan.onDeviceFound订阅扫描结果回调，本接口发起扫描后，扫描到的设备信息通过 scan.onDeviceFound回调上报。扫描完成后可调用[scan.stopScan](arkts-connectivity-scan-stopscan-f.md)停止扫描。 |
-| [stopScan](arkts-connectivity-scan-stopscan-f.md) | 停止星闪扫描。使用Promise异步回调。 |
+| 名称 |
+| --- |
+| [offDeviceFound(星闪扫描能力)](arkts-connectivity-scan-offdevicefound-f.md) |
+| [onDeviceFound(星闪扫描能力)](arkts-connectivity-scan-ondevicefound-f.md) |
+| [startScan(星闪扫描能力)](arkts-connectivity-scan-startscan-f.md) |
+| [stopScan(星闪扫描能力)](arkts-connectivity-scan-stopscan-f.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [ScanFilters](arkts-connectivity-scan-scanfilters-i.md) | 表示扫描过滤条件。 |
-| [ScanOptions](arkts-connectivity-scan-scanoptions-i.md) | 表示扫描选项。 |
-| [ScanResults](arkts-connectivity-scan-scanresults-i.md) | 表示扫描结果。 |
+| 名称 |
+| --- |
+| [ScanFilters(星闪扫描能力)](arkts-connectivity-scan-scanfilters-i.md) |
+| [ScanOptions(星闪扫描能力)](arkts-connectivity-scan-scanoptions-i.md) |
+| [ScanResults(星闪扫描能力)](arkts-connectivity-scan-scanresults-i.md) |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-| [ScanMode](arkts-connectivity-scan-scanmode-e.md) | 表示扫描模式，为枚举值。 |
+| 名称 |
+| --- |
+| [ScanMode(星闪扫描能力)](arkts-connectivity-scan-scanmode-e.md) |
 
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [ScanMode](arkts-connectivity-scan-scanmode-e-sys.md) | 表示扫描模式，为枚举值。 |
+| 名称 |
+| --- |
+| [ScanMode(星闪扫描能力)](arkts-connectivity-scan-scanmode-e-sys.md) |
 <!--DelEnd-->
-

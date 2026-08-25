@@ -12,15 +12,13 @@ import { performanceMonitor } from '@kit.ArkUI';
 function begin(scene: string, startInputType: ActionType, note?: string): void
 ```
 
-Begin monitoring an application scene.
+Marks the start of a user scene. Call this API when the scene begins.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-performanceMonitor-function begin(scene: string, startInputType: ActionType, note?: string): void--><!--Device-performanceMonitor-function begin(scene: string, startInputType: ActionType, note?: string): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,9 +26,16 @@ Begin monitoring an application scene.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| scene | string | Yes | Indicates the scene name. |
-| startInputType | ActionType | Yes | Indicates the scene input event type. |
-| note | string | No | Indicates the app expected info delivered. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| scene | string | Yes |
+| startInputType | [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md) | Yes |
+| [note](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-contact-c.md) | string | No |
 
+**Examples**
+
+Start point of the user scene where the user taps an icon to launch an application, triggered by a release event (LAST_UP).
+
+```TypeScript
+performanceMonitor.begin("LAUNCHER_APP_LAUNCH_FROM_ICON", performanceMonitor.ActionType.LAST_UP, "APP_START_BEGIN");
+```

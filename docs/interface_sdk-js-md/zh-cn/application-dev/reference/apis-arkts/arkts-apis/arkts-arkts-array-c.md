@@ -6,9 +6,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-unnamed-export class Array--><!--Device-unnamed-export class Array-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,25 +25,23 @@ $_get(idx: int): T
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-$_get(idx: int): T--><!--Device-Array-$_get(idx: int): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| idx | int | 是 | 待获取元素的索引。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| idx | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 指定索引处的元素。 |
+| 类型 |
+| --- |
+| T |
 
 ## $_invoke
 
@@ -57,25 +53,23 @@ static $_invoke<T>(...items: T[]): Array<T>
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-static $_invoke<T>(...items: T[]): Array<T>--><!--Device-Array-static $_invoke<T>(...items: T[]): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| items | T[] | 是 | 用于初始化数组的元素。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| items | T[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;T&gt; | 包含给定元素的新Array实例。 |
+| 类型 |
+| --- |
+| Array & lt;T & gt; |
 
 ## $_iterator
 
@@ -87,19 +81,17 @@ $_iterator(): IterableIterator<T>
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-$_iterator(): IterableIterator<T>--><!--Device-Array-$_iterator(): IterableIterator<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 遍历所有值的迭代器。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |
 
 ## $_set
 
@@ -111,20 +103,18 @@ $_set(idx: int, val: T): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-$_set(idx: int, val: T): void--><!--Device-Array-$_set(idx: int, val: T): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| idx | int | 是 | 待设置元素的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| val | T | 是 | 要在指定索引处设置的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| idx | int | 是 |
+| val | T | 是 |
 
 ## at
 
@@ -136,25 +126,23 @@ public at(index: int): T
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public at(index: int): T--><!--Device-Array-public at(index: int): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待返回数组元素的索引，从0开始计数。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 给定索引处的元素。 |
+| 类型 |
+| --- |
+| T |
 
 ## concat
 
@@ -166,25 +154,23 @@ public concat(...items: FixedArray<ConcatArray<T>>): Array<T>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public concat(...items: FixedArray<ConcatArray<T>>): Array<T>--><!--Device-Array-public concat(...items: FixedArray<ConcatArray<T>>): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| items | FixedArray&lt;ConcatArray&lt;T&gt;&gt; | 是 | 待拼接成新数组的数组和/或值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| items | FixedArray & lt;ConcatArray & lt;T & gt; & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;T&gt; | 新的Array实例。 |
+| 类型 |
+| --- |
+| Array & lt;T & gt; |
 
 ## constructor
 
@@ -196,11 +182,9 @@ public constructor()
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public constructor()--><!--Device-Array-public constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -214,20 +198,18 @@ constructor(first: T, ...d: T[])
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-constructor(first: T, ...d: T[])--><!--Device-Array-constructor(first: T, ...d: T[])-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| first | T | 是 | 数组的第一个元素。 |
-| d | T[] | 是 | 用于初始化数组的其余元素。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| first | T | 是 |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | T[] | 是 |
 
 ## constructor
 
@@ -239,20 +221,18 @@ constructor(arrayLen: int, initializer: (index: int) => T)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-constructor(arrayLen: int, initializer: (index: int) => T)--><!--Device-Array-constructor(arrayLen: int, initializer: (index: int) => T)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| arrayLen | int | 是 | 数组的元素个数。 <br>取值约束：必须为大于或等于0的整数。 |
-| initializer | (index: int) =&gt; T | 是 | 为给定索引生成元素的函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| arrayLen | int | 是 |
+| initializer | (index: int) = & gt; T | 是 |
 
 ## copyWithin
 
@@ -264,25 +244,23 @@ public copyWithin(target: int): this
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public copyWithin(target: int): this--><!--Device-Array-public copyWithin(target: int): this-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| target | int | 是 | 序列拷贝到的目标索引，从0开始计数。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| target | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| this | 修改后的数组。 |
+| 类型 |
+| --- |
+| this |
 
 ## copyWithin
 
@@ -294,26 +272,24 @@ public copyWithin(target: int, start: int): this
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public copyWithin(target: int, start: int): this--><!--Device-Array-public copyWithin(target: int, start: int): this-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| target | int | 是 | 序列拷贝到的目标索引，从0开始计数。 <br>取值约束：应为整数。 |
-| start | int | 是 | 开始拷贝元素的索引，从0开始计数。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| target | int | 是 |
+| start | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| this | 修改后的数组。 |
+| 类型 |
+| --- |
+| this |
 
 ## copyWithin
 
@@ -325,27 +301,25 @@ public copyWithin(target: int, start: int, end?: int): this
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public copyWithin(target: int, start: int, end?: int): this--><!--Device-Array-public copyWithin(target: int, start: int, end?: int): this-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| target | int | 是 | 序列拷贝到的目标索引，从0开始计数。 <br>取值约束：应为整数。 |
-| start | int | 是 | 开始拷贝元素的索引，从0开始计数。 <br>取值约束：应为整数。 |
-| end | int | 否 | 结束拷贝元素的索引，从0开始计数。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| target | int | 是 |
+| start | int | 是 |
+| end | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| this | 修改后的数组。 |
+| 类型 |
+| --- |
+| this |
 
 ## create
 
@@ -357,26 +331,24 @@ public static create<T>(arrayLength: int, initialValue: T): Array<T>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public static create<T>(arrayLength: int, initialValue: T): Array<T>--><!--Device-Array-public static create<T>(arrayLength: int, initialValue: T): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| arrayLength | int | 是 | 新数组的元素个数。 <br>取值约束：必须为大于或等于0的整数。 |
-| initialValue | T | 是 | 用于填充数组的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| arrayLength | int | 是 |
+| initialValue | T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;T&gt; | 使用初始值填充的新Array实例。 |
+| 类型 |
+| --- |
+| Array & lt;T & gt; |
 
 ## entries
 
@@ -388,19 +360,17 @@ public entries(): IterableIterator<[int, T]>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public entries(): IterableIterator<[int, T]>--><!--Device-Array-public entries(): IterableIterator<[int, T]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, T]&gt; | 新的数组迭代器对象。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, T]&gt; |
 
 ## every
 
@@ -412,25 +382,23 @@ public every(predicate: (value: T, index: int, array: Array<T>) => boolean): boo
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public every(predicate: (value: T, index: int, array: Array<T>) => boolean): boolean--><!--Device-Array-public every(predicate: (value: T, index: int, array: Array<T>) => boolean): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: int, array: Array&lt;T&gt;) =&gt; boolean | 是 | 一个最多接受三个参数的函数。every方法会对数组中的每个元素 调用predicate函数，直到predicate返回可转换为布尔值 false的值，或直到数组末尾。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: int, array: Array & lt;T & gt;) = & gt; boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果数组中所有元素的predicate都返回true则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## extendTo
 
@@ -442,20 +410,18 @@ public extendTo(arrayLength: int, initialValue: T): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public extendTo(arrayLength: int, initialValue: T): void--><!--Device-Array-public extendTo(arrayLength: int, initialValue: T): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| arrayLength | int | 是 | 数组的新长度。 <br>取值约束：必须为大于或等于0的整数。 |
-| initialValue | T | 是 | 新增元素的初始值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| arrayLength | int | 是 |
+| initialValue | T | 是 |
 
 ## fill
 
@@ -467,27 +433,25 @@ public fill(value: T, start?: int, end?: int): this
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public fill(value: T, start?: int, end?: int): this--><!--Device-Array-public fill(value: T, start?: int, end?: int): this-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | T | 是 | 用于填充数组的值。 |
-| start | int | 否 | 可选参数，开始填充的索引。如果start大于或等于 数组长度，则不填充任何元素；如果start为负数，则视为0。 <br>取值约束：应为整数。 |
-| end | int | 否 | 可选参数，结束填充的索引（不包含）。如果end大于 数组长度，则以数组长度作为结束索引；如果end为负数，则视为0。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | T | 是 |
+| start | int | 否 |
+| end | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| this | 修改后的数组。 |
+| 类型 |
+| --- |
+| this |
 
 ## filter
 
@@ -499,25 +463,23 @@ public filter(predicate: (value: T, index: int, array: Array<T>) => boolean): Ar
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public filter(predicate: (value: T, index: int, array: Array<T>) => boolean): Array<T>--><!--Device-Array-public filter(predicate: (value: T, index: int, array: Array<T>) => boolean): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: int, array: Array&lt;T&gt;) =&gt; boolean | 是 | 一个最多接受三个参数的函数。filter方法会对数组中的每个元素 调用一次predicate函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: int, array: Array & lt;T & gt;) = & gt; boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;T&gt; | 包含通过测试的元素的新数组。 |
+| 类型 |
+| --- |
+| Array & lt;T & gt; |
 
 ## find
 
@@ -529,25 +491,23 @@ public find(predicate: (value: T, index: int, array: Array<T>) => boolean): T | 
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public find(predicate: (value: T, index: int, array: Array<T>) => boolean): T | undefined--><!--Device-Array-public find(predicate: (value: T, index: int, array: Array<T>) => boolean): T | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: int, array: Array&lt;T&gt;) =&gt; boolean | 是 | 对数组中每个值执行的函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: int, array: Array & lt;T & gt;) = & gt; boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T \| undefined | 满足给定测试函数的第一个元素的值， 否则返回undefined。 |
+| 类型 |
+| --- |
+| T \| undefined |
 
 ## findIndex
 
@@ -559,25 +519,23 @@ public findIndex(predicate: (value: T, index: int, array: Array<T>) => boolean):
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public findIndex(predicate: (value: T, index: int, array: Array<T>) => boolean): int--><!--Device-Array-public findIndex(predicate: (value: T, index: int, array: Array<T>) => boolean): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: int, array: Array&lt;T&gt;) =&gt; boolean | 是 | 对数组中每个值执行的函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: int, array: Array & lt;T & gt;) = & gt; boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 满足给定测试函数的第一个元素的索引，否则返回-1。 |
+| 类型 |
+| --- |
+| int |
 
 ## findLast
 
@@ -589,25 +547,23 @@ public findLast(predicate: (elem: T, index: int, array: Array<T>) => boolean): T
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public findLast(predicate: (elem: T, index: int, array: Array<T>) => boolean): T | undefined--><!--Device-Array-public findLast(predicate: (elem: T, index: int, array: Array<T>) => boolean): T | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| predicate | (elem: T, index: int, array: Array&lt;T&gt;) =&gt; boolean | 是 | 对数组中每个值执行的函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (elem: T, index: int, array: Array & lt;T & gt;) = & gt; boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T \| undefined | 如果找到则返回该元素的值，否则返回undefined。 |
+| 类型 |
+| --- |
+| T \| undefined |
 
 ## findLastIndex
 
@@ -619,25 +575,23 @@ public findLastIndex(predicate: (element: T, index: int, array: Array<T>) => boo
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public findLastIndex(predicate: (element: T, index: int, array: Array<T>) => boolean): int--><!--Device-Array-public findLastIndex(predicate: (element: T, index: int, array: Array<T>) => boolean): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| predicate | (element: T, index: int, array: Array&lt;T&gt;) =&gt; boolean | 是 | 对数组中每个值执行的函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (element: T, index: int, array: Array & lt;T & gt;) = & gt; boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 满足给定测试函数的第一个元素的索引，否则返回-1。 |
+| 类型 |
+| --- |
+| int |
 
 ## flat
 
@@ -649,25 +603,23 @@ public flat<U = T>(depth: int): Array<U>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public flat<U = T>(depth: int): Array<U>--><!--Device-Array-public flat<U = T>(depth: int): Array<U>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| depth | int | 是 | 指定嵌套数组结构展平深度的层级。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [depth](../../apis-ability-kit/arkts-apis/arkts-ability-pagenodeinfo-i-sys.md) | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;U&gt; | 拼接了子数组元素的新数组。 |
+| 类型 |
+| --- |
+| Array & lt;U & gt; |
 
 ## flat
 
@@ -679,19 +631,17 @@ public flat<U = T>(): Array<U>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public flat<U = T>(): Array<U>--><!--Device-Array-public flat<U = T>(): Array<U>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;U&gt; | 拼接了子数组元素的新数组。 |
+| 类型 |
+| --- |
+| Array & lt;U & gt; |
 
 ## flatMap
 
@@ -703,25 +653,23 @@ public flatMap<U=T>(fn: (v: T, k: int, arr: Array<T>) => U | ReadonlyArray<U>): 
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public flatMap<U=T>(fn: (v: T, k: int, arr: Array<T>) => U | ReadonlyArray<U>): Array<U>--><!--Device-Array-public flatMap<U=T>(fn: (v: T, k: int, arr: Array<T>) => U | ReadonlyArray<U>): Array<U>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| fn | (v: T, k: int, arr: Array&lt;T&gt;) =&gt; U \| ReadonlyArray&lt;U&gt; | 是 | 生成新数组元素的函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| fn | (v: T, k: int, arr: Array & lt;T & gt;) = & gt; U \ | ReadonlyArray & lt;U & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;U&gt; | 新数组，其每个元素均为回调函数的返回结果并已展平。 |
+| 类型 |
+| --- |
+| Array & lt;U & gt; |
 
 ## forEach
 
@@ -733,19 +681,17 @@ forEach(callbackfn: (value: T, index: int, array: Array<T>) => void): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-forEach(callbackfn: (value: T, index: int, array: Array<T>) => void): void--><!--Device-Array-forEach(callbackfn: (value: T, index: int, array: Array<T>) => void): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackfn | (value: T, index: int, array: Array&lt;T&gt;) =&gt; void | 是 | 一个最多接受三个参数的函数。forEach会对数组中的每个元素 调用一次callbackfn函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackfn | (value: T, index: int, array: Array & lt;T & gt;) = & gt; void | 是 |
 
 ## from
 
@@ -757,25 +703,23 @@ static from<T>(arr: FixedArray<T>): Array<T>
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-static from<T>(arr: FixedArray<T>): Array<T>--><!--Device-Array-static from<T>(arr: FixedArray<T>): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| arr | FixedArray&lt;T&gt; | 是 | 源基础数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| arr | FixedArray & lt;T & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;T&gt; | 包含源数组元素的新Array实例。 |
+| 类型 |
+| --- |
+| Array & lt;T & gt; |
 
 ## from
 
@@ -787,25 +731,23 @@ static from<T>(arr: ArrayLike<T>): Array<T>
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-static from<T>(arr: ArrayLike<T>): Array<T>--><!--Device-Array-static from<T>(arr: ArrayLike<T>): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| arr | ArrayLike&lt;T&gt; | 是 | 待转换为数组的类数组对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| arr | ArrayLike & lt;T & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;T&gt; | 包含类数组对象元素的新Array实例。 |
+| 类型 |
+| --- |
+| Array & lt;T & gt; |
 
 ## from
 
@@ -817,25 +759,23 @@ static from<T>(iterable: ArrayLike<T> | Iterable<T>): Array<T>
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-static from<T>(iterable: ArrayLike<T> | Iterable<T>): Array<T>--><!--Device-Array-static from<T>(iterable: ArrayLike<T> | Iterable<T>): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| iterable | ArrayLike&lt;T&gt; \| Iterable&lt;T&gt; | 是 | 待转换为数组的可迭代对象或类数组对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| iterable | ArrayLike & lt;T & gt; \ | Iterable & lt;T & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;T&gt; | 包含可迭代对象元素的新Array实例。 |
+| 类型 |
+| --- |
+| Array & lt;T & gt; |
 
 ## from
 
@@ -847,26 +787,24 @@ static from<T, U>(values: FixedArray<T>, mapfn: (v: T, k: int) => U): Array<U>
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-static from<T, U>(values: FixedArray<T>, mapfn: (v: T, k: int) => U): Array<U>--><!--Device-Array-static from<T, U>(values: FixedArray<T>, mapfn: (v: T, k: int) => U): Array<U>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| values | FixedArray&lt;T&gt; | 是 | 源基础数组。 |
-| mapfn | (v: T, k: int) =&gt; U | 是 | 对数组每个元素调用的映射函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [values](#values) | FixedArray & lt;T & gt; | 是 |
+| mapfn | (v: T, k: int) = & gt; U | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;U&gt; | 包含映射后值的新Array实例。 |
+| 类型 |
+| --- |
+| Array & lt;U & gt; |
 
 ## from
 
@@ -878,26 +816,24 @@ static from<T, U>(iterable: ArrayLike<T> | Iterable<T>, mapfn: (v: T, k: int) =>
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-static from<T, U>(iterable: ArrayLike<T> | Iterable<T>, mapfn: (v: T, k: int) => U): Array<U>--><!--Device-Array-static from<T, U>(iterable: ArrayLike<T> | Iterable<T>, mapfn: (v: T, k: int) => U): Array<U>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| iterable | ArrayLike&lt;T&gt; \| Iterable&lt;T&gt; | 是 | 待转换为数组的可迭代对象或类数组对象。 |
-| mapfn | (v: T, k: int) =&gt; U | 是 | 对数组每个元素调用的映射函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| iterable | ArrayLike & lt;T & gt; \ | Iterable & lt;T & gt; | 是 |
+| mapfn | (v: T, k: int) = & gt; U | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;U&gt; | 包含映射后值的新Array实例。 |
+| 类型 |
+| --- |
+| Array & lt;U & gt; |
 
 ## includes
 
@@ -909,26 +845,24 @@ public includes(val: T, fromIndex?: int): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public includes(val: T, fromIndex?: int): boolean--><!--Device-Array-public includes(val: T, fromIndex?: int): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | T | 是 | 待查找的值。 |
-| fromIndex | int | 否 | 在该数组中开始查找值的位置。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | T | 是 |
+| fromIndex | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果找到该值则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## indexOf
 
@@ -940,25 +874,23 @@ public indexOf(val: T): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public indexOf(val: T): int--><!--Device-Array-public indexOf(val: T): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | T | 是 | 待在数组中查找的元素。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 该元素在数组中的第一个索引，未找到时返回-1。 |
+| 类型 |
+| --- |
+| int |
 
 ## indexOf
 
@@ -970,26 +902,24 @@ public indexOf(val: T, fromIndex?: int): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public indexOf(val: T, fromIndex?: int): int--><!--Device-Array-public indexOf(val: T, fromIndex?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | T | 是 | 待在数组中查找的元素。 |
-| fromIndex | int | 否 | 开始搜索的索引。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | T | 是 |
+| fromIndex | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 该元素在数组中的第一个索引，未找到时返回-1。 |
+| 类型 |
+| --- |
+| int |
 
 ## isArray
 
@@ -1001,25 +931,23 @@ static isArray(o: Any): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-static isArray(o: Any): boolean--><!--Device-Array-static isArray(o: Any): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| o | Any | 是 | 待检查的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| o | Any | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果该值为数组则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## join
 
@@ -1031,25 +959,23 @@ public join(sep?: string): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public join(sep?: string): string--><!--Device-Array-public join(sep?: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sep | string | 否 | 用于分隔数组中每对相邻元素的字符串。省略时，数组 元素之间以逗号分隔。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sep | string | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 连接所有数组元素后的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## keys
 
@@ -1061,19 +987,17 @@ public keys(): IterableIterator<int>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public keys(): IterableIterator<int>--><!--Device-Array-public keys(): IterableIterator<int>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | 新的数组迭代器对象。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; |
 
 ## lastIndexOf
 
@@ -1085,25 +1009,23 @@ public lastIndexOf(searchElement: T): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public lastIndexOf(searchElement: T): int--><!--Device-Array-public lastIndexOf(searchElement: T): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| searchElement | T | 是 | 待在数组中查找的元素。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| searchElement | T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 该元素在数组中的最后一个索引，未找到时返回-1。 |
+| 类型 |
+| --- |
+| int |
 
 ## lastIndexOf
 
@@ -1115,26 +1037,24 @@ public lastIndexOf(searchElement: T, fromIndex?: int): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public lastIndexOf(searchElement: T, fromIndex?: int): int--><!--Device-Array-public lastIndexOf(searchElement: T, fromIndex?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| searchElement | T | 是 | 待在数组中查找的元素。 |
-| fromIndex | int | 否 | 开始逆序搜索的索引。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| searchElement | T | 是 |
+| fromIndex | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 该元素在数组中的最后一个索引，未找到时返回-1。 |
+| 类型 |
+| --- |
+| int |
 
 ## map
 
@@ -1146,25 +1066,23 @@ public map<U>(callbackfn: (value: T, index: int, array: Array<T>) => U): Array<U
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public map<U>(callbackfn: (value: T, index: int, array: Array<T>) => U): Array<U>--><!--Device-Array-public map<U>(callbackfn: (value: T, index: int, array: Array<T>) => U): Array<U>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackfn | (value: T, index: int, array: Array&lt;T&gt;) =&gt; U | 是 | 对数组每个元素调用的函数。每次callbackfn执行时， 其返回值都会被添加到新数组中。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackfn | (value: T, index: int, array: Array & lt;T & gt;) = & gt; U | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;U&gt; | 新数组，其每个元素均为回调函数的返回结果。 |
+| 类型 |
+| --- |
+| Array & lt;U & gt; |
 
 ## pop
 
@@ -1176,19 +1094,17 @@ public pop(): T | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public pop(): T | undefined--><!--Device-Array-public pop(): T | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T \| undefined | 从数组中被删除的元素，如果数组为空则返回undefined。 |
+| 类型 |
+| --- |
+| T \| undefined |
 
 ## push
 
@@ -1200,25 +1116,23 @@ public push(...val: T[]): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public push(...val: T[]): int--><!--Device-Array-public push(...val: T[]): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | T[] | 是 | 要添加到数组末尾的元素。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | T[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 调用该方法的数组的新长度。 |
+| 类型 |
+| --- |
+| int |
 
 ## reduce
 
@@ -1230,25 +1144,23 @@ public reduce(callbackfn: (previousValue: T, currentValue: T, index: int, array:
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public reduce(callbackfn: (previousValue: T, currentValue: T, index: int, array: Array<T>) => T): T--><!--Device-Array-public reduce(callbackfn: (previousValue: T, currentValue: T, index: int, array: Array<T>) => T): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: T, currentValue: T, index: int, array: Array&lt;T&gt;) =&gt; T | 是 | 一个最多接受四个参数的函数。reduce方法会对数组中的每个元素 调用一次callbackfn函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackfn | (previousValue: T, currentValue: T, index: int, array: Array & lt;T & gt;) = & gt; T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 累加结果。 |
+| 类型 |
+| --- |
+| T |
 
 ## reduce
 
@@ -1261,26 +1173,24 @@ public reduce<U = T>(callbackfn: (previousValue: U, currentValue: T, index: int,
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public reduce<U = T>(callbackfn: (previousValue: U, currentValue: T, index: int, array: Array<T>) => U,                         initialValue: U): U--><!--Device-Array-public reduce<U = T>(callbackfn: (previousValue: U, currentValue: T, index: int, array: Array<T>) => U,                         initialValue: U): U-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: T, index: int, array: Array&lt;T&gt;) =&gt; U | 是 | 一个最多接受四个参数的函数。reduce方法会对数组中的每个元素 调用一次callbackfn函数。 |
-| initialValue | U | 是 | 累加器的初始值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackfn | (previousValue: U, currentValue: T, index: int, array: Array & lt;T & gt;) = & gt; U | 是 |
+| initialValue | U | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| U | 累加结果。 |
+| 类型 |
+| --- |
+| U |
 
 ## reduceRight
 
@@ -1293,26 +1203,24 @@ public reduceRight<U>(callbackfn: (previousValue: U, currentValue: T, index: int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public reduceRight<U>(callbackfn: (previousValue: U, currentValue: T, index: int, array: Array<T>) => U,                          initialValue: U): U--><!--Device-Array-public reduceRight<U>(callbackfn: (previousValue: U, currentValue: T, index: int, array: Array<T>) => U,                          initialValue: U): U-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: T, index: int, array: Array&lt;T&gt;) =&gt; U | 是 | 一个最多接受四个参数的函数。reduceRight方法会对数组中的每个元素 调用一次callbackfn函数。 |
-| initialValue | U | 是 | 累加器的初始值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackfn | (previousValue: U, currentValue: T, index: int, array: Array & lt;T & gt;) = & gt; U | 是 |
+| initialValue | U | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| U | 累加结果。 |
+| 类型 |
+| --- |
+| U |
 
 ## reduceRight
 
@@ -1324,25 +1232,23 @@ public reduceRight(callbackfn: (previousValue: T, currentValue: T, index: int, a
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public reduceRight(callbackfn: (previousValue: T, currentValue: T, index: int, array: Array<T>) => T): T--><!--Device-Array-public reduceRight(callbackfn: (previousValue: T, currentValue: T, index: int, array: Array<T>) => T): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: T, currentValue: T, index: int, array: Array&lt;T&gt;) =&gt; T | 是 | 一个最多接受四个参数的函数。reduceRight方法会对数组中的每个元素 调用一次callbackfn函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackfn | (previousValue: T, currentValue: T, index: int, array: Array & lt;T & gt;) = & gt; T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 累加结果。 |
+| 类型 |
+| --- |
+| T |
 
 ## reverse
 
@@ -1354,19 +1260,17 @@ public reverse(): this
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public reverse(): this--><!--Device-Array-public reverse(): this-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| this | 反转后的数组。 |
+| 类型 |
+| --- |
+| this |
 
 ## shift
 
@@ -1378,19 +1282,17 @@ public shift(): T | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public shift(): T | undefined--><!--Device-Array-public shift(): T | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T \| undefined | 从数组中被删除的元素，如果数组为空则返回undefined。 |
+| 类型 |
+| --- |
+| T \| undefined |
 
 ## shrinkTo
 
@@ -1402,19 +1304,17 @@ public shrinkTo(arrayLength: int): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public shrinkTo(arrayLength: int): void--><!--Device-Array-public shrinkTo(arrayLength: int): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| arrayLength | int | 是 | 数组收缩到的长度。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| arrayLength | int | 是 |
 
 ## slice
 
@@ -1426,25 +1326,23 @@ public slice(start: int): Array<T>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public slice(start: int): Array<T>--><!--Device-Array-public slice(start: int): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| start | int | 是 | 数组中指定部分的起始索引。如果start大于 或等于数组长度，则返回空数组；如果start为负数， 则视为length + start。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| start | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;T&gt; | 包含所提取元素的新Array对象。 |
+| 类型 |
+| --- |
+| Array & lt;T & gt; |
 
 ## slice
 
@@ -1456,26 +1354,24 @@ public slice(start?: int, end?: int): Array<T>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public slice(start?: int, end?: int): Array<T>--><!--Device-Array-public slice(start?: int, end?: int): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| start | int | 否 | 数组中指定部分的起始索引。如果start大于 或等于数组长度，则返回空数组；如果start为负数， 则视为length + start。 <br>取值约束：应为整数。 |
-| end | int | 否 | 数组中指定部分的结束索引。如果end大于 数组长度，则以数组长度作为结束索引；如果end为负数，则视为0。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| start | int | 否 |
+| end | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;T&gt; | 包含所提取元素的新Array对象。 |
+| 类型 |
+| --- |
+| Array & lt;T & gt; |
 
 ## some
 
@@ -1487,25 +1383,23 @@ public some(predicate: (value: T, index: int, array: Array<T>) => boolean): bool
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public some(predicate: (value: T, index: int, array: Array<T>) => boolean): boolean--><!--Device-Array-public some(predicate: (value: T, index: int, array: Array<T>) => boolean): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: int, array: Array&lt;T&gt;) =&gt; boolean | 是 | 一个最多接受三个参数的函数。some方法会对数组中的每个元素 调用predicate函数，直到predicate返回可转换为布尔值 true的值，或直到数组末尾。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: int, array: Array & lt;T & gt;) = & gt; boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果数组中至少有一个元素的predicate返回true则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## sort
 
@@ -1517,25 +1411,23 @@ public sort(comparator?: (a: T, b: T) => int): this
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public sort(comparator?: (a: T, b: T) => int): this--><!--Device-Array-public sort(comparator?: (a: T, b: T) => int): this-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| comparator | (a: T, b: T) =&gt; int | 否 | 可选参数，用于定义排序顺序的函数。省略时， 数组将按照每个元素转换为字符串后的结果， 依据各字符的Unicode码点值进行排序。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| comparator | (a: T, b: T) = & gt; int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| this | 排序后的数组。 |
+| 类型 |
+| --- |
+| this |
 
 ## splice
 
@@ -1547,27 +1439,25 @@ public splice(start: int, del: int | undefined, ...items: T[]): Array<T>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public splice(start: int, del: int | undefined, ...items: T[]): Array<T>--><!--Device-Array-public splice(start: int, del: int | undefined, ...items: T[]): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| start | int | 是 | 开始修改数组的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| del | int \| undefined | 是 | 从start索引开始要删除的元素个数。如果传入 undefined，则表示0，不删除任何元素。 |
-| items | T[] | 是 | 从start位置开始添加到数组中的元素。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| start | int | 是 |
+| del | int \| undefined | 是 |
+| items | T[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;T&gt; | 从数组中删除元素，并在必要时在其位置插入新元素， 返回被删除的元素。 |
+| 类型 |
+| --- |
+| Array & lt;T & gt; |
 
 ## splice
 
@@ -1579,25 +1469,23 @@ public splice(start: int): Array<T>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public splice(start: int): Array<T>--><!--Device-Array-public splice(start: int): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| start | int | 是 | 开始修改数组的索引。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| start | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;T&gt; | 包含被删除元素的数组。 |
+| 类型 |
+| --- |
+| Array & lt;T & gt; |
 
 ## toLocaleString
 
@@ -1609,26 +1497,24 @@ public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string--><!--Device-Array-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | 否 | 带有BCP 47语言标签的字符串，或 由此类字符串组成的数组。 |
-| options | object | 否 | 包含配置属性的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | 否 |
+| options | object | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 表示数组元素的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toReversed
 
@@ -1640,19 +1526,17 @@ public toReversed(): Array<T>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public toReversed(): Array<T>--><!--Device-Array-public toReversed(): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;T&gt; | 反转后的新数组。 |
+| 类型 |
+| --- |
+| Array & lt;T & gt; |
 
 ## toSorted
 
@@ -1664,19 +1548,17 @@ public toSorted(): Array<T>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public toSorted(): Array<T>--><!--Device-Array-public toSorted(): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;T&gt; | 排序后的新数组。 |
+| 类型 |
+| --- |
+| Array & lt;T & gt; |
 
 ## toSorted
 
@@ -1688,25 +1570,23 @@ public toSorted(comparator: (a: T, b: T) => int): Array<T>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public toSorted(comparator: (a: T, b: T) => int): Array<T>--><!--Device-Array-public toSorted(comparator: (a: T, b: T) => int): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| comparator | (a: T, b: T) =&gt; int | 是 | 用于定义排序顺序的函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| comparator | (a: T, b: T) = & gt; int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;T&gt; | 排序后的新数组。 |
+| 类型 |
+| --- |
+| Array & lt;T & gt; |
 
 ## toSpliced
 
@@ -1718,25 +1598,23 @@ public toSpliced(start: int): Array<T>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public toSpliced(start: int): Array<T>--><!--Device-Array-public toSpliced(start: int): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| start | int | 是 | 开始修改数组的索引，从0开始计数。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| start | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;T&gt; | 应用修改后的新数组。 |
+| 类型 |
+| --- |
+| Array & lt;T & gt; |
 
 ## toSpliced
 
@@ -1748,27 +1626,25 @@ public toSpliced(start: int, del: int, ...items: FixedArray<T>): Array<T>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public toSpliced(start: int, del: int, ...items: FixedArray<T>): Array<T>--><!--Device-Array-public toSpliced(start: int, del: int, ...items: FixedArray<T>): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| start | int | 是 | 开始修改数组的索引，从0开始计数。 <br>取值约束：必须为大于或等于0的整数。 |
-| del | int | 是 | 要删除的元素个数。 <br>取值约束：必须为大于或等于0的整数。 |
-| items | FixedArray&lt;T&gt; | 是 | 要添加到数组中的元素。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| start | int | 是 |
+| del | int | 是 |
+| items | FixedArray & lt;T & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;T&gt; | 应用修改后的新数组。 |
+| 类型 |
+| --- |
+| Array & lt;T & gt; |
 
 ## toSpliced
 
@@ -1780,26 +1656,24 @@ public toSpliced(start?: int, del?: int): Array<T>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public toSpliced(start?: int, del?: int): Array<T>--><!--Device-Array-public toSpliced(start?: int, del?: int): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| start | int | 否 | 开始修改数组的索引，从0开始计数。 <br>取值约束：必须为大于或等于0的整数。 |
-| del | int | 否 | 要删除的元素个数。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| start | int | 否 |
+| del | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;T&gt; | 应用修改后的新数组。 |
+| 类型 |
+| --- |
+| Array & lt;T & gt; |
 
 ## toString
 
@@ -1811,19 +1685,17 @@ public toString(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public toString(): string--><!--Device-Array-public toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 表示该数组的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## unshift
 
@@ -1835,25 +1707,23 @@ public unshift(...values: T[]): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public unshift(...values: T[]): int--><!--Device-Array-public unshift(...values: T[]): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| values | T[] | 是 | 要添加到数组开头的元素。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [values](#values) | T[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 数组的新长度。 |
+| 类型 |
+| --- |
+| int |
 
 ## values
 
@@ -1865,19 +1735,17 @@ public values(): IterableIterator<T>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public values(): IterableIterator<T>--><!--Device-Array-public values(): IterableIterator<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 新的数组迭代器对象。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |
 
 ## with
 
@@ -1889,24 +1757,39 @@ public with(index: int, value: T): Array<T>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Array-public with(index: int, value: T): Array<T>--><!--Device-Array-public with(index: int, value: T): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 替换值的索引，从0开始计数。 <br>取值约束：应为整数。 |
-| value | T | 是 | 要插入到给定索引处的新值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| value | T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;T&gt; | 替换该元素后的新数组。 |
+| 类型 |
+| --- |
+| Array & lt;T & gt; |
 
+## length
+
+```TypeScript
+set length(newLen: int)
+```
+
+设置数组的长度。
+
+**类型：** int
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang

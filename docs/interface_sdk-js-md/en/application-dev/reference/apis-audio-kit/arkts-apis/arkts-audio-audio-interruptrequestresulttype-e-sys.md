@@ -2,9 +2,9 @@
 
 Enumerates audio interrupt request result type.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-audio-enum InterruptRequestResultType--><!--Device-audio-enum InterruptRequestResultType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -18,9 +18,9 @@ INTERRUPT_REQUEST_GRANT = 0
 
 Request audio interrupt success
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-InterruptRequestResultType-INTERRUPT_REQUEST_GRANT = 0--><!--Device-InterruptRequestResultType-INTERRUPT_REQUEST_GRANT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -34,11 +34,10 @@ INTERRUPT_REQUEST_REJECT = 1
 
 Request audio interrupt fail, may have higher priority type
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-InterruptRequestResultType-INTERRUPT_REQUEST_REJECT = 1--><!--Device-InterruptRequestResultType-INTERRUPT_REQUEST_REJECT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 
 **System API:** This is a system API.
-

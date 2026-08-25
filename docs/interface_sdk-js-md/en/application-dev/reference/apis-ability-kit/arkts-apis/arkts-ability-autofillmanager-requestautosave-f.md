@@ -14,29 +14,29 @@ export function requestAutoSave(context: UIContext, callback?: AutoSaveCallback)
 
 Requests to automatically save the widget data. This API uses an asynchronous callback to return the result. If the current widget does not support widget switching, you can call this API to save historical widget input data. The callback is triggered when the auto-save request is complete.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-autoFillManager-export function requestAutoSave(context: UIContext, callback?: AutoSaveCallback): void--><!--Device-autoFillManager-export function requestAutoSave(context: UIContext, callback?: AutoSaveCallback): void-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context in which the auto-save operation will be performed. |
-| callback | [AutoSaveCallback](arkts-ability-autofillmanager-autosavecallback-i.md) | No | Implements callbacks triggered when auto-save is complete. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
+| callback | [AutoSaveCallback](arkts-ability-autofillmanager-autosavecallback-i.md) | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Get instance id failed; <br>2. Parse instance id failed; 3. The second parameter is not of type callback. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
 
 **Examples**
 
@@ -132,29 +132,28 @@ Trigger an auto save request.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-autoFillManager-export function requestAutoSave(context: UIContext, request: SaveRequest, callback?: AutoSaveCallback): void--><!--Device-autoFillManager-export function requestAutoSave(context: UIContext, request: SaveRequest, callback?: AutoSaveCallback): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | Indicates the ui context where the save operation will be performed. |
-| request | SaveRequest | Yes | Indicates the struct of automatic save request. |
-| callback | [AutoSaveCallback](arkts-ability-autofillmanager-autosavecallback-i.md) | No | Indicates the callback that used to receive the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
+| request | [SaveRequest](arkts-ability-autofillmanager-saverequest-t.md) | Yes |
+| callback | [AutoSaveCallback](arkts-ability-autofillmanager-autosavecallback-i.md) | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| Error Code ID |
+| --- |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
 
 **Examples**
 
 See [requestAutoSave](#requestautosave)
-

@@ -2,9 +2,9 @@
 
 Defines the cellular data flow type.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-data-export enum DataFlowType--><!--Device-data-export enum DataFlowType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -16,9 +16,9 @@ DATA_FLOW_TYPE_NONE = 0
 
 No uplink or downlink data is available.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-DataFlowType-DATA_FLOW_TYPE_NONE = 0--><!--Device-DataFlowType-DATA_FLOW_TYPE_NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -30,9 +30,9 @@ DATA_FLOW_TYPE_DOWN = 1
 
 Only the downlink data is available.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-DataFlowType-DATA_FLOW_TYPE_DOWN = 1--><!--Device-DataFlowType-DATA_FLOW_TYPE_DOWN = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -44,9 +44,9 @@ DATA_FLOW_TYPE_UP = 2
 
 Only the uplink data is available.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-DataFlowType-DATA_FLOW_TYPE_UP = 2--><!--Device-DataFlowType-DATA_FLOW_TYPE_UP = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -58,9 +58,9 @@ DATA_FLOW_TYPE_UP_DOWN = 3
 
 Both the uplink data and downlink data are available.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-DataFlowType-DATA_FLOW_TYPE_UP_DOWN = 3--><!--Device-DataFlowType-DATA_FLOW_TYPE_UP_DOWN = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -72,9 +72,8 @@ DATA_FLOW_TYPE_DORMANT = 4
 
 No uplink or downlink data is available because the lower-layer link is in the dormant state.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-DataFlowType-DATA_FLOW_TYPE_DORMANT = 4--><!--Device-DataFlowType-DATA_FLOW_TYPE_DORMANT = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
-

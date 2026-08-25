@@ -1,10 +1,6 @@
 # TemplateStringsArray
 
-**Inheritance/Implementation:** TemplateStringsArray extends ReadonlyArray<string>
-
-**Since:** -1
-
-<!--Device-unnamed-interface TemplateStringsArray--><!--Device-unnamed-interface TemplateStringsArray-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -19,7 +15,4 @@ readonly raw: readonly string[]
 
 **Type:** readonly string[]
 
-**Since:** -1
-
-<!--Device-TemplateStringsArray-readonly raw: readonly string[]--><!--Device-TemplateStringsArray-readonly raw: readonly string[]-End-->
-
+**ArkTS mode:** 

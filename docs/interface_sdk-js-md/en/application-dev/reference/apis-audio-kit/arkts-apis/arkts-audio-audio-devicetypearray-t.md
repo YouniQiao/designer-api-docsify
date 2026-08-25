@@ -8,11 +8,10 @@ Defines the device type array.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-audio-type DeviceTypeArray = Array<DeviceType>--><!--Device-audio-type DeviceTypeArray = Array<DeviceType>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **Property type:** Array&lt;DeviceType&gt;
-

@@ -3690,7 +3690,7 @@ Sets the PixelMap for paragraph indentation in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorParagraphStyle* style | Pointer to the [OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md) object. |
-| struct OH_PixelmapNative* pixelmap | Pointer to the PixelMap for paragraph indentation. |
+| [struct OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)* pixelmap | Pointer to the PixelMap for paragraph indentation. |
 
 **Returns**:
 
@@ -3715,7 +3715,7 @@ Obtains the PixelMap for paragraph indentation in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorParagraphStyle* style | Pointer to the [OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md) object. |
-| struct OH_PixelmapNative** pixelmap | Double pointer to the PixelMap for paragraph indentation. |
+| [struct OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)** pixelmap | Double pointer to the PixelMap for paragraph indentation. |
 
 **Returns**:
 
@@ -5344,8 +5344,8 @@ Set the parameters of background style.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_PickerIndicatorStyle](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md)* style | The ArkUI_PickerIndicatorStyle instance. |
-| [ArkUI_PickerIndicatorBackground](capi-arkui-nativemodule-arkui-pickerindicatorbackground.md)* background | The parameters of background style. |
+| ArkUI_PickerIndicatorStyle* style | The ArkUI_PickerIndicatorStyle instance. |
+| ArkUI_PickerIndicatorBackground* background | The parameters of background style. |
 
 **Returns**:
 
@@ -5369,8 +5369,8 @@ Set the parameters of divider style.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_PickerIndicatorStyle](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md)* style | The ArkUI_PickerIndicatorStyle instance. |
-| [ArkUI_PickerIndicatorDivider](capi-arkui-nativemodule-arkui-pickerindicatordivider.md)* divider | The parameters of divider style. |
+| ArkUI_PickerIndicatorStyle* style | The ArkUI_PickerIndicatorStyle instance. |
+| ArkUI_PickerIndicatorDivider* divider | The parameters of divider style. |
 
 **Returns**:
 

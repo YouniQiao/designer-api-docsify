@@ -6,7 +6,7 @@ The universal attributes are supported.The following events are supported:
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare class SecurityUIExtensionComponentAttribute--><!--Device-unnamed-declare class SecurityUIExtensionComponentAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,4 +16,3 @@ The universal attributes are supported.The following events are supported:
 
 ```TypeScript
 ```
-

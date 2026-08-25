@@ -4,7 +4,7 @@ HorizontalAlign enumeration description.
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum HorizontalAlign--><!--Device-unnamed-declare enum HorizontalAlign-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Aligns the start end in the language direction.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-HorizontalAlign-Start--><!--Device-HorizontalAlign-Start-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Center alignment. The default alignment mode is used.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-HorizontalAlign-Center--><!--Device-HorizontalAlign-Center-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ Aligns the ends in the language direction.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-HorizontalAlign-End--><!--Device-HorizontalAlign-End-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

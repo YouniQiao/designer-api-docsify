@@ -4,7 +4,7 @@ Provides the conditions of on/off.@interface SecurityEventInfo
 
 **Since:** 12
 
-<!--Device-securityGuard-interface SecurityEventInfo--><!--Device-securityGuard-interface SecurityEventInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -28,9 +28,8 @@ The security event id.
 
 **Since:** 12
 
-<!--Device-SecurityEventInfo-eventId: number--><!--Device-SecurityEventInfo-eventId: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
-

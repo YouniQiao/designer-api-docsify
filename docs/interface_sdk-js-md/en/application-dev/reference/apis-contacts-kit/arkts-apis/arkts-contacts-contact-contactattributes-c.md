@@ -4,7 +4,7 @@ Provides a list of contact attributes, which are generally used as arguments. If
 
 **Since:** 7
 
-<!--Device-contact-class ContactAttributes--><!--Device-contact-class ContactAttributes-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -26,9 +26,9 @@ Indicates the contact attributes.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ContactAttributes-attributes: Attribute[]--><!--Device-ContactAttributes-attributes: Attribute[]-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -45,4 +45,3 @@ let contactAttributes: contact.ContactAttributes = {
     ]
 };
 ```
-

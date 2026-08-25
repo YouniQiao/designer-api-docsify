@@ -4,7 +4,7 @@ Provides audio debug management capabilities.
 
 **Since:** 26.0.0
 
-<!--Device-audio-interface AudioDebuggingManager--><!--Device-audio-interface AudioDebuggingManager-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -16,6 +16,12 @@ import { audio } from '@kit.AudioKit';
 
 ## printAppInfo
 
+ArkTS-Dyn:
+```TypeScript
+printAppInfo(fd: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 printAppInfo(fd: int): void
 ```
@@ -24,20 +30,26 @@ Prints full audio runtime snapshot for current app process. The snapshot will co
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AudioDebuggingManager-printAppInfo(fd: int): void--><!--Device-AudioDebuggingManager-printAppInfo(fd: int): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fd | int | Yes | fd is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 ## printCapturerInfo
 
+ArkTS-Dyn:
+```TypeScript
+printCapturerInfo(capturer: AudioCapturer, fd: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 printCapturerInfo(capturer: AudioCapturer, fd: int): void
 ```
@@ -46,21 +58,27 @@ Prints full audio runtime snapshot for target audio capturer instance. The snaps
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AudioDebuggingManager-printCapturerInfo(capturer: AudioCapturer, fd: int): void--><!--Device-AudioDebuggingManager-printCapturerInfo(capturer: AudioCapturer, fd: int): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| capturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | Yes | target audio capturer instance to print snapshot. |
-| fd | int | Yes | fd is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| capturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | Yes |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 ## printLoopbackInfo
 
+ArkTS-Dyn:
+```TypeScript
+printLoopbackInfo(loopback: AudioLoopback, fd: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 printLoopbackInfo(loopback: AudioLoopback, fd: int): void
 ```
@@ -69,21 +87,27 @@ Prints full audio runtime snapshot for target audio loopback instance. The snaps
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AudioDebuggingManager-printLoopbackInfo(loopback: AudioLoopback, fd: int): void--><!--Device-AudioDebuggingManager-printLoopbackInfo(loopback: AudioLoopback, fd: int): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| loopback | [AudioLoopback](arkts-audio-audio-audioloopback-i.md) | Yes | target audio loopback instance to print snapshot. |
-| fd | int | Yes | fd is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| loopback | [AudioLoopback](arkts-audio-audio-audioloopback-i.md) | Yes |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 ## printRendererInfo
 
+ArkTS-Dyn:
+```TypeScript
+printRendererInfo(renderer: AudioRenderer, fd: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 printRendererInfo(renderer: AudioRenderer, fd: int): void
 ```
@@ -92,21 +116,27 @@ Prints full audio runtime snapshot for target audio renderer instance. The snaps
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AudioDebuggingManager-printRendererInfo(renderer: AudioRenderer, fd: int): void--><!--Device-AudioDebuggingManager-printRendererInfo(renderer: AudioRenderer, fd: int): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| renderer | [AudioRenderer](arkts-audio-audio-audiorenderer-i.md) | Yes | target audio renderer instance to print snapshot. |
-| fd | int | Yes | fd is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| renderer | [AudioRenderer](arkts-audio-audio-audiorenderer-i.md) | Yes |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 ## printSessionInfo
 
+ArkTS-Dyn:
+```TypeScript
+printSessionInfo(session: AudioSessionManager, fd: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 printSessionInfo(session: AudioSessionManager, fd: int): void
 ```
@@ -115,16 +145,15 @@ Prints full audio runtime snapshot for target audio session manager instance. Th
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AudioDebuggingManager-printSessionInfo(session: AudioSessionManager, fd: int): void--><!--Device-AudioDebuggingManager-printSessionInfo(session: AudioSessionManager, fd: int): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| session | [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md) | Yes | target audio session manager instance to print snapshot. |
-| fd | int | Yes | fd is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| session | [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md) | Yes |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |

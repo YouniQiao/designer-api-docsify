@@ -9,7 +9,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Byte](arkts-arkts-byte-c.md) | Represents boxed byte value and related operations |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Byte](arkts-arkts-byte-c.md) |

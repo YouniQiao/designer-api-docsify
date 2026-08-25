@@ -8,9 +8,9 @@ type OnResultReport = (bundleName: string, result: string) => void
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-backup-type OnResultReport = (bundleName: string, result: string) => void--><!--Device-backup-type OnResultReport = (bundleName: string, result: string) => void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -18,8 +18,7 @@ type OnResultReport = (bundleName: string, result: string) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 触发回调的应用名称。 |
-| result | string | 是 | 应用备份或恢复的结果信息。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| result | string | 是 |

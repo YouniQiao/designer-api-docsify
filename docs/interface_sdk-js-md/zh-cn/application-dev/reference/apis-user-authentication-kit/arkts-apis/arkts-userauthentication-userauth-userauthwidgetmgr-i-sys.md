@@ -2,9 +2,9 @@
 
 身份认证组件管理器。用于将自定义身份认证控件注册到UserAuthWidgetMgr中进行统一管理和调度。自定义身份认证控件可接收来自用户认证框架的命令并执行相应操作。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-userAuth-interface UserAuthWidgetMgr--><!--Device-userAuth-interface UserAuthWidgetMgr-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -26,7 +26,7 @@ off(type: 'command', callback?: IAuthWidgetCallback): void
 
 **起始版本：** 10
 
-<!--Device-UserAuthWidgetMgr-off(type: 'command', callback?: IAuthWidgetCallback): void--><!--Device-UserAuthWidgetMgr-off(type: 'command', callback?: IAuthWidgetCallback): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -34,19 +34,42 @@ off(type: 'command', callback?: IAuthWidgetCallback): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'command' | 是 | 订阅事件类型。值为'command'，表明取消订阅用户认证框架向身份认证控件发送命令的事件。 |
-| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | 否 | 回调函数。指定取消注册的回调函数，需与on方法注册时传入的回调一致；若不传入此参数，则取消所有已注册的回调。使用前需确保已通过 [on](#oncommand)方法注册过相应回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'command' | 是 |
+| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 
 **示例**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
+let authType = userAuth.UserAuthType.FACE;
+let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
+try {
+  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
+  // 订阅认证结果。
+  auth.on('result', {
+    callback: (result: userAuth.AuthResultInfo) => {
+      console.info(`result: ${result.result}`);
+    }
+  });
+  // 取消订阅结果。
+  auth.off('result');
+  console.info('cancel subscribe authentication event successfully.');
+} catch (error) {
+  console.error(`Failed to cancel subscribe authentication event. Code: ${error.code}, message: ${error.message}`);
+  // do error.
+}
+```
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
@@ -78,7 +101,7 @@ offCommand(callback?: IAuthWidgetCallback): void
 
 **起始版本：** 23
 
-<!--Device-UserAuthWidgetMgr-offCommand(callback?: IAuthWidgetCallback): void--><!--Device-UserAuthWidgetMgr-offCommand(callback?: IAuthWidgetCallback): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -86,16 +109,16 @@ offCommand(callback?: IAuthWidgetCallback): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | 否 | Callback to unregister. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 
 **示例**
 
@@ -129,7 +152,7 @@ on(type: 'command', callback: IAuthWidgetCallback): void
 
 **起始版本：** 10
 
-<!--Device-UserAuthWidgetMgr-on(type: 'command', callback: IAuthWidgetCallback): void--><!--Device-UserAuthWidgetMgr-on(type: 'command', callback: IAuthWidgetCallback): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -137,19 +160,56 @@ on(type: 'command', callback: IAuthWidgetCallback): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'command' | 是 | 订阅事件类型。值为'command'，表明该事件用于用户认证框架向身份认证控件发送命令。 |
-| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | 是 | 回调函数。用于接收来自用户认证框架的命令，身份认证控件需在回调中解析命令并执行相应操作。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'command' | 是 |
+| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 
 **示例**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
+let authType = userAuth.UserAuthType.FACE;
+let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
+try {
+  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
+  // 订阅认证结果。
+  auth.on('result', {
+    callback: (result: userAuth.AuthResultInfo) => {
+      console.info(`result: ${result.result}`);
+    }
+  });
+  // 订阅认证过程中的提示信息。
+  auth.on('tip', {
+    callback: (result: userAuth.TipInfo) => {
+      switch (result.tip) {
+        case userAuth.FaceTips.FACE_AUTH_TIP_TOO_BRIGHT:
+          // do something;
+          break;
+        case userAuth.FaceTips.FACE_AUTH_TIP_TOO_DARK:
+          // do something;
+          break;
+        default:
+          // do others.
+      }
+    }
+  } as userAuth.AuthEvent);
+  auth.start();
+  console.info('auth start successfully.');
+} catch (error) {
+  console.error(`Failed to auth. Code: ${error.code}, message: ${error.message}`);
+  // do error.
+}
+```
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
@@ -181,7 +241,7 @@ onCommand(callback: IAuthWidgetCallback): void
 
 **起始版本：** 23
 
-<!--Device-UserAuthWidgetMgr-onCommand(callback: IAuthWidgetCallback): void--><!--Device-UserAuthWidgetMgr-onCommand(callback: IAuthWidgetCallback): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -189,16 +249,16 @@ onCommand(callback: IAuthWidgetCallback): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | 是 | 组件管理接口的回调函数，用于用户认证框架向身份认证控件发送命令。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 
 **示例**
 
@@ -221,4 +281,3 @@ try {
   console.error(`Failed to operate userAuthWidgetMgr. Code: ${err.code}, message: ${err.message}`);
 }
 ```
-

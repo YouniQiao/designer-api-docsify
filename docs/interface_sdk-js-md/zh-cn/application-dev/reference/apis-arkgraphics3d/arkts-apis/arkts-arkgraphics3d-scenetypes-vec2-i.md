@@ -2,9 +2,9 @@
 
 二维向量，通常用于表示2D空间中的点或方向，由x和y两个分量组成。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export interface Vec2--><!--Device-unnamed-export interface Vec2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -16,11 +16,11 @@ x: double
 
 x轴分量，取值范围是实数。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Vec2-x: double--><!--Device-Vec2-x: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -32,11 +32,10 @@ y: double
 
 y轴分量，取值范围是实数。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Vec2-y: double--><!--Device-Vec2-y: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

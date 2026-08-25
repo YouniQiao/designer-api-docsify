@@ -4,7 +4,7 @@ Defines the type of the param used for calling the API.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export interface HuksCryptoExtensionParam--><!--Device-unnamed-export interface HuksCryptoExtensionParam-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -26,16 +26,16 @@ Parameter tag, which is used to distinguish parameters.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-HuksCryptoExtensionParam-tag: huksExternalCrypto.HuksExternalCryptoTag | huks.HuksTag | number--><!--Device-HuksCryptoExtensionParam-tag: huksExternalCrypto.HuksExternalCryptoTag | huks.HuksTag | number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## value
 
 ```TypeScript
-value: boolean | int | bigint | Uint8Array
+value: boolean | number | bigint | Uint8Array
 ```
 
 Value of the tag.
@@ -44,9 +44,8 @@ Value of the tag.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-HuksCryptoExtensionParam-value: boolean | int | bigint | Uint8Array--><!--Device-HuksCryptoExtensionParam-value: boolean | int | bigint | Uint8Array-End-->
-
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
-

@@ -4,11 +4,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [Base64Helper](arkts-arkts-util-base64helper-c.md)
-
-<!--Device-util-class Base64--><!--Device-util-class Base64-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -28,11 +28,11 @@ constructor()
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [constructor](arkts-arkts-util-base64helper-c.md#constructor)
-
-<!--Device-Base64-constructor()--><!--Device-Base64-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -189,25 +189,25 @@ decode(src: Uint8Array | string): Promise<Uint8Array>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [decode](arkts-arkts-util-base64helper-c.md#decode)
-
-<!--Device-Base64-decode(src: Uint8Array | string): Promise<Uint8Array>--><!--Device-Base64-decode(src: Uint8Array | string): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| src | Uint8Array \| string | 是 | 要解码的 Uint8Array 对象或字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| src | Uint8Array \| string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Uint8Array&gt; | 用于返回获取到的 Uint8Array 对象的 promise。 |
+| 类型 |
+| --- |
+| Promise & lt;Uint8Array & gt; |
 
 **示例**
 
@@ -256,25 +256,25 @@ decodeSync(src: Uint8Array | string): Uint8Array
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [decodeSync](arkts-arkts-util-base64helper-c.md#decodesync)
-
-<!--Device-Base64-decodeSync(src: Uint8Array | string): Uint8Array--><!--Device-Base64-decodeSync(src: Uint8Array | string): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| src | Uint8Array \| string | 是 | 要解码的 Uint8Array 对象或字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| src | Uint8Array \| string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Uint8Array | 获取到的 Uint8Array 对象。 |
+| 类型 |
+| --- |
+| Uint8Array |
 
 **示例**
 
@@ -306,25 +306,25 @@ encode(src: Uint8Array): Promise<Uint8Array>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [encode](arkts-arkts-util-base64helper-c.md#encode)
-
-<!--Device-Base64-encode(src: Uint8Array): Promise<Uint8Array>--><!--Device-Base64-encode(src: Uint8Array): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| src | Uint8Array | 是 | 要编码的 Uint8Array 对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| src | Uint8Array | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Uint8Array&gt; | 用于返回获取到的 Uint8Array 对象的 promise。 |
+| 类型 |
+| --- |
+| Promise & lt;Uint8Array & gt; |
 
 **示例**
 
@@ -363,25 +363,25 @@ encodeSync(src: Uint8Array): Uint8Array
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [encodeSync](arkts-arkts-util-base64helper-c.md#encodesync)
-
-<!--Device-Base64-encodeSync(src: Uint8Array): Uint8Array--><!--Device-Base64-encodeSync(src: Uint8Array): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| src | Uint8Array | 是 | 要编码的 Uint8Array 对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| src | Uint8Array | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Uint8Array | 获取到的 Uint8Array 对象。 |
+| 类型 |
+| --- |
+| Uint8Array |
 
 **示例**
 
@@ -411,25 +411,25 @@ encodeToString(src: Uint8Array): Promise<string>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [encodeToString](arkts-arkts-util-base64helper-c.md#encodetostring)
-
-<!--Device-Base64-encodeToString(src: Uint8Array): Promise<string>--><!--Device-Base64-encodeToString(src: Uint8Array): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| src | Uint8Array | 是 | 要编码的 Uint8Array 对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| src | Uint8Array | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | 用于返回获取到的字符串的 promise。 |
+| 类型 |
+| --- |
+| Promise & lt;string & gt; |
 
 **示例**
 
@@ -466,25 +466,25 @@ encodeToStringSync(src: Uint8Array): string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [encodeToStringSync](arkts-arkts-util-base64helper-c.md#encodetostringsync)
-
-<!--Device-Base64-encodeToStringSync(src: Uint8Array): string--><!--Device-Base64-encodeToStringSync(src: Uint8Array): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| src | Uint8Array | 是 | 要编码的 Uint8Array 对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| src | Uint8Array | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 获取到的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -564,4 +564,3 @@ let result = base64.encodeToStringSync(array);
 console.info("result = " + result);
 // 输出结果：result = czEz
 ```
-

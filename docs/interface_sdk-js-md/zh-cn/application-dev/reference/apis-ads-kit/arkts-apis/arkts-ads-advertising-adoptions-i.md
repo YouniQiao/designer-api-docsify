@@ -4,7 +4,7 @@
 
 **起始版本：** 11
 
-<!--Device-advertising-export interface AdOptions--><!--Device-advertising-export interface AdOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -13,6 +13,24 @@
 ```TypeScript
 import { advertising } from '@kit.AdsKit';
 ```
+
+## [key: string]
+
+```TypeScript
+[key: string]: number | boolean | string | undefined
+```
+
+自定义参数。<!--RP1--><!--RP1End-->
+
+**类型：** number \| boolean \| string \| undefined
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.Advertising.Ads
 
 ## adContentClassification
 
@@ -26,9 +44,9 @@ adContentClassification?: string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-AdOptions-adContentClassification?: string--><!--Device-AdOptions-adContentClassification?: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -44,9 +62,9 @@ nonPersonalizedAd?: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-AdOptions-nonPersonalizedAd?: number--><!--Device-AdOptions-nonPersonalizedAd?: number-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -64,9 +82,8 @@ tagForChildProtection?: number
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AdOptions-tagForChildProtection?: number--><!--Device-AdOptions-tagForChildProtection?: number-End-->
-
 **系统能力：** SystemCapability.Advertising.Ads
-

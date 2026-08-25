@@ -4,7 +4,7 @@
 
 **起始版本：** 24
 
-<!--Device-photoAccessHelper-interface AnalysisResult--><!--Device-photoAccessHelper-interface AnalysisResult-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -24,15 +24,14 @@ result: int
 
 资产分析的结果码。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-AnalysisResult-result: int--><!--Device-AnalysisResult-result: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
-

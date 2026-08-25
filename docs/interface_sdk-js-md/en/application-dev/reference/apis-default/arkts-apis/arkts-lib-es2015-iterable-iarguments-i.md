@@ -1,8 +1,6 @@
 # IArguments
 
-**Since:** -1
-
-<!--Device-unnamed-interface IArguments--><!--Device-unnamed-interface IArguments-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,11 +15,9 @@
 
 Iterator
 
-**Since:** -1
-
-<!--Device-IArguments-[Symbol.iterator](): IterableIterator<any>--><!--Device-IArguments-[Symbol.iterator](): IterableIterator<any>-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

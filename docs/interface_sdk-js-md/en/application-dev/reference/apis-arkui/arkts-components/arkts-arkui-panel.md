@@ -12,24 +12,23 @@ Called when the panel slidable panel pops up.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PanelInterface-(show: boolean): PanelAttribute--><!--Device-PanelInterface-(show: boolean): PanelAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| show | boolean | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| show | boolean | Yes |
 
 ## Summary
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |

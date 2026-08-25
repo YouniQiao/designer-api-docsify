@@ -21,20 +21,20 @@ function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCall
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getInclination](arkts-sensorservice-sensor-getinclination-f.md)(inclinationMatrix: Array&lt;double&gt;, callback: AsyncCallback&lt;double&gt;)
-
-<!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void--><!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| inclinationMatrix | Array&lt;number&gt; | 是 | 表示倾斜矩阵。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 异步返回地磁倾斜角，单位：rad（弧度）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| inclinationMatrix | Array & lt;number & gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **示例**
 
@@ -78,27 +78,26 @@ function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getInclination](arkts-sensorservice-sensor-getinclination-f.md)(inclinationMatrix: Array&lt;double&gt;)
-
-<!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>--><!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| inclinationMatrix | Array&lt;number&gt; | 是 | 表示倾斜矩阵。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| inclinationMatrix | Array & lt;number & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;number&gt; | 使用异步方式返回地磁倾斜角，单位：rad（弧度）。 |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **示例**
 
 参见 [getGeomagneticDip](#getgeomagneticdip)
-

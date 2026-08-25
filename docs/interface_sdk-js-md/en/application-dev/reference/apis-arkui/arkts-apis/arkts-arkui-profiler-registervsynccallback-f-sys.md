@@ -15,7 +15,7 @@ Registers vsync callback for profiler.
 
 **Since:** 8
 
-<!--Device-Profiler-function registerVsyncCallback(callback: (info: string) => void): void--><!--Device-Profiler-function registerVsyncCallback(callback: (info: string) => void): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,7 +23,6 @@ Registers vsync callback for profiler.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (info: string) =&gt; void | Yes | the callback info is json string with ui update info. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | (info: string) = & gt; void | Yes |

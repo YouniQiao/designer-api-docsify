@@ -1,12 +1,10 @@
 # ICurve
 
-Interface for curve object.@interface ICurve
+Represents a curve object. Different types of curve objects can be created using APIs in this module, including [curves.cubicBezierCurve](arkts-arkui-curves-cubicbeziercurve-f.md) and [curves.interpolatingSpring](arkts-arkui-curves-interpolatingspring-f.md). The curve object provides interpolation functionality through its member method [interpolate](#interpolate).
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-curves-export interface ICurve--><!--Device-curves-export interface ICurve-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,30 +17,35 @@ import { curves } from '@kit.ArkUI';
 ## interpolate
 
 ```TypeScript
-interpolate(fraction: double): double
+interpolate(fraction : number) : number
 ```
 
-Get curve value by fraction.
+Calculates the interpolated value along the curve at the specified normalized time point.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ICurve-interpolate(fraction: double): double--><!--Device-ICurve-interpolate(fraction: double): double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fraction | double | Yes | Indicates the current normalized time parameter. Value range: [0, 1]. Note: If the value is less than 0, it will be processed as 0. If the value is greater than 1, 1 is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fraction | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
+**Examples**
+
+```TypeScript
+import { curves } from '@kit.ArkUI'
+let curveValue = curves.initCurve(Curve.EaseIn) // Create an ease-in curve.
+let value: number = curveValue.interpolate(0.5) // Calculate the interpolation for half of the time.
+```

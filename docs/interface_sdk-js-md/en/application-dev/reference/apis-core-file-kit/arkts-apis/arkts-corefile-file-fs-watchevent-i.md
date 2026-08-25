@@ -4,7 +4,7 @@ Defines the event to observe.
 
 **Since:** 10
 
-<!--Device-unnamed-export interface WatchEvent--><!--Device-unnamed-export interface WatchEvent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -28,7 +28,7 @@ Cookie bound with the event.Currently, only the **IN_MOVED_FROM** and **IN_MOVED
 
 **Since:** 10
 
-<!--Device-WatchEvent-readonly cookie: number--><!--Device-WatchEvent-readonly cookie: number-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -44,7 +44,7 @@ Events to observe. Multiple events can be separated by vertical bars (
 
 **Since:** 10
 
-<!--Device-WatchEvent-readonly event: number--><!--Device-WatchEvent-readonly event: number-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -60,7 +60,6 @@ Sandbox path of the file to observe. The sandbox path contains the file name.
 
 **Since:** 10
 
-<!--Device-WatchEvent-readonly fileName: string--><!--Device-WatchEvent-readonly fileName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
-

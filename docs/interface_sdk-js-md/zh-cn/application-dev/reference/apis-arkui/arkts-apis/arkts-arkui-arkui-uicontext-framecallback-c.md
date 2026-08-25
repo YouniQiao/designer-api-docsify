@@ -9,7 +9,7 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-export abstract class FrameCallback--><!--Device-unnamed-export abstract class FrameCallback-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,19 +32,19 @@ onFrame(frameTimeInNano: number): void
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FrameCallback-onFrame(frameTimeInNano: number): void--><!--Device-FrameCallback-onFrame(frameTimeInNano: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| frameTimeInNano | number | 是 | 下一帧渲染开始执行的时间，以纳秒为单位。<br/>取值范围：[0, +∞) |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| frameTimeInNano | number | 是 |
 
 **示例**
 
@@ -96,19 +96,19 @@ onIdle(timeLeftInNano: number): void
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FrameCallback-onIdle(timeLeftInNano: number): void--><!--Device-FrameCallback-onIdle(timeLeftInNano: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| timeLeftInNano | number | 是 | 这一帧剩余的空闲时间，以纳秒为单位。<br/>取值范围：[0, +∞) |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| timeLeftInNano | number | 是 |
 
 **示例**
 
@@ -149,4 +149,3 @@ struct Index {
   }
 }
 ```
-

@@ -5,9 +5,9 @@ The **dragInteraction** module provides the APIs to enable and disable listening
 > **NOTE：**&gt;
 > - The APIs provided by this module are system APIs.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-unnamed-declare namespace dragInteraction--><!--Device-unnamed-declare namespace dragInteraction-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 
@@ -24,28 +24,27 @@ import { dragInteraction } from '@kit.ArkUI';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [getDataSummary](arkts-arkui-draginteraction-getdatasummary-f-sys.md) | Obtains the data summary of all dragged objects. |
-| [off_drag](arkts-arkui-draginteraction-offdrag-f-sys.md#offdrag) | Disables listening for dragging status changes. |
-| [offDragStateChange](arkts-arkui-draginteraction-offdragstatechange-f-sys.md) | Disables listening for dragging state change events. |
-| [on_drag](arkts-arkui-draginteraction-ondrag-f-sys.md#ondrag) | Enables listening for dragging status changes. |
-| [onDragStateChange](arkts-arkui-draginteraction-ondragstatechange-f-sys.md) | Listens for dragging state change events. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getDataSummary](arkts-arkui-draginteraction-getdatasummary-f-sys.md) |
+| [off](arkts-arkui-draginteraction-off-f-sys.md#offdrag) |
+| [offDragStateChange](arkts-arkui-draginteraction-offdragstatechange-f-sys.md) |
+| [on](arkts-arkui-draginteraction-on-f-sys.md#ondrag) |
+| [onDragStateChange](arkts-arkui-draginteraction-ondragstatechange-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [Summary](arkts-arkui-draginteraction-summary-i-sys.md) | Defines the data summary of the dragged object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Summary](arkts-arkui-draginteraction-summary-i-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [DragState](arkts-arkui-draginteraction-dragstate-e-sys.md) | Enumerates dragging states. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DragState](arkts-arkui-draginteraction-dragstate-e-sys.md) |
 <!--DelEnd-->
-

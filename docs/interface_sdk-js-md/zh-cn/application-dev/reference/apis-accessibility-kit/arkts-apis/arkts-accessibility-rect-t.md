@@ -6,9 +6,9 @@ export type Rect = _Rect
 
 表示矩形区域，请参考[Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-unnamed-export type Rect = _Rect--><!--Device-unnamed-export type Rect = _Rect-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -21,4 +21,3 @@ import { Rect } from '@kit.AccessibilityKit';
 
 let rect: Rect;
 ```
-

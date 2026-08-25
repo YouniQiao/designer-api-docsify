@@ -2,9 +2,9 @@
 
 Enumerates the window modes.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-window-enum GlobalWindowMode--><!--Device-window-enum GlobalWindowMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -16,11 +16,11 @@ FULLSCREEN = 1
 
 Full-screen window. The first binary bit from right to left is 1.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-GlobalWindowMode-FULLSCREEN = 1--><!--Device-GlobalWindowMode-FULLSCREEN = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -32,11 +32,11 @@ SPLIT = 1 << 1
 
 Split-screen window. The second binary bit from right to left is 1.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-GlobalWindowMode-SPLIT = 1 << 1--><!--Device-GlobalWindowMode-SPLIT = 1 << 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -48,11 +48,11 @@ FLOAT = 1 << 2
 
 Floating window. The third binary bit from right to left is 1.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-GlobalWindowMode-FLOAT = 1 << 2--><!--Device-GlobalWindowMode-FLOAT = 1 << 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -64,11 +64,10 @@ PIP = 1 << 3
 
 PiP window. The fourth binary bit from right to left is 1.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-GlobalWindowMode-PIP = 1 << 3--><!--Device-GlobalWindowMode-PIP = 1 << 3-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Window.SessionManager
-

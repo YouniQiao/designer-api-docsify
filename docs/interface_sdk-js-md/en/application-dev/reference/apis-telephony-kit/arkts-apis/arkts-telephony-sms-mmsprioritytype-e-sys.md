@@ -2,9 +2,9 @@
 
 Enumerates MMS message priorities.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sms-export enum MmsPriorityType--><!--Device-sms-export enum MmsPriorityType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -18,9 +18,9 @@ MMS_LOW = 128
 
 Low priority.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsPriorityType-MMS_LOW = 128--><!--Device-MmsPriorityType-MMS_LOW = 128-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -34,9 +34,9 @@ MMS_NORMAL = 129
 
 Normal priority.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsPriorityType-MMS_NORMAL = 129--><!--Device-MmsPriorityType-MMS_NORMAL = 129-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -50,11 +50,10 @@ MMS_HIGH = 130
 
 High priority.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsPriorityType-MMS_HIGH = 130--><!--Device-MmsPriorityType-MMS_HIGH = 130-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
-

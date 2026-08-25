@@ -2,9 +2,9 @@
 
 Provides information about a form.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-formInfo-interface FormInfo--><!--Device-formInfo-interface FormInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -24,11 +24,11 @@ Obtains the class name of the ability to which this form belongs.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FormInfo-abilityName: string--><!--Device-FormInfo-abilityName: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -42,11 +42,11 @@ Obtains the bundle name of the application to which this form belongs.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FormInfo-bundleName: string--><!--Device-FormInfo-bundleName: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -62,11 +62,11 @@ Obtains the color mode of this form.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FormInfo-colorMode: ColorMode--><!--Device-FormInfo-colorMode: ColorMode-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -80,11 +80,11 @@ Obtains the custom data defined in this form.
 
 **Type:** Record&lt;string, string&gt;
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FormInfo-customizeData: Record<string, string>--><!--Device-FormInfo-customizeData: Record<string, string>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -96,13 +96,13 @@ defaultDimension: int
 
 Obtains the default grid style of this form. The value must be a positive integer, refer to [FormDimension](arkts-form-forminfo-formdimension-e.md).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FormInfo-defaultDimension: int--><!--Device-FormInfo-defaultDimension: int-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -116,11 +116,11 @@ Obtains the description of this form.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FormInfo-description: string--><!--Device-FormInfo-description: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -132,13 +132,13 @@ descriptionId: int
 
 Obtains the description id of this form. The value must be a positive integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FormInfo-descriptionId: int--><!--Device-FormInfo-descriptionId: int-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -152,11 +152,11 @@ Obtains the display name of this form.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
-<!--Device-FormInfo-displayName: string--><!--Device-FormInfo-displayName: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -168,13 +168,13 @@ displayNameId: int
 
 Obtains the displayName resource id of this form. The value must be a positive integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
-<!--Device-FormInfo-displayNameId: int--><!--Device-FormInfo-displayNameId: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -188,11 +188,11 @@ Obtains the form config ability about this form.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FormInfo-formConfigAbility: string--><!--Device-FormInfo-formConfigAbility: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -206,11 +206,11 @@ Obtains whether notify visible of this form.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FormInfo-formVisibleNotify: boolean--><!--Device-FormInfo-formVisibleNotify: boolean-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -224,11 +224,11 @@ Checks whether this form is a default form.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FormInfo-isDefault: boolean--><!--Device-FormInfo-isDefault: boolean-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -242,11 +242,11 @@ Obtains whether this form is a dynamic form.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FormInfo-isDynamic: boolean--><!--Device-FormInfo-isDynamic: boolean-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -260,11 +260,11 @@ Obtains the JS component name of this JS form.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FormInfo-jsComponentName: string--><!--Device-FormInfo-jsComponentName: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -278,11 +278,11 @@ Obtains the name of the application module to which this form belongs.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FormInfo-moduleName: string--><!--Device-FormInfo-moduleName: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -296,11 +296,11 @@ Obtains the name of this form.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FormInfo-name: string--><!--Device-FormInfo-name: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -314,11 +314,11 @@ Obtains the scheduledUpdateTime.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FormInfo-scheduledUpdateTime: string--><!--Device-FormInfo-scheduledUpdateTime: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -330,13 +330,13 @@ supportDimensions: Array<int>
 
 Obtains the grid styles supported by this form. The minimum length is 1, refer to [FormDimension](arkts-form-forminfo-formdimension-e.md).
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FormInfo-supportDimensions: Array<int>--><!--Device-FormInfo-supportDimensions: Array<int>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -348,13 +348,13 @@ supportedShapes: Array<int>
 
 Obtains the shape supported by this form. The minimum length is 1, refer to [FormShape](arkts-form-forminfo-formshape-e.md).
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-FormInfo-supportedShapes: Array<int>--><!--Device-FormInfo-supportedShapes: Array<int>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -370,11 +370,11 @@ Indicates whether the form can be set as a transparent background
 
 **Default:** false
 
-**Since:** 23
+**Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
-<!--Device-FormInfo-transparencyEnabled: boolean--><!--Device-FormInfo-transparencyEnabled: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -388,11 +388,11 @@ Obtains the type of this form. Currently, JS forms are supported.
 
 **Type:** FormType
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FormInfo-type: FormType--><!--Device-FormInfo-type: FormType-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -404,13 +404,13 @@ updateDuration: int
 
 Obtains the updateDuration. The value must be an integer within [0,336].
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FormInfo-updateDuration: int--><!--Device-FormInfo-updateDuration: int-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -424,11 +424,10 @@ Obtains the updateEnabled.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-FormInfo-updateEnabled: boolean--><!--Device-FormInfo-updateEnabled: boolean-End-->
-
 **System capability:** SystemCapability.Ability.Form
-

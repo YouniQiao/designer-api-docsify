@@ -14,11 +14,11 @@ function getPermissionUsedRecordToggleStatus(): Promise<boolean>
 
 系统应用调用此接口，可以获取当前用户的权限使用记录开关状态，例如在权限管理界面展示当前开关设置状态。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
-
-<!--Device-privacyManager-function getPermissionUsedRecordToggleStatus(): Promise<boolean>--><!--Device-privacyManager-function getPermissionUsedRecordToggleStatus(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -26,18 +26,18 @@ function getPermissionUsedRecordToggleStatus(): Promise<boolean>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回true，表示当前用户的开关状态值为开启。返回false，表示当前用户的开关状态值为关闭。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission"ohos.permission.PERMISSION_USED_STATS". |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
-| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | This API must be used together with [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md).<br>**适用版本：** 26.1.0+ |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 **示例**
 
@@ -74,18 +74,18 @@ privacyManager.getPermissionUsedRecordToggleStatus(subProfileId).then((status: b
 ## getPermissionUsedRecordToggleStatus
 
 ```TypeScript
-function getPermissionUsedRecordToggleStatus(subProfileId: int): Promise<boolean>
+function getPermissionUsedRecordToggleStatus(subProfileId: number): Promise<boolean>
 ```
 
 系统应用调用此接口，可以获取指定子身份资料的权限使用记录开关状态，例如在权限管理界面展示当前开关设置状态。使用Promise异步回调。
 
 **起始版本：** 26.1.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
+
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-privacyManager-function getPermissionUsedRecordToggleStatus(subProfileId: int): Promise<boolean>--><!--Device-privacyManager-function getPermissionUsedRecordToggleStatus(subProfileId: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -93,27 +93,26 @@ function getPermissionUsedRecordToggleStatus(subProfileId: int): Promise<boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| subProfileId | int | 是 | 子身份资料的标识符。可以通过[OsAccountSubProfile.id](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md#id)获取。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [subProfileId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回true，表示指定子身份资料的开关状态值为开启。返回false，表示指定子身份资料的开关状态值为关闭 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission"ohos.permission.PERMISSION_USED_STATS". |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The specified subProfileId does not exist for the current user. |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 **示例**
 
 参见 [getPermissionUsedRecordToggleStatus](#getpermissionusedrecordtogglestatus)
-

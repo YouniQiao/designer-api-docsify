@@ -4,7 +4,7 @@ Provides the information about the custom page transition animation.
 
 **Since:** 18
 
-<!--Device-unnamed-declare interface SwiperContentAnimatedTransition--><!--Device-unnamed-declare interface SwiperContentAnimatedTransition-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -28,9 +28,9 @@ Timeout for the custom page transition animation. The timeout timer starts when 
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-SwiperContentAnimatedTransition-timeout?: number--><!--Device-SwiperContentAnimatedTransition-timeout?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -46,9 +46,8 @@ Content of the custom page transition animation.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SwiperContentAnimatedTransition-transition: Callback<SwiperContentTransitionProxy>--><!--Device-SwiperContentAnimatedTransition-transition: Callback<SwiperContentTransitionProxy>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
-

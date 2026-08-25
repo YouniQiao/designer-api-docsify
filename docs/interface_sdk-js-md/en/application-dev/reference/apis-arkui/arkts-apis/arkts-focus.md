@@ -9,14 +9,13 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [FocusBoxStyle(Provide some common interface for focus.)](arkts-arkui-focusboxstyle-i.md) | Sets the system focus box style for the component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FocusBoxStyle(Provide some common interface for focus.)](arkts-arkui-focusboxstyle-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [FocusPriority(Provide some common interface for focus.)](arkts-arkui-focuspriority-e.md) | Sets the focus priority of a component. |
-| [KeyProcessingMode(Provide some common interface for focus.)](arkts-arkui-keyprocessingmode-e.md) | Enumerates the modes for processing key events. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FocusPriority(Provide some common interface for focus.)](arkts-arkui-focuspriority-e.md) |
+| [KeyProcessingMode(Provide some common interface for focus.)](arkts-arkui-keyprocessingmode-e.md) |

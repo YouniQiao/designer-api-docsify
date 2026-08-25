@@ -6,9 +6,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export declare class PageTransitionExit--><!--Device-unnamed-export declare class PageTransitionExit-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,25 +20,23 @@ static $_invoke(value: PageTransitionOptions): PageTransitionExit
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PageTransitionExit-static $_invoke(value: PageTransitionOptions): PageTransitionExit--><!--Device-PageTransitionExit-static $_invoke(value: PageTransitionOptions): PageTransitionExit-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [PageTransitionOptions](arkts-arkui-pagetransition-pagetransitionoptions-i.md) | 是 | 配置退场动效的参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [PageTransitionOptions](arkts-arkui-pagetransition-pagetransitionoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [PageTransitionExit](arkts-arkui-pagetransition-pagetransitionexit-c.md) |  |
+| 类型 |
+| --- |
+| [PageTransitionExit](arkts-arkui-pagetransition-pagetransitionexit-c.md) |
 
 ## onExit
 
@@ -52,23 +48,20 @@ onExit(event: PageTransitionCallback): this
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PageTransitionExit-onExit(event: PageTransitionCallback): this--><!--Device-PageTransitionExit-onExit(event: PageTransitionCallback): this-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md) | 是 | 出场动画的逐帧回调直到出场动画结束，progress从0变化到1。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| this |  |
-
+| 类型 |
+| --- |
+| this |

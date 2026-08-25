@@ -4,7 +4,7 @@ Defines the basic callback.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface Callback--><!--Device-unnamed-declare interface Callback-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -13,7 +13,7 @@ Defines the basic callback.
 ```TypeScript
 ```
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (data: T): V
@@ -23,34 +23,22 @@ Defines the callback info.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Callback-(data: T): V--><!--Device-Callback-(data: T): V-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | T | Yes | the data will be used in the callback. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| V | Returns result of the callback. |
-
-**Examples**
-
-```TypeScript
-@Builder
-function MyBuilder(value: string, size: number) {
-  Text(value)
-    .fontSize(size)
-}
-let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(MyBuilder);
-```
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| V |

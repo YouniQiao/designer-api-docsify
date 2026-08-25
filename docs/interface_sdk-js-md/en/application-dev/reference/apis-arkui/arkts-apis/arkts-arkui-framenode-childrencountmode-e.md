@@ -4,7 +4,7 @@ Enumerates the modes of counting child nodes.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export enum ChildrenCountMode--><!--Device-unnamed-export enum ChildrenCountMode-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Counting all child node after expansion. When a lazy loading node (for example, 
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChildrenCountMode-ALL_EXPAND = 0--><!--Device-ChildrenCountMode-ALL_EXPAND = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Counting currently expanded child nodes. Lazy loading nodes are not expanded, an
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChildrenCountMode-ONLY_EXPANDED = 1--><!--Device-ChildrenCountMode-ONLY_EXPANDED = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ Counting all child nodes. Lazy loading nodes are not expanded, but the total num
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChildrenCountMode-ALL_NOT_EXPAND = 2--><!--Device-ChildrenCountMode-ALL_NOT_EXPAND = 2-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

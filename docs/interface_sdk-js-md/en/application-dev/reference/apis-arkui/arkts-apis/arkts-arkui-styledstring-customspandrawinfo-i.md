@@ -4,9 +4,7 @@ Defines the CustomSpanDrawInfo interface.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare interface CustomSpanDrawInfo--><!--Device-unnamed-export declare interface CustomSpanDrawInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +20,9 @@ The baseline offset of the line where customSpan is located. The unit is px.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-CustomSpanDrawInfo-baseline: double--><!--Device-CustomSpanDrawInfo-baseline: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,11 +38,9 @@ The bottom position of the line where customSpan is located. The unit is px.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-CustomSpanDrawInfo-lineBottom: double--><!--Device-CustomSpanDrawInfo-lineBottom: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,11 +56,9 @@ The top position of the line where customSpan is located. The unit is px.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-CustomSpanDrawInfo-lineTop: double--><!--Device-CustomSpanDrawInfo-lineTop: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,11 +74,8 @@ CustomSpan's offset relative to the parent component. The unit is px.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CustomSpanDrawInfo-x: double--><!--Device-CustomSpanDrawInfo-x: double-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

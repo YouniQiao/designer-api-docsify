@@ -6,7 +6,7 @@ Implements an extended text editing controller.Inherits [TextBaseController](ark
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface TextEditControllerEx--><!--Device-unnamed-declare interface TextEditControllerEx-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,19 +25,19 @@ Obtains the current position of the caret.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TextEditControllerEx-getCaretOffset(): number--><!--Device-TextEditControllerEx-getCaretOffset(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Position of the caret. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 ## getPreviewText
 
@@ -49,19 +49,19 @@ Obtains the preview text.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TextEditControllerEx-getPreviewText?(): PreviewText--><!--Device-TextEditControllerEx-getPreviewText?(): PreviewText-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [PreviewText](arkts-arkui-previewtext-i.md) | Preview text. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PreviewText](arkts-arkui-previewtext-i.md) |
 
 ## isEditing
 
@@ -73,19 +73,19 @@ Obtains the editing status of the rich text.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TextEditControllerEx-isEditing(): boolean--><!--Device-TextEditControllerEx-isEditing(): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Editing status of the rich text. **true** means that the text is in editable state, and **false** means the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## setCaretOffset
 
@@ -97,25 +97,25 @@ Sets the offset of the caret.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TextEditControllerEx-setCaretOffset(offset: number): boolean--><!--Device-TextEditControllerEx-setCaretOffset(offset: number): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | Yes | Offset of the caret. If the offset is outside the range of all content, the setting fails. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the caret offset is set successfully. <br>Returns **true** if it is set successfully; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## stopEditing
 
@@ -127,11 +127,10 @@ Stops editing.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-TextEditControllerEx-stopEditing(): void--><!--Device-TextEditControllerEx-stopEditing(): void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

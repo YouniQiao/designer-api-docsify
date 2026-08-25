@@ -16,23 +16,23 @@ function isDomainAccountSupported(): Promise<boolean>
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-osAccount-function isDomainAccountSupported(): Promise<boolean>--><!--Device-osAccount-function isDomainAccountSupported(): Promise<boolean>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示支持域账号；返回false表示不支持。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| 错误码ID |
+| --- |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
 
 **示例**
 
@@ -70,4 +70,3 @@ try {
   console.error(`isDomainAccountSupported exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
-

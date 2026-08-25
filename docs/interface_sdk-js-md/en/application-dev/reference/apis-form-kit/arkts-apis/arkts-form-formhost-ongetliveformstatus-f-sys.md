@@ -16,7 +16,7 @@ Listens to the event of get live form status.
 
 **Since:** 23
 
-<!--Device-formHost-function onGetLiveFormStatus(callback: formInfo.GetLiveFormStatusCallback): void--><!--Device-formHost-function onGetLiveFormStatus(callback: formInfo.GetLiveFormStatusCallback): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -24,13 +24,12 @@ Listens to the event of get live form status.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | formInfo.GetLiveFormStatusCallback | Yes | The callback of get live form status. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | formInfo.GetLiveFormStatusCallback | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

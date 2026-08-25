@@ -8,7 +8,7 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-export interface HoverModeRegionLayoutOptions--><!--Device-unnamed-export interface HoverModeRegionLayoutOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,15 +26,15 @@ extraRegionPosition?: ExtraRegionPosition
 
 扩展区域的位置信息，可选值为TOP（上半区域）或BOTTOM（下半区域）。此字段在extra有效且showExtraRegion设置为true时生效。extra有效是指FoldSplitContainer组件传入了extra参数。默认值：`ExtraRegionPosition.TOP`
 
-**类型：** [ExtraRegionPosition](../../apis-default/arkts-apis/arkts-arkui-advanced-foldsplitcontainer-extraregionposition-e.md)
+**类型：** [ExtraRegionPosition](arkts-arkui-arkui-advanced-foldsplitcontainer-extraregionposition-e.md)
 
 **起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HoverModeRegionLayoutOptions-extraRegionPosition?: ExtraRegionPosition--><!--Device-HoverModeRegionLayoutOptions-extraRegionPosition?: ExtraRegionPosition-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,17 +44,17 @@ extraRegionPosition?: ExtraRegionPosition
 horizontalSplitRatio?: number
 ```
 
-主要区域宽度与扩展区域宽度的比值。取值可使用PresetSplitRatio预设值或自定义数值，取值范围为(0, +∞)，传入小于等于0的值时使用默认值。此字段在extra有效且showExtraRegion设置为true时生效。 extra有效是指FoldSplitContainer组件传入了extra参数。默认值：[PresetSplitRatio](../../apis-default/arkts-apis/arkts-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md).LAYOUT_3V2
+主要区域宽度与扩展区域宽度的比值。取值可使用PresetSplitRatio预设值或自定义数值，取值范围为(0, +∞)，传入小于等于0的值时使用默认值。此字段在extra有效且showExtraRegion设置为true时生效。 extra有效是指FoldSplitContainer组件传入了extra参数。默认值：[PresetSplitRatio](arkts-arkui-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md).LAYOUT_3V2
 
 **类型：** number
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HoverModeRegionLayoutOptions-horizontalSplitRatio?: number--><!--Device-HoverModeRegionLayoutOptions-horizontalSplitRatio?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,11 +70,10 @@ showExtraRegion?: boolean
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-HoverModeRegionLayoutOptions-showExtraRegion?: boolean--><!--Device-HoverModeRegionLayoutOptions-showExtraRegion?: boolean-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

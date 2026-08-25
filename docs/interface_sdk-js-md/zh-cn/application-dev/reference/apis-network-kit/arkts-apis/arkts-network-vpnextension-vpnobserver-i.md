@@ -4,7 +4,7 @@ VPN观察者对象。用于监听VPN相关事件。在调用VpnObserver的方法
 
 **起始版本：** 26.0.0
 
-<!--Device-vpnExtension-export interface VpnObserver--><!--Device-vpnExtension-export interface VpnObserver-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -23,21 +23,21 @@ offAuthorizationResult(callback?: Callback<boolean>): void
 取消注册用户授权结果监听器。
 
 > **注意**&gt;
-> 多次调用onAuthorizationResult注册监听时，若需取消授权结果监听，需要传最后一次调用时传入的callback，或者不传入参数。
+> 多次调用[onAuthorizationResult](#onauthorizationresult)注册监听时，若需取消授权结果监听，需要传最后一次调用时传入的callback，或者不传入参数。
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-VpnObserver-offAuthorizationResult(callback?: Callback<boolean>): void--><!--Device-VpnObserver-offAuthorizationResult(callback?: Callback<boolean>): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;boolean&gt; | 否 | 监听器回调函数，用于返回用户授权结果。 <br>传入该参数：取消注册指定的监听器。不传参数：取消注册所有已注册的监听器。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback & lt;boolean & gt; | 否 |
 
 **示例**
 
@@ -65,24 +65,24 @@ vpnObserver.offAuthorizationResult();
 onAuthorizationResult(callback: Callback<boolean>): void
 ```
 
-注册用户授权结果监听器。授权结果在调用[startVpnExtensionAbility](arkts-network-vpnextension-startvpnextensionability-f.md)弹出授权弹窗，用户点击弹窗后通知，仅接收当前 VPN的结果。在不需要监听授权结果时可以调用offAuthorizationResult接口取消注册。
+注册用户授权结果监听器。授权结果在调用[startVpnExtensionAbility](arkts-network-vpnextension-startvpnextensionability-f.md)弹出授权弹窗，用户点击弹窗后通知，仅接收当前 VPN的结果。在不需要监听授权结果时可以调用[offAuthorizationResult](#offauthorizationresult)接口取消注册。
 
 > **注意**&gt;
 > 多次调用该接口时，仅最后一次传入的callback生效。
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-VpnObserver-onAuthorizationResult(callback: Callback<boolean>): void--><!--Device-VpnObserver-onAuthorizationResult(callback: Callback<boolean>): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;boolean&gt; | 是 | 回调函数，用于返回用户授权结果。true表示用户同意授权，false表示用户拒绝授权。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback & lt;boolean & gt; | 是 |
 
 **示例**
 
@@ -98,4 +98,3 @@ vpnObserver.onAuthorizationResult((result: boolean) => {
   }
 });
 ```
-

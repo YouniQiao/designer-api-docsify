@@ -16,17 +16,17 @@ Queries the usage priority group of the calling application.The priority defined
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-bundleState-function queryAppUsagePriorityGroup(callback: AsyncCallback<number>): void--><!--Device-bundleState-function queryAppUsagePriorityGroup(callback: AsyncCallback<number>): void-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | the callback of queryAppUsagePriorityGroup. Returns the app group of the calling application. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **示例**
 
@@ -65,19 +65,18 @@ Queries the usage priority group of the calling application.The priority defined
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-bundleState-function queryAppUsagePriorityGroup(): Promise<number>--><!--Device-bundleState-function queryAppUsagePriorityGroup(): Promise<number>-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;number&gt; | the promise returned by queryAppUsagePriorityGroup. Returns the app group of the calling application. |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **示例**
 
 参见 [queryAppUsagePriorityGroup](#queryappusageprioritygroup)
-

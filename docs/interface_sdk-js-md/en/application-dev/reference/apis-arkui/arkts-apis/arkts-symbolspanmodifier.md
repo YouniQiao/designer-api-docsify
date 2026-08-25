@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [SymbolSpanModifier](arkts-arkui-symbolspanmodifier-c.md) | Defines ContainerSpan Modifier |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SymbolSpanModifier](arkts-arkui-symbolspanmodifier-c.md) |

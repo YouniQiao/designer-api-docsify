@@ -16,30 +16,30 @@ Creates a **DiscoveryService** object, which is used to discover MDNS services o
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-mdns-function createDiscoveryService(context: Context, serviceType: string): DiscoveryService--><!--Device-mdns-function createDiscoveryService(context: Context, serviceType: string): DiscoveryService-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. <br>For details about the application context of the FA model, see Context. <br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
-| serviceType | string | Yes | MDNS service type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes |
+| serviceType | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [DiscoveryService](arkts-network-mdns-discoveryservice-i.md) | DiscoveryService** object obtained based on the specified **serviceType** and **context**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DiscoveryService](arkts-network-mdns-discoveryservice-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -56,4 +56,3 @@ let context: common.UIAbilityContext = this.getUIContext().getHostContext() as c
 let serviceType = "_print._tcp";
 let discoveryService : Object = mdns.createDiscoveryService(context, serviceType);
 ```
-

@@ -2,9 +2,9 @@
 
 Represents KeyAgree recipient information for CMS enveloped data.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-cert-interface CmsKeyAgreeRecipientInfo--><!--Device-cert-interface CmsKeyAgreeRecipientInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -24,11 +24,11 @@ EC certificate.
 
 **Type:** X509Cert
 
-**Since:** 23
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
-<!--Device-CmsKeyAgreeRecipientInfo-cert: X509Cert--><!--Device-CmsKeyAgreeRecipientInfo-cert: X509Cert-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -44,11 +44,10 @@ KDF digest algorithm. The default value is **SHA256**.
 
 **Default:** CmsKeyAgreeRecipientDigestAlgorithm.SHA256
 
-**Since:** 23
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
-<!--Device-CmsKeyAgreeRecipientInfo-digestAlgorithm?: CmsKeyAgreeRecipientDigestAlgorithm--><!--Device-CmsKeyAgreeRecipientInfo-digestAlgorithm?: CmsKeyAgreeRecipientDigestAlgorithm-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Security.Cert
-

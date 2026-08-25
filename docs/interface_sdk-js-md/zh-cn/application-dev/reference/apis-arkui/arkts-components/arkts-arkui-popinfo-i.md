@@ -4,7 +4,7 @@
 
 **起始版本：** 11
 
-<!--Device-unnamed-declare interface PopInfo--><!--Device-unnamed-declare interface PopInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ info: NavPathInfo
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PopInfo-info: NavPathInfo--><!--Device-PopInfo-info: NavPathInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ result: Object
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-PopInfo-result: Object--><!--Device-PopInfo-result: Object-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,15 +4,14 @@
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i.md) | 作为trigger的入参定义触发WantAgent所需 要的信息。 |
+| 名称 |
+| --- |
+| [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i.md) |
 
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i-sys.md) | 作为trigger的入参定义触发WantAgent所需 要的信息。 |
+| 名称 |
+| --- |
+| [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i-sys.md) |
 <!--DelEnd-->
-

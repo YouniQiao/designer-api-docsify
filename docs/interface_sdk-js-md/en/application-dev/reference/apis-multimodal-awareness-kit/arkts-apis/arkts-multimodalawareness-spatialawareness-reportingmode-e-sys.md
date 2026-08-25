@@ -4,7 +4,7 @@ Enum for distance measurement result reporting modes. @enum { int } ReportingMod
 
 **Since:** 23
 
-<!--Device-spatialAwareness-export enum ReportingMode--><!--Device-spatialAwareness-export enum ReportingMode-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
@@ -20,9 +20,9 @@ indicates periodic reporting
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-ReportingMode-REPORT_MODE_PERIODIC_REPORTING = 0--><!--Device-ReportingMode-REPORT_MODE_PERIODIC_REPORTING = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
@@ -38,11 +38,10 @@ indicates triggered reporting
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-ReportingMode-REPORT_MODE_TRIGGERED_REPORTING = 1--><!--Device-ReportingMode-REPORT_MODE_TRIGGERED_REPORTING = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **System API:** This is a system API.
-

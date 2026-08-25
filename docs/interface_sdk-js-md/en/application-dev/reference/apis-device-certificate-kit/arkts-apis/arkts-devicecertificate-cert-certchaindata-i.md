@@ -2,9 +2,9 @@
 
 Defines the certificate chain data, which is passed in as input parameters during certificate chain verification.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-cert-interface CertChainData--><!--Device-cert-interface CertChainData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -22,13 +22,13 @@ count: int
 
 Number of certificates contained in the input data.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CertChainData-count: int--><!--Device-CertChainData-count: int-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -42,11 +42,11 @@ Certificate data.
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CertChainData-data: Uint8Array--><!--Device-CertChainData-data: Uint8Array-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -60,11 +60,10 @@ Certificate encoding format.
 
 **Type:** [EncodingFormat](arkts-devicecertificate-cert-encodingformat-e.md)
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-CertChainData-encodingFormat: EncodingFormat--><!--Device-CertChainData-encodingFormat: EncodingFormat-End-->
-
 **System capability:** SystemCapability.Security.Cert
-

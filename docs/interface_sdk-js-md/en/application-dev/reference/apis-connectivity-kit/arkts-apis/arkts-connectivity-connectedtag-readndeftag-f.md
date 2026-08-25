@@ -20,21 +20,21 @@ Reads the content of this active tag. This API uses a promise to return the resu
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [read](arkts-connectivity-connectedtag-read-f.md)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-<!--Device-connectedTag-function readNdefTag(): Promise<string>--><!--Device-connectedTag-function readNdefTag(): Promise<string>-End-->
-
 **System capability:** SystemCapability.Communication.ConnectedTag
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Promise used to return the content of the active tag. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Examples**
 
@@ -76,23 +76,22 @@ Reads the content of this active tag. This API uses an asynchronous callback to 
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [read](arkts-connectivity-connectedtag-read-f.md)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-<!--Device-connectedTag-function readNdefTag(callback: AsyncCallback<string>): void--><!--Device-connectedTag-function readNdefTag(callback: AsyncCallback<string>): void-End-->
-
 **System capability:** SystemCapability.Communication.ConnectedTag
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the active tag content obtained. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
 **Examples**
 
 See [readNdefTag](#readndeftag)
-

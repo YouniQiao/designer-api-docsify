@@ -16,22 +16,21 @@ function getAllCapabilityList(): Promise<Capability[]>
 
 **起始版本：** 26.1.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
-<!--Device-carAwareness-function getAllCapabilityList(): Promise<Capability[]>--><!--Device-carAwareness-function getAllCapabilityList(): Promise<Capability[]>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Capability[]&gt; | Promise用于返回所有的能力列表。 |
+| 类型 |
+| --- |
+| Promise & lt;Capability[] & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Car awareness not supported. Function can not work correctly due to limited device capabilities. |
-| [34000001](../errorcode-carAwareness.md#34000001-服务异常) | Service exception. |
-
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [34000001](../errorcode-carAwareness.md#34000001-服务异常) |

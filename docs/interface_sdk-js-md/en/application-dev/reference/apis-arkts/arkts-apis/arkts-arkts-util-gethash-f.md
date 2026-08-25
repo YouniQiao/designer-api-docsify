@@ -16,23 +16,23 @@ Obtains the hash value of an object. If no hash value has been obtained, a rando
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-util-function getHash(object: object): number--><!--Device-util-function getHash(object: object): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| object | object | Yes | Object whose hash value is to be obtained. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| object | object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Hash value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -48,4 +48,3 @@ let result2 = util.getHash(obj);
 console.info('result2 is ' + result2);
 // Output: The values of result1 and result2 are the same and are a random hash value.
 ```
-

@@ -14,11 +14,11 @@ function getWakeupManager(): WakeupManager
 
 Obtains an [WakeupManager](arkts-basicservices-intelligentvoice-wakeupmanager-i-sys.md) instance.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
-
-<!--Device-intelligentVoice-function getWakeupManager(): WakeupManager--><!--Device-intelligentVoice-function getWakeupManager(): WakeupManager-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -26,18 +26,18 @@ Obtains an [WakeupManager](arkts-basicservices-intelligentvoice-wakeupmanager-i-
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WakeupManager](arkts-basicservices-intelligentvoice-wakeupmanager-i-sys.md) | this { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WakeupManager](arkts-basicservices-intelligentvoice-wakeupmanager-i-sys.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) | No memory. |
-| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) | System error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) |
+| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) |
 
 **Examples**
 
@@ -52,4 +52,3 @@ try {
   console.error(`Get WakeupManager failed. Code:${error.code}, message:${error.message}`);
 }
 ```
-

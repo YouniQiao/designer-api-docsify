@@ -2,9 +2,9 @@
 
 Indicates the strong authentication reason flags used to request.@enum { int }
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-screenLock-enum StrongAuthReasonFlags--><!--Device-screenLock-enum StrongAuthReasonFlags-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
@@ -18,9 +18,9 @@ NONE = 0x00000000
 
 Indicates that there are no strong authentication reason flags.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-StrongAuthReasonFlags-NONE = 0x00000000--><!--Device-StrongAuthReasonFlags-NONE = 0x00000000-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
@@ -34,9 +34,9 @@ AFTER_BOOT = 0x00000001
 
 Indicates the strong authentication reason requested after boot.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-StrongAuthReasonFlags-AFTER_BOOT = 0x00000001--><!--Device-StrongAuthReasonFlags-AFTER_BOOT = 0x00000001-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
@@ -50,9 +50,9 @@ AFTER_TIMEOUT = 0x00000002
 
 Indicates the strong authentication reason requested after timeout.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-StrongAuthReasonFlags-AFTER_TIMEOUT = 0x00000002--><!--Device-StrongAuthReasonFlags-AFTER_TIMEOUT = 0x00000002-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
@@ -66,9 +66,9 @@ ACTIVE_REQUEST = 0x00000004
 
 Indicates the strong authentication reason requested by active request.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-StrongAuthReasonFlags-ACTIVE_REQUEST = 0x00000004--><!--Device-StrongAuthReasonFlags-ACTIVE_REQUEST = 0x00000004-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
@@ -82,11 +82,10 @@ POLICY_RESTRICTION = 0x00000008
 
 Indicates the strong authentication reason requested by policy restriction.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-StrongAuthReasonFlags-POLICY_RESTRICTION = 0x00000008--><!--Device-StrongAuthReasonFlags-POLICY_RESTRICTION = 0x00000008-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **System API:** This is a system API.
-

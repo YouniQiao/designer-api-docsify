@@ -14,7 +14,7 @@ Display mode of the navigation page. When **Navigation** is displayed in split-c
 
 **Since:** 9
 
-<!--Device-unnamed-declare enum NavigationMode--><!--Device-unnamed-declare enum NavigationMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,9 +28,9 @@ The navigation page and content area are displayed independently of each other, 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-NavigationMode-Stack--><!--Device-NavigationMode-Stack-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,9 +50,9 @@ The navigation page and content area are displayed in different columns.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-NavigationMode-Split--><!--Device-NavigationMode-Split-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,9 +66,9 @@ In API version 9 and earlier versions: If the window width is greater than or eq
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-NavigationMode-Auto--><!--Device-NavigationMode-Auto-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,11 +82,10 @@ If the navigation width is greater than the sum of minNavBarWidth and minContent
 
 **Since:** 24
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
-<!--Device-NavigationMode-AUTO_WITH_ASPECT_RATIO--><!--Device-NavigationMode-AUTO_WITH_ASPECT_RATIO-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

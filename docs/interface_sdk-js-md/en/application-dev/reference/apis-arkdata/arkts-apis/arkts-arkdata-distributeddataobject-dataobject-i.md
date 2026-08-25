@@ -2,9 +2,9 @@
 
 Provides APIs for managing a distributed data object. Before using any API of this class, use create() to create a DataObject object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-distributedDataObject-interface DataObject--><!--Device-distributedDataObject-interface DataObject-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -22,26 +22,26 @@ bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<voi
 
 Binds joint assets. Currently, only the binding between an asset in a distributed data object and an asset in an RDB store is supported. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<void>): void--><!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<void>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| assetKey | string | Yes | Key of the joint asset in the distributed data object. |
-| bindInfo | [BindInfo](arkts-arkdata-distributeddataobject-bindinfo-i.md) | Yes | Information about the joint asset in the RDB store, including the RDB store name, table name, primary key, column name, and asset name in the RDB store. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| assetKey | string | Yes |
+| bindInfo | [BindInfo](arkts-arkdata-distributeddataobject-bindinfo-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -158,31 +158,31 @@ bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>
 
 Binds joint assets. Currently, only the binding between an asset in a distributed data object and an asset in an RDB store is supported. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>--><!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| assetKey | string | Yes | Key of the joint asset in the distributed data object. |
-| bindInfo | [BindInfo](arkts-arkdata-distributeddataobject-bindinfo-i.md) | Yes | Information about the joint asset in the RDB store, including the RDB store name, table name, primary key, column name, and asset name in the RDB store. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| assetKey | string | Yes |
+| bindInfo | [BindInfo](arkts-arkdata-distributeddataobject-bindinfo-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -198,22 +198,22 @@ Unsubscribes from data changes of this distributed data object.
 
 **Since:** 9
 
-<!--Device-DataObject-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void ): void--><!--Device-DataObject-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void ): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'change' | Yes | Event type. The value is 'change', which indicates data changes. |
-| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for data changes of this distributed object. sessionId indicates the session ID of the distributed data object. fields indicates the changed properties of the distributed data object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'change' | Yes |
+| callback | (sessionId: string, fields: Array & lt;string & gt;) = & gt; void | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -231,6 +231,47 @@ g_object.off("change", (sessionId: string, fields: Array<string>) => {
 g_object.off("change");
 ```
 
+## off('status')
+
+```TypeScript
+off(
+      type: 'status',
+      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
+    ): void
+```
+
+Unsubscribes from the status change of this distributed data object.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'status' | Yes |
+| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) = & gt; void | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+**Examples**
+
+```TypeScript
+// Unregister the specified status change callback.
+g_object.off("status", (sessionId: string, networkId: string, status: 'online' | 'offline') => {
+    console.info("status changed " + sessionId + " " + status + " " + networkId);
+});
+// Unregister all status change callbacks.
+g_object.off("status");
+```
+
 ## off('change')
 
 ```TypeScript
@@ -241,16 +282,16 @@ Unsubscribes from data changes of this distributed object.
 
 **Since:** 20
 
-<!--Device-DataObject-off(type: 'change', callback?: DataObserver): void--><!--Device-DataObject-off(type: 'change', callback?: DataObserver): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'change' | Yes | Event type. The value is 'change', which indicates data changes. |
-| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for data changes of this distributed object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'change' | Yes |
+| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | No |
 
 **Examples**
 
@@ -287,6 +328,51 @@ try {
 }
 ```
 
+## off('status')
+
+```TypeScript
+off(type: 'status', callback?: StatusObserver): void
+```
+
+Unsubscribes from status changes of this distributed object.
+
+**Since:** 20
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
+**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'status' | Yes |
+| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | No |
+
+**Examples**
+
+```TypeScript
+const statusCallback1: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
+  console.info("status callback1" + sessionId);
+}
+
+const statusCallback2: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
+  console.info("status callback2" + sessionId);
+}
+try {
+  // Unregister a single status change callback function.
+  g_object.on("status", statusCallback1);
+  g_object.off("status", statusCallback1);
+
+  // Unregister all status change callback functions.
+  g_object.on("status", statusCallback1);
+  g_object.on("status", statusCallback2);
+  g_object.off("status");
+} catch (error) {
+  console.error("Execute failed, error code =  " + error.code);
+}
+```
+
 ## off('progressChanged')
 
 ```TypeScript
@@ -297,16 +383,16 @@ Unsubscribes from asset transfer progress changes.
 
 **Since:** 20
 
-<!--Device-DataObject-off(type: 'progressChanged', callback?: ProgressObserver): void--><!--Device-DataObject-off(type: 'progressChanged', callback?: ProgressObserver): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'progressChanged' | Yes | Event type. The value is 'progressChanged', which indicates the asset transfer progress changes. |
-| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for progress changes of this distributed object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'progressChanged' | Yes |
+| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | No |
 
 **Examples**
 
@@ -334,92 +420,6 @@ try {
 }
 ```
 
-## off('status')
-
-```TypeScript
-off(
-      type: 'status',
-      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
-    ): void
-```
-
-Unsubscribes from the status change of this distributed data object.
-
-**Since:** 9
-
-<!--Device-DataObject-off(      type: 'status',      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void--><!--Device-DataObject-off(      type: 'status',      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'status' | Yes | Event type. The value is 'status', which indicates the status change (online or offline) of the distributed object. |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for status changes of this distributed object. sessionId indicates the session ID distributed data object. networkId identifies the distributed data object. status indicates the indicates the object status, which can be online or offline. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-// Unregister the specified status change callback.
-g_object.off("status", (sessionId: string, networkId: string, status: 'online' | 'offline') => {
-    console.info("status changed " + sessionId + " " + status + " " + networkId);
-});
-// Unregister all status change callbacks.
-g_object.off("status");
-```
-
-## off('status')
-
-```TypeScript
-off(type: 'status', callback?: StatusObserver): void
-```
-
-Unsubscribes from status changes of this distributed object.
-
-**Since:** 20
-
-<!--Device-DataObject-off(type: 'status', callback?: StatusObserver): void--><!--Device-DataObject-off(type: 'status', callback?: StatusObserver): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'status' | Yes | Event type. The value is 'status', which indicates the status changes of a distributed object. |
-| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for status changes of this distributed object. |
-
-**Examples**
-
-```TypeScript
-const statusCallback1: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
-  console.info("status callback1" + sessionId);
-}
-
-const statusCallback2: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
-  console.info("status callback2" + sessionId);
-}
-try {
-  // Unregister a single status change callback function.
-  g_object.on("status", statusCallback1);
-  g_object.off("status", statusCallback1);
-
-  // Unregister all status change callback functions.
-  g_object.on("status", statusCallback1);
-  g_object.on("status", statusCallback2);
-  g_object.off("status");
-} catch (error) {
-  console.error("Execute failed, error code =  " + error.code);
-}
-```
-
 ## offChange
 
 ```TypeScript
@@ -430,15 +430,15 @@ Off watch of change.
 
 **Since:** 23
 
-<!--Device-DataObject-offChange(callback?: DataObserver): void--><!--Device-DataObject-offChange(callback?: DataObserver): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | No | The observer of object data changed, if not null, off the callback, if undefined, off all callbacks. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | No |
 
 ## offProgressChanged
 
@@ -450,15 +450,15 @@ Unsubscribes from the asset sync progress.
 
 **Since:** 23
 
-<!--Device-DataObject-offProgressChanged(callback?: ProgressObserver): void--><!--Device-DataObject-offProgressChanged(callback?: ProgressObserver): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | No | Observer to be unregistered. If this parameter is not set, all observers will be unregistered. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | No |
 
 ## offStatus
 
@@ -470,15 +470,15 @@ Off watch of status.
 
 **Since:** 23
 
-<!--Device-DataObject-offStatus(callback?: StatusObserver): void--><!--Device-DataObject-offStatus(callback?: StatusObserver): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | No | The observer of object status changed, if not null, off the callback, if undefined, off all callbacks. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | No |
 
 ## on('change')
 
@@ -490,22 +490,22 @@ Subscribes to data changes of this distributed data object.
 
 **Since:** 9
 
-<!--Device-DataObject-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void ): void--><!--Device-DataObject-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void ): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'change' | Yes | Event type. The value is **'change'**, which indicates data changes. sessionId |
-| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | Yes | Callback used to return the changes of the distributed data object. indicates the session ID of the distributed data object. fields indicates the changed properties of the distributed data object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'change' | Yes |
+| callback | (sessionId: string, fields: Array & lt;string & gt;) = & gt; void | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -520,6 +520,44 @@ g_object.on("change", (sessionId: string, fields: Array<string>) => {
 });
 ```
 
+## on('status')
+
+```TypeScript
+on(
+      type: 'status',
+      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
+    ): void
+```
+
+Subscribes to status changes of this distributed data object.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'status' | Yes |
+| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) = & gt; void | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+**Examples**
+
+```TypeScript
+g_object.on("status", (sessionId: string, networkId: string, status: 'online' | 'offline') => {
+    console.info("status changed " + sessionId + " " + status + " " + networkId);
+});
+```
+
 ## on('change')
 
 ```TypeScript
@@ -530,16 +568,16 @@ Subscribes to data changes of this distributed data object.
 
 **Since:** 20
 
-<!--Device-DataObject-on(type: 'change', callback: DataObserver): void--><!--Device-DataObject-on(type: 'change', callback: DataObserver): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'change' | Yes | Event type. The value is 'change', which indicates data changes. |
-| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | Yes | Callback used to listen for data changes of a distributed object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'change' | Yes |
+| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | Yes |
 
 **Examples**
 
@@ -559,6 +597,40 @@ try {
 }
 ```
 
+## on('status')
+
+```TypeScript
+on(type: 'status', callback: StatusObserver): void
+```
+
+Subscribes to the status changes of this distributed object.
+
+**Since:** 20
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
+**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'status' | Yes |
+| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | Yes |
+
+**Examples**
+
+```TypeScript
+const statusCallback1: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
+  console.info("status callback " + sessionId);
+}
+try {
+  g_object.on("status", statusCallback1);
+} catch (error) {
+  console.error("Execute failed, error code =  " + error.code);
+}
+```
+
 ## on('progressChanged')
 
 ```TypeScript
@@ -569,16 +641,16 @@ Subscribes to the asset transfer progress changes.
 
 **Since:** 20
 
-<!--Device-DataObject-on(type: 'progressChanged', callback: ProgressObserver): void--><!--Device-DataObject-on(type: 'progressChanged', callback: ProgressObserver): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'progressChanged' | Yes | Event type. The value is 'progressChanged', which indicates the asset transfer progress changes. |
-| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | Yes | Callback used to listen for the asset transfer progress changes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'progressChanged' | Yes |
+| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | Yes |
 
 **Examples**
 
@@ -594,78 +666,6 @@ try {
 }
 ```
 
-## on('status')
-
-```TypeScript
-on(
-      type: 'status',
-      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
-    ): void
-```
-
-Subscribes to status changes of this distributed data object.
-
-**Since:** 9
-
-<!--Device-DataObject-on(      type: 'status',      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void--><!--Device-DataObject-on(      type: 'status',      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'status' | Yes | Event type. The value is 'status', which indicates the status change (online or offline) of the distributed object. |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | Yes | Callback used to return the status change. sessionId indicates the session ID of the distributed data object. networkId identifies the device. status indicates the object status, which can be online or offline. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-g_object.on("status", (sessionId: string, networkId: string, status: 'online' | 'offline') => {
-    console.info("status changed " + sessionId + " " + status + " " + networkId);
-});
-```
-
-## on('status')
-
-```TypeScript
-on(type: 'status', callback: StatusObserver): void
-```
-
-Subscribes to the status changes of this distributed object.
-
-**Since:** 20
-
-<!--Device-DataObject-on(type: 'status', callback: StatusObserver): void--><!--Device-DataObject-on(type: 'status', callback: StatusObserver): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'status' | Yes | Event type. The value is 'status', which indicates the status changes of a distributed object. |
-| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | Yes | Callback used to listen for status changes of a distributed object. |
-
-**Examples**
-
-```TypeScript
-const statusCallback1: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
-  console.info("status callback " + sessionId);
-}
-try {
-  g_object.on("status", statusCallback1);
-} catch (error) {
-  console.error("Execute failed, error code =  " + error.code);
-}
-```
-
 ## onChange
 
 ```TypeScript
@@ -676,15 +676,15 @@ On watch of change.
 
 **Since:** 23
 
-<!--Device-DataObject-onChange(callback: DataObserver): void--><!--Device-DataObject-onChange(callback: DataObserver): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | Yes | The observer of object data changed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | Yes |
 
 ## onProgressChanged
 
@@ -696,15 +696,15 @@ Subscribes to the asset sync progress.
 
 **Since:** 23
 
-<!--Device-DataObject-onProgressChanged(callback: ProgressObserver): void--><!--Device-DataObject-onProgressChanged(callback: ProgressObserver): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | Yes | Observer to be registered. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | Yes |
 
 ## onStatus
 
@@ -716,17 +716,17 @@ On watch of status.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-DataObject-onStatus(callback: StatusObserver): void--><!--Device-DataObject-onStatus(callback: StatusObserver): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | Yes | The observer of object status changed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | Yes |
 
 ## revokeSave
 
@@ -736,24 +736,24 @@ revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void
 
 Revokes the data of this distributed data object saved. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DataObject-revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void--><!--Device-DataObject-revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RevokeSaveSuccessResponse](arkts-arkdata-distributeddataobject-revokesavesuccessresponse-i.md)&gt; | Yes | Callback used to return RevokeSaveSuccessResponse, which contains the session ID. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RevokeSaveSuccessResponse](arkts-arkdata-distributeddataobject-revokesavesuccessresponse-i.md)&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -813,23 +813,23 @@ revokeSave(): Promise<RevokeSaveSuccessResponse>
 
 Revokes the data of this distributed data object saved. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DataObject-revokeSave(): Promise<RevokeSaveSuccessResponse>--><!--Device-DataObject-revokeSave(): Promise<RevokeSaveSuccessResponse>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[RevokeSaveSuccessResponse](arkts-arkdata-distributeddataobject-revokesavesuccessresponse-i.md)&gt; | Promise used to return RevokeSaveSuccessResponse, which contains the session ID. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[RevokeSaveSuccessResponse](arkts-arkdata-distributeddataobject-revokesavesuccessresponse-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -843,25 +843,25 @@ save(deviceId: string, callback: AsyncCallback<SaveSuccessResponse>): void
 
 Saves a distributed data object. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DataObject-save(deviceId: string, callback: AsyncCallback<SaveSuccessResponse>): void--><!--Device-DataObject-save(deviceId: string, callback: AsyncCallback<SaveSuccessResponse>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the device where the data is stored. The value local indicates a local device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SaveSuccessResponse](arkts-arkdata-distributeddataobject-savesuccessresponse-i.md)&gt; | Yes | Callback used to return SaveSuccessResponse, which contains information such as session ID, version, and device ID. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| deviceId | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SaveSuccessResponse](arkts-arkdata-distributeddataobject-savesuccessresponse-i.md)&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -901,30 +901,30 @@ save(deviceId: string): Promise<SaveSuccessResponse>
 
 Saves a distributed data object. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DataObject-save(deviceId: string): Promise<SaveSuccessResponse>--><!--Device-DataObject-save(deviceId: string): Promise<SaveSuccessResponse>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the device where the data is saved. The default value is local, which indicates a local device. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| deviceId | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[SaveSuccessResponse](arkts-arkdata-distributeddataobject-savesuccessresponse-i.md)&gt; | Promise used to return SaveSuccessResponse, which contains information such as session ID, version, and device ID. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[SaveSuccessResponse](arkts-arkdata-distributeddataobject-savesuccessresponse-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -938,31 +938,31 @@ setAsset(assetKey: string, uri: string): Promise<void>
 
 Sets the property information about a single asset in a distributed object. This API must be called before the setSessionId API is called. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-DataObject-setAsset(assetKey: string, uri: string): Promise<void>--><!--Device-DataObject-setAsset(assetKey: string, uri: string): Promise<void>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| assetKey | string | Yes | Property name of the asset in the distributed object. |
-| uri | string | Yes | URI of the new asset to be set, indicating the distributed path for storing the asset. The value must correspond to an existing asset. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| assetKey | string | Yes |
+| uri | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [15400002](../errorcode-distributed-dataObject.md#15400002-incorrect-parameter) | Parameter error. Possible causes: 1. The assetKey is invalid, such as ""; 2. The uri is invalid, such as "". |
-| [15400003](../errorcode-distributed-dataObject.md#15400003-sessionid-already-set) | The sessionId of the distributed object has been set. |
+| Error Code ID |
+| --- |
+| [15400002](../errorcode-distributed-dataObject.md#15400002-incorrect-parameter) |
+| [15400003](../errorcode-distributed-dataObject.md#15400003-sessionid-already-set) |
 
 **Examples**
 
@@ -1016,31 +1016,31 @@ setAssets(assetsKey: string, uris: Array<string>): Promise<void>
 
 Sets the property information about multiple assets in a distributed object. This API must be called before the setSessionId API is called. The number of values contained in the uris array ranges from 1 to 50. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-DataObject-setAssets(assetsKey: string, uris: Array<string>): Promise<void>--><!--Device-DataObject-setAssets(assetsKey: string, uris: Array<string>): Promise<void>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| assetsKey | string | Yes | Property name of the assets in the distributed object. |
-| uris | Array&lt;string&gt; | Yes | URIs of the new asset array to be set, indicating the distributed paths for storing each element of the asset. The number of array elements ranges from 1 to 50. The URI of an element must be the distributed path corresponding to an actual asset. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| assetsKey | string | Yes |
+| uris | Array & lt;string & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [15400002](../errorcode-distributed-dataObject.md#15400002-incorrect-parameter) | Parameter error. Possible causes: 1. The assetsKey is invalid, such as ""; 2. The uris is invalid, such as the length of uris is more than 50. |
-| [15400003](../errorcode-distributed-dataObject.md#15400003-sessionid-already-set) | The sessionId of the distributed object has been set. |
+| Error Code ID |
+| --- |
+| [15400002](../errorcode-distributed-dataObject.md#15400002-incorrect-parameter) |
+| [15400003](../errorcode-distributed-dataObject.md#15400003-sessionid-already-set) |
 
 **Examples**
 
@@ -1094,28 +1094,28 @@ setSessionId(sessionId: string, callback: AsyncCallback<void>): void
 
 Sets a session ID. This API uses an asynchronous callback to return the result. For the devices in the collaboration state in a trusted network, data of the distributed objects with the same session ID can be automatically synced across devices.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DataObject-setSessionId(sessionId: string, callback: AsyncCallback<void>): void--><!--Device-DataObject-setSessionId(sessionId: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sessionId | string | Yes | ID of a distributed data object on a trusted network. The value can contain only letters, digits, and underscores (_), and cannot exceed 128 characters. If this parameter is set to "" or null, the distributed data object exits the network. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Asynchronous callback invoked when the session ID is successfully set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sessionId | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. The sessionId allows only letters, digits, and underscores(_), and cannot exceed 128 in length. |
-| [15400001](../errorcode-distributed-dataObject.md#15400001-failed-to-create-the-in-memory-database) | Failed to create the in-memory database. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15400001](../errorcode-distributed-dataObject.md#15400001-failed-to-create-the-in-memory-database) |
 
 **Examples**
 
@@ -1185,28 +1185,28 @@ setSessionId(callback: AsyncCallback<void>): void
 
 Exits all sessions. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 9 - 19: ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DataObject-setSessionId(callback: AsyncCallback<void>): void--><!--Device-DataObject-setSessionId(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the distributed data object exits all sessions. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.<br>**Applicable version:** 9 - 19 |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Incorrect parameter types. |
-| [15400001](../errorcode-distributed-dataObject.md#15400001-failed-to-create-the-in-memory-database) | Failed to create the in-memory database. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15400001](../errorcode-distributed-dataObject.md#15400001-failed-to-create-the-in-memory-database) |
 
 **Examples**
 
@@ -1220,35 +1220,50 @@ setSessionId(sessionId?: string): Promise<void>
 
 Sets a session ID or exits the distributed network. This API uses a promise to return the result. If this parameter is set to "" or null, or left empty, the distributed data object exits the network. For the devices in the collaboration state in a trusted network, data of the distributed objects with the same session ID can be automatically synced across devices.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DataObject-setSessionId(sessionId?: string): Promise<void>--><!--Device-DataObject-setSessionId(sessionId?: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sessionId | string | No | ID of a distributed data object on a trusted network. The value can contain only letters, digits, and underscores (_), and cannot exceed 128 characters. If this parameter is set to "" or null, or left empty, the distributed data object exits the network. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sessionId | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. The sessionId allows only letters, digits, and underscores(_), and cannot exceed 128 in length. |
-| [15400001](../errorcode-distributed-dataObject.md#15400001-failed-to-create-the-in-memory-database) | Failed to create the in-memory database. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15400001](../errorcode-distributed-dataObject.md#15400001-failed-to-create-the-in-memory-database) |
 
 **Examples**
 
 See [setSessionId](#setsessionid)
 
+## [key: string]
+
+```TypeScript
+[key: string]: Object | null | undefined
+```
+
+Get and set value of property.
+
+**Type:** Object \| null \| undefined
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject

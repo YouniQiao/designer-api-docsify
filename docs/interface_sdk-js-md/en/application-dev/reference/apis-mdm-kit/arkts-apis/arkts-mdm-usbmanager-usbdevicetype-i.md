@@ -4,7 +4,7 @@ Represents the USB device type information.You can obtain the list of USB device
 
 **Since:** 14
 
-<!--Device-usbManager-export interface UsbDeviceType--><!--Device-usbManager-export interface UsbDeviceType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -26,9 +26,9 @@ Type code.First, determine the type of descriptor to pass in based on this value
 
 **Since:** 14
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
-<!--Device-UsbDeviceType-baseClass: number--><!--Device-UsbDeviceType-baseClass: number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -44,9 +44,9 @@ USB descriptor.If the value of **USBDevice.clazz** is **0**, you need to find th
 
 **Since:** 14
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
-<!--Device-UsbDeviceType-descriptor: Descriptor--><!--Device-UsbDeviceType-descriptor: Descriptor-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -62,9 +62,9 @@ Protocol code.First, determine the type of descriptor to pass in based on the va
 
 **Since:** 14
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
-<!--Device-UsbDeviceType-protocol: number--><!--Device-UsbDeviceType-protocol: number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -80,9 +80,8 @@ Subtype code.First, determine the type of descriptor to pass in based on the val
 
 **Since:** 14
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UsbDeviceType-subClass: number--><!--Device-UsbDeviceType-subClass: number-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

@@ -4,11 +4,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [CompleteData](arkts-ability-wantagent-completedata-i.md)
-
-<!--Device-wantAgent-export interface CompleteData--><!--Device-wantAgent-export interface CompleteData-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,13 +29,13 @@ extraInfo?: { [key: string]: any }
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [extraInfo](arkts-ability-wantagent-completedata-i.md#extrainfo)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CompleteData-extraInfo?: { [key: string]: any }--><!--Device-CompleteData-extraInfo?: { [key: string]: any }-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -51,13 +51,13 @@ finalCode: number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [finalCode](arkts-ability-wantagent-completedata-i.md#finalcode)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CompleteData-finalCode: number--><!--Device-CompleteData-finalCode: number-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -73,13 +73,13 @@ finalData: string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [finalData](arkts-ability-wantagent-completedata-i.md#finaldata)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CompleteData-finalData: string--><!--Device-CompleteData-finalData: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -95,13 +95,13 @@ info: WantAgent
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [info](arkts-ability-wantagent-completedata-i.md#info)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CompleteData-info: WantAgent--><!--Device-CompleteData-info: WantAgent-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -117,13 +117,12 @@ want: Want
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [want](arkts-ability-wantagent-completedata-i.md#want)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-CompleteData-want: Want--><!--Device-CompleteData-want: Want-End-->
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-

@@ -6,16 +6,15 @@ type HdrMetadataValue = HdrMetadataType | HdrStaticMetadata | ArrayBuffer | HdrG
 
 Describes the HDR metadata values used by a PixelMap, which corresponds to the values available for [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md).
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-image-type HdrMetadataValue = HdrMetadataType | HdrStaticMetadata | ArrayBuffer | HdrGainmapMetadata--><!--Device-image-type HdrMetadataValue = HdrMetadataType | HdrStaticMetadata | ArrayBuffer | HdrGainmapMetadata-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
-| Type | Description |
-| --- | --- |
-| HdrMetadataType | Metadata value corresponding to the **HDR_METADATA_TYPE** key in [HdrMetadataKey]{ |
-| HdrStaticMetadata | Metadata value corresponding to the **HDR_STATIC_METADATA** key in [HdrMetadataKey]{ |
-| ArrayBuffer | Metadata value corresponding to the **HDR_DYNAMIC_METADATA** key in [HdrMetadataKey]{ |
-| HdrGainmapMetadata | Metadata value corresponding to the **HDR_GAINMAP_METADATA** key in [HdrMetadataKey]{ |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [HdrMetadataType](arkts-image-image-hdrmetadatatype-e.md) |
+| [HdrStaticMetadata](arkts-image-image-hdrstaticmetadata-i.md) |
+| ArrayBuffer |
+| [HdrGainmapMetadata](arkts-image-image-hdrgainmapmetadata-i.md) |

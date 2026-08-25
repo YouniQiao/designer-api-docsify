@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export class Object--><!--Device-unnamed-export class Object-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,19 +23,17 @@ public $_hashCode(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Object-public $_hashCode(): int--><!--Device-Object-public $_hashCode(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 该实例的整数表示。 |
+| 类型 |
+| --- |
+| int |
 
 ## constructor
 
@@ -49,11 +45,9 @@ constructor()
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Object-constructor()--><!--Device-Object-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -67,17 +61,14 @@ toString()将该对象转换为字符串。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Object-public toString(): string--><!--Device-Object-public toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 表示该对象的字符串。 |
-
+| 类型 |
+| --- |
+| string |

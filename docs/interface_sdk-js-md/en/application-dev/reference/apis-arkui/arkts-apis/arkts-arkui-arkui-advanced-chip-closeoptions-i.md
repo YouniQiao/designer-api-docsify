@@ -1,12 +1,12 @@
 # CloseOptions
 
-Defines the default close icon behavior attributes for the chip, including accessibility attributes. The default value of **accessibilityText** is **"Delete"**.Inherits from [AccessibilityOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-accessibilityoptions-i.md).
+Defines the default close icon behavior attributes for the chip, including accessibility attributes. The default value of **accessibilityText** is **"Delete"**.Inherits from [AccessibilityOptions](arkts-arkui-arkui-advanced-chip-accessibilityoptions-i.md).
 
-**Inheritance/Implementation:** CloseOptions extends [AccessibilityOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-accessibilityoptions-i.md)
+**Inheritance/Implementation:** CloseOptions extends [AccessibilityOptions](arkts-arkui-arkui-advanced-chip-accessibilityoptions-i.md)
 
 **Since:** 14
 
-<!--Device-unnamed-export interface CloseOptions--><!--Device-unnamed-export interface CloseOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +28,10 @@ Default close icon size of the chip. Percentage is not supported.Default value:W
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-CloseOptions-fontSize?: Dimension--><!--Device-CloseOptions-fontSize?: Dimension-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

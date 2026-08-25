@@ -4,7 +4,7 @@ Represents the NearLink service.
 
 **Since:** 26.0.0
 
-<!--Device-ssap-interface Service--><!--Device-ssap-interface Service-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -26,9 +26,9 @@ Properties of a service.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-Service-properties: Property[]--><!--Device-Service-properties: Property[]-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -44,9 +44,8 @@ NearLink service UUID, which is a string of 36 characters. The value consists of
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Service-serviceUuid: string--><!--Device-Service-serviceUuid: string-End-->
-
 **System capability:** SystemCapability.Communication.NearLink.Base
-

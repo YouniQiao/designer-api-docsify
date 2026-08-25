@@ -2,9 +2,9 @@
 
 Enumerates the window modes.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-window-enum WindowMode--><!--Device-window-enum WindowMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -18,9 +18,9 @@ UNDEFINED = 1
 
 The window mode is not defined by the application.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-WindowMode-UNDEFINED = 1--><!--Device-WindowMode-UNDEFINED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -34,9 +34,9 @@ FULLSCREEN = 2
 
 The application is displayed in full screen.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-WindowMode-FULLSCREEN = 2--><!--Device-WindowMode-FULLSCREEN = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -50,9 +50,9 @@ PRIMARY = 3
 
 The application is displayed in the primary window in split-screen mode. In top-bottom splits, the top screen is primary; in left-right splits, the left screen is primary.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-WindowMode-PRIMARY = 3--><!--Device-WindowMode-PRIMARY = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -66,9 +66,9 @@ SECONDARY = 4
 
 The application is displayed in the secondary window in split-screen mode. In top-bottom splits, the bottom screen is secondary; in left-right splits, the right screen is secondary.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-WindowMode-SECONDARY = 4--><!--Device-WindowMode-SECONDARY = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -82,11 +82,10 @@ FLOATING = 5
 
 The application is displayed in a floating window.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-WindowMode-FLOATING = 5--><!--Device-WindowMode-FLOATING = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
-

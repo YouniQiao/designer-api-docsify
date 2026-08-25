@@ -2,9 +2,9 @@
 
 跨设备协同操作信息。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-notificationSubscribe-export interface OperationInfo--><!--Device-notificationSubscribe-export interface OperationInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -26,9 +26,9 @@ actionName?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-OperationInfo-actionName?: string--><!--Device-OperationInfo-actionName?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -42,11 +42,11 @@ buttonIndex?: int
 
 用户点击的非实况通知按钮序号或实况通知辅助区序号。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-OperationInfo-buttonIndex?: int--><!--Device-OperationInfo-buttonIndex?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -61,11 +61,11 @@ operationType?: int
 用户点击操作类型。  
 - 0：用户点击非实况通知本体。 - 1：用户点击非实况通知按钮。 - 32：用户点击实况通知本体。 - 33：用户点击实况通知辅助区
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-OperationInfo-operationType?: int--><!--Device-OperationInfo-operationType?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -81,11 +81,10 @@ userInput?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-OperationInfo-userInput?: string--><!--Device-OperationInfo-userInput?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
-

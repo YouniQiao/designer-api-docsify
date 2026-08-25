@@ -2,9 +2,9 @@
 
 Defines a struct for shared configurations.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-dataShare-interface ProxyData--><!--Device-dataShare-interface ProxyData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -24,11 +24,11 @@ List of applications that can subscribe to and read shared configurations. If th
 
 **Type:** string[]
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ProxyData-allowList?: string[]--><!--Device-ProxyData-allowList?: string[]-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -44,9 +44,9 @@ Indicates whether the shared configuration is multi-value type. The default valu
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ProxyData-isMultiValues?: boolean--><!--Device-ProxyData-isMultiValues?: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -62,9 +62,9 @@ List of applications that can add values to the shared configuration of multi-va
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ProxyData-trustProviders?: string[]--><!--Device-ProxyData-trustProviders?: string[]-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -78,11 +78,11 @@ Unique ID of a shared configuration, fixed at the format of **"datashareproxy://
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ProxyData-uri: string--><!--Device-ProxyData-uri: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -96,11 +96,11 @@ Value of a shared configuration. If not specified, the value is an empty string.
 
 **Type:** [ValueType](arkts-arkdata-valuetype-t.md)
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ProxyData-value?: ValueType--><!--Device-ProxyData-value?: ValueType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -112,13 +112,12 @@ values?: Record<int, ValueType>
 
 Values of the multi-value type. The first parameter in the **Record** is the key specified by the user, which must be unique. The second parameter is the value corresponding to the key. A maximum of 10 values can be added to a single URI for an application. Each value can contain a maximum of 4096 bytes. At the same time, the total length of all values is limited by the [maxValueLength](arkts-arkdata-datashare-dataproxyconfig-i.md#maxvaluelength) parameter value. This parameter is valid only when [isMultiValues](#ismultivalues) is set to true.
 
-**Type:** Record&lt;int, [ValueType](arkts-arkdata-valuetype-t.md)&gt;
+**Type:** ArkTS-Dyn: Record&lt;number, [ValueType](arkts-arkdata-valuetype-t.md)&gt;  <br>ArkTS-Sta：Record&lt;int, [ValueType](arkts-arkdata-valuetype-t.md)&gt;
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ProxyData-values?: Record<int, ValueType>--><!--Device-ProxyData-values?: Record<int, ValueType>-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
-

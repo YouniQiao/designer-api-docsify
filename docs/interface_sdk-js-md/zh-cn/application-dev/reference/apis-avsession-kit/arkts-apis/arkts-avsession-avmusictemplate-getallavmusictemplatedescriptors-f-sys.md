@@ -16,11 +16,11 @@ function getAllAVMusicTemplateDescriptors(userId?: int): AVMusicTemplateDescript
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-avMusicTemplate-function getAllAVMusicTemplateDescriptors(userId?: int): AVMusicTemplateDescriptor[]--><!--Device-avMusicTemplate-function getAllAVMusicTemplateDescriptors(userId?: int): AVMusicTemplateDescriptor[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -28,21 +28,20 @@ function getAllAVMusicTemplateDescriptors(userId?: int): AVMusicTemplateDescript
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| userId | int | 否 | 用户ID。以用户传递为准，可为空。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AVMusicTemplateDescriptor](arkts-avsession-avmusictemplate-avmusictemplatedescriptor-i-sys.md)[] | 音频模板描述的集合。 |
+| 类型 |
+| --- |
+| [AVMusicTemplateDescriptor](arkts-avsession-avmusictemplate-avmusictemplatedescriptor-i-sys.md)[] |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verify failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function getAllAVMusicTemplateDescriptors can not work correctly due to limited device capabilities. |
-
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |

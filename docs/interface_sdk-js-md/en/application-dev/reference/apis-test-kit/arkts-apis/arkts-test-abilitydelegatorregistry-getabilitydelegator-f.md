@@ -14,19 +14,19 @@ function getAbilityDelegator(): AbilityDelegator
 
 Obtains an [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md) object.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-abilityDelegatorRegistry-function getAbilityDelegator(): AbilityDelegator--><!--Device-abilityDelegatorRegistry-function getAbilityDelegator(): AbilityDelegator-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| AbilityDelegator | [AbilityDelegator]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md) |
 
 **Examples**
 
@@ -48,4 +48,3 @@ abilityDelegator.startAbility(want, (err) => {
   }
 });
 ```
-

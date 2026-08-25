@@ -14,25 +14,25 @@ function getTransientTaskInfo(): Promise<TransientTaskInfo>
 
 获取所有短时任务信息，如当日剩余总配额等，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-backgroundTaskManager-function getTransientTaskInfo(): Promise<TransientTaskInfo>--><!--Device-backgroundTaskManager-function getTransientTaskInfo(): Promise<TransientTaskInfo>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[TransientTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-transienttaskinfo-i.md)&gt; | Promise对象，返回所有短时任务信息。 |
+| 类型 |
+| --- |
+| Promise&lt;[TransientTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-transienttaskinfo-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [9900001](../errorcode-backgroundTaskMgr.md#9900001-短时任务调用方信息校验失败) | Caller information verification failed for a transient task. |
-| [9900003](../errorcode-backgroundTaskMgr.md#9900003-parcel读写操作失败) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; <br> 2. Failed to apply for memory. |
-| [9900004](../errorcode-backgroundTaskMgr.md#9900004-系统服务失败) | System service operation failed. |
+| 错误码ID |
+| --- |
+| [9900001](../errorcode-backgroundTaskMgr.md#9900001-短时任务调用方信息校验失败) |
+| [9900003](../errorcode-backgroundTaskMgr.md#9900003-parcel读写操作失败) |
+| [9900004](../errorcode-backgroundTaskMgr.md#9900004-系统服务失败) |
 
 **示例**
 
@@ -69,4 +69,3 @@ try {
   console.error(`Operation getTransientTaskInfo failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
 }
 ```
-

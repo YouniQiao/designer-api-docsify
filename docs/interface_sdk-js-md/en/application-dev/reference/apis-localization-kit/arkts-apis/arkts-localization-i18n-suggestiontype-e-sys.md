@@ -2,9 +2,9 @@
 
 Represents the language or country/region suggestion type.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-i18n-export enum SuggestionType--><!--Device-i18n-export enum SuggestionType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -18,9 +18,9 @@ SUGGESTION_TYPE_NONE = 0
 
 Not a recommended language or country/region.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SuggestionType-SUGGESTION_TYPE_NONE = 0--><!--Device-SuggestionType-SUGGESTION_TYPE_NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -34,9 +34,9 @@ SUGGESTION_TYPE_RELATED = 1
 
 Country/region recommended by the system language or language recommended by the system country/region.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SuggestionType-SUGGESTION_TYPE_RELATED = 1--><!--Device-SuggestionType-SUGGESTION_TYPE_RELATED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -50,11 +50,10 @@ SUGGESTION_TYPE_SIM = 2
 
 Language recommended by the country/region of the SIM card.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SuggestionType-SUGGESTION_TYPE_SIM = 2--><!--Device-SuggestionType-SUGGESTION_TYPE_SIM = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
-

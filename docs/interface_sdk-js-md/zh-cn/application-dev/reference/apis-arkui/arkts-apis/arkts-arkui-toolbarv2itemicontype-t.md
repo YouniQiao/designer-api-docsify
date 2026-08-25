@@ -8,16 +8,15 @@ Defines the icon type of ToolBarV2 item.
 
 **起始版本：** 18
 
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-unnamed-export declare type ToolBarV2ItemIconType = ToolBarV2ItemImage | ToolBarV2SymbolGlyph--><!--Device-unnamed-export declare type ToolBarV2ItemIconType = ToolBarV2ItemImage | ToolBarV2SymbolGlyph-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 | 说明 |
-| --- | --- |
-| ToolBarV2ItemImage |  |
-| ToolBarV2SymbolGlyph |  |
-
+| 类型 |
+| --- |
+| [ToolBarV2ItemImage](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemimage-c.md) |
+| [ToolBarV2SymbolGlyph](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2symbolglyph-c.md) |

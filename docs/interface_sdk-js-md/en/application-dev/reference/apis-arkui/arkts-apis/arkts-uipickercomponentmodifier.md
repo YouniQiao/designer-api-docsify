@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [UIPickerComponentModifier](arkts-arkui-uipickercomponentmodifier-c.md) | Defines Picker Modifier@extends UIPickerComponentAttribute @implements { AttributeModifier&lt;UIPickerComponentAttribute&gt; } |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [UIPickerComponentModifier](arkts-arkui-uipickercomponentmodifier-c.md) |

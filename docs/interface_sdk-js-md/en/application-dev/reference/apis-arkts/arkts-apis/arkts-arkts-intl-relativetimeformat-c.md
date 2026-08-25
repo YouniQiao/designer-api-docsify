@@ -4,9 +4,7 @@ RelativeTimeFormat class for locale-sensitive relative time formatting.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-Intl-export class RelativeTimeFormat--><!--Device-Intl-export class RelativeTimeFormat-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,20 +23,18 @@ Creates a new RelativeTimeFormat.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RelativeTimeFormat-constructor(locales?: string | string[], options?: RelativeTimeFormatOptions)--><!--Device-RelativeTimeFormat-constructor(locales?: string | string[], options?: RelativeTimeFormatOptions)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | string \| string[] | No | the locales. |
-| options | RelativeTimeFormatOptions | No | the options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | string \| string[] | No |
+| options | [RelativeTimeFormatOptions](arkts-arkts-intl-relativetimeformatoptions-i.md) | No |
 
 ## format
 
@@ -50,26 +46,24 @@ Formats a relative time.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RelativeTimeFormat-public format(value: double, unit: RelativeTimeFormatUnit): string--><!--Device-RelativeTimeFormat-public format(value: double, unit: RelativeTimeFormatUnit): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | the value. |
-| unit | RelativeTimeFormatUnit | Yes | the unit. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | double | Yes |
+| unit | [RelativeTimeFormatUnit](../../apis-default/arkts-apis/arkts-intl-relativetimeformatunit-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | formatted string. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## formatToParts
 
@@ -81,26 +75,24 @@ Formats a relative time to parts.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RelativeTimeFormat-public formatToParts(value: double, unit: RelativeTimeFormatUnit): RelativeTimeFormatPart[]--><!--Device-RelativeTimeFormat-public formatToParts(value: double, unit: RelativeTimeFormatUnit): RelativeTimeFormatPart[]-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | the value. |
-| unit | RelativeTimeFormatUnit | Yes | the unit. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | double | Yes |
+| unit | [RelativeTimeFormatUnit](../../apis-default/arkts-apis/arkts-intl-relativetimeformatunit-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| RelativeTimeFormatPart[] | formatted parts. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [RelativeTimeFormatPart[]](../../apis-default/arkts-apis/arkts-intl-relativetimeformatpart-t.md) |
 
 ## resolvedOptions
 
@@ -112,19 +104,17 @@ Returns resolved options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RelativeTimeFormat-public resolvedOptions(): ResolvedRelativeTimeFormatOptions--><!--Device-RelativeTimeFormat-public resolvedOptions(): ResolvedRelativeTimeFormatOptions-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ResolvedRelativeTimeFormatOptions | the resolved options. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [ResolvedRelativeTimeFormatOptions](../../apis-default/arkts-apis/arkts-intl-resolvedrelativetimeformatoptions-i.md) |
 
 ## supportedLocalesOf
 
@@ -136,24 +126,21 @@ Returns supported locales.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RelativeTimeFormat-public static supportedLocalesOf(locales: string | string[], options?: RelativeTimeFormatOptions): string[]--><!--Device-RelativeTimeFormat-public static supportedLocalesOf(locales: string | string[], options?: RelativeTimeFormatOptions): string[]-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | string \| string[] | Yes | the locales. |
-| options | RelativeTimeFormatOptions | No | the options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | string \| string[] | Yes |
+| options | [RelativeTimeFormatOptions](arkts-arkts-intl-relativetimeformatoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string[] | supported locales. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string[] |

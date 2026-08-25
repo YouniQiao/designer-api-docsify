@@ -16,9 +16,9 @@ Enables listening for mouse pointer position information on the specified device
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.COOPERATE_MANAGER
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-cooperate-function onCooperateMouseEvent(networkId: string, callback: Callback<MouseLocation>): void--><!--Device-cooperate-function onCooperateMouseEvent(networkId: string, callback: Callback<MouseLocation>): void-End-->
+**需要权限：** ohos.permission.COOPERATE_MANAGER
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -26,18 +26,18 @@ Enables listening for mouse pointer position information on the specified device
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| networkId | string | 是 | Specified device. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MouseLocation](arkts-distributedservice-cooperate-mouselocation-i-sys.md)&gt; | 是 | Callback for receiving reported events. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| networkId | string | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MouseLocation](arkts-distributedservice-cooperate-mouselocation-i-sys.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -54,4 +54,3 @@ try {
   console.error(`Register failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
 }
 ```
-

@@ -16,13 +16,13 @@ Removes the file of the specified URI from the recent file list.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-recent-function remove(uri: string): void--><!--Device-recent-function remove(uri: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -30,17 +30,17 @@ Removes the file of the specified URI from the recent file list.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | File URI. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900002 | No such file or directory |
-| 13900020 | Invalid argument |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900002 |
+| 13900020 |
+| 13900042 |
 
 **Examples**
 
@@ -48,4 +48,3 @@ Removes the file of the specified URI from the recent file list.
 let uri = 'file://docs/storage/Users/currentUser/<publicPath>';
 recent.remove(uri);
 ```
-

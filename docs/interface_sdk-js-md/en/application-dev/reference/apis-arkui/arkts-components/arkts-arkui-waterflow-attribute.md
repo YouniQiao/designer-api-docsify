@@ -6,7 +6,7 @@ In addition to universal attributes and [scrollable component common attributes]
 
 **Since:** 9
 
-<!--Device-unnamed-declare class WaterFlowAttribute--><!--Device-unnamed-declare class WaterFlowAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,19 +25,19 @@ Number of items to be preloaded.This attribute takes effect only in [LazyForEach
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-WaterFlowAttribute-cachedCount(value: number): WaterFlowAttribute--><!--Device-WaterFlowAttribute-cachedCount(value: number): WaterFlowAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | Number of water flow items to be preloaded (cached).<br>Default value: number of nodes visible on the screen, with the maximum value of 16<br>Value range: 0, +∞).<br>Values less than 0 are treated as **1**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
 
 ## cachedCount
 
@@ -49,20 +49,20 @@ Sets the number of flow items to be cached (preloaded) and specifies whether to 
 
 **Since:** 14
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-WaterFlowAttribute-cachedCount(count: number, show: boolean): WaterFlowAttribute--><!--Device-WaterFlowAttribute-cachedCount(count: number, show: boolean): WaterFlowAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| count | number | Yes | Number of water flow items to be preloaded (cached).<br>Default value: number of nodes visible on the screen, with the maximum value of 16<br>Value range: [0, +∞).<br>Values less than 0 are treated as **1**. |
-| show | boolean | Yes | Whether to display the cached water flow items. If this parameter is set to **true**, the preloaded flow items are displayed. If this parameter is set to **false**, the preloaded flow items are not displayed.<br> Default value: **false**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| count | number | Yes |
+| show | boolean | Yes |
 
 ## columnsGap
 
@@ -74,17 +74,17 @@ Sets the gap between columns.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-WaterFlowAttribute-columnsGap(value: Length): WaterFlowAttribute--><!--Device-WaterFlowAttribute-columnsGap(value: Length): WaterFlowAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Length | Yes | Gap between columns.<br>Default value: **0**<br>Value range: [0, +∞). A value less than 0 evaluates to the value **0**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
 
 ## columnsTemplate
 
@@ -96,17 +96,17 @@ Sets the number of columns in the layout. If this attribute is not set, one colu
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-WaterFlowAttribute-columnsTemplate(value: string): WaterFlowAttribute--><!--Device-WaterFlowAttribute-columnsTemplate(value: string): WaterFlowAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string | Yes | Number of columns in the layout.<br>Default value: **'1fr' |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | string | Yes |
 
 ## columnsTemplate
 
@@ -118,19 +118,19 @@ Sets the number of columns in the layout. If this attribute is not set, one colu
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-WaterFlowAttribute-columnsTemplate(value: string | ItemFillPolicy): WaterFlowAttribute--><!--Device-WaterFlowAttribute-columnsTemplate(value: string | ItemFillPolicy): WaterFlowAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string \| ItemFillPolicy | Yes | Number of columns in the layout. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | string \| [ItemFillPolicy](../arkts-apis/arkts-arkui-itemfillpolicy-i.md) | Yes |
 
 ## enableScrollInteraction
 
@@ -145,19 +145,19 @@ Sets whether to support the scrolling gesture.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WaterFlowAttribute-enableScrollInteraction(value: boolean): WaterFlowAttribute--><!--Device-WaterFlowAttribute-enableScrollInteraction(value: boolean): WaterFlowAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | boolean | Yes | Whether to support scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the Scroller.<br>Default value: **true |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | boolean | Yes |
 
 ## friction
 
@@ -169,19 +169,19 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WaterFlowAttribute-friction(value: number | Resource): WaterFlowAttribute--><!--Device-WaterFlowAttribute-friction(value: number | Resource): WaterFlowAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number \| Resource | Yes | Friction coefficient.<br>Default value: **0.9** for wearable devices and **0.6** for non-wearable devices.<br>Since API version 11, the default value for non-wearable devices is **0.7**.<br>Since API version 12, the default value for non-wearable devices is **0.75**.<br>Value range: (0, + ∞).<br>If the value is less than or equal to 0, the default value is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
 
 ## itemConstraintSize
 
@@ -193,17 +193,17 @@ Sets the size constraints of the child components during layout. For details abo
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-WaterFlowAttribute-itemConstraintSize(value: ConstraintSizeOptions): WaterFlowAttribute--><!--Device-WaterFlowAttribute-itemConstraintSize(value: ConstraintSizeOptions): WaterFlowAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | ConstraintSizeOptions | Yes | Size constraints of the child components during layout. If the value specified is less than **0**, this parameter does not take effect.<br>**NOTE：**<br>1. If both **itemConstraintSize** and the constraintSize attribute of the **FlowItem** are set, the **minWidth** (or **minHeight**) will be the larger of the two values, and the **maxWidth** (or **maxHeight**) will be the smaller of the two values. The resulting values will then be used as the **constraintSize** for the **FlowItem**.<br>2. When only **itemConstraintSize** is set, it effectively applies a uniform size constraint to all child components in the **WaterFlow**.<br>3. The **itemConstraintSize** attribute, once converted to the **constraintSize** attribute of the **FlowItem** through the two methods mentioned above, follows the same rules for taking effect as the universal attribute constraintSize. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes |
 
 ## layoutDirection
 
@@ -215,17 +215,17 @@ Sets the main axis direction of the layout.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-WaterFlowAttribute-layoutDirection(value: FlexDirection): WaterFlowAttribute--><!--Device-WaterFlowAttribute-layoutDirection(value: FlexDirection): WaterFlowAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | FlexDirection | Yes | Main axis direction of the layout.<br>Default value: **FlexDirection.Column |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [FlexDirection](../arkts-apis/arkts-arkui-flexdirection-e.md) | Yes |
 
 ## nestedScroll
 
@@ -237,19 +237,19 @@ Sets the nested scrolling mode in the forward and backward directions to impleme
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WaterFlowAttribute-nestedScroll(value: NestedScrollOptions): WaterFlowAttribute--><!--Device-WaterFlowAttribute-nestedScroll(value: NestedScrollOptions): WaterFlowAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | NestedScrollOptions | Yes | Nested scrolling options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [NestedScrollOptions](../arkts-apis/arkts-arkui-common-nestedscrolloptions-i.md) | Yes |
 
 ## onReachEnd
 
@@ -261,17 +261,17 @@ Triggered when the **WaterFlow** content reaches the end position.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-WaterFlowAttribute-onReachEnd(event: () => void): WaterFlowAttribute--><!--Device-WaterFlowAttribute-onReachEnd(event: () => void): WaterFlowAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | () =&gt; void | Yes | Callback triggered when the **WaterFlow** content reaches the end position. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | () = & gt; void | Yes |
 
 ## onReachStart
 
@@ -283,17 +283,17 @@ Triggered when the **WaterFlow** content reaches the start position.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-WaterFlowAttribute-onReachStart(event: () => void): WaterFlowAttribute--><!--Device-WaterFlowAttribute-onReachStart(event: () => void): WaterFlowAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | () =&gt; void | Yes | Callback triggered when the **WaterFlow** content reaches the start position. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | () = & gt; void | Yes |
 
 ## onScrollFrameBegin
 
@@ -312,19 +312,19 @@ This event is not triggered in the following scenarios:
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WaterFlowAttribute-onScrollFrameBegin(event: OnScrollFrameBeginCallback): WaterFlowAttribute--><!--Device-WaterFlowAttribute-onScrollFrameBegin(event: OnScrollFrameBeginCallback): WaterFlowAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | OnScrollFrameBeginCallback | Yes | Callback triggered when each frame scrolling starts.<br>**Since:** 20 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) | Yes |
 
 ## onScrollIndex
 
@@ -336,19 +336,19 @@ Triggered when the first or last item displayed in the component changes. It is 
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WaterFlowAttribute-onScrollIndex(event: (first: number, last: number) => void): WaterFlowAttribute--><!--Device-WaterFlowAttribute-onScrollIndex(event: (first: number, last: number) => void): WaterFlowAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | (first: number, last: number) =&gt; void | Yes | Callback function, triggered when the first or last item displayed in the waterflow changes."first": the index of the first item displayed in the waterflow,"last": the index of the last item displayed in the waterflow. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | (first: number, last: number) = & gt; void | Yes |
 
 ## rowsGap
 
@@ -360,17 +360,17 @@ Sets the gap between rows.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-WaterFlowAttribute-rowsGap(value: Length): WaterFlowAttribute--><!--Device-WaterFlowAttribute-rowsGap(value: Length): WaterFlowAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Length | Yes | Gap between rows.<br>Default value: **0**<br>Value range: [0, +∞). A value less than 0 evaluates to the value **0**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
 
 ## rowsTemplate
 
@@ -382,17 +382,17 @@ Sets the number of rows in the layout. If this attribute is not set, one row is 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-WaterFlowAttribute-rowsTemplate(value: string): WaterFlowAttribute--><!--Device-WaterFlowAttribute-rowsTemplate(value: string): WaterFlowAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string | Yes | Number of rows in the layout.<br>Default value: **'1fr' |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | string | Yes |
 
 ## supportEmptyBranchInLazyLoading
 
@@ -410,19 +410,19 @@ Defines whether the **WaterFlow** component supports the generation of empty bra
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-WaterFlowAttribute-supportEmptyBranchInLazyLoading(supported: boolean | undefined): WaterFlowAttribute--><!--Device-WaterFlowAttribute-supportEmptyBranchInLazyLoading(supported: boolean | undefined): WaterFlowAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| supported | boolean \| undefined | Yes | Whether the current **WaterFlow** component supports the use of the [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) rendering syntax in [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) or [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) to generate an empty branch node that contains no child component.<br>**true** indicates that the **FlowItem** after the empty branch is displayed; **false** indicates the opposite.<br>If the value is **undefined**, it is processed as **false**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| supported | boolean \| undefined | Yes |
 
 ## syncLoad
 
@@ -434,17 +434,16 @@ Sets whether to synchronously load all child components in the **WaterFlow** com
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-WaterFlowAttribute-syncLoad(enable: boolean): WaterFlowAttribute--><!--Device-WaterFlowAttribute-syncLoad(enable: boolean): WaterFlowAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to synchronously load all child components in the **WaterFlow** component.<br> **true**: synchronous loading; false: asynchronous loading<br>Default value: **true**<br>**NOTE：**<br>When this parameter is set to **false**, in the first display or scrollToIndex jumps without animation, if the time consumed by the frame layout exceeds 50 ms, the child components that have not been laid out in the **WaterFlow** component are delayed to the next frame for layout. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enable | boolean | Yes |

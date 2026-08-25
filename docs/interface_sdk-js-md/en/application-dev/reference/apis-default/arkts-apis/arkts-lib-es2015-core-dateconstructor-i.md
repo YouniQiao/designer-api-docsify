@@ -1,31 +1,27 @@
 # DateConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface DateConstructor--><!--Device-unnamed-interface DateConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
+## [[Construct]]
 
 ```TypeScript
 new (value: number | string | Date): Date
 ```
 
-**Since:** -1
-
-<!--Device-DateConstructor-new (value: number | string | Date): Date--><!--Device-DateConstructor-new (value: number | string | Date): Date-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number \| string \| Date | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number \| string \| Date | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

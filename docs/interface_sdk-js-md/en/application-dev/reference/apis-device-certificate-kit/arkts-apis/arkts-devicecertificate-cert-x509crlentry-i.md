@@ -2,9 +2,9 @@
 
 Provides APIs for operating on a revoked certificate entry in a CRL.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-cert-interface X509CRLEntry--><!--Device-cert-interface X509CRLEntry-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -25,28 +25,28 @@ Obtains the issuer name of the revoked certificate.
 > **NOTE：**&gt;
 > The obtained issuer name of this revoked certificate contains a string terminator.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-X509CRLEntry-getCertIssuer(): DataBlob--><!--Device-X509CRLEntry-getCertIssuer(): DataBlob-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| DataBlob | Issuer name of the revoked certificate obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 **Examples**
 
@@ -198,35 +198,35 @@ getCertIssuer(encodingType: EncodingType): string
 
 Obtains the issuer name of the revoked certificate based on the encoding type.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-X509CRLEntry-getCertIssuer(encodingType: EncodingType): string--><!--Device-X509CRLEntry-getCertIssuer(encodingType: EncodingType): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| encodingType | [EncodingType](arkts-devicecertificate-cert-encodingtype-e.md) | Yes | Encoding type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [encodingType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiostreaminfo-i.md) | [EncodingType](arkts-devicecertificate-cert-encodingtype-e.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Issuer name of the revoked certificate, separated by commas (,). |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: <br>1. The value of encodingType is not in the EncodingType enumeration range. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 **Examples**
 
@@ -240,27 +240,27 @@ getCertIssuerX500DistinguishedName(): X500DistinguishedName
 
 Obtains the distinguished name (DN) of the issuer of the revoked certificate.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-X509CRLEntry-getCertIssuerX500DistinguishedName(): X500DistinguishedName--><!--Device-X509CRLEntry-getCertIssuerX500DistinguishedName(): X500DistinguishedName-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [X500DistinguishedName](arkts-devicecertificate-cert-x500distinguishedname-i.md) | DN object obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [X500DistinguishedName](arkts-devicecertificate-cert-x500distinguishedname-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| Error Code ID |
+| --- |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 **Examples**
 
@@ -313,28 +313,28 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 Obtains the serialized data of this revoked certificate entry. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-X509CRLEntry-getEncoded(callback: AsyncCallback<EncodingBlob>): void--><!--Device-X509CRLEntry-getEncoded(callback: AsyncCallback<EncodingBlob>): void-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the serialized data of the revoked certificate entry obtained. Otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 **Examples**
 
@@ -867,28 +867,28 @@ getEncoded(): Promise<EncodingBlob>
 
 Obtains the serialized data of this revoked certificate entry. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-X509CRLEntry-getEncoded(): Promise<EncodingBlob>--><!--Device-X509CRLEntry-getEncoded(): Promise<EncodingBlob>-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | Promise used to return the serialized data of the revoked certificate entry obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 **Examples**
 
@@ -902,27 +902,27 @@ getExtensions(): DataBlob
 
 Obtains the CRL entry extensions in DER format.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-X509CRLEntry-getExtensions(): DataBlob--><!--Device-X509CRLEntry-getExtensions(): DataBlob-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| DataBlob | X.509 CRL entry extensions obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| Error Code ID |
+| --- |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 **Examples**
 
@@ -1030,27 +1030,27 @@ getExtensionsObject(): CertExtension
 
 Obtains the CRL entry extension object.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-X509CRLEntry-getExtensionsObject(): CertExtension--><!--Device-X509CRLEntry-getExtensionsObject(): CertExtension-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [CertExtension](arkts-devicecertificate-cert-certextension-i.md) | CRL entry extensions. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [CertExtension](arkts-devicecertificate-cert-certextension-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| Error Code ID |
+| --- |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 **Examples**
 
@@ -1274,27 +1274,27 @@ getRevocationDate(): string
 
 Obtains the certificate's revocation date.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-X509CRLEntry-getRevocationDate(): string--><!--Device-X509CRLEntry-getRevocationDate(): string-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | The certificate revocation date obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| Error Code ID |
+| --- |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 **Examples**
 
@@ -1398,27 +1398,27 @@ getSerialNumber(): bigint
 
 Obtains the serial number of this revoked certificate.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-X509CRLEntry-getSerialNumber(): bigint--><!--Device-X509CRLEntry-getSerialNumber(): bigint-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint | Serial number of the revoked certificate obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| bigint |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| Error Code ID |
+| --- |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 **Examples**
 
@@ -1561,27 +1561,27 @@ hasExtensions(): boolean
 
 Checks whether this CRL entry has extensions.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-X509CRLEntry-hasExtensions(): boolean--><!--Device-X509CRLEntry-hasExtensions(): boolean-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the CRL entry has an extension; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| Error Code ID |
+| --- |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 **Examples**
 
@@ -1639,27 +1639,27 @@ hashCode(): Uint8Array
 
 Obtains the hash value of the data in DER format.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-X509CRLEntry-hashCode(): Uint8Array--><!--Device-X509CRLEntry-hashCode(): Uint8Array-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint8Array | Hash value obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Uint8Array |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| Error Code ID |
+| --- |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 **Examples**
 
@@ -1911,27 +1911,27 @@ toString(): string
 
 Converts the object data into a string.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-X509CRLEntry-toString(): string--><!--Device-X509CRLEntry-toString(): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | String obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| Error Code ID |
+| --- |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 **Examples**
 
@@ -2274,4 +2274,3 @@ async function certChainToString() {
   }
 }
 ```
-

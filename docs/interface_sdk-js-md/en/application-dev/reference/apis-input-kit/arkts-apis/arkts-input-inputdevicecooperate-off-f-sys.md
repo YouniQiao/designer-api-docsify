@@ -1,0 +1,97 @@
+# off (System API)
+
+## Modules to Import
+
+```TypeScript
+import { inputDeviceCooperate } from '@kit.InputKit';
+```
+
+## off('cooperation')
+
+```TypeScript
+function off(type: 'cooperation', callback?: AsyncCallback<void>): void
+```
+
+Deregisters the listener for screen hopping status changes. This API uses an asynchronous callback to return the result.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**Deprecated since:** 23
+
+**Substitutes:** [off](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-off-f-sys.md)
+
+**System capability:** SystemCapability.MultimodalInput.Input.Cooperator
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'cooperation' | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+**Examples**
+
+```TypeScript
+import { inputDeviceCooperate } from '@kit.InputKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          // Unregister a single callback.
+          let callbackOn = (msg: object) => {
+            console.info(`Keyboard mouse crossing event: ${JSON.stringify(msg)}`);
+            return false;
+          }
+          try {
+            inputDeviceCooperate.on('cooperation', callbackOn);
+            inputDeviceCooperate.off("cooperation", callbackOn);
+          } catch (error) {
+            console.error(`Execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { inputDeviceCooperate } from '@kit.InputKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          // Unregister all callbacks.
+          let callback = (msg: object) => {
+            console.info(`Keyboard mouse crossing event: ${JSON.stringify(msg)}`);
+            return false;
+          }
+          try {
+            inputDeviceCooperate.on('cooperation', callback);
+            inputDeviceCooperate.off("cooperation");
+          } catch (error) {
+            console.error(`Execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```

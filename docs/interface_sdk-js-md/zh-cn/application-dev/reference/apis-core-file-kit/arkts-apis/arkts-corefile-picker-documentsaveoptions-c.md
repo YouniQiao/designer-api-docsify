@@ -4,7 +4,7 @@
 
 **起始版本：** 9
 
-<!--Device-picker-class DocumentSaveOptions--><!--Device-picker-class DocumentSaveOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -28,9 +28,9 @@ autoCreateEmptyFile?: boolean
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-DocumentSaveOptions-autoCreateEmptyFile?: boolean--><!--Device-DocumentSaveOptions-autoCreateEmptyFile?: boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.UserFileService.FolderSelection
 
@@ -40,15 +40,15 @@ autoCreateEmptyFile?: boolean
 defaultFilePathUri?: string
 ```
 
-指定保存的文件或者目录的URI。默认为空。
+指定选择的文件或者目录的URI。默认为空（效果为拉起最近打开页）。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
-<!--Device-DocumentSaveOptions-defaultFilePathUri?: string--><!--Device-DocumentSaveOptions-defaultFilePathUri?: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -62,11 +62,11 @@ fileSuffixChoices?: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 23
+**起始版本：** 10
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
-<!--Device-DocumentSaveOptions-fileSuffixChoices?: Array<string>--><!--Device-DocumentSaveOptions-fileSuffixChoices?: Array<string>-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -80,11 +80,11 @@ newFileNames?: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 23
+**起始版本：** 9
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
-<!--Device-DocumentSaveOptions-newFileNames?: Array<string>--><!--Device-DocumentSaveOptions-newFileNames?: Array<string>-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -98,11 +98,10 @@ pickerMode?: DocumentPickerMode
 
 **类型：** [DocumentPickerMode](arkts-corefile-picker-documentpickermode-e.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-DocumentSaveOptions-pickerMode?: DocumentPickerMode--><!--Device-DocumentSaveOptions-pickerMode?: DocumentPickerMode-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
-

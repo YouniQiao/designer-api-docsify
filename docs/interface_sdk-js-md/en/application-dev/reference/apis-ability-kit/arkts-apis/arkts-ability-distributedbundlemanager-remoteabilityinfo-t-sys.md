@@ -6,13 +6,12 @@ export type RemoteAbilityInfo = _RemoteAbilityInfo
 
 Defines the remote ability information.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-distributedBundleManager-export type RemoteAbilityInfo = _RemoteAbilityInfo--><!--Device-distributedBundleManager-export type RemoteAbilityInfo = _RemoteAbilityInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 
 **System API:** This is a system API.
 
 **Property type:** _RemoteAbilityInfo
-

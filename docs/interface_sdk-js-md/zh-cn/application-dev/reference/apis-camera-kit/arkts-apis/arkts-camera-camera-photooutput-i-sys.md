@@ -4,9 +4,9 @@
 
 **继承/实现关系：** PhotoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-camera-interface PhotoOutput--><!--Device-camera-interface PhotoOutput-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -24,9 +24,9 @@ burstCapture(setting: PhotoCaptureSetting): Promise<void>
 
 Starts the burst mode, in which users can capture a series of photos in quick succession. This API is generally used in photo mode. After the burst mode starts, the bottom layer continues displaying photos. You can call [confirmCapture](#confirmcapture) to cancel the burst mode. This API uses a promise to return the result.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-PhotoOutput-burstCapture(setting: PhotoCaptureSetting): Promise<void>--><!--Device-PhotoOutput-burstCapture(setting: PhotoCaptureSetting): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -34,24 +34,24 @@ Starts the burst mode, in which users can capture a series of photos in quick su
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| setting | [PhotoCaptureSetting](arkts-camera-camera-photocapturesetting-i.md) | 是 | Shooting parameters. The input of **undefined** is processed as if no parameters were passed. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| setting | [PhotoCaptureSetting](arkts-camera-camera-photocapturesetting-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 **示例**
 
@@ -86,9 +86,9 @@ confirmCapture(): void
 
 Confirms photo capture. This API is generally used in night photo mode when users need to stop the exposure countdown and take a photo in advance. This API is used to end the burst mode, which is started by calling [burstCapture](#burstcapture).
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-PhotoOutput-confirmCapture(): void--><!--Device-PhotoOutput-confirmCapture(): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -96,11 +96,11 @@ Confirms photo capture. This API is generally used in night photo mode when user
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 **示例**
 
@@ -125,9 +125,9 @@ deferImageDelivery(type: DeferredDeliveryImageType): void
 
 Enables deferred delivery of a certain type.
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-PhotoOutput-deferImageDelivery(type: DeferredDeliveryImageType): void--><!--Device-PhotoOutput-deferImageDelivery(type: DeferredDeliveryImageType): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -135,18 +135,18 @@ Enables deferred delivery of a certain type.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [DeferredDeliveryImageType](arkts-camera-camera-deferreddeliveryimagetype-e-sys.md) | 是 | Deferred delivery image type. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [DeferredDeliveryImageType](arkts-camera-camera-deferreddeliveryimagetype-e-sys.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 **示例**
 
@@ -164,9 +164,9 @@ enableAutoCloudImageEnhancement(enabled: boolean): void
 
 Enable auto cloud image enhancement
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-PhotoOutput-enableAutoCloudImageEnhancement(enabled: boolean): void--><!--Device-PhotoOutput-enableAutoCloudImageEnhancement(enabled: boolean): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -174,17 +174,17 @@ Enable auto cloud image enhancement
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enabled | boolean | 是 | Target state for auto cloud image enhancement. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enabled | boolean | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 ## enableAutoHighQualityPhoto
 
@@ -194,9 +194,9 @@ enableAutoHighQualityPhoto(enabled: boolean): void
 
 Enables automatic high quality for photos. Before using this API, call [isAutoHighQualityPhotoSupported](#isautohighqualityphotosupported) to check whether automatic high quality is supported.
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-PhotoOutput-enableAutoHighQualityPhoto(enabled: boolean): void--><!--Device-PhotoOutput-enableAutoHighQualityPhoto(enabled: boolean): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -204,18 +204,18 @@ Enables automatic high quality for photos. Before using this API, call [isAutoHi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enabled | boolean | 是 | Whether to enable or disable automatic high quality for photos. **true** to enable, **false** otherwise. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enabled | boolean | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) | session is not running. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 **示例**
 
@@ -235,9 +235,9 @@ enableDepthDataDelivery(enabled: boolean): void
 
 Enable depth data delivery.
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-PhotoOutput-enableDepthDataDelivery(enabled: boolean): void--><!--Device-PhotoOutput-enableDepthDataDelivery(enabled: boolean): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -245,18 +245,18 @@ Enable depth data delivery.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enabled | boolean | 是 | Target state for depth data delivery. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enabled | boolean | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 ## enableOffline
 
@@ -266,9 +266,9 @@ enableOffline(): void
 
 Enable offline processing.
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-PhotoOutput-enableOffline(): void--><!--Device-PhotoOutput-enableOffline(): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -276,11 +276,11 @@ Enable offline processing.
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) | session is not running. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 ## enableOriginalImageGeneration
 
@@ -292,9 +292,9 @@ Enable original image generation.
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-PhotoOutput-enableOriginalImageGeneration(enabled: boolean): void--><!--Device-PhotoOutput-enableOriginalImageGeneration(enabled: boolean): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -302,16 +302,16 @@ Enable original image generation.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enabled | boolean | 是 | enable original image generation if TRUE. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enabled | boolean | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 ## enableQuickThumbnail
 
@@ -321,9 +321,9 @@ enableQuickThumbnail(enabled: boolean): void
 
 Enables or disables the quick thumbnail feature. This API takes effect after [addOutput](arkts-camera-camera-session-i.md#addoutput) and [addInput](arkts-camera-camera-session-i.md#addinput) and before [commitConfig](arkts-camera-camera-session-i.md#commitconfig).
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-PhotoOutput-enableQuickThumbnail(enabled: boolean): void--><!--Device-PhotoOutput-enableQuickThumbnail(enabled: boolean): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -331,18 +331,18 @@ Enables or disables the quick thumbnail feature. This API takes effect after [ad
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enabled | boolean | 是 | Whether to enable the quick thumbnail feature. **true** to enable, **false** otherwise. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enabled | boolean | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) | session is not running. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12+ |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 12+ |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 **示例**
 
@@ -387,9 +387,9 @@ enableRawDelivery(enabled: boolean): void
 
 Enable raw image image delivery.
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-PhotoOutput-enableRawDelivery(enabled: boolean): void--><!--Device-PhotoOutput-enableRawDelivery(enabled: boolean): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -397,18 +397,18 @@ Enable raw image image delivery.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enabled | boolean | 是 | Target state for raw image delivery. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enabled | boolean | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 ## isAutoCloudImageEnhancementSupported
 
@@ -418,9 +418,9 @@ isAutoCloudImageEnhancementSupported(): boolean
 
 Confirm if the auto cloud image enhancement is supported.
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-PhotoOutput-isAutoCloudImageEnhancementSupported(): boolean--><!--Device-PhotoOutput-isAutoCloudImageEnhancementSupported(): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -428,16 +428,16 @@ Confirm if the auto cloud image enhancement is supported.
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | TRUE if the auto cloud image enhancement is supported. |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 ## isAutoHighQualityPhotoSupported
 
@@ -447,9 +447,9 @@ isAutoHighQualityPhotoSupported(): boolean
 
 Checks whether automatic high quality is supported for photos.
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-PhotoOutput-isAutoHighQualityPhotoSupported(): boolean--><!--Device-PhotoOutput-isAutoHighQualityPhotoSupported(): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -457,17 +457,17 @@ Checks whether automatic high quality is supported for photos.
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | Check result for whether automatic high quality is supported. **true** if supported, **false** otherwise. |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) | session is not running. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 **示例**
 
@@ -487,9 +487,9 @@ isDeferredImageDeliveryEnabled(type: DeferredDeliveryImageType): boolean
 
 Checks whether deferred delivery of a certain type is enabled.
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-PhotoOutput-isDeferredImageDeliveryEnabled(type: DeferredDeliveryImageType): boolean--><!--Device-PhotoOutput-isDeferredImageDeliveryEnabled(type: DeferredDeliveryImageType): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -497,24 +497,24 @@ Checks whether deferred delivery of a certain type is enabled.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [DeferredDeliveryImageType](arkts-camera-camera-deferreddeliveryimagetype-e-sys.md) | 是 | Deferred delivery image type. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [DeferredDeliveryImageType](arkts-camera-camera-deferreddeliveryimagetype-e-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | Check result for whether deferred delivery is enabled. **true** if enabled, **false** otherwise. |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 **示例**
 
@@ -534,9 +534,9 @@ isDeferredImageDeliverySupported(type: DeferredDeliveryImageType): boolean
 
 Checks whether deferred delivery of a certain type is supported.
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-PhotoOutput-isDeferredImageDeliverySupported(type: DeferredDeliveryImageType): boolean--><!--Device-PhotoOutput-isDeferredImageDeliverySupported(type: DeferredDeliveryImageType): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -544,24 +544,24 @@ Checks whether deferred delivery of a certain type is supported.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [DeferredDeliveryImageType](arkts-camera-camera-deferreddeliveryimagetype-e-sys.md) | 是 | Deferred delivery image type. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [DeferredDeliveryImageType](arkts-camera-camera-deferreddeliveryimagetype-e-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | Check result for the support of deferred delivery. **true** if supported, **false** otherwise. |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 **示例**
 
@@ -581,9 +581,9 @@ isDepthDataDeliverySupported(): boolean
 
 Check if the depth data delivery is supported.
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-PhotoOutput-isDepthDataDeliverySupported(): boolean--><!--Device-PhotoOutput-isDepthDataDeliverySupported(): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -591,17 +591,17 @@ Check if the depth data delivery is supported.
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | TRUE if the type of delivery image is enabled. |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 ## isOfflineSupported
 
@@ -611,9 +611,9 @@ isOfflineSupported(): boolean
 
 Confirm if offline processing is supported.
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-PhotoOutput-isOfflineSupported(): boolean--><!--Device-PhotoOutput-isOfflineSupported(): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -621,16 +621,16 @@ Confirm if offline processing is supported.
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | TRUE if the type of offline is supported. |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 ## isOriginalImageGenerationSupported
 
@@ -642,9 +642,9 @@ Confirm if original image generation supported.
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-PhotoOutput-isOriginalImageGenerationSupported(): boolean--><!--Device-PhotoOutput-isOriginalImageGenerationSupported(): boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -652,16 +652,16 @@ Confirm if original image generation supported.
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | TRUE if the original image generation is supported. |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 ## isQuickThumbnailSupported
 
@@ -671,9 +671,9 @@ isQuickThumbnailSupported(): boolean
 
 Checks whether the quick thumbnail feature is supported. This API takes effect after [addOutput](arkts-camera-camera-session-i.md#addoutput) and [addInput](arkts-camera-camera-session-i.md#addinput) and before [commitConfig](arkts-camera-camera-session-i.md#commitconfig).
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-PhotoOutput-isQuickThumbnailSupported(): boolean--><!--Device-PhotoOutput-isQuickThumbnailSupported(): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -681,16 +681,16 @@ Checks whether the quick thumbnail feature is supported. This API takes effect a
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | Check result for the support of the quick thumbnail feature. **true** if supported, **false** otherwise. |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) | session is not running. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -735,9 +735,9 @@ isRawDeliverySupported(): boolean
 
 Confirm if the raw image delivery is supported
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-PhotoOutput-isRawDeliverySupported(): boolean--><!--Device-PhotoOutput-isRawDeliverySupported(): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -745,17 +745,17 @@ Confirm if the raw image delivery is supported
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | TRUE if the type of delivery image is support. |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 ## off('deferredPhotoProxyAvailable')
 
@@ -767,7 +767,7 @@ Unsubscribes from events indicating available thumbnail proxies.
 
 **起始版本：** 11
 
-<!--Device-PhotoOutput-off(type: 'deferredPhotoProxyAvailable', callback?: AsyncCallback<DeferredPhotoProxy>): void--><!--Device-PhotoOutput-off(type: 'deferredPhotoProxyAvailable', callback?: AsyncCallback<DeferredPhotoProxy>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -775,16 +775,16 @@ Unsubscribes from events indicating available thumbnail proxies.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'deferredPhotoProxyAvailable' | 是 | Event type. The value is fixed at **'deferredPhotoProxyAvailable'**. The event can be listened for when a photoOutput instance is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 否 | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('deferredPhotoProxyAvailable')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'deferredPhotoProxyAvailable' | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -807,35 +807,6 @@ function unRegisterPhotoOutputDeferredPhotoProxyAvailable(photoOutput: camera.Ph
 }
 ```
 
-## off('offlineDeliveryFinished')
-
-```TypeScript
-off(type: 'offlineDeliveryFinished', callback?: AsyncCallback<void>): void
-```
-
-Unsubscribes offline Delivery finished events. This method is valid only after enableOffline() is called.
-
-**起始版本：** 18
-
-<!--Device-PhotoOutput-off(type: 'offlineDeliveryFinished', callback?: AsyncCallback<void>): void--><!--Device-PhotoOutput-off(type: 'offlineDeliveryFinished', callback?: AsyncCallback<void>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'offlineDeliveryFinished' | 是 | Event type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | Callback used to get offline Delivery finished events. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-
 ## off('quickThumbnail')
 
 ```TypeScript
@@ -846,7 +817,7 @@ Unsubscribes from quick thumbnail output events.
 
 **起始版本：** 10
 
-<!--Device-PhotoOutput-off(type: 'quickThumbnail', callback?: AsyncCallback<image.PixelMap>): void--><!--Device-PhotoOutput-off(type: 'quickThumbnail', callback?: AsyncCallback<image.PixelMap>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -854,10 +825,10 @@ Unsubscribes from quick thumbnail output events.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'quickThumbnail' | 是 | Event type. The value is fixed at **'quickThumbnail'**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 否 | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('quickThumbnail')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'quickThumbnail' | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 否 |
 
 **示例**
 
@@ -866,6 +837,35 @@ function unregisterQuickThumbnail(photoOutput: camera.PhotoOutput): void {
   photoOutput.off('quickThumbnail');
 }
 ```
+
+## off('offlineDeliveryFinished')
+
+```TypeScript
+off(type: 'offlineDeliveryFinished', callback?: AsyncCallback<void>): void
+```
+
+Unsubscribes offline Delivery finished events. This method is valid only after enableOffline() is called.
+
+**起始版本：** 18
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'offlineDeliveryFinished' | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## offDeferredPhotoProxyAvailable
 
@@ -877,7 +877,7 @@ Unsubscribes deferred photo proxy available event callback.
 
 **起始版本：** 23
 
-<!--Device-PhotoOutput-offDeferredPhotoProxyAvailable(callback?: AsyncCallback<DeferredPhotoProxy>): void--><!--Device-PhotoOutput-offDeferredPhotoProxyAvailable(callback?: AsyncCallback<DeferredPhotoProxy>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -885,15 +885,15 @@ Unsubscribes deferred photo proxy available event callback.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 否 | Callback used to get the DeferredPhotoProxy. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## offOfflineDeliveryFinished
 
@@ -905,7 +905,7 @@ Unsubscribes offline Delivery finished events. This method is valid only after e
 
 **起始版本：** 23
 
-<!--Device-PhotoOutput-offOfflineDeliveryFinished(callback?: AsyncCallback<void>): void--><!--Device-PhotoOutput-offOfflineDeliveryFinished(callback?: AsyncCallback<void>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -913,15 +913,15 @@ Unsubscribes offline Delivery finished events. This method is valid only after e
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | Callback used to get offline Delivery finished events. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## offQuickThumbnail
 
@@ -933,7 +933,7 @@ Unsubscribes from camera thumbnail events. This method is valid only after enabl
 
 **起始版本：** 23
 
-<!--Device-PhotoOutput-offQuickThumbnail(callback?: AsyncCallback<image.PixelMap>): void--><!--Device-PhotoOutput-offQuickThumbnail(callback?: AsyncCallback<image.PixelMap>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -941,9 +941,9 @@ Unsubscribes from camera thumbnail events. This method is valid only after enabl
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 否 | Callback used to get the quick thumbnail. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 否 |
 
 ## on('deferredPhotoProxyAvailable')
 
@@ -955,7 +955,7 @@ Subscribes to events indicating available thumbnail proxies. This API uses an as
 
 **起始版本：** 11
 
-<!--Device-PhotoOutput-on(type: 'deferredPhotoProxyAvailable', callback: AsyncCallback<DeferredPhotoProxy>): void--><!--Device-PhotoOutput-on(type: 'deferredPhotoProxyAvailable', callback: AsyncCallback<DeferredPhotoProxy>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -963,16 +963,16 @@ Subscribes to events indicating available thumbnail proxies. This API uses an as
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'deferredPhotoProxyAvailable' | 是 | Event type. The value is fixed at **'deferredPhotoProxyAvailable'**. The event can be listened for when a photoOutput instance is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 是 | Callback used to return the thumbnail proxy. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'deferredPhotoProxyAvailable' | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -995,35 +995,6 @@ function registerPhotoOutputDeferredPhotoProxyAvailable(photoOutput: camera.Phot
 }
 ```
 
-## on('offlineDeliveryFinished')
-
-```TypeScript
-on(type: 'offlineDeliveryFinished', callback: AsyncCallback<void>): void
-```
-
-Subscribes offline Delivery finished events. This method is valid only after enableOffline() is called.
-
-**起始版本：** 18
-
-<!--Device-PhotoOutput-on(type: 'offlineDeliveryFinished', callback: AsyncCallback<void>): void--><!--Device-PhotoOutput-on(type: 'offlineDeliveryFinished', callback: AsyncCallback<void>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'offlineDeliveryFinished' | 是 | Event type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to get offline Delivery finished events. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-
 ## on('quickThumbnail')
 
 ```TypeScript
@@ -1034,7 +1005,7 @@ Subscribes to quick thumbnail output events. This API uses an asynchronous callb
 
 **起始版本：** 10
 
-<!--Device-PhotoOutput-on(type: 'quickThumbnail', callback: AsyncCallback<image.PixelMap>): void--><!--Device-PhotoOutput-on(type: 'quickThumbnail', callback: AsyncCallback<image.PixelMap>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -1042,10 +1013,10 @@ Subscribes to quick thumbnail output events. This API uses an asynchronous callb
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'quickThumbnail' | 是 | Event type. The value is fixed at **'quickThumbnail'**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | Callback that returns a PixelMap instance. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'quickThumbnail' | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 |
 
 **示例**
 
@@ -1094,6 +1065,35 @@ async function registerQuickThumbnail(context: common.BaseContext, mode: camera.
 }
 ```
 
+## on('offlineDeliveryFinished')
+
+```TypeScript
+on(type: 'offlineDeliveryFinished', callback: AsyncCallback<void>): void
+```
+
+Subscribes offline Delivery finished events. This method is valid only after enableOffline() is called.
+
+**起始版本：** 18
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'offlineDeliveryFinished' | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
 ## onDeferredPhotoProxyAvailable
 
 ```TypeScript
@@ -1104,7 +1104,7 @@ Subscribes deferred photo proxy available event callback.
 
 **起始版本：** 23
 
-<!--Device-PhotoOutput-onDeferredPhotoProxyAvailable(callback: AsyncCallback<DeferredPhotoProxy>): void--><!--Device-PhotoOutput-onDeferredPhotoProxyAvailable(callback: AsyncCallback<DeferredPhotoProxy>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -1112,15 +1112,15 @@ Subscribes deferred photo proxy available event callback.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 是 | Callback used to get the DeferredPhotoProxy. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## onOfflineDeliveryFinished
 
@@ -1132,7 +1132,7 @@ Subscribes offline Delivery finished events. This method is valid only after ena
 
 **起始版本：** 23
 
-<!--Device-PhotoOutput-onOfflineDeliveryFinished(callback: AsyncCallback<void>): void--><!--Device-PhotoOutput-onOfflineDeliveryFinished(callback: AsyncCallback<void>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -1140,15 +1140,15 @@ Subscribes offline Delivery finished events. This method is valid only after ena
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to get offline Delivery finished events. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## onQuickThumbnail
 
@@ -1160,7 +1160,7 @@ Subscribes to camera thumbnail events. This method is valid only after enableQui
 
 **起始版本：** 23
 
-<!--Device-PhotoOutput-onQuickThumbnail(callback: AsyncCallback<image.PixelMap>): void--><!--Device-PhotoOutput-onQuickThumbnail(callback: AsyncCallback<image.PixelMap>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -1168,9 +1168,9 @@ Subscribes to camera thumbnail events. This method is valid only after enableQui
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | Callback used to get the quick thumbnail. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 |
 
 ## setEditData
 
@@ -1182,9 +1182,9 @@ Set edit data.
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-PhotoOutput-setEditData(editData: string): void--><!--Device-PhotoOutput-setEditData(editData: string): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -1192,14 +1192,13 @@ Set edit data.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| editData | string | 是 | The edit data. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| editData | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |

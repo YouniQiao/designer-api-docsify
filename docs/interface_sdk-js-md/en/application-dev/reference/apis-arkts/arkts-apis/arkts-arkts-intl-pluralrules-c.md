@@ -4,9 +4,7 @@ PluralRules class for locale-sensitive plural formatting.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-Intl-export class PluralRules--><!--Device-Intl-export class PluralRules-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,20 +23,18 @@ Creates a new PluralRules.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PluralRules-public constructor(locales?: string | FixedArray<string>, options?: PluralRulesOptions)--><!--Device-PluralRules-public constructor(locales?: string | FixedArray<string>, options?: PluralRulesOptions)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | string \| FixedArray&lt;string&gt; | No | the locales. |
-| options | PluralRulesOptions | No | the options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | string \| FixedArray & lt;string & gt; | No |
+| options | [PluralRulesOptions](arkts-arkts-intl-pluralrulesoptions-i.md) | No |
 
 ## resolvedOptions
 
@@ -50,19 +46,17 @@ Returns resolved options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PluralRules-public resolvedOptions(): ResolvedPluralRulesOptions--><!--Device-PluralRules-public resolvedOptions(): ResolvedPluralRulesOptions-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ResolvedPluralRulesOptions | the resolved options. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [ResolvedPluralRulesOptions](arkts-arkts-intl-resolvedpluralrulesoptions-i.md) |
 
 ## select
 
@@ -74,25 +68,23 @@ Selects a plural rule category.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PluralRules-public select(value: double): LDMLPluralRule--><!--Device-PluralRules-public select(value: double): LDMLPluralRule-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | the value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| LDMLPluralRule | the plural rule. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [LDMLPluralRule](arkts-arkts-intl-ldmlpluralrule-t.md) |
 
 ## supportedLocalesOf
 
@@ -105,24 +97,21 @@ Returns supported locales.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PluralRules-public static supportedLocalesOf(locales: string | FixedArray<string> | Array<string>,             options?: SupportedLocalesOfOptions | PluralRulesOptions): string[]--><!--Device-PluralRules-public static supportedLocalesOf(locales: string | FixedArray<string> | Array<string>,             options?: SupportedLocalesOfOptions | PluralRulesOptions): string[]-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | string \| FixedArray&lt;string&gt; \| Array&lt;string&gt; | Yes | the locales. |
-| options | [SupportedLocalesOfOptions](arkts-arkts-intl-supportedlocalesofoptions-i.md) \| PluralRulesOptions | No | the options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | string \| FixedArray & lt;string & gt; \ | Array & lt;string & gt; | Yes |
+| options | [SupportedLocalesOfOptions](arkts-arkts-intl-supportedlocalesofoptions-i.md) \| [PluralRulesOptions](arkts-arkts-intl-pluralrulesoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string[] | supported locales. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string[] |

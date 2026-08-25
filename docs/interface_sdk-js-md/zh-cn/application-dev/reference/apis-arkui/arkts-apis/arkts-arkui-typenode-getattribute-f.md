@@ -10,26 +10,26 @@ export function getAttribute(node: FrameNode, nodeType: 'Text'): TextAttribute |
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Text'): TextAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Text'): TextAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'Text' | 是 | 获取Text节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Text' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| TextAttribute \| undefined | Text节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| TextAttribute \| undefined |
 
 
 ## getAttribute
@@ -42,26 +42,26 @@ export function getAttribute(node: FrameNode, nodeType: 'Column'): ColumnAttribu
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Column'): ColumnAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Column'): ColumnAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'Column' | 是 | 获取Column节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Column' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ColumnAttribute \| undefined | Column节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| ColumnAttribute \| undefined |
 
 
 ## getAttribute
@@ -74,26 +74,26 @@ export function getAttribute(node: FrameNode, nodeType: 'Row'): RowAttribute | u
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Row'): RowAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Row'): RowAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'Row' | 是 | 获取Row节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Row' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RowAttribute \| undefined | Row节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| RowAttribute \| undefined |
 
 
 ## getAttribute
@@ -106,26 +106,26 @@ export function getAttribute(node: FrameNode, nodeType: 'Stack'): StackAttribute
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Stack'): StackAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Stack'): StackAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'Stack' | 是 | 获取Stack节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Stack' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| StackAttribute \| undefined | Stack节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| StackAttribute \| undefined |
 
 
 ## getAttribute
@@ -138,26 +138,26 @@ export function getAttribute(node: FrameNode, nodeType: 'Flex'): FlexAttribute |
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Flex'): FlexAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Flex'): FlexAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'Flex' | 是 | 获取Flex节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Flex' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| FlexAttribute \| undefined | Flex节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| FlexAttribute \| undefined |
 
 
 ## getAttribute
@@ -170,26 +170,26 @@ export function getAttribute(node: FrameNode, nodeType: 'Swiper'): SwiperAttribu
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Swiper'): SwiperAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Swiper'): SwiperAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'Swiper' | 是 | 获取Swiper节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Swiper' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| SwiperAttribute \| undefined | Swiper节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| SwiperAttribute \| undefined |
 
 
 ## getAttribute
@@ -202,26 +202,26 @@ export function getAttribute(node: FrameNode, nodeType: 'Progress'): ProgressAtt
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Progress'): ProgressAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Progress'): ProgressAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'Progress' | 是 | 获取Progress节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Progress' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ProgressAttribute \| undefined | Progress节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| ProgressAttribute \| undefined |
 
 
 ## getAttribute
@@ -234,26 +234,26 @@ function getAttribute(node: FrameNode, nodeType: 'Scroll'): ScrollAttribute | un
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function getAttribute(node: FrameNode, nodeType: 'Scroll'): ScrollAttribute | undefined--><!--Device-typeNode-function getAttribute(node: FrameNode, nodeType: 'Scroll'): ScrollAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'Scroll' | 是 | 获取Scroll节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Scroll' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ScrollAttribute \| undefined | Scroll节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| ScrollAttribute \| undefined |
 
 
 ## getAttribute
@@ -266,26 +266,26 @@ export function getAttribute(node: FrameNode, nodeType: 'RelativeContainer'): Re
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'RelativeContainer'): RelativeContainerAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'RelativeContainer'): RelativeContainerAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'RelativeContainer' | 是 | 获取RelativeContainer节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'RelativeContainer' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RelativeContainerAttribute \| undefined | RelativeContainer节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| RelativeContainerAttribute \| undefined |
 
 
 ## getAttribute
@@ -298,26 +298,26 @@ export function getAttribute(node: FrameNode, nodeType: 'LoadingProgress'): Load
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'LoadingProgress'): LoadingProgressAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'LoadingProgress'): LoadingProgressAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'LoadingProgress' | 是 | 获取LoadingProgress节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'LoadingProgress' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| LoadingProgressAttribute \| undefined | LoadingProgress节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| LoadingProgressAttribute \| undefined |
 
 
 ## getAttribute
@@ -330,26 +330,26 @@ export function getAttribute(node: FrameNode, nodeType: 'Image'): ImageAttribute
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Image'): ImageAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Image'): ImageAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'Image' | 是 | 获取Image节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Image' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ImageAttribute \| undefined | Image节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| ImageAttribute \| undefined |
 
 
 ## getAttribute
@@ -362,26 +362,26 @@ export function getAttribute(node: FrameNode, nodeType: 'List'): ListAttribute |
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'List'): ListAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'List'): ListAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'List' | 是 | 获取List节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'List' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ListAttribute \| undefined | List节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| ListAttribute \| undefined |
 
 
 ## getAttribute
@@ -394,26 +394,26 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItem'): ListItemAtt
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'ListItem'): ListItemAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'ListItem'): ListItemAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'ListItem' | 是 | 获取ListItem节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'ListItem' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ListItemAttribute \| undefined | ListItem节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| ListItemAttribute \| undefined |
 
 
 ## getAttribute
@@ -426,26 +426,26 @@ export function getAttribute(node: FrameNode, nodeType: 'TextInput'): TextInputA
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'TextInput'): TextInputAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'TextInput'): TextInputAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'TextInput' | 是 | 获取TextInput节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'TextInput' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| TextInputAttribute \| undefined | TextInput节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| TextInputAttribute \| undefined |
 
 
 ## getAttribute
@@ -458,26 +458,26 @@ export function getAttribute(node: FrameNode, nodeType: 'Button'): ButtonAttribu
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Button'): ButtonAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Button'): ButtonAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'Button' | 是 | 获取Button节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Button' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ButtonAttribute \| undefined | Button节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| ButtonAttribute \| undefined |
 
 
 ## getAttribute
@@ -490,26 +490,26 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItemGroup'): ListIt
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'ListItemGroup'): ListItemGroupAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'ListItemGroup'): ListItemGroupAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'ListItemGroup' | 是 | 获取ListItemGroup节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'ListItemGroup' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ListItemGroupAttribute \| undefined | ListItemGroup节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| ListItemGroupAttribute \| undefined |
 
 
 ## getAttribute
@@ -522,26 +522,26 @@ export function getAttribute(node: FrameNode, nodeType: 'WaterFlow'): WaterFlowA
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'WaterFlow'): WaterFlowAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'WaterFlow'): WaterFlowAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'WaterFlow' | 是 | 获取WaterFlow节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'WaterFlow' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| WaterFlowAttribute \| undefined | WaterFlow节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| WaterFlowAttribute \| undefined |
 
 
 ## getAttribute
@@ -554,26 +554,26 @@ export function getAttribute(node: FrameNode, nodeType: 'FlowItem'): FlowItemAtt
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'FlowItem'): FlowItemAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'FlowItem'): FlowItemAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'FlowItem' | 是 | 获取FlowItem节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'FlowItem' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| FlowItemAttribute \| undefined | FlowItem节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| FlowItemAttribute \| undefined |
 
 
 ## getAttribute
@@ -586,26 +586,26 @@ export function getAttribute(node: FrameNode, nodeType: 'XComponent'): XComponen
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'XComponent'): XComponentAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'XComponent'): XComponentAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'XComponent' | 是 | 获取XComponent节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'XComponent' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| XComponentAttribute \| undefined | XComponent节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| XComponentAttribute \| undefined |
 
 
 ## getAttribute
@@ -618,26 +618,26 @@ export function getAttribute(node: FrameNode, nodeType: 'Checkbox'): CheckboxAtt
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Checkbox'): CheckboxAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Checkbox'): CheckboxAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'Checkbox' | 是 | 获取Checkbox节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Checkbox' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| CheckboxAttribute \| undefined | Checkbox节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| CheckboxAttribute \| undefined |
 
 
 ## getAttribute
@@ -650,26 +650,26 @@ export function getAttribute(node: FrameNode, nodeType: 'Radio'): RadioAttribute
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Radio'): RadioAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Radio'): RadioAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'Radio' | 是 | 获取Radio节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Radio' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RadioAttribute \| undefined | Radio节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| RadioAttribute \| undefined |
 
 
 ## getAttribute
@@ -682,26 +682,26 @@ export function getAttribute(node: FrameNode, nodeType: 'Slider'): SliderAttribu
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Slider'): SliderAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Slider'): SliderAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'Slider' | 是 | 获取Slider节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Slider' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| SliderAttribute \| undefined | Slider节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| SliderAttribute \| undefined |
 
 
 ## getAttribute
@@ -714,26 +714,26 @@ export function getAttribute(node: FrameNode, nodeType: 'Toggle'): ToggleAttribu
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Toggle'): ToggleAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Toggle'): ToggleAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'Toggle' | 是 | 获取Toggle节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Toggle' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ToggleAttribute \| undefined | Toggle节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| ToggleAttribute \| undefined |
 
 
 ## getAttribute
@@ -746,26 +746,26 @@ export function getAttribute(node: FrameNode, nodeType: 'TextArea'): TextAreaAtt
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'TextArea'): TextAreaAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'TextArea'): TextAreaAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'TextArea' | 是 | 获取TextArea节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'TextArea' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| TextAreaAttribute \| undefined | TextArea节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| TextAreaAttribute \| undefined |
 
 
 ## getAttribute
@@ -778,26 +778,26 @@ export function getAttribute(node: FrameNode, nodeType: 'Grid'): GridAttribute |
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Grid'): GridAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'Grid'): GridAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'Grid' | 是 | 获取Grid节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Grid' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| GridAttribute \| undefined | Grid节点类型的属性，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| GridAttribute \| undefined |
 
 
 ## getAttribute
@@ -810,24 +810,23 @@ export function getAttribute(node: FrameNode, nodeType: 'GridItem'): GridItemAtt
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'GridItem'): GridItemAttribute | undefined--><!--Device-typeNode-export function getAttribute(node: FrameNode, nodeType: 'GridItem'): GridItemAttribute | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
-| nodeType | 'GridItem' | 是 | 获取GridItem节点类型的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'GridItem' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| GridItemAttribute \| undefined | GridItem节点类型的属性，若获取失败，则返回undefined。 |
-
+| 类型 |
+| --- |
+| GridItemAttribute \| undefined |

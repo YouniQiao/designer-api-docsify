@@ -2,9 +2,9 @@
 
 表示安全通信协议的枚举。
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-cacheDownload-enum SslType--><!--Device-cacheDownload-enum SslType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -16,9 +16,9 @@ TLS = 'TLS'
 
 使用TLS安全通信协议。
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-SslType-TLS = 'TLS'--><!--Device-SslType-TLS = 'TLS'-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -30,9 +30,8 @@ TLCP = 'TLCP'
 
 使用TLCP安全通信协议。
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-SslType-TLCP = 'TLCP'--><!--Device-SslType-TLCP = 'TLCP'-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
-

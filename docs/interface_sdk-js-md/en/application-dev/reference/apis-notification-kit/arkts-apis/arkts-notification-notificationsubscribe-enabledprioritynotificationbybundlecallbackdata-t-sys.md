@@ -8,11 +8,10 @@ Describes the bundle switch state for priority notification.
 
 **Since:** 23
 
-<!--Device-notificationSubscribe-export type EnabledPriorityNotificationByBundleCallbackData = _EnabledPriorityNotificationByBundleCallbackData--><!--Device-notificationSubscribe-export type EnabledPriorityNotificationByBundleCallbackData = _EnabledPriorityNotificationByBundleCallbackData-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
 
 **Property type:** _EnabledPriorityNotificationByBundleCallbackData
-

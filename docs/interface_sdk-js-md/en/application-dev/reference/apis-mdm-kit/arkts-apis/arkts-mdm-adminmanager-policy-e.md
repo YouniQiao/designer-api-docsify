@@ -4,7 +4,7 @@ Defines the policy type for the trustlist or blocklist.
 
 **Since:** 20
 
-<!--Device-adminManager-export enum Policy--><!--Device-adminManager-export enum Policy-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,9 +18,9 @@ Blocklist.
 
 **Since:** 20
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-Policy-BLOCK_LIST = 0--><!--Device-Policy-BLOCK_LIST = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -34,9 +34,8 @@ Trustlist.
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Policy-TRUST_LIST = 1--><!--Device-Policy-TRUST_LIST = 1-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

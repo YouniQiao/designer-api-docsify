@@ -2,9 +2,9 @@
 
 音量改变时，应用接收的事件。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-audio-interface VolumeEvent--><!--Device-audio-interface VolumeEvent-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -24,9 +24,9 @@ updateUi: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-VolumeEvent-updateUi: boolean--><!--Device-VolumeEvent-updateUi: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -38,11 +38,11 @@ volume: int
 
 音量等级，可设置范围通过调用getMinVolume和getMaxVolume方法获取。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-VolumeEvent-volume: int--><!--Device-VolumeEvent-volume: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -56,9 +56,9 @@ volumeMode?: AudioVolumeMode
 
 **类型：** [AudioVolumeMode](arkts-audio-audio-audiovolumemode-e.md)
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-VolumeEvent-volumeMode?: AudioVolumeMode--><!--Device-VolumeEvent-volumeMode?: AudioVolumeMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -72,9 +72,8 @@ volumeType: AudioVolumeType
 
 **类型：** [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-VolumeEvent-volumeType: AudioVolumeType--><!--Device-VolumeEvent-volumeType: AudioVolumeType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
-

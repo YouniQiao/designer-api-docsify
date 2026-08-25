@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-scan-interface ScanOptions--><!--Device-scan-interface ScanOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -17,18 +17,18 @@ import { scan } from '@kit.ConnectivityKit';
 ## duration
 
 ```TypeScript
-duration?: int
+duration?: number
 ```
 
 表示扫描持续时间。单位：秒，取值范围[10, 60]，默认值为全时段扫描。 取值限定为整数。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-ScanOptions-duration?: int--><!--Device-ScanOptions-duration?: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -44,9 +44,8 @@ scanMode?: ScanMode
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ScanOptions-scanMode?: ScanMode--><!--Device-ScanOptions-scanMode?: ScanMode-End-->
-
 **系统能力：** SystemCapability.Communication.NearLink.Base
-

@@ -2,9 +2,9 @@
 
 Wi-Fi IP configuration information.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-wifiManager-interface IpConfig--><!--Device-wifiManager-interface IpConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -24,11 +24,11 @@ dnsServers: int[]
 
 DNS servers.
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IpConfig-dnsServers: int[]--><!--Device-IpConfig-dnsServers: int[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -44,9 +44,9 @@ Domains.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IpConfig-domains: Array<string>--><!--Device-IpConfig-domains: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -60,11 +60,11 @@ gateway: int
 
 Gate way.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IpConfig-gateway: int--><!--Device-IpConfig-gateway: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -78,11 +78,11 @@ ipAddress: int
 
 IP address.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IpConfig-ipAddress: int--><!--Device-IpConfig-ipAddress: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -96,13 +96,12 @@ prefixLength: int
 
 Prefix length.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IpConfig-prefixLength: int--><!--Device-IpConfig-prefixLength: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
-

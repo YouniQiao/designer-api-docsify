@@ -5,8 +5,7 @@
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [MultiAppMode](arkts-ability-multiappmode-e-sys.md) | The module defines whether an application supports the multi-app mode. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [MultiAppMode](arkts-ability-multiappmode-e-sys.md) |
 <!--DelEnd-->
-

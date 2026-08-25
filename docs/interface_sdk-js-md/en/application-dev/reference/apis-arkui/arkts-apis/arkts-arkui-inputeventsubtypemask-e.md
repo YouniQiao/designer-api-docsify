@@ -4,7 +4,7 @@ Defines the input event subtype mask for monitoring.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare enum InputEventSubTypeMask--><!--Device-unnamed-declare enum InputEventSubTypeMask-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Mouse left button down.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-InputEventSubTypeMask-LEFT_MOUSE_DOWN = 1 << 0--><!--Device-InputEventSubTypeMask-LEFT_MOUSE_DOWN = 1 << 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Mouse left button up.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-InputEventSubTypeMask-LEFT_MOUSE_UP = 1 << 1--><!--Device-InputEventSubTypeMask-LEFT_MOUSE_UP = 1 << 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ Mouse right button down.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-InputEventSubTypeMask-RIGHT_MOUSE_DOWN = 1 << 2--><!--Device-InputEventSubTypeMask-RIGHT_MOUSE_DOWN = 1 << 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,11 @@ Mouse right button up.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-InputEventSubTypeMask-RIGHT_MOUSE_UP = 1 << 3--><!--Device-InputEventSubTypeMask-RIGHT_MOUSE_UP = 1 << 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,11 +90,11 @@ Mouse middle button down.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-InputEventSubTypeMask-MIDDLE_MOUSE_DOWN = 1 << 4--><!--Device-InputEventSubTypeMask-MIDDLE_MOUSE_DOWN = 1 << 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,11 +108,11 @@ Mouse middle button up.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-InputEventSubTypeMask-MIDDLE_MOUSE_UP = 1 << 5--><!--Device-InputEventSubTypeMask-MIDDLE_MOUSE_UP = 1 << 5-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,11 +126,11 @@ Mouse left button dragging.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-InputEventSubTypeMask-LEFT_MOUSE_DRAGGING = 1 << 6--><!--Device-InputEventSubTypeMask-LEFT_MOUSE_DRAGGING = 1 << 6-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -144,11 +144,11 @@ Mouse right button dragging.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-InputEventSubTypeMask-RIGHT_MOUSE_DRAGGING = 1 << 7--><!--Device-InputEventSubTypeMask-RIGHT_MOUSE_DRAGGING = 1 << 7-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -162,11 +162,11 @@ Mouse middle button dragging.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-InputEventSubTypeMask-MIDDLE_MOUSE_DRAGGING = 1 << 8--><!--Device-InputEventSubTypeMask-MIDDLE_MOUSE_DRAGGING = 1 << 8-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -180,11 +180,11 @@ Touch down.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-InputEventSubTypeMask-TOUCH_DOWN = 1 << 9--><!--Device-InputEventSubTypeMask-TOUCH_DOWN = 1 << 9-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -198,11 +198,11 @@ Touch up.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-InputEventSubTypeMask-TOUCH_UP = 1 << 10--><!--Device-InputEventSubTypeMask-TOUCH_UP = 1 << 10-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -216,11 +216,11 @@ Physical keyboard key down.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-InputEventSubTypeMask-KEY_DOWN = 1 << 11--><!--Device-InputEventSubTypeMask-KEY_DOWN = 1 << 11-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -234,11 +234,10 @@ Physical keyboard key up.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-InputEventSubTypeMask-KEY_UP = 1 << 12--><!--Device-InputEventSubTypeMask-KEY_UP = 1 << 12-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

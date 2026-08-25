@@ -4,11 +4,11 @@ URLSearchParams接口定义了一些处理URL查询字符串的实用方法，�
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [URLParams](arkts-arkts-url-urlparams-c.md)
-
-<!--Device-url-class URLSearchParams--><!--Device-url-class URLSearchParams-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -28,19 +28,19 @@ import { url } from '@kit.ArkTS';
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** iterator]
-
-<!--Device-URLSearchParams-[Symbol.iterator](): IterableIterator<[string, string]>--><!--Device-URLSearchParams-[Symbol.iterator](): IterableIterator<[string, string]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; | 返回一个迭代器，迭代器的每一项为包含name和value的[string, string]数组。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; |
 
 **示例**
 
@@ -77,20 +77,20 @@ append(name: string, value: string): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** append
-
-<!--Device-URLSearchParams-append(name: string, value: string): void--><!--Device-URLSearchParams-append(name: string, value: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 需要插入搜索参数的键名。 |
-| value | string | 是 | 需要插入搜索参数的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| value | string | 是 |
 
 **示例**
 
@@ -119,19 +119,19 @@ URLSearchParams的构造函数。
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** constructor
-
-<!--Device-URLSearchParams-constructor(init?: string[][] | Record<string, string> | string | URLSearchParams)--><!--Device-URLSearchParams-constructor(init?: string[][] | Record<string, string> | string | URLSearchParams)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| init | string[][] \| Record&lt;string, string&gt; \| string \| URLSearchParams | 否 | 入参对象。 <br/>- string[][]：字符串二维数组，每个内部数组包含两个元素，分别为键名和键值。 <br/>- Record&lt;string, string&gt;：对象列表。 <br/>- string：字符串，需遵循URL查询参数格式，如'key=value&key2=value2'。 <br/>- URLSearchParams：对象。 <br/>- 默认值：undefined。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| init | string[][] \| Record & lt;string, string & gt; \ | string \| URLSearchParams | 否 |
 
 **示例**
 
@@ -207,19 +207,19 @@ delete(name: string): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** delete
-
-<!--Device-URLSearchParams-delete(name: string): void--><!--Device-URLSearchParams-delete(name: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 需要删除的键值名称。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
 
 **示例**
 
@@ -248,19 +248,19 @@ entries(): IterableIterator<[string, string]>
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** entries
-
-<!--Device-URLSearchParams-entries(): IterableIterator<[string, string]>--><!--Device-URLSearchParams-entries(): IterableIterator<[string, string]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; | 返回一个ES6的迭代器。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; |
 
 **示例**
 
@@ -316,20 +316,20 @@ forEach(callbackFn: (value: string, key: string, searchParams: URLSearchParams) 
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** forEach
-
-<!--Device-URLSearchParams-forEach(callbackFn: (value: string, key: string, searchParams: URLSearchParams) => void, thisArg?: Object): void--><!--Device-URLSearchParams-forEach(callbackFn: (value: string, key: string, searchParams: URLSearchParams) => void, thisArg?: Object): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackFn | (value: string, key: string, searchParams: URLSearchParams) =&gt; void | 是 | 回调函数。 |
-| thisArg | Object | 否 | callbackFn被调用时用作this值，默认值是本对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackFn | (value: string, key: string, searchParams: URLSearchParams) = & gt; void | 是 |
+| thisArg | Object | 否 |
 
 **示例**
 
@@ -373,25 +373,25 @@ get(name: string): string | null
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** get
-
-<!--Device-URLSearchParams-get(name: string): string | null--><!--Device-URLSearchParams-get(name: string): string | null-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 指定键值对的名称。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string \| null | 返回第一个值，如果没找到，返回 null。 |
+| 类型 |
+| --- |
+| string \| null |
 
 **示例**
 
@@ -419,25 +419,25 @@ getAll(name: string): string[]
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** getAll
-
-<!--Device-URLSearchParams-getAll(name: string): string[]--><!--Device-URLSearchParams-getAll(name: string): string[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 指定的键值名称。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string[] | 返回指定名称的所有键对应值的集合。 |
+| 类型 |
+| --- |
+| string[] |
 
 **示例**
 
@@ -467,25 +467,25 @@ has(name: string): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** has
-
-<!--Device-URLSearchParams-has(name: string): boolean--><!--Device-URLSearchParams-has(name: string): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 要查找的参数的键名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 是否存在相对应的key值，存在返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -514,19 +514,19 @@ keys(): IterableIterator<string>
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** keys
-
-<!--Device-URLSearchParams-keys(): IterableIterator<string>--><!--Device-URLSearchParams-keys(): IterableIterator<string>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | 返回一个所有键值对的name的迭代器。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; |
 
 **示例**
 
@@ -563,20 +563,20 @@ set(name: string, value: string): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** set
-
-<!--Device-URLSearchParams-set(name: string, value: string): void--><!--Device-URLSearchParams-set(name: string, value: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 将要设置的参数的键值名。 |
-| value | string | 是 | 所要设置的参数值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| value | string | 是 |
 
 **示例**
 
@@ -602,11 +602,11 @@ sort(): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** sort
-
-<!--Device-URLSearchParams-sort(): void--><!--Device-URLSearchParams-sort(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -634,19 +634,19 @@ toString(): string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** toString
-
-<!--Device-URLSearchParams-toString(): string--><!--Device-URLSearchParams-toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回序列化为字符串的搜索参数，必要时对字符进行百分比编码。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -683,19 +683,19 @@ values(): IterableIterator<string>
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** values
-
-<!--Device-URLSearchParams-values(): IterableIterator<string>--><!--Device-URLSearchParams-values(): IterableIterator<string>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | 返回一个所有键值对的value的迭代器。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; |
 
 **示例**
 
@@ -721,4 +721,3 @@ for (let value of values) {
 // value1
 // value2
 ```
-

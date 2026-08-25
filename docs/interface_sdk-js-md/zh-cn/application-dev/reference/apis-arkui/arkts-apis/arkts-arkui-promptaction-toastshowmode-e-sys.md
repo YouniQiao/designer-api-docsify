@@ -4,7 +4,7 @@
 
 **起始版本：** 11
 
-<!--Device-promptAction-export enum ToastShowMode--><!--Device-promptAction-export enum ToastShowMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,10 @@ Toast shows in SYSTEM_TOAST window.
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-ToastShowMode-SYSTEM_TOP_MOST = 2--><!--Device-ToastShowMode-SYSTEM_TOP_MOST = 2-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
-

@@ -16,23 +16,23 @@ Creates a Bluetooth server listening socket.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [sppListen](arkts-connectivity-bluetoothmanager-spplisten-f.md)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
-<!--Device-bluetooth-function sppListen(name: string, option: SppOption, callback: AsyncCallback<number>): void--><!--Device-bluetooth-function sppListen(name: string, option: SppOption, callback: AsyncCallback<number>): void-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Indicates the service name. |
-| option | SppOption | Yes | Indicates the listen parameters [SppOption](arkts-connectivity-bluetooth-sppoption-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return a server socket ID. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| option | [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Examples**
 
@@ -50,4 +50,3 @@ function serverSocket(code : BusinessError, number : number) {
 let sppOption : bluetooth.SppOption = {uuid: '00001810-0000-1000-8000-00805F9B34FB', secure: false, type: 0};
 bluetooth.sppListen('server1', sppOption, serverSocket);
 ```
-

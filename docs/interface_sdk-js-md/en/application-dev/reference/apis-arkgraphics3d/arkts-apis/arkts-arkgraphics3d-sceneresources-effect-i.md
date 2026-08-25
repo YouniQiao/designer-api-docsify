@@ -4,9 +4,9 @@ Effect resource, which inherits from SceneResource. It is obtained from the crea
 
 **Inheritance/Implementation:** Effect extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-unnamed-export interface Effect--><!--Device-unnamed-export interface Effect-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -20,23 +20,23 @@ Obtains the value of the specified effect property.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-Effect-getPropertyValue(propertyName: string): Object | null | undefined--><!--Device-Effect-getPropertyValue(propertyName: string): Object | null | undefined-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| propertyName | string | Yes | Name of a specified effect property. Currently, the following strings are supported: -'exposure': exposure level of an image. -'vibrance': natural saturation of an image. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| propertyName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Object \| null \| undefined | Effect property value. If the value fails to be obtained, null is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Object \| null \| undefined |
 
 ## setPropertyValue
 
@@ -48,24 +48,24 @@ Sets the value of a specified effect property.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-Effect-setPropertyValue(propertyName: string, value: Object | undefined): boolean--><!--Device-Effect-setPropertyValue(propertyName: string, value: Object | undefined): boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| propertyName | string | Yes | Name of a specified effect property. Currently, the following strings are supported: -'exposure': exposure level of an image. -'vibrance': natural saturation of an image. |
-| value | Object \| undefined | Yes | Value of the effect property to set. -'exposure': The value is of the number type. The recommended value range is [-5, 5]. A larger value indicates a brighter image. -'vibrance': The value is of the number type. The recommended value range is [-1, 1]. A larger value indicates more vivid image colors. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| propertyName | string | Yes |
+| value | Object \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the operation of setting the effect property value is successful. true indicates that the setting is successful, and false indicates that the setting fails. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## effectId
 
@@ -77,9 +77,9 @@ Effect ID, which is in the format of 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX', for
 
 **Type:** string
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-Effect-readonly effectId: string--><!--Device-Effect-readonly effectId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -93,9 +93,8 @@ Enabled status of the effect. true if enabled, false otherwise.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-Effect-enabled: boolean--><!--Device-Effect-enabled: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

@@ -8,11 +8,11 @@ Options for initializing the **Locale** object. Since API version 9, the **Local
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#options)
-
-<!--Device-intl-export interface LocaleOptions--><!--Device-intl-export interface LocaleOptions-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -34,6 +34,8 @@ Calendar parameter. The value can be:"buddhist", "chinese", "coptic", "dangi", "
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.calendar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#calendar)
@@ -41,8 +43,6 @@ Calendar parameter. The value can be:"buddhist", "chinese", "coptic", "dangi", "
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-LocaleOptions-calendar?: string--><!--Device-LocaleOptions-calendar?: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -61,6 +61,8 @@ Whether case is taken into account for the locale's collation rules. The value c
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.caseFirst](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#casefirst)
@@ -68,8 +70,6 @@ Whether case is taken into account for the locale's collation rules. The value c
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-LocaleOptions-caseFirst?: string--><!--Device-LocaleOptions-caseFirst?: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -101,6 +101,8 @@ Collation rules for the locale. The value can be:
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.collation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#collation)
@@ -108,8 +110,6 @@ Collation rules for the locale. The value can be:
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-LocaleOptions-collation?: string--><!--Device-LocaleOptions-collation?: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -125,6 +125,8 @@ Hour cycle. The value can be:"h11", "h12", "h23", or  "h24".
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.hourCycle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#hourcycle)
@@ -132,8 +134,6 @@ Hour cycle. The value can be:"h11", "h12", "h23", or  "h24".
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-LocaleOptions-hourCycle?: string--><!--Device-LocaleOptions-hourCycle?: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -150,6 +150,8 @@ Numbering system. The value can be:
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#numberingsystem)
@@ -157,8 +159,6 @@ Numbering system. The value can be:
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-LocaleOptions-numberingSystem?: string--><!--Device-LocaleOptions-numberingSystem?: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -174,6 +174,8 @@ Whether to treat numeric characters as numbers for sorting. The value true means
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#numeric)
@@ -182,7 +184,4 @@ Whether to treat numeric characters as numbers for sorting. The value true means
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
-<!--Device-LocaleOptions-numeric?: boolean--><!--Device-LocaleOptions-numeric?: boolean-End-->
-
 **System capability:** SystemCapability.Global.I18n
-

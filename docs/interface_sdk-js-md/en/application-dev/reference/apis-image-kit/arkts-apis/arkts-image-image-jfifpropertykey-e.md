@@ -4,7 +4,7 @@ Enumerates the properties available for the metadata of a JFIF image.
 
 **Since:** 26.0.0
 
-<!--Device-image-enum JfifPropertyKey--><!--Device-image-enum JfifPropertyKey-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -18,9 +18,9 @@ JFIF x density.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-JfifPropertyKey-X_DENSITY = 'JfifXDensity'--><!--Device-JfifPropertyKey-X_DENSITY = 'JfifXDensity'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -34,9 +34,9 @@ JFIF y density.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-JfifPropertyKey-Y_DENSITY = 'JfifYDensity'--><!--Device-JfifPropertyKey-Y_DENSITY = 'JfifYDensity'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -50,9 +50,9 @@ JFIF density unit.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-JfifPropertyKey-DENSITY_UNIT = 'JfifDensityUnit'--><!--Device-JfifPropertyKey-DENSITY_UNIT = 'JfifDensityUnit'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -66,9 +66,9 @@ JFIF version.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-JfifPropertyKey-VERSION = 'JfifVersion'--><!--Device-JfifPropertyKey-VERSION = 'JfifVersion'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -82,9 +82,8 @@ whether the JFIF image is progressive.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-JfifPropertyKey-IS_PROGRESSIVE = 'JfifIsProgressive'--><!--Device-JfifPropertyKey-IS_PROGRESSIVE = 'JfifIsProgressive'-End-->
-
 **System capability:** SystemCapability.Multimedia.Image.Core
-

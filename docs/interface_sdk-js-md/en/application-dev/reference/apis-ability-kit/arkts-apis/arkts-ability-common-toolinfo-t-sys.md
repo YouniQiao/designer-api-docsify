@@ -8,13 +8,12 @@ Define basic information about the CLI tool.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-common-export type ToolInfo = _ToolInfo--><!--Device-common-export type ToolInfo = _ToolInfo-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
 
 **Property type:** _ToolInfo
-

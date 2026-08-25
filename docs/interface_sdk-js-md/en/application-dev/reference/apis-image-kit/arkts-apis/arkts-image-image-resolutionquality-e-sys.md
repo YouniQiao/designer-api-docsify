@@ -2,9 +2,9 @@
 
 Enumerates the image quality levels.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-image-enum ResolutionQuality--><!--Device-image-enum ResolutionQuality-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -18,9 +18,9 @@ LOW = 1
 
 Low image quality, requiring a short decoding time.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-ResolutionQuality-LOW = 1--><!--Device-ResolutionQuality-LOW = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -34,9 +34,9 @@ MEDIUM = 2
 
 Medium image quality, requiring a medium decoding time
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-ResolutionQuality-MEDIUM = 2--><!--Device-ResolutionQuality-MEDIUM = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -50,11 +50,10 @@ HIGH = 3
 
 High image quality, requiring a long decoding time.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-ResolutionQuality-HIGH = 3--><!--Device-ResolutionQuality-HIGH = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **System API:** This is a system API.
-

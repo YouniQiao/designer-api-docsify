@@ -1,12 +1,12 @@
 # RoundRectShapeOptions
 
-Represents the parameter of the constructor used to create a **RectShape** object with rounded corners.This API inherits from [ShapeSize](../../apis-default/arkts-apis/arkts-arkui-shape-shapesize-i.md).
+Represents the parameter of the constructor used to create a **RectShape** object with rounded corners.This API inherits from [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md).
 
-**Inheritance/Implementation:** RoundRectShapeOptions extends [ShapeSize](../../apis-default/arkts-apis/arkts-arkui-shape-shapesize-i.md)
+**Inheritance/Implementation:** RoundRectShapeOptions extends [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md)
 
 **Since:** 12
 
-<!--Device-unnamed-interface RoundRectShapeOptions--><!--Device-unnamed-interface RoundRectShapeOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,13 +28,13 @@ Radius height of the rectangle border corners.When the parameter type is number,
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-RoundRectShapeOptions-radiusHeight?: number | string--><!--Device-RoundRectShapeOptions-radiusHeight?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,13 +50,12 @@ Radius width of the rectangle border corners.When the parameter type is number, 
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-RoundRectShapeOptions-radiusWidth?: number | string--><!--Device-RoundRectShapeOptions-radiusWidth?: number | string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

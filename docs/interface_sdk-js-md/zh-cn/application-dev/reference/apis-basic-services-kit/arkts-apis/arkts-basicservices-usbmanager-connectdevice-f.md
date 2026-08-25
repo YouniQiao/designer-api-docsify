@@ -16,33 +16,33 @@ function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 1. 调用[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md)获取设备信息以及USBDevice;
 2. 调用[usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md)请求使用该设备的权限。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-usbManager-function connectDevice(device: USBDevice): Readonly<USBDevicePipe>--><!--Device-usbManager-function connectDevice(device: USBDevice): Readonly<USBDevicePipe>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| device | USBDevice | 是 | USB设备信息，用[getDevices](arkts-basicservices-usbmanager-getdevices-f.md)获取的busNum和devAddress确定设备，当前其他属性（如 name、vendorId等）不参与设备匹配。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| device | [USBDevice](arkts-basicservices-usb-usbdevice-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Readonly&lt;USBDevicePipe&gt; | USB设备连接通道对象，用于后续的数据传输和设备控制操作。 |
+| 类型 |
+| --- |
+| Readonly & lt;USBDevicePipe & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified.<br>2.Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
-| [14400001](../errorcode-usb.md#14400001-usb设备访问权限被拒绝) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
-| [14400004](../errorcode-usb.md#14400004-服务异常) |  |
-| [14400012](../errorcode-usb.md#14400012-io错误) |  |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [14400001](../errorcode-usb.md#14400001-usb设备访问权限被拒绝) |
+| [14400004](../errorcode-usb.md#14400004-服务异常) |
+| [14400012](../errorcode-usb.md#14400012-io错误) |
 
 **示例**
 
@@ -69,4 +69,3 @@ async function connectDevice() {
   usbManager.closePipe(devicePipe);
 }
 ```
-

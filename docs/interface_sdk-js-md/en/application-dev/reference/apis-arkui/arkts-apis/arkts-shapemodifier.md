@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [ShapeModifier](arkts-arkui-shapemodifier-c.md) | Defines Shape Modifier@implements ShapeAttribute, AttributeModifier&lt;ShapeAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ShapeModifier](arkts-arkui-shapemodifier-c.md) |

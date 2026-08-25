@@ -4,9 +4,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export interface StyledStringChangeValue--><!--Device-unnamed-export interface StyledStringChangeValue-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +20,9 @@ previewText?: StyledString
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StyledStringChangeValue-previewText?: StyledString--><!--Device-StyledStringChangeValue-previewText?: StyledString-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,11 +38,9 @@ range: TextRange
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StyledStringChangeValue-range: TextRange--><!--Device-StyledStringChangeValue-range: TextRange-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,11 +56,8 @@ replacementString: StyledString
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-StyledStringChangeValue-replacementString: StyledString--><!--Device-StyledStringChangeValue-replacementString: StyledString-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

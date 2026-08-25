@@ -16,7 +16,7 @@ function cwd(): string
 
 **起始版本：** 7
 
-<!--Device-process-function cwd(): string--><!--Device-process-function cwd(): string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -24,7 +24,6 @@ function cwd(): string
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回当前工作目录。 |
-
+| 类型 |
+| --- |
+| string |

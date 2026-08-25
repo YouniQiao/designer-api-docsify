@@ -4,7 +4,7 @@ Bind target result.
 
 **Since:** 23
 
-<!--Device-distributedDeviceManager-interface BindTargetResult--><!--Device-distributedDeviceManager-interface BindTargetResult-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -26,7 +26,6 @@ Device identifier. The actual value is udid-hash confused with appid and salt va
 
 **Since:** 23
 
-<!--Device-BindTargetResult-deviceId: string--><!--Device-BindTargetResult-deviceId: string-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
-

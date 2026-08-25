@@ -16,17 +16,17 @@ Checks whether the main window of this ability has the focus. This API uses an a
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-featureAbility-function hasWindowFocus(callback: AsyncCallback<boolean>): void--><!--Device-featureAbility-function hasWindowFocus(callback: AsyncCallback<boolean>): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result.<br>If the main window has the focus, **true** is returned. Otherwise, **false** is returned. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
 **Examples**
 
@@ -61,19 +61,18 @@ Checks whether the main window of this ability has the focus. This API uses a pr
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-featureAbility-function hasWindowFocus(): Promise<boolean>--><!--Device-featureAbility-function hasWindowFocus(): Promise<boolean>-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. If the main window has the focus, **true** is returned. Otherwise, **false** is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **Examples**
 
 See [hasWindowFocus](#haswindowfocus)
-

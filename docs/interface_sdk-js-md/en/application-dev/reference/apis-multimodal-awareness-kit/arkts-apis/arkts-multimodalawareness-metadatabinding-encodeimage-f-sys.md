@@ -14,9 +14,9 @@ function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.
 
 Encodes metadata into an image. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-metadataBinding-function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.PixelMap>--><!--Device-metadataBinding-function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.PixelMap>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.MetadataBinding
 
@@ -24,24 +24,24 @@ Encodes metadata into an image. This API uses a promise to return the result.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| srcImage | image.PixelMap | Yes | Source image. |
-| metadata | string | Yes | Metadata to be encoded. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| srcImage | image.PixelMap | Yes |
+| metadata | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise object, which is used to return the image with encoded metadata. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;image.PixelMap & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API. |
-| [32100001](../errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
-| [32100002](../errorcode-metadataBinding.md#32100002-encoding-failed) | Encode process fail. Possible causes: <br>1. Image processing error. <br>2. Channel coding error. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [32100001](../errorcode-metadataBinding.md#32100001-file-creation-failed) |
+| [32100002](../errorcode-metadataBinding.md#32100002-encoding-failed) |
 
 **Examples**
 
@@ -59,4 +59,3 @@ metadataBinding.encodeImage(srcImage, metadata).then((pixelMap: image.PixelMap) 
   console.error("encode image error" + error);
 });
 ```
-

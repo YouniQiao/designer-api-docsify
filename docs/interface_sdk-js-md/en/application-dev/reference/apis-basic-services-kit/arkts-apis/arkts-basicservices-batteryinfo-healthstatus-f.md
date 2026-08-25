@@ -16,15 +16,12 @@ Battery health status of the device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-batteryInfo-function healthStatus(): BatteryHealthState--><!--Device-batteryInfo-function healthStatus(): BatteryHealthState-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BatteryHealthState](arkts-basicservices-batteryinfo-batteryhealthstate-e.md) | Returns the battery health status of the device. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [BatteryHealthState](arkts-basicservices-batteryinfo-batteryhealthstate-e.md) |

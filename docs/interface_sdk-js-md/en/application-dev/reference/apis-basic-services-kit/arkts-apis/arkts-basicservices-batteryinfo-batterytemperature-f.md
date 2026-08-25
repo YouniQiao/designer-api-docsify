@@ -16,15 +16,12 @@ Battery temperature of the device, in unit of 0.1°C.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-batteryInfo-function batteryTemperature(): int--><!--Device-batteryInfo-function batteryTemperature(): int-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Returns the battery temperature of the device, in unit of 0.1°C. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| int |

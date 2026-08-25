@@ -4,7 +4,7 @@ Enumerates layout modes of the tab bar.
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum BarMode--><!--Device-unnamed-declare enum BarMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ The width of each tab is determined by the actual layout. The tabs are scrollabl
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-BarMode-Scrollable = 0--><!--Device-BarMode-Scrollable = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,8 @@ The width of each tab is determined by equally dividing the number of tabs by th
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-BarMode-Fixed = 1--><!--Device-BarMode-Fixed = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

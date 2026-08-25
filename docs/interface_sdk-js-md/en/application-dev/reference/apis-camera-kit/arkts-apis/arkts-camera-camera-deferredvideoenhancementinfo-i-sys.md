@@ -2,9 +2,9 @@
 
 Deferred video enhancement info.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-camera-interface DeferredVideoEnhancementInfo--><!--Device-camera-interface DeferredVideoEnhancementInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -26,9 +26,9 @@ Check whether deferred video enhancement available.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-DeferredVideoEnhancementInfo-readonly isDeferredVideoEnhancementAvailable: boolean--><!--Device-DeferredVideoEnhancementInfo-readonly isDeferredVideoEnhancementAvailable: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -44,11 +44,10 @@ Video identifier.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-DeferredVideoEnhancementInfo-readonly videoId?: string--><!--Device-DeferredVideoEnhancementInfo-readonly videoId?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

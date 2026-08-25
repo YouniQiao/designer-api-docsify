@@ -8,13 +8,12 @@ Represents the current matrix object.
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
-<!--Device-unnamed-declare type ImageMatrix = import ('../api/@ohos.matrix4').default.Matrix4Transit--><!--Device-unnamed-declare type ImageMatrix = import ('../api/@ohos.matrix4').default.Matrix4Transit-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** import ('../api/@ohos.matrix4').default.Matrix4Transit
-

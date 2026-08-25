@@ -6,7 +6,7 @@ Inherits from [BaseEvent](arkts-arkui-baseevent-i.md). In non-event injection sc
 
 **Since:** 7
 
-<!--Device-unnamed-declare interface TouchEvent--><!--Device-unnamed-declare interface TouchEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,19 +25,60 @@ Obtains all historical touch points for the current frame. The touch event frequ
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-TouchEvent-getHistoricalPoints(): Array<HistoricalPoint>--><!--Device-TouchEvent-getHistoricalPoints(): Array<HistoricalPoint>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;[HistoricalPoint](arkts-arkui-historicalpoint-i.md)&gt; | Array of historical points. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;[HistoricalPoint](arkts-arkui-historicalpoint-i.md)&gt; |
+
+## preventDefault
+
+```TypeScript
+preventDefault: () => void
+```
+
+Blocks the default event.  
+**NOTE：**This API is only supported by the Hyperlink component. Using it with unsupported components throws an exception. Asynchronous calls and **Modifier** API integration are not yet supported.
+
+**Since:** 12
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [100017](../errorcode-event.md#100017-component-does-not-support-default-event-prevention) |
+
+## stopPropagation
+
+```TypeScript
+stopPropagation: () => void
+```
+
+Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
+
+**Since:** 7
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## changedTouches
 
@@ -51,9 +92,9 @@ Information about touch points that changed and triggered the event. When using 
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-TouchEvent-changedTouches: TouchObject[]--><!--Device-TouchEvent-changedTouches: TouchObject[]-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,50 +111,11 @@ Unique identifier for event processing.Value range: [0, +∞)
 
 **Since:** 24
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-TouchEvent-eventHandleId?: number--><!--Device-TouchEvent-eventHandleId?: number-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## preventDefault
-
-```TypeScript
-preventDefault: () => void
-```
-
-Blocks the default event.  
-**NOTE：**This API is only supported by the Hyperlink component. Using it with unsupported components throws an exception. Asynchronous calls and **Modifier** API integration are not yet supported.
-
-**Type:** () =&gt; void
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TouchEvent-preventDefault: () => void--><!--Device-TouchEvent-preventDefault: () => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## stopPropagation
-
-```TypeScript
-stopPropagation: () => void
-```
-
-Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
-
-**Type:** () =&gt; void
-
-**Since:** 7
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-TouchEvent-stopPropagation: () => void--><!--Device-TouchEvent-stopPropagation: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -129,9 +131,9 @@ Information about all touch points (for multi-touch). Each element represents on
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-TouchEvent-touches: TouchObject[]--><!--Device-TouchEvent-touches: TouchObject[]-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -147,9 +149,8 @@ Type of the touch event.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-TouchEvent-type: TouchType--><!--Device-TouchEvent-type: TouchType-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

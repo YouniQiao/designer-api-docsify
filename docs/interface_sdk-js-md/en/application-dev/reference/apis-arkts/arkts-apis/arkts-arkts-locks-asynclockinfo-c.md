@@ -4,7 +4,7 @@ Information about a lock.
 
 **Since:** 12
 
-<!--Device-locks-class AsyncLockInfo--><!--Device-locks-class AsyncLockInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,9 +26,9 @@ lockAsync caller's execution context identifier.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-AsyncLockInfo-contextId: number--><!--Device-AsyncLockInfo-contextId: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -44,9 +44,9 @@ Lock operation mode.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-AsyncLockInfo-mode: AsyncLockMode--><!--Device-AsyncLockInfo-mode: AsyncLockMode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -62,9 +62,8 @@ Name of the lock.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AsyncLockInfo-name: string--><!--Device-AsyncLockInfo-name: string-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

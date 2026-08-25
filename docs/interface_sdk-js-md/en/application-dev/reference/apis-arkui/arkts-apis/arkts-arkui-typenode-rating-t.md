@@ -8,13 +8,12 @@ Represents a FrameNode of the **Rating** type.
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-typeNode-type Rating = TypedFrameNode<RatingInterface, RatingAttribute>--><!--Device-typeNode-type Rating = TypedFrameNode<RatingInterface, RatingAttribute>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;RatingInterface, RatingAttribute&gt;
-
+**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;RatingInterface, RatingAttribute&gt;

@@ -2,9 +2,9 @@
 
 Enumerates the modes for creating media files.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-media-enum FileGenerationMode--><!--Device-media-enum FileGenerationMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -16,9 +16,9 @@ APP_CREATE = 0
 
 The application creates a media file in the sandbox.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-FileGenerationMode-APP_CREATE = 0--><!--Device-FileGenerationMode-APP_CREATE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -30,9 +30,8 @@ AUTO_CREATE_CAMERA_SCENE = 1
 
 The system creates a media file. Currently, this mode takes effect only in camera recording scenarios. The URL set by the application is ignored.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-FileGenerationMode-AUTO_CREATE_CAMERA_SCENE = 1--><!--Device-FileGenerationMode-AUTO_CREATE_CAMERA_SCENE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
-

@@ -2,9 +2,9 @@
 
 Manages GATT client. Before calling an Gatt client method, you must use [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md) to create an GattClientDevice instance.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ble-interface GattClientDevice--><!--Device-ble-interface GattClientDevice-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -25,11 +25,11 @@ Writes the characteristic of a BLE peripheral device with context.
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GattClientDevice-writeCharacteristicValueWithContext(      characteristic: BLECharacteristic, writeType: GattWriteType): Promise<GattRspContext>--><!--Device-GattClientDevice-writeCharacteristicValueWithContext(      characteristic: BLECharacteristic, writeType: GattWriteType): Promise<GattRspContext>-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -37,32 +37,32 @@ Writes the characteristic of a BLE peripheral device with context.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| characteristic | BLECharacteristic | Yes | Indicates the characteristic to write. |
-| writeType | [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md) | Yes | Write type of the characteristic. The interface currently only supports [WRITE](arkts-connectivity-ble-gattwritetype-e.md#write) mode. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes |
+| [writeType](arkts-connectivity-ssap-propertywriterequest-i.md) | [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[GattRspContext](arkts-connectivity-ble-gattrspcontext-i-sys.md)&gt; | Promise used to return the result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[GattRspContext](arkts-connectivity-ble-gattrspcontext-i-sys.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2900011 | The operation is busy. The last operation is not complete. |
-| 2900099 | Operation failed. |
-| 2901001 | Write forbidden. |
-| 2901003 | The connection is not established. |
-| 2901004 | The connection is congested. |
-| 2901005 | The connection is not encrypted. |
-| 2901006 | The connection is not authenticated. |
-| 2901007 | The connection is not authorized. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| 2900011 |
+| 2900099 |
+| 2901001 |
+| 2901003 |
+| 2901004 |
+| 2901005 |
+| 2901006 |
+| 2901007 |
 
 **Examples**
 
@@ -91,4 +91,3 @@ try {
     console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
 }
 ```
-

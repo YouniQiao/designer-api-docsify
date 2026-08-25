@@ -9,36 +9,36 @@ import { eap } from '@kit.NetworkKit';
 ## startEthEap
 
 ```TypeScript
-function startEthEap(netId: int, profile: EthEapProfile): void
+function startEthEap(netId: number, profile: EthEapProfile): void
 ```
 
 Starts EAP authentication on an Ethernet NIC.
 
 **Since:** 20
 
-**Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-eap-function startEthEap(netId: int, profile: EthEapProfile): void--><!--Device-eap-function startEthEap(netId: int, profile: EthEapProfile): void-End-->
+**Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| netId | int | Yes | ID of the Ethernet NIC. If the default value **-1** is specified, the system automatically matches the Ethernet NIC to initiate EAP authentication. |
-| profile | [EthEapProfile](arkts-network-eap-etheapprofile-i.md) | Yes | EAP profile. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| netId | number | Yes |
+| profile | [EthEapProfile](arkts-network-eap-etheapprofile-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [33200001](../errorcode-net-eap.md#33200001-invalid-netid) | Invalid netId |
-| [33200003](../errorcode-net-eap.md#33200003-invalid-eth-eap-configuration) | Invalid profile |
-| [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) | netmanager stop |
-| [33200010](../errorcode-net-eap.md#33200010-invalid-eap-status) | invalid eth state |
-| [33200099](../errorcode-net-eap.md#33200099-internal-program-error) | internal error |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [33200001](../errorcode-net-eap.md#33200001-invalid-netid) |
+| [33200003](../errorcode-net-eap.md#33200003-invalid-eth-eap-configuration) |
+| [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) |
+| [33200010](../errorcode-net-eap.md#33200010-invalid-eap-status) |
+| [33200099](../errorcode-net-eap.md#33200099-internal-program-error) |
 
 **Examples**
 
@@ -70,4 +70,3 @@ try {
   console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
 }
 ```
-

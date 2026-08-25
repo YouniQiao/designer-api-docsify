@@ -4,7 +4,7 @@ Describes [environment variable](../../../ui/arkts-env-system-property.md) data 
 
 **Since:** 23
 
-<!--Device-window-interface UIEnvWindowAvoidAreaInfoPX--><!--Device-window-interface UIEnvWindowAvoidAreaInfoPX-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -26,7 +26,7 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is *
 
 **Since:** 23
 
-<!--Device-UIEnvWindowAvoidAreaInfoPX-cutout: AvoidArea--><!--Device-UIEnvWindowAvoidAreaInfoPX-cutout: AvoidArea-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -42,7 +42,7 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is *
 
 **Since:** 23
 
-<!--Device-UIEnvWindowAvoidAreaInfoPX-keyboard: AvoidArea--><!--Device-UIEnvWindowAvoidAreaInfoPX-keyboard: AvoidArea-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -58,7 +58,7 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is *
 
 **Since:** 23
 
-<!--Device-UIEnvWindowAvoidAreaInfoPX-navigationIndicator: AvoidArea--><!--Device-UIEnvWindowAvoidAreaInfoPX-navigationIndicator: AvoidArea-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -74,7 +74,6 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is *
 
 **Since:** 23
 
-<!--Device-UIEnvWindowAvoidAreaInfoPX-statusBar: AvoidArea--><!--Device-UIEnvWindowAvoidAreaInfoPX-statusBar: AvoidArea-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
-

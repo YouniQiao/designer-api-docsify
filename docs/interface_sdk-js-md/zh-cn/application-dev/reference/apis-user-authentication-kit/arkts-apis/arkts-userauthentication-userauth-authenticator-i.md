@@ -4,11 +4,11 @@
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
 **替代接口：** [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)
-
-<!--Device-userAuth-interface Authenticator--><!--Device-userAuth-interface Authenticator-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -28,23 +28,23 @@ execute(type: AuthType, level: SecureLevel, callback: AsyncCallback<number>): vo
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
 **替代接口：** [start](arkts-userauthentication-userauth-authinstance-i.md#start)
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
-<!--Device-Authenticator-execute(type: AuthType, level: SecureLevel, callback: AsyncCallback<number>): void--><!--Device-Authenticator-execute(type: AuthType, level: SecureLevel, callback: AsyncCallback<number>): void-End-->
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | AuthType | 是 | 认证类型，当前只支持"FACE_ONLY"。<br/>ALL为预留参数。当前版本暂不支持ALL类型的认证。 |
-| level | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | 是 | 安全级别，对应认证的安全级别，有效值为"S1"（最低）、"S2"、"S3"、"S4"（最高）。<br/>具备3D人脸识别能力的设备支持"S3"及以下安全级别的认证。 <br/>具备2D人脸识别能力的设备支持"S2"及以下安全级别的认证。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。number表示认证结果，参见 [AuthenticationResult](arkts-userauthentication-userauth-authenticationresult-e.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [AuthType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtype-e-sys.md) | 是 |
+| level | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **示例**
 
@@ -84,30 +84,29 @@ execute(type: AuthType, level: SecureLevel): Promise<number>
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
 **替代接口：** [start](arkts-userauthentication-userauth-authinstance-i.md#start)
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
-<!--Device-Authenticator-execute(type: AuthType, level: SecureLevel): Promise<number>--><!--Device-Authenticator-execute(type: AuthType, level: SecureLevel): Promise<number>-End-->
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | AuthType | 是 | 认证类型，当前只支持"FACE_ONLY"。<br/>ALL为预留参数。当前版本暂不支持ALL类型的认证。 |
-| level | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | 是 | 安全级别，对应认证的安全级别，有效值为"S1"（最低）、"S2"、"S3"、"S4"（最高）。<br/>具备3D人脸识别能力的设备支持"S3"及以下安全级别的认证。 <br/>具备2D人脸识别能力的设备支持"S2"及以下安全级别的认证。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [AuthType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtype-e-sys.md) | 是 |
+| level | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;number&gt; | 返回携带一个number的Promise。number 为认证结果，参见 [AuthenticationResult]{ |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **示例**
 
 参见 [execute](#execute)
-

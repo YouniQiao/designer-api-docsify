@@ -1,12 +1,12 @@
 # RectShapeOptions
 
-Represents the parameter of the constructor used to create a **RectShape** object.This API inherits from [ShapeSize](../../apis-default/arkts-apis/arkts-arkui-shape-shapesize-i.md).
+Represents the parameter of the constructor used to create a **RectShape** object.This API inherits from [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md).
 
-**Inheritance/Implementation:** RectShapeOptions extends [ShapeSize](../../apis-default/arkts-apis/arkts-arkui-shape-shapesize-i.md)
+**Inheritance/Implementation:** RectShapeOptions extends [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md)
 
 **Since:** 12
 
-<!--Device-unnamed-interface RectShapeOptions--><!--Device-unnamed-interface RectShapeOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,13 +28,12 @@ Radius of the rectangle border corners.When the parameter type is number, the va
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-RectShapeOptions-radius?: number | string | Array<number | string>--><!--Device-RectShapeOptions-radius?: number | string | Array<number | string>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

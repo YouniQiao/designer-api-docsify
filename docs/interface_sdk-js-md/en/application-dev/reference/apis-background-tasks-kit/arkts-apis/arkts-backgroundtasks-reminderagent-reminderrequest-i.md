@@ -4,11 +4,11 @@ Defines the reminder to publish.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
-
-<!--Device-reminderAgent-interface ReminderRequest--><!--Device-reminderAgent-interface ReminderRequest-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -30,11 +30,11 @@ Button displayed in the reminder notification. (The parameter is optional. Up to
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** actionButton
-
-<!--Device-ReminderRequest-actionButton?: [ActionButton?, ActionButton?]--><!--Device-ReminderRequest-actionButton?: [ActionButton?, ActionButton?]-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -50,11 +50,11 @@ Reminder content.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** content
-
-<!--Device-ReminderRequest-content?: string--><!--Device-ReminderRequest-content?: string-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -70,11 +70,11 @@ Content to be displayed after the reminder expires.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** expiredContent
-
-<!--Device-ReminderRequest-expiredContent?: string--><!--Device-ReminderRequest-expiredContent?: string-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -90,11 +90,11 @@ Information about the ability that is automatically started when the reminder ar
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** maxScreenWantAgent
-
-<!--Device-ReminderRequest-maxScreenWantAgent?: MaxScreenWantAgent--><!--Device-ReminderRequest-maxScreenWantAgent?: MaxScreenWantAgent-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -110,11 +110,11 @@ Notification ID used by the reminder. If there are reminders with the same notif
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** notificationId
-
-<!--Device-ReminderRequest-notificationId?: number--><!--Device-ReminderRequest-notificationId?: number-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -130,11 +130,11 @@ Type of the reminder.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** reminderType
-
-<!--Device-ReminderRequest-reminderType: ReminderType--><!--Device-ReminderRequest-reminderType: ReminderType-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -150,11 +150,11 @@ Ringing duration, in seconds. The default value is **1**. Unit: s.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** ringDuration
-
-<!--Device-ReminderRequest-ringDuration?: number--><!--Device-ReminderRequest-ringDuration?: number-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -170,11 +170,11 @@ Type of the slot used by the reminder.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** slotType
-
-<!--Device-ReminderRequest-slotType?: notification.SlotType--><!--Device-ReminderRequest-slotType?: notification.SlotType-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -190,11 +190,11 @@ Content to be displayed when the reminder is snoozing.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** snoozeContent
-
-<!--Device-ReminderRequest-snoozeContent?: string--><!--Device-ReminderRequest-snoozeContent?: string-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -210,11 +210,11 @@ Number of reminder snooze times. The default value is **0**.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** snoozeTimes
-
-<!--Device-ReminderRequest-snoozeTimes?: number--><!--Device-ReminderRequest-snoozeTimes?: number-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -230,11 +230,11 @@ Reminder snooze interval, in seconds. The default value is **0**. Unit: s.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** timeInterval
-
-<!--Device-ReminderRequest-timeInterval?: number--><!--Device-ReminderRequest-timeInterval?: number-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -250,11 +250,11 @@ Reminder title.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** title
-
-<!--Device-ReminderRequest-title?: string--><!--Device-ReminderRequest-title?: string-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -270,11 +270,10 @@ Information about the ability that is redirected to when the notification is cli
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** wantAgent
 
-<!--Device-ReminderRequest-wantAgent?: WantAgent--><!--Device-ReminderRequest-wantAgent?: WantAgent-End-->
-
 **System capability:** SystemCapability.Notification.ReminderAgent
-

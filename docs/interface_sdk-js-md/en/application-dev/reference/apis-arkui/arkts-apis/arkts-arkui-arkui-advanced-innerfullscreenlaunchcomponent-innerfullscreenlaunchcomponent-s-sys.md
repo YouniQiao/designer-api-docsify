@@ -9,9 +9,7 @@
 
 **Since:** 12
 
-**Decorator:** @Component
-
-<!--Device-unnamed-export declare struct InnerFullScreenLaunchComponent--><!--Device-unnamed-export declare struct InnerFullScreenLaunchComponent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,9 +33,7 @@ Content displayed in the component.
 
 **Since:** 12
 
-**Decorator:** @BuilderParam
-
-<!--Device-InnerFullScreenLaunchComponent-@BuilderParam  content: Callback<void>--><!--Device-InnerFullScreenLaunchComponent-@BuilderParam  content: Callback<void>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -55,7 +51,7 @@ Controller for launching the atomic service.
 
 **Since:** 12
 
-<!--Device-InnerFullScreenLaunchComponent-controller: LaunchController--><!--Device-InnerFullScreenLaunchComponent-controller: LaunchController-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,7 +69,7 @@ Callback triggered when an exception occurs during the execution of an embedded 
 
 **Since:** 23
 
-<!--Device-InnerFullScreenLaunchComponent-onError?: ErrorCallback--><!--Device-InnerFullScreenLaunchComponent-onError?: ErrorCallback-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -91,7 +87,7 @@ Callback triggered when an embedded atomic service calls [@ohos.window (window)]
 
 **Since:** 20
 
-<!--Device-InnerFullScreenLaunchComponent-onReceive?: Callback<Record<string, Object>>--><!--Device-InnerFullScreenLaunchComponent-onReceive?: Callback<Record<string, Object>>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -109,9 +105,8 @@ Callback triggered when an embedded atomic service exits normally. Exit scenario
 
 **Since:** 23
 
-<!--Device-InnerFullScreenLaunchComponent-onTerminated?: Callback<TerminationInfo>--><!--Device-InnerFullScreenLaunchComponent-onTerminated?: Callback<TerminationInfo>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

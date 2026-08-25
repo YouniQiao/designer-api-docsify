@@ -7,9 +7,9 @@
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-bundle-export interface BundleOptions--><!--Device-bundle-export interface BundleOptions-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -31,9 +31,8 @@ userId?: number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-<!--Device-BundleOptions-userId?: number--><!--Device-BundleOptions-userId?: number-End-->
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework
-

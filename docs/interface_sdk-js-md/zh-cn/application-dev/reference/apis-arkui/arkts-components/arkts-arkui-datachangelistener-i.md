@@ -8,7 +8,7 @@
 
 **起始版本：** 7
 
-<!--Device-unnamed-declare interface DataChangeListener--><!--Device-unnamed-declare interface DataChangeListener-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,17 +30,17 @@ onDataAdd(index: number): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-DataChangeListener-onDataAdd(index: number): void--><!--Device-DataChangeListener-onDataAdd(index: number): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | number | 是 | 数据添加位置的索引值。取值范围是[0, 数据源长度-1]。 <br>小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
 
 ## onDataAdded
 
@@ -55,19 +55,19 @@ onDataAdded(index: number): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 8
 
 **替代接口：** [onDataAdd](#ondataadd)
-
-<!--Device-DataChangeListener-onDataAdded(index: number): void--><!--Device-DataChangeListener-onDataAdded(index: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | number | 是 | 数据添加位置的索引值。取值范围是[0, 数据源长度-1]。 <br>小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
 
 ## onDataChange
 
@@ -82,17 +82,17 @@ onDataChange(index: number): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-DataChangeListener-onDataChange(index: number): void--><!--Device-DataChangeListener-onDataChange(index: number): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | number | 是 | 数据变化位置的索引值。取值范围是[0, 数据源长度-1]。 <br>小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
 
 ## onDataChanged
 
@@ -107,19 +107,19 @@ onDataChanged(index: number): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 8
 
 **替代接口：** [onDataChange](#ondatachange)
-
-<!--Device-DataChangeListener-onDataChanged(index: number): void--><!--Device-DataChangeListener-onDataChanged(index: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | number | 是 | 数据变化位置的索引值。取值范围是[0, 数据源长度-1]。 <br>小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
 
 ## onDataDelete
 
@@ -135,17 +135,17 @@ onDataDelete(index: number): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-DataChangeListener-onDataDelete(index: number): void--><!--Device-DataChangeListener-onDataDelete(index: number): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | number | 是 | 数据删除位置的索引值。取值范围是[0, 数据源长度-1]。 <br>小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
 
 ## onDataDeleted
 
@@ -160,19 +160,19 @@ onDataDeleted(index: number): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 8
 
 **替代接口：** [onDataDelete](#ondatadelete)
-
-<!--Device-DataChangeListener-onDataDeleted(index: number): void--><!--Device-DataChangeListener-onDataDeleted(index: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | number | 是 | 数据删除位置的索引值。取值范围是[0, 数据源长度-1]。 <br>小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
 
 ## onDataMove
 
@@ -188,18 +188,18 @@ onDataMove(from: number, to: number): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-DataChangeListener-onDataMove(from: number, to: number): void--><!--Device-DataChangeListener-onDataMove(from: number, to: number): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| from | number | 是 | 数据移动起始位置。取值范围是[0, 数据源长度-1]。 <br>小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
-| to | number | 是 | 数据移动目标位置。取值范围是[0, 数据源长度-1]。 <br>小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| from | number | 是 |
+| to | number | 是 |
 
 ## onDataMoved
 
@@ -215,20 +215,20 @@ onDataMoved(from: number, to: number): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 8
 
 **替代接口：** [onDataMove](#ondatamove)
-
-<!--Device-DataChangeListener-onDataMoved(from: number, to: number): void--><!--Device-DataChangeListener-onDataMoved(from: number, to: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| from | number | 是 | 数据移动起始位置。取值范围是[0, 数据源长度-1]。 <br>小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
-| to | number | 是 | 数据移动目标位置。取值范围是[0, 数据源长度-1]。 <br>小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| from | number | 是 |
+| to | number | 是 |
 
 ## onDataReloaded
 
@@ -243,9 +243,9 @@ onDataReloaded(): void
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-DataChangeListener-onDataReloaded(): void--><!--Device-DataChangeListener-onDataReloaded(): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -259,19 +259,19 @@ onDataReloaded(reuseImmediately: boolean): void
 
 **起始版本：** 26.1.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DataChangeListener-onDataReloaded(reuseImmediately: boolean): void--><!--Device-DataChangeListener-onDataReloaded(reuseImmediately: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| reuseImmediately | boolean | 是 | 是否允许在更新过程中复用旧的子组件。<br/>true：允许在更新过程中复用旧的子组件。<br/>false：不允许在更新过程中复用旧的子组件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [reuseImmediately](arkts-arkui-datareloadoperation-i.md) | boolean | 是 |
 
 ## onDatasetChange
 
@@ -288,17 +288,16 @@ onDatasetChange(dataOperations: DataOperation[]): void
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DataChangeListener-onDatasetChange(dataOperations: DataOperation[]): void--><!--Device-DataChangeListener-onDatasetChange(dataOperations: DataOperation[]): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dataOperations | [DataOperation](arkts-arkui-dataoperation-t.md)[] | 是 | 一次批量处理数据的操作集合，开发者将需要处理的数据操作（添加、删除、改变、移动、交换、重载等）放入该数组，组件按照数组中的操作顺序刷新展示内 容。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dataOperations | [DataOperation](arkts-arkui-dataoperation-t.md)[] | 是 |

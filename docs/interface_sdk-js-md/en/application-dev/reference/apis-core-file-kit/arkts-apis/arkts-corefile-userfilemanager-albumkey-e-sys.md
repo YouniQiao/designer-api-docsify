@@ -4,11 +4,11 @@ Defines the key album information.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [AlbumKeys](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md)
-
-<!--Device-userFileManager-enum AlbumKey--><!--Device-userFileManager-enum AlbumKey-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -24,11 +24,11 @@ URI of the album.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md#uri)
-
-<!--Device-AlbumKey-URI = 0--><!--Device-AlbumKey-URI = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -44,11 +44,11 @@ Type of the file.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md)
-
-<!--Device-AlbumKey-FILE_TYPE = 1--><!--Device-AlbumKey-FILE_TYPE = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -64,11 +64,11 @@ Name of the album.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [ALBUM_NAME](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md#album_name)
-
-<!--Device-AlbumKey-ALBUM_NAME = 2--><!--Device-AlbumKey-ALBUM_NAME = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -84,11 +84,11 @@ Date when the file was added. The value is the number of seconds elapsed since t
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e-sys.md#date_modified)
-
-<!--Device-AlbumKey-DATE_ADDED = 3--><!--Device-AlbumKey-DATE_ADDED = 3-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -104,13 +104,12 @@ Date when the file content (not the file name) was last modified. The value is t
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e-sys.md#date_modified)
 
-<!--Device-AlbumKey-DATE_MODIFIED = 4--><!--Device-AlbumKey-DATE_MODIFIED = 4-End-->
-
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
-

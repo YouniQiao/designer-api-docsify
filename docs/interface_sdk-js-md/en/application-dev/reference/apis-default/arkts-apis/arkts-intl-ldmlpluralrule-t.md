@@ -4,16 +4,13 @@
 type LDMLPluralRule = "zero" | "one" | "two" | "few" | "many" | "other"
 ```
 
-**Since:** -1
+**ArkTS mode:** 
 
-<!--Device-Intl-type LDMLPluralRule = "zero" | "one" | "two" | "few" | "many" | "other"--><!--Device-Intl-type LDMLPluralRule = "zero" | "one" | "two" | "few" | "many" | "other"-End-->
-
-| Type | Description |
-| --- | --- |
-| "zero" |  |
-| "one" |  |
-| "two" |  |
-| "few" |  |
-| "many" |  |
-| "other" |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| "zero" |
+| "one" |
+| "two" |
+| "few" |
+| "many" |
+| "other" |

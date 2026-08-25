@@ -14,23 +14,23 @@ function isValid(id: HiTraceId): boolean
 
 判断HiTraceId是否有效，同步接口。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-hiTraceChain-function isValid(id: HiTraceId): boolean--><!--Device-hiTraceChain-function isValid(id: HiTraceId): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | 是 | 需要判断是否有效的HiTraceId实例。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：HiTraceId有效；false：HiTraceId无效。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -45,4 +45,3 @@ if (traceIdIsvalid) {
 // 业务结束，结束跟踪。
 hiTraceChain.end(traceId);
 ```
-

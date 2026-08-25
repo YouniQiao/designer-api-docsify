@@ -4,7 +4,7 @@ Represents an operation for changing data.
 
 **Since:** 12
 
-<!--Device-unnamed-interface DataChangeOperation--><!--Device-unnamed-interface DataChangeOperation-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Index of the data to be changed. The value range is [0, data source length - 1].
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DataChangeOperation-index: number--><!--Device-DataChangeOperation-index: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ New key to assign to the changed data. The original key is used by default.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DataChangeOperation-key?: string--><!--Device-DataChangeOperation-key?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,11 +65,10 @@ Type of data change.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-DataChangeOperation-type: DataOperationType.CHANGE--><!--Device-DataChangeOperation-type: DataOperationType.CHANGE-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

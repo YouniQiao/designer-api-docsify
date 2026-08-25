@@ -4,7 +4,7 @@ Sets regular expression for input filtering.
 
 **Since:** 18
 
-<!--Device-unnamed-export interface InputFilterParams--><!--Device-unnamed-export interface InputFilterParams-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,9 +26,9 @@ Callback used to return the filtered-out content when regular expression matchin
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-InputFilterParams-error?: Callback<string>--><!--Device-InputFilterParams-error?: Callback<string>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,9 +44,8 @@ Regular expression.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-InputFilterParams-inputFilterValue: ResourceStr--><!--Device-InputFilterParams-inputFilterValue: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

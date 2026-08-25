@@ -1,0 +1,135 @@
+# DrawModifier
+
+Defined the draw modifier of node. Provides draw callbacks for the associated Node. Each DrawModifier instance can be set for only one component. Repeated setting is not allowed.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## drawBehind
+
+```TypeScript
+drawBehind(drawContext: DrawContext): void
+```
+
+drawBehind Method. Executed before drawing associated Node.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| drawContext | [DrawContext](arkts-arkui-drawcontext-t.md) | Yes |
+
+## drawContent
+
+```TypeScript
+drawContent(drawContext: DrawContext): void
+```
+
+drawContent Method. Executed when associated Node is drawing, the default drawContent method will be replaced if this method is set.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| drawContext | [DrawContext](arkts-arkui-drawcontext-t.md) | Yes |
+
+## drawForeground
+
+```TypeScript
+drawForeground(drawContext: DrawContext): void
+```
+
+drawForeground Method. This method is executed after drawing the associated Node and its children. It allows you to perform additional drawing operations on top of the already rendered content. This can be useful for adding visual elements that should appear above the main content.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| drawContext | [DrawContext](arkts-arkui-drawcontext-t.md) | Yes |
+
+## drawFront
+
+```TypeScript
+drawFront(drawContext: DrawContext): void
+```
+
+drawFront Method. Executed after drawing associated Node and its children.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| drawContext | [DrawContext](arkts-arkui-drawcontext-t.md) | Yes |
+
+## drawOverlay
+
+```TypeScript
+drawOverlay(drawContext: DrawContext): void
+```
+
+Draws content in the overlay layer after the associated Node and all its children have been drawn.Custom drawing consists of five layers: Behind, Content, Front, Foreground, and Overlay. - The Foreground and Overlay layers are drawn after child nodes. - The Overlay layer differs from Foreground in that it can draw outside the bounds of the component.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| drawContext | [DrawContext](arkts-arkui-drawcontext-t.md) | Yes |
+
+## invalidate
+
+```TypeScript
+invalidate(): void
+```
+
+Invalidate the component, which will cause a re-render of the component. No overloading is allowed or needed.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

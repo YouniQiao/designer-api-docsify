@@ -1,10 +1,10 @@
-# @ohos.telephony.observer
+# @ohos.telephony.observer(Telephony Status Observer)
 
 The **observer** module provides event subscription management functions. You can register or unregister an observer that listens for the following events: network status change, signal status change, call status change, cellular data connection status, uplink and downlink data flow status of cellular data services, and SIM status change.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-unnamed-declare namespace observer--><!--Device-unnamed-declare namespace observer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -18,109 +18,108 @@ import { observer } from '@kit.TelephonyKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [off_callStateChange](arkts-telephony-observer-offcallstatechange-f.md) | Unregisters the observer for call status change events. This API uses an asynchronous callback to return the execution result. |
-| [off_callStateChangeEx](arkts-telephony-observer-offcallstatechangeex-f.md) | Unregisters the observer for extended call status change events. This API uses an asynchronous callback to return the execution result. |
-| [off_cellularDataConnectionStateChange](arkts-telephony-observer-offcellulardataconnectionstatechange-f.md) | Unregisters the observer for connection status change events of the cellular data link. This API uses an asynchronous callback to return the result. |
-| [off_cellularDataFlowChange](arkts-telephony-observer-offcellulardataflowchange-f.md) | Unregisters the observer for the uplink and downlink data flow status change events of the cellular data service. This API uses an asynchronous callback to return the result. |
-| [off_iccAccountInfoChange](arkts-telephony-observer-officcaccountinfochange-f.md) | Unregisters the observer for account information change events of the SIM card. This API uses an asynchronous callback to return the result. |
-| [off_networkStateChange](arkts-telephony-observer-offnetworkstatechange-f.md) | Unregisters the observer for network status change events. This API uses an asynchronous callback to return the execution result. |
-| [off_signalInfoChange](arkts-telephony-observer-offsignalinfochange-f.md) | Unregisters the observer for signal status change events. This API uses an asynchronous callback to return the execution result. |
-| [off_simStateChange](arkts-telephony-observer-offsimstatechange-f.md) | Unregisters the observer for SIM card status change events. This API uses an asynchronous callback to return the result. |
-| [offCallStateChange](arkts-telephony-observer-offcallstatechange-f.md) | Cancel callback when the call state is updated. |
-| [offCallStateChangeEx](arkts-telephony-observer-offcallstatechangeex-f.md) | Cancel callback when the telCall state is updated. |
-| [offCCallStateChange](arkts-telephony-observer-offccallstatechange-f.md) | Cancels the listening on the carrier call status and obtaining of the call number by a third-party application. This method uses an asynchronous callback to return the result. |
-| [offCellularDataConnectionStateChange](arkts-telephony-observer-offcellulardataconnectionstatechange-f.md) | Cancel callback when the cellular data link connection state is updated. |
-| [offCellularDataFlowChange](arkts-telephony-observer-offcellulardataflowchange-f.md) | Cancel callback when the uplink and downlink data flow state of cellular data services is updated. |
-| [offCommunicationStateChange](arkts-telephony-observer-offcommunicationstatechange-f.md) | Unsubscribes from the callback for listening to the 5A state. |
-| [offGetSimActiveState](arkts-telephony-observer-offgetsimactivestate-f.md) | Unregisters an observer for SIM card activation state changes. This API uses an asynchronous callback to return the execution result.  **Required permission**: ohos.permission.GET_TELEPHONY_STATE |
-| [offIccAccountInfoChange](arkts-telephony-observer-officcaccountinfochange-f.md) | Cancel to receive an ICC account change. |
-| [offNetworkStateChange](arkts-telephony-observer-offnetworkstatechange-f.md) | Cancel callback when the network state is updated. |
-| [offSignalInfoChange](arkts-telephony-observer-offsignalinfochange-f.md) | Cancel callback when the signal strength is updated. |
-| [offSimStateChange](arkts-telephony-observer-offsimstatechange-f.md) | Cancel callback when the sim state is updated. |
-| [on_callStateChange](arkts-telephony-observer-oncallstatechange-f.md) | Registers an observer for call status change events. This API uses an asynchronous callback to return the execution result. |
-| [on_callStateChange](arkts-telephony-observer-oncallstatechange-f.md) | Registers an observer for call status change events. This API uses an asynchronous callback to return the execution result. |
-| [on_callStateChangeEx](arkts-telephony-observer-oncallstatechangeex-f.md) | Registers an observer for extended call status change events. This API uses an asynchronous callback to return the execution result. |
-| [on_cellularDataConnectionStateChange](arkts-telephony-observer-oncellulardataconnectionstatechange-f.md) | Registers an observer for connection status change events of the cellular data link. This API uses an asynchronous callback to return the result. |
-| [on_cellularDataConnectionStateChange](arkts-telephony-observer-oncellulardataconnectionstatechange-f.md) | Registers an observer for connection status change events of the cellular data link over the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
-| [on_cellularDataFlowChange](arkts-telephony-observer-oncellulardataflowchange-f.md) | Registers an observer for the uplink and downlink data flow status change events of the cellular data service. This API uses an asynchronous callback to return the result. |
-| [on_cellularDataFlowChange](arkts-telephony-observer-oncellulardataflowchange-f.md) | Registers an observer for the uplink and downlink data flow status change events of the cellular data service on the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
-| [on_iccAccountInfoChange](arkts-telephony-observer-oniccaccountinfochange-f.md) | Registers an observer for account information change events of the SIM card. This API uses an asynchronous callback to return the result. |
-| [on_networkStateChange](arkts-telephony-observer-onnetworkstatechange-f.md) | Registers an observer for network status change events. This API uses an asynchronous callback to return the execution result.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
-| [on_networkStateChange](arkts-telephony-observer-onnetworkstatechange-f.md) | Registers an observer for network status change events of the SIM card in the specified slot. This API uses an asynchronous callback to return the execution result.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
-| [on_signalInfoChange](arkts-telephony-observer-onsignalinfochange-f.md) | Registers an observer for signal status change events. This API uses an asynchronous callback to return the execution result. |
-| [on_signalInfoChange](arkts-telephony-observer-onsignalinfochange-f.md) | Registers an observer for signal status change events of the SIM card in the specified slot. This API uses an asynchronous callback to return the execution result. |
-| [on_simStateChange](arkts-telephony-observer-onsimstatechange-f.md) | Registers an observer for SIM card status change events. This API uses an asynchronous callback to return the result. |
-| [on_simStateChange](arkts-telephony-observer-onsimstatechange-f.md) | Registers an observer for status change events of the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
-| [onCallStateChange](arkts-telephony-observer-oncallstatechange-f.md) | Callback when the call state corresponding to the default sim card is updated. |
-| [onCallStateChange](arkts-telephony-observer-oncallstatechange-f.md) | Callback when the call state corresponding to the monitored {@code slotId} is updated. |
-| [onCallStateChangeEx](arkts-telephony-observer-oncallstatechangeex-f.md) | Callback when the telCall state corresponding to the monitored {@code slotId} is updated. |
-| [onCCallStateChange](arkts-telephony-observer-onccallstatechange-f.md) | Subscribes to the carrier call state changes and obtains the call number. This method uses an asynchronous callback to return the execution result. |
-| [onCellularDataConnectionStateChange](arkts-telephony-observer-oncellulardataconnectionstatechange-f.md) | Callback when the cellular data link connection state corresponding to the default sim card is updated. |
-| [onCellularDataConnectionStateChange](arkts-telephony-observer-oncellulardataconnectionstatechange-f.md) | Callback when the cellular data link connection state corresponding to the monitored {@code slotId} is updated. |
-| [onCellularDataFlowChange](arkts-telephony-observer-oncellulardataflowchange-f.md) | Callback when the uplink and downlink data flow state of cellular data services corresponding to the default sim card is updated. |
-| [onCellularDataFlowChange](arkts-telephony-observer-oncellulardataflowchange-f.md) | Callback when the uplink and downlink data flow state of cellular data services corresponding to the monitored {@code slotId} is updated. |
-| [onCommunicationStateChange](arkts-telephony-observer-oncommunicationstatechange-f.md) | This API uses an asynchronous callback to return the result. |
-| [onGetSimActiveState](arkts-telephony-observer-ongetsimactivestate-f.md) | Registers an observer for SIM card activation state changes. This API uses an asynchronous callback to return the execution result.  **Required permission**: ohos.permission.GET_TELEPHONY_STATE |
-| [onIccAccountInfoChange](arkts-telephony-observer-oniccaccountinfochange-f.md) | Receives an ICC account change. This callback is invoked when the ICC account updates and the observer is added to monitor the updates. |
-| [onNetworkStateChange](arkts-telephony-observer-onnetworkstatechange-f.md) | Callback when the network state corresponding to the default sim card is updated. |
-| [onNetworkStateChange](arkts-telephony-observer-onnetworkstatechange-f.md) | Callback when the network state corresponding to the monitored {@code slotId} is updated. |
-| [onSignalInfoChange](arkts-telephony-observer-onsignalinfochange-f.md) | Callback when the signal strength corresponding to the default sim card is updated. |
-| [onSignalInfoChange](arkts-telephony-observer-onsignalinfochange-f.md) | Callback when the signal strength corresponding to a monitored {@code slotId} is updated. |
-| [onSimStateChange](arkts-telephony-observer-onsimstatechange-f.md) | Callback when the sim state corresponding to the default sim card is updated. |
-| [onSimStateChange](arkts-telephony-observer-onsimstatechange-f.md) | Callback when the sim state corresponding to the monitored {@code slotId} is updated. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [off(Telephony Status Observer)](arkts-telephony-observer-off-f.md#offnetworkstatechange) |
+| [off(Telephony Status Observer)](arkts-telephony-observer-off-f.md#offsignalinfochange) |
+| [off(Telephony Status Observer)](arkts-telephony-observer-off-f.md#offcellulardataconnectionstatechange) |
+| [off(Telephony Status Observer)](arkts-telephony-observer-off-f.md#offcellulardataflowchange) |
+| [off(Telephony Status Observer)](arkts-telephony-observer-off-f.md#offcallstatechange) |
+| [off(Telephony Status Observer)](arkts-telephony-observer-off-f.md#offcallstatechangeex) |
+| [off(Telephony Status Observer)](arkts-telephony-observer-off-f.md#offsimstatechange) |
+| [off(Telephony Status Observer)](arkts-telephony-observer-off-f.md#officcaccountinfochange) |
+| [offCallStateChange(Telephony Status Observer)](arkts-telephony-observer-offcallstatechange-f.md) |
+| [offCallStateChangeEx(Telephony Status Observer)](arkts-telephony-observer-offcallstatechangeex-f.md) |
+| [offCCallStateChange(Telephony Status Observer)](arkts-telephony-observer-offccallstatechange-f.md) |
+| [offCellularDataConnectionStateChange(Telephony Status Observer)](arkts-telephony-observer-offcellulardataconnectionstatechange-f.md) |
+| [offCellularDataFlowChange(Telephony Status Observer)](arkts-telephony-observer-offcellulardataflowchange-f.md) |
+| [offCommunicationStateChange(Telephony Status Observer)](arkts-telephony-observer-offcommunicationstatechange-f.md) |
+| [offGetSimActiveState(Telephony Status Observer)](arkts-telephony-observer-offgetsimactivestate-f.md) |
+| [offIccAccountInfoChange(Telephony Status Observer)](arkts-telephony-observer-officcaccountinfochange-f.md) |
+| [offNetworkStateChange(Telephony Status Observer)](arkts-telephony-observer-offnetworkstatechange-f.md) |
+| [offSignalInfoChange(Telephony Status Observer)](arkts-telephony-observer-offsignalinfochange-f.md) |
+| [offSimStateChange(Telephony Status Observer)](arkts-telephony-observer-offsimstatechange-f.md) |
+| [on(Telephony Status Observer)](arkts-telephony-observer-on-f.md#onnetworkstatechange) |
+| [on(Telephony Status Observer)](arkts-telephony-observer-on-f.md#onnetworkstatechange) |
+| [on(Telephony Status Observer)](arkts-telephony-observer-on-f.md#onsignalinfochange) |
+| [on(Telephony Status Observer)](arkts-telephony-observer-on-f.md#onsignalinfochange) |
+| [on(Telephony Status Observer)](arkts-telephony-observer-on-f.md#oncellulardataconnectionstatechange) |
+| [on(Telephony Status Observer)](arkts-telephony-observer-on-f.md#oncellulardataconnectionstatechange) |
+| [on(Telephony Status Observer)](arkts-telephony-observer-on-f.md#oncellulardataflowchange) |
+| [on(Telephony Status Observer)](arkts-telephony-observer-on-f.md#oncellulardataflowchange) |
+| [on(Telephony Status Observer)](arkts-telephony-observer-on-f.md#oncallstatechange) |
+| [on(Telephony Status Observer)](arkts-telephony-observer-on-f.md#oncallstatechange) |
+| [on(Telephony Status Observer)](arkts-telephony-observer-on-f.md#oncallstatechangeex) |
+| [on(Telephony Status Observer)](arkts-telephony-observer-on-f.md#onsimstatechange) |
+| [on(Telephony Status Observer)](arkts-telephony-observer-on-f.md#onsimstatechange) |
+| [on(Telephony Status Observer)](arkts-telephony-observer-on-f.md#oniccaccountinfochange) |
+| [onCallStateChange(Telephony Status Observer)](arkts-telephony-observer-oncallstatechange-f.md) |
+| [onCallStateChange(Telephony Status Observer)](arkts-telephony-observer-oncallstatechange-f.md) |
+| [onCallStateChangeEx(Telephony Status Observer)](arkts-telephony-observer-oncallstatechangeex-f.md) |
+| [onCCallStateChange(Telephony Status Observer)](arkts-telephony-observer-onccallstatechange-f.md) |
+| [onCellularDataConnectionStateChange(Telephony Status Observer)](arkts-telephony-observer-oncellulardataconnectionstatechange-f.md) |
+| [onCellularDataConnectionStateChange(Telephony Status Observer)](arkts-telephony-observer-oncellulardataconnectionstatechange-f.md) |
+| [onCellularDataFlowChange(Telephony Status Observer)](arkts-telephony-observer-oncellulardataflowchange-f.md) |
+| [onCellularDataFlowChange(Telephony Status Observer)](arkts-telephony-observer-oncellulardataflowchange-f.md) |
+| [onCommunicationStateChange(Telephony Status Observer)](arkts-telephony-observer-oncommunicationstatechange-f.md) |
+| [onGetSimActiveState(Telephony Status Observer)](arkts-telephony-observer-ongetsimactivestate-f.md) |
+| [onIccAccountInfoChange(Telephony Status Observer)](arkts-telephony-observer-oniccaccountinfochange-f.md) |
+| [onNetworkStateChange(Telephony Status Observer)](arkts-telephony-observer-onnetworkstatechange-f.md) |
+| [onNetworkStateChange(Telephony Status Observer)](arkts-telephony-observer-onnetworkstatechange-f.md) |
+| [onSignalInfoChange(Telephony Status Observer)](arkts-telephony-observer-onsignalinfochange-f.md) |
+| [onSignalInfoChange(Telephony Status Observer)](arkts-telephony-observer-onsignalinfochange-f.md) |
+| [onSimStateChange(Telephony Status Observer)](arkts-telephony-observer-onsimstatechange-f.md) |
+| [onSimStateChange(Telephony Status Observer)](arkts-telephony-observer-onsimstatechange-f.md) |
 
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [off_cellInfoChange](arkts-telephony-observer-offcellinfochange-f-sys.md) | Unregisters the observer for cell information change events. This API uses an asynchronous callback to return the result. |
-| [offCellInfoChange](arkts-telephony-observer-offcellinfochange-f-sys.md) | Cancel callback when the cell information is updated. |
-| [on_cellInfoChange](arkts-telephony-observer-oncellinfochange-f-sys.md) | Registers an observer for cell information change events. This API uses an asynchronous callback to return the result. |
-| [on_cellInfoChange](arkts-telephony-observer-oncellinfochange-f-sys.md) | Registers an observer for signal status change events of the SIM card in the specified slot. This API uses an asynchronous callback to return the execution result. |
-| [onCellInfoChange](arkts-telephony-observer-oncellinfochange-f-sys.md) | Callback when the cell information corresponding to the default sim card is updated. |
-| [onCellInfoChange](arkts-telephony-observer-oncellinfochange-f-sys.md) | Callback when the cell information corresponding to a monitored {@code slotId} is updated. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [off(Telephony Status Observer)](arkts-telephony-observer-off-f-sys.md#offcellinfochange) |
+| [offCellInfoChange(Telephony Status Observer)](arkts-telephony-observer-offcellinfochange-f-sys.md) |
+| [on(Telephony Status Observer)](arkts-telephony-observer-on-f-sys.md#oncellinfochange) |
+| [on(Telephony Status Observer)](arkts-telephony-observer-on-f-sys.md#oncellinfochange) |
+| [onCellInfoChange(Telephony Status Observer)](arkts-telephony-observer-oncellinfochange-f-sys.md) |
+| [onCellInfoChange(Telephony Status Observer)](arkts-telephony-observer-oncellinfochange-f-sys.md) |
 <!--DelEnd-->
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [CallStateInfo](arkts-telephony-observer-callstateinfo-i.md) | Defines information about the call status. |
-| [CCallStateInfo](arkts-telephony-observer-ccallstateinfo-i.md) | Defines information about the call status. |
-| [DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md) | Defines information about the data connection status. |
-| [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Defines event subscription parameters. |
-| [SimStateData](arkts-telephony-observer-simstatedata-i.md) | Enumerates SIM card types and states. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CallStateInfo(Telephony Status Observer)](arkts-telephony-observer-callstateinfo-i.md) |
+| [CCallStateInfo(Telephony Status Observer)](arkts-telephony-observer-ccallstateinfo-i.md) |
+| [DataConnectionStateInfo(Telephony Status Observer)](arkts-telephony-observer-dataconnectionstateinfo-i.md) |
+| [ObserverOptions(Telephony Status Observer)](arkts-telephony-observer-observeroptions-i.md) |
+| [SimStateData(Telephony Status Observer)](arkts-telephony-observer-simstatedata-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [LockReason](arkts-telephony-observer-lockreason-e.md) | Enumerates SIM card lock types. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [LockReason(Telephony Status Observer)](arkts-telephony-observer-lockreason-e.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [CallState](arkts-telephony-observer-callstate-t.md) | Enumerates call states. |
-| [CardType](arkts-telephony-observer-cardtype-t.md) | Enumerates SIM card types. |
-| [CCallState](arkts-telephony-observer-ccallstate-t.md) | Enumerates carrier call states. |
-| [DataConnectState](arkts-telephony-observer-dataconnectstate-t.md) | Describes the connection status of a cellular data link. |
-| [DataFlowType](arkts-telephony-observer-dataflowtype-t.md) | Defines the cellular data flow type. |
-| [NetworkState](arkts-telephony-observer-networkstate-t.md) | Defines the network status. |
-| [RatType](arkts-telephony-observer-rattype-t.md) | Enumerates the radio access technologies. |
-| [SignalInformation](arkts-telephony-observer-signalinformation-t.md) | Defines the signal strength. |
-| [SimState](arkts-telephony-observer-simstate-t.md) | SIM card state. |
-| [TelCallState](arkts-telephony-observer-telcallstate-t.md) | Enumerates call states. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CallState(Telephony Status Observer)](arkts-telephony-observer-callstate-t.md) |
+| [CardType(Telephony Status Observer)](arkts-telephony-observer-cardtype-t.md) |
+| [CCallState(Telephony Status Observer)](arkts-telephony-observer-ccallstate-t.md) |
+| [DataConnectState(Telephony Status Observer)](arkts-telephony-observer-dataconnectstate-t.md) |
+| [DataFlowType(Telephony Status Observer)](arkts-telephony-observer-dataflowtype-t.md) |
+| [NetworkState(Telephony Status Observer)](arkts-telephony-observer-networkstate-t.md) |
+| [RatType(Telephony Status Observer)](arkts-telephony-observer-rattype-t.md) |
+| [SignalInformation(Telephony Status Observer)](arkts-telephony-observer-signalinformation-t.md) |
+| [SimState(Telephony Status Observer)](arkts-telephony-observer-simstate-t.md) |
+| [TelCallState(Telephony Status Observer)](arkts-telephony-observer-telcallstate-t.md) |
 
 <!--Del-->
 ### Types(System API)
 
-| Name | Description |
-| --- | --- |
-| [CellInformation](arkts-telephony-observer-cellinformation-t-sys.md) | Describes current cell information. |
-| [NetworkSearchRealTimeResult](arkts-telephony-observer-networksearchrealtimeresult-t-sys.md) | Indicates the result of network search. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CellInformation(Telephony Status Observer)](arkts-telephony-observer-cellinformation-t-sys.md) |
+| [NetworkSearchRealTimeResult(Telephony Status Observer)](arkts-telephony-observer-networksearchrealtimeresult-t-sys.md) |
 <!--DelEnd-->
-

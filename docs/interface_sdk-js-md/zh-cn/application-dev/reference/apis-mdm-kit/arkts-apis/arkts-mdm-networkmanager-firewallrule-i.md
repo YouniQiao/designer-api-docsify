@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-networkManager-interface FirewallRule--><!--Device-networkManager-interface FirewallRule-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -26,9 +26,9 @@ action?: Action
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-FirewallRule-action?: Action--><!--Device-FirewallRule-action?: Action-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -44,9 +44,9 @@ appUid?: string
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-FirewallRule-appUid?: string--><!--Device-FirewallRule-appUid?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -62,9 +62,9 @@ ip目标地址。支持IP段，例如：192.168.0.0/22或者192.168.1.100-192.16
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-FirewallRule-destAddr?: string--><!--Device-FirewallRule-destAddr?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -80,9 +80,9 @@ destPort?: string
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-FirewallRule-destPort?: string--><!--Device-FirewallRule-destPort?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -98,9 +98,9 @@ direction?: Direction
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-FirewallRule-direction?: Direction--><!--Device-FirewallRule-direction?: Direction-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -116,9 +116,9 @@ IP协议版本。支持取值为1或2，取值为1表示IPv4，取值为2表示I
 
 **起始版本：** 22
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
-<!--Device-FirewallRule-family?: number--><!--Device-FirewallRule-family?: number-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -134,9 +134,9 @@ logType?: LogType
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
-<!--Device-FirewallRule-logType?: LogType--><!--Device-FirewallRule-logType?: LogType-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -152,9 +152,9 @@ protocol?: Protocol
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-FirewallRule-protocol?: Protocol--><!--Device-FirewallRule-protocol?: Protocol-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -170,9 +170,9 @@ ip源地址。支持IP段，例如：192.168.0.0/22或者192.168.1.100-192.168.1
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-FirewallRule-srcAddr?: string--><!--Device-FirewallRule-srcAddr?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -188,9 +188,8 @@ srcPort?: string
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-FirewallRule-srcPort?: string--><!--Device-FirewallRule-srcPort?: string-End-->
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
-

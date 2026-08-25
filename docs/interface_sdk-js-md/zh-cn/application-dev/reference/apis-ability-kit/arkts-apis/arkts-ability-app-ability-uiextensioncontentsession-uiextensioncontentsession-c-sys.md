@@ -2,9 +2,9 @@
 
 UIExtensionAbility组件的界面操作类，提供页面加载、设置宿主应用窗口隐私模式等功能。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-unnamed-declare class UIExtensionContentSession--><!--Device-unnamed-declare class UIExtensionContentSession-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -22,11 +22,11 @@ getUIExtensionHostWindowProxy(): uiExtensionHost.UIExtensionHostWindowProxy
 
 获取当前UIExtension对应的窗口对象，用于通知宽高、位置、避让信息等。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-UIExtensionContentSession-getUIExtensionHostWindowProxy(): uiExtensionHost.UIExtensionHostWindowProxy--><!--Device-UIExtensionContentSession-getUIExtensionHostWindowProxy(): uiExtensionHost.UIExtensionHostWindowProxy-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -34,16 +34,16 @@ getUIExtensionHostWindowProxy(): uiExtensionHost.UIExtensionHostWindowProxy
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| uiExtensionHost.UIExtensionHostWindowProxy | 宿主应用窗口信息。 |
+| 类型 |
+| --- |
+| uiExtensionHost.UIExtensionHostWindowProxy |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 **示例**
 
@@ -151,9 +151,9 @@ sendData(data: Record<string, Object>): void
 
 **起始版本：** 10
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-UIExtensionContentSession-sendData(data: Record<string, Object>): void--><!--Device-UIExtensionContentSession-sendData(data: Record<string, Object>): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -161,17 +161,17 @@ sendData(data: Record<string, Object>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 | 发送给UIExtensionComponent控件的数据参数。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | Record & lt;string, Object & gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 **示例**
 
@@ -254,9 +254,9 @@ sendData(data: Record<string, RecordData>): void
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-UIExtensionContentSession-sendData(data: Record<string, RecordData>): void--><!--Device-UIExtensionContentSession-sendData(data: Record<string, RecordData>): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -264,16 +264,16 @@ sendData(data: Record<string, RecordData>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 发送给UIExtensionComponent控件的数据参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 **示例**
 
@@ -289,9 +289,9 @@ setReceiveDataCallback(callback: (data: Record<string, Object>) => void): void
 
 **起始版本：** 10
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-UIExtensionContentSession-setReceiveDataCallback(callback: (data: Record<string, Object>) => void): void--><!--Device-UIExtensionContentSession-setReceiveDataCallback(callback: (data: Record<string, Object>) => void): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -299,17 +299,17 @@ setReceiveDataCallback(callback: (data: Record<string, Object>) => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (data: Record&lt;string, Object&gt;) =&gt; void | 是 | 回调函数，返回接收的数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (data: Record & lt;string, Object & gt;) = & gt; void | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 **示例**
 
@@ -382,9 +382,9 @@ setReceiveDataCallback(callback: OnReceiveDataCallback): void
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-UIExtensionContentSession-setReceiveDataCallback(callback: OnReceiveDataCallback): void--><!--Device-UIExtensionContentSession-setReceiveDataCallback(callback: OnReceiveDataCallback): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -392,16 +392,16 @@ setReceiveDataCallback(callback: OnReceiveDataCallback): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [OnReceiveDataCallback](arkts-ability-onreceivedatacallback-t-sys.md) | 是 | 回调函数，返回接收的数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [OnReceiveDataCallback](arkts-ability-onreceivedatacallback-t-sys.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: Failed to communicate with dependency module. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 **示例**
 
@@ -417,9 +417,9 @@ setReceiveDataForResultCallback(callback: (data: Record<string, Object>) => Reco
 
 **起始版本：** 11
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-UIExtensionContentSession-setReceiveDataForResultCallback(callback: (data: Record<string, Object>) => Record<string, Object>): void--><!--Device-UIExtensionContentSession-setReceiveDataForResultCallback(callback: (data: Record<string, Object>) => Record<string, Object>): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -427,17 +427,17 @@ setReceiveDataForResultCallback(callback: (data: Record<string, Object>) => Reco
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (data: Record&lt;string, Object&gt;) =&gt; Record&lt;string, Object&gt; | 是 | 回调函数，返回带返回值的接收的数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (data: Record & lt;string, Object & gt;) = & gt; Record & lt;string, Object & gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 **示例**
 
@@ -512,9 +512,9 @@ setReceiveDataForResultCallback(callback: OnReceiveDataForResultCallback): void
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-UIExtensionContentSession-setReceiveDataForResultCallback(callback: OnReceiveDataForResultCallback): void--><!--Device-UIExtensionContentSession-setReceiveDataForResultCallback(callback: OnReceiveDataForResultCallback): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -522,16 +522,16 @@ setReceiveDataForResultCallback(callback: OnReceiveDataForResultCallback): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [OnReceiveDataForResultCallback](arkts-ability-onreceivedataforresultcallback-t-sys.md) | 是 | 回调函数，返回带返回值的接收的数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [OnReceiveDataForResultCallback](arkts-ability-onreceivedataforresultcallback-t-sys.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: Failed to communicate with dependency module. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 **示例**
 
@@ -545,11 +545,11 @@ setWindowBackgroundColor(color: string): void
 
 设置UIExtensionAbility加载界面的背景色。该接口需要在 [loadContent()](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent)调用生效后使用。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-UIExtensionContentSession-setWindowBackgroundColor(color: string): void--><!--Device-UIExtensionContentSession-setWindowBackgroundColor(color: string): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -557,17 +557,17 @@ setWindowBackgroundColor(color: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| color | string | 是 | 需要设置的背景色，为十六进制RGB或ARGB颜色，不区分大小写，例如`#00FF00`或`#FF00FF00`。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| color | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 **示例**
 
@@ -644,11 +644,11 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 > 
 > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-UIExtensionContentSession-startAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-startAbility(want: Want, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -656,33 +656,33 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动成功，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
 **示例**
 
@@ -771,11 +771,11 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 > 
 > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-UIExtensionContentSession-startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -783,32 +783,32 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动成功，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
 **示例**
 
@@ -827,11 +827,11 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 > 
 > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-UIExtensionContentSession-startAbility(want: Want, options?: StartOptions): Promise<void>--><!--Device-UIExtensionContentSession-startAbility(want: Want, options?: StartOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -839,39 +839,39 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
 **示例**
 
@@ -885,11 +885,11 @@ startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 
 初始Ability将自己的caller信息（如BundleName、AbilityName等）置于want参数中，传递给中间层的ExtensionAbility。当ExtensionAbility通过该接口拉起另外一个 Ability，被拉起的Ability可以从onCreate生命周期获取到初始Ability的caller信息。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-UIExtensionContentSession-startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -897,33 +897,33 @@ startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
 **示例**
 
@@ -1022,11 +1022,11 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 
 初始Ability将自己的caller信息（如BundleName、AbilityName等）置于want参数中，传递给中间层的ExtensionAbility。当ExtensionAbility通过该接口拉起另外一个 Ability，被拉起的Ability可以从onCreate生命周期获取到初始Ability的caller信息。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-UIExtensionContentSession-startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1034,32 +1034,32 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
 **示例**
 
@@ -1073,11 +1073,11 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 
 初始Ability将自己的caller信息（如BundleName、AbilityName等）置于want参数中，传递给中间层的ExtensionAbility。当ExtensionAbility通过该接口拉起另外一个 Ability，被拉起的Ability可以从onCreate生命周期获取到初始Ability的caller信息。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-UIExtensionContentSession-startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>--><!--Device-UIExtensionContentSession-startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1085,39 +1085,39 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
 **示例**
 
@@ -1137,11 +1137,11 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 > 
 > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-UIExtensionContentSession-startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void--><!--Device-UIExtensionContentSession-startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1149,33 +1149,33 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | 是 | 回调函数。当Ability启动并终止成功，err为undefined，data为获取到的结果码和数据；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
 **示例**
 
@@ -1266,11 +1266,11 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 > 
 > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-UIExtensionContentSession-startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void--><!--Device-UIExtensionContentSession-startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1278,32 +1278,32 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | 是 | 回调函数。当Ability启动并终止成功，err为undefined，data为获取到的结果码和数据；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
 **示例**
 
@@ -1323,11 +1323,11 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 > 
 > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-UIExtensionContentSession-startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>--><!--Device-UIExtensionContentSession-startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1335,41 +1335,40 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Promise对象，返回结果码和数据。 |
+| 类型 |
+| --- |
+| Promise&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
 **示例**
 
 参见 [startAbilityForResult](#startabilityforresult)
-

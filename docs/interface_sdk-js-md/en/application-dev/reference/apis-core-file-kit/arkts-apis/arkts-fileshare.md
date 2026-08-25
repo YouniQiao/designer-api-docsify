@@ -2,9 +2,9 @@
 
 Provides fileshare APIS@namespace fileShare
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-declare namespace fileShare--><!--Device-unnamed-declare namespace fileShare-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService
 
@@ -18,52 +18,51 @@ import { fileShare } from '@kit.CoreFileKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [activatePermission](arkts-corefile-fileshare-activatepermission-f.md) | Enable the URI that have been permanently authorized |
-| [checkPersistentPermission](arkts-corefile-fileshare-checkpersistentpermission-f.md) | Check persistent permissions for the URI. |
-| [deactivatePermission](arkts-corefile-fileshare-deactivatepermission-f.md) | Stop the authorized URI that has been enabled |
-| [persistPermission](arkts-corefile-fileshare-persistpermission-f.md) | Set persistence permissions for the URI |
-| [revokePermission](arkts-corefile-fileshare-revokepermission-f.md) | Revoke persistence permissions for the URI |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [activatePermission](arkts-corefile-fileshare-activatepermission-f.md) |
+| [checkPersistentPermission](arkts-corefile-fileshare-checkpersistentpermission-f.md) |
+| [deactivatePermission](arkts-corefile-fileshare-deactivatepermission-f.md) |
+| [persistPermission](arkts-corefile-fileshare-persistpermission-f.md) |
+| [revokePermission](arkts-corefile-fileshare-revokepermission-f.md) |
 
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [checkPathPermission](arkts-corefile-fileshare-checkpathpermission-f-sys.md) | Check permissions for the path. |
-| [getPersistentPolicy](arkts-corefile-fileshare-getpersistentpolicy-f-sys.md) | Get all persistence permissions for the application. |
-| [getSharedDirectoryInfo](arkts-corefile-fileshare-getshareddirectoryinfo-f-sys.md) | Gets the shared sandbox directories of applications |
-| [grantSharedDirectoryPermission](arkts-corefile-fileshare-grantshareddirectorypermission-f-sys.md) | Provides a permission grant for application-shared directories |
-| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md) | Provides grant uri permission for app |
-| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md) | Provides grant uri permission for app |
-| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md) | Grant URI permissions for an application. |
-| [revokePermission](arkts-corefile-fileshare-revokepermission-f-sys.md) | Revoke all persistence permissions for the application. |
-| [revokePermission](arkts-corefile-fileshare-revokepermission-f-sys.md) | Revoke persistence permissions for the URI. |
-| [revokeSharedDirectoryPermission](arkts-corefile-fileshare-revokeshareddirectorypermission-f-sys.md) | Revokes permission for application-shared directories |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [checkPathPermission](arkts-corefile-fileshare-checkpathpermission-f-sys.md) |
+| [getPersistentPolicy](arkts-corefile-fileshare-getpersistentpolicy-f-sys.md) |
+| [getSharedDirectoryInfo](arkts-corefile-fileshare-getshareddirectoryinfo-f-sys.md) |
+| [grantSharedDirectoryPermission](arkts-corefile-fileshare-grantshareddirectorypermission-f-sys.md) |
+| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md) |
+| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md) |
+| [grantUriPermission](arkts-corefile-fileshare-granturipermission-f-sys.md) |
+| [revokePermission](arkts-corefile-fileshare-revokepermission-f-sys.md) |
+| [revokePermission](arkts-corefile-fileshare-revokepermission-f-sys.md) |
+| [revokeSharedDirectoryPermission](arkts-corefile-fileshare-revokeshareddirectorypermission-f-sys.md) |
 <!--DelEnd-->
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [PathPolicyInfo](arkts-corefile-fileshare-pathpolicyinfo-i.md) | Policy information to manager permissions on a path.@interface PathPolicyInfo |
-| [PolicyErrorResult](arkts-corefile-fileshare-policyerrorresult-i.md) | Failed policy result on URI.@interface { object } |
-| [PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md) | Policy information to manager permissions on a URI.@interface PolicyInfo |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PathPolicyInfo](arkts-corefile-fileshare-pathpolicyinfo-i.md) |
+| [PolicyErrorResult](arkts-corefile-fileshare-policyerrorresult-i.md) |
+| [PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md) |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [SharedDirectoryInfo](arkts-corefile-fileshare-shareddirectoryinfo-i-sys.md) | The directory information shared with the system by the application. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SharedDirectoryInfo](arkts-corefile-fileshare-shareddirectoryinfo-i-sys.md) |
 <!--DelEnd-->
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [OperationMode](arkts-corefile-fileshare-operationmode-e.md) | Enumerates the uri operate mode types.@enum { int } OperationMode |
-| [PolicyErrorCode](arkts-corefile-fileshare-policyerrorcode-e.md) | Enumerates the error code of the permission policy for the URI operation.@enum { int } PolicyErrorCode |
-| [PolicyType](arkts-corefile-fileshare-policytype-e.md) | Indicates the policy type of the path.@enum { int } policyType |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [OperationMode](arkts-corefile-fileshare-operationmode-e.md) |
+| [PolicyErrorCode](arkts-corefile-fileshare-policyerrorcode-e.md) |
+| [PolicyType](arkts-corefile-fileshare-policytype-e.md) |

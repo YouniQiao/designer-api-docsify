@@ -6,9 +6,7 @@ Defines the PanGestureHandler options.@extends BaseHandlerOptions @interface Pan
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export interface PanGestureHandlerOptions--><!--Device-unnamed-export interface PanGestureHandlerOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,11 +22,9 @@ Indicates the move direction of the pan gesture. The default value is PanDirecti
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PanGestureHandlerOptions-direction?: PanDirection--><!--Device-PanGestureHandlerOptions-direction?: PanDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,11 +40,9 @@ Indicates minimum move distance. The default value is 5vp.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PanGestureHandlerOptions-distance?: double--><!--Device-PanGestureHandlerOptions-distance?: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,11 +58,9 @@ Indicates minimum move distance map.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PanGestureHandlerOptions-distanceMap?: Map<SourceTool, double>--><!--Device-PanGestureHandlerOptions-distanceMap?: Map<SourceTool, double>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,11 +76,8 @@ Indicates the hand index that triggers the pan. If the value is less than 1, the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PanGestureHandlerOptions-fingers?: int--><!--Device-PanGestureHandlerOptions-fingers?: int-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

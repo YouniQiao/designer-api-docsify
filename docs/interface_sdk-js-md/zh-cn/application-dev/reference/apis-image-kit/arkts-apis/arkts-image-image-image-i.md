@@ -5,9 +5,9 @@ Image类，供ImageReceiver和ImageCreator使用，用于传输图片对象，�
 > **说明：**&gt;
 > - 本Interface首批接口从API version 9开始支持。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-image-interface Image--><!--Device-image-interface Image-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -30,17 +30,17 @@ getBufferData(): ImageBufferData | null
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-Image-getBufferData(): ImageBufferData | null--><!--Device-Image-getBufferData(): ImageBufferData | null-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageBufferData](arkts-image-image-imagebufferdata-i.md) \| null | 获取封装图像数据缓冲区的结构体，获取不到时返回空值。 |
+| 类型 |
+| --- |
+| [ImageBufferData](arkts-image-image-imagebufferdata-i.md) \| null |
 
 **示例**
 
@@ -82,18 +82,18 @@ getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): 
 
 根据图像的组件类型从图像中获取组件缓存。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Image-getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): void--><!--Device-Image-getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| componentType | ComponentType | 是 | 图像的组件类型（目前仅支持ComponentType:JPEG，实际返回格式由生产者决定，如相机）。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Component&gt; | 是 | 回调函数，当返回组件缓冲区成功，err为undefined，data为获取到的组件缓冲区；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| componentType | [ComponentType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-update-componenttype-e-sys.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Component&gt; | 是 |
 
 **示例**
 
@@ -168,23 +168,23 @@ getComponent(componentType: ComponentType): Promise<Component>
 
 根据图像的组件类型从图像中获取组件缓存。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Image-getComponent(componentType: ComponentType): Promise<Component>--><!--Device-Image-getComponent(componentType: ComponentType): Promise<Component>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| componentType | ComponentType | 是 | 图像的组件类型（目前仅支持ComponentType:JPEG，实际返回格式由生产者决定，如相机）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| componentType | [ComponentType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-update-componenttype-e-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Component&gt; | Promise对象，返回组件缓冲区。 |
+| 类型 |
+| --- |
+| Promise & lt;Component & gt; |
 
 **示例**
 
@@ -200,30 +200,30 @@ getMetadata(key: HdrMetadataKey): HdrMetadataValue | null
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-Image-getMetadata(key: HdrMetadataKey): HdrMetadataValue | null--><!--Device-Image-getMetadata(key: HdrMetadataKey): HdrMetadataValue | null-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md) | 是 | HDR元数据的关键字，可用于查询对应值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [HdrMetadataValue](arkts-image-image-hdrmetadatavalue-t.md) \| null | 返回关键字对应的HDR元数据的值。如果图像没有HDR元数据，返回空值。 |
+| 类型 |
+| --- |
+| [HdrMetadataValue](arkts-image-image-hdrmetadatavalue-t.md) \| null |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
-| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Memory copy failed. |
+| 错误码ID |
+| --- |
+| [7600206](../errorcode-image.md#7600206-无效参数) |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) |
 
 **示例**
 
@@ -384,17 +384,17 @@ release(callback: AsyncCallback<void>): void
 
 释放当前图像。使用callback异步回调。在接收另一个图像前必须先释放对应资源。由于图片占用内存较大，所以当Image实例使用完成后，应主动调用该方法，及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Image-release(callback: AsyncCallback<void>): void--><!--Device-Image-release(callback: AsyncCallback<void>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当图像释放成功，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **示例**
 
@@ -831,17 +831,17 @@ release(): Promise<void>
 
 释放当前图像。使用Promise异步回调。在接收另一个图像前必须先释放对应资源。由于图片占用内存较大，所以当Image实例使用完成后，应主动调用该方法，及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Image-release(): Promise<void>--><!--Device-Image-release(): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
@@ -857,9 +857,9 @@ clipRect: Region
 
 **类型：** Region
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Image-clipRect: Region--><!--Device-Image-clipRect: Region-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -875,9 +875,9 @@ readonly colorSpace: colorSpaceManager.ColorSpace
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-Image-readonly colorSpace: colorSpaceManager.ColorSpace--><!--Device-Image-readonly colorSpace: colorSpaceManager.ColorSpace-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -889,11 +889,11 @@ readonly format: int
 
 图像格式，参考 [OH_NativeBuffer_Format](../../../reference/apis-arkgraphics2d/capi-buffer-common-h.md#oh_nativebuffer_format)。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Image-readonly format: int--><!--Device-Image-readonly format: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -907,9 +907,9 @@ readonly size: Size
 
 **类型：** Size
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Image-readonly size: Size--><!--Device-Image-readonly size: Size-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -921,11 +921,10 @@ readonly timestamp: long
 
 图像时间戳。时间戳以纳秒为单位，通常是单调递增的。时间戳的具体含义和基准取决于图像的生产者，在相机预览/拍照场景，生产者就是相机。来自不同生产者的图像的时间戳可能有不同的含义和基准，因此可能无法进行比较。如果要获取某张照片的生 成时间，可以通过 [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)接口读 取EXIF时间戳信息。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Image-readonly timestamp: long--><!--Device-Image-readonly timestamp: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
-

@@ -4,9 +4,7 @@ Declare type ToolBarV2ItemImage
 
 **起始版本：** 18
 
-**装饰器类型：** @ObservedV2
-
-<!--Device-unnamed-export declare class ToolBarV2ItemImage--><!--Device-unnamed-export declare class ToolBarV2ItemImage-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,19 +24,19 @@ ToolBarV2ItemImage的构造函数。
 
 **起始版本：** 18
 
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ToolBarV2ItemImage-constructor(options: ToolBarV2ItemImageOptions)--><!--Device-ToolBarV2ItemImage-constructor(options: ToolBarV2ItemImageOptions)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [ToolBarV2ItemImageOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-toolbarv2-toolbarv2itemimageoptions-i.md) | 是 | 图标信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [ToolBarV2ItemImageOptions](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemimageoptions-i.md) | 是 |
 
 ## activatedColor
 
@@ -48,17 +46,15 @@ activatedColor?: ColorMetrics
 
 Icon fillColor when the item is activated.
 
-**类型：** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
 
-**装饰器类型：** @Trace
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ToolBarV2ItemImage-@Trace  activatedColor?: ColorMetrics--><!--Device-ToolBarV2ItemImage-@Trace  activatedColor?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,17 +66,15 @@ color?: ColorMetrics
 
 Define icon fillColor.
 
-**类型：** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
 
-**装饰器类型：** @Trace
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ToolBarV2ItemImage-@Trace  color?: ColorMetrics--><!--Device-ToolBarV2ItemImage-@Trace  color?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,17 +86,14 @@ src: ResourceStr
 
 Define icon resource.
 
-**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 18
 
-**装饰器类型：** @Trace
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ToolBarV2ItemImage-@Trace  src: ResourceStr--><!--Device-ToolBarV2ItemImage-@Trace  src: ResourceStr-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

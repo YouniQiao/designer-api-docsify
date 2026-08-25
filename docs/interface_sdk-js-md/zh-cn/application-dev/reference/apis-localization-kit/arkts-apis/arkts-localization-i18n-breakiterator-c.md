@@ -2,9 +2,9 @@
 
 提供文本换行相关的能力，包括可换行点的获取、移动和识别等。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-i18n-export class BreakIterator--><!--Device-i18n-export class BreakIterator-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -16,25 +16,31 @@ import { i18n } from '@kit.LocalizationKit';
 
 ## current
 
+ArkTS-Dyn:
+```TypeScript
+current(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 current(): int
 ```
 
 获取换行迭代器在当前处理文本中的位置。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BreakIterator-current(): int--><!--Device-BreakIterator-current(): int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 获取换行迭代器在当前处理的文本中的位置。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -48,25 +54,31 @@ let currentPos = iterator.current(); // currentPos = 0
 
 ## first
 
+ArkTS-Dyn:
+```TypeScript
+first(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 first(): int
 ```
 
 将换行迭代器移动到第一个可换行点。第一个可换行点总是在被处理文本的起始位置。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BreakIterator-first(): int--><!--Device-BreakIterator-first(): int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 被处理文本的第一个可换行点的偏移量。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -80,31 +92,37 @@ let firstPos = iterator.first(); // firstPos = 0
 
 ## following
 
+ArkTS-Dyn:
+```TypeScript
+following(offset: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 following(offset: int): int
 ```
 
 将换行迭代器移动到指定位置后面一个可换行点。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BreakIterator-following(offset: int): int--><!--Device-BreakIterator-following(offset: int): int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| offset | int | 是 | 将换行迭代器移动到文本指定位置的后面一个可换行点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 换行迭代器移动后的位置。若offset所指定位置的下一个可换行点超出了文本的范围，则返回-1。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -126,19 +144,19 @@ getLineBreakText(): string
 
 获取BreakIterator对象当前处理的文本。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BreakIterator-getLineBreakText(): string--><!--Device-BreakIterator-getLineBreakText(): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | BreakIterator对象正在处理的文本。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -152,31 +170,37 @@ let breakText: string = iterator.getLineBreakText(); // breakText = 'Apple is my
 
 ## isBoundary
 
+ArkTS-Dyn:
+```TypeScript
+isBoundary(offset: number): boolean
+```
+
+ArkTS-Sta:
 ```TypeScript
 isBoundary(offset: int): boolean
 ```
 
 判断指定位置是否为可换行点。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BreakIterator-isBoundary(offset: int): boolean--><!--Device-BreakIterator-isBoundary(offset: int): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| offset | int | 是 | 文本指定位置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true表示offset指定的文本位置是一个可换行点，false表示offset指定的文本位置不是一个可换行点。 <br>返回true时，会将换行迭代器移动到offset指定的位置，否则相当于调用following。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -191,25 +215,31 @@ isBoundary = iterator.isBoundary(5); // isBoundary = false;
 
 ## last
 
+ArkTS-Dyn:
+```TypeScript
+last(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 last(): int
 ```
 
 将换行迭代器移动到最后一个可换行点。最后一个可换行点总是在被处理文本末尾的下一个位置。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BreakIterator-last(): int--><!--Device-BreakIterator-last(): int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 被处理文本的最后一个可换行点的偏移量。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -223,31 +253,37 @@ let lastPos = iterator.last(); // lastPos = 27
 
 ## next
 
+ArkTS-Dyn:
+```TypeScript
+next(index?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 next(index?: int): int
 ```
 
 将换行迭代器向后移动index个可换行点。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BreakIterator-next(index?: int): int--><!--Device-BreakIterator-next(index?: int): int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 否 | 换行迭代器将要移动的可换行点数，取值为整数。 <br>正数表示向后移动index个可换行点，负数表示向前移动index个可换行点。 <br>默认值：1。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 移动index个可换行点后，当前换行迭代器在文本中的位置。 <br>若移动index个可换行点后超出了所处理的文本的长度范围，返回-1。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -263,25 +299,31 @@ pos = iterator.next(10); // pos = -1
 
 ## previous
 
+ArkTS-Dyn:
+```TypeScript
+previous(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 previous(): int
 ```
 
 将换行迭代器向前移动一个可换行点。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BreakIterator-previous(): int--><!--Device-BreakIterator-previous(): int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 移动到前一个可换行点后，当前换行迭代器在文本中的位置。 <br>若移动后超出了所处理的文本的长度范围，返回-1。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -303,19 +345,19 @@ setLineBreakText(text: string): void
 
 设置BreakIterator对象要处理的文本。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BreakIterator-setLineBreakText(text: string): void--><!--Device-BreakIterator-setLineBreakText(text: string): void-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| text | string | 是 | 输入文本。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| text | string | 是 |
 
 **示例**
 
@@ -325,4 +367,3 @@ import { i18n } from '@kit.LocalizationKit';
 let iterator: i18n.BreakIterator = i18n.getLineInstance('en');
 iterator.setLineBreakText('Apple is my favorite fruit.'); // 设置处理文本
 ```
-

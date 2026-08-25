@@ -8,15 +8,14 @@ Represents the error information returned when an error occurs during image load
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
 
-<!--Device-unnamed-declare type BusinessError<T = void> = import('../api/@ohos.base').BusinessError<T>--><!--Device-unnamed-declare type BusinessError<T = void> = import('../api/@ohos.base').BusinessError<T>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** import('../api/@ohos.base').BusinessError&lt;T&gt;
-

@@ -11,9 +11,9 @@
 > 参数是ParamsSpec类型（父类），而实际需要传入具体的子类对象（如[IvParamsSpec](arkts-cryptoarchitecture-cryptoframework-ivparamsspec-i.md)），因此在
 > 构造子类对象时应设置其父类ParamsSpec的algName参数，使算法库在init()时知道传入的是哪种子类对象。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-cryptoFramework-interface ParamsSpec--><!--Device-cryptoFramework-interface ParamsSpec-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -36,13 +36,12 @@ algName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ParamsSpec-algName: string--><!--Device-ParamsSpec-algName: string-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
 - API版本9-11：SystemCapability.Security.CryptoFramework
-

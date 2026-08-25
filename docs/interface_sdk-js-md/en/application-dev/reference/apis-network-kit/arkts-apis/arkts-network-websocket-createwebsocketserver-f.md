@@ -17,21 +17,20 @@ Creates a **WebSocketServer** object, which provides methods to start or stop th
 > **NOTE：**&gt;
 > Supported on all devices since API version 23. In earlier versions, this method is supported only on TV devices.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-webSocket-function createWebSocketServer(): WebSocketServer--><!--Device-webSocket-function createWebSocketServer(): WebSocketServer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WebSocketServer](arkts-network-websocket-websocketserver-i.md) | WebSocketServer** object, which provides the **start**, **listAllConnections**, **send**, **close**, **stop**, **on**, and **off** methods. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WebSocketServer](arkts-network-websocket-websocketserver-i.md) |
 
 **Examples**
 
 ```TypeScript
 let ws: webSocket.WebSocketServer = webSocket.createWebSocketServer();
 ```
-

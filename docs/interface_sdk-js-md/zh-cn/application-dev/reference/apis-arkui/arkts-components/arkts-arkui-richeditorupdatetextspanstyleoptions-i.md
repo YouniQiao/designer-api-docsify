@@ -6,7 +6,7 @@
 
 **起始版本：** 10
 
-<!--Device-unnamed-declare interface RichEditorUpdateTextSpanStyleOptions--><!--Device-unnamed-declare interface RichEditorUpdateTextSpanStyleOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,11 @@ textStyle: RichEditorTextStyle
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RichEditorUpdateTextSpanStyleOptions-textStyle: RichEditorTextStyle--><!--Device-RichEditorUpdateTextSpanStyleOptions-textStyle: RichEditorTextStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,11 +47,10 @@ url信息。默认值：undefined
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
-<!--Device-RichEditorUpdateTextSpanStyleOptions-urlStyle?: RichEditorUrlStyle--><!--Device-RichEditorUpdateTextSpanStyleOptions-urlStyle?: RichEditorUrlStyle-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

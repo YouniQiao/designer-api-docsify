@@ -16,21 +16,21 @@ Starts scanning Bluetooth devices.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [startBluetoothDiscovery](arkts-connectivity-bluetoothmanager-startbluetoothdiscovery-f.md)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH and ohos.permission.LOCATION
 
-<!--Device-bluetooth-function startBluetoothDiscovery(): boolean--><!--Device-bluetooth-function startBluetoothDiscovery(): boolean-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -42,4 +42,3 @@ function onReceiveEvent(data : Array<string>) {
 bluetooth.on('bluetoothDeviceFind', onReceiveEvent);
 let result : boolean = bluetooth.startBluetoothDiscovery();
 ```
-

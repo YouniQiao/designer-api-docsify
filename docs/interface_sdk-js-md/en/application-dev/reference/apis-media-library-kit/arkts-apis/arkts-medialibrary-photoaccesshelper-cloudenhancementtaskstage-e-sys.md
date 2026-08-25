@@ -2,9 +2,9 @@
 
 Enumerates the cloud enhancement task states, which are returned by [CloudEnhancementTaskState](arkts-medialibrary-photoaccesshelper-cloudenhancement-c-sys.md).
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-photoAccessHelper-enum CloudEnhancementTaskStage--><!--Device-photoAccessHelper-enum CloudEnhancementTaskStage-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ TASK_STAGE_EXCEPTION = -1
 
 The cloud enhancement task is abnormal.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-CloudEnhancementTaskStage-TASK_STAGE_EXCEPTION = -1--><!--Device-CloudEnhancementTaskStage-TASK_STAGE_EXCEPTION = -1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,9 @@ TASK_STAGE_PREPARING
 
 The cloud enhancement task is being prepared.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-CloudEnhancementTaskStage-TASK_STAGE_PREPARING--><!--Device-CloudEnhancementTaskStage-TASK_STAGE_PREPARING-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,9 +50,9 @@ TASK_STAGE_UPLOADING
 
 The cloud enhancement task is uploading data.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-CloudEnhancementTaskStage-TASK_STAGE_UPLOADING--><!--Device-CloudEnhancementTaskStage-TASK_STAGE_UPLOADING-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -66,9 +66,9 @@ TASK_STAGE_EXECUTING
 
 The cloud enhancement task is being executed.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-CloudEnhancementTaskStage-TASK_STAGE_EXECUTING--><!--Device-CloudEnhancementTaskStage-TASK_STAGE_EXECUTING-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -82,9 +82,9 @@ TASK_STAGE_DOWNLOADING
 
 The cloud enhancement task is downloading data.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-CloudEnhancementTaskStage-TASK_STAGE_DOWNLOADING--><!--Device-CloudEnhancementTaskStage-TASK_STAGE_DOWNLOADING-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -98,9 +98,9 @@ TASK_STAGE_FAILED
 
 The cloud enhancement task failed.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-CloudEnhancementTaskStage-TASK_STAGE_FAILED--><!--Device-CloudEnhancementTaskStage-TASK_STAGE_FAILED-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -114,11 +114,10 @@ TASK_STAGE_COMPLETED
 
 The cloud enhancement task is complete.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-CloudEnhancementTaskStage-TASK_STAGE_COMPLETED--><!--Device-CloudEnhancementTaskStage-TASK_STAGE_COMPLETED-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

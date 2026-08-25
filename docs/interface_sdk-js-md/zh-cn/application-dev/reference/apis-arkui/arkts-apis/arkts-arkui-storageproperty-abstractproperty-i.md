@@ -4,9 +4,7 @@ Define AbstractProperty&lt;T&gt; interface.AbstractProperty can be understood as
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export declare interface AbstractProperty--><!--Device-unnamed-export declare interface AbstractProperty-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,87 +18,80 @@ get(): T
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AbstractProperty-get(): T--><!--Device-AbstractProperty-get(): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | AppStorage/LocalStorage中所引用属性的数据。 |
+| 类型 |
+| --- |
+| T |
 
 ## info
 
 ```TypeScript
-info(): string
+default info(): string
 ```
 
-**起始版本：** -1
+读取AppStorage/ LocalStorage中所引用属性的属性名。
 
-**ArkTS模式：** ArkTS-Sta起始版本为-1。
+**起始版本：** 23
 
-<!--Device-AbstractProperty-info(): string--><!--Device-AbstractProperty-info(): string-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
+| 类型 |
+| --- |
+| string |
+
 ## onChange
 
 ```TypeScript
-onChange(onChangeFunc: OnChangeType<T> | undefined): void
-```
-
-**起始版本：** -1
-
-**ArkTS模式：** ArkTS-Sta起始版本为-1。
-
-<!--Device-AbstractProperty-onChange(onChangeFunc: OnChangeType<T> | undefined): void--><!--Device-AbstractProperty-onChange(onChangeFunc: OnChangeType<T> | undefined): void-End-->
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| onChangeFunc | [OnChangeType](arkts-arkui-onchangetype-t.md)&lt;T&gt; \| undefined | 是 |  |
-
-## set
-
-```TypeScript
-set(newValue: T): void
-```
-
-**起始版本：** -1
-
-**ArkTS模式：** ArkTS-Sta起始版本为-1。
-
-<!--Device-AbstractProperty-set(newValue: T): void--><!--Device-AbstractProperty-set(newValue: T): void-End-->
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| newValue | T | 是 |  |
-
-## default
-
-```TypeScript
-default
+default onChange(onChangeFunc: OnChangeType<T> | undefined): void
 ```
 
 注册AppStorage/ LocalStorage中所引用属性变化的事件。
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AbstractProperty-default--><!--Device-AbstractProperty-default-End-->
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| onChangeFunc | [OnChangeType](arkts-arkui-onchangetype-t.md)&lt;T&gt; \| undefined | 是 |
+
+## set
+
+```TypeScript
+default set(newValue: T): void
+```
+
+更新AppStorage/ LocalStorage中所引用属性的数据，newValue必须是T类型，可以为null或 undefined。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| newValue | T | 是 |

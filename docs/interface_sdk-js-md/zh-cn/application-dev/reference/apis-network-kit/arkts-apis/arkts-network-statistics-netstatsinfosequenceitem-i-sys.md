@@ -1,10 +1,10 @@
 # NetStatsInfoSequenceItem（系统接口）
 
-包含开始时间和结束时间的[NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md)参数。
+包含开始时间和结束时间的[NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md)参数。
 
 **起始版本：** 23
 
-<!--Device-statistics-export interface NetStatsInfoSequenceItem--><!--Device-statistics-export interface NetStatsInfoSequenceItem-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -28,7 +28,7 @@ endTime: int
 
 **起始版本：** 23
 
-<!--Device-NetStatsInfoSequenceItem-endTime: int--><!--Device-NetStatsInfoSequenceItem-endTime: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -42,11 +42,11 @@ info: NetStatsInfo
 
 获取的历史流量信息。
 
-**类型：** [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md)
+**类型：** [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md)
 
 **起始版本：** 23
 
-<!--Device-NetStatsInfoSequenceItem-info: NetStatsInfo--><!--Device-NetStatsInfoSequenceItem-info: NetStatsInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -64,9 +64,8 @@ startTime: int
 
 **起始版本：** 23
 
-<!--Device-NetStatsInfoSequenceItem-startTime: int--><!--Device-NetStatsInfoSequenceItem-startTime: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
-

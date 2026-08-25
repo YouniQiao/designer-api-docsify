@@ -24,9 +24,9 @@ Creates the root container for a subpage in Navigation.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-NavDestinationInterface-(): NavDestinationAttribute--><!--Device-NavDestinationInterface-(): NavDestinationAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,16 +34,19 @@ Creates the root container for a subpage in Navigation.
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [NavDestinationTransitionDelegate](arkts-arkui-navdestinationtransitiondelegate-t.md) |
+| [Orientation](arkts-arkui-orientation-t.md) |
+| [RestoreStateCallback](arkts-arkui-restorestatecallback-t.md) |
+| [SaveStateCallback](arkts-arkui-savestatecallback-t.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |

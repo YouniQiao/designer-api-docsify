@@ -5,9 +5,9 @@
 > **说明：**&gt;
 > KVStoreResultSet的游标起始位置为-1。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-distributedKVStore-interface KVStoreResultSet--><!--Device-distributedKVStore-interface KVStoreResultSet-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -19,25 +19,31 @@ import { distributedKVStore } from '@kit.ArkData';
 
 ## getCount
 
+ArkTS-Dyn:
+```TypeScript
+getCount(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getCount(): int
 ```
 
 获取结果集中的总行数。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-KVStoreResultSet-getCount(): int--><!--Device-KVStoreResultSet-getCount(): int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 返回数据的总行数。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -91,19 +97,19 @@ getEntry(): Entry
 
 从当前位置获取对应的键值对。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-KVStoreResultSet-getEntry(): Entry--><!--Device-KVStoreResultSet-getEntry(): Entry-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Entry | 返回键值对。 |
+| 类型 |
+| --- |
+| [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) |
 
 **示例**
 
@@ -149,25 +155,31 @@ try {
 
 ## getPosition
 
+ArkTS-Dyn:
+```TypeScript
+getPosition(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getPosition(): int
 ```
 
 获取结果集中当前的读取位置。读取位置会因[moveToFirst](#movetofirst)、 [moveToLast](#movetolast)等操作而发生变化。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-KVStoreResultSet-getPosition(): int--><!--Device-KVStoreResultSet-getPosition(): int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 返回当前读取位置。取值范围&gt;= -1，值为 -1 时表示还未开始读取，值为 0 时表示第一行。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -221,19 +233,19 @@ isAfterLast(): boolean
 
 检查读取位置是否在最后一行之后。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-KVStoreResultSet-isAfterLast(): boolean--><!--Device-KVStoreResultSet-isAfterLast(): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回true表示读取位置在最后一行之后；返回false表示读取位置不在最后一行之后。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -285,19 +297,19 @@ isBeforeFirst(): boolean
 
 检查读取位置是否在第一行之前。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-KVStoreResultSet-isBeforeFirst(): boolean--><!--Device-KVStoreResultSet-isBeforeFirst(): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回true表示读取位置在第一行之前；返回false表示读取位置不在第一行之前。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -349,19 +361,19 @@ isFirst(): boolean
 
 检查读取位置是否为第一行。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-KVStoreResultSet-isFirst(): boolean--><!--Device-KVStoreResultSet-isFirst(): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回true表示读取位置为第一行；返回false表示读取位置不是第一行。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -415,19 +427,19 @@ isLast(): boolean
 
 检查读取位置是否为最后一行。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-KVStoreResultSet-isLast(): boolean--><!--Device-KVStoreResultSet-isLast(): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回true表示读取位置为最后一行；返回false表示读取位置不是最后一行。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -475,37 +487,43 @@ try {
 
 ## move
 
+ArkTS-Dyn:
+```TypeScript
+move(offset: number): boolean
+```
+
+ArkTS-Sta:
 ```TypeScript
 move(offset: int): boolean
 ```
 
 将读取位置移动到当前位置的相对偏移量。即当前游标位置向下偏移 offset 行。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-KVStoreResultSet-move(offset: int): boolean--><!--Device-KVStoreResultSet-move(offset: int): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| offset | int | 是 | 表示与当前位置的相对偏移量，正偏移表示向结果集末尾方向移动（行号增大），负偏移表示向结果集起始方向移动（行号减小）。当游标超出结果集最前或者最后的位置时，接口返回false。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -561,19 +579,19 @@ moveToFirst(): boolean
 
 将读取位置移动到第一行。如果结果集为空，则返回false。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-KVStoreResultSet-moveToFirst(): boolean--><!--Device-KVStoreResultSet-moveToFirst(): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -627,19 +645,19 @@ moveToLast(): boolean
 
 将读取位置移动到最后一行。如果结果集为空，则返回false。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-KVStoreResultSet-moveToLast(): boolean--><!--Device-KVStoreResultSet-moveToLast(): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -693,19 +711,19 @@ moveToNext(): boolean
 
 将读取位置移动到下一行。如果结果集为空，则返回false。适用于全量获取数据库结果集的场景。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-KVStoreResultSet-moveToNext(): boolean--><!--Device-KVStoreResultSet-moveToNext(): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -757,37 +775,43 @@ try {
 
 ## moveToPosition
 
+ArkTS-Dyn:
+```TypeScript
+moveToPosition(position: number): boolean
+```
+
+ArkTS-Sta:
 ```TypeScript
 moveToPosition(position: int): boolean
 ```
 
 将读取位置从 0 移动到绝对位置。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-KVStoreResultSet-moveToPosition(position: int): boolean--><!--Device-KVStoreResultSet-moveToPosition(position: int): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| position | int | 是 | 表示绝对位置。当绝对位置超出结果集最前或者最后的位置时，接口返回false。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| position | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -843,19 +867,19 @@ moveToPrevious(): boolean
 
 将读取位置移动到上一行。如果结果集为空，则返回false。适用于全量获取数据库结果集的场景。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-KVStoreResultSet-moveToPrevious(): boolean--><!--Device-KVStoreResultSet-moveToPrevious(): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -902,4 +926,3 @@ try {
   console.error(`Failed to move to previous. Code: ${error.code}, message: ${error.message}`);
 }
 ```
-

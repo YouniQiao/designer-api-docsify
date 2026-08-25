@@ -4,7 +4,7 @@ Provides the number formatting capability, supporting automatic unit conversion 
 
 **Since:** 23
 
-<!--Device-i18n-export class AdvancedMeasureFormat--><!--Device-i18n-export class AdvancedMeasureFormat-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -24,20 +24,20 @@ Creates a **NumberFormat** object for the specified locale.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-AdvancedMeasureFormat-constructor(numberFormat: Intl.NumberFormat, options?: AdvancedMeasureFormatOptions)--><!--Device-AdvancedMeasureFormat-constructor(numberFormat: Intl.NumberFormat, options?: AdvancedMeasureFormatOptions)-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| numberFormat | Intl.NumberFormat | Yes | Indicates the number format object that used to format number. |
-| options | [AdvancedMeasureFormatOptions](arkts-localization-i18n-advancedmeasureformatoptions-i.md) | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| numberFormat | Intl.NumberFormat | Yes |
+| options | [AdvancedMeasureFormatOptions](arkts-localization-i18n-advancedmeasureformatoptions-i.md) | No |
 
 **Examples**
 
@@ -193,6 +193,12 @@ let systemLocaleManager: i18n.SystemLocaleManager = new i18n.SystemLocaleManager
 
 ## format
 
+ArkTS-Dyn:
+```TypeScript
+format(num: number): string
+```
+
+ArkTS-Sta:
 ```TypeScript
 format(num: double): string
 ```
@@ -201,25 +207,25 @@ Formats a number by appropriate measure for usage scenarios. For instance, when 
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-AdvancedMeasureFormat-format(num: double): string--><!--Device-AdvancedMeasureFormat-format(num: double): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| num | double | Yes | Number to be formatted. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| num | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Formatted text. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -350,4 +356,3 @@ let advancedMeasureFormat: i18n.AdvancedMeasureFormat = new i18n.AdvancedMeasure
 });
 let result = advancedMeasureFormat.format(100); // result = '37.778°C'
 ```
-

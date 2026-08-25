@@ -16,15 +16,15 @@ function constructMulticastSocketInstance(): MulticastSocket
 
 **起始版本：** 11
 
-<!--Device-socket-function constructMulticastSocketInstance(): MulticastSocket--><!--Device-socket-function constructMulticastSocketInstance(): MulticastSocket-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [MulticastSocket](arkts-network-socket-multicastsocket-i.md) | 返回一个MulticastSocket对象。 |
+| 类型 |
+| --- |
+| [MulticastSocket](arkts-network-socket-multicastsocket-i.md) |
 
 **示例**
 
@@ -32,4 +32,3 @@ function constructMulticastSocketInstance(): MulticastSocket
 import { socket } from '@kit.NetworkKit';
 let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
 ```
-

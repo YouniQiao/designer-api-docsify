@@ -4,9 +4,7 @@ ChipGroupV2组件提供操作块群组容器，支持单选或多选、自定义
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @ComponentV2
-
-<!--Device-unnamed-export declare struct ChipGroupV2--><!--Device-unnamed-export declare struct ChipGroupV2-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +24,27 @@ build函数用于构造ChipGroupV2高级组件。
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ChipGroupV2-build(): void--><!--Device-ChipGroupV2-build(): void-End-->
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## suffix
+
+```TypeScript
+suffix?: ChipGroupV2SuffixBuilder
+```
+
+将在ChipGroupV2的后缀中渲染的构建器函数。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,17 +56,15 @@ $items?: Callback<ChipGroupV2Items>
 
 ChipV2项的双向绑定回调方法，当需要监听或修改ChipV2项列表时传入此回调。默认值：undefined，不触发回调。
 
-**类型：** Callback&lt;[ChipGroupV2Items](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)&gt;
+**类型：** Callback&lt;[ChipGroupV2Items](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)&gt;
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Event
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroupV2-@Event  $items?: Callback<ChipGroupV2Items>--><!--Device-ChipGroupV2-@Event  $items?: Callback<ChipGroupV2Items>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,13 +80,11 @@ $selectedIndexes?: Callback<Array<number>>
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Event
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroupV2-@Event  $selectedIndexes?: Callback<Array<number>>--><!--Device-ChipGroupV2-@Event  $selectedIndexes?: Callback<Array<number>>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,19 +94,17 @@ $selectedIndexes?: Callback<Array<number>>
 chipGroupPadding?: ChipGroupV2Padding
 ```
 
-设置ChipGroupV2的上下内边距，以控制整体高度。类型为[ChipGroupV2Padding](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2padding-c.md)。默认值：{ top: 14, bottom: 14 }单位：vp值为undefined时，按默认值处理。
+设置ChipGroupV2的上下内边距，以控制整体高度。类型为[ChipGroupV2Padding](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2padding-c.md)。默认值：{ top: 14, bottom: 14 }单位：vp值为undefined时，按默认值处理。
 
-**类型：** [ChipGroupV2Padding](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2padding-c.md)
+**类型：** [ChipGroupV2Padding](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2padding-c.md)
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Param
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroupV2-@Param  chipGroupPadding?: ChipGroupV2Padding--><!--Device-ChipGroupV2-@Param  chipGroupPadding?: ChipGroupV2Padding-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -106,19 +114,17 @@ chipGroupPadding?: ChipGroupV2Padding
 chipGroupSpace?: ChipGroupV2Space
 ```
 
-左右内边距及ChipV2之间间距。设置后可调整ChipGroupV2的左右内边距和ChipV2之间的间距，增大间距使布局更宽松，减小间距使布局更紧凑。参考 [ChipGroupV2Space](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2space-c.md)类型。默认值：{ itemSpace: 8, startSpace: 16, endSpace: 16 }单位：vp值为undefined时，按默认值处理。
+左右内边距及ChipV2之间间距。设置后可调整ChipGroupV2的左右内边距和ChipV2之间的间距，增大间距使布局更宽松，减小间距使布局更紧凑。参考 [ChipGroupV2Space](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2space-c.md)类型。默认值：{ itemSpace: 8, startSpace: 16, endSpace: 16 }单位：vp值为undefined时，按默认值处理。
 
-**类型：** [ChipGroupV2Space](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2space-c.md)
+**类型：** [ChipGroupV2Space](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2space-c.md)
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Param
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroupV2-@Param  chipGroupSpace?: ChipGroupV2Space--><!--Device-ChipGroupV2-@Param  chipGroupSpace?: ChipGroupV2Space-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -128,19 +134,17 @@ chipGroupSpace?: ChipGroupV2Space
 items: ChipGroupV2Items
 ```
 
-每个ChipV2的特定属性，参考[ChipGroupV2ItemConfig](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)类型。值为undefined或空数组时，ChipGroupV2不渲染内部的[ChipV2](arkts-arkui-arkui-advanced-chipv2-chipv2-s.md)。
+每个ChipV2的特定属性，参考[ChipGroupV2ItemConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)类型。值为undefined或空数组时，ChipGroupV2不渲染内部的[ChipV2](arkts-arkui-arkui-advanced-chipv2-chipv2-s.md)。
 
-**类型：** [ChipGroupV2Items](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)
+**类型：** [ChipGroupV2Items](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Require、@Param
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroupV2-@Require  @Param  items: ChipGroupV2Items--><!--Device-ChipGroupV2-@Require  @Param  items: ChipGroupV2Items-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -150,19 +154,17 @@ items: ChipGroupV2Items
 itemStyle?: ChipGroupV2ItemStyle
 ```
 
-ChipV2的style属性，如颜色、大小等，参考[ChipGroupV2ItemStyle](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2itemstyle-c.md)类型。默认值：{ size: ChipV2Size.NORMAL, backgroundColor: \$r('sys.color.ohos_id_color_button_normal'), fontColor: \$r('sys.color.ohos_id_color_text_primary'), selectedFontColor: \$r('sys.color.ohos_id_color_text_primary_contrary'), selectedBackgroundColor: \$r('sys.color.ohos_id_color_emphasize') }值为undefined时，按默认值处理。图标填充色（[fillColor](arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md)和 [activatedFillColor](arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md)）的设置与对应的字体颜色保持一致：未选中状态下fillColor与 [fontColor](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2itemstyleconfig-i.md)保持一致，选中状态下activatedFillColor与 [selectedFontColor](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2itemstyleconfig-i.md)保持一致。如果需要设置不同的颜色，可以在传入items时使用 [prefixSymbolIcon](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)和[suffixSymbolIcon](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)。
+ChipV2的style属性，如颜色、大小等，参考[ChipGroupV2ItemStyle](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyle-c.md)类型。默认值：{ size: ChipV2Size.NORMAL, backgroundColor: \$r('sys.color.ohos_id_color_button_normal'), fontColor: \$r('sys.color.ohos_id_color_text_primary'), selectedFontColor: \$r('sys.color.ohos_id_color_text_primary_contrary'), selectedBackgroundColor: \$r('sys.color.ohos_id_color_emphasize') }值为undefined时，按默认值处理。图标填充色（[fillColor](arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md)和 [activatedFillColor](arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md)）的设置与对应的字体颜色保持一致：未选中状态下fillColor与 [fontColor](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyleconfig-i.md)保持一致，选中状态下activatedFillColor与 [selectedFontColor](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyleconfig-i.md)保持一致。如果需要设置不同的颜色，可以在传入items时使用 [prefixSymbolIcon](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)和[suffixSymbolIcon](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)。
 
-**类型：** [ChipGroupV2ItemStyle](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2itemstyle-c.md)
+**类型：** [ChipGroupV2ItemStyle](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyle-c.md)
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Param
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroupV2-@Param  itemStyle?: ChipGroupV2ItemStyle--><!--Device-ChipGroupV2-@Param  itemStyle?: ChipGroupV2ItemStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -178,13 +180,11 @@ multiple?: boolean
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Param
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroupV2-@Param  multiple?: boolean--><!--Device-ChipGroupV2-@Param  multiple?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -200,13 +200,11 @@ ChipV2状态改变时的回调方法，用于响应ChipV2选中状态变化。�
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Event
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroupV2-@Event  onChange?: Callback<Array<number>>--><!--Device-ChipGroupV2-@Event  onChange?: Callback<Array<number>>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -222,13 +220,11 @@ selectedIndexes?: Array<number>
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Param
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroupV2-@Param  selectedIndexes?: Array<number>--><!--Device-ChipGroupV2-@Param  selectedIndexes?: Array<number>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -238,19 +234,16 @@ selectedIndexes?: Array<number>
 suffix?: Callback<void>
 ```
 
-支持开发者自定义builder，如需在组件最右侧显示自定义内容可配置suffix属性，使用属性suffix需引用 [ChipGroupV2IconGroupSuffix](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2icongroupsuffix-s.md)接口。默认值：undefined，不在最右侧显示自定义内容。
+支持开发者自定义builder，如需在组件最右侧显示自定义内容可配置suffix属性，使用属性suffix需引用 [ChipGroupV2IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2icongroupsuffix-s.md)接口。默认值：undefined，不在最右侧显示自定义内容。
 
 **类型：** Callback&lt;void&gt;
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @BuilderParam
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ChipGroupV2-@BuilderParam  suffix?: Callback<void>--><!--Device-ChipGroupV2-@BuilderParam  suffix?: Callback<void>-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

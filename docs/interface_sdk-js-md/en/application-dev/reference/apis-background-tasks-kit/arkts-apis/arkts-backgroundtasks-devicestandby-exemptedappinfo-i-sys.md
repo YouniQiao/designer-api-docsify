@@ -2,9 +2,9 @@
 
 Information about an exempted application.@interface ExemptedAppInfo
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-deviceStandby-export interface ExemptedAppInfo--><!--Device-deviceStandby-export interface ExemptedAppInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -24,11 +24,11 @@ duration: int
 
 The exemption duration. <br>Unit:s
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ExemptedAppInfo-duration: int--><!--Device-ExemptedAppInfo-duration: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -44,9 +44,9 @@ The application name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ExemptedAppInfo-name: string--><!--Device-ExemptedAppInfo-name: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -60,13 +60,12 @@ resourceTypes: int
 
 The set of resource types that an application requests.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ExemptedAppInfo-resourceTypes: int--><!--Device-ExemptedAppInfo-resourceTypes: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
 **System API:** This is a system API.
-

@@ -14,37 +14,37 @@ function getAuthLockState(authType: UserAuthType): Promise<AuthLockState>
 
 Queries the lockout state of the specified authentication type. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-userAuth-function getAuthLockState(authType: UserAuthType): Promise<AuthLockState>--><!--Device-userAuth-function getAuthLockState(authType: UserAuthType): Promise<AuthLockState>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Yes | Authentication type, which is used to specify the credential type to query. Supported values: **FACE**, **FINGERPRINT**, and **PIN**. Select an appropriate authentication type based on the security requirements of the service scenario. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[AuthLockState](arkts-userauthentication-userauth-authlockstate-i.md)&gt; | Promise used to return the result. An error is reported when the operation fails. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[AuthLockState](arkts-userauthentication-userauth-authlockstate-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
-| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
-| [12500008](../errorcode-useriam.md#12500008-parameter-verification-failed) | The parameter is out of range. |
-| [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) | The type of credential has not been enrolled. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) |
+| [12500008](../errorcode-useriam.md#12500008-parameter-verification-failed) |
+| [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) |
 
 **Examples**
 
@@ -68,4 +68,3 @@ userAuth.getAuthLockState(queryType)
     console.info(`get auth lock state failed, err code is : ${err?.code}, err message is : ${err?.message}`);
   })
 ```
-

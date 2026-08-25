@@ -4,9 +4,9 @@
 
 **起始版本：** 26.1.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
-<!--Device-unnamed-declare namespace backgroundLoader--><!--Device-unnamed-declare namespace backgroundLoader-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -20,30 +20,29 @@ import { backgroundLoader } from '@kit.BackgroundTasksKit';
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [finishTask](arkts-backgroundtasks-backgroundloader-finishtask-f.md) | 结束后台加载任务。 |
-| [getTaskInfo](arkts-backgroundtasks-backgroundloader-gettaskinfo-f.md) | 获取后台预取任务信息。 |
-| [registerTask](arkts-backgroundtasks-backgroundloader-registertask-f.md) | 注册后台加载任务。 使用 callee.on(ON_START)来接受系统测触发的任务 |
-| [unregisterTask](arkts-backgroundtasks-backgroundloader-unregistertask-f.md) | 取消注册后台加载任务。 |
+| 名称 |
+| --- |
+| [finishTask](arkts-backgroundtasks-backgroundloader-finishtask-f.md) |
+| [getTaskInfo](arkts-backgroundtasks-backgroundloader-gettaskinfo-f.md) |
+| [registerTask](arkts-backgroundtasks-backgroundloader-registertask-f.md) |
+| [unregisterTask](arkts-backgroundtasks-backgroundloader-unregistertask-f.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [TaskInfo](arkts-backgroundtasks-backgroundloader-taskinfo-i.md) | 任务信息 |
-| [TaskStopInfo](arkts-backgroundtasks-backgroundloader-taskstopinfo-i.md) | 停止任务的信息。 |
+| 名称 |
+| --- |
+| [TaskInfo](arkts-backgroundtasks-backgroundloader-taskinfo-i.md) |
+| [TaskStopInfo](arkts-backgroundtasks-backgroundloader-taskstopinfo-i.md) |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-| [StopCode](arkts-backgroundtasks-backgroundloader-stopcode-e.md) | 枚举停止代码， 用于ON_STOP函数。 |
+| 名称 |
+| --- |
+| [StopCode](arkts-backgroundtasks-backgroundloader-stopcode-e.md) |
 
 ### 常量
 
-| 名称 | 说明 |
-| --- | --- |
-| [ON_START](arkts-backgroundtasks-backgroundloader-con.md#on_start) | 监听任务启动的方法 |
-| [ON_STOP](arkts-backgroundtasks-backgroundloader-con.md#on_stop) | 监听任务结束的方法 |
-
+| 名称 |
+| --- |
+| [ON_START](arkts-backgroundtasks-backgroundloader-con.md#on_start) |
+| [ON_STOP](arkts-backgroundtasks-backgroundloader-con.md#on_stop) |

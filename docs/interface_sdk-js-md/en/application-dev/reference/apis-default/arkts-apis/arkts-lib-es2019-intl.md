@@ -1,8 +1,6 @@
 # lib.es2019.intl
 
-**Since:** -1
-
-<!--Device-unnamed-declare namespace Intl--><!--Device-unnamed-declare namespace Intl-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -13,7 +11,6 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [DateTimeFormatPartTypesRegistry](arkts-intl-datetimeformatparttypesregistry-i.md) |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DateTimeFormatPartTypesRegistry](arkts-intl-datetimeformatparttypesregistry-i.md) |

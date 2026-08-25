@@ -2,9 +2,9 @@
 
 Defines the quick fix information at the HAP file level.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-quickFixManager-export interface HapModuleQuickFixInfo--><!--Device-quickFixManager-export interface HapModuleQuickFixInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 
@@ -26,9 +26,9 @@ Name of the HAP file.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-HapModuleQuickFixInfo-readonly moduleName: string--><!--Device-HapModuleQuickFixInfo-readonly moduleName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 
@@ -44,9 +44,9 @@ Hash value of the HAP file.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-HapModuleQuickFixInfo-readonly originHapHash: string--><!--Device-HapModuleQuickFixInfo-readonly originHapHash: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 
@@ -62,11 +62,10 @@ Installation path of the quick fix patch file.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-HapModuleQuickFixInfo-readonly quickFixFilePath: string--><!--Device-HapModuleQuickFixInfo-readonly quickFixFilePath: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **System API:** This is a system API.
-

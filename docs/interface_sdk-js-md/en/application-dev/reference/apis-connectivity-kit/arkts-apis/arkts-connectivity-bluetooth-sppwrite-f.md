@@ -16,26 +16,26 @@ Write data through the socket.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [sppWrite](arkts-connectivity-bluetoothmanager-sppwrite-f.md)
-
-<!--Device-bluetooth-function sppWrite(clientSocket: number, data: ArrayBuffer): boolean--><!--Device-bluetooth-function sppWrite(clientSocket: number, data: ArrayBuffer): boolean-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| clientSocket | number | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-bluetooth-sppaccept-f.md) or [sppConnect](arkts-connectivity-bluetooth-sppconnect-f.md). |
-| data | ArrayBuffer | Yes | Indicates the data to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| clientSocket | number | Yes |
+| data | ArrayBuffer | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -60,4 +60,3 @@ if (ret) {
   console.error('spp write failed');
 }
 ```
-

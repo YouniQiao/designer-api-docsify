@@ -9,7 +9,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Char](arkts-arkts-char-c.md) | Represents boxed char value and related operations |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Char](arkts-arkts-char-c.md) |

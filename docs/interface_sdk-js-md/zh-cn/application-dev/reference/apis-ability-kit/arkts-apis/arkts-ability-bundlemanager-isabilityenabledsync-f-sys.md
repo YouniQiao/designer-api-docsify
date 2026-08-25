@@ -14,9 +14,9 @@ function isAbilityEnabledSync(info: AbilityInfo): boolean
 
 以同步方法获取指定组件的禁用或使能状态。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-bundleManager-function isAbilityEnabledSync(info: AbilityInfo): boolean--><!--Device-bundleManager-function isAbilityEnabledSync(info: AbilityInfo): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -24,24 +24,24 @@ function isAbilityEnabledSync(info: AbilityInfo): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| info | AbilityInfo | 是 | 表示关于检查ability的信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回true表示当前应用组件为使能状态，返回false表示当前应用组件为禁用状态。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
-| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified abilityName is not found. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
 
 **示例**
 
@@ -118,4 +118,3 @@ try {
   hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
 }
 ```
-

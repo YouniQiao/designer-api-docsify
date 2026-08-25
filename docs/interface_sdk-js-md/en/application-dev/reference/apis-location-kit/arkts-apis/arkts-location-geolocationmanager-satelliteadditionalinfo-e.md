@@ -2,9 +2,9 @@
 
 Enum for satellite additional information.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-geoLocationManager-export enum SatelliteAdditionalInfo--><!--Device-geoLocationManager-export enum SatelliteAdditionalInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
@@ -16,9 +16,9 @@ SATELLITES_ADDITIONAL_INFO_NULL = 0
 
 Default value.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SatelliteAdditionalInfo-SATELLITES_ADDITIONAL_INFO_NULL = 0--><!--Device-SatelliteAdditionalInfo-SATELLITES_ADDITIONAL_INFO_NULL = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
@@ -30,9 +30,9 @@ SATELLITES_ADDITIONAL_INFO_EPHEMERIS_DATA_EXIST = 1
 
 Ephemeris data exist.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SatelliteAdditionalInfo-SATELLITES_ADDITIONAL_INFO_EPHEMERIS_DATA_EXIST = 1--><!--Device-SatelliteAdditionalInfo-SATELLITES_ADDITIONAL_INFO_EPHEMERIS_DATA_EXIST = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
@@ -44,9 +44,9 @@ SATELLITES_ADDITIONAL_INFO_ALMANAC_DATA_EXIST = 2
 
 Almanac data exist.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SatelliteAdditionalInfo-SATELLITES_ADDITIONAL_INFO_ALMANAC_DATA_EXIST = 2--><!--Device-SatelliteAdditionalInfo-SATELLITES_ADDITIONAL_INFO_ALMANAC_DATA_EXIST = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
@@ -58,9 +58,9 @@ SATELLITES_ADDITIONAL_INFO_USED_IN_FIX = 4
 
 This satellite is being used in location fix.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SatelliteAdditionalInfo-SATELLITES_ADDITIONAL_INFO_USED_IN_FIX = 4--><!--Device-SatelliteAdditionalInfo-SATELLITES_ADDITIONAL_INFO_USED_IN_FIX = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
@@ -72,9 +72,8 @@ SATELLITES_ADDITIONAL_INFO_CARRIER_FREQUENCY_EXIST = 8
 
 Carrier frequency exist.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SatelliteAdditionalInfo-SATELLITES_ADDITIONAL_INFO_CARRIER_FREQUENCY_EXIST = 8--><!--Device-SatelliteAdditionalInfo-SATELLITES_ADDITIONAL_INFO_CARRIER_FREQUENCY_EXIST = 8-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Gnss
-

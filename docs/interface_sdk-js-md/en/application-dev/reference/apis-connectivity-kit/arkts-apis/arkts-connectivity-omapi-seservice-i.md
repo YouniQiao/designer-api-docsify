@@ -4,7 +4,7 @@
 
 **Since:** 10
 
-<!--Device-omapi-export interface SEService--><!--Device-omapi-export interface SEService-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.SecureElement
 
@@ -24,21 +24,21 @@ Obtains available SE readers, which include all the SEs on the device.
 
 **Since:** 10
 
-<!--Device-SEService-getReaders(): Reader[]--><!--Device-SEService-getReaders(): Reader[]-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.SecureElement
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Reader](arkts-connectivity-omapi-reader-i.md)[] | Available readers obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Reader](arkts-connectivity-omapi-reader-i.md)[] |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -76,21 +76,21 @@ Obtains the version of the Open Mobile API (OMAPI) specification used.
 
 **Since:** 10
 
-<!--Device-SEService-getVersion(): string--><!--Device-SEService-getVersion(): string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.SecureElement
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | OMAPI version obtained. For example, **3.3** indicates Open Mobile API Specification v3.3. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -121,21 +121,21 @@ Checks whether this SE service is connected.
 
 **Since:** 10
 
-<!--Device-SEService-isConnected(): boolean--><!--Device-SEService-isConnected(): boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.SecureElement
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true** if the SE service is connected; **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -170,15 +170,15 @@ Releases all SE resources allocated to this SE service. After that, [isConnected
 
 **Since:** 10
 
-<!--Device-SEService-shutdown(): void--><!--Device-SEService-shutdown(): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.SecureElement
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -197,4 +197,3 @@ try {
     hilog.error(0x0000, 'testTag', 'shutdown error %{public}s', JSON.stringify(error));
 }
 ```
-

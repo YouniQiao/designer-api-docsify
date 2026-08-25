@@ -8,16 +8,15 @@ Custom tab type USER_INFO & TAB, COMPILATION, SETTINGS.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-avMusicTemplate-type CustomType = 'USER_INFO' | 'TAB' | 'COMPILATION' | 'SETTINGS'--><!--Device-avMusicTemplate-type CustomType = 'USER_INFO' | 'TAB' | 'COMPILATION' | 'SETTINGS'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-| Type | Description |
-| --- | --- |
-| 'USER_INFO' |  |
-| 'TAB' |  |
-| 'COMPILATION' |  |
-| 'SETTINGS' |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'USER_INFO' |
+| 'TAB' |
+| 'COMPILATION' |
+| 'SETTINGS' |

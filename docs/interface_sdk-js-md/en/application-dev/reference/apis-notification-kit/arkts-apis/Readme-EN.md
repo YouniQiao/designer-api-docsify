@@ -180,6 +180,7 @@
   <!--Del-->
   - [isDistributedEnabledBySlot(system api)](arkts-notification-notificationmanager-isdistributedenabledbyslot-f-sys.md)<!--DelEnd-->
   - [isGeofenceEnabled](arkts-notification-notificationmanager-isgeofenceenabled-f.md)
+  - [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md)
   <!--Del-->
   - [isNotificationEnabled(system api)](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md)<!--DelEnd-->
   - [isNotificationEnabledSync](arkts-notification-notificationmanager-isnotificationenabledsync-f.md)
@@ -201,13 +202,13 @@
   - [isSupportDoNotDisturbMode(system api)](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md)<!--DelEnd-->
   - [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md)
   <!--Del-->
-  - [off_checkNotification(system api)](arkts-notification-notificationmanager-offchecknotification-f-sys.md)<!--DelEnd-->
+  - [off(system api)](arkts-notification-notificationmanager-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offBadgeNumberQuery(system api)](arkts-notification-notificationmanager-offbadgenumberquery-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offCheckNotification(system api)](arkts-notification-notificationmanager-offchecknotification-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on_checkNotification(system api)](arkts-notification-notificationmanager-onchecknotification-f-sys.md)<!--DelEnd-->
+  - [on(system api)](arkts-notification-notificationmanager-on-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onBadgeNumberQuery(system api)](arkts-notification-notificationmanager-onbadgenumberquery-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -486,8 +487,7 @@
     - [NotificationFlags](arkts-notification-notificationflags-notificationflags-i.md)
     <!--Del-->
     - [NotificationFlags(system api)](arkts-notification-notificationflags-notificationflags-i-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [NotificationFlagStatus(system api)](arkts-notification-notificationflags-notificationflagstatus-e-sys.md)<!--DelEnd-->
+    - [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
   - [NotificationInfo](arkts-notificationinfo.md)
     - [NotificationInfo](arkts-notification-notificationinfo-i.md)
   - [notificationRequest](arkts-notificationrequest.md)

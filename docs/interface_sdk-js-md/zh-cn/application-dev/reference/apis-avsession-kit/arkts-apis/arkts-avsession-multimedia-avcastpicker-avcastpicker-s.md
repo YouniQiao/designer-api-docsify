@@ -8,9 +8,7 @@
 
 **起始版本：** 10
 
-**装饰器类型：** @Component
-
-<!--Device-unnamed-declare struct AVCastPicker--><!--Device-unnamed-declare struct AVCastPicker-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -20,6 +18,42 @@
 import { AVCastPicker } from '@kit.AVSessionKit';
 ```
 
+## build
+
+```TypeScript
+build(): void
+```
+
+构造组件。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+## onStateChange
+
+```TypeScript
+onStateChange?: (state: AVCastPickerState) => void
+```
+
+投播状态更改回调。
+
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| state | [AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md) | 是 |
+
 ## activeColor
 
 ```TypeScript
@@ -28,15 +62,13 @@ activeColor?: Color | number | string
 
 设备连接成功状态下投播组件的颜色。未设置时，系统将优先根据normalColor的颜色匹配；如果normalColor也未设置，将采用colorMode下的颜色设置。
 
-**类型：** [Color](../../apis-default/arkts-apis/arkts-enums-color-e.md) \| number \| string
+**类型：** [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) \| number \| string
 
 **起始版本：** 11
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastPicker-@Prop  activeColor?: Color | number | string--><!--Device-AVCastPicker-@Prop  activeColor?: Color | number | string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -53,11 +85,9 @@ colorMode?: AVCastPickerColorMode
 
 **起始版本：** 12
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastPicker-@Prop  colorMode?: AVCastPickerColorMode--><!--Device-AVCastPicker-@Prop  colorMode?: AVCastPickerColorMode-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -69,15 +99,13 @@ customPicker?: CustomBuilder
 
 自定义样式。建议使用自定义组件样式，可有效提升组件显示速度。
 
-**类型：** [CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md)
+**类型：** [CustomBuilder](../../apis-arkui/arkts-apis/arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 12
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastPicker-@Prop  customPicker?: CustomBuilder--><!--Device-AVCastPicker-@Prop  customPicker?: CustomBuilder-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -89,33 +117,13 @@ normalColor?: Color | number | string
 
 正常状态下投播组件的颜色。未设置时，将采用colorMode下的颜色设置。
 
-**类型：** [Color](../../apis-default/arkts-apis/arkts-enums-color-e.md) \| number \| string
+**类型：** [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) \| number \| string
 
 **起始版本：** 11
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastPicker-@Prop  normalColor?: Color | number | string--><!--Device-AVCastPicker-@Prop  normalColor?: Color | number | string-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-## onStateChange
-
-```TypeScript
-onStateChange?: (state: AVCastPickerState) => void
-```
-
-投播状态更改回调。
-
-**类型：** (state: AVCastPickerState) =&gt; void
-
-**起始版本：** 11
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastPicker-onStateChange?: (state: AVCastPickerState) => void--><!--Device-AVCastPicker-onStateChange?: (state: AVCastPickerState) => void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -132,11 +140,9 @@ pickerStyle?: AVCastPickerStyle
 
 **起始版本：** 12
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastPicker-@Prop  pickerStyle?: AVCastPickerStyle--><!--Device-AVCastPicker-@Prop  pickerStyle?: AVCastPickerStyle-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -152,11 +158,8 @@ sessionType?: string
 
 **起始版本：** 12
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AVCastPicker-@Prop  sessionType?: string--><!--Device-AVCastPicker-@Prop  sessionType?: string-End-->
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-

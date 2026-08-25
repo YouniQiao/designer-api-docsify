@@ -4,7 +4,7 @@ Represents the callback invoked when the display scale of this page changes.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface OnScaleChangeEvent--><!--Device-unnamed-declare interface OnScaleChangeEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -25,9 +25,9 @@ Display scale of the page after the change.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-OnScaleChangeEvent-newScale: number--><!--Device-OnScaleChangeEvent-newScale: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -43,9 +43,8 @@ Display scale of the page before the change.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-OnScaleChangeEvent-oldScale: number--><!--Device-OnScaleChangeEvent-oldScale: number-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

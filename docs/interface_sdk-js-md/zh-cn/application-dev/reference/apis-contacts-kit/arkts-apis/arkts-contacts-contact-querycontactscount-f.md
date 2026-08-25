@@ -9,39 +9,39 @@ import { contact } from '@kit.ContactsKit';
 ## queryContactsCount
 
 ```TypeScript
-function queryContactsCount(context: Context): Promise<int>
+function queryContactsCount(context: Context): Promise<number>
 ```
 
 查询所有联系人的数量。使用Promise异步回调。
 
 **起始版本：** 22
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
+
 **需要权限：** ohos.permission.READ_CONTACTS
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-contact-function queryContactsCount(context: Context): Promise<int>--><!--Device-contact-function queryContactsCount(context: Context): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文Context。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise对象。返回查询到的联系人数量。 |
+| 类型 |
+| --- |
+| Promise & lt;int & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [16700001](../errorcode-contacts.md#16700001-系统内部错误) | General error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [16700001](../errorcode-contacts.md#16700001-系统内部错误) |
 
 **示例**
 
@@ -58,4 +58,3 @@ promise.then((data) => {
   console.info(`Succeeded in querying ContactsCount. data->${JSON.stringify(data)}`);
 });
 ```
-

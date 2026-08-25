@@ -14,30 +14,30 @@ function openFormEditAbility(abilityName: string, formId: string, isMainPage?: b
 
 打开卡片编辑页。适用于需要用户配置卡片参数的场景，例如设置卡片显示内容、选择数据源、配置更新频率等。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-formProvider-function openFormEditAbility(abilityName: string, formId: string, isMainPage?: boolean): void--><!--Device-formProvider-function openFormEditAbility(abilityName: string, formId: string, isMainPage?: boolean): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| abilityName | string | 是 | 编辑页的ability名称。 |
-| formId | string | 是 | 卡片标识。 |
-| isMainPage | boolean | 否 | 是否为主编辑页。 <br>- true：表示是主编辑页，适合首次配置卡片基本信息的场景。 <br>- false：表示不是主编辑页，适合进行卡片细节调整或高级配置的场景。 <br>默认值：true（通常首次编辑卡片时使用默认值即可）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| abilityName | string | 是 |
+| formId | string | 是 |
+| isMainPage | boolean | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function openFormEditAbility cannot work correctly due to limited device capabilities. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
-| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
-| [16501007](../errorcode-form.md#16501007-卡片不可信) | Form is not trust. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
+| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) |
+| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) |
+| [16501007](../errorcode-form.md#16501007-卡片不可信) |
 
 **示例**
 
@@ -111,4 +111,3 @@ struct Page {
   }
 }
 ```
-

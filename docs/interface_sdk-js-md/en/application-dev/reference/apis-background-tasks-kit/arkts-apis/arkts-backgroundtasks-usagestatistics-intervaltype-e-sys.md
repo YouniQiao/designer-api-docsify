@@ -2,9 +2,9 @@
 
 Declares interval type.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-usageStatistics-export enum IntervalType--><!--Device-usageStatistics-export enum IntervalType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -18,9 +18,9 @@ BY_OPTIMIZED = 0
 
 Indicates the interval type that will determine the optimal interval based on the start and end time.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IntervalType-BY_OPTIMIZED = 0--><!--Device-IntervalType-BY_OPTIMIZED = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -34,9 +34,9 @@ BY_DAILY = 1
 
 Indicates the daily interval.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IntervalType-BY_DAILY = 1--><!--Device-IntervalType-BY_DAILY = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -50,9 +50,9 @@ BY_WEEKLY = 2
 
 Indicates the weekly interval.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IntervalType-BY_WEEKLY = 2--><!--Device-IntervalType-BY_WEEKLY = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -66,9 +66,9 @@ BY_MONTHLY = 3
 
 Indicates the monthly interval.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IntervalType-BY_MONTHLY = 3--><!--Device-IntervalType-BY_MONTHLY = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -82,11 +82,10 @@ BY_ANNUALLY = 4
 
 Indicates the annually interval.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IntervalType-BY_ANNUALLY = 4--><!--Device-IntervalType-BY_ANNUALLY = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
-

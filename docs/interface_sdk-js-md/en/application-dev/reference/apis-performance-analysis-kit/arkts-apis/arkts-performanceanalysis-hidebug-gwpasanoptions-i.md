@@ -2,9 +2,9 @@
 
 GwpAsan Options.@interface GwpAsanOptions
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-hidebug-interface GwpAsanOptions--><!--Device-hidebug-interface GwpAsanOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -24,9 +24,9 @@ Control whether to enable GWP-ASan every time
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-GwpAsanOptions-alwaysEnabled?: boolean--><!--Device-GwpAsanOptions-alwaysEnabled?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -42,9 +42,9 @@ the Recoverable mode of GWP-ASAN.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-GwpAsanOptions-isRecover?: boolean--><!--Device-GwpAsanOptions-isRecover?: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -56,11 +56,11 @@ maxSimutaneousAllocations?: int
 
 the max simutaneous allocations of GWP-ASAN
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-GwpAsanOptions-maxSimutaneousAllocations?: int--><!--Device-GwpAsanOptions-maxSimutaneousAllocations?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -72,11 +72,10 @@ sampleRate?: int
 
 sample rate of GWP-ASAN
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-GwpAsanOptions-sampleRate?: int--><!--Device-GwpAsanOptions-sampleRate?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
-

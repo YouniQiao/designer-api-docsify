@@ -33,34 +33,38 @@ Swiper(controller?: SwiperController)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-SwiperInterface-(controller?: SwiperController): SwiperAttribute--><!--Device-SwiperInterface-(controller?: SwiperController): SwiperAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| controller | [SwiperController](arkts-arkui-swipercontroller-c.md) | 否 | 给组件绑定一个控制器，用来控制组件翻页或者预加载指定子节点。 |
+| 参数名 | [类型](#类型) | 必填 |
+| --- | --- | --- |
+| controller | [SwiperController](arkts-arkui-swipercontroller-c.md) | 否 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
+| 名称 |
+| --- |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
+| 名称 |
+| --- |
+| [ContentDidScrollCallback](arkts-arkui-contentdidscrollcallback-t.md) |
+| [ContentWillScrollCallback](arkts-arkui-contentwillscrollcallback-t.md) |
+| [OnSwiperAnimationEndCallback](arkts-arkui-onswiperanimationendcallback-t.md) |
+| [OnSwiperAnimationStartCallback](arkts-arkui-onswiperanimationstartcallback-t.md) |
+| [OnSwiperGestureSwipeCallback](arkts-arkui-onswipergestureswipecallback-t.md) |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-
+| 名称 |
+| --- |

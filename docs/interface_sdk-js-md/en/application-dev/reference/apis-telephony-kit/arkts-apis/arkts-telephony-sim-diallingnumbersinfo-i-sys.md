@@ -2,9 +2,9 @@
 
 Defines the contact number information.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sim-export interface DiallingNumbersInfo--><!--Device-sim-export interface DiallingNumbersInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -26,9 +26,9 @@ Indicates the tag.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DiallingNumbersInfo-alphaTag: string--><!--Device-DiallingNumbersInfo-alphaTag: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -46,7 +46,7 @@ Indicates the call transfer number.
 
 **Since:** 8
 
-<!--Device-DiallingNumbersInfo-number: string--><!--Device-DiallingNumbersInfo-number: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -62,9 +62,9 @@ Indicates the PIN 2.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DiallingNumbersInfo-pin2?: string--><!--Device-DiallingNumbersInfo-pin2?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -78,11 +78,11 @@ recordNumber?: int
 
 Indicates the record number.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DiallingNumbersInfo-recordNumber?: int--><!--Device-DiallingNumbersInfo-recordNumber?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -100,9 +100,8 @@ Indicates the call transfer teleNumber.
 
 **Since:** 23
 
-<!--Device-DiallingNumbersInfo-teleNumber: string--><!--Device-DiallingNumbersInfo-teleNumber: string-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
-

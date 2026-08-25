@@ -4,7 +4,7 @@ Defining Environment variable enumeration value.@enum { string }
 
 **Since:** 22
 
-<!--Device-unnamed-declare enum SystemProperties--><!--Device-unnamed-declare enum SystemProperties-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ System environmental breakpoint key that is used to obtain the width and height 
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-SystemProperties-BREAK_POINT = 'system.arkui.breakpoint'--><!--Device-SystemProperties-BREAK_POINT = 'system.arkui.breakpoint'-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ System environmental avoidarea key that is used to obtain the avoid area of the 
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-SystemProperties-WINDOW_AVOID_AREA = 'system.window.avoidarea'--><!--Device-SystemProperties-WINDOW_AVOID_AREA = 'system.window.avoidarea'-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ System environmental avoidarea key that is used to obtain the avoid area of the 
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-SystemProperties-WINDOW_AVOID_AREA_PX = 'system.window.avoidarea.px'--><!--Device-SystemProperties-WINDOW_AVOID_AREA_PX = 'system.window.avoidarea.px'-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,11 @@ System environmental windowsize key that is used to obtain the size of the windo
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-SystemProperties-WINDOW_SIZE = 'system.window.size'--><!--Device-SystemProperties-WINDOW_SIZE = 'system.window.size'-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,11 +90,10 @@ System environmental windowsize key that is used to obtain the size of the windo
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-SystemProperties-WINDOW_SIZE_PX = 'system.window.size.px'--><!--Device-SystemProperties-WINDOW_SIZE_PX = 'system.window.size.px'-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 升级文件，包含文件类型和文件路径，用于指定要安装的本地升级包。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-update-export interface UpgradeFile--><!--Device-update-export interface UpgradeFile-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -26,9 +26,9 @@ filePath: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-UpgradeFile-filePath: string--><!--Device-UpgradeFile-filePath: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -44,11 +44,10 @@ fileType: ComponentType
 
 **类型：** ComponentType
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-UpgradeFile-fileType: ComponentType--><!--Device-UpgradeFile-fileType: ComponentType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
-

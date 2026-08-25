@@ -16,23 +16,23 @@ Returns true if encoding is the name of a supported character encoding, or false
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-fastbuffer-function isEncoding(encoding: string): boolean--><!--Device-fastbuffer-function isEncoding(encoding: string): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| encoding | string | Yes | The character encoding name to validate |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| encoding | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true or false |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -48,4 +48,3 @@ console.info(fastbuffer.isEncoding('utf/8').toString());
 console.info(fastbuffer.isEncoding('').toString());
 // Output: false
 ```
-

@@ -2,9 +2,9 @@
 
 The enum of scan duty.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ble-enum ScanDuty--><!--Device-ble-enum ScanDuty-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -16,13 +16,13 @@ SCAN_MODE_LOW_POWER = 0
 
 low power mode
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ScanDuty-SCAN_MODE_LOW_POWER = 0--><!--Device-ScanDuty-SCAN_MODE_LOW_POWER = 0-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -34,13 +34,13 @@ SCAN_MODE_BALANCED = 1
 
 balanced power mode
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ScanDuty-SCAN_MODE_BALANCED = 1--><!--Device-ScanDuty-SCAN_MODE_BALANCED = 1-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -52,13 +52,12 @@ SCAN_MODE_LOW_LATENCY = 2
 
 Scan using highest duty cycle
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ScanDuty-SCAN_MODE_LOW_LATENCY = 2--><!--Device-ScanDuty-SCAN_MODE_LOW_LATENCY = 2-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

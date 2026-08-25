@@ -4,7 +4,7 @@ Represents the manufacturer data.
 
 **Since:** 26.0.0
 
-<!--Device-advertising-interface ManufacturerData--><!--Device-advertising-interface ManufacturerData-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -26,27 +26,26 @@ Manufacturer data.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ManufacturerData-manufacturerData: ArrayBuffer--><!--Device-ManufacturerData-manufacturerData: ArrayBuffer-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## manufacturerId
 
 ```TypeScript
-manufacturerId: int
+manufacturerId: number
 ```
 
 Manufacturer ID. The value range is [1, 65535].
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ManufacturerData-manufacturerId: int--><!--Device-ManufacturerData-manufacturerId: int-End-->
-
 **System capability:** SystemCapability.Communication.NearLink.Base
-

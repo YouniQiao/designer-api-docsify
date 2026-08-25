@@ -4,7 +4,7 @@ Defines the listener for changes of the styled string text content.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface StyledStringChangedListener--><!--Device-unnamed-declare interface StyledStringChangedListener-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,15 +21,13 @@ onDidChange?: OnDidChangeCallback
 
 Callback invoked when text is changed.
 
-**Type:** [OnDidChangeCallback](arkts-arkui-ondidchangecallback-t.md)
-
 **Since:** 12
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-StyledStringChangedListener-onDidChange?: OnDidChangeCallback--><!--Device-StyledStringChangedListener-onDidChange?: OnDidChangeCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +43,10 @@ Callback invoked when text is about to change.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-StyledStringChangedListener-onWillChange?: Callback<StyledStringChangeValue, boolean>--><!--Device-StyledStringChangedListener-onWillChange?: Callback<StyledStringChangeValue, boolean>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

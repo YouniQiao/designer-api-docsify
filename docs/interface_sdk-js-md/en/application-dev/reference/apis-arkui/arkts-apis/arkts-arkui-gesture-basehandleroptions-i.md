@@ -4,9 +4,7 @@ Defines the BaseHandlerOptions options. @interface BaseHandlerOptions
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export interface BaseHandlerOptions--><!--Device-unnamed-export interface BaseHandlerOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +20,8 @@ The flag to strict verification fingers, if touch finger size is over or less th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BaseHandlerOptions-isFingerCountLimited?: boolean--><!--Device-BaseHandlerOptions-isFingerCountLimited?: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

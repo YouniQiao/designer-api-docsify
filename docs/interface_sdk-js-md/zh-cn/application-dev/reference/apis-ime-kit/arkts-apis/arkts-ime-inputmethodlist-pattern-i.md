@@ -2,9 +2,9 @@
 
 输入法模式选项的图标资源定义，用于配置键盘模式在弹窗中的视觉表现。仅当前输入法（即系统预置输入法）可使用。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-unnamed-export interface Pattern--><!--Device-unnamed-export interface Pattern-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -24,9 +24,9 @@ icon: Resource
 
 **类型：** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-Pattern-icon: Resource--><!--Device-Pattern-icon: Resource-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -40,9 +40,8 @@ selectedIcon: Resource
 
 **类型：** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-Pattern-selectedIcon: Resource--><!--Device-Pattern-selectedIcon: Resource-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
-

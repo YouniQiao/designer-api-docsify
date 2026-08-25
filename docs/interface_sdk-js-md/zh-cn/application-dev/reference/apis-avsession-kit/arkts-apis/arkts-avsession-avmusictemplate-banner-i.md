@@ -6,7 +6,7 @@
 
 **起始版本：** 23
 
-<!--Device-avMusicTemplate-interface Banner--><!--Device-avMusicTemplate-interface Banner-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -28,9 +28,8 @@ isSupportOnePlay: boolean
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Banner-isSupportOnePlay: boolean--><!--Device-Banner-isSupportOnePlay: boolean-End-->
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-

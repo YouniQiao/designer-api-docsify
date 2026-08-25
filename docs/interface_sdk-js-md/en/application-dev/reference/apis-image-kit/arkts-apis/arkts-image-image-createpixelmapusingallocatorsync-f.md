@@ -15,33 +15,33 @@ function createPixelMapUsingAllocatorSync(colors: ArrayBuffer, param: Initializa
 
 Create pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-image-function createPixelMapUsingAllocatorSync(colors: ArrayBuffer, param: InitializationOptions,    allocatorType?: AllocatorType): PixelMap--><!--Device-image-function createPixelMapUsingAllocatorSync(colors: ArrayBuffer, param: InitializationOptions,    allocatorType?: AllocatorType): PixelMap-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| colors | ArrayBuffer | Yes | The image color buffer. |
-| param | [InitializationOptions](arkts-image-image-initializationoptions-i.md) | Yes | Initialization options for pixelmap. |
-| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | No | Indicate which memory type will be used by the returned PixelMap. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| colors | ArrayBuffer | Yes |
+| param | [InitializationOptions](arkts-image-image-initializationoptions-i.md) | Yes |
+| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| PixelMap | Returns the instance if the operation is successful;Otherwise, return undefined. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PixelMap](arkts-image-image-pixelmap-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation. |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
+| Error Code ID |
+| --- |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) |
 
 **Examples**
 
@@ -95,33 +95,32 @@ function createPixelMapUsingAllocatorSync(param: InitializationOptions, allocato
 
 Create an empty pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-image-function createPixelMapUsingAllocatorSync(param: InitializationOptions, allocatorType?: AllocatorType): PixelMap--><!--Device-image-function createPixelMapUsingAllocatorSync(param: InitializationOptions, allocatorType?: AllocatorType): PixelMap-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| param | [InitializationOptions](arkts-image-image-initializationoptions-i.md) | Yes | Initialization options for pixelmap. |
-| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | No | Indicate which memory type will be used by the returned PixelMap. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| param | [InitializationOptions](arkts-image-image-initializationoptions-i.md) | Yes |
+| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| PixelMap | Returns the instance if the operation is successful;Otherwise, return undefined. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PixelMap](arkts-image-image-pixelmap-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation. |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
+| Error Code ID |
+| --- |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
 
 **Examples**
 
 See [createPixelMapUsingAllocatorSync](#createpixelmapusingallocatorsync)
-

@@ -16,23 +16,23 @@ function getSandboxAppConfig(): Promise<string>
 
 **起始版本：** 11
 
-<!--Device-dlpPermission-function getSandboxAppConfig(): Promise<string>--><!--Device-dlpPermission-function getSandboxAppConfig(): Promise<string>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | Promise对象。返回沙箱应用配置信息。长度小于4194304字节。 |
+| 类型 |
+| --- |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
-| [19100018](../errorcode-dlp.md#19100018-应用未授权) | The application is not authorized. |
+| 错误码ID |
+| --- |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
+| [19100018](../errorcode-dlp.md#19100018-应用未授权) |
 
 **示例**
 
@@ -45,4 +45,3 @@ dlpPermission.getSandboxAppConfig().then((configInfo) => { // 获取沙箱应用
   console.error(JSON.stringify(error));
 });
 ```
-

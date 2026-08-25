@@ -1,8 +1,6 @@
 # RegExpConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface RegExpConstructor--><!--Device-unnamed-interface RegExpConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,7 +15,4 @@ readonly [Symbol.species]: RegExpConstructor
 
 **Type:** [RegExpConstructor](arkts-lib-es2015-symbol-wellknown-regexpconstructor-i.md)
 
-**Since:** -1
-
-<!--Device-RegExpConstructor-readonly [Symbol.species]: RegExpConstructor--><!--Device-RegExpConstructor-readonly [Symbol.species]: RegExpConstructor-End-->
-
+**ArkTS mode:** 

@@ -1,30 +1,29 @@
 # InflateBackOutputCallback
 
 ```TypeScript
-type InflateBackOutputCallback = (outDesc: RecordData, buf: ArrayBuffer, length: int) => int
+type InflateBackOutputCallback = (outDesc: object, buf: ArrayBuffer, length: int) => int
 ```
 
 The output data provided by the user is written into the callback function. Whenever decompressed data is ready for output, zlib calls this function to write the data from the buffer to the target location.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-zlib-type InflateBackOutputCallback = (outDesc: RecordData, buf: ArrayBuffer, length: int) => int--><!--Device-zlib-type InflateBackOutputCallback = (outDesc: RecordData, buf: ArrayBuffer, length: int) => int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| outDesc | [RecordData](arkts-basicservices-recorddata-t.md) | Yes | Object passed to output function. Object dependency requirement implementation. |
-| buf | ArrayBuffer | Yes | Used to store data to be written. |
-| length | int | Yes | Write the length of the output buffer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| outDesc | object | Yes |
+| buf | ArrayBuffer | Yes |
+| length | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Return the number of bytes output. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |

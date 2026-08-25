@@ -2,9 +2,9 @@
 
 Client information, including the IP address and port number.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-webSocket-export interface WebSocketConnection--><!--Device-webSocket-export interface WebSocketConnection-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -24,9 +24,9 @@ IP address of the client.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-WebSocketConnection-clientIP: string--><!--Device-WebSocketConnection-clientIP: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -38,11 +38,10 @@ clientPort: int
 
 Port number of the client.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-WebSocketConnection-clientPort: int--><!--Device-WebSocketConnection-clientPort: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
-

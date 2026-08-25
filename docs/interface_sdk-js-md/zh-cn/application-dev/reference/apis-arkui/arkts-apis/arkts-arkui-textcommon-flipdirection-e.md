@@ -4,9 +4,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-unnamed-export declare enum FlipDirection--><!--Device-unnamed-export declare enum FlipDirection-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +18,9 @@ DOWN = 0
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-FlipDirection-DOWN = 0--><!--Device-FlipDirection-DOWN = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +34,8 @@ UP = 1
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-FlipDirection-UP = 1--><!--Device-FlipDirection-UP = 1-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

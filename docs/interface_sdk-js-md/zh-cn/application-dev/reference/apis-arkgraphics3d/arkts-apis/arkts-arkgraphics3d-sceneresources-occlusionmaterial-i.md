@@ -6,7 +6,6 @@
 
 **起始版本：** 23
 
-<!--Device-unnamed-export interface OcclusionMaterial--><!--Device-unnamed-export interface OcclusionMaterial-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

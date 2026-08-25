@@ -16,25 +16,25 @@ function createWantRecord(want: Want): PasteDataRecord
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [createRecord](arkts-basicservices-pasteboard-createrecord-f.md)(mimeType: string, value: ValueType)
-
-<!--Device-pasteboard-function createWantRecord(want: Want): PasteDataRecord--><!--Device-pasteboard-function createWantRecord(want: Want): PasteDataRecord-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Want内容。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | 一条新建的Want内容条目。 |
+| 类型 |
+| --- |
+| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) |
 
 **示例**
 
@@ -47,4 +47,3 @@ let object: Want = {
 };
 let record: pasteboard.PasteDataRecord = pasteboard.createWantRecord(object);
 ```
-

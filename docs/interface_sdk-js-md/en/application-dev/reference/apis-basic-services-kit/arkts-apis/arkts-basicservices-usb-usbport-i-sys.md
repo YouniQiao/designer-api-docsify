@@ -4,11 +4,11 @@ Represents a USB port.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 9
 
 **Substitutes:** [USBPort](arkts-basicservices-usbmanager-usbport-i-sys.md)
-
-<!--Device-usb-interface USBPort--><!--Device-usb-interface USBPort-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -32,11 +32,11 @@ Unique identifier of a USB port.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 9
 
 **Substitutes:** [id](arkts-basicservices-usbmanager-usbport-i-sys.md#id)
-
-<!--Device-USBPort-id: number--><!--Device-USBPort-id: number-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -54,11 +54,11 @@ USB port role.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 9
 
 **Substitutes:** [status](arkts-basicservices-usbmanager-usbport-i-sys.md#status)
-
-<!--Device-USBPort-status: USBPortStatus--><!--Device-USBPort-status: USBPortStatus-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -76,13 +76,12 @@ Numeric mask combination for the supported mode list.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 9
 
 **Substitutes:** [supportedModes](arkts-basicservices-usbmanager-usbport-i-sys.md#supportedmodes)
 
-<!--Device-USBPort-supportedModes: PortModeType--><!--Device-USBPort-supportedModes: PortModeType-End-->
-
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
-

@@ -4,9 +4,9 @@ AppServiceExtensionAbility模块提供后台服务相关扩展能力，包括后
 
 **继承/实现关系：** AppServiceExtensionAbility extends ExtensionAbility
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-unnamed-declare class AppServiceExtensionAbility--><!--Device-unnamed-declare class AppServiceExtensionAbility-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -25,25 +25,25 @@ onConnect(want: Want): rpc.RemoteObject
 调用方使用 [connectAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#connectappserviceextensionability) 连接AppServiceExtensionAbility实例时，系统会触发该回调。应用需要在该接口中返回一个RemoteObject对象，用于客户端和服务端进行通信。当AppServiceExtensionAbility实例处于连接状态时，如果调用方发起新的连接，系统会返回缓存的RemoteObject对象， 而不会重复回调onConnect()接口。  
 **设备行为差异**：该接口仅在PC/2in1设备中可正常执行回调，在其他设备上不执行回调。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AppServiceExtensionAbility-onConnect(want: Want): rpc.RemoteObject--><!--Device-AppServiceExtensionAbility-onConnect(want: Want): rpc.RemoteObject-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 调用方拉起当前AppServiceExtensionAbility实例时传递的Want类型信息，包括Ability名称、Bundle名称等。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| rpc.RemoteObject | 一个RemoteObject对象，用于客户端和服务端进行通信。 |
+| 类型 |
+| --- |
+| rpc.RemoteObject |
 
 **示例**
 
@@ -112,19 +112,19 @@ onCreate(want: Want): void
 > 如果AppServiceExtensionAbility实例已创建，再次启动或连接该实例时不会触发onCreate()回调。
 **设备行为差异**：该接口仅在PC/2in1设备中可正常执行回调，在其他设备上不执行回调。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AppServiceExtensionAbility-onCreate(want: Want): void--><!--Device-AppServiceExtensionAbility-onCreate(want: Want): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 调用方拉起当前AppServiceExtensionAbility实例时传递的Want类型信息，包括Ability名称、Bundle名称等。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
 
 **示例**
 
@@ -150,11 +150,11 @@ onDestroy(): void
 在AppServiceExtensionAbility实例销毁时，系统会触发该回调。应用可以在该接口中执行资源清理等操作，如注销监听等。  
 **设备行为差异**：该接口仅在PC/2in1设备中可正常执行回调，在其他设备上不执行回调。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AppServiceExtensionAbility-onDestroy(): void--><!--Device-AppServiceExtensionAbility-onDestroy(): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -182,19 +182,19 @@ onDisconnect(want: Want): void
 当所有连接方断开与AppServiceExtensionAbility实例的连接时，系统会触发该回调。  
 **设备行为差异**：该接口仅在PC/2in1设备中可正常执行回调，在其他设备上不执行回调。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AppServiceExtensionAbility-onDisconnect(want: Want): void--><!--Device-AppServiceExtensionAbility-onDisconnect(want: Want): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | AppServiceExtensionAbility实例最近一次被拉起或者连接时，调用方传递的Want类型信息，包括Ability名称、Bundle名称等。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
 
 **示例**
 
@@ -213,6 +213,12 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 
 ## onRequest
 
+ArkTS-Dyn:
+```TypeScript
+onRequest(want: Want, startId: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 onRequest(want: Want, startId: int): void
 ```
@@ -220,20 +226,20 @@ onRequest(want: Want, startId: int): void
 调用方每次使用 [startAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#startappserviceextensionability) 拉起AppServiceExtensionAbility实例时，系统都会触发该回调。  
 **设备行为差异**：该接口仅在PC/2in1设备中可正常执行回调，在其他设备上不执行回调。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AppServiceExtensionAbility-onRequest(want: Want, startId: int): void--><!--Device-AppServiceExtensionAbility-onRequest(want: Want, startId: int): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 调用方拉起当前AppServiceExtensionAbility实例时传递的Want类型信息，包括Ability名称、Bundle名称等。 |
-| startId | int | 是 | 拉起次数标识。首次拉起初始值为1，多次拉起时自动递增。建议开发者根据startId值判断是否为首次启动，避免重复执行初始化操作。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
+| startId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **示例**
 
@@ -260,11 +266,10 @@ AppServiceExtensionAbility的上下文环境，继承自[ExtensionContext](arkts
 
 **类型：** [AppServiceExtensionContext](../../apis-default/arkts-apis/arkts-appserviceextensioncontext-c.md)
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AppServiceExtensionAbility-context: AppServiceExtensionContext--><!--Device-AppServiceExtensionAbility-context: AppServiceExtensionContext-End-->
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-

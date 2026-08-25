@@ -1,25 +1,21 @@
 # Int16ArrayConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface Int16ArrayConstructor--><!--Device-unnamed-interface Int16ArrayConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
+## [[Construct]]
 
 ```TypeScript
 new (): Int16Array
 ```
 
-**Since:** -1
-
-<!--Device-Int16ArrayConstructor-new (): Int16Array--><!--Device-Int16ArrayConstructor-new (): Int16Array-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

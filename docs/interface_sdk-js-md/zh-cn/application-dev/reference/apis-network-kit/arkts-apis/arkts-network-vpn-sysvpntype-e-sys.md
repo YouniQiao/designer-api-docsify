@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-vpn-export enum SysVpnType--><!--Device-vpn-export enum SysVpnType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -18,7 +18,7 @@ IKEV2_IPSEC_MSCHAPV2 = 1
 
 **起始版本：** 12
 
-<!--Device-SysVpnType-IKEV2_IPSEC_MSCHAPV2 = 1--><!--Device-SysVpnType-IKEV2_IPSEC_MSCHAPV2 = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -32,7 +32,7 @@ IKEV2_IPSEC_PSK = 2
 
 **起始版本：** 12
 
-<!--Device-SysVpnType-IKEV2_IPSEC_PSK = 2--><!--Device-SysVpnType-IKEV2_IPSEC_PSK = 2-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -46,7 +46,7 @@ IKEV2_IPSEC_RSA = 3
 
 **起始版本：** 12
 
-<!--Device-SysVpnType-IKEV2_IPSEC_RSA = 3--><!--Device-SysVpnType-IKEV2_IPSEC_RSA = 3-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -60,7 +60,7 @@ L2TP_IPSEC_PSK = 4
 
 **起始版本：** 12
 
-<!--Device-SysVpnType-L2TP_IPSEC_PSK = 4--><!--Device-SysVpnType-L2TP_IPSEC_PSK = 4-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -74,7 +74,7 @@ L2TP_IPSEC_RSA = 5
 
 **起始版本：** 12
 
-<!--Device-SysVpnType-L2TP_IPSEC_RSA = 5--><!--Device-SysVpnType-L2TP_IPSEC_RSA = 5-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -88,7 +88,7 @@ IPSEC_XAUTH_PSK = 6
 
 **起始版本：** 12
 
-<!--Device-SysVpnType-IPSEC_XAUTH_PSK = 6--><!--Device-SysVpnType-IPSEC_XAUTH_PSK = 6-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -102,7 +102,7 @@ IPSEC_XAUTH_RSA = 7
 
 **起始版本：** 12
 
-<!--Device-SysVpnType-IPSEC_XAUTH_RSA = 7--><!--Device-SysVpnType-IPSEC_XAUTH_RSA = 7-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -116,7 +116,7 @@ IPSEC_HYBRID_RSA = 8
 
 **起始版本：** 12
 
-<!--Device-SysVpnType-IPSEC_HYBRID_RSA = 8--><!--Device-SysVpnType-IPSEC_HYBRID_RSA = 8-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -130,9 +130,8 @@ OPENVPN = 9
 
 **起始版本：** 12
 
-<!--Device-SysVpnType-OPENVPN = 9--><!--Device-SysVpnType-OPENVPN = 9-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
-

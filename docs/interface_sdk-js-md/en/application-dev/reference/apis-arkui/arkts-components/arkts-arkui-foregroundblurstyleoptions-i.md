@@ -6,11 +6,11 @@ Inherits from [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md) to define th
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-unnamed-declare interface ForegroundBlurStyleOptions--><!--Device-unnamed-declare interface ForegroundBlurStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,4 +18,3 @@ Inherits from [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md) to define th
 
 ```TypeScript
 ```
-

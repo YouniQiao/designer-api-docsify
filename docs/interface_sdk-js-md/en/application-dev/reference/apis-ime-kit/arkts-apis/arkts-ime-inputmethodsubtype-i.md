@@ -6,9 +6,9 @@ The **InputMethodSubtype** module provides APIs for managing the attributes of i
 > &lt;br
 &gt; &gt;The initial APIs of this module are supported since API version 9. Newly added APIs will be marked with a superscript to indicate their earliest API version.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export default interface InputMethodSubtype--><!--Device-unnamed-export default interface InputMethodSubtype-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -28,9 +28,9 @@ Extra information of the input method subtype. <br> <br> **NOTE：**<br> <br> - 
 
 **Type:** object
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-InputMethodSubtype-extra?: object--><!--Device-InputMethodSubtype-extra?: object-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -44,9 +44,9 @@ Optional. Icon of the input method subtype. It can be obtained by using **iconId
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-InputMethodSubtype-readonly icon?: string--><!--Device-InputMethodSubtype-readonly icon?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -58,11 +58,11 @@ readonly iconId?: double
 
 Optional. Icon ID of the input method subtype.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-InputMethodSubtype-readonly iconId?: double--><!--Device-InputMethodSubtype-readonly iconId?: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -76,9 +76,9 @@ Mandatory. ID of the input method subtype.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-InputMethodSubtype-readonly id: string--><!--Device-InputMethodSubtype-readonly id: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -92,9 +92,9 @@ Optional. Label of the input method subtype.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-InputMethodSubtype-readonly label?: string--><!--Device-InputMethodSubtype-readonly label?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -106,11 +106,11 @@ readonly labelId?: double
 
 Optional. Label ID of the input method subtype.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-InputMethodSubtype-readonly labelId?: double--><!--Device-InputMethodSubtype-readonly labelId?: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -124,9 +124,9 @@ Mandatory. Language of the input method subtype.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-InputMethodSubtype-readonly language: string--><!--Device-InputMethodSubtype-readonly language: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -140,9 +140,9 @@ Mandatory. Locale of the input method subtype.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-InputMethodSubtype-readonly locale: string--><!--Device-InputMethodSubtype-readonly locale: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -156,9 +156,9 @@ Optional. Mode of the input method subtype, including **upper** (uppercase) and 
 
 **Type:** 'upper' \| 'lower'
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-InputMethodSubtype-readonly mode?: 'upper' | 'lower'--><!--Device-InputMethodSubtype-readonly mode?: 'upper' | 'lower'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -172,9 +172,8 @@ Mandatory. Bundle name of the application to which the input method subtype belo
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-InputMethodSubtype-readonly name: string--><!--Device-InputMethodSubtype-readonly name: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

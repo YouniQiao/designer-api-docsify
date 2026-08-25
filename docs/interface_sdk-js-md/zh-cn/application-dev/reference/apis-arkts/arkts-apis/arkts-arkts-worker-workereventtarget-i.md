@@ -4,7 +4,7 @@
 
 **起始版本：** 9
 
-<!--Device-unnamed-export interface WorkerEventTarget--><!--Device-unnamed-export interface WorkerEventTarget-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -24,25 +24,25 @@ addEventListener(type: string, listener: WorkerEventListener): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-WorkerEventTarget-addEventListener(type: string, listener: WorkerEventListener): void--><!--Device-WorkerEventTarget-addEventListener(type: string, listener: WorkerEventListener): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | string | 是 | 监听的事件类型。 |
-| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | string | 是 |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| 错误码ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
 
 **示例**
 
@@ -94,29 +94,29 @@ dispatchEvent(event: Event): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-WorkerEventTarget-dispatchEvent(event: Event): boolean--><!--Device-WorkerEventTarget-dispatchEvent(event: Event): boolean-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | [Event](arkts-arkts-worker-event-i.md) | 是 | 需要分发的事件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [Event](arkts-arkts-worker-event-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean |  |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| 错误码ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
 
 **示例**
 
@@ -201,17 +201,17 @@ removeAllListener(): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-WorkerEventTarget-removeAllListener(): void--><!--Device-WorkerEventTarget-removeAllListener(): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| 错误码ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
 
 **示例**
 
@@ -264,24 +264,24 @@ removeEventListener(type: string, callback?: WorkerEventListener): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-WorkerEventTarget-removeEventListener(type: string, callback?: WorkerEventListener): void--><!--Device-WorkerEventTarget-removeEventListener(type: string, callback?: WorkerEventListener): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | string | 是 | 需要移除的事件类型。 |
-| callback | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 否 | 移除监听事件后执行的回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | string | 是 |
+| callback | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| 错误码ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
 
 **示例**
 
@@ -327,4 +327,3 @@ workerPort.addEventListener("alert", () => {
 
 workerPort.removeEventListener('alert');
 ```
-

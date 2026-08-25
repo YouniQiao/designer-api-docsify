@@ -4,7 +4,7 @@ FlexAlign enumeration description.
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum FlexAlign--><!--Device-unnamed-declare enum FlexAlign-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ The element is aligned at the head of the principal axis, the first element is a
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-FlexAlign-Start--><!--Device-FlexAlign-Start-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ The elements are centered in the direction of the principal axis, and the first 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-FlexAlign-Center--><!--Device-FlexAlign-Center-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ The element is aligned at the tail of the principal axis, the last element is al
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-FlexAlign-End--><!--Device-FlexAlign-End-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,11 @@ Elastic elements are evenly distributed in the direction of the Flex principal a
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-FlexAlign-SpaceBetween--><!--Device-FlexAlign-SpaceBetween-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,11 +90,11 @@ Elastic elements are evenly distributed in the direction of the Flex principal a
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-FlexAlign-SpaceAround--><!--Device-FlexAlign-SpaceAround-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,11 +108,10 @@ Elements in the Flex axis direction are evenly spaced. The spacing between adjac
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-FlexAlign-SpaceEvenly--><!--Device-FlexAlign-SpaceEvenly-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

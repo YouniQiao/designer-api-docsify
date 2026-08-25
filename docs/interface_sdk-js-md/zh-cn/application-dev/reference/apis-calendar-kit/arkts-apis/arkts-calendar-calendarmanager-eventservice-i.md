@@ -4,7 +4,7 @@
 
 **起始版本：** 10
 
-<!--Device-calendarManager-export interface EventService--><!--Device-calendarManager-export interface EventService-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -26,9 +26,9 @@ description?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-EventService-description?: string--><!--Device-EventService-description?: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -44,9 +44,9 @@ type: ServiceType
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-EventService-type: ServiceType--><!--Device-EventService-type: ServiceType-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -62,9 +62,8 @@ uri: string
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-EventService-uri: string--><!--Device-EventService-uri: string-End-->
-
 **系统能力：** SystemCapability.Applications.CalendarData
-

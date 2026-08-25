@@ -4,9 +4,7 @@ Class used to describe runtime types
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-unnamed-export class Class--><!--Device-unnamed-export class Class-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,19 +23,17 @@ Create a new instance of this class and invokes its parameterless constructor.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-createInstance(): Object--><!--Device-Class-createInstance(): Object-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Object | a new instance of this class. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Object |
 
 ## current
 
@@ -49,19 +45,17 @@ Get current class.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-static current(): Class--><!--Device-Class-static current(): Class-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Class](arkts-arkts-class-c.md) | the current class. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Class](arkts-arkts-class-c.md) |
 
 ## from
 
@@ -73,19 +67,17 @@ Get the class of an object.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-static from<T>(): Class--><!--Device-Class-static from<T>(): Class-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Class](arkts-arkts-class-c.md) | the class of the object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Class](arkts-arkts-class-c.md) |
 
 ## getConstructors
 
@@ -97,19 +89,17 @@ Get all constructors of a class.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-getConstructors(): FixedArray<reflect.Constructor>--><!--Device-Class-getConstructors(): FixedArray<reflect.Constructor>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;reflect.Constructor&gt; | a fixed array of constructors. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;reflect.Constructor & gt; |
 
 ## getDescriptor
 
@@ -121,19 +111,17 @@ Get the description.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-getDescriptor(): string--><!--Device-Class-getDescriptor(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | a desceription. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## getFixedArrayComponentType
 
@@ -145,19 +133,17 @@ Get the component type of this class if it is a fixed array.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-getFixedArrayComponentType(): Class | undefined--><!--Device-Class-getFixedArrayComponentType(): Class | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Class](arkts-arkts-class-c.md) \| undefined | the component type of the fixed array, or undefined if this class is not a fixed array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Class](arkts-arkts-class-c.md) \| undefined |
 
 ## getInstanceField
 
@@ -169,25 +155,23 @@ Look up a instance field by name among the fields declared in this class.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-getInstanceField(name: string): reflect.InstanceField | undefined--><!--Device-Class-getInstanceField(name: string): reflect.InstanceField | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | The field name to search for. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| reflect.InstanceField \| undefined | the found instance field, or undefined if not found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| reflect.InstanceField \| undefined |
 
 ## getInstanceFields
 
@@ -199,19 +183,17 @@ Get instance fields declared in the class.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-getInstanceFields(): FixedArray<reflect.InstanceField>--><!--Device-Class-getInstanceFields(): FixedArray<reflect.InstanceField>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;reflect.InstanceField&gt; | a fixed array of instance fields. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;reflect.InstanceField & gt; |
 
 ## getInstanceMethod
 
@@ -223,26 +205,24 @@ Look up a instance method (including default methods from implemented interfaces
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-getInstanceMethod(name: string, signature?: FixedArray<Class>): reflect.InstanceMethod | undefined--><!--Device-Class-getInstanceMethod(name: string, signature?: FixedArray<Class>): reflect.InstanceMethod | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | The method name to search for. |
-| signature | FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; | No | Array of parameter classes defining the method signature. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| signature | FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| reflect.InstanceMethod \| undefined | the found instance method, or undefined if not found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| reflect.InstanceMethod \| undefined |
 
 ## getInstanceMethods
 
@@ -254,19 +234,17 @@ Get instance methods (including default methods from implemented interfaces) dec
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-getInstanceMethods(): FixedArray<reflect.InstanceMethod>--><!--Device-Class-getInstanceMethods(): FixedArray<reflect.InstanceMethod>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;reflect.InstanceMethod&gt; | a fixed array of instance methods. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;reflect.InstanceMethod & gt; |
 
 ## getInterfaces
 
@@ -278,19 +256,17 @@ Get the interfaces implemented by this class.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-getInterfaces(): FixedArray<Class>--><!--Device-Class-getInterfaces(): FixedArray<Class>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; | a fixed array of interfaces implemented by the class. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; |
 
 ## getLinker
 
@@ -302,19 +278,17 @@ Get the runtime linker associated with this class.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-getLinker(): RuntimeLinker--><!--Device-Class-getLinker(): RuntimeLinker-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| RuntimeLinker | the runtime linker for this class |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| RuntimeLinker |
 
 ## getName
 
@@ -326,19 +300,17 @@ Get the name of a class in assembly
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-getName(): string--><!--Device-Class-getName(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | return class name |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## getStaticField
 
@@ -350,25 +322,23 @@ Look up a static field by name among the fields declared in this class.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-getStaticField(name: string): reflect.StaticField | undefined--><!--Device-Class-getStaticField(name: string): reflect.StaticField | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | The field name to search for. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| reflect.StaticField \| undefined | the found static field, or undefined if not found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| reflect.StaticField \| undefined |
 
 ## getStaticFields
 
@@ -380,19 +350,17 @@ Get static fields declared in this class.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-getStaticFields(): FixedArray<reflect.StaticField>--><!--Device-Class-getStaticFields(): FixedArray<reflect.StaticField>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;reflect.StaticField&gt; | a fixed array of static fields. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;reflect.StaticField & gt; |
 
 ## getStaticMethod
 
@@ -404,26 +372,24 @@ Look up a static method among the methods declared in the class.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-getStaticMethod(name: string, signature?: FixedArray<Class>): reflect.StaticMethod | undefined--><!--Device-Class-getStaticMethod(name: string, signature?: FixedArray<Class>): reflect.StaticMethod | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | The method name to search for. |
-| signature | FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; | No | Array of parameter classes defining the method signature. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| signature | FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| reflect.StaticMethod \| undefined | the found static method, or undefined if not found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| reflect.StaticMethod \| undefined |
 
 ## getStaticMethods
 
@@ -435,19 +401,17 @@ Get static methods declared in the class.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-getStaticMethods(): FixedArray<reflect.StaticMethod>--><!--Device-Class-getStaticMethods(): FixedArray<reflect.StaticMethod>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;reflect.StaticMethod&gt; | a fixed array of static methods. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;reflect.StaticMethod & gt; |
 
 ## getSuper
 
@@ -459,19 +423,17 @@ Get the super class of a class
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-getSuper(): Class | undefined--><!--Device-Class-getSuper(): Class | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Class](arkts-arkts-class-c.md) \| undefined | return the super class |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Class](arkts-arkts-class-c.md) \| undefined |
 
 ## getUnionConstituentTypes
 
@@ -483,19 +445,17 @@ Get all constituent types of a union class.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-getUnionConstituentTypes(): FixedArray<Class> | undefined--><!--Device-Class-getUnionConstituentTypes(): FixedArray<Class> | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; \| undefined | a fixed array of constituent types, or undefined if this is not a union class. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; \| undefined |
 
 ## initialize
 
@@ -507,11 +467,9 @@ Invoke class initializer once if class is not initialized.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-initialize(): void--><!--Device-Class-initialize(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -525,19 +483,17 @@ Check the class is abstract
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-isAbstract(): boolean--><!--Device-Class-isAbstract(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the class is abstract |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isEnum
 
@@ -549,19 +505,17 @@ Check if this class is an enum.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-isEnum(): boolean--><!--Device-Class-isEnum(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if this class is an enum, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isFinal
 
@@ -573,19 +527,17 @@ Check the class is final
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-isFinal(): boolean--><!--Device-Class-isFinal(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the class is fianl |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isFixedArray
 
@@ -597,19 +549,17 @@ Check if this class is a fixed array.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-isFixedArray(): boolean--><!--Device-Class-isFixedArray(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if this class is a fixed array, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isInterface
 
@@ -621,19 +571,17 @@ Check if this class is an interface.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-isInterface(): boolean--><!--Device-Class-isInterface(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if this class is an interface, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isNamespace
 
@@ -645,19 +593,17 @@ Checks if this class is a namespace.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-public isNamespace(): boolean--><!--Device-Class-public isNamespace(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if this class is a namespace. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isPrimitive
 
@@ -669,19 +615,17 @@ Check if class is primitive type
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-isPrimitive(): boolean--><!--Device-Class-isPrimitive(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the class corresponds to a primitive type |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isSubtypeOf
 
@@ -693,25 +637,23 @@ Check if this class is a subtype of another class.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-isSubtypeOf(other: Class): boolean--><!--Device-Class-isSubtypeOf(other: Class): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [Class](arkts-arkts-class-c.md) | Yes | The class to check against. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [Class](arkts-arkts-class-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns true if this class is a subtype of the other class, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isUnion
 
@@ -723,19 +665,17 @@ Check if this class is a union type.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-isUnion(): boolean--><!--Device-Class-isUnion(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if this class is a union type, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## of
 
@@ -747,25 +687,23 @@ Get the class of an object.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-static of(obj: Object | null): Class--><!--Device-Class-static of(obj: Object | null): Class-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| obj | Object \| null | Yes | The object to get the class from. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | Object \| null | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Class](arkts-arkts-class-c.md) | the class of the object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Class](arkts-arkts-class-c.md) |
 
 ## ofAny
 
@@ -777,25 +715,23 @@ Get the class of an object of any type.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-static ofAny(obj: Any): Class | undefined--><!--Device-Class-static ofAny(obj: Any): Class | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| obj | Any | Yes | The object to get the class from. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | Any | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Class](arkts-arkts-class-c.md) \| undefined | the class of the object, or undefined if the object is not a class instance. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Class](arkts-arkts-class-c.md) \| undefined |
 
 ## ofCaller
 
@@ -807,19 +743,17 @@ Get class of caller.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-static ofCaller(): Class | undefined--><!--Device-Class-static ofCaller(): Class | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Class](arkts-arkts-class-c.md) \| undefined | the class of the caller, or undefined if there is no caller managed frame. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Class](arkts-arkts-class-c.md) \| undefined |
 
 ## PRIMITIVE_BOOLEAN
 
@@ -833,11 +767,9 @@ Stores Class of boolean primitive type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-public static readonly PRIMITIVE_BOOLEAN: Class--><!--Device-Class-public static readonly PRIMITIVE_BOOLEAN: Class-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -853,11 +785,9 @@ Stores Class of byte primitive type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-public static readonly PRIMITIVE_BYTE: Class--><!--Device-Class-public static readonly PRIMITIVE_BYTE: Class-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -873,11 +803,9 @@ Stores Class of char primitive type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-public static readonly PRIMITIVE_CHAR: Class--><!--Device-Class-public static readonly PRIMITIVE_CHAR: Class-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -893,11 +821,9 @@ Stores Class of double primitive type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-public static readonly PRIMITIVE_DOUBLE: Class--><!--Device-Class-public static readonly PRIMITIVE_DOUBLE: Class-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -913,11 +839,9 @@ Stores Class of float primitive type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-public static readonly PRIMITIVE_FLOAT: Class--><!--Device-Class-public static readonly PRIMITIVE_FLOAT: Class-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -933,11 +857,9 @@ Stores Class of int primitive type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-public static readonly PRIMITIVE_INT: Class--><!--Device-Class-public static readonly PRIMITIVE_INT: Class-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -953,11 +875,9 @@ Stores Class of long primitive type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-public static readonly PRIMITIVE_LONG: Class--><!--Device-Class-public static readonly PRIMITIVE_LONG: Class-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -973,11 +893,9 @@ Stores Class of number primitive type (same as double).
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-public static readonly PRIMITIVE_NUMBER: Class--><!--Device-Class-public static readonly PRIMITIVE_NUMBER: Class-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -993,11 +911,9 @@ Stores Class of short primitive type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Class-public static readonly PRIMITIVE_SHORT: Class--><!--Device-Class-public static readonly PRIMITIVE_SHORT: Class-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1013,11 +929,8 @@ Stores Class of void type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Class-public static readonly PRIMITIVE_VOID: Class--><!--Device-Class-public static readonly PRIMITIVE_VOID: Class-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

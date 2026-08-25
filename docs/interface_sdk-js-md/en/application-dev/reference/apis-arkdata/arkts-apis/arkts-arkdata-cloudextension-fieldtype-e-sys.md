@@ -2,9 +2,9 @@
 
 Enumerates the types of the fields in a database table. Use the enum name rather than the enum value.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-cloudExtension-export enum FieldType--><!--Device-cloudExtension-export enum FieldType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -18,9 +18,9 @@ NULL = 0
 
 NULL.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-FieldType-NULL = 0--><!--Device-FieldType-NULL = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -34,9 +34,9 @@ NUMBER = 1
 
 Number.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-FieldType-NUMBER = 1--><!--Device-FieldType-NUMBER = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -50,9 +50,9 @@ REAL = 2
 
 Double-precision floating point.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-FieldType-REAL = 2--><!--Device-FieldType-REAL = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -66,9 +66,9 @@ TEXT = 3
 
 Text.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-FieldType-TEXT = 3--><!--Device-FieldType-TEXT = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -82,9 +82,9 @@ BOOL = 4
 
 Boolean.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-FieldType-BOOL = 4--><!--Device-FieldType-BOOL = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -98,9 +98,9 @@ BLOB = 5
 
 BLOB, which can hold a binary file.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-FieldType-BLOB = 5--><!--Device-FieldType-BLOB = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -114,9 +114,9 @@ ASSET = 6
 
 Asset. For details, see Asset.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-FieldType-ASSET = 6--><!--Device-FieldType-ASSET = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -130,11 +130,10 @@ ASSETS = 7
 
 Assets. For details, see Assets.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-FieldType-ASSETS = 7--><!--Device-FieldType-ASSETS = 7-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
-

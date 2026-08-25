@@ -4,7 +4,7 @@ Describes the rectangular area of the window, in vp.
 
 **Since:** 23
 
-<!--Device-window-interface RectInVP--><!--Device-window-interface RectInVP-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -22,13 +22,13 @@ height: double
 
 Height of the rectangle, in vp.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-RectInVP-height: double--><!--Device-RectInVP-height: double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -40,13 +40,13 @@ left: double
 
 Left boundary of the rectangle, in vp.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-RectInVP-left: double--><!--Device-RectInVP-left: double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -58,13 +58,13 @@ top: double
 
 Top boundary of the rectangle, in vp.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-RectInVP-top: double--><!--Device-RectInVP-top: double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -76,13 +76,12 @@ width: double
 
 Width of the rectangle, in vp.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RectInVP-width: double--><!--Device-RectInVP-width: double-End-->
-
 **System capability:** SystemCapability.Window.SessionManager
-

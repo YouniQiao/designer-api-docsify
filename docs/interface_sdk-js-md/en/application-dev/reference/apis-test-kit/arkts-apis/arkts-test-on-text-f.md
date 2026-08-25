@@ -13,26 +13,26 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 export function text(txt: string, pattern?: MatchPattern): On
 ```
 
-Specifies the text for the target Component.
+Specifies the text attribute of the target component. Multiple match patterns are supported.
 
 **Since:** 23
 
-<!--Device-ON-export function text(txt: string, pattern?: MatchPattern): On--><!--Device-ON-export function text(txt: string, pattern?: MatchPattern): On-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| txt | string | Yes | the text value. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | the [MatchPattern](arkts-test-uitest-matchpattern-e.md) of the text value. <br>Default value: MatchPattern.EQUALS |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| txt | string | Yes |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | this { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **Examples**
 
@@ -49,4 +49,3 @@ import { BY, By } from '@kit.TestKit';
 
 let by: By = BY.text('123'); // Use the static constructor BY to create a By object and specify the text attribute of the target component.
 ```
-

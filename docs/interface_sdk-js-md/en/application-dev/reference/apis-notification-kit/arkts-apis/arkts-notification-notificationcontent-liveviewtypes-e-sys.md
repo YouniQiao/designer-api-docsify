@@ -2,9 +2,9 @@
 
 Enumerates live view types.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-unnamed-export enum LiveViewTypes--><!--Device-unnamed-export enum LiveViewTypes-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -18,9 +18,9 @@ LIVE_VIEW_ACTIVITY = 0
 
 Real-time activity (progress).
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-LiveViewTypes-LIVE_VIEW_ACTIVITY = 0--><!--Device-LiveViewTypes-LIVE_VIEW_ACTIVITY = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -34,9 +34,9 @@ LIVE_VIEW_INSTANT = 1
 
 Instant task.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-LiveViewTypes-LIVE_VIEW_INSTANT = 1--><!--Device-LiveViewTypes-LIVE_VIEW_INSTANT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -50,11 +50,10 @@ LIVE_VIEW_LONG_TERM = 2
 
 Long-term task.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-LiveViewTypes-LIVE_VIEW_LONG_TERM = 2--><!--Device-LiveViewTypes-LIVE_VIEW_LONG_TERM = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

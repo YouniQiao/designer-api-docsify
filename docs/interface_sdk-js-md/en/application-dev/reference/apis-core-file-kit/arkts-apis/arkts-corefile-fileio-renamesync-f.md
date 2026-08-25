@@ -15,20 +15,20 @@ Renames a file. This API returns the result synchronously.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [renameSync](arkts-corefile-file-fs-renamesync-f.md)
-
-<!--Device-unnamed-declare function renameSync(oldPath: string, newPath: string): void--><!--Device-unnamed-declare function renameSync(oldPath: string, newPath: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| oldPath | string | Yes | Application sandbox path of the file to rename. |
-| newPath | string | Yes | Application sandbox path of the file renamed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| oldPath | string | Yes |
+| newPath | string | Yes |
 
 **Examples**
 
@@ -37,4 +37,3 @@ let srcFile = pathDir + "/test.txt";
 let dstFile = pathDir + '/new.txt';
 fileio.renameSync(srcFile, dstFile);
 ```
-

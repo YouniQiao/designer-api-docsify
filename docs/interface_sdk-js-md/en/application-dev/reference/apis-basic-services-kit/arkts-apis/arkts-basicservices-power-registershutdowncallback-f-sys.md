@@ -16,9 +16,9 @@ Registers a callback to be invoked when the device is shut down or rebooted. Thi
 
 **Since:** 23
 
-**Required permissions:** ohos.permission.REBOOT
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-power-function registerShutdownCallback(callback: Callback<boolean>): void--><!--Device-power-function registerShutdownCallback(callback: Callback<boolean>): void-End-->
+**Required permissions:** ohos.permission.REBOOT
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
@@ -26,17 +26,17 @@ Registers a callback to be invoked when the device is shut down or rebooted. Thi
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the device is rebooted, and **false** indicates that the device is shut down. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [4900101](../errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [4900101](../errorcode-power.md#4900101-service-connection-failure) |
 
 **Examples**
 
@@ -50,4 +50,3 @@ try {
     console.error('register shutdown callback failed, err: ' + err);
 }
 ```
-

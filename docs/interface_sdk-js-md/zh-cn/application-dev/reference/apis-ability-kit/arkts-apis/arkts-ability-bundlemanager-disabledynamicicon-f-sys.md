@@ -16,9 +16,9 @@ function disableDynamicIcon(bundleName: string): Promise<void>
 
 **起始版本：** 12
 
-**需要权限：** ohos.permission.ACCESS_DYNAMIC_ICON
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-bundleManager-function disableDynamicIcon(bundleName: string): Promise<void>--><!--Device-bundleManager-function disableDynamicIcon(bundleName: string): Promise<void>-End-->
+**需要权限：** ohos.permission.ACCESS_DYNAMIC_ICON
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -26,25 +26,25 @@ function disableDynamicIcon(bundleName: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 要禁用动态图标的应用名称。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
-| [17700305](../errorcode-bundle.md#17700305-动态图标去使能失败) | Failed to disable the dynamic icon. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700305](../errorcode-bundle.md#17700305-动态图标去使能失败) |
 
 **示例**
 
@@ -122,11 +122,11 @@ function disableDynamicIcon(bundleName: string, option?: BundleOptions): Promise
 
 根据给定的bundleName和option禁用动态图标。使用Promise异步回调。禁用当前用户下的动态图标信息时需要申请权限ohos.permission.ACCESS_DYNAMIC_ICON。禁用其他用户下的动态图标信息时需要申请权限ohos.permission.ACCESS_DYNAMIC_ICON 和 ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_DYNAMIC_ICON or (ohos.permission.ACCESS_DYNAMIC_ICON and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
-
-<!--Device-bundleManager-function disableDynamicIcon(bundleName: string, option?: BundleOptions): Promise<void>--><!--Device-bundleManager-function disableDynamicIcon(bundleName: string, option?: BundleOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -134,29 +134,28 @@ function disableDynamicIcon(bundleName: string, option?: BundleOptions): Promise
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 要禁用动态图标的应用包名。 |
-| option | BundleOptions | 否 | 指定需要禁用动态图标的用户和分身索引。缺省时禁用应用所有用户和所有分身的动态图标。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| option | [BundleOptions](arkts-ability-bundle-bundleoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
-| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | AppIndex not in valid range. |
-| [17700305](../errorcode-bundle.md#17700305-动态图标去使能失败) | Failed to disable the dynamic icon. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
+| [17700305](../errorcode-bundle.md#17700305-动态图标去使能失败) |
 
 **示例**
 
 参见 [disableDynamicIcon](#disabledynamicicon)
-

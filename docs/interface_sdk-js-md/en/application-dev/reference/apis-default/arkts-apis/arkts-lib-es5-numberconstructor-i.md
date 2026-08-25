@@ -1,54 +1,48 @@
 # NumberConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface NumberConstructor--><!--Device-unnamed-interface NumberConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
-
-```TypeScript
-new(value?: any): Number
-```
-
-**Since:** -1
-
-<!--Device-NumberConstructor-new(value?: any): Number--><!--Device-NumberConstructor-new(value?: any): Number-End-->
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | any | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-## constructor
+## [[Call]]
 
 ```TypeScript
 (value?: any): number
 ```
 
-**Since:** -1
-
-<!--Device-NumberConstructor-(value?: any): number--><!--Device-NumberConstructor-(value?: any): number-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | any | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | any | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+## [[Construct]]
+
+```TypeScript
+new(value?: any): Number
+```
+
+**ArkTS mode:** 
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | any | No |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## MAX_VALUE
 
 ```TypeScript
@@ -59,9 +53,7 @@ The largest number that can be represented in JavaScript. Equal to approximately
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-NumberConstructor-readonly MAX_VALUE: number--><!--Device-NumberConstructor-readonly MAX_VALUE: number-End-->
+**ArkTS mode:** 
 
 ## MIN_VALUE
 
@@ -73,9 +65,7 @@ The closest number to zero that can be represented in JavaScript. Equal to appro
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-NumberConstructor-readonly MIN_VALUE: number--><!--Device-NumberConstructor-readonly MIN_VALUE: number-End-->
+**ArkTS mode:** 
 
 ## NaN
 
@@ -87,9 +77,7 @@ A value that is not a number. In equality comparisons, NaN does not equal any va
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-NumberConstructor-readonly NaN: number--><!--Device-NumberConstructor-readonly NaN: number-End-->
+**ArkTS mode:** 
 
 ## NEGATIVE_INFINITY
 
@@ -101,9 +89,7 @@ A value that is less than the largest negative number that can be represented in
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-NumberConstructor-readonly NEGATIVE_INFINITY: number--><!--Device-NumberConstructor-readonly NEGATIVE_INFINITY: number-End-->
+**ArkTS mode:** 
 
 ## POSITIVE_INFINITY
 
@@ -115,9 +101,7 @@ A value greater than the largest number that can be represented in JavaScript. J
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-NumberConstructor-readonly POSITIVE_INFINITY: number--><!--Device-NumberConstructor-readonly POSITIVE_INFINITY: number-End-->
+**ArkTS mode:** 
 
 ## prototype
 
@@ -127,7 +111,4 @@ readonly prototype: Number
 
 **Type:** Number
 
-**Since:** -1
-
-<!--Device-NumberConstructor-readonly prototype: Number--><!--Device-NumberConstructor-readonly prototype: Number-End-->
-
+**ArkTS mode:** 

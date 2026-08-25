@@ -18,11 +18,11 @@ LoadingProgress()
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-LoadingProgressInterface-(): LoadingProgressAttribute--><!--Device-LoadingProgressInterface-(): LoadingProgressAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,10 @@ LoadingProgress()
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
+| 名称 |
+| --- |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-
+| 名称 |
+| --- |

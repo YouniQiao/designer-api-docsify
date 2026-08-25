@@ -2,9 +2,9 @@
 
 描述自定义铃声信息。
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-notificationManager-export interface RingtoneInfo--><!--Device-notificationManager-export interface RingtoneInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -26,9 +26,9 @@ ringtoneFileName?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-RingtoneInfo-ringtoneFileName?: string--><!--Device-RingtoneInfo-ringtoneFileName?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -44,9 +44,9 @@ ringtoneTitle?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-RingtoneInfo-ringtoneTitle?: string--><!--Device-RingtoneInfo-ringtoneTitle?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -62,9 +62,9 @@ ringtoneType: RingtoneType
 
 **类型：** RingtoneType
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-RingtoneInfo-ringtoneType: RingtoneType--><!--Device-RingtoneInfo-ringtoneType: RingtoneType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -80,11 +80,10 @@ ringtoneUri?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-RingtoneInfo-ringtoneUri?: string--><!--Device-RingtoneInfo-ringtoneUri?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
-

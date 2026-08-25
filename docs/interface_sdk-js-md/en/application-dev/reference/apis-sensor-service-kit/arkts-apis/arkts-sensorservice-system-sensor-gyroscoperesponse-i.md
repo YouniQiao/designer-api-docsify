@@ -4,13 +4,13 @@ Defines a **GyroscopeResponse** object.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [GyroscopeResponse](arkts-sensorservice-sensor-gyroscoperesponse-i.md)
 
 **Required permissions:** ohos.permission.GYROSCOPE
-
-<!--Device-unnamed-export interface GyroscopeResponse--><!--Device-unnamed-export interface GyroscopeResponse-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -32,6 +32,8 @@ Rotation angular velocity of the X axis.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [x](arkts-sensorservice-sensor-gyroscoperesponse-i.md#x)
@@ -39,8 +41,6 @@ Rotation angular velocity of the X axis.
 **Required permissions:** ohos.permission.GYROSCOPE
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-GyroscopeResponse-x: number--><!--Device-GyroscopeResponse-x: number-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -56,6 +56,8 @@ Rotation angular velocity of the Y axis.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [y](arkts-sensorservice-sensor-gyroscoperesponse-i.md#y)
@@ -63,8 +65,6 @@ Rotation angular velocity of the Y axis.
 **Required permissions:** ohos.permission.GYROSCOPE
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-GyroscopeResponse-y: number--><!--Device-GyroscopeResponse-y: number-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -80,6 +80,8 @@ Rotation angular velocity of the Z axis.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [z](arkts-sensorservice-sensor-gyroscoperesponse-i.md#z)
@@ -88,7 +90,4 @@ Rotation angular velocity of the Z axis.
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-GyroscopeResponse-z: number--><!--Device-GyroscopeResponse-z: number-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
-

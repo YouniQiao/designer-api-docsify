@@ -4,9 +4,7 @@ Defines GestureStyle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare class GestureStyle--><!--Device-unnamed-export declare class GestureStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,17 +18,14 @@ constructor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GestureStyle-constructor(value?: GestureStyleInterface)--><!--Device-GestureStyle-constructor(value?: GestureStyleInterface)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [GestureStyleInterface](arkts-arkui-styledstring-gesturestyleinterface-i.md) | No | gesture event object. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [GestureStyleInterface](arkts-arkui-styledstring-gesturestyleinterface-i.md) | No |

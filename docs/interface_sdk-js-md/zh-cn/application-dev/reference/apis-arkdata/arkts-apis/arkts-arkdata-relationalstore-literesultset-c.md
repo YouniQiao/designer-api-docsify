@@ -7,7 +7,7 @@
 
 **起始版本：** 23
 
-<!--Device-relationalStore-class LiteResultSet--><!--Device-relationalStore-class LiteResultSet-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -27,9 +27,9 @@ close(): void
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-LiteResultSet-close(): void--><!--Device-LiteResultSet-close(): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -70,6 +70,12 @@ async function closeExample(store : relationalStore.RdbStore) {
 
 ## getAsset
 
+ArkTS-Dyn:
+```TypeScript
+getAsset(columnIndex: number): Asset
+```
+
+ArkTS-Sta:
 ```TypeScript
 getAsset(columnIndex: int): Asset
 ```
@@ -78,32 +84,32 @@ getAsset(columnIndex: int): Asset
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-LiteResultSet-getAsset(columnIndex: int): Asset--><!--Device-LiteResultSet-getAsset(columnIndex: int): Asset-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| columnIndex | int | 是 | 指定的列索引，从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Asset | 以Asset形式返回指定列的值。 |
+| 类型 |
+| --- |
+| [Asset](arkts-arkdata-commontype-asset-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) | Type conversion failed. |
+| 错误码ID |
+| --- |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) |
 
 **示例**
 
@@ -131,6 +137,12 @@ async function getAssetExample(store : relationalStore.RdbStore) {
 
 ## getAssets
 
+ArkTS-Dyn:
+```TypeScript
+getAssets(columnIndex: number): Assets
+```
+
+ArkTS-Sta:
 ```TypeScript
 getAssets(columnIndex: int): Assets
 ```
@@ -139,32 +151,32 @@ getAssets(columnIndex: int): Assets
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-LiteResultSet-getAssets(columnIndex: int): Assets--><!--Device-LiteResultSet-getAssets(columnIndex: int): Assets-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| columnIndex | int | 是 | 指定的列索引，从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Assets | 以Assets形式返回指定列的值。 |
+| 类型 |
+| --- |
+| [Assets](arkts-arkdata-sendablerelationalstore-assets-t.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) | Type conversion failed. |
+| 错误码ID |
+| --- |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) |
 
 **示例**
 
@@ -192,6 +204,12 @@ async function getAssetsExample(store : relationalStore.RdbStore) {
 
 ## getBlob
 
+ArkTS-Dyn:
+```TypeScript
+getBlob(columnIndex: number): Uint8Array
+```
+
+ArkTS-Sta:
 ```TypeScript
 getBlob(columnIndex: int): Uint8Array
 ```
@@ -200,32 +218,32 @@ getBlob(columnIndex: int): Uint8Array
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-LiteResultSet-getBlob(columnIndex: int): Uint8Array--><!--Device-LiteResultSet-getBlob(columnIndex: int): Uint8Array-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| columnIndex | int | 是 | 指定的列索引，从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Uint8Array | 以字节数组的形式返回指定列的值。 |
+| 类型 |
+| --- |
+| Uint8Array |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) | Type conversion failed. |
+| 错误码ID |
+| --- |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) |
 
 **示例**
 
@@ -253,6 +271,12 @@ async function getBlobExample(store : relationalStore.RdbStore) {
 
 ## getColumnIndex
 
+ArkTS-Dyn:
+```TypeScript
+getColumnIndex(columnName: string): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getColumnIndex(columnName: string): int
 ```
@@ -261,36 +285,36 @@ getColumnIndex(columnName: string): int
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-LiteResultSet-getColumnIndex(columnName: string): int--><!--Device-LiteResultSet-getColumnIndex(columnName: string): int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| columnName | string | 是 | 表示结果集中指定列的名称。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| columnName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 返回指定列的索引。当结果集中包含重名列时，返回值会不符合预期。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
+| 错误码ID |
+| --- |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
 
 **示例**
 
@@ -323,6 +347,12 @@ async function getColumnIndexExample(store : relationalStore.RdbStore){
 
 ## getColumnName
 
+ArkTS-Dyn:
+```TypeScript
+getColumnName(columnIndex: number): string
+```
+
+ArkTS-Sta:
 ```TypeScript
 getColumnName(columnIndex: int): string
 ```
@@ -331,37 +361,37 @@ getColumnName(columnIndex: int): string
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-LiteResultSet-getColumnName(columnIndex: int): string--><!--Device-LiteResultSet-getColumnName(columnIndex: int): string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| columnIndex | int | 是 | 表示结果集中指定列的索引，从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回指定列的名称。当结果集中包含重名列时，返回值会不符合预期。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
+| 错误码ID |
+| --- |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
 
 **示例**
 
@@ -401,30 +431,30 @@ getColumnNames(): Array<string>
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-LiteResultSet-getColumnNames(): Array<string>--><!--Device-LiteResultSet-getColumnNames(): Array<string>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;string&gt; | 返回结果集中所有列的名称。支持获取包含重名列的列名。 |
+| 类型 |
+| --- |
+| Array & lt;string & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
+| 错误码ID |
+| --- |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
 
 **示例**
 
@@ -459,6 +489,12 @@ async function getColumnNamesExample(store: relationalStore.RdbStore) {
 
 ## getColumnType
 
+ArkTS-Dyn:
+```TypeScript
+getColumnType(columnIdentifier: number | string): Promise<ColumnType>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getColumnType(columnIdentifier: int | string): Promise<ColumnType>
 ```
@@ -467,38 +503,38 @@ getColumnType(columnIdentifier: int | string): Promise<ColumnType>
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-LiteResultSet-getColumnType(columnIdentifier: int | string): Promise<ColumnType>--><!--Device-LiteResultSet-getColumnType(columnIdentifier: int | string): Promise<ColumnType>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| columnIdentifier | int \| string | 是 | 表示结果集中指定列的索引或名称，索引从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| columnIdentifier | ArkTS-Dyn: number \| string<br>ArkTS-Sta：int \ | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[ColumnType](arkts-arkdata-relationalstore-columntype-e.md)&gt; | Promise对象。返回指定列的数据类型。当结果集中包含重名列时，通过列名获取的结果会不符合预期。 |
+| 类型 |
+| --- |
+| Promise&lt;[ColumnType](arkts-arkdata-relationalstore-columntype-e.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
+| 错误码ID |
+| --- |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
 
 **示例**
 
@@ -544,6 +580,12 @@ async function getColumnTypeExample(store : relationalStore.RdbStore){
 
 ## getColumnTypeSync
 
+ArkTS-Dyn:
+```TypeScript
+getColumnTypeSync(columnIdentifier: number | string): ColumnType
+```
+
+ArkTS-Sta:
 ```TypeScript
 getColumnTypeSync(columnIdentifier: int | string): ColumnType
 ```
@@ -552,38 +594,38 @@ getColumnTypeSync(columnIdentifier: int | string): ColumnType
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-LiteResultSet-getColumnTypeSync(columnIdentifier: int | string): ColumnType--><!--Device-LiteResultSet-getColumnTypeSync(columnIdentifier: int | string): ColumnType-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| columnIdentifier | int \| string | 是 | 表示结果集中指定列的索引或名称，索引从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| columnIdentifier | ArkTS-Dyn: number \| string<br>ArkTS-Sta：int \ | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ColumnType](arkts-arkdata-relationalstore-columntype-e.md) | 返回指定列的数据类型。当结果集中包含重名列时，通过列名获取的结果会不符合预期。 |
+| 类型 |
+| --- |
+| [ColumnType](arkts-arkdata-relationalstore-columntype-e.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
+| 错误码ID |
+| --- |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
 
 **示例**
 
@@ -637,31 +679,31 @@ getCurrentRowData(): RowData
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-LiteResultSet-getCurrentRowData(): RowData--><!--Device-LiteResultSet-getCurrentRowData(): RowData-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RowData](arkts-arkdata-relationalstore-rowdata-t.md) | 返回当前行所有列的值。支持获取包含重名列的值。 |
+| 类型 |
+| --- |
+| [RowData](arkts-arkdata-relationalstore-rowdata-t.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
+| 错误码ID |
+| --- |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
 
 **示例**
 
@@ -699,6 +741,12 @@ async function getCurrentRowDataExample(store : relationalStore.RdbStore) {
 
 ## getDouble
 
+ArkTS-Dyn:
+```TypeScript
+getDouble(columnIndex: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getDouble(columnIndex: int): double
 ```
@@ -707,32 +755,32 @@ getDouble(columnIndex: int): double
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-LiteResultSet-getDouble(columnIndex: int): double--><!--Device-LiteResultSet-getDouble(columnIndex: int): double-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| columnIndex | int | 是 | 指定的列索引，从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | 以double形式返回指定列的值。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) | Type conversion failed. |
+| 错误码ID |
+| --- |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) |
 
 **示例**
 
@@ -766,6 +814,12 @@ async function getDoubleExample(store : relationalStore.RdbStore) {
 
 ## getLong
 
+ArkTS-Dyn:
+```TypeScript
+getLong(columnIndex: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getLong(columnIndex: int): long
 ```
@@ -774,32 +828,32 @@ getLong(columnIndex: int): long
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-LiteResultSet-getLong(columnIndex: int): long--><!--Device-LiteResultSet-getLong(columnIndex: int): long-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| columnIndex | int | 是 | 指定的列索引，从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 以Long形式返回指定列的值。 <br>该接口支持的精度范围是：Number.MIN_SAFE_INTEGER ~ Number.MAX_SAFE_INTEGER，若超出该范围，建议对于DOUBLE类型的值使用 [getDouble]{ |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) | Type conversion failed. |
+| 错误码ID |
+| --- |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) |
 
 **示例**
 
@@ -841,31 +895,31 @@ getRow(): ValuesBucket
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-LiteResultSet-getRow(): ValuesBucket--><!--Device-LiteResultSet-getRow(): ValuesBucket-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ValuesBucket | 返回指定行的值。当结果集中包含重名列时，返回值会不符合预期，建议使用 [getCurrentRowData]{ |
+| 类型 |
+| --- |
+| [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
+| 错误码ID |
+| --- |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
 
 **示例**
 
@@ -894,6 +948,12 @@ async function getRowExample(store : relationalStore.RdbStore) {
 
 ## getRows
 
+ArkTS-Dyn:
+```TypeScript
+getRows(maxCount: number, position?: number): Promise<Array<ValuesBucket>>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getRows(maxCount: int, position?: int): Promise<Array<ValuesBucket>>
 ```
@@ -902,39 +962,39 @@ getRows(maxCount: int, position?: int): Promise<Array<ValuesBucket>>
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-LiteResultSet-getRows(maxCount: int, position?: int): Promise<Array<ValuesBucket>>--><!--Device-LiteResultSet-getRows(maxCount: int, position?: int): Promise<Array<ValuesBucket>>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| maxCount | int | 是 | 正整数，指定要从结果集中获取数据的条数。 |
-| position | int | 否 | 非负整数，指定从结果集中获取数据的起始位置，不填则从结果集的当前行（默认首次获取数据时为当前结果集的第一行）开始获取数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| maxCount | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| position | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;ValuesBucket&gt;&gt; | 返回maxCount条数据，剩余数据不足maxCount条则返回剩余数据，返回空数组时代表已经遍历到结果集的末尾。当结果集中包含重名列时，返回 值会不符合预期，建议使用[getRowsData]{ |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;ValuesBucket & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
+| 错误码ID |
+| --- |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
 
 **示例**
 
@@ -1001,6 +1061,12 @@ async function getRowsExample(store : relationalStore.RdbStore) {
 
 ## getRowsData
 
+ArkTS-Dyn:
+```TypeScript
+getRowsData(maxCount: number, position?: number): Promise<RowsData>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getRowsData(maxCount: int, position?: int): Promise<RowsData>
 ```
@@ -1009,39 +1075,39 @@ getRowsData(maxCount: int, position?: int): Promise<RowsData>
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-LiteResultSet-getRowsData(maxCount: int, position?: int): Promise<RowsData>--><!--Device-LiteResultSet-getRowsData(maxCount: int, position?: int): Promise<RowsData>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| maxCount | int | 是 | 正整数，指定从结果集中获取数据的条数。不为正整数则参数非法，抛出错误码14800001。 |
-| position | int | 否 | 非负整数，指定从结果集中获取数据的起始位置，不填则从结果集的当前行（默认首次获取数据时为当前结果集的第一行）开始获取数据。不为非负整数则参数非法，抛出错误码1480000 1。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| maxCount | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| position | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[RowsData](arkts-arkdata-relationalstore-rowsdata-t.md)&gt; | 返回maxCount条数据，剩余数据不足maxCount条则返回剩余数据，返回空数组时代表已经遍历到结果集的末尾。支持获取包含重名列的值。 |
+| 类型 |
+| --- |
+| Promise&lt;[RowsData](arkts-arkdata-relationalstore-rowsdata-t.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
+| 错误码ID |
+| --- |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
 
 **示例**
 
@@ -1130,6 +1196,12 @@ async function getRowsDataExample(store : relationalStore.RdbStore) {
 
 ## getString
 
+ArkTS-Dyn:
+```TypeScript
+getString(columnIndex: number): string
+```
+
+ArkTS-Sta:
 ```TypeScript
 getString(columnIndex: int): string
 ```
@@ -1138,32 +1210,32 @@ getString(columnIndex: int): string
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-LiteResultSet-getString(columnIndex: int): string--><!--Device-LiteResultSet-getString(columnIndex: int): string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| columnIndex | int | 是 | 指定的列索引，从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 以字符串形式返回指定列的值。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) | Type conversion failed. |
+| 错误码ID |
+| --- |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) |
 
 **示例**
 
@@ -1191,6 +1263,12 @@ async function getStringExample(store : relationalStore.RdbStore) {
 
 ## getValue
 
+ArkTS-Dyn:
+```TypeScript
+getValue(columnIndex: number): ValueType
+```
+
+ArkTS-Sta:
 ```TypeScript
 getValue(columnIndex: int): ValueType
 ```
@@ -1199,31 +1277,31 @@ getValue(columnIndex: int): ValueType
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-LiteResultSet-getValue(columnIndex: int): ValueType--><!--Device-LiteResultSet-getValue(columnIndex: int): ValueType-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| columnIndex | int | 是 | 指定的列索引，从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ValueType | 允许返回的数据字段类型。 |
+| 类型 |
+| --- |
+| [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| 错误码ID |
+| --- |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 **示例**
 
@@ -1265,32 +1343,32 @@ goToNextRow(): boolean
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-LiteResultSet-goToNextRow(): boolean--><!--Device-LiteResultSet-goToNextRow(): boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果成功移动结果集到下一行，返回true；否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
+| 错误码ID |
+| --- |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
 
 **示例**
 
@@ -1317,6 +1395,12 @@ async function goToNextRowExample(store : relationalStore.RdbStore) {
 
 ## isColumnNull
 
+ArkTS-Dyn:
+```TypeScript
+isColumnNull(columnIndex: number): boolean
+```
+
+ArkTS-Sta:
 ```TypeScript
 isColumnNull(columnIndex: int): boolean
 ```
@@ -1325,38 +1409,38 @@ isColumnNull(columnIndex: int): boolean
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-LiteResultSet-isColumnNull(columnIndex: int): boolean--><!--Device-LiteResultSet-isColumnNull(columnIndex: int): boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| columnIndex | int | 是 | 指定的列索引，从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果当前行中指定列的值为null，则返回true；否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file |
+| 错误码ID |
+| --- |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
 
 **示例**
 
@@ -1387,4 +1471,3 @@ async function isColumnNullExample(store : relationalStore.RdbStore) {
   }
 }
 ```
-

@@ -4,11 +4,11 @@
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** RouterState
-
-<!--Device-unnamed-export interface RouterState--><!--Device-unnamed-export interface RouterState-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,11 @@ index: number
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** index
-
-<!--Device-RouterState-index: number--><!--Device-RouterState-index: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,11 +50,11 @@ name: string
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** name
-
-<!--Device-RouterState-name: string--><!--Device-RouterState-name: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,11 +70,10 @@ path: string
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** path
 
-<!--Device-RouterState-path: string--><!--Device-RouterState-path: string-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

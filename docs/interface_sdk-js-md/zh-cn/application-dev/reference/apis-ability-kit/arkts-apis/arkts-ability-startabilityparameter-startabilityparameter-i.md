@@ -4,7 +4,7 @@
 
 **起始版本：** 6
 
-<!--Device-unnamed-export interface StartAbilityParameter--><!--Device-unnamed-export interface StartAbilityParameter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -20,9 +20,9 @@ abilityStartSetting?: { [key: string]: any }
 
 **起始版本：** 6
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-StartAbilityParameter-abilityStartSetting?: { [key: string]: any }--><!--Device-StartAbilityParameter-abilityStartSetting?: { [key: string]: any }-End-->
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -38,9 +38,9 @@ abilityStartSettings?: Record<string, Object>
 
 **起始版本：** 11
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-StartAbilityParameter-abilityStartSettings?: Record<string, Object>--><!--Device-StartAbilityParameter-abilityStartSettings?: Record<string, Object>-End-->
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -56,9 +56,8 @@ want: Want
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-StartAbilityParameter-want: Want--><!--Device-StartAbilityParameter-want: Want-End-->
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
-

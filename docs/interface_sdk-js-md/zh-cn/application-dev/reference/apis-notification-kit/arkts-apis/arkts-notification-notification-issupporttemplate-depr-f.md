@@ -15,20 +15,20 @@ function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md)
-
-<!--Device-notification-function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void--><!--Device-notification-function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| templateName | string | 是 | 模板名称。当前仅支持'downloadTemplate'。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 查询模板是否存在的回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| templateName | string | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
 **示例**
 
@@ -69,27 +69,26 @@ function isSupportTemplate(templateName: string): Promise<boolean>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md)
-
-<!--Device-notification-function isSupportTemplate(templateName: string): Promise<boolean>--><!--Device-notification-function isSupportTemplate(templateName: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| templateName | string | 是 | 模板名称。当前仅支持'downloadTemplate'。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| templateName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise方式返回模板是否存在的结果。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **示例**
 
 参见 [isSupportTemplate](#issupporttemplate)
-

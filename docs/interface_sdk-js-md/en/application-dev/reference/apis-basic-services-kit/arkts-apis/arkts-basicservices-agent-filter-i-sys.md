@@ -2,9 +2,9 @@
 
 Defines the filter criteria.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-agent-interface Filter--><!--Device-agent-interface Filter-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -24,11 +24,10 @@ Specify the package name of an application. Only for advanced search, common sea
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Filter-bundle?: string--><!--Device-Filter-bundle?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **System API:** This is a system API.
-

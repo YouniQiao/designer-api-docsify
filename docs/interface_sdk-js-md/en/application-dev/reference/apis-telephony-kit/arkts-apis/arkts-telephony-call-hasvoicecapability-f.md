@@ -14,15 +14,14 @@ function hasVoiceCapability(): boolean
 
 Checks whether a device supports voice calls.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-call-function hasVoiceCapability(): boolean--><!--Device-call-function hasVoiceCapability(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Result indicating whether the device supports voice calls. The value **true** indicates yes, and the value **false** indicates no. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

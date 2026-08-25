@@ -9,7 +9,6 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [Function](arkts-arkts-function-i.md) | Function |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Function](arkts-arkts-function-i.md) |

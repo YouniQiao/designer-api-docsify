@@ -2,9 +2,9 @@
 
 WallpaperInfo definition including folding status, rotation status, and resource path.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-wallpaper-interface WallpaperInfo--><!--Device-wallpaper-interface WallpaperInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -26,9 +26,9 @@ Indicates the folding status for wallpaper.
 
 **Type:** [FoldState](arkts-basicservices-wallpaper-foldstate-e-sys.md)
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-WallpaperInfo-foldState: FoldState--><!--Device-WallpaperInfo-foldState: FoldState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -44,9 +44,9 @@ Indicates the rotation status for wallpaper.
 
 **Type:** [RotateState](arkts-basicservices-wallpaper-rotatestate-e-sys.md)
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-WallpaperInfo-rotateState: RotateState--><!--Device-WallpaperInfo-rotateState: RotateState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -62,11 +62,10 @@ Indicates the resource path for wallpaper.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-WallpaperInfo-source: string--><!--Device-WallpaperInfo-source: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **System API:** This is a system API.
-

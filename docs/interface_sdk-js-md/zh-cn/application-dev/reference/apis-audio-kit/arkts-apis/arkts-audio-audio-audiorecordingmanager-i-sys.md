@@ -8,7 +8,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-audio-interface AudioRecordingManager--><!--Device-audio-interface AudioRecordingManager-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -28,9 +28,9 @@ getCurrentCollaborativeRecordingConfiguration(): CollaborativeRecordingConfigura
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AudioRecordingManager-getCurrentCollaborativeRecordingConfiguration(): CollaborativeRecordingConfiguration--><!--Device-AudioRecordingManager-getCurrentCollaborativeRecordingConfiguration(): CollaborativeRecordingConfiguration-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -38,16 +38,16 @@ getCurrentCollaborativeRecordingConfiguration(): CollaborativeRecordingConfigura
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [CollaborativeRecordingConfiguration](arkts-audio-audio-collaborativerecordingconfiguration-i-sys.md) | 协作录音配置，若开启该功能，返回值中将包含音频设备信息。 |
+| 类型 |
+| --- |
+| [CollaborativeRecordingConfiguration](arkts-audio-audio-collaborativerecordingconfiguration-i-sys.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs, like service died. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## getSupportedCollaborativeRecordingDevices
 
@@ -59,9 +59,9 @@ getSupportedCollaborativeRecordingDevices(): AudioDeviceDescriptors
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AudioRecordingManager-getSupportedCollaborativeRecordingDevices(): AudioDeviceDescriptors--><!--Device-AudioRecordingManager-getSupportedCollaborativeRecordingDevices(): AudioDeviceDescriptors-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -69,15 +69,15 @@ getSupportedCollaborativeRecordingDevices(): AudioDeviceDescriptors
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 支持协同录制的设备。 |
+| 类型 |
+| --- |
+| [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## isCollaborativeRecordingEnabled
 
@@ -89,9 +89,9 @@ isCollaborativeRecordingEnabled(): boolean
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AudioRecordingManager-isCollaborativeRecordingEnabled(): boolean--><!--Device-AudioRecordingManager-isCollaborativeRecordingEnabled(): boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -99,15 +99,15 @@ isCollaborativeRecordingEnabled(): boolean
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 该设备是否支持协同录制。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## offSystemRecordControllerEnabledChange
 
@@ -119,9 +119,9 @@ offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControlle
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AudioRecordingManager-offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControllerChangeInfo>): void--><!--Device-AudioRecordingManager-offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControllerChangeInfo>): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -129,17 +129,17 @@ offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControlle
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SystemRecordControllerChangeInfo](arkts-audio-audio-systemrecordcontrollerchangeinfo-i-sys.md)&gt; | 否 | 订阅中使用的回调函数 用于取消订阅的函数。如果不使用此参数，将取消当前进程中之前订阅的所有回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SystemRecordControllerChangeInfo](arkts-audio-audio-systemrecordcontrollerchangeinfo-i-sys.md)&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs like service died. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 **示例**
 
@@ -159,9 +159,9 @@ onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerC
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AudioRecordingManager-onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerChangeInfo>): void--><!--Device-AudioRecordingManager-onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerChangeInfo>): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -169,18 +169,18 @@ onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerC
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SystemRecordControllerChangeInfo](arkts-audio-audio-systemrecordcontrollerchangeinfo-i-sys.md)&gt; | 是 | 回调函数，用于监听系统录音控制器面板使能状态变化事件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SystemRecordControllerChangeInfo](arkts-audio-audio-systemrecordcontrollerchangeinfo-i-sys.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800102](../errorcode-audio.md#6800102-分配内存失败) | Memory allocation failed. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs like service died. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800102](../errorcode-audio.md#6800102-分配内存失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 **示例**
 
@@ -202,11 +202,11 @@ setCollaborativeRecordingEnabledForDevices(enable: boolean, devices: AudioDevice
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AudioRecordingManager-setCollaborativeRecordingEnabledForDevices(enable: boolean, devices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRecordingManager-setCollaborativeRecordingEnabledForDevices(enable: boolean, devices: AudioDeviceDescriptors): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -214,23 +214,22 @@ setCollaborativeRecordingEnabledForDevices(enable: boolean, devices: AudioDevice
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enable | boolean | 是 | 确实可以实现协作录制。 |
-| devices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 是 | 目标音频设备用于协同录制， 应使用 [getSupportedCollaborativeRecordingDevices](#getsupportedcollaborativerecordingdevices) 来获取。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enable | boolean | 是 |
+| devices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise 对象，返回 void。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed, the devices are invalid. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs, like service died. |
-
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |

@@ -4,7 +4,7 @@
 
 **起始版本：** 21
 
-<!--Device-unnamed-export interface DrawableDescriptorLoadedResult--><!--Device-unnamed-export interface DrawableDescriptorLoadedResult-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,11 @@ imageHeight: number
 
 **起始版本：** 21
 
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DrawableDescriptorLoadedResult-imageHeight: number--><!--Device-DrawableDescriptorLoadedResult-imageHeight: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,11 +46,11 @@ imageWidth: number
 
 **起始版本：** 21
 
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DrawableDescriptorLoadedResult-imageWidth: number--><!--Device-DrawableDescriptorLoadedResult-imageWidth: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,4 +90,3 @@ struct Index {
   }
 }
 ```
-

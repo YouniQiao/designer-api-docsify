@@ -2,9 +2,9 @@
 
 Defines a subscription data holder for processing event information.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-hiAppEvent-class AppEventPackageHolder--><!--Device-hiAppEvent-class AppEventPackageHolder-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -22,19 +22,19 @@ constructor(watcherName: string)
 
 Constructs an **AppEventPackageHolder** instance. You can call [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md) to add an event watcher, and then associate the **AppEventPackageHolder** instance with the watcher added in the application based on the watcher name.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-AppEventPackageHolder-constructor(watcherName: string)--><!--Device-AppEventPackageHolder-constructor(watcherName: string)-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| watcherName | string | Yes | Name of the event watcher added through [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md). If no watcher is added, no data is displayed by default. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| watcherName | string | Yes |
 
 **Examples**
 
@@ -55,32 +55,38 @@ let holder1: hiAppEvent.AppEventPackageHolder = new hiAppEvent.AppEventPackageHo
 
 ## setRow
 
+ArkTS-Dyn:
+```TypeScript
+setRow(size: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setRow(size: int): void
 ```
 
 Sets the number of data records of the event package obtained each time. When **setRow()** and **setSize()** are called at the same time, only **setRow()** takes effect.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AppEventPackageHolder-setRow(size: int): void--><!--Device-AppEventPackageHolder-setRow(size: int): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | int | Yes | Number of events. The value range is (0, 2^31-1]. If the value is out of the range, an exception is thrown. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| size | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [11104001](../errorcode-hiappevent.md#11104001-invalid-event-package-size) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11104001](../errorcode-hiappevent.md#11104001-invalid-event-package-size) |
 
 **Examples**
 
@@ -93,32 +99,38 @@ holder3.setRow(1000);
 
 ## setSize
 
+ArkTS-Dyn:
+```TypeScript
+setSize(size: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setSize(size: int): void
 ```
 
 Sets the threshold for the data size of the event package obtained each time.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-AppEventPackageHolder-setSize(size: int): void--><!--Device-AppEventPackageHolder-setSize(size: int): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | int | Yes | Data size threshold, in bytes. The value range is [0, 2^31-1]. If the value is out of the range, an exception is thrown. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| size | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [11104001](../errorcode-hiappevent.md#11104001-invalid-event-package-size) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11104001](../errorcode-hiappevent.md#11104001-invalid-event-package-size) |
 
 **Examples**
 
@@ -139,17 +151,17 @@ Obtains the subscription event.The system obtains the subscription event data ba
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-AppEventPackageHolder-takeNext(): AppEventPackage--><!--Device-AppEventPackageHolder-takeNext(): AppEventPackage-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) | Event package object. If all subscription event data has been retrieved, **null** is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) |
 
 **Examples**
 
@@ -170,19 +182,18 @@ Obtains the subscription event. <br>The system obtains the subscription event da
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-AppEventPackageHolder-takeNext(): AppEventPackage | null--><!--Device-AppEventPackageHolder-takeNext(): AppEventPackage | null-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) \| null | Event package object. If all subscription event data has been retrieved, null is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) \| null |
 
 **Examples**
 
 See [takeNext](#takenext)
-

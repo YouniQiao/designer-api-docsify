@@ -6,7 +6,7 @@
 
 **起始版本：** 9
 
-<!--Device-unnamed-declare class NavDestinationAttribute--><!--Device-unnamed-declare class NavDestinationAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,19 +30,19 @@ backButtonIcon(value: ResourceStr | PixelMap | SymbolGlyphModifier)
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-backButtonIcon(value: ResourceStr | PixelMap | SymbolGlyphModifier): NavDestinationAttribute--><!--Device-NavDestinationAttribute-backButtonIcon(value: ResourceStr | PixelMap | SymbolGlyphModifier): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceStr \| PixelMap \| SymbolGlyphModifier | 是 | 标题栏返回键图标。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | ResourceStr \| PixelMap \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | 是 |
 
 ## backButtonIcon
 
@@ -59,20 +59,20 @@ backButtonIcon(icon: ResourceStr | PixelMap | SymbolGlyphModifier, accessibility
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-backButtonIcon(icon: ResourceStr | PixelMap | SymbolGlyphModifier, accessibilityText?: ResourceStr): NavDestinationAttribute--><!--Device-NavDestinationAttribute-backButtonIcon(icon: ResourceStr | PixelMap | SymbolGlyphModifier, accessibilityText?: ResourceStr): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| icon | ResourceStr \| PixelMap \| SymbolGlyphModifier | 是 | 标题栏返回键图标。 |
-| accessibilityText | ResourceStr | 否 | 返回键无障碍播报内容。<br/>默认值：系统语言是中文时为“返回”，系统语言是英文时为“back”。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| icon | ResourceStr \| PixelMap \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | 是 |
+| accessibilityText | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 否 |
 
 ## bindToNestedScrollable
 
@@ -91,19 +91,19 @@ bindToNestedScrollable(scrollInfos: Array<NestedScrollInfo>)
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-bindToNestedScrollable(scrollInfos: Array<NestedScrollInfo>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-bindToNestedScrollable(scrollInfos: Array<NestedScrollInfo>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| scrollInfos | Array&lt;[NestedScrollInfo](arkts-arkui-nestedscrollinfo-i.md)&gt; | 是 | 嵌套的可滚动容器组件的控制器。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| scrollInfos | Array&lt;[NestedScrollInfo](arkts-arkui-nestedscrollinfo-i.md)&gt; | 是 |
 
 ## bindToScrollable
 
@@ -122,19 +122,19 @@ bindToScrollable(scrollers: Array<Scroller>)
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-bindToScrollable(scrollers: Array<Scroller>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-bindToScrollable(scrollers: Array<Scroller>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| scrollers | Array&lt;Scroller&gt; | 是 | 可滚动容器组件的控制器。<br/>生效前提：NavDestination的标题栏或工具栏需设置为可见状态。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| scrollers | Array & lt;Scroller & gt; | 是 |
 
 ## customTransition
 
@@ -151,19 +151,19 @@ customTransition(delegate: NavDestinationTransitionDelegate)
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-customTransition(delegate: NavDestinationTransitionDelegate): NavDestinationAttribute--><!--Device-NavDestinationAttribute-customTransition(delegate: NavDestinationTransitionDelegate): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| delegate | [NavDestinationTransitionDelegate](arkts-arkui-navdestinationtransitiondelegate-t.md) | 是 | NavDestination自定义动画的代理函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| delegate | [NavDestinationTransitionDelegate](arkts-arkui-navdestinationtransitiondelegate-t.md) | 是 |
 
 ## enableNavigationIndicator
 
@@ -183,19 +183,19 @@ enableNavigationIndicator(enabled: Optional<boolean>)
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-enableNavigationIndicator(enabled: Optional<boolean>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-enableNavigationIndicator(enabled: Optional<boolean>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | 是 | 进入该NavDestination后，系统导航条的显示/隐藏状态。<br/>默认值：false<br/>true： 显示导航条。<br/>false：隐藏导航条。<br/>undefined：不改变系统导航条的显示/隐藏状态。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enabled | Optional & lt;boolean & gt; | 是 |
 
 ## enableStatusBar
 
@@ -222,20 +222,20 @@ enableStatusBar(enabled: Optional<boolean>, animated?: boolean)
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-enableStatusBar(enabled: Optional<boolean>, animated?: boolean): NavDestinationAttribute--><!--Device-NavDestinationAttribute-enableStatusBar(enabled: Optional<boolean>, animated?: boolean): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | 是 | 进入该NavDestination后，系统状态栏的显示/隐藏状态。<br/>默认值：false<br/>true： 显示状态栏。<br/>false：隐藏状态栏。<br/>undefined：不改变系统状态栏的显示/隐藏状态。 |
-| animated | boolean | 否 | 是否使用动画的方式显示/隐藏系统状态栏。<br/>默认值：false<br/>true：使用动画的方式显示/隐藏系统状态栏。<br/>false：不使用动画的方式显示 /隐藏系统状态栏。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enabled | Optional & lt;boolean & gt; | 是 |
+| animated | boolean | 否 |
 
 ## fullScreenOverlay
 
@@ -247,19 +247,19 @@ fullScreenOverlay(fullScreenOverlay: Optional<boolean>)
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-fullScreenOverlay(fullScreenOverlay: Optional<boolean>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-fullScreenOverlay(fullScreenOverlay: Optional<boolean>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| fullScreenOverlay | Optional&lt;boolean&gt; | 是 | 是否以全屏覆盖模式显示。<br/>true：全屏覆盖模式，覆盖整个Navigation容器。<br/>false：普通显示模式，遵循 Navigation分栏显示规则。指定为false的STANDARD类型页面不会继承全屏显示。<br/>undefined：普通显示模式，遵循Navigation分栏显示规则。指定为undefined的页面会继承全屏显示。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [fullScreenOverlay](#fullscreenoverlay) | Optional & lt;boolean & gt; | 是 |
 
 ## hideBackButton
 
@@ -271,19 +271,19 @@ hideBackButton(hide: Optional<boolean>)
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-hideBackButton(hide: Optional<boolean>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-hideBackButton(hide: Optional<boolean>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| hide | Optional&lt;boolean&gt; | 是 | 是否隐藏标题栏中的返回键。 <br/>默认值：false<br/>true：隐藏返回键。<br/>false：显示返回键。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| hide | Optional & lt;boolean & gt; | 是 |
 
 ## hideTitleBar
 
@@ -295,17 +295,17 @@ hideTitleBar(value: boolean)
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-NavDestinationAttribute-hideTitleBar(value: boolean): NavDestinationAttribute--><!--Device-NavDestinationAttribute-hideTitleBar(value: boolean): NavDestinationAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean | 是 | 是否隐藏标题栏。<br/>默认值：false<br/>true：隐藏标题栏。<br/>false：显示标题栏。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | boolean | 是 |
 
 ## hideTitleBar
 
@@ -317,20 +317,20 @@ hideTitleBar(hide: boolean, animated: boolean)
 
 **起始版本：** 13
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-hideTitleBar(hide: boolean, animated: boolean): NavDestinationAttribute--><!--Device-NavDestinationAttribute-hideTitleBar(hide: boolean, animated: boolean): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| hide | boolean | 是 | 是否隐藏标题栏。<br/>默认值：false<br/>true：隐藏标题栏。<br/>false：显示标题栏。 |
-| animated | boolean | 是 | 设置是否使用动画显隐标题栏。<br/>默认值：false<br/>true：使用动画显示隐藏标题栏。<br/>false：不使用动画显示隐藏标题栏。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| hide | boolean | 是 |
+| animated | boolean | 是 |
 
 ## hideToolBar
 
@@ -342,20 +342,20 @@ hideToolBar(hide: boolean, animated?: boolean)
 
 **起始版本：** 13
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-hideToolBar(hide: boolean, animated?: boolean): NavDestinationAttribute--><!--Device-NavDestinationAttribute-hideToolBar(hide: boolean, animated?: boolean): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| hide | boolean | 是 | 是否隐藏工具栏。<br/>默认值：false<br/>true：隐藏工具栏。<br/>false：显示工具栏。 |
-| animated | boolean | 否 | 设置是否使用动画显隐工具栏。<br/>默认值：false<br/>true：使用动画显示隐藏工具栏。<br/>false：不使用动画显示隐藏工具栏。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| hide | boolean | 是 |
+| animated | boolean | 否 |
 
 ## ignoreLayoutSafeArea
 
@@ -373,20 +373,20 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafe
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafeAreaEdge>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafeAreaEdge>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| types | Array&lt;LayoutSafeAreaType&gt; | 否 | 配置扩展安全区域的类型。&lt;br /&gt;默认值：&lt;br /&gt;[LayoutSafeAreaType.SYSTEM] |
-| edges | Array&lt;LayoutSafeAreaEdge&gt; | 否 | 配置扩展安全区域的方向。&lt;br /&gt; 默认值：&lt;br /&gt; [LayoutSafeAreaEdge.TOP, LayoutSafeAreaEdge.BOTTOM]。<br/>默认扩展顶部和底部方向，用于避让系统状态栏和导航栏的安全区域。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array & lt;LayoutSafeAreaType & gt; | 否 |
+| edges | Array & lt;LayoutSafeAreaEdge & gt; | 否 |
 
 ## menus
 
@@ -403,19 +403,19 @@ menus(value: Array<NavigationMenuItem> | CustomBuilder)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-menus(value: Array<NavigationMenuItem> | CustomBuilder): NavDestinationAttribute--><!--Device-NavDestinationAttribute-menus(value: Array<NavigationMenuItem> | CustomBuilder): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Array&lt;NavigationMenuItem&gt; \| CustomBuilder | 是 | 页面右上角菜单。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | Array & lt;NavigationMenuItem & gt; \ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 |
 
 ## menus
 
@@ -432,20 +432,20 @@ menus(items: Array<NavigationMenuItem> | CustomBuilder, options?: NavigationMenu
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-menus(items: Array<NavigationMenuItem> | CustomBuilder, options?: NavigationMenuOptions): NavDestinationAttribute--><!--Device-NavDestinationAttribute-menus(items: Array<NavigationMenuItem> | CustomBuilder, options?: NavigationMenuOptions): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| items | Array&lt;NavigationMenuItem&gt; \| CustomBuilder | 是 | 页面右上角菜单。 |
-| options | NavigationMenuOptions | 否 | 页面右上角菜单选项。<br/>默认值：不设置时使用菜单默认配置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| items | Array & lt;NavigationMenuItem & gt; \ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 |
+| options | [NavigationMenuOptions](arkts-arkui-navigationmenuoptions-i.md) | 否 |
 
 ## mode
 
@@ -461,19 +461,19 @@ mode(value: NavDestinationMode)
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-mode(value: NavDestinationMode): NavDestinationAttribute--><!--Device-NavDestinationAttribute-mode(value: NavDestinationMode): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [NavDestinationMode](arkts-arkui-navdestinationmode-e.md) | 是 | NavDestination类型。<br/>默认值：NavDestinationMode.STANDARD |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [NavDestinationMode](arkts-arkui-navdestinationmode-e.md) | 是 |
 
 ## onActive
 
@@ -489,19 +489,19 @@ NavDestination处于激活态（处于栈顶可操作，且上层无特殊组件
 
 **起始版本：** 17
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-onActive(callback: Optional<Callback<NavDestinationActiveReason>>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-onActive(callback: Optional<Callback<NavDestinationActiveReason>>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Optional&lt;Callback&lt;[NavDestinationActiveReason](arkts-arkui-navdestinationactivereason-e.md)&gt;&gt; | 是 | Indicates callback when destination is active. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Optional&lt;Callback&lt;[NavDestinationActiveReason](arkts-arkui-navdestinationactivereason-e.md)&gt;&gt; | 是 |
 
 ## onBackPressed
 
@@ -513,19 +513,19 @@ onBackPressed(callback: () => boolean)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-onBackPressed(callback: () => boolean): NavDestinationAttribute--><!--Device-NavDestinationAttribute-onBackPressed(callback: () => boolean): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | () =&gt; boolean | 是 | 当与Navigation绑定的导航控制器中存在内容时，此回调生效。当点击返回键时，触发该回调。<br/>返回值为true时， 表示重写返回键逻辑；返回值为false时，表示回退到上一个页面。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | () = & gt; boolean | 是 |
 
 ## onHidden
 
@@ -537,19 +537,19 @@ onHidden(callback: Callback<VisibilityChangeReason>)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-onHidden(callback: Callback<VisibilityChangeReason>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-onHidden(callback: Callback<VisibilityChangeReason>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;[VisibilityChangeReason](arkts-arkui-visibilitychangereason-e.md)&gt; | 是 | 当该NavDestination页面隐藏时触发此回调。<br/>在API version 21之前，当 NavDestination页面隐藏时触发回调。<br/>从API version 21开始，该回调会提供入参VisibilityChangeReason以说明onHidden触发的原因。<br>**起始版本：** 21 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback&lt;[VisibilityChangeReason](arkts-arkui-visibilitychangereason-e.md)&gt; | 是 |
 
 ## onInactive
 
@@ -565,19 +565,19 @@ NavDestination处于非激活态（处于非栈顶不可操作，或处于栈顶
 
 **起始版本：** 17
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-onInactive(callback: Optional<Callback<NavDestinationActiveReason>>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-onInactive(callback: Optional<Callback<NavDestinationActiveReason>>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Optional&lt;Callback&lt;[NavDestinationActiveReason](arkts-arkui-navdestinationactivereason-e.md)&gt;&gt; | 是 | Indicates callback when destination is inactive. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Optional&lt;Callback&lt;[NavDestinationActiveReason](arkts-arkui-navdestinationactivereason-e.md)&gt;&gt; | 是 |
 
 ## onNewParam
 
@@ -595,19 +595,19 @@ onNewParam(callback: Optional<Callback<ESObject>>)
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-onNewParam(callback: Optional<Callback<ESObject>>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-onNewParam(callback: Optional<Callback<ESObject>>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Optional&lt;Callback&lt;ESObject&gt;&gt; | 是 | Indicates callback when destination be pushed with singleton mode. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Optional & lt;Callback & lt;ESObject & gt; & gt; | 是 |
 
 ## onReady
 
@@ -623,19 +623,19 @@ onReady(callback: import('../api/@ohos.base').Callback<NavDestinationContext>)
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-onReady(callback: import('../api/@ohos.base').Callback<NavDestinationContext>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-onReady(callback: import('../api/@ohos.base').Callback<NavDestinationContext>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | import('../api/@ohos.base').Callback&lt;[NavDestinationContext](arkts-arkui-navdestinationcontext-i.md)&gt; | 是 | 当NavDestination即将构建子组件之前会触发此回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | import('../api/@ohos.base').Callback&lt;[NavDestinationContext](arkts-arkui-navdestinationcontext-i.md)&gt; | 是 |
 
 ## onRestoreState
 
@@ -647,19 +647,19 @@ onRestoreState(callback: Optional<RestoreStateCallback>)
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-onRestoreState(callback: Optional<RestoreStateCallback>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-onRestoreState(callback: Optional<RestoreStateCallback>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Optional&lt;[RestoreStateCallback](arkts-arkui-restorestatecallback-t.md)&gt; | 是 | 自定义状态恢复回调 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Optional&lt;[RestoreStateCallback](arkts-arkui-restorestatecallback-t.md)&gt; | 是 |
 
 ## onResult
 
@@ -675,19 +675,19 @@ NavDestination返回时触发该回调。
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-onResult(callback: Optional<Callback<ESObject>>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-onResult(callback: Optional<Callback<ESObject>>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Optional&lt;Callback&lt;ESObject&gt;&gt; | 是 | Indicates callback when pop to the navDestination with result. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Optional & lt;Callback & lt;ESObject & gt; & gt; | 是 |
 
 ## onSaveState
 
@@ -699,19 +699,19 @@ onSaveState(callback: Optional<SaveStateCallback>)
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-onSaveState(callback: Optional<SaveStateCallback>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-onSaveState(callback: Optional<SaveStateCallback>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Optional&lt;[SaveStateCallback](arkts-arkui-savestatecallback-t.md)&gt; | 是 | 自定义状态保存回调 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Optional&lt;[SaveStateCallback](arkts-arkui-savestatecallback-t.md)&gt; | 是 |
 
 ## onShown
 
@@ -723,19 +723,19 @@ onShown(callback: Callback<VisibilityChangeReason>)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-onShown(callback: Callback<VisibilityChangeReason>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-onShown(callback: Callback<VisibilityChangeReason>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;[VisibilityChangeReason](arkts-arkui-visibilitychangereason-e.md)&gt; | 是 | 当该NavDestination页面显示时触发此回调。<br/>在API version 21之前，当 NavDestination页面显示时触发回调。<br/>从API version 21开始，回调会提供入参VisibilityChangeReason以说明onShown触发的原因。<br>**起始版本：** 21 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback&lt;[VisibilityChangeReason](arkts-arkui-visibilitychangereason-e.md)&gt; | 是 |
 
 ## onWillAppear
 
@@ -751,19 +751,19 @@ onWillAppear(callback: Callback<void>)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-onWillAppear(callback: Callback<void>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-onWillAppear(callback: Callback<void>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; | 是 | 当该NavDestination挂载之前触发此回调。在该回调中允许修改路由栈，当前帧生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback & lt;void & gt; | 是 |
 
 ## onWillDisappear
 
@@ -779,19 +779,19 @@ onWillDisappear(callback: Callback<void>)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-onWillDisappear(callback: Callback<void>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-onWillDisappear(callback: Callback<void>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; | 是 | 当该NavDestination卸载之前触发的生命周期(有转场动画时，在转场动画开始之前触发)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback & lt;void & gt; | 是 |
 
 ## onWillHide
 
@@ -807,19 +807,19 @@ onWillHide(callback: Callback<void>)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-onWillHide(callback: Callback<void>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-onWillHide(callback: Callback<void>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; | 是 | 当该NavDestination隐藏之前触发此回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback & lt;void & gt; | 是 |
 
 ## onWillShow
 
@@ -835,19 +835,19 @@ onWillShow(callback: Callback<void>)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-onWillShow(callback: Callback<void>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-onWillShow(callback: Callback<void>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; | 是 | 当该NavDestination显示之前触发此回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback & lt;void & gt; | 是 |
 
 ## preferredOrientation
 
@@ -872,19 +872,19 @@ preferredOrientation(orientation: Optional<Orientation>)
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-preferredOrientation(orientation: Optional<Orientation>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-preferredOrientation(orientation: Optional<Orientation>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| orientation | Optional&lt;[Orientation](arkts-arkui-orientation-t.md)&gt; | 是 | NavDestination页面的显示方向。转场到该NavDestination后，系统会将应用主窗口切换到该显示方向。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| orientation | Optional&lt;[Orientation](arkts-arkui-orientation-t.md)&gt; | 是 |
 
 ## recoverable
 
@@ -900,17 +900,17 @@ recoverable(recoverable: Optional<boolean>)
 
 **起始版本：** 14
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
-<!--Device-NavDestinationAttribute-recoverable(recoverable: Optional<boolean>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-recoverable(recoverable: Optional<boolean>): NavDestinationAttribute-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| recoverable | Optional&lt;boolean&gt; | 是 | NavDestination是否可恢复，默认为不可恢复。<br/>默认值：false<br/>true： 路由栈可恢复，需配合Navigation的recoverable属性使用。<br/>false：路由栈不可恢复。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [recoverable](#recoverable) | Optional & lt;boolean & gt; | 是 |
 
 ## systemBarStyle
 
@@ -928,19 +928,19 @@ systemBarStyle(style: Optional<SystemBarStyle>)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-systemBarStyle(style: Optional<SystemBarStyle>): NavDestinationAttribute--><!--Device-NavDestinationAttribute-systemBarStyle(style: Optional<SystemBarStyle>): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| style | Optional&lt;SystemBarStyle&gt; | 是 | 系统状态栏样式。设置后进入该NavDestination时，系统状态栏会切换到对应样式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| style | Optional & lt;SystemBarStyle & gt; | 是 |
 
 ## systemTransition
 
@@ -952,19 +952,19 @@ systemTransition(type: NavigationSystemTransitionType)
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-systemTransition(type: NavigationSystemTransitionType): NavDestinationAttribute--><!--Device-NavDestinationAttribute-systemTransition(type: NavigationSystemTransitionType): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [NavigationSystemTransitionType](arkts-arkui-navigationsystemtransitiontype-e.md) | 是 | 系统转场动画类型。<br/>默认值：NavigationSystemTransitionType.DEFAULT |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [NavigationSystemTransitionType](arkts-arkui-navigationsystemtransitiontype-e.md) | 是 |
 
 ## title
 
@@ -981,18 +981,18 @@ title(value: string | CustomBuilder | NavDestinationCommonTitle | NavDestination
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-NavDestinationAttribute-title(value: string | CustomBuilder | NavDestinationCommonTitle | NavDestinationCustomTitle | Resource,          options?: NavigationTitleOptions): NavDestinationAttribute--><!--Device-NavDestinationAttribute-title(value: string | CustomBuilder | NavDestinationCommonTitle | NavDestinationCustomTitle | Resource,          options?: NavigationTitleOptions): NavDestinationAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | string \| CustomBuilder \| [NavDestinationCommonTitle](arkts-arkui-navdestinationcommontitle-i.md) \| [NavDestinationCustomTitle](arkts-arkui-navdestinationcustomtitle-i.md) \| Resource | 是 | 页面标 题。<br>**起始版本：** 9 - 13 |
-| options | NavigationTitleOptions | 否 | 标题栏选项。<br/>默认值：不设置时使用标题栏默认配置。 **模型约束：** 此接口仅可在Stage模型下使用。<br>**起始版本：** 12 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | string \| CustomBuilder \| [NavDestinationCommonTitle](arkts-arkui-navdestinationcommontitle-i.md) \| [NavDestinationCustomTitle](arkts-arkui-navdestinationcustomtitle-i.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
+| options | [NavigationTitleOptions](../arkts-apis/arkts-arkui-navigation-navigationtitleoptions-i.md) | 否 |
 
 ## toolbarConfiguration
 
@@ -1009,18 +1009,17 @@ toolbarConfiguration(toolbarParam: Array<ToolbarItem> | CustomBuilder, options?:
 
 **起始版本：** 13
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationAttribute-toolbarConfiguration(toolbarParam: Array<ToolbarItem> | CustomBuilder, options?: NavigationToolbarOptions): NavDestinationAttribute--><!--Device-NavDestinationAttribute-toolbarConfiguration(toolbarParam: Array<ToolbarItem> | CustomBuilder, options?: NavigationToolbarOptions): NavDestinationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| toolbarParam | Array&lt;ToolbarItem&gt; \| CustomBuilder | 是 | 工具栏内容。<br/>使用Array&lt;ToolbarItem&gt;写法 设置的工具栏有如下特性：<br/>-底部工具栏的每个选项均分宽度，用于显示文本和图标。<br/>-竖屏模式最多支持显示5个图标，多余的图标会被放入自动生成的更多图标中，点击更多图标可以展示剩余内容。横屏模式 时，如果为Split模式，仍按照竖屏模式显示，如果为Stack模式需配合 [menus](#menus)属性的Array&lt;NavigationMenuItem&gt;使用，底部工具栏会自动隐藏，同时底部工具栏所有选项移动至页面右上角菜单。<br/>使用 CustomBuilder写法为用户自定义工具栏选项，不具备以上功能。 |
-| options | NavigationToolbarOptions | 否 | 工具栏选项，用于自定义工具栏显示样式。包含工具栏背景颜色、工具栏背景模糊样式及模糊选项、工具栏背景属性、工具栏布局方式、 是否隐藏工具栏的文本、工具栏更多图标的菜单选项。当需要自定义工具栏样式时传入，不传入时使用默认工具栏样式。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| toolbarParam | Array & lt;ToolbarItem & gt; \ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 |
+| options | [NavigationToolbarOptions](../arkts-apis/arkts-arkui-navigation-navigationtoolbaroptions-i.md) | 否 |

@@ -15,20 +15,20 @@ function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [unsubscribe](arkts-basicservices-commoneventmanager-unsubscribe-f.md)
-
-<!--Device-commonEvent-function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback<void>): void--><!--Device-commonEvent-function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md) | 是 | 表示订阅者对象。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | 表示取消订阅的回调方法。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md) | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 |
 
 **示例**
 
@@ -79,4 +79,3 @@ commonEvent.createSubscriber(subscribeInfo, createCB);
 // 取消订阅公共事件
 commonEvent.unsubscribe(subscriber, unsubscribeCB);
 ```
-

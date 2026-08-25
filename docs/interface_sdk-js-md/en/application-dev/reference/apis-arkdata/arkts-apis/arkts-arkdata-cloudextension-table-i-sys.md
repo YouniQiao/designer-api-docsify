@@ -2,9 +2,9 @@
 
 Represents the table information.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-cloudExtension-export interface Table--><!--Device-cloudExtension-export interface Table-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -26,9 +26,9 @@ Alias of the table in the database.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Table-alias: string--><!--Device-Table-alias: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -44,9 +44,9 @@ Field information in the table.
 
 **Type:** Array&lt;Field&gt;
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Table-fields: Array<Field>--><!--Device-Table-fields: Array<Field>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -62,11 +62,10 @@ Table name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Table-name: string--><!--Device-Table-name: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
-

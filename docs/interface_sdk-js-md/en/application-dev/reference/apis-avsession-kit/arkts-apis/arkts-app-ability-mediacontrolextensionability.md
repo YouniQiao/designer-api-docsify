@@ -10,7 +10,6 @@ import { MediaControlExtensionAbility } from '@kit.AVSessionKit';
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [MediaControlExtensionAbility](arkts-avsession-app-ability-mediacontrolextensionability-mediacontrolextensionability-c.md) | The class of media control extension ability.@extends UIExtensionAbility |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [MediaControlExtensionAbility](arkts-avsession-app-ability-mediacontrolextensionability-mediacontrolextensionability-c.md) |

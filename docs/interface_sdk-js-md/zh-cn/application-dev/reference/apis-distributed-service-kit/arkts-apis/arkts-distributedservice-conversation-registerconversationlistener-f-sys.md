@@ -21,11 +21,11 @@ function registerConversationListener(
 
 **起始版本：** 26.1.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.sec.ACCESS_UDID
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-conversation-function registerConversationListener(    bundleName: string,    abilityName: string,    dataCallback: DataCallback  ): void--><!--Device-conversation-function registerConversationListener(    bundleName: string,    abilityName: string,    dataCallback: DataCallback  ): void-End-->
 
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 
@@ -33,21 +33,21 @@ function registerConversationListener(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 接收数据的Bundle名，Bundle名长度范围为1-127字节，需与本应用的Bundle名一致。 不满足此要求时，监听器无法正确接收数据。传入无效或空值时返回错误码401。 |
-| abilityName | string | 是 | 接收数据的Ability名，Ability名长度范围为1-127字节，需与本应用中的Ability名一致。 不满足此要求时，监听器无法正确接收数据。传入无效或空值时返回错误码401。 |
-| dataCallback | [DataCallback](arkts-distributedservice-conversation-datacallback-t-sys.md) | 是 | 收到数据时的回调函数，用于接收跨设备数据。传入无效值时返回错误码401。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| abilityName | string | 是 |
+| dataCallback | [DataCallback](arkts-distributedservice-conversation-datacallback-t-sys.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. The application does not have the required permission to access distributed data. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameter. The bundleName, abilityName or dataCallback is invalid or empty. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [2000001](../errorcode-conversation.md#2000001-内部错误) | Internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [2000001](../errorcode-conversation.md#2000001-内部错误) |
 
 **示例**
 
@@ -68,4 +68,3 @@ try {
   console.error(`registerConversationListener errCode: ${e.code}, errMessage: ${e.message}`);
 }
 ```
-

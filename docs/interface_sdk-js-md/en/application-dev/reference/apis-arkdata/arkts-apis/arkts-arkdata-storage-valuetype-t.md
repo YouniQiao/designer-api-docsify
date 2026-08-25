@@ -8,13 +8,12 @@ Enumerates the value types.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
-<!--Device-storage-type ValueType = number | string | boolean--><!--Device-storage-type ValueType = number | string | boolean-End-->
-
-| Type | Description |
-| --- | --- |
-| number | The value is a number. |
-| string | The value is a string. |
-| boolean | The value is of Boolean type. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
+| string |
+| boolean |

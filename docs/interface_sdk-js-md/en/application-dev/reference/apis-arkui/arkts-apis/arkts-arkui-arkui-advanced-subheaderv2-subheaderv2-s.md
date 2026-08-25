@@ -13,9 +13,7 @@ The component is positioned at the top of list items or content sections, organi
 
 **Since:** 18
 
-**Decorator:** @ComponentV2
-
-<!--Device-unnamed-export declare struct SubHeaderV2--><!--Device-unnamed-export declare struct SubHeaderV2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,114 +23,17 @@ The component is positioned at the top of list items or content sections, organi
 import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, SubHeaderV2OperationType, SubHeaderV2OperationItem, SubHeaderV2OperationItemType } from '@kit.ArkUI';
 ```
 
-## icon
+## build
 
 ```TypeScript
-readonly icon?: SubHeaderV2IconType
+build(): void
 ```
 
-Icon.Default value: **undefined**  
-**icon** takes effect only when **secondaryTitle** is used for **title**.
+The method to build component.
 
-**Type:** [SubHeaderV2IconType](../../apis-default/arkts-apis/arkts-subheaderv2icontype-t.md)
+**Since:** 23
 
-**Since:** 18
-
-**Decorator:** @Param
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SubHeaderV2-@Param  readonly icon?: SubHeaderV2IconType--><!--Device-SubHeaderV2-@Param  readonly icon?: SubHeaderV2IconType-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## operationItems
-
-```TypeScript
-readonly operationItems?: SubHeaderV2OperationItem[]
-```
-
-Items in the operation area.Default value: **undefined**
-
-**Type:** [SubHeaderV2OperationItem](../../apis-default/arkts-apis/arkts-arkui-advanced-subheaderv2-subheaderv2operationitem-c.md)[]
-
-**Since:** 18
-
-**Decorator:** @Param
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SubHeaderV2-@Param  readonly operationItems?: SubHeaderV2OperationItem[]--><!--Device-SubHeaderV2-@Param  readonly operationItems?: SubHeaderV2OperationItem[]-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## operationType
-
-```TypeScript
-readonly operationType?: SubHeaderV2OperationType
-```
-
-Style of elements in the operation area.Default value: **SubHeaderV2OperationType.BUTTON**
-
-**Type:** [SubHeaderV2OperationType](../../apis-default/arkts-apis/arkts-arkui-advanced-subheaderv2-subheaderv2operationtype-e.md)
-
-**Since:** 18
-
-**Decorator:** @Param
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SubHeaderV2-@Param  readonly operationType?: SubHeaderV2OperationType--><!--Device-SubHeaderV2-@Param  readonly operationType?: SubHeaderV2OperationType-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## select
-
-```TypeScript
-readonly select?: SubHeaderV2Select
-```
-
-Content and events for selection.Default value: **undefined**
-
-**Type:** [SubHeaderV2Select](../../apis-default/arkts-apis/arkts-arkui-advanced-subheaderv2-subheaderv2select-c.md)
-
-**Since:** 18
-
-**Decorator:** @Param
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SubHeaderV2-@Param  readonly select?: SubHeaderV2Select--><!--Device-SubHeaderV2-@Param  readonly select?: SubHeaderV2Select-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## title
-
-```TypeScript
-readonly title?: SubHeaderV2Title
-```
-
-Title of the subheader.Default value: **undefined**
-
-**Type:** [SubHeaderV2Title](../../apis-default/arkts-apis/arkts-arkui-advanced-subheaderv2-subheaderv2title-c.md)
-
-**Since:** 18
-
-**Decorator:** @Param
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SubHeaderV2-@Param  readonly title?: SubHeaderV2Title--><!--Device-SubHeaderV2-@Param  readonly title?: SubHeaderV2Title-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -144,17 +45,113 @@ titleBuilder?: SubHeaderV2TitleBuilder
 
 Custom content for the title area.Default value: **() =&gt; void**
 
-**Type:** [SubHeaderV2TitleBuilder](../../apis-default/arkts-apis/arkts-subheaderv2titlebuilder-t.md)
-
 **Since:** 18
 
-**Decorator:** @BuilderParam
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2-@BuilderParam  titleBuilder?: SubHeaderV2TitleBuilder--><!--Device-SubHeaderV2-@BuilderParam  titleBuilder?: SubHeaderV2TitleBuilder-End-->
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## icon
+
+```TypeScript
+readonly icon?: SubHeaderV2IconType
+```
+
+Icon.Default value: **undefined**  
+**icon** takes effect only when **secondaryTitle** is used for **title**.
+
+**Type:** [SubHeaderV2IconType](arkts-arkui-subheaderv2icontype-t.md)
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## operationItems
+
+```TypeScript
+readonly operationItems?: SubHeaderV2OperationItem[]
+```
+
+Items in the operation area.Default value: **undefined**
+
+**Type:** [SubHeaderV2OperationItem](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitem-c.md)[]
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## operationType
+
+```TypeScript
+readonly operationType?: SubHeaderV2OperationType
+```
+
+Style of elements in the operation area.Default value: **SubHeaderV2OperationType.BUTTON**
+
+**Type:** [SubHeaderV2OperationType](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationtype-e.md)
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## select
+
+```TypeScript
+readonly select?: SubHeaderV2Select
+```
+
+Content and events for selection.Default value: **undefined**
+
+**Type:** [SubHeaderV2Select](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2select-c.md)
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## title
+
+```TypeScript
+readonly title?: SubHeaderV2Title
+```
+
+Title of the subheader.Default value: **undefined**
+
+**Type:** [SubHeaderV2Title](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2title-c.md)
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

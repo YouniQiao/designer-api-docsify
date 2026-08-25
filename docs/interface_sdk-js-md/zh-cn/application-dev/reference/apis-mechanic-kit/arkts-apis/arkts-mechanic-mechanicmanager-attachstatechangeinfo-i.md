@@ -2,9 +2,9 @@
 
 设备吸附状态回调信息
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-mechanicManager-export interface AttachStateChangeInfo--><!--Device-mechanicManager-export interface AttachStateChangeInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -24,9 +24,9 @@ Mechanical device information.
 
 **类型：** [MechInfo](arkts-mechanic-mechanicmanager-mechinfo-i.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-AttachStateChangeInfo-mechInfo: MechInfo--><!--Device-AttachStateChangeInfo-mechInfo: MechInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -40,9 +40,8 @@ state: AttachState
 
 **类型：** [AttachState](arkts-mechanic-mechanicmanager-attachstate-e.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-AttachStateChangeInfo-state: AttachState--><!--Device-AttachStateChangeInfo-state: AttachState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
-

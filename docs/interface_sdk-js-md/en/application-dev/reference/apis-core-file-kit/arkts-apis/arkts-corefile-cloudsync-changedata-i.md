@@ -2,9 +2,9 @@
 
 Represents the data change information.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-cloudSync-interface ChangeData--><!--Device-cloudSync-interface ChangeData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -24,9 +24,9 @@ Whether the URIs with data changed are of directories. The value **true** means 
 
 **Type:** Array&lt;boolean&gt;
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-ChangeData-isDirectory: Array<boolean>--><!--Device-ChangeData-isDirectory: Array<boolean>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -40,9 +40,9 @@ Type of the data change.
 
 **Type:** NotifyType
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-ChangeData-type: NotifyType--><!--Device-ChangeData-type: NotifyType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -56,9 +56,8 @@ List of URIs whose data needs to be changed.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-ChangeData-uris: Array<string>--><!--Device-ChangeData-uris: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-

@@ -1,12 +1,10 @@
 # SpringLoadingDragInfos
 
-Defines drag-related information when triggering spring loading callbacks. This interface provides drag data summaries and additional drag information, useful for applications needing to dynamically determine whether to respond to spring loading callbacks based on drag data.
+Defines the drag event information when hover detection is triggered. This API provides drag data summaries and additional drag event information, allowing applications to decide whether to respond to hover detection callbacks.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-dragController-export interface SpringLoadingDragInfos--><!--Device-dragController-export interface SpringLoadingDragInfos-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,17 +20,17 @@ import { dragController } from '@kit.ArkUI';
 dataSummary?: unifiedDataChannel.Summary
 ```
 
-Summary of the dragged data. This field is absent if the source application did not configure data.
+Summary of the dragged data. The default value is null.
 
 **Type:** unifiedDataChannel.Summary
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SpringLoadingDragInfos-dataSummary?: unifiedDataChannel.Summary--><!--Device-SpringLoadingDragInfos-dataSummary?: unifiedDataChannel.Summary-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,17 +40,16 @@ Summary of the dragged data. This field is absent if the source application did 
 extraInfos?: string
 ```
 
-Additional information provided by the source application when initiating the drag operation. This field is absent if the source application did not configure it.
+Additional information about the drag event. The default value is an empty string.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SpringLoadingDragInfos-extraInfos?: string--><!--Device-SpringLoadingDragInfos-extraInfos?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

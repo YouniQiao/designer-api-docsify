@@ -2,9 +2,9 @@
 
 Describes group configuration options for download tasks.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-agent-interface GroupConfig--><!--Device-agent-interface GroupConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -26,9 +26,9 @@ The default value is **false**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-GroupConfig-gauge?: boolean--><!--Device-GroupConfig-gauge?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -42,9 +42,8 @@ Custom settings for the notification bar. The default value is **{}**.
 
 **Type:** Notification
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-GroupConfig-notification: Notification--><!--Device-GroupConfig-notification: Notification-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
-

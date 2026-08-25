@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-securityGuard-interface ModelRule--><!--Device-securityGuard-interface ModelRule-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 
@@ -28,7 +28,7 @@ modelName: string
 
 **起始版本：** 12
 
-<!--Device-ModelRule-modelName: string--><!--Device-ModelRule-modelName: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 
@@ -46,9 +46,8 @@ param?: string
 
 **起始版本：** 12
 
-<!--Device-ModelRule-param?: string--><!--Device-ModelRule-param?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 
 **系统接口：** 此接口为系统接口。
-

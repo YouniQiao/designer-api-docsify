@@ -14,23 +14,23 @@ function getSimLabelSync(slotId: int): SimLabel
 
 Obtains the SIM card label based on the specified SIM card slot ID.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-sim-function getSimLabelSync(slotId: int): SimLabel--><!--Device-sim-function getSimLabelSync(slotId: int): SimLabel-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SimLabel](arkts-telephony-sim-simlabel-i.md) | SIM card label. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SimLabel](arkts-telephony-sim-simlabel-i.md) |
 
 **Examples**
 
@@ -41,4 +41,3 @@ import { sim } from '@kit.TelephonyKit';
 let simLabel: sim.SimLabel = sim.getSimLabelSync(0);
 console.info(`The sim state is:` + simLabel);
 ```
-

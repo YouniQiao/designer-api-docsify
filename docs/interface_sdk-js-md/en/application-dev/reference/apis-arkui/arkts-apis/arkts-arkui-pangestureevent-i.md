@@ -6,7 +6,7 @@ Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md). This object
 
 **Since:** 11
 
-<!--Device-unnamed-interface PanGestureEvent--><!--Device-unnamed-interface PanGestureEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,11 @@ Offset of the gesture event on the x-axis relative to the original area of the c
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PanGestureEvent-offsetX: number--><!--Device-PanGestureEvent-offsetX: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,11 +47,11 @@ Offset of the gesture event on the y-axis relative to the original area of the c
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PanGestureEvent-offsetY: number--><!--Device-PanGestureEvent-offsetY: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,11 +67,11 @@ Velocity along the main axis. The value is the arithmetic square root of the sum
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PanGestureEvent-velocity: number--><!--Device-PanGestureEvent-velocity: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -87,11 +87,11 @@ Velocity along the x-axis. The origin of the coordinate axis is the upper left c
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PanGestureEvent-velocityX: number--><!--Device-PanGestureEvent-velocityX: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -107,11 +107,10 @@ Velocity along the y-axis. The origin of the coordinate axis is the upper left c
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PanGestureEvent-velocityY: number--><!--Device-PanGestureEvent-velocityY: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

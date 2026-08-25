@@ -16,24 +16,24 @@ function hasIrEmitter(): Promise<boolean>
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.MANAGE_INPUT_INFRARED_EMITTER
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-infraredEmitter-function hasIrEmitter(): Promise<boolean>--><!--Device-infraredEmitter-function hasIrEmitter(): Promise<boolean>-End-->
+**需要权限：** ohos.permission.MANAGE_INPUT_INFRARED_EMITTER
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示设备具有红外发射器；返回false表示设备不具有红外发射器。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
 
 **示例**
 
@@ -85,4 +85,3 @@ struct Index {
   }
 }
 ```
-

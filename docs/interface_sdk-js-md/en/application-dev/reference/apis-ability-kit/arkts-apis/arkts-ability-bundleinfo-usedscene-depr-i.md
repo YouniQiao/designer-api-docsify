@@ -8,11 +8,11 @@ Describes the application scenario and timing for using the permission.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [UsedScene](#usedscene)
-
-<!--Device-unnamed-export interface UsedScene--><!--Device-unnamed-export interface UsedScene-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -30,11 +30,11 @@ Abilities that use the permission.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** abilities
-
-<!--Device-UsedScene-abilities: Array<string>--><!--Device-UsedScene-abilities: Array<string>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -52,11 +52,10 @@ Time when the permission is used.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** when
 
-<!--Device-UsedScene-when: string--><!--Device-UsedScene-when: string-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework
-

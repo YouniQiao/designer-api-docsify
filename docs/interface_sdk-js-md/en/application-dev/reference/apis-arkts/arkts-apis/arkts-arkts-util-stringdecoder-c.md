@@ -4,7 +4,7 @@ Provides the capability of decoding binary streams into strings. The following e
 
 **Since:** 12
 
-<!--Device-util-class StringDecoder--><!--Device-util-class StringDecoder-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -24,17 +24,17 @@ Constructor used to create a **StringDecoder** instance.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-StringDecoder-constructor(encoding?: string)--><!--Device-StringDecoder-constructor(encoding?: string)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| encoding | string | No | Encoding type of the input data. The default value is **utf-8**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| encoding | string | No |
 
 **Examples**
 
@@ -154,23 +154,23 @@ Ends the decoding process and returns any remaining input stored in the internal
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-StringDecoder-end(chunk?: string | Uint8Array): string--><!--Device-StringDecoder-end(chunk?: string | Uint8Array): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| chunk | string \| Uint8Array | No | String to decode. The default value is **undefined**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| chunk | string \| Uint8Array | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | String decoded. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -195,23 +195,23 @@ Decodes a string. Any incomplete multi-byte characters at the end of Uint8Array 
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-StringDecoder-write(chunk: string | Uint8Array): string--><!--Device-StringDecoder-write(chunk: string | Uint8Array): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| chunk | string \| Uint8Array | Yes | String to decode. Decoding is performed based on the input encoding type. If the input is of the Uint8Array type, decoding is performed normally. If the input is of the string type, the parameter is directly returned. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| chunk | string \| Uint8Array | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | String decoded. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -222,4 +222,3 @@ const decoded = decoder.write(input);
 console.info("decoded:", decoded);
 // Output: decoded: Hello, World
 ```
-

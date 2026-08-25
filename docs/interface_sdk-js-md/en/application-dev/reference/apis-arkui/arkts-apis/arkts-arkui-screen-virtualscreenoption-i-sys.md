@@ -2,9 +2,9 @@
 
 Defines virtual screen parameters.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-screen-interface VirtualScreenOption--><!--Device-screen-interface VirtualScreenOption-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -24,11 +24,11 @@ density: double
 
 Density of the virtual screen, in px. The value must be a floating-point number.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VirtualScreenOption-density: double--><!--Device-VirtualScreenOption-density: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -42,11 +42,11 @@ height: long
 
 Height of the virtual screen, in px. The value must be an integer.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VirtualScreenOption-height: long--><!--Device-VirtualScreenOption-height: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -62,9 +62,9 @@ Name of a virtual screen.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VirtualScreenOption-name: string--><!--Device-VirtualScreenOption-name: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -80,9 +80,9 @@ Whether the virtual screen is focusable. **true** if focusable; **false** otherw
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-VirtualScreenOption-supportsFocus?: boolean--><!--Device-VirtualScreenOption-supportsFocus?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -98,9 +98,9 @@ Surface ID of the virtual screen.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VirtualScreenOption-surfaceId: string--><!--Device-VirtualScreenOption-surfaceId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -114,13 +114,13 @@ userId?: int
 
 User ID of the virtual screen, which is an integer. The default value is **-1**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-VirtualScreenOption-userId?: int--><!--Device-VirtualScreenOption-userId?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -134,13 +134,12 @@ width: long
 
 Width of the virtual screen, in px. The value must be an integer.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VirtualScreenOption-width: long--><!--Device-VirtualScreenOption-width: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
-

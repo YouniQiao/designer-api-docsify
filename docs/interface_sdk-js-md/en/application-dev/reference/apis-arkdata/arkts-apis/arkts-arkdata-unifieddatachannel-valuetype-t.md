@@ -1,30 +1,31 @@
 # ValueType
 
 ```TypeScript
-type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | RecordData | null | undefined
+type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | object | null | undefined
 ```
 
-Indicates type of value.
+Enumerates the data field types allowed in a unified data record.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unifiedDataChannel-type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | RecordData | null | undefined--><!--Device-unifiedDataChannel-type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | RecordData | null | undefined-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
-| Type | Description |
-| --- | --- |
-| int | Int. |
-| long | Long. |
-| double | Double. |
-| string | String. |
-| boolean | Boolean. |
-| image.PixelMap | The value is of the [image.PixelMap]{ |
-| Want | [Want]{ |
-| ArrayBuffer | ArrayBuffer. |
-| RecordData | RecordData. |
-| null | Null. |
-| undefined | Undefined. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| int |
+| long |
+| double |
+| string |
+| boolean |
+| image.PixelMap |
+| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) |
+| ArrayBuffer |
+| object |
+| null |
+| undefined |

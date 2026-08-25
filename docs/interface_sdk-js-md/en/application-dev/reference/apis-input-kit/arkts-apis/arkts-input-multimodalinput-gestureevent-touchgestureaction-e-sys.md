@@ -2,9 +2,9 @@
 
 Enumerates touchscreen gesture types.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-unnamed-export declare enum TouchGestureAction--><!--Device-unnamed-export declare enum TouchGestureAction-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -18,9 +18,9 @@ SWIPE_DOWN = 0
 
 Multi-finger downward swipe.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-TouchGestureAction-SWIPE_DOWN = 0--><!--Device-TouchGestureAction-SWIPE_DOWN = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -34,9 +34,9 @@ SWIPE_UP = 1
 
 Multi-finger upward swipe.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-TouchGestureAction-SWIPE_UP = 1--><!--Device-TouchGestureAction-SWIPE_UP = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -50,9 +50,9 @@ SWIPE_LEFT = 2
 
 Multi-finger leftward swipe.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-TouchGestureAction-SWIPE_LEFT = 2--><!--Device-TouchGestureAction-SWIPE_LEFT = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -66,9 +66,9 @@ SWIPE_RIGHT = 3
 
 Multi-finger rightward swipe.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-TouchGestureAction-SWIPE_RIGHT = 3--><!--Device-TouchGestureAction-SWIPE_RIGHT = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -82,9 +82,9 @@ PINCH_CLOSED = 4
 
 Multi-finger pinch closed.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-TouchGestureAction-PINCH_CLOSED = 4--><!--Device-TouchGestureAction-PINCH_CLOSED = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -98,9 +98,9 @@ PINCH_OPENED = 5
 
 Multi-finger pinch opened.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-TouchGestureAction-PINCH_OPENED = 5--><!--Device-TouchGestureAction-PINCH_OPENED = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -114,11 +114,10 @@ GESTURE_END = 6
 
 Gesture ended.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-TouchGestureAction-GESTURE_END = 6--><!--Device-TouchGestureAction-GESTURE_END = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 **System API:** This is a system API.
-

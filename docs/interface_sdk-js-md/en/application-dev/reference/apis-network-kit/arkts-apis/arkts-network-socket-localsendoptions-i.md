@@ -4,7 +4,7 @@ Defines the request parameters for the **LocalSocket** object.
 
 **Since:** 11
 
-<!--Device-socket-export interface LocalSendOptions--><!--Device-socket-export interface LocalSendOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -26,7 +26,7 @@ Data to be transmitted.
 
 **Since:** 11
 
-<!--Device-LocalSendOptions-data: string | ArrayBuffer--><!--Device-LocalSendOptions-data: string | ArrayBuffer-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -42,7 +42,6 @@ Encoding format of the string.
 
 **Since:** 11
 
-<!--Device-LocalSendOptions-encoding?: string--><!--Device-LocalSendOptions-encoding?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
-

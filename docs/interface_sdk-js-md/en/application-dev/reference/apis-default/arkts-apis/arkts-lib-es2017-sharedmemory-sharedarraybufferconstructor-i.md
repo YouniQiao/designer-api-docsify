@@ -1,34 +1,30 @@
 # SharedArrayBufferConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface SharedArrayBufferConstructor--><!--Device-unnamed-interface SharedArrayBufferConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
+## [[Construct]]
 
 ```TypeScript
 new (byteLength: number): SharedArrayBuffer
 ```
 
-**Since:** -1
-
-<!--Device-SharedArrayBufferConstructor-new (byteLength: number): SharedArrayBuffer--><!--Device-SharedArrayBufferConstructor-new (byteLength: number): SharedArrayBuffer-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteLength | number | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| byteLength | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## prototype
 
 ```TypeScript
@@ -37,7 +33,4 @@ readonly prototype: SharedArrayBuffer
 
 **Type:** SharedArrayBuffer
 
-**Since:** -1
-
-<!--Device-SharedArrayBufferConstructor-readonly prototype: SharedArrayBuffer--><!--Device-SharedArrayBufferConstructor-readonly prototype: SharedArrayBuffer-End-->
-
+**ArkTS mode:** 

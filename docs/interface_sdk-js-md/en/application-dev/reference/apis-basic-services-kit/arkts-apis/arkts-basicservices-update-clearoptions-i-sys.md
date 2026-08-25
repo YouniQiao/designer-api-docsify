@@ -2,9 +2,9 @@
 
 Defines the clearing options, which specify the errors to be cleared.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-update-export interface ClearOptions--><!--Device-update-export interface ClearOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -26,11 +26,10 @@ Exception status, which is used to specify the status to be cleared. This parame
 
 **Type:** [UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ClearOptions-status: UpgradeStatus--><!--Device-ClearOptions-status: UpgradeStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
-

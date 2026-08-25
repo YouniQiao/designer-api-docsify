@@ -4,7 +4,7 @@ Defines the policy for sensitive content identification. In a single policy, key
 
 **Since:** 21
 
-<!--Device-identifySensitiveContent-export interface Policy--><!--Device-identifySensitiveContent-export interface Policy-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -26,7 +26,7 @@ Keyword set, which is used to match sensitive keywords in a file. The system sea
 
 **Since:** 21
 
-<!--Device-Policy-keywords: Array<string>--><!--Device-Policy-keywords: Array<string>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -42,7 +42,7 @@ Regular expression used to match sensitive content. The system performs pattern 
 
 **Since:** 21
 
-<!--Device-Policy-regex: string--><!--Device-Policy-regex: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -58,7 +58,6 @@ Label of an identification policy, which is used to identify and classify matchi
 
 **Since:** 21
 
-<!--Device-Policy-sensitiveLabel: string--><!--Device-Policy-sensitiveLabel: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
-

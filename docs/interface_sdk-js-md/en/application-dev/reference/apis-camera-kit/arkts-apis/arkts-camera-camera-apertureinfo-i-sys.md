@@ -2,9 +2,9 @@
 
 Describes the aperture information.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-camera-interface ApertureInfo--><!--Device-camera-interface ApertureInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -24,13 +24,12 @@ readonly aperture?: double
 
 Aperture.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-ApertureInfo-readonly aperture?: double--><!--Device-ApertureInfo-readonly aperture?: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

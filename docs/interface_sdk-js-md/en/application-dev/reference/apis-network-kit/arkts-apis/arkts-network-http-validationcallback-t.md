@@ -8,21 +8,20 @@ Self defined remote validation. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-http-export type ValidationCallback = (context: ValidationContext) => boolean | Promise<boolean>--><!--Device-http-export type ValidationCallback = (context: ValidationContext) => boolean | Promise<boolean>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [ValidationContext](arkts-network-http-validationcontext-i.md) | Yes | Certificate context. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [ValidationContext](arkts-network-http-validationcontext-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean \| Promise&lt;boolean&gt; | Returns a boolean value indicating whether the validation is successful. Promise used to return the result. The value true indicates valid, and false indicates invalid. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean \| Promise & lt;boolean & gt; |

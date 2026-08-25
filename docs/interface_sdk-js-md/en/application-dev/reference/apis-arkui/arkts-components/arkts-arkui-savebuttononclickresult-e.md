@@ -4,7 +4,7 @@ Enumerates the authorization results after the **SaveButton** component is tappe
 
 **Since:** 10
 
-<!--Device-unnamed-declare enum SaveButtonOnClickResult--><!--Device-unnamed-declare enum SaveButtonOnClickResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Authorization is successful.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SaveButtonOnClickResult-SUCCESS = 0--><!--Device-SaveButtonOnClickResult-SUCCESS = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Authorization fails.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SaveButtonOnClickResult-TEMPORARY_AUTHORIZATION_FAILED = 1--><!--Device-SaveButtonOnClickResult-TEMPORARY_AUTHORIZATION_FAILED = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ Authorization is canceled by the user through a dialog box after the **SaveButto
 
 **Since:** 21
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
-<!--Device-SaveButtonOnClickResult-CANCELED_BY_USER = 2--><!--Device-SaveButtonOnClickResult-CANCELED_BY_USER = 2-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

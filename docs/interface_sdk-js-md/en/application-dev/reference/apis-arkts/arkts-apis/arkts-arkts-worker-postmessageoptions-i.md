@@ -4,7 +4,7 @@ Defines the object for which the ownership is to be transferred during data tran
 
 **Since:** 7
 
-<!--Device-unnamed-export interface PostMessageOptions--><!--Device-unnamed-export interface PostMessageOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,9 +26,8 @@ ArrayBuffer array used to transfer the ownership. The array cannot be null.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-PostMessageOptions-transfer?: Object[]--><!--Device-PostMessageOptions-transfer?: Object[]-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

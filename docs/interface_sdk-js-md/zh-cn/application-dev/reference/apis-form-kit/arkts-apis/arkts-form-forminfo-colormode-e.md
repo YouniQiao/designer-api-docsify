@@ -7,9 +7,9 @@
 
 **起始版本：** 9
 
-**废弃版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-formInfo-enum ColorMode--><!--Device-formInfo-enum ColorMode-End-->
+**废弃版本：** 20
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -23,11 +23,11 @@ MODE_AUTO = -1
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 20
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ColorMode-MODE_AUTO = -1--><!--Device-ColorMode-MODE_AUTO = -1-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -41,11 +41,11 @@ MODE_DARK = 0
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 20
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ColorMode-MODE_DARK = 0--><!--Device-ColorMode-MODE_DARK = 0-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -59,11 +59,10 @@ MODE_LIGHT = 1
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 20
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ColorMode-MODE_LIGHT = 1--><!--Device-ColorMode-MODE_LIGHT = 1-End-->
-
 **系统能力：** SystemCapability.Ability.Form
-

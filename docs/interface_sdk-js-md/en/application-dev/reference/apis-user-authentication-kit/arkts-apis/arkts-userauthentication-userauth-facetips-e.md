@@ -4,9 +4,9 @@ Enumerates the tip codes used during the facial authentication process.
 
 **Since:** 8
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-userAuth-enum FaceTips--><!--Device-userAuth-enum FaceTips-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -20,9 +20,9 @@ The obtained facial image is too bright due to high illumination.
 
 **Since:** 8
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-FaceTips-FACE_AUTH_TIP_TOO_BRIGHT = 1--><!--Device-FaceTips-FACE_AUTH_TIP_TOO_BRIGHT = 1-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -36,9 +36,9 @@ The obtained facial image is too dark due to low illumination.
 
 **Since:** 8
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-FaceTips-FACE_AUTH_TIP_TOO_DARK = 2--><!--Device-FaceTips-FACE_AUTH_TIP_TOO_DARK = 2-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -52,9 +52,9 @@ The face is too close to the device.
 
 **Since:** 8
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-FaceTips-FACE_AUTH_TIP_TOO_CLOSE = 3--><!--Device-FaceTips-FACE_AUTH_TIP_TOO_CLOSE = 3-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -68,9 +68,9 @@ The face is too far away from the device.
 
 **Since:** 8
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-FaceTips-FACE_AUTH_TIP_TOO_FAR = 4--><!--Device-FaceTips-FACE_AUTH_TIP_TOO_FAR = 4-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -84,9 +84,9 @@ Only the upper part of the face is captured because the device is angled too hig
 
 **Since:** 8
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-FaceTips-FACE_AUTH_TIP_TOO_HIGH = 5--><!--Device-FaceTips-FACE_AUTH_TIP_TOO_HIGH = 5-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -100,9 +100,9 @@ Only the lower part of the face is captured because the device is angled too low
 
 **Since:** 8
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-FaceTips-FACE_AUTH_TIP_TOO_LOW = 6--><!--Device-FaceTips-FACE_AUTH_TIP_TOO_LOW = 6-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -116,9 +116,9 @@ Only the right part of the face is captured because the device is deviated to th
 
 **Since:** 8
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-FaceTips-FACE_AUTH_TIP_TOO_RIGHT = 7--><!--Device-FaceTips-FACE_AUTH_TIP_TOO_RIGHT = 7-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -132,9 +132,9 @@ Only the left part of the face is captured because the device is deviated to the
 
 **Since:** 8
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-FaceTips-FACE_AUTH_TIP_TOO_LEFT = 8--><!--Device-FaceTips-FACE_AUTH_TIP_TOO_LEFT = 8-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -148,9 +148,9 @@ The face moves too fast during facial information collection.
 
 **Since:** 8
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-FaceTips-FACE_AUTH_TIP_TOO_MUCH_MOTION = 9--><!--Device-FaceTips-FACE_AUTH_TIP_TOO_MUCH_MOTION = 9-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -164,9 +164,9 @@ The face is not facing the camera.
 
 **Since:** 8
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-FaceTips-FACE_AUTH_TIP_POOR_GAZE = 10--><!--Device-FaceTips-FACE_AUTH_TIP_POOR_GAZE = 10-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -180,9 +180,8 @@ No face is detected.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 11
 
-<!--Device-FaceTips-FACE_AUTH_TIP_NOT_DETECTED = 11--><!--Device-FaceTips-FACE_AUTH_TIP_NOT_DETECTED = 11-End-->
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
-

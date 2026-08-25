@@ -25,27 +25,26 @@ SideBarContainer(type?: SideBarContainerType)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SideBarContainerInterface-(type?: SideBarContainerType): SideBarContainerAttribute--><!--Device-SideBarContainerInterface-(type?: SideBarContainerType): SideBarContainerAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [SideBarContainerType](arkts-arkui-sidebarcontainertype-e.md) | 否 | 设置侧边栏的显示类型。<br/>默认值：SideBarContainerType.Embed |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [SideBarContainerType](arkts-arkui-sidebarcontainertype-e.md) | 否 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
+| 名称 |
+| --- |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-
+| 名称 |
+| --- |

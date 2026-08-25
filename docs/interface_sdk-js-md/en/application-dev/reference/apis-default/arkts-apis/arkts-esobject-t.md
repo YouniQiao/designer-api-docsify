@@ -4,9 +4,6 @@
 type ESObject = any
 ```
 
-**Since:** -1
-
-<!--Device-unnamed-type ESObject = any--><!--Device-unnamed-type ESObject = any-End-->
+**ArkTS mode:** 
 
 **Property type:** any
-

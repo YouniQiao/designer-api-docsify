@@ -16,15 +16,15 @@ function getInputMethodAbility(): InputMethodAbility
 
 **起始版本：** 9
 
-<!--Device-inputMethodEngine-function getInputMethodAbility(): InputMethodAbility--><!--Device-inputMethodEngine-function getInputMethodAbility(): InputMethodAbility-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) | 输入法能力对象。 |
+| 类型 |
+| --- |
+| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) |
 
 **示例**
 
@@ -44,17 +44,16 @@ function getInputMethodAbility(): InputMethodAbility | null
 
 **起始版本：** 23
 
-<!--Device-inputMethodEngine-function getInputMethodAbility(): InputMethodAbility | null--><!--Device-inputMethodEngine-function getInputMethodAbility(): InputMethodAbility | null-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) \| null | 输入法能力对象。 |
+| 类型 |
+| --- |
+| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) \| null |
 
 **示例**
 
 参见 [getInputMethodAbility](#getinputmethodability)
-

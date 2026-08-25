@@ -2,9 +2,9 @@
 
 WLAN WAPI配置。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-wifiManager-interface WifiWapiConfig--><!--Device-wifiManager-interface WifiWapiConfig-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -24,9 +24,9 @@ WAPI AS证书。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-WifiWapiConfig-wapiAsCert: string--><!--Device-WifiWapiConfig-wapiAsCert: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -40,9 +40,9 @@ WAPI预共享密钥类型。
 
 **类型：** [WapiPskType](arkts-connectivity-wifimanager-wapipsktype-e.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-WifiWapiConfig-wapiPskType: WapiPskType--><!--Device-WifiWapiConfig-wapiPskType: WapiPskType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -56,9 +56,8 @@ WAPI用户证书。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-WifiWapiConfig-wapiUserCert: string--><!--Device-WifiWapiConfig-wapiUserCert: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
-

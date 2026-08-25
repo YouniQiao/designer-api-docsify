@@ -6,7 +6,7 @@ Inherits from MultiShadowOptions and has all properties of **MultiShadowOptions*
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface DataPanelShadowOptions--><!--Device-unnamed-declare interface DataPanelShadowOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,10 @@ Array of shadow colors for data segments.Default value: same as the value of **v
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-DataPanelShadowOptions-colors?: Array<ResourceColor | LinearGradient>--><!--Device-DataPanelShadowOptions-colors?: Array<ResourceColor | LinearGradient>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

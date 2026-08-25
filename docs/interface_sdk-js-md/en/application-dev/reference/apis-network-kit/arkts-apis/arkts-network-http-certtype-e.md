@@ -2,9 +2,9 @@
 
 Enumerates certificate types.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-http-export enum CertType--><!--Device-http-export enum CertType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -16,9 +16,9 @@ PEM = 'PEM'
 
 PEM certificate.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CertType-PEM = 'PEM'--><!--Device-CertType-PEM = 'PEM'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -30,9 +30,9 @@ DER = 'DER'
 
 DER certificate.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CertType-DER = 'DER'--><!--Device-CertType-DER = 'DER'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -44,9 +44,8 @@ P12 = 'P12'
 
 P12 certificate.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CertType-P12 = 'P12'--><!--Device-CertType-P12 = 'P12'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
-

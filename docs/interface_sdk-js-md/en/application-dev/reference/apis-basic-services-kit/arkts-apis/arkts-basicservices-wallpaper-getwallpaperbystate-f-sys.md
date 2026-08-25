@@ -14,11 +14,11 @@ function getWallpaperByState(wallpaperType: WallpaperType, foldState: FoldState,
 
 Obtains the default pixel map of a wallpaper of the specified device type. Returns the default pixel map. Only the static wallpaper set by using setAllWallpapers can be obtained.
 
-**Since:** 23
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WALLPAPER
-
-<!--Device-wallpaper-function getWallpaperByState(wallpaperType: WallpaperType, foldState: FoldState, rotateState: RotateState): Promise<image.PixelMap>--><!--Device-wallpaper-function getWallpaperByState(wallpaperType: WallpaperType, foldState: FoldState, rotateState: RotateState): Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -26,25 +26,25 @@ Obtains the default pixel map of a wallpaper of the specified device type. Retur
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
-| foldState | [FoldState](arkts-basicservices-wallpaper-foldstate-e-sys.md) | Yes | indicates the folding status for wallpaper. |
-| rotateState | [RotateState](arkts-basicservices-wallpaper-rotatestate-e-sys.md) | Yes | indicates the rotation status for wallpaper. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes |
+| [foldState](arkts-basicservices-wallpaper-wallpaperinfo-i-sys.md) | [FoldState](arkts-basicservices-wallpaper-foldstate-e-sys.md) | Yes |
+| [rotateState](arkts-basicservices-wallpaper-wallpaperinfo-i-sys.md) | [RotateState](arkts-basicservices-wallpaper-rotatestate-e-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;image.PixelMap&gt; | the promise returned by the function. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;image.PixelMap & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.The type must be WallpaperType, parameter range must be WALLPAPER_LOCKSCREEN or WALLPAPER_SYSTEM. 3.The type must be FoldState, parameter range must be NORMAL or UNFOLD_ONCE_STATE or UNFOLD_TWICE_STATE. 4.The type must be RotateState, parameter range must be PORTRAIT or LANDSCAPE. |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -59,4 +59,3 @@ wallpaper.getWallpaperByState(wallpaper.WallpaperType.WALLPAPER_SYSTEM,wallpaper
   console.error(`failed to getWallpaperByState. Code: ${error.code}, Message: ${error.message}`);
 });
 ```
-

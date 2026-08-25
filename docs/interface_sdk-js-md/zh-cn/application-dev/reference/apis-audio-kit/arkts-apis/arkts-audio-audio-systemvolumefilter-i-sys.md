@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-audio-interface SystemVolumeFilter--><!--Device-audio-interface SystemVolumeFilter-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -24,15 +24,14 @@ uid: int
 
 应用程序的UID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-SystemVolumeFilter-uid: int--><!--Device-SystemVolumeFilter-uid: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
-

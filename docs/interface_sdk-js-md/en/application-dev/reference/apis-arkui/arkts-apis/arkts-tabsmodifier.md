@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [TabsModifier](arkts-arkui-tabsmodifier-c.md) | Defines Tabs Modifier@extends TabsAttribute @implements AttributeModifier&lt;TabsAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [TabsModifier](arkts-arkui-tabsmodifier-c.md) |

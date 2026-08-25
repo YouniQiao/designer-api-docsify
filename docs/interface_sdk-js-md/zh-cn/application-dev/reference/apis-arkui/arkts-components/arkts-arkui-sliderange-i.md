@@ -12,7 +12,7 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare interface SlideRange--><!--Device-unnamed-declare interface SlideRange-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,11 +33,11 @@ from?: number
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SlideRange-from?: number--><!--Device-SlideRange-from?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -53,11 +53,10 @@ to?: number
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SlideRange-to?: number--><!--Device-SlideRange-to?: number-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

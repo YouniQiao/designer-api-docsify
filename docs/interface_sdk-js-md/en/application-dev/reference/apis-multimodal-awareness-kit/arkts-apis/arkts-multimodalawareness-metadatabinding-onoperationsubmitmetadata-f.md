@@ -16,21 +16,20 @@ Subscribes to a system event to obtain the encoded metadata.
 
 **Since:** 23
 
-<!--Device-metadataBinding-function onOperationSubmitMetadata(bundleName: string, callback: Callback<int>): void--><!--Device-metadataBinding-function onOperationSubmitMetadata(bundleName: string, callback: Callback<int>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.MetadataBinding
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of a third-party application |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Call back the screenshot event |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bundleName | string | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [32100001](../errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
-| [32100004](../errorcode-metadataBinding.md#32100004-subscription-failed) | Subscribe Failed. Possible causes: <br>1. Abnormal system capability. <br>2. IPC communication abnormality. <br>3. Algorithm loading exception. |
-
+| Error Code ID |
+| --- |
+| [32100001](../errorcode-metadataBinding.md#32100001-file-creation-failed) |
+| [32100004](../errorcode-metadataBinding.md#32100004-subscription-failed) |

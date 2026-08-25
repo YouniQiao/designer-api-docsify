@@ -2,9 +2,9 @@
 
 窗口的标志属性信息。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-declare interface WindowFilter--><!--Device-unnamed-declare interface WindowFilter-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -25,11 +25,11 @@ active?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 11
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
-<!--Device-WindowFilter-active?: boolean--><!--Device-WindowFilter-active?: boolean-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -45,11 +45,11 @@ actived?: boolean
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 11
 
 **替代接口：** active
-
-<!--Device-WindowFilter-actived?: boolean--><!--Device-WindowFilter-actived?: boolean-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -63,11 +63,11 @@ bundleName?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-WindowFilter-bundleName?: string--><!--Device-WindowFilter-bundleName?: string-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -79,13 +79,13 @@ displayId?: int
 
 窗口所属的屏幕ID。取值大于或等于0的整数。默认值为设备默认屏幕ID。从API version 20开始，该接口支持在原子化服务中使用。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-WindowFilter-displayId?: int--><!--Device-WindowFilter-displayId?: int-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -99,11 +99,11 @@ focused?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-WindowFilter-focused?: boolean--><!--Device-WindowFilter-focused?: boolean-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -117,11 +117,10 @@ title?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-WindowFilter-title?: string--><!--Device-WindowFilter-title?: string-End-->
-
 **系统能力：** SystemCapability.Test.UiTest
-

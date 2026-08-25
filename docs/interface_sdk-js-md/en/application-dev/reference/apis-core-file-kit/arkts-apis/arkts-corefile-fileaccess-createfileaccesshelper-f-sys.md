@@ -16,13 +16,13 @@ Creates a **Helper** object to bind with all file management services in the sys
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER and ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-fileAccess-function createFileAccessHelper(context: Context): FileAccessHelper--><!--Device-fileAccess-function createFileAccessHelper(context: Context): FileAccessHelper-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -30,50 +30,50 @@ Creates a **Helper** object to bind with all file management services in the sys
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Indicates the application context. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [FileAccessHelper](arkts-corefile-fileaccess-fileaccesshelper-i-sys.md) | Returns the fileAccessHelper. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [FileAccessHelper](arkts-corefile-fileaccess-fileaccesshelper-i-sys.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -137,13 +137,13 @@ Creates a **Helper** object to bind with the specified Wants. This API returns t
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER and ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-fileAccess-function createFileAccessHelper(context: Context, wants: Array<Want>): FileAccessHelper--><!--Device-fileAccess-function createFileAccessHelper(context: Context, wants: Array<Want>): FileAccessHelper-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -151,53 +151,52 @@ Creates a **Helper** object to bind with the specified Wants. This API returns t
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Indicates the application context. |
-| wants | Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Represents the connected data provider. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes |
+| wants | Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [FileAccessHelper](arkts-corefile-fileaccess-fileaccesshelper-i-sys.md) | Returns the fileAccessHelper. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [FileAccessHelper](arkts-corefile-fileaccess-fileaccesshelper-i-sys.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
 See [createFileAccessHelper](#createfileaccesshelper)
-

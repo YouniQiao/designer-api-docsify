@@ -4,7 +4,7 @@ Remote device information.
 
 **Since:** 26.1.0
 
-<!--Device-abilityToolAccessCtrl-interface RemoteInfo--><!--Device-abilityToolAccessCtrl-interface RemoteInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -27,7 +27,7 @@ Domain ID.
 
 **Since:** 26.1.0
 
-<!--Device-RemoteInfo-domainId: string--><!--Device-RemoteInfo-domainId: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -45,7 +45,7 @@ interaction params in remote control.
 
 **Since:** 26.1.0
 
-<!--Device-RemoteInfo-remoteControlParams?: RemoteControlParams--><!--Device-RemoteInfo-remoteControlParams?: RemoteControlParams-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -63,7 +63,7 @@ Remote device ID.
 
 **Since:** 26.1.0
 
-<!--Device-RemoteInfo-remoteId: string--><!--Device-RemoteInfo-remoteId: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -81,9 +81,8 @@ Device role.
 
 **Since:** 26.1.0
 
-<!--Device-RemoteInfo-role: Role--><!--Device-RemoteInfo-role: Role-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
-

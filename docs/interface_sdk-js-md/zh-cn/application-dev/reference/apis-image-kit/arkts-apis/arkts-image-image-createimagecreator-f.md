@@ -19,28 +19,28 @@ function createImageCreator(width: number, height: number, format: number, capac
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 11
 
 **替代接口：** [createImageCreator](#createimagecreator)(size: Size, format: ImageFormat, capacity: int)
-
-<!--Device-image-function createImageCreator(width: number, height: number, format: number, capacity: number): ImageCreator--><!--Device-image-function createImageCreator(width: number, height: number, format: number, capacity: number): ImageCreator-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageCreator
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| width | number | 是 | 图像的默认宽度。单位：像素（px）。 |
-| height | number | 是 | 图像的默认高度。单位：像素（px）。 |
-| format | number | 是 | 图像格式，如YCBCR_422_SP，JPEG。 |
-| capacity | number | 是 | 同时访问的最大图像数。该参数仅作为期望值，实际capacity由设备硬件决定。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| width | number | 是 |
+| height | number | 是 |
+| format | number | 是 |
+| capacity | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageCreator](arkts-image-image-imagecreator-i.md) | 如果操作成功，则返回ImageCreator实例。 |
+| 类型 |
+| --- |
+| [ImageCreator](arkts-image-image-imagecreator-i.md) |
 
 **示例**
 
@@ -65,33 +65,32 @@ function createImageCreator(size: Size, format: ImageFormat, capacity: int): Ima
 
 通过图片大小、图片格式、容量创建ImageCreator实例。由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release](arkts-image-image-imagecreator-i.md#release)方法 及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-image-function createImageCreator(size: Size, format: ImageFormat, capacity: int): ImageCreator--><!--Device-image-function createImageCreator(size: Size, format: ImageFormat, capacity: int): ImageCreator-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageCreator
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| size | Size | 是 | 图像的默认大小。单位：像素（px）。 |
-| format | [ImageFormat](arkts-image-image-imageformat-e.md) | 是 | 图像格式，如YCBCR_422_SP，JPEG。 |
-| capacity | int | 是 | 同时访问的最大图像数。该参数仅作为期望值，实际capacity由设备硬件决定。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| size | Size | 是 |
+| format | [ImageFormat](arkts-image-image-imageformat-e.md) | 是 |
+| capacity | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageCreator](arkts-image-image-imagecreator-i.md) | 如果操作成功，则返回ImageCreator实例。 |
+| 类型 |
+| --- |
+| [ImageCreator](arkts-image-image-imagecreator-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
 参见 [createImageCreator](#createimagecreator)
-

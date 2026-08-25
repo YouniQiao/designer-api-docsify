@@ -4,11 +4,11 @@ Represents the USB device information.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md)
-
-<!--Device-usb-interface USBDevice--><!--Device-usb-interface USBDevice-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -30,11 +30,11 @@ Bus address.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [busNum](arkts-basicservices-usbmanager-usbdevice-i.md#busnum)
-
-<!--Device-USBDevice-busNum: number--><!--Device-USBDevice-busNum: number-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -50,11 +50,11 @@ Device class.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [clazz](arkts-basicservices-usbmanager-usbdevice-i.md#clazz)
-
-<!--Device-USBDevice-clazz: number--><!--Device-USBDevice-clazz: number-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -70,11 +70,11 @@ Device configuration descriptor information.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [configs](arkts-basicservices-usbmanager-usbdevice-i.md#configs)
-
-<!--Device-USBDevice-configs: Array<USBConfig>--><!--Device-USBDevice-configs: Array<USBConfig>-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -90,11 +90,11 @@ Device address.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [devAddress](arkts-basicservices-usbmanager-usbdevice-i.md#devaddress)
-
-<!--Device-USBDevice-devAddress: number--><!--Device-USBDevice-devAddress: number-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -110,11 +110,11 @@ Device manufacturer.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [manufacturerName](arkts-basicservices-usbmanager-usbdevice-i.md#manufacturername)
-
-<!--Device-USBDevice-manufacturerName: string--><!--Device-USBDevice-manufacturerName: string-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -130,11 +130,11 @@ Device name.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [name](arkts-basicservices-usbmanager-usbdevice-i.md#name)
-
-<!--Device-USBDevice-name: string--><!--Device-USBDevice-name: string-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -150,11 +150,11 @@ Product ID.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [productId](arkts-basicservices-usbmanager-usbdevice-i.md#productid)
-
-<!--Device-USBDevice-productId: number--><!--Device-USBDevice-productId: number-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -170,11 +170,11 @@ Product name.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [productName](arkts-basicservices-usbmanager-usbdevice-i.md#productname)
-
-<!--Device-USBDevice-productName: string--><!--Device-USBDevice-productName: string-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -190,11 +190,11 @@ Device protocol code.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [protocol](arkts-basicservices-usbmanager-usbdevice-i.md#protocol)
-
-<!--Device-USBDevice-protocol: number--><!--Device-USBDevice-protocol: number-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -210,11 +210,11 @@ Sequence number.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [serial](arkts-basicservices-usbmanager-usbdevice-i.md#serial)
-
-<!--Device-USBDevice-serial: string--><!--Device-USBDevice-serial: string-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -230,11 +230,11 @@ Device subclass.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [subClass](arkts-basicservices-usbmanager-usbdevice-i.md#subclass)
-
-<!--Device-USBDevice-subClass: number--><!--Device-USBDevice-subClass: number-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -250,11 +250,11 @@ Vendor ID.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [vendorId](arkts-basicservices-usbmanager-usbdevice-i.md#vendorid)
-
-<!--Device-USBDevice-vendorId: number--><!--Device-USBDevice-vendorId: number-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -270,11 +270,10 @@ Version.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [version](arkts-basicservices-usbmanager-usbdevice-i.md#version)
 
-<!--Device-USBDevice-version: string--><!--Device-USBDevice-version: string-End-->
-
 **System capability:** SystemCapability.USB.USBManager
-

@@ -4,7 +4,7 @@ Provides an interface that can be implemented for releasing a resource which is 
 
 **Since:** 22
 
-<!--Device-util-interface AutoFinalizer--><!--Device-util-interface AutoFinalizer-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -24,15 +24,14 @@ The developer-defined callback used to release resources.
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-AutoFinalizer-onFinalization(heldValue: T): void--><!--Device-AutoFinalizer-onFinalization(heldValue: T): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| heldValue | T | Yes | The value to pass to the finalizer. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| heldValue | T | Yes |

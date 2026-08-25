@@ -4,7 +4,7 @@
 
 **起始版本：** 11
 
-<!--Device-unnamed-declare enum LocationType--><!--Device-unnamed-declare enum LocationType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -18,7 +18,7 @@ LOCAL = 1 << 0
 
 **起始版本：** 11
 
-<!--Device-LocationType-LOCAL = 1 << 0--><!--Device-LocationType-LOCAL = 1 << 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -32,7 +32,6 @@ CLOUD = 1 << 1
 
 **起始版本：** 11
 
-<!--Device-LocationType-CLOUD = 1 << 1--><!--Device-LocationType-CLOUD = 1 << 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
-

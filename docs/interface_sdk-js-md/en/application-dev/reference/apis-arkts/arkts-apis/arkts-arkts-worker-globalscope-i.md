@@ -6,7 +6,7 @@ Implements the running environment of the Worker thread. The GlobalScope class i
 
 **Since:** 9
 
-<!--Device-unnamed-declare interface GlobalScope--><!--Device-unnamed-declare interface GlobalScope-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -15,6 +15,28 @@ Implements the running environment of the Worker thread. The GlobalScope class i
 ```TypeScript
 import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
 ```
+
+## onerror
+
+```TypeScript
+onerror?: (ev: ErrorEvent) => void
+```
+
+Called when an exception occurs during worker execution. The event handler is executed in the Worker thread. In the callback function, the ev type is ErrorEvent, indicating the received abnormal data.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| ev | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | Yes |
 
 ## name
 
@@ -28,27 +50,9 @@ Worker instance specified when there is a new Worker instance.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-GlobalScope-readonly name: string--><!--Device-GlobalScope-readonly name: string-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## onerror
-
-```TypeScript
-onerror?: (ev: ErrorEvent) => void
-```
-
-Called when an exception occurs during worker execution. The event handler is executed in the Worker thread. In the callback function, the ev type is ErrorEvent, indicating the received abnormal data.
-
-**Type:** (ev: ErrorEvent) =&gt; void
-
-**Since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-GlobalScope-onerror?: (ev: ErrorEvent) => void--><!--Device-GlobalScope-onerror?: (ev: ErrorEvent) => void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -64,9 +68,8 @@ GlobalScope itself.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-GlobalScope-readonly self: GlobalScope & typeof globalThis--><!--Device-GlobalScope-readonly self: GlobalScope & typeof globalThis-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

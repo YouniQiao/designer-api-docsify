@@ -1,25 +1,21 @@
 # Uint8ArrayConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface Uint8ArrayConstructor--><!--Device-unnamed-interface Uint8ArrayConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
+## [[Construct]]
 
 ```TypeScript
 new (): Uint8Array
 ```
 
-**Since:** -1
-
-<!--Device-Uint8ArrayConstructor-new (): Uint8Array--><!--Device-Uint8ArrayConstructor-new (): Uint8Array-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

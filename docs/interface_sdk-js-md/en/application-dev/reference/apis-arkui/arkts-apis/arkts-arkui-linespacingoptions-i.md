@@ -4,7 +4,7 @@ Configures the line spacing of text and whether it applies only between lines.
 
 **Since:** 20
 
-<!--Device-unnamed-declare interface LineSpacingOptions--><!--Device-unnamed-declare interface LineSpacingOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,10 @@ Whether line spacing applies only between lines.
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-LineSpacingOptions-onlyBetweenLines?: boolean--><!--Device-LineSpacingOptions-onlyBetweenLines?: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

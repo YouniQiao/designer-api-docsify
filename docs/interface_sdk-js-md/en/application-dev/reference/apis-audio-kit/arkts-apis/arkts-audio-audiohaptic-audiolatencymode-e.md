@@ -2,9 +2,9 @@
 
 Enumerates the audio latency modes.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-audioHaptic-enum AudioLatencyMode--><!--Device-audioHaptic-enum AudioLatencyMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -16,9 +16,9 @@ AUDIO_LATENCY_MODE_NORMAL = 0
 
 Normal latency mode.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AudioLatencyMode-AUDIO_LATENCY_MODE_NORMAL = 0--><!--Device-AudioLatencyMode-AUDIO_LATENCY_MODE_NORMAL = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -28,11 +28,10 @@ Normal latency mode.
 AUDIO_LATENCY_MODE_FAST = 1
 ```
 
-Low latency mode. This mode is applicable to short audio files. A long audio file may be truncated in this mode. It functions the same as SoundPool.
+Low latency mode. This mode is applicable to short audio files. A long audio file may be truncated in this mode. It functions the same as [SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool).
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AudioLatencyMode-AUDIO_LATENCY_MODE_FAST = 1--><!--Device-AudioLatencyMode-AUDIO_LATENCY_MODE_FAST = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
-

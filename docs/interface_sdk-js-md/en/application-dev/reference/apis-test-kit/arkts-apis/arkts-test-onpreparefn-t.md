@@ -8,7 +8,6 @@ Prepare the unit testing environment for running test cases.
 
 **Since:** 23
 
-<!--Device-unnamed-type OnPrepareFn = () => void--><!--Device-unnamed-type OnPrepareFn = () => void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-

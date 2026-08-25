@@ -2,9 +2,9 @@
 
 表示分布式硬件的描述信息。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-hardwareManager-interface HardwareDescriptor--><!--Device-hardwareManager-interface HardwareDescriptor-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
@@ -26,11 +26,11 @@ srcNetworkId?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_DISTRIBUTED_HARDWARE
-
-<!--Device-HardwareDescriptor-srcNetworkId?: string--><!--Device-HardwareDescriptor-srcNetworkId?: string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
@@ -46,13 +46,12 @@ type: DistributedHardwareType
 
 **类型：** [DistributedHardwareType](arkts-distributedservice-hardwaremanager-distributedhardwaretype-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_DISTRIBUTED_HARDWARE
-
-<!--Device-HardwareDescriptor-type: DistributedHardwareType--><!--Device-HardwareDescriptor-type: DistributedHardwareType-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **系统接口：** 此接口为系统接口。
-

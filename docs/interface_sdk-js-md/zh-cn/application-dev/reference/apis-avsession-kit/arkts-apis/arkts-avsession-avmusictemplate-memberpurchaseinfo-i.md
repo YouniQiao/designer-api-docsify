@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-avMusicTemplate-interface MemberPurchaseInfo--><!--Device-avMusicTemplate-interface MemberPurchaseInfo-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -26,9 +26,9 @@ diagramContent: string
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-MemberPurchaseInfo-diagramContent: string--><!--Device-MemberPurchaseInfo-diagramContent: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -44,9 +44,9 @@ diagramData?: image.PixelMap
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-MemberPurchaseInfo-diagramData?: image.PixelMap--><!--Device-MemberPurchaseInfo-diagramData?: image.PixelMap-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -62,9 +62,9 @@ diagramUrl: string
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-MemberPurchaseInfo-diagramUrl: string--><!--Device-MemberPurchaseInfo-diagramUrl: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -80,9 +80,9 @@ id: string
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-MemberPurchaseInfo-id: string--><!--Device-MemberPurchaseInfo-id: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -98,9 +98,8 @@ memberPurchaseType: MemberPurchaseType
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-MemberPurchaseInfo-memberPurchaseType: MemberPurchaseType--><!--Device-MemberPurchaseInfo-memberPurchaseType: MemberPurchaseType-End-->
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-

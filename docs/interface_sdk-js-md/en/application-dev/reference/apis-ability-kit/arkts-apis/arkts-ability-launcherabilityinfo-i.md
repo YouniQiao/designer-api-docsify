@@ -2,9 +2,9 @@
 
 The module describes the ability information of the launcher application. The information can be obtained by calling [getLauncherAbilityInfoSync](arkts-ability-launcherbundlemanager-getlauncherabilityinfosync-f.md) <!--Del--> or [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md) <!--DelEnd-->.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-unnamed-export interface LauncherAbilityInfo--><!--Device-unnamed-export interface LauncherAbilityInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -18,9 +18,9 @@ Application information of the launcher ability.
 
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-LauncherAbilityInfo-readonly applicationInfo: ApplicationInfo--><!--Device-LauncherAbilityInfo-readonly applicationInfo: ApplicationInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -34,9 +34,9 @@ Element name of the launcher ability.
 
 **Type:** [ElementName](arkts-ability-elementname-i.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-LauncherAbilityInfo-readonly elementName: ElementName--><!--Device-LauncherAbilityInfo-readonly elementName: ElementName-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -48,11 +48,11 @@ readonly iconId: long
 
 Icon ID of the launcher ability.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-LauncherAbilityInfo-readonly iconId: long--><!--Device-LauncherAbilityInfo-readonly iconId: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -64,11 +64,11 @@ readonly installTime: long
 
 Timestamp when the launcher ability was installed, in milliseconds.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-LauncherAbilityInfo-readonly installTime: long--><!--Device-LauncherAbilityInfo-readonly installTime: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -80,11 +80,11 @@ readonly labelId: long
 
 Label ID of the launcher ability.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-LauncherAbilityInfo-readonly labelId: long--><!--Device-LauncherAbilityInfo-readonly labelId: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -96,11 +96,10 @@ readonly userId: int
 
 User ID of the launcher ability.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-LauncherAbilityInfo-readonly userId: int--><!--Device-LauncherAbilityInfo-readonly userId: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
-

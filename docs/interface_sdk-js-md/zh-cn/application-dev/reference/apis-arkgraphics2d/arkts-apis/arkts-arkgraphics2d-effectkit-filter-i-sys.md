@@ -2,9 +2,9 @@
 
 图像效果类，用于通过链式调用将指定效果添加到效果链表中，适用于图片滤镜处理、视觉效果增强、图像美化等场景。 在调用Filter的方法前，需要先通过[createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md)创建一个Filter实例。 在添加效果后，需调用[getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)获取处理后的图像。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-effectKit-interface Filter--><!--Device-effectKit-interface Filter-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -16,6 +16,13 @@ import { effectKit } from '@kit.ArkGraphics2D';
 
 ## ellipticalGradientBlur
 
+ArkTS-Dyn:
+```TypeScript
+ellipticalGradientBlur(blurRadius: number, center: EllipticalMaskCenter,
+      maskRadius: EllipticalMaskRadius, fractionStops: FractionStop[]): Filter
+```
+
+ArkTS-Sta:
 ```TypeScript
 ellipticalGradientBlur(blurRadius: double, center: EllipticalMaskCenter,
       maskRadius: EllipticalMaskRadius, fractionStops: FractionStop[]): Filter
@@ -25,9 +32,9 @@ ellipticalGradientBlur(blurRadius: double, center: EllipticalMaskCenter,
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-Filter-ellipticalGradientBlur(blurRadius: double, center: EllipticalMaskCenter,      maskRadius: EllipticalMaskRadius, fractionStops: FractionStop[]): Filter--><!--Device-Filter-ellipticalGradientBlur(blurRadius: double, center: EllipticalMaskCenter,      maskRadius: EllipticalMaskRadius, fractionStops: FractionStop[]): Filter-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -35,24 +42,24 @@ ellipticalGradientBlur(blurRadius: double, center: EllipticalMaskCenter,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blurRadius | double | 是 | 模糊半径，取正整数，单位为px，模糊半径大于60px时自动截断。 模糊效果与所设置的模糊半径值成正比，值越大效果越明显。 |
-| center | [EllipticalMaskCenter](arkts-arkgraphics2d-effectkit-ellipticalmaskcenter-t-sys.md) | 是 | 椭圆形遮罩的中心点坐标。 |
-| maskRadius | [EllipticalMaskRadius](arkts-arkgraphics2d-effectkit-ellipticalmaskradius-t-sys.md) | 是 | 椭圆形遮罩在X轴和Y轴方向的半径。 |
-| fractionStops | [FractionStop](../../apis-default/arkts-apis/arkts-fractionstop-t.md)[] | 是 | 渐变模糊位置与程度数组。数组元素为二元数组，第一个元素表示位置，第二个元素表示模糊程度。 位置取值范围为[0, 1]，椭圆中心对应位置0，椭圆边界对应位置1。模糊程度取值范围为[0, 1]，0表示无模糊，大于1的值自动转为1。 位置参数值需严格递增，数组长度不能小于2，最大为12。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| center | [EllipticalMaskCenter](arkts-arkgraphics2d-effectkit-ellipticalmaskcenter-t-sys.md) | 是 |
+| maskRadius | [EllipticalMaskRadius](arkts-arkgraphics2d-effectkit-ellipticalmaskradius-t-sys.md) | 是 |
+| fractionStops | [FractionStop](../../apis-arkui/arkts-apis/arkts-arkui-fractionstop-t.md)[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Filter | 返回已添加的图像效果。 |
+| 类型 |
+| --- |
+| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -119,4 +126,3 @@ struct Index {
   }
 }
 ```
-

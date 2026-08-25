@@ -15,23 +15,23 @@ function setMemoryCacheSize(bytes: long): void
 设置缓存下载组件能够保存的内存缓存上限。  
 - 使用该接口调整缓存大小时，默认使用“LRU”（最近最少使用）方式清除多余的已缓存的内存缓存内容。 - 该方法为同步方法，不阻塞调用线程。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-cacheDownload-function setMemoryCacheSize(bytes: long): void--><!--Device-cacheDownload-function setMemoryCacheSize(bytes: long): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bytes | long | 是 | 设置的缓存上限。默认值为0B，最大值不超过1073741824B（即1GB）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bytes | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -62,4 +62,3 @@ try {
   console.error(`Failed to set memory cache size. err code: ${err.code}, err message: ${err.message}`);
 }
 ```
-

@@ -4,11 +4,11 @@ Manages GATT server. Before calling an Gatt server method, you must use [createG
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [GattServer](arkts-connectivity-bluetoothmanager-gattserver-i.md)
-
-<!--Device-bluetooth-interface GattServer--><!--Device-bluetooth-interface GattServer-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -28,27 +28,27 @@ Adds a specified service to be hosted. The added service and its characteristics
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [addService](arkts-connectivity-bluetoothmanager-gattserver-i.md#addservice)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
-<!--Device-GattServer-addService(service: GattService): boolean--><!--Device-GattServer-addService(service: GattService): boolean-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| service | GattService | Yes | Indicates the service to add. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [service](../../apis-calendar-kit/arkts-apis/arkts-calendar-calendarmanager-event-i.md) | [GattService](arkts-connectivity-bluetooth-gattservice-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -96,13 +96,13 @@ Closes this {@code GattServer} object and unregisters its callbacks.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [close](arkts-connectivity-bluetoothmanager-gattserver-i.md#close)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
-
-<!--Device-GattServer-close(): void--><!--Device-GattServer-close(): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -128,28 +128,28 @@ Sends a notification of a change in a specified local characteristic.This method
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [notifyCharacteristicChanged](arkts-connectivity-bluetoothmanager-gattserver-i.md#notifycharacteristicchanged)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
-<!--Device-GattServer-notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): boolean--><!--Device-GattServer-notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): boolean-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| deviceId | string | Yes | Indicates the address of the BLE peripheral device to receive the notification. |
-| notifyCharacteristic | NotifyCharacteristic | Yes | Indicates the local characteristic that has changed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| deviceId | string | Yes |
+| notifyCharacteristic | [NotifyCharacteristic](arkts-connectivity-bluetoothmanager-notifycharacteristic-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -182,22 +182,22 @@ Unsubscribe characteristic read event.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** characteristicRead
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
-<!--Device-GattServer-off(type: 'characteristicRead', callback?: Callback<CharacteristicReadReq>): void--><!--Device-GattServer-off(type: 'characteristicRead', callback?: Callback<CharacteristicReadReq>): void-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'characteristicRead' | Yes | Type of the characteristic read event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicReadReq](arkts-connectivity-bluetooth-characteristicreadreq-i.md)&gt; | No | Callback used to listen for the characteristic read event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'characteristicRead' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicReadReq](arkts-connectivity-bluetooth-characteristicreadreq-i.md)&gt; | No |
 
 **Examples**
 
@@ -216,62 +216,28 @@ Unsubscribe characteristic write event.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** characteristicWrite
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
-<!--Device-GattServer-off(type: 'characteristicWrite', callback?: Callback<CharacteristicWriteReq>): void--><!--Device-GattServer-off(type: 'characteristicWrite', callback?: Callback<CharacteristicWriteReq>): void-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'characteristicWrite' | Yes | Type of the characteristic write event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicWriteReq](arkts-connectivity-bluetooth-characteristicwritereq-i.md)&gt; | No | Callback used to listen for the characteristic write event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'characteristicWrite' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicWriteReq](arkts-connectivity-bluetooth-characteristicwritereq-i.md)&gt; | No |
 
 **Examples**
 
 ```TypeScript
 let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 gattServer.off("characteristicWrite");
-```
-
-## off('connectStateChange')
-
-```TypeScript
-off(type: 'connectStateChange', callback?: Callback<BLEConnectChangedState>): void
-```
-
-Unsubscribe server connection state changed event.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** connectStateChange
-
-**Required permissions:** ohos.permission.USE_BLUETOOTH
-
-<!--Device-GattServer-off(type: 'connectStateChange', callback?: Callback<BLEConnectChangedState>): void--><!--Device-GattServer-off(type: 'connectStateChange', callback?: Callback<BLEConnectChangedState>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'connectStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
-
-**Examples**
-
-```TypeScript
-let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-gattServer.off("connectStateChange");
 ```
 
 ## off('descriptorRead')
@@ -284,22 +250,22 @@ Unsubscribe descriptor read event.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** descriptorRead
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
-<!--Device-GattServer-off(type: 'descriptorRead', callback?: Callback<DescriptorReadReq>): void--><!--Device-GattServer-off(type: 'descriptorRead', callback?: Callback<DescriptorReadReq>): void-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'descriptorRead' | Yes | Type of the descriptor read event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorReadReq](arkts-connectivity-bluetooth-descriptorreadreq-i.md)&gt; | No | Callback used to listen for the descriptor read event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'descriptorRead' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorReadReq](arkts-connectivity-bluetooth-descriptorreadreq-i.md)&gt; | No |
 
 **Examples**
 
@@ -318,28 +284,62 @@ Unsubscribe descriptor write event.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** descriptorWrite
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
-<!--Device-GattServer-off(type: 'descriptorWrite', callback?: Callback<DescriptorWriteReq>): void--><!--Device-GattServer-off(type: 'descriptorWrite', callback?: Callback<DescriptorWriteReq>): void-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'descriptorWrite' | Yes | Type of the descriptor write event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorWriteReq](arkts-connectivity-bluetooth-descriptorwritereq-i.md)&gt; | No | Callback used to listen for the descriptor write event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'descriptorWrite' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorWriteReq](arkts-connectivity-bluetooth-descriptorwritereq-i.md)&gt; | No |
 
 **Examples**
 
 ```TypeScript
 let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 gattServer.off("descriptorWrite");
+```
+
+## off('connectStateChange')
+
+```TypeScript
+off(type: 'connectStateChange', callback?: Callback<BLEConnectChangedState>): void
+```
+
+Unsubscribe server connection state changed event.
+
+**Since:** 7
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** connectStateChange
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'connectStateChange' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | No |
+
+**Examples**
+
+```TypeScript
+let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
+gattServer.off("connectStateChange");
 ```
 
 ## on('characteristicRead')
@@ -352,22 +352,22 @@ Subscribe characteristic read event.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** characteristicRead
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
-<!--Device-GattServer-on(type: 'characteristicRead', callback: Callback<CharacteristicReadReq>): void--><!--Device-GattServer-on(type: 'characteristicRead', callback: Callback<CharacteristicReadReq>): void-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'characteristicRead' | Yes | Type of the characteristic read event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicReadReq](arkts-connectivity-bluetooth-characteristicreadreq-i.md)&gt; | Yes | Callback used to listen for the characteristic read event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'characteristicRead' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicReadReq](arkts-connectivity-bluetooth-characteristicreadreq-i.md)&gt; | Yes |
 
 **Examples**
 
@@ -406,22 +406,22 @@ Subscribe characteristic write event.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** characteristicWrite
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
-<!--Device-GattServer-on(type: 'characteristicWrite', callback: Callback<CharacteristicWriteReq>): void--><!--Device-GattServer-on(type: 'characteristicWrite', callback: Callback<CharacteristicWriteReq>): void-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'characteristicWrite' | Yes | Type of the characteristic write event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicWriteReq](arkts-connectivity-bluetooth-characteristicwritereq-i.md)&gt; | Yes | Callback used to listen for the characteristic write event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'characteristicWrite' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicWriteReq](arkts-connectivity-bluetooth-characteristicwritereq-i.md)&gt; | Yes |
 
 **Examples**
 
@@ -453,45 +453,6 @@ let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 gattServer.on("characteristicWrite", WriteCharacteristicReq);
 ```
 
-## on('connectStateChange')
-
-```TypeScript
-on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void
-```
-
-Subscribe server connection state changed event.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** connectStateChange
-
-**Required permissions:** ohos.permission.USE_BLUETOOTH
-
-<!--Device-GattServer-on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void--><!--Device-GattServer-on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'connectStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
-
-**Examples**
-
-```TypeScript
-function Connected(BLEConnectChangedState : bluetooth.BLEConnectChangedState) {
-  let deviceId : string = BLEConnectChangedState.deviceId;
-  let status : bluetooth.ProfileConnectionState = BLEConnectChangedState.state;
-}
-
-let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-gattServer.on("connectStateChange", Connected);
-```
-
 ## on('descriptorRead')
 
 ```TypeScript
@@ -502,22 +463,22 @@ Subscribe descriptor read event.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** descriptorRead
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
-<!--Device-GattServer-on(type: 'descriptorRead', callback: Callback<DescriptorReadReq>): void--><!--Device-GattServer-on(type: 'descriptorRead', callback: Callback<DescriptorReadReq>): void-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'descriptorRead' | Yes | Type of the descriptor read event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorReadReq](arkts-connectivity-bluetooth-descriptorreadreq-i.md)&gt; | Yes | Callback used to listen for the descriptor read event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'descriptorRead' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorReadReq](arkts-connectivity-bluetooth-descriptorreadreq-i.md)&gt; | Yes |
 
 **Examples**
 
@@ -556,22 +517,22 @@ Subscribe descriptor write event.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** descriptorWrite
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
-<!--Device-GattServer-on(type: 'descriptorWrite', callback: Callback<DescriptorWriteReq>): void--><!--Device-GattServer-on(type: 'descriptorWrite', callback: Callback<DescriptorWriteReq>): void-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'descriptorWrite' | Yes | Type of the descriptor write event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorWriteReq](arkts-connectivity-bluetooth-descriptorwritereq-i.md)&gt; | Yes | Callback used to listen for the descriptor write event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'descriptorWrite' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorWriteReq](arkts-connectivity-bluetooth-descriptorwritereq-i.md)&gt; | Yes |
 
 **Examples**
 
@@ -602,6 +563,45 @@ let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 gattServer.on("descriptorWrite", WriteDescriptorReq);
 ```
 
+## on('connectStateChange')
+
+```TypeScript
+on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void
+```
+
+Subscribe server connection state changed event.
+
+**Since:** 7
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** connectStateChange
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'connectStateChange' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | Yes |
+
+**Examples**
+
+```TypeScript
+function Connected(BLEConnectChangedState : bluetooth.BLEConnectChangedState) {
+  let deviceId : string = BLEConnectChangedState.deviceId;
+  let status : bluetooth.ProfileConnectionState = BLEConnectChangedState.state;
+}
+
+let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
+gattServer.on("connectStateChange", Connected);
+```
+
 ## removeService
 
 ```TypeScript
@@ -612,27 +612,27 @@ Removes a specified service from the list of GATT services provided by this devi
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [removeService](arkts-connectivity-bluetoothmanager-gattserver-i.md#removeservice)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
-<!--Device-GattServer-removeService(serviceUuid: string): boolean--><!--Device-GattServer-removeService(serviceUuid: string): boolean-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| serviceUuid | string | Yes | Indicates the UUID of the service to remove. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| serviceUuid | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -651,27 +651,27 @@ Sends a response to a specified read or write request to a given BLE peripheral 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [sendResponse](arkts-connectivity-bluetoothmanager-gattserver-i.md#sendresponse)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
-<!--Device-GattServer-sendResponse(serverResponse: ServerResponse): boolean--><!--Device-GattServer-sendResponse(serverResponse: ServerResponse): boolean-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| serverResponse | ServerResponse | Yes | Indicates the response parameters [ServerResponse](arkts-connectivity-bluetooth-serverresponse-i.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| serverResponse | [ServerResponse](arkts-connectivity-bluetoothmanager-serverresponse-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -707,23 +707,23 @@ Starts BLE advertising.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [startAdvertising](arkts-connectivity-bluetoothmanager-gattserver-i.md#startadvertising)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 
-<!--Device-GattServer-startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?: AdvertiseData): void--><!--Device-GattServer-startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?: AdvertiseData): void-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| setting | AdvertiseSetting | Yes | Indicates the settings for BLE advertising. If you need to use the default value, set this parameter to {@code null}. |
-| advData | AdvertiseData | Yes | Indicates the advertising data. |
-| advResponse | AdvertiseData | No | Indicates the scan response associated with the advertising data. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| setting | [AdvertiseSetting](arkts-connectivity-ble-advertisesetting-i.md) | Yes |
+| advData | [AdvertiseData](arkts-connectivity-bluetoothmanager-advertisedata-i.md) | Yes |
+| advResponse | [AdvertiseData](arkts-connectivity-bluetoothmanager-advertisedata-i.md) | No |
 
 **Examples**
 
@@ -782,13 +782,13 @@ Stops BLE advertising.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [stopAdvertising](arkts-connectivity-bluetoothmanager-gattserver-i.md#stopadvertising)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
-
-<!--Device-GattServer-stopAdvertising(): void--><!--Device-GattServer-stopAdvertising(): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -798,4 +798,3 @@ Stops BLE advertising.
 let server : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 server.stopAdvertising();
 ```
-

@@ -6,7 +6,7 @@
 
 **Since:** 4
 
-<!--Device-unnamed-export interface CanvasElement--><!--Device-unnamed-export interface CanvasElement-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,24 +20,24 @@ Obtains the context of 2D canvas drawing. Only parameters related to 2D canvas d
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasElement-getContext(type: "2d", options?: ContextAttrOptions): CanvasRenderingContext2D--><!--Device-CanvasElement-getContext(type: "2d", options?: ContextAttrOptions): CanvasRenderingContext2D-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | "2d" | Yes | identifier defining the drawing context associated to the canvas. |
-| options | [ContextAttrOptions](arkts-arkui-viewmodel-contextattroptions-i.md) | No | use this context attributes to creating rendering context. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | "2d" | Yes |
+| options | [ContextAttrOptions](arkts-arkui-viewmodel-contextattroptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [CanvasRenderingContext2D](arkts-arkui-viewmodel-canvasrenderingcontext2d-i.md) |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [CanvasRenderingContext2D](arkts-arkui-viewmodel-canvasrenderingcontext2d-i.md) |
 
 ## getContext("webgl")
 
@@ -49,24 +49,24 @@ Obtains the context of webgl canvas drawing. Only parameters related to webgl ca
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-CanvasElement-getContext(type: "webgl", options?: WebGLContextAttributes): WebGLRenderingContext--><!--Device-CanvasElement-getContext(type: "webgl", options?: WebGLContextAttributes): WebGLRenderingContext-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | "webgl" | Yes | identifier defining the drawing context associated to the canvas. |
-| options | [WebGLContextAttributes](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-webgl-webglcontextattributes-i.md) | No | use this context attributes to creating rendering context. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | "webgl" | Yes |
+| options | [WebGLContextAttributes](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-webgl-webglcontextattributes-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WebGLRenderingContext](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-webgl-webglrenderingcontext-i.md) |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WebGLRenderingContext](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-webgl-webglrenderingcontext-i.md) |
 
 ## getContext("webgl2")
 
@@ -78,24 +78,24 @@ Obtains the context of webgl2 canvas drawing. Only parameters related to webgl2 
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasElement-getContext(type: "webgl2", options?: WebGLContextAttributes): WebGL2RenderingContext--><!--Device-CanvasElement-getContext(type: "webgl2", options?: WebGLContextAttributes): WebGL2RenderingContext-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | "webgl2" | Yes | identifier defining the drawing context associated to the canvas. |
-| options | [WebGLContextAttributes](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-webgl-webglcontextattributes-i.md) | No | use this context attributes to creating rendering context. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | "webgl2" | Yes |
+| options | [WebGLContextAttributes](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-webgl-webglcontextattributes-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WebGL2RenderingContext](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-webgl2-webgl2renderingcontext-i.md) |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WebGL2RenderingContext](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-webgl2-webgl2renderingcontext-i.md) |
 
 ## toDataURL
 
@@ -107,22 +107,21 @@ Creates a data URI that contains the image display.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasElement-toDataURL(type?: string, quality?: number): string--><!--Device-CanvasElement-toDataURL(type?: string, quality?: number): string-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | string | No | A DOMString indicating the image format. The default type is image/png. |
-| quality | number | No | A Number between 0 and 1 indicating image quality if the type option is image/jpeg or image/webp. If this argument is anything else, the default value for image quality is used. Other arguments are ignored. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | string | No |
+| quality | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |

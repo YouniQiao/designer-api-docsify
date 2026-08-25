@@ -2,9 +2,9 @@
 
 Describes audio capturer configurations.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-audio-interface AudioCapturerOptions--><!--Device-audio-interface AudioCapturerOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -22,13 +22,13 @@ playbackCaptureUid?: int
 
 The target application uid for voice/video communication playback capture. This parameter takes effect only when [MODE_ONLY_VOIP](arkts-audio-audio-audioplaybackcapturemode-e-sys.md#mode_only_voip) is set in [playbackCaptureMode](arkts-audio-audio-audiocaptureroptions-i.md#playbackcapturemode). In other playback capture modes, this parameter is ignored. The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AudioCapturerOptions-playbackCaptureUid?: int--><!--Device-AudioCapturerOptions-playbackCaptureUid?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 
@@ -44,11 +44,10 @@ Perfered input device for this audio capturer. The preferredInputDevice must be 
 
 **Type:** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-AudioCapturerOptions-preferredInputDevice?: AudioDeviceDescriptor--><!--Device-AudioCapturerOptions-preferredInputDevice?: AudioDeviceDescriptor-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
-

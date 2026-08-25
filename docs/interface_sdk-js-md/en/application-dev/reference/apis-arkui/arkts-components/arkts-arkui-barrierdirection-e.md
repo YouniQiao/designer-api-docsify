@@ -4,7 +4,7 @@ Defines the direction of a barrier.
 
 **Since:** 12
 
-<!--Device-unnamed-declare enum BarrierDirection--><!--Device-unnamed-declare enum BarrierDirection-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -18,11 +18,11 @@ The barrier is on the left side of all the referenced components specified by [r
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-BarrierDirection-LEFT--><!--Device-BarrierDirection-LEFT-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ The barrier is on the right side of all the referenced components specified by [
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-BarrierDirection-RIGHT--><!--Device-BarrierDirection-RIGHT-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ The barrier is at the top of all the referenced components specified by [referen
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-BarrierDirection-TOP--><!--Device-BarrierDirection-TOP-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,10 @@ The barrier is at the bottom of all the referenced components specified by [refe
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-BarrierDirection-BOTTOM--><!--Device-BarrierDirection-BOTTOM-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -6,7 +6,7 @@
 
 **起始版本：** 7
 
-<!--Device-unnamed-declare class ShapeAttribute--><!--Device-unnamed-declare class ShapeAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,19 +25,19 @@ antiAlias(value: boolean)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ShapeAttribute-antiAlias(value: boolean): ShapeAttribute--><!--Device-ShapeAttribute-antiAlias(value: boolean): ShapeAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean | 是 | 是否开启抗锯齿效果。<br/>true：开启抗锯齿；false：关闭抗锯齿。<br/>默认值：true <br/>异常值undefined和null按照false处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | boolean | 是 |
 
 ## fill
 
@@ -49,19 +49,19 @@ fill(value: ResourceColor)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ShapeAttribute-fill(value: ResourceColor): ShapeAttribute--><!--Device-ShapeAttribute-fill(value: ResourceColor): ShapeAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceColor | 是 | 填充区域颜色。<br/>默认值：Color.Black <br/>异常值undefined、null、NaN和Infinity按照默认 值处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
 
 ## fillOpacity
 
@@ -73,19 +73,19 @@ fillOpacity(value: number | string | Resource)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ShapeAttribute-fillOpacity(value: number | string | Resource): ShapeAttribute--><!--Device-ShapeAttribute-fillOpacity(value: number | string | Resource): ShapeAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 填充区域透明度。<br/>**说明：**<br/>number格式取值范围是[0.0, 1.0]，若给定值小于0.0，则取值为0.0；若给 定值大于1.0，则取值为1.0，其余异常值按1.0处理。<br/>string格式支持number格式取值的字符串形式，取值范围与number格式相同。<br/>Resource格式支持系统资源或者应用资源中的字符串，取值 范围和number格式相同。<br/>默认值：1.0 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
 
 ## mesh
 
@@ -102,21 +102,21 @@ mesh(value: Array<any>, column: number, row: number)
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ShapeAttribute-mesh(value: Array<any>, column: number, row: number): ShapeAttribute--><!--Device-ShapeAttribute-mesh(value: Array<any>, column: number, row: number): ShapeAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Array&lt;any&gt; | 是 | 长度（row + 1）* （column + 1）* 2的数组，记录扭曲后的位图各个顶点位置。坐标系基于Shape组件显示区域，原点(0,0)位于左上角，x轴向右延伸，y 轴向下延伸。 <br>默认单位：vp <br>设置异常值undefined、null时按照空数组处理。 |
-| column | number | 是 | mesh矩阵列数，取值范围≥0。 <br>默认值：0 <br>设置异常值undefined、null、NaN和Infinity时，column参数和row参数按默认值0处理，value参数按空数组处理。 |
-| row | number | 是 | mesh矩阵行数，取值范围≥0。 <br>默认值：0 <br>设置异常值undefined、null、NaN和Infinity时，column参数和row参数按默认值0处理，value参数按空数组处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | Array & lt;any & gt; | 是 |
+| column | number | 是 |
+| row | number | 是 |
 
 ## stroke
 
@@ -128,19 +128,19 @@ stroke(value: ResourceColor)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ShapeAttribute-stroke(value: ResourceColor): ShapeAttribute--><!--Device-ShapeAttribute-stroke(value: ResourceColor): ShapeAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceColor | 是 | 边框颜色。<br/>默认值：Color.Transparent<br/>异常值undefined和null按照默认值处理，NaN和 Infinity按照Color.Black处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
 
 ## strokeDashArray
 
@@ -152,19 +152,19 @@ strokeDashArray(value: Array<any>)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ShapeAttribute-strokeDashArray(value: Array<any>): ShapeAttribute--><!--Device-ShapeAttribute-strokeDashArray(value: Array<any>): ShapeAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Array&lt;any&gt; | 是 | 定义Shape轮廓的虚线模式的数组，数组元素交替表示线段长度和间隙长度。<br/>默认值：[]（空数组）<br/>默认单位：vp <br/>异常值undefined和 null按照默认值处理。<br/>**说明：**<br/>空数组：实线<br/>偶数多元素数组：数组元素按顺序循环，如[a, b, c, d]表示线段长度a-&gt;间隙长度b-&gt;线段长度c-&gt;间隙长度d-&gt;线段长度a-&gt;... <br/>奇数多元素数组：重复一次该数组元素，按偶数多元素数组的规则顺序循环，如[a, b, c]等效于[a, b, c, a, b, c]，表示线段长度a-&gt;间隙长度b-&gt;线段长度c-&gt;间隙长度a-&gt;线段长度b-&gt;间隙长 度c-&gt;线段长度a-&gt;... |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | Array & lt;any & gt; | 是 |
 
 ## strokeDashOffset
 
@@ -176,19 +176,19 @@ strokeDashOffset(value: Length)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ShapeAttribute-strokeDashOffset(value: Length): ShapeAttribute--><!--Device-ShapeAttribute-strokeDashOffset(value: Length): ShapeAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Length | 是 | 边框绘制起点的偏移量。<br/>默认值：0<br/>默认单位：vp <br/>异常值undefined和null按照默认值处理，NaN和Infinity会导致 strokeDashArray失效。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
 
 ## strokeLineCap
 
@@ -200,19 +200,19 @@ strokeLineCap(value: LineCapStyle)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ShapeAttribute-strokeLineCap(value: LineCapStyle): ShapeAttribute--><!--Device-ShapeAttribute-strokeLineCap(value: LineCapStyle): ShapeAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | LineCapStyle | 是 | 边框端点绘制样式。<br/>默认值：LineCapStyle.Butt <br/>异常值undefined、null、NaN和Infinity按照默认值处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [LineCapStyle](../arkts-apis/arkts-arkui-enums-linecapstyle-e.md) | 是 |
 
 ## strokeLineJoin
 
@@ -224,19 +224,19 @@ strokeLineJoin(value: LineJoinStyle)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ShapeAttribute-strokeLineJoin(value: LineJoinStyle): ShapeAttribute--><!--Device-ShapeAttribute-strokeLineJoin(value: LineJoinStyle): ShapeAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | LineJoinStyle | 是 | 边框拐角绘制样式。<br/>默认值：LineJoinStyle.Miter <br/>异常值undefined、null、NaN和Infinity按照默认值处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [LineJoinStyle](../arkts-apis/arkts-arkui-linejoinstyle-e.md) | 是 |
 
 ## strokeMiterLimit
 
@@ -248,19 +248,19 @@ strokeMiterLimit(value: Length)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ShapeAttribute-strokeMiterLimit(value: Length): ShapeAttribute--><!--Device-ShapeAttribute-strokeMiterLimit(value: Length): ShapeAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Length | 是 | 斜接长度与边框宽度比值的极限值。<br/>默认值：4 <br/>异常值undefined、null和NaN按照默认值处理，Infinity会导致stroke失 效。<br>**起始版本：** 20 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
 
 ## strokeOpacity
 
@@ -272,19 +272,19 @@ strokeOpacity(value: number | string | Resource)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ShapeAttribute-strokeOpacity(value: number | string | Resource): ShapeAttribute--><!--Device-ShapeAttribute-strokeOpacity(value: number | string | Resource): ShapeAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 边框透明度。<br/>默认值：[stroke](#stroke)接口设置的透明度。<br/>异常值 NaN按0.0处理，undefined、null和Infinity按1.0处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
 
 ## strokeWidth
 
@@ -296,19 +296,19 @@ strokeWidth(value: Length)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ShapeAttribute-strokeWidth(value: Length): ShapeAttribute--><!--Device-ShapeAttribute-strokeWidth(value: Length): ShapeAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Length | 是 | 边框宽度，取值范围≥0。<br/>默认值：1 <br/>默认单位：vp<br/>异常值undefined、null和NaN按照默认值处理，Infinity按0处 理。<br>**起始版本：** 20 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
 
 ## viewPort
 
@@ -320,17 +320,16 @@ viewPort(value: ViewportRect)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ShapeAttribute-viewPort(value: ViewportRect): ShapeAttribute--><!--Device-ShapeAttribute-viewPort(value: ViewportRect): ShapeAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [ViewportRect](arkts-arkui-viewportrect-i.md) | 是 | Viewport绘制属性。 <br>默认值：{x: 0, y: 0, width: 0, height: 0} <br>异常值undefined和null按照默认值处理。<br>**起始版本：** 18 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ViewportRect](arkts-arkui-viewportrect-i.md) | 是 |

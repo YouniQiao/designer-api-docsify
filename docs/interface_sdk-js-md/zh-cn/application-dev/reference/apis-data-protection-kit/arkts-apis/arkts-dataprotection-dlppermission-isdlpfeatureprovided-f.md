@@ -19,21 +19,21 @@ function isDLPFeatureProvided(): Promise<boolean>
 
 **起始版本：** 12
 
-<!--Device-dlpPermission-function isDLPFeatureProvided(): Promise<boolean>--><!--Device-dlpPermission-function isDLPFeatureProvided(): Promise<boolean>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Pomise对象。返回true表示当前系统提供加密保护特性，返回false表示不提供加密保护特性。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+| 错误码ID |
+| --- |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 
 **示例**
 
@@ -46,4 +46,3 @@ dlpPermission.isDLPFeatureProvided().then((isFeatureProvided) => { // 查询当�
   console.error(`Failed to check if DLP feature is provided. Code: ${(err as BusinessError).code}, message: ${(err as BusinessError).message}`);
 });
 ```
-

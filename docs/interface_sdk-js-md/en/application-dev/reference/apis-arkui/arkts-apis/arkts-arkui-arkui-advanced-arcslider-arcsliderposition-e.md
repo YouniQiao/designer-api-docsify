@@ -4,7 +4,7 @@ Defines the position of the arc slider on the screen.
 
 **Since:** 18
 
-<!--Device-unnamed-export declare enum ArcSliderPosition--><!--Device-unnamed-export declare enum ArcSliderPosition-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -18,9 +18,9 @@ The arc slider is displayed on the left.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-ArcSliderPosition-LEFT = 0--><!--Device-ArcSliderPosition-LEFT = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -34,9 +34,8 @@ The arc slider is displayed on the right.
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ArcSliderPosition-RIGHT = 1--><!--Device-ArcSliderPosition-RIGHT = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
-

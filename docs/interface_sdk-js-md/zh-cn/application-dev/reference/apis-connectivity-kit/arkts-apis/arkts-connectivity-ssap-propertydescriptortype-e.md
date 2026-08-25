@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-ssap-enum PropertyDescriptorType--><!--Device-ssap-enum PropertyDescriptorType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -18,9 +18,9 @@ PROPERTY = 1
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-PropertyDescriptorType-PROPERTY = 1--><!--Device-PropertyDescriptorType-PROPERTY = 1-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -34,9 +34,9 @@ CLIENT_PROPERTY_CONFIG = 2
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-PropertyDescriptorType-CLIENT_PROPERTY_CONFIG = 2--><!--Device-PropertyDescriptorType-CLIENT_PROPERTY_CONFIG = 2-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -50,9 +50,9 @@ SERVER_PROPERTY_CONFIG = 3
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-PropertyDescriptorType-SERVER_PROPERTY_CONFIG = 3--><!--Device-PropertyDescriptorType-SERVER_PROPERTY_CONFIG = 3-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -66,9 +66,9 @@ PROPERTY_FORMAT = 4
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-PropertyDescriptorType-PROPERTY_FORMAT = 4--><!--Device-PropertyDescriptorType-PROPERTY_FORMAT = 4-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -82,9 +82,8 @@ TYPE_VENDOR = 255
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-PropertyDescriptorType-TYPE_VENDOR = 255--><!--Device-PropertyDescriptorType-TYPE_VENDOR = 255-End-->
-
 **系统能力：** SystemCapability.Communication.NearLink.Base
-

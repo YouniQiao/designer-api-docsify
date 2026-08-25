@@ -2,9 +2,9 @@
 
 Class of fence extension ability.
 
-**Since:** 26.1.0
+**Since:** 14
 
-<!--Device-unnamed-export default class FenceExtensionAbility--><!--Device-unnamed-export default class FenceExtensionAbility-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -22,11 +22,11 @@ onDestroy(): void
 
 Called back before a fence extension is destroyed.
 
-**Since:** 26.1.0
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FenceExtensionAbility-onDestroy(): void--><!--Device-FenceExtensionAbility-onDestroy(): void-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -51,20 +51,20 @@ onFenceStatusChange(transition: geoLocationManager.GeofenceTransition, additions
 
 Called back when geofence status is change.
 
-**Since:** 26.1.0
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FenceExtensionAbility-onFenceStatusChange(transition: geoLocationManager.GeofenceTransition, additions: Record<string, string>): void--><!--Device-FenceExtensionAbility-onFenceStatusChange(transition: geoLocationManager.GeofenceTransition, additions: Record<string, string>): void-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| transition | geoLocationManager.GeofenceTransition | Yes | Geofence transition status |
-| additions | Record&lt;string, string&gt; | Yes | Indicates additional information |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| transition | geoLocationManager.GeofenceTransition | Yes |
+| additions | Record & lt;string, string & gt; | Yes |
 
 **Examples**
 
@@ -123,11 +123,10 @@ Indicates the fence extension context.
 
 **Type:** [FenceExtensionContext](arkts-location-app-ability-fenceextensioncontext-fenceextensioncontext-c-sys.md)
 
-**Since:** 26.1.0
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FenceExtensionAbility-context: FenceExtensionContext--><!--Device-FenceExtensionAbility-context: FenceExtensionContext-End-->
-
 **System capability:** SystemCapability.Location.Location.Geofence
-

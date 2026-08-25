@@ -2,9 +2,9 @@
 
 表示常量的枚举。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-appAccount-enum Constants--><!--Device-appAccount-enum Constants-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -19,11 +19,11 @@ ACTION_ADD_ACCOUNT_IMPLICITLY = 'addAccountImplicitly'
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [ACTION_CREATE_ACCOUNT_IMPLICITLY](#action_create_account_implicitly)
-
-<!--Device-Constants-ACTION_ADD_ACCOUNT_IMPLICITLY = 'addAccountImplicitly'--><!--Device-Constants-ACTION_ADD_ACCOUNT_IMPLICITLY = 'addAccountImplicitly'-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -38,11 +38,11 @@ ACTION_AUTHENTICATE = 'authenticate'
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [ACTION_AUTH](#action_auth)
-
-<!--Device-Constants-ACTION_AUTHENTICATE = 'authenticate'--><!--Device-Constants-ACTION_AUTHENTICATE = 'authenticate'-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -54,9 +54,9 @@ ACTION_CREATE_ACCOUNT_IMPLICITLY = "createAccountImplicitly"
 
 表示操作，隐式创建账号。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Constants-ACTION_CREATE_ACCOUNT_IMPLICITLY = "createAccountImplicitly"--><!--Device-Constants-ACTION_CREATE_ACCOUNT_IMPLICITLY = "createAccountImplicitly"-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -68,9 +68,9 @@ ACTION_AUTH = "auth"
 
 表示操作，鉴权。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Constants-ACTION_AUTH = "auth"--><!--Device-Constants-ACTION_AUTH = "auth"-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -82,9 +82,9 @@ ACTION_VERIFY_CREDENTIAL = "verifyCredential"
 
 表示操作，验证凭据。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Constants-ACTION_VERIFY_CREDENTIAL = "verifyCredential"--><!--Device-Constants-ACTION_VERIFY_CREDENTIAL = "verifyCredential"-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -96,9 +96,9 @@ ACTION_SET_AUTHENTICATOR_PROPERTIES = "setAuthenticatorProperties"
 
 表示操作，设置认证器属性。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Constants-ACTION_SET_AUTHENTICATOR_PROPERTIES = "setAuthenticatorProperties"--><!--Device-Constants-ACTION_SET_AUTHENTICATOR_PROPERTIES = "setAuthenticatorProperties"-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -110,9 +110,9 @@ KEY_NAME = "name"
 
 表示键名，应用账号的名称。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-Constants-KEY_NAME = "name"--><!--Device-Constants-KEY_NAME = "name"-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -124,9 +124,9 @@ KEY_OWNER = "owner"
 
 表示键名，应用账号所有者的包名。最大长度为1024个字符。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-Constants-KEY_OWNER = "owner"--><!--Device-Constants-KEY_OWNER = "owner"-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -138,9 +138,9 @@ KEY_TOKEN = "token"
 
 表示键名，令牌。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-Constants-KEY_TOKEN = "token"--><!--Device-Constants-KEY_TOKEN = "token"-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -152,9 +152,9 @@ KEY_ACTION = "action"
 
 表示键名，操作。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-Constants-KEY_ACTION = "action"--><!--Device-Constants-KEY_ACTION = "action"-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -166,9 +166,9 @@ KEY_AUTH_TYPE = "authType"
 
 表示键名，鉴权类型。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-Constants-KEY_AUTH_TYPE = "authType"--><!--Device-Constants-KEY_AUTH_TYPE = "authType"-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -180,9 +180,9 @@ KEY_SESSION_ID = "sessionId"
 
 表示键名，会话标识。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-Constants-KEY_SESSION_ID = "sessionId"--><!--Device-Constants-KEY_SESSION_ID = "sessionId"-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -194,9 +194,9 @@ KEY_CALLER_PID = "callerPid"
 
 表示键名，调用方PID。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-Constants-KEY_CALLER_PID = "callerPid"--><!--Device-Constants-KEY_CALLER_PID = "callerPid"-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -208,9 +208,9 @@ KEY_CALLER_UID = "callerUid"
 
 表示键名，调用方UID。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-Constants-KEY_CALLER_UID = "callerUid"--><!--Device-Constants-KEY_CALLER_UID = "callerUid"-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -222,9 +222,9 @@ KEY_CALLER_BUNDLE_NAME = "callerBundleName"
 
 表示键名，调用方包名。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-Constants-KEY_CALLER_BUNDLE_NAME = "callerBundleName"--><!--Device-Constants-KEY_CALLER_BUNDLE_NAME = "callerBundleName"-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -236,9 +236,9 @@ KEY_REQUIRED_LABELS = "requiredLabels"
 
 表示键名，必需的标签。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Constants-KEY_REQUIRED_LABELS = "requiredLabels"--><!--Device-Constants-KEY_REQUIRED_LABELS = "requiredLabels"-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -250,9 +250,8 @@ KEY_BOOLEAN_RESULT = "booleanResult"
 
 表示键名，布尔返回值。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Constants-KEY_BOOLEAN_RESULT = "booleanResult"--><!--Device-Constants-KEY_BOOLEAN_RESULT = "booleanResult"-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 3
 
-<!--Device-unnamed-export declare class console--><!--Device-unnamed-export declare class console-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -18,17 +18,17 @@ static debug(message: string): void
 
 **起始版本：** 3
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-console-static debug(message: string): void--><!--Device-console-static debug(message: string): void-End-->
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| message | string | 是 | 要打印的文本信息。 @static |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| message | string | 是 |
 
 ## error
 
@@ -40,17 +40,17 @@ static error(message: string): void
 
 **起始版本：** 3
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-console-static error(message: string): void--><!--Device-console-static error(message: string): void-End-->
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| message | string | 是 | 要打印的错误信息。 @static |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| message | string | 是 |
 
 ## info
 
@@ -62,17 +62,17 @@ static info(message: string): void
 
 **起始版本：** 3
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-console-static info(message: string): void--><!--Device-console-static info(message: string): void-End-->
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| message | string | 是 | 要打印的文本信息。 @static |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| message | string | 是 |
 
 ## log
 
@@ -84,17 +84,17 @@ static log(message: string): void
 
 **起始版本：** 3
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-console-static log(message: string): void--><!--Device-console-static log(message: string): void-End-->
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| message | string | 是 | 要打印的文本信息。 @static |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| message | string | 是 |
 
 ## warn
 
@@ -106,15 +106,14 @@ static warn(message: string): void
 
 **起始版本：** 3
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-console-static warn(message: string): void--><!--Device-console-static warn(message: string): void-End-->
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| message | string | 是 | 要打印的警告信息。 @static |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| message | string | 是 |

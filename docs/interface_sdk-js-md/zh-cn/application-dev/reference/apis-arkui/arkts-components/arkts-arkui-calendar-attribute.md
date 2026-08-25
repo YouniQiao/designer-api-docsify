@@ -2,9 +2,9 @@
 
 **起始版本：** 7
 
-**废弃版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-unnamed-declare class CalendarAttribute--><!--Device-unnamed-declare class CalendarAttribute-End-->
+**废弃版本：** 20
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -14,4 +14,3 @@
 
 ```TypeScript
 ```
-

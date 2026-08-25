@@ -2,9 +2,9 @@
 
 Describes the information returned by the application during window rotation changes. The system uses the information to adjust the size of the current window rectangle. If the returned information is about the rotation change of the main window, the system does not change the size of the main window.There are limitations on the size of application windows and system windows. For details about specific restrictions and rules, see [resize](arkts-arkui-window-window-i.md#resize).
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-window-interface RotationChangeResult--><!--Device-window-interface RotationChangeResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -24,11 +24,11 @@ Type of window rectangle coordinate system.
 
 **Type:** RectType
 
-**Since:** 23
+**Since:** 19
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
-<!--Device-RotationChangeResult-rectType: RectType--><!--Device-RotationChangeResult-rectType: RectType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -42,11 +42,10 @@ Information about the window's rectangle relative to the screen or parent window
 
 **Type:** Rect
 
-**Since:** 23
+**Since:** 19
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
-<!--Device-RotationChangeResult-windowRect: Rect--><!--Device-RotationChangeResult-windowRect: Rect-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Window.SessionManager
-

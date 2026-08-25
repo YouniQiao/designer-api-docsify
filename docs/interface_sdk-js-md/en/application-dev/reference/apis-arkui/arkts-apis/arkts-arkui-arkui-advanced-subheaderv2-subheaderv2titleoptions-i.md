@@ -4,7 +4,7 @@ Defines the options for initializing a **SubHeaderV2Title** object.
 
 **Since:** 18
 
-<!--Device-unnamed-export interface SubHeaderV2TitleOptions--><!--Device-unnamed-export interface SubHeaderV2TitleOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,11 @@ Set the id of the title.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-SubHeaderV2TitleOptions-id?: string--><!--Device-SubHeaderV2TitleOptions-id?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,11 +46,11 @@ Primary title.Default value: **undefined**
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SubHeaderV2TitleOptions-primaryTitle?: ResourceStr--><!--Device-SubHeaderV2TitleOptions-primaryTitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,11 +66,11 @@ Text attributes of the primary title, such as the font color, font size, and fon
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SubHeaderV2TitleOptions-primaryTitleModifier?: TextModifier--><!--Device-SubHeaderV2TitleOptions-primaryTitleModifier?: TextModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,11 +86,11 @@ Secondary title.Default value: **undefined**
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SubHeaderV2TitleOptions-secondaryTitle?: ResourceStr--><!--Device-SubHeaderV2TitleOptions-secondaryTitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -106,11 +106,11 @@ Text attributes of the secondary title, such as the font color, font size, and f
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SubHeaderV2TitleOptions-secondaryTitleModifier?: TextModifier--><!--Device-SubHeaderV2TitleOptions-secondaryTitleModifier?: TextModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,11 +126,10 @@ Customized content to be read in the title.Default value: **undefined**If the va
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-SubHeaderV2TitleOptions-titleAccessibilityText?: ResourceStr--><!--Device-SubHeaderV2TitleOptions-titleAccessibilityText?: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

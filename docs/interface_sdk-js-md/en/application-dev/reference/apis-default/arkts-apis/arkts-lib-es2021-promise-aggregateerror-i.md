@@ -1,10 +1,6 @@
 # AggregateError
 
-**Inheritance/Implementation:** AggregateError extends Error
-
-**Since:** -1
-
-<!--Device-unnamed-interface AggregateError--><!--Device-unnamed-interface AggregateError-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -19,7 +15,4 @@ errors: any[]
 
 **Type:** any[]
 
-**Since:** -1
-
-<!--Device-AggregateError-errors: any[]--><!--Device-AggregateError-errors: any[]-End-->
-
+**ArkTS mode:** 

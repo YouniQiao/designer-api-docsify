@@ -6,7 +6,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-export class ScrollActionProposal--><!--Device-unnamed-export class ScrollActionProposal-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,20 +29,20 @@ constructor(node: FrameNode, distance: double)
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ScrollActionProposal-constructor(node: FrameNode, distance: double)--><!--Device-ScrollActionProposal-constructor(node: FrameNode, distance: double)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | FrameNode | 是 | 响应滚动动作的目标节点。 |
-| distance | double | 是 | 滚动距离。<br/>取值范围：[0, +∞)，小于0时按0处理。<br/>单位为vp。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [distance](#distance) | number | 是 |
 
 **示例**
 
@@ -122,15 +122,14 @@ distance?: double
 
 智慧手势滚动距离。取值范围：[0, +∞)，小于0时按0处理。单位为vp。
 
-**类型：** double
+**类型：** number
 
 **起始版本：** 26.0.0
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ScrollActionProposal-distance?: double--><!--Device-ScrollActionProposal-distance?: double-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

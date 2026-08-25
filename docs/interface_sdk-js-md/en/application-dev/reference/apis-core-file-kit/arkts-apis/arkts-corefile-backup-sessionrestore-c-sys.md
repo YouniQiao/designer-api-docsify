@@ -2,9 +2,9 @@
 
 Control class for restore procedure.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-backup-class SessionRestore--><!--Device-backup-class SessionRestore-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -18,17 +18,23 @@ import { backup } from '@kit.CoreFileKit';
 
 ## appendBundles
 
+ArkTS-Dyn:
+```TypeScript
+appendBundles(remoteCapabilitiesFd: number, bundlesToBackup: string[], infos?: string[]): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], infos?: string[]): Promise<void>
 ```
 
 Append new bundles and restoreInfos to be restore up during the restore.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BACKUP
-
-<!--Device-SessionRestore-appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], infos?: string[]): Promise<void>--><!--Device-SessionRestore-appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], infos?: string[]): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -36,29 +42,29 @@ Append new bundles and restoreInfos to be restore up during the restore.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| remoteCapabilitiesFd | int | Yes | Opened JSON file that stores remote device capabilities. You can use the getLocalCapabilities method to obtain the value. |
-| bundlesToBackup | string[] | Yes | Bundles to restore. |
-| infos | string[] | No | infos to restore |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| remoteCapabilitiesFd | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| bundlesToBackup | string[] | Yes |
+| infos | string[] | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
-| 13900005 | I/O error |
-| 13900011 | Out of memory |
-| 13900020 | Invalid argument |
-| 13900025 | No space left on device |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13600001 |
+| 13900001 |
+| 13900005 |
+| 13900011 |
+| 13900020 |
+| 13900025 |
+| 13900042 |
 
 **Examples**
 
@@ -548,17 +554,23 @@ incrementalBackupSession.appendBundles(incrementalBackupDataArray, infos).then((
 
 ## appendBundles
 
+ArkTS-Dyn:
+```TypeScript
+appendBundles(remoteCapabilitiesFd: number, bundlesToBackup: string[], callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], callback: AsyncCallback<void>): void
 ```
 
 Append new bundles to be restore up during the restore.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BACKUP
-
-<!--Device-SessionRestore-appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], callback: AsyncCallback<void>): void--><!--Device-SessionRestore-appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -566,23 +578,23 @@ Append new bundles to be restore up during the restore.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| remoteCapabilitiesFd | int | Yes | Opened JSON file that stores remote device capabilities. You can use the getLocalCapabilities method to obtain the value. |
-| bundlesToBackup | string[] | Yes | Bundles to restore. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Asynchronous callback to be called when appendBundles has finished. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| remoteCapabilitiesFd | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| bundlesToBackup | string[] | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
-| 13900005 | I/O error |
-| 13900011 | Out of memory |
-| 13900020 | Invalid argument |
-| 13900025 | No space left on device |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13600001 |
+| 13900001 |
+| 13900005 |
+| 13900011 |
+| 13900020 |
+| 13900025 |
+| 13900042 |
 
 **Examples**
 
@@ -590,17 +602,23 @@ See [appendBundles](#appendbundles)
 
 ## cancel
 
+ArkTS-Dyn:
+```TypeScript
+cancel(bundleName: string): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 cancel(bundleName: string): int
 ```
 
 cancel the application being restore.
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BACKUP
-
-<!--Device-SessionRestore-cancel(bundleName: string): int--><!--Device-SessionRestore-cancel(bundleName: string): int-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -608,23 +626,23 @@ cancel the application being restore.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleName | string | Yes | Set the bundleName of the application to be canceled. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bundleName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Return cancel result, 0 is success, 13500011 is fail, 13500012 is not have task. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -804,11 +822,11 @@ cleanBundleTempDir(bundleName: string): Promise<boolean>
 
 Provides an interface for the tool to clear temporary directories
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BACKUP
-
-<!--Device-SessionRestore-cleanBundleTempDir(bundleName: string): Promise<boolean>--><!--Device-SessionRestore-cleanBundleTempDir(bundleName: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -816,22 +834,22 @@ Provides an interface for the tool to clear temporary directories
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleName | string | Yes | Set the bundleName of the application to be cleaned. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bundleName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Return clean result, true is success, false is fail. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -1035,11 +1053,11 @@ constructor(callbacks: GeneralCallbacks)
 
 Constructor for obtaining the instance of the SessionBackup class.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BACKUP
-
-<!--Device-SessionRestore-constructor(callbacks: GeneralCallbacks)--><!--Device-SessionRestore-constructor(callbacks: GeneralCallbacks)-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -1047,9 +1065,9 @@ Constructor for obtaining the instance of the SessionBackup class.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbacks | [GeneralCallbacks](arkts-corefile-backup-generalcallbacks-i-sys.md) | Yes | Callbacks to be registered for the restore. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [callbacks](../../apis-ability-kit/arkts-apis/arkts-ability-appmanager-appstatefilter-i-sys.md) | [GeneralCallbacks](arkts-corefile-backup-generalcallbacks-i-sys.md) | Yes |
 
 **Examples**
 
@@ -1204,11 +1222,11 @@ Get the file handle of an APK file.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Required permissions:** ohos.permission.BACKUP
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SessionRestore-getApkFileHandle(path: string, fileName: string): Promise<FileData>--><!--Device-SessionRestore-getApkFileHandle(path: string, fileName: string): Promise<FileData>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -1216,26 +1234,26 @@ Get the file handle of an APK file.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| path | string | Yes | The path to the APK file. |
-| fileName | string | Yes | The name of the APK file. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| path | string | Yes |
+| fileName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | Promise used to return A FileData holding the file descriptor. The returned file is a temporal file that will be deleted automatically when closed. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
-| 13900020 | Invalid argument |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13600001 |
+| 13900001 |
+| 13900020 |
 
 ## getCompatibilityInfo
 
@@ -1245,11 +1263,11 @@ getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>
 
 Provides an interface for the tool to get compatibility info.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BACKUP
-
-<!--Device-SessionRestore-getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>--><!--Device-SessionRestore-getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -1257,23 +1275,23 @@ Provides an interface for the tool to get compatibility info.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleName | string | Yes | Set the bundleName of the application that need to get compatibilityInfo. |
-| extInfo | string | Yes | Indicates the extension information of application. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bundleName | string | Yes |
+| extInfo | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Return compatibility info. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -1474,11 +1492,11 @@ getFileHandle(fileMeta: FileMeta): Promise<void>
 
 Request to get a shared file from the service. This interface is part of the zero-copy feature. Developers could get the file through onFileReady callback. When the client accomplished the file, use publishFile to publish.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BACKUP
-
-<!--Device-SessionRestore-getFileHandle(fileMeta: FileMeta): Promise<void>--><!--Device-SessionRestore-getFileHandle(fileMeta: FileMeta): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -1486,24 +1504,24 @@ Request to get a shared file from the service. This interface is part of the zer
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes | Metadata of the file to be sent. Note that all the files should come from the backup procedure or the getLocalCapabilities method. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
-| 13900020 | Invalid argument |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13600001 |
+| 13900001 |
+| 13900020 |
+| 13900042 |
 
 **Examples**
 
@@ -1632,11 +1650,11 @@ getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 
 Request to get a shared file from the service. This interface is part of the zero-copy feature. Developers could get the file through onFileReady callback. When the client accomplished the file, use publishFile to publish.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BACKUP
-
-<!--Device-SessionRestore-getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void--><!--Device-SessionRestore-getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -1644,19 +1662,19 @@ Request to get a shared file from the service. This interface is part of the zer
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes | Metadata of the file to be sent. Note that all the files should come from the backup procedure or the getLocalCapabilities method. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Asynchronous callback to be called when getFileHandle has finished. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
-| 13900020 | Invalid argument |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13600001 |
+| 13900001 |
+| 13900020 |
+| 13900042 |
 
 **Examples**
 
@@ -1672,11 +1690,11 @@ Request to get shared files from the service. This interface is part of the zero
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Required permissions:** ohos.permission.BACKUP
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SessionRestore-getFileHandles(fileMeta: FileMeta): Promise<void>--><!--Device-SessionRestore-getFileHandles(fileMeta: FileMeta): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -1684,25 +1702,25 @@ Request to get shared files from the service. This interface is part of the zero
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes | Metadata of the file to be sent. Note that all the files should come from the backup procedure or the getLocalCapabilities method. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
-| 13900020 | Invalid argument |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13600001 |
+| 13900001 |
+| 13900020 |
 
 ## getLocalCapabilities
 
@@ -1712,11 +1730,11 @@ getLocalCapabilities(): Promise<FileData>
 
 Obtain a Json file that describes local capabilities.
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BACKUP
-
-<!--Device-SessionRestore-getLocalCapabilities(): Promise<FileData>--><!--Device-SessionRestore-getLocalCapabilities(): Promise<FileData>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -1724,20 +1742,20 @@ Obtain a Json file that describes local capabilities.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | A FileData holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
-| 13900020 | Invalid argument |
-| 13900042 | Internal error |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13600001 |
+| 13900001 |
+| 13900020 |
+| 13900042 |
 
 **Examples**
 
@@ -1761,7 +1779,7 @@ try {
 }
 ```
 
-The capability file can be obtained by using fileIo.stat of the @ohos.file.fs module. The following is an example of the capability file.
+The capability file can be obtained by using fileIo.stat of the [@ohos.file.fs](arkts-corefile-fileio-n.md) module. The following is an example of the capability file.
 
 ```TypeScript
 {
@@ -1797,7 +1815,7 @@ async function getLocalCapabilities() {
 }
 ```
 
-The capability file can be obtained by using fileIo.stat of the @ohos.file.fs module. The following is an example of the capability file.
+The capability file can be obtained by using fileIo.stat of the [@ohos.file.fs](arkts-corefile-fileio-n.md) module. The following is an example of the capability file.
 
 ```TypeScript
 {
@@ -1943,7 +1961,7 @@ async function getLocalCapabilitiesTest() {
 }
 ```
 
-The capability file can be obtained by using fileIo.stat of the @ohos.file.fs module. The following is an example of the capability file.
+The capability file can be obtained by using fileIo.stat of the [@ohos.file.fs](arkts-corefile-fileio-n.md) module. The following is an example of the capability file.
 
 ```TypeScript
 {
@@ -2068,7 +2086,7 @@ async function getLocalCapabilitiesTest() {
 }
 ```
 
-The capability file can be obtained by using fileIo.stat of the @ohos.file.fs module. The following is an example of the capability file.
+The capability file can be obtained by using fileIo.stat of the [@ohos.file.fs](arkts-corefile-fileio-n.md) module. The following is an example of the capability file.
 
 ```TypeScript
 {
@@ -2193,7 +2211,7 @@ async function getLocalCapabilitiesTest() {
 }
 ```
 
-The capability file can be obtained by using fileIo.stat of the @ohos.file.fs module. The following is an example of the capability file.
+The capability file can be obtained by using fileIo.stat of the [@ohos.file.fs](arkts-corefile-fileio-n.md) module. The following is an example of the capability file.
 
 ```TypeScript
 {
@@ -2222,11 +2240,11 @@ Migrate file from source path to destination path.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Required permissions:** ohos.permission.BACKUP
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SessionRestore-migrateFile(pathInfo: PathInfo, fileMeta: FileMeta): Promise<void>--><!--Device-SessionRestore-migrateFile(pathInfo: PathInfo, fileMeta: FileMeta): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -2234,26 +2252,26 @@ Migrate file from source path to destination path.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pathInfo | [PathInfo](arkts-corefile-backup-pathinfo-i-sys.md) | Yes | Path information containing source and destination paths. |
-| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes | File metadata containing bundleName and optional fileName. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| pathInfo | [PathInfo](arkts-corefile-backup-pathinfo-i-sys.md) | Yes |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
-| 13900020 | Invalid argument |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13600001 |
+| 13900001 |
+| 13900020 |
 
 ## publishFile
 
@@ -2263,11 +2281,11 @@ publishFile(fileMeta: FileMeta): Promise<void>
 
 Publish the file handle to the backup service to make the service aware that the file's content is ready. This interface is part of the zero-copy feature.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BACKUP
-
-<!--Device-SessionRestore-publishFile(fileMeta: FileMeta): Promise<void>--><!--Device-SessionRestore-publishFile(fileMeta: FileMeta): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -2275,24 +2293,24 @@ Publish the file handle to the backup service to make the service aware that the
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes | Metadata of the file to be sent. Make sure that the backup framework holds this file by calling getFileHandle. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
-| 13900020 | Invalid argument |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13600001 |
+| 13900001 |
+| 13900020 |
+| 13900042 |
 
 **Examples**
 
@@ -2450,11 +2468,11 @@ publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 
 Publish the file handle to the backup service to make the service aware that the file's content is ready. This interface is part of the zero-copy feature.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BACKUP
-
-<!--Device-SessionRestore-publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void--><!--Device-SessionRestore-publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -2462,19 +2480,19 @@ Publish the file handle to the backup service to make the service aware that the
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes | Metadata of the file to be sent. Make sure that the backup framework holds this file by calling getFileHandle. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Asynchronous callback to be called when publishFile has finished. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
-| 13900020 | Invalid argument |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13600001 |
+| 13900001 |
+| 13900020 |
+| 13900042 |
 
 **Examples**
 
@@ -2488,11 +2506,11 @@ release(): Promise<void>
 
 End restore process
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BACKUP
-
-<!--Device-SessionRestore-release(): Promise<void>--><!--Device-SessionRestore-release(): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -2500,21 +2518,21 @@ End restore process
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
-| 13900005 | I/O error |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| 13600001 |
+| 13900001 |
+| 13900005 |
+| 13900042 |
 
 **Examples**
 
@@ -2691,4 +2709,3 @@ let incrementalBackupSession = new backup.IncrementalBackupSession(generalCallba
 incrementalBackupSession.release(); // End the incremental backup process.
 console.info('release success');
 ```
-

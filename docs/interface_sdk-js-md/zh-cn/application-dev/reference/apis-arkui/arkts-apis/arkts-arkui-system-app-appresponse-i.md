@@ -4,7 +4,7 @@
 
 **起始版本：** 3
 
-<!--Device-unnamed-export interface AppResponse--><!--Device-unnamed-export interface AppResponse-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -26,9 +26,9 @@ appID: string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-AppResponse-appID: string--><!--Device-AppResponse-appID: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,9 +44,9 @@ appName: string
 
 **起始版本：** 3
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-AppResponse-appName: string--><!--Device-AppResponse-appName: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -62,9 +62,9 @@ versionCode: number
 
 **起始版本：** 3
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-AppResponse-versionCode: number--><!--Device-AppResponse-versionCode: number-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -80,9 +80,8 @@ versionName: string
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AppResponse-versionName: string--><!--Device-AppResponse-versionName: string-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
-

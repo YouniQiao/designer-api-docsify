@@ -5,11 +5,12 @@ Text组件的控制器。
 ## 导入对象
 
 ```ts
-controller: TextController = new TextController() ```
+controller: TextController = new TextController()
+```
 
 **起始版本：** 11
 
-<!--Device-unnamed-declare class TextController--><!--Device-unnamed-declare class TextController-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +29,11 @@ closeSelectionMenu(): void
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextController-closeSelectionMenu(): void--><!--Device-TextController-closeSelectionMenu(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,19 +47,19 @@ getLayoutManager(): LayoutManager
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextController-getLayoutManager(): LayoutManager--><!--Device-TextController-getLayoutManager(): LayoutManager-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| LayoutManager | 布局管理器对象，用于获取文本布局信息，包括行数、字形位置、行信息、字符绘制区域等。 |
+| 类型 |
+| --- |
+| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) |
 
 ## setStyledString
 
@@ -70,19 +71,19 @@ setStyledString(value: StyledString): void
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextController-setStyledString(value: StyledString): void--><!--Device-TextController-setStyledString(value: StyledString): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | StyledString | 是 | 属性字符串。 <br>**说明：** <br>StyledString的子类MutableStyledString也可以作为入参值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 |
 
 ## setTextSelection
 
@@ -103,19 +104,18 @@ setTextSelection(selectionStart: number | undefined, selectionEnd: number | unde
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextController-setTextSelection(selectionStart: number | undefined, selectionEnd: number | undefined,                   options?: SelectionOptions): void--><!--Device-TextController-setTextSelection(selectionStart: number | undefined, selectionEnd: number | undefined,                   options?: SelectionOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| selectionStart | number \| undefined | 是 | 文本选择区域起始位置。 <br>取值范围：[0, +∞），值为负数或undefined时按0处理。 |
-| selectionEnd | number \| undefined | 是 | 文本选择区域结束位置。 <br>取值范围：[0, +∞），值为负数或undefined时按0处理。 |
-| options | SelectionOptions | 否 | 选中文字时的配置。 <br>默认值：SelectionOptions中MenuPolicy.DEFAULT |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| selectionStart | number \| undefined | 是 |
+| selectionEnd | number \| undefined | 是 |
+| options | [SelectionOptions](../arkts-apis/arkts-arkui-common-selectionoptions-i.md) | 否 |

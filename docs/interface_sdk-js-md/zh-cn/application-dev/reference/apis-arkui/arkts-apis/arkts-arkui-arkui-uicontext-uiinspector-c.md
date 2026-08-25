@@ -4,7 +4,7 @@ class UIInspector提供注册组件布局和组件绘制送显完成回调通知
 
 **起始版本：** 10
 
-<!--Device-unnamed-export class UIInspector--><!--Device-unnamed-export class UIInspector-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,25 +27,25 @@ createComponentObserver(id: string): inspector.ComponentObserver
 
 **起始版本：** 10
 
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-UIInspector-createComponentObserver(id: string): inspector.ComponentObserver--><!--Device-UIInspector-createComponentObserver(id: string): inspector.ComponentObserver-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| id | string | 是 | 指定组件id，该id通过通用属性id或者key设置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| id | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| inspector.ComponentObserver | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
+| 类型 |
+| --- |
+| inspector.ComponentObserver |
 
 **示例**
 
@@ -147,27 +147,26 @@ createComponentObserver(id: string | number): inspector.ComponentObserver
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-UIInspector-createComponentObserver(id: string | number): inspector.ComponentObserver--><!--Device-UIInspector-createComponentObserver(id: string | number): inspector.ComponentObserver-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| id | string \| number | 是 | 类型为string时，为指定的组件id，该id通过通用属性id或者key设置。使用组件id创建监听句柄时，请确保该id对应的组件已经存在，否则后续监听无法生效。类型为number时，为系统为节点分配的唯一标识UniqueID，UniqueID通过getUniqueId获取。使用UniqueID创建监听句柄时，请确保UniqueID对应的节点已经存在，否则后续监听无法生效。number的取值范围为1~2147483647的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| id | string \| number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| inspector.ComponentObserver | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
+| 类型 |
+| --- |
+| inspector.ComponentObserver |
 
 **示例**
 
 参见 [createComponentObserver](#createcomponentobserver)
-

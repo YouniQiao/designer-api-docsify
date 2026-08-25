@@ -1,8 +1,6 @@
 # DateTimeFormatPart
 
-**Since:** -1
-
-<!--Device-Intl-interface DateTimeFormatPart--><!--Device-Intl-interface DateTimeFormatPart-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,9 +15,7 @@ type: DateTimeFormatPartTypes
 
 **Type:** DateTimeFormatPartTypes
 
-**Since:** -1
-
-<!--Device-DateTimeFormatPart-type: DateTimeFormatPartTypes--><!--Device-DateTimeFormatPart-type: DateTimeFormatPartTypes-End-->
+**ArkTS mode:** 
 
 ## value
 
@@ -29,7 +25,4 @@ value: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-DateTimeFormatPart-value: string--><!--Device-DateTimeFormatPart-value: string-End-->
-
+**ArkTS mode:** 

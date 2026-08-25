@@ -2,9 +2,9 @@
 
 Type of the primary mouse button.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-pointer-enum PrimaryButton--><!--Device-pointer-enum PrimaryButton-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -16,9 +16,9 @@ LEFT = 0
 
 Left button.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-PrimaryButton-LEFT = 0--><!--Device-PrimaryButton-LEFT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -30,9 +30,8 @@ RIGHT = 1
 
 Right button.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-PrimaryButton-RIGHT = 1--><!--Device-PrimaryButton-RIGHT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
-

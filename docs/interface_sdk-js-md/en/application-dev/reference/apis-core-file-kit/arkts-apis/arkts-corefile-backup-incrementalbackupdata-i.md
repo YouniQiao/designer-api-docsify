@@ -4,9 +4,9 @@ Corresponds to an incremental application, including its last incremental time a
 
 **Inheritance/Implementation:** IncrementalBackupData extends [IncrementalBackupTime](arkts-corefile-backup-incrementalbackuptime-i-sys.md), [FileManifestData](arkts-corefile-backup-filemanifestdata-i-sys.md), [BackupParams](arkts-corefile-backup-backupparams-i-sys.md), [BackupPriority](arkts-corefile-backup-backuppriority-i-sys.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-backup-interface IncrementalBackupData--><!--Device-backup-interface IncrementalBackupData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -17,4 +17,3 @@ Corresponds to an incremental application, including its last incremental time a
 ```TypeScript
 import { backup } from '@kit.CoreFileKit';
 ```
-

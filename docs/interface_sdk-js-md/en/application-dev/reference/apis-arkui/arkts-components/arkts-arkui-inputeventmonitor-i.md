@@ -10,11 +10,11 @@ Input event monitor identity object.This object is created and returned by the s
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-unnamed-declare interface InputEventMonitor--><!--Device-unnamed-declare interface InputEventMonitor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,4 +22,3 @@ Input event monitor identity object.This object is created and returned by the s
 
 ```TypeScript
 ```
-

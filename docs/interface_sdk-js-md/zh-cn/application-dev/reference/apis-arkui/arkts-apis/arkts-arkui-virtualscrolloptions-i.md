@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-interface VirtualScrollOptions--><!--Device-unnamed-interface VirtualScrollOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,19 +24,19 @@ onLazyLoading?(index: number): void
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-VirtualScrollOptions-onLazyLoading?(index: number): void--><!--Device-VirtualScrollOptions-onLazyLoading?(index: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | number | 是 | 需要加载的数据项对应的索引。 <br>取值范围：自然数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
 
 **示例**
 
@@ -65,19 +65,19 @@ onTotalCount?(): number
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-VirtualScrollOptions-onTotalCount?(): number--><!--Device-VirtualScrollOptions-onTotalCount?(): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 期望加载的数据项总数。 <br>取值范围：自然数。 |
+| 类型 |
+| --- |
+| number |
 
 ## memoryOptimizationStrategy
 
@@ -91,11 +91,11 @@ Repeat的内存优化策略。该参数在创建Repeat时设定，不支持动�
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-VirtualScrollOptions-memoryOptimizationStrategy?: RepeatMemOptStrategy--><!--Device-VirtualScrollOptions-memoryOptimizationStrategy?: RepeatMemOptStrategy-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -111,11 +111,11 @@ reusable?: boolean
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-VirtualScrollOptions-reusable?: boolean--><!--Device-VirtualScrollOptions-reusable?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -131,11 +131,10 @@ totalCount?: number
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-VirtualScrollOptions-totalCount?: number--><!--Device-VirtualScrollOptions-totalCount?: number-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

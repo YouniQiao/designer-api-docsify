@@ -2,9 +2,9 @@
 
 应用进程内存限制。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-hidebug-interface MemoryLimit--><!--Device-hidebug-interface MemoryLimit-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -24,9 +24,9 @@ rssLimit: bigint
 
 **类型：** bigint
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-MemoryLimit-rssLimit: bigint--><!--Device-MemoryLimit-rssLimit: bigint-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -40,9 +40,9 @@ vmHeapLimit: bigint
 
 **类型：** bigint
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-MemoryLimit-vmHeapLimit: bigint--><!--Device-MemoryLimit-vmHeapLimit: bigint-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -56,9 +56,9 @@ vmTotalHeapSize: bigint
 
 **类型：** bigint
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-MemoryLimit-vmTotalHeapSize: bigint--><!--Device-MemoryLimit-vmTotalHeapSize: bigint-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -72,9 +72,8 @@ vssLimit: bigint
 
 **类型：** bigint
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-MemoryLimit-vssLimit: bigint--><!--Device-MemoryLimit-vssLimit: bigint-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
-

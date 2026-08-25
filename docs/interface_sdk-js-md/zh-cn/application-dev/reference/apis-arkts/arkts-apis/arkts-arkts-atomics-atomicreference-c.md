@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export class AtomicReference--><!--Device-unnamed-export class AtomicReference-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,26 +23,24 @@ compareAndSwap(expected: T, ref: T): T
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicReference-compareAndSwap(expected: T, ref: T): T--><!--Device-AtomicReference-compareAndSwap(expected: T, ref: T): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| expected | T | 是 | 预期的当前引用值。 |
-| ref | T | 是 | 匹配成功时要写入的新引用值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| expected | T | 是 |
+| ref | T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 修改前的旧引用值。 |
+| 类型 |
+| --- |
+| T |
 
 ## constructor
 
@@ -56,19 +52,17 @@ constructor(ref: T)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicReference-constructor(ref: T)--><!--Device-AtomicReference-constructor(ref: T)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| ref | T | 是 | 初始引用值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| ref | T | 是 |
 
 ## exchange
 
@@ -80,25 +74,23 @@ exchange(ref: T): T
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicReference-exchange(ref: T): T--><!--Device-AtomicReference-exchange(ref: T): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| ref | T | 是 | 要写入的新引用值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| ref | T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 更新前的旧引用值。 |
+| 类型 |
+| --- |
+| T |
 
 ## isLockFree
 
@@ -110,19 +102,17 @@ static isLockFree(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicReference-static isLockFree(): boolean--><!--Device-AtomicReference-static isLockFree(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true表示无锁实现，false表示内部可能使用阻塞式同步机制。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## load
 
@@ -134,19 +124,17 @@ load(): T
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicReference-load(): T--><!--Device-AtomicReference-load(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 当前保存的引用值。 |
+| 类型 |
+| --- |
+| T |
 
 ## store
 
@@ -158,17 +146,14 @@ store(ref: T): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicReference-store(ref: T): void--><!--Device-AtomicReference-store(ref: T): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| ref | T | 是 | 要写入的新引用值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| ref | T | 是 |

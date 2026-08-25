@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-uiEffect-interface BlurBubblesRiseEffectParam--><!--Device-uiEffect-interface BlurBubblesRiseEffectParam-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -19,18 +19,18 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 ## blurIntensity
 
 ```TypeScript
-blurIntensity: double
+blurIntensity: number
 ```
 
 模糊气泡上升效果的高斯模糊强度。 取值范围为[0, 1]，超出边界会在实现时自动截断。0表示无模糊，1表示最大模糊程度。
 
-**类型：** double
+**类型：** number
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-BlurBubblesRiseEffectParam-blurIntensity: double--><!--Device-BlurBubblesRiseEffectParam-blurIntensity: double-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -48,9 +48,9 @@ maskImage: image.PixelMap
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-BlurBubblesRiseEffectParam-maskImage: image.PixelMap--><!--Device-BlurBubblesRiseEffectParam-maskImage: image.PixelMap-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -59,18 +59,18 @@ maskImage: image.PixelMap
 ## mixStrength
 
 ```TypeScript
-mixStrength: double
+mixStrength: number
 ```
 
 原图与模糊图的混合强度。 取值范围为[0, 1]，超出边界会在实现时自动截断。0对应原图，1对应模糊后的图像。
 
-**类型：** double
+**类型：** number
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-BlurBubblesRiseEffectParam-mixStrength: double--><!--Device-BlurBubblesRiseEffectParam-mixStrength: double-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -79,20 +79,19 @@ mixStrength: double
 ## progress
 
 ```TypeScript
-progress: double
+progress: number
 ```
 
 模糊气泡上升效果的动画进度。 取值范围为[0, 1]，超出边界会在实现时自动截断。0对应动画开始，1对应动画结束。
 
-**类型：** double
+**类型：** number
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-BlurBubblesRiseEffectParam-progress: double--><!--Device-BlurBubblesRiseEffectParam-progress: double-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
-

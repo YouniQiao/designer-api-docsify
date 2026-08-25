@@ -10,22 +10,21 @@ import { Colors, CustomColors, Theme, ThemeControl, CustomTheme, CustomDarkColor
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [ThemeControl](arkts-arkui-arkui-theme-themecontrol-c.md) | Class ThemeControl provides the Theme management for whole Ability and pages. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ThemeControl](arkts-arkui-arkui-theme-themecontrol-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [Colors](arkts-arkui-arkui-theme-colors-i.md) | Defines the struct of Colors. |
-| [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md) | Defines the struct of CustomTheme. |
-| [Theme](arkts-arkui-arkui-theme-theme-i.md) | Defines the struct of Theme. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Colors](arkts-arkui-arkui-theme-colors-i.md) |
+| [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md) |
+| [Theme](arkts-arkui-arkui-theme-theme-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [CustomColors](arkts-arkui-customcolors-t.md) | Defines the struct of CustomColors. |
-| [CustomDarkColors](arkts-arkui-customdarkcolors-t.md) | Defines the struct of CustomDarkColors. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CustomColors](arkts-arkui-customcolors-t.md) |
+| [CustomDarkColors](arkts-arkui-customdarkcolors-t.md) |

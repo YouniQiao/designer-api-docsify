@@ -16,25 +16,25 @@ Deletes the ad JavaScript object injected through **registerWebAdInterface** (th
 
 **Since:** 16
 
-**Atomic service API:** This API can be used in atomic services since API version 16.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
-<!--Device-advertising-function deleteWebAdInterface(controller: web_webview.WebviewController, needRefresh: boolean): void--><!--Device-advertising-function deleteWebAdInterface(controller: web_webview.WebviewController, needRefresh: boolean): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 16.
 
 **System capability:** SystemCapability.Advertising.Ads
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| controller | web_webview.WebviewController | Yes | Web component controller. |
-| needRefresh | boolean | Yes | Whether to refresh the page (true: yes; false: no). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| controller | web_webview.WebviewController | Yes |
+| needRefresh | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
+| Error Code ID |
+| --- |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) |
 
 **Examples**
 
@@ -61,4 +61,3 @@ struct Index {
   }
 }
 ```
-

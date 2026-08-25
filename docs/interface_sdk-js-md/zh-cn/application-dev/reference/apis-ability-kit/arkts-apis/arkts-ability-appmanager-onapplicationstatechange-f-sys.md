@@ -16,9 +16,9 @@ function onApplicationStateChange(observer: ApplicationStateObserver, filter: Ap
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-appManager-function onApplicationStateChange(observer: ApplicationStateObserver, filter: AppStateFilter): int--><!--Device-appManager-function onApplicationStateChange(observer: ApplicationStateObserver, filter: AppStateFilter): int-End-->
+**需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -26,24 +26,24 @@ function onApplicationStateChange(observer: ApplicationStateObserver, filter: Ap
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| observer | ApplicationStateObserver | 是 | 应用状态监听器，用于监听应用的生命周期变化。 |
-| filter | [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md) | 是 | 应用生命周期变化事件的过滤器。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | 是 |
+| filter | [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 已注册监听器ID。 |
+| 类型 |
+| --- |
+| int |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service failed to communicate with dependency module. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 **示例**
 
@@ -151,4 +151,3 @@ try {
   console.error(`[appManager] error: ${code}, ${message}`);
 }
 ```
-

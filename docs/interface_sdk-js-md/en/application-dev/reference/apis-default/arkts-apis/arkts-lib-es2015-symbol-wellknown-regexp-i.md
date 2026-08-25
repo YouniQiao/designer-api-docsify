@@ -1,8 +1,6 @@
 # RegExp
 
-**Since:** -1
-
-<!--Device-unnamed-interface RegExp--><!--Device-unnamed-interface RegExp-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,20 +15,18 @@
 
 Matches a string with this regular expression, and returns an array containing the results of that search.
 
-**Since:** -1
-
-<!--Device-RegExp-[Symbol.match](string: string): RegExpMatchArray | null--><!--Device-RegExp-[Symbol.match](string: string): RegExpMatchArray | null-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| string | string | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| string | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## [Symbol.replace]
 
 ```TypeScript
@@ -39,21 +35,19 @@ Matches a string with this regular expression, and returns an array containing t
 
 Replaces text in a string, using this regular expression.
 
-**Since:** -1
-
-<!--Device-RegExp-[Symbol.replace](string: string, replaceValue: string): string--><!--Device-RegExp-[Symbol.replace](string: string, replaceValue: string): string-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| string | string | Yes |  |
-| replaceValue | string | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| string | string | Yes |
+| replaceValue | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## [Symbol.replace]
 
 ```TypeScript
@@ -62,21 +56,19 @@ Replaces text in a string, using this regular expression.
 
 Replaces text in a string, using this regular expression.
 
-**Since:** -1
-
-<!--Device-RegExp-[Symbol.replace](string: string, replacer: (substring: string, ...args: any[]) => string): string--><!--Device-RegExp-[Symbol.replace](string: string, replacer: (substring: string, ...args: any[]) => string): string-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| string | string | Yes |  |
-| replacer | (substring: string, ...args: any[]) =&gt; string | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| string | string | Yes |
+| replacer | (substring: string, ...args: any[]) = & gt; string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## [Symbol.search]
 
 ```TypeScript
@@ -85,20 +77,18 @@ Replaces text in a string, using this regular expression.
 
 Finds the position beginning first substring match in a regular expression search using this regular expression.
 
-**Since:** -1
-
-<!--Device-RegExp-[Symbol.search](string: string): number--><!--Device-RegExp-[Symbol.search](string: string): number-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| string | string | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| string | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## [Symbol.split]
 
 ```TypeScript
@@ -107,18 +97,16 @@ Finds the position beginning first substring match in a regular expression searc
 
 Returns an array of substrings that were delimited by strings in the original input that match against this regular expression.If the regular expression contains capturing parentheses, then each time this regular expression matches, the results (including any undefined results) of the capturing parentheses are spliced.
 
-**Since:** -1
-
-<!--Device-RegExp-[Symbol.split](string: string, limit?: number): string[]--><!--Device-RegExp-[Symbol.split](string: string, limit?: number): string[]-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| string | string | Yes |  |
-| limit | number | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| string | string | Yes |
+| limit | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

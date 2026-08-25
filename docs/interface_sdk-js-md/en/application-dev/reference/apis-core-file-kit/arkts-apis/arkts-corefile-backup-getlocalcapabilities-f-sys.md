@@ -14,11 +14,11 @@ function getLocalCapabilities(): Promise<FileData>
 
 Obtain a Json file that describes local capabilities.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BACKUP
-
-<!--Device-backup-function getLocalCapabilities(): Promise<FileData>--><!--Device-backup-function getLocalCapabilities(): Promise<FileData>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -26,19 +26,19 @@ Obtain a Json file that describes local capabilities.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | A FileData holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13600001 | IPC error |
-| 13900005 | I/O error |
-| 13900011 | Out of memory |
-| 13900025 | No space left on device |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13600001 |
+| 13900005 |
+| 13900011 |
+| 13900025 |
+| 13900042 |
 
 **Examples**
 
@@ -62,7 +62,7 @@ try {
 }
 ```
 
-The capability file can be obtained by using fileIo.stat of the @ohos.file.fs module. The following is an example of the capability file.
+The capability file can be obtained by using fileIo.stat of the [@ohos.file.fs](arkts-corefile-fileio-n.md) module. The following is an example of the capability file.
 
 ```TypeScript
 {
@@ -98,7 +98,7 @@ async function getLocalCapabilities() {
 }
 ```
 
-The capability file can be obtained by using fileIo.stat of the @ohos.file.fs module. The following is an example of the capability file.
+The capability file can be obtained by using fileIo.stat of the [@ohos.file.fs](arkts-corefile-fileio-n.md) module. The following is an example of the capability file.
 
 ```TypeScript
 {
@@ -244,7 +244,7 @@ async function getLocalCapabilitiesTest() {
 }
 ```
 
-The capability file can be obtained by using fileIo.stat of the @ohos.file.fs module. The following is an example of the capability file.
+The capability file can be obtained by using fileIo.stat of the [@ohos.file.fs](arkts-corefile-fileio-n.md) module. The following is an example of the capability file.
 
 ```TypeScript
 {
@@ -369,7 +369,7 @@ async function getLocalCapabilitiesTest() {
 }
 ```
 
-The capability file can be obtained by using fileIo.stat of the @ohos.file.fs module. The following is an example of the capability file.
+The capability file can be obtained by using fileIo.stat of the [@ohos.file.fs](arkts-corefile-fileio-n.md) module. The following is an example of the capability file.
 
 ```TypeScript
 {
@@ -494,7 +494,7 @@ async function getLocalCapabilitiesTest() {
 }
 ```
 
-The capability file can be obtained by using fileIo.stat of the @ohos.file.fs module. The following is an example of the capability file.
+The capability file can be obtained by using fileIo.stat of the [@ohos.file.fs](arkts-corefile-fileio-n.md) module. The following is an example of the capability file.
 
 ```TypeScript
 {
@@ -522,11 +522,11 @@ function getLocalCapabilities(callback: AsyncCallback<FileData>): void
 
 Obtain a Json file that describes local capabilities.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BACKUP
-
-<!--Device-backup-function getLocalCapabilities(callback: AsyncCallback<FileData>): void--><!--Device-backup-function getLocalCapabilities(callback: AsyncCallback<FileData>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -534,19 +534,19 @@ Obtain a Json file that describes local capabilities.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | Yes | A callback method, the argument FileData will holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13600001 | IPC error |
-| 13900005 | I/O error |
-| 13900011 | Out of memory |
-| 13900025 | No space left on device |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13600001 |
+| 13900005 |
+| 13900011 |
+| 13900025 |
+| 13900042 |
 
 **Examples**
 
@@ -561,11 +561,11 @@ function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<F
 
 Obtain a json file that describes local capabilities.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BACKUP
-
-<!--Device-backup-function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<FileData>--><!--Device-backup-function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<FileData>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -573,30 +573,29 @@ Obtain a json file that describes local capabilities.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dataList | Array&lt;[IncrementalBackupTime](arkts-corefile-backup-incrementalbackuptime-i-sys.md)&gt; | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [dataList](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponent-s.md) | Array&lt;[IncrementalBackupTime](arkts-corefile-backup-incrementalbackuptime-i-sys.md)&gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | A FileData holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| 13600001 | IPC error |
-| 13900005 | I/O error |
-| 13900011 | Out of memory |
-| 13900025 | No space left on device |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| 13600001 |
+| 13900005 |
+| 13900011 |
+| 13900025 |
+| 13900042 |
 
 **Examples**
 
 See [getLocalCapabilities](#getlocalcapabilities)
-

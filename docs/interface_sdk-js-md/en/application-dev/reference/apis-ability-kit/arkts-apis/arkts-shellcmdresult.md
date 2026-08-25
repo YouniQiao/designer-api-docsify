@@ -4,7 +4,6 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md) | The **ShellCmdResult** module provides the shell command execution result. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md) |

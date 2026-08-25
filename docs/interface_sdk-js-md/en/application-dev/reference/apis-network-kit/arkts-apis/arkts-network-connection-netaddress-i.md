@@ -2,9 +2,9 @@
 
 Defines a network address.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-connection-export interface NetAddress--><!--Device-connection-export interface NetAddress-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -24,11 +24,11 @@ Network address.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NetAddress-address: string--><!--Device-NetAddress-address: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -40,13 +40,13 @@ family?: int
 
 Address family identifier. The value is **1** for IPv4 and **2** for IPv6. The default value is **1**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NetAddress-family?: int--><!--Device-NetAddress-family?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -58,13 +58,12 @@ port?: int
 
 Port number. The value range is [0, 65535]. The default value is **0**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-NetAddress-port?: int--><!--Device-NetAddress-port?: int-End-->
-
 **System capability:** SystemCapability.Communication.NetManager.Core
-

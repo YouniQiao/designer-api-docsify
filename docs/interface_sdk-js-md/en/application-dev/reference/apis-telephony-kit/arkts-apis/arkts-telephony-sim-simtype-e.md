@@ -2,9 +2,9 @@
 
 Enumerates the SIM card types.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-sim-export enum SimType--><!--Device-sim-export enum SimType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -16,9 +16,9 @@ PSIM = 0
 
 Physical SIM card.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-SimType-PSIM = 0--><!--Device-SimType-PSIM = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -30,9 +30,8 @@ ESIM = 1
 
 eSIM card.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-SimType-ESIM = 1--><!--Device-SimType-ESIM = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
-

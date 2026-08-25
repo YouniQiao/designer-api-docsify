@@ -1,0 +1,45 @@
+# SizeOptions
+
+宽高尺寸类型，用于描述组件布局时的宽高尺寸大小。@interface SizeOptions
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## height
+
+```TypeScript
+height?: Length
+```
+
+元素高度。
+
+**类型：** [Length](arkts-arkui-length-t.md)
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## width
+
+```TypeScript
+width?: Length
+```
+
+元素宽度。
+
+**类型：** [Length](arkts-arkui-length-t.md)
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full

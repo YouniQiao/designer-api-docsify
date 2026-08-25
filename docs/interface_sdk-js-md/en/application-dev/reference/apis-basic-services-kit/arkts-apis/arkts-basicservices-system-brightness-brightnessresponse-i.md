@@ -4,9 +4,9 @@ Defines a response that returns the screen brightness.
 
 **Since:** 3
 
-**Deprecated since:** 7
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface BrightnessResponse--><!--Device-unnamed-export interface BrightnessResponse-End-->
+**Deprecated since:** 7
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -28,9 +28,8 @@ Screen brightness. The value ranges from **1** to **255**.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 7
 
-<!--Device-BrightnessResponse-value: number--><!--Device-BrightnessResponse-value: number-End-->
-
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
-

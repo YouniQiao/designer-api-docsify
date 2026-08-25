@@ -2,9 +2,9 @@
 
 属性转换控制器。使用其子接口之前得先创建系统窗口，参照示例代码。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-window-interface TransitionController--><!--Device-window-interface TransitionController-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -26,7 +26,7 @@ animationForHidden(context: TransitionContext): void
 
 **起始版本：** 9
 
-<!--Device-TransitionController-animationForHidden(context: TransitionContext): void--><!--Device-TransitionController-animationForHidden(context: TransitionContext): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -34,16 +34,16 @@ animationForHidden(context: TransitionContext): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [TransitionContext](arkts-arkui-window-transitioncontext-i-sys.md) | 是 | 属性转换时的上下文。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [TransitionContext](arkts-arkui-window-transitioncontext-i-sys.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -103,6 +103,26 @@ try {
 }
 ```
 
+## animationForHidden
+
+```TypeScript
+animationForHidden?: TransitionControllerCallback
+```
+
+窗口隐藏时的自定义动画配置。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**系统接口：** 此接口为系统接口。
+
+**示例**
+
+参见 [animationForHidden](#animationforhidden)
+
 ## animationForShown
 
 ```TypeScript
@@ -113,7 +133,7 @@ animationForShown(context: TransitionContext): void
 
 **起始版本：** 9
 
-<!--Device-TransitionController-animationForShown(context: TransitionContext): void--><!--Device-TransitionController-animationForShown(context: TransitionContext): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -121,16 +141,16 @@ animationForShown(context: TransitionContext): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [TransitionContext](arkts-arkui-window-transitioncontext-i-sys.md) | 是 | 属性转换时的上下文。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [TransitionContext](arkts-arkui-window-transitioncontext-i-sys.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -190,26 +210,6 @@ try {
 }
 ```
 
-## animationForHidden
-
-```TypeScript
-animationForHidden?: TransitionControllerCallback
-```
-
-窗口隐藏时的自定义动画配置。
-
-**类型：** [TransitionControllerCallback](arkts-arkui-transitioncontrollercallback-t-sys.md)
-
-**默认值：** undefined
-
-**起始版本：** 23
-
-<!--Device-TransitionController-animationForHidden?: TransitionControllerCallback--><!--Device-TransitionController-animationForHidden?: TransitionControllerCallback-End-->
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**系统接口：** 此接口为系统接口。
-
 ## animationForShown
 
 ```TypeScript
@@ -218,17 +218,17 @@ animationForShown?: TransitionControllerCallback
 
 窗口显示时的自定义动画配置。
 
-**类型：** [TransitionControllerCallback](arkts-arkui-transitioncontrollercallback-t-sys.md)
-
-**默认值：** undefined
-
 **起始版本：** 23
 
-<!--Device-TransitionController-animationForShown?: TransitionControllerCallback--><!--Device-TransitionController-animationForShown?: TransitionControllerCallback-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
+
+**示例**
+
+参见 [animationForShown](#animationforshown)
 
 **示例**
 
@@ -249,4 +249,3 @@ promise.then((data) => {
   console.error(`Failed to create the Window. Cause code: ${err.code}, message: ${err.message}`);
 });
 ```
-

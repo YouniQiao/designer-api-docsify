@@ -4,9 +4,9 @@
 
 **起始版本：** 3
 
-**废弃版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-unnamed-export interface FileReadArrayBufferOption--><!--Device-unnamed-export interface FileReadArrayBufferOption-End-->
+**废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -23,13 +23,11 @@ complete?: () => void
 
 接口调用结束的回调函数。
 
-**类型：** () =&gt; void
-
 **起始版本：** 3
 
-**废弃版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-FileReadArrayBufferOption-complete?: () => void--><!--Device-FileReadArrayBufferOption-complete?: () => void-End-->
+**废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -41,15 +39,42 @@ fail?: (data: string, code: number) => void
 
 接口调用失败的回调函数。
 
-**类型：** (data: string, code: number) =&gt; void
-
 **起始版本：** 3
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 10
 
-<!--Device-FileReadArrayBufferOption-fail?: (data: string, code: number) => void--><!--Device-FileReadArrayBufferOption-fail?: (data: string, code: number) => void-End-->
+**系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | string | 是 |
+| code | number | 是 |
+
+## success
+
+```TypeScript
+success?: (data: FileReadArrayBufferResponse) => void
+```
+
+接口调用成功的回调函数。返回[FileReadArrayBufferResponse](arkts-corefile-system-file-filereadarraybufferresponse-depr-i.md#filereadarraybufferresponse)。
+
+**起始版本：** 3
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
+**废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | [FileReadArrayBufferResponse](arkts-corefile-system-file-filereadarraybufferresponse-depr-i.md) | 是 |
 
 ## length
 
@@ -63,9 +88,9 @@ length?: number
 
 **起始版本：** 3
 
-**废弃版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-FileReadArrayBufferOption-length?: number--><!--Device-FileReadArrayBufferOption-length?: number-End-->
+**废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -81,27 +106,9 @@ position?: number
 
 **起始版本：** 3
 
-**废弃版本：** 10
-
-<!--Device-FileReadArrayBufferOption-position?: number--><!--Device-FileReadArrayBufferOption-position?: number-End-->
-
-**系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
-
-## success
-
-```TypeScript
-success?: (data: FileReadArrayBufferResponse) => void
-```
-
-接口调用成功的回调函数。返回[FileReadArrayBufferResponse](arkts-corefile-system-file-filereadarraybufferresponse-depr-i.md#filereadarraybufferresponse)。
-
-**类型：** (data: FileReadArrayBufferResponse) =&gt; void
-
-**起始版本：** 3
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 10
-
-<!--Device-FileReadArrayBufferOption-success?: (data: FileReadArrayBufferResponse) => void--><!--Device-FileReadArrayBufferOption-success?: (data: FileReadArrayBufferResponse) => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -119,9 +126,8 @@ uri: string
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 10
 
-<!--Device-FileReadArrayBufferOption-uri: string--><!--Device-FileReadArrayBufferOption-uri: string-End-->
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
-

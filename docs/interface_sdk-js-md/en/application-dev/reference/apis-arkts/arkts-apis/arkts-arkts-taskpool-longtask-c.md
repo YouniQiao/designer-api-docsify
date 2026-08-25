@@ -6,9 +6,9 @@ Describes a continuous task. **LongTask** inherits from [Task](arkts-arkts-taskp
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-taskpool-class LongTask--><!--Device-taskpool-class LongTask-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -29,4 +29,3 @@ function printArgs(args: string): string {
 
 let task: taskpool.LongTask = new taskpool.LongTask(printArgs, "this is my first LongTask");
 ```
-

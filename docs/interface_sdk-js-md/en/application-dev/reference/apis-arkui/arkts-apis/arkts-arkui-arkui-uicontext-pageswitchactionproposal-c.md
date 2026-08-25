@@ -1,12 +1,12 @@
 # PageSwitchActionProposal
 
-Smart gesture page switch action handling. The default direction is forward page switching, including right and down. When dynamically customizing smart gesture behavior through the [registerMonitor](../../apis-default/arkts-apis/arkts-arkui-uicontext-smartgesturecontroller-c.md#registermonitor) API, setting the return value [GestureHandlingResolution](../../apis-default/arkts-apis/arkts-arkui-uicontext-gesturehandlingresolution-c.md)'s **selectedProposal** to an object of this type triggers a page switching operation on the target component.
+Smart gesture page switch action handling. The default direction is forward page switching, including right and down. When dynamically customizing smart gesture behavior through the [registerMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#registermonitor) API, setting the return value [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)'s **selectedProposal** to an object of this type triggers a page switching operation on the target component.
 
-**Inheritance/Implementation:** PageSwitchActionProposal extends [TargetedGestureProposal](../../apis-default/arkts-apis/arkts-arkui-uicontext-targetedgestureproposal-c.md)
+**Inheritance/Implementation:** PageSwitchActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md)
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export class PageSwitchActionProposal--><!--Device-unnamed-export class PageSwitchActionProposal-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,20 +29,20 @@ Constructor for the smart gesture page switch action handling.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-PageSwitchActionProposal-constructor(node: FrameNode, pageCount: int)--><!--Device-PageSwitchActionProposal-constructor(node: FrameNode, pageCount: int)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| node | FrameNode | Yes | Target node that responds to the page switch action. |
-| pageCount | int | Yes | Number of pages to switch.<br/>Value range: [0, +∞). Values less than 0 are treated as 0.<br/>Unit: pages. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
+| [pageCount](arkts-arkui-arkui-uicontext-pageswitchactionproposal-c.md) | number | Yes |
 
 **Examples**
 
@@ -122,15 +122,14 @@ pageCount: int
 
 Number of pages to switch in the smart gesture.Value range: [0, +∞). Values less than 0 are treated as 0.Unit: pages.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-PageSwitchActionProposal-pageCount: int--><!--Device-PageSwitchActionProposal-pageCount: int-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,7 +4,7 @@ Enumerates the schemes that use the proxy.
 
 **Since:** 15
 
-<!--Device-webview-enum ProxySchemeFilter--><!--Device-webview-enum ProxySchemeFilter-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,9 +18,9 @@ All schemes use proxies.
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
-<!--Device-ProxySchemeFilter-MATCH_ALL_SCHEMES = 0--><!--Device-ProxySchemeFilter-MATCH_ALL_SCHEMES = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -34,9 +34,9 @@ HTTP requests use proxies.
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
-<!--Device-ProxySchemeFilter-MATCH_HTTP = 1--><!--Device-ProxySchemeFilter-MATCH_HTTP = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -50,9 +50,8 @@ HTTPS requests use proxies.
 
 **Since:** 15
 
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-ProxySchemeFilter-MATCH_HTTPS = 2--><!--Device-ProxySchemeFilter-MATCH_HTTPS = 2-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

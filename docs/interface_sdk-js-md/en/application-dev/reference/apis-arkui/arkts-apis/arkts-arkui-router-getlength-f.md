@@ -17,26 +17,26 @@ Obtains the number of pages in the current stack.
 > **NOTE：**&gt;
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated
+> [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated
 > with the current UI context.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 18
 
-**Substitutes:** [getLength](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#getlength)
+**Substitutes:** [getLength](arkts-arkui-arkui-uicontext-router-c.md#getlength)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-router-function getLength(): string--><!--Device-router-function getLength(): string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Number of pages in the stack. The maximum value is **32**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -44,4 +44,3 @@ Obtains the number of pages in the current stack.
 let size = this.getUIContext().getRouter().getLength();
 console.info('pages stack size = ' + size);
 ```
-

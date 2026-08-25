@@ -2,9 +2,9 @@
 
 绑定输入法时的附加选项。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-inputMethodEngine-export interface AttachOptions--><!--Device-inputMethodEngine-export interface AttachOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -24,9 +24,9 @@ isSimpleKeyboardEnabled?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-AttachOptions-isSimpleKeyboardEnabled?: boolean--><!--Device-AttachOptions-isSimpleKeyboardEnabled?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -40,9 +40,8 @@ requestKeyboardReason?: RequestKeyboardReason
 
 **类型：** RequestKeyboardReason
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-AttachOptions-requestKeyboardReason?: RequestKeyboardReason--><!--Device-AttachOptions-requestKeyboardReason?: RequestKeyboardReason-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
-

@@ -2,9 +2,9 @@
 
 Widget extension class. It provides APIs to notify the widget provider that a widget is being created or the widget visibility status is being changed.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-declare class FormExtensionAbility--><!--Device-unnamed-declare class FormExtensionAbility-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -24,25 +24,25 @@ Called to notify the widget provider that the widget host is requesting the widg
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FormExtensionAbility-onAcquireFormState?(want: Want): formInfo.FormState--><!--Device-FormExtensionAbility-onAcquireFormState?(want: Want): formInfo.FormState-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Description of the widget state, including the bundle name, ability name, module name, and widget name. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| formInfo.FormState | Enumerated values of the current widget status. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| formInfo.FormState |
 
 **Examples**
 
@@ -58,6 +58,28 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 };
 ```
 
+## onAcquireFormState
+
+```TypeScript
+onAcquireFormState?: OnAcquireFormStateFn
+```
+
+Called to return a FormState object.<p>You must override this callback if you want this ability to return the actual form state. Otherwise, this method returns DEFAULT by default.</p>
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+**System capability:** SystemCapability.Ability.Form
+
+**Examples**
+
+See [onAcquireFormState](#onacquireformstate)
+
 ## onAddForm
 
 ```TypeScript
@@ -66,27 +88,27 @@ onAddForm(want: Want): formBindingData.FormBindingData
 
 Called to notify the widget provider that a widget is being created.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-FormExtensionAbility-onAddForm(want: Want): formBindingData.FormBindingData--><!--Device-FormExtensionAbility-onAddForm(want: Want): formBindingData.FormBindingData-End-->
-
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information of the widget. You can set the **parameters** field to one or more values enumerated in [widget parameters](arkts-form-forminfo-formparam-e.md), such as widget ID, widget name, and widget style. The information must be managed as persistent data to facilitate subsequent widget update and deletion. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| formBindingData.FormBindingData | A **formBindingData.FormBindingData** object containing the data to be displayed on the widget. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| formBindingData.FormBindingData |
 
 **Examples**
 
@@ -116,21 +138,21 @@ onCastToNormalForm(formId: string): void
 
 Called to notify the widget provider that a temporary widget has been converted to a normal one. Temporary widgets and normal widgets are concepts of the widget host. Temporary widgets have a brief existence, appearing following particular events or user interactions and vanishing automatically upon task completion. Normal widgets maintain a lasting presence, continuing to exist unless explicitly removed or altered by the user. Function widgets developed in normal cases are normal widgets. Currently, the widget host does not use temporary widgets.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-FormExtensionAbility-onCastToNormalForm(formId: string): void--><!--Device-FormExtensionAbility-onCastToNormalForm(formId: string): void-End-->
-
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| formId | string | Yes | ID of the widget that requests to be converted to a normal one. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| formId | string | Yes |
 
 **Examples**
 
@@ -147,25 +169,31 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 
 ## onChangeFormVisibility
 
+ArkTS-Dyn:
+```TypeScript
+onChangeFormVisibility(newStatus: Record<string, number>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 onChangeFormVisibility(newStatus: Record<string, int>): void
 ```
 
 Called to notify the widget provider that the widget visibility status is being changed. This API is valid only for system applications when **formVisibleNotify** is set to **true**.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FormExtensionAbility-onChangeFormVisibility(newStatus: Record<string, int>): void--><!--Device-FormExtensionAbility-onChangeFormVisibility(newStatus: Record<string, int>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| newStatus | Record&lt;string, int&gt; | Yes | ID and visibility status of the widget to be changed.<br>**Since:** 11 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [newStatus](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-updatesimmessageoptions-i-sys.md) | ArkTS-Dyn: Record & lt;string, number & gt;<br>ArkTS-Sta：Record & lt;string, int & gt; | Yes |
 
 **Examples**
 
@@ -211,21 +239,21 @@ onConfigurationUpdate(newConfig: Configuration): void
 
 Called when system configuration items change. The **onConfigurationUpdate** callback is triggered only when the FormExtensionAbility is alive. <!--Del-->Since API version 20, for system applications, the **onConfigurationUpdate** callback within the FormExtensionAbility will be triggered when the system language changes.<!--DelEnd-->
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-FormExtensionAbility-onConfigurationUpdate(newConfig: Configuration): void--><!--Device-FormExtensionAbility-onConfigurationUpdate(newConfig: Configuration): void-End-->
-
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| newConfig | [Configuration](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md) | Yes | New configuration. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| newConfig | [Configuration](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md) | Yes |
 
 **Examples**
 
@@ -250,22 +278,22 @@ onFormEvent(formId: string, message: string): void
 
 Called to instruct the widget provider to process the widget event.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-FormExtensionAbility-onFormEvent(formId: string, message: string): void--><!--Device-FormExtensionAbility-onFormEvent(formId: string, message: string): void-End-->
-
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| formId | string | Yes | ID of the widget that requests the event. |
-| message | string | Yes | Event message. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| formId | string | Yes |
+| message | string | Yes |
 
 **Examples**
 
@@ -287,22 +315,22 @@ onFormLocationChanged(formId: string, newFormLocation: formInfo.FormLocation): v
 
 Called when the widget location changes.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-FormExtensionAbility-onFormLocationChanged(formId: string, newFormLocation: formInfo.FormLocation): void--><!--Device-FormExtensionAbility-onFormLocationChanged(formId: string, newFormLocation: formInfo.FormLocation): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| formId | string | Yes | Widget ID. |
-| newFormLocation | formInfo.FormLocation | Yes | Enumerated value of the latest widget location. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| formId | string | Yes |
+| newFormLocation | formInfo.FormLocation | Yes |
 
 **Examples**
 
@@ -331,21 +359,21 @@ onRemoveForm(formId: string): void
 
 Called to notify the widget provider that a widget is being destroyed.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-FormExtensionAbility-onRemoveForm(formId: string): void--><!--Device-FormExtensionAbility-onRemoveForm(formId: string): void-End-->
-
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| formId | string | Yes | ID of the widget to be destroyed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| formId | string | Yes |
 
 **Examples**
 
@@ -367,23 +395,23 @@ onSizeChanged(formId: string, newDimension: formInfo.FormDimension, newRect: for
 
 Called when the widget size changes.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-FormExtensionAbility-onSizeChanged(formId: string, newDimension: formInfo.FormDimension, newRect: formInfo.Rect): void--><!--Device-FormExtensionAbility-onSizeChanged(formId: string, newDimension: formInfo.FormDimension, newRect: formInfo.Rect): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| formId | string | Yes | Widget ID. |
-| newDimension | formInfo.FormDimension | Yes | Widget dimension. For example, **Dimension_1_2** indicates a 1 x 2 widget. |
-| newRect | formInfo.Rect | Yes | Widget position information, including the X and Y coordinates of the widget's top- left corner, as well as its width and height. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| formId | string | Yes |
+| newDimension | formInfo.FormDimension | Yes |
+| newRect | formInfo.Rect | Yes |
 
 **Examples**
 
@@ -407,11 +435,11 @@ Called when the widget process of the widget provider exits.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FormExtensionAbility-onStop?(): void--><!--Device-FormExtensionAbility-onStop?(): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -427,6 +455,28 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 }
 ```
 
+## onStop
+
+```TypeScript
+onStop?: OnStopFn
+```
+
+Called when this ability breaks the last link, notifying the provider that the provider process is about to stop.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+**System capability:** SystemCapability.Ability.Form
+
+**Examples**
+
+See [onStop](#onstop)
+
 ## onUpdateForm
 
 ```TypeScript
@@ -435,22 +485,22 @@ onUpdateForm(formId: string, wantParams?: Record<string, Object>): void
 
 Called to notify the widget provider that a widget is being updated, with update parameters carried. After obtaining the latest data, your application should call [updateForm](arkts-form-formprovider-updateform-f.md) of **formProvider** to update the widget data.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-FormExtensionAbility-onUpdateForm(formId: string, wantParams?: Record<string, Object>): void--><!--Device-FormExtensionAbility-onUpdateForm(formId: string, wantParams?: Record<string, Object>): void-End-->
-
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| formId | string | Yes | ID of the widget that requests to be updated. |
-| wantParams | Record&lt;string, Object&gt; | No | Parameters used for the update. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| formId | string | Yes |
+| wantParams | Record & lt;string, Object & gt; | No |
 
 **Examples**
 
@@ -486,53 +536,12 @@ Context of the FormExtensionAbility. This context is inherited from [ExtensionCo
 
 **Type:** [FormExtensionContext](arkts-form-formextensioncontext-c-sys.md)
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-FormExtensionAbility-context: FormExtensionContext--><!--Device-FormExtensionAbility-context: FormExtensionContext-End-->
-
 **System capability:** SystemCapability.Ability.Form
-
-## onAcquireFormState
-
-```TypeScript
-onAcquireFormState?: OnAcquireFormStateFn
-```
-
-Called to return a FormState object.<p>You must override this callback if you want this ability to return the actual form state. Otherwise, this method returns DEFAULT by default.</p>
-
-**Type:** [OnAcquireFormStateFn](arkts-form-onacquireformstatefn-t.md)
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-FormExtensionAbility-onAcquireFormState?: OnAcquireFormStateFn--><!--Device-FormExtensionAbility-onAcquireFormState?: OnAcquireFormStateFn-End-->
-
-**System capability:** SystemCapability.Ability.Form
-
-## onStop
-
-```TypeScript
-onStop?: OnStopFn
-```
-
-Called when this ability breaks the last link, notifying the provider that the provider process is about to stop.
-
-**Type:** [OnStopFn](arkts-form-onstopfn-t.md)
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-FormExtensionAbility-onStop?: OnStopFn--><!--Device-FormExtensionAbility-onStop?: OnStopFn-End-->
-
-**System capability:** SystemCapability.Ability.Form
-

@@ -16,9 +16,9 @@ function decomposeToPicture(hdrPixelMap : PixelMap, options?: HdrDecomposeOption
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-image-function decomposeToPicture(hdrPixelMap : PixelMap, options?: HdrDecomposeOptions): Promise<Picture | undefined>--><!--Device-image-function decomposeToPicture(hdrPixelMap : PixelMap, options?: HdrDecomposeOptions): Promise<Picture | undefined>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -26,26 +26,26 @@ function decomposeToPicture(hdrPixelMap : PixelMap, options?: HdrDecomposeOption
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| hdrPixelMap | PixelMap | 是 | HDR PixelMap，像素格式需为RGBA_F16、RGBA_1010102、YCBCR_P010或YCRCB_P010。 |
-| options | [HdrDecomposeOptions](arkts-image-image-hdrdecomposeoptions-i-sys.md) | 否 | HDR分解配置选项，包含增益图尺寸和像素格式设置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| hdrPixelMap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
+| options | [HdrDecomposeOptions](arkts-image-image-hdrdecomposeoptions-i-sys.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined&gt; | Promise对象。返回包含SDR PixelMap和增益图的Picture对象。 |
+| 类型 |
+| --- |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation. hdrPixelMap's PixelMapFormat is not RGBA_F16\RGBA_1010102\YCBCR_P010\YCRCB_P010. |
-| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: hdrPixelMap is empty. |
-| [7600208](../errorcode-image.md#7600208-hdr图片分解失败) | HDR image decomposition failed. Possible causes: 1. Decomposition processing is not supported. 2. Processing error occurs. |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) | Alloc memory failed. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) |
+| [7600206](../errorcode-image.md#7600206-无效参数) |
+| [7600208](../errorcode-image.md#7600208-hdr图片分解失败) |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) |
 
 **示例**
 
@@ -74,4 +74,3 @@ async function DecomposeToPictureTest(context: Context) {
   }
 }
 ```
-

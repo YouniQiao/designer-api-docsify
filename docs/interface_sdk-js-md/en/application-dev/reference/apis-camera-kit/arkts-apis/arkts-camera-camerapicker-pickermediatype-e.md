@@ -2,9 +2,9 @@
 
 Enumerates the media types displayed in the camera picker.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-cameraPicker-enum PickerMediaType--><!--Device-cameraPicker-enum PickerMediaType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -16,11 +16,11 @@ PHOTO = 'photo'
 
 Photo mode.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PickerMediaType-PHOTO = 'photo'--><!--Device-PickerMediaType-PHOTO = 'photo'-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -32,11 +32,10 @@ VIDEO = 'video'
 
 Video mode.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PickerMediaType-VIDEO = 'video'--><!--Device-PickerMediaType-VIDEO = 'video'-End-->
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
-

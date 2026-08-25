@@ -4,7 +4,7 @@ Describe the contents of the battery information.
 
 **Since:** 26.0.0
 
-<!--Device-bas-interface BatteryInfo--><!--Device-bas-interface BatteryInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -19,18 +19,18 @@ import { bas } from '@kit.ConnectivityKit';
 ## batteryLevel
 
 ```TypeScript
-batteryLevel: int
+batteryLevel: number
 ```
 
 battery value of the device. {@code -1} means no power information.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-BatteryInfo-batteryLevel: int--><!--Device-BatteryInfo-batteryLevel: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -48,11 +48,10 @@ Identify of the discovery device.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-BatteryInfo-deviceId: BluetoothAddress--><!--Device-BatteryInfo-deviceId: BluetoothAddress-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
-

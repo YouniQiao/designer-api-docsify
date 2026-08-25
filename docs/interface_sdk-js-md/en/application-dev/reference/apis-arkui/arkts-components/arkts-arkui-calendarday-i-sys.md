@@ -4,9 +4,9 @@ Provides a monthly view component to display information such as date, shift bre
 
 **Since:** 7
 
-**Deprecated since:** 20
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-unnamed-interface CalendarDay--><!--Device-unnamed-interface CalendarDay-End-->
+**Deprecated since:** 20
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,11 +29,11 @@ Gregorian calendar day.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CalendarDay-day: number--><!--Device-CalendarDay-day: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,11 +51,11 @@ Day.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CalendarDay-dayMark: string--><!--Device-CalendarDay-dayMark: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,11 +73,11 @@ Indicates the off-duty flag information. The options are work and off.By default
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CalendarDay-dayMarkValue: string--><!--Device-CalendarDay-dayMarkValue: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -95,11 +95,11 @@ Indicates whether to display has Schedule. The week sequence is one, two, three,
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CalendarDay-hasSchedule: boolean--><!--Device-CalendarDay-hasSchedule: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -117,11 +117,11 @@ Indicates the sequence number of the 7 x 7 (7 x 6) grid layout on a calendar pag
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CalendarDay-index: number--><!--Device-CalendarDay-index: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -139,11 +139,11 @@ Indicates whether the default value is Lunar calendar.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CalendarDay-isFirstOfLunar: boolean--><!--Device-CalendarDay-isFirstOfLunar: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -161,11 +161,11 @@ Lunar day.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CalendarDay-lunarDay: string--><!--Device-CalendarDay-lunarDay: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -183,11 +183,11 @@ Lunar moon. The week sequence is one, two, three, four, five, six.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CalendarDay-lunarMonth: string--><!--Device-CalendarDay-lunarMonth: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -205,11 +205,11 @@ Display Lunar Date.The week sequence is one, two, three, four, five, six.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CalendarDay-markLunarDay: boolean--><!--Device-CalendarDay-markLunarDay: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -227,11 +227,11 @@ Gregorian calendar month.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CalendarDay-month: number--><!--Device-CalendarDay-month: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -249,13 +249,12 @@ Gregorian calendar year.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
-<!--Device-CalendarDay-year: number--><!--Device-CalendarDay-year: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

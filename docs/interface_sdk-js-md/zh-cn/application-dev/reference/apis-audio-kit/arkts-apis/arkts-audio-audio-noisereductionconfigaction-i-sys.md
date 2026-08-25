@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-audio-interface NoiseReductionConfigAction--><!--Device-audio-interface NoiseReductionConfigAction-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -28,9 +28,9 @@ appName: string
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-NoiseReductionConfigAction-appName: string--><!--Device-NoiseReductionConfigAction-appName: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -48,9 +48,9 @@ device: AudioDeviceDescriptor
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-NoiseReductionConfigAction-device: AudioDeviceDescriptor--><!--Device-NoiseReductionConfigAction-device: AudioDeviceDescriptor-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -68,11 +68,10 @@ noiseReductionMode: NoiseReductionMode
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-NoiseReductionConfigAction-noiseReductionMode: NoiseReductionMode--><!--Device-NoiseReductionConfigAction-noiseReductionMode: NoiseReductionMode-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
-

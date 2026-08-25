@@ -6,11 +6,11 @@ Defines Navigator Modifier@extends NavigatorAttribute @implements AttributeModif
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Deprecated since:** 20
 
-**Substitutes:** [NavigationModifier](../../apis-default/arkts-apis/arkts-navigationmodifier-c.md)
-
-<!--Device-unnamed-export declare class NavigatorModifier--><!--Device-unnamed-export declare class NavigatorModifier-End-->
+**Substitutes:** [NavigationModifier](arkts-arkui-navigationmodifier-c.md)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,6 +24,8 @@ Defines the normal update attribute function.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Deprecated since:** 20
 
 **Substitutes:** applyNormalAttribute
@@ -32,13 +34,10 @@ Defines the normal update attribute function.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-NavigatorModifier-applyNormalAttribute?(instance: NavigatorAttribute): void--><!--Device-NavigatorModifier-applyNormalAttribute?(instance: NavigatorAttribute): void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| instance | [NavigatorAttribute](../arkts-components/arkts-arkui-navigator-attribute.md) | Yes |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| instance | [NavigatorAttribute](../arkts-components/arkts-arkui-navigator-attribute.md) | Yes |

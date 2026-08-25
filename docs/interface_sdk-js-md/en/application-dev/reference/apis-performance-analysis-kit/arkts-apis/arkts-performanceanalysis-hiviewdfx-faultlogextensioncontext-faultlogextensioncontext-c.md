@@ -8,11 +8,11 @@ FaultLogExtensionContext is the context of [FaultLogExtensionAbility](arkts-perf
 
 **Inheritance/Implementation:** FaultLogExtensionContext extends ExtensionContext
 
-**Since:** 23
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export default class FaultLogExtensionContext--><!--Device-unnamed-export default class FaultLogExtensionContext-End-->
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -21,4 +21,3 @@ FaultLogExtensionContext is the context of [FaultLogExtensionAbility](arkts-perf
 ```TypeScript
 import { FaultLogExtensionContext } from '@kit.PerformanceAnalysisKit';
 ```
-

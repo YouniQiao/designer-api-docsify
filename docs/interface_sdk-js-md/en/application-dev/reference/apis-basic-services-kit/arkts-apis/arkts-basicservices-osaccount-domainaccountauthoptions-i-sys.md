@@ -4,7 +4,7 @@ Defines the options for domain account authentication.
 
 **Since:** 24
 
-<!--Device-osAccount-interface DomainAccountAuthOptions--><!--Device-osAccount-interface DomainAccountAuthOptions-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -19,18 +19,17 @@ import { osAccount } from '@kit.BasicServicesKit';
 ## serverParams
 
 ```TypeScript
-serverParams?: Record<string, RecordData>
+serverParams?: Record<string, Object>
 ```
 
-Indicates the server parameters.
+Configuration parameters of the domain account authentication server. which is **undefined** by default.
 
-**Type:** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 24
 
-<!--Device-DomainAccountAuthOptions-serverParams?: Record<string, RecordData>--><!--Device-DomainAccountAuthOptions-serverParams?: Record<string, RecordData>-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-

@@ -4,9 +4,9 @@ Options for obtaining the screen brightness mode.
 
 **Since:** 3
 
-**Deprecated since:** 7
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface GetBrightnessModeOptions--><!--Device-unnamed-export interface GetBrightnessModeOptions-End-->
+**Deprecated since:** 7
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -24,13 +24,11 @@ complete?: () => void
 
 Called when an API call is complete.
 
-**Type:** () =&gt; void
-
 **Since:** 3
 
-**Deprecated since:** 7
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-GetBrightnessModeOptions-complete?: () => void--><!--Device-GetBrightnessModeOptions-complete?: () => void-End-->
+**Deprecated since:** 7
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -42,15 +40,20 @@ fail?: (data: string, code: number) => void
 
 Called when an API call has failed. **data** indicates the error information, and **code** indicates the error code.
 
-**Type:** (data: string, code: number) =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 7
 
-<!--Device-GetBrightnessModeOptions-fail?: (data: string, code: number) => void--><!--Device-GetBrightnessModeOptions-fail?: (data: string, code: number) => void-End-->
-
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | string | Yes |
+| code | number | Yes |
 
 ## success
 
@@ -60,13 +63,16 @@ success?: (data: BrightnessModeResponse) => void
 
 Called when an API call is successful. **data** is a return value of the [BrightnessModeResponse](arkts-basicservices-system-brightness-brightnessmoderesponse-i.md) type.
 
-**Type:** (data: BrightnessModeResponse) =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 7
 
-<!--Device-GetBrightnessModeOptions-success?: (data: BrightnessModeResponse) => void--><!--Device-GetBrightnessModeOptions-success?: (data: BrightnessModeResponse) => void-End-->
-
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | [BrightnessModeResponse](arkts-basicservices-system-brightness-brightnessmoderesponse-i.md) | Yes |

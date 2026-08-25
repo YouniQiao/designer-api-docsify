@@ -4,11 +4,11 @@
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** [BarometerResponse](arkts-sensorservice-sensor-barometerresponse-i.md)
-
-<!--Device-unnamed-export interface BarometerResponse--><!--Device-unnamed-export interface BarometerResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -30,13 +30,12 @@ pressure: number
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** [pressure](arkts-sensorservice-sensor-barometerresponse-i.md#pressure)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-BarometerResponse-pressure: number--><!--Device-BarometerResponse-pressure: number-End-->
-
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
-

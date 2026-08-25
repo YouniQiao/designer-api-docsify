@@ -4,7 +4,7 @@ class OverlayManager
 
 **起始版本：** 12
 
-<!--Device-unnamed-export class OverlayManager--><!--Device-unnamed-export class OverlayManager-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,20 +27,20 @@ Adds a specified ComponentContent node to the OverlayManager.
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-OverlayManager-addComponentContent(content: ComponentContent, index?: number): void--><!--Device-OverlayManager-addComponentContent(content: ComponentContent, index?: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| content | ComponentContent | 是 | Content to add to the target node on the **OverlayManager**.<br> **NOTE：**<br> By default, the new node is centered on the page and stacked according to its stacking level. |
-| index | number | 否 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 |
+| index | number | 否 |
 
 **示例**
 
@@ -146,20 +146,20 @@ Creates a floating layer node with the specified display order. This API allows 
 
 **起始版本：** 18
 
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-OverlayManager-addComponentContentWithOrder(content: ComponentContent, levelOrder?: LevelOrder): void--><!--Device-OverlayManager-addComponentContentWithOrder(content: ComponentContent, levelOrder?: LevelOrder): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| content | ComponentContent | 是 | Content to add to the target node on the **OverlayManager**. <br>**NOTE：**<br> By default, the new node is centered on the page and stacked according to its stacking level. |
-| levelOrder | [LevelOrder](../../apis-default/arkts-apis/arkts-promptaction-levelorder-c.md) | 否 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 |
+| levelOrder | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 否 |
 
 **示例**
 
@@ -252,11 +252,11 @@ Hide all ComponentContents on the OverlayManager.
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-OverlayManager-hideAllComponentContents(): void--><!--Device-OverlayManager-hideAllComponentContents(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -274,19 +274,19 @@ Hide the ComponentContent.
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-OverlayManager-hideComponentContent(content: ComponentContent): void--><!--Device-OverlayManager-hideComponentContent(content: ComponentContent): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| content | ComponentContent | 是 | Content to hide on the **OverlayManager**. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 |
 
 **示例**
 
@@ -302,32 +302,32 @@ openOrderOverlay(content: ComponentContent, options?: OrderOverlayOptions): Prom
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-OverlayManager-openOrderOverlay(content: ComponentContent, options?: OrderOverlayOptions): Promise<void>--><!--Device-OverlayManager-openOrderOverlay(content: ComponentContent, options?: OrderOverlayOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| content | ComponentContent | 是 | OverlayManager新增节点需要添加的内容。 <p>&lt;strong&gt;注意&lt;/strong&gt;：。 <br>默认情况下，新节点在页面中居中，并根据其堆叠级别进行堆叠。 </p> |
-| options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | 否 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 |
+| options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 函数返回的promise。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [103307](../errorcode-promptAction.md#103307-系统弹出窗口导致无法打开浮层) | The overlay cannot be opened due to the system pop-up window. |
+| 错误码ID |
+| --- |
+| [103307](../errorcode-promptAction.md#103307-系统弹出窗口导致无法打开浮层) |
 
 ## removeComponentContent
 
@@ -339,19 +339,19 @@ Removes a specified ComponentContent node from the OverlayManager
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-OverlayManager-removeComponentContent(content: ComponentContent): void--><!--Device-OverlayManager-removeComponentContent(content: ComponentContent): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| content | ComponentContent | 是 | Content to remove from the **OverlayManager**. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 |
 
 **示例**
 
@@ -367,11 +367,11 @@ Show all ComponentContents on the OverlayManager.
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-OverlayManager-showAllComponentContents(): void--><!--Device-OverlayManager-showAllComponentContents(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -389,21 +389,20 @@ Show the ComponentContent.
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-OverlayManager-showComponentContent(content: ComponentContent): void--><!--Device-OverlayManager-showComponentContent(content: ComponentContent): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| content | ComponentContent | 是 | Content to show on the **OverlayManager**. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 |
 
 **示例**
 
 请参考[addComponentContent](#addcomponentcontent)示例。
-

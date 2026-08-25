@@ -4,7 +4,7 @@ Defines shadow style properties.
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface MultiShadowOptions--><!--Device-unnamed-declare interface MultiShadowOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,13 +27,13 @@ X-axis offset. Unit: vp. Default value: 5.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
-
-<!--Device-MultiShadowOptions-offsetX?: number | Resource--><!--Device-MultiShadowOptions-offsetX?: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,13 +51,13 @@ Y-axis offset. Unit: vp. Default value: 5.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
-
-<!--Device-MultiShadowOptions-offsetY?: number | Resource--><!--Device-MultiShadowOptions-offsetY?: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -75,13 +75,12 @@ Shadow blur radius.The default value varies by API version.API version 10 and ea
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
-<!--Device-MultiShadowOptions-radius?: number | Resource--><!--Device-MultiShadowOptions-radius?: number | Resource-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 Enumerates the types of changes that trigger the media asset or album change events.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-photoAccessHelper-enum NotifyChangeType--><!--Device-photoAccessHelper-enum NotifyChangeType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -16,9 +16,9 @@ NOTIFY_CHANGE_ADD = 0
 
 A media asset or an album is created.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-NotifyChangeType-NOTIFY_CHANGE_ADD = 0--><!--Device-NotifyChangeType-NOTIFY_CHANGE_ADD = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -30,9 +30,9 @@ NOTIFY_CHANGE_UPDATE = 1
 
 A media asset or an album is modified.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-NotifyChangeType-NOTIFY_CHANGE_UPDATE = 1--><!--Device-NotifyChangeType-NOTIFY_CHANGE_UPDATE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -44,9 +44,8 @@ NOTIFY_CHANGE_REMOVE = 2
 
 A media asset or an album is deleted.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-NotifyChangeType-NOTIFY_CHANGE_REMOVE = 2--><!--Device-NotifyChangeType-NOTIFY_CHANGE_REMOVE = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

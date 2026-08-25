@@ -2,9 +2,9 @@
 
 Double-ended queue (deque) is a sequence container implemented based on the queue data structure that follows the principles of First In First Out (FIFO) and Last In First Out (LIFO). It allows insertion and removal of elements at both the ends.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-unnamed-declare class Deque--><!--Device-unnamed-declare class Deque-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,17 +25,17 @@ Returns an iterator. Each item of the iterator is a ArkTS Object
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-Deque-$_iterator(): IterableIterator<T>--><!--Device-Deque-$_iterator(): IterableIterator<T>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;T&gt; |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;T & gt; |
 
 ## [Symbol.iterator]
 
@@ -47,23 +47,23 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Deque-[Symbol.iterator](): IterableIterator<T>--><!--Device-Deque-[Symbol.iterator](): IterableIterator<T>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;T&gt; |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;T & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -108,19 +108,19 @@ constructor()
 
 A constructor used to create a **Deque** instance.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Deque-constructor()--><!--Device-Deque-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Deque's constructor cannot be directly invoked. |
+| Error Code ID |
+| --- |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
 
 **Examples**
 
@@ -138,24 +138,24 @@ Uses a callback to traverse each element in the **Deque** instance.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Deque-forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisArg?: Object): void--><!--Device-Deque-forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisArg?: Object): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, deque?: Deque&lt;T&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the Deque. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackFn | (value: T, index?: number, deque?: Deque & lt;T & gt;) = & gt; void | Yes |
+| thisArg | Object | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -186,17 +186,17 @@ Iterates over elements in a generic Deque (double-ended queue) and executes a ca
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-Deque-forEach(callbackFn: DequeForEachCb<T>): void--><!--Device-Deque-forEach(callbackFn: DequeForEachCb<T>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackFn | [DequeForEachCb](arkts-arkts-dequeforeachcb-t.md)&lt;T&gt; | Yes | A callback function to execute for each element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackFn | [DequeForEachCb](arkts-arkts-dequeforeachcb-t.md)&lt;T&gt; | Yes |
 
 **Examples**
 
@@ -210,26 +210,26 @@ getFirst(): T
 
 Obtains the first element of this Deque.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Deque-getFirst(): T--><!--Device-Deque-getFirst(): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | First element of the T type obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirst method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 **Examples**
 
@@ -251,26 +251,26 @@ getLast(): T
 
 Obtains the last element of this Deque.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Deque-getLast(): T--><!--Device-Deque-getLast(): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | Last element of the T type obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLast method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 **Examples**
 
@@ -292,31 +292,31 @@ has(element: T): boolean
 
 Checks whether this Deque has the specified element.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Deque-has(element: T): boolean--><!--Device-Deque-has(element: T): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| element | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Operation result. The value **true** is returned if the specified element is contained; otherwise, **false** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -335,25 +335,25 @@ insertEnd(element: T): void
 
 Inserts an element at the end of this Deque.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Deque-insertEnd(element: T): void--><!--Device-Deque-insertEnd(element: T): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| element | T | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The insertEnd method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -382,25 +382,25 @@ insertFront(element: T): void
 
 Inserts an element at the front of this Deque.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Deque-insertFront(element: T): void--><!--Device-Deque-insertFront(element: T): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| element | T | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The insertFront method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -429,26 +429,26 @@ popFirst(): T
 
 Removes the first element of this Deque.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Deque-popFirst(): T--><!--Device-Deque-popFirst(): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | First element removed. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The popFirst method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 **Examples**
 
@@ -471,26 +471,26 @@ popLast(): T
 
 Removes the last element of this Deque.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Deque-popLast(): T--><!--Device-Deque-popLast(): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | Last element removed. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The popLast method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 **Examples**
 
@@ -505,6 +505,24 @@ let result = deque.popLast();
 console.info("result:", result);  // result: 6
 ```
 
+## [index: int]
+
+```TypeScript
+[index: int]: T
+```
+
+Returns the item at that index.
+
+**Type:** T
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+**System capability:** SystemCapability.Utils.Lang
+
 ## length
 
 ```TypeScript
@@ -517,9 +535,8 @@ Number of elements in a Deque.
 
 **Since:** 8
 
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-Deque-length: number--><!--Device-Deque-length: number-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

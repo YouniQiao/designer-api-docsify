@@ -4,7 +4,7 @@ Callback API type used during data migration, defining the callback methods for 
 
 **Since:** 23
 
-<!--Device-fontManager-interface DataMigrationCallback--><!--Device-fontManager-interface DataMigrationCallback-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Global.FontManager
 
@@ -26,7 +26,7 @@ Callback function that is periodically invoked during the execution of the data 
 
 **Since:** 23
 
-<!--Device-DataMigrationCallback-onHeartBeat(): void--><!--Device-DataMigrationCallback-onHeartBeat(): void-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Global.FontManager
 
@@ -69,7 +69,7 @@ Callback function that is periodically invoked during the execution of the data 
 
 **Since:** 23
 
-<!--Device-DataMigrationCallback-onProgress(progress : DataMigrationProgress): void--><!--Device-DataMigrationCallback-onProgress(progress : DataMigrationProgress): void-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Global.FontManager
 
@@ -77,9 +77,9 @@ Callback function that is periodically invoked during the execution of the data 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| progress | [DataMigrationProgress](arkts-localization-fontmanager-datamigrationprogress-i-sys.md) | Yes | Data migration progress. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| progress | [DataMigrationProgress](arkts-localization-fontmanager-datamigrationprogress-i-sys.md) | Yes |
 
 **Examples**
 
@@ -110,6 +110,12 @@ dataMigration() {
 
 ## onResult
 
+ArkTS-Dyn:
+```TypeScript
+onResult(result : number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 onResult(result : int): void
 ```
@@ -118,7 +124,7 @@ Callback function that is invoked after the data migration task is completed (wh
 
 **Since:** 23
 
-<!--Device-DataMigrationCallback-onResult(result : int): void--><!--Device-DataMigrationCallback-onResult(result : int): void-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Global.FontManager
 
@@ -126,9 +132,9 @@ Callback function that is invoked after the data migration task is completed (wh
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| result | int | Yes | Data migration result. <br>**0**: Data migration succeeded. <br>**1**: No data migration is required. <br>**2**: Failed to obtain the user ID. <br>**3**: Failed to check the directory. <br>**4**: Failed to initialize the cache directory. <br>**5**: Failed to open the source file. <br>**6**: Failed to copy the file. <br>**7**: Failed to rename the file. <br>**8**: Failed to delete the file. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| result | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Examples**
 
@@ -156,4 +162,3 @@ dataMigration() {
   return;
 }
 ```
-

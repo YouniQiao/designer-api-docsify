@@ -16,21 +16,21 @@ function getCountryCode(): string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [getCountryCode](arkts-connectivity-wifimanager-getcountrycode-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
-<!--Device-wifi-function getCountryCode(): string--><!--Device-wifi-function getCountryCode(): string-End-->
-
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 国家码。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -44,4 +44,3 @@ try {
   console.error("failed:" + JSON.stringify(error));
 }
 ```
-

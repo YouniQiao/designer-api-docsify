@@ -4,7 +4,7 @@ Represents the query options about an enterprise DLP file.
 
 **Since:** 26.0.0
 
-<!--Device-dlpPermission-export interface DlpFileQueryOptions--><!--Device-dlpPermission-export interface DlpFileQueryOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -26,9 +26,8 @@ User-defined classification label of an enterprise DLP file. The value contains 
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DlpFileQueryOptions-classificationLabel?: string--><!--Device-DlpFileQueryOptions-classificationLabel?: string-End-->
-
 **System capability:** SystemCapability.Security.DataLossPrevention
-

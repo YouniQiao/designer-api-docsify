@@ -8,16 +8,15 @@ type AuthType = 'ALL' | 'FACE_ONLY'
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
 **替代接口：** [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)
 
-<!--Device-userAuth-type AuthType = 'ALL' | 'FACE_ONLY'--><!--Device-userAuth-type AuthType = 'ALL' | 'FACE_ONLY'-End-->
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
-| 类型 | 说明 |
-| --- | --- |
-| 'ALL' | 预留参数，当前版本暂不支持ALL类型的认证。 |
-| 'FACE_ONLY' | 人脸认证。 |
-
+| 类型 |
+| --- |
+| 'ALL' |
+| 'FACE_ONLY' |

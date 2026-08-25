@@ -22,7 +22,7 @@ Provides type definitions for <b>NativeNode</b> APIs.
 | [ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md) | ArkUI_StringAsyncEvent | Defines the string type parameter used by the component callback event. |
 | [ArkUI_TextChangeEvent](capi-arkui-nativemodule-arkui-textchangeevent.md) | ArkUI_TextChangeEvent | Defines a hybrid data structure for component events. |
 | [ArkUI_NativeNodeAPI_1](capi-arkui-nativemodule-arkui-nativenodeapi-1.md) | ArkUI_NativeNodeAPI_1 | ArkUI提供的Native侧Node类型接口集合。Node模块相关接口需要在主线程上调用。 |
-| [OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md) | OH_ArkUI_TextEditorChangeEvent | 定义TextEditor组件文本内容变化事件的结构体。 |
+| [OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md) | OH_ArkUI_TextEditorChangeEvent | 定义TextEditor组件文本内容变化事件的结构体，用于在文本内容变化时通知用户，支持获取变化前后的内容等信息，适用于需要在文本内容变化前进行拦截或校验的场景，例如输入拦截、内容过滤、变更确认等。 |
 | [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md) | ArkUI_NodeCustomEvent | Defines the general structure of a custom component event. |
 | [ArkUI_NodeAdapter*](capi-arkui-nativemodule-arkui-nodeadapter8h.md) | ArkUI_NodeAdapterHandle | Defines the component adapter, which is used for lazy loading of elements of scrollable components. |
 | [ArkUI_NodeAdapterEvent](capi-arkui-nativemodule-arkui-nodeadapterevent.md) | ArkUI_NodeAdapterEvent | Defines the component adapter event. |
@@ -684,12 +684,12 @@ enum ArkUI_NodeAttributeType
 | NODE_TEXT_EDITOR_STYLED_STRING_CONTROLLER | TextEditor组件属性字符串控制器，支持属性设置。设置后，可通过该控制器管理TextEditor中的内容、光标、选区、输入样式及编辑状态。<br>作为属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.object：属性字符串控制器，参数类型{@link ArkUI_TextEditorStyledStringController}。<br>**起始版本：** 24 |
 | NODE_TEXT_EDITOR_ENABLE_PREVIEW_TEXT | TextEditor组件预上屏功能开关，启用后，组件内显示输入法输入过程中的拼音、笔画字符。支持属性设置、属性重置和属性获取。<br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.value[0].i32：是否启用预上屏功能，0表示禁用，1表示启用，默认值为1。<br>*返回：<br>.value[0].i32：是否启用预上屏功能，0表示禁用，1表示启用。<br>**起始版本：** 24 |
 | NODE_TEXT_EDITOR_LAYOUT_MANAGER | TextEditor组件TextLayoutManager获取，获取后，可通过布局管理器查询文本的布局信息，如行数、行高和内容偏移等。支持属性获取。<br>作为属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*返回：<br>.object：布局管理器，可通过该管理器查询文本的布局信息。参数类型{@link ArkUI_TextLayoutManager}。<br>**起始版本：** 24 |
-| NODE_TEXT_EDITOR_ENABLE_SELECTED_DATA_DETECTOR | TextEditor组件文本选择识别AI菜单开关，支持属性设置、属性重置和属性获取。启用后，用户选中特殊文本实体时将弹出AI识别菜单，提供基于选中文本内容的智能识别和操作选项。<br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.value[0].i32：是否启用文本选择识别的AI菜单，0表示禁用，1表示启用，默认值为1。<br>*返回：<br>.value[0].i32：是否启用了文本选择识别的AI菜单，0表示禁用，1表示启用。<br>**起始版本：** 24 |
+| NODE_TEXT_EDITOR_ENABLE_SELECTED_DATA_DETECTOR | TextEditor组件的AI菜单开关，用于控制选中特殊文本实体时是否弹出AI识别菜单。该功能支持属性的设置、重置与获取，启用后可基于选中文本内容提供智能识别及操作选项。<br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.value[0].i32：是否启用文本选择识别的AI菜单，0表示禁用，1表示启用，默认值为1。<br>*返回：<br>.value[0].i32：是否启用了文本选择识别的AI菜单，0表示禁用，1表示启用。<br>**起始版本：** 24 |
 | NODE_TEXT_EDITOR_SELECTED_BACKGROUND_COLOR | TextEditor组件选中内容背景颜色，支持属性设置、属性重置和属性获取。<br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.data[0].u32：选中内容的背景颜色，采用0xARGB格式，例如0xFFFF0000表示红色。默认跟随系统主题。<br>*返回：<br>.data[0].u32：选中内容的背景颜色，采用0xARGB格式，例如0xFFFF0000表示红色。默认跟随系统主题。<br>**起始版本：** 24 |
 | NODE_TEXT_EDITOR_ENABLE_KEYBOARD_ON_FOCUS | TextEditor组件非点击获焦时拉起输入法开关，支持属性设置、属性重置和属性获取。<br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.value[0].i32：非点击获焦时是否拉起输入法，0表示不拉起，1表示拉起，默认值为1。<br>*返回：<br>.value[0].i32：非点击获焦时是否拉起输入法，0表示不拉起，1表示拉起。<br>**起始版本：** 24 |
 | NODE_TEXT_EDITOR_MAX_LENGTH | TextEditor组件最大字符数，支持属性设置、属性重置和属性获取。<br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.value[0].i32：文本编辑器允许输入的最大长度，取值范围为[0, +∞)，超出此限制后将阻止继续输入文本。设置为0、负数或未设置该属性时不限制输入长度。<br>*返回：<br>.value[0].i32：文本编辑器允许输入的最大长度。<br>**起始版本：** 24 |
-| NODE_TEXT_EDITOR_MAX_LINES | TextEditor组件内容最大行数，支持属性设置、属性重置和属性获取。<br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.value[0].i32：文本编辑器最大行数限制，取值范围[0, +∞)。取值为0时按无穷大处理；设置为0、负数或未设置该属性时不限制行数。建议在需要固定显示高度的场景下设置该参数。<br>*返回：<br>.value[0].i32：文本编辑器最大行数限制。<br>**起始版本：** 24 |
-| NODE_TEXT_EDITOR_ENABLE_HAPTIC_FEEDBACK | TextEditor组件触觉反馈开关，启用后，在文本拖选等交互操作时将产生触觉反馈震动响应，支持属性设置、属性重置和属性获取。<br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.value[0].i32：是否在文本编辑器中启用触觉反馈，0表示不启用，1表示启用，默认值为1。<br>*返回：<br>.value[0].i32：是否启用了触觉反馈，0表示不启用，1表示启用。<br>**起始版本：** 24 |
+| NODE_TEXT_EDITOR_MAX_LINES | TextEditor组件内容最大行数，支持属性设置、属性重置和属性获取。<br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.value[0].i32：文本编辑器最大行数限制，取值范围：(0, +∞)。设置为0、负数或未设置该属性时，取默认值UINT32_MAX，不限制行数。建议在需要固定显示高度的场景下设置该参数。<br>*返回：<br>.value[0].i32：文本编辑器最大行数限制。<br>**起始版本：** 24 |
+| NODE_TEXT_EDITOR_ENABLE_HAPTIC_FEEDBACK | TextEditor组件触感反馈开关，启用后，在文本拖选等交互操作时将产生触感反馈震动响应，支持属性设置、属性重置和属性获取。<br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.value[0].i32：是否在文本编辑器中启用触感反馈，0表示不启用，1表示启用，默认值为1。<br>*返回：<br>.value[0].i32：是否启用了触感反馈，0表示不启用，1表示启用。<br>**起始版本：** 24 |
 | NODE_TEXT_EDITOR_COPY_OPTIONS | TextEditor组件复制选项，支持属性设置、属性重置和属性获取。<br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.value[0].i32：复制选项，参数类型[ArkUI_CopyOptions](capi-native-type-h.md#arkui_copyoptions)，默认值为ARKUI_COPY_OPTIONS_LOCAL_DEVICE。<br>*返回：<br>.value[0].i32：复制选项，参数类型[ArkUI_CopyOptions](capi-native-type-h.md#arkui_copyoptions)。<br>**起始版本：** 24 |
 | NODE_TEXT_EDITOR_KEYBOARD_APPEARANCE | TextEditor组件键盘外观，支持属性设置、属性重置和属性获取。<br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.value[0].i32：键盘外观，参数类型[ArkUI_KeyboardAppearance](capi-text-common-h.md#arkui_keyboardappearance)，默认值为ARKUI_KEYBOARD_APPEARANCE_NONE_IMMERSIVE。<br>*返回：<br>.value[0].i32：文本编辑器当前设置的键盘外观类型，参数类型[ArkUI_KeyboardAppearance](capi-text-common-h.md#arkui_keyboardappearance)。<br>**起始版本：** 24 |
 | NODE_TEXT_EDITOR_STOP_BACK_PRESS | TextEditor组件是否阻止返回键事件向上层传播，支持属性设置、属性重置和属性获取。<br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.value[0].i32：是否阻止返回事件传播，0表示不阻止，1表示阻止，默认值为0。推荐在编辑器有未保存内容或需要拦截返回键防止意外退出的场景设置为1。<br>*返回：<br>.value[0].i32：是否阻止返回事件传播，0表示不阻止，1表示阻止。<br>**起始版本：** 24 |
@@ -701,7 +701,7 @@ enum ArkUI_NodeAttributeType
 | NODE_TEXT_EDITOR_COMPRESS_LEADING_PUNCTUATION | TextEditor组件行首标点符号压缩开关，启用后，行首的标点符号将缩减占位宽度，调整文本排版对齐效果，支持属性设置、属性重置和属性获取。<br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.value[0].i32：是否启用行首标点符号压缩，0表示不启用，1表示启用，默认值为0。<br>*返回：<br>.value[0].i32：是否启用行首标点符号压缩，0表示不启用，1表示启用。<br>**起始版本：** 24 |
 | NODE_TEXT_EDITOR_SELECTED_DRAG_PREVIEW_STYLE | TextEditor组件选中拖拽预览样式，支持属性设置、属性重置和属性获取。<br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.object：选中拖拽预览样式配置，参数类型[ArkUI_SelectedDragPreviewStyle](capi-arkui-nativemodule-arkui-selecteddragpreviewstyle.md)。当需要自定义选中文本拖拽时的预览效果时传入此参数，不传入时使用系统默认拖拽预览样式。<br>*返回：<br>.object：选中拖拽预览样式配置，参数类型[ArkUI_SelectedDragPreviewStyle](capi-arkui-nativemodule-arkui-selecteddragpreviewstyle.md)。<br>**起始版本：** 24 |
 | NODE_TEXT_EDITOR_SINGLE_LINE | TextEditor组件单行模式开关，支持属性设置、属性重置和属性获取。启用单行模式后，NODE_TEXT_EDITOR_MAX_LINES属性设置的最大行数将不再生效。<br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.value[0].i32：是否启用单行模式，0表示不启用，1表示启用，默认值为0。<br>*返回：<br>.value[0].i32：是否启用单行模式，0表示不启用，1表示启用。<br>**起始版本：** 24 |
-| NODE_TEXT_EDITOR_ORPHAN_CHAR_OPTIMIZATION | TextEditor组件孤字优化开关，支持属性设置、属性重置和属性获取。启用后会调整换行点以尽可能避免孤字。仅在[ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak)属性为非ARKUI_WORD_BREAK_BREAK_ALL时生效。<br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.value[0].i32：是否启用孤字优化，0表示不启用，1表示启用。默认值为0。<br>*返回：<br>.value[0].i32：是否启用孤字优化，0表示不启用，1表示启用。<br>**起始版本：** 26.0.0 |
+| NODE_TEXT_EDITOR_ORPHAN_CHAR_OPTIMIZATION | TextEditor组件孤字优化开关，支持属性设置、属性重置和属性获取。启用后会调整换行点以尽可能避免孤字。仅在[ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak)属性为非ARKUI_WORD_BREAK_BREAK_ALL时生效。<br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.value[0].i32：是否启用孤字优化，0表示不启用，1表示启用。默认值为0。仅在[ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak)属性为非ARKUI_WORD_BREAK_BREAK_ALL时生效。<br>*返回：<br>.value[0].i32：是否启用孤字优化，0表示不启用，1表示启用。<br>**起始版本：** 26.0.0 |
 | NODE_TEXT_EDITOR_HORIZONTAL_SCROLLING | 设置TextEditor组件在文本宽度超过内容区宽度时是否启用水平滚动，支持属性设置、属性重置和属性获取。<br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.value[0].i32：是否启用水平滚动，0表示不启用水平滚动，1表示启用水平滚动。默认值为0。<br>*返回：<br>.value[0].i32：是否启用水平滚动，0表示不启用水平滚动，1表示启用水平滚动。<br>**起始版本：** 26.0.0 |
 | NODE_TEXT_EDITOR_PUNCTUATION_OVERFLOW | 设置TextEditor组件是否启用行尾标点符号悬挂，支持属性设置、属性重置和属性获取。<br>启用后，行尾单个标点符号超出排版宽度而不换行，避免行尾标点符号换行至下一行行首，从而改善文本排版效果。<br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br>*参数：<br>.value[0].i32：是否启用行尾标点符号悬挂，0表示不启用标点符号悬挂，1表示启用标点符号悬挂。默认值为0。<br>*返回：<br>.value[0].i32：是否启用行尾标点符号悬挂，0表示不启用行尾标点符号悬挂，1表示启用行尾标点符号悬挂。<br>**起始版本：** 26.0.0 |
 | NODE_STACK_ALIGN_CONTENT = MAX_NODE_SCOPE_NUM * ARKUI_NODE_STACK | 设置子组件在Stack容器中的对齐方式，支持属性设置，属性重置和属性获取接口。该属性与通用属性NODE_ALIGNMENT同时设置时，后设置的属性生效。**属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：<ul><li>.value[0].i32： 设置子组件在Stack容器中的对齐方式，数据类型[ArkUI_Alignment](capi-native-type-h.md#arkui_alignment)，默认值ARKUI_ALIGNMENT_CENTER。</li></ul>**属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：<ul><li>.value[0].i32： 子组件在Stack容器中的对齐方式，数据类型[ArkUI_Alignment](capi-native-type-h.md#arkui_alignment)。</li></ul> |
@@ -1234,7 +1234,7 @@ ArkUI_UIInputEvent* OH_ArkUI_NodeEvent_GetInputEvent(ArkUI_NodeEvent* event)
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_UIInputEvent* | ArkUI_UIInputEvent 输入事件数据指针。 |
+| [ArkUI_UIInputEvent*](capi-arkui-eventmodule-arkui-uiinputevent.md) | ArkUI_UIInputEvent 输入事件数据指针。 |
 
 ### OH_ArkUI_NodeEvent_GetNodeComponentEvent()
 
@@ -1433,7 +1433,7 @@ ArkUI_TouchTestInfo* OH_ArkUI_NodeEvent_GetTouchTestInfo(ArkUI_NodeEvent* nodeEv
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_TouchTestInfo* | 返回指向[ArkUI_TouchTestInfo](capi-arkui-eventmodule-arkui-touchtestinfo.md)对象的指针。若传入的参数无效或并非触摸测试信息，则返回null。 |
+| [ArkUI_TouchTestInfo*](capi-arkui-eventmodule-arkui-touchtestinfo.md) | 返回指向[ArkUI_TouchTestInfo](capi-arkui-eventmodule-arkui-touchtestinfo.md)对象的指针。若传入的参数无效或并非触摸测试信息，则返回null。 |
 
 ### OH_ArkUI_NodeEvent_GetTextEditorOnWillChangeEvent()
 
@@ -2085,7 +2085,7 @@ Obtains the measurement information of a custom span through a custom component 
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md)* event | Indicates the pointer to the custom component event. |
-| [ArkUI_CustomSpanMeasureInfo](capi-arkui-nativemodule-arkui-customspanmeasureinfo.md)* info | Indicates the measurement information to be obtained. |
+| ArkUI_CustomSpanMeasureInfo* info | Indicates the measurement information to be obtained. |
 
 **返回：**
 
@@ -2110,7 +2110,7 @@ Sets the measurement metrics of a custom span through a custom component event.
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md)* event | Indicates the pointer to the custom component event. |
-| [ArkUI_CustomSpanMetrics](capi-arkui-nativemodule-arkui-customspanmetrics.md)* metrics | Indicates the measurement metrics to set. |
+| ArkUI_CustomSpanMetrics* metrics | Indicates the measurement metrics to set. |
 
 **返回：**
 
@@ -2135,7 +2135,7 @@ Obtains the drawing information of a custom span through a custom component even
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md)* event | Indicates the pointer to the custom component event. |
-| [ArkUI_CustomSpanDrawInfo](capi-arkui-nativemodule-arkui-customspandrawinfo.md)* info | Indicates the drawing information to obtain. |
+| ArkUI_CustomSpanDrawInfo* info | Indicates the drawing information to obtain. |
 
 **返回：**
 
@@ -3244,8 +3244,8 @@ Obtains a snapshot of a given component. If the node is not in the component tre
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Target node. |
-| [ArkUI_SnapshotOptions](capi-arkui-nativemodule-arkui-snapshotoptions.md)* snapshotOptions | Snapshot settings. If the value is null, the default settings are used.Snapshot settings include scaling, color space, and dynamic range configuration.Scaling: floating-point value greater than 0.Color space: <b>3</b> (DISPLAY_P3), <b>4</b> (SRGB), <b>27</b> (DISPLAY_BT2020_SRGB).Dynamic range: [ArkUI_DynamicRangeMode](capi-native-type-h.md#arkui_dynamicrangemode). |
-| [OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)** pixelmap | Pointer to the <b>Pixelmap</b> object created by the system. |
+| ArkUI_SnapshotOptions* snapshotOptions | Snapshot settings. If the value is null, the default settings are used.Snapshot settings include scaling, color space, and dynamic range configuration.Scaling: floating-point value greater than 0.Color space: <b>3</b> (DISPLAY_P3), <b>4</b> (SRGB), <b>27</b> (DISPLAY_BT2020_SRGB).Dynamic range: [ArkUI_DynamicRangeMode](capi-native-type-h.md#arkui_dynamicrangemode). |
+| OH_PixelmapNative** pixelmap | Pointer to the <b>Pixelmap</b> object created by the system. |
 
 **返回：**
 

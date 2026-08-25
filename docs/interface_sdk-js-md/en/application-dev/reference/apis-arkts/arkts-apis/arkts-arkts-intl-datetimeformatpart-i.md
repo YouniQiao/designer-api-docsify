@@ -4,9 +4,7 @@ Date time format part.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-Intl-export interface DateTimeFormatPart--><!--Device-Intl-export interface DateTimeFormatPart-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,11 +25,9 @@ Part type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DateTimeFormatPart-type: DateTimeFormatPartTypes--><!--Device-DateTimeFormatPart-type: DateTimeFormatPartTypes-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -47,11 +43,8 @@ Part value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DateTimeFormatPart-value: string--><!--Device-DateTimeFormatPart-value: string-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

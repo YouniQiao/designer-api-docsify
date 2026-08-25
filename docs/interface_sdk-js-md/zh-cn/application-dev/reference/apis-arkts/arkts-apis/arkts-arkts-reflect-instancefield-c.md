@@ -6,9 +6,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-reflect-class InstanceField--><!--Device-reflect-class InstanceField-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,25 +25,23 @@ equals(other: InstanceField): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InstanceField-equals(other: InstanceField): boolean--><!--Device-InstanceField-equals(other: InstanceField): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [InstanceField](arkts-arkts-reflect-instancefield-c.md) | 是 | 用于与当前字段实例比较的另一个字段对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [InstanceField](arkts-arkts-reflect-instancefield-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果两个实例字段相等则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## getValue
 
@@ -57,25 +53,23 @@ getValue(thisObj: Object): Any
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InstanceField-getValue(thisObj: Object): Any--><!--Device-InstanceField-getValue(thisObj: Object): Any-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| thisObj | Object | 是 | 作为`this`上下文的目标对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| thisObj | Object | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Any | 从该实例字段读取的值。当thisobj为null时返回null； 当其为undefined时返回undefined。 |
+| 类型 |
+| --- |
+| Any |
 
 ## setValue
 
@@ -87,18 +81,15 @@ setValue(thisObj: Object, value: Any): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InstanceField-setValue(thisObj: Object, value: Any): void--><!--Device-InstanceField-setValue(thisObj: Object, value: Any): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| thisObj | Object | 是 | 作为`this`上下文的目标对象。 |
-| value | Any | 是 | 待写入的值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| thisObj | Object | 是 |
+| value | Any | 是 |

@@ -4,7 +4,7 @@ Enum for the file transfer status.
 
 **Since:** 16
 
-<!--Device-opp-enum TransferStatus--><!--Device-opp-enum TransferStatus-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -20,9 +20,9 @@ The file is waiting next operate.
 
 **Since:** 16
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
-<!--Device-TransferStatus-PENDING = 0--><!--Device-TransferStatus-PENDING = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -38,9 +38,9 @@ The file is transfering.
 
 **Since:** 16
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
-<!--Device-TransferStatus-RUNNING = 1--><!--Device-TransferStatus-RUNNING = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -56,11 +56,10 @@ The file is transfer finished.
 
 **Since:** 16
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
-<!--Device-TransferStatus-FINISH = 2--><!--Device-TransferStatus-FINISH = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
-

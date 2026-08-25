@@ -1,14 +1,11 @@
 # @ohos.matrix4
 
-Used to do matrix operations@namespace matrix4
+Provides matrix transformation capabilities for components, including translation, rotation, and scaling. For details, see Transformation.  
+**Matrix4** can be used in the following scenarios:In Transformation, the transform API uses the **Matrix4** object to display the matrix transformation in two-dimensional transformation, and the transform3D API uses the **Matrix4** object to set the three-dimensional transformation matrix for a component.
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-declare namespace matrix4--><!--Device-unnamed-declare namespace matrix4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,19 +19,25 @@ import { matrix4 } from '@kit.ArkUI';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [identity](arkts-arkui-matrix4-identity-f.md) | Matrix initialization function, which can return an identity matrix object. |
-| [init](arkts-arkui-matrix4-init-f.md) | Constructor of Matrix, which can create a fourth-order matrix based on the input parameters. The matrix is column-first. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [combine](arkts-arkui-matrix4-combine-f.md) |
+| [copy](arkts-arkui-matrix4-copy-f.md) |
+| [identity](arkts-arkui-matrix4-identity-f.md) |
+| [init](arkts-arkui-matrix4-init-f.md) |
+| [invert](arkts-arkui-matrix4-invert-f.md) |
+| [rotate](arkts-arkui-matrix4-rotate-f.md) |
+| [scale](arkts-arkui-matrix4-scale-f.md) |
+| [transformPoint](arkts-arkui-matrix4-transformpoint-f.md) |
+| [translate](arkts-arkui-matrix4-translate-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Matrix4Transit.@interface Matrix4Transit |
-| [Point](arkts-arkui-matrix4-point-i.md) | Set poly to poly point.@interface Point |
-| [PolyToPolyOptions](arkts-arkui-matrix4-polytopolyoptions-i.md) | Set poly to poly point options.@interface PolyToPolyOptions |
-| [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | Set Rotation Parameters.@interface RotateOption |
-| [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md) | Set scaling parameters@interface ScaleOption |
-| [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | Set translation parameters@interface TranslateOption |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) |
+| [Point](arkts-arkui-matrix4-point-i.md) |
+| [PolyToPolyOptions](arkts-arkui-matrix4-polytopolyoptions-i.md) |
+| [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) |
+| [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md) |
+| [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) |

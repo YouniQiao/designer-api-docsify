@@ -2,11 +2,9 @@
 
 定义工具栏子项的当前状态。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export declare enum ItemState--><!--Device-unnamed-export declare enum ItemState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +16,13 @@ ENABLE = 1
 
 工具栏子项为正常可点击状态。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ItemState-ENABLE = 1--><!--Device-ItemState-ENABLE = 1-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,13 +34,13 @@ DISABLE = 2
 
 工具栏子项为不可点击状态。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ItemState-DISABLE = 2--><!--Device-ItemState-DISABLE = 2-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,13 +52,12 @@ ACTIVATE = 3
 
 工具栏子项为激活状态，可点击。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ItemState-ACTIVATE = 3--><!--Device-ItemState-ACTIVATE = 3-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

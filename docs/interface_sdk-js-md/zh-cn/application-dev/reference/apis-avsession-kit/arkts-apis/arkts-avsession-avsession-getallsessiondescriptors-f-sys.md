@@ -14,11 +14,11 @@ function getAllSessionDescriptors(callback: AsyncCallback<Array<Readonly<AVSessi
 
 获取所有设置过媒体信息且注册过控制回调的会话的描述符信息。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
-
-<!--Device-avSession-function getAllSessionDescriptors(callback: AsyncCallback<Array<Readonly<AVSessionDescriptor>>>): void--><!--Device-avSession-function getAllSessionDescriptors(callback: AsyncCallback<Array<Readonly<AVSessionDescriptor>>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
@@ -26,17 +26,17 @@ function getAllSessionDescriptors(callback: AsyncCallback<Array<Readonly<AVSessi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Readonly&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)&gt;&gt;&gt; | 是 | 回调函数。返回所有会话描述的只读对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Readonly&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i.md)&gt;&gt;&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
 **示例**
 
@@ -105,43 +105,3 @@ avSession.getSessionDescriptors(avSession.SessionCategory.CATEGORY_ALL).then((de
   }
 });
 ```
-
-
-## getAllSessionDescriptors
-
-```TypeScript
-function getAllSessionDescriptors(): Promise<Array<Readonly<AVSessionDescriptor>>>
-```
-
-获取所有设置过媒体信息且注册过控制回调的会话的描述符信息。结果通过Promise异步回调方式返回。
-
-**起始版本：** 23
-
-**需要权限：** 
-- API版本23+：ohos.permission.MANAGE_MEDIA_RESOURCES or ohos.permission.MANAGE_MEDIA_RESOURCES_FOR_PUBLIC
-- API版本9 - 22：ohos.permission.MANAGE_MEDIA_RESOURCES
-
-<!--Device-avSession-function getAllSessionDescriptors(): Promise<Array<Readonly<AVSessionDescriptor>>>--><!--Device-avSession-function getAllSessionDescriptors(): Promise<Array<Readonly<AVSessionDescriptor>>>-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Manager
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;Readonly&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)&gt;&gt;&gt; | Promise对象。返回所有会话描述的只读对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.<br>**适用版本：** 9 - 22 |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-
-**示例**
-
-参见 [getAllSessionDescriptors](#getallsessiondescriptors)
-

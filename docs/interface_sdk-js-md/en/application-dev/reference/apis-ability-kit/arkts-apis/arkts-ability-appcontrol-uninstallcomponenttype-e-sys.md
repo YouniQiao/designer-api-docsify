@@ -2,9 +2,9 @@
 
 Enumerates the types of abilities during uninstallation.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-appControl-export enum UninstallComponentType--><!--Device-appControl-export enum UninstallComponentType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -18,9 +18,9 @@ EXTENSION = 1
 
 ExtensionAbility component. Only [ExtensionAbility](../../../quick-start/module-configuration-file.md#extensionabilities) components of the service type is supported.The ExtensionAbility component is determined by bundleName, moduleName, and abilityName in want.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-UninstallComponentType-EXTENSION = 1--><!--Device-UninstallComponentType-EXTENSION = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -34,11 +34,10 @@ UI_EXTENSION = 2
 
 UIExtensionAbility component.The UIExtensionAbility is determined by bundleName, moduleName, and abilityName in want, and the **ability.want.params.uiExtensionType** field in **want.parameters** is set to [UIExtensionAbility](../../../application-models/uiextensionability-sys.md).
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-UninstallComponentType-UI_EXTENSION = 2--><!--Device-UninstallComponentType-UI_EXTENSION = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **System API:** This is a system API.
-

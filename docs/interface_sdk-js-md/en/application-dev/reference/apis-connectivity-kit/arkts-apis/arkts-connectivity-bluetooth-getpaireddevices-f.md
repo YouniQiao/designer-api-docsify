@@ -16,25 +16,24 @@ Obtains the list of Bluetooth devices that have been paired with the current dev
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getPairedDevices](arkts-connectivity-bluetoothmanager-getpaireddevices-f.md)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
-<!--Device-bluetooth-function getPairedDevices(): Array<string>--><!--Device-bluetooth-function getPairedDevices(): Array<string>-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;string&gt; | Returns a list of paired Bluetooth devices's address. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;string & gt; |
 
 **Examples**
 
 ```TypeScript
 let devices : Array<string> = bluetooth.getPairedDevices();
 ```
-

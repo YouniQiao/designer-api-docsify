@@ -2,9 +2,9 @@
 
 Defines the shared bundle information.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-unnamed-export interface SharedBundleInfo--><!--Device-unnamed-export interface SharedBundleInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -20,9 +20,9 @@ Compatibility type of the shared bundle.
 
 **Type:** bundleManager.CompatiblePolicy
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SharedBundleInfo-readonly compatiblePolicy: bundleManager.CompatiblePolicy--><!--Device-SharedBundleInfo-readonly compatiblePolicy: bundleManager.CompatiblePolicy-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -38,9 +38,9 @@ Name of the shared bundle.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SharedBundleInfo-readonly name: string--><!--Device-SharedBundleInfo-readonly name: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -56,11 +56,10 @@ Information about the shared module.
 
 **Type:** Array&lt;[SharedModuleInfo](arkts-ability-sharedbundleinfo-sharedmoduleinfo-i-sys.md)&gt;
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SharedBundleInfo-readonly sharedModuleInfo: Array<SharedModuleInfo>--><!--Device-SharedBundleInfo-readonly sharedModuleInfo: Array<SharedModuleInfo>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
-

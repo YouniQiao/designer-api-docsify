@@ -4,7 +4,7 @@ ChipGroupSpaceOptions 定义了ChipGroup左右内边距，以及Chip与Chip之�
 
 **起始版本：** 12
 
-<!--Device-unnamed-export interface ChipGroupSpaceOptions--><!--Device-unnamed-export interface ChipGroupSpaceOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,11 @@ endSpace?: Length
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroupSpaceOptions-endSpace?: Length--><!--Device-ChipGroupSpaceOptions-endSpace?: Length-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,11 +47,11 @@ Chip与Chip之间的间距（不支持百分比）。取值范围：number类型
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroupSpaceOptions-itemSpace?: string | number--><!--Device-ChipGroupSpaceOptions-itemSpace?: string | number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,11 +67,10 @@ startSpace?: Length
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ChipGroupSpaceOptions-startSpace?: Length--><!--Device-ChipGroupSpaceOptions-startSpace?: Length-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

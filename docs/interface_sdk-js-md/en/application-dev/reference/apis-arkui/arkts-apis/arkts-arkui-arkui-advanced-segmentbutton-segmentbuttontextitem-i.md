@@ -4,7 +4,7 @@ Text button information.
 
 **Since:** 11
 
-<!--Device-unnamed-interface SegmentButtonTextItem--><!--Device-unnamed-interface SegmentButtonTextItem-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +28,11 @@ Accessibility description, which is used to explain component operations to user
 
 **Since:** 13
 
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-SegmentButtonTextItem-accessibilityDescription?: ResourceStr--><!--Device-SegmentButtonTextItem-accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ Accessibility level, which is used to set whether the current component can be r
 
 **Since:** 13
 
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-SegmentButtonTextItem-accessibilityLevel?: string--><!--Device-SegmentButtonTextItem-accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,11 +74,10 @@ Button text.
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-SegmentButtonTextItem-text: ResourceStr--><!--Device-SegmentButtonTextItem-text: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

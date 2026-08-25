@@ -2,9 +2,9 @@
 
 数据代理操作配置的数据结构。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-dataShare-interface DataProxyConfig--><!--Device-dataShare-interface DataProxyConfig-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -26,9 +26,9 @@ maxValueLength?: DataProxyMaxValueLength
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-DataProxyConfig-maxValueLength?: DataProxyMaxValueLength--><!--Device-DataProxyConfig-maxValueLength?: DataProxyMaxValueLength-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -42,11 +42,10 @@ type: DataProxyType
 
 **类型：** [DataProxyType](arkts-arkdata-datashare-dataproxytype-e.md)
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DataProxyConfig-type: DataProxyType--><!--Device-DataProxyConfig-type: DataProxyType-End-->
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
-

@@ -16,28 +16,28 @@ function cancelReminderOnDisplay(reminderId: int): Promise<void>
 
 **起始版本：** 23
 
-<!--Device-reminderAgentManager-function cancelReminderOnDisplay(reminderId: int): Promise<void>--><!--Device-reminderAgentManager-function cancelReminderOnDisplay(reminderId: int): Promise<void>-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| reminderId | int | 是 | 需要取消的代理提醒的id。 代理提醒id会在 [发布代理提醒](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md) 时作为返回值返回。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| reminderId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [1700003](../errorcode-reminderAgentManager.md#1700003-提醒不存在) | The reminder does not exist. |
-| [1700007](../errorcode-reminderAgentManager.md#1700007-参数错误) | If the input parameter is not valid parameter. |
+| 错误码ID |
+| --- |
+| [1700003](../errorcode-reminderAgentManager.md#1700003-提醒不存在) |
+| [1700007](../errorcode-reminderAgentManager.md#1700007-参数错误) |
 
 **示例**
 
@@ -67,4 +67,3 @@ reminderAgentManager.cancelReminderOnDisplay(reminderId).then(() => {
   console.error("promise err code:" + err.code + " message:" + err.message);
 });
 ```
-

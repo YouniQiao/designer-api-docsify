@@ -14,11 +14,11 @@ function setInputDeviceEnabled(deviceId: int, enabled: boolean): Promise<void>
 
 设置输入设备的开关状态。以触摸屏为例：关闭时，点击触摸屏设备不响应；开启时，可正常操作触摸屏。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INPUT_DEVICE_CONTROLLER
-
-<!--Device-inputDevice-function setInputDeviceEnabled(deviceId: int, enabled: boolean): Promise<void>--><!--Device-inputDevice-function setInputDeviceEnabled(deviceId: int, enabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -26,25 +26,25 @@ function setInputDeviceEnabled(deviceId: int, enabled: boolean): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| deviceId | int | 是 | 输入设备的唯一标识，同一个物理设备反复插拔或重启，设备ID可能会发生变化。 |
-| enabled | boolean | 是 | 输入设备的开关状态，取值为true表示开启输入设备，取值为false表示关闭输入设备。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| deviceId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| enabled | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [3900001](../errorcode-inputdevice.md#3900001-指定的设备不存在) | The specified device does not exist. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3900001](../errorcode-inputdevice.md#3900001-指定的设备不存在) |
 
 **示例**
 
@@ -105,4 +105,3 @@ struct Index {
   }
 }
 ```
-

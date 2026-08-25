@@ -4,9 +4,7 @@ Provides an atomic wrapper for safe concurrent access to a float value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class AtomicFloat--><!--Device-unnamed-export class AtomicFloat-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,26 +23,24 @@ Atomically compares the current value with the expected value and replaces it if
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicFloat-compareAndSwap(expected: float, val: float): float--><!--Device-AtomicFloat-compareAndSwap(expected: float, val: float): float-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| expected | float | Yes | the expected current value. |
-| val | float | Yes | the new value to store if the comparison succeeds. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| expected | float | Yes |
+| val | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| float | the previous value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| float |
 
 ## constructor
 
@@ -56,19 +52,17 @@ Constructs a new AtomicFloat with the provided initial value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicFloat-constructor(val: float)--><!--Device-AtomicFloat-constructor(val: float)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | float | Yes | the initial value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | float | Yes |
 
 ## exchange
 
@@ -80,25 +74,23 @@ Atomically exchanges the current value with a new value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicFloat-exchange(val: float): float--><!--Device-AtomicFloat-exchange(val: float): float-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | float | Yes | the new value to exchange with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| float | the previous value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| float |
 
 ## fetchAdd
 
@@ -110,25 +102,23 @@ Atomically adds a value to the current value and returns the previous value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicFloat-fetchAdd(val: float): float--><!--Device-AtomicFloat-fetchAdd(val: float): float-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | float | Yes | the value to add. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| float | the previous value before the addition |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| float |
 
 ## fetchSub
 
@@ -140,25 +130,23 @@ Atomically subtracts a value from the current value and returns the previous val
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicFloat-fetchSub(val: float): float--><!--Device-AtomicFloat-fetchSub(val: float): float-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | float | Yes | the value to subtract. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| float | the previous value before the subtraction |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| float |
 
 ## isLockFree
 
@@ -170,19 +158,17 @@ Checks whether atomic operations on this type are lock-free
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicFloat-static isLockFree(): boolean--><!--Device-AtomicFloat-static isLockFree(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if atomic operations are lock-free, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## load
 
@@ -194,19 +180,17 @@ Atomically loads the current value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicFloat-load(): float--><!--Device-AtomicFloat-load(): float-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| float | the current value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| float |
 
 ## store
 
@@ -218,17 +202,14 @@ Atomically stores a new value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicFloat-store(val: float): void--><!--Device-AtomicFloat-store(val: float): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | float | Yes | the new value to store. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | float | Yes |

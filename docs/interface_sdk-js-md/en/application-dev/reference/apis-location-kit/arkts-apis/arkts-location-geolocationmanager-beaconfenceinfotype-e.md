@@ -2,9 +2,9 @@
 
 Enum for the beacon fence information type.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-geoLocationManager-export enum BeaconFenceInfoType--><!--Device-geoLocationManager-export enum BeaconFenceInfoType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -16,11 +16,10 @@ BEACON_MANUFACTURE_DATA = 1
 
 Identifies a beacon device using beacon device manufacture data.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-BeaconFenceInfoType-BEACON_MANUFACTURE_DATA = 1--><!--Device-BeaconFenceInfoType-BEACON_MANUFACTURE_DATA = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Location.Location.Geofence
-

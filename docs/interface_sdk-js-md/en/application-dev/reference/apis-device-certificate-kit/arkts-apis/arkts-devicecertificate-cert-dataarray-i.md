@@ -2,9 +2,9 @@
 
 Defines a list of data arrays.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-cert-interface DataArray--><!--Device-cert-interface DataArray-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -24,11 +24,10 @@ Indicates the content of the data array.
 
 **Type:** Array&lt;Uint8Array&gt;
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-DataArray-data: Array<Uint8Array>--><!--Device-DataArray-data: Array<Uint8Array>-End-->
-
 **System capability:** SystemCapability.Security.Cert
-

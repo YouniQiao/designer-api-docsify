@@ -4,7 +4,7 @@
 
 **起始版本：** 7
 
-<!--Device-unnamed-declare enum LayoutDirection--><!--Device-unnamed-declare enum LayoutDirection-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ LTR
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-LayoutDirection-LTR--><!--Device-LayoutDirection-LTR-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,9 @@ RTL
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-LayoutDirection-RTL--><!--Device-LayoutDirection-RTL-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,9 +50,8 @@ Auto
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-LayoutDirection-Auto--><!--Device-LayoutDirection-Auto-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

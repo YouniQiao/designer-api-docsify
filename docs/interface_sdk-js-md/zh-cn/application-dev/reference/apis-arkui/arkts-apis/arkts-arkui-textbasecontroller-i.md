@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare interface TextBaseController--><!--Device-unnamed-declare interface TextBaseController-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,11 +23,11 @@ closeSelectionMenu(): void
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextBaseController-closeSelectionMenu(): void--><!--Device-TextBaseController-closeSelectionMenu(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -41,19 +41,19 @@ getLayoutManager(): LayoutManager
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextBaseController-getLayoutManager(): LayoutManager--><!--Device-TextBaseController-getLayoutManager(): LayoutManager-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [LayoutManager](arkts-arkui-layoutmanager-i.md) | 布局管理器对象，用于获取文本布局信息，如行数、行度量、字形位置等。 |
+| 类型 |
+| --- |
+| [LayoutManager](arkts-arkui-layoutmanager-i.md) |
 
 ## setSelection
 
@@ -68,19 +68,18 @@ setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOp
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextBaseController-setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void--><!--Device-TextBaseController-setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| selectionStart | number | 是 | 选中开始位置。 <br>取值小于0时，按0处理。取值大于文本长度时，按当前文本长度处理。 <br>特殊取值效果：当selectionStart和selectionEnd均为-1时，表示全选。 |
-| selectionEnd | number | 是 | 选中结束位置。 <br>取值小于0时，按0处理。取值大于文本长度时，按当前文本长度处理。 <br>特殊取值效果：当selectionStart和selectionEnd均为-1时，表示全选。 |
-| options | SelectionOptions | 否 | 选择项配置。 默认值继承SelectionOptions。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| selectionStart | number | 是 |
+| selectionEnd | number | 是 |
+| options | [SelectionOptions](arkts-arkui-common-selectionoptions-i.md) | 否 |

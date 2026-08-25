@@ -4,7 +4,7 @@
 
 **起始版本：** 15
 
-<!--Device-unnamed-declare enum KeyboardAppearance--><!--Device-unnamed-declare enum KeyboardAppearance-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ NONE_IMMERSIVE = 0
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-KeyboardAppearance-NONE_IMMERSIVE = 0--><!--Device-KeyboardAppearance-NONE_IMMERSIVE = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ IMMERSIVE = 1
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-KeyboardAppearance-IMMERSIVE = 1--><!--Device-KeyboardAppearance-IMMERSIVE = 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ LIGHT_IMMERSIVE = 2
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-KeyboardAppearance-LIGHT_IMMERSIVE = 2--><!--Device-KeyboardAppearance-LIGHT_IMMERSIVE = 2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,10 @@ DARK_IMMERSIVE = 3
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
-<!--Device-KeyboardAppearance-DARK_IMMERSIVE = 3--><!--Device-KeyboardAppearance-DARK_IMMERSIVE = 3-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

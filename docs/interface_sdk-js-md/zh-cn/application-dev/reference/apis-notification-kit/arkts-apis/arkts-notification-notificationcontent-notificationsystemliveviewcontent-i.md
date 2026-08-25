@@ -7,9 +7,9 @@
 
 **继承/实现关系：** NotificationSystemLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-unnamed-export interface NotificationSystemLiveViewContent--><!--Device-unnamed-export interface NotificationSystemLiveViewContent-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -23,9 +23,9 @@ button?: NotificationButton
 
 **类型：** [NotificationButton](arkts-notification-notificationcontent-notificationbutton-i.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-NotificationSystemLiveViewContent-button?: NotificationButton--><!--Device-NotificationSystemLiveViewContent-button?: NotificationButton-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -39,9 +39,9 @@ capsule?: NotificationCapsule
 
 **类型：** [NotificationCapsule](arkts-notification-notificationcontent-notificationcapsule-i.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-NotificationSystemLiveViewContent-capsule?: NotificationCapsule--><!--Device-NotificationSystemLiveViewContent-capsule?: NotificationCapsule-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -55,9 +55,9 @@ progress?: NotificationProgress
 
 **类型：** [NotificationProgress](arkts-notification-notificationcontent-notificationprogress-i.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-NotificationSystemLiveViewContent-progress?: NotificationProgress--><!--Device-NotificationSystemLiveViewContent-progress?: NotificationProgress-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -71,9 +71,9 @@ time?: NotificationTime
 
 **类型：** [NotificationTime](arkts-notification-notificationcontent-notificationtime-i.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-NotificationSystemLiveViewContent-time?: NotificationTime--><!--Device-NotificationSystemLiveViewContent-time?: NotificationTime-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -85,11 +85,10 @@ typeCode: int
 
 类型标识符，标记调用方业务类型，用于区分不同实况窗业务场景。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-NotificationSystemLiveViewContent-typeCode: int--><!--Device-NotificationSystemLiveViewContent-typeCode: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
-

@@ -15,20 +15,20 @@ Truncates a file based on the file descriptor. This API returns the result synch
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [truncateSync](arkts-corefile-file-fs-truncatesync-f.md)
-
-<!--Device-unnamed-declare function ftruncateSync(fd: number, len?: number): void--><!--Device-unnamed-declare function ftruncateSync(fd: number, len?: number): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fd | number | Yes | File descriptor of the file to truncate. |
-| len | number | No | File length after truncation, in bytes. The default value is **0**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fd | number | Yes |
+| len | number | No |
 
 **Examples**
 
@@ -38,4 +38,3 @@ let fd = fileio.openSync(filePath);
 let len = 5;
 fileio.ftruncateSync(fd, len);
 ```
-

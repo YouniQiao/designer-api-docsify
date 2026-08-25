@@ -4,7 +4,7 @@ Defines the writable system environment key.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare class WritableEnvKey--><!--Device-unnamed-declare class WritableEnvKey-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,31 +25,30 @@ Defines the system environment key direction.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-WritableEnvKey-static readonly DIRECTION: WritableSystemEnvKey<Direction>--><!--Device-WritableEnvKey-static readonly DIRECTION: WritableSystemEnvKey<Direction>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FONT_SCALE
 
 ```TypeScript
-static readonly FONT_SCALE: WritableSystemEnvKey<double>
+static readonly FONT_SCALE: WritableSystemEnvKey<number>
 ```
 
 Defines the system environment key fontScale.
 
-**Type:** [WritableSystemEnvKey](arkts-arkui-writablesystemenvkey-c.md)&lt;double&gt;
+**Type:** [WritableSystemEnvKey](arkts-arkui-writablesystemenvkey-c.md)&lt;number&gt;
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-WritableEnvKey-static readonly FONT_SCALE: WritableSystemEnvKey<double>--><!--Device-WritableEnvKey-static readonly FONT_SCALE: WritableSystemEnvKey<double>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

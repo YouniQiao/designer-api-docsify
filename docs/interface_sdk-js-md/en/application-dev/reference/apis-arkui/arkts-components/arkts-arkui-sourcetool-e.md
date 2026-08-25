@@ -4,7 +4,7 @@ Enumerates the input source tool types.
 
 **Since:** 9
 
-<!--Device-unnamed-declare enum SourceTool--><!--Device-unnamed-declare enum SourceTool-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ Unknown input source.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-SourceTool-Unknown--><!--Device-SourceTool-Unknown-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,9 @@ Finger.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-SourceTool-Finger--><!--Device-SourceTool-Finger-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,9 +50,9 @@ Stylus.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-SourceTool-Pen--><!--Device-SourceTool-Pen-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,11 +66,11 @@ Mouse device.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SourceTool-MOUSE--><!--Device-SourceTool-MOUSE-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,11 +84,11 @@ Touchpad. Single-finger input on the touchpad is treated as a mouse input operat
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SourceTool-TOUCHPAD--><!--Device-SourceTool-TOUCHPAD-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -102,11 +102,10 @@ Joystick.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-SourceTool-JOYSTICK--><!--Device-SourceTool-JOYSTICK-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

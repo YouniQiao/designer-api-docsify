@@ -4,9 +4,9 @@ Describes the magnetic field sensor data. It extends from [Response](arkts-senso
 
 **Inheritance/Implementation:** MagneticFieldResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sensor-interface MagneticFieldResponse--><!--Device-sensor-interface MagneticFieldResponse-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -24,11 +24,11 @@ x: double
 
 Magnetic field strength on the x-axis, in μT.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MagneticFieldResponse-x: double--><!--Device-MagneticFieldResponse-x: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -40,11 +40,11 @@ y: double
 
 Magnetic field strength on the y-axis, in μT.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MagneticFieldResponse-y: double--><!--Device-MagneticFieldResponse-y: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -56,11 +56,10 @@ z: double
 
 Magnetic field strength on the z-axis, in μT.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MagneticFieldResponse-z: double--><!--Device-MagneticFieldResponse-z: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
-

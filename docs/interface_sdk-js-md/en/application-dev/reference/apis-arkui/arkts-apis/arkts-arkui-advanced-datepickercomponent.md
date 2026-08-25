@@ -10,25 +10,24 @@ import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode,
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md) | CommonOptions defines common options for the date time picker. |
-| [DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md) | DateOptions defines options for the date picker.Inherits from [CommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-datepickercomponent-commonoptions-c.md). |
-| [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md) | DatePickerComponentOptions defines options for the date time picker component. |
-| [DatePickerComponentResult](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md) | DatePickerComponentResult defines the selection result of the date time picker. |
-| [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md) | TimeOptions defines options for the time picker.Inherits from [CommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-datepickercomponent-commonoptions-c.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md) |
+| [DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md) |
+| [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md) |
+| [DatePickerComponentResult](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md) |
+| [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md) |
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [DatePickerComponent](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponent-s.md) | DatePickerComponent component is used to select date (year, month, day) and time (hour, minute, second). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DatePickerComponent](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponent-s.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [DateMode](arkts-arkui-arkui-advanced-datepickercomponent-datemode-e.md) | DateMode enum defines the mode of the date picker. |
-| [DisplayMode](arkts-arkui-arkui-advanced-datepickercomponent-displaymode-e.md) | DisplayMode enum defines the display mode of the picker. |
-| [TimeFormat](arkts-arkui-arkui-advanced-datepickercomponent-timeformat-e.md) | TimeFormat enum defines the format of the time picker. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DateMode](arkts-arkui-arkui-advanced-datepickercomponent-datemode-e.md) |
+| [DisplayMode](arkts-arkui-arkui-advanced-datepickercomponent-displaymode-e.md) |
+| [TimeFormat](arkts-arkui-arkui-advanced-datepickercomponent-timeformat-e.md) |

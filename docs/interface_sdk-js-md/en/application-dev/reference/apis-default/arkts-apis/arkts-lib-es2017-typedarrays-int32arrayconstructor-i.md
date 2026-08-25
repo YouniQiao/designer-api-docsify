@@ -1,25 +1,21 @@
 # Int32ArrayConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface Int32ArrayConstructor--><!--Device-unnamed-interface Int32ArrayConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
+## [[Construct]]
 
 ```TypeScript
 new (): Int32Array
 ```
 
-**Since:** -1
-
-<!--Device-Int32ArrayConstructor-new (): Int32Array--><!--Device-Int32ArrayConstructor-new (): Int32Array-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

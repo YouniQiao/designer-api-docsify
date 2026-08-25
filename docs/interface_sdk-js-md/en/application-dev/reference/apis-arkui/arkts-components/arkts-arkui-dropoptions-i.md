@@ -4,7 +4,7 @@ Sets parameters for the drop process.
 
 **Since:** 15
 
-<!--Device-unnamed-declare interface DropOptions--><!--Device-unnamed-declare interface DropOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,10 @@ Whether to disable data prefetching for the drag-and-drop operation. The value *
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
-<!--Device-DropOptions-disableDataPrefetch?: boolean--><!--Device-DropOptions-disableDataPrefetch?: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

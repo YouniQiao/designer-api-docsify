@@ -2,9 +2,9 @@
 
 Enumerates the application states. This enum can be used together with [AbilityStateData](arkts-ability-abilitystatedata-c.md) to return the application state.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-appManager-export enum ApplicationState--><!--Device-appManager-export enum ApplicationState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -18,9 +18,9 @@ STATE_CREATE
 
 The application is being created.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ApplicationState-STATE_CREATE--><!--Device-ApplicationState-STATE_CREATE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -34,9 +34,9 @@ STATE_FOREGROUND
 
 The application is running in the foreground.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ApplicationState-STATE_FOREGROUND--><!--Device-ApplicationState-STATE_FOREGROUND-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -50,9 +50,9 @@ STATE_ACTIVE
 
 The application is active.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ApplicationState-STATE_ACTIVE--><!--Device-ApplicationState-STATE_ACTIVE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -66,9 +66,9 @@ STATE_BACKGROUND
 
 The application is running in the background.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ApplicationState-STATE_BACKGROUND--><!--Device-ApplicationState-STATE_BACKGROUND-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -82,11 +82,10 @@ STATE_DESTROY
 
 The application is being destroyed.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ApplicationState-STATE_DESTROY--><!--Device-ApplicationState-STATE_DESTROY-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
-

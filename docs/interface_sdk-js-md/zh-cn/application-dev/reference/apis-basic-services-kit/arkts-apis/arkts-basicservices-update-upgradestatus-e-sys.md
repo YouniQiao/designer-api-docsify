@@ -2,9 +2,9 @@
 
 升级状态。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-update-export enum UpgradeStatus--><!--Device-update-export enum UpgradeStatus-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -18,9 +18,9 @@ WAITING_DOWNLOAD = 20
 
 待下载。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-UpgradeStatus-WAITING_DOWNLOAD = 20--><!--Device-UpgradeStatus-WAITING_DOWNLOAD = 20-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -34,9 +34,9 @@ DOWNLOADING = 21
 
 下载中。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-UpgradeStatus-DOWNLOADING = 21--><!--Device-UpgradeStatus-DOWNLOADING = 21-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -50,9 +50,9 @@ DOWNLOAD_PAUSED = 22
 
 下载暂停。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-UpgradeStatus-DOWNLOAD_PAUSED = 22--><!--Device-UpgradeStatus-DOWNLOAD_PAUSED = 22-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -66,9 +66,9 @@ DOWNLOAD_FAIL = 23
 
 下载失败。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-UpgradeStatus-DOWNLOAD_FAIL = 23--><!--Device-UpgradeStatus-DOWNLOAD_FAIL = 23-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -82,9 +82,9 @@ WAITING_INSTALL = 30
 
 待安装。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-UpgradeStatus-WAITING_INSTALL = 30--><!--Device-UpgradeStatus-WAITING_INSTALL = 30-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -98,9 +98,9 @@ UPDATING = 31
 
 更新中。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-UpgradeStatus-UPDATING = 31--><!--Device-UpgradeStatus-UPDATING = 31-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -114,9 +114,9 @@ WAITING_APPLY = 40
 
 待生效。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-UpgradeStatus-WAITING_APPLY = 40--><!--Device-UpgradeStatus-WAITING_APPLY = 40-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -130,9 +130,9 @@ APPLYING = 41
 
 生效中。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-UpgradeStatus-APPLYING = 41--><!--Device-UpgradeStatus-APPLYING = 41-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -146,9 +146,9 @@ UPGRADE_SUCCESS = 50
 
 升级成功。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-UpgradeStatus-UPGRADE_SUCCESS = 50--><!--Device-UpgradeStatus-UPGRADE_SUCCESS = 50-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -162,11 +162,10 @@ UPGRADE_FAIL = 51
 
 升级失败。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-UpgradeStatus-UPGRADE_FAIL = 51--><!--Device-UpgradeStatus-UPGRADE_FAIL = 51-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
-

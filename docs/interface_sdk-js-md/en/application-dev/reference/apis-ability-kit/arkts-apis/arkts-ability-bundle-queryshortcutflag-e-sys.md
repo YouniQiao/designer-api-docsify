@@ -4,9 +4,9 @@ Flag used to specify the query scope for shortcuts.
 
 **Since:** 9
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-bundle-export enum QueryShortCutFlag--><!--Device-bundle-export enum QueryShortCutFlag-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -22,11 +22,10 @@ Query home screen shortcuts.
 
 **Since:** 9
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-QueryShortCutFlag-QUERY_SHORTCUT_HOME = 0--><!--Device-QueryShortCutFlag-QUERY_SHORTCUT_HOME = 0-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **System API:** This is a system API.
-

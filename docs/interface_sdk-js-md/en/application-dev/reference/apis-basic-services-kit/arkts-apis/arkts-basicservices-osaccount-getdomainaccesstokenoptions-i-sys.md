@@ -2,9 +2,9 @@
 
 Defines the options for obtaining a domain access token.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-osAccount-interface GetDomainAccessTokenOptions--><!--Device-osAccount-interface GetDomainAccessTokenOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -19,16 +19,16 @@ import { osAccount } from '@kit.BasicServicesKit';
 ## businessParams
 
 ```TypeScript
-businessParams: Record<string, RecordData>
+businessParams: Record<string, Object>
 ```
 
-Indicates the business parameters.
+Service parameters customized by the service party based on the request protocol.
 
-**Type:** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, Object&gt;
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-GetDomainAccessTokenOptions-businessParams: Record<string, RecordData>--><!--Device-GetDomainAccessTokenOptions-businessParams: Record<string, RecordData>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -42,11 +42,11 @@ callerUid: int
 
 Unique identifier of the caller.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-GetDomainAccessTokenOptions-callerUid: int--><!--Device-GetDomainAccessTokenOptions-callerUid: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -62,9 +62,9 @@ Domain account information.
 
 **Type:** [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-GetDomainAccessTokenOptions-domainAccountInfo: DomainAccountInfo--><!--Device-GetDomainAccessTokenOptions-domainAccountInfo: DomainAccountInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -80,11 +80,10 @@ Token of the domain account.
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-GetDomainAccessTokenOptions-domainAccountToken: Uint8Array--><!--Device-GetDomainAccessTokenOptions-domainAccountToken: Uint8Array-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-

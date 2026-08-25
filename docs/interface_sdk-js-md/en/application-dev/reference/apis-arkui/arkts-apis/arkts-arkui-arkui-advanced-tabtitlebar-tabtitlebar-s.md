@@ -12,9 +12,7 @@ The **TabTitleBar** component is a tab title bar used to switch between tabs pag
 
 **Since:** 10
 
-**Decorator:** @Component
-
-<!--Device-unnamed-export declare struct TabTitleBar--><!--Device-unnamed-export declare struct TabTitleBar-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,23 +22,19 @@ The **TabTitleBar** component is a tab title bar used to switch between tabs pag
 import { TabTitleBar, TabTitleBarMenuItem, TabTitleBarTabItem } from '@kit.ArkUI';
 ```
 
-## menuItems
+## build
 
 ```TypeScript
-menuItems?: Array<TabTitleBarMenuItem>
+build(): void
 ```
 
-List of menu items on the right of the title bar.
+The method to build component.
 
-**Type:** Array&lt;[TabTitleBarMenuItem](../../apis-default/arkts-apis/arkts-arkui-advanced-tabtitlebar-tabtitlebarmenuitem-c.md)&gt;
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-TabTitleBar-menuItems?: Array<TabTitleBarMenuItem>--><!--Device-TabTitleBar-menuItems?: Array<TabTitleBarMenuItem>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,17 +46,33 @@ swiperContent: () => void
 
 Constructor for page content pertaining to the tab list.
 
-**Type:** () =&gt; void
-
 **Since:** 10
 
-**Decorator:** @BuilderParam
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-TabTitleBar-@BuilderParam  swiperContent: () => void--><!--Device-TabTitleBar-@BuilderParam  swiperContent: () => void-End-->
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## menuItems
+
+```TypeScript
+menuItems?: Array<TabTitleBarMenuItem>
+```
+
+List of menu items on the right of the title bar.
+
+**Type:** Array&lt;[TabTitleBarMenuItem](arkts-arkui-arkui-advanced-tabtitlebar-tabtitlebarmenuitem-c.md)&gt;
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,15 +84,14 @@ tabItems: Array<TabTitleBarTabItem>
 
 List of tab items on the left of the title bar.
 
-**Type:** Array&lt;[TabTitleBarTabItem](../../apis-default/arkts-apis/arkts-arkui-advanced-tabtitlebar-tabtitlebartabitem-c.md)&gt;
+**Type:** Array&lt;[TabTitleBarTabItem](arkts-arkui-arkui-advanced-tabtitlebar-tabtitlebartabitem-c.md)&gt;
 
 **Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-TabTitleBar-tabItems: Array<TabTitleBarTabItem>--><!--Device-TabTitleBar-tabItems: Array<TabTitleBarTabItem>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

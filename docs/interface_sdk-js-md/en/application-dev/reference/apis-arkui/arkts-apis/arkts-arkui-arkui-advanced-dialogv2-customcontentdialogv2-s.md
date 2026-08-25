@@ -4,9 +4,7 @@ Declare custom content dialog@struct { CustomContentDialogV2 }
 
 **Since:** 18
 
-**Decorator:** @ComponentV2
-
-<!--Device-unnamed-export declare struct CustomContentDialogV2--><!--Device-unnamed-export declare struct CustomContentDialogV2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,6 +13,22 @@ Declare custom content dialog@struct { CustomContentDialogV2 }
 ```TypeScript
 import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, AdvancedDialogV2ButtonAction, AdvancedDialogV2OnCheckedChange, ConfirmDialogV2, LoadingDialogV2, SelectDialogV2, TipsDialogV2, CustomContentDialogV2, PopoverDialogV2, PopoverDialogV2OnVisibleChange, PopoverDialogV2Options } from '@kit.ArkUI';
 ```
+
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## buttons
 
@@ -28,13 +42,11 @@ Sets the CustomContentDialogV2 buttons.
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-CustomContentDialogV2-@Param  buttons?: AdvancedDialogV2Button[]--><!--Device-CustomContentDialogV2-@Param  buttons?: AdvancedDialogV2Button[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,13 +62,11 @@ Sets the CustomContentDialogV2 content area padding.
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-CustomContentDialogV2-@Param  contentAreaPadding?: LocalizedPadding--><!--Device-CustomContentDialogV2-@Param  contentAreaPadding?: LocalizedPadding-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,13 +82,11 @@ Sets the CustomContentDialogV2 content.
 
 **Since:** 18
 
-**Decorator:** @BuilderParam
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-CustomContentDialogV2-@BuilderParam  contentBuilder: CustomBuilder--><!--Device-CustomContentDialogV2-@BuilderParam  contentBuilder: CustomBuilder-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,13 +102,11 @@ Sets the CustomContentDialogV2 title.
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-CustomContentDialogV2-@Param  primaryTitle?: ResourceStr--><!--Device-CustomContentDialogV2-@Param  primaryTitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,13 +122,10 @@ Sets the CustomContentDialogV2 secondary title.
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-CustomContentDialogV2-@Param  secondaryTitle?: ResourceStr--><!--Device-CustomContentDialogV2-@Param  secondaryTitle?: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,7 +4,7 @@ WebResourceError is a class that provides error information when resource loadin
 
 **Since:** 8
 
-<!--Device-unnamed-declare class WebResourceError--><!--Device-unnamed-declare class WebResourceError-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -23,9 +23,9 @@ Constructor of WebResourceError. Creates a WebResourceError object to encapsulat
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-WebResourceError-constructor()--><!--Device-WebResourceError-constructor()-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -39,15 +39,15 @@ Gets the custom error code of the Web resource.
 
 **Since:** 26.1.0
 
-<!--Device-WebResourceError-getCustomErrorCode(): number--><!--Device-WebResourceError-getCustomErrorCode(): number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Return the custom error code of the Web resource. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 ## getErrorCode
 
@@ -59,17 +59,17 @@ Obtains the error code of the resource loading. It is used to determine the spec
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-WebResourceError-getErrorCode(): number--><!--Device-WebResourceError-getErrorCode(): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Error code for loading the resource. For details about the error codes, see [WebNetErrorList]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 ## getErrorInfo
 
@@ -81,15 +81,14 @@ Obtains the error information of the resource loading. It is used to describe th
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-WebResourceError-getErrorInfo(): string--><!--Device-WebResourceError-getErrorInfo(): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Error information about resource loading. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |

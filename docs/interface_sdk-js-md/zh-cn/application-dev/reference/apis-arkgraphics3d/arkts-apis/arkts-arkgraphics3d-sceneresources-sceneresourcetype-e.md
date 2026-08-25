@@ -2,9 +2,9 @@
 
 场景资源类型枚举，对场景中的资源进行分类。@enum { int }
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export enum SceneResourceType--><!--Device-unnamed-export enum SceneResourceType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -16,9 +16,9 @@ UNKNOWN = 0
 
 未定义类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SceneResourceType-UNKNOWN = 0--><!--Device-SceneResourceType-UNKNOWN = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -30,9 +30,9 @@ NODE = 1
 
 节点类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SceneResourceType-NODE = 1--><!--Device-SceneResourceType-NODE = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -44,9 +44,9 @@ ENVIRONMENT = 2
 
 环境类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SceneResourceType-ENVIRONMENT = 2--><!--Device-SceneResourceType-ENVIRONMENT = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -58,9 +58,9 @@ MATERIAL = 3
 
 材质类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SceneResourceType-MATERIAL = 3--><!--Device-SceneResourceType-MATERIAL = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -72,9 +72,9 @@ MESH = 4
 
 网格类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SceneResourceType-MESH = 4--><!--Device-SceneResourceType-MESH = 4-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -86,9 +86,9 @@ ANIMATION = 5
 
 动画类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SceneResourceType-ANIMATION = 5--><!--Device-SceneResourceType-ANIMATION = 5-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -100,9 +100,9 @@ SHADER = 6
 
 着色器类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SceneResourceType-SHADER = 6--><!--Device-SceneResourceType-SHADER = 6-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -114,9 +114,9 @@ IMAGE = 7
 
 图片类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SceneResourceType-IMAGE = 7--><!--Device-SceneResourceType-IMAGE = 7-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -128,9 +128,9 @@ MESH_RESOURCE = 8
 
 网格资源类型。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-SceneResourceType-MESH_RESOURCE = 8--><!--Device-SceneResourceType-MESH_RESOURCE = 8-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -142,9 +142,8 @@ EFFECT = 9
 
 后处理特效类型。
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-SceneResourceType-EFFECT = 9--><!--Device-SceneResourceType-EFFECT = 9-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

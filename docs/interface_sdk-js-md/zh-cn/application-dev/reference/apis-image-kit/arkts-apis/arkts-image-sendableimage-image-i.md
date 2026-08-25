@@ -6,7 +6,7 @@
 
 **起始版本：** 12
 
-<!--Device-sendableImage-interface Image--><!--Device-sendableImage-interface Image-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -26,21 +26,21 @@ getComponent(componentType: image.ComponentType): Promise<image.Component>
 
 **起始版本：** 12
 
-<!--Device-Image-getComponent(componentType: image.ComponentType): Promise<image.Component>--><!--Device-Image-getComponent(componentType: image.ComponentType): Promise<image.Component>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| componentType | image.ComponentType | 是 | 图像的组件类型。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| componentType | image.ComponentType | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;image.Component&gt; | Promise实例，用于异步返回组件缓冲区。 |
+| 类型 |
+| --- |
+| Promise & lt;image.Component & gt; |
 
 **示例**
 
@@ -74,15 +74,15 @@ release(): Promise<void>
 
 **起始版本：** 12
 
-<!--Device-Image-release(): Promise<void>--><!--Device-Image-release(): Promise<void>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | promise返回操作结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
@@ -164,7 +164,7 @@ clipRect: Region
 
 **起始版本：** 12
 
-<!--Device-Image-clipRect: Region--><!--Device-Image-clipRect: Region-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -180,7 +180,7 @@ readonly format: number
 
 **起始版本：** 12
 
-<!--Device-Image-readonly format: number--><!--Device-Image-readonly format: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -196,7 +196,7 @@ readonly size: Size
 
 **起始版本：** 12
 
-<!--Device-Image-readonly size: Size--><!--Device-Image-readonly size: Size-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -212,7 +212,6 @@ readonly timestamp: number
 
 **起始版本：** 12
 
-<!--Device-Image-readonly timestamp: number--><!--Device-Image-readonly timestamp: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
-

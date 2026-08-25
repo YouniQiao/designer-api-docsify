@@ -1,8 +1,6 @@
 # PluralRules
 
-**Since:** -1
-
-<!--Device-Intl-interface PluralRules--><!--Device-Intl-interface PluralRules-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -15,31 +13,27 @@
 resolvedOptions(): ResolvedPluralRulesOptions
 ```
 
-**Since:** -1
-
-<!--Device-PluralRules-resolvedOptions(): ResolvedPluralRulesOptions--><!--Device-PluralRules-resolvedOptions(): ResolvedPluralRulesOptions-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## select
 
 ```TypeScript
 select(n: number): LDMLPluralRule
 ```
 
-**Since:** -1
-
-<!--Device-PluralRules-select(n: number): LDMLPluralRule--><!--Device-PluralRules-select(n: number): LDMLPluralRule-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| n | number | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| n | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

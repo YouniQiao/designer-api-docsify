@@ -2,9 +2,9 @@
 
 Defines the radio access technology for the packet switched (PS) or circuit switched (CS) network.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-radio-export interface NetworkRadioTech--><!--Device-radio-export interface NetworkRadioTech-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -24,9 +24,9 @@ CS.
 
 **Type:** [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NetworkRadioTech-csRadioTech: RadioTechnology--><!--Device-NetworkRadioTech-csRadioTech: RadioTechnology-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -40,9 +40,8 @@ PS.
 
 **Type:** [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NetworkRadioTech-psRadioTech: RadioTechnology--><!--Device-NetworkRadioTech-psRadioTech: RadioTechnology-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
-

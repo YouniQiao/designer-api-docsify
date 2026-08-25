@@ -16,26 +16,26 @@ function notifyWatermarkComplete(jobId: string, result: WatermarkHandleResult): 
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_PRINT
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-print-function notifyWatermarkComplete(jobId: string, result: WatermarkHandleResult): void--><!--Device-print-function notifyWatermarkComplete(jobId: string, result: WatermarkHandleResult): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| jobId | string | 是 | 表示打印任务ID。 |
-| result | [WatermarkHandleResult](arkts-basicservices-print-watermarkhandleresult-e.md) | 是 | 表示水印处理结果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| jobId | string | 是 |
+| result | [WatermarkHandleResult](arkts-basicservices-print-watermarkhandleresult-e.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -61,4 +61,3 @@ try {
     console.error('registerWatermarkCallback error: ' + JSON.stringify(error));
 }
 ```
-

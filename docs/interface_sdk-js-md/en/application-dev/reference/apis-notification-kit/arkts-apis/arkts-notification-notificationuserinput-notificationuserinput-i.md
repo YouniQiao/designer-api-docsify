@@ -2,9 +2,9 @@
 
 The **NotificationUserInput** module provides APIs for defining the notification user input.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-unnamed-export interface NotificationUserInput--><!--Device-unnamed-export interface NotificationUserInput-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -18,9 +18,8 @@ Key to identify the user input.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-NotificationUserInput-inputKey: string--><!--Device-NotificationUserInput-inputKey: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
-

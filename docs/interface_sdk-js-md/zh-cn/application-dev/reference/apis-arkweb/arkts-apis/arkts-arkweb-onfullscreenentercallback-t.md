@@ -1,0 +1,19 @@
+# OnFullScreenEnterCallback
+
+```TypeScript
+export type OnFullScreenEnterCallback = (event: FullScreenEnterEvent) => void
+```
+
+Web组件进入全屏时触发的回调。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [FullScreenEnterEvent](arkts-arkweb-web-fullscreenenterevent-i.md) | 是 |

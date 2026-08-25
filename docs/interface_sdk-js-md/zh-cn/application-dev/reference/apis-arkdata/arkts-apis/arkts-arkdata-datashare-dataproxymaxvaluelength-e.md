@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-dataShare-enum DataProxyMaxValueLength--><!--Device-dataShare-enum DataProxyMaxValueLength-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -18,9 +18,9 @@ MAX_LENGTH_4K = 4096
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-DataProxyMaxValueLength-MAX_LENGTH_4K = 4096--><!--Device-DataProxyMaxValueLength-MAX_LENGTH_4K = 4096-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -34,9 +34,8 @@ MAX_LENGTH_100K = 102400
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DataProxyMaxValueLength-MAX_LENGTH_100K = 102400--><!--Device-DataProxyMaxValueLength-MAX_LENGTH_100K = 102400-End-->
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
-

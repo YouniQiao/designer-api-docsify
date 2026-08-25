@@ -4,7 +4,7 @@ Scroll滚动类型，用于[setScrollable](arkts-arkweb-webview-webviewcontrolle
 
 **起始版本：** 12
 
-<!--Device-webview-enum ScrollType--><!--Device-webview-enum ScrollType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -18,7 +18,6 @@ EVENT = 0
 
 **起始版本：** 12
 
-<!--Device-ScrollType-EVENT = 0--><!--Device-ScrollType-EVENT = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-

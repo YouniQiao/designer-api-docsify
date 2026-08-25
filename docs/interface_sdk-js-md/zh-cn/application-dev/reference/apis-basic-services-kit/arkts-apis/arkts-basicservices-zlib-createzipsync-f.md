@@ -14,19 +14,19 @@ function createZipSync(): Zip
 
 创建压缩解压缩对象实例，成功时返回压缩解压缩对象实例。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-zlib-function createZipSync(): Zip--><!--Device-zlib-function createZipSync(): Zip-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Zip](arkts-basicservices-zlib-zip-i.md) | 返回压缩解压缩对象实例。 |
+| 类型 |
+| --- |
+| [Zip](arkts-basicservices-zlib-zip-i.md) |
 
 **示例**
 
@@ -35,4 +35,3 @@ import { zlib } from '@kit.BasicServicesKit';
 
 let zip = zlib.createZipSync();
 ```
-

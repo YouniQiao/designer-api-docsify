@@ -4,11 +4,11 @@ Defines the options for fetching file attributes.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md)
-
-<!--Device-userFileManager-interface FetchOptions--><!--Device-userFileManager-interface FetchOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -32,11 +32,11 @@ Options for fetching files based on the attributes in columns. If this parameter
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [fetchColumns](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#fetchcolumns)
-
-<!--Device-FetchOptions-fetchColumns: Array<string>--><!--Device-FetchOptions-fetchColumns: Array<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -54,13 +54,12 @@ Predicates that specify the fetch criteria.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [predicates](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#predicates)
 
-<!--Device-FetchOptions-predicates: dataSharePredicates.DataSharePredicates--><!--Device-FetchOptions-predicates: dataSharePredicates.DataSharePredicates-End-->
-
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
-

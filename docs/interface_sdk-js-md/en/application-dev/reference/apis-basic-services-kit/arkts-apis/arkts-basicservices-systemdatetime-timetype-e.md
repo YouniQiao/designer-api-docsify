@@ -2,9 +2,9 @@
 
 Enumerates the types of time to obtain.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-systemDateTime-enum TimeType--><!--Device-systemDateTime-enum TimeType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -16,9 +16,9 @@ STARTUP = 0
 
 Number of milliseconds elapsed since system startup, including the deep sleep time.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-TimeType-STARTUP = 0--><!--Device-TimeType-STARTUP = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -30,9 +30,8 @@ ACTIVE = 1
 
 Number of milliseconds elapsed since system startup, excluding the deep sleep time.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-TimeType-ACTIVE = 1--><!--Device-TimeType-ACTIVE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
-

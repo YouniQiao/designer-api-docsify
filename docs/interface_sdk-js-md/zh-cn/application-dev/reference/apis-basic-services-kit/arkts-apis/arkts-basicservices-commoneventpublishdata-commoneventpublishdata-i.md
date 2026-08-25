@@ -5,9 +5,9 @@
 > **说明：**&gt;
 > 如果不加限制，任何应用都可以订阅公共事件并读取公共事件携带的信息，应避免在公共事件中携带敏感信息。通过本模块的subscriberPermissions和bundleName参数，可以限制公共事件接收方的范围。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-unnamed-export interface CommonEventPublishData--><!--Device-unnamed-export interface CommonEventPublishData-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -21,11 +21,11 @@ bundleName?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CommonEventPublishData-bundleName?: string--><!--Device-CommonEventPublishData-bundleName?: string-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -37,15 +37,15 @@ code?: int
 
 表示发布方传递的公共事件数据。默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **默认值：** 0
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CommonEventPublishData-code?: int--><!--Device-CommonEventPublishData-code?: int-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -59,11 +59,11 @@ data?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CommonEventPublishData-data?: string--><!--Device-CommonEventPublishData-data?: string-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -80,9 +80,9 @@ isOrdered?: boolean
 
 **默认值：** false
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-CommonEventPublishData-isOrdered?: boolean--><!--Device-CommonEventPublishData-isOrdered?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -101,27 +101,29 @@ isSticky?: boolean
 
 **默认值：** false
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.COMMONEVENT_STICKY
-
-<!--Device-CommonEventPublishData-isSticky?: boolean--><!--Device-CommonEventPublishData-isSticky?: boolean-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## parameters
 
 ```TypeScript
-parameters?: Record<string, RecordData>
+parameters?: { [key: string]: any }
 ```
 
 表示发布方传递的公共事件的附加信息，以键值对形式携带自定义参数。 默认为空。
 
-**类型：** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
+**类型：** { [key: string]: any }
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-CommonEventPublishData-parameters?: Record<string, RecordData>--><!--Device-CommonEventPublishData-parameters?: Record<string, RecordData>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -135,11 +137,10 @@ subscriberPermissions?: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-CommonEventPublishData-subscriberPermissions?: Array<string>--><!--Device-CommonEventPublishData-subscriberPermissions?: Array<string>-End-->
-
 **系统能力：** SystemCapability.Notification.CommonEvent
-

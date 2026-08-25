@@ -4,7 +4,7 @@ Represents a device clipboard policy.
 
 **Since:** 12
 
-<!--Device-securityManager-export enum ClipboardPolicy--><!--Device-securityManager-export enum ClipboardPolicy-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,9 +18,9 @@ Default policy, which indicates no policy.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-ClipboardPolicy-DEFAULT = 0--><!--Device-ClipboardPolicy-DEFAULT = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -34,9 +34,9 @@ Allow the clipboard to be used in the same application.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-ClipboardPolicy-IN_APP = 1--><!--Device-ClipboardPolicy-IN_APP = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -50,9 +50,9 @@ Allow the clipboard to be used on the same device.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-ClipboardPolicy-LOCAL_DEVICE = 2--><!--Device-ClipboardPolicy-LOCAL_DEVICE = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -66,9 +66,8 @@ Allow the clipboard to be used across devices.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ClipboardPolicy-CROSS_DEVICE = 3--><!--Device-ClipboardPolicy-CROSS_DEVICE = 3-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

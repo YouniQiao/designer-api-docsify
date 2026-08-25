@@ -2,9 +2,9 @@
 
 任务信息。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-update-export interface TaskInfo--><!--Device-update-export interface TaskInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -26,9 +26,9 @@ existTask: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-TaskInfo-existTask: boolean--><!--Device-TaskInfo-existTask: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -44,11 +44,10 @@ taskBody: TaskBody
 
 **类型：** [TaskBody](arkts-basicservices-update-taskbody-i-sys.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-TaskInfo-taskBody: TaskBody--><!--Device-TaskInfo-taskBody: TaskBody-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
-

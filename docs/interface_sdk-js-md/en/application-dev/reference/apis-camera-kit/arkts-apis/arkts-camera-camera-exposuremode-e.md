@@ -2,9 +2,9 @@
 
 Enumerates the exposure modes.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-camera-enum ExposureMode--><!--Device-camera-enum ExposureMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -18,11 +18,11 @@ Unspecified exposure.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-ExposureMode-EXPOSURE_MODE_UNSPECIFIED = -1--><!--Device-ExposureMode-EXPOSURE_MODE_UNSPECIFIED = -1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -34,11 +34,11 @@ EXPOSURE_MODE_LOCKED = 0
 
 Exposure locked. The metering point cannot be set.After this mode is used, the exposure will be locked by default for each photo capture.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-ExposureMode-EXPOSURE_MODE_LOCKED = 0--><!--Device-ExposureMode-EXPOSURE_MODE_LOCKED = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -50,11 +50,11 @@ EXPOSURE_MODE_AUTO = 1
 
 Auto exposure. The metering point can be set by calling [AutoExposure.setMeteringPoint](arkts-camera-camera-autoexposure-i.md#setmeteringpoint).After this mode is used, it takes effect only for the first photo capture.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-ExposureMode-EXPOSURE_MODE_AUTO = 1--><!--Device-ExposureMode-EXPOSURE_MODE_AUTO = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -66,11 +66,26 @@ EXPOSURE_MODE_CONTINUOUS_AUTO = 2
 
 Continuous auto exposure. The metering point cannot be set.After this mode is used, the camera system automatically adjusts the exposure based on the environment changes each time.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-ExposureMode-EXPOSURE_MODE_CONTINUOUS_AUTO = 2--><!--Device-ExposureMode-EXPOSURE_MODE_CONTINUOUS_AUTO = 2-End-->
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## EXPOSURE_MODE_MANUAL
+
+```TypeScript
+EXPOSURE_MODE_MANUAL = 3
+```
+
+Manual exposure. The exposure duration can be set.In this mode, you can set the exposure duration by calling [ManualExposure.setExposureDuration](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md#setexposureduration).
+
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+**System capability:** SystemCapability.Multimedia.Camera.Core

@@ -2,9 +2,9 @@
 
 表示证书管理对话框的属性。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-certificateManagerDialog-export interface CertificateDialogProperty--><!--Device-certificateManagerDialog-export interface CertificateDialogProperty-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
@@ -24,11 +24,10 @@ showInstallButton: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-CertificateDialogProperty-showInstallButton: boolean--><!--Device-CertificateDialogProperty-showInstallButton: boolean-End-->
-
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
-

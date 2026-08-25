@@ -14,9 +14,9 @@ function createCloudDBStub(instance: CloudDB): Promise<rpc.RemoteObject>
 
 根据CloudDB类的实例创建对应的RemoteObject对象，系统内部通过该对象调用CloudDB的实现接口，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-cloudExtension-function createCloudDBStub(instance: CloudDB): Promise<rpc.RemoteObject>--><!--Device-cloudExtension-function createCloudDBStub(instance: CloudDB): Promise<rpc.RemoteObject>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -24,15 +24,15 @@ function createCloudDBStub(instance: CloudDB): Promise<rpc.RemoteObject>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| instance | [CloudDB](arkts-arkdata-cloudextension-clouddb-i-sys.md) | 是 | CloudDB类的实例。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| instance | [CloudDB](arkts-arkdata-cloudextension-clouddb-i-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回CloudDB的rpc.RemoteObject对象。 |
+| 类型 |
+| --- |
+| Promise & lt;rpc.RemoteObject & gt; |
 
 **示例**
 
@@ -125,4 +125,3 @@ export default class MyCloudService implements cloudExtension.CloudService {
   }
 }
 ```
-

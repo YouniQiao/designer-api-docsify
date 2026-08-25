@@ -14,25 +14,25 @@ function getGraphicsMemory(): Promise<int>
 
 Obtains the total GPU memory size (**gl** + **graph**) of the application. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
-<!--Device-hidebug-function getGraphicsMemory(): Promise<int>--><!--Device-hidebug-function getGraphicsMemory(): Promise<int>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;int&gt; | Promise used to return the total GPU memory size of the application, in KB. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | Failed to get the application memory due to a remote exception. |
+| Error Code ID |
+| --- |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) |
 
 **Examples**
 
@@ -46,4 +46,3 @@ hidebug.getGraphicsMemory().then((ret: number) => {
   console.error(`error code: ${error.code}, error msg: ${error.message}`);
 })
 ```
-

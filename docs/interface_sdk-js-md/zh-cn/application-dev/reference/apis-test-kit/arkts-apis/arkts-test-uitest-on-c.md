@@ -2,9 +2,9 @@
 
 UiTest框架从API version 9开始，通过On类提供了丰富的控件特征描述API，用于进行控件筛选来匹配/查找出目标控件。On提供的API能力具有以下几个特点：1、支持单属性匹配和多属性组合匹配，例如同时指定目标控件text和id。2、控件属性支持多种匹配模式。3、支持控件绝对定位，相对定位，可通过[ON.isBefore](#isbefore)和[ON.isAfter](#isafter)等API限定邻近控件特征进行辅助定位。On类提供的所有API均为同步接口，建议使用者通过静态构造器ON来链式创建On对象。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-declare class On--><!--Device-unnamed-declare class On-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -21,33 +21,33 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 afterComponent(com: Component): On
 ```
 
-要求目标组件位于由给定[Component](arkts-test-uitest-component-c.md)指定的另一个组件之后 对象，用于相对于组件定位。
+指定目标控件位于给出的特征控件（参数 [Component](arkts-test-uitest-component-c.md)）之后，返回 On 对象自身。
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-On-afterComponent(com: Component): On--><!--Device-On-afterComponent(com: Component): On-End-->
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| com | [Component](arkts-test-uitest-component-c.md) | 是 | 描述了目标组件在的后面。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| com | [Component](arkts-test-uitest-component-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | this { |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -68,33 +68,33 @@ async function demo() {
 beforeComponent(com: Component): On
 ```
 
-要求目标组件位于由给定[Component](arkts-test-uitest-component-c.md)指定的另一个组件之前 对象，用于相对于组件定位。
+指定目标控件位于给出的特征控件（参数 [Component](arkts-test-uitest-component-c.md)）之前，返回 On 对象自身。
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-On-beforeComponent(com: Component): On--><!--Device-On-beforeComponent(com: Component): On-End-->
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| com | [Component](arkts-test-uitest-component-c.md) | 是 | 目标组件前面的组件如所示。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| com | [Component](arkts-test-uitest-component-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | this { |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -111,37 +111,43 @@ async function demo() {
 
 ## belongingDisplay
 
+ArkTS-Dyn:
+```TypeScript
+belongingDisplay(displayId: number): On
+```
+
+ArkTS-Sta:
 ```TypeScript
 belongingDisplay(displayId: int): On
 ```
 
-获取指定屏幕内的控件对象，返回On对象自身。
+指定目标控件所属的屏幕，返回On对象自身。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-On-belongingDisplay(displayId: int): On--><!--Device-On-belongingDisplay(displayId: int): On-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| displayId | int | 是 | 指定控件所属屏幕ID，取值范围：大于等于0的整数。 **说明：** 传入displayId不存在时，将抛出17000007异常。可通过 [getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md)获取当前所有的 display对象，并由display对象获取对应的屏幕ID。<!--RP2--><!--RP2End--> |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定控件所属屏幕的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -160,31 +166,31 @@ checkable(b?: boolean): On
 
 指定目标控件能否被勾选状态属性，返回On对象自身。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-On-checkable(b?: boolean): On--><!--Device-On-checkable(b?: boolean): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| b | boolean | 否 | 指定控件能否被勾选状态。true：能被勾选。false：不能被勾选。默认为true。<!--RP2--><!--RP2End--><br>**起始版本：** 10 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| b | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定目标控件能否被勾选状态属性的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -203,31 +209,31 @@ checked(b?: boolean): On
 
 指定目标控件的被勾选状态属性，返回On对象自身。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-On-checked(b?: boolean): On--><!--Device-On-checked(b?: boolean): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| b | boolean | 否 | 指定控件被勾选状态。true：被勾选。false：未被勾选。默认为true。<!--RP2--><!--RP2End--><br>**起始版本：** 10 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| b | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定目标控件的被勾选状态属性的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -246,31 +252,31 @@ clickable(b?: boolean): On
 
 指定目标控件的可点击状态属性，返回On对象自身。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-On-clickable(b?: boolean): On--><!--Device-On-clickable(b?: boolean): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| b | boolean | 否 | 指定控件可点击状态。true：可点击。false：不可点击。默认为true。<!--RP2--><!--RP2End--><br>**起始版本：** 10 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| b | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定目标控件的可点击状态属性的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -296,32 +302,32 @@ description(val: string, pattern?: MatchPattern): On
 
 指定目标控件的描述属性，支持多种匹配模式，返回On对象自身。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
-<!--Device-On-description(val: string, pattern?: MatchPattern): On--><!--Device-On-description(val: string, pattern?: MatchPattern): On-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | string | 是 | 控件的描述属性。 <!--RP2--><!--RP2End--> |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 | 指定的文本匹配模式，默认为[EQUALS](arkts-test-uitest-matchpattern-e.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | string | 是 |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定目标控件description属性的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -340,31 +346,31 @@ enabled(b?: boolean): On
 
 指定目标控件的使能状态属性，返回On对象自身。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-On-enabled(b?: boolean): On--><!--Device-On-enabled(b?: boolean): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| b | boolean | 否 | 指定控件使能状态。true：使能。false：未使能。默认为true。<!--RP2--><!--RP2End--><br>**起始版本：** 10 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| b | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定目标控件的使能状态属性的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -390,31 +396,31 @@ focused(b?: boolean): On
 
 指定目标控件的获焦状态属性，返回On对象自身。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-On-focused(b?: boolean): On--><!--Device-On-focused(b?: boolean): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| b | boolean | 否 | 控件获焦状态。true：获焦。false：未获焦。默认为true。<!--RP2--><!--RP2End--><br>**起始版本：** 10 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| b | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定目标控件的获焦状态属性的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -438,34 +444,34 @@ let by: By = BY.focused(true); // 使用静态构造器BY创建by对象，指定
 hint(val: string, pattern?: MatchPattern): On
 ```
 
-获取指定提示文本的控件对象，返回On对象自身。
+指定目标控件的提示文本属性，返回On对象自身。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-On-hint(val: string, pattern?: MatchPattern): On--><!--Device-On-hint(val: string, pattern?: MatchPattern): On-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | string | 是 | 指定控件提示文本。 <!--RP2--><!--RP2End--> |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 | 指定的文本匹配模式，默认为[EQUALS](arkts-test-uitest-matchpattern-e.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | string | 是 |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定提示文本控件的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -484,31 +490,31 @@ id(id: string): On
 
 指定目标控件id属性，返回On对象自身。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-On-id(id: string): On--><!--Device-On-id(id: string): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| id | string | 是 | 指定控件的id值。<!--RP2--><!--RP2End--> |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [id](#id) | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定目标控件id属性的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -541,32 +547,32 @@ id(id: string, pattern: MatchPattern): On
 
 指定目标控件id属性和匹配模式，返回On对象自身。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-On-id(id: string, pattern: MatchPattern): On--><!--Device-On-id(id: string, pattern: MatchPattern): On-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| id | string | 是 | 指定控件的id值。<!--RP2--><!--RP2End--> |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 是 | 指定的文本匹配模式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [id](#id) | string | 是 |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定目标控件id属性的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -580,31 +586,31 @@ inWindow(bundleName: string): On
 
 指定目标控件位于给出的应用窗口内，返回On对象自身。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-On-inWindow(bundleName: string): On--><!--Device-On-inWindow(bundleName: string): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 应用窗口的包名。<!--RP2--><!--RP2End--> |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定目标控件位于给出的应用窗口内的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -623,31 +629,31 @@ isAfter(on: On): On
 
 指定目标控件位于给出的特征属性控件之后，返回On对象自身。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-On-isAfter(on: On): On--><!--Device-On-isAfter(on: On): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 | 特征控件的属性要求。 <!--RP3--><!--RP3End--> |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定目标控件位于给出的特征属性控件之后的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -675,31 +681,31 @@ isBefore(on: On): On
 
 指定目标控件位于给出的特征属性控件之前，返回On对象自身。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-On-isBefore(on: On): On--><!--Device-On-isBefore(on: On): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 | 特征控件的属性要求。 <!--RP3--><!--RP3End--> |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定目标控件位于给出的特征属性控件之前的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -727,31 +733,31 @@ longClickable(b?: boolean): On
 
 指定目标控件的可长按点击状态属性，返回On对象自身。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-On-longClickable(b?: boolean): On--><!--Device-On-longClickable(b?: boolean): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| b | boolean | 否 | 指定控件可长按点击状态。true：可长按点击。false：不可长按点击。默认为true。<!--RP2--><!--RP2End--><br>**起始版本：** 10 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| b | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定目标控件的可长按点击状态属性的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -772,35 +778,35 @@ originalText(text: string, pattern?: MatchPattern): On
 
 > **说明：**&gt;
 > 如果控件的无障碍属性
-> [accessibilityLevel](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel)
+> accessibilityLevel
 > 设置为'no'或'no-hide-descendants'，可以使用本接口指定目标控件的文本属性用于查找控件，使用[On.text()](#text)接口不生效。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-On-originalText(text: string, pattern?: MatchPattern): On--><!--Device-On-originalText(text: string, pattern?: MatchPattern): On-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| text | string | 是 | 指定控件文本，用于匹配目标控件文本。 <!--RP2--><!--RP2End--> |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 | 指定的文本匹配模式，默认为[EQUALS](arkts-test-uitest-matchpattern-e.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [text](#text) | string | 是 |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定目标控件文本属性的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -819,31 +825,31 @@ scrollable(b?: boolean): On
 
 指定目标控件的可滑动状态属性，返回On对象自身。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-On-scrollable(b?: boolean): On--><!--Device-On-scrollable(b?: boolean): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| b | boolean | 否 | 控件可滑动状态。true：可滑动。false：不可滑动。默认为true。<!--RP2--><!--RP2End--><br>**起始版本：** 10 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| b | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定目标控件的可滑动状态属性的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -869,31 +875,31 @@ selected(b?: boolean): On
 
 指定目标控件的被选中状态属性，返回On对象自身。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-On-selected(b?: boolean): On--><!--Device-On-selected(b?: boolean): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| b | boolean | 否 | 指定控件被选中状态。true：被选中。false：未被选中。默认为true。<!--RP2--><!--RP2End--><br>**起始版本：** 10 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| b | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定目标控件的被选中状态属性的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -921,35 +927,35 @@ text(txt: string, pattern?: MatchPattern): On
 
 > **说明：**&gt;
 > 如果控件的无障碍属性
-> [accessibilityLevel](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel)
+> accessibilityLevel
 > 设置为'no'或'no-hide-descendants'，无法使用本接口指定目标控件的文本属性用于查找控件，可以使用[On.originalText()](#originaltext)接口实现。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-On-text(txt: string, pattern?: MatchPattern): On--><!--Device-On-text(txt: string, pattern?: MatchPattern): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| txt | string | 是 | 指定控件文本，用于匹配目标控件文本。<!--RP2--><!--RP2End--> |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 | 指定的文本匹配模式，默认为[EQUALS](arkts-test-uitest-matchpattern-e.md)。<br>**起始版本：** 10 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| txt | string | 是 |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定目标控件文本属性的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -975,31 +981,31 @@ type(tp: string): On
 
 指定目标控件的控件类型属性，返回On对象自身。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-On-type(tp: string): On--><!--Device-On-type(tp: string): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| tp | string | 是 | 指定控件类型。<!--RP2--><!--RP2End--> |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| tp | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定目标控件的控件类型属性的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1032,32 +1038,32 @@ type(tp: string, pattern: MatchPattern): On
 
 指定目标控件的控件类型属性和匹配模式，返回On对象自身。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-On-type(tp: string, pattern: MatchPattern): On--><!--Device-On-type(tp: string, pattern: MatchPattern): On-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| tp | string | 是 | 指定控件类型。<!--RP2--><!--RP2End--> |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 是 | 指定的文本匹配模式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| tp | string | 是 |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定目标控件的控件类型属性的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1071,31 +1077,31 @@ within(on: On): On
 
 指定目标控件位于给出的特征属性控件之内，返回On对象自身。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-On-within(on: On): On--><!--Device-On-within(on: On): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 | 特征控件的属性要求。<!--RP3--><!--RP3End--> |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | 返回指定目标控件位于给出的特征属性控件内的On对象。 |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1113,33 +1119,33 @@ let on: On = ON.text('java').within(ON.type('Scroll')); // 查找Scroll里面的
 withinComponent(com: Component): On
 ```
 
-要求目标组件位于由给定[Component](arkts-test-uitest-component-c.md)指定的另一个组件的内部 对象，用于相对于组件定位。
+指定目标控件位于给出的特征控件（参数 [Component](arkts-test-uitest-component-c.md)）之内，返回 On 对象自身。
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-On-withinComponent(com: Component): On--><!--Device-On-withinComponent(com: Component): On-End-->
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| com | [Component](arkts-test-uitest-component-c.md) | 是 | 描述目标组件所在的组件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| com | [Component](arkts-test-uitest-component-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | this { |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -1153,4 +1159,3 @@ async function demo() {
   let on: On = ON.text('123').withinComponent(component); // 查找第一个Text组件内部的text为123的组件。
 }
 ```
-

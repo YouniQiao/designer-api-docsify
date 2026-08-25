@@ -16,15 +16,12 @@ Charger type of the device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-batteryInfo-function pluggedType(): BatteryPluggedType--><!--Device-batteryInfo-function pluggedType(): BatteryPluggedType-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BatteryPluggedType](arkts-basicservices-batteryinfo-batterypluggedtype-e.md) | Returns the charger type of the device. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [BatteryPluggedType](arkts-basicservices-batteryinfo-batterypluggedtype-e.md) |

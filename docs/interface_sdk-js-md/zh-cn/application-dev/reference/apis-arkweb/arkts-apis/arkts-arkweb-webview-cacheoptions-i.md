@@ -4,7 +4,7 @@ Web组件预编译JavaScript生成字节码缓存的配置对象，用于控制�
 
 **起始版本：** 12
 
-<!--Device-webview-interface CacheOptions--><!--Device-webview-interface CacheOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -26,7 +26,6 @@ responseHeaders: Array<WebHeader>
 
 **起始版本：** 12
 
-<!--Device-CacheOptions-responseHeaders: Array<WebHeader>--><!--Device-CacheOptions-responseHeaders: Array<WebHeader>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-

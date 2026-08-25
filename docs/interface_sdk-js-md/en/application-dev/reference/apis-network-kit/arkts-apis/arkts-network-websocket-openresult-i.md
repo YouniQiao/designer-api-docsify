@@ -4,7 +4,7 @@ The result for connect status a WebSocket connection.
 
 **Since:** 23
 
-<!--Device-webSocket-export interface OpenResult--><!--Device-webSocket-export interface OpenResult-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -26,7 +26,7 @@ result message.
 
 **Since:** 23
 
-<!--Device-OpenResult-message: string--><!--Device-OpenResult-message: string-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -42,7 +42,6 @@ result status.
 
 **Since:** 23
 
-<!--Device-OpenResult-status: int--><!--Device-OpenResult-status: int-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
-

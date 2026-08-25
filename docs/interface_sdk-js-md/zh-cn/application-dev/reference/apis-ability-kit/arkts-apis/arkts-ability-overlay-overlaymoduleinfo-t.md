@@ -1,16 +1,15 @@
 # OverlayModuleInfo
 
 ```TypeScript
-export type OverlayModuleInfo = _OverlayModuleInfo
+export type OverlayModuleInfo = _OverlayModuleInfo.OverlayModuleInfo
 ```
 
-overlayHap的配置文件信息
+OverlayModuleInfo信息。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-overlay-export type OverlayModuleInfo = _OverlayModuleInfo--><!--Device-overlay-export type OverlayModuleInfo = _OverlayModuleInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 
-**属性类型：** _OverlayModuleInfo
-
+**属性类型：** _OverlayModuleInfo.OverlayModuleInfo

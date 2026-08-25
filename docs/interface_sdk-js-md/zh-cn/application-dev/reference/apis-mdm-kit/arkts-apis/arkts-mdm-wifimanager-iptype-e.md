@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-wifiManager-enum IpType--><!--Device-wifiManager-enum IpType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,9 +18,9 @@ STATIC = 0
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-IpType-STATIC = 0--><!--Device-IpType-STATIC = 0-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -34,9 +34,9 @@ DHCP = 1
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-IpType-DHCP = 1--><!--Device-IpType-DHCP = 1-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -50,9 +50,8 @@ UNKNOWN = 2
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-IpType-UNKNOWN = 2--><!--Device-IpType-UNKNOWN = 2-End-->
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
-

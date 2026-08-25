@@ -2,9 +2,9 @@
 
 SIM卡消息选项。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-sms-export interface SimMessageOptions--><!--Device-sms-export interface SimMessageOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -26,9 +26,9 @@ pdu: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-SimMessageOptions-pdu: string--><!--Device-SimMessageOptions-pdu: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -42,11 +42,11 @@ slotId: int
 
 卡槽ID
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-SimMessageOptions-slotId: int--><!--Device-SimMessageOptions-slotId: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -62,9 +62,9 @@ smsc: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-SimMessageOptions-smsc: string--><!--Device-SimMessageOptions-smsc: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -80,11 +80,10 @@ status: SimMessageStatus
 
 **类型：** [SimMessageStatus](arkts-telephony-sms-simmessagestatus-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-SimMessageOptions-status: SimMessageStatus--><!--Device-SimMessageOptions-status: SimMessageStatus-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
-

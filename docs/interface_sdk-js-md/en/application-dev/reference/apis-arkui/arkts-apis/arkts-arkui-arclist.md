@@ -10,24 +10,41 @@ import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@k
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [ArcList](arkts-arkui-arkui-arclist-arclist-f.md) | Defines ArcList Component. |
-| [ArcList](arkts-arkui-arkui-arclist-arclist-f.md) | Defines ArcList Component. |
-| [ArcListItem](arkts-arkui-arkui-arclist-arclistitem-f.md) | Defines ArcListItem Component. |
-| [ArcListItem](arkts-arkui-arkui-arclist-arclistitem-f.md) | Defines ArcListItem Component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArcList](arkts-arkui-arkui-arclist-arclist-f.md) |
+| [ArcList](arkts-arkui-arkui-arclist-arclist-f.md) |
+| [ArcListItem](arkts-arkui-arkui-arclist-arclistitem-f.md) |
+| [ArcListItem](arkts-arkui-arkui-arclist-arclistitem-f.md) |
+
+### Classes
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) | The ArcListAttribute |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) | The ArcListItemAttribute |
-| [ArkListOptions](arkts-arkui-arkui-arclist-arklistoptions-i.md) | Defines the arc list options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |
+| [ArcListInterface](arkts-arkui-arkui-arclist-arclistinterface-i.md) |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) |
+| [ArcListItemInterface](arkts-arkui-arkui-arclist-arclistiteminterface-i.md) |
+| [ArkListOptions](arkts-arkui-arkui-arclist-arklistoptions-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [ArcScrollIndexHandler](arkts-arkui-arcscrollindexhandler-t.md) | Called when the start, end and center positions of the display change. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArcScrollIndexHandler](arkts-arkui-arcscrollindexhandler-t.md) |
 
+### Constants
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArcList](arkts-arkui-arkui-arclist-con.md#arclist) |
+| [ArcListInstance](arkts-arkui-arkui-arclist-con.md#arclistinstance) |
+| [ArcListItem](arkts-arkui-arkui-arclist-con.md#arclistitem) |
+| [ArcListItemInstance](arkts-arkui-arkui-arclist-con.md#arclistiteminstance) |

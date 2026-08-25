@@ -6,9 +6,7 @@ Defines the numeric text content transition class.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-unnamed-export declare class NumericTextTransition--><!--Device-unnamed-export declare class NumericTextTransition-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,19 +20,17 @@ constructor.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NumericTextTransition-constructor(options?: NumericTextTransitionOptions)--><!--Device-NumericTextTransition-constructor(options?: NumericTextTransitionOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [NumericTextTransitionOptions](arkts-arkui-textcommon-numerictexttransitionoptions-i.md) | No | The options of numeric text transition. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [NumericTextTransitionOptions](arkts-arkui-textcommon-numerictexttransitionoptions-i.md) | No |
 
 ## enableBlur
 
@@ -48,11 +44,9 @@ Define whether enable blur effect.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NumericTextTransition-enableBlur?: boolean--><!--Device-NumericTextTransition-enableBlur?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,11 +62,8 @@ The flip direction of numeric text transition.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NumericTextTransition-flipDirection?: FlipDirection--><!--Device-NumericTextTransition-flipDirection?: FlipDirection-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -11,9 +11,7 @@
 
 **起始版本：** 11
 
-**装饰器类型：** @Component
-
-<!--Device-unnamed-declare struct AdComponent--><!--Device-unnamed-declare struct AdComponent-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -22,6 +20,22 @@
 ```TypeScript
 import { AdComponent } from '@kit.AdsKit';
 ```
+
+## adRenderer
+
+```TypeScript
+adRenderer?: () => void
+```
+
+应用自渲染广告样式。应用自渲染广告样式为受限使用能力，具体请前往 [流量变现官网客服支持](https://developer.huawei.com/consumer/cn/doc/monetize/kefuzhichi-0000001104461922)进行咨询。
+
+**起始版本：** 12
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.Advertising.Ads
 
 ## build
 
@@ -33,29 +47,9 @@ build(): void
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AdComponent-build(): void--><!--Device-AdComponent-build(): void-End-->
-
-**系统能力：** SystemCapability.Advertising.Ads
-
-## adRenderer
-
-```TypeScript
-adRenderer?: () => void
-```
-
-应用自渲染广告样式。应用自渲染广告样式为受限使用能力，具体请前往 [流量变现官网客服支持](https://developer.huawei.com/consumer/cn/doc/monetize/kefuzhichi-0000001104461922)进行咨询。
-
-**类型：** () =&gt; void
-
-**起始版本：** 12
-
-**装饰器类型：** @BuilderParam
-
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AdComponent-@BuilderParam  adRenderer?: () => void--><!--Device-AdComponent-@BuilderParam  adRenderer?: () => void-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -71,9 +65,9 @@ ads: advertising.Advertisement[]
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-AdComponent-ads: advertising.Advertisement[]--><!--Device-AdComponent-ads: advertising.Advertisement[]-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -89,9 +83,9 @@ displayOptions: advertising.AdDisplayOptions
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-AdComponent-displayOptions: advertising.AdDisplayOptions--><!--Device-AdComponent-displayOptions: advertising.AdDisplayOptions-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -107,9 +101,9 @@ interactionListener: advertising.AdInteractionListener
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-AdComponent-interactionListener: advertising.AdInteractionListener--><!--Device-AdComponent-interactionListener: advertising.AdInteractionListener-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -125,11 +119,8 @@ rollPlayState?: number
 
 **起始版本：** 15
 
-**装饰器类型：** @Prop
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AdComponent-@Prop  rollPlayState?: number--><!--Device-AdComponent-@Prop  rollPlayState?: number-End-->
-
 **系统能力：** SystemCapability.Advertising.Ads
-

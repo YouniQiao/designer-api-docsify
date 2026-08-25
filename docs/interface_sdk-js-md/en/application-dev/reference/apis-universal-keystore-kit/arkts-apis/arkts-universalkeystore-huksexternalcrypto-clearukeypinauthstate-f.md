@@ -16,35 +16,34 @@ Clear the PIN auth state of the specified resource ID.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-huksExternalCrypto-function clearUkeyPinAuthState(resourceId: string): Promise<void>--><!--Device-huksExternalCrypto-function clearUkeyPinAuthState(resourceId: string): Promise<void>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| resourceId | string | Yes | Indicates the resource ID of the provider. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| resourceId | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | API is not supported. |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
-| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | Failed to call the UKey driver interface. Please check the UKey connection and driver status. |
-| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | The cached resource ID not found. |
-| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameters are abnormal. This may occur if the process function is null, or due to other issues. |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | The memory is insufficient. |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | The input parameters are invalid. Possible causes: 1. The resourceId length is invalid. |
-| [12000020](../errorcode-huks.md#12000020-dependent-module-error) | The provider operation failed. This means an error occurred in the crypto extension before calling the UKey driver interface. |
-| [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) | The provider or UKey is busy. |
-
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) |
+| [12000012](../errorcode-huks.md#12000012-external-error) |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
+| [12000020](../errorcode-huks.md#12000020-dependent-module-error) |
+| [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) |

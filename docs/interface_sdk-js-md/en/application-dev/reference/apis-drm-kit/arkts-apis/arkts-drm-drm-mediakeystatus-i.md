@@ -2,9 +2,9 @@
 
 Defines a status attribute for a media key.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-drm-interface MediaKeyStatus--><!--Device-drm-interface MediaKeyStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -24,11 +24,11 @@ Name of the media key status attribute, for example, expiration time or content 
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-MediaKeyStatus-name: string--><!--Device-MediaKeyStatus-name: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -42,11 +42,10 @@ Value of the media key status attribute.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-MediaKeyStatus-value: string--><!--Device-MediaKeyStatus-value: string-End-->
-
 **System capability:** SystemCapability.Multimedia.Drm.Core
-

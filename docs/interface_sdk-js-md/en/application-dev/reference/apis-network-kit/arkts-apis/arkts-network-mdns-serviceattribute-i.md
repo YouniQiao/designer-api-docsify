@@ -4,7 +4,7 @@ MDNS service attribute information.
 
 **Since:** 10
 
-<!--Device-mdns-export interface ServiceAttribute--><!--Device-mdns-export interface ServiceAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
@@ -26,27 +26,26 @@ MDNS service attribute key. The value contains a maximum of 9 characters.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-ServiceAttribute-key: string--><!--Device-ServiceAttribute-key: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 ## value
 
 ```TypeScript
-value: Array<int>
+value: Array<number>
 ```
 
 MDNS service attribute value.
 
-**Type:** Array&lt;int&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ServiceAttribute-value: Array<int>--><!--Device-ServiceAttribute-value: Array<int>-End-->
-
 **System capability:** SystemCapability.Communication.NetManager.MDNS
-

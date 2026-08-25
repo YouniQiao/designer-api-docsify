@@ -2,9 +2,9 @@
 
 网络路由信息。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-connection-export interface RouteInfo--><!--Device-connection-export interface RouteInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -24,9 +24,9 @@ destination: LinkAddress
 
 **类型：** LinkAddress
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-RouteInfo-destination: LinkAddress--><!--Device-RouteInfo-destination: LinkAddress-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -40,9 +40,9 @@ gateway: NetAddress
 
 **类型：** NetAddress
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-RouteInfo-gateway: NetAddress--><!--Device-RouteInfo-gateway: NetAddress-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -56,9 +56,9 @@ hasGateway: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-RouteInfo-hasGateway: boolean--><!--Device-RouteInfo-hasGateway: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -74,7 +74,7 @@ Network card name.
 
 **起始版本：** 23
 
-<!--Device-RouteInfo-iface: string--><!--Device-RouteInfo-iface: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -90,7 +90,7 @@ interface: string
 
 **起始版本：** 8
 
-<!--Device-RouteInfo-interface: string--><!--Device-RouteInfo-interface: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -105,9 +105,9 @@ isDefaultRoute: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-RouteInfo-isDefaultRoute: boolean--><!--Device-RouteInfo-isDefaultRoute: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -123,7 +123,6 @@ isExcludedRoute?: boolean
 
 **起始版本：** 20
 
-<!--Device-RouteInfo-isExcludedRoute?: boolean--><!--Device-RouteInfo-isExcludedRoute?: boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
-

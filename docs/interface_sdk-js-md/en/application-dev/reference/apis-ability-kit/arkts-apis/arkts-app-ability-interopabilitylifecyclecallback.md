@@ -10,14 +10,13 @@ import { InteropAbilityLifecycleCallback } from '@kit.AbilityKit';
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [InteropAbilityLifecycleCallback](arkts-ability-app-ability-interopabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | The interop ability lifecycle callback. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [InteropAbilityLifecycleCallback](arkts-ability-app-ability-interopabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md) | The callback was called when only an ability is registered for listening. |
-| [WindowStageCallbackFn](arkts-ability-windowstagecallbackfn-t.md) | The callback was called when both ability and window stage are registered for listening. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md) |
+| [WindowStageCallbackFn](arkts-ability-windowstagecallbackfn-t.md) |

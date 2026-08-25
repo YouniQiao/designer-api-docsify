@@ -4,7 +4,7 @@ Path information for file migration.
 
 **Since:** 26.0.0
 
-<!--Device-backup-interface PathInfo--><!--Device-backup-interface PathInfo-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -28,9 +28,9 @@ Destination path for migration.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-PathInfo-destPath: string--><!--Device-PathInfo-destPath: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -48,11 +48,10 @@ Source path for migration.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-PathInfo-srcPath: string--><!--Device-PathInfo-srcPath: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
-

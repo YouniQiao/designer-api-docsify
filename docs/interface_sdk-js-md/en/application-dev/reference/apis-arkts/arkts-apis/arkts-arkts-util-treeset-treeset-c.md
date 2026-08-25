@@ -2,9 +2,9 @@
 
 TreeSet is implemented based on TreeMap. In TreeSet, only value objects are processed. TreeSet can be used to store values, each of which must be unique.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-unnamed-declare class TreeSet--><!--Device-unnamed-declare class TreeSet-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,17 +26,17 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-TreeSet-$_iterator(): IterableIterator<T>--><!--Device-TreeSet-$_iterator(): IterableIterator<T>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;T&gt; | an iterator for the TreeSet |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;T & gt; |
 
 ## [Symbol.iterator]
 
@@ -48,23 +48,23 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-TreeSet-[Symbol.iterator](): IterableIterator<T>--><!--Device-TreeSet-[Symbol.iterator](): IterableIterator<T>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;T&gt; |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;T & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -109,31 +109,31 @@ add(value: T): boolean
 
 If the set does not contain the element, the specified element is added
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TreeSet-add(value: T): boolean--><!--Device-TreeSet-add(value: T): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | T | Yes | the element to add to the set |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | whether the element was already present |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -151,19 +151,19 @@ clear(): void
 
 Clears all element groups in a set
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TreeSet-clear(): void--><!--Device-TreeSet-clear(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -186,23 +186,23 @@ A constructor used to create a TreeSet object.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-TreeSet-constructor(comparator?: (firstValue: T, secondValue: T) => boolean)--><!--Device-TreeSet-constructor(comparator?: (firstValue: T, secondValue: T) => boolean)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| comparator | (firstValue: T, secondValue: T) =&gt; boolean | No | comparator comparator (Optional) User-defined comparison functions. firstValue (required) previous element. secondValue (required) next element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| comparator | (firstValue: T, secondValue: T) = & gt; boolean | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The TreeSet's constructor cannot be directly invoked. |
+| Error Code ID |
+| --- |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
 
 **Examples**
 
@@ -256,17 +256,17 @@ A constructor used to create a TreeSet object.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-TreeSet-constructor(comparator?: TreeSetComparator<T>)--><!--Device-TreeSet-constructor(comparator?: TreeSetComparator<T>)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| comparator | [TreeSetComparator](arkts-arkts-treesetcomparator-t.md)&lt;T&gt; | No | comparator comparator (Optional) User-defined comparison functions. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| comparator | [TreeSetComparator](arkts-arkts-treesetcomparator-t.md)&lt;T&gt; | No |
 
 **Examples**
 
@@ -280,25 +280,25 @@ entries(): IterableIterator<[T, T]>
 
 Returns a new Iterator object that contains the [key, value] pairs for each element in the Set object in insertion order
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TreeSet-entries(): IterableIterator<[T, T]>--><!--Device-TreeSet-entries(): IterableIterator<[T, T]>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;[T, T]&gt; |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;[T, T] & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -337,24 +337,24 @@ Executes a provided function once for each value in the Set object.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-TreeSet-forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Object): void--><!--Device-TreeSet-forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Object): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackFn | (value?: T, key?: T, set?: TreeSet&lt;T&gt;) =&gt; void | Yes | callbackFn callbackFn (required) A function that accepts up to three arguments. The function to be called for each element. |
-| thisArg | Object | No | thisArg thisArg (Optional) The value to be used as this value for when callbackFn is called. If thisArg is omitted, undefined is used as the this value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackFn | (value?: T, key?: T, set?: TreeSet & lt;T & gt;) = & gt; void | Yes |
+| thisArg | Object | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -390,17 +390,17 @@ Executes a provided function once for each value in the Set object.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-TreeSet-forEach(callbackFn: TreeSetForEachCb<T>): void--><!--Device-TreeSet-forEach(callbackFn: TreeSetForEachCb<T>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackFn | [TreeSetForEachCb](arkts-arkts-treesetforeachcb-t.md)&lt;T&gt; | Yes | callbackFn |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackFn | [TreeSetForEachCb](arkts-arkts-treesetforeachcb-t.md)&lt;T&gt; | Yes |
 
 **Examples**
 
@@ -414,26 +414,26 @@ getFirstValue(): T
 
 Gets the first elements in a set
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TreeSet-getFirstValue(): T--><!--Device-TreeSet-getFirstValue(): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | value or undefined |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirstValue method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 **Examples**
 
@@ -455,29 +455,29 @@ Returns the least element greater than or equal to the specified key if the key 
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-TreeSet-getHigherValue(key: T): T--><!--Device-TreeSet-getHigherValue(key: T): T-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | T | Yes | the key to compare against |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | key or undefined |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getHigherValue method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -500,29 +500,29 @@ Returns the least element greater than or equal to the specified key if the key 
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-TreeSet-getHigherValue(key: T): T | undefined--><!--Device-TreeSet-getHigherValue(key: T): T | undefined-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | T | Yes | the key to compare against |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T \| undefined | the higher value of the given key's element if exists, undefined otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T \| undefined |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
+| Error Code ID |
+| --- |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 **Examples**
 
@@ -536,26 +536,26 @@ getLastValue(): T
 
 Gets the last elements in a set
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TreeSet-getLastValue(): T--><!--Device-TreeSet-getLastValue(): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | value or undefined |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastValue method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 **Examples**
 
@@ -577,29 +577,29 @@ Returns the greatest element smaller than or equal to the specified key if the k
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-TreeSet-getLowerValue(key: T): T--><!--Device-TreeSet-getLowerValue(key: T): T-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | T | Yes | the key to compare against |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | key or undefined |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLowerValue method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -622,29 +622,29 @@ Returns the greatest element smaller than or equal to the specified key if the k
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-TreeSet-getLowerValue(key: T): T | undefined--><!--Device-TreeSet-getLowerValue(key: T): T | undefined-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | T | Yes | the key to compare against |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T \| undefined | the lower value of the given key's element if exists, undefined otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T \| undefined |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
+| Error Code ID |
+| --- |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 **Examples**
 
@@ -658,31 +658,31 @@ has(value: T): boolean
 
 Returns whether the Set object contains the elements
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TreeSet-has(value: T): boolean--><!--Device-TreeSet-has(value: T): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | T | Yes | the value to check for presence in the set |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | the boolean type |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -701,25 +701,25 @@ isEmpty(): boolean
 
 Returns whether the Set object contains elements
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TreeSet-isEmpty(): boolean--><!--Device-TreeSet-isEmpty(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | the boolean type |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -737,26 +737,26 @@ popFirst(): T
 
 Return and delete the first element, returns undefined if tree set is empty
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TreeSet-popFirst(): T--><!--Device-TreeSet-popFirst(): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | first value or undefined |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The popFirst method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 **Examples**
 
@@ -776,26 +776,26 @@ popLast(): T
 
 Return and delete the last element, returns undefined if tree set is empty
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TreeSet-popLast(): T--><!--Device-TreeSet-popLast(): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | last value or undefined |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The popLast method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 **Examples**
 
@@ -815,31 +815,31 @@ remove(value: T): boolean
 
 Remove a specified element from a Set object
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TreeSet-remove(value: T): boolean--><!--Device-TreeSet-remove(value: T): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | T | Yes | the element to remove from the set |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | the boolean type(Is there contain this element) |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -859,25 +859,25 @@ values(): IterableIterator<T>
 
 Returns a new Iterator object that contains the values contained in this set
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TreeSet-values(): IterableIterator<T>--><!--Device-TreeSet-values(): IterableIterator<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;T&gt; |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;T & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -905,9 +905,8 @@ Gets the element number of the TreeSet.
 
 **Since:** 8
 
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-TreeSet-length: number--><!--Device-TreeSet-length: number-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

@@ -4,11 +4,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [USBControlParams](arkts-basicservices-usbmanager-usbcontrolparams-i.md)
-
-<!--Device-usb-interface USBControlParams--><!--Device-usb-interface USBControlParams-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -30,11 +30,11 @@ data: Uint8Array
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [data](arkts-basicservices-usbmanager-usbcontrolparams-i.md#data)
-
-<!--Device-USBControlParams-data: Uint8Array--><!--Device-USBControlParams-data: Uint8Array-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -50,11 +50,11 @@ index: number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [index](arkts-basicservices-usbmanager-usbcontrolparams-i.md#index)
-
-<!--Device-USBControlParams-index: number--><!--Device-USBControlParams-index: number-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -70,11 +70,11 @@ reqType: USBControlRequestType
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [reqType](arkts-basicservices-usbmanager-usbcontrolparams-i.md#reqtype)
-
-<!--Device-USBControlParams-reqType: USBControlRequestType--><!--Device-USBControlParams-reqType: USBControlRequestType-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -90,11 +90,11 @@ request: number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [request](arkts-basicservices-usbmanager-usbcontrolparams-i.md#request)
-
-<!--Device-USBControlParams-request: number--><!--Device-USBControlParams-request: number-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -110,11 +110,11 @@ target: USBRequestTargetType
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [target](arkts-basicservices-usbmanager-usbcontrolparams-i.md#target)
-
-<!--Device-USBControlParams-target: USBRequestTargetType--><!--Device-USBControlParams-target: USBRequestTargetType-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -130,11 +130,10 @@ value: number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [value](arkts-basicservices-usbmanager-usbcontrolparams-i.md#value)
 
-<!--Device-USBControlParams-value: number--><!--Device-USBControlParams-value: number-End-->
-
 **系统能力：** SystemCapability.USB.USBManager
-

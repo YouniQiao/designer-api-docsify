@@ -14,17 +14,17 @@ function isFloatingBallEnabled(): boolean
 
 Checks whether the device supports floating balls.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-floatingBall-function isFloatingBallEnabled(): boolean--><!--Device-floatingBall-function isFloatingBallEnabled(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result for the support of floating balls. **true** if supported, **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -32,4 +32,3 @@ Checks whether the device supports floating balls.
 let enable: boolean = floatingBall.isFloatingBallEnabled();
 console.info('Floating ball enabled is: ' + enable);
 ```
-

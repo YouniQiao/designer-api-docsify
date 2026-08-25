@@ -2,9 +2,9 @@
 
 WLAN IPv6信息。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-wifiManager-interface Ipv6Info--><!--Device-wifiManager-interface Ipv6Info-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -24,9 +24,9 @@ WLAN连接的网关
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Ipv6Info-gateway: string--><!--Device-Ipv6Info-gateway: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -40,9 +40,9 @@ WLAN连接的全局IPv6地址
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Ipv6Info-globalIpv6Address: string--><!--Device-Ipv6Info-globalIpv6Address: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -56,9 +56,9 @@ WLAN连接的链路IPv6地址
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Ipv6Info-linkIpv6Address: string--><!--Device-Ipv6Info-linkIpv6Address: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -72,9 +72,9 @@ WLAN连接的网络掩码
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Ipv6Info-netmask: string--><!--Device-Ipv6Info-netmask: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -88,9 +88,9 @@ WLAN连接的主DNS服务器IPV6地址
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Ipv6Info-primaryDNS: string--><!--Device-Ipv6Info-primaryDNS: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -104,9 +104,9 @@ WLAN连接的随机全局IPv6地址
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Ipv6Info-randomGlobalIpv6Address: string--><!--Device-Ipv6Info-randomGlobalIpv6Address: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -120,9 +120,9 @@ WLAN连接的随机唯一IPv6地址
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Ipv6Info-randomUniqueIpv6Address?: string--><!--Device-Ipv6Info-randomUniqueIpv6Address?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -136,9 +136,9 @@ WLAN连接的备DNS服务器IPV6地址
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Ipv6Info-secondDNS: string--><!--Device-Ipv6Info-secondDNS: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -152,9 +152,8 @@ WLAN连接的唯一IPv6地址
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Ipv6Info-uniqueIpv6Address?: string--><!--Device-Ipv6Info-uniqueIpv6Address?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
-

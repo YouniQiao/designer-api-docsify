@@ -2,9 +2,9 @@
 
 歌单（歌曲列表）的相关属性。@interface AVQueueInfo
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-avSession-interface AVQueueInfo--><!--Device-avSession-interface AVQueueInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -26,9 +26,9 @@ avQueueId: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-AVQueueInfo-avQueueId: string--><!--Device-AVQueueInfo-avQueueId: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -44,9 +44,9 @@ avQueueImage: image.PixelMap | string
 
 **类型：** image.PixelMap \| string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-AVQueueInfo-avQueueImage: image.PixelMap | string--><!--Device-AVQueueInfo-avQueueImage: image.PixelMap | string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -62,9 +62,9 @@ avQueueName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-AVQueueInfo-avQueueName: string--><!--Device-AVQueueInfo-avQueueName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -80,9 +80,9 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-AVQueueInfo-bundleName: string--><!--Device-AVQueueInfo-bundleName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -96,13 +96,12 @@ lastPlayedTime?: long
 
 歌单最后播放时间。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-AVQueueInfo-lastPlayedTime?: long--><!--Device-AVQueueInfo-lastPlayedTime?: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **系统接口：** 此接口为系统接口。
-

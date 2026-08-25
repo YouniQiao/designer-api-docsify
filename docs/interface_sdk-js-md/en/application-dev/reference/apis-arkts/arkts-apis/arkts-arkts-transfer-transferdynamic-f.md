@@ -16,28 +16,27 @@ Converting the 1.2 object to a 1.0 object.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-transfer-function transferDynamic(input: Object, inputName: string): Any--><!--Device-transfer-function transferDynamic(input: Object, inputName: string): Any-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| input | Object | Yes | The 1.2 object that needs to be converted |
-| inputName | string | Yes | name registered by the subsystem. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| input | Object | Yes |
+| inputName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Any | Object |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Any |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 10200067 | Transfer Error. The input name is not supported! |
-
+| Error Code ID |
+| --- |
+| 10200067 |

@@ -4,9 +4,7 @@ ChipGroup组件提供操作块群组能力，支持单选或多选模式，可�
 
 **起始版本：** 12
 
-**装饰器类型：** @Component
-
-<!--Device-unnamed-export declare struct IconGroupSuffix--><!--Device-unnamed-export declare struct IconGroupSuffix-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,6 +13,22 @@ ChipGroup组件提供操作块群组能力，支持单选或多选模式，可�
 ```TypeScript
 import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
 ```
+
+## build
+
+```TypeScript
+build(): void
+```
+
+build函数用于构造ChipGroup高级组件。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## iconBackgroundSystemMaterial
 
@@ -28,13 +42,11 @@ iconBackgroundSystemMaterial?: uiMaterial.Material
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Prop
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-IconGroupSuffix-@Prop  iconBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-IconGroupSuffix-@Prop  iconBackgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,13 +62,10 @@ items: Array<IconItemOptions | SymbolGlyphModifier | SymbolItemOptions>
 
 **起始版本：** 12
 
-**装饰器类型：** @Require、@Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-IconGroupSuffix-@Require  @Prop  items: Array<IconItemOptions | SymbolGlyphModifier | SymbolItemOptions>--><!--Device-IconGroupSuffix-@Require  @Prop  items: Array<IconItemOptions | SymbolGlyphModifier | SymbolItemOptions>-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

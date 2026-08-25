@@ -6,11 +6,11 @@ PrefixIconOptions定义前缀图标的属性。继承于[IconCommonOptions](arkt
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-unnamed-export interface PrefixIconOptions--><!--Device-unnamed-export interface PrefixIconOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,4 +19,3 @@ PrefixIconOptions定义前缀图标的属性。继承于[IconCommonOptions](arkt
 ```TypeScript
 import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from '@kit.ArkUI';
 ```
-

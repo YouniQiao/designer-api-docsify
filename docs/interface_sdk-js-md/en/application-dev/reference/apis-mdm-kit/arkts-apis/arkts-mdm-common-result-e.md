@@ -4,7 +4,7 @@ Enumerates application installation results.
 
 **Since:** 22
 
-<!--Device-common-export enum Result--><!--Device-common-export enum Result-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,9 +18,9 @@ The application is installed successfully.
 
 **Since:** 22
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-Result-SUCCESS = 0--><!--Device-Result-SUCCESS = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -34,9 +34,8 @@ The application fails to be installed.
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Result-FAIL = -1--><!--Device-Result-FAIL = -1-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

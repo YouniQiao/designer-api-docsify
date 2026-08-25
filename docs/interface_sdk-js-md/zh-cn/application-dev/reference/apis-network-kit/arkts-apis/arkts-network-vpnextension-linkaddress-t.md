@@ -8,9 +8,8 @@ export type LinkAddress = connection.LinkAddress
 
 **起始版本：** 11
 
-<!--Device-vpnExtension-export type LinkAddress = connection.LinkAddress--><!--Device-vpnExtension-export type LinkAddress = connection.LinkAddress-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **属性类型：** connection.LinkAddress
-

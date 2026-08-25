@@ -1,12 +1,12 @@
 # FunctionIntentInfo (System API)
 
-Defines the parameter type of the @InsightIntentFunctionMethod decorator. All parameters inherit from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md).
+Defines the parameter type of the [@InsightIntentFunctionMethod](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctionmethod) decorator. All parameters inherit from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md).
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-insightIntentDriver-interface FunctionIntentInfo--><!--Device-insightIntentDriver-interface FunctionIntentInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -17,4 +17,3 @@ Defines the parameter type of the @InsightIntentFunctionMethod decorator. All pa
 ```TypeScript
 import { insightIntentDriver } from '@kit.AbilityKit';
 ```
-

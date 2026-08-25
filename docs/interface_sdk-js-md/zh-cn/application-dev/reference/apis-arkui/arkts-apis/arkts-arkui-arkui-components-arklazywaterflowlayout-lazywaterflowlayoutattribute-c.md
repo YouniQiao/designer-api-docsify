@@ -6,7 +6,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-export declare class LazyWaterFlowLayoutAttribute--><!--Device-unnamed-export declare class LazyWaterFlowLayoutAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,25 +26,25 @@ columnsGap(value: LengthMetrics | undefined): T
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LazyWaterFlowLayoutAttribute-columnsGap(value: LengthMetrics | undefined): T--><!--Device-LazyWaterFlowLayoutAttribute-columnsGap(value: LengthMetrics | undefined): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | 是 | 列之间的间距。 <br>默认值：LengthMetrics.vp(0) |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T |  |
+| 类型 |
+| --- |
+| T |
 
 ## footer
 
@@ -56,25 +56,25 @@ footer(builder: CustomBuilder | undefined): T
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LazyWaterFlowLayoutAttribute-footer(builder: CustomBuilder | undefined): T--><!--Device-LazyWaterFlowLayoutAttribute-footer(builder: CustomBuilder | undefined): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| builder | CustomBuilder \| undefined | 是 | footer生成器函数 <br>传递undefined将删除footer。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| builder | CustomBuilder \| undefined | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T |  |
+| 类型 |
+| --- |
+| T |
 
 ## header
 
@@ -86,25 +86,25 @@ header(builder: CustomBuilder | undefined): T
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LazyWaterFlowLayoutAttribute-header(builder: CustomBuilder | undefined): T--><!--Device-LazyWaterFlowLayoutAttribute-header(builder: CustomBuilder | undefined): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| builder | CustomBuilder \| undefined | 是 | header生成器函数 <br>传递undefined将删除header。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| builder | CustomBuilder \| undefined | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T |  |
+| 类型 |
+| --- |
+| T |
 
 ## onVisibleIndexesChange
 
@@ -116,25 +116,25 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LazyWaterFlowLayoutAttribute-onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T--><!--Device-LazyWaterFlowLayoutAttribute-onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | OnVisibleIndexesChangeCallback \| undefined | 是 | 回调函数，当可见区域中子组件的索引发生变化时触发。 <br>传递undefined将取消注册回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | OnVisibleIndexesChangeCallback \| undefined | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T |  |
+| 类型 |
+| --- |
+| T |
 
 ## rowsGap
 
@@ -146,25 +146,25 @@ rowsGap(value: LengthMetrics | undefined): T
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LazyWaterFlowLayoutAttribute-rowsGap(value: LengthMetrics | undefined): T--><!--Device-LazyWaterFlowLayoutAttribute-rowsGap(value: LengthMetrics | undefined): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) \| undefined | 是 | 行之间的间距。 <br>默认值：LengthMetrics.vp(0) |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T |  |
+| 类型 |
+| --- |
+| T |
 
 ## sticky
 
@@ -176,23 +176,22 @@ sticky(sticky: StickyStyle | undefined): T
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LazyWaterFlowLayoutAttribute-sticky(sticky: StickyStyle | undefined): T--><!--Device-LazyWaterFlowLayoutAttribute-sticky(sticky: StickyStyle | undefined): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sticky | StickyStyle \| undefined | 是 | header和footer的吸顶吸底样式 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [sticky](#sticky) | StickyStyle \| undefined | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T |  |
-
+| 类型 |
+| --- |
+| T |

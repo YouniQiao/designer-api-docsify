@@ -16,23 +16,23 @@ function createRunningLock(name: string, type: RunningLockType, callback: AsyncC
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [create](arkts-basicservices-runninglock-create-f.md)
 
 **需要权限：** ohos.permission.RUNNING_LOCK
 
-<!--Device-runningLock-function createRunningLock(name: string, type: RunningLockType, callback: AsyncCallback<RunningLock>): void--><!--Device-runningLock-function createRunningLock(name: string, type: RunningLockType, callback: AsyncCallback<RunningLock>): void-End-->
-
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 锁的名字。建议使用包名或类名加后缀的方式命名。 |
-| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | 是 | 要创建的锁的类型。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | 是 | 回调函数。当创建锁成功，err为undefined，data为创建的RunningLock；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | 是 |
 
 **示例**
 
@@ -67,30 +67,29 @@ function createRunningLock(name: string, type: RunningLockType): Promise<Running
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [create](arkts-basicservices-runninglock-create-f.md)
 
 **需要权限：** ohos.permission.RUNNING_LOCK
 
-<!--Device-runningLock-function createRunningLock(name: string, type: RunningLockType): Promise<RunningLock>--><!--Device-runningLock-function createRunningLock(name: string, type: RunningLockType): Promise<RunningLock>-End-->
-
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 锁的名字。建议使用包名或类名加后缀的方式命名。 |
-| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | 是 | 要创建的锁的类型。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | Promise对象，返回RunningLock锁对象。 |
+| 类型 |
+| --- |
+| Promise&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; |
 
 **示例**
 
 参见 [createRunningLock](#createrunninglock)
-

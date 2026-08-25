@@ -16,23 +16,23 @@ function supportsCACertDialog(): boolean
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-certificateManagerDialog-function supportsCACertDialog(): boolean--><!--Device-certificateManagerDialog-function supportsCACertDialog(): boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 设备是否支持打开CA证书管理对话框。true：支持，false：不支持。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
+| 错误码ID |
+| --- |
+| [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) |
 
 **示例**
 
@@ -49,4 +49,3 @@ try {
   console.error(`Failed to check whether the device supports CA dialog. Code: ${error.code}, message: ${error.message}`);
 }
 ```
-

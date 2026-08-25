@@ -4,7 +4,7 @@ Defines the response interface to receive the device status.
 
 **Since:** 9
 
-<!--Device-stationary-interface ActivityResponse--><!--Device-stationary-interface ActivityResponse-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 
@@ -26,7 +26,6 @@ New device status.
 
 **Since:** 9
 
-<!--Device-ActivityResponse-state: ActivityState--><!--Device-ActivityResponse-state: ActivityState-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
-

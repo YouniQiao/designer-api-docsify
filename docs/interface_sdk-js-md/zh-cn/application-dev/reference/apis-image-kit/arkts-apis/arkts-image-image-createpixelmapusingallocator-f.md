@@ -15,33 +15,33 @@ function createPixelMapUsingAllocator(colors: ArrayBuffer, param: Initialization
 
 Create pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-image-function createPixelMapUsingAllocator(colors: ArrayBuffer, param: InitializationOptions,    allocatorType?: AllocatorType): Promise<PixelMap>--><!--Device-image-function createPixelMapUsingAllocator(colors: ArrayBuffer, param: InitializationOptions,    allocatorType?: AllocatorType): Promise<PixelMap>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| colors | ArrayBuffer | 是 | The image color buffer. |
-| param | [InitializationOptions](arkts-image-image-initializationoptions-i.md) | 是 | Initialization options for pixelmap. |
-| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | 否 | Indicate which memory type will be used by the returned PixelMap. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| colors | ArrayBuffer | 是 |
+| param | [InitializationOptions](arkts-image-image-initializationoptions-i.md) | 是 |
+| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;PixelMap&gt; | A Promise instance used to return the PixelMap object. |
+| 类型 |
+| --- |
+| Promise & lt;PixelMap & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation. |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) | Memory alloc failed. |
-| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Memory copy failed. |
+| 错误码ID |
+| --- |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) |
 
 **示例**
 
@@ -131,4 +131,3 @@ async function CreatePixelMapUsingAllocatorFunc(imageSource: image.ImageSource):
   }
 }
 ```
-

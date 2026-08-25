@@ -2,9 +2,9 @@
 
 Provides the callback for the SMS message sending result. It consists of three parts: SMS message sending result, URI for storing the sent SMS message, and whether the SMS message is the last part of a long SMS message.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-sms-export interface ISendShortMessageCallback--><!--Device-sms-export interface ISendShortMessageCallback-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -25,9 +25,9 @@ Whether this SMS message is the last part of a long SMS message. The default val
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-ISendShortMessageCallback-isLastPart: boolean--><!--Device-ISendShortMessageCallback-isLastPart: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -41,9 +41,9 @@ SMS message sending result.
 
 **Type:** [SendSmsResult](arkts-telephony-sms-sendsmsresult-e.md)
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-ISendShortMessageCallback-result: SendSmsResult--><!--Device-ISendShortMessageCallback-result: SendSmsResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -57,9 +57,8 @@ URI for storing the sent SMS message.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-ISendShortMessageCallback-url: string--><!--Device-ISendShortMessageCallback-url: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
-

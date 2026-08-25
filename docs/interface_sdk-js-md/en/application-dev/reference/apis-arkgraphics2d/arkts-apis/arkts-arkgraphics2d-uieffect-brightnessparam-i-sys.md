@@ -2,9 +2,9 @@
 
 Detailed description of the material brightness parameters.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-uiEffect-interface BrightnessParam--><!--Device-uiEffect-interface BrightnessParam-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -24,11 +24,11 @@ cubicCoeff : double
 
 Third-order coefficient for grayscale adjustment. The value range is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-BrightnessParam-cubicCoeff : double--><!--Device-BrightnessParam-cubicCoeff : double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -42,11 +42,11 @@ fraction : double
 
 Blending ratio for the brightness effect. The value range is [0, 1]. Values less than 0 are treated as 0; values greater than 1 are treated as 1. A larger value indicates a weaker brightness effect.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-BrightnessParam-fraction : double--><!--Device-BrightnessParam-fraction : double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -60,11 +60,11 @@ lightUpDegree : double
 
 Grayscale adjustment ratio. The value range is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-BrightnessParam-lightUpDegree : double--><!--Device-BrightnessParam-lightUpDegree : double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -78,11 +78,11 @@ negRgb : [double, double, double]
 
 Negative adjustment coefficients based on the base saturation. The value range for each number is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value indicates lower saturation.
 
-**Type:** [double, double, double]
+**Type:** ArkTS-Dyn: [number, number, number]  <br>ArkTS-Sta：[double, double, double]
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-BrightnessParam-negRgb : [double, double, double]--><!--Device-BrightnessParam-negRgb : [double, double, double]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -96,11 +96,11 @@ posRgb : [double, double, double]
 
 Positive adjustment coefficients based on the base saturation. The value range for each number is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value indicates higher saturation.
 
-**Type:** [double, double, double]
+**Type:** ArkTS-Dyn: [number, number, number]  <br>ArkTS-Sta：[double, double, double]
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-BrightnessParam-posRgb : [double, double, double]--><!--Device-BrightnessParam-posRgb : [double, double, double]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -114,11 +114,11 @@ quadCoeff : double
 
 Second-order coefficient for grayscale adjustment. The value range is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-BrightnessParam-quadCoeff : double--><!--Device-BrightnessParam-quadCoeff : double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -132,11 +132,11 @@ rate : double
 
 Linear coefficient for grayscale adjustment. The value range is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-BrightnessParam-rate : double--><!--Device-BrightnessParam-rate : double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -150,13 +150,12 @@ saturation : double
 
 Base saturation for brightness. The value range is [0, 1]. Values less than 0 are treated as 0; values greater than 1 are treated as 1. A larger value indicates a higher base saturation.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-BrightnessParam-saturation : double--><!--Device-BrightnessParam-saturation : double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
-

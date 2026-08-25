@@ -2,9 +2,9 @@
 
 Enumerates the types of ability states to filter. It can be used with [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md) to filter the ability state types you want to listen for.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-appManager-export enum FilterAbilityStateType--><!--Device-appManager-export enum FilterAbilityStateType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -16,11 +16,11 @@ Enumerates the types of ability states to filter. It can be used with [AppStateF
 CREATE = 1 << 0
 ```
 
-The ability is being created. It corresponds to the state **ABILITY_STATE_CREATE** in Ability States.
+The ability is being created. It corresponds to the state **ABILITY_STATE_CREATE** in [Ability States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability-states).
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-FilterAbilityStateType-CREATE = 1 << 0--><!--Device-FilterAbilityStateType-CREATE = 1 << 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -32,11 +32,11 @@ The ability is being created. It corresponds to the state **ABILITY_STATE_CREATE
 FOREGROUND = 1 << 1
 ```
 
-The ability is running in the foreground. It corresponds to the state **ABILITY_STATE_FOREGROUND** in Ability States.
+The ability is running in the foreground. It corresponds to the state **ABILITY_STATE_FOREGROUND** in [Ability States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability-states).
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-FilterAbilityStateType-FOREGROUND = 1 << 1--><!--Device-FilterAbilityStateType-FOREGROUND = 1 << 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -48,11 +48,11 @@ The ability is running in the foreground. It corresponds to the state **ABILITY_
 BACKGROUND = 1 << 2
 ```
 
-The ability is running in the background. It corresponds to the state **ABILITY_STATE_BACKGROUND** in Ability States.
+The ability is running in the background. It corresponds to the state **ABILITY_STATE_BACKGROUND** in [Ability States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability-states).
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-FilterAbilityStateType-BACKGROUND = 1 << 2--><!--Device-FilterAbilityStateType-BACKGROUND = 1 << 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -64,13 +64,12 @@ The ability is running in the background. It corresponds to the state **ABILITY_
 DESTROY = 1 << 3
 ```
 
-The ability has been destroyed. It corresponds to the state **ABILITY_STATE_TERMINATED** in Ability States.
+The ability has been destroyed. It corresponds to the state **ABILITY_STATE_TERMINATED** in [Ability States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability-states).
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-FilterAbilityStateType-DESTROY = 1 << 3--><!--Device-FilterAbilityStateType-DESTROY = 1 << 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
-

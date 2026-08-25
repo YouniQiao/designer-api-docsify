@@ -1,0 +1,1350 @@
+# on
+
+## Modules to Import
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+```
+
+## on
+
+```TypeScript
+function on(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerResponse>,
+    options?: Options): void
+```
+
+Subscribes to data of the acceleration sensor.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**Required permissions:** ohos.permission.ACCELEROMETER
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.ACCELEROMETER | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccelerometerResponse&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>,
+    options?: Options): void
+```
+
+Subscribes to data of the uncalibrated acceleration sensor.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**Required permissions:** ohos.permission.ACCELEROMETER
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.ACCELEROMETER_UNCALIBRATED | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AccelerometerUncalibratedResponse](arkts-sensorservice-sensor-accelerometeruncalibratedresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.AMBIENT_LIGHT, callback: Callback<LightResponse>, options?: Options): void
+```
+
+Subscribes to data of the ambient light sensor.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.AMBIENT_LIGHT | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LightResponse&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>,
+    options?: Options): void
+```
+
+Subscribes to data of the ambient temperature sensor.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.AMBIENT_TEMPERATURE | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AmbientTemperatureResponse](arkts-sensorservice-sensor-ambienttemperatureresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.BAROMETER, callback: Callback<BarometerResponse>, options?: Options): void
+```
+
+Subscribes to data of the barometer sensor.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.BAROMETER | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BarometerResponse&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.GRAVITY, callback: Callback<GravityResponse>,
+    options?: Options): void
+```
+
+Subscribes to data of the gravity sensor.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.GRAVITY | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GravityResponse](arkts-sensorservice-sensor-gravityresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>,
+    options?: Options): void
+```
+
+Subscribes to data of the gyroscope sensor.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**Required permissions:** ohos.permission.GYROSCOPE
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.GYROSCOPE | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeResponse&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>,
+    options?: Options): void
+```
+
+Subscribes to data of the uncalibrated gyroscope sensor.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**Required permissions:** ohos.permission.GYROSCOPE
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.GYROSCOPE_UNCALIBRATED | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GyroscopeUncalibratedResponse](arkts-sensorservice-sensor-gyroscopeuncalibratedresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.HALL, callback: Callback<HallResponse>, options?: Options): void
+```
+
+Subscribes to data of the Hall effect sensor.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.HALL | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HallResponse](arkts-sensorservice-sensor-hallresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.HEART_RATE, callback: Callback<HeartRateResponse>,
+    options?: Options): void
+```
+
+Subscribes to data of the heart rate sensor.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**Required permissions:** ohos.permission.READ_HEALTH_DATA
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.HEART_RATE | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HeartRateResponse&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.HUMIDITY, callback: Callback<HumidityResponse>,
+    options?: Options): void
+```
+
+Subscribes to data of the humidity sensor.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.HUMIDITY | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HumidityResponse](arkts-sensorservice-sensor-humidityresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback<LinearAccelerometerResponse>,
+    options?: Options): void
+```
+
+Subscribes to data of the linear acceleration sensor.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**Required permissions:** ohos.permission.ACCELEROMETER
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.LINEAR_ACCELEROMETER | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LinearAccelerometerResponse](arkts-sensorservice-sensor-linearaccelerometerresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>,
+    options?: Options): void
+```
+
+Subscribes to data of the magnetic field sensor.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.MAGNETIC_FIELD | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MagneticFieldResponse](arkts-sensorservice-sensor-magneticfieldresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>,
+    options?: Options): void
+```
+
+Subscribes to data of the uncalibrated magnetic field sensor.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.MAGNETIC_FIELD_UNCALIBRATED | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MagneticFieldUncalibratedResponse](arkts-sensorservice-sensor-magneticfielduncalibratedresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.ORIENTATION, callback: Callback<OrientationResponse>,
+    options?: Options): void
+```
+
+Subscribes to data of the orientation sensor.
+
+> **NOTE：**&gt;
+> Applications or services invoking this API can prompt users to use figure-8 calibration to improve the accuracy
+> of the direction sensor. The sensor has a theoretical error of ±5 degrees, but the specific precision may vary
+> depending on different driver implementations and algorithmic designs.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.ORIENTATION | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>, options?: Options): void
+```
+
+Subscribes to data of the pedometer sensor. The step counter sensor's data reporting is subject to some delay, and the delay is determined by specific product implementations.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**Required permissions:** ohos.permission.ACTIVITY_MOTION
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.PEDOMETER | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerResponse](arkts-sensorservice-sensor-pedometerresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>,
+    options?: Options): void
+```
+
+Subscribes to data of the pedometer detection sensor.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**Required permissions:** ohos.permission.ACTIVITY_MOTION
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.PEDOMETER_DETECTION | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerDetectionResponse](arkts-sensorservice-sensor-pedometerdetectionresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.PROXIMITY, callback: Callback<ProximityResponse>, options?: Options): void
+```
+
+Subscribes to data of the proximity sensor.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.PROXIMITY | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProximityResponse&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorResponse>,
+    options?: Options): void
+```
+
+Subscribes to data of the rotation vector sensor.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.ROTATION_VECTOR | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RotationVectorResponse](arkts-sensorservice-sensor-rotationvectorresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>,
+    options?: Options): void
+```
+
+Subscribes to the significant motion sensor data.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.SIGNIFICANT_MOTION | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SignificantMotionResponse](arkts-sensorservice-sensor-significantmotionresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionResponse>,
+    options?: Options): void
+```
+
+Subscribes to data of the wear detection sensor.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.WEAR_DETECTION | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WearDetectionResponse](arkts-sensorservice-sensor-weardetectionresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorId.FUSION_PRESSURE, callback: Callback<FusionPressureResponse>,
+    options?: Options): void
+```
+
+Subscribes to the fused pressure sensor data.
+
+**Since:** 22
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorId.FUSION_PRESSURE | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FusionPressureResponse](arkts-sensorservice-sensor-fusionpressureresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<AccelerometerResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the acceleration sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;, options?: Options)
+
+**Required permissions:** ohos.permission.ACCELEROMETER
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_ACCELEROMETER | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccelerometerResponse&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the uncalibrated acceleration sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback&lt;AccelerometerUncalibratedResponse&gt;, options?: Options)
+
+**Required permissions:** ohos.permission.ACCELEROMETER
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AccelerometerUncalibratedResponse](arkts-sensorservice-sensor-accelerometeruncalibratedresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<LightResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the ambient light sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.AMBIENT_LIGHT, callback: Callback&lt;LightResponse&gt;, options?: Options)
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LightResponse&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the ambient temperature sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback&lt;AmbientTemperatureResponse&gt;, options?: Options)
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AmbientTemperatureResponse](arkts-sensorservice-sensor-ambienttemperatureresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the barometer sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.BAROMETER, callback: Callback&lt;BarometerResponse&gt;, options?: Options)
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_BAROMETER | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BarometerResponse&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the gravity sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.GRAVITY, callback: Callback&lt;GravityResponse&gt;, options?: Options)
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_GRAVITY | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GravityResponse](arkts-sensorservice-sensor-gravityresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<GyroscopeResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the gyroscope sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.GYROSCOPE, callback: Callback&lt;GyroscopeResponse&gt;, options?: Options)
+
+**Required permissions:** ohos.permission.GYROSCOPE
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_GYROSCOPE | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeResponse&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the uncalibrated gyroscope sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback&lt;GyroscopeUncalibratedResponse&gt;, options?: Options)
+
+**Required permissions:** ohos.permission.GYROSCOPE
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GyroscopeUncalibratedResponse](arkts-sensorservice-sensor-gyroscopeuncalibratedresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the Hall effect sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.HALL, callback: Callback&lt;HallResponse&gt;, options?: Options)
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_HALL | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HallResponse](arkts-sensorservice-sensor-hallresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<HeartRateResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the heart rate sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.HEART_RATE, callback: Callback&lt;HeartRateResponse&gt;, options?: Options)
+
+**Required permissions:** ohos.permission.HEALTH_DATA
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_HEART_RATE | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HeartRateResponse&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<HumidityResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the humidity sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.HUMIDITY, callback: Callback&lt;HumidityResponse&gt;, options?: Options)
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_HUMIDITY | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HumidityResponse](arkts-sensorservice-sensor-humidityresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Callback<LinearAccelerometerResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the linear acceleration sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback&lt;LinearAccelerometerResponse&gt;, options?: Options)
+
+**Required permissions:** ohos.permission.ACCELEROMETER
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LinearAccelerometerResponse](arkts-sensorservice-sensor-linearaccelerometerresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the magnetic field sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.MAGNETIC_FIELD, callback: Callback&lt;MagneticFieldResponse&gt;, options?: Options)
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MagneticFieldResponse](arkts-sensorservice-sensor-magneticfieldresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the uncalibrated magnetic field sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback&lt;MagneticFieldUncalibratedResponse&gt;, options?: Options)
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MagneticFieldUncalibratedResponse](arkts-sensorservice-sensor-magneticfielduncalibratedresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<OrientationResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the orientation sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.ORIENTATION, callback: Callback&lt;OrientationResponse&gt;, options?: Options)
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_ORIENTATION | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<PedometerResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the pedometer sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.PEDOMETER, callback: Callback&lt;PedometerResponse&gt;, options?: Options)
+
+**Required permissions:** ohos.permission.ACTIVITY_MOTION
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_PEDOMETER | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerResponse](arkts-sensorservice-sensor-pedometerresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the pedometer detection sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.PEDOMETER_DETECTION, callback: Callback&lt;PedometerDetectionResponse&gt;, options?: Options)
+
+**Required permissions:** ohos.permission.ACTIVITY_MOTION
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerDetectionResponse](arkts-sensorservice-sensor-pedometerdetectionresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<ProximityResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the proximity sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.PROXIMITY, callback: Callback&lt;ProximityResponse&gt;, options?: Options)
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_PROXIMITY | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProximityResponse&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<RotationVectorResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the rotation vector sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.ROTATION_VECTOR, callback: Callback&lt;RotationVectorResponse&gt;, options?: Options)
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RotationVectorResponse](arkts-sensorservice-sensor-rotationvectorresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the significant motion sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.SIGNIFICANT_MOTION, callback: Callback&lt;SignificantMotionResponse&gt;, options?: Options)
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SignificantMotionResponse](arkts-sensorservice-sensor-significantmotionresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<WearDetectionResponse>,
+    options?: Options): void
+```
+
+Subscribes to data changes of the wear detection sensor. If this API is called multiple times for the same application, the last call takes effect.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on)(type: SensorId.WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;, options?: Options)
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_WEAR_DETECTION | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WearDetectionResponse](arkts-sensorservice-sensor-weardetectionresponse-i.md)&gt; | Yes |
+| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
+
+
+## on('sensorStatusChange')
+
+```TypeScript
+function on(type: 'sensorStatusChange', callback: Callback<SensorStatusEvent>): void
+```
+
+Enables listening for sensor status changes. This API asynchronously returns the result through a callback.
+
+**Since:** 19
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'sensorStatusChange' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SensorStatusEvent](arkts-sensorservice-sensor-sensorstatusevent-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |

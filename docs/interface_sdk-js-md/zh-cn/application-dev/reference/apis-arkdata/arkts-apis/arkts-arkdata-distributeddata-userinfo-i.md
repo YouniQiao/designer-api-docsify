@@ -4,9 +4,9 @@
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-distributedData-interface UserInfo--><!--Device-distributedData-interface UserInfo-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -27,9 +27,9 @@ userId?: string
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-UserInfo-userId?: string--><!--Device-UserInfo-userId?: string-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -45,9 +45,8 @@ userType?: UserType
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-<!--Device-UserInfo-userType?: UserType--><!--Device-UserInfo-userType?: UserType-End-->
-
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-

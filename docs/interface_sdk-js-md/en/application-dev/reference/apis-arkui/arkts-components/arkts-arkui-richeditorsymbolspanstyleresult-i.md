@@ -4,7 +4,7 @@ Provides the symbol span style information returned by the backend.
 
 **Since:** 11
 
-<!--Device-unnamed-declare interface RichEditorSymbolSpanStyleResult--><!--Device-unnamed-declare interface RichEditorSymbolSpanStyleResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Effect strategy of the symbol span.Default value: **SymbolEffectStrategy.NONE**
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorSymbolSpanStyleResult-effectStrategy: SymbolEffectStrategy--><!--Device-RichEditorSymbolSpanStyleResult-effectStrategy: SymbolEffectStrategy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ Color of the symbol span.Default value: depending on the rendering strategy
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorSymbolSpanStyleResult-fontColor: Array<ResourceColor>--><!--Device-RichEditorSymbolSpanStyleResult-fontColor: Array<ResourceColor>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,11 +65,11 @@ Size of the symbol span. The default unit is fp.The default value follows the th
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorSymbolSpanStyleResult-fontSize: number | string | Resource--><!--Device-RichEditorSymbolSpanStyleResult-fontSize: number | string | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,11 +85,11 @@ Weight of the symbol span.For the number type, the value ranges from 100 to 900,
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorSymbolSpanStyleResult-fontWeight: number | FontWeight | string--><!--Device-RichEditorSymbolSpanStyleResult-fontWeight: number | FontWeight | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -105,11 +105,10 @@ Rendering strategy of the symbol span.Default value: **SymbolRenderingStrategy.S
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-RichEditorSymbolSpanStyleResult-renderingStrategy: SymbolRenderingStrategy--><!--Device-RichEditorSymbolSpanStyleResult-renderingStrategy: SymbolRenderingStrategy-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

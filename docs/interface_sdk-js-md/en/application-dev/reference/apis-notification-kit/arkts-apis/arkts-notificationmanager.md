@@ -15,9 +15,9 @@ through the **publish** API, carry the number of badges to be incremented in the
 6. **Stored notification query process**: Obtain the number of stored notifications for this application in the
 notification center through **getActiveNotificationCount**, and obtain the details of stored notifications for this application in the notification center through **getActiveNotifications**.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-declare namespace notificationManager--><!--Device-unnamed-declare namespace notificationManager-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -31,280 +31,279 @@ import { notificationManager } from '@kit.NotificationKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [addSlot](arkts-notification-notificationmanager-addslot-f.md) | Adds a notification slot of a specified type. This API uses an asynchronous callback to return the result.The notification slot NotificationSlot defines the reminder type (such as alert sound, vibration, and banner) and level of a notification. Before publishing a notification, the application needs to create a corresponding type of notification slot first, or the system will automatically create a corresponding type of notification slot when the notification is published. Only one notification slot of the same type can be created. |
-| [addSlot](arkts-notification-notificationmanager-addslot-f.md) | Adds a notification slot of a specified type. This API uses a promise to return the result.The notification slot NotificationSlot defines the reminder type (such as alert sound, vibration, and banner) and level of a notification. Before publishing a notification, the application needs to create a corresponding type of notification slot first, or the system will automatically create a corresponding type of notification slot when the notification is published. Only one notification slot of the same type can be created. |
-| [cancel](arkts-notification-notificationmanager-cancel-f.md) | Cancels a notification with the specified ID. This API uses an asynchronous callback to return the result.After cancellation, the corresponding notification will be removed from the notification center, status bar, etc., and will no longer be visible to the user.Compared with notificationManager.cancel(id, label, callback), which includes the label parameter, this API does not pass in a label and will cancel the notification matching the specified ID. When a notification is published with a non-empty label, the `notificationManager.cancel(id, label, callback)` API must be used to cancel it. |
-| [cancel](arkts-notification-notificationmanager-cancel-f.md) | Cancels a published notification based on the notification ID and label. This API uses an asynchronous callback to return the result.After cancellation, the corresponding notification will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user. This is suitable for scenarios where a specific notification with a particular tag needs to be precisely canceled.Compared with notificationManager.cancel(id, callback), which requires only the notification ID, this API additionally has the **label** parameter, allowing precise cancellation of notifications with the same ID but different labels. |
-| [cancel](arkts-notification-notificationmanager-cancel-f.md) | Cancels a published notification based on the notification ID and label. This API uses a promise to return the result.After cancellation, the corresponding notification will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user. |
-| [cancelAll](arkts-notification-notificationmanager-cancelall-f.md) | Cancels all notifications of this application. This API uses an asynchronous callback to return the result.After cancellation, all notifications of the current application will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user. This is suitable for scenarios such as application exit or when the user manually clears all notifications. |
-| [cancelAll](arkts-notification-notificationmanager-cancelall-f.md) | Cancels all notifications of this application. This API uses a promise to return the result.After cancellation, all notifications of the current application will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user. This is suitable for scenarios such as application exit or when the user manually clears all notifications. |
-| [cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md) | Cancels notifications under a notification group of this application. This API uses an asynchronous callback to return the result.The notification group **groupName** is the group identifier specified through the **groupName** field of NotificationRequest when a notification is published. After cancellation, all notifications under this group will be removed from the notification center. This is suitable for scenarios where notifications need to be canceled in batches by service group. |
-| [cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md) | Cancels notifications under a notification group of this application. This API uses a promise to return the result.The notification group **groupName** is the group identifier specified through the **groupName** field of NotificationRequest when a notification is published. After cancellation, all notifications under this group will be removed from the notification center. This is suitable for scenarios where notifications need to be canceled in batches by service group. |
-| [getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md) | Obtains the number of active notifications of this application. This API uses an asynchronous callback to return the result.This API is used to query the number of active notifications published by the current application in the notification center. This is suitable for scenarios where an unread notification count prompt needs to be displayed. |
-| [getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md) | Obtains the number of active notifications of this application. This API uses a promise to return the result.This API is used to query the number of active notifications published by the current application in the notification center. This is suitable for scenarios where an unread notification count prompt needs to be displayed. |
-| [getActiveNotifications](arkts-notification-notificationmanager-getactivenotifications-f.md) | Obtains the active notifications of this application. This API uses an asynchronous callback to return the result.This API is used to query the detailed information list of all stored notifications of the current application in the notification center, including the ID, tag, content, and creation time of each notification. |
-| [getActiveNotifications](arkts-notification-notificationmanager-getactivenotifications-f.md) | Obtains the active notifications of this application. This API uses a promise to return the result.This API is used to query the detailed information list of all stored notifications of the current application in the notification center, including the ID, tag, content, and creation time of each notification. |
-| [getBadgeNumber](arkts-notification-notificationmanager-getbadgenumber-f.md) | Obtains the badge number of this application. This API uses a promise to return the result.This API is used to query the badge number displayed on the current application's desktop icon. |
-| [getNotificationParameters](arkts-notification-notificationmanager-getnotificationparameters-f.md) | Obtains some information about the **wantAgent** field in [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md). This API uses a promise to return the result. |
-| [getNotificationParameters](arkts-notification-notificationmanager-getnotificationparameters-f.md) | Obtains some information about the **wantAgent** field in [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md). This API uses a promise to return the result. |
-| [getNotificationSetting](arkts-notification-notificationmanager-getnotificationsetting-f.md) | Obtains the notification settings of the application, including the switch statuses for lock screen notifications, banner notifications, desktop badges, vibration, and ringtone. This API uses a promise to return the result. |
-| [getSlot](arkts-notification-notificationmanager-getslot-f.md) | Obtains a notification slot of a specified type. This API uses an asynchronous callback to return the result.This API is used to query the detailed configuration information of a created notification slot, including settings such as reminder method, level, and lock screen display. A corresponding type of notification slot must be created first through addSlot, otherwise the obtained result will be empty. |
-| [getSlot](arkts-notification-notificationmanager-getslot-f.md) | Obtains a notification slot of a specified type. This API uses an asynchronous callback to return the result.This API is used to query the detailed configuration information of a created notification slot, including settings such as reminder method, level, and lock screen display. A corresponding type of notification slot must be created first through addSlot, otherwise the obtained result will be empty. |
-| [getSlot](arkts-notification-notificationmanager-getslot-f.md) | Obtains a notification slot of a specified type. This API uses a promise to return the result.This API is used to query the detailed configuration information of a created notification slot, including settings such as reminder method, level, and lock screen display. A corresponding type of notification slot must be created first through addSlot, otherwise the obtained result will be empty. |
-| [getSlot](arkts-notification-notificationmanager-getslot-f.md) | Obtains a notification slot of a specified type. This API uses a promise to return the result.This API is used to query the detailed configuration information of a created notification slot, including settings such as reminder method, level, and lock screen display. A corresponding type of notification slot must be created first through addSlot, otherwise the obtained result will be empty. |
-| [getSlots](arkts-notification-notificationmanager-getslots-f.md) | Obtains all notification slots of this application. This API uses an asynchronous callback to return the result.This API is used to batch query the configuration information of all notification slots created by the current application, including settings such as the type, reminder method, and level of each slot. This is suitable for scenarios where all slot configurations need to be viewed. The corresponding notification slots must be created through addSlot first; otherwise, the obtained result will be empty. |
-| [getSlots](arkts-notification-notificationmanager-getslots-f.md) | Obtains all notification slots of this application. This API uses a promise to return the result.This API is used to batch query the configuration information of all notification slots created by the current application, including settings such as the type, reminder method, and level of each slot. This is suitable for scenarios where all slot configurations need to be viewed. The corresponding notification slots must be created through addSlot first; otherwise, the obtained result will be empty. |
-| [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f.md) | Checks whether the device supports cross-device notifications. This API uses an asynchronous callback to return the result. |
-| [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f.md) | Checks whether the device supports cross-device notifications. This API uses a promise to return the result. |
-| [isGeofenceEnabled](arkts-notification-notificationmanager-isgeofenceenabled-f.md) | Checks whether geofencing is enabled. This API uses a promise to return the result. |
-| [isNotificationEnabledSync](arkts-notification-notificationmanager-isnotificationenabledsync-f.md) | Synchronously queries the notification authorization status of the current application.This API is used to quickly check whether the current application is allowed to send notifications before publishing. It is synchronous and returns the result immediately after being called, suitable for scenarios where the enabled status needs to be obtained in a synchronous code flow. |
-| [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md) | Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md) to publish a notification. This API uses an asynchronous callback to return the result. |
-| [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md) | Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md) to publish a notification. This API uses a promise to return the result. |
-| [openNotificationSettings](arkts-notification-notificationmanager-opennotificationsettings-f.md) | Opens the notification settings page of the application, which is displayed in semi-modal mode and can be used to set the notification enabling and notification mode. This API uses a promise to return the result.This is suitable for scenarios where users need to manually modify notification settings, such as a secondary request after a user denies authorization, or when the notification reminder method (vibration, ringtone, etc.) needs to be modified. When the requestEnableNotification dialog box is denied by the user, you can call this API to guide the user to the notification settings page to manually enable it. |
-| [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md) | Opens the notification settings page of the application, which is presented in a semi-modal window and can be used to set notification switches, notification reminder methods, etc. This API uses a promise to return the user-set status when the semi-modal window is closed.Unlike openNotificationSettings, this API returns a NotificationSetting object when the semi-modal window is closed. You can determine whether the user has enabled the notification permission based on the returned result, thereby deciding subsequent logic. |
-| [publish](arkts-notification-notificationmanager-publish-f.md) | Publishes a notification. This API uses an asynchronous callback to return the result.After a notification is published, it will be displayed as a notification widget in the device's notification center, status bar, etc. If the ID and tag of the newly published notification are the same as those of an already published notification, the new notification will replace the original one, achieving a notification update effect. |
-| [publish](arkts-notification-notificationmanager-publish-f.md) | Publishes a notification. This API uses a promise to return the result.After a notification is published, it will be displayed as a notification card in the device's notification center, status bar, and other locations. If the ID and tag of the newly published notification are the same as those of an already published notification, the new notification will replace the original one, achieving a notification update effect. |
-| [removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md) | Removes all notification slots for this application. This API uses an asynchronous callback to return the result.After deletion, all notification slots and their configurations of the current application will be permanently removed. When notifications are published subsequently, the system will automatically create slots of the corresponding types. Notifications already published through these slots are not affected and can still be viewed in the notification center. This is suitable for scenarios where all slot configurations need to be cleared at once. |
-| [removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md) | Removes all notification slots for this application. This API uses a promise to return the result.After deletion, all notification slots and their configurations of the current application will be permanently removed. When notifications are published subsequently, the system will automatically create slots of the corresponding types. Notifications already published through these slots are not affected and can still be viewed in the notification center. This is suitable for scenarios where all slot configurations need to be cleared at once. |
-| [removeSlot](arkts-notification-notificationmanager-removeslot-f.md) | Removes a notification slot of a specified type for this application. This API uses an asynchronous callback to return the result.After deletion, the corresponding type of notification slot and its configuration will be permanently removed. When a notification of this type is published subsequently, the system will automatically create a default slot. Notifications already published through this slot are not affected and can still be viewed in the notification center. This is suitable for scenarios where a slot needs to be deleted and then recreated for reconfiguration. |
-| [removeSlot](arkts-notification-notificationmanager-removeslot-f.md) | Removes a notification slot of a specified type for this application. This API uses a promise to return the result.After deletion, the corresponding notification slot and its configuration will be permanently removed. When a notification of this type is published subsequently, the system will automatically create a default slot. Notifications already published through this slot are not affected and can still be viewed in the notification center. This is suitable for scenarios where a slot needs to be deleted and then recreated for reconfiguration. |
-| [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md) | Requests notification to be enabled for this application. This API uses an asynchronous callback to return the result. |
-| [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md) | Requests notification to be enabled for this application. You can call this API to display a dialog box prompting the user to enable notification for your application before publishing a notification. This API uses an asynchronous callback to return the result. |
-| [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md) | Requests notification to be enabled for this application. This API uses a promise to return the result. |
-| [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md) | Requests notification to be enabled for this application. You can call this API to display a dialog box prompting the user to enable notification for your application before publishing a notification. This API uses a promise to return the result. |
-| [setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md) | Sets the notification badge number. This API uses an asynchronous callback to return the result.A badge is a numeric identifier displayed in the upper right corner of an application's desktop icon, used to prompt the user about the number of unprocessed notifications. After setting, the desktop icon will display the corresponding badge number. This is suitable for scenarios where the number of pending messages needs to be prompted on the desktop icon, such as the number of unread messages and to-do items.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned. |
-| [setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md) | Sets the notification badge number. This API uses a promise to return the result.A badge is a numeric identifier displayed in the upper right corner of an application's desktop icon, used to prompt the user about the number of unprocessed notifications. After setting, the desktop icon will display the corresponding badge number. This is suitable for scenarios where the number of pending messages needs to be prompted on the desktop icon, such as the number of unread messages and to-do items.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [addSlot](arkts-notification-notificationmanager-addslot-f.md) |
+| [addSlot](arkts-notification-notificationmanager-addslot-f.md) |
+| [cancel](arkts-notification-notificationmanager-cancel-f.md) |
+| [cancel](arkts-notification-notificationmanager-cancel-f.md) |
+| [cancel](arkts-notification-notificationmanager-cancel-f.md) |
+| [cancelAll](arkts-notification-notificationmanager-cancelall-f.md) |
+| [cancelAll](arkts-notification-notificationmanager-cancelall-f.md) |
+| [cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md) |
+| [cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md) |
+| [getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md) |
+| [getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md) |
+| [getActiveNotifications](arkts-notification-notificationmanager-getactivenotifications-f.md) |
+| [getActiveNotifications](arkts-notification-notificationmanager-getactivenotifications-f.md) |
+| [getBadgeNumber](arkts-notification-notificationmanager-getbadgenumber-f.md) |
+| [getNotificationParameters](arkts-notification-notificationmanager-getnotificationparameters-f.md) |
+| [getNotificationParameters](arkts-notification-notificationmanager-getnotificationparameters-f.md) |
+| [getNotificationSetting](arkts-notification-notificationmanager-getnotificationsetting-f.md) |
+| [getSlot](arkts-notification-notificationmanager-getslot-f.md) |
+| [getSlot](arkts-notification-notificationmanager-getslot-f.md) |
+| [getSlot](arkts-notification-notificationmanager-getslot-f.md) |
+| [getSlot](arkts-notification-notificationmanager-getslot-f.md) |
+| [getSlots](arkts-notification-notificationmanager-getslots-f.md) |
+| [getSlots](arkts-notification-notificationmanager-getslots-f.md) |
+| [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f.md) |
+| [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f.md) |
+| [isGeofenceEnabled](arkts-notification-notificationmanager-isgeofenceenabled-f.md) |
+| [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md) |
+| [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md) |
+| [isNotificationEnabledSync](arkts-notification-notificationmanager-isnotificationenabledsync-f.md) |
+| [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md) |
+| [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md) |
+| [openNotificationSettings](arkts-notification-notificationmanager-opennotificationsettings-f.md) |
+| [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md) |
+| [publish](arkts-notification-notificationmanager-publish-f.md) |
+| [publish](arkts-notification-notificationmanager-publish-f.md) |
+| [removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md) |
+| [removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md) |
+| [removeSlot](arkts-notification-notificationmanager-removeslot-f.md) |
+| [removeSlot](arkts-notification-notificationmanager-removeslot-f.md) |
+| [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md) |
+| [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md) |
+| [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md) |
+| [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md) |
+| [setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md) |
+| [setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md) |
 
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [addDoNotDisturbProfile](arkts-notification-notificationmanager-adddonotdisturbprofile-f-sys.md) | Adds the Do Not Disturb profile. This API uses a promise to return the result. |
-| [addDoNotDisturbProfile](arkts-notification-notificationmanager-adddonotdisturbprofile-f-sys.md) | Adds the Do Not Disturb profile for a specified user. This API uses a promise to return the result. |
-| [addSlot](arkts-notification-notificationmanager-addslot-f-sys.md) | Adds a notification slot. This API uses an asynchronous callback to return the result. |
-| [addSlot](arkts-notification-notificationmanager-addslot-f-sys.md) | Adds a notification slot. This API uses a promise to return the result. |
-| [addSlots](arkts-notification-notificationmanager-addslots-f-sys.md) | Adds an array of notification slots. This API uses an asynchronous callback to return the result. |
-| [addSlots](arkts-notification-notificationmanager-addslots-f-sys.md) | Adds an array of notification slots. This API uses a promise to return the result. |
-| [cancel](arkts-notification-notificationmanager-cancel-f-sys.md) | Cancels the notification of other applications of the user. This API uses a promise to return the result.The current application must have a proxy relationship with another application, or the **ohos.permission.NOTIFICATION_AGENT_CONTROLLER** permission is granted to the current application. |
-| [cancelAsBundle](arkts-notification-notificationmanager-cancelasbundle-f-sys.md) | Cancels a notification published through the reminder agent. This API uses an asynchronous callback to return the result. |
-| [cancelAsBundle](arkts-notification-notificationmanager-cancelasbundle-f-sys.md) | Cancels a notification published through the reminder agent. This API uses a promise to return the result. |
-| [cancelAsBundle](arkts-notification-notificationmanager-cancelasbundle-f-sys.md) | Cancels a notification published through the reminder agent. This API uses a promise to return the result. |
-| [disableNotificationFeature](arkts-notification-notificationmanager-disablenotificationfeature-f-sys.md) | Disables the application from publishing notifications by adding the application bundle name to the permission control list. This function can be disabled as required. |
-| [disableNotificationFeature](arkts-notification-notificationmanager-disablenotificationfeature-f-sys.md) | Disables the application from publishing notifications by adding the application bundle name to the permission control list. This API uses a promise to return the result. |
-| [displayBadge](arkts-notification-notificationmanager-displaybadge-f-sys.md) | Sets whether to enable the notification badge for a specified application. This API uses an asynchronous callback to return the result. |
-| [displayBadge](arkts-notification-notificationmanager-displaybadge-f-sys.md) | Sets whether to enable the notification badge for a specified application. This API uses a promise to return the result. |
-| [getActiveNotificationByFilter](arkts-notification-notificationmanager-getactivenotificationbyfilter-f-sys.md) | Obtains information about the common live view that matches the specified filter criteria. This API uses an asynchronous callback to return the result. |
-| [getActiveNotificationByFilter](arkts-notification-notificationmanager-getactivenotificationbyfilter-f-sys.md) | Obtains information about the common live view that matches the specified filter criteria. This API uses an asynchronous callback to return the result. |
-| [getActiveNotificationByFilter](arkts-notification-notificationmanager-getactivenotificationbyfilter-f-sys.md) | Obtains information about the common live view that matches the specified filter criteria. This API uses a promise to return the result. |
-| [getActiveNotificationByFilter](arkts-notification-notificationmanager-getactivenotificationbyfilter-f-sys.md) | Obtains information about the common live view that matches the specified filter criteria. This API uses a promise to return the result. |
-| [getAllActiveNotifications](arkts-notification-notificationmanager-getallactivenotifications-f-sys.md) | Obtains all active notifications. This API uses an asynchronous callback to return the result. |
-| [getAllActiveNotifications](arkts-notification-notificationmanager-getallactivenotifications-f-sys.md) | Obtains all active notifications. This API uses a promise to return the result. |
-| [getAllNotificationEnabledBundles](arkts-notification-notificationmanager-getallnotificationenabledbundles-f-sys.md) | Obtains a list of applications that allow notifications. This API uses a promise to return the result. |
-| [getAllNotificationEnabledBundles](arkts-notification-notificationmanager-getallnotificationenabledbundles-f-sys.md) | Obtains the list of applications that are allowed to publish notifications by a specified user. This API uses a promise to return the result. |
-| [getBadgeDisplayStatusByBundles](arkts-notification-notificationmanager-getbadgedisplaystatusbybundles-f-sys.md) | Batch obtains the display statuses of application badges. This API uses a promise to return the result. |
-| [getBundlePriorityConfig](arkts-notification-notificationmanager-getbundlepriorityconfig-f-sys.md) | Obtains the priority configuration of an application. |
-| [getDeviceRemindType](arkts-notification-notificationmanager-getdeviceremindtype-f-sys.md) | Obtains the notification reminder type. This API uses an asynchronous callback to return the result. |
-| [getDeviceRemindType](arkts-notification-notificationmanager-getdeviceremindtype-f-sys.md) | Obtains the notification reminder type. This API uses a promise to return the result. |
-| [getDistributedDeviceList](arkts-notification-notificationmanager-getdistributeddevicelist-f-sys.md) | Obtains the device types that enable cross-device notification. This API uses a promise to return the result. |
-| [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md) | Obtains the DND time. This API uses an asynchronous callback to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned. |
-| [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md) | Obtains the DND time. This API uses a promise to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned. |
-| [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md) | Obtains the DND time of a specified user. This API uses an asynchronous callback to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned. |
-| [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md) | Obtains the DND time of a specified user. This API uses a promise to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned. |
-| [getDoNotDisturbProfile](arkts-notification-notificationmanager-getdonotdisturbprofile-f-sys.md) | Queries the Do Not Disturb profile. This API uses a promise to return the result. |
-| [getDoNotDisturbProfile](arkts-notification-notificationmanager-getdonotdisturbprofile-f-sys.md) | Queries the Do Not Disturb profile of a specified user. This API uses a promise to return the result. |
-| [getNotificationStatisticsByBundle](arkts-notification-notificationmanager-getnotificationstatisticsbybundle-f-sys.md) | Obtains notification statistics of a specified list of applications in batches. This API uses a promise to return the result. |
-| [getNotificationSwitch](arkts-notification-notificationmanager-getnotificationswitch-f-sys.md) | Obtains the notification switch state. This API uses a promise to return the result. |
-| [getPriorityEnabledByBundles](arkts-notification-notificationmanager-getpriorityenabledbybundles-f-sys.md) | Obtains whether priority notifications are enabled for applications in batches. This API uses a promise to return the result. |
-| [getPriorityStrategyByBundles](arkts-notification-notificationmanager-getprioritystrategybybundles-f-sys.md) | Obtains the application priority notification strategies in batches. This API uses a promise to return the result. |
-| [getReminderInfoByBundles](arkts-notification-notificationmanager-getreminderinfobybundles-f-sys.md) | Batch obtains reminders of specified applications. This API uses a promise to return the result. |
-| [getRingtoneInfoByBundle](arkts-notification-notificationmanager-getringtoneinfobybundle-f-sys.md) | Obtains the custom ringtone information of an application. This API uses a promise to return the result. |
-| [getSlotByBundle](arkts-notification-notificationmanager-getslotbybundle-f-sys.md) | Obtains a notification slot of a specified application. This API uses a promise to return the result.Before obtaining the notification slot, create a slot through [addSlot](arkts-notification-notificationmanager-addslot-f.md). |
-| [getSlotByBundle](arkts-notification-notificationmanager-getslotbybundle-f-sys.md) | Obtains a notification slot of a specified application. This API uses a promise to return the result.Before obtaining the notification slot, create a slot through [addSlot](arkts-notification-notificationmanager-addslot-f.md). |
-| [getSlotFlagsByBundle](arkts-notification-notificationmanager-getslotflagsbybundle-f-sys.md) | Obtains the notification slot flag of a specified application. This API uses a promise to return the result. |
-| [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md) | Obtains the number of notification slots of a specified application. This API uses an asynchronous callback to return the result. |
-| [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md) | Obtains the number of notification slots of a specified application. This API uses a promise to return the result. |
-| [getSlotsByBundle](arkts-notification-notificationmanager-getslotsbybundle-f-sys.md) | Obtains the notification slots of a specified application. This API uses an asynchronous callback to return the result. |
-| [getSlotsByBundle](arkts-notification-notificationmanager-getslotsbybundle-f-sys.md) | Obtains the notification slots of a specified application. This API uses a promise to return the result. |
-| [getSyncNotificationEnabledWithoutApp](arkts-notification-notificationmanager-getsyncnotificationenabledwithoutapp-f-sys.md) | Obtains whether the notification sync feature is enabled for devices where the application is not installed. This API uses an asynchronous callback to return the result. |
-| [getSyncNotificationEnabledWithoutApp](arkts-notification-notificationmanager-getsyncnotificationenabledwithoutapp-f-sys.md) | Obtains whether the notification sync feature is enabled for devices where the application is not installed. This API uses a promise to return the result. |
-| [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md) | Checks whether the notification badge is enabled for a specified application. This API uses an asynchronous callback to return the result. |
-| [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md) | Checks whether the notification badge is enabled for a specified application. This API uses a promise to return the result. |
-| [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f-sys.md) | Checks whether a device enables cross-device notification. This API uses a promise to return the result. |
-| [isDistributedEnabledByBundle](arkts-notification-notificationmanager-isdistributedenabledbybundle-f-sys.md) | Checks whether distributed notification is enabled for a specified application. This API uses an asynchronous callback to return the result. |
-| [isDistributedEnabledByBundle](arkts-notification-notificationmanager-isdistributedenabledbybundle-f-sys.md) | Checks whether distributed notification is enabled for a specified application. This API uses a promise to return the result. |
-| [isDistributedEnabledByBundle](arkts-notification-notificationmanager-isdistributedenabledbybundle-f-sys.md) | Obtains whether a specified application enables cross-device collaboration. This API uses a promise to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned. |
-| [isDistributedEnabledBySlot](arkts-notification-notificationmanager-isdistributedenabledbyslot-f-sys.md) | Queries whether notifications of a specified slot can be sent to devices of a specified type. This API uses a promise to return the result. |
-| [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md) | Checks whether notification is enabled for the specified application. This API uses an asynchronous callback to return the result. |
-| [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md) | Checks whether notification is enabled for the specified application. This API uses a promise to return the result. |
-| [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md) | Queries the notification authorization status of the current application. This API uses an asynchronous callback to return the result.This API is used to check whether the current application is allowed to send notifications before publishing, preventing publish failures when notification authorization is disabled. |
-| [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md) | Queries the notification authorization status of the current application. This API uses a promise to return the result.This API is used to check whether the current application is allowed to send notifications before publishing, preventing publish failures when notification authorization is disabled. |
-| [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md) | Checks whether notification is enabled for a specified user. This API uses an asynchronous callback to return the result. |
-| [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md) | Checks whether notification is enabled for a specified user. This API uses a promise to return the result. |
-| [isNotificationSlotEnabled](arkts-notification-notificationmanager-isnotificationslotenabled-f-sys.md) | Checks whether a notification slot type is enabled for the specified application. This API uses an asynchronous callback to return the result.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned. |
-| [isNotificationSlotEnabled](arkts-notification-notificationmanager-isnotificationslotenabled-f-sys.md) | Checks whether a notification slot type is enabled for the specified application. This API uses a promise to return the result.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned. |
-| [isNotificationSlotEnabledByBundles](arkts-notification-notificationmanager-isnotificationslotenabledbybundles-f-sys.md) | Checks whether a notification slot type is enabled for the specified applications in batch. This API uses a promise to return the result. |
-| [isPriorityEnabled](arkts-notification-notificationmanager-ispriorityenabled-f-sys.md) | Checks whether the priority notification is enabled. |
-| [isPriorityEnabledByBundle](arkts-notification-notificationmanager-ispriorityenabledbybundle-f-sys.md) | Checks whether the priority notification for a specified application is enabled. |
-| [isPriorityIntelligentEnabled](arkts-notification-notificationmanager-ispriorityintelligentenabled-f-sys.md) | Obtains whether the intelligent priority notification service is enabled. This API uses a promise to return the result. |
-| [isSilentReminderEnabled](arkts-notification-notificationmanager-issilentreminderenabled-f-sys.md) | Checks whether the silent reminder is enabled. This API uses a promise to return the result. |
-| [isSmartReminderEnabled](arkts-notification-notificationmanager-issmartreminderenabled-f-sys.md) | Obtains a smart reminder for cross-device collaboration. This API uses a promise to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned. |
-| [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md) | Checks whether DND mode is supported. This API uses an asynchronous callback to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned. |
-| [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md) | Checks whether DND mode is supported. This API uses a promise to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned. |
-| [off_checkNotification](arkts-notification-notificationmanager-offchecknotification-f-sys.md) | Unsubscribes from notification events. |
-| [offBadgeNumberQuery](arkts-notification-notificationmanager-offbadgenumberquery-f-sys.md) | Unregisters the callback for querying the number of application badges. |
-| [offCheckNotification](arkts-notification-notificationmanager-offchecknotification-f-sys.md) | Unsubscribe the callback for check notifications. |
-| [on_checkNotification](arkts-notification-notificationmanager-onchecknotification-f-sys.md) | Subscribes to notification events. The notification service sends the notification information in the callback to the verification program. The verification program returns the verification result to determine whether to publish the notification, for example, controlling the publication frequency of marketing notifications.Each [SlotType](arkts-notification-notificationmanager-slottype-e.md) in the system can have only one registrant.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned. |
-| [on_checkNotification](arkts-notification-notificationmanager-onchecknotification-f-sys.md) | Subscribes to notification events. The notification service sends the notification information in the callback to the verification program. The verification program returns the verification result to determine whether to publish the notification, for example, controlling the publication frequency of marketing notifications. This API uses a promise to return the result.Each [SlotType](arkts-notification-notificationmanager-slottype-e.md) in the system can have only one registrant.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned. |
-| [onBadgeNumberQuery](arkts-notification-notificationmanager-onbadgenumberquery-f-sys.md) | Registers a callback for querying the number of application badges. |
-| [onCheckNotification](arkts-notification-notificationmanager-onchecknotification-f-sys.md) | Subscribe the callback for check notifications. |
-| [onCheckNotification](arkts-notification-notificationmanager-onchecknotification-f-sys.md) | Subscribe the callback for check notifications. |
-| [publish](arkts-notification-notificationmanager-publish-f-sys.md) | Publishes a notification to a specified user. This API uses an asynchronous callback to return the result. |
-| [publish](arkts-notification-notificationmanager-publish-f-sys.md) | Publishes a notification to a specified user. This API uses a promise to return the result. |
-| [publishAsBundle](arkts-notification-notificationmanager-publishasbundle-f-sys.md) | Publishes a notification through the reminder agent. This API uses an asynchronous callback to return the result. |
-| [publishAsBundle](arkts-notification-notificationmanager-publishasbundle-f-sys.md) | Publishes a notification through the reminder agent. This API uses a promise to return the result. |
-| [publishAsBundle](arkts-notification-notificationmanager-publishasbundle-f-sys.md) | Publishes a notification through the reminder agent. This API uses a promise to return the result. |
-| [removeDoNotDisturbProfile](arkts-notification-notificationmanager-removedonotdisturbprofile-f-sys.md) | Deletes the Do Not Disturb profile. This API uses a promise to return the result. |
-| [removeDoNotDisturbProfile](arkts-notification-notificationmanager-removedonotdisturbprofile-f-sys.md) | Deletes the Do Not Disturb profile of a specified user. This API uses a promise to return the result. |
-| [removeGroupByBundle](arkts-notification-notificationmanager-removegroupbybundle-f-sys.md) | Removes notifications under a notification group of the specified application. This API uses an asynchronous callback to return the result. |
-| [removeGroupByBundle](arkts-notification-notificationmanager-removegroupbybundle-f-sys.md) | Removes notifications under a notification group of the specified application. This API uses a promise to return the result. |
-| [setAdditionalConfig](arkts-notification-notificationmanager-setadditionalconfig-f-sys.md) | Sets the additional system configuration information of the notification. This API uses a promise to return the result. |
-| [setBadgeDisplayStatusByBundles](arkts-notification-notificationmanager-setbadgedisplaystatusbybundles-f-sys.md) | Batch sets whether to display badges for specified applications. This API uses a promise to return the result. |
-| [setBadgeNumberByBundle](arkts-notification-notificationmanager-setbadgenumberbybundle-f-sys.md) | Sets the badge count for other applications. This API uses a promise to return the result.The current application must have a proxy relationship with another application, or the **ohos.permission.NOTIFICATION_AGENT_CONTROLLER** permission is granted to the current application.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned. |
-| [setBundlePriorityConfig](arkts-notification-notificationmanager-setbundlepriorityconfig-f-sys.md) | Sets the priority configuration of an application. |
-| [setDistributedEnable](arkts-notification-notificationmanager-setdistributedenable-f-sys.md) | Sets whether to enable distributed notification on this device. This API uses an asynchronous callback to return the result. |
-| [setDistributedEnable](arkts-notification-notificationmanager-setdistributedenable-f-sys.md) | Sets whether to enable distributed notification on this device. This API uses a promise to return the result. |
-| [setDistributedEnableByBundle](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md) | Sets whether to enable distributed notification for a specified application. This API uses an asynchronous callback to return the result. |
-| [setDistributedEnableByBundle](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md) | Sets whether to enable distributed notification for a specified application. This API uses a promise to return the result. |
-| [setDistributedEnableByBundles](arkts-notification-notificationmanager-setdistributedenablebybundles-f-sys.md) | Sets whether applications enable cross-device collaboration. This API uses a promise to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned. |
-| [setDistributedEnabled](arkts-notification-notificationmanager-setdistributedenabled-f-sys.md) | Sets whether the device of a specified type enables cross-device notification. This API uses a promise to return the result. |
-| [setDistributedEnabledByBundle](arkts-notification-notificationmanager-setdistributedenabledbybundle-f-sys.md) | Sets whether a specified application enables cross-device collaboration. This API uses a promise to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned. |
-| [setDistributedEnabledBySlot](arkts-notification-notificationmanager-setdistributedenabledbyslot-f-sys.md) | Sets whether notifications of a specified slot can be sent to devices of a specified type through cross-device collaboration. This API uses a promise to return the result. |
-| [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md) | Sets the DND time. This API uses an asynchronous callback to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned. |
-| [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md) | Sets the DND time. This API uses a promise to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned. |
-| [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md) | Sets the DND time for a specified user. This API uses an asynchronous callback to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned. |
-| [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md) | Sets the DND time for a specified user. This API uses a promise to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned. |
-| [setGeofenceEnabled](arkts-notification-notificationmanager-setgeofenceenabled-f-sys.md) | Sets the enabling state of geofencing. This API uses a promise to return the result. |
-| [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md) | Sets whether to enable notification for a specified application. This API uses an asynchronous callback to return the result. |
-| [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md) | Sets whether to enable notification for a specified application. This API uses a promise to return the result. |
-| [setNotificationEnableSlot](arkts-notification-notificationmanager-setnotificationenableslot-f-sys.md) | Sets the enabled status of a slot type for the specified application. This API uses an asynchronous callback to return the result.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned. |
-| [setNotificationEnableSlot](arkts-notification-notificationmanager-setnotificationenableslot-f-sys.md) | Sets the enabled status of a slot type for the specified application. This API uses an asynchronous callback to return the result.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned. |
-| [setNotificationEnableSlot](arkts-notification-notificationmanager-setnotificationenableslot-f-sys.md) | Sets the enabled status of a slot type for the specified application. This API uses a promise to return the result.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned. |
-| [setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md) | Sets the notification switch state. This API uses a promise to return the result. |
-| [setPriorityEnabled](arkts-notification-notificationmanager-setpriorityenabled-f-sys.md) | Sets the enabling status of the priority notification. |
-| [setPriorityEnabledByBundle](arkts-notification-notificationmanager-setpriorityenabledbybundle-f-sys.md) | Sets the enabling status of the priority notification for an application. |
-| [setPriorityEnabledByBundles](arkts-notification-notificationmanager-setpriorityenabledbybundles-f-sys.md) | Sets whether priority notifications are enabled for applications in batches. This API uses a promise to return the result. |
-| [setPriorityIntelligentEnabled](arkts-notification-notificationmanager-setpriorityintelligentenabled-f-sys.md) | Sets the enabling status of the intelligent priority notification service. This API uses a promise to return the result. |
-| [setPriorityStrategyByBundles](arkts-notification-notificationmanager-setprioritystrategybybundles-f-sys.md) | Sets the application priority notification strategies in batches. This API uses a promise to return the result. |
-| [setReminderInfoByBundles](arkts-notification-notificationmanager-setreminderinfobybundles-f-sys.md) | Batch sets reminders for specified applications. This API uses a promise to return the result. |
-| [setRingtoneInfoByBundle](arkts-notification-notificationmanager-setringtoneinfobybundle-f-sys.md) | Sets the custom ringtone information for an application. This API uses a promise to return the result. |
-| [setSilentReminderEnabled](arkts-notification-notificationmanager-setsilentreminderenabled-f-sys.md) | Sets the enabling status of the silent reminder. This API uses a promise to return the result. |
-| [setSlotByBundle](arkts-notification-notificationmanager-setslotbybundle-f-sys.md) | Sets the notification slot for a specified application. This API uses an asynchronous callback to return the result.Before setting a notification slot, create a slot through [addSlot](arkts-notification-notificationmanager-addslot-f.md). |
-| [setSlotByBundle](arkts-notification-notificationmanager-setslotbybundle-f-sys.md) | Sets the notification slot for a specified application. This API uses a promise to return the result.Before setting a notification slot, create a slot through [addSlot](arkts-notification-notificationmanager-addslot-f.md). |
-| [setSlotFlagsByBundle](arkts-notification-notificationmanager-setslotflagsbybundle-f-sys.md) | Sets the slot flags for a specified application. This API uses a promise to return the result. |
-| [setSmartReminderEnabled](arkts-notification-notificationmanager-setsmartreminderenabled-f-sys.md) | Sets a smart reminder for cross-device collaboration. This API uses a promise to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned. |
-| [setSyncNotificationEnabledWithoutApp](arkts-notification-notificationmanager-setsyncnotificationenabledwithoutapp-f-sys.md) | Sets whether to enable the notification sync feature for devices where the application is not installed. This API uses an asynchronous callback to return the result. |
-| [setSyncNotificationEnabledWithoutApp](arkts-notification-notificationmanager-setsyncnotificationenabledwithoutapp-f-sys.md) | Sets whether to enable the notification sync feature for devices where the application is not installed. This API uses a promise to return the result. |
-| [setTargetDeviceStatus](arkts-notification-notificationmanager-settargetdevicestatus-f-sys.md) | Sets the status of a device after it is successfully connected. Device status determines the notification mode of the current device when a notification is published. |
-| [snoozeNotification](arkts-notification-notificationmanager-snoozenotification-f-sys.md) | Snoozes a notification. The notification will be reminded again after the specified time. Each setting will trigger only one reminder, and the reminder mode will be the same as that of the notification.<br>The notification will be deleted after the setting. |
-| [subscribeSystemLiveView](arkts-notification-notificationmanager-subscribesystemliveview-f-sys.md) | Subscribes to the system live view notification. This API uses a promise to return the result. |
-| [triggerSystemLiveView](arkts-notification-notificationmanager-triggersystemliveview-f-sys.md) | Triggers a system live view notification. This API uses a promise to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [addDoNotDisturbProfile](arkts-notification-notificationmanager-adddonotdisturbprofile-f-sys.md) |
+| [addDoNotDisturbProfile](arkts-notification-notificationmanager-adddonotdisturbprofile-f-sys.md) |
+| [addSlot](arkts-notification-notificationmanager-addslot-f-sys.md) |
+| [addSlot](arkts-notification-notificationmanager-addslot-f-sys.md) |
+| [addSlots](arkts-notification-notificationmanager-addslots-f-sys.md) |
+| [addSlots](arkts-notification-notificationmanager-addslots-f-sys.md) |
+| [cancel](arkts-notification-notificationmanager-cancel-f-sys.md) |
+| [cancelAsBundle](arkts-notification-notificationmanager-cancelasbundle-f-sys.md) |
+| [cancelAsBundle](arkts-notification-notificationmanager-cancelasbundle-f-sys.md) |
+| [cancelAsBundle](arkts-notification-notificationmanager-cancelasbundle-f-sys.md) |
+| [disableNotificationFeature](arkts-notification-notificationmanager-disablenotificationfeature-f-sys.md) |
+| [disableNotificationFeature](arkts-notification-notificationmanager-disablenotificationfeature-f-sys.md) |
+| [displayBadge](arkts-notification-notificationmanager-displaybadge-f-sys.md) |
+| [displayBadge](arkts-notification-notificationmanager-displaybadge-f-sys.md) |
+| [getActiveNotificationByFilter](arkts-notification-notificationmanager-getactivenotificationbyfilter-f-sys.md) |
+| [getActiveNotificationByFilter](arkts-notification-notificationmanager-getactivenotificationbyfilter-f-sys.md) |
+| [getActiveNotificationByFilter](arkts-notification-notificationmanager-getactivenotificationbyfilter-f-sys.md) |
+| [getActiveNotificationByFilter](arkts-notification-notificationmanager-getactivenotificationbyfilter-f-sys.md) |
+| [getAllActiveNotifications](arkts-notification-notificationmanager-getallactivenotifications-f-sys.md) |
+| [getAllActiveNotifications](arkts-notification-notificationmanager-getallactivenotifications-f-sys.md) |
+| [getAllNotificationEnabledBundles](arkts-notification-notificationmanager-getallnotificationenabledbundles-f-sys.md) |
+| [getAllNotificationEnabledBundles](arkts-notification-notificationmanager-getallnotificationenabledbundles-f-sys.md) |
+| [getBadgeDisplayStatusByBundles](arkts-notification-notificationmanager-getbadgedisplaystatusbybundles-f-sys.md) |
+| [getBundlePriorityConfig](arkts-notification-notificationmanager-getbundlepriorityconfig-f-sys.md) |
+| [getDeviceRemindType](arkts-notification-notificationmanager-getdeviceremindtype-f-sys.md) |
+| [getDeviceRemindType](arkts-notification-notificationmanager-getdeviceremindtype-f-sys.md) |
+| [getDistributedDeviceList](arkts-notification-notificationmanager-getdistributeddevicelist-f-sys.md) |
+| [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md) |
+| [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md) |
+| [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md) |
+| [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md) |
+| [getDoNotDisturbProfile](arkts-notification-notificationmanager-getdonotdisturbprofile-f-sys.md) |
+| [getDoNotDisturbProfile](arkts-notification-notificationmanager-getdonotdisturbprofile-f-sys.md) |
+| [getNotificationStatisticsByBundle](arkts-notification-notificationmanager-getnotificationstatisticsbybundle-f-sys.md) |
+| [getNotificationSwitch](arkts-notification-notificationmanager-getnotificationswitch-f-sys.md) |
+| [getPriorityEnabledByBundles](arkts-notification-notificationmanager-getpriorityenabledbybundles-f-sys.md) |
+| [getPriorityStrategyByBundles](arkts-notification-notificationmanager-getprioritystrategybybundles-f-sys.md) |
+| [getReminderInfoByBundles](arkts-notification-notificationmanager-getreminderinfobybundles-f-sys.md) |
+| [getRingtoneInfoByBundle](arkts-notification-notificationmanager-getringtoneinfobybundle-f-sys.md) |
+| [getSlotByBundle](arkts-notification-notificationmanager-getslotbybundle-f-sys.md) |
+| [getSlotByBundle](arkts-notification-notificationmanager-getslotbybundle-f-sys.md) |
+| [getSlotFlagsByBundle](arkts-notification-notificationmanager-getslotflagsbybundle-f-sys.md) |
+| [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md) |
+| [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md) |
+| [getSlotsByBundle](arkts-notification-notificationmanager-getslotsbybundle-f-sys.md) |
+| [getSlotsByBundle](arkts-notification-notificationmanager-getslotsbybundle-f-sys.md) |
+| [getSyncNotificationEnabledWithoutApp](arkts-notification-notificationmanager-getsyncnotificationenabledwithoutapp-f-sys.md) |
+| [getSyncNotificationEnabledWithoutApp](arkts-notification-notificationmanager-getsyncnotificationenabledwithoutapp-f-sys.md) |
+| [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md) |
+| [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md) |
+| [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f-sys.md) |
+| [isDistributedEnabledByBundle](arkts-notification-notificationmanager-isdistributedenabledbybundle-f-sys.md) |
+| [isDistributedEnabledByBundle](arkts-notification-notificationmanager-isdistributedenabledbybundle-f-sys.md) |
+| [isDistributedEnabledByBundle](arkts-notification-notificationmanager-isdistributedenabledbybundle-f-sys.md) |
+| [isDistributedEnabledBySlot](arkts-notification-notificationmanager-isdistributedenabledbyslot-f-sys.md) |
+| [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md) |
+| [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md) |
+| [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md) |
+| [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md) |
+| [isNotificationSlotEnabled](arkts-notification-notificationmanager-isnotificationslotenabled-f-sys.md) |
+| [isNotificationSlotEnabled](arkts-notification-notificationmanager-isnotificationslotenabled-f-sys.md) |
+| [isNotificationSlotEnabledByBundles](arkts-notification-notificationmanager-isnotificationslotenabledbybundles-f-sys.md) |
+| [isPriorityEnabled](arkts-notification-notificationmanager-ispriorityenabled-f-sys.md) |
+| [isPriorityEnabledByBundle](arkts-notification-notificationmanager-ispriorityenabledbybundle-f-sys.md) |
+| [isPriorityIntelligentEnabled](arkts-notification-notificationmanager-ispriorityintelligentenabled-f-sys.md) |
+| [isSilentReminderEnabled](arkts-notification-notificationmanager-issilentreminderenabled-f-sys.md) |
+| [isSmartReminderEnabled](arkts-notification-notificationmanager-issmartreminderenabled-f-sys.md) |
+| [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md) |
+| [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md) |
+| [off](arkts-notification-notificationmanager-off-f-sys.md#offchecknotification) |
+| [offBadgeNumberQuery](arkts-notification-notificationmanager-offbadgenumberquery-f-sys.md) |
+| [offCheckNotification](arkts-notification-notificationmanager-offchecknotification-f-sys.md) |
+| [on](arkts-notification-notificationmanager-on-f-sys.md#onchecknotification) |
+| [on](arkts-notification-notificationmanager-on-f-sys.md#onchecknotification) |
+| [onBadgeNumberQuery](arkts-notification-notificationmanager-onbadgenumberquery-f-sys.md) |
+| [onCheckNotification](arkts-notification-notificationmanager-onchecknotification-f-sys.md) |
+| [onCheckNotification](arkts-notification-notificationmanager-onchecknotification-f-sys.md) |
+| [publish](arkts-notification-notificationmanager-publish-f-sys.md) |
+| [publish](arkts-notification-notificationmanager-publish-f-sys.md) |
+| [publishAsBundle](arkts-notification-notificationmanager-publishasbundle-f-sys.md) |
+| [publishAsBundle](arkts-notification-notificationmanager-publishasbundle-f-sys.md) |
+| [publishAsBundle](arkts-notification-notificationmanager-publishasbundle-f-sys.md) |
+| [removeDoNotDisturbProfile](arkts-notification-notificationmanager-removedonotdisturbprofile-f-sys.md) |
+| [removeDoNotDisturbProfile](arkts-notification-notificationmanager-removedonotdisturbprofile-f-sys.md) |
+| [removeGroupByBundle](arkts-notification-notificationmanager-removegroupbybundle-f-sys.md) |
+| [removeGroupByBundle](arkts-notification-notificationmanager-removegroupbybundle-f-sys.md) |
+| [setAdditionalConfig](arkts-notification-notificationmanager-setadditionalconfig-f-sys.md) |
+| [setBadgeDisplayStatusByBundles](arkts-notification-notificationmanager-setbadgedisplaystatusbybundles-f-sys.md) |
+| [setBadgeNumberByBundle](arkts-notification-notificationmanager-setbadgenumberbybundle-f-sys.md) |
+| [setBundlePriorityConfig](arkts-notification-notificationmanager-setbundlepriorityconfig-f-sys.md) |
+| [setDistributedEnable](arkts-notification-notificationmanager-setdistributedenable-f-sys.md) |
+| [setDistributedEnable](arkts-notification-notificationmanager-setdistributedenable-f-sys.md) |
+| [setDistributedEnableByBundle](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md) |
+| [setDistributedEnableByBundle](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md) |
+| [setDistributedEnableByBundles](arkts-notification-notificationmanager-setdistributedenablebybundles-f-sys.md) |
+| [setDistributedEnabled](arkts-notification-notificationmanager-setdistributedenabled-f-sys.md) |
+| [setDistributedEnabledByBundle](arkts-notification-notificationmanager-setdistributedenabledbybundle-f-sys.md) |
+| [setDistributedEnabledBySlot](arkts-notification-notificationmanager-setdistributedenabledbyslot-f-sys.md) |
+| [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md) |
+| [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md) |
+| [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md) |
+| [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md) |
+| [setGeofenceEnabled](arkts-notification-notificationmanager-setgeofenceenabled-f-sys.md) |
+| [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md) |
+| [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md) |
+| [setNotificationEnableSlot](arkts-notification-notificationmanager-setnotificationenableslot-f-sys.md) |
+| [setNotificationEnableSlot](arkts-notification-notificationmanager-setnotificationenableslot-f-sys.md) |
+| [setNotificationEnableSlot](arkts-notification-notificationmanager-setnotificationenableslot-f-sys.md) |
+| [setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md) |
+| [setPriorityEnabled](arkts-notification-notificationmanager-setpriorityenabled-f-sys.md) |
+| [setPriorityEnabledByBundle](arkts-notification-notificationmanager-setpriorityenabledbybundle-f-sys.md) |
+| [setPriorityEnabledByBundles](arkts-notification-notificationmanager-setpriorityenabledbybundles-f-sys.md) |
+| [setPriorityIntelligentEnabled](arkts-notification-notificationmanager-setpriorityintelligentenabled-f-sys.md) |
+| [setPriorityStrategyByBundles](arkts-notification-notificationmanager-setprioritystrategybybundles-f-sys.md) |
+| [setReminderInfoByBundles](arkts-notification-notificationmanager-setreminderinfobybundles-f-sys.md) |
+| [setRingtoneInfoByBundle](arkts-notification-notificationmanager-setringtoneinfobybundle-f-sys.md) |
+| [setSilentReminderEnabled](arkts-notification-notificationmanager-setsilentreminderenabled-f-sys.md) |
+| [setSlotByBundle](arkts-notification-notificationmanager-setslotbybundle-f-sys.md) |
+| [setSlotByBundle](arkts-notification-notificationmanager-setslotbybundle-f-sys.md) |
+| [setSlotFlagsByBundle](arkts-notification-notificationmanager-setslotflagsbybundle-f-sys.md) |
+| [setSmartReminderEnabled](arkts-notification-notificationmanager-setsmartreminderenabled-f-sys.md) |
+| [setSyncNotificationEnabledWithoutApp](arkts-notification-notificationmanager-setsyncnotificationenabledwithoutapp-f-sys.md) |
+| [setSyncNotificationEnabledWithoutApp](arkts-notification-notificationmanager-setsyncnotificationenabledwithoutapp-f-sys.md) |
+| [setTargetDeviceStatus](arkts-notification-notificationmanager-settargetdevicestatus-f-sys.md) |
+| [snoozeNotification](arkts-notification-notificationmanager-snoozenotification-f-sys.md) |
+| [subscribeSystemLiveView](arkts-notification-notificationmanager-subscribesystemliveview-f-sys.md) |
+| [triggerSystemLiveView](arkts-notification-notificationmanager-triggersystemliveview-f-sys.md) |
 <!--DelEnd-->
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [NotificationSetting](arkts-notification-notificationmanager-notificationsetting-i.md) | Describes the setting status of the notification mode switch. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [NotificationSetting](arkts-notification-notificationmanager-notificationsetting-i.md) |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [BundleNotificationStatistics](arkts-notification-notificationmanager-bundlenotificationstatistics-i-sys.md) | Describes the notification statistics of a specified application. |
-| [ButtonOptions](arkts-notification-notificationmanager-buttonoptions-i-sys.md) | Provides the button information of the notification. |
-| [DistributedBundleEnableInfo](arkts-notification-notificationmanager-distributedbundleenableinfo-i-sys.md) | Describes the bundle information of an application that enables cross-device collaboration. |
-| [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Defines the DND time. |
-| [DoNotDisturbProfile](arkts-notification-notificationmanager-donotdisturbprofile-i-sys.md) | Do Not Disturb profile. |
-| [NotificationCheckInfo](arkts-notification-notificationmanager-notificationcheckinfo-i-sys.md) | Describes the parameters of check notifications. |
-| [NotificationCheckResult](arkts-notification-notificationmanager-notificationcheckresult-i-sys.md) | Describes the result of check notifications. |
-| [NotificationReminderInfo](arkts-notification-notificationmanager-notificationreminderinfo-i-sys.md) | Describes the information about the application reminder. |
-| [RingtoneInfo](arkts-notification-notificationmanager-ringtoneinfo-i-sys.md) | Describes the custom ringtone information. |
-| [SystemLiveViewSubscriber](arkts-notification-notificationmanager-systemliveviewsubscriber-i-sys.md) | Subscriber of the system live view notification. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BundleNotificationStatistics](arkts-notification-notificationmanager-bundlenotificationstatistics-i-sys.md) |
+| [ButtonOptions](arkts-notification-notificationmanager-buttonoptions-i-sys.md) |
+| [DistributedBundleEnableInfo](arkts-notification-notificationmanager-distributedbundleenableinfo-i-sys.md) |
+| [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) |
+| [DoNotDisturbProfile](arkts-notification-notificationmanager-donotdisturbprofile-i-sys.md) |
+| [NotificationCheckInfo](arkts-notification-notificationmanager-notificationcheckinfo-i-sys.md) |
+| [NotificationCheckResult](arkts-notification-notificationmanager-notificationcheckresult-i-sys.md) |
+| [NotificationReminderInfo](arkts-notification-notificationmanager-notificationreminderinfo-i-sys.md) |
+| [RingtoneInfo](arkts-notification-notificationmanager-ringtoneinfo-i-sys.md) |
+| [SystemLiveViewSubscriber](arkts-notification-notificationmanager-systemliveviewsubscriber-i-sys.md) |
 <!--DelEnd-->
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [ContentType](arkts-notification-notificationmanager-contenttype-e.md) | Enumerates the notification content types. |
-| [PriorityNotificationType](arkts-notification-notificationmanager-prioritynotificationtype-e.md) | Describes the priority type of a notification. |
-| [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md) | Enumerates the notification level.This API is used to define the notification reminder behavior level of NotificationSlot, affecting how the notification is displayed in the status bar, whether to show banners and alert sounds, etc. |
-| [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Enumerates the notification slot types.Different types correspond to different [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md) values, determining the reminder behavior of the notification. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ContentType](arkts-notification-notificationmanager-contenttype-e.md) |
+| [PriorityNotificationType](arkts-notification-notificationmanager-prioritynotificationtype-e.md) |
+| [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md) |
+| [SlotType](arkts-notification-notificationmanager-slottype-e.md) |
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [DeviceRemindType](arkts-notification-notificationmanager-deviceremindtype-e-sys.md) | Defines the notification reminder type. |
-| [DoNotDisturbType](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md) | Defines the DND time type. |
-| [NotificationControlFlagStatus](arkts-notification-notificationmanager-notificationcontrolflagstatus-e-sys.md) | Each bit can control the notification mode. When the bitwise OR operation is performed on **notificationControlFlags** and the enumerated values in the following table, the notification mode is disabled. |
-| [PriorityEnableStatus](arkts-notification-notificationmanager-priorityenablestatus-e-sys.md) | Describes the enabling status of the priority notification for an application. |
-| [PriorityNotificationType](arkts-notification-notificationmanager-prioritynotificationtype-e-sys.md) | Describes the priority type of a notification. |
-| [PriorityStrategyStatus](arkts-notification-notificationmanager-prioritystrategystatus-e-sys.md) | Describes the application notification strategy. |
-| [RingtoneType](arkts-notification-notificationmanager-ringtonetype-e-sys.md) | Enumerates the custom ringtone types. |
-| [SlotType](arkts-notification-notificationmanager-slottype-e-sys.md) | Enumerates the notification slot types.Different types correspond to different [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md) values, determining the reminder behavior of the notification. |
-| [SourceType](arkts-notification-notificationmanager-sourcetype-e-sys.md) | Defines the notification source type. |
-| [SwitchState](arkts-notification-notificationmanager-switchstate-e-sys.md) | Describes the switch state of notifications. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DeviceRemindType](arkts-notification-notificationmanager-deviceremindtype-e-sys.md) |
+| [DoNotDisturbType](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md) |
+| [NotificationControlFlagStatus](arkts-notification-notificationmanager-notificationcontrolflagstatus-e-sys.md) |
+| [PriorityEnableStatus](arkts-notification-notificationmanager-priorityenablestatus-e-sys.md) |
+| [PriorityNotificationType](arkts-notification-notificationmanager-prioritynotificationtype-e-sys.md) |
+| [PriorityStrategyStatus](arkts-notification-notificationmanager-prioritystrategystatus-e-sys.md) |
+| [RingtoneType](arkts-notification-notificationmanager-ringtonetype-e-sys.md) |
+| [SlotType](arkts-notification-notificationmanager-slottype-e-sys.md) |
+| [SourceType](arkts-notification-notificationmanager-sourcetype-e-sys.md) |
+| [SwitchState](arkts-notification-notificationmanager-switchstate-e-sys.md) |
 <!--DelEnd-->
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Describes the bundle information of an application. |
-| [DistributedOptions](arkts-notification-notificationmanager-distributedoptions-t.md) | Describes distributed notification options. |
-| [NotificationActionButton](arkts-notification-notificationmanager-notificationactionbutton-t.md) | Describes the operation button displayed in the notification. |
-| [NotificationBasicContent](arkts-notification-notificationmanager-notificationbasiccontent-t.md) | Describes the normal text notification. |
-| [NotificationButton](arkts-notification-notificationmanager-notificationbutton-t.md) | Describes the notification button. |
-| [NotificationCapsule](arkts-notification-notificationmanager-notificationcapsule-t.md) | Describes the notification capsule. |
-| [NotificationContent](arkts-notification-notificationmanager-notificationcontent-t.md) | Describes the notification content. |
-| [NotificationLongTextContent](arkts-notification-notificationmanager-notificationlongtextcontent-t.md) | Describes the long text notification. |
-| [NotificationMultiLineContent](arkts-notification-notificationmanager-notificationmultilinecontent-t.md) | Describes the multi-line text notification. |
-| [NotificationParameters](arkts-notification-notificationmanager-notificationparameters-t.md) | Describes partial information about the **wantAgent** in the notification request. |
-| [NotificationPictureContent](arkts-notification-notificationmanager-notificationpicturecontent-t.md) | Describes the picture-attached notification. |
-| [NotificationProgress](arkts-notification-notificationmanager-notificationprogress-t.md) | Describes the notification progress. |
-| [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | Describes the notification request. |
-| [NotificationSlot](arkts-notification-notificationmanager-notificationslot-t.md) | Describes the notification slot. |
-| [NotificationSystemLiveViewContent](arkts-notification-notificationmanager-notificationsystemliveviewcontent-t.md) | Describes the system live view notification. |
-| [NotificationTemplate](arkts-notification-notificationmanager-notificationtemplate-t.md) | Describes the notification template. |
-| [NotificationTime](arkts-notification-notificationmanager-notificationtime-t.md) | Describes the notification timing information. |
-| [NotificationUserInput](arkts-notification-notificationmanager-notificationuserinput-t.md) | Describes the user input for the notification. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) |
+| [DistributedOptions](arkts-notification-notificationmanager-distributedoptions-t.md) |
+| [NotificationActionButton](arkts-notification-notificationmanager-notificationactionbutton-t.md) |
+| [NotificationBasicContent](arkts-notification-notificationmanager-notificationbasiccontent-t.md) |
+| [NotificationButton](arkts-notification-notificationmanager-notificationbutton-t.md) |
+| [NotificationCapsule](arkts-notification-notificationmanager-notificationcapsule-t.md) |
+| [NotificationContent](arkts-notification-notificationmanager-notificationcontent-t.md) |
+| [NotificationLongTextContent](arkts-notification-notificationmanager-notificationlongtextcontent-t.md) |
+| [NotificationMultiLineContent](arkts-notification-notificationmanager-notificationmultilinecontent-t.md) |
+| [NotificationParameters](arkts-notification-notificationmanager-notificationparameters-t.md) |
+| [NotificationPictureContent](arkts-notification-notificationmanager-notificationpicturecontent-t.md) |
+| [NotificationProgress](arkts-notification-notificationmanager-notificationprogress-t.md) |
+| [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) |
+| [NotificationSlot](arkts-notification-notificationmanager-notificationslot-t.md) |
+| [NotificationSystemLiveViewContent](arkts-notification-notificationmanager-notificationsystemliveviewcontent-t.md) |
+| [NotificationTemplate](arkts-notification-notificationmanager-notificationtemplate-t.md) |
+| [NotificationTime](arkts-notification-notificationmanager-notificationtime-t.md) |
+| [NotificationUserInput](arkts-notification-notificationmanager-notificationuserinput-t.md) |
 
 <!--Del-->
 ### Types(System API)
 
-| Name | Description |
-| --- | --- |
-| [CoordinateSystemType](arkts-notification-notificationmanager-coordinatesystemtype-t-sys.md) | Enumerates the coordinate systems of a geofence. |
-| [Geofence](arkts-notification-notificationmanager-geofence-t-sys.md) | Defines the configuration of a geofence. |
-| [GroupInfo](arkts-notification-notificationmanager-groupinfo-t-sys.md) | Defines the custom group notification information. |
-| [LiveViewStatus](arkts-notification-notificationmanager-liveviewstatus-t-sys.md) | Enumerates the statuses of the common live view. |
-| [LiveViewTypes](arkts-notification-notificationmanager-liveviewtypes-t-sys.md) | Enumerates live view types. |
-| [MonitorEvent](arkts-notification-notificationmanager-monitorevent-t-sys.md) | Enumerates the event types of monitoring a geofence. |
-| [NotificationCheckRequest](arkts-notification-notificationmanager-notificationcheckrequest-t-sys.md) | Describes the notification authentication information. |
-| [NotificationFilter](arkts-notification-notificationmanager-notificationfilter-t-sys.md) | Describes the filter criteria for querying the live view. |
-| [NotificationFlags](arkts-notification-notificationmanager-notificationflags-t-sys.md) | Defines the notification flags. |
-| [NotificationFlagStatus](arkts-notification-notificationmanager-notificationflagstatus-t-sys.md) | Enumerates the notification flag states. |
-| [NotificationIconButton](arkts-notification-notificationmanager-notificationiconbutton-t-sys.md) | System notification button. |
-| [NotificationLiveViewContent](arkts-notification-notificationmanager-notificationliveviewcontent-t-sys.md) | Describes the common live view. |
-| [NotificationSorting](arkts-notification-notificationmanager-notificationsorting-t-sys.md) | The **NotificationSorting** module provides APIs for defining the sorting information of active notifications. |
-| [Trigger](arkts-notification-notificationmanager-trigger-t-sys.md) | Defines the details for triggering a geofence. |
-| [TriggerType](arkts-notification-notificationmanager-triggertype-t-sys.md) | Enumerates the trigger types. |
-| [UnifiedGroupInfo](arkts-notification-notificationmanager-unifiedgroupinfo-t-sys.md) | Describes the fields of notification intelligent unification information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CoordinateSystemType](arkts-notification-notificationmanager-coordinatesystemtype-t-sys.md) |
+| [Geofence](arkts-notification-notificationmanager-geofence-t-sys.md) |
+| [GroupInfo](arkts-notification-notificationmanager-groupinfo-t-sys.md) |
+| [LiveViewStatus](arkts-notification-notificationmanager-liveviewstatus-t-sys.md) |
+| [LiveViewTypes](arkts-notification-notificationmanager-liveviewtypes-t-sys.md) |
+| [MonitorEvent](arkts-notification-notificationmanager-monitorevent-t-sys.md) |
+| [NotificationCheckRequest](arkts-notification-notificationmanager-notificationcheckrequest-t-sys.md) |
+| [NotificationFilter](arkts-notification-notificationmanager-notificationfilter-t-sys.md) |
+| [NotificationFlags](arkts-notification-notificationmanager-notificationflags-t-sys.md) |
+| [NotificationFlagStatus](arkts-notification-notificationmanager-notificationflagstatus-t-sys.md) |
+| [NotificationIconButton](arkts-notification-notificationmanager-notificationiconbutton-t-sys.md) |
+| [NotificationLiveViewContent](arkts-notification-notificationmanager-notificationliveviewcontent-t-sys.md) |
+| [NotificationSorting](arkts-notification-notificationmanager-notificationsorting-t-sys.md) |
+| [Trigger](arkts-notification-notificationmanager-trigger-t-sys.md) |
+| [TriggerType](arkts-notification-notificationmanager-triggertype-t-sys.md) |
+| [UnifiedGroupInfo](arkts-notification-notificationmanager-unifiedgroupinfo-t-sys.md) |
 <!--DelEnd-->
-

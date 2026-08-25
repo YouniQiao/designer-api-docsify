@@ -2,9 +2,9 @@
 
 HashMap is a map implemented based on the array, linked list, and red-black tree. It provides efficient data query, insertion, and removal. The elements in a HashMap instance are mappings of key-value pairs. Each key must be unique and have only one value.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-unnamed-declare class HashMap--><!--Device-unnamed-declare class HashMap-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,17 +25,17 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-HashMap-$_iterator(): IterableIterator<[K, V]>--><!--Device-HashMap-$_iterator(): IterableIterator<[K, V]>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;[K, V]&gt; | an iterator for the HashMap |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;[K, V] & gt; |
 
 ## [Symbol.iterator]
 
@@ -47,23 +47,23 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HashMap-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-HashMap-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;[K, V]&gt; |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;[K, V] & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -116,19 +116,19 @@ clear(): void
 
 Clears this HashMap and sets its length to **0**.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-HashMap-clear(): void--><!--Device-HashMap-clear(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -149,19 +149,19 @@ constructor()
 
 A constructor used to create a **HashMap** instance.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-HashMap-constructor()--><!--Device-HashMap-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The HashMap's constructor cannot be directly invoked. |
+| Error Code ID |
+| --- |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
 
 **Examples**
 
@@ -177,25 +177,25 @@ entries(): IterableIterator<[K, V]>
 
 Returns an iterator that contains all the elements in this HashMap.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-HashMap-entries(): IterableIterator<[K, V]>--><!--Device-HashMap-entries(): IterableIterator<[K, V]>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;[K, V]&gt; | Iterator obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;[K, V] & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -234,24 +234,24 @@ Uses a callback to traverse each element.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HashMap-forEach(callbackFn: (value?: V, key?: K, map?: HashMap<K, V>) => void, thisArg?: Object): void--><!--Device-HashMap-forEach(callbackFn: (value?: V, key?: K, map?: HashMap<K, V>) => void, thisArg?: Object): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackFn | (value?: V, key?: K, map?: HashMap&lt;K, V&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the HashMap. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackFn | (value?: V, key?: K, map?: HashMap & lt;K, V & gt;) = & gt; void | Yes |
+| thisArg | Object | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -288,17 +288,17 @@ Uses a callback to traverse the elements in this container and obtain their posi
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-HashMap-forEach(callbackFn: HashMapCbFn<K, V>): void--><!--Device-HashMap-forEach(callbackFn: HashMapCbFn<K, V>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackFn | [HashMapCbFn](arkts-arkts-hashmapcbfn-t.md)&lt;K, V&gt; | Yes | Callback invoked to traverse the elements in the container. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackFn | [HashMapCbFn](arkts-arkts-hashmapcbfn-t.md)&lt;K, V&gt; | Yes |
 
 **Examples**
 
@@ -314,29 +314,29 @@ Obtains the value of the specified key in this HashMap. If nothing is obtained, 
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HashMap-get(key: K): V--><!--Device-HashMap-get(key: K): V-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | K | Yes | Target key. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| V | Value obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| V |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The get method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -358,23 +358,23 @@ Obtains the value of the specified key in this container. If nothing is obtained
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-HashMap-get(key: K): V | undefined--><!--Device-HashMap-get(key: K): V | undefined-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | K | Yes | Target key. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| V \| undefined | value or undefined |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| V \| undefined |
 
 **Examples**
 
@@ -388,31 +388,31 @@ hasKey(key: K): boolean
 
 Checks whether this HashMap has the specified key.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-HashMap-hasKey(key: K): boolean--><!--Device-HashMap-hasKey(key: K): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | K | Yes | Target key. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** is returned if the specified key is contained; otherwise, **false** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasKey method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -431,31 +431,31 @@ hasValue(value: V): boolean
 
 Checks whether this HashMap has the specified value.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-HashMap-hasValue(value: V): boolean--><!--Device-HashMap-hasValue(value: V): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | V | Yes | Target value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | V | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** is returned if the specified value is contained; otherwise, **false** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasValue method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -474,25 +474,25 @@ isEmpty(): boolean
 
 Checks whether this HashMap is empty (contains no element).
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-HashMap-isEmpty(): boolean--><!--Device-HashMap-isEmpty(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** is returned if the HashMap is empty; otherwise, **false** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -510,25 +510,25 @@ keys(): IterableIterator<K>
 
 Returns an iterator that contains all the keys in this HashMap.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-HashMap-keys(): IterableIterator<K>--><!--Device-HashMap-keys(): IterableIterator<K>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;K&gt; | Iterator obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;K & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -554,29 +554,29 @@ Removes an element with the specified key from this HashMap.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HashMap-remove(key: K): V--><!--Device-HashMap-remove(key: K): V-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | K | Yes | Key of the target element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| V | Value of the element. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| V |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -598,23 +598,23 @@ Removes an element with the specified key from this container.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-HashMap-remove(key: K): V | undefined--><!--Device-HashMap-remove(key: K): V | undefined-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | K | Yes | Key of the target element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| V \| undefined | Tthe value associated with the key if it was removed, undefined otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| V \| undefined |
 
 **Examples**
 
@@ -628,32 +628,32 @@ replace(key: K, newValue: V): boolean
 
 Replaces the value of a specified key.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-HashMap-replace(key: K, newValue: V): boolean--><!--Device-HashMap-replace(key: K, newValue: V): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | K | Yes | Key of the target element. |
-| newValue | V | Yes | New value of the element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
+| newValue | V | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Operation result. The value **true** is returned if the element is replaced; otherwise, **false** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The replace method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -672,32 +672,32 @@ set(key: K, value: V): Object
 
 Adds or updates an element in this HashMap.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-HashMap-set(key: K, value: V): Object--><!--Device-HashMap-set(key: K, value: V): Object-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | K | Yes | Key of the target element. |
-| value | V | Yes | Value of the target element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
+| value | V | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Object | HashMap that contains the new element. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Object |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -715,25 +715,25 @@ setAll(map: HashMap<K, V>): void
 
 Adds all elements in a **HashMap** instance to this HashMap.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-HashMap-setAll(map: HashMap<K, V>): void--><!--Device-HashMap-setAll(map: HashMap<K, V>): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| map | [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)&lt;K, V&gt; | Yes | HashMap** instance whose elements are to be added to the current HashMap. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| map | [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)&lt;K, V&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setAll method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -756,25 +756,25 @@ values(): IterableIterator<V>
 
 Returns an iterator that contains all the values in this HashMap.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-HashMap-values(): IterableIterator<V>--><!--Device-HashMap-values(): IterableIterator<V>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;V&gt; | Iterator obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;V & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 **Examples**
 
@@ -802,9 +802,8 @@ Number of elements in a HashMap.
 
 **Since:** 8
 
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-HashMap-length: number--><!--Device-HashMap-length: number-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

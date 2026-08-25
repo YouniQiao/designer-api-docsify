@@ -4,7 +4,7 @@ Defines the options of scale.
 
 **Since:** 7
 
-<!--Device-unnamed-declare interface ScaleOptions--><!--Device-unnamed-declare interface ScaleOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ X coordinate of the transformation center point (anchor). The value can be of th
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ScaleOptions-centerX?: number | string--><!--Device-ScaleOptions-centerX?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ Y coordinate of the transformation center point (anchor). The value can be of th
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ScaleOptions-centerY?: number | string--><!--Device-ScaleOptions-centerY?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,11 +65,11 @@ Scale ratio along the x-axis. x &gt; 1: The component is scaled up along the x-a
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ScaleOptions-x?: number--><!--Device-ScaleOptions-x?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,11 +85,11 @@ Scale ratio along the y-axis. y &gt; 1: The component is scaled up along the y-a
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ScaleOptions-y?: number--><!--Device-ScaleOptions-y?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -105,11 +105,10 @@ Scale ratio along the z-axis. z &gt; 1: The component is scaled up along the z-a
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-ScaleOptions-z?: number--><!--Device-ScaleOptions-z?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,7 +4,7 @@ Enumerates the system management events that can be subscribed to.
 
 **Since:** 12
 
-<!--Device-adminManager-export enum ManagedEvent--><!--Device-adminManager-export enum ManagedEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,7 +18,7 @@ An application is installed.
 
 **Since:** 12
 
-<!--Device-ManagedEvent-MANAGED_EVENT_BUNDLE_ADDED = 0--><!--Device-ManagedEvent-MANAGED_EVENT_BUNDLE_ADDED = 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -32,7 +32,7 @@ An application is uninstalled.
 
 **Since:** 12
 
-<!--Device-ManagedEvent-MANAGED_EVENT_BUNDLE_REMOVED = 1--><!--Device-ManagedEvent-MANAGED_EVENT_BUNDLE_REMOVED = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -46,7 +46,7 @@ An application is started.
 
 **Since:** 12
 
-<!--Device-ManagedEvent-MANAGED_EVENT_APP_START = 2--><!--Device-ManagedEvent-MANAGED_EVENT_APP_START = 2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -60,7 +60,7 @@ An application is stopped.
 
 **Since:** 12
 
-<!--Device-ManagedEvent-MANAGED_EVENT_APP_STOP = 3--><!--Device-ManagedEvent-MANAGED_EVENT_APP_STOP = 3-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -74,7 +74,7 @@ The system is updated.
 
 **Since:** 12
 
-<!--Device-ManagedEvent-MANAGED_EVENT_SYSTEM_UPDATE = 4--><!--Device-ManagedEvent-MANAGED_EVENT_SYSTEM_UPDATE = 4-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -88,7 +88,7 @@ An account is created.
 
 **Since:** 18
 
-<!--Device-ManagedEvent-MANAGED_EVENT_ACCOUNT_ADDED = 5--><!--Device-ManagedEvent-MANAGED_EVENT_ACCOUNT_ADDED = 5-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -102,7 +102,7 @@ An account is switched.
 
 **Since:** 18
 
-<!--Device-ManagedEvent-MANAGED_EVENT_ACCOUNT_SWITCHED = 6--><!--Device-ManagedEvent-MANAGED_EVENT_ACCOUNT_SWITCHED = 6-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -116,7 +116,7 @@ An account is removed.
 
 **Since:** 18
 
-<!--Device-ManagedEvent-MANAGED_EVENT_ACCOUNT_REMOVED = 7--><!--Device-ManagedEvent-MANAGED_EVENT_ACCOUNT_REMOVED = 7-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -130,9 +130,9 @@ The startup wizard is complete.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-ManagedEvent-MANAGED_EVENT_STARTUP_GUIDE_COMPLETED = 8--><!--Device-ManagedEvent-MANAGED_EVENT_STARTUP_GUIDE_COMPLETED = 8-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -146,9 +146,9 @@ Device startup is complete.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-ManagedEvent-MANAGED_EVENT_BOOT_COMPLETED = 9--><!--Device-ManagedEvent-MANAGED_EVENT_BOOT_COMPLETED = 9-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -162,9 +162,9 @@ Application update event.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ManagedEvent-MANAGED_EVENT_BUNDLE_UPDATED = 10--><!--Device-ManagedEvent-MANAGED_EVENT_BUNDLE_UPDATED = 10-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -178,9 +178,8 @@ Policy change event. Only super device administrator applications can subscribe 
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ManagedEvent-MANAGED_EVENT_POLICIES_CHANGED = 11--><!--Device-ManagedEvent-MANAGED_EVENT_POLICIES_CHANGED = 11-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

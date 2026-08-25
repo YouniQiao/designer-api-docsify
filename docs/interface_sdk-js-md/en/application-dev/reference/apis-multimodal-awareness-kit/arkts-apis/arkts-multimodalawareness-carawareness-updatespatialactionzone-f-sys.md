@@ -16,11 +16,11 @@ Updates the voice zone when the voice subscribes to the spatial point engine cap
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
+
 **Required permissions:** ohos.permission.vehicle.MMA_SPATIALACTION
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-carAwareness-function updateSpatialActionZone(zone: number): void--><!--Device-carAwareness-function updateSpatialActionZone(zone: number): void-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -28,17 +28,16 @@ Updates the voice zone when the voice subscribes to the spatial point engine cap
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| zone | number | Yes | Voice zone. The value 3 indicates the left back, and the value 4 indicates the right back. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| zone | number | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system capability. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Car awareness not supported. Function can not work correctly due to limited device capabilities. |
-| [34000001](../errorcode-onScreen.md#34000001-service-exception) | Service exception. |
-| [34000002](../errorcode-onScreen.md#34000002-unsupported-application-or-page) | Specific capability not supported. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [34000001](../errorcode-onScreen.md#34000001-service-exception) |
+| [34000002](../errorcode-onScreen.md#34000002-unsupported-application-or-page) |

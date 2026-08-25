@@ -4,9 +4,7 @@ Defines the CustomSpanMeasureInfo interface.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare interface CustomSpanMeasureInfo--><!--Device-unnamed-export declare interface CustomSpanMeasureInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +20,9 @@ Current component's fontSize value. The unit is fp.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-CustomSpanMeasureInfo-fontSize: double--><!--Device-CustomSpanMeasureInfo-fontSize: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,11 +38,9 @@ The layoutPolicy of custom span.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-CustomSpanMeasureInfo-layoutPolicy?: LayoutPolicy--><!--Device-CustomSpanMeasureInfo-layoutPolicy?: LayoutPolicy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,11 +56,8 @@ The max width constraint of custom span. The unit is px.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CustomSpanMeasureInfo-maxWidth?: double--><!--Device-CustomSpanMeasureInfo-maxWidth?: double-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

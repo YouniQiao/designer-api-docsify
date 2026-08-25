@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-export interface SelectionContainerInterface--><!--Device-unnamed-export interface SelectionContainerInterface-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -14,7 +14,7 @@
 import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerInstance, SelectionContainerMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerOptions, SelectionContainerController } from '@kit.ArkUI';
 ```
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (value?: SelectionContainerOptions): SelectionContainerAttribute
@@ -24,23 +24,22 @@ import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainer
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectionContainerInterface-(value?: SelectionContainerOptions): SelectionContainerAttribute--><!--Device-SelectionContainerInterface-(value?: SelectionContainerOptions): SelectionContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [SelectionContainerOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontaineroptions-i.md) | 否 | 组件的初始化选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [SelectionContainerOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontaineroptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SelectionContainerAttribute](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) |  |
-
+| 类型 |
+| --- |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |

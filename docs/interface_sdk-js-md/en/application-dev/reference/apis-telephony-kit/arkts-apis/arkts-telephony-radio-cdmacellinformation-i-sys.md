@@ -2,9 +2,9 @@
 
 Obtains CDMA cell information.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-radio-export interface CdmaCellInformation--><!--Device-radio-export interface CdmaCellInformation-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -24,11 +24,11 @@ baseId: int
 
 Indicates the base station Id.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-CdmaCellInformation-baseId: int--><!--Device-CdmaCellInformation-baseId: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -42,11 +42,11 @@ latitude: int
 
 Indicates the latitude.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-CdmaCellInformation-latitude: int--><!--Device-CdmaCellInformation-latitude: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -60,11 +60,11 @@ longitude: int
 
 Indicates the longitude.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-CdmaCellInformation-longitude: int--><!--Device-CdmaCellInformation-longitude: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -78,11 +78,11 @@ nid: int
 
 Indicates the network identification code.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-CdmaCellInformation-nid: int--><!--Device-CdmaCellInformation-nid: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -96,13 +96,12 @@ sid: int
 
 Indicates the system identification code.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-CdmaCellInformation-sid: int--><!--Device-CdmaCellInformation-sid: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
-

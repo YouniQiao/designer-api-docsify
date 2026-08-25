@@ -4,7 +4,7 @@ cookie的相关字段。
 
 **起始版本：** 23
 
-<!--Device-webview-interface WebHttpCookie--><!--Device-webview-interface WebHttpCookie-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -26,7 +26,7 @@ domain: string
 
 **起始版本：** 23
 
-<!--Device-WebHttpCookie-domain: string--><!--Device-WebHttpCookie-domain: string-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -42,7 +42,7 @@ cookie的过期时间。时间格式详见[Date](https://developer.mozilla.org/z
 
 **起始版本：** 23
 
-<!--Device-WebHttpCookie-expiresDate: string--><!--Device-WebHttpCookie-expiresDate: string-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -58,7 +58,7 @@ isHttpOnly: boolean
 
 **起始版本：** 23
 
-<!--Device-WebHttpCookie-isHttpOnly: boolean--><!--Device-WebHttpCookie-isHttpOnly: boolean-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -74,7 +74,7 @@ isSecure: boolean
 
 **起始版本：** 23
 
-<!--Device-WebHttpCookie-isSecure: boolean--><!--Device-WebHttpCookie-isSecure: boolean-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -90,7 +90,7 @@ isSessionCookie: boolean
 
 **起始版本：** 23
 
-<!--Device-WebHttpCookie-isSessionCookie: boolean--><!--Device-WebHttpCookie-isSessionCookie: boolean-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -106,7 +106,7 @@ cookie的名称。
 
 **起始版本：** 23
 
-<!--Device-WebHttpCookie-name: string--><!--Device-WebHttpCookie-name: string-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -122,7 +122,7 @@ cookie的路径。
 
 **起始版本：** 23
 
-<!--Device-WebHttpCookie-path: string--><!--Device-WebHttpCookie-path: string-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -138,7 +138,7 @@ cookie的同站策略。
 
 **起始版本：** 23
 
-<!--Device-WebHttpCookie-samesitePolicy: WebHttpCookieSameSitePolicy--><!--Device-WebHttpCookie-samesitePolicy: WebHttpCookieSameSitePolicy-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -154,7 +154,6 @@ cookie的值。
 
 **起始版本：** 23
 
-<!--Device-WebHttpCookie-value: string--><!--Device-WebHttpCookie-value: string-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-

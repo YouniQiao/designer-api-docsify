@@ -6,12 +6,9 @@ type DisplayNamesFallback =
         | "none"
 ```
 
-**Since:** -1
+**ArkTS mode:** 
 
-<!--Device-Intl-type DisplayNamesFallback =        | "code"        | "none"--><!--Device-Intl-type DisplayNamesFallback =        | "code"        | "none"-End-->
-
-| Type | Description |
-| --- | --- |
-| "code" |  |
-| "none" |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| "code" |
+| "none" |

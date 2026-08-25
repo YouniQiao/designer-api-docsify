@@ -9,7 +9,7 @@ Options used to build the **TextClock** component.
 
 **Since:** 18
 
-<!--Device-unnamed-declare interface TextClockOptions--><!--Device-unnamed-declare interface TextClockOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,11 @@ Controller to control the status of the **&lt;TextClock&gt;** component.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-TextClockOptions-controller?: TextClockController--><!--Device-TextClockOptions-controller?: TextClockController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,11 +50,10 @@ Time zone offset.The value range is [-14, 12], indicating UTC+12 to UTC-12. A ne
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
-<!--Device-TextClockOptions-timeZoneOffset?: number--><!--Device-TextClockOptions-timeZoneOffset?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

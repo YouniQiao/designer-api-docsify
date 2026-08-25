@@ -16,19 +16,19 @@ export function getFirstPreferredLanguage(): string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-**替代接口：** [getFirstPreferredLanguage](../../apis-default/arkts-apis/arkts-i18n-system-c.md#getfirstpreferredlanguage)
-
-<!--Device-i18n-export function getFirstPreferredLanguage(): string--><!--Device-i18n-export function getFirstPreferredLanguage(): string-End-->
+**替代接口：** [getFirstPreferredLanguage](arkts-localization-i18n-system-c.md#getfirstpreferredlanguage)
 
 **系统能力：** SystemCapability.Global.I18n
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 偏好语言列表中的第一个语言。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -43,4 +43,3 @@ import { i18n } from '@kit.LocalizationKit';
 
 let firstPreferredLanguage: string = i18n.getFirstPreferredLanguage();
 ```
-

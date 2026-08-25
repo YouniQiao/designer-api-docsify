@@ -4,7 +4,7 @@ Defines the common options.
 
 **Since:** 11
 
-<!--Device-unnamed-declare class CommonOptions--><!--Device-unnamed-declare class CommonOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -13,6 +13,54 @@ Defines the common options.
 ```TypeScript
 import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
 ```
+
+## onHoverDecrease
+
+```TypeScript
+onHoverDecrease?: (isHover: boolean) => void
+```
+
+Trigger a mouse hover event at the decrease button.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| isHover | boolean | Yes |
+
+## onHoverIncrease
+
+```TypeScript
+onHoverIncrease?: (isHover: boolean) => void
+```
+
+Trigger a mouse hover event at the increase button.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| isHover | boolean | Yes |
 
 ## focusable
 
@@ -28,51 +76,11 @@ Set the focusable of the counter component.
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CommonOptions-focusable?: boolean--><!--Device-CommonOptions-focusable?: boolean-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onHoverDecrease
-
-```TypeScript
-onHoverDecrease?: (isHover: boolean) => void
-```
-
-Trigger a mouse hover event at the decrease button.
-
-**Type:** (isHover: boolean) =&gt; void
-
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CommonOptions-onHoverDecrease?: (isHover: boolean) => void--><!--Device-CommonOptions-onHoverDecrease?: (isHover: boolean) => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onHoverIncrease
-
-```TypeScript
-onHoverIncrease?: (isHover: boolean) => void
-```
-
-Trigger a mouse hover event at the increase button.
-
-**Type:** (isHover: boolean) =&gt; void
-
-**Since:** 11
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CommonOptions-onHoverIncrease?: (isHover: boolean) => void--><!--Device-CommonOptions-onHoverIncrease?: (isHover: boolean) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,11 +98,10 @@ Set the step of the counter component, ranges greater than or equal to 1
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-CommonOptions-step?: number--><!--Device-CommonOptions-step?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

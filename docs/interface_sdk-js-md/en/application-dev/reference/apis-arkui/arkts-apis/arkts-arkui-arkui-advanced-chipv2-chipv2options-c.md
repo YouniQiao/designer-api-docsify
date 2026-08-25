@@ -4,9 +4,7 @@ Defines chip options class.
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
-
-<!--Device-unnamed-export declare class ChipV2Options--><!--Device-unnamed-export declare class ChipV2Options-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,19 +24,37 @@ The constructor of ChipV2Options
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-constructor(config: IChipV2OptionsConfig)--><!--Device-ChipV2Options-constructor(config: IChipV2OptionsConfig)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| config | [IChipV2OptionsConfig](arkts-arkui-arkui-advanced-chipv2-ichipv2optionsconfig-i.md) | Yes | config of the ChipV2Options |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| config | [IChipV2OptionsConfig](arkts-arkui-arkui-advanced-chipv2-ichipv2optionsconfig-i.md) | Yes |
+
+## onClose
+
+```TypeScript
+public onClose?: VoidCallback
+```
+
+On close action.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityDescription
 
@@ -52,13 +68,11 @@ Set accessibility description for Chip.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-ChipV2Options-@Trace  public accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,13 +88,11 @@ Set accessibility level for Chip.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-@Trace  public accessibilityLevel?: string--><!--Device-ChipV2Options-@Trace  public accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,13 +108,11 @@ Sets the accessibility selection type for the chip.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-@Trace  public accessibilitySelectedType?: ChipV2AccessibilitySelectedType--><!--Device-ChipV2Options-@Trace  public accessibilitySelectedType?: ChipV2AccessibilitySelectedType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -118,13 +128,11 @@ Set whether chip is active or not.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-@Trace  public activated?: boolean--><!--Device-ChipV2Options-@Trace  public activated?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -140,13 +148,11 @@ Chip background color when chip is activated.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-@Trace  public activatedBackgroundColor?: ColorMetrics--><!--Device-ChipV2Options-@Trace  public activatedBackgroundColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -162,13 +168,11 @@ Set system-styled materials for the component which is activated. Different mate
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-@Trace  public activatedBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipV2Options-@Trace  public activatedBackgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -184,13 +188,11 @@ Show close icon.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-@Trace  public allowClose?: boolean--><!--Device-ChipV2Options-@Trace  public allowClose?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -206,13 +208,11 @@ Chip background color.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-@Trace  public backgroundColor?: ColorMetrics--><!--Device-ChipV2Options-@Trace  public backgroundColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -228,13 +228,11 @@ Set system-styled materials for the component. Different materials have differen
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-@Trace  public backgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipV2Options-@Trace  public backgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -250,13 +248,11 @@ Chip radius.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-@Trace  public borderRadius?: LengthMetrics--><!--Device-ChipV2Options-@Trace  public borderRadius?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -272,13 +268,11 @@ Set config for default close icon when 'allowClose' is true.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-@Trace  public closeIcon?: ChipV2CloseIcon--><!--Device-ChipV2Options-@Trace  public closeIcon?: ChipV2CloseIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -294,13 +288,11 @@ Indicates the attribute of the current chip direction.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-@Trace  public direction?: Direction--><!--Device-ChipV2Options-@Trace  public direction?: Direction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -316,13 +308,11 @@ Enable chip.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-@Trace  public enabled?: boolean--><!--Device-ChipV2Options-@Trace  public enabled?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -338,13 +328,11 @@ Set font size for the label text and the close icon.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-@Trace  public fontSize?: LengthMetrics--><!--Device-ChipV2Options-@Trace  public fontSize?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -360,13 +348,11 @@ Chip prefix icon.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-@Trace  public label: ChipV2Label--><!--Device-ChipV2Options-@Trace  public label: ChipV2Label-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -382,13 +368,11 @@ Maximum font scale for Chip.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-@Trace  public maxFontScale?: number | Resource--><!--Device-ChipV2Options-@Trace  public maxFontScale?: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -404,13 +388,11 @@ Minimum font scale for Chip.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-@Trace  public minFontScale?: number | Resource--><!--Device-ChipV2Options-@Trace  public minFontScale?: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -426,11 +408,11 @@ On clicked action.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-public onClicked?: Callback<void>--><!--Device-ChipV2Options-public onClicked?: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -446,11 +428,9 @@ On close action.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-public onClose?: VoidCallback--><!--Device-ChipV2Options-public onClose?: VoidCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -466,13 +446,11 @@ Chip padding.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-@Trace  public padding?: LocalizedPadding--><!--Device-ChipV2Options-@Trace  public padding?: LocalizedPadding-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -488,13 +466,11 @@ Chip prefix icon.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-@Trace  public prefixIcon?: ChipV2Icon--><!--Device-ChipV2Options-@Trace  public prefixIcon?: ChipV2Icon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -510,13 +486,11 @@ Chip size.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-@Trace  public size?: ChipV2Size | SizeT<LengthMetrics>--><!--Device-ChipV2Options-@Trace  public size?: ChipV2Size | SizeT<LengthMetrics>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -532,13 +506,10 @@ Chip suffix icon.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-@Trace  public suffixIcon?: ChipV2Icon--><!--Device-ChipV2Options-@Trace  public suffixIcon?: ChipV2Icon-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

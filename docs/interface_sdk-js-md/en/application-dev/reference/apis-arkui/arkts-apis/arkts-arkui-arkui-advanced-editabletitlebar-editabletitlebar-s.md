@@ -13,9 +13,7 @@ The editable title bar is a title bar that comes with button icons, typically **
 
 **Since:** 10
 
-**Decorator:** @Component
-
-<!--Device-unnamed-export declare struct EditableTitleBar--><!--Device-unnamed-export declare struct EditableTitleBar-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,6 +22,58 @@ The editable title bar is a title bar that comes with button icons, typically **
 ```TypeScript
 import { EditableLeftIconType, EditableTitleBar, EditableTitleBarMenuItem, EditableTitleBarItem, EditableTitleBarOptions } from '@kit.ArkUI';
 ```
+
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onCancel
+
+```TypeScript
+onCancel?: () => void
+```
+
+Cancel action event, which is triggered when the left button is of the Cancel type. This parameter is required to customize the return or cancel operation logic. If this parameter is not specified, clicking the button on the left does not respond.Default value: **() =&gt; void**Back action event, which is triggered when the button on the left side is of the Back type, since API version 12.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onSave
+
+```TypeScript
+onSave?: () => void
+```
+
+Save button click event. This parameter is required to customize the save operation logic. If this parameter is not specified, clicking the button does not respond.Default value: **() =&gt; void**
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## contentMargin
 
@@ -39,13 +89,11 @@ Content margin. Negative numbers are not supported.Default value:{start: LengthM
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-EditableTitleBar-@Prop  contentMargin?: LocalizedMargin--><!--Device-EditableTitleBar-@Prop  contentMargin?: LocalizedMargin-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -57,15 +105,15 @@ imageItem?: EditableTitleBarItem
 
 A single menu item for the profile picture on the left. This parameter is required to display a profile picture on the left side of the title bar. If this parameter is not passed, the default value is used and no profile picture is displayed.Default value: **undefined**Note: Accessibility properties are not supported.
 
-**Type:** [EditableTitleBarItem](../../apis-default/arkts-apis/arkts-editabletitlebaritem-t.md)
+**Type:** [EditableTitleBarItem](arkts-arkui-editabletitlebaritem-t.md)
 
 **Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-EditableTitleBar-imageItem?: EditableTitleBarItem--><!--Device-EditableTitleBar-imageItem?: EditableTitleBarItem-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,11 +132,11 @@ Whether the save button on the right is required.Default value: **true**, indica
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-EditableTitleBar-isSaveIconRequired: boolean--><!--Device-EditableTitleBar-isSaveIconRequired: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -106,11 +154,11 @@ Whether the left icon is the default focus.Default value: **false**, indicating 
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-EditableTitleBar-leftIconDefaultFocus?: boolean--><!--Device-EditableTitleBar-leftIconDefaultFocus?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -122,15 +170,15 @@ leftIconStyle: EditableLeftIconType
 
 Type of the icon on the left.Default value: **EditableLeftIconType.Back**
 
-**Type:** [EditableLeftIconType](../../apis-default/arkts-apis/arkts-arkui-advanced-editabletitlebar-editablelefticontype-e.md)
+**Type:** [EditableLeftIconType](arkts-arkui-arkui-advanced-editabletitlebar-editablelefticontype-e.md)
 
 **Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EditableTitleBar-leftIconStyle: EditableLeftIconType--><!--Device-EditableTitleBar-leftIconStyle: EditableLeftIconType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -142,55 +190,15 @@ menuItems?: Array<EditableTitleBarMenuItem>
 
 List of menu items on the right. This parameter is required to display custom buttons on the right of the title bar. If this parameter is not passed, the default value is used, and no menu item list is displayed on the right.Default value: **undefined**
 
-**Type:** Array&lt;[EditableTitleBarMenuItem](../../apis-default/arkts-apis/arkts-arkui-advanced-editabletitlebar-editabletitlebarmenuitem-c.md)&gt;
+**Type:** Array&lt;[EditableTitleBarMenuItem](arkts-arkui-arkui-advanced-editabletitlebar-editabletitlebarmenuitem-c.md)&gt;
 
 **Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EditableTitleBar-menuItems?: Array<EditableTitleBarMenuItem>--><!--Device-EditableTitleBar-menuItems?: Array<EditableTitleBarMenuItem>-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onCancel
-
-```TypeScript
-onCancel?: () => void
-```
-
-Cancel action event, which is triggered when the left button is of the Cancel type. This parameter is required to customize the return or cancel operation logic. If this parameter is not specified, clicking the button on the left does not respond.Default value: **() =&gt; void**Back action event, which is triggered when the button on the left side is of the Back type, since API version 12.
-
-**Type:** () =&gt; void
-
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EditableTitleBar-onCancel?: () => void--><!--Device-EditableTitleBar-onCancel?: () => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onSave
-
-```TypeScript
-onSave?: () => void
-```
-
-Save button click event. This parameter is required to customize the save operation logic. If this parameter is not specified, clicking the button does not respond.Default value: **() =&gt; void**
-
-**Type:** () =&gt; void
-
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EditableTitleBar-onSave?: () => void--><!--Device-EditableTitleBar-onSave?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -203,17 +211,17 @@ options: EditableTitleBarOptions
 Title style.Default value:{safeAreaTypes: [SafeAreaType.SYSTEM],safeAreaEdges: [SafeAreaEdge.TOP],backgroundColor: '#00000000'}  
 **NOTE：**If not decorated by @Require, this parameter is not subject to mandatory validation during construction.
 
-**Type:** [EditableTitleBarOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-editabletitlebar-editabletitlebaroptions-i.md)
+**Type:** [EditableTitleBarOptions](arkts-arkui-arkui-advanced-editabletitlebar-editabletitlebaroptions-i.md)
 
 **Default:** {expandSafeAreaTypes: SafeAreaType.SYSTEM, expandSafeAreaEdges: SafeAreaEdge.TOP}
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-EditableTitleBar-options: EditableTitleBarOptions--><!--Device-EditableTitleBar-options: EditableTitleBarOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -231,11 +239,11 @@ Whether the save icon is the default focus.Default value: **false**, indicating 
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-EditableTitleBar-saveIconDefaultFocus?: boolean--><!--Device-EditableTitleBar-saveIconDefaultFocus?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -251,11 +259,11 @@ Subtitle. This parameter is required to display a subtitle below the title bar. 
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-EditableTitleBar-subtitle?: ResourceStr--><!--Device-EditableTitleBar-subtitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -271,11 +279,10 @@ Title.Default value: **''**, indicating that the title is empty.
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-EditableTitleBar-title: ResourceStr--><!--Device-EditableTitleBar-title: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

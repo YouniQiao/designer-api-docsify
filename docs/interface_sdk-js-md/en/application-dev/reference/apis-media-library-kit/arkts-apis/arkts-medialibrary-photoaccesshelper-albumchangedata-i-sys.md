@@ -2,9 +2,9 @@
 
 Describes the change data of an album.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-photoAccessHelper-interface AlbumChangeData--><!--Device-photoAccessHelper-interface AlbumChangeData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -22,13 +22,12 @@ version: long
 
 Version number of the album notification, which is used to determine the order of notifications.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-AlbumChangeData-version: long--><!--Device-AlbumChangeData-version: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

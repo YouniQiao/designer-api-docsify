@@ -2,9 +2,9 @@
 
 Enumerates the beauty types.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-camera-enum BeautyType--><!--Device-camera-enum BeautyType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -18,9 +18,9 @@ AUTO = 0
 
 Automatic.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-BeautyType-AUTO = 0--><!--Device-BeautyType-AUTO = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -34,9 +34,9 @@ SKIN_SMOOTH = 1
 
 Skin smoothing.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-BeautyType-SKIN_SMOOTH = 1--><!--Device-BeautyType-SKIN_SMOOTH = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -50,9 +50,9 @@ FACE_SLENDER = 2
 
 Face slimming.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-BeautyType-FACE_SLENDER = 2--><!--Device-BeautyType-FACE_SLENDER = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -66,9 +66,9 @@ SKIN_TONE = 3
 
 Skin tone perfection.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-BeautyType-SKIN_TONE = 3--><!--Device-BeautyType-SKIN_TONE = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -82,9 +82,9 @@ SKIN_TONE_BRIGHT = 4
 
 Skin tone bright beauty type.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-BeautyType-SKIN_TONE_BRIGHT = 4--><!--Device-BeautyType-SKIN_TONE_BRIGHT = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -98,9 +98,9 @@ EYE_BIG_EYES = 5
 
 Eye big eyes beauty type.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-BeautyType-EYE_BIG_EYES = 5--><!--Device-BeautyType-EYE_BIG_EYES = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -114,9 +114,9 @@ HAIR_HAIRLINE = 6
 
 Hair hairline beauty type.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-BeautyType-HAIR_HAIRLINE = 6--><!--Device-BeautyType-HAIR_HAIRLINE = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -130,9 +130,9 @@ FACE_MAKEUP = 7
 
 Face makeup beauty type.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-BeautyType-FACE_MAKEUP = 7--><!--Device-BeautyType-FACE_MAKEUP = 7-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -146,9 +146,9 @@ HEAD_SHRINK = 8
 
 Head shrink beauty type.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-BeautyType-HEAD_SHRINK = 8--><!--Device-BeautyType-HEAD_SHRINK = 8-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -162,11 +162,10 @@ NOSE_SLENDER = 9
 
 Nose slender beauty type.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-BeautyType-NOSE_SLENDER = 9--><!--Device-BeautyType-NOSE_SLENDER = 9-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

@@ -2,9 +2,9 @@
 
 Describes the advertising parameters.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ble-interface AdvertisingParams--><!--Device-ble-interface AdvertisingParams-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -24,11 +24,11 @@ Indicates the advertising data.
 
 **Type:** AdvertiseData
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AdvertisingParams-advertisingData: AdvertiseData--><!--Device-AdvertisingParams-advertisingData: AdvertiseData-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -42,11 +42,11 @@ Indicates the advertising response.
 
 **Type:** AdvertiseData
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AdvertisingParams-advertisingResponse?: AdvertiseData--><!--Device-AdvertisingParams-advertisingResponse?: AdvertiseData-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -60,11 +60,11 @@ Indicates the advertising settings.
 
 **Type:** AdvertiseSetting
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AdvertisingParams-advertisingSettings: AdvertiseSetting--><!--Device-AdvertisingParams-advertisingSettings: AdvertiseSetting-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -76,13 +76,12 @@ duration?: int
 
 Indicates the duration for advertising continuously. The duration, in 10ms unit. Valid range is from 1 (10ms) to 65535 (655,350 ms). If this parameter is not specified or is set to 0, advertisement is continuously sent.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AdvertisingParams-duration?: int--><!--Device-AdvertisingParams-duration?: int-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

@@ -1,0 +1,25 @@
+# ContentDidScrollCallback
+
+```TypeScript
+export type ContentDidScrollCallback = (selectedIndex: int, index: int, position: double,
+  mainAxisLength: double) => void
+```
+
+The callback of onContentDidScroll.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| selectedIndex | int | Yes |
+| index | int | Yes |
+| position | double | Yes |
+| mainAxisLength | double | Yes |

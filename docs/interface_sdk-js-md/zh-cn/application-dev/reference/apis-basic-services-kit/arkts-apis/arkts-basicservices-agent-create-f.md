@@ -17,34 +17,34 @@ function create(context: BaseContext, config: Config, callback: AsyncCallback<Ta
 > **说明：**&gt;
 > 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INTERNET
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-agent-function create(context: BaseContext, config: Config, callback: AsyncCallback<Task>): void--><!--Device-agent-function create(context: BaseContext, config: Config, callback: AsyncCallback<Task>): void-End-->
-
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 基于应用程序的上下文。 |
-| config | Config | 是 | 上传/下载任务的配置信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Task&gt; | 是 | 回调函数。当创建上传或下载任务成功，err为undefined，data为获取到的Task对象；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 |
+| config | [Config](arkts-basicservices-agent-config-i.md) | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Task&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
-| [13400001](../errorcode-request.md#13400001-文件操作异常) | Invalid file or file system error. |
-| [13400003](../errorcode-request.md#13400003-服务异常) | Task service ability error. |
-| [21900004](../errorcode-request.md#21900004-应用任务队列已满) | The application task queue is full. |
-| [21900005](../errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [13400001](../errorcode-request.md#13400001-文件操作异常) |
+| [13400003](../errorcode-request.md#13400003-服务异常) |
+| [21900004](../errorcode-request.md#21900004-应用任务队列已满) |
+| [21900005](../errorcode-request.md#21900005-任务模式错误) |
 
 **示例**
 
@@ -152,41 +152,40 @@ function create(context: BaseContext, config: Config): Promise<Task>
 > **说明：**&gt;
 > 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INTERNET
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-agent-function create(context: BaseContext, config: Config): Promise<Task>--><!--Device-agent-function create(context: BaseContext, config: Config): Promise<Task>-End-->
-
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 基于应用程序的上下文。 |
-| config | Config | 是 | 上传/下载任务的配置信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 |
+| config | [Config](arkts-basicservices-agent-config-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Task&gt; | Promise对象。返回任务配置信息的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;Task & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
-| [13400001](../errorcode-request.md#13400001-文件操作异常) | Invalid file or file system error. |
-| [13400003](../errorcode-request.md#13400003-服务异常) | Task service ability error. |
-| [21900004](../errorcode-request.md#21900004-应用任务队列已满) | The application task queue is full. |
-| [21900005](../errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [13400001](../errorcode-request.md#13400001-文件操作异常) |
+| [13400003](../errorcode-request.md#13400003-服务异常) |
+| [21900004](../errorcode-request.md#21900004-应用任务队列已满) |
+| [21900005](../errorcode-request.md#21900005-任务模式错误) |
 
 **示例**
 
 参见 [create](#create)
-

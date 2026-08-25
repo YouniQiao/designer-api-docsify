@@ -6,11 +6,10 @@ export type NotificationTemplate = _NotificationTemplate
 
 Describes the notification template.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-notificationManager-export type NotificationTemplate = _NotificationTemplate--><!--Device-notificationManager-export type NotificationTemplate = _NotificationTemplate-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **Property type:** _NotificationTemplate
-

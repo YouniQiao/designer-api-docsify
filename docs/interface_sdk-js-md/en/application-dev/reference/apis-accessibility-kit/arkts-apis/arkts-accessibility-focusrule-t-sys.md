@@ -9,16 +9,15 @@ Describes how to determine the focus capability of the starting node and its chi
 
 **Since:** 23
 
-<!--Device-unnamed-export type FocusRule = 'bypassSelf' | 'bypassSelfDescendants' |'checkSelf' | 'checkSelfBypassDescendants'--><!--Device-unnamed-export type FocusRule = 'bypassSelf' | 'bypassSelfDescendants' |'checkSelf' | 'checkSelfBypassDescendants'-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
 
-| Type | Description |
-| --- | --- |
-| 'bypassSelf' | Skips the check on the starting node and only checks its child nodes. The value is fixed to the 'bypassSelf' string. |
-| 'bypassSelfDescendants' | Skips the check on the starting node and all its child nodes. The value is fixed to the 'bypassSelfDescendants' string. |
-| 'checkSelf' | Checks whether the starting node can gain focus first. If yes, uses it directly; if not, continues to check its child nodes. The value is fixed to the 'checkSelf' string. |
-| 'checkSelfBypassDescendants' | Checks whether the starting node can gain focus first. If yes, uses it; if not, skips the check on all child nodes. The value is fixed to the 'checkSelfBypassDescendants' string. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'bypassSelf' |
+| 'bypassSelfDescendants' |
+| 'checkSelf' |
+| 'checkSelfBypassDescendants' |

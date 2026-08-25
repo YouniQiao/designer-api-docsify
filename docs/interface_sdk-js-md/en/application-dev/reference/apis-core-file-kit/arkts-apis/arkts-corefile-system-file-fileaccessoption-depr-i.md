@@ -4,9 +4,9 @@ Defines the options used in access().
 
 **Since:** 3
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface FileAccessOption--><!--Device-unnamed-export interface FileAccessOption-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -23,13 +23,11 @@ complete?: () => void
 
 Callback invoked when the API call is complete.
 
-**Type:** () =&gt; void
-
 **Since:** 3
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-FileAccessOption-complete?: () => void--><!--Device-FileAccessOption-complete?: () => void-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -41,15 +39,20 @@ fail?: (data: string, code: number) => void
 
 Callback invoked when the API call fails. **data** indicates the error information. **code** indicates the returned error code: **202**: invalid parameter **300**: I/O error **301**: file or directory not found
 
-**Type:** (data: string, code: number) =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
 
-<!--Device-FileAccessOption-fail?: (data: string, code: number) => void--><!--Device-FileAccessOption-fail?: (data: string, code: number) => void-End-->
-
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | string | Yes |
+| code | number | Yes |
 
 ## success
 
@@ -59,13 +62,11 @@ success?: () => void
 
 Callback invoked when the API call is successful.
 
-**Type:** () =&gt; void
-
 **Since:** 3
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-FileAccessOption-success?: () => void--><!--Device-FileAccessOption-success?: () => void-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -83,9 +84,8 @@ URI of the directory or file. Restricted by the underlying file system of lite w
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 10
 
-<!--Device-FileAccessOption-uri: string--><!--Device-FileAccessOption-uri: string-End-->
-
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
-

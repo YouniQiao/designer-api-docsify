@@ -4,7 +4,7 @@ Options type @interface Options
 
 **Since:** 4
 
-<!--Device-unnamed-export interface Options--><!--Device-unnamed-export interface Options-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -18,9 +18,9 @@ Called when the application is created
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-Options-onCreate?(): void--><!--Device-Options-onCreate?(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -34,9 +34,9 @@ Called when the application is destroyed or called when the page is redirected t
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-Options-onDestroy?(): void--><!--Device-Options-onDestroy?(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -50,9 +50,9 @@ Listens for page hiding. Called when the page disappears.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-Options-onHide?(): void--><!--Device-Options-onHide?(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -66,9 +66,9 @@ Called when the page is initialized. This function can be called only once in a 
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-Options-onInit?(): void--><!--Device-Options-onInit?(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -82,9 +82,9 @@ Called when the page is created. This function can be called only once in a life
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-Options-onReady?(): void--><!--Device-Options-onReady?(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -98,17 +98,17 @@ Called when the user data need to be restored
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-Options-onRestoreData?(data: Object): void--><!--Device-Options-onRestoreData?(data: Object): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | Object | Yes | Indicates the user data to restore. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [data](#data) | Object | Yes |
 
 ## onSaveData
 
@@ -120,23 +120,23 @@ Called when the user data need to be saved
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-Options-onSaveData?(data: Object): boolean--><!--Device-Options-onSaveData?(data: Object): boolean-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | Object | Yes | Indicates the user data to save. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [data](#data) | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## onShow
 
@@ -148,9 +148,9 @@ Called when the page is displayed.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-Options-onShow?(): void--><!--Device-Options-onShow?(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -166,9 +166,8 @@ Data model of the page that can be converted into a JSON object. The attribute n
 
 **Since:** 4
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-Options-data?: Data--><!--Device-Options-data?: Data-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
-

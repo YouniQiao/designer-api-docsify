@@ -4,7 +4,7 @@ Interface for defining time base metadata
 
 **Since:** 26.0.0
 
-<!--Device-media-interface AVTimedMetaData--><!--Device-media-interface AVTimedMetaData-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -26,9 +26,9 @@ The classification label of the time base metadata.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AVTimedMetaData-classify?: string--><!--Device-AVTimedMetaData-classify?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -44,9 +44,9 @@ Key-value pair set corresponding to time primitive information
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AVTimedMetaData-contents: Record<string, object>--><!--Device-AVTimedMetaData-contents: Record<string, object>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -58,13 +58,13 @@ duration: int
 
 Duration of the time primitive information The value should be an integer. <br>Unit:milliseconds.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AVTimedMetaData-duration: int--><!--Device-AVTimedMetaData-duration: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -80,9 +80,9 @@ Defines the unique token of the time base metadata, The tag must be unique in ot
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AVTimedMetaData-id?: string--><!--Device-AVTimedMetaData-id?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -94,13 +94,12 @@ start: int
 
 Defines the offset value of the time primitive information relative to the start time of the entire media. The value should be an integer. <br>Unit:milliseconds.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AVTimedMetaData-start: int--><!--Device-AVTimedMetaData-start: int-End-->
-
 **System capability:** SystemCapability.Multimedia.Media.Core
-

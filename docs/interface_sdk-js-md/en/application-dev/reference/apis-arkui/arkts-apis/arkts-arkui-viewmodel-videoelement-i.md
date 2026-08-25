@@ -6,7 +6,7 @@ The &lt;video&gt; component provides a video player.@extends Element @interface 
 
 **Since:** 4
 
-<!--Device-unnamed-export interface VideoElement--><!--Device-unnamed-export interface VideoElement-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,9 +20,9 @@ Requests to exit the full screen mode.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-VideoElement-exitFullscreen(): void--><!--Device-VideoElement-exitFullscreen(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,9 +36,9 @@ Requests to pause a video.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-VideoElement-pause(): void--><!--Device-VideoElement-pause(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,17 +52,17 @@ Requests to enter the full screen mode.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-VideoElement-requestFullscreen(param: { screenOrientation: "default" }): void--><!--Device-VideoElement-requestFullscreen(param: { screenOrientation: "default" }): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| param | { screenOrientation: "default" } | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| param | { screenOrientation: "default" } | Yes |
 
 ## setCurrentTime
 
@@ -74,17 +74,17 @@ Specifies the video playing position.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-VideoElement-setCurrentTime(param: { currenttime: number }): void--><!--Device-VideoElement-setCurrentTime(param: { currenttime: number }): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| param | { currenttime: number } | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| param | { currenttime: number } | Yes |
 
 ## start
 
@@ -96,9 +96,9 @@ Requests to start playing a video.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-VideoElement-start(): void--><!--Device-VideoElement-start(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,9 +112,8 @@ Requests to stop playing a video.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-VideoElement-stop(): void--><!--Device-VideoElement-stop(): void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

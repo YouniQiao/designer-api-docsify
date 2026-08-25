@@ -14,7 +14,7 @@
 
 **起始版本：** 10
 
-<!--Device-unnamed-declare class DigitIndicator--><!--Device-unnamed-declare class DigitIndicator-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -39,13 +39,13 @@ DotIndicator的构造函数。
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DigitIndicator-constructor()--><!--Device-DigitIndicator-constructor()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,27 +59,27 @@ Swiper组件数字导航点的字体样式。按组翻页时，数字导航点�
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-DigitIndicator-digitFont(value: Font): DigitIndicator--><!--Device-DigitIndicator-digitFont(value: Font): DigitIndicator-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Font | 是 | 设置Swiper组件数字导航点的字体样式。<br/>只支持Font中size和weight参数，family和style设置不生效。<br/>默认值：<br/>{ size: 14,  weight: FontWeight.Normal } |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DigitIndicator](arkts-arkui-digitindicator-c.md) | 返回当前数字指示器，用于支持链式调用配置其他导航点属性。 |
+| 类型 |
+| --- |
+| [DigitIndicator](arkts-arkui-digitindicator-c.md) |
 
 ## fontColor
 
@@ -91,27 +91,27 @@ Swiper组件数字导航点的字体颜色。
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-DigitIndicator-fontColor(value: ResourceColor): DigitIndicator--><!--Device-DigitIndicator-fontColor(value: ResourceColor): DigitIndicator-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceColor | 是 | 设置Swiper组件数字导航点的字体颜色。<br/>默认值：'#ff182431' |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DigitIndicator](arkts-arkui-digitindicator-c.md) | 返回当前数字指示器，用于支持链式调用配置其他导航点属性。 |
+| 类型 |
+| --- |
+| [DigitIndicator](arkts-arkui-digitindicator-c.md) |
 
 ## selectedDigitFont
 
@@ -123,27 +123,27 @@ selectedDigitFont(value: Font): DigitIndicator
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-DigitIndicator-selectedDigitFont(value: Font): DigitIndicator--><!--Device-DigitIndicator-selectedDigitFont(value: Font): DigitIndicator-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Font | 是 | 设置选中Swiper组件数字导航点的字体样式。<br/>默认值：<br/>{ size: 14, weight: FontWeight.Normal } |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DigitIndicator](arkts-arkui-digitindicator-c.md) | 返回当前数字指示器，用于支持链式调用配置其他导航点属性。 |
+| 类型 |
+| --- |
+| [DigitIndicator](arkts-arkui-digitindicator-c.md) |
 
 ## selectedFontColor
 
@@ -155,25 +155,24 @@ selectedFontColor(value: ResourceColor): DigitIndicator
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-DigitIndicator-selectedFontColor(value: ResourceColor): DigitIndicator--><!--Device-DigitIndicator-selectedFontColor(value: ResourceColor): DigitIndicator-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceColor | 是 | 设置选中Swiper组件数字导航点的字体颜色。<br/>默认值：'#ff182431' |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DigitIndicator](arkts-arkui-digitindicator-c.md) | 返回当前数字指示器，用于支持链式调用配置其他导航点属性。 |
-
+| 类型 |
+| --- |
+| [DigitIndicator](arkts-arkui-digitindicator-c.md) |

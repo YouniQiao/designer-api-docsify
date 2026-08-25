@@ -6,13 +6,12 @@ export type UnifiedGroupInfo = _UnifiedGroupInfo
 
 Describes the fields of notification intelligent unification information.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-notificationManager-export type UnifiedGroupInfo = _UnifiedGroupInfo--><!--Device-notificationManager-export type UnifiedGroupInfo = _UnifiedGroupInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
 
 **Property type:** _UnifiedGroupInfo
-

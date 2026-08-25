@@ -4,7 +4,7 @@ Enumerates the directions in which the swipe gesture can be recognized.
 
 **Since:** 8
 
-<!--Device-unnamed-declare enum SwipeDirection--><!--Device-unnamed-declare enum SwipeDirection-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ Swiping disabled.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-SwipeDirection-None--><!--Device-SwipeDirection-None-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,9 @@ Horizontal direction. The gesture is triggered when the angle between the finger
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-SwipeDirection-Horizontal--><!--Device-SwipeDirection-Horizontal-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,9 +50,9 @@ Vertical direction. The gesture is triggered when the angle between the finger m
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-SwipeDirection-Vertical--><!--Device-SwipeDirection-Vertical-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,9 +66,8 @@ All directions.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-SwipeDirection-All--><!--Device-SwipeDirection-All-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

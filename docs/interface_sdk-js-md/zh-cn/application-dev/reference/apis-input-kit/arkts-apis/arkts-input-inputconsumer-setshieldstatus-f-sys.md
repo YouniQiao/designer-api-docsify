@@ -14,11 +14,11 @@ function setShieldStatus(shieldMode: ShieldMode, isShield: boolean): void
 
 设置系统快捷键屏蔽类型。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INPUT_CONTROL_DISPATCHING
-
-<!--Device-inputConsumer-function setShieldStatus(shieldMode: ShieldMode, isShield: boolean): void--><!--Device-inputConsumer-function setShieldStatus(shieldMode: ShieldMode, isShield: boolean): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -26,18 +26,18 @@ function setShieldStatus(shieldMode: ShieldMode, isShield: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| shieldMode | [ShieldMode](arkts-input-inputconsumer-shieldmode-e-sys.md) | 是 | 系统快捷键屏蔽类型，目前仅支持取值为'FACTORY_MODE'，表示屏蔽所有系统快捷键。 |
-| isShield | boolean | 是 | 屏蔽类型生效状态，true代表屏蔽类型生效，false代表不生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| shieldMode | [ShieldMode](arkts-input-inputconsumer-shieldmode-e-sys.md) | 是 |
+| isShield | boolean | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -95,4 +95,3 @@ struct Index {
   }
 }
 ```
-

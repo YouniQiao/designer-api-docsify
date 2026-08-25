@@ -4,9 +4,7 @@
 
 **Since:** 12
 
-**Decorator:** @Component
-
-<!--Device-unnamed-export declare struct AtomicServiceTabs--><!--Device-unnamed-export declare struct AtomicServiceTabs-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,6 +13,22 @@
 ```TypeScript
 import { AtomicServiceTabs, TabBarOptions, TabBarPosition, TabContentBuilder, OnContentWillChangeCallback } from '@kit.ArkUI';
 ```
+
+## onContentWillChange
+
+```TypeScript
+onContentWillChange?: OnContentWillChangeCallback
+```
+
+onContentWillChange callback of tabs when tabbar is clicked.
+
+**Since:** 12
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## barBackgroundColor
 
@@ -28,11 +42,9 @@ Sets the barBackgroundColor of tabs.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AtomicServiceTabs-@Prop  barBackgroundColor?: ResourceColor--><!--Device-AtomicServiceTabs-@Prop  barBackgroundColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,11 +60,9 @@ set if need overlap, default value is true.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AtomicServiceTabs-@Prop  barOverlap?: boolean--><!--Device-AtomicServiceTabs-@Prop  barOverlap?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,9 +78,9 @@ Provide methods for switching tabs.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-AtomicServiceTabs-controller?: TabsController--><!--Device-AtomicServiceTabs-controller?: TabsController-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,11 +96,9 @@ Sets the index of tabs.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AtomicServiceTabs-@Prop  index?: number--><!--Device-AtomicServiceTabs-@Prop  index?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -106,11 +114,9 @@ Sets the layout mode of the bottom tab bar
 
 **Since:** 18
 
-**Decorator:** @Prop
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-AtomicServiceTabs-@Prop  layoutMode?: LayoutMode--><!--Device-AtomicServiceTabs-@Prop  layoutMode?: LayoutMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,27 +132,9 @@ onChange callback of tabs when tabs changed.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AtomicServiceTabs-onChange?: Callback<number>--><!--Device-AtomicServiceTabs-onChange?: Callback<number>-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onContentWillChange
-
-```TypeScript
-onContentWillChange?: OnContentWillChangeCallback
-```
-
-onContentWillChange callback of tabs when tabbar is clicked.
-
-**Type:** [OnContentWillChangeCallback](arkts-arkui-oncontentwillchangecallback-t.md)
-
-**Since:** 12
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AtomicServiceTabs-onContentWillChange?: OnContentWillChangeCallback--><!--Device-AtomicServiceTabs-onContentWillChange?: OnContentWillChangeCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -162,9 +150,9 @@ onTabBarClick callback of tabs when tabbar is clicked.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-AtomicServiceTabs-onTabBarClick?: Callback<number>--><!--Device-AtomicServiceTabs-onTabBarClick?: Callback<number>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -186,11 +174,9 @@ The tabBar array of tabs.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AtomicServiceTabs-@Prop  tabBarOptionsArray: [    TabBarOptions,    TabBarOptions,    TabBarOptions?,    TabBarOptions?,    TabBarOptions?  ]--><!--Device-AtomicServiceTabs-@Prop  tabBarOptionsArray: [    TabBarOptions,    TabBarOptions,    TabBarOptions?,    TabBarOptions?,    TabBarOptions?  ]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -206,11 +192,9 @@ set the positions of tabbar.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AtomicServiceTabs-@Prop  tabBarPosition?: TabBarPosition--><!--Device-AtomicServiceTabs-@Prop  tabBarPosition?: TabBarPosition-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -232,11 +216,8 @@ The TabContent array of tabs.
 
 **Since:** 12
 
-**Decorator:** @BuilderParam
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AtomicServiceTabs-@BuilderParam  tabContents?: [     TabContentBuilder?,    TabContentBuilder?,    TabContentBuilder?,    TabContentBuilder?,    TabContentBuilder?  ]--><!--Device-AtomicServiceTabs-@BuilderParam  tabContents?: [     TabContentBuilder?,    TabContentBuilder?,    TabContentBuilder?,    TabContentBuilder?,    TabContentBuilder?  ]-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 APN信息。
 
-**起始版本：** 23
+**起始版本：** 16
 
-<!--Device-data-interface ApnInfo--><!--Device-data-interface ApnInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CellularData
 
@@ -24,9 +24,9 @@ APN。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 16
 
-<!--Device-ApnInfo-apn: string--><!--Device-ApnInfo-apn: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CellularData
 
@@ -40,9 +40,9 @@ APN名称。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 16
 
-<!--Device-ApnInfo-apnName: string--><!--Device-ApnInfo-apnName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CellularData
 
@@ -56,9 +56,9 @@ Sim卡的mcc。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 16
 
-<!--Device-ApnInfo-mcc: string--><!--Device-ApnInfo-mcc: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CellularData
 
@@ -72,9 +72,9 @@ mmsproxy?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 16
 
-<!--Device-ApnInfo-mmsproxy?: string--><!--Device-ApnInfo-mmsproxy?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CellularData
 
@@ -88,9 +88,9 @@ Sim卡的mnc。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 16
 
-<!--Device-ApnInfo-mnc: string--><!--Device-ApnInfo-mnc: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CellularData
 
@@ -104,9 +104,9 @@ proxy?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 16
 
-<!--Device-ApnInfo-proxy?: string--><!--Device-ApnInfo-proxy?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CellularData
 
@@ -120,9 +120,9 @@ APN类型。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 16
 
-<!--Device-ApnInfo-type?: string--><!--Device-ApnInfo-type?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CellularData
 
@@ -136,9 +136,8 @@ user?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 16
 
-<!--Device-ApnInfo-user?: string--><!--Device-ApnInfo-user?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CellularData
-

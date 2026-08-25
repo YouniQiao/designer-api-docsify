@@ -16,9 +16,9 @@ function getConnectedVpnAppInfo(): Promise<Array<string>>
 
 **起始版本：** 20
 
-**需要权限：** ohos.permission.MANAGE_VPN
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-vpn-function getConnectedVpnAppInfo(): Promise<Array<string>>--><!--Device-vpn-function getConnectedVpnAppInfo(): Promise<Array<string>>-End-->
+**需要权限：** ohos.permission.MANAGE_VPN
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -26,16 +26,15 @@ function getConnectedVpnAppInfo(): Promise<Array<string>>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | The promise returned by the connected VPN App Info. |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [19900001](../errorcode-net-vpn.md#19900001-无效参数) | Invalid parameter value. |
-| [19900002](../errorcode-net-vpn.md#19900002-系统内部错误) | System internal error. |
-
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [19900001](../errorcode-net-vpn.md#19900001-无效参数) |
+| [19900002](../errorcode-net-vpn.md#19900002-系统内部错误) |

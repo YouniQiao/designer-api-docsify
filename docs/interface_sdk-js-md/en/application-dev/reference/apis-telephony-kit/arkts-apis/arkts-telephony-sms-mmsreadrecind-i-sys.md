@@ -2,9 +2,9 @@
 
 Defines the MMS message reading index.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sms-export interface MmsReadRecInd--><!--Device-sms-export interface MmsReadRecInd-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -24,11 +24,11 @@ date?: long
 
 Date.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsReadRecInd-date?: long--><!--Device-MmsReadRecInd-date?: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -44,9 +44,9 @@ Source address.
 
 **Type:** [MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsReadRecInd-from: MmsAddress--><!--Device-MmsReadRecInd-from: MmsAddress-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -62,9 +62,9 @@ Message ID.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsReadRecInd-messageId: string--><!--Device-MmsReadRecInd-messageId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -78,11 +78,11 @@ readStatus: int
 
 Read status.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsReadRecInd-readStatus: int--><!--Device-MmsReadRecInd-readStatus: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -98,9 +98,9 @@ Destination address.
 
 **Type:** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsReadRecInd-to: Array<MmsAddress>--><!--Device-MmsReadRecInd-to: Array<MmsAddress>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -116,11 +116,10 @@ Version.
 
 **Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsReadRecInd-version: MmsVersionType--><!--Device-MmsReadRecInd-version: MmsVersionType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
-

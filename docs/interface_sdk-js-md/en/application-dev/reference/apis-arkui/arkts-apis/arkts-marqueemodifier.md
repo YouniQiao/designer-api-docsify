@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [MarqueeModifier](arkts-arkui-marqueemodifier-c.md) | Defines Marquee Modifier |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [MarqueeModifier](arkts-arkui-marqueemodifier-c.md) |

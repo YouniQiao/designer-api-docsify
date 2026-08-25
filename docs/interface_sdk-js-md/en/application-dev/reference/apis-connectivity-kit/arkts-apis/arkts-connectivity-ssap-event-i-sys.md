@@ -4,7 +4,7 @@ Represents a service event.
 
 **Since:** 26.0.0
 
-<!--Device-ssap-interface Event--><!--Device-ssap-interface Event-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -28,9 +28,9 @@ Event UUID. The data format is the same as that of **serviceUuid**.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-Event-eventUuid: string--><!--Device-Event-eventUuid: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -48,9 +48,9 @@ Event parameters. The data format is defined by the specific service. By default
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-Event-parameter?: ArrayBuffer--><!--Device-Event-parameter?: ArrayBuffer-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -68,11 +68,10 @@ NearLink service UUID, which is a string of 36 characters. The value consists of
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-Event-serviceUuid: string--><!--Device-Event-serviceUuid: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
-

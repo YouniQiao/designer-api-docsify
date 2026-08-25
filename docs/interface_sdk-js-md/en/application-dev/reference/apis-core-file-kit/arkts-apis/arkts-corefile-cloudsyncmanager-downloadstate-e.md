@@ -2,9 +2,9 @@
 
 Enumerates the full download states.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-cloudSyncManager-enum DownloadState--><!--Device-cloudSyncManager-enum DownloadState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -16,9 +16,9 @@ RUNNING = 0
 
 Downloading.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-DownloadState-RUNNING = 0--><!--Device-DownloadState-RUNNING = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -30,9 +30,9 @@ COMPLETED = 1
 
 Downloaded.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-DownloadState-COMPLETED = 1--><!--Device-DownloadState-COMPLETED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -44,9 +44,8 @@ STOPPED = 2
 
 Downloading stopped.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-DownloadState-STOPPED = 2--><!--Device-DownloadState-STOPPED = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 18
 
-<!--Device-unnamed-declare interface PopupMaskType--><!--Device-unnamed-declare interface PopupMaskType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,10 @@ color: ResourceColor
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-PopupMaskType-color: ResourceColor--><!--Device-PopupMaskType-color: ResourceColor-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

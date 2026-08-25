@@ -16,10 +16,10 @@ Injects keys (including single keys and combination keys).
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Required permissions:** 
 - API version 12+: ohos.permission.INJECT_INPUT_EVENT
-
-<!--Device-inputEventClient-function injectEvent({ KeyEvent: KeyEvent }): void--><!--Device-inputEventClient-function injectEvent({ KeyEvent: KeyEvent }): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -27,17 +27,17 @@ Injects keys (including single keys and combination keys).
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| { KeyEvent: KeyEvent } | 0.0 | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| { KeyEvent: KeyEvent } | 0.0 | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 12 and later |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -87,9 +87,9 @@ Inject system keys.
 
 **Since:** 23
 
-**Required permissions:** ohos.permission.INJECT_INPUT_EVENT
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-inputEventClient-function injectEvent(keyEvent: KeyEventInfo): void--><!--Device-inputEventClient-function injectEvent(keyEvent: KeyEventInfo): void-End-->
+**Required permissions:** ohos.permission.INJECT_INPUT_EVENT
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -97,19 +97,18 @@ Inject system keys.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| keyEvent | [KeyEventInfo](arkts-input-inputeventclient-keyeventinfo-i-sys.md) | Yes | the key event to be injected. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [keyEvent](arkts-input-inputeventclient-keyeventdata-i-sys.md) | [KeyEventInfo](arkts-input-inputeventclient-keyeventinfo-i-sys.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
 See [injectEvent](#injectevent)
-

@@ -2,9 +2,9 @@
 
 Defines the response to an HTTP request.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-http-export interface HttpResponse--><!--Device-http-export interface HttpResponse-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -26,7 +26,7 @@ Detailed information about the HTTP request interaction.
 
 **Since:** 24
 
-<!--Device-HttpResponse-connectionExtraInfo?: ConnectionExtraInfo--><!--Device-HttpResponse-connectionExtraInfo?: ConnectionExtraInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -40,11 +40,11 @@ Original cookies returned by the server. How to process the cookies is up to you
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-HttpResponse-cookies: string--><!--Device-HttpResponse-cookies: string-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -59,11 +59,11 @@ Response header. The return value is a string in JSON format. If you want to use
 
 **Type:** Object
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-HttpResponse-header: Object--><!--Device-HttpResponse-header: Object-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -77,9 +77,9 @@ Time consumed in each phase of an HTTP request.
 
 **Type:** [PerformanceTiming](arkts-network-http-performancetiming-i.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-HttpResponse-performanceTiming: PerformanceTiming--><!--Device-HttpResponse-performanceTiming: PerformanceTiming-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -91,13 +91,13 @@ responseCode: ResponseCode | int
 
 Result code for an HTTP request. If the callback function is successfully executed, a result code defined in [ResponseCode](arkts-network-http-responsecode-e.md) will be returned. Otherwise, an error code will be returned in the **err** field in **AsyncCallback**.
 
-**Type:** [ResponseCode](arkts-network-http-responsecode-e.md) \| int
+**Type:** ArkTS-Dyn: [ResponseCode](arkts-network-http-responsecode-e.md) \| number  <br>ArkTS-Sta：[ResponseCode](arkts-network-http-responsecode-e.md) \| int
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-HttpResponse-responseCode: ResponseCode | int--><!--Device-HttpResponse-responseCode: ResponseCode | int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -113,11 +113,11 @@ If **HttpRequestOptions** contains the **expectDataType** field, the response co
 
 **Type:** string \| Object \| ArrayBuffer
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-HttpResponse-result: string | Object | ArrayBuffer--><!--Device-HttpResponse-result: string | Object | ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -131,11 +131,10 @@ Type of the return value.
 
 **Type:** [HttpDataType](arkts-network-http-httpdatatype-e.md)
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-HttpResponse-resultType: HttpDataType--><!--Device-HttpResponse-resultType: HttpDataType-End-->
-
 **System capability:** SystemCapability.Communication.NetStack
-

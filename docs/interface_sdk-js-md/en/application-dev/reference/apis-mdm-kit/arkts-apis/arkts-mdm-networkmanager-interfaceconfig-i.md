@@ -4,7 +4,7 @@ Enumerates Ethernet network interface configurations. Only IPv4 is supported.
 
 **Since:** 23
 
-<!--Device-networkManager-interface InterfaceConfig--><!--Device-networkManager-interface InterfaceConfig-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -26,9 +26,9 @@ DNS service address. The value ranges from **0.0.0.0** to **255.255.255.255**. (
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-InterfaceConfig-dnsServers?: string--><!--Device-InterfaceConfig-dnsServers?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -44,9 +44,9 @@ Gateway. The value ranges from **0.0.0.0** to **255.255.255.255**. (This paramet
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-InterfaceConfig-gateway?: string--><!--Device-InterfaceConfig-gateway?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -62,9 +62,9 @@ Static IP address. The value ranges from **0.0.0.0** to **255.255.255.255**. (Th
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-InterfaceConfig-ipAddress?: string--><!--Device-InterfaceConfig-ipAddress?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -80,9 +80,9 @@ Ethernet connection configuration mode.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-InterfaceConfig-ipSetMode: IpSetMode--><!--Device-InterfaceConfig-ipSetMode: IpSetMode-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -98,9 +98,8 @@ Subnet mask. The value ranges from **0.0.0.0** to **255.255.255.255**. (This par
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-InterfaceConfig-netMask?: string--><!--Device-InterfaceConfig-netMask?: string-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

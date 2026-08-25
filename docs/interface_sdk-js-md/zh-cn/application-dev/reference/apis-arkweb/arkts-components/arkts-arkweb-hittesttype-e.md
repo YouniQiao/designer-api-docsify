@@ -4,11 +4,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 21
 
 **替代接口：** [WebHitTestType](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md)
-
-<!--Device-unnamed-declare enum HitTestType--><!--Device-unnamed-declare enum HitTestType-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -22,13 +22,13 @@ EditText = 0
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 21
 
 **替代接口：** [EditText](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#edittext)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HitTestType-EditText = 0--><!--Device-HitTestType-EditText = 0-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -42,13 +42,13 @@ Email = 1
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 21
 
 **替代接口：** [Email](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#email)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HitTestType-Email = 1--><!--Device-HitTestType-Email = 1-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -62,13 +62,13 @@ HttpAnchor = 2
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 21
 
 **替代接口：** [HttpAnchor](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#httpanchor)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HitTestType-HttpAnchor = 2--><!--Device-HitTestType-HttpAnchor = 2-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -82,13 +82,13 @@ HttpAnchorImg = 3
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 21
 
 **替代接口：** [HttpAnchorImg](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#httpanchorimg)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HitTestType-HttpAnchorImg = 3--><!--Device-HitTestType-HttpAnchorImg = 3-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -102,13 +102,13 @@ HTML::img标签。
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 21
 
 **替代接口：** [Img](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#img)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HitTestType-Img = 4--><!--Device-HitTestType-Img = 4-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -122,13 +122,13 @@ Map = 5
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 21
 
 **替代接口：** [Map](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#map)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HitTestType-Map = 5--><!--Device-HitTestType-Map = 5-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -142,13 +142,13 @@ Phone = 6
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 21
 
 **替代接口：** [Phone](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#phone)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HitTestType-Phone = 6--><!--Device-HitTestType-Phone = 6-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -162,13 +162,12 @@ Unknown = 7
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 21
 
 **替代接口：** [Unknown](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#unknown)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-HitTestType-Unknown = 7--><!--Device-HitTestType-Unknown = 7-End-->
-
 **系统能力：** SystemCapability.Web.Webview.Core
-

@@ -1,15 +1,15 @@
-# Event
+# Event(Application Event Logging)
 
 Provides constants that define the names of all predefined events.  
-| Name | Type | Readable| Writable| Description | | ------------------------- | ------ | ---- | ---- | -------------------- | | USER_LOGIN | string | Yes | No | User login event. | | USER_LOGOUT | string | Yes | No | User logout event. | | DISTRIBUTED_SERVICE_START | string | Yes | No | Distributed service startup event.|
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | [Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md) | [Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md) | Description | | ------------------------- | ------ | ---- | ---- | -------------------- | | USER_LOGIN | string | Yes | No | User login event. | | USER_LOGOUT | string | Yes | No | User logout event. | | DISTRIBUTED_SERVICE_START | string | Yes | No |
 
 **Since:** 7
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
 **Substitutes:** Event
-
-<!--Device-hiAppEvent-namespace Event--><!--Device-hiAppEvent-namespace Event-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -22,9 +22,8 @@ Provides constants that define the names of all predefined events.
 
 ### Constants
 
-| Name | Description |
-| --- | --- |
-| [USER_LOGIN](arkts-performanceanalysis-event-depr-con.md#user_login) | User login event. |
-| [USER_LOGOUT](arkts-performanceanalysis-event-depr-con.md#user_logout) | User logout event. |
-| [DISTRIBUTED_SERVICE_START](arkts-performanceanalysis-event-depr-con.md#distributed_service_start) | Distributed service event. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [USER_LOGIN(Application Event Logging)](arkts-performanceanalysis-event-depr-con.md#user_login) |
+| [USER_LOGOUT(Application Event Logging)](arkts-performanceanalysis-event-depr-con.md#user_logout) |
+| [DISTRIBUTED_SERVICE_START(Application Event Logging)](arkts-performanceanalysis-event-depr-con.md#distributed_service_start) |

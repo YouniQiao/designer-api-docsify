@@ -2,9 +2,9 @@
 
 无障碍节点元素执行特定操作时，为操作提供具体设置的参数值。不同操作类型需设置不同的参数字段，各操作类型与参数字段的对应关系，详见 [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md)（无障碍节点元素可执行的操作）。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-unnamed-export declare class Parameter--><!--Device-unnamed-export declare class Parameter-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -22,9 +22,9 @@ accessibilityFocusScene?: AccessibilityFocusScene
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Parameter-accessibilityFocusScene?: AccessibilityFocusScene--><!--Device-Parameter-accessibilityFocusScene?: AccessibilityFocusScene-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -42,9 +42,9 @@ customAction?: string
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Parameter-customAction?: string--><!--Device-Parameter-customAction?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -62,9 +62,9 @@ injectActionType?: InjectActionType
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Parameter-injectActionType?: InjectActionType--><!--Device-Parameter-injectActionType?: InjectActionType-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -80,9 +80,9 @@ offset?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Parameter-offset?: string--><!--Device-Parameter-offset?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -98,9 +98,9 @@ scrollType?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Parameter-scrollType?: string--><!--Device-Parameter-scrollType?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -116,9 +116,9 @@ selectTextBegin?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Parameter-selectTextBegin?: string--><!--Device-Parameter-selectTextBegin?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -134,9 +134,9 @@ selectTextEnd?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Parameter-selectTextEnd?: string--><!--Device-Parameter-selectTextEnd?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -152,9 +152,9 @@ selectTextInForWard?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Parameter-selectTextInForWard?: boolean--><!--Device-Parameter-selectTextInForWard?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -170,9 +170,9 @@ setText?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Parameter-setText?: string--><!--Device-Parameter-setText?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -188,9 +188,9 @@ spanId?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Parameter-spanId?: string--><!--Device-Parameter-spanId?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -205,4 +205,3 @@ import { Parameter } from '@kit.AccessibilityKit';
 
 let parameter : Parameter = { selectTextBegin: '0', selectTextEnd: '8', selectTextInForWard: true };
 ```
-

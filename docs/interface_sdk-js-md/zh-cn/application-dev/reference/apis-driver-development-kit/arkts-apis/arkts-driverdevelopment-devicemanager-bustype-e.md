@@ -2,9 +2,9 @@
 
 设备总线类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-deviceManager-export enum BusType--><!--Device-deviceManager-export enum BusType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
@@ -16,9 +16,8 @@ USB = 1
 
 USB总线类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-BusType-USB = 1--><!--Device-BusType-USB = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
-

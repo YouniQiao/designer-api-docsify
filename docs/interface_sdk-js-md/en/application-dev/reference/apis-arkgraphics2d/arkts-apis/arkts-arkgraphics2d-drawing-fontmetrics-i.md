@@ -2,9 +2,9 @@
 
 Describes the attributes that describe the font size and layout. A typeface has similar font metrics.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-drawing-interface FontMetrics--><!--Device-drawing-interface FontMetrics-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -22,13 +22,13 @@ ascent: double
 
 Distance from the baseline to the highest coordinate of the text. The value is a floating point number.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-FontMetrics-ascent: double--><!--Device-FontMetrics-ascent: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -40,13 +40,13 @@ avgCharWidth?: double
 
 Average character width.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-FontMetrics-avgCharWidth?: double--><!--Device-FontMetrics-avgCharWidth?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -58,13 +58,13 @@ bottom: double
 
 Maximum distance from the baseline to the lowest coordinate of the text. The value is a floating point number.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-FontMetrics-bottom: double--><!--Device-FontMetrics-bottom: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -76,13 +76,13 @@ capHeight?: double
 
 Height of a capital letter. The value is usually a negative value.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-FontMetrics-capHeight?: double--><!--Device-FontMetrics-capHeight?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -94,29 +94,31 @@ descent: double
 
 Distance from the baseline to the lowest coordinate of the text. The value is a floating point number.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-FontMetrics-descent: double--><!--Device-FontMetrics-descent: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## flags
 
 ```TypeScript
-flags?: int
+flags?: FontMetricsFlags
 ```
 
 Font measurement flags that are valid.
 
-**Type:** int
+**Type:** [FontMetricsFlags](arkts-arkgraphics2d-drawing-fontmetricsflags-e.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-FontMetrics-flags?: int--><!--Device-FontMetrics-flags?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -128,13 +130,13 @@ leading: double
 
 Interline spacing, that is, the distance from the descent of one line of text to the ascent of the next line. The value is a floating point number.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-FontMetrics-leading: double--><!--Device-FontMetrics-leading: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -146,13 +148,13 @@ maxCharWidth?: double
 
 Maximum character width.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-FontMetrics-maxCharWidth?: double--><!--Device-FontMetrics-maxCharWidth?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -164,13 +166,13 @@ strikethroughPosition?: double
 
 Vertical distance from the baseline to the bottom of the strikethrough. The value is usually a negative value.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-FontMetrics-strikethroughPosition?: double--><!--Device-FontMetrics-strikethroughPosition?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -182,13 +184,13 @@ strikethroughThickness?: double
 
 Thickness of the strikethrough.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-FontMetrics-strikethroughThickness?: double--><!--Device-FontMetrics-strikethroughThickness?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -200,13 +202,13 @@ top: double
 
 Maximum distance from the baseline to the highest coordinate of the text. The value is a floating point number.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-FontMetrics-top: double--><!--Device-FontMetrics-top: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -218,13 +220,13 @@ underlinePosition?: double
 
 Vertical distance from the baseline to the top of the underline. The value is usually a positive number.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-FontMetrics-underlinePosition?: double--><!--Device-FontMetrics-underlinePosition?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -236,13 +238,13 @@ underlineThickness?: double
 
 Thickness of the underline.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-FontMetrics-underlineThickness?: double--><!--Device-FontMetrics-underlineThickness?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -254,13 +256,13 @@ xHeight?: double
 
 Height of the lowercase letter x. The value is usually a negative value.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-FontMetrics-xHeight?: double--><!--Device-FontMetrics-xHeight?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -272,13 +274,13 @@ xMax?: double
 
 Horizontal distance from the rightmost edge of any glyph bounding box to the origin. The value is a positive number, indicating the maximum horizontal coordinate across all glyph bounding boxes.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-FontMetrics-xMax?: double--><!--Device-FontMetrics-xMax?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -290,13 +292,12 @@ xMin?: double
 
 Horizontal distance from the leftmost edge of any glyph bounding box to the origin. This value is usually less than 0, indicating the minimum horizontal coordinate across all glyph bounding boxes.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-FontMetrics-xMin?: double--><!--Device-FontMetrics-xMin?: double-End-->
-
 **System capability:** SystemCapability.Graphics.Drawing
-

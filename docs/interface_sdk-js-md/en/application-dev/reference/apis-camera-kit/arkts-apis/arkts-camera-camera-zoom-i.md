@@ -4,9 +4,9 @@
 
 **Inheritance/Implementation:** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-camera-interface Zoom--><!--Device-camera-interface Zoom-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -18,32 +18,38 @@ import { camera } from '@kit.CameraKit';
 
 ## getZoomRatio
 
+ArkTS-Dyn:
+```TypeScript
+getZoomRatio(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getZoomRatio(): double
 ```
 
 Obtains the zoom ratio in use.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-Zoom-getZoomRatio(): double--><!--Device-Zoom-getZoomRatio(): double-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | Zoom ratio obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 **Examples**
 
@@ -83,32 +89,38 @@ function getZoomRatio(photoSession: camera.PhotoSession): number {
 
 ## setSmoothZoom
 
+ArkTS-Dyn:
+```TypeScript
+setSmoothZoom(targetRatio: number, mode?: SmoothZoomMode): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setSmoothZoom(targetRatio: double, mode?: SmoothZoomMode): void
 ```
 
 Sets smooth zoom.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-Zoom-setSmoothZoom(targetRatio: double, mode?: SmoothZoomMode): void--><!--Device-Zoom-setSmoothZoom(targetRatio: double, mode?: SmoothZoomMode): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| targetRatio | double | Yes | Target zoom ratio. The supported zoom ratio range can be obtained by calling [getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange). If the value passed in is not within the supported range, the value within the precision range is retained. |
-| mode | [SmoothZoomMode](arkts-camera-camera-smoothzoommode-e.md) | No | Smooth zoom mode. The default value is **0**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| targetRatio | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| mode | [SmoothZoomMode](arkts-camera-camera-smoothzoommode-e.md) | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config.<br>**Applicable version:** 11 - 17 |
+| Error Code ID |
+| --- |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 **Examples**
 
@@ -120,31 +132,37 @@ function setSmoothZoom(sessionExtendsZoom: camera.Zoom, targetZoomRatio: number,
 
 ## setZoomRatio
 
+ArkTS-Dyn:
+```TypeScript
+setZoomRatio(zoomRatio: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setZoomRatio(zoomRatio: double): void
 ```
 
 Sets a zoom ratio, with a maximum precision of two decimal places.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-Zoom-setZoomRatio(zoomRatio: double): void--><!--Device-Zoom-setZoomRatio(zoomRatio: double): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| zoomRatio | double | Yes | Zoom ratio. The supported zoom ratio range can be obtained by calling [getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange). If the value passed in is not within the supported range, the value within the precision range is retained. <br>It takes some time for the zoom ratio to take effect at the bottom layer. To obtain the correct zoom ratio, you need to wait for one to two frames. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [zoomRatio](arkts-camera-camera-zoompointinfo-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| Error Code ID |
+| --- |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 **Examples**
 
@@ -183,4 +201,3 @@ function setZoomRatio(photoSession: camera.PhotoSession, zoomRatioRange: Array<n
   }
 }
 ```
-

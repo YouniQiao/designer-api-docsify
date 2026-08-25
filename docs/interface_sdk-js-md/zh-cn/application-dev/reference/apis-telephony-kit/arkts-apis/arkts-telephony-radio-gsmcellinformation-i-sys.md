@@ -2,9 +2,9 @@
 
 Obtains GSM cell information.
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-radio-export interface GsmCellInformation--><!--Device-radio-export interface GsmCellInformation-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -24,11 +24,11 @@ arfcn: int
 
 Indicates the ARFCN(absolute radio frequency channel int).
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-GsmCellInformation-arfcn: int--><!--Device-GsmCellInformation-arfcn: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -42,11 +42,11 @@ bsic: int
 
 Indicates the base station identification code.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-GsmCellInformation-bsic: int--><!--Device-GsmCellInformation-bsic: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -60,11 +60,11 @@ cellId: int
 
 Indicates the cell identification.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-GsmCellInformation-cellId: int--><!--Device-GsmCellInformation-cellId: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -78,11 +78,11 @@ lac: int
 
 Indicates the location area code.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-GsmCellInformation-lac: int--><!--Device-GsmCellInformation-lac: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -98,9 +98,9 @@ Indicates the mobile country code.
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-GsmCellInformation-mcc: string--><!--Device-GsmCellInformation-mcc: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -116,11 +116,10 @@ Indicates the mobile network code.
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-GsmCellInformation-mnc: string--><!--Device-GsmCellInformation-mnc: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
-

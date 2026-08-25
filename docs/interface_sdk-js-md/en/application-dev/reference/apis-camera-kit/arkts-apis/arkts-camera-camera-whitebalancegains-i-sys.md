@@ -4,7 +4,7 @@ RGB white balance gain values.
 
 **Since:** 26.1.0
 
-<!--Device-camera-interface WhiteBalanceGains--><!--Device-camera-interface WhiteBalanceGains-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -24,13 +24,13 @@ blueGain: double
 
 The blue gain component of the white balance value.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-WhiteBalanceGains-blueGain: double--><!--Device-WhiteBalanceGains-blueGain: double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -44,13 +44,13 @@ greenGain: double
 
 The green gain component of the white balance value.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-WhiteBalanceGains-greenGain: double--><!--Device-WhiteBalanceGains-greenGain: double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -64,15 +64,14 @@ redGain: double
 
 The red gain component of the white balance value.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-WhiteBalanceGains-redGain: double--><!--Device-WhiteBalanceGains-redGain: double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

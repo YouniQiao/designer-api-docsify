@@ -2,9 +2,7 @@
 
 Creates a new function.
 
-**Since:** -1
-
-<!--Device-unnamed-interface Function--><!--Device-unnamed-interface Function-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -19,22 +17,20 @@ apply(this: Function, thisArg: any, argArray?: any): any
 
 Calls the function, substituting the specified object for the this value of the function, and the specified array for the arguments of the function.
 
-**Since:** -1
-
-<!--Device-Function-apply(this: Function, thisArg: any, argArray?: any): any--><!--Device-Function-apply(this: Function, thisArg: any, argArray?: any): any-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| this | Function | Yes |  |
-| thisArg | any | Yes |  |
-| argArray | any | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| this | Function | Yes |
+| thisArg | any | Yes |
+| argArray | any | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## bind
 
 ```TypeScript
@@ -43,22 +39,20 @@ bind(this: Function, thisArg: any, ...argArray: any[]): any
 
 For a given function, creates a bound function that has the same body as the original function. The this object of the bound function is associated with the specified object, and has the specified initial parameters.
 
-**Since:** -1
-
-<!--Device-Function-bind(this: Function, thisArg: any, ...argArray: any[]): any--><!--Device-Function-bind(this: Function, thisArg: any, ...argArray: any[]): any-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| this | Function | Yes |  |
-| thisArg | any | Yes |  |
-| argArray | any[] | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| this | Function | Yes |
+| thisArg | any | Yes |
+| argArray | any[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## call
 
 ```TypeScript
@@ -67,22 +61,20 @@ call(this: Function, thisArg: any, ...argArray: any[]): any
 
 Calls a method of an object, substituting another object for the current object.
 
-**Since:** -1
-
-<!--Device-Function-call(this: Function, thisArg: any, ...argArray: any[]): any--><!--Device-Function-call(this: Function, thisArg: any, ...argArray: any[]): any-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| this | Function | Yes |  |
-| thisArg | any | Yes |  |
-| argArray | any[] | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| this | Function | Yes |
+| thisArg | any | Yes |
+| argArray | any[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## toString
 
 ```TypeScript
@@ -91,14 +83,12 @@ toString(): string
 
 Returns a string representation of a function.
 
-**Since:** -1
-
-<!--Device-Function-toString(): string--><!--Device-Function-toString(): string-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## arguments
 
 ```TypeScript
@@ -107,9 +97,7 @@ arguments: any
 
 **Type:** any
 
-**Since:** -1
-
-<!--Device-Function-arguments: any--><!--Device-Function-arguments: any-End-->
+**ArkTS mode:** 
 
 ## caller
 
@@ -119,9 +107,7 @@ caller: Function
 
 **Type:** Function
 
-**Since:** -1
-
-<!--Device-Function-caller: Function--><!--Device-Function-caller: Function-End-->
+**ArkTS mode:** 
 
 ## length
 
@@ -131,9 +117,7 @@ readonly length: number
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-Function-readonly length: number--><!--Device-Function-readonly length: number-End-->
+**ArkTS mode:** 
 
 ## prototype
 
@@ -143,7 +127,4 @@ prototype: any
 
 **Type:** any
 
-**Since:** -1
-
-<!--Device-Function-prototype: any--><!--Device-Function-prototype: any-End-->
-
+**ArkTS mode:** 

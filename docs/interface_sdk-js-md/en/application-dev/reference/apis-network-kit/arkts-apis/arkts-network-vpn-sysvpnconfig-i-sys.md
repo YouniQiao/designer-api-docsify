@@ -6,7 +6,7 @@ Define configuration of the system VPN network.
 
 **Since:** 12
 
-<!--Device-vpn-export interface SysVpnConfig--><!--Device-vpn-export interface SysVpnConfig-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -30,7 +30,7 @@ The forwarding routes for the VPN network.
 
 **Since:** 12
 
-<!--Device-SysVpnConfig-forwardingRoutes?: string--><!--Device-SysVpnConfig-forwardingRoutes?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -48,9 +48,9 @@ The array of local addresses for VPN interface.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-SysVpnConfig-localAddresses?: Array<LinkAddress>--><!--Device-SysVpnConfig-localAddresses?: Array<LinkAddress>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -68,7 +68,7 @@ The user password for the VPN network.
 
 **Since:** 12
 
-<!--Device-SysVpnConfig-password?: string--><!--Device-SysVpnConfig-password?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -86,7 +86,7 @@ The p12 cert data for the ipsec VPN network.
 
 **Since:** 20
 
-<!--Device-SysVpnConfig-pkcs12FileData?: Uint8Array--><!--Device-SysVpnConfig-pkcs12FileData?: Uint8Array-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -104,7 +104,7 @@ The p12 cert password for the ipsec VPN network.
 
 **Since:** 20
 
-<!--Device-SysVpnConfig-pkcs12Password?: string--><!--Device-SysVpnConfig-pkcs12Password?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -122,7 +122,7 @@ The array of addresses for remote server.
 
 **Since:** 20
 
-<!--Device-SysVpnConfig-remoteAddresses?: Array<string>--><!--Device-SysVpnConfig-remoteAddresses?: Array<string>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -140,7 +140,7 @@ Whether the VPN network save login name and password. The default value is false
 
 **Since:** 12
 
-<!--Device-SysVpnConfig-saveLogin?: boolean--><!--Device-SysVpnConfig-saveLogin?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -149,16 +149,16 @@ Whether the VPN network save login name and password. The default value is false
 ## userId
 
 ```TypeScript
-userId?: int
+userId?: number
 ```
 
 The system user id for the VPN network.
 
-**Type:** int
+**Type:** number
 
 **Since:** 12
 
-<!--Device-SysVpnConfig-userId?: int--><!--Device-SysVpnConfig-userId?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -176,7 +176,7 @@ The user name for the VPN network.
 
 **Since:** 12
 
-<!--Device-SysVpnConfig-userName?: string--><!--Device-SysVpnConfig-userName?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -194,7 +194,7 @@ The uuid for the VPN network.
 
 **Since:** 12
 
-<!--Device-SysVpnConfig-vpnId?: string--><!--Device-SysVpnConfig-vpnId?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -212,7 +212,7 @@ The name for the VPN network.
 
 **Since:** 12
 
-<!--Device-SysVpnConfig-vpnName?: string--><!--Device-SysVpnConfig-vpnName?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -230,9 +230,8 @@ The type for the VPN network.
 
 **Since:** 12
 
-<!--Device-SysVpnConfig-vpnType?: SysVpnType--><!--Device-SysVpnConfig-vpnType?: SysVpnType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
-

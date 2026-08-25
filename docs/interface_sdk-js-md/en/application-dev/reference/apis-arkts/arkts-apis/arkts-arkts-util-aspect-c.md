@@ -4,7 +4,7 @@ Provides APIs that support Aspect Oriented Programming (AOP). These APIs can be 
 
 **Since:** 11
 
-<!--Device-util-class Aspect--><!--Device-util-class Aspect-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -24,20 +24,20 @@ Inserts a function after a method of a class object. The final return value is t
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-Aspect-static addAfter(targetClass: Object, methodName: string, isStatic: boolean, after: Function): void--><!--Device-Aspect-static addAfter(targetClass: Object, methodName: string, isStatic: boolean, after: Function): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| targetClass | Object | Yes | Target class object. |
-| methodName | string | Yes | Name of the method. Read-only methods are not supported. |
-| isStatic | boolean | Yes | Whether the method is a static method. The value **true** means a static method, and **false** means an instance method. |
-| after | Function | Yes | Function to insert. If the function carries parameters, then the first parameter is the **this** object, which is the target class object (specified by **targetClass**) if **isStatic** is **true** or the instance object of the method if **isStatic** is **false**; the second parameter is the return value of the original method (**undefined** if the original method does not have a return value); other parameters are the parameters carried by the original method. If the function does not carry any parameter, no processing is performed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [targetClass](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutwant-depr-i-sys.md) | Object | Yes |
+| methodName | string | Yes |
+| [isStatic](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutinfo-depr-i.md) | boolean | Yes |
+| [after](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Function | Yes |
 
 **Examples**
 
@@ -105,20 +105,20 @@ Inserts a function before a method of a class object. The inserted function is e
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-Aspect-static addBefore(targetClass: Object, methodName: string, isStatic: boolean, before: Function): void--><!--Device-Aspect-static addBefore(targetClass: Object, methodName: string, isStatic: boolean, before: Function): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| targetClass | Object | Yes | Target class object. |
-| methodName | string | Yes | Name of the method. Read-only methods are not supported. |
-| isStatic | boolean | Yes | Whether the method is a static method. The value **true** means a static method, and **false** means an instance method. |
-| before | Function | Yes | Function to insert. If the function carries parameters, then the first parameter is the **this** object, which is the target class object (specified by **targetClass**) if **isStatic** is **true** or the instance object of the method if **isStatic** is **false**; other parameters are the parameters carried in the original method. If the function does not carry any parameter, no processing is performed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [targetClass](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutwant-depr-i-sys.md) | Object | Yes |
+| methodName | string | Yes |
+| [isStatic](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutinfo-depr-i.md) | boolean | Yes |
+| before | Function | Yes |
 
 **Examples**
 
@@ -195,20 +195,20 @@ Replaces a method of a class object with another function. After the replacement
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-Aspect-static replace(targetClass: Object, methodName: string, isStatic: boolean, instead: Function) : void--><!--Device-Aspect-static replace(targetClass: Object, methodName: string, isStatic: boolean, instead: Function) : void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| targetClass | Object | Yes | Target class object. |
-| methodName | string | Yes | Name of the method. Read-only methods are not supported. |
-| isStatic | boolean | Yes | Whether the method is a static method. The value **true** means a static method, and **false** means an instance method. |
-| instead | Function | Yes | Function to be used replacement. If the function carries parameters, then the first parameter is the **this** object, which is the target class object (specified by **targetClass**) if **isStatic** is **true** or the instance object of the method if **isStatic** is **false**; other parameters are the parameters carried in the original method. If the function does not carry any parameter, no processing is performed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [targetClass](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutwant-depr-i-sys.md) | Object | Yes |
+| methodName | string | Yes |
+| [isStatic](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutinfo-depr-i.md) | boolean | Yes |
+| instead | Function | Yes |
 
 **Examples**
 
@@ -246,4 +246,3 @@ console.info('result is ' + result);
 console.info('asp.msg is ' + asp.msg);
 // Output: asp.msg is msg111
 ```
-

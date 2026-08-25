@@ -4,7 +4,7 @@ Photo asset position
 
 **起始版本：** 14
 
-<!--Device-sendablePhotoAccessHelper-enum PositionType--><!--Device-sendablePhotoAccessHelper-enum PositionType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -20,7 +20,7 @@ Asset exists only in local device
 
 **起始版本：** 14
 
-<!--Device-PositionType-LOCAL = 1 << 0--><!--Device-PositionType-LOCAL = 1 << 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -36,9 +36,8 @@ Asset exists only in cloud
 
 **起始版本：** 14
 
-<!--Device-PositionType-CLOUD = 1 << 1--><!--Device-PositionType-CLOUD = 1 << 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
-

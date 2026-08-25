@@ -4,9 +4,9 @@
 
 **继承/实现关系：** Light extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export interface Light--><!--Device-unnamed-export interface Light-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -20,9 +20,9 @@ color: Color
 
 **类型：** [Color](arkts-arkgraphics3d-scenetypes-color-i.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Light-color: Color--><!--Device-Light-color: Color-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -36,9 +36,9 @@ enabled: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Light-enabled: boolean--><!--Device-Light-enabled: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -50,11 +50,11 @@ intensity: double
 
 光照强度，单位为坎德拉（cd），取值范围是大于0的实数。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Light-intensity: double--><!--Device-Light-intensity: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -68,9 +68,9 @@ readonly lightType: LightType
 
 **类型：** [LightType](arkts-arkgraphics3d-scenenodes-lighttype-e.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Light-readonly lightType: LightType--><!--Device-Light-readonly lightType: LightType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -84,9 +84,8 @@ shadowEnabled: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Light-shadowEnabled: boolean--><!--Device-Light-shadowEnabled: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

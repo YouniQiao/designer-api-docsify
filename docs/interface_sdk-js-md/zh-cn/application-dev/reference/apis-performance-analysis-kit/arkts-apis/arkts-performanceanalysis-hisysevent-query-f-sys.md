@@ -14,11 +14,11 @@ function query(queryArg: QueryArg, rules: QueryRule[], querier: Querier): void
 
 查询系统事件。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.READ_DFX_SYSEVENT
-
-<!--Device-hiSysEvent-function query(queryArg: QueryArg, rules: QueryRule[], querier: Querier): void--><!--Device-hiSysEvent-function query(queryArg: QueryArg, rules: QueryRule[], querier: Querier): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -26,23 +26,23 @@ function query(queryArg: QueryArg, rules: QueryRule[], querier: Querier): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| queryArg | [QueryArg](arkts-performanceanalysis-hisysevent-queryarg-i-sys.md) | 是 | 查询需要配置的查询参数。 |
-| rules | [QueryRule](arkts-performanceanalysis-hisysevent-queryrule-i-sys.md)[] | 是 | 查询规则数组，每次查询可配置多个查询规则。 |
-| querier | Querier | 是 | 查询者对象，包含查询结果及结束的相关回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| queryArg | [QueryArg](arkts-performanceanalysis-hisysevent-queryarg-i-sys.md) | 是 |
+| rules | [QueryRule](arkts-performanceanalysis-hisysevent-queryrule-i-sys.md)[] | 是 |
+| querier | [Querier](../../apis-security-guard-kit/arkts-apis/arkts-securityguard-securityguard-querier-i-sys.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. An attempt was made to read system event forbidden by permission: ohos.permission.READ_DFX_SYSEVENT. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | System API is not allowed called by Non-system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [11200301](../errorcode-hisysevent-sys.md#11200301-查询规则的数量超过限制) | The number of query rules exceeds the limit. |
-| [11200302](../errorcode-hisysevent-sys.md#11200302-非法的查询规则) | Invalid query rule. |
-| [11200303](../errorcode-hisysevent-sys.md#11200303-并发查询的数量超过限制) | The number of concurrent queriers exceeds the limit. |
-| [11200304](../errorcode-hisysevent-sys.md#11200304-查询频率超过限制) | The query frequency exceeds the limit. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [11200301](../errorcode-hisysevent-sys.md#11200301-查询规则的数量超过限制) |
+| [11200302](../errorcode-hisysevent-sys.md#11200302-非法的查询规则) |
+| [11200303](../errorcode-hisysevent-sys.md#11200303-并发查询的数量超过限制) |
+| [11200304](../errorcode-hisysevent-sys.md#11200304-查询频率超过限制) |
 
 **示例**
 
@@ -143,4 +143,3 @@ try {
   console.error(`error code: ${(err as BusinessError).code}, error msg: ${(err as BusinessError).message}`);
 }
 ```
-

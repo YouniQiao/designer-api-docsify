@@ -8,7 +8,6 @@ export type GetTextIndexAtCursorCallback = () => int
 
 **起始版本：** 23
 
-<!--Device-inputMethod-export type GetTextIndexAtCursorCallback = () => int--><!--Device-inputMethod-export type GetTextIndexAtCursorCallback = () => int-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
-

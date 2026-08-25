@@ -2,9 +2,9 @@
 
 Defines the options for selecting accounts.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-appAccount-interface SelectAccountsOptions--><!--Device-appAccount-interface SelectAccountsOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -24,9 +24,9 @@ Array of allowed accounts. By default, no value is passed in.
 
 **Type:** Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SelectAccountsOptions-allowedAccounts?: Array<AppAccountInfo>--><!--Device-SelectAccountsOptions-allowedAccounts?: Array<AppAccountInfo>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -40,9 +40,9 @@ Array of the owners of the allowed accounts. By default, no value is passed in.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SelectAccountsOptions-allowedOwners?: Array<string>--><!--Device-SelectAccountsOptions-allowedOwners?: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -56,9 +56,8 @@ Labels of the authenticator. By default, no value is passed in.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SelectAccountsOptions-requiredLabels?: Array<string>--><!--Device-SelectAccountsOptions-requiredLabels?: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
-

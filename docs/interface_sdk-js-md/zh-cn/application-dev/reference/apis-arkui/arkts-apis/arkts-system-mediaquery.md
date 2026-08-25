@@ -10,14 +10,13 @@ import { SystemMediaQuery, MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [MediaQuery](arkts-arkui-system-mediaquery-mediaquery-c.md) | 提供根据不同媒体类型定义不同的样式。 定义MediaQuery接口。 |
+| 名称 |
+| --- |
+| [MediaQuery](arkts-arkui-system-mediaquery-mediaquery-c.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [MediaQueryEvent](arkts-arkui-system-mediaquery-mediaqueryevent-i.md) | 定义MediaQuery事件。@interface MediaQueryEvent |
-| [MediaQueryList](arkts-arkui-system-mediaquery-mediaquerylist-i.md) | 定义MediaQuery列表信息。@interface MediaQueryList |
-
+| 名称 |
+| --- |
+| [MediaQueryEvent](arkts-arkui-system-mediaquery-mediaqueryevent-i.md) |
+| [MediaQueryList](arkts-arkui-system-mediaquery-mediaquerylist-i.md) |

@@ -16,31 +16,30 @@ Creates a PixelMap object based on the ID of a Surface with transformation.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-image-function createPixelMapFromSurfaceWithTransformation(surfaceId: string, transformEnabled: boolean): Promise<PixelMap>--><!--Device-image-function createPixelMapFromSurfaceWithTransformation(surfaceId: string, transformEnabled: boolean): Promise<PixelMap>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| surfaceId | string | Yes | ID of the Surface. |
-| transformEnabled | boolean | Yes | Whether to inverse transform the PixelMap to cancel out the transformation from the Surface. If true, the PixelMap will be transformed by the same amount from the Surface but in a reversed direction; if false, the PixelMap will not be transformed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| surfaceId | string | Yes |
+| transformEnabled | boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;PixelMap&gt; | A Promise of PixelMap instance if the operation is successful. Otherwise, an exception will be thrown. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;PixelMap & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) | Failed to get the data from Surface. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation, e.g. on cross-platform. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
-| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) | Failed to create the PixelMap. |
-
+| Error Code ID |
+| --- |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) |

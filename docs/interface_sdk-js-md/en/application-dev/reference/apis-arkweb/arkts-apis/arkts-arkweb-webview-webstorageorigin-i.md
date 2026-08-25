@@ -4,7 +4,7 @@ Provides usage information of the Web SQL Database.@interface WebStorageOrigin [
 
 **Since:** 9
 
-<!--Device-webview-interface WebStorageOrigin--><!--Device-webview-interface WebStorageOrigin-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -26,9 +26,9 @@ Index of the origin.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebStorageOrigin-origin: string--><!--Device-WebStorageOrigin-origin: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -44,9 +44,9 @@ Storage quota of the specified source.Unit: byte.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebStorageOrigin-quota: number--><!--Device-WebStorageOrigin-quota: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -62,9 +62,8 @@ Storage usage of the specified source.Unit: byte.
 
 **Since:** 9
 
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-WebStorageOrigin-usage: number--><!--Device-WebStorageOrigin-usage: number-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-Intl-export interface DisplayNamesOptions--><!--Device-Intl-export interface DisplayNamesOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,11 +25,9 @@ fallback?: DisplayNamesFallback
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DisplayNamesOptions-fallback?: DisplayNamesFallback--><!--Device-DisplayNamesOptions-fallback?: DisplayNamesFallback-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -47,11 +43,9 @@ languageDisplay?: DisplayNamesLanguageDisplay
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DisplayNamesOptions-languageDisplay?: DisplayNamesLanguageDisplay--><!--Device-DisplayNamesOptions-languageDisplay?: DisplayNamesLanguageDisplay-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -67,11 +61,9 @@ localeMatcher?: RelativeTimeFormatLocaleMatcher
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DisplayNamesOptions-localeMatcher?: RelativeTimeFormatLocaleMatcher--><!--Device-DisplayNamesOptions-localeMatcher?: RelativeTimeFormatLocaleMatcher-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -87,11 +79,9 @@ style?: RelativeTimeFormatStyle
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DisplayNamesOptions-style?: RelativeTimeFormatStyle--><!--Device-DisplayNamesOptions-style?: RelativeTimeFormatStyle-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -107,11 +97,8 @@ type: DisplayNamesType
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DisplayNamesOptions-type: DisplayNamesType--><!--Device-DisplayNamesOptions-type: DisplayNamesType-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

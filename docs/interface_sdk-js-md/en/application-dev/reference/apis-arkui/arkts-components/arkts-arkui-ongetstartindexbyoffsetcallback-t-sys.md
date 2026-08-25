@@ -1,16 +1,16 @@
 # OnGetStartIndexByOffsetCallback (System API)
 
 ```TypeScript
-declare type OnGetStartIndexByOffsetCallback = (totalOffset: double) => StartLineInfo
+declare type OnGetStartIndexByOffsetCallback = (totalOffset: number) => StartLineInfo
 ```
 
 Defines the callback type used in onGetStartIndexByOffset of GridLayoutOptions.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-unnamed-declare type OnGetStartIndexByOffsetCallback = (totalOffset: double) => StartLineInfo--><!--Device-unnamed-declare type OnGetStartIndexByOffsetCallback = (totalOffset: double) => StartLineInfo-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +18,12 @@ Defines the callback type used in onGetStartIndexByOffset of GridLayoutOptions.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| totalOffset | double | Yes | Total scrolling offset, that is, the offset between the top of the first **GridItem** in the **Grid** component and the top of the **Grid** component. <br>Unit:vp. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| totalOffset | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [StartLineInfo](arkts-arkui-startlineinfo-i-sys.md) | - |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [StartLineInfo](arkts-arkui-startlineinfo-i-sys.md) |

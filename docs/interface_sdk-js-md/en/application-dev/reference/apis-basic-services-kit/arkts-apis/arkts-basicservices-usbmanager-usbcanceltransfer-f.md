@@ -21,27 +21,27 @@ Cancels an asynchronous USB data transfer request.
 > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)
 > API to claim a communication interface.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-usbManager-function usbCancelTransfer(transfer: UsbDataTransferParams): void--><!--Device-usbManager-function usbCancelTransfer(transfer: UsbDataTransferParams): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| transfer | [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | Yes | Only the [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) and [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md) parameters should be specified in this API. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| transfer | [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [14400001](../errorcode-usb.md#14400001-usb-device-connection-denied) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
-| [14400008](../errorcode-usb.md#14400008-no-device-disconnected) | No such device (it may have been disconnected). |
-| [14400010](../errorcode-usb.md#14400010-unrecognized-error) | Other USB error. Possible causes:<br>1.Unrecognized discard error code. |
-| [14400011](../errorcode-usb.md#14400011-no-ongoing-transfer-found) | The transfer is not in progress, or is already complete or cancelled. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14400001](../errorcode-usb.md#14400001-usb-device-connection-denied) |
+| [14400008](../errorcode-usb.md#14400008-no-device-disconnected) |
+| [14400010](../errorcode-usb.md#14400010-unrecognized-error) |
+| [14400011](../errorcode-usb.md#14400011-no-ongoing-transfer-found) |
 
 **Examples**
 
@@ -91,4 +91,3 @@ function usbCancelTransfer() {
   }
 }
 ```
-

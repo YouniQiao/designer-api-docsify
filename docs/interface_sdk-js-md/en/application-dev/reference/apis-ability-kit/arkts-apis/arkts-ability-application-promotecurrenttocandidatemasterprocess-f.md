@@ -26,32 +26,32 @@ Adds the current process into the [candidate master process](../../../applicatio
 > the sys/commonUI type.
 <!--DelEnd-->
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-application-export function promoteCurrentToCandidateMasterProcess(insertToHead: boolean): Promise<void>--><!--Device-application-export function promoteCurrentToCandidateMasterProcess(insertToHead: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| insertToHead | boolean | Yes | Whether to add the current process to the head of the candidate master process list. **true** to add the current process to the head of the list, **false** to add the current process to the tail of the list. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| insertToHead | boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [16000115](../errorcode-ability.md#16000115-current-process-cannot-be-set-as-candidate-master-process) | The current process cannot be set as a candidate master process. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000115](../errorcode-ability.md#16000115-current-process-cannot-be-set-as-candidate-master-process) |
 
 **Examples**
 
@@ -77,4 +77,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

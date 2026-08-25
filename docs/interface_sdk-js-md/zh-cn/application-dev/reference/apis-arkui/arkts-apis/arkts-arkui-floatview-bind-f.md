@@ -26,37 +26,37 @@ function bind(floatViewController: FloatViewController, floatingBallController: 
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **需要权限：** ohos.permission.USE_FLOAT_BALL and ohos.permission.FLOAT_VIEW
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-floatView-function bind(floatViewController: FloatViewController, floatingBallController: floatingBall.FloatingBallController,    floatingBallParams: floatingBall.FloatingBallParams): Promise<void>--><!--Device-floatView-function bind(floatViewController: FloatViewController, floatingBallController: floatingBall.FloatingBallController,    floatingBallParams: floatingBall.FloatingBallParams): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| floatViewController | [FloatViewController](arkts-arkui-floatview-floatviewcontroller-i.md) | 是 | 标准悬浮窗控制器。 |
-| floatingBallController | floatingBall.FloatingBallController | 是 | 闪控球控制器。 |
-| floatingBallParams | floatingBall.FloatingBallParams | 是 | 闪控球参数。绑定时设置的参数会覆盖掉闪控球控制器启动时已保存的参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| floatViewController | [FloatViewController](arkts-arkui-floatview-floatviewcontroller-i.md) | 是 |
+| floatingBallController | floatingBall.FloatingBallController | 是 |
+| floatingBallParams | floatingBall.FloatingBallParams | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. Possible cause: The application does not have the permission required to call the API. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported on this device. Possible cause: Call api on unsupported device. |
-| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) | Wrong parameters for operating the floating ball. Possible cause: Invalid floating ball params. |
-| [1300025](../errorcode-window.md#1300025-闪控球状态不支持该操作) | The floating ball state does not support this operation. Possible cause: 1. The floating ball has started but not stopped yet. 2. The floating ball controller has been bound. |
-| [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) | The floatView state does not support this operation. Possible cause: 1. The float view has started but not stopped yet. 2. The float view controller has been bound. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) |
+| [1300025](../errorcode-window.md#1300025-闪控球状态不支持该操作) |
+| [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) |
 
 **示例**
 
@@ -93,4 +93,3 @@ struct Index {
   }
 }
 ```
-

@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [ContainerReaderModifier](arkts-arkui-containerreadermodifier-c.md) | Defines ContainerReader Modifier |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ContainerReaderModifier](arkts-arkui-containerreadermodifier-c.md) |

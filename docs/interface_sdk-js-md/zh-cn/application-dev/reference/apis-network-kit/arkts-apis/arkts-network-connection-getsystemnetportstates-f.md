@@ -21,27 +21,27 @@ function getSystemNetPortStates(): Promise<NetPortStatesInfo>
 
 **起始版本：** 24
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
+
 **需要权限：** ohos.permission.GET_IP_MAC_INFO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-connection-function getSystemNetPortStates(): Promise<NetPortStatesInfo>--><!--Device-connection-function getSystemNetPortStates(): Promise<NetPortStatesInfo>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[NetPortStatesInfo](arkts-network-connection-netportstatesinfo-i.md)&gt; | Promise对象，返回系统当前监听的TCP、UDP端口信息。 |
+| 类型 |
+| --- |
+| Promise&lt;[NetPortStatesInfo](arkts-network-connection-netportstatesinfo-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
 **示例**
 
@@ -69,4 +69,3 @@ connection.getSystemNetPortStates().then((data: connection.NetPortStatesInfo) =>
   console.error(`Error fetching getSystemNetPortStates. Code:${error.code}, message:${error.message}`);
 });
 ```
-

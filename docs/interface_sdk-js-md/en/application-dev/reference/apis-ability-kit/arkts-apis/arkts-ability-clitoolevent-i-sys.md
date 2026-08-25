@@ -4,7 +4,7 @@ The event data of cli execute.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export interface CliToolEvent--><!--Device-unnamed-export interface CliToolEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -22,9 +22,9 @@ Tool event data.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-CliToolEvent-data: string--><!--Device-CliToolEvent-data: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -42,11 +42,10 @@ Tool event type.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-CliToolEvent-toolEventType: ToolEventType--><!--Device-CliToolEvent-toolEventType: ToolEventType-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
-

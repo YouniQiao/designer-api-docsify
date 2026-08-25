@@ -4,7 +4,7 @@ Enumerates the album types.
 
 **Since:** 12
 
-<!--Device-sendablePhotoAccessHelper-const enum AlbumType--><!--Device-sendablePhotoAccessHelper-const enum AlbumType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,8 @@ Smart analysis album.
 
 **Since:** 12
 
-<!--Device-AlbumType-SMART = 4096--><!--Device-AlbumType-SMART = 4096-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

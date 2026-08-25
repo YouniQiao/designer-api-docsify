@@ -4,7 +4,6 @@
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [TextModifier](arkts-arkui-textmodifier-c.md) | Defines Text Modifier |
-
+| 名称 |
+| --- |
+| [TextModifier](arkts-arkui-textmodifier-c.md) |

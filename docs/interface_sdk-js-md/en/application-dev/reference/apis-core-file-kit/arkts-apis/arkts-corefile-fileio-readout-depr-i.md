@@ -4,9 +4,9 @@ Obtains the file read result. This class applies only to the **read()** method.
 
 **Since:** 6
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-unnamed-declare interface ReadOut--><!--Device-unnamed-declare interface ReadOut-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -27,9 +27,9 @@ Buffer for storing the data read.
 
 **Since:** 6
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-ReadOut-buffer: ArrayBuffer--><!--Device-ReadOut-buffer: ArrayBuffer-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -45,9 +45,9 @@ Length of the data read, in bytes.
 
 **Since:** 6
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-ReadOut-bytesRead: number--><!--Device-ReadOut-bytesRead: number-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -63,9 +63,8 @@ Position of the buffer to which the data will be read relative to the start addr
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
-<!--Device-ReadOut-offset: number--><!--Device-ReadOut-offset: number-End-->
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
-

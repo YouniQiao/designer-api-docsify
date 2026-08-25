@@ -1,31 +1,27 @@
 # SetConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface SetConstructor--><!--Device-unnamed-interface SetConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
+## [[Construct]]
 
 ```TypeScript
 new <T>(iterable?: Iterable<T> | null): Set<T>
 ```
 
-**Since:** -1
-
-<!--Device-SetConstructor-new <T>(iterable?: Iterable<T> | null): Set<T>--><!--Device-SetConstructor-new <T>(iterable?: Iterable<T> | null): Set<T>-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| iterable | Iterable&lt;T&gt; \| null | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| iterable | Iterable & lt;T & gt; \ | null | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

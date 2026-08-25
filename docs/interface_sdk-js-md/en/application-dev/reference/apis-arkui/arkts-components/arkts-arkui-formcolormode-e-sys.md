@@ -4,7 +4,7 @@ Enumerates the card color modes.
 
 **Since:** 23
 
-<!--Device-unnamed-enum FormColorMode--><!--Device-unnamed-enum FormColorMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,9 +20,9 @@ Same with the system.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-FormColorMode-MODE_AUTO = -1--><!--Device-FormColorMode-MODE_AUTO = -1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,9 +38,9 @@ Dark.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-FormColorMode-MODE_DARK = 0--><!--Device-FormColorMode-MODE_DARK = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,11 +56,10 @@ Light.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-FormColorMode-MODE_LIGHT = 1--><!--Device-FormColorMode-MODE_LIGHT = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

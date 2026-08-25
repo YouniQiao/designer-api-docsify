@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [ContainerSpanModifier](arkts-arkui-containerspanmodifier-c.md) | Defines ContainerSpan Modifier@implements { ContainerSpanAttribute, AttributeModifier&lt;ContainerSpanAttribute&gt; } |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ContainerSpanModifier](arkts-arkui-containerspanmodifier-c.md) |

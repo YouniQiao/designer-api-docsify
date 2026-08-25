@@ -2,9 +2,9 @@
 
 音视频录制配置参数。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-interface AVRecorderProfile--><!--Device-unnamed-interface AVRecorderProfile-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -24,11 +24,10 @@ enableStableQualityMode?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-AVRecorderProfile-enableStableQualityMode?: boolean--><!--Device-AVRecorderProfile-enableStableQualityMode?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **系统接口：** 此接口为系统接口。
-

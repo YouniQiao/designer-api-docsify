@@ -13,25 +13,25 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 export function inWindow(bundleName: string): On
 ```
 
-Specifies the bundleName of the application which the window that the target Component is located belongs.
+Specifies that the target component is located within the given application window.
 
 **Since:** 23
 
-<!--Device-ON-export function inWindow(bundleName: string): On--><!--Device-ON-export function inWindow(bundleName: string): On-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleName | string | Yes | the bundleName of the specified window. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bundleName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | this { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **Examples**
 
@@ -41,4 +41,3 @@ import { On, ON } from '@kit.TestKit';
 
 let on: On = ON.inWindow('com.uitestScene.acts'); // Use the static constructor ON to create an On object and specify that the target component is located within the given application window.
 ```
-

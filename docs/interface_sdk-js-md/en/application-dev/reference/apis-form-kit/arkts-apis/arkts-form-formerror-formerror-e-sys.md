@@ -2,9 +2,9 @@
 
 Error of form.@enum { int }
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-formError-enum FormError--><!--Device-formError-enum FormError-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -16,11 +16,10 @@ ERR_DISTRIBUTED_SCHEDULE_FAILED = 37
 
 Distributed scheduling failed
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-FormError-ERR_DISTRIBUTED_SCHEDULE_FAILED = 37--><!--Device-FormError-ERR_DISTRIBUTED_SCHEDULE_FAILED = 37-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
-

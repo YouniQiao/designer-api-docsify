@@ -9,18 +9,16 @@ import { performanceMonitor } from '@kit.ArkUI';
 ## recordInputEventTime
 
 ```TypeScript
-function recordInputEventTime(type: ActionType, sourceType: SourceType, time: long): void
+function recordInputEventTime(type: ActionType, sourceType: SourceType, time: number): void
 ```
 
-recordInputEventTime monitoring an application scene.
+Records the trigger event type and time before the start of the animation scene.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-performanceMonitor-function recordInputEventTime(type: ActionType, sourceType: SourceType, time: long): void--><!--Device-performanceMonitor-function recordInputEventTime(type: ActionType, sourceType: SourceType, time: long): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,15 +26,26 @@ recordInputEventTime monitoring an application scene.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | ActionType | Yes | Indicates the scene input event type. |
-| sourceType | SourceType | Yes | Indicates the scene input source type. |
-| time | long | Yes | Indicates the scene input time. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md) | Yes |
+| sourceType | [SourceType](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-sourcetype-e.md) | Yes |
+| time | number | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
+**Examples**
+
+```TypeScript
+import { systemDateTime, BusinessError } from '@kit.BasicServicesKit';
+import { performanceMonitor } from '@kit.ArkUI';
+
+// Obtain the current system time.
+let time = systemDateTime.getTime(false);
+// Update the user trigger event type and time.
+performanceMonitor.recordInputEventTime(performanceMonitor.ActionType.LAST_UP, performanceMonitor.SourceType.PERF_MOUSE_EVENT, time);
+```

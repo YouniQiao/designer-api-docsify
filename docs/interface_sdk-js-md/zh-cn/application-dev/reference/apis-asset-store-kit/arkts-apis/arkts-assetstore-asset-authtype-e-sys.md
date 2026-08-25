@@ -4,7 +4,7 @@
 
 **起始版本：** 11
 
-<!--Device-asset-enum AuthType--><!--Device-asset-enum AuthType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -18,9 +18,8 @@ PRIVATE_PIN = 0x100
 
 **起始版本：** 26.0.0
 
-<!--Device-AuthType-PRIVATE_PIN = 0x100--><!--Device-AuthType-PRIVATE_PIN = 0x100-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
-

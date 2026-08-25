@@ -9,7 +9,7 @@ Defines the configuration object for text overflow behavior.
 
 **Since:** 18
 
-<!--Device-unnamed-declare interface TextOverflowOptions--><!--Device-unnamed-declare interface TextOverflowOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,11 +32,10 @@ Display mode of overflowing text.Default value: **TextOverflow.Clip**
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-TextOverflowOptions-overflow: TextOverflow--><!--Device-TextOverflowOptions-overflow: TextOverflow-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

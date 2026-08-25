@@ -8,11 +8,11 @@ Provides the detailed information of the permissions to request from the system.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** bundleInfo
-
-<!--Device-unnamed-export interface ReqPermissionDetail--><!--Device-unnamed-export interface ReqPermissionDetail-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -30,11 +30,11 @@ Name of the permission to request.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** name
-
-<!--Device-ReqPermissionDetail-name: string--><!--Device-ReqPermissionDetail-name: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -52,11 +52,11 @@ Reason for requesting the permission.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** reason
-
-<!--Device-ReqPermissionDetail-reason: string--><!--Device-ReqPermissionDetail-reason: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -74,11 +74,10 @@ Application scenario and timing for using the permission.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** usedScene
 
-<!--Device-ReqPermissionDetail-usedScene: UsedScene--><!--Device-ReqPermissionDetail-usedScene: UsedScene-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework
-

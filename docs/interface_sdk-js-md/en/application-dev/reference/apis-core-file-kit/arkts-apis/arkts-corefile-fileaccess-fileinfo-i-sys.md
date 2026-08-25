@@ -4,9 +4,9 @@ Provides APIs for managing file or directory attribute information.
 
 **Since:** 9
 
-**Deprecated since:** 23
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-fileAccess-interface FileInfo--><!--Device-fileAccess-interface FileInfo-End-->
+**Deprecated since:** 23
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -28,15 +28,15 @@ Obtains a **FileIterator** object that lists the next-level files or directories
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
-**Substitutes:** [listFile](../../apis-default/arkts-apis/arkts-fileio-listfile-f.md)
+**Substitutes:** [listFile](arkts-corefile-fileio-listfile-f.md)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileInfo-listFile(filter?: Filter): FileIterator--><!--Device-FileInfo-listFile(filter?: Filter): FileIterator-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -44,54 +44,54 @@ Obtains a **FileIterator** object that lists the next-level files or directories
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | No | Indicates the filter of file. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [FileIterator](arkts-corefile-fileaccess-fileiterator-i-sys.md) | Returns the FileIterator Object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [FileIterator](arkts-corefile-fileaccess-fileiterator-i-sys.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 14000001 |
+| 14000002 |
+| 14000003 |
+| 14000004 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -165,13 +165,13 @@ Obtains a **FileIterator** object that recursively retrieves the files matching 
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileInfo-scanFile(filter?: Filter): FileIterator--><!--Device-FileInfo-scanFile(filter?: Filter): FileIterator-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -179,54 +179,54 @@ Obtains a **FileIterator** object that recursively retrieves the files matching 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | No | Indicates the filter of file. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [FileIterator](arkts-corefile-fileaccess-fileiterator-i-sys.md) | Returns the FileIterator Object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [FileIterator](arkts-corefile-fileaccess-fileiterator-i-sys.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 14000001 |
+| 14000002 |
+| 14000003 |
+| 14000004 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -302,13 +302,13 @@ Name of the file or directory.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileInfo-fileName: string--><!--Device-FileInfo-fileName: string-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -326,13 +326,13 @@ Multipurpose Internet Mail Extensions (MIME) type of the file or directory.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileInfo-mimeType: string--><!--Device-FileInfo-mimeType: string-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -350,13 +350,13 @@ Permissions on the file or directory.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileInfo-mode: number--><!--Device-FileInfo-mode: number-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -374,13 +374,13 @@ Time when the file or directory was last modified. <br>Unit: ms.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileInfo-mtime: number--><!--Device-FileInfo-mtime: number-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -398,13 +398,13 @@ Relative path of the file or directory.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileInfo-relativePath: string--><!--Device-FileInfo-relativePath: string-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -422,13 +422,13 @@ Size of the file or directory. <br>Unit: Byte.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileInfo-size: number--><!--Device-FileInfo-size: number-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -446,15 +446,14 @@ URI of the file or directory.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FileInfo-uri: string--><!--Device-FileInfo-uri: string-End-->
-
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
-

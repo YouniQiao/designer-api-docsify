@@ -4,7 +4,7 @@ Provides the information about the nested scrollable containers.
 
 **Since:** 14
 
-<!--Device-unnamed-declare interface NestedScrollInfo--><!--Device-unnamed-declare interface NestedScrollInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Controller of the scrollable container nested within the target scrollable conta
 
 **Since:** 14
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-NestedScrollInfo-child: Scroller--><!--Device-NestedScrollInfo-child: Scroller-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ Controller of the target scrollable container.
 
 **Since:** 14
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-NestedScrollInfo-parent: Scroller--><!--Device-NestedScrollInfo-parent: Scroller-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

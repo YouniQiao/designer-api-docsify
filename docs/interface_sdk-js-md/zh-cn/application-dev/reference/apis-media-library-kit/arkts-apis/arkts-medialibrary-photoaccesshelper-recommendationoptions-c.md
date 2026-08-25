@@ -2,9 +2,9 @@
 
 图片推荐选项(基于图片数据分析结果，依赖设备适配)。
 
-**起始版本：** 26.0.0
+**起始版本：** 11
 
-<!--Device-photoAccessHelper-class RecommendationOptions--><!--Device-photoAccessHelper-class RecommendationOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -24,11 +24,11 @@ recommendationType?: RecommendationType
 
 **类型：** [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md)
 
-**起始版本：** 26.0.0
+**起始版本：** 11
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为26.0.0。
 
-<!--Device-RecommendationOptions-recommendationType?: RecommendationType--><!--Device-RecommendationOptions-recommendationType?: RecommendationType-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -42,11 +42,10 @@ textContextInfo?: TextContextInfo
 
 **类型：** [TextContextInfo](arkts-medialibrary-photoaccesshelper-textcontextinfo-i.md)
 
-**起始版本：** 26.0.0
+**起始版本：** 12
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为26.0.0。
 
-<!--Device-RecommendationOptions-textContextInfo?: TextContextInfo--><!--Device-RecommendationOptions-textContextInfo?: TextContextInfo-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

@@ -2,11 +2,11 @@
 
 Defines a vertical domain panel manager.@namespace verticalPanelManager
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-declare namespace verticalPanelManager--><!--Device-unnamed-declare namespace verticalPanelManager-End-->
 
 **System capability:** SystemCapability.Ability.AppExtension.VerticalPanel
 
@@ -23,38 +23,37 @@ import { verticalPanelManager } from '@kit.AbilityKit';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [startVerticalPanel](arkts-ability-verticalpanelmanager-startverticalpanel-f-sys.md) | Starts the vertical domain picker with panel config. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the caller application is in the background, it is not allowed to call this interface. |
-| [startVerticalPanel](arkts-ability-verticalpanelmanager-startverticalpanel-f-sys.md) | Starts the vertical domain picker with panel config. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the caller application is in the background, it is not allowed to call this interface. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [startVerticalPanel](arkts-ability-verticalpanelmanager-startverticalpanel-f-sys.md) |
+| [startVerticalPanel](arkts-ability-verticalpanelmanager-startverticalpanel-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [PanelConfig](arkts-ability-verticalpanelmanager-panelconfig-i-sys.md) | Indicates the panel config@interface PanelConfig |
-| [PanelStartCallback](arkts-ability-verticalpanelmanager-panelstartcallback-i-sys.md) | The callback of start vertical panel. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PanelConfig](arkts-ability-verticalpanelmanager-panelconfig-i-sys.md) |
+| [PanelStartCallback](arkts-ability-verticalpanelmanager-panelstartcallback-i-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [VerticalType](arkts-ability-verticalpanelmanager-verticaltype-e-sys.md) | Provides vertical type definition.@enum { string } VerticalType |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [VerticalType](arkts-ability-verticalpanelmanager-verticaltype-e-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Constants(System API)
 
-| Name | Description |
-| --- | --- |
-| [SOURCE_APP_BUNDLE_NAME](arkts-ability-verticalpanelmanager-con-sys.md#source_app_bundle_name) | export the const string of bundleName and provide it for sourceAppInfo. |
-| [SOURCE_APP_MODULE_NAME](arkts-ability-verticalpanelmanager-con-sys.md#source_app_module_name) | export the const string of moduleName and provide it for sourceAppInfo. |
-| [SOURCE_APP_ABILITY_NAME](arkts-ability-verticalpanelmanager-con-sys.md#source_app_ability_name) | export the const string of abilityName and provide it for sourceAppInfo. |
-| [SOURCE_APP_WINDOW_ID](arkts-ability-verticalpanelmanager-con-sys.md#source_app_window_id) | export the const string of windowId and provide it for sourceAppInfo. |
-| [SOURCE_APP_SCREEN_MODE](arkts-ability-verticalpanelmanager-con-sys.md#source_app_screen_mode) | export the const string of screenMode and provide it for sourceAppInfo. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SOURCE_APP_BUNDLE_NAME](arkts-ability-verticalpanelmanager-con-sys.md#source_app_bundle_name) |
+| [SOURCE_APP_MODULE_NAME](arkts-ability-verticalpanelmanager-con-sys.md#source_app_module_name) |
+| [SOURCE_APP_ABILITY_NAME](arkts-ability-verticalpanelmanager-con-sys.md#source_app_ability_name) |
+| [SOURCE_APP_WINDOW_ID](arkts-ability-verticalpanelmanager-con-sys.md#source_app_window_id) |
+| [SOURCE_APP_SCREEN_MODE](arkts-ability-verticalpanelmanager-con-sys.md#source_app_screen_mode) |
 <!--DelEnd-->
-

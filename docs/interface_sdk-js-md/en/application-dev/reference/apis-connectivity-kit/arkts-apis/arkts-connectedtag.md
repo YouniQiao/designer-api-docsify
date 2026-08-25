@@ -1,10 +1,10 @@
-# @ohos.connectedTag
+# @ohos.connectedTag(Active Tags)
 
 The **connectedTag** module provides APIs for using active tags. You can use the APIs to initialize the active tag chip and read and write active tags.
 
 **Since:** 8
 
-<!--Device-unnamed-declare namespace connectedTag--><!--Device-unnamed-declare namespace connectedTag-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.Communication.ConnectedTag
 
@@ -18,26 +18,25 @@ import { connectedTag } from '@kit.ConnectivityKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [init](arkts-connectivity-connectedtag-init-f.md) | Initializes the active tag chip. |
-| [initialize](arkts-connectivity-connectedtag-initialize-f.md) | Initializes the active tag chip. |
-| [off_notify](arkts-connectivity-connectedtag-offnotify-f.md#offnotify) | Unregisters the NFC field strength state events. |
-| [on_notify](arkts-connectivity-connectedtag-onnotify-f.md#onnotify) | Registers the NFC field strength state events. |
-| [read](arkts-connectivity-connectedtag-read-f.md) | Reads the content of this active tag. This API uses a promise to return the result. |
-| [read](arkts-connectivity-connectedtag-read-f.md) | Reads the content of this active tag. This API uses an asynchronous callback to return the result. |
-| [readNdefTag](arkts-connectivity-connectedtag-readndeftag-f.md) | Reads the content of this active tag. This API uses a promise to return the result. |
-| [readNdefTag](arkts-connectivity-connectedtag-readndeftag-f.md) | Reads the content of this active tag. This API uses an asynchronous callback to return the result. |
-| [uninit](arkts-connectivity-connectedtag-uninit-f.md) | Uninitializes the active tag resources. |
-| [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md) | Uninitializes the active tag resources. |
-| [write](arkts-connectivity-connectedtag-write-f.md) | Writes data to this active tag. This API uses a promise to return the result. |
-| [write](arkts-connectivity-connectedtag-write-f.md) | Writes data to this active tag. This API uses an asynchronous callback to return the result. |
-| [writeNdefTag](arkts-connectivity-connectedtag-writendeftag-f.md) | Writes data to this active tag. This API uses a promise to return the result. |
-| [writeNdefTag](arkts-connectivity-connectedtag-writendeftag-f.md) | Writes data to this active tag. This API uses an asynchronous callback to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [init(Active Tags)](arkts-connectivity-connectedtag-init-f.md) |
+| [initialize(Active Tags)](arkts-connectivity-connectedtag-initialize-f.md) |
+| [off(Active Tags)](arkts-connectivity-connectedtag-off-f.md#offnotify) |
+| [on(Active Tags)](arkts-connectivity-connectedtag-on-f.md#onnotify) |
+| [read(Active Tags)](arkts-connectivity-connectedtag-read-f.md) |
+| [read(Active Tags)](arkts-connectivity-connectedtag-read-f.md) |
+| [readNdefTag(Active Tags)](arkts-connectivity-connectedtag-readndeftag-f.md) |
+| [readNdefTag(Active Tags)](arkts-connectivity-connectedtag-readndeftag-f.md) |
+| [uninit(Active Tags)](arkts-connectivity-connectedtag-uninit-f.md) |
+| [uninitialize(Active Tags)](arkts-connectivity-connectedtag-uninitialize-f.md) |
+| [write(Active Tags)](arkts-connectivity-connectedtag-write-f.md) |
+| [write(Active Tags)](arkts-connectivity-connectedtag-write-f.md) |
+| [writeNdefTag(Active Tags)](arkts-connectivity-connectedtag-writendeftag-f.md) |
+| [writeNdefTag(Active Tags)](arkts-connectivity-connectedtag-writendeftag-f.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [NfcRfType](arkts-connectivity-connectedtag-nfcrftype-e.md) | Enumerates the NFC field strength states. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [NfcRfType(Active Tags)](arkts-connectivity-connectedtag-nfcrftype-e.md) |

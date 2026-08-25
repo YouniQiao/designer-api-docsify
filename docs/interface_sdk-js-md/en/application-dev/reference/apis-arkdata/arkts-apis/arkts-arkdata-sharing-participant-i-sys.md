@@ -2,9 +2,9 @@
 
 Represents information about a participant of device-cloud sharing.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-sharing-interface Participant--><!--Device-sharing-interface Participant-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -26,9 +26,9 @@ Additional information, such as the verification code used for participant ident
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Participant-attachInfo?: string--><!--Device-Participant-attachInfo?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -44,9 +44,9 @@ ID of the participant.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Participant-identity: string--><!--Device-Participant-identity: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -62,9 +62,9 @@ Permissions on the shared data. The Privilege defaults are used by default.
 
 **Type:** [Privilege](arkts-arkdata-sharing-privilege-i-sys.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Participant-privilege?: Privilege--><!--Device-Participant-privilege?: Privilege-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -80,9 +80,9 @@ Role of the participant, inviter or invitee. The default value is undefined.
 
 **Type:** Role
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Participant-role?: Role--><!--Device-Participant-role?: Role-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -98,11 +98,10 @@ State of the device-cloud sharing. The default value is undefined.
 
 **Type:** State
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Participant-state?: State--><!--Device-Participant-state?: State-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **System API:** This is a system API.
-

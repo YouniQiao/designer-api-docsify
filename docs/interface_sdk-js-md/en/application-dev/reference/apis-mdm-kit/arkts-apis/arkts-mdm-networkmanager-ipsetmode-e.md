@@ -4,7 +4,7 @@ Enumerates Ethernet connection configuration modes.
 
 **Since:** 23
 
-<!--Device-networkManager-enum IpSetMode--><!--Device-networkManager-enum IpSetMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,9 +18,9 @@ Static configuration of network information for Ethernet connection. When this m
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-IpSetMode-STATIC = 0--><!--Device-IpSetMode-STATIC = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -34,9 +34,8 @@ Dynamic configuration of network information for Ethernet connection. When this 
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-IpSetMode-DHCP = 1--><!--Device-IpSetMode-DHCP = 1-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

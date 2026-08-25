@@ -8,13 +8,12 @@ Defines the Vector2T type. The Vector2T type contains two attribute values: x an
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-unnamed-declare type Vector2T<T> = import('../api/arkui/Graphics').Vector2T<T>--><!--Device-unnamed-declare type Vector2T<T> = import('../api/arkui/Graphics').Vector2T<T>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** import('../api/arkui/Graphics').Vector2T&lt;T&gt;
-

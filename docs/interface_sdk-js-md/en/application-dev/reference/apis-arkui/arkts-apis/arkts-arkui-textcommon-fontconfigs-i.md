@@ -4,9 +4,7 @@ Defines the configuration of font.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export declare interface FontConfigs--><!--Device-unnamed-export declare interface FontConfigs-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +20,8 @@ Defines font weight configurations.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FontConfigs-fontWeightConfigs?: FontWeightConfigs--><!--Device-FontConfigs-fontWeightConfigs?: FontWeightConfigs-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

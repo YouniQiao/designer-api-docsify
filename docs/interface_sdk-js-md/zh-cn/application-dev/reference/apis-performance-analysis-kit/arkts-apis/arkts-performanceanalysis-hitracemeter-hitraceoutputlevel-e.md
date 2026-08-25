@@ -2,9 +2,9 @@
 
 枚举，跟踪输出级别。低于系统跟踪输出级别阈值的打点将不会生效。log版本阈值为INFO；nolog版本阈值为COMMERCIAL。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-hiTraceMeter-enum HiTraceOutputLevel--><!--Device-hiTraceMeter-enum HiTraceOutputLevel-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
@@ -16,11 +16,11 @@ DEBUG = 0
 
 仅用于调试的输出级别，优先级最低。低于系统跟踪输出级别阈值时打点不会生效。
 
-**起始版本：** 23
+**起始版本：** 19
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
-<!--Device-HiTraceOutputLevel-DEBUG = 0--><!--Device-HiTraceOutputLevel-DEBUG = 0-End-->
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
@@ -32,11 +32,11 @@ INFO = 1
 
 用于log版本的输出级别，log版本阈值为INFO。
 
-**起始版本：** 23
+**起始版本：** 19
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
-<!--Device-HiTraceOutputLevel-INFO = 1--><!--Device-HiTraceOutputLevel-INFO = 1-End-->
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
@@ -48,11 +48,11 @@ CRITICAL = 2
 
 用于log版本的输出级别，优先级高于INFO，用于需要重点关注的trace事件。
 
-**起始版本：** 23
+**起始版本：** 19
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
-<!--Device-HiTraceOutputLevel-CRITICAL = 2--><!--Device-HiTraceOutputLevel-CRITICAL = 2-End-->
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
@@ -64,11 +64,11 @@ COMMERCIAL = 3
 
 用于nolog版本的输出级别，优先级最高。nolog版本阈值为COMMERCIAL。
 
-**起始版本：** 23
+**起始版本：** 19
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
-<!--Device-HiTraceOutputLevel-COMMERCIAL = 3--><!--Device-HiTraceOutputLevel-COMMERCIAL = 3-End-->
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
@@ -80,11 +80,10 @@ MAX = COMMERCIAL
 
 输出级别范围限制，MAX = COMMERCIAL。
 
-**起始版本：** 23
+**起始版本：** 19
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
-<!--Device-HiTraceOutputLevel-MAX = COMMERCIAL--><!--Device-HiTraceOutputLevel-MAX = COMMERCIAL-End-->
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
-

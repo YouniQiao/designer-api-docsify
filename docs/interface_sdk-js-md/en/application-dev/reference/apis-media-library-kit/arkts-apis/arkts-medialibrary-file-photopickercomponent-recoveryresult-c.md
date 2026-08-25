@@ -4,7 +4,7 @@ RecoveryResult
 
 **Since:** 26.1.0
 
-<!--Device-unnamed-export declare class RecoveryResult--><!--Device-unnamed-export declare class RecoveryResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,11 +26,11 @@ Name of the restored album.
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-RecoveryResult-albumName: string--><!--Device-RecoveryResult-albumName: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -46,11 +46,10 @@ URI of the restored album.
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
-<!--Device-RecoveryResult-albumUri: string--><!--Device-RecoveryResult-albumUri: string-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

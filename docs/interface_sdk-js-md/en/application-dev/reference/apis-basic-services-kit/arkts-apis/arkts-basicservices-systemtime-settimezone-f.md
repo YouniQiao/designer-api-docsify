@@ -16,28 +16,28 @@ Sets the system time zone. This API uses an asynchronous callback to return the 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [setTimezone](arkts-basicservices-systemdatetime-settimezone-f-sys.md)
 
 **Required permissions:** ohos.permission.SET_TIME_ZONE
 
-<!--Device-systemTime-function setTimezone(timezone: string, callback: AsyncCallback<void>): void--><!--Device-systemTime-function setTimezone(timezone: string, callback: AsyncCallback<void>): void-End-->
-
 **System capability:** SystemCapability.MiscServices.Time
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| timezone | string | Yes | System time zone to set. For details, see Supported System Time Zones. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| timezone | string | Yes |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| -1 | Parameter check failed, permission denied, or system error. |
+| Error Code ID |
+| --- |
+| -1 |
 
 **Examples**
 
@@ -84,35 +84,34 @@ Sets the system time zone. This API uses a promise to return the result.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [setTimezone](arkts-basicservices-systemdatetime-settimezone-f-sys.md)
 
 **Required permissions:** ohos.permission.SET_TIME_ZONE
 
-<!--Device-systemTime-function setTimezone(timezone: string): Promise<void>--><!--Device-systemTime-function setTimezone(timezone: string): Promise<void>-End-->
-
 **System capability:** SystemCapability.MiscServices.Time
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| timezone | string | Yes | System time zone to set. For details, see Supported System Time Zones. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| timezone | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| -1 | Parameter check failed, permission denied, or system error. |
+| Error Code ID |
+| --- |
+| -1 |
 
 **Examples**
 
 See [setTimezone](#settimezone)
-

@@ -4,7 +4,7 @@ Define the smart gesture's operation intention.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare enum OperateIntention--><!--Device-unnamed-declare enum OperateIntention-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Tap intention.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OperateIntention-TAP = 0--><!--Device-OperateIntention-TAP = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Slide forward intention.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OperateIntention-SLIDE_FORWARD = 1--><!--Device-OperateIntention-SLIDE_FORWARD = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ Back press intention.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-OperateIntention-BACK_PRESS = 2--><!--Device-OperateIntention-BACK_PRESS = 2-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

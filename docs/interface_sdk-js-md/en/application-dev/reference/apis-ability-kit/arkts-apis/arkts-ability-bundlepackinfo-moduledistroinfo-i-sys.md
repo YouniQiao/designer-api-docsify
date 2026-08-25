@@ -2,9 +2,9 @@
 
 ModuleDistroInfo: the bundle info summary class.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export interface ModuleDistroInfo--><!--Device-unnamed-export interface ModuleDistroInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -20,9 +20,9 @@ Whether it should be installed together with the application. **true** if it sho
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ModuleDistroInfo-readonly deliveryWithInstall: boolean--><!--Device-ModuleDistroInfo-readonly deliveryWithInstall: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -38,9 +38,9 @@ Whether the HAP file supports the installation-free feature. **true** if the HAP
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ModuleDistroInfo-readonly installationFree: boolean--><!--Device-ModuleDistroInfo-readonly installationFree: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -56,9 +56,9 @@ Module name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ModuleDistroInfo-readonly moduleName: string--><!--Device-ModuleDistroInfo-readonly moduleName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -74,11 +74,10 @@ Module type.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ModuleDistroInfo-readonly moduleType: string--><!--Device-ModuleDistroInfo-readonly moduleType: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
-

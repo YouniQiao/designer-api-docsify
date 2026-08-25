@@ -22,7 +22,7 @@
 | -- | -- | -- |
 | [DRM_MediaKeyRequestInfo](capi-drm-drm-mediakeyrequestinfo.md) | DRM_MediaKeyRequestInfo | 媒体密钥请求信息。 |
 | [DRM_MediaKeyRequest](capi-drm-drm-mediakeyrequest.md) | DRM_MediaKeyRequest | 媒体密钥请求。 |
-| [DRM_Statistics](capi-drm-drm-statistics.md) | DRM_Statistics | MediaKeySystem的统计信息。 |
+| [DRM_Statistics](capi-drm-drm-statistics.md) | DRM_Statistics | MediaKeySystem的度量信息。 |
 | [DRM_OfflineMediakeyIdArray](capi-drm-drm-offlinemediakeyidarray.md) | DRM_OfflineMediakeyIdArray | 离线媒体密钥ID数组。 |
 | [DRM_KeysInfo](capi-drm-drm-keysinfo.md) | DRM_KeysInfo | 媒体密钥信息。 |
 | [DRM_MediaKeyStatus](capi-drm-drm-mediakeystatus.md) | DRM_MediaKeyStatus | 媒体密钥状态。 |

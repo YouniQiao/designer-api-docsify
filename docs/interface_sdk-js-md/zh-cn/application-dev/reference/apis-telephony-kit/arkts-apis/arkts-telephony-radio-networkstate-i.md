@@ -2,9 +2,9 @@
 
 网络注册状态。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-radio-export interface NetworkState--><!--Device-radio-export interface NetworkState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -24,9 +24,9 @@ cfgTech: RadioTechnology
 
 **类型：** [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-NetworkState-cfgTech: RadioTechnology--><!--Device-NetworkState-cfgTech: RadioTechnology-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -40,9 +40,9 @@ CA的状态。
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkState-isCaActive: boolean--><!--Device-NetworkState-isCaActive: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -56,9 +56,9 @@ isEmergency: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkState-isEmergency: boolean--><!--Device-NetworkState-isEmergency: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -72,9 +72,9 @@ isRoaming: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkState-isRoaming: boolean--><!--Device-NetworkState-isRoaming: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -88,9 +88,9 @@ longOperatorName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkState-longOperatorName: string--><!--Device-NetworkState-longOperatorName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -104,9 +104,9 @@ nsaState: NsaState
 
 **类型：** [NsaState](arkts-telephony-radio-nsastate-e.md)
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkState-nsaState: NsaState--><!--Device-NetworkState-nsaState: NsaState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -120,9 +120,9 @@ plmnNumeric: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkState-plmnNumeric: string--><!--Device-NetworkState-plmnNumeric: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -136,9 +136,9 @@ regState: RegState
 
 **类型：** [RegState](arkts-telephony-radio-regstate-e.md)
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkState-regState: RegState--><!--Device-NetworkState-regState: RegState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -152,9 +152,8 @@ shortOperatorName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkState-shortOperatorName: string--><!--Device-NetworkState-shortOperatorName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
-

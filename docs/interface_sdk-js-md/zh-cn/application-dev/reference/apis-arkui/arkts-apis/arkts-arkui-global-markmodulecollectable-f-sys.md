@@ -15,9 +15,9 @@ Mark moduleNamespace which loaded by dynamic-import is collectable.
 
 **起始版本：** 10
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-unnamed-export declare function markModuleCollectable(namespace: Object): void--><!--Device-unnamed-export declare function markModuleCollectable(namespace: Object): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,13 +25,12 @@ Mark moduleNamespace which loaded by dynamic-import is collectable.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| namespace | Object | 是 | moduleNamespace to be marked. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| namespace | Object | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | if type of object is not moduleNameSpace. |
-
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |

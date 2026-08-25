@@ -21,33 +21,33 @@ declare function listFileExt(
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-unnamed-declare function listFileExt(  path: string,  options?: ListFileExtOptions): Promise<string[]>--><!--Device-unnamed-declare function listFileExt(  path: string,  options?: ListFileExtOptions): Promise<string[]>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 目录的应用沙箱路径。 |
-| options | [ListFileExtOptions](arkts-corefile-file-fs-listfileextoptions-i.md) | 否 | 文件列出选项。默认为空，表示不递归、不限制列出数量、不进行过滤。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| path | string | 是 |
+| options | [ListFileExtOptions](arkts-corefile-file-fs-listfileextoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string[]&gt; | Promise used to return the file names listed. |
+| 类型 |
+| --- |
+| Promise & lt;string[] & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900002 | No such file or directory |
-| 13900011 | Out of memory |
-| 13900018 | Not a directory |
-| 13900020 | Invalid argument |
+| 错误码ID |
+| --- |
+| 13900002 |
+| 13900011 |
+| 13900018 |
+| 13900020 |
 
 **示例**
 
@@ -75,4 +75,3 @@ fileIo.listFileExt(pathDir, options).then((filenames: Array<string>) => {
   console.error(`Failed to list file. Code: ${err.code}, message: ${err.message}`);
 });
 ```
-

@@ -2,9 +2,9 @@
 
 ContinueCallback registered for notify continue result.@interface ContinueCallback
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export interface ContinueCallback--><!--Device-unnamed-export interface ContinueCallback-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -18,15 +18,39 @@ onContinueDone: OnContinueDoneCallback
 
 Called by system when continue mission done.
 
-**Type:** [OnContinueDoneCallback](arkts-ability-oncontinuedonecallback-t-sys.md)
+**Since:** 9
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ContinueCallback-onContinueDone: OnContinueDoneCallback--><!--Device-ContinueCallback-onContinueDone: OnContinueDoneCallback-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
 
+**Examples**
+
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+distributedMissionManager.continueMission(
+  {
+    srcDeviceId: '123',
+    dstDeviceId: '456',
+    missionId: 123,
+    wantParam: {
+      'key': 'value'
+    }
+  },
+  {
+    onContinueDone(result: number) {
+      console.info(`onContinueDone, result: ${JSON.stringify(result)}`);
+    }
+  }, (error: BusinessError) => {
+  if (error && error.code) {
+    console.error(`continueMission failed, error.code: ${error.code}, error.message: ${error.message}`);
+  }
+  console.info(`continueMission finished`);
+});
+```

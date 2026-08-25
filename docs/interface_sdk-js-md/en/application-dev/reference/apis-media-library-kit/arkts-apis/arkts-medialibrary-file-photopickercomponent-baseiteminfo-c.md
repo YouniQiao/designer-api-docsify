@@ -4,7 +4,7 @@ Represents basic image and video information.
 
 **Since:** 12
 
-<!--Device-unnamed-export declare class BaseItemInfo--><!--Device-unnamed-export declare class BaseItemInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -20,15 +20,15 @@ import { PhotoPickerComponent, PickerController, PickerOptions, DataType, BaseIt
 duration?: number
 ```
 
-Video duration, in milliseconds. In versions earlier than API version 23, the value of **duration** is **0** for moving photos. In API version 23 and later versions, the value of **duration** is the duration of the video clip attached to moving photos. If an exception occurs, **-1** is returned.This parameter is supported only when [ItemType](../../apis-default/arkts-apis/arkts-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
+Video duration, in milliseconds. In versions earlier than API version 23, the value of **duration** is **0** for moving photos. In API version 23 and later versions, the value of **duration** is the duration of the video clip attached to moving photos. If an exception occurs, **-1** is returned.This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **Type:** number
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-BaseItemInfo-duration?: number--><!--Device-BaseItemInfo-duration?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -44,9 +44,9 @@ Dynamic range type of the media file. The options are **HDR** and **SDR**.For mo
 
 **Since:** 21
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.1.0.
 
-<!--Device-BaseItemInfo-dynamicRangeType?: photoAccessHelper.DynamicRangeType--><!--Device-BaseItemInfo-dynamicRangeType?: photoAccessHelper.DynamicRangeType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -56,15 +56,15 @@ Dynamic range type of the media file. The options are **HDR** and **SDR**.For mo
 height?: number
 ```
 
-Height of the image or video, in px.This parameter is supported only when [ItemType](../../apis-default/arkts-apis/arkts-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
+Height of the image or video, in px.This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **Type:** number
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-BaseItemInfo-height?: number--><!--Device-BaseItemInfo-height?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -74,15 +74,15 @@ Height of the image or video, in px.This parameter is supported only when [ItemT
 mimeType?: string
 ```
 
-MIME type of the image or video.This parameter is supported only when [ItemType](../../apis-default/arkts-apis/arkts-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.You can determine the media type based on the prefix of the **mimeType** string. If the string starts with "image/", it indicates an image. If the string starts with "video/", it indicates a video. For details, see [Identifying Asset Types Using the mimeType Field](../../../media/medialibrary/medialibrary-faqs/medialibrary-asset-judgment-faq.md#identifying-asset-types-using-the-mimetype-field).
+MIME type of the image or video.This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.You can determine the media type based on the prefix of the **mimeType** string. If the string starts with "image/", it indicates an image. If the string starts with "video/", it indicates a video. For details, see [Identifying Asset Types Using the mimeType Field](../../../media/medialibrary/medialibrary-faqs/medialibrary-asset-judgment-faq.md#identifying-asset-types-using-the-mimetype-field).
 
 **Type:** string
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-BaseItemInfo-mimeType?: string--><!--Device-BaseItemInfo-mimeType?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -92,15 +92,15 @@ MIME type of the image or video.This parameter is supported only when [ItemType]
 movingPhotoBadgeState?: photoAccessHelper.MovingPhotoBadgeStateType
 ```
 
-State of the moving photo badge.This parameter is supported only when [ItemType](../../apis-default/arkts-apis/arkts-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
+State of the moving photo badge.This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **Type:** photoAccessHelper.MovingPhotoBadgeStateType
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
-<!--Device-BaseItemInfo-movingPhotoBadgeState?: photoAccessHelper.MovingPhotoBadgeStateType--><!--Device-BaseItemInfo-movingPhotoBadgeState?: photoAccessHelper.MovingPhotoBadgeStateType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -116,9 +116,9 @@ Image or video direction information.1: **TOP-left**: The image is not rotated.2
 
 **Since:** 21
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.1.0.
 
-<!--Device-BaseItemInfo-orientation?: number--><!--Device-BaseItemInfo-orientation?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -134,9 +134,9 @@ Subtype of the photo. The options are **DEFAULT**, **MOVING_PHOTO**, and **BURST
 
 **Since:** 21
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.1.0.
 
-<!--Device-BaseItemInfo-photoSubType?: photoAccessHelper.PhotoSubtype--><!--Device-BaseItemInfo-photoSubType?: photoAccessHelper.PhotoSubtype-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -146,17 +146,17 @@ Subtype of the photo. The options are **DEFAULT**, **MOVING_PHOTO**, and **BURST
 size?: number
 ```
 
-Size of the image or video, in bytes.This parameter is supported only when [ItemType](../../apis-default/arkts-apis/arkts-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
+Size of the image or video, in bytes.This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **Type:** number
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-BaseItemInfo-size?: number--><!--Device-BaseItemInfo-size?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -166,16 +166,16 @@ Size of the image or video, in bytes.This parameter is supported only when [Item
 uri?: string
 ```
 
-URI of the image or video.This parameter is supported only when [ItemType](../../apis-default/arkts-apis/arkts-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.  
+URI of the image or video.This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.  
 **NOTE：**If the resource is a burst shot photo, only the cover image of the burst shot photo group is returned.
 
 **Type:** string
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-BaseItemInfo-uri?: string--><!--Device-BaseItemInfo-uri?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -191,9 +191,9 @@ Log mode of a video file.
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
-<!--Device-BaseItemInfo-videoMode?: photoAccessHelper.VideoMode--><!--Device-BaseItemInfo-videoMode?: photoAccessHelper.VideoMode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -203,15 +203,14 @@ Log mode of a video file.
 width?: number
 ```
 
-Width of the image or video, in px.This parameter is supported only when [ItemType](../../apis-default/arkts-apis/arkts-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
+Width of the image or video, in px.This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **Type:** number
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-BaseItemInfo-width?: number--><!--Device-BaseItemInfo-width?: number-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

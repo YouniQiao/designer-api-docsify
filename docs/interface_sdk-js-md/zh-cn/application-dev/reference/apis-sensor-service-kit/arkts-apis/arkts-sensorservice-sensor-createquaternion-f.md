@@ -21,20 +21,20 @@ function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md)(rotationVector: Array&lt;double&gt;, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
-
-<!--Device-sensor-function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rotationVector | Array&lt;number&gt; | 是 | 表示旋转矢量。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 | 异步返回四元数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| rotationVector | Array & lt;number & gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 |
 
 **示例**
 
@@ -84,27 +84,26 @@ function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md)(rotationVector: Array&lt;double&gt;)
-
-<!--Device-sensor-function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>--><!--Device-sensor-function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rotationVector | Array&lt;number&gt; | 是 | 表示旋转矢量。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| rotationVector | Array & lt;number & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | 使用异步方式返回四元数。 |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **示例**
 
 参见 [createQuaternion](#createquaternion)
-

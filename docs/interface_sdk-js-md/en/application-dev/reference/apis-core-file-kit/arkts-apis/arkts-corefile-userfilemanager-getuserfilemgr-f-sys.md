@@ -16,13 +16,13 @@ Obtains a **UserFileManager** instance. This instance can be used to access and 
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [getPhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md)
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-userFileManager-function getUserFileMgr(context: Context): UserFileManager--><!--Device-userFileManager-function getUserFileMgr(context: Context): UserFileManager-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -30,15 +30,15 @@ Obtains a **UserFileManager** instance. This instance can be used to access and 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [UserFileManager](arkts-corefile-userfilemanager-userfilemanager-i-sys.md) | UserFileManager** instance obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [UserFileManager](arkts-corefile-userfilemanager-userfilemanager-i-sys.md) |
 
 **Examples**
 
@@ -61,4 +61,3 @@ struct Index {
   }
 }
 ```
-

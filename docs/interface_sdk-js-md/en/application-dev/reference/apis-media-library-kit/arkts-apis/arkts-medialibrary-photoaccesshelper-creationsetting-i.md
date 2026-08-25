@@ -2,9 +2,9 @@
 
 Represents the configuration for saving images or videos to the media library, including the file name, file type, and other related parameters.
 
-**Since:** 26.0.0
+**Since:** 23
 
-<!--Device-photoAccessHelper-export interface CreationSetting--><!--Device-photoAccessHelper-export interface CreationSetting-End-->
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -24,13 +24,13 @@ File name extension, for example, **'jpg'**.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CreationSetting-fileNameExtension: string--><!--Device-CreationSetting-fileNameExtension: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -44,13 +44,13 @@ photoType: PhotoType
 
 **Type:** PhotoType
 
-**Since:** 26.0.0
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CreationSetting-photoType: PhotoType--><!--Device-CreationSetting-photoType: PhotoType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -65,13 +65,12 @@ Title of the image or video.If this parameter is not passed, the system generate
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CreationSetting-title?: string--><!--Device-CreationSetting-title?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

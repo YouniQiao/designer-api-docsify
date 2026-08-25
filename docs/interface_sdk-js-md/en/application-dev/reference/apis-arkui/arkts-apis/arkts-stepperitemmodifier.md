@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [StepperItemModifier](arkts-arkui-stepperitemmodifier-c.md) | Defines StepperItem Modifier@extends StepperItemAttribute @implements AttributeModifier&lt;StepperItemAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [StepperItemModifier](arkts-arkui-stepperitemmodifier-c.md) |

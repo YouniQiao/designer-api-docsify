@@ -14,36 +14,36 @@ function getRadioTechSync(slotId: int): NetworkRadioTech
 
 获取当前接入的CS域和PS域无线接入技术。CS域为电路交换域，PS为分组交换域。
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
-
-<!--Device-radio-function getRadioTechSync(slotId: int): NetworkRadioTech--><!--Device-radio-function getRadioTechSync(slotId: int): NetworkRadioTech-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [NetworkRadioTech](arkts-telephony-radio-networkradiotech-i.md) | 返回当前接入的CS域和PS域技术。CS域为电路交换域，PS为分组交换域。 |
+| 类型 |
+| --- |
+| [NetworkRadioTech](arkts-telephony-radio-networkradiotech-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
 **示例**
 
@@ -52,4 +52,3 @@ let slotId: number = 0;
 let networkRadioTech: radio.NetworkRadioTech = radio.getRadioTechSync(slotId);
 console.info(`getRadioTechSync success, NetworkRadioTech->${JSON.stringify(networkRadioTech)}`);
 ```
-

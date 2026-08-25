@@ -9,9 +9,9 @@ Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kd
 
 **Inheritance/Implementation:** ScryptSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-cryptoFramework-interface ScryptSpec--><!--Device-cryptoFramework-interface ScryptSpec-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -29,13 +29,13 @@ keySize: int
 
 Length of the derived key, in bytes. The value must be a positive integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-ScryptSpec-keySize: int--><!--Device-ScryptSpec-keySize: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -47,13 +47,13 @@ maxMemory: long
 
 Maximum memory size, in bytes. The value must be a positive integer.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-ScryptSpec-maxMemory: long--><!--Device-ScryptSpec-maxMemory: long-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -65,13 +65,13 @@ n: long
 
 CPU/memory cost parameter. The value must be a positive integer.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-ScryptSpec-n: long--><!--Device-ScryptSpec-n: long-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -83,13 +83,13 @@ p: long
 
 Parallelization parameter. The value must be a positive integer.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-ScryptSpec-p: long--><!--Device-ScryptSpec-p: long-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -103,11 +103,11 @@ Original password entered by the user.
 
 **Type:** string \| Uint8Array
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-ScryptSpec-passphrase: string | Uint8Array--><!--Device-ScryptSpec-passphrase: string | Uint8Array-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -119,13 +119,13 @@ r: long
 
 Block size. The value must be a positive integer.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-ScryptSpec-r: long--><!--Device-ScryptSpec-r: long-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -139,11 +139,10 @@ Salt value.
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-ScryptSpec-salt: Uint8Array--><!--Device-ScryptSpec-salt: Uint8Array-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
-

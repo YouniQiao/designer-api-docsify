@@ -4,7 +4,7 @@ Represents the update notification defined by an enterprise.
 
 **Since:** 12
 
-<!--Device-systemManager-interface NotifyDescription--><!--Device-systemManager-interface NotifyDescription-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -26,9 +26,9 @@ Update tips provided by the enterprise.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-NotifyDescription-installTips?: string--><!--Device-NotifyDescription-installTips?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -44,9 +44,8 @@ Details about the update tips customized by the enterprise.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NotifyDescription-installTipsDetail?: string--><!--Device-NotifyDescription-installTipsDetail?: string-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

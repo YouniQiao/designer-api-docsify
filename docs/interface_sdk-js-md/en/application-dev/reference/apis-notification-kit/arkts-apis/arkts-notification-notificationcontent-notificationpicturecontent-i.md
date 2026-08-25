@@ -15,9 +15,9 @@ Describes the picture-attached notification. This API is inherited from Notifica
 
 **Inheritance/Implementation:** NotificationPictureContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-export interface NotificationPictureContent--><!--Device-unnamed-export interface NotificationPictureContent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -31,9 +31,9 @@ Notification summary content, which is a summary of the notification content and
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationPictureContent-briefText: string--><!--Device-NotificationPictureContent-briefText: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -47,9 +47,9 @@ Title when the notification is expanded. It cannot be an empty string. The size 
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationPictureContent-expandedTitle: string--><!--Device-NotificationPictureContent-expandedTitle: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -63,9 +63,8 @@ Picture content displayed after the notification is expanded. The total bytes of
 
 **Type:** image.PixelMap
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationPictureContent-picture: image.PixelMap--><!--Device-NotificationPictureContent-picture: image.PixelMap-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
-

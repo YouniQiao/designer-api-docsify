@@ -2,9 +2,9 @@
 
 Defines the mouse pointer position for screen hopping.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-cooperate-interface MouseLocation--><!--Device-cooperate-interface MouseLocation-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -24,11 +24,11 @@ displayHeight: int
 
 Screen height, in pixels.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MouseLocation-displayHeight: int--><!--Device-MouseLocation-displayHeight: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -42,11 +42,11 @@ displayWidth: int
 
 Screen width, in pixels.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MouseLocation-displayWidth: int--><!--Device-MouseLocation-displayWidth: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -60,11 +60,11 @@ displayX: int
 
 Position of the mouse pointer on the X coordinate of the screen.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MouseLocation-displayX: int--><!--Device-MouseLocation-displayX: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -78,13 +78,12 @@ displayY: int
 
 Position of the mouse pointer on the Y coordinate of the screen.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MouseLocation-displayY: int--><!--Device-MouseLocation-displayY: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **System API:** This is a system API.
-

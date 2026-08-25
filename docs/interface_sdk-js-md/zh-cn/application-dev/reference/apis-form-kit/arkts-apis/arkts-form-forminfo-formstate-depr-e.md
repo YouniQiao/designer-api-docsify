@@ -4,11 +4,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [FormState](arkts-form-forminfo-formstate-e.md)
-
-<!--Device-formInfo-enum FormState--><!--Device-formInfo-enum FormState-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -22,11 +22,11 @@ UNKNOWN = -1
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [UNKNOWN](arkts-form-forminfo-formstate-e.md#unknown)
-
-<!--Device-FormState-UNKNOWN = -1--><!--Device-FormState-UNKNOWN = -1-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -40,11 +40,11 @@ DEFAULT = 0
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [DEFAULT](arkts-form-forminfo-formstate-e.md#default)
-
-<!--Device-FormState-DEFAULT = 0--><!--Device-FormState-DEFAULT = 0-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -58,11 +58,10 @@ READY = 1
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [READY](arkts-form-forminfo-formstate-e.md#ready)
 
-<!--Device-FormState-READY = 1--><!--Device-FormState-READY = 1-End-->
-
 **系统能力：** SystemCapability.Ability.Form
-

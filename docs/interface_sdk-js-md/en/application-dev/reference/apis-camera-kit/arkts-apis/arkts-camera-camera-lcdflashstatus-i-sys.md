@@ -2,9 +2,9 @@
 
 Describes the LCD flash information.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-camera-interface LcdFlashStatus--><!--Device-camera-interface LcdFlashStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -26,9 +26,9 @@ Whether the LCD flash is required. **true** if required, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-LcdFlashStatus-readonly isLcdFlashNeeded: boolean--><!--Device-LcdFlashStatus-readonly isLcdFlashNeeded: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -42,13 +42,12 @@ readonly lcdCompensation: int
 
 LCD flash compensation.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-LcdFlashStatus-readonly lcdCompensation: int--><!--Device-LcdFlashStatus-readonly lcdCompensation: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

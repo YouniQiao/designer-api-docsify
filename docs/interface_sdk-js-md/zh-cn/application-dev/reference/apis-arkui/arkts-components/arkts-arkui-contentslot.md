@@ -13,24 +13,23 @@ ContentSlot(content: Content)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ContentSlotInterface-(content: Content): ContentSlotAttribute--><!--Device-ContentSlotInterface-(content: Content): ContentSlotAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| content | [Content](arkts-arkui-content-t.md) | 是 | Content作为ContentSlot的管理器，通过Native侧提供的接口，可以注册并触发ContentSlot的上下树（即组件节点加入或移出组件渲染树）事件回调以及管 理ContentSlot的子组件。 |
+| 参数名 | [类型](#类型) | 必填 |
+| --- | --- | --- |
+| content | [Content](arkts-arkui-content-t.md) | 是 |
 
 ## 汇总
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-
+| 名称 |
+| --- |

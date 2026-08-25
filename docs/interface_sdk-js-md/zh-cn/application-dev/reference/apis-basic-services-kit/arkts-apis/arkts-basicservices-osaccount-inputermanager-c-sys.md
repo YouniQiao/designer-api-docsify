@@ -2,9 +2,9 @@
 
 凭据输入管理器。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-osAccount-class InputerManager--><!--Device-osAccount-class InputerManager-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -24,11 +24,11 @@ static registerInputer(authType: AuthType, inputer: IInputer): void
 
 注册凭据输入器。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL or ohos.permission.MANAGE_USER_IDM
-
-<!--Device-InputerManager-static registerInputer(authType: AuthType, inputer: IInputer): void--><!--Device-InputerManager-static registerInputer(authType: AuthType, inputer: IInputer): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -36,22 +36,22 @@ static registerInputer(authType: AuthType, inputer: IInputer): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| authType | AuthType | 是 | 认证类型。 |
-| inputer | [IInputer](arkts-basicservices-osaccount-iinputer-i-sys.md) | 是 | 凭据输入器，用于获取凭据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | 是 |
+| inputer | [IInputer](arkts-basicservices-osaccount-iinputer-i-sys.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid authType or inputer. |
-| [12300103](../errorcode-account.md#12300103-凭据输入器已注册) | The credential inputer already exists. |
-| [12300106](../errorcode-account.md#12300106-认证类型不支持) | The authentication type is not supported. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300103](../errorcode-account.md#12300103-凭据输入器已注册) |
+| [12300106](../errorcode-account.md#12300106-认证类型不支持) |
 
 **示例**
 
@@ -99,11 +99,11 @@ static unregisterInputer(authType: AuthType): void
 
 解注册凭据输入器。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL or ohos.permission.MANAGE_USER_IDM
-
-<!--Device-InputerManager-static unregisterInputer(authType: AuthType): void--><!--Device-InputerManager-static unregisterInputer(authType: AuthType): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -111,18 +111,18 @@ static unregisterInputer(authType: AuthType): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| authType | AuthType | 是 | 认证类型。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid authType. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
 
 **示例**
 
@@ -161,4 +161,3 @@ try {
   console.error(`unregisterInputer code is ${err.code}, message is ${err.message}`);
 }
 ```
-

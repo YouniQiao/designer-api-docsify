@@ -4,11 +4,11 @@ Represents a USB device pipe, which is used to determine a USB device.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md)
-
-<!--Device-usb-interface USBDevicePipe--><!--Device-usb-interface USBDevicePipe-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -30,11 +30,11 @@ Bus address.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [busNum](arkts-basicservices-usbmanager-usbdevicepipe-i.md#busnum)
-
-<!--Device-USBDevicePipe-busNum: number--><!--Device-USBDevicePipe-busNum: number-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -50,11 +50,10 @@ Device address.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [devAddress](arkts-basicservices-usbmanager-usbdevicepipe-i.md#devaddress)
 
-<!--Device-USBDevicePipe-devAddress: number--><!--Device-USBDevicePipe-devAddress: number-End-->
-
 **System capability:** SystemCapability.USB.USBManager
-

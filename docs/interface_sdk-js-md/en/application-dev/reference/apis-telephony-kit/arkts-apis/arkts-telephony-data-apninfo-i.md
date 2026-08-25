@@ -2,9 +2,9 @@
 
 Defines the APN information.
 
-**Since:** 23
+**Since:** 16
 
-<!--Device-data-interface ApnInfo--><!--Device-data-interface ApnInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -24,9 +24,9 @@ APN.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 16
 
-<!--Device-ApnInfo-apn: string--><!--Device-ApnInfo-apn: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -40,9 +40,9 @@ APN name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 16
 
-<!--Device-ApnInfo-apnName: string--><!--Device-ApnInfo-apnName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -56,9 +56,9 @@ Mobile country code (MCC) of the SIM card.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 16
 
-<!--Device-ApnInfo-mcc: string--><!--Device-ApnInfo-mcc: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -72,9 +72,9 @@ Multimedia messaging service (MMS) proxy.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 16
 
-<!--Device-ApnInfo-mmsproxy?: string--><!--Device-ApnInfo-mmsproxy?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -88,9 +88,9 @@ Mobile network code (MNC) of the SIM card.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 16
 
-<!--Device-ApnInfo-mnc: string--><!--Device-ApnInfo-mnc: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -104,9 +104,9 @@ Proxy address.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 16
 
-<!--Device-ApnInfo-proxy?: string--><!--Device-ApnInfo-proxy?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -120,9 +120,9 @@ APN type.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 16
 
-<!--Device-ApnInfo-type?: string--><!--Device-ApnInfo-type?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -136,9 +136,8 @@ User name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 16
 
-<!--Device-ApnInfo-user?: string--><!--Device-ApnInfo-user?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
-

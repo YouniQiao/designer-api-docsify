@@ -2,9 +2,9 @@
 
 Window animation manager.@namespace windowAnimationManager
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-declare namespace windowAnimationManager--><!--Device-unnamed-declare namespace windowAnimationManager-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -21,34 +21,33 @@ import { windowAnimationManager } from '@kit.ArkUI';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md) | Minimize the window target with animation. |
-| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md) | Minimize the window target with animation. |
-| [setController](arkts-arkui-windowanimationmanager-setcontroller-f-sys.md) | Set the window animation controller. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md) |
+| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md) |
+| [setController](arkts-arkui-windowanimationmanager-setcontroller-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [RRect](arkts-arkui-windowanimationmanager-rrect-i-sys.md) | Round rect.@interface RRect |
-| [WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md) | Window animation controller.@interface WindowAnimationController |
-| [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Window animation finished callback.@interface WindowAnimationFinishedCallback |
-| [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) | Window animation target.@interface WindowAnimationTarget |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [RRect](arkts-arkui-windowanimationmanager-rrect-i-sys.md) |
+| [WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md) |
+| [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) |
+| [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Types(System API)
 
-| Name | Description |
-| --- | --- |
-| [AppStartCallback](arkts-arkui-windowanimationmanager-appstartcallback-t-sys.md) | Callback function on starting an application. |
-| [AppTransitionCallback](arkts-arkui-windowanimationmanager-apptransitioncallback-t-sys.md) | Callback function on application transition. |
-| [ScreenUnlockCallback](arkts-arkui-windowanimationmanager-screenunlockcallback-t-sys.md) | Callback function on unlocking the screen. |
-| [WindowAnimationTargetsUpdationCallback](arkts-arkui-windowanimationmanager-windowanimationtargetsupdationcallback-t-sys.md) | Callback function on window animation targets update. |
-| [WindowCloseCallback](arkts-arkui-windowanimationmanager-windowclosecallback-t-sys.md) | Callback function on closing a window. |
-| [WindowMinimizationCallback](arkts-arkui-windowanimationmanager-windowminimizationcallback-t-sys.md) | Callback function on minimizing a window. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AppStartCallback](arkts-arkui-windowanimationmanager-appstartcallback-t-sys.md) |
+| [AppTransitionCallback](arkts-arkui-windowanimationmanager-apptransitioncallback-t-sys.md) |
+| [ScreenUnlockCallback](arkts-arkui-windowanimationmanager-screenunlockcallback-t-sys.md) |
+| [WindowAnimationTargetsUpdationCallback](arkts-arkui-windowanimationmanager-windowanimationtargetsupdationcallback-t-sys.md) |
+| [WindowCloseCallback](arkts-arkui-windowanimationmanager-windowclosecallback-t-sys.md) |
+| [WindowMinimizationCallback](arkts-arkui-windowanimationmanager-windowminimizationcallback-t-sys.md) |
 <!--DelEnd-->
-

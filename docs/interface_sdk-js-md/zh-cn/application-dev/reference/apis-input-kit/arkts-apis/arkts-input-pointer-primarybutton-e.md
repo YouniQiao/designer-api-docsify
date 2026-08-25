@@ -2,9 +2,9 @@
 
 鼠标主键类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-pointer-enum PrimaryButton--><!--Device-pointer-enum PrimaryButton-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -16,9 +16,9 @@ LEFT = 0
 
 鼠标左键。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-PrimaryButton-LEFT = 0--><!--Device-PrimaryButton-LEFT = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -30,9 +30,8 @@ RIGHT = 1
 
 鼠标右键。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-PrimaryButton-RIGHT = 1--><!--Device-PrimaryButton-RIGHT = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
-

@@ -4,7 +4,7 @@ Reply result.
 
 **Since:** 23
 
-<!--Device-distributedDeviceManager-interface ReplyResult--><!--Device-distributedDeviceManager-interface ReplyResult-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -28,9 +28,8 @@ Param of ui state changes.
 
 **Since:** 23
 
-<!--Device-ReplyResult-param: string--><!--Device-ReplyResult-param: string-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
-

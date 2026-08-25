@@ -4,11 +4,11 @@ Provides information about files and directories. Before calling an API of the *
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md)
-
-<!--Device-unnamed-declare interface Dirent--><!--Device-unnamed-declare interface Dirent-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -27,19 +27,19 @@ Checks whether this directory entry is a block special file. A block special fil
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md)
-
-<!--Device-Dirent-isBlockDevice(): boolean--><!--Device-Dirent-isBlockDevice(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if it is a block special file; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -63,19 +63,19 @@ Checks whether this directory entry is a character special file. A character spe
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md)
-
-<!--Device-Dirent-isCharacterDevice(): boolean--><!--Device-Dirent-isCharacterDevice(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if it is a character special file; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -99,19 +99,19 @@ Checks whether this directory entry is a directory.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md)
-
-<!--Device-Dirent-isDirectory(): boolean--><!--Device-Dirent-isDirectory(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if it is a directory; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -135,19 +135,19 @@ Checks whether this directory entry is a named pipe (also called FIFO). Named pi
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md)
-
-<!--Device-Dirent-isFIFO(): boolean--><!--Device-Dirent-isFIFO(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if it is a named pipe; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -171,19 +171,19 @@ Checks whether this directory entry is a regular file.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md)
-
-<!--Device-Dirent-isFile(): boolean--><!--Device-Dirent-isFile(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if it is a regular file; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -207,19 +207,19 @@ Checks whether this directory entry is a socket.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md)
-
-<!--Device-Dirent-isSocket(): boolean--><!--Device-Dirent-isSocket(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if it is a socket; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -243,19 +243,19 @@ Checks whether this directory entry is a symbolic link.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md)
-
-<!--Device-Dirent-isSymbolicLink(): boolean--><!--Device-Dirent-isSymbolicLink(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if it is a symbolic link; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -281,11 +281,10 @@ Directory entry name.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md)
 
-<!--Device-Dirent-readonly name: string--><!--Device-Dirent-readonly name: string-End-->
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
-

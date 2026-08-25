@@ -19,23 +19,23 @@ function dial(phoneNumber: string, options: DialOptions, callback: AsyncCallback
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [dialCall](arkts-telephony-call-dialcall-f-sys.md)
 
 **需要权限：** ohos.permission.PLACE_CALL
 
-<!--Device-call-function dial(phoneNumber: string, options: DialOptions, callback: AsyncCallback<boolean>): void--><!--Device-call-function dial(phoneNumber: string, options: DialOptions, callback: AsyncCallback<boolean>): void-End-->
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| phoneNumber | string | 是 | 电话号码。 |
-| options | [DialOptions](arkts-telephony-call-dialoptions-i.md) | 是 | 通话参数，选择为语音通话还是视频通话。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，返回true为成功，false为失败。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| phoneNumber | string | 是 |
+| options | [DialOptions](arkts-telephony-call-dialoptions-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
 **示例**
 
@@ -85,28 +85,28 @@ function dial(phoneNumber: string, options?: DialOptions): Promise<boolean>
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [dialCall](arkts-telephony-call-dialcall-f-sys.md)
 
 **需要权限：** ohos.permission.PLACE_CALL
 
-<!--Device-call-function dial(phoneNumber: string, options?: DialOptions): Promise<boolean>--><!--Device-call-function dial(phoneNumber: string, options?: DialOptions): Promise<boolean>-End-->
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| phoneNumber | string | 是 | 电话号码。 |
-| options | [DialOptions](arkts-telephony-call-dialoptions-i.md) | 否 | 通话参数，选择为语音通话还是视频通话。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| phoneNumber | string | 是 |
+| options | [DialOptions](arkts-telephony-call-dialoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | 以Promise形式返回拨打电话的结果，返回true为成功，false为失败。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **示例**
 
@@ -126,24 +126,23 @@ function dial(phoneNumber: string, callback: AsyncCallback<boolean>): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [dialCall](arkts-telephony-call-dialcall-f-sys.md)
 
 **需要权限：** ohos.permission.PLACE_CALL
 
-<!--Device-call-function dial(phoneNumber: string, callback: AsyncCallback<boolean>): void--><!--Device-call-function dial(phoneNumber: string, callback: AsyncCallback<boolean>): void-End-->
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| phoneNumber | string | 是 | 电话号码。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，返回true为成功，false为失败。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| phoneNumber | string | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
 **示例**
 
 参见 [dial](#dial)
-

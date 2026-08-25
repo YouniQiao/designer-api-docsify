@@ -4,7 +4,7 @@ Defines the group notification information.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export interface GroupInfo--><!--Device-unnamed-export interface GroupInfo-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -22,9 +22,9 @@ Group title displayed after notifications are grouped. This parameter is valid o
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-GroupInfo-groupTitle?: string--><!--Device-GroupInfo-groupTitle?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -42,11 +42,10 @@ Whether to use the **smallIcon** field in NotificationRequest as the group icon 
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-GroupInfo-isGroupIcon?: boolean--><!--Device-GroupInfo-isGroupIcon?: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

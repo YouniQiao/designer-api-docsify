@@ -16,11 +16,11 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 9
 
 **Substitutes:** [setPortRoles](arkts-basicservices-usbmanager-setportroles-f-sys.md)
-
-<!--Device-usb-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<boolean>--><!--Device-usb-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -28,17 +28,17 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| portId | number | Yes | Port number. |
-| powerRole | PowerRoleType | Yes | Role for charging. |
-| dataRole | DataRoleType | Yes | Role for data transfer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | Yes |
+| powerRole | [PowerRoleType](arkts-basicservices-usb-powerroletype-e-sys.md) | Yes |
+| dataRole | [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful, and **false** indicates the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **Examples**
 
@@ -50,4 +50,3 @@ usb.setPortRoles(portId, usb.PowerRoleType.SOURCE, usb.DataRoleType.HOST).then((
     console.error('usb setPortRoles failed: ' + err.code + ' message: ' + err.message);
 });
 ```
-

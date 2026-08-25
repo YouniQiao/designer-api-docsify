@@ -4,7 +4,7 @@ Provides the conditions of Collector.
 
 **Since:** 12
 
-<!--Device-securityGuard-interface CollectorRule--><!--Device-securityGuard-interface CollectorRule-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -28,7 +28,7 @@ The event id
 
 **Since:** 12
 
-<!--Device-CollectorRule-eventId: number--><!--Device-CollectorRule-eventId: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -46,9 +46,8 @@ The query condition.
 
 **Since:** 12
 
-<!--Device-CollectorRule-param?: string--><!--Device-CollectorRule-param?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
-

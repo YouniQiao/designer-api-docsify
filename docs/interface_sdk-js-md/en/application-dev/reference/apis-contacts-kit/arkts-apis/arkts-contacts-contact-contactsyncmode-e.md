@@ -4,7 +4,7 @@ The type of contact synchronization mode.
 
 **Since:** 26.0.0
 
-<!--Device-contact-enum ContactSyncMode--><!--Device-contact-enum ContactSyncMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -18,11 +18,11 @@ Indicates that contacts differing between cloud and local will be inserted or up
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ContactSyncMode-MODE_INCREMENTAL = 1--><!--Device-ContactSyncMode-MODE_INCREMENTAL = 1-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -36,11 +36,10 @@ Indicates that all local contacts will be replaced by cloud contacts.When the cl
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ContactSyncMode-MODE_CLOUD_BASED = 2--><!--Device-ContactSyncMode-MODE_CLOUD_BASED = 2-End-->
-
 **System capability:** SystemCapability.Applications.ContactsData
-

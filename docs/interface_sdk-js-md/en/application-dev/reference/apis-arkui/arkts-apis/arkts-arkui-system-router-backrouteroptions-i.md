@@ -4,11 +4,11 @@ Defines the parameters for routing back.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 8
 
 **Substitutes:** RouterOptions
-
-<!--Device-unnamed-export interface BackRouterOptions--><!--Device-unnamed-export interface BackRouterOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,11 @@ Data that needs to be passed to the target page during redirection.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 8
 
 **Substitutes:** params
-
-<!--Device-BackRouterOptions-params?: Object--><!--Device-BackRouterOptions-params?: Object-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -50,11 +50,10 @@ URI of the page to return to. If the specified page does not exist in the page s
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 8
 
 **Substitutes:** url
 
-<!--Device-BackRouterOptions-uri?: string--><!--Device-BackRouterOptions-uri?: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

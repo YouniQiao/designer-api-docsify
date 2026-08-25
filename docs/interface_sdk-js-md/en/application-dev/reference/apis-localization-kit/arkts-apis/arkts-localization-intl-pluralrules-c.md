@@ -4,11 +4,11 @@ Provides the capability for obtaining the plural rule type.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules)
-
-<!--Device-intl-export class PluralRules--><!--Device-intl-export class PluralRules-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -28,13 +28,13 @@ Creates a **PluralRules** object to obtain the singular-plural type of numbers.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.PluralRules.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PluralRules-constructor()--><!--Device-PluralRules-constructor()-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -144,22 +144,22 @@ Creates a **PluralRules** object to obtain the singular-plural type of numbers.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.PluralRules.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PluralRules-constructor(locale: string | Array<string>, options?: PluralRulesOptions)--><!--Device-PluralRules-constructor(locale: string | Array<string>, options?: PluralRulesOptions)-End-->
-
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
-| options | PluralRulesOptions | No | Options for creating a **PluralRules** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locale | string \| Array & lt;string & gt; | Yes |
+| options | [PluralRulesOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-pluralrulesoptions-i.md) | No |
 
 **Examples**
 
@@ -175,27 +175,27 @@ Obtains the singular-plural type of the specified number.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.PluralRules.select](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PluralRules-select(n: double): string--><!--Device-PluralRules-select(n: double): string-End-->
-
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| n | double | Yes | Number for which the singular-plural type is to be obtained. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| n | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Singular-plural type. The value can be any of the following: **zero**, **one**, **two**, **few**, **many**, **others**. For details about the meanings of different values, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -212,4 +212,3 @@ let enPluralRules = new intl.PluralRules('en-US');
 // Determine the singular-plural type corresponding to number 1 in locale en-US.
 plural = enPluralRules.select(1); // plural = 'one'
 ```
-

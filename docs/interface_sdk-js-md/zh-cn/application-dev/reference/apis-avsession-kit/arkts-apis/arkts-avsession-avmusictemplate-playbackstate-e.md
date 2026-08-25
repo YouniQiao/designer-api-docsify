@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-avMusicTemplate-enum PlaybackState--><!--Device-avMusicTemplate-enum PlaybackState-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -18,9 +18,9 @@ PLAYBACK_STATE_PREPARE = 0
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-PlaybackState-PLAYBACK_STATE_PREPARE = 0--><!--Device-PlaybackState-PLAYBACK_STATE_PREPARE = 0-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -34,9 +34,9 @@ PLAYBACK_STATE_PLAY = 1
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-PlaybackState-PLAYBACK_STATE_PLAY = 1--><!--Device-PlaybackState-PLAYBACK_STATE_PLAY = 1-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -50,9 +50,9 @@ PLAYBACK_STATE_PAUSE = 2
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-PlaybackState-PLAYBACK_STATE_PAUSE = 2--><!--Device-PlaybackState-PLAYBACK_STATE_PAUSE = 2-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -66,9 +66,9 @@ PLAYBACK_STATE_STOP = 3
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-PlaybackState-PLAYBACK_STATE_STOP = 3--><!--Device-PlaybackState-PLAYBACK_STATE_STOP = 3-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -82,9 +82,9 @@ PLAYBACK_STATE_COMPLETED = 4
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-PlaybackState-PLAYBACK_STATE_COMPLETED = 4--><!--Device-PlaybackState-PLAYBACK_STATE_COMPLETED = 4-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -98,9 +98,9 @@ PLAYBACK_STATE_ERROR = 5
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-PlaybackState-PLAYBACK_STATE_ERROR = 5--><!--Device-PlaybackState-PLAYBACK_STATE_ERROR = 5-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -114,9 +114,8 @@ PLAYBACK_STATE_BUFFERING = 6
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-PlaybackState-PLAYBACK_STATE_BUFFERING = 6--><!--Device-PlaybackState-PLAYBACK_STATE_BUFFERING = 6-End-->
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-

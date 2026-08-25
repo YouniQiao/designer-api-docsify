@@ -5,9 +5,9 @@ Picker（选择器）是一个封装DocumentViewPicker、AudioViewPicker、Photo
 > **说明：**&gt;
 > 该模块接口从API version 9开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-declare namespace picker--><!--Device-unnamed-declare namespace picker-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -21,43 +21,42 @@ import { picker } from '@kit.CoreFileKit';
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [AudioSaveOptions](arkts-corefile-picker-audiosaveoptions-c.md) | 音频保存选项。 |
-| [AudioSelectOptions](arkts-corefile-picker-audioselectoptions-c.md) | 音频选择选项。 |
-| [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md) | 音频选择器对象，用来支撑选择和保存音频类文件等用户场景。在使用前，需要先创建AudioViewPicker实例。 |
-| [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c.md) | 文档保存选项。 |
-| [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c.md) | 文档选择选项。 |
-| [DocumentViewPicker](arkts-corefile-picker-documentviewpicker-c.md) | 文件选择器对象，用来支撑选择和保存各种格式文档。在使用前，需要先创建DocumentViewPicker实例。 |
-| [PhotoSaveOptions](arkts-corefile-picker-photosaveoptions-c.md) | 图片或视频的保存选项。 |
-| [PhotoSelectOptions](arkts-corefile-picker-photoselectoptions-c.md) | 图库选择选项。 |
-| [PhotoSelectResult](arkts-corefile-picker-photoselectresult-c.md) | 返回图库选择后的结果集。 |
-| [PhotoViewPicker](arkts-corefile-picker-photoviewpicker-c.md) | 图库选择器对象，用来支撑选择图片/视频和保存图片/视频等用户场景。选择文件推荐使用 [PhotoAccessHelper的PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md)。 在使用前，需要先创建PhotoViewPicker实例。 |
+| 名称 |
+| --- |
+| [AudioSaveOptions](arkts-corefile-picker-audiosaveoptions-c.md) |
+| [AudioSelectOptions](arkts-corefile-picker-audioselectoptions-c.md) |
+| [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md) |
+| [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c.md) |
+| [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c.md) |
+| [DocumentViewPicker](arkts-corefile-picker-documentviewpicker-c.md) |
+| [PhotoSaveOptions](arkts-corefile-picker-photosaveoptions-c.md) |
+| [PhotoSelectOptions](arkts-corefile-picker-photoselectoptions-c.md) |
+| [PhotoSelectResult](arkts-corefile-picker-photoselectresult-c.md) |
+| [PhotoViewPicker](arkts-corefile-picker-photoviewpicker-c.md) |
 
 <!--Del-->
 ### 类（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c-sys.md) | 文档保存选项。 |
-| [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c-sys.md) | 文档选择选项。 |
+| 名称 |
+| --- |
+| [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c-sys.md) |
+| [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c-sys.md) |
 <!--DelEnd-->
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [AudioSaveOptions](arkts-corefile-picker-audiosaveoptions-i.md) | 音频保存选项。 |
-| [AudioSelectOptions](arkts-corefile-picker-audioselectoptions-i.md) | 音频选择选项。 |
-| [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-i.md) | 文档保存选项。 |
-| [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-i.md) | 文档选择选项。 |
+| 名称 |
+| --- |
+| [AudioSaveOptions](arkts-corefile-picker-audiosaveoptions-i.md) |
+| [AudioSelectOptions](arkts-corefile-picker-audioselectoptions-i.md) |
+| [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-i.md) |
+| [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-i.md) |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-| [DocumentPickerMode](arkts-corefile-picker-documentpickermode-e.md) | Enumerates the modes for saving documents. |
-| [DocumentSelectMode](arkts-corefile-picker-documentselectmode-e.md) | Enumerates the types of documents selected. |
-| [MergeTypeMode](arkts-corefile-picker-mergetypemode-e.md) | Enumerates file aggregation types. |
-| [PhotoViewMIMETypes](arkts-corefile-picker-photoviewmimetypes-e.md) | Enumerates the media file types that can be selected. |
-
+| 名称 |
+| --- |
+| [DocumentPickerMode](arkts-corefile-picker-documentpickermode-e.md) |
+| [DocumentSelectMode](arkts-corefile-picker-documentselectmode-e.md) |
+| [MergeTypeMode](arkts-corefile-picker-mergetypemode-e.md) |
+| [PhotoViewMIMETypes](arkts-corefile-picker-photoviewmimetypes-e.md) |

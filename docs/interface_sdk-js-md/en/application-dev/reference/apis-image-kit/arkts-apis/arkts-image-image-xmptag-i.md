@@ -4,7 +4,7 @@ Describes XMP Tag parameters.
 
 **Since:** 26.0.0
 
-<!--Device-image-interface XMPTag--><!--Device-image-interface XMPTag-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -26,9 +26,9 @@ The name of XMP tag.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-XMPTag-name: string--><!--Device-XMPTag-name: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -44,9 +44,9 @@ The type of XMP tag.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-XMPTag-type: XMPTagType--><!--Device-XMPTag-type: XMPTagType-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -62,9 +62,9 @@ The value of XMP tag.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-XMPTag-value?: string--><!--Device-XMPTag-value?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -80,9 +80,8 @@ The namespace of XMP tag.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-XMPTag-xmpNamespace: XMPNamespace--><!--Device-XMPTag-xmpNamespace: XMPNamespace-End-->
-
 **System capability:** SystemCapability.Multimedia.Image.Core
-

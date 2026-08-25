@@ -4,9 +4,7 @@ PluralRules options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-Intl-export interface PluralRulesOptions--><!--Device-Intl-export interface PluralRulesOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,11 +25,9 @@ Locale matcher option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PluralRulesOptions-localeMatcher?: 'lookup' | 'best fit' | undefined--><!--Device-PluralRulesOptions-localeMatcher?: 'lookup' | 'best fit' | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -47,11 +43,9 @@ Maximum fraction digits option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PluralRulesOptions-maximumFractionDigits?: double | undefined--><!--Device-PluralRulesOptions-maximumFractionDigits?: double | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -67,11 +61,9 @@ Maximum significant digits option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PluralRulesOptions-maximumSignificantDigits?: double | undefined--><!--Device-PluralRulesOptions-maximumSignificantDigits?: double | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -87,11 +79,9 @@ Minimum fraction digits option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PluralRulesOptions-minimumFractionDigits?: double | undefined--><!--Device-PluralRulesOptions-minimumFractionDigits?: double | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -107,11 +97,9 @@ Minimum integer digits option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PluralRulesOptions-minimumIntegerDigits?: double | undefined--><!--Device-PluralRulesOptions-minimumIntegerDigits?: double | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -127,11 +115,9 @@ Minimum significant digits option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PluralRulesOptions-minimumSignificantDigits?: double | undefined--><!--Device-PluralRulesOptions-minimumSignificantDigits?: double | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -147,11 +133,8 @@ Type option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PluralRulesOptions-type?: PluralRuleType | undefined--><!--Device-PluralRulesOptions-type?: PluralRuleType | undefined-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

@@ -2,9 +2,9 @@
 
 Streaming configuration parameters.@interface StreamParam
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-abilityConnectionManager-interface StreamParam--><!--Device-abilityConnectionManager-interface StreamParam-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -24,13 +24,13 @@ bitrate?: int
 
 This value indicates video bitrate, default 80(kbps). Only valid on the sender side.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StreamParam-bitrate?: int--><!--Device-StreamParam-bitrate?: int-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -46,11 +46,11 @@ The target color space for conversion. Currently, only BT709_LIMIT is supported.
 
 **Type:** colorSpaceManager.ColorSpace
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StreamParam-colorSpaceConversionTarget?: colorSpaceManager.ColorSpace--><!--Device-StreamParam-colorSpaceConversionTarget?: colorSpaceManager.ColorSpace-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -66,11 +66,11 @@ Stream name, the receive end must be consistent with the transmit end.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StreamParam-name: string--><!--Device-StreamParam-name: string-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -86,13 +86,12 @@ Stream transmission role, which can be a receive stream or a transmit stream.
 
 **Type:** [StreamRole](arkts-distributedservice-abilityconnectionmanager-streamrole-e-sys.md)
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StreamParam-role: StreamRole--><!--Device-StreamParam-role: StreamRole-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **System API:** This is a system API.
-

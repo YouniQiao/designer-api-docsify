@@ -2,9 +2,9 @@
 
 Obtains information about the eUICC chip or device.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-eSIM-export interface OperatorId--><!--Device-eSIM-export interface OperatorId-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -26,9 +26,9 @@ Group ID level 1.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-OperatorId-gid1: string--><!--Device-OperatorId-gid1: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -44,9 +44,9 @@ Group ID level 2.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-OperatorId-gid2: string--><!--Device-OperatorId-gid2: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -62,9 +62,9 @@ Mobile country code (MCC).
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-OperatorId-mcc: string--><!--Device-OperatorId-mcc: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -80,11 +80,10 @@ Network code.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-OperatorId-mnc: string--><!--Device-OperatorId-mnc: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
-

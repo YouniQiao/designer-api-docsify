@@ -4,7 +4,7 @@ Enumerates progress indicator styles.
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum ProgressStyle--><!--Device-unnamed-declare enum ProgressStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Linear style.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ProgressStyle-Linear--><!--Device-ProgressStyle-Linear-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ The ring is gradually displayed until completely filled.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ProgressStyle-Ring--><!--Device-ProgressStyle-Ring-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ Eclipse style, which visualizes the progress in a way similar to the moon waxing
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ProgressStyle-Eclipse--><!--Device-ProgressStyle-Eclipse-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,11 @@ Ring style with scales, which is similar to the clock scale style.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ProgressStyle-ScaleRing--><!--Device-ProgressStyle-ScaleRing-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,11 +90,10 @@ Capsule style. At both ends, the progress indicator works in the same manner as 
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-ProgressStyle-Capsule--><!--Device-ProgressStyle-Capsule-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

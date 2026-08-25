@@ -2,9 +2,9 @@
 
 Describes the strut style, which determines the line spacing, baseline alignment mode, and other properties related to the line height when drawing texts. The strut style is disabled by default.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-text-interface StrutStyle--><!--Device-text-interface StrutStyle-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -24,11 +24,11 @@ Whether to enable the strut style. The value **true** means to enable the strut 
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-StrutStyle-enabled?: boolean--><!--Device-StrutStyle-enabled?: boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -42,11 +42,11 @@ Array of font families. By default, the array is empty, indicating that all syst
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-StrutStyle-fontFamilies?: Array<string>--><!--Device-StrutStyle-fontFamilies?: Array<string>-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -58,13 +58,13 @@ fontSize?: double
 
 Font size, a floating-point value with a default value of **14.0**, measured in physical pixels (px).
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-StrutStyle-fontSize?: double--><!--Device-StrutStyle-fontSize?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -78,11 +78,11 @@ Font style. The default value is **NORMAL**.
 
 **Type:** FontStyle
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-StrutStyle-fontStyle?: FontStyle--><!--Device-StrutStyle-fontStyle?: FontStyle-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -96,11 +96,11 @@ Font weight. The default value is **W400**. Before <!--RP1-->OpenHarmony 6.1<!--
 
 **Type:** FontWeight
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-StrutStyle-fontWeight?: FontWeight--><!--Device-StrutStyle-fontWeight?: FontWeight-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -114,11 +114,11 @@ Font width. The default value is **NORMAL**.
 
 **Type:** [FontWidth](arkts-arkgraphics2d-text-fontwidth-e.md)
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-StrutStyle-fontWidth?: FontWidth--><!--Device-StrutStyle-fontWidth?: FontWidth-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -132,11 +132,11 @@ Whether to forcibly use the strut height for all lines. The value **true** means
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-StrutStyle-forceHeight?: boolean--><!--Device-StrutStyle-forceHeight?: boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -150,11 +150,11 @@ Whether half leading is enabled. Half leading is the leading split in half and a
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-StrutStyle-halfLeading?: boolean--><!--Device-StrutStyle-halfLeading?: boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -166,13 +166,13 @@ height?: double
 
 Scale factor of the line height. The value is a floating point number. The default value is **1.0**.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-StrutStyle-height?: double--><!--Device-StrutStyle-height?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -186,11 +186,11 @@ Whether to override the height. The value **true** means to override the height,
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-StrutStyle-heightOverride?: boolean--><!--Device-StrutStyle-heightOverride?: boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -202,13 +202,12 @@ leading?: double
 
 Custom line spacing applied to the strut, a floating-point value in physical pixels (px), with a default value of **-1.0**.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-StrutStyle-leading?: double--><!--Device-StrutStyle-leading?: double-End-->
-
 **System capability:** SystemCapability.Graphics.Drawing
-

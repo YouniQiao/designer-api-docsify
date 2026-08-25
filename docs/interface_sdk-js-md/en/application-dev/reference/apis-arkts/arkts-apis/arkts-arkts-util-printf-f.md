@@ -16,26 +16,26 @@ Formats a string by replacing the placeholders in it.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-**Substitutes:** [format](../../apis-default/arkts-apis/arkts-util-format-f.md)
-
-<!--Device-util-function printf(format: string, ...args: Object[]): string--><!--Device-util-function printf(format: string, ...args: Object[]): string-End-->
+**Substitutes:** [format](arkts-arkts-util-format-f.md)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| format | string | Yes | Format string. |
-| args | Object[] | Yes | Data used to replace the placeholders in **format**. If **null** is passed in, the first argument is returned by default. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| format | string | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Object[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | String containing the formatted values. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -44,4 +44,3 @@ let res = util.printf("%s", "hello world!");
 console.info(res);
 // Output: hello world!
 ```
-

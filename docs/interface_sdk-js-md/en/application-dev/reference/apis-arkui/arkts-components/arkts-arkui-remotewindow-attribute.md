@@ -6,7 +6,7 @@ Inheritance CommonMethod Set Styles@extends CommonMethod&lt;RemoteWindowAttribut
 
 **Since:** 9
 
-<!--Device-unnamed-declare class RemoteWindowAttribute--><!--Device-unnamed-declare class RemoteWindowAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,4 +16,3 @@ Inheritance CommonMethod Set Styles@extends CommonMethod&lt;RemoteWindowAttribut
 
 ```TypeScript
 ```
-

@@ -6,9 +6,9 @@
 > KeyPair对象中的pubKey对象和priKey对象是KeyPair对象的成员。当KeyPair对象超出作用域时，其内部的pubKey对象和priKey对象将被析构。&gt;
 > 业务方使用时应持有KeyPair对象的引用，而非内部pubKey或priKey对象的引用。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-cryptoFramework-interface KeyPair--><!--Device-cryptoFramework-interface KeyPair-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -30,11 +30,11 @@ readonly priKey: PriKey
 
 **类型：** [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md)
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-KeyPair-readonly priKey: PriKey--><!--Device-KeyPair-readonly priKey: PriKey-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -50,13 +50,12 @@ readonly pubKey: PubKey
 
 **类型：** [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md)
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-KeyPair-readonly pubKey: PubKey--><!--Device-KeyPair-readonly pubKey: PubKey-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API版本9-11：SystemCapability.Security.CryptoFramework
-

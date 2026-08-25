@@ -36,7 +36,7 @@ Provides UI capabilities of ArkUI on the native side, such as UI component creat
 | [grid.h](capi-grid-h.md) | 定义Grid组件相关的枚举和接口。 |
 | [custom_attributes.h](capi-custom-attributes-h.md) | 为NativeNode API提供自定义节点事件定义。 |
 | [xcomponent.h](capi-xcomponent-h.md) | XComponent组件的枚举类型定义。 |
-| [rich_editor.h](capi-rich-editor-h.md) | Defines a set of RichEditor enum and interface. |
+| [rich_editor.h](capi-rich-editor-h.md) | 定义文本编辑器相关的结构体、枚举和函数。文本编辑器提供富文本编辑能力，支持自定义文本选择菜单、属性字符串控制器、段落样式和文本样式设置，以及触感反馈控制等功能，适用于需要在应用中实现富文本编辑和自定义交互菜单的场景。 |
 | [image_span.h](capi-image-span-h.md) | Defines a set of ImageSpan enum and interface. |
 | [progress.h](capi-progress-h.md) | Defines a set of Progress enum and interface. |
 | [slider.h](capi-slider-h.md) | Provides Slider node type definitions for <b>NativeNode</b> APIs. |

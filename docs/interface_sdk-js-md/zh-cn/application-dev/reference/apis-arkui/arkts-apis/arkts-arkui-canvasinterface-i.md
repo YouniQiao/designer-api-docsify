@@ -7,7 +7,7 @@
 
 **起始版本：** 8
 
-<!--Device-unnamed-interface CanvasInterface--><!--Device-unnamed-interface CanvasInterface-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,7 +16,7 @@
 ```TypeScript
 ```
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (context?: CanvasRenderingContext2D | DrawingRenderingContext): CanvasAttribute
@@ -26,68 +26,27 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-CanvasInterface-(context?: CanvasRenderingContext2D | DrawingRenderingContext): CanvasAttribute--><!--Device-CanvasInterface-(context?: CanvasRenderingContext2D | DrawingRenderingContext): CanvasAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) \| [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | 否 | CanvasRenderingContext2D: 不支持多个Canvas共用一个 CanvasRenderingContext2D对象，具体描述见[CanvasRenderingContext2D](arkts-arkui-canvas-con.md)对象。DrawingRenderingContext: 不支持多个 Canvas共用一个DrawingRenderingContext对象，具体描述见[DrawingRenderingContext](arkts-arkui-canvas-con.md)对象。 <br>异常值null和undefined按未设置context处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) \| [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |  |
+| 类型 |
+| --- |
+| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |
 
-**示例**
-
-以下示例展示了配置CanvasRenderingContext2D对象的单位模式，默认单位模式为LengthMetricsUnit.DEFAULT，对应默认单位vp，配置后无法动态更改。详细说明见LengthMetricsUnit。
-
-```TypeScript
-// xxx.ets
-import { LengthMetricsUnit } from '@kit.ArkUI'
-
-@Entry
-@Component
-struct LengthMetricsUnitDemo {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private contextPX: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings, LengthMetricsUnit.PX);
-  private contextVP: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.contextPX)
-        .width('100%')
-        .height(150)
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.contextPX.fillRect(10, 10, 100, 100)
-          this.contextPX.clearRect(10, 10, 50, 50)
-        })
-
-      Canvas(this.contextVP)
-        .width('100%')
-        .height(150)
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.contextVP.fillRect(10, 10, 100, 100)
-          this.contextVP.clearRect(10, 10, 50, 50)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-## constructor
+## [[Call]]
 
 ```TypeScript
 (context: CanvasRenderingContext2D | DrawingRenderingContext, imageAIOptions: ImageAIOptions): CanvasAttribute
@@ -97,32 +56,28 @@ struct LengthMetricsUnitDemo {
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CanvasInterface-(context: CanvasRenderingContext2D | DrawingRenderingContext, imageAIOptions: ImageAIOptions): CanvasAttribute--><!--Device-CanvasInterface-(context: CanvasRenderingContext2D | DrawingRenderingContext, imageAIOptions: ImageAIOptions): CanvasAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) \| [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | 是 | CanvasRenderingContext2D: 不支持多个Canvas共用一个 CanvasRenderingContext2D对象，具体描述见[CanvasRenderingContext2D](arkts-arkui-canvas-con.md)对象。DrawingRenderingContext: 不支持多个 Canvas共用一个DrawingRenderingContext对象，具体描述见[DrawingRenderingContext](arkts-arkui-canvas-con.md)对象。 <br>异常值null和undefined按未设置context处理。 |
-| imageAIOptions | ImageAIOptions | 是 | 给组件设置一个AI分析选项，通过此项可配置分析类型或绑定一个分析控制器。 <br>异常值null和undefined按ImageAIOptions的默认值处理，默认取值为{ type: [ImageAnalyzerType.SUBJECT, ImageAnalyzerType.TEXT], aiController: new ImageAnalyzerController() }，即开启主体识别和文字识别 功能。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) \| [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | 是 |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |  |
+| 类型 |
+| --- |
+| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |
 
-**示例**
-
-参见 [constructor](#constructor)
-
-## constructor
+## [[Call]]
 
 ```TypeScript
 (params: CanvasParams): CanvasAttribute
@@ -139,27 +94,22 @@ struct LengthMetricsUnitDemo {
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CanvasInterface-(params: CanvasParams): CanvasAttribute--><!--Device-CanvasInterface-(params: CanvasParams): CanvasAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| params | [CanvasParams](arkts-arkui-canvasparams-i.md) | 是 | Canvas组件的构造参数，用于创建不缓存指令的Canvas组件。配置参数详见[CanvasParams](arkts-arkui-canvasparams-i.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| params | [CanvasParams](arkts-arkui-canvasparams-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |  |
-
-**示例**
-
-参见 [constructor](#constructor)
-
+| 类型 |
+| --- |
+| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |

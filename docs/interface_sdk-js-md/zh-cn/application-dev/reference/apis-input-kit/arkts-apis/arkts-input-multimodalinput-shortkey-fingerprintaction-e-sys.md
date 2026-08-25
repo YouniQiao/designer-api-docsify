@@ -2,9 +2,9 @@
 
 指纹手势事件类型的枚举。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export declare enum FingerprintAction--><!--Device-unnamed-export declare enum FingerprintAction-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -18,9 +18,9 @@ DOWN = 0
 
 按下事件。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-FingerprintAction-DOWN = 0--><!--Device-FingerprintAction-DOWN = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -34,9 +34,9 @@ UP = 1
 
 抬起事件。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-FingerprintAction-UP = 1--><!--Device-FingerprintAction-UP = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -50,9 +50,9 @@ SLIDE = 2
 
 滑动事件。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-FingerprintAction-SLIDE = 2--><!--Device-FingerprintAction-SLIDE = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -66,9 +66,9 @@ RETOUCH = 3
 
 第二次按下事件。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-FingerprintAction-RETOUCH = 3--><!--Device-FingerprintAction-RETOUCH = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -82,11 +82,10 @@ CLICK = 4
 
 双触事件。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-FingerprintAction-CLICK = 4--><!--Device-FingerprintAction-CLICK = 4-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **系统接口：** 此接口为系统接口。
-

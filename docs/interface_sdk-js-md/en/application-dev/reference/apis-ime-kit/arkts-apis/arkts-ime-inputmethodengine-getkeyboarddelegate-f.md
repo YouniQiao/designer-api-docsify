@@ -16,15 +16,15 @@ Obtains a [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) 
 
 **Since:** 9
 
-<!--Device-inputMethodEngine-function getKeyboardDelegate(): KeyboardDelegate--><!--Device-inputMethodEngine-function getKeyboardDelegate(): KeyboardDelegate-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | KeyboardDelegate** instance. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) |
 
 **Examples**
 
@@ -43,17 +43,16 @@ Get KeyboardDelegate object to subscribe key event or events about editor.
 
 **Since:** 23
 
-<!--Device-inputMethodEngine-function getKeyboardDelegate(): KeyboardDelegate | null--><!--Device-inputMethodEngine-function getKeyboardDelegate(): KeyboardDelegate | null-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) \| null | the object of KeyboardDelegate. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) \| null |
 
 **Examples**
 
 See [getKeyboardDelegate](#getkeyboarddelegate)
-

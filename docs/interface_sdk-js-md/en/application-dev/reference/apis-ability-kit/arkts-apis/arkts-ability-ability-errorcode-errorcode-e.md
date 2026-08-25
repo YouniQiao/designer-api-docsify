@@ -2,9 +2,9 @@
 
 Enumerates the error codes that may be returned when an ability is started.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-unnamed-export enum ErrorCode--><!--Device-unnamed-export enum ErrorCode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -16,9 +16,9 @@ PERMISSION_DENY = -3
 
 Permission denied.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-ErrorCode-PERMISSION_DENY = -3--><!--Device-ErrorCode-PERMISSION_DENY = -3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -30,9 +30,9 @@ ABILITY_NOT_FOUND = -2
 
 The ability is not found.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-ErrorCode-ABILITY_NOT_FOUND = -2--><!--Device-ErrorCode-ABILITY_NOT_FOUND = -2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -44,9 +44,9 @@ INVALID_PARAMETER = -1
 
 Invalid parameter.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-ErrorCode-INVALID_PARAMETER = -1--><!--Device-ErrorCode-INVALID_PARAMETER = -1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -58,9 +58,8 @@ NO_ERROR = 0
 
 No error.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-ErrorCode-NO_ERROR = 0--><!--Device-ErrorCode-NO_ERROR = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-

@@ -2,9 +2,9 @@
 
 Represents information about the version description file.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-update-export interface DescriptionInfo--><!--Device-update-export interface DescriptionInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -26,9 +26,9 @@ Content of the description file.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DescriptionInfo-content: string--><!--Device-DescriptionInfo-content: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -44,11 +44,10 @@ Description type. The value **CONTENT** indicates that the description is conten
 
 **Type:** [DescriptionType](arkts-basicservices-update-descriptiontype-e-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DescriptionInfo-descriptionType: DescriptionType--><!--Device-DescriptionInfo-descriptionType: DescriptionType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
-

@@ -16,22 +16,23 @@ Updates the key operation data by segment. This API uses an asynchronous callbac
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [updateSession](arkts-universalkeystore-huks-updatesession-f.md)( handle: long, options: HuksOptions, token: Uint8Array, callback: AsyncCallback&lt;HuksReturnResult&gt; )
-
-<!--Device-huks-function update(handle: number, token?: Uint8Array, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function update(handle: number, token?: Uint8Array, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
+**Substitutes:** [updateSession](arkts-universalkeystore-huks-updatesession-f.md)( handle: long, options: HuksOptions, token: Uint8Array,
+   *     callback: AsyncCallback&lt;HuksReturnResult&gt; )
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| handle | number | Yes | Handle of the **update** operation, which is of the uint64 type. |
-| token | Uint8Array | No | Token of the **update** operation. |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Parameter set used for the **update** operation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| handle | number | Yes |
+| token | Uint8Array | No |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Yes |
 
 
 ## update
@@ -44,25 +45,24 @@ Updates the key operation data by segment. This API uses a promise to return the
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [updateSession](arkts-universalkeystore-huks-updatesession-f.md)(handle: long, options: HuksOptions, token?: Uint8Array)
-
-<!--Device-huks-function update(handle: number, token?: Uint8Array, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function update(handle: number, token?: Uint8Array, options: HuksOptions): Promise<HuksResult>-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| handle | number | Yes | Handle of the **update** operation, which is of the uint64 type. |
-| token | Uint8Array | No | Token of the **update** operation. |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Parameter set used for the **update** operation. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| handle | number | Yes |
+| token | Uint8Array | No |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Promise that returns **HuksResult**. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; |

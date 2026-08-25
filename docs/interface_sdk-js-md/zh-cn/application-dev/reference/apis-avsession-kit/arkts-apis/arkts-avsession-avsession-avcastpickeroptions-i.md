@@ -2,9 +2,9 @@
 
 拉起的投播组件包含的配置属性。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-avSession-interface AVCastPickerOptions--><!--Device-avSession-interface AVCastPickerOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -24,9 +24,9 @@ menuPosition?: MenuPosition
 
 **类型：** [MenuPosition](arkts-avsession-avsession-menuposition-i.md)
 
-**起始版本：** 24
+**起始版本：** 22
 
-<!--Device-AVCastPickerOptions-menuPosition?: MenuPosition--><!--Device-AVCastPickerOptions-menuPosition?: MenuPosition-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -40,9 +40,9 @@ pickerStyle?: AVCastPickerStyle
 
 **类型：** [AVCastPickerStyle](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstyle-e.md)
 
-**起始版本：** 24
+**起始版本：** 22
 
-<!--Device-AVCastPickerOptions-pickerStyle?: AVCastPickerStyle--><!--Device-AVCastPickerOptions-pickerStyle?: AVCastPickerStyle-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -56,11 +56,10 @@ sessionType?: AVSessionType
 
 **类型：** [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)
 
-**起始版本：** 23
+**起始版本：** 14
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
-<!--Device-AVCastPickerOptions-sessionType?: AVSessionType--><!--Device-AVCastPickerOptions-sessionType?: AVSessionType-End-->
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-

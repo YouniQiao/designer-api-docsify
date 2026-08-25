@@ -6,7 +6,7 @@
 
 **起始版本：** 8
 
-<!--Device-unnamed-declare class SearchAttribute--><!--Device-unnamed-declare class SearchAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,19 +25,19 @@ autoCapitalizationMode(mode: AutoCapitalizationMode)
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-autoCapitalizationMode(mode: AutoCapitalizationMode): SearchAttribute--><!--Device-SearchAttribute-autoCapitalizationMode(mode: AutoCapitalizationMode): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mode | AutoCapitalizationMode | 是 | 自动大小写模式，用于设置输入法的大小写转换规则，具体实现以输入法应用为主。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mode | [AutoCapitalizationMode](#autocapitalizationmode) | 是 |
 
 ## cancelButton
 
@@ -49,19 +49,19 @@ cancelButton(value: CancelButtonOptions | CancelButtonSymbolOptions)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-cancelButton(value: CancelButtonOptions | CancelButtonSymbolOptions): SearchAttribute--><!--Device-SearchAttribute-cancelButton(value: CancelButtonOptions | CancelButtonSymbolOptions): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [CancelButtonOptions](arkts-arkui-cancelbuttonoptions-i.md) \| [CancelButtonSymbolOptions](arkts-arkui-cancelbuttonsymboloptions-i.md) | 是 | 右侧清除按钮样式。当style为CancelButtonStyle.CONSTANT时，默认显示 清除样式。<br>**起始版本：** 12 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [CancelButtonOptions](arkts-arkui-cancelbuttonoptions-i.md) \| [CancelButtonSymbolOptions](arkts-arkui-cancelbuttonsymboloptions-i.md) | 是 |
 
 ## caretStyle
 
@@ -76,19 +76,19 @@ caretStyle(value: CaretStyle)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-caretStyle(value: CaretStyle): SearchAttribute--><!--Device-SearchAttribute-caretStyle(value: CaretStyle): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | CaretStyle | 是 | 光标样式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [CaretStyle](#caretstyle) | 是 |
 
 ## compressLeadingPunctuation
 
@@ -104,11 +104,11 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-compressLeadingPunctuation(enabled: Optional<boolean>): SearchAttribute--><!--Device-SearchAttribute-compressLeadingPunctuation(enabled: Optional<boolean>): SearchAttribute-End-->
 
 **系统能力：** 
 - SystemCapability.ArkUI.ArkUI.Full
@@ -116,9 +116,9 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | 是 | 是否开启行首标点符号压缩。 <br>true表示开启行首标点符号压缩；false表示不开启行首标点符号压缩。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enabled | Optional & lt;boolean & gt; | 是 |
 
 ## copyOption
 
@@ -130,17 +130,17 @@ copyOption(value: CopyOptions)
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-SearchAttribute-copyOption(value: CopyOptions): SearchAttribute--><!--Device-SearchAttribute-copyOption(value: CopyOptions): SearchAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | CopyOptions | 是 | 输入的文本是否可复制。 <br>**说明：** <br>当copyOption不为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时， [enableSelectedDataDetector](#enableselecteddatadetector)功能不生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | 是 |
 
 ## customKeyboard
 
@@ -155,11 +155,11 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: Ke
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: KeyboardOptions): SearchAttribute--><!--Device-SearchAttribute-customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: KeyboardOptions): SearchAttribute-End-->
 
 **系统能力：** 
 - SystemCapability.ArkUI.ArkUI.Full
@@ -167,10 +167,10 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: Ke
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | CustomBuilder \| ComponentContent \| undefined | 是 | 自定义键盘。设定值为undefined时，关闭自定义键盘。<br>**起始版本：** 22 |
-| options | KeyboardOptions | 否 | 设置自定义键盘是否支持避让功能。不传入时使用默认配置。<br>**起始版本：** 12 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | CustomBuilder \| ComponentContent \| undefined | 是 |
+| options | [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) | 否 |
 
 ## decoration
 
@@ -186,19 +186,19 @@ decoration(value: TextDecorationOptions)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-decoration(value: TextDecorationOptions): SearchAttribute--><!--Device-SearchAttribute-decoration(value: TextDecorationOptions): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | TextDecorationOptions | 是 | 文本装饰线对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [TextDecorationOptions](../arkts-apis/arkts-arkui-common-textdecorationoptions-i.md) | 是 |
 
 ## dividerColor
 
@@ -210,19 +210,19 @@ dividerColor(color: Optional<ColorMetrics>)
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-dividerColor(color: Optional<ColorMetrics>): SearchAttribute--><!--Device-SearchAttribute-dividerColor(color: Optional<ColorMetrics>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| color | Optional&lt;ColorMetrics&gt; | 是 | 设置分割线颜色。 <br>默认使用系统的主题色：浅色模式下为0x33000000，表示黑色（20%不透明度），深色模式下为0x33FFFFFF，表示白色（20%不透明度）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| color | Optional & lt;ColorMetrics & gt; | 是 |
 
 ## editMenuOptions
 
@@ -234,19 +234,19 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-editMenuOptions(editMenu: EditMenuOptions): SearchAttribute--><!--Device-SearchAttribute-editMenuOptions(editMenu: EditMenuOptions): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| editMenu | EditMenuOptions | 是 | 扩展菜单选项，用于设置自定义菜单扩展项的文本内容、图标和回调方法。当需要在文本选择菜单中添加自定义选项时使用此参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| editMenu | [EditMenuOptions](#editmenuoptions) | 是 |
 
 ## enableAutoSpacing
 
@@ -258,19 +258,19 @@ enableAutoSpacing(enabled: Optional<boolean>)
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-enableAutoSpacing(enabled: Optional<boolean>): SearchAttribute--><!--Device-SearchAttribute-enableAutoSpacing(enabled: Optional<boolean>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | 是 | 是否开启中文与西文的自动间距。 <br>true为开启自动间距，false为不开启。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enabled | Optional & lt;boolean & gt; | 是 |
 
 ## enableHapticFeedback
 
@@ -282,11 +282,11 @@ enableHapticFeedback(isEnabled: boolean)
 
 **起始版本：** 13
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-enableHapticFeedback(isEnabled: boolean): SearchAttribute--><!--Device-SearchAttribute-enableHapticFeedback(isEnabled: boolean): SearchAttribute-End-->
 
 **系统能力：** 
 - SystemCapability.ArkUI.ArkUI.Full
@@ -294,9 +294,9 @@ enableHapticFeedback(isEnabled: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isEnabled | boolean | 是 | 是否开启触控反馈。 <br>true表示开启触控反馈，false表示不开启触控反馈。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| isEnabled | boolean | 是 |
 
 ## enableKeyboardOnFocus
 
@@ -308,11 +308,11 @@ enableKeyboardOnFocus(value: boolean)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-enableKeyboardOnFocus(value: boolean): SearchAttribute--><!--Device-SearchAttribute-enableKeyboardOnFocus(value: boolean): SearchAttribute-End-->
 
 **系统能力：** 
 - SystemCapability.ArkUI.ArkUI.Full
@@ -320,9 +320,9 @@ enableKeyboardOnFocus(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean | 是 | Search获焦时，是否主动拉起软键盘。 <br>true表示主动拉起，false表示不主动拉起。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | boolean | 是 |
 
 ## enablePreviewText
 
@@ -337,19 +337,19 @@ enablePreviewText(enable: boolean)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-enablePreviewText(enable: boolean): SearchAttribute--><!--Device-SearchAttribute-enablePreviewText(enable: boolean): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enable | boolean | 是 | 是否开启输入预上屏。 <br>true表示开启输入预上屏，false表示不开启输入预上屏。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enable | boolean | 是 |
 
 ## enableSelectedDataDetector
 
@@ -361,19 +361,19 @@ enableSelectedDataDetector(enable: boolean | undefined)
 
 **起始版本：** 22
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-enableSelectedDataDetector(enable: boolean | undefined): SearchAttribute--><!--Device-SearchAttribute-enableSelectedDataDetector(enable: boolean | undefined): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enable | boolean \| undefined | 是 | 开启选中文本实体识别。 <br>true：开启识别，false：关闭识别。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enable | boolean \| undefined | 是 |
 
 ## enterKeyType
 
@@ -385,19 +385,19 @@ enterKeyType(value: EnterKeyType)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-enterKeyType(value: EnterKeyType): SearchAttribute--><!--Device-SearchAttribute-enterKeyType(value: EnterKeyType): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | EnterKeyType | 是 | 输入法回车键类型。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [EnterKeyType](#enterkeytype) | 是 |
 
 ## fallbackLineSpacing
 
@@ -409,11 +409,11 @@ fallbackLineSpacing(enabled: Optional<boolean>)
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-fallbackLineSpacing(enabled: Optional<boolean>): SearchAttribute--><!--Device-SearchAttribute-fallbackLineSpacing(enabled: Optional<boolean>): SearchAttribute-End-->
 
 **系统能力：** 
 - SystemCapability.ArkUI.ArkUI.Full
@@ -421,9 +421,9 @@ fallbackLineSpacing(enabled: Optional<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | 是 | 行高是否基于文字实际高度自适应。 <br>此接口仅当行高小于文字实际高度时生效。 <br>true表示行高基于文字实际高度自适应；false表示行高不基于文字实际高度自适应。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enabled | Optional & lt;boolean & gt; | 是 |
 
 ## fontColor
 
@@ -438,19 +438,19 @@ fontColor(value: ResourceColor)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-fontColor(value: ResourceColor): SearchAttribute--><!--Device-SearchAttribute-fontColor(value: ResourceColor): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceColor | 是 | 输入文本的字体颜色。 <br>**说明：** <br>当同时设置fontColor和[shaderStyle](#shaderstyle)时，fontColor设置不生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
 
 ## fontFeature
 
@@ -462,19 +462,19 @@ fontFeature(value: string)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-fontFeature(value: string): SearchAttribute--><!--Device-SearchAttribute-fontFeature(value: string): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | string | 是 | 文字特性效果，用于设置OpenType字体的高级排版能力，如连字、数字等宽等。 <br>格式为："ss01" on。更多支持的属性详见fontFeature属性列表。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | string | 是 |
 
 ## halfLeading
 
@@ -486,19 +486,19 @@ halfLeading(halfLeading: Optional<boolean>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-halfLeading(halfLeading: Optional<boolean>): SearchAttribute--><!--Device-SearchAttribute-halfLeading(halfLeading: Optional<boolean>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| halfLeading | Optional&lt;boolean&gt; | 是 | 设置文本是否垂直居中。 <br>true表示将行间距平分至行的顶部与底部，false则不平分。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [halfLeading](#halfleading) | Optional & lt;boolean & gt; | 是 |
 
 ## includeFontPadding
 
@@ -510,11 +510,11 @@ includeFontPadding(include: Optional<boolean>)
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-includeFontPadding(include: Optional<boolean>): SearchAttribute--><!--Device-SearchAttribute-includeFontPadding(include: Optional<boolean>): SearchAttribute-End-->
 
 **系统能力：** 
 - SystemCapability.ArkUI.ArkUI.Full
@@ -522,9 +522,9 @@ includeFontPadding(include: Optional<boolean>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| include | Optional&lt;boolean&gt; | 是 | 是否在首行和尾行增加间距以避免文字截断。 <br>true表示在首行和尾行增加间距；false表示在首行和尾行不增加间距。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| include | Optional & lt;boolean & gt; | 是 |
 
 ## inputFilter
 
@@ -536,20 +536,20 @@ inputFilter(value: ResourceStr, error?: Callback<string>)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-inputFilter(value: ResourceStr, error?: Callback<string>): SearchAttribute--><!--Device-SearchAttribute-inputFilter(value: ResourceStr, error?: Callback<string>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceStr | 是 | 输入过滤器的正则表达式。匹配该表达式的输入允许显示，不匹配的输入将被过滤。 |
-| error | Callback&lt;string&gt; | 否 | 正则匹配失败时，返回被过滤的内容。不传入时不触发该回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 |
+| error | Callback & lt;string & gt; | 否 |
 
 ## keyboardAppearance
 
@@ -561,19 +561,19 @@ keyboardAppearance(appearance: Optional<KeyboardAppearance>)
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-keyboardAppearance(appearance: Optional<KeyboardAppearance>): SearchAttribute--><!--Device-SearchAttribute-keyboardAppearance(appearance: Optional<KeyboardAppearance>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| appearance | Optional&lt;KeyboardAppearance&gt; | 是 | 键盘样式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| appearance | Optional & lt;KeyboardAppearance & gt; | 是 |
 
 ## letterSpacing
 
@@ -585,19 +585,19 @@ letterSpacing(value: number | string | Resource)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-letterSpacing(value: number | string | Resource): SearchAttribute--><!--Device-SearchAttribute-letterSpacing(value: number | string | Resource): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 文本字符间距。 <br>单位：fp |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
 
 ## lineHeight
 
@@ -612,19 +612,19 @@ lineHeight(value: number | string | Resource)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-lineHeight(value: number | string | Resource): SearchAttribute--><!--Device-SearchAttribute-lineHeight(value: number | string | Resource): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 文本的文本行高。 <br>number类型时单位为fp，string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
 
 ## maxFontScale
 
@@ -636,19 +636,19 @@ maxFontScale(scale: Optional<number|Resource>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-maxFontScale(scale: Optional<number|Resource>): SearchAttribute--><!--Device-SearchAttribute-maxFontScale(scale: Optional<number|Resource>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| scale | Optional&lt;number \| Resource&gt; | 是 | 文本最大的字体缩放倍数，支持undefined类型。 <br>取值范围：[1, +∞) <br>**说明：** <br>设置的值小于1时，按值为1处理。设置undefined时维持原值，异常值默认不生效。 <br>设置maxFontScale属性后，search组件内容最多放大到2倍。 <br>使用前需在工程中配置[configuration.json](../../../quick-start/app-configuration-file.md#configuration标签)文件和 [app.json5](../../../quick-start/app-configuration-file.md)文件，具体详见 [示例19（设置最小字体范围与最大字体范围）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-search.md#示例19设置最小字体范围与最大字体范围)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| scale | Optional & lt;number \ | Resource & gt; | 是 |
 
 ## maxFontSize
 
@@ -660,19 +660,19 @@ maxFontSize(value: number | string | Resource)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-maxFontSize(value: number | string | Resource): SearchAttribute--><!--Device-SearchAttribute-maxFontSize(value: number | string | Resource): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 文本最大显示字号。 <br>单位：fp |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
 
 ## maxLength
 
@@ -684,19 +684,19 @@ maxLength(value: number)
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-maxLength(value: number): SearchAttribute--><!--Device-SearchAttribute-maxLength(value: number): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number | 是 | 文本的最大输入字符数。取值范围：[0, +∞)。当value&lt;0时，按照默认值处理，不设限制。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number | 是 |
 
 ## minFontScale
 
@@ -708,19 +708,19 @@ minFontScale(scale: Optional<number|Resource>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-minFontScale(scale: Optional<number|Resource>): SearchAttribute--><!--Device-SearchAttribute-minFontScale(scale: Optional<number|Resource>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| scale | Optional&lt;number \| Resource&gt; | 是 | 文本最小的字体缩放倍数，支持undefined类型。 <br>取值范围：[0, 1] <br>**说明：** <br>设置的值小于0时，按值为0处理。设置的值大于1，按值为1处理。设置undefined时维持原值，异常值默认不生效。 <br>使用前需在工程中配置[configuration.json](../../../quick-start/app-configuration-file.md#configuration标签)文件和 [app.json5](../../../quick-start/app-configuration-file.md)文件，具体详见 [示例19（设置最小字体范围与最大字体范围）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-search.md#示例19设置最小字体范围与最大字体范围)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| scale | Optional & lt;number \ | Resource & gt; | 是 |
 
 ## minFontSize
 
@@ -732,19 +732,19 @@ minFontSize(value: number | string | Resource)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-minFontSize(value: number | string | Resource): SearchAttribute--><!--Device-SearchAttribute-minFontSize(value: number | string | Resource): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 文本最小显示字号。 <br>单位：fp |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
 
 ## onChange
 
@@ -756,17 +756,17 @@ onChange(callback: EditableTextOnChangeCallback)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SearchAttribute-onChange(callback: EditableTextOnChangeCallback): SearchAttribute--><!--Device-SearchAttribute-onChange(callback: EditableTextOnChangeCallback): SearchAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | EditableTextOnChangeCallback | 是 | 当前输入文本内容变化时的回调。<br>**起始版本：** 12 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [EditableTextOnChangeCallback](../arkts-apis/arkts-arkui-editabletextonchangecallback-t.md) | 是 |
 
 ## onContentScroll
 
@@ -778,11 +778,11 @@ onContentScroll(callback: OnContentScrollCallback)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-onContentScroll(callback: OnContentScrollCallback): SearchAttribute--><!--Device-SearchAttribute-onContentScroll(callback: OnContentScrollCallback): SearchAttribute-End-->
 
 **系统能力：** 
 - SystemCapability.ArkUI.ArkUI.Full
@@ -790,9 +790,9 @@ onContentScroll(callback: OnContentScrollCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | OnContentScrollCallback | 是 | 文本内容滚动回调，回调参数包括totalOffsetX（水平滚动偏移量）和totalOffsetY（垂直滚动偏移量）。<br>**起始版本：** 18 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [OnContentScrollCallback](../arkts-apis/arkts-arkui-oncontentscrollcallback-t.md) | 是 |
 
 ## onCopy
 
@@ -807,17 +807,17 @@ onCopy(callback: Callback<string>)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SearchAttribute-onCopy(callback: Callback<string>): SearchAttribute--><!--Device-SearchAttribute-onCopy(callback: Callback<string>): SearchAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;string&gt; | 是 | 复制回调，其返回值为复制的文本内容。<br>**起始版本：** 18 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback & lt;string & gt; | 是 |
 
 ## onCut
 
@@ -832,17 +832,17 @@ onCut(callback: Callback<string>)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SearchAttribute-onCut(callback: Callback<string>): SearchAttribute--><!--Device-SearchAttribute-onCut(callback: Callback<string>): SearchAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;string&gt; | 是 | 剪切回调，其返回值为剪切的文本内容。<br>**起始版本：** 18 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback & lt;string & gt; | 是 |
 
 ## onDidDelete
 
@@ -857,19 +857,19 @@ onDidDelete(callback: Callback<DeleteValue>)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-onDidDelete(callback: Callback<DeleteValue>): SearchAttribute--><!--Device-SearchAttribute-onDidDelete(callback: Callback<DeleteValue>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;DeleteValue&gt; | 是 | 在删除完成时调用的回调。 <br>仅支持系统输入法输入的场景。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback & lt;DeleteValue & gt; | 是 |
 
 ## onDidInsert
 
@@ -881,19 +881,19 @@ onDidInsert(callback: Callback<InsertValue>)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-onDidInsert(callback: Callback<InsertValue>): SearchAttribute--><!--Device-SearchAttribute-onDidInsert(callback: Callback<InsertValue>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;InsertValue&gt; | 是 | 在输入完成时调用的回调。 <br>仅支持系统输入法输入的场景。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback & lt;InsertValue & gt; | 是 |
 
 ## onEditChange
 
@@ -905,19 +905,19 @@ onEditChange(callback: Callback<boolean>)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-onEditChange(callback: Callback<boolean>): SearchAttribute--><!--Device-SearchAttribute-onEditChange(callback: Callback<boolean>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;boolean&gt; | 是 | 编辑状态改变回调，其返回值为true表示正在输入，false表示无焦点，无法输入文字。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback & lt;boolean & gt; | 是 |
 
 ## onPaste
 
@@ -929,9 +929,9 @@ onPaste(callback: OnPasteCallback)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SearchAttribute-onPaste(callback: OnPasteCallback): SearchAttribute--><!--Device-SearchAttribute-onPaste(callback: OnPasteCallback): SearchAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** 
 - SystemCapability.ArkUI.ArkUI.Full
@@ -939,9 +939,9 @@ onPaste(callback: OnPasteCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | OnPasteCallback | 是 | Executed when a paste operation is performed.Callback used to return the pasted text content.<br>**起始版本：** 18 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [OnPasteCallback](arkts-arkui-onpastecallback-t.md) | 是 |
 
 ## onSubmit
 
@@ -953,17 +953,17 @@ onSubmit(callback: Callback<string>)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SearchAttribute-onSubmit(callback: Callback<string>): SearchAttribute--><!--Device-SearchAttribute-onSubmit(callback: Callback<string>): SearchAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;string&gt; | 是 | 搜索提交回调，其返回值为当前搜索框中输入的文本内容。<br>**起始版本：** 18 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback & lt;string & gt; | 是 |
 
 ## onSubmit
 
@@ -975,19 +975,19 @@ onSubmit(callback: SearchSubmitCallback)
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-onSubmit(callback: SearchSubmitCallback): SearchAttribute--><!--Device-SearchAttribute-onSubmit(callback: SearchSubmitCallback): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [SearchSubmitCallback](arkts-arkui-searchsubmitcallback-t.md) | 是 | 点击搜索图标、搜索按钮或者按下软键盘搜索按钮时的回调事件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [SearchSubmitCallback](arkts-arkui-searchsubmitcallback-t.md) | 是 |
 
 ## onTextSelectionChange
 
@@ -999,11 +999,11 @@ onTextSelectionChange(callback: OnTextSelectionChangeCallback)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-onTextSelectionChange(callback: OnTextSelectionChangeCallback): SearchAttribute--><!--Device-SearchAttribute-onTextSelectionChange(callback: OnTextSelectionChangeCallback): SearchAttribute-End-->
 
 **系统能力：** 
 - SystemCapability.ArkUI.ArkUI.Full
@@ -1011,9 +1011,9 @@ onTextSelectionChange(callback: OnTextSelectionChangeCallback)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | OnTextSelectionChangeCallback | 是 | 文本选择变化回调或光标位置变化回调。<br>**起始版本：** 18 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [OnTextSelectionChangeCallback](arkts-arkui-ontextselectionchangecallback-t.md) | 是 |
 
 ## onWillAttachIME
 
@@ -1028,19 +1028,19 @@ onWillAttachIME(callback: Callback<IMEClient>)
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-onWillAttachIME(callback: Callback<IMEClient>): SearchAttribute--><!--Device-SearchAttribute-onWillAttachIME(callback: Callback<IMEClient>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;IMEClient&gt; | 是 | 在搜索框将要绑定输入法前触发该回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback & lt;IMEClient & gt; | 是 |
 
 ## onWillChange
 
@@ -1052,19 +1052,19 @@ onWillChange(callback: Callback<EditableTextChangeValue, boolean>)
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-onWillChange(callback: Callback<EditableTextChangeValue, boolean>): SearchAttribute--><!--Device-SearchAttribute-onWillChange(callback: Callback<EditableTextChangeValue, boolean>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;EditableTextChangeValue, boolean&gt; | 是 | 在文本内容将要发生变化时的回调。 <br>返回true时，表示正常修改。返回false时，表示拦截此次触发。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback & lt;EditableTextChangeValue, boolean & gt; | 是 |
 
 ## onWillCopy
 
@@ -1079,19 +1079,19 @@ onWillCopy(callback: Callback<string, boolean>)
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-onWillCopy(callback: Callback<string, boolean>): SearchAttribute--><!--Device-SearchAttribute-onWillCopy(callback: Callback<string, boolean>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;string, boolean&gt; | 是 | 复制操作前的回调。回调参数类型为string时，表示将要被复制的文本内容。回调参数类型为boolean时，表示当前选中文本是否允许被复 制，true：允许文本被复制；false：不允许文本被复制。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback & lt;string, boolean & gt; | 是 |
 
 ## onWillCut
 
@@ -1106,19 +1106,19 @@ onWillCut(callback: Callback<string, boolean>)
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-onWillCut(callback: Callback<string, boolean>): SearchAttribute--><!--Device-SearchAttribute-onWillCut(callback: Callback<string, boolean>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;string, boolean&gt; | 是 | 剪切操作前的回调。回调参数类型为string时，表示将要被剪切的文本内容。回调参数类型为boolean时，表示当前选中文本是否允许被剪 切，true：允许文本被剪切；false：不允许文本被剪切。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback & lt;string, boolean & gt; | 是 |
 
 ## onWillDelete
 
@@ -1130,19 +1130,19 @@ onWillDelete(callback: Callback<DeleteValue, boolean>)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-onWillDelete(callback: Callback<DeleteValue, boolean>): SearchAttribute--><!--Device-SearchAttribute-onWillDelete(callback: Callback<DeleteValue, boolean>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;DeleteValue, boolean&gt; | 是 | 在将要删除时调用的回调。 <br>在返回true时，表示正常删除，返回false时，表示不删除。 <br>在预上屏删除操作时，该回调不触发。 <br>仅支持系统输入法输入的场景。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback & lt;DeleteValue, boolean & gt; | 是 |
 
 ## onWillInsert
 
@@ -1154,19 +1154,19 @@ onWillInsert(callback: Callback<InsertValue, boolean>)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-onWillInsert(callback: Callback<InsertValue, boolean>): SearchAttribute--><!--Device-SearchAttribute-onWillInsert(callback: Callback<InsertValue, boolean>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;InsertValue, boolean&gt; | 是 | 在将要输入时调用的回调。 <br>在返回true时，表示正常插入，返回false时，表示不插入。 <br>在预上屏和候选词操作时，该回调不触发。 <br>仅支持系统输入法输入的场景。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback & lt;InsertValue, boolean & gt; | 是 |
 
 ## placeholderColor
 
@@ -1178,17 +1178,17 @@ placeholderColor(value: ResourceColor)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SearchAttribute-placeholderColor(value: ResourceColor): SearchAttribute--><!--Device-SearchAttribute-placeholderColor(value: ResourceColor): SearchAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceColor | 是 | placeholder文本颜色。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
 
 ## placeholderFont
 
@@ -1203,17 +1203,17 @@ placeholderFont(value?: Font)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SearchAttribute-placeholderFont(value?: Font): SearchAttribute--><!--Device-SearchAttribute-placeholderFont(value?: Font): SearchAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Font | 否 | placeholder文本样式。不传入时使用系统默认字体样式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 否 |
 
 ## searchButton
 
@@ -1225,18 +1225,18 @@ searchButton(value: ResourceStr, option?: SearchButtonOptions)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SearchAttribute-searchButton(value: ResourceStr, option?: SearchButtonOptions): SearchAttribute--><!--Device-SearchAttribute-searchButton(value: ResourceStr, option?: SearchButtonOptions): SearchAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceStr | 是 | 搜索框末尾搜索按钮文本内容。 <br>从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
-| option | [SearchButtonOptions](arkts-arkui-searchbuttonoptions-i.md) | 否 | 配置搜索框末尾搜索按钮样式。 <br>默认值： <br>{<br>fontSize: '16fp', <br>fontColor: '#ff3f97e9'<br>}<br>**起始版本：** 10 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 |
+| option | [SearchButtonOptions](arkts-arkui-searchbuttonoptions-i.md) | 否 |
 
 ## searchIcon
 
@@ -1248,19 +1248,19 @@ searchIcon(value: IconOptions | SymbolGlyphModifier)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-searchIcon(value: IconOptions | SymbolGlyphModifier): SearchAttribute--><!--Device-SearchAttribute-searchIcon(value: IconOptions | SymbolGlyphModifier): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [IconOptions](arkts-arkui-iconoptions-i.md) \| SymbolGlyphModifier | 是 | 左侧搜索图标样式。如果与参数icon同时设置，本属性优先生效。<!--RP1--> <br>浅色模式默认值： <br>{<br>size: '16vp', <br>color: '#99182431', <br>src: ' '<br>} <br>深色模式默认值： <br>{<br>size: '16vp', <br>color: '#99ffffff', <br>src: ' '<br>} <!--RP1End--><br>**起始版本：** 12 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [IconOptions](arkts-arkui-iconoptions-i.md) \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | 是 |
 
 ## selectedBackgroundColor
 
@@ -1272,19 +1272,19 @@ selectedBackgroundColor(value: ResourceColor)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-selectedBackgroundColor(value: ResourceColor): SearchAttribute--><!--Device-SearchAttribute-selectedBackgroundColor(value: ResourceColor): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceColor | 是 | 文本选中底板颜色。如果未设置不透明度，默认为20%不透明度。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
 
 ## selectedDragPreviewStyle
 
@@ -1296,19 +1296,19 @@ selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined)
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined): SearchAttribute--><!--Device-SearchAttribute-selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | SelectedDragPreviewStyle \| undefined | 是 | 文本拖拽时的背板样式。 <br>设置为undefined时：背板颜色跟随主题，浅色模式显示白色，深色模式显示黑色。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | SelectedDragPreviewStyle \| undefined | 是 |
 
 ## selectionMenuHidden
 
@@ -1320,11 +1320,11 @@ selectionMenuHidden(value: boolean)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-selectionMenuHidden(value: boolean): SearchAttribute--><!--Device-SearchAttribute-selectionMenuHidden(value: boolean): SearchAttribute-End-->
 
 **系统能力：** 
 - SystemCapability.ArkUI.ArkUI.Full
@@ -1332,9 +1332,9 @@ selectionMenuHidden(value: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean | 是 | 是否不弹出系统文本选择菜单。 <br>设置为true时，单击输入框光标、长按输入框、双击输入框、三击输入框或者右键输入框，不弹出系统文本选择菜单。 <br>设置为false时，弹出系统文本选择菜单。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | boolean | 是 |
 
 ## shaderStyle
 
@@ -1350,11 +1350,11 @@ shaderStyle(shader: ShaderStyle | undefined)
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-shaderStyle(shader: ShaderStyle | undefined): SearchAttribute--><!--Device-SearchAttribute-shaderStyle(shader: ShaderStyle | undefined): SearchAttribute-End-->
 
 **系统能力：** 
 - SystemCapability.ArkUI.ArkUI.Full
@@ -1362,9 +1362,9 @@ shaderStyle(shader: ShaderStyle | undefined)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| shader | ShaderStyle \| undefined | 是 | 文本着色器效果。 <br>**说明：** <br>当同时设置shaderStyle和[strokeWidth](#strokewidth)时，shaderStyle不生效。 <br>当同时设置shaderStyle和[fontColor](#fontcolor)时，fontColor不生效。 <br>值为undefined时，无渐变效果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| shader | ShaderStyle \| undefined | 是 |
 
 ## stopBackPress
 
@@ -1376,19 +1376,19 @@ stopBackPress(isStopped: Optional<boolean>)
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-stopBackPress(isStopped: Optional<boolean>): SearchAttribute--><!--Device-SearchAttribute-stopBackPress(isStopped: Optional<boolean>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isStopped | Optional&lt;boolean&gt; | 是 | 是否阻止返回键。 <br>true表示阻止，false表示不阻止。 <br>异常值取默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| isStopped | Optional & lt;boolean & gt; | 是 |
 
 ## strokeColor
 
@@ -1400,11 +1400,11 @@ strokeColor(color: Optional<ResourceColor>)
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-strokeColor(color: Optional<ResourceColor>): SearchAttribute--><!--Device-SearchAttribute-strokeColor(color: Optional<ResourceColor>): SearchAttribute-End-->
 
 **系统能力：** 
 - SystemCapability.ArkUI.ArkUI.Full
@@ -1412,9 +1412,9 @@ strokeColor(color: Optional<ResourceColor>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| color | Optional&lt;ResourceColor&gt; | 是 | 描边颜色。未通过该接口设置时，默认描边颜色为字体颜色，设置异常值时取默认值。需配合 [strokeWidth](#strokewidth)设置描边宽度后生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| color | Optional & lt;ResourceColor & gt; | 是 |
 
 ## strokeJoinStyle
 
@@ -1426,11 +1426,11 @@ strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined)
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined): SearchAttribute--><!--Device-SearchAttribute-strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined): SearchAttribute-End-->
 
 **系统能力：** 
 - SystemCapability.ArkUI.ArkUI.Full
@@ -1438,9 +1438,9 @@ strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| strokeJoinStyle | StrokeJoinStyle \| undefined | 是 | 文本描边拐角样式。 <br>值为undefined时，按照StrokeJoinStyle.MITER_JOIN处理，请参考StrokeJoinStyle，文本拐角处表现为锐角。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [strokeJoinStyle](#strokejoinstyle) | StrokeJoinStyle \| undefined | 是 |
 
 ## strokeWidth
 
@@ -1455,11 +1455,11 @@ strokeWidth(width: Optional<LengthMetrics>)
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-strokeWidth(width: Optional<LengthMetrics>): SearchAttribute--><!--Device-SearchAttribute-strokeWidth(width: Optional<LengthMetrics>): SearchAttribute-End-->
 
 **系统能力：** 
 - SystemCapability.ArkUI.ArkUI.Full
@@ -1467,9 +1467,9 @@ strokeWidth(width: Optional<LengthMetrics>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| width | Optional&lt;LengthMetrics&gt; | 是 | 文本描边的宽度。如果LengthMetrics的unit值是PERCENT，当前设置不生效，按默认值处理。 <br>若设置值小于0，显示实心字；若大于0，显示空心字。 <br>**说明：** <br>当同时设置strokeWidth和[shaderStyle](#shaderstyle)时，shaderStyle不生效。 <br>[strokeJoinStyle](#strokejoinstyle)仅在使用strokeWidth设置文本描边时生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| width | Optional & lt;LengthMetrics & gt; | 是 |
 
 ## textAlign
 
@@ -1484,17 +1484,17 @@ textAlign(value: TextAlign)
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-SearchAttribute-textAlign(value: TextAlign): SearchAttribute--><!--Device-SearchAttribute-textAlign(value: TextAlign): SearchAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | TextAlign | 是 | 文本在搜索框中的对齐方式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [TextAlign](#textalign) | 是 |
 
 ## textDirection
 
@@ -1506,19 +1506,19 @@ textDirection(direction: TextDirection | undefined)
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-textDirection(direction: TextDirection | undefined): SearchAttribute--><!--Device-SearchAttribute-textDirection(direction: TextDirection | undefined): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| direction | TextDirection \| undefined | 是 | 文本排版方向。 <br>设置为undefined时，按照TextDirection.DEFAULT处理，表现为文本排版方向遵循组件布局方向。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| direction | TextDirection \| undefined | 是 |
 
 ## textFont
 
@@ -1533,17 +1533,17 @@ textFont(value?: Font)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SearchAttribute-textFont(value?: Font): SearchAttribute--><!--Device-SearchAttribute-textFont(value?: Font): SearchAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Font | 否 | 搜索框内输入文本样式。不传入时使用系统默认字体样式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 否 |
 
 ## textIndent
 
@@ -1555,19 +1555,19 @@ textIndent(value: Dimension)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-textIndent(value: Dimension): SearchAttribute--><!--Device-SearchAttribute-textIndent(value: Dimension): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Dimension | 是 | 首行文本缩进。 <br>单位：vp <br>取值范围：大于等于0。设置负数时，按默认值处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 是 |
 
 ## type
 
@@ -1582,17 +1582,16 @@ type(value: SearchType)
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SearchAttribute-type(value: SearchType): SearchAttribute--><!--Device-SearchAttribute-type(value: SearchType): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [SearchType](arkts-arkui-searchtype-e.md) | 是 | 输入框类型。 <br>当同时设置了[inputFilter](#inputfilter)且输入的字符不为空字符时，type接口附带的文本过滤效果失效。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [SearchType](arkts-arkui-searchtype-e.md) | 是 |

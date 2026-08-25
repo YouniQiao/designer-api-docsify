@@ -6,9 +6,7 @@ Represents an error that occurs when a variable that doesn't exist (or hasn't ye
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class ReferenceError--><!--Device-unnamed-export class ReferenceError-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,26 +25,24 @@ Constructs a new ReferenceError instance with provided message and error specifi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReferenceError-static $_invoke(message?: string, options?: ErrorOptions): ReferenceError--><!--Device-ReferenceError-static $_invoke(message?: string, options?: ErrorOptions): ReferenceError-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | string | No | Error text. |
-| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No | Error options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | string | No |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ReferenceError](arkts-arkts-errors-referenceerror-c.md) | Newly created ReferenceError instance |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [ReferenceError](arkts-arkts-errors-referenceerror-c.md) |
 
 ## constructor
 
@@ -58,18 +54,15 @@ Constructs a new ReferenceError instance with provided message and error specifi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReferenceError-constructor(message?: string, options?: ErrorOptions)--><!--Device-ReferenceError-constructor(message?: string, options?: ErrorOptions)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | string | No | Error text. |
-| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No | Error options. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | string | No |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No |

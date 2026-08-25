@@ -17,29 +17,31 @@ FolderStack(options?: FolderStackOptions)
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FolderStackInterface-(options?: FolderStackOptions): FolderStackAttribute--><!--Device-FolderStackInterface-(options?: FolderStackOptions): FolderStackAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [FolderStackOptions](arkts-arkui-folderstackoptions-i.md) | 否 | FolderStack的配置项，用于设置悬停态时需要移到上半屏的子组件。当需要使用折叠屏悬停能力时，通过upperItems数组指定子组件id；不 传入时FolderStack作为普通Stack组件使用，不启用悬停能力，upperItems默认为空数组。 |
+| 参数名 | [类型](#类型) | 必填 |
+| --- | --- | --- |
+| options | [FolderStackOptions](arkts-arkui-folderstackoptions-i.md) | 否 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
+| 名称 |
+| --- |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-
+| 名称 |
+| --- |
+| [OnFoldStatusChangeCallback](arkts-arkui-onfoldstatuschangecallback-t.md) |
+| [OnHoverStatusChangeCallback](arkts-arkui-onhoverstatuschangecallback-t.md) |
+| [WindowStatusType](arkts-arkui-windowstatustype-t.md) |

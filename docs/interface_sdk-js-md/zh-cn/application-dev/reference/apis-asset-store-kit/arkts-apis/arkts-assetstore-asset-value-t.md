@@ -8,15 +8,14 @@ declare type Value = boolean | number | Uint8Array
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-asset-declare type Value = boolean | number | Uint8Array--><!--Device-asset-declare type Value = boolean | number | Uint8Array-End-->
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | The value is a boolean value, with a range of true or false. |
-| number | The value is a number, and the value range is the enumerated value or number corresponding to the tag. |
-| Uint8Array | The value is a byte array, and the content is defined by the service. |
-
+| 类型 |
+| --- |
+| boolean |
+| number |
+| Uint8Array |

@@ -2,9 +2,9 @@
 
 Defines the DND time.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-notificationManager-export interface DoNotDisturbDate--><!--Device-notificationManager-export interface DoNotDisturbDate-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -26,9 +26,9 @@ DND start time.
 
 **Type:** Date
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DoNotDisturbDate-begin: Date--><!--Device-DoNotDisturbDate-begin: Date-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -44,9 +44,9 @@ DND end time.
 
 **Type:** Date
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DoNotDisturbDate-end: Date--><!--Device-DoNotDisturbDate-end: Date-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -62,11 +62,10 @@ DND time type.
 
 **Type:** DoNotDisturbType
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DoNotDisturbDate-type: DoNotDisturbType--><!--Device-DoNotDisturbDate-type: DoNotDisturbType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

@@ -6,7 +6,7 @@ RestrictedWorker类继承[ThreadWorker](arkts-arkts-worker-threadworker-c.md)，
 
 **起始版本：** 11
 
-<!--Device-worker-class RestrictedWorker--><!--Device-worker-class RestrictedWorker-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -28,7 +28,7 @@ RestrictedWorker构造函数。使用其他方法前，均需先构造Restricted
 
 **起始版本：** 11
 
-<!--Device-RestrictedWorker-constructor(scriptURL: string, options?: WorkerOptions)--><!--Device-RestrictedWorker-constructor(scriptURL: string, options?: WorkerOptions)-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -36,17 +36,17 @@ RestrictedWorker构造函数。使用其他方法前，均需先构造Restricted
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| scriptURL | string | 是 | Worker线程文件的路径，路径规则详细参考文件路径注意事项。 |
-| options | [WorkerOptions](arkts-arkts-worker-workeroptions-i.md) | 否 | 构造RestrictedWorker时的选项。type默认值为'classic'，name默认'undefined'， shared默认'undefined'，priority默认'MEDIUM'。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| scriptURL | string | 是 |
+| options | [WorkerOptions](arkts-arkts-worker-workeroptions-i.md) | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200003](../errorcode-utils.md#10200003-worker初始化失败) | Worker initialization failure. |
-| [10200007](../errorcode-utils.md#10200007-worker文件路径异常) | The worker file path is invalid. |
+| 错误码ID |
+| --- |
+| [10200003](../errorcode-utils.md#10200003-worker初始化失败) |
+| [10200007](../errorcode-utils.md#10200007-worker文件路径异常) |
 
 **示例**
 
@@ -69,4 +69,3 @@ import { worker } from '@kit.ArkTS';
 // worker文件所在路径："entry/src/main/ets/workers/worker.ets"
 const workerInstance = new worker.Worker('entry/ets/workers/worker.ets', {name: "WorkerThread"});
 ```
-

@@ -2,9 +2,9 @@
 
 Failed policy result on URI.@interface { object }
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-fileShare-export interface PolicyErrorResult--><!--Device-fileShare-export interface PolicyErrorResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -24,9 +24,9 @@ Indicates the error code of the failure in the policy information.
 
 **Type:** [PolicyErrorCode](arkts-corefile-fileshare-policyerrorcode-e.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PolicyErrorResult-code: PolicyErrorCode--><!--Device-PolicyErrorResult-code: PolicyErrorCode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -40,9 +40,9 @@ Indicates the reason of the failure in the policy information.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PolicyErrorResult-message: string--><!--Device-PolicyErrorResult-message: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -56,9 +56,8 @@ Indicates the failed uri of the policy information.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PolicyErrorResult-uri: string--><!--Device-PolicyErrorResult-uri: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
-

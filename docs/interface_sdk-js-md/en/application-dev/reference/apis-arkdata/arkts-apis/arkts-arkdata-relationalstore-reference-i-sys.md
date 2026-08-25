@@ -2,9 +2,9 @@
 
 Indicates the reference between tables.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-relationalStore-interface Reference--><!--Device-relationalStore-interface Reference-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -26,9 +26,9 @@ Indicates the reference fields.
 
 **Type:** Record&lt;string, string&gt;
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Reference-refFields: Record<string, string>--><!--Device-Reference-refFields: Record<string, string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -44,9 +44,9 @@ Indicates the table that references another table.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Reference-sourceTable: string--><!--Device-Reference-sourceTable: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -62,11 +62,10 @@ Indicates the table to be referenced.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Reference-targetTable: string--><!--Device-Reference-targetTable: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **System API:** This is a system API.
-

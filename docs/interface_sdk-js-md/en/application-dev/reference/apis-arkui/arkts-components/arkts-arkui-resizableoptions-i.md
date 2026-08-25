@@ -5,7 +5,7 @@ Defines the resizable image options.
 
 **Since:** 11
 
-<!--Device-unnamed-declare interface ResizableOptions--><!--Device-unnamed-declare interface ResizableOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,11 @@ Lattice object, which is used to divide the image by lattice.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ResizableOptions-lattice?: DrawingLattice--><!--Device-ResizableOptions-lattice?: DrawingLattice-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,15 +44,14 @@ slice?: EdgeWidths
 Edge widths in different directions of a component.  
 **NOTE：**This attribute takes effect only when both **bottom** and **right** are greater than 0.When **top** is set, the top part of the image is stretched while the pixel values of the image remain unchanged.When **right** is set, the right part of the image is stretched while the pixel values of the image remain unchanged.When **bottom** is set, the bottom part of the image is stretched while the pixel values of the image remain unchanged.When **left** is set, the left part of the image is stretched while the pixel values of the image remain unchanged.The default width of each direction is **0**. The default unit is vp.The effect of setting **EdgeWidths** is shown in Figure 1 (Effect of Setting EdgeWidths).
 
-**Type:** EdgeWidths
+**Type:** [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md)
 
 **Since:** 11
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ResizableOptions-slice?: EdgeWidths--><!--Device-ResizableOptions-slice?: EdgeWidths-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

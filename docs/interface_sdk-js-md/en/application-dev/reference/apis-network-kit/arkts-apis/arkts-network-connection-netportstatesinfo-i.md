@@ -4,7 +4,7 @@ Describes the information about the TCP and UDP ports that are currently listene
 
 **Since:** 24
 
-<!--Device-connection-export interface NetPortStatesInfo--><!--Device-connection-export interface NetPortStatesInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -26,9 +26,9 @@ TCP information currently listened for by the system.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-NetPortStatesInfo-tcpPortStatesInfo?: Array<TcpNetPortStatesInfo>--><!--Device-NetPortStatesInfo-tcpPortStatesInfo?: Array<TcpNetPortStatesInfo>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -44,9 +44,8 @@ UDP information currently listened for by the system.
 
 **Since:** 24
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NetPortStatesInfo-udpPortStatesInfo?: Array<UdpNetPortStatesInfo>--><!--Device-NetPortStatesInfo-udpPortStatesInfo?: Array<UdpNetPortStatesInfo>-End-->
-
 **System capability:** SystemCapability.Communication.NetManager.Core
-

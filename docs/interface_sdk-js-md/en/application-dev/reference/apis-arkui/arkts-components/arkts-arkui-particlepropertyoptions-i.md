@@ -4,7 +4,7 @@ Defines the particle property Options. @interface ParticlePropertyOptions
 
 **Since:** 10
 
-<!--Device-unnamed-interface ParticlePropertyOptions--><!--Device-unnamed-interface ParticlePropertyOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,11 +33,11 @@ Initial property value range of the particle. The initial property value of part
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ParticlePropertyOptions-range: ParticleTuple<TYPE, TYPE>--><!--Device-ParticlePropertyOptions-range: ParticleTuple<TYPE, TYPE>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,11 +61,10 @@ How the property is updated. The available options of **type** are as follows:
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ParticlePropertyOptions-updater?: ParticleUpdaterOptions<TYPE, UPDATER>--><!--Device-ParticlePropertyOptions-updater?: ParticleUpdaterOptions<TYPE, UPDATER>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

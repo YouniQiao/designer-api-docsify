@@ -1,8 +1,6 @@
 # IteratorReturnResult
 
-**Since:** -1
-
-<!--Device-unnamed-interface IteratorReturnResult--><!--Device-unnamed-interface IteratorReturnResult-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,9 +15,7 @@ done: true
 
 **Type:** true
 
-**Since:** -1
-
-<!--Device-IteratorReturnResult-done: true--><!--Device-IteratorReturnResult-done: true-End-->
+**ArkTS mode:** 
 
 ## value
 
@@ -29,7 +25,4 @@ value: TReturn
 
 **Type:** TReturn
 
-**Since:** -1
-
-<!--Device-IteratorReturnResult-value: TReturn--><!--Device-IteratorReturnResult-value: TReturn-End-->
-
+**ArkTS mode:** 

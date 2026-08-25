@@ -2,9 +2,9 @@
 
 输入法面板位置大小信息。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-inputMethodEngine-export interface PanelRect--><!--Device-inputMethodEngine-export interface PanelRect-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -24,9 +24,9 @@ landscapeRect: window.Rect
 
 **类型：** window.Rect
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-PanelRect-landscapeRect: window.Rect--><!--Device-PanelRect-landscapeRect: window.Rect-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -40,9 +40,8 @@ portraitRect: window.Rect
 
 **类型：** window.Rect
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-PanelRect-portraitRect: window.Rect--><!--Device-PanelRect-portraitRect: window.Rect-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
-

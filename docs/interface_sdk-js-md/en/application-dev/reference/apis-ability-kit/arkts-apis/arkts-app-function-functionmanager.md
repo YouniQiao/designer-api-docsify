@@ -4,9 +4,9 @@ The module provides the capability to manage and invoke functions in the system.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-unnamed-declare namespace functionManager--><!--Device-unnamed-declare namespace functionManager-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -23,18 +23,17 @@ import { functionManager } from '@kit.AbilityKit';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [invokeFunction](arkts-ability-functionmanager-invokefunction-f-sys.md) | Invoke a function by functionNamespace and functionName. |
-| [queryFunctions](arkts-ability-functionmanager-queryfunctions-f-sys.md) | Query all available functions. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [invokeFunction](arkts-ability-functionmanager-invokefunction-f-sys.md) |
+| [queryFunctions](arkts-ability-functionmanager-queryfunctions-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [InvokeOptions](arkts-ability-functionmanager-invokeoptions-i-sys.md) | Invoke options for function execution. |
-| [InvokeResult](arkts-ability-functionmanager-invokeresult-i-sys.md) | Encapsulates the success or failure status of function invocation. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [InvokeOptions](arkts-ability-functionmanager-invokeoptions-i-sys.md) |
+| [InvokeResult](arkts-ability-functionmanager-invokeresult-i-sys.md) |
 <!--DelEnd-->
-

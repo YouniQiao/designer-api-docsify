@@ -4,9 +4,9 @@ Represents the file data. It is a child class of [UnifiedRecord](arkts-arkdata-u
 
 **Inheritance/Implementation:** File extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-unifiedDataChannel-class File--><!--Device-unifiedDataChannel-class File-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -28,11 +28,51 @@ A dictionary type object, where both the key and value are of the string type an
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-File-details?: Record<string, string>--><!--Device-File-details?: Record<string, string>-End-->
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+## uri
+
+```TypeScript
+set uri(value: string)
+```
+
+Indicates the uri of file
+
+**Type:** string
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+## uriAuthorizationPolicies
+
+```TypeScript
+set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)
+```
+
+Defines URI authorization policies for drag intention.
+
+**Type:** Array&lt;[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)&gt;
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -58,4 +98,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

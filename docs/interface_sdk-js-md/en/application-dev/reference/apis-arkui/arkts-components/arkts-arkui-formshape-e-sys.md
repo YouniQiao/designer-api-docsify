@@ -4,7 +4,7 @@ Defines the FormShape enum.
 
 **Since:** 12
 
-<!--Device-unnamed-declare enum FormShape--><!--Device-unnamed-declare enum FormShape-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,7 +20,7 @@ The rect shape.
 
 **Since:** 12
 
-<!--Device-FormShape-RECT = 1--><!--Device-FormShape-RECT = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,9 +36,8 @@ The circle shape.
 
 **Since:** 12
 
-<!--Device-FormShape-CIRCLE = 2--><!--Device-FormShape-CIRCLE = 2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

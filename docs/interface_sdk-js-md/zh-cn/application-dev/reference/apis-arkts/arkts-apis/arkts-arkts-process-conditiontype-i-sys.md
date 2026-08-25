@@ -4,7 +4,7 @@
 
 **起始版本：** 10
 
-<!--Device-process-interface ConditionType--><!--Device-process-interface ConditionType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -28,7 +28,7 @@ killSignal?: number | string
 
 **起始版本：** 10
 
-<!--Device-ConditionType-killSignal?: number | string--><!--Device-ConditionType-killSignal?: number | string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -46,7 +46,7 @@ maxBuffer?: number
 
 **起始版本：** 10
 
-<!--Device-ConditionType-maxBuffer?: number--><!--Device-ConditionType-maxBuffer?: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -64,9 +64,8 @@ timeout?: number
 
 **起始版本：** 10
 
-<!--Device-ConditionType-timeout?: number--><!--Device-ConditionType-timeout?: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。
-

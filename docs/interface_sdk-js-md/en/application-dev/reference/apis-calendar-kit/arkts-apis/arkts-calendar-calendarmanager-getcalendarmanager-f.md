@@ -16,25 +16,25 @@ Obtains a CalendarManager object based on the context.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-calendarManager-function getCalendarManager(context: Context) : CalendarManager--><!--Device-calendarManager-function getCalendarManager(context: Context) : CalendarManager-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. For details about the application context of the stage model, see Context. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [CalendarManager](arkts-calendar-calendarmanager-calendarmanager-i.md) | CalendarManager object obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [CalendarManager](arkts-calendar-calendarmanager-calendarmanager-i.md) |
 
 **Examples**
 
@@ -104,4 +104,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

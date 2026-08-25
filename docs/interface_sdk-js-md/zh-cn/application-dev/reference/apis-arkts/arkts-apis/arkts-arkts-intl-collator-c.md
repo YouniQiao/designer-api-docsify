@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-Intl-export class Collator--><!--Device-Intl-export class Collator-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,26 +23,24 @@ public compare(x: string, y: string): double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Collator-public compare(x: string, y: string): double--><!--Device-Collator-public compare(x: string, y: string): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| x | string | 是 | 参与比较的第一个字符串。 |
-| y | string | 是 | 参与比较的第二个字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| x | string | 是 |
+| y | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | 比较结果。 |
+| 类型 |
+| --- |
+| double |
 
 ## constructor
 
@@ -56,20 +52,18 @@ public constructor(locales?: string | string[], options?: CollatorOptions)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Collator-public constructor(locales?: string | string[], options?: CollatorOptions)--><!--Device-Collator-public constructor(locales?: string | string[], options?: CollatorOptions)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locales | string \| string[] | 否 | 区域设置。 |
-| options | CollatorOptions | 否 | 选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locales | string \| string[] | 否 |
+| options | [CollatorOptions](arkts-arkts-intl-collatoroptions-i.md) | 否 |
 
 ## resolvedOptions
 
@@ -81,19 +75,17 @@ public resolvedOptions(): ResolvedCollatorOptions
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Collator-public resolvedOptions(): ResolvedCollatorOptions--><!--Device-Collator-public resolvedOptions(): ResolvedCollatorOptions-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ResolvedCollatorOptions](arkts-arkts-intl-resolvedcollatoroptions-i.md) | 解析后的选项。 |
+| 类型 |
+| --- |
+| [ResolvedCollatorOptions](arkts-arkts-intl-resolvedcollatoroptions-i.md) |
 
 ## supportedLocalesOf
 
@@ -105,24 +97,21 @@ public static supportedLocalesOf(locales: string | string[], options?: CollatorO
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Collator-public static supportedLocalesOf(locales: string | string[], options?: CollatorOptions): string[]--><!--Device-Collator-public static supportedLocalesOf(locales: string | string[], options?: CollatorOptions): string[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locales | string \| string[] | 是 | 区域设置。 |
-| options | CollatorOptions | 否 | 选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locales | string \| string[] | 是 |
+| options | [CollatorOptions](arkts-arkts-intl-collatoroptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string[] | 支持的区域设置。 |
-
+| 类型 |
+| --- |
+| string[] |

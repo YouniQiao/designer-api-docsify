@@ -18,25 +18,25 @@ Matrix的平移函数，可以为当前矩阵增加x轴/y轴/z轴平移效果。
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [translate](arkts-arkui-matrix4-matrix4transit-i.md#translate)
-
-<!--Device-matrix4-function translate(options: TranslateOption): Matrix4Transit--><!--Device-matrix4-function translate(options: TranslateOption): Matrix4Transit-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | 是 | 设置平移参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Matrix4Transit | 平移后的矩阵对象。 |
+| 类型 |
+| --- |
+| [Matrix4Transit](arkts-arkui-matrix4transit-t.md) |
 
 **示例**
 
@@ -59,4 +59,3 @@ struct Test {
   }
 }
 ```
-

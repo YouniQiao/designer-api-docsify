@@ -2,9 +2,9 @@
 
 描述查询普通实况窗时的筛选条件。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-unnamed-export interface NotificationFilter--><!--Device-unnamed-export interface NotificationFilter-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -20,9 +20,9 @@ bundle: BundleOption
 
 **类型：** [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-NotificationFilter-bundle: BundleOption--><!--Device-NotificationFilter-bundle: BundleOption-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -38,9 +38,9 @@ extraInfoKeys?: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-NotificationFilter-extraInfoKeys?: Array<string>--><!--Device-NotificationFilter-extraInfoKeys?: Array<string>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -56,11 +56,10 @@ notificationKey: notificationSubscribe.NotificationKey
 
 **类型：** notificationSubscribe.NotificationKey
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-NotificationFilter-notificationKey: notificationSubscribe.NotificationKey--><!--Device-NotificationFilter-notificationKey: notificationSubscribe.NotificationKey-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
-

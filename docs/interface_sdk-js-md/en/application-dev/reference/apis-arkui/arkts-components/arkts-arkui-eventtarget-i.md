@@ -4,7 +4,7 @@ Defines the type of the **target** parameter in [BaseEvent](arkts-arkui-baseeven
 
 **Since:** 8
 
-<!--Device-unnamed-declare interface EventTarget--><!--Device-unnamed-declare interface EventTarget-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Area information of the target element.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-EventTarget-area: Area--><!--Device-EventTarget-area: Area-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,13 +45,12 @@ Custom node [ID](arkts-arkui-commonmethod-c.md#id). Default value: **undefined**
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 15.
 
-<!--Device-EventTarget-id?: string--><!--Device-EventTarget-id?: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

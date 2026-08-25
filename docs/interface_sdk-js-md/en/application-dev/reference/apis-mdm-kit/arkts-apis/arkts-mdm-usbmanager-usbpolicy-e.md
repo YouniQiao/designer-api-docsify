@@ -4,7 +4,7 @@ Enumerates the USB storage device access policies.
 
 **Since:** 12
 
-<!--Device-usbManager-export enum UsbPolicy--><!--Device-usbManager-export enum UsbPolicy-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,9 +18,9 @@ Read and write.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-UsbPolicy-READ_WRITE = 0--><!--Device-UsbPolicy-READ_WRITE = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -34,9 +34,9 @@ Read only.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-UsbPolicy-READ_ONLY = 1--><!--Device-UsbPolicy-READ_ONLY = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -50,9 +50,8 @@ Disabled.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UsbPolicy-DISABLED = 2--><!--Device-UsbPolicy-DISABLED = 2-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

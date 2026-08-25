@@ -10,15 +10,14 @@ Obtain the objects exposed in app.js
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-unnamed-export declare function getApp(): object--><!--Device-unnamed-export declare function getApp(): object-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| object |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| object |

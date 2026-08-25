@@ -2,9 +2,9 @@
 
 Enumerates audio devices.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-call-export interface AudioDevice--><!--Device-call-export interface AudioDevice-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -26,9 +26,9 @@ Audio device address.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-AudioDevice-address?: string--><!--Device-AudioDevice-address?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -44,9 +44,9 @@ Audio device name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AudioDevice-deviceName?: string--><!--Device-AudioDevice-deviceName?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -62,11 +62,10 @@ Audio device type.
 
 **Type:** [AudioDeviceType](arkts-telephony-call-audiodevicetype-e-sys.md)
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-AudioDevice-deviceType: AudioDeviceType--><!--Device-AudioDevice-deviceType: AudioDeviceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
-

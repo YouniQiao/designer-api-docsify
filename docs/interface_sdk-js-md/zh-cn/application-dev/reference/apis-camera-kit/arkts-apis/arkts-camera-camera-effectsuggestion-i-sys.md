@@ -2,9 +2,9 @@
 
 EffectSuggestion object.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-camera-interface EffectSuggestion--><!--Device-camera-interface EffectSuggestion-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -24,9 +24,9 @@ enableEffectSuggestion(enabled: boolean): void
 
 Enable effect suggestion for session.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-EffectSuggestion-enableEffectSuggestion(enabled: boolean): void--><!--Device-EffectSuggestion-enableEffectSuggestion(enabled: boolean): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -34,17 +34,17 @@ Enable effect suggestion for session.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enabled | boolean | 是 | enable effect suggestion for session if TRUE.. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enabled | boolean | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 ## getSupportedEffectSuggestionTypes
 
@@ -54,9 +54,9 @@ getSupportedEffectSuggestionTypes(): Array<EffectSuggestionType>
 
 Gets supported effect suggestion types.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-EffectSuggestion-getSupportedEffectSuggestionTypes(): Array<EffectSuggestionType>--><!--Device-EffectSuggestion-getSupportedEffectSuggestionTypes(): Array<EffectSuggestionType>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -64,16 +64,16 @@ Gets supported effect suggestion types.
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | The array of the effect suggestion types. |
+| 类型 |
+| --- |
+| Array&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 ## isEffectSuggestionSupported
 
@@ -83,9 +83,9 @@ isEffectSuggestionSupported(): boolean
 
 Checks whether effect suggestion is supported.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-EffectSuggestion-isEffectSuggestionSupported(): boolean--><!--Device-EffectSuggestion-isEffectSuggestionSupported(): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -93,16 +93,16 @@ Checks whether effect suggestion is supported.
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | Is the effect suggestion supported. |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 ## setEffectSuggestionStatus
 
@@ -112,9 +112,9 @@ setEffectSuggestionStatus(status: Array<EffectSuggestionStatus>): void
 
 Set the range of effect suggestion type and enable status. The application should fully set all data when it starts up.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-EffectSuggestion-setEffectSuggestionStatus(status: Array<EffectSuggestionStatus>): void--><!--Device-EffectSuggestion-setEffectSuggestionStatus(status: Array<EffectSuggestionStatus>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -122,17 +122,17 @@ Set the range of effect suggestion type and enable status. The application shoul
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| status | Array&lt;[EffectSuggestionStatus](arkts-camera-camera-effectsuggestionstatus-c-sys.md)&gt; | 是 | The array of the effect suggestion status. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| status | Array&lt;[EffectSuggestionStatus](arkts-camera-camera-effectsuggestionstatus-c-sys.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 ## updateEffectSuggestion
 
@@ -142,9 +142,9 @@ updateEffectSuggestion(type: EffectSuggestionType, enabled: boolean): void
 
 Update the enable status of the effect suggestion type.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-EffectSuggestion-updateEffectSuggestion(type: EffectSuggestionType, enabled: boolean): void--><!--Device-EffectSuggestion-updateEffectSuggestion(type: EffectSuggestionType, enabled: boolean): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -152,16 +152,15 @@ Update the enable status of the effect suggestion type.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md) | 是 | The type of effect suggestion. |
-| enabled | boolean | 是 | The status of effect suggestion type. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md) | 是 |
+| enabled | boolean | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |

@@ -2,9 +2,9 @@
 
 Defines the audio and video metadata. Parameters that are not declared as read-only in [AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md) can be used as input parameters for recording of [AVRecorder](arkts-media-media-avrecorder-i.md).
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-media-interface AVMetadata--><!--Device-media-interface AVMetadata-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -24,11 +24,10 @@ The offset value of GLTF 3D model in media file. This parameter is not supported
 
 **Type:** string
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-AVMetadata-gltf_offset?: string--><!--Device-AVMetadata-gltf_offset?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **System API:** This is a system API.
-

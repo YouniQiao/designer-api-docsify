@@ -4,7 +4,7 @@ Sets the system focus box style for the component.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface FocusBoxStyle--><!--Device-unnamed-declare interface FocusBoxStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Distance of the focus box from the component's edge.A positive number indicates 
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FocusBoxStyle-margin?: LengthMetrics--><!--Device-FocusBoxStyle-margin?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ Stroke color of the focus box.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FocusBoxStyle-strokeColor?: ColorMetrics--><!--Device-FocusBoxStyle-strokeColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,11 +65,10 @@ Stroke width of the focus box.Negative numbers and percentages are not supported
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-FocusBoxStyle-strokeWidth?: LengthMetrics--><!--Device-FocusBoxStyle-strokeWidth?: LengthMetrics-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

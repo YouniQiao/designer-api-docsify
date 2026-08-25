@@ -2,9 +2,9 @@
 
 Enumerates the RDB store rebuild types. Use the enum name rather than the enum value.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-relationalStore-enum RebuildType--><!--Device-relationalStore-enum RebuildType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -16,9 +16,9 @@ NONE = 0
 
 The RDB store is not rebuilt.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-RebuildType-NONE = 0--><!--Device-RebuildType-NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -30,9 +30,9 @@ REBUILT = 1
 
 The RDB store is rebuilt and creates an empty database. You need to create tables and restore data.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-RebuildType-REBUILT = 1--><!--Device-RebuildType-REBUILT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -44,9 +44,8 @@ REPAIRED = 2
 
 The database is repaired and the undamaged data is restored. Currently, only the [vector store](arkts-arkdata-relationalstore-storeconfig-i.md) supports this capability.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-RebuildType-REPAIRED = 2--><!--Device-RebuildType-REPAIRED = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-

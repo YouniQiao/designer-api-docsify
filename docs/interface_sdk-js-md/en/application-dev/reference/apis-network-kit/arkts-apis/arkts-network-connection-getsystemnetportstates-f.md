@@ -23,27 +23,27 @@ Obtains information about all TCP and UDP ports currently listened by the system
 
 **Since:** 24
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
+
 **Required permissions:** ohos.permission.GET_IP_MAC_INFO
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-connection-function getSystemNetPortStates(): Promise<NetPortStatesInfo>--><!--Device-connection-function getSystemNetPortStates(): Promise<NetPortStatesInfo>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[NetPortStatesInfo](arkts-network-connection-netportstatesinfo-i.md)&gt; | Promise used to return the TCP and UDP port information. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[NetPortStatesInfo](arkts-network-connection-netportstatesinfo-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
 **Examples**
 
@@ -71,4 +71,3 @@ connection.getSystemNetPortStates().then((data: connection.NetPortStatesInfo) =>
   console.error(`Error fetching getSystemNetPortStates. Code:${error.code}, message:${error.message}`);
 });
 ```
-

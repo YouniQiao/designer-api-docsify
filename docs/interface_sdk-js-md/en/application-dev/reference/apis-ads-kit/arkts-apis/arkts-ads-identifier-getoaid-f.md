@@ -20,23 +20,23 @@ Obtains the OAID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
-**Required permissions:** ohos.permission.APP_TRACKING_CONSENT
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-identifier-function getOAID(callback: AsyncCallback<string>): void--><!--Device-identifier-function getOAID(callback: AsyncCallback<string>): void-End-->
+**Required permissions:** ohos.permission.APP_TRACKING_CONSENT
 
 **System capability:** SystemCapability.Advertising.OAID
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the OAID. 1. If the app has configured the ohos.permission.APP_TRACKING_CONSENT permission and the cross-app association access permission is allowed, the OAID is returned. 2. If the app has configured the ohos.permission.APP_TRACKING_CONSENT permission and the cross-app association access permission is disallowed, 00000000-0000-0000-0000-000000000000 is returned. 3. If the app has not configured the ohos.permission.APP_TRACKING_CONSENT permission, 00000000-0000-0000-0000-000000000000 is returned. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17300001](../errorcode-oaid.md#17300001-system-internal-error) | System internal error. |
+| Error Code ID |
+| --- |
+| [17300001](../errorcode-oaid.md#17300001-system-internal-error) |
 
 **Examples**
 
@@ -75,25 +75,24 @@ Obtains the OAID. This API uses a promise to return the result.
 
 **Since:** 10
 
-**Required permissions:** ohos.permission.APP_TRACKING_CONSENT
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-identifier-function getOAID(): Promise<string>--><!--Device-identifier-function getOAID(): Promise<string>-End-->
+**Required permissions:** ohos.permission.APP_TRACKING_CONSENT
 
 **System capability:** SystemCapability.Advertising.OAID
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Promise used to return the OAID. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17300001](../errorcode-oaid.md#17300001-system-internal-error) | System internal error. |
+| Error Code ID |
+| --- |
+| [17300001](../errorcode-oaid.md#17300001-system-internal-error) |
 
 **Examples**
 
 See [getOAID](#getoaid)
-

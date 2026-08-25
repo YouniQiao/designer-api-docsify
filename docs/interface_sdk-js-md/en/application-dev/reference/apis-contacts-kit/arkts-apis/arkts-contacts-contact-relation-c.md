@@ -4,7 +4,7 @@ Defines a contact's relationship.
 
 **Since:** 7
 
-<!--Device-contact-class Relation--><!--Device-contact-class Relation-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -26,9 +26,9 @@ Custom relationship, the default value is **0**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Relation-static readonly CUSTOM_LABEL: 0--><!--Device-Relation-static readonly CUSTOM_LABEL: 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -44,9 +44,9 @@ Invalid relationship, the default value is **-1**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Relation-static readonly INVALID_LABEL_ID: -1--><!--Device-Relation-static readonly INVALID_LABEL_ID: -1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -62,9 +62,9 @@ Relation type.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Relation-labelId?: number--><!--Device-Relation-labelId?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -80,9 +80,9 @@ Name of the Relation type.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Relation-labelName?: string--><!--Device-Relation-labelName?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -98,9 +98,9 @@ Assistant, the default value is **1**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Relation-static readonly RELATION_ASSISTANT: 1--><!--Device-Relation-static readonly RELATION_ASSISTANT: 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -116,9 +116,9 @@ Brother, the default value is **2**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Relation-static readonly RELATION_BROTHER: 2--><!--Device-Relation-static readonly RELATION_BROTHER: 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -134,9 +134,9 @@ Child, the default value is **3**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Relation-static readonly RELATION_CHILD: 3--><!--Device-Relation-static readonly RELATION_CHILD: 3-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -152,9 +152,9 @@ Domestic partner, the default value is **4**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Relation-static readonly RELATION_DOMESTIC_PARTNER: 4--><!--Device-Relation-static readonly RELATION_DOMESTIC_PARTNER: 4-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -170,9 +170,9 @@ Father, the default value is **5**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Relation-static readonly RELATION_FATHER: 5--><!--Device-Relation-static readonly RELATION_FATHER: 5-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -188,9 +188,9 @@ Friend, the default value is **6**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Relation-static readonly RELATION_FRIEND: 6--><!--Device-Relation-static readonly RELATION_FRIEND: 6-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -206,9 +206,9 @@ Manager, the default value is **7**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Relation-static readonly RELATION_MANAGER: 7--><!--Device-Relation-static readonly RELATION_MANAGER: 7-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -224,9 +224,9 @@ Mother, the default value is **8**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Relation-static readonly RELATION_MOTHER: 8--><!--Device-Relation-static readonly RELATION_MOTHER: 8-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -242,9 +242,9 @@ Parent, the default value is **9**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Relation-static readonly RELATION_PARENT: 9--><!--Device-Relation-static readonly RELATION_PARENT: 9-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -260,9 +260,9 @@ Partner, the default value is **10**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Relation-static readonly RELATION_PARTNER: 10--><!--Device-Relation-static readonly RELATION_PARTNER: 10-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -278,9 +278,9 @@ Referrer, the default value is **11**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Relation-static readonly RELATION_REFERRED_BY: 11--><!--Device-Relation-static readonly RELATION_REFERRED_BY: 11-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -296,9 +296,9 @@ Relative, the default value is **12**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Relation-static readonly RELATION_RELATIVE: 12--><!--Device-Relation-static readonly RELATION_RELATIVE: 12-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -314,9 +314,9 @@ Sister, the default value is **13**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Relation-static readonly RELATION_SISTER: 13--><!--Device-Relation-static readonly RELATION_SISTER: 13-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -332,9 +332,9 @@ Spouse, the default value is **14**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Relation-static readonly RELATION_SPOUSE: 14--><!--Device-Relation-static readonly RELATION_SPOUSE: 14-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -350,9 +350,8 @@ Relationship name.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-Relation-relationName: string--><!--Device-Relation-relationName: string-End-->
-
 **System capability:** SystemCapability.Applications.ContactsData
-

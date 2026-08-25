@@ -16,25 +16,25 @@ Obtains the UID of a user from the user database of the system based on the spec
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getUidForName](arkts-arkts-process-processmanager-c.md#getuidforname)
-
-<!--Device-process-function getUidForName(v: string): number--><!--Device-process-function getUidForName(v: string): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| v | string | Yes | User name. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| v | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | UID of the user. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -46,4 +46,3 @@ let pres = process.getUidForName("tool");
 let pro = new process.ProcessManager();
 let pres = pro.getUidForName("tool");
 ```
-

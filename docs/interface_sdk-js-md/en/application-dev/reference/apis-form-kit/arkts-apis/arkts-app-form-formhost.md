@@ -2,9 +2,9 @@
 
 The **formHost** module provides APIs related to the widget host, which is an application that displays the widget content and controls the position where the widget is displayed. You can use the APIs to delete, release, and update widgets installed by the same user, and obtain widget information and status.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-declare namespace formHost--><!--Device-unnamed-declare namespace formHost-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -21,92 +21,91 @@ import { formHost } from '@kit.FormKit';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [acquireFormData](arkts-form-formhost-acquireformdata-f-sys.md) | Requests data from the widget provider. This API uses an asynchronous callback to return the result. |
-| [acquireFormData](arkts-form-formhost-acquireformdata-f-sys.md) | Requests data from the widget provider. This API uses a promise to return the result. |
-| [acquireFormState](arkts-form-formhost-acquireformstate-f-sys.md) | Obtains the widget state. This API uses an asynchronous callback to return the result. |
-| [acquireFormState](arkts-form-formhost-acquireformstate-f-sys.md) | Obtains the widget state. This API uses a promise to return the result. |
-| [addForm](arkts-form-formhost-addform-f-sys.md) | Add a form.You can use this method to create a theme form. |
-| [castToNormalForm](arkts-form-formhost-casttonormalform-f-sys.md) | Converts a temporary widget to a normal one. This API uses an asynchronous callback to return the result. |
-| [castToNormalForm](arkts-form-formhost-casttonormalform-f-sys.md) | Converts a temporary widget to a normal one. This API uses a promise to return the result. |
-| [clearRouterProxy](arkts-form-formhost-clearrouterproxy-f-sys.md) | Clears the router proxy set for widgets. This API uses an asynchronous callback to return the result. |
-| [clearRouterProxy](arkts-form-formhost-clearrouterproxy-f-sys.md) | Clears the router proxy set for widgets. This API uses a promise to return the result. |
-| [deleteForm](arkts-form-formhost-deleteform-f-sys.md) | Deletes a widget. After this API is called, the application can no longer use the widget, and the Widget Manager will not retain the widget information. This API uses an asynchronous callback to return the result. |
-| [deleteForm](arkts-form-formhost-deleteform-f-sys.md) | Deletes a widget. After this API is called, the application can no longer use the widget, and the Widget Manager will not retain the widget information. This API uses a promise to return the result. |
-| [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-f-sys.md) | Deletes invalid widgets from the list. This API uses an asynchronous callback to return the result. |
-| [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-f-sys.md) | Deletes invalid widgets from the list. This API uses a promise to return the result. |
-| [disableFormsUpdate](arkts-form-formhost-disableformsupdate-f-sys.md) | Instructs the widget framework to make a widget not updatable. After this API is called, the widget cannot receive updates from the widget provider. This API uses an asynchronous callback to return the result. |
-| [disableFormsUpdate](arkts-form-formhost-disableformsupdate-f-sys.md) | Instructs the widget framework to make a widget not updatable. After this API is called, the widget cannot receive updates from the widget provider. This API uses a promise to return the result. |
-| [enableFormsUpdate](arkts-form-formhost-enableformsupdate-f-sys.md) | Instructs the widget framework to make a widget updatable. After this API is called, the widget is in the enabled state and can receive updates from the widget provider. This API uses an asynchronous callback to return the result. |
-| [enableFormsUpdate](arkts-form-formhost-enableformsupdate-f-sys.md) | Instructs the widget framework to make a widget updatable. After this API is called, the widget is in the enabled state and can receive updates from the widget provider. This API uses a promise to return the result. |
-| [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md) | Obtains the widget information provided by all applications on the device (excluding template widgets). This API uses an asynchronous callback to return the result. |
-| [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md) | Obtains the widget information provided by all applications on the device (excluding template widgets). This API uses a promise to return the result. |
-| [getAllTemplateFormsInfo](arkts-form-formhost-getalltemplateformsinfo-f-sys.md) | Obtains the template widget information provided by all applications on the device. This API uses a promise to return the result. |
-| [getFormIdsByFormLocation](arkts-form-formhost-getformidsbyformlocation-f-sys.md) | Obtains the list of widget IDs at a specified location on the device. This API uses a promise to return the result. |
-| [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md) | Obtains the widget information provided by a specified application on the device (excluding template widgets). This API uses an asynchronous callback to return the result. |
-| [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md) | Obtains the widget information provided by a specified application on the device (excluding template widgets). This API uses an asynchronous callback to return the result. |
-| [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md) | Obtains the widget information provided by a specified application on the device (excluding template widgets). This API uses a promise to return the result. |
-| [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md) | Obtains the widget information provided by a specified application on the device (excluding template widgets). This API uses a promise to return the result. |
-| [getTemplateFormsInfo](arkts-form-formhost-gettemplateformsinfo-f-sys.md) | Obtains the template widget information provided by a specified application on the device. This API uses a promise to return the result. |
-| [isSystemReady](arkts-form-formhost-issystemready-f-sys.md) | Checks whether the system is ready. This API uses an asynchronous callback to return the result. |
-| [isSystemReady](arkts-form-formhost-issystemready-f-sys.md) | Checks whether the system is ready. This API uses a promise to return the result. |
-| [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md) | Instructs the widgets to enable or disable updates. This API uses an asynchronous callback to return the result. |
-| [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md) | Instructs the widgets to enable or disable updates. This API uses a promise to return the result. |
-| [notifyFormsPrivacyProtected](arkts-form-formhost-notifyformsprivacyprotected-f-sys.md) | Notifies that the privacy protection status of the specified widgets changes. This API uses an asynchronous callback to return the result. |
-| [notifyFormsPrivacyProtected](arkts-form-formhost-notifyformsprivacyprotected-f-sys.md) | Notifies that the privacy protection status of the specified widgets changes. This API uses a promise to return the result. |
-| [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md) | Instructs the widgets to make themselves visible. This API uses an asynchronous callback to return the result. |
-| [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md) | Instructs the widgets to make themselves visible. This API uses a promise to return the result. |
-| [notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-f-sys.md) | Instructs the widget framework to make a widget invisible. After this API is called, **onVisibilityChange** is invoked to notify the widget provider. This API uses an asynchronous callback to return the result. |
-| [notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-f-sys.md) | Instructs the widget framework to make a widget invisible. After this API is called, **onVisibilityChange** is invoked to notify the widget provider. This API uses a promise to return the result. |
-| [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md) | Instructs the widget framework to make a widget visible. After this API is called, **onVisibilityChange** is invoked to notify the widget provider. This API uses an asynchronous callback to return the result. |
-| [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md) | Instructs the widget framework to make a widget visible. After this API is called, **onVisibilityChange** is invoked to notify the widget provider. This API uses a promise to return the result. |
-| [off_changeSceneAnimationState](arkts-form-formhost-offchangesceneanimationstate-f-sys.md) | Unsubscribes from the event of switching the interactive widget state. An interactive widget can be in the active or inactive state. In the inactive state, the interactive widget is the same as a common widget. In the active state, the interactive widget can start the **LiveFormExtensionAbility** process developed by the widget host to implement interactive widget animations. This API uses an asynchronous callback to return the result. |
-| [off_formOverflow](arkts-form-formhost-offformoverflow-f-sys.md) | Unsubscribes from the interactive widget animation request event. This API uses an asynchronous callback to return the result. |
-| [off_formUninstall](arkts-form-formhost-offformuninstall-f-sys.md) | Unsubscribes from widget uninstall events. This API uses an asynchronous callback to return the result. |
-| [off_getFormRect](arkts-form-formhost-offgetformrect-f-sys.md) | Unsubscribes from the event of requesting widget position and dimension. This API uses an asynchronous callback to return the result. |
-| [off_getLiveFormStatus](arkts-form-formhost-offgetliveformstatus-f-sys.md) | Cancels Listening to the event of get live form status. |
-| [offChangeSceneAnimationState](arkts-form-formhost-offchangesceneanimationstate-f-sys.md) | Cancels listening to the event of change scene animation state.You can use this method to cancel listening to the event of change scene animation state. |
-| [offDeleteFormsCallback](arkts-form-formhost-offdeleteformscallback-f-sys.md) | Unregister the callback for deleting forms. |
-| [offFormOverflow](arkts-form-formhost-offformoverflow-f-sys.md) | Cancels listening to the event of formOverflow.You can use this method to cancel listening to the event of formOverflow. |
-| [offFormUninstall](arkts-form-formhost-offformuninstall-f-sys.md) | Cancels listening to the event of uninstall form.You can use this method to cancel listening to the event of uninstall form. |
-| [offGetFormRect](arkts-form-formhost-offgetformrect-f-sys.md) | Cancels listening to the event of get form rect.You can use this method to cancel listening to the event of get form rect. |
-| [offGetLiveFormStatus](arkts-form-formhost-offgetliveformstatus-f-sys.md) | Cancels Listening to the event of get live form status. |
-| [offGetWantParamsCallback](arkts-form-formhost-offgetwantparamscallback-f-sys.md) | Unregister callback of getting the want parameters of the form. |
-| [offTemplateFormDetailInfoChange](arkts-form-formhost-offtemplateformdetailinfochange-f-sys.md) | Unsubscribes from changes in the static configuration information of template widgets. This API uses an asynchronous callback to return the result. |
-| [offUpdateFormsConfigCallback](arkts-form-formhost-offupdateformsconfigcallback-f-sys.md) | Unregister the callback for updating form config. |
-| [on_changeSceneAnimationState](arkts-form-formhost-onchangesceneanimationstate-f-sys.md) | Subscribes to the event of switching the interactive widget state. An interactive widget can be in the active or inactive state. In the inactive state, the interactive widget is the same as a common widget. In the active state, the interactive widget can start the **LiveFormExtensionAbility** process developed by the widget host to implement interactive widget animations. This API uses an asynchronous callback to return the result. |
-| [on_formOverflow](arkts-form-formhost-onformoverflow-f-sys.md) | Subscribes to the interactive widget animation request event. This API uses an asynchronous callback to return the result. |
-| [on_formUninstall](arkts-form-formhost-onformuninstall-f-sys.md) | Subscribes to widget uninstall events. This API uses an asynchronous callback to return the result. |
-| [on_getFormRect](arkts-form-formhost-ongetformrect-f-sys.md) | Subscribes to the event of requesting widget position and dimension. This API uses an asynchronous callback to return the result. |
-| [on_getLiveFormStatus](arkts-form-formhost-ongetliveformstatus-f-sys.md) | Listens to the event of get live form status. |
-| [onChangeSceneAnimationState](arkts-form-formhost-onchangesceneanimationstate-f-sys.md) | Listens to the event of change scene animation state.You can use this method to listen to the event of change scene animation state. |
-| [onDeleteFormsCallback](arkts-form-formhost-ondeleteformscallback-f-sys.md) | Register the callback for deleting forms. |
-| [onFormOverflow](arkts-form-formhost-onformoverflow-f-sys.md) | Listens to the event of formOverflow.You can use this method to listen to the event of formOverflow. |
-| [onFormUninstall](arkts-form-formhost-onformuninstall-f-sys.md) | Listens to the event of uninstall form.You can use this method to listen to the event of uninstall form. |
-| [onGetFormRect](arkts-form-formhost-ongetformrect-f-sys.md) | Listens to the event of get form rect.You can use this method to listen to the event of get form rect. |
-| [onGetLiveFormStatus](arkts-form-formhost-ongetliveformstatus-f-sys.md) | Listens to the event of get live form status. |
-| [onGetWantParamsCallback](arkts-form-formhost-ongetwantparamscallback-f-sys.md) | Register callback of getting the want parameters of the form. |
-| [onTemplateFormDetailInfoChange](arkts-form-formhost-ontemplateformdetailinfochange-f-sys.md) | Subscribes to changes in the static configuration information of template widgets. This API uses an asynchronous callback to return the result. |
-| [onUpdateFormsConfigCallback](arkts-form-formhost-onupdateformsconfigcallback-f-sys.md) | Register the callback for updating form config. |
-| [recoverForms](arkts-form-formhost-recoverforms-f-sys.md) | Recovers recycled widgets and updates their status to non-recyclable, or updates the status of widgets to non- recyclable if the widgets are not recycled. This API uses a promise to return the result. |
-| [recoverForms](arkts-form-formhost-recoverforms-f-sys.md) | Recovers widgets. This API uses an asynchronous callback to return the result. |
-| [recycleForms](arkts-form-formhost-recycleforms-f-sys.md) | Recycles widgets, that is, reclaiming widget memory. This API uses a promise to return the result. |
-| [releaseForm](arkts-form-formhost-releaseform-f-sys.md) | Releases a widget. After this API is called, the application can no longer use the widget, but the Widget Manager still retains the widget cache and storage information. This API uses an asynchronous callback to return the result. |
-| [releaseForm](arkts-form-formhost-releaseform-f-sys.md) | Releases a widget. After this API is called, the application can no longer use the widget, but the Widget Manager retains the storage information about the widget and retains or releases the cache information based on the setting. This API uses an asynchronous callback to return the result. |
-| [releaseForm](arkts-form-formhost-releaseform-f-sys.md) | Releases a widget. After this API is called, the application can no longer use the widget, but the Widget Manager retains the storage information about the widget and retains or releases the cache information based on the setting. This API uses a promise to return the result. |
-| [requestForm](arkts-form-formhost-requestform-f-sys.md) | Requests a widget update. This API uses an asynchronous callback to return the result. |
-| [requestForm](arkts-form-formhost-requestform-f-sys.md) | Requests a widget update. This API uses a promise to return the result. |
-| [requestFormWithParams](arkts-form-formhost-requestformwithparams-f-sys.md) | Carries parameters to request a widget update. This API uses a promise to return the result. |
-| [setFormsRecyclable](arkts-form-formhost-setformsrecyclable-f-sys.md) | Sets widgets to be recyclable. This API uses a promise to return the result. |
-| [setFormsRecyclable](arkts-form-formhost-setformsrecyclable-f-sys.md) | Sets widgets to be recyclable. This API uses an asynchronous callback to return the result. |
-| [setPublishFormResult](arkts-form-formhost-setpublishformresult-f-sys.md) | Sets the result for the operation of adding a widget to the home screen. |
-| [setRouterProxy](arkts-form-formhost-setrouterproxy-f-sys.md) | Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses an asynchronous callback to return the result. |
-| [setRouterProxy](arkts-form-formhost-setrouterproxy-f-sys.md) | Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses a promise to return the result. This API uses a promise to return the result. |
-| [shareForm](arkts-form-formhost-shareform-f-sys.md) | Shares a specified widget with a remote device. This API uses an asynchronous callback to return the result. |
-| [shareForm](arkts-form-formhost-shareform-f-sys.md) | Shares a specified widget with a remote device. This API uses a promise to return the result. |
-| [updateFormLocation](arkts-form-formhost-updateformlocation-f-sys.md) | Updates the widget location. |
-| [updateFormLockedState](arkts-form-formhost-updateformlockedstate-f-sys.md) | Notifies the update of the widget lock state. This API uses a promise to return the result. If an application is locked, its widget will also be locked and masked in a locked style. To use the widget, you need to enter the password set for the widget. |
-| [updateFormSize](arkts-form-formhost-updateformsize-f-sys.md) | Updates the size of the widget. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [acquireFormData](arkts-form-formhost-acquireformdata-f-sys.md) |
+| [acquireFormData](arkts-form-formhost-acquireformdata-f-sys.md) |
+| [acquireFormState](arkts-form-formhost-acquireformstate-f-sys.md) |
+| [acquireFormState](arkts-form-formhost-acquireformstate-f-sys.md) |
+| [addForm](arkts-form-formhost-addform-f-sys.md) |
+| [castToNormalForm](arkts-form-formhost-casttonormalform-f-sys.md) |
+| [castToNormalForm](arkts-form-formhost-casttonormalform-f-sys.md) |
+| [clearRouterProxy](arkts-form-formhost-clearrouterproxy-f-sys.md) |
+| [clearRouterProxy](arkts-form-formhost-clearrouterproxy-f-sys.md) |
+| [deleteForm](arkts-form-formhost-deleteform-f-sys.md) |
+| [deleteForm](arkts-form-formhost-deleteform-f-sys.md) |
+| [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-f-sys.md) |
+| [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-f-sys.md) |
+| [disableFormsUpdate](arkts-form-formhost-disableformsupdate-f-sys.md) |
+| [disableFormsUpdate](arkts-form-formhost-disableformsupdate-f-sys.md) |
+| [enableFormsUpdate](arkts-form-formhost-enableformsupdate-f-sys.md) |
+| [enableFormsUpdate](arkts-form-formhost-enableformsupdate-f-sys.md) |
+| [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md) |
+| [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md) |
+| [getAllTemplateFormsInfo](arkts-form-formhost-getalltemplateformsinfo-f-sys.md) |
+| [getFormIdsByFormLocation](arkts-form-formhost-getformidsbyformlocation-f-sys.md) |
+| [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md) |
+| [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md) |
+| [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md) |
+| [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md) |
+| [getTemplateFormsInfo](arkts-form-formhost-gettemplateformsinfo-f-sys.md) |
+| [isSystemReady](arkts-form-formhost-issystemready-f-sys.md) |
+| [isSystemReady](arkts-form-formhost-issystemready-f-sys.md) |
+| [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md) |
+| [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md) |
+| [notifyFormsPrivacyProtected](arkts-form-formhost-notifyformsprivacyprotected-f-sys.md) |
+| [notifyFormsPrivacyProtected](arkts-form-formhost-notifyformsprivacyprotected-f-sys.md) |
+| [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md) |
+| [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md) |
+| [notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-f-sys.md) |
+| [notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-f-sys.md) |
+| [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md) |
+| [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md) |
+| [off](arkts-form-formhost-off-f-sys.md#offformuninstall) |
+| [off](arkts-form-formhost-off-f-sys.md#offformoverflow) |
+| [off](arkts-form-formhost-off-f-sys.md#offchangesceneanimationstate) |
+| [off](arkts-form-formhost-off-f-sys.md#offgetformrect) |
+| [off](arkts-form-formhost-off-f-sys.md#offgetliveformstatus) |
+| [offChangeSceneAnimationState](arkts-form-formhost-offchangesceneanimationstate-f-sys.md) |
+| [offDeleteFormsCallback](arkts-form-formhost-offdeleteformscallback-f-sys.md) |
+| [offFormOverflow](arkts-form-formhost-offformoverflow-f-sys.md) |
+| [offFormUninstall](arkts-form-formhost-offformuninstall-f-sys.md) |
+| [offGetFormRect](arkts-form-formhost-offgetformrect-f-sys.md) |
+| [offGetLiveFormStatus](arkts-form-formhost-offgetliveformstatus-f-sys.md) |
+| [offGetWantParamsCallback](arkts-form-formhost-offgetwantparamscallback-f-sys.md) |
+| [offTemplateFormDetailInfoChange](arkts-form-formhost-offtemplateformdetailinfochange-f-sys.md) |
+| [offUpdateFormsConfigCallback](arkts-form-formhost-offupdateformsconfigcallback-f-sys.md) |
+| [on](arkts-form-formhost-on-f-sys.md#onformuninstall) |
+| [on](arkts-form-formhost-on-f-sys.md#onformoverflow) |
+| [on](arkts-form-formhost-on-f-sys.md#onchangesceneanimationstate) |
+| [on](arkts-form-formhost-on-f-sys.md#ongetformrect) |
+| [on](arkts-form-formhost-on-f-sys.md#ongetliveformstatus) |
+| [onChangeSceneAnimationState](arkts-form-formhost-onchangesceneanimationstate-f-sys.md) |
+| [onDeleteFormsCallback](arkts-form-formhost-ondeleteformscallback-f-sys.md) |
+| [onFormOverflow](arkts-form-formhost-onformoverflow-f-sys.md) |
+| [onFormUninstall](arkts-form-formhost-onformuninstall-f-sys.md) |
+| [onGetFormRect](arkts-form-formhost-ongetformrect-f-sys.md) |
+| [onGetLiveFormStatus](arkts-form-formhost-ongetliveformstatus-f-sys.md) |
+| [onGetWantParamsCallback](arkts-form-formhost-ongetwantparamscallback-f-sys.md) |
+| [onTemplateFormDetailInfoChange](arkts-form-formhost-ontemplateformdetailinfochange-f-sys.md) |
+| [onUpdateFormsConfigCallback](arkts-form-formhost-onupdateformsconfigcallback-f-sys.md) |
+| [recoverForms](arkts-form-formhost-recoverforms-f-sys.md) |
+| [recoverForms](arkts-form-formhost-recoverforms-f-sys.md) |
+| [recycleForms](arkts-form-formhost-recycleforms-f-sys.md) |
+| [releaseForm](arkts-form-formhost-releaseform-f-sys.md) |
+| [releaseForm](arkts-form-formhost-releaseform-f-sys.md) |
+| [releaseForm](arkts-form-formhost-releaseform-f-sys.md) |
+| [requestForm](arkts-form-formhost-requestform-f-sys.md) |
+| [requestForm](arkts-form-formhost-requestform-f-sys.md) |
+| [requestFormWithParams](arkts-form-formhost-requestformwithparams-f-sys.md) |
+| [setFormsRecyclable](arkts-form-formhost-setformsrecyclable-f-sys.md) |
+| [setFormsRecyclable](arkts-form-formhost-setformsrecyclable-f-sys.md) |
+| [setPublishFormResult](arkts-form-formhost-setpublishformresult-f-sys.md) |
+| [setRouterProxy](arkts-form-formhost-setrouterproxy-f-sys.md) |
+| [setRouterProxy](arkts-form-formhost-setrouterproxy-f-sys.md) |
+| [shareForm](arkts-form-formhost-shareform-f-sys.md) |
+| [shareForm](arkts-form-formhost-shareform-f-sys.md) |
+| [updateFormLocation](arkts-form-formhost-updateformlocation-f-sys.md) |
+| [updateFormLockedState](arkts-form-formhost-updateformlockedstate-f-sys.md) |
+| [updateFormSize](arkts-form-formhost-updateformsize-f-sys.md) |
 <!--DelEnd-->
-

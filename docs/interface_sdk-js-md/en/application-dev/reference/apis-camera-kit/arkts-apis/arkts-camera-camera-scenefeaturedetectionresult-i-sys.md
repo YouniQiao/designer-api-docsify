@@ -2,9 +2,9 @@
 
 Describes the scene feature detection result.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-camera-interface SceneFeatureDetectionResult--><!--Device-camera-interface SceneFeatureDetectionResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -26,9 +26,9 @@ Whether the specified scene feature is detected. **true** if detected, **false**
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SceneFeatureDetectionResult-readonly detected: boolean--><!--Device-SceneFeatureDetectionResult-readonly detected: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -44,11 +44,10 @@ Scene feature type.
 
 **Type:** [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SceneFeatureDetectionResult-readonly featureType: SceneFeatureType--><!--Device-SceneFeatureDetectionResult-readonly featureType: SceneFeatureType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

@@ -2,9 +2,7 @@
 
 **继承/实现关系：** OffscreenCanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
 
-**起始版本：** -1
-
-<!--Device-unnamed-declare class OffscreenCanvasRenderingContext2D--><!--Device-unnamed-declare class OffscreenCanvasRenderingContext2D-End-->
+**ArkTS模式：** 
 
 ## 导入模块
 
@@ -21,21 +19,21 @@ constructor(width: number, height: number, settings?: RenderingContextSettings)
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-OffscreenCanvasRenderingContext2D-constructor(width: number, height: number, settings?: RenderingContextSettings)--><!--Device-OffscreenCanvasRenderingContext2D-constructor(width: number, height: number, settings?: RenderingContextSettings)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| width | number | 是 | 离屏画布的宽度，默认单位：vp。 <br>异常值NaN和Infinity按无效值处理。 |
-| height | number | 是 | 离屏画布的高度，默认单位：vp。 <br>异常值NaN和Infinity按无效值处理。 |
-| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的参数， 见RenderingContextSettings接口描述。 <br>异常值undefined按RenderingContextSettings的默认值处理。 <br>默认值：null。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| width | number | 是 |
+| height | number | 是 |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 |
 
 **示例**
 
@@ -88,24 +86,24 @@ constructor(width: number, height: number, settings?: RenderingContextSettings, 
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-OffscreenCanvasRenderingContext2D-constructor(width: number, height: number, settings?: RenderingContextSettings, unit?: LengthMetricsUnit)--><!--Device-OffscreenCanvasRenderingContext2D-constructor(width: number, height: number, settings?: RenderingContextSettings, unit?: LengthMetricsUnit)-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| width | number | 是 | 离屏画布的宽度，默认单位：vp。 <br>异常值NaN和Infinity按无效值处理。 |
-| height | number | 是 | 离屏画布的高度，默认单位：vp。 <br>异常值NaN和Infinity按无效值处理。 |
-| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的参数， 见RenderingContextSettings接口描述。 <br>异常值undefined按RenderingContextSettings的默认值处理。 <br>默认值：null。 |
-| unit | LengthMetricsUnit | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的单位模式， 配置后无法动态更改，配置方法同 [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。 <br>异常值undefined、NaN和Infinity按默认值处理。 <br>默认值：DEFAULT。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| width | number | 是 |
+| height | number | 是 |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 |
 
 **示例**
 
@@ -121,26 +119,26 @@ toDataURL(type?: string, quality?: any): string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-OffscreenCanvasRenderingContext2D-toDataURL(type?: string, quality?: any): string--><!--Device-OffscreenCanvasRenderingContext2D-toDataURL(type?: string, quality?: any): string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | string | 否 | 用于指定图像格式。 <br>可选参数为："image/png"（无损压缩，适合需要精确像素的场景）、"image/jpeg"（有损压缩，适合照片类图像）、"image/webp"（高效压缩，适合网络传输场景）。 <br>异常值undefined或null按默认值处理。 <br>默认值：image/png |
-| quality | any | 否 | 在指定图片格式为image/jpeg或image/webp的情况下，可以从0到1的区间内选择图片的质量，0-0.5适合快速传输或低带宽场景，0.6-0.8适合普通场景，0.9-1. 0适合高质量需求。如果超出取值范围，将会使用默认值0.92。 <br>异常值undefined、null、NaN和Infinity按默认值处理。 <br>默认值：0.92 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | string | 否 |
+| quality | any | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 图像的URL地址。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -211,19 +209,19 @@ transferToImageBitmap(): ImageBitmap
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-OffscreenCanvasRenderingContext2D-transferToImageBitmap(): ImageBitmap--><!--Device-OffscreenCanvasRenderingContext2D-transferToImageBitmap(): ImageBitmap-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageBitmap](arkts-arkui-imagebitmap-c.md) | 存储离屏画布上渲染的像素数据。 |
+| 类型 |
+| --- |
+| [ImageBitmap](arkts-arkui-imagebitmap-c.md) |
 
 **示例**
 
@@ -295,4 +293,3 @@ struct PutImageData {
   }
 }
 ```
-

@@ -14,13 +14,13 @@ function queryAssociatedBundleNames(domain: string): string[]
 
 query bundleNames associated with domain.
 
-**Since:** 23
+**Since:** 13
+
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_APP_DOMAIN_BUNDLE_INFO
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-appDomainVerify-function queryAssociatedBundleNames(domain: string): string[]--><!--Device-appDomainVerify-function queryAssociatedBundleNames(domain: string): string[]-End-->
 
 **System capability:** SystemCapability.BundleManager.AppDomainVerify
 
@@ -28,24 +28,24 @@ query bundleNames associated with domain.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| domain | string | Yes | Parameters related to the function. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| domain | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string[] | Result bundleNames. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string[] |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API accessed by non-system app. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [29900001](../errorcode-appDomainVerify-sys.md#29900001-internal-system-service-error) | Internal error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [29900001](../errorcode-appDomainVerify-sys.md#29900001-internal-system-service-error) |
 
 **Examples**
 
@@ -60,4 +60,3 @@ bundleNames.forEach(bundleName => {
   hilog.info(0x0000, 'testTag', `domain:${domain} associate with app:${bundleName}`);
 });
 ```
-

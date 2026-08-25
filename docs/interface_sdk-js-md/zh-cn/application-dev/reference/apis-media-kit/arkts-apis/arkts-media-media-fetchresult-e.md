@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-media-enum FetchResult--><!--Device-media-enum FetchResult-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -18,9 +18,9 @@ FETCH_FAILED = 0
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-FetchResult-FETCH_FAILED = 0--><!--Device-FetchResult-FETCH_FAILED = 0-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -34,9 +34,9 @@ FETCH_SUCCEEDED = 1
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-FetchResult-FETCH_SUCCEEDED = 1--><!--Device-FetchResult-FETCH_SUCCEEDED = 1-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -50,9 +50,8 @@ FETCH_CANCELED = 2
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-FetchResult-FETCH_CANCELED = 2--><!--Device-FetchResult-FETCH_CANCELED = 2-End-->
-
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
-

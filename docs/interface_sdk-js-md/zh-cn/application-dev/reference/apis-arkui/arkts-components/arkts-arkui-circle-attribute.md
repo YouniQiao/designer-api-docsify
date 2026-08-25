@@ -6,7 +6,7 @@
 
 **起始版本：** 7
 
-<!--Device-unnamed-declare class CircleAttribute--><!--Device-unnamed-declare class CircleAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,23 +21,23 @@
 fill(value: ResourceColor | ColorMetrics)
 ```
 
-设置填充区域的颜色，支持使用[ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)描述颜色，可进行HDR提亮。支持 attributeModifier动态设置属性。不设置时，默认填充颜色为Color.Black。异常值undefined 、null、NaN和Infinity按照默认值处理。与通用属性foregroundColor同时设置时，后设置的属性生效。
+设置填充区域的颜色，支持使用[ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md)描述颜色，可进行HDR提亮。支持 attributeModifier动态设置属性。不设置时，默认填充颜色为Color.Black。异常值undefined 、null、NaN和Infinity按照默认值处理。与通用属性foregroundColor同时设置时，后设置的属性生效。
 
 **起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-CircleAttribute-fill(value: ResourceColor | ColorMetrics): CircleAttribute--><!--Device-CircleAttribute-fill(value: ResourceColor | ColorMetrics): CircleAttribute-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceColor \| ColorMetrics | 是 | 填充区域颜色。 <br>默认值：Color.Black <br>异常值undefined、null、NaN和Infinity按照默认值处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | ResourceColor \| [ColorMetrics](../arkts-apis/arkts-arkui-colormetrics-t.md) | 是 |
 
 ## stroke
 
@@ -45,21 +45,20 @@ fill(value: ResourceColor | ColorMetrics)
 stroke(value: ResourceColor | ColorMetrics)
 ```
 
-设置边框颜色，支持使用[ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)描述颜色，可进行HDR提亮。支持 attributeModifier动态设置属性。不设置时，默认边框颜色为Color.Transparent，即没有边框。 异常值undefined和null按照默认值处理，NaN和Infinity按照Color.Black处理。
+设置边框颜色，支持使用[ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md)描述颜色，可进行HDR提亮。支持 attributeModifier动态设置属性。不设置时，默认边框颜色为Color.Transparent，即没有边框。 异常值undefined和null按照默认值处理，NaN和Infinity按照Color.Black处理。
 
 **起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-CircleAttribute-stroke(value: ResourceColor | ColorMetrics): CircleAttribute--><!--Device-CircleAttribute-stroke(value: ResourceColor | ColorMetrics): CircleAttribute-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceColor \| ColorMetrics | 是 | 边框颜色。 <br>默认值：Color.Transparent <br>异常值undefined和null按照默认值处理，NaN和Infinity按照Color.Black处理。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | ResourceColor \| [ColorMetrics](../arkts-apis/arkts-arkui-colormetrics-t.md) | 是 |

@@ -2,9 +2,9 @@
 
 Provides APIs for querying the color retention type supported by the device.
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-camera-interface ColorReservationQuery--><!--Device-camera-interface ColorReservationQuery-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -24,9 +24,9 @@ getSupportedColorReservationTypes(): Array<ColorReservationType>
 
 Obtains the supported color reservation types.
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-ColorReservationQuery-getSupportedColorReservationTypes(): Array<ColorReservationType>--><!--Device-ColorReservationQuery-getSupportedColorReservationTypes(): Array<ColorReservationType>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -34,16 +34,16 @@ Obtains the supported color reservation types.
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[ColorReservationType](arkts-camera-camera-colorreservationtype-e-sys.md)&gt; | Array of color reservation types supported. |
+| 类型 |
+| --- |
+| Array&lt;[ColorReservationType](arkts-camera-camera-colorreservationtype-e-sys.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 **示例**
 
@@ -62,4 +62,3 @@ function getSupportedColorReservationTypes(session: camera.VideoSessionForSys): 
   return colorReservationTypes;
 }
 ```
-

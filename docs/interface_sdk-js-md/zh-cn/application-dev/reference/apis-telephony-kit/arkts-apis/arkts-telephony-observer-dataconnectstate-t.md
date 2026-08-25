@@ -6,11 +6,10 @@ type DataConnectState = data.DataConnectState
 
 描述蜂窝数据链路连接状态。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-observer-type DataConnectState = data.DataConnectState--><!--Device-observer-type DataConnectState = data.DataConnectState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **属性类型：** data.DataConnectState
-

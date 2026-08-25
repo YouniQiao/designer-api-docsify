@@ -4,9 +4,7 @@
 
 **起始版本：** 18
 
-**装饰器类型：** @ObservedV2
-
-<!--Device-unnamed-export declare class SubHeaderV2OperationItem--><!--Device-unnamed-export declare class SubHeaderV2OperationItem-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,6 +13,24 @@
 ```TypeScript
 import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, SubHeaderV2OperationType, SubHeaderV2OperationItem, SubHeaderV2OperationItemType } from '@kit.ArkUI';
 ```
+
+## action
+
+```TypeScript
+action?: SubHeaderV2OperationItemAction
+```
+
+callback function when operate the text or icon.
+
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
 
@@ -26,19 +42,19 @@ constructor(options: SubHeaderV2OperationItemOptions)
 
 **起始版本：** 18
 
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SubHeaderV2OperationItem-constructor(options: SubHeaderV2OperationItemOptions)--><!--Device-SubHeaderV2OperationItem-constructor(options: SubHeaderV2OperationItemOptions)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [SubHeaderV2OperationItemOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitemoptions-i.md) | 是 | 操作项配置信息。用于构建SubHeaderV2OperationItem对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [SubHeaderV2OperationItemOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitemoptions-i.md) | 是 |
 
 ## accessibilityDescription
 
@@ -48,17 +64,15 @@ accessibilityDescription?: ResourceStr
 
 The accessibilityDescription of this text or icon.
 
-**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 18
 
-**装饰器类型：** @Trace
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SubHeaderV2OperationItem-@Trace  accessibilityDescription?: ResourceStr--><!--Device-SubHeaderV2OperationItem-@Trace  accessibilityDescription?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,13 +90,11 @@ The accessibilityLevel of this text or icon.
 
 **起始版本：** 18
 
-**装饰器类型：** @Trace
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SubHeaderV2OperationItem-@Trace  accessibilityLevel?: string--><!--Device-SubHeaderV2OperationItem-@Trace  accessibilityLevel?: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,39 +106,15 @@ accessibilityText?: ResourceStr
 
 The accessibilityText of this text or icon.
 
-**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 18
 
-**装饰器类型：** @Trace
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SubHeaderV2OperationItem-@Trace  accessibilityText?: ResourceStr--><!--Device-SubHeaderV2OperationItem-@Trace  accessibilityText?: ResourceStr-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## action
-
-```TypeScript
-action?: SubHeaderV2OperationItemAction
-```
-
-callback function when operate the text or icon.
-
-**类型：** [SubHeaderV2OperationItemAction](arkts-arkui-subheaderv2operationitemaction-t.md)
-
-**起始版本：** 18
-
-**装饰器类型：** @Trace
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SubHeaderV2OperationItem-@Trace  action?: SubHeaderV2OperationItemAction--><!--Device-SubHeaderV2OperationItem-@Trace  action?: SubHeaderV2OperationItemAction-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -142,13 +130,11 @@ The content of text or the address of icon.
 
 **起始版本：** 18
 
-**装饰器类型：** @Trace
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SubHeaderV2OperationItem-@Trace  content: SubHeaderV2OperationItemType--><!--Device-SubHeaderV2OperationItem-@Trace  content: SubHeaderV2OperationItemType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -166,13 +152,11 @@ Sets the default focus state of the text or icon.
 
 **起始版本：** 18
 
-**装饰器类型：** @Trace
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SubHeaderV2OperationItem-@Trace  defaultFocus?: boolean--><!--Device-SubHeaderV2OperationItem-@Trace  defaultFocus?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -188,13 +172,10 @@ id?: string
 
 **起始版本：** 24
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SubHeaderV2OperationItem-@Trace  id?: string--><!--Device-SubHeaderV2OperationItem-@Trace  id?: string-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

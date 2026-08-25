@@ -4,7 +4,7 @@ Defines the specific configuration parameters for the rendering context.
 
 **Since:** 23
 
-<!--Device-unnamed-declare interface RenderingContextOptions--><!--Device-unnamed-declare interface RenderingContextOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,10 @@ Indicates whether to enable anti-aliasing for the **RenderingContext**. <br>A va
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-RenderingContextOptions-antialias?: boolean--><!--Device-RenderingContextOptions-antialias?: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

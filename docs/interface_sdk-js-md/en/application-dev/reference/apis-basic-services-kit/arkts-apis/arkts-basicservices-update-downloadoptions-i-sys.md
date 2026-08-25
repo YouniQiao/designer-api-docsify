@@ -2,9 +2,9 @@
 
 Defines the download options, including the **allowNetwork** and **order** fields, which are used to control the download behavior.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-update-export interface DownloadOptions--><!--Device-update-export interface DownloadOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -26,9 +26,9 @@ Network type allowed for download. The value **CELLULAR** indicates that only do
 
 **Type:** [NetType](arkts-basicservices-update-nettype-e-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DownloadOptions-allowNetwork: NetType--><!--Device-DownloadOptions-allowNetwork: NetType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -44,11 +44,10 @@ The options are as follows: **DOWNLOAD**: download the upgrade package, which ne
 
 **Type:** [Order](arkts-basicservices-update-order-e-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DownloadOptions-order: Order--><!--Device-DownloadOptions-order: Order-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
-

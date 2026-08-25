@@ -6,9 +6,9 @@ Defines the water flow item attribute.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-unnamed-declare class FlowItemAttribute--><!--Device-unnamed-declare class FlowItemAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,4 +16,3 @@ Defines the water flow item attribute.
 
 ```TypeScript
 ```
-

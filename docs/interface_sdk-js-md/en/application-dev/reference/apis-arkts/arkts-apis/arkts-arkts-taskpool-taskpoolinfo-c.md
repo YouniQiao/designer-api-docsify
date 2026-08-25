@@ -4,7 +4,7 @@ Describes the internal information about a task pool.
 
 **Since:** 10
 
-<!--Device-taskpool-class TaskPoolInfo--><!--Device-taskpool-class TaskPoolInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,9 +26,9 @@ Internal information about the tasks. You are advised not to change the value.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-TaskPoolInfo-taskInfos: TaskInfo[]--><!--Device-TaskPoolInfo-taskInfos: TaskInfo[]-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -44,9 +44,8 @@ Internal information about the worker threads. You are advised not to change the
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-TaskPoolInfo-threadInfos: ThreadInfo[]--><!--Device-TaskPoolInfo-threadInfos: ThreadInfo[]-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

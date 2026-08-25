@@ -2,9 +2,9 @@
 
 照片代理，相机应用通过该对象写入图片数据。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-photoAccessHelper-interface PhotoProxy--><!--Device-photoAccessHelper-interface PhotoProxy-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -15,4 +15,3 @@
 ```TypeScript
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
-

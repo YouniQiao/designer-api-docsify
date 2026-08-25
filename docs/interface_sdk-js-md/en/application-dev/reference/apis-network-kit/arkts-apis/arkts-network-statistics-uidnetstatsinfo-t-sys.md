@@ -1,18 +1,19 @@
 # UidNetStatsInfo (System API)
 
 ```TypeScript
-export type UidNetStatsInfo = Record<int, NetStatsInfo>
+export type UidNetStatsInfo = {
+    [uid: int]: NetStatsInfo;
+  }
 ```
 
-[NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) for every UID. Key is UID.
+**Since:** 12
 
-**Since:** 23
-
-<!--Device-statistics-export type UidNetStatsInfo = Record<int, NetStatsInfo>--><!--Device-statistics-export type UidNetStatsInfo = Record<int, NetStatsInfo>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
 
-**Property type:** Record&lt;int, [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md)&gt;
-
+**Property type:** {
+    [uid: number]: NetStatsInfo;
+  }

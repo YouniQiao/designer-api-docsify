@@ -1,8 +1,6 @@
 # Number
 
-**Since:** -1
-
-<!--Device-unnamed-interface Number--><!--Device-unnamed-interface Number-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,18 +15,16 @@ toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.NumberFormatOption
 
 Converts a number to a string by using the current or specified locale.
 
-**Since:** -1
-
-<!--Device-Number-toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.NumberFormatOptions): string--><!--Device-Number-toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.NumberFormatOptions): string-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | No |  |
-| options | Intl.NumberFormatOptions | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | No |
+| options | Intl.NumberFormatOptions | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

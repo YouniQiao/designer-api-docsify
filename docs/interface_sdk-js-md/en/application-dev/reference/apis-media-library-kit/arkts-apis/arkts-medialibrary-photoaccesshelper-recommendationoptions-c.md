@@ -2,9 +2,9 @@
 
 Defines the image recommendation options. The image recommendation feature depends on the image data analysis capability, which varies with devices.
 
-**Since:** 26.0.0
+**Since:** 11
 
-<!--Device-photoAccessHelper-class RecommendationOptions--><!--Device-photoAccessHelper-class RecommendationOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -24,11 +24,11 @@ Type of the recommended image.
 
 **Type:** [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md)
 
-**Since:** 26.0.0
+**Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
-<!--Device-RecommendationOptions-recommendationType?: RecommendationType--><!--Device-RecommendationOptions-recommendationType?: RecommendationType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -42,11 +42,10 @@ Text based on which images are recommended. If both **recommendationType** and *
 
 **Type:** [TextContextInfo](arkts-medialibrary-photoaccesshelper-textcontextinfo-i.md)
 
-**Since:** 26.0.0
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-RecommendationOptions-textContextInfo?: TextContextInfo--><!--Device-RecommendationOptions-textContextInfo?: TextContextInfo-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

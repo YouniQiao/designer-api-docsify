@@ -1,10 +1,10 @@
 # UpdatablePickerConfigs
 
-Describes the updatable attributes of the **PhotoPickerComponent**. These attributes are a subset of [PickerOptions](../../apis-default/arkts-apis/arkts-file-photopickercomponent-pickeroptions-c.md).
+Describes the updatable attributes of the **PhotoPickerComponent**. These attributes are a subset of [PickerOptions](arkts-medialibrary-file-photopickercomponent-pickeroptions-c.md).
 
 **Since:** 22
 
-<!--Device-unnamed-export declare class UpdatablePickerConfigs--><!--Device-unnamed-export declare class UpdatablePickerConfigs-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,11 +26,11 @@ Used to display only the album content corresponding to the specified bundle nam
 
 **Since:** 23
 
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-UpdatablePickerConfigs-appAlbumFilters?: Array<string>--><!--Device-UpdatablePickerConfigs-appAlbumFilters?: Array<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -46,11 +46,11 @@ Playback mode of the moving photo. The maximum array length is 2. If this limit 
 
 **Since:** 23
 
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-UpdatablePickerConfigs-autoPlayScenes?: Array<photoAccessHelper.AutoPlayScene>--><!--Device-UpdatablePickerConfigs-autoPlayScenes?: Array<photoAccessHelper.AutoPlayScene>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -66,9 +66,9 @@ Background color of the Picker grid page.The value is an 8-digit hexadecimal col
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
-<!--Device-UpdatablePickerConfigs-backgroundColor?: string--><!--Device-UpdatablePickerConfigs-backgroundColor?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -84,11 +84,11 @@ Background opacity of the picker. The value range is [0, 1]. **0** indicates com
 
 **Since:** 24
 
+**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-UpdatablePickerConfigs-backgroundOpacity?: number--><!--Device-UpdatablePickerConfigs-backgroundOpacity?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -104,9 +104,9 @@ Background color of the check box.The value is an 8-digit hexadecimal color code
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
-<!--Device-UpdatablePickerConfigs-checkBoxColor?: string--><!--Device-UpdatablePickerConfigs-checkBoxColor?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -122,9 +122,9 @@ Text color in the check box.The value is an 8-digit hexadecimal color code.
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
-<!--Device-UpdatablePickerConfigs-checkboxTextColor?: string--><!--Device-UpdatablePickerConfigs-checkboxTextColor?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -140,11 +140,11 @@ Scrolling effect when the Picker grid page reaches the edge.The default value is
 
 **Since:** 23
 
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-UpdatablePickerConfigs-edgeEffect?: EdgeEffect--><!--Device-UpdatablePickerConfigs-edgeEffect?: EdgeEffect-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -160,11 +160,11 @@ Margin of the component grid.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-UpdatablePickerConfigs-gridMargin?: Margin--><!--Device-UpdatablePickerConfigs-gridMargin?: Margin-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -181,9 +181,9 @@ Whether a single image can be repeatedly selected.
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
-<!--Device-UpdatablePickerConfigs-isRepeatSelectSupported?: boolean--><!--Device-UpdatablePickerConfigs-isRepeatSelectSupported?: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -199,11 +199,11 @@ Whether scrolling in the **PhotoPickerComponent** is enabled. The value **true**
 
 **Since:** 23
 
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-UpdatablePickerConfigs-isSlidingSupported?: boolean--><!--Device-UpdatablePickerConfigs-isSlidingSupported?: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -219,9 +219,9 @@ Maximum number of images that can be selected (unit: number).The maximum value i
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
-<!--Device-UpdatablePickerConfigs-maxPhotoSelectNumber?: number--><!--Device-UpdatablePickerConfigs-maxPhotoSelectNumber?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -237,9 +237,9 @@ Maximum number of media files that can be selected.The maximum value is 500, and
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
-<!--Device-UpdatablePickerConfigs-maxSelectNumber?: number--><!--Device-UpdatablePickerConfigs-maxSelectNumber?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -255,9 +255,9 @@ Maximum number of videos that can be selected (unit: number).The maximum value i
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
-<!--Device-UpdatablePickerConfigs-maxVideoSelectNumber?: number--><!--Device-UpdatablePickerConfigs-maxVideoSelectNumber?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -273,9 +273,9 @@ MIME types.If this parameter is not specified, **IMAGE_VIDEO_TYPE** is used by d
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
-<!--Device-UpdatablePickerConfigs-mimeType?: photoAccessHelper.PhotoViewMIMETypes--><!--Device-UpdatablePickerConfigs-mimeType?: photoAccessHelper.PhotoViewMIMETypes-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -292,9 +292,9 @@ Configuration for file type filtering. Multiple types can be specified.
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
-<!--Device-UpdatablePickerConfigs-mimeTypeFilter?: photoAccessHelper.MimeTypeFilter--><!--Device-UpdatablePickerConfigs-mimeTypeFilter?: photoAccessHelper.MimeTypeFilter-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -306,13 +306,13 @@ photoBrowserBackgroundColorMode?: PickerColorMode
 
 Background color of the photo browser page.The options are **AUTO**, **LIGHT**, and **DARK**. The default value is **AUTO**.
 
-**Type:** [PickerColorMode](../../apis-default/arkts-apis/arkts-file-photopickercomponent-pickercolormode-e.md)
+**Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
-<!--Device-UpdatablePickerConfigs-photoBrowserBackgroundColorMode?: PickerColorMode--><!--Device-UpdatablePickerConfigs-photoBrowserBackgroundColorMode?: PickerColorMode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -328,11 +328,11 @@ Margin of the component large image.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-UpdatablePickerConfigs-photoBrowserMargin?: Margin--><!--Device-UpdatablePickerConfigs-photoBrowserMargin?: Margin-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -348,9 +348,9 @@ URIs of the selected images.
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
-<!--Device-UpdatablePickerConfigs-preselectedUris?: Array<string>--><!--Device-UpdatablePickerConfigs-preselectedUris?: Array<string>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -363,13 +363,13 @@ selectMode?: SelectMode
 Picker selection mode.  
 **SINGLE_SELECT** or **MULTI_SELECT**. The default value is **MULTI_SELECT**.
 
-**Type:** [SelectMode](../../apis-default/arkts-apis/arkts-file-photopickercomponent-selectmode-e.md)
+**Type:** [SelectMode](arkts-medialibrary-file-photopickercomponent-selectmode-e.md)
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
-<!--Device-UpdatablePickerConfigs-selectMode?: SelectMode--><!--Device-UpdatablePickerConfigs-selectMode?: SelectMode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -385,9 +385,9 @@ Single selection mode. The default value is **SingleSelectionMode.BROWSER_MODE**
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
-<!--Device-UpdatablePickerConfigs-singleSelectionMode?: photoAccessHelper.SingleSelectionMode--><!--Device-UpdatablePickerConfigs-singleSelectionMode?: photoAccessHelper.SingleSelectionMode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -399,13 +399,12 @@ uiComponentColorMode?: PickerColorMode
 
 Color mode of the Picker UI component.Dark/Light color mode (excluding the background color) of other components on the Picker grid page, including the search box, camera entry, safety tips for using Gallery, and recommendation bubble. This attribute is usually used together with **backgroundColor**. The default value is **PickerColorMode.AUTO**, which follows the system's dark/ light color mode.When setting this attribute, avoid using **PickerColorMode.LIGHT** with a dark background color, as it may make components or text hard to see. Avoid using **PickerColorMode.DARK** with a light background color for the same reason.
 
-**Type:** [PickerColorMode](../../apis-default/arkts-apis/arkts-file-photopickercomponent-pickercolormode-e.md)
+**Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 22
 
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
+
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-UpdatablePickerConfigs-uiComponentColorMode?: PickerColorMode--><!--Device-UpdatablePickerConfigs-uiComponentColorMode?: PickerColorMode-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

@@ -4,7 +4,7 @@ UserAgentMetadata is a class in the ArkWeb framework used to configure the compl
 
 **Since:** 24
 
-<!--Device-webview-class UserAgentMetadata--><!--Device-webview-class UserAgentMetadata-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -20,21 +20,21 @@ import { webview } from '@kit.ArkWeb';
 getArchitecture(): string
 ```
 
-Obtains the architecture type of the platform. If the corresponding [setArchitecture](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setarchitecture) is not called for configuration, the default value of the architecture type is: "".
+Obtains the architecture type of the platform. If the corresponding [setArchitecture](#setarchitecture) is not called for configuration, the default value of the architecture type is: "".
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-UserAgentMetadata-getArchitecture(): string--><!--Device-UserAgentMetadata-getArchitecture(): string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Platform architecture type. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -46,21 +46,21 @@ For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-
 getBitness(): string
 ```
 
-Obtains the bitness type of the platform. If the corresponding [setBitness](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setbitness) is not called for configuration, the default value of the bitness type is: Desktop: "64", other devices: "".
+Obtains the bitness type of the platform. If the corresponding [setBitness](#setbitness) is not called for configuration, the default value of the bitness type is: Desktop: "64", other devices: "".
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-UserAgentMetadata-getBitness(): string--><!--Device-UserAgentMetadata-getBitness(): string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Bitness type of the platform. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -72,21 +72,21 @@ For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-
 getBrandVersionList(): Array<UserAgentBrandVersion>
 ```
 
-Obtains the brand and version information list. If the corresponding [setBrandVersionList](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setbrandversionlist) is not called for configuration, the default value of the list is: [{"brand":"Chromium","version":[ChromeCompatibleVersion](../../../web/web-default-userAgent.md#default-user-agent-structure)}, {"brand":"ArkWeb","version":[OSVersion](../../../web/web-default-userAgent.md#default-user-agent-structure)}].
+Obtains the brand and version information list. If the corresponding [setBrandVersionList](#setbrandversionlist) is not called for configuration, the default value of the list is: [{"brand":"Chromium","version":[ChromeCompatibleVersion](../../../web/web-default-userAgent.md#default-user-agent-structure)}, {"brand":"ArkWeb","version":[OSVersion](../../../web/web-default-userAgent.md#default-user-agent-structure)}].
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-UserAgentMetadata-getBrandVersionList(): Array<UserAgentBrandVersion>--><!--Device-UserAgentMetadata-getBrandVersionList(): Array<UserAgentBrandVersion>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;[UserAgentBrandVersion](../../apis-default/arkts-apis/arkts-webview-useragentbrandversion-c.md)&gt; | Brand and version information list. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; |
 
 **Examples**
 
@@ -98,21 +98,21 @@ For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-
 getFormFactors(): Array<UserAgentFormFactor>
 ```
 
-Obtains the device form factor information, such as phone and tablet. If the corresponding [setFormFactors](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setformfactors) is not called for configuration, the default value of the form factor information is: Phone: "Mobile", Watch: "Watch", Automotive: "Automotive", PC: "Desktop", Tablet: "Tablet".
+Obtains the device form factor information, such as phone and tablet. If the corresponding [setFormFactors](#setformfactors) is not called for configuration, the default value of the form factor information is: Phone: "Mobile", Watch: "Watch", Automotive: "Automotive", PC: "Desktop", Tablet: "Tablet".
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-UserAgentMetadata-getFormFactors(): Array<UserAgentFormFactor>--><!--Device-UserAgentMetadata-getFormFactors(): Array<UserAgentFormFactor>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;[UserAgentFormFactor](../../apis-default/arkts-apis/arkts-webview-useragentformfactor-e.md)&gt; | Device form information. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; |
 
 **Examples**
 
@@ -124,21 +124,21 @@ For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-
 getFullVersion(): string
 ```
 
-Obtains the full version number. If the corresponding [setFullVersion](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setfullversion) is not called for configuration, the default value of the version number is: "".
+Obtains the full version number. If the corresponding [setFullVersion](#setfullversion) is not called for configuration, the default value of the version number is: "".
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-UserAgentMetadata-getFullVersion(): string--><!--Device-UserAgentMetadata-getFullVersion(): string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Full version number. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -152,21 +152,21 @@ For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-
 getMobile(): boolean
 ```
 
-Obtains whether the device is a mobile device. If the corresponding [setMobile](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setmobile) is not called for configuration, the default value is: Phone: true, Watch, Automotive, Tablet, Large screen: false.
+Obtains whether the device is a mobile device. If the corresponding [setMobile](#setmobile) is not called for configuration, the default value is: Phone: true, Watch, Automotive, Tablet, Large screen: false.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-UserAgentMetadata-getMobile(): boolean--><!--Device-UserAgentMetadata-getMobile(): boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the device is a mobile device. **true** means yes; **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -178,21 +178,21 @@ For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-
 getModel(): string
 ```
 
-Obtains the device model. If the corresponding [setModel](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setmodel) is not called for configuration, the default value of the model is: Phone: obtains the device model based on const.product.model; Watch, Large screen, Automotive, PC, Tablet: "".
+Obtains the device model. If the corresponding [setModel](#setmodel) is not called for configuration, the default value of the model is: Phone: obtains the device model based on const.product.model; Watch, Large screen, Automotive, PC, Tablet: "".
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-UserAgentMetadata-getModel(): string--><!--Device-UserAgentMetadata-getModel(): string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Device model. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -204,21 +204,21 @@ For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-
 getPlatform(): string
 ```
 
-Obtains the operating system name. If the corresponding [setPlatform](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setplatform) is not called for configuration, the default value of the name is: "OpenHarmony".
+Obtains the operating system name. If the corresponding [setPlatform](#setplatform) is not called for configuration, the default value of the name is: "OpenHarmony".
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-UserAgentMetadata-getPlatform(): string--><!--Device-UserAgentMetadata-getPlatform(): string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | OS name. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -230,21 +230,21 @@ For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-
 getPlatformVersion(): string
 ```
 
-Obtains the operating system version number. If the corresponding [setPlatformVersion](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setplatformversion) is not called for configuration, the default value of the version number is: follows the OpenHarmony platform version number rules, same as const.product.os.dist.version.
+Obtains the operating system version number. If the corresponding [setPlatformVersion](#setplatformversion) is not called for configuration, the default value of the version number is: follows the OpenHarmony platform version number rules, same as const.product.os.dist.version.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-UserAgentMetadata-getPlatformVersion(): string--><!--Device-UserAgentMetadata-getPlatformVersion(): string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | OS version. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -256,21 +256,21 @@ For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-
 getWow64(): boolean
 ```
 
-Obtains whether the binary file is running in 32-bit mode on 64-bit Windows. If the corresponding [setWow64](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md#setwow64) is not called for configuration, the default value is false.
+Obtains whether the binary file is running in 32-bit mode on 64-bit Windows. If the corresponding [setWow64](#setwow64) is not called for configuration, the default value is false.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-UserAgentMetadata-getWow64(): boolean--><!--Device-UserAgentMetadata-getWow64(): boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the binary file runs in 32-bit mode on a 64-bit Windows. **true** means yes; **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -286,17 +286,17 @@ Sets the architecture type of the platform.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-UserAgentMetadata-setArchitecture(arch: string): void--><!--Device-UserAgentMetadata-setArchitecture(arch: string): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arch | string | Yes | Sec-CH-UA-Arch** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arch | string | Yes |
 
 **Examples**
 
@@ -312,17 +312,17 @@ Sets the bitness type of the platform.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-UserAgentMetadata-setBitness(bitness: string): void--><!--Device-UserAgentMetadata-setBitness(bitness: string): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bitness | string | Yes | Corresponds to the Sec-CH-UA-Bitness request header. If empty, the default value of ArkWeb is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bitness | string | Yes |
 
 **Examples**
 
@@ -338,17 +338,17 @@ Sets the brand and version information.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-UserAgentMetadata-setBrandVersionList(brandVersionList: Array<UserAgentBrandVersion>): void--><!--Device-UserAgentMetadata-setBrandVersionList(brandVersionList: Array<UserAgentBrandVersion>): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| brandVersionList | Array&lt;[UserAgentBrandVersion](../../apis-default/arkts-apis/arkts-webview-useragentbrandversion-c.md)&gt; | Yes | Sec-CH-UA-Full-Version-List** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| brandVersionList | Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; | Yes |
 
 **Examples**
 
@@ -364,17 +364,17 @@ Sets the device form, such as the mobile phone or tablet.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-UserAgentMetadata-setFormFactors(formFactors: Array<UserAgentFormFactor>): void--><!--Device-UserAgentMetadata-setFormFactors(formFactors: Array<UserAgentFormFactor>): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| formFactors | Array&lt;[UserAgentFormFactor](../../apis-default/arkts-apis/arkts-webview-useragentformfactor-e.md)&gt; | Yes | Sec-CH-UA-Form-Factor** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| formFactors | Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; | Yes |
 
 **Examples**
 
@@ -390,17 +390,17 @@ Sets the full version number.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-UserAgentMetadata-setFullVersion(fullVersion: string): void--><!--Device-UserAgentMetadata-setFullVersion(fullVersion: string): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fullVersion | string | Yes | Sec-CH-UA-Full-Version** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fullVersion | string | Yes |
 
 **Examples**
 
@@ -418,17 +418,17 @@ Sets whether the device is a mobile device.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-UserAgentMetadata-setMobile(isMobile: boolean): void--><!--Device-UserAgentMetadata-setMobile(isMobile: boolean): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isMobile | boolean | Yes | Whether the device is a mobile device. Corresponds to the Sec-CH-UA-Mobile request header. The value true means the device is a mobile device, and false means the opposite. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| isMobile | boolean | Yes |
 
 **Examples**
 
@@ -444,17 +444,17 @@ Sets the device model.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-UserAgentMetadata-setModel(model: string): void--><!--Device-UserAgentMetadata-setModel(model: string): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| model | string | Yes | Value of the Sec-CH-UA-Model request header. If empty, the default value of ArkWeb is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| model | string | Yes |
 
 **Examples**
 
@@ -470,17 +470,17 @@ Sets the OS name.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-UserAgentMetadata-setPlatform(platform: string): void--><!--Device-UserAgentMetadata-setPlatform(platform: string): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| platform | string | Yes | Sec-CH-UA-Platform** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| platform | string | Yes |
 
 **Examples**
 
@@ -496,17 +496,17 @@ Sets the OS version.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-UserAgentMetadata-setPlatformVersion(platformVersion: string): void--><!--Device-UserAgentMetadata-setPlatformVersion(platformVersion: string): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| platformVersion | string | Yes | Sec-CH-UA-Platform-Version** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| platformVersion | string | Yes |
 
 **Examples**
 
@@ -522,19 +522,18 @@ Sets whether the binary file runs in 32-bit mode on a 64-bit Windows.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-UserAgentMetadata-setWow64(isWow64: boolean): void--><!--Device-UserAgentMetadata-setWow64(isWow64: boolean): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isWow64 | boolean | Yes | Corresponds to the Sec-CH-UA-WoW64 request header. Whether the binary file is running in 32-bit mode on 64-bit Windows. The value **true** means yes, and **false** means no. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| isWow64 | boolean | Yes |
 
 **Examples**
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-

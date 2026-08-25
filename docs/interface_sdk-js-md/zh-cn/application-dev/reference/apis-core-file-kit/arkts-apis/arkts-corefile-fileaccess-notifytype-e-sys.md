@@ -4,9 +4,9 @@
 
 **起始版本：** 10
 
-**废弃版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-fileAccess-enum NotifyType--><!--Device-fileAccess-enum NotifyType-End-->
+**废弃版本：** 23
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -22,11 +22,11 @@ NOTIFY_ADD = 0
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NotifyType-NOTIFY_ADD = 0--><!--Device-NotifyType-NOTIFY_ADD = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -42,11 +42,11 @@ NOTIFY_DELETE = 1
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NotifyType-NOTIFY_DELETE = 1--><!--Device-NotifyType-NOTIFY_DELETE = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -62,11 +62,11 @@ NOTIFY_MOVED_TO = 2
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NotifyType-NOTIFY_MOVED_TO = 2--><!--Device-NotifyType-NOTIFY_MOVED_TO = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -82,11 +82,11 @@ NOTIFY_MOVED_FROM = 3
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NotifyType-NOTIFY_MOVED_FROM = 3--><!--Device-NotifyType-NOTIFY_MOVED_FROM = 3-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -102,11 +102,11 @@ NOTIFY_MOVE_SELF = 4
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NotifyType-NOTIFY_MOVE_SELF = 4--><!--Device-NotifyType-NOTIFY_MOVE_SELF = 4-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -122,11 +122,11 @@ NOTIFY_DEVICE_ONLINE = 5
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NotifyType-NOTIFY_DEVICE_ONLINE = 5--><!--Device-NotifyType-NOTIFY_DEVICE_ONLINE = 5-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -142,13 +142,12 @@ NOTIFY_DEVICE_OFFLINE = 6
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-NotifyType-NOTIFY_DEVICE_OFFLINE = 6--><!--Device-NotifyType-NOTIFY_DEVICE_OFFLINE = 6-End-->
-
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
-

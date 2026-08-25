@@ -8,9 +8,9 @@ const TONE_CATEGORY_ALARM: int
 
 Define the alarm tone category.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-systemSoundManager-const TONE_CATEGORY_ALARM: int--><!--Device-systemSoundManager-const TONE_CATEGORY_ALARM: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -19,16 +19,16 @@ Define the alarm tone category.
 ## TONE_CATEGORY_CONTACTS
 
 ```TypeScript
-const TONE_CATEGORY_CONTACTS: int
+const TONE_CATEGORY_CONTACTS: 16
 ```
 
 Define the contact tone category.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-systemSoundManager-const TONE_CATEGORY_CONTACTS: int--><!--Device-systemSoundManager-const TONE_CATEGORY_CONTACTS: int-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -42,9 +42,9 @@ const TONE_CATEGORY_NOTIFICATION: int
 
 Define the notification tone category.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-systemSoundManager-const TONE_CATEGORY_NOTIFICATION: int--><!--Device-systemSoundManager-const TONE_CATEGORY_NOTIFICATION: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -58,9 +58,9 @@ const TONE_CATEGORY_NOTIFICATION_APP: int
 
 Define the app notification tone category.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-systemSoundManager-const TONE_CATEGORY_NOTIFICATION_APP: int--><!--Device-systemSoundManager-const TONE_CATEGORY_NOTIFICATION_APP: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -74,9 +74,9 @@ const TONE_CATEGORY_RINGTONE: int
 
 Define the ringtone category.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-systemSoundManager-const TONE_CATEGORY_RINGTONE: int--><!--Device-systemSoundManager-const TONE_CATEGORY_RINGTONE: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -90,11 +90,10 @@ const TONE_CATEGORY_TEXT_MESSAGE: int
 
 Define the text message tone category.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-systemSoundManager-const TONE_CATEGORY_TEXT_MESSAGE: int--><!--Device-systemSoundManager-const TONE_CATEGORY_TEXT_MESSAGE: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
-

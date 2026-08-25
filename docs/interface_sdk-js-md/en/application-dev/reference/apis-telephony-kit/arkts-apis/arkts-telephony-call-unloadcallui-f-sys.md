@@ -16,9 +16,9 @@ Unload callUI.
 
 **Since:** 24
 
-**Required permissions:** ohos.permission.SET_TELEPHONY_STATE
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-call-function unloadCallUI(): Promise<boolean>--><!--Device-call-function unloadCallUI(): Promise<boolean>-End-->
+**Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -26,18 +26,17 @@ Unload callUI.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the unloadCallUI. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| 8400001 | Invalid parameter value. |
-| 8400002 | Operation failed. Cannot connect to service. |
-| 8400003 | System internal error. |
-| 8400999 | Unknown error code. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 8400001 |
+| 8400002 |
+| 8400003 |
+| 8400999 |

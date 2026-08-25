@@ -20,17 +20,17 @@ function isAutoStartupSupported(): boolean
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-autoStartupManager-function isAutoStartupSupported(): boolean--><!--Device-autoStartupManager-function isAutoStartupSupported(): boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 当前设备是否支持开机自启动。true：支持，false：不支持。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -45,4 +45,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

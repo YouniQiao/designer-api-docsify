@@ -16,13 +16,13 @@ Recovers a file or directory from the trash.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-trash-function recover(uri: string): void--><!--Device-trash-function recover(uri: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -30,17 +30,17 @@ Recovers a file or directory from the trash.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | URI of the file or directory. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900002 | No such file or directory |
-| 13900020 | Invalid argument |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900002 |
+| 13900020 |
+| 13900042 |
 
 **Examples**
 
@@ -49,4 +49,3 @@ let fileinfos = trash.listFile();
 let uri = fileinfos[0].uri;
 trash.recover(uri);
 ```
-

@@ -7,11 +7,11 @@
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 11
 
 **替代接口：** [VideoSession](arkts-camera-camera-videosession-i.md)
-
-<!--Device-camera-interface CaptureSession--><!--Device-camera-interface CaptureSession-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -31,11 +31,11 @@ Obtains the level of the beauty type in use.
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 11
 
 **替代接口：** [getBeauty](arkts-camera-camera-beauty-i-sys.md#getbeauty)
-
-<!--Device-CaptureSession-getBeauty(type: BeautyType): number--><!--Device-CaptureSession-getBeauty(type: BeautyType): number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -43,21 +43,21 @@ Obtains the level of the beauty type in use.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [BeautyType](arkts-camera-camera-beautytype-e-sys.md) | 是 | Beauty type. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [BeautyType](arkts-camera-camera-beautytype-e-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | the beauty effect in use. |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 错误码ID |
+| --- |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 **示例**
 
@@ -105,11 +105,11 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 11
 
 **替代接口：** [getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautyrange)
-
-<!--Device-CaptureSession-getSupportedBeautyRange(type: BeautyType): Array<number>--><!--Device-CaptureSession-getSupportedBeautyRange(type: BeautyType): Array<number>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -117,21 +117,21 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [BeautyType](arkts-camera-camera-beautytype-e-sys.md) | 是 | Beauty type. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [BeautyType](arkts-camera-camera-beautytype-e-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;number&gt; | Array of levels supported. |
+| 类型 |
+| --- |
+| Array & lt;number & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 错误码ID |
+| --- |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 **示例**
 
@@ -167,11 +167,11 @@ Obtains the supported beauty types.
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 11
 
 **替代接口：** [getSupportedBeautyTypes](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautytypes)
-
-<!--Device-CaptureSession-getSupportedBeautyTypes(): Array<BeautyType>--><!--Device-CaptureSession-getSupportedBeautyTypes(): Array<BeautyType>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -179,15 +179,15 @@ Obtains the supported beauty types.
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[BeautyType](arkts-camera-camera-beautytype-e-sys.md)&gt; | Array of beauty types supported. |
+| 类型 |
+| --- |
+| Array&lt;[BeautyType](arkts-camera-camera-beautytype-e-sys.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 错误码ID |
+| --- |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 **示例**
 
@@ -215,11 +215,11 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the [b
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 11
 
 **替代接口：** [setBeauty](arkts-camera-camera-beauty-i-sys.md#setbeauty)
-
-<!--Device-CaptureSession-setBeauty(type: BeautyType, value: number): void--><!--Device-CaptureSession-setBeauty(type: BeautyType, value: number): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -227,16 +227,16 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the [b
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [BeautyType](arkts-camera-camera-beautytype-e-sys.md) | 是 | Beauty type. |
-| value | number | 是 | Beauty level, which is obtained through [getSupportedBeautyRange](#getsupportedbeautyrange). |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [BeautyType](arkts-camera-camera-beautytype-e-sys.md) | 是 |
+| value | number | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 错误码ID |
+| --- |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 **示例**
 
@@ -267,4 +267,3 @@ function setBeauty(captureSession: camera.CaptureSession): void {
   captureSession.setBeauty(beautyTypes[0], beautyLevels[0]);
 }
 ```
-

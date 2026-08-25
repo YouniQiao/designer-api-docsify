@@ -4,9 +4,7 @@ Represents a lock that can be acquired and released
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export interface Lock--><!--Device-unnamed-export interface Lock-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,11 +23,9 @@ Acquires the lock
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Lock-lock(): void--><!--Device-Lock-lock(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -43,11 +39,8 @@ Releases the lock
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Lock-unlock(): void--><!--Device-Lock-unlock(): void-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

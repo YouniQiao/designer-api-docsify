@@ -16,9 +16,9 @@ Obtains the template widget information provided by all applications on the devi
 
 **Since:** 23
 
-**Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-formHost-function getAllTemplateFormsInfo(): Promise<Array<formInfo.FormInfo>>--><!--Device-formHost-function getAllTemplateFormsInfo(): Promise<Array<formInfo.FormInfo>>-End-->
+**Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -26,17 +26,17 @@ Obtains the template widget information provided by all applications on the devi
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Promise used to return the information obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Array & lt;formInfo.FormInfo & gt; & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
 
 **Examples**
 
@@ -56,4 +56,3 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
-

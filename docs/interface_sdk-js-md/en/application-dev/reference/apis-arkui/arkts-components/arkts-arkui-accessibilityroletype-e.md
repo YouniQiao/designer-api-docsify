@@ -4,7 +4,7 @@ Enumerates the component role types used by screen readers. @enum { number }
 
 **Since:** 18
 
-<!--Device-unnamed-declare enum AccessibilityRoleType--><!--Device-unnamed-declare enum AccessibilityRoleType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +18,13 @@ Action sheet.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-ACTION_SHEET = 0--><!--Device-AccessibilityRoleType-ACTION_SHEET = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,13 +38,13 @@ Alert dialog box.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-ALERT_DIALOG = 1--><!--Device-AccessibilityRoleType-ALERT_DIALOG = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,13 +58,13 @@ Indexer component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-INDEXER_COMPONENT = 2--><!--Device-AccessibilityRoleType-INDEXER_COMPONENT = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,13 +78,13 @@ Badge component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-BADGE_COMPONENT = 3--><!--Device-AccessibilityRoleType-BADGE_COMPONENT = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,13 +98,13 @@ Blank placeholder component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-BLANK = 4--><!--Device-AccessibilityRoleType-BLANK = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -118,13 +118,13 @@ Button.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-BUTTON = 5--><!--Device-AccessibilityRoleType-BUTTON = 5-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,13 +138,13 @@ Back button on a large image page.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-BACK_BUTTON = 6--><!--Device-AccessibilityRoleType-BACK_BUTTON = 6-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -158,13 +158,13 @@ Drag bar for sheets.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-SHEET_DRAG_BAR = 7--><!--Device-AccessibilityRoleType-SHEET_DRAG_BAR = 7-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -178,13 +178,13 @@ Calendar picker.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-CALENDAR_PICKER = 8--><!--Device-AccessibilityRoleType-CALENDAR_PICKER = 8-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -198,13 +198,13 @@ Calendar.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-CALENDAR = 9--><!--Device-AccessibilityRoleType-CALENDAR = 9-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -218,13 +218,13 @@ Canvas component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-CANVAS = 10--><!--Device-AccessibilityRoleType-CANVAS = 10-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -238,13 +238,13 @@ Gradient object.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-CANVAS_GRADIENT = 11--><!--Device-AccessibilityRoleType-CANVAS_GRADIENT = 11-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -258,13 +258,13 @@ Pattern for image filling based on a specified source image and repetition mode.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-CANVAS_PATTERN = 12--><!--Device-AccessibilityRoleType-CANVAS_PATTERN = 12-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -278,13 +278,13 @@ Check box component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-CHECKBOX = 13--><!--Device-AccessibilityRoleType-CHECKBOX = 13-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -298,13 +298,13 @@ Check box group.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-CHECKBOX_GROUP = 14--><!--Device-AccessibilityRoleType-CHECKBOX_GROUP = 14-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -318,13 +318,13 @@ Component for drawing circles.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-CIRCLE = 15--><!--Device-AccessibilityRoleType-CIRCLE = 15-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -338,13 +338,13 @@ Vertical layout of child components with horizontal dividers.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-COLUMN_SPLIT = 16--><!--Device-AccessibilityRoleType-COLUMN_SPLIT = 16-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -358,13 +358,13 @@ Container that lays out child components vertically.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-COLUMN = 17--><!--Device-AccessibilityRoleType-COLUMN = 17-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -378,13 +378,13 @@ CANVAS_RENDERING_CONTEXT_2D = 18
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-CANVAS_RENDERING_CONTEXT_2D = 18--><!--Device-AccessibilityRoleType-CANVAS_RENDERING_CONTEXT_2D = 18-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -398,13 +398,13 @@ Chart component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-CHART = 19--><!--Device-AccessibilityRoleType-CHART = 19-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -418,13 +418,13 @@ Counter component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-COUNTER = 20--><!--Device-AccessibilityRoleType-COUNTER = 20-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -438,13 +438,13 @@ Modal container.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-CONTAINER_MODAL = 21--><!--Device-AccessibilityRoleType-CONTAINER_MODAL = 21-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -458,13 +458,13 @@ Data panel component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-DATA_PANEL = 22--><!--Device-AccessibilityRoleType-DATA_PANEL = 22-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -478,13 +478,13 @@ Date picker.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-DATE_PICKER = 23--><!--Device-AccessibilityRoleType-DATE_PICKER = 23-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -498,13 +498,13 @@ Dialog box.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-DIALOG = 24--><!--Device-AccessibilityRoleType-DIALOG = 24-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -518,13 +518,13 @@ Divider component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-DIVIDER = 25--><!--Device-AccessibilityRoleType-DIVIDER = 25-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -538,13 +538,13 @@ Drag bar.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-DRAG_BAR = 26--><!--Device-AccessibilityRoleType-DRAG_BAR = 26-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -558,13 +558,13 @@ Container component for special effects.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-EFFECT_COMPONENT = 27--><!--Device-AccessibilityRoleType-EFFECT_COMPONENT = 27-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -578,13 +578,13 @@ Ellipse drawing component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-ELLIPSE = 28--><!--Device-AccessibilityRoleType-ELLIPSE = 28-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -598,13 +598,13 @@ Container that allows for flexible layout of child components.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-FLEX = 29--><!--Device-AccessibilityRoleType-FLEX = 29-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -618,13 +618,13 @@ Child component of a waterfall layout container.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-FLOW_ITEM = 30--><!--Device-AccessibilityRoleType-FLOW_ITEM = 30-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -638,13 +638,13 @@ Widget component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-FORM_COMPONENT = 31--><!--Device-AccessibilityRoleType-FORM_COMPONENT = 31-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -658,13 +658,13 @@ Static widget interaction component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-FORM_LINK = 32--><!--Device-AccessibilityRoleType-FORM_LINK = 32-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -678,13 +678,13 @@ Gauge component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-GAUGE = 33--><!--Device-AccessibilityRoleType-GAUGE = 33-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -698,13 +698,13 @@ Grid container.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-GRID = 34--><!--Device-AccessibilityRoleType-GRID = 34-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -718,13 +718,13 @@ Grid column component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-GRID_COL = 35--><!--Device-AccessibilityRoleType-GRID_COL = 35-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -738,13 +738,13 @@ Grid container that lays out child components vertically.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-GRID_CONTAINER = 36--><!--Device-AccessibilityRoleType-GRID_CONTAINER = 36-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -758,13 +758,13 @@ Single-item container within a grid container.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-GRID_ITEM = 37--><!--Device-AccessibilityRoleType-GRID_ITEM = 37-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -778,13 +778,13 @@ Grid row component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-GRID_ROW = 38--><!--Device-AccessibilityRoleType-GRID_ROW = 38-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -798,13 +798,13 @@ Hyperlink component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-HYPERLINK = 39--><!--Device-AccessibilityRoleType-HYPERLINK = 39-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -818,13 +818,13 @@ Image component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-IMAGE = 40--><!--Device-AccessibilityRoleType-IMAGE = 40-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -838,13 +838,13 @@ Frame animation component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-IMAGE_ANIMATOR = 41--><!--Device-AccessibilityRoleType-IMAGE_ANIMATOR = 41-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -858,13 +858,13 @@ Pixel data for canvas rendering.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-IMAGE_BITMAP = 42--><!--Device-AccessibilityRoleType-IMAGE_BITMAP = 42-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -878,13 +878,13 @@ Pixel data for canvas rendering.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-IMAGE_DATA = 43--><!--Device-AccessibilityRoleType-IMAGE_DATA = 43-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -898,13 +898,13 @@ Component used to display inline images.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-IMAGE_SPAN = 44--><!--Device-AccessibilityRoleType-IMAGE_SPAN = 44-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -918,13 +918,13 @@ Label.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-LABEL = 45--><!--Device-AccessibilityRoleType-LABEL = 45-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -938,13 +938,13 @@ Line.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-LINE = 46--><!--Device-AccessibilityRoleType-LINE = 46-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -958,13 +958,13 @@ List.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-LIST = 47--><!--Device-AccessibilityRoleType-LIST = 47-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -978,13 +978,13 @@ Specific item in a list.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-LIST_ITEM = 48--><!--Device-AccessibilityRoleType-LIST_ITEM = 48-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -998,13 +998,13 @@ List item group.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-LIST_ITEM_GROUP = 49--><!--Device-AccessibilityRoleType-LIST_ITEM_GROUP = 49-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1018,13 +1018,13 @@ Component for display loading animations.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-LOADING_PROGRESS = 50--><!--Device-AccessibilityRoleType-LOADING_PROGRESS = 50-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1038,13 +1038,13 @@ Marquee component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-MARQUEE = 51--><!--Device-AccessibilityRoleType-MARQUEE = 51-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1058,13 +1058,13 @@ MATRIX2D = 52
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-MATRIX2D = 52--><!--Device-AccessibilityRoleType-MATRIX2D = 52-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1078,13 +1078,13 @@ Menu.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-MENU = 53--><!--Device-AccessibilityRoleType-MENU = 53-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1098,13 +1098,13 @@ Menu item.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-MENU_ITEM = 54--><!--Device-AccessibilityRoleType-MENU_ITEM = 54-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1118,13 +1118,13 @@ Menu item group.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-MENU_ITEM_GROUP = 55--><!--Device-AccessibilityRoleType-MENU_ITEM_GROUP = 55-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1138,13 +1138,13 @@ Content area of the **Navigation** component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-NAV_DESTINATION = 56--><!--Device-AccessibilityRoleType-NAV_DESTINATION = 56-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1158,13 +1158,13 @@ navrouter component type
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-NAV_ROUTER = 57--><!--Device-AccessibilityRoleType-NAV_ROUTER = 57-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1178,13 +1178,13 @@ Root view container for navigation routing.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-NAVIGATION = 58--><!--Device-AccessibilityRoleType-NAVIGATION = 58-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1198,13 +1198,13 @@ Navigation bar.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-NAVIGATION_BAR = 59--><!--Device-AccessibilityRoleType-NAVIGATION_BAR = 59-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1218,13 +1218,13 @@ Navigation menu.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-NAVIGATION_MENU = 60--><!--Device-AccessibilityRoleType-NAVIGATION_MENU = 60-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1238,13 +1238,13 @@ Navigation container component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-NAVIGATOR = 61--><!--Device-AccessibilityRoleType-NAVIGATOR = 61-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1258,13 +1258,13 @@ Canvas for custom drawing of graphics.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-OFFSCREEN_CANVAS = 62--><!--Device-AccessibilityRoleType-OFFSCREEN_CANVAS = 62-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1278,13 +1278,13 @@ OFFSCREEN_CANVAS_RENDERING_CONTEXT2D = 63
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-OFFSCREEN_CANVAS_RENDERING_CONTEXT2D = 63--><!--Device-AccessibilityRoleType-OFFSCREEN_CANVAS_RENDERING_CONTEXT2D = 63-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1298,13 +1298,13 @@ option component type
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-OPTION = 64--><!--Device-AccessibilityRoleType-OPTION = 64-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1318,13 +1318,13 @@ Slidable panel.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-PANEL = 65--><!--Device-AccessibilityRoleType-PANEL = 65-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1338,13 +1338,13 @@ paper page component type
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-PAPER_PAGE = 66--><!--Device-AccessibilityRoleType-PAPER_PAGE = 66-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1358,13 +1358,13 @@ Path drawing component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-PATH = 67--><!--Device-AccessibilityRoleType-PATH = 67-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1378,13 +1378,13 @@ Path object.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-PATH2D = 68--><!--Device-AccessibilityRoleType-PATH2D = 68-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1398,13 +1398,13 @@ Pattern lock component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-PATTERN_LOCK = 69--><!--Device-AccessibilityRoleType-PATTERN_LOCK = 69-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1418,13 +1418,13 @@ Picker.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-PICKER = 70--><!--Device-AccessibilityRoleType-PICKER = 70-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1438,13 +1438,13 @@ Picker view.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-PICKER_VIEW = 71--><!--Device-AccessibilityRoleType-PICKER_VIEW = 71-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1458,13 +1458,13 @@ Plugin component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-PLUGIN_COMPONENT = 72--><!--Device-AccessibilityRoleType-PLUGIN_COMPONENT = 72-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1478,13 +1478,13 @@ Component used to draw a polygon.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-POLYGON = 73--><!--Device-AccessibilityRoleType-POLYGON = 73-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1498,13 +1498,13 @@ Component used to draw a polyline.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-POLYLINE = 74--><!--Device-AccessibilityRoleType-POLYLINE = 74-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1518,13 +1518,13 @@ Popup with a specific style.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-POPUP = 75--><!--Device-AccessibilityRoleType-POPUP = 75-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1538,13 +1538,13 @@ progress component type
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-PROGRESS = 76--><!--Device-AccessibilityRoleType-PROGRESS = 76-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1558,13 +1558,13 @@ QR code.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-QRCODE = 77--><!--Device-AccessibilityRoleType-QRCODE = 77-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1578,13 +1578,13 @@ Radio button.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-RADIO = 78--><!--Device-AccessibilityRoleType-RADIO = 78-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1598,13 +1598,13 @@ Component for selecting a rating within a given range.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-RATING = 79--><!--Device-AccessibilityRoleType-RATING = 79-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1618,13 +1618,13 @@ Component used to draw a rectangle.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-RECT = 80--><!--Device-AccessibilityRoleType-RECT = 80-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1638,13 +1638,13 @@ Pull-to-refresh container component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-REFRESH = 81--><!--Device-AccessibilityRoleType-REFRESH = 81-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1658,13 +1658,13 @@ Relative layout component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-RELATIVE_CONTAINER = 82--><!--Device-AccessibilityRoleType-RELATIVE_CONTAINER = 82-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1678,13 +1678,13 @@ Remote control window component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-REMOTE_WINDOW = 83--><!--Device-AccessibilityRoleType-REMOTE_WINDOW = 83-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1698,13 +1698,13 @@ Component that supports rich text editing and interactive text editing.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-RICH_EDITOR = 84--><!--Device-AccessibilityRoleType-RICH_EDITOR = 84-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1718,13 +1718,13 @@ Rich text component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-RICH_TEXT = 85--><!--Device-AccessibilityRoleType-RICH_TEXT = 85-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1738,13 +1738,13 @@ Pagination component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-ROLE_PAGER = 86--><!--Device-AccessibilityRoleType-ROLE_PAGER = 86-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1758,13 +1758,13 @@ Container that lays out child components horizontally.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-ROW = 87--><!--Device-AccessibilityRoleType-ROW = 87-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1778,13 +1778,13 @@ Horizontal layout of child components with vertical dividers.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-ROW_SPLIT = 88--><!--Device-AccessibilityRoleType-ROW_SPLIT = 88-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1798,13 +1798,13 @@ Scrollable container component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-SCROLL = 89--><!--Device-AccessibilityRoleType-SCROLL = 89-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1818,13 +1818,13 @@ Scrollbar.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-SCROLL_BAR = 90--><!--Device-AccessibilityRoleType-SCROLL_BAR = 90-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1838,13 +1838,13 @@ Search box component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-SEARCH = 91--><!--Device-AccessibilityRoleType-SEARCH = 91-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1858,13 +1858,13 @@ Search box.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-SEARCH_FIELD = 92--><!--Device-AccessibilityRoleType-SEARCH_FIELD = 92-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1878,13 +1878,13 @@ Drop-down list component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-SELECT = 93--><!--Device-AccessibilityRoleType-SELECT = 93-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1898,13 +1898,13 @@ Parent component of the drawing components.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-SHAPE = 94--><!--Device-AccessibilityRoleType-SHAPE = 94-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1918,13 +1918,13 @@ Sidebar container that can show and hide the sidebar.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-SIDEBAR_CONTAINER = 95--><!--Device-AccessibilityRoleType-SIDEBAR_CONTAINER = 95-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1938,13 +1938,13 @@ slider component type
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-SLIDER = 96--><!--Device-AccessibilityRoleType-SLIDER = 96-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1958,13 +1958,13 @@ Component used to display inline text.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-SPAN = 97--><!--Device-AccessibilityRoleType-SPAN = 97-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1978,13 +1978,13 @@ Stack container.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-STACK = 98--><!--Device-AccessibilityRoleType-STACK = 98-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1998,13 +1998,13 @@ Stepper component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-STEPPER = 99--><!--Device-AccessibilityRoleType-STEPPER = 99-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2018,13 +2018,13 @@ Page child component of the stepper component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-STEPPER_ITEM = 100--><!--Device-AccessibilityRoleType-STEPPER_ITEM = 100-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2038,13 +2038,13 @@ Swiper view container.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-SWIPER = 101--><!--Device-AccessibilityRoleType-SWIPER = 101-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2058,13 +2058,13 @@ Navigation indicator for the **Swiper** component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-SWIPER_INDICATOR = 102--><!--Device-AccessibilityRoleType-SWIPER_INDICATOR = 102-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2078,13 +2078,13 @@ Switch.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-SWITCH = 103--><!--Device-AccessibilityRoleType-SWITCH = 103-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2098,13 +2098,13 @@ Component for displaying a symbol glyph.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-SYMBOL_GLYPH = 104--><!--Device-AccessibilityRoleType-SYMBOL_GLYPH = 104-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2118,13 +2118,13 @@ Content view for a tab in the **Tabs** component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-TAB_CONTENT = 105--><!--Device-AccessibilityRoleType-TAB_CONTENT = 105-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2138,13 +2138,13 @@ Tab bar.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-TAB_BAR = 106--><!--Device-AccessibilityRoleType-TAB_BAR = 106-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2158,13 +2158,13 @@ Container that allows users to switch between content views through tabs.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-TABS = 107--><!--Device-AccessibilityRoleType-TABS = 107-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2178,13 +2178,13 @@ Text.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-TEXT = 108--><!--Device-AccessibilityRoleType-TEXT = 108-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2198,13 +2198,13 @@ Text clock component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-TEXT_CLOCK = 109--><!--Device-AccessibilityRoleType-TEXT_CLOCK = 109-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2218,13 +2218,13 @@ text entry component type
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-TEXT_ENTRY = 110--><!--Device-AccessibilityRoleType-TEXT_ENTRY = 110-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2238,13 +2238,13 @@ Text box component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-TEXT_INPUT = 111--><!--Device-AccessibilityRoleType-TEXT_INPUT = 111-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2258,13 +2258,13 @@ Text picker.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-TEXT_PICKER = 112--><!--Device-AccessibilityRoleType-TEXT_PICKER = 112-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2278,13 +2278,13 @@ Component that displays timing information and is controlled in text format.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-TEXT_TIMER = 113--><!--Device-AccessibilityRoleType-TEXT_TIMER = 113-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2298,13 +2298,13 @@ Text area component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-TEXT_AREA = 114--><!--Device-AccessibilityRoleType-TEXT_AREA = 114-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2318,13 +2318,13 @@ Text box.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-TEXT_FIELD = 115--><!--Device-AccessibilityRoleType-TEXT_FIELD = 115-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2338,13 +2338,13 @@ Time picker.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-TIME_PICKER = 116--><!--Device-AccessibilityRoleType-TIME_PICKER = 116-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2358,13 +2358,13 @@ Title bar.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-TITLE_BAR = 117--><!--Device-AccessibilityRoleType-TITLE_BAR = 117-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2378,13 +2378,13 @@ toggler component type
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-TOGGLER = 118--><!--Device-AccessibilityRoleType-TOGGLER = 118-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2398,13 +2398,13 @@ UI extension component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-UI_EXTENSION_COMPONENT = 119--><!--Device-AccessibilityRoleType-UI_EXTENSION_COMPONENT = 119-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2418,13 +2418,13 @@ Component for playing video files and controlling playback.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-VIDEO = 120--><!--Device-AccessibilityRoleType-VIDEO = 120-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2438,13 +2438,13 @@ Waterfall layout container.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-WATER_FLOW = 121--><!--Device-AccessibilityRoleType-WATER_FLOW = 121-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2458,13 +2458,13 @@ Component for loading web pages.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-WEB = 122--><!--Device-AccessibilityRoleType-WEB = 122-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2478,13 +2478,13 @@ Custom rendering component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-AccessibilityRoleType-XCOMPONENT = 123--><!--Device-AccessibilityRoleType-XCOMPONENT = 123-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2498,13 +2498,12 @@ Null.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
-<!--Device-AccessibilityRoleType-ROLE_NONE = 124--><!--Device-AccessibilityRoleType-ROLE_NONE = 124-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -9,7 +9,7 @@ Describes the options of the path.
 
 **Since:** 18
 
-<!--Device-unnamed-declare interface PathOptions--><!--Device-unnamed-declare interface PathOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,11 @@ Command string for drawing the path. If the value is invalid or the default valu
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-PathOptions-commands?: ResourceStr--><!--Device-PathOptions-commands?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,11 +50,11 @@ Height of the rectangle where the path is located. If the value is invalid or th
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-PathOptions-height?: Length--><!--Device-PathOptions-height?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,11 +70,10 @@ Width of the rectangle where the path is located. If the value is invalid or the
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-PathOptions-width?: Length--><!--Device-PathOptions-width?: Length-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

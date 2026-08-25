@@ -4,9 +4,7 @@ The TextChangeOptions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare interface TextChangeOptions--><!--Device-unnamed-export declare interface TextChangeOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +20,9 @@ The content before the change.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TextChangeOptions-oldContent: string--><!--Device-TextChangeOptions-oldContent: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,11 +38,9 @@ The info of PreviewText before the change.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TextChangeOptions-oldPreviewText: PreviewText--><!--Device-TextChangeOptions-oldPreviewText: PreviewText-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,11 +56,9 @@ The selected area after the change.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TextChangeOptions-rangeAfter: TextRange--><!--Device-TextChangeOptions-rangeAfter: TextRange-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,11 +74,8 @@ The selected area before the change.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TextChangeOptions-rangeBefore: TextRange--><!--Device-TextChangeOptions-rangeBefore: TextRange-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,7 +4,7 @@ Permission query information.
 
 **Since:** 26.0.0
 
-<!--Device-abilityToolAccessCtrl-interface PermissionQuery--><!--Device-abilityToolAccessCtrl-interface PermissionQuery-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -18,16 +18,16 @@ Permission query information.
 ## callerTokenId
 
 ```TypeScript
-callerTokenId?: long
+callerTokenId?: number
 ```
 
 Caller token ID. Value range: (-∞,+∞).
 
-**Type:** long
+**Type:** number
 
 **Since:** 26.0.0
 
-<!--Device-PermissionQuery-callerTokenId?: long--><!--Device-PermissionQuery-callerTokenId?: long-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -45,7 +45,7 @@ Domain ID.
 
 **Since:** 26.0.0
 
-<!--Device-PermissionQuery-domainId?: string--><!--Device-PermissionQuery-domainId?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -63,7 +63,7 @@ Whether a ticket is required.
 
 **Since:** 26.0.0
 
-<!--Device-PermissionQuery-needTicket?: boolean--><!--Device-PermissionQuery-needTicket?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -81,7 +81,7 @@ Operation information list.
 
 **Since:** 26.0.0
 
-<!--Device-PermissionQuery-operationInfo: OperationInfo[]--><!--Device-PermissionQuery-operationInfo: OperationInfo[]-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -99,7 +99,7 @@ Remote device information.
 
 **Since:** 26.1.0
 
-<!--Device-PermissionQuery-remoteInfo?: RemoteInfo--><!--Device-PermissionQuery-remoteInfo?: RemoteInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -108,18 +108,17 @@ Remote device information.
 ## ticketExpireTimeMs
 
 ```TypeScript
-ticketExpireTimeMs?: long
+ticketExpireTimeMs?: number
 ```
 
 Ticket expiration time in milliseconds. Unit: milliseconds. The value must be greater than 0. Value constraint: Greater than 0.
 
-**Type:** long
+**Type:** number
 
 **Since:** 26.0.0
 
-<!--Device-PermissionQuery-ticketExpireTimeMs?: long--><!--Device-PermissionQuery-ticketExpireTimeMs?: long-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
-

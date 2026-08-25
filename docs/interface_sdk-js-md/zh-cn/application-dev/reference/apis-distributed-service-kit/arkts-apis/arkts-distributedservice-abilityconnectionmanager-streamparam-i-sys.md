@@ -2,9 +2,9 @@
 
 Streaming configuration parameters.@interface StreamParam
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-abilityConnectionManager-interface StreamParam--><!--Device-abilityConnectionManager-interface StreamParam-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -24,13 +24,13 @@ bitrate?: int
 
 视频码率，默认80(kbps)。仅在发送端有效。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StreamParam-bitrate?: int--><!--Device-StreamParam-bitrate?: int-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -46,11 +46,11 @@ colorSpaceConversionTarget?: colorSpaceManager.ColorSpace
 
 **类型：** colorSpaceManager.ColorSpace
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StreamParam-colorSpaceConversionTarget?: colorSpaceManager.ColorSpace--><!--Device-StreamParam-colorSpaceConversionTarget?: colorSpaceManager.ColorSpace-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -66,11 +66,11 @@ name: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StreamParam-name: string--><!--Device-StreamParam-name: string-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -86,13 +86,12 @@ role: StreamRole
 
 **类型：** [StreamRole](arkts-distributedservice-abilityconnectionmanager-streamrole-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StreamParam-role: StreamRole--><!--Device-StreamParam-role: StreamRole-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **系统接口：** 此接口为系统接口。
-

@@ -4,7 +4,7 @@ Represents a configuration object for precompiling JavaScript in the **Web** com
 
 **Since:** 12
 
-<!--Device-webview-interface CacheOptions--><!--Device-webview-interface CacheOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -26,7 +26,6 @@ Response headers returned by the server when requesting this JavaScript file. ET
 
 **Since:** 12
 
-<!--Device-CacheOptions-responseHeaders: Array<WebHeader>--><!--Device-CacheOptions-responseHeaders: Array<WebHeader>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

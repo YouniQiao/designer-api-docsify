@@ -2,9 +2,9 @@
 
 Describes the configuration for file type filtering.
 
-**Since:** 26.0.0
+**Since:** 19
 
-<!--Device-photoAccessHelper-class MimeTypeFilter--><!--Device-photoAccessHelper-class MimeTypeFilter-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -24,11 +24,10 @@ Types of media files that PhotoPicker allows users to filter by. The maximum arr
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 26.0.0
+**Since:** 19
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
 
-<!--Device-MimeTypeFilter-mimeTypeArray: Array<string>--><!--Device-MimeTypeFilter-mimeTypeArray: Array<string>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

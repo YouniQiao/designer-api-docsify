@@ -4,7 +4,7 @@ Defines the controller of the SelectionContainer component.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export declare class SelectionContainerController--><!--Device-unnamed-export declare class SelectionContainerController-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,11 +24,11 @@ Clears the current text selection of the SelectionContainer, and closes the sele
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-SelectionContainerController-clearTextSelection(): void--><!--Device-SelectionContainerController-clearTextSelection(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,11 +42,10 @@ Closes the custom or default selection menu of the SelectionContainer.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-SelectionContainerController-closeSelectionMenu(): void--><!--Device-SelectionContainerController-closeSelectionMenu(): void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

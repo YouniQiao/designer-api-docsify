@@ -2,9 +2,9 @@
 
 Provide methods for adding long or short vibration events and generate VibratorPattern objects.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-vibrator-class VibratorPatternBuilder--><!--Device-vibrator-class VibratorPatternBuilder-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -16,37 +16,43 @@ import { vibrator } from '@kit.SensorServiceKit';
 
 ## addContinuousEvent
 
+ArkTS-Dyn:
+```TypeScript
+addContinuousEvent(time: number, duration: number, options?: ContinuousParam): VibratorPatternBuilder
+```
+
+ArkTS-Sta:
 ```TypeScript
 addContinuousEvent(time: int, duration: int, options?: ContinuousParam): VibratorPatternBuilder
 ```
 
 Adds a long vibration event as a **VibratorPattern** object.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-VibratorPatternBuilder-addContinuousEvent(time: int, duration: int, options?: ContinuousParam): VibratorPatternBuilder--><!--Device-VibratorPatternBuilder-addContinuousEvent(time: int, duration: int, options?: ContinuousParam): VibratorPatternBuilder-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| time | int | Yes | Start time of the long vibration event, in ms. The value range is [0, 1800000]. |
-| duration | int | Yes | Duration of the long vibration event, in ms. The value range is (0,5000]. |
-| options | [ContinuousParam](arkts-sensorservice-vibrator-continuousparam-i.md) | No | Optional parameters. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| time | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| duration | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| options | [ContinuousParam](arkts-sensorservice-vibrator-continuousparam-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) | VibratorPatternBuilder** object representing a long vibration event. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -86,36 +92,42 @@ try {
 
 ## addTransientEvent
 
+ArkTS-Dyn:
+```TypeScript
+addTransientEvent(time: number, options?: TransientParam): VibratorPatternBuilder
+```
+
+ArkTS-Sta:
 ```TypeScript
 addTransientEvent(time: int, options?: TransientParam): VibratorPatternBuilder
 ```
 
 Adds a short vibration event as a **VibratorPattern** object.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-VibratorPatternBuilder-addTransientEvent(time: int, options?: TransientParam): VibratorPatternBuilder--><!--Device-VibratorPatternBuilder-addTransientEvent(time: int, options?: TransientParam): VibratorPatternBuilder-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| time | int | Yes | Start time of the short vibration event, in ms. The value range is [0, 1800000]. |
-| options | [TransientParam](arkts-sensorservice-vibrator-transientparam-i.md) | No | Optional parameters. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| time | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| options | [TransientParam](arkts-sensorservice-vibrator-transientparam-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) | VibratorPatternBuilder** object representing a short vibration event. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -147,17 +159,17 @@ build(): VibratorPattern
 
 Constructor used to create a **VibratorPattern** object, which determines the vibration sequence of short or long events.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-VibratorPatternBuilder-build(): VibratorPattern--><!--Device-VibratorPatternBuilder-build(): VibratorPattern-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md) | VibratorPattern** object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md) |
 
 **Examples**
 
@@ -197,4 +209,3 @@ try {
   console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
 }
 ```
-

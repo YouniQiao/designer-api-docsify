@@ -8,7 +8,7 @@ For details about how to use environment parameters, see [Environment: Device En
 
 **Since:** 7
 
-<!--Device-unnamed-declare class Environment--><!--Device-unnamed-declare class Environment-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,7 +27,7 @@ Constructor.
 
 **Since:** 7
 
-<!--Device-Environment-constructor()--><!--Device-Environment-constructor()-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -39,4 +39,3 @@ Constructor.
 let para: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(para);
 ```
-

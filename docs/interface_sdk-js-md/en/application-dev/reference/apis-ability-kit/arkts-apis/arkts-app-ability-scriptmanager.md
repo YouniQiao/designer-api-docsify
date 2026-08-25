@@ -4,9 +4,9 @@ Namespace for managing and organizing script information.@namespace scriptManage
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-unnamed-declare namespace scriptManager--><!--Device-unnamed-declare namespace scriptManager-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -20,14 +20,13 @@ import { scriptManager } from '@kit.AbilityKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [completeArkTSScriptInApp](arkts-ability-scriptmanager-completearktsscriptinapp-f.md) | complete arkTS script for in-app skills. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [completeArkTSScriptInApp](arkts-ability-scriptmanager-completearktsscriptinapp-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ArkTSScriptInfo](arkts-ability-scriptmanager-arktsscriptinfo-i.md) | arkTS script info. |
-| [ExecuteResult](arkts-ability-scriptmanager-executeresult-i.md) | Result of arkTS script execution. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArkTSScriptInfo](arkts-ability-scriptmanager-arktsscriptinfo-i.md) |
+| [ExecuteResult](arkts-ability-scriptmanager-executeresult-i.md) |

@@ -12,7 +12,6 @@ import { fileExtensionInfo } from '@kit.CoreFileKit';
 
 ### Namespaces
 
-| Name | Description |
-| --- | --- |
-| [fileExtensionInfo](arkts-corefile-fileextensioninfo-n.md) | The **fileExtensionInfo** module defines attributes in **RootInfo** and **FileInfo** of the user file access and management module. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [fileExtensionInfo](arkts-corefile-fileextensioninfo-n.md) |

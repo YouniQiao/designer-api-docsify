@@ -2,9 +2,9 @@
 
 屏上内容。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-onScreen-export interface PageContent--><!--Device-onScreen-export interface PageContent-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -26,9 +26,9 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-PageContent-bundleName: string--><!--Device-PageContent-bundleName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -44,9 +44,9 @@ content?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-PageContent-content?: string--><!--Device-PageContent-content?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -62,9 +62,9 @@ pageLink?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-PageContent-pageLink?: string--><!--Device-PageContent-pageLink?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -80,9 +80,9 @@ paragraphs?: Paragraph[]
 
 **类型：** Paragraph[]
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-PageContent-paragraphs?: Paragraph[]--><!--Device-PageContent-paragraphs?: Paragraph[]-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -98,9 +98,9 @@ scenario?: Scenario
 
 **类型：** [Scenario](arkts-multimodalawareness-onscreen-scenario-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-PageContent-scenario?: Scenario--><!--Device-PageContent-scenario?: Scenario-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -114,11 +114,11 @@ sessionId: long
 
 此次调用该接口的session ID，标识当次调用动作。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-PageContent-sessionId: long--><!--Device-PageContent-sessionId: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -134,9 +134,9 @@ title?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-PageContent-title?: string--><!--Device-PageContent-title?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -150,13 +150,12 @@ windowId: int
 
 获取到的屏上内容的窗口ID
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-PageContent-windowId: int--><!--Device-PageContent-windowId: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
-

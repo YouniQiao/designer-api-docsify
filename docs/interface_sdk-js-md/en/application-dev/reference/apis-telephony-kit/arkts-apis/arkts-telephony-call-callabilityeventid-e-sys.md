@@ -2,9 +2,9 @@
 
 Enumerates call ability event IDs.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-call-export enum CallAbilityEventId--><!--Device-call-export enum CallAbilityEventId-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -18,9 +18,9 @@ EVENT_DIAL_NO_CARRIER = 1
 
 No available carrier during dialing.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-CallAbilityEventId-EVENT_DIAL_NO_CARRIER = 1--><!--Device-CallAbilityEventId-EVENT_DIAL_NO_CARRIER = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -34,9 +34,9 @@ EVENT_INVALID_FDN_NUMBER = 2
 
 Invalid FDN.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-CallAbilityEventId-EVENT_INVALID_FDN_NUMBER = 2--><!--Device-CallAbilityEventId-EVENT_INVALID_FDN_NUMBER = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -50,9 +50,9 @@ EVENT_HOLD_CALL_FAILED = 3
 
 Failed to place the call on hold.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CallAbilityEventId-EVENT_HOLD_CALL_FAILED = 3--><!--Device-CallAbilityEventId-EVENT_HOLD_CALL_FAILED = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -66,9 +66,9 @@ EVENT_SWAP_CALL_FAILED = 4
 
 Failed to place the current call on hold and answer the waiting call.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CallAbilityEventId-EVENT_SWAP_CALL_FAILED = 4--><!--Device-CallAbilityEventId-EVENT_SWAP_CALL_FAILED = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -82,9 +82,9 @@ EVENT_COMBINE_CALL_FAILED = 5
 
 Failed to combine calls.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CallAbilityEventId-EVENT_COMBINE_CALL_FAILED = 5--><!--Device-CallAbilityEventId-EVENT_COMBINE_CALL_FAILED = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -98,9 +98,9 @@ EVENT_SPLIT_CALL_FAILED = 6
 
 Failed to split the call.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CallAbilityEventId-EVENT_SPLIT_CALL_FAILED = 6--><!--Device-CallAbilityEventId-EVENT_SPLIT_CALL_FAILED = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -114,9 +114,9 @@ EVENT_SHOW_FULL_SCREEN = 7
 
 Displaying the call UI in full screen.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-CallAbilityEventId-EVENT_SHOW_FULL_SCREEN = 7--><!--Device-CallAbilityEventId-EVENT_SHOW_FULL_SCREEN = 7-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -130,11 +130,10 @@ EVENT_SHOW_FLOAT_WINDOW = 8
 
 Displaying the call UI in a floating widow.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-CallAbilityEventId-EVENT_SHOW_FLOAT_WINDOW = 8--><!--Device-CallAbilityEventId-EVENT_SHOW_FLOAT_WINDOW = 8-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
-

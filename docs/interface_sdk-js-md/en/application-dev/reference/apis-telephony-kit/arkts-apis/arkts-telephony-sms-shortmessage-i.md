@@ -2,9 +2,9 @@
 
 Defines an SMS message instance.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-sms-export interface ShortMessage--><!--Device-sms-export interface ShortMessage-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -26,9 +26,9 @@ Whether the received SMS contains **TP-Reply-Path**. The default value is **fals
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-ShortMessage-hasReplyPath: boolean--><!--Device-ShortMessage-hasReplyPath: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -44,9 +44,9 @@ For details, see [3GPP TS 23.040 9.2.3.9](https://www.3gpp.org/ftp/specs/archive
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-ShortMessage-isReplaceMessage: boolean--><!--Device-ShortMessage-isReplaceMessage: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -62,9 +62,9 @@ SMS delivery report: a message sent from the SMSC to show the current status of 
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-ShortMessage-isSmsStatusReportMessage: boolean--><!--Device-ShortMessage-isSmsStatusReportMessage: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -78,9 +78,9 @@ Enumerates SMS message types.
 
 **Type:** [ShortMessageClass](arkts-telephony-sms-shortmessageclass-e.md)
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-ShortMessage-messageClass: ShortMessageClass--><!--Device-ShortMessage-messageClass: ShortMessageClass-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -92,11 +92,11 @@ pdu: Array<int>
 
 PDU in the SMS message.
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-ShortMessage-pdu: Array<int>--><!--Device-ShortMessage-pdu: Array<int>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -108,11 +108,11 @@ protocolId: int
 
 Protocol identifier used for delivering the SMS message.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-ShortMessage-protocolId: int--><!--Device-ShortMessage-protocolId: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -126,9 +126,9 @@ SMSC address.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-ShortMessage-scAddress: string--><!--Device-ShortMessage-scAddress: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -140,11 +140,11 @@ scTimestamp: long
 
 SMSC timestamp.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-ShortMessage-scTimestamp: long--><!--Device-ShortMessage-scTimestamp: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -156,11 +156,11 @@ status: int
 
 SMS message status sent by the SMSC in the **SMS-STATUS-REPORT** message.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-ShortMessage-status: int--><!--Device-ShortMessage-status: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -174,9 +174,9 @@ SMS message body.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-ShortMessage-visibleMessageBody: string--><!--Device-ShortMessage-visibleMessageBody: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -190,9 +190,8 @@ Sender address.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-ShortMessage-visibleRawAddress: string--><!--Device-ShortMessage-visibleRawAddress: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
-

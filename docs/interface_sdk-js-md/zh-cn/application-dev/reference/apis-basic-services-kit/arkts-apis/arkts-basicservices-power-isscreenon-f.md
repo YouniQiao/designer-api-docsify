@@ -16,19 +16,19 @@ function isScreenOn(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [isActive](arkts-basicservices-power-isactive-f.md)
-
-<!--Device-power-function isScreenOn(callback: AsyncCallback<boolean>): void--><!--Device-power-function isScreenOn(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当检测成功，err为undefined，data为获取到的亮灭屏状态，返回true表示亮屏，返回false表示灭屏； 否则err为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
 **示例**
 
@@ -63,21 +63,20 @@ function isScreenOn(): Promise<boolean>
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [isActive](arkts-basicservices-power-isactive-f.md)
-
-<!--Device-power-function isScreenOn(): Promise<boolean>--><!--Device-power-function isScreenOn(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示亮屏；返回false表示灭屏。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **示例**
 
 参见 [isScreenOn](#isscreenon)
-

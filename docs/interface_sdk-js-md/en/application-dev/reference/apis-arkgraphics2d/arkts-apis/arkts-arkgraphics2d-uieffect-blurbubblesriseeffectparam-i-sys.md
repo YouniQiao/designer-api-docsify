@@ -4,7 +4,7 @@ The parameters of blur bubbles rise effect.
 
 **Since:** 26.0.0
 
-<!--Device-uiEffect-interface BlurBubblesRiseEffectParam--><!--Device-uiEffect-interface BlurBubblesRiseEffectParam-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -19,18 +19,18 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 ## blurIntensity
 
 ```TypeScript
-blurIntensity: double
+blurIntensity: number
 ```
 
 The Gaussian blur intensity of the blur bubbles rise effect. The value range is [0, 1], and values outside the range will be clamped during implementation. 0 means no blur, and 1 represents the maximum blur level.
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-BlurBubblesRiseEffectParam-blurIntensity: double--><!--Device-BlurBubblesRiseEffectParam-blurIntensity: double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -48,9 +48,9 @@ The mask image for the blur bubbles rise effect, controlling the blur bubbles ar
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-BlurBubblesRiseEffectParam-maskImage: image.PixelMap--><!--Device-BlurBubblesRiseEffectParam-maskImage: image.PixelMap-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -59,18 +59,18 @@ The mask image for the blur bubbles rise effect, controlling the blur bubbles ar
 ## mixStrength
 
 ```TypeScript
-mixStrength: double
+mixStrength: number
 ```
 
 The mixing strength between the original and blurred images. The value range is [0, 1], and values outside the range will be clamped during implementation. 0 corresponds to the original image, and 1 corresponds to the blurred image.
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-BlurBubblesRiseEffectParam-mixStrength: double--><!--Device-BlurBubblesRiseEffectParam-mixStrength: double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -79,20 +79,19 @@ The mixing strength between the original and blurred images. The value range is 
 ## progress
 
 ```TypeScript
-progress: double
+progress: number
 ```
 
 The animation progress of the blur bubbles rise effect. The value range is [0, 1], and values outside the range will be clamped during implementation. 0 corresponds to the start of the animation, and 1 corresponds to the end of the animation.
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-BlurBubblesRiseEffectParam-progress: double--><!--Device-BlurBubblesRiseEffectParam-progress: double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
-

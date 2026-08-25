@@ -19,32 +19,36 @@ Scroll(scroller?: Scroller)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ScrollInterface-(scroller?: Scroller): ScrollAttribute--><!--Device-ScrollInterface-(scroller?: Scroller): ScrollAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| scroller | [Scroller](arkts-arkui-scroller-c.md) | 否 |  |
+| 参数名 | [类型](#类型) | 必填 |
+| --- | --- | --- |
+| scroller | [Scroller](arkts-arkui-scroller-c.md) | 否 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
+| 名称 |
+| --- |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
+| 名称 |
+| --- |
+| [OnScrollEdgeCallback](arkts-arkui-onscrolledgecallback-t.md) |
+| [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) |
+| [ScrollOnDidZoomCallback](arkts-arkui-scrollondidzoomcallback-t.md) |
+| [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) |
+| [ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md) |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-
+| 名称 |
+| --- |

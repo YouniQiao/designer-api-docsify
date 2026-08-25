@@ -4,7 +4,7 @@ Provides the APIs for loading ads.
 
 **Since:** 11
 
-<!--Device-advertising-export class AdLoader--><!--Device-advertising-export class AdLoader-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -24,17 +24,17 @@ Constructor.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-AdLoader-constructor(context: common.Context)--><!--Device-AdLoader-constructor(context: common.Context)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | common.Context | Yes | Context of the ability or application. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | common.Context | Yes |
 
 **Examples**
 
@@ -60,28 +60,28 @@ Loads an ad.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-AdLoader-loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener): void--><!--Device-AdLoader-loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| adParam | [AdRequestParams](arkts-ads-advertising-adrequestparams-i.md) | Yes | Ad request parameters. |
-| adOptions | [AdOptions](arkts-ads-advertising-adoptions-i.md) | Yes | Ad configuration parameters. |
-| listener | [AdLoadListener](arkts-ads-advertising-adloadlistener-i.md) | Yes | Callback listener for ad requests. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [adParam](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | [AdRequestParams](arkts-ads-advertising-adrequestparams-i.md) | Yes |
+| [adOptions](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | [AdOptions](arkts-ads-advertising-adoptions-i.md) | Yes |
+| listener | [AdLoadListener](arkts-ads-advertising-adloadlistener-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
-| [21800003](../errorcode-ads.md#21800003-ad-loading-failure) | Failed to load the ad request. |
-| [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) |
+| [21800003](../errorcode-ads.md#21800003-ad-loading-failure) |
+| [801](../errorcode-ads.md#801-ad-request-failure) |
 
 **Examples**
 
@@ -124,28 +124,28 @@ Loads multiple ads.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-AdLoader-loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener: MultiSlotsAdLoadListener): void--><!--Device-AdLoader-loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener: MultiSlotsAdLoadListener): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| adParams | [AdRequestParams](arkts-ads-advertising-adrequestparams-i.md)[] | Yes | Ad request parameters. |
-| adOptions | [AdOptions](arkts-ads-advertising-adoptions-i.md) | Yes | Ad configuration parameters. |
-| listener | [MultiSlotsAdLoadListener](arkts-ads-advertising-multislotsadloadlistener-i.md) | Yes | Callback listener for ad requests. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| adParams | [AdRequestParams](arkts-ads-advertising-adrequestparams-i.md)[] | Yes |
+| [adOptions](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | [AdOptions](arkts-ads-advertising-adoptions-i.md) | Yes |
+| listener | [MultiSlotsAdLoadListener](arkts-ads-advertising-multislotsadloadlistener-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
-| [21800003](../errorcode-ads.md#21800003-ad-loading-failure) | Failed to load the ad request. |
-| [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) |
+| [21800003](../errorcode-ads.md#21800003-ad-loading-failure) |
+| [801](../errorcode-ads.md#801-ad-request-failure) |
 
 **Examples**
 
@@ -178,4 +178,3 @@ function loadAdWithMultiSlots(context: common.Context, adRequestParamsArray: adv
   adLoader.loadAdWithMultiSlots(adRequestParamsArray, adOptions, multiSlotsAdLoaderListener);
 }
 ```
-

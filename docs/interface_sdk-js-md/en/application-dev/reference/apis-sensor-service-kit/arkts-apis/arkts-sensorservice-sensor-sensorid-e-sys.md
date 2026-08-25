@@ -2,9 +2,9 @@
 
 Enumerates the sensor types.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-sensor-enum SensorId--><!--Device-sensor-enum SensorId-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -16,9 +16,9 @@ COLOR = 14
 
 Color sensor.System API: This is a system API.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SensorId-COLOR = 14--><!--Device-SensorId-COLOR = 14-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -32,11 +32,10 @@ SAR = 15
 
 Sodium Adsorption Ratio (SAR) sensor.System API: This is a system API.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SensorId-SAR = 15--><!--Device-SensorId-SAR = 15-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 **System API:** This is a system API.
-

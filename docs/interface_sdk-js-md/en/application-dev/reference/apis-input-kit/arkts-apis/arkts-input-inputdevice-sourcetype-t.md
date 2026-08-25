@@ -6,18 +6,17 @@ type SourceType = 'keyboard' | 'mouse' | 'touchpad' | 'touchscreen' | 'joystick'
 
 Input sources supported by the input device, including the keyboard, mouse, touchscreen, trackball, touchpad, and joystick.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-inputDevice-type SourceType = 'keyboard' | 'mouse' | 'touchpad' | 'touchscreen' | 'joystick' | 'trackball'--><!--Device-inputDevice-type SourceType = 'keyboard' | 'mouse' | 'touchpad' | 'touchscreen' | 'joystick' | 'trackball'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
-| Type | Description |
-| --- | --- |
-| 'keyboard' | The input device is a keyboard. |
-| 'mouse' | The input device is a mouse. |
-| 'touchpad' | The input device is a touchpad. |
-| 'touchscreen' | The input device is a touchscreen. |
-| 'joystick' | The input device is a joystick. |
-| 'trackball' | The input device is a trackball. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'keyboard' |
+| 'mouse' |
+| 'touchpad' |
+| 'touchscreen' |
+| 'joystick' |
+| 'trackball' |

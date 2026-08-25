@@ -7,24 +7,23 @@ type CaptionsFontFamily = 'default' | 'monospacedSerif' | 'serif' |
 
 Enumerates the font families of captions.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
-<!--Device-accessibility-type CaptionsFontFamily = 'default' | 'monospacedSerif' | 'serif' |     'monospacedSansSerif' | 'sansSerif' | 'casual' | 'cursive' | 'smallCapitals'--><!--Device-accessibility-type CaptionsFontFamily = 'default' | 'monospacedSerif' | 'serif' |     'monospacedSansSerif' | 'sansSerif' | 'casual' | 'cursive' | 'smallCapitals'-End-->
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
 
-| Type | Description |
-| --- | --- |
-| 'default' | Default font family. |
-| 'monospacedSerif' | Represents a monospaced Serif font. |
-| 'serif' | Represents a Serif font. |
-| 'monospacedSansSerif' | Represents a monospaced Sans Serif font. |
-| 'sansSerif' | Represents a Sans Serif font. |
-| 'casual' | Casual fonts. |
-| 'cursive' | Cursive fonts. |
-| 'smallCapitals' | Small caps fonts. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'default' |
+| 'monospacedSerif' |
+| 'serif' |
+| 'monospacedSansSerif' |
+| 'sansSerif' |
+| 'casual' |
+| 'cursive' |
+| 'smallCapitals' |

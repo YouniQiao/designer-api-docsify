@@ -4,7 +4,7 @@ Defines the type of the param array used for calling the API.
 
 **Since:** 22
 
-<!--Device-huksExternalCrypto-export interface HuksExternalCryptoParam--><!--Device-huksExternalCrypto-export interface HuksExternalCryptoParam-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -26,14 +26,14 @@ Parameter tag, which is used to distinguish parameters.
 
 **Since:** 22
 
-<!--Device-HuksExternalCryptoParam-tag: HuksExternalCryptoTag--><!--Device-HuksExternalCryptoParam-tag: HuksExternalCryptoTag-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## value
 
 ```TypeScript
-value: boolean | int | bigint | Uint8Array
+value: boolean | number | bigint | Uint8Array
 ```
 
 Value of the tag.
@@ -42,7 +42,6 @@ Value of the tag.
 
 **Since:** 22
 
-<!--Device-HuksExternalCryptoParam-value: boolean | int | bigint | Uint8Array--><!--Device-HuksExternalCryptoParam-value: boolean | int | bigint | Uint8Array-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
-

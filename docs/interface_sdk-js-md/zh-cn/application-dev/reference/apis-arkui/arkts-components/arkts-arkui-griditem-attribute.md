@@ -4,7 +4,7 @@
 
 **起始版本：** 7
 
-<!--Device-unnamed-declare class GridItemAttribute--><!--Device-unnamed-declare class GridItemAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,17 +23,17 @@ columnEnd(value: number)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-GridItemAttribute-columnEnd(value: number): GridItemAttribute--><!--Device-GridItemAttribute-columnEnd(value: number): GridItemAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number | 是 | 当前元素终点列号。<br/>需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的 GridLayoutOptions参数，详细可参考Grid的 示例1（固定行列Grid）和 示例3（可滚动Grid设置跨行跨列节点）。<br/>取值 范围：[0, 总列数-1] |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number | 是 |
 
 ## columnStart
 
@@ -45,17 +45,17 @@ columnStart(value: number)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-GridItemAttribute-columnStart(value: number): GridItemAttribute--><!--Device-GridItemAttribute-columnStart(value: number): GridItemAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number | 是 | 当前元素起始列号。<br/>需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的 GridLayoutOptions参数，详细可参考Grid的 示例1（固定行列Grid）和 示例3（可滚动Grid设置跨行跨列节点）。<br/>取值 范围：[0, 总列数-1] |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number | 是 |
 
 ## forceRebuild
 
@@ -70,17 +70,17 @@ forceRebuild(value: boolean)
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-GridItemAttribute-forceRebuild(value: boolean): GridItemAttribute--><!--Device-GridItemAttribute-forceRebuild(value: boolean): GridItemAttribute-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean | 是 | 设置为true时，在触发组件build时重新创建此节点；设置为false时，不强制重新创建此节点。<br/>默认值：false |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | boolean | 是 |
 
 ## onSelect
 
@@ -92,17 +92,17 @@ GridItem元素被鼠标框选的状态改变时触发回调。
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-GridItemAttribute-onSelect(event: (isSelected: boolean) => void): GridItemAttribute--><!--Device-GridItemAttribute-onSelect(event: (isSelected: boolean) => void): GridItemAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | (isSelected: boolean) =&gt; void | 是 | 回调函数。进入鼠标框选范围即被选中返回true，移出鼠标框选范围即未被选中返回false。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | (isSelected: boolean) = & gt; void | 是 |
 
 ## rowEnd
 
@@ -114,17 +114,17 @@ rowEnd(value: number)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-GridItemAttribute-rowEnd(value: number): GridItemAttribute--><!--Device-GridItemAttribute-rowEnd(value: number): GridItemAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number | 是 | 当前元素终点行号。<br/>需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的 GridLayoutOptions参数，详细可参考Grid的 示例1（固定行列Grid）和 示例3（可滚动Grid设置跨行跨列节点）。<br/>取值 范围：[0, 总行数-1] |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number | 是 |
 
 ## rowStart
 
@@ -136,17 +136,17 @@ rowStart(value: number)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-GridItemAttribute-rowStart(value: number): GridItemAttribute--><!--Device-GridItemAttribute-rowStart(value: number): GridItemAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number | 是 | 当前元素起始行号。<br/>需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的 GridLayoutOptions参数，详细可参考Grid的 示例1（固定行列Grid）和 示例3（可滚动Grid设置跨行跨列节点）。<br/>取值 范围：[0, 总行数-1] |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number | 是 |
 
 ## selectable
 
@@ -158,17 +158,17 @@ selectable(value: boolean)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-GridItemAttribute-selectable(value: boolean): GridItemAttribute--><!--Device-GridItemAttribute-selectable(value: boolean): GridItemAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean | 是 | 当前GridItem元素是否可以被鼠标框选。设置为true时可以被鼠标框选，设置为false时无法被鼠标框选。<br/>默认值：true |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | boolean | 是 |
 
 ## selected
 
@@ -180,17 +180,16 @@ selected(value: boolean)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-GridItemAttribute-selected(value: boolean): GridItemAttribute--><!--Device-GridItemAttribute-selected(value: boolean): GridItemAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean | 是 | 当前GridItem选中状态。设置为true时为选中状态，设置为false时为非选中状态。<br/>默认值：false |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | boolean | 是 |

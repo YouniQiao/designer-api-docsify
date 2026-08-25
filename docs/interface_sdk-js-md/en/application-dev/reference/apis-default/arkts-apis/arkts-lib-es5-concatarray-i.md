@@ -1,8 +1,6 @@
 # ConcatArray
 
-**Since:** -1
-
-<!--Device-unnamed-interface ConcatArray--><!--Device-unnamed-interface ConcatArray-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -15,41 +13,47 @@
 join(separator?: string): string
 ```
 
-**Since:** -1
-
-<!--Device-ConcatArray-join(separator?: string): string--><!--Device-ConcatArray-join(separator?: string): string-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| separator | string | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| separator | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## slice
 
 ```TypeScript
 slice(start?: number, end?: number): T[]
 ```
 
-**Since:** -1
-
-<!--Device-ConcatArray-slice(start?: number, end?: number): T[]--><!--Device-ConcatArray-slice(start?: number, end?: number): T[]-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | number | No |  |
-| end | number | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | number | No |
+| end | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+## [n: number]
+
+```TypeScript
+readonly [n: number]: T
+```
+
+**Type:** T
+
+**ArkTS mode:** 
+
 ## length
 
 ```TypeScript
@@ -58,7 +62,4 @@ readonly length: number
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-ConcatArray-readonly length: number--><!--Device-ConcatArray-readonly length: number-End-->
-
+**ArkTS mode:** 

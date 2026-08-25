@@ -2,9 +2,9 @@
 
 Defines cross-device collaborative operation information.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-notificationSubscribe-export interface OperationInfo--><!--Device-notificationSubscribe-export interface OperationInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -26,9 +26,9 @@ Operation button displayed in the notification. The value must be the same as th
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-OperationInfo-actionName?: string--><!--Device-OperationInfo-actionName?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -42,11 +42,11 @@ buttonIndex?: int
 
 Index of the non-live view button or live view auxiliary area that the user taps.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-OperationInfo-buttonIndex?: int--><!--Device-OperationInfo-buttonIndex?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -61,11 +61,11 @@ operationType?: int
 Operation type.  
 - **0**: The user taps the non-live view. - **1**: The user taps the non-live view button. - **32**: The user taps the live view. - **33**: The user taps the live view auxiliary area.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-OperationInfo-operationType?: int--><!--Device-OperationInfo-operationType?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -81,11 +81,10 @@ User input, used to apply quick reply across devices. The value must be the same
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-OperationInfo-userInput?: string--><!--Device-OperationInfo-userInput?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

@@ -2,9 +2,9 @@
 
 Represents detailed information about a credential.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-certificateManager-export interface Credential--><!--Device-certificateManager-export interface Credential-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -24,9 +24,9 @@ Alias of a credential. The value contains up to 128 bytes.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Credential-alias: string--><!--Device-Credential-alias: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -38,11 +38,11 @@ certNum: int
 
 Number of certificates contained in the credential.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Credential-certNum: int--><!--Device-Credential-certNum: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -56,9 +56,9 @@ Credential usage. The default value is **CertificatePurpose.PURPOSE_DEFAULT**.
 
 **Type:** [CertificatePurpose](arkts-devicecertificate-certificatemanager-certificatepurpose-e.md)
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-Credential-certPurpose?: CertificatePurpose--><!--Device-Credential-certPurpose?: CertificatePurpose-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -72,9 +72,9 @@ Binary data of a credential. The value contains up to 20480 bytes.
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Credential-credentialData: Uint8Array--><!--Device-Credential-credentialData: Uint8Array-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -86,11 +86,11 @@ keyNum: int
 
 Number of keys contained in the credential.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Credential-keyNum: int--><!--Device-Credential-keyNum: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -104,9 +104,9 @@ Unique identifier of a credential. The value contains up to 256 bytes.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Credential-keyUri: string--><!--Device-Credential-keyUri: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -120,9 +120,8 @@ Type of a credential. The value contains up to 8 bytes.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Credential-type: string--><!--Device-Credential-type: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
-

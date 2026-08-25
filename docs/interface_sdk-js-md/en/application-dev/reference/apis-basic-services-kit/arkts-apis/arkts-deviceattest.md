@@ -4,7 +4,7 @@ xts_device_attest authResult information@namespace deviceAttest
 
 **Since:** 9
 
-<!--Device-unnamed-declare namespace deviceAttest--><!--Device-unnamed-declare namespace deviceAttest-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.XTS.DeviceAttest
 
@@ -19,18 +19,17 @@ import { deviceAttest } from '@kit.BasicServicesKit';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [getAttestStatus](arkts-basicservices-deviceattest-getatteststatus-f-sys.md) | Obtains the AttestResultInfo object. |
-| [getAttestStatus](arkts-basicservices-deviceattest-getatteststatus-f-sys.md) | Obtains the AttestResultInfo object. |
-| [getAttestStatusSync](arkts-basicservices-deviceattest-getatteststatussync-f-sys.md) | Obtains the AttestResultInfo object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getAttestStatus](arkts-basicservices-deviceattest-getatteststatus-f-sys.md) |
+| [getAttestStatus](arkts-basicservices-deviceattest-getatteststatus-f-sys.md) |
+| [getAttestStatusSync](arkts-basicservices-deviceattest-getatteststatussync-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [AttestResultInfo](arkts-basicservices-deviceattest-attestresultinfo-i-sys.md) | Device attest result information.@interface AttestResultInfo |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AttestResultInfo](arkts-basicservices-deviceattest-attestresultinfo-i-sys.md) |
 <!--DelEnd-->
-

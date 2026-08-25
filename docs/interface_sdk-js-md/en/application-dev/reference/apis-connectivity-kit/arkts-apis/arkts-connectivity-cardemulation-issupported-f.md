@@ -20,27 +20,27 @@ Checks whether a certain type of card emulation is supported.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md)
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-cardEmulation-function isSupported(feature: number): boolean--><!--Device-cardEmulation-function isSupported(feature: number): boolean-End-->
-
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| feature | number | Yes | Card emulation type to check. For details, see [FeatureType](arkts-connectivity-cardemulation-featuretype-e.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [feature](../../apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md) | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the card emulation type is supported; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -63,4 +63,3 @@ if (!isHceSupported) {
     console.error('this device is not supported for HCE, ignore it.');
 }
 ```
-

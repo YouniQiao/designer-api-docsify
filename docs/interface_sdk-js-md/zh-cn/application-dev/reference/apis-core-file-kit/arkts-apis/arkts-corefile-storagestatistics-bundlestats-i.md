@@ -2,9 +2,9 @@
 
 获取捆绑包统计信息。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-storageStatistics-export interface BundleStats--><!--Device-storageStatistics-export interface BundleStats-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -22,11 +22,11 @@ appSize: long
 
 应用安装文件大小（单位为Byte）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-BundleStats-appSize: long--><!--Device-BundleStats-appSize: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -38,11 +38,11 @@ cacheSize: long
 
 应用缓存文件大小（单位为Byte）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-BundleStats-cacheSize: long--><!--Device-BundleStats-cacheSize: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -54,11 +54,10 @@ dataSize: long
 
 应用文件存储大小（除应用安装文件）（单位为Byte）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-BundleStats-dataSize: long--><!--Device-BundleStats-dataSize: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
-

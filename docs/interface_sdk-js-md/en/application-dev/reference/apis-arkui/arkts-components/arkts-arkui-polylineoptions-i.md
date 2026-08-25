@@ -9,7 +9,7 @@ Describes the options of the polyline.
 
 **Since:** 18
 
-<!--Device-unnamed-declare interface PolylineOptions--><!--Device-unnamed-declare interface PolylineOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,11 @@ Height. Unit: vp, The value must be greater than or equal to 0, The **undefined*
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-PolylineOptions-height?: Length--><!--Device-PolylineOptions-height?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,11 +50,10 @@ Width. Unit: vp, The value must be greater than or equal to 0, The **undefined**
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-PolylineOptions-width?: Length--><!--Device-PolylineOptions-width?: Length-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

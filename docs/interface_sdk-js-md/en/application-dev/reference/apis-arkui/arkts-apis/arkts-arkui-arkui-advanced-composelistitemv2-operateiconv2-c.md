@@ -4,9 +4,7 @@ Declare type OperateIconV2
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
-
-<!--Device-unnamed-export declare class OperateIconV2--><!--Device-unnamed-export declare class OperateIconV2-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,6 +13,24 @@ Declare type OperateIconV2
 ```TypeScript
 import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, OperateButtonV2, OperateButtonV2Options, OperateCheckV2, OperateCheckV2Options, OperateIconV2, OperateIconV2Options, OperateItemV2, OperateItemV2Options } from '@kit.ArkUI';
 ```
+
+## action
+
+```TypeScript
+public action?: OnActionCallback
+```
+
+Callback function when operate the icon.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
 
@@ -26,19 +42,19 @@ The constructor of OperateIconV2.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OperateIconV2-constructor(options?: OperateIconV2Options)--><!--Device-OperateIconV2-constructor(options?: OperateIconV2Options)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [OperateIconV2Options](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operateiconv2options-i.md) | No | The options of OperateIconV2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [OperateIconV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2options-i.md) | No |
 
 ## accessibilityDescription
 
@@ -52,13 +68,11 @@ The accessibilityDescription of the icon.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OperateIconV2-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-OperateIconV2-@Trace  public accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,13 +90,11 @@ The accessibilityLevel of the icon.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OperateIconV2-@Trace  public accessibilityLevel?: string--><!--Device-OperateIconV2-@Trace  public accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,35 +110,11 @@ The accessibilityText of the icon.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OperateIconV2-@Trace  public accessibilityText?: ResourceStr--><!--Device-OperateIconV2-@Trace  public accessibilityText?: ResourceStr-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## action
-
-```TypeScript
-public action?: OnActionCallback
-```
-
-Callback function when operate the icon.
-
-**Type:** [OnActionCallback](../../apis-default/arkts-apis/arkts-onactioncallback-t.md)
-
-**Since:** 26.0.0
-
-**Decorator:** @Trace
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OperateIconV2-@Trace  public action?: OnActionCallback--><!--Device-OperateIconV2-@Trace  public action?: OnActionCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -142,13 +130,11 @@ The content of text or the address of symbol
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OperateIconV2-@Trace  public symbolStyle?: SymbolGlyphModifier--><!--Device-OperateIconV2-@Trace  public symbolStyle?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -164,13 +150,10 @@ The content of text or the address of icon.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-OperateIconV2-@Trace  public value: ResourceStr--><!--Device-OperateIconV2-@Trace  public value: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

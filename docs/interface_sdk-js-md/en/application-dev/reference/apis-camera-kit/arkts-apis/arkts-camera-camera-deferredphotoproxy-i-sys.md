@@ -2,9 +2,9 @@
 
 A class object that functions as a thumbnail proxy.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-camera-interface DeferredPhotoProxy--><!--Device-camera-interface DeferredPhotoProxy-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -24,9 +24,9 @@ getThumbnail(): Promise<image.PixelMap>
 
 Obtains the PixelMap of a thumbnail. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DeferredPhotoProxy-getThumbnail(): Promise<image.PixelMap>--><!--Device-DeferredPhotoProxy-getThumbnail(): Promise<image.PixelMap>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -34,15 +34,15 @@ Obtains the PixelMap of a thumbnail. This API uses a promise to return the resul
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;image.PixelMap&gt; | PixelMap of the thumbnail. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;image.PixelMap & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -64,9 +64,9 @@ release(): Promise<void>
 
 Releases depth data output resources. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DeferredPhotoProxy-release(): Promise<void>--><!--Device-DeferredPhotoProxy-release(): Promise<void>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -74,15 +74,15 @@ Releases depth data output resources. This API uses a promise to return the resu
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -207,4 +207,3 @@ async function releaseCapturePhoto(capturePhoto: camera.CapturePhoto): Promise<v
   await capturePhoto.release();
 }
 ```
-

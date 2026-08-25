@@ -2,9 +2,9 @@
 
 Defines the optional parameters carried in the request for establishing a WebSocket connection.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-webSocket-export interface WebSocketRequestOptions--><!--Device-webSocket-export interface WebSocketRequestOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -24,9 +24,9 @@ Path of CA certificates. If a path is set, the system uses the CA certificates i
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-WebSocketRequestOptions-caPath?: string--><!--Device-WebSocketRequestOptions-caPath?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -40,27 +40,27 @@ Client certificate.
 
 **Type:** ClientCert
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-WebSocketRequestOptions-clientCert?: ClientCert--><!--Device-WebSocketRequestOptions-clientCert?: ClientCert-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## header
 
 ```TypeScript
-header?: Record<string, string>
+header?: Object
 ```
 
-HTTP request header.
+Header carrying optional parameters in the request for establishing a WebSocket connection. You can customize the parameter or leave it unspecified.
 
-**Type:** Record&lt;string, string&gt;
+**Type:** Object
 
-**Since:** 23
+**Since:** 6
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-WebSocketRequestOptions-header?: Record<string, string>--><!--Device-WebSocketRequestOptions-header?: Record<string, string>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -76,9 +76,9 @@ Custom minimum TLS version supported. For example, if this parameter is set to *
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-WebSocketRequestOptions-minSupportTlsProtocol?: TlsProtocol--><!--Device-WebSocketRequestOptions-minSupportTlsProtocol?: TlsProtocol-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -90,11 +90,11 @@ pingInterval?: int
 
 Custom [heartbeat detection interval](../../../network/websocket-connection.md). The default value is 30s. Heartbeat detection is initiated at the specified interval. If the value is set to **0**, heartbeat detection is disabled. The maximum value is 30000s, and the minimum value is 0s.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 26.0.0
+**Since:** 21
 
-<!--Device-WebSocketRequestOptions-pingInterval?: int--><!--Device-WebSocketRequestOptions-pingInterval?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -106,11 +106,11 @@ pongTimeout?: int
 
 Timeout interval for disconnecting a connection after heartbeat detection is initiated. The default value is 30s. If no response is received during the specified interval, the connection is disconnected. The maximum value is 30 000s, and the minimum value is 0s. **pongTimeout** must be less than or equal to **pingInterval**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 26.0.0
+**Since:** 21
 
-<!--Device-WebSocketRequestOptions-pongTimeout?: int--><!--Device-WebSocketRequestOptions-pongTimeout?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -124,9 +124,9 @@ Custom **Sec-WebSocket-Protocol** field. The default value is "".
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-WebSocketRequestOptions-protocol?: string--><!--Device-WebSocketRequestOptions-protocol?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -140,9 +140,9 @@ Proxy configuration. By default, the system network proxy is used.
 
 **Type:** [ProxyConfiguration](arkts-network-websocket-proxyconfiguration-t.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-WebSocketRequestOptions-proxy?: ProxyConfiguration--><!--Device-WebSocketRequestOptions-proxy?: ProxyConfiguration-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -156,9 +156,9 @@ Whether to skip server certificate verification. The value **true** means to ski
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 20
 
-<!--Device-WebSocketRequestOptions-skipServerCertVerification?: boolean--><!--Device-WebSocketRequestOptions-skipServerCertVerification?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -174,9 +174,8 @@ The option of supporting origin port.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WebSocketRequestOptions-supportOriginPort?: boolean--><!--Device-WebSocketRequestOptions-supportOriginPort?: boolean-End-->
-
 **System capability:** SystemCapability.Communication.NetStack
-

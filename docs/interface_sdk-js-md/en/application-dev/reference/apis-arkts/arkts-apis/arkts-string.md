@@ -9,13 +9,12 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [String](arkts-arkts-string-c.md) | Unicode string |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [String](arkts-arkts-string-c.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [string](arkts-arkts-string-t.md) | `string` is an alias for type `String` |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [string](arkts-arkts-string-t.md) |

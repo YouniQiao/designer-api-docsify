@@ -6,7 +6,7 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 7
 
-<!--Device-unnamed-declare class RowSplitAttribute--><!--Device-unnamed-declare class RowSplitAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,15 +28,14 @@ Sets whether the divider can be dragged.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-RowSplitAttribute-resizeable(value: boolean): RowSplitAttribute--><!--Device-RowSplitAttribute-resizeable(value: boolean): RowSplitAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | boolean | Yes | Whether the divider can be dragged. **true**: The divider can be dragged. **false**: The divider cannot be dragged. <br>Default value: **false** <br>Invalid values are treated as the default value. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | boolean | Yes |

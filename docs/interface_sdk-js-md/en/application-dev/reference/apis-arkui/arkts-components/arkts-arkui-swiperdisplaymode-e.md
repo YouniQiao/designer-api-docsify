@@ -4,7 +4,7 @@ Enumerates the modes in which elements are displayed along the main axis.
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum SwiperDisplayMode--><!--Device-unnamed-declare enum SwiperDisplayMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +18,13 @@ The width of each page in the **Swiper** component equals the component's own wi
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 10
 
 **Substitutes:** [STRETCH](#stretch)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 7.
-
-<!--Device-SwiperDisplayMode-Stretch--><!--Device-SwiperDisplayMode-Stretch-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,13 +38,13 @@ The width of each page in the **Swiper** component equals the maximum width of c
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 10
 
 **Substitutes:** [AUTO_LINEAR](#auto_linear)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 7.
-
-<!--Device-SwiperDisplayMode-AutoLinear--><!--Device-SwiperDisplayMode-AutoLinear-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,13 +58,13 @@ The width of each page in the **Swiper** component equals the component's own wi
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-SwiperDisplayMode-STRETCH--><!--Device-SwiperDisplayMode-STRETCH-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,6 +78,8 @@ The width of each page in the **Swiper** component equals the width of the leftm
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 12
 
 **Substitutes:** scrollTo
@@ -88,7 +90,4 @@ The width of each page in the **Swiper** component equals the width of the leftm
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
-<!--Device-SwiperDisplayMode-AUTO_LINEAR--><!--Device-SwiperDisplayMode-AUTO_LINEAR-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -14,11 +14,11 @@ function setApplicationEnabledSync(bundleName: string, isEnabled: boolean): void
 
 以同步方法设置指定应用的禁用或使能状态。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
-
-<!--Device-bundleManager-function setApplicationEnabledSync(bundleName: string, isEnabled: boolean): void--><!--Device-bundleManager-function setApplicationEnabledSync(bundleName: string, isEnabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -26,19 +26,19 @@ function setApplicationEnabledSync(bundleName: string, isEnabled: boolean): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 指定应用的bundleName。 |
-| isEnabled | boolean | 是 | 值为true表示使能，值为false表示禁用。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| isEnabled | boolean | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 **示例**
 
@@ -89,11 +89,11 @@ function setApplicationEnabledSync(bundleName: string, appIndex: int, isEnabled:
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-bundleManager-function setApplicationEnabledSync(bundleName: string, appIndex: int, isEnabled: boolean, killProcess: boolean): void--><!--Device-bundleManager-function setApplicationEnabledSync(bundleName: string, appIndex: int, isEnabled: boolean, killProcess: boolean): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -101,23 +101,22 @@ function setApplicationEnabledSync(bundleName: string, appIndex: int, isEnabled:
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 应用包名 |
-| appIndex | int | 是 | 应用的分身索引 <br>取值范围为全体整数。 |
-| isEnabled | boolean | 是 | true表示启用应用程序，false表示启用应用程序。 |
-| killProcess | boolean | 是 | true表示应用进程在禁用时杀死应用程序进程，而值为false表示禁用时不会杀死应用程序进程 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| isEnabled | boolean | 是 |
+| killProcess | boolean | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Non-system APP calling system API. |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle is not found. |
-| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | The specified app index is invalid. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
 
 **示例**
 
 参见 [setApplicationEnabledSync](#setapplicationenabledsync)
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-bluetoothManager-export interface BluetoothInfo--><!--Device-bluetoothManager-export interface BluetoothInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -26,9 +26,9 @@ connectionState: constant.ProfileConnectionState
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-BluetoothInfo-connectionState: constant.ProfileConnectionState--><!--Device-BluetoothInfo-connectionState: constant.ProfileConnectionState-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -44,9 +44,9 @@ name: string
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-BluetoothInfo-name: string--><!--Device-BluetoothInfo-name: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -62,9 +62,8 @@ state: access.BluetoothState
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-BluetoothInfo-state: access.BluetoothState--><!--Device-BluetoothInfo-state: access.BluetoothState-End-->
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
-

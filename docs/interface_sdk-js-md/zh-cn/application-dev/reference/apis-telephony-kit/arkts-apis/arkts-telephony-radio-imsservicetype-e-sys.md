@@ -2,9 +2,9 @@
 
 Indicates the type of IMS service.
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-radio-export enum ImsServiceType--><!--Device-radio-export enum ImsServiceType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -18,9 +18,9 @@ TYPE_VOICE = 0
 
 Indicates voice service.
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ImsServiceType-TYPE_VOICE = 0--><!--Device-ImsServiceType-TYPE_VOICE = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -34,9 +34,9 @@ TYPE_VIDEO = 1
 
 Indicates video service.
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ImsServiceType-TYPE_VIDEO = 1--><!--Device-ImsServiceType-TYPE_VIDEO = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -50,9 +50,9 @@ TYPE_UT = 2
 
 Indicates UT service.
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ImsServiceType-TYPE_UT = 2--><!--Device-ImsServiceType-TYPE_UT = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -66,11 +66,10 @@ TYPE_SMS = 3
 
 Indicates SMS service.
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ImsServiceType-TYPE_SMS = 3--><!--Device-ImsServiceType-TYPE_SMS = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
-

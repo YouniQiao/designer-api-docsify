@@ -4,7 +4,7 @@ Provide an interface for the button style of picker
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface PickerDialogButtonStyle--><!--Device-unnamed-declare interface PickerDialogButtonStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Describes the button background color.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PickerDialogButtonStyle-backgroundColor?: ResourceColor--><!--Device-PickerDialogButtonStyle-backgroundColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ Describes the button border radius.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PickerDialogButtonStyle-borderRadius?: Length | BorderRadiuses--><!--Device-PickerDialogButtonStyle-borderRadius?: Length | BorderRadiuses-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,11 +65,11 @@ Describes the button text color.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PickerDialogButtonStyle-fontColor?: ResourceColor--><!--Device-PickerDialogButtonStyle-fontColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,11 +85,11 @@ Describes the button font family.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PickerDialogButtonStyle-fontFamily?: Resource | string--><!--Device-PickerDialogButtonStyle-fontFamily?: Resource | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -105,11 +105,11 @@ Describes the button text size.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PickerDialogButtonStyle-fontSize?: Length--><!--Device-PickerDialogButtonStyle-fontSize?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -125,11 +125,11 @@ Describes the button font style.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PickerDialogButtonStyle-fontStyle?: FontStyle--><!--Device-PickerDialogButtonStyle-fontStyle?: FontStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -145,11 +145,11 @@ Describes the button font weight.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PickerDialogButtonStyle-fontWeight?: FontWeight | number | string--><!--Device-PickerDialogButtonStyle-fontWeight?: FontWeight | number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -165,11 +165,11 @@ Define whether the button default to responding to the Enter key
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PickerDialogButtonStyle-primary?: boolean--><!--Device-PickerDialogButtonStyle-primary?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -185,11 +185,11 @@ Describes the button role.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PickerDialogButtonStyle-role?: ButtonRole--><!--Device-PickerDialogButtonStyle-role?: ButtonRole-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -205,11 +205,11 @@ Describes the button style.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PickerDialogButtonStyle-style?: ButtonStyleMode--><!--Device-PickerDialogButtonStyle-style?: ButtonStyleMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -225,11 +225,10 @@ Describes the button type.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PickerDialogButtonStyle-type?: ButtonType--><!--Device-PickerDialogButtonStyle-type?: ButtonType-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

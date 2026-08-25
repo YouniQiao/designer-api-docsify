@@ -4,7 +4,7 @@ Configures the web dark mode, which controls the dark theme display of web conte
 
 **Since:** 9
 
-<!--Device-unnamed-declare enum WebDarkMode--><!--Device-unnamed-declare enum WebDarkMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,9 +18,9 @@ The web dark mode is disabled.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-WebDarkMode-Off = 0--><!--Device-WebDarkMode-Off = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -34,9 +34,9 @@ The web dark mode is enabled.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-WebDarkMode-On = 1--><!--Device-WebDarkMode-On = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -50,9 +50,8 @@ The Web dark mode follows the system. This mode is applicable to scenarios where
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-WebDarkMode-Auto = 2--><!--Device-WebDarkMode-Auto = 2-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

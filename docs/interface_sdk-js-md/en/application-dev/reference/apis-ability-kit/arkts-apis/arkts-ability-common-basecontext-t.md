@@ -1,18 +1,19 @@
 # BaseContext
 
 ```TypeScript
-export type BaseContext = _BaseContext
+export type BaseContext = _BaseContext.default
 ```
 
 Defines the parent class of all context types.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-common-export type BaseContext = _BaseContext--><!--Device-common-export type BaseContext = _BaseContext-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _BaseContext
-
+**Property type:** _BaseContext.default

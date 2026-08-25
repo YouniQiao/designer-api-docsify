@@ -6,9 +6,7 @@ Set的实现。
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-unnamed-export class Set--><!--Device-unnamed-export class Set-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,19 +25,17 @@ $_iterator(): IterableIterator<K>
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Set-$_iterator(): IterableIterator<K>--><!--Device-Set-$_iterator(): IterableIterator<K>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | 该Set的默认迭代器。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; |
 
 ## add
 
@@ -51,25 +47,23 @@ add(val: K): this
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Set-add(val: K): this--><!--Device-Set-add(val: K): this-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | K | 是 | 待放入该Set的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | K | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| this | 添加该值后的Set。 |
+| 类型 |
+| --- |
+| this |
 
 ## clear
 
@@ -81,11 +75,9 @@ clear(): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Set-clear(): void--><!--Device-Set-clear(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -99,19 +91,17 @@ constructor(bucketsCount: int)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Set-constructor(bucketsCount: int)--><!--Device-Set-constructor(bucketsCount: int)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bucketsCount | int | 是 | 内部map的桶数量。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bucketsCount | int | 是 |
 
 ## constructor
 
@@ -123,19 +113,17 @@ constructor(set: Set<K>)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Set-constructor(set: Set<K>)--><!--Device-Set-constructor(set: Set<K>)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| set | Set&lt;K&gt; | 是 | 用于初始化的另一个Set实例。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| set | Set & lt;K & gt; | 是 |
 
 ## constructor
 
@@ -147,19 +135,17 @@ constructor(values: K[])
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Set-constructor(values: K[])--><!--Device-Set-constructor(values: K[])-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| values | K[] | 是 | 用于初始化的数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [values](#values) | K[] | 是 |
 
 ## constructor
 
@@ -171,19 +157,17 @@ constructor(elements?: Iterable<K> | FixedArray<K> | null)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Set-constructor(elements?: Iterable<K> | FixedArray<K> | null)--><!--Device-Set-constructor(elements?: Iterable<K> | FixedArray<K> | null)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| elements | Iterable&lt;K&gt; \| FixedArray&lt;K&gt; \| null | 否 | 用于初始化的可迭代对象、FixedArray 或null。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [elements](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-pagemediaentity-i.md) | Iterable & lt;K & gt; \ | FixedArray & lt;K & gt; \ | null | 否 |
 
 ## delete
 
@@ -195,25 +179,23 @@ delete(val: K): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Set-delete(val: K): boolean--><!--Device-Set-delete(val: K): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | K | 是 | 待移除的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | K | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果该值已被移除则返回true。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## entries
 
@@ -225,19 +207,17 @@ entries(): IterableIterator<[K, K]>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Set-entries(): IterableIterator<[K, K]>--><!--Device-Set-entries(): IterableIterator<[K, K]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, K]&gt; | [v, v]键值对的可迭代对象。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, K]&gt; |
 
 ## forEach
 
@@ -249,19 +229,17 @@ forEach(callbackfn: (k: K, v: K, set: Set<K>) => void): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Set-forEach(callbackfn: (k: K, v: K, set: Set<K>) => void): void--><!--Device-Set-forEach(callbackfn: (k: K, v: K, set: Set<K>) => void): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackfn | (k: K, v: K, set: Set&lt;K&gt;) =&gt; void | 是 | 要应用的函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackfn | (k: K, v: K, set: Set & lt;K & gt;) = & gt; void | 是 |
 
 ## has
 
@@ -273,25 +251,23 @@ has(val: K): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Set-has(val: K): boolean--><!--Device-Set-has(val: K): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | K | 是 | 待在该Set中查找的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | K | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果该值在Set中则返回true。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## keys
 
@@ -303,19 +279,17 @@ keys(): IterableIterator<K>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Set-keys(): IterableIterator<K>--><!--Device-Set-keys(): IterableIterator<K>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | 该Set中值的可迭代对象。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; |
 
 ## toString
 
@@ -327,19 +301,17 @@ toString(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Set-toString(): string--><!--Device-Set-toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 表示该Set的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## values
 
@@ -351,17 +323,32 @@ values(): IterableIterator<K>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Set-values(): IterableIterator<K>--><!--Device-Set-values(): IterableIterator<K>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | 该Set中值的可迭代对象。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; |
 
+## size
+
+```TypeScript
+get size(): int
+```
+
+获取该Set中不重复元素的个数。
+
+**类型：** int
+
+**起始版本：** 24
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang

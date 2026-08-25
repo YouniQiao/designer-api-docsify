@@ -4,7 +4,7 @@
 
 **起始版本：** 7
 
-<!--Device-unnamed-declare interface PixelMapMock--><!--Device-unnamed-declare interface PixelMapMock-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,9 +25,8 @@ release function.
 
 **起始版本：** 7
 
-<!--Device-PixelMapMock-release(): void--><!--Device-PixelMapMock-release(): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
-

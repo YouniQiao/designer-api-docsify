@@ -1,10 +1,10 @@
 # WidthBreakpoint
 
-Enumerates the width breakpoint values corresponding to different window width thresholds. The values are returned through [getWindowWidthBreakpoint](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getwindowwidthbreakpoint).The following table lists default width breakpoint thresholds for typical devices, serving as a reference for responsive layout design based on window width breakpoints. Device manufacturers may customize these thresholds through product-specific configurations when needed.
+Enumerates the width breakpoint values corresponding to different window width thresholds. The values are returned through [getWindowWidthBreakpoint](arkts-arkui-arkui-uicontext-uicontext-c.md#getwindowwidthbreakpoint).The following table lists default width breakpoint thresholds for typical devices, serving as a reference for responsive layout design based on window width breakpoints. Device manufacturers may customize these thresholds through product-specific configurations when needed.
 
 **Since:** 13
 
-<!--Device-unnamed-declare enum WidthBreakpoint--><!--Device-unnamed-declare enum WidthBreakpoint-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ The window width is less than 320 vp.
 
 **Since:** 13
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-WidthBreakpoint-WIDTH_XS = 0--><!--Device-WidthBreakpoint-WIDTH_XS = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ The window width is greater than or equal to 320 vp and less than 600 vp.
 
 **Since:** 13
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-WidthBreakpoint-WIDTH_SM = 1--><!--Device-WidthBreakpoint-WIDTH_SM = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ The window width is greater than or equal to 600 vp and less than 840 vp.
 
 **Since:** 13
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-WidthBreakpoint-WIDTH_MD = 2--><!--Device-WidthBreakpoint-WIDTH_MD = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,11 @@ The window width is greater than or equal to 840 vp and less than 1440 vp.
 
 **Since:** 13
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-WidthBreakpoint-WIDTH_LG = 3--><!--Device-WidthBreakpoint-WIDTH_LG = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,11 +90,10 @@ The window width is greater than or equal to 1440 vp.
 
 **Since:** 13
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
-<!--Device-WidthBreakpoint-WIDTH_XL = 4--><!--Device-WidthBreakpoint-WIDTH_XL = 4-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

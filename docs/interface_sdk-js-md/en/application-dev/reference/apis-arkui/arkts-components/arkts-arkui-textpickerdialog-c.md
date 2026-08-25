@@ -4,7 +4,7 @@ A text picker dialog box is a dialog box that allows users to select text from t
 
 **Since:** 8
 
-<!--Device-unnamed-declare class TextPickerDialog--><!--Device-unnamed-declare class TextPickerDialog-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,19 +23,18 @@ Shows a text picker in the given settings.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 18
 
-**Substitutes:** [showTextPickerDialog](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#showtextpickerdialog)
+**Substitutes:** [showTextPickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#showtextpickerdialog)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-TextPickerDialog-static show(options?: TextPickerDialogOptions)--><!--Device-TextPickerDialog-static show(options?: TextPickerDialogOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [TextPickerDialogOptions](arkts-arkui-textpickerdialogoptions-i.md) | No | Parameters of the text picker dialog box. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [TextPickerDialogOptions](arkts-arkui-textpickerdialogoptions-i.md) | No |

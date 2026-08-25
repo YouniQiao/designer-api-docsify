@@ -3,16 +3,17 @@
 ## REASON_MESSAGE_DESKTOP_SHORTCUT
 
 ```TypeScript
-const REASON_MESSAGE_DESKTOP_SHORTCUT: string
+const REASON_MESSAGE_DESKTOP_SHORTCUT = 'ReasonMessage_DesktopShortcut'
 ```
 
 The UIAbility is launched via a home screen shortcut. If this string is obtained from the **launchReasonMessage** property in [LaunchParam](arkts-ability-abilityconstant-launchparam-i.md), the UIAbility is initiated by touching a shortcut on the home screen.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AbilityConstant-const REASON_MESSAGE_DESKTOP_SHORTCUT: string--><!--Device-AbilityConstant-const REASON_MESSAGE_DESKTOP_SHORTCUT: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Ability.AbilityBase
-

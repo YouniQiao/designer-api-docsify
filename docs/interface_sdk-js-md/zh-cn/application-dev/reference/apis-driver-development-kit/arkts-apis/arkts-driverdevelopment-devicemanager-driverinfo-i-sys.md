@@ -2,9 +2,9 @@
 
 驱动详细信息。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-deviceManager-interface DriverInfo--><!--Device-deviceManager-interface DriverInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
@@ -26,9 +26,9 @@ busType: BusType
 
 **类型：** [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-DriverInfo-busType: BusType--><!--Device-DriverInfo-busType: BusType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
@@ -44,9 +44,9 @@ description: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-DriverInfo-description: string--><!--Device-DriverInfo-description: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
@@ -62,9 +62,9 @@ driverName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-DriverInfo-driverName: string--><!--Device-DriverInfo-driverName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
@@ -80,9 +80,9 @@ driverSize: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-DriverInfo-driverSize: string--><!--Device-DriverInfo-driverSize: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
@@ -98,9 +98,9 @@ driverUid: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-DriverInfo-driverUid: string--><!--Device-DriverInfo-driverUid: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
@@ -116,11 +116,10 @@ driverVersion: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-DriverInfo-driverVersion: string--><!--Device-DriverInfo-driverVersion: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **系统接口：** 此接口为系统接口。
-

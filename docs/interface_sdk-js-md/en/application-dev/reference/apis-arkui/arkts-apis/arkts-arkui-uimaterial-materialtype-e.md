@@ -1,14 +1,12 @@
-# MaterialType (System API)
+# MaterialType
 
 Enumerates system material types.
 
-**Since:** 23
+**Since:** 26.0.0
 
-<!--Device-uiMaterial-enum MaterialType--><!--Device-uiMaterial-enum MaterialType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**System API:** This is a system API.
 
 ## IMMERSIVE
 
@@ -20,11 +18,10 @@ Immersive material type. It is used only by the **type** attribute of the [Mater
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-MaterialType-IMMERSIVE = 2--><!--Device-MaterialType-IMMERSIVE = 2-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

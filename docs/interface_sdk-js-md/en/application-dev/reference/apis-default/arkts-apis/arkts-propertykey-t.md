@@ -4,13 +4,10 @@
 declare type PropertyKey = string | number | symbol
 ```
 
-**Since:** -1
+**ArkTS mode:** 
 
-<!--Device-unnamed-declare type PropertyKey = string | number | symbol--><!--Device-unnamed-declare type PropertyKey = string | number | symbol-End-->
-
-| Type | Description |
-| --- | --- |
-| string |  |
-| number |  |
-| symbol |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+| number |
+| symbol |

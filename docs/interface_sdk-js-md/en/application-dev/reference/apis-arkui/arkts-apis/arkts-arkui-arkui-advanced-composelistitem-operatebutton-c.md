@@ -4,7 +4,7 @@ Defines the type of the button element on the right of the **ComposeListItem** c
 
 **Since:** 10
 
-<!--Device-unnamed-export declare class OperateButton--><!--Device-unnamed-export declare class OperateButton-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,11 @@ Accessible description of the button on the right. You can provide comprehensive
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-OperateButton-accessibilityDescription?: ResourceStr--><!--Device-OperateButton-accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,11 +52,11 @@ Accessibility level of the button on the right. It determines whether the compon
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-OperateButton-accessibilityLevel?: string--><!--Device-OperateButton-accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,11 @@ Accessibility text, that is, accessible label name, of the button on the right. 
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-OperateButton-accessibilityText?: ResourceStr--><!--Device-OperateButton-accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,11 +92,10 @@ Text of the button on the right.Default value: **""**
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-OperateButton-text?: ResourceStr--><!--Device-OperateButton-text?: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

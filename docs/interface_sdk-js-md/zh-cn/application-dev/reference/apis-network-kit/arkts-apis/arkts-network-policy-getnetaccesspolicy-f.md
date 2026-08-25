@@ -16,24 +16,24 @@ function getNetAccessPolicy(): Promise<NetAccessPolicy>
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-policy-function getNetAccessPolicy(): Promise<NetAccessPolicy>--><!--Device-policy-function getNetAccessPolicy(): Promise<NetAccessPolicy>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[NetAccessPolicy](arkts-network-policy-netaccesspolicy-i.md)&gt; | Promise对象。返回应用自身联网策略。 |
+| 类型 |
+| --- |
+| Promise&lt;[NetAccessPolicy](arkts-network-policy-netaccesspolicy-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error, such as nullptr。 |
+| 错误码ID |
+| --- |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
 **示例**
 
@@ -47,4 +47,3 @@ policy.getNetAccessPolicy().then((policyInfo: policy.NetAccessPolicy) => {
   console.error(`getNetAccessPolicy fail. error info: ${err.code} - ${err.message}`);
 });
 ```
-

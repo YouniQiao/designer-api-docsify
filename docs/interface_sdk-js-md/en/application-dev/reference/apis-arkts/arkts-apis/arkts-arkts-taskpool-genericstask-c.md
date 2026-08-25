@@ -6,7 +6,7 @@ Implements a generic task. **GenericsTask** inherits from [Task](arkts-arkts-tas
 
 **Since:** 13
 
-<!--Device-taskpool-class GenericsTask--><!--Device-taskpool-class GenericsTask-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,24 +26,24 @@ A constructor used to create a **GenericsTask** object.
 
 **Since:** 13
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
-<!--Device-GenericsTask-constructor(func: (...args: A) => R | Promise<R>, ...args: A)--><!--Device-GenericsTask-constructor(func: (...args: A) => R | Promise<R>, ...args: A)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | Yes | Function to be executed. The function must be decorated using [@Concurrent](../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see Sequenceable Data Types. |
-| args | A | Yes | Arguments of the function. For details about the supported parameter types, see Sequenceable Data Types. The default value is **undefined**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| func | (...args: A) = & gt; R \ | Promise & lt;R & gt; | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | A | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
+| Error Code ID |
+| --- |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) |
 
 **Examples**
 
@@ -141,27 +141,26 @@ A constructor used to create a **GenericsTask** instance, with the task name spe
 
 **Since:** 13
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
-<!--Device-GenericsTask-constructor(name: string, func: (...args: A) => R | Promise<R>, ...args: A)--><!--Device-GenericsTask-constructor(name: string, func: (...args: A) => R | Promise<R>, ...args: A)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the generic task. |
-| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | Yes | Function to be executed. The function must be decorated using [@Concurrent](../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see Sequenceable Data Types. |
-| args | A | Yes | Arguments of the function. For details about the supported parameter types, see Sequenceable Data Types. The default value is **undefined**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| func | (...args: A) = & gt; R \ | Promise & lt;R & gt; | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | A | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
+| Error Code ID |
+| --- |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) |
 
 **Examples**
 
 See [constructor](#constructor)
-

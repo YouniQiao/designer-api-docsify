@@ -2,9 +2,9 @@
 
 Defines a SIM message.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-sms-export interface SimShortMessage--><!--Device-sms-export interface SimShortMessage-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -24,11 +24,11 @@ indexOnSim: int
 
 SIM card index.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-SimShortMessage-indexOnSim: int--><!--Device-SimShortMessage-indexOnSim: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -44,9 +44,9 @@ SMS message.
 
 **Type:** [ShortMessage](arkts-telephony-sms-shortmessage-i.md)
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-SimShortMessage-shortMessage: ShortMessage--><!--Device-SimShortMessage-shortMessage: ShortMessage-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -62,11 +62,10 @@ SIM message status.
 
 **Type:** [SimMessageStatus](arkts-telephony-sms-simmessagestatus-e-sys.md)
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-SimShortMessage-simMessageStatus: SimMessageStatus--><!--Device-SimShortMessage-simMessageStatus: SimMessageStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
-

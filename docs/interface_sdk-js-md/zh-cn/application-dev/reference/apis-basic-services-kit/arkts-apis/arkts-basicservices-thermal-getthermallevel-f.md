@@ -16,19 +16,19 @@ function getThermalLevel(): ThermalLevel
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getLevel](arkts-basicservices-thermal-getlevel-f.md)
-
-<!--Device-thermal-function getThermalLevel(): ThermalLevel--><!--Device-thermal-function getThermalLevel(): ThermalLevel-End-->
 
 **系统能力：** SystemCapability.PowerManager.ThermalManager
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md) | 当前设备的热档位等级，反映设备的温度状态，可用于指导业务的热控策略调整。 |
+| 类型 |
+| --- |
+| [ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md) |
 
 **示例**
 
@@ -36,4 +36,3 @@ function getThermalLevel(): ThermalLevel
 let level = thermal.getThermalLevel();
 console.info('thermal level is: ' + level);
 ```
-

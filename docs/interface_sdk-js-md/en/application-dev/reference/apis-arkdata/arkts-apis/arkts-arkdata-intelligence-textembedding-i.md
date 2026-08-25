@@ -2,9 +2,9 @@
 
 Describes the text embedding functions of the multi-modal embedding model. Chinese and English are supported.@interface TextEmbedding
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-intelligence-interface TextEmbedding--><!--Device-intelligence-interface TextEmbedding-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
@@ -16,37 +16,43 @@ import { intelligence } from '@kit.ArkData';
 
 ## getEmbedding
 
+ArkTS-Dyn:
+```TypeScript
+getEmbedding(text: string): Promise<Array<number>>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getEmbedding(text: string): Promise<Array<double>>
 ```
 
 Obtains the embedding vector of the given text. The model can process up to 512 characters of text per inference, supporting both Chinese and English.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-TextEmbedding-getEmbedding(text: string): Promise<Array<double>>--><!--Device-TextEmbedding-getEmbedding(text: string): Promise<Array<double>>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| text | string | Yes | The input text of the embedding model. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| text | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;double&gt;&gt; | The promise used to return the embedding result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Promise & lt;Array & lt;number & gt; & gt;<br>ArkTS-Sta：Promise & lt;Array & lt;double & gt; & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) |
 
 **Examples**
 
@@ -94,37 +100,43 @@ imageEmbedding.getEmbedding(image)
 
 ## getEmbedding
 
+ArkTS-Dyn:
+```TypeScript
+getEmbedding(batchTexts: Array<string>): Promise<Array<Array<number>>>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>
 ```
 
 Obtains the embedding vector of a given batch of text. The model can process up to 512 characters of text per inference, supporting both Chinese and English.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-TextEmbedding-getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>--><!--Device-TextEmbedding-getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| batchTexts | Array&lt;string&gt; | Yes | The input batch of texts of the embedding model. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| batchTexts | Array & lt;string & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;Array&lt;double&gt;&gt;&gt; | The promise used to return the embedding result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Promise & lt;Array & lt;Array & lt;number & gt; & gt; & gt;<br>ArkTS-Sta：Promise & lt;Array & lt;Array & lt;double & gt; & gt; & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) |
 
 **Examples**
 
@@ -138,24 +150,24 @@ loadModel(): Promise<void>
 
 Loads this text embedding model. If the loading fails, an error code is returned.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-TextEmbedding-loadModel(): Promise<void>--><!--Device-TextEmbedding-loadModel(): Promise<void>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) |
 
 **Examples**
 
@@ -191,24 +203,24 @@ releaseModel(): Promise<void>
 
 Releases this text embedding model. If the releasing fails, an error code is returned.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-TextEmbedding-releaseModel(): Promise<void>--><!--Device-TextEmbedding-releaseModel(): Promise<void>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) |
 
 **Examples**
 
@@ -235,4 +247,3 @@ imageEmbedding.releaseModel()
     console.error("Failed to release Model and code is " + err.code);
   })
 ```
-

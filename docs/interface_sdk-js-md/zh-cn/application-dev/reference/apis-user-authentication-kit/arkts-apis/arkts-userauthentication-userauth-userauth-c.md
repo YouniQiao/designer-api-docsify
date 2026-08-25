@@ -4,11 +4,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)
-
-<!--Device-userAuth-class UserAuth--><!--Device-userAuth-class UserAuth-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -33,30 +33,30 @@ auth(
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [start](arkts-userauthentication-userauth-authinstance-i.md#start)
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
-<!--Device-UserAuth-auth(      challenge: Uint8Array,      authType: UserAuthType,      authTrustLevel: AuthTrustLevel,      callback: IUserAuthCallback    ): Uint8Array--><!--Device-UserAuth-auth(      challenge: Uint8Array,      authType: UserAuthType,      authTrustLevel: AuthTrustLevel,      callback: IUserAuthCallback    ): Uint8Array-End-->
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| challenge | Uint8Array | 是 | 挑战值，可以传Uint8Array([])。 |
-| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | 是 | 认证类型，当前支持FACE和FINGERPRINT。 |
-| authTrustLevel | AuthTrustLevel | 是 | 认证信任等级。 |
-| callback | IUserAuthCallback | 是 | 回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| challenge | Uint8Array | 是 |
+| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | 是 |
+| authTrustLevel | [AuthTrustLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | 是 |
+| callback | [IUserAuthCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Uint8Array | ContextId，作为取消认证[cancelAuth]{ |
+| 类型 |
+| --- |
+| Uint8Array |
 
 **示例**
 
@@ -91,27 +91,27 @@ cancelAuth(contextID: Uint8Array): number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [cancel](arkts-userauthentication-userauth-authinstance-i.md#cancel)
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
-<!--Device-UserAuth-cancelAuth(contextID: Uint8Array): number--><!--Device-UserAuth-cancelAuth(contextID: Uint8Array): number-End-->
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| contextID | Uint8Array | 是 | 上下文的标识，通过[auth](#auth)接口获取。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| contextID | Uint8Array | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 取消认证的结果，结果为SUCCESS时表示取消成功，其他返回值参见[ResultCode]{ |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -139,11 +139,11 @@ constructor()
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md)
-
-<!--Device-UserAuth-constructor()--><!--Device-UserAuth-constructor()-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -165,28 +165,28 @@ getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLevel): numb
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md)
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
-<!--Device-UserAuth-getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLevel): number--><!--Device-UserAuth-getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLevel): number-End-->
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | 是 | 认证类型，当前支持FACE和FINGERPRINT。 |
-| authTrustLevel | AuthTrustLevel | 是 | 认证信任等级。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | 是 |
+| authTrustLevel | [AuthTrustLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 查询结果，结果为SUCCESS时表示支持，其他返回值参见[ResultCode]{ |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -223,19 +223,19 @@ getVersion(): number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
-
-<!--Device-UserAuth-getVersion(): number--><!--Device-UserAuth-getVersion(): number-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 认证器版本信息。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -246,4 +246,3 @@ let auth = new userAuth.UserAuth();
 let version = auth.getVersion();
 console.info(`auth version = ${version}`);
 ```
-

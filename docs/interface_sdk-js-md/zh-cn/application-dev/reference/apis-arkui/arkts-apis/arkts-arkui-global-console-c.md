@@ -4,7 +4,7 @@
 
 **起始版本：** 7
 
-<!--Device-unnamed-export declare class console--><!--Device-unnamed-export declare class console-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,24 +23,24 @@ static assert(value?: Object, ...arguments: Object[]): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-console-static assert(value?: Object, ...arguments: Object[]): void--><!--Device-console-static assert(value?: Object, ...arguments: Object[]): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Object | 否 | 语句结果值。若value为假（false）或者省略，则输出以"Assertion failed"开头。 如果value为真值（true），则无打印。 |
-| arguments | Object[] | 是 | value为假（false）的后续错误消息打印。省略则不打印。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | Object | 否 |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | Object[] | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## count
 
@@ -52,23 +52,23 @@ static count(label?: string): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-console-static count(label?: string): void--><!--Device-console-static count(label?: string): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| label | string | 否 | 计数器标签名。默认值为'default'。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| label | string | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## countReset
 
@@ -80,23 +80,23 @@ static countReset(label?: string): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-console-static countReset(label?: string): void--><!--Device-console-static countReset(label?: string): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| label | string | 否 | 计数器标签名。默认值为'default'。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| label | string | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## debug
 
@@ -108,20 +108,20 @@ static debug(message: string, ...arguments: any[]): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-console-static debug(message: string, ...arguments: any[]): void--><!--Device-console-static debug(message: string, ...arguments: any[]): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| message | string | 是 | 要打印的文本信息。 |
-| arguments | any[] | 是 | 其余要打印的信息或message的替换值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| message | string | 是 |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | any[] | 是 |
 
 ## dir
 
@@ -133,17 +133,17 @@ static dir(dir?: Object): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-console-static dir(dir?: Object): void--><!--Device-console-static dir(dir?: Object): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dir | Object | 否 | 需要打印内容的对象。省略则无任何打印。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [dir](#dir) | Object | 否 |
 
 ## dirxml
 
@@ -155,17 +155,17 @@ static dirxml(...arguments: Object[]): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-console-static dirxml(...arguments: Object[]): void--><!--Device-console-static dirxml(...arguments: Object[]): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| arguments | Object[] | 是 | 要打印的信息。省略则无任何打印。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | Object[] | 是 |
 
 ## error
 
@@ -177,20 +177,20 @@ static error(message: string, ...arguments: any[]): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-console-static error(message: string, ...arguments: any[]): void--><!--Device-console-static error(message: string, ...arguments: any[]): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| message | string | 是 | 要打印的错误信息。 |
-| arguments | any[] | 是 | 其余要打印的信息或message的替换值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| message | string | 是 |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | any[] | 是 |
 
 ## group
 
@@ -202,17 +202,17 @@ static group(...arguments: Object[]): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-console-static group(...arguments: Object[]): void--><!--Device-console-static group(...arguments: Object[]): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| arguments | Object[] | 是 | 要打印的信息。省略则仅打印两个空格。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | Object[] | 是 |
 
 ## groupCollapsed
 
@@ -224,17 +224,17 @@ static groupCollapsed(...arguments: Object[]): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-console-static groupCollapsed(...arguments: Object[]): void--><!--Device-console-static groupCollapsed(...arguments: Object[]): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| arguments | Object[] | 是 | 要打印的信息。省略则仅打印两个空格。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | Object[] | 是 |
 
 ## groupEnd
 
@@ -246,9 +246,9 @@ static groupEnd(): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-console-static groupEnd(): void--><!--Device-console-static groupEnd(): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -262,20 +262,20 @@ static info(message: string, ...arguments: any[]): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-console-static info(message: string, ...arguments: any[]): void--><!--Device-console-static info(message: string, ...arguments: any[]): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| message | string | 是 | 要打印的文本信息。 |
-| arguments | any[] | 是 | 其余要打印的信息或message的替换值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| message | string | 是 |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | any[] | 是 |
 
 ## log
 
@@ -287,20 +287,20 @@ static log(message: string, ...arguments: any[]): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-console-static log(message: string, ...arguments: any[]): void--><!--Device-console-static log(message: string, ...arguments: any[]): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| message | string | 是 | 要打印的文本信息。 |
-| arguments | any[] | 是 | 其余要打印的信息或message的替换值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| message | string | 是 |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | any[] | 是 |
 
 ## table
 
@@ -312,17 +312,17 @@ static table(tableData?: Object): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-console-static table(tableData?: Object): void--><!--Device-console-static table(tableData?: Object): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| tableData | Object | 否 | 要打印为表格形式的对象。省略则无任何打印。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| tableData | Object | 否 |
 
 ## time
 
@@ -334,23 +334,23 @@ static time(label?: string): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-console-static time(label?: string): void--><!--Device-console-static time(label?: string): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| label | string | 否 | 计时器标识。默认值为'default'。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| label | string | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## timeEnd
 
@@ -362,23 +362,23 @@ static timeEnd(label?: string): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-console-static timeEnd(label?: string): void--><!--Device-console-static timeEnd(label?: string): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| label | string | 否 | 计时器标识。默认值为'default'。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| label | string | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## timeLog
 
@@ -390,24 +390,24 @@ static timeLog(label?: string, ...arguments: Object[]): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-console-static timeLog(label?: string, ...arguments: Object[]): void--><!--Device-console-static timeLog(label?: string, ...arguments: Object[]): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| label | string | 否 | 计时器标识。默认值为'default'。 |
-| arguments | Object[] | 是 | 需要打印的其他日志。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| label | string | 否 |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | Object[] | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## trace
 
@@ -419,17 +419,17 @@ static trace(...arguments: Object[]): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-console-static trace(...arguments: Object[]): void--><!--Device-console-static trace(...arguments: Object[]): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| arguments | Object[] | 是 | 需要打印的其他日志。省略则仅打印堆栈信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | Object[] | 是 |
 
 ## traceHybridStack
 
@@ -441,9 +441,9 @@ static traceHybridStack(): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-console-static traceHybridStack(): void--><!--Device-console-static traceHybridStack(): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -457,18 +457,17 @@ static warn(message: string, ...arguments: any[]): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-console-static warn(message: string, ...arguments: any[]): void--><!--Device-console-static warn(message: string, ...arguments: any[]): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| message | string | 是 | 要打印的警告信息。 |
-| arguments | any[] | 是 | 其余要打印的信息或message的替换值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| message | string | 是 |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | any[] | 是 |

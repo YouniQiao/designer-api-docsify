@@ -2,9 +2,9 @@
 
 Enumerates the color modes.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-print-enum PrintColorMode--><!--Device-print-enum PrintColorMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -16,9 +16,9 @@ COLOR_MODE_MONOCHROME = 0
 
 Black and white.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintColorMode-COLOR_MODE_MONOCHROME = 0--><!--Device-PrintColorMode-COLOR_MODE_MONOCHROME = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -30,9 +30,8 @@ COLOR_MODE_COLOR = 1
 
 Color.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintColorMode-COLOR_MODE_COLOR = 1--><!--Device-PrintColorMode-COLOR_MODE_COLOR = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
-

@@ -1,8 +1,6 @@
 # Symbol
 
-**Since:** -1
-
-<!--Device-unnamed-interface Symbol--><!--Device-unnamed-interface Symbol-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,20 +15,18 @@
 
 Converts a Symbol object to a symbol.
 
-**Since:** -1
-
-<!--Device-Symbol-[Symbol.toPrimitive](hint: string): symbol--><!--Device-Symbol-[Symbol.toPrimitive](hint: string): symbol-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| hint | string | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| hint | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## [Symbol.toStringTag]
 
 ```TypeScript
@@ -39,7 +35,4 @@ readonly [Symbol.toStringTag]: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-Symbol-readonly [Symbol.toStringTag]: string--><!--Device-Symbol-readonly [Symbol.toStringTag]: string-End-->
-
+**ArkTS mode:** 

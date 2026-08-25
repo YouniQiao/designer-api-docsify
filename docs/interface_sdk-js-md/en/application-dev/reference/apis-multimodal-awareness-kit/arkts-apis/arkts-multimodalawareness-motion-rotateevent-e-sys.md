@@ -4,7 +4,7 @@ Enum for rotate event.
 
 **Since:** 26.0.0
 
-<!--Device-motion-export enum RotateEvent--><!--Device-motion-export enum RotateEvent-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -20,9 +20,9 @@ Indicates the device has rotated, but the movement is insufficient to change the
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-RotateEvent-UNCHANGED = -1--><!--Device-RotateEvent-UNCHANGED = -1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -38,9 +38,9 @@ Indicates the device is upright.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-RotateEvent-UPRIGHT = 0--><!--Device-RotateEvent-UPRIGHT = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -56,9 +56,9 @@ Indicates the device is rotated left.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-RotateEvent-LEFT = 1--><!--Device-RotateEvent-LEFT = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -74,9 +74,9 @@ Indicates the device is inverted.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-RotateEvent-INVERTED = 2--><!--Device-RotateEvent-INVERTED = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -92,11 +92,10 @@ Indicates the device is rotated right.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-RotateEvent-RIGHT = 3--><!--Device-RotateEvent-RIGHT = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **System API:** This is a system API.
-

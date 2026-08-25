@@ -7,11 +7,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColOptions and grid_row/GridRowOptions
-
-<!--Device-unnamed-declare interface GridContainerOptions--><!--Device-unnamed-declare interface GridContainerOptions-End-->
+**替代接口：** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,11 +32,11 @@ columns?: number | "auto"
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColOptions and grid_row/GridRowOptions
-
-<!--Device-GridContainerOptions-columns?: number | "auto"--><!--Device-GridContainerOptions-columns?: number | "auto"-End-->
+**替代接口：** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,11 +52,11 @@ gutter?: number | string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColOptions and grid_row/GridRowOptions
-
-<!--Device-GridContainerOptions-gutter?: number | string--><!--Device-GridContainerOptions-gutter?: number | string-End-->
+**替代接口：** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,11 @@ margin?: number | string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColOptions and grid_row/GridRowOptions
-
-<!--Device-GridContainerOptions-margin?: number | string--><!--Device-GridContainerOptions-margin?: number | string-End-->
+**替代接口：** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,11 +92,10 @@ sizeType?: SizeType
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColOptions and grid_row/GridRowOptions
-
-<!--Device-GridContainerOptions-sizeType?: SizeType--><!--Device-GridContainerOptions-sizeType?: SizeType-End-->
+**替代接口：** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

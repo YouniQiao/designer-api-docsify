@@ -8,11 +8,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md)
-
-<!--Device-bundle-export enum DisplayOrientation--><!--Device-bundle-export enum DisplayOrientation-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -26,11 +26,11 @@ UNSPECIFIED = 0
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [UNSPECIFIED](arkts-ability-bundlemanager-displayorientation-e.md#unspecified)
-
-<!--Device-DisplayOrientation-UNSPECIFIED = 0--><!--Device-DisplayOrientation-UNSPECIFIED = 0-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -42,11 +42,11 @@ LANDSCAPE = 1
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [LANDSCAPE](arkts-ability-bundlemanager-displayorientation-e.md#landscape)
-
-<!--Device-DisplayOrientation-LANDSCAPE = 1--><!--Device-DisplayOrientation-LANDSCAPE = 1-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -58,11 +58,11 @@ PORTRAIT = 2
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [PORTRAIT](arkts-ability-bundlemanager-displayorientation-e.md#portrait)
-
-<!--Device-DisplayOrientation-PORTRAIT = 2--><!--Device-DisplayOrientation-PORTRAIT = 2-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -74,11 +74,10 @@ FOLLOW_RECENT = 3
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [FOLLOW_RECENT](arkts-ability-bundlemanager-displayorientation-e.md#follow_recent)
 
-<!--Device-DisplayOrientation-FOLLOW_RECENT = 3--><!--Device-DisplayOrientation-FOLLOW_RECENT = 3-End-->
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework
-

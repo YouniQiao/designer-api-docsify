@@ -2,9 +2,9 @@
 
 动画完成后的回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-windowAnimationManager-export interface WindowAnimationFinishedCallback--><!--Device-windowAnimationManager-export interface WindowAnimationFinishedCallback-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -24,9 +24,9 @@ onAnimationFinish(): void
 
 结束本次动画。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-WindowAnimationFinishedCallback-onAnimationFinish(): void--><!--Device-WindowAnimationFinishedCallback-onAnimationFinish(): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -35,4 +35,3 @@ onAnimationFinish(): void
 **示例**
 
 请参考windowAnimationManager.setController的示例代码。
-

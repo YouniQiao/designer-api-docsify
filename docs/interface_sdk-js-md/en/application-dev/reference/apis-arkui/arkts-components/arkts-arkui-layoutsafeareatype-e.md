@@ -4,7 +4,7 @@ Enumerates the types for expanding layout safe areas.
 
 **Since:** 12
 
-<!--Device-unnamed-declare enum LayoutSafeAreaType--><!--Device-unnamed-declare enum LayoutSafeAreaType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,10 @@ Default non-safe area of the system, including the status bar and navigation bar
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-LayoutSafeAreaType-SYSTEM = 0--><!--Device-LayoutSafeAreaType-SYSTEM = 0-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 Target type.@enum { int }
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-mechanicManager-export enum TargetType--><!--Device-mechanicManager-export enum TargetType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -18,11 +18,10 @@ HUMAN_FACE = 0
 
 human Face type.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-TargetType-HUMAN_FACE = 0--><!--Device-TargetType-HUMAN_FACE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
-

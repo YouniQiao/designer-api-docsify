@@ -4,7 +4,7 @@ Describes visible area change configuration options.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface VisibleAreaEventOptions--><!--Device-unnamed-declare interface VisibleAreaEventOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,11 @@ Expected calculation interval, in ms. If the value is less than 100 or set to **
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-VisibleAreaEventOptions-expectedUpdateInterval?: number--><!--Device-VisibleAreaEventOptions-expectedUpdateInterval?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,11 +50,11 @@ Visible area calculation mode.
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-VisibleAreaEventOptions-measureFromViewport?: boolean--><!--Device-VisibleAreaEventOptions-measureFromViewport?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,11 +70,10 @@ Threshold array. Each threshold represents a ratio of the component's visible ar
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-VisibleAreaEventOptions-ratios: Array<number>--><!--Device-VisibleAreaEventOptions-ratios: Array<number>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

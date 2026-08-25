@@ -4,7 +4,7 @@ Defines the information carried when the system recording controller state chang
 
 **Since:** 26.0.0
 
-<!--Device-audio-interface SystemRecordControllerChangeInfo--><!--Device-audio-interface SystemRecordControllerChangeInfo-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -28,9 +28,9 @@ Whether the system recording controller panel is enabled. The value true means t
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-SystemRecordControllerChangeInfo-enabled: boolean--><!--Device-SystemRecordControllerChangeInfo-enabled: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -48,9 +48,9 @@ The expected audio source type configured by the application when enabling the r
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-SystemRecordControllerChangeInfo-sourceType?: SourceType--><!--Device-SystemRecordControllerChangeInfo-sourceType?: SourceType-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -64,15 +64,14 @@ uid?: int
 
 The UID of the application that triggers the system recording controller state change. The value range is all integers.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-SystemRecordControllerChangeInfo-uid?: int--><!--Device-SystemRecordControllerChangeInfo-uid?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
-

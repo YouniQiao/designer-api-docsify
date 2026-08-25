@@ -2,9 +2,9 @@
 
 Enumerates event types.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-hiAppEvent-enum EventType--><!--Device-hiAppEvent-enum EventType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -16,11 +16,11 @@ FAULT = 1
 
 Fault event.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EventType-FAULT = 1--><!--Device-EventType-FAULT = 1-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -32,11 +32,11 @@ STATISTIC = 2
 
 Statistic event.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EventType-STATISTIC = 2--><!--Device-EventType-STATISTIC = 2-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -48,11 +48,11 @@ SECURITY = 3
 
 Security event.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EventType-SECURITY = 3--><!--Device-EventType-SECURITY = 3-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -64,11 +64,10 @@ BEHAVIOR = 4
 
 Behavior event.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-EventType-BEHAVIOR = 4--><!--Device-EventType-BEHAVIOR = 4-End-->
-
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
-

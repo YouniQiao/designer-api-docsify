@@ -1,11 +1,8 @@
 # WeakSet
 
-**Since:** -1
-
-<!--Device-unnamed-interface WeakSet--><!--Device-unnamed-interface WeakSet-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
-

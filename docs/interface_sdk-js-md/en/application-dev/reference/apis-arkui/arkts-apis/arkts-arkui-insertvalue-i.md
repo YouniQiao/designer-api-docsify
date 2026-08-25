@@ -4,7 +4,7 @@ Defines the inserted text value info.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface InsertValue--><!--Device-unnamed-declare interface InsertValue-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Position of the inserted text.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-InsertValue-insertOffset: number--><!--Device-InsertValue-insertOffset: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ Content of the inserted text.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-InsertValue-insertValue: string--><!--Device-InsertValue-insertValue: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

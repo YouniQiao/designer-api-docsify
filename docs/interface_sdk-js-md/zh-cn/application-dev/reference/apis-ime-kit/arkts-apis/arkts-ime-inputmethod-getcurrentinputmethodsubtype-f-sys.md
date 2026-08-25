@@ -16,9 +16,9 @@ function getCurrentInputMethodSubtype(userId?: int): InputMethodSubtype
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-inputMethod-function getCurrentInputMethodSubtype(userId?: int): InputMethodSubtype--><!--Device-inputMethod-function getCurrentInputMethodSubtype(userId?: int): InputMethodSubtype-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -26,25 +26,25 @@ function getCurrentInputMethodSubtype(userId?: int): InputMethodSubtype
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| userId | int | 否 | 用户ID。取值范围为有效用户的ID。如果不提供： <br>- 如果调用者不是用户0的应用，该值默认为调用者的用户ID。 <br>- 如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | 返回当前输入法子类型对象。 |
+| 类型 |
+| --- |
+| [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
-| [12800023](../errorcode-inputmethod-framework.md#12800023-指定的用户不存在) | the specified user does not exist. |
-| [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) | the specified user is not in the foreground. |
-| [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800023](../errorcode-inputmethod-framework.md#12800023-指定的用户不存在) |
+| [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) |
+| [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) |
 
 **示例**
 
@@ -66,4 +66,3 @@ try {
   console.error(`Failed to getCurrentInputMethodSubtype. Code: ${error.code}, message: ${error.message}`);
 }
 ```
-

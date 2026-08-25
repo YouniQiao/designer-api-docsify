@@ -4,7 +4,7 @@ CanvasRenderingContext2D allows you to draw rectangles, text, images, and other 
 
 **Since:** 4
 
-<!--Device-unnamed-export interface CanvasRenderingContext2D--><!--Device-unnamed-export interface CanvasRenderingContext2D-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,22 +18,22 @@ Draws an arc on the canvas.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-arc(x: number, y: number, radius: number, startAngle: number, endAngle: number, counterclockwise?: boolean): void--><!--Device-CanvasRenderingContext2D-arc(x: number, y: number, radius: number, startAngle: number, endAngle: number, counterclockwise?: boolean): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | number | Yes | X-coordinate of the center point of the arc. |
-| y | number | Yes | Y-coordinate of the center point of the arc. |
-| radius | number | Yes | Radius of the arc. |
-| startAngle | number | Yes | Start radian of the arc. |
-| endAngle | number | Yes | End radian of the arc. |
-| counterclockwise | boolean | No | Whether to draw the arc counterclockwise. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | number | Yes |
+| y | number | Yes |
+| radius | number | Yes |
+| startAngle | number | Yes |
+| endAngle | number | Yes |
+| counterclockwise | boolean | No |
 
 ## arcTo
 
@@ -45,21 +45,21 @@ Draws an arc based on the radius and points on the arc.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-arcTo(x1: number, y1: number, x2: number, y2: number, radius: number): void--><!--Device-CanvasRenderingContext2D-arcTo(x1: number, y1: number, x2: number, y2: number, radius: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x1 | number | Yes | X-coordinate of the first point on the arc. |
-| y1 | number | Yes | Y-coordinate of the first point on the arc. |
-| x2 | number | Yes | X-coordinate of the second point on the arc. |
-| y2 | number | Yes | Y-coordinate of the second point on the arc. |
-| radius | number | Yes | Radius of the arc. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x1 | number | Yes |
+| y1 | number | Yes |
+| x2 | number | Yes |
+| y2 | number | Yes |
+| radius | number | Yes |
 
 ## beginPath
 
@@ -71,9 +71,9 @@ Creates a drawing path.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-beginPath(): void--><!--Device-CanvasRenderingContext2D-beginPath(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -87,22 +87,22 @@ Draws a cubic bezier curve on the canvas.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-bezierCurveTo(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number, y: number): void--><!--Device-CanvasRenderingContext2D-bezierCurveTo(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number, y: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| cp1x | number | Yes | X-coordinate of the first parameter of the bezier curve. |
-| cp1y | number | Yes | Y-coordinate of the first parameter of the bezier curve. |
-| cp2x | number | Yes | X-coordinate of the second parameter of the bezier curve. |
-| cp2y | number | Yes | Y-coordinate of the second parameter of the bezier curve. |
-| x | number | Yes | End point x-coordinate of the bezier curve. |
-| y | number | Yes | End point y-coordinate of the bezier curve. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| cp1x | number | Yes |
+| cp1y | number | Yes |
+| cp2x | number | Yes |
+| cp2y | number | Yes |
+| x | number | Yes |
+| y | number | Yes |
 
 ## clearRect
 
@@ -114,20 +114,20 @@ Clears the content in a rectangle on the canvas.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-clearRect(x: number, y: number, width: number, height: number): void--><!--Device-CanvasRenderingContext2D-clearRect(x: number, y: number, width: number, height: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | number | Yes | X-coordinate of the upper left corner of the rectangle. |
-| y | number | Yes | Y-coordinate of the upper left corner of the rectangle. |
-| width | number | Yes | Width of the rectangle. |
-| height | number | Yes | Height of the rectangle. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | number | Yes |
+| y | number | Yes |
+| width | number | Yes |
+| height | number | Yes |
 
 ## clip
 
@@ -139,9 +139,9 @@ Sets a path as the clipping path.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-clip(): void--><!--Device-CanvasRenderingContext2D-clip(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -155,9 +155,9 @@ Draws a closed path.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-closePath(): void--><!--Device-CanvasRenderingContext2D-closePath(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -171,24 +171,24 @@ Creates an ImageData object.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-createImageData(width: number, height: number): ImageData--><!--Device-CanvasRenderingContext2D-createImageData(width: number, height: number): ImageData-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| width | number | Yes | Width of the ImageData object. |
-| height | number | Yes | Height of the ImageData object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| width | number | Yes |
+| height | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageData | Returns the newly created FunctionCallable object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) |
 
 ## createImageData
 
@@ -200,23 +200,23 @@ Creates an ImageData object.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-createImageData(imageData: ImageData): ImageData--><!--Device-CanvasRenderingContext2D-createImageData(imageData: ImageData): ImageData-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| imageData | ImageData | Yes | ImageData object with the same width and height copied from the original ImageData object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageData | Returns the newly created FunctionCallable object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) |
 
 ## createLinearGradient
 
@@ -228,26 +228,26 @@ Creates a linear gradient color.
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-CanvasRenderingContext2D-createLinearGradient(x0: number, y0: number, x1: number, y1: number): CanvasGradient--><!--Device-CanvasRenderingContext2D-createLinearGradient(x0: number, y0: number, x1: number, y1: number): CanvasGradient-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x0 | number | Yes | X-coordinate of the start point. |
-| y0 | number | Yes | Y-coordinate of the start point. |
-| x1 | number | Yes | X-coordinate of the end point. |
-| y1 | number | Yes | Y-coordinate of the end point. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x0 | number | Yes |
+| y0 | number | Yes |
+| x1 | number | Yes |
+| y1 | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) | LinearGradient object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) |
 
 ## createPath2D
 
@@ -259,23 +259,23 @@ Creates a path that is later used by the CanvasRenderingContext2D object.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-createPath2D(path?: Path2D): Path2D--><!--Device-CanvasRenderingContext2D-createPath2D(path?: Path2D): Path2D-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | No | another created Path2D object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Path2D](arkts-arkui-viewmodel-path2d-i.md) | the object of Path2D. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Path2D](arkts-arkui-viewmodel-path2d-i.md) |
 
 ## createPath2D
 
@@ -287,23 +287,23 @@ Creates a path that is later used by the CanvasRenderingContext2D object.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-createPath2D(cmds?: string): Path2D--><!--Device-CanvasRenderingContext2D-createPath2D(cmds?: string): Path2D-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| cmds | string | No | a string defined using the SVG path command. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| cmds | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Path2D](arkts-arkui-viewmodel-path2d-i.md) | the object of Path2D. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Path2D](arkts-arkui-viewmodel-path2d-i.md) |
 
 ## createPattern
 
@@ -315,24 +315,24 @@ Creates a pattern for image filling based on a specified source image and repeti
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-createPattern(image: Image, repetition: string): object--><!--Device-CanvasRenderingContext2D-createPattern(image: Image, repetition: string): object-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| image | Image | Yes | Source image. |
-| repetition | string | Yes | Repetition mode. The value can be "repeat", "repeat-x", "repeat-y", or "no-repeat". |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes |
+| repetition | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| object | Pattern of image filling. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| object |
 
 ## createRadialGradient
 
@@ -344,28 +344,28 @@ Creates a radial gradient color.
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-CanvasRenderingContext2D-createRadialGradient(x0: number, y0: number, r0: number, x1: number, y1: number, r1: number): CanvasGradient--><!--Device-CanvasRenderingContext2D-createRadialGradient(x0: number, y0: number, r0: number, x1: number, y1: number, r1: number): CanvasGradient-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x0 | number | Yes | X-coordinate of the start point. |
-| y0 | number | Yes | Y-coordinate of the start point. |
-| r0 | number | Yes | The radius of the starting circle. |
-| x1 | number | Yes | X-coordinate of the end point. |
-| y1 | number | Yes | Y-coordinate of the end point. |
-| r1 | number | Yes | The radius of End Circle. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x0 | number | Yes |
+| y0 | number | Yes |
+| r0 | number | Yes |
+| x1 | number | Yes |
+| y1 | number | Yes |
+| r1 | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) | RadialGradient object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) |
 
 ## drawImage
 
@@ -377,21 +377,21 @@ Draws an image.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-drawImage(image: Image, dx: number, dy: number, dWidth: number, dHeight: number): void--><!--Device-CanvasRenderingContext2D-drawImage(image: Image, dx: number, dy: number, dWidth: number, dHeight: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| image | Image | Yes | Image resource. |
-| dx | number | Yes | X-coordinate of the upper left corner of the drawing area on the canvas. |
-| dy | number | Yes | Y-coordinate of the upper left corner of the drawing area on the canvas. |
-| dWidth | number | Yes | Width of the drawing area. |
-| dHeight | number | Yes | Height of the drawing area. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes |
+| dx | number | Yes |
+| dy | number | Yes |
+| dWidth | number | Yes |
+| dHeight | number | Yes |
 
 ## drawImage
 
@@ -413,25 +413,25 @@ Draws an image.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-drawImage(    image: Image,    sx: number,    sy: number,    sWidth: number,    sHeight: number,    dx: number,    dy: number,    dWidth: number,    dHeight: number,  ): void--><!--Device-CanvasRenderingContext2D-drawImage(    image: Image,    sx: number,    sy: number,    sWidth: number,    sHeight: number,    dx: number,    dy: number,    dWidth: number,    dHeight: number,  ): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| image | Image | Yes | Image resource. |
-| sx | number | Yes | X-coordinate of the upper left corner of the rectangle used to crop the source image. |
-| sy | number | Yes | Y-coordinate of the upper left corner of the rectangle used to crop the source image. |
-| sWidth | number | Yes | Target width of the image to crop. |
-| sHeight | number | Yes | Target height of the image to crop. |
-| dx | number | Yes | X-coordinate of the upper left corner of the drawing area on the canvas. |
-| dy | number | Yes | Y-coordinate of the upper left corner of the drawing area on the canvas. |
-| dWidth | number | Yes | Width of the drawing area. |
-| dHeight | number | Yes | Height of the drawing area. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes |
+| sx | number | Yes |
+| sy | number | Yes |
+| sWidth | number | Yes |
+| sHeight | number | Yes |
+| dx | number | Yes |
+| dy | number | Yes |
+| dWidth | number | Yes |
+| dHeight | number | Yes |
 
 ## drawImage
 
@@ -443,21 +443,21 @@ Draws an image.
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-CanvasRenderingContext2D-drawImage(image: image.PixelMap, dx: number, dy: number, dWidth: number, dHeight: number): void--><!--Device-CanvasRenderingContext2D-drawImage(image: image.PixelMap, dx: number, dy: number, dWidth: number, dHeight: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| image | image.PixelMap | Yes | Image resource. |
-| dx | number | Yes | X-coordinate of the upper left corner of the drawing area on the canvas. |
-| dy | number | Yes | Y-coordinate of the upper left corner of the drawing area on the canvas. |
-| dWidth | number | Yes | Width of the drawing area. |
-| dHeight | number | Yes | Height of the drawing area. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) | image.PixelMap | Yes |
+| dx | number | Yes |
+| dy | number | Yes |
+| dWidth | number | Yes |
+| dHeight | number | Yes |
 
 ## drawImage
 
@@ -479,25 +479,25 @@ Draws an image.
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-CanvasRenderingContext2D-drawImage(    image: image.PixelMap,    sx: number,    sy: number,    sWidth: number,    sHeight: number,    dx: number,    dy: number,    dWidth: number,    dHeight: number,  ): void--><!--Device-CanvasRenderingContext2D-drawImage(    image: image.PixelMap,    sx: number,    sy: number,    sWidth: number,    sHeight: number,    dx: number,    dy: number,    dWidth: number,    dHeight: number,  ): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| image | image.PixelMap | Yes | Image resource. |
-| sx | number | Yes | X-coordinate of the upper left corner of the rectangle used to crop the source image. |
-| sy | number | Yes | Y-coordinate of the upper left corner of the rectangle used to crop the source image. |
-| sWidth | number | Yes | Target width of the image to crop. |
-| sHeight | number | Yes | Target height of the image to crop. |
-| dx | number | Yes | X-coordinate of the upper left corner of the drawing area on the canvas. |
-| dy | number | Yes | Y-coordinate of the upper left corner of the drawing area on the canvas. |
-| dWidth | number | Yes | Width of the drawing area. |
-| dHeight | number | Yes | Height of the drawing area. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) | image.PixelMap | Yes |
+| sx | number | Yes |
+| sy | number | Yes |
+| sWidth | number | Yes |
+| sHeight | number | Yes |
+| dx | number | Yes |
+| dy | number | Yes |
+| dWidth | number | Yes |
+| dHeight | number | Yes |
 
 ## ellipse
 
@@ -518,24 +518,24 @@ Draws an ellipse based on the coordinate and radius.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-ellipse(    x: number,    y: number,    radiusX: number,    radiusY: number,    rotation: number,    startAngle: number,    endAngle: number,    counterclockwise?: number,  ): void--><!--Device-CanvasRenderingContext2D-ellipse(    x: number,    y: number,    radiusX: number,    radiusY: number,    rotation: number,    startAngle: number,    endAngle: number,    counterclockwise?: number,  ): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | number | Yes | X-coordinate of the center point on the ellipse. |
-| y | number | Yes | Y-coordinate of the center point on the ellipse. |
-| radiusX | number | Yes | X-coordinate of the radius Length on the ellipse. |
-| radiusY | number | Yes | Y-coordinate of the radius Length on the ellipse. |
-| rotation | number | Yes | The rotation angle of the ellipse, in radians. |
-| startAngle | number | Yes | Angle of the start point for ellipse drawing. |
-| endAngle | number | Yes | End Point Angle for Ellipse Drawing. |
-| counterclockwise | number | No | Indicates whether to draw an ellipse counterclockwise. 0: clockwise; 1: counterclockwise. The default value is 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | number | Yes |
+| y | number | Yes |
+| radiusX | number | Yes |
+| radiusY | number | Yes |
+| rotation | number | Yes |
+| startAngle | number | Yes |
+| endAngle | number | Yes |
+| counterclockwise | number | No |
 
 ## fill
 
@@ -547,9 +547,9 @@ Fills the area inside a closed path.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-fill(): void--><!--Device-CanvasRenderingContext2D-fill(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -563,20 +563,20 @@ Fills a rectangle on the canvas.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-fillRect(x: number, y: number, width: number, height: number): void--><!--Device-CanvasRenderingContext2D-fillRect(x: number, y: number, width: number, height: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | number | Yes | X-coordinate of the upper left corner of the rectangle. |
-| y | number | Yes | Y-coordinate of the upper left corner of the rectangle. |
-| width | number | Yes | Width of the rectangle. |
-| height | number | Yes | Height of the rectangle. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | number | Yes |
+| y | number | Yes |
+| width | number | Yes |
+| height | number | Yes |
 
 ## fillText
 
@@ -588,19 +588,19 @@ Draws filled text on the canvas.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-fillText(text: string, x: number, y: number): void--><!--Device-CanvasRenderingContext2D-fillText(text: string, x: number, y: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| text | string | Yes | Text to draw. |
-| x | number | Yes | X-coordinate of the lower left corner of the text. |
-| y | number | Yes | Y-coordinate of the lower left corner of the text. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| text | string | Yes |
+| x | number | Yes |
+| y | number | Yes |
 
 ## getImageData
 
@@ -612,26 +612,26 @@ ImageData object created with pixels in the specified area on the canvas.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-getImageData(sx: number, sy: number, sw: number, sh: number): ImageData--><!--Device-CanvasRenderingContext2D-getImageData(sx: number, sy: number, sw: number, sh: number): ImageData-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sx | number | Yes | X-coordinate of the upper left corner of the output area. |
-| sy | number | Yes | Y-coordinate of the upper left corner of the output area. |
-| sw | number | Yes | Width of the output area. |
-| sh | number | Yes | Height of the output area. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sx | number | Yes |
+| sy | number | Yes |
+| sw | number | Yes |
+| sh | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageData | ImageData object that contains pixels in the specified area on the canvas. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) |
 
 ## getLineDash
 
@@ -643,17 +643,17 @@ Obtains the dash line style.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-getLineDash(): Array<number>--><!--Device-CanvasRenderingContext2D-getLineDash(): Array<number>-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;number&gt; | Interval of alternate line segments and the length of spacing. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;number & gt; |
 
 ## getPixelMap
 
@@ -665,26 +665,26 @@ Get an PixelMap object.
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-CanvasRenderingContext2D-getPixelMap(sx: number, sy: number, sw: number, sh: number): image.PixelMap--><!--Device-CanvasRenderingContext2D-getPixelMap(sx: number, sy: number, sw: number, sh: number): image.PixelMap-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sx | number | Yes | The upper-left x-coordinate of the rectangular area of the image data to be extracted. |
-| sy | number | Yes | The upper-left y coordinate of the rectangular region of the image data to be extracted. |
-| sw | number | Yes | The width of the rectangular area of the image data to be extracted. |
-| sh | number | Yes | The height of the rectangular area of the image data to be extracted. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sx | number | Yes |
+| sy | number | Yes |
+| sw | number | Yes |
+| sh | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| image.PixelMap | PixelMap A PixelMap object that contains the rectangular ImageData given by the canvas. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| image.PixelMap |
 
 ## lineTo
 
@@ -696,18 +696,18 @@ Connects the current point to a target position using a straight line.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-lineTo(x: number, y: number): void--><!--Device-CanvasRenderingContext2D-lineTo(x: number, y: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | number | Yes | X-coordinate of the target position. |
-| y | number | Yes | Y-coordinate of the target position. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | number | Yes |
+| y | number | Yes |
 
 ## measureText
 
@@ -719,23 +719,23 @@ Returns a TextMetrics object used to obtain the width of specified text.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-measureText(text: string): TextMetrics--><!--Device-CanvasRenderingContext2D-measureText(text: string): TextMetrics-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| text | string | Yes | Text to be measured. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| text | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [TextMetrics](arkts-arkui-viewmodel-textmetrics-i.md) | Object that contains the text width. You can obtain the width by TextMetrics.width. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [TextMetrics](arkts-arkui-viewmodel-textmetrics-i.md) |
 
 ## moveTo
 
@@ -747,18 +747,18 @@ Moves a drawing path to a target position on the canvas.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-moveTo(x: number, y: number): void--><!--Device-CanvasRenderingContext2D-moveTo(x: number, y: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | number | Yes | X-coordinate of the target position. |
-| y | number | Yes | Y-coordinate of the target position. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | number | Yes |
+| y | number | Yes |
 
 ## putImageData
 
@@ -770,19 +770,19 @@ Puts the ImageData onto a rectangular area on the canvas.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-putImageData(imageData: ImageData, dx: number, dy: number): void--><!--Device-CanvasRenderingContext2D-putImageData(imageData: ImageData, dx: number, dy: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| imageData | ImageData | Yes | ImageData object with pixels to put onto the canvas. |
-| dx | number | Yes | X-axis offset of the rectangle area on the canvas. |
-| dy | number | Yes | Y-axis offset of the rectangle area on the canvas. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes |
+| dx | number | Yes |
+| dy | number | Yes |
 
 ## putImageData
 
@@ -802,23 +802,23 @@ Puts the ImageData onto a rectangular area on the canvas.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-putImageData(    imageData: ImageData,    dx: number,    dy: number,    dirtyX: number,    dirtyY: number,    dirtyWidth: number,    dirtyHeight: number,  ): void--><!--Device-CanvasRenderingContext2D-putImageData(    imageData: ImageData,    dx: number,    dy: number,    dirtyX: number,    dirtyY: number,    dirtyWidth: number,    dirtyHeight: number,  ): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| imageData | ImageData | Yes | ImageData object with pixels to put onto the canvas. |
-| dx | number | Yes | X-axis offset of the rectangle area on the canvas. |
-| dy | number | Yes | Y-axis offset of the rectangle area on the canvas. |
-| dirtyX | number | Yes | X-axis offset of the upper left corner of the rectangle area relative to that of the source image. |
-| dirtyY | number | Yes | Y-axis offset of the upper left corner of the rectangle area relative to that of the source image. |
-| dirtyWidth | number | Yes | Width of the rectangle area to cop the source image. |
-| dirtyHeight | number | Yes | Height of the rectangle area to cop the source image. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes |
+| dx | number | Yes |
+| dy | number | Yes |
+| dirtyX | number | Yes |
+| dirtyY | number | Yes |
+| dirtyWidth | number | Yes |
+| dirtyHeight | number | Yes |
 
 ## quadraticCurveTo
 
@@ -830,20 +830,20 @@ Draws a quadratic curve on the canvas.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-quadraticCurveTo(cpx: number, cpy: number, x: number, y: number): void--><!--Device-CanvasRenderingContext2D-quadraticCurveTo(cpx: number, cpy: number, x: number, y: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| cpx | number | Yes | X-coordinate of the bezier curve parameter. |
-| cpy | number | Yes | Y-coordinate of the bezier curve parameter. |
-| x | number | Yes | End point x-coordinate of the bezier curve. |
-| y | number | Yes | End point y-coordinate of the bezier curve. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| cpx | number | Yes |
+| cpy | number | Yes |
+| x | number | Yes |
+| y | number | Yes |
 
 ## rect
 
@@ -855,20 +855,36 @@ Creates a rectangular.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-rect(x: number, y: number, width: number, height: number): void--><!--Device-CanvasRenderingContext2D-rect(x: number, y: number, width: number, height: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | number | Yes | X-coordinate of the upper left corner of the rectangle. |
-| y | number | Yes | Y-coordinate of the upper left corner of the rectangle. |
-| width | number | Yes | Width of the rectangle. |
-| height | number | Yes | Height of the rectangle. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | number | Yes |
+| y | number | Yes |
+| width | number | Yes |
+| height | number | Yes |
+
+## restore
+
+```TypeScript
+restore: () => void
+```
+
+Restores the saved drawing context.
+
+**Since:** 4
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
+
+**Model restriction:** This API can be used only in the FA model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## rotate
 
@@ -880,17 +896,33 @@ Rotates a canvas clockwise around its coordinate axes.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-rotate(rotate: number): void--><!--Device-CanvasRenderingContext2D-rotate(rotate: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rotate | number | Yes | Clockwise rotation angle. You can use Math.PI / 180 to convert the angle to radian. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [rotate](#rotate) | number | Yes |
+
+## save
+
+```TypeScript
+save: () => void
+```
+
+Saves the current drawing context.
+
+**Since:** 4
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
+
+**Model restriction:** This API can be used only in the FA model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## scale
 
@@ -902,18 +934,18 @@ Scales a canvas based on scaling factors.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-scale(x: number, y: number): void--><!--Device-CanvasRenderingContext2D-scale(x: number, y: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | number | Yes | Horizontal scale factor. |
-| y | number | Yes | Vertical scale factor. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | number | Yes |
+| y | number | Yes |
 
 ## setLineDash
 
@@ -925,17 +957,17 @@ Sets the dash line style.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-setLineDash(segments: Array<number>): void--><!--Device-CanvasRenderingContext2D-setLineDash(segments: Array<number>): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| segments | Array&lt;number&gt; | Yes | Interval of alternate line segments and the length of spacing. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| segments | Array & lt;number & gt; | Yes |
 
 ## setTransform
 
@@ -954,22 +986,22 @@ Uses same parameters as the transform() function to reset the existing transform
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-setTransform(    scaleX: number,    skewX: number,    skewY: number,    scaleY: number,    translateX: number,    translateY: number,  ): void--><!--Device-CanvasRenderingContext2D-setTransform(    scaleX: number,    skewX: number,    skewY: number,    scaleY: number,    translateX: number,    translateY: number,  ): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| scaleX | number | Yes | X-axis scale. |
-| skewX | number | Yes | X-axis skew. |
-| skewY | number | Yes | Y-axis skew. |
-| scaleY | number | Yes | Y-axis scale. |
-| translateX | number | Yes | X-axis translation. |
-| translateY | number | Yes | Y-axis translation. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| scaleX | number | Yes |
+| [skewX](arkts-arkui-viewmodel-transformobject-i.md) | number | Yes |
+| [skewY](arkts-arkui-viewmodel-transformobject-i.md) | number | Yes |
+| scaleY | number | Yes |
+| translateX | number | Yes |
+| translateY | number | Yes |
 
 ## stroke
 
@@ -981,9 +1013,9 @@ Draws a border stroke.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-stroke(): void--><!--Device-CanvasRenderingContext2D-stroke(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -997,17 +1029,17 @@ Draws a path stroke.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-stroke(path: Path2D): void--><!--Device-CanvasRenderingContext2D-stroke(path: Path2D): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | Yes | The object of Path2D. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | Yes |
 
 ## strokeRect
 
@@ -1019,20 +1051,20 @@ Draws a rectangle stroke on the canvas.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-strokeRect(x: number, y: number, width: number, height: number): void--><!--Device-CanvasRenderingContext2D-strokeRect(x: number, y: number, width: number, height: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | number | Yes | X-coordinate of the upper left corner of the rectangle stroke. |
-| y | number | Yes | Y-coordinate of the upper left corner of the rectangle stroke. |
-| width | number | Yes | Width of the rectangle stroke. |
-| height | number | Yes | Height of the rectangle stroke. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | number | Yes |
+| y | number | Yes |
+| width | number | Yes |
+| height | number | Yes |
 
 ## strokeText
 
@@ -1044,19 +1076,19 @@ Draws a text stroke on the canvas.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-strokeText(text: string, x: number, y: number): void--><!--Device-CanvasRenderingContext2D-strokeText(text: string, x: number, y: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| text | string | Yes | Text stroke to draw. |
-| x | number | Yes | X-coordinate of the lower left corner of the text stroke. |
-| y | number | Yes | Y-coordinate of the lower left corner of the text stroke. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| text | string | Yes |
+| x | number | Yes |
+| y | number | Yes |
 
 ## transferFromImageBitmap
 
@@ -1068,17 +1100,17 @@ Draws the Bitmap to the current canvas.
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-CanvasRenderingContext2D-transferFromImageBitmap(bitmap: ImageBitmap): void--><!--Device-CanvasRenderingContext2D-transferFromImageBitmap(bitmap: ImageBitmap): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bitmap | ImageBitmap | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bitmap | [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) | Yes |
 
 ## transform
 
@@ -1090,22 +1122,22 @@ Defines a transformation matrix. To transform a graph, you only need to set para
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-transform(scaleX: number, skewX: number, skewY: number, scaleY: number, translateX: number, translateY: number): void--><!--Device-CanvasRenderingContext2D-transform(scaleX: number, skewX: number, skewY: number, scaleY: number, translateX: number, translateY: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| scaleX | number | Yes | X-axis scale. |
-| skewX | number | Yes | X-axis skew. |
-| skewY | number | Yes | Y-axis skew. |
-| scaleY | number | Yes | Y-axis scale. |
-| translateX | number | Yes | X-axis translation. |
-| translateY | number | Yes | Y-axis translation. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| scaleX | number | Yes |
+| [skewX](arkts-arkui-viewmodel-transformobject-i.md) | number | Yes |
+| [skewY](arkts-arkui-viewmodel-transformobject-i.md) | number | Yes |
+| scaleY | number | Yes |
+| translateX | number | Yes |
+| translateY | number | Yes |
 
 ## translate
 
@@ -1117,18 +1149,18 @@ Moves the origin of the coordinate system.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-translate(x: number, y: number): void--><!--Device-CanvasRenderingContext2D-translate(x: number, y: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | number | Yes | X-axis translation. |
-| y | number | Yes | Y-axis translation. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | number | Yes |
+| y | number | Yes |
 
 ## fillStyle
 
@@ -1142,9 +1174,9 @@ Sets the style of a paint to fill an area. Paint color used to fill the area. Ca
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-fillStyle?: string | CanvasGradient | CanvasPattern--><!--Device-CanvasRenderingContext2D-fillStyle?: string | CanvasGradient | CanvasPattern-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1160,9 +1192,9 @@ Sets the font style. Font style. The default value is 10px sans-serif in tv, pho
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-font: string--><!--Device-CanvasRenderingContext2D-font: string-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1178,9 +1210,9 @@ Sets the alpha value. Global alpha value to set. The value ranges from 0.0 (comp
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-globalAlpha: number--><!--Device-CanvasRenderingContext2D-globalAlpha: number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1196,9 +1228,9 @@ Sets the composite operation type. source-over Default value. Displays the new d
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-globalCompositeOperation: string--><!--Device-CanvasRenderingContext2D-globalCompositeOperation: string-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1214,9 +1246,9 @@ Sets whether an image is smooth. default value is true.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-imageSmoothingEnabled: boolean--><!--Device-CanvasRenderingContext2D-imageSmoothingEnabled: boolean-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1232,9 +1264,9 @@ Sets the style of line endpoints. Style of line endpoints. Available values incl
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-lineCap: string--><!--Device-CanvasRenderingContext2D-lineCap: string-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1250,9 +1282,9 @@ Sets the dash line offset. Dash line offset. The value is a float number startin
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-lineDashOffset: number--><!--Device-CanvasRenderingContext2D-lineDashOffset: number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1268,9 +1300,9 @@ Sets the style for an intersection point where a line joins another. Style of th
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-lineJoin: string--><!--Device-CanvasRenderingContext2D-lineJoin: string-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1286,9 +1318,9 @@ Sets the width of a line.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-lineWidth?: number--><!--Device-CanvasRenderingContext2D-lineWidth?: number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1304,45 +1336,9 @@ Sets the maximum miter length. The miter length is the distance between the inne
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-CanvasRenderingContext2D-miterLimit: number--><!--Device-CanvasRenderingContext2D-miterLimit: number-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## restore
-
-```TypeScript
-restore: () => void
-```
-
-Restores the saved drawing context.
-
-**Type:** () =&gt; void
-
-**Since:** 4
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-CanvasRenderingContext2D-restore: () => void--><!--Device-CanvasRenderingContext2D-restore: () => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## save
-
-```TypeScript
-save: () => void
-```
-
-Saves the current drawing context.
-
-**Type:** () =&gt; void
-
-**Since:** 4
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-CanvasRenderingContext2D-save: () => void--><!--Device-CanvasRenderingContext2D-save: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1358,9 +1354,9 @@ Sets the shadow blur degree. Shadow blur degree. A larger value indicates a more
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-shadowBlur: number--><!--Device-CanvasRenderingContext2D-shadowBlur: number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1376,9 +1372,9 @@ Sets the shadow color.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-shadowColor: string--><!--Device-CanvasRenderingContext2D-shadowColor: string-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1394,9 +1390,9 @@ Sets the x-axis shadow offset relative to the original object. X-axis shadow off
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-shadowOffsetX: number--><!--Device-CanvasRenderingContext2D-shadowOffsetX: number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1412,9 +1408,9 @@ Sets the y-axis shadow offset relative to the original object. Y-axis shadow off
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-shadowOffsetY: number--><!--Device-CanvasRenderingContext2D-shadowOffsetY: number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1430,9 +1426,9 @@ Sets the stroke paint style. Color of the stroke paint. Canvas gradient object u
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-strokeStyle?: string | CanvasGradient | CanvasPattern--><!--Device-CanvasRenderingContext2D-strokeStyle?: string | CanvasGradient | CanvasPattern-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1448,9 +1444,9 @@ Sets the text alignment mode. Text alignment mode. Available values include: lef
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CanvasRenderingContext2D-textAlign: "left" | "right" | "center" | "start" | "end"--><!--Device-CanvasRenderingContext2D-textAlign: "left" | "right" | "center" | "start" | "end"-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1466,9 +1462,8 @@ Sets a text baseline in the horizontal direction for text alignment. Text baseli
 
 **Since:** 4
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-CanvasRenderingContext2D-textBaseline: string--><!--Device-CanvasRenderingContext2D-textBaseline: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -15,9 +15,9 @@ Grants tool permissions based on user authorization results. This function grant
 
 **Since:** 26.0.0
 
-**Required permissions:** ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-abilityToolAccessCtrl-export function grantToolPermissionsByUser(userAuthResult: UserAuthResult[]): Promise<TicketInfo[]>--><!--Device-abilityToolAccessCtrl-export function grantToolPermissionsByUser(userAuthResult: UserAuthResult[]): Promise<TicketInfo[]>-End-->
+**Required permissions:** ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -25,26 +25,25 @@ Grants tool permissions based on user authorization results. This function grant
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| userAuthResult | UserAuthResult[] | Yes | User authorization result list. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| userAuthResult | [UserAuthResult[]](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-userauthresult-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[TicketInfo](arkts-ability-abilitytoolaccessctrl-ticketinfo-i-sys.md)[]&gt; | Promise used to return \\${TicketInfo[]}. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[TicketInfo](arkts-ability-abilitytoolaccessctrl-ticketinfo-i-sys.md)[]&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denial. The interface caller does not have permission "ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS". |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| 24010000 | Invalid parameter. PermissionName exceeds 256 characters, permissionStatus is invalid, etc. |
-| 24010001 | Service is abnormal. Possible cause: IPC failed. |
-| 24010002 | Common internal error. Possible cause: dependent service unavailable, resource access failure, etc. |
-| 24010003 | The account is not logged in, network is unavailable, timeout, etc. |
-| 24010004 | Invalid permission. A permission in permissionInfo does not exist. |
-| 24010005 | Grant permission failed. The application specified by the tokenID is not allowed to be granted with the specified permission, the specified permission cannot be granted by user, etc. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 24010000 |
+| 24010001 |
+| 24010002 |
+| 24010003 |
+| 24010004 |
+| 24010005 |

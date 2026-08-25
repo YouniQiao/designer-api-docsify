@@ -4,9 +4,7 @@ The AutoAdComponent module provides the capability of displaying carousel ads.
 
 **Since:** 11
 
-**Decorator:** @Component
-
-<!--Device-unnamed-declare struct AutoAdComponent--><!--Device-unnamed-declare struct AutoAdComponent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -26,9 +24,9 @@ A constructor used to create an **AutoAdComponent** object.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-AutoAdComponent-build(): void--><!--Device-AutoAdComponent-build(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -44,9 +42,9 @@ Ad configuration options.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-AutoAdComponent-adOptions: advertising.AdOptions--><!--Device-AutoAdComponent-adOptions: advertising.AdOptions-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -62,9 +60,9 @@ Ad request parameters.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-AutoAdComponent-adParam: advertising.AdRequestParams--><!--Device-AutoAdComponent-adParam: advertising.AdRequestParams-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -80,9 +78,9 @@ Ad display parameters.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-AutoAdComponent-displayOptions: advertising.AdDisplayOptions--><!--Device-AutoAdComponent-displayOptions: advertising.AdDisplayOptions-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -98,9 +96,9 @@ Ad status change callback.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-AutoAdComponent-interactionListener: advertising.AdInteractionListener--><!--Device-AutoAdComponent-interactionListener: advertising.AdInteractionListener-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -233,4 +231,3 @@ struct Index {
   }
 }
 ```
-

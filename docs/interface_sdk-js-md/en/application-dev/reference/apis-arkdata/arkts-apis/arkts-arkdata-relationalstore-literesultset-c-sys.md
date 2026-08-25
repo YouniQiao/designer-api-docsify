@@ -7,7 +7,7 @@ Defines APIs to access the result set obtained by querying the RDB store. This r
 
 **Since:** 23
 
-<!--Device-relationalStore-class LiteResultSet--><!--Device-relationalStore-class LiteResultSet-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -19,6 +19,12 @@ import { relationalStore } from '@kit.ArkData';
 
 ## getFloat32Array
 
+ArkTS-Dyn:
+```TypeScript
+getFloat32Array(columnIndex: number): Float32Array
+```
+
+ArkTS-Sta:
 ```TypeScript
 getFloat32Array(columnIndex: int): Float32Array
 ```
@@ -27,9 +33,9 @@ Obtains the value of the specified column in the current row as a float array. T
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-LiteResultSet-getFloat32Array(columnIndex: int): Float32Array--><!--Device-LiteResultSet-getFloat32Array(columnIndex: int): Float32Array-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -37,22 +43,21 @@ Obtains the value of the specified column in the current row as a float array. T
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| columnIndex | int | Yes | Indicates the specified column index, which starts from 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Float32Array | The value of the specified column as a float array. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Float32Array |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) | ResultSet is empty or pointer index is out of bounds. |
-| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) | Column index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
-| [14800041](../errorcode-data-rdb.md#14800041-type-conversion-failure) | Type conversion failed. |
-
+| Error Code ID |
+| --- |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800041](../errorcode-data-rdb.md#14800041-type-conversion-failure) |

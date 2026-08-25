@@ -4,9 +4,9 @@ The **FormEditExtensionAbility** module, inherited from [UIExtensionAbility](../
 
 **继承/实现关系：** FormEditExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-unnamed-declare class FormEditExtensionAbility--><!--Device-unnamed-declare class FormEditExtensionAbility-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -28,9 +28,9 @@ Indicates configuration information about a form edit extension ability context.
 
 **起始版本：** 18
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
-<!--Device-FormEditExtensionAbility-context: FormEditExtensionContext--><!--Device-FormEditExtensionAbility-context: FormEditExtensionContext-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -46,9 +46,8 @@ Indicates configuration information about a form edit extension ability context.
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-FormEditExtensionAbility-formEditContext: FormEditExtensionContext--><!--Device-FormEditExtensionAbility-formEditContext: FormEditExtensionContext-End-->
-
 **系统能力：** SystemCapability.Ability.Form
-

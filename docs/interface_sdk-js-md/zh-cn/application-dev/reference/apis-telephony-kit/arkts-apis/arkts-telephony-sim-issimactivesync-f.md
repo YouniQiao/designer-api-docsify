@@ -14,23 +14,23 @@ function isSimActiveSync(slotId: int): boolean
 
 获取指定卡槽SIM卡是否激活。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-sim-function isSimActiveSync(slotId: int): boolean--><!--Device-sim-function isSimActiveSync(slotId: int): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回指定卡槽是否激活。<br/>- true:激活。<br/>- false：未激活。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -40,4 +40,3 @@ import { sim } from '@kit.TelephonyKit';
 let isSimActive: boolean = sim.isSimActiveSync(0);
 console.info(`the sim is active:` + isSimActive);
 ```
-

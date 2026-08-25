@@ -2,9 +2,9 @@
 
 彩信回复标志。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-sms-export interface MmsRespInd--><!--Device-sms-export interface MmsRespInd-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -26,9 +26,9 @@ reportAllowed?: ReportType
 
 **类型：** [ReportType](arkts-telephony-sms-reporttype-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-MmsRespInd-reportAllowed?: ReportType--><!--Device-MmsRespInd-reportAllowed?: ReportType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -42,11 +42,11 @@ status: int
 
 状态
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-MmsRespInd-status: int--><!--Device-MmsRespInd-status: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -62,9 +62,9 @@ transactionId: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-MmsRespInd-transactionId: string--><!--Device-MmsRespInd-transactionId: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -80,11 +80,10 @@ version: MmsVersionType
 
 **类型：** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-MmsRespInd-version: MmsVersionType--><!--Device-MmsRespInd-version: MmsVersionType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
-

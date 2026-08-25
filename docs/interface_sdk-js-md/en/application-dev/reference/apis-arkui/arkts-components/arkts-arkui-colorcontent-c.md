@@ -4,7 +4,7 @@ Defines the content for color filling.
 
 **Since:** 15
 
-<!--Device-unnamed-declare class ColorContent--><!--Device-unnamed-declare class ColorContent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,10 @@ Resets the [fillColor](arkts-arkui-image-attribute.md#fillcolor) API, effectivel
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
-<!--Device-ColorContent-static readonly ORIGIN: ColorContent--><!--Device-ColorContent-static readonly ORIGIN: ColorContent-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

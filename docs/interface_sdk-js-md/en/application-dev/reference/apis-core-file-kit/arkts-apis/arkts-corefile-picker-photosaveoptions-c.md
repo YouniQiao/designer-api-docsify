@@ -4,11 +4,11 @@ Defines the options for saving images or videos.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 12
 
 **Substitutes:** SaveButtonOptions
-
-<!--Device-picker-class PhotoSaveOptions--><!--Device-picker-class PhotoSaveOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -30,11 +30,10 @@ File name of the image or video to save. If this parameter is not specified, the
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 18
 
 **Substitutes:** SaveButtonOptions
 
-<!--Device-PhotoSaveOptions-newFileNames?: Array<string>--><!--Device-PhotoSaveOptions-newFileNames?: Array<string>-End-->
-
 **System capability:** SystemCapability.FileManagement.UserFileService
-

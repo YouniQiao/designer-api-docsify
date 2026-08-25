@@ -2,9 +2,9 @@
 
 相机跟踪布局@enum { int }
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-mechanicManager-export enum CameraTrackingLayout--><!--Device-mechanicManager-export enum CameraTrackingLayout-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -16,9 +16,9 @@ DEFAULT = 0
 
 系统默认布局
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-CameraTrackingLayout-DEFAULT = 0--><!--Device-CameraTrackingLayout-DEFAULT = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -30,9 +30,9 @@ LEFT = 1
 
 左侧布局
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-CameraTrackingLayout-LEFT = 1--><!--Device-CameraTrackingLayout-LEFT = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -44,9 +44,9 @@ MIDDLE = 2
 
 中间布局
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-CameraTrackingLayout-MIDDLE = 2--><!--Device-CameraTrackingLayout-MIDDLE = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -58,9 +58,8 @@ RIGHT = 3
 
 右侧布局
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-CameraTrackingLayout-RIGHT = 3--><!--Device-CameraTrackingLayout-RIGHT = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
-

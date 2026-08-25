@@ -16,23 +16,23 @@ Check whether the device supports the [openCertificateDetailDialog](arkts-device
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-certificateManagerDialog-function supportsCACertDialog(): boolean--><!--Device-certificateManagerDialog-function supportsCACertDialog(): boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the CA certificate management dialog box can be opened. **true**: supported; **false**: not supported |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
+| Error Code ID |
+| --- |
+| [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) |
 
 **Examples**
 
@@ -48,4 +48,3 @@ try {
     console.error(`Failed to check whether the device supports CA dialog. Code: ${error.code}, message: ${error.message}`);
 }
 ```
-

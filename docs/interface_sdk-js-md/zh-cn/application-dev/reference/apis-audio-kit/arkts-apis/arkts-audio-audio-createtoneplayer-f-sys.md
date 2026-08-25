@@ -16,7 +16,7 @@ function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<To
 
 **起始版本：** 9
 
-<!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -24,10 +24,10 @@ function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<To
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 | 配置音频渲染器信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; | 是 | 回调函数。当获取DTMF播放器成功，err为undefined，data为获取到的DTMF播放器对象；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; | 是 |
 
 **示例**
 
@@ -108,7 +108,7 @@ function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<To
 
 **起始版本：** 23
 
-<!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer | null>): void--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer | null>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -116,16 +116,16 @@ function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<To
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 | 配置音频渲染器信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) \| null&gt; | 是 | 回调函数用于返回 tonePlayer 实例，或在发生错误时返回 null。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) \| null & gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -142,7 +142,7 @@ function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>
 
 **起始版本：** 9
 
-<!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -150,15 +150,15 @@ function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 | 配置音频渲染器信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; | Promise对象，返回DTMF播放器对象。 |
+| 类型 |
+| --- |
+| Promise&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; |
 
 **示例**
 
@@ -175,7 +175,7 @@ function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer | null
 
 **起始版本：** 23
 
-<!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer | null>--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer | null>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -183,23 +183,22 @@ function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer | null
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 | 配置音频渲染器信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) \| null&gt; | Promise 过去用于返回 tonePlayer 实例，或者在发生错误时返回 null。 |
+| 类型 |
+| --- |
+| Promise&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) \| null & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
 参见 [createTonePlayer](#createtoneplayer)
-

@@ -4,7 +4,7 @@ Describes the contents of the ranging results.
 
 **Since:** 26.0.0
 
-<!--Device-ranging-interface RangingResult--><!--Device-ranging-interface RangingResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -26,9 +26,9 @@ Azimuth angle output from ranging.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-RangingResult-angle: RangingMeasurement--><!--Device-RangingResult-angle: RangingMeasurement-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -44,9 +44,9 @@ Address of the ranging device.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-RangingResult-deviceId: string--><!--Device-RangingResult-deviceId: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -62,27 +62,26 @@ The distance measured by the ranging output.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-RangingResult-distance: RangingMeasurement--><!--Device-RangingResult-distance: RangingMeasurement-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 ## rssi
 
 ```TypeScript
-rssi: int
+rssi: number
 ```
 
 Received signal strength.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RangingResult-rssi: int--><!--Device-RangingResult-rssi: int-End-->
-
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
-

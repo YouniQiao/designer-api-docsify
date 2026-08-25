@@ -2,9 +2,9 @@
 
 Enumerates the download states of a cloud file.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-cloudSync-enum State--><!--Device-cloudSync-enum State-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -18,11 +18,10 @@ Indicates that the download task is missing.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-State-MISSING = 4--><!--Device-State-MISSING = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
-

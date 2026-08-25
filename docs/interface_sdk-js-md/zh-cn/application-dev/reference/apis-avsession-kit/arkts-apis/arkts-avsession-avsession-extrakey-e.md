@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-avSession-enum ExtraKey--><!--Device-avSession-enum ExtraKey-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -18,11 +18,11 @@ REQUIRE_ABILITY_LIST = 'requireAbilityList'
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ExtraKey-REQUIRE_ABILITY_LIST = 'requireAbilityList'--><!--Device-ExtraKey-REQUIRE_ABILITY_LIST = 'requireAbilityList'-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -37,11 +37,11 @@ setExtras)}接口传入入参 `{[avSession.ExtraKey.REQUIRE_ABILITY_LIST]: [avSe
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ExtraKey-SUPPORT_URL_CASTING = 'url-cast'--><!--Device-ExtraKey-SUPPORT_URL_CASTING = 'url-cast'-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -55,11 +55,11 @@ DLNA_CURRENT_URI_METADATA = 'CurrentURIMetadata'
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ExtraKey-DLNA_CURRENT_URI_METADATA = 'CurrentURIMetadata'--><!--Device-ExtraKey-DLNA_CURRENT_URI_METADATA = 'CurrentURIMetadata'-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -73,11 +73,10 @@ DLNA_DIDL_LITE = 'DIDL-Lite'
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ExtraKey-DLNA_DIDL_LITE = 'DIDL-Lite'--><!--Device-ExtraKey-DLNA_DIDL_LITE = 'DIDL-Lite'-End-->
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-

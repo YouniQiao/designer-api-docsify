@@ -4,9 +4,9 @@ Sets the initial state of the slidable panel.
 
 **Since:** 7
 
-**Deprecated since:** 12
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-unnamed-declare enum PanelMode--><!--Device-unnamed-declare enum PanelMode-End-->
+**Deprecated since:** 12
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +20,11 @@ Minimum state.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PanelMode-Mini = 0--><!--Device-PanelMode-Mini = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +38,11 @@ SHalf-screen-like status
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PanelMode-Half--><!--Device-PanelMode-Half-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,11 +56,10 @@ Class Full Screen Status.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-PanelMode-Full--><!--Device-PanelMode-Full-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

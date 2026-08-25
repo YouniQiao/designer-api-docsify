@@ -4,11 +4,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** WebviewController
-
-<!--Device-unnamed-declare class WebController--><!--Device-unnamed-declare class WebController-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -27,19 +27,19 @@ accessBackward(): boolean
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** accessBackward
-
-<!--Device-WebController-accessBackward(): boolean--><!--Device-WebController-accessBackward(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 可以后退返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -73,19 +73,19 @@ accessForward(): boolean
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** accessForward
-
-<!--Device-WebController-accessForward(): boolean--><!--Device-WebController-accessForward(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回true表示当前页面可以前进，返回false表示当前页面不可以前进。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -119,25 +119,25 @@ accessStep(step: number): boolean
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** accessStep
-
-<!--Device-WebController-accessStep(step: number): boolean--><!--Device-WebController-accessStep(step: number): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| step | number | 是 | 要跳转的步数，正数代表前进，负数代表后退。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| step | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 页面是否可以前进或后退给定的step步。true表示可以，false为不可以。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -172,11 +172,11 @@ backward()
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** backward
-
-<!--Device-WebController-backward()--><!--Device-WebController-backward()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -211,11 +211,11 @@ clearHistory(): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** clearHistory
-
-<!--Device-WebController-clearHistory(): void--><!--Device-WebController-clearHistory(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -250,11 +250,11 @@ WebController的构造函数。
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** constructor
-
-<!--Device-WebController-constructor()--><!--Device-WebController-constructor()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -268,19 +268,19 @@ deleteJavaScriptRegister(name: string)
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** deleteJavaScriptRegister
-
-<!--Device-WebController-deleteJavaScriptRegister(name: string)--><!--Device-WebController-deleteJavaScriptRegister(name: string)-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 注册对象的名称，可在网页侧JavaScript中通过此名称调用应用侧JavaScript对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
 
 **示例**
 
@@ -314,11 +314,11 @@ forward()
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** forward
-
-<!--Device-WebController-forward()--><!--Device-WebController-forward()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -353,19 +353,19 @@ getCookieManager(): WebCookie
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 9
 
 **替代接口：** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md)
-
-<!--Device-WebController-getCookieManager(): WebCookie--><!--Device-WebController-getCookieManager(): WebCookie-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [WebCookie](arkts-arkweb-webcookie-c.md) | Web组件cookie管理对象，参考[WebCookie]{ |
+| 类型 |
+| --- |
+| [WebCookie](arkts-arkweb-webcookie-c.md) |
 
 **示例**
 
@@ -398,19 +398,19 @@ getHitTest(): HitTestType
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getHitTest](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#gethittest)
-
-<!--Device-WebController-getHitTest(): HitTestType--><!--Device-WebController-getHitTest(): HitTestType-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [HitTestType](arkts-arkweb-hittesttype-e.md) | 被点击区域的元素类型。 |
+| 类型 |
+| --- |
+| [HitTestType](arkts-arkweb-hittesttype-e.md) |
 
 **示例**
 
@@ -444,19 +444,19 @@ baseUrl为空时，通过“data”协议加载指定的一段字符串。当bas
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** loadData
-
-<!--Device-WebController-loadData(options: { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string })--><!--Device-WebController-loadData(options: { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string })-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string } | 是 | The options with the data or URL and other information. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string } | 是 |
 
 **示例**
 
@@ -493,19 +493,19 @@ loadUrl(options: { url: string | Resource, headers?: Array<Header> })
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** loadUrl
-
-<!--Device-WebController-loadUrl(options: { url: string | Resource, headers?: Array<Header> })--><!--Device-WebController-loadUrl(options: { url: string | Resource, headers?: Array<Header> })-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | { url: string \| Resource, headers?: Array&lt;[Header](arkts-arkweb-header-i.md)&gt; } | 是 | The options with the URL and other information. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | { url: string \| Resource, headers?: Array&lt;[Header](arkts-arkweb-header-i.md)&gt; } | 是 |
 
 **示例**
 
@@ -538,11 +538,11 @@ onActive(): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** onActive
-
-<!--Device-WebController-onActive(): void--><!--Device-WebController-onActive(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -577,11 +577,11 @@ onInactive(): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** onInactive
-
-<!--Device-WebController-onInactive(): void--><!--Device-WebController-onInactive(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -616,11 +616,11 @@ refresh()
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** refresh
-
-<!--Device-WebController-refresh()--><!--Device-WebController-refresh()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -655,19 +655,19 @@ registerJavaScriptProxy(options: { object: object, name: string, methodList: Arr
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** registerJavaScriptProxy
-
-<!--Device-WebController-registerJavaScriptProxy(options: { object: object, name: string, methodList: Array<string> })--><!--Device-WebController-registerJavaScriptProxy(options: { object: object, name: string, methodList: Array<string> })-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | { object: object, name: string, methodList: Array&lt;string&gt; } | 是 | The option with the JavaScript object and method list. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | { object: object, name: string, methodList: Array & lt;string & gt; } | 是 |
 
 **示例**
 
@@ -740,11 +740,11 @@ requestFocus()
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** requestFocus
-
-<!--Device-WebController-requestFocus()--><!--Device-WebController-requestFocus()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -779,19 +779,19 @@ runJavaScript(options: { script: string, callback?: (result: string) => void })
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** runJavaScript
-
-<!--Device-WebController-runJavaScript(options: { script: string, callback?: (result: string) => void })--><!--Device-WebController-runJavaScript(options: { script: string, callback?: (result: string) => void })-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | { script: string, callback?: (result: string) =&gt; void } | 是 | The options with a piece of code and a callback. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | { script: string, callback?: (result: string) = & gt; void } | 是 |
 
 **示例**
 
@@ -854,11 +854,11 @@ stop()
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** stop
-
-<!--Device-WebController-stop()--><!--Device-WebController-stop()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -893,19 +893,19 @@ zoom(factor: number): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [zoom](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoom)
-
-<!--Device-WebController-zoom(factor: number): void--><!--Device-WebController-zoom(factor: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| factor | number | 是 | The zoom factor. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [factor](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | number | 是 |
 
 **示例**
 
@@ -928,4 +928,3 @@ struct WebComponent {
   }
 }
 ```
-

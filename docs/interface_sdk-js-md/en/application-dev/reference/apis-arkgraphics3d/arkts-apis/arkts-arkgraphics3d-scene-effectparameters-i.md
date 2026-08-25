@@ -2,9 +2,9 @@
 
 Special effect parameter configuration, which is used to specify the special effect ID required for creating a special effect. It is used as the input parameter of the createEffect API to create a special effect object.@interface EffectParameters
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-unnamed-export interface EffectParameters--><!--Device-unnamed-export interface EffectParameters-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,9 +18,8 @@ Effect ID, which is in the format of 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX', for
 
 **Type:** string
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-EffectParameters-effectId: string--><!--Device-EffectParameters-effectId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

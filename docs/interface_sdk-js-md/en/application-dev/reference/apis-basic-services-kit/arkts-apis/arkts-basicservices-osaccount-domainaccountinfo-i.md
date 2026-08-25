@@ -2,9 +2,9 @@
 
 Represents the domain account information.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-osAccount-interface DomainAccountInfo--><!--Device-osAccount-interface DomainAccountInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -24,27 +24,27 @@ Domain account name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DomainAccountInfo-accountName: string--><!--Device-DomainAccountInfo-accountName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 ## additionalInfo
 
 ```TypeScript
-additionalInfo?: Record<string, RecordData>
+additionalInfo?: Record<string, Object>
 ```
 
 Additional information about the domain account.
 
-**Type:** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-DomainAccountInfo-additionalInfo?: Record<string, RecordData>--><!--Device-DomainAccountInfo-additionalInfo?: Record<string, RecordData>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -58,9 +58,9 @@ Domain name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DomainAccountInfo-domain: string--><!--Device-DomainAccountInfo-domain: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -74,9 +74,8 @@ Domain account configuration ID, which is an empty string by default.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DomainAccountInfo-serverConfigId?: string--><!--Device-DomainAccountInfo-serverConfigId?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
-

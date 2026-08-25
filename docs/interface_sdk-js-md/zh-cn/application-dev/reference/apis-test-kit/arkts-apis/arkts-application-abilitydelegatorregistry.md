@@ -4,11 +4,11 @@ AbilityDelegatorRegistry模块提供用于存储已注册的[AbilityDelegator](.
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [abilityDelegatorRegistry](arkts-app-ability-abilitydelegatorregistry.md)
-
-<!--Device-unnamed-declare namespace abilityDelegatorRegistry--><!--Device-unnamed-declare namespace abilityDelegatorRegistry-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -21,14 +21,13 @@ AbilityDelegatorRegistry模块提供用于存储已注册的[AbilityDelegator](.
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [getAbilityDelegator](arkts-test-abilitydelegatorregistry-getabilitydelegator-depr-f.md#getabilitydelegator) | 获取应用程序的AbilityDelegator对象。 |
-| [getArguments](arkts-test-abilitydelegatorregistry-getarguments-depr-f.md#getarguments) | 获取单元测试参数AbilityDelegatorArgs对象。 |
+| 名称 |
+| --- |
+| [getAbilityDelegator](arkts-test-abilitydelegatorregistry-getabilitydelegator-depr-f.md#getabilitydelegator) |
+| [getArguments](arkts-test-abilitydelegatorregistry-getarguments-depr-f.md#getarguments) |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-| [AbilityLifecycleState](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-depr-e.md) | Ability生命周期状态。 |
-
+| 名称 |
+| --- |
+| [AbilityLifecycleState](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-depr-e.md) |

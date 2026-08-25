@@ -16,15 +16,14 @@ Checks whether the current device supports the partner agent feature.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-partnerAgent-function isPartnerAgentSupported(): boolean--><!--Device-partnerAgent-function isPartnerAgentSupported(): boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result for the support of the partner agent feature. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

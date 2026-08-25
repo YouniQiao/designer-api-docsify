@@ -8,11 +8,10 @@ X509 certificate.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-http-export type X509Cert = cert.X509Cert--><!--Device-http-export type X509Cert = cert.X509Cert-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Property type:** cert.X509Cert
-

@@ -8,12 +8,11 @@ Enumerates the device status types.
 
 **Since:** 9
 
-<!--Device-stationary-type ActivityType = 'still' | 'relativeStill'--><!--Device-stationary-type ActivityType = 'still' | 'relativeStill'-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 
-| Type | Description |
-| --- | --- |
-| 'still' | Absolutely still. |
-| 'relativeStill' | Relatively still. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'still' |
+| 'relativeStill' |

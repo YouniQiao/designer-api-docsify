@@ -13,9 +13,9 @@ Enumerates the KV store security levels.
 > * You cannot downgrade the database security level. For example, you can change the database security level from
 > S2 to S3, but cannot change it from S3 to S2.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-distributedKVStore-enum SecurityLevel--><!--Device-distributedKVStore-enum SecurityLevel-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -27,11 +27,11 @@ S1
 
 S1: means the db is in the low security level There are some low impact when the data is leaked.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityLevel-S1--><!--Device-SecurityLevel-S1-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -43,11 +43,11 @@ S2
 
 S2: means the db is in the middle security level There are some major impact when the data is leaked.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityLevel-S2--><!--Device-SecurityLevel-S2-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -59,11 +59,11 @@ S3
 
 S3: means the db is in the high security level There are some severity impact when the data is leaked.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityLevel-S3--><!--Device-SecurityLevel-S3-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -75,11 +75,10 @@ S4
 
 S4: means the db is in the critical security level There are some critical impact when the data is leaked.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SecurityLevel-S4--><!--Device-SecurityLevel-S4-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
-

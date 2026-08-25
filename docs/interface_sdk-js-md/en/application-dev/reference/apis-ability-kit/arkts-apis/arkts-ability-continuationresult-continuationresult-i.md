@@ -4,11 +4,11 @@ The ContinuationResult module describes the device information returned by the c
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Substitutes:** [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md)
-
-<!--Device-unnamed-export interface ContinuationResult--><!--Device-unnamed-export interface ContinuationResult-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
@@ -24,13 +24,13 @@ Device ID.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ContinuationResult-id: string--><!--Device-ContinuationResult-id: string-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
@@ -46,13 +46,13 @@ Device name.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ContinuationResult-name: string--><!--Device-ContinuationResult-name: string-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
@@ -68,13 +68,12 @@ Device type.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ContinuationResult-type: string--><!--Device-ContinuationResult-type: string-End-->
-
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
-

@@ -14,17 +14,17 @@ function createSpan(): HiTraceId
 
 Creates a trace span. This API works in synchronous manner.Specifically, create a **HiTraceId**, use the **chainId** and **spanId** in the TLS of the current thread to initialize the **chainId** and **parentSpanId** of the **HiTraceId**, generate a new **spanId** for the **HiTraceId**, and return the **HiTraceId**.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-hiTraceChain-function createSpan(): HiTraceId--><!--Device-hiTraceChain-function createSpan(): HiTraceId-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | HiTraceId** instance. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) |
 
 **Examples**
 
@@ -40,4 +40,3 @@ if (spanTraceId.chainId != traceId.chainId) {
 // Stop tracing after the service is complete.
 hiTraceChain.end(traceId);
 ```
-

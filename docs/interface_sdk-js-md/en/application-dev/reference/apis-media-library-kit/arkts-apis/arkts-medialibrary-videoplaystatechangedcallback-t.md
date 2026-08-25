@@ -1,22 +1,21 @@
-# videoPlayStateChangedCallback
+# VideoPlayStateChangedCallback
 
 ```TypeScript
-export type videoPlayStateChangedCallback = (state: VideoPlayerState) => void
+export type VideoPlayStateChangedCallback = (state: VideoPlayerState) => void
 ```
 
-Callback to be invoked when the video playback state on a photo browser page changes.
+The callback of onVideoPlayStateChanged event
 
-**Since:** 14
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
-<!--Device-unnamed-export type videoPlayStateChangedCallback = (state: VideoPlayerState) => void--><!--Device-unnamed-export type videoPlayStateChangedCallback = (state: VideoPlayerState) => void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| state | [VideoPlayerState](../../apis-default/arkts-apis/arkts-file-photopickercomponent-videoplayerstate-e.md) | Yes | Enumerates the video playback states. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| state | [VideoPlayerState](arkts-medialibrary-file-photopickercomponent-videoplayerstate-e.md) | Yes |

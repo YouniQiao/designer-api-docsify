@@ -4,7 +4,7 @@ AtomicServiceSearch中“功能区”的初始化参数。
 
 **起始版本：** 18
 
-<!--Device-unnamed-export interface OperationParams--><!--Device-unnamed-export interface OperationParams-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,9 +26,9 @@ auxiliaryItem?: OperationOption
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
-<!--Device-OperationParams-auxiliaryItem?: OperationOption--><!--Device-OperationParams-auxiliaryItem?: OperationOption-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,9 +44,8 @@ independentItem?: OperationOption
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-OperationParams-independentItem?: OperationOption--><!--Device-OperationParams-independentItem?: OperationOption-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 按键注入描述信息。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-inputEventClient-interface KeyEventData--><!--Device-inputEventClient-interface KeyEventData-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -26,11 +26,10 @@ keyEvent: KeyEvent
 
 **类型：** KeyEvent
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-KeyEventData-keyEvent: KeyEvent--><!--Device-KeyEventData-keyEvent: KeyEvent-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **系统接口：** 此接口为系统接口。
-

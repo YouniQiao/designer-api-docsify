@@ -4,9 +4,9 @@
 
 **继承/实现关系：** CloudAsset extends relationalStore.Asset
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-cloudExtension-export interface CloudAsset--><!--Device-cloudExtension-export interface CloudAsset-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -28,9 +28,9 @@ assetId: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CloudAsset-assetId: string--><!--Device-CloudAsset-assetId: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -46,11 +46,10 @@ hash: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CloudAsset-hash: string--><!--Device-CloudAsset-hash: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
-

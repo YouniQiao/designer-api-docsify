@@ -4,9 +4,7 @@
 
 **起始版本：** 18
 
-**装饰器类型：** @ObservedV2
-
-<!--Device-unnamed-declare class ArcSliderOptions--><!--Device-unnamed-declare class ArcSliderOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -26,17 +24,65 @@ ArcSliderOptions的构造函数。
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-ArcSliderOptions-constructor(options?: ArcSliderOptionsConstructorOptions)--><!--Device-ArcSliderOptions-constructor(options?: ArcSliderOptionsConstructorOptions)-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [ArcSliderOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptionsconstructoroptions-i.md) | 否 | ArcSliderOptions的构造信息。不传入时，ArcSliderOptions的各项子属性均取其默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [ArcSliderOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptionsconstructoroptions-i.md) | 否 |
+
+## onChange
+
+```TypeScript
+onChange?: ArcSliderChangeHandler
+```
+
+弧形Slider的进度值发生变化时触发回调。默认值：不传入的情况，无回调。@Trace
+
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
+
+## onEnlarge
+
+```TypeScript
+onEnlarge?: ArcSliderEnlargeHandler
+```
+
+弧形Slider放大或缩小时触发回调。默认值：不传入的情况，无回调。@Trace
+
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
+
+## onTouch
+
+```TypeScript
+onTouch?: ArcSliderTouchHandler
+```
+
+弧形Slider被触摸时触发回调。默认值：不传入的情况，无回调。@Trace
+
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 ## digitalCrownSensitivity
 
@@ -50,11 +96,9 @@ digitalCrownSensitivity?: CrownSensitivity
 
 **起始版本：** 18
 
-**装饰器类型：** @Trace
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ArcSliderOptions-@Trace  digitalCrownSensitivity?: CrownSensitivity--><!--Device-ArcSliderOptions-@Trace  digitalCrownSensitivity?: CrownSensitivity-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -70,71 +114,9 @@ layoutOptions?: ArcSliderLayoutOptions
 
 **起始版本：** 18
 
-**装饰器类型：** @Trace
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ArcSliderOptions-@Trace  layoutOptions?: ArcSliderLayoutOptions--><!--Device-ArcSliderOptions-@Trace  layoutOptions?: ArcSliderLayoutOptions-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
-
-## onChange
-
-```TypeScript
-onChange?: ArcSliderChangeHandler
-```
-
-弧形Slider的进度值发生变化时触发回调。默认值：不传入的情况，无回调。@Trace
-
-**类型：** [ArcSliderChangeHandler](arkts-arkui-arcsliderchangehandler-t.md)
-
-**起始版本：** 18
-
-**装饰器类型：** @Trace
-
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ArcSliderOptions-@Trace  onChange?: ArcSliderChangeHandler--><!--Device-ArcSliderOptions-@Trace  onChange?: ArcSliderChangeHandler-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
-
-## onEnlarge
-
-```TypeScript
-onEnlarge?: ArcSliderEnlargeHandler
-```
-
-弧形Slider放大或缩小时触发回调。默认值：不传入的情况，无回调。@Trace
-
-**类型：** [ArcSliderEnlargeHandler](arkts-arkui-arcsliderenlargehandler-t.md)
-
-**起始版本：** 18
-
-**装饰器类型：** @Trace
-
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ArcSliderOptions-@Trace  onEnlarge?: ArcSliderEnlargeHandler--><!--Device-ArcSliderOptions-@Trace  onEnlarge?: ArcSliderEnlargeHandler-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
-
-## onTouch
-
-```TypeScript
-onTouch?: ArcSliderTouchHandler
-```
-
-弧形Slider被触摸时触发回调。默认值：不传入的情况，无回调。@Trace
-
-**类型：** [ArcSliderTouchHandler](arkts-arkui-arcslidertouchhandler-t.md)
-
-**起始版本：** 18
-
-**装饰器类型：** @Trace
-
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ArcSliderOptions-@Trace  onTouch?: ArcSliderTouchHandler--><!--Device-ArcSliderOptions-@Trace  onTouch?: ArcSliderTouchHandler-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -150,11 +132,9 @@ styleOptions?: ArcSliderStyleOptions
 
 **起始版本：** 18
 
-**装饰器类型：** @Trace
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ArcSliderOptions-@Trace  styleOptions?: ArcSliderStyleOptions--><!--Device-ArcSliderOptions-@Trace  styleOptions?: ArcSliderStyleOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -170,11 +150,8 @@ valueOptions?: ArcSliderValueOptions
 
 **起始版本：** 18
 
-**装饰器类型：** @Trace
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ArcSliderOptions-@Trace  valueOptions?: ArcSliderValueOptions--><!--Device-ArcSliderOptions-@Trace  valueOptions?: ArcSliderValueOptions-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
-

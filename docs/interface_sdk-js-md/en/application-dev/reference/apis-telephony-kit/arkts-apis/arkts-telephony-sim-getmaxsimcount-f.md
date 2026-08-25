@@ -14,17 +14,17 @@ function getMaxSimCount(): int
 
 Obtains the number of card slots.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-sim-function getMaxSimCount(): int--><!--Device-sim-function getMaxSimCount(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Number of card slots. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -33,4 +33,3 @@ import { sim } from '@kit.TelephonyKit';
 
 console.info("Result: "+ sim.getMaxSimCount());
 ```
-

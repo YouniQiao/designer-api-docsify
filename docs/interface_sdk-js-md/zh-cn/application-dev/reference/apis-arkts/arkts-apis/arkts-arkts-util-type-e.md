@@ -4,7 +4,7 @@ Base64 编码格式枚举。
 
 **起始版本：** 10
 
-<!--Device-util-enum Type--><!--Device-util-enum Type-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -18,9 +18,9 @@ BASIC = 0
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
-<!--Device-Type-BASIC = 0--><!--Device-Type-BASIC = 0-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -34,9 +34,9 @@ MIME 格式。 从 API version 11 开始，该接口支持在原子化服务中�
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
-<!--Device-Type-MIME = 1--><!--Device-Type-MIME = 1-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -50,9 +50,9 @@ BASIC_URL_SAFE 格式。该值从 API version 12 开始支持。 从 API version
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-Type-BASIC_URL_SAFE = 2--><!--Device-Type-BASIC_URL_SAFE = 2-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -66,9 +66,8 @@ MIME_URL_SAFE 格式。该值从 API version 12 开始支持。 从 API version 
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-Type-MIME_URL_SAFE = 3--><!--Device-Type-MIME_URL_SAFE = 3-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

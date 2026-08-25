@@ -4,7 +4,7 @@ The definition of dialog button information.@interface DialogButtonInfo
 
 **Since:** 23
 
-<!--Device-avMusicTemplate-interface DialogButtonInfo--><!--Device-avMusicTemplate-interface DialogButtonInfo-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -26,9 +26,9 @@ Button id.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-DialogButtonInfo-buttonId: string--><!--Device-DialogButtonInfo-buttonId: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -44,9 +44,9 @@ Button text.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-DialogButtonInfo-buttonText: string--><!--Device-DialogButtonInfo-buttonText: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -62,9 +62,8 @@ Button type.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DialogButtonInfo-buttonType: ButtonType--><!--Device-DialogButtonInfo-buttonType: ButtonType-End-->
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-

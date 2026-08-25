@@ -4,7 +4,7 @@ Enumerates the type of area in hover mode.
 
 **Since:** 14
 
-<!--Device-unnamed-declare enum HoverModeAreaType--><!--Device-unnamed-declare enum HoverModeAreaType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Layout top half screen when the phone in hover mode.
 
 **Since:** 14
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-HoverModeAreaType-TOP_SCREEN = 0--><!--Device-HoverModeAreaType-TOP_SCREEN = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ Layout bottom half screen when the phone in hover mode.
 
 **Since:** 14
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-HoverModeAreaType-BOTTOM_SCREEN = 1--><!--Device-HoverModeAreaType-BOTTOM_SCREEN = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

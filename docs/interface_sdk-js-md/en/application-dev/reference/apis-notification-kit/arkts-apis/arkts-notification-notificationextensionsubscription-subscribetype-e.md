@@ -2,9 +2,9 @@
 
 Describes the type that enables notification extension subscription.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-notificationExtensionSubscription-export enum SubscribeType--><!--Device-notificationExtensionSubscription-export enum SubscribeType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -16,9 +16,8 @@ BLUETOOTH = 0
 
 Bluetooth.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-SubscribeType-BLUETOOTH = 0--><!--Device-SubscribeType-BLUETOOTH = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
-

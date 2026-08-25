@@ -4,9 +4,7 @@ Focus box style.@interface FocusBoxStyle
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare interface FocusBoxStyle--><!--Device-unnamed-export declare interface FocusBoxStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +20,9 @@ Describes the focus-box margin.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FocusBoxStyle-margin?: LengthMetrics--><!--Device-FocusBoxStyle-margin?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,11 +38,9 @@ Describes the focus-box color.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FocusBoxStyle-strokeColor?: ColorMetrics--><!--Device-FocusBoxStyle-strokeColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,11 +56,8 @@ Describes the focus-box stroke width.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FocusBoxStyle-strokeWidth?: LengthMetrics--><!--Device-FocusBoxStyle-strokeWidth?: LengthMetrics-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

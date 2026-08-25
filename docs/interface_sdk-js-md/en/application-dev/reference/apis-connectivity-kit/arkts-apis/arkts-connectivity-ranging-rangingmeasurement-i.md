@@ -4,7 +4,7 @@ Describes the measurement result.
 
 **Since:** 26.0.0
 
-<!--Device-ranging-interface RangingMeasurement--><!--Device-ranging-interface RangingMeasurement-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -26,27 +26,26 @@ Confidence level of measurement results.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-RangingMeasurement-confidence: RangingConfidence--><!--Device-RangingMeasurement-confidence: RangingConfidence-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 ## value
 
 ```TypeScript
-value: int
+value: number
 ```
 
 Measurement result value. The value is expressed in centimeters.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RangingMeasurement-value: int--><!--Device-RangingMeasurement-value: int-End-->
-
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
-

@@ -14,9 +14,9 @@ function decodeImage(encodedImage: image.PixelMap): Promise<string>
 
 Decodes the information carried in the image. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-metadataBinding-function decodeImage(encodedImage: image.PixelMap): Promise<string>--><!--Device-metadataBinding-function decodeImage(encodedImage: image.PixelMap): Promise<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.MetadataBinding
 
@@ -24,23 +24,23 @@ Decodes the information carried in the image. This API uses a promise to return 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| encodedImage | image.PixelMap | Yes | Image with metadata encoded. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| encodedImage | image.PixelMap | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Promise object, which is used to return the encoded metadata of the image. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API. |
-| [32100001](../errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
-| [32100003](../errorcode-metadataBinding.md#32100003-decoding-failed) | Decode process fail. Possible causes: <br>1. Image is not an encoded Image. <br>2. Image destroyed, decoding failed. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [32100001](../errorcode-metadataBinding.md#32100001-file-creation-failed) |
+| [32100003](../errorcode-metadataBinding.md#32100003-decoding-failed) |
 
 **Examples**
 
@@ -57,4 +57,3 @@ metadataBinding.decodeImage(encodeImage).then((metadata: string) => {
   console.error("decode image error" + error);
 });
 ```
-

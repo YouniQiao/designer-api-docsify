@@ -4,9 +4,9 @@
 
 **起始版本：** 3
 
-**废弃版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-unnamed-export interface BrightnessModeResponse--><!--Device-unnamed-export interface BrightnessModeResponse-End-->
+**废弃版本：** 7
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -28,9 +28,8 @@ mode: number
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 7
 
-<!--Device-BrightnessModeResponse-mode: number--><!--Device-BrightnessModeResponse-mode: number-End-->
-
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
-

@@ -6,11 +6,10 @@ export type NotificationMultiLineContent = _NotificationMultiLineContent
 
 Describes the multi-line text notification.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-notificationManager-export type NotificationMultiLineContent = _NotificationMultiLineContent--><!--Device-notificationManager-export type NotificationMultiLineContent = _NotificationMultiLineContent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **Property type:** _NotificationMultiLineContent
-

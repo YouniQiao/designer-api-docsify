@@ -4,7 +4,7 @@ Defines the accessibility options of the symbol-type suffix icon.
 
 **Since:** 14
 
-<!--Device-unnamed-export interface ChipSuffixSymbolGlyphOptions--><!--Device-unnamed-export interface ChipSuffixSymbolGlyphOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,15 +22,31 @@ action?: VoidCallback
 
 Action of the suffix icon.Default value: **undefined**
 
-**Type:** VoidCallback
-
 **Since:** 14
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-ChipSuffixSymbolGlyphOptions-action?: VoidCallback--><!--Device-ChipSuffixSymbolGlyphOptions-action?: VoidCallback-End-->
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## action
+
+```TypeScript
+action?: VoidCallback
+```
+
+Called when the suffix symbol is clicked.
+
+**Type:** VoidCallback
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,15 +58,15 @@ activatedAccessibility?: AccessibilityOptions
 
 Accessibility settings for the activated state.Default value: **undefined**
 
-**Type:** [AccessibilityOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-accessibilityoptions-i.md)
+**Type:** [AccessibilityOptions](arkts-arkui-arkui-advanced-chip-accessibilityoptions-i.md)
 
 **Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-ChipSuffixSymbolGlyphOptions-activatedAccessibility?: AccessibilityOptions--><!--Device-ChipSuffixSymbolGlyphOptions-activatedAccessibility?: AccessibilityOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,15 +78,14 @@ normalAccessibility?: AccessibilityOptions
 
 Accessibility settings for the normal state.Default value: **undefined**
 
-**Type:** [AccessibilityOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-accessibilityoptions-i.md)
+**Type:** [AccessibilityOptions](arkts-arkui-arkui-advanced-chip-accessibilityoptions-i.md)
 
 **Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-ChipSuffixSymbolGlyphOptions-normalAccessibility?: AccessibilityOptions--><!--Device-ChipSuffixSymbolGlyphOptions-normalAccessibility?: AccessibilityOptions-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

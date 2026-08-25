@@ -2,9 +2,9 @@
 
 Provides APIs for reading and writing data in specific format. During RPC or IPC, the sender can use the **write()** method provided by **MessageSequence** to write data in specific format to a **MessageSequence** object. The receiver can use the **read()** method provided by **MessageSequence** to read data in specific format from a **MessageSequence** object. The data formats include basic data types and arrays, IPC objects, interface tokens, and custom sequenceable objects.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-rpc-class MessageSequence--><!--Device-rpc-class MessageSequence-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -16,29 +16,35 @@ import { rpc } from '@kit.IPCKit';
 
 ## closeFileDescriptor
 
+ArkTS-Dyn:
+```TypeScript
+static closeFileDescriptor(fd: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 static closeFileDescriptor(fd: int): void
 ```
 
 Closes a file descriptor. This API is a static method.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-static closeFileDescriptor(fd: int): void--><!--Device-MessageSequence-static closeFileDescriptor(fd: int): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fd | int | Yes | File descriptor to close. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -81,17 +87,17 @@ containFileDescriptors(): boolean
 
 Checks whether this **MessageSequence** object contains file descriptors.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-containFileDescriptors(): boolean--><!--Device-MessageSequence-containFileDescriptors(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the **MessageSequence** object contains file descriptors; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -140,17 +146,17 @@ static create(): MessageSequence
 
 Creates a **MessageSequence** object. This API is a static method.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-static create(): MessageSequence--><!--Device-MessageSequence-static create(): MessageSequence-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | MessageSequence** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) |
 
 **Examples**
 
@@ -223,36 +229,42 @@ try {
 
 ## dupFileDescriptor
 
+ArkTS-Dyn:
+```TypeScript
+static dupFileDescriptor(fd: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 static dupFileDescriptor(fd: int): int
 ```
 
 Duplicates a file descriptor. This API is a static method.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-static dupFileDescriptor(fd: int): int--><!--Device-MessageSequence-static dupFileDescriptor(fd: int): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fd | int | Yes | File descriptor to duplicate. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | New file descriptor. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900013](../errorcode-rpc.md#1900013-failed-to-invoke-dup) | Failed to call dup. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900013](../errorcode-rpc.md#1900013-failed-to-invoke-dup) |
 
 **Examples**
 
@@ -289,23 +301,29 @@ try {
 
 ## getCapacity
 
+ArkTS-Dyn:
+```TypeScript
+getCapacity(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getCapacity(): int
 ```
 
 Obtains the capacity of this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-getCapacity(): int--><!--Device-MessageSequence-getCapacity(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Capacity of the obtained **MessageSequence** object, in bytes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -340,23 +358,29 @@ try {
 
 ## getRawDataCapacity
 
+ArkTS-Dyn:
+```TypeScript
+getRawDataCapacity(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getRawDataCapacity(): int
 ```
 
 Obtains the maximum amount of raw data that can be held by this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-getRawDataCapacity(): int--><!--Device-MessageSequence-getRawDataCapacity(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Maximum amount of raw data that **MessageSequence** can hold, that is, 128 MB. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -391,23 +415,29 @@ try {
 
 ## getReadableBytes
 
+ArkTS-Dyn:
+```TypeScript
+getReadableBytes(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getReadableBytes(): int
 ```
 
 Obtains the readable capacity of this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-getReadableBytes(): int--><!--Device-MessageSequence-getReadableBytes(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Readable capacity of the **MessageSequence** instance, in bytes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -444,23 +474,29 @@ try {
 
 ## getReadPosition
 
+ArkTS-Dyn:
+```TypeScript
+getReadPosition(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getReadPosition(): int
 ```
 
 Obtains the read position of this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-getReadPosition(): int--><!--Device-MessageSequence-getReadPosition(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Read position obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -496,23 +532,29 @@ try {
 
 ## getSize
 
+ArkTS-Dyn:
+```TypeScript
+getSize(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getSize(): int
 ```
 
 Obtains the data size of this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-getSize(): int--><!--Device-MessageSequence-getSize(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Size of the **MessageSequence** instance obtained, in bytes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -548,23 +590,29 @@ try {
 
 ## getWritableBytes
 
+ArkTS-Dyn:
+```TypeScript
+getWritableBytes(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getWritableBytes(): int
 ```
 
 Obtains the writable capacity (in bytes) of this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-getWritableBytes(): int--><!--Device-MessageSequence-getWritableBytes(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Writable capacity of the **MessageSequence** instance, in bytes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -601,23 +649,29 @@ try {
 
 ## getWritePosition
 
+ArkTS-Dyn:
+```TypeScript
+getWritePosition(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getWritePosition(): int
 ```
 
 Obtains the write position of this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-getWritePosition(): int--><!--Device-MessageSequence-getWritePosition(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Write position obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -660,30 +714,30 @@ readArrayBuffer(typeCode: TypeCode): ArrayBuffer
 
 Reads data of the ArrayBuffer type from this **MessageSequence**.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MessageSequence-readArrayBuffer(typeCode: TypeCode): ArrayBuffer--><!--Device-MessageSequence-readArrayBuffer(typeCode: TypeCode): ArrayBuffer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| typeCode | [TypeCode](arkts-ipc-rpc-typecode-e.md) | Yes | TypedArray type of the ArrayBuffer data.<br>The underlying read mode is determined based on the enum value of **TypeCode** passed by the service. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| typeCode | [TypeCode](arkts-ipc-rpc-typecode-e.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ArrayBuffer | Data of the ArrayBuffer type read, in bytes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArrayBuffer |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The obtained value of typeCode is incorrect; |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -719,23 +773,23 @@ readAshmem(): Ashmem
 
 Reads the anonymous shared object from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readAshmem(): Ashmem--><!--Device-MessageSequence-readAshmem(): Ashmem-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Anonymous share object obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -820,23 +874,23 @@ readBoolean(): boolean
 
 Reads the Boolean value from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readBoolean(): boolean--><!--Device-MessageSequence-readBoolean(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Boolean value read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -880,24 +934,24 @@ readBooleanArray(dataIn: boolean[]): void
 
 Reads the Boolean array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readBooleanArray(dataIn: boolean[]): void--><!--Device-MessageSequence-readBooleanArray(dataIn: boolean[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dataIn | boolean[] | Yes | Boolean array to read. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dataIn | boolean[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -975,23 +1029,23 @@ readBooleanArray(): boolean[]
 
 Reads the Boolean array from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readBooleanArray(): boolean[]--><!--Device-MessageSequence-readBooleanArray(): boolean[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean[] | Boolean array read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean[] |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -999,29 +1053,35 @@ See [readBooleanArray](#readbooleanarray)
 
 ## readByte
 
+ArkTS-Dyn:
+```TypeScript
+readByte(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readByte(): int
 ```
 
 Reads the byte value from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readByte(): int--><!--Device-MessageSequence-readByte(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Byte value read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -1059,30 +1119,36 @@ try {
 
 ## readByteArray
 
+ArkTS-Dyn:
+```TypeScript
+readByteArray(dataIn: number[]): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 readByteArray(dataIn: int[]): void
 ```
 
 Reads the byte array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readByteArray(dataIn: int[]): void--><!--Device-MessageSequence-readByteArray(dataIn: int[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dataIn | int[] | Yes | Byte array to read. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dataIn | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -1157,29 +1223,35 @@ try {
 
 ## readByteArray
 
+ArkTS-Dyn:
+```TypeScript
+readByteArray(): number[]
+```
+
+ArkTS-Sta:
 ```TypeScript
 readByteArray(): int[]
 ```
 
 Reads the byte array from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readByteArray(): int[]--><!--Device-MessageSequence-readByteArray(): int[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int[] | Byte array read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -1187,29 +1259,35 @@ See [readByteArray](#readbytearray)
 
 ## readChar
 
+ArkTS-Dyn:
+```TypeScript
+readChar(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readChar(): int
 ```
 
 Reads the character from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readChar(): int--><!--Device-MessageSequence-readChar(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Char** value read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -1247,30 +1325,36 @@ try {
 
 ## readCharArray
 
+ArkTS-Dyn:
+```TypeScript
+readCharArray(dataIn: number[]): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 readCharArray(dataIn: int[]): void
 ```
 
 Reads the character array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readCharArray(dataIn: int[]): void--><!--Device-MessageSequence-readCharArray(dataIn: int[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dataIn | int[] | Yes | Character array to read. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dataIn | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -1342,29 +1426,35 @@ try {
 
 ## readCharArray
 
+ArkTS-Dyn:
+```TypeScript
+readCharArray(): number[]
+```
+
+ArkTS-Sta:
 ```TypeScript
 readCharArray(): int[]
 ```
 
 Reads the character array from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readCharArray(): int[]--><!--Device-MessageSequence-readCharArray(): int[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int[] | Character array read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -1372,29 +1462,35 @@ See [readCharArray](#readchararray)
 
 ## readDouble
 
+ArkTS-Dyn:
+```TypeScript
+readDouble(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readDouble(): double
 ```
 
 Reads the double value from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readDouble(): double--><!--Device-MessageSequence-readDouble(): double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | Double value read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -1432,30 +1528,36 @@ try {
 
 ## readDoubleArray
 
+ArkTS-Dyn:
+```TypeScript
+readDoubleArray(dataIn: number[]): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 readDoubleArray(dataIn: double[]): void
 ```
 
 Reads the double array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readDoubleArray(dataIn: double[]): void--><!--Device-MessageSequence-readDoubleArray(dataIn: double[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dataIn | double[] | Yes | Double array to read. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dataIn | ArkTS-Dyn: number[]<br>ArkTS-Sta：double[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -1527,29 +1629,35 @@ try {
 
 ## readDoubleArray
 
+ArkTS-Dyn:
+```TypeScript
+readDoubleArray(): number[]
+```
+
+ArkTS-Sta:
 ```TypeScript
 readDoubleArray(): double[]
 ```
 
 Reads the double array from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readDoubleArray(): double[]--><!--Device-MessageSequence-readDoubleArray(): double[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double[] | Double array read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number[]<br>ArkTS-Sta：double[] |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -1563,17 +1671,17 @@ readException(): void
 
 Reads the exception information from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readException(): void--><!--Device-MessageSequence-readException(): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -1729,29 +1837,35 @@ try {
 
 ## readFileDescriptor
 
+ArkTS-Dyn:
+```TypeScript
+readFileDescriptor(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readFileDescriptor(): int
 ```
 
 Reads the file descriptor from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readFileDescriptor(): int--><!--Device-MessageSequence-readFileDescriptor(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | File descriptor read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -1794,29 +1908,35 @@ try {
 
 ## readFloat
 
+ArkTS-Dyn:
+```TypeScript
+readFloat(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readFloat(): double
 ```
 
 Reads the double value from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readFloat(): double--><!--Device-MessageSequence-readFloat(): double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | Double value read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -1854,30 +1974,36 @@ try {
 
 ## readFloatArray
 
+ArkTS-Dyn:
+```TypeScript
+readFloatArray(dataIn: number[]): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 readFloatArray(dataIn: double[]): void
 ```
 
 Reads the double array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readFloatArray(dataIn: double[]): void--><!--Device-MessageSequence-readFloatArray(dataIn: double[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dataIn | double[] | Yes | Double array to read. The system processes float data as that of the double type. Therefore, the total number of bytes occupied by a float array must be calculated as the double type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dataIn | ArkTS-Dyn: number[]<br>ArkTS-Sta：double[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -1949,29 +2075,35 @@ try {
 
 ## readFloatArray
 
+ArkTS-Dyn:
+```TypeScript
+readFloatArray(): number[]
+```
+
+ArkTS-Sta:
 ```TypeScript
 readFloatArray(): double[]
 ```
 
 Reads the double array from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readFloatArray(): double[]--><!--Device-MessageSequence-readFloatArray(): double[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double[] | Double array read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number[]<br>ArkTS-Sta：double[] |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -1979,31 +2111,37 @@ See [readFloatArray](#readfloatarray)
 
 ## readInt
 
+ArkTS-Dyn:
+```TypeScript
+readInt(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readInt(): int
 ```
 
 Reads the integer from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-MessageSequence-readInt(): int--><!--Device-MessageSequence-readInt(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Integer read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -2041,30 +2179,36 @@ try {
 
 ## readIntArray
 
+ArkTS-Dyn:
+```TypeScript
+readIntArray(dataIn: number[]): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 readIntArray(dataIn: int[]): void
 ```
 
 Reads the integer array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readIntArray(dataIn: int[]): void--><!--Device-MessageSequence-readIntArray(dataIn: int[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dataIn | int[] | Yes | Integer array to read. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dataIn | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -2136,29 +2280,35 @@ try {
 
 ## readIntArray
 
+ArkTS-Dyn:
+```TypeScript
+readIntArray(): number[]
+```
+
+ArkTS-Sta:
 ```TypeScript
 readIntArray(): int[]
 ```
 
 Reads the integer array from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readIntArray(): int[]--><!--Device-MessageSequence-readIntArray(): int[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int[] | Integer array read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -2172,23 +2322,23 @@ readInterfaceToken(): string
 
 Reads the interface token from this **MessageSequence** object. The interface token is read in the sequence in which it is written to the **MessageSequence** object. The local object can use it to verify the communication.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readInterfaceToken(): string--><!--Device-MessageSequence-readInterfaceToken(): string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Interface token obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -2225,29 +2375,35 @@ try {
 
 ## readLong
 
+ArkTS-Dyn:
+```TypeScript
+readLong(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readLong(): long
 ```
 
 Reads the long integer from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readLong(): long--><!--Device-MessageSequence-readLong(): long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Long integer read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -2285,30 +2441,36 @@ try {
 
 ## readLongArray
 
+ArkTS-Dyn:
+```TypeScript
+readLongArray(dataIn: number[]): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 readLongArray(dataIn: long[]): void
 ```
 
 Reads the long array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readLongArray(dataIn: long[]): void--><!--Device-MessageSequence-readLongArray(dataIn: long[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dataIn | long[] | Yes | Long array to read. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dataIn | ArkTS-Dyn: number[]<br>ArkTS-Sta：long[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -2380,29 +2542,35 @@ try {
 
 ## readLongArray
 
+ArkTS-Dyn:
+```TypeScript
+readLongArray(): number[]
+```
+
+ArkTS-Sta:
 ```TypeScript
 readLongArray(): long[]
 ```
 
 Reads the long integer array from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readLongArray(): long[]--><!--Device-MessageSequence-readLongArray(): long[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long[] | Long array read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number[]<br>ArkTS-Sta：long[] |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -2416,25 +2584,25 @@ readParcelable(dataIn: Parcelable): void
 
 Reads the **Parcelable** object from this **MessageSequence** object to the specified object (**dataIn**).
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readParcelable(dataIn: Parcelable): void--><!--Device-MessageSequence-readParcelable(dataIn: Parcelable): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dataIn | [Parcelable](arkts-ipc-rpc-parcelable-i.md) | Yes | Parcelable** object to read. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dataIn | [Parcelable](arkts-ipc-rpc-parcelable-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect. |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
-| [1900012](../errorcode-rpc.md#1900012-js-callback-execution-failed) | Failed to call the JS callback function. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900012](../errorcode-rpc.md#1900012-js-callback-execution-failed) |
 
 **Examples**
 
@@ -2483,25 +2651,25 @@ readParcelableArray(parcelableArray: Parcelable[]): void
 
 Reads the **Parcelable** array from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readParcelableArray(parcelableArray: Parcelable[]): void--><!--Device-MessageSequence-readParcelableArray(parcelableArray: Parcelable[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| parcelableArray | [Parcelable](arkts-ipc-rpc-parcelable-i.md)[] | Yes | Parcelable** array to read. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| parcelableArray | [Parcelable](arkts-ipc-rpc-parcelable-i.md)[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The length of the array passed when reading is not equal to the length passed when writing to the array; 5.The element does not exist in the array. |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
-| [1900012](../errorcode-rpc.md#1900012-js-callback-execution-failed) | Failed to call the JS callback function. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900012](../errorcode-rpc.md#1900012-js-callback-execution-failed) |
 
 **Examples**
 
@@ -2555,32 +2723,32 @@ Reads raw data from this **MessageSequence** object.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 11
 
 **Substitutes:** [readRawDataBuffer](#readrawdatabuffer)(size: int)
-
-<!--Device-MessageSequence-readRawData(size: number): number[]--><!--Device-MessageSequence-readRawData(size: number): number[]-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | number | Yes | Size of the raw data to read. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| size | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number[] | Raw data obtained, in bytes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number[] |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -2621,36 +2789,42 @@ try {
 
 ## readRawDataBuffer
 
+ArkTS-Dyn:
+```TypeScript
+readRawDataBuffer(size: number): ArrayBuffer
+```
+
+ArkTS-Sta:
 ```TypeScript
 readRawDataBuffer(size: int): ArrayBuffer
 ```
 
 Reads raw data from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-MessageSequence-readRawDataBuffer(size: int): ArrayBuffer--><!--Device-MessageSequence-readRawDataBuffer(size: int): ArrayBuffer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | int | Yes | Size of the raw data to read. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| size | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ArrayBuffer | Raw data obtained, in bytes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArrayBuffer |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -2686,24 +2860,24 @@ readRemoteObject(): IRemoteObject
 
 Reads the remote object from **MessageSequence**. You can use this API to deserialize the **MessageSequence** object to generate an **IRemoteObject**. The remote object is read in the order in which it is written to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readRemoteObject(): IRemoteObject--><!--Device-MessageSequence-readRemoteObject(): IRemoteObject-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Remote object obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -2770,24 +2944,24 @@ readRemoteObjectArray(objects: IRemoteObject[]): void
 
 Reads the **IRemoteObject** array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readRemoteObjectArray(objects: IRemoteObject[]): void--><!--Device-MessageSequence-readRemoteObjectArray(objects: IRemoteObject[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| objects | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes | IRemoteObject** array to read. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| objects | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The length of the array passed when reading is not equal to the length passed when writing to the array. |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -2913,23 +3087,23 @@ readRemoteObjectArray(): IRemoteObject[]
 
 Reads the **IRemoteObject** array from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readRemoteObjectArray(): IRemoteObject[]--><!--Device-MessageSequence-readRemoteObjectArray(): IRemoteObject[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | The **IRemoteObject** array is returned. If an empty array is written, **null** is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -2937,29 +3111,35 @@ See [readRemoteObjectArray](#readremoteobjectarray)
 
 ## readShort
 
+ArkTS-Dyn:
+```TypeScript
+readShort(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readShort(): int
 ```
 
 Reads the short integer from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readShort(): int--><!--Device-MessageSequence-readShort(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Short integer read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -2997,30 +3177,36 @@ try {
 
 ## readShortArray
 
+ArkTS-Dyn:
+```TypeScript
+readShortArray(dataIn: number[]): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 readShortArray(dataIn: int[]): void
 ```
 
 Reads the short array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readShortArray(dataIn: int[]): void--><!--Device-MessageSequence-readShortArray(dataIn: int[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dataIn | int[] | Yes | Short array to read. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dataIn | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -3092,29 +3278,35 @@ try {
 
 ## readShortArray
 
+ArkTS-Dyn:
+```TypeScript
+readShortArray(): number[]
+```
+
+ArkTS-Sta:
 ```TypeScript
 readShortArray(): int[]
 ```
 
 Reads the short array from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readShortArray(): int[]--><!--Device-MessageSequence-readShortArray(): int[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int[] | Short array read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -3128,25 +3320,25 @@ readString(): string
 
 Reads the string from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-MessageSequence-readString(): string--><!--Device-MessageSequence-readString(): string-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | String read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -3190,24 +3382,24 @@ readStringArray(dataIn: string[]): void
 
 Reads the string array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readStringArray(dataIn: string[]): void--><!--Device-MessageSequence-readStringArray(dataIn: string[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dataIn | string[] | Yes | String array to read. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dataIn | string[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -3285,23 +3477,23 @@ readStringArray(): string[]
 
 Reads the string array from this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-readStringArray(): string[]--><!--Device-MessageSequence-readStringArray(): string[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string[] | String array read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string[] |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -3315,9 +3507,9 @@ reclaim(): void
 
 Reclaims the **MessageSequence** object that is no longer used.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-reclaim(): void--><!--Device-MessageSequence-reclaim(): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -3352,30 +3544,36 @@ try {
 
 ## rewindRead
 
+ArkTS-Dyn:
+```TypeScript
+rewindRead(pos: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 rewindRead(pos: int): void
 ```
 
 Moves the read pointer to the specified position.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-rewindRead(pos: int): void--><!--Device-MessageSequence-rewindRead(pos: int): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pos | int | Yes | Position from which data is to read. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| pos | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 **Examples**
 
@@ -3420,30 +3618,36 @@ try {
 
 ## rewindWrite
 
+ArkTS-Dyn:
+```TypeScript
+rewindWrite(pos: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 rewindWrite(pos: int): void
 ```
 
 Moves the write pointer to the specified position.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-rewindWrite(pos: int): void--><!--Device-MessageSequence-rewindWrite(pos: int): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pos | int | Yes | Position from which data is to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| pos | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -3484,31 +3688,37 @@ try {
 
 ## setCapacity
 
+ArkTS-Dyn:
+```TypeScript
+setCapacity(size: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setCapacity(size: int): void
 ```
 
 Sets the storage capacity of this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-setCapacity(size: int): void--><!--Device-MessageSequence-setCapacity(size: int): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | int | Yes | Storage capacity of the **MessageSequence** object to set, in bytes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| size | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
-| [1900011](../errorcode-rpc.md#1900011-memory-allocation-failed) | Memory allocation failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [1900011](../errorcode-rpc.md#1900011-memory-allocation-failed) |
 
 **Examples**
 
@@ -3542,30 +3752,36 @@ try {
 
 ## setSize
 
+ArkTS-Dyn:
+```TypeScript
+setSize(size: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setSize(size: int): void
 ```
 
 Sets the size of the data contained in this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-setSize(size: int): void--><!--Device-MessageSequence-setSize(size: int): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | int | Yes | Data size to set, in bytes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| size | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -3606,25 +3822,25 @@ writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void
 
 Writes data of the ArrayBuffer type to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MessageSequence-writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void--><!--Device-MessageSequence-writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Data to write. |
-| typeCode | [TypeCode](arkts-ipc-rpc-typecode-e.md) | Yes | TypedArray type of the ArrayBuffer data.<br>The underlying write mode is determined based on the enum value of **TypeCode** passed by the service. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | ArrayBuffer | Yes |
+| typeCode | [TypeCode](arkts-ipc-rpc-typecode-e.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The obtained value of typeCode is incorrect; 5.Failed to obtain arrayBuffer information. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -3657,24 +3873,24 @@ writeAshmem(ashmem: Ashmem): void
 
 Writes an anonymous shared object to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeAshmem(ashmem: Ashmem): void--><!--Device-MessageSequence-writeAshmem(ashmem: Ashmem): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Yes | Anonymous shared object to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter is not an instance of the Ashmem object. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -3745,24 +3961,24 @@ writeBoolean(val: boolean): void
 
 Writes a Boolean value to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeBoolean(val: boolean): void--><!--Device-MessageSequence-writeBoolean(val: boolean): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | boolean | Yes | Boolean value to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -3802,24 +4018,24 @@ writeBooleanArray(booleanArray: boolean[]): void
 
 Writes a Boolean array to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeBooleanArray(booleanArray: boolean[]): void--><!--Device-MessageSequence-writeBooleanArray(booleanArray: boolean[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| booleanArray | boolean[] | Yes | Boolean array to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| booleanArray | boolean[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -3853,30 +4069,36 @@ try {
 
 ## writeByte
 
+ArkTS-Dyn:
+```TypeScript
+writeByte(val: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeByte(val: int): void
 ```
 
 Writes a byte value to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeByte(val: int): void--><!--Device-MessageSequence-writeByte(val: int): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | int | Yes | Byte value to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -3910,30 +4132,36 @@ try {
 
 ## writeByteArray
 
+ArkTS-Dyn:
+```TypeScript
+writeByteArray(byteArray: number[]): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeByteArray(byteArray: int[]): void
 ```
 
 Writes a byte array to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeByteArray(byteArray: int[]): void--><!--Device-MessageSequence-writeByteArray(byteArray: int[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteArray | int[] | Yes | Byte array to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| byteArray | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. 5.The type of the element in the array is incorrect. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -3969,30 +4197,36 @@ try {
 
 ## writeChar
 
+ArkTS-Dyn:
+```TypeScript
+writeChar(val: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeChar(val: int): void
 ```
 
 Writes a character to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeChar(val: int): void--><!--Device-MessageSequence-writeChar(val: int): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | int | Yes | Char** value to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -4026,30 +4260,36 @@ try {
 
 ## writeCharArray
 
+ArkTS-Dyn:
+```TypeScript
+writeCharArray(charArray: number[]): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeCharArray(charArray: int[]): void
 ```
 
 Writes a character array to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeCharArray(charArray: int[]): void--><!--Device-MessageSequence-writeCharArray(charArray: int[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| charArray | int[] | Yes | Character array to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| charArray | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -4083,30 +4323,36 @@ try {
 
 ## writeDouble
 
+ArkTS-Dyn:
+```TypeScript
+writeDouble(val: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeDouble(val: double): void
 ```
 
 Writes a double value to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeDouble(val: double): void--><!--Device-MessageSequence-writeDouble(val: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | double | Yes | Double value to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -4140,30 +4386,36 @@ try {
 
 ## writeDoubleArray
 
+ArkTS-Dyn:
+```TypeScript
+writeDoubleArray(doubleArray: number[]): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeDoubleArray(doubleArray: double[]): void
 ```
 
 Writes a double array to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeDoubleArray(doubleArray: double[]): void--><!--Device-MessageSequence-writeDoubleArray(doubleArray: double[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| doubleArray | double[] | Yes | Double array to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| doubleArray | ArkTS-Dyn: number[]<br>ArkTS-Sta：double[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -4197,30 +4449,36 @@ try {
 
 ## writeFileDescriptor
 
+ArkTS-Dyn:
+```TypeScript
+writeFileDescriptor(fd: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeFileDescriptor(fd: int): void
 ```
 
 Writes a file descriptor to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeFileDescriptor(fd: int): void--><!--Device-MessageSequence-writeFileDescriptor(fd: int): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fd | int | Yes | File descriptor to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -4260,30 +4518,36 @@ try {
 
 ## writeFloat
 
+ArkTS-Dyn:
+```TypeScript
+writeFloat(val: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeFloat(val: double): void
 ```
 
 Writes a double value to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeFloat(val: double): void--><!--Device-MessageSequence-writeFloat(val: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | double | Yes | Double value to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -4317,30 +4581,36 @@ try {
 
 ## writeFloatArray
 
+ArkTS-Dyn:
+```TypeScript
+writeFloatArray(floatArray: number[]): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeFloatArray(floatArray: double[]): void
 ```
 
 Writes a double array to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeFloatArray(floatArray: double[]): void--><!--Device-MessageSequence-writeFloatArray(floatArray: double[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| floatArray | double[] | Yes | Double array to write. The system processes float data as that of the double type. Therefore, the total number of bytes occupied by a float array must be calculated as the double type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| floatArray | ArkTS-Dyn: number[]<br>ArkTS-Sta：double[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -4374,32 +4644,38 @@ try {
 
 ## writeInt
 
+ArkTS-Dyn:
+```TypeScript
+writeInt(val: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeInt(val: int): void
 ```
 
 Writes an integer to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-MessageSequence-writeInt(val: int): void--><!--Device-MessageSequence-writeInt(val: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | int | Yes | Integer to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -4433,30 +4709,36 @@ try {
 
 ## writeIntArray
 
+ArkTS-Dyn:
+```TypeScript
+writeIntArray(intArray: number[]): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeIntArray(intArray: int[]): void
 ```
 
 Writes an integer array to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeIntArray(intArray: int[]): void--><!--Device-MessageSequence-writeIntArray(intArray: int[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| intArray | int[] | Yes | Integer array to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| intArray | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -4496,24 +4778,24 @@ writeInterfaceToken(token: string): void
 
 Writes an interface token to this **MessageSequence** object. The remote object can use this interface token to verify the communication.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeInterfaceToken(token: string): void--><!--Device-MessageSequence-writeInterfaceToken(token: string): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| token | string | Yes | Interface token to write. The length of the string must be less than 40960. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| token | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -4547,30 +4829,36 @@ try {
 
 ## writeLong
 
+ArkTS-Dyn:
+```TypeScript
+writeLong(val: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeLong(val: long): void
 ```
 
 Writes a long integer to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeLong(val: long): void--><!--Device-MessageSequence-writeLong(val: long): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | long | Yes | Long integer to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -4604,30 +4892,36 @@ try {
 
 ## writeLongArray
 
+ArkTS-Dyn:
+```TypeScript
+writeLongArray(longArray: number[]): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeLongArray(longArray: long[]): void
 ```
 
 Writes a long array to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeLongArray(longArray: long[]): void--><!--Device-MessageSequence-writeLongArray(longArray: long[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| longArray | long[] | Yes | Long array to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| longArray | ArkTS-Dyn: number[]<br>ArkTS-Sta：long[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -4667,17 +4961,17 @@ writeNoException(): void
 
 Writes information to this **MessageSequence** object indicating that no exception occurred.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeNoException(): void--><!--Device-MessageSequence-writeNoException(): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -4745,24 +5039,24 @@ writeParcelable(val: Parcelable): void
 
 Writes a **Parcelable** object to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeParcelable(val: Parcelable): void--><!--Device-MessageSequence-writeParcelable(val: Parcelable): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | [Parcelable](arkts-ipc-rpc-parcelable-i.md) | Yes | Parcelable** object to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | [Parcelable](arkts-ipc-rpc-parcelable-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -4809,24 +5103,24 @@ writeParcelableArray(parcelableArray: Parcelable[]): void
 
 Writes the **Parcelable** array to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeParcelableArray(parcelableArray: Parcelable[]): void--><!--Device-MessageSequence-writeParcelableArray(parcelableArray: Parcelable[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| parcelableArray | [Parcelable](arkts-ipc-rpc-parcelable-i.md)[] | Yes | Parcelable** array to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| parcelableArray | [Parcelable](arkts-ipc-rpc-parcelable-i.md)[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -4883,27 +5177,27 @@ Writes raw data to this **MessageSequence** object.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 11
 
 **Substitutes:** [writeRawDataBuffer](#writerawdatabuffer)(rawData: ArrayBuffer, size: int)
-
-<!--Device-MessageSequence-writeRawData(rawData: number[], size: number): void--><!--Device-MessageSequence-writeRawData(rawData: number[], size: number): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rawData | number[] | Yes | Raw data to write. The size cannot exceed 128 MB. |
-| size | number | Yes | Size of the raw data, in bytes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rawData | number[] | Yes |
+| size | number | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The element does not exist in the array; 7.Failed to obtain typedArray information; 8.The array is not of type int32; 9.The length of typedarray is smaller than the size of the original data sent. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -4939,6 +5233,12 @@ try {
 
 ## writeRawDataBuffer
 
+ArkTS-Dyn:
+```TypeScript
+writeRawDataBuffer(rawData: ArrayBuffer, size: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeRawDataBuffer(rawData: ArrayBuffer, size: int): void
 ```
@@ -4950,25 +5250,25 @@ Writes raw data to this **MessageSequence** object.
 > - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case,
 > pay attention to the SELinux configuration.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-MessageSequence-writeRawDataBuffer(rawData: ArrayBuffer, size: int): void--><!--Device-MessageSequence-writeRawDataBuffer(rawData: ArrayBuffer, size: int): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rawData | ArrayBuffer | Yes | Raw data to write. The size cannot exceed 128 MB. |
-| size | int | Yes | Size of the raw data, in bytes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rawData | ArrayBuffer | Yes |
+| size | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain arrayBuffer information; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The transferred size is greater than the byte length of ArrayBuffer. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -5001,25 +5301,25 @@ writeRemoteObject(obj: IRemoteObject): void
 
 Serializes the remote object and writes it to the [MessageSequence](#messagesequence) object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeRemoteObject(obj: IRemoteObject): void--><!--Device-MessageSequence-writeRemoteObject(obj: IRemoteObject): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| obj | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes | Remote object to serialize and write to the **MessageSequence** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -5081,24 +5381,24 @@ writeRemoteObjectArray(objectArray: IRemoteObject[]): void
 
 Writes an **IRemoteObject** array to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeRemoteObjectArray(objectArray: IRemoteObject[]): void--><!--Device-MessageSequence-writeRemoteObjectArray(objectArray: IRemoteObject[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| objectArray | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes | IRemoteObject** array to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| objectArray | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The obtained remoteObject is null. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -5156,30 +5456,36 @@ try {
 
 ## writeShort
 
+ArkTS-Dyn:
+```TypeScript
+writeShort(val: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeShort(val: int): void
 ```
 
 Writes a short integer to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeShort(val: int): void--><!--Device-MessageSequence-writeShort(val: int): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | int | Yes | Short integer to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -5213,30 +5519,36 @@ try {
 
 ## writeShortArray
 
+ArkTS-Dyn:
+```TypeScript
+writeShortArray(shortArray: number[]): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeShortArray(shortArray: int[]): void
 ```
 
 Writes a short array to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeShortArray(shortArray: int[]): void--><!--Device-MessageSequence-writeShortArray(shortArray: int[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| shortArray | int[] | Yes | Short array to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| shortArray | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -5276,26 +5588,26 @@ writeString(val: string): void
 
 Writes a string to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-MessageSequence-writeString(val: string): void--><!--Device-MessageSequence-writeString(val: string): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | string | Yes | String to write. The length of the string must be less than 40960. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -5335,24 +5647,24 @@ writeStringArray(stringArray: string[]): void
 
 Writes a string array to this **MessageSequence** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MessageSequence-writeStringArray(stringArray: string[]): void--><!--Device-MessageSequence-writeStringArray(stringArray: string[]): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| stringArray | string[] | Yes | String array to write. The length of a single element in the array must be less than 40960. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| stringArray | string[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The string length is greater than or equal to 40960; 5.The number of bytes copied to the buffer is different from the length of the obtained string. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 **Examples**
 
@@ -5383,4 +5695,3 @@ try {
   hilog.error(0x0000, 'testTag', 'error ' + error);
 }
 ```
-

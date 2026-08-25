@@ -2,9 +2,9 @@
 
 Describes a scene.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export declare class Scene--><!--Device-unnamed-export declare class Scene-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,23 +18,23 @@ Clones a node in the current scene. Cross-scene node cloning is not supported.
 
 **Since:** 23
 
-<!--Device-Scene-cloneNode(node: Node, parent: Node, name: string): Node | null--><!--Device-Scene-cloneNode(node: Node, parent: Node, name: string): Node | null-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node to be cloned. |
-| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Target parent node of the cloned node in the current scene. The cloned node and the target parent node must belong to the same scene. |
-| name | string | Yes | Name of the cloned node, which can be customized and has no special requirements. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes |
+| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes |
+| name | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Returns the cloned node. If the operation fails, null is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null |
 
 **Examples**
 
@@ -68,24 +68,24 @@ createComponent(node: Node, name: string): Promise<SceneComponent>
 
 Creates a component and attaches it to a node. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Scene-createComponent(node: Node, name: string): Promise<SceneComponent>--><!--Device-Scene-createComponent(node: Node, name: string): Promise<SceneComponent>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node to which the component will be attached. |
-| name | string | Yes | Name of the component to create, which is defined by individual plugins. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes |
+| name | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md)&gt; | Promise used to return the SceneComponent object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md)&gt; |
 
 **Examples**
 
@@ -119,9 +119,9 @@ destroy(): void
 
 Destroys this scene and releases all scene resources.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Scene-destroy(): void--><!--Device-Scene-destroy(): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -150,24 +150,24 @@ getComponent(node: Node, name: string): SceneComponent | null
 
 Obtains the component instance from a node based on the component name.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Scene-getComponent(node: Node, name: string): SceneComponent | null--><!--Device-Scene-getComponent(node: Node, name: string): SceneComponent | null-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node to which the component is attached. |
-| name | string | Yes | Name of the component to obtain. The value must be a system predefined or registered custom component name, and follow the naming conventions. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes |
+| name | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) \| null | SceneComponent object corresponding to the given name, or null if not found. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) \| null |
 
 **Examples**
 
@@ -201,17 +201,17 @@ static getDefaultRenderContext(): RenderContext | null
 
 Obtains the rendering context associated with the current graphics object.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Scene-static getDefaultRenderContext(): RenderContext | null--><!--Device-Scene-static getDefaultRenderContext(): RenderContext | null-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) \| null | Rendering context associated with the current object, or null if no rendering context is associated. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) \| null |
 
 **Examples**
 
@@ -237,24 +237,24 @@ getNodeByPath(path: string, type?: NodeType): Node | null
 
 Obtains a node by path.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Scene-getNodeByPath(path: string, type?: NodeType): Node | null--><!--Device-Scene-getNodeByPath(path: string, type?: NodeType): Node | null-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| path | string | Yes | Path in the scene node tree. Each layer is separated by a slash (/). |
-| type | [NodeType](arkts-arkgraphics3d-scenenodes-nodetype-e.md) | No | Expected type of the node to be returned. The default value is null. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| path | string | Yes |
+| type | [NodeType](arkts-arkgraphics3d-scenenodes-nodetype-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Returns the instance of the requested node. Returns null if not found or if the type of the found node does not match the passed parameter. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null |
 
 **Examples**
 
@@ -281,17 +281,17 @@ getResourceFactory(): SceneResourceFactory
 
 Obtains the scene resource factory.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Scene-getResourceFactory(): SceneResourceFactory--><!--Device-Scene-getResourceFactory(): SceneResourceFactory-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SceneResourceFactory](arkts-arkgraphics3d-scene-sceneresourcefactory-i.md) | Scene resource factory. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SceneResourceFactory](arkts-arkgraphics3d-scene-sceneresourcefactory-i.md) |
 
 **Examples**
 
@@ -318,25 +318,25 @@ importNode(name: string, node: Node, parent: Node | null): Node
 
 Generally used for importing nodes from other scenes.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-Scene-importNode(name: string, node: Node, parent: Node | null): Node--><!--Device-Scene-importNode(name: string, node: Node, parent: Node | null): Node-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the imported node, which can be customized and has no special requirements. |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node to be imported. |
-| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Yes | Parent node of the imported node in the new scene. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes |
+| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Node to be imported. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) |
 
 **Examples**
 
@@ -370,25 +370,25 @@ importScene(name: string, scene: Scene, parent: Node | null): Node
 
 Imports another scene into the current one.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-Scene-importScene(name: string, scene: Scene, parent: Node | null): Node--><!--Device-Scene-importScene(name: string, scene: Scene, parent: Node | null): Node-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the root node of the imported scene, which can be customized and has no special requirements. |
-| scene | [Scene](arkts-arkgraphics3d-scene-c.md) | Yes | Scene to import. |
-| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Yes | Parent node of the imported scene in the new scene. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| scene | [Scene](arkts-arkgraphics3d-scene-c.md) | Yes |
+| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Root node of the imported scene. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) |
 
 **Examples**
 
@@ -416,23 +416,23 @@ static load(uri? : ResourceStr): Promise<Scene>
 
 Loads a resource by path. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Scene-static load(uri? : ResourceStr): Promise<Scene>--><!--Device-Scene-static load(uri? : ResourceStr): Promise<Scene>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | ResourceStr | No | Path of the model file resource to load. The default value is undefined. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; | Promise used to return the Scene object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; |
 
 **Examples**
 
@@ -489,23 +489,23 @@ renderFrame(params?: RenderParameters): boolean
 
 Renders frames on demand, such as controlling the frame rate.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-Scene-renderFrame(params?: RenderParameters): boolean--><!--Device-Scene-renderFrame(params?: RenderParameters): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| params | [RenderParameters](arkts-arkgraphics3d-scene-renderparameters-i.md) | No | Rendering parameters. The default value is undefined. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| params | [RenderParameters](arkts-arkgraphics3d-scene-renderparameters-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Rendering result. The value true is returned if rendering is successfully scheduled; returns false otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -525,3 +525,66 @@ function RenderFrameTest() {
 }
 ```
 
+## animations
+
+```TypeScript
+get animations(): Animation[]
+```
+
+Animation objects in the 3D scene.@return { Animation[] } @readonly
+
+**Type:** [Animation](arkts-arkgraphics3d-sceneresources-animation-i.md)[]
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## environment
+
+```TypeScript
+set environment(value: Environment)
+```
+
+Environment object.
+
+**Type:** [Environment](arkts-arkgraphics3d-sceneresources-environment-i.md)
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## renderConfiguration
+
+```TypeScript
+get renderConfiguration(): RenderConfiguration
+```
+
+Rendering configuration.
+
+**Type:** [RenderConfiguration](arkts-arkgraphics3d-scene-renderconfiguration-i.md)
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## root
+
+```TypeScript
+get root(): Node | null
+```
+
+Root node of the 3D scene tree.@return { Node | null } @readonly
+
+**Type:** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**System capability:** SystemCapability.ArkUi.Graphics3D

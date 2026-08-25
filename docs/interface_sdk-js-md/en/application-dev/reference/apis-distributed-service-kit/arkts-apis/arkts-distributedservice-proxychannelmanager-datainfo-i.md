@@ -2,9 +2,9 @@
 
 Represents the received data information, including the channel ID and data.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-proxyChannelManager-interface DataInfo--><!--Device-proxyChannelManager-interface DataInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -22,13 +22,13 @@ channelId: int
 
 Channel ID of the proxy channel. The value range is 1 to 2147483647.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataInfo-channelId: int--><!--Device-DataInfo-channelId: int-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -42,11 +42,10 @@ Received byte data. The maximum length is 4096 bytes.
 
 **Type:** ArrayBuffer
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataInfo-data: ArrayBuffer--><!--Device-DataInfo-data: ArrayBuffer-End-->
-
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
-

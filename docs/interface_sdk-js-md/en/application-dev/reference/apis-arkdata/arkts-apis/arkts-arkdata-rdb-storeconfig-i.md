@@ -4,11 +4,11 @@ Defines the RDB store configuration.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)
-
-<!--Device-rdb-interface StoreConfig--><!--Device-rdb-interface StoreConfig-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -29,11 +29,10 @@ Database file name.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [name](arkts-arkdata-relationalstore-storeconfig-i.md#name)
 
-<!--Device-StoreConfig-name: string--><!--Device-StoreConfig-name: string-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-

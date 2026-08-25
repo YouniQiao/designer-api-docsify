@@ -4,9 +4,7 @@ Handles messages and provides message scheduling capabilities
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-concurrency-export class MessageHandler--><!--Device-concurrency-export class MessageHandler-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,20 +23,18 @@ Constructs a new MessageHandler with a handler function
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MessageHandler-constructor(handler: (message: concurrency.Message) => void, worker: EAWorker | undefined = EAWorker.current())--><!--Device-MessageHandler-constructor(handler: (message: concurrency.Message) => void, worker: EAWorker | undefined = EAWorker.current())-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| handler | (message: concurrency.Message) =&gt; void | Yes | the handler function to process messages. |
-| worker | [EAWorker](arkts-arkts-eaworker-c.md) \| undefined | Yes | the worker to associate with this handler. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| handler | (message: concurrency.Message) = & gt; void | Yes |
+| worker | [EAWorker](arkts-arkts-eaworker-c.md) \| undefined | Yes |
 
 ## getWorker
 
@@ -50,19 +46,17 @@ Returns the worker associated with this handler
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MessageHandler-getWorker(): EAWorker--><!--Device-MessageHandler-getWorker(): EAWorker-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [EAWorker](arkts-arkts-eaworker-c.md) | the associated worker |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [EAWorker](arkts-arkts-eaworker-c.md) |
 
 ## hasCallbacks
 
@@ -74,25 +68,23 @@ Checks whether the handler has the specified callback pending
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MessageHandler-hasCallbacks(callback: () => void): boolean--><!--Device-MessageHandler-hasCallbacks(callback: () => void): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | () =&gt; void | Yes | the callback to check for. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | () = & gt; void | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the callback is pending, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## hasMessages
 
@@ -104,25 +96,23 @@ Checks whether the handler has messages with the specified what code
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MessageHandler-hasMessages(what: int): boolean--><!--Device-MessageHandler-hasMessages(what: int): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| what | int | Yes | the message code to check for. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| what | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if such messages exist, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## hasMessages
 
@@ -134,26 +124,24 @@ Checks whether the handler has messages with the specified what code and object
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MessageHandler-hasMessages(what: int, obj: Any): boolean--><!--Device-MessageHandler-hasMessages(what: int, obj: Any): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| what | int | Yes | the message code to check for. <br>The value should be an integer. |
-| obj | Any | Yes | the object to check for. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| what | int | Yes |
+| obj | Any | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if such messages exist, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## post
 
@@ -165,25 +153,23 @@ Posts a callback to the handler
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MessageHandler-post(callback: () => void): boolean--><!--Device-MessageHandler-post(callback: () => void): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | () =&gt; void | Yes | the callback to post. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | () = & gt; void | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the callback was successfully posted, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## removeCallbacks
 
@@ -195,25 +181,23 @@ Removes pending callbacks matching the specified callback
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MessageHandler-removeCallbacks(callback: () => void): boolean--><!--Device-MessageHandler-removeCallbacks(callback: () => void): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | () =&gt; void | Yes | the callback to remove. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | () = & gt; void | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the callback was removed, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## removeMessages
 
@@ -225,25 +209,23 @@ Removes pending messages with the specified what code
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MessageHandler-removeMessages(what: int): boolean--><!--Device-MessageHandler-removeMessages(what: int): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| what | int | Yes | the message code to remove. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| what | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if messages were removed, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## removeMessages
 
@@ -255,26 +237,24 @@ Removes pending messages with the specified what code and object
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MessageHandler-removeMessages(what: int, obj: Any): boolean--><!--Device-MessageHandler-removeMessages(what: int, obj: Any): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| what | int | Yes | the message code to remove. <br>The value should be an integer. |
-| obj | Any | Yes | the object to match. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| what | int | Yes |
+| obj | Any | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if messages were removed, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## sendEmptyMessage
 
@@ -286,25 +266,23 @@ Sends an empty message with the specified what code
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MessageHandler-sendEmptyMessage(what: int): boolean--><!--Device-MessageHandler-sendEmptyMessage(what: int): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| what | int | Yes | the message code to send. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| what | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the message was successfully sent, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## sendMessage
 
@@ -316,23 +294,20 @@ Sends a message to this handler
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MessageHandler-sendMessage(message: concurrency.Message): boolean--><!--Device-MessageHandler-sendMessage(message: concurrency.Message): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | concurrency.Message | Yes | the message to send. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | concurrency.Message | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the message was successfully sent, false otherwise |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

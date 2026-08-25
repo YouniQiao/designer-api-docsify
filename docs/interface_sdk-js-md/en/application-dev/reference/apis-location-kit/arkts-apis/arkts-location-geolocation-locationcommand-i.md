@@ -4,13 +4,13 @@ Location subsystem command structure@interface LocationCommand
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-geolocation-export interface LocationCommand--><!--Device-geolocation-export interface LocationCommand-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -30,11 +30,11 @@ command: string
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [command](arkts-location-geolocationmanager-locationcommand-i.md#command)
-
-<!--Device-LocationCommand-command: string--><!--Device-LocationCommand-command: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -48,11 +48,10 @@ scenario: LocationRequestScenario
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [scenario](arkts-location-geolocationmanager-locationcommand-i.md#scenario)
 
-<!--Device-LocationCommand-scenario: LocationRequestScenario--><!--Device-LocationCommand-scenario: LocationRequestScenario-End-->
-
 **System capability:** SystemCapability.Location.Location.Core
-

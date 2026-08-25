@@ -6,11 +6,10 @@ type HttpProxy = connection.HttpProxy
 
 Defines the global HTTP proxy configuration of the network.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-webSocket-type HttpProxy = connection.HttpProxy--><!--Device-webSocket-type HttpProxy = connection.HttpProxy-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Property type:** connection.HttpProxy
-

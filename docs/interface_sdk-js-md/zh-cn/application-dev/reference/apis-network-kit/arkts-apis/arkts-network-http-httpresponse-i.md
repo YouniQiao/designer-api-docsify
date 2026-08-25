@@ -2,9 +2,9 @@
 
 request方法回调函数的返回值类型。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-http-export interface HttpResponse--><!--Device-http-export interface HttpResponse-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -26,7 +26,7 @@ HTTP请求交互的详细信息。
 
 **起始版本：** 24
 
-<!--Device-HttpResponse-connectionExtraInfo?: ConnectionExtraInfo--><!--Device-HttpResponse-connectionExtraInfo?: ConnectionExtraInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -40,11 +40,11 @@ cookies: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HttpResponse-cookies: string--><!--Device-HttpResponse-cookies: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -59,11 +59,11 @@ header: Object
 
 **类型：** Object
 
-**起始版本：** 23
+**起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HttpResponse-header: Object--><!--Device-HttpResponse-header: Object-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -77,9 +77,9 @@ HTTP请求的各个阶段的耗时。
 
 **类型：** [PerformanceTiming](arkts-network-http-performancetiming-i.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-HttpResponse-performanceTiming: PerformanceTiming--><!--Device-HttpResponse-performanceTiming: PerformanceTiming-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -91,13 +91,13 @@ responseCode: ResponseCode | int
 
 回调函数执行成功时，此字段为[ResponseCode](arkts-network-http-responsecode-e.md)。若执行失败，错误码将会从AsyncCallback中的err字段返回。
 
-**类型：** [ResponseCode](arkts-network-http-responsecode-e.md) \| int
+**类型：** ArkTS-Dyn: [ResponseCode](arkts-network-http-responsecode-e.md) \| number  <br>ArkTS-Sta：[ResponseCode](arkts-network-http-responsecode-e.md) \| int
 
-**起始版本：** 23
+**起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HttpResponse-responseCode: ResponseCode | int--><!--Device-HttpResponse-responseCode: ResponseCode | int-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -113,11 +113,11 @@ HTTP请求根据响应头中content-type类型返回对应的响应格式内容�
 
 **类型：** string \| Object \| ArrayBuffer
 
-**起始版本：** 23
+**起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HttpResponse-result: string | Object | ArrayBuffer--><!--Device-HttpResponse-result: string | Object | ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -131,11 +131,10 @@ resultType: HttpDataType
 
 **类型：** [HttpDataType](arkts-network-http-httpdatatype-e.md)
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-HttpResponse-resultType: HttpDataType--><!--Device-HttpResponse-resultType: HttpDataType-End-->
-
 **系统能力：** SystemCapability.Communication.NetStack
-

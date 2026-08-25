@@ -15,13 +15,13 @@ Unregisters a mission status listener. This API uses an asynchronous callback to
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [off](arkts-ability-missionmanager-offmission-f-sys.md)
+**Substitutes:** [off](arkts-ability-missionmanager-off-f-sys.md)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
-
-<!--Device-missionManager-function unregisterMissionListener(listenerId: number, callback: AsyncCallback<void>): void--><!--Device-missionManager-function unregisterMissionListener(listenerId: number, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -29,10 +29,10 @@ Unregisters a mission status listener. This API uses an asynchronous callback to
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| listenerId | number | Yes | Index of the mission status listener to unregister. It is returned by **registerMissionListener()**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| listenerId | number | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Examples**
 
@@ -118,13 +118,13 @@ Unregisters a mission status listener. This API uses a promise to return the res
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [off](arkts-ability-missionmanager-offmission-f-sys.md)
+**Substitutes:** [off](arkts-ability-missionmanager-off-f-sys.md)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
-
-<!--Device-missionManager-function unregisterMissionListener(listenerId: number): Promise<void>--><!--Device-missionManager-function unregisterMissionListener(listenerId: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -132,17 +132,16 @@ Unregisters a mission status listener. This API uses a promise to return the res
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| listenerId | number | Yes | Index of the mission status listener to unregister. It is returned by **registerMissionListener()**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| listenerId | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Examples**
 
 See [unregisterMissionListener](#unregistermissionlistener)
-

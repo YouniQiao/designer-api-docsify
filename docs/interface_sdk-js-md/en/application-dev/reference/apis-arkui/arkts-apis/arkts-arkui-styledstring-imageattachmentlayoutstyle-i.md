@@ -4,9 +4,7 @@ Defines the ImageAttachment Layout Style.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare interface ImageAttachmentLayoutStyle--><!--Device-unnamed-export declare interface ImageAttachmentLayoutStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,15 +16,13 @@ borderRadius?: LengthMetrics | BorderRadiuses
 
 Border radius.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| BorderRadiuses
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ImageAttachmentLayoutStyle-borderRadius?: LengthMetrics | BorderRadiuses--><!--Device-ImageAttachmentLayoutStyle-borderRadius?: LengthMetrics | BorderRadiuses-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,11 +38,9 @@ Outer Margin.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ImageAttachmentLayoutStyle-margin?: LengthMetrics | Margin--><!--Device-ImageAttachmentLayoutStyle-margin?: LengthMetrics | Margin-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,15 +52,12 @@ padding?: LengthMetrics | Padding
 
 Inner margin.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [Padding](arkts-arkui-padding-t.md)
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [Padding](arkts-arkui-units-padding-i.md)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ImageAttachmentLayoutStyle-padding?: LengthMetrics | Padding--><!--Device-ImageAttachmentLayoutStyle-padding?: LengthMetrics | Padding-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

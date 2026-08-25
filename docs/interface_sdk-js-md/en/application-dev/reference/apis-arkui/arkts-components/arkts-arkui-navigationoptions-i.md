@@ -4,7 +4,7 @@ Defines the routing stack operation options.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface NavigationOptions--><!--Device-unnamed-declare interface NavigationOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,11 @@ Whether to enable the transition animation.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NavigationOptions-animated?: boolean--><!--Device-NavigationOptions-animated?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,11 +46,10 @@ Operation mode of the routing stack.Default value: **LaunchMode.STANDARD**
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-NavigationOptions-launchMode?: LaunchMode--><!--Device-NavigationOptions-launchMode?: LaunchMode-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

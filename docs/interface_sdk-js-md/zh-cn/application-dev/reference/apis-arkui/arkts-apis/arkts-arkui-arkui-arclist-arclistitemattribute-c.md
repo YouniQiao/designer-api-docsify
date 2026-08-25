@@ -6,7 +6,7 @@
 
 **起始版本：** 18
 
-<!--Device-unnamed-export declare class ArcListItemAttribute--><!--Device-unnamed-export declare class ArcListItemAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -15,6 +15,32 @@
 ```TypeScript
 import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@kit.ArkUI';
 ```
+
+## attributeModifier
+
+```TypeScript
+default attributeModifier(modifier: AttributeModifier<ArcListItemAttribute> | AttributeModifier<CommonMethod> | undefined): this
+```
+
+设置属性修改器。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| modifier | AttributeModifier&lt;[ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md)&gt; \| AttributeModifier & lt;CommonMethod & gt; \ | undefined | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| this |
 
 ## autoScale
 
@@ -26,23 +52,45 @@ autoScale(enable: Optional<boolean>): ArcListItemAttribute
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-ArcListItemAttribute-autoScale(enable: Optional<boolean>): ArcListItemAttribute--><!--Device-ArcListItemAttribute-autoScale(enable: Optional<boolean>): ArcListItemAttribute-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enable | Optional&lt;boolean&gt; | 是 | ArcListItem是否支持自动缩放显示，true表示支持，false表示不支持。 <br>默认值：true，支持自动缩放显示。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enable | Optional & lt;boolean & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) |  |
+| 类型 |
+| --- |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |
+
+## setArcListItemOptions
+
+```TypeScript
+default setArcListItemOptions(): this
+```
+
+设置ArcListItem选项。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |
 
 ## swipeAction
 
@@ -54,21 +102,20 @@ swipeAction(options: Optional<SwipeActionOptions>): ArcListItemAttribute
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-ArcListItemAttribute-swipeAction(options: Optional<SwipeActionOptions>): ArcListItemAttribute--><!--Device-ArcListItemAttribute-swipeAction(options: Optional<SwipeActionOptions>): ArcListItemAttribute-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | Optional&lt;SwipeActionOptions&gt; | 是 | ArcListItem划出操作的配置选项，具体配置请参考SwipeActionOptions。未设置时，不配置划出操作。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | Optional & lt;SwipeActionOptions & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) |  |
-
+| 类型 |
+| --- |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |

@@ -2,9 +2,9 @@
 
 Enumerates the text decoration types.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-text-enum TextDecorationType--><!--Device-text-enum TextDecorationType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -16,11 +16,11 @@ NONE = 0
 
 No decoration is used.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-TextDecorationType-NONE = 0--><!--Device-TextDecorationType-NONE = 0-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,11 +32,11 @@ UNDERLINE = 1
 
 An underline is used for decoration.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-TextDecorationType-UNDERLINE = 1--><!--Device-TextDecorationType-UNDERLINE = 1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -48,11 +48,11 @@ OVERLINE = 2
 
 An overline is used for decoration.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-TextDecorationType-OVERLINE = 2--><!--Device-TextDecorationType-OVERLINE = 2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -64,11 +64,10 @@ LINE_THROUGH = 4
 
 A strikethrough is used for decoration.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-TextDecorationType-LINE_THROUGH = 4--><!--Device-TextDecorationType-LINE_THROUGH = 4-End-->
-
 **System capability:** SystemCapability.Graphics.Drawing
-

@@ -15,11 +15,11 @@ function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [getWant](arkts-ability-wantagent-getwant-f-sys.md)
-
-<!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void--><!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -27,10 +27,10 @@ function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | 是 | Indicates the [WantAgent](arkts-ability-wantagent-depr-t.md#wantagent) WantAgent信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | 是 | 获取WantAgent中的Want的回调方法。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [agent](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-request-agent-n.md) | [WantAgent](arkts-ability-wantagent-depr-t.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | 是 |
 
 **示例**
 
@@ -141,11 +141,11 @@ function getWant(agent: WantAgent): Promise<Want>
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [getWant](arkts-ability-wantagent-getwant-f-sys.md)
-
-<!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>--><!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -153,17 +153,16 @@ function getWant(agent: WantAgent): Promise<Want>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | 是 | WantAgent信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [agent](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-request-agent-n.md) | [WantAgent](arkts-ability-wantagent-depr-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | 以Promise形式返回Want。 |
+| 类型 |
+| --- |
+| Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; |
 
 **示例**
 
 参见 [getWant](#getwant)
-

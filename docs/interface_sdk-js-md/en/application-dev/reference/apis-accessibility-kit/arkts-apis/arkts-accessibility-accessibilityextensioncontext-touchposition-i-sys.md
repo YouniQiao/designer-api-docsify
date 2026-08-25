@@ -4,7 +4,7 @@ Touch tap position.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export declare interface TouchPosition--><!--Device-unnamed-export declare interface TouchPosition-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -18,13 +18,13 @@ x: int
 
 X-coordinate of the tap position, in px.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-TouchPosition-x: int--><!--Device-TouchPosition-x: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -38,15 +38,14 @@ y: int
 
 Y-coordinate of the tap position, in px.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-TouchPosition-y: int--><!--Device-TouchPosition-y: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
-

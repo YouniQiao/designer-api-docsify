@@ -2,9 +2,9 @@
 
 Enumerates network types.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-connection-export enum NetBearType--><!--Device-connection-export enum NetBearType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -16,11 +16,11 @@ BEARER_CELLULAR = 0
 
 Cellular network.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-NetBearType-BEARER_CELLULAR = 0--><!--Device-NetBearType-BEARER_CELLULAR = 0-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -32,11 +32,11 @@ BEARER_WIFI = 1
 
 Wi-Fi network.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-NetBearType-BEARER_WIFI = 1--><!--Device-NetBearType-BEARER_WIFI = 1-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -48,11 +48,11 @@ BEARER_BLUETOOTH = 2
 
 Bluetooth network.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-NetBearType-BEARER_BLUETOOTH = 2--><!--Device-NetBearType-BEARER_BLUETOOTH = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -64,11 +64,11 @@ BEARER_ETHERNET = 3
 
 Ethernet network.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-NetBearType-BEARER_ETHERNET = 3--><!--Device-NetBearType-BEARER_ETHERNET = 3-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -80,9 +80,8 @@ BEARER_VPN = 4
 
 VPN.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NetBearType-BEARER_VPN = 4--><!--Device-NetBearType-BEARER_VPN = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
-

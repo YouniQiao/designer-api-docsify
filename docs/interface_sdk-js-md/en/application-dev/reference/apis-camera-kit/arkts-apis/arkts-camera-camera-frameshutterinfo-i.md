@@ -2,9 +2,9 @@
 
 Describes the frame shutter information.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-camera-interface FrameShutterInfo--><!--Device-camera-interface FrameShutterInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -22,13 +22,13 @@ captureId: int
 
 ID of this capture action.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-FrameShutterInfo-captureId: int--><!--Device-FrameShutterInfo-captureId: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -40,13 +40,12 @@ timestamp: long
 
 Timestamp when the frame shutter event is triggered, in milliseconds.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-FrameShutterInfo-timestamp: long--><!--Device-FrameShutterInfo-timestamp: long-End-->
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
-

@@ -4,7 +4,7 @@ TCPSocket连接。在调用TCPSocket的方法前，需要先通过[socket.constr
 
 **起始版本：** 7
 
-<!--Device-socket-export interface TCPSocket--><!--Device-socket-export interface TCPSocket-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -29,25 +29,25 @@ bind(address: NetAddress, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-TCPSocket-bind(address: NetAddress, callback: AsyncCallback<void>): void--><!--Device-TCPSocket-bind(address: NetAddress, callback: AsyncCallback<void>): void-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| address | NetAddress | 是 | 本端地址信息，参考 NetAddress。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败返回错误、错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| address | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -187,30 +187,30 @@ bind(address: NetAddress): Promise<void>
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-TCPSocket-bind(address: NetAddress): Promise<void>--><!--Device-TCPSocket-bind(address: NetAddress): Promise<void>-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| address | NetAddress | 是 | 本端地址信息，参考 NetAddress。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| address | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 以Promise形式返回TCPSocket绑定本机的IP地址和端口的结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -226,23 +226,23 @@ close(callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-TCPSocket-close(callback: AsyncCallback<void>): void--><!--Device-TCPSocket-close(callback: AsyncCallback<void>): void-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败返回错误码、错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -557,23 +557,23 @@ close(): Promise<void>
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-TCPSocket-close(): Promise<void>--><!--Device-TCPSocket-close(): Promise<void>-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -592,33 +592,33 @@ connect(options: TCPConnectOptions, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-TCPSocket-connect(options: TCPConnectOptions, callback: AsyncCallback<void>): void--><!--Device-TCPSocket-connect(options: TCPConnectOptions, callback: AsyncCallback<void>): void-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [TCPConnectOptions](arkts-network-socket-tcpconnectoptions-i.md) | 是 | TCPSocket连接的参数，参考[TCPConnectOptions](arkts-network-socket-tcpconnectoptions-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败返回错误码、错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [TCPConnectOptions](arkts-network-socket-tcpconnectoptions-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2301206](../errorcode-net-socket.md#2301206-socks5连接代理服务器失败) | Socks5 failed to connect to the proxy server.<br>**适用版本：** 18+ |
-| [2301207](../errorcode-net-socket.md#2301207-socks5认证用户名或密码无效) | Socks5 username or password is invalid.<br>**适用版本：** 18+ |
-| [2301208](../errorcode-net-socket.md#2301208-socks5连接远程服务器失败) | Socks5 failed to connect to the remote server.<br>**适用版本：** 18+ |
-| [2301209](../errorcode-net-socket.md#2301209-socks5协商认证方式失败) | Socks5 failed to negotiate the authentication method.<br>**适用版本：** 18+ |
-| [2301210](../errorcode-net-socket.md#2301210-socks5发送消息失败) | Socks5 failed to send the message.<br>**适用版本：** 18+ |
-| [2301211](../errorcode-net-socket.md#2301211-socks5接收消息失败) | Socks5 failed to receive the message.<br>**适用版本：** 18+ |
-| [2301212](../errorcode-net-socket.md#2301212-socks5消息序列化失败) | Socks5 serialization error.<br>**适用版本：** 18+ |
-| [2301213](../errorcode-net-socket.md#2301213-socks5消息反序列化失败) | Socks5 deserialization error.<br>**适用版本：** 18+ |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2301206](../errorcode-net-socket.md#2301206-socks5连接代理服务器失败) |
+| [2301207](../errorcode-net-socket.md#2301207-socks5认证用户名或密码无效) |
+| [2301208](../errorcode-net-socket.md#2301208-socks5连接远程服务器失败) |
+| [2301209](../errorcode-net-socket.md#2301209-socks5协商认证方式失败) |
+| [2301210](../errorcode-net-socket.md#2301210-socks5发送消息失败) |
+| [2301211](../errorcode-net-socket.md#2301211-socks5接收消息失败) |
+| [2301212](../errorcode-net-socket.md#2301212-socks5消息序列化失败) |
+| [2301213](../errorcode-net-socket.md#2301213-socks5消息反序列化失败) |
 
 **示例**
 
@@ -1076,38 +1076,38 @@ connect(options: TCPConnectOptions): Promise<void>
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-TCPSocket-connect(options: TCPConnectOptions): Promise<void>--><!--Device-TCPSocket-connect(options: TCPConnectOptions): Promise<void>-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [TCPConnectOptions](arkts-network-socket-tcpconnectoptions-i.md) | 是 | TCPSocket连接的参数，参考[TCPConnectOptions](arkts-network-socket-tcpconnectoptions-i.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [TCPConnectOptions](arkts-network-socket-tcpconnectoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 以Promise形式返回TCPSocket连接到指定的IP地址和端口的结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2301206](../errorcode-net-socket.md#2301206-socks5连接代理服务器失败) | Socks5 failed to connect to the proxy server.<br>**适用版本：** 18+ |
-| [2301207](../errorcode-net-socket.md#2301207-socks5认证用户名或密码无效) | Socks5 username or password is invalid.<br>**适用版本：** 18+ |
-| [2301208](../errorcode-net-socket.md#2301208-socks5连接远程服务器失败) | Socks5 failed to connect to the remote server.<br>**适用版本：** 18+ |
-| [2301209](../errorcode-net-socket.md#2301209-socks5协商认证方式失败) | Socks5 failed to negotiate the authentication method.<br>**适用版本：** 18+ |
-| [2301210](../errorcode-net-socket.md#2301210-socks5发送消息失败) | Socks5 failed to send the message.<br>**适用版本：** 18+ |
-| [2301211](../errorcode-net-socket.md#2301211-socks5接收消息失败) | Socks5 failed to receive the message.<br>**适用版本：** 18+ |
-| [2301212](../errorcode-net-socket.md#2301212-socks5消息序列化失败) | Socks5 serialization error.<br>**适用版本：** 18+ |
-| [2301213](../errorcode-net-socket.md#2301213-socks5消息反序列化失败) | Socks5 deserialization error.<br>**适用版本：** 18+ |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2301206](../errorcode-net-socket.md#2301206-socks5连接代理服务器失败) |
+| [2301207](../errorcode-net-socket.md#2301207-socks5认证用户名或密码无效) |
+| [2301208](../errorcode-net-socket.md#2301208-socks5连接远程服务器失败) |
+| [2301209](../errorcode-net-socket.md#2301209-socks5协商认证方式失败) |
+| [2301210](../errorcode-net-socket.md#2301210-socks5发送消息失败) |
+| [2301211](../errorcode-net-socket.md#2301211-socks5接收消息失败) |
+| [2301212](../errorcode-net-socket.md#2301212-socks5消息序列化失败) |
+| [2301213](../errorcode-net-socket.md#2301213-socks5消息反序列化失败) |
 
 **示例**
 
@@ -1126,23 +1126,23 @@ getLocalAddress(): Promise<NetAddress>
 
 **起始版本：** 12
 
-<!--Device-TCPSocket-getLocalAddress(): Promise<NetAddress>--><!--Device-TCPSocket-getLocalAddress(): Promise<NetAddress>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;NetAddress&gt; | 以Promise形式返回获取本地socket地址的结果。 |
+| 类型 |
+| --- |
+| Promise & lt;NetAddress & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
-| [2301009](../errorcode-net-socket.md#2301009-错误文件描述符) | Bad file descriptor. |
-| [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) | Socket operation on non-socket. |
+| 错误码ID |
+| --- |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) |
+| [2301009](../errorcode-net-socket.md#2301009-错误文件描述符) |
+| [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) |
 
 **示例**
 
@@ -1405,23 +1405,23 @@ getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-TCPSocket-getRemoteAddress(callback: AsyncCallback<NetAddress>): void--><!--Device-TCPSocket-getRemoteAddress(callback: AsyncCallback<NetAddress>): void-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | 是 | 回调函数。成功时返回对端Socket地址，失败时返回错误码、错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -1622,23 +1622,23 @@ getRemoteAddress(): Promise<NetAddress>
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-TCPSocket-getRemoteAddress(): Promise<NetAddress>--><!--Device-TCPSocket-getRemoteAddress(): Promise<NetAddress>-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;NetAddress&gt; | 以Promise形式返回获取对端socket地址的结果。 |
+| 类型 |
+| --- |
+| Promise & lt;NetAddress & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -1659,15 +1659,15 @@ getSocketFd(callback: AsyncCallback<int>): void
 
 **起始版本：** 10
 
-<!--Device-TCPSocket-getSocketFd(callback: AsyncCallback<int>): void--><!--Device-TCPSocket-getSocketFd(callback: AsyncCallback<int>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数，当成功时，返回socket的文件描述符，失败时，返回undefined。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **示例**
 
@@ -1997,15 +1997,15 @@ getSocketFd(): Promise<int>
 
 **起始版本：** 10
 
-<!--Device-TCPSocket-getSocketFd(): Promise<int>--><!--Device-TCPSocket-getSocketFd(): Promise<int>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | 以Promise形式返回socket的文件描述符。 |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **示例**
 
@@ -2024,23 +2024,23 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-TCPSocket-getState(callback: AsyncCallback<SocketStateBase>): void--><!--Device-TCPSocket-getState(callback: AsyncCallback<SocketStateBase>): void-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | 是 | 回调函数。成功时获取TCPSocket状态，失败时返回错误码、错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -2380,27 +2380,72 @@ getState(): Promise<SocketStateBase>
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-TCPSocket-getState(): Promise<SocketStateBase>--><!--Device-TCPSocket-getState(): Promise<SocketStateBase>-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | 以Promise形式返回获取TCPSocket状态的结果。 |
+| 类型 |
+| --- |
+| Promise&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
 参见 [getState](#getstate)
+
+## off('message')
+
+```TypeScript
+off(type: 'message', callback?: Callback<SocketMessageInfo>): void
+```
+
+取消订阅TCPSocket连接的接收消息事件。使用callback异步回调。
+
+**起始版本：** 7
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'message' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 否 |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let messageView = '';
+let callback = (value: socket.SocketMessageInfo) => {
+  for (let i: number = 0; i < value.message.byteLength; i++) {
+    let uint8Array = new Uint8Array(value.message) 
+    let messages = uint8Array[i]
+    let message = String.fromCharCode(messages);
+    messageView += message;
+  }
+  console.info('on message message: ' + JSON.stringify(messageView));
+  console.info('remoteInfo: ' + JSON.stringify(value.remoteInfo));
+}
+tcp.on('message', callback);
+// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+tcp.off('message', callback);
+tcp.off('message');
+```
 
 ## off('connect' | 'close')
 
@@ -2412,16 +2457,16 @@ off(type: 'connect' | 'close', callback?: Callback<void>): void
 
 **起始版本：** 7
 
-<!--Device-TCPSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void--><!--Device-TCPSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'connect' \| 'close' | 是 | 取消订阅的事件类型。&lt;br /&gt;- 'connect'：连接事件。&lt;br /&gt;- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'connect' \| 'close' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
 
 **示例**
 
@@ -2456,20 +2501,20 @@ off(type: 'connect' | 'close', callback?: Callback<void>): void
 
 **起始版本：** 7
 
-<!--Device-TCPSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void--><!--Device-TCPSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'connect' \| 'close' | 是 | 取消订阅的事件类型。&lt;br /&gt;- 'connect'：连接事件。&lt;br /&gt;- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'connect' \| 'close' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
 
 **示例**
 
-参见 off_close
+参见 off
 
 ## off('error')
 
@@ -2481,16 +2526,16 @@ off(type: 'error', callback?: ErrorCallback): void
 
 **起始版本：** 7
 
-<!--Device-TCPSocket-off(type: 'error', callback?: ErrorCallback): void--><!--Device-TCPSocket-off(type: 'error', callback?: ErrorCallback): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'error' | 是 | 取消订阅的事件类型。'error'：error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'error' | 是 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
 
 **示例**
 
@@ -2508,26 +2553,26 @@ tcp.off('error', callback);
 tcp.off('error');
 ```
 
-## off('message')
+## on('message')
 
 ```TypeScript
-off(type: 'message', callback?: Callback<SocketMessageInfo>): void
+on(type: 'message', callback: Callback<SocketMessageInfo>): void
 ```
 
-取消订阅TCPSocket连接的接收消息事件。使用callback异步回调。
+订阅TCPSocket连接的接收消息事件。使用callback异步回调。
 
 **起始版本：** 7
 
-<!--Device-TCPSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void--><!--Device-TCPSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'message' | 是 | 取消订阅的事件类型。'message'：接收消息事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'message' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 是 |
 
 **示例**
 
@@ -2536,21 +2581,17 @@ import { socket } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let messageView = '';
-let callback = (value: socket.SocketMessageInfo) => {
+tcp.on('message', (value: socket.SocketMessageInfo) => {
+  let messageView = '';
+  let uint8Array = new Uint8Array(value.message); 
   for (let i: number = 0; i < value.message.byteLength; i++) {
-    let uint8Array = new Uint8Array(value.message) 
-    let messages = uint8Array[i]
+    let messages = uint8Array[i];
     let message = String.fromCharCode(messages);
     messageView += message;
   }
   console.info('on message message: ' + JSON.stringify(messageView));
   console.info('remoteInfo: ' + JSON.stringify(value.remoteInfo));
-}
-tcp.on('message', callback);
-// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
-tcp.off('message', callback);
-tcp.off('message');
+});
 ```
 
 ## on('connect' | 'close')
@@ -2563,16 +2604,16 @@ on(type: 'connect' | 'close', callback: Callback<void>): void
 
 **起始版本：** 7
 
-<!--Device-TCPSocket-on(type: 'connect' | 'close', callback: Callback<void>): void--><!--Device-TCPSocket-on(type: 'connect' | 'close', callback: Callback<void>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'connect' \| 'close' | 是 | 订阅的事件类型。&lt;br /&gt;- 'connect'：连接事件。&lt;br /&gt;- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。TCPSocket的连接事件或关闭事件触发时调用回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'connect' \| 'close' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
 
 **示例**
 
@@ -2599,20 +2640,20 @@ on(type: 'connect' | 'close', callback: Callback<void>): void
 
 **起始版本：** 7
 
-<!--Device-TCPSocket-on(type: 'connect' | 'close', callback: Callback<void>): void--><!--Device-TCPSocket-on(type: 'connect' | 'close', callback: Callback<void>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'connect' \| 'close' | 是 | 订阅的事件类型。&lt;br /&gt;- 'connect'：连接事件。&lt;br /&gt;- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。TCPSocket的连接事件或关闭事件触发时调用回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'connect' \| 'close' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
 
 **示例**
 
-参见 on_close
+参见 on
 
 ## on('error')
 
@@ -2624,16 +2665,16 @@ on(type: 'error', callback: ErrorCallback): void
 
 **起始版本：** 7
 
-<!--Device-TCPSocket-on(type: 'error', callback: ErrorCallback): void--><!--Device-TCPSocket-on(type: 'error', callback: ErrorCallback): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'error' | 是 | 订阅的事件类型。'error'：error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数。TCPSocket连接订阅的某类error事件触发时调用回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'error' | 是 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
 
 **示例**
 
@@ -2644,47 +2685,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
 tcp.on('error', (err: BusinessError) => {
   console.error("on error, err:" + JSON.stringify(err))
-});
-```
-
-## on('message')
-
-```TypeScript
-on(type: 'message', callback: Callback<SocketMessageInfo>): void
-```
-
-订阅TCPSocket连接的接收消息事件。使用callback异步回调。
-
-**起始版本：** 7
-
-<!--Device-TCPSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void--><!--Device-TCPSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'message' | 是 | 订阅的事件类型。'message'：接收消息事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 是 | 回调函数。返回TCPSocket连接信息。<br>**起始版本：** 11 |
-
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-tcp.on('message', (value: socket.SocketMessageInfo) => {
-  let messageView = '';
-  let uint8Array = new Uint8Array(value.message); 
-  for (let i: number = 0; i < value.message.byteLength; i++) {
-    let messages = uint8Array[i];
-    let message = String.fromCharCode(messages);
-    messageView += message;
-  }
-  console.info('on message message: ' + JSON.stringify(messageView));
-  console.info('remoteInfo: ' + JSON.stringify(value.remoteInfo));
 });
 ```
 
@@ -2701,25 +2701,25 @@ send(options: TCPSendOptions, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-TCPSocket-send(options: TCPSendOptions, callback: AsyncCallback<void>): void--><!--Device-TCPSocket-send(options: TCPSendOptions, callback: AsyncCallback<void>): void-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [TCPSendOptions](arkts-network-socket-tcpsendoptions-i.md) | 是 | TCPSocket发送请求的参数，参考[TCPSendOptions](arkts-network-socket-tcpsendoptions-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败返回错误码、错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [TCPSendOptions](arkts-network-socket-tcpsendoptions-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -3129,30 +3129,30 @@ send(options: TCPSendOptions): Promise<void>
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-TCPSocket-send(options: TCPSendOptions): Promise<void>--><!--Device-TCPSocket-send(options: TCPSendOptions): Promise<void>-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [TCPSendOptions](arkts-network-socket-tcpsendoptions-i.md) | 是 | TCPSocket发送请求的参数，参考[TCPSendOptions](arkts-network-socket-tcpsendoptions-i.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [TCPSendOptions](arkts-network-socket-tcpsendoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -3171,25 +3171,25 @@ setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-TCPSocket-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void--><!--Device-TCPSocket-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | 是 | TCPSocket连接的其他属性，参考[TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -3686,32 +3686,31 @@ setExtraOptions(options: TCPExtraOptions): Promise<void>
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-TCPSocket-setExtraOptions(options: TCPExtraOptions): Promise<void>--><!--Device-TCPSocket-setExtraOptions(options: TCPExtraOptions): Promise<void>-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | 是 | TCPSocket连接的其他属性，参考[TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
 参见 [setExtraOptions](#setextraoptions)
-

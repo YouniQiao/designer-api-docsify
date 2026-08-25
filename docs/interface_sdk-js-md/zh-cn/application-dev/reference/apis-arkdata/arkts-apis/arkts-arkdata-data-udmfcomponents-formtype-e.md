@@ -4,7 +4,7 @@
 
 **起始版本：** 20
 
-<!--Device-unnamed-declare enum FormType--><!--Device-unnamed-declare enum FormType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -18,9 +18,9 @@ TYPE_BIG = 0
 
 **起始版本：** 20
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-FormType-TYPE_BIG = 0--><!--Device-FormType-TYPE_BIG = 0-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -34,9 +34,9 @@ TYPE_MID = 1
 
 **起始版本：** 20
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-FormType-TYPE_MID = 1--><!--Device-FormType-TYPE_MID = 1-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -50,9 +50,8 @@ TYPE_SMALL = 2
 
 **起始版本：** 20
 
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-FormType-TYPE_SMALL = 2--><!--Device-FormType-TYPE_SMALL = 2-End-->
-
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
-

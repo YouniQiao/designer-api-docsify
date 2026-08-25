@@ -2,9 +2,9 @@
 
 Enumerates the types of the operation for obtaining image or video thumbnails.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-photoAccessHelper-enum RequestPhotoType--><!--Device-photoAccessHelper-enum RequestPhotoType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ REQUEST_ALL_THUMBNAILS = 0
 
 Obtain both the quick thumbnail and the quality thumbnail.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-RequestPhotoType-REQUEST_ALL_THUMBNAILS = 0--><!--Device-RequestPhotoType-REQUEST_ALL_THUMBNAILS = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,9 @@ REQUEST_FAST_THUMBNAIL
 
 Obtain only the quick thumbnail.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-RequestPhotoType-REQUEST_FAST_THUMBNAIL--><!--Device-RequestPhotoType-REQUEST_FAST_THUMBNAIL-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,11 +50,10 @@ REQUEST_QUALITY_THUMBNAIL
 
 Obtain only the quality thumbnail.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-RequestPhotoType-REQUEST_QUALITY_THUMBNAIL--><!--Device-RequestPhotoType-REQUEST_QUALITY_THUMBNAIL-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

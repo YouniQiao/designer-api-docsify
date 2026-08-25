@@ -4,7 +4,7 @@ Session的实例表示在某个SE Reader实例上创建连接会话。通过[Rea
 
 **起始版本：** 10
 
-<!--Device-omapi-export interface Session--><!--Device-omapi-export interface Session-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -24,16 +24,16 @@ close(): void
 
 **起始版本：** 10
 
-<!--Device-Session-close(): void--><!--Device-Session-close(): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-se服务状态异常) | IllegalStateError, service state exception. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3300101](../errorcode-se.md#3300101-se服务状态异常) |
 
 **示例**
 
@@ -76,16 +76,16 @@ closeChannels(): void
 
 **起始版本：** 10
 
-<!--Device-Session-closeChannels(): void--><!--Device-Session-closeChannels(): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-se服务状态异常) | IllegalStateError, service state exception. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3300101](../errorcode-se.md#3300101-se服务状态异常) |
 
 **示例**
 
@@ -114,22 +114,22 @@ getATR(): number[]
 
 **起始版本：** 10
 
-<!--Device-Session-getATR(): number[]--><!--Device-Session-getATR(): number[]-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number[] | 返回SE的ATR，SE的ATR不可用时，返回空的数组。 |
+| 类型 |
+| --- |
+| number[] |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-se服务状态异常) | IllegalStateError, service state exception. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3300101](../errorcode-se.md#3300101-se服务状态异常) |
 
 **示例**
 
@@ -159,21 +159,21 @@ getReader(): Reader
 
 **起始版本：** 10
 
-<!--Device-Session-getReader(): Reader--><!--Device-Session-getReader(): Reader-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Reader](arkts-connectivity-omapi-reader-i.md) | 返回此Session的Reader实例。 |
+| 类型 |
+| --- |
+| [Reader](arkts-connectivity-omapi-reader-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 **示例**
 
@@ -213,21 +213,21 @@ isClosed(): boolean
 
 **起始版本：** 10
 
-<!--Device-Session-isClosed(): boolean--><!--Device-Session-isClosed(): boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | True if the session is closed, false otherwise. |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 **示例**
 
@@ -272,32 +272,32 @@ openBasicChannel(aid: number[]): Promise<Channel>
 
 **起始版本：** 10
 
-<!--Device-Session-openBasicChannel(aid: number[]): Promise<Channel>--><!--Device-Session-openBasicChannel(aid: number[]): Promise<Channel>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| aid | number[] | 是 | 在此Channel上选择的Applet的AID或如果没有Applet被选择时空的数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| aid | number[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | 以Promise形式异步返回可用的基础Channel对象实例。 |
+| 类型 |
+| --- |
+| Promise&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-se服务状态异常) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
-| [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) | NoSuchElementError, the AID on the SE is not available or cannot be selected. |
-| [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
-| [3300104](../errorcode-se.md#3300104-se芯片io异常) | IOError, there is a communication problem to the reader or the SE. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3300101](../errorcode-se.md#3300101-se服务状态异常) |
+| [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) |
+| [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) |
+| [3300104](../errorcode-se.md#3300104-se芯片io异常) |
 
 **示例**
 
@@ -425,27 +425,27 @@ openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void
 
 **起始版本：** 10
 
-<!--Device-Session-openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void--><!--Device-Session-openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| aid | number[] | 是 | 在此Channel上选择的Applet的AID或如果没有Applet被选择时空的数组。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | 是 | 以callback形式异步返回可用的基础Channel对象实例。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| aid | number[] | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-se服务状态异常) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
-| [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) | NoSuchElementError, the AID on the SE is not available or cannot be selected. |
-| [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
-| [3300104](../errorcode-se.md#3300104-se芯片io异常) | IOError, there is a communication problem to the reader or the SE. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3300101](../errorcode-se.md#3300101-se服务状态异常) |
+| [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) |
+| [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) |
+| [3300104](../errorcode-se.md#3300104-se芯片io异常) |
 
 **示例**
 
@@ -461,33 +461,33 @@ openBasicChannel(aid: number[], p2: number): Promise<Channel>
 
 **起始版本：** 10
 
-<!--Device-Session-openBasicChannel(aid: number[], p2: number): Promise<Channel>--><!--Device-Session-openBasicChannel(aid: number[], p2: number): Promise<Channel>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| aid | number[] | 是 | 在此Channel上选择的Applet的AID或如果没有Applet被选择时空的数组。 |
-| p2 | number | 是 | 在该Channel上执行的SELECT APDU的P2参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| aid | number[] | 是 |
+| p2 | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | 以Promise形式异步返回可用的基础Channel对象实例。 |
+| 类型 |
+| --- |
+| Promise&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-se服务状态异常) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
-| [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) | NoSuchElementError, the AID on the SE is not available or cannot be selected. |
-| [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
-| [3300104](../errorcode-se.md#3300104-se芯片io异常) | IOError, there is a communication problem to the reader or the SE. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3300101](../errorcode-se.md#3300101-se服务状态异常) |
+| [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) |
+| [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) |
+| [3300104](../errorcode-se.md#3300104-se芯片io异常) |
 
 **示例**
 
@@ -503,28 +503,28 @@ openBasicChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): v
 
 **起始版本：** 10
 
-<!--Device-Session-openBasicChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void--><!--Device-Session-openBasicChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| aid | number[] | 是 | 在此Channel上选择的Applet的AID或如果没有Applet被选择时空的数组。 |
-| p2 | number | 是 | 此Channel上执行SELECT APDU命令的P2参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | 是 | 以callback形式异步返回可用的基础Channel对象实例。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| aid | number[] | 是 |
+| p2 | number | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-se服务状态异常) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
-| [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) | NoSuchElementError, the AID on the SE is not available or cannot be selected. |
-| [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
-| [3300104](../errorcode-se.md#3300104-se芯片io异常) | IOError, there is a communication problem to the reader or the SE. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3300101](../errorcode-se.md#3300101-se服务状态异常) |
+| [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) |
+| [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) |
+| [3300104](../errorcode-se.md#3300104-se芯片io异常) |
 
 **示例**
 
@@ -540,32 +540,32 @@ openLogicalChannel(aid: number[]): Promise<Channel>
 
 **起始版本：** 10
 
-<!--Device-Session-openLogicalChannel(aid: number[]): Promise<Channel>--><!--Device-Session-openLogicalChannel(aid: number[]): Promise<Channel>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| aid | number[] | 是 | 在此Channel上选择的Applet的AID或如果没有Applet被选择时空的数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| aid | number[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Promise used to return the logical channel instance obtained. |
+| 类型 |
+| --- |
+| Promise&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-se服务状态异常) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
-| [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) | NoSuchElementError, the AID on the SE is not available or cannot be selected or a logical channel is already open to a non-multi-selectable applet. |
-| [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
-| [3300104](../errorcode-se.md#3300104-se芯片io异常) | IOError, there is a communication problem to the reader or the SE. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3300101](../errorcode-se.md#3300101-se服务状态异常) |
+| [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) |
+| [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) |
+| [3300104](../errorcode-se.md#3300104-se芯片io异常) |
 
 **示例**
 
@@ -693,27 +693,27 @@ openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void
 
 **起始版本：** 10
 
-<!--Device-Session-openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void--><!--Device-Session-openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| aid | number[] | 是 | 在此Channel上选择的Applet的AID或如果没有Applet被选择时空的数组。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | 是 | 以callback形式异步返回可用的逻辑Channel对象实例。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| aid | number[] | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-se服务状态异常) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
-| [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) | NoSuchElementError, the AID on the SE is not available or cannot be selected or a logical channel is already open to a non-multi-selectable applet. |
-| [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
-| [3300104](../errorcode-se.md#3300104-se芯片io异常) | IOError, there is a communication problem to the reader or the SE. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3300101](../errorcode-se.md#3300101-se服务状态异常) |
+| [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) |
+| [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) |
+| [3300104](../errorcode-se.md#3300104-se芯片io异常) |
 
 **示例**
 
@@ -729,33 +729,33 @@ openLogicalChannel(aid: number[], p2: number): Promise<Channel>
 
 **起始版本：** 10
 
-<!--Device-Session-openLogicalChannel(aid: number[], p2: number): Promise<Channel>--><!--Device-Session-openLogicalChannel(aid: number[], p2: number): Promise<Channel>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| aid | number[] | 是 | 在此Channel上选择的Applet的AID或如果没有Applet被选择时空的数组。 |
-| p2 | number | 是 | 此Channel上执行SELECT APDU命令的P2参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| aid | number[] | 是 |
+| p2 | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | 以Promise形式异步返回可用的逻辑Channel实例对象。 |
+| 类型 |
+| --- |
+| Promise&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-se服务状态异常) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
-| [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) | NoSuchElementError, the AID on the SE is not available or cannot be selected or a logical channel is already open to a non-multi-selectable applet. |
-| [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
-| [3300104](../errorcode-se.md#3300104-se芯片io异常) | IOError, there is a communication problem to the reader or the SE. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3300101](../errorcode-se.md#3300101-se服务状态异常) |
+| [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) |
+| [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) |
+| [3300104](../errorcode-se.md#3300104-se芯片io异常) |
 
 **示例**
 
@@ -771,30 +771,29 @@ openLogicalChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>):
 
 **起始版本：** 10
 
-<!--Device-Session-openLogicalChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void--><!--Device-Session-openLogicalChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| aid | number[] | 是 | 在此Channel上选择的Applet的AID或如果没有Applet被选择时空的数组。 |
-| p2 | number | 是 | 此Channel上执行SELECT APDU命令的P2参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | 是 | 以callback形式异步返回可用的逻辑Channel对象实例。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| aid | number[] | 是 |
+| p2 | number | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-se服务状态异常) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
-| [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) | NoSuchElementError, the AID on the SE is not available or cannot be selected or a logical channel is already open to a non-multi-selectable applet. |
-| [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
-| [3300104](../errorcode-se.md#3300104-se芯片io异常) | IOError, there is a communication problem to the reader or the SE. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3300101](../errorcode-se.md#3300101-se服务状态异常) |
+| [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) |
+| [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) |
+| [3300104](../errorcode-se.md#3300104-se芯片io异常) |
 
 **示例**
 
 参见 [openLogicalChannel](#openlogicalchannel)
-

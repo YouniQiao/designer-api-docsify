@@ -4,7 +4,7 @@ Enumerates input types, which are used to identify the input modes supported by 
 
 **Since:** 26.0.0
 
-<!--Device-inputMethodSystemPanelManager-export enum InputMethodInputType--><!--Device-inputMethodSystemPanelManager-export enum InputMethodInputType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -20,9 +20,9 @@ No input.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InputMethodInputType-NONE = -1--><!--Device-InputMethodInputType-NONE = -1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -38,9 +38,9 @@ Camera input, indicating that the system is in camera input mode. This type is t
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InputMethodInputType-CAMERA_INPUT = 0--><!--Device-InputMethodInputType-CAMERA_INPUT = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -56,9 +56,9 @@ Security input, indicating that the system panel is in secure input mode. This t
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InputMethodInputType-SECURITY_INPUT = 1--><!--Device-InputMethodInputType-SECURITY_INPUT = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -74,9 +74,9 @@ Voice input, indicating that the system panel is in voice input mode. This type 
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InputMethodInputType-VOICE_INPUT = 2--><!--Device-InputMethodInputType-VOICE_INPUT = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -92,11 +92,10 @@ Floating voice input, indicating that the system panel is in floating voice inpu
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InputMethodInputType-FLOATING_VOICE_INPUT = 3--><!--Device-InputMethodInputType-FLOATING_VOICE_INPUT = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **System API:** This is a system API.
-

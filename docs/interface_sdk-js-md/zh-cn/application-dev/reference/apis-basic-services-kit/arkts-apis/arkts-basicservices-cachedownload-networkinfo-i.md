@@ -2,9 +2,9 @@
 
 预下载的网络信息。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-cacheDownload-interface NetworkInfo--><!--Device-cacheDownload-interface NetworkInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -24,9 +24,9 @@ readonly dnsServers: string[]
 
 **类型：** string[]
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-NetworkInfo-readonly dnsServers: string[]--><!--Device-NetworkInfo-readonly dnsServers: string[]-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -42,7 +42,6 @@ readonly ip?: string
 
 **起始版本：** 23
 
-<!--Device-NetworkInfo-readonly ip?: string--><!--Device-NetworkInfo-readonly ip?: string-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
-

@@ -1,18 +1,17 @@
 # BundleOptions (System API)
 
 ```TypeScript
-export type BundleOptions = _BundleOptions
+export type BundleOptions = _BundleInfo.BundleOptions
 ```
 
 Describes the bundle options used to set or query application information.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-bundleManager-export type BundleOptions = _BundleOptions--><!--Device-bundleManager-export type BundleOptions = _BundleOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
 
-**Property type:** _BundleOptions
-
+**Property type:** _BundleInfo.BundleOptions

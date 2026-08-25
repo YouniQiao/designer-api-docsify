@@ -2,9 +2,9 @@
 
 Enumerates the print job states.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-print-enum PrintJobState--><!--Device-print-enum PrintJobState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -16,9 +16,9 @@ PRINT_JOB_PREPARE = 0
 
 The printer is prepared for the print job.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrintJobState-PRINT_JOB_PREPARE = 0--><!--Device-PrintJobState-PRINT_JOB_PREPARE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -30,9 +30,9 @@ PRINT_JOB_QUEUED = 1
 
 The print job is on the print queue of the printer.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrintJobState-PRINT_JOB_QUEUED = 1--><!--Device-PrintJobState-PRINT_JOB_QUEUED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -44,9 +44,9 @@ PRINT_JOB_RUNNING = 2
 
 The print job is being executed.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrintJobState-PRINT_JOB_RUNNING = 2--><!--Device-PrintJobState-PRINT_JOB_RUNNING = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -58,9 +58,9 @@ PRINT_JOB_BLOCKED = 3
 
 The print job is blocked.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrintJobState-PRINT_JOB_BLOCKED = 3--><!--Device-PrintJobState-PRINT_JOB_BLOCKED = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -72,9 +72,8 @@ PRINT_JOB_COMPLETED = 4
 
 The print job is complete.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrintJobState-PRINT_JOB_COMPLETED = 4--><!--Device-PrintJobState-PRINT_JOB_COMPLETED = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
-

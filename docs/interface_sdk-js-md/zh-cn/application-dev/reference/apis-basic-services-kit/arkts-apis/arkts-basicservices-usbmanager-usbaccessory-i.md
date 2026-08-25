@@ -2,9 +2,9 @@
 
 USB配件信息。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-usbManager-interface USBAccessory--><!--Device-usbManager-interface USBAccessory-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -24,9 +24,9 @@ description: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-USBAccessory-description: string--><!--Device-USBAccessory-description: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -40,9 +40,9 @@ manufacturer: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-USBAccessory-manufacturer: string--><!--Device-USBAccessory-manufacturer: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -56,9 +56,9 @@ product: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-USBAccessory-product: string--><!--Device-USBAccessory-product: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -72,9 +72,9 @@ serialNumber: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-USBAccessory-serialNumber: string--><!--Device-USBAccessory-serialNumber: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -88,9 +88,8 @@ version: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-USBAccessory-version: string--><!--Device-USBAccessory-version: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
-

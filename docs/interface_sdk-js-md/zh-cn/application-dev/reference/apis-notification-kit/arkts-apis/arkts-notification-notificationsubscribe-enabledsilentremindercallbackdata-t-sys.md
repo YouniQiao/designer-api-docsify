@@ -8,13 +8,12 @@ export type EnabledSilentReminderCallbackData = _EnabledSilentReminderCallbackDa
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-notificationSubscribe-export type EnabledSilentReminderCallbackData = _EnabledSilentReminderCallbackData--><!--Device-notificationSubscribe-export type EnabledSilentReminderCallbackData = _EnabledSilentReminderCallbackData-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
 
 **属性类型：** _EnabledSilentReminderCallbackData
-

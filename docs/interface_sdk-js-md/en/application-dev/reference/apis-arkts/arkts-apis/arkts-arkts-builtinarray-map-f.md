@@ -16,26 +16,24 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function map(self: FixedArray<boolean>, callbackfn: (value: boolean, index: int, array: FixedArray<boolean>)     => boolean): FixedArray<boolean>--><!--Device-unnamed-export function map(self: FixedArray<boolean>, callbackfn: (value: boolean, index: int, array: FixedArray<boolean>)     => boolean): FixedArray<boolean>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;boolean&gt; | Yes | The array to map. |
-| callbackfn | (value: boolean, index: int, array: FixedArray&lt;boolean&gt;)      =&gt; boolean | Yes | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;boolean & gt; | Yes |
+| callbackfn | (value: boolean, index: int, array: FixedArray & lt;boolean & gt;)      = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;boolean&gt; | An array instance, constructed from `this` and given function. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;boolean & gt; |
 
 
 ## map
@@ -49,26 +47,24 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function map(self: FixedArray<byte>, callbackfn: (value: byte, index: int, array: FixedArray<byte>) => byte):     FixedArray<byte>--><!--Device-unnamed-export function map(self: FixedArray<byte>, callbackfn: (value: byte, index: int, array: FixedArray<byte>) => byte):     FixedArray<byte>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;byte&gt; | Yes | The array to map. |
-| callbackfn | (value: byte, index: int, array: FixedArray&lt;byte&gt;) =&gt; byte | Yes | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;byte & gt; | Yes |
+| callbackfn | (value: byte, index: int, array: FixedArray & lt;byte & gt;) = & gt; byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;byte&gt; | An array instance, constructed from `this` and given function. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;byte & gt; |
 
 
 ## map
@@ -82,26 +78,24 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function map(self: FixedArray<short>, callbackfn: (value: short, index: int, array: FixedArray<short>)     => short): FixedArray<short>--><!--Device-unnamed-export function map(self: FixedArray<short>, callbackfn: (value: short, index: int, array: FixedArray<short>)     => short): FixedArray<short>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;short&gt; | Yes | The array to map. |
-| callbackfn | (value: short, index: int, array: FixedArray&lt;short&gt;)      =&gt; short | Yes | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;short & gt; | Yes |
+| callbackfn | (value: short, index: int, array: FixedArray & lt;short & gt;)      = & gt; short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;short&gt; | An array instance, constructed from `this` and given function. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;short & gt; |
 
 
 ## map
@@ -115,26 +109,24 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function map(self: FixedArray<int>, callbackfn: (value: int, index: int, array: FixedArray<int>) => int):     FixedArray<int>--><!--Device-unnamed-export function map(self: FixedArray<int>, callbackfn: (value: int, index: int, array: FixedArray<int>) => int):     FixedArray<int>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;int&gt; | Yes | The array to map. |
-| callbackfn | (value: int, index: int, array: FixedArray&lt;int&gt;) =&gt; int | Yes | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;int & gt; | Yes |
+| callbackfn | (value: int, index: int, array: FixedArray & lt;int & gt;) = & gt; int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;int&gt; | An array instance, constructed from `this` and given function. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;int & gt; |
 
 
 ## map
@@ -148,26 +140,24 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function map(self: FixedArray<long>, callbackfn: (value: long, index: int, array: FixedArray<long>) => long):     FixedArray<long>--><!--Device-unnamed-export function map(self: FixedArray<long>, callbackfn: (value: long, index: int, array: FixedArray<long>) => long):     FixedArray<long>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;long&gt; | Yes | The array to map. |
-| callbackfn | (value: long, index: int, array: FixedArray&lt;long&gt;) =&gt; long | Yes | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;long & gt; | Yes |
+| callbackfn | (value: long, index: int, array: FixedArray & lt;long & gt;) = & gt; long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;long&gt; | An array instance, constructed from `this` and given function. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;long & gt; |
 
 
 ## map
@@ -181,26 +171,24 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function map(self: FixedArray<float>, callbackfn: (value: float, index: int, array: FixedArray<float>)     => float): FixedArray<float>--><!--Device-unnamed-export function map(self: FixedArray<float>, callbackfn: (value: float, index: int, array: FixedArray<float>)     => float): FixedArray<float>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;float&gt; | Yes | The array to map. |
-| callbackfn | (value: float, index: int, array: FixedArray&lt;float&gt;)      =&gt; float | Yes | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;float & gt; | Yes |
+| callbackfn | (value: float, index: int, array: FixedArray & lt;float & gt;)      = & gt; float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;float&gt; | An array instance, constructed from `this` and given function. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;float & gt; |
 
 
 ## map
@@ -214,26 +202,24 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function map(self: FixedArray<double>, callbackfn: (value: double, index: int, array: FixedArray<double>)     => double): FixedArray<double>--><!--Device-unnamed-export function map(self: FixedArray<double>, callbackfn: (value: double, index: int, array: FixedArray<double>)     => double): FixedArray<double>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;double&gt; | Yes | The array to map. |
-| callbackfn | (value: double, index: int, array: FixedArray&lt;double&gt;)      =&gt; double | Yes | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;double & gt; | Yes |
+| callbackfn | (value: double, index: int, array: FixedArray & lt;double & gt;)      = & gt; double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;double&gt; | An array instance, constructed from `this` and given function. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;double & gt; |
 
 
 ## map
@@ -247,24 +233,21 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function map(self: FixedArray<char>, callbackfn: (value: char, index: int, array: FixedArray<char>) => char):     FixedArray<char>--><!--Device-unnamed-export function map(self: FixedArray<char>, callbackfn: (value: char, index: int, array: FixedArray<char>) => char):     FixedArray<char>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;char&gt; | Yes | The array to map. |
-| callbackfn | (value: char, index: int, array: FixedArray&lt;char&gt;) =&gt; char | Yes | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;char & gt; | Yes |
+| callbackfn | (value: char, index: int, array: FixedArray & lt;char & gt;) = & gt; char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;char&gt; | An array instance, constructed from `this` and given function. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;char & gt; |

@@ -2,9 +2,9 @@
 
 Wi-Fi station information.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-wifiManager-interface StationInfo--><!--Device-wifiManager-interface StationInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -26,9 +26,9 @@ The IP address of the Wi-Fi client
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-StationInfo-ipAddress: string--><!--Device-StationInfo-ipAddress: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -44,9 +44,9 @@ The MAC address of the Wi-Fi client
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-StationInfo-macAddress: string--><!--Device-StationInfo-macAddress: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -62,9 +62,9 @@ The MAC address type of the Wi-Fi client
 
 **Type:** [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md)
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-StationInfo-macAddressType?: DeviceAddressType--><!--Device-StationInfo-macAddressType?: DeviceAddressType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -80,11 +80,10 @@ The network name of the Wi-Fi client
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-StationInfo-name: string--><!--Device-StationInfo-name: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
-

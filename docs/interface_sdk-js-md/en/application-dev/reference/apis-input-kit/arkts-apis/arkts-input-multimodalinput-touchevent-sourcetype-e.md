@@ -2,9 +2,9 @@
 
 Enumerates touch sources. Currently, only the touchscreen and touchpad are supported.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export declare enum SourceType--><!--Device-unnamed-export declare enum SourceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -16,9 +16,9 @@ TOUCH_SCREEN = 0
 
 Touchscreen.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SourceType-TOUCH_SCREEN = 0--><!--Device-SourceType-TOUCH_SCREEN = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -30,9 +30,9 @@ PEN = 1
 
 Stylus.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SourceType-PEN = 1--><!--Device-SourceType-PEN = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -44,9 +44,8 @@ TOUCH_PAD = 2
 
 Touchpad.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SourceType-TOUCH_PAD = 2--><!--Device-SourceType-TOUCH_PAD = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
-

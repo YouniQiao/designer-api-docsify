@@ -8,22 +8,21 @@ declare type OnItemDragStartCallback = (event: ItemDragInfo, itemIndex: number) 
 
 **起始版本：** 23
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
-<!--Device-unnamed-declare type OnItemDragStartCallback = (event: ItemDragInfo, itemIndex: number) => CustomBuilder--><!--Device-unnamed-declare type OnItemDragStartCallback = (event: ItemDragInfo, itemIndex: number) => CustomBuilder-End-->
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | [ItemDragInfo](arkts-arkui-itemdraginfo-i.md) | 是 | 拖拽点的信息。 |
-| itemIndex | number | 是 | 被拖拽列表元素索引值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [ItemDragInfo](arkts-arkui-itemdraginfo-i.md) | 是 |
+| itemIndex | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [CustomBuilder](arkts-arkui-custombuilder-t.md) | 返回CustomBuilder用于构建被拖拽元素的拖拽图。返回void表示不能拖拽。 |
-
+| 类型 |
+| --- |
+| [CustomBuilder](arkts-arkui-custombuilder-t.md) |

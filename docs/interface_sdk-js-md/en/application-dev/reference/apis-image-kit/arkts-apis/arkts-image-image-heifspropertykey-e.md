@@ -4,7 +4,7 @@ Enumerates the properties available for the metadata of a HEIFS image.
 
 **Since:** 23
 
-<!--Device-image-enum HeifsPropertyKey--><!--Device-image-enum HeifsPropertyKey-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -18,9 +18,9 @@ Playback duration of each frame in an HEIF image sequence, in milliseconds.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-HeifsPropertyKey-HEIFS_DELAY_TIME = 'HeifsDelayTime'--><!--Device-HeifsPropertyKey-HEIFS_DELAY_TIME = 'HeifsDelayTime'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -34,9 +34,9 @@ Unclamped delay of each frame in milliseconds.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-HeifsPropertyKey-HEIFS_UNCLAMPED_DELAY_TIME = 'HeifsUnclampedDelayTime'--><!--Device-HeifsPropertyKey-HEIFS_UNCLAMPED_DELAY_TIME = 'HeifsUnclampedDelayTime'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -50,9 +50,9 @@ Canvas height.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-HeifsPropertyKey-HEIFS_CANVAS_HEIGHT = 'HeifsCanvasHeight'--><!--Device-HeifsPropertyKey-HEIFS_CANVAS_HEIGHT = 'HeifsCanvasHeight'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -66,9 +66,8 @@ Canvas width.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-HeifsPropertyKey-HEIFS_CANVAS_WIDTH = 'HeifsCanvasWidth'--><!--Device-HeifsPropertyKey-HEIFS_CANVAS_WIDTH = 'HeifsCanvasWidth'-End-->
-
 **System capability:** SystemCapability.Multimedia.Image.Core
-

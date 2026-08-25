@@ -2,9 +2,9 @@
 
 Loop Play Mode Definition
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-avSession-enum LoopMode--><!--Device-avSession-enum LoopMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -16,11 +16,11 @@ LOOP_MODE_SEQUENCE = 0
 
 The default mode is sequential playback
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-LoopMode-LOOP_MODE_SEQUENCE = 0--><!--Device-LoopMode-LOOP_MODE_SEQUENCE = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -32,11 +32,11 @@ LOOP_MODE_SINGLE = 1
 
 Single loop mode
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-LoopMode-LOOP_MODE_SINGLE = 1--><!--Device-LoopMode-LOOP_MODE_SINGLE = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -48,11 +48,11 @@ LOOP_MODE_LIST = 2
 
 List loop mode
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-LoopMode-LOOP_MODE_LIST = 2--><!--Device-LoopMode-LOOP_MODE_LIST = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -64,11 +64,11 @@ LOOP_MODE_SHUFFLE = 3
 
 Shuffle playback mode
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-LoopMode-LOOP_MODE_SHUFFLE = 3--><!--Device-LoopMode-LOOP_MODE_SHUFFLE = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -80,11 +80,10 @@ LOOP_MODE_CUSTOM = 4
 
 Custom playback mode supported by application
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-LoopMode-LOOP_MODE_CUSTOM = 4--><!--Device-LoopMode-LOOP_MODE_CUSTOM = 4-End-->
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
-

@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [FolderStackModifier](arkts-arkui-folderstackmodifier-c.md) | Defines FolderStack Modifier@implements FolderStackAttribute, AttributeModifier&lt;FolderStackAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FolderStackModifier](arkts-arkui-folderstackmodifier-c.md) |

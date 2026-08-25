@@ -4,7 +4,7 @@ Sets the spacing, main axis alignment method, cross axis alignment method, and m
 
 **Since:** 24
 
-<!--Device-unnamed-interface RowLayoutAlgorithmOptions--><!--Device-unnamed-interface RowLayoutAlgorithmOptions-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,19 +16,19 @@ alignItems?: VerticalAlign
 
 Vertical alignment mode of all child components.Default value: **VerticalAlign.Center**Invalid values are treated as the default value.
 
-**Type:** [VerticalAlign](../../apis-default/arkts-apis/arkts-enums-verticalalign-e.md)
+**Type:** [VerticalAlign](arkts-arkui-enums-verticalalign-e.md)
 
 **Default:** VerticalAlign.Center
 
 **Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
-
-<!--Device-RowLayoutAlgorithmOptions-alignItems?: VerticalAlign--><!--Device-RowLayoutAlgorithmOptions-alignItems?: VerticalAlign-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,13 +46,13 @@ Whether to reverse the horizontal arrangement of child components. **true** indi
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
-
-<!--Device-RowLayoutAlgorithmOptions-isReverse?: boolean--><!--Device-RowLayoutAlgorithmOptions-isReverse?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,19 +64,19 @@ justifyContent?: FlexAlign
 
 Horizontal alignment mode of all child components.Default value: **FlexAlign.Start**Invalid values are treated as the default value.
 
-**Type:** [FlexAlign](../../apis-default/arkts-apis/arkts-enums-flexalign-e.md)
+**Type:** [FlexAlign](arkts-arkui-enums-flexalign-e.md)
 
 **Default:** FlexAlign.Start
 
 **Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
-
-<!--Device-RowLayoutAlgorithmOptions-justifyContent?: FlexAlign--><!--Device-RowLayoutAlgorithmOptions-justifyContent?: FlexAlign-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,13 +94,12 @@ Horizontal spacing between elements in a horizontal layout.Default value: **Leng
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
-<!--Device-RowLayoutAlgorithmOptions-space?: LengthMetrics--><!--Device-RowLayoutAlgorithmOptions-space?: LengthMetrics-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

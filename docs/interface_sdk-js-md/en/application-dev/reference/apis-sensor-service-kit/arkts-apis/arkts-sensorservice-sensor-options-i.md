@@ -2,9 +2,9 @@
 
 Describes the sensor data reporting frequency.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sensor-interface Options--><!--Device-sensor-interface Options-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -22,13 +22,13 @@ interval?: long | SensorFrequency
 
 Frequency at which a sensor reports data. The default value is 200,000,000 ns. The maximum and minimum values of this parameter are determined by the reporting frequency supported by the hardware. If the configured frequency is greater than the maximum value, the maximum value is used for data reporting. If the configured frequency is less than the minimum value, the minimum value is used for data reporting.
 
-**Type:** long \| [SensorFrequency](arkts-sensorservice-sensor-sensorfrequency-t.md)
+**Type:** ArkTS-Dyn: number \| [SensorFrequency](arkts-sensorservice-sensor-sensorfrequency-t.md)  <br>ArkTS-Sta：long \| [SensorFrequency](arkts-sensorservice-sensor-sensorfrequency-t.md)
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Options-interval?: long | SensorFrequency--><!--Device-Options-interval?: long | SensorFrequency-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -42,11 +42,10 @@ Sensor parameters, including **deviceId** and **sensorIndex**.This API can be us
 
 **Type:** [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md)
 
-**Since:** 23
+**Since:** 19
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
-<!--Device-Options-sensorInfoParam?: SensorInfoParam--><!--Device-Options-sensorInfoParam?: SensorInfoParam-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Sensors.Sensor
-

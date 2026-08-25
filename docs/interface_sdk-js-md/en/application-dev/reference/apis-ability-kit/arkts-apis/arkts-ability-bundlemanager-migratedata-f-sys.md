@@ -14,11 +14,11 @@ function migrateData(sourcePaths: Array<string>, destinationPath: string): Promi
 
 Migrates files from the source path to the destination path. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MIGRATE_DATA
-
-<!--Device-bundleManager-function migrateData(sourcePaths: Array<string>, destinationPath: string): Promise<void>--><!--Device-bundleManager-function migrateData(sourcePaths: Array<string>, destinationPath: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -26,30 +26,30 @@ Migrates files from the source path to the destination path. This API uses a pro
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourcePaths | Array&lt;string&gt; | Yes | Array of source paths. The value can be a single file path such as **\/example1/test.txt** or a directory path such as **\/example2/test**. |
-| destinationPath | string | Yes | Destination path. Only one directory path is supported, for example, **\/example2/test**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sourcePaths | Array & lt;string & gt; | Yes |
+| destinationPath | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700080](../errorcode-bundle.md#17700080-invalid-source-paths) | The source paths are invalid. |
-| [17700081](../errorcode-bundle.md#17700081-invalid-destination-path) | The destination path is invalid. |
-| [17700082](../errorcode-bundle.md#17700082-user-authentication-failed) | User authentication failed. |
-| [17700083](../errorcode-bundle.md#17700083-user-authentication-times-out) | Waiting for user authentication timeout. |
-| [17700084](../errorcode-bundle.md#17700084-no-read-permissions-for-source-paths) | There are inaccessible path in the source paths. |
-| [17700085](../errorcode-bundle.md#17700085-no-write-permissions-for-the-destination-path) | The destination path cannot be accessed. |
-| [17700086](../errorcode-bundle.md#17700086-system-error) | System error occurred during copy execution. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17700080](../errorcode-bundle.md#17700080-invalid-source-paths) |
+| [17700081](../errorcode-bundle.md#17700081-invalid-destination-path) |
+| [17700082](../errorcode-bundle.md#17700082-user-authentication-failed) |
+| [17700083](../errorcode-bundle.md#17700083-user-authentication-times-out) |
+| [17700084](../errorcode-bundle.md#17700084-no-read-permissions-for-source-paths) |
+| [17700085](../errorcode-bundle.md#17700085-no-write-permissions-for-the-destination-path) |
+| [17700086](../errorcode-bundle.md#17700086-system-error) |
 
 **Examples**
 
@@ -75,4 +75,3 @@ try {
   console.error(`migrateData call err : `, JSON.stringify(err));
 }
 ```
-

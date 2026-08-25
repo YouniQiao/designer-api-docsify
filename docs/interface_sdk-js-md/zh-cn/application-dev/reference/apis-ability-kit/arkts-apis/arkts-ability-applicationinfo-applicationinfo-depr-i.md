@@ -7,11 +7,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [ApplicationInfo](#applicationinfo)
-
-<!--Device-unnamed-export interface ApplicationInfo--><!--Device-unnamed-export interface ApplicationInfo-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -29,11 +29,11 @@ readonly accessTokenId: number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** accessTokenId
-
-<!--Device-ApplicationInfo-readonly accessTokenId: number--><!--Device-ApplicationInfo-readonly accessTokenId: number-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -51,11 +51,11 @@ readonly codePath: string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** codePath
-
-<!--Device-ApplicationInfo-readonly codePath: string--><!--Device-ApplicationInfo-readonly codePath: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -73,11 +73,11 @@ readonly description: string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** description
-
-<!--Device-ApplicationInfo-readonly description: string--><!--Device-ApplicationInfo-readonly description: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -95,11 +95,11 @@ readonly descriptionId: number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** descriptionId
-
-<!--Device-ApplicationInfo-readonly descriptionId: number--><!--Device-ApplicationInfo-readonly descriptionId: number-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -117,11 +117,11 @@ readonly enabled: boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** enabled
-
-<!--Device-ApplicationInfo-readonly enabled: boolean--><!--Device-ApplicationInfo-readonly enabled: boolean-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -139,9 +139,9 @@ readonly entityType: string
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-ApplicationInfo-readonly entityType: string--><!--Device-ApplicationInfo-readonly entityType: string-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -159,9 +159,9 @@ readonly entryDir: string
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ApplicationInfo-readonly entryDir: string--><!--Device-ApplicationInfo-readonly entryDir: string-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -179,11 +179,11 @@ readonly icon: string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** icon
-
-<!--Device-ApplicationInfo-readonly icon: string--><!--Device-ApplicationInfo-readonly icon: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -201,11 +201,11 @@ readonly iconId: string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** iconId
-
-<!--Device-ApplicationInfo-readonly iconId: string--><!--Device-ApplicationInfo-readonly iconId: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -223,11 +223,11 @@ readonly label: string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** label
-
-<!--Device-ApplicationInfo-readonly label: string--><!--Device-ApplicationInfo-readonly label: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -245,11 +245,11 @@ readonly labelId: string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** labelId
-
-<!--Device-ApplicationInfo-readonly labelId: string--><!--Device-ApplicationInfo-readonly labelId: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -267,11 +267,11 @@ readonly metaData: Map<string, Array<CustomizeData>>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** metadataArray
-
-<!--Device-ApplicationInfo-readonly metaData: Map<string, Array<CustomizeData>>--><!--Device-ApplicationInfo-readonly metaData: Map<string, Array<CustomizeData>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -289,11 +289,11 @@ readonly moduleInfos: Array<ModuleInfo>
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** hapModulesInfo
-
-<!--Device-ApplicationInfo-readonly moduleInfos: Array<ModuleInfo>--><!--Device-ApplicationInfo-readonly moduleInfos: Array<ModuleInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -311,9 +311,9 @@ readonly moduleSourceDirs: Array<string>
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ApplicationInfo-readonly moduleSourceDirs: Array<string>--><!--Device-ApplicationInfo-readonly moduleSourceDirs: Array<string>-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -331,11 +331,11 @@ readonly name: string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** name
-
-<!--Device-ApplicationInfo-readonly name: string--><!--Device-ApplicationInfo-readonly name: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -353,11 +353,11 @@ readonly permissions: Array<string>
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** permissions
-
-<!--Device-ApplicationInfo-readonly permissions: Array<string>--><!--Device-ApplicationInfo-readonly permissions: Array<string>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -375,11 +375,11 @@ readonly process: string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** process
-
-<!--Device-ApplicationInfo-readonly process: string--><!--Device-ApplicationInfo-readonly process: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -397,11 +397,11 @@ readonly removable: boolean
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** removable
-
-<!--Device-ApplicationInfo-readonly removable: boolean--><!--Device-ApplicationInfo-readonly removable: boolean-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -419,9 +419,9 @@ readonly supportedModes: number
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ApplicationInfo-readonly supportedModes: number--><!--Device-ApplicationInfo-readonly supportedModes: number-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -439,11 +439,11 @@ readonly systemApp: boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** systemApp
-
-<!--Device-ApplicationInfo-readonly systemApp: boolean--><!--Device-ApplicationInfo-readonly systemApp: boolean-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -461,11 +461,10 @@ readonly uid: number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** uid
 
-<!--Device-ApplicationInfo-readonly uid: number--><!--Device-ApplicationInfo-readonly uid: number-End-->
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework
-

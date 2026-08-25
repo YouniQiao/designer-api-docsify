@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @ObservedV2
-
-<!--Device-unnamed-export declare class OperateCheckV2--><!--Device-unnamed-export declare class OperateCheckV2-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,19 +24,37 @@ OperateCheckV2的构造函数。
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-OperateCheckV2-constructor(options?: OperateCheckV2Options)--><!--Device-OperateCheckV2-constructor(options?: OperateCheckV2Options)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [OperateCheckV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2options-i.md) | 否 | 列表项右侧元素为Switch、CheckBox、Radio属性配置。<br/>默认不设置或设置为undefined时，按各属性的默认效果创建 对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [OperateCheckV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2options-i.md) | 否 |
+
+## onChange
+
+```TypeScript
+public onChange?: OnChangeCallback
+```
+
+列表项右侧元素Switch/CheckBox/Radio选中状态改变时触发回调。value为true时，表示从未选中变为选中。value为false时，表示从选中变为未选中。默认不设置或设置为undefined时，状态改变不触发回调。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityDescription
 
@@ -52,13 +68,11 @@ public accessibilityDescription?: ResourceStr
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-OperateCheckV2-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-OperateCheckV2-@Trace  public accessibilityDescription?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,13 +90,11 @@ public accessibilityLevel?: string
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-OperateCheckV2-@Trace  public accessibilityLevel?: string--><!--Device-OperateCheckV2-@Trace  public accessibilityLevel?: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,13 +110,11 @@ public accessibilityText?: ResourceStr
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-OperateCheckV2-@Trace  public accessibilityText?: ResourceStr--><!--Device-OperateCheckV2-@Trace  public accessibilityText?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -120,35 +130,10 @@ public isCheck?: boolean
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-OperateCheckV2-@Trace  public isCheck?: boolean--><!--Device-OperateCheckV2-@Trace  public isCheck?: boolean-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onChange
-
-```TypeScript
-public onChange?: OnChangeCallback
-```
-
-列表项右侧元素Switch/CheckBox/Radio选中状态改变时触发回调。value为true时，表示从未选中变为选中。value为false时，表示从选中变为未选中。默认不设置或设置为undefined时，状态改变不触发回调。
-
-**类型：** [OnChangeCallback](arkts-arkui-onchangecallback-t.md)
-
-**起始版本：** 26.0.0
-
-**装饰器类型：** @Trace
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-OperateCheckV2-@Trace  public onChange?: OnChangeCallback--><!--Device-OperateCheckV2-@Trace  public onChange?: OnChangeCallback-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

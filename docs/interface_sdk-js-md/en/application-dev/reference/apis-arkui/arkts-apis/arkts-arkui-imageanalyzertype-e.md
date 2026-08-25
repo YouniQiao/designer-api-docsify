@@ -4,7 +4,7 @@ Defines the AI image analysis type. If it is not set, subject recognition and te
 
 **Since:** 12
 
-<!--Device-unnamed-declare enum ImageAnalyzerType--><!--Device-unnamed-declare enum ImageAnalyzerType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Subject recognition.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ImageAnalyzerType-SUBJECT = 0--><!--Device-ImageAnalyzerType-SUBJECT = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Text recognition.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ImageAnalyzerType-TEXT--><!--Device-ImageAnalyzerType-TEXT-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ Object lookup.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ImageAnalyzerType-OBJECT_LOOKUP--><!--Device-ImageAnalyzerType-OBJECT_LOOKUP-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

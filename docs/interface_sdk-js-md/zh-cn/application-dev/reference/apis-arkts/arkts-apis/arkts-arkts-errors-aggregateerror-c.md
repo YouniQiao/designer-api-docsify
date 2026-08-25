@@ -6,9 +6,7 @@ AggregateError对象表示需要将多个错误包装为 单个错误时的错�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export class AggregateError--><!--Device-unnamed-export class AggregateError-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,27 +25,25 @@ static $_invoke(errors: Iterable<Error>, message?: string, options?: ErrorOption
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AggregateError-static $_invoke(errors: Iterable<Error>, message?: string, options?: ErrorOptions): AggregateError--><!--Device-AggregateError-static $_invoke(errors: Iterable<Error>, message?: string, options?: ErrorOptions): AggregateError-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| errors | Iterable&lt;Error&gt; | 是 | 待聚合的错误。 |
-| message | string | 否 | 错误文本。 |
-| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | 否 | 错误选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [errors](arkts-arkts-errors-aggregateerror-c.md) | Iterable & lt;Error & gt; | 是 |
+| message | string | 否 |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AggregateError](arkts-arkts-errors-aggregateerror-c.md) | 新创建的AggregateError实例。 |
+| 类型 |
+| --- |
+| [AggregateError](arkts-arkts-errors-aggregateerror-c.md) |
 
 ## $_invoke
 
@@ -59,27 +55,25 @@ static $_invoke(errors: Error[], message?: string, options?: ErrorOptions): Aggr
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AggregateError-static $_invoke(errors: Error[], message?: string, options?: ErrorOptions): AggregateError--><!--Device-AggregateError-static $_invoke(errors: Error[], message?: string, options?: ErrorOptions): AggregateError-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| errors | Error[] | 是 | 待聚合的错误。 |
-| message | string | 否 | 错误文本。 |
-| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | 否 | 错误选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [errors](arkts-arkts-errors-aggregateerror-c.md) | Error[] | 是 |
+| message | string | 否 |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AggregateError](arkts-arkts-errors-aggregateerror-c.md) | 新创建的AggregateError实例。 |
+| 类型 |
+| --- |
+| [AggregateError](arkts-arkts-errors-aggregateerror-c.md) |
 
 ## constructor
 
@@ -91,21 +85,19 @@ constructor(errors: Iterable<Error>, message?: string, options?: ErrorOptions)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AggregateError-constructor(errors: Iterable<Error>, message?: string, options?: ErrorOptions)--><!--Device-AggregateError-constructor(errors: Iterable<Error>, message?: string, options?: ErrorOptions)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| errors | Iterable&lt;Error&gt; | 是 | 待聚合的错误。 |
-| message | string | 否 | 错误文本。 |
-| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | 否 | 错误选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [errors](arkts-arkts-errors-aggregateerror-c.md) | Iterable & lt;Error & gt; | 是 |
+| message | string | 否 |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | 否 |
 
 ## constructor
 
@@ -117,21 +109,19 @@ constructor(errors: Error[], message?: string, options?: ErrorOptions)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AggregateError-constructor(errors: Error[], message?: string, options?: ErrorOptions)--><!--Device-AggregateError-constructor(errors: Error[], message?: string, options?: ErrorOptions)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| errors | Error[] | 是 | 待聚合的错误。 |
-| message | string | 否 | 错误文本。 |
-| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | 否 | 错误选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [errors](arkts-arkts-errors-aggregateerror-c.md) | Error[] | 是 |
+| message | string | 否 |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | 否 |
 
 ## errors
 
@@ -145,11 +135,8 @@ errors: Array<Error>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AggregateError-errors: Array<Error>--><!--Device-AggregateError-errors: Array<Error>-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

@@ -8,16 +8,13 @@ export type AsyncCallback<T, E = void> = (err: BusinessError<E> | null, data: T 
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export type AsyncCallback<T, E = void> = (err: BusinessError<E> | null, data: T | undefined) => void--><!--Device-unnamed-export type AsyncCallback<T, E = void> = (err: BusinessError<E> | null, data: T | undefined) => void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Base
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| err | [BusinessError](arkts-basicservices-base-businesserror-i.md)&lt;E&gt; \| null | 是 | 接口调用失败的公共错误信息。 |
-| data | T \| undefined | 是 | 接口调用时的公共回调信息。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| err | [BusinessError](arkts-basicservices-base-businesserror-i.md)&lt;E&gt; \| null | 是 |
+| data | T \| undefined | 是 |

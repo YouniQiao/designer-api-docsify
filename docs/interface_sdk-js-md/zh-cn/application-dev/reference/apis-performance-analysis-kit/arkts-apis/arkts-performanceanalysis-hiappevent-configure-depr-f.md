@@ -15,25 +15,25 @@ function configure(config: ConfigOption): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [configure](arkts-performanceanalysis-hiappevent-configure-f.md)
-
-<!--Device-hiAppEvent-function configure(config: ConfigOption): boolean--><!--Device-hiAppEvent-function configure(config: ConfigOption): boolean-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| config | ConfigOption | 是 | 应用事件打点配置项对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| config | [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 配置结果，true 表示配置成功，false 表示配置失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -50,4 +50,3 @@ let config2: hiAppEvent.ConfigOption = {
 };
 hiAppEvent.configure(config2);
 ```
-

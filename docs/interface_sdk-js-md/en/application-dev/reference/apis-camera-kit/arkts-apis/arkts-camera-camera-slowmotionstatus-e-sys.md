@@ -2,9 +2,9 @@
 
 Enumerates the slow-motion states.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-camera-enum SlowMotionStatus--><!--Device-camera-enum SlowMotionStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -18,9 +18,9 @@ DISABLED = 0
 
 Disabled.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SlowMotionStatus-DISABLED = 0--><!--Device-SlowMotionStatus-DISABLED = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -34,9 +34,9 @@ READY = 1
 
 Ready.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SlowMotionStatus-READY = 1--><!--Device-SlowMotionStatus-READY = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -50,9 +50,9 @@ VIDEO_START = 2
 
 Video start.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SlowMotionStatus-VIDEO_START = 2--><!--Device-SlowMotionStatus-VIDEO_START = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -66,9 +66,9 @@ VIDEO_DONE = 3
 
 Video complete.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SlowMotionStatus-VIDEO_DONE = 3--><!--Device-SlowMotionStatus-VIDEO_DONE = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -82,11 +82,10 @@ FINISHED = 4
 
 Finished.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SlowMotionStatus-FINISHED = 4--><!--Device-SlowMotionStatus-FINISHED = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

@@ -8,9 +8,9 @@ Callback called when the backup service return result information. The first ret
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-backup-type OnResultReport = (bundleName: string, result: string) => void--><!--Device-backup-type OnResultReport = (bundleName: string, result: string) => void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -18,8 +18,7 @@ Callback called when the backup service return result information. The first ret
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleName | string | Yes | the bundleName that triggers the callback. |
-| result | string | Yes | the result of the bundle. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bundleName | string | Yes |
+| result | string | Yes |

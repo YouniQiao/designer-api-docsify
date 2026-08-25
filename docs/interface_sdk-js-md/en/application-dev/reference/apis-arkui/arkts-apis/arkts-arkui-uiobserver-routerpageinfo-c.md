@@ -4,7 +4,7 @@ Provides the information contained in **RouterPageInfo**, returned by the system
 
 **Since:** 11
 
-<!--Device-uiObserver-export class RouterPageInfo--><!--Device-uiObserver-export class RouterPageInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,15 +22,15 @@ context: UIAbilityContext | UIContext
 
 Context of the router page that invokes the lifecycle callback.
 
-**Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)
+**Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 
 **Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RouterPageInfo-context: UIAbilityContext | UIContext--><!--Device-RouterPageInfo-context: UIAbilityContext | UIContext-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,11 +46,11 @@ Position of the router page that invokes the lifecycle callback, in the navigati
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RouterPageInfo-index: number--><!--Device-RouterPageInfo-index: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,11 +66,11 @@ Name of the page that invokes the lifecycle callback.
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RouterPageInfo-name: string--><!--Device-RouterPageInfo-name: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,11 +86,11 @@ Unique ID of the router page that invokes the lifecycle callback.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RouterPageInfo-pageId: string--><!--Device-RouterPageInfo-pageId: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -106,11 +106,11 @@ Path of the page that invokes the lifecycle callback.
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RouterPageInfo-path: string--><!--Device-RouterPageInfo-path: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,11 +126,11 @@ Size of the router page, in vp.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-RouterPageInfo-size?: Size--><!--Device-RouterPageInfo-size?: Size-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -142,15 +142,14 @@ state: RouterPageState
 
 State of the router page that invokes the lifecycle callback.
 
-**Type:** [RouterPageState](../../apis-default/arkts-apis/arkts-uiobserver-routerpagestate-e.md)
+**Type:** [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md)
 
 **Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-RouterPageInfo-state: RouterPageState--><!--Device-RouterPageInfo-state: RouterPageState-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

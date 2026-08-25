@@ -14,9 +14,9 @@ function resetAllEfficiencyResources(): void
 
 释放已申请的全部能效资源。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-backgroundTaskManager-function resetAllEfficiencyResources(): void--><!--Device-backgroundTaskManager-function resetAllEfficiencyResources(): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -24,16 +24,16 @@ function resetAllEfficiencyResources(): void
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Parameter verification failed. |
-| [9800001](../errorcode-backgroundTaskMgr.md#9800001-内存操作失败) | Memory operation failed. |
-| [9800002](../errorcode-backgroundTaskMgr.md#9800002-parcel读写操作失败) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; <br> 2. Failed to apply for memory. |
-| [9800003](../errorcode-backgroundTaskMgr.md#9800003-ipc通信失败) | Internal transaction failed. |
-| [9800004](../errorcode-backgroundTaskMgr.md#9800004-系统服务失败) | System service operation failed. |
-| [18700001](../errorcode-backgroundTaskMgr.md#18700001-资源申请接口信息校验失败) | Caller information verification failed for an energy resource request. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9800001](../errorcode-backgroundTaskMgr.md#9800001-内存操作失败) |
+| [9800002](../errorcode-backgroundTaskMgr.md#9800002-parcel读写操作失败) |
+| [9800003](../errorcode-backgroundTaskMgr.md#9800003-ipc通信失败) |
+| [9800004](../errorcode-backgroundTaskMgr.md#9800004-系统服务失败) |
+| [18700001](../errorcode-backgroundTaskMgr.md#18700001-资源申请接口信息校验失败) |
 
 **示例**
 
@@ -47,4 +47,3 @@ try {
   console.error(`resetAllEfficiencyResources failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
 }
 ```
-

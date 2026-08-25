@@ -12,7 +12,6 @@ import { settings } from '@kit.BasicServicesKit';
 
 ### Namespaces
 
-| Name | Description |
-| --- | --- |
-| [settings](arkts-basicservices-settings-n.md) | This module provides settings data access abilities.@namespace settings |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [settings](arkts-basicservices-settings-n.md) |

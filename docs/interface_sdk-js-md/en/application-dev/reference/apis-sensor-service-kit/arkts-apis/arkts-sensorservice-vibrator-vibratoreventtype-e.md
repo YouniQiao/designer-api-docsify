@@ -2,9 +2,9 @@
 
 Vibration event type.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-vibrator-enum VibratorEventType--><!--Device-vibrator-enum VibratorEventType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -16,9 +16,9 @@ CONTINUOUS = 0
 
 Long vibration.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-VibratorEventType-CONTINUOUS = 0--><!--Device-VibratorEventType-CONTINUOUS = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -30,9 +30,8 @@ TRANSIENT = 1
 
 Short vibration.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-VibratorEventType-TRANSIENT = 1--><!--Device-VibratorEventType-TRANSIENT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
-

@@ -4,9 +4,7 @@ ChipGroupV2Space定义了ChipGroupV2左右内边距，以及ChipV2与ChipV2之�
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @ObservedV2
-
-<!--Device-unnamed-export declare class ChipGroupV2Space--><!--Device-unnamed-export declare class ChipGroupV2Space-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,19 +24,19 @@ ChipGroupV2Space的构造函数。
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroupV2Space-constructor(config: ChipGroupV2SpaceConfig)--><!--Device-ChipGroupV2Space-constructor(config: ChipGroupV2SpaceConfig)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| config | [ChipGroupV2SpaceConfig](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2spaceconfig-i.md) | 是 | ChipGroupV2间距配置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| config | [ChipGroupV2SpaceConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2spaceconfig-i.md) | 是 |
 
 ## endSpace
 
@@ -52,13 +50,11 @@ public endSpace?: Length
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroupV2Space-@Trace  public endSpace?: Length--><!--Device-ChipGroupV2Space-@Trace  public endSpace?: Length-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,13 +72,11 @@ ChipV2与ChipV2之间的间距（不支持百分比）。取值范围：
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroupV2Space-@Trace  public itemSpace?: string | number--><!--Device-ChipGroupV2Space-@Trace  public itemSpace?: string | number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,13 +92,10 @@ public startSpace?: Length
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ChipGroupV2Space-@Trace  public startSpace?: Length--><!--Device-ChipGroupV2Space-@Trace  public startSpace?: Length-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

@@ -16,22 +16,22 @@ Obtains the DLP file name extension. After the API is called successfully, the D
 
 **Since:** 10
 
-<!--Device-dlpPermission-function getDLPSuffix(): string--><!--Device-dlpPermission-function getDLPSuffix(): string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | DLP file name extension obtained. For example, if the original file name is **test.txt**, the encrypted DLP file name is **test.txt.dlp**, and the returned extension is **.dlp**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
 **Examples**
 
@@ -46,4 +46,3 @@ try {
   console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
 }
 ```
-

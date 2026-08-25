@@ -2,9 +2,9 @@
 
 Enumerates the print directions.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-print-enum PrintOrientationMode--><!--Device-print-enum PrintOrientationMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -16,9 +16,9 @@ ORIENTATION_MODE_PORTRAIT = 0
 
 Portrait mode.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrintOrientationMode-ORIENTATION_MODE_PORTRAIT = 0--><!--Device-PrintOrientationMode-ORIENTATION_MODE_PORTRAIT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -30,9 +30,9 @@ ORIENTATION_MODE_LANDSCAPE= 1
 
 Landscape mode.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrintOrientationMode-ORIENTATION_MODE_LANDSCAPE= 1--><!--Device-PrintOrientationMode-ORIENTATION_MODE_LANDSCAPE= 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -44,9 +44,9 @@ ORIENTATION_MODE_REVERSE_LANDSCAPE = 2
 
 Reverse landscape mode.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrintOrientationMode-ORIENTATION_MODE_REVERSE_LANDSCAPE = 2--><!--Device-PrintOrientationMode-ORIENTATION_MODE_REVERSE_LANDSCAPE = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -58,9 +58,9 @@ ORIENTATION_MODE_REVERSE_PORTRAIT = 3
 
 Reverse portrait mode.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrintOrientationMode-ORIENTATION_MODE_REVERSE_PORTRAIT = 3--><!--Device-PrintOrientationMode-ORIENTATION_MODE_REVERSE_PORTRAIT = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -72,9 +72,8 @@ ORIENTATION_MODE_NONE = 4
 
 Adaptive mode.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrintOrientationMode-ORIENTATION_MODE_NONE = 4--><!--Device-PrintOrientationMode-ORIENTATION_MODE_NONE = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
-

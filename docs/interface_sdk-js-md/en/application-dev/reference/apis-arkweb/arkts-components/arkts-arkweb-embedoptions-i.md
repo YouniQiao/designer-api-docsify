@@ -4,7 +4,7 @@ Configuration for Web same-layer rendering. Configures Web same-layer rendering 
 
 **Since:** 16
 
-<!--Device-unnamed-declare interface EmbedOptions--><!--Device-unnamed-declare interface EmbedOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -27,7 +27,7 @@ Whether the same-layer rendering visibility API supports the display attribute.B
 
 **Since:** 20
 
-<!--Device-EmbedOptions-supportCssDisplayChange?: boolean--><!--Device-EmbedOptions-supportCssDisplayChange?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -45,7 +45,6 @@ Whether a same-layer rendering element supports the fixed size of 300 × 150.Whe
 
 **Since:** 16
 
-<!--Device-EmbedOptions-supportDefaultIntrinsicSize?: boolean--><!--Device-EmbedOptions-supportDefaultIntrinsicSize?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

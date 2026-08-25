@@ -4,9 +4,9 @@
 
 **继承/实现关系：** Point3d extends [Point](arkts-arkgraphics2d-common2d-point-i.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-common2D-interface Point3d--><!--Device-common2D-interface Point3d-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -24,11 +24,10 @@ z: double
 
 z轴坐标，浮点数。单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Point3d-z: double--><!--Device-Point3d-z: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
-

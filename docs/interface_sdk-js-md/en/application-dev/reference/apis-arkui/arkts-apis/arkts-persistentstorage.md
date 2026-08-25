@@ -4,20 +4,19 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [PersistentStorage](arkts-arkui-persistentstorage-persistentstorage-c.md) | Defines the PersistentStorage interface. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PersistentStorage](arkts-arkui-persistentstorage-persistentstorage-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [PersistPropsOptions](arkts-arkui-persistentstorage-persistpropsoptions-i.md) | Defining PersistPropsOptions interface |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PersistPropsOptions](arkts-arkui-persistentstorage-persistpropsoptions-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [FromJSONType](arkts-arkui-fromjsontype-t.md) | Define fromJson type function. |
-| [ToJSONType](arkts-arkui-tojsontype-t.md) | Define toJson type function. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FromJSONType](arkts-arkui-fromjsontype-t.md) |
+| [ToJSONType](arkts-arkui-tojsontype-t.md) |

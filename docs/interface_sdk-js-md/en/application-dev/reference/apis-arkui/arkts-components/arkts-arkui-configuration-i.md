@@ -4,7 +4,7 @@ Defines the data type of the interface restriction.@interface Configuration
 
 **Since:** 11
 
-<!--Device-unnamed-declare interface Configuration--><!--Device-unnamed-declare interface Configuration-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Set colorMode.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-Configuration-readonly colorMode: string--><!--Device-Configuration-readonly colorMode: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ Set fontScale.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
-<!--Device-Configuration-readonly fontScale: number--><!--Device-Configuration-readonly fontScale: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

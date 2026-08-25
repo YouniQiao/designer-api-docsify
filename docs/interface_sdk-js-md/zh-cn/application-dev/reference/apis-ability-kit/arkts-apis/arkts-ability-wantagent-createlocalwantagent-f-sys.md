@@ -18,11 +18,11 @@ function createLocalWantAgent(info: LocalWantAgentInfo): WantAgent
 > 本接口创建的本地WantAgent实例仅存储于WantAgent客户端，不受WantAgent服务端管理。使用该本地实例时，需要校验实例，以保证安全性。
 > 本地WantAgent实例创建后，触发方法参见[wantAgent.triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md)接口说明。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-wantAgent-function createLocalWantAgent(info: LocalWantAgentInfo): WantAgent--><!--Device-wantAgent-function createLocalWantAgent(info: LocalWantAgentInfo): WantAgent-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -30,21 +30,21 @@ function createLocalWantAgent(info: LocalWantAgentInfo): WantAgent
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| info | LocalWantAgentInfo | 是 | Information about the local WantAgent object to create. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| info | [LocalWantAgentInfo](arkts-ability-wantagentinfo-localwantagentinfo-i-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [WantAgent](arkts-ability-wantagent-t.md) | Returns the created WantAgent. |
+| 类型 |
+| --- |
+| [WantAgent](arkts-ability-wantagent-t.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -133,4 +133,3 @@ try {
   console.error('createLocalWantAgent failed');
 }
 ```
-

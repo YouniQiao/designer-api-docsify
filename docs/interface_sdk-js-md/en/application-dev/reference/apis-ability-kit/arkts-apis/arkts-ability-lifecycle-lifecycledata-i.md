@@ -4,7 +4,7 @@ interface of data lifecycle.@interface LifecycleData
 
 **Since:** 7
 
-<!--Device-unnamed-export declare interface LifecycleData--><!--Device-unnamed-export declare interface LifecycleData-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -23,19 +23,19 @@ Inserts multiple data records into the database. This method should be implement
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleData-batchInsert?(uri: string, valueBuckets: Array<rdb.ValuesBucket>, callback: AsyncCallback<number>): void--><!--Device-LifecycleData-batchInsert?(uri: string, valueBuckets: Array<rdb.ValuesBucket>, callback: AsyncCallback<number>): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Indicates the position where the data is to insert. |
-| valueBuckets | Array&lt;rdb.ValuesBucket&gt; | Yes | Indicates the data to insert. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| valueBuckets | Array & lt;rdb.ValuesBucket & gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 ## call
 
@@ -47,20 +47,20 @@ Defines a method in this Data ability (implementation depending on child classes
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleData-call?(method: string, arg: string, extras: PacMap, callback: AsyncCallback<PacMap>): void--><!--Device-LifecycleData-call?(method: string, arg: string, extras: PacMap, callback: AsyncCallback<PacMap>): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| method | string | Yes | Indicates the method name. |
-| arg | string | Yes | Indicates the parameter transferred by the method. |
-| extras | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | Yes | Indicates the parameter transferred by the method. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PacMap](arkts-ability-dataabilityhelper-pacmap-i.md)&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| method | string | Yes |
+| arg | string | Yes |
+| extras | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PacMap](arkts-ability-dataabilityhelper-pacmap-i.md)&gt; | Yes |
 
 ## delete
 
@@ -72,19 +72,19 @@ Deletes one or more data records. This method should be implemented by a Data ab
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleData-delete?(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<number>): void--><!--Device-LifecycleData-delete?(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<number>): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Indicates the database table storing the data to delete. |
-| predicates | dataAbility.DataAbilityPredicates | Yes | Indicates filter criteria. If this parameter is null, all data records will be deleted by default. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| predicates | dataAbility.DataAbilityPredicates | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 ## denormalizeUri
 
@@ -96,18 +96,18 @@ Converts the given normalized {@code uri} generated by normalizeUri into a denor
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleData-denormalizeUri?(uri: string, callback: AsyncCallback<string>): void--><!--Device-LifecycleData-denormalizeUri?(uri: string, callback: AsyncCallback<string>): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Indicates the uri to denormalize. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
 ## executeBatch
 
@@ -119,18 +119,18 @@ Performs batch operations on the database. This method should be implemented by 
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleData-executeBatch?(ops: Array<DataAbilityOperation>, callback: AsyncCallback<Array<DataAbilityResult>>): void--><!--Device-LifecycleData-executeBatch?(ops: Array<DataAbilityOperation>, callback: AsyncCallback<Array<DataAbilityResult>>): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| ops | Array&lt;[DataAbilityOperation](arkts-ability-dataabilityoperation-dataabilityoperation-i.md)&gt; | Yes | Indicates the data operation list, which can contain multiple operations on the database. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md)&gt;&gt; | Yes | specified by framework to receive the result, developer should call this function to return the result to framework. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| ops | Array&lt;[DataAbilityOperation](arkts-ability-dataabilityoperation-dataabilityoperation-i.md)&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md)&gt;&gt; | Yes |
 
 ## getFileTypes
 
@@ -142,19 +142,19 @@ Obtains the MIME type of files. This method should be implemented by a Data abil
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleData-getFileTypes?(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<string>>): void--><!--Device-LifecycleData-getFileTypes?(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<string>>): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Indicates the path of the files to obtain. |
-| mimeTypeFilter | string | Yes | Indicates the MIME type of the files to obtain. This parameter cannot be set to {@code null}. <p>1. "&ast;/*": Obtains all types supported by a Data ability. <p>2. "image/*": Obtains files whose main type is image of any subtype. <p>3. "&ast;/jpg": Obtains files whose subtype is JPG of any main type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| mimeTypeFilter | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes |
 
 ## getType
 
@@ -166,18 +166,18 @@ Obtains the MIME type matching the data specified by the URI of the Data ability
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleData-getType?(uri: string, callback: AsyncCallback<string>): void--><!--Device-LifecycleData-getType?(uri: string, callback: AsyncCallback<string>): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Indicates the uri of the data. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
 ## insert
 
@@ -189,19 +189,19 @@ Inserts a data record into the database. This method should be implemented by a 
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleData-insert?(uri: string, valueBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void--><!--Device-LifecycleData-insert?(uri: string, valueBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Indicates the position where the data is to insert. |
-| valueBucket | rdb.ValuesBucket | Yes | Indicates the data to insert. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| valueBucket | rdb.ValuesBucket | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 ## normalizeUri
 
@@ -213,18 +213,18 @@ Converts the given {@code uri} that refer to the Data ability into a normalized 
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleData-normalizeUri?(uri: string, callback: AsyncCallback<string>): void--><!--Device-LifecycleData-normalizeUri?(uri: string, callback: AsyncCallback<string>): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Indicates the uri to normalize. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
 ## onInitialized
 
@@ -236,17 +236,17 @@ Called to carry {@code AbilityInfo} to this ability after the ability is initial
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleData-onInitialized?(info: AbilityInfo): void--><!--Device-LifecycleData-onInitialized?(info: AbilityInfo): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | Yes | Indicates the {@code AbilityInfo} object containing information about this ability. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | Yes |
 
 ## openFile
 
@@ -258,19 +258,19 @@ Opens a file. This method should be implemented by a Data ability.
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleData-openFile?(uri: string, mode: string, callback: AsyncCallback<number>): void--><!--Device-LifecycleData-openFile?(uri: string, mode: string, callback: AsyncCallback<number>): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Indicates the path of the file to open. |
-| mode | string | Yes | Indicates the open mode, which can be "r" for read-only access, "w" for write-only access (erasing whatever data is currently in the file), "wt" for write access that truncates any existing file,"wa" for write-only access to append to any existing data, "rw" for read and write access on any existing data, or "rwt" for read and write access that truncates any existing file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| mode | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 ## query
 
@@ -287,20 +287,20 @@ Queries one or more data records in the database. This method should be implemen
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleData-query?(    uri: string,    columns: Array<string>,    predicates: dataAbility.DataAbilityPredicates,    callback: AsyncCallback<ResultSet>  ): void--><!--Device-LifecycleData-query?(    uri: string,    columns: Array<string>,    predicates: dataAbility.DataAbilityPredicates,    callback: AsyncCallback<ResultSet>  ): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Indicates the database table storing the data to query. |
-| columns | Array&lt;string&gt; | Yes | Indicates the columns to be queried, in array, for example, {"name","age"}. You should define the processing logic when this parameter is null. |
-| predicates | dataAbility.DataAbilityPredicates | Yes | Indicates filter criteria. If this parameter is null, all data records will be queried by default. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| columns | Array & lt;string & gt; | Yes |
+| predicates | dataAbility.DataAbilityPredicates | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | Yes |
 
 ## update
 
@@ -317,18 +317,17 @@ Updates one or more data records in the database. This method should be implemen
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleData-update?(    uri: string,    valueBucket: rdb.ValuesBucket,    predicates: dataAbility.DataAbilityPredicates,    callback: AsyncCallback<number>  ): void--><!--Device-LifecycleData-update?(    uri: string,    valueBucket: rdb.ValuesBucket,    predicates: dataAbility.DataAbilityPredicates,    callback: AsyncCallback<number>  ): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Indicates the database table storing the data to update. |
-| valueBucket | rdb.ValuesBucket | Yes | Indicates the data to update. This parameter can be null. |
-| predicates | dataAbility.DataAbilityPredicates | Yes | Indicates filter criteria. If this parameter is null, all data records will be updated by default. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| valueBucket | rdb.ValuesBucket | Yes |
+| predicates | dataAbility.DataAbilityPredicates | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |

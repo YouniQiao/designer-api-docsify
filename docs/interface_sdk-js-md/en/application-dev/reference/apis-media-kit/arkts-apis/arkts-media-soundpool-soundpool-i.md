@@ -6,35 +6,41 @@ Implements a sound pool that provides APIs for loading, unloading, playing, and 
 > - When using the SoundPool instance, you are advised to register the following callbacks to proactively obtain
 > status changes:
 > 
-> - [on('loadComplete')](#onloadcomplete): listens for the
+> - on('loadComplete'): listens for the
 > event indicating that the resource loading is finished. You are advised to listen for this callback to ensure that
 > the audio is played after being loaded.
 > 
 > -
-> [on('playFinishedWithStreamId')](#onloadcomplete):
+> on('playFinishedWithStreamId'):
 > listens for the event indicating that the playback is finished and returns the stream ID of the audio that finishes
 > playing.
 > 
-> - [on('playFinished')](#onloadcomplete): listens
+> - on('playFinished'): listens
 > for the event indicating that the playback is finished.
 > 
-> - [on('error')](#onloadcomplete): listens for error events.
+> - [on('error')](#onerror): listens for error events.
 > 
-> - [on('errorOccurred')](#onloadcomplete): listens for
+> - on('errorOccurred'): listens for
 > error events and returns [errorInfo](arkts-media-soundpool-errorinfo-i.md).&gt;
 > - Currently, SoundPool does not support audio focus policies such as background playback and audio interruption, or
 > skipping the silent frames at the beginning and end of an audio file. For details about low-latency playback using
 > SoundPool, see
 > [Using SoundPool to Play Short Sounds (ArkTS)](../../../media/media/using-soundpool-for-playback.md).
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-unnamed-export declare interface SoundPool--><!--Device-unnamed-export declare interface SoundPool-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 ## load
 
+ArkTS-Dyn:
+```TypeScript
+load(uri: string, callback: AsyncCallback<number>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 load(uri: string, callback: AsyncCallback<int>): void
 ```
@@ -48,29 +54,35 @@ Loads a sound. This API uses an asynchronous callback to return the result.This 
 > - Competition occurs when multiple players use the same resource handle or path description to read and write
 > files at the same time, resulting in playback errors.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-load(uri: string, callback: AsyncCallback<int>): void--><!--Device-SoundPool-load(uri: string, callback: AsyncCallback<int>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | URI of the audio file to load. Generally, the URI starts with **fd://**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the sound ID. A valid value must be greater than 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
-| [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+| Error Code ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## load
 
+ArkTS-Dyn:
+```TypeScript
+load(uri: string): Promise<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 load(uri: string): Promise<int>
 ```
@@ -84,34 +96,40 @@ Loads a sound. This API uses a promise to return the result.This API uses a prom
 > - Competition occurs when multiple players use the same resource handle or path description to read and write
 > files at the same time, resulting in playback errors.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-load(uri: string): Promise<int>--><!--Device-SoundPool-load(uri: string): Promise<int>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | URI of the audio file to load. Generally, the URI starts with **fd://**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;int&gt; | Promise used to return the sound ID. A valid value must be greater than 0 |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| Error Code ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## load
 
+ArkTS-Dyn:
+```TypeScript
+load(fd: number, offset: number, length: number, callback: AsyncCallback<number>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void
 ```
@@ -125,31 +143,37 @@ Loads a sound. This API uses an asynchronous callback to return the result.This 
 > - Competition occurs when multiple players use the same resource handle or path description to read and write
 > files at the same time, resulting in playback errors.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void--><!--Device-SoundPool-load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fd | int | Yes | Resource handle, which is obtained by calling resourceManager.getRawFd. |
-| offset | long | Yes | Resource offset, which needs to be entered based on the preset resource information. An invalid value causes a failure to parse audio and video resources. |
-| length | long | Yes | Resource length, which needs to be entered based on the preset resource information. An invalid value causes a failure to parse audio and video resources. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the sound ID. A valid value must be greater than 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| length | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
-| [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+| Error Code ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## load
 
+ArkTS-Dyn:
+```TypeScript
+load(fd: number, offset: number, length: number): Promise<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 load(fd: int, offset: long, length: long): Promise<int>
 ```
@@ -163,74 +187,33 @@ Loads a sound. This API uses a promise to return the result.This API uses a prom
 > - Competition occurs when multiple players use the same resource handle or path description to read and write
 > files at the same time, resulting in playback errors.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-load(fd: int, offset: long, length: long): Promise<int>--><!--Device-SoundPool-load(fd: int, offset: long, length: long): Promise<int>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fd | int | Yes | Resource handle, which is obtained by calling resourceManager.getRawFd |
-| offset | long | Yes | Resource offset, which needs to be entered based on the preset resource information. An invalid value causes a failure to parse audio and video resources. |
-| length | long | Yes | Resource length, which needs to be entered based on the preset resource information. An invalid value causes a failure to parse audio and video resources. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| length | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;int&gt; | Promise used to return the sound ID. A valid value must be greater than 0 |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
-
-## off('error')
-
-```TypeScript
-off(type: 'error'): void
-```
-
-Unsubscribes from error events of a SoundPool instance.
-
-**Since:** 10
-
-<!--Device-SoundPool-off(type: 'error'): void--><!--Device-SoundPool-off(type: 'error'): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'error' | Yes | Event type, which is **'error'** in this case. |
-
-## off('errorOccurred')
-
-```TypeScript
-off(type: 'errorOccurred', callback?: Callback<ErrorInfo>): void
-```
-
-Unsubscribes from error events of a SoundPool instance.
-
-**Since:** 20
-
-<!--Device-SoundPool-off(type: 'errorOccurred', callback?: Callback<ErrorInfo>): void--><!--Device-SoundPool-off(type: 'errorOccurred', callback?: Callback<ErrorInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'errorOccurred' | Yes | Event type, which is **'errorOccurred'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | No | Callback used to return [ErrorInfo](arkts-media-soundpool-errorinfo-i.md) if an error occurs during the use of the player. If the callback is not set, no related information is provided. |
+| Error Code ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## off('loadComplete')
 
@@ -242,35 +225,15 @@ Unsubscribes from events indicating that a sound finishes loading.
 
 **Since:** 10
 
-<!--Device-SoundPool-off(type: 'loadComplete'): void--><!--Device-SoundPool-off(type: 'loadComplete'): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'loadComplete' | Yes | Event type. The value is fixed at **'loadComplete'**. |
-
-## off('playFinished')
-
-```TypeScript
-off(type: 'playFinished'): void
-```
-
-Unsubscribes from events indicating that a sound finishes playing.
-
-**Since:** 10
-
-<!--Device-SoundPool-off(type: 'playFinished'): void--><!--Device-SoundPool-off(type: 'playFinished'): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'playFinished' | Yes | Event type. The value is fixed at **'playFinished'**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'loadComplete' | Yes |
 
 ## off('playFinishedWithStreamId')
 
@@ -282,15 +245,76 @@ Unsubscribes from events indicating that a sound finishes playing.
 
 **Since:** 18
 
-<!--Device-SoundPool-off(type: 'playFinishedWithStreamId'): void--><!--Device-SoundPool-off(type: 'playFinishedWithStreamId'): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'playFinishedWithStreamId' | Yes | Event type. The value is fixed at **'playFinishedWithStreamId'**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'playFinishedWithStreamId' | Yes |
+
+## off('playFinished')
+
+```TypeScript
+off(type: 'playFinished'): void
+```
+
+Unsubscribes from events indicating that a sound finishes playing.
+
+**Since:** 10
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'playFinished' | Yes |
+
+## off('error')
+
+```TypeScript
+off(type: 'error'): void
+```
+
+Unsubscribes from error events of a SoundPool instance.
+
+**Since:** 10
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'error' | Yes |
+
+## off('errorOccurred')
+
+```TypeScript
+off(type: 'errorOccurred', callback?: Callback<ErrorInfo>): void
+```
+
+Unsubscribes from error events of a SoundPool instance.
+
+**Since:** 20
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'errorOccurred' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | No |
 
 ## offError
 
@@ -302,7 +326,7 @@ Unsubscribes from error events of this **SoundPool** instance.
 
 **Since:** 23
 
-<!--Device-SoundPool-offError(): void--><!--Device-SoundPool-offError(): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -316,15 +340,15 @@ Unsubscribes from errorOccurred events of this **SoundPool** instance.
 
 **Since:** 23
 
-<!--Device-SoundPool-offErrorOccurred(callback?: Callback<ErrorInfo>): void--><!--Device-SoundPool-offErrorOccurred(callback?: Callback<ErrorInfo>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | No | Callback used to listen for soundpool errorOccurred events. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | No |
 
 ## offLoadComplete
 
@@ -336,7 +360,7 @@ Unsubscribes from events indicating that a sound finishes loading.
 
 **Since:** 23
 
-<!--Device-SoundPool-offLoadComplete(): void--><!--Device-SoundPool-offLoadComplete(): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -350,7 +374,7 @@ Unsubscribes from events indicating that a sound finishes playing.
 
 **Since:** 23
 
-<!--Device-SoundPool-offPlayFinished(): void--><!--Device-SoundPool-offPlayFinished(): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -364,51 +388,9 @@ Unsubscribes from events indicating that a sound finishes playing.
 
 **Since:** 23
 
-<!--Device-SoundPool-offPlayFinishedWithStreamId(): void--><!--Device-SoundPool-offPlayFinishedWithStreamId(): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-## on('error')
-
-```TypeScript
-on(type: 'error', callback: ErrorCallback): void
-```
-
-Subscribes to error events of a SoundPool instance. This event is used only for error prompt. This API uses an asynchronous callback to return the result.
-
-**Since:** 10
-
-<!--Device-SoundPool-on(type: 'error', callback: ErrorCallback): void--><!--Device-SoundPool-on(type: 'error', callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'error' | Yes | Event type, which is **'error'** in this case. This event can be triggered by both user operations and the system. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the error code ID and error message. |
-
-## on('errorOccurred')
-
-```TypeScript
-on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void
-```
-
-Subscribes to error events of a SoundPool instance and returns [ErrorInfo](arkts-media-soundpool-errorinfo-i.md) that contains the error code, error stage, resource ID, and audio stream ID. This API uses an asynchronous callback to return the result.
-
-**Since:** 20
-
-<!--Device-SoundPool-on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void--><!--Device-SoundPool-on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'errorOccurred' | Yes | Event type, which is **'errorOccurred'** in this case. This event can be triggered by both user operations and the system. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | Yes | Callback used to return [ErrorInfo](arkts-media-soundpool-errorinfo-i.md). |
 
 ## on('loadComplete')
 
@@ -420,16 +402,37 @@ Subscribes to events indicating that a sound finishes loading. This API uses an 
 
 **Since:** 10
 
-<!--Device-SoundPool-on(type: 'loadComplete', callback: Callback<int>): void--><!--Device-SoundPool-on(type: 'loadComplete', callback: Callback<int>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'loadComplete' | Yes | Event type, which is **'loadComplete'** in this case. This event is triggered when a sound is loaded. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the ID of the resource that has been loaded. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'loadComplete' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
+
+## on('playFinishedWithStreamId')
+
+```TypeScript
+on(type: 'playFinishedWithStreamId', callback: Callback<int>): void
+```
+
+Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing. This API uses an asynchronous callback to return the result.When only on('playFinished') or on('playFinishedWithStreamId') is subscribed to, the registered callback is triggered when the audio playback is complete.When both on('playFinished') and on('playFinishedWithStreamId') are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
+
+**Since:** 18
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'playFinishedWithStreamId' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
 
 ## on('playFinished')
 
@@ -441,37 +444,58 @@ Subscribes to events indicating that a sound finishes playing. This API uses an 
 
 **Since:** 10
 
-<!--Device-SoundPool-on(type: 'playFinished', callback: Callback<void>): void--><!--Device-SoundPool-on(type: 'playFinished', callback: Callback<void>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'playFinished' | Yes | Event type, which is **'playFinished'** in this case. This event is triggered when a sound finishes playing. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'playFinished' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
 
-## on('playFinishedWithStreamId')
+## on('error')
 
 ```TypeScript
-on(type: 'playFinishedWithStreamId', callback: Callback<int>): void
+on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing. This API uses an asynchronous callback to return the result.When only [on('playFinished')](#onloadcomplete) or [on('playFinishedWithStreamId')](#onloadcomplete) is subscribed to, the registered callback is triggered when the audio playback is complete.When both [on('playFinished')](#onloadcomplete) and [on('playFinishedWithStreamId')](#onloadcomplete) are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
+Subscribes to error events of a [SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool) instance. This event is used only for error prompt. This API uses an asynchronous callback to return the result.
 
-**Since:** 18
+**Since:** 10
 
-<!--Device-SoundPool-on(type: 'playFinishedWithStreamId', callback: Callback<int>): void--><!--Device-SoundPool-on(type: 'playFinishedWithStreamId', callback: Callback<int>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'playFinishedWithStreamId' | Yes | Event type, which is **'playFinishedWithStreamId'** in this case. This event is triggered when an audio stream finishes playing, and the stream ID is returned. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the stream ID of the audio that has finished playing. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'error' | Yes |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
+
+## on('errorOccurred')
+
+```TypeScript
+on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void
+```
+
+Subscribes to error events of a [SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool) instance and returns [ErrorInfo](arkts-media-soundpool-errorinfo-i.md) that contains the error code, error stage, resource ID, and audio stream ID. This API uses an asynchronous callback to return the result.
+
+**Since:** 20
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'errorOccurred' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | Yes |
 
 ## onError
 
@@ -483,15 +507,15 @@ Subscribes to error events of this **SoundPool** instance. This event is used on
 
 **Since:** 23
 
-<!--Device-SoundPool-onError(callback: ErrorCallback): void--><!--Device-SoundPool-onError(callback: ErrorCallback): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the error code ID and error message. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
 
 ## onErrorOccurred
 
@@ -503,15 +527,15 @@ Subscribes to errorOccurred events of this **SoundPool** instance.
 
 **Since:** 23
 
-<!--Device-SoundPool-onErrorOccurred(callback: Callback<ErrorInfo>): void--><!--Device-SoundPool-onErrorOccurred(callback: Callback<ErrorInfo>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | Yes | Callback used to listen for soundpool errorOccurred events. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | Yes |
 
 ## onLoadComplete
 
@@ -523,15 +547,15 @@ Subscribes to events indicating that a sound finishes loading. This event is tri
 
 **Since:** 23
 
-<!--Device-SoundPool-onLoadComplete(callback: Callback<int>): void--><!--Device-SoundPool-onLoadComplete(callback: Callback<int>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | ID of the sound that has been loaded. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes |
 
 ## onPlayFinished
 
@@ -543,15 +567,15 @@ Subscribes to events indicating that a sound finishes playing. This event is tri
 
 **Since:** 23
 
-<!--Device-SoundPool-onPlayFinished(callback: Callback<void>): void--><!--Device-SoundPool-onPlayFinished(callback: Callback<void>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
 
 ## onPlayFinishedWithStreamId
 
@@ -563,109 +587,127 @@ Subscribes to events indicating the completion of audio playback and returns the
 
 **Since:** 23
 
-<!--Device-SoundPool-onPlayFinishedWithStreamId(callback: Callback<int>): void--><!--Device-SoundPool-onPlayFinishedWithStreamId(callback: Callback<int>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the result. Stream ID of the audio that finishes playing. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes |
 
 ## play
 
+ArkTS-Dyn:
+```TypeScript
+play(soundID: number, params: PlayParameters, callback: AsyncCallback<number>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 play(soundID: int, params: PlayParameters, callback: AsyncCallback<int>): void
 ```
 
 Plays a sound and obtains the stream ID. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-play(soundID: int, params: PlayParameters, callback: AsyncCallback<int>): void--><!--Device-SoundPool-play(soundID: int, params: PlayParameters, callback: AsyncCallback<int>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| soundID | int | Yes | Sound ID, which is obtained by calling **load()**. |
-| params | [PlayParameters](arkts-media-soundpool-playparameters-i.md) | Yes | Playback parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the audio stream ID. A valid value must be greater than 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| soundID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| params | [PlayParameters](arkts-media-soundpool-playparameters-i.md) | Yes |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## play
 
+ArkTS-Dyn:
+```TypeScript
+play(soundID: number, callback: AsyncCallback<number>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 play(soundID: int, callback: AsyncCallback<int>): void
 ```
 
 Plays a sound using default parameters and obtains the stream ID. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-play(soundID: int, callback: AsyncCallback<int>): void--><!--Device-SoundPool-play(soundID: int, callback: AsyncCallback<int>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| soundID | int | Yes | Sound ID, which is obtained by calling **load()**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the audio stream ID. A valid value must be greater than 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| soundID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## play
 
+ArkTS-Dyn:
+```TypeScript
+play(soundID: number, params?: PlayParameters): Promise<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 play(soundID: int, params?: PlayParameters): Promise<int>
 ```
 
 Plays a sound and obtains the stream ID. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-play(soundID: int, params?: PlayParameters): Promise<int>--><!--Device-SoundPool-play(soundID: int, params?: PlayParameters): Promise<int>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| soundID | int | Yes | Sound ID, which is obtained by calling **load()**. |
-| params | [PlayParameters](arkts-media-soundpool-playparameters-i.md) | No | Playback parameters. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| soundID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| params | [PlayParameters](arkts-media-soundpool-playparameters-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;int&gt; | Promise used to return the audio stream ID. A valid value must be greater than 0 |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by promise. |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## release
 
@@ -675,23 +717,23 @@ release(callback: AsyncCallback<void>): void
 
 Releases a **SoundPool** instance. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-release(callback: AsyncCallback<void>): void--><!--Device-SoundPool-release(callback: AsyncCallback<void>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+| Error Code ID |
+| --- |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## release
 
@@ -701,23 +743,23 @@ release(): Promise<void>
 
 Releases a **SoundPool** instance. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-release(): Promise<void>--><!--Device-SoundPool-release(): Promise<void>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| Error Code ID |
+| --- |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## setInterruptMode
 
@@ -729,403 +771,474 @@ Sets the interruption mode of the audio files with the same ID during playback. 
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-SoundPool-setInterruptMode(interruptMode: media.SoundInterruptMode): void--><!--Device-SoundPool-setInterruptMode(interruptMode: media.SoundInterruptMode): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| interruptMode | media.SoundInterruptMode | Yes | Interruption mode of the audio files with the same ID during playback, which is obtained through the **media.SoundInterruptMode** enum. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| interruptMode | media.SoundInterruptMode | Yes |
 
 ## setLoop
 
+ArkTS-Dyn:
+```TypeScript
+setLoop(streamID: number, loop: number, callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void
 ```
 
 Sets the loop mode. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| streamID | int | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| loop | int | Yes | Number of loops.<br>If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1.<br> If this parameter is set to a value less than 0, the content is played repeatedly. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| loop | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## setLoop
 
+ArkTS-Dyn:
+```TypeScript
+setLoop(streamID: number, loop: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 setLoop(streamID: int, loop: int): Promise<void>
 ```
 
 Sets the loop mode. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-setLoop(streamID: int, loop: int): Promise<void>--><!--Device-SoundPool-setLoop(streamID: int, loop: int): Promise<void>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| streamID | int | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| loop | int | Yes | Number of loops.<br>If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1.<br> If this parameter is set to a value less than 0, the content is played repeatedly. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| loop | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by promise. |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## setPriority
 
+ArkTS-Dyn:
+```TypeScript
+setPriority(streamID: number, priority: number, callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setPriority(streamID: int, priority: int, callback: AsyncCallback<void>): void
 ```
 
 Sets the priority for an audio stream. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-setPriority(streamID: int, priority: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setPriority(streamID: int, priority: int, callback: AsyncCallback<void>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| streamID | int | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| priority | int | Yes | Priority. The value **0** means the lowest priority. The value is an integer greater than or equal to 0. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| priority | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## setPriority
 
+ArkTS-Dyn:
+```TypeScript
+setPriority(streamID: number, priority: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 setPriority(streamID: int, priority: int): Promise<void>
 ```
 
 Sets the priority for an audio stream. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-setPriority(streamID: int, priority: int): Promise<void>--><!--Device-SoundPool-setPriority(streamID: int, priority: int): Promise<void>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| streamID | int | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| priority | int | Yes | Priority. The value **0** means the lowest priority. The value is an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| priority | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by promise. |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## setRate
 
+ArkTS-Dyn:
+```TypeScript
+setRate(streamID: number, rate: audio.AudioRendererRate, callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setRate(streamID: int, rate: audio.AudioRendererRate, callback: AsyncCallback<void>): void
 ```
 
 Sets the playback rate for an audio stream. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate, callback: AsyncCallback<void>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| streamID | int | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| rate | audio.AudioRendererRate | Yes | Playback rate. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| rate | audio.AudioRendererRate | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## setRate
 
+ArkTS-Dyn:
+```TypeScript
+setRate(streamID: number, rate: audio.AudioRendererRate): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 setRate(streamID: int, rate: audio.AudioRendererRate): Promise<void>
 ```
 
 Sets the playback rate for an audio stream. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate): Promise<void>--><!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate): Promise<void>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| streamID | int | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| rate | audio.AudioRendererRate | Yes | Playback rate. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| rate | audio.AudioRendererRate | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by promise. |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## setVolume
 
+ArkTS-Dyn:
+```TypeScript
+setVolume(streamID: number, leftVolume: number, rightVolume: number, callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setVolume(streamID: int, leftVolume: double, rightVolume: double, callback: AsyncCallback<void>): void
 ```
 
 Sets the volume for an audio stream. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double, callback: AsyncCallback<void>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| streamID | int | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| leftVolume | double | Yes | Volume of the left channel. The value range is [0.0, 1.0]. |
-| rightVolume | double | Yes | Volume of the right channel. The value range is [0.0, 1.0]. Currently, setting the volume for the right channel does not take effect. The volume set for the left channel is used. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| [leftVolume](arkts-media-soundpool-playparameters-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [rightVolume](arkts-media-soundpool-playparameters-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## setVolume
 
+ArkTS-Dyn:
+```TypeScript
+setVolume(streamID: number, leftVolume: number, rightVolume: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 setVolume(streamID: int, leftVolume: double, rightVolume: double): Promise<void>
 ```
 
 Sets the volume for an audio stream. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double): Promise<void>--><!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double): Promise<void>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| streamID | int | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| leftVolume | double | Yes | Volume of the left channel. The value range is [0.0, 1.0]. |
-| rightVolume | double | Yes | Volume of the right channel. The value range is [0.0, 1.0]. Currently, setting the volume for the right channel does not take effect. The volume set for the left channel is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| [leftVolume](arkts-media-soundpool-playparameters-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [rightVolume](arkts-media-soundpool-playparameters-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by promise. |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## stop
 
+ArkTS-Dyn:
+```TypeScript
+stop(streamID: number, callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 stop(streamID: int, callback: AsyncCallback<void>): void
 ```
 
 Stops audio playback. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-stop(streamID: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-stop(streamID: int, callback: AsyncCallback<void>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| streamID | int | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## stop
 
+ArkTS-Dyn:
+```TypeScript
+stop(streamID: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 stop(streamID: int): Promise<void>
 ```
 
 Stops audio playback. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-stop(streamID: int): Promise<void>--><!--Device-SoundPool-stop(streamID: int): Promise<void>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| streamID | int | Yes | Audio stream ID, which is obtained by calling **play()**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by promise. |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## unload
 
+ArkTS-Dyn:
+```TypeScript
+unload(soundID: number, callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 unload(soundID: int, callback: AsyncCallback<void>): void
 ```
 
 Unloads a sound. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-unload(soundID: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-unload(soundID: int, callback: AsyncCallback<void>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| soundID | int | Yes | Sound ID, which is obtained by calling **load()**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| soundID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
-| [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by callback. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+| Error Code ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## unload
 
+ArkTS-Dyn:
+```TypeScript
+unload(soundID: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 unload(soundID: int): Promise<void>
 ```
 
 Unloads a sound. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SoundPool-unload(soundID: int): Promise<void>--><!--Device-SoundPool-unload(soundID: int): Promise<void>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| soundID | int | Yes | Sound ID, which is obtained by calling **load()**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| soundID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
-
+| Error Code ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |

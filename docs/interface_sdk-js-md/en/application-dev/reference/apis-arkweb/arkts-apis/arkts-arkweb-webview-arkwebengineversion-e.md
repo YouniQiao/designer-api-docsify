@@ -4,7 +4,7 @@ For ArkWeb kernel versions, see [Adaptation Guide for the M114 Kernel on OpenHar
 
 **Since:** 20
 
-<!--Device-webview-enum ArkWebEngineVersion--><!--Device-webview-enum ArkWebEngineVersion-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,7 +18,7 @@ System default kernel (see [Constraints](../../../web/web-component-overview.md#
 
 **Since:** 20
 
-<!--Device-ArkWebEngineVersion-SYSTEM_DEFAULT = 0--><!--Device-ArkWebEngineVersion-SYSTEM_DEFAULT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,7 +32,7 @@ Legacy kernel of OpenHarmony 6.0. Developers can select this legacy kernel. If t
 
 **Since:** 20
 
-<!--Device-ArkWebEngineVersion-M114 = 1--><!--Device-ArkWebEngineVersion-M114 = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -46,7 +46,7 @@ Evergreen kernel of OpenHarmony 6.0 (legacy kernel of OpenHarmony 7.0). M132 is 
 
 **Since:** 20
 
-<!--Device-ArkWebEngineVersion-M132 = 2--><!--Device-ArkWebEngineVersion-M132 = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -60,9 +60,9 @@ Evergreen kernel of OpenHarmony 7.0. M144 is the default kernel of OpenHarmony 7
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ArkWebEngineVersion-M144 = 3--><!--Device-ArkWebEngineVersion-M144 = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -76,7 +76,6 @@ The latest kernel (evergreen kernel) of the system. Developers can select this k
 
 **Since:** 23
 
-<!--Device-ArkWebEngineVersion-ARKWEB_EVERGREEN = 99999--><!--Device-ArkWebEngineVersion-ARKWEB_EVERGREEN = 99999-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

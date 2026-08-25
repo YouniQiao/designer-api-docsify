@@ -4,9 +4,9 @@
 
 **起始版本：** 7
 
-**废弃版本：** 22
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-unnamed-declare class FrictionMotion--><!--Device-unnamed-declare class FrictionMotion-End-->
+**废弃版本：** 22
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,9 +27,9 @@ constructor(friction: number, position: number, velocity: number)
 
 **起始版本：** 7
 
-**废弃版本：** 22
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-FrictionMotion-constructor(friction: number, position: number, velocity: number)--><!--Device-FrictionMotion-constructor(friction: number, position: number, velocity: number)-End-->
+**废弃版本：** 22
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -37,9 +37,8 @@ constructor(friction: number, position: number, velocity: number)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| friction | number | 是 |  |
-| position | number | 是 |  |
-| velocity | number | 是 |  |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| friction | number | 是 |
+| position | number | 是 |
+| velocity | number | 是 |

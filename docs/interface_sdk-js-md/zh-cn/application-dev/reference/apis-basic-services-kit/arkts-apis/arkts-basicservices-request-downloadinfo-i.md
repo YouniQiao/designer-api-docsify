@@ -2,9 +2,9 @@
 
 下载任务信息，[getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)接口的回调参数。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-request-interface DownloadInfo--><!--Device-request-interface DownloadInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -24,9 +24,9 @@ description: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-DownloadInfo-description: string--><!--Device-DownloadInfo-description: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -38,11 +38,11 @@ downloadedBytes: long
 
 实时下载大小，单位为字节（B）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-DownloadInfo-downloadedBytes: long--><!--Device-DownloadInfo-downloadedBytes: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -54,11 +54,11 @@ downloadId: long
 
 下载任务id。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-DownloadInfo-downloadId: long--><!--Device-DownloadInfo-downloadId: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -72,9 +72,9 @@ downloadTitle: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-DownloadInfo-downloadTitle: string--><!--Device-DownloadInfo-downloadTitle: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -86,11 +86,11 @@ downloadTotalBytes: long
 
 下载的文件的总大小，单位为字节（B）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-DownloadInfo-downloadTotalBytes: long--><!--Device-DownloadInfo-downloadTotalBytes: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -100,13 +100,13 @@ downloadTotalBytes: long
 failedReason: int
 ```
 
-下载失败原因，可以是任何 下载任务的错误码常量。
+下载失败原因，可以是任何 [下载任务的错误码](../../../reference/apis-basic-services-kit/js-apis-request.md#constants)常量。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-DownloadInfo-failedReason: int--><!--Device-DownloadInfo-failedReason: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -120,9 +120,9 @@ fileName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-DownloadInfo-fileName: string--><!--Device-DownloadInfo-fileName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -136,9 +136,9 @@ filePath: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-DownloadInfo-filePath: string--><!--Device-DownloadInfo-filePath: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -148,13 +148,13 @@ filePath: string
 pausedReason: int
 ```
 
-会话暂停的原因，可以是任何 下载任务暂停原因常量。
+会话暂停的原因，可以是任何 [下载任务暂停原因](../../../reference/apis-basic-services-kit/js-apis-request.md#constants)常量。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-DownloadInfo-pausedReason: int--><!--Device-DownloadInfo-pausedReason: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -164,13 +164,13 @@ pausedReason: int
 status: int
 ```
 
-下载状态码，可以是任何 下载任务状态码常量。
+下载状态码，可以是任何 [下载任务状态码](../../../reference/apis-basic-services-kit/js-apis-request.md#constants)常量。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-DownloadInfo-status: int--><!--Device-DownloadInfo-status: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -184,9 +184,8 @@ targetURI: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-DownloadInfo-targetURI: string--><!--Device-DownloadInfo-targetURI: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
-

@@ -4,9 +4,9 @@ Defines authentication information.
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-deviceManager-interface AuthInfo--><!--Device-deviceManager-interface AuthInfo-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -30,9 +30,9 @@ Authentication type.
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-AuthInfo-authType: number--><!--Device-AuthInfo-authType: number-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -50,9 +50,9 @@ Extended field. Optional. The default value is **undefined**.
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-AuthInfo-extraInfo: { [key: string]: any }--><!--Device-AuthInfo-extraInfo: { [key: string]: any }-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -70,11 +70,10 @@ Authentication token.
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-AuthInfo-token: number--><!--Device-AuthInfo-token: number-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
-

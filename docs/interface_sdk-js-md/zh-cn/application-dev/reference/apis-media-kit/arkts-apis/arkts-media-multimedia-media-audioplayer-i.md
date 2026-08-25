@@ -7,11 +7,11 @@
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [media](arkts-media-media-n.md)
-
-<!--Device-unnamed-interface AudioPlayer--><!--Device-unnamed-interface AudioPlayer-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -37,19 +37,19 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)(callback: AsyncCallback&lt;Array&lt;MediaDescription&gt;&gt;)
-
-<!--Device-AudioPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void--><!--Device-AudioPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;&gt; | 是 | 回调函数。获取音频轨道信息成功时，err为undefined，data为获取到的 MediaDescription数组，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;&gt; | 是 |
 
 **示例**
 
@@ -146,54 +146,23 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)()
-
-<!--Device-AudioPlayer-getTrackDescription(): Promise<Array<MediaDescription>>--><!--Device-AudioPlayer-getTrackDescription(): Promise<Array<MediaDescription>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;&gt; | 音频轨道信息MediaDescription数组Promise返回值。 |
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;&gt; |
 
 **示例**
 
 参见 [getTrackDescription](#gettrackdescription)
-
-## on('audioInterrupt')
-
-```TypeScript
-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
-```
-
-监听音频焦点变化事件，参考[audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md)。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 9开始废弃，建议使用
-> AVPlayer.on('audioInterrupt')
-> 替代。
-
-**起始版本：** 9
-
-**废弃版本：** 9
-
-**替代接口：** on(type: 'audioInterrupt', callback: Callback&lt;audio.InterruptEvent&gt;)
-
-<!--Device-AudioPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void--><!--Device-AudioPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'audioInterrupt' | 是 | 音频焦点变化事件回调类型，支持的事件：'audioInterrupt'。 |
-| callback | (info: audio.InterruptEvent) =&gt; void | 是 | 音频焦点变化事件回调方法。 |
 
 ## on('bufferingUpdate')
 
@@ -211,20 +180,20 @@ on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: numbe
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** on(type: 'bufferingUpdate', callback: OnBufferingUpdateHandler)
 
-<!--Device-AudioPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void--><!--Device-AudioPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void-End-->
-
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'bufferingUpdate' | 是 | 音频缓存事件回调类型，支持的事件：'bufferingUpdate'。 |
-| callback | (infoType: BufferingInfoType, value: number) =&gt; void | 是 | 音频缓存事件回调方法。<br> BufferingInfoTypevalue值固定为0。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'bufferingUpdate' | 是 |
+| callback | (infoType: BufferingInfoType, value: number) = & gt; void | 是 |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -242,51 +211,20 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
 
-<!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
-
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange'。<br>- 'play'：完成 play()调用，音频开始播放，触发该事件。<br>- 'pause'：完成 pause()调用，音频暂停播放，触发该事件。<br>- 'stop'：完成stop() 调用，音频停止播放，触发该事件。<br>- 'reset'：完成reset()调用，播放器重置，触发该事件。<br>- 'dataLoad'：完成音频数 据加载后触发该事件，即src属性设置完成后触发该事件。<br>- 'finish'：完成音频播放后触发该事件。<br>- 'volumeChange'：完成 setVolume()调用，播放音量改变后触发该事件。 |
-| callback | () =&gt; void | 是 | 播放事件回调方法。 |
-
-## on('error')
-
-```TypeScript
-on(type: 'error', callback: ErrorCallback): void
-```
-
-开始订阅音频播放错误事件，当上报error错误事件后，用户需处理error事件，退出播放操作。
-
-> **说明：**
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用
-> AVPlayer.on('error')替
-> 代。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** on(type: 'error', callback: ErrorCallback)
-
-<!--Device-AudioPlayer-on(type: 'error', callback: ErrorCallback): void--><!--Device-AudioPlayer-on(type: 'error', callback: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'error' | 是 | 播放错误事件回调类型，支持的事件包括：'error'。<br>- 'error'：音频播放中发生错误，触发该事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 播放错误事件回调方法。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \|
+| callback | () = & gt; void | 是 |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -304,20 +242,20 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
-
-<!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange'。<br>- 'play'：完成 play()调用，音频开始播放，触发该事件。<br>- 'pause'：完成 pause()调用，音频暂停播放，触发该事件。<br>- 'stop'：完成stop() 调用，音频停止播放，触发该事件。<br>- 'reset'：完成reset()调用，播放器重置，触发该事件。<br>- 'dataLoad'：完成音频数 据加载后触发该事件，即src属性设置完成后触发该事件。<br>- 'finish'：完成音频播放后触发该事件。<br>- 'volumeChange'：完成 setVolume()调用，播放音量改变后触发该事件。 |
-| callback | () =&gt; void | 是 | 播放事件回调方法。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \|
+| callback | () = & gt; void | 是 |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -335,20 +273,20 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
-
-<!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange'。<br>- 'play'：完成 play()调用，音频开始播放，触发该事件。<br>- 'pause'：完成 pause()调用，音频暂停播放，触发该事件。<br>- 'stop'：完成stop() 调用，音频停止播放，触发该事件。<br>- 'reset'：完成reset()调用，播放器重置，触发该事件。<br>- 'dataLoad'：完成音频数 据加载后触发该事件，即src属性设置完成后触发该事件。<br>- 'finish'：完成音频播放后触发该事件。<br>- 'volumeChange'：完成 setVolume()调用，播放音量改变后触发该事件。 |
-| callback | () =&gt; void | 是 | 播放事件回调方法。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \|
+| callback | () = & gt; void | 是 |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -366,20 +304,20 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
-
-<!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange'。<br>- 'play'：完成 play()调用，音频开始播放，触发该事件。<br>- 'pause'：完成 pause()调用，音频暂停播放，触发该事件。<br>- 'stop'：完成stop() 调用，音频停止播放，触发该事件。<br>- 'reset'：完成reset()调用，播放器重置，触发该事件。<br>- 'dataLoad'：完成音频数 据加载后触发该事件，即src属性设置完成后触发该事件。<br>- 'finish'：完成音频播放后触发该事件。<br>- 'volumeChange'：完成 setVolume()调用，播放音量改变后触发该事件。 |
-| callback | () =&gt; void | 是 | 播放事件回调方法。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \|
+| callback | () = & gt; void | 是 |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -397,20 +335,20 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
-
-<!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange'。<br>- 'play'：完成 play()调用，音频开始播放，触发该事件。<br>- 'pause'：完成 pause()调用，音频暂停播放，触发该事件。<br>- 'stop'：完成stop() 调用，音频停止播放，触发该事件。<br>- 'reset'：完成reset()调用，播放器重置，触发该事件。<br>- 'dataLoad'：完成音频数 据加载后触发该事件，即src属性设置完成后触发该事件。<br>- 'finish'：完成音频播放后触发该事件。<br>- 'volumeChange'：完成 setVolume()调用，播放音量改变后触发该事件。 |
-| callback | () =&gt; void | 是 | 播放事件回调方法。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \|
+| callback | () = & gt; void | 是 |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -428,20 +366,51 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
-
-<!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange'。<br>- 'play'：完成 play()调用，音频开始播放，触发该事件。<br>- 'pause'：完成 pause()调用，音频暂停播放，触发该事件。<br>- 'stop'：完成stop() 调用，音频停止播放，触发该事件。<br>- 'reset'：完成reset()调用，播放器重置，触发该事件。<br>- 'dataLoad'：完成音频数 据加载后触发该事件，即src属性设置完成后触发该事件。<br>- 'finish'：完成音频播放后触发该事件。<br>- 'volumeChange'：完成 setVolume()调用，播放音量改变后触发该事件。 |
-| callback | () =&gt; void | 是 | 播放事件回调方法。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \|
+| callback | () = & gt; void | 是 |
+
+## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
+
+```TypeScript
+on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void
+```
+
+开始订阅音频播放事件。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> AVPlayer.on('stateChange')
+> 替代。
+
+**起始版本：** 6
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
+**废弃版本：** 9
+
+**替代接口：** on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \|
+| callback | () = & gt; void | 是 |
 
 ## on('timeUpdate')
 
@@ -459,51 +428,82 @@ on(type: 'timeUpdate', callback: Callback<number>): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** on(type: 'timeUpdate', callback: Callback&lt;int&gt;)
 
-<!--Device-AudioPlayer-on(type: 'timeUpdate', callback: Callback<number>): void--><!--Device-AudioPlayer-on(type: 'timeUpdate', callback: Callback<number>): void-End-->
+**系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'timeUpdate' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+
+## on('audioInterrupt')
+
+```TypeScript
+on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
+```
+
+监听音频焦点变化事件，参考[audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md)。
+
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 9开始废弃，建议使用
+> AVPlayer.on('audioInterrupt')
+> 替代。
+
+**起始版本：** 9
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
+**废弃版本：** 9
+
+**替代接口：** on(type: 'audioInterrupt', callback: Callback&lt;audio.InterruptEvent&gt;)
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'timeUpdate' | 是 | 播放事件回调类型，支持的事件包括：'timeUpdate'。<br>- 'timeUpdate'：音频播放时间戳更新，开始播放后自动触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 播放事件回调方法。回调方法入参为更新后的时间戳。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'audioInterrupt' | 是 |
+| callback | (info: audio.InterruptEvent) = & gt; void | 是 |
 
-## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
+## on('error')
 
 ```TypeScript
-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void
+on(type: 'error', callback: ErrorCallback): void
 ```
 
-开始订阅音频播放事件。
+开始订阅音频播放错误事件，当上报error错误事件后，用户需处理error事件，退出播放操作。
 
 > **说明：**
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> AVPlayer.on('stateChange')
-> 替代。
+> AVPlayer.on('error')替
+> 代。
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
-**替代接口：** on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
-
-<!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
+**替代接口：** on(type: 'error', callback: ErrorCallback)
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange'。<br>- 'play'：完成 play()调用，音频开始播放，触发该事件。<br>- 'pause'：完成 pause()调用，音频暂停播放，触发该事件。<br>- 'stop'：完成stop() 调用，音频停止播放，触发该事件。<br>- 'reset'：完成reset()调用，播放器重置，触发该事件。<br>- 'dataLoad'：完成音频数 据加载后触发该事件，即src属性设置完成后触发该事件。<br>- 'finish'：完成音频播放后触发该事件。<br>- 'volumeChange'：完成 setVolume()调用，播放音量改变后触发该事件。 |
-| callback | () =&gt; void | 是 | 播放事件回调方法。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'error' | 是 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
 
 ## pause
 
@@ -520,11 +520,11 @@ pause(): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [pause](arkts-media-media-avplayer-i.md#pause)(callback: AsyncCallback&lt;void&gt;)
-
-<!--Device-AudioPlayer-pause(): void--><!--Device-AudioPlayer-pause(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -673,11 +673,11 @@ play(): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [play](arkts-media-media-avplayer-i.md#play)(callback: AsyncCallback&lt;void&gt;)
-
-<!--Device-AudioPlayer-play(): void--><!--Device-AudioPlayer-play(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -757,11 +757,11 @@ release(): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [release](arkts-media-media-avplayer-i.md#release)(callback: AsyncCallback&lt;void&gt;)
-
-<!--Device-AudioPlayer-release(): void--><!--Device-AudioPlayer-release(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -1010,11 +1010,11 @@ reset(): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [reset](arkts-media-media-avplayer-i.md#reset)(callback: AsyncCallback&lt;void&gt;)
-
-<!--Device-AudioPlayer-reset(): void--><!--Device-AudioPlayer-reset(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -1148,19 +1148,19 @@ seek(timeMs: number): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [seek](arkts-media-media-avplayer-i.md#seek)
-
-<!--Device-AudioPlayer-seek(timeMs: number): void--><!--Device-AudioPlayer-seek(timeMs: number): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| timeMs | number | 是 | 指定的跳转时间节点，单位毫秒（ms），取值范围[0, duration]。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| timeMs | number | 是 |
 
 **示例**
 
@@ -1287,19 +1287,19 @@ setVolume(vol: number): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [setVolume](arkts-media-media-avplayer-i.md#setvolume)
-
-<!--Device-AudioPlayer-setVolume(vol: number): void--><!--Device-AudioPlayer-setVolume(vol: number): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| vol | number | 是 | 指定的相对音量大小，取值范围为[0.00-1.00]，1表示最大音量，即100%。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| vol | number | 是 |
 
 **示例**
 
@@ -1357,11 +1357,11 @@ stop(): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [stop](arkts-media-media-avplayer-i.md#stop)(callback: AsyncCallback&lt;void&gt;)
-
-<!--Device-AudioPlayer-stop(): void--><!--Device-AudioPlayer-stop(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -1492,11 +1492,11 @@ audioInterruptMode?: audio.InterruptMode
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 9
 
 **替代接口：** audioInterruptMode
-
-<!--Device-AudioPlayer-audioInterruptMode?: audio.InterruptMode--><!--Device-AudioPlayer-audioInterruptMode?: audio.InterruptMode-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -1512,11 +1512,11 @@ readonly currentTime: number
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** currentTime
-
-<!--Device-AudioPlayer-readonly currentTime: number--><!--Device-AudioPlayer-readonly currentTime: number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -1532,11 +1532,11 @@ readonly duration: number
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** duration
-
-<!--Device-AudioPlayer-readonly duration: number--><!--Device-AudioPlayer-readonly duration: number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -1557,11 +1557,11 @@ fdSrc: AVFileDescriptor
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 9
 
 **替代接口：** fdSrc
-
-<!--Device-AudioPlayer-fdSrc: AVFileDescriptor--><!--Device-AudioPlayer-fdSrc: AVFileDescriptor-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -1577,11 +1577,11 @@ loop: boolean
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** loop
-
-<!--Device-AudioPlayer-loop: boolean--><!--Device-AudioPlayer-loop: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -1604,13 +1604,13 @@ ohos.permission.READ_MEDIA 或 ohos.permission.INTERNET。
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** url
 
 **需要权限：** ohos.permission.READ_MEDIA or ohos.permission.INTERNET
-
-<!--Device-AudioPlayer-src: string--><!--Device-AudioPlayer-src: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -1626,11 +1626,10 @@ readonly state: AudioState
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** state
 
-<!--Device-AudioPlayer-readonly state: AudioState--><!--Device-AudioPlayer-readonly state: AudioState-End-->
-
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
-

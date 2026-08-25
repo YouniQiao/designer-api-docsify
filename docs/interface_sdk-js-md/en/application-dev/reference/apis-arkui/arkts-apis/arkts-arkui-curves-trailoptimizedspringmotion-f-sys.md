@@ -16,9 +16,9 @@ Creates a spring animation curve. If multiple spring animations are applied to t
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-curves-function trailOptimizedSpringMotion(response?: number, dampingFraction?: number, overlapDuration?: number, trail?: TrailOptimization): ICurve--><!--Device-curves-function trailOptimizedSpringMotion(response?: number, dampingFraction?: number, overlapDuration?: number, trail?: TrailOptimization): ICurve-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,16 +26,15 @@ Creates a spring animation curve. If multiple spring animations are applied to t
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| response | number | No | Duration of one complete oscillation.<br>Default value: **0.55**<br>Unit: second<br> Value range: (0, +∞)<br>**NOTE：**<br>If this parameter is set to a value less than or equal to 0, the default value **0.55** is used. |
-| dampingFraction | number | No | Damping coefficient.<br>**0**: undamped. In this case, the spring oscillates forever.<br>   > 0 and &lt; 1: underdamped. In this case, the spring overshoots the equilibrium position.<br>**1**: critically damped.<br> &gt; 1: overdamped. In this case, the spring approaches equilibrium gradually.<br>Default value: **0.825**<br>Unit: second<br>Value range: 0, +∞)<br>**NOTE：**<br>A value less than 0 evaluates to the default value **0.825**. |
-| overlapDuration | number | No | Duration for animations to overlap, in seconds. When animations overlap, the **response** values of these animations will transit smoothly over this duration if they are different.<br> Default value: **0**<br>Unit: second<br>Value range: [0, +∞)<br> **NOTE：**<br>A value less than 0 evaluates to the default value **0**.<br> The spring animation curve is physics-based. Its duration depends on the **springMotion** parameters and the previous velocity, rather than the **duration** parameter in [animation, animateTo, or pageTransition. The time cannot be normalized. Therefore, the interpolation cannot be obtained using the **interpolate** function of the curve. |
-| trail | [TrailOptimization](arkts-arkui-curves-trailoptimization-i-sys.md) | No | Trail optimization configuration. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| response | number | No |
+| dampingFraction | number | No |
+| overlapDuration | number | No |
+| trail | [TrailOptimization](arkts-arkui-curves-trailoptimization-i-sys.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ICurve | Curve. <br>**NOTE：**<br>The spring animation curve is physics-based. Its duration depends on the **springMotion** parameters and the previous velocity, rather than the **duration** parameter in [animation]{ |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ICurve](arkts-arkui-curves-icurve-i.md) |

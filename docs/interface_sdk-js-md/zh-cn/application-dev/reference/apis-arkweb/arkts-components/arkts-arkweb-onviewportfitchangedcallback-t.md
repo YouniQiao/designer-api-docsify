@@ -8,15 +8,14 @@ type OnViewportFitChangedCallback = (viewportFit: ViewportFit) => void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-unnamed-type OnViewportFitChangedCallback = (viewportFit: ViewportFit) => void--><!--Device-unnamed-type OnViewportFitChangedCallback = (viewportFit: ViewportFit) => void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| viewportFit | [ViewportFit](arkts-arkweb-viewportfit-e.md) | 是 | 网页meta中viewport-fit配置的视口类型。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| viewportFit | [ViewportFit](arkts-arkweb-viewportfit-e.md) | 是 |

@@ -9,32 +9,36 @@ import { curves } from '@kit.ArkUI';
 ## responsiveSpringMotion
 
 ```TypeScript
-export function responsiveSpringMotion(response?: double, dampingFraction?: double, overlapDuration?: double): ICurve
+function responsiveSpringMotion(response?: number, dampingFraction?: number, overlapDuration?: number): ICurve
 ```
 
-Creates a responsive spring animation curve. It is a special case of springMotion, with the only difference in the default values. It can be used together with **springMotion**.
+Creates a responsive spring animation curve. It is a special case of [springMotion](arkts-arkui-curves-springmotion-f.md), with the only difference in the default values. It can be used together with **springMotion**.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-curves-export function responsiveSpringMotion(response?: double, dampingFraction?: double, overlapDuration?: double): ICurve--><!--Device-curves-export function responsiveSpringMotion(response?: double, dampingFraction?: double, overlapDuration?: double): ICurve-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| response | double | No | See **response** in **springMotion**.<br>Default value: **0.15**. Unit: second<br>Value range: (0, +∞). <p>**NOTE：**: <br>If this parameter is set to a value less than or equal to 0, the default value **0.15** is used. </p> |
-| dampingFraction | double | No | See **dampingFraction** in **springMotion**.<br>Default value: **0.86**. Unit: second<br>Value range: [0, +∞). <p>**NOTE：**<br>A value less than 0 evaluates to the default value **0.86**. </p> |
-| overlapDuration | double | No | See **overlapDuration** in **springMotion**.<br>Default value: **0.25**. Unit: second<br>Value range: [0, +∞). <p>**NOTE：**: <br>A value less than 0 evaluates to the default value **0.25**. <br>To apply custom settings for a spring animation, you are advised to use **springMotion**. <br>When using **responsiveSpringMotion**, you are advised to retain the default settings. <br>The duration of the responsive spring animation depends on the **responsiveSpringMotion** parameters and the previous velocity, rather than the duration parameter in animation, animateTo, or pageTransition. <br>In addition, the interpolation cannot be obtained using the **interpolate** function of the curve. </p> |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| response | number | No |
+| dampingFraction | number | No |
+| overlapDuration | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ICurve |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ICurve](arkts-arkui-curves-icurve-i.md) |
 
+**Examples**
+
+```TypeScript
+import { curves } from '@kit.ArkUI'
+curves.responsiveSpringMotion() // Create a responsive spring animation curve with default settings.
+```

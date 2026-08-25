@@ -6,7 +6,7 @@ Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md) and has all attributes o
 
 **Since:** 7
 
-<!--Device-unnamed-declare interface BadgeParamWithString--><!--Device-unnamed-declare interface BadgeParamWithString-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +28,10 @@ Text string of the badge content.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-BadgeParamWithString-value: ResourceStr--><!--Device-BadgeParamWithString-value: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

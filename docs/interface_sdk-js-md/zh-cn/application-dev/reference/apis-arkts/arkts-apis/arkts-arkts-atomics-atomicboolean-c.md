@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export class AtomicBoolean--><!--Device-unnamed-export class AtomicBoolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,26 +23,24 @@ compareAndSwap(expected: boolean, val: boolean): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicBoolean-compareAndSwap(expected: boolean, val: boolean): boolean--><!--Device-AtomicBoolean-compareAndSwap(expected: boolean, val: boolean): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| expected | boolean | 是 | 预期的当前值。 |
-| val | boolean | 是 | 匹配成功时要写入的新值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| expected | boolean | 是 |
+| val | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 修改前的旧值。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## constructor
 
@@ -56,19 +52,17 @@ constructor(val: boolean)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicBoolean-constructor(val: boolean)--><!--Device-AtomicBoolean-constructor(val: boolean)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | boolean | 是 | 初始值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | boolean | 是 |
 
 ## exchange
 
@@ -80,25 +74,23 @@ exchange(val: boolean): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicBoolean-exchange(val: boolean): boolean--><!--Device-AtomicBoolean-exchange(val: boolean): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | boolean | 是 | 要写入的新值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 更新前的旧值。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isLockFree
 
@@ -110,19 +102,17 @@ static isLockFree(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicBoolean-static isLockFree(): boolean--><!--Device-AtomicBoolean-static isLockFree(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true表示无锁实现，false表示内部可能使用阻塞式同步机制。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## load
 
@@ -134,19 +124,17 @@ load(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicBoolean-load(): boolean--><!--Device-AtomicBoolean-load(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 当前保存的值。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## store
 
@@ -158,17 +146,14 @@ store(val: boolean): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicBoolean-store(val: boolean): void--><!--Device-AtomicBoolean-store(val: boolean): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | boolean | 是 | 要写入的新值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | boolean | 是 |

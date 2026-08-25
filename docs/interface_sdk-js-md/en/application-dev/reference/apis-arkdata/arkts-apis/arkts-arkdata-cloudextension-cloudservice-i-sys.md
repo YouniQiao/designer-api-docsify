@@ -2,9 +2,9 @@
 
 Provides APIs for interacting with the cloud sync service. You need to inherit this class and implement APIs of this class. The system calls these APIs to connect to the cloud and use the cloud sync service.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-cloudExtension-export interface CloudService--><!--Device-cloudExtension-export interface CloudService-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -24,9 +24,9 @@ connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteOb
 
 Connects to an asset loader by obtaining a RemoteObject instance of AssetLoader, which is created by using createAssetLoaderStub. This API uses a promise to return the result. You can use this API to connect to the asset loader.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CloudService-connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteObject>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -34,16 +34,16 @@ Connects to an asset loader by obtaining a RemoteObject instance of AssetLoader,
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application. |
-| database | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | Yes | Database to connect. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bundleName | string | Yes |
+| database | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of AssetLoader. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;rpc.RemoteObject & gt; |
 
 ## connectDB
 
@@ -53,9 +53,9 @@ connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 
 Connects to a cloud database by obtaining a RemoteObject instance of CloudDB, which is created by using createCloudDBStub. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CloudService-connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -63,28 +63,34 @@ Connects to a cloud database by obtaining a RemoteObject instance of CloudDB, wh
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application. |
-| database | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | Yes | Database to connect. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bundleName | string | Yes |
+| database | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of CloudDB. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;rpc.RemoteObject & gt; |
 
 ## connectShareCenter
 
+ArkTS-Dyn:
+```TypeScript
+connectShareCenter(userId: number, bundleName: string): Promise<rpc.RemoteObject>
+```
+
+ArkTS-Sta:
 ```TypeScript
 connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject>
 ```
 
 Connects to ShareCenter by obtaining a RemoteObject instance of ShareCenter, which is created by using createShareServiceStub. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CloudService-connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -92,16 +98,16 @@ Connects to ShareCenter by obtaining a RemoteObject instance of ShareCenter, whi
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| userId | int | Yes | User ID. |
-| bundleName | string | Yes | Bundle name of the application. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| bundleName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of ShareCenter. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;rpc.RemoteObject & gt; |
 
 **Examples**
 
@@ -130,9 +136,9 @@ getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>
 
 Obtains brief application information. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CloudService-getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>--><!--Device-CloudService-getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -140,9 +146,9 @@ Obtains brief application information. This API uses a promise to return the res
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Record&lt;string, [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)&gt;&gt; | Promise used to return bundleName and AppBriefInfo, in KV pairs. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;Record&lt;string, [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)&gt;&gt; |
 
 **Examples**
 
@@ -174,9 +180,9 @@ getAppSchema(bundleName: string): Promise<Result<AppSchema>>
 
 Obtains the application database schema information. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CloudService-getAppSchema(bundleName: string): Promise<Result<AppSchema>>--><!--Device-CloudService-getAppSchema(bundleName: string): Promise<Result<AppSchema>>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -184,15 +190,15 @@ Obtains the application database schema information. This API uses a promise to 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bundleName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Result&lt;[AppSchema](arkts-arkdata-cloudextension-appschema-i-sys.md)&gt;&gt; | Promise used to return the schema information obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;Result&lt;[AppSchema](arkts-arkdata-cloudextension-appschema-i-sys.md)&gt;&gt; |
 
 **Examples**
 
@@ -225,9 +231,9 @@ getServiceInfo(): Promise<ServiceInfo>
 
 Obtains the server information. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CloudService-getServiceInfo(): Promise<ServiceInfo>--><!--Device-CloudService-getServiceInfo(): Promise<ServiceInfo>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -235,9 +241,9 @@ Obtains the server information. This API uses a promise to return the result.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[ServiceInfo](arkts-arkdata-cloudextension-serviceinfo-i-sys.md)&gt; | Promise used to return the server information obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[ServiceInfo](arkts-arkdata-cloudextension-serviceinfo-i-sys.md)&gt; |
 
 **Examples**
 
@@ -266,6 +272,15 @@ class MyCloudService implements cloudExtension.CloudService {
 
 ## subscribe
 
+ArkTS-Dyn:
+```TypeScript
+subscribe(
+      subInfo: Record<string, Array<Database>>,
+      expirationTime: number
+    ): Promise<Result<SubscribeInfo>>
+```
+
+ArkTS-Sta:
 ```TypeScript
 subscribe(
       subInfo: Record<string, Array<Database>>,
@@ -275,9 +290,9 @@ subscribe(
 
 Subscribes to data. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CloudService-subscribe(      subInfo: Record<string, Array<Database>>,      expirationTime: long    ): Promise<Result<SubscribeInfo>>--><!--Device-CloudService-subscribe(      subInfo: Record<string, Array<Database>>,      expirationTime: long    ): Promise<Result<SubscribeInfo>>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -285,16 +300,16 @@ Subscribes to data. This API uses a promise to return the result.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| subInfo | Record&lt;string, Array&lt;[Database](arkts-arkdata-cloudextension-database-i-sys.md)&gt;&gt; | Yes | Data to be subscribed to, in KV pairs of the application bundle name and database information. |
-| expirationTime | long | Yes | Subscription expiration time, in ms. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| subInfo | Record&lt;string, Array&lt;[Database](arkts-arkdata-cloudextension-database-i-sys.md)&gt;&gt; | Yes |
+| expirationTime | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Result&lt;SubscribeInfo&gt;&gt; | Promise used to return the result, including the subscription expiration time and subscription information. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Result & lt;SubscribeInfo & gt; & gt; |
 
 **Examples**
 
@@ -322,15 +337,21 @@ class MyCloudService implements cloudExtension.CloudService {
 
 ## unsubscribe
 
+ArkTS-Dyn:
+```TypeScript
+unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>
 ```
 
 Unsubscribes from data changes in the cloud. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CloudService-unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>--><!--Device-CloudService-unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -338,13 +359,12 @@ Unsubscribes from data changes in the cloud. This API uses a promise to return t
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| unsubscribeInfo | Record&lt;string, Array&lt;string&gt;&gt; | Yes | Data to be unsubscribed from, in an array of KV pairs consisting of the application bundle name and database information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| unsubscribeInfo | Record & lt;string, Array & lt;string & gt; & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;int&gt; | Promise used to return the result. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |

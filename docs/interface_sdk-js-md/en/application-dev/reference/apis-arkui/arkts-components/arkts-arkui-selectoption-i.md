@@ -4,7 +4,7 @@ Provides information about the drop-down menu options.
 
 **Since:** 8
 
-<!--Device-unnamed-declare interface SelectOption--><!--Device-unnamed-declare interface SelectOption-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,9 +25,9 @@ Icon of the drop-down menu option.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-SelectOption-icon?: ResourceStr--><!--Device-SelectOption-icon?: ResourceStr-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,11 +44,11 @@ Symbol icon of drop-down menu option.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SelectOption-symbolIcon?: SymbolGlyphModifier--><!--Device-SelectOption-symbolIcon?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,9 +64,8 @@ Value of the drop-down menu option.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-SelectOption-value: ResourceStr--><!--Device-SelectOption-value: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

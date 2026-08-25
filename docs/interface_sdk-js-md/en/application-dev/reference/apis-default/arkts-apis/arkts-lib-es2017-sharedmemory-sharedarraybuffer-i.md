@@ -1,8 +1,6 @@
 # SharedArrayBuffer
 
-**Since:** -1
-
-<!--Device-unnamed-interface SharedArrayBuffer--><!--Device-unnamed-interface SharedArrayBuffer-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,21 +15,19 @@ slice(begin: number, end?: number): SharedArrayBuffer
 
 Returns a section of an SharedArrayBuffer.
 
-**Since:** -1
-
-<!--Device-SharedArrayBuffer-slice(begin: number, end?: number): SharedArrayBuffer--><!--Device-SharedArrayBuffer-slice(begin: number, end?: number): SharedArrayBuffer-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| begin | number | Yes |  |
-| end | number | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| begin | number | Yes |
+| end | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## [Symbol.species]
 
 ```TypeScript
@@ -40,9 +36,7 @@ readonly [Symbol.species]: SharedArrayBuffer
 
 **Type:** SharedArrayBuffer
 
-**Since:** -1
-
-<!--Device-SharedArrayBuffer-readonly [Symbol.species]: SharedArrayBuffer--><!--Device-SharedArrayBuffer-readonly [Symbol.species]: SharedArrayBuffer-End-->
+**ArkTS mode:** 
 
 ## [Symbol.toStringTag]
 
@@ -52,9 +46,7 @@ readonly [Symbol.toStringTag]: "SharedArrayBuffer"
 
 **Type:** "SharedArrayBuffer"
 
-**Since:** -1
-
-<!--Device-SharedArrayBuffer-readonly [Symbol.toStringTag]: "SharedArrayBuffer"--><!--Device-SharedArrayBuffer-readonly [Symbol.toStringTag]: "SharedArrayBuffer"-End-->
+**ArkTS mode:** 
 
 ## byteLength
 
@@ -66,7 +58,4 @@ Read-only. The length of the ArrayBuffer (in bytes).
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-SharedArrayBuffer-readonly byteLength: number--><!--Device-SharedArrayBuffer-readonly byteLength: number-End-->
-
+**ArkTS mode:** 

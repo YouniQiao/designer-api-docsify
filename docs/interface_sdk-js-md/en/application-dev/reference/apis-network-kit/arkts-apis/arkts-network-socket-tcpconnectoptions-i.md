@@ -4,7 +4,7 @@ Defines TCP socket connection parameters.
 
 **Since:** 7
 
-<!--Device-socket-export interface TCPConnectOptions--><!--Device-socket-export interface TCPConnectOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -26,7 +26,7 @@ Bound IP address and port number.
 
 **Since:** 7
 
-<!--Device-TCPConnectOptions-address: NetAddress--><!--Device-TCPConnectOptions-address: NetAddress-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -42,23 +42,22 @@ Proxy option. By default, no proxy is used.
 
 **Since:** 18
 
-<!--Device-TCPConnectOptions-proxy?: ProxyOptions--><!--Device-TCPConnectOptions-proxy?: ProxyOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## timeout
 
 ```TypeScript
-timeout?: int
+timeout?: number
 ```
 
 Timeout duration of the TCP socket connection, in ms. The default value is **5000**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 7
 
-<!--Device-TCPConnectOptions-timeout?: int--><!--Device-TCPConnectOptions-timeout?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
-

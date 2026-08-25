@@ -4,9 +4,9 @@
 
 **起始版本：** 3
 
-**废弃版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-unnamed-export interface FileResponse--><!--Device-unnamed-export interface FileResponse-End-->
+**废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -27,9 +27,9 @@ lastModifiedTime: number
 
 **起始版本：** 3
 
-**废弃版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-FileResponse-lastModifiedTime: number--><!--Device-FileResponse-lastModifiedTime: number-End-->
+**废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -45,9 +45,9 @@ length: number
 
 **起始版本：** 3
 
-**废弃版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-FileResponse-length: number--><!--Device-FileResponse-length: number-End-->
+**废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -63,9 +63,9 @@ subFiles?: Array<FileResponse>
 
 **起始版本：** 3
 
-**废弃版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-FileResponse-subFiles?: Array<FileResponse>--><!--Device-FileResponse-subFiles?: Array<FileResponse>-End-->
+**废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -81,9 +81,9 @@ type: 'dir' | 'file'
 
 **起始版本：** 3
 
-**废弃版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-FileResponse-type: 'dir' | 'file'--><!--Device-FileResponse-type: 'dir' | 'file'-End-->
+**废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -99,9 +99,8 @@ uri: string
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 10
 
-<!--Device-FileResponse-uri: string--><!--Device-FileResponse-uri: string-End-->
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
-

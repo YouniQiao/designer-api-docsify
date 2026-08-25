@@ -2,9 +2,9 @@
 
 Enumerates the flashlight modes.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-camera-enum TorchMode--><!--Device-camera-enum TorchMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -16,11 +16,11 @@ OFF = 0
 
 The flashlight is off.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-TorchMode-OFF = 0--><!--Device-TorchMode-OFF = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -32,11 +32,11 @@ ON = 1
 
 The flashlight is on.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-TorchMode-ON = 1--><!--Device-TorchMode-ON = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -48,11 +48,10 @@ AUTO = 2
 
 The system automatically adjusts the flashlight brightness according to the environment.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-TorchMode-AUTO = 2--><!--Device-TorchMode-AUTO = 2-End-->
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
-

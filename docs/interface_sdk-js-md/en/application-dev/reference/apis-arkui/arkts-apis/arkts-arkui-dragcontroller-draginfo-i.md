@@ -1,12 +1,10 @@
 # DragInfo
 
-DragInfo object description@interface DragInfo
+Defines the attributes required for initiating a drag action and information carried in the dragging process.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-dragController-interface DragInfo--><!--Device-dragController-interface DragInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,17 +20,17 @@ import { dragController } from '@kit.ArkUI';
 autoHideComponentUniqueIds?: int | int[]
 ```
 
-Components to be automatically hidden during drag by uniqueId. You can pass a single uniqueId or an array. If the drag source itself also needs to be hidden, pass its uniqueId as well.
+Unique ID of the component that is automatically hidden by the system during proactive dragging. A single unique ID or an array of unique IDs can be passed.After the proactive dragging is successfully initiated, the system automatically hides the target component before displaying the drag preview window.If the proactive dragging source also needs to be hidden, its unique ID must be passed as well.The unique ID of a component can be obtained by using [UIContext.getFrameNodeById()](arkts-arkui-arkui-uicontext-uicontext-c.md#getframenodebyid) together with [FrameNode.getUniqueId()](arkts-arkui-framenode-c.md#getuniqueid).You need to restore the component display status as required in the drag end callback.
 
-**Type:** int \| int[]
+**Type:** number \| number[]
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragInfo-autoHideComponentUniqueIds?: int | int[]--><!--Device-DragInfo-autoHideComponentUniqueIds?: int | int[]-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,17 +40,17 @@ Components to be automatically hidden during drag by uniqueId. You can pass a si
 data?: unifiedDataChannel.UnifiedData
 ```
 
-Drag data.
+Data carried in the dragging process.The default value is null.
 
 **Type:** unifiedDataChannel.UnifiedData
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragInfo-data?: unifiedDataChannel.UnifiedData--><!--Device-DragInfo-data?: unifiedDataChannel.UnifiedData-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,17 +60,17 @@ Drag data.
 dataLoadParams?: unifiedDataChannel.DataLoadParams
 ```
 
-Provide a data representation to the system instead of providing a complete data object directly. When the user releases the drag over the target application, the system will use this data representation to request the actual data from drag source. This approach significantly improves the efficiency of initiating drag operations for large volumes of data and enhances the effectiveness of data reception. It is recommended to use this instead of the data field.
+Parameters for deferred data loading from the drag source. This API provides data loading parameters to the system instead of directly providing complete data objects. When the user drops data on the target application, the system will use these parameters to request the actual data from the drag source. If set together with **data**, **dataLoadParams** takes effect.The default value is null.
 
 **Type:** unifiedDataChannel.DataLoadParams
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragInfo-dataLoadParams?: unifiedDataChannel.DataLoadParams--><!--Device-DragInfo-dataLoadParams?: unifiedDataChannel.DataLoadParams-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,37 +80,37 @@ Provide a data representation to the system instead of providing a complete data
 extraParams?: string
 ```
 
-Additional information about the drag info.
+Additional information about the drag action. Not supported currently.The default value is null.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragInfo-extraParams?: string--><!--Device-DragInfo-extraParams?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## pointerId
 
 ```TypeScript
-pointerId: int
+pointerId: number
 ```
 
-A unique identifier to identify which touch point.
+ID of the touch point on the screen when dragging is started. The value is an integer in the [0, 9] range.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragInfo-pointerId: int--><!--Device-DragInfo-pointerId: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -122,17 +120,17 @@ A unique identifier to identify which touch point.
 previewOptions?: DragPreviewOptions
 ```
 
-Drag preview options.
+Processing mode of the drag preview and the display of the number badge during dragging.
 
 **Type:** DragPreviewOptions
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragInfo-previewOptions?: DragPreviewOptions--><!--Device-DragInfo-previewOptions?: DragPreviewOptions-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -142,17 +140,16 @@ Drag preview options.
 touchPoint?: TouchPoint
 ```
 
-Touch point coordinates.
+Coordinates of the touch point. If this parameter is not set, the touch point is centered horizontally and shifted downward by 20% from the top.
 
 **Type:** TouchPoint
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragInfo-touchPoint?: TouchPoint--><!--Device-DragInfo-touchPoint?: TouchPoint-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

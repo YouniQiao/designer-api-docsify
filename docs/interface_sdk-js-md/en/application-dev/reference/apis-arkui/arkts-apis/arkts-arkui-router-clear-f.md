@@ -17,18 +17,18 @@ Clears all historical pages in the stack and retains only the current page at th
 > **NOTE：**&gt;
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated
+> [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated
 > with the current UI context.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 18
 
-**Substitutes:** [clear](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#clear)
+**Substitutes:** [clear](arkts-arkui-arkui-uicontext-router-c.md#clear)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-router-function clear(): void--><!--Device-router-function clear(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -37,4 +37,3 @@ Clears all historical pages in the stack and retains only the current page at th
 ```TypeScript
 this.getUIContext().getRouter().clear();
 ```
-

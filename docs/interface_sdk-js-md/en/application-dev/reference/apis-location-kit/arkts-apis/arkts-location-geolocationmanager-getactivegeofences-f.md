@@ -16,24 +16,24 @@ Get all active fences.
 
 **Since:** 23
 
-**Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-geoLocationManager-function getActiveGeoFences(): Promise<Map<int, Geofence>>--><!--Device-geoLocationManager-function getActiveGeoFences(): Promise<Map<int, Geofence>>-End-->
+**Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Map&lt;int, Geofence&gt;&gt; | The promise returned by the function. The key of the map represents the fence ID. The value of the map represents the detailed information of the fence. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Promise & lt;Map & lt;number, Geofence & gt; & gt;<br>ArkTS-Sta：Promise & lt;Map & lt;int, Geofence & gt; & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call \\${geoLocationManager.getActiveGeoFences} due to limited device capabilities. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -56,4 +56,3 @@ try {
   console.error("getActiveGeoFences: errCode" + error.code + ", errMessage" + error.message);
 }
 ```
-

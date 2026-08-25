@@ -4,7 +4,7 @@ Declaration of the menu item on the right side.
 
 **Since:** 10
 
-<!--Device-unnamed-export declare class EditableTitleBarMenuItem--><!--Device-unnamed-export declare class EditableTitleBarMenuItem-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -13,6 +13,24 @@ Declaration of the menu item on the right side.
 ```TypeScript
 import { EditableLeftIconType, EditableTitleBar, EditableTitleBarMenuItem, EditableTitleBarItem, EditableTitleBarOptions } from '@kit.ArkUI';
 ```
+
+## action
+
+```TypeScript
+action?: () => void
+```
+
+Right-side custom button click event of the title bar.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityDescription
 
@@ -26,11 +44,11 @@ Accessible description. You can provide comprehensive text explanations to help 
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-EditableTitleBarMenuItem-accessibilityDescription?: ResourceStr--><!--Device-EditableTitleBarMenuItem-accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,11 +70,11 @@ Accessibility level. It determines whether the component can be recognized by ac
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-EditableTitleBarMenuItem-accessibilityLevel?: string--><!--Device-EditableTitleBarMenuItem-accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,31 +90,11 @@ Accessibility text, that is, accessible label name. If a component does not cont
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-EditableTitleBarMenuItem-accessibilityText?: ResourceStr--><!--Device-EditableTitleBarMenuItem-accessibilityText?: ResourceStr-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## action
-
-```TypeScript
-action?: () => void
-```
-
-Right-side custom button click event of the title bar.
-
-**Type:** () =&gt; void
-
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EditableTitleBarMenuItem-action?: () => void--><!--Device-EditableTitleBarMenuItem-action?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,11 +114,11 @@ Whether to set the item as the default focus.
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-EditableTitleBarMenuItem-defaultFocus?: boolean--><!--Device-EditableTitleBarMenuItem-defaultFocus?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,11 +136,11 @@ Whether to enable the item. Default value: **true**.
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EditableTitleBarMenuItem-isEnabled?: boolean--><!--Device-EditableTitleBarMenuItem-isEnabled?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -158,11 +156,11 @@ Icon label.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-EditableTitleBarMenuItem-label?: ResourceStr--><!--Device-EditableTitleBarMenuItem-label?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -178,11 +176,11 @@ Symbol icon resource, which has higher priority than **value**.
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-EditableTitleBarMenuItem-symbolStyle?: SymbolGlyphModifier--><!--Device-EditableTitleBarMenuItem-symbolStyle?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -198,11 +196,10 @@ Icon resource.
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-EditableTitleBarMenuItem-value: ResourceStr--><!--Device-EditableTitleBarMenuItem-value: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

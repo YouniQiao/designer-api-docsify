@@ -10,25 +10,24 @@ import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog,
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md) | Declare ButtonOptions |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md) |
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [AlertDialog](arkts-arkui-arkui-advanced-dialog-alertdialog-s.md) | Declare CustomDialog AlertDialog |
-| [ConfirmDialog](arkts-arkui-arkui-advanced-dialog-confirmdialog-s.md) | Declare CustomDialog ConfirmDialog |
-| [CustomContentDialog](arkts-arkui-arkui-advanced-dialog-customcontentdialog-s.md) | Declare custom content dialog |
-| [LoadingDialog](arkts-arkui-arkui-advanced-dialog-loadingdialog-s.md) | Declare CustomDialog LoadingDialog |
-| [PopoverDialog](arkts-arkui-arkui-advanced-dialog-popoverdialog-s.md) | Declare struct PopoverDialog |
-| [SelectDialog](arkts-arkui-arkui-advanced-dialog-selectdialog-s.md) | Declare CustomDialog SelectDialog |
-| [TipsDialog](arkts-arkui-arkui-advanced-dialog-tipsdialog-s.md) | Declare CustomDialog TipsDialog |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AlertDialog](arkts-arkui-arkui-advanced-dialog-alertdialog-s.md) |
+| [ConfirmDialog](arkts-arkui-arkui-advanced-dialog-confirmdialog-s.md) |
+| [CustomContentDialog](arkts-arkui-arkui-advanced-dialog-customcontentdialog-s.md) |
+| [LoadingDialog](arkts-arkui-arkui-advanced-dialog-loadingdialog-s.md) |
+| [PopoverDialog](arkts-arkui-arkui-advanced-dialog-popoverdialog-s.md) |
+| [SelectDialog](arkts-arkui-arkui-advanced-dialog-selectdialog-s.md) |
+| [TipsDialog](arkts-arkui-arkui-advanced-dialog-tipsdialog-s.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [PopoverOptions](arkts-arkui-arkui-advanced-dialog-popoveroptions-i.md) | Defines PopoverDialog Options |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PopoverOptions](arkts-arkui-arkui-advanced-dialog-popoveroptions-i.md) |

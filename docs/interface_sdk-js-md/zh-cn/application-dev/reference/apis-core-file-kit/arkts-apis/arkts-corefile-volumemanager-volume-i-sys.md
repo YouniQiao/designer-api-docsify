@@ -2,9 +2,9 @@
 
 获取所有卷。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-volumeManager-export interface Volume--><!--Device-volumeManager-export interface Volume-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
@@ -26,9 +26,9 @@ description: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Volume-description: string--><!--Device-Volume-description: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
@@ -44,9 +44,9 @@ diskId: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Volume-diskId: string--><!--Device-Volume-diskId: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
@@ -63,9 +63,9 @@ fsType: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Volume-fsType: string--><!--Device-Volume-fsType: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
@@ -81,9 +81,9 @@ id: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Volume-id: string--><!--Device-Volume-id: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
@@ -99,9 +99,9 @@ path: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Volume-path: string--><!--Device-Volume-path: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
@@ -117,9 +117,9 @@ removable: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Volume-removable: boolean--><!--Device-Volume-removable: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
@@ -133,11 +133,11 @@ state: int
 
 卷设备状态标识：0：卸载状态 UNMOUNTED。1：检查状态 CHECKING。2：挂载状态 MOUNTED。3：正在弹出状态 EJECTING。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Volume-state: int--><!--Device-Volume-state: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
@@ -153,11 +153,10 @@ uuid: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Volume-uuid: string--><!--Device-Volume-uuid: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
 **系统接口：** 此接口为系统接口。
-

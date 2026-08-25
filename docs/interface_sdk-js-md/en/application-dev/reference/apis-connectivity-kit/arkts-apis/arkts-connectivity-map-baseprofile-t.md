@@ -8,9 +8,8 @@ Base interface of profile.
 
 **Since:** 11
 
-<!--Device-map-type BaseProfile = baseProfile.BaseProfile--><!--Device-map-type BaseProfile = baseProfile.BaseProfile-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Property type:** baseProfile.BaseProfile
-

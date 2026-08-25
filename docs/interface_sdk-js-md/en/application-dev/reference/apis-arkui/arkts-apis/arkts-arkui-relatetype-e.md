@@ -4,7 +4,7 @@ RelateType enumeration description
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum RelateType--><!--Device-unnamed-declare enum RelateType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ Scales the current component to fill the parent component.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-RelateType-FILL--><!--Device-RelateType-FILL-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,8 @@ Scales the current component to fit the parent component.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-RelateType-FIT--><!--Device-RelateType-FIT-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

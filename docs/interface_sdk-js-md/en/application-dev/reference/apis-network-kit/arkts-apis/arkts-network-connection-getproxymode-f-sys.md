@@ -16,9 +16,9 @@ Obtains the current proxy mode. This API uses a promise to return the result.
 
 **Since:** 20
 
-**Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-connection-function getProxyMode(): Promise<ProxyMode>--><!--Device-connection-function getProxyMode(): Promise<ProxyMode>-End-->
+**Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -26,16 +26,16 @@ Obtains the current proxy mode. This API uses a promise to return the result.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[ProxyMode](arkts-network-connection-proxymode-e-sys.md)&gt; | Promise used to return the current proxy mode. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[ProxyMode](arkts-network-connection-proxymode-e-sys.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -49,4 +49,3 @@ connection.getProxyMode().then(mode => {
     console.error("Error getting proxy mode:", error);
 });
 ```
-

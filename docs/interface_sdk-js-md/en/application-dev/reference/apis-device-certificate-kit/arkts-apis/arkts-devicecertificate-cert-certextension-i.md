@@ -2,9 +2,9 @@
 
 Provides APIs for operating on certificate extensions.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-cert-interface CertExtension--><!--Device-cert-interface CertExtension-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -16,33 +16,39 @@ import { cert } from '@kit.DeviceCertificateKit';
 
 ## checkCA
 
+ArkTS-Dyn:
+```TypeScript
+checkCA(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 checkCA(): int
 ```
 
 Checks whether the certificate is a CA certificate.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CertExtension-checkCA(): int--><!--Device-CertExtension-checkCA(): int-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | If the key usage extension contains the keyCertSign bit and the CA field in the basic constraints is **true**, the certificate is a CA certificate. Returns **-1** if the certificate is not a CA certificate; returns the path length in the basic constraints otherwise. Returns **-2** if the certificate is a CA certificate but the path length is not specified in the basic constraints, which means the path length is not limited. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| Error Code ID |
+| --- |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 **Examples**
 
@@ -91,27 +97,27 @@ getEncoded(): EncodingBlob
 
 Obtains the serialized data of the certificate extensions.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CertExtension-getEncoded(): EncodingBlob--><!--Device-CertExtension-getEncoded(): EncodingBlob-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | Serialized data obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| Error Code ID |
+| --- |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 **Examples**
 
@@ -644,35 +650,35 @@ getEntry(valueType: ExtensionEntryType, oid: DataBlob): DataBlob
 
 Obtains the value of a specific certificate extension entry by OID.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CertExtension-getEntry(valueType: ExtensionEntryType, oid: DataBlob): DataBlob--><!--Device-CertExtension-getEntry(valueType: ExtensionEntryType, oid: DataBlob): DataBlob-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| valueType | [ExtensionEntryType](arkts-devicecertificate-cert-extensionentrytype-e.md) | Yes | Type of the information to obtain. |
-| oid | DataBlob | Yes | OID of the certificate extension to obtain. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [valueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-scanneroptionvalue-i.md) | [ExtensionEntryType](arkts-devicecertificate-cert-extensionentrytype-e.md) | Yes |
+| oid | [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| DataBlob | Certificate extension object information obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 **Examples**
 
@@ -726,34 +732,34 @@ getOidList(valueType: ExtensionOidType): DataArray
 
 Obtains the OIDs of the certificate extensions.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CertExtension-getOidList(valueType: ExtensionOidType): DataArray--><!--Device-CertExtension-getOidList(valueType: ExtensionOidType): DataArray-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| valueType | [ExtensionOidType](arkts-devicecertificate-cert-extensionoidtype-e.md) | Yes | Type of the OIDs to obtain. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [valueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-scanneroptionvalue-i.md) | [ExtensionOidType](arkts-devicecertificate-cert-extensionoidtype-e.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [DataArray](arkts-devicecertificate-cert-dataarray-i.md) | OIDs obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataArray](arkts-devicecertificate-cert-dataarray-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 **Examples**
 
@@ -803,27 +809,27 @@ hasUnsupportedCriticalExtension(): boolean
 
 Checks whether there is a critical extension that is not supported.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CertExtension-hasUnsupportedCriticalExtension(): boolean--><!--Device-CertExtension-hasUnsupportedCriticalExtension(): boolean-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if an unsupported critical extension is found; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| Error Code ID |
+| --- |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 **Examples**
 
@@ -855,4 +861,3 @@ cert.createCertExtension(encodingBlob).then((extensionObj) => {
   console.error(`createCertExtension failed, errCode: ${err.code}, errMsg: ${err.message}`);
 });
 ```
-

@@ -4,7 +4,7 @@ Enumerates the Base64 encoding formats.
 
 **Since:** 10
 
-<!--Device-util-enum Type--><!--Device-util-enum Type-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -18,9 +18,9 @@ Basic format. This API can be used in atomic services since API version 11.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-Type-BASIC = 0--><!--Device-Type-BASIC = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -34,9 +34,9 @@ MIME format. This API can be used in atomic services since API version 11.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-Type-MIME = 1--><!--Device-Type-MIME = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -50,9 +50,9 @@ BASIC_URL_SAFE format.This value is supported since API version 12. This API can
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Type-BASIC_URL_SAFE = 2--><!--Device-Type-BASIC_URL_SAFE = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -66,9 +66,8 @@ MIME_URL_SAFE format.This value is supported since API version 12. This API can 
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-Type-MIME_URL_SAFE = 3--><!--Device-Type-MIME_URL_SAFE = 3-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

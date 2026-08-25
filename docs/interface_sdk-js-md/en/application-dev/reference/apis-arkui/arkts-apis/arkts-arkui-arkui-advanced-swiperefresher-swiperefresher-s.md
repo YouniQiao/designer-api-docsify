@@ -4,9 +4,7 @@ Declare component SwipeRefresher
 
 **Since:** 20
 
-**Decorator:** @Component
-
-<!--Device-unnamed-export declare struct SwipeRefresher--><!--Device-unnamed-export declare struct SwipeRefresher-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,7 +14,27 @@ Declare component SwipeRefresher
 import { SwipeRefresher } from '@kit.ArkUI';
 ```
 
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## content
+
+```TypeScript
+content?: ResourceStr
+```
 
 Sets the content when loading.
 
@@ -24,17 +42,19 @@ Sets the content when loading.
 
 **Since:** 20
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-SwipeRefresher-@Prop content?: ResourceStr--><!--Device-SwipeRefresher-@Prop content?: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isLoading
+
+```TypeScript
+isLoading: boolean
+```
 
 Whether the component is loading. type { boolean }
 
@@ -42,13 +62,10 @@ Whether the component is loading. type { boolean }
 
 **Since:** 20
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-SwipeRefresher-@Prop isLoading: boolean--><!--Device-SwipeRefresher-@Prop isLoading: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

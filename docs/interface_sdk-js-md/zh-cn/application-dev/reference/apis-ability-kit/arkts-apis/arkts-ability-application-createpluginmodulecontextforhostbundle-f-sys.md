@@ -15,13 +15,13 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
 
 根据入参Context、插件包名、插件模块名和安装插件的应用包名，创建对应插件的Context，用于获取插件的基本信息。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-application-export function createPluginModuleContextForHostBundle(context: Context, pluginBundleName: string, pluginModuleName: string,    hostBundleName: string): Promise<Context>--><!--Device-application-export function createPluginModuleContextForHostBundle(context: Context, pluginBundleName: string, pluginModuleName: string,    hostBundleName: string): Promise<Context>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,25 +29,25 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | 是 | 表示应用上下文。 |
-| pluginBundleName | string | 是 | 表示应用的插件包名。 |
-| pluginModuleName | string | 是 | 表示应用的插件模块名。 |
-| hostBundleName | string | 是 | 表示安装插件的应用包名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [Context](arkts-ability-context-c.md) | 是 |
+| [pluginBundleName](arkts-ability-pluginbundleinfo-i.md) | string | 是 |
+| pluginModuleName | string | 是 |
+| [hostBundleName](../../apis-form-kit/arkts-apis/arkts-form-forminfo-runningforminfo-i-sys.md) | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Context](arkts-ability-context-c.md)&gt; | Promise对象。返回创建的Context，返回的Context中的属性processName和config与入参Context中的属性processName和config的值相 同。 |
+| 类型 |
+| --- |
+| Promise&lt;[Context](arkts-ability-context-c.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -76,4 +76,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

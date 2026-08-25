@@ -4,9 +4,7 @@ NumberFormat class for locale-sensitive number formatting.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-Intl-export class NumberFormat--><!--Device-Intl-export class NumberFormat-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,20 +23,18 @@ Creates a new NumberFormat.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NumberFormat-public constructor(locales?: Intl.BCP47LanguageTag | Intl.BCP47LanguageTag[], options?: NumberFormatOptions)--><!--Device-NumberFormat-public constructor(locales?: Intl.BCP47LanguageTag | Intl.BCP47LanguageTag[], options?: NumberFormatOptions)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | [Intl.BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md) \| [Intl.BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md)[] | No | the locales. |
-| options | NumberFormatOptions | No | the options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | [Intl.BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md) \| [Intl.BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md)[] | No |
+| options | [NumberFormatOptions](../../apis-telephony-kit/arkts-apis/arkts-telephony-call-numberformatoptions-i.md) | No |
 
 ## format
 
@@ -50,25 +46,23 @@ Formats a number.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NumberFormat-public format(value: long): string--><!--Device-NumberFormat-public format(value: long): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | long | Yes | the number to format. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | formatted string. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## format
 
@@ -80,25 +74,23 @@ Formats a number.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NumberFormat-public format(value: double): string--><!--Device-NumberFormat-public format(value: double): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | the number to format. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | formatted string. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## format
 
@@ -110,25 +102,23 @@ Formats a number.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NumberFormat-public format(value: double | bigint | long): string--><!--Device-NumberFormat-public format(value: double | bigint | long): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double \| bigint \| long | Yes | the number to format. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | double \| bigint \| long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | formatted string. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## formatRange
 
@@ -140,26 +130,24 @@ Formats a range of numbers.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NumberFormat-public formatRange(start: double | bigint, end: double | bigint): string--><!--Device-NumberFormat-public formatRange(start: double | bigint, end: double | bigint): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | double \| bigint | Yes | start of range. |
-| end | double \| bigint | Yes | end of range. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | double \| bigint | Yes |
+| end | double \| bigint | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | formatted range string. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## formatRangeToParts
 
@@ -171,26 +159,24 @@ Formats a range to parts.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NumberFormat-public formatRangeToParts(start: double | bigint, end: double | bigint): NumberRangeFormatPart[]--><!--Device-NumberFormat-public formatRangeToParts(start: double | bigint, end: double | bigint): NumberRangeFormatPart[]-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | double \| bigint | Yes | start of range. |
-| end | double \| bigint | Yes | end of range. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | double \| bigint | Yes |
+| end | double \| bigint | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [NumberRangeFormatPart](arkts-arkts-intl-numberrangeformatpart-c.md)[] | formatted range parts. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [NumberRangeFormatPart](arkts-arkts-intl-numberrangeformatpart-c.md)[] |
 
 ## formatToParts
 
@@ -202,25 +188,23 @@ Formats a number to parts.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NumberFormat-public formatToParts(value: double | bigint): NumberFormatPart[]--><!--Device-NumberFormat-public formatToParts(value: double | bigint): NumberFormatPart[]-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double \| bigint | Yes | the number to format. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | double \| bigint | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| NumberFormatPart[] | formatted parts. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [NumberFormatPart[]](arkts-arkts-intl-numberformatpart-c.md) |
 
 ## resolvedOptions
 
@@ -232,19 +216,17 @@ Returns resolved options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NumberFormat-public resolvedOptions(): ResolvedNumberFormatOptions--><!--Device-NumberFormat-public resolvedOptions(): ResolvedNumberFormatOptions-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ResolvedNumberFormatOptions | the resolved options. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [ResolvedNumberFormatOptions](arkts-arkts-intl-resolvednumberformatoptions-i.md) |
 
 ## supportedLocalesOf
 
@@ -256,24 +238,21 @@ Returns supported locales.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NumberFormat-public static supportedLocalesOf(locales: string | string[], options?: NumberFormatOptions): string[]--><!--Device-NumberFormat-public static supportedLocalesOf(locales: string | string[], options?: NumberFormatOptions): string[]-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | string \| string[] | Yes | the locales. |
-| options | NumberFormatOptions | No | the options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | string \| string[] | Yes |
+| options | [NumberFormatOptions](../../apis-telephony-kit/arkts-apis/arkts-telephony-call-numberformatoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string[] | supported locales. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string[] |

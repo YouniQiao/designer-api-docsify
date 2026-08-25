@@ -14,17 +14,17 @@ function getTimezoneSync(): string
 
 获取系统时区，使用同步方式。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-systemDateTime-function getTimezoneSync(): string--><!--Device-systemDateTime-function getTimezoneSync(): string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Time
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回系统时区。具体可见支持的系统时区。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -53,4 +53,3 @@ try {
   console.error(`Failed to get timezone. Code: ${error.code}, message: ${error.message}`);
 }
 ```
-

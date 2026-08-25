@@ -1,6 +1,6 @@
 # Int16Array
 
-一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-collections.md)实现。
+一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-arkts-collections-n.md)实现。
 
 > **说明：**&gt;
 > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
@@ -8,9 +8,7 @@
 
 **起始版本：** 12
 
-**装饰器类型：** @Sendable
-
-<!--Device-collections-class Int16Array--><!--Device-collections-class Int16Array-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -30,23 +28,23 @@ import { collections } from '@kit.ArkTS';
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-[Symbol.iterator](): IterableIterator<number>--><!--Device-Int16Array-[Symbol.iterator](): IterableIterator<number>-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 返回一个迭代器。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## at
 
@@ -58,30 +56,30 @@ at(index: number): number | undefined
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-at(index: number): number | undefined--><!--Device-Int16Array-at(index: number): number | undefined-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | number | 是 | 要返回的元素的索引（从零开始），取值为整数。 如果`index &lt; 0`，则会访问`index + Int16Array.length`位置的元素。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number \| undefined | 指定下标的元素；如果不存在，则返回**undefined**。 |
+| 类型 |
+| --- |
+| number \| undefined |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The at method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## constructor
 
@@ -93,17 +91,17 @@ constructor()
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-constructor()--><!--Device-Int16Array-constructor()-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Int16Array's constructor cannot be directly invoked. |
+| 错误码ID |
+| --- |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## constructor
 
@@ -115,23 +113,23 @@ constructor(length: number)
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-constructor(length: number)--><!--Device-Int16Array-constructor(length: number)-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| length | number | 是 | 用于指定ArkTS Int16Array的长度，取值需为非负整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [length](#length) | number | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Int16Array's constructor cannot be directly invoked. |
+| 错误码ID |
+| --- |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## constructor
 
@@ -143,23 +141,23 @@ constructor(elements: Iterable<number>)
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-constructor(elements: Iterable<number>)--><!--Device-Int16Array-constructor(elements: Iterable<number>)-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| elements | Iterable&lt;number&gt; | 是 | 可迭代数字集合，用于构造ArkTS Int16Array 对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [elements](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-pagemediaentity-i.md) | Iterable & lt;number & gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Int16Array's constructor cannot be directly invoked. |
+| 错误码ID |
+| --- |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## constructor
 
@@ -171,23 +169,23 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-constructor(array: ArrayLike<number> | ArrayBuffer)--><!--Device-Int16Array-constructor(array: ArrayLike<number> | ArrayBuffer)-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Int16Array的对象。当参数类型是ArrayBuffer时， buffer所占的字节数须是2的整数倍。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| array | ArrayLike & lt;number & gt; \ | ArrayBuffer | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Int16Array's constructor cannot be directly invoked. |
+| 错误码ID |
+| --- |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## constructor
 
@@ -199,25 +197,25 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)--><!--Device-Int16Array-constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于构造ArkTS Int16Array的ArrayBuffer对象。buffer所占的字节数须是 2的整数倍。 |
-| byteOffset | number | 否 | 指定buffer的字节偏移，从0开始，默认为**0**。 |
-| length | number | 否 | 指定ArkTS Int16Array的长度，默认为**0**。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [buffer](#buffer) | ArrayBuffer | 是 |
+| [byteOffset](#byteoffset) | number | 否 |
+| [length](#length) | number | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Int16Array's constructor cannot be directly invoked. |
+| 错误码ID |
+| --- |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## copyWithin
 
@@ -229,32 +227,32 @@ copyWithin(target: number, start: number, end?: number): Int16Array
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-copyWithin(target: number, start: number, end?: number): Int16Array--><!--Device-Int16Array-copyWithin(target: number, start: number, end?: number): Int16Array-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| target | number | 是 | 目标起始位置的下标，如果`target &lt; 0`，则会从`target + array.length`位置开始。 |
-| start | number | 是 | 源起始位置索引，如果`start &lt; 0`，则会从`start + Int16Array.length`位置开始。 |
-| end | number | 否 | 源终止位置下标（不包含end位置的元素），如果`end &lt; 0`，则会从`end + Int16Array.length`位置终止。 默认为ArkTS Int16Array的长度。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| target | number | 是 |
+| start | number | 是 |
+| end | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Int16Array | 修改后的Int16Array。 |
+| 类型 |
+| --- |
+| Int16Array |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The copyWithin method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## entries
 
@@ -266,24 +264,24 @@ entries(): IterableIterator<[number, number]>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-entries(): IterableIterator<[number, number]>--><!--Device-Int16Array-entries(): IterableIterator<[number, number]>-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt; | 新的迭代器对象。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## every
 
@@ -295,30 +293,30 @@ every(predicate: TypedArrayPredicateFn<number, Int16Array>): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-every(predicate: TypedArrayPredicateFn<number, Int16Array>): boolean--><!--Device-Int16Array-every(predicate: TypedArrayPredicateFn<number, Int16Array>): boolean-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Int16Array&gt; | 是 | 用于测试的断言函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Int16Array&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 检查结果。如果所有元素都满足指定条件则返回true； 否则，返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The every method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## fill
 
@@ -330,32 +328,32 @@ fill(value: number, start?: number, end?: number): Int16Array
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-fill(value: number, start?: number, end?: number): Int16Array--><!--Device-Int16Array-fill(value: number, start?: number, end?: number): Int16Array-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number | 是 | 待填充的值。 |
-| start | number | 否 | 开始填充的索引，如果`start &lt; 0`，则会从`start + Int16Array.length`位置开始。 默认值为**0**。 |
-| end | number | 否 | 结束填充的索引（不包括该元素），如果`end &lt; 0`，则会到`end + Int16Array.length`位置结束。 默认为ArkTS Int16Array的长度。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number | 是 |
+| start | number | 否 |
+| end | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Int16Array | 填充后的Int16Array。 |
+| 类型 |
+| --- |
+| Int16Array |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The fill method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## filter
 
@@ -367,30 +365,30 @@ filter(predicate: TypedArrayPredicateFn<number, Int16Array>): Int16Array
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-filter(predicate: TypedArrayPredicateFn<number, Int16Array>): Int16Array--><!--Device-Int16Array-filter(predicate: TypedArrayPredicateFn<number, Int16Array>): Int16Array-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Int16Array&gt; | 是 | 用于元素过滤的断言函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Int16Array&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Int16Array | 过滤后的ArkTS Int16Array对象。 |
+| 类型 |
+| --- |
+| Int16Array |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The filter method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## find
 
@@ -402,30 +400,30 @@ find(predicate: TypedArrayPredicateFn<number, Int16Array>): number | undefined
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-find(predicate: TypedArrayPredicateFn<number, Int16Array>): number | undefined--><!--Device-Int16Array-find(predicate: TypedArrayPredicateFn<number, Int16Array>): number | undefined-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Int16Array&gt; | 是 | 用于元素查找的断言函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Int16Array&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number \| undefined | 第一个满足条件的元素的值；如果所有元素都不满足条件，则返回**undefined**。 |
+| 类型 |
+| --- |
+| number \| undefined |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The find method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## findIndex
 
@@ -437,30 +435,30 @@ findIndex(predicate: TypedArrayPredicateFn<number, Int16Array>): number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-findIndex(predicate: TypedArrayPredicateFn<number, Int16Array>): number--><!--Device-Int16Array-findIndex(predicate: TypedArrayPredicateFn<number, Int16Array>): number-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Int16Array&gt; | 是 | 用于元素查找的断言函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Int16Array&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 第一个满足条件的元素索引；如果所有元素都不满足条件，则返回**-1**。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The findIndex method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## forEach
 
@@ -472,24 +470,24 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Int16Array>): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-forEach(callbackFn: TypedArrayForEachCallback<number, Int16Array>): void--><!--Device-Int16Array-forEach(callbackFn: TypedArrayForEachCallback<number, Int16Array>): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackFn | [TypedArrayForEachCallback](arkts-arkts-collections-typedarrayforeachcallback-t.md)&lt;number, Int16Array&gt; | 是 | 用于对每个元素执行的回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackFn | [TypedArrayForEachCallback](arkts-arkts-collections-typedarrayforeachcallback-t.md)&lt;number, Int16Array&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## from
 
@@ -501,23 +499,23 @@ static from(arrayLike: ArrayLike<number>): Int16Array
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-static from(arrayLike: ArrayLike<number>): Int16Array--><!--Device-Int16Array-static from(arrayLike: ArrayLike<number>): Int16Array-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;number&gt; | 是 | 用于构造ArkTS Int16Array的ArrayLike对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| arrayLike | ArrayLike & lt;number & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Int16Array | 新创建的ArkTS Int16Array对象。 |
+| 类型 |
+| --- |
+| Int16Array |
 
 ## from
 
@@ -529,24 +527,24 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): Int16Array--><!--Device-Int16Array-static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): Int16Array-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; | 是 | 用于构造ArkTS Int16Array的ArrayLike对象。 |
-| mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | 是 | 映射函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| arrayLike | ArrayLike & lt;T & gt; | 是 |
+| mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Int16Array | 新创建的ArkTS Int16Array对象。 |
+| 类型 |
+| --- |
+| Int16Array |
 
 ## from
 
@@ -558,24 +556,24 @@ static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, num
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Int16Array--><!--Device-Int16Array-static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Int16Array-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| arrayLike | Iterable&lt;number&gt; | 是 | 用于构造的可迭代对象。 |
-| mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;number, number&gt; | 否 | 映射函数。如果省略，则不对元素进行加工处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| arrayLike | Iterable & lt;number & gt; | 是 |
+| mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;number, number&gt; | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Int16Array | 新创建的ArkTS Int16Array对象。 |
+| 类型 |
+| --- |
+| Int16Array |
 
 ## includes
 
@@ -587,31 +585,31 @@ includes(searchElement: number, fromIndex?: number): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-includes(searchElement: number, fromIndex?: number): boolean--><!--Device-Int16Array-includes(searchElement: number, fromIndex?: number): boolean-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| searchElement | number | 是 | 待搜索的元素。 |
-| fromIndex | number | 否 | 开始搜索的索引，如果`fromIndex &lt; 0`，则会从`fromIndex + Int16Array.length`位置开始。 默认值为0。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| searchElement | number | 是 |
+| fromIndex | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 检查结果。如果ArkTS Int16Array包含指定的元素，则返回true；否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The includes method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## indexOf
 
@@ -623,31 +621,31 @@ indexOf(searchElement: number, fromIndex?: number): number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-indexOf(searchElement: number, fromIndex?: number): number--><!--Device-Int16Array-indexOf(searchElement: number, fromIndex?: number): number-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| searchElement | number | 是 | 待索引的值。 |
-| fromIndex | number | 否 | 搜索的起始下标。默认值为**0**。如果下标大于等于ArkTS Int16Array的长度， 则返回**-1**。如果提供的下标值是负数，则被当做距离数组尾部的偏移，从前到后搜索。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| searchElement | number | 是 |
+| fromIndex | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 元素的第一个索引；如果不存在，则返回**-1**。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The indexOf method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## join
 
@@ -659,30 +657,30 @@ join(separator?: string): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-join(separator?: string): string--><!--Device-Int16Array-join(separator?: string): string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| separator | string | 否 | 分隔字符串。如果省略，则使用逗号(,)作为分隔符。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| separator | string | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 包含所有元素拼接成的字符串。如果ArkTS Int16Array为空，则返回空字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The join method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## keys
 
@@ -694,24 +692,24 @@ keys(): IterableIterator<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-keys(): IterableIterator<number>--><!--Device-Int16Array-keys(): IterableIterator<number>-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 新的迭代器对象。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The keys method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## lastIndexOf
 
@@ -723,31 +721,31 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
-<!--Device-Int16Array-lastIndexOf(searchElement: number, fromIndex?: number): number--><!--Device-Int16Array-lastIndexOf(searchElement: number, fromIndex?: number): number-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| searchElement | number | 是 | 待索引的值。 |
-| fromIndex | number | 否 | 搜索的起始下标。默认值为ArkTS Int16Array长度减1（即从末尾开始）。如果下标大于等于ArkTS Int16Array的长度， 则返回**-1**。如果提供的下标值是负数，则被当做距离数组尾部的偏移，从后到前搜索。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| searchElement | number | 是 |
+| fromIndex | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 元素最后一次出现的索引；如果不存在，则返回**-1**。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The lastIndexOf method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## map
 
@@ -759,30 +757,30 @@ map(callbackFn: TypedArrayMapCallback<number, Int16Array>): Int16Array
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-map(callbackFn: TypedArrayMapCallback<number, Int16Array>): Int16Array--><!--Device-Int16Array-map(callbackFn: TypedArrayMapCallback<number, Int16Array>): Int16Array-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, Int16Array&gt; | 是 | 回调函数。回调执行期间不能修改当前Map对象，否则会触发并发修改错误。 map方法对数组中的每个元素调用一次callbackfn函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, Int16Array&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Int16Array | 新ArkTS Int16Array对象。 |
+| 类型 |
+| --- |
+| Int16Array |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The map method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## of
 
@@ -794,23 +792,23 @@ static of(...items: number[]): Int16Array
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
-<!--Device-Int16Array-static of(...items: number[]): Int16Array--><!--Device-Int16Array-static of(...items: number[]): Int16Array-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| items | number[] | 是 | 用于创建数组的元素，参数个数可以是0个、1个或者多个。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| items | number[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Int16Array | 新的ArkTS Int16Array实例。可能原因：1. 必填参数未指定； <br>2. 参数类型不正确；3. 参数校验失败。 |
+| 类型 |
+| --- |
+| Int16Array |
 
 ## reduce
 
@@ -822,30 +820,30 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>): number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>): number--><!--Device-Int16Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>): number-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Int16Array&gt; | 是 | 归约函数。 reduce方法对数组中的每个元素调用一次callbackfn函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Int16Array&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 由最后一次调用归约函数得到的结果。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduce method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## reduce
 
@@ -857,31 +855,31 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>, initial
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>, initialValue: number): number--><!--Device-Int16Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>, initialValue: number): number-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Int16Array&gt; | 是 | 归约函数。 reduce方法对数组中的每个元素调用一次callbackfn函数。 |
-| initialValue | number | 是 | 如果指定了initialValue，则将其作为开始累加的初始值。 首次调用callbackfn函数时将此值作为参数传入，而不是使用数组元素。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Int16Array&gt; | 是 |
+| initialValue | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 由最后一次调用归约函数得到的结果。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduce method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## reduce
 
@@ -893,31 +891,31 @@ reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Int16Array>, initialVa
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Int16Array>, initialValue: U): U--><!--Device-Int16Array-reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Int16Array>, initialValue: U): U-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Int16Array&gt; | 是 | 归约函数。 |
-| initialValue | U | 是 | 初始值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Int16Array&gt; | 是 |
+| initialValue | U | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| U | 由最后一次调用归约函数得到的结果。 |
+| 类型 |
+| --- |
+| U |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduce method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## reduceRight
 
@@ -929,31 +927,31 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Int16Arr
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
-<!--Device-Int16Array-reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Int16Array>, initialValue: U): U--><!--Device-Int16Array-reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Int16Array>, initialValue: U): U-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Int16Array&gt; | 是 | 对Int16Array中的 每个元素调用的函数。 |
-| initialValue | U | 是 | 作为首次调用回调函数的第一个参数使用的值。 <br>如果未提供初始值，则使用Int16Array的最后一个元素作为初始值， <br>回调将从倒数第二个元素开始执行。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Int16Array&gt; | 是 |
+| initialValue | U | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| U | 由最后一次调用归约函数得到的结果。可能原因： 1.必填参数未指定。 2.参数类型不正确。 |
+| 类型 |
+| --- |
+| U |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduceRight method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## reduceRight
 
@@ -965,30 +963,30 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>): n
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
-<!--Device-Int16Array-reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>): number--><!--Device-Int16Array-reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>): number-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Int16Array&gt; | 是 | 对Int16Array中的 每个元素调用的函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Int16Array&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 由最后一次调用归约函数得到的结果。可能原因： 1.必填参数未指定。 2.参数类型不正确。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduceRight method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## reverse
 
@@ -1000,24 +998,24 @@ reverse(): Int16Array
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-reverse(): Int16Array--><!--Device-Int16Array-reverse(): Int16Array-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Int16Array | 反转后的ArkTS Int16Array对象。 |
+| 类型 |
+| --- |
+| Int16Array |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reverse method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## set
 
@@ -1029,25 +1027,25 @@ set(array: ArrayLike<number>, offset?: number): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-set(array: ArrayLike<number>, offset?: number): void--><!--Device-Int16Array-set(array: ArrayLike<number>, offset?: number): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
-| offset | number | 否 | 写入的起始位置。默认为0。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| array | ArrayLike & lt;number & gt; | 是 |
+| offset | number | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The set method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## slice
 
@@ -1059,31 +1057,31 @@ slice(start?: number, end?: number): Int16Array
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-slice(start?: number, end?: number): Int16Array--><!--Device-Int16Array-slice(start?: number, end?: number): Int16Array-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| start | number | 否 | 开始索引，如果`start &lt; 0`，则会从`start + Int16Array.length`位置开始。 默认值为**0**。 |
-| end | number | 否 | 结束索引（不包括该元素），如果`end &lt; 0`，则会到`end + Int16Array.length`位置结束。 默认为ArkTS Int16Array的长度。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| start | number | 否 |
+| end | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Int16Array | 新的ArkTS Int16Array对象。 |
+| 类型 |
+| --- |
+| Int16Array |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The slice method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## some
 
@@ -1095,30 +1093,30 @@ some(predicate: TypedArrayPredicateFn<number, Int16Array>): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-some(predicate: TypedArrayPredicateFn<number, Int16Array>): boolean--><!--Device-Int16Array-some(predicate: TypedArrayPredicateFn<number, Int16Array>): boolean-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Int16Array&gt; | 是 | 用于测试的断言函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Int16Array&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 检查结果。如果存在元素满足指定条件返回true； 否则，返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The some method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## sort
 
@@ -1130,30 +1128,30 @@ sort(compareFn?: TypedArrayCompareFn<number>): Int16Array
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-sort(compareFn?: TypedArrayCompareFn<number>): Int16Array--><!--Device-Int16Array-sort(compareFn?: TypedArrayCompareFn<number>): Int16Array-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| compareFn | [TypedArrayCompareFn](arkts-arkts-collections-typedarraycomparefn-t.md)&lt;number&gt; | 否 | 用于确定元素顺序的函数。默认使用升序排序。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| compareFn | [TypedArrayCompareFn](arkts-arkts-collections-typedarraycomparefn-t.md)&lt;number&gt; | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Int16Array | 排序后的ArkTS Int16Array对象。 |
+| 类型 |
+| --- |
+| Int16Array |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The sort method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## subarray
 
@@ -1165,31 +1163,31 @@ subarray(begin?: number, end?: number): Int16Array
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-subarray(begin?: number, end?: number): Int16Array--><!--Device-Int16Array-subarray(begin?: number, end?: number): Int16Array-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| begin | number | 否 | 开始索引，如果`begin &lt; 0`，则会从`begin + Int16Array.length`位置开始。 默认值为**0**。 |
-| end | number | 否 | 结束索引（不包括该元素），如果`end &lt; 0`，则会到`end + Int16Array.length`位置结束。 默认为ArkTS Int16Array的长度。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| begin | number | 否 |
+| end | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Int16Array | 新的ArkTS Int16Array对象。 |
+| 类型 |
+| --- |
+| Int16Array |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The subarray method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## toLocaleString
 
@@ -1201,24 +1199,24 @@ toLocaleString(): string
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
-<!--Device-Int16Array-toLocaleString(): string--><!--Device-Int16Array-toLocaleString(): string-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 一个包含数组所有元素的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The toLocaleString method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## toString
 
@@ -1230,24 +1228,24 @@ toString(): string
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
-<!--Device-Int16Array-toString(): string--><!--Device-Int16Array-toString(): string-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 一个包含数组所有元素的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The toString method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## values
 
@@ -1259,24 +1257,42 @@ values(): IterableIterator<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-values(): IterableIterator<number>--><!--Device-Int16Array-values(): IterableIterator<number>-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 新的迭代器对象。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+
+## [index: number]
+
+```TypeScript
+[index: number]: number
+```
+
+返回ArkTS Int16Array指定索引位置的元素。
+
+**类型：** number
+
+**起始版本：** 12
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.Utils.Lang
 
 ## buffer
 
@@ -1290,9 +1306,9 @@ ArkTS Int16Array底层使用的buffer。
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-readonly buffer: ArrayBuffer--><!--Device-Int16Array-readonly buffer: ArrayBuffer-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1308,9 +1324,9 @@ ArkTS Int16Array所占的字节数。
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-readonly byteLength: number--><!--Device-Int16Array-readonly byteLength: number-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1326,9 +1342,9 @@ ArkTS Int16Array距离其ArrayBuffer起始位置的字节偏移。
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-readonly byteOffset: number--><!--Device-Int16Array-readonly byteOffset: number-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1344,9 +1360,9 @@ ArkTS Int16Array中每个元素所占的字节数。
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Int16Array-static readonly BYTES_PER_ELEMENT: number--><!--Device-Int16Array-static readonly BYTES_PER_ELEMENT: number-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1362,9 +1378,8 @@ ArkTS Int16Array元素个数。
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-Int16Array-readonly length: number--><!--Device-Int16Array-readonly length: number-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

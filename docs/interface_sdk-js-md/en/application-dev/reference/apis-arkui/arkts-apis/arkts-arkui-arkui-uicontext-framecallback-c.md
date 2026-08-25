@@ -3,14 +3,14 @@
 Implements the API for setting the task that needs to be executed during the next frame rendering.
 
 > **NOTE：**&gt;
-> - The following APIs must be used in conjunction with [postFrameCallback](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#postframecallback) and
-> [postDelayedFrameCallback](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#postdelayedframecallback) from [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md).
-> Extend this class and override either the [onFrame](../../apis-default/arkts-apis/arkts-arkui-uicontext-framecallback-c.md#onframe) or
-> [onIdle](../../apis-default/arkts-apis/arkts-arkui-uicontext-framecallback-c.md#onidle) method to implement specific service logic.
+> - The following APIs must be used in conjunction with [postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback) and
+> [postDelayedFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postdelayedframecallback) from [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md).
+> Extend this class and override either the [onFrame](#onframe) or
+> [onIdle](#onidle) method to implement specific service logic.
 
 **Since:** 12
 
-<!--Device-unnamed-export abstract class FrameCallback--><!--Device-unnamed-export abstract class FrameCallback-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,19 +33,19 @@ Called when the next frame is rendered.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FrameCallback-onFrame(frameTimeInNano: number): void--><!--Device-FrameCallback-onFrame(frameTimeInNano: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| frameTimeInNano | number | Yes | Time when the rendering of the next frame starts, in nanoseconds.<br>Value range: [0, +∞) |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| frameTimeInNano | number | Yes |
 
 **Examples**
 
@@ -97,19 +97,19 @@ Called after the rendering of the subsequent frame has finished and there is mor
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FrameCallback-onIdle(timeLeftInNano: number): void--><!--Device-FrameCallback-onIdle(timeLeftInNano: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| timeLeftInNano | number | Yes | Remaining idle time for the current frame, in nanoseconds.<br>Value range: [0, +∞) |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| timeLeftInNano | number | Yes |
 
 **Examples**
 
@@ -150,4 +150,3 @@ struct Index {
   }
 }
 ```
-

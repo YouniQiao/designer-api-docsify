@@ -12,17 +12,16 @@ RichText(content: string | Resource)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11 - 11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-RichTextInterface-(content: string | Resource): RichTextAttribute--><!--Device-RichTextInterface-(content: string | Resource): RichTextAttribute-End-->
+**原子化服务API：** 从API版本11 - 11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| content | string \| Resource | 是 | [since 20] { string } content [since 8 - 19] |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| content | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
 
 ## 汇总
-

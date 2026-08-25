@@ -4,7 +4,7 @@ Defines the parameters for application installation.
 
 **Since:** 12
 
-<!--Device-bundleManager-interface InstallParam--><!--Device-bundleManager-interface InstallParam-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -27,9 +27,9 @@ Installation flag.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-InstallParam-installFlag?: number--><!--Device-InstallParam-installFlag?: number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -45,9 +45,9 @@ Extended parameters. The default value is null. The key can be **ohos.bms.param.
 
 **Since:** 19
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
-<!--Device-InstallParam-parameters?: Record<string, string>--><!--Device-InstallParam-parameters?: Record<string, string>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -63,9 +63,8 @@ User ID, which must be greater than or equal to 0. The default value is the user
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-InstallParam-userId?: number--><!--Device-InstallParam-userId?: number-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

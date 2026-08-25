@@ -4,7 +4,7 @@ Defines the click effect.
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface ClickEffect--><!--Device-unnamed-declare interface ClickEffect-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +28,11 @@ Click feedback effect of the component.Default value: **ClickEffectLevel.LIGHT**
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ClickEffect-level: ClickEffectLevel--><!--Device-ClickEffect-level: ClickEffectLevel-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,11 +52,10 @@ Custom scaling ratio for fine-tuning the click feedback effect.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ClickEffect-scale?: number--><!--Device-ClickEffect-scale?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

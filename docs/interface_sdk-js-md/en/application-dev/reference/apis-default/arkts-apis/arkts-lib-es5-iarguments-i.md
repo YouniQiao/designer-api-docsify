@@ -1,13 +1,21 @@
 # IArguments
 
-**Since:** -1
-
-<!--Device-unnamed-interface IArguments--><!--Device-unnamed-interface IArguments-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
+
+## [index: number]
+
+```TypeScript
+[index: number]: any
+```
+
+**Type:** any
+
+**ArkTS mode:** 
 
 ## callee
 
@@ -17,9 +25,7 @@ callee: Function
 
 **Type:** Function
 
-**Since:** -1
-
-<!--Device-IArguments-callee: Function--><!--Device-IArguments-callee: Function-End-->
+**ArkTS mode:** 
 
 ## length
 
@@ -29,7 +35,4 @@ length: number
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-IArguments-length: number--><!--Device-IArguments-length: number-End-->
-
+**ArkTS mode:** 

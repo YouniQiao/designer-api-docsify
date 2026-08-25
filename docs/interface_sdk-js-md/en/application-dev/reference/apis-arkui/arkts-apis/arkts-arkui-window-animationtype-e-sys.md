@@ -2,9 +2,9 @@
 
 Enumerates the types of window animations.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-window-enum AnimationType--><!--Device-window-enum AnimationType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -16,11 +16,10 @@ FADE_IN = 1
 
 Fade-in animation, which takes effect during window display.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-AnimationType-FADE_IN = 1--><!--Device-AnimationType-FADE_IN = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
-

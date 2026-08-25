@@ -2,9 +2,9 @@
 
 空间化设备状态。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-audio-interface AudioSpatialDeviceState--><!--Device-audio-interface AudioSpatialDeviceState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -26,9 +26,9 @@ address: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-AudioSpatialDeviceState-address: string--><!--Device-AudioSpatialDeviceState-address: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -44,9 +44,9 @@ isHeadTrackingSupported: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-AudioSpatialDeviceState-isHeadTrackingSupported: boolean--><!--Device-AudioSpatialDeviceState-isHeadTrackingSupported: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -62,9 +62,9 @@ isSpatializationSupported: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-AudioSpatialDeviceState-isSpatializationSupported: boolean--><!--Device-AudioSpatialDeviceState-isSpatializationSupported: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -80,9 +80,9 @@ spatialDeviceType: AudioSpatialDeviceType
 
 **类型：** [AudioSpatialDeviceType](arkts-audio-audio-audiospatialdevicetype-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-AudioSpatialDeviceState-spatialDeviceType: AudioSpatialDeviceType--><!--Device-AudioSpatialDeviceState-spatialDeviceType: AudioSpatialDeviceType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -100,4 +100,3 @@ let spatialDeviceState: audio.AudioSpatialDeviceState = {
   spatialDeviceType: audio.AudioSpatialDeviceType.SPATIAL_DEVICE_TYPE_IN_EAR_HEADPHONE
 };
 ```
-

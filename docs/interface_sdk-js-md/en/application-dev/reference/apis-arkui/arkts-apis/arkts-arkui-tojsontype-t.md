@@ -8,23 +8,20 @@ Define toJson type function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export declare type ToJSONType<T> = (value: T) => jsonx.JsonElement--><!--Device-unnamed-export declare type ToJSONType<T> = (value: T) => jsonx.JsonElement-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | T | Yes | toJson value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| jsonx.JsonElement | Json stringify element object |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| jsonx.JsonElement |

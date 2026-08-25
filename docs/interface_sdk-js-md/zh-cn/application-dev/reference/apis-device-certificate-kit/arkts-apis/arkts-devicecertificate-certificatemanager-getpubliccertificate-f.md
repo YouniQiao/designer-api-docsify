@@ -14,35 +14,35 @@ function getPublicCertificate(keyUri: string): Promise<CMResult>
 
 表示获取用户公共凭据的详细信息。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
-
-<!--Device-certificateManager-function getPublicCertificate(keyUri: string): Promise<CMResult>--><!--Device-certificateManager-function getPublicCertificate(keyUri: string): Promise<CMResult>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| keyUri | string | 是 | 表示用户公共凭据的唯一标识符，长度限制256字节以内。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| keyUri | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise对象，返回获取用户公共凭据详细信息的结果，返回值为[CMResult]{ |
+| 类型 |
+| --- |
+| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
-| [17500002](../errorcode-certManager.md#17500002-证书不存在) | The certificate does not exist. |
-| [17500005](../errorcode-certManager.md#17500005-应用未经用户授权) | The application is not authorized by the user. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17500001](../errorcode-certManager.md#17500001-内部错误) |
+| [17500002](../errorcode-certManager.md#17500002-证书不存在) |
+| [17500005](../errorcode-certManager.md#17500005-应用未经用户授权) |
 
 **示例**
 
@@ -67,4 +67,3 @@ try {
   console.error(`Failed to get Public certificate. Code: ${error.code}, message: ${error.message}`);
 }
 ```
-

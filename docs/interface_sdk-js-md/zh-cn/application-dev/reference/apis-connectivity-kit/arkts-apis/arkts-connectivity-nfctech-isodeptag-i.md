@@ -4,33 +4,39 @@ IsoDepTag 提供对ISO-DEP(ISO 14443-4)技术的属性和I/O操作的访问，�
 
 **继承/实现关系：** IsoDepTag extends TagSession
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-export interface IsoDepTag--><!--Device-unnamed-export interface IsoDepTag-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## getHiLayerResponse
 
+ArkTS-Dyn:
+```TypeScript
+getHiLayerResponse(): number[]
+```
+
+ArkTS-Sta:
 ```TypeScript
 getHiLayerResponse(): int[]
 ```
 
 获取标签的更高层响应字节，针对基于NfcB通信技术的IsoDep卡片。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-IsoDepTag-getHiLayerResponse(): int[]--><!--Device-IsoDepTag-getHiLayerResponse(): int[]-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int[] | IsoDepTag 标签的更高层响应字节，每个number十六进制表示，范围是0x00~0xFF。如果该IsoDep类型Tag是基于NfcA技术的，则该返回值为空。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
 
 **示例**
 
@@ -44,25 +50,31 @@ console.info("isoDep hiLayerResponse: " + hiLayerResponse);
 
 ## getHistoricalBytes
 
+ArkTS-Dyn:
+```TypeScript
+getHistoricalBytes(): number[]
+```
+
+ArkTS-Sta:
 ```TypeScript
 getHistoricalBytes(): int[]
 ```
 
 获取标签的历史字节，针对基于NfcA通信技术的IsoDep卡片。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-IsoDepTag-getHistoricalBytes(): int[]--><!--Device-IsoDepTag-getHistoricalBytes(): int[]-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int[] | IsoDepTag 标签的历史字节，每个number十六进制表示，范围是0x00~0xFF。如果该IsoDep类型Tag是基于NfcB技术的，则该返回值为空。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
 
 **示例**
 
@@ -82,30 +94,30 @@ isExtendedApduSupported(): Promise<boolean>
 
 检查是否支持扩展的APDU，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-IsoDepTag-isExtendedApduSupported(): Promise<boolean>--><!--Device-IsoDepTag-isExtendedApduSupported(): Promise<boolean>-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示支持；返回false表示不支持。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
@@ -171,32 +183,31 @@ isExtendedApduSupported(callback: AsyncCallback<boolean>): void
 
 检查是否支持扩展的APDU。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-IsoDepTag-isExtendedApduSupported(callback: AsyncCallback<boolean>): void--><!--Device-IsoDepTag-isExtendedApduSupported(callback: AsyncCallback<boolean>): void-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，true: 支持， false: 不支持。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The Tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
 参见 [isExtendedApduSupported](#isextendedapdusupported)
-

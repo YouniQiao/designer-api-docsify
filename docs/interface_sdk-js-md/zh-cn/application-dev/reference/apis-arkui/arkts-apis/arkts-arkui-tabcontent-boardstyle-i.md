@@ -1,0 +1,27 @@
+# BoardStyle
+
+背板风格对象。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## borderRadius
+
+```TypeScript
+borderRadius?: Length
+```
+
+背板的圆角半径（不支持百分比设置）。默认值：8.0单位：vp取值范围：[0, +∞)。
+
+**类型：** [Length](arkts-arkui-length-t.md)
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full

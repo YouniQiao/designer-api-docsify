@@ -14,23 +14,23 @@ function getAttachedMechDevices(): MechInfo[]
 
 获取已连接的机械设备列表
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-mechanicManager-function getAttachedMechDevices(): MechInfo[]--><!--Device-mechanicManager-function getAttachedMechDevices(): MechInfo[]-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [MechInfo](arkts-mechanic-mechanicmanager-mechinfo-i.md)[] | 返回已连接的机械设备列表 |
+| 类型 |
+| --- |
+| [MechInfo](arkts-mechanic-mechanicmanager-mechinfo-i.md)[] |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
+| 错误码ID |
+| --- |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) |
 
 **示例**
 
@@ -40,4 +40,3 @@ console.info('Query device list');
 let mechanicInfos = mechanicManager.getAttachedMechDevices();
 console.info(`'device list:' ${mechanicInfos}`);
 ```
-

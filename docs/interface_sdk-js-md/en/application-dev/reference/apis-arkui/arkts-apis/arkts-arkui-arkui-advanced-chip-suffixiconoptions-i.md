@@ -1,12 +1,12 @@
 # SuffixIconOptions
 
-Defines the suffix icon options.Inherits from [IconCommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-iconcommonoptions-i.md).
+Defines the suffix icon options.Inherits from [IconCommonOptions](arkts-arkui-arkui-advanced-chip-iconcommonoptions-i.md).
 
-**Inheritance/Implementation:** SuffixIconOptions extends [IconCommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-iconcommonoptions-i.md)
+**Inheritance/Implementation:** SuffixIconOptions extends [IconCommonOptions](arkts-arkui-arkui-advanced-chip-iconcommonoptions-i.md)
 
 **Since:** 11
 
-<!--Device-unnamed-export interface SuffixIconOptions--><!--Device-unnamed-export interface SuffixIconOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,6 +15,24 @@ Defines the suffix icon options.Inherits from [IconCommonOptions](../../apis-def
 ```TypeScript
 import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from '@kit.ArkUI';
 ```
+
+## action
+
+```TypeScript
+action?: () => void
+```
+
+Action of the suffix icon.If the value is **undefined**, no action is configured for the suffix icon.
+
+**Since:** 11
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityDescription
 
@@ -28,11 +46,11 @@ Accessible description of the suffix icon. You can provide comprehensive text ex
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-SuffixIconOptions-accessibilityDescription?: ResourceStr--><!--Device-SuffixIconOptions-accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +72,11 @@ Accessibility level of the suffix icon. It determines whether the component can 
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-SuffixIconOptions-accessibilityLevel?: string--><!--Device-SuffixIconOptions-accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,31 +92,28 @@ Accessibility text, that is, accessibility label name, of the suffix icon. If a 
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-SuffixIconOptions-accessibilityText?: ResourceStr--><!--Device-SuffixIconOptions-accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## action
 
 ```TypeScript
-action?: () => void
+action?: VoidCallback
 ```
 
-Action of the suffix icon.If the value is **undefined**, no action is configured for the suffix icon.
+Called when the suffix icon is clicked.
 
-**Type:** () =&gt; void
+**Type:** VoidCallback
 
-**Since:** 11
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SuffixIconOptions-action?: () => void--><!--Device-SuffixIconOptions-action?: () => void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

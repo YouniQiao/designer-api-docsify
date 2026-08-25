@@ -18,17 +18,17 @@ Obtains the CPU usage of a process.
 > This API involves cross-process communication and takes a long time. To avoid performance problems, you are
 > advised not to call this API in the main thread.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-hidebug-function getCpuUsage() : double--><!--Device-hidebug-function getCpuUsage() : double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | CPU usage of a process. For example, if the CPU usage is **50%**, **0.5** is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **Examples**
 
@@ -37,4 +37,3 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 let cpuUsage: number = hidebug.getCpuUsage();
 ```
-

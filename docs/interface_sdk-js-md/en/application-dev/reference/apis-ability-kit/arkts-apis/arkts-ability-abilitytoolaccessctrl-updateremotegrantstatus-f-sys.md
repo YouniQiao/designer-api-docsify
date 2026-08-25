@@ -15,9 +15,9 @@ Updates the remote grant status. This function enables or disables the remote au
 
 **Since:** 26.1.0
 
-**Required permissions:** ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
-<!--Device-abilityToolAccessCtrl-export function updateRemoteGrantStatus(remoteGrantStatus: RemoteGrantStatus): Promise<void>--><!--Device-abilityToolAccessCtrl-export function updateRemoteGrantStatus(remoteGrantStatus: RemoteGrantStatus): Promise<void>-End-->
+**Required permissions:** ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -25,23 +25,22 @@ Updates the remote grant status. This function enables or disables the remote au
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| remoteGrantStatus | [RemoteGrantStatus](arkts-ability-abilitytoolaccessctrl-remotegrantstatus-e-sys.md) | Yes | Remote grant status to be set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| remoteGrantStatus | [RemoteGrantStatus](arkts-ability-abilitytoolaccessctrl-remotegrantstatus-e-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denial. The interface caller does not have permission "ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS". |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| 24010000 | Invalid parameter. RemoteGrantStatus is invalid. |
-| 24010001 | Service is abnormal. Possible cause: IPC failed. |
-| 24010002 | Common internal error. Possible cause: dependent service unavailable, resource access failure, etc. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 24010000 |
+| 24010001 |
+| 24010002 |

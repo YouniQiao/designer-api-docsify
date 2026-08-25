@@ -2,9 +2,9 @@
 
 Enumerates video call event types.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-call-export enum CallSessionEventId--><!--Device-call-export enum CallSessionEventId-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -18,9 +18,9 @@ EVENT_CONTROL_CAMERA_FAILURE = 0
 
 Camera setting failed.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CallSessionEventId-EVENT_CONTROL_CAMERA_FAILURE = 0--><!--Device-CallSessionEventId-EVENT_CONTROL_CAMERA_FAILURE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -34,9 +34,9 @@ EVENT_CONTROL_CAMERA_READY = 1
 
 Camera setting succeeded.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CallSessionEventId-EVENT_CONTROL_CAMERA_READY = 1--><!--Device-CallSessionEventId-EVENT_CONTROL_CAMERA_READY = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -50,9 +50,9 @@ EVENT_DISPLAY_SURFACE_RELEASED = 100
 
 Remote display window released.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CallSessionEventId-EVENT_DISPLAY_SURFACE_RELEASED = 100--><!--Device-CallSessionEventId-EVENT_DISPLAY_SURFACE_RELEASED = 100-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -66,11 +66,10 @@ EVENT_PREVIEW_SURFACE_RELEASED = 101
 
 Local preview window released.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CallSessionEventId-EVENT_PREVIEW_SURFACE_RELEASED = 101--><!--Device-CallSessionEventId-EVENT_PREVIEW_SURFACE_RELEASED = 101-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
-

@@ -14,9 +14,9 @@ function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: Pi
 
 根据HDR PixelMap和SDR PixelMap创建Picture对象。系统将使用HDR和SDR PixelMap生成一个增益图（gainmap），返回的Picture对象将包含SDR PixelMap和生成的gainmap PixelMap，像素格式为RGBA8888。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap): Promise<Picture>--><!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap): Promise<Picture>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -24,22 +24,22 @@ function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: Pi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| hdrPixelMap | PixelMap | 是 | HDR PixelMap，位深16bit或10bit，像素格式为FP16/RGBA1010102/YCBCR_P010，色彩空间是BT2020_HLG。 |
-| sdrPixelMap | PixelMap | 是 | SDR PixelMap，位深8bit，像素格式为RGBA8888/NV21，色彩空间是P3。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| hdrPixelMap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
+| sdrPixelMap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; | 返回Picture包含sdr和gainmap，像素格式为RGBA8888。 |
+| 类型 |
+| --- |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation. HdrPixelMap's PixelMapFormat is not RGBA_F16\RGBA_1010102\YCBCR_P010, or its color space is not BT2020_HLG. Or sdrPixelMap's PixelMapFormat is not RGBA_8888\NV21\NV12, or its color space is not P3. |
+| 错误码ID |
+| --- |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) |
 
 **示例**
 
@@ -131,9 +131,9 @@ function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: Pi
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap,       params: GainmapParams): Promise<Picture>--><!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap,       params: GainmapParams): Promise<Picture>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -141,26 +141,25 @@ function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: Pi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| hdrPixelMap | PixelMap | 是 | HDR PixelMap，位深16bit或10bit，像素格式为RGBA_F16/RGBA_1010102/YCBCR_P010，色彩空间是BT2020_HLG。 |
-| sdrPixelMap | PixelMap | 是 | SDR PixelMap，位深8bit，像素格式为RGBA_8888/NV21，色彩空间是P3。 |
-| params | [GainmapParams](arkts-image-image-gainmapparams-i-sys.md) | 是 | Gainmap Params，增益图参数设置选项，决定是否使用全尺寸增益图。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| hdrPixelMap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
+| sdrPixelMap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
+| params | [GainmapParams](arkts-image-image-gainmapparams-i-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; | Promise对象，返回Picture包含SDR和Gainmap，像素格式为RGBA_8888。 |
+| 类型 |
+| --- |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation. HdrPixelMap's PixelMapFormat is not RGBA_F16\RGBA_1010102\YCBCR_P010, or its color space is not BT2020_HLG. Or sdrPixelMap's PixelMapFormat is not RGBA_8888\NV21\NV12, or its color space is not P3. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) |
 
 **示例**
 
 参见 [createPictureByHdrAndSdrPixelMap](#createpicturebyhdrandsdrpixelmap)
-

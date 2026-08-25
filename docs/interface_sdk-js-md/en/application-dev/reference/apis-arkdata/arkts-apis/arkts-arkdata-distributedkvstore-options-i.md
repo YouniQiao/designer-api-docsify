@@ -2,9 +2,9 @@
 
 Provides KV store configuration.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-distributedKVStore-interface Options--><!--Device-distributedKVStore-interface Options-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -24,13 +24,13 @@ Whether to enable auto sync across devices. The default value is **false**, indi
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Options-autoSync?: boolean--><!--Device-Options-autoSync?: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -44,11 +44,11 @@ Whether to back up the database files. The value **true** means to back up the d
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Options-backup?: boolean--><!--Device-Options-backup?: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -62,11 +62,11 @@ Whether to create a database when database files do not exist. The value **true*
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Options-createIfMissing?: boolean--><!--Device-Options-createIfMissing?: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -80,11 +80,11 @@ Whether to encrypt the database files. The value **true** means to encrypt the d
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Options-encrypt?: boolean--><!--Device-Options-encrypt?: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -98,11 +98,11 @@ Type of the KV store to create. The default value is **DEVICE_COLLABORATION**, w
 
 **Type:** KVStoreType
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Options-kvStoreType?: KVStoreType--><!--Device-Options-kvStoreType?: KVStoreType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -118,9 +118,9 @@ Specifies the root directory relative to the database
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-Options-rootDir?: string--><!--Device-Options-rootDir?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -134,11 +134,11 @@ Schema that defines the values stored in the KV store. The default value is **un
 
 **Type:** Schema
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Options-schema?: Schema--><!--Device-Options-schema?: Schema-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -152,11 +152,10 @@ Security level of the KV store.
 
 **Type:** SecurityLevel
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Options-securityLevel: SecurityLevel--><!--Device-Options-securityLevel: SecurityLevel-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
-

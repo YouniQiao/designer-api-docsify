@@ -2,9 +2,9 @@
 
 Describes the manufacturer data.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ble-interface ManufactureData--><!--Device-ble-interface ManufactureData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -22,15 +22,15 @@ manufactureId: int
 
 Indicates the manufacturer ID assigned by Bluetooth SIG
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ManufactureData-manufactureId: int--><!--Device-ManufactureData-manufactureId: int-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -44,13 +44,12 @@ Indicates the manufacturer data to add
 
 **Type:** ArrayBuffer
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ManufactureData-manufactureValue: ArrayBuffer--><!--Device-ManufactureData-manufactureValue: ArrayBuffer-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

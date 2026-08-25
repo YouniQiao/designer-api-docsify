@@ -2,9 +2,9 @@
 
 Describes the information about an encoder.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-media-interface EncoderInfo--><!--Device-media-interface EncoderInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -24,9 +24,9 @@ Bit rate range of the encoder, with the minimum and maximum bit rates specified,
 
 **Type:** Range
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-EncoderInfo-bitRate?: Range--><!--Device-EncoderInfo-bitRate?: Range-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -40,9 +40,9 @@ Number of audio channels for the audio capturer, with the minimum and maximum nu
 
 **Type:** Range
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-EncoderInfo-channels?: Range--><!--Device-EncoderInfo-channels?: Range-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -56,9 +56,9 @@ Video frame rate range, with the minimum and maximum frame rates specified, in f
 
 **Type:** Range
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-EncoderInfo-frameRate?: Range--><!--Device-EncoderInfo-frameRate?: Range-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -72,9 +72,9 @@ Video frame height range, with the minimum and maximum heights specified, in px.
 
 **Type:** Range
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-EncoderInfo-height?: Range--><!--Device-EncoderInfo-height?: Range-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -88,9 +88,9 @@ MIME type of the encoder.
 
 **Type:** [CodecMimeType](arkts-media-media-codecmimetype-e.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-EncoderInfo-mimeType: CodecMimeType--><!--Device-EncoderInfo-mimeType: CodecMimeType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -102,11 +102,11 @@ sampleRate?: Array<int>
 
 Audio sampling rate, including all available audio sampling rates, in Hz. The value depends on the encoder type, and this parameter is available only for audio encoders.
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-EncoderInfo-sampleRate?: Array<int>--><!--Device-EncoderInfo-sampleRate?: Array<int>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -120,9 +120,9 @@ Encoder type. The value **audio** means an audio encoder, and **video** means a 
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-EncoderInfo-type: string--><!--Device-EncoderInfo-type: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -136,9 +136,8 @@ Video frame width range, with the minimum and maximum widths specified, in px. T
 
 **Type:** Range
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-EncoderInfo-width?: Range--><!--Device-EncoderInfo-width?: Range-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
-

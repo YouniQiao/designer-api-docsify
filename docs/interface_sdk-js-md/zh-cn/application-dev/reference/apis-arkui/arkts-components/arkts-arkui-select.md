@@ -15,33 +15,32 @@ Select(options: Array<SelectOption>)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SelectInterface-(options: Array<SelectOption>): SelectAttribute--><!--Device-SelectInterface-(options: Array<SelectOption>): SelectAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | Array&lt;[SelectOption](arkts-arkui-selectoption-i.md)&gt; | 是 | 设置下拉选项。 |
+| 参数名 | [类型](#类型) | 必填 |
+| --- | --- | --- |
+| options | Array&lt;[SelectOption](arkts-arkui-selectoption-i.md)&gt; | 是 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
+| 名称 |
+| --- |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-| [OnSelectCallback](arkts-arkui-onselectcallback-t.md) | 下拉菜单选中某一项时触发的回调函数类型定义。 |
+| 名称 |
+| --- |
+| [OnSelectCallback](arkts-arkui-onselectcallback-t.md) |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-
+| 名称 |
+| --- |

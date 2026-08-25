@@ -4,11 +4,11 @@ Route information.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 13
 
-**Substitutes:** NavPathStack and navDestination
-
-<!--Device-unnamed-declare interface RouteInfo--><!--Device-unnamed-declare interface RouteInfo-End-->
+**Substitutes:** NavPathStack
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,6 +29,8 @@ Name of the navigation destination page to be redirected to.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 13
 
 **Substitutes:** name
@@ -36,8 +38,6 @@ Name of the navigation destination page to be redirected to.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RouteInfo-name: string--><!--Device-RouteInfo-name: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -53,6 +53,8 @@ Parameter transferred during redirection.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 13
 
 **Substitutes:** param
@@ -61,7 +63,4 @@ Parameter transferred during redirection.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-RouteInfo-param?: unknown--><!--Device-RouteInfo-param?: unknown-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

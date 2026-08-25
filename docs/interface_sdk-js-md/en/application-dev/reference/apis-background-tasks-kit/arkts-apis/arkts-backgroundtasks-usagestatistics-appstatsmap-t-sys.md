@@ -4,13 +4,12 @@
 type AppStatsMap = Record<string, Array<BundleStatsInfo>>
 ```
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-usageStatistics-type AppStatsMap = Record<string, Array<BundleStatsInfo>>--><!--Device-usageStatistics-type AppStatsMap = Record<string, Array<BundleStatsInfo>>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
 
 **Property type:** Record&lt;string, Array&lt;BundleStatsInfo&gt;&gt;
-

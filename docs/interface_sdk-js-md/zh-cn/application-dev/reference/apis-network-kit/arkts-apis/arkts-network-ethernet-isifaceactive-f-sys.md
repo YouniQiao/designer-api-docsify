@@ -9,16 +9,16 @@ import { ethernet } from '@kit.NetworkKit';
 ## isIfaceActive
 
 ```TypeScript
-function isIfaceActive(iface: string, callback: AsyncCallback<int>): void
+function isIfaceActive(iface: string, callback: AsyncCallback<number>): void
 ```
 
 判断接口是否已激活，使用callback异步回调。
 
 **起始版本：** 9
 
-**需要权限：** ohos.permission.GET_NETWORK_INFO
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-ethernet-function isIfaceActive(iface: string, callback: AsyncCallback<int>): void--><!--Device-ethernet-function isIfaceActive(iface: string, callback: AsyncCallback<int>): void-End-->
+**需要权限：** ohos.permission.GET_NETWORK_INFO
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -26,22 +26,22 @@ function isIfaceActive(iface: string, callback: AsyncCallback<int>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| iface | string | 是 | 接口名。为空时代表查询是否存在激活接口。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。已激活：1，未激活：0，其他为获取失败错误码。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| iface | string | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) | Invalid parameter value. |
-| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Failed to connect to the service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
-| [2201005](../errorcode-net-ethernet.md#2201005-设备信息不存在) | Device information does not exist. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
+| [2201005](../errorcode-net-ethernet.md#2201005-设备信息不存在) |
 
 **示例**
 
@@ -73,16 +73,16 @@ ethernet.isIfaceActive("eth0").then((data: number) => {
 ## isIfaceActive
 
 ```TypeScript
-function isIfaceActive(iface: string): Promise<int>
+function isIfaceActive(iface: string): Promise<number>
 ```
 
 判断接口是否已激活，使用Promise异步回调。
 
 **起始版本：** 9
 
-**需要权限：** ohos.permission.GET_NETWORK_INFO
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-ethernet-function isIfaceActive(iface: string): Promise<int>--><!--Device-ethernet-function isIfaceActive(iface: string): Promise<int>-End-->
+**需要权限：** ohos.permission.GET_NETWORK_INFO
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -90,29 +90,28 @@ function isIfaceActive(iface: string): Promise<int>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| iface | string | 是 | 接口名。为空时代表查询是否存在激活接口。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| iface | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | 以Promise形式返回获取结果。已激活：1，未激活：0，其他为获取失败错误码。 |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) | Invalid parameter value. |
-| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Failed to connect to the service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
-| [2201005](../errorcode-net-ethernet.md#2201005-设备信息不存在) | Device information does not exist. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
+| [2201005](../errorcode-net-ethernet.md#2201005-设备信息不存在) |
 
 **示例**
 
 参见 [isIfaceActive](#isifaceactive)
-

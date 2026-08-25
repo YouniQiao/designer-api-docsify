@@ -2,9 +2,9 @@
 
 Defines a touchscreen gesture event.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-unnamed-export declare interface TouchGestureEvent--><!--Device-unnamed-export declare interface TouchGestureEvent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -26,9 +26,9 @@ Enumerates touchscreen gesture types.
 
 **Type:** [TouchGestureAction](arkts-input-multimodalinput-gestureevent-touchgestureaction-e-sys.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-TouchGestureEvent-action: TouchGestureAction--><!--Device-TouchGestureEvent-action: TouchGestureAction-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -44,11 +44,10 @@ Touch point information.
 
 **Type:** [Touch](arkts-input-multimodalinput-touchevent-touch-i.md)[]
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-TouchGestureEvent-touches: Touch[]--><!--Device-TouchGestureEvent-touches: Touch[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 **System API:** This is a system API.
-

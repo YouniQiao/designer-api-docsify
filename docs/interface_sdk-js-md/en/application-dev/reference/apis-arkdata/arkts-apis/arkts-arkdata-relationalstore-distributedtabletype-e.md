@@ -4,7 +4,7 @@ Enumerates the distributed table types. Use the enum name rather than the enum v
 
 **Since:** 23
 
-<!--Device-relationalStore-enum DistributedTableType--><!--Device-relationalStore-enum DistributedTableType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -18,9 +18,9 @@ Multi-device collaboration table. Data on each device is stored in an independen
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-DistributedTableType-DEVICE_COLLABORATION = 0--><!--Device-DistributedTableType-DEVICE_COLLABORATION = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -34,9 +34,8 @@ Single version table. Data is directly written to the local table of the peer de
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DistributedTableType-SINGLE_VERSION = 1--><!--Device-DistributedTableType-SINGLE_VERSION = 1-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-

@@ -4,9 +4,9 @@ Signature verification result.
 
 **Since:** 9
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-bundle-export enum SignatureCompareResult--><!--Device-bundle-export enum SignatureCompareResult-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -22,9 +22,9 @@ Signatures match.
 
 **Since:** 9
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-SignatureCompareResult-SIGNATURE_MATCHED = 0--><!--Device-SignatureCompareResult-SIGNATURE_MATCHED = 0-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -40,9 +40,9 @@ Signatures do not match.
 
 **Since:** 9
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-SignatureCompareResult-SIGNATURE_NOT_MATCHED = 1--><!--Device-SignatureCompareResult-SIGNATURE_NOT_MATCHED = 1-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -58,11 +58,10 @@ The bundle corresponding to the signature is unknown.
 
 **Since:** 9
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-SignatureCompareResult-SIGNATURE_UNKNOWN_BUNDLE = 2--><!--Device-SignatureCompareResult-SIGNATURE_UNKNOWN_BUNDLE = 2-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **System API:** This is a system API.
-

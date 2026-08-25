@@ -23,7 +23,7 @@ Universal attributes are supported. The width and height can be set.
 
 **Since:** 23
 
-<!--Device-unnamed-declare class UnionEffectContainerAttribute--><!--Device-unnamed-declare class UnionEffectContainerAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,4 +33,3 @@ Universal attributes are supported. The width and height can be set.
 
 ```TypeScript
 ```
-

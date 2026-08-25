@@ -4,7 +4,7 @@ Parity bits in serial port communication.
 
 **Since:** 26.0.0
 
-<!--Device-serial-enum Parity--><!--Device-serial-enum Parity-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.BusManager.Serial
 
@@ -18,9 +18,9 @@ No parity bit.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-Parity-NONE = 'none'--><!--Device-Parity-NONE = 'none'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
 
@@ -34,9 +34,9 @@ Even parity.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-Parity-EVEN = 'even'--><!--Device-Parity-EVEN = 'even'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
 
@@ -50,9 +50,9 @@ Odd parity.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-Parity-ODD = 'odd'--><!--Device-Parity-ODD = 'odd'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
 
@@ -66,9 +66,9 @@ Mark parity. The parity bit is always 1.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-Parity-MARK = 'mark'--><!--Device-Parity-MARK = 'mark'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
 
@@ -82,9 +82,8 @@ Space parity. The parity bit is always 0.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Parity-SPACE = 'space'--><!--Device-Parity-SPACE = 'space'-End-->
-
 **System capability:** SystemCapability.BusManager.Serial
-

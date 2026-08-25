@@ -4,7 +4,7 @@ Alignment mode of the dialog box.
 
 **Since:** 18
 
-<!--Device-unnamed-interface ActionSheetOffset--><!--Device-unnamed-interface ActionSheetOffset-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,11 @@ Offset of the action sheet along the x-axis relative to the alignment position.E
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ActionSheetOffset-dx: number | string | Resource--><!--Device-ActionSheetOffset-dx: number | string | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,11 +47,10 @@ Offset of the action sheet along the y-axis relative to the alignment position.E
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ActionSheetOffset-dy: number | string | Resource--><!--Device-ActionSheetOffset-dy: number | string | Resource-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

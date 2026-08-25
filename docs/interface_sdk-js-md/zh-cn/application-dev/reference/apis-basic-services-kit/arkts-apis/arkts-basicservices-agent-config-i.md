@@ -2,9 +2,9 @@
 
 上传/下载任务的配置信息。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-agent-interface Config--><!--Device-agent-interface Config-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -25,11 +25,11 @@ action: Action
 
 **类型：** Action
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Config-action: Action--><!--Device-Config-action: Action-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -42,13 +42,13 @@ begins?: long
 文件起点，单位为字节（B），通常情况下用于断点续传。默认值为0，取值为闭区间，表示从头开始传输。  
 - 下载时，请求读取服务器开始下载文件时的起点位置（HTTP协议中设置"Range"选项）。 - 上传时，读取需上传的文件的起点位置。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Config-begins?: long--><!--Device-Config-begins?: long-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -62,11 +62,11 @@ data?: string | Array<FormItem>
 
 **类型：** string \| Array&lt;[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Config-data?: string | Array<FormItem>--><!--Device-Config-data?: string | Array<FormItem>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -80,11 +80,11 @@ description?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Config-description?: string--><!--Device-Config-description?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -97,29 +97,31 @@ ends?: long
 文件终点，单位为字节（B），通常情况下用于断点续传。默认值为-1，取值为闭区间，表示传输到整个文件末尾结束。  
 - 下载时，请求读取服务器开始下载文件时的结束位置（HTTP协议中设置"Range"选项）。 - 上传时，读取需上传的文件的结束位置。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Config-ends?: long--><!--Device-Config-ends?: long-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## extras
 
 ```TypeScript
-extras?: Record<string, string>
+extras?: object
 ```
 
-The extras for the configuration.
+配置的附加功能，默认为空。
 
-**类型：** Record&lt;string, string&gt;
+**类型：** object
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Config-extras?: Record<string, string>--><!--Device-Config-extras?: Record<string, string>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -134,27 +136,30 @@ gauge?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Config-gauge?: boolean--><!--Device-Config-gauge?: boolean-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## headers
 
 ```TypeScript
-headers?: Record<string, string>
+headers?: object
 ```
 
-The HTTP headers. For upload request, the `Content-Type` is forced to `multipart/form-data`. For download request, the default `Content-Type` is `application/json`.
+添加要包含在任务中的HTTP协议标志头。  
+- 上传请求，默认的Content-Type为"multipart/form-data"。 - 下载请求，默认的Content-Type为"application/json"。
 
-**类型：** Record&lt;string, string&gt;
+**类型：** object
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Config-headers?: Record<string, string>--><!--Device-Config-headers?: Record<string, string>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -166,13 +171,13 @@ index?: int
 
 任务的路径索引，通常情况下用于任务断点续传，默认为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Config-index?: int--><!--Device-Config-index?: int-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -189,11 +194,11 @@ metered?: boolean
 
 **默认值：** false
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Config-metered?: boolean--><!--Device-Config-metered?: boolean-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -208,11 +213,11 @@ method?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Config-method?: string--><!--Device-Config-method?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -226,9 +231,9 @@ minSpeed?: MinSpeed
 
 **类型：** [MinSpeed](arkts-basicservices-agent-minspeed-i.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Config-minSpeed?: MinSpeed--><!--Device-Config-minSpeed?: MinSpeed-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -242,11 +247,11 @@ mode?: Mode
 
 **类型：** [Mode](arkts-basicservices-agent-mode-e.md)
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Config-mode?: Mode--><!--Device-Config-mode?: Mode-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -262,9 +267,9 @@ multipart?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-Config-multipart?: boolean--><!--Device-Config-multipart?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -280,11 +285,11 @@ network?: Network
 
 **默认值：** Network.ANY
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Config-network?: Network--><!--Device-Config-network?: Network-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -298,9 +303,9 @@ notification?: Notification
 
 **类型：** Notification
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-Config-notification?: Notification--><!--Device-Config-notification?: Notification-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -316,11 +321,11 @@ overwrite?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Config-overwrite?: boolean--><!--Device-Config-overwrite?: boolean-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -335,11 +340,11 @@ precise?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Config-precise?: boolean--><!--Device-Config-precise?: boolean-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -351,11 +356,11 @@ priority?: int
 
 任务的优先级。前台任务的优先级比后台任务高。任务模式相同的情况下，该配置项的数字越小优先级越高，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-Config-priority?: int--><!--Device-Config-priority?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -369,9 +374,9 @@ proxy?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Config-proxy?: string--><!--Device-Config-proxy?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -386,11 +391,11 @@ redirect?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Config-redirect?: boolean--><!--Device-Config-redirect?: boolean-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -405,11 +410,11 @@ retry?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Config-retry?: boolean--><!--Device-Config-retry?: boolean-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -424,11 +429,11 @@ roaming?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Config-roaming?: boolean--><!--Device-Config-roaming?: boolean-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -446,11 +451,11 @@ saveas?: string
 
 **默认值：** ./
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Config-saveas?: string--><!--Device-Config-saveas?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -464,9 +469,9 @@ timeout?: Timeout
 
 **类型：** Timeout
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Config-timeout?: Timeout--><!--Device-Config-timeout?: Timeout-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -480,11 +485,11 @@ title?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Config-title?: string--><!--Device-Config-title?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -498,11 +503,11 @@ token?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Config-token?: string--><!--Device-Config-token?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -516,11 +521,10 @@ url: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-Config-url: string--><!--Device-Config-url: string-End-->
-
 **系统能力：** SystemCapability.Request.FileTransferAgent
-

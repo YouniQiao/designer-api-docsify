@@ -16,15 +16,15 @@ Creates a **TCPSocket** object.
 
 **Since:** 7
 
-<!--Device-socket-function constructTCPSocketInstance(): TCPSocket--><!--Device-socket-function constructTCPSocketInstance(): TCPSocket-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| TCPSocket | TCPSocket** object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [TCPSocket](arkts-network-socket-tcpsocket-i.md) |
 
 **Examples**
 
@@ -32,4 +32,3 @@ Creates a **TCPSocket** object.
 import { socket } from '@kit.NetworkKit';
 let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
 ```
-

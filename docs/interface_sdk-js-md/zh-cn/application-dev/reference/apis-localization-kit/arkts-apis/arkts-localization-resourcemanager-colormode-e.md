@@ -2,9 +2,9 @@
 
 用于表示当前设备颜色模式。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-resourceManager-export enum ColorMode--><!--Device-resourceManager-export enum ColorMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -16,11 +16,11 @@ DARK = 0
 
 深色模式。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-ColorMode-DARK = 0--><!--Device-ColorMode-DARK = 0-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -32,11 +32,10 @@ LIGHT = 1
 
 浅色模式。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-ColorMode-LIGHT = 1--><!--Device-ColorMode-LIGHT = 1-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
-

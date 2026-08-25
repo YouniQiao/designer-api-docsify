@@ -16,27 +16,27 @@ function addUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md)
 
 **需要权限：** ohos.permission.SET_WIFI_INFO
 
-<!--Device-wifi-function addUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>--><!--Device-wifi-function addUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>-End-->
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| config | WifiDeviceConfig | 是 | WLAN配置信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | 表示操作结果，{ |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **示例**
 
@@ -113,24 +113,23 @@ function addUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<bo
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md)
 
 **需要权限：** ohos.permission.SET_WIFI_INFO
 
-<!--Device-wifi-function addUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void--><!--Device-wifi-function addUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void-End-->
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| config | WifiDeviceConfig | 是 | WLAN配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
 **示例**
 
 参见 [addUntrustedConfig](#adduntrustedconfig)
-

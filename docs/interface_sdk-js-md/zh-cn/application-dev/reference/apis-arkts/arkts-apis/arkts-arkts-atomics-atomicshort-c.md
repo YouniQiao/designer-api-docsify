@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export class AtomicShort--><!--Device-unnamed-export class AtomicShort-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,26 +23,24 @@ compareAndSwap(expected: short, val: short): short
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicShort-compareAndSwap(expected: short, val: short): short--><!--Device-AtomicShort-compareAndSwap(expected: short, val: short): short-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| expected | short | 是 | 预期的当前值。 |
-| val | short | 是 | 匹配成功时要写入的新值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| expected | short | 是 |
+| val | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| short | 修改前的旧值。 |
+| 类型 |
+| --- |
+| short |
 
 ## constructor
 
@@ -56,19 +52,17 @@ constructor(val: short)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicShort-constructor(val: short)--><!--Device-AtomicShort-constructor(val: short)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | short | 是 | 初始值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | short | 是 |
 
 ## exchange
 
@@ -80,25 +74,23 @@ exchange(val: short): short
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicShort-exchange(val: short): short--><!--Device-AtomicShort-exchange(val: short): short-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | short | 是 | 要写入的新值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| short | 更新前的旧值。 |
+| 类型 |
+| --- |
+| short |
 
 ## fetchAdd
 
@@ -110,25 +102,23 @@ fetchAdd(val: short): short
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicShort-fetchAdd(val: short): short--><!--Device-AtomicShort-fetchAdd(val: short): short-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | short | 是 | 执行加法运算的操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| short | 加法执行前的旧值。 |
+| 类型 |
+| --- |
+| short |
 
 ## fetchAnd
 
@@ -140,25 +130,23 @@ fetchAnd(val: short): short
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicShort-fetchAnd(val: short): short--><!--Device-AtomicShort-fetchAnd(val: short): short-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | short | 是 | 执行按位与运算的操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| short | 按位与运算前的旧值。 |
+| 类型 |
+| --- |
+| short |
 
 ## fetchOr
 
@@ -170,25 +158,23 @@ fetchOr(val: short): short
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicShort-fetchOr(val: short): short--><!--Device-AtomicShort-fetchOr(val: short): short-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | short | 是 | 执行按位或运算的操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| short | 按位或运算前的旧值。 |
+| 类型 |
+| --- |
+| short |
 
 ## fetchSub
 
@@ -200,25 +186,23 @@ fetchSub(val: short): short
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicShort-fetchSub(val: short): short--><!--Device-AtomicShort-fetchSub(val: short): short-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | short | 是 | 执行减法运算的操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| short | 减法执行前的旧值。 |
+| 类型 |
+| --- |
+| short |
 
 ## fetchXor
 
@@ -230,25 +214,23 @@ fetchXor(val: short): short
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicShort-fetchXor(val: short): short--><!--Device-AtomicShort-fetchXor(val: short): short-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | short | 是 | 执行按位异或运算的操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| short | 按位异或运算前的旧值。 |
+| 类型 |
+| --- |
+| short |
 
 ## isLockFree
 
@@ -260,19 +242,17 @@ static isLockFree(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicShort-static isLockFree(): boolean--><!--Device-AtomicShort-static isLockFree(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true表示无锁实现，false表示内部可能使用阻塞式同步机制。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## load
 
@@ -284,19 +264,17 @@ load(): short
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicShort-load(): short--><!--Device-AtomicShort-load(): short-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| short | 当前保存的值。 |
+| 类型 |
+| --- |
+| short |
 
 ## store
 
@@ -308,17 +286,14 @@ store(val: short): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicShort-store(val: short): void--><!--Device-AtomicShort-store(val: short): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | short | 是 | 要写入的新值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | short | 是 |

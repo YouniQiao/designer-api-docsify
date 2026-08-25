@@ -1,12 +1,12 @@
 # TypedFrameNode
 
-Extends [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) to define a FrameNode with specific type constraints.
+Extends [FrameNode](arkts-arkui-framenode-c.md) to define a FrameNode with specific type constraints.
 
-**Inheritance/Implementation:** TypedFrameNode extends [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md)
+**Inheritance/Implementation:** TypedFrameNode extends [FrameNode](arkts-arkui-framenode-c.md)
 
 **Since:** 12
 
-<!--Device-unnamed-export interface TypedFrameNode--><!--Device-unnamed-export interface TypedFrameNode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +22,11 @@ Attribute configuration object for setting or updating common and specific attri
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TypedFrameNode-readonly attribute: T--><!--Device-TypedFrameNode-readonly attribute: T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,11 +42,10 @@ Construction parameters for creating a component, used to set or update the comp
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-TypedFrameNode-initialize: C--><!--Device-TypedFrameNode-initialize: C-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

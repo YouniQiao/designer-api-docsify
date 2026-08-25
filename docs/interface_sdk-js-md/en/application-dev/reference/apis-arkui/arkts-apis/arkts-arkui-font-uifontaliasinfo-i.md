@@ -1,10 +1,10 @@
 # UIFontAliasInfo
 
-**Since:** 23
+UI font configuration of the system.
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**Since:** 11
 
-<!--Device-font-interface UIFontAliasInfo--><!--Device-font-interface UIFontAliasInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,37 +20,36 @@ import { font } from '@kit.ArkUI';
 name: string
 ```
 
-Font set name.
+Alias name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIFontAliasInfo-name: string--><!--Device-UIFontAliasInfo-name: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## weight
 
 ```TypeScript
-weight: double
+weight: number
 ```
 
-Weight the font set contains only fonts with, if weight = 0, this font set can contain fonts with any weight.
+Weight of the fonts included in the font family. If the value is greater than 0, the font family contains only the fonts with the specified weight. If the value is 0, the font family contains all fonts.Valid values are **0**, **100**, **400**, **700**, and **900**.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIFontAliasInfo-weight: double--><!--Device-UIFontAliasInfo-weight: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,7 +4,7 @@ Tool execution options.
 
 **Since:** 26.0.0
 
-<!--Device-cliManager-interface ExecOptions--><!--Device-cliManager-interface ExecOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -30,9 +30,9 @@ Indicates whether the tool is executed in the background.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ExecOptions-background?: boolean--><!--Device-ExecOptions-background?: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -41,20 +41,20 @@ Indicates whether the tool is executed in the background.
 ## timeout
 
 ```TypeScript
-timeout?: long
+timeout?: number
 ```
 
 Indicates the maximum execution time of the tool, in seconds.
 
-**Type:** long
+**Type:** number
 
 **Default:** 1800
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ExecOptions-timeout?: long--><!--Device-ExecOptions-timeout?: long-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -63,22 +63,21 @@ Indicates the maximum execution time of the tool, in seconds.
 ## yieldMs
 
 ```TypeScript
-yieldMs?: long
+yieldMs?: number
 ```
 
 Indicates the foreground waiting timeout in milliseconds.
 
-**Type:** long
+**Type:** number
 
 **Default:** 0
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ExecOptions-yieldMs?: long--><!--Device-ExecOptions-yieldMs?: long-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
-

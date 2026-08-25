@@ -4,7 +4,7 @@ IPC上下文信息，包括PID和UID、本端和对端设备ID、检查接口调
 
 **起始版本：** 23
 
-<!--Device-rpc-class CallingInfo--><!--Device-rpc-class CallingInfo-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -28,7 +28,7 @@ readonly callerPid: number
 
 **起始版本：** 23
 
-<!--Device-CallingInfo-readonly callerPid: number--><!--Device-CallingInfo-readonly callerPid: number-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -46,7 +46,7 @@ readonly callerTokenId: number
 
 **起始版本：** 23
 
-<!--Device-CallingInfo-readonly callerTokenId: number--><!--Device-CallingInfo-readonly callerTokenId: number-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -64,7 +64,7 @@ readonly callerUid: number
 
 **起始版本：** 23
 
-<!--Device-CallingInfo-readonly callerUid: number--><!--Device-CallingInfo-readonly callerUid: number-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -82,7 +82,7 @@ readonly isLocalCalling: boolean
 
 **起始版本：** 23
 
-<!--Device-CallingInfo-readonly isLocalCalling: boolean--><!--Device-CallingInfo-readonly isLocalCalling: boolean-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -98,7 +98,7 @@ readonly localDeviceId: string
 
 **起始版本：** 23
 
-<!--Device-CallingInfo-readonly localDeviceId: string--><!--Device-CallingInfo-readonly localDeviceId: string-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -114,7 +114,6 @@ readonly remoteDeviceId: string
 
 **起始版本：** 23
 
-<!--Device-CallingInfo-readonly remoteDeviceId: string--><!--Device-CallingInfo-readonly remoteDeviceId: string-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
-

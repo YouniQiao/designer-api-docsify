@@ -4,9 +4,7 @@ Interface for objects that can be converted to JSON.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export interface JsonSerializable--><!--Device-unnamed-export interface JsonSerializable-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,17 +23,14 @@ Method to convert the object to a JSON string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonSerializable-toJSON(): Any--><!--Device-JsonSerializable-toJSON(): Any-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Any | The JSON any representation. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Any |

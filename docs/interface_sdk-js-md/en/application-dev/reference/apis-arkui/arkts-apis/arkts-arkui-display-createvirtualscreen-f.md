@@ -14,34 +14,34 @@ function createVirtualScreen(config: VirtualScreenConfig): Promise<long>
 
 Creates a virtual screen. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 16
+
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_VIRTUAL_SCREEN
-
-<!--Device-display-function createVirtualScreen(config: VirtualScreenConfig): Promise<long>--><!--Device-display-function createVirtualScreen(config: VirtualScreenConfig): Promise<long>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| config | [VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md) | Yes | Virtual screen parameters. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| config | [VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;long&gt; | Promise used to return the screen ID of the created virtual screen. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;long & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
 
 **Examples**
 
@@ -72,4 +72,3 @@ display.createVirtualScreen(config).then((screenId: number) => {
   console.error(`Failed to create the virtual screen. Code:${err.code},message is ${err.message}`);
 });
 ```
-

@@ -4,9 +4,7 @@ Declaration of the composable title bar. Composable title bar represents a commo
 
 **Since:** 26.0.0
 
-**Decorator:** @ComponentV2
-
-<!--Device-unnamed-export declare struct ComposeTitleBarV2--><!--Device-unnamed-export declare struct ComposeTitleBarV2-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,6 +14,22 @@ Declaration of the composable title bar. Composable title bar represents a commo
 import { ComposeTitleBarV2, ComposeTitleBarV2MenuItem, ComposeTitleBarV2MenuItemParams } from '@kit.ArkUI';
 ```
 
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## item
 
 ```TypeScript
@@ -24,17 +38,15 @@ item?: ComposeTitleBarV2MenuItem
 
 A single menu item for the profile picture on the left.
 
-**Type:** [ComposeTitleBarV2MenuItem](../../apis-default/arkts-apis/arkts-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)
+**Type:** [ComposeTitleBarV2MenuItem](arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)
 
 **Since:** 26.0.0
 
-**Decorator:** @Param
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ComposeTitleBarV2-@Param  item?: ComposeTitleBarV2MenuItem--><!--Device-ComposeTitleBarV2-@Param  item?: ComposeTitleBarV2MenuItem-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,17 +58,15 @@ menuItems?: Array<ComposeTitleBarV2MenuItem>
 
 Menu items on the right side.
 
-**Type:** Array&lt;[ComposeTitleBarV2MenuItem](../../apis-default/arkts-apis/arkts-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)&gt;
+**Type:** Array&lt;[ComposeTitleBarV2MenuItem](arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)&gt;
 
 **Since:** 26.0.0
 
-**Decorator:** @Param
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ComposeTitleBarV2-@Param  menuItems?: Array<ComposeTitleBarV2MenuItem>--><!--Device-ComposeTitleBarV2-@Param  menuItems?: Array<ComposeTitleBarV2MenuItem>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,13 +82,11 @@ Sub-title of this title bar.
 
 **Since:** 26.0.0
 
-**Decorator:** @Param
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ComposeTitleBarV2-@Param  subtitle?: ResourceStr--><!--Device-ComposeTitleBarV2-@Param  subtitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,13 +102,10 @@ Title of this title bar.
 
 **Since:** 26.0.0
 
-**Decorator:** @Param
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ComposeTitleBarV2-@Param  title: ResourceStr--><!--Device-ComposeTitleBarV2-@Param  title: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

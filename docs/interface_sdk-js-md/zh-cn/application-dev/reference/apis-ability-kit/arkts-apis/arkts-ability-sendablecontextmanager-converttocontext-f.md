@@ -16,31 +16,31 @@ function convertToContext(sendableContext: SendableContext): common.Context
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-sendableContextManager-function convertToContext(sendableContext: SendableContext): common.Context--><!--Device-sendableContextManager-function convertToContext(sendableContext: SendableContext): common.Context-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sendableContext | SendableContext | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sendableContext | [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| common.Context | [Context]{ |
+| 类型 |
+| --- |
+| common.Context |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -127,4 +127,3 @@ workerPort.onerror = (e: ErrorEvent) => {
   hilog.info(0x0000, 'testTag', '%{public}s', 'onerror');
 }
 ```
-

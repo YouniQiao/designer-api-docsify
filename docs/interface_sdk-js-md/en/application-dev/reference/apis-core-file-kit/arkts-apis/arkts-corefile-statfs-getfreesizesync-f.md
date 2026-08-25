@@ -14,41 +14,41 @@ function getFreeSizeSync(path: string): long
 
 Obtains the free size of the specified file system, in bytes. This API returns the result synchronously.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-statfs-function getFreeSizeSync(path: string): long--><!--Device-statfs-function getFreeSizeSync(path: string): long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| path | string | Yes | File path of the file system. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| path | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Free size obtained, in bytes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900018 | Not a directory |
-| 13900030 | File name too long |
-| 13900031 | Function not implemented |
-| 13900033 | Too many symbolic links encountered |
-| 13900038 | Value too large for defined data type |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900002 |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900018 |
+| 13900030 |
+| 13900031 |
+| 13900033 |
+| 13900038 |
+| 13900042 |
 
 **Examples**
 
@@ -61,4 +61,3 @@ let path = context.filesDir;
 let number = statfs.getFreeSizeSync(path);
 console.info("getFreeSizeSync succeed, Size: " + number);
 ```
-

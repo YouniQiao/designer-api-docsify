@@ -4,7 +4,7 @@ Describes the popup message text style.
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface PopupMessageOptions--><!--Device-unnamed-declare interface PopupMessageOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +28,11 @@ Font settings of the popup message.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PopupMessageOptions-font?: Font--><!--Device-PopupMessageOptions-font?: Font-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,11 +48,10 @@ Text color of the popup message.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-PopupMessageOptions-textColor?: ResourceColor--><!--Device-PopupMessageOptions-textColor?: ResourceColor-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

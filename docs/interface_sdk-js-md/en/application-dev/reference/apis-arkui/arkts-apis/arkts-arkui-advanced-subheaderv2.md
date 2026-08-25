@@ -1,4 +1,4 @@
-# @ohos.arkui.advanced.SubHeaderV2
+# @ohos.arkui.advanced.SubHeaderV2(api/@ohos.arkui.advanced.SubHeaderV2.d.ts)
 
 ## Modules to Import
 
@@ -10,39 +10,38 @@ import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, 
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [SubHeaderV2OperationItem](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitem-c.md) | Represents an item in the operation area. |
-| [SubHeaderV2Select](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2select-c.md) | Defines the content and events for selection. |
-| [SubHeaderV2Title](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2title-c.md) | Defines the title settings for the subheader. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SubHeaderV2OperationItem(api/@ohos.arkui.advanced.SubHeaderV2.d.ts)](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitem-c.md) |
+| [SubHeaderV2Select(api/@ohos.arkui.advanced.SubHeaderV2.d.ts)](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2select-c.md) |
+| [SubHeaderV2Title(api/@ohos.arkui.advanced.SubHeaderV2.d.ts)](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2title-c.md) |
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [SubHeaderV2](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2-s.md) | The component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section.This component is implemented based on [state management V2](../../../ui/state-management/arkts-state-management-overview.md#state-management-v2). Compared with [state management V1](../../../ui/state-management/arkts-state-management-overview.md#state-management-v1), V2 offers a higher level of observation and management over data objects beyond the component level. You can now more easily manage subheader data and states with greater flexibility, leading to faster UI updates. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SubHeaderV2(api/@ohos.arkui.advanced.SubHeaderV2.d.ts)](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2-s.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [SubHeaderV2OperationItemOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitemoptions-i.md) | Defines the options for initializing a **SubHeaderV2OperationItem** object. |
-| [SubHeaderV2SelectOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2selectoptions-i.md) | Defines the options for initializing a **SubHeaderV2Select** object. |
-| [SubHeaderV2TitleOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2titleoptions-i.md) | Defines the options for initializing a **SubHeaderV2Title** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SubHeaderV2OperationItemOptions(api/@ohos.arkui.advanced.SubHeaderV2.d.ts)](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitemoptions-i.md) |
+| [SubHeaderV2SelectOptions(api/@ohos.arkui.advanced.SubHeaderV2.d.ts)](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2selectoptions-i.md) |
+| [SubHeaderV2TitleOptions(api/@ohos.arkui.advanced.SubHeaderV2.d.ts)](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2titleoptions-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [SubHeaderV2OperationType](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationtype-e.md) | Defines the style of elements in the operation area. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SubHeaderV2OperationType(api/@ohos.arkui.advanced.SubHeaderV2.d.ts)](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationtype-e.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [SubHeaderV2IconType](arkts-arkui-subheaderv2icontype-t.md) | SubHeaderV2IconType |
-| [SubHeaderV2OperationItemAction](arkts-arkui-subheaderv2operationitemaction-t.md) | Defines the callback for items in the operation area. |
-| [SubHeaderV2OperationItemType](arkts-arkui-subheaderv2operationitemtype-t.md) | SubHeaderV2OperationItemType |
-| [SubHeaderV2SelectOnSelect](arkts-arkui-subheaderv2selectonselect-t.md) | Defines the callback invoked when an item in the drop-down list box is selected. |
-| [SubHeaderV2TitleBuilder](arkts-arkui-subheaderv2titlebuilder-t.md) | Defines the callback used to customize the content of the title area. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SubHeaderV2IconType(api/@ohos.arkui.advanced.SubHeaderV2.d.ts)](arkts-arkui-subheaderv2icontype-t.md) |
+| [SubHeaderV2OperationItemAction(api/@ohos.arkui.advanced.SubHeaderV2.d.ts)](arkts-arkui-subheaderv2operationitemaction-t.md) |
+| [SubHeaderV2OperationItemType(api/@ohos.arkui.advanced.SubHeaderV2.d.ts)](arkts-arkui-subheaderv2operationitemtype-t.md) |
+| [SubHeaderV2SelectOnSelect(api/@ohos.arkui.advanced.SubHeaderV2.d.ts)](arkts-arkui-subheaderv2selectonselect-t.md) |
+| [SubHeaderV2TitleBuilder(api/@ohos.arkui.advanced.SubHeaderV2.d.ts)](arkts-arkui-subheaderv2titlebuilder-t.md) |

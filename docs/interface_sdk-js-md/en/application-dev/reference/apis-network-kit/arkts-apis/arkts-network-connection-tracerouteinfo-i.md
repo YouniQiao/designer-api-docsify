@@ -4,7 +4,7 @@ Defines the route tracing information.
 
 **Since:** 26.0.0
 
-<!--Device-connection-export interface TraceRouteInfo--><!--Device-connection-export interface TraceRouteInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -26,45 +26,44 @@ IP address to jump to.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-TraceRouteInfo-address: string--><!--Device-TraceRouteInfo-address: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## jumpNo
 
 ```TypeScript
-jumpNo: int
+jumpNo: number
 ```
 
 Jump number.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-TraceRouteInfo-jumpNo: int--><!--Device-TraceRouteInfo-jumpNo: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## rtt
 
 ```TypeScript
-rtt: int[]
+rtt: number[]
 ```
 
 Round-trip time (RTT), in milliseconds. Five probe packets are sent for each jump. The array elements are the minimum, average, maximum, and standard deviation of the RTTs of these probe packets, respectively.
 
-**Type:** int[]
+**Type:** number[]
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TraceRouteInfo-rtt: int[]--><!--Device-TraceRouteInfo-rtt: int[]-End-->
-
 **System capability:** SystemCapability.Communication.NetManager.Core
-

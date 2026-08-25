@@ -1,5 +1,8 @@
 # @ohos.application.DataShareExtensionAbility
 
+The **DataShareExtensionAbility** module provides data share services based on the ExtensionAbility.
+
+
 ## Modules to Import
 
 ```TypeScript
@@ -11,25 +14,24 @@ import { DataShareExtensionAbility } from '@kit.ArkData';
 <!--Del-->
 ### Classes(System API)
 
-| Name | Description |
-| --- | --- |
-| [DataShareExtensionAbility](arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md) | This module provides data sharing and expansion capabilities. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DataShareExtensionAbility](arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Types(System API)
 
-| Name | Description |
-| --- | --- |
-| [BatchInsertFn](arkts-arkdata-batchinsertfn-t-sys.md) | Callback function called when inserting multiple data records into the database. |
-| [BatchUpdateFn](arkts-arkdata-batchupdatefn-t-sys.md) | Callback function called when updating multiple data records in the database. |
-| [DeleteFn](arkts-arkdata-deletefn-t-sys.md) | Callback function called when deleting one or more data records in the database. |
-| [DenormalizeUriFn](arkts-arkdata-denormalizeurifn-t-sys.md) | Callback function called when converting the given normalized URI into a denormalized URI. |
-| [InsertFn](arkts-arkdata-insertfn-t-sys.md) | Callback function called when inserting a data record into the database. |
-| [NormalizeUriFn](arkts-arkdata-normalizeurifn-t-sys.md) | Callback function called when converting the given URI into a normalized URI. |
-| [OnCreateFn](arkts-arkdata-oncreatefn-t-sys.md) | Callback function called when a datashare extension ability is started for initialization. |
-| [QueryFn](arkts-arkdata-queryfn-t-sys.md) | Callback function called when querying one or more data records in the database. |
-| [UpdateFn](arkts-arkdata-updatefn-t-sys.md) | Callback function called when updating one or more data records in the database. |
-| [UpdateOperation](arkts-arkdata-updateoperation-t-sys.md) | Represents the batch update operation information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BatchInsertFn](arkts-arkdata-batchinsertfn-t-sys.md) |
+| [BatchUpdateFn](arkts-arkdata-batchupdatefn-t-sys.md) |
+| [DeleteFn](arkts-arkdata-deletefn-t-sys.md) |
+| [DenormalizeUriFn](arkts-arkdata-denormalizeurifn-t-sys.md) |
+| [InsertFn](arkts-arkdata-insertfn-t-sys.md) |
+| [NormalizeUriFn](arkts-arkdata-normalizeurifn-t-sys.md) |
+| [OnCreateFn](arkts-arkdata-oncreatefn-t-sys.md) |
+| [QueryFn](arkts-arkdata-queryfn-t-sys.md) |
+| [UpdateFn](arkts-arkdata-updatefn-t-sys.md) |
+| [UpdateOperation](arkts-arkdata-updateoperation-t-sys.md) |
 <!--DelEnd-->
-

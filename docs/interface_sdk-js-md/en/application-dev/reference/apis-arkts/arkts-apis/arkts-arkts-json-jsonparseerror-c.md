@@ -6,9 +6,7 @@ Error thrown when parsing JSON fails.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class JsonParseError--><!--Device-unnamed-export class JsonParseError-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,27 +25,25 @@ Creates a JsonParseError with location information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonParseError-static $_invoke(msg: string, start_offset?: int, end_offset?: int): JsonParseError--><!--Device-JsonParseError-static $_invoke(msg: string, start_offset?: int, end_offset?: int): JsonParseError-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| msg | string | Yes | Error message |
-| start_offset | int | No | Start offset in the source string <br>The value should be an integer. |
-| end_offset | int | No | End offset in the source string <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| msg | string | Yes |
+| start_offset | int | No |
+| end_offset | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [JsonParseError](arkts-arkts-json-jsonparseerror-c.md) | The created JsonParseError |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [JsonParseError](arkts-arkts-json-jsonparseerror-c.md) |
 
 ## constructor
 
@@ -59,18 +55,15 @@ Constructor for creating a JsonParseError.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonParseError-public constructor(message?: string, options?: ErrorOptions)--><!--Device-JsonParseError-public constructor(message?: string, options?: ErrorOptions)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | string | No | Error message. |
-| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No | Error options. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | string | No |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No |

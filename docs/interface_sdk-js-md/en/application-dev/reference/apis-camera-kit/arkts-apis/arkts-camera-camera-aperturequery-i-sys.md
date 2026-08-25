@@ -1,14 +1,12 @@
-# ApertureQuery (System API)
+# ApertureQuery
 
 Provides the aperture query capability.
 
-**Since:** 23
+**Since:** 24
 
-<!--Device-camera-interface ApertureQuery--><!--Device-camera-interface ApertureQuery-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -16,58 +14,23 @@ Provides the aperture query capability.
 import { camera } from '@kit.CameraKit';
 ```
 
-## getSupportedPhysicalApertures
-
-```TypeScript
-getSupportedPhysicalApertures(): Array<PhysicalAperture>
-```
-
-Gets the supported physical apertures. Move to ApertureQuery interface from Aperture since 12.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-ApertureQuery-getSupportedPhysicalApertures(): Array<PhysicalAperture>--><!--Device-ApertureQuery-getSupportedPhysicalApertures(): Array<PhysicalAperture>-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Array&lt;[PhysicalAperture](arkts-camera-camera-physicalaperture-i-sys.md)&gt; | The array of supported physical apertures. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 11 - 23 |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal.<br>**Applicable version:** 24 and later |
-
-**Examples**
-
-```TypeScript
-function getSupportedPhysicalApertures(session: camera.PortraitPhotoSession): Array<camera.PhysicalAperture> {
-  let physicalApertures: Array<camera.PhysicalAperture> = session.getSupportedPhysicalApertures();
-  return physicalApertures;
-}
-```
-
 ## getSupportedVirtualApertures
 
+ArkTS-Dyn:
+```TypeScript
+getSupportedVirtualApertures(): Array<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getSupportedVirtualApertures(): Array<double>
 ```
 
 Obtains the supported virtual apertures.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ApertureQuery-getSupportedVirtualApertures(): Array<double>--><!--Device-ApertureQuery-getSupportedVirtualApertures(): Array<double>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -75,16 +38,16 @@ Obtains the supported virtual apertures.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;double&gt; | Array of virtual apertures supported. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;double & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 **Examples**
 
@@ -94,4 +57,3 @@ function getSupportedVirtualApertures(session: camera.PortraitPhotoSession): Arr
   return virtualApertures;
 }
 ```
-

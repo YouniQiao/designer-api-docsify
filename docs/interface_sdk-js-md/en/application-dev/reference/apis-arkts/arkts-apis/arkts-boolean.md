@@ -9,7 +9,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Boolean](arkts-arkts-boolean-c.md) | Represents boxed boolean value and related operations |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Boolean](arkts-arkts-boolean-c.md) |

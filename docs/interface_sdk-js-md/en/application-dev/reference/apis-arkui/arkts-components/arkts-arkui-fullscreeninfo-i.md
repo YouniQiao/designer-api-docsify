@@ -9,7 +9,7 @@ Describes whether the video is in full-screen playback mode.
 
 **Since:** 18
 
-<!--Device-unnamed-interface FullscreenInfo--><!--Device-unnamed-interface FullscreenInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,10 @@ Callback that indicates whether the video playback is in full-screen mode. **tru
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-FullscreenInfo-fullscreen: boolean--><!--Device-FullscreenInfo-fullscreen: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

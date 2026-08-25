@@ -4,7 +4,7 @@ Enumerates the connection modes.
 
 **Since:** 26.0.0
 
-<!--Device-manager-enum ConnectionMode--><!--Device-manager-enum ConnectionMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -20,9 +20,9 @@ The device cannot be connected.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ConnectionMode-SLE_MODE_UNCONNECTABLE = 0--><!--Device-ConnectionMode-SLE_MODE_UNCONNECTABLE = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -38,11 +38,10 @@ The device can be connected.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ConnectionMode-SLE_MODE_CONNECTABLE = 1--><!--Device-ConnectionMode-SLE_MODE_CONNECTABLE = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
-

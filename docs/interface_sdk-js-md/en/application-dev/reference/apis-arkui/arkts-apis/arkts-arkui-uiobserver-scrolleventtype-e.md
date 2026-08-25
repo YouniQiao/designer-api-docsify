@@ -4,7 +4,7 @@ ScrollEvent type.@enum { number }
 
 **Since:** 12
 
-<!--Device-uiObserver-export enum ScrollEventType--><!--Device-uiObserver-export enum ScrollEventType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ When the ScrollEvent starts.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ScrollEventType-SCROLL_START = 0--><!--Device-ScrollEventType-SCROLL_START = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ When the ScrollEvent stops.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ScrollEventType-SCROLL_STOP = 1--><!--Device-ScrollEventType-SCROLL_STOP = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

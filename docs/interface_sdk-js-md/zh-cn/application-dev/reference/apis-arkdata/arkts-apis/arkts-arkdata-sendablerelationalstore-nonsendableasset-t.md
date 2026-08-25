@@ -8,9 +8,8 @@ type NonSendableAsset = relationalStore.Asset
 
 **起始版本：** 12
 
-<!--Device-sendableRelationalStore-type NonSendableAsset = relationalStore.Asset--><!--Device-sendableRelationalStore-type NonSendableAsset = relationalStore.Asset-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **属性类型：** relationalStore.Asset
-

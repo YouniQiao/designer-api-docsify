@@ -4,13 +4,9 @@ Represents the custom data type for applications only. It is a child class of [U
 
 **Inheritance/Implementation:** ApplicationDefinedRecord extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)
 
-**Since:** 23
+**Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-unifiedDataChannel-class ApplicationDefinedRecord--><!--Device-unifiedDataChannel-class ApplicationDefinedRecord-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -19,6 +15,46 @@ Represents the custom data type for applications only. It is a child class of [U
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
+
+## applicationDefinedType
+
+```TypeScript
+set applicationDefinedType(value: string)
+```
+
+Indicates the type of data, should always be started with 'ApplicationDefined.', will return error otherwise
+
+**Type:** string
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+## rawData
+
+```TypeScript
+set rawData(value: Uint8Array)
+```
+
+Indicates the raw data of application defined data
+
+**Type:** Uint8Array
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **Examples**
 
@@ -29,4 +65,3 @@ record.applicationDefinedType = 'ApplicationDefinedType';
 record.rawData = u8Array;
 let unifiedData = new unifiedDataChannel.UnifiedData(record);
 ```
-

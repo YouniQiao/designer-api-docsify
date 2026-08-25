@@ -26,9 +26,9 @@ TabContent()
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-TabContentInterface-(): TabContentAttribute--><!--Device-TabContentInterface-(): TabContentAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,19 +36,18 @@ TabContent()
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) | 下划线风格对象。 |
-| [LabelStyle](arkts-arkui-labelstyle-i.md) | label文本和字体的样式对象。 |
+| 名称 |
+| --- |
+| [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) |
+| [LabelStyle](arkts-arkui-labelstyle-i.md) |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 作为DrawableTabBarIndicator对象中drawable属性的入参对象。 |
+| 名称 |
+| --- |
+| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-
+| 名称 |
+| --- |

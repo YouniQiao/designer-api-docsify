@@ -4,7 +4,7 @@ Define start line info used in GridLayoutOptions.
 
 **Since:** 23
 
-<!--Device-unnamed-declare interface StartLineInfo--><!--Device-unnamed-declare interface StartLineInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,18 +18,18 @@ Define start line info used in GridLayoutOptions.
 ## startIndex
 
 ```TypeScript
-startIndex: int
+startIndex: number
 ```
 
 Define the start index of the row where the target index or offset is located.
 
-**Type:** int
+**Type:** number
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-StartLineInfo-startIndex: int--><!--Device-StartLineInfo-startIndex: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,18 +38,18 @@ Define the start index of the row where the target index or offset is located.
 ## startLine
 
 ```TypeScript
-startLine: int
+startLine: number
 ```
 
 Define the start row of the item with startIndex.
 
-**Type:** int
+**Type:** number
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-StartLineInfo-startLine: int--><!--Device-StartLineInfo-startLine: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,18 +58,18 @@ Define the start row of the item with startIndex.
 ## startOffset
 
 ```TypeScript
-startOffset: double
+startOffset: number
 ```
 
 Offset between the top of the **GridItem** corresponding to **startIndex** and the top of the **Grid**. <br>Unit: vp
 
-**Type:** double
+**Type:** number
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-StartLineInfo-startOffset: double--><!--Device-StartLineInfo-startOffset: double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,20 +78,19 @@ Offset between the top of the **GridItem** corresponding to **startIndex** and t
 ## totalOffset
 
 ```TypeScript
-totalOffset: double
+totalOffset: number
 ```
 
 Total scrolling offset, that is, the offset between the top of the first **GridItem** in the **Grid** component and the top of the **Grid** component.<br>Unit: vp
 
-**Type:** double
+**Type:** number
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-StartLineInfo-totalOffset: double--><!--Device-StartLineInfo-totalOffset: double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

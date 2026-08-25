@@ -16,15 +16,15 @@ function getKeyboardDelegate(): KeyboardDelegate
 
 **起始版本：** 9
 
-<!--Device-inputMethodEngine-function getKeyboardDelegate(): KeyboardDelegate--><!--Device-inputMethodEngine-function getKeyboardDelegate(): KeyboardDelegate-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | 客户端编辑事件监听代理。 |
+| 类型 |
+| --- |
+| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) |
 
 **示例**
 
@@ -44,17 +44,16 @@ function getKeyboardDelegate(): KeyboardDelegate | null
 
 **起始版本：** 23
 
-<!--Device-inputMethodEngine-function getKeyboardDelegate(): KeyboardDelegate | null--><!--Device-inputMethodEngine-function getKeyboardDelegate(): KeyboardDelegate | null-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) \| null | 客户端编辑事件监听代理。 |
+| 类型 |
+| --- |
+| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) \| null |
 
 **示例**
 
 参见 [getKeyboardDelegate](#getkeyboarddelegate)
-

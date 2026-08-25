@@ -14,32 +14,32 @@ function setCustomCursor(windowId: int, pixelMap: image.PixelMap, focusX?: int, 
 
 设置指定窗口的自定义光标样式，此接口仅支持设置本应用进程内窗口的自定义光标样式，如需通过UIExtensionAbility进程设置宿主窗口的自定义光标样式，请参阅 [setCustomCursor](../../../reference/apis-arkui/arkts-apis-uicontext-cursorcontroller.md#setcustomcursor)，使用 Promise异步回调。<br>应用窗口布局改变、热区切换、页面跳转、光标移出再回到窗口、光标在窗口不同区域移动，以上场景可能导致光标切换回系统样式，需要开发者重新设置光标样式。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-pointer-function setCustomCursor(windowId: int, pixelMap: image.PixelMap, focusX?: int, focusY?: int): Promise<void>--><!--Device-pointer-function setCustomCursor(windowId: int, pixelMap: image.PixelMap, focusX?: int, focusY?: int): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| windowId | int | 是 | 窗口ID。取值为大于0的整数。 |
-| pixelMap | image.PixelMap | 是 | 自定义光标资源。 |
-| focusX | int | 否 | 自定义光标焦点x，取值范围：大于等于0，默认为0，单位为像素（px）。 |
-| focusY | int | 否 | 自定义光标焦点y，取值范围：大于等于0，默认为0，单位为像素（px）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| windowId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| pixelMap | image.PixelMap | 是 |
+| [focusX](arkts-input-pointer-customcursor-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| [focusY](arkts-input-pointer-customcursor-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -237,34 +237,33 @@ function setCustomCursor(windowId: int, cursor: CustomCursor, config: CursorConf
 
 设置指定窗口的自定义光标样式，此接口仅支持设置本应用进程内窗口的自定义光标样式，如需通过UIExtensionAbility进程设置宿主窗口的自定义光标样式，请参阅 [setCustomCursor](../../../reference/apis-arkui/arkts-apis-uicontext-cursorcontroller.md#setcustomcursor)，使用 Promise异步回调。<br>应用窗口布局改变、热区切换、页面跳转、光标移出再回到窗口、光标在窗口不同区域移动，以上场景可能导致光标切换回系统样式，需要开发者重新设置光标样式。
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-pointer-function setCustomCursor(windowId: int, cursor: CustomCursor, config: CursorConfig): Promise<void>--><!--Device-pointer-function setCustomCursor(windowId: int, cursor: CustomCursor, config: CursorConfig): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| windowId | int | 是 | 窗口ID。取值为大于0的整数。 |
-| cursor | [CustomCursor](arkts-input-pointer-customcursor-i.md) | 是 | 自定义光标资源。 |
-| config | [CursorConfig](arkts-input-pointer-cursorconfig-i.md) | 是 | 自定义光标配置，用于配置是否根据系统设置调整光标大小。如果CursorConfig中followSystem设置为true，则光标大小的可调整范围为： [光标资源图大小, 256×256]。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| windowId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| cursor | [CustomCursor](arkts-input-pointer-customcursor-i.md) | 是 |
+| config | [CursorConfig](arkts-input-pointer-cursorconfig-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Abnormal windowId parameter passed in; <br>2. Abnormal pixelMap parameter passed in; 3. Abnormal focusX parameter passed in; <br>4. Abnormal focusY parameter passed in. |
-| [26500001](../errorcode-pointer.md#26500001-无效的windowid) | Invalid windowId. Possible causes: The window id does not belong to the current process. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [26500001](../errorcode-pointer.md#26500001-无效的windowid) |
 
 **示例**
 
 参见 [setCustomCursor](#setcustomcursor)
-

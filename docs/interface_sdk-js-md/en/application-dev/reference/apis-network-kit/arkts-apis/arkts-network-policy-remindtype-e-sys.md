@@ -4,7 +4,7 @@ Enumerates the reminder types.
 
 **Since:** 10
 
-<!--Device-policy-export enum RemindType--><!--Device-policy-export enum RemindType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -20,7 +20,7 @@ Warning.
 
 **Since:** 10
 
-<!--Device-RemindType-REMIND_TYPE_WARNING = 1--><!--Device-RemindType-REMIND_TYPE_WARNING = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -36,9 +36,8 @@ Limit.
 
 **Since:** 10
 
-<!--Device-RemindType-REMIND_TYPE_LIMIT = 2--><!--Device-RemindType-REMIND_TYPE_LIMIT = 2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
-

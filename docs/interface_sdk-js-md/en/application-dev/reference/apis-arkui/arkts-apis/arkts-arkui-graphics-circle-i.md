@@ -4,7 +4,7 @@ Describes a circle.
 
 **Since:** 12
 
-<!--Device-unnamed-export interface Circle--><!--Device-unnamed-export interface Circle-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +20,11 @@ X-coordinate of the center of the circle, in px.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Circle-centerX: number--><!--Device-Circle-centerX: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,11 +40,11 @@ Y-coordinate of the center of the circle, in px.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Circle-centerY: number--><!--Device-Circle-centerY: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,11 +60,10 @@ Radius of the circle, in px.Value range: [0, +∞).
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-Circle-radius: number--><!--Device-Circle-radius: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

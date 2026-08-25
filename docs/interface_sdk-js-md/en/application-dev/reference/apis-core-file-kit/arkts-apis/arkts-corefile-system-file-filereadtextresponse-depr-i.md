@@ -4,9 +4,9 @@ Returns the text read, including the text content.
 
 **Since:** 3
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface FileReadTextResponse--><!--Device-unnamed-export interface FileReadTextResponse-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -27,9 +27,8 @@ Text read from the specified file.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 10
 
-<!--Device-FileReadTextResponse-text: string--><!--Device-FileReadTextResponse-text: string-End-->
-
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
-

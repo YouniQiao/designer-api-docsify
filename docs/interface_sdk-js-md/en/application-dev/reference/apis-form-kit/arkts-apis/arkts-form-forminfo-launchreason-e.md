@@ -2,9 +2,9 @@
 
 Indicates the launch reason of a form.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-formInfo-enum LaunchReason--><!--Device-formInfo-enum LaunchReason-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -16,11 +16,11 @@ FORM_DEFAULT = 1
 
 Indicates the launch reason of a form is default.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-LaunchReason-FORM_DEFAULT = 1--><!--Device-LaunchReason-FORM_DEFAULT = 1-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -32,11 +32,11 @@ FORM_SHARE = 2
 
 Indicates the launch reason of a form is share.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-LaunchReason-FORM_SHARE = 2--><!--Device-LaunchReason-FORM_SHARE = 2-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -48,11 +48,10 @@ FORM_SIZE_CHANGE = 3
 
 Indicates the launch reason of a form is change size.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-LaunchReason-FORM_SIZE_CHANGE = 3--><!--Device-LaunchReason-FORM_SIZE_CHANGE = 3-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Ability.Form
-

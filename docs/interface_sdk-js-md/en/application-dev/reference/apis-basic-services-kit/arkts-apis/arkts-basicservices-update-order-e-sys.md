@@ -2,9 +2,9 @@
 
 Enumerates update commands.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-update-export enum Order--><!--Device-update-export enum Order-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -18,9 +18,9 @@ DOWNLOAD = 1
 
 Download. This command is applicable to the scenario where only the upgrade package is downloaded.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Order-DOWNLOAD = 1--><!--Device-Order-DOWNLOAD = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -34,9 +34,9 @@ INSTALL = 2
 
 Install. This command is applicable to the scenario where the downloaded upgrade package is directly installed.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Order-INSTALL = 2--><!--Device-Order-INSTALL = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -50,9 +50,9 @@ DOWNLOAD_AND_INSTALL = 3
 
 Download and install. This command is applicable to the scenario where the upgrade package is downloaded and installed.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Order-DOWNLOAD_AND_INSTALL = 3--><!--Device-Order-DOWNLOAD_AND_INSTALL = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -66,9 +66,9 @@ APPLY = 4
 
 Apply. This command is applicable only to the scenario where the installed upgrade package takes effect. The device will restart to apply the new version. This command is applicable to the scenario where the installation is complete and the device needs to be restarted for the installation to take effect.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Order-APPLY = 4--><!--Device-Order-APPLY = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -82,11 +82,10 @@ INSTALL_AND_APPLY = 6
 
 Install and apply. After the installation, the device restarts to apply the new version. This command is applicable to the scenario where the system upgrade needs to be completed quickly and take effect immediately.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Order-INSTALL_AND_APPLY = 6--><!--Device-Order-INSTALL_AND_APPLY = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
-

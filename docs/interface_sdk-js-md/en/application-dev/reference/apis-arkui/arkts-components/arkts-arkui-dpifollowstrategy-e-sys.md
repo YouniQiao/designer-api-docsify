@@ -4,7 +4,7 @@ Enumeration of different types of DpiFollowStrategy.
 
 **Since:** 12
 
-<!--Device-unnamed-declare enum DpiFollowStrategy--><!--Device-unnamed-declare enum DpiFollowStrategy-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,9 +20,9 @@ The DPI settings follow the host.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-DpiFollowStrategy-FOLLOW_HOST_DPI = 0--><!--Device-DpiFollowStrategy-FOLLOW_HOST_DPI = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +38,10 @@ The DPI settings follow the UIExtensionAbility.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-DpiFollowStrategy-FOLLOW_UI_EXTENSION_ABILITY_DPI = 1--><!--Device-DpiFollowStrategy-FOLLOW_UI_EXTENSION_ABILITY_DPI = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

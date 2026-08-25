@@ -14,21 +14,20 @@ function genSessionId(): string
 
 Creates a random session ID.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-distributedDataObject-function genSessionId(): string--><!--Device-distributedDataObject-function genSessionId(): string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Session ID created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
 ```TypeScript
 let sessionId: string = distributedDataObject.genSessionId();
 ```
-

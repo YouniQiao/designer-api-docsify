@@ -2,11 +2,9 @@
 
 Enumerates the device capability levels.
 
-**Since:** 24
+**Since:** 19
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-deviceInfo-enum PerformanceClassLevel--><!--Device-deviceInfo-enum PerformanceClassLevel-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -18,13 +16,9 @@ CLASS_LEVEL_HIGH
 
 High
 
-**Since:** 24
+**Since:** 19
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PerformanceClassLevel-CLASS_LEVEL_HIGH--><!--Device-PerformanceClassLevel-CLASS_LEVEL_HIGH-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -36,13 +30,9 @@ CLASS_LEVEL_MEDIUM
 
 Medium
 
-**Since:** 24
+**Since:** 19
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PerformanceClassLevel-CLASS_LEVEL_MEDIUM--><!--Device-PerformanceClassLevel-CLASS_LEVEL_MEDIUM-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -54,13 +44,8 @@ CLASS_LEVEL_LOW
 
 Low
 
-**Since:** 24
+**Since:** 19
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PerformanceClassLevel-CLASS_LEVEL_LOW--><!--Device-PerformanceClassLevel-CLASS_LEVEL_LOW-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Startup.SystemInfo
-

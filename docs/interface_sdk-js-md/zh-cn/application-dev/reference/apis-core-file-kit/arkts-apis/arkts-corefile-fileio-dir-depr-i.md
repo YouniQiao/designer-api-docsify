@@ -4,11 +4,11 @@
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
-
-<!--Device-unnamed-declare interface Dir--><!--Device-unnamed-declare interface Dir-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -27,19 +27,19 @@ close(): Promise<void>
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
-
-<!--Device-Dir-close(): Promise<void>--><!--Device-Dir-close(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | return Promise |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
@@ -107,19 +107,19 @@ close(callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
-
-<!--Device-Dir-close(callback: AsyncCallback<void>): void--><!--Device-Dir-close(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **示例**
 
@@ -135,11 +135,11 @@ closeSync(): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
-
-<!--Device-Dir-closeSync(): void--><!--Device-Dir-closeSync(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -171,19 +171,19 @@ read(): Promise<Dirent>
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
-
-<!--Device-Dir-read(): Promise<Dirent>--><!--Device-Dir-read(): Promise<Dirent>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Dirent](arkts-corefile-fileio-dirent-depr-i.md)&gt; | Promise对象。返回表示异步读取目录项的结果。 |
+| 类型 |
+| --- |
+| Promise&lt;[Dirent](arkts-corefile-fileio-dirent-depr-i.md)&gt; |
 
 **示例**
 
@@ -264,19 +264,19 @@ read(callback: AsyncCallback<Dirent>): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
-
-<!--Device-Dir-read(callback: AsyncCallback<Dirent>): void--><!--Device-Dir-read(callback: AsyncCallback<Dirent>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Dirent](arkts-corefile-fileio-dirent-depr-i.md)&gt; | 是 | 异步读取下一个目录项之后的回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Dirent](arkts-corefile-fileio-dirent-depr-i.md)&gt; | 是 |
 
 **示例**
 
@@ -292,19 +292,19 @@ readSync(): Dirent
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
-
-<!--Device-Dir-readSync(): Dirent--><!--Device-Dir-readSync(): Dirent-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Dirent](arkts-corefile-fileio-dirent-depr-i.md) | 表示一个目录项。 |
+| 类型 |
+| --- |
+| [Dirent](arkts-corefile-fileio-dirent-depr-i.md) |
 
 **示例**
 
@@ -334,4 +334,3 @@ let num = ss.readSync(buf, option);
 ```TypeScript
 let dirent = dir.readSync();
 ```
-

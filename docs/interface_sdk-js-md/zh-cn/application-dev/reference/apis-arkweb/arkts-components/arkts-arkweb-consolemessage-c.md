@@ -4,7 +4,7 @@ ConsoleMessage是Web组件中封装JavaScript控制台输出信息的对象。�
 
 **起始版本：** 8
 
-<!--Device-unnamed-declare class ConsoleMessage--><!--Device-unnamed-declare class ConsoleMessage-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -23,22 +23,22 @@ ConsoleMessage的构造函数。
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** constructor
-
-<!--Device-ConsoleMessage-constructor(message: string, sourceId: string, lineNumber: number, messageLevel: MessageLevel)--><!--Device-ConsoleMessage-constructor(message: string, sourceId: string, lineNumber: number, messageLevel: MessageLevel)-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| message | string | 是 | ConsoleMessage的日志输出信息。 |
-| sourceId | string | 是 | 网页源文件的路径和文件名。 |
-| lineNumber | number | 是 | ConsoleMessage的行号。 |
-| messageLevel | [MessageLevel](arkts-arkweb-messagelevel-e.md) | 是 | ConsoleMessage的日志级别。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| message | string | 是 |
+| sourceId | string | 是 |
+| [lineNumber](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-linemetrics-i.md) | number | 是 |
+| messageLevel | [MessageLevel](arkts-arkweb-messagelevel-e.md) | 是 |
 
 ## constructor
 
@@ -50,9 +50,9 @@ ConsoleMessage的构造函数。
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-ConsoleMessage-constructor()--><!--Device-ConsoleMessage-constructor()-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -66,17 +66,17 @@ getLineNumber(): number
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-ConsoleMessage-getLineNumber(): number--><!--Device-ConsoleMessage-getLineNumber(): number-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回控制台输出在网页源文件中的行号。 |
+| 类型 |
+| --- |
+| number |
 
 ## getMessage
 
@@ -88,17 +88,17 @@ getMessage(): string
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-ConsoleMessage-getMessage(): string--><!--Device-ConsoleMessage-getMessage(): string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回控制台输出的日志信息。 |
+| 类型 |
+| --- |
+| string |
 
 ## getMessageLevel
 
@@ -110,17 +110,17 @@ getMessageLevel(): MessageLevel
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-ConsoleMessage-getMessageLevel(): MessageLevel--><!--Device-ConsoleMessage-getMessageLevel(): MessageLevel-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [MessageLevel](arkts-arkweb-messagelevel-e.md) | 返回ConsoleMessage的信息级别。 |
+| 类型 |
+| --- |
+| [MessageLevel](arkts-arkweb-messagelevel-e.md) |
 
 ## getSource
 
@@ -132,15 +132,15 @@ getSource() : ConsoleMessageSource
 
 **起始版本：** 23
 
-<!--Device-ConsoleMessage-getSource() : ConsoleMessageSource--><!--Device-ConsoleMessage-getSource() : ConsoleMessageSource-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ConsoleMessageSource](arkts-arkweb-consolemessagesource-e.md) | 返回ConsoleMessage的日志来源。 |
+| 类型 |
+| --- |
+| [ConsoleMessageSource](arkts-arkweb-consolemessagesource-e.md) |
 
 ## getSourceId
 
@@ -152,15 +152,14 @@ getSourceId(): string
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-ConsoleMessage-getSourceId(): string--><!--Device-ConsoleMessage-getSourceId(): string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回网页源文件路径和文件名。 |
-
+| 类型 |
+| --- |
+| string |

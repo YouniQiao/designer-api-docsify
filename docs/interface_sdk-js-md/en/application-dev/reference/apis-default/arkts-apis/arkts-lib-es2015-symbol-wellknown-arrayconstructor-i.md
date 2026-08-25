@@ -1,8 +1,6 @@
 # ArrayConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface ArrayConstructor--><!--Device-unnamed-interface ArrayConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,7 +15,4 @@ readonly [Symbol.species]: ArrayConstructor
 
 **Type:** [ArrayConstructor](arkts-lib-es2015-symbol-wellknown-arrayconstructor-i.md)
 
-**Since:** -1
-
-<!--Device-ArrayConstructor-readonly [Symbol.species]: ArrayConstructor--><!--Device-ArrayConstructor-readonly [Symbol.species]: ArrayConstructor-End-->
-
+**ArkTS mode:** 

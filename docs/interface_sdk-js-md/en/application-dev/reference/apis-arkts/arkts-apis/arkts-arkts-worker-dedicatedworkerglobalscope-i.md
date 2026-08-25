@@ -6,11 +6,11 @@ Specifies the worker thread running environment, which is isolated from the host
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ThreadWorkerGlobalScope](arkts-arkts-worker-threadworkerglobalscope-i.md)
-
-<!--Device-unnamed-export interface DedicatedWorkerGlobalScope--><!--Device-unnamed-export interface DedicatedWorkerGlobalScope-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -30,11 +30,11 @@ Close the worker thread to stop the worker from receiving messages
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** close
-
-<!--Device-DedicatedWorkerGlobalScope-close(): void--><!--Device-DedicatedWorkerGlobalScope-close(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -76,6 +76,56 @@ parentPort.onmessage = (): void => {
 }
 ```
 
+## onmessage
+
+```TypeScript
+onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
+```
+
+The onmessage attribute of parentPort specifies the event handler to be called then the worker thread receives a message sent by the host thread through worker postMessage. The event handler is executed in the worker thread.
+
+**Since:** 7
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** onmessage
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| this | [DedicatedWorkerGlobalScope](arkts-arkts-worker-dedicatedworkerglobalscope-i.md) | Yes |
+| ev | [MessageEvent](arkts-arkts-worker-messageevent-i.md) | Yes |
+
+## onmessageerror
+
+```TypeScript
+onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
+```
+
+The onmessage attribute of parentPort specifies the event handler to be called then the worker receives a message that cannot be deserialized. The event handler is executed in the worker thread.
+
+**Since:** 7
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** onmessageerror
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| this | [DedicatedWorkerGlobalScope](arkts-arkts-worker-dedicatedworkerglobalscope-i.md) | Yes |
+| ev | [MessageEvent](arkts-arkts-worker-messageevent-i.md) | Yes |
+
 ## postMessage
 
 ```TypeScript
@@ -86,20 +136,20 @@ Send a message to be host thread from the worker
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** postMessage
-
-<!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: Transferable[]): void--><!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: Transferable[]): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| messageObject | Object | Yes | messageObject Data to be sent to the worker |
-| transfer | Transferable[] | Yes | transfer array cannot contain null. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| messageObject | Object | Yes |
+| transfer | Transferable[] | Yes |
 
 **Examples**
 
@@ -313,20 +363,20 @@ Send a message to be host thread from the worker
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** postMessage
-
-<!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void--><!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| messageObject | Object | Yes | messageObject Data to be sent to the worker |
-| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | No | Option can be set for postmessage. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| messageObject | Object | Yes |
+| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | No |
 
 **Examples**
 
@@ -342,62 +392,21 @@ Send a message to host thread from the worker
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 9
 
 **Substitutes:** postMessage
-
-<!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: ArrayBuffer[]): void--><!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: ArrayBuffer[]): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| messageObject | Object | Yes | messageObject Data to be sent to the worker |
-| transfer | ArrayBuffer[] | Yes | transfer array cannot contain null. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| messageObject | Object | Yes |
+| transfer | ArrayBuffer[] | Yes |
 
 **Examples**
 
 See [postMessage](#postmessage)
-
-## onmessage
-
-```TypeScript
-onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
-```
-
-The onmessage attribute of parentPort specifies the event handler to be called then the worker thread receives a message sent by the host thread through worker postMessage. The event handler is executed in the worker thread.
-
-**Type:** (this: DedicatedWorkerGlobalScope, ev: MessageEvent) =&gt; void
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** onmessage
-
-<!--Device-DedicatedWorkerGlobalScope-onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void--><!--Device-DedicatedWorkerGlobalScope-onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## onmessageerror
-
-```TypeScript
-onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
-```
-
-The onmessage attribute of parentPort specifies the event handler to be called then the worker receives a message that cannot be deserialized. The event handler is executed in the worker thread.
-
-**Type:** (this: DedicatedWorkerGlobalScope, ev: MessageEvent) =&gt; void
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** onmessageerror
-
-<!--Device-DedicatedWorkerGlobalScope-onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void--><!--Device-DedicatedWorkerGlobalScope-onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-

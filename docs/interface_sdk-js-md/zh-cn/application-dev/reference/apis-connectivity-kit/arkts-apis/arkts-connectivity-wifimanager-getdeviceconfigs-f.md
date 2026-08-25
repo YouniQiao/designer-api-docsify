@@ -14,27 +14,27 @@ function getDeviceConfigs(): Array<WifiDeviceConfig>
 
 获取所有已存在的WLAN配置列表。
 
-**起始版本：** 23
+**起始版本：** 15
+
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
-
-<!--Device-wifiManager-function getDeviceConfigs(): Array<WifiDeviceConfig>--><!--Device-wifiManager-function getDeviceConfigs(): Array<WifiDeviceConfig>-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;WifiDeviceConfig&gt; | 返回您在应用上创建的所有已存在的WLAN配置列表。 |
+| 类型 |
+| --- |
+| Array & lt;WifiDeviceConfig & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [2501000](../errorcode-wifi.md#2501000-sta内部异常) | Operation failed. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [2501000](../errorcode-wifi.md#2501000-sta内部异常) |
 
 **示例**
 
@@ -48,4 +48,3 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.error("failed:", error.code, error.message);
     }
 ```
-

@@ -4,7 +4,7 @@ Defines the window callback.
 
 **起始版本：** 15
 
-<!--Device-unnamed-declare interface Callback--><!--Device-unnamed-declare interface Callback-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -14,7 +14,7 @@ Defines the window callback.
 import { window } from '@kit.ArkUI';
 ```
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (data: T): V
@@ -24,21 +24,20 @@ Defines the callback info.
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
-<!--Device-Callback-(data: T): V--><!--Device-Callback-(data: T): V-End-->
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | T | 是 | the data will be used in the callback. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| V | Returns result of the callback. |
-
+| 类型 |
+| --- |
+| V |

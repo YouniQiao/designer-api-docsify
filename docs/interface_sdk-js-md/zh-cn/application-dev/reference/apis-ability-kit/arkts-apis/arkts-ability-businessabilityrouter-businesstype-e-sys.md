@@ -2,9 +2,9 @@
 
 此枚举值用于标识过滤条件类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-businessAbilityRouter-export enum BusinessType--><!--Device-businessAbilityRouter-export enum BusinessType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -18,9 +18,9 @@ SHARE = 0
 
 标识具有共享类型的Ability信息。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-BusinessType-SHARE = 0--><!--Device-BusinessType-SHARE = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -34,11 +34,10 @@ UNSPECIFIED = 255
 
 标识未指定类型的Ability信息。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-BusinessType-UNSPECIFIED = 255--><!--Device-BusinessType-UNSPECIFIED = 255-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
-

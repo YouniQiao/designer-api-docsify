@@ -15,13 +15,13 @@ Register application state observer.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate)
+**Substitutes:** [on](arkts-ability-appmanager-on-f.md#onapplicationstate)
 
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
-
-<!--Device-appManager-function registerApplicationStateObserver(observer: ApplicationStateObserver): number--><!--Device-appManager-function registerApplicationStateObserver(observer: ApplicationStateObserver): number-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,15 +29,15 @@ Register application state observer.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | The application state observer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Returns the number code of the observer. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -69,4 +69,3 @@ const observerCode = appManager.registerApplicationStateObserver({
 });
 console.info(`observerCode: ${observerCode}.`);
 ```
-

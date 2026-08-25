@@ -6,9 +6,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-unnamed-export declare class LinearGradientStyle--><!--Device-unnamed-export declare class LinearGradientStyle-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,19 +20,17 @@ constructor(options: LinearGradientOptions)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LinearGradientStyle-constructor(options: LinearGradientOptions)--><!--Device-LinearGradientStyle-constructor(options: LinearGradientOptions)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [LinearGradientOptions](../arkts-components/arkts-arkui-lineargradientoptions-i.md) | 是 | 显示为线性渐变效果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [options](#options) | [LinearGradientOptions](../arkts-components/arkts-arkui-lineargradientoptions-i.md) | 是 |
 
 ## options
 
@@ -49,11 +45,8 @@ LinearGradientOptions 中的direction默认值按 GradientDirection中的NONE处
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-LinearGradientStyle-options: LinearGradientOptions--><!--Device-LinearGradientStyle-options: LinearGradientOptions-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

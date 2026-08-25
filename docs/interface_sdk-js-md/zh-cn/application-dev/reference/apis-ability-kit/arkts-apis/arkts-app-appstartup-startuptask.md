@@ -10,7 +10,6 @@ import { StartupTask } from '@kit.AbilityKit';
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md) | The module provides capabilities related to startup tasks in [AppStartup](../../../application-models/app-startup.md). |
-
+| 名称 |
+| --- |
+| [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md) |

@@ -2,9 +2,9 @@
 
 通话状态相关信息。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-observer-export interface CallStateInfo--><!--Device-observer-export interface CallStateInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -26,7 +26,7 @@ number: string
 
 **起始版本：** 11
 
-<!--Device-CallStateInfo-number: string--><!--Device-CallStateInfo-number: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -40,9 +40,9 @@ state: CallState
 
 **类型：** CallState
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CallStateInfo-state: CallState--><!--Device-CallStateInfo-state: CallState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -58,7 +58,6 @@ Indicates call number.
 
 **起始版本：** 23
 
-<!--Device-CallStateInfo-teleNumber: string--><!--Device-CallStateInfo-teleNumber: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
-

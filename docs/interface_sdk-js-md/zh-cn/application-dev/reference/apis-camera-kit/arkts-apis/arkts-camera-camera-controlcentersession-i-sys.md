@@ -2,11 +2,11 @@
 
 Control center session object.@extends Beauty, Aperture [since 20 - 24] @extends Beauty, Aperture, ColorEffect [since 26.0.0]
 
-**继承/实现关系：** ControlCenterSession extends [Beauty](arkts-camera-camera-beauty-i-sys.md), [Aperture](arkts-camera-camera-aperture-i-sys.md), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md)
+**继承/实现关系：** ControlCenterSession extends [Beauty](arkts-camera-camera-beauty-i-sys.md), [Aperture](arkts-camera-camera-aperture-i.md), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-camera-interface ControlCenterSession--><!--Device-camera-interface ControlCenterSession-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -28,7 +28,7 @@ Enable auto-framing effect.
 
 **起始版本：** 24
 
-<!--Device-ControlCenterSession-enableAutoFraming(enabled: boolean): void--><!--Device-ControlCenterSession-enableAutoFraming(enabled: boolean): void-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -36,17 +36,17 @@ Enable auto-framing effect.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enabled | boolean | 是 | enable auto-framing effect if TRUE. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enabled | boolean | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 ## getAutoFramingStatus
 
@@ -58,7 +58,7 @@ Gets the status of auto-framing effect.
 
 **起始版本：** 24
 
-<!--Device-ControlCenterSession-getAutoFramingStatus(): boolean--><!--Device-ControlCenterSession-getAutoFramingStatus(): boolean-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -66,18 +66,24 @@ Gets the status of auto-framing effect.
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | Is auto-framing active. |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getControlCenterHeight
 
+ArkTS-Dyn:
+```TypeScript
+getControlCenterHeight(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getControlCenterHeight(): double
 ```
@@ -86,9 +92,9 @@ Gets the control center height.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-ControlCenterSession-getControlCenterHeight(): double--><!--Device-ControlCenterSession-getControlCenterHeight(): double-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -96,15 +102,15 @@ Gets the control center height.
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | the control center height, in units of vp. |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getCurrentDevice
 
@@ -116,9 +122,9 @@ Gets the current camera device.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-ControlCenterSession-getCurrentDevice(): CameraDevice--><!--Device-ControlCenterSession-getCurrentDevice(): CameraDevice-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -126,16 +132,16 @@ Gets the current camera device.
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [CameraDevice](arkts-camera-camera-cameradevice-i.md) | the current camera device. |
+| 类型 |
+| --- |
+| [CameraDevice](arkts-camera-camera-cameradevice-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) |
 
 ## isAutoFramingSupported
 
@@ -147,7 +153,7 @@ Checks whether auto-framing is supported.
 
 **起始版本：** 24
 
-<!--Device-ControlCenterSession-isAutoFramingSupported(): boolean--><!--Device-ControlCenterSession-isAutoFramingSupported(): boolean-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -155,15 +161,15 @@ Checks whether auto-framing is supported.
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | Is auto-framing supported. |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## release
 
@@ -173,9 +179,9 @@ release(): Promise<void>
 
 Release control center session object.
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-ControlCenterSession-release(): Promise<void>--><!--Device-ControlCenterSession-release(): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -183,15 +189,15 @@ Release control center session object.
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -381,9 +387,9 @@ Sets the camera to be used as a camera at the specified position.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-ControlCenterSession-usedAsPosition(position: CameraPosition): void--><!--Device-ControlCenterSession-usedAsPosition(position: CameraPosition): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -391,15 +397,14 @@ Sets the camera to be used as a camera at the specified position.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| position | [CameraPosition](arkts-camera-camera-cameraposition-e.md) | 是 | The positon used for the camera. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| position | [CameraPosition](arkts-camera-camera-cameraposition-e.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |

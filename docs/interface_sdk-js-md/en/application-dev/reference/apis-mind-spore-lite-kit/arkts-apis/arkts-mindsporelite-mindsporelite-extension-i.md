@@ -2,9 +2,9 @@
 
 Provides the extension information of nnrt device
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-mindSporeLite-interface Extension--><!--Device-mindSporeLite-interface Extension-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -24,11 +24,11 @@ Extension name
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Extension-name: string--><!--Device-Extension-name: string-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -42,11 +42,10 @@ Extension array buffer
 
 **Type:** ArrayBuffer
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Extension-value: ArrayBuffer--><!--Device-Extension-value: ArrayBuffer-End-->
-
 **System capability:** SystemCapability.AI.MindSporeLite
-

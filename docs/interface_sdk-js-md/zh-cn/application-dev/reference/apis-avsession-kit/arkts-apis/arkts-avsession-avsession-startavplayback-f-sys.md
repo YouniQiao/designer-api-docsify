@@ -14,11 +14,11 @@ function startAVPlayback(bundleName: string, assetId: string): Promise<void>
 
 启动媒体播放应用程序。结果通过Promise异步回调方式返回。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
-
-<!--Device-avSession-function startAVPlayback(bundleName: string, assetId: string): Promise<void>--><!--Device-avSession-function startAVPlayback(bundleName: string, assetId: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
@@ -26,25 +26,25 @@ function startAVPlayback(bundleName: string, assetId: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 指定应用包名。 |
-| assetId | string | 是 | 指定媒体ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| assetId | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。当播放成功，无返回结果，否则返回错误对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
 **示例**
 
@@ -65,11 +65,11 @@ function startAVPlayback(bundleName: string, assetId: string, info: CommandInfo)
 
 携带启动参数的冷启动应用播放接口
 
-**起始版本：** 24
+**起始版本：** 22
+
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
-
-<!--Device-avSession-function startAVPlayback(bundleName: string, assetId: string, info: CommandInfo): Promise<void>--><!--Device-avSession-function startAVPlayback(bundleName: string, assetId: string, info: CommandInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
@@ -77,27 +77,26 @@ function startAVPlayback(bundleName: string, assetId: string, info: CommandInfo)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | Specifies the bundleName which to be started. |
-| assetId | string | 是 | Specifies the assetId to be started. |
-| info | [CommandInfo](arkts-avsession-avsession-commandinfo-i.md) | 是 | Specifies the specified command information. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| assetId | string | 是 |
+| info | [CommandInfo](arkts-avsession-avsession-commandinfo-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
 **示例**
 
 参见 [startAVPlayback](#startavplayback)
-

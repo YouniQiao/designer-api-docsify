@@ -6,17 +6,16 @@ export type ErrorHandler = (errObject: Error) => void
 
 The ErrorHandler will be called when the ArkTS runtime throws an exception that is not caught by the user.
 
-**Since:** 24
+**Since:** 21
 
-**Atomic service API:** This API can be used in atomic services since API version 24.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
-<!--Device-errorManager-export type ErrorHandler = (errObject: Error) => void--><!--Device-errorManager-export type ErrorHandler = (errObject: Error) => void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| errObject | Error | Yes | Event name, message, and error stack of the exception. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| errObject | Error | Yes |

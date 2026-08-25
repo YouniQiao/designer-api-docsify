@@ -16,23 +16,22 @@ Obtains an [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.m
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md)()
-
-<!--Device-inputMethodEngine-function getInputMethodEngine(): InputMethodEngine--><!--Device-inputMethodEngine-function getInputMethodEngine(): InputMethodEngine-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md) | InputMethodAbility** instance. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md) |
 
 **Examples**
 
 ```TypeScript
 let InputMethodEngine: inputMethodEngine.InputMethodEngine = inputMethodEngine.getInputMethodEngine();
 ```
-

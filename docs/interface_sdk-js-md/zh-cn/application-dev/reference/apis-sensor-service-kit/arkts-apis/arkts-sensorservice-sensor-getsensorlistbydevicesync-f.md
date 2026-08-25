@@ -14,23 +14,23 @@ function getSensorListByDeviceSync(deviceId?: int): Array<Sensor>
 
 同步获取设备的所有传感器信息。getSensorListByDeviceSync返回设备上所有传感器信息，getSingleSensorByDeviceSync返回指定单个传感器信息。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-sensor-function getSensorListByDeviceSync(deviceId?: int): Array<Sensor>--><!--Device-sensor-function getSensorListByDeviceSync(deviceId?: int): Array<Sensor>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| deviceId | int | 否 | 设备ID，默认为查询本地设备，默认值为-1，表示本地设备，设备ID需通过 [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md)查询或者监听设备上下线接口 [sensorStatusChange](arkts-sensorservice-sensor-onsensorstatuschange-f.md)获取。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| deviceId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;Sensor&gt; | 传感器属性列表。 |
+| 类型 |
+| --- |
+| Array & lt;Sensor & gt; |
 
 **示例**
 
@@ -49,4 +49,3 @@ try {
   console.error(`Failed to get sensorList. Code: ${e.code}, message: ${e.message}`);
 }
 ```
-

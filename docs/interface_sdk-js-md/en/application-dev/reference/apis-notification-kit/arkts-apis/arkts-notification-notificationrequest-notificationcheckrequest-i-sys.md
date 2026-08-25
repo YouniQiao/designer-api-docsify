@@ -2,9 +2,9 @@
 
 Describes the notification authentication information.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-unnamed-export interface NotificationCheckRequest--><!--Device-unnamed-export interface NotificationCheckRequest-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -20,9 +20,9 @@ Notification type.
 
 **Type:** notificationManager.ContentType
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationCheckRequest-contentType: notificationManager.ContentType--><!--Device-NotificationCheckRequest-contentType: notificationManager.ContentType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -38,9 +38,9 @@ Extra information about the live view.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationCheckRequest-extraInfoKeys: Array<string>--><!--Device-NotificationCheckRequest-extraInfoKeys: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -56,11 +56,10 @@ Notification slot type.
 
 **Type:** notificationManager.SlotType
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationCheckRequest-slotType: notificationManager.SlotType--><!--Device-NotificationCheckRequest-slotType: notificationManager.SlotType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

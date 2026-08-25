@@ -14,32 +14,32 @@ function getAttribute(portId: int): Readonly<SerialAttribute>
 
 Obtains the configuration parameters of a specified serial port.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-serialManager-function getAttribute(portId: int): Readonly<SerialAttribute>--><!--Device-serialManager-function getAttribute(portId: int): Readonly<SerialAttribute>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| portId | int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [portId](arkts-basicservices-serialmanager-serialport-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Readonly&lt;[SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md)&gt; | Configuration parameters of the serial port. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Readonly&lt;[SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
-| [31400001](../errorcode-usb.md#31400001-serial-port-service-error) |  |
-| [31400003](../errorcode-usb.md#31400003-port-number-not-exist) |  |
-| [31400005](../errorcode-usb.md#31400005-device-not-opened) |  |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [31400001](../errorcode-usb.md#31400001-serial-port-service-error) |
+| [31400003](../errorcode-usb.md#31400003-port-number-not-exist) |
+| [31400005](../errorcode-usb.md#31400005-device-not-opened) |
 
 **Examples**
 
@@ -94,4 +94,3 @@ function getAttribute() {
   }
 }
 ```
-

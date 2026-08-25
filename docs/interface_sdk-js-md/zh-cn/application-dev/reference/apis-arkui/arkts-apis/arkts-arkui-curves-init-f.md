@@ -19,23 +19,22 @@ function init(curve?: Curve): string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [initCurve](arkts-arkui-curves-initcurve-f.md)
-
-<!--Device-curves-function init(curve?: Curve): string--><!--Device-curves-function init(curve?: Curve): string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| curve | Curve | 否 | 曲线类型。<br/>默认值：Curve.Linear |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| curve | [Curve](arkts-arkui-curve-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回插值曲线对象。 |
-
+| 类型 |
+| --- |
+| string |

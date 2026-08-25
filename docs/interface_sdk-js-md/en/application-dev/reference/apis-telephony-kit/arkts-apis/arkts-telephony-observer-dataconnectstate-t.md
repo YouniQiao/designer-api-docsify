@@ -6,11 +6,10 @@ type DataConnectState = data.DataConnectState
 
 Describes the connection status of a cellular data link.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-observer-type DataConnectState = data.DataConnectState--><!--Device-observer-type DataConnectState = data.DataConnectState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Property type:** data.DataConnectState
-

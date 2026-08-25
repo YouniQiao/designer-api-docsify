@@ -14,11 +14,11 @@ function getPasswordPolicy(): PasswordPolicy
 
 Obtains the device screen lock password policy.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-securityManager-function getPasswordPolicy(): PasswordPolicy--><!--Device-securityManager-function getPasswordPolicy(): PasswordPolicy-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -26,15 +26,15 @@ Obtains the device screen lock password policy.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [PasswordPolicy](arkts-mdm-securitymanager-passwordpolicy-i.md) | Device screen lock password policy. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PasswordPolicy](arkts-mdm-securitymanager-passwordpolicy-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -66,4 +66,3 @@ try {
     console.error(`Failed to get password policy. Code: ${err.code}, message: ${err.message}`);
 }
 ```
-

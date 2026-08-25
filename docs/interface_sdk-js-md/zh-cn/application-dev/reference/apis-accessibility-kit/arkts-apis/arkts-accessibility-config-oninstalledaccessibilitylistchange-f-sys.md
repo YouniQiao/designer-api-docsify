@@ -16,9 +16,9 @@ function onInstalledAccessibilityListChange(callback: Callback<void>): void
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.READ_ACCESSIBILITY_CONFIG
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-config-function onInstalledAccessibilityListChange(callback: Callback<void>): void--><!--Device-config-function onInstalledAccessibilityListChange(callback: Callback<void>): void-End-->
+**需要权限：** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -26,16 +26,16 @@ function onInstalledAccessibilityListChange(callback: Callback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，在已安装的辅助扩展的列表变化时通过此函数进行通知。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -60,4 +60,3 @@ struct Index {
   }
 }
 ```
-

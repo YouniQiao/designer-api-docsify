@@ -6,9 +6,7 @@ Defines a shader with single color.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-unnamed-export declare class ColorShaderStyle--><!--Device-unnamed-export declare class ColorShaderStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,19 +20,17 @@ The constructor.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ColorShaderStyle-constructor(color: ResourceColor)--><!--Device-ColorShaderStyle-constructor(color: ResourceColor)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | The color used by shader. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [color](#color) | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes |
 
 ## color
 
@@ -48,11 +44,8 @@ The color of the shader.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ColorShaderStyle-color: ResourceColor--><!--Device-ColorShaderStyle-color: ResourceColor-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

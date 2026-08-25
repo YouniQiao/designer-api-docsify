@@ -4,13 +4,13 @@
 
 > **说明：**&gt;
 > LazyCustomLayoutAlgorithm类对象可以作为
-> [LazyDynamicLayout](../../apis-default/arkts-apis/arkts-arkui-components-arklazydynamiclayout-lazydynamiclayout-f.md)组件的入参指定布局算法。
+> [LazyDynamicLayout](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayout-f.md)组件的入参指定布局算法。
 
 **继承/实现关系：** LazyCustomLayoutAlgorithm implements [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md)
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-export class LazyCustomLayoutAlgorithm--><!--Device-unnamed-export class LazyCustomLayoutAlgorithm-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,19 +24,19 @@ constructor(option?: LazyCustomLayoutAlgorithmOptions)
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LazyCustomLayoutAlgorithm-constructor(option?: LazyCustomLayoutAlgorithmOptions)--><!--Device-LazyCustomLayoutAlgorithm-constructor(option?: LazyCustomLayoutAlgorithmOptions)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| option | [LazyCustomLayoutAlgorithmOptions](arkts-arkui-lazylayoutalgorithm-lazycustomlayoutalgorithmoptions-i.md) | 否 | 自定义懒加载布局算法的构造入参，设置布局算法的轴向。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| option | [LazyCustomLayoutAlgorithmOptions](arkts-arkui-lazylayoutalgorithm-lazycustomlayoutalgorithmoptions-i.md) | 否 |
 
 ## onLayout
 
@@ -59,20 +59,20 @@ onLayout(self: FrameNode, position: Position): void
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LazyCustomLayoutAlgorithm-onLayout(self: FrameNode, position: Position): void--><!--Device-LazyCustomLayoutAlgorithm-onLayout(self: FrameNode, position: Position): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| self | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 懒加载动态布局组件在组件树上的实体节点。 |
-| position | [Position](arkts-arkui-position-t.md) | 是 | 懒加载动态布局组件进行布局时使用的位置信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| self | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| position | [Position](arkts-arkui-position-t.md) | 是 |
 
 ## onMeasure
 
@@ -95,19 +95,18 @@ onMeasure(self: FrameNode, constraint: LayoutConstraint, helper?: LazyLayoutHelp
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LazyCustomLayoutAlgorithm-onMeasure(self: FrameNode, constraint: LayoutConstraint, helper?: LazyLayoutHelper): void--><!--Device-LazyCustomLayoutAlgorithm-onMeasure(self: FrameNode, constraint: LayoutConstraint, helper?: LazyLayoutHelper): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| self | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 懒加载动态布局组件在组件树上的实体节点。 |
-| constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | 是 | 懒加载动态布局组件进行测量时使用的布局约束。 |
-| helper | [LazyLayoutHelper](arkts-arkui-lazylayoutalgorithm-lazylayouthelper-c.md) | 否 | 懒加载布局辅助对象，提供布局方向和可视区域位置信息。为undefined时表示不支持懒加载。helper为undefined的场景如下： <br>1. 在WaterFlow组件多列模式或分段模式的多列分段下使用时不支持懒加载。 <br>2. 在List组件下使用，当List设置了 lanes、 chainAnimation、scrollSnapAlign属性 中的任意一个时不支持懒加载。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| self | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | 是 |
+| helper | [LazyLayoutHelper](arkts-arkui-lazylayoutalgorithm-lazylayouthelper-c.md) | 否 |

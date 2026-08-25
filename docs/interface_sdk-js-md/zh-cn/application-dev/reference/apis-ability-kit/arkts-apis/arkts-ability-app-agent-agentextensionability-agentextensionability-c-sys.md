@@ -10,7 +10,7 @@ AgentExtensionAbility继承自[ExtensionAbility](arkts-ability-app-ability-exten
 
 **起始版本：** 24
 
-<!--Device-unnamed-declare class AgentExtensionAbility--><!--Device-unnamed-declare class AgentExtensionAbility-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -26,13 +26,13 @@ import { AgentExtensionAbility } from '@kit.AbilityKit';
 onAgentInvoked(agentId: string): void
 ```
 
-当LOW_CODE 类型的Agent被成功调用时触发，用于执行初始化操作（如从云端下载资源、加载配置等）。
+当[LOW_CODE](../../../reference/apis-ability-kit/js-apis-app-agent-agentConstant-sys.md#agentconstantagentcardtype) 类型的Agent被成功调用时触发，用于执行初始化操作（如从云端下载资源、加载配置等）。
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AgentExtensionAbility-onAgentInvoked(agentId: string): void--><!--Device-AgentExtensionAbility-onAgentInvoked(agentId: string): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -40,7 +40,6 @@ onAgentInvoked(agentId: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| agentId | string | 是 | 低代码类型的Agent的ID。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [agentId](arkts-ability-agentcard-i.md) | string | 是 |

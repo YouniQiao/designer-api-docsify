@@ -4,9 +4,9 @@ Defines the options used in mkdir().
 
 **Since:** 3
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface FileMkdirOption--><!--Device-unnamed-export interface FileMkdirOption-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -23,13 +23,11 @@ complete?: () => void
 
 Callback invoked when the API call is complete.
 
-**Type:** () =&gt; void
-
 **Since:** 3
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-FileMkdirOption-complete?: () => void--><!--Device-FileMkdirOption-complete?: () => void-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -41,13 +39,34 @@ fail?: (data: string, code: number) => void
 
 Callback invoked when the API call fails. **data** indicates the error information. **code** indicates the returned error code: **202**: invalid parameter **300**: I/O error
 
-**Type:** (data: string, code: number) =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
 
-<!--Device-FileMkdirOption-fail?: (data: string, code: number) => void--><!--Device-FileMkdirOption-fail?: (data: string, code: number) => void-End-->
+**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | string | Yes |
+| code | number | Yes |
+
+## success
+
+```TypeScript
+success?: () => void
+```
+
+Callback invoked when the API call is successful.
+
+**Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -63,27 +82,9 @@ Whether to recursively create the upper-level directory of the specified directo
 
 **Since:** 3
 
-**Deprecated since:** 10
-
-<!--Device-FileMkdirOption-recursive?: boolean--><!--Device-FileMkdirOption-recursive?: boolean-End-->
-
-**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
-
-## success
-
-```TypeScript
-success?: () => void
-```
-
-Callback invoked when the API call is successful.
-
-**Type:** () =&gt; void
-
-**Since:** 3
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
-
-<!--Device-FileMkdirOption-success?: () => void--><!--Device-FileMkdirOption-success?: () => void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -101,9 +102,8 @@ URI of the directory. Restricted by the underlying file system of lite wearables
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 10
 
-<!--Device-FileMkdirOption-uri: string--><!--Device-FileMkdirOption-uri: string-End-->
-
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
-

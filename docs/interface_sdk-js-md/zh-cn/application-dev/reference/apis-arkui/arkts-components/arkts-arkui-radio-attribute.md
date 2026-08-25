@@ -6,7 +6,7 @@
 
 **起始版本：** 8
 
-<!--Device-unnamed-declare class RadioAttribute--><!--Device-unnamed-declare class RadioAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,19 +25,19 @@ checked(value: boolean)
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-RadioAttribute-checked(value: boolean): RadioAttribute--><!--Device-RadioAttribute-checked(value: boolean): RadioAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean | 是 | 单选框的选中状态。<br/>默认值：false<br/>值为true时，单选框被选中。值为false时，单选框不被选中。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | boolean | 是 |
 
 ## checked
 
@@ -49,21 +49,21 @@ checked(isChecked: Optional<boolean>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-RadioAttribute-checked(isChecked: Optional<boolean>): RadioAttribute--><!--Device-RadioAttribute-checked(isChecked: Optional<boolean>): RadioAttribute-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isChecked | Optional&lt;boolean&gt; | 是 | 单选框的选中状态。<br/>当isChecked的值为undefined时取默认值false。<br/>值为true时，单选框被选中。值为false 时，单选框不被选中。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| isChecked | Optional & lt;boolean & gt; | 是 |
 
 ## contentModifier
 
@@ -75,19 +75,19 @@ contentModifier(modifier: ContentModifier<RadioConfiguration>)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RadioAttribute-contentModifier(modifier: ContentModifier<RadioConfiguration>): RadioAttribute--><!--Device-RadioAttribute-contentModifier(modifier: ContentModifier<RadioConfiguration>): RadioAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| modifier | ContentModifier&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt; | 是 | 在Radio组件上，定制内容区的方法。<br/>modifier：内容修改器，开发者需要自定义class实现 ContentModifier接口。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| modifier | ContentModifier&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt; | 是 |
 
 ## contentModifier
 
@@ -99,19 +99,19 @@ contentModifier(modifier: Optional<ContentModifier<RadioConfiguration>>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RadioAttribute-contentModifier(modifier: Optional<ContentModifier<RadioConfiguration>>): RadioAttribute--><!--Device-RadioAttribute-contentModifier(modifier: Optional<ContentModifier<RadioConfiguration>>): RadioAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| modifier | Optional&lt;ContentModifier&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt;&gt; | 是 | 在Radio组件上，定制内容区的方法。<br/>modifier：内容修改器，开发者需要自定义 class实现ContentModifier接口。<br/>当modifier的值为undefined时，不使用内容修改器。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| modifier | Optional&lt;ContentModifier&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt;&gt; | 是 |
 
 ## onChange
 
@@ -123,19 +123,19 @@ onChange(callback: (isChecked: boolean) => void)
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-RadioAttribute-onChange(callback: (isChecked: boolean) => void): RadioAttribute--><!--Device-RadioAttribute-onChange(callback: (isChecked: boolean) => void): RadioAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (isChecked: boolean) =&gt; void | 是 | 单选框选中状态改变时触发该回调。<br/>值为true时，表示从未选中变为选中。值为false时，表示从选中变为未选中。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (isChecked: boolean) = & gt; void | 是 |
 
 ## onChange
 
@@ -147,21 +147,21 @@ onChange(callback: Optional<OnRadioChangeCallback>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-RadioAttribute-onChange(callback: Optional<OnRadioChangeCallback>): RadioAttribute--><!--Device-RadioAttribute-onChange(callback: Optional<OnRadioChangeCallback>): RadioAttribute-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Optional&lt;[OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md)&gt; | 是 | 单选框选中状态改变时触发该回调。<br/>当callback的值为undefined时，不使用回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Optional&lt;[OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md)&gt; | 是 |
 
 ## radioStyle
 
@@ -173,17 +173,16 @@ radioStyle(value?: RadioStyle)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RadioAttribute-radioStyle(value?: RadioStyle): RadioAttribute--><!--Device-RadioAttribute-radioStyle(value?: RadioStyle): RadioAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [RadioStyle](arkts-arkui-radiostyle-i.md) | 否 | 单选框选中状态和非选中状态的样式。 <br/> 未设置时，则按照RadioStyle中各参数的默认值配置。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [RadioStyle](arkts-arkui-radiostyle-i.md) | 否 |

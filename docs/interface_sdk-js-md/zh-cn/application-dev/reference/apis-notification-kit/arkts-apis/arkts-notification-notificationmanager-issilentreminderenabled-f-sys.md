@@ -14,11 +14,11 @@ function isSilentReminderEnabled(bundle: BundleOption): Promise<SwitchState>
 
 查询静默提醒的开关状态。使用Promise进行异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
-
-<!--Device-notificationManager-function isSilentReminderEnabled(bundle: BundleOption): Promise<SwitchState>--><!--Device-notificationManager-function isSilentReminderEnabled(bundle: BundleOption): Promise<SwitchState>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -26,27 +26,27 @@ function isSilentReminderEnabled(bundle: BundleOption): Promise<SwitchState>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 指定应用的包信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[SwitchState](arkts-notification-notificationmanager-switchstate-e-sys.md)&gt; | Promise对象，返回指定应用的通知静默提醒开关状态。 |
+| 类型 |
+| --- |
+| Promise&lt;[SwitchState](arkts-notification-notificationmanager-switchstate-e-sys.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [1600001](../errorcode-notification.md#1600001-内部错误) |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
+| [1600012](../errorcode-notification.md#1600012-内存空间不足) |
+| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 **示例**
 
@@ -80,4 +80,3 @@ try {
     console.info(`isSilentReminderEnabled failed, code is ${err.code}, message is ${err.message}`);
 }
 ```
-

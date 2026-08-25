@@ -1,10 +1,10 @@
 # JsMessageType
 
-Enumerates the data types of the results returned after the [runJavaScriptExt](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#runjavascriptext) API is executed.
+Enumerates the data types of the results returned after the [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runjavascriptext) API is executed.
 
 **Since:** 10
 
-<!--Device-webview-enum JsMessageType--><!--Device-webview-enum JsMessageType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,9 +18,9 @@ Unsupported data type.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-JsMessageType-NOT_SUPPORT = 0--><!--Device-JsMessageType-NOT_SUPPORT = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -34,9 +34,9 @@ String type.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-JsMessageType-STRING = 1--><!--Device-JsMessageType-STRING = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -50,9 +50,9 @@ Number type.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-JsMessageType-NUMBER = 2--><!--Device-JsMessageType-NUMBER = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -66,9 +66,9 @@ Boolean type.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-JsMessageType-BOOLEAN = 3--><!--Device-JsMessageType-BOOLEAN = 3-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -82,9 +82,9 @@ Raw binary data buffer.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-JsMessageType-ARRAY_BUFFER = 4--><!--Device-JsMessageType-ARRAY_BUFFER = 4-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -98,9 +98,8 @@ Array type.
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-JsMessageType-ARRAY = 5--><!--Device-JsMessageType-ARRAY = 5-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

@@ -1,12 +1,12 @@
-# @ohos.bundleState
+# @ohos.bundleState(Device Usage Statistics)
 
 This module provides APIs for collecting statistics on device usage.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-unnamed-declare namespace bundleState--><!--Device-unnamed-declare namespace bundleState-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -20,39 +20,38 @@ import { bundleState } from '@kit.BackgroundTasksKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [isIdleState](arkts-backgroundtasks-bundlestate-isidlestate-f.md) | Checks whether the application specified by **bundleName** is in the idle state. A third-party application can only check the idle state of itself. A system application can check the idle state of other applications only when it is granted with the ohos.permission.BUNDLE_ACTIVE_INFO permission. This API uses an asynchronous callback to return the result. |
-| [isIdleState](arkts-backgroundtasks-bundlestate-isidlestate-f.md) | Checks whether the application specified by **bundleName** is in the idle state. A third-party application can only check the idle state of itself. A system application can check the idle state of other applications only when it is granted with the ohos.permission.BUNDLE_ACTIVE_INFO permission. This API uses a promise to return the result. |
-| [queryAppUsagePriorityGroup](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md) | Queries the usage priority group of the calling application.The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks. |
-| [queryAppUsagePriorityGroup](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md) | Queries the usage priority group of the calling application.The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks. |
-| [queryCurrentBundleActiveStates](arkts-backgroundtasks-bundlestate-querycurrentbundleactivestates-f.md) | Queries state data of the current bundle within a specified period. |
-| [queryCurrentBundleActiveStates](arkts-backgroundtasks-bundlestate-querycurrentbundleactivestates-f.md) | Queries state data of the current bundle within a specified period. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [isIdleState(Device Usage Statistics)](arkts-backgroundtasks-bundlestate-isidlestate-f.md) |
+| [isIdleState(Device Usage Statistics)](arkts-backgroundtasks-bundlestate-isidlestate-f.md) |
+| [queryAppUsagePriorityGroup(Device Usage Statistics)](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md) |
+| [queryAppUsagePriorityGroup(Device Usage Statistics)](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md) |
+| [queryCurrentBundleActiveStates(Device Usage Statistics)](arkts-backgroundtasks-bundlestate-querycurrentbundleactivestates-f.md) |
+| [queryCurrentBundleActiveStates(Device Usage Statistics)](arkts-backgroundtasks-bundlestate-querycurrentbundleactivestates-f.md) |
 
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [queryBundleActiveStates](arkts-backgroundtasks-bundlestate-querybundleactivestates-f-sys.md) | Queries state data of all bundles within a specified period identified by the start and end time. |
-| [queryBundleActiveStates](arkts-backgroundtasks-bundlestate-querybundleactivestates-f-sys.md) | Queries state data of all bundles within a specified period identified by the start and end time. |
-| [queryBundleStateInfoByInterval](arkts-backgroundtasks-bundlestate-querybundlestateinfobyinterval-f-sys.md) | Queries usage information about each bundle within a specified period at a specified interval. |
-| [queryBundleStateInfoByInterval](arkts-backgroundtasks-bundlestate-querybundlestateinfobyinterval-f-sys.md) | Queries usage information about each bundle within a specified period at a specified interval. |
-| [queryBundleStateInfos](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md) | Queries usage information about each bundle within a specified period.This method queries usage information at the BY_OPTIMIZED interval by default. |
-| [queryBundleStateInfos](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md) | Queries usage information about each bundle within a specified period.This method queries usage information at the BY_OPTIMIZED interval by default. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [queryBundleActiveStates(Device Usage Statistics)](arkts-backgroundtasks-bundlestate-querybundleactivestates-f-sys.md) |
+| [queryBundleActiveStates(Device Usage Statistics)](arkts-backgroundtasks-bundlestate-querybundleactivestates-f-sys.md) |
+| [queryBundleStateInfoByInterval(Device Usage Statistics)](arkts-backgroundtasks-bundlestate-querybundlestateinfobyinterval-f-sys.md) |
+| [queryBundleStateInfoByInterval(Device Usage Statistics)](arkts-backgroundtasks-bundlestate-querybundlestateinfobyinterval-f-sys.md) |
+| [queryBundleStateInfos(Device Usage Statistics)](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md) |
+| [queryBundleStateInfos(Device Usage Statistics)](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md) |
 <!--DelEnd-->
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md) |  |
-| [BundleActiveState](arkts-backgroundtasks-bundlestate-bundleactivestate-i.md) |  |
-| [BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md) |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BundleActiveInfoResponse(Device Usage Statistics)](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md) |
+| [BundleActiveState(Device Usage Statistics)](arkts-backgroundtasks-bundlestate-bundleactivestate-i.md) |
+| [BundleStateInfo(Device Usage Statistics)](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | Declares interval type. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [IntervalType(Device Usage Statistics)](arkts-backgroundtasks-bundlestate-intervaltype-e.md) |

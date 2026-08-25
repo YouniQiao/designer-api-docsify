@@ -14,30 +14,30 @@ function getUptime(timeType: TimeType, isNanoseconds?: boolean): long
 
 Obtains the time elapsed since system startup. This API returns the result synchronously.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-systemDateTime-function getUptime(timeType: TimeType, isNanoseconds?: boolean): long--><!--Device-systemDateTime-function getUptime(timeType: TimeType, isNanoseconds?: boolean): long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| timeType | [TimeType](arkts-basicservices-systemdatetime-timetype-e.md) | Yes | Type of the time to be obtained. The value can only be `STARTUP` or `ACTIVE`. |
-| isNanoseconds | boolean | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| timeType | [TimeType](arkts-basicservices-systemdatetime-timetype-e.md) | Yes |
+| isNanoseconds | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Time elapsed since system startup. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. <br> 3. Parameter verification failed. This error code was added due to missing issues.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -51,4 +51,3 @@ try {
   console.error(`Failed to get uptime. message: ${error.message}, code: ${error.code}`);
 }
 ```
-

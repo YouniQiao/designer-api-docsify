@@ -4,11 +4,11 @@ Defines a **BarometerResponse** object.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [BarometerResponse](arkts-sensorservice-sensor-barometerresponse-i.md)
-
-<!--Device-unnamed-export interface BarometerResponse--><!--Device-unnamed-export interface BarometerResponse-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -30,13 +30,12 @@ Pressure, in pascal.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [pressure](arkts-sensorservice-sensor-barometerresponse-i.md#pressure)
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-BarometerResponse-pressure: number--><!--Device-BarometerResponse-pressure: number-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
-

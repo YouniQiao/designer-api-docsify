@@ -9,26 +9,25 @@ Called before scroll to allow developer to control real offset the Scroll can sc
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-unnamed-declare type ScrollOnWillScrollCallback = (xOffset: number, yOffset: number, scrollState: ScrollState, scrollSource: ScrollSource) => void | OffsetResult--><!--Device-unnamed-declare type ScrollOnWillScrollCallback = (xOffset: number, yOffset: number, scrollState: ScrollState, scrollSource: ScrollSource) => void | OffsetResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| xOffset | number | Yes | Horizontal offset per frame during scrolling. A positive offset indicates scrolling to the left, and a negative offset indicates scrolling to the right. <br>Unit: vp |
-| yOffset | number | Yes | offset per frame during scrolling. A positive offset indicates scrolling upward, and a negative offset indicates scrolling downward. <br>Unit: vp |
-| scrollState | ScrollState | Yes | Current scrolling state. |
-| scrollSource | ScrollSource | Yes | Source of the current scrolling operation. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| xOffset | number | Yes |
+| yOffset | number | Yes |
+| scrollState | [ScrollState](arkts-arkui-scrollstate-e.md) | Yes |
+| scrollSource | [ScrollSource](../arkts-apis/arkts-arkui-enums-scrollsource-e.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| void \| [OffsetResult](arkts-arkui-offsetresult-i.md) | the remain offset for the Scroll, same as (xOffset, yOffset) when no OffsetResult is returned. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| void \| [OffsetResult](arkts-arkui-offsetresult-i.md) |

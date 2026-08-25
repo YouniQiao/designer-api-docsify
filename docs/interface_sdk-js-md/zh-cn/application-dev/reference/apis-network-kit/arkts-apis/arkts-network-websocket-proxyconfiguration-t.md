@@ -6,15 +6,14 @@ export type ProxyConfiguration = 'system' | 'no-proxy' | HttpProxy
 
 网络代理配置信息
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-webSocket-export type ProxyConfiguration = 'system' | 'no-proxy' | HttpProxy--><!--Device-webSocket-export type ProxyConfiguration = 'system' | 'no-proxy' | HttpProxy-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
-| 类型 | 说明 |
-| --- | --- |
-| 'system' | 使用系统默认网络代理。 |
-| 'no-proxy' | 不使用网络代理。 |
-| HttpProxy | 使用指定的网络代理。 |
-
+| 类型 |
+| --- |
+| 'system' |
+| 'no-proxy' |
+| [HttpProxy](arkts-network-ethernet-httpproxy-t.md) |

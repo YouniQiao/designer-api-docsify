@@ -4,11 +4,11 @@ Provides an asynchronous callback to return the authentication event information
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 11
 
 **Substitutes:** [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md)
-
-<!--Device-userAuth-interface AuthEvent--><!--Device-userAuth-interface AuthEvent-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -28,19 +28,19 @@ Called to return the authentication result or authentication tip information.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 11
 
 **Substitutes:** [onResult](arkts-userauthentication-userauth-iauthcallback-i.md#onresult)(result: UserAuthResult)
-
-<!--Device-AuthEvent-callback(result: EventInfo): void--><!--Device-AuthEvent-callback(result: EventInfo): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| result | EventInfo | Yes | Authentication result or tip information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| result | [EventInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-update-eventinfo-i-sys.md) | Yes |
 
 **Examples**
 
@@ -91,4 +91,3 @@ try {
   // do error.
 }
 ```
-

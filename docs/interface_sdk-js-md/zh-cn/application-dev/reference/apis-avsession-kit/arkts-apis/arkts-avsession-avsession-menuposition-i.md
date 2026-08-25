@@ -2,9 +2,9 @@
 
 定义可弹出菜单的组件的位置。
 
-**起始版本：** 24
+**起始版本：** 22
 
-<!--Device-avSession-interface MenuPosition--><!--Device-avSession-interface MenuPosition-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -22,13 +22,13 @@ height: int
 
 组件高度。单位为vp。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 24
+**起始版本：** 22
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
-<!--Device-MenuPosition-height: int--><!--Device-MenuPosition-height: int-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -40,13 +40,13 @@ width: int
 
 组件宽度。单位为vp。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 24
+**起始版本：** 22
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
-<!--Device-MenuPosition-width: int--><!--Device-MenuPosition-width: int-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -58,13 +58,13 @@ x: int
 
 组件在X轴上的位置坐标。单位为vp。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 24
+**起始版本：** 22
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
-<!--Device-MenuPosition-x: int--><!--Device-MenuPosition-x: int-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -76,13 +76,12 @@ y: int
 
 组件在y轴上的位置坐标。单位为vp。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 24
+**起始版本：** 22
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
-<!--Device-MenuPosition-y: int--><!--Device-MenuPosition-y: int-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-

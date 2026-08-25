@@ -7,11 +7,11 @@
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [media](arkts-media-media-n.md)
-
-<!--Device-unnamed-interface AudioRecorder--><!--Device-unnamed-interface AudioRecorder-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -20,6 +20,223 @@
 ```TypeScript
 import { media } from '@kit.MediaKit';
 ```
+
+## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
+
+```TypeScript
+on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
+```
+
+开始订阅音频录制事件。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> AVRecorder.on('stateChange')
+> 替代。
+
+**起始版本：** 6
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
+**废弃版本：** 9
+
+**替代接口：** on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \|
+| callback | () = & gt; void | 是 |
+
+## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
+
+```TypeScript
+on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
+```
+
+开始订阅音频录制事件。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> AVRecorder.on('stateChange')
+> 替代。
+
+**起始版本：** 6
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
+**废弃版本：** 9
+
+**替代接口：** on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \|
+| callback | () = & gt; void | 是 |
+
+## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
+
+```TypeScript
+on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
+```
+
+开始订阅音频录制事件。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> AVRecorder.on('stateChange')
+> 替代。
+
+**起始版本：** 6
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
+**废弃版本：** 9
+
+**替代接口：** on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \|
+| callback | () = & gt; void | 是 |
+
+## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
+
+```TypeScript
+on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
+```
+
+开始订阅音频录制事件。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> AVRecorder.on('stateChange')
+> 替代。
+
+**起始版本：** 6
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
+**废弃版本：** 9
+
+**替代接口：** on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \|
+| callback | () = & gt; void | 是 |
+
+## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
+
+```TypeScript
+on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
+```
+
+开始订阅音频录制事件。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> AVRecorder.on('stateChange')
+> 替代。
+
+**起始版本：** 6
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
+**废弃版本：** 9
+
+**替代接口：** on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \|
+| callback | () = & gt; void | 是 |
+
+## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
+
+```TypeScript
+on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
+```
+
+开始订阅音频录制事件。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> AVRecorder.on('stateChange')
+> 替代。
+
+**起始版本：** 6
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
+**废弃版本：** 9
+
+**替代接口：** on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \|
+| callback | () = & gt; void | 是 |
+
+## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
+
+```TypeScript
+on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
+```
+
+开始订阅音频录制事件。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> AVRecorder.on('stateChange')
+> 替代。
+
+**起始版本：** 6
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
+**废弃版本：** 9
+
+**替代接口：** on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \|
+| callback | () = & gt; void | 是 |
 
 ## on('error')
 
@@ -37,237 +254,20 @@ on(type: 'error', callback: ErrorCallback): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** on(type: 'error', callback: ErrorCallback)
 
-<!--Device-AudioRecorder-on(type: 'error', callback: ErrorCallback): void--><!--Device-AudioRecorder-on(type: 'error', callback: ErrorCallback): void-End-->
-
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'error' | 是 | 录制错误事件回调类型'error'。<br/>- 'error'：音频录制过程中发生错误，触发该事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 录制错误事件回调方法。 |
-
-## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
-
-```TypeScript
-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
-```
-
-开始订阅音频录制事件。
-
-> **说明：**
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用
-> AVRecorder.on('stateChange')
-> 替代。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
-
-<!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \| 'reset'。<br/>- 'prepare' ：完成prepare调用，音频录制参数设 置完成，触发该事件。<br/>- 'start' ：完成start调用，音频录制开始，触发该事件。<br/>- 'pause': 完成pause调用，音频暂停录制，触发该事件。<br/>- 'resume': 完成 resume调用，音频恢复录制，触发该事件。<br/>- 'stop' ：完成stop调用，音频停止录制，触发该事件。<br/>- 'release' ：完成release调用，音频释放录制资源，触发该事件。<br/> - 'reset'：完成reset调用，音频重置为初始状态，触发该事件。 |
-| callback | () =&gt; void | 是 | 录制事件回调方法。 |
-
-## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
-
-```TypeScript
-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
-```
-
-开始订阅音频录制事件。
-
-> **说明：**
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用
-> AVRecorder.on('stateChange')
-> 替代。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
-
-<!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \| 'reset'。<br/>- 'prepare' ：完成prepare调用，音频录制参数设 置完成，触发该事件。<br/>- 'start' ：完成start调用，音频录制开始，触发该事件。<br/>- 'pause': 完成pause调用，音频暂停录制，触发该事件。<br/>- 'resume': 完成 resume调用，音频恢复录制，触发该事件。<br/>- 'stop' ：完成stop调用，音频停止录制，触发该事件。<br/>- 'release' ：完成release调用，音频释放录制资源，触发该事件。<br/> - 'reset'：完成reset调用，音频重置为初始状态，触发该事件。 |
-| callback | () =&gt; void | 是 | 录制事件回调方法。 |
-
-## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
-
-```TypeScript
-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
-```
-
-开始订阅音频录制事件。
-
-> **说明：**
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用
-> AVRecorder.on('stateChange')
-> 替代。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
-
-<!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \| 'reset'。<br/>- 'prepare' ：完成prepare调用，音频录制参数设 置完成，触发该事件。<br/>- 'start' ：完成start调用，音频录制开始，触发该事件。<br/>- 'pause': 完成pause调用，音频暂停录制，触发该事件。<br/>- 'resume': 完成 resume调用，音频恢复录制，触发该事件。<br/>- 'stop' ：完成stop调用，音频停止录制，触发该事件。<br/>- 'release' ：完成release调用，音频释放录制资源，触发该事件。<br/> - 'reset'：完成reset调用，音频重置为初始状态，触发该事件。 |
-| callback | () =&gt; void | 是 | 录制事件回调方法。 |
-
-## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
-
-```TypeScript
-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
-```
-
-开始订阅音频录制事件。
-
-> **说明：**
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用
-> AVRecorder.on('stateChange')
-> 替代。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
-
-<!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \| 'reset'。<br/>- 'prepare' ：完成prepare调用，音频录制参数设 置完成，触发该事件。<br/>- 'start' ：完成start调用，音频录制开始，触发该事件。<br/>- 'pause': 完成pause调用，音频暂停录制，触发该事件。<br/>- 'resume': 完成 resume调用，音频恢复录制，触发该事件。<br/>- 'stop' ：完成stop调用，音频停止录制，触发该事件。<br/>- 'release' ：完成release调用，音频释放录制资源，触发该事件。<br/> - 'reset'：完成reset调用，音频重置为初始状态，触发该事件。 |
-| callback | () =&gt; void | 是 | 录制事件回调方法。 |
-
-## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
-
-```TypeScript
-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
-```
-
-开始订阅音频录制事件。
-
-> **说明：**
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用
-> AVRecorder.on('stateChange')
-> 替代。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
-
-<!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \| 'reset'。<br/>- 'prepare' ：完成prepare调用，音频录制参数设 置完成，触发该事件。<br/>- 'start' ：完成start调用，音频录制开始，触发该事件。<br/>- 'pause': 完成pause调用，音频暂停录制，触发该事件。<br/>- 'resume': 完成 resume调用，音频恢复录制，触发该事件。<br/>- 'stop' ：完成stop调用，音频停止录制，触发该事件。<br/>- 'release' ：完成release调用，音频释放录制资源，触发该事件。<br/> - 'reset'：完成reset调用，音频重置为初始状态，触发该事件。 |
-| callback | () =&gt; void | 是 | 录制事件回调方法。 |
-
-## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
-
-```TypeScript
-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
-```
-
-开始订阅音频录制事件。
-
-> **说明：**
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用
-> AVRecorder.on('stateChange')
-> 替代。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
-
-<!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \| 'reset'。<br/>- 'prepare' ：完成prepare调用，音频录制参数设 置完成，触发该事件。<br/>- 'start' ：完成start调用，音频录制开始，触发该事件。<br/>- 'pause': 完成pause调用，音频暂停录制，触发该事件。<br/>- 'resume': 完成 resume调用，音频恢复录制，触发该事件。<br/>- 'stop' ：完成stop调用，音频停止录制，触发该事件。<br/>- 'release' ：完成release调用，音频释放录制资源，触发该事件。<br/> - 'reset'：完成reset调用，音频重置为初始状态，触发该事件。 |
-| callback | () =&gt; void | 是 | 录制事件回调方法。 |
-
-## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
-
-```TypeScript
-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
-```
-
-开始订阅音频录制事件。
-
-> **说明：**
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用
-> AVRecorder.on('stateChange')
-> 替代。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
-
-<!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \| 'reset'。<br/>- 'prepare' ：完成prepare调用，音频录制参数设 置完成，触发该事件。<br/>- 'start' ：完成start调用，音频录制开始，触发该事件。<br/>- 'pause': 完成pause调用，音频暂停录制，触发该事件。<br/>- 'resume': 完成 resume调用，音频恢复录制，触发该事件。<br/>- 'stop' ：完成stop调用，音频停止录制，触发该事件。<br/>- 'release' ：完成release调用，音频释放录制资源，触发该事件。<br/> - 'reset'：完成reset调用，音频重置为初始状态，触发该事件。 |
-| callback | () =&gt; void | 是 | 录制事件回调方法。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'error' | 是 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
 
 ## pause
 
@@ -284,11 +284,11 @@ pause(): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** pause(callback: AsyncCallback&lt;void&gt;)
-
-<!--Device-AudioRecorder-pause(): void--><!--Device-AudioRecorder-pause(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -438,27 +438,27 @@ prepare(config: AudioRecorderConfig): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** prepare(config: AVRecorderConfig, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.MICROPHONE
 
-<!--Device-AudioRecorder-prepare(config: AudioRecorderConfig): void--><!--Device-AudioRecorder-prepare(config: AudioRecorderConfig): void-End-->
-
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| config | [AudioRecorderConfig](arkts-media-multimedia-media-audiorecorderconfig-i.md) | 是 | 配置录音的相关参数，包括音频输出URI、编码格式、采样率、声道数、输出格式等。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| config | [AudioRecorderConfig](arkts-media-multimedia-media-audiorecorderconfig-i.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -712,11 +712,11 @@ release(): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** release(callback: AsyncCallback&lt;void&gt;)
-
-<!--Device-AudioRecorder-release(): void--><!--Device-AudioRecorder-release(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -965,11 +965,11 @@ reset(): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** reset(callback: AsyncCallback&lt;void&gt;)
-
-<!--Device-AudioRecorder-reset(): void--><!--Device-AudioRecorder-reset(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -1103,11 +1103,11 @@ resume(): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** resume(callback: AsyncCallback&lt;void&gt;)
-
-<!--Device-AudioRecorder-resume(): void--><!--Device-AudioRecorder-resume(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -1197,11 +1197,11 @@ start(): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** start(callback: AsyncCallback&lt;void&gt;)
-
-<!--Device-AudioRecorder-start(): void--><!--Device-AudioRecorder-start(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -1291,11 +1291,11 @@ stop(): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** stop(callback: AsyncCallback&lt;void&gt;)
-
-<!--Device-AudioRecorder-stop(): void--><!--Device-AudioRecorder-stop(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -1413,4 +1413,3 @@ videoPlayer.stop().then(() => {
   console.error(`video catchCallback, error:${error}`);
 });
 ```
-

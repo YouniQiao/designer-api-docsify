@@ -4,7 +4,7 @@ Defines the option content in the dialog box. You can configure the text, icon, 
 
 **Since:** 8
 
-<!--Device-unnamed-interface SheetInfo--><!--Device-unnamed-interface SheetInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,13 +21,11 @@ action: VoidCallback
 
 Callback when the sheet is selected.
 
-**Type:** VoidCallback
-
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-SheetInfo-action: VoidCallback--><!--Device-SheetInfo-action: VoidCallback-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,9 +41,9 @@ Sheet icon. By default, no icon is displayed.The string type can be used to load
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-SheetInfo-icon?: string | Resource--><!--Device-SheetInfo-icon?: string | Resource-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,9 +59,8 @@ Sheet text.If the text is too long to display, a scrollbar is displayed.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-SheetInfo-title: string | Resource--><!--Device-SheetInfo-title: string | Resource-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 提供富文本数字格式化的能力。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-i18n-export class StyledNumberFormat--><!--Device-i18n-export class StyledNumberFormat-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -22,20 +22,20 @@ constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: Styl
 
 创建需要富文本显示的数字格式化的对象。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-StyledNumberFormat-constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)--><!--Device-StyledNumberFormat-constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| numberFormat | Intl.NumberFormat \| [SimpleNumberFormat](../../apis-default/arkts-apis/arkts-i18n-simplenumberformat-c.md) | 是 | 用于格式化数字的对象。 |
-| options | [StyledNumberFormatOptions](../../apis-default/arkts-apis/arkts-i18n-stylednumberformatoptions-i.md) | 否 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| numberFormat | Intl.NumberFormat \| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | 是 |
+| options | [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md) | 否 |
 
 **示例**
 
@@ -228,22 +228,22 @@ constructor(numberFormat: intl.NumberFormat | SimpleNumberFormat, options?: Styl
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **废弃版本：** 20
 
-**替代接口：** [constructor](../../apis-default/arkts-apis/arkts-i18n-stylednumberformat-c.md#constructor)(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)
+**替代接口：** [constructor](#constructor)(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StyledNumberFormat-constructor(numberFormat: intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)--><!--Device-StyledNumberFormat-constructor(numberFormat: intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| numberFormat | intl.NumberFormat \| [SimpleNumberFormat](../../apis-default/arkts-apis/arkts-i18n-simplenumberformat-c.md) | 是 | 用于格式化数字的对象。 |
-| options | [StyledNumberFormatOptions](../../apis-default/arkts-apis/arkts-i18n-stylednumberformatoptions-i.md) | 否 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| numberFormat | intl.NumberFormat \| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | 是 |
+| options | [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md) | 否 |
 
 **示例**
 
@@ -251,31 +251,37 @@ constructor(numberFormat: intl.NumberFormat | SimpleNumberFormat, options?: Styl
 
 ## format
 
+ArkTS-Dyn:
+```TypeScript
+format(value: number): StyledString
+```
+
+ArkTS-Sta:
 ```TypeScript
 format(value: double): StyledString
 ```
 
 使用数字格式化对象对数字进行格式化，返回富文本对象。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-StyledNumberFormat-format(value: double): StyledString--><!--Device-StyledNumberFormat-format(value: double): StyledString-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | double | 是 | 需要格式化的数字。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-styledstring-c.md) | 格式化后的富文本对象。 |
+| 类型 |
+| --- |
+| [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-styledstring-c.md) |
 
 **示例**
 
@@ -438,4 +444,3 @@ let advancedMeasureFormat: i18n.AdvancedMeasureFormat = new i18n.AdvancedMeasure
 });
 let result = advancedMeasureFormat.format(100); // result = '37.778°C'
 ```
-

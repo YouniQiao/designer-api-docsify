@@ -2,9 +2,9 @@
 
 Describes the options used in the **Readable** constructor.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-stream-interface ReadableOptions--><!--Device-stream-interface ReadableOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -24,11 +24,10 @@ Encoding format. If an invalid string is input, an exception is thrown in the **
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-ReadableOptions-encoding?: string--><!--Device-ReadableOptions-encoding?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
-

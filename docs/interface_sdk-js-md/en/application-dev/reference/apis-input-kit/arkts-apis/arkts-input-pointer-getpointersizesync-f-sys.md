@@ -14,9 +14,9 @@ function getPointerSizeSync(): int
 
 Obtains the pointer size. This API returns the result synchronously.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-pointer-function getPointerSizeSync(): int--><!--Device-pointer-function getPointerSizeSync(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -24,15 +24,15 @@ Obtains the pointer size. This API returns the result synchronously.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Mouse pointer size. The value ranges from **1** to **7**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -57,4 +57,3 @@ struct Index {
   }
 }
 ```
-

@@ -1,11 +1,11 @@
-# domain
+# domain(Application Event Logging)
 
 Provides domain name constants.  
-| Name| Type | Read Only | Description | | --- | ------ | ------ | ---------- | | OS | string | Yes| System domain.|
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Read Only | Description | | --- | ------ | ------ | ---------- | | [OS](arkts-performanceanalysis-domain-con.md) | string | Yes|
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-hiAppEvent-namespace domain--><!--Device-hiAppEvent-namespace domain-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -19,7 +19,6 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 
 ### Constants
 
-| Name | Description |
-| --- | --- |
-| [OS](arkts-performanceanalysis-domain-con.md#os) | System domain. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [OS(Application Event Logging)](arkts-performanceanalysis-domain-con.md#os) |

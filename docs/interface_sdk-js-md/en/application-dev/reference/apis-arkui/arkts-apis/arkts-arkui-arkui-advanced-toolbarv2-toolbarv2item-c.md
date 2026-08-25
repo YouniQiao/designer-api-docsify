@@ -4,9 +4,7 @@ Declare type ToolBarV2Item
 
 **Since:** 18
 
-**Decorator:** @ObservedV2
-
-<!--Device-unnamed-export declare class ToolBarV2Item--><!--Device-unnamed-export declare class ToolBarV2Item-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,6 +13,24 @@ Declare type ToolBarV2Item
 ```TypeScript
 import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemText, ToolBarV2ItemTextOptions, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemImageOptions, ToolBarV2, ToolBarV2Item, ToolBarV2ItemOptions, ToolBarV2Modifier, ToolBarV2ItemAction } from '@kit.ArkUI';
 ```
+
+## action
+
+```TypeScript
+action?: ToolBarV2ItemAction
+```
+
+Define the action event.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
 
@@ -26,19 +42,19 @@ The constructor used to create a ToolBarV2Item object.
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ToolBarV2Item-constructor(options: ToolBarV2ItemOptions)--><!--Device-ToolBarV2Item-constructor(options: ToolBarV2ItemOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [ToolBarV2ItemOptions](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemoptions-i.md) | Yes | item info. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [ToolBarV2ItemOptions](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemoptions-i.md) | Yes |
 
 ## accessibilityDescription
 
@@ -52,13 +68,11 @@ The accessibilityDescription of item.
 
 **Since:** 18
 
-**Decorator:** @Trace
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ToolBarV2Item-@Trace  accessibilityDescription?: ResourceStr--><!--Device-ToolBarV2Item-@Trace  accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,13 +90,11 @@ The accessibilityLevel of item.
 
 **Since:** 18
 
-**Decorator:** @Trace
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ToolBarV2Item-@Trace  accessibilityLevel?: string--><!--Device-ToolBarV2Item-@Trace  accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,35 +110,11 @@ The accessibilityText of item.
 
 **Since:** 18
 
-**Decorator:** @Trace
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ToolBarV2Item-@Trace  accessibilityText?: ResourceStr--><!--Device-ToolBarV2Item-@Trace  accessibilityText?: ResourceStr-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## action
-
-```TypeScript
-action?: ToolBarV2ItemAction
-```
-
-Define the action event.
-
-**Type:** [ToolBarV2ItemAction](arkts-arkui-toolbarv2itemaction-t.md)
-
-**Since:** 18
-
-**Decorator:** @Trace
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ToolBarV2Item-@Trace  action?: ToolBarV2ItemAction--><!--Device-ToolBarV2Item-@Trace  action?: ToolBarV2ItemAction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -142,13 +130,11 @@ Define text content.
 
 **Since:** 18
 
-**Decorator:** @Trace
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ToolBarV2Item-@Trace  content: ToolBarV2ItemText--><!--Device-ToolBarV2Item-@Trace  content: ToolBarV2ItemText-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -164,13 +150,11 @@ Define icon resource.
 
 **Since:** 18
 
-**Decorator:** @Trace
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ToolBarV2Item-@Trace  icon?: ToolBarV2ItemIconType--><!--Device-ToolBarV2Item-@Trace  icon?: ToolBarV2ItemIconType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -186,13 +170,10 @@ Define item type.
 
 **Since:** 18
 
-**Decorator:** @Trace
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2Item-@Trace  state?: ToolBarV2ItemState--><!--Device-ToolBarV2Item-@Trace  state?: ToolBarV2ItemState-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

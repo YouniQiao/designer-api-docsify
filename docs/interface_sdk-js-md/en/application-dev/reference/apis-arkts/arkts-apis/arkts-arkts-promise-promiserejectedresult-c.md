@@ -4,9 +4,7 @@ Represents the result of a rejected promise.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class PromiseRejectedResult--><!--Device-unnamed-export class PromiseRejectedResult-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,11 +23,9 @@ Constructs a PromiseRejectedResult with a default error.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PromiseRejectedResult-constructor()--><!--Device-PromiseRejectedResult-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -43,19 +39,17 @@ Constructs a PromiseRejectedResult with the given reason.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PromiseRejectedResult-constructor(reason: Error)--><!--Device-PromiseRejectedResult-constructor(reason: Error)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| reason | Error | Yes | the rejection reason. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [reason](#reason) | Error | Yes |
 
 ## reason
 
@@ -69,11 +63,9 @@ The reason the promise was rejected.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PromiseRejectedResult-reason: Error--><!--Device-PromiseRejectedResult-reason: Error-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -89,11 +81,8 @@ The status of the promise.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PromiseRejectedResult-status: string--><!--Device-PromiseRejectedResult-status: string-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

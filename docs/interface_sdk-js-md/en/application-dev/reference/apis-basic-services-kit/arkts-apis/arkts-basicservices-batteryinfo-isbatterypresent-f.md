@@ -16,15 +16,12 @@ Whether the battery is supported or present. The value **true** means that the b
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-batteryInfo-function isBatteryPresent(): boolean--><!--Device-batteryInfo-function isBatteryPresent(): boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns true if the battery is supported or present; returns false if the battery is not supported or absent. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

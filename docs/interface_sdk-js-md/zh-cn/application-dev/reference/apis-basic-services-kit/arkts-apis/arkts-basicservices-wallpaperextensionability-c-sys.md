@@ -4,9 +4,9 @@ class of wallpaper extension ability.
 
 **起始版本：** 10
 
-**废弃版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-unnamed-declare class WallpaperExtensionAbility--><!--Device-unnamed-declare class WallpaperExtensionAbility-End-->
+**废弃版本：** 23
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
@@ -28,11 +28,11 @@ onCreate(want: object): void
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-WallpaperExtensionAbility-onCreate(want: object): void--><!--Device-WallpaperExtensionAbility-onCreate(want: object): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
@@ -40,9 +40,9 @@ onCreate(want: object): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | object | 是 | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | object | 是 |
 
 **示例**
 
@@ -67,11 +67,11 @@ onDestroy(): void
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-WallpaperExtensionAbility-onDestroy(): void--><!--Device-WallpaperExtensionAbility-onDestroy(): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
@@ -99,11 +99,11 @@ onWallpaperChange(wallpaperType: number): void
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-WallpaperExtensionAbility-onWallpaperChange(wallpaperType: number): void--><!--Device-WallpaperExtensionAbility-onWallpaperChange(wallpaperType: number): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
@@ -111,9 +111,9 @@ onWallpaperChange(wallpaperType: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| wallpaperType | number | 是 | 壁纸类型。主屏幕壁纸为0，锁屏壁纸为1。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| wallpaperType | number | 是 |
 
 **示例**
 
@@ -127,4 +127,3 @@ class WallpaperExt extends WallpaperExtensionAbility {
     }
 }
 ```
-

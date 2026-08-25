@@ -2,9 +2,9 @@
 
 音频中断结果。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-audio-interface InterruptResult--><!--Device-audio-interface InterruptResult-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -24,11 +24,11 @@ interruptNode: int
 
 音频请求中断的节点。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-InterruptResult-interruptNode: int--><!--Device-InterruptResult-interruptNode: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -44,11 +44,10 @@ requestResult: InterruptRequestResultType
 
 **类型：** [InterruptRequestResultType](arkts-audio-audio-interruptrequestresulttype-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-InterruptResult-requestResult: InterruptRequestResultType--><!--Device-InterruptResult-requestResult: InterruptRequestResultType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 
 **系统接口：** 此接口为系统接口。
-

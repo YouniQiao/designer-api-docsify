@@ -2,9 +2,9 @@
 
 Describes the camera status information.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-camera-interface CameraStatusInfo--><!--Device-camera-interface CameraStatusInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -24,11 +24,11 @@ Camera device.
 
 **Type:** [CameraDevice](arkts-camera-camera-cameradevice-i.md)
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-CameraStatusInfo-camera: CameraDevice--><!--Device-CameraStatusInfo-camera: CameraDevice-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -42,11 +42,10 @@ Camera status.
 
 **Type:** [CameraStatus](arkts-camera-camera-camerastatus-e.md)
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-CameraStatusInfo-status: CameraStatus--><!--Device-CameraStatusInfo-status: CameraStatus-End-->
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
-

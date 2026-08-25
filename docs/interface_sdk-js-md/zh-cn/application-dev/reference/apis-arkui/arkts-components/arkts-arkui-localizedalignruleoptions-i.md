@@ -4,7 +4,7 @@ Defines the Localized align rule options of relative container.@interface Locali
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare interface LocalizedAlignRuleOptions--><!--Device-unnamed-declare interface LocalizedAlignRuleOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,11 @@ bias?: Bias
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LocalizedAlignRuleOptions-bias?: Bias--><!--Device-LocalizedAlignRuleOptions-bias?: Bias-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,11 +47,11 @@ bottom?: LocalizedVerticalAlignParam
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LocalizedAlignRuleOptions-bottom?: LocalizedVerticalAlignParam--><!--Device-LocalizedAlignRuleOptions-bottom?: LocalizedVerticalAlignParam-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,11 +67,11 @@ center?: LocalizedVerticalAlignParam
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LocalizedAlignRuleOptions-center?: LocalizedVerticalAlignParam--><!--Device-LocalizedAlignRuleOptions-center?: LocalizedVerticalAlignParam-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -87,11 +87,11 @@ end?: LocalizedHorizontalAlignParam
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LocalizedAlignRuleOptions-end?: LocalizedHorizontalAlignParam--><!--Device-LocalizedAlignRuleOptions-end?: LocalizedHorizontalAlignParam-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -107,11 +107,11 @@ middle?: LocalizedHorizontalAlignParam
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LocalizedAlignRuleOptions-middle?: LocalizedHorizontalAlignParam--><!--Device-LocalizedAlignRuleOptions-middle?: LocalizedHorizontalAlignParam-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -127,11 +127,11 @@ start?: LocalizedHorizontalAlignParam
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LocalizedAlignRuleOptions-start?: LocalizedHorizontalAlignParam--><!--Device-LocalizedAlignRuleOptions-start?: LocalizedHorizontalAlignParam-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -147,11 +147,10 @@ top?: LocalizedVerticalAlignParam
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-LocalizedAlignRuleOptions-top?: LocalizedVerticalAlignParam--><!--Device-LocalizedAlignRuleOptions-top?: LocalizedVerticalAlignParam-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 Enumerates the user operations. @enum { int }
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-mechanicManager-export enum Operation--><!--Device-mechanicManager-export enum Operation-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -18,9 +18,9 @@ CONNECT = 0
 
 Connection operation.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Operation-CONNECT = 0--><!--Device-Operation-CONNECT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -34,11 +34,10 @@ DISCONNECT = 1
 
 Disconnection operation.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Operation-DISCONNECT = 1--><!--Device-Operation-DISCONNECT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
-

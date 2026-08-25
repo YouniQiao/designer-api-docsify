@@ -4,11 +4,11 @@ Describes the **BundleOption** information, that is, the bundle information of a
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** BundleOption
-
-<!--Device-notification-export interface BundleOption--><!--Device-notification-export interface BundleOption-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -29,11 +29,11 @@ Bundle information of the application.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md)
-
-<!--Device-BundleOption-bundle: string--><!--Device-BundleOption-bundle: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -49,11 +49,10 @@ User ID. The default value is 0.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md)
 
-<!--Device-BundleOption-uid?: number--><!--Device-BundleOption-uid?: number-End-->
-
 **System capability:** SystemCapability.Notification.Notification
-

@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-Intl-export class ListFormat--><!--Device-Intl-export class ListFormat-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,20 +23,18 @@ public constructor(locales?: string | string[], options?: ListFormatOptions)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ListFormat-public constructor(locales?: string | string[], options?: ListFormatOptions)--><!--Device-ListFormat-public constructor(locales?: string | string[], options?: ListFormatOptions)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locales | string \| string[] | 否 | 区域设置。 |
-| options | [ListFormatOptions](arkts-arkts-intl-listformatoptions-i.md) | 否 | 选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locales | string \| string[] | 否 |
+| options | [ListFormatOptions](arkts-arkts-intl-listformatoptions-i.md) | 否 |
 
 ## format
 
@@ -50,25 +46,23 @@ public format(list: Iterable<string>): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ListFormat-public format(list: Iterable<string>): string--><!--Device-ListFormat-public format(list: Iterable<string>): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| list | Iterable&lt;string&gt; | 是 | 待格式化的列表。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| list | Iterable & lt;string & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 格式化后的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## formatToParts
 
@@ -80,25 +74,23 @@ public formatToParts(list: Iterable<string>): Array<FormatToPartsResult>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ListFormat-public formatToParts(list: Iterable<string>): Array<FormatToPartsResult>--><!--Device-ListFormat-public formatToParts(list: Iterable<string>): Array<FormatToPartsResult>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| list | Iterable&lt;string&gt; | 是 | 待格式化的列表。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| list | Iterable & lt;string & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[FormatToPartsResult](arkts-arkts-intl-formattopartsresult-i.md)&gt; | 格式化后的各个片段。 |
+| 类型 |
+| --- |
+| Array&lt;[FormatToPartsResult](arkts-arkts-intl-formattopartsresult-i.md)&gt; |
 
 ## supportedLocalesOf
 
@@ -110,24 +102,21 @@ public static supportedLocalesOf(locales: string | string[], options?: ListForma
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ListFormat-public static supportedLocalesOf(locales: string | string[], options?: ListFormatLocaleMatcher): string[]--><!--Device-ListFormat-public static supportedLocalesOf(locales: string | string[], options?: ListFormatLocaleMatcher): string[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locales | string \| string[] | 是 | 区域设置。 |
-| options | [ListFormatLocaleMatcher](arkts-arkts-intl-listformatlocalematcher-t.md) | 否 | 选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locales | string \| string[] | 是 |
+| options | [ListFormatLocaleMatcher](arkts-arkts-intl-listformatlocalematcher-t.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string[] | 支持的区域设置。 |
-
+| 类型 |
+| --- |
+| string[] |

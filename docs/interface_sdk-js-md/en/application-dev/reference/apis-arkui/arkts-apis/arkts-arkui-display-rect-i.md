@@ -2,9 +2,9 @@
 
 Describes a rectangle on the display.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-display-interface Rect--><!--Device-display-interface Rect-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -22,13 +22,13 @@ height: long
 
 Height of the rectangle, in px. The value is an integer.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Rect-height: long--><!--Device-Rect-height: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -40,13 +40,13 @@ left: long
 
 Left boundary of the rectangle, in px. The value is an integer.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Rect-left: long--><!--Device-Rect-left: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -58,13 +58,13 @@ top: long
 
 Top boundary of the rectangle, in px. The value is an integer.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Rect-top: long--><!--Device-Rect-top: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -76,13 +76,12 @@ width: long
 
 Width of the rectangle, in px. The value is an integer.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-Rect-width: long--><!--Device-Rect-width: long-End-->
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
-

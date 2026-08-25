@@ -8,11 +8,10 @@ Defines the ErrorObserver module.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-errorManager-export type ErrorObserver = _ErrorObserver.default--><!--Device-errorManager-export type ErrorObserver = _ErrorObserver.default-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Property type:** _ErrorObserver.default
-

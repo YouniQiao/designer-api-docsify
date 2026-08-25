@@ -16,19 +16,18 @@ function init(): boolean
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [initialize](arkts-connectivity-connectedtag-initialize-f.md)
 
 **需要权限：** ohos.permission.NFC_TAG
 
-<!--Device-connectedTag-function init(): boolean--><!--Device-connectedTag-function init(): boolean-End-->
-
 **系统能力：** SystemCapability.Communication.ConnectedTag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：初始化成功。  <br>false：初始化失败。 |
-
+| 类型 |
+| --- |
+| boolean |

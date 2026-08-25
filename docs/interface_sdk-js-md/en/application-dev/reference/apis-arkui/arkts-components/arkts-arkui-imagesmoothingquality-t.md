@@ -8,17 +8,16 @@ Sets the image smoothness attribute.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-unnamed-declare type ImageSmoothingQuality = "high" | "low" | "medium"--><!--Device-unnamed-declare type ImageSmoothingQuality = "high" | "low" | "medium"-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| Type | Description |
-| --- | --- |
-| "high" | High quality. |
-| "low" | Low quality. |
-| "medium" | Medium quality. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| "high" |
+| "low" |
+| "medium" |

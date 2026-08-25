@@ -8,18 +8,17 @@ declare type OnDidChangeCallback = (rangeBefore: TextRange, rangeAfter: TextRang
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-unnamed-declare type OnDidChangeCallback = (rangeBefore: TextRange, rangeAfter: TextRange) => void--><!--Device-unnamed-declare type OnDidChangeCallback = (rangeBefore: TextRange, rangeAfter: TextRange) => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rangeBefore | [TextRange](arkts-arkui-textrange-i.md) | 是 | Range of the text to be changed. |
-| rangeAfter | [TextRange](arkts-arkui-textrange-i.md) | 是 | Range of the text added. |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| rangeBefore | [TextRange](arkts-arkui-textrange-i.md) | 是 |
+| rangeAfter | [TextRange](arkts-arkui-textrange-i.md) | 是 |

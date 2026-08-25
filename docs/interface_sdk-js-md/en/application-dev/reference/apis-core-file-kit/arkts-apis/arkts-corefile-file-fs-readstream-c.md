@@ -1,12 +1,12 @@
 # ReadStream
 
-Defines a readable stream. You need to use fileIo.createReadStream to create a **ReadStream** instance, which is inherited from [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readableoptions-i.md).The data obtained by **ReadStream** is a decoded string. Currently, only the UTF-8 format is supported.
+Defines a readable stream. You need to use [fileIo.createReadStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatereadstream12) to create a **ReadStream** instance, which is inherited from [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readableoptions-i.md).The data obtained by **ReadStream** is a decoded string. Currently, only the UTF-8 format is supported.
 
 **Inheritance/Implementation:** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md)
 
 **Since:** 12
 
-<!--Device-unnamed-declare class ReadStream--><!--Device-unnamed-declare class ReadStream-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -28,20 +28,20 @@ Closes this readable stream.
 
 **Since:** 12
 
-<!--Device-ReadStream-close(): void--><!--Device-ReadStream-close(): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900025 | No space left on device |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900025 |
+| 13900041 |
+| 13900042 |
 
 **Examples**
 
@@ -121,7 +121,7 @@ The ReadStream constructor.
 
 **Since:** 12
 
-<!--Device-ReadStream-constructor()--><!--Device-ReadStream-constructor()-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -135,31 +135,31 @@ Adjusts the position of the readable stream offset pointer.
 
 **Since:** 12
 
-<!--Device-ReadStream-seek(offset: number, whence?: WhenceType): number--><!--Device-ReadStream-seek(offset: number, whence?: WhenceType): number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | Yes | Relative offset, in bytes. |
-| whence | [WhenceType](arkts-corefile-file-fs-whencetype-e.md) | No | Where to start the offset. The default value is **SEEK_SET**, which indicates the beginning of the file. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | Yes |
+| whence | [WhenceType](arkts-corefile-file-fs-whencetype-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Position of the current offset pointer (offset relative to the file header, in bytes). |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error |
-| 13900020 | Invalid argument |
-| 13900026 | Illegal seek |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| 13900020 |
+| 13900026 |
+| 13900042 |
 
 **Examples**
 
@@ -191,7 +191,7 @@ Number of bytes read by the readable stream.
 
 **Since:** 12
 
-<!--Device-ReadStream-readonly bytesRead: number--><!--Device-ReadStream-readonly bytesRead: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -207,7 +207,6 @@ Path of the file corresponding to the readable stream.
 
 **Since:** 12
 
-<!--Device-ReadStream-readonly path: string--><!--Device-ReadStream-readonly path: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
-

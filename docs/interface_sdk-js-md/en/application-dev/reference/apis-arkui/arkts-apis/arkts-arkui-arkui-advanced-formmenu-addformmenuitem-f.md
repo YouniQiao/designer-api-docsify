@@ -9,7 +9,6 @@ import { AddFormMenuItem, FormMenuItemStyle, AddFormOptions } from '@kit.ArkUI';
 ## AddFormMenuItem
 
 ```TypeScript
-@Builder
 export declare function AddFormMenuItem(
   want: Want,
   componentId: string,
@@ -19,21 +18,18 @@ export declare function AddFormMenuItem(
 
 Build function of AddFormMenuItem.
 
-**Since:** 23
+**Since:** 12
 
-**Decorator:** @Builder
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-unnamed-@Builderexport declare function AddFormMenuItem(  want: Want,  componentId: string,  options?: AddFormOptions): void--><!--Device-unnamed-@Builderexport declare function AddFormMenuItem(  want: Want,  componentId: string,  options?: AddFormOptions): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | The want of the form to publish. |
-| componentId | string | Yes | The id of the component used to get form snapshot. |
-| options | [AddFormOptions](arkts-arkui-arkui-advanced-formmenu-addformoptions-i.md) | No | Add form options. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+| componentId | string | Yes |
+| options | [AddFormOptions](arkts-arkui-arkui-advanced-formmenu-addformoptions-i.md) | No |

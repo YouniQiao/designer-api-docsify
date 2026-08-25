@@ -4,7 +4,7 @@
 
 **起始版本：** 20
 
-<!--Device-securityManager-export enum PermissionManagedState--><!--Device-securityManager-export enum PermissionManagedState-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,9 +18,9 @@ DENIED = -1
 
 **起始版本：** 20
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-PermissionManagedState-DENIED = -1--><!--Device-PermissionManagedState-DENIED = -1-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -34,9 +34,9 @@ GRANTED = 0
 
 **起始版本：** 20
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-PermissionManagedState-GRANTED = 0--><!--Device-PermissionManagedState-GRANTED = 0-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -50,9 +50,8 @@ DEFAULT = 1
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-PermissionManagedState-DEFAULT = 1--><!--Device-PermissionManagedState-DEFAULT = 1-End-->
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
-

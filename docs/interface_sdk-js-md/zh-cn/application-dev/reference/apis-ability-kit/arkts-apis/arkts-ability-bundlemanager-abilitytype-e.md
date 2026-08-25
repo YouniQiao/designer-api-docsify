@@ -4,7 +4,7 @@
 
 **起始版本：** 9
 
-<!--Device-bundleManager-export enum AbilityType--><!--Device-bundleManager-export enum AbilityType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -18,9 +18,9 @@ UI界面类型的Ability。表示基于Page模板开发的FA，用于提供与�
 
 **起始版本：** 9
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-AbilityType-PAGE = 1--><!--Device-AbilityType-PAGE = 1-End-->
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -34,9 +34,9 @@ SERVICE = 2
 
 **起始版本：** 9
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-AbilityType-SERVICE = 2--><!--Device-AbilityType-SERVICE = 2-End-->
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -50,9 +50,8 @@ DATA = 3
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-AbilityType-DATA = 3--><!--Device-AbilityType-DATA = 3-End-->
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-

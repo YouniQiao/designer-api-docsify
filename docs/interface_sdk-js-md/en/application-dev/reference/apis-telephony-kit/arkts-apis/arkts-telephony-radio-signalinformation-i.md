@@ -2,9 +2,9 @@
 
 Defines the signal strength.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-radio-export interface SignalInformation--><!--Device-radio-export interface SignalInformation-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -22,11 +22,11 @@ dBm: int
 
 Signal strength. The value range is [–140, 140]. If the value is out of range, an error is returned.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SignalInformation-dBm: int--><!--Device-SignalInformation-dBm: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -38,11 +38,11 @@ signalLevel: int
 
 Signal strength level. The value range is [0, 5]. If the value is out of range, an error is returned.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-SignalInformation-signalLevel: int--><!--Device-SignalInformation-signalLevel: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -56,9 +56,8 @@ Signal strength type.
 
 **Type:** NetworkType
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-SignalInformation-signalType: NetworkType--><!--Device-SignalInformation-signalType: NetworkType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
-

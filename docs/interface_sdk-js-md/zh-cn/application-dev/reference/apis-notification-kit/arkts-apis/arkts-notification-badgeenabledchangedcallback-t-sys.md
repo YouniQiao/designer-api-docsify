@@ -8,9 +8,9 @@ type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) =&gt;
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-unnamed-export type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void--><!--Device-unnamed-export type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -18,9 +18,9 @@ type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) =&gt;
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | [EnabledNotificationCallbackData](arkts-notification-notificationsubscriber-enablednotificationcallbackdata-i-sys.md) | 是 | 回调返回监听到的角标使能状态信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | [EnabledNotificationCallbackData](arkts-notification-notificationsubscriber-enablednotificationcallbackdata-i-sys.md) | 是 |
 
 **示例**
 
@@ -62,4 +62,3 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
   console.error(`subscribeNotification failed, code is ${error.code}, message is ${error.message}`);
 });
 ```
-

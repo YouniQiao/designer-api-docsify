@@ -1,4 +1,16 @@
-# @ohos.file.RecentPhotoComponent
+# @ohos.file.RecentPhotoComponent(RecentPhotoComponent)
+
+The RecentPhotoComponent embedded in the UI of an application allows the application to access the recent image or
+ video in the user directory without the required permission. This component grants the application only the read
+ permission.
+ Note that **RecentPhotoComponent** does not support nesting. Additionally, prevent overlaying components with the
+ **overlay** attribute or of higher levels on top it, as this will prevent it from receiving gesture events.
+ > **NOTE**
+ >
+ > - This component does not support [same-layer rendering](../../../web/web-same-layer.md).
+ ###### Properties
+ The universal properties are supported.
+
 
 ## Modules to Import
 
@@ -10,28 +22,27 @@ import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoInfo, 
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [RecentPhotoInfo](arkts-medialibrary-file-recentphotocomponent-recentphotoinfo-c.md) | Represents information about the recent image or video. |
-| [RecentPhotoOptions](arkts-medialibrary-file-recentphotocomponent-recentphotooptions-c.md) | Represents the configuration of the recent image or video. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [RecentPhotoInfo(RecentPhotoComponent)](arkts-medialibrary-file-recentphotocomponent-recentphotoinfo-c.md) |
+| [RecentPhotoOptions(RecentPhotoComponent)](arkts-medialibrary-file-recentphotocomponent-recentphotooptions-c.md) |
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [RecentPhotoComponent](arkts-medialibrary-file-recentphotocomponent-recentphotocomponent-s.md) | RecentPhotoComponent({ recentPhotoOptions?: RecentPhotoOptions, onRecentPhotoCheckResult?: RecentPhotoCheckResultCallback, onRecentPhotoClick: RecentPhotoClickCallback, onRecentPhotoCheckInfo?: RecentPhotoCheckInfoCallback, })Allows an application to access the latest image or video file in the public directory to access the recent image or video in the user directory without the media access permission. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [RecentPhotoComponent(RecentPhotoComponent)](arkts-medialibrary-file-recentphotocomponent-recentphotocomponent-s.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [PhotoSource](arkts-medialibrary-file-recentphotocomponent-photosource-e.md) | Enumerates the sources of the image or video data. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PhotoSource(RecentPhotoComponent)](arkts-medialibrary-file-recentphotocomponent-photosource-e.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [RecentPhotoCheckInfoCallback](arkts-medialibrary-recentphotocheckinfocallback-t.md) | Called to return whether the recent image or video exists and the information about it. |
-| [RecentPhotoCheckResultCallback](arkts-medialibrary-recentphotocheckresultcallback-t.md) | Called to return the query result of the recent image or video. |
-| [RecentPhotoClickCallback](arkts-medialibrary-recentphotoclickcallback-t.md) | Called when the recent image or video is selected. No special processing is performed on the return value. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [RecentPhotoCheckInfoCallback(RecentPhotoComponent)](arkts-medialibrary-recentphotocheckinfocallback-t.md) |
+| [RecentPhotoCheckResultCallback(RecentPhotoComponent)](arkts-medialibrary-recentphotocheckresultcallback-t.md) |
+| [RecentPhotoClickCallback(RecentPhotoComponent)](arkts-medialibrary-recentphotoclickcallback-t.md) |

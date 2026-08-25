@@ -2,9 +2,9 @@
 
 Defines a disposed rule.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-appControl-export interface DisposedRule--><!--Device-appControl-export interface DisposedRule-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -26,9 +26,9 @@ Type of application component that functions as the displayed page.
 
 **Type:** ComponentType
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DisposedRule-componentType: ComponentType--><!--Device-DisposedRule-componentType: ComponentType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -44,9 +44,9 @@ Control type of application disposal.
 
 **Type:** ControlType
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DisposedRule-controlType: ControlType--><!--Device-DisposedRule-controlType: ControlType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -62,9 +62,9 @@ Type of application disposal.
 
 **Type:** [DisposedType](arkts-ability-appcontrol-disposedtype-e-sys.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DisposedRule-disposedType: DisposedType--><!--Device-DisposedRule-disposedType: DisposedType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -80,9 +80,9 @@ List of application components to be disposed of or exempted.
 
 **Type:** Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt;
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DisposedRule-elementList: Array<ElementName>--><!--Device-DisposedRule-elementList: Array<ElementName>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -100,9 +100,9 @@ Specifies whether to jump to another page when the target application is blocked
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-DisposedRule-pageJump?: PageJumpMode--><!--Device-DisposedRule-pageJump?: PageJumpMode-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -116,11 +116,11 @@ priority: int
 
 Priority of the disposed rule, which is used to sort the query results of the rule list. The value is an integer. A smaller value indicates a higher priority.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DisposedRule-priority: int--><!--Device-DisposedRule-priority: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -136,11 +136,10 @@ Page displayed when the application is disposed of.
 
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DisposedRule-want: Want--><!--Device-DisposedRule-want: Want-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **System API:** This is a system API.
-

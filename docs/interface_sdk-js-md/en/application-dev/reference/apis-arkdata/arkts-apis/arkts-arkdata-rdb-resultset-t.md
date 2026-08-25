@@ -8,11 +8,10 @@ Configure RdbPredicates to match the specified field whose data type is ValueTyp
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-rdb-export type ResultSet = _ResultSet--><!--Device-rdb-export type ResultSet = _ResultSet-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Property type:** _ResultSet
-

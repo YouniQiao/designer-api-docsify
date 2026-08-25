@@ -4,9 +4,7 @@ Defines the style of the arc slider.
 
 **Since:** 18
 
-**Decorator:** @ObservedV2
-
-<!--Device-unnamed-declare class ArcSliderStyleOptions--><!--Device-unnamed-declare class ArcSliderStyleOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -26,17 +24,17 @@ A constructor used to create an **ArcSliderStyleOptions** instance.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-ArcSliderStyleOptions-constructor(options?: ArcSliderStyleOptionsConstructorOptions)--><!--Device-ArcSliderStyleOptions-constructor(options?: ArcSliderStyleOptionsConstructorOptions)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [ArcSliderStyleOptionsConstructorOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcslider-arcsliderstyleoptionsconstructoroptions-i.md) | No | Constructor information for **ArcSliderStyleOptions**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [ArcSliderStyleOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptionsconstructoroptions-i.md) | No |
 
 ## activeTrackThickness
 
@@ -52,11 +50,9 @@ Stroke width of the arc slider when it is in an enlarged state, in vp.Default va
 
 **Since:** 18
 
-**Decorator:** @Trace
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ArcSliderStyleOptions-@Trace  activeTrackThickness?: number--><!--Device-ArcSliderStyleOptions-@Trace  activeTrackThickness?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -74,11 +70,9 @@ Highlight color of the stroke.Default value: **#FF5EA1FF**@Trace
 
 **Since:** 18
 
-**Decorator:** @Trace
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ArcSliderStyleOptions-@Trace  selectedColor?: string--><!--Device-ArcSliderStyleOptions-@Trace  selectedColor?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -96,11 +90,9 @@ Blur effect applied to the stroke background, in vp.Default value: **20**If a va
 
 **Since:** 18
 
-**Decorator:** @Trace
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ArcSliderStyleOptions-@Trace  trackBlur?: number--><!--Device-ArcSliderStyleOptions-@Trace  trackBlur?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -118,11 +110,9 @@ Background color of the stroke.Default value: **#33FFFFFF**@Trace
 
 **Since:** 18
 
-**Decorator:** @Trace
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ArcSliderStyleOptions-@Trace  trackColor?: string--><!--Device-ArcSliderStyleOptions-@Trace  trackColor?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -140,11 +130,8 @@ Stroke width of the arc slider in the normal state, in vp.Default value: **5**Va
 
 **Since:** 18
 
-**Decorator:** @Trace
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ArcSliderStyleOptions-@Trace  trackThickness?: number--><!--Device-ArcSliderStyleOptions-@Trace  trackThickness?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
-

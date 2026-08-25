@@ -4,11 +4,11 @@ Defines the response to the request.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [RequestResult](arkts-ipc-rpc-requestresult-i.md)
-
-<!--Device-rpc-interface SendRequestResult--><!--Device-rpc-interface SendRequestResult-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -30,11 +30,11 @@ Message code.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [code](arkts-ipc-rpc-requestresult-i.md#code)
-
-<!--Device-SendRequestResult-code: number--><!--Device-SendRequestResult-code: number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -50,11 +50,11 @@ data: MessageParcel
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [data](arkts-ipc-rpc-requestresult-i.md#data)
-
-<!--Device-SendRequestResult-data: MessageParcel--><!--Device-SendRequestResult-data: MessageParcel-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -70,11 +70,11 @@ Error code.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [errCode](arkts-ipc-rpc-requestresult-i.md#errcode)
-
-<!--Device-SendRequestResult-errCode: number--><!--Device-SendRequestResult-errCode: number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -90,11 +90,10 @@ reply: MessageParcel
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [reply](arkts-ipc-rpc-requestresult-i.md#reply)
 
-<!--Device-SendRequestResult-reply: MessageParcel--><!--Device-SendRequestResult-reply: MessageParcel-End-->
-
 **System capability:** SystemCapability.Communication.IPC.Core
-

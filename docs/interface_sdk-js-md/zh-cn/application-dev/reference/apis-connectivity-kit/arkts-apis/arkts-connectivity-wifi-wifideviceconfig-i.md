@@ -4,11 +4,11 @@ WLAN设备配置信息。@interface WifiDeviceConfig
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md)
-
-<!--Device-wifi-interface WifiDeviceConfig--><!--Device-wifi-interface WifiDeviceConfig-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -30,11 +30,11 @@ WLAN BSSID(MAC)：长度为6
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [bssid](arkts-connectivity-wifimanager-wifideviceconfig-i.md#bssid)
-
-<!--Device-WifiDeviceConfig-bssid: string--><!--Device-WifiDeviceConfig-bssid: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -50,11 +50,11 @@ isHiddenSsid: boolean
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [isHiddenSsid](arkts-connectivity-wifimanager-wifideviceconfig-i.md#ishiddenssid)
-
-<!--Device-WifiDeviceConfig-isHiddenSsid: boolean--><!--Device-WifiDeviceConfig-isHiddenSsid: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -70,11 +70,11 @@ WLAN密钥：最大长度为64
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [preSharedKey](arkts-connectivity-wifimanager-wifideviceconfig-i.md#presharedkey)
-
-<!--Device-WifiDeviceConfig-preSharedKey: string--><!--Device-WifiDeviceConfig-preSharedKey: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -90,11 +90,11 @@ securityType: WifiSecurityType
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [securityType](arkts-connectivity-wifimanager-wifideviceconfig-i.md#securitytype)
-
-<!--Device-WifiDeviceConfig-securityType: WifiSecurityType--><!--Device-WifiDeviceConfig-securityType: WifiSecurityType-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -110,11 +110,10 @@ WLAN SSID：最大长度为32
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [ssid](arkts-connectivity-wifimanager-wifideviceconfig-i.md#ssid)
 
-<!--Device-WifiDeviceConfig-ssid: string--><!--Device-WifiDeviceConfig-ssid: string-End-->
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
-

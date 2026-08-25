@@ -4,9 +4,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export declare interface ImageAttachmentLayoutStyle--><!--Device-unnamed-export declare interface ImageAttachmentLayoutStyle-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,15 +16,13 @@ borderRadius?: LengthMetrics | BorderRadiuses
 
 设置圆角。默认值：0单位：vp
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| BorderRadiuses
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ImageAttachmentLayoutStyle-borderRadius?: LengthMetrics | BorderRadiuses--><!--Device-ImageAttachmentLayoutStyle-borderRadius?: LengthMetrics | BorderRadiuses-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,11 +38,9 @@ margin?: LengthMetrics | Margin
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ImageAttachmentLayoutStyle-margin?: LengthMetrics | Margin--><!--Device-ImageAttachmentLayoutStyle-margin?: LengthMetrics | Margin-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,15 +52,12 @@ padding?: LengthMetrics | Padding
 
 设置图片内边距。默认值：0单位：vp
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [Padding](arkts-arkui-padding-t.md)
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [Padding](arkts-arkui-units-padding-i.md)
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ImageAttachmentLayoutStyle-padding?: LengthMetrics | Padding--><!--Device-ImageAttachmentLayoutStyle-padding?: LengthMetrics | Padding-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

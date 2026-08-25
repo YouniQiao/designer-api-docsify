@@ -9,16 +9,16 @@ import { screen } from '@kit.ArkUI';
 ## stopExpand
 
 ```TypeScript
-function stopExpand(expandScreen:Array<long>, callback: AsyncCallback<void>): void
+function stopExpand(expandScreen:Array<number>, callback: AsyncCallback<void>): void
 ```
 
 停止屏幕的扩展模式，使用callback异步回调。
 
 **起始版本：** 10
 
-**废弃版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-screen-function stopExpand(expandScreen:Array<long>, callback: AsyncCallback<void>): void--><!--Device-screen-function stopExpand(expandScreen:Array<long>, callback: AsyncCallback<void>): void-End-->
+**废弃版本：** 20
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -26,18 +26,18 @@ function stopExpand(expandScreen:Array<long>, callback: AsyncCallback<void>): vo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| expandScreen | Array&lt;long&gt; | 是 | 扩展屏幕ID集合，其中ID为整数。 expandScreen数组大小不应超过1000。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止屏幕扩展模式成功，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| expandScreen | Array & lt;number & gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) |
 
 **示例**
 
@@ -73,16 +73,16 @@ screen.stopExpand(expandScreenIds).then(() => {
 ## stopExpand
 
 ```TypeScript
-function stopExpand(expandScreen:Array<long>): Promise<void>
+function stopExpand(expandScreen:Array<number>): Promise<void>
 ```
 
 停止屏幕的扩展模式，使用Promise异步回调。
 
 **起始版本：** 10
 
-**废弃版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-screen-function stopExpand(expandScreen:Array<long>): Promise<void>--><!--Device-screen-function stopExpand(expandScreen:Array<long>): Promise<void>-End-->
+**废弃版本：** 20
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -90,25 +90,24 @@ function stopExpand(expandScreen:Array<long>): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| expandScreen | Array&lt;long&gt; | 是 | 扩展屏幕ID集合，其中ID为整数。expandScreen数组大小不应超过1000。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| expandScreen | Array & lt;number & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) |
 
 **示例**
 
 参见 [stopExpand](#stopexpand)
-

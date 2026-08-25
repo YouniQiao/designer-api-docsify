@@ -2,9 +2,9 @@
 
 打印任务完成后的事件监听回调接口类。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-print-interface PrintTask--><!--Device-print-interface PrintTask-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -24,25 +24,25 @@ off(type: 'block', callback?: Callback<void>): void
 
 **起始版本：** 10
 
-**需要权限：** ohos.permission.PRINT
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-PrintTask-off(type: 'block', callback?: Callback<void>): void--><!--Device-PrintTask-off(type: 'block', callback?: Callback<void>): void-End-->
+**需要权限：** ohos.permission.PRINT
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'block' | 是 | 取消监听，<br/>监听字段：block，<br/>表示打印任务阻塞。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定的打印任务阻塞事件订阅。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'block' | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -79,38 +79,6 @@ struct Index {
 }
 ```
 
-## off('cancel')
-
-```TypeScript
-off(type: 'cancel', callback?: Callback<void>): void
-```
-
-取消打印任务被取消的监听，使用callback异步回调。
-
-**起始版本：** 10
-
-**需要权限：** ohos.permission.PRINT
-
-<!--Device-PrintTask-off(type: 'cancel', callback?: Callback<void>): void--><!--Device-PrintTask-off(type: 'cancel', callback?: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Print.PrintFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'cancel' | 是 | 取消监听，<br/>监听字段：cancel，<br/>表示打印任务被取消。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定的打印任务被取消事件订阅。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-
-**示例**
-
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@ohos.base';
@@ -126,8 +94,8 @@ struct Index {
                     let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
                     let context = this.getUIContext().getHostContext();
                     print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
-                        printTask.off('cancel', () => {
-                            console.info('unregister state cancel');
+                        printTask.off('succeed', () => {
+                            console.info('unregister state succeed');
                         })
                         // ...
                     }).catch((error: BusinessError) => {
@@ -143,38 +111,6 @@ struct Index {
     }
 }
 ```
-
-## off('fail')
-
-```TypeScript
-off(type: 'fail', callback?: Callback<void>): void
-```
-
-取消打印任务失败的监听，使用callback异步回调。
-
-**起始版本：** 10
-
-**需要权限：** ohos.permission.PRINT
-
-<!--Device-PrintTask-off(type: 'fail', callback?: Callback<void>): void--><!--Device-PrintTask-off(type: 'fail', callback?: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Print.PrintFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'fail' | 是 | 取消监听，<br/>监听字段：fail，<br/>表示打印任务失败。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定的打印任务失败事件订阅。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-
-**示例**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -209,38 +145,6 @@ struct Index {
 }
 ```
 
-## off('succeed')
-
-```TypeScript
-off(type: 'succeed', callback?: Callback<void>): void
-```
-
-取消打印任务成功的监听，使用callback异步回调。
-
-**起始版本：** 10
-
-**需要权限：** ohos.permission.PRINT
-
-<!--Device-PrintTask-off(type: 'succeed', callback?: Callback<void>): void--><!--Device-PrintTask-off(type: 'succeed', callback?: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Print.PrintFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'succeed' | 是 | 取消监听，<br/>监听字段：succeed，<br/>表示打印任务成功。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定的打印任务成功事件订阅。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-
-**示例**
-
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@ohos.base';
@@ -256,8 +160,8 @@ struct Index {
                     let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
                     let context = this.getUIContext().getHostContext();
                     print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
-                        printTask.off('succeed', () => {
-                            console.info('unregister state succeed');
+                        printTask.off('cancel', () => {
+                            console.info('unregister state cancel');
                         })
                         // ...
                     }).catch((error: BusinessError) => {
@@ -274,6 +178,144 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
+// Trigger this callback when a added printer is changed.
+let onPrinterChange =
+    (event: print.PrinterEvent, printerInformation: print.PrinterInformation) => {
+        console.info('printerChange, event: ' + event + ', printerInformation: ' + JSON.stringify(printerInformation));
+    };
+print.on('printerChange', onPrinterChange);
+print.off('printerChange');
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
+print.off('printerStateChange', (data: boolean) => {
+    console.info('off printerStateChange data : ' + JSON.stringify(data));
+})
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
+print.off('jobStateChange', (data: boolean) => {
+    console.info('offJobStateChanged data : ' + JSON.stringify(data));
+})
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
+print.off('extInfoChange', (data: boolean) => {
+    console.info('offExtInfoChange data : ' + JSON.stringify(data));
+})
+```
+
+## off('succeed')
+
+```TypeScript
+off(type: 'succeed', callback?: Callback<void>): void
+```
+
+取消打印任务成功的监听，使用callback异步回调。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
+**需要权限：** ohos.permission.PRINT
+
+**系统能力：** SystemCapability.Print.PrintFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'succeed' | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+**示例**
+
+参见 off
+
+## off('fail')
+
+```TypeScript
+off(type: 'fail', callback?: Callback<void>): void
+```
+
+取消打印任务失败的监听，使用callback异步回调。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
+**需要权限：** ohos.permission.PRINT
+
+**系统能力：** SystemCapability.Print.PrintFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'fail' | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+**示例**
+
+参见 off
+
+## off('cancel')
+
+```TypeScript
+off(type: 'cancel', callback?: Callback<void>): void
+```
+
+取消打印任务被取消的监听，使用callback异步回调。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
+**需要权限：** ohos.permission.PRINT
+
+**系统能力：** SystemCapability.Print.PrintFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'cancel' | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+**示例**
+
+参见 off
+
 ## offBlock
 
 ```TypeScript
@@ -284,24 +326,24 @@ Unregister event callback when the current print task is in process.
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.PRINT
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-PrintTask-offBlock(callback?: Callback<void>): void--><!--Device-PrintTask-offBlock(callback?: Callback<void>): void-End-->
+**需要权限：** ohos.permission.PRINT
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | The callback function for print task change event |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -333,24 +375,24 @@ Unregister event callback when the current print task is in process.
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.PRINT
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-PrintTask-offCancel(callback?: Callback<void>): void--><!--Device-PrintTask-offCancel(callback?: Callback<void>): void-End-->
+**需要权限：** ohos.permission.PRINT
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | The callback function for print task change event |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -382,24 +424,24 @@ Unregister event callback when the current print task is in process.
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.PRINT
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-PrintTask-offFail(callback?: Callback<void>): void--><!--Device-PrintTask-offFail(callback?: Callback<void>): void-End-->
+**需要权限：** ohos.permission.PRINT
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | The callback function for print task change event |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -431,24 +473,24 @@ Unregister event callback when the current print task is in process.
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.PRINT
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-PrintTask-offSucceed(callback?: Callback<void>): void--><!--Device-PrintTask-offSucceed(callback?: Callback<void>): void-End-->
+**需要权限：** ohos.permission.PRINT
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | The callback function for print task change event |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -480,25 +522,25 @@ on(type: 'block', callback: Callback<void>): void
 
 **起始版本：** 10
 
-**需要权限：** ohos.permission.PRINT
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-PrintTask-on(type: 'block', callback: Callback<void>): void--><!--Device-PrintTask-on(type: 'block', callback: Callback<void>): void-End-->
+**需要权限：** ohos.permission.PRINT
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'block' | 是 | 注册监听，<br/>监听字段：block，<br/>表示打印任务阻塞。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，通知调用方打印任务阻塞。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'block' | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -535,38 +577,6 @@ struct Index {
 }
 ```
 
-## on('cancel')
-
-```TypeScript
-on(type: 'cancel', callback: Callback<void>): void
-```
-
-注册打印任务被取消的监听，使用callback异步回调。
-
-**起始版本：** 10
-
-**需要权限：** ohos.permission.PRINT
-
-<!--Device-PrintTask-on(type: 'cancel', callback: Callback<void>): void--><!--Device-PrintTask-on(type: 'cancel', callback: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Print.PrintFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'cancel' | 是 | 注册监听，<br/>监听字段：cancel，<br/>表示打印任务被取消。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，通知调用方打印任务被取消。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-
-**示例**
-
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@ohos.base';
@@ -582,8 +592,8 @@ struct Index {
                     let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
                     let context = this.getUIContext().getHostContext();
                     print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
-                        printTask.on('cancel', () => {
-                            console.info('print state is cancel');
+                        printTask.on('succeed', () => {
+                            console.info('print state is succeed');
                         })
                         // ...
                     }).catch((error: BusinessError) => {
@@ -599,38 +609,6 @@ struct Index {
     }
 }
 ```
-
-## on('fail')
-
-```TypeScript
-on(type: 'fail', callback: Callback<void>): void
-```
-
-注册打印任务失败的监听，使用callback异步回调。
-
-**起始版本：** 10
-
-**需要权限：** ohos.permission.PRINT
-
-<!--Device-PrintTask-on(type: 'fail', callback: Callback<void>): void--><!--Device-PrintTask-on(type: 'fail', callback: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Print.PrintFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'fail' | 是 | 注册监听，<br/>监听字段：fail，<br/>表示打印任务失败。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，通知调用方打印任务失败。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-
-**示例**
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -665,38 +643,6 @@ struct Index {
 }
 ```
 
-## on('succeed')
-
-```TypeScript
-on(type: 'succeed', callback: Callback<void>): void
-```
-
-注册打印任务成功的监听，使用callback异步回调。
-
-**起始版本：** 10
-
-**需要权限：** ohos.permission.PRINT
-
-<!--Device-PrintTask-on(type: 'succeed', callback: Callback<void>): void--><!--Device-PrintTask-on(type: 'succeed', callback: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Print.PrintFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'succeed' | 是 | 注册监听，<br/>监听字段：succeed，<br/>表示打印任务成功。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，通知调用方打印任务成功。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-
-**示例**
-
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@ohos.base';
@@ -712,8 +658,8 @@ struct Index {
                     let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
                     let context = this.getUIContext().getHostContext();
                     print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
-                        printTask.on('succeed', () => {
-                            console.info('print state is succeed');
+                        printTask.on('cancel', () => {
+                            console.info('print state is cancel');
                         })
                         // ...
                     }).catch((error: BusinessError) => {
@@ -730,6 +676,149 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
+// Trigger this callback when a added printer is changed.
+let onPrinterChange =
+    (event: print.PrinterEvent, printerInformation: print.PrinterInformation) => {
+        console.info('printerChange, event: ' + event + ', printerInformation: ' + JSON.stringify(printerInformation));
+    };
+print.on('printerChange', onPrinterChange);
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
+print.on('printerStateChange', (state: print.PrinterState, info: print.PrinterInfo) => {
+    if (state === null || info === null) {
+        console.error('printer state changed state is null or info is null');
+        return;
+    } else {
+        console.info('on printer state changed, state : ' + JSON.stringify(state));
+        console.info('on printer state changed, info : ' + JSON.stringify(info));
+    }
+})
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
+print.on('jobStateChange', (state: print.PrintJobState, job: print.PrintJob) => {
+    console.info('onJobStateChange, state : ' + JSON.stringify(state) + ', job : ' + JSON.stringify(job));
+})
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
+print.on('extInfoChange', (extensionId: string, info: string) => {
+    console.info('onExtInfoChange, extensionId : ' + JSON.stringify(extensionId) + ', info : ' + JSON.stringify(info));
+})
+```
+
+## on('succeed')
+
+```TypeScript
+on(type: 'succeed', callback: Callback<void>): void
+```
+
+注册打印任务成功的监听，使用callback异步回调。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
+**需要权限：** ohos.permission.PRINT
+
+**系统能力：** SystemCapability.Print.PrintFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'succeed' | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+**示例**
+
+参见 on
+
+## on('fail')
+
+```TypeScript
+on(type: 'fail', callback: Callback<void>): void
+```
+
+注册打印任务失败的监听，使用callback异步回调。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
+**需要权限：** ohos.permission.PRINT
+
+**系统能力：** SystemCapability.Print.PrintFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'fail' | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+**示例**
+
+参见 on
+
+## on('cancel')
+
+```TypeScript
+on(type: 'cancel', callback: Callback<void>): void
+```
+
+注册打印任务被取消的监听，使用callback异步回调。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
+**需要权限：** ohos.permission.PRINT
+
+**系统能力：** SystemCapability.Print.PrintFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'cancel' | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+**示例**
+
+参见 on
+
 ## onBlock
 
 ```TypeScript
@@ -740,24 +829,24 @@ Register event callback when the current print task is in process.
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.PRINT
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-PrintTask-onBlock(callback: Callback<void>): void--><!--Device-PrintTask-onBlock(callback: Callback<void>): void-End-->
+**需要权限：** ohos.permission.PRINT
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | The callback function for print task change event |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -789,24 +878,24 @@ Register event callback when the current print task is in process.
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.PRINT
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-PrintTask-onCancel(callback: Callback<void>): void--><!--Device-PrintTask-onCancel(callback: Callback<void>): void-End-->
+**需要权限：** ohos.permission.PRINT
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | The callback function for print task change event |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -838,24 +927,24 @@ Register event callback when the current print task is in process.
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.PRINT
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-PrintTask-onFail(callback: Callback<void>): void--><!--Device-PrintTask-onFail(callback: Callback<void>): void-End-->
+**需要权限：** ohos.permission.PRINT
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | The callback function for print task change event |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -887,24 +976,24 @@ Register event callback when the current print task is in process.
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.PRINT
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-PrintTask-onSucceed(callback: Callback<void>): void--><!--Device-PrintTask-onSucceed(callback: Callback<void>): void-End-->
+**需要权限：** ohos.permission.PRINT
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | The callback function for print task change event |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -925,4 +1014,3 @@ try {
     console.error('print err ' + JSON.stringify(error));
 }
 ```
-

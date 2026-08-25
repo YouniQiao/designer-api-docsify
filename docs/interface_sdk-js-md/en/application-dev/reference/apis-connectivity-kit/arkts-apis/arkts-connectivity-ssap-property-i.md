@@ -4,7 +4,7 @@ Represents a service Property.
 
 **Since:** 26.0.0
 
-<!--Device-ssap-interface Property--><!--Device-ssap-interface Property-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -26,27 +26,27 @@ Descriptors of the current property. By default, this field is not used if not s
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-Property-descriptors?: PropertyDescriptor[]--><!--Device-Property-descriptors?: PropertyDescriptor[]-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## operation
 
 ```TypeScript
-operation?: int
+operation?: number
 ```
 
 Operation modes supported by the property. The default value is **READABLE|WRITE_NO_RESPONSE**, indicating that the property is readable and writable and no response is required. To enable a property to support an operation, you need to assign a value to this field, for example, **READABLE | WRITE_NO_RESPONSE | NOTIFY**. The value range is [0, 15]. For details about the operation corresponding to each bit, see [Operation](arkts-connectivity-ssap-operation-e.md). The value should be an integer.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-Property-operation?: int--><!--Device-Property-operation?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -62,9 +62,9 @@ Property UUID, in the same format as **serviceUuid**.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-Property-propertyUuid: string--><!--Device-Property-propertyUuid: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -80,9 +80,9 @@ NearLink service UUID, which is a string of 36 characters. The value consists of
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-Property-serviceUuid: string--><!--Device-Property-serviceUuid: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -98,9 +98,8 @@ Data value of a property.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Property-value: ArrayBuffer--><!--Device-Property-value: ArrayBuffer-End-->
-
 **System capability:** SystemCapability.Communication.NearLink.Base
-

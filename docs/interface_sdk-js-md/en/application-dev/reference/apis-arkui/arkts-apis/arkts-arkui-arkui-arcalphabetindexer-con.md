@@ -20,9 +20,9 @@ Not supported
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-unnamed-declare const ArcAlphabetIndexer: ArcAlphabetIndexerInterface--><!--Device-unnamed-declare const ArcAlphabetIndexer: ArcAlphabetIndexerInterface-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -36,9 +36,8 @@ Defines ArcAlphabetIndexer Component instance.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-unnamed-declare const ArcAlphabetIndexerInstance: ArcAlphabetIndexerAttribute--><!--Device-unnamed-declare const ArcAlphabetIndexerInstance: ArcAlphabetIndexerAttribute-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
-

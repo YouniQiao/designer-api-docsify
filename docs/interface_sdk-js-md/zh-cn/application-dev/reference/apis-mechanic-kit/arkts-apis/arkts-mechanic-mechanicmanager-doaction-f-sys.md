@@ -16,7 +16,7 @@ function doAction(mechId: int, actionType: ActionType): Promise<Result>
 
 **起始版本：** 26.0.0
 
-<!--Device-mechanicManager-function doAction(mechId: int, actionType: ActionType): Promise<Result>--><!--Device-mechanicManager-function doAction(mechId: int, actionType: ActionType): Promise<Result>-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -24,23 +24,22 @@ function doAction(mechId: int, actionType: ActionType): Promise<Result>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mechId | int | 是 | 具身设备ID。 <br>取值限定为整数。 |
-| actionType | ActionType | 是 | 动作序列类型。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mechId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| actionType | [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Result&gt; | 202 - 非系统应用 |
+| 类型 |
+| --- |
+| Promise & lt;Result & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
-| [33300003](../errorcode-mechanic.md#33300003-功能不支持) | Feature not supported. |
-
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) |
+| [33300002](../errorcode-mechanic.md#33300002-设备未连接) |
+| [33300003](../errorcode-mechanic.md#33300003-功能不支持) |

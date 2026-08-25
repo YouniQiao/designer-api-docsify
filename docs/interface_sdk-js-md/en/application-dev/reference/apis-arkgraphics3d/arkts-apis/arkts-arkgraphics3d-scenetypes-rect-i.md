@@ -2,9 +2,9 @@
 
 Rectangle in a plane.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface Rect--><!--Device-unnamed-export interface Rect-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -16,11 +16,11 @@ height: double
 
 Rectangle height, in scene units of the world coordinate system (such as cm, m, km, etc.). The valid value range is greater than 0.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Rect-height: double--><!--Device-Rect-height: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -32,11 +32,11 @@ width: double
 
 Rectangle width, in scene units of the world coordinate system (such as cm, m, km, etc.). The valid value range is greater than 0.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Rect-width: double--><!--Device-Rect-width: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -48,11 +48,11 @@ x: double
 
 X component of the rectangle's bottom-left corner, in scene units of the world coordinate system (such as cm, m, km, etc.). The value can be any real number, and the specific range depends on the scene coordinate system settings.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Rect-x: double--><!--Device-Rect-x: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -64,11 +64,10 @@ y: double
 
 Y component of the rectangle's bottom-left corner, in scene units of the world coordinate system (such as cm, m, km, etc.). The value can be any real number, and the specific range depends on the scene coordinate system settings.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Rect-y: double--><!--Device-Rect-y: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

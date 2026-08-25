@@ -14,9 +14,9 @@ function getCfgDirListSync(): Array<string>
 
 Obtains a list of configuration level directories, in ascending order of priority.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-configPolicy-function getCfgDirListSync(): Array<string>--><!--Device-configPolicy-function getCfgDirListSync(): Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Customization.ConfigPolicy
 
@@ -24,9 +24,9 @@ Obtains a list of configuration level directories, in ascending order of priorit
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;string&gt; | Obtains the list of configuration level directories. This API returns the result synchronously. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;string & gt; |
 
 **Examples**
 
@@ -42,4 +42,3 @@ try {
   console.error('error:' + code + ', ' + message);
 }
 ```
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-huks-export interface HuksListAliasesReturnResult--><!--Device-huks-export interface HuksListAliasesReturnResult-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -26,9 +26,8 @@ keyAliases: Array<string>
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-HuksListAliasesReturnResult-keyAliases: Array<string>--><!--Device-HuksListAliasesReturnResult-keyAliases: Array<string>-End-->
-
 **系统能力：** SystemCapability.Security.Huks.Extension
-

@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [DatePickerModifier](arkts-arkui-datepickermodifier-c.md) | Defines DatePicker Modifier@implements { DatePickerAttribute, AttributeModifier&lt;DatePickerAttribute&gt; } |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DatePickerModifier](arkts-arkui-datepickermodifier-c.md) |

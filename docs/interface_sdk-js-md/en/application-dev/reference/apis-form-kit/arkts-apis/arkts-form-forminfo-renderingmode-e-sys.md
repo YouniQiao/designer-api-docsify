@@ -2,9 +2,9 @@
 
 Enumerates the rendering modes supported by the widget.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-formInfo-enum RenderingMode--><!--Device-formInfo-enum RenderingMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -18,9 +18,9 @@ AUTO_COLOR = 0
 
 Auto mode.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-RenderingMode-AUTO_COLOR = 0--><!--Device-RenderingMode-AUTO_COLOR = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -34,9 +34,9 @@ FULL_COLOR = 1
 
 Full-color mode.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-RenderingMode-FULL_COLOR = 1--><!--Device-RenderingMode-FULL_COLOR = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -50,11 +50,10 @@ SINGLE_COLOR = 2
 
 Single-color mode.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-RenderingMode-SINGLE_COLOR = 2--><!--Device-RenderingMode-SINGLE_COLOR = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
-

@@ -5,11 +5,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 11
 
 **替代接口：** [distributedDeviceManager](arkts-distributeddevicemanager.md)
-
-<!--Device-unnamed-declare namespace deviceManager--><!--Device-unnamed-declare namespace deviceManager-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -24,35 +24,34 @@ import { deviceManager } from '@kit.DistributedServiceKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [createDeviceManager](arkts-distributedservice-devicemanager-createdevicemanager-f-sys.md) | 创建一个设备管理器实例。 |
+| 名称 |
+| --- |
+| [createDeviceManager](arkts-distributedservice-devicemanager-createdevicemanager-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [AuthInfo](arkts-distributedservice-devicemanager-authinfo-i-sys.md) | 认证信息。 |
-| [AuthParam](arkts-distributedservice-devicemanager-authparam-i-sys.md) | 认证参数。 |
-| [DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md) | 设备信息。 |
-| [DeviceManager](arkts-distributedservice-devicemanager-devicemanager-i-sys.md) | 设备管理实例，用于获取可信设备和本地设备的相关信息。在调用DeviceManager的方法前，需要先通过createDeviceManager构建一个DeviceManager实例dmInstance。 |
-| [PublishInfo](arkts-distributedservice-devicemanager-publishinfo-i-sys.md) | 发布设备参数 |
-| [SubscribeInfo](arkts-distributedservice-devicemanager-subscribeinfo-i-sys.md) | 发现信息。 |
+| 名称 |
+| --- |
+| [AuthInfo](arkts-distributedservice-devicemanager-authinfo-i-sys.md) |
+| [AuthParam](arkts-distributedservice-devicemanager-authparam-i-sys.md) |
+| [DeviceInfo](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md) |
+| [DeviceManager](arkts-distributedservice-devicemanager-devicemanager-i-sys.md) |
+| [PublishInfo](arkts-distributedservice-devicemanager-publishinfo-i-sys.md) |
+| [SubscribeInfo](arkts-distributedservice-devicemanager-subscribeinfo-i-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [AuthForm](arkts-distributedservice-devicemanager-authform-e-sys.md) | 表示设备认证类型的枚举类。 |
-| [DeviceStateChangeAction](arkts-distributedservice-devicemanager-devicestatechangeaction-e-sys.md) | 表示设备状态变化的枚举。 |
-| [DeviceType](arkts-distributedservice-devicemanager-devicetype-e-sys.md) | 表示设备类型的枚举类。 |
-| [DiscoverMode](arkts-distributedservice-devicemanager-discovermode-e-sys.md) | 表示发现模式的枚举。 |
-| [ExchangeFreq](arkts-distributedservice-devicemanager-exchangefreq-e-sys.md) | 表示发现频率的枚举。 |
-| [ExchangeMedium](arkts-distributedservice-devicemanager-exchangemedium-e-sys.md) | 表示发现类型的枚举。 |
-| [SubscribeCap](arkts-distributedservice-devicemanager-subscribecap-e-sys.md) | 表示发现能力的枚举。 |
+| 名称 |
+| --- |
+| [AuthForm](arkts-distributedservice-devicemanager-authform-e-sys.md) |
+| [DeviceStateChangeAction](arkts-distributedservice-devicemanager-devicestatechangeaction-e-sys.md) |
+| [DeviceType](arkts-distributedservice-devicemanager-devicetype-e-sys.md) |
+| [DiscoverMode](arkts-distributedservice-devicemanager-discovermode-e-sys.md) |
+| [ExchangeFreq](arkts-distributedservice-devicemanager-exchangefreq-e-sys.md) |
+| [ExchangeMedium](arkts-distributedservice-devicemanager-exchangemedium-e-sys.md) |
+| [SubscribeCap](arkts-distributedservice-devicemanager-subscribecap-e-sys.md) |
 <!--DelEnd-->
-

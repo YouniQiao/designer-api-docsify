@@ -4,9 +4,7 @@ Creating an Object@enum { number }
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare enum GestureJudgeResult--><!--Device-unnamed-export declare enum GestureJudgeResult-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +18,9 @@ The system gesture determination is not affected.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GestureJudgeResult-CONTINUE = 0--><!--Device-GestureJudgeResult-CONTINUE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +34,8 @@ The user-defined gesture determination result of the current component is fail.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-GestureJudgeResult-REJECT = 1--><!--Device-GestureJudgeResult-REJECT = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

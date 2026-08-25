@@ -4,7 +4,7 @@ Enumerates the media source types.
 
 **Since:** 12
 
-<!--Device-webview-enum SourceType--><!--Device-webview-enum SourceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,9 +18,9 @@ URL.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-SourceType-URL = 0--><!--Device-SourceType-URL = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -34,9 +34,8 @@ Blob.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-SourceType-MSE = 1--><!--Device-SourceType-MSE = 1-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

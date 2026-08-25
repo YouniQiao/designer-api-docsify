@@ -4,7 +4,7 @@
 
 **起始版本：** 20
 
-<!--Device-asset-interface SyncResult--><!--Device-asset-interface SyncResult-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -26,7 +26,7 @@ readonly failedCount?: number
 
 **起始版本：** 20
 
-<!--Device-SyncResult-readonly failedCount?: number--><!--Device-SyncResult-readonly failedCount?: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -42,7 +42,7 @@ readonly resultCode: number
 
 **起始版本：** 20
 
-<!--Device-SyncResult-readonly resultCode: number--><!--Device-SyncResult-readonly resultCode: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -58,7 +58,6 @@ readonly totalCount?: number
 
 **起始版本：** 20
 
-<!--Device-SyncResult-readonly totalCount?: number--><!--Device-SyncResult-readonly totalCount?: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Security.Asset
-

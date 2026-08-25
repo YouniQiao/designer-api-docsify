@@ -2,9 +2,9 @@
 
 Enumerates the digest algorithms of the CMS KeyAgree type.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-cert-enum CmsKeyAgreeRecipientDigestAlgorithm--><!--Device-cert-enum CmsKeyAgreeRecipientDigestAlgorithm-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -16,11 +16,11 @@ SHA256 = 0
 
 SHA-256.
 
-**Since:** 23
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
-<!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA256 = 0--><!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA256 = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -32,11 +32,11 @@ SHA384 = 1
 
 SHA-384.
 
-**Since:** 23
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
-<!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA384 = 1--><!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA384 = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -48,11 +48,10 @@ SHA512 = 2
 
 SHA-512.
 
-**Since:** 23
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
-<!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA512 = 2--><!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA512 = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Security.Cert
-

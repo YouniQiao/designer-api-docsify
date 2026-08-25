@@ -4,9 +4,9 @@ The sendableContextManager module provides APIs for converting between Context a
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-unnamed-declare namespace sendableContextManager--><!--Device-unnamed-declare namespace sendableContextManager-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -20,18 +20,17 @@ import { sendableContextManager } from '@kit.AbilityKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [convertFromContext](arkts-ability-sendablecontextmanager-convertfromcontext-f.md) | Converts a Context object to a SendableContext object. |
-| [convertToAbilityStageContext](arkts-ability-sendablecontextmanager-converttoabilitystagecontext-f.md) | Converts a SendableContext object to an AbilityStageContext object. |
-| [convertToApplicationContext](arkts-ability-sendablecontextmanager-converttoapplicationcontext-f.md) | Converts a SendableContext object to an ApplicationContext object. |
-| [convertToContext](arkts-ability-sendablecontextmanager-converttocontext-f.md) | Converts a SendableContext object to a Context object. |
-| [convertToUIAbilityContext](arkts-ability-sendablecontextmanager-converttouiabilitycontext-f.md) | Converts a SendableContext object to a UIAbilityContext object. |
-| [setEventHubMultithreadingEnabled](arkts-ability-sendablecontextmanager-seteventhubmultithreadingenabled-f.md) | Enables the cross-thread data transfer feature of [EventHub](arkts-ability-eventhub-c.md) in Context. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [convertFromContext](arkts-ability-sendablecontextmanager-convertfromcontext-f.md) |
+| [convertToAbilityStageContext](arkts-ability-sendablecontextmanager-converttoabilitystagecontext-f.md) |
+| [convertToApplicationContext](arkts-ability-sendablecontextmanager-converttoapplicationcontext-f.md) |
+| [convertToContext](arkts-ability-sendablecontextmanager-converttocontext-f.md) |
+| [convertToUIAbilityContext](arkts-ability-sendablecontextmanager-converttouiabilitycontext-f.md) |
+| [setEventHubMultithreadingEnabled](arkts-ability-sendablecontextmanager-seteventhubmultithreadingenabled-f.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | Level-2 module SendableContext. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) |

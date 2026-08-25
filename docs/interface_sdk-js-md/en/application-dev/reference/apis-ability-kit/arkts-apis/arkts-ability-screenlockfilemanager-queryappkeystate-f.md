@@ -14,24 +14,24 @@ function queryAppKeyState(): KeyStatus
 
 Queries the status of the caller app's sensitive data key under the lock screen in synchronous mode.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-screenLockFileManager-function queryAppKeyState(): KeyStatus--><!--Device-screenLockFileManager-function queryAppKeyState(): KeyStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.ScreenLockFileManager
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [KeyStatus](arkts-ability-screenlockfilemanager-keystatus-e.md) | Status of the key for sensitive data under lock screen. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [KeyStatus](arkts-ability-screenlockfilemanager-keystatus-e.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | The specified SystemCapability name was not found. |
-| [29300002](../errorcode-screenLockFileManager.md#29300002-system-service-abnormal) | The system ability works abnormally. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [29300002](../errorcode-screenLockFileManager.md#29300002-system-service-abnormal) |
 
 **Examples**
 
@@ -76,4 +76,3 @@ try {
     hilog.error(0x0000, 'testTag', 'queryAppKeyState failed: %{public}s', message);
 }
 ```
-

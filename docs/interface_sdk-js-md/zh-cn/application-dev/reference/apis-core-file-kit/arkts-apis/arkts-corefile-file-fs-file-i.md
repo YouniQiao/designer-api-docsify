@@ -4,7 +4,7 @@
 
 **起始版本：** 9
 
-<!--Device-unnamed-declare interface File--><!--Device-unnamed-declare interface File-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -26,23 +26,23 @@ getParent(): string
 
 **起始版本：** 11
 
-<!--Device-File-getParent(): string--><!--Device-File-getParent(): string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回父目录路径。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900005 | I/O error |
-| 13900042 | Unknown error |
-| 14300002 | Invalid URI |
+| 错误码ID |
+| --- |
+| 13900005 |
+| 13900042 |
+| 14300002 |
 
 **示例**
 
@@ -63,32 +63,32 @@ lock(exclusive?: boolean): Promise<void>
 
 **起始版本：** 9
 
-<!--Device-File-lock(exclusive?: boolean): Promise<void>--><!--Device-File-lock(exclusive?: boolean): Promise<void>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| exclusive | boolean | 否 | 是否施加独占锁，默认false。true：施加独占锁；false：不施加独占锁。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| exclusive | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回值。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
-| 13900042 | Unknown error |
-| 13900043 | No record locks available |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900008 |
+| 13900020 |
+| 13900034 |
+| 13900042 |
+| 13900043 |
 
 **示例**
 
@@ -203,26 +203,26 @@ lock(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-<!--Device-File-lock(callback: AsyncCallback<void>): void--><!--Device-File-lock(callback: AsyncCallback<void>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当文件上锁成功，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
-| 13900042 | Unknown error |
-| 13900043 | No record locks available |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900008 |
+| 13900020 |
+| 13900034 |
+| 13900042 |
+| 13900043 |
 
 **示例**
 
@@ -238,27 +238,27 @@ lock(exclusive: boolean, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-<!--Device-File-lock(exclusive: boolean, callback: AsyncCallback<void>): void--><!--Device-File-lock(exclusive: boolean, callback: AsyncCallback<void>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| exclusive | boolean | 是 | 是否施加独占锁。true：施加独占锁；false：不施加独占锁。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当文件上锁成功，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| exclusive | boolean | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
-| 13900042 | Unknown error |
-| 13900043 | No record locks available |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900008 |
+| 13900020 |
+| 13900034 |
+| 13900042 |
+| 13900043 |
 
 **示例**
 
@@ -274,26 +274,26 @@ tryLock(exclusive?: boolean): void
 
 **起始版本：** 9
 
-<!--Device-File-tryLock(exclusive?: boolean): void--><!--Device-File-tryLock(exclusive?: boolean): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| exclusive | boolean | 否 | 是否施加独占锁，默认false。true：施加独占锁；false：不施加独占锁。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| exclusive | boolean | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
-| 13900042 | Unknown error |
-| 13900043 | No record locks available |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900008 |
+| 13900020 |
+| 13900034 |
+| 13900042 |
+| 13900043 |
 
 **示例**
 
@@ -315,20 +315,20 @@ unlock(): void
 
 **起始版本：** 9
 
-<!--Device-File-unlock(): void--><!--Device-File-unlock(): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
-| 13900042 | Unknown error |
-| 13900043 | No record locks available |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900008 |
+| 13900020 |
+| 13900034 |
+| 13900042 |
+| 13900043 |
 
 **示例**
 
@@ -353,9 +353,9 @@ readonly fd: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-File-readonly fd: number--><!--Device-File-readonly fd: number-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -371,7 +371,7 @@ readonly name: string
 
 **起始版本：** 10
 
-<!--Device-File-readonly name: string--><!--Device-File-readonly name: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -387,7 +387,6 @@ readonly path: string
 
 **起始版本：** 10
 
-<!--Device-File-readonly path: string--><!--Device-File-readonly path: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
-

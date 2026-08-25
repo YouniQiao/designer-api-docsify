@@ -4,7 +4,7 @@ Web同层渲染的配置。用于配置Web同层渲染选项，包括支持固�
 
 **起始版本：** 16
 
-<!--Device-unnamed-declare interface EmbedOptions--><!--Device-unnamed-declare interface EmbedOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为16。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -27,7 +27,7 @@ supportCssDisplayChange?: boolean
 
 **起始版本：** 20
 
-<!--Device-EmbedOptions-supportCssDisplayChange?: boolean--><!--Device-EmbedOptions-supportCssDisplayChange?: boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -45,7 +45,6 @@ supportDefaultIntrinsicSize?: boolean
 
 **起始版本：** 16
 
-<!--Device-EmbedOptions-supportDefaultIntrinsicSize?: boolean--><!--Device-EmbedOptions-supportDefaultIntrinsicSize?: boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为16。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-

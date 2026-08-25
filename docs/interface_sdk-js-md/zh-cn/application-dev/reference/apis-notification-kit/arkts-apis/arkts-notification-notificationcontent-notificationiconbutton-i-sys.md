@@ -2,9 +2,9 @@
 
 描述系统通知按钮。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-unnamed-export interface NotificationIconButton--><!--Device-unnamed-export interface NotificationIconButton-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -21,9 +21,9 @@ hidePanel?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-NotificationIconButton-hidePanel?: boolean--><!--Device-NotificationIconButton-hidePanel?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -39,9 +39,9 @@ iconResource: IconType
 
 **类型：** [IconType](arkts-notification-icontype-t-sys.md)
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-NotificationIconButton-iconResource: IconType--><!--Device-NotificationIconButton-iconResource: IconType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -57,9 +57,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-NotificationIconButton-name: string--><!--Device-NotificationIconButton-name: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -75,11 +75,10 @@ text?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-NotificationIconButton-text?: string--><!--Device-NotificationIconButton-text?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
-

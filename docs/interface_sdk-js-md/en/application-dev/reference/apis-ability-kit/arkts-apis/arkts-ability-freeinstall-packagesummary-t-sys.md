@@ -1,18 +1,17 @@
 # PackageSummary (System API)
 
 ```TypeScript
-export type PackageSummary = _PackageSummary
+export type PackageSummary = _PackInfo.PackageSummary
 ```
 
 Defines the package summary information in the **pack.info** file.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-freeInstall-export type PackageSummary = _PackageSummary--><!--Device-freeInstall-export type PackageSummary = _PackageSummary-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
 
-**Property type:** _PackageSummary
-
+**Property type:** _PackInfo.PackageSummary

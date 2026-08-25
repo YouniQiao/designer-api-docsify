@@ -6,7 +6,7 @@ Custom ComponentV2
 
 **Since:** 18
 
-<!--Device-unnamed-declare class CustomComponentV2--><!--Device-unnamed-declare class CustomComponentV2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,10 @@ aboutToReuse Method for @ComponentV2, it is executed when fetching instance of c
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-CustomComponentV2-aboutToReuse?(): void--><!--Device-CustomComponentV2-aboutToReuse?(): void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

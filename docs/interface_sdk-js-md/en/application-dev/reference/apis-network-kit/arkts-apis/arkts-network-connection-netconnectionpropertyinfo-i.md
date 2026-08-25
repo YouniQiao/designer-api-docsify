@@ -2,9 +2,9 @@
 
 Defines the network connection properties.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-connection-export interface NetConnectionPropertyInfo--><!--Device-connection-export interface NetConnectionPropertyInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -24,9 +24,9 @@ Defines the network connection properties.
 
 **Type:** [ConnectionProperties](arkts-network-connection-connectionproperties-i.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NetConnectionPropertyInfo-connectionProperties: ConnectionProperties--><!--Device-NetConnectionPropertyInfo-connectionProperties: ConnectionProperties-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -40,9 +40,8 @@ Network handle.
 
 **Type:** NetHandle
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NetConnectionPropertyInfo-netHandle: NetHandle--><!--Device-NetConnectionPropertyInfo-netHandle: NetHandle-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
-

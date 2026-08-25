@@ -4,7 +4,7 @@ Enumerates rendering strategies for drawing rounded corners.
 
 **Since:** 22
 
-<!--Device-unnamed-declare enum RenderStrategy--><!--Device-unnamed-declare enum RenderStrategy-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +18,13 @@ Online rendering mode. The content to be rendered is clipped with rounded corner
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
-
-<!--Device-RenderStrategy-FAST = 0--><!--Device-RenderStrategy-FAST = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,13 +44,12 @@ it has effect only when the clip attribute, background, or foreground color is c
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
-<!--Device-RenderStrategy-OFFSCREEN = 1--><!--Device-RenderStrategy-OFFSCREEN = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

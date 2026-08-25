@@ -21,13 +21,13 @@ Creates a page component for the Stepper container.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Substitutes:** SwiperAttribute
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-StepperItemInterface-(): StepperItemAttribute--><!--Device-StepperItemInterface-(): StepperItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,6 +35,5 @@ Creates a page component for the Stepper container.
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |

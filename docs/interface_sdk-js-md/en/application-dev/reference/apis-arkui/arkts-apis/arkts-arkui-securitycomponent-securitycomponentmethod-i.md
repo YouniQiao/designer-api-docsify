@@ -4,9 +4,7 @@ Declares the interface for the method of a security component.@interface Securit
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare interface SecurityComponentMethod--><!--Device-unnamed-export declare interface SecurityComponentMethod-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,25 +18,23 @@ Sets the default focus flag of the accessibility feature.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-accessibilityDefaultFocus(focus: boolean | undefined): this--><!--Device-SecurityComponentMethod-accessibilityDefaultFocus(focus: boolean | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| focus | boolean \| undefined | Yes | Set to true if the component is the default accessibility focus. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| focus | boolean \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attributes of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## accessibilityDescription
 
@@ -50,25 +46,23 @@ Sets the accessibility description.This property provides additional context or 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-accessibilityDescription(description: string | Resource | undefined): this--><!--Device-SecurityComponentMethod-accessibilityDescription(description: string | Resource | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| description | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes | Accessibility description. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| description | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attributes of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## accessibilityNextFocusId
 
@@ -80,25 +74,23 @@ Sets the ID of the next component to receive accessibility focus.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-accessibilityNextFocusId(nextId: string | undefined): this--><!--Device-SecurityComponentMethod-accessibilityNextFocusId(nextId: string | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| nextId | string \| undefined | Yes | ID of the next component to receive accessibility focus. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| nextId | string \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attributes of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## accessibilityRole
 
@@ -110,25 +102,23 @@ Sets the accessibility role, which represents the custom type of the component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-accessibilityRole(role: SecurityComponentRoleType | undefined): this--><!--Device-SecurityComponentMethod-accessibilityRole(role: SecurityComponentRoleType | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| role | [SecurityComponentRoleType](arkts-arkui-securitycomponent-securitycomponentroletype-e.md) \| undefined | Yes | Component type of the accessibility feature. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| role | [SecurityComponentRoleType](arkts-arkui-securitycomponent-securitycomponentroletype-e.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attributes of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## align
 
@@ -140,25 +130,23 @@ align
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-align(alignType: Alignment | undefined): this--><!--Device-SecurityComponentMethod-align(alignType: Alignment | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| alignType | [Alignment](arkts-arkui-alignment-e.md) \| undefined | Yes | Indicates the align type of the security component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [alignType](arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | [Alignment](arkts-arkui-alignment-e.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## alignRules
 
@@ -170,25 +158,23 @@ Specifies the alignRules of relative container
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-alignRules(alignRule: AlignRuleOption | LocalizedAlignRuleOptions | undefined): this--><!--Device-SecurityComponentMethod-alignRules(alignRule: AlignRuleOption | LocalizedAlignRuleOptions | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| alignRule | [AlignRuleOption](../arkts-components/arkts-arkui-alignruleoption-i.md) \| [LocalizedAlignRuleOptions](../arkts-components/arkts-arkui-localizedalignruleoptions-i.md) \| undefined | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| alignRule | [AlignRuleOption](../arkts-components/arkts-arkui-alignruleoption-i.md) \| [LocalizedAlignRuleOptions](../arkts-components/arkts-arkui-localizedalignruleoptions-i.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## backgroundColor
 
@@ -200,25 +186,23 @@ Background color.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-backgroundColor(value: ResourceColor | undefined): this--><!--Device-SecurityComponentMethod-backgroundColor(value: ResourceColor | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | Indicates the background color of the security component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## borderColor
 
@@ -230,25 +214,23 @@ Color of the border.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-borderColor(value: ResourceColor | undefined): this--><!--Device-SecurityComponentMethod-borderColor(value: ResourceColor | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | Indicates the border color of the security component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## borderRadius
 
@@ -260,25 +242,23 @@ Radius of the border.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-borderRadius(radius: Dimension | BorderRadiuses | undefined): this--><!--Device-SecurityComponentMethod-borderRadius(radius: Dimension | BorderRadiuses | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| radius | [Dimension](arkts-arkui-dimension-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) \| undefined | Yes | Indicates the border radius of the security component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| radius | [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## borderStyle
 
@@ -290,25 +270,23 @@ Style of the border.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-borderStyle(value: BorderStyle | undefined): this--><!--Device-SecurityComponentMethod-borderStyle(value: BorderStyle | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [BorderStyle](arkts-arkui-borderstyle-e.md) \| undefined | Yes | Indicates the border style of the security component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [BorderStyle](arkts-arkui-borderstyle-e.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## borderWidth
 
@@ -320,25 +298,23 @@ Width of the border.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-borderWidth(value: Dimension | undefined): this--><!--Device-SecurityComponentMethod-borderWidth(value: Dimension | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) \| undefined | Yes | Indicates the border width of the security component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [Dimension](arkts-arkui-dimension-t.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## chainMode
 
@@ -350,26 +326,24 @@ Specifies the direction and style of chain in relative container
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-chainMode(direction: Axis | undefined, style: ChainStyle | undefined): this--><!--Device-SecurityComponentMethod-chainMode(direction: Axis | undefined, style: ChainStyle | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| direction | [Axis](arkts-arkui-axis-e.md) \| undefined | Yes | Indicates direction of the chain |
-| style | [ChainStyle](../arkts-components/arkts-arkui-chainstyle-e.md) \| undefined | Yes | Indicates style of the chain |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| direction | [Axis](arkts-arkui-axis-e.md) \| undefined | Yes |
+| style | [ChainStyle](../arkts-components/arkts-arkui-chainstyle-e.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## constraintSize
 
@@ -381,25 +355,23 @@ constraint Size: minWidth: minimum Width, maxWidth: maximum Width, minHeight: mi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-constraintSize(value: ConstraintSizeOptions | undefined): this--><!--Device-SecurityComponentMethod-constraintSize(value: ConstraintSizeOptions | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [ConstraintSizeOptions](arkts-arkui-constraintsizeoptions-i.md) \| undefined | Yes | Indicates the constraint size of the security component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [ConstraintSizeOptions](arkts-arkui-constraintsizeoptions-i.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## enabled
 
@@ -411,25 +383,23 @@ If the value is true, the component is available and can respond to operations s
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-enabled(respond: boolean | undefined): this--><!--Device-SecurityComponentMethod-enabled(respond: boolean | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| respond | boolean \| undefined | Yes | Indicates whether the button is responded to. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| respond | boolean \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## fallbackLineSpacing
 
@@ -441,25 +411,23 @@ Whether to include the ascent and descent of fallback fonts to prevent line over
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-fallbackLineSpacing(enabled: boolean | undefined): this--><!--Device-SecurityComponentMethod-fallbackLineSpacing(enabled: boolean | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enabled | boolean \| undefined | Yes | Whether to enable the feature. The default value is false. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [enabled](#enabled) | boolean \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attributes of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## focusBox
 
@@ -471,25 +439,23 @@ Set the focusBox style.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-focusBox(style: FocusBoxStyle | undefined): this--><!--Device-SecurityComponentMethod-focusBox(style: FocusBoxStyle | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| style | [FocusBoxStyle](arkts-arkui-focusboxstyle-i.md) \| undefined | Yes | FocusBox style. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| style | [FocusBoxStyle](arkts-arkui-focusboxstyle-i.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## fontColor
 
@@ -501,25 +467,23 @@ Font color of the inner text.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-fontColor(value: ResourceColor | undefined): this--><!--Device-SecurityComponentMethod-fontColor(value: ResourceColor | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | Indicates the font color of the text in the security component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## fontFamily
 
@@ -531,25 +495,23 @@ Font family of the inner text.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-fontFamily(value: string | Resource | undefined): this--><!--Device-SecurityComponentMethod-fontFamily(value: string | Resource | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes | Indicates the font family of the text in the security component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## fontSize
 
@@ -561,25 +523,23 @@ Font size of the inner text.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-fontSize(value: Dimension | undefined): this--><!--Device-SecurityComponentMethod-fontSize(value: Dimension | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) \| undefined | Yes | Indicates the font size of the text in the security component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [Dimension](arkts-arkui-dimension-t.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## fontStyle
 
@@ -591,25 +551,23 @@ Font style of the inner text.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-fontStyle(value: FontStyle | undefined): this--><!--Device-SecurityComponentMethod-fontStyle(value: FontStyle | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [FontStyle](arkts-arkui-fontstyle-e.md) \| undefined | Yes | Indicates the font style of the text in the security component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [FontStyle](arkts-arkui-fontstyle-e.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## fontWeight
 
@@ -621,25 +579,23 @@ Font weight of the inner text.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-fontWeight(value: int | FontWeight | string | Resource | undefined): this--><!--Device-SecurityComponentMethod-fontWeight(value: int | FontWeight | string | Resource | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | int \| [FontWeight](arkts-arkui-fontweight-e.md) \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes | Font weight of the text in the security component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | int \| [FontWeight](arkts-arkui-fontweight-e.md) \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## height
 
@@ -651,25 +607,23 @@ Sets the height of the component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-height(value: Length | undefined): this--><!--Device-SecurityComponentMethod-height(value: Length | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes | Indicates the height of the security component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## heightAdaptivePolicy
 
@@ -681,25 +635,23 @@ Called when the height adaptive policy is set.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-heightAdaptivePolicy(policy: TextHeightAdaptivePolicy | undefined): this--><!--Device-SecurityComponentMethod-heightAdaptivePolicy(policy: TextHeightAdaptivePolicy | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| policy | [TextHeightAdaptivePolicy](arkts-arkui-textheightadaptivepolicy-e.md) \| undefined | Yes | The height adaptive policy. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| policy | [TextHeightAdaptivePolicy](arkts-arkui-textheightadaptivepolicy-e.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## iconColor
 
@@ -711,25 +663,23 @@ Color of the icon.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-iconColor(value: ResourceColor | undefined): this--><!--Device-SecurityComponentMethod-iconColor(value: ResourceColor | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | Indicates the icon color in the security component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## iconSize
 
@@ -741,25 +691,23 @@ Icon size.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-iconSize(value: Dimension | undefined): this--><!--Device-SecurityComponentMethod-iconSize(value: Dimension | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) \| undefined | Yes | Indicates the size of the icon. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [Dimension](arkts-arkui-dimension-t.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## id
 
@@ -771,25 +719,23 @@ Id. User can set an id to the component to identify it.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-id(id: string | undefined): this--><!--Device-SecurityComponentMethod-id(id: string | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| id | string \| undefined | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [id](#id) | string \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## layoutDirection
 
@@ -801,25 +747,23 @@ Layout direction of the icon and text.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-layoutDirection(value: SecurityComponentLayoutDirection | undefined): this--><!--Device-SecurityComponentMethod-layoutDirection(value: SecurityComponentLayoutDirection | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [SecurityComponentLayoutDirection](arkts-arkui-securitycomponent-securitycomponentlayoutdirection-e.md) \| undefined | Yes | Indicates the layout direction of the icon and text. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [SecurityComponentLayoutDirection](arkts-arkui-securitycomponent-securitycomponentlayoutdirection-e.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## markAnchor
 
@@ -831,25 +775,23 @@ Anchor of the security component for positioning. The top start edge of the comp
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-markAnchor(value: Position | undefined): this--><!--Device-SecurityComponentMethod-markAnchor(value: Position | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [Position](arkts-arkui-position-i.md) \| undefined | Yes | Indicates the anchor of the component when it is positioned. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [Position](arkts-arkui-position-i.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## maxFontScale
 
@@ -861,25 +803,23 @@ Sets the maximum font scale factor for text.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-maxFontScale(scale: double | Resource | undefined): this--><!--Device-SecurityComponentMethod-maxFontScale(scale: double | Resource | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| scale | double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes | Maximum font scale factor to set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| scale | double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attributes of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## maxFontSize
 
@@ -891,25 +831,23 @@ Called when the maximum font size of the font is set.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-maxFontSize(maxSize: double | string | Resource | undefined): this--><!--Device-SecurityComponentMethod-maxFontSize(maxSize: double | string | Resource | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| maxSize | double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| maxSize | double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## maxLines
 
@@ -921,25 +859,23 @@ Called when the maximum number of lines of text is set.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-maxLines(line: int | Resource | undefined): this--><!--Device-SecurityComponentMethod-maxLines(line: int | Resource | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| line | int \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| line | int \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## minFontScale
 
@@ -951,25 +887,23 @@ Sets the minimum font scale factor for text.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-minFontScale(scale: double | Resource | undefined): this--><!--Device-SecurityComponentMethod-minFontScale(scale: double | Resource | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| scale | double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes | Minimum font scale factor to set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| scale | double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attributes of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## minFontSize
 
@@ -981,25 +915,23 @@ Called when the minimum font size of the font is set.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-minFontSize(minSize: double | string | Resource | undefined): this--><!--Device-SecurityComponentMethod-minFontSize(minSize: double | string | Resource | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| minSize | double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| minSize | double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## offset
 
@@ -1011,25 +943,23 @@ Coordinate offset relative to the layout completion position. Setting this attri
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-offset(value: Position | Edges | LocalizedEdges | undefined): this--><!--Device-SecurityComponentMethod-offset(value: Position | Edges | LocalizedEdges | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [Position](arkts-arkui-position-i.md) \| [Edges](arkts-arkui-edges-i.md) \| [LocalizedEdges](arkts-arkui-localizededges-i.md) \| undefined | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [Position](arkts-arkui-position-i.md) \| [Edges](arkts-arkui-edges-i.md) \| [LocalizedEdges](arkts-arkui-localizededges-i.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## padding
 
@@ -1041,25 +971,23 @@ Padding between the background border and icon/inner text.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-padding(value: Padding | Dimension | undefined): this--><!--Device-SecurityComponentMethod-padding(value: Padding | Dimension | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [Padding](arkts-arkui-padding-t.md) \| [Dimension](arkts-arkui-dimension-t.md) \| undefined | Yes | Indicates the padding of the security component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [Padding](arkts-arkui-units-padding-i.md) \| [Dimension](arkts-arkui-dimension-t.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## position
 
@@ -1071,25 +999,23 @@ Position of the security component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-position(value: Position | undefined): this--><!--Device-SecurityComponentMethod-position(value: Position | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [Position](arkts-arkui-position-i.md) \| undefined | Yes | Indicates the position of the security component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [Position](arkts-arkui-position-i.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## size
 
@@ -1101,25 +1027,23 @@ The size of the component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-size(value: SizeOptions | undefined): this--><!--Device-SecurityComponentMethod-size(value: SizeOptions | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [SizeOptions](arkts-arkui-sizeoptions-i.md) \| undefined | Yes | Indicates the size of the security component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [SizeOptions](arkts-arkui-sizeoptions-i.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## textIconSpace
 
@@ -1131,25 +1055,23 @@ Space between the inner text and icon.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-textIconSpace(value: Dimension | undefined): this--><!--Device-SecurityComponentMethod-textIconSpace(value: Dimension | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) \| undefined | Yes | Indicates the space between the inner text and icon. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [Dimension](arkts-arkui-dimension-t.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 ## width
 
@@ -1161,23 +1083,20 @@ Sets the width of the component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentMethod-width(value: Length | undefined): this--><!--Device-SecurityComponentMethod-width(value: Length | undefined): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes | Indicates the width of the security component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |

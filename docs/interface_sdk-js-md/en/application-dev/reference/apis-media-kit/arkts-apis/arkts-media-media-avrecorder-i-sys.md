@@ -7,9 +7,9 @@ AVRecorder is a class for audio and video recording management. It provides APIs
 > To use the camera to record videos, the camera module is required. For details about how to use the APIs
 > provided by the camera module, see [Camera Management](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md).
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-media-interface AVRecorder--><!--Device-media-interface AVRecorder-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -29,7 +29,7 @@ Get input meta surface for specified meta source type. it must be called between
 
 **Since:** 12
 
-<!--Device-AVRecorder-getInputMetaSurface(type: MetaSourceType): Promise<string>--><!--Device-AVRecorder-getInputMetaSurface(type: MetaSourceType): Promise<string>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -37,25 +37,25 @@ Get input meta surface for specified meta source type. it must be called between
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | [MetaSourceType](arkts-media-media-metasourcetype-e-sys.md) | Yes | Meta source type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | [MetaSourceType](arkts-media-media-metasourcetype-e-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | A Promise instance used to return the input surface id in string. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called from Non-System applications. Return by promise. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operate not permit. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## getInputMetaSurface
 
@@ -67,7 +67,7 @@ Get input meta surface for specified meta source type. it must be called between
 
 **Since:** 23
 
-<!--Device-AVRecorder-getInputMetaSurface(type: MetaSourceType): Promise<string | undefined>--><!--Device-AVRecorder-getInputMetaSurface(type: MetaSourceType): Promise<string | undefined>-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -75,25 +75,25 @@ Get input meta surface for specified meta source type. it must be called between
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | [MetaSourceType](arkts-media-media-metasourcetype-e-sys.md) | Yes | Meta source type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | [MetaSourceType](arkts-media-media-metasourcetype-e-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string \| undefined&gt; | A Promise instance used to return the input surface id in string. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string \ | undefined & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called from Non-System applications. Return by promise. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operate not permit. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## isWatermarkSupported
 
@@ -103,9 +103,9 @@ isWatermarkSupported(): Promise<boolean>
 
 Checks whether the device supports the hardware digital watermark. This API uses a promise to return the result.This API can be called after the prepare(), start(), or paused() event is triggered.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-AVRecorder-isWatermarkSupported(): Promise<boolean>--><!--Device-AVRecorder-isWatermarkSupported(): Promise<boolean>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -113,9 +113,9 @@ Checks whether the device supports the hardware digital watermark. This API uses
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the check result. The value **true** means that the device supports the hardware digital watermark, and **false** means the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **Examples**
 
@@ -129,50 +129,6 @@ avRecorder.isWatermarkSupported().then((isWatermarkSupported: boolean) => {
 });
 ```
 
-## setMetadata
-
-```TypeScript
-setMetadata(metadata: Record<string, string>): void
-```
-
-Set metadata (key-value pairs) for the recording file of the recorder. This metadata overwrites the value in config.metadata.customInfo (see {prepare()} and {AVRecorderConfig}) if they have same key.This API can be called only after the prepare() event is successfully triggered and before the stop() API is called.
-
-**Since:** 23
-
-<!--Device-AVRecorder-setMetadata(metadata: Record<string, string>): void--><!--Device-AVRecorder-setMetadata(metadata: Record<string, string>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVRecorder
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| metadata | Record&lt;string, string&gt; | Yes | Tag and value of the metadata in key-value pairs. <br>- The first string is the key.<br>- The second string is the value. <br> The key string should start with "com.openharmony.", the length of value can't be more than 256 bytes. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 19 - 24 |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory.<br>**Applicable version:** 26.0.0 and later |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed.<br>**Applicable version:** 26.0.0 and later |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let meta : Record<string, string> = {
-   'com.openharmony.userdefine':'10',
-   'com.openharmony.userdefine2':'20'
-};
-
-avRecorder.setMetadata(meta);
-```
-
 ## setWatermark
 
 ```TypeScript
@@ -181,9 +137,9 @@ setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>
 
 Sets a watermark for the AVRecorder. This API uses a promise to return the result.This API can be called only after the prepare() event is triggered and before the start() event is triggered.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-AVRecorder-setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>--><!--Device-AVRecorder-setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -191,23 +147,23 @@ Sets a watermark for the AVRecorder. This API uses a promise to return the resul
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| watermark | image.PixelMap | Yes | : Watermark image. |
-| config | [WatermarkConfig](arkts-media-media-watermarkconfig-i-sys.md) | Yes | : Configures of the watermark. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| watermark | image.PixelMap | Yes |
+| config | [WatermarkConfig](arkts-media-media-watermarkconfig-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -224,4 +180,3 @@ avRecorder.setWatermark(watermark, watermarkConfig).then(() => {
   console.error(`Failed to setWatermark and catch error is ${error.message}`);
 });
 ```
-

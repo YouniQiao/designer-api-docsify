@@ -1,10 +1,10 @@
 # AVScreenCaptureRecordConfig
 
-Defines the screen capture parameters.
+表示录屏参数配置。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-interface AVScreenCaptureRecordConfig--><!--Device-unnamed-interface AVScreenCaptureRecordConfig-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -20,13 +20,13 @@ import { media } from '@kit.MediaKit';
 audioBitrate?: int
 ```
 
-Audio bit rate, in bit/s. This value is used for both internal capture and external capture (using microphones). The default value is **96000**.
+录屏的音频比特率，内录的系统音和外录的麦克风都使用此比特率，默认96000。单位为比特每秒（bit/s）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AVScreenCaptureRecordConfig-audioBitrate?: int--><!--Device-AVScreenCaptureRecordConfig-audioBitrate?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -36,13 +36,13 @@ Audio bit rate, in bit/s. This value is used for both internal capture and exter
 audioChannelCount?: int
 ```
 
-Number of audio channels. This value is used for both internal capture and external capture (using microphones). Only **1** and **2** (default) are supported.
+录屏的音频通道数，内录的系统音和外录的麦克风都使用此通道数，默认2声道，仅支持设置1或2声道。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AVScreenCaptureRecordConfig-audioChannelCount?: int--><!--Device-AVScreenCaptureRecordConfig-audioChannelCount?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -52,13 +52,13 @@ Number of audio channels. This value is used for both internal capture and exter
 audioSampleRate?: int
 ```
 
-Audio sampling rate, in Hz. This value is used for both internal capture and external capture (using microphones), in Hz. Only **48000** (default value) and **16000** are supported.
+录屏的音频采样率。 内录的系统音和外录的麦克风都使用此采样率，默认48000，仅支持设置48000或16000。单位为赫兹（Hz）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AVScreenCaptureRecordConfig-audioSampleRate?: int--><!--Device-AVScreenCaptureRecordConfig-audioSampleRate?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -68,13 +68,13 @@ Audio sampling rate, in Hz. This value is used for both internal capture and ext
 displayId?: int
 ```
 
-ID of the display used for screen capture. By default, the main screen is captured.
+指定录屏使用的屏幕，默认主屏幕。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-AVScreenCaptureRecordConfig-displayId?: int--><!--Device-AVScreenCaptureRecordConfig-displayId?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -84,13 +84,13 @@ ID of the display used for screen capture. By default, the main screen is captur
 fd: int
 ```
 
-FD of the file output.
+录制输出的文件fd。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AVScreenCaptureRecordConfig-fd: int--><!--Device-AVScreenCaptureRecordConfig-fd: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -100,13 +100,13 @@ FD of the file output.
 fillMode?: AVScreenCaptureFillMode
 ```
 
-Video fill mode during screen capture.
+录屏时视频流的填充模式。
 
 **类型：** [AVScreenCaptureFillMode](arkts-media-multimedia-media-avscreencapturefillmode-e.md)
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-AVScreenCaptureRecordConfig-fillMode?: AVScreenCaptureFillMode--><!--Device-AVScreenCaptureRecordConfig-fillMode?: AVScreenCaptureFillMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -116,13 +116,13 @@ Video fill mode during screen capture.
 frameHeight?: int
 ```
 
-Video height, in px. The default value varies according to the display in use.
+录屏的视频高度。 默认屏幕高度，根据不同屏幕默认值不同。单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AVScreenCaptureRecordConfig-frameHeight?: int--><!--Device-AVScreenCaptureRecordConfig-frameHeight?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -132,13 +132,13 @@ Video height, in px. The default value varies according to the display in use.
 frameWidth?: int
 ```
 
-Video width, in px. The default value varies according to the display in use.
+录屏的视频宽度。 默认屏幕宽度，根据不同屏幕默认值不同。单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AVScreenCaptureRecordConfig-frameWidth?: int--><!--Device-AVScreenCaptureRecordConfig-frameWidth?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -148,13 +148,13 @@ Video width, in px. The default value varies according to the display in use.
 preset?: AVScreenCaptureRecordPreset
 ```
 
-Encoding and container format used. The default value is **SCREEN_RECORD_PRESET_H264_AAC_MP4**.
+录屏使用的编码和封装格式，默认SCREEN_RECORD_PRESET_H264_AAC_MP4格式。
 
 **类型：** [AVScreenCaptureRecordPreset](arkts-media-multimedia-media-avscreencapturerecordpreset-e.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AVScreenCaptureRecordConfig-preset?: AVScreenCaptureRecordPreset--><!--Device-AVScreenCaptureRecordConfig-preset?: AVScreenCaptureRecordPreset-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -164,15 +164,15 @@ Encoding and container format used. The default value is **SCREEN_RECORD_PRESET_
 strategy?: AVScreenCaptureStrategy
 ```
 
-Screen Capture Policy Configuration Fields
+录屏策略。
 
 **类型：** [AVScreenCaptureStrategy](arkts-media-multimedia-media-avscreencapturestrategy-i.md)
 
 **默认值：** {default value of the property} [Required if provided]
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-AVScreenCaptureRecordConfig-strategy?: AVScreenCaptureStrategy--><!--Device-AVScreenCaptureRecordConfig-strategy?: AVScreenCaptureStrategy-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -182,13 +182,12 @@ Screen Capture Policy Configuration Fields
 videoBitrate?: int
 ```
 
-Video bit rate, in bit/s. The default value is **10000000**.
+录屏的视频比特率。 默认为10000000。单位为比特每秒（bit/s）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AVScreenCaptureRecordConfig-videoBitrate?: int--><!--Device-AVScreenCaptureRecordConfig-videoBitrate?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
-

@@ -31,9 +31,9 @@
 - [@ohos.multimodalAwareness.deviceStatus](arkts-multimodalawareness-devicestatus.md)
   <!--Del-->
   - [getDeviceRotationRadian(system api)](arkts-multimodalawareness-devicestatus-getdevicerotationradian-f-sys.md)<!--DelEnd-->
-  - [off_steadyStandingDetect](arkts-multimodalawareness-devicestatus-offsteadystandingdetect-f.md)
+  - [off](arkts-multimodalawareness-devicestatus-off-f.md)
   - [offSteadyStandingDetect](arkts-multimodalawareness-devicestatus-offsteadystandingdetect-f.md)
-  - [on_steadyStandingDetect](arkts-multimodalawareness-devicestatus-onsteadystandingdetect-f.md)
+  - [on](arkts-multimodalawareness-devicestatus-on-f.md)
   - [onSteadyStandingDetect](arkts-multimodalawareness-devicestatus-onsteadystandingdetect-f.md)
   <!--Del-->
   - [DeviceRotationRadian(system api)](arkts-multimodalawareness-devicestatus-devicerotationradian-i-sys.md)<!--DelEnd-->
@@ -45,15 +45,14 @@
   - [encodeImage(system api)](arkts-multimodalawareness-metadatabinding-encodeimage-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [notifyMetadataBindingEvent(system api)](arkts-multimodalawareness-metadatabinding-notifymetadatabindingevent-f-sys.md)<!--DelEnd-->
-  - [off_operationSubmitMetadata](arkts-multimodalawareness-metadatabinding-offoperationsubmitmetadata-f.md)
+  - [off](arkts-multimodalawareness-metadatabinding-off-f.md)
   - [offOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-offoperationsubmitmetadata-f.md)
-  - [on_operationSubmitMetadata](arkts-multimodalawareness-metadatabinding-onoperationsubmitmetadata-f.md)
+  - [on](arkts-multimodalawareness-metadatabinding-on-f.md)
   - [onOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-onoperationsubmitmetadata-f.md)
   - [submitMetadata](arkts-multimodalawareness-metadatabinding-submitmetadata-f.md)
 - [@ohos.multimodalAwareness.motion](arkts-multimodalawareness-motion.md)
   - [getRecentOperatingHandStatus](arkts-multimodalawareness-motion-getrecentoperatinghandstatus-f.md)
-  - [off_holdingHandChanged](arkts-multimodalawareness-motion-offholdinghandchanged-f.md)
-  - [off_operatingHandChanged](arkts-multimodalawareness-motion-offoperatinghandchanged-f.md)
+  - [off](arkts-multimodalawareness-motion-off-f.md)
   - [offHoldingHandChanged](arkts-multimodalawareness-motion-offholdinghandchanged-f.md)
   <!--Del-->
   - [offHoverHandChange(system api)](arkts-multimodalawareness-motion-offhoverhandchange-f-sys.md)<!--DelEnd-->
@@ -64,8 +63,7 @@
   - [offRotateChange(system api)](arkts-multimodalawareness-motion-offrotatechange-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offSmartRotateChange(system api)](arkts-multimodalawareness-motion-offsmartrotatechange-f-sys.md)<!--DelEnd-->
-  - [on_holdingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md)
-  - [on_operatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md)
+  - [on](arkts-multimodalawareness-motion-on-f.md)
   - [onHoldingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md)
   <!--Del-->
   - [onHoverHandChange(system api)](arkts-multimodalawareness-motion-onhoverhandchange-f-sys.md)<!--DelEnd-->
@@ -166,9 +164,9 @@
 - [@ohos.multimodalAwareness.userStatus](arkts-multimodalawareness-userstatus.md)
   <!--Del-->
   - [configure(system api)](arkts-multimodalawareness-userstatus-configure-f-sys.md)<!--DelEnd-->
-  - [off_userAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md)
+  - [off](arkts-multimodalawareness-userstatus-off-f.md)
   - [offUserAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md)
-  - [on_userAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md)
+  - [on](arkts-multimodalawareness-userstatus-on-f.md)
   - [onUserAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md)
   <!--Del-->
   - [queryCapabilities(system api)](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md)<!--DelEnd-->
@@ -203,9 +201,9 @@
   <!--Del-->
   - [UserStatusFeature(system api)](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md)<!--DelEnd-->
 - [@ohos.stationary](arkts-stationary.md)
-  - [off_ActivityType](arkts-multimodalawareness-stationary-offactivitytype-f.md)
-  - [on_ActivityType](arkts-multimodalawareness-stationary-onactivitytype-f.md)
-  - [once_ActivityType](arkts-multimodalawareness-stationary-onceactivitytype-f.md)
+  - [off](arkts-multimodalawareness-stationary-off-f.md)
+  - [on](arkts-multimodalawareness-stationary-on-f.md)
+  - [once](arkts-multimodalawareness-stationary-once-f.md)
   - [ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md)
   - [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md)
   - [ActivityEvent](arkts-multimodalawareness-stationary-activityevent-e.md)

@@ -16,28 +16,28 @@ Converts a key-value (KV) pair that cannot be passed across threads into the dat
 
 **Since:** 12
 
-<!--Device-sendableRelationalStore-function toSendableValuesBucket(valuesBucket: NonSendableBucket): ValuesBucket--><!--Device-sendableRelationalStore-function toSendableValuesBucket(valuesBucket: NonSendableBucket): ValuesBucket-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| valuesBucket | [NonSendableBucket](arkts-arkdata-sendablerelationalstore-nonsendablebucket-t.md) | Yes | Data that cannot be passed across threads. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [valuesBucket](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityoperation-dataabilityoperation-i.md) | [NonSendableBucket](arkts-arkdata-sendablerelationalstore-nonsendablebucket-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ValuesBucket | Data that can be passed across threads. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [14800000](../errorcode-data-rdb.md#14800000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
 
 **Examples**
 
@@ -72,4 +72,3 @@ const valuesBucket: sendableRelationalStore.NonSendableBucket = {
 
 const sendableValuesBucket = sendableRelationalStore.toSendableValuesBucket(valuesBucket);
 ```
-

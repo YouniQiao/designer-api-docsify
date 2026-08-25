@@ -17,19 +17,19 @@ LazyForEach(
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LazyForEachInterface-(    dataSource: IDataSource,    itemGenerator: (item: any, index: number) => void,    keyGenerator?: (item: any, index: number) => string  ): LazyForEachAttribute--><!--Device-LazyForEachInterface-(    dataSource: IDataSource,    itemGenerator: (item: any, index: number) => void,    keyGenerator?: (item: any, index: number) => string  ): LazyForEachAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dataSource | [IDataSource](arkts-arkui-idatasource-i.md) | Yes | LazyForEach** data source. You need to implement related APIs. |
-| itemGenerator | (item: any, index: number) =&gt; void | Yes | Child component generation function, which generates a child component for each data item in the array. <br>**NOTE** <br>- (Optional) **item**: data item. <br>(Optional) **index**: index of the data item. <br>- The function body of **itemGenerator** must be included in braces {...}. <br>- **itemGenerator** can and must generate only one child component for each iteration. <br>- The **if** statement is allowed in **itemGenerator**, but you must ensure that each branch of the **if** statement creates a child component of the same type. |
-| keyGenerator | (item: any, index: number) =&gt; string | No | ID generation function, which generates a unique and fixed ID for each data item in the data source. Components are updated only when their generated key changes. The **keyGenerator** parameter is optional, but you are advised to provide it so that the development framework can better identify array changes and update components correctly. <br>The default value is an empty callback. <br>**NOTE** <br>- (Optional) **item**: data item. <br>(Optional) **index**: index of the data item. <br>- When **keyGenerator** is omitted, the default function **(item: Object, index: number) => { return viewId + '-' + index.toString(); }** is used, where key generation is affected by the index value only (**viewId** is compiler-generated and consistent within the same **LazyForEach** component). <br>- To ensure correct and efficient child component updates, avoiding rendering anomalies or performance degradation, keys must meet the following requirements: <br>1. Uniqueness: Each data item must have a distinct key. <br>2. Consistency: Keys must remain unchanged for unmodified data items. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dataSource | [IDataSource](arkts-arkui-idatasource-i.md) | Yes |
+| itemGenerator | (item: any, index: number) = & gt; void | Yes |
+| keyGenerator | (item: any, index: number) = & gt; string | No |
 
 ## LazyForEach
 
@@ -46,37 +46,37 @@ Enter the value to obtain the LazyForEach.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-LazyForEachInterface-(    dataSource: IDataSource,    itemGenerator: (item: any, index: number) => void,    keyGenerator?: (item: any, index: number) => string,    options?: LazyForEachOptions  ): LazyForEachAttribute--><!--Device-LazyForEachInterface-(    dataSource: IDataSource,    itemGenerator: (item: any, index: number) => void,    keyGenerator?: (item: any, index: number) => string,    options?: LazyForEachOptions  ): LazyForEachAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dataSource | [IDataSource](arkts-arkui-idatasource-i.md) | Yes |  |
-| itemGenerator | (item: any, index: number) =&gt; void | Yes |  |
-| keyGenerator | (item: any, index: number) =&gt; string | No |  |
-| options | [LazyForEachOptions](arkts-arkui-lazyforeachoptions-i.md) | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dataSource | [IDataSource](arkts-arkui-idatasource-i.md) | Yes |
+| itemGenerator | (item: any, index: number) = & gt; void | Yes |
+| keyGenerator | (item: any, index: number) = & gt; string | No |
+| options | [LazyForEachOptions](arkts-arkui-lazyforeachoptions-i.md) | No |
 
 ## Summary
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DataOperation](arkts-arkui-dataoperation-t.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |

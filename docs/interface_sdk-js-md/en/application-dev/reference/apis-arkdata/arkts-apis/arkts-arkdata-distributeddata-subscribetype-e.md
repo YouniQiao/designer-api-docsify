@@ -4,11 +4,11 @@ Enumerates the subscription types.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** SubscribeType
-
-<!--Device-distributedData-enum SubscribeType--><!--Device-distributedData-enum SubscribeType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -22,11 +22,11 @@ Local data changes.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** SUBSCRIBE_TYPE_LOCAL
-
-<!--Device-SubscribeType-SUBSCRIBE_TYPE_LOCAL = 0--><!--Device-SubscribeType-SUBSCRIBE_TYPE_LOCAL = 0-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -40,11 +40,11 @@ Remote data changes.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** SUBSCRIBE_TYPE_REMOTE
-
-<!--Device-SubscribeType-SUBSCRIBE_TYPE_REMOTE = 1--><!--Device-SubscribeType-SUBSCRIBE_TYPE_REMOTE = 1-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -58,11 +58,10 @@ Local and remote data changes.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** SUBSCRIBE_TYPE_ALL
 
-<!--Device-SubscribeType-SUBSCRIBE_TYPE_ALL = 2--><!--Device-SubscribeType-SUBSCRIBE_TYPE_ALL = 2-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
-

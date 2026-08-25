@@ -4,9 +4,7 @@ Resolved options returned by the resolvedOptions method.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-Intl-export interface ResolvedDisplayNamesOptions--><!--Device-Intl-export interface ResolvedDisplayNamesOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,11 +25,9 @@ Fallback option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDisplayNamesOptions-fallback: DisplayNamesFallback--><!--Device-ResolvedDisplayNamesOptions-fallback: DisplayNamesFallback-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -47,11 +43,9 @@ Language display option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDisplayNamesOptions-languageDisplay?: DisplayNamesLanguageDisplay--><!--Device-ResolvedDisplayNamesOptions-languageDisplay?: DisplayNamesLanguageDisplay-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -67,11 +61,9 @@ Locale identifier.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDisplayNamesOptions-locale: UnicodeBCP47LocaleIdentifier--><!--Device-ResolvedDisplayNamesOptions-locale: UnicodeBCP47LocaleIdentifier-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -87,11 +79,9 @@ Style option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDisplayNamesOptions-style: RelativeTimeFormatStyle--><!--Device-ResolvedDisplayNamesOptions-style: RelativeTimeFormatStyle-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -107,11 +97,8 @@ Type option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ResolvedDisplayNamesOptions-type: DisplayNamesType--><!--Device-ResolvedDisplayNamesOptions-type: DisplayNamesType-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

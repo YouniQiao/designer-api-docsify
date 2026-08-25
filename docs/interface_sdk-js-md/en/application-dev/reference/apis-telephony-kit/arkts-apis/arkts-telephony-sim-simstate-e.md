@@ -2,9 +2,9 @@
 
 Enumerates SIM card states.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-sim-export enum SimState--><!--Device-sim-export enum SimState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -16,9 +16,9 @@ SIM_STATE_UNKNOWN = 0
 
 The SIM card is in **unknown** state; that is, the SIM card status cannot be obtained.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-SimState-SIM_STATE_UNKNOWN = 0--><!--Device-SimState-SIM_STATE_UNKNOWN = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -30,9 +30,9 @@ SIM_STATE_NOT_PRESENT = 1
 
 The SIM card is in **not present** state; that is, no SIM card is inserted into the card slot.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-SimState-SIM_STATE_NOT_PRESENT = 1--><!--Device-SimState-SIM_STATE_NOT_PRESENT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -44,9 +44,9 @@ SIM_STATE_LOCKED = 2
 
 The SIM card is in **locked** state; that is, the SIM card is locked by the personal identification number (PIN), PIN unblocking key (PUK), or network.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-SimState-SIM_STATE_LOCKED = 2--><!--Device-SimState-SIM_STATE_LOCKED = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -58,9 +58,9 @@ SIM_STATE_NOT_READY = 3
 
 The SIM card is in **not ready** state; that is, the SIM card has been installed but cannot work properly.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-SimState-SIM_STATE_NOT_READY = 3--><!--Device-SimState-SIM_STATE_NOT_READY = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -72,9 +72,9 @@ SIM_STATE_READY = 4
 
 The SIM card is in **ready** state; that is, the SIM card has been installed and is working properly.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-SimState-SIM_STATE_READY = 4--><!--Device-SimState-SIM_STATE_READY = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -86,9 +86,8 @@ SIM_STATE_LOADED = 5
 
 The SIM card is in **loaded** state; that is, the SIM card is present and all its files have been loaded.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-SimState-SIM_STATE_LOADED = 5--><!--Device-SimState-SIM_STATE_LOADED = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
-

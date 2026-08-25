@@ -1,8 +1,8 @@
 # PersoLockInfo（系统接口）
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-sim-export interface PersoLockInfo--><!--Device-sim-export interface PersoLockInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -22,9 +22,9 @@ lockType: PersoLockType
 
 **类型：** [PersoLockType](arkts-telephony-sim-persolocktype-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-PersoLockInfo-lockType: PersoLockType--><!--Device-PersoLockInfo-lockType: PersoLockType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -38,11 +38,10 @@ password: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-PersoLockInfo-password: string--><!--Device-PersoLockInfo-password: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
-

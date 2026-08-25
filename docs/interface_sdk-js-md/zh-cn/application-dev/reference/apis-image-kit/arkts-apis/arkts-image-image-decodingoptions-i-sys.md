@@ -2,9 +2,9 @@
 
 图像解码设置选项。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-image-interface DecodingOptions--><!--Device-image-interface DecodingOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -24,11 +24,10 @@ resolutionQuality?: ResolutionQuality
 
 **类型：** ResolutionQuality
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-DecodingOptions-resolutionQuality?: ResolutionQuality--><!--Device-DecodingOptions-resolutionQuality?: ResolutionQuality-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **系统接口：** 此接口为系统接口。
-

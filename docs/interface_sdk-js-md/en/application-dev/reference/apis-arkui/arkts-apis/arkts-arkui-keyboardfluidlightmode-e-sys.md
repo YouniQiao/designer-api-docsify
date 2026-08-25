@@ -4,7 +4,7 @@ Enumerates keyboard fluid lighting effects.
 
 **Since:** 20
 
-<!--Device-unnamed-declare enum KeyboardFluidLightMode--><!--Device-unnamed-declare enum KeyboardFluidLightMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,9 +20,9 @@ No fluid lighting effect.
 
 **Since:** 20
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-KeyboardFluidLightMode-NONE = 0--><!--Device-KeyboardFluidLightMode-NONE = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +38,10 @@ Background fluid lighting effect enabled.
 
 **Since:** 20
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-KeyboardFluidLightMode-BACKGROUND_FLUID_LIGHT = 1--><!--Device-KeyboardFluidLightMode-BACKGROUND_FLUID_LIGHT = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

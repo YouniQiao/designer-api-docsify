@@ -14,17 +14,17 @@ function getSystemMemInfo(): SystemMemInfo
 
 Obtains system memory information. This API is implemented by reading data from the **\/proc/meminfo** node.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-hidebug-function getSystemMemInfo(): SystemMemInfo--><!--Device-hidebug-function getSystemMemInfo(): SystemMemInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SystemMemInfo](arkts-performanceanalysis-hidebug-systemmeminfo-i.md) | System memory information. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SystemMemInfo](arkts-performanceanalysis-hidebug-systemmeminfo-i.md) |
 
 **Examples**
 
@@ -36,4 +36,3 @@ let systemMemInfo: hidebug.SystemMemInfo = hidebug.getSystemMemInfo();
 console.info(`totalMem: ${systemMemInfo.totalMem}, freeMem: ${systemMemInfo.freeMem}, ` +
   `availableMem: ${systemMemInfo.availableMem}`);
 ```
-

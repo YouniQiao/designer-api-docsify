@@ -2,9 +2,9 @@
 
 数据库加密参数配置。此配置只有在StoreConfig的encrypt选项设置为true或密钥非空时有效。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-relationalStore-interface CryptoParam--><!--Device-relationalStore-interface CryptoParam-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -22,11 +22,11 @@ cryptoPageSize?: int
 
 整数类型，指定数据库加解密使用的页大小，单位：字节。如不指定，默认值为1024字节。用户指定的页大小应为1024到65536范围内的整数，并且为2&lt;sup&gt;n&lt;/sup&gt;。若指定值非整数，则向下取整。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-CryptoParam-cryptoPageSize?: int--><!--Device-CryptoParam-cryptoPageSize?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -40,9 +40,9 @@ encryptionAlgo?: EncryptionAlgo
 
 **类型：** [EncryptionAlgo](arkts-arkdata-relationalstore-encryptionalgo-e.md)
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-CryptoParam-encryptionAlgo?: EncryptionAlgo--><!--Device-CryptoParam-encryptionAlgo?: EncryptionAlgo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -56,9 +56,9 @@ encryptionKey: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-CryptoParam-encryptionKey: Uint8Array--><!--Device-CryptoParam-encryptionKey: Uint8Array-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -72,9 +72,9 @@ hmacAlgo?: HmacAlgo
 
 **类型：** [HmacAlgo](arkts-arkdata-relationalstore-hmacalgo-e.md)
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-CryptoParam-hmacAlgo?: HmacAlgo--><!--Device-CryptoParam-hmacAlgo?: HmacAlgo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -86,11 +86,11 @@ iterationCount?: int
 
 整数类型，指定数据库PBKDF2算法的迭代次数，默认值为10000。迭代次数应当为大于零的整数，若非整数则向下取整，若小于零则抛出错误码401，请参见[通用错误码](../../errorcode-universal.md)。不指定此参数或指定为零时，使用默认值10000，并使用默认加密算法AES_256_GCM。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-CryptoParam-iterationCount?: int--><!--Device-CryptoParam-iterationCount?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -104,9 +104,8 @@ kdfAlgo?: KdfAlgo
 
 **类型：** [KdfAlgo](arkts-arkdata-relationalstore-kdfalgo-e.md)
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-CryptoParam-kdfAlgo?: KdfAlgo--><!--Device-CryptoParam-kdfAlgo?: KdfAlgo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-

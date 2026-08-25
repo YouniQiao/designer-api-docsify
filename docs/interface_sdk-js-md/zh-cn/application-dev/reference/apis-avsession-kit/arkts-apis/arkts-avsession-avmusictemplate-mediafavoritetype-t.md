@@ -8,14 +8,13 @@ type MediaFavoriteType = 'addFavorite' | 'removeFavorite'
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-avMusicTemplate-type MediaFavoriteType = 'addFavorite' | 'removeFavorite'--><!--Device-avMusicTemplate-type MediaFavoriteType = 'addFavorite' | 'removeFavorite'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-| 类型 | 说明 |
-| --- | --- |
-| 'addFavorite' |  |
-| 'removeFavorite' |  |
-
+| 类型 |
+| --- |
+| 'addFavorite' |
+| 'removeFavorite' |

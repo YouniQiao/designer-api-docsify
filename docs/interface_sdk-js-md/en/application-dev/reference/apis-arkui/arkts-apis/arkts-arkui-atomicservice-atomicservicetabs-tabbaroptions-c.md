@@ -4,7 +4,7 @@ Array of tab bar container configurations.
 
 **Since:** 12
 
-<!--Device-unnamed-export declare class TabBarOptions--><!--Device-unnamed-export declare class TabBarOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,18 +25,17 @@ A constructor used to create a **TabBarOptions** instance.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-TabBarOptions-constructor(icon: ResourceStr | TabBarSymbol, text: ResourceStr,    unselectedColor?: ResourceColor, selectedColor?: ResourceColor)--><!--Device-TabBarOptions-constructor(icon: ResourceStr | TabBarSymbol, text: ResourceStr,    unselectedColor?: ResourceColor, selectedColor?: ResourceColor)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| icon | ResourceStr \| TabBarSymbol | Yes | Image for the tab. |
-| text | ResourceStr | Yes | Text of the tab. |
-| unselectedColor | ResourceColor | No | Color of the tab when it is not selected. <br>Default value: **#99182431 |
-| selectedColor | ResourceColor | No | Color of the tab when it is selected. <br>Default value: **#FF007DFF |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| icon | ResourceStr \| [TabBarSymbol](../arkts-components/arkts-arkui-tabbarsymbol-c.md) | Yes |
+| text | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes |
+| unselectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No |
+| selectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No |

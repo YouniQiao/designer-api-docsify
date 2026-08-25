@@ -14,36 +14,36 @@ function getSecurityLabelSync(path: string): string
 
 Obtains the data security level of a file or directory in synchronous mode. If no data security level has been set, **s3** is returned by default.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-securityLabel-function getSecurityLabelSync(path: string): string--><!--Device-securityLabel-function getSecurityLabelSync(path: string): string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| path | string | Yes | File path. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| path | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Promise used to return the data security level. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900007 | Arg list too long |
-| 13900015 | File exists |
-| 13900020 | Invalid argument |
-| 13900025 | No space left on device |
-| 13900037 | No data available |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900007 |
+| 13900015 |
+| 13900020 |
+| 13900025 |
+| 13900037 |
+| 13900041 |
+| 13900042 |
 
 **Examples**
 
@@ -52,4 +52,3 @@ let filePath = pathDir + '/test.txt';
 let type = securityLabel.getSecurityLabelSync(filePath);
 console.info("getSecurityLabel successfully, Label: " + type);
 ```
-

@@ -8,14 +8,13 @@ Defines the type of values in a **Scope** object.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-util-type ScopeType = ScopeComparable | number--><!--Device-util-type ScopeType = ScopeComparable | number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
-| Type | Description |
-| --- | --- |
-| ScopeComparable | The value type is ScopeComparable. |
-| number | The value type is a number. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [ScopeComparable](arkts-arkts-util-scopecomparable-i.md) |
+| number |

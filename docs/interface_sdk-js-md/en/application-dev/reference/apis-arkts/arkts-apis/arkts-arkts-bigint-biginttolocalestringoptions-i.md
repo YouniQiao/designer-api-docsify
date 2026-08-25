@@ -4,9 +4,7 @@ Options for BigInt.toLocaleString method.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export interface BigIntToLocaleStringOptions--><!--Device-unnamed-export interface BigIntToLocaleStringOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,11 +25,9 @@ Specifies the compact display format for large numbers.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigIntToLocaleStringOptions-compactDisplay?: string--><!--Device-BigIntToLocaleStringOptions-compactDisplay?: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -47,11 +43,9 @@ The currency to use for currency formatting. Required when style is "currency". 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigIntToLocaleStringOptions-currency?: string--><!--Device-BigIntToLocaleStringOptions-currency?: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -67,11 +61,9 @@ Specifies how to display the currency in the formatted string. Valid values: "co
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigIntToLocaleStringOptions-currencyDisplay?: string--><!--Device-BigIntToLocaleStringOptions-currencyDisplay?: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -87,11 +79,9 @@ The locale matching algorithm to use. Valid values: "lookup" (BCP 47 lookup algo
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigIntToLocaleStringOptions-localeMatcher?: string--><!--Device-BigIntToLocaleStringOptions-localeMatcher?: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -107,11 +97,9 @@ The maximum number of decimal digits to display. Must be an integer between 0 an
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigIntToLocaleStringOptions-maximumFractionDigits?: double--><!--Device-BigIntToLocaleStringOptions-maximumFractionDigits?: double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -127,11 +115,9 @@ The maximum number of significant digits to display. Must be an integer between 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigIntToLocaleStringOptions-maximumSignificantDigits?: double--><!--Device-BigIntToLocaleStringOptions-maximumSignificantDigits?: double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -147,11 +133,9 @@ The minimum number of decimal digits to display. Must be an integer between 1 an
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigIntToLocaleStringOptions-minimumFractionDigits?: double--><!--Device-BigIntToLocaleStringOptions-minimumFractionDigits?: double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -167,11 +151,9 @@ The minimum number of integer digits to display (before the decimal point). Must
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigIntToLocaleStringOptions-minimumIntegerDigits?: double--><!--Device-BigIntToLocaleStringOptions-minimumIntegerDigits?: double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -187,11 +169,9 @@ The minimum number of significant digits to display. Must be an integer between 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigIntToLocaleStringOptions-minimumSignificantDigits?: double--><!--Device-BigIntToLocaleStringOptions-minimumSignificantDigits?: double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -207,11 +187,9 @@ The notation format to use for displaying the number. Valid values: "standard" (
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigIntToLocaleStringOptions-notation?: string--><!--Device-BigIntToLocaleStringOptions-notation?: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -227,11 +205,9 @@ The numbering system to use for number formatting. This option is currently not 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigIntToLocaleStringOptions-numberingSystem?: string--><!--Device-BigIntToLocaleStringOptions-numberingSystem?: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -247,11 +223,9 @@ The formatting style to use. Valid values: "decimal" (default, for plain numbers
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigIntToLocaleStringOptions-style?: string--><!--Device-BigIntToLocaleStringOptions-style?: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -267,11 +241,9 @@ The unit to use for unit formatting. Required when style is "unit". Use UCUM uni
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigIntToLocaleStringOptions-unit?: string--><!--Device-BigIntToLocaleStringOptions-unit?: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -287,11 +259,9 @@ Specifies how to display the unit in the formatted string. Valid values: "short"
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigIntToLocaleStringOptions-unitDisplay?: string--><!--Device-BigIntToLocaleStringOptions-unitDisplay?: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -307,11 +277,8 @@ Whether to use grouping separators (e.g., thousands separator "," in "1,000").
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BigIntToLocaleStringOptions-useGrouping?: boolean--><!--Device-BigIntToLocaleStringOptions-useGrouping?: boolean-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

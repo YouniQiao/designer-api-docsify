@@ -4,9 +4,7 @@ Declare type OperateButtonV2
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
-
-<!--Device-unnamed-export declare class OperateButtonV2--><!--Device-unnamed-export declare class OperateButtonV2-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,19 +24,19 @@ The constructor of OperateButtonV2.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OperateButtonV2-constructor(options?: OperateButtonV2Options)--><!--Device-OperateButtonV2-constructor(options?: OperateButtonV2Options)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [OperateButtonV2Options](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitemv2-operatebuttonv2options-i.md) | No | The options of OperateButtonV2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [OperateButtonV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2options-i.md) | No |
 
 ## accessibilityDescription
 
@@ -52,13 +50,11 @@ The accessibilityDescription of the button.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OperateButtonV2-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-OperateButtonV2-@Trace  public accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,13 +72,11 @@ The accessibilityLevel of the button.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OperateButtonV2-@Trace  public accessibilityLevel?: string--><!--Device-OperateButtonV2-@Trace  public accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,13 +92,11 @@ The accessibilityText of the button.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OperateButtonV2-@Trace  public accessibilityText?: ResourceStr--><!--Device-OperateButtonV2-@Trace  public accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -120,13 +112,10 @@ The text on the button.
 
 **Since:** 26.0.0
 
-**Decorator:** @Trace
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-OperateButtonV2-@Trace  public text?: ResourceStr--><!--Device-OperateButtonV2-@Trace  public text?: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

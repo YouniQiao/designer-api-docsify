@@ -4,9 +4,7 @@ Creating an Object@enum { number }
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare enum SwipeDirection--><!--Device-unnamed-export declare enum SwipeDirection-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +18,9 @@ Default.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SwipeDirection-None--><!--Device-SwipeDirection-None-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +34,9 @@ Sliding horizontally.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SwipeDirection-Horizontal--><!--Device-SwipeDirection-Horizontal-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,11 +50,9 @@ Sliding vertically
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SwipeDirection-Vertical--><!--Device-SwipeDirection-Vertical-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,11 +66,8 @@ Sliding in all directions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SwipeDirection-All--><!--Device-SwipeDirection-All-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

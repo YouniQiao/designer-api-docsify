@@ -4,7 +4,7 @@ Intercepted record.
 
 **Since:** 14
 
-<!--Device-netFirewall-interface InterceptedRecord--><!--Device-netFirewall-interface InterceptedRecord-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -19,16 +19,16 @@ import { netFirewall } from '@kit.NetworkKit';
 ## appUid
 
 ```TypeScript
-appUid?: int
+appUid?: number
 ```
 
 Application or service ID.
 
-**Type:** int
+**Type:** number
 
 **Since:** 14
 
-<!--Device-InterceptedRecord-appUid?: int--><!--Device-InterceptedRecord-appUid?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -46,7 +46,7 @@ Blocked domain name information.
 
 **Since:** 14
 
-<!--Device-InterceptedRecord-domain?: string--><!--Device-InterceptedRecord-domain?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -64,7 +64,7 @@ Local IP.
 
 **Since:** 14
 
-<!--Device-InterceptedRecord-localIp?: string--><!--Device-InterceptedRecord-localIp?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -73,16 +73,16 @@ Local IP.
 ## localPort
 
 ```TypeScript
-localPort?: int
+localPort?: number
 ```
 
 Local port.
 
-**Type:** int
+**Type:** number
 
 **Since:** 14
 
-<!--Device-InterceptedRecord-localPort?: int--><!--Device-InterceptedRecord-localPort?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -91,16 +91,16 @@ Local port.
 ## protocol
 
 ```TypeScript
-protocol?: int
+protocol?: number
 ```
 
 Transport layer protocol.
 
-**Type:** int
+**Type:** number
 
 **Since:** 14
 
-<!--Device-InterceptedRecord-protocol?: int--><!--Device-InterceptedRecord-protocol?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -118,7 +118,7 @@ Remote IP.
 
 **Since:** 14
 
-<!--Device-InterceptedRecord-remoteIp?: string--><!--Device-InterceptedRecord-remoteIp?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -127,16 +127,16 @@ Remote IP.
 ## remotePort
 
 ```TypeScript
-remotePort?: int
+remotePort?: number
 ```
 
 Remote port.
 
-**Type:** int
+**Type:** number
 
 **Since:** 14
 
-<!--Device-InterceptedRecord-remotePort?: int--><!--Device-InterceptedRecord-remotePort?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -145,18 +145,17 @@ Remote port.
 ## time
 
 ```TypeScript
-time: int
+time: number
 ```
 
 Time stamp.
 
-**Type:** int
+**Type:** number
 
 **Since:** 14
 
-<!--Device-InterceptedRecord-time: int--><!--Device-InterceptedRecord-time: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **System API:** This is a system API.
-

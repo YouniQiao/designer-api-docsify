@@ -16,11 +16,11 @@ Obtains the mask combination for the supported mode list of a given USB port.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 12
 
 **Substitutes:** [getPortSupportModes](arkts-basicservices-usbmanager-getportsupportmodes-f-sys.md)(portId: int)
-
-<!--Device-usbManager-function getSupportedModes(portId: number): PortModeType--><!--Device-usbManager-function getSupportedModes(portId: number): PortModeType-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -28,25 +28,24 @@ Obtains the mask combination for the supported mode list of a given USB port.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| portId | number | Yes | Port number. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| PortModeType | Mask combination for the supported mode list. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PortModeType](arkts-basicservices-usb-portmodetype-e-sys.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified.<br>2.Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
 ```TypeScript
 let ret: number = usbManager.getSupportedModes(0);
 ```
-

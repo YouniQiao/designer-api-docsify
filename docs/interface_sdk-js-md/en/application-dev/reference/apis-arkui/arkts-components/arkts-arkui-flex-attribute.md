@@ -6,7 +6,7 @@ The universal attributes are supported.The universal events are supported.
 
 **Since:** 7
 
-<!--Device-unnamed-declare class FlexAttribute--><!--Device-unnamed-declare class FlexAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -14,4 +14,3 @@ The universal attributes are supported.The universal events are supported.
 
 ```TypeScript
 ```
-

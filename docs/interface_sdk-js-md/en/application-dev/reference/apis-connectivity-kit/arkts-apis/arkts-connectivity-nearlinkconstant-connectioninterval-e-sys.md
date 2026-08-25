@@ -4,7 +4,7 @@ Enumerates the connection intervals. A smaller interval indicates a lower latenc
 
 **Since:** 26.0.0
 
-<!--Device-nearlinkConstant-export enum ConnectionInterval--><!--Device-nearlinkConstant-export enum ConnectionInterval-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -20,9 +20,9 @@ Connection interval of 4.5 ms.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ConnectionInterval-HIGH_SPEED_INTERVAL_4_5 = 0--><!--Device-ConnectionInterval-HIGH_SPEED_INTERVAL_4_5 = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -38,9 +38,9 @@ Connection interval of 4.875 ms.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ConnectionInterval-HIGH_SPEED_INTERVAL_4_875 = 1--><!--Device-ConnectionInterval-HIGH_SPEED_INTERVAL_4_875 = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -56,9 +56,9 @@ Connection interval of 11.25 ms.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ConnectionInterval-MID_SPEED_INTERVAL_11_25 = 2--><!--Device-ConnectionInterval-MID_SPEED_INTERVAL_11_25 = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -74,9 +74,9 @@ Connection interval of 15 ms.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ConnectionInterval-MID_SPEED_INTERVAL_15 = 3--><!--Device-ConnectionInterval-MID_SPEED_INTERVAL_15 = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -92,9 +92,9 @@ Connection interval of 50 ms.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ConnectionInterval-MID_SPEED_INTERVAL_50 = 4--><!--Device-ConnectionInterval-MID_SPEED_INTERVAL_50 = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -110,9 +110,9 @@ Connection interval of 100 ms.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ConnectionInterval-LOW_SPEED_INTERVAL_100 = 5--><!--Device-ConnectionInterval-LOW_SPEED_INTERVAL_100 = 5-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -128,9 +128,9 @@ Connection interval of 150 ms.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ConnectionInterval-LOW_SPEED_INTERVAL_150 = 6--><!--Device-ConnectionInterval-LOW_SPEED_INTERVAL_150 = 6-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -146,9 +146,9 @@ Connection interval of 200 ms.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ConnectionInterval-LOW_SPEED_INTERVAL_200 = 7--><!--Device-ConnectionInterval-LOW_SPEED_INTERVAL_200 = 7-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -164,9 +164,9 @@ Connection interval of 300 ms.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ConnectionInterval-LOW_SPEED_INTERVAL_300 = 8--><!--Device-ConnectionInterval-LOW_SPEED_INTERVAL_300 = 8-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -182,11 +182,10 @@ Connection interval of 500 ms.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ConnectionInterval-LOW_SPEED_INTERVAL_500 = 9--><!--Device-ConnectionInterval-LOW_SPEED_INTERVAL_500 = 9-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
-

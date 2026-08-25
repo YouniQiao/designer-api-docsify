@@ -16,11 +16,11 @@ function getCurrentFunctions(): FunctionType
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 12
 
 **替代接口：** [getDeviceFunctions](arkts-basicservices-usbmanager-getdevicefunctions-f-sys.md)()
-
-<!--Device-usbManager-function getCurrentFunctions(): FunctionType--><!--Device-usbManager-function getCurrentFunctions(): FunctionType-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -28,9 +28,9 @@ function getCurrentFunctions(): FunctionType
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| FunctionType | 当前的USB功能列表的数字组合掩码。如果开发者模式关闭且没有设备接入，则返回undefined，需要对返回值做判空处理。 |
+| 类型 |
+| --- |
+| [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) |
 
 **示例**
 
@@ -38,4 +38,3 @@ function getCurrentFunctions(): FunctionType
 // 获取当前USB功能的数字掩码
 let ret: usbManager.FunctionType = usbManager.getCurrentFunctions();
 ```
-

@@ -4,7 +4,7 @@ Provides keyframe configuration options.
 
 **Since:** 11
 
-<!--Device-unnamed-declare interface KeyframeState--><!--Device-unnamed-declare interface KeyframeState-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -12,6 +12,24 @@ Provides keyframe configuration options.
 
 ```TypeScript
 ```
+
+## event
+
+```TypeScript
+event: () => void
+```
+
+Closure function of the state at the time of the keyframe, that is, the state to be reached at the time of the keyframe.
+
+**Since:** 11
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## curve
 
@@ -28,11 +46,11 @@ Animation curve used by the keyframe.You are advised to specify the curve using 
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyframeState-curve?: Curve | string | ICurve--><!--Device-KeyframeState-curve?: Curve | string | ICurve-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,31 +68,10 @@ Duration of the keyframe animation, in ms.Value range: [0, +∞)
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyframeState-duration: number--><!--Device-KeyframeState-duration: number-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## event
-
-```TypeScript
-event: () => void
-```
-
-Closure function of the state at the time of the keyframe, that is, the state to be reached at the time of the keyframe.
-
-**Type:** () =&gt; void
-
-**Since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-KeyframeState-event: () => void--><!--Device-KeyframeState-event: () => void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

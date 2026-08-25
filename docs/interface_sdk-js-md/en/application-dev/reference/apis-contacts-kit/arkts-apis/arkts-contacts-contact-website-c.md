@@ -4,7 +4,7 @@ Defines a contact's website.
 
 **Since:** 7
 
-<!--Device-contact-class Website--><!--Device-contact-class Website-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -26,9 +26,9 @@ Website that stores the contact information.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Website-website: string--><!--Device-Website-website: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -41,4 +41,3 @@ let website: contact.Website = {
     website: "website"
 };
 ```
-

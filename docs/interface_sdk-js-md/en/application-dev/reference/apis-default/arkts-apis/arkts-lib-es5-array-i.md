@@ -1,8 +1,6 @@
 # Array
 
-**Since:** -1
-
-<!--Device-unnamed-interface Array--><!--Device-unnamed-interface Array-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,20 +15,18 @@ concat(...items: ConcatArray<T>[]): T[]
 
 Combines two or more arrays. This method returns a new array without modifying any existing arrays.
 
-**Since:** -1
-
-<!--Device-Array-concat(...items: ConcatArray<T>[]): T[]--><!--Device-Array-concat(...items: ConcatArray<T>[]): T[]-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| items | ConcatArray&lt;T&gt;[] | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| items | ConcatArray & lt;T & gt;[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## concat
 
 ```TypeScript
@@ -39,20 +35,18 @@ concat(...items: (T | ConcatArray<T>)[]): T[]
 
 Combines two or more arrays. This method returns a new array without modifying any existing arrays.
 
-**Since:** -1
-
-<!--Device-Array-concat(...items: (T | ConcatArray<T>)[]): T[]--><!--Device-Array-concat(...items: (T | ConcatArray<T>)[]): T[]-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| items | (T \| ConcatArray&lt;T&gt;)[] | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| items | (T \| ConcatArray & lt;T & gt;)[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## every
 
 ```TypeScript
@@ -61,21 +55,19 @@ every<S extends T>(predicate: (value: T, index: number, array: T[]) => value is 
 
 Determines whether all the members of an array satisfy the specified test.
 
-**Since:** -1
-
-<!--Device-Array-every<S extends T>(predicate: (value: T, index: number, array: T[]) => value is S, thisArg?: any): this is S[]--><!--Device-Array-every<S extends T>(predicate: (value: T, index: number, array: T[]) => value is S, thisArg?: any): this is S[]-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: number, array: T[]) =&gt; value is S | Yes |  |
-| thisArg | any | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, array: T[]) = & gt; value is S | Yes |
+| thisArg | any | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## every
 
 ```TypeScript
@@ -84,21 +76,19 @@ every(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any
 
 Determines whether all the members of an array satisfy the specified test.
 
-**Since:** -1
-
-<!--Device-Array-every(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): boolean--><!--Device-Array-every(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): boolean-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: number, array: T[]) =&gt; unknown | Yes |  |
-| thisArg | any | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, array: T[]) = & gt; unknown | Yes |
+| thisArg | any | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## filter
 
 ```TypeScript
@@ -107,21 +97,19 @@ filter<S extends T>(predicate: (value: T, index: number, array: T[]) => value is
 
 Returns the elements of an array that meet the condition specified in a callback function.
 
-**Since:** -1
-
-<!--Device-Array-filter<S extends T>(predicate: (value: T, index: number, array: T[]) => value is S, thisArg?: any): S[]--><!--Device-Array-filter<S extends T>(predicate: (value: T, index: number, array: T[]) => value is S, thisArg?: any): S[]-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: number, array: T[]) =&gt; value is S | Yes |  |
-| thisArg | any | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, array: T[]) = & gt; value is S | Yes |
+| thisArg | any | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## filter
 
 ```TypeScript
@@ -130,21 +118,19 @@ filter(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: an
 
 Returns the elements of an array that meet the condition specified in a callback function.
 
-**Since:** -1
-
-<!--Device-Array-filter(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): T[]--><!--Device-Array-filter(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): T[]-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: number, array: T[]) =&gt; unknown | Yes |  |
-| thisArg | any | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, array: T[]) = & gt; unknown | Yes |
+| thisArg | any | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## forEach
 
 ```TypeScript
@@ -153,16 +139,14 @@ forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any
 
 Performs the specified action for each element in an array.
 
-**Since:** -1
-
-<!--Device-Array-forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any): void--><!--Device-Array-forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any): void-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (value: T, index: number, array: T[]) =&gt; void | Yes |  |
-| thisArg | any | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (value: T, index: number, array: T[]) = & gt; void | Yes |
+| thisArg | any | No |
 
 ## indexOf
 
@@ -172,21 +156,19 @@ indexOf(searchElement: T, fromIndex?: number): number
 
 Returns the index of the first occurrence of a value in an array, or -1 if it is not present.
 
-**Since:** -1
-
-<!--Device-Array-indexOf(searchElement: T, fromIndex?: number): number--><!--Device-Array-indexOf(searchElement: T, fromIndex?: number): number-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | T | Yes |  |
-| fromIndex | number | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | T | Yes |
+| fromIndex | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## join
 
 ```TypeScript
@@ -195,20 +177,18 @@ join(separator?: string): string
 
 Adds all the elements of an array into a string, separated by the specified separator string.
 
-**Since:** -1
-
-<!--Device-Array-join(separator?: string): string--><!--Device-Array-join(separator?: string): string-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| separator | string | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| separator | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## lastIndexOf
 
 ```TypeScript
@@ -217,21 +197,19 @@ lastIndexOf(searchElement: T, fromIndex?: number): number
 
 Returns the index of the last occurrence of a specified value in an array, or -1 if it is not present.
 
-**Since:** -1
-
-<!--Device-Array-lastIndexOf(searchElement: T, fromIndex?: number): number--><!--Device-Array-lastIndexOf(searchElement: T, fromIndex?: number): number-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | T | Yes |  |
-| fromIndex | number | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | T | Yes |
+| fromIndex | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## map
 
 ```TypeScript
@@ -240,21 +218,19 @@ map<U>(callbackfn: (value: T, index: number, array: T[]) => U, thisArg?: any): U
 
 Calls a defined callback function on each element of an array, and returns an array that contains the results.
 
-**Since:** -1
-
-<!--Device-Array-map<U>(callbackfn: (value: T, index: number, array: T[]) => U, thisArg?: any): U[]--><!--Device-Array-map<U>(callbackfn: (value: T, index: number, array: T[]) => U, thisArg?: any): U[]-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (value: T, index: number, array: T[]) =&gt; U | Yes |  |
-| thisArg | any | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (value: T, index: number, array: T[]) = & gt; U | Yes |
+| thisArg | any | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## pop
 
 ```TypeScript
@@ -263,14 +239,12 @@ pop(): T | undefined
 
 Removes the last element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
 
-**Since:** -1
-
-<!--Device-Array-pop(): T | undefined--><!--Device-Array-pop(): T | undefined-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## push
 
 ```TypeScript
@@ -279,20 +253,18 @@ push(...items: T[]): number
 
 Appends new elements to the end of an array, and returns the new length of the array.
 
-**Since:** -1
-
-<!--Device-Array-push(...items: T[]): number--><!--Device-Array-push(...items: T[]): number-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| items | T[] | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| items | T[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## reduce
 
 ```TypeScript
@@ -301,41 +273,37 @@ reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, arr
 
 Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
-**Since:** -1
-
-<!--Device-Array-reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T): T--><!--Device-Array-reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T): T-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: T[]) =&gt; T | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: T[]) = & gt; T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## reduce
 
 ```TypeScript
 reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T, initialValue: T): T
 ```
 
-**Since:** -1
-
-<!--Device-Array-reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T, initialValue: T): T--><!--Device-Array-reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T, initialValue: T): T-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: T[]) =&gt; T | Yes |  |
-| initialValue | T | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: T[]) = & gt; T | Yes |
+| initialValue | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## reduce
 
 ```TypeScript
@@ -344,21 +312,19 @@ reduce<U>(callbackfn: (previousValue: U, currentValue: T, currentIndex: number, 
 
 Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
-**Since:** -1
-
-<!--Device-Array-reduce<U>(callbackfn: (previousValue: U, currentValue: T, currentIndex: number, array: T[]) => U, initialValue: U): U--><!--Device-Array-reduce<U>(callbackfn: (previousValue: U, currentValue: T, currentIndex: number, array: T[]) => U, initialValue: U): U-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: T, currentIndex: number, array: T[]) =&gt; U | Yes |  |
-| initialValue | U | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (previousValue: U, currentValue: T, currentIndex: number, array: T[]) = & gt; U | Yes |
+| initialValue | U | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## reduceRight
 
 ```TypeScript
@@ -367,41 +333,37 @@ reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number
 
 Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
-**Since:** -1
-
-<!--Device-Array-reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T): T--><!--Device-Array-reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T): T-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: T[]) =&gt; T | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: T[]) = & gt; T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## reduceRight
 
 ```TypeScript
 reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T, initialValue: T): T
 ```
 
-**Since:** -1
-
-<!--Device-Array-reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T, initialValue: T): T--><!--Device-Array-reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T, initialValue: T): T-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: T[]) =&gt; T | Yes |  |
-| initialValue | T | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: T[]) = & gt; T | Yes |
+| initialValue | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## reduceRight
 
 ```TypeScript
@@ -410,21 +372,19 @@ reduceRight<U>(callbackfn: (previousValue: U, currentValue: T, currentIndex: num
 
 Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
-**Since:** -1
-
-<!--Device-Array-reduceRight<U>(callbackfn: (previousValue: U, currentValue: T, currentIndex: number, array: T[]) => U, initialValue: U): U--><!--Device-Array-reduceRight<U>(callbackfn: (previousValue: U, currentValue: T, currentIndex: number, array: T[]) => U, initialValue: U): U-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: T, currentIndex: number, array: T[]) =&gt; U | Yes |  |
-| initialValue | U | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (previousValue: U, currentValue: T, currentIndex: number, array: T[]) = & gt; U | Yes |
+| initialValue | U | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## reverse
 
 ```TypeScript
@@ -433,14 +393,12 @@ reverse(): T[]
 
 Reverses the elements in an array in place. This method mutates the array and returns a reference to the same array.
 
-**Since:** -1
-
-<!--Device-Array-reverse(): T[]--><!--Device-Array-reverse(): T[]-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## shift
 
 ```TypeScript
@@ -449,14 +407,12 @@ shift(): T | undefined
 
 Removes the first element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
 
-**Since:** -1
-
-<!--Device-Array-shift(): T | undefined--><!--Device-Array-shift(): T | undefined-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## slice
 
 ```TypeScript
@@ -465,21 +421,19 @@ slice(start?: number, end?: number): T[]
 
 Returns a copy of a section of an array. For both start and end, a negative index can be used to indicate an offset from the end of the array. For example, -2 refers to the second to last element of the array.
 
-**Since:** -1
-
-<!--Device-Array-slice(start?: number, end?: number): T[]--><!--Device-Array-slice(start?: number, end?: number): T[]-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | number | No |  |
-| end | number | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | number | No |
+| end | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## some
 
 ```TypeScript
@@ -488,21 +442,19 @@ some(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any)
 
 Determines whether the specified callback function returns true for any element of an array.
 
-**Since:** -1
-
-<!--Device-Array-some(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): boolean--><!--Device-Array-some(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): boolean-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: number, array: T[]) =&gt; unknown | Yes |  |
-| thisArg | any | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, array: T[]) = & gt; unknown | Yes |
+| thisArg | any | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## sort
 
 ```TypeScript
@@ -511,20 +463,18 @@ sort(compareFn?: (a: T, b: T) => number): this
 
 Sorts an array in place. This method mutates the array and returns a reference to the same array.
 
-**Since:** -1
-
-<!--Device-Array-sort(compareFn?: (a: T, b: T) => number): this--><!--Device-Array-sort(compareFn?: (a: T, b: T) => number): this-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| compareFn | (a: T, b: T) =&gt; number | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| compareFn | (a: T, b: T) = & gt; number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## splice
 
 ```TypeScript
@@ -533,21 +483,19 @@ splice(start: number, deleteCount?: number): T[]
 
 Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
 
-**Since:** -1
-
-<!--Device-Array-splice(start: number, deleteCount?: number): T[]--><!--Device-Array-splice(start: number, deleteCount?: number): T[]-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | number | Yes |  |
-| deleteCount | number | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | number | Yes |
+| deleteCount | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## splice
 
 ```TypeScript
@@ -556,22 +504,20 @@ splice(start: number, deleteCount: number, ...items: T[]): T[]
 
 Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
 
-**Since:** -1
-
-<!--Device-Array-splice(start: number, deleteCount: number, ...items: T[]): T[]--><!--Device-Array-splice(start: number, deleteCount: number, ...items: T[]): T[]-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | number | Yes |  |
-| deleteCount | number | Yes |  |
-| items | T[] | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | number | Yes |
+| deleteCount | number | Yes |
+| items | T[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## toLocaleString
 
 ```TypeScript
@@ -580,14 +526,12 @@ toLocaleString(): string
 
 Returns a string representation of an array. The elements are converted to string using their toLocaleString methods.
 
-**Since:** -1
-
-<!--Device-Array-toLocaleString(): string--><!--Device-Array-toLocaleString(): string-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## toString
 
 ```TypeScript
@@ -596,14 +540,12 @@ toString(): string
 
 Returns a string representation of an array.
 
-**Since:** -1
-
-<!--Device-Array-toString(): string--><!--Device-Array-toString(): string-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## unshift
 
 ```TypeScript
@@ -612,20 +554,28 @@ unshift(...items: T[]): number
 
 Inserts new elements at the start of an array, and returns the new length of the array.
 
-**Since:** -1
-
-<!--Device-Array-unshift(...items: T[]): number--><!--Device-Array-unshift(...items: T[]): number-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| items | T[] | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| items | T[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+## [n: number]
+
+```TypeScript
+[n: number]: T
+```
+
+**Type:** T
+
+**ArkTS mode:** 
+
 ## length
 
 ```TypeScript
@@ -636,7 +586,4 @@ Gets or sets the length of the array. This is a number one higher than the highe
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-Array-length: number--><!--Device-Array-length: number-End-->
-
+**ArkTS mode:** 

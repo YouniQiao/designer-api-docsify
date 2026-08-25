@@ -6,9 +6,9 @@ Attributes of MediaCachedImage inherited from ImageAttribute.@extends ImageAttri
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-unnamed-declare class MediaCachedImageAttribute--><!--Device-unnamed-declare class MediaCachedImageAttribute-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,4 +18,3 @@ Attributes of MediaCachedImage inherited from ImageAttribute.@extends ImageAttri
 
 ```TypeScript
 ```
-

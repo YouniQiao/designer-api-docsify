@@ -14,17 +14,17 @@ function getDefaultCellularDataSlotId(callback: AsyncCallback<int>): void
 
 获取默认移动数据的SIM卡，使用callback方式作为异步方法。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-data-function getDefaultCellularDataSlotId(callback: AsyncCallback<int>): void--><!--Device-data-function getDefaultCellularDataSlotId(callback: AsyncCallback<int>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CellularData
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 以callback形式异步返回结果。&lt;br /&gt;- 0：卡槽1。 &lt;br /&gt;- 1：卡槽2。&lt;br /&gt;- 2：esim和天际通场景下，默认移动数 据的slotId为2。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 |
 
 **示例**
 
@@ -61,19 +61,18 @@ function getDefaultCellularDataSlotId(): Promise<int>
 
 获取默认移动数据的SIM卡，使用Promise方式作为异步方法。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-data-function getDefaultCellularDataSlotId(): Promise<int>--><!--Device-data-function getDefaultCellularDataSlotId(): Promise<int>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CellularData
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | 以Promise形式返回获取默认移动数据的SIM卡。&lt;br /&gt;- 0：卡槽1。 &lt;br /&gt;- 1：卡槽2。&lt;br /&gt;- 2：esim和天际通场景下，默认移动数据的 slotId为2。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
 
 **示例**
 
 参见 [getDefaultCellularDataSlotId](#getdefaultcellulardataslotid)
-

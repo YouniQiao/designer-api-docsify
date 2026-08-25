@@ -1,10 +1,10 @@
 # Stream
 
-Provides API for stream operations. Before calling any API of **Stream**, you need to create a **Stream** instance by using fileIo.createStream or fileIo.fdopenStream.
+Provides API for stream operations. Before calling any API of **Stream**, you need to create a **Stream** instance by using [fileIo.createStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatestream) or [fileIo.fdopenStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiofdopenstream).
 
 **Since:** 9
 
-<!--Device-unnamed-declare interface Stream--><!--Device-unnamed-declare interface Stream-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -26,28 +26,28 @@ Closes the file stream. This API uses a promise to return the result.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Stream-close(): Promise<void>--><!--Device-Stream-close(): Promise<void>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900025 | No space left on device |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900025 |
+| 13900041 |
+| 13900042 |
 
 **Examples**
 
@@ -127,28 +127,28 @@ Closes the file stream. This API uses an asynchronous callback to return the res
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Stream-close(callback: AsyncCallback<void>): void--><!--Device-Stream-close(callback: AsyncCallback<void>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked immediately after the stream is closed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900025 | No space left on device |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900025 |
+| 13900041 |
+| 13900042 |
 
 **Examples**
 
@@ -164,22 +164,22 @@ Closes the file stream. This API returns the result synchronously.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Stream-closeSync(): void--><!--Device-Stream-closeSync(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900025 | No space left on device |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900025 |
+| 13900041 |
+| 13900042 |
 
 **Examples**
 
@@ -205,34 +205,34 @@ Flushes the file stream. This API uses a promise to return the result.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Stream-flush(): Promise<void>--><!--Device-Stream-flush(): Promise<void>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900020 | Invalid argument |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900034 | Operation would block |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900020 |
+| 13900024 |
+| 13900025 |
+| 13900034 |
+| 13900041 |
+| 13900042 |
 
 **Examples**
 
@@ -272,34 +272,34 @@ Flushes the file stream. This API uses an asynchronous callback to return the re
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Stream-flush(callback: AsyncCallback<void>): void--><!--Device-Stream-flush(callback: AsyncCallback<void>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900020 | Invalid argument |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900034 | Operation would block |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900020 |
+| 13900024 |
+| 13900025 |
+| 13900034 |
+| 13900041 |
+| 13900042 |
 
 **Examples**
 
@@ -315,28 +315,28 @@ Flushes the file stream. This API returns the result synchronously.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Stream-flushSync(): void--><!--Device-Stream-flushSync(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900020 | Invalid argument |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900034 | Operation would block |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900020 |
+| 13900024 |
+| 13900025 |
+| 13900034 |
+| 13900041 |
+| 13900042 |
 
 **Examples**
 
@@ -360,39 +360,39 @@ Reads data from a stream file. This API uses a promise to return the result.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Stream-read(      buffer: ArrayBuffer,      options?: ReadOptions  ): Promise<number>--><!--Device-Stream-read(      buffer: ArrayBuffer,      options?: ReadOptions  ): Promise<number>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | The options are as follows:<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>**Since:** 11 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buffer | ArrayBuffer | Yes |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;number&gt; | Promise used to return the data read, in bytes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
-| 13900042 | Unknown error |
-| 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900019 |
+| 13900020 |
+| 13900034 |
+| 13900042 |
+| 13900044 |
 
 **Examples**
 
@@ -532,32 +532,32 @@ Reads data from a stream file. This API uses an asynchronous callback to return 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void--><!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. The callback returns the data read, in bytes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buffer | ArrayBuffer | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900019 |
+| 13900020 |
+| 13900034 |
+| 13900042 |
 
 **Examples**
 
@@ -577,33 +577,33 @@ Reads data from a stream file. This API uses an asynchronous callback to return 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Stream-read(      buffer: ArrayBuffer,      options: ReadOptions,      callback: AsyncCallback<number>  ): void--><!--Device-Stream-read(      buffer: ArrayBuffer,      options: ReadOptions,      callback: AsyncCallback<number>  ): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | Yes | The options are as follows:<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>**Since:** 11 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. The callback returns the data read, in bytes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buffer | ArrayBuffer | Yes |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900019 |
+| 13900020 |
+| 13900034 |
+| 13900042 |
 
 **Examples**
 
@@ -622,39 +622,39 @@ Reads data from a stream file. This API returns the result synchronously.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Stream-readSync(      buffer: ArrayBuffer,      options?: ReadOptions  ): number--><!--Device-Stream-readSync(      buffer: ArrayBuffer,      options?: ReadOptions  ): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | The options are as follows:<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br><br>**Since:** 11 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buffer | ArrayBuffer | Yes |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Length of the data read, in bytes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
-| 13900042 | Unknown error |
-| 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900019 |
+| 13900020 |
+| 13900034 |
+| 13900042 |
+| 13900044 |
 
 **Examples**
 
@@ -703,41 +703,41 @@ Writes data to a stream file. This API uses a promise to return the result.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Stream-write(      buffer: ArrayBuffer | string,      options?: WriteOptions  ): Promise<number>--><!--Device-Stream-write(      buffer: ArrayBuffer | string,      options?: WriteOptions  ): Promise<number>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | The options are as follows:<br>- **length** (number): length of the data to write, in bytes. The default value is the buffer length.<br>- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position.<br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buffer | ArrayBuffer \| string | Yes |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;number&gt; | Promise used to return the length of the data written, in bytes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900020 | Invalid argument |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900034 | Operation would block |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900020 |
+| 13900024 |
+| 13900025 |
+| 13900034 |
+| 13900041 |
+| 13900042 |
 
 **Examples**
 
@@ -869,35 +869,35 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. The callback returns the length of the data written, in bytes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buffer | ArrayBuffer \| string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900020 | Invalid argument |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900034 | Operation would block |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900020 |
+| 13900024 |
+| 13900025 |
+| 13900034 |
+| 13900041 |
+| 13900042 |
 
 **Examples**
 
@@ -917,36 +917,36 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Stream-write(      buffer: ArrayBuffer | string,      options: WriteOptions,      callback: AsyncCallback<number>  ): void--><!--Device-Stream-write(      buffer: ArrayBuffer | string,      options: WriteOptions,      callback: AsyncCallback<number>  ): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Yes | The options are as follows:<br>- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position.<br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. The callback returns the length of the data written, in bytes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buffer | ArrayBuffer \| string | Yes |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900020 | Invalid argument |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900034 | Operation would block |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900020 |
+| 13900024 |
+| 13900025 |
+| 13900034 |
+| 13900041 |
+| 13900042 |
 
 **Examples**
 
@@ -965,41 +965,41 @@ Writes data to a stream file. This API returns the result synchronously.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Stream-writeSync(      buffer: ArrayBuffer | string,      options?: WriteOptions  ): number--><!--Device-Stream-writeSync(      buffer: ArrayBuffer | string,      options?: WriteOptions  ): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | The options are as follows:<br>- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position.<br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buffer | ArrayBuffer \| string | Yes |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Length of the data written in the file, in bytes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900020 | Invalid argument |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900034 | Operation would block |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900020 |
+| 13900024 |
+| 13900025 |
+| 13900034 |
+| 13900041 |
+| 13900042 |
 
 **Examples**
 
@@ -1037,4 +1037,3 @@ let writeOption: WriteOptions = {
 let bytesWritten = randomAccessFile.writeSync("hello, world", writeOption);
 randomAccessFile.close();
 ```
-

@@ -10,9 +10,9 @@ Open the file in append mode. New data will be written to the end of the file.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-OpenMode-const APPEND = 0o2000--><!--Device-OpenMode-const APPEND = 0o2000-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -26,9 +26,9 @@ Create a file if the specified file does not exist.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-OpenMode-const CREATE = 0o100--><!--Device-OpenMode-const CREATE = 0o100-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -42,7 +42,7 @@ If **path** does not point to a directory, throw an exception.
 
 **Since:** 9
 
-<!--Device-OpenMode-const DIR = 0o200000--><!--Device-OpenMode-const DIR = 0o200000-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -56,7 +56,7 @@ If **path** points to a symbolic link, throw an exception.
 
 **Since:** 9
 
-<!--Device-OpenMode-const NOFOLLOW = 0o400000--><!--Device-OpenMode-const NOFOLLOW = 0o400000-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -70,7 +70,7 @@ If **path** points to a named pipe (FIFO), block special file, or character spec
 
 **Since:** 9
 
-<!--Device-OpenMode-const NONBLOCK = 0o4000--><!--Device-OpenMode-const NONBLOCK = 0o4000-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -84,9 +84,9 @@ Open the file in read-only mode.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-OpenMode-const READ_ONLY = 0o0--><!--Device-OpenMode-const READ_ONLY = 0o0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -100,9 +100,9 @@ Open the file in read/write mode.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-OpenMode-const READ_WRITE = 0o2--><!--Device-OpenMode-const READ_WRITE = 0o2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -116,7 +116,7 @@ Open the file in synchronous I/O mode.
 
 **Since:** 9
 
-<!--Device-OpenMode-const SYNC = 0o4010000--><!--Device-OpenMode-const SYNC = 0o4010000-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -130,9 +130,9 @@ If the file exists and is opened in write-only or read/write mode, truncate the 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-OpenMode-const TRUNC = 0o1000--><!--Device-OpenMode-const TRUNC = 0o1000-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -146,11 +146,11 @@ UNCACHE IO.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OpenMode-const UNCACHE = 0o10000000000--><!--Device-OpenMode-const UNCACHE = 0o10000000000-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -164,9 +164,8 @@ Open the file in write-only mode.
 
 **Since:** 9
 
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-OpenMode-const WRITE_ONLY = 0o1--><!--Device-OpenMode-const WRITE_ONLY = 0o1-End-->
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
-

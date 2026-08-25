@@ -2,9 +2,9 @@
 
 Describes enroll intelligent voice engine.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-intelligentVoice-interface EnrollIntelligentVoiceEngineDescriptor--><!--Device-intelligentVoice-interface EnrollIntelligentVoiceEngineDescriptor-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -26,11 +26,10 @@ Wakeup phrase.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-EnrollIntelligentVoiceEngineDescriptor-wakeupPhrase: string--><!--Device-EnrollIntelligentVoiceEngineDescriptor-wakeupPhrase: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
-

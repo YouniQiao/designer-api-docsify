@@ -4,7 +4,7 @@ User copy event.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface CopyEvent--><!--Device-unnamed-declare interface CopyEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,10 @@ Prevents the default cut event.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-CopyEvent-preventDefault?: Callback<void>--><!--Device-CopyEvent-preventDefault?: Callback<void>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -1,28 +1,27 @@
 # Callback
 
 ```TypeScript
-type Callback<T, V = void> = (data: T) => V
+export type Callback<T, V = void> = (data: T) => V
 ```
 
-Defines the window callback.
+Defines the callback
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-unnamed-type Callback<T, V = void> = (data: T) => V--><!--Device-unnamed-type Callback<T, V = void> = (data: T) => V-End-->
+**Model restriction:** This API can be used only in the stage model.
 
-**System capability:** SystemCapability.Window.SessionManager
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | T | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| V | - |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| V |

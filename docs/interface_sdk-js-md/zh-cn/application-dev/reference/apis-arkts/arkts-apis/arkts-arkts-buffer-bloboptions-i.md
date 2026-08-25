@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-buffer-interface BlobOptions--><!--Device-buffer-interface BlobOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -26,9 +26,9 @@ endings?: string
 
 **起始版本：** 23
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-BlobOptions-endings?: string--><!--Device-BlobOptions-endings?: string-End-->
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -44,9 +44,8 @@ Blob的内容类型。其目的是让类型传达数据的MIME媒体类型，但
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
-<!--Device-BlobOptions-type?: string--><!--Device-BlobOptions-type?: string-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

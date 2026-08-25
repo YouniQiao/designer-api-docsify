@@ -16,21 +16,21 @@ Register the callback for device capture, casting, or recording status changes.
 
 **起始版本：** 23
 
-<!--Device-display-function onCaptureStatusChange(callback: Callback<boolean>): void--><!--Device-display-function onCaptureStatusChange(callback: Callback<boolean>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | Callback used to return the device capture, casting, or recording status. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 错误码ID |
+| --- |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
 **示例**
 
@@ -42,4 +42,3 @@ let callback: Callback<boolean> = (captureStatus: boolean) => {
 };
 display.onCaptureStatusChange(callback);
 ```
-

@@ -4,7 +4,7 @@ Represents a board style object.
 
 **Since:** 10
 
-<!--Device-unnamed-interface BoardStyle--><!--Device-unnamed-interface BoardStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,10 @@ Rounded corner radius of the board. It cannot be set in percentage.Default value
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-BoardStyle-borderRadius?: Length--><!--Device-BoardStyle-borderRadius?: Length-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

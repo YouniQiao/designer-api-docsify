@@ -8,9 +8,9 @@ const CURSOR_DOWN: int
 
 光标下移。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-inputMethodEngine-const CURSOR_DOWN: int--><!--Device-inputMethodEngine-const CURSOR_DOWN: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -22,9 +22,9 @@ const CURSOR_LEFT: int
 
 光标左移。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-inputMethodEngine-const CURSOR_LEFT: int--><!--Device-inputMethodEngine-const CURSOR_LEFT: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -36,9 +36,9 @@ const CURSOR_RIGHT: int
 
 光标右移。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-inputMethodEngine-const CURSOR_RIGHT: int--><!--Device-inputMethodEngine-const CURSOR_RIGHT: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -50,9 +50,9 @@ const CURSOR_UP: int
 
 光标上移。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-inputMethodEngine-const CURSOR_UP: int--><!--Device-inputMethodEngine-const CURSOR_UP: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -64,9 +64,9 @@ const DISPLAY_MODE_FULL: int
 
 编辑框显示为全屏。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const DISPLAY_MODE_FULL: int--><!--Device-inputMethodEngine-const DISPLAY_MODE_FULL: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -78,9 +78,9 @@ const DISPLAY_MODE_PART: int
 
 编辑框显示为半屏。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const DISPLAY_MODE_PART: int--><!--Device-inputMethodEngine-const DISPLAY_MODE_PART: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -92,9 +92,9 @@ const ENTER_KEY_TYPE_DONE: int
 
 “回车”功能键。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_DONE: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_DONE: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -106,9 +106,9 @@ const ENTER_KEY_TYPE_GO: int
 
 “前往”功能键。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_GO: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_GO: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -120,9 +120,9 @@ const ENTER_KEY_TYPE_NEWLINE: int
 
 “换行”功能键。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEWLINE: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEWLINE: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -134,9 +134,9 @@ const ENTER_KEY_TYPE_NEXT: int
 
 “下一个”功能键。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEXT: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEXT: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -148,9 +148,9 @@ const ENTER_KEY_TYPE_PREVIOUS: int
 
 “前一个”功能键。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_PREVIOUS: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_PREVIOUS: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -162,9 +162,9 @@ const ENTER_KEY_TYPE_SEARCH: int
 
 “搜索”功能键。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEARCH: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEARCH: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -176,9 +176,9 @@ const ENTER_KEY_TYPE_SEND: int
 
 “发送”功能键。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEND: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEND: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -190,9 +190,9 @@ const ENTER_KEY_TYPE_UNSPECIFIED: int
 
 无功能键。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_UNSPECIFIED: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_UNSPECIFIED: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -204,9 +204,9 @@ const FLAG_SELECTING: int
 
 编辑框处于选择状态。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const FLAG_SELECTING: int--><!--Device-inputMethodEngine-const FLAG_SELECTING: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -218,9 +218,9 @@ const FLAG_SINGLE_LINE: int
 
 编辑框为单行。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const FLAG_SINGLE_LINE: int--><!--Device-inputMethodEngine-const FLAG_SINGLE_LINE: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -232,9 +232,9 @@ const OPTION_ASCII: int
 
 允许输入ASCII值。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const OPTION_ASCII: int--><!--Device-inputMethodEngine-const OPTION_ASCII: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -246,9 +246,9 @@ const OPTION_AUTO_CAP_CHARACTERS: int
 
 允许输入字符。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const OPTION_AUTO_CAP_CHARACTERS: int--><!--Device-inputMethodEngine-const OPTION_AUTO_CAP_CHARACTERS: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -260,9 +260,9 @@ const OPTION_AUTO_CAP_SENTENCES: int
 
 允许输入句子。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const OPTION_AUTO_CAP_SENTENCES: int--><!--Device-inputMethodEngine-const OPTION_AUTO_CAP_SENTENCES: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -274,9 +274,9 @@ const OPTION_AUTO_WORDS: int
 
 允许输入单词。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const OPTION_AUTO_WORDS: int--><!--Device-inputMethodEngine-const OPTION_AUTO_WORDS: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -288,9 +288,9 @@ const OPTION_MULTI_LINE: int
 
 允许输入多行。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const OPTION_MULTI_LINE: int--><!--Device-inputMethodEngine-const OPTION_MULTI_LINE: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -302,9 +302,9 @@ const OPTION_NO_FULLSCREEN: int
 
 半屏样式。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const OPTION_NO_FULLSCREEN: int--><!--Device-inputMethodEngine-const OPTION_NO_FULLSCREEN: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -316,9 +316,9 @@ const OPTION_NONE: int
 
 不指定编辑框输入属性。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const OPTION_NONE: int--><!--Device-inputMethodEngine-const OPTION_NONE: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -330,9 +330,9 @@ const PATTERN_DATETIME: int
 
 日期编辑框。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const PATTERN_DATETIME: int--><!--Device-inputMethodEngine-const PATTERN_DATETIME: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -344,9 +344,9 @@ const PATTERN_EMAIL: int
 
 邮件编辑框。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const PATTERN_EMAIL: int--><!--Device-inputMethodEngine-const PATTERN_EMAIL: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -358,11 +358,11 @@ const PATTERN_NEW_PASSWORD: int
 
 新密码编辑框。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-inputMethodEngine-const PATTERN_NEW_PASSWORD: int--><!--Device-inputMethodEngine-const PATTERN_NEW_PASSWORD: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -374,9 +374,9 @@ const PATTERN_NULL: int
 
 无特殊性编辑框。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const PATTERN_NULL: int--><!--Device-inputMethodEngine-const PATTERN_NULL: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -388,9 +388,9 @@ const PATTERN_NUMBER: int
 
 数字编辑框。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const PATTERN_NUMBER: int--><!--Device-inputMethodEngine-const PATTERN_NUMBER: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -402,11 +402,11 @@ const PATTERN_NUMBER_DECIMAL: int
 
 带小数点的数字编辑框。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-inputMethodEngine-const PATTERN_NUMBER_DECIMAL: int--><!--Device-inputMethodEngine-const PATTERN_NUMBER_DECIMAL: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -418,11 +418,11 @@ const PATTERN_ONE_TIME_CODE: int
 
 验证码编辑框。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-inputMethodEngine-const PATTERN_ONE_TIME_CODE: int--><!--Device-inputMethodEngine-const PATTERN_ONE_TIME_CODE: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -434,9 +434,9 @@ const PATTERN_PASSWORD: int
 
 密码编辑框。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const PATTERN_PASSWORD: int--><!--Device-inputMethodEngine-const PATTERN_PASSWORD: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -448,9 +448,9 @@ const PATTERN_PASSWORD_NUMBER: int
 
 数字密码编辑框。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-inputMethodEngine-const PATTERN_PASSWORD_NUMBER: int--><!--Device-inputMethodEngine-const PATTERN_PASSWORD_NUMBER: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -462,9 +462,9 @@ const PATTERN_PASSWORD_SCREEN_LOCK: int
 
 锁屏密码编辑框。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-inputMethodEngine-const PATTERN_PASSWORD_SCREEN_LOCK: int--><!--Device-inputMethodEngine-const PATTERN_PASSWORD_SCREEN_LOCK: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -476,9 +476,9 @@ const PATTERN_PHONE: int
 
 电话号码编辑框。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const PATTERN_PHONE: int--><!--Device-inputMethodEngine-const PATTERN_PHONE: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -490,9 +490,9 @@ const PATTERN_TEXT: int
 
 文本编辑框。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const PATTERN_TEXT: int--><!--Device-inputMethodEngine-const PATTERN_TEXT: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -504,9 +504,9 @@ const PATTERN_URI: int
 
 超链接编辑框。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-inputMethodEngine-const PATTERN_URI: int--><!--Device-inputMethodEngine-const PATTERN_URI: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -518,11 +518,11 @@ const PATTERN_USER_NAME: int
 
 用户名编辑框。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-inputMethodEngine-const PATTERN_USER_NAME: int--><!--Device-inputMethodEngine-const PATTERN_USER_NAME: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -534,9 +534,8 @@ const WINDOW_TYPE_INPUT_METHOD_FLOAT: int
 
 输入法应用窗口风格标识。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-inputMethodEngine-const WINDOW_TYPE_INPUT_METHOD_FLOAT: int--><!--Device-inputMethodEngine-const WINDOW_TYPE_INPUT_METHOD_FLOAT: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
-

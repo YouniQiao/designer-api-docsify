@@ -4,7 +4,7 @@ Defines text join style for SelectionContainer.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export declare enum SelectionContainerTextJoinStyle--><!--Device-unnamed-export declare enum SelectionContainerTextJoinStyle-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Join text with line break (`\n`) between text nodes.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-SelectionContainerTextJoinStyle-NEWLINE = 0--><!--Device-SelectionContainerTextJoinStyle-NEWLINE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ Join text directly without separator between text nodes.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-SelectionContainerTextJoinStyle-DIRECT = 1--><!--Device-SelectionContainerTextJoinStyle-DIRECT = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

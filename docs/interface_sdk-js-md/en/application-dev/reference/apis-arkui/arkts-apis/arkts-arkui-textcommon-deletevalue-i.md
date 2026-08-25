@@ -4,9 +4,7 @@ Provides an interface for deleting value from text.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare interface DeleteValue--><!--Device-unnamed-export declare interface DeleteValue-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +20,9 @@ The location info where the value will be deleted. The value should be an intege
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeleteValue-deleteOffset: int--><!--Device-DeleteValue-deleteOffset: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,11 +38,9 @@ The deleted value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeleteValue-deleteValue: string--><!--Device-DeleteValue-deleteValue: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,11 +56,8 @@ The deleted direction.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DeleteValue-direction: TextDeleteDirection--><!--Device-DeleteValue-direction: TextDeleteDirection-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

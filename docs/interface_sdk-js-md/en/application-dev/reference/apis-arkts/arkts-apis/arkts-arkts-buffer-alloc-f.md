@@ -14,27 +14,27 @@ function alloc(size: int, fill?: string | Buffer | int | double | long, encoding
 
 Creates and initializes a **Buffer** object of the specified length.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-buffer-function alloc(size: int, fill?: string | Buffer | int | double | long, encoding?: BufferEncoding): Buffer--><!--Device-buffer-function alloc(size: int, fill?: string | Buffer | int | double | long, encoding?: BufferEncoding): Buffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | int | Yes | Size of the **Buffer** object to create, in bytes. |
-| fill | string \| Buffer \| int \| double \| long | No | Value to be filled in the buffer. The default value is **0**.<br>**Since:** 9 - 10 |
-| encoding | BufferEncoding | No | Encoding format (valid only when **fill** is a string). The default value is **'utf8'**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| size | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| fill | ArkTS-Dyn: string \| Buffer \| number \| number \| number<br>ArkTS-Sta：string \ | Buffer \| int \| double \| long | No |
+| encoding | BufferEncoding | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Buffer | Buffer** object created. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Buffer |
 
 **Examples**
 
@@ -50,4 +50,3 @@ console.info(JSON.stringify(buf2)); // {"type":"Buffer","data":[97,97,97,97,97]}
 let buf3 = buffer.alloc(11, 'aGVsbG8gd29ybGQ=', 'base64');
 console.info(JSON.stringify(buf3)); // {"type":"Buffer","data":[104,101,108,108,111,32,119,111,114,108,100]}
 ```
-

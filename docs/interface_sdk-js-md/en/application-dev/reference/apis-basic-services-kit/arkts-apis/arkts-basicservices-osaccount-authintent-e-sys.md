@@ -2,9 +2,9 @@
 
 Enumerates the authentication intents.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-osAccount-enum AuthIntent--><!--Device-osAccount-enum AuthIntent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -18,9 +18,9 @@ UNLOCK = 1
 
 Unlock.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AuthIntent-UNLOCK = 1--><!--Device-AuthIntent-UNLOCK = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -34,9 +34,9 @@ SILENT_AUTH = 2
 
 Silent authentication.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-AuthIntent-SILENT_AUTH = 2--><!--Device-AuthIntent-SILENT_AUTH = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -50,9 +50,9 @@ QUESTION_AUTH = 3
 
 Security question authentication.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-AuthIntent-QUESTION_AUTH = 3--><!--Device-AuthIntent-QUESTION_AUTH = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -66,11 +66,10 @@ ABANDONED_PIN_AUTH = 4
 
 Abandoned PIN authentication. After a user changes the lock screen password, the old PIN is abandoned. If a user forgets the current password, the user can reset the lock screen password after passing the authentication with the abandoned PIN.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-AuthIntent-ABANDONED_PIN_AUTH = 4--><!--Device-AuthIntent-ABANDONED_PIN_AUTH = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-

@@ -4,9 +4,7 @@ Enumerates security component types.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export declare enum SecurityComponentRoleType--><!--Device-unnamed-export declare enum SecurityComponentRoleType-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +18,9 @@ None role type: The screen reader will not broadcast the component type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SecurityComponentRoleType-ROLE_NONE = 0--><!--Device-SecurityComponentRoleType-ROLE_NONE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +34,8 @@ Button component type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SecurityComponentRoleType-BUTTON = 1--><!--Device-SecurityComponentRoleType-BUTTON = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

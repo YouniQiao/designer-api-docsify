@@ -4,11 +4,11 @@ Provides the information about the target package and ability to start automatic
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md)
-
-<!--Device-reminderAgent-interface MaxScreenWantAgent--><!--Device-reminderAgent-interface MaxScreenWantAgent-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -30,11 +30,11 @@ Name of the ability that is automatically started when the reminder arrives and 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** abilityName
-
-<!--Device-MaxScreenWantAgent-abilityName: string--><!--Device-MaxScreenWantAgent-abilityName: string-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -50,11 +50,10 @@ Name of the HAP that is automatically started when the reminder arrives and the 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** pkgName
 
-<!--Device-MaxScreenWantAgent-pkgName: string--><!--Device-MaxScreenWantAgent-pkgName: string-End-->
-
 **System capability:** SystemCapability.Notification.ReminderAgent
-

@@ -2,9 +2,9 @@
 
 Describes the parameters in the callback of the action event of the PiP controller.
 
-**Since:** 26.0.0
+**Since:** 12
 
-<!--Device-PiPWindow-interface ControlEventParam--><!--Device-PiPWindow-interface ControlEventParam-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -24,11 +24,11 @@ Type of the action event of the PiP controller. The application performs process
 
 **Type:** [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md)
 
-**Since:** 26.0.0
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-ControlEventParam-controlType: PiPControlType--><!--Device-ControlEventParam-controlType: PiPControlType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -42,11 +42,10 @@ Status of a component that can be switched. For example, for a microphone on/off
 
 **Type:** [PiPControlStatus](arkts-arkui-pipwindow-pipcontrolstatus-e.md)
 
-**Since:** 26.0.0
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-ControlEventParam-status?: PiPControlStatus--><!--Device-ControlEventParam-status?: PiPControlStatus-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Window.SessionManager
-

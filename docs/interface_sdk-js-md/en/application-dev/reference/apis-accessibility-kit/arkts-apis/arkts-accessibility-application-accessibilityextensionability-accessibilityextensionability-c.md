@@ -3,9 +3,9 @@
 AccessibilityExtensionAbility provides accessibility extension capabilities based on the ExtensionAbility framework, including connecting to and disconnecting from accessibility services, processing accessibility events, and processing accessibility key events.  
 **Lifecycle flow:** onAccessibilityConnect (connection callback, used for initialization) → onAccessibilityEventInfo/onAccessibilityKeyEvent (processing accessibility events and key events) → onAccessibilityDisconnect (disconnection callback, used for resource reclamation).
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-declare class AccessibilityExtensionAbility--><!--Device-unnamed-declare class AccessibilityExtensionAbility-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -26,17 +26,17 @@ Called when an accessibility event occurs. In this API, you can implement event-
 
 **Since:** 9
 
-**Deprecated since:** 12
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-AccessibilityExtensionAbility-onAccessibilityEvent(event: AccessibilityEvent): void--><!--Device-AccessibilityExtensionAbility-onAccessibilityEvent(event: AccessibilityEvent): void-End-->
+**Deprecated since:** 12
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | [AccessibilityEvent](arkts-accessibility-application-accessibilityextensionability-accessibilityevent-i.md) | Yes | Accessibility event information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | [AccessibilityEvent](arkts-accessibility-application-accessibilityextensionability-accessibilityevent-i.md) | Yes |
 
 **Examples**
 
@@ -63,9 +63,9 @@ Called when the **AccessibilityExtensionAbility** is enabled and connected to th
 
 **Since:** 9
 
-**Deprecated since:** 12
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-AccessibilityExtensionAbility-onConnect(): void--><!--Device-AccessibilityExtensionAbility-onConnect(): void-End-->
+**Deprecated since:** 12
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -91,9 +91,9 @@ Called when the **AccessibilityExtensionAbility** is disabled and disconnected f
 
 **Since:** 9
 
-**Deprecated since:** 12
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-AccessibilityExtensionAbility-onDisconnect(): void--><!--Device-AccessibilityExtensionAbility-onDisconnect(): void-End-->
+**Deprecated since:** 12
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -119,23 +119,23 @@ Called when a physical key is pressed. In this API, you can determine whether to
 
 **Since:** 9
 
-**Deprecated since:** 12
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-AccessibilityExtensionAbility-onKeyEvent(keyEvent: KeyEvent): boolean--><!--Device-AccessibilityExtensionAbility-onKeyEvent(keyEvent: KeyEvent): boolean-End-->
+**Deprecated since:** 12
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| keyEvent | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | Key event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [keyEvent](../../apis-input-kit/arkts-apis/arkts-input-inputeventclient-keyeventdata-i-sys.md) | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the event is consumed and will not be transferred; <br>returns **false** if the event is not consumed and will be transferred. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -165,9 +165,8 @@ Indicates the context of the accessibility extension.
 
 **Type:** [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-AccessibilityExtensionAbility-context: AccessibilityExtensionContext--><!--Device-AccessibilityExtensionAbility-context: AccessibilityExtensionContext-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
-

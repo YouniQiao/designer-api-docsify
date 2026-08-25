@@ -20,37 +20,36 @@ function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8A
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-huks-function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8Array): Promise<HuksReturnResult>--><!--Device-huks-function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8Array): Promise<HuksReturnResult>-End-->
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| keyAlias | string | 是 | 密钥别名，指定导入密钥的密钥别名。 |
-| params | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | 用于指定导入密钥时的加密类型。 |
-| wrappedKey | Uint8Array | 是 | 加密导出密钥的密文。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| keyAlias | string | 是 |
+| params | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 |
+| [wrappedKey](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-kemencapresult-i.md) | Uint8Array | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | Promise对象，返回调用接口的结果。 |
+| 类型 |
+| --- |
+| Promise&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**适用版本：** 26.0.0+ |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | api is not supported |
-| [12000004](../errorcode-huks.md#12000004-文件错误) | operating file failed |
-| [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed |
-| [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
-| [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
-| [12000015](../errorcode-huks.md#12000015-调用其他系统服务失败) | Failed to obtain the security information via UserIAM |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the input parameter is invalid |
-| [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available<br>**适用版本：** 26.0.0+ |
-
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [12000004](../errorcode-huks.md#12000004-文件错误) |
+| [12000005](../errorcode-huks.md#12000005-进程通信错误) |
+| [12000012](../errorcode-huks.md#12000012-外部错误) |
+| [12000014](../errorcode-huks.md#12000014-内存不足) |
+| [12000015](../errorcode-huks.md#12000015-调用其他系统服务失败) |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) |
+| [12000026](../errorcode-huks.md#12000026-安全元件故障) |

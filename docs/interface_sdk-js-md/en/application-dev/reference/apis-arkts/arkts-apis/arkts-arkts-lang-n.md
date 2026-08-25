@@ -4,7 +4,7 @@ ArkTS language
 
 **Since:** 12
 
-<!--Device-unnamed-declare namespace lang--><!--Device-unnamed-declare namespace lang-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -18,7 +18,6 @@ import { lang, Retention, RetentionPolicy } from '@kit.ArkTS';
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ISendable](arkts-arkts-lang-isendable-i.md) | Base interface for all Sendable classes/interfaces. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ISendable](arkts-arkts-lang-isendable-i.md) |

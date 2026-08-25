@@ -4,11 +4,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [FormStateInfo](arkts-form-forminfo-formstateinfo-i.md)
-
-<!--Device-formInfo-interface FormStateInfo--><!--Device-formInfo-interface FormStateInfo-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -29,11 +29,11 @@ formState: FormState
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [formState](arkts-form-forminfo-formstateinfo-i.md#formstate)
-
-<!--Device-FormStateInfo-formState: FormState--><!--Device-FormStateInfo-formState: FormState-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -49,11 +49,10 @@ want: Want
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [want](arkts-form-forminfo-formstateinfo-i.md#want)
 
-<!--Device-FormStateInfo-want: Want--><!--Device-FormStateInfo-want: Want-End-->
-
 **系统能力：** SystemCapability.Ability.Form
-

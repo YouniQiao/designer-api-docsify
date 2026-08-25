@@ -9,7 +9,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-drawing-class PointUtils--><!--Device-drawing-class PointUtils-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -29,20 +29,26 @@ static negate(point: common2D.Point): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-PointUtils-static negate(point: common2D.Point): void--><!--Device-PointUtils-static negate(point: common2D.Point): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| point | common2D.Point | 是 | 要取反的点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| point | common2D.Point | 是 |
 
 ## offset
 
+ArkTS-Dyn:
+```TypeScript
+static offset(point: common2D.Point, dx: number, dy: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 static offset(point: common2D.Point, dx: double, dy: double): void
 ```
@@ -51,19 +57,19 @@ static offset(point: common2D.Point, dx: double, dy: double): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-PointUtils-static offset(point: common2D.Point, dx: double, dy: double): void--><!--Device-PointUtils-static offset(point: common2D.Point, dx: double, dy: double): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| point | common2D.Point | 是 | 要偏移的点。 |
-| dx | double | 是 | x轴方向平移距离，正数表示往x轴正方向平移，负数表示往x轴负方向平移，该参数为浮点数。单位为物理像素px。 |
-| dy | double | 是 | y轴方向平移距离，正数表示往y轴正方向平移，负数表示往y轴负方向平移，该参数为浮点数。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| point | common2D.Point | 是 |
+| dx | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| dy | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **示例**
 
@@ -129,4 +135,3 @@ import { drawing } from '@kit.ArkGraphics2D';
 let roundRect : drawing.RoundRect = new drawing.RoundRect({ left: 0, top: 0, right: 300, bottom: 300 }, 50, 50);
 roundRect.offset(100, 100);
 ```
-

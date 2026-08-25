@@ -4,7 +4,7 @@ Sliding effect
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum EdgeEffect--><!--Device-unnamed-declare enum EdgeEffect-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Elastic physical action, sliding to the edge can continue to slide for a distanc
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-EdgeEffect-Spring--><!--Device-EdgeEffect-Spring-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Fade.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-EdgeEffect-Fade--><!--Device-EdgeEffect-Fade-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ Sliding to the edge has no effect.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-EdgeEffect-None--><!--Device-EdgeEffect-None-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

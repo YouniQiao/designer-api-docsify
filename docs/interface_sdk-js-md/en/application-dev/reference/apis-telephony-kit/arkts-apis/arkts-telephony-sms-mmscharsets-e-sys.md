@@ -2,9 +2,9 @@
 
 Enumerates MMS character sets.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sms-export enum MmsCharSets--><!--Device-sms-export enum MmsCharSets-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -18,9 +18,9 @@ BIG5 = 0X07EA
 
 BIG5 format.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsCharSets-BIG5 = 0X07EA--><!--Device-MmsCharSets-BIG5 = 0X07EA-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -34,9 +34,9 @@ ISO_10646_UCS_2 = 0X03E8
 
 ISO_10646_UCS_2 format.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsCharSets-ISO_10646_UCS_2 = 0X03E8--><!--Device-MmsCharSets-ISO_10646_UCS_2 = 0X03E8-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -50,9 +50,9 @@ ISO_8859_1 = 0X04
 
 ISO_8859_1 format.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsCharSets-ISO_8859_1 = 0X04--><!--Device-MmsCharSets-ISO_8859_1 = 0X04-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -66,9 +66,9 @@ ISO_8859_2 = 0X05
 
 ISO_8859_2 format.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsCharSets-ISO_8859_2 = 0X05--><!--Device-MmsCharSets-ISO_8859_2 = 0X05-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -82,9 +82,9 @@ ISO_8859_3 = 0X06
 
 ISO_8859_3 format.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsCharSets-ISO_8859_3 = 0X06--><!--Device-MmsCharSets-ISO_8859_3 = 0X06-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -98,9 +98,9 @@ ISO_8859_4 = 0X07
 
 ISO_8859_4 format.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsCharSets-ISO_8859_4 = 0X07--><!--Device-MmsCharSets-ISO_8859_4 = 0X07-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -114,9 +114,9 @@ ISO_8859_5 = 0X08
 
 ISO_8859_5 format.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsCharSets-ISO_8859_5 = 0X08--><!--Device-MmsCharSets-ISO_8859_5 = 0X08-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -130,9 +130,9 @@ ISO_8859_6 = 0X09
 
 ISO_8859_6 format.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsCharSets-ISO_8859_6 = 0X09--><!--Device-MmsCharSets-ISO_8859_6 = 0X09-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -146,9 +146,9 @@ ISO_8859_7 = 0X0a
 
 ISO_8859_7 format.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsCharSets-ISO_8859_7 = 0X0a--><!--Device-MmsCharSets-ISO_8859_7 = 0X0a-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -162,9 +162,9 @@ ISO_8859_8 = 0X0b
 
 ISO_8859_8 format.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsCharSets-ISO_8859_8 = 0X0b--><!--Device-MmsCharSets-ISO_8859_8 = 0X0b-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -178,9 +178,9 @@ ISO_8859_9 = 0X0c
 
 ISO_8859_9 format.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsCharSets-ISO_8859_9 = 0X0c--><!--Device-MmsCharSets-ISO_8859_9 = 0X0c-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -194,9 +194,9 @@ SHIFT_JIS = 0X11
 
 SHIFT_JIS format.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsCharSets-SHIFT_JIS = 0X11--><!--Device-MmsCharSets-SHIFT_JIS = 0X11-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -210,9 +210,9 @@ US_ASCII = 0X03
 
 US_ASCII format.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsCharSets-US_ASCII = 0X03--><!--Device-MmsCharSets-US_ASCII = 0X03-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -226,11 +226,10 @@ UTF_8 = 0X6A
 
 UTF_8 format.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsCharSets-UTF_8 = 0X6A--><!--Device-MmsCharSets-UTF_8 = 0X6A-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
-

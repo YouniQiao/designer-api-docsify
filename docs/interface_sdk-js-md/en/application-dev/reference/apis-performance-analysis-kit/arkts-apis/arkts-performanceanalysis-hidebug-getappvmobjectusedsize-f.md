@@ -14,17 +14,17 @@ function getAppVMObjectUsedSize(): bigint
 
 Obtains the VM memory size occupied by ArkTS objects.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-hidebug-function getAppVMObjectUsedSize(): bigint--><!--Device-hidebug-function getAppVMObjectUsedSize(): bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint | VM memory size occupied by ArkTS objects, in KB. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| bigint |
 
 **Examples**
 
@@ -33,4 +33,3 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 console.info(`getAppVMObjectUsedSize = ${hidebug.getAppVMObjectUsedSize()}`);
 ```
-

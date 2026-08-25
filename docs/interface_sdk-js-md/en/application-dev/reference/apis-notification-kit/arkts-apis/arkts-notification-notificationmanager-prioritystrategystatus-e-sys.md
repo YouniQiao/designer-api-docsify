@@ -4,7 +4,7 @@ Describes the application notification strategy.
 
 **Since:** 23
 
-<!--Device-notificationManager-export enum PriorityStrategyStatus--><!--Device-notificationManager-export enum PriorityStrategyStatus-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -20,9 +20,9 @@ Default priority strategy.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PriorityStrategyStatus-STATUS_SYSTEM_DEFAULT = 1 << 0--><!--Device-PriorityStrategyStatus-STATUS_SYSTEM_DEFAULT = 1 << 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -38,9 +38,9 @@ Only system rule.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PriorityStrategyStatus-STATUS_SYSTEM_RULE = 1 << 1--><!--Device-PriorityStrategyStatus-STATUS_SYSTEM_RULE = 1 << 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -56,9 +56,9 @@ Only intelligent recognition.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PriorityStrategyStatus-STATUS_INTELLIGENT = 1 << 2--><!--Device-PriorityStrategyStatus-STATUS_INTELLIGENT = 1 << 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -74,9 +74,9 @@ Only user-defined.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PriorityStrategyStatus-STATUS_USER_DEFINED = 1 << 3--><!--Device-PriorityStrategyStatus-STATUS_USER_DEFINED = 1 << 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -92,9 +92,9 @@ Only application-defined.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PriorityStrategyStatus-STATUS_APPLICATION_DEFINED = 1 << 4--><!--Device-PriorityStrategyStatus-STATUS_APPLICATION_DEFINED = 1 << 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -110,11 +110,10 @@ All.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PriorityStrategyStatus-STATUS_ALL_PRIORITY = 1 << 5--><!--Device-PriorityStrategyStatus-STATUS_ALL_PRIORITY = 1 << 5-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

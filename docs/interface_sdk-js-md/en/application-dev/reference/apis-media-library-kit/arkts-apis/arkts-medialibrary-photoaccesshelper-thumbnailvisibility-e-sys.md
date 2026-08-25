@@ -2,9 +2,9 @@
 
 Enumerates the visibility statuses of thumbnails.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-photoAccessHelper-enum ThumbnailVisibility--><!--Device-photoAccessHelper-enum ThumbnailVisibility-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ INVISIBLE = 0
 
 Unable to access thumbnail
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-ThumbnailVisibility-INVISIBLE = 0--><!--Device-ThumbnailVisibility-INVISIBLE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,11 +34,10 @@ VISIBLE = 1
 
 able to access thumbnail
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-ThumbnailVisibility-VISIBLE = 1--><!--Device-ThumbnailVisibility-VISIBLE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

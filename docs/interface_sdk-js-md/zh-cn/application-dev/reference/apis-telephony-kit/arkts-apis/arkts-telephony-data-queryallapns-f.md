@@ -14,25 +14,25 @@ function queryAllApns(): Promise<Array<ApnInfo>>
 
 异步获取默认移动数据的SIM卡的APN（access point name，接入点名称）信息。
 
-**起始版本：** 23
+**起始版本：** 16
+
+**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_APN_SETTING
-
-<!--Device-data-function queryAllApns(): Promise<Array<ApnInfo>>--><!--Device-data-function queryAllApns(): Promise<Array<ApnInfo>>-End-->
 
 **系统能力：** SystemCapability.Telephony.CellularData
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[ApnInfo](arkts-telephony-data-apninfo-i.md)&gt;&gt; | Promise对象，返回默认移动数据的SIM卡的APN信息列表。 |
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;[ApnInfo](arkts-telephony-data-apninfo-i.md)&gt;&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -46,4 +46,3 @@ data.queryAllApns().then((apnInfos: Array<data.ApnInfo>) => {
     console.error(`queryAllApns failed. code: ${err.code}, message: ${err.message}`);
 });
 ```
-

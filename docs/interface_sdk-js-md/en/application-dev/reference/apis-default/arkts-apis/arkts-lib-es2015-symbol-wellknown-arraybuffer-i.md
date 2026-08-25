@@ -1,8 +1,6 @@
 # ArrayBuffer
 
-**Since:** -1
-
-<!--Device-unnamed-interface ArrayBuffer--><!--Device-unnamed-interface ArrayBuffer-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,7 +15,4 @@ readonly [Symbol.toStringTag]: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ArrayBuffer-readonly [Symbol.toStringTag]: string--><!--Device-ArrayBuffer-readonly [Symbol.toStringTag]: string-End-->
-
+**ArkTS mode:** 

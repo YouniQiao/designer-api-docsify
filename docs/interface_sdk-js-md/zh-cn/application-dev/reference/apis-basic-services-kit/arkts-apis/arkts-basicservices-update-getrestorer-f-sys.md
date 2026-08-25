@@ -19,9 +19,9 @@ function getRestorer(): Restorer
 **约束和限制**：  
 - 恢复出厂操作不可逆，将永久删除用户数据，需提前提醒用户备份重要数据。 - 调用factoryReset，deepFactoryReset和getDeepFactoryResetInfo接口时，需要权限ohos.permission.FACTORY_RESET。 - 调用forceFactoryReset接口时，需要权限ohos.permission.FORCE_FACTORY_RESET。 - 操作过程中设备会自动重启，应用需做好状态保存。 - 深度恢复出厂(deepFactoryReset)耗时较长（根据设备存储容量，可能需要1-4小时），必须确保设备电量充足(建议电量&gt;50%)。 - 建议在用户通过对话框或界面点击确认按钮后，再执行恢复出厂操作。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-update-function getRestorer(): Restorer--><!--Device-update-function getRestorer(): Restorer-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -29,15 +29,15 @@ function getRestorer(): Restorer
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Restorer](arkts-basicservices-update-restorer-i-sys.md) | 用于执行恢复出厂设置相关操作的工具类对象。 |
+| 类型 |
+| --- |
+| [Restorer](arkts-basicservices-update-restorer-i-sys.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -48,4 +48,3 @@ try {
   console.error(`Fail to get restorer: ${error}`);
 }
 ```
-

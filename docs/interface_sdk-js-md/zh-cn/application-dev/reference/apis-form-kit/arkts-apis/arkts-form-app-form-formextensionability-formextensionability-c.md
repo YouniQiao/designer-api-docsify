@@ -2,9 +2,9 @@
 
 Widget extension class. It provides APIs to notify the widget provider that a widget is being created or the widget visibility status is being changed.
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-declare class FormExtensionAbility--><!--Device-unnamed-declare class FormExtensionAbility-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -24,25 +24,25 @@ Called to notify the widget provider that the widget host is requesting the widg
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FormExtensionAbility-onAcquireFormState?(want: Want): formInfo.FormState--><!--Device-FormExtensionAbility-onAcquireFormState?(want: Want): formInfo.FormState-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Description of the widget state, including the bundle name, ability name, module name, and widget name. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| formInfo.FormState | Enumerated values of the current widget status. |
+| 类型 |
+| --- |
+| formInfo.FormState |
 
 **示例**
 
@@ -58,6 +58,28 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 }
 ```
 
+## onAcquireFormState
+
+```TypeScript
+onAcquireFormState?: OnAcquireFormStateFn
+```
+
+Called to return a FormState object.<p>You must override this callback if you want this ability to return the actual form state. Otherwise, this method returns DEFAULT by default.</p>
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.Ability.Form
+
+**示例**
+
+参见 [onAcquireFormState](#onacquireformstate)
+
 ## onAddForm
 
 ```TypeScript
@@ -66,27 +88,27 @@ onAddForm(want: Want): formBindingData.FormBindingData
 
 Called to notify the widget provider that a widget is being created.
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-FormExtensionAbility-onAddForm(want: Want): formBindingData.FormBindingData--><!--Device-FormExtensionAbility-onAddForm(want: Want): formBindingData.FormBindingData-End-->
-
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Want information of the widget. You can set the **parameters** field to one or more values enumerated in [widget parameters](arkts-form-forminfo-formparam-e.md), such as widget ID, widget name, and widget style. The information must be managed as persistent data to facilitate subsequent widget update and deletion. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| formBindingData.FormBindingData | A **formBindingData.FormBindingData** object containing the data to be displayed on the widget. |
+| 类型 |
+| --- |
+| formBindingData.FormBindingData |
 
 **示例**
 
@@ -136,21 +158,21 @@ onCastToNormalForm(formId: string): void
 
 Called to notify the widget provider that a temporary widget has been converted to a normal one. Temporary widgets and normal widgets are concepts of the widget host. Temporary widgets have a brief existence, appearing following particular events or user interactions and vanishing automatically upon task completion. Normal widgets maintain a lasting presence, continuing to exist unless explicitly removed or altered by the user. Function widgets developed in normal cases are normal widgets. Currently, the widget host does not use temporary widgets.
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-FormExtensionAbility-onCastToNormalForm(formId: string): void--><!--Device-FormExtensionAbility-onCastToNormalForm(formId: string): void-End-->
-
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formId | string | 是 | ID of the widget that requests to be converted to a normal one. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formId | string | 是 |
 
 **示例**
 
@@ -184,25 +206,31 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 
 ## onChangeFormVisibility
 
+ArkTS-Dyn:
+```TypeScript
+onChangeFormVisibility(newStatus: Record<string, number>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 onChangeFormVisibility(newStatus: Record<string, int>): void
 ```
 
 Called to notify the widget provider that the widget visibility status is being changed. This API is valid only for system applications when **formVisibleNotify** is set to **true**.
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-FormExtensionAbility-onChangeFormVisibility(newStatus: Record<string, int>): void--><!--Device-FormExtensionAbility-onChangeFormVisibility(newStatus: Record<string, int>): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| newStatus | Record&lt;string, int&gt; | 是 | ID and visibility status of the widget to be changed.<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [newStatus](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-updatesimmessageoptions-i-sys.md) | ArkTS-Dyn: Record & lt;string, number & gt;<br>ArkTS-Sta：Record & lt;string, int & gt; | 是 |
 
 **示例**
 
@@ -264,21 +292,21 @@ onConfigurationUpdate(newConfig: Configuration): void
 
 Called when system configuration items change. The **onConfigurationUpdate** callback is triggered only when the FormExtensionAbility is alive. <!--Del-->Since API version 20, for system applications, the **onConfigurationUpdate** callback within the FormExtensionAbility will be triggered when the system language changes.<!--DelEnd-->
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-FormExtensionAbility-onConfigurationUpdate(newConfig: Configuration): void--><!--Device-FormExtensionAbility-onConfigurationUpdate(newConfig: Configuration): void-End-->
-
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| newConfig | [Configuration](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md) | 是 | New configuration. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| newConfig | [Configuration](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md) | 是 |
 
 **示例**
 
@@ -322,22 +350,22 @@ onFormEvent(formId: string, message: string): void
 
 Called to instruct the widget provider to process the widget event.
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-FormExtensionAbility-onFormEvent(formId: string, message: string): void--><!--Device-FormExtensionAbility-onFormEvent(formId: string, message: string): void-End-->
-
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formId | string | 是 | ID of the widget that requests the event. |
-| message | string | 是 | Event message. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formId | string | 是 |
+| message | string | 是 |
 
 **示例**
 
@@ -375,22 +403,22 @@ onFormLocationChanged(formId: string, newFormLocation: formInfo.FormLocation): v
 
 Called when the widget location changes.
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FormExtensionAbility-onFormLocationChanged(formId: string, newFormLocation: formInfo.FormLocation): void--><!--Device-FormExtensionAbility-onFormLocationChanged(formId: string, newFormLocation: formInfo.FormLocation): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formId | string | 是 | Widget ID. |
-| newFormLocation | formInfo.FormLocation | 是 | Enumerated value of the latest widget location. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formId | string | 是 |
+| newFormLocation | formInfo.FormLocation | 是 |
 
 **示例**
 
@@ -444,21 +472,21 @@ onRemoveForm(formId: string): void
 
 Called to notify the widget provider that a widget is being destroyed.
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-FormExtensionAbility-onRemoveForm(formId: string): void--><!--Device-FormExtensionAbility-onRemoveForm(formId: string): void-End-->
-
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formId | string | 是 | ID of the widget to be destroyed. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formId | string | 是 |
 
 **示例**
 
@@ -496,23 +524,23 @@ onSizeChanged(formId: string, newDimension: formInfo.FormDimension, newRect: for
 
 Called when the widget size changes.
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FormExtensionAbility-onSizeChanged(formId: string, newDimension: formInfo.FormDimension, newRect: formInfo.Rect): void--><!--Device-FormExtensionAbility-onSizeChanged(formId: string, newDimension: formInfo.FormDimension, newRect: formInfo.Rect): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formId | string | 是 | Widget ID. |
-| newDimension | formInfo.FormDimension | 是 | Widget dimension. For example, **Dimension_1_2** indicates a 1 x 2 widget. |
-| newRect | formInfo.Rect | 是 | Widget position information, including the X and Y coordinates of the widget's top- left corner, as well as its width and height. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formId | string | 是 |
+| newDimension | formInfo.FormDimension | 是 |
+| newRect | formInfo.Rect | 是 |
 
 **示例**
 
@@ -552,11 +580,11 @@ Called when the widget process of the widget provider exits.
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FormExtensionAbility-onStop?(): void--><!--Device-FormExtensionAbility-onStop?(): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -572,6 +600,28 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 }
 ```
 
+## onStop
+
+```TypeScript
+onStop?: OnStopFn
+```
+
+Called when this ability breaks the last link, notifying the provider that the provider process is about to stop.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.Ability.Form
+
+**示例**
+
+参见 [onStop](#onstop)
+
 ## onUpdateForm
 
 ```TypeScript
@@ -580,22 +630,22 @@ onUpdateForm(formId: string, wantParams?: Record<string, Object>): void
 
 Called to notify the widget provider that a widget is being updated, with update parameters carried. After obtaining the latest data, your application should call [updateForm](arkts-form-formprovider-updateform-f.md) of **formProvider** to update the widget data.
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-FormExtensionAbility-onUpdateForm(formId: string, wantParams?: Record<string, Object>): void--><!--Device-FormExtensionAbility-onUpdateForm(formId: string, wantParams?: Record<string, Object>): void-End-->
-
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formId | string | 是 | ID of the widget that requests to be updated. |
-| wantParams | Record&lt;string, Object&gt; | 否 | Parameters used for the update. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formId | string | 是 |
+| wantParams | Record & lt;string, Object & gt; | 否 |
 
 **示例**
 
@@ -658,53 +708,12 @@ Context of the FormExtensionAbility. This context is inherited from [ExtensionCo
 
 **类型：** [FormExtensionContext](arkts-form-formextensioncontext-c-sys.md)
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-FormExtensionAbility-context: FormExtensionContext--><!--Device-FormExtensionAbility-context: FormExtensionContext-End-->
-
 **系统能力：** SystemCapability.Ability.Form
-
-## onAcquireFormState
-
-```TypeScript
-onAcquireFormState?: OnAcquireFormStateFn
-```
-
-Called to return a FormState object.<p>You must override this callback if you want this ability to return the actual form state. Otherwise, this method returns DEFAULT by default.</p>
-
-**类型：** [OnAcquireFormStateFn](arkts-form-onacquireformstatefn-t.md)
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FormExtensionAbility-onAcquireFormState?: OnAcquireFormStateFn--><!--Device-FormExtensionAbility-onAcquireFormState?: OnAcquireFormStateFn-End-->
-
-**系统能力：** SystemCapability.Ability.Form
-
-## onStop
-
-```TypeScript
-onStop?: OnStopFn
-```
-
-Called when this ability breaks the last link, notifying the provider that the provider process is about to stop.
-
-**类型：** [OnStopFn](arkts-form-onstopfn-t.md)
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FormExtensionAbility-onStop?: OnStopFn--><!--Device-FormExtensionAbility-onStop?: OnStopFn-End-->
-
-**系统能力：** SystemCapability.Ability.Form
-

@@ -20,17 +20,17 @@ Obtains the memory information of the application process. This API is implement
 > You are advised to use the [hidebug.getRssInfo](arkts-performanceanalysis-hidebug-getrssinfo-f.md) API to obtain the RSS information of an
 > application.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-hidebug-function getAppNativeMemInfo(): NativeMemInfo--><!--Device-hidebug-function getAppNativeMemInfo(): NativeMemInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [NativeMemInfo](arkts-performanceanalysis-hidebug-nativememinfo-i.md) | Memory information of the application process. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [NativeMemInfo](arkts-performanceanalysis-hidebug-nativememinfo-i.md) |
 
 **Examples**
 
@@ -42,4 +42,3 @@ console.info(`pss: ${nativeMemInfo.pss}, vss: ${nativeMemInfo.vss}, rss: ${nativ
   `sharedDirty: ${nativeMemInfo.sharedDirty}, privateDirty: ${nativeMemInfo.privateDirty}, ` +
   `sharedClean: ${nativeMemInfo.sharedClean}, privateClean: ${nativeMemInfo.privateClean}`);
 ```
-

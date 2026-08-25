@@ -8,13 +8,12 @@ Defines the angle property with number in units of deg.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-unnamed-declare type Degree = `${number}deg`--><!--Device-unnamed-declare type Degree = `${number}deg`-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** `${number}deg`
-

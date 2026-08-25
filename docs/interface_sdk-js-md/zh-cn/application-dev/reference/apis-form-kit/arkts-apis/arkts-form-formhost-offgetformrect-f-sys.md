@@ -16,7 +16,7 @@ Cancels listening to the event of get form rect.You can use this method to cance
 
 **起始版本：** 23
 
-<!--Device-formHost-function offGetFormRect(callback?: formInfo.GetFormRectInfoCallback): void--><!--Device-formHost-function offGetFormRect(callback?: formInfo.GetFormRectInfoCallback): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -24,15 +24,15 @@ Cancels listening to the event of get form rect.You can use this method to cance
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | formInfo.GetFormRectInfoCallback | 否 | The callback of get form rect. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | formInfo.GetFormRectInfoCallback | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -61,4 +61,3 @@ try {
   console.error(`catch error, code: ${error.code}, message: ${error.message}`);
 }
 ```
-

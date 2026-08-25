@@ -4,7 +4,7 @@
 
 **起始版本：** 20
 
-<!--Device-unnamed-interface ToolBarItemOptions--><!--Device-unnamed-interface ToolBarItemOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,9 +27,8 @@ placement?: ToolBarItemPlacement
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ToolBarItemOptions-placement?: ToolBarItemPlacement--><!--Device-ToolBarItemOptions-placement?: ToolBarItemPlacement-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

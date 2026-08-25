@@ -4,7 +4,7 @@ Defines the ad configuration.
 
 **Since:** 11
 
-<!--Device-advertising-export interface AdOptions--><!--Device-advertising-export interface AdOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -13,6 +13,24 @@ Defines the ad configuration.
 ```TypeScript
 import { advertising } from '@kit.AdsKit';
 ```
+
+## [key: string]
+
+```TypeScript
+[key: string]: number | boolean | string | undefined
+```
+
+Custom parameters.<!--RP1--><!--RP1End-->
+
+**Type:** number \| boolean \| string \| undefined
+
+**Since:** 11
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Advertising.Ads
 
 ## adContentClassification
 
@@ -26,9 +44,9 @@ Sets the maximum ad content rating.W: ages 3+, all audiences. PI: ages 7+, paren
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-AdOptions-adContentClassification?: string--><!--Device-AdOptions-adContentClassification?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -44,9 +62,9 @@ Sets whether to request only non-personalized ads.0: Request both personalized a
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-AdOptions-nonPersonalizedAd?: number--><!--Device-AdOptions-nonPersonalizedAd?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -64,9 +82,8 @@ The default value is -1.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AdOptions-tagForChildProtection?: number--><!--Device-AdOptions-tagForChildProtection?: number-End-->
-
 **System capability:** SystemCapability.Advertising.Ads
-

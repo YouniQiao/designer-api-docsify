@@ -2,9 +2,9 @@
 
 Enumeration of PhotoSource type@enum { int } PhotoSource
 
-**Since:** 26.0.0
+**Since:** 20
 
-<!--Device-photoAccessHelper-export enum PhotoSource--><!--Device-photoAccessHelper-export enum PhotoSource-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -16,11 +16,11 @@ ALL = 0
 
 Images and videos from all sources.
 
-**Since:** 26.1.0
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
 
-<!--Device-PhotoSource-ALL = 0--><!--Device-PhotoSource-ALL = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -32,11 +32,11 @@ CAMERA = 1
 
 Image or video taken by the camera.
 
-**Since:** 26.1.0
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
 
-<!--Device-PhotoSource-CAMERA = 1--><!--Device-PhotoSource-CAMERA = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -48,11 +48,10 @@ SCREENSHOT = 2
 
 Screenshot or screen capture video.
 
-**Since:** 26.1.0
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
 
-<!--Device-PhotoSource-SCREENSHOT = 2--><!--Device-PhotoSource-SCREENSHOT = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

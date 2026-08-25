@@ -2,9 +2,9 @@
 
 Provides an instance that bears data network capabilities.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-connection-export interface NetCapabilityInfo--><!--Device-connection-export interface NetCapabilityInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -24,11 +24,11 @@ Network transmission capabilities and bearer types of the data network.
 
 **Type:** [NetCapabilities](arkts-network-connection-netcapabilities-i.md)
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-NetCapabilityInfo-netCap: NetCapabilities--><!--Device-NetCapabilityInfo-netCap: NetCapabilities-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -42,11 +42,10 @@ Network handle.
 
 **Type:** NetHandle
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-NetCapabilityInfo-netHandle: NetHandle--><!--Device-NetCapabilityInfo-netHandle: NetHandle-End-->
-
 **System capability:** SystemCapability.Communication.NetManager.Core
-

@@ -4,7 +4,7 @@ Enumerates the error codes that may be returned when an ability is started.
 
 **Since:** 7
 
-<!--Device-featureAbility-export enum ErrorCode--><!--Device-featureAbility-export enum ErrorCode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -18,9 +18,9 @@ No error.
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ErrorCode-NO_ERROR = 0--><!--Device-ErrorCode-NO_ERROR = 0-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -34,9 +34,9 @@ Invalid parameter.
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ErrorCode-INVALID_PARAMETER = -1--><!--Device-ErrorCode-INVALID_PARAMETER = -1-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -50,9 +50,9 @@ The ability is not found.
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ErrorCode-ABILITY_NOT_FOUND = -2--><!--Device-ErrorCode-ABILITY_NOT_FOUND = -2-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -66,9 +66,8 @@ Permission denied.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-ErrorCode-PERMISSION_DENY = -3--><!--Device-ErrorCode-PERMISSION_DENY = -3-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
-

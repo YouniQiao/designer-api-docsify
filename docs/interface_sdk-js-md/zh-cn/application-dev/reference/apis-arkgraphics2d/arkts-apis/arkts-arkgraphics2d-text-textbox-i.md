@@ -2,9 +2,9 @@
 
 文本矩形区域，表示文本在布局时所占用的矩形空间。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-text-interface TextBox--><!--Device-text-interface TextBox-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -24,11 +24,11 @@ direction: TextDirection
 
 **类型：** TextDirection
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextBox-direction: TextDirection--><!--Device-TextBox-direction: TextDirection-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -42,11 +42,10 @@ rect: common2D.Rect
 
 **类型：** common2D.Rect
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
-<!--Device-TextBox-rect: common2D.Rect--><!--Device-TextBox-rect: common2D.Rect-End-->
-
 **系统能力：** SystemCapability.Graphics.Drawing
-

@@ -5,7 +5,7 @@ Represents a domain name filtering rule.In API version 21 and earlier versions, 
 
 **Since:** 12
 
-<!--Device-networkManager-interface DomainFilterRule--><!--Device-networkManager-interface DomainFilterRule-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -27,9 +27,9 @@ Action to take, that is, receive or discard the data packets.This parameter is m
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-DomainFilterRule-action?: Action--><!--Device-DomainFilterRule-action?: Action-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -45,9 +45,9 @@ UID of the application.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-DomainFilterRule-appUid?: string--><!--Device-DomainFilterRule-appUid?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -63,9 +63,9 @@ Direction chains to which the rule applies.This parameter is optional when a dom
 
 **Since:** 15
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
-<!--Device-DomainFilterRule-direction?: Direction--><!--Device-DomainFilterRule-direction?: Direction-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -81,9 +81,9 @@ Domain name. This parameter is mandatory when a domain name filtering rule is ad
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-DomainFilterRule-domainName?: string--><!--Device-DomainFilterRule-domainName?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -99,9 +99,9 @@ IP protocol version. The value can be **1** (IPv4) or **2** (IPv6).
 
 **Since:** 22
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-DomainFilterRule-family?: number--><!--Device-DomainFilterRule-family?: number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -117,9 +117,8 @@ Log type. Currently, only **NFLOG** is supported. This parameter applies only to
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DomainFilterRule-logType?: LogType--><!--Device-DomainFilterRule-logType?: LogType-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

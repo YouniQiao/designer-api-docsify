@@ -6,17 +6,15 @@
 > - 对于使用XComponent的场景，例如：Video或者相机流媒体展示类组件，不建议使用组件截图相关接口，建议使用
 > [createPixelMapFromSurface](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmapfromsurface-f.md)
 > 直接获取图片。&gt;
-> - 如果组件自身内容不能填满组件大小区域，那么剩余位置截图返回的内容为透明像素。如果组件使用了图像效果类属性或其他的效果类属性，则可能产生非用户预期的截图结果。请排查是否需要填充组件透
-> 明内容区域，或使用窗口截图接口[snapshot](arkts-arkui-window-window-i.md#snapshot)替代。&gt;
+> - 如果组件自身内容不能填满组件大小区域，那么剩余位置截图返回的内容为透明像素。如果组件使用了图像效果类属性或其他的效果类属性，则可能产生非用户预期的截图结果。请排查是否需要填充组件透明内容区域，或
+> 使用窗口截图接口[snapshot](arkts-arkui-window-window-i.md#snapshot)替代。&gt;
 > - 示例效果请以真机运行为准，当前 DevEco Studio预览器不支持。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-unnamed-declare namespace componentSnapshot--><!--Device-unnamed-declare namespace componentSnapshot-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,24 +28,27 @@ import { componentSnapshot } from '@kit.ArkUI';
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [getSync](arkts-arkui-componentsnapshot-getsync-f.md) | 获取已加载的组件的截图，传入组件的组件标识，找到对应组件进行截图。同步等待截图完成返回 [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)。 |
+| 名称 |
+| --- |
+| [createFromBuilder](arkts-arkui-componentsnapshot-createfrombuilder-f.md) |
+| [createFromBuilder](arkts-arkui-componentsnapshot-createfrombuilder-f.md) |
+| [get](arkts-arkui-componentsnapshot-get-f.md) |
+| [get](arkts-arkui-componentsnapshot-get-f.md) |
+| [getSync](arkts-arkui-componentsnapshot-getsync-f.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [ColorModeOptions](arkts-arkui-componentsnapshot-colormodeoptions-i.md) | 定义截图时所使用的色彩空间。 |
-| [DynamicRangeModeOptions](arkts-arkui-componentsnapshot-dynamicrangemodeoptions-i.md) | 定义截图所使用的动态范围模式。 |
-| [LocalizedSnapshotRegion](arkts-arkui-componentsnapshot-localizedsnapshotregion-i.md) | 定义组件截图的矩形区域，start和end的值在布局方向为LTR时指定为left和right，在布局方向为RTL时指定为right和left。 |
-| [SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | 定义截图额外选项。 |
-| [SnapshotRegion](arkts-arkui-componentsnapshot-snapshotregion-i.md) | 定义组件截图的矩形区域。 |
-| [SnapshotSizeLimitation](arkts-arkui-componentsnapshot-snapshotsizelimitation-i.md) | 定义组件截图的尺寸限制。 |
+| 名称 |
+| --- |
+| [ColorModeOptions](arkts-arkui-componentsnapshot-colormodeoptions-i.md) |
+| [DynamicRangeModeOptions](arkts-arkui-componentsnapshot-dynamicrangemodeoptions-i.md) |
+| [LocalizedSnapshotRegion](arkts-arkui-componentsnapshot-localizedsnapshotregion-i.md) |
+| [SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) |
+| [SnapshotRegion](arkts-arkui-componentsnapshot-snapshotregion-i.md) |
+| [SnapshotSizeLimitation](arkts-arkui-componentsnapshot-snapshotsizelimitation-i.md) |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-| [SnapshotRegionType](arkts-arkui-componentsnapshot-snapshotregiontype-t.md) | 表示组件截图区域。 |
-
+| 名称 |
+| --- |
+| [SnapshotRegionType](arkts-arkui-componentsnapshot-snapshotregiontype-t.md) |

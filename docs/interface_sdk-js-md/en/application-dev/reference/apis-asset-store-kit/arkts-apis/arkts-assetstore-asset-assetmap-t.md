@@ -8,11 +8,10 @@ Represents a set of asset attributes in the form of KV pairs.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-asset-type AssetMap = Map<Tag, Value>--><!--Device-asset-type AssetMap = Map<Tag, Value>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
 
 **Property type:** Map&lt;[Tag](arkts-assetstore-asset-tag-e.md), Value&gt;
-

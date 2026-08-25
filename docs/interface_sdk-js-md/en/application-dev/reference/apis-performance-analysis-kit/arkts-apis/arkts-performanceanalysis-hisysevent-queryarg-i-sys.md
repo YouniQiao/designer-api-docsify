@@ -2,9 +2,9 @@
 
 Defines arguments for an event query.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-hiSysEvent-interface QueryArg--><!--Device-hiSysEvent-interface QueryArg-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -24,11 +24,11 @@ beginTime: long
 
 Start time of the system event to be queried. The value is a 13-digit timestamp, indicating the number of milliseconds elapsed since 00:00:00:00 on January 1, 1970.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-QueryArg-beginTime: long--><!--Device-QueryArg-beginTime: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -42,11 +42,11 @@ endTime: long
 
 End time of the system event to be queried. The value is a 13-digit timestamp, indicating the number of milliseconds elapsed since 00:00:00:00 on January 1, 1970.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-QueryArg-endTime: long--><!--Device-QueryArg-endTime: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -55,16 +55,16 @@ End time of the system event to be queried. The value is a 13-digit timestamp, i
 ## fromSeq
 
 ```TypeScript
-fromSeq?: long | null | undefined
+fromSeq?: long
 ```
 
 Start SN of the events to be queried. The default value is **-1**
 
-**Type:** long \| null \| undefined
+**Type:** number
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-QueryArg-fromSeq?: long | null | undefined--><!--Device-QueryArg-fromSeq?: long | null | undefined-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -78,11 +78,11 @@ maxEvents: long
 
 Maximum number of events that can be queried.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-QueryArg-maxEvents: long--><!--Device-QueryArg-maxEvents: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -91,18 +91,17 @@ Maximum number of events that can be queried.
 ## toSeq
 
 ```TypeScript
-toSeq?: long | null | undefined
+toSeq?: long
 ```
 
 End SN of the system events to be queried. The default value is **-1**.
 
-**Type:** long \| null \| undefined
+**Type:** number
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-QueryArg-toSeq?: long | null | undefined--><!--Device-QueryArg-toSeq?: long | null | undefined-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
-

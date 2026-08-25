@@ -4,7 +4,7 @@ Enumerates the alignment styles of the indexer pop-up window.
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum IndexerAlign--><!--Device-unnamed-declare enum IndexerAlign-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ The pop-up window is displayed on the right of the indexer.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-IndexerAlign-Left--><!--Device-IndexerAlign-Left-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,9 @@ The pop-up window is displayed on the left of the indexer.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-IndexerAlign-Right--><!--Device-IndexerAlign-Right-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,11 +50,11 @@ The pop-up window is displayed on the right of the indexer for left-to-right scr
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-IndexerAlign-START--><!--Device-IndexerAlign-START-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,11 +68,10 @@ The pop-up window is displayed on the left of the indexer for left-to-right scri
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-IndexerAlign-END--><!--Device-IndexerAlign-END-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

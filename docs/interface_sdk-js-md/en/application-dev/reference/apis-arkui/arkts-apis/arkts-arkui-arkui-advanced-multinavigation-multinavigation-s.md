@@ -13,9 +13,7 @@
 
 **Since:** 14
 
-**Decorator:** @Component
-
-<!--Device-unnamed-export declare struct MultiNavigation--><!--Device-unnamed-export declare struct MultiNavigation-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,25 +23,19 @@
 import { SplitPolicy, MultiNavigation, MultiNavPathStack } from '@kit.ArkUI';
 ```
 
-## multiStack
+## build
 
 ```TypeScript
-multiStack: MultiNavPathStack
+build(): void
 ```
 
-Navigation stack.
+The method to build multiNavigation.
 
-**Type:** [MultiNavPathStack](../../apis-default/arkts-apis/arkts-arkui-advanced-multinavigation-multinavpathstack-c.md)
+**Since:** 23
 
-**Since:** 14
-
-**Decorator:** @State
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-MultiNavigation-@State  multiStack: MultiNavPathStack--><!--Device-MultiNavigation-@State  multiStack: MultiNavPathStack-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -55,17 +47,13 @@ navDestination: NavDestinationBuildFunction
 
 Routing rules for loading the target page.
 
-**Type:** [NavDestinationBuildFunction](arkts-arkui-navdestinationbuildfunction-t.md)
-
 **Since:** 14
 
-**Decorator:** @BuilderParam
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-MultiNavigation-@BuilderParam  navDestination: NavDestinationBuildFunction--><!--Device-MultiNavigation-@BuilderParam  navDestination: NavDestinationBuildFunction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -77,15 +65,13 @@ onHomeShowOnTop?: OnHomeShowOnTopCallback
 
 Callback invoked when the home page is on the top of the navigation stack.
 
-**Type:** [OnHomeShowOnTopCallback](../../apis-default/arkts-apis/arkts-onhomeshowontopcallback-t.md)
-
 **Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-MultiNavigation-onHomeShowOnTop?: OnHomeShowOnTopCallback--><!--Device-MultiNavigation-onHomeShowOnTop?: OnHomeShowOnTopCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -97,15 +83,50 @@ onNavigationModeChange?: OnNavigationModeChangeCallback
 
 Callback invoked when the mode of the **MultiNavigation** component changes.
 
-**Type:** [OnNavigationModeChangeCallback](../../apis-default/arkts-apis/arkts-onnavigationmodechangecallback-t.md)
-
 **Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-MultiNavigation-onNavigationModeChange?: OnNavigationModeChangeCallback--><!--Device-MultiNavigation-onNavigationModeChange?: OnNavigationModeChangeCallback-End-->
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## multiStack
+
+```TypeScript
+multiStack: MultiNavPathStack
+```
+
+Navigation stack.
+
+**Type:** [MultiNavPathStack](arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md)
+
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## navDestination
+
+```TypeScript
+navDestination: PageMapBuilder | undefined
+```
+
+build function of NavDestination.
+
+**Type:** [PageMapBuilder](arkts-arkui-pagemapbuilder-t.md) \| undefined
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

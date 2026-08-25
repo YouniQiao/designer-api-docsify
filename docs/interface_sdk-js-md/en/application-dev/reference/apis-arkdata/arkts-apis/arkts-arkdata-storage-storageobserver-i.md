@@ -4,9 +4,9 @@ Define the change data information object.
 
 **Since:** 6
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-storage-interface StorageObserver--><!--Device-storage-interface StorageObserver-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -27,7 +27,6 @@ Data changed.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
-
-<!--Device-StorageObserver-key: string--><!--Device-StorageObserver-key: string-End-->
-

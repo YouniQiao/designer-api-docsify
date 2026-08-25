@@ -4,7 +4,7 @@ LocalSocket客户端在连接服务端时传入的参数信息。
 
 **起始版本：** 11
 
-<!--Device-socket-export interface LocalConnectOptions--><!--Device-socket-export interface LocalConnectOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -26,23 +26,22 @@ address: LocalAddress
 
 **起始版本：** 11
 
-<!--Device-LocalConnectOptions-address: LocalAddress--><!--Device-LocalConnectOptions-address: LocalAddress-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## timeout
 
 ```TypeScript
-timeout?: int
+timeout?: number
 ```
 
 连接服务端的超时时间，单位为毫秒。默认值为0。需要应用手动设置一下，建议设置为5000。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 11
 
-<!--Device-LocalConnectOptions-timeout?: int--><!--Device-LocalConnectOptions-timeout?: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
-

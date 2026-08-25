@@ -2,9 +2,9 @@
 
 用于表示场景中的资源。@interface SceneResource
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export interface SceneResource--><!--Device-unnamed-export interface SceneResource-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -16,9 +16,9 @@ destroy(): void
 
 销毁场景资源，释放所有关联的资源或引用，一旦被释放，资源就不能被再次使用或访问。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SceneResource-destroy(): void--><!--Device-SceneResource-destroy(): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -56,9 +56,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SceneResource-name: string--><!--Device-SceneResource-name: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -72,9 +72,9 @@ readonly resourceType: SceneResourceType
 
 **类型：** [SceneResourceType](arkts-arkgraphics3d-sceneresources-sceneresourcetype-e.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SceneResource-readonly resourceType: SceneResourceType--><!--Device-SceneResource-readonly resourceType: SceneResourceType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -88,9 +88,8 @@ readonly uri?: ResourceStr
 
 **类型：** ResourceStr
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SceneResource-readonly uri?: ResourceStr--><!--Device-SceneResource-readonly uri?: ResourceStr-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

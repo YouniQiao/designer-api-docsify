@@ -16,25 +16,25 @@ function createDistributedObject(source: object): DistributedObject
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [create](arkts-arkdata-distributeddataobject-create-f.md)
-
-<!--Device-distributedDataObject-function createDistributedObject(source: object): DistributedObject--><!--Device-distributedDataObject-function createDistributedObject(source: object): DistributedObject-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| source | object | 是 | 设置分布式数据对象的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| source | object | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DistributedObject](arkts-arkdata-distributeddataobject-distributedobject-i.md) | 创建完成的分布式数据对象。 |
+| 类型 |
+| --- |
+| [DistributedObject](arkts-arkdata-distributeddataobject-distributedobject-i.md) |
 
 **示例**
 
@@ -54,4 +54,3 @@ class SourceObject {
 let source: SourceObject = new SourceObject('jack', 18, false);
 let g_object: distributedDataObject.DistributedObject = distributedDataObject.createDistributedObject(source);
 ```
-

@@ -8,16 +8,15 @@ Describes the callback function of the ad content playback start event.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-media-type OnAdsEventAdsStartedHandle = (adsId: string, duration: int) => void--><!--Device-media-type OnAdsEventAdsStartedHandle = (adsId: string, duration: int) => void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| adsId | string | Yes | ID of the ad resource that is being played. |
-| duration | int | Yes | Playing duration of the advertisement, in milliseconds. <br>The value should be an integer. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| adsId | string | Yes |
+| duration | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |

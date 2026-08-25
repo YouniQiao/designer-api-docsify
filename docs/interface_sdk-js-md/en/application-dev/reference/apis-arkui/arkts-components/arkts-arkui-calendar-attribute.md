@@ -2,9 +2,9 @@
 
 **Since:** 7
 
-**Deprecated since:** 20
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-unnamed-declare class CalendarAttribute--><!--Device-unnamed-declare class CalendarAttribute-End-->
+**Deprecated since:** 20
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -14,4 +14,3 @@
 
 ```TypeScript
 ```
-

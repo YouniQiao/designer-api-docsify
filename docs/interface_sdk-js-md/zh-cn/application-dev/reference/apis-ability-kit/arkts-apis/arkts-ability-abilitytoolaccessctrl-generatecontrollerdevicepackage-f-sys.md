@@ -16,9 +16,9 @@ export function generateControllerDevicePackage(remoteUserAuthResult: RemoteUser
 
 **起始版本：** 26.1.0
 
-**需要权限：** ohos.permission.QUERY_TOOL_PERMISSIONS
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
-<!--Device-abilityToolAccessCtrl-export function generateControllerDevicePackage(remoteUserAuthResult: RemoteUserAuthResults[]):    Promise<RemoteAuthPackage[]>--><!--Device-abilityToolAccessCtrl-export function generateControllerDevicePackage(remoteUserAuthResult: RemoteUserAuthResults[]):    Promise<RemoteAuthPackage[]>-End-->
+**需要权限：** ohos.permission.QUERY_TOOL_PERMISSIONS
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -26,26 +26,26 @@ export function generateControllerDevicePackage(remoteUserAuthResult: RemoteUser
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| remoteUserAuthResult | [RemoteUserAuthResults](arkts-ability-abilitytoolaccessctrl-remoteuserauthresults-i-sys.md)[] | 是 | 远程用户授权结果列表 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| remoteUserAuthResult | [RemoteUserAuthResults](arkts-ability-abilitytoolaccessctrl-remoteuserauthresults-i-sys.md)[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[RemoteAuthPackage](arkts-ability-abilitytoolaccessctrl-remoteauthpackage-i-sys.md)[]&gt; | Promise用于返回\\${RemoteAuthPackage[]}。 |
+| 类型 |
+| --- |
+| Promise&lt;[RemoteAuthPackage](arkts-ability-abilitytoolaccessctrl-remoteauthpackage-i-sys.md)[]&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denial. The interface caller does not have permission "ohos.permission.QUERY_TOOL_PERMISSIONS". |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| [24010000](../errorcode-abilityToolAccessCtrl-sys.md#24010000-入参错误) | Invalid parameter. OperationType and operationInfo do not match, specified callerTokenId does not exist, etc. |
-| [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) | Service is abnormal. Possible cause: IPC failed. |
-| [24010002](../errorcode-abilityToolAccessCtrl-sys.md#24010002-服务内部错误) | Common internal error. Possible cause: dependent service unavailable, resource access failure, etc. |
-| [24010003](../errorcode-abilityToolAccessCtrl-sys.md#24010003-环境错误) | The account is not logged in, network is unavailable, timeout, etc. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [24010000](../errorcode-abilityToolAccessCtrl-sys.md#24010000-入参错误) |
+| [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) |
+| [24010002](../errorcode-abilityToolAccessCtrl-sys.md#24010002-服务内部错误) |
+| [24010003](../errorcode-abilityToolAccessCtrl-sys.md#24010003-环境错误) |
 
 **示例**
 
@@ -75,4 +75,3 @@ abilityToolAccessCtrl.generateControllerDevicePackage(remoteUserAuthResult).then
   console.error(`generateControllerDevicePackage fail, code: ${err.code}, message: ${err.message}`);
 });
 ```
-

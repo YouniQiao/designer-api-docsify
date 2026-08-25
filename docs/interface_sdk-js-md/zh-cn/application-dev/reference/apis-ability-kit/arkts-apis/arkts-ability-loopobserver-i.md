@@ -1,10 +1,10 @@
 # LoopObserver
 
-定义异常监听，可以作为 [ErrorManager.on](arkts-ability-errormanager-onerror-f.md#onerror) 的入参，用于监听应用主线程事件处理超时的情况。通过回调机制实时获取主线程消息实际执行时间，帮助开发者及时发现和定位故障问题。
+定义异常监听，可以作为 [ErrorManager.on](arkts-ability-errormanager-on-f.md#onloopobserver) 的入参，用于监听应用主线程事件处理超时的情况。通过回调机制实时获取主线程消息实际执行时间，帮助开发者及时发现和定位故障问题。
 
 **起始版本：** 12
 
-<!--Device-unnamed-export interface LoopObserver--><!--Device-unnamed-export interface LoopObserver-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -18,17 +18,17 @@ onLoopTimeOut?(timeout: int): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-LoopObserver-onLoopTimeOut?(timeout: int): void--><!--Device-LoopObserver-onLoopTimeOut?(timeout: int): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| timeout | int | 是 | 表示应用主线程消息实际执行时间，单位：毫秒，取值范围：大于0的正整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| timeout | number | 是 |
 
 **示例**
 
@@ -43,4 +43,3 @@ let observer: errorManager.LoopObserver = {
 
 errorManager.on('loopObserver', 1, observer);
 ```
-

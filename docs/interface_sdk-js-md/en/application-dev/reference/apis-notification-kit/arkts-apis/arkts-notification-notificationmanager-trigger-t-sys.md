@@ -8,13 +8,12 @@ Defines the details for triggering a geofence.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-notificationManager-export type Trigger = _Trigger--><!--Device-notificationManager-export type Trigger = _Trigger-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
 
 **Property type:** _Trigger
-

@@ -4,7 +4,7 @@ The FastBuffer object is a method of handling buffers dedicated to binary data.
 
 **Since:** 20
 
-<!--Device-fastbuffer-class FastBuffer--><!--Device-fastbuffer-class FastBuffer-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -24,34 +24,34 @@ Compares buf with target and returns a number indicating whether buf comes befor
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: number, sourceStart?: number, sourceEnd?: number): -1 | 0 | 1--><!--Device-FastBuffer-compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: number, sourceStart?: number, sourceEnd?: number): -1 | 0 | 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | The buffer to compare with this buffer |
-| targetStart | number | No | targetStart [targetStart = 0] The offset within target at which to begin comparison |
-| targetEnd | number | No | targetEnd [targetEnd = target.length] The offset within target at which to end comparison (not inclusive) |
-| sourceStart | number | No | sourceStart [sourceStart = 0] The offset within buf at which to begin comparison |
-| sourceEnd | number | No | sourceEnd [sourceEnd = buf.length] The offset within buf at which to end comparison (not inclusive) |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes |
+| targetStart | number | No |
+| targetEnd | number | No |
+| sourceStart | number | No |
+| sourceEnd | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| -1 \| 0 \| 1 | 0 is returned if target is the same as buf 1 is returned if target should come before buf when sorted. -1 is returned if target should come after buf when sorted. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| -1 \| 0 \| 1 |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
 **Examples**
 
@@ -90,33 +90,33 @@ Copies data from a region of buf to a region in target, even if the target memor
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number, sourceEnd?: number): number--><!--Device-FastBuffer-copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number, sourceEnd?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | The buffer to copy data into |
-| targetStart | number | No | targetStart [targetStart = 0] The offset within target at which to begin writing |
-| sourceStart | number | No | sourceStart [sourceStart = 0] The offset within buf from which to begin copying |
-| sourceEnd | number | No | sourceEnd [sourceEnd = buf.length] The offset within buf at which to stop copying (not inclusive) |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes |
+| targetStart | number | No |
+| sourceStart | number | No |
+| sourceEnd | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | The number of bytes copied |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
 **Examples**
 
@@ -148,17 +148,17 @@ Creates and returns an iterator of [index, byte] pairs from the contents of buf.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-entries(): IterableIterator<[            number,            number        ]>--><!--Device-FastBuffer-entries(): IterableIterator<[            number,            number        ]>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;[number, number]&gt; |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;[number, number] & gt; |
 
 **Examples**
 
@@ -192,29 +192,29 @@ Returns true if both buf and otherBuffer have exactly the same bytes, false othe
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-equals(otherBuffer: Uint8Array | FastBuffer): boolean--><!--Device-FastBuffer-equals(otherBuffer: Uint8Array | FastBuffer): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| otherBuffer | Uint8Array \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Yes | The buffer to compare with this buffer for equality |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| otherBuffer | Uint8Array \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true or false |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| Error Code ID |
+| --- |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
 **Examples**
 
@@ -241,33 +241,33 @@ Fills buf with the specified value. If the offset and end are not given, the ent
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: number, encoding?: BufferEncoding): FastBuffer--><!--Device-FastBuffer-fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: number, encoding?: BufferEncoding): FastBuffer-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array \| number | Yes | The value to fill into the buffer |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to fill buf |
-| end | number | No | end [end = buf.length] Where to stop filling buf (not inclusive) |
-| encoding | BufferEncoding | No | encoding [encoding='utf8'] The encoding for value if value is a string |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | string \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array \| number | Yes |
+| offset | number | No |
+| end | number | No |
+| encoding | BufferEncoding | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | A reference to buf |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
 **Examples**
 
@@ -289,25 +289,25 @@ Returns true if value was found in buf, false otherwise
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-includes(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): boolean--><!--Device-FastBuffer-includes(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string \| number \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | The value to search for in the buffer |
-| byteOffset | number | No | byteOffset [byteOffset = 0] Where to begin searching in buf. If negative, then offset is calculated from the end of buf |
-| encoding | BufferEncoding | No | encoding [encoding='utf8'] If value is a string, this is its encoding |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | string \| number \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes |
+| [byteOffset](#byteoffset) | number | No |
+| encoding | BufferEncoding | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true or false |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -331,25 +331,25 @@ The index of the first occurrence of value in buf
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number--><!--Device-FastBuffer-indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string \| number \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | The value to find the index for in the buffer |
-| byteOffset | number | No | byteOffset [byteOffset = 0] Where to begin searching in buf |
-| encoding | BufferEncoding | No | encoding [encoding='utf8'] If value is a string, this is the encoding used to determine the binary representation of the string that will be searched for in buf |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | string \| number \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes |
+| [byteOffset](#byteoffset) | number | No |
+| encoding | BufferEncoding | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | The index of the first occurrence of value in buf, or -1 if buf does not contain value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -373,17 +373,17 @@ Creates and returns an iterator of buf keys (indices).
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-keys(): IterableIterator<number>--><!--Device-FastBuffer-keys(): IterableIterator<number>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;number&gt; |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;number & gt; |
 
 **Examples**
 
@@ -415,25 +415,25 @@ The index of the last occurrence of value in buf
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number--><!--Device-FastBuffer-lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string \| number \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | The value to find the last index for in the buffer |
-| byteOffset | number | No | byteOffset [byteOffset = 0] Where to begin searching in buf |
-| encoding | BufferEncoding | No | encoding [encoding='utf8'] If value is a string, this is the encoding used to determine the binary representation of the string that will be searched for in buf |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | string \| number \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes |
+| [byteOffset](#byteoffset) | number | No |
+| encoding | BufferEncoding | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | The index of the last occurrence of value in buf, or -1 if buf does not contain value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -457,29 +457,29 @@ Reads a signed, big-endian 64-bit integer from buf at the specified offset
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readBigInt64BE(offset?: number): bigint--><!--Device-FastBuffer-readBigInt64BE(offset?: number): bigint-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint | Return a signed, big-endian 64-bit integer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| bigint |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -502,29 +502,29 @@ Reads a signed, little-endian 64-bit integer from buf at the specified offset
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readBigInt64LE(offset?: number): bigint--><!--Device-FastBuffer-readBigInt64LE(offset?: number): bigint-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint | Return a signed, little-endian 64-bit integer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| bigint |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -547,29 +547,29 @@ Reads a unsigned, big-endian 64-bit integer from buf at the specified offset
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readBigUInt64BE(offset?: number): bigint--><!--Device-FastBuffer-readBigUInt64BE(offset?: number): bigint-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint | Return a unsigned, big-endian 64-bit integer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| bigint |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -592,29 +592,29 @@ Reads a unsigned, little-endian 64-bit integer from buf at the specified offset
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readBigUInt64LE(offset?: number): bigint--><!--Device-FastBuffer-readBigUInt64LE(offset?: number): bigint-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint | Return a unsigned, little-endian 64-bit integer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| bigint |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -637,29 +637,29 @@ Reads a 64-bit, big-endian double from buf at the specified offset
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readDoubleBE(offset?: number): number--><!--Device-FastBuffer-readDoubleBE(offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Return a 64-bit, big-endian double |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -681,29 +681,29 @@ Reads a 64-bit, little-endian double from buf at the specified offset
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readDoubleLE(offset?: number): number--><!--Device-FastBuffer-readDoubleLE(offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Return a 64-bit, little-endian double |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -725,29 +725,29 @@ Reads a 32-bit, big-endian float from buf at the specified offset
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readFloatBE(offset?: number): number--><!--Device-FastBuffer-readFloatBE(offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Return a 32-bit, big-endian float |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -769,29 +769,29 @@ Reads a 32-bit, little-endian float from buf at the specified offset
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readFloatLE(offset?: number): number--><!--Device-FastBuffer-readFloatLE(offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Return a 32-bit, little-endian float |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -813,29 +813,29 @@ Reads a signed, big-endian 16-bit integer from buf at the specified offset
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readInt16BE(offset?: number): number--><!--Device-FastBuffer-readInt16BE(offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Return a signed, big-endian 16-bit integer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 2. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -857,29 +857,29 @@ Reads a signed, little-endian 16-bit integer from buf at the specified offset
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readInt16LE(offset?: number): number--><!--Device-FastBuffer-readInt16LE(offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Return a signed, little-endian 16-bit integer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 2. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -901,29 +901,29 @@ Reads a signed, big-endian 32-bit integer from buf at the specified offset
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readInt32BE(offset?: number): number--><!--Device-FastBuffer-readInt32BE(offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Return a signed, big-endian 32-bit integer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -945,29 +945,29 @@ Reads a signed, little-endian 32-bit integer from buf at the specified offset
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readInt32LE(offset?: number): number--><!--Device-FastBuffer-readInt32LE(offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Return a signed, little-endian 32-bit integer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -989,29 +989,29 @@ Reads a signed 8-bit integer from buf at the specified offset
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readInt8(offset?: number): number--><!--Device-FastBuffer-readInt8(offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 1 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Return a signed 8-bit integer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 1. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1035,30 +1035,30 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readIntBE(offset: number, byteLength: number): number--><!--Device-FastBuffer-readIntBE(offset: number, byteLength: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | Yes | Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to read. Must satisfy 0 &lt; byteLength &lt;= 6 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | Yes |
+| byteLength | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1081,30 +1081,30 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readIntLE(offset: number, byteLength: number): number--><!--Device-FastBuffer-readIntLE(offset: number, byteLength: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | Yes | Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to read. Must satisfy 0 &lt; byteLength &lt;= 6 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | Yes |
+| byteLength | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1126,29 +1126,29 @@ Reads an unsigned, big-endian 16-bit integer from buf at the specified offset
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readUInt16BE(offset?: number): number--><!--Device-FastBuffer-readUInt16BE(offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 &lt;= offset &lt;= buf.length - 2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Reads an unsigned, big-endian 16-bit integer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 2. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1172,29 +1172,29 @@ Reads an unsigned, little-endian 16-bit integer from buf at the specified offset
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readUInt16LE(offset?: number): number--><!--Device-FastBuffer-readUInt16LE(offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 &lt;= offset &lt;= buf.length - 2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Reads an unsigned, little-endian 16-bit integer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 2. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1218,29 +1218,29 @@ Reads an unsigned, big-endian 32-bit integer from buf at the specified offset
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readUInt32BE(offset?: number): number--><!--Device-FastBuffer-readUInt32BE(offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 &lt;= offset &lt;= buf.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Reads an unsigned, big-endian 32-bit integer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1262,29 +1262,29 @@ Reads an unsigned, little-endian 32-bit integer from buf at the specified offset
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readUInt32LE(offset?: number): number--><!--Device-FastBuffer-readUInt32LE(offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 &lt;= offset &lt;= buf.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Reads an unsigned, little-endian 32-bit integer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1306,29 +1306,29 @@ Reads an unsigned 8-bit integer from buf at the specified offset
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readUInt8(offset?: number): number--><!--Device-FastBuffer-readUInt8(offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 &lt;= offset &lt;= buf.length - 1 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Reads an unsigned 8-bit integer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 1. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1352,30 +1352,30 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readUIntBE(offset: number, byteLength: number): number--><!--Device-FastBuffer-readUIntBE(offset: number, byteLength: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | Yes | Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to read. Must satisfy 0 &lt; byteLength &lt;= 6 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | Yes |
+| byteLength | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1397,30 +1397,30 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-readUIntLE(offset: number, byteLength: number): number--><!--Device-FastBuffer-readUIntLE(offset: number, byteLength: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | number | Yes | Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to read. Must satisfy 0 &lt; byteLength &lt;= 6 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | number | Yes |
+| byteLength | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1442,24 +1442,24 @@ Returns a new FastBuffer that references the same memory as the original, but of
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-subarray(start?: number, end?: number): FastBuffer--><!--Device-FastBuffer-subarray(start?: number, end?: number): FastBuffer-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | number | No | start [start = 0] Where the new FastBuffer will start |
-| end | number | No | end [end = buf.length] Where the new FastBuffer will end (not inclusive) |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | number | No |
+| end | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Returns a new FastBuffer that references the same memory as the original |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
 
 **Examples**
 
@@ -1486,23 +1486,23 @@ Interprets buf as an array of unsigned 16-bit integers and swaps the byte order 
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-swap16(): FastBuffer--><!--Device-FastBuffer-swap16(): FastBuffer-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | A reference to buf |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The fastbuffer size must be a multiple of 16-bits |
+| Error Code ID |
+| --- |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) |
 
 **Examples**
 
@@ -1527,23 +1527,23 @@ Interprets buf as an array of unsigned 32-bit integers and swaps the byte order 
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-swap32(): FastBuffer--><!--Device-FastBuffer-swap32(): FastBuffer-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | A reference to buf |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The fastbuffer size must be a multiple of 32-bits |
+| Error Code ID |
+| --- |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) |
 
 **Examples**
 
@@ -1568,23 +1568,23 @@ Interprets buf as an array of unsigned 64-bit integers and swaps the byte order 
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-swap64(): FastBuffer--><!--Device-FastBuffer-swap64(): FastBuffer-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | A reference to buf |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The fastbuffer size must be a multiple of 64-bits |
+| Error Code ID |
+| --- |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) |
 
 **Examples**
 
@@ -1609,17 +1609,17 @@ Returns a JSON representation of buf
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-toJSON(): Object--><!--Device-FastBuffer-toJSON(): Object-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Object | Returns a JSON |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Object |
 
 **Examples**
 
@@ -1642,31 +1642,31 @@ Decodes buf to a string according to the specified character encoding in encodin
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-toString(encoding?: string, start?: number, end?: number): string--><!--Device-FastBuffer-toString(encoding?: string, start?: number, end?: number): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| encoding | string | No | encoding [encoding='utf8'] The character encoding to use |
-| start | number | No | start [start = 0] The byte offset to start decoding at |
-| end | number | No | end [end = buf.length] The byte offset to stop decoding at (not inclusive) |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| encoding | string | No |
+| start | number | No |
+| end | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| Error Code ID |
+| --- |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
 **Examples**
 
@@ -1691,17 +1691,17 @@ Creates and returns an iterator for buf values (bytes).
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-values(): IterableIterator<number>--><!--Device-FastBuffer-values(): IterableIterator<number>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;number&gt; |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;number & gt; |
 
 **Examples**
 
@@ -1735,33 +1735,33 @@ Writes string to buf at offset according to the character encoding in encoding
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-write(str: string, offset?: number, length?: number, encoding?: string): number--><!--Device-FastBuffer-write(str: string, offset?: number, length?: number, encoding?: string): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| str | string | Yes | The string to write into the buffer |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write string |
-| length | number | No | length [length = buf.length - offset] Maximum number of bytes to write (written bytes will not exceed buf.length - offset) |
-| encoding | string | No | encoding [encoding='utf8'] The character encoding of string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| str | string | Yes |
+| offset | number | No |
+| [length](#length) | number | No |
+| encoding | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Number of bytes written. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
 **Examples**
 
@@ -1789,30 +1789,30 @@ Writes value to buf at the specified offset as big-endian.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeBigInt64BE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigInt64BE(value: bigint, offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | bigint | Yes | The 64-bit big-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | bigint | Yes |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1835,30 +1835,30 @@ Writes value to buf at the specified offset as little-endian.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeBigInt64LE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigInt64LE(value: bigint, offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | bigint | Yes | The 64-bit little-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | bigint | Yes |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1881,30 +1881,30 @@ Writes value to buf at the specified offset as big-endian.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeBigUInt64BE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigUInt64BE(value: bigint, offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | bigint | Yes | The unsigned 64-bit big-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | bigint | Yes |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1927,30 +1927,30 @@ Writes value to buf at the specified offset as little-endian.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeBigUInt64LE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigUInt64LE(value: bigint, offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | bigint | Yes | The unsigned 64-bit little-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | bigint | Yes |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1973,30 +1973,30 @@ Writes value to buf at the specified offset as big-endian.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeDoubleBE(value: number, offset?: number): number--><!--Device-FastBuffer-writeDoubleBE(value: number, offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | The 64-bit big-endian double value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2019,30 +2019,30 @@ Writes value to buf at the specified offset as little-endian.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeDoubleLE(value: number, offset?: number): number--><!--Device-FastBuffer-writeDoubleLE(value: number, offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | The 64-bit little-endian double value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2065,30 +2065,30 @@ Writes value to buf at the specified offset as big-endian.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeFloatBE(value: number, offset?: number): number--><!--Device-FastBuffer-writeFloatBE(value: number, offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | The 32-bit big-endian float value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2111,30 +2111,30 @@ Writes value to buf at the specified offset as little-endian.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeFloatLE(value: number, offset?: number): number--><!--Device-FastBuffer-writeFloatLE(value: number, offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | The 32-bit little-endian float value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2157,30 +2157,30 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeInt16BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt16BE(value: number, offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | The signed 16-bit big-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2203,30 +2203,30 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeInt16LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt16LE(value: number, offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | The signed 16-bit little-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2249,30 +2249,30 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeInt32BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt32BE(value: number, offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | The signed 32-bit big-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2295,30 +2295,30 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeInt32LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt32LE(value: number, offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | The signed 32-bit little-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2341,30 +2341,30 @@ Writes value to buf at the specified offset. value must be a valid signed 8-bit 
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeInt8(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt8(value: number, offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | The signed 8-bit integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 1 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2390,31 +2390,31 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeIntBE(value: number, offset: number, byteLength: number): number--><!--Device-FastBuffer-writeIntBE(value: number, offset: number, byteLength: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | The big-endian integer value to write |
-| offset | number | Yes | Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to write. Must satisfy 0 &lt; byteLength &lt;= 6 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
+| offset | number | Yes |
+| byteLength | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2437,31 +2437,31 @@ Writes byteLength bytes of value to buf at the specified offset as little-endian
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeIntLE(value: number, offset: number, byteLength: number): number--><!--Device-FastBuffer-writeIntLE(value: number, offset: number, byteLength: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | The little-endian integer value to write |
-| offset | number | Yes | Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to write. Must satisfy 0 &lt; byteLength &lt;= 6 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
+| offset | number | Yes |
+| byteLength | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2484,30 +2484,30 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeUInt16BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt16BE(value: number, offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | The unsigned 16-bit big-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 &lt;= offset &lt;= buf.length - 2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2533,30 +2533,30 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeUInt16LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt16LE(value: number, offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | The unsigned 16-bit little-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 &lt;= offset &lt;= buf.length - 2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2582,30 +2582,30 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeUInt32BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt32BE(value: number, offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | The unsigned 32-bit big-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 &lt;= offset &lt;= buf.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2628,30 +2628,30 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeUInt32LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt32LE(value: number, offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | The unsigned 32-bit little-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 &lt;= offset &lt;= buf.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2674,30 +2674,30 @@ Writes value to buf at the specified offset. value must be a valid unsigned 8-bi
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeUInt8(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt8(value: number, offset?: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | The unsigned 8-bit integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 &lt;= offset &lt;= buf.length - 1 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
+| offset | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2729,31 +2729,31 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeUIntBE(value: number, offset: number, byteLength: number): number--><!--Device-FastBuffer-writeUIntBE(value: number, offset: number, byteLength: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | The unsigned big-endian integer value to write |
-| offset | number | Yes | Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to write. Must satisfy 0 &lt; byteLength &lt;= 6 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
+| offset | number | Yes |
+| byteLength | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2776,31 +2776,31 @@ Writes byteLength bytes of value to buf at the specified offset as little-endian
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-writeUIntLE(value: number, offset: number, byteLength: number): number--><!--Device-FastBuffer-writeUIntLE(value: number, offset: number, byteLength: number): number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | The unsigned little-endian integer value to write |
-| offset | number | Yes | Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to write. Must satisfy 0 &lt; byteLength &lt;= 6 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
+| offset | number | Yes |
+| byteLength | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | offset plus the number of bytes written |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2825,9 +2825,9 @@ The arraybuffer underlying the FastBuffer object
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-buffer: ArrayBuffer--><!--Device-FastBuffer-buffer: ArrayBuffer-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2843,9 +2843,9 @@ The byteOffset of the Buffers underlying ArrayBuffer object
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-FastBuffer-byteOffset: number--><!--Device-FastBuffer-byteOffset: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2861,9 +2861,8 @@ Returns the number of bytes in buf
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-FastBuffer-length: number--><!--Device-FastBuffer-length: number-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

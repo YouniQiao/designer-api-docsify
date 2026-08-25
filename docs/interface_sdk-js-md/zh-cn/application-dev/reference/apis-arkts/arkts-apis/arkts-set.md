@@ -9,14 +9,13 @@
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [Set](arkts-arkts-set-c.md) | Set的实现。 |
+| 名称 |
+| --- |
+| [Set](arkts-arkts-set-c.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [ReadonlySet](arkts-arkts-set-readonlyset-i.md) | ReadonlySet的实现。 |
-| [SetIterator](arkts-arkts-set-setiterator-i.md) | SetIterator的实现。 |
-
+| 名称 |
+| --- |
+| [ReadonlySet](arkts-arkts-set-readonlyset-i.md) |
+| [SetIterator](arkts-arkts-set-setiterator-i.md) |

@@ -4,7 +4,7 @@ ScrollOffset@interface ScrollOffset
 
 **Since:** 6
 
-<!--Device-unnamed-export interface ScrollOffset--><!--Device-unnamed-export interface ScrollOffset-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,9 +20,9 @@ Scrolling offset in the x-axis, in px.
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-ScrollOffset-x: number--><!--Device-ScrollOffset-x: number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,9 +38,8 @@ Scrolling offset in the y-axis, in px.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-ScrollOffset-y: number--><!--Device-ScrollOffset-y: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

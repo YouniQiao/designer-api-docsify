@@ -14,17 +14,17 @@ function isNRSupported(): boolean
 
 判断当前设备是否支持NR(New Radio)。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-radio-function isNRSupported(): boolean--><!--Device-radio-function isNRSupported(): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：支持。<br/>- false：不支持。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -58,25 +58,24 @@ function isNRSupported(slotId: int): boolean
 
 判断当前设备是否支持NR(New Radio)。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-radio-function isNRSupported(slotId: int): boolean--><!--Device-radio-function isNRSupported(slotId: int): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：支持。<br/>- false：不支持。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
 参见 [isNRSupported](#isnrsupported)
-

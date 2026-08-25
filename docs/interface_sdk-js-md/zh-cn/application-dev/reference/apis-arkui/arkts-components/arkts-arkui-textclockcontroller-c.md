@@ -5,11 +5,12 @@ TextClock容器组件的控制器，可以将该控制器绑定到TextClock组�
 ## 导入对象
 
 ```ts
-controller: TextClockController = new TextClockController(); ```
+controller: TextClockController = new TextClockController();
+```
 
 **起始版本：** 8
 
-<!--Device-unnamed-declare class TextClockController--><!--Device-unnamed-declare class TextClockController-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +29,11 @@ TextClockController的构造函数。
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-TextClockController-constructor()--><!--Device-TextClockController-constructor()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,11 +47,11 @@ start()
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-TextClockController-start()--><!--Device-TextClockController-start()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,11 +65,10 @@ stop()
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-TextClockController-stop()--><!--Device-TextClockController-stop()-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

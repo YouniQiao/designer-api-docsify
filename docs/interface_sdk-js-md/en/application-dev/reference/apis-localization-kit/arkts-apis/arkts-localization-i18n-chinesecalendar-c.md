@@ -6,7 +6,7 @@ Provide a ChineseCalendar interface which could handle unique characteristics of
 
 **Since:** 26.0.0
 
-<!--Device-i18n-export class ChineseCalendar--><!--Device-i18n-export class ChineseCalendar-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -26,33 +26,33 @@ Checks whether a given month exist leap month in gregorianYear and cyclicalYear.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChineseCalendar-public static checkLeapMonth(gregorianYear: int, cyclicalYear: int, month: int): boolean--><!--Device-ChineseCalendar-public static checkLeapMonth(gregorianYear: int, cyclicalYear: int, month: int): boolean-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| gregorianYear | int | Yes | Gregorian year to check, supported range is from 1900 to 2100. <br>The value range is all integers. <br>Year. |
-| cyclicalYear | int | Yes | Cyclical year to check, supported range is from 1 to 60. <br>The value range is all integers. <br>Year. |
-| month | int | Yes | Month to check. Note: The month starts from 0. For example, 0 indicates January. <br>The value range is all integers. <br>Month. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [gregorianYear](arkts-localization-i18n-chinesecalendartime-i.md) | number | Yes |
+| [cyclicalYear](arkts-localization-i18n-chinesecalendartime-i.md) | number | Yes |
+| month | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check whether the input month is a leap month. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) |
 
 ## setChineseCalendarTime
 
@@ -64,17 +64,16 @@ Sets the year, month, day, hour, minute, second, isLeapMonth for this ChineseCal
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChineseCalendar-public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void--><!--Device-ChineseCalendar-public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| chineseCalendarTime | [ChineseCalendarTime](arkts-localization-i18n-chinesecalendartime-i.md) | Yes | Indicates the time element used to set for ChineseCalendar. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| chineseCalendarTime | [ChineseCalendarTime](arkts-localization-i18n-chinesecalendartime-i.md) | Yes |

@@ -16,25 +16,25 @@ Re-encodes the given FastBuffer or Uint8Array instance from one character encodi
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-fastbuffer-function transcode(source: FastBuffer | Uint8Array, fromEnc: string, toEnc: string): FastBuffer--><!--Device-fastbuffer-function transcode(source: FastBuffer | Uint8Array, fromEnc: string, toEnc: string): FastBuffer-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| source | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | The buffer to re-encode |
-| fromEnc | string | Yes | The source character encoding |
-| toEnc | string | Yes | The target character encoding |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| source | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes |
+| fromEnc | string | Yes |
+| toEnc | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Returns a new FastBuffer instance |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
 
 **Examples**
 
@@ -45,4 +45,3 @@ let newBuf = fastbuffer.transcode(fastbuffer.from('buffer'), 'utf-8', 'ascii');
 console.info("newBuf = " + newBuf.toString('ascii'));
 // Output: newBuf = buffer
 ```
-

@@ -2,9 +2,9 @@
 
 表示静音策略类型的枚举。@enum { int }
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-audio-enum PolicyType--><!--Device-audio-enum PolicyType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -18,9 +18,9 @@ EDM = 0
 
 设备管理器下发的静音策略。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-PolicyType-EDM = 0--><!--Device-PolicyType-EDM = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -34,11 +34,10 @@ PRIVACY = 1
 
 安全隐私模块下发的静音策略。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-PolicyType-PRIVACY = 1--><!--Device-PolicyType-PRIVACY = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
-

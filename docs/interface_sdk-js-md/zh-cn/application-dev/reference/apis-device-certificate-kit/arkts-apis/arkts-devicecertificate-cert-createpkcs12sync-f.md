@@ -14,35 +14,35 @@ function createPkcs12Sync(data: Pkcs12Data, config: Pkcs12CreationConfig): Uint8
 
 表示创建P12，同步返回结果。
 
-**起始版本：** 23
+**起始版本：** 21
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
-<!--Device-cert-function createPkcs12Sync(data: Pkcs12Data, config: Pkcs12CreationConfig): Uint8Array--><!--Device-cert-function createPkcs12Sync(data: Pkcs12Data, config: Pkcs12CreationConfig): Uint8Array-End-->
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Cert
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | [Pkcs12Data](arkts-devicecertificate-cert-pkcs12data-i.md) | 是 | 要打包的P12数据对象。 |
-| config | [Pkcs12CreationConfig](arkts-devicecertificate-cert-pkcs12creationconfig-i.md) | 是 | P12的创建配置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | [Pkcs12Data](arkts-devicecertificate-cert-pkcs12data-i.md) | 是 |
+| config | [Pkcs12CreationConfig](arkts-devicecertificate-cert-pkcs12creationconfig-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Uint8Array | 表示创建的P12，DER格式。 |
+| 类型 |
+| --- |
+| Uint8Array |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The password is too short or too long; <br>2. The private key does not match the certificate; <br>3. Invalid encryption algorithm parameters. |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
+| 错误码ID |
+| --- |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 **示例**
 
@@ -337,4 +337,3 @@ async function doTestCreatePkcs12Sync() {
   }
 }
 ```
-

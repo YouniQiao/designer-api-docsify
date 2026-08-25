@@ -2,9 +2,9 @@
 
 A Caller UIAbility can use the [startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall) API to start the target Callee UIAbility. After the target UIAbility is started successfully, a Caller object is returned to the caller for communication.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export interface Caller--><!--Device-unnamed-export interface Caller-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -22,35 +22,35 @@ call(method: string, data: rpc.Parcelable): Promise<void>
 
 Used by a Caller UIAbility to send serialized data, as agreed upon by both parties, to the Callee UIAbility. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Caller-call(method: string, data: rpc.Parcelable): Promise<void>--><!--Device-Caller-call(method: string, data: rpc.Parcelable): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| method | string | Yes | Method name agreed upon by the Caller UIAbility and Callee UIAbility, used by the Callee UIAbility to identify the type of message. |
-| data | rpc.Parcelable | Yes | Message content sent from the Caller UIAbility to the Callee UIAbility, which is in serialized form. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| method | string | Yes |
+| data | rpc.Parcelable | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16200002](../errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16200002](../errorcode-ability.md#16200002-invalid-callee) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
 
 **Examples**
 
@@ -118,35 +118,35 @@ callWithResult(method: string, data: rpc.Parcelable): Promise<rpc.MessageSequenc
 
 Used by a Caller UIAbility to send serialized data to a Callee UIAbility and return the result after the Callee UIAbility processes the message. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Caller-callWithResult(method: string, data: rpc.Parcelable): Promise<rpc.MessageSequence>--><!--Device-Caller-callWithResult(method: string, data: rpc.Parcelable): Promise<rpc.MessageSequence>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| method | string | Yes | Method name agreed upon by the Caller UIAbility and Callee UIAbility, used by the Callee UIAbility to identify the type of message. |
-| data | rpc.Parcelable | Yes | Message content sent from the Caller UIAbility to the Callee UIAbility, which is in serialized form. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| method | string | Yes |
+| data | rpc.Parcelable | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;rpc.MessageSequence&gt; | Promise used to return the response data from the Callee UIAbility. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;rpc.MessageSequence & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16200002](../errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16200002](../errorcode-ability.md#16200002-invalid-callee) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
 
 **Examples**
 
@@ -219,52 +219,40 @@ Unregisters the listener for disconnection notifications from the Callee UIAbili
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Caller-off(type: 'release', callback: OnReleaseCallback): void--><!--Device-Caller-off(type: 'release', callback: OnReleaseCallback): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'release' | Yes | Event type. The value is fixed at **'release'**. |
-| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes | Callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'release' | Yes |
+| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
 ```TypeScript
-import { UIAbility, Caller, OnReleaseCallback } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
+
+let method = 'call_Function';
 
 export default class MainUIAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    this.context.startAbilityByCall({
-      bundleName: 'com.example.myservice',
-      abilityName: 'MainUIAbility',
-      deviceId: ''
-    }).then((obj) => {
-      let caller: Caller = obj;
-      try {
-        let onReleaseCallBack: OnReleaseCallback = (str) => {
-          console.info(`Caller OnRelease CallBack is called ${str}`);
-        };
-        caller.on('release', onReleaseCallBack);
-        caller.off('release', onReleaseCallBack);
-      } catch (error) {
-        console.error(`Caller.on or Caller.off catch error, error.code: ${error.code}, error.message: ${error.message}`);
-      }
-    }).catch((err: BusinessError) => {
-      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
-    });
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info('Callee onCreate is called');
+    try {
+      this.callee.off(method);
+    } catch (error) {
+      console.error(`Callee.off catch error, error.code: ${error.code}, error.message: ${error.message}`);
+    }
   }
 }
 ```
@@ -279,56 +267,27 @@ Unregisters the listener for disconnection notifications from the Callee UIAbili
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Caller-off(type: 'release'): void--><!--Device-Caller-off(type: 'release'): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'release' | Yes | Event type. The value is fixed at **'release'**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'release' | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
-```TypeScript
-import { UIAbility, Caller, OnReleaseCallback } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let caller: Caller;
-
-export default class MainUIAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    this.context.startAbilityByCall({
-      bundleName: 'com.example.myservice',
-      abilityName: 'MainUIAbility',
-      deviceId: ''
-    }).then((obj) => {
-      caller = obj;
-      try {
-        let onReleaseCallBack: OnReleaseCallback = (str) => {
-          console.info(`Caller OnRelease CallBack is called ${str}`);
-        };
-        caller.on('release', onReleaseCallBack);
-        caller.off('release');
-      } catch (error) {
-        console.error(`Caller.on or Caller.off catch error, error.code: ${error.code}, error.message: ${error.message}`);
-      }
-    }).catch((err: BusinessError) => {
-      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
-    });
-  }
-}
-```
+See off
 
 ## offRelease
 
@@ -340,17 +299,17 @@ Unregisters the listener for disconnection notifications from the Callee UIAbili
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-Caller-offRelease(callback: OnReleaseCallback): void--><!--Device-Caller-offRelease(callback: OnReleaseCallback): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes | Callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes |
 
 ## offRelease
 
@@ -362,9 +321,9 @@ Unregisters the listener for disconnection notifications from the Callee UIAbili
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-Caller-offRelease(): void--><!--Device-Caller-offRelease(): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -378,52 +337,73 @@ Used by the Caller UIAbility to register a listener for disconnection notificati
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Caller-on(type: 'release', callback: OnReleaseCallback): void--><!--Device-Caller-on(type: 'release', callback: OnReleaseCallback): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'release' | Yes | Event type. The value is fixed at **'release'**. |
-| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes | Callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'release' | Yes |
+| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
 
 **Examples**
 
 ```TypeScript
-import { UIAbility, Caller } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+
+class MyMessageAble implements rpc.Parcelable {
+  name: string
+  str: string
+  num: number = 1
+
+  constructor(name: string, str: string) {
+    this.name = name;
+    this.str = str;
+  }
+
+  marshalling(messageSequence: rpc.MessageSequence) {
+    messageSequence.writeInt(this.num);
+    messageSequence.writeString(this.str);
+    console.info(`MyMessageAble marshalling num[${this.num}] str[${this.str}]`);
+    return true;
+  }
+
+  unmarshalling(messageSequence: rpc.MessageSequence) {
+    this.num = messageSequence.readInt();
+    this.str = messageSequence.readString();
+    console.info(`MyMessageAble unmarshalling num[${this.num}] str[${this.str}]`);
+    return true;
+  }
+}
+
+let method = 'call_Function';
+
+function funcCallBack(pdata: rpc.MessageSequence) {
+  let msg = new MyMessageAble('test', '');
+  pdata.readParcelable(msg);
+  return new MyMessageAble('test1', 'Callee test');
+}
 
 export default class MainUIAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let dstDeviceId: string = 'xxxx';
-    this.context.startAbilityByCall({
-      bundleName: 'com.example.myservice',
-      abilityName: 'MainUIAbility',
-      deviceId: dstDeviceId
-    }).then((obj) => {
-      let caller: Caller = obj;
-      try {
-        caller.on('release', (str) => {
-          console.info(`Caller OnRelease CallBack is called ${str}`);
-        });
-      } catch (error) {
-        console.error(`Caller.on catch error, error.code: ${error.code}, error.message: ${error.message}`);
-      }
-    }).catch((err: BusinessError) => {
-      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
-    });
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info('Callee onCreate is called');
+    try {
+      this.callee.on(method, funcCallBack);
+    } catch (error) {
+      console.error(`Callee.on catch error, error.code: ${error.code}, error.message: ${error.message}`);
+    }
   }
 }
 ```
@@ -436,26 +416,26 @@ onRelease(callback: OnReleaseCallback): void
 
 Used by the Caller UIAbility to register a listener for disconnection notifications from the Callee UIAbility.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Caller-onRelease(callback: OnReleaseCallback): void--><!--Device-Caller-onRelease(callback: OnReleaseCallback): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes | Callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
 
 **Examples**
 
@@ -494,26 +474,26 @@ onRemoteStateChange(callback: OnRemoteStateChangeCallback): void
 
 Called when the remote UIAbility state changes in the collaboration scenario. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Caller-onRemoteStateChange(callback: OnRemoteStateChangeCallback): void--><!--Device-Caller-onRemoteStateChange(callback: OnRemoteStateChangeCallback): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [OnRemoteStateChangeCallback](arkts-ability-app-ability-uiability-onremotestatechangecallback-i.md) | Yes | Callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [OnRemoteStateChangeCallback](arkts-ability-app-ability-uiability-onremotestatechangecallback-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
 
 **Examples**
 
@@ -553,20 +533,20 @@ release(): void
 
 Used by a Caller UIAbility to proactively release the connection with the Callee UIAbility. After this API is called, the Caller UIAbility can no longer use **call** or **callWithResult** to send messages to the Callee UIAbility.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Caller-release(): void--><!--Device-Caller-release(): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16200002](../errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
+| Error Code ID |
+| --- |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16200002](../errorcode-ability.md#16200002-invalid-callee) |
 
 **Examples**
 
@@ -596,4 +576,3 @@ export default class MainUIAbility extends UIAbility {
   }
 }
 ```
-

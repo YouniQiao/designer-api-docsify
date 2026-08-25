@@ -12,7 +12,7 @@
 
 **起始版本：** 18
 
-<!--Device-unnamed-export interface ArcListItemInterface--><!--Device-unnamed-export interface ArcListItemInterface-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -22,7 +22,7 @@
 import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@kit.ArkUI';
 ```
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (): ArcListItemAttribute
@@ -32,15 +32,14 @@ import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@k
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
-<!--Device-ArcListItemInterface-(): ArcListItemAttribute--><!--Device-ArcListItemInterface-(): ArcListItemAttribute-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) |  |
-
+| 类型 |
+| --- |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |

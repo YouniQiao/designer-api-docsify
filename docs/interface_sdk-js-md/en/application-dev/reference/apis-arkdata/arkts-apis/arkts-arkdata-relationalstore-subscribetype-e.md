@@ -2,9 +2,9 @@
 
 Enumerates the subscription types. Use the enum name rather than the enum value.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-relationalStore-enum SubscribeType--><!--Device-relationalStore-enum SubscribeType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -16,9 +16,9 @@ SUBSCRIBE_TYPE_REMOTE = 0
 
 Subscribe to remote data changes.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SubscribeType-SUBSCRIBE_TYPE_REMOTE = 0--><!--Device-SubscribeType-SUBSCRIBE_TYPE_REMOTE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -30,12 +30,12 @@ SUBSCRIBE_TYPE_CLOUD = 1
 
 Subscribe to cloud data changes.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 10 - 11: ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-SubscribeType-SUBSCRIBE_TYPE_CLOUD = 1--><!--Device-SubscribeType-SUBSCRIBE_TYPE_CLOUD = 1-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -47,12 +47,12 @@ SUBSCRIBE_TYPE_CLOUD_DETAILS = 2
 
 Subscribe to detailed information about cloud data changes.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 10 - 11: ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-SubscribeType-SUBSCRIBE_TYPE_CLOUD_DETAILS = 2--><!--Device-SubscribeType-SUBSCRIBE_TYPE_CLOUD_DETAILS = 2-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -64,9 +64,8 @@ SUBSCRIBE_TYPE_LOCAL_DETAILS
 
 Subscribe to detailed information about local data changes.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SubscribeType-SUBSCRIBE_TYPE_LOCAL_DETAILS--><!--Device-SubscribeType-SUBSCRIBE_TYPE_LOCAL_DETAILS-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-

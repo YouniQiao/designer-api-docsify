@@ -14,13 +14,13 @@ function preloadApplication(bundleName: string, userId: int, mode: PreloadMode, 
 
 预加载应用进程。接口返回成功并不代表预加载成功，具体结果以目标应用进程是否创建成功为准。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PRELOAD_APPLICATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-appManager-function preloadApplication(bundleName: string, userId: int, mode: PreloadMode, appIndex?: int): Promise<void>--><!--Device-appManager-function preloadApplication(bundleName: string, userId: int, mode: PreloadMode, appIndex?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -28,28 +28,28 @@ function preloadApplication(bundleName: string, userId: int, mode: PreloadMode, 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 预加载的应用包名。 |
-| userId | int | 是 | 预加载的用户Id。 |
-| mode | [PreloadMode](arkts-ability-appmanager-preloadmode-e-sys.md) | 是 | 预加载模式。 |
-| appIndex | int | 否 | 预加载应用分身的appIndex。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| mode | [PreloadMode](arkts-ability-appmanager-preloadmode-e-sys.md) | 是 |
+| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16300005](../errorcode-ability.md#16300005-指定的包信息不存在) | The target bundle does not exist. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [16300005](../errorcode-ability.md#16300005-指定的包信息不存在) |
 
 **示例**
 
@@ -76,4 +76,3 @@ try {
     `preloadApplication error, code: ${(err as BusinessError).code}, msg:${(err as BusinessError).message}`);
 }
 ```
-

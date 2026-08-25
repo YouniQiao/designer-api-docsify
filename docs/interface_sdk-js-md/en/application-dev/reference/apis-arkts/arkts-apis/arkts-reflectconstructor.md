@@ -9,7 +9,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Constructor](arkts-arkts-reflectconstructor-constructor-c.md) | Represents a class constructor. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Constructor](arkts-arkts-reflectconstructor-constructor-c.md) |

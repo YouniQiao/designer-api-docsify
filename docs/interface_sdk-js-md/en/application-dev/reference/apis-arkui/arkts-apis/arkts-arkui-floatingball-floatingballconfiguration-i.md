@@ -2,9 +2,9 @@
 
 Describes the parameters for creating a floating ball controller.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-floatingBall-interface FloatingBallConfiguration--><!--Device-floatingBall-interface FloatingBallConfiguration-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -24,9 +24,8 @@ Context environment.
 
 **Type:** [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-FloatingBallConfiguration-context: BaseContext--><!--Device-FloatingBallConfiguration-context: BaseContext-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
-

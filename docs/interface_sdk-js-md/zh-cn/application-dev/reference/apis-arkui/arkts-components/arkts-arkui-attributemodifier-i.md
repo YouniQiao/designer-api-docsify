@@ -4,7 +4,7 @@ Defines the attribute modifier.@interface AttributeModifier&lt;T&gt;
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare interface AttributeModifier--><!--Device-unnamed-declare interface AttributeModifier-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,19 +23,19 @@ Defines the disabled update attribute function.
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AttributeModifier-applyDisabledAttribute?(instance: T) : void--><!--Device-AttributeModifier-applyDisabledAttribute?(instance: T) : void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| instance | T | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| instance | T | 是 |
 
 ## applyFocusedAttribute
 
@@ -47,19 +47,19 @@ Defines the focused update attribute function.
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AttributeModifier-applyFocusedAttribute?(instance: T) : void--><!--Device-AttributeModifier-applyFocusedAttribute?(instance: T) : void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| instance | T | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| instance | T | 是 |
 
 ## applyHoveredAttribute
 
@@ -71,19 +71,19 @@ applyHoveredAttribute?(instance: T) : void
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AttributeModifier-applyHoveredAttribute?(instance: T) : void--><!--Device-AttributeModifier-applyHoveredAttribute?(instance: T) : void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| instance | T | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| instance | T | 是 |
 
 ## applyNormalAttribute
 
@@ -95,19 +95,19 @@ Defines the normal update attribute function.
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AttributeModifier-applyNormalAttribute?(instance: T) : void--><!--Device-AttributeModifier-applyNormalAttribute?(instance: T) : void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| instance | T | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| instance | T | 是 |
 
 ## applyPressedAttribute
 
@@ -119,19 +119,19 @@ Defines the pressed update attribute function.
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AttributeModifier-applyPressedAttribute?(instance: T) : void--><!--Device-AttributeModifier-applyPressedAttribute?(instance: T) : void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| instance | T | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| instance | T | 是 |
 
 ## applySelectedAttribute
 
@@ -143,17 +143,16 @@ Defines the selected update attribute function.
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AttributeModifier-applySelectedAttribute?(instance: T) : void--><!--Device-AttributeModifier-applySelectedAttribute?(instance: T) : void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| instance | T | 是 |  |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| instance | T | 是 |

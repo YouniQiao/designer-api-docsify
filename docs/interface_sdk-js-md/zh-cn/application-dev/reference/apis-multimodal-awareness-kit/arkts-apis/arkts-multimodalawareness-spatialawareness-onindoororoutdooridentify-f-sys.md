@@ -17,11 +17,11 @@ function onIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParams
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **需要权限：** ohos.permission.ACCESS_SENSING_WITH_ULTRASOUND
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-spatialAwareness-function onIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParams,    callback: Callback<DoorPositionResponse>): void--><!--Device-spatialAwareness-function onIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParams,    callback: Callback<DoorPositionResponse>): void-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
@@ -29,21 +29,21 @@ function onIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParams
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| configParams | [DistanceMeasurementConfigParams](arkts-multimodalawareness-spatialawareness-distancemeasurementconfigparams-i-sys.md) | 是 | 测距接口配置参数 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DoorPositionResponse](arkts-multimodalawareness-spatialawareness-doorpositionresponse-i-sys.md)&gt; | 是 | 回调函数，返回门内外信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| configParams | [DistanceMeasurementConfigParams](arkts-multimodalawareness-spatialawareness-distancemeasurementconfigparams-i-sys.md) | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DoorPositionResponse](arkts-multimodalawareness-spatialawareness-doorpositionresponse-i-sys.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to <br> limited device capabilities. |
-| [35100001](../errorcode-spatialAwareness.md#35100001-服务异常) | Service exception. |
-| [35100002](../errorcode-spatialAwareness.md#35100002-订阅失败) | Subscription failed. |
-| [35100004](../errorcode-spatialAwareness.md#35100004-无效参数) | Parameter invalid. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35100001](../errorcode-spatialAwareness.md#35100001-服务异常) |
+| [35100002](../errorcode-spatialAwareness.md#35100002-订阅失败) |
+| [35100004](../errorcode-spatialAwareness.md#35100004-无效参数) |
 
 **示例**
 
@@ -65,4 +65,3 @@ import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
       console.error(`call onIndoorOrOutdoorIdentify failed, Code: ${err.code}, message: ${err.message}`);
    }
 ```
-

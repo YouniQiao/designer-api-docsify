@@ -7,11 +7,11 @@ huks Handle结构体。
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** null
-
-<!--Device-huks-export interface HuksHandle--><!--Device-huks-export interface HuksHandle-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -34,9 +34,9 @@ errorCode: number
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-HuksHandle-errorCode: number--><!--Device-HuksHandle-errorCode: number-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -53,9 +53,9 @@ handle: number
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-HuksHandle-handle: number--><!--Device-HuksHandle-handle: number-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -72,9 +72,8 @@ token?: Uint8Array
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-<!--Device-HuksHandle-token?: Uint8Array--><!--Device-HuksHandle-token?: Uint8Array-End-->
-
 **系统能力：** SystemCapability.Security.Huks.Extension
-

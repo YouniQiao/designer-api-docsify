@@ -19,25 +19,25 @@ function contains(rule: bigint): boolean
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [containsCheckRule](arkts-performanceanalysis-hichecker-containscheckrule-f.md)
-
-<!--Device-hichecker-function contains(rule: bigint): boolean--><!--Device-hichecker-function contains(rule: bigint): boolean-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rule | bigint | 是 | 需要查询的规则。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| rule | bigint | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 查询结果。true 表示规则已添加；false 表示规则未添加。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -49,4 +49,3 @@ hichecker.addRule(hichecker.RULE_THREAD_CHECK_SLOW_PROCESS);
 hichecker.contains(hichecker.RULE_THREAD_CHECK_SLOW_PROCESS); // return true;
 hichecker.contains(hichecker.RULE_CAUTION_PRINT_LOG); // return false;
 ```
-

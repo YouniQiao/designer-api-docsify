@@ -8,22 +8,21 @@ Defines the ArkTS Array reduction function, which is used by the 'from' API of t
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-collections-type ArrayFromMapFn<FromElementType, ToElementType> = (value: FromElementType, index: number) => ToElementType--><!--Device-collections-type ArrayFromMapFn<FromElementType, ToElementType> = (value: FromElementType, index: number) => ToElementType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | FromElementType | Yes | Element that is being processed. |
-| index | number | Yes | Index of the element in the ArkTS array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | FromElementType | Yes |
+| index | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ToElementType | The transformed value. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ToElementType |

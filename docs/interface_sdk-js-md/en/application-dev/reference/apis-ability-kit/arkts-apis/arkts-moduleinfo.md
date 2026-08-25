@@ -4,7 +4,6 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ModuleInfo](arkts-ability-moduleinfo-moduleinfo-depr-i.md) | The ModuleInfo module provides module information of an application. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ModuleInfo](arkts-ability-moduleinfo-moduleinfo-depr-i.md) |

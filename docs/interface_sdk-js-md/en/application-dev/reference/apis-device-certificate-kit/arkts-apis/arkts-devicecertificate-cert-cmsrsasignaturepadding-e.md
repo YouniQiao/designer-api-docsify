@@ -2,9 +2,9 @@
 
 Enumerates the RSA CMS signature padding modes.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-cert-enum CmsRsaSignaturePadding--><!--Device-cert-enum CmsRsaSignaturePadding-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -16,11 +16,11 @@ PKCS1_PADDING = 0
 
 PKCS #1 padding mode.
 
-**Since:** 23
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
-<!--Device-CmsRsaSignaturePadding-PKCS1_PADDING = 0--><!--Device-CmsRsaSignaturePadding-PKCS1_PADDING = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -32,11 +32,10 @@ PKCS1_PSS_PADDING = 1
 
 PKCS #1 PSS padding mode.
 
-**Since:** 23
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
-<!--Device-CmsRsaSignaturePadding-PKCS1_PSS_PADDING = 1--><!--Device-CmsRsaSignaturePadding-PKCS1_PSS_PADDING = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Security.Cert
-

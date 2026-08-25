@@ -6,7 +6,7 @@ Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md). This object
 
 **Since:** 11
 
-<!--Device-unnamed-interface PinchGestureEvent--><!--Device-unnamed-interface PinchGestureEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,11 @@ X-coordinate of the center of the pinch gesture, in vp, relative to the original
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PinchGestureEvent-pinchCenterX: number--><!--Device-PinchGestureEvent-pinchCenterX: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,11 +47,11 @@ Y-coordinate of the center of the pinch gesture, in vp, relative to the original
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PinchGestureEvent-pinchCenterY: number--><!--Device-PinchGestureEvent-pinchCenterY: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,11 +67,10 @@ Scale factor.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PinchGestureEvent-scale: number--><!--Device-PinchGestureEvent-scale: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,11 +2,9 @@
 
 拖拽过程中监听到status改变时上报的数据。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-dragController-interface DragAndDropInfo--><!--Device-dragController-interface DragAndDropInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,13 +24,13 @@ event: DragEvent
 
 **类型：** DragEvent
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DragAndDropInfo-event: DragEvent--><!--Device-DragAndDropInfo-event: DragEvent-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,17 +40,17 @@ event: DragEvent
 extraParams?: string
 ```
 
-设置拖拽事件额外信息，具体功能暂未实现。默认值：空
+设置拖拽事件额外信息，具体功能暂未实现。默认值为空。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DragAndDropInfo-extraParams?: string--><!--Device-DragAndDropInfo-extraParams?: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,13 +64,12 @@ status: DragStatus
 
 **类型：** [DragStatus](arkts-arkui-dragcontroller-dragstatus-e.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DragAndDropInfo-status: DragStatus--><!--Device-DragAndDropInfo-status: DragStatus-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

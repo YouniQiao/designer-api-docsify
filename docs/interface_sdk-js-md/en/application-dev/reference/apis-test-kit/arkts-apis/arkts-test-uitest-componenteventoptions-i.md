@@ -2,9 +2,9 @@
 
 Describes the extended configuration of component operation event listening, which is used to specify the listening process configuration and event filtering conditions.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-unnamed-declare interface ComponentEventOptions--><!--Device-unnamed-declare interface ComponentEventOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -25,11 +25,11 @@ Attribute requirements of the target component to listen for. By default, all co
 
 **Type:** [On](arkts-test-uitest-on-c.md)
 
-**Since:** 23
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
-<!--Device-ComponentEventOptions-on?: On--><!--Device-ComponentEventOptions-on?: On-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -41,13 +41,12 @@ timeout?: int
 
 Listening timeout interval, in milliseconds. The value is an integer greater than or equal to 500. The default value is **10000**. If the value is out of range, an error code is thrown.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
-<!--Device-ComponentEventOptions-timeout?: int--><!--Device-ComponentEventOptions-timeout?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Test.UiTest
-

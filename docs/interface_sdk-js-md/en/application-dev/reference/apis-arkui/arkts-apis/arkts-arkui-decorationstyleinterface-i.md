@@ -10,7 +10,7 @@ Describes the API object for text decoration line styles.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface DecorationStyleInterface--><!--Device-unnamed-declare interface DecorationStyleInterface-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,11 +31,11 @@ Color of the text decorative line.Default value: **Color.Black**.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DecorationStyleInterface-color?: ResourceColor--><!--Device-DecorationStyleInterface-color?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,11 +51,11 @@ Style of the text decorative line.Default value: **TextDecorationStyle.SOLID**.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DecorationStyleInterface-style?: TextDecorationStyle--><!--Device-DecorationStyleInterface-style?: TextDecorationStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -71,11 +71,11 @@ Scale factor for the decoration line thickness.Default value: **1.0**.Value rang
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-DecorationStyleInterface-thicknessScale?: number--><!--Device-DecorationStyleInterface-thicknessScale?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -91,11 +91,10 @@ Type of the text decorative line.Default value: **TextDecorationType.None**.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-DecorationStyleInterface-type: TextDecorationType--><!--Device-DecorationStyleInterface-type: TextDecorationType-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

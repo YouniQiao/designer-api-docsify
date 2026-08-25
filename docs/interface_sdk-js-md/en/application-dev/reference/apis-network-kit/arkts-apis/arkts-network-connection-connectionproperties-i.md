@@ -6,9 +6,9 @@ Defines the network connection properties.
 > The values of **linkAddresses**, **routes**, and **dnses** may be empty. You need to protect the empty values.
 > You are advised to check whether the objects exist before using the values.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-connection-export interface ConnectionProperties--><!--Device-connection-export interface ConnectionProperties-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -28,9 +28,9 @@ Network address. For details, see [NetAddress](arkts-network-connection-netaddre
 
 **Type:** Array&lt;NetAddress&gt;
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ConnectionProperties-dnses: Array<NetAddress>--><!--Device-ConnectionProperties-dnses: Array<NetAddress>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -44,9 +44,9 @@ Domain name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ConnectionProperties-domains: string--><!--Device-ConnectionProperties-domains: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -60,9 +60,9 @@ Network interface card (NIC) name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ConnectionProperties-interfaceName: string--><!--Device-ConnectionProperties-interfaceName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -78,9 +78,9 @@ Whether IPv4 is available on the current network. **true**: IPv4 is available wh
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-ConnectionProperties-isIPv4LinkValid?: boolean--><!--Device-ConnectionProperties-isIPv4LinkValid?: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -96,9 +96,9 @@ Whether IPv6 is available on the current network. **true**: IPv6 is available wh
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-ConnectionProperties-isIPv6LinkValid?: boolean--><!--Device-ConnectionProperties-isIPv6LinkValid?: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -112,9 +112,9 @@ Network link information.
 
 **Type:** Array&lt;LinkAddress&gt;
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ConnectionProperties-linkAddresses: Array<LinkAddress>--><!--Device-ConnectionProperties-linkAddresses: Array<LinkAddress>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -126,11 +126,11 @@ mtu: int
 
 Maximum transmission unit (MTU).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ConnectionProperties-mtu: int--><!--Device-ConnectionProperties-mtu: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -144,9 +144,8 @@ Network route information.
 
 **Type:** Array&lt;RouteInfo&gt;
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ConnectionProperties-routes: Array<RouteInfo>--><!--Device-ConnectionProperties-routes: Array<RouteInfo>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
-

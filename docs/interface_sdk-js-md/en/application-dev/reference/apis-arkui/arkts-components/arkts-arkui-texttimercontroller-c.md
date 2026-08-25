@@ -5,11 +5,12 @@ Defines the controller for controlling the **TextTimer** component. A **TextTime
 ## Objects to Import
 
 ```ts
-textTimerController: TextTimerController = new TextTimerController() ```
+textTimerController: TextTimerController = new TextTimerController()
+```
 
 **Since:** 8
 
-<!--Device-unnamed-declare class TextTimerController--><!--Device-unnamed-declare class TextTimerController-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +29,11 @@ A constructor used to create a **TextTimerController** object.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-TextTimerController-constructor()--><!--Device-TextTimerController-constructor()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,11 +47,11 @@ Pauses the timer.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-TextTimerController-pause()--><!--Device-TextTimerController-pause()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,11 +65,11 @@ Resets the timer.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-TextTimerController-reset()--><!--Device-TextTimerController-reset()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,11 +83,10 @@ Starts the timer.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
-<!--Device-TextTimerController-start()--><!--Device-TextTimerController-start()-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

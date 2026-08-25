@@ -1,11 +1,11 @@
 # @ohos.multimedia.audioHaptic
 
-音振协同，表示在播放声音时，可同步发起振动。可用于来电通知、消息提醒等场景。  
-**设备行为差异：** 若设备无振动器件，将不会产生振动效果。@namespace audioHaptic
+音振协同
 
-**起始版本：** 23
 
-<!--Device-unnamed-declare namespace audioHaptic--><!--Device-unnamed-declare namespace audioHaptic-End-->
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -19,31 +19,30 @@ import { audioHaptic } from '@kit.AudioKit';
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md) | 获取音振管理器。 |
+| 名称 |
+| --- |
+| [getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [AudioHapticFileDescriptor](arkts-audio-audiohaptic-audiohapticfiledescriptor-i.md) | 描述音振文件描述符。 |
-| [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) | 管理音振协同功能。在调用AudioHapticManager的接口前，需要先通过[getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md)创建实例。 |
-| [AudioHapticPlayer](arkts-audio-audiohaptic-audiohapticplayer-i.md) | 音振播放器，提供音振协同播放功能。在调用AudioHapticPlayer的接口前，需要先通过 [createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createplayer)创建 实例。 |
-| [AudioHapticPlayerOptions](arkts-audio-audiohaptic-audiohapticplayeroptions-i.md) | 音振播放器选项。 |
+| 名称 |
+| --- |
+| [AudioHapticFileDescriptor](arkts-audio-audiohaptic-audiohapticfiledescriptor-i.md) |
+| [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) |
+| [AudioHapticPlayer](arkts-audio-audiohaptic-audiohapticplayer-i.md) |
+| [AudioHapticPlayerOptions](arkts-audio-audiohaptic-audiohapticplayeroptions-i.md) |
 
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [AudioHapticPlayer](arkts-audio-audiohaptic-audiohapticplayer-i-sys.md) | 音振播放器，提供音振协同播放功能。在调用AudioHapticPlayer的接口前，需要先通过 [createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createplayer)创建 实例。 |
+| 名称 |
+| --- |
+| [AudioHapticPlayer](arkts-audio-audiohaptic-audiohapticplayer-i-sys.md) |
 <!--DelEnd-->
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-| [AudioHapticType](arkts-audio-audiohaptic-audiohaptictype-e.md) | 枚举，音振类型。@enum { int } |
-| [AudioLatencyMode](arkts-audio-audiohaptic-audiolatencymode-e.md) | 枚举，音频时延模式。@enum {int} |
-
+| 名称 |
+| --- |
+| [AudioHapticType](arkts-audio-audiohaptic-audiohaptictype-e.md) |
+| [AudioLatencyMode](arkts-audio-audiohaptic-audiolatencymode-e.md) |

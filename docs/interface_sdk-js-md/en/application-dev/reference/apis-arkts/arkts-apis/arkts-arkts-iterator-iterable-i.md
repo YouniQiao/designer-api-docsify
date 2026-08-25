@@ -4,9 +4,7 @@ Iterable interface representing an object whose elements can be traversed
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export interface Iterable--><!--Device-unnamed-export interface Iterable-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,17 +23,14 @@ Returns an iterator for this object
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Iterable-$_iterator(): Iterator<T>--><!--Device-Iterable-$_iterator(): Iterator<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Iterator&lt;T&gt; | An iterator instance for this iterable object |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Iterator & lt;T & gt; |

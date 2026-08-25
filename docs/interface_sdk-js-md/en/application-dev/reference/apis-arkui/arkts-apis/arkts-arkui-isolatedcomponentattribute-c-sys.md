@@ -6,7 +6,7 @@ Only the width, height, and backgroundColor universal attributes are supported.T
 
 **Since:** 12
 
-<!--Device-unnamed-declare class IsolatedComponentAttribute--><!--Device-unnamed-declare class IsolatedComponentAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,9 +29,9 @@ Invoked when an error occurs during the running of the **IsolatedComponent**. Yo
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-IsolatedComponentAttribute-onError(    callback: ErrorCallback  ): IsolatedComponentAttribute--><!--Device-IsolatedComponentAttribute-onError(    callback: ErrorCallback  ): IsolatedComponentAttribute-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -39,13 +39,12 @@ Invoked when an error occurs during the running of the **IsolatedComponent**. Yo
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](arkts-arkui-errorcallback-t-sys.md) | Yes | Error information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [ErrorCallback](arkts-arkui-errorcallback-t-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [IsolatedComponentAttribute](arkts-arkui-isolatedcomponentattribute-c-sys.md) |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [IsolatedComponentAttribute](arkts-arkui-isolatedcomponentattribute-c-sys.md) |

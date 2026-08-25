@@ -4,7 +4,7 @@
 
 **起始版本：** 26.1.0
 
-<!--Device-abilityToolAccessCtrl-interface RemoteUserAuthItem--><!--Device-abilityToolAccessCtrl-interface RemoteUserAuthItem-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -27,7 +27,7 @@ authResult: string
 
 **起始版本：** 26.1.0
 
-<!--Device-RemoteUserAuthItem-authResult: string--><!--Device-RemoteUserAuthItem-authResult: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -45,9 +45,8 @@ permission: string
 
 **起始版本：** 26.1.0
 
-<!--Device-RemoteUserAuthItem-permission: string--><!--Device-RemoteUserAuthItem-permission: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
-

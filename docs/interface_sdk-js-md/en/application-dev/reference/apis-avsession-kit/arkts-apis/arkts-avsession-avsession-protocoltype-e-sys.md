@@ -2,9 +2,9 @@
 
 Define different protocol capability
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-avSession-enum ProtocolType--><!--Device-avSession-enum ProtocolType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -16,11 +16,10 @@ TYPE_CAST_PLUS_MIRROR = 1
 
 Cast+ mirror capability
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ProtocolType-TYPE_CAST_PLUS_MIRROR = 1--><!--Device-ProtocolType-TYPE_CAST_PLUS_MIRROR = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
-

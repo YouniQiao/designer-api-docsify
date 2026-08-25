@@ -1,8 +1,6 @@
 # ReadonlyMap
 
-**Since:** -1
-
-<!--Device-unnamed-interface ReadonlyMap--><!--Device-unnamed-interface ReadonlyMap-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,14 +15,12 @@
 
 Returns an iterable of entries in the map.
 
-**Since:** -1
-
-<!--Device-ReadonlyMap-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-ReadonlyMap-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## entries
 
 ```TypeScript
@@ -33,14 +29,12 @@ entries(): IterableIterator<[K, V]>
 
 Returns an iterable of key, value pairs for every entry in the map.
 
-**Since:** -1
-
-<!--Device-ReadonlyMap-entries(): IterableIterator<[K, V]>--><!--Device-ReadonlyMap-entries(): IterableIterator<[K, V]>-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## keys
 
 ```TypeScript
@@ -49,14 +43,12 @@ keys(): IterableIterator<K>
 
 Returns an iterable of keys in the map
 
-**Since:** -1
-
-<!--Device-ReadonlyMap-keys(): IterableIterator<K>--><!--Device-ReadonlyMap-keys(): IterableIterator<K>-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## values
 
 ```TypeScript
@@ -65,11 +57,9 @@ values(): IterableIterator<V>
 
 Returns an iterable of values in the map
 
-**Since:** -1
-
-<!--Device-ReadonlyMap-values(): IterableIterator<V>--><!--Device-ReadonlyMap-values(): IterableIterator<V>-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

@@ -14,17 +14,17 @@ function getVMRuntimeStats(): GcStats
 
 获取系统GC统计信息。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-hidebug-function getVMRuntimeStats(): GcStats--><!--Device-hidebug-function getVMRuntimeStats(): GcStats-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md) | 系统GC统计信息。 |
+| 类型 |
+| --- |
+| [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md) |
 
 **示例**
 
@@ -38,4 +38,3 @@ console.info(`gc-bytes-allocated: ${vMRuntimeStats['ark.gc.gc-bytes-allocated']}
 console.info(`gc-bytes-freed: ${vMRuntimeStats['ark.gc.gc-bytes-freed']}`);
 console.info(`fullgc-longtime-count: ${vMRuntimeStats['ark.gc.fullgc-longtime-count']}`);
 ```
-

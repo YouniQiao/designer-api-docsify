@@ -1,14 +1,10 @@
 # @ohos.curves
 
-Contains interpolator functions such as initialization, third-order Bezier curves, and spring curves.@namespace curves
+The **Curves** module provides APIs for interpolation calculation to create step, cubic Bezier, and spring curves.
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-declare namespace curves--><!--Device-unnamed-declare namespace curves-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,26 +18,47 @@ import { curves } from '@kit.ArkUI';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [cubicBezierCurve](arkts-arkui-curves-cubicbeziercurve-f.md) | Creates a cubic Bezier curve. The curve values must be between 0 and 1. |
-| [customCurve](arkts-arkui-curves-customcurve-f.md) | Creates a custom curve. |
-| [initCurve](arkts-arkui-curves-initcurve-f.md) | Implements initialization for the interpolation curve, which is used to create an interpolation curve based on the input parameter. |
-| [interpolatingSpring](arkts-arkui-curves-interpolatingspring-f.md) | Creates an interpolating spring curve animated from 0 to 1. The actual animation value is calculated based on the curve. The animation duration is subject to the curve parameters, rather than the **duration** parameter in **animation** or **animateTo**. |
-| [responsiveSpringMotion](arkts-arkui-curves-responsivespringmotion-f.md) | Creates a responsive spring animation curve. It is a special case of springMotion, with the only difference in the default values. It can be used together with **springMotion**. |
-| [springCurve](arkts-arkui-curves-springcurve-f.md) | Creates a spring curve. The curve shape is subject to the spring parameters, and the animation duration is subject to the **duration** parameter in **animation** and **animateTo**. |
-| [springMotion](arkts-arkui-curves-springmotion-f.md) | Creates a spring animation curve. If multiple spring animations are applied to the same attribute of an object, each animation replaces their predecessor and inherits the velocity. |
-| [stepsCurve](arkts-arkui-curves-stepscurve-f.md) | Creates a step curve. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [cubicBezier](arkts-arkui-curves-cubicbezier-f.md) |
+| [cubicBezierCurve](arkts-arkui-curves-cubicbeziercurve-f.md) |
+| [customCurve](arkts-arkui-curves-customcurve-f.md) |
+| [init](arkts-arkui-curves-init-f.md) |
+| [initCurve](arkts-arkui-curves-initcurve-f.md) |
+| [interpolatingSpring](arkts-arkui-curves-interpolatingspring-f.md) |
+| [responsiveSpringMotion](arkts-arkui-curves-responsivespringmotion-f.md) |
+| [spring](arkts-arkui-curves-spring-f.md) |
+| [springCurve](arkts-arkui-curves-springcurve-f.md) |
+| [springMotion](arkts-arkui-curves-springmotion-f.md) |
+| [steps](arkts-arkui-curves-steps-f.md) |
+| [stepsCurve](arkts-arkui-curves-stepscurve-f.md) |
+
+<!--Del-->
+### Functions(System API)
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [trailOptimizedInterpolatingSpring](arkts-arkui-curves-trailoptimizedinterpolatingspring-f-sys.md) |
+| [trailOptimizedResponsiveSpringMotion](arkts-arkui-curves-trailoptimizedresponsivespringmotion-f-sys.md) |
+| [trailOptimizedSpringMotion](arkts-arkui-curves-trailoptimizedspringmotion-f-sys.md) |
+<!--DelEnd-->
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) | Interface for curve object.@interface ICurve |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ICurve](arkts-arkui-curves-icurve-i.md) |
+
+<!--Del-->
+### Interfaces(System API)
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [TrailOptimization](arkts-arkui-curves-trailoptimization-i-sys.md) |
+<!--DelEnd-->
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [Curve](arkts-arkui-curves-curve-e.md) | enum Curve.@enum { number } |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Curve](arkts-arkui-curves-curve-e.md) |

@@ -16,19 +16,19 @@ Disables an spp server socket and releases related resources.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [sppCloseServerSocket](arkts-connectivity-bluetoothmanager-sppcloseserversocket-f.md)
-
-<!--Device-bluetooth-function sppCloseServerSocket(socket: number): void--><!--Device-bluetooth-function sppCloseServerSocket(socket: number): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| socket | number | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-bluetooth-spplisten-f.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| socket | number | Yes |
 
 **Examples**
 
@@ -44,4 +44,3 @@ function serverSocket(code : BusinessError, number : number) {
 }
 bluetooth.sppCloseServerSocket(serverNumber);
 ```
-

@@ -4,9 +4,7 @@ Relative time format part.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-Intl-export interface RelativeTimeFormatPart--><!--Device-Intl-export interface RelativeTimeFormatPart-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,11 +25,9 @@ Part type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RelativeTimeFormatPart-type: string--><!--Device-RelativeTimeFormatPart-type: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -47,11 +43,9 @@ Unit option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RelativeTimeFormatPart-unit?: RelativeTimeFormatUnit--><!--Device-RelativeTimeFormatPart-unit?: RelativeTimeFormatUnit-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -67,11 +61,8 @@ Part value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RelativeTimeFormatPart-value: string--><!--Device-RelativeTimeFormatPart-value: string-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

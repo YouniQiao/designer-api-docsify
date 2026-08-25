@@ -2,9 +2,9 @@
 
 Enumerates SIM card types.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-sim-export enum CardType--><!--Device-sim-export enum CardType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -16,9 +16,9 @@ UNKNOWN_CARD = -1
 
 Unknown type.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-CardType-UNKNOWN_CARD = -1--><!--Device-CardType-UNKNOWN_CARD = -1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -30,9 +30,9 @@ SINGLE_MODE_SIM_CARD = 10
 
 Single-card (SIM).
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-CardType-SINGLE_MODE_SIM_CARD = 10--><!--Device-CardType-SINGLE_MODE_SIM_CARD = 10-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -44,9 +44,9 @@ SINGLE_MODE_USIM_CARD = 20
 
 Single-card (USIM).
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-CardType-SINGLE_MODE_USIM_CARD = 20--><!--Device-CardType-SINGLE_MODE_USIM_CARD = 20-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -58,9 +58,9 @@ SINGLE_MODE_RUIM_CARD = 30
 
 Single-card (RUIM).
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-CardType-SINGLE_MODE_RUIM_CARD = 30--><!--Device-CardType-SINGLE_MODE_RUIM_CARD = 30-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -72,9 +72,9 @@ DUAL_MODE_CG_CARD = 40
 
 Dual-card (CDMA+GSM).
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-CardType-DUAL_MODE_CG_CARD = 40--><!--Device-CardType-DUAL_MODE_CG_CARD = 40-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -86,9 +86,9 @@ CT_NATIONAL_ROAMING_CARD = 41
 
 China Telecom internal roaming card.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-CardType-CT_NATIONAL_ROAMING_CARD = 41--><!--Device-CardType-CT_NATIONAL_ROAMING_CARD = 41-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -100,9 +100,9 @@ CU_DUAL_MODE_CARD = 42
 
 China Unicom dual-mode card.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-CardType-CU_DUAL_MODE_CARD = 42--><!--Device-CardType-CU_DUAL_MODE_CARD = 42-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -114,9 +114,9 @@ DUAL_MODE_TELECOM_LTE_CARD = 43
 
 China Telecom dual-mode LTE card.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-CardType-DUAL_MODE_TELECOM_LTE_CARD = 43--><!--Device-CardType-DUAL_MODE_TELECOM_LTE_CARD = 43-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -128,9 +128,9 @@ DUAL_MODE_UG_CARD = 50
 
 Dual-mode card (UMTS+GSM).
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-CardType-DUAL_MODE_UG_CARD = 50--><!--Device-CardType-DUAL_MODE_UG_CARD = 50-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -142,9 +142,8 @@ SINGLE_MODE_ISIM_CARD = 60
 
 Single-card (ISIM).
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-CardType-SINGLE_MODE_ISIM_CARD = 60--><!--Device-CardType-SINGLE_MODE_ISIM_CARD = 60-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 20
 
-<!--Device-unnamed-declare interface KeyboardAppearanceConfig--><!--Device-unnamed-declare interface KeyboardAppearanceConfig-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,9 +27,9 @@ fluidLightMode?: KeyboardFluidLightMode
 
 **起始版本：** 20
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-KeyboardAppearanceConfig-fluidLightMode?: KeyboardFluidLightMode--><!--Device-KeyboardAppearanceConfig-fluidLightMode?: KeyboardFluidLightMode-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,11 +47,10 @@ gradientMode?: KeyboardGradientMode
 
 **起始版本：** 20
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-KeyboardAppearanceConfig-gradientMode?: KeyboardGradientMode--><!--Device-KeyboardAppearanceConfig-gradientMode?: KeyboardGradientMode-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
-

@@ -10,28 +10,28 @@ export function bindController(node: FrameNode, controller: TextController, node
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function bindController(node: FrameNode, controller: TextController, nodeType: 'Text'): void--><!--Device-typeNode-export function bindController(node: FrameNode, controller: TextController, nodeType: 'Text'): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 绑定文本控制器的目标节点。 |
-| controller | TextController | 是 | 文本控制器。 |
-| nodeType | 'Text' | 是 | 绑定文本控制器的目标节点的节点类型为Text。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| controller | [TextController](arkts-arkui-text-textcontroller-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Text' | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
+| 错误码ID |
+| --- |
+| [100023](../errorcode-node.md#100023-参数错误) |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) |
 
 
 ## bindController
@@ -44,28 +44,28 @@ export function bindController(node: FrameNode, controller: SwiperController, no
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function bindController(node: FrameNode, controller: SwiperController, nodeType: 'Swiper'): void--><!--Device-typeNode-export function bindController(node: FrameNode, controller: SwiperController, nodeType: 'Swiper'): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 绑定控制器的目标节点。 |
-| controller | SwiperController | 是 | Swiper容器组件的控制器。 |
-| nodeType | 'Swiper' | 是 | 绑定控制器的目标节点的节点类型为Swiper。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| controller | [SwiperController](arkts-arkui-swiper-swipercontroller-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Swiper' | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
+| 错误码ID |
+| --- |
+| [100023](../errorcode-node.md#100023-参数错误) |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) |
 
 
 ## bindController
@@ -78,28 +78,28 @@ function bindController(node: FrameNode, controller: Scroller, nodeType: 'Scroll
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function bindController(node: FrameNode, controller: Scroller, nodeType: 'Scroll'): void--><!--Device-typeNode-function bindController(node: FrameNode, controller: Scroller, nodeType: 'Scroll'): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 绑定滚动控制器的目标节点。 |
-| controller | Scroller | 是 | 滚动控制器。 |
-| nodeType | 'Scroll' | 是 | 绑定滚动控制器的目标节点的节点类型为Scroll。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| controller | [Scroller](arkts-arkui-scroll-scroller-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Scroll' | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. the type of the node is error. 2. the node is null or undefined. |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. Introduced in API version 15 and will not be threw above API version 24.<br>**适用版本：** 15 - 24 |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) |
 
 
 ## bindController
@@ -112,28 +112,28 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function bindController(node: FrameNode, controller: Scroller, nodeType: 'List'): void--><!--Device-typeNode-export function bindController(node: FrameNode, controller: Scroller, nodeType: 'List'): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 绑定滚动控制器的目标节点。 |
-| controller | Scroller | 是 | 滚动控制器。 |
-| nodeType | 'List' | 是 | 绑定滚动控制器的目标节点的节点类型为List。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| controller | [Scroller](arkts-arkui-scroll-scroller-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'List' | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**适用版本：** 20 - 24 |
+| 错误码ID |
+| --- |
+| [100023](../errorcode-node.md#100023-参数错误) |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) |
 
 
 ## bindController
@@ -146,28 +146,28 @@ export function bindController(node: FrameNode, controller: TextInputController,
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function bindController(node: FrameNode, controller: TextInputController, nodeType: 'TextInput'): void--><!--Device-typeNode-export function bindController(node: FrameNode, controller: TextInputController, nodeType: 'TextInput'): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 绑定输入框控制器的目标节点。 |
-| controller | TextInputController | 是 | 输入框控制器。 |
-| nodeType | 'TextInput' | 是 | 绑定输入框控制器的目标节点的节点类型为TextInput。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| controller | [TextInputController](arkts-arkui-textinput-textinputcontroller-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'TextInput' | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
+| 错误码ID |
+| --- |
+| [100023](../errorcode-node.md#100023-参数错误) |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) |
 
 
 ## bindController
@@ -180,28 +180,28 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function bindController(node: FrameNode, controller: Scroller, nodeType: 'WaterFlow'): void--><!--Device-typeNode-export function bindController(node: FrameNode, controller: Scroller, nodeType: 'WaterFlow'): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 绑定滚动控制器的目标节点。 |
-| controller | Scroller | 是 | 滚动控制器。 |
-| nodeType | 'WaterFlow' | 是 | 绑定滚动控制器的目标节点的节点类型为WaterFlow。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| controller | [Scroller](arkts-arkui-scroll-scroller-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'WaterFlow' | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**适用版本：** 20 - 24 |
+| 错误码ID |
+| --- |
+| [100023](../errorcode-node.md#100023-参数错误) |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) |
 
 
 ## bindController
@@ -214,28 +214,28 @@ export function bindController(node: FrameNode, controller: TextAreaController, 
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function bindController(node: FrameNode, controller: TextAreaController, nodeType: 'TextArea'): void--><!--Device-typeNode-export function bindController(node: FrameNode, controller: TextAreaController, nodeType: 'TextArea'): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 绑定输入框控制器的目标节点。 |
-| controller | TextAreaController | 是 | 输入框控制器。 |
-| nodeType | 'TextArea' | 是 | 绑定输入框控制器的目标节点的节点类型为TextArea。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| controller | [TextAreaController](arkts-arkui-textarea-textareacontroller-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'TextArea' | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
+| 错误码ID |
+| --- |
+| [100023](../errorcode-node.md#100023-参数错误) |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) |
 
 
 ## bindController
@@ -248,26 +248,25 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-export function bindController(node: FrameNode, controller: Scroller, nodeType: 'Grid'): void--><!--Device-typeNode-export function bindController(node: FrameNode, controller: Scroller, nodeType: 'Grid'): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 绑定滚动控制器的目标节点。 |
-| controller | Scroller | 是 | 滚动控制器。 |
-| nodeType | 'Grid' | 是 | 绑定滚动控制器的目标节点的节点类型为Grid。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| controller | [Scroller](arkts-arkui-scroll-scroller-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Grid' | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**适用版本：** 20 - 24 |
-
+| 错误码ID |
+| --- |
+| [100023](../errorcode-node.md#100023-参数错误) |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) |

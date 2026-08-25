@@ -30,7 +30,7 @@
 
 **起始版本：** 11
 
-<!--Device-unnamed-export class BuilderNode--><!--Device-unnamed-export class BuilderNode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,25 +47,25 @@ build(builder: WrappedBuilder<Args>, arg?: Object): void
 > - 最外层的@Builder只支持一个入参。&gt;
 > - build的参数是值传递，需要使用[update](#update)接口进行更新。&gt;
 > - 需要操作BuilderNode中的对象时，需要保证其引用不被回收。当BuilderNode对象被虚拟机回收之后，它的FrameNode、
-> [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md)对象也会与后端节点解引用。即从BuilderNode中获取的FrameNode对象不对应任何一个节点。&gt;
+> [RenderNode](arkts-arkui-rendernode-c.md)对象也会与后端节点解引用。即从BuilderNode中获取的FrameNode对象不对应任何一个节点。&gt;
 > - BuilderNode对象会持有实体节点的引用。如果不需要使用BuilderNode前端对象管理后端节点，可以调用[dispose](#dispose)接口，实现前后端对象的解绑。
 
 **起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-BuilderNode-build(builder: WrappedBuilder<Args>, arg?: Object): void--><!--Device-BuilderNode-build(builder: WrappedBuilder<Args>, arg?: Object): void-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| builder | WrappedBuilder&lt;Args&gt; | 是 | 创建对应节点树的时候所需的无状态UI方法 [@Builder](../../../ui/state-management/arkts-builder.md)。 |
-| arg | Object | 否 | builder的入参。当前仅支持一个入参，且入参对象类型与@Builder定义的入参类型保持一致。 <br>默认值：undefined |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| builder | WrappedBuilder & lt;Args & gt; | 是 |
+| arg | Object | 否 |
 
 **示例**
 
@@ -201,30 +201,58 @@ build(builder: WrappedBuilder<Args>, arg: Object, options: BuildOptions): void
 > - 最外层的@Builder只支持一个入参。&gt;
 > - build的参数是值传递，需要使用[update](#update)接口进行更新。&gt;
 > - 需要操作BuilderNode中的对象时，需要保证其引用不被回收。当BuilderNode对象被虚拟机回收之后，它的FrameNode、
-> [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md)对象也会与后端节点解引用。即从BuilderNode中获取的FrameNode对象不对应任何一个节点。&gt;
+> [RenderNode](arkts-arkui-rendernode-c.md)对象也会与后端节点解引用。即从BuilderNode中获取的FrameNode对象不对应任何一个节点。&gt;
 > - BuilderNode对象会持有实体节点的引用。如果不需要使用BuilderNode前端对象管理后端节点，可以调用[dispose](#dispose)接口，实现前后端对象的解绑。
 
 **起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-BuilderNode-build(builder: WrappedBuilder<Args>, arg: Object, options: BuildOptions): void--><!--Device-BuilderNode-build(builder: WrappedBuilder<Args>, arg: Object, options: BuildOptions): void-End-->
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| builder | WrappedBuilder & lt;Args & gt; | 是 |
+| arg | Object | 是 |
+| options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | 是 |
+
+**示例**
+
+参见 [build](#build)
+
+## build
+
+```TypeScript
+build(builder: WrappedBuilder<CustomBuilderT<T>>, arg: T, options: BuildOptions): void
+```
+
+依照传入的带参数的[CustomBuilderT\&lt;T&gt;](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuildertt23)创建组件树，并持有组件树的根节 点。同时，支持设置build相关的配置项。无状态的UI方法@Builder最多拥有一个根节点。支持自定义组件。
+
+> **说明：**&gt;
+> - @Builder进行创建和更新的规格参考@Builder。&gt;
+> - 最外层的@Builder只支持一个入参。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| builder | WrappedBuilder&lt;Args&gt; | 是 | 创建对应节点树的时候所需的无状态UI方法 [@Builder](../../../ui/state-management/arkts-builder.md)。 |
-| arg | Object | 是 | builder的入参。当前仅支持一个入参，且入参对象类型与@Builder定义的入参类型保持一致。 |
-| options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | 是 | builder的配置参数，用于配置Builder的构建行为，具体属性和说明见[BuildOptions](arkts-arkui-buildernode-buildoptions-i.md)。 |
-
-**示例**
-
-参见 [build](#build)
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| builder | WrappedBuilder & lt;CustomBuilderT & lt;T & gt; & gt; | 是 |
+| arg | T | 是 |
+| options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | 是 |
 
 ## constructor
 
@@ -236,20 +264,20 @@ constructor(uiContext: UIContext, options?: RenderOptions)
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BuilderNode-constructor(uiContext: UIContext, options?: RenderOptions)--><!--Device-BuilderNode-constructor(uiContext: UIContext, options?: RenderOptions)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考 UIContext获取方法。uiContext需要为一个有效的值，即UI上下文正 确，如果传入非法值或者未设置，会导致创建失败。 |
-| options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | 否 | BuilderNode的构造可选参数，参数用于构造节点的理想大小和节点的渲染类型。 <br>默认值：undefined |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | 否 |
 
 ## dispose
 
@@ -266,11 +294,11 @@ dispose(): void
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BuilderNode-dispose(): void--><!--Device-BuilderNode-dispose(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -381,19 +409,19 @@ getFrameNode(): FrameNode | null
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BuilderNode-getFrameNode(): FrameNode | null--><!--Device-BuilderNode-getFrameNode(): FrameNode | null-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | BuilderNode持有的FrameNode对象，用于将该BuilderNode作为子节点挂载到其他FrameNode上。若该BuilderNode不包含 FrameNode，则返回空对象null。 |
+| 类型 |
+| --- |
+| [FrameNode](arkts-arkui-framenode-c.md) \| null |
 
 **示例**
 
@@ -504,19 +532,19 @@ inheritFreezeOptions(enabled: boolean): void
 
 **起始版本：** 20
 
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BuilderNode-inheritFreezeOptions(enabled: boolean): void--><!--Device-BuilderNode-inheritFreezeOptions(enabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enabled | boolean | 是 | BuilderNode对象是否设置为继承父组件中自定义组件的冻结策略。 <br>true：继承父组件中自定义组件的冻结策略；false：不继承父组件中自定义组件的冻结策略。 <br>**说明：** 仅当父组件为自定义组件、BuilderNode、ComponentContent、ReactiveBuilderNode或ReactiveComponentContent时，设置为true才会生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enabled | boolean | 是 |
 
 **示例**
 
@@ -958,19 +986,19 @@ isDisposed(): boolean
 
 **起始版本：** 20
 
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BuilderNode-isDisposed(): boolean--><!--Device-BuilderNode-isDisposed(): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 后端实体节点是否解除引用。true为节点已与后端实体节点解除引用，false为节点未与后端实体节点解除引用。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -1224,25 +1252,25 @@ postInputEvent(event: InputEventType): boolean
 
 **起始版本：** 20
 
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BuilderNode-postInputEvent(event: InputEventType): boolean--><!--Device-BuilderNode-postInputEvent(event: InputEventType): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | [InputEventType](arkts-arkui-inputeventtype-t.md) | 是 | 用于事件分发的输入事件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [InputEventType](arkts-arkui-inputeventtype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 事件是否被成功派发。如果事件派发成功，则返回true；否则，返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -1274,26 +1302,26 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BuilderNode-postInputEventWithStrategy(event: InputEventType, competitionStrategy?: CompetitionStrategy): boolean--><!--Device-BuilderNode-postInputEventWithStrategy(event: InputEventType, competitionStrategy?: CompetitionStrategy): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | [InputEventType](arkts-arkui-inputeventtype-t.md) | 是 | 用于事件分发的输入事件。 |
-| competitionStrategy | CompetitionStrategy | 否 | 分发事件的手势竞争策略。CompetitionStrategy.DEFAULT表示非竞争模式（目标组件与当前组件的手势不 竞争），适用于当前组件与目标组件各自独立处理手势、无需竞争同一事件的场景；CompetitionStrategy.COMPETITION表示竞争模式（目标组件与当前组件的手势参与竞争），适用于当前组件与目标组件需要竞争同一 手势事件的场景。不传入时默认为CompetitionStrategy.DEFAULT（非竞争）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [InputEventType](arkts-arkui-inputeventtype-t.md) | 是 |
+| competitionStrategy | [CompetitionStrategy](arkts-arkui-enums-competitionstrategy-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 事件是否被成功派发。如果成功，则返回true；否则，返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -1314,25 +1342,25 @@ postTouchEvent(event: TouchEvent): boolean
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BuilderNode-postTouchEvent(event: TouchEvent): boolean--><!--Device-BuilderNode-postTouchEvent(event: TouchEvent): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | TouchEvent | 是 | 用于派发到BuilderNode创建出的FrameNode上的触摸事件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 派发事件是否成功。true：已命中响应事件的组件；false：未命中任何可响应事件的组件。 <br>**说明：** <br>如果未按照预期命中组件，需要确认以下几点： <br>1. 坐标系是否转换正确。 <br>2. 组件是否处于可交互状态。 <br>3. 是否绑定事件。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -1531,11 +1559,11 @@ recycle(): void
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BuilderNode-recycle(): void--><!--Device-BuilderNode-recycle(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1924,19 +1952,19 @@ reuse(param?: Object): void
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BuilderNode-reuse(param?: Object): void--><!--Device-BuilderNode-reuse(param?: Object): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| param | Object | 否 | 用于复用BuilderNode的参数。该参数将直接用于BuilderNode中所有顶层自定义组件的复用，应该包含每个自定义组件的构造函数参数所需内容，否则，会导致未定义行为。 调用此方法将同步触发内部自定义组件的 aboutToReuse生命周期回调，并 将该参数作为回调的入参。默认值为undefined，此时BuilderNode中的自定义组件将直接使用构造时的数据源。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| param | Object | 否 |
 
 **示例**
 
@@ -1952,19 +1980,19 @@ update(arg: Object): void
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BuilderNode-update(arg: Object): void--><!--Device-BuilderNode-update(arg: Object): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| arg | Object | 是 | 用于更新BuilderNode的参数，和 [build](#build)调用时传入的参数类型一致。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| arg | Object | 是 |
 
 **示例**
 
@@ -2078,11 +2106,11 @@ updateConfiguration(): void
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BuilderNode-updateConfiguration(): void--><!--Device-BuilderNode-updateConfiguration(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2397,4 +2425,3 @@ struct Index {
   }
 }
 ```
-

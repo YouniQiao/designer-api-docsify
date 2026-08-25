@@ -5,9 +5,9 @@ Describes the notification timing information.
 > **NOTE：**&gt;
 > The actual display effect depends on the device capabilities and the notification center UI style.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-unnamed-export interface NotificationTime--><!--Device-unnamed-export interface NotificationTime-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -19,11 +19,11 @@ initialTime?: int
 
 Initial time for the timer, which is used to set the starting point of the timer in the live view. The default value is **0**. Unit: ms.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationTime-initialTime?: int--><!--Device-NotificationTime-initialTime?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -38,9 +38,9 @@ Whether it is countdown mode. The default value is **false**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationTime-isCountDown?: boolean--><!--Device-NotificationTime-isCountDown?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -55,9 +55,9 @@ Whether the time information is displayed in the notification title. The default
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationTime-isInTitle?: boolean--><!--Device-NotificationTime-isInTitle?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -72,9 +72,9 @@ Whether the timer is paused. The default value is **false**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationTime-isPaused?: boolean--><!--Device-NotificationTime-isPaused?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -89,4 +89,3 @@ time: {
     isInTitle: true,
 }
 ```
-

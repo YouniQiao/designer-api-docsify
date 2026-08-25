@@ -1,12 +1,10 @@
 # AnimationOptions
 
-Defines the animation options for drag preview.@interface AnimationOptions
+Defines parameters related to drag-and-drop animation effects.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-dragController-interface AnimationOptions--><!--Device-dragController-interface AnimationOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,37 +20,38 @@ import { dragController } from '@kit.ArkUI';
 curve?: Curve | ICurve
 ```
 
-Animation curve.
+Animation curve.Default value: **Curve.EaseInOut**
 
 **Type:** Curve \| ICurve
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AnimationOptions-curve?: Curve | ICurve--><!--Device-AnimationOptions-curve?: Curve | ICurve-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## duration
 
 ```TypeScript
-duration?: int
+duration?: number
 ```
 
-Animation duration, in ms.
+Animation duration, in ms.Default value: **1000**  
+**NOTE：**
+- If this parameter is set to a value less than 0, the value **0** is used. - Floating-point values will be rounded down to integers. For example, if the value set is 1.2, **1** will be used.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AnimationOptions-duration?: int--><!--Device-AnimationOptions-duration?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

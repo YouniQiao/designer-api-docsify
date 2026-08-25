@@ -4,11 +4,11 @@ Describes the Gatt characteristic.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md)
-
-<!--Device-bluetoothManager-interface BLECharacteristic--><!--Device-bluetoothManager-interface BLECharacteristic-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -30,11 +30,11 @@ The UUID of a BLECharacteristic instance
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** [characteristicUuid](arkts-connectivity-ble-blecharacteristic-i.md#characteristicuuid)
-
-<!--Device-BLECharacteristic-characteristicUuid: string--><!--Device-BLECharacteristic-characteristicUuid: string-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -50,11 +50,11 @@ The value of a BLECharacteristic instance
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** [characteristicValue](arkts-connectivity-ble-blecharacteristic-i.md#characteristicvalue)
-
-<!--Device-BLECharacteristic-characteristicValue: ArrayBuffer--><!--Device-BLECharacteristic-characteristicValue: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -70,11 +70,11 @@ The list of [BLEDescriptor](arkts-connectivity-bluetoothmanager-bledescriptor-i.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** [descriptors](arkts-connectivity-ble-blecharacteristic-i.md#descriptors)
-
-<!--Device-BLECharacteristic-descriptors: Array<BLEDescriptor>--><!--Device-BLECharacteristic-descriptors: Array<BLEDescriptor>-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -90,11 +90,10 @@ The UUID of the [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** [serviceUuid](arkts-connectivity-ble-blecharacteristic-i.md#serviceuuid)
 
-<!--Device-BLECharacteristic-serviceUuid: string--><!--Device-BLECharacteristic-serviceUuid: string-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

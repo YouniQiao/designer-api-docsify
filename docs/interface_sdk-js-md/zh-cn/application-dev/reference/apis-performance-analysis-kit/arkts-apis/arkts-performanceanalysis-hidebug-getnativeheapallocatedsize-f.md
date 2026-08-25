@@ -14,17 +14,17 @@ function getNativeHeapAllocatedSize() : bigint
 
 获取内存分配器统计的进程持有的已使用的普通块所占用的总字节数。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-hidebug-function getNativeHeapAllocatedSize() : bigint--><!--Device-hidebug-function getNativeHeapAllocatedSize() : bigint-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| bigint | 返回内存分配器统计的进程持有的已使用的普通块所占用内存大小，单位为Byte。 |
+| 类型 |
+| --- |
+| bigint |
 
 **示例**
 
@@ -34,4 +34,3 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 let nativeHeapAllocatedSize: bigint = hidebug.getNativeHeapAllocatedSize();
 console.info(`nativeHeapAllocatedSize = ${nativeHeapAllocatedSize}`);
 ```
-

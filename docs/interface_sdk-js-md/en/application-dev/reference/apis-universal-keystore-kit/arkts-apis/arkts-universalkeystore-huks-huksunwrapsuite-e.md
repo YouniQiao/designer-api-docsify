@@ -4,7 +4,7 @@ Enumerates the algorithm suites for securely importing a key.
 
 **Since:** 9
 
-<!--Device-huks-export enum HuksUnwrapSuite--><!--Device-huks-export enum HuksUnwrapSuite-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -20,9 +20,9 @@ Use X25519 for key agreement and then use AES-256 GCM to decrypt the key.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-HuksUnwrapSuite-HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING = 1--><!--Device-HuksUnwrapSuite-HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -38,9 +38,9 @@ Use ECDH for key agreement and then use AES-256 GCM to decrypt the key.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-HuksUnwrapSuite-HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING = 2--><!--Device-HuksUnwrapSuite-HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -56,9 +56,8 @@ Use the temporary SM4 key to encrypt the imported key and use the SM2 key that h
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-HuksUnwrapSuite-HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING = 5--><!--Device-HuksUnwrapSuite-HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING = 5-End-->
-
 **System capability:** SystemCapability.Security.Huks.Core
-

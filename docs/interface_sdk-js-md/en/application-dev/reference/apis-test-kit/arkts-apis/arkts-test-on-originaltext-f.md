@@ -13,32 +13,37 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 export function originalText(text: string, pattern?: MatchPattern): On
 ```
 
-Specifies the original text for the target Component. If the accessibility property [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel) of a component is set to 'no' or 'no-hide-descendants', you will not be able to use [text](arkts-test-uitest-on-c.md#text) to match the component with the specified original text, but you can use this method to achieve it; if the component does not set the above accessibility property, this method has no difference with [text](arkts-test-uitest-on-c.md#text)
+Specifies the text content and text matching pattern of the component.
+
+> **NOTE：**&gt;
+> If the accessibilityLevel of a component is set to **no** or **no-hide-descendants**,
+> this API can be used to specify the text attribute of the target component for searching for the component.
+> In this case, the [On.text()](arkts-test-uitest-on-c.md#text) API does not take effect.
 
 **Since:** 23
 
-<!--Device-ON-export function originalText(text: string, pattern?: MatchPattern): On--><!--Device-ON-export function originalText(text: string, pattern?: MatchPattern): On-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| text | string | Yes | the original text value. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | the [MatchPattern](arkts-test-uitest-matchpattern-e.md) of the text value. <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| text | string | Yes |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | this { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 **Examples**
 
@@ -48,4 +53,3 @@ import { On, ON } from '@kit.TestKit';
 
 let on: On = ON.originalText('123'); // Use the static constructor ON to create an On object and specify the originalText attribute of the target component.
 ```
-

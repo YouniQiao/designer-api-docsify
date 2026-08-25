@@ -14,17 +14,17 @@ function getImageSourceSupportedFormats(): string[]
 
 Obtains the supported decoding formats, represented by MIME types.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-image-function getImageSourceSupportedFormats(): string[]--><!--Device-image-function getImageSourceSupportedFormats(): string[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string[] | List of supported decoding formats (MIME types). |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string[] |
 
 **Examples**
 
@@ -34,4 +34,3 @@ async function GetImageSourceSupportedFormats() {
     console.info('formats:', formats);
 }
 ```
-

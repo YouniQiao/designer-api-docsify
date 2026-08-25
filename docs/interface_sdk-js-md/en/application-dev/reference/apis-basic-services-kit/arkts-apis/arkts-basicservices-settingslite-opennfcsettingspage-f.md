@@ -16,9 +16,8 @@ Opens the NFC settings page.
 
 **Since:** 24
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-settingsLite-function openNfcSettingsPage(): void--><!--Device-settingsLite-function openNfcSettingsPage(): void-End-->
-
 **System capability:** SystemCapability.Applications.Settings.Core.Lite
-

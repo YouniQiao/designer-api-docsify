@@ -4,11 +4,11 @@ Describes the data returned by after wantAgent.trigger is called.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [CompleteData](arkts-ability-wantagent-completedata-i.md)
-
-<!--Device-wantAgent-export interface CompleteData--><!--Device-wantAgent-export interface CompleteData-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,13 +29,13 @@ Extra data collected by the common event.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [extraInfo](arkts-ability-wantagent-completedata-i.md#extrainfo)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CompleteData-extraInfo?: { [key: string]: any }--><!--Device-CompleteData-extraInfo?: { [key: string]: any }-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -51,13 +51,13 @@ Request code used to trigger the WantAgent.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [finalCode](arkts-ability-wantagent-completedata-i.md#finalcode)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CompleteData-finalCode: number--><!--Device-CompleteData-finalCode: number-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -73,13 +73,13 @@ Final data collected by the common event.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [finalData](arkts-ability-wantagent-completedata-i.md#finaldata)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CompleteData-finalData: string--><!--Device-CompleteData-finalData: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -95,13 +95,13 @@ Triggered WantAgent.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [info](arkts-ability-wantagent-completedata-i.md#info)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CompleteData-info: WantAgent--><!--Device-CompleteData-info: WantAgent-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -117,13 +117,12 @@ Existing Want that is triggered.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [want](arkts-ability-wantagent-completedata-i.md#want)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-CompleteData-want: Want--><!--Device-CompleteData-want: Want-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-

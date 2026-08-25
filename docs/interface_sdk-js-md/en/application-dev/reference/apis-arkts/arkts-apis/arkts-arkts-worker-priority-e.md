@@ -4,7 +4,7 @@ Enumerates the priorities available for EventHandler. For details about the mapp
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export enum Priority--><!--Device-unnamed-export enum Priority-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -18,11 +18,11 @@ IMMEDIATE priority, corresponding to EventHandler IMMEDIATE priority.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-Priority-IMMEDIATE = 1--><!--Device-Priority-IMMEDIATE = 1-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -36,11 +36,11 @@ HIGH priority, corresponding to EventHandler HIGH priority.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-Priority-HIGH = 2--><!--Device-Priority-HIGH = 2-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -54,11 +54,11 @@ Low priority, corresponding to EventHandler LOW priority.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-Priority-LOW = 3--><!--Device-Priority-LOW = 3-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -72,11 +72,10 @@ IDLE priority, corresponding to EventHandler IDLE priority.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-Priority-IDLE = 4--><!--Device-Priority-IDLE = 4-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

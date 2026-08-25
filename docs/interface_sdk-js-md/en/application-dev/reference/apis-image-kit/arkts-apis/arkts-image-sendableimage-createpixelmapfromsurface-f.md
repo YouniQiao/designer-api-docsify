@@ -16,30 +16,30 @@ Creates a PixelMap object from surface id.
 
 **Since:** 12
 
-<!--Device-sendableImage-function createPixelMapFromSurface(surfaceId: string, region: image.Region): Promise<PixelMap>--><!--Device-sendableImage-function createPixelMapFromSurface(surfaceId: string, region: image.Region): Promise<PixelMap>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| surfaceId | string | Yes | surface id. |
-| region | image.Region | Yes | The region to surface. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| surfaceId | string | Yes |
+| region | image.Region | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;PixelMap&gt; | Returns the instance if the operation is successful. Otherwise, an exception will be thrown. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;PixelMap & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | If the image parameter invalid. |
-| [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) | Failed to get the data. |
-| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the PixelMap. |
+| Error Code ID |
+| --- |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) |
+| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) |
 
 **Examples**
 
@@ -57,4 +57,3 @@ async function Demo(surfaceId: string) {
   });
 }
 ```
-

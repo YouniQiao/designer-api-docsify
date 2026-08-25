@@ -15,13 +15,13 @@ function deleteInvalidForms(formIds: Array<string>, callback: AsyncCallback<numb
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-f-sys.md)
 
 **需要权限：** ohos.permission.REQUIRE_FORM
-
-<!--Device-formHost-function deleteInvalidForms(formIds: Array<string>, callback: AsyncCallback<number>): void--><!--Device-formHost-function deleteInvalidForms(formIds: Array<string>, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -29,10 +29,10 @@ function deleteInvalidForms(formIds: Array<string>, callback: AsyncCallback<numb
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | 是 | 有效卡片标识列表。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当根据列表删除应用程序的无效卡片成功，error为undefined，data为删除的卡片个数；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formIds | Array & lt;string & gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **示例**
 
@@ -71,13 +71,13 @@ function deleteInvalidForms(formIds: Array<string>): Promise<number>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-f-sys.md)
 
 **需要权限：** ohos.permission.REQUIRE_FORM
-
-<!--Device-formHost-function deleteInvalidForms(formIds: Array<string>): Promise<number>--><!--Device-formHost-function deleteInvalidForms(formIds: Array<string>): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -85,17 +85,16 @@ function deleteInvalidForms(formIds: Array<string>): Promise<number>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | 是 | 有效卡片标识列表。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formIds | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回删除的卡片个数。 |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **示例**
 
 参见 [deleteInvalidForms](#deleteinvalidforms)
-

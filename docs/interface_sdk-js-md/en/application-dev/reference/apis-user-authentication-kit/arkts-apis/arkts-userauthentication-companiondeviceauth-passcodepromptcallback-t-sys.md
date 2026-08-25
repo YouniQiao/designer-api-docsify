@@ -9,9 +9,9 @@ Defines the callback invoked when the framework needs a passcode for a companion
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-companionDeviceAuth-type PasscodePromptCallback =      (submit: PasscodeSubmitCallback, params: PasscodePromptParams) => void--><!--Device-companionDeviceAuth-type PasscodePromptCallback =      (submit: PasscodeSubmitCallback, params: PasscodePromptParams) => void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -19,8 +19,7 @@ Defines the callback invoked when the framework needs a passcode for a companion
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| submit | [PasscodeSubmitCallback](arkts-userauthentication-companiondeviceauth-passcodesubmitcallback-t-sys.md) | Yes | Callback used to submit the passcode entered by the user. |
-| params | [PasscodePromptParams](arkts-userauthentication-companiondeviceauth-passcodepromptparams-i-sys.md) | Yes | Params carrying contextual information of this prompt request. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| submit | [PasscodeSubmitCallback](arkts-userauthentication-companiondeviceauth-passcodesubmitcallback-t-sys.md) | Yes |
+| params | [PasscodePromptParams](arkts-userauthentication-companiondeviceauth-passcodepromptparams-i-sys.md) | Yes |

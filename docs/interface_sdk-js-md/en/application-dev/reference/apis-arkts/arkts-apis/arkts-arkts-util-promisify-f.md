@@ -16,24 +16,24 @@ Receives a function that uses the error-first callback mode, that is, uses `(err
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-util-function promisify(original: (err: Object, value: Object) => void): Function--><!--Device-util-function promisify(original: (err: Object, value: Object) => void): Function-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| original | (err: Object, value: Object) =&gt; void | Yes | Function, in which the first parameter **err** indicates the cause of the rejection (the value is **null** if the promise has been resolved) and the second parameter **value** indicates the resolved value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| original | (err: Object, value: Object) = & gt; void | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [function](arkts-arkts-taskpool-task-c.md) | Return a function that returns promises<br>**Applicable version:** 9 - 11 |
-| Function | Promise function.<br>**Applicable version:** 10 and later |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [function](arkts-arkts-taskpool-task-c.md) |
+| Function |
 
 **Examples**
 
@@ -52,4 +52,3 @@ const addCall = util.promisify(util.callbackWrapper(fn));
   }
 })();
 ```
-

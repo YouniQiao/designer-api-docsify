@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-declare interface DepthVector4--><!--Device-unnamed-declare interface DepthVector4-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,20 +18,20 @@
 ## w
 
 ```TypeScript
-w: double
+w: number
 ```
 
 W分量。
 
-**类型：** double
+**类型：** number
 
 **起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DepthVector4-w: double--><!--Device-DepthVector4-w: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,22 +40,22 @@ W分量。
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
 X分量。
 
-**类型：** double
+**类型：** number
 
 **默认值：** 0.0
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DepthVector4-x: double--><!--Device-DepthVector4-x: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,20 +64,20 @@ X分量。
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
 Y分量。
 
-**类型：** double
+**类型：** number
 
 **起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DepthVector4-y: double--><!--Device-DepthVector4-y: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,22 +86,21 @@ Y分量。
 ## z
 
 ```TypeScript
-z: double
+z: number
 ```
 
 Z分量。
 
-**类型：** double
+**类型：** number
 
 **起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-DepthVector4-z: double--><!--Device-DepthVector4-z: double-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
-

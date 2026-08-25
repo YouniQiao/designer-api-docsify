@@ -4,9 +4,7 @@ Defines maxlines mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare enum MaxLinesMode--><!--Device-unnamed-export declare enum MaxLinesMode-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +18,9 @@ Clip mode of max lines
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MaxLinesMode-CLIP = 0--><!--Device-MaxLinesMode-CLIP = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +34,8 @@ Scroll mode of max lines
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MaxLinesMode-SCROLL = 1--><!--Device-MaxLinesMode-SCROLL = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

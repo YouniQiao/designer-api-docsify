@@ -1,14 +1,12 @@
-# MaterialType (System API)
+# MaterialType
 
 Enumerates system material types.
 
-**Since:** 23
+**Since:** 26.0.0
 
-<!--Device-uiMaterial-enum MaterialType--><!--Device-uiMaterial-enum MaterialType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**System API:** This is a system API.
 
 ## NONE
 
@@ -20,11 +18,11 @@ No system material effect. The corresponding effects are: backgroundColor and bo
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
-
-<!--Device-MaterialType-NONE = 0--><!--Device-MaterialType-NONE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,13 +42,12 @@ shadow: ShadowStyle.OUTER_DEFAULT_SM.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
-<!--Device-MaterialType-SEMI_TRANSPARENT = 1--><!--Device-MaterialType-SEMI_TRANSPARENT = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

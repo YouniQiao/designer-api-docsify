@@ -14,9 +14,9 @@ function getBundleInstallerSync(): BundleInstaller
 
 Obtains a BundleInstaller object. This API is a synchronous API.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-installer-function getBundleInstallerSync(): BundleInstaller--><!--Device-installer-function getBundleInstallerSync(): BundleInstaller-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -24,15 +24,15 @@ Obtains a BundleInstaller object. This API is a synchronous API.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| BundleInstaller | BundleInstaller object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [BundleInstaller](arkts-ability-installer-bundleinstaller-i-sys.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -48,4 +48,3 @@ try {
     console.error('getBundleInstallerSync failed. Cause: ' + message);
 }
 ```
-

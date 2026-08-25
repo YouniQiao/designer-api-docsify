@@ -16,7 +16,7 @@ function clearFileCache(): void
 
 **起始版本：** 23
 
-<!--Device-cacheDownload-function clearFileCache(): void--><!--Device-cacheDownload-function clearFileCache(): void-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -33,4 +33,3 @@ ArkTS-Sta示例：
 ```TypeScript
 cacheDownload.clearFileCache();
 ```
-

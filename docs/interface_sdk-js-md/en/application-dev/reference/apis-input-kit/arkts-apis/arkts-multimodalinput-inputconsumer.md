@@ -1,4 +1,4 @@
-# @ohos.multimodalInput.inputConsumer
+# @ohos.multimodalInput.inputConsumer(Global Shortcut Keys)
 
 The **inputConsumer** module implements listening for combination key events as well as listening and interception for volume key events.
 
@@ -6,9 +6,9 @@ The **inputConsumer** module implements listening for combination key events as 
 > - Global shortcut keys are combination keys defined by the system or application. System shortcut keys are defined
 > by the system, and application shortcut keys are defined by applications.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-unnamed-declare namespace inputConsumer--><!--Device-unnamed-declare namespace inputConsumer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -22,62 +22,61 @@ import { inputConsumer } from '@kit.InputKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getAllSystemHotkeys](arkts-input-inputconsumer-getallsystemhotkeys-f.md) | Obtains all system shortcut keys. This API uses a promise to return the result. |
-| [off_hotkeyChange](arkts-input-inputconsumer-offhotkeychange-f.md) | Unsubscribes from application shortcut key change events. This API uses an asynchronous callback to return the result. |
-| [off_keyPressed](arkts-input-inputconsumer-offkeypressed-f.md) | Unsubscribes from key press events. This API uses an asynchronous callback to return the result. If the API call is successful, the system's default response to the key event will be resumed; that is, system-level actions, such as volume adjustment, will be triggered normally. |
-| [offHotkeyChange](arkts-input-inputconsumer-offhotkeychange-f.md) | Unsubscribe from hotkey event. |
-| [offKeyPressed](arkts-input-inputconsumer-offkeypressed-f.md) | Cancels consumption of key events. |
-| [on_hotkeyChange](arkts-input-inputconsumer-onhotkeychange-f.md) | Subscribes to application shortcut key change events. This API obtains combination key input events that meet the specified conditions, and uses an asynchronous callback to return the result. |
-| [on_keyPressed](arkts-input-inputconsumer-onkeypressed-f.md) | Subscribes to key press events. If the current application is in the foreground focus window, a callback is triggered when the specified key is pressed. This API uses an asynchronous callback to return the result.If the API call is successful, the system's default response to the key event will be intercepted; that is, system- level actions, such as volume adjustment, will no longer be triggered. To restore the system response, call [off](arkts-input-inputconsumer-offkey-f-sys.md) to disable listening for the key event. |
-| [onHotkeyChange](arkts-input-inputconsumer-onhotkeychange-f.md) | Listening for hotkey event. |
-| [onKeyPressed](arkts-input-inputconsumer-onkeypressed-f.md) | Subscribes to key press events. This API uses an asynchronous callback to return the result. If the current application is in the foreground focus window, a callback is triggered when the specified key is pressed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getAllSystemHotkeys(Global Shortcut Keys)](arkts-input-inputconsumer-getallsystemhotkeys-f.md) |
+| [off(Global Shortcut Keys)](arkts-input-inputconsumer-off-f.md#offhotkeychange) |
+| [off(Global Shortcut Keys)](arkts-input-inputconsumer-off-f.md#offkeypressed) |
+| [offHotkeyChange(Global Shortcut Keys)](arkts-input-inputconsumer-offhotkeychange-f.md) |
+| [offKeyPressed(Global Shortcut Keys)](arkts-input-inputconsumer-offkeypressed-f.md) |
+| [on(Global Shortcut Keys)](arkts-input-inputconsumer-on-f.md#onhotkeychange) |
+| [on(Global Shortcut Keys)](arkts-input-inputconsumer-on-f.md#onkeypressed) |
+| [onHotkeyChange(Global Shortcut Keys)](arkts-input-inputconsumer-onhotkeychange-f.md) |
+| [onKeyPressed(Global Shortcut Keys)](arkts-input-inputconsumer-onkeypressed-f.md) |
 
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [getShieldStatus](arkts-input-inputconsumer-getshieldstatus-f-sys.md) | Obtains the system hotkey shield status. |
-| [off_key](arkts-input-inputconsumer-offkey-f-sys.md) | Disables listening for system hotkey change events. This API uses an asynchronous callback to return the result. |
-| [offKey](arkts-input-inputconsumer-offkey-f-sys.md) | Subscribe system keys. |
-| [offKey](arkts-input-inputconsumer-offkey-f-sys.md) | Unsubscribe system keys. |
-| [on_key](arkts-input-inputconsumer-onkey-f-sys.md) | Enables listening for system hotkey change events. This API uses an asynchronous callback to return the system hotkey data when a system hotkey event that meets the specified condition occurs. |
-| [onKey](arkts-input-inputconsumer-onkey-f-sys.md) | Subscribe system keys. |
-| [onKey](arkts-input-inputconsumer-onkey-f-sys.md) | Subscribe system keys. |
-| [setShieldStatus](arkts-input-inputconsumer-setshieldstatus-f-sys.md) | Sets the system hotkey shield status. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getShieldStatus(Global Shortcut Keys)](arkts-input-inputconsumer-getshieldstatus-f-sys.md) |
+| [off(Global Shortcut Keys)](arkts-input-inputconsumer-off-f-sys.md#offkey) |
+| [offKey(Global Shortcut Keys)](arkts-input-inputconsumer-offkey-f-sys.md) |
+| [offKey(Global Shortcut Keys)](arkts-input-inputconsumer-offkey-f-sys.md) |
+| [on(Global Shortcut Keys)](arkts-input-inputconsumer-on-f-sys.md#onkey) |
+| [onKey(Global Shortcut Keys)](arkts-input-inputconsumer-onkey-f-sys.md) |
+| [onKey(Global Shortcut Keys)](arkts-input-inputconsumer-onkey-f-sys.md) |
+| [setShieldStatus(Global Shortcut Keys)](arkts-input-inputconsumer-setshieldstatus-f-sys.md) |
 <!--DelEnd-->
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [HotkeyOptions](arkts-input-inputconsumer-hotkeyoptions-i.md) | Defines shortcut key options. |
-| [KeyPressedConfig](arkts-input-inputconsumer-keypressedconfig-i.md) | Sets the key event consumption configuration. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [HotkeyOptions(Global Shortcut Keys)](arkts-input-inputconsumer-hotkeyoptions-i.md) |
+| [KeyPressedConfig(Global Shortcut Keys)](arkts-input-inputconsumer-keypressedconfig-i.md) |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [KeyOptions](arkts-input-inputconsumer-keyoptions-i-sys.md) | Represents combination key options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [KeyOptions(Global Shortcut Keys)](arkts-input-inputconsumer-keyoptions-i-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [KeyCommandTriggerType](arkts-input-inputconsumer-keycommandtriggertype-e-sys.md) | KeyCommandTriggerType |
-| [ShieldMode](arkts-input-inputconsumer-shieldmode-e-sys.md) | Enumerates shortcut key shield modes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [KeyCommandTriggerType(Global Shortcut Keys)](arkts-input-inputconsumer-keycommandtriggertype-e-sys.md) |
+| [ShieldMode(Global Shortcut Keys)](arkts-input-inputconsumer-shieldmode-e-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Types(System API)
 
-| Name | Description |
-| --- | --- |
-| [KeyCommandCallback](arkts-input-inputconsumer-keycommandcallback-t-sys.md) | Callback function when the shortcut key registered by the system application meets the conditions. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [KeyCommandCallback(Global Shortcut Keys)](arkts-input-inputconsumer-keycommandcallback-t-sys.md) |
 <!--DelEnd-->
-

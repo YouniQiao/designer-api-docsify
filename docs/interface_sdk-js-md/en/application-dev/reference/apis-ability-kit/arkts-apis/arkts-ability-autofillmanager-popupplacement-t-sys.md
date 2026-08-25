@@ -8,13 +8,12 @@ The popup placement of auto fill popup config.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-autoFillManager-export type PopupPlacement = _PopupPlacement--><!--Device-autoFillManager-export type PopupPlacement = _PopupPlacement-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
 
 **Property type:** _PopupPlacement
-

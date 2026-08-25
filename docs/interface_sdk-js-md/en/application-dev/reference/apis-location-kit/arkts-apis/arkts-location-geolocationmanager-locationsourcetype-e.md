@@ -2,9 +2,9 @@
 
 Enum for the source of the location.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-geoLocationManager-export enum LocationSourceType--><!--Device-geoLocationManager-export enum LocationSourceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -16,11 +16,11 @@ GNSS = 1
 
 The location is obtained from the GNSS.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-LocationSourceType-GNSS = 1--><!--Device-LocationSourceType-GNSS = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -32,11 +32,11 @@ NETWORK = 2
 
 The location comes from the network positioning technology.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-LocationSourceType-NETWORK = 2--><!--Device-LocationSourceType-NETWORK = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -48,11 +48,11 @@ INDOOR = 3
 
 The location comes from the indoor positioning technology.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-LocationSourceType-INDOOR = 3--><!--Device-LocationSourceType-INDOOR = 3-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -64,11 +64,10 @@ RTK = 4
 
 The location comes from the GNSS RTK technology.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-LocationSourceType-RTK = 4--><!--Device-LocationSourceType-RTK = 4-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
-

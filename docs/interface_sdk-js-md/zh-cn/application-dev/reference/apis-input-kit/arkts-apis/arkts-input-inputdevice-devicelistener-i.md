@@ -2,9 +2,9 @@
 
 描述输入设备热插拔的信息。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-inputDevice-interface DeviceListener--><!--Device-inputDevice-interface DeviceListener-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -22,11 +22,11 @@ deviceId: int
 
 输入设备的唯一标识，同一个物理设备反复插拔或重启，设备ID可能会发生变化。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-DeviceListener-deviceId: int--><!--Device-DeviceListener-deviceId: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -40,9 +40,8 @@ type: ChangedType
 
 **类型：** [ChangedType](arkts-input-inputdevice-changedtype-t.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-DeviceListener-type: ChangedType--><!--Device-DeviceListener-type: ChangedType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
-

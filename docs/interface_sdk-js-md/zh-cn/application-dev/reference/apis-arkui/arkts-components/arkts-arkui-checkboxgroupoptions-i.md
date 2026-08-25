@@ -4,7 +4,7 @@
 
 **起始版本：** 8
 
-<!--Device-unnamed-declare interface CheckboxGroupOptions--><!--Device-unnamed-declare interface CheckboxGroupOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,10 @@ group?: string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-CheckboxGroupOptions-group?: string--><!--Device-CheckboxGroupOptions-group?: string-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

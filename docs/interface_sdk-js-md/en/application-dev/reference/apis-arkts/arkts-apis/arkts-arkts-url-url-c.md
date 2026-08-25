@@ -2,9 +2,9 @@
 
 The interface of URL is used to parse, construct, normalize, and encode URLs.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-url-class URL--><!--Device-url-class URL-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -24,20 +24,20 @@ URL constructor, which is used to instantiate a URL object. url: Absolute or rel
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [parseURL](#parseurl)
-
-<!--Device-URL-constructor(url: string, base?: string | URL)--><!--Device-URL-constructor(url: string, base?: string | URL)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string | Yes | url url |
-| base | string \| URL | No | base base |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [url](arkts-url.md) | string | Yes |
+| base | string \| URL | No |
 
 **Examples**
 
@@ -87,11 +87,11 @@ constructor()
 
 A no-argument constructor used to create a URL. It returns a URL object after parseURL is called. It is not used independently.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-URL-constructor()--><!--Device-URL-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -107,32 +107,32 @@ static parseURL(url: string, base?: string | URL): URL
 
 Parses a URL.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-URL-static parseURL(url: string, base?: string | URL): URL--><!--Device-URL-static parseURL(url: string, base?: string | URL): URL-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string | Yes | A string representing an absolute or a relative URL. In the case of a relative URL, you must specify base to parse the final URL. In the case of an absolute URL, the passed base will be ignored. |
-| base | string \| URL | No | Either a string or an object. The default value is undefined. - string: string. - URL: URL object. This parameter is used when url is a relative URL. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [url](arkts-url.md) | string | Yes |
+| base | string \| URL | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| URL |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| URL |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid url string. |
+| Error Code ID |
+| --- |
+| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) |
 
 **Examples**
 
@@ -159,19 +159,19 @@ toJSON(): string
 
 Converts the parsed URL into a JSON string.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-URL-toJSON(): string--><!--Device-URL-toJSON(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Returns the serialized URL as a string. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -188,19 +188,19 @@ toString(): string
 
 Converts the parsed URL into a string.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-URL-toString(): string--><!--Device-URL-toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Returns the serialized URL as a string. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -235,9 +235,9 @@ Gets and sets the fragment portion of the URL.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-<!--Device-URL-hash: string--><!--Device-URL-hash: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -253,9 +253,9 @@ Gets and sets the host portion of the URL.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-<!--Device-URL-host: string--><!--Device-URL-host: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -271,9 +271,9 @@ Gets and sets the host name portion of the URL，not include the port.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-<!--Device-URL-hostname: string--><!--Device-URL-hostname: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -289,9 +289,9 @@ Gets and sets the serialized URL.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-<!--Device-URL-href: string--><!--Device-URL-href: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -307,9 +307,9 @@ Gets the read-only serialization of the URL's origin.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-<!--Device-URL-readonly origin: string--><!--Device-URL-readonly origin: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -325,9 +325,9 @@ Gets the URLParams object that represents the URL query parameter. This property
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-URL-readonly params: URLParams--><!--Device-URL-readonly params: URLParams-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -343,9 +343,9 @@ Gets and sets the password portion of the URL.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-<!--Device-URL-password: string--><!--Device-URL-password: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -361,9 +361,9 @@ Gets and sets the path portion of the URL.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-<!--Device-URL-pathname: string--><!--Device-URL-pathname: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -379,9 +379,9 @@ Gets and sets the port portion of the URL.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-<!--Device-URL-port: string--><!--Device-URL-port: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -397,9 +397,9 @@ Gets and sets the protocol portion of the URL.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-<!--Device-URL-protocol: string--><!--Device-URL-protocol: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -415,9 +415,9 @@ Gets and sets the serialized query portion of the URL.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-<!--Device-URL-search: string--><!--Device-URL-search: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -433,11 +433,11 @@ Gets the URLSearchParams object that represents the URL query parameter. This pr
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** params
-
-<!--Device-URL-readonly searchParams: URLSearchParams--><!--Device-URL-readonly searchParams: URLSearchParams-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -453,9 +453,8 @@ Gets and sets the username portion of the URL.
 
 **Since:** 7
 
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-URL-username: string--><!--Device-URL-username: string-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

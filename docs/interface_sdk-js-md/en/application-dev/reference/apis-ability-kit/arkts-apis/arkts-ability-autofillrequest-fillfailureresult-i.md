@@ -4,7 +4,7 @@ Fill fail result.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export interface FillFailureResult--><!--Device-unnamed-export interface FillFailureResult-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -16,15 +16,14 @@ errCode: int
 
 errcode. The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-FillFailureResult-errCode: int--><!--Device-FillFailureResult-errCode: int-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-

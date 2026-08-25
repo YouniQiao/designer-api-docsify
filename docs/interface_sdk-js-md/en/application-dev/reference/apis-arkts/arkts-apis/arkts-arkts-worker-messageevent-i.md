@@ -6,7 +6,7 @@ Holds the data transferred between worker threads.
 
 **Since:** 7
 
-<!--Device-unnamed-export interface MessageEvent--><!--Device-unnamed-export interface MessageEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -28,9 +28,8 @@ Data transferred when an exception occurs.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-MessageEvent-readonly data: T--><!--Device-MessageEvent-readonly data: T-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

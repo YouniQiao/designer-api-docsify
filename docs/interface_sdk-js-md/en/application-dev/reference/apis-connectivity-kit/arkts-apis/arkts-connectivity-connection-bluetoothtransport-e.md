@@ -2,9 +2,9 @@
 
 Enum for the transport of a remote device
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-connection-enum BluetoothTransport--><!--Device-connection-enum BluetoothTransport-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -16,11 +16,11 @@ TRANSPORT_BR_EDR = 0
 
 The value of bluetooth transport BR/EDR.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BluetoothTransport-TRANSPORT_BR_EDR = 0--><!--Device-BluetoothTransport-TRANSPORT_BR_EDR = 0-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -32,11 +32,11 @@ TRANSPORT_LE = 1
 
 The value of bluetooth transport LE.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BluetoothTransport-TRANSPORT_LE = 1--><!--Device-BluetoothTransport-TRANSPORT_LE = 1-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -50,9 +50,9 @@ The value of bluetooth transport DUAL.
 
 **Since:** 20
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-BluetoothTransport-TRANSPORT_DUAL = 2--><!--Device-BluetoothTransport-TRANSPORT_DUAL = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -66,9 +66,8 @@ The unknown bluetooth transport.
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BluetoothTransport-TRANSPORT_UNKNOWN = 3--><!--Device-BluetoothTransport-TRANSPORT_UNKNOWN = 3-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

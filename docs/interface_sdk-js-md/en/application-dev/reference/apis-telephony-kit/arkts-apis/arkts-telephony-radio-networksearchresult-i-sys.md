@@ -2,9 +2,9 @@
 
 Obtains the network search results.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-radio-export interface NetworkSearchResult--><!--Device-radio-export interface NetworkSearchResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -26,9 +26,9 @@ Indicates whether the network search was successful.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-NetworkSearchResult-isNetworkSearchSuccess: boolean--><!--Device-NetworkSearchResult-isNetworkSearchSuccess: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -44,11 +44,10 @@ Obtains the network search results.
 
 **Type:** Array&lt;[NetworkInformation](arkts-telephony-radio-networkinformation-i-sys.md)&gt;
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-NetworkSearchResult-networkSearchResult: Array<NetworkInformation>--><!--Device-NetworkSearchResult-networkSearchResult: Array<NetworkInformation>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
-

@@ -16,11 +16,11 @@ function updateStatsData(): Promise<void>
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-statistics-function updateStatsData(): Promise<void>--><!--Device-statistics-function updateStatsData(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -28,16 +28,15 @@ function updateStatsData(): Promise<void>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |

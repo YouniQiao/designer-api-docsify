@@ -2,9 +2,9 @@
 
 Represents the result obtained from the **close** event reported when the WebSocket connection is closed.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-webSocket-export interface CloseResult--><!--Device-webSocket-export interface CloseResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -22,13 +22,13 @@ code: int
 
 Error code for closing the connection.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-CloseResult-code: int--><!--Device-CloseResult-code: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -42,11 +42,10 @@ Error cause for closing the connection.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-CloseResult-reason: string--><!--Device-CloseResult-reason: string-End-->
-
 **System capability:** SystemCapability.Communication.NetStack
-

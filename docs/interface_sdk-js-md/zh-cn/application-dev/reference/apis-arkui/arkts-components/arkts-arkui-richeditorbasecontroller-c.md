@@ -6,7 +6,7 @@ RichEditor组件控制器基类。
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare class RichEditorBaseController--><!--Device-unnamed-declare class RichEditorBaseController-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ closeSelectionMenu(): void
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RichEditorBaseController-closeSelectionMenu(): void--><!--Device-RichEditorBaseController-closeSelectionMenu(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,11 +43,11 @@ deleteBackward(): void
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RichEditorBaseController-deleteBackward(): void--><!--Device-RichEditorBaseController-deleteBackward(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,19 +61,19 @@ getCaretOffset(): number
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RichEditorBaseController-getCaretOffset(): number--><!--Device-RichEditorBaseController-getCaretOffset(): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 当前光标所在位置。 |
+| 类型 |
+| --- |
+| number |
 
 ## getCaretRect
 
@@ -85,19 +85,19 @@ getCaretRect(): RectResult | undefined
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RichEditorBaseController-getCaretRect(): RectResult | undefined--><!--Device-RichEditorBaseController-getCaretRect(): RectResult | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RectResult \| undefined | 当前光标与RichEditor的相对位置。 |
+| 类型 |
+| --- |
+| RectResult \| undefined |
 
 ## getLayoutManager
 
@@ -109,19 +109,19 @@ getLayoutManager(): LayoutManager
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RichEditorBaseController-getLayoutManager(): LayoutManager--><!--Device-RichEditorBaseController-getLayoutManager(): LayoutManager-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| LayoutManager | 布局管理器对象，可用于获取组件内容的布局位置等信息。 <br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| 类型 |
+| --- |
+| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) |
 
 ## getPreviewText
 
@@ -133,19 +133,19 @@ getPreviewText(): PreviewText
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RichEditorBaseController-getPreviewText(): PreviewText--><!--Device-RichEditorBaseController-getPreviewText(): PreviewText-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| PreviewText | 预上屏文本信息，包含输入法预显示的候选文本内容及起始位置。 <br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| 类型 |
+| --- |
+| [PreviewText](../arkts-apis/arkts-arkui-previewtext-i.md) |
 
 ## getTypingStyle
 
@@ -157,19 +157,19 @@ getTypingStyle(): RichEditorTextStyle
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RichEditorBaseController-getTypingStyle(): RichEditorTextStyle--><!--Device-RichEditorBaseController-getTypingStyle(): RichEditorTextStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | 用户预设的文本输入样式对象，包含字体颜色、大小、粗细等样式属性，可用于查询当前组件的输入文本样式配置。 <br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| 类型 |
+| --- |
+| [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) |
 
 ## isEditing
 
@@ -181,19 +181,19 @@ isEditing(): boolean
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RichEditorBaseController-isEditing(): boolean--><!--Device-RichEditorBaseController-isEditing(): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true表示编辑态，false表示非编辑态。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## scrollToVisible
 
@@ -205,17 +205,17 @@ scrollToVisible(range?: TextRange): void
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-RichEditorBaseController-scrollToVisible(range?: TextRange): void--><!--Device-RichEditorBaseController-scrollToVisible(range?: TextRange): void-End-->
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| range | TextRange | 否 | 滚动到可视区域的内容范围，包括内容起始位置和终止位置。 <br>起始位置应小于等于结束位置，否则接口调用无效。起始位置小于0视为0，结束位置大于全文长度视为全文长度。 <br>未指定范围时，默认为全部内容。未指定起始位置，默认起始位置为0；未指定结束位置，默认结束位置为全文长度。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 否 |
 
 ## setCaretOffset
 
@@ -227,25 +227,25 @@ setCaretOffset(offset: number): boolean
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RichEditorBaseController-setCaretOffset(offset: number): boolean--><!--Device-RichEditorBaseController-setCaretOffset(offset: number): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| offset | number | 是 | 光标偏移位置。超出所有内容范围时，设置失败。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| offset | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 光标是否设置成功。<br/>true表示光标位置设置成功，false表示未成功。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## setSelection
 
@@ -260,21 +260,21 @@ setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOp
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RichEditorBaseController-setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void--><!--Device-RichEditorBaseController-setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| selectionStart | number | 是 | 选中开始位置。 |
-| selectionEnd | number | 是 | 选中结束位置。 |
-| options | SelectionOptions | 否 | 选择项配置，用于控制选中操作时的菜单弹出策略。 <br>当需要自定义菜单弹出行为（如强制显示或隐藏菜单）时传入此参数； <br>省略时默认使用MenuPolicy.DEFAULT，遵循系统默认菜单弹出策略。 <br>各MenuPolicy取值的适用场景请参考SelectionOptions对象说明。<br>**起始版本：** 12 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| selectionStart | number | 是 |
+| selectionEnd | number | 是 |
+| options | [SelectionOptions](../arkts-apis/arkts-arkui-common-selectionoptions-i.md) | 否 |
 
 ## setStyledPlaceholder
 
@@ -286,19 +286,19 @@ setStyledPlaceholder(styledString: StyledString): void
 
 **起始版本：** 24
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RichEditorBaseController-setStyledPlaceholder(styledString: StyledString): void--><!--Device-RichEditorBaseController-setStyledPlaceholder(styledString: StyledString): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| styledString | StyledString | 是 | 设置属性字符串样式的提示文本，其优先级高于[placeholder](arkts-arkui-richeditor-attribute.md#placeholder)属性设 置的提示文本。 <br>提示文本不支持触发属性字符串GestureStyle样式绑定的手势事件，以及UrlStyle样式的超链接跳转能力。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 |
 
 ## setTypingParagraphStyle
 
@@ -310,19 +310,19 @@ setTypingParagraphStyle(style: RichEditorParagraphStyle): void
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RichEditorBaseController-setTypingParagraphStyle(style: RichEditorParagraphStyle): void--><!--Device-RichEditorBaseController-setTypingParagraphStyle(style: RichEditorParagraphStyle): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| style | [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md) | 是 | 预设段落样式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| style | [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md) | 是 |
 
 ## setTypingStyle
 
@@ -334,19 +334,19 @@ setTypingStyle(value: RichEditorTextStyle): void
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RichEditorBaseController-setTypingStyle(value: RichEditorTextStyle): void--><!--Device-RichEditorBaseController-setTypingStyle(value: RichEditorTextStyle): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | 是 | 预设的文本输入样式，包含字体颜色、大小、粗细等属性，用于设置后续输入文本的默认样式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | 是 |
 
 ## stopEditing
 
@@ -358,11 +358,10 @@ stopEditing(): void
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-RichEditorBaseController-stopEditing(): void--><!--Device-RichEditorBaseController-stopEditing(): void-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

@@ -14,27 +14,27 @@ function alloc(size: int, fill?: string | Buffer | int | double | long, encoding
 
 创建指定字节长度的Buffer对象，并使用指定值进行初始化填充（默认填充0）。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-buffer-function alloc(size: int, fill?: string | Buffer | int | double | long, encoding?: BufferEncoding): Buffer--><!--Device-buffer-function alloc(size: int, fill?: string | Buffer | int | double | long, encoding?: BufferEncoding): Buffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| size | int | 是 | 指定的Buffer对象长度，单位：字节。取值为正整数，最大值为2^32-1，即4294967295。 |
-| fill | string \| Buffer \| int \| double \| long | 否 | 填充至新缓冲区的值。默认值：0。<br>**起始版本：** 9 - 10 |
-| encoding | BufferEncoding | 否 | 编码格式（当fill为string时，才有意义）。默认值：'utf8'。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| size | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| fill | ArkTS-Dyn: string \| Buffer \| number \| number \| number<br>ArkTS-Sta：string \ | Buffer \| int \| double \| long | 否 |
+| encoding | BufferEncoding | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Buffer | 返回一个Buffer对象。 |
+| 类型 |
+| --- |
+| Buffer |
 
 **示例**
 
@@ -67,4 +67,3 @@ console.info(JSON.stringify(buf2)); // {"type":"Buffer","data":[97,97,97,97,97]}
 let buf3 = buffer.alloc(11, 'aGVsbG8gd29ybGQ=', 'base64');
 console.info(JSON.stringify(buf3)); // {"type":"Buffer","data":[104,101,108,108,111,32,119,111,114,108,100]}
 ```
-

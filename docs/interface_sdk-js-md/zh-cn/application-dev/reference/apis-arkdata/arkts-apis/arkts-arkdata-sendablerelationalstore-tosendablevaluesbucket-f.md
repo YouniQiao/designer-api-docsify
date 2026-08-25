@@ -16,28 +16,28 @@ function toSendableValuesBucket(valuesBucket: NonSendableBucket): ValuesBucket
 
 **起始版本：** 12
 
-<!--Device-sendableRelationalStore-function toSendableValuesBucket(valuesBucket: NonSendableBucket): ValuesBucket--><!--Device-sendableRelationalStore-function toSendableValuesBucket(valuesBucket: NonSendableBucket): ValuesBucket-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| valuesBucket | [NonSendableBucket](arkts-arkdata-sendablerelationalstore-nonsendablebucket-t.md) | 是 | 不可跨线程传递的ValuesBucket数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [valuesBucket](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityoperation-dataabilityoperation-i.md) | [NonSendableBucket](arkts-arkdata-sendablerelationalstore-nonsendablebucket-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ValuesBucket | 可用于跨线程传递的ValuesBucket数据。 |
+| 类型 |
+| --- |
+| [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
 
 **示例**
 
@@ -72,4 +72,3 @@ const valuesBucket: sendableRelationalStore.NonSendableBucket = {
 
 const sendableValuesBucket = sendableRelationalStore.toSendableValuesBucket(valuesBucket);
 ```
-

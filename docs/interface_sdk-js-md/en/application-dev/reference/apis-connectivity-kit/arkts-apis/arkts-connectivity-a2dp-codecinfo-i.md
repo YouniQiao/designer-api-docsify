@@ -2,9 +2,9 @@
 
 Describes the codec information.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-a2dp-interface CodecInfo--><!--Device-a2dp-interface CodecInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -26,7 +26,7 @@ codec bit rate.
 
 **Since:** 19
 
-<!--Device-CodecInfo-codecBitRate?: CodecBitRate--><!--Device-CodecInfo-codecBitRate?: CodecBitRate-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -40,9 +40,9 @@ codec bits per sample.
 
 **Type:** [CodecBitsPerSample](arkts-connectivity-a2dp-codecbitspersample-e.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CodecInfo-codecBitsPerSample: CodecBitsPerSample--><!--Device-CodecInfo-codecBitsPerSample: CodecBitsPerSample-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -56,9 +56,9 @@ codec channel mode.
 
 **Type:** [CodecChannelMode](arkts-connectivity-a2dp-codecchannelmode-e.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CodecInfo-codecChannelMode: CodecChannelMode--><!--Device-CodecInfo-codecChannelMode: CodecChannelMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -74,7 +74,7 @@ codec frame length.
 
 **Since:** 19
 
-<!--Device-CodecInfo-codecFrameLength?: CodecFrameLength--><!--Device-CodecInfo-codecFrameLength?: CodecFrameLength-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -88,9 +88,9 @@ codec sample rate.
 
 **Type:** [CodecSampleRate](arkts-connectivity-a2dp-codecsamplerate-e.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CodecInfo-codecSampleRate: CodecSampleRate--><!--Device-CodecInfo-codecSampleRate: CodecSampleRate-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -104,9 +104,8 @@ codec type
 
 **Type:** [CodecType](arkts-connectivity-a2dp-codectype-e.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CodecInfo-codecType: CodecType--><!--Device-CodecInfo-codecType: CodecType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

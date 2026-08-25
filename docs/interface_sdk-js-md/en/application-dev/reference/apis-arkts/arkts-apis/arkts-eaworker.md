@@ -9,13 +9,12 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [EAWorker](arkts-arkts-eaworker-c.md) | A worker that executes tasks concurrently with priority support |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [EAWorker](arkts-arkts-eaworker-c.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [WorkerPriority](arkts-arkts-eaworker-workerpriority-e.md) | Represents the priority levels for an EAWorker |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [WorkerPriority](arkts-arkts-eaworker-workerpriority-e.md) |

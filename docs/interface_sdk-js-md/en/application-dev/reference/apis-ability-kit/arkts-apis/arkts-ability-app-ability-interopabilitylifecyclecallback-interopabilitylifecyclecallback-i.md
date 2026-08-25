@@ -4,7 +4,7 @@ The interop ability lifecycle callback.
 
 **Since:** 23
 
-<!--Device-unnamed-declare interface InteropAbilityLifecycleCallback--><!--Device-unnamed-declare interface InteropAbilityLifecycleCallback-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -22,13 +22,11 @@ onAbilityBackground: AbilityCallbackFn
 
 Called back when the state of an ability changes to background.
 
-**Type:** [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md)
-
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-InteropAbilityLifecycleCallback-onAbilityBackground: AbilityCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onAbilityBackground: AbilityCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -40,13 +38,11 @@ onAbilityContinue?: AbilityCallbackFn
 
 Called back when an ability prepares to continue.
 
-**Type:** [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md)
-
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InteropAbilityLifecycleCallback-onAbilityContinue?: AbilityCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onAbilityContinue?: AbilityCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -58,13 +54,11 @@ onAbilityCreate: AbilityCallbackFn
 
 Called back when an ability is started for initialization.
 
-**Type:** [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md)
-
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-InteropAbilityLifecycleCallback-onAbilityCreate: AbilityCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onAbilityCreate: AbilityCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -76,13 +70,11 @@ onAbilityDestroy: AbilityCallbackFn
 
 Called back when an ability is destroyed.
 
-**Type:** [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md)
-
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-InteropAbilityLifecycleCallback-onAbilityDestroy: AbilityCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onAbilityDestroy: AbilityCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -94,13 +86,11 @@ onAbilityForeground: AbilityCallbackFn
 
 Called back when the state of an ability changes to foreground.
 
-**Type:** [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md)
-
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-InteropAbilityLifecycleCallback-onAbilityForeground: AbilityCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onAbilityForeground: AbilityCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -112,13 +102,11 @@ onAbilitySaveState?: AbilityCallbackFn
 
 Called back when the ability has called onSaveState.
 
-**Type:** [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md)
-
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InteropAbilityLifecycleCallback-onAbilitySaveState?: AbilityCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onAbilitySaveState?: AbilityCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -130,13 +118,11 @@ onAbilityWillBackground?: AbilityCallbackFn
 
 Called back before the state of an ability changes to background.
 
-**Type:** [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md)
-
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InteropAbilityLifecycleCallback-onAbilityWillBackground?: AbilityCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onAbilityWillBackground?: AbilityCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -148,13 +134,11 @@ onAbilityWillContinue?: AbilityCallbackFn
 
 Called back when the ability prepares to call onContinue.
 
-**Type:** [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md)
-
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InteropAbilityLifecycleCallback-onAbilityWillContinue?: AbilityCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onAbilityWillContinue?: AbilityCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -166,13 +150,11 @@ onAbilityWillCreate?: AbilityCallbackFn
 
 Called back before an ability is started for initialization.
 
-**Type:** [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md)
-
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InteropAbilityLifecycleCallback-onAbilityWillCreate?: AbilityCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onAbilityWillCreate?: AbilityCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -184,13 +166,11 @@ onAbilityWillDestroy?: AbilityCallbackFn
 
 Called back before an ability is destroyed.
 
-**Type:** [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md)
-
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InteropAbilityLifecycleCallback-onAbilityWillDestroy?: AbilityCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onAbilityWillDestroy?: AbilityCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -202,13 +182,11 @@ onAbilityWillForeground?: AbilityCallbackFn
 
 Called back before the state of an ability changes to foreground.
 
-**Type:** [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md)
-
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InteropAbilityLifecycleCallback-onAbilityWillForeground?: AbilityCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onAbilityWillForeground?: AbilityCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -220,13 +198,11 @@ onAbilityWillSaveState?: AbilityCallbackFn
 
 Called back when the ability prepares to call onSaveState.
 
-**Type:** [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md)
-
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InteropAbilityLifecycleCallback-onAbilityWillSaveState?: AbilityCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onAbilityWillSaveState?: AbilityCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -238,13 +214,11 @@ onNewWant?: AbilityCallbackFn
 
 Called back after the UIAbility called onNewWant.
 
-**Type:** [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md)
-
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InteropAbilityLifecycleCallback-onNewWant?: AbilityCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onNewWant?: AbilityCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -256,13 +230,11 @@ onWillNewWant?: AbilityCallbackFn
 
 Called back before the UIAbility will called onNewWant.
 
-**Type:** [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md)
-
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InteropAbilityLifecycleCallback-onWillNewWant?: AbilityCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onWillNewWant?: AbilityCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -274,13 +246,11 @@ onWindowStageActive?: WindowStageCallbackFn
 
 Called back when a window stage is active.
 
-**Type:** [WindowStageCallbackFn](arkts-ability-windowstagecallbackfn-t.md)
-
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InteropAbilityLifecycleCallback-onWindowStageActive?: WindowStageCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onWindowStageActive?: WindowStageCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -292,13 +262,11 @@ onWindowStageCreate: WindowStageCallbackFn
 
 Called back when a window stage is created.
 
-**Type:** [WindowStageCallbackFn](arkts-ability-windowstagecallbackfn-t.md)
-
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-InteropAbilityLifecycleCallback-onWindowStageCreate: WindowStageCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onWindowStageCreate: WindowStageCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -310,13 +278,11 @@ onWindowStageDestroy: WindowStageCallbackFn
 
 Called back when a window stage is destroyed.
 
-**Type:** [WindowStageCallbackFn](arkts-ability-windowstagecallbackfn-t.md)
-
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-InteropAbilityLifecycleCallback-onWindowStageDestroy: WindowStageCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onWindowStageDestroy: WindowStageCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -328,13 +294,11 @@ onWindowStageInactive?: WindowStageCallbackFn
 
 Called back when a window stage is inactive.
 
-**Type:** [WindowStageCallbackFn](arkts-ability-windowstagecallbackfn-t.md)
-
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InteropAbilityLifecycleCallback-onWindowStageInactive?: WindowStageCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onWindowStageInactive?: WindowStageCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -346,13 +310,11 @@ onWindowStageRestore?: WindowStageCallbackFn
 
 Called back when the ability has called onWindowStageRestore.
 
-**Type:** [WindowStageCallbackFn](arkts-ability-windowstagecallbackfn-t.md)
-
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InteropAbilityLifecycleCallback-onWindowStageRestore?: WindowStageCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onWindowStageRestore?: WindowStageCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -364,13 +326,11 @@ onWindowStageWillCreate?: WindowStageCallbackFn
 
 Called back before a window stage is created.
 
-**Type:** [WindowStageCallbackFn](arkts-ability-windowstagecallbackfn-t.md)
-
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InteropAbilityLifecycleCallback-onWindowStageWillCreate?: WindowStageCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onWindowStageWillCreate?: WindowStageCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -382,13 +342,11 @@ onWindowStageWillDestroy?: WindowStageCallbackFn
 
 Called back before a window stage is destroyed.
 
-**Type:** [WindowStageCallbackFn](arkts-ability-windowstagecallbackfn-t.md)
-
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InteropAbilityLifecycleCallback-onWindowStageWillDestroy?: WindowStageCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onWindowStageWillDestroy?: WindowStageCallbackFn-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -400,13 +358,10 @@ onWindowStageWillRestore?: WindowStageCallbackFn
 
 Called back when the ability has called onWindowStageWillRestore.
 
-**Type:** [WindowStageCallbackFn](arkts-ability-windowstagecallbackfn-t.md)
-
 **Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-InteropAbilityLifecycleCallback-onWindowStageWillRestore?: WindowStageCallbackFn--><!--Device-InteropAbilityLifecycleCallback-onWindowStageWillRestore?: WindowStageCallbackFn-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-

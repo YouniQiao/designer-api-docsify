@@ -6,7 +6,7 @@
 
 **起始版本：** 11
 
-<!--Device-unnamed-declare class BaseSpan--><!--Device-unnamed-declare class BaseSpan-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,25 +25,25 @@ baselineOffset(value: LengthMetrics): T
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BaseSpan-baselineOffset(value: LengthMetrics): T--><!--Device-BaseSpan-baselineOffset(value: LengthMetrics): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | LengthMetrics | 是 | 设置Span基线的偏移量，设置该值为百分比时，按默认值显示。 <br>正数内容向上偏移，负数向下偏移。 <br>在ImageSpan中，设置为非0时，verticalAlign将固定为ImageSpanAlignment.BASELINE对 齐；设置为0时，要使基线对齐策略生效，需同时设置verticalAlign为ImageSpanAlignment.BASELINE。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 返回当前Span的属性对象，用于链式调用。 |
+| 类型 |
+| --- |
+| T |
 
 ## textBackgroundStyle
 
@@ -55,23 +55,22 @@ textBackgroundStyle(style: TextBackgroundStyle): T
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BaseSpan-textBackgroundStyle(style: TextBackgroundStyle): T--><!--Device-BaseSpan-textBackgroundStyle(style: TextBackgroundStyle): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| style | [TextBackgroundStyle](arkts-arkui-textbackgroundstyle-i.md) | 是 | 文本背景样式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| style | [TextBackgroundStyle](arkts-arkui-textbackgroundstyle-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 返回当前Span的属性对象。 |
-
+| 类型 |
+| --- |
+| T |

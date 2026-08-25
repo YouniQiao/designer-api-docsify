@@ -2,9 +2,9 @@
 
 Describes the parameters used for creating a child window.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-window-interface SubWindowOptions--><!--Device-window-interface SubWindowOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -24,11 +24,10 @@ Whether the child window is topmost. **true** if topmost, **false** otherwise. T
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SubWindowOptions-isTopmost?: boolean--><!--Device-SubWindowOptions-isTopmost?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
-

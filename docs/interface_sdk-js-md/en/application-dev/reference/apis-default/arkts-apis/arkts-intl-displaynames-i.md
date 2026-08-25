@@ -1,8 +1,6 @@
 # DisplayNames
 
-**Since:** -1
-
-<!--Device-Intl-interface DisplayNames--><!--Device-Intl-interface DisplayNames-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,20 +15,18 @@ of(code: string): string | undefined
 
 Receives a code and returns a string based on the locale and options provided when instantiating [`Intl.DisplayNames()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames)
 
-**Since:** -1
-
-<!--Device-DisplayNames-of(code: string): string | undefined--><!--Device-DisplayNames-of(code: string): string | undefined-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| code | string | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| code | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## resolvedOptions
 
 ```TypeScript
@@ -40,11 +36,9 @@ resolvedOptions(): ResolvedDisplayNamesOptions
 Returns a new object with properties reflecting the locale and style formatting options computed during the construction of the current [`Intl/DisplayNames`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames) object.  
 [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions).
 
-**Since:** -1
-
-<!--Device-DisplayNames-resolvedOptions(): ResolvedDisplayNamesOptions--><!--Device-DisplayNames-resolvedOptions(): ResolvedDisplayNamesOptions-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

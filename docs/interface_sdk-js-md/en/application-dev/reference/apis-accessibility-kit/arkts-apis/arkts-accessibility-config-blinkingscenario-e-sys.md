@@ -4,7 +4,7 @@ Enumerates the blinking scenarios.
 
 **Since:** 26.0.0
 
-<!--Device-config-export enum BlinkingScenario--><!--Device-config-export enum BlinkingScenario-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -20,9 +20,9 @@ Blinking triggered by an alarm.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-BlinkingScenario-ALARM = 1--><!--Device-BlinkingScenario-ALARM = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -38,9 +38,9 @@ Blinking triggered by a notification.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-BlinkingScenario-NOTIFICATION = 2--><!--Device-BlinkingScenario-NOTIFICATION = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -56,9 +56,9 @@ Blinking triggered by an incoming call.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-BlinkingScenario-CALL = 3--><!--Device-BlinkingScenario-CALL = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -74,11 +74,10 @@ Blinking triggered by a test scenario.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-BlinkingScenario-TESTING = 4--><!--Device-BlinkingScenario-TESTING = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
-

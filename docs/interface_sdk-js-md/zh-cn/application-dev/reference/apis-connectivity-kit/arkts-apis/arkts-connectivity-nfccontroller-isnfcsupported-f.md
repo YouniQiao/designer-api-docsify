@@ -16,15 +16,14 @@ function isNfcSupported(): boolean
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-nfcController-function isNfcSupported(): boolean--><!--Device-nfcController-function isNfcSupported(): boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true: 设备具备NFC能力， false: 设备不具备NFC能力。 |
-
+| 类型 |
+| --- |
+| boolean |

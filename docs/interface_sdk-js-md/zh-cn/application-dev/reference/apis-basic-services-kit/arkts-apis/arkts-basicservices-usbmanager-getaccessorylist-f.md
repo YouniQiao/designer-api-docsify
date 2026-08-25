@@ -14,24 +14,24 @@ function getAccessoryList(): Array<Readonly<USBAccessory>>
 
 获取当前已接入主机的USB配件列表。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-usbManager-function getAccessoryList(): Array<Readonly<USBAccessory>>--><!--Device-usbManager-function getAccessoryList(): Array<Readonly<USBAccessory>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;Readonly&lt;[USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md)&gt;&gt; | 只读的USB配件列表。包含所有可用的USB配件信息。 |
+| 类型 |
+| --- |
+| Array&lt;Readonly&lt;[USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md)&gt;&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
-| [14400004](../errorcode-usb.md#14400004-服务异常) | Service exception. Possible causes:<br>1. No accessory is plugged in. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [14400004](../errorcode-usb.md#14400004-服务异常) |
 
 **示例**
 
@@ -43,4 +43,3 @@ try {
   console.error(`getAccessoryList error ${error.code}, message is ${error.message}`);
 }
 ```
-

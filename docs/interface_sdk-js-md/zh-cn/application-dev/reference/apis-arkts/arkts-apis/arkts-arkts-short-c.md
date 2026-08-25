@@ -6,9 +6,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export class Short--><!--Device-unnamed-export class Short-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,25 +25,23 @@ public add(other: Short): Short
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public add(other: Short): Short--><!--Device-Short-public add(other: Short): Short-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Short | 是 | 加法运算的右操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Short | 加法运算的结果。 |
+| 类型 |
+| --- |
+| Short |
 
 ## compareTo
 
@@ -57,25 +53,23 @@ public compareTo(other: Short): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public compareTo(other: Short): int--><!--Device-Short-public compareTo(other: Short): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Short | 是 | 用于比较的Short对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 比较结果：当前实例小于传入对象时为-1，相等时为0， 大于时为1。 |
+| 类型 |
+| --- |
+| int |
 
 ## constructor
 
@@ -87,11 +81,9 @@ public constructor()
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public constructor()--><!--Device-Short-public constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -105,19 +97,17 @@ public constructor(value: short)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public constructor(value: short)--><!--Device-Short-public constructor(value: short)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | short | 是 | 初始值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | short | 是 |
 
 ## div
 
@@ -129,25 +119,23 @@ public div(other: Short): Short
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public div(other: Short): Short--><!--Device-Short-public div(other: Short): Short-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Short | 是 | 除法运算的右操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Short | 除法运算的结果。 |
+| 类型 |
+| --- |
+| Short |
 
 ## equals
 
@@ -159,25 +147,23 @@ public equals(other: Any): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public equals(other: Any): boolean--><!--Device-Short-public equals(other: Any): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Any | 是 | 待比较的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Any | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果传入对象与当前实例的值相同则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isGreaterEqualThan
 
@@ -189,25 +175,23 @@ public isGreaterEqualThan(other: Short): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public isGreaterEqualThan(other: Short): boolean--><!--Device-Short-public isGreaterEqualThan(other: Short): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Short | 是 | 比较运算的右操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果当前值大于或等于传入值则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isGreaterThan
 
@@ -219,25 +203,23 @@ public isGreaterThan(other: Short): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public isGreaterThan(other: Short): boolean--><!--Device-Short-public isGreaterThan(other: Short): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Short | 是 | 比较运算的右操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果当前值大于传入值则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isLessEqualThan
 
@@ -249,25 +231,23 @@ public isLessEqualThan(other: Short): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public isLessEqualThan(other: Short): boolean--><!--Device-Short-public isLessEqualThan(other: Short): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Short | 是 | 比较运算的右操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果当前值小于或等于传入值则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isLessThan
 
@@ -279,25 +259,23 @@ public isLessThan(other: Short): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public isLessThan(other: Short): boolean--><!--Device-Short-public isLessThan(other: Short): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Short | 是 | 比较运算的右操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果当前值小于传入值则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## mul
 
@@ -309,25 +287,23 @@ public mul(other: Short): Short
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public mul(other: Short): Short--><!--Device-Short-public mul(other: Short): Short-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Short | 是 | 乘法运算的右操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Short | 乘法运算的结果。 |
+| 类型 |
+| --- |
+| Short |
 
 ## parseInt
 
@@ -339,26 +315,24 @@ public static parseInt(s: string, r: int): short
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public static parseInt(s: string, r: int): short--><!--Device-Short-public static parseInt(s: string, r: int): short-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| s | string | 是 | 待转换的字符串。 |
-| r | int | 是 | 转换使用的基数，取值范围为[2, 36]，传入0时按10处理。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| s | string | 是 |
+| r | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| short | 解析结果。 |
+| 类型 |
+| --- |
+| short |
 
 ## sub
 
@@ -370,25 +344,23 @@ public sub(other: Short): Short
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public sub(other: Short): Short--><!--Device-Short-public sub(other: Short): Short-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Short | 是 | 减法运算的右操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Short | 减法运算的结果。 |
+| 类型 |
+| --- |
+| Short |
 
 ## toByte
 
@@ -400,19 +372,17 @@ public toByte(): byte
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public toByte(): byte--><!--Device-Short-public toByte(): byte-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| byte | byte类型的值。 |
+| 类型 |
+| --- |
+| byte |
 
 ## toByte
 
@@ -424,25 +394,23 @@ public static toByte(value: short): byte
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public static toByte(value: short): byte--><!--Device-Short-public static toByte(value: short): byte-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | short | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| byte | 转换后的值。 |
+| 类型 |
+| --- |
+| byte |
 
 ## toChar
 
@@ -454,19 +422,17 @@ public toChar(): char
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public toChar(): char--><!--Device-Short-public toChar(): char-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| char | char类型的值。 |
+| 类型 |
+| --- |
+| char |
 
 ## toChar
 
@@ -478,25 +444,23 @@ public static toChar(value: short): char
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public static toChar(value: short): char--><!--Device-Short-public static toChar(value: short): char-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | short | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| char | 转换后的值。 |
+| 类型 |
+| --- |
+| char |
 
 ## toDouble
 
@@ -508,19 +472,17 @@ public toDouble(): double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public toDouble(): double--><!--Device-Short-public toDouble(): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | double类型的值。 |
+| 类型 |
+| --- |
+| double |
 
 ## toDouble
 
@@ -532,25 +494,23 @@ public static toDouble(value: short): double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public static toDouble(value: short): double--><!--Device-Short-public static toDouble(value: short): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | short | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | 转换后的值。 |
+| 类型 |
+| --- |
+| double |
 
 ## toFloat
 
@@ -562,19 +522,17 @@ public toFloat(): float
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public toFloat(): float--><!--Device-Short-public toFloat(): float-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| float | float类型的值。 |
+| 类型 |
+| --- |
+| float |
 
 ## toFloat
 
@@ -586,25 +544,23 @@ public static toFloat(value: short): float
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public static toFloat(value: short): float--><!--Device-Short-public static toFloat(value: short): float-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | short | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| float | 转换后的值。 |
+| 类型 |
+| --- |
+| float |
 
 ## toInt
 
@@ -616,19 +572,17 @@ public toInt(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public toInt(): int--><!--Device-Short-public toInt(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | int类型的值。 |
+| 类型 |
+| --- |
+| int |
 
 ## toInt
 
@@ -640,25 +594,23 @@ public static toInt(value: short): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public static toInt(value: short): int--><!--Device-Short-public static toInt(value: short): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | short | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 转换后的值。 |
+| 类型 |
+| --- |
+| int |
 
 ## toLocaleString
 
@@ -670,26 +622,24 @@ public toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.NumberForma
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.NumberFormatOptions): string--><!--Device-Short-public toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.NumberFormatOptions): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | 否 | 包含BCP 47语言标签的字符串，或由此类 字符串组成的数组。 |
-| options | Intl.NumberFormatOptions | 否 | 包含Intl.NumberFormat选项的部分或 全部属性的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | 否 |
+| options | Intl.NumberFormatOptions | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 按区域设置转换后的结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## toLocaleString
 
@@ -701,26 +651,24 @@ public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string--><!--Device-Short-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | 否 | 包含BCP 47语言标签的字符串，或由此类 字符串组成的数组。 |
-| options | object | 否 | 包含Intl.NumberFormat选项的部分或 全部属性的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | 否 |
+| options | object | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 按区域设置转换后的结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## toLong
 
@@ -732,19 +680,17 @@ public toLong(): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public toLong(): long--><!--Device-Short-public toLong(): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | long类型的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## toLong
 
@@ -756,25 +702,23 @@ public static toLong(value: short): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public static toLong(value: short): long--><!--Device-Short-public static toLong(value: short): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | short | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 转换后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## toShort
 
@@ -786,19 +730,17 @@ public toShort(): short
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public toShort(): short--><!--Device-Short-public toShort(): short-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| short | short类型的值。 |
+| 类型 |
+| --- |
+| short |
 
 ## toShort
 
@@ -810,25 +752,23 @@ public static toShort(value: short): short
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public static toShort(value: short): short--><!--Device-Short-public static toShort(value: short): short-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | short | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| short | 转换后的值。 |
+| 类型 |
+| --- |
+| short |
 
 ## toString
 
@@ -840,25 +780,23 @@ public static toString(v: short): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public static toString(v: short): string--><!--Device-Short-public static toString(v: short): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| v | short | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| v | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## toString
 
@@ -870,19 +808,17 @@ public toString(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public toString(): string--><!--Device-Short-public toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## toString
 
@@ -894,25 +830,23 @@ public toString(radix: int): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public toString(radix: int): string--><!--Device-Short-public toString(radix: int): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| radix | int | 是 | 转换使用的基数。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| radix | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## toString
 
@@ -924,25 +858,23 @@ public toString(radix: double): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public toString(radix: double): string--><!--Device-Short-public toString(radix: double): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| radix | double | 是 | 转换使用的基数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| radix | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## BIT_SIZE
 
@@ -956,11 +888,9 @@ public static BIT_SIZE: byte = 16
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public static BIT_SIZE: byte = 16--><!--Device-Short-public static BIT_SIZE: byte = 16-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -976,11 +906,9 @@ public static BYTE_SIZE: byte = 2
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public static BYTE_SIZE: byte = 2--><!--Device-Short-public static BYTE_SIZE: byte = 2-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -996,11 +924,9 @@ public static MAX_VALUE: short = 32767
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Short-public static MAX_VALUE: short = 32767--><!--Device-Short-public static MAX_VALUE: short = 32767-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1016,11 +942,8 @@ public static MIN_VALUE: short = -32768
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Short-public static MIN_VALUE: short = -32768--><!--Device-Short-public static MIN_VALUE: short = -32768-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

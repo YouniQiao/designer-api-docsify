@@ -2,9 +2,9 @@
 
 表示身份认证的凭据类型枚举。该枚举定义了系统支持的认证类型，包括锁屏密码认证（PIN）、生物特征认证（人脸、指纹）等。应用在发起认证时需指定认证类型列表，用户可选择其中任意一种完成认证。不同认证类型具有不同的安全强度和用户体验特 点，应用应根据业务场景选择合适的认证类型。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-userAuth-enum UserAuthType--><!--Device-userAuth-enum UserAuthType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -16,9 +16,9 @@ PRIVATE_PIN = 16
 
 隐私密码。一种特殊的PIN认证类型，一般用于解锁后的用户二次访问控制（即在设备解锁后，用户访问特定应用或内容前需再次进行身份验证）。例如用户可以选择使用隐私密码保护应用锁（应用锁是一种对应用启动进行二次验证的功能，可防止他人打 开用户的应用），从而阻止知道锁屏密码的家人访问自己的某些应用。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-UserAuthType-PRIVATE_PIN = 16--><!--Device-UserAuthType-PRIVATE_PIN = 16-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -99,4 +99,3 @@ try {
   console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
 }
 ```
-

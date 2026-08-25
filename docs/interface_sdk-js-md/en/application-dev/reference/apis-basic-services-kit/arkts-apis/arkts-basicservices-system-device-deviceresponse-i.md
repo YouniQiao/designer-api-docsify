@@ -2,9 +2,9 @@
 
 **Since:** 3
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface DeviceResponse--><!--Device-unnamed-export interface DeviceResponse-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -26,9 +26,9 @@ API version.
 
 **Since:** 4
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-DeviceResponse-apiVersion: number--><!--Device-DeviceResponse-apiVersion: number-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -44,9 +44,9 @@ Brand.
 
 **Since:** 3
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-DeviceResponse-brand: string--><!--Device-DeviceResponse-brand: string-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -62,9 +62,9 @@ Device type. The options are as follows: phone: smartphone tablet: tablet tv: sm
 
 **Since:** 4
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-DeviceResponse-deviceType: string--><!--Device-DeviceResponse-deviceType: string-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -80,9 +80,9 @@ System language.
 
 **Since:** 4
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-DeviceResponse-language: string--><!--Device-DeviceResponse-language: string-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -98,9 +98,9 @@ Manufacturer.
 
 **Since:** 3
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-DeviceResponse-manufacturer: string--><!--Device-DeviceResponse-manufacturer: string-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -116,9 +116,9 @@ Model.
 
 **Since:** 3
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-DeviceResponse-model: string--><!--Device-DeviceResponse-model: string-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -134,9 +134,9 @@ Product number.
 
 **Since:** 3
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-DeviceResponse-product: string--><!--Device-DeviceResponse-product: string-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -152,9 +152,9 @@ System region.
 
 **Since:** 4
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-DeviceResponse-region: string--><!--Device-DeviceResponse-region: string-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -170,9 +170,9 @@ Screen density, unit dpi.
 
 **Since:** 4
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-DeviceResponse-screenDensity: number--><!--Device-DeviceResponse-screenDensity: number-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -188,9 +188,9 @@ Screen shape. The options are as follows: rect: Rectangle screen. circle: Circle
 
 **Since:** 4
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-DeviceResponse-screenShape: 'rect' | 'circle'--><!--Device-DeviceResponse-screenShape: 'rect' | 'circle'-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -206,11 +206,11 @@ Minor API version of the system software. From API 26 and later versions, the sy
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Deprecated since:** 26.0.0
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-DeviceResponse-sdkMinorApiVersion?: number--><!--Device-DeviceResponse-sdkMinorApiVersion?: number-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -226,11 +226,11 @@ Minor API version of the system software. From API 26 and later versions, the sy
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Deprecated since:** 26.0.0
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-DeviceResponse-sdkPatchApiVersion?: number--><!--Device-DeviceResponse-sdkPatchApiVersion?: number-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -246,9 +246,9 @@ Window Height, unit px.
 
 **Since:** 3
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-DeviceResponse-windowHeight: number--><!--Device-DeviceResponse-windowHeight: number-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -264,9 +264,9 @@ Window width, unit px.
 
 **Since:** 3
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-DeviceResponse-windowWidth: number--><!--Device-DeviceResponse-windowWidth: number-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -294,4 +294,3 @@ export default class Page {
   }
 }
 ```
-

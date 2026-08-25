@@ -2,9 +2,9 @@
 
 Enumerates the user behavior types of the highlights album.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-photoAccessHelper-enum HighlightUserActionType--><!--Device-photoAccessHelper-enum HighlightUserActionType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ INSERTED_PIC_COUNT = 0
 
 Number of inserted pictures.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HighlightUserActionType-INSERTED_PIC_COUNT = 0--><!--Device-HighlightUserActionType-INSERTED_PIC_COUNT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,9 @@ REMOVED_PIC_COUNT
 
 Number of removed pictures.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HighlightUserActionType-REMOVED_PIC_COUNT--><!--Device-HighlightUserActionType-REMOVED_PIC_COUNT-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,9 +50,9 @@ SHARED_SCREENSHOT_COUNT
 
 Number of times that a full-length image in a highlights album is shared.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HighlightUserActionType-SHARED_SCREENSHOT_COUNT--><!--Device-HighlightUserActionType-SHARED_SCREENSHOT_COUNT-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -66,9 +66,9 @@ SHARED_COVER_COUNT
 
 Number of times that a highlights cover is shared.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HighlightUserActionType-SHARED_COVER_COUNT--><!--Device-HighlightUserActionType-SHARED_COVER_COUNT-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -82,9 +82,9 @@ RENAMED_COUNT
 
 Number of times that a highlights album is renamed.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HighlightUserActionType-RENAMED_COUNT--><!--Device-HighlightUserActionType-RENAMED_COUNT-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -98,9 +98,9 @@ CHANGED_COVER_COUNT
 
 Number of times that a cover is changed.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HighlightUserActionType-CHANGED_COVER_COUNT--><!--Device-HighlightUserActionType-CHANGED_COVER_COUNT-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -114,9 +114,9 @@ RENDER_VIEWED_TIMES = 100
 
 Number of times that the pictures in a highlights album are played.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HighlightUserActionType-RENDER_VIEWED_TIMES = 100--><!--Device-HighlightUserActionType-RENDER_VIEWED_TIMES = 100-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -130,9 +130,9 @@ RENDER_VIEWED_DURATION
 
 Time used to play the pictures in a highlights album.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HighlightUserActionType-RENDER_VIEWED_DURATION--><!--Device-HighlightUserActionType-RENDER_VIEWED_DURATION-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -146,9 +146,9 @@ ART_LAYOUT_VIEWED_TIMES
 
 Number of times that a highlights album is viewed.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HighlightUserActionType-ART_LAYOUT_VIEWED_TIMES--><!--Device-HighlightUserActionType-ART_LAYOUT_VIEWED_TIMES-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -162,11 +162,10 @@ ART_LAYOUT_VIEWED_DURATION
 
 Time used to view a highlights album.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HighlightUserActionType-ART_LAYOUT_VIEWED_DURATION--><!--Device-HighlightUserActionType-ART_LAYOUT_VIEWED_DURATION-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

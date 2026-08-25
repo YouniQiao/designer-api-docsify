@@ -2,9 +2,9 @@
 
 Defines a pinch event.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-unnamed-export declare interface Pinch--><!--Device-unnamed-export declare interface Pinch-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -22,11 +22,11 @@ scale: double
 
 Pinch scale factor. The value is greater than or equal to 0.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Pinch-scale: double--><!--Device-Pinch-scale: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -40,9 +40,8 @@ Gesture event type, for example, gesture start, gesture update, or gesture end.
 
 **Type:** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Pinch-type: ActionType--><!--Device-Pinch-type: ActionType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
-

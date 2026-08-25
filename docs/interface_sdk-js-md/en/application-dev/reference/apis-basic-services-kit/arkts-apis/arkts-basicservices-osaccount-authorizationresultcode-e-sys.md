@@ -4,7 +4,7 @@ Enumerates authorization result codes.
 
 **Since:** 24
 
-<!--Device-osAccount-enum AuthorizationResultCode--><!--Device-osAccount-enum AuthorizationResultCode-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -20,9 +20,9 @@ The authorization is successful.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-AuthorizationResultCode-AUTHORIZATION_SUCCESS = 0--><!--Device-AuthorizationResultCode-AUTHORIZATION_SUCCESS = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -38,9 +38,9 @@ The authorization is canceled.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-AuthorizationResultCode-AUTHORIZATION_CANCELED = 12300301--><!--Device-AuthorizationResultCode-AUTHORIZATION_CANCELED = 12300301-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -59,9 +59,9 @@ The authorization is rejected because user interaction is not allowed.Possible c
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-AuthorizationResultCode-AUTHORIZATION_INTERACTION_NOT_ALLOWED = 12300302--><!--Device-AuthorizationResultCode-AUTHORIZATION_INTERACTION_NOT_ALLOWED = 12300302-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -77,9 +77,9 @@ The authorization is rejected because the authorization rules are not met, for e
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-AuthorizationResultCode-AUTHORIZATION_DENIED = 12300303--><!--Device-AuthorizationResultCode-AUTHORIZATION_DENIED = 12300303-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -95,11 +95,10 @@ Authorization service is busy.Possible cause: Another authorization is being pro
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-AuthorizationResultCode-AUTHORIZATION_SERVICE_BUSY = 12300304--><!--Device-AuthorizationResultCode-AUTHORIZATION_SERVICE_BUSY = 12300304-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-

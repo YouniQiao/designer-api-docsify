@@ -2,9 +2,9 @@
 
 Session category for different scenes.
 
-**Since:** 24
+**Since:** 22
 
-<!--Device-avSession-enum SessionCategory--><!--Device-avSession-enum SessionCategory-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
@@ -18,9 +18,9 @@ CATEGORY_ACTIVE = 1
 
 The active session category which can be shown on system control entrance.
 
-**Since:** 24
+**Since:** 22
 
-<!--Device-SessionCategory-CATEGORY_ACTIVE = 1--><!--Device-SessionCategory-CATEGORY_ACTIVE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
@@ -34,9 +34,9 @@ CATEGORY_NOT_ACTIVE = 2
 
 The session category which is partially integrated with AVSession function.
 
-**Since:** 24
+**Since:** 22
 
-<!--Device-SessionCategory-CATEGORY_NOT_ACTIVE = 2--><!--Device-SessionCategory-CATEGORY_NOT_ACTIVE = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
@@ -50,9 +50,9 @@ CATEGORY_ALL = 3
 
 The all session category including all the applications using AVSession.
 
-**Since:** 24
+**Since:** 22
 
-<!--Device-SessionCategory-CATEGORY_ALL = 3--><!--Device-SessionCategory-CATEGORY_ALL = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
@@ -68,11 +68,10 @@ The session category for HiPlay casting AVSession.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-SessionCategory-CATEGORY_HIPLAY = 4--><!--Device-SessionCategory-CATEGORY_HIPLAY = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
-

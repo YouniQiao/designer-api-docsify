@@ -2,9 +2,9 @@
 
 Enumerates the reasons why a task is waiting.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-agent-enum WaitingReason--><!--Device-agent-enum WaitingReason-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -16,9 +16,9 @@ TASK_QUEUE_FULL = 0x00
 
 The task queue is full.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-WaitingReason-TASK_QUEUE_FULL = 0x00--><!--Device-WaitingReason-TASK_QUEUE_FULL = 0x00-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -30,9 +30,9 @@ NETWORK_NOT_MATCH = 0x01
 
 The required network conditions are not met.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-WaitingReason-NETWORK_NOT_MATCH = 0x01--><!--Device-WaitingReason-NETWORK_NOT_MATCH = 0x01-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -44,9 +44,9 @@ APP_BACKGROUND = 0x02
 
 The application has been running in the background for a long time.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-WaitingReason-APP_BACKGROUND = 0x02--><!--Device-WaitingReason-APP_BACKGROUND = 0x02-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -58,9 +58,8 @@ USER_INACTIVATED = 0x03
 
 The user is inactive.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-WaitingReason-USER_INACTIVATED = 0x03--><!--Device-WaitingReason-USER_INACTIVATED = 0x03-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
-

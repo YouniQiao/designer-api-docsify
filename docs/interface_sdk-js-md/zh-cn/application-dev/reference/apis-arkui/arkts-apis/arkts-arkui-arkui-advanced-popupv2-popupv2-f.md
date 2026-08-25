@@ -9,7 +9,6 @@ import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 ## PopupV2
 
 ```TypeScript
-@Builder
 export declare function PopupV2(options: PopupV2InitInfo): void
 ```
 
@@ -17,17 +16,14 @@ PopupV2用于显示特定样式的气泡，适用于提示信息、操作确认�
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Builder
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-unnamed-@Builderexport declare function PopupV2(options: PopupV2InitInfo): void--><!--Device-unnamed-@Builderexport declare function PopupV2(options: PopupV2InitInfo): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [PopupV2InitInfo](../../apis-default/arkts-apis/arkts-arkui-advanced-popupv2-popupv2initinfo-i.md) | 是 | 定义PopupV2组件的配置参数。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [PopupV2InitInfo](arkts-arkui-arkui-advanced-popupv2-popupv2initinfo-i.md) | 是 |

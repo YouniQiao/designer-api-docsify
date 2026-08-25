@@ -2,9 +2,9 @@
 
 查询网卡历史流量参数信息。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-statistics-export interface IfaceInfo--><!--Device-statistics-export interface IfaceInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -24,11 +24,11 @@ endTime: int
 
 查询的结束时间(时间戳;单位：秒)。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-IfaceInfo-endTime: int--><!--Device-IfaceInfo-endTime: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -44,9 +44,9 @@ iface: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-IfaceInfo-iface: string--><!--Device-IfaceInfo-iface: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -60,13 +60,12 @@ startTime: int
 
 查询的开始时间(时间戳;单位：秒)。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-IfaceInfo-startTime: int--><!--Device-IfaceInfo-startTime: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
-

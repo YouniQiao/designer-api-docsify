@@ -9,25 +9,25 @@ type SourceOpenCallback = (request: MediaSourceLoadingRequest) => long
 > **注意：**&gt;
 > 客户端在处理完请求后应立刻返回。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-unnamed-type SourceOpenCallback = (request: MediaSourceLoadingRequest) => long--><!--Device-unnamed-type SourceOpenCallback = (request: MediaSourceLoadingRequest) => long-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| request | [MediaSourceLoadingRequest](arkts-media-multimedia-media-mediasourceloadingrequest-i.md) | 是 | 打开请求参数，包含请求资源的具体信息和数据推送方式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| request | [MediaSourceLoadingRequest](arkts-media-multimedia-media-mediasourceloadingrequest-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 当前资源打开请求的句柄。大于0表示请求成功，小于或等于0表示请求失败。<br/> - request对象对应句柄唯一。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **示例**
 
@@ -46,4 +46,3 @@ let sourceOpenCallback: media.SourceOpenCallback = (request: media.MediaSourceLo
   return uuid;
 };
 ```
-

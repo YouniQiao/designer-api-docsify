@@ -2,9 +2,9 @@
 
 Wi-Fi detail state. @enum { int } WifiDetailState
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-wifiManager-enum WifiDetailState--><!--Device-wifiManager-enum WifiDetailState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -18,9 +18,9 @@ UNKNOWN = -1
 
 state is unknown
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-WifiDetailState-UNKNOWN = -1--><!--Device-WifiDetailState-UNKNOWN = -1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -34,9 +34,9 @@ INACTIVE = 0
 
 wifi is closed
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-WifiDetailState-INACTIVE = 0--><!--Device-WifiDetailState-INACTIVE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -50,9 +50,9 @@ ACTIVATED = 1
 
 wifi is opened
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-WifiDetailState-ACTIVATED = 1--><!--Device-WifiDetailState-ACTIVATED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -66,9 +66,9 @@ ACTIVATING = 2
 
 wifi is opening
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-WifiDetailState-ACTIVATING = 2--><!--Device-WifiDetailState-ACTIVATING = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -82,9 +82,9 @@ DEACTIVATING = 3
 
 wifi is closing
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-WifiDetailState-DEACTIVATING = 3--><!--Device-WifiDetailState-DEACTIVATING = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -98,9 +98,9 @@ SEMI_ACTIVATING = 4
 
 wifi sta is entering semi active
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-WifiDetailState-SEMI_ACTIVATING = 4--><!--Device-WifiDetailState-SEMI_ACTIVATING = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -114,11 +114,10 @@ SEMI_ACTIVE = 5
 
 wifi sta is semi active
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-WifiDetailState-SEMI_ACTIVE = 5--><!--Device-WifiDetailState-SEMI_ACTIVE = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
-

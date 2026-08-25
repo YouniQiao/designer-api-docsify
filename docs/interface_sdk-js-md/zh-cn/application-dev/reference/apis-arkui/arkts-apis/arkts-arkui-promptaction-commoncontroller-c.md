@@ -4,7 +4,7 @@
 
 **起始版本：** 18
 
-<!--Device-promptAction-class CommonController--><!--Device-promptAction-class CommonController-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,11 +24,11 @@ close(): void
 
 **起始版本：** 18
 
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CommonController-close(): void--><!--Device-CommonController-close(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,11 +42,11 @@ constructor()
 
 **起始版本：** 18
 
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CommonController-constructor()--><!--Device-CommonController-constructor()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,17 +60,16 @@ getState(): CommonState
 
 **起始版本：** 20
 
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CommonController-getState(): CommonState--><!--Device-CommonController-getState(): CommonState-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [CommonState](../../apis-default/arkts-apis/arkts-promptaction-commonstate-e.md) | 返回对应的弹窗状态。 |
-
+| 类型 |
+| --- |
+| [CommonState](arkts-arkui-promptaction-commonstate-e.md) |

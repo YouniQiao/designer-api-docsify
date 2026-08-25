@@ -4,11 +4,11 @@ Environment提供设备环境状态的查询能力，可将系统环境变量（
 
 ## 内置环境变量说明
 
-| key | 类型 | 说明 | | -------------------- | --------------- | ------------------------------------------------------------ | | accessibilityEnabled | string | 无障碍屏幕朗读是否启用。当无法获取环境变量中的accessibilityEnabled的值时，将通过envProp、envProps等接口传入的开发者指定的默认值添加到AppStorage中。 | | colorMode | ColorMode | 深浅色模式，可选值为：<br>- **ColorMode.LIGHT：浅色模式**；<br>- **ColorMode.DARK**：深色模式。 | | fontScale | number | 字体大小比例。 | | fontWeightScale | number | 字重比例。 | | layoutDirection | LayoutDirection | 布局方向类型，可选值为：<br>- **LayoutDirection.LTR**：从左到右；<br>- **LayoutDirection.RTL**：从右到左；<br>- **LayoutDirection.Auto**：跟随系统。 | | languageCode | string | 当前系统语言，小写字母，例如zh。 |
+| key | 类型 | 说明 | | -------------------- | --------------- | ------------------------------------------------------------ | | accessibilityEnabled | string | 无障碍屏幕朗读是否启用。当无法获取环境变量中的accessibilityEnabled的值时，将通过envProp、envProps等接口传入的开发者指定的默认值添加到AppStorage中。 | | colorMode | [ColorMode](arkts-arkui-storageproperty-colormode-e.md) | 深浅色模式，可选值为：<br>- **ColorMode.LIGHT：浅色模式**；<br>- **ColorMode.DARK**：深色模式。 | | fontScale | number | 字体大小比例。 | | [fontWeightScale](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md) | number | 字重比例。 | | layoutDirection | [LayoutDirection](arkts-arkui-storageproperty-layoutdirection-e.md) | 布局方向类型，可选值为：<br>- **LayoutDirection.LTR**：从左到右；<br>- **LayoutDirection.RTL**：从右到左；<br>- **LayoutDirection.Auto**：跟随系统。 | | languageCode | string |
 
 **起始版本：** 7
 
-<!--Device-unnamed-declare class Environment--><!--Device-unnamed-declare class Environment-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,26 +27,26 @@ static EnvProp<S>(key: string, value: S): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [envProp](#envprop)
-
-<!--Device-Environment-static EnvProp<S>(key: string, value: S): boolean--><!--Device-Environment-static EnvProp<S>(key: string, value: S): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | string | 是 | 环境变量名称，支持的范围详见[内置环境变量说明](#内置环境变量说明)。 |
-| value | S | 是 | 查询不到环境变量key时，则使用value作为默认值存入AppStorage中。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | string | 是 |
+| value | S | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果key对应的属性在AppStorage中存在，则返回false。不存在则在AppStorage中用value作为默认值创建key对应的属性，返回true。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -64,24 +64,24 @@ static envProp<S>(key: string, value: S): boolean
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-Environment-static envProp<S>(key: string, value: S): boolean--><!--Device-Environment-static envProp<S>(key: string, value: S): boolean-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | string | 是 | 环境变量名称，支持的范围详见[内置环境变量说明](#内置环境变量说明)。 |
-| value | S | 是 | 查询不到环境变量key时，则使用value作为默认值存入AppStorage中。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | string | 是 |
+| value | S | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果key对应的属性在AppStorage中存在，则返回false。不存在则在AppStorage中用value作为默认值创建key对应的属性，返回true。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -102,19 +102,19 @@ static EnvProps(
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [envProps](#envprops)
-
-<!--Device-Environment-static EnvProps(    props: {      key: string;      defaultValue: any;    }[],  ): void--><!--Device-Environment-static EnvProps(    props: {      key: string;      defaultValue: any;    }[],  ): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| props | {       key: string;       defaultValue: any;     }[] | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| props | {       key: string;       defaultValue: any;     }[] | 是 |
 
 **示例**
 
@@ -135,17 +135,17 @@ static envProps(props: EnvPropsOptions[]): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-Environment-static envProps(props: EnvPropsOptions[]): void--><!--Device-Environment-static envProps(props: EnvPropsOptions[]): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| props | [EnvPropsOptions](arkts-arkui-envpropsoptions-i.md)[] | 是 | 系统环境变量和默认值的键值对的数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| props | [EnvPropsOptions](arkts-arkui-envpropsoptions-i.md)[] | 是 |
 
 **示例**
 
@@ -166,19 +166,19 @@ static Keys(): Array<string>
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [keys](#keys)
-
-<!--Device-Environment-static Keys(): Array<string>--><!--Device-Environment-static Keys(): Array<string>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;string&gt; | 返回环境变量的属性key的数组。 |
+| 类型 |
+| --- |
+| Array & lt;string & gt; |
 
 **示例**
 
@@ -210,17 +210,17 @@ static keys(): Array<string>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-Environment-static keys(): Array<string>--><!--Device-Environment-static keys(): Array<string>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;string&gt; | 返回环境变量的属性key的数组。 |
+| 类型 |
+| --- |
+| Array & lt;string & gt; |
 
 **示例**
 
@@ -247,4 +247,3 @@ Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, 
 
 let keys: Array<string> = Environment.keys(); // keys 包含 accessibilityEnabled、languageCode、prop
 ```
-

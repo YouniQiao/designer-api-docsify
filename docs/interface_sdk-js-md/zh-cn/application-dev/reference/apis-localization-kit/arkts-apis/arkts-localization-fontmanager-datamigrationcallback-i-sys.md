@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-fontManager-interface DataMigrationCallback--><!--Device-fontManager-interface DataMigrationCallback-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Global.FontManager
 
@@ -26,7 +26,7 @@ onHeartBeat(): void
 
 **起始版本：** 23
 
-<!--Device-DataMigrationCallback-onHeartBeat(): void--><!--Device-DataMigrationCallback-onHeartBeat(): void-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Global.FontManager
 
@@ -70,7 +70,7 @@ onProgress(progress : DataMigrationProgress): void
 
 **起始版本：** 23
 
-<!--Device-DataMigrationCallback-onProgress(progress : DataMigrationProgress): void--><!--Device-DataMigrationCallback-onProgress(progress : DataMigrationProgress): void-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Global.FontManager
 
@@ -78,9 +78,9 @@ onProgress(progress : DataMigrationProgress): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| progress | [DataMigrationProgress](arkts-localization-fontmanager-datamigrationprogress-i-sys.md) | 是 | 数据迁移进度信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| progress | [DataMigrationProgress](arkts-localization-fontmanager-datamigrationprogress-i-sys.md) | 是 |
 
 **示例**
 
@@ -112,6 +112,12 @@ async function dataMigration() {
 
 ## onResult
 
+ArkTS-Dyn:
+```TypeScript
+onResult(result : number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 onResult(result : int): void
 ```
@@ -120,7 +126,7 @@ onResult(result : int): void
 
 **起始版本：** 23
 
-<!--Device-DataMigrationCallback-onResult(result : int): void--><!--Device-DataMigrationCallback-onResult(result : int): void-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Global.FontManager
 
@@ -128,9 +134,9 @@ onResult(result : int): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| result | int | 是 | 数据迁移结果。 <br>0：数据迁移成功。 <br>1：无需进行数据迁移。 <br>2：获取用户ID失败。 <br>3：检查目录失败。 <br>4：初始化缓存目录失败。 <br>5：打开源文件失败。 <br>6：拷贝失败。 <br>7：文件重命名失败。 <br>8：文件删除失败。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| result | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **示例**
 
@@ -159,4 +165,3 @@ async function dataMigration() {
   }
 }
 ```
-

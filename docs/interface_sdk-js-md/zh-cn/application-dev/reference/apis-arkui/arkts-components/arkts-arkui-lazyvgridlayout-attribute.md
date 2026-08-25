@@ -6,7 +6,7 @@
 
 **起始版本：** 19
 
-<!--Device-unnamed-declare class LazyVGridLayoutAttribute--><!--Device-unnamed-declare class LazyVGridLayoutAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,17 +25,16 @@ columnsTemplate(value: string)
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LazyVGridLayoutAttribute-columnsTemplate(value: string): LazyVGridLayoutAttribute--><!--Device-LazyVGridLayoutAttribute-columnsTemplate(value: string): LazyVGridLayoutAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | string | 是 | 当前网格布局列的数量、固定列宽或最小列宽值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | string | 是 |

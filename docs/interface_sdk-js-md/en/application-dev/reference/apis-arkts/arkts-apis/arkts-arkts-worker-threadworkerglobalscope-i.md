@@ -6,7 +6,7 @@ Implements communication between the Worker thread and the host thread. The post
 
 **Since:** 9
 
-<!--Device-unnamed-export interface ThreadWorkerGlobalScope--><!--Device-unnamed-export interface ThreadWorkerGlobalScope-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,36 +26,36 @@ Calls a method of an object registered with the host thread. This API is called 
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-ThreadWorkerGlobalScope-callGlobalCallObjectMethod(instanceName: string, methodName: string, timeout: number, ...args: Object[]): Object--><!--Device-ThreadWorkerGlobalScope-callGlobalCallObjectMethod(instanceName: string, methodName: string, timeout: number, ...args: Object[]): Object-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| instanceName | string | Yes | Key used for registration. It is used to search for the object in the host thread. |
-| methodName | string | Yes | Name of the method to call. Note that the method cannot be modified by async or generator, or return results asynchronously by using the asynchronous mechanism at the bottom layer. Otherwise, an exception is thrown. |
-| timeout | number | Yes | Maximum duration that the current synchronous invoking waits, in ms. The value is an integer ranging from 1 to 5000. The value 0 means that the 5000 ms duration is used. The value should be an integer. <br>Unit:ms. |
-| args | Object[] | Yes | the method argument called on registered globalCallObject. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [instanceName](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-globalerror-i.md) | string | Yes |
+| methodName | string | Yes |
+| timeout | number | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Object[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Object | Return the result of method if it has a return value, otherwise return void. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Object |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200019](../errorcode-utils.md#10200019-failed-to-call-an-api-of-an-unregistered-object) | The globalCallObject is not registered. |
-| [10200020](../errorcode-utils.md#10200020-failed-to-call-an-api-of-a-registered-object) | The method to be called is not callable or is an async method or a generator. |
-| [10200021](../errorcode-utils.md#10200021-waiting-for-a-global-call-times-out) | The global call exceeds the timeout. |
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200019](../errorcode-utils.md#10200019-failed-to-call-an-api-of-an-unregistered-object) |
+| [10200020](../errorcode-utils.md#10200020-failed-to-call-an-api-of-a-registered-object) |
+| [10200021](../errorcode-utils.md#10200021-waiting-for-a-global-call-times-out) |
 
 **Examples**
 
@@ -116,17 +116,17 @@ Terminates the Worker thread to stop it from receiving messages.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ThreadWorkerGlobalScope-close(): void--><!--Device-ThreadWorkerGlobalScope-close(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
 
 **Examples**
 
@@ -166,6 +166,66 @@ parentPort.onmessage = (): void => {
 }
 ```
 
+## onmessage
+
+```TypeScript
+onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
+```
+
+Called when the Worker thread receives a message sent by the host thread through postMessage. The event handler is executed in the Worker thread. In the callback function, this indicates the caller's ThreadWorkerGlobalScope, and the ev type is MessageEvents, indicating the received message data.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| this | [ThreadWorkerGlobalScope](arkts-arkts-worker-threadworkerglobalscope-i.md) | Yes |
+| ev | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
+
+## onmessageerror
+
+```TypeScript
+onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
+```
+
+Called when the Worker thread receives a message that cannot be deserialized. The event handler is executed in the Worker thread. In the callback function, this indicates the caller's ThreadWorkerGlobalScope, and the ev type is MessageEvents, indicating the received message data.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| this | [ThreadWorkerGlobalScope](arkts-arkts-worker-threadworkerglobalscope-i.md) | Yes |
+| ev | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
+
 ## postMessage
 
 ```TypeScript
@@ -176,25 +236,25 @@ Sends a message from the Worker thread to the host thread by transferring object
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ThreadWorkerGlobalScope-postMessage(messageObject: Object, transfer: ArrayBuffer[]): void--><!--Device-ThreadWorkerGlobalScope-postMessage(messageObject: Object, transfer: ArrayBuffer[]): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| messageObject | Object | Yes | Data to be sent to the host thread. The data object must be sequenceable. For details about the supported parameter types, see Sequenceable Data Types. |
-| transfer | ArrayBuffer[] | Yes | ArrayBuffer instance holding an array of objects for which the ownership is transferred to the host thread. After the transfer, the objects are available only in the host thread. The array cannot be null. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| messageObject | Object | Yes |
+| transfer | ArrayBuffer[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 **Examples**
 
@@ -408,25 +468,25 @@ Sends a message from the Worker thread to the host thread by transferring object
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ThreadWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void--><!--Device-ThreadWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| messageObject | Object | Yes | Data to be sent to the host thread. The data object must be sequenceable. For details about the supported parameter types, see Sequenceable Data Types. |
-| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | No | If this parameter is specified, it functions the same as ArrayBuffer[]. Specifically, the ownership of the objects in the array is transferred to the host thread and becomes unavailable in the Worker thread. The objects are available only in the host thread. If this parameter is not specified, the default value undefined is used, and information is transferred to the host thread by copying data. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| messageObject | Object | Yes |
+| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 **Examples**
 
@@ -442,28 +502,28 @@ Sends a message from the Worker thread to the main thread by transferring object
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ThreadWorkerGlobalScope-postMessageAtFront?(message: Object, priority: Priority, transfer?: ArrayBuffer[]): void--><!--Device-ThreadWorkerGlobalScope-postMessageAtFront?(message: Object, priority: Priority, transfer?: ArrayBuffer[]): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | Object | Yes | Data to be sent to the main thread. The data object must be sequenceable or sendable. For details about the supported sequenceable types, see Sequenceable Data Types. For details about the supported sendable types, see Sendable Data Types. |
-| priority | [Priority](arkts-arkts-worker-priority-e.md) | Yes | Priority of the Worker EventHandler. |
-| transfer | ArrayBuffer[] | No | ArrayBuffer instance holding an array of objects for which the ownership is transferred to the main thread. After the transfer, the objects are available only in the main thread. The array cannot be null. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | Object | Yes |
+| priority | [Priority](arkts-arkts-worker-priority-e.md) | Yes |
+| transfer | ArrayBuffer[] | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 ## postMessageWithSharedSendable
 
@@ -475,25 +535,25 @@ Sends a message from the Worker thread to the host thread. In the message, a sen
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-ThreadWorkerGlobalScope-postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void--><!--Device-ThreadWorkerGlobalScope-postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | Object | Yes | Data to be sent to the host thread. The data object must be sequenceable or sendable. For details about the supported sequenceable types, see Sequenceable Data Types. For details about the supported sendable types, see Sendable Data Types. |
-| transfer | ArrayBuffer[] | No | ArrayBuffer instance holding an array of objects for which the ownership is transferred to the host thread. After the transfer, the objects are available only in the host thread. The array cannot be null. The default value is an empty array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | Object | Yes |
+| transfer | ArrayBuffer[] | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 **Examples**
 
@@ -577,40 +637,3 @@ workerInstance.onmessage = (e: MessageEvents) => {
   console.info("sendable index obj is: " + obj.a);
 }
 ```
-
-## onmessage
-
-```TypeScript
-onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
-```
-
-Called when the Worker thread receives a message sent by the host thread through postMessage. The event handler is executed in the Worker thread. In the callback function, this indicates the caller's ThreadWorkerGlobalScope, and the ev type is MessageEvents, indicating the received message data.
-
-**Type:** (this: ThreadWorkerGlobalScope, ev: MessageEvents) =&gt; void
-
-**Since:** 9
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ThreadWorkerGlobalScope-onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void--><!--Device-ThreadWorkerGlobalScope-onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## onmessageerror
-
-```TypeScript
-onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
-```
-
-Called when the Worker thread receives a message that cannot be deserialized. The event handler is executed in the Worker thread. In the callback function, this indicates the caller's ThreadWorkerGlobalScope, and the ev type is MessageEvents, indicating the received message data.
-
-**Type:** (this: ThreadWorkerGlobalScope, ev: MessageEvents) =&gt; void
-
-**Since:** 9
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ThreadWorkerGlobalScope-onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void--><!--Device-ThreadWorkerGlobalScope-onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-

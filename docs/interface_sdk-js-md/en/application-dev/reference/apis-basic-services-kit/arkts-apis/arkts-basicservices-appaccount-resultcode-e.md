@@ -9,9 +9,9 @@ Enumerates the result codes.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-appAccount-enum ResultCode--><!--Device-appAccount-enum ResultCode-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -25,9 +25,9 @@ The operation is successful.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ResultCode-SUCCESS = 0--><!--Device-ResultCode-SUCCESS = 0-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -41,9 +41,9 @@ The application account does not exist.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ResultCode-ERROR_ACCOUNT_NOT_EXIST = 10001--><!--Device-ResultCode-ERROR_ACCOUNT_NOT_EXIST = 10001-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -57,9 +57,9 @@ The **AppAccountManager** service is abnormal.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ResultCode-ERROR_APP_ACCOUNT_SERVICE_EXCEPTION = 10002--><!--Device-ResultCode-ERROR_APP_ACCOUNT_SERVICE_EXCEPTION = 10002-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -73,9 +73,9 @@ The password is invalid.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ResultCode-ERROR_INVALID_PASSWORD = 10003--><!--Device-ResultCode-ERROR_INVALID_PASSWORD = 10003-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -89,9 +89,9 @@ The request is invalid.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ResultCode-ERROR_INVALID_REQUEST = 10004--><!--Device-ResultCode-ERROR_INVALID_REQUEST = 10004-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -105,9 +105,9 @@ The response is invalid.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ResultCode-ERROR_INVALID_RESPONSE = 10005--><!--Device-ResultCode-ERROR_INVALID_RESPONSE = 10005-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -121,9 +121,9 @@ The network is abnormal.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ResultCode-ERROR_NETWORK_EXCEPTION = 10006--><!--Device-ResultCode-ERROR_NETWORK_EXCEPTION = 10006-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -137,9 +137,9 @@ The authenticator does not exist.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ResultCode-ERROR_OAUTH_AUTHENTICATOR_NOT_EXIST = 10007--><!--Device-ResultCode-ERROR_OAUTH_AUTHENTICATOR_NOT_EXIST = 10007-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -153,9 +153,9 @@ The authentication is canceled.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ResultCode-ERROR_OAUTH_CANCELED = 10008--><!--Device-ResultCode-ERROR_OAUTH_CANCELED = 10008-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -169,9 +169,9 @@ The size of the OAuth list exceeds the limit.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ResultCode-ERROR_OAUTH_LIST_TOO_LARGE = 10009--><!--Device-ResultCode-ERROR_OAUTH_LIST_TOO_LARGE = 10009-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -185,9 +185,9 @@ The OAuth service is busy.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ResultCode-ERROR_OAUTH_SERVICE_BUSY = 10010--><!--Device-ResultCode-ERROR_OAUTH_SERVICE_BUSY = 10010-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -201,9 +201,9 @@ The OAuth service is abnormal.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ResultCode-ERROR_OAUTH_SERVICE_EXCEPTION = 10011--><!--Device-ResultCode-ERROR_OAUTH_SERVICE_EXCEPTION = 10011-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -217,9 +217,9 @@ The session to be authenticated does not exist.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ResultCode-ERROR_OAUTH_SESSION_NOT_EXIST = 10012--><!--Device-ResultCode-ERROR_OAUTH_SESSION_NOT_EXIST = 10012-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -233,9 +233,9 @@ The authentication timed out.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ResultCode-ERROR_OAUTH_TIMEOUT = 10013--><!--Device-ResultCode-ERROR_OAUTH_TIMEOUT = 10013-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -249,9 +249,9 @@ The authorization token does not exist.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ResultCode-ERROR_OAUTH_TOKEN_NOT_EXIST = 10014--><!--Device-ResultCode-ERROR_OAUTH_TOKEN_NOT_EXIST = 10014-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -265,9 +265,9 @@ The number of OAuth tokens reaches the limit.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ResultCode-ERROR_OAUTH_TOKEN_TOO_MANY = 10015--><!--Device-ResultCode-ERROR_OAUTH_TOKEN_TOO_MANY = 10015-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -281,9 +281,9 @@ The authentication operation is not supported.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ResultCode-ERROR_OAUTH_UNSUPPORT_ACTION = 10016--><!--Device-ResultCode-ERROR_OAUTH_UNSUPPORT_ACTION = 10016-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -297,9 +297,9 @@ The authentication type is not supported.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ResultCode-ERROR_OAUTH_UNSUPPORT_AUTH_TYPE = 10017--><!--Device-ResultCode-ERROR_OAUTH_UNSUPPORT_AUTH_TYPE = 10017-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -313,9 +313,8 @@ The required permission is missing.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-<!--Device-ResultCode-ERROR_PERMISSION_DENIED = 10018--><!--Device-ResultCode-ERROR_PERMISSION_DENIED = 10018-End-->
-
 **System capability:** SystemCapability.Account.AppAccount
-

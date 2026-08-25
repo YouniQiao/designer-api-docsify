@@ -2,9 +2,9 @@
 
 The module defines the environment variables for the application runtime, including language, dark/light color mode, screen orientation, and font size. You can subscribe to these environment variables to adapt to different user preferences and enhance the interaction experience.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export interface Configuration--><!--Device-unnamed-export interface Configuration-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -25,11 +25,11 @@ Dark/Light color mode of the application. The light color mode is used by defaul
 
 **Type:** ConfigurationConstant.ColorMode
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode--><!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -45,11 +45,11 @@ You can subscribe to changes to this environment variable in the [UIAbility](ark
 
 **Type:** ConfigurationConstant.Direction
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Configuration-direction?: ConfigurationConstant.Direction--><!--Device-Configuration-direction?: ConfigurationConstant.Direction-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -61,13 +61,13 @@ displayId?: long
 
 ID of the display where the application is located.You can subscribe to changes to this environment variable in the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) and [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), but not in the [ApplicationContext](arkts-ability-applicationcontext-c.md) or [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md).
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Configuration-displayId?: long--><!--Device-Configuration-displayId?: long-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -81,11 +81,11 @@ Unique ID of the font.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
-<!--Device-Configuration-fontId?: string--><!--Device-Configuration-fontId?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -97,13 +97,13 @@ fontSizeScale?: double
 
 Font size scale ratio. The value is a non-negative number. The default value is **1**.You can [set the font size for an application](../../../application-models/subscribe-system-environment-variable-changes.md#setting-font-size).
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Configuration-fontSizeScale?: double--><!--Device-Configuration-fontSizeScale?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -115,13 +115,13 @@ fontWeightScale?: double
 
 Font weight scale ratio. The value is a non-negative number. The default value is **1**.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Configuration-fontWeightScale?: double--><!--Device-Configuration-fontWeightScale?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -135,11 +135,11 @@ Whether a pointer device, such as a keyboard, mouse, or touchpad, is connected. 
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Configuration-hasPointerDevice?: boolean--><!--Device-Configuration-hasPointerDevice?: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -149,15 +149,15 @@ Whether a pointer device, such as a keyboard, mouse, or touchpad, is connected. 
 language?: string
 ```
 
-Current language of the application, for example, **zh** (Chinese) or **en** (English).You can [set the application language](../../../application-models/subscribe-system-environment-variable-changes.md#setting-application-language).For details about the value range, see getSystemLanguages.
+Current language of the application, for example, **zh** (Chinese) or **en** (English).You can [set the application language](../../../application-models/subscribe-system-environment-variable-changes.md#setting-application-language).For details about the value range, see [getSystemLanguages](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-system-c.md#getsystemlanguages).
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Configuration-language?: string--><!--Device-Configuration-language?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -171,11 +171,11 @@ Locale.The application automatically adjusts its behavior based on the current l
 
 **Type:** Intl.Locale
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-Configuration-locale?: Intl.Locale--><!--Device-Configuration-locale?: Intl.Locale-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -189,11 +189,11 @@ Mobile country code.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Configuration-mcc?: string--><!--Device-Configuration-mcc?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -207,11 +207,11 @@ Mobile network code.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Configuration-mnc?: string--><!--Device-Configuration-mnc?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -227,11 +227,11 @@ The font size is positively correlated with the screen pixel density. By monitor
 
 **Type:** ConfigurationConstant.ScreenDensity
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Configuration-screenDensity?: ConfigurationConstant.ScreenDensity--><!--Device-Configuration-screenDensity?: ConfigurationConstant.ScreenDensity-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -273,4 +273,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

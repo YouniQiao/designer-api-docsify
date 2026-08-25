@@ -4,11 +4,10 @@
 
 **Inheritance/Implementation:** VpnExtensionContext extends ExtensionContext
 
-**Since:** 26.1.0
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export default class VpnExtensionContext--><!--Device-unnamed-export default class VpnExtensionContext-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-

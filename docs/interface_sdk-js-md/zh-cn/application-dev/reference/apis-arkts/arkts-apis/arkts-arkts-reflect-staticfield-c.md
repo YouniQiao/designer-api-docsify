@@ -6,9 +6,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-reflect-class StaticField--><!--Device-reflect-class StaticField-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,25 +25,23 @@ equals(other: StaticField): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StaticField-equals(other: StaticField): boolean--><!--Device-StaticField-equals(other: StaticField): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [StaticField](arkts-arkts-reflect-staticfield-c.md) | 是 | 待比较的另一个静态字段对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [StaticField](arkts-arkts-reflect-staticfield-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果两个对象相等则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## getValue
 
@@ -57,19 +53,17 @@ getValue(): Any
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StaticField-getValue(): Any--><!--Device-StaticField-getValue(): Any-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Any | 字段值。 |
+| 类型 |
+| --- |
+| Any |
 
 ## setValue
 
@@ -81,17 +75,14 @@ setValue(value: Any): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StaticField-setValue(value: Any): void--><!--Device-StaticField-setValue(value: Any): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Any | 是 | 待写入的值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | Any | 是 |

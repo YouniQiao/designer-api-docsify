@@ -2,37 +2,43 @@
 
 Defines the layer mask of a node.@interface LayerMask
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface LayerMask--><!--Device-unnamed-export interface LayerMask-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## getEnabled
 
+ArkTS-Dyn:
+```TypeScript
+getEnabled(index: number): boolean
+```
+
+ArkTS-Sta:
 ```TypeScript
 getEnabled(index: int): boolean
 ```
 
 Checks whether the mask is enabled for a layer of a given index.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-LayerMask-getEnabled(index: int): boolean--><!--Device-LayerMask-getEnabled(index: int): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | Index of the layer. The value is an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result for whether the layer mask is enabled. true if enabled, false otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -58,24 +64,30 @@ function layerMask(): void {
 
 ## setEnabled
 
+ArkTS-Dyn:
+```TypeScript
+setEnabled(index: number, enabled: boolean): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setEnabled(index: int, enabled: boolean): void
 ```
 
 Enables the mask of a layer of a given index.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-LayerMask-setEnabled(index: int, enabled: boolean): void--><!--Device-LayerMask-setEnabled(index: int, enabled: boolean): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | Index of the layer. The value is an integer greater than or equal to 0. |
-| enabled | boolean | Yes | Whether to enable the layer mask. true to enable, false otherwise. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| enabled | boolean | Yes |
 
 **Examples**
 
@@ -98,4 +110,3 @@ function layerMask(): void {
   });
 }
 ```
-

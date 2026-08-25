@@ -2,9 +2,9 @@
 
 判断是否是紧急电话号码的可选参数。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-call-export interface EmergencyNumberOptions--><!--Device-call-export interface EmergencyNumberOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -23,11 +23,10 @@ slotId?: int
 卡槽ID：  
 - 卡槽1：`0`。 - 卡槽2：`1`。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-EmergencyNumberOptions-slotId?: int--><!--Device-EmergencyNumberOptions-slotId?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
-

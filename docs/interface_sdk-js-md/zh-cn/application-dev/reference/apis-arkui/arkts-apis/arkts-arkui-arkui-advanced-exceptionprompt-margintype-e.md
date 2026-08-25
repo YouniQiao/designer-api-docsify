@@ -4,7 +4,7 @@ MarginType定义marginType的类型。
 
 **起始版本：** 11
 
-<!--Device-unnamed-export declare enum MarginType--><!--Device-unnamed-export declare enum MarginType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ DEFAULT_MARGIN = 0
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MarginType-DEFAULT_MARGIN = 0--><!--Device-MarginType-DEFAULT_MARGIN = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ FIT_MARGIN = 1
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MarginType-FIT_MARGIN = 1--><!--Device-MarginType-FIT_MARGIN = 1-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

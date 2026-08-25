@@ -15,13 +15,13 @@ function unregisterMissionListener(listenerId: number, callback: AsyncCallback<v
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-**替代接口：** [off](arkts-ability-missionmanager-offmission-f-sys.md)
+**替代接口：** [off](arkts-ability-missionmanager-off-f-sys.md)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
-
-<!--Device-missionManager-function unregisterMissionListener(listenerId: number, callback: AsyncCallback<void>): void--><!--Device-missionManager-function unregisterMissionListener(listenerId: number, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -29,10 +29,10 @@ function unregisterMissionListener(listenerId: number, callback: AsyncCallback<v
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| listenerId | number | 是 | 系统任务状态监听器的index值，和监听器一一对应，由registerMissionListener方法返回。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 执行结果回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| listenerId | number | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **示例**
 
@@ -122,13 +122,13 @@ function unregisterMissionListener(listenerId: number): Promise<void>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-**替代接口：** [off](arkts-ability-missionmanager-offmission-f-sys.md)
+**替代接口：** [off](arkts-ability-missionmanager-off-f-sys.md)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
-
-<!--Device-missionManager-function unregisterMissionListener(listenerId: number): Promise<void>--><!--Device-missionManager-function unregisterMissionListener(listenerId: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -136,17 +136,16 @@ function unregisterMissionListener(listenerId: number): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| listenerId | number | 是 | 系统任务状态监听器的index值，和监听器一一对应，由registerMissionListener方法返回。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| listenerId | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
 参见 [unregisterMissionListener](#unregistermissionlistener)
-

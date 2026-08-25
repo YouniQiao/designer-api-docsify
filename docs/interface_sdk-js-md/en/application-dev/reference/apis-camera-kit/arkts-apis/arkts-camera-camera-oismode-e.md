@@ -4,7 +4,7 @@ Enumerates the optical image stabilization (OIS) mode.
 
 **Since:** 24
 
-<!--Device-camera-enum OISMode--><!--Device-camera-enum OISMode-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -18,11 +18,11 @@ OIS is disabled.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-OISMode-OFF = 0--><!--Device-OISMode-OFF = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -36,11 +36,11 @@ OIS is automatically controlled.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-OISMode-AUTO = 1--><!--Device-OISMode-AUTO = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -54,11 +54,10 @@ OIS is controlled by the application.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
-<!--Device-OISMode-CUSTOM = 2--><!--Device-OISMode-CUSTOM = 2-End-->
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
-

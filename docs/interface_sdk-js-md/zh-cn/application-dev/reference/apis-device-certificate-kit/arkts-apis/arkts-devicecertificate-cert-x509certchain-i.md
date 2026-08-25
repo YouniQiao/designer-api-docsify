@@ -2,9 +2,9 @@
 
 X.509证书链对象。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-cert-interface X509CertChain--><!--Device-cert-interface X509CertChain-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -22,27 +22,27 @@ getCertList(): Array<X509Cert>
 
 获取X.509证书列表。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-X509CertChain-getCertList(): Array<X509Cert>--><!--Device-X509CertChain-getCertList(): Array<X509Cert>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;X509Cert&gt; | X.509证书数组。 |
+| 类型 |
+| --- |
+| Array & lt;X509Cert & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 **示例**
 
@@ -243,27 +243,27 @@ hashCode(): Uint8Array
 
 获取DER格式数据的哈希值。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-X509CertChain-hashCode(): Uint8Array--><!--Device-X509CertChain-hashCode(): Uint8Array-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Cert
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Uint8Array | DER格式数据的哈希值。 |
+| 类型 |
+| --- |
+| Uint8Array |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
+| 错误码ID |
+| --- |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 **示例**
 
@@ -771,27 +771,27 @@ toString(): string
 
 获取对象的字符串类型数据。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-X509CertChain-toString(): string--><!--Device-X509CertChain-toString(): string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Cert
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 对象的字符串类型数据。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
+| 错误码ID |
+| --- |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 **示例**
 
@@ -1508,40 +1508,40 @@ validate(param: CertChainValidationParameters): Promise<CertChainValidationResul
 
 校验证书链。使用Promise方式返回结果。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-X509CertChain-validate(param: CertChainValidationParameters): Promise<CertChainValidationResult>--><!--Device-X509CertChain-validate(param: CertChainValidationParameters): Promise<CertChainValidationResult>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| param | [CertChainValidationParameters](arkts-devicecertificate-cert-certchainvalidationparameters-i.md) | 是 | 表示校验X.509证书链的参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| param | [CertChainValidationParameters](arkts-devicecertificate-cert-certchainvalidationparameters-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[CertChainValidationResult](arkts-devicecertificate-cert-certchainvalidationresult-i.md)&gt; | Promise对象，返回证书链校验结果。 |
+| 类型 |
+| --- |
+| Promise&lt;[CertChainValidationResult](arkts-devicecertificate-cert-certchainvalidationresult-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
-| [19030002](../errorcode-cert.md#19030002-证书签名验证错误) | The certificate signature verification failed. |
-| [19030003](../errorcode-cert.md#19030003-证书尚未生效) | The certificate has not taken effect. |
-| [19030004](../errorcode-cert.md#19030004-证书过期) | The certificate has expired. |
-| [19030005](../errorcode-cert.md#19030005-无法获取证书的颁发者) | Failed to obtain the certificate issuer. |
-| [19030006](../errorcode-cert.md#19030006-证书的密钥用途不含证书签名) | The key cannot be used for signing a certificate. |
-| [19030007](../errorcode-cert.md#19030007-证书的密钥用途不含数字签名) | The key cannot be used for a digital signature. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19030002](../errorcode-cert.md#19030002-证书签名验证错误) |
+| [19030003](../errorcode-cert.md#19030003-证书尚未生效) |
+| [19030004](../errorcode-cert.md#19030004-证书过期) |
+| [19030005](../errorcode-cert.md#19030005-无法获取证书的颁发者) |
+| [19030006](../errorcode-cert.md#19030006-证书的密钥用途不含证书签名) |
+| [19030007](../errorcode-cert.md#19030007-证书的密钥用途不含数字签名) |
 
 **示例**
 
@@ -2277,37 +2277,36 @@ validate(param: CertChainValidationParameters, callback: AsyncCallback<CertChain
 
 使用校验参数校验证书链。使用Callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-X509CertChain-validate(param: CertChainValidationParameters, callback: AsyncCallback<CertChainValidationResult>): void--><!--Device-X509CertChain-validate(param: CertChainValidationParameters, callback: AsyncCallback<CertChainValidationResult>): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| param | [CertChainValidationParameters](arkts-devicecertificate-cert-certchainvalidationparameters-i.md) | 是 | 表示校验X.509证书链的参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CertChainValidationResult](arkts-devicecertificate-cert-certchainvalidationresult-i.md)&gt; | 是 | 回调函数。当校验证书链成功时，err为undefined， data为获取到的证书链校验结果；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| param | [CertChainValidationParameters](arkts-devicecertificate-cert-certchainvalidationparameters-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CertChainValidationResult](arkts-devicecertificate-cert-certchainvalidationresult-i.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
-| [19030002](../errorcode-cert.md#19030002-证书签名验证错误) | The certificate signature verification failed. |
-| [19030003](../errorcode-cert.md#19030003-证书尚未生效) | The certificate has not taken effect. |
-| [19030004](../errorcode-cert.md#19030004-证书过期) | The certificate has expired. |
-| [19030005](../errorcode-cert.md#19030005-无法获取证书的颁发者) | Failed to obtain the certificate issuer. |
-| [19030006](../errorcode-cert.md#19030006-证书的密钥用途不含证书签名) | The key cannot be used for signing a certificate. |
-| [19030007](../errorcode-cert.md#19030007-证书的密钥用途不含数字签名) | The key cannot be used for a digital signature. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19030002](../errorcode-cert.md#19030002-证书签名验证错误) |
+| [19030003](../errorcode-cert.md#19030003-证书尚未生效) |
+| [19030004](../errorcode-cert.md#19030004-证书过期) |
+| [19030005](../errorcode-cert.md#19030005-无法获取证书的颁发者) |
+| [19030006](../errorcode-cert.md#19030006-证书的密钥用途不含证书签名) |
+| [19030007](../errorcode-cert.md#19030007-证书的密钥用途不含数字签名) |
 
 **示例**
 
 参见 [validate](#validate)
-

@@ -8,16 +8,15 @@ type EventInfo = AuthResultInfo | TipInfo
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 11
 
 **替代接口：** [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md)
 
-<!--Device-userAuth-type EventInfo = AuthResultInfo | TipInfo--><!--Device-userAuth-type EventInfo = AuthResultInfo | TipInfo-End-->
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
-| 类型 | 说明 |
-| --- | --- |
-| AuthResultInfo | 获取到的认证结果信息。 |
-| TipInfo | 认证过程中的提示信息。 |
-
+| 类型 |
+| --- |
+| [AuthResultInfo](arkts-userauthentication-userauth-authresultinfo-i.md) |
+| [TipInfo](arkts-userauthentication-userauth-tipinfo-i.md) |

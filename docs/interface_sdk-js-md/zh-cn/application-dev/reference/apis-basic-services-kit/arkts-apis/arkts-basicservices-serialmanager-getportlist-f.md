@@ -14,17 +14,17 @@ function getPortList(): Readonly<SerialPort>[]
 
 查询串口设备清单，包括设备名称和对应的端口号。通常在应用启动时、设备连接后或需要检测可用串口设备时调用。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-serialManager-function getPortList(): Readonly<SerialPort>[]--><!--Device-serialManager-function getPortList(): Readonly<SerialPort>[]-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Readonly&lt;SerialPort&gt;[] | 返回可用串口设备的列表，每个元素包含串口的端口号和设备名称等属性信息。可用于获取当前系统中的所有串口设备，以便用户选择需要进行操作的串口。 |
+| 类型 |
+| --- |
+| Readonly & lt;SerialPort & gt;[] |
 
 **示例**
 
@@ -45,4 +45,3 @@ function getPortListExample() {
   let portId: int = portList[0].portId;
 }
 ```
-

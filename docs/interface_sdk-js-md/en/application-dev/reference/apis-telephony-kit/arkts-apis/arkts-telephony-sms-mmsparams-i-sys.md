@@ -2,9 +2,9 @@
 
 Defines the parameters for sending SMS messages.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-sms-export interface MmsParams--><!--Device-sms-export interface MmsParams-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -26,9 +26,9 @@ MMS PDU address.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-MmsParams-data: string--><!--Device-MmsParams-data: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -44,9 +44,9 @@ MMSC address.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-MmsParams-mmsc: string--><!--Device-MmsParams-mmsc: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -62,9 +62,9 @@ MMS configuration file. For details, see [MmsParams](#mmsparams-system-api).
 
 **Type:** [MmsConfig](arkts-telephony-sms-mmsconfig-i-sys.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-MmsParams-mmsConfig?: MmsConfig--><!--Device-MmsParams-mmsConfig?: MmsConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -79,13 +79,12 @@ slotId: int
 Slot ID of the SIM card used for sending SMS messages.  
 - **0**: card slot 1 - **1**: card slot 2
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-MmsParams-slotId: int--><!--Device-MmsParams-slotId: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
-

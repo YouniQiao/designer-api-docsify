@@ -4,7 +4,7 @@
 
 **起始版本：** 20
 
-<!--Device-ethernet-export interface EthernetDeviceInfos--><!--Device-ethernet-export interface EthernetDeviceInfos-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -28,7 +28,7 @@ connectionMode: DeviceConnectionType
 
 **起始版本：** 20
 
-<!--Device-EthernetDeviceInfos-connectionMode: DeviceConnectionType--><!--Device-EthernetDeviceInfos-connectionMode: DeviceConnectionType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -46,7 +46,7 @@ deviceName: string
 
 **起始版本：** 20
 
-<!--Device-EthernetDeviceInfos-deviceName: string--><!--Device-EthernetDeviceInfos-deviceName: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -64,7 +64,7 @@ ifaceName: string
 
 **起始版本：** 20
 
-<!--Device-EthernetDeviceInfos-ifaceName: string--><!--Device-EthernetDeviceInfos-ifaceName: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -82,7 +82,7 @@ maximumRate: string
 
 **起始版本：** 20
 
-<!--Device-EthernetDeviceInfos-maximumRate: string--><!--Device-EthernetDeviceInfos-maximumRate: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -100,7 +100,7 @@ productName: string
 
 **起始版本：** 20
 
-<!--Device-EthernetDeviceInfos-productName: string--><!--Device-EthernetDeviceInfos-productName: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -118,7 +118,7 @@ supplierId: string
 
 **起始版本：** 20
 
-<!--Device-EthernetDeviceInfos-supplierId: string--><!--Device-EthernetDeviceInfos-supplierId: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -136,9 +136,8 @@ supplierName: string
 
 **起始版本：** 20
 
-<!--Device-EthernetDeviceInfos-supplierName: string--><!--Device-EthernetDeviceInfos-supplierName: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。
-

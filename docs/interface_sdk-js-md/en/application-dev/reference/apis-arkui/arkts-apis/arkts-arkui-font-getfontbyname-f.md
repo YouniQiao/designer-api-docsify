@@ -17,10 +17,12 @@ Obtains information about a system font based on the font name.
 > **NOTE：**&gt;
 > - Since API version 10, you can use the
 > [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in
-> [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Font](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated with
+> [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Font](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated with
 > the current UI context.
 
 **Since:** 10
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 18
 
@@ -30,19 +32,16 @@ Obtains information about a system font based on the font name.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-font-function getFontByName(fontName: string): FontInfo--><!--Device-font-function getFontByName(fontName: string): FontInfo-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fontName | string | Yes | System font name. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fontName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [FontInfo](arkts-arkui-font-fontinfo-i.md) | Information about the system font. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [FontInfo](arkts-arkui-font-fontinfo-i.md) |

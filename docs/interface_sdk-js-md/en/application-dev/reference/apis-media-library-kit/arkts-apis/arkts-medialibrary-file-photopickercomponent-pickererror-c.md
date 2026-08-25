@@ -4,7 +4,7 @@ Describes the function name, error code, and message of the error returned when 
 
 **Since:** 23
 
-<!--Device-unnamed-export declare class PickerError--><!--Device-unnamed-export declare class PickerError-End-->
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,11 +26,11 @@ Error code.
 
 **Since:** 23
 
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-PickerError-errorCode: number--><!--Device-PickerError-errorCode: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -46,11 +46,11 @@ Function name of the error.
 
 **Since:** 23
 
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-PickerError-functionName: string--><!--Device-PickerError-functionName: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -66,11 +66,10 @@ Error message.
 
 **Since:** 23
 
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-PickerError-message: string--><!--Device-PickerError-message: string-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

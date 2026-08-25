@@ -9,11 +9,11 @@ Vector is a linear data structure that is implemented based on arrays. When the 
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md)
-
-<!--Device-unnamed-declare class Vector--><!--Device-unnamed-declare class Vector-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -33,17 +33,17 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-[Symbol.iterator](): IterableIterator<T>--><!--Device-Vector-[Symbol.iterator](): IterableIterator<T>-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;T&gt; |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;T & gt; |
 
 **Examples**
 
@@ -78,23 +78,23 @@ Adds an element at the end of this Vector.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-add(element: T): boolean--><!--Device-Vector-add(element: T): boolean-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| element | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -122,9 +122,9 @@ Clears all elements in this Vector and sets its length to **0**.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-clear(): void--><!--Device-Vector-clear(): void-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -149,17 +149,17 @@ Clones this Vector and returns a copy. The modification to the copy does not aff
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-clone(): Vector<T>--><!--Device-Vector-clone(): Vector<T>-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; | New **Vector** instance obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; |
 
 **Examples**
 
@@ -182,9 +182,9 @@ A constructor used to create a **Vector** instance.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-constructor()--><!--Device-Vector-constructor()-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -204,17 +204,17 @@ Converts this Vector into an array.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-convertToArray(): Array<T>--><!--Device-Vector-convertToArray(): Array<T>-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | Array obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 **Examples**
 
@@ -237,17 +237,17 @@ Copies elements in this Vector into an array to overwrite elements of the same p
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-copyToArray(array: Array<T>): void--><!--Device-Vector-copyToArray(array: Array<T>): void-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| array | Array&lt;T&gt; | Yes | Array to which the elements in the Vector will be copied. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| array | Array & lt;T & gt; | Yes |
 
 ## forEach
 
@@ -259,18 +259,18 @@ Uses a callback to traverse the elements in this Vector and obtain their positio
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-forEach(callbackFn: (value: T, index?: number, vector?: Vector<T>) => void, thisArg?: Object): void--><!--Device-Vector-forEach(callbackFn: (value: T, index?: number, vector?: Vector<T>) => void, thisArg?: Object): void-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; void | Yes | Callback invoked for replacement. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackFn | (value: T, index?: number, vector?: Vector & lt;T & gt;) = & gt; void | Yes |
+| thisArg | Object | No |
 
 **Examples**
 
@@ -295,23 +295,23 @@ Obtains an element at the specified position in this Vector.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-get(index: number): T--><!--Device-Vector-get(index: number): T-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | number | Yes | Position index of the target element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | Element obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 **Examples**
 
@@ -334,17 +334,17 @@ Obtains the capacity of this Vector.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-getCapacity(): number--><!--Device-Vector-getCapacity(): number-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Capacity obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -367,17 +367,17 @@ Obtains the first element in this Vector.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-getFirstElement(): T--><!--Device-Vector-getFirstElement(): T-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | The first element obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 **Examples**
 
@@ -400,24 +400,24 @@ Searches for an element forward from the specified position index and returns th
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-getIndexFrom(element: T, index: number): number--><!--Device-Vector-getIndexFrom(element: T, index: number): number-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| element | T | Yes | Target element. |
-| index | number | Yes | Position index where the search starts. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| element | T | Yes |
+| index | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Index of the element. If no match is found, **-1** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -440,23 +440,23 @@ Obtains the index of the first occurrence of the specified element in this Vecto
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-getIndexOf(element: T): number--><!--Device-Vector-getIndexOf(element: T): number-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| element | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Index of the element. If no match is found, **-1** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -482,17 +482,17 @@ Obtains the last element in this Vector.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-getLastElement(): T--><!--Device-Vector-getLastElement(): T-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | The last element obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 **Examples**
 
@@ -515,24 +515,24 @@ Searches for an element backward from the specified position index and returns t
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-getLastIndexFrom(element: T, index: number): number--><!--Device-Vector-getLastIndexFrom(element: T, index: number): number-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| element | T | Yes | Target element. |
-| index | number | Yes | Position index where the search starts. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| element | T | Yes |
+| index | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Index of the element. If no match is found, **-1** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -555,23 +555,23 @@ Obtains the index of the last occurrence of the specified element in this Vector
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-getLastIndexOf(element: T): number--><!--Device-Vector-getLastIndexOf(element: T): number-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| element | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Index of the element. If no match is found, **-1** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -597,23 +597,23 @@ Checks whether this Vector has the specified element.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-has(element: T): boolean--><!--Device-Vector-has(element: T): boolean-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| element | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** is returned if the Vector has the specified element; otherwise, **false** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -634,17 +634,17 @@ Increases the capacity of this Vector.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-increaseCapacityTo(newCapacity: number): void--><!--Device-Vector-increaseCapacityTo(newCapacity: number): void-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| newCapacity | number | Yes | New capacity. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| newCapacity | number | Yes |
 
 **Examples**
 
@@ -668,18 +668,18 @@ Inserts an element within the length range and moves its subsequent elements rig
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-insert(element: T, index: number): void--><!--Device-Vector-insert(element: T, index: number): void-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| element | T | Yes | Target element. |
-| index | number | Yes | Index of the position where the element is to be inserted. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| element | T | Yes |
+| index | number | Yes |
 
 **Examples**
 
@@ -700,17 +700,17 @@ Checks whether this Vector is empty (contains no elements).
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-isEmpty(): boolean--><!--Device-Vector-isEmpty(): boolean-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** is returned if the Vector is empty; otherwise, **false** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -733,23 +733,23 @@ Removes the first occurrence of the specified element from this Vector.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-remove(element: T): boolean--><!--Device-Vector-remove(element: T): boolean-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| element | T | Yes | Target element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| element | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Operation result. The value **true** is returned if the element is removed; otherwise, **false** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -772,23 +772,23 @@ Searches for an element based on its index, removes the element after returning 
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-removeByIndex(index: number): T--><!--Device-Vector-removeByIndex(index: number): T-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | number | Yes | Position index of the target element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | Element removed. If the Vector is empty, **undefined** is returned. If the index is out of range, an exception is thrown. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 **Examples**
 
@@ -812,18 +812,18 @@ Removes from this Vector all of the elements within a range, including the eleme
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-removeByRange(fromIndex: number, toIndex: number): void--><!--Device-Vector-removeByRange(fromIndex: number, toIndex: number): void-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fromIndex | number | Yes | Index of the start position. |
-| toIndex | number | Yes | Index of the end position. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fromIndex | number | Yes |
+| toIndex | number | Yes |
 
 **Examples**
 
@@ -846,18 +846,18 @@ Replaces all elements in this Vector with new elements, and returns the new ones
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-replaceAllElements(callbackFn: (value: T, index?: number, vector?: Vector<T>) => T, thisArg?: Object): void--><!--Device-Vector-replaceAllElements(callbackFn: (value: T, index?: number, vector?: Vector<T>) => T, thisArg?: Object): void-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; T | Yes | Callback invoked for replacement. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackFn | (value: T, index?: number, vector?: Vector & lt;T & gt;) = & gt; T | Yes |
+| thisArg | Object | No |
 
 **Examples**
 
@@ -883,24 +883,24 @@ Replaces an element at the specified position in this Vector with a given elemen
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-set(index: number, element: T): T--><!--Device-Vector-set(index: number, element: T): T-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | number | Yes | Position index of the target element. |
-| element | T | Yes | Element to be used for replacement. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | number | Yes |
+| element | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | New element. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 ## setLength
 
@@ -912,17 +912,17 @@ Sets a new length for this Vector.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-setLength(newSize: number): void--><!--Device-Vector-setLength(newSize: number): void-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| newSize | number | Yes | New length to set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| newSize | number | Yes |
 
 **Examples**
 
@@ -946,17 +946,17 @@ Sorts elements in this Vector.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-sort(comparator?: (firstValue: T, secondValue: T) => number): void--><!--Device-Vector-sort(comparator?: (firstValue: T, secondValue: T) => number): void-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| comparator | (firstValue: T, secondValue: T) =&gt; number | No | Callback invoked for sorting. The default value is this instance. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| comparator | (firstValue: T, secondValue: T) = & gt; number | No |
 
 **Examples**
 
@@ -981,24 +981,24 @@ Obtains elements within a range in this Vector, including the element at the sta
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-subVector(fromIndex: number, toIndex: number): Vector<T>--><!--Device-Vector-subVector(fromIndex: number, toIndex: number): Vector<T>-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fromIndex | number | Yes | Index of the start position. |
-| toIndex | number | Yes | Index of the end position. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fromIndex | number | Yes |
+| toIndex | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; | New **Vector** instance obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; |
 
 **Examples**
 
@@ -1024,17 +1024,17 @@ Uses commas (,) to concatenate elements in this Vector into a string.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-toString(): string--><!--Device-Vector-toString(): string-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | String obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -1057,9 +1057,9 @@ Trims the capacity of this Vector into its current length.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Vector-trimToCurrentLength(): void--><!--Device-Vector-trimToCurrentLength(): void-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1086,9 +1086,8 @@ Number of elements in a Vector.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-<!--Device-Vector-length: number--><!--Device-Vector-length: number-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

@@ -2,9 +2,9 @@
 
 表示图片编码选项。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-image-interface PackingOption--><!--Device-image-interface PackingOption-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -22,13 +22,13 @@ backgroundColor?: int
 
 用于指定编码过程中透明区域填充的背景颜色。当图片像素为RGBA_8888，且编码的目标格式不支持透明度（如"image/jpeg"或"image/heif"）时，透明区域将填充为指定背景颜色（格式：0xRRGGBB），默认值为 0（黑色）。PNG、WebP等支持透明度的格式会忽略此参数。颜色范围：0x000000 - 0xFFFFFF
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-PackingOption-backgroundColor?: int--><!--Device-PackingOption-backgroundColor?: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -40,13 +40,13 @@ bufferSize?: int
 
 接收编码数据的缓冲区大小，单位：字节（Byte）。如果不设置大小，默认为25MB。如果编码图片超过25MB，需要指定大小。bufferSize需大于编码后图片大小。使用 [packToFile](arkts-image-image-imagepacker-i.md#packtofile) 不受此参数限制。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PackingOption-bufferSize?: int--><!--Device-PackingOption-bufferSize?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -60,9 +60,9 @@ desiredDynamicRange?: PackingDynamicRange
 
 **类型：** [PackingDynamicRange](arkts-image-image-packingdynamicrange-e.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-PackingOption-desiredDynamicRange?: PackingDynamicRange--><!--Device-PackingOption-desiredDynamicRange?: PackingDynamicRange-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -78,11 +78,11 @@ format: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PackingOption-format: string--><!--Device-PackingOption-format: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -94,13 +94,13 @@ maxEmbedThumbnailDimension?: int
 
 用于指定编码过程中生成缩略图的最大边长（宽和高中较大的那一边），较短的一边会根据长边的缩放比例进行缩放。此参数仅在needsPackProperties设置为true时有效。该值应为整数，默认值为0。若未指定此参数，或根据该尺寸计算出生成的缩略图宽/高为0，则编码过程中不会生成缩略图。单位：像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-PackingOption-maxEmbedThumbnailDimension?: int--><!--Device-PackingOption-maxEmbedThumbnailDimension?: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -116,9 +116,9 @@ needsPackGPS?: boolean
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-PackingOption-needsPackGPS?: boolean--><!--Device-PackingOption-needsPackGPS?: boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -132,9 +132,9 @@ needsPackProperties?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-PackingOption-needsPackProperties?: boolean--><!--Device-PackingOption-needsPackProperties?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -149,13 +149,13 @@ quality: int
 3. sut编码中，设定输出图片质量可选参数：92。
 4. （API version 20支持）hdr_astc_4x4编码中，可以设定输出图片质量的参数，可选参数：85。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PackingOption-quality: int--><!--Device-PackingOption-quality: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -173,9 +173,9 @@ sizeLimit?: PackingSizeLimit
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-PackingOption-sizeLimit?: PackingSizeLimit--><!--Device-PackingOption-sizeLimit?: PackingSizeLimit-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -191,9 +191,8 @@ TIFF图像编码选项。
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-PackingOption-tiffPackingOptions?: PackingOptionsForTiff--><!--Device-PackingOption-tiffPackingOptions?: PackingOptionsForTiff-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
-

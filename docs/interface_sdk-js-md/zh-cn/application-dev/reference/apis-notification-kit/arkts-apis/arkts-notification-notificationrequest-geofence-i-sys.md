@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-unnamed-export interface Geofence--><!--Device-unnamed-export interface Geofence-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -22,7 +22,7 @@ coordinateSystemType:CoordinateSystemType
 
 **起始版本：** 23
 
-<!--Device-Geofence-coordinateSystemType:CoordinateSystemType--><!--Device-Geofence-coordinateSystemType:CoordinateSystemType-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -36,11 +36,11 @@ delayTime?:int
 
 围栏延迟时间，单位：秒，进入围栏后触发围栏的延迟时间，取值范围：[0, 300]。默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
-<!--Device-Geofence-delayTime?:int--><!--Device-Geofence-delayTime?:int-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -54,11 +54,11 @@ latitude:double
 
 地理围栏中心点纬度，取值范围：[-90, 90]。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
-<!--Device-Geofence-latitude:double--><!--Device-Geofence-latitude:double-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -72,11 +72,11 @@ longitude:double
 
 地理围栏中心点经度，取值范围：[-180, 180]。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
-<!--Device-Geofence-longitude:double--><!--Device-Geofence-longitude:double-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -94,7 +94,7 @@ monitorEvent:MonitorEvent
 
 **起始版本：** 23
 
-<!--Device-Geofence-monitorEvent:MonitorEvent--><!--Device-Geofence-monitorEvent:MonitorEvent-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -108,13 +108,12 @@ radius:double
 
 围栏半径，单位：米，取值范围：[200, 2000]。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 23
 
-<!--Device-Geofence-radius:double--><!--Device-Geofence-radius:double-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
-

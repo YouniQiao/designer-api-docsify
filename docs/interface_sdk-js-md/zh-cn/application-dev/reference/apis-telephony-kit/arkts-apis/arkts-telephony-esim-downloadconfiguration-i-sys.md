@@ -2,9 +2,9 @@
 
 下载过程中的属性配置。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-eSIM-export interface DownloadConfiguration--><!--Device-eSIM-export interface DownloadConfiguration-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -26,9 +26,9 @@ forceDisableProfile: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-DownloadConfiguration-forceDisableProfile: boolean--><!--Device-DownloadConfiguration-forceDisableProfile: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -44,9 +44,9 @@ isPprAllowed: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-DownloadConfiguration-isPprAllowed: boolean--><!--Device-DownloadConfiguration-isPprAllowed: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -62,11 +62,10 @@ switchAfterDownload: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-DownloadConfiguration-switchAfterDownload: boolean--><!--Device-DownloadConfiguration-switchAfterDownload: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
-

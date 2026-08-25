@@ -2,9 +2,9 @@
 
 rtt通话事件
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-call-export interface RttEventInfo--><!--Device-call-export interface RttEventInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -24,11 +24,11 @@ callId: int
 
 rtt通话id
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-RttEventInfo-callId: int--><!--Device-RttEventInfo-callId: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -42,11 +42,11 @@ eventType: int
 
 rtt通话事件类型
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-RttEventInfo-eventType: int--><!--Device-RttEventInfo-eventType: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -60,13 +60,12 @@ reason: int
 
 rtt事件原因
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-RttEventInfo-reason: int--><!--Device-RttEventInfo-reason: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
-

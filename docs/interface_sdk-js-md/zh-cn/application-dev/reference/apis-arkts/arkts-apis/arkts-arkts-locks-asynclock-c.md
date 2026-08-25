@@ -4,9 +4,7 @@
 
 **起始版本：** 12
 
-**装饰器类型：** @Sendable
-
-<!--Device-locks-class AsyncLock--><!--Device-locks-class AsyncLock-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -26,9 +24,9 @@ constructor()
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-AsyncLock-constructor()--><!--Device-AsyncLock-constructor()-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -42,29 +40,29 @@ lockAsync<T>(callback: AsyncLockCallback<T>): Promise<T>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-AsyncLock-lockAsync<T>(callback: AsyncLockCallback<T>): Promise<T>--><!--Device-AsyncLock-lockAsync<T>(callback: AsyncLockCallback<T>): Promise<T>-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | 是 | 获取锁后要调用的函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;T&gt; | 回调执行后将解决的Promise。 |
+| 类型 |
+| --- |
+| Promise & lt;T & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200030](../errorcode-utils.md#10200030-锁不存在) | The lock does not exist. |
+| 错误码ID |
+| --- |
+| [10200030](../errorcode-utils.md#10200030-锁不存在) |
 
 ## lockAsync
 
@@ -76,30 +74,30 @@ lockAsync<T>(callback: AsyncLockCallback<T>, mode: AsyncLockMode): Promise<T>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-AsyncLock-lockAsync<T>(callback: AsyncLockCallback<T>, mode: AsyncLockMode): Promise<T>--><!--Device-AsyncLock-lockAsync<T>(callback: AsyncLockCallback<T>, mode: AsyncLockMode): Promise<T>-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | 是 | 获取锁后要调用的函数。 |
-| mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | 是 | 锁的操作模式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | 是 |
+| mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;T&gt; | 回调执行后将解决的Promise。 |
+| 类型 |
+| --- |
+| Promise & lt;T & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200030](../errorcode-utils.md#10200030-锁不存在) | The lock does not exist. |
+| 错误码ID |
+| --- |
+| [10200030](../errorcode-utils.md#10200030-锁不存在) |
 
 ## lockAsync
 
@@ -112,32 +110,32 @@ lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-AsyncLock-lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,        options: AsyncLockOptions<U>): Promise<T | U>--><!--Device-AsyncLock-lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,        options: AsyncLockOptions<U>): Promise<T | U>-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | 是 | 获取锁后要调用的函数。 |
-| mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | 是 | 锁的操作模式。 |
-| options | [AsyncLockOptions](arkts-arkts-locks-asynclockoptions-c.md)&lt;U&gt; | 是 | 锁的操作选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | 是 |
+| mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | 是 |
+| options | [AsyncLockOptions](arkts-arkts-locks-asynclockoptions-c.md)&lt;U&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;T \| U&gt; | 回调执行后解决的Promise，或者在超时情况下被拒绝。 |
+| 类型 |
+| --- |
+| Promise & lt;T \ | U & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200030](../errorcode-utils.md#10200030-锁不存在) | The lock does not exist. |
-| [10200031](../errorcode-utils.md#10200031-lockasync超时) | Timeout exceeded. |
+| 错误码ID |
+| --- |
+| [10200030](../errorcode-utils.md#10200030-锁不存在) |
+| [10200031](../errorcode-utils.md#10200031-lockasync超时) |
 
 ## query
 
@@ -149,29 +147,29 @@ static query(name: string): AsyncLockState
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-AsyncLock-static query(name: string): AsyncLockState--><!--Device-AsyncLock-static query(name: string): AsyncLockState-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 要查询的锁的名称，仅可查询通过request接口获取的锁（即与request接口入参锁名称保持一致）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [name](#name) | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md) | 包含状态描述的异步锁状态实例。 |
+| 类型 |
+| --- |
+| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200030](../errorcode-utils.md#10200030-锁不存在) | The lock does not exist. |
+| 错误码ID |
+| --- |
+| [10200030](../errorcode-utils.md#10200030-锁不存在) |
 
 ## queryAll
 
@@ -183,17 +181,17 @@ static queryAll(): AsyncLockState[]
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-AsyncLock-static queryAll(): AsyncLockState[]--><!--Device-AsyncLock-static queryAll(): AsyncLockState[]-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md)[] | 包含锁状态信息的异步锁状态数组。 |
+| 类型 |
+| --- |
+| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md)[] |
 
 ## request
 
@@ -205,23 +203,23 @@ static request(name: string): AsyncLock
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-AsyncLock-static request(name: string): AsyncLock--><!--Device-AsyncLock-static request(name: string): AsyncLock-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 要查找或创建的锁的名称。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [name](#name) | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AsyncLock](arkts-arkts-locks-asynclock-c.md) | 返回AsyncLock实例。 |
+| 类型 |
+| --- |
+| [AsyncLock](arkts-arkts-locks-asynclock-c.md) |
 
 ## name
 
@@ -235,9 +233,8 @@ readonly name: string
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AsyncLock-readonly name: string--><!--Device-AsyncLock-readonly name: string-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

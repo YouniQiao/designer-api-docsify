@@ -1,6 +1,7 @@
 # ArkTS API<!--arkts-telephonykit-->
 
 - [@ohos.telephony.call](arkts-telephony-call.md)
+  - [answerCall](arkts-telephony-call-answercall-f.md)
   <!--Del-->
   - [answerCall(系统接口)](arkts-telephony-call-answercall-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -41,6 +42,7 @@
   - [getSubCallIdList(系统接口)](arkts-telephony-call-getsubcallidlist-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getVoNRState(系统接口)](arkts-telephony-call-getvonrstate-f-sys.md)<!--DelEnd-->
+  - [hangUpCall](arkts-telephony-call-hangupcall-f.md)
   <!--Del-->
   - [hangUpCall(系统接口)](arkts-telephony-call-hangupcall-f-sys.md)<!--DelEnd-->
   - [hasCall](arkts-telephony-call-hascall-f.md)
@@ -70,25 +72,7 @@
   <!--Del-->
   - [muteRinger(系统接口)](arkts-telephony-call-muteringer-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [off_audioDeviceChange(系统接口)](arkts-telephony-call-offaudiodevicechange-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off_callDetailsChange(系统接口)](arkts-telephony-call-offcalldetailschange-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off_callDisconnectedCause(系统接口)](arkts-telephony-call-offcalldisconnectedcause-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off_callEventChange(系统接口)](arkts-telephony-call-offcalleventchange-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off_callSessionEvent(系统接口)](arkts-telephony-call-offcallsessionevent-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off_cameraCapabilitiesChange(系统接口)](arkts-telephony-call-offcameracapabilitieschange-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off_imsCallModeChange(系统接口)](arkts-telephony-call-offimscallmodechange-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off_mmiCodeResult(系统接口)](arkts-telephony-call-offmmicoderesult-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off_peerDimensionsChange(系统接口)](arkts-telephony-call-offpeerdimensionschange-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off_postDialDelay(系统接口)](arkts-telephony-call-offpostdialdelay-f-sys.md)<!--DelEnd-->
+  - [off(系统接口)](arkts-telephony-call-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offAudioDeviceChange(系统接口)](arkts-telephony-call-offaudiodevicechange-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -116,25 +100,7 @@
   <!--Del-->
   - [offRttModifyInd(系统接口)](arkts-telephony-call-offrttmodifyind-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on_audioDeviceChange(系统接口)](arkts-telephony-call-onaudiodevicechange-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on_callDetailsChange(系统接口)](arkts-telephony-call-oncalldetailschange-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on_callDisconnectedCause(系统接口)](arkts-telephony-call-oncalldisconnectedcause-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on_callEventChange(系统接口)](arkts-telephony-call-oncalleventchange-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on_callSessionEvent(系统接口)](arkts-telephony-call-oncallsessionevent-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on_cameraCapabilitiesChange(系统接口)](arkts-telephony-call-oncameracapabilitieschange-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on_imsCallModeChange(系统接口)](arkts-telephony-call-onimscallmodechange-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on_mmiCodeResult(系统接口)](arkts-telephony-call-onmmicoderesult-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on_peerDimensionsChange(系统接口)](arkts-telephony-call-onpeerdimensionschange-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on_postDialDelay(系统接口)](arkts-telephony-call-onpostdialdelay-f-sys.md)<!--DelEnd-->
+  - [on(系统接口)](arkts-telephony-call-on-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onAudioDeviceChange(系统接口)](arkts-telephony-call-onaudiodevicechange-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -165,6 +131,7 @@
   - [postDialProceed(系统接口)](arkts-telephony-call-postdialproceed-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [preloadCallUI(系统接口)](arkts-telephony-call-preloadcallui-f-sys.md)<!--DelEnd-->
+  - [rejectCall](arkts-telephony-call-rejectcall-f.md)
   <!--Del-->
   - [rejectCall(系统接口)](arkts-telephony-call-rejectcall-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -229,6 +196,7 @@
   - [CallSessionEvent(系统接口)](arkts-telephony-call-callsessionevent-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [CallTransferInfo(系统接口)](arkts-telephony-call-calltransferinfo-i-sys.md)<!--DelEnd-->
+  - [CallTransferResult](arkts-telephony-call-calltransferresult-i.md)
   <!--Del-->
   - [CallTransferResult(系统接口)](arkts-telephony-call-calltransferresult-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -274,8 +242,7 @@
   - [CallState](arkts-telephony-call-callstate-e.md)
   <!--Del-->
   - [CallTransferSettingType(系统接口)](arkts-telephony-call-calltransfersettingtype-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [CallTransferType(系统接口)](arkts-telephony-call-calltransfertype-e-sys.md)<!--DelEnd-->
+  - [CallTransferType](arkts-telephony-call-calltransfertype-e.md)
   <!--Del-->
   - [CallType(系统接口)](arkts-telephony-call-calltype-e-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -306,8 +273,7 @@
   <!--Del-->
   - [RttState(系统接口)](arkts-telephony-call-rttstate-e-sys.md)<!--DelEnd-->
   - [TelCallState](arkts-telephony-call-telcallstate-e.md)
-  <!--Del-->
-  - [TransferStatus(系统接口)](arkts-telephony-call-transferstatus-e-sys.md)<!--DelEnd-->
+  - [TransferStatus](arkts-telephony-call-transferstatus-e.md)
   <!--Del-->
   - [VideoRequestResultType(系统接口)](arkts-telephony-call-videorequestresulttype-e-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -385,7 +351,8 @@
   - [startOsu(系统接口)](arkts-telephony-esim-startosu-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [switchToProfile(系统接口)](arkts-telephony-esim-switchtoprofile-f-sys.md)<!--DelEnd-->
-  - [AccessRule](arkts-telephony-esim-accessrule-i.md)
+  <!--Del-->
+  - [AccessRule(系统接口)](arkts-telephony-esim-accessrule-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ContractRequestData(系统接口)](arkts-telephony-esim-contractrequestdata-i-sys.md)<!--DelEnd-->
   - [DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md)
@@ -422,16 +389,9 @@
   <!--Del-->
   - [SolvableErrors(系统接口)](arkts-telephony-esim-solvableerrors-e-sys.md)<!--DelEnd-->
 - [@ohos.telephony.observer](arkts-telephony-observer.md)
-  - [off_callStateChange](arkts-telephony-observer-offcallstatechange-f.md)
-  - [off_callStateChangeEx](arkts-telephony-observer-offcallstatechangeex-f.md)
+  - [off](arkts-telephony-observer-off-f.md)
   <!--Del-->
-  - [off_cellInfoChange(系统接口)](arkts-telephony-observer-offcellinfochange-f-sys.md)<!--DelEnd-->
-  - [off_cellularDataConnectionStateChange](arkts-telephony-observer-offcellulardataconnectionstatechange-f.md)
-  - [off_cellularDataFlowChange](arkts-telephony-observer-offcellulardataflowchange-f.md)
-  - [off_iccAccountInfoChange](arkts-telephony-observer-officcaccountinfochange-f.md)
-  - [off_networkStateChange](arkts-telephony-observer-offnetworkstatechange-f.md)
-  - [off_signalInfoChange](arkts-telephony-observer-offsignalinfochange-f.md)
-  - [off_simStateChange](arkts-telephony-observer-offsimstatechange-f.md)
+  - [off(系统接口)](arkts-telephony-observer-off-f-sys.md)<!--DelEnd-->
   - [offCallStateChange](arkts-telephony-observer-offcallstatechange-f.md)
   - [offCallStateChangeEx](arkts-telephony-observer-offcallstatechangeex-f.md)
   - [offCCallStateChange](arkts-telephony-observer-offccallstatechange-f.md)
@@ -445,16 +405,9 @@
   - [offNetworkStateChange](arkts-telephony-observer-offnetworkstatechange-f.md)
   - [offSignalInfoChange](arkts-telephony-observer-offsignalinfochange-f.md)
   - [offSimStateChange](arkts-telephony-observer-offsimstatechange-f.md)
-  - [on_callStateChange](arkts-telephony-observer-oncallstatechange-f.md)
-  - [on_callStateChangeEx](arkts-telephony-observer-oncallstatechangeex-f.md)
+  - [on](arkts-telephony-observer-on-f.md)
   <!--Del-->
-  - [on_cellInfoChange(系统接口)](arkts-telephony-observer-oncellinfochange-f-sys.md)<!--DelEnd-->
-  - [on_cellularDataConnectionStateChange](arkts-telephony-observer-oncellulardataconnectionstatechange-f.md)
-  - [on_cellularDataFlowChange](arkts-telephony-observer-oncellulardataflowchange-f.md)
-  - [on_iccAccountInfoChange](arkts-telephony-observer-oniccaccountinfochange-f.md)
-  - [on_networkStateChange](arkts-telephony-observer-onnetworkstatechange-f.md)
-  - [on_signalInfoChange](arkts-telephony-observer-onsignalinfochange-f.md)
-  - [on_simStateChange](arkts-telephony-observer-onsimstatechange-f.md)
+  - [on(系统接口)](arkts-telephony-observer-on-f-sys.md)<!--DelEnd-->
   - [onCallStateChange](arkts-telephony-observer-oncallstatechange-f.md)
   - [onCallStateChangeEx](arkts-telephony-observer-oncallstatechangeex-f.md)
   - [onCCallStateChange](arkts-telephony-observer-onccallstatechange-f.md)
@@ -532,11 +485,11 @@
   - [isNRSupported](arkts-telephony-radio-isnrsupported-f.md)
   - [isRadioOn](arkts-telephony-radio-isradioon-f.md)
   <!--Del-->
-  - [off_imsRegStateChange(系统接口)](arkts-telephony-radio-offimsregstatechange-f-sys.md)<!--DelEnd-->
+  - [off(系统接口)](arkts-telephony-radio-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offImsRegStateChange(系统接口)](arkts-telephony-radio-offimsregstatechange-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on_imsRegStateChange(系统接口)](arkts-telephony-radio-onimsregstatechange-f-sys.md)<!--DelEnd-->
+  - [on(系统接口)](arkts-telephony-radio-on-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onImsRegStateChange(系统接口)](arkts-telephony-radio-onimsregstatechange-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -852,11 +805,7 @@
   <!--Del-->
   - [SmsShortCodeType(系统接口)](arkts-telephony-sms-smsshortcodetype-e-sys.md)<!--DelEnd-->
 - [@ohos.telephony.vcard](arkts-telephony-vcard.md)
-  <!--Del-->
-  - [exportVCard(系统接口)](arkts-telephony-vcard-exportvcard-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [importVCard(系统接口)](arkts-telephony-vcard-importvcard-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [VCardBuilderOptions(系统接口)](arkts-telephony-vcard-vcardbuilderoptions-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [VCardType(系统接口)](arkts-telephony-vcard-vcardtype-e-sys.md)<!--DelEnd-->
+  - [exportVCard](arkts-telephony-vcard-exportvcard-f.md)
+  - [importVCard](arkts-telephony-vcard-importvcard-f.md)
+  - [VCardBuilderOptions](arkts-telephony-vcard-vcardbuilderoptions-i.md)
+  - [VCardType](arkts-telephony-vcard-vcardtype-e.md)

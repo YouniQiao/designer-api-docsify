@@ -2,9 +2,9 @@
 
 **Since:** 3
 
-**Deprecated since:** 7
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface ActionResult--><!--Device-unnamed-export interface ActionResult-End-->
+**Deprecated since:** 7
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -26,9 +26,9 @@ Name of the application ability to which the notification will be redirected aft
 
 **Since:** 3
 
-**Deprecated since:** 7
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-ActionResult-abilityName: string--><!--Device-ActionResult-abilityName: string-End-->
+**Deprecated since:** 7
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -44,9 +44,9 @@ Name of the application bundle to which the notification will be redirected afte
 
 **Since:** 3
 
-**Deprecated since:** 7
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-ActionResult-bundleName: string--><!--Device-ActionResult-bundleName: string-End-->
+**Deprecated since:** 7
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -62,9 +62,8 @@ URI of the page to be redirected to.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 7
 
-<!--Device-ActionResult-uri: string--><!--Device-ActionResult-uri: string-End-->
-
 **System capability:** SystemCapability.Notification.Notification
-

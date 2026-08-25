@@ -4,9 +4,7 @@ Resolved date time format options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-Intl-export interface ResolvedDateTimeFormatOptions--><!--Device-Intl-export interface ResolvedDateTimeFormatOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,11 +25,9 @@ Calendar option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDateTimeFormatOptions-calendar: string--><!--Device-ResolvedDateTimeFormatOptions-calendar: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -47,11 +43,9 @@ Date style option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDateTimeFormatOptions-dateStyle?: 'full' | 'long' | 'medium' | 'short'--><!--Device-ResolvedDateTimeFormatOptions-dateStyle?: 'full' | 'long' | 'medium' | 'short'-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -67,11 +61,9 @@ Day option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDateTimeFormatOptions-day?: string--><!--Device-ResolvedDateTimeFormatOptions-day?: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -87,11 +79,9 @@ Day period option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDateTimeFormatOptions-dayPeriod?: 'narrow' | 'short' | 'long'--><!--Device-ResolvedDateTimeFormatOptions-dayPeriod?: 'narrow' | 'short' | 'long'-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -107,11 +97,9 @@ Era option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDateTimeFormatOptions-era?: string--><!--Device-ResolvedDateTimeFormatOptions-era?: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -127,11 +115,9 @@ Format matcher option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDateTimeFormatOptions-formatMatcher?: 'basic' | 'best fit'--><!--Device-ResolvedDateTimeFormatOptions-formatMatcher?: 'basic' | 'best fit'-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -147,11 +133,9 @@ Fractional second digits option. The value should be an integer.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDateTimeFormatOptions-fractionalSecondDigits?: double--><!--Device-ResolvedDateTimeFormatOptions-fractionalSecondDigits?: double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -167,11 +151,9 @@ Hour option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDateTimeFormatOptions-hour?: string--><!--Device-ResolvedDateTimeFormatOptions-hour?: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -187,11 +169,9 @@ Hour12 option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDateTimeFormatOptions-hour12?: boolean--><!--Device-ResolvedDateTimeFormatOptions-hour12?: boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -207,11 +187,9 @@ Hour cycle option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDateTimeFormatOptions-hourCycle?: 'h11' | 'h12' | 'h23' | 'h24'--><!--Device-ResolvedDateTimeFormatOptions-hourCycle?: 'h11' | 'h12' | 'h23' | 'h24'-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -227,11 +205,9 @@ Locale identifier.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDateTimeFormatOptions-locale: string--><!--Device-ResolvedDateTimeFormatOptions-locale: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -247,11 +223,9 @@ Minute option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDateTimeFormatOptions-minute?: string--><!--Device-ResolvedDateTimeFormatOptions-minute?: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -267,11 +241,9 @@ Month option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDateTimeFormatOptions-month?: string--><!--Device-ResolvedDateTimeFormatOptions-month?: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -287,11 +259,9 @@ Numbering system option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDateTimeFormatOptions-numberingSystem: string--><!--Device-ResolvedDateTimeFormatOptions-numberingSystem: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -307,11 +277,9 @@ Second option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDateTimeFormatOptions-second?: string--><!--Device-ResolvedDateTimeFormatOptions-second?: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -327,11 +295,9 @@ Time style option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDateTimeFormatOptions-timeStyle?: 'full' | 'long' | 'medium' | 'short'--><!--Device-ResolvedDateTimeFormatOptions-timeStyle?: 'full' | 'long' | 'medium' | 'short'-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -347,11 +313,9 @@ Time zone option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDateTimeFormatOptions-timeZone: string--><!--Device-ResolvedDateTimeFormatOptions-timeZone: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -367,11 +331,9 @@ Time zone name option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDateTimeFormatOptions-timeZoneName?: string--><!--Device-ResolvedDateTimeFormatOptions-timeZoneName?: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -387,11 +349,9 @@ Weekday option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedDateTimeFormatOptions-weekday?: string--><!--Device-ResolvedDateTimeFormatOptions-weekday?: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -407,11 +367,8 @@ Year option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ResolvedDateTimeFormatOptions-year?: string--><!--Device-ResolvedDateTimeFormatOptions-year?: string-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

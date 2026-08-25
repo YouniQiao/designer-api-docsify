@@ -7,9 +7,9 @@
 > - 如果删除的是人脸、指纹，则认证结果依然可以复用，只是返回的EnrolledState中credentialCount和credentialDigest均为0。&gt;
 > - 如果删除的是锁屏口令，则此次复用会失败。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-userAuth-interface ReuseUnlockResult--><!--Device-userAuth-interface ReuseUnlockResult-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -28,13 +28,13 @@ reuseDuration: int
 允许复用解锁认证结果的有效时长，单位为毫秒。有效时长的值应大于0，最大值为 [MAX_ALLOWABLE_REUSE_DURATION](arkts-userauthentication-userauth-con.md#max_allowable_reuse_duration)， （300000毫秒，即5分钟）。建议根据业务场景设置合理的时长：  
 - 高安全场景（如支付）：建议设置较短时长（如30秒至1分钟）。 - 中等安全场景（如应用登录）：建议设置中等时长（如2至3分钟）。 - 低安全场景（如数据查询）：可使用最大时长。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-ReuseUnlockResult-reuseDuration: int--><!--Device-ReuseUnlockResult-reuseDuration: int-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -49,11 +49,10 @@ reuseMode: ReuseMode
 
 **类型：** [ReuseMode](arkts-userauthentication-userauth-reusemode-e.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-ReuseUnlockResult-reuseMode: ReuseMode--><!--Device-ReuseUnlockResult-reuseMode: ReuseMode-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
-

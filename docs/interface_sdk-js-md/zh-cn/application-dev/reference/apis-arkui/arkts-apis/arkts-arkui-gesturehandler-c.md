@@ -6,7 +6,7 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare class GestureHandler--><!--Device-unnamed-declare class GestureHandler-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,25 +25,25 @@ allowedTypes(types: Array<SourceTool>): T
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-GestureHandler-allowedTypes(types: Array<SourceTool>): T--><!--Device-GestureHandler-allowedTypes(types: Array<SourceTool>): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| types | Array&lt;SourceTool&gt; | 是 | 手势处理器所支持的事件输入源。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array & lt;SourceTool & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 返回当前组件。 |
+| 类型 |
+| --- |
+| T |
 
 ## tag
 
@@ -55,23 +55,22 @@ tag(tag: string): T
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-GestureHandler-tag(tag: string): T--><!--Device-GestureHandler-tag(tag: string): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| tag | string | 是 | 手势处理器的标志。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [tag](#tag) | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 返回当前组件。 |
-
+| 类型 |
+| --- |
+| T |

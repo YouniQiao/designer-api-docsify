@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-photoAccessHelper-enum AlbumAttribute--><!--Device-photoAccessHelper-enum AlbumAttribute-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -20,9 +20,9 @@ NICK_NAME_ATTR = 'nickname'
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AlbumAttribute-NICK_NAME_ATTR = 'nickname'--><!--Device-AlbumAttribute-NICK_NAME_ATTR = 'nickname'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -38,9 +38,9 @@ EXTRA_INFO_ATTR = 'extra_info'
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AlbumAttribute-EXTRA_INFO_ATTR = 'extra_info'--><!--Device-AlbumAttribute-EXTRA_INFO_ATTR = 'extra_info'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -56,9 +56,9 @@ IS_REMOVED_ATTR = 'is_removed'
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AlbumAttribute-IS_REMOVED_ATTR = 'is_removed'--><!--Device-AlbumAttribute-IS_REMOVED_ATTR = 'is_removed'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -74,11 +74,10 @@ FRIEND_ID_ATTR = 'friend_id'
 
 **起始版本：** 26.1.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
-<!--Device-AlbumAttribute-FRIEND_ID_ATTR = 'friend_id'--><!--Device-AlbumAttribute-FRIEND_ID_ATTR = 'friend_id'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
-

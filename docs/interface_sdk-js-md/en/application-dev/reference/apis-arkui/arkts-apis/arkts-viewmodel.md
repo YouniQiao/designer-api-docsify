@@ -5,31 +5,30 @@
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [extendViewModel](arkts-arkui-viewmodel-extendviewmodel-f-sys.md) |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [extendViewModel](arkts-arkui-viewmodel-extendviewmodel-f-sys.md) |
 <!--DelEnd-->
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ElementReferences](arkts-arkui-viewmodel-elementreferences-i.md) | Element References @interface ElementReferences |
-| [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) | Defines the focus param.@interface FocusParamObj |
-| [ImageAnimatorElement](arkts-arkui-viewmodel-imageanimatorelement-i.md) | Image animator element @interface ImageAnimatorElement |
-| [ListElement](arkts-arkui-viewmodel-listelement-i.md) | List element @interface ListElement |
-| [ListScrollToOptions](arkts-arkui-viewmodel-listscrolltooptions-i.md) | List scroll to options @interface ListScrollToOptions |
-| [Options](arkts-arkui-viewmodel-options-i.md) | Options type @interface Options |
-| [PickerElement](arkts-arkui-viewmodel-pickerelement-i.md) | The &lt;picker&gt; component supports common, date, time, and multi-column text.@interface PickerElement |
-| [SwiperElement](arkts-arkui-viewmodel-swiperelement-i.md) | The &lt;swiper&gt; component provides a swiper container.@interface SwiperElement |
-| [ViewModel](arkts-arkui-viewmodel-viewmodel-i.md) | View model @interface ViewModel |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ElementReferences](arkts-arkui-viewmodel-elementreferences-i.md) |
+| [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) |
+| [ImageAnimatorElement](arkts-arkui-viewmodel-imageanimatorelement-i.md) |
+| [ListElement](arkts-arkui-viewmodel-listelement-i.md) |
+| [ListScrollToOptions](arkts-arkui-viewmodel-listscrolltooptions-i.md) |
+| [Options](arkts-arkui-viewmodel-options-i.md) |
+| [PickerElement](arkts-arkui-viewmodel-pickerelement-i.md) |
+| [SwiperElement](arkts-arkui-viewmodel-swiperelement-i.md) |
+| [ViewModel](arkts-arkui-viewmodel-viewmodel-i.md) |
 
 <!--Del-->
 ### Types(System API)
 
-| Name | Description |
-| --- | --- |
-| [CombinedOptions](arkts-arkui-combinedoptions-t-sys.md) | Used for ide. |
-| [DefaultData](arkts-arkui-defaultdata-t-sys.md) | Used for ide. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CombinedOptions](arkts-arkui-combinedoptions-t-sys.md) |
+| [DefaultData](arkts-arkui-defaultdata-t-sys.md) |
 <!--DelEnd-->
-

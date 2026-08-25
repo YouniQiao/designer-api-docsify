@@ -15,9 +15,9 @@ export function getRemoteGrantStatus(): Promise<RemoteGrantStatus>
 
 **起始版本：** 26.1.0
 
-**需要权限：** ohos.permission.QUERY_TOOL_PERMISSIONS
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
-<!--Device-abilityToolAccessCtrl-export function getRemoteGrantStatus(): Promise<RemoteGrantStatus>--><!--Device-abilityToolAccessCtrl-export function getRemoteGrantStatus(): Promise<RemoteGrantStatus>-End-->
+**需要权限：** ohos.permission.QUERY_TOOL_PERMISSIONS
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -25,18 +25,18 @@ export function getRemoteGrantStatus(): Promise<RemoteGrantStatus>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[RemoteGrantStatus](arkts-ability-abilitytoolaccessctrl-remotegrantstatus-e-sys.md)&gt; | Promise用于返回\\${RemoteGrantStatus}。 |
+| 类型 |
+| --- |
+| Promise&lt;[RemoteGrantStatus](arkts-ability-abilitytoolaccessctrl-remotegrantstatus-e-sys.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denial. The interface caller does not have permission "ohos.permission.QUERY_TOOL_PERMISSIONS". |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) | Service is abnormal. Possible cause: IPC failed. |
-| [24010002](../errorcode-abilityToolAccessCtrl-sys.md#24010002-服务内部错误) | Common internal error. Possible cause: dependent service unavailable, resource access failure, etc. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) |
+| [24010002](../errorcode-abilityToolAccessCtrl-sys.md#24010002-服务内部错误) |
 
 **示例**
 
@@ -50,4 +50,3 @@ abilityToolAccessCtrl.getRemoteGrantStatus().then((data: abilityToolAccessCtrl.R
   console.error(`getRemoteGrantStatus fail, code: ${err.code}, message: ${err.message}`);
 });
 ```
-

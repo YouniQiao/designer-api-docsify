@@ -16,11 +16,11 @@ Send event to target process.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Required permissions:** ohos.permission.EXEC_CLI_TOOL
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-cliManager-function sendMessage(sessionId: string, message: string): Promise<void>--><!--Device-cliManager-function sendMessage(sessionId: string, message: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -28,24 +28,23 @@ Send event to target process.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sessionId | string | Yes | The session id of target tool process. |
-| message | string | Yes | The message to write, max length is 10240. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sessionId | string | Yes |
+| message | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied, interface caller does not have permission"ohos.permission.EXEC_CLI_TOOL". |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. Interface caller is not a system app. |
-| 35600032 | The session does not exist. |
-| 35600033 | failed to write message to tool. |
-| 35600050 | System Error. 1. Connect to system service failed; 2.System service failed to communicate with dependency module. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 35600032 |
+| 35600033 |
+| 35600050 |

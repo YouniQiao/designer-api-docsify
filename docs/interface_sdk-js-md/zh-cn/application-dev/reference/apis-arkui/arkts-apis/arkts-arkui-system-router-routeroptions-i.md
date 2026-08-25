@@ -4,11 +4,11 @@
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** RouterOptions
-
-<!--Device-unnamed-export interface RouterOptions--><!--Device-unnamed-export interface RouterOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -30,11 +30,11 @@ params?: Object
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** params
-
-<!--Device-RouterOptions-params?: Object--><!--Device-RouterOptions-params?: Object-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -53,11 +53,10 @@ uri: string
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** url
 
-<!--Device-RouterOptions-uri: string--><!--Device-RouterOptions-uri: string-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
-

@@ -14,17 +14,17 @@ function getDefaultCellularDataSlotIdSync(): int
 
 Obtains the default SIM card used for mobile data synchronously.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-data-function getDefaultCellularDataSlotIdSync(): int--><!--Device-data-function getDefaultCellularDataSlotIdSync(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 <br>- **2**: slot ID of the mobile data in the eSIM and SkyTone scenarios. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -33,4 +33,3 @@ import { data } from '@kit.TelephonyKit';
 
 console.info("Result: "+ data.getDefaultCellularDataSlotIdSync())
 ```
-

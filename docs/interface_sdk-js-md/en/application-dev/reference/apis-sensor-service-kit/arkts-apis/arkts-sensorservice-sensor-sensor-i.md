@@ -2,9 +2,9 @@
 
 Describes the sensor information.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-sensor-interface Sensor--><!--Device-sensor-interface Sensor-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -22,11 +22,11 @@ deviceId?: int
 
 Device ID.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-Sensor-deviceId?: int--><!--Device-Sensor-deviceId?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -40,9 +40,9 @@ Device name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-Sensor-deviceName?: string--><!--Device-Sensor-deviceName?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -56,9 +56,9 @@ Firmware version of the sensor.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Sensor-firmwareVersion:string--><!--Device-Sensor-firmwareVersion:string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -72,9 +72,9 @@ Hardware version of the sensor.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Sensor-hardwareVersion:string--><!--Device-Sensor-hardwareVersion:string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -88,9 +88,9 @@ Whether the sensor is a local sensor. The value **true** indicates a local senso
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-Sensor-isLocalSensor?: boolean--><!--Device-Sensor-isLocalSensor?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -106,7 +106,7 @@ Whether the sensor is a mock sensor. The value **true** indicates a mock sensor,
 
 **Since:** 23
 
-<!--Device-Sensor-isMockSensor?: boolean--><!--Device-Sensor-isMockSensor?: boolean-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -118,11 +118,11 @@ maxRange:double
 
 Maximum measurement range of the sensor.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Sensor-maxRange:double--><!--Device-Sensor-maxRange:double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -134,11 +134,11 @@ maxSamplePeriod:long
 
 Maximum sampling period.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Sensor-maxSamplePeriod:long--><!--Device-Sensor-maxSamplePeriod:long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -150,11 +150,11 @@ minSamplePeriod:long
 
 Minimum sampling period.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Sensor-minSamplePeriod:long--><!--Device-Sensor-minSamplePeriod:long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -166,11 +166,11 @@ power:double
 
 Estimated sensor power, in mA.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Sensor-power:double--><!--Device-Sensor-power:double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -182,11 +182,11 @@ precision:double
 
 Precision of the sensor.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Sensor-precision:double--><!--Device-Sensor-precision:double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -198,11 +198,11 @@ sensorId:int
 
 Sensor type ID.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Sensor-sensorId:int--><!--Device-Sensor-sensorId:int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -214,11 +214,11 @@ sensorIndex?: int
 
 Sensor index.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-Sensor-sensorIndex?: int--><!--Device-Sensor-sensorIndex?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -232,9 +232,9 @@ Sensor name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Sensor-sensorName:string--><!--Device-Sensor-sensorName:string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -248,9 +248,8 @@ Vendor of the sensor.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Sensor-vendorName:string--><!--Device-Sensor-vendorName:string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
-

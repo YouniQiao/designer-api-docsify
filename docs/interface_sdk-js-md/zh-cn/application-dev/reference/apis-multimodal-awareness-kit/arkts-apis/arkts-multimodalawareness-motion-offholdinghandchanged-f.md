@@ -16,26 +16,26 @@ function offHoldingHandChanged(callback?: Callback<HoldingHandStatus>): void
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.DETECT_GESTURE
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-motion-function offHoldingHandChanged(callback?: Callback<HoldingHandStatus>): void--><!--Device-motion-function offHoldingHandChanged(callback?: Callback<HoldingHandStatus>): void-End-->
+**需要权限：** ohos.permission.DETECT_GESTURE
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HoldingHandStatus](arkts-multimodalawareness-motion-holdinghandstatus-e.md)&gt; | 否 | 回调函数，返回握持手状态信息。需要取消监听的回调函数，需与订阅时传入的回调函数一致。 <br>若不填，则取消当前监听该事件的所有回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HoldingHandStatus](arkts-multimodalawareness-motion-holdinghandstatus-e.md)&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. An attempt was made to unsubscribe holdingHandChanged <br> event forbidden by permission: ohos.permission.DETECT_GESTURE. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to limited <br> device capabilities. |
-| [31500001](../errorcode-motion.md#31500001-服务异常) | Service exception. |
-| [31500003](../errorcode-motion.md#31500003-取消订阅失败) | Unsubscribe Failed. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [31500001](../errorcode-motion.md#31500001-服务异常) |
+| [31500003](../errorcode-motion.md#31500003-取消订阅失败) |
 
 **示例**
 
@@ -50,4 +50,3 @@ try {
   console.error('Failed off; err code = ' + error.code);
 }
 ```
-

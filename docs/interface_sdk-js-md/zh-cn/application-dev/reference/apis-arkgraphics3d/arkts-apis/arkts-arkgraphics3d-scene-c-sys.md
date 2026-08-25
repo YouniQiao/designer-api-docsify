@@ -2,9 +2,9 @@
 
 用于设置场景。Scene采用树状层次结构组织场景节点，根节点（root）作为场景的入口。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export declare class Scene--><!--Device-unnamed-export declare class Scene-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -18,9 +18,9 @@ static load(uri: ResourceStr, param: SceneLoadParams):Promise<Scene>
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Scene-static load(uri: ResourceStr, param: SceneLoadParams):Promise<Scene>--><!--Device-Scene-static load(uri: ResourceStr, param: SceneLoadParams):Promise<Scene>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -28,16 +28,16 @@ static load(uri: ResourceStr, param: SceneLoadParams):Promise<Scene>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uri | ResourceStr | 是 | 待加载的模型文件资源路径。 |
-| param | [SceneLoadParams](arkts-arkgraphics3d-scene-sceneloadparams-i-sys.md) | 是 | 场景加载参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | 是 |
+| param | [SceneLoadParams](arkts-arkgraphics3d-scene-sceneloadparams-i-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; | Promise对象，返回场景对象。 |
+| 类型 |
+| --- |
+| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; |
 
 **示例**
 
@@ -96,4 +96,3 @@ function loadModelWithParams(): Promise<Scene> {
   return scene;
 }
 ```
-

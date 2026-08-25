@@ -10,7 +10,7 @@
 
 **起始版本：** 10
 
-<!--Device-unnamed-declare class SecurityComponentMethod--><!--Device-unnamed-declare class SecurityComponentMethod-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,9 +29,9 @@ key(value: string): T
 
 **起始版本：** 10
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-SecurityComponentMethod-key(value: string): T--><!--Device-SecurityComponentMethod-key(value: string): T-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -39,13 +39,12 @@ key(value: string): T
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | string | 是 | 组件的唯一标识，唯一性由开发者保证。适用于测试场景中按标识精确定位安全控件实例。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
-
+| 类型 |
+| --- |
+| T |

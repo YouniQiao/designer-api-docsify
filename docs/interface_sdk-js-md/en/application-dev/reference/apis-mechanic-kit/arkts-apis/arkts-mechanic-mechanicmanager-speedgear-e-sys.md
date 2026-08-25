@@ -4,7 +4,7 @@ Speed gear definition.
 
 **Since:** 26.0.0
 
-<!--Device-mechanicManager-export enum SpeedGear--><!--Device-mechanicManager-export enum SpeedGear-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -20,7 +20,7 @@ Low speed definition.
 
 **Since:** 26.0.0
 
-<!--Device-SpeedGear-LOW_SPEED = 0--><!--Device-SpeedGear-LOW_SPEED = 0-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -36,7 +36,7 @@ Middle speed definition, default speed.
 
 **Since:** 26.0.0
 
-<!--Device-SpeedGear-MIDDLE_SPEED = 1--><!--Device-SpeedGear-MIDDLE_SPEED = 1-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -52,9 +52,8 @@ High speed definition.
 
 **Since:** 26.0.0
 
-<!--Device-SpeedGear-HIGH_SPEED = 2--><!--Device-SpeedGear-HIGH_SPEED = 2-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
-

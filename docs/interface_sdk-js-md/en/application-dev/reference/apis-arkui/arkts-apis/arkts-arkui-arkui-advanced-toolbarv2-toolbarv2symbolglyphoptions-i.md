@@ -4,7 +4,7 @@ Declare the options of ToolBarV2SymbolGlyph
 
 **Since:** 18
 
-<!--Device-unnamed-export interface ToolBarV2SymbolGlyphOptions--><!--Device-unnamed-export interface ToolBarV2SymbolGlyphOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,11 @@ Modifier of toolbarV2's activated symbol.
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ToolBarV2SymbolGlyphOptions-activated?: SymbolGlyphModifier--><!--Device-ToolBarV2SymbolGlyphOptions-activated?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,11 +46,10 @@ Modifier of toolbarV2's normal symbol.
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2SymbolGlyphOptions-normal: SymbolGlyphModifier--><!--Device-ToolBarV2SymbolGlyphOptions-normal: SymbolGlyphModifier-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

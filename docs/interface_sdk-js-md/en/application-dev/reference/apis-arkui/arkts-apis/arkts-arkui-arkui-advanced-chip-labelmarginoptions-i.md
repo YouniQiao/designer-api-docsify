@@ -4,7 +4,7 @@ Defines the spacing between the text and the left and right icons.
 
 **Since:** 11
 
-<!--Device-unnamed-export interface LabelMarginOptions--><!--Device-unnamed-export interface LabelMarginOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,11 @@ Spacing between the text and the left icon. This parameter cannot be set in perc
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-LabelMarginOptions-left?: Dimension--><!--Device-LabelMarginOptions-left?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,11 +46,10 @@ Spacing between the text and the right icon. This parameter cannot be set in per
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-LabelMarginOptions-right?: Dimension--><!--Device-LabelMarginOptions-right?: Dimension-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -1,14 +1,15 @@
-# @ohos.font
+# @ohos.font(Custom Font Registration)
 
-@namespace font
+本模块提供注册自定义字体。
 
-**起始版本：** 23
+> **说明：**&gt;
+> - 本模块功能依赖UI的执行上下文，不可在[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的地方使用，参见
+> [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)说明。&gt;
+> - 推荐使用字体引擎的[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)接口注册自定义字体。
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**起始版本：** 9
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-unnamed-declare namespace font--><!--Device-unnamed-declare namespace font-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,20 +23,22 @@ import { font } from '@kit.ArkUI';
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [getUIFontConfig](arkts-arkui-font-getuifontconfig-f.md) | 获取系统字体配置文件的UI字体配置信息。该接口仅支持获取配置文件内的信息以及当UI上下文不明确时可能返回undefined，如果想要获取全量的字体配置信息，推荐使用字体引擎的 [getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md) 接口。 |
+| 名称 |
+| --- |
+| [getFontByName(Custom Font Registration)](arkts-arkui-font-getfontbyname-f.md) |
+| [getSystemFontList(Custom Font Registration)](arkts-arkui-font-getsystemfontlist-f.md) |
+| [getUIFontConfig(Custom Font Registration)](arkts-arkui-font-getuifontconfig-f.md) |
+| [registerFont(Custom Font Registration)](arkts-arkui-font-registerfont-f.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [FontInfo](arkts-arkui-font-fontinfo-i.md) |  |
-| [FontOptions](arkts-arkui-font-fontoptions-i.md) |  |
-| [UIFontAdjustInfo](arkts-arkui-font-uifontadjustinfo-i.md) |  |
-| [UIFontAliasInfo](arkts-arkui-font-uifontaliasinfo-i.md) |  |
-| [UIFontConfig](arkts-arkui-font-uifontconfig-i.md) |  |
-| [UIFontFallbackGroupInfo](arkts-arkui-font-uifontfallbackgroupinfo-i.md) |  |
-| [UIFontFallbackInfo](arkts-arkui-font-uifontfallbackinfo-i.md) |  |
-| [UIFontGenericInfo](arkts-arkui-font-uifontgenericinfo-i.md) |  |
-
+| 名称 |
+| --- |
+| [FontInfo(Custom Font Registration)](arkts-arkui-font-fontinfo-i.md) |
+| [FontOptions(Custom Font Registration)](arkts-arkui-font-fontoptions-i.md) |
+| [UIFontAdjustInfo(Custom Font Registration)](arkts-arkui-font-uifontadjustinfo-i.md) |
+| [UIFontAliasInfo(Custom Font Registration)](arkts-arkui-font-uifontaliasinfo-i.md) |
+| [UIFontConfig(Custom Font Registration)](arkts-arkui-font-uifontconfig-i.md) |
+| [UIFontFallbackGroupInfo(Custom Font Registration)](arkts-arkui-font-uifontfallbackgroupinfo-i.md) |
+| [UIFontFallbackInfo(Custom Font Registration)](arkts-arkui-font-uifontfallbackinfo-i.md) |
+| [UIFontGenericInfo(Custom Font Registration)](arkts-arkui-font-uifontgenericinfo-i.md) |

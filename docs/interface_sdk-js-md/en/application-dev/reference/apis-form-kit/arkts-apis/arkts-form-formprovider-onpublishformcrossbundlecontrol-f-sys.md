@@ -16,11 +16,11 @@ Subscribes to controls on cross-bundle widget addition to the home screen. This 
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Required permissions:** ohos.permission.PUBLISH_FORM_CROSS_BUNDLE_CONTROL
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-formProvider-function onPublishFormCrossBundleControl(callback: formInfo.PublishFormCrossBundleControlCallback): void--><!--Device-formProvider-function onPublishFormCrossBundleControl(callback: formInfo.PublishFormCrossBundleControlCallback): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -28,17 +28,17 @@ Subscribes to controls on cross-bundle widget addition to the home screen. This 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | formInfo.PublishFormCrossBundleControlCallback | Yes | Callback function used to return the control result on cross-bundle widget addition to the home screen. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | formInfo.PublishFormCrossBundleControlCallback | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
 
 **Examples**
 
@@ -55,4 +55,3 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
 }
 ```
-

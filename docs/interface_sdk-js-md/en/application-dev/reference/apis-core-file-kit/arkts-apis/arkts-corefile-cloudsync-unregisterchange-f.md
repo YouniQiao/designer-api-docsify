@@ -14,27 +14,27 @@ function unregisterChange(uri: string): void
 
 Unsubscribes from the change of a file.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-cloudSync-function unregisterChange(uri: string): void--><!--Device-cloudSync-function unregisterChange(uri: string): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | URI of the file to download. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory. |
-| 13900012 | Permission denied |
-| 14000002 | Invalid uri. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| 13900001 |
+| 13900002 |
+| 13900012 |
+| 14000002 |
 
 **Examples**
 
@@ -54,4 +54,3 @@ cloudSync.registerChange(uri, false, onCallback1);
 // Unregister the listener.
 cloudSync.unregisterChange(uri);
 ```
-

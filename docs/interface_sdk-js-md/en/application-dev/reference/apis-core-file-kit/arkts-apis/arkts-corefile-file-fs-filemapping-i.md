@@ -4,7 +4,7 @@ File mapping object. Before invoking the FileMapping method, you need to use the
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare interface FileMapping--><!--Device-unnamed-declare interface FileMapping-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -26,25 +26,25 @@ Obtains the capacity of the file mapping area.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-FileMapping-capacity(): number--><!--Device-FileMapping-capacity(): number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Size of the file mapping area, in bytes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
+| Error Code ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900052 |
 
 ## flip
 
@@ -56,19 +56,19 @@ Mode reversal. That is, the limit attribute is set to the current position, and 
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-FileMapping-flip(): void--><!--Device-FileMapping-flip(): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
+| Error Code ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900052 |
 
 ## getLimit
 
@@ -80,25 +80,25 @@ Obtains the upper bound of the readable and writable area of the file mapping ar
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-FileMapping-getLimit(): number--><!--Device-FileMapping-getLimit(): number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Upper bound of the current readable and writable area, in bytes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
+| Error Code ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900052 |
 
 ## getPosition
 
@@ -110,25 +110,25 @@ Gets the current location of the file mapping area.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-FileMapping-getPosition(): number--><!--Device-FileMapping-getPosition(): number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Current location of the file mapping area, in bytes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
+| Error Code ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900052 |
 
 ## msync
 
@@ -140,28 +140,28 @@ Synchronizes the dirty page data in the entire file mapping area to the disk fil
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-FileMapping-msync(): Promise<void>--><!--Device-FileMapping-msync(): Promise<void>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise object. No return value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
-| 13900055 | Mmap operation not supported |
+| Error Code ID |
+| --- |
+| 13900011 |
+| 13900014 |
+| 13900020 |
+| 13900050 |
+| 13900052 |
+| 13900055 |
 
 ## msync
 
@@ -173,35 +173,35 @@ Synchronizes the dirty page data in the specified range of the file mapping area
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-FileMapping-msync(position: number, length: number): Promise<void>--><!--Device-FileMapping-msync(position: number, length: number): Promise<void>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| position | number | Yes | Start position to synchronize from, in bytes. |
-| length | number | Yes | Length of the data to be synchronized, in bytes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| position | number | Yes |
+| length | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise object. No return value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
-| 13900055 | Mmap operation not supported |
+| Error Code ID |
+| --- |
+| 13900011 |
+| 13900014 |
+| 13900020 |
+| 13900050 |
+| 13900052 |
+| 13900055 |
 
 ## msyncSync
 
@@ -213,22 +213,22 @@ Synchronizes the dirty page data of the entire file mapping area to the disk fil
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-FileMapping-msyncSync(): void--><!--Device-FileMapping-msyncSync(): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
-| 13900055 | Mmap operation not supported |
+| Error Code ID |
+| --- |
+| 13900011 |
+| 13900014 |
+| 13900020 |
+| 13900050 |
+| 13900052 |
+| 13900055 |
 
 ## msyncSync
 
@@ -240,29 +240,29 @@ Synchronize the dirty page data in the specified range of the file mapping area 
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-FileMapping-msyncSync(position: number, length: number): void--><!--Device-FileMapping-msyncSync(position: number, length: number): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| position | number | Yes | Start position to synchronize from, in bytes. |
-| length | number | Yes | Length of the data to be synchronized, in bytes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| position | number | Yes |
+| length | number | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
-| 13900055 | Mmap operation not supported |
+| Error Code ID |
+| --- |
+| 13900011 |
+| 13900014 |
+| 13900020 |
+| 13900050 |
+| 13900052 |
+| 13900055 |
 
 ## read
 
@@ -274,34 +274,34 @@ Reads data from the current position and moves the position backward by the numb
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-FileMapping-read(buffer: ArrayBuffer, length?: number): number--><!--Device-FileMapping-read(buffer: ArrayBuffer, length?: number): number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer for storing the read file data. |
-| length | number | No | Length of the data to be read, in bytes. This parameter is optional. The default value is the buffer length. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buffer | ArrayBuffer | Yes |
+| length | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Length of the actually read data, in bytes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
-| 13900052 | Mmap buffer released |
-| 13900054 | Mmap buffer is inaccessible |
+| Error Code ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900051 |
+| 13900052 |
+| 13900054 |
 
 **Examples**
 
@@ -441,35 +441,35 @@ Reads data from the specified location without affecting the current location.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-FileMapping-read(position: number, buffer: ArrayBuffer, length?: number): number--><!--Device-FileMapping-read(position: number, buffer: ArrayBuffer, length?: number): number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| position | number | Yes | Start position to read from. |
-| buffer | ArrayBuffer | Yes | Buffer for storing the read file data. |
-| length | number | No | Length of the data to be read, in bytes. This parameter is optional. The default value is the buffer length. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| position | number | Yes |
+| buffer | ArrayBuffer | Yes |
+| length | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Length of the actually read data, in bytes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
-| 13900052 | Mmap buffer released |
-| 13900054 | Mmap buffer is inaccessible |
+| Error Code ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900051 |
+| 13900052 |
+| 13900054 |
 
 **Examples**
 
@@ -485,25 +485,25 @@ Obtains the number of remaining bytes between the current position (position) an
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-FileMapping-remaining(): number--><!--Device-FileMapping-remaining(): number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Number of remaining readable or writable bytes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
+| Error Code ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900052 |
 
 ## setLimit
 
@@ -515,25 +515,25 @@ Sets the upper bound of the readable and writable area of the file mapping area.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-FileMapping-setLimit(limit: number): void--><!--Device-FileMapping-setLimit(limit: number): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| limit | number | Yes | Upper bound of the readable and writable area to be set, in bytes. If the current position is greater than the new upper bound, the value is automatically adjusted to limit. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| limit | number | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
+| Error Code ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900052 |
 
 ## setPosition
 
@@ -545,25 +545,25 @@ Sets the current location of the file mapping area.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-FileMapping-setPosition(position: number): void--><!--Device-FileMapping-setPosition(position: number): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| position | number | Yes | Target location, in bytes. The value must be a non-negative number and cannot be greater than the current upper bound (limit). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| position | number | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
+| Error Code ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900052 |
 
 ## unmap
 
@@ -575,24 +575,24 @@ Releases the file mapping area and use the promise asynchronous callback functio
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-FileMapping-unmap(): Promise<void>--><!--Device-FileMapping-unmap(): Promise<void>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise object. No return value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
+| Error Code ID |
+| --- |
+| 13900020 |
+| 13900050 |
 
 ## unmapSync
 
@@ -604,18 +604,18 @@ Releases the file mapping area by using the synchronization method.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-FileMapping-unmapSync(): void--><!--Device-FileMapping-unmapSync(): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
+| Error Code ID |
+| --- |
+| 13900020 |
+| 13900050 |
 
 ## write
 
@@ -627,35 +627,35 @@ Writes data from the current location and moves the location backward by the num
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-FileMapping-write(data: ArrayBuffer, length?: number): number--><!--Device-FileMapping-write(data: ArrayBuffer, length?: number): number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | ArrayBuffer | Yes | Buffer data to be written to the file. |
-| length | number | No | Length of the data to be written, in bytes. This parameter is optional. The default value is the buffer length. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | ArrayBuffer | Yes |
+| length | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Length of the data written. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
-| 13900052 | Mmap buffer released |
-| 13900053 | Read-only mmap buffer |
-| 13900054 | Mmap buffer is inaccessible |
+| Error Code ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900051 |
+| 13900052 |
+| 13900053 |
+| 13900054 |
 
 **Examples**
 
@@ -787,38 +787,37 @@ Writes data from the specified location without affecting the current location.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-FileMapping-write(position: number, data: ArrayBuffer, length?: number): number--><!--Device-FileMapping-write(position: number, data: ArrayBuffer, length?: number): number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| position | number | Yes | Start position of the expected write. |
-| data | ArrayBuffer | Yes | Buffer data to be written to the file. |
-| length | number | No | Length of the data to be written, in bytes. This parameter is optional. The default value is the buffer length. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| position | number | Yes |
+| data | ArrayBuffer | Yes |
+| length | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Length of the data written, in bytes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
-| 13900052 | Mmap buffer released |
-| 13900053 | Read-only mmap buffer |
-| 13900054 | Mmap buffer is inaccessible |
+| Error Code ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900051 |
+| 13900052 |
+| 13900053 |
+| 13900054 |
 
 **Examples**
 
 See [write](#write)
-

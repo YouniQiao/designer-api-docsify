@@ -2,9 +2,9 @@
 
 Describes the frame shutter end information during capture.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-camera-interface FrameShutterEndInfo--><!--Device-camera-interface FrameShutterEndInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -22,13 +22,12 @@ captureId: int
 
 ID of this capture action.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-FrameShutterEndInfo-captureId: int--><!--Device-FrameShutterEndInfo-captureId: int-End-->
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
-

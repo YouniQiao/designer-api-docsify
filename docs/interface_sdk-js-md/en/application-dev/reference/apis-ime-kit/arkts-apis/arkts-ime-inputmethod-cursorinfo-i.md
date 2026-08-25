@@ -2,9 +2,9 @@
 
 Represents the cursor information.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-inputMethod-export interface CursorInfo--><!--Device-inputMethod-export interface CursorInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -22,13 +22,13 @@ displayId?: long
 
 ID of the monitor where the cursor is located.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-CursorInfo-displayId?: long--><!--Device-CursorInfo-displayId?: long-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -40,11 +40,11 @@ height: double
 
 Height of the cursor, in px. The value must be an integer. The minimum value is 0 and the maximum value is the height of the current screen.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-CursorInfo-height: double--><!--Device-CursorInfo-height: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -56,11 +56,11 @@ left: double
 
 Horizontal coordinate of the cursor, in px. The value must be an integer. The minimum value is 0 and the maximum value is the width of the current screen.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-CursorInfo-left: double--><!--Device-CursorInfo-left: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -72,11 +72,11 @@ top: double
 
 Vertical coordinate of the cursor, in px. The value must be an integer. The minimum value is 0 and the maximum value is the height of the current screen.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-CursorInfo-top: double--><!--Device-CursorInfo-top: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -88,11 +88,10 @@ width: double
 
 Width of the cursor, in px. The value must be an integer. The minimum value is 0 and the maximum value is the width of the current screen.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-CursorInfo-width: double--><!--Device-CursorInfo-width: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

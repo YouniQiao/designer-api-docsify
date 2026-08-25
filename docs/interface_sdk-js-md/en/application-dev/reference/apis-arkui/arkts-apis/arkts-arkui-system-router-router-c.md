@@ -4,11 +4,11 @@ The **Router** module provides APIs to access pages through URIs.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [router](arkts-router.md)
-
-<!--Device-unnamed-export default class Router--><!--Device-unnamed-export default class Router-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -32,19 +32,19 @@ Returns to the previous or a specified page.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** back
-
-<!--Device-Router-static back(options?: BackRouterOptions): void--><!--Device-Router-static back(options?: BackRouterOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [BackRouterOptions](arkts-arkui-system-router-backrouteroptions-i.md) | No | For details, see **BackRouterOptions**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [BackRouterOptions](arkts-arkui-system-router-backrouteroptions-i.md) | No |
 
 **Examples**
 
@@ -117,11 +117,11 @@ Clears all historical pages in the stack and retains only the current page at th
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** clear
-
-<!--Device-Router-static clear(): void--><!--Device-Router-static clear(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -147,19 +147,19 @@ Disables the display of a confirm dialog box before returning to the previous pa
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** hideAlertBeforeBackPage
-
-<!--Device-Router-static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): void--><!--Device-Router-static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [DisableAlertBeforeBackPageOptions](arkts-arkui-system-router-disablealertbeforebackpageoptions-i.md) | No | For details, see **DisableAlertBeforeBackPageOptions**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [DisableAlertBeforeBackPageOptions](arkts-arkui-system-router-disablealertbeforebackpageoptions-i.md) | No |
 
 **Examples**
 
@@ -190,19 +190,19 @@ Enables the display of a confirm dialog box before returning to the previous pag
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** showAlertBeforeBackPage
-
-<!--Device-Router-static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): void--><!--Device-Router-static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [EnableAlertBeforeBackPageOptions](arkts-arkui-system-router-enablealertbeforebackpageoptions-i.md) | Yes | For details, see **EnableAlertBeforeBackPageOptions**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [EnableAlertBeforeBackPageOptions](arkts-arkui-system-router-enablealertbeforebackpageoptions-i.md) | Yes |
 
 **Examples**
 
@@ -234,19 +234,19 @@ Obtains the number of pages in the current stack.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** getLength
-
-<!--Device-Router-static getLength(): string--><!--Device-Router-static getLength(): string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Number of pages in the stack. The maximum value is **32**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -271,19 +271,19 @@ Obtains parameter information about the current page.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 8
 
 **Substitutes:** getParams
-
-<!--Device-Router-static getParams(): ParamsInterface--><!--Device-Router-static getParams(): ParamsInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ParamsInterface](arkts-arkui-paramsinterface-t.md) | For details, see **ParamsInterface**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ParamsInterface](arkts-arkui-paramsinterface-t.md) |
 
 ## getState
 
@@ -295,19 +295,19 @@ Obtains state information about the current page.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** getState
-
-<!--Device-Router-static getState(): RouterState--><!--Device-Router-static getState(): RouterState-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [RouterState](arkts-arkui-system-router-routerstate-i.md) | For details, see **RouterState**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [RouterState](arkts-arkui-system-router-routerstate-i.md) |
 
 **Examples**
 
@@ -337,19 +337,19 @@ Navigates to a specified page in the application.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** push
-
-<!--Device-Router-static push(options: RouterOptions): void--><!--Device-Router-static push(options: RouterOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | Page routing parameters. For details, see **RouterOptions**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes |
 
 **Examples**
 
@@ -395,19 +395,19 @@ Replaces the current page with another one in the application and destroys the c
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** replace
-
-<!--Device-Router-static replace(options: RouterOptions): void--><!--Device-Router-static replace(options: RouterOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | Page routing parameters. For details, see **RouterOptions**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes |
 
 **Examples**
 
@@ -437,4 +437,3 @@ class Area {
 }
 export default new Area()
 ```
-

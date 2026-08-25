@@ -2,9 +2,9 @@
 
 Effect suggestion status
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-camera-class EffectSuggestionStatus--><!--Device-camera-class EffectSuggestionStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -26,9 +26,9 @@ Effect Suggestion type status.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EffectSuggestionStatus-status: boolean--><!--Device-EffectSuggestionStatus-status: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -44,11 +44,10 @@ Effect Suggestion type.
 
 **Type:** [EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EffectSuggestionStatus-type: EffectSuggestionType--><!--Device-EffectSuggestionStatus-type: EffectSuggestionType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

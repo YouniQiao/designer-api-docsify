@@ -4,7 +4,7 @@ Enumerates media file types.
 
 **Since:** 12
 
-<!--Device-sendablePhotoAccessHelper-const enum PhotoType--><!--Device-sendablePhotoAccessHelper-const enum PhotoType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ Image.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-PhotoType-IMAGE = 1--><!--Device-PhotoType-IMAGE = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,8 @@ Video.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PhotoType-VIDEO = 2--><!--Device-PhotoType-VIDEO = 2-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

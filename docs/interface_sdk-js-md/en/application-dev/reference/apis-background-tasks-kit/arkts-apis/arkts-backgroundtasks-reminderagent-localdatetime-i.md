@@ -4,11 +4,11 @@ Sets the time information for a calendar reminder.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md)
-
-<!--Device-reminderAgent-interface LocalDateTime--><!--Device-reminderAgent-interface LocalDateTime-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -30,11 +30,11 @@ Date.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** day
-
-<!--Device-LocalDateTime-day: number--><!--Device-LocalDateTime-day: number-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -50,11 +50,11 @@ Hour.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** hour
-
-<!--Device-LocalDateTime-hour: number--><!--Device-LocalDateTime-hour: number-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -70,11 +70,11 @@ Minute.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** minute
-
-<!--Device-LocalDateTime-minute: number--><!--Device-LocalDateTime-minute: number-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -90,11 +90,11 @@ Month.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** month
-
-<!--Device-LocalDateTime-month: number--><!--Device-LocalDateTime-month: number-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -110,11 +110,11 @@ Second.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** second
-
-<!--Device-LocalDateTime-second?: number--><!--Device-LocalDateTime-second?: number-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -130,11 +130,10 @@ Year.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** year
 
-<!--Device-LocalDateTime-year: number--><!--Device-LocalDateTime-year: number-End-->
-
 **System capability:** SystemCapability.Notification.ReminderAgent
-

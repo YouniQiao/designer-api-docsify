@@ -4,7 +4,7 @@ TabContent state.
 
 **Since:** 12
 
-<!--Device-uiObserver-export enum TabContentState--><!--Device-uiObserver-export enum TabContentState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ When the TabContent is shown.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TabContentState-ON_SHOW = 0--><!--Device-TabContentState-ON_SHOW = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ When the TabContent is hidden.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-TabContentState-ON_HIDE = 1--><!--Device-TabContentState-ON_HIDE = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

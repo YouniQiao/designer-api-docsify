@@ -2,9 +2,9 @@
 
 Parameters corresponding to mission.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export interface MissionParameter--><!--Device-unnamed-export interface MissionParameter-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -20,13 +20,13 @@ Device ID.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MissionParameter-deviceId: string--><!--Device-MissionParameter-deviceId: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -42,13 +42,13 @@ Whether a version conflict exists. **true** if yes, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MissionParameter-fixConflict: boolean--><!--Device-MissionParameter-fixConflict: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -62,17 +62,16 @@ tag: int
 
 Tag of the mission. The value **0** means the default tag.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MissionParameter-tag: int--><!--Device-MissionParameter-tag: int-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
-

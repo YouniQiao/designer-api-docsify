@@ -2,9 +2,9 @@
 
 Describes the event received by the application when the volume is changed.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-audio-interface VolumeEvent--><!--Device-audio-interface VolumeEvent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -24,9 +24,9 @@ Device network id
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VolumeEvent-networkId: string--><!--Device-VolumeEvent-networkId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -40,11 +40,11 @@ percentage?: int
 
 Volume percentage, which is an integer ranging from [0, 100].
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
-<!--Device-VolumeEvent-percentage?: int--><!--Device-VolumeEvent-percentage?: int-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -58,13 +58,12 @@ volumeGroupId: int
 
 volumeGroup id
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VolumeEvent-volumeGroupId: int--><!--Device-VolumeEvent-volumeGroupId: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
-

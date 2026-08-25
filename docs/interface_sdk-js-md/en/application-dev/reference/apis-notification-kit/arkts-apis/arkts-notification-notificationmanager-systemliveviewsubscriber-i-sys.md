@@ -2,9 +2,9 @@
 
 Subscriber of the system live view notification.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-notificationManager-export interface SystemLiveViewSubscriber--><!--Device-notificationManager-export interface SystemLiveViewSubscriber-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -18,19 +18,29 @@ import { notificationManager } from '@kit.NotificationKit';
 
 ## onResponse
 
+ArkTS-Dyn:
+```TypeScript
+onResponse?: (notificationId: number, buttonOptions: ButtonOptions) => void
+```
+
+ArkTS-Sta:
 ```TypeScript
 onResponse?: (notificationId: int, buttonOptions: ButtonOptions) => void
 ```
 
 Callback when the button is touched.
 
-**Type:** (notificationId: int, buttonOptions: ButtonOptions) =&gt; void
+**Since:** 11
 
-**Since:** 23
-
-<!--Device-SystemLiveViewSubscriber-onResponse?: (notificationId: int, buttonOptions: ButtonOptions) => void--><!--Device-SystemLiveViewSubscriber-onResponse?: (notificationId: int, buttonOptions: ButtonOptions) => void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
 
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| notificationId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| buttonOptions | [ButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-button-buttonoptions-i.md) | Yes |

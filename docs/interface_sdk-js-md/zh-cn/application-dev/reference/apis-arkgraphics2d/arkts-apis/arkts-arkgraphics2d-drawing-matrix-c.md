@@ -7,9 +7,9 @@
 > - 本模块使用屏幕物理像素单位px。&gt;
 > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-drawing-class Matrix--><!--Device-drawing-class Matrix-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -27,9 +27,9 @@ constructor()
 
 构造一个矩阵对象。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Matrix-constructor()--><!--Device-Matrix-constructor()-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -325,17 +325,17 @@ constructor(matrix: Matrix)
 
 拷贝一个矩阵。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Matrix-constructor(matrix: Matrix)--><!--Device-Matrix-constructor(matrix: Matrix)-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 | 被拷贝的矩阵。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 |
 
 **示例**
 
@@ -351,15 +351,15 @@ getAll(): Array<number>
 
 **起始版本：** 12
 
-<!--Device-Matrix-getAll(): Array<number>--><!--Device-Matrix-getAll(): Array<number>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;number&gt; | 存储矩阵元素值的浮点数组，长度为9。 |
+| 类型 |
+| --- |
+| Array & lt;number & gt; |
 
 **示例**
 
@@ -380,15 +380,15 @@ getAll(): Array<double> | undefined
 
 **起始版本：** 23
 
-<!--Device-Matrix-getAll(): Array<double> | undefined--><!--Device-Matrix-getAll(): Array<double> | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;double&gt; \| undefined | 存储矩阵元素值的浮点数组，长度为9。获取失败时返回undefined。 |
+| 类型 |
+| --- |
+| Array & lt;double & gt; \ | undefined |
 
 **示例**
 
@@ -396,35 +396,41 @@ getAll(): Array<double> | undefined
 
 ## getValue
 
+ArkTS-Dyn:
+```TypeScript
+getValue(index: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getValue(index: int): double
 ```
 
 获取矩阵给定索引位的值。索引范围0-8。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Matrix-getValue(index: int): double--><!--Device-Matrix-getValue(index: int): double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 索引位置，范围0-8，该参数为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | 函数返回矩阵给定索引位对应的值，该返回值为整数。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -445,29 +451,29 @@ invert(matrix: Matrix): boolean
 
 将矩阵matrix设置为当前矩阵的逆矩阵，并返回是否设置成功的结果。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Matrix-invert(matrix: Matrix): boolean--><!--Device-Matrix-invert(matrix: Matrix): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 | 矩阵对象，用于存储获取到的逆矩阵。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回matrix是否被设置为逆矩阵的结果。true表示当前矩阵可逆，matrix被设置为逆矩阵，false表示当前矩阵不可逆，matrix不被设置。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -493,17 +499,17 @@ isAffine(): boolean
 
 判断当前矩阵是否为仿射矩阵。仿射矩阵是一种包括平移、旋转、缩放等变换的矩阵。
 
-**起始版本：** 24
+**起始版本：** 20
 
-<!--Device-Matrix-isAffine(): boolean--><!--Device-Matrix-isAffine(): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回当前矩阵是否为仿射矩阵。true表示是仿射矩阵，false表示不是仿射矩阵。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -524,29 +530,29 @@ isEqual(matrix: Matrix): boolean
 
 判断两个矩阵是否相等。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Matrix-isEqual(matrix: Matrix): boolean--><!--Device-Matrix-isEqual(matrix: Matrix): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 | 另一个矩阵，用来与当前矩阵比较是否相等。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回两个矩阵的比较结果。true表示两个矩阵相等，false表示两个矩阵不相等。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -665,17 +671,17 @@ isIdentity(): boolean
 
 判断矩阵是否是单位矩阵。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Matrix-isIdentity(): boolean--><!--Device-Matrix-isIdentity(): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回矩阵是否是单位矩阵。true表示矩阵是单位矩阵，false表示矩阵不是单位矩阵。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -700,27 +706,27 @@ mapPoints(src: Array<common2D.Point>): Array<common2D.Point>
 
 **起始版本：** 12
 
-<!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point>--><!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| src | Array&lt;common2D.Point&gt; | 是 | 源点数组，作为矩阵变换的输入点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| src | Array & lt;common2D.Point & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;common2D.Point&gt; | 源点数组经矩阵变换后的点数组。 |
+| 类型 |
+| --- |
+| Array & lt;common2D.Point & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -764,27 +770,27 @@ mapPoints(src: Array<common2D.Point>): Array<common2D.Point> | undefined
 
 **起始版本：** 23
 
-<!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point> | undefined--><!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point> | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| src | Array&lt;common2D.Point&gt; | 是 | 源点数组，作为矩阵变换的输入点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| src | Array & lt;common2D.Point & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;common2D.Point&gt; \| undefined | 源点数组经矩阵变换后的点数组。创建对象失败时返回undefined。 |
+| 类型 |
+| --- |
+| Array & lt;common2D.Point & gt; \ | undefined |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -792,29 +798,35 @@ mapPoints(src: Array<common2D.Point>): Array<common2D.Point> | undefined
 
 ## mapRadius
 
+ArkTS-Dyn:
+```TypeScript
+mapRadius(radius: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 mapRadius(radius: double): double
 ```
 
 返回半径为radius的圆经过当前矩阵映射形成的椭圆的平均半径。平均半径的平方为椭圆长轴长度和短轴长度的乘积。若当前矩阵包含透视变换，则该结果无意义。
 
-**起始版本：** 24
+**起始版本：** 20
 
-<!--Device-Matrix-mapRadius(radius: double): double--><!--Device-Matrix-mapRadius(radius: double): double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| radius | double | 是 | 用于计算的圆的半径，浮点数。如果是负数，则按照绝对值进行计算。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| radius | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | 返回经过变换之后的平均半径。单位为物理像素px。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **示例**
 
@@ -835,30 +847,30 @@ mapRect(dst: common2D.Rect, src: common2D.Rect): boolean
 
 将目标矩形设置为源矩形通过矩阵变换后的图形的外接矩形。如下图所示，蓝色矩形为源矩形，假设黄色矩形为源矩形通过矩阵变换形成的图形，此时黄色矩形的边不与坐标轴平行，无法使用矩形对象表示，因此，将目标矩形设置为黄色矩形的外接矩形，即 黑色矩形。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Matrix-mapRect(dst: common2D.Rect, src: common2D.Rect): boolean--><!--Device-Matrix-mapRect(dst: common2D.Rect, src: common2D.Rect): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dst | common2D.Rect | 是 | 目标矩形对象，用于存储源矩形经矩阵变换后的图形的外接矩形。 |
-| src | common2D.Rect | 是 | 源矩形对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | common2D.Rect | 是 |
+| src | common2D.Rect | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回源矩形经过矩阵变换后的图形是否仍然是矩形，true表示是矩形，false表示不是矩形。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -881,17 +893,17 @@ postConcat(matrix: Matrix): void
 
 将一个矩阵乘在当前矩阵的左侧，即新的变换在当前矩阵的变换之后应用。如果需要在当前矩阵的变换之前应用新变换，使用preConcat方法。
 
-**起始版本：** 24
+**起始版本：** 20
 
-<!--Device-Matrix-postConcat(matrix: Matrix): void--><!--Device-Matrix-postConcat(matrix: Matrix): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 | 表示用于运算的矩阵，位于乘法表达式左侧。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 |
 
 **示例**
 
@@ -913,31 +925,37 @@ matrix1.postConcat(matrix2);
 
 ## postRotate
 
+ArkTS-Dyn:
+```TypeScript
+postRotate(degree: number, px: number, py: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 postRotate(degree: double, px: double, py: double): void
 ```
 
 将矩阵设置为矩阵右乘围绕旋转中心点旋转degree角度的单位矩阵后得到的矩阵，即新的旋转变换在当前矩阵的变换之后应用。如果需要在当前矩阵的变换之前应用旋转变换，使用preRotate方法。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Matrix-postRotate(degree: double, px: double, py: double): void--><!--Device-Matrix-postRotate(degree: double, px: double, py: double): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| degree | double | 是 | 旋转角度，单位为度。正数表示顺时针旋转，负数表示逆时针旋转，该参数为浮点数。 |
-| px | double | 是 | 旋转中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| py | double | 是 | 旋转中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| degree | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| py | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -971,32 +989,38 @@ if (matrix.getAll() != undefined) {
 
 ## postScale
 
+ArkTS-Dyn:
+```TypeScript
+postScale(sx: number, sy: number, px: number, py: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 postScale(sx: double, sy: double, px: double, py: double): void
 ```
 
 将矩阵设置为矩阵右乘围绕缩放中心点按sx和sy缩放系数缩放后的单位矩阵后得到的矩阵，即新的缩放变换在当前矩阵的变换之后应用。如果需要在当前矩阵的变换之前应用缩放变换，使用preScale方法。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Matrix-postScale(sx: double, sy: double, px: double, py: double): void--><!--Device-Matrix-postScale(sx: double, sy: double, px: double, py: double): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sx | double | 是 | x轴方向缩放因子，负数表示先关于x = px作镜像翻转后再进行缩放，该参数为浮点数。 |
-| sy | double | 是 | y轴方向缩放因子，负数表示先关于y = py作镜像翻转后再进行缩放，该参数为浮点数。 |
-| px | double | 是 | 缩放中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| py | double | 是 | 缩放中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sx | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| sy | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| py | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1032,26 +1056,32 @@ if (matrix.getAll() != undefined) {
 
 ## postSkew
 
+ArkTS-Dyn:
+```TypeScript
+postSkew(kx: number, ky: number, px: number, py: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 postSkew(kx: double, ky: double, px: double, py: double): void
 ```
 
 当前矩阵右乘一个倾斜变换矩阵。
 
-**起始版本：** 24
+**起始版本：** 20
 
-<!--Device-Matrix-postSkew(kx: double, ky: double, px: double, py: double): void--><!--Device-Matrix-postSkew(kx: double, ky: double, px: double, py: double): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| kx | double | 是 | x轴上的倾斜量，该参数为浮点数。正值会使绘制沿y轴增量方向向右倾斜；负值会使绘制沿y轴增量方向向左倾斜。 |
-| ky | double | 是 | y轴上的倾斜量，该参数为浮点数。正值会使绘制沿x轴增量方向向下倾斜；负值会使绘制沿x轴增量方向向上倾斜。 |
-| px | double | 是 | 倾斜中心点的x轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点右侧，负数表示位于坐标原点左侧。单位为物理像素px。 |
-| py | double | 是 | 倾斜中心点的y轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点下侧，负数表示位于坐标原点上侧。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| kx | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| ky | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| py | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **示例**
 
@@ -1064,30 +1094,36 @@ matrix.postSkew(2.0, 1.0, 2.0, 1.0);
 
 ## postTranslate
 
+ArkTS-Dyn:
+```TypeScript
+postTranslate(dx: number, dy: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 postTranslate(dx: double, dy: double): void
 ```
 
 将矩阵设置为矩阵右乘平移dx和dy距离后的单位矩阵后得到的矩阵，即新的平移变换在当前矩阵的变换之后应用。如果需要在当前矩阵的变换之前应用平移变换，使用preTranslate方法。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Matrix-postTranslate(dx: double, dy: double): void--><!--Device-Matrix-postTranslate(dx: double, dy: double): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dx | double | 是 | x轴方向平移距离，正数表示往x轴正方向平移，负数表示往x轴负方向平移，该参数为浮点数。单位为物理像素px。 |
-| dy | double | 是 | y轴方向平移距离，正数表示往y轴正方向平移，负数表示往y轴负方向平移，该参数为浮点数。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dx | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| dy | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1125,23 +1161,23 @@ preConcat(matrix: Matrix): void
 
 将一个矩阵乘在当前矩阵的右侧，即新的变换在当前矩阵的变换之前应用。如果需要在当前矩阵的变换之后应用新变换，使用postConcat方法。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Matrix-preConcat(matrix: Matrix): void--><!--Device-Matrix-preConcat(matrix: Matrix): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 | 表示用于运算的矩阵，位于乘法表达式右侧。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1157,31 +1193,37 @@ matrix1.preConcat(matrix2);
 
 ## preRotate
 
+ArkTS-Dyn:
+```TypeScript
+preRotate(degree: number, px: number, py: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 preRotate(degree: double, px: double, py: double): void
 ```
 
 将矩阵设置为矩阵左乘围绕旋转中心点旋转degree角度的单位矩阵后得到的矩阵，即新的旋转变换在当前矩阵的变换之前应用。如果需要在当前矩阵的变换之后应用旋转变换，使用postRotate方法。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Matrix-preRotate(degree: double, px: double, py: double): void--><!--Device-Matrix-preRotate(degree: double, px: double, py: double): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| degree | double | 是 | 旋转角度，单位为度。正数表示顺时针旋转，负数表示逆时针旋转，该参数为浮点数。 |
-| px | double | 是 | 旋转中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| py | double | 是 | 旋转中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| degree | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| py | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1215,32 +1257,38 @@ if (matrix.getAll() != undefined) {
 
 ## preScale
 
+ArkTS-Dyn:
+```TypeScript
+preScale(sx: number, sy: number, px: number, py: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 preScale(sx: double, sy: double, px: double, py: double): void
 ```
 
 将矩阵设置为矩阵左乘围绕缩放中心点按sx和sy缩放系数缩放后的单位矩阵后得到的矩阵，即新的缩放变换在当前矩阵的变换之前应用。如果需要在当前矩阵的变换之后应用缩放变换，使用postScale方法。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Matrix-preScale(sx: double, sy: double, px: double, py: double): void--><!--Device-Matrix-preScale(sx: double, sy: double, px: double, py: double): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sx | double | 是 | x轴方向缩放因子，为负数时可看作是先关于x = px作镜像翻转后再进行缩放，该参数为浮点数。 |
-| sy | double | 是 | y轴方向缩放因子，为负数时可看作是先关于y = py作镜像翻转后再进行缩放，该参数为浮点数。 |
-| px | double | 是 | 缩放中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| py | double | 是 | 缩放中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sx | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| sy | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| py | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1276,26 +1324,32 @@ if (matrix.getAll() != undefined) {
 
 ## preSkew
 
+ArkTS-Dyn:
+```TypeScript
+preSkew(kx: number, ky: number, px: number, py: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 preSkew(kx: double, ky: double, px: double, py: double): void
 ```
 
 当前矩阵左乘一个倾斜变换矩阵。
 
-**起始版本：** 24
+**起始版本：** 20
 
-<!--Device-Matrix-preSkew(kx: double, ky: double, px: double, py: double): void--><!--Device-Matrix-preSkew(kx: double, ky: double, px: double, py: double): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| kx | double | 是 | x轴上的倾斜量，该参数为浮点数。正值会使绘制沿y轴增量方向向右倾斜；负值会使绘制沿y轴增量方向向左倾斜。 |
-| ky | double | 是 | y轴上的倾斜量，该参数为浮点数。正值会使绘制沿x轴增量方向向下倾斜；负值会使绘制沿x轴增量方向向上倾斜。 |
-| px | double | 是 | 倾斜中心点的x轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点右侧，负数表示位于坐标原点左侧。单位为物理像素px。 |
-| py | double | 是 | 倾斜中心点的y轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点下侧，负数表示位于坐标原点上侧。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| kx | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| ky | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| py | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **示例**
 
@@ -1307,30 +1361,36 @@ matrix.preSkew(2.0, 1.0, 2.0, 1.0);
 
 ## preTranslate
 
+ArkTS-Dyn:
+```TypeScript
+preTranslate(dx: number, dy: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 preTranslate(dx: double, dy: double): void
 ```
 
 将矩阵设置为矩阵左乘平移dx和dy距离后的单位矩阵后得到的矩阵，即新的平移变换在当前矩阵的变换之前应用。如果需要在当前矩阵的变换之后应用平移变换，使用postTranslate方法。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Matrix-preTranslate(dx: double, dy: double): void--><!--Device-Matrix-preTranslate(dx: double, dy: double): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dx | double | 是 | x轴方向平移距离，正数表示往x轴正方向平移，负数表示往x轴负方向平移，该参数为浮点数。单位为物理像素px。 |
-| dy | double | 是 | y轴方向平移距离，正数表示往y轴正方向平移，负数表示往y轴负方向平移，该参数为浮点数。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dx | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| dy | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1368,17 +1428,17 @@ rectStaysRect(): boolean
 
 判断经过该矩阵映射后的矩形的形状是否仍为矩形。
 
-**起始版本：** 24
+**起始版本：** 20
 
-<!--Device-Matrix-rectStaysRect(): boolean--><!--Device-Matrix-rectStaysRect(): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回经过该矩阵映射后的矩形的形状是否仍为矩形。true表示仍是矩形，false表示不是矩形。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -1400,9 +1460,9 @@ reset(): void
 
 重置当前矩阵为单位矩阵。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Matrix-reset(): void--><!--Device-Matrix-reset(): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1463,18 +1523,18 @@ setConcat(matrixA: Matrix, matrixB: Matrix): void
 
 用两个矩阵的乘积更新当前矩阵，即当前矩阵 = matrixA × matrixB。
 
-**起始版本：** 24
+**起始版本：** 20
 
-<!--Device-Matrix-setConcat(matrixA: Matrix, matrixB: Matrix): void--><!--Device-Matrix-setConcat(matrixA: Matrix, matrixB: Matrix): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| matrixA | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 | 用于运算的矩阵A，位于乘法表达式左侧。 |
-| matrixB | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 | 用于运算的矩阵B，位于乘法表达式右侧。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| matrixA | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 |
+| matrixB | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 |
 
 **示例**
 
@@ -1490,29 +1550,35 @@ matrix1.setConcat(matrix2, matrix1);
 
 ## setMatrix
 
+ArkTS-Dyn:
+```TypeScript
+setMatrix(values: Array<number>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setMatrix(values: Array<double>): void
 ```
 
 设置矩阵对象的各项参数。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Matrix-setMatrix(values: Array<double>): void--><!--Device-Matrix-setMatrix(values: Array<double>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| values | Array&lt;double&gt; | 是 | 长度为9的浮点数组，表示矩阵对象的各项参数。数组中的值按下标从小到大分别表示水平缩放因子、水平倾斜系数、水平位移系数（单位为物理像素px）、垂直倾斜系数、垂直 缩放因子、垂直位移系数（单位为物理像素px）、x轴透视系数、y轴透视系数和透视缩放因子。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| values | ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;double & gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1569,23 +1635,29 @@ matrix1.setMatrix(matrix2);
 
 ## setMatrix
 
+ArkTS-Dyn:
+```TypeScript
+setMatrix(matrix: Array<number> | Matrix): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setMatrix(matrix: Array<double> | Matrix): void
 ```
 
 用一个矩阵对当前矩阵进行更新。
 
-**起始版本：** 24
+**起始版本：** 20
 
-<!--Device-Matrix-setMatrix(matrix: Array<double> | Matrix): void--><!--Device-Matrix-setMatrix(matrix: Array<double> | Matrix): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| matrix | Array&lt;double&gt; \| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 | 用于更新的数组或矩阵。当类型为数组时，长度固定为9。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| matrix | ArkTS-Dyn: Array & lt;number & gt; \ | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md)  <br>ArkTS-Sta：Array&lt;double&gt; \| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 |
 
 **示例**
 
@@ -1593,37 +1665,43 @@ setMatrix(matrix: Array<double> | Matrix): void
 
 ## setPolyToPoly
 
+ArkTS-Dyn:
+```TypeScript
+setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: number): boolean
+```
+
+ArkTS-Sta:
 ```TypeScript
 setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int): boolean
 ```
 
 将当前矩阵设置为能够将源点数组映射到目标点数组的变换矩阵。源点和目标点的个数必须大于等于0，小于等于4。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Matrix-setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int): boolean--><!--Device-Matrix-setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| src | Array&lt;common2D.Point&gt; | 是 | 源点数组，长度必须为count。 |
-| dst | Array&lt;common2D.Point&gt; | 是 | 目标点数组，长度必须为count。 |
-| count | int | 是 | src和dst中点的数量，取值范围为[0, 4]，该参数为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| src | Array & lt;common2D.Point & gt; | 是 |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | Array & lt;common2D.Point & gt; | 是 |
+| count | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回设置矩阵是否成功的结果，true表示设置成功，false表示设置失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1661,31 +1739,31 @@ setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): b
 
 将当前矩阵设置为能使源矩形映射到目标矩形的变换矩阵。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Matrix-setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): boolean--><!--Device-Matrix-setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| src | common2D.Rect | 是 | 源矩形，用于指定映射的源区域。 |
-| dst | common2D.Rect | 是 | 目标矩形，用于指定映射的目标区域。 |
-| scaleToFit | [ScaleToFit](arkts-arkgraphics2d-drawing-scaletofit-e.md) | 是 | 源矩形到目标矩形的映射方式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| src | common2D.Rect | 是 |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | common2D.Rect | 是 |
+| scaleToFit | [ScaleToFit](arkts-arkgraphics2d-drawing-scaletofit-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回矩阵是否可以表示矩形之间的映射，true表示可以，false表示不可以。如果源矩形的宽高任意一个小于等于0，则返回false，并将矩阵设置为单位矩阵；如果目标矩形的宽高任意一个小于 等于0，则返回true，并将矩阵设置为除透视缩放因子为1外其余值皆为0的矩阵。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1719,31 +1797,37 @@ if (matrix.setRectToRect(src, dst, scaleToFit) && matrix.getAll() != undefined) 
 
 ## setRotation
 
+ArkTS-Dyn:
+```TypeScript
+setRotation(degree: number, px: number, py: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setRotation(degree: double, px: double, py: double): void
 ```
 
 设置矩阵为单位矩阵，并围绕旋转中心点(px, py)进行旋转。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Matrix-setRotation(degree: double, px: double, py: double): void--><!--Device-Matrix-setRotation(degree: double, px: double, py: double): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| degree | double | 是 | 角度，单位为度。正数表示顺时针旋转，负数表示逆时针旋转，该参数为浮点数。 |
-| px | double | 是 | 旋转中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| py | double | 是 | 旋转中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| degree | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| py | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1756,32 +1840,38 @@ matrix.setRotation(90.0, 100.0, 100.0);
 
 ## setScale
 
+ArkTS-Dyn:
+```TypeScript
+setScale(sx: number, sy: number, px: number, py: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setScale(sx: double, sy: double, px: double, py: double): void
 ```
 
 设置矩阵为单位矩阵，并围绕缩放中心点(px, py)按sx和sy进行缩放。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Matrix-setScale(sx: double, sy: double, px: double, py: double): void--><!--Device-Matrix-setScale(sx: double, sy: double, px: double, py: double): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sx | double | 是 | x轴方向缩放因子，为负数时可看作是先关于x = px作镜像翻转后再进行缩放，该参数为浮点数。 |
-| sy | double | 是 | y轴方向缩放因子，为负数时可看作是先关于y = py作镜像翻转后再进行缩放，该参数为浮点数。 |
-| px | double | 是 | 缩放中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| py | double | 是 | 缩放中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sx | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| sy | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| py | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1794,26 +1884,32 @@ matrix.setScale(100.0, 100.0, 150.0, 150.0);
 
 ## setSinCos
 
+ArkTS-Dyn:
+```TypeScript
+setSinCos(sinValue: number, cosValue: number, px: number, py: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setSinCos(sinValue: double, cosValue: double, px: double, py: double): void
 ```
 
 设置矩阵为单位矩阵，使其围绕旋转中心点(px, py)以指定的正弦值和余弦值旋转。与[setRotation](#setrotation)功能类似，但setRotation直接传入角度 值，而本方法传入正弦值和余弦值。
 
-**起始版本：** 24
+**起始版本：** 20
 
-<!--Device-Matrix-setSinCos(sinValue: double, cosValue: double, px: double, py: double): void--><!--Device-Matrix-setSinCos(sinValue: double, cosValue: double, px: double, py: double): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sinValue | double | 是 | 旋转角度的正弦值。仅当正弦值和余弦值的平方和为1时，为旋转变换，否则矩阵可能包含平移缩放等其他变换。 |
-| cosValue | double | 是 | 旋转角度的余弦值。仅当正弦值和余弦值的平方和为1时，为旋转变换，否则矩阵可能包含平移缩放等其他变换。 |
-| px | double | 是 | 旋转中心的x轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点右侧，负数表示位于坐标原点左侧。单位为物理像素px。 |
-| py | double | 是 | 旋转中心的y轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点下侧，负数表示位于坐标原点上侧。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sinValue | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| cosValue | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| py | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **示例**
 
@@ -1827,26 +1923,32 @@ matrix.setSinCos(0.0, 1.0, 1.0, 0.0);
 
 ## setSkew
 
+ArkTS-Dyn:
+```TypeScript
+setSkew(kx: number, ky: number, px: number, py: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setSkew(kx: double, ky: double, px: double, py: double): void
 ```
 
 设置矩阵为单位矩阵，并围绕倾斜中心点(px, py)按(kx, ky)进行倾斜变换。与[setRotation](#setrotation)、 [setScale](#setscale)、[setTranslation](#settranslation)类似，均为重置矩阵后施加单一变换。
 
-**起始版本：** 24
+**起始版本：** 20
 
-<!--Device-Matrix-setSkew(kx: double, ky: double, px: double, py: double): void--><!--Device-Matrix-setSkew(kx: double, ky: double, px: double, py: double): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| kx | double | 是 | x轴上的倾斜量，该参数为浮点数。正值会使绘制沿y轴增量方向向右倾斜；负值会使绘制沿y轴增量方向向左倾斜。 |
-| ky | double | 是 | y轴上的倾斜量，该参数为浮点数。正值会使绘制沿x轴增量方向向下倾斜；负值会使绘制沿x轴增量方向向上倾斜。 |
-| px | double | 是 | 倾斜中心点的x轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点右侧，负数表示位于坐标原点左侧。单位为物理像素px。 |
-| py | double | 是 | 倾斜中心点的y轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点下侧，负数表示位于坐标原点上侧。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| kx | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| ky | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| py | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **示例**
 
@@ -1860,30 +1962,36 @@ matrix.setSkew(2.0, 0.5, 0.5, 2.0);
 
 ## setTranslation
 
+ArkTS-Dyn:
+```TypeScript
+setTranslation(dx: number, dy: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setTranslation(dx: double, dy: double): void
 ```
 
 设置矩阵为单位矩阵，并平移(dx, dy)。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Matrix-setTranslation(dx: double, dy: double): void--><!--Device-Matrix-setTranslation(dx: double, dy: double): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dx | double | 是 | x轴方向平移距离，正数表示往x轴正方向平移，负数表示往x轴负方向平移，该参数为浮点数。单位为物理像素px。 |
-| dy | double | 是 | y轴方向平移距离，正数表示往y轴正方向平移，负数表示往y轴负方向平移，该参数为浮点数。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dx | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| dy | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1893,4 +2001,3 @@ import { drawing } from '@kit.ArkGraphics2D';
 let matrix = new drawing.Matrix();
 matrix.setTranslation(100.0, 100.0);
 ```
-

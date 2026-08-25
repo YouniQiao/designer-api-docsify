@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-Intl-export interface CollatorOptions--><!--Device-Intl-export interface CollatorOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,11 +25,9 @@ caseFirst?: string | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-CollatorOptions-caseFirst?: string | undefined--><!--Device-CollatorOptions-caseFirst?: string | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -47,11 +43,9 @@ collation?: string | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-CollatorOptions-collation?: string | undefined--><!--Device-CollatorOptions-collation?: string | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -67,11 +61,9 @@ ignorePunctuation?: boolean | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-CollatorOptions-ignorePunctuation?: boolean | undefined--><!--Device-CollatorOptions-ignorePunctuation?: boolean | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -87,11 +79,9 @@ localeMatcher?: string | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-CollatorOptions-localeMatcher?: string | undefined--><!--Device-CollatorOptions-localeMatcher?: string | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -107,11 +97,9 @@ numeric?: boolean | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-CollatorOptions-numeric?: boolean | undefined--><!--Device-CollatorOptions-numeric?: boolean | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -127,11 +115,9 @@ sensitivity?: string | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-CollatorOptions-sensitivity?: string | undefined--><!--Device-CollatorOptions-sensitivity?: string | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -147,11 +133,8 @@ usage?: string | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-CollatorOptions-usage?: string | undefined--><!--Device-CollatorOptions-usage?: string | undefined-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

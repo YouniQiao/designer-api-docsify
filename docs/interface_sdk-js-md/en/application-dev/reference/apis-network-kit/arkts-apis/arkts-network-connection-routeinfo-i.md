@@ -2,9 +2,9 @@
 
 Defines network route information.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-connection-export interface RouteInfo--><!--Device-connection-export interface RouteInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -24,9 +24,9 @@ Destination address.
 
 **Type:** LinkAddress
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-RouteInfo-destination: LinkAddress--><!--Device-RouteInfo-destination: LinkAddress-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -40,9 +40,9 @@ Gateway address.
 
 **Type:** NetAddress
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-RouteInfo-gateway: NetAddress--><!--Device-RouteInfo-gateway: NetAddress-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -56,9 +56,9 @@ Whether a gateway is present. Whether a gateway is available. The value **true**
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-RouteInfo-hasGateway: boolean--><!--Device-RouteInfo-hasGateway: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -74,7 +74,7 @@ Network card name.
 
 **Since:** 23
 
-<!--Device-RouteInfo-iface: string--><!--Device-RouteInfo-iface: string-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -90,7 +90,7 @@ NIC name.
 
 **Since:** 8
 
-<!--Device-RouteInfo-interface: string--><!--Device-RouteInfo-interface: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -104,9 +104,9 @@ Whether the route is the default one. Whether the route is the default route. Th
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-RouteInfo-isDefaultRoute: boolean--><!--Device-RouteInfo-isDefaultRoute: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -122,7 +122,6 @@ Whether the route is excluded. The value **true** indicates that the route is ex
 
 **Since:** 20
 
-<!--Device-RouteInfo-isExcludedRoute?: boolean--><!--Device-RouteInfo-isExcludedRoute?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
-

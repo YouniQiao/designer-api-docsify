@@ -4,9 +4,7 @@ Date time format class for locale-sensitive date formatting.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-Intl-export class DateTimeFormat--><!--Device-Intl-export class DateTimeFormat-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,20 +23,18 @@ Creates a new DateTimeFormat.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DateTimeFormat-public constructor(locales?: string | string[], options?: DateTimeFormatOptions)--><!--Device-DateTimeFormat-public constructor(locales?: string | string[], options?: DateTimeFormatOptions)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | string \| string[] | No | the locales. |
-| options | DateTimeFormatOptions | No | the options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | string \| string[] | No |
+| options | [DateTimeFormatOptions](arkts-arkts-intl-datetimeformatoptions-i.md) | No |
 
 ## format
 
@@ -50,25 +46,23 @@ Formats a date.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DateTimeFormat-public format(date?: Date | double): string--><!--Device-DateTimeFormat-public format(date?: Date | double): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| date | Date \| double | No | the date to format. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| date | Date \| double | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | formatted date string. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## formatRange
 
@@ -80,26 +74,24 @@ Formats a date range.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DateTimeFormat-public formatRange(startDate: Date | double, endDate: Date | double): string--><!--Device-DateTimeFormat-public formatRange(startDate: Date | double, endDate: Date | double): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| startDate | Date \| double | Yes | start date. |
-| endDate | Date \| double | Yes | end date. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| startDate | Date \| double | Yes |
+| endDate | Date \| double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | formatted range string. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## formatRangeToParts
 
@@ -111,26 +103,24 @@ Formats a date range to parts.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DateTimeFormat-public formatRangeToParts(startDate: Date | double, endDate: Date | double): DateTimeRangeFormatPart[]--><!--Device-DateTimeFormat-public formatRangeToParts(startDate: Date | double, endDate: Date | double): DateTimeRangeFormatPart[]-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| startDate | Date \| double | Yes | start date. |
-| endDate | Date \| double | Yes | end date. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| startDate | Date \| double | Yes |
+| endDate | Date \| double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| DateTimeRangeFormatPart[] | formatted range parts. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [DateTimeRangeFormatPart[]](arkts-arkts-intl-datetimerangeformatpart-i.md) |
 
 ## formatToParts
 
@@ -142,25 +132,23 @@ Formats a date to parts.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DateTimeFormat-public formatToParts(date?: Date | double): DateTimeFormatPart[]--><!--Device-DateTimeFormat-public formatToParts(date?: Date | double): DateTimeFormatPart[]-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| date | Date \| double | No | the date to format. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| date | Date \| double | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| DateTimeFormatPart[] | formatted parts. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [DateTimeFormatPart[]](arkts-arkts-intl-datetimeformatpart-i.md) |
 
 ## resolvedOptions
 
@@ -172,19 +160,17 @@ Returns resolved options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DateTimeFormat-public resolvedOptions(): ResolvedDateTimeFormatOptions--><!--Device-DateTimeFormat-public resolvedOptions(): ResolvedDateTimeFormatOptions-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ResolvedDateTimeFormatOptions | the resolved options. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [ResolvedDateTimeFormatOptions](arkts-arkts-intl-resolveddatetimeformatoptions-i.md) |
 
 ## supportedLocalesOf
 
@@ -197,24 +183,21 @@ Returns supported locales.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DateTimeFormat-public static supportedLocalesOf(locales: string | Locale | ReadonlyArray<string | Locale>,             options?: DateTimeFormatOptions): string[]--><!--Device-DateTimeFormat-public static supportedLocalesOf(locales: string | Locale | ReadonlyArray<string | Locale>,             options?: DateTimeFormatOptions): string[]-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | string \| Locale \| ReadonlyArray&lt;string \| Locale&gt; | Yes | the locales. |
-| options | DateTimeFormatOptions | No | the options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | string \| Locale \| ReadonlyArray & lt;string \ | Locale & gt; | Yes |
+| options | [DateTimeFormatOptions](arkts-arkts-intl-datetimeformatoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string[] | supported locales. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string[] |

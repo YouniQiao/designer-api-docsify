@@ -2,9 +2,9 @@
 
 Defines the initialization options for the system timer.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-systemTimer-interface TimerOptions--><!--Device-systemTimer-interface TimerOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -16,6 +16,22 @@ Defines the initialization options for the system timer.
 import { systemTimer } from '@kit.BasicServicesKit';
 ```
 
+## callback
+
+```TypeScript
+callback?: () => void
+```
+
+Callback to be executed by the user.The default value is empty.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+
+**System capability:** SystemCapability.MiscServices.Time
+
+**System API:** This is a system API.
+
 ## autoRestore
 
 ```TypeScript
@@ -26,27 +42,9 @@ Whether the timer is restored after the device is restarted.The value **true** m
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-TimerOptions-autoRestore?: boolean--><!--Device-TimerOptions-autoRestore?: boolean-End-->
-
-**System capability:** SystemCapability.MiscServices.Time
-
-**System API:** This is a system API.
-
-## callback
-
-```TypeScript
-callback?: () => void
-```
-
-Callback to be executed by the user.The default value is empty.
-
-**Type:** () =&gt; void
-
-**Since:** 23
-
-<!--Device-TimerOptions-callback?: () => void--><!--Device-TimerOptions-callback?: () => void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -60,11 +58,11 @@ interval?: long
 
 Interval between two consecutive timers, in milliseconds.For a repeating timer, the minimum value of **interval** is 1s and the maximum value is 365 days. It is recommended that the value be greater than or equal to 5000 ms.For a one-shot timer, the value is **0**.Default value: **0**.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-TimerOptions-interval?: long--><!--Device-TimerOptions-interval?: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -80,9 +78,9 @@ Timer name, with a maximum length of 64 bytes.A UID cannot contain two timers wi
 
 **Type:** string
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-TimerOptions-name?: string--><!--Device-TimerOptions-name?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -98,9 +96,9 @@ Whether the timer is a repeating timer. The value **true** means that the timer 
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-TimerOptions-repeat: boolean--><!--Device-TimerOptions-repeat: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -114,11 +112,11 @@ type: int
 
 Timer types. Use pipe (|) symbol
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-TimerOptions-type: int--><!--Device-TimerOptions-type: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -134,11 +132,10 @@ wantAgent?: WantAgent
 
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-TimerOptions-wantAgent?: WantAgent--><!--Device-TimerOptions-wantAgent?: WantAgent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
 **System API:** This is a system API.
-

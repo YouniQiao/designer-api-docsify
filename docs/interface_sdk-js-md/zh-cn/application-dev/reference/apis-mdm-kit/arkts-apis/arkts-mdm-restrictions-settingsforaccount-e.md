@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-restrictions-enum SettingsForAccount--><!--Device-restrictions-enum SettingsForAccount-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,9 +18,8 @@ MODIFY_WALLPAPER = 0
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-SettingsForAccount-MODIFY_WALLPAPER = 0--><!--Device-SettingsForAccount-MODIFY_WALLPAPER = 0-End-->
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
-

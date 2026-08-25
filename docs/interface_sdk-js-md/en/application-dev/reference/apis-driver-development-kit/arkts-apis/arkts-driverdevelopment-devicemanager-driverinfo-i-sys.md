@@ -2,9 +2,9 @@
 
 Defines detailed information about a driver.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-deviceManager-interface DriverInfo--><!--Device-deviceManager-interface DriverInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -26,9 +26,9 @@ Bus type.
 
 **Type:** [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-DriverInfo-busType: BusType--><!--Device-DriverInfo-busType: BusType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -44,9 +44,9 @@ Driver description.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-DriverInfo-description: string--><!--Device-DriverInfo-description: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -62,9 +62,9 @@ Driver name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-DriverInfo-driverName: string--><!--Device-DriverInfo-driverName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -80,9 +80,9 @@ Driver size, in bytes.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-DriverInfo-driverSize: string--><!--Device-DriverInfo-driverSize: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -98,9 +98,9 @@ Driver UID.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-DriverInfo-driverUid: string--><!--Device-DriverInfo-driverUid: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -116,11 +116,10 @@ Driver version.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-DriverInfo-driverVersion: string--><!--Device-DriverInfo-driverVersion: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **System API:** This is a system API.
-

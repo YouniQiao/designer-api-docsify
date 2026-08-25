@@ -14,9 +14,9 @@ function setFoldDisplayMode(mode: FoldDisplayMode): void
 
 Sets the display mode of the foldable device.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-display-function setFoldDisplayMode(mode: FoldDisplayMode): void--><!--Device-display-function setFoldDisplayMode(mode: FoldDisplayMode): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -24,17 +24,17 @@ Sets the display mode of the foldable device.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | Yes | Display mode. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mode | [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
 
 **Examples**
 
@@ -69,9 +69,9 @@ function setFoldDisplayMode(mode: FoldDisplayMode, reason: string): void
 
 Sets the display mode of the foldable device, with the reason for the change specified.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-display-function setFoldDisplayMode(mode: FoldDisplayMode, reason: string): void--><!--Device-display-function setFoldDisplayMode(mode: FoldDisplayMode, reason: string): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -79,19 +79,18 @@ Sets the display mode of the foldable device, with the reason for the change spe
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | Yes | Display mode. |
-| reason | string | Yes | Reason for changing the display mode. If this parameter is not set, an empty string is used by default. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mode | [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | Yes |
+| reason | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
 
 **Examples**
 
 See [setFoldDisplayMode](#setfolddisplaymode)
-

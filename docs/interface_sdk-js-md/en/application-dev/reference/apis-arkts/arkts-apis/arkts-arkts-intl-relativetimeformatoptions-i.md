@@ -4,9 +4,7 @@ Relative time format options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-Intl-export interface RelativeTimeFormatOptions--><!--Device-Intl-export interface RelativeTimeFormatOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,11 +25,9 @@ Locale matcher option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RelativeTimeFormatOptions-localeMatcher?: RelativeTimeFormatLocaleMatcher--><!--Device-RelativeTimeFormatOptions-localeMatcher?: RelativeTimeFormatLocaleMatcher-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -47,11 +43,9 @@ Numeric option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RelativeTimeFormatOptions-numeric?: RelativeTimeFormatNumeric--><!--Device-RelativeTimeFormatOptions-numeric?: RelativeTimeFormatNumeric-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -67,11 +61,8 @@ Style option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RelativeTimeFormatOptions-style?: RelativeTimeFormatStyle--><!--Device-RelativeTimeFormatOptions-style?: RelativeTimeFormatStyle-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

@@ -2,9 +2,9 @@
 
 In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-interface KeyboardDelegate--><!--Device-inputMethodEngine-interface KeyboardDelegate-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -12,62 +12,6 @@ In the following API examples, you must first use [getKeyboardDelegate](arkts-im
 
 ```TypeScript
 import { inputMethodEngine } from '@kit.IMEKit';
-```
-
-## off('cursorContextChange')
-
-```TypeScript
-off(type: 'cursorContextChange', callback?: (x: number, y: number, height: number) => void): void
-```
-
-Disables listening for cursor context changes. This API uses an asynchronous callback to return the result.
-
-**Since:** 8
-
-<!--Device-KeyboardDelegate-off(type: 'cursorContextChange', callback?: (x: number, y: number, height: number) => void): void--><!--Device-KeyboardDelegate-off(type: 'cursorContextChange', callback?: (x: number, y: number, height: number) => void): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'cursorContextChange' | Yes | Event type, which is **'cursorContextChange'**. |
-| callback | (x: number, y: number, height: number) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
-
-**Examples**
-
-```TypeScript
-inputMethodEngine.getKeyboardDelegate().off('cursorContextChange', (x: number, y: number, height: number) => {
-  console.info('delete cursorContextChange notification.');
-});
-```
-
-## off('editorAttributeChanged')
-
-```TypeScript
-off(type: 'editorAttributeChanged', callback?: (attr: EditorAttribute) => void): void
-```
-
-Disables listening for the edit box attribute change event. This API uses an asynchronous callback to return the result.
-
-**Since:** 10
-
-<!--Device-KeyboardDelegate-off(type: 'editorAttributeChanged', callback?: (attr: EditorAttribute) => void): void--><!--Device-KeyboardDelegate-off(type: 'editorAttributeChanged', callback?: (attr: EditorAttribute) => void): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'editorAttributeChanged' | Yes | Event type, which is **'editorAttributeChanged'**. |
-| callback | (attr: EditorAttribute) =&gt; void | No | Callback used for unsubscription. If this parameter is not specified, this API unregisters all callbacks for the specified type by default. |
-
-**Examples**
-
-```TypeScript
-inputMethodEngine.getKeyboardDelegate().off('editorAttributeChanged');
 ```
 
 ## off('keyDown' | 'keyUp')
@@ -80,16 +24,16 @@ Disables listening for a physical keyboard event. This API uses an asynchronous 
 
 **Since:** 8
 
-<!--Device-KeyboardDelegate-off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void--><!--Device-KeyboardDelegate-off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'keyDown' \| 'keyUp' | Yes | Event type. <br>- The value **'keyDown'** indicates the keydown event. <br>- The value **'keyUp'** indicates the keyup event. |
-| callback | (event: KeyEvent) =&gt; boolean | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'keyDown' \| 'keyUp' | Yes |
+| callback | (event: KeyEvent) = & gt; boolean | No |
 
 **Examples**
 
@@ -104,6 +48,31 @@ inputMethodEngine.getKeyboardDelegate().off('keyDown', (keyEvent: inputMethodEng
 });
 ```
 
+## off('keyDown' | 'keyUp')
+
+```TypeScript
+off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
+```
+
+Disables listening for a physical keyboard event. This API uses an asynchronous callback to return the result.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'keyDown' \| 'keyUp' | Yes |
+| callback | (event: KeyEvent) = & gt; boolean | No |
+
+**Examples**
+
+See off
+
 ## off('keyEvent')
 
 ```TypeScript
@@ -114,16 +83,16 @@ Disables listening for a keyboard event. This API uses an asynchronous callback 
 
 **Since:** 10
 
-<!--Device-KeyboardDelegate-off(type: 'keyEvent', callback?: (event: InputKeyEvent) => boolean): void--><!--Device-KeyboardDelegate-off(type: 'keyEvent', callback?: (event: InputKeyEvent) => boolean): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'keyEvent' | Yes | Event type, which is **'keyEvent'**. |
-| callback | (event: InputKeyEvent) =&gt; boolean | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'keyEvent' | Yes |
+| callback | (event: InputKeyEvent) = & gt; boolean | No |
 
 **Examples**
 
@@ -137,30 +106,34 @@ inputMethodEngine.getKeyboardDelegate().off('keyEvent', (keyEvent: KeyEvent) => 
 inputMethodEngine.getKeyboardDelegate().off('keyEvent');
 ```
 
-## off('keyDown' | 'keyUp')
+## off('cursorContextChange')
 
 ```TypeScript
-off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
+off(type: 'cursorContextChange', callback?: (x: number, y: number, height: number) => void): void
 ```
 
-Disables listening for a physical keyboard event. This API uses an asynchronous callback to return the result.
+Disables listening for cursor context changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
-<!--Device-KeyboardDelegate-off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void--><!--Device-KeyboardDelegate-off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'keyDown' \| 'keyUp' | Yes | Event type. <br>- The value **'keyDown'** indicates the keydown event. <br>- The value **'keyUp'** indicates the keyup event. |
-| callback | (event: KeyEvent) =&gt; boolean | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'cursorContextChange' | Yes |
+| callback | (x: number, y: number, height: number) = & gt; void | No |
 
 **Examples**
 
-See off_keyDown
+```TypeScript
+inputMethodEngine.getKeyboardDelegate().off('cursorContextChange', (x: number, y: number, height: number) => {
+  console.info('delete cursorContextChange notification.');
+});
+```
 
 ## off('selectionChange')
 
@@ -175,16 +148,16 @@ Disables listening for the text selection change event. This API uses an asynchr
 
 **Since:** 8
 
-<!--Device-KeyboardDelegate-off(      type: 'selectionChange',      callback?: (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => void    ): void--><!--Device-KeyboardDelegate-off(      type: 'selectionChange',      callback?: (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => void    ): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'selectionChange' | Yes | Event type, which is **'selectionChange'**. |
-| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'selectionChange' | Yes |
+| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) = & gt; void | No |
 
 **Examples**
 
@@ -205,16 +178,16 @@ Disables listening for the text change event. This API uses an asynchronous call
 
 **Since:** 8
 
-<!--Device-KeyboardDelegate-off(type: 'textChange', callback?: (text: string) => void): void--><!--Device-KeyboardDelegate-off(type: 'textChange', callback?: (text: string) => void): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'textChange' | Yes | Event type, which is **'textChange'**. |
-| callback | (text: string) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'textChange' | Yes |
+| callback | (text: string) = & gt; void | No |
 
 **Examples**
 
@@ -222,6 +195,33 @@ Disables listening for the text change event. This API uses an asynchronous call
 inputMethodEngine.getKeyboardDelegate().off('textChange', (text: string) => {
   console.info('delete textChange notification. text:' + text);
 });
+```
+
+## off('editorAttributeChanged')
+
+```TypeScript
+off(type: 'editorAttributeChanged', callback?: (attr: EditorAttribute) => void): void
+```
+
+Disables listening for the edit box attribute change event. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'editorAttributeChanged' | Yes |
+| callback | (attr: EditorAttribute) = & gt; void | No |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getKeyboardDelegate().off('editorAttributeChanged');
 ```
 
 ## offCursorContextChange
@@ -234,15 +234,15 @@ Unsubscribe cursor context change.
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-offCursorContextChange(callback?: CursorContextChangeCallback): void--><!--Device-KeyboardDelegate-offCursorContextChange(callback?: CursorContextChangeCallback): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [CursorContextChangeCallback](arkts-ime-inputmethodengine-cursorcontextchangecallback-t.md) | No | optional, the callback called when cursor information changes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [CursorContextChangeCallback](arkts-ime-inputmethodengine-cursorcontextchangecallback-t.md) | No |
 
 ## offEditorAttributeChanged
 
@@ -254,15 +254,15 @@ Unsubscribe input text attribute change.
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-offEditorAttributeChanged(callback?: Callback<EditorAttribute>): void--><!--Device-KeyboardDelegate-offEditorAttributeChanged(callback?: Callback<EditorAttribute>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | No | optional, the callback called when editor's attribute changes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | No |
 
 ## offKeyDown
 
@@ -274,15 +274,15 @@ Unsubscribe key down event
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-offKeyDown(callback?: KeyEventCallback): void--><!--Device-KeyboardDelegate-offKeyDown(callback?: KeyEventCallback): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | No | optional, the callback called when a key down event occurs. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | No |
 
 ## offKeyEvent
 
@@ -294,15 +294,15 @@ Unsubscribe key event.
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-offKeyEvent(callback?: InputKeyEventCallback): void--><!--Device-KeyboardDelegate-offKeyEvent(callback?: InputKeyEventCallback): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [InputKeyEventCallback](arkts-ime-inputmethodengine-inputkeyeventcallback-t.md) | No | optional, the callback called when a key event event occurs. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [InputKeyEventCallback](arkts-ime-inputmethodengine-inputkeyeventcallback-t.md) | No |
 
 ## offKeyUp
 
@@ -314,15 +314,15 @@ Unsubscribe key up event
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-offKeyUp(callback?: KeyEventCallback): void--><!--Device-KeyboardDelegate-offKeyUp(callback?: KeyEventCallback): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | No | optional, the callback called when a key up event occurs. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | No |
 
 ## offSelectionChange
 
@@ -334,15 +334,15 @@ Unsubscribe selection change.
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-offSelectionChange(callback?: SelectionChangeCallback): void--><!--Device-KeyboardDelegate-offSelectionChange(callback?: SelectionChangeCallback): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [SelectionChangeCallback](arkts-ime-inputmethodengine-selectionchangecallback-t.md) | No | optional, the callback called when the text selection changes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [SelectionChangeCallback](arkts-ime-inputmethodengine-selectionchangecallback-t.md) | No |
 
 ## offTextChange
 
@@ -354,76 +354,15 @@ Unsubscribe text change.
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-offTextChange(callback?: Callback<string>): void--><!--Device-KeyboardDelegate-offTextChange(callback?: Callback<string>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | optional, the callback called when the text changes. |
-
-## on('cursorContextChange')
-
-```TypeScript
-on(type: 'cursorContextChange', callback: (x: number, y: number, height: number) => void): void
-```
-
-Enables listening for the cursor change event. This API uses an asynchronous callback to return the result.
-
-**Since:** 8
-
-<!--Device-KeyboardDelegate-on(type: 'cursorContextChange', callback: (x: number, y: number, height: number) => void): void--><!--Device-KeyboardDelegate-on(type: 'cursorContextChange', callback: (x: number, y: number, height: number) => void): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'cursorContextChange' | Yes | Event type, which is **'cursorContextChange'**. |
-| callback | (x: number, y: number, height: number) =&gt; void | Yes | Callback used to return the cursor information. <br>- **x**: x coordinate of the top of the cursor. <br>- **y**: y coordinate of the bottom of the cursor. <br>- **height**: height of the cursor. |
-
-**Examples**
-
-```TypeScript
-inputMethodEngine.getKeyboardDelegate().on('cursorContextChange', (x: number, y: number, height: number) => {
-  console.info('inputMethodEngine cursorContextChange x:' + x);
-  console.info('inputMethodEngine cursorContextChange y:' + y);
-  console.info('inputMethodEngine cursorContextChange height:' + height);
-});
-```
-
-## on('editorAttributeChanged')
-
-```TypeScript
-on(type: 'editorAttributeChanged', callback: (attr: EditorAttribute) => void): void
-```
-
-Enables listening for the edit box attribute change event. This API uses an asynchronous callback to return the result.
-
-**Since:** 10
-
-<!--Device-KeyboardDelegate-on(type: 'editorAttributeChanged', callback: (attr: EditorAttribute) => void): void--><!--Device-KeyboardDelegate-on(type: 'editorAttributeChanged', callback: (attr: EditorAttribute) => void): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'editorAttributeChanged' | Yes | Event type, which is **'editorAttributeChanged'**. |
-| callback | (attr: EditorAttribute) =&gt; void | Yes | Callback used to return the changed edit box attribute. |
-
-**Examples**
-
-```TypeScript
-inputMethodEngine.getKeyboardDelegate()
-  .on('editorAttributeChanged', (attr: inputMethodEngine.EditorAttribute) => {
-    console.info(`Succeeded in receiving attribute of editor, inputPattern = ${attr.inputPattern}, enterKeyType = ${attr.enterKeyType}`);
-  });
-```
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No |
 
 ## on('keyDown' | 'keyUp')
 
@@ -435,16 +374,16 @@ Enables listening for a physical keyboard event. This API uses an asynchronous c
 
 **Since:** 8
 
-<!--Device-KeyboardDelegate-on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void--><!--Device-KeyboardDelegate-on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'keyDown' \| 'keyUp' | Yes | Event type. <br>- The value **'keyDown'** indicates the keydown event. <br>- The value **'keyUp'** indicates the keyup event. |
-| callback | (event: KeyEvent) =&gt; boolean | Yes | Callback used to return the key information. If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'keyDown' \| 'keyUp' | Yes |
+| callback | (event: KeyEvent) = & gt; boolean | Yes |
 
 **Examples**
 
@@ -461,6 +400,31 @@ inputMethodEngine.getKeyboardDelegate().on('keyDown', (keyEvent: inputMethodEngi
 });
 ```
 
+## on('keyDown' | 'keyUp')
+
+```TypeScript
+on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
+```
+
+Enables listening for a physical keyboard event. This API uses an asynchronous callback to return the result.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'keyDown' \| 'keyUp' | Yes |
+| callback | (event: KeyEvent) = & gt; boolean | Yes |
+
+**Examples**
+
+See on
+
 ## on('keyEvent')
 
 ```TypeScript
@@ -471,16 +435,16 @@ Enables listening for a keyboard event. This API uses an asynchronous callback t
 
 **Since:** 10
 
-<!--Device-KeyboardDelegate-on(type: 'keyEvent', callback: (event: InputKeyEvent) => boolean): void--><!--Device-KeyboardDelegate-on(type: 'keyEvent', callback: (event: InputKeyEvent) => boolean): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'keyEvent' | Yes | Event type, which is **'keyEvent'**. |
-| callback | (event: InputKeyEvent) =&gt; boolean | Yes | Callback used to return the result. The input parameter is the key event information and the return value is of the Boolean type. <br>- Input parameter: [InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md). <br>- If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'keyEvent' | Yes |
+| callback | (event: InputKeyEvent) = & gt; boolean | Yes |
 
 **Examples**
 
@@ -496,30 +460,36 @@ inputMethodEngine.getKeyboardDelegate().on('keyEvent', (keyEvent: KeyEvent) => {
 });
 ```
 
-## on('keyDown' | 'keyUp')
+## on('cursorContextChange')
 
 ```TypeScript
-on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
+on(type: 'cursorContextChange', callback: (x: number, y: number, height: number) => void): void
 ```
 
-Enables listening for a physical keyboard event. This API uses an asynchronous callback to return the result.
+Enables listening for the cursor change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
-<!--Device-KeyboardDelegate-on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void--><!--Device-KeyboardDelegate-on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'keyDown' \| 'keyUp' | Yes | Event type. <br>- The value **'keyDown'** indicates the keydown event. <br>- The value **'keyUp'** indicates the keyup event. |
-| callback | (event: KeyEvent) =&gt; boolean | Yes | Callback used to return the key information. If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'cursorContextChange' | Yes |
+| callback | (x: number, y: number, height: number) = & gt; void | Yes |
 
 **Examples**
 
-See on_keyDown
+```TypeScript
+inputMethodEngine.getKeyboardDelegate().on('cursorContextChange', (x: number, y: number, height: number) => {
+  console.info('inputMethodEngine cursorContextChange x:' + x);
+  console.info('inputMethodEngine cursorContextChange y:' + y);
+  console.info('inputMethodEngine cursorContextChange height:' + height);
+});
+```
 
 ## on('selectionChange')
 
@@ -534,16 +504,16 @@ Enables listening for the text selection change event. This API uses an asynchro
 
 **Since:** 8
 
-<!--Device-KeyboardDelegate-on(      type: 'selectionChange',      callback: (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => void    ): void--><!--Device-KeyboardDelegate-on(      type: 'selectionChange',      callback: (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => void    ): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'selectionChange' | Yes | Event type, which is **'selectionChange'**. |
-| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) =&gt; void | Yes | Callback used to return the text selection information. <br>- **oldBegin**: start of the selected text before the change. <br>- **oldEnd**: end of the selected text before the change. <br>- **newBegin**: start of the selected text after the change. <br>- **newEnd**: end of the selected text after the change. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'selectionChange' | Yes |
+| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) = & gt; void | Yes |
 
 **Examples**
 
@@ -567,16 +537,16 @@ Enables listening for the text change event. This API uses an asynchronous callb
 
 **Since:** 8
 
-<!--Device-KeyboardDelegate-on(type: 'textChange', callback: (text: string) => void): void--><!--Device-KeyboardDelegate-on(type: 'textChange', callback: (text: string) => void): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'textChange' | Yes | Event type, which is **'textChange'**. |
-| callback | (text: string) =&gt; void | Yes | Callback used to return the text content. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'textChange' | Yes |
+| callback | (text: string) = & gt; void | Yes |
 
 **Examples**
 
@@ -584,6 +554,36 @@ Enables listening for the text change event. This API uses an asynchronous callb
 inputMethodEngine.getKeyboardDelegate().on('textChange', (text: string) => {
   console.info('inputMethodEngine textChange. text:' + text);
 });
+```
+
+## on('editorAttributeChanged')
+
+```TypeScript
+on(type: 'editorAttributeChanged', callback: (attr: EditorAttribute) => void): void
+```
+
+Enables listening for the edit box attribute change event. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'editorAttributeChanged' | Yes |
+| callback | (attr: EditorAttribute) = & gt; void | Yes |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getKeyboardDelegate()
+  .on('editorAttributeChanged', (attr: inputMethodEngine.EditorAttribute) => {
+    console.info(`Succeeded in receiving attribute of editor, inputPattern = ${attr.inputPattern}, enterKeyType = ${attr.enterKeyType}`);
+  });
 ```
 
 ## onCursorContextChange
@@ -596,15 +596,15 @@ Subscribe cursor context change.
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-onCursorContextChange(callback: CursorContextChangeCallback): void--><!--Device-KeyboardDelegate-onCursorContextChange(callback: CursorContextChangeCallback): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [CursorContextChangeCallback](arkts-ime-inputmethodengine-cursorcontextchangecallback-t.md) | Yes | the callback called when cursor information changes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [CursorContextChangeCallback](arkts-ime-inputmethodengine-cursorcontextchangecallback-t.md) | Yes |
 
 ## onEditorAttributeChanged
 
@@ -616,15 +616,15 @@ Subscribe input text attribute change.
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-onEditorAttributeChanged(callback: Callback<EditorAttribute>): void--><!--Device-KeyboardDelegate-onEditorAttributeChanged(callback: Callback<EditorAttribute>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | Yes | the callback called when editor's attribute changes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | Yes |
 
 ## onKeyDown
 
@@ -636,15 +636,15 @@ Subscribe key down event
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-onKeyDown(callback: KeyEventCallback): void--><!--Device-KeyboardDelegate-onKeyDown(callback: KeyEventCallback): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | Yes | the callback called when a key down event occurs. If the key is processed by event subscriber, callback should be return true, else return false. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | Yes |
 
 ## onKeyEvent
 
@@ -656,15 +656,15 @@ Subscribe key event.
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-onKeyEvent(callback: InputKeyEventCallback): void--><!--Device-KeyboardDelegate-onKeyEvent(callback: InputKeyEventCallback): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [InputKeyEventCallback](arkts-ime-inputmethodengine-inputkeyeventcallback-t.md) | Yes | the callback called when a key event event occurs. If the key is processed by event subscriber, callback should be return true, else return false. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [InputKeyEventCallback](arkts-ime-inputmethodengine-inputkeyeventcallback-t.md) | Yes |
 
 ## onKeyUp
 
@@ -676,15 +676,15 @@ Subscribe key up event
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-onKeyUp(callback: KeyEventCallback): void--><!--Device-KeyboardDelegate-onKeyUp(callback: KeyEventCallback): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | Yes | the callback called when a key up event occurs. If the key is processed by event subscriber, callback should be return true, else return false. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | Yes |
 
 ## onSelectionChange
 
@@ -696,15 +696,15 @@ Subscribe selection change.
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-onSelectionChange(callback: SelectionChangeCallback): void--><!--Device-KeyboardDelegate-onSelectionChange(callback: SelectionChangeCallback): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [SelectionChangeCallback](arkts-ime-inputmethodengine-selectionchangecallback-t.md) | Yes | the callback called when the text selection changes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [SelectionChangeCallback](arkts-ime-inputmethodengine-selectionchangecallback-t.md) | Yes |
 
 ## onTextChange
 
@@ -716,13 +716,12 @@ Subscribe text change.
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-onTextChange(callback: Callback<string>): void--><!--Device-KeyboardDelegate-onTextChange(callback: Callback<string>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | the callback called when the text changes. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes |

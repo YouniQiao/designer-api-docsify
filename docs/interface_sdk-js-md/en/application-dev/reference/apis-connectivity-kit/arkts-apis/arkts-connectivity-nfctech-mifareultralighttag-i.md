@@ -5,9 +5,9 @@ Provides APIs to access MIFARE Ultralight properties and perform I/O operations 
 
 **Inheritance/Implementation:** MifareUltralightTag extends TagSession
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export interface MifareUltralightTag--><!--Device-unnamed-export interface MifareUltralightTag-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -19,19 +19,19 @@ getType(): tag.MifareUltralightType
 
 Obtains the type of this MIFARE Ultralight tag.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-MifareUltralightTag-getType(): tag.MifareUltralightType--><!--Device-MifareUltralightTag-getType(): tag.MifareUltralightType-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| tag.MifareUltralightType | Type of the MIFARE Ultralight tag obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| tag.MifareUltralightType |
 
 **Examples**
 
@@ -53,42 +53,48 @@ console.info("mifareUltralight getType: " + getType);
 
 ## readMultiplePages
 
+ArkTS-Dyn:
+```TypeScript
+readMultiplePages(pageIndex: number): Promise<number[]>
+```
+
+ArkTS-Sta:
 ```TypeScript
 readMultiplePages(pageIndex: int): Promise<int[]>
 ```
 
 Reads four pages of data (16 bytes in total) from the tag. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-MifareUltralightTag-readMultiplePages(pageIndex: int): Promise<int[]>--><!--Device-MifareUltralightTag-readMultiplePages(pageIndex: int): Promise<int[]>-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pageIndex | int | Yes | Index of the first page to read. The page indexes start from **0**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| pageIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;int[]&gt; | Promise used to return the data read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Promise & lt;number[] & gt;<br>ArkTS-Sta：Promise & lt;int[] & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) |
 
 **Examples**
 
@@ -152,37 +158,43 @@ function nfcTechDemo() {
 
 ## readMultiplePages
 
+ArkTS-Dyn:
+```TypeScript
+readMultiplePages(pageIndex: number, callback: AsyncCallback<number[]>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 readMultiplePages(pageIndex: int, callback: AsyncCallback<int[]>): void
 ```
 
 Reads four pages of data (16 bytes in total) from the tag. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-MifareUltralightTag-readMultiplePages(pageIndex: int, callback: AsyncCallback<int[]>): void--><!--Device-MifareUltralightTag-readMultiplePages(pageIndex: int, callback: AsyncCallback<int[]>): void-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pageIndex | int | Yes | Index of the first page to read. The page indexes start from **0**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | Yes | Callback used to return the data (16 bytes in size) read. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| pageIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) |
 
 **Examples**
 
@@ -190,43 +202,49 @@ See [readMultiplePages](#readmultiplepages)
 
 ## writeSinglePage
 
+ArkTS-Dyn:
+```TypeScript
+writeSinglePage(pageIndex: number, data: number[]): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeSinglePage(pageIndex: int, data: int[]): Promise<void>
 ```
 
 Writes one page (4 bytes) of data to this tag. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-MifareUltralightTag-writeSinglePage(pageIndex: int, data: int[]): Promise<void>--><!--Device-MifareUltralightTag-writeSinglePage(pageIndex: int, data: int[]): Promise<void>-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pageIndex | int | Yes | Index of the page to write. The page indexes start from **0**. |
-| data | int[] | Yes | 4-byte data to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| pageIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| data | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) |
 
 **Examples**
 
@@ -292,40 +310,45 @@ function nfcTechDemo() {
 
 ## writeSinglePage
 
+ArkTS-Dyn:
+```TypeScript
+writeSinglePage(pageIndex: number, data: number[], callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeSinglePage(pageIndex: int, data: int[], callback: AsyncCallback<void>): void
 ```
 
 Writes one page (4 bytes) of data to this tag. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-MifareUltralightTag-writeSinglePage(pageIndex: int, data: int[], callback: AsyncCallback<void>): void--><!--Device-MifareUltralightTag-writeSinglePage(pageIndex: int, data: int[], callback: AsyncCallback<void>): void-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pageIndex | int | Yes | Index of the page to write. The page indexes start from **0**. |
-| data | int[] | Yes | 4-byte data to write. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| pageIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| data | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) |
 
 **Examples**
 
 See [writeSinglePage](#writesinglepage)
-

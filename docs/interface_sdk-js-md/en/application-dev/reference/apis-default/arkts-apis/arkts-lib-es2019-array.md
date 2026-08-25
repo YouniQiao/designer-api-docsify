@@ -9,14 +9,13 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [Array](arkts-lib-es2019-array-array-i.md) |  |
-| [ReadonlyArray](arkts-lib-es2019-array-readonlyarray-i.md) |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Array](arkts-lib-es2019-array-array-i.md) |
+| [ReadonlyArray](arkts-lib-es2019-array-readonlyarray-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [FlatArray](arkts-flatarray-t.md) |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FlatArray](arkts-flatarray-t.md) |

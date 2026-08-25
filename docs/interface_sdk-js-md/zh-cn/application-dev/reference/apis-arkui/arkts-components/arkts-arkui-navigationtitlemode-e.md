@@ -4,7 +4,7 @@
 
 **起始版本：** 8
 
-<!--Device-unnamed-declare enum NavigationTitleMode--><!--Device-unnamed-declare enum NavigationTitleMode-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,9 +19,9 @@ Free = 0
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-NavigationTitleMode-Free = 0--><!--Device-NavigationTitleMode-Free = 0-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,9 +35,9 @@ Full
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-NavigationTitleMode-Full--><!--Device-NavigationTitleMode-Full-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,9 +51,8 @@ Mini
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-NavigationTitleMode-Mini--><!--Device-NavigationTitleMode-Mini-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

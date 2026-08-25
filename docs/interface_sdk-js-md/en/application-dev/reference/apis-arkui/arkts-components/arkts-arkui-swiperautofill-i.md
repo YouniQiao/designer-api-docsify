@@ -4,7 +4,7 @@ Describes the auto-fill attribute.
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface SwiperAutoFill--><!--Device-unnamed-declare interface SwiperAutoFill-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,13 +25,12 @@ Minimum width of the element.Default value: **0**
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
-<!--Device-SwiperAutoFill-minSize: VP--><!--Device-SwiperAutoFill-minSize: VP-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

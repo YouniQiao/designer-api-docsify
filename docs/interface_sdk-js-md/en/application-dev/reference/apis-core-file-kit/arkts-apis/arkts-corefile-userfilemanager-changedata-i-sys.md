@@ -4,11 +4,11 @@ Defines the return value of the listener callback.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [ChangeData](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-changedata-i.md)
-
-<!--Device-userFileManager-interface ChangeData--><!--Device-userFileManager-interface ChangeData-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -32,9 +32,9 @@ URIs of the changed files in the album. The value may be undefined. Check whethe
 
 **Since:** 10
 
-**Deprecated since:** 26.0.0
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-ChangeData-subUris: Array<string>--><!--Device-ChangeData-subUris: Array<string>-End-->
+**Deprecated since:** 26.0.0
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -52,11 +52,11 @@ Notification type.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [type](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-changedata-i.md#type)
-
-<!--Device-ChangeData-type: NotifyType--><!--Device-ChangeData-type: NotifyType-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -74,13 +74,12 @@ Array of all file asset or album URIs with the same [NotifyType](arkts-corefile-
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [uris](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-changedata-i.md#uris)
 
-<!--Device-ChangeData-uris: Array<string>--><!--Device-ChangeData-uris: Array<string>-End-->
-
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
-

@@ -18,41 +18,41 @@ Creates a **Watcher** object to listen for file or directory changes.
 
 **Since:** 10
 
-<!--Device-unnamed-declare function createWatcher(path: string, events: number, listener: WatchEventListener): Watcher--><!--Device-unnamed-declare function createWatcher(path: string, events: number, listener: WatchEventListener): Watcher-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the file or directory to observe. |
-| events | number | Yes | Events to observe. Multiple events can be separated by vertical bars ( |
-| listener | [WatchEventListener](arkts-corefile-file-fs-watcheventlistener-i.md) | Yes | Callback invoked when an observed event occurs. The callback will be invoked each time an observed event occurs. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| path | string | Yes |
+| events | number | Yes |
+| listener | [WatchEventListener](arkts-corefile-file-fs-watcheventlistener-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Watcher](arkts-corefile-file-fs-watcher-i.md) | Watcher** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Watcher](arkts-corefile-file-fs-watcher-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900002 | No such file or directory |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900020 | Invalid argument |
-| 13900021 | File table overflow |
-| 13900022 | Too many open files |
-| 13900025 | No space left on device |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900002 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900015 |
+| 13900018 |
+| 13900020 |
+| 13900021 |
+| 13900022 |
+| 13900025 |
+| 13900030 |
+| 13900042 |
 
 **Examples**
 
@@ -77,4 +77,3 @@ fs.writeSync(file.fd, 'test');
 fs.closeSync(file);
 watcher.stop();
 ```
-

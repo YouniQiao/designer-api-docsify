@@ -1,23 +1,22 @@
 # OnPasteCallback
 
 ```TypeScript
-declare type OnPasteCallback = (pasteValue: string, event: PasteEvent) => void
+export type OnPasteCallback = (content: string, event: PasteEvent) => void
 ```
 
-进行粘贴操作时，触发该回调。
+粘贴回调。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-unnamed-declare type OnPasteCallback = (pasteValue: string, event: PasteEvent) => void--><!--Device-unnamed-declare type OnPasteCallback = (pasteValue: string, event: PasteEvent) => void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pasteValue | string | 是 | 要粘贴的文本内容。 |
-| event | PasteEvent | 是 | 用户自定义粘贴事件。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| content | string | 是 |
+| event | [PasteEvent](arkts-arkui-richeditor-pasteevent-i.md) | 是 |

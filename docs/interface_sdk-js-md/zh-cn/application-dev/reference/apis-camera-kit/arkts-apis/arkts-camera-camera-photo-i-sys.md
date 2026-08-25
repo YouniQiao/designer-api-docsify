@@ -2,9 +2,9 @@
 
 全质量图对象。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-camera-interface Photo--><!--Device-camera-interface Photo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -24,9 +24,9 @@ Depth data.
 
 **类型：** [DepthData](arkts-camera-camera-depthdata-i-sys.md)
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-Photo-depthData?: DepthData--><!--Device-Photo-depthData?: DepthData-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -42,11 +42,10 @@ Raw image.
 
 **类型：** image.Image
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Photo-raw?: image.Image--><!--Device-Photo-raw?: image.Image-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
-

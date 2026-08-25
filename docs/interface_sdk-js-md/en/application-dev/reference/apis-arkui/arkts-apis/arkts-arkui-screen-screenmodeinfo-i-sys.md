@@ -2,9 +2,9 @@
 
 Defines the screen mode information.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-screen-interface ScreenModeInfo--><!--Device-screen-interface ScreenModeInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -24,11 +24,11 @@ height: long
 
 Height of the screen, in px. The value is an integer.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ScreenModeInfo-height: long--><!--Device-ScreenModeInfo-height: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -42,11 +42,11 @@ id: long
 
 Screen ID. The value must be an integer.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ScreenModeInfo-id: long--><!--Device-ScreenModeInfo-id: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -60,11 +60,11 @@ refreshRate: int
 
 Refresh rate of the screen, in hz. The value is an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ScreenModeInfo-refreshRate: int--><!--Device-ScreenModeInfo-refreshRate: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -78,13 +78,12 @@ width: long
 
 Width of the screen, in px. The value is an integer.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ScreenModeInfo-width: long--><!--Device-ScreenModeInfo-width: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
-

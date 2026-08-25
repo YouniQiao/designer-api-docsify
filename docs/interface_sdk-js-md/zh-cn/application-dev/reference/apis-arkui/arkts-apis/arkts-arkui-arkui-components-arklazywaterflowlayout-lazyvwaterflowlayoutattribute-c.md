@@ -6,7 +6,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-export declare class LazyVWaterFlowLayoutAttribute--><!--Device-unnamed-export declare class LazyVWaterFlowLayoutAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,6 +15,35 @@
 ```TypeScript
 import { LazyVWaterFlowLayout, LazyVWaterFlowLayoutAttribute, LazyWaterFlowLayoutAttribute } from '@kit.ArkUI';
 ```
+
+## attributeModifier
+
+```TypeScript
+default attributeModifier(
+      modifier: AttributeModifier<LazyVWaterFlowLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this
+```
+
+设置属性修饰符。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| modifier | AttributeModifier&lt;[LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-c.md)&gt; \| AttributeModifier & lt;CommonMethod & gt; \ | undefined | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| this |
 
 ## columnsTemplate
 
@@ -26,23 +55,44 @@ columnsTemplate(value: string | ItemFillPolicy | undefined): LazyVWaterFlowLayou
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LazyVWaterFlowLayoutAttribute-columnsTemplate(value: string | ItemFillPolicy | undefined): LazyVWaterFlowLayoutAttribute--><!--Device-LazyVWaterFlowLayoutAttribute-columnsTemplate(value: string | ItemFillPolicy | undefined): LazyVWaterFlowLayoutAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | string \| ItemFillPolicy \| undefined | 是 | 布局中的列数。 <br>默认值：'1fr' |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | string \| ItemFillPolicy \| undefined | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [LazyVWaterFlowLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) |  |
+| 类型 |
+| --- |
+| [LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-c.md) |
 
+## setLazyVWaterFlowLayoutOptions
+
+```TypeScript
+default setLazyVWaterFlowLayoutOptions(): this
+```
+
+设置LazyVWaterFlowLayout选项。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**返回值：**
+
+| 类型 |
+| --- |
+| this |

@@ -4,7 +4,7 @@ Defines the callback information triggered when the web page is overscrolled, in
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface OnOverScrollEvent--><!--Device-unnamed-declare interface OnOverScrollEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -25,9 +25,9 @@ Horizontal overscroll offset based on the leftmost edge of the web page.Unit: vp
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-OnOverScrollEvent-xOffset: number--><!--Device-OnOverScrollEvent-xOffset: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -43,9 +43,8 @@ Vertical overscroll offset based on the top edge of the web page.Unit: vp.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-OnOverScrollEvent-yOffset: number--><!--Device-OnOverScrollEvent-yOffset: number-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

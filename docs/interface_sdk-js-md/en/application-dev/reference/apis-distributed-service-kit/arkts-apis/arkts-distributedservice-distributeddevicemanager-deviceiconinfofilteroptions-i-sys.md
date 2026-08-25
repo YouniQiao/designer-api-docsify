@@ -2,9 +2,9 @@
 
 Defines the device icon information filter options.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-distributedDeviceManager-interface DeviceIconInfoFilterOptions--><!--Device-distributedDeviceManager-interface DeviceIconInfoFilterOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -26,9 +26,9 @@ Image type. This parameter has a fixed value of **ID**, indicating the product's
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DeviceIconInfoFilterOptions-imageType: string--><!--Device-DeviceIconInfoFilterOptions-imageType: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -44,9 +44,9 @@ Internal product model. This parameter is left unspecified by default.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DeviceIconInfoFilterOptions-internalModel?: string--><!--Device-DeviceIconInfoFilterOptions-internalModel?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -62,9 +62,9 @@ Product ID.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DeviceIconInfoFilterOptions-productId: string--><!--Device-DeviceIconInfoFilterOptions-productId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -81,9 +81,9 @@ Image specification name. Value:
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DeviceIconInfoFilterOptions-specName: string--><!--Device-DeviceIconInfoFilterOptions-specName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -99,11 +99,10 @@ Sub-product ID. This parameter is left unspecified by default.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DeviceIconInfoFilterOptions-subProductId?: string--><!--Device-DeviceIconInfoFilterOptions-subProductId?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
-

@@ -4,7 +4,7 @@ This module provides the Network Response.
 
 **Since:** 3
 
-<!--Device-unnamed-export interface NetworkResponse--><!--Device-unnamed-export interface NetworkResponse-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -25,7 +25,7 @@ Whether to charge by traffic. The value **true** means to charge by traffic, and
 
 **Since:** 3
 
-<!--Device-NetworkResponse-metered: boolean--><!--Device-NetworkResponse-metered: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -41,7 +41,6 @@ Network type. The value can be **2G**, **3G**, **4G**, **5G**, **WiFi**, or **no
 
 **Since:** 3
 
-<!--Device-NetworkResponse-type: string--><!--Device-NetworkResponse-type: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
-

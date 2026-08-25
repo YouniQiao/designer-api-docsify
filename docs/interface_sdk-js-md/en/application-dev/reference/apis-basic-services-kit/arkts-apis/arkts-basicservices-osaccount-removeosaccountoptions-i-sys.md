@@ -4,7 +4,7 @@ Represents the optional parameter used to remove an OS account.
 
 **Since:** 24
 
-<!--Device-osAccount-interface RemoveOsAccountOptions--><!--Device-osAccount-interface RemoveOsAccountOptions-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -28,9 +28,8 @@ Token obtained from the authentication management API. The value is left empty b
 
 **Since:** 24
 
-<!--Device-RemoveOsAccountOptions-token?: Uint8Array--><!--Device-RemoveOsAccountOptions-token?: Uint8Array-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-

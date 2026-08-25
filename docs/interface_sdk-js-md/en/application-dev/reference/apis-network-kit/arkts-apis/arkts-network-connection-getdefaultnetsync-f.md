@@ -28,29 +28,29 @@ Obtains the network handle used by the system by default, including the network 
 > network information.
 > **Required permission**: ohos.permission.GET_NETWORK_INFO
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-connection-function getDefaultNetSync(): NetHandle--><!--Device-connection-function getDefaultNetSync(): NetHandle-End-->
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| NetHandle | Network handle of the default network. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [NetHandle](arkts-network-connection-nethandle-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
 **Examples**
 
@@ -59,4 +59,3 @@ import { connection } from '@kit.NetworkKit';
 
 let netHandle = connection.getDefaultNetSync();
 ```
-

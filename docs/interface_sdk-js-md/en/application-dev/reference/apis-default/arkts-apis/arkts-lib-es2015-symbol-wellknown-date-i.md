@@ -1,8 +1,6 @@
 # Date
 
-**Since:** -1
-
-<!--Device-unnamed-interface Date--><!--Device-unnamed-interface Date-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,20 +15,18 @@
 
 Converts a Date object to a string.
 
-**Since:** -1
-
-<!--Device-Date-[Symbol.toPrimitive](hint: "default"): string--><!--Device-Date-[Symbol.toPrimitive](hint: "default"): string-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| hint | "default" | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| hint | "default" | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## [Symbol.toPrimitive]
 
 ```TypeScript
@@ -39,20 +35,18 @@ Converts a Date object to a string.
 
 Converts a Date object to a string.
 
-**Since:** -1
-
-<!--Device-Date-[Symbol.toPrimitive](hint: "string"): string--><!--Device-Date-[Symbol.toPrimitive](hint: "string"): string-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| hint | "string" | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| hint | "string" | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## [Symbol.toPrimitive]
 
 ```TypeScript
@@ -61,20 +55,18 @@ Converts a Date object to a string.
 
 Converts a Date object to a number.
 
-**Since:** -1
-
-<!--Device-Date-[Symbol.toPrimitive](hint: "number"): number--><!--Device-Date-[Symbol.toPrimitive](hint: "number"): number-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| hint | "number" | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| hint | "number" | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## [Symbol.toPrimitive]
 
 ```TypeScript
@@ -83,17 +75,15 @@ Converts a Date object to a number.
 
 Converts a Date object to a string or number.
 
-**Since:** -1
-
-<!--Device-Date-[Symbol.toPrimitive](hint: string): string | number--><!--Device-Date-[Symbol.toPrimitive](hint: string): string | number-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| hint | string | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| hint | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

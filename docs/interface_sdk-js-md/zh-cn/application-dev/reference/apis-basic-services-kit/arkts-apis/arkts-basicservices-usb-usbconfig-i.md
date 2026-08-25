@@ -4,11 +4,11 @@ USB配置，一个[USBDevice](arkts-basicservices-usb-usbdevice-i.md)中可以�
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md)
-
-<!--Device-usb-interface USBConfig--><!--Device-usb-interface USBConfig-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -30,11 +30,11 @@ attributes: number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [attributes](arkts-basicservices-usbmanager-usbconfiguration-i.md#attributes)
-
-<!--Device-USBConfig-attributes: number--><!--Device-USBConfig-attributes: number-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -50,11 +50,11 @@ id: number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [id](arkts-basicservices-usbmanager-usbconfiguration-i.md#id)
-
-<!--Device-USBConfig-id: number--><!--Device-USBConfig-id: number-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -70,11 +70,11 @@ interfaces: Array<USBInterface>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [interfaces](arkts-basicservices-usbmanager-usbconfiguration-i.md#interfaces)
-
-<!--Device-USBConfig-interfaces: Array<USBInterface>--><!--Device-USBConfig-interfaces: Array<USBInterface>-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -90,11 +90,11 @@ isRemoteWakeup: boolean
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [isRemoteWakeup](arkts-basicservices-usbmanager-usbconfiguration-i.md#isremotewakeup)
-
-<!--Device-USBConfig-isRemoteWakeup: boolean--><!--Device-USBConfig-isRemoteWakeup: boolean-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -110,11 +110,11 @@ isSelfPowered: boolean
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [isSelfPowered](arkts-basicservices-usbmanager-usbconfiguration-i.md#isselfpowered)
-
-<!--Device-USBConfig-isSelfPowered: boolean--><!--Device-USBConfig-isSelfPowered: boolean-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -130,11 +130,11 @@ maxPower: number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [maxPower](arkts-basicservices-usbmanager-usbconfiguration-i.md#maxpower)
-
-<!--Device-USBConfig-maxPower: number--><!--Device-USBConfig-maxPower: number-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -150,11 +150,10 @@ name: string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [name](arkts-basicservices-usbmanager-usbconfiguration-i.md#name)
 
-<!--Device-USBConfig-name: string--><!--Device-USBConfig-name: string-End-->
-
 **系统能力：** SystemCapability.USB.USBManager
-

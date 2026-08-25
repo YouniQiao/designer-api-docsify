@@ -4,7 +4,7 @@ WebMessageExt是[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)接口
 
 **起始版本：** 10
 
-<!--Device-webview-class WebMessageExt--><!--Device-webview-class WebMessageExt-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -24,23 +24,23 @@ getArray(): Array<string | number | boolean>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
-<!--Device-WebMessageExt-getArray(): Array<string | number | boolean>--><!--Device-WebMessageExt-getArray(): Array<string | number | boolean>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;string \| number \| boolean&gt; | 返回数组类型的数据。 |
+| 类型 |
+| --- |
+| Array & lt;string \ | number \| boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 错误码ID |
+| --- |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getArrayBuffer
 
@@ -52,23 +52,23 @@ getArrayBuffer(): ArrayBuffer
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
-<!--Device-WebMessageExt-getArrayBuffer(): ArrayBuffer--><!--Device-WebMessageExt-getArrayBuffer(): ArrayBuffer-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ArrayBuffer | 返回原始二进制数据。 |
+| 类型 |
+| --- |
+| ArrayBuffer |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 错误码ID |
+| --- |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getBoolean
 
@@ -80,23 +80,23 @@ getBoolean(): boolean
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
-<!--Device-WebMessageExt-getBoolean(): boolean--><!--Device-WebMessageExt-getBoolean(): boolean-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回布尔类型的数据。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 错误码ID |
+| --- |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getError
 
@@ -108,23 +108,23 @@ getError(): Error
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
-<!--Device-WebMessageExt-getError(): Error--><!--Device-WebMessageExt-getError(): Error-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Error | 返回错误对象类型的数据。 |
+| 类型 |
+| --- |
+| Error |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 错误码ID |
+| --- |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getNumber
 
@@ -136,23 +136,23 @@ getNumber(): number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
-<!--Device-WebMessageExt-getNumber(): number--><!--Device-WebMessageExt-getNumber(): number-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回数值类型的数据。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 错误码ID |
+| --- |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getString
 
@@ -164,23 +164,23 @@ getString(): string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
-<!--Device-WebMessageExt-getString(): string--><!--Device-WebMessageExt-getString(): string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回字符串类型的数据。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 错误码ID |
+| --- |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getType
 
@@ -192,17 +192,17 @@ getType(): WebMessageType
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
-<!--Device-WebMessageExt-getType(): WebMessageType--><!--Device-WebMessageExt-getType(): WebMessageType-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | [WebMessagePort]{ |
+| 类型 |
+| --- |
+| [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) |
 
 ## setArray
 
@@ -214,24 +214,24 @@ setArray(message: Array<string | number | boolean>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
-<!--Device-WebMessageExt-setArray(message: Array<string | number | boolean>): void--><!--Device-WebMessageExt-setArray(message: Array<string | number | boolean>): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| message | Array&lt;string \| number \| boolean&gt; | 是 | 数组类型数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| message | Array & lt;string \ | number \| boolean & gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## setArrayBuffer
 
@@ -243,24 +243,24 @@ setArrayBuffer(message: ArrayBuffer): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
-<!--Device-WebMessageExt-setArrayBuffer(message: ArrayBuffer): void--><!--Device-WebMessageExt-setArrayBuffer(message: ArrayBuffer): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| message | ArrayBuffer | 是 | 原始二进制类型数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| message | ArrayBuffer | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## setBoolean
 
@@ -272,24 +272,24 @@ setBoolean(message: boolean): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
-<!--Device-WebMessageExt-setBoolean(message: boolean): void--><!--Device-WebMessageExt-setBoolean(message: boolean): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| message | boolean | 是 | 布尔类型数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| message | boolean | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## setError
 
@@ -301,24 +301,24 @@ setError(message: Error): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
-<!--Device-WebMessageExt-setError(message: Error): void--><!--Device-WebMessageExt-setError(message: Error): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| message | Error | 是 | 错误对象类型数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| message | Error | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## setNumber
 
@@ -330,24 +330,24 @@ setNumber(message: number): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
-<!--Device-WebMessageExt-setNumber(message: number): void--><!--Device-WebMessageExt-setNumber(message: number): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| message | number | 是 | 数值类型数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| message | number | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## setString
 
@@ -359,24 +359,24 @@ setString(message: string): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
-<!--Device-WebMessageExt-setString(message: string): void--><!--Device-WebMessageExt-setString(message: string): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| message | string | 是 | 字符串类型数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| message | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## setType
 
@@ -388,22 +388,21 @@ setType(type: WebMessageType): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
-<!--Device-WebMessageExt-setType(type: WebMessageType): void--><!--Device-WebMessageExt-setType(type: WebMessageType): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | 是 | [WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)接口所支持的数据类型。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
-
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |

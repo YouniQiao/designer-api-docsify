@@ -4,11 +4,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-**替代接口：** [ActionMenuSuccessResponse](../../apis-default/arkts-apis/arkts-promptaction-actionmenusuccessresponse-i.md)
-
-<!--Device-prompt-interface ActionMenuSuccessResponse--><!--Device-prompt-interface ActionMenuSuccessResponse-End-->
+**替代接口：** [ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,10 @@ index: number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-**替代接口：** [index](../../apis-default/arkts-apis/arkts-promptaction-actionmenusuccessresponse-i.md#index)
-
-<!--Device-ActionMenuSuccessResponse-index: number--><!--Device-ActionMenuSuccessResponse-index: number-End-->
+**替代接口：** [index](arkts-arkui-promptaction-actionmenusuccessresponse-i.md#index)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

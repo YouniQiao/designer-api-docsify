@@ -1,8 +1,8 @@
 # PatternOptions
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-unnamed-export interface PatternOptions--><!--Device-unnamed-export interface PatternOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -14,19 +14,29 @@ import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
 
 ## action
 
+ArkTS-Dyn:
+```TypeScript
+action: (index: number) => void
+```
+
+ArkTS-Sta:
 ```TypeScript
 action: (index: int) => void
 ```
 
 Mandatory. Callback invoked when the pattern option changes.
 
-**Type:** (index: int) =&gt; void
+**Since:** 11
 
-**Since:** 23
-
-<!--Device-PatternOptions-action: (index: int) => void--><!--Device-PatternOptions-action: (index: int) => void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 ## defaultSelected
 
@@ -36,11 +46,11 @@ defaultSelected?: int
 
 Optional. Default selected pattern.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PatternOptions-defaultSelected?: int--><!--Device-PatternOptions-defaultSelected?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -54,9 +64,8 @@ Mandatory. Resource of the pattern option.
 
 **Type:** Array&lt;[Pattern](arkts-ime-inputmethodlist-pattern-i.md)&gt;
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PatternOptions-patterns: Array<Pattern>--><!--Device-PatternOptions-patterns: Array<Pattern>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

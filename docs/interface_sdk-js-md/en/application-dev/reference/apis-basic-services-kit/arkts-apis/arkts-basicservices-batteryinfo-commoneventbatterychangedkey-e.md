@@ -1,12 +1,10 @@
 # CommonEventBatteryChangedKey
 
-Enumerates keys for querying the additional information about the **COMMON_EVENT_BATTERY_CHANGED** event.@enum { string }
+Enumerates keys for querying the additional information about the **COMMON_EVENT_BATTERY_CHANGED** event.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-batteryInfo-export enum CommonEventBatteryChangedKey--><!--Device-batteryInfo-export enum CommonEventBatteryChangedKey-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -18,11 +16,9 @@ EXTRA_SOC = 'soc'
 
 Remaining battery level in percentage.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-CommonEventBatteryChangedKey-EXTRA_SOC = 'soc'--><!--Device-CommonEventBatteryChangedKey-EXTRA_SOC = 'soc'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -34,11 +30,9 @@ EXTRA_CHARGE_STATE = 'chargeState'
 
 Battery charging status of the device.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-CommonEventBatteryChangedKey-EXTRA_CHARGE_STATE = 'chargeState'--><!--Device-CommonEventBatteryChangedKey-EXTRA_CHARGE_STATE = 'chargeState'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -50,11 +44,9 @@ EXTRA_HEALTH_STATE = 'healthState'
 
 Battery health status of the device.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-CommonEventBatteryChangedKey-EXTRA_HEALTH_STATE = 'healthState'--><!--Device-CommonEventBatteryChangedKey-EXTRA_HEALTH_STATE = 'healthState'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -66,11 +58,9 @@ EXTRA_PLUGGED_TYPE = 'pluggedType'
 
 Type of the charger connected to the device.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-CommonEventBatteryChangedKey-EXTRA_PLUGGED_TYPE = 'pluggedType'--><!--Device-CommonEventBatteryChangedKey-EXTRA_PLUGGED_TYPE = 'pluggedType'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -82,11 +72,9 @@ EXTRA_VOLTAGE = 'voltage'
 
 Battery voltage of the device.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-CommonEventBatteryChangedKey-EXTRA_VOLTAGE = 'voltage'--><!--Device-CommonEventBatteryChangedKey-EXTRA_VOLTAGE = 'voltage'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -98,11 +86,9 @@ EXTRA_TECHNOLOGY = 'technology'
 
 Battery technology of the device.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-CommonEventBatteryChangedKey-EXTRA_TECHNOLOGY = 'technology'--><!--Device-CommonEventBatteryChangedKey-EXTRA_TECHNOLOGY = 'technology'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -114,11 +100,9 @@ EXTRA_TEMPERATURE = 'temperature'
 
 Battery temperature of the device.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-CommonEventBatteryChangedKey-EXTRA_TEMPERATURE = 'temperature'--><!--Device-CommonEventBatteryChangedKey-EXTRA_TEMPERATURE = 'temperature'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -130,11 +114,9 @@ EXTRA_PRESENT = 'present'
 
 Whether the battery is supported by the device or installed.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-CommonEventBatteryChangedKey-EXTRA_PRESENT = 'present'--><!--Device-CommonEventBatteryChangedKey-EXTRA_PRESENT = 'present'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -146,11 +128,8 @@ EXTRA_CAPACITY_LEVEL = 'capacityLevel'
 
 Battery level of the device.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-CommonEventBatteryChangedKey-EXTRA_CAPACITY_LEVEL = 'capacityLevel'--><!--Device-CommonEventBatteryChangedKey-EXTRA_CAPACITY_LEVEL = 'capacityLevel'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
-

@@ -1,12 +1,10 @@
 # DragStartRequestStatus
 
-Define the status for the application to notify the framework whether to execute drag.@enum { number }
+Enumerates the states defining whether an application can initiate a drag operation. This API is effective only when onDragStart is called.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-dragController-const enum DragStartRequestStatus--><!--Device-dragController-const enum DragStartRequestStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,15 +14,15 @@ Define the status for the application to notify the framework whether to execute
 WAITING = 0
 ```
 
-Notify the framework that the application is not yet ready and needs to temporarily block the start of drag, only effective in onDragStart calls.
+The application is preparing data and cannot initiate a drag operation yet.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragStartRequestStatus-WAITING = 0--><!--Device-DragStartRequestStatus-WAITING = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,15 +32,14 @@ Notify the framework that the application is not yet ready and needs to temporar
 READY = 1
 ```
 
-Notify the framework that the drag can continue to be started, but only during the start of drag, and will not take effect when the drag is started.
+The application has completed data preparation and is ready to initiate a drag operation.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragStartRequestStatus-READY = 1--><!--Device-DragStartRequestStatus-READY = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

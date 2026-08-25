@@ -1,18 +1,17 @@
 # DataItem
 
 ```TypeScript
-export type DataItem = _DataItem
+export type DataItem = _HapModuleInfo.DataItem
 ```
 
 Defines the user-defined data in the routing table configuration of the module.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-bundleManager-export type DataItem = _DataItem--><!--Device-bundleManager-export type DataItem = _DataItem-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _DataItem
-
+**Property type:** _HapModuleInfo.DataItem

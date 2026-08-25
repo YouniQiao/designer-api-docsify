@@ -4,7 +4,7 @@ Defines the option of ShowActionMenu.@interface ShowActionMenuOptions
 
 **Since:** 11
 
-<!--Device-unnamed-export interface ShowActionMenuOptions--><!--Device-unnamed-export interface ShowActionMenuOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -13,6 +13,67 @@ Defines the option of ShowActionMenu.@interface ShowActionMenuOptions
 ```TypeScript
 import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from '@kit.ArkUI';
 ```
+
+## complete
+
+```TypeScript
+complete?: () => void
+```
+
+Called when the dialog box is closed.
+
+**Since:** 11
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## fail
+
+```TypeScript
+fail?: (errMsg: string) => void
+```
+
+Called when the operation is cancelled.
+
+**Since:** 11
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| errMsg | string | Yes |
+
+## success
+
+```TypeScript
+success?: (tapIndex: number, errMsg: string) => void
+```
+
+Called when the dialog box is displayed.
+
+**Since:** 11
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| tapIndex | number | Yes |
+| errMsg | string | Yes |
 
 ## buttons
 
@@ -26,63 +87,9 @@ Array of buttons in the dialog box. The array structure is {text:'button', color
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ShowActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]--><!--Device-ShowActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## complete
-
-```TypeScript
-complete?: () => void
-```
-
-Called when the dialog box is closed.
-
-**Type:** () =&gt; void
-
-**Since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ShowActionMenuOptions-complete?: () => void--><!--Device-ShowActionMenuOptions-complete?: () => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## fail
-
-```TypeScript
-fail?: (errMsg: string) => void
-```
-
-Called when the operation is cancelled.
-
-**Type:** (errMsg: string) =&gt; void
-
-**Since:** 11
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ShowActionMenuOptions-fail?: (errMsg: string) => void--><!--Device-ShowActionMenuOptions-fail?: (errMsg: string) => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## success
-
-```TypeScript
-success?: (tapIndex: number, errMsg: string) => void
-```
-
-Called when the dialog box is displayed.
-
-**Type:** (tapIndex: number, errMsg: string) =&gt; void
-
-**Since:** 11
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ShowActionMenuOptions-success?: (tapIndex: number, errMsg: string) => void--><!--Device-ShowActionMenuOptions-success?: (tapIndex: number, errMsg: string) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,9 +105,8 @@ Title of the text to display.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ShowActionMenuOptions-title?: string--><!--Device-ShowActionMenuOptions-title?: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -16,9 +16,9 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-huks-function importKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<void>): void--><!--Device-huks-function importKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<void>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -26,31 +26,31 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Tags required for the import and key to import. The algorithm, key purpose, and key length are mandatory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| keyAlias | string | Yes |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | api is not supported |
-| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |
-| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | algorithm param is missing |
-| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | algorithm param is invalid |
-| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
-| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine |
-| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist<br>**Applicable version:** 9 - 19 |
-| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
-| [12000013](../errorcode-huks.md#12000013-the-credential-does-not-exist) | queried credential does not exist |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
-| [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) | Failed to obtain the security information via UserIAM |
-| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | The key with the same alias already exists<br>**Applicable version:** 20 and later |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [12000001](../errorcode-huks.md#12000001-feature-not-supported) |
+| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) |
+| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) |
+| [12000004](../errorcode-huks.md#12000004-file-error) |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) |
+| [12000012](../errorcode-huks.md#12000012-external-error) |
+| [12000013](../errorcode-huks.md#12000013-the-credential-does-not-exist) |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
+| [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) |
+| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
 
 **Examples**
 
@@ -163,46 +163,45 @@ Imports a key in plaintext. This API uses a promise to return the result.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-huks-function importKeyItem(keyAlias: string, options: HuksOptions): Promise<void>--><!--Device-huks-function importKeyItem(keyAlias: string, options: HuksOptions): Promise<void>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Tags required for the import and key to import. The algorithm, key purpose, and key length are mandatory. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| keyAlias | string | Yes |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | api is not supported |
-| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |
-| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | algorithm param is missing |
-| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | algorithm param is invalid |
-| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
-| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine |
-| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist<br>**Applicable version:** 9 - 19 |
-| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
-| [12000013](../errorcode-huks.md#12000013-the-credential-does-not-exist) | queried credential does not exist |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
-| [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) | Failed to obtain the security information via UserIAM |
-| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | The key with the same alias already exists<br>**Applicable version:** 20 and later |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [12000001](../errorcode-huks.md#12000001-feature-not-supported) |
+| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) |
+| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) |
+| [12000004](../errorcode-huks.md#12000004-file-error) |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) |
+| [12000012](../errorcode-huks.md#12000012-external-error) |
+| [12000013](../errorcode-huks.md#12000013-the-credential-does-not-exist) |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
+| [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) |
+| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
 
 **Examples**
 
 See [importKeyItem](#importkeyitem)
-

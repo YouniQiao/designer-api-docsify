@@ -2,11 +2,9 @@
 
 Enumerates device types, which can be used to verify the return value of **deviceType**.
 
-**Since:** 24
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-deviceInfo-enum DeviceTypes--><!--Device-deviceInfo-enum DeviceTypes-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -18,13 +16,11 @@ TYPE_DEFAULT = 'default'
 
 Default device
 
-**Since:** 24
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceTypes-TYPE_DEFAULT = 'default'--><!--Device-DeviceTypes-TYPE_DEFAULT = 'default'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -36,13 +32,11 @@ TYPE_PHONE = 'phone'
 
 Smartphone
 
-**Since:** 24
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceTypes-TYPE_PHONE = 'phone'--><!--Device-DeviceTypes-TYPE_PHONE = 'phone'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -54,13 +48,11 @@ TYPE_TABLET = 'tablet'
 
 Tablet
 
-**Since:** 24
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceTypes-TYPE_TABLET = 'tablet'--><!--Device-DeviceTypes-TYPE_TABLET = 'tablet'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -72,13 +64,11 @@ TYPE_2IN1 = '2in1'
 
 PC/2-in-1 device
 
-**Since:** 24
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceTypes-TYPE_2IN1 = '2in1'--><!--Device-DeviceTypes-TYPE_2IN1 = '2in1'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -90,13 +80,11 @@ TYPE_TV = 'tv'
 
 Smart TV
 
-**Since:** 24
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceTypes-TYPE_TV = 'tv'--><!--Device-DeviceTypes-TYPE_TV = 'tv'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -108,13 +96,11 @@ TYPE_WEARABLE = 'wearable'
 
 Wearable
 
-**Since:** 24
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceTypes-TYPE_WEARABLE = 'wearable'--><!--Device-DeviceTypes-TYPE_WEARABLE = 'wearable'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -126,13 +112,42 @@ TYPE_CAR = 'car'
 
 Head unit
 
-**Since:** 24
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceTypes-TYPE_CAR = 'car'--><!--Device-DeviceTypes-TYPE_CAR = 'car'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
+**Examples**
+
+```TypeScript
+let deviceTypesInfoDefault: string = deviceInfo.DeviceTypes.TYPE_DEFAULT;
+    // Output: the value of the DeviceTypes is :default
+    console.info('the value of the DeviceTypes is :' + deviceTypesInfoDefault);
+
+    let deviceTypesInfoPhone: string = deviceInfo.DeviceTypes.TYPE_PHONE;
+    // Output: the value of the DeviceTypes is :phone-type 
+    console.info('the value of the DeviceTypes is :' + deviceTypesInfoPhone);
+
+    let deviceTypesInfoTablet: string = deviceInfo.DeviceTypes.TYPE_TABLET;
+    // Output: the value of the DeviceTypes is :tablet
+    console.info('the value of the DeviceTypes is :' + deviceTypesInfoTablet);
+
+    let deviceTypesInfo2IN1: string = deviceInfo.DeviceTypes.TYPE_2IN1;
+    // Output: the value of the DeviceTypes is :2in1
+    console.info('the value of the DeviceTypes is :' + deviceTypesInfo2IN1);
+
+    let deviceTypesInfoTV: string = deviceInfo.DeviceTypes.TYPE_TV;
+    // Output: the value of the DeviceTypes is :tv
+    console.info('the value of the DeviceTypes is :' + deviceTypesInfoTV);
+
+    let deviceTypesInfoWearable: string = deviceInfo.DeviceTypes.TYPE_WEARABLE;
+    // Output: the value of the DeviceTypes is :wearable
+    console.info('the value of the DeviceTypes is :' + deviceTypesInfoWearable);
+
+    let deviceTypesInfoCar: string = deviceInfo.DeviceTypes.TYPE_CAR;
+    // Output: the value of the DeviceTypes is :car
+    console.info('the value of the DeviceTypes is :' + deviceTypesInfoCar);
+```

@@ -4,7 +4,7 @@ Defines base properties of the **LocalSocket** object.
 
 **Since:** 7
 
-<!--Device-socket-export interface ExtraOptionsBase--><!--Device-socket-export interface ExtraOptionsBase-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -17,16 +17,16 @@ import { socket } from '@kit.NetworkKit';
 ## receiveBufferSize
 
 ```TypeScript
-receiveBufferSize?: int
+receiveBufferSize?: number
 ```
 
 Size of the RX buffer, in bytes. The value ranges from 0 to 262144. If this parameter is left unspecified or the unspecified value exceeds the value range, the default value **8192** is used.
 
-**Type:** int
+**Type:** number
 
 **Since:** 7
 
-<!--Device-ExtraOptionsBase-receiveBufferSize?: int--><!--Device-ExtraOptionsBase-receiveBufferSize?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -42,39 +42,38 @@ Whether to reuse addresses. The value **true** means to reuse addresses, and the
 
 **Since:** 7
 
-<!--Device-ExtraOptionsBase-reuseAddress?: boolean--><!--Device-ExtraOptionsBase-reuseAddress?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## sendBufferSize
 
 ```TypeScript
-sendBufferSize?: int
+sendBufferSize?: number
 ```
 
 Size of the TX buffer, in bytes. The value ranges from 0 to 262144. If this parameter is left unspecified or the unspecified value exceeds the value range, the default value **8192** is used.
 
-**Type:** int
+**Type:** number
 
 **Since:** 7
 
-<!--Device-ExtraOptionsBase-sendBufferSize?: int--><!--Device-ExtraOptionsBase-sendBufferSize?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## socketTimeout
 
 ```TypeScript
-socketTimeout?: int
+socketTimeout?: number
 ```
 
 Timeout duration of the local socket connection, in ms.
 
-**Type:** int
+**Type:** number
 
 **Since:** 7
 
-<!--Device-ExtraOptionsBase-socketTimeout?: int--><!--Device-ExtraOptionsBase-socketTimeout?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
-

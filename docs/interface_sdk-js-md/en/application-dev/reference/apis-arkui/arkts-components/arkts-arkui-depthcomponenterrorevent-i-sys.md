@@ -4,7 +4,7 @@ Information about the background resource loading error.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare interface DepthComponentErrorEvent--><!--Device-unnamed-declare interface DepthComponentErrorEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,20 +18,20 @@ Information about the background resource loading error.
 ## componentHeight
 
 ```TypeScript
-componentHeight: double
+componentHeight: number
 ```
 
 Component height.
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-DepthComponentErrorEvent-componentHeight: double--><!--Device-DepthComponentErrorEvent-componentHeight: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,20 +40,20 @@ Component height.
 ## componentWidth
 
 ```TypeScript
-componentWidth: double
+componentWidth: number
 ```
 
 Component width.
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-DepthComponentErrorEvent-componentWidth: double--><!--Device-DepthComponentErrorEvent-componentWidth: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -71,13 +71,12 @@ Business Error.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-DepthComponentErrorEvent-error?: BusinessError<void>--><!--Device-DepthComponentErrorEvent-error?: BusinessError<void>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

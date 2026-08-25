@@ -4,7 +4,7 @@
 
 **起始版本：** 21
 
-<!--Device-webNativeMessagingExtensionManager-interface ConnectionNativeInfo--><!--Device-webNativeMessagingExtensionManager-interface ConnectionNativeInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -26,9 +26,9 @@ Web原生消息扩展应用的包名。
 
 **起始版本：** 21
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
-<!--Device-ConnectionNativeInfo-bundleName: string--><!--Device-ConnectionNativeInfo-bundleName: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -44,9 +44,9 @@ Web原生消息扩展连接的唯一标识，由connectNative方法返回，用�
 
 **起始版本：** 21
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
-<!--Device-ConnectionNativeInfo-connectionId: number--><!--Device-ConnectionNativeInfo-connectionId: number-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -62,9 +62,9 @@ extensionOrigin: string
 
 **起始版本：** 21
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
-<!--Device-ConnectionNativeInfo-extensionOrigin: string--><!--Device-ConnectionNativeInfo-extensionOrigin: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -80,9 +80,8 @@ Web原生消息扩展的进程ID。
 
 **起始版本：** 21
 
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ConnectionNativeInfo-extensionPid: number--><!--Device-ConnectionNativeInfo-extensionPid: number-End-->
-
 **系统能力：** SystemCapability.Web.Webview.Core
-

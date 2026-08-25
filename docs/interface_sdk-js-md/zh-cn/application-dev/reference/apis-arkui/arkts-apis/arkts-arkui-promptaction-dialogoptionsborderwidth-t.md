@@ -8,16 +8,15 @@ declare type DialogOptionsBorderWidth = Dimension | EdgeWidths
 
 **起始版本：** 18
 
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-promptAction-declare type DialogOptionsBorderWidth = Dimension | EdgeWidths--><!--Device-promptAction-declare type DialogOptionsBorderWidth = Dimension | EdgeWidths-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 | 说明 |
-| --- | --- |
-| Dimension |  |
-| EdgeWidths |  |
-
+| 类型 |
+| --- |
+| [Dimension](arkts-arkui-dimension-t.md) |
+| [EdgeWidths](arkts-arkui-units-edgewidths-i.md) |

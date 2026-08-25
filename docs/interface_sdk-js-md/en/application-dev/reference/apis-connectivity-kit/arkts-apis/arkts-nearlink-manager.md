@@ -1,12 +1,12 @@
-# @ohos.nearlink.manager
+# @ohos.nearlink.manager(Basic NearLink Management Capability)
 
 This module provides basic NearLink management capabilities, including enabling or disabling NearLink, obtaining the MAC address of the local device, and setting the connection mode.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-unnamed-declare namespace manager--><!--Device-unnamed-declare namespace manager-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -20,38 +20,37 @@ import { manager } from '@kit.ConnectivityKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getLocalName](arkts-connectivity-manager-getlocalname-f.md) | Queries the NearLink name on the local device. |
-| [getPairedDevices](arkts-connectivity-manager-getpaireddevices-f.md) | Obtains the devices paired with the current device. |
-| [getState](arkts-connectivity-manager-getstate-f.md) | Queries the NearLink status. |
-| [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md) | Checks whether the current device supports NearLink. |
-| [offStateChange](arkts-connectivity-manager-offstatechange-f.md) | Unsubscribes from the NearLink status change event. This API uses an asynchronous callback to return the result. |
-| [onStateChange](arkts-connectivity-manager-onstatechange-f.md) | Subscribes to the NearLink status change event. This API uses an asynchronous callback to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getLocalName(Basic NearLink Management Capability)](arkts-connectivity-manager-getlocalname-f.md) |
+| [getPairedDevices(Basic NearLink Management Capability)](arkts-connectivity-manager-getpaireddevices-f.md) |
+| [getState(Basic NearLink Management Capability)](arkts-connectivity-manager-getstate-f.md) |
+| [isNearLinkSupported(Basic NearLink Management Capability)](arkts-connectivity-manager-isnearlinksupported-f.md) |
+| [offStateChange(Basic NearLink Management Capability)](arkts-connectivity-manager-offstatechange-f.md) |
+| [onStateChange(Basic NearLink Management Capability)](arkts-connectivity-manager-onstatechange-f.md) |
 
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [disable](arkts-connectivity-manager-disable-f-sys.md) | Disables NearLink. |
-| [enable](arkts-connectivity-manager-enable-f-sys.md) | Enables NearLink. |
-| [factoryReset](arkts-connectivity-manager-factoryreset-f-sys.md) | Restores a device to its factory settings. This API uses a promise to return the result. |
-| [getLocalAddress](arkts-connectivity-manager-getlocaladdress-f-sys.md) | Queries the MAC address of the local device. |
-| [setConnectionMode](arkts-connectivity-manager-setconnectionmode-f-sys.md) | Sets the connection mode. This API uses a promise to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [disable(Basic NearLink Management Capability)](arkts-connectivity-manager-disable-f-sys.md) |
+| [enable(Basic NearLink Management Capability)](arkts-connectivity-manager-enable-f-sys.md) |
+| [factoryReset(Basic NearLink Management Capability)](arkts-connectivity-manager-factoryreset-f-sys.md) |
+| [getLocalAddress(Basic NearLink Management Capability)](arkts-connectivity-manager-getlocaladdress-f-sys.md) |
+| [setConnectionMode(Basic NearLink Management Capability)](arkts-connectivity-manager-setconnectionmode-f-sys.md) |
 <!--DelEnd-->
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md) | Enumerated the NearLink statuses. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [NearlinkState(Basic NearLink Management Capability)](arkts-connectivity-manager-nearlinkstate-e.md) |
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [ConnectionMode](arkts-connectivity-manager-connectionmode-e-sys.md) | Enumerates the connection modes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ConnectionMode(Basic NearLink Management Capability)](arkts-connectivity-manager-connectionmode-e-sys.md) |
 <!--DelEnd-->
-

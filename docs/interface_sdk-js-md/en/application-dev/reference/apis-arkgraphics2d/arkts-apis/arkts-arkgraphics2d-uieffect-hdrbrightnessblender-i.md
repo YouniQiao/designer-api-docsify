@@ -4,9 +4,9 @@ HDR-enabled brightness blender (inherited from BrightnessBlender), used to add a
 
 **Inheritance/Implementation:** HdrBrightnessBlender extends [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-uiEffect-interface HdrBrightnessBlender--><!--Device-uiEffect-interface HdrBrightnessBlender-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -17,4 +17,3 @@ HDR-enabled brightness blender (inherited from BrightnessBlender), used to add a
 ```TypeScript
 import { uiEffect } from '@kit.ArkGraphics2D';
 ```
-

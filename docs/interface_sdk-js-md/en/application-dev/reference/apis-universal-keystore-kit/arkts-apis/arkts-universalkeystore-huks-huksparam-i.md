@@ -4,7 +4,7 @@ Defines the **param** field in the **properties** array of **options** used in t
 
 **Since:** 8
 
-<!--Device-huks-export interface HuksParam--><!--Device-huks-export interface HuksParam-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -26,9 +26,9 @@ Tag.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HuksParam-tag: HuksTag--><!--Device-HuksParam-tag: HuksTag-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -44,9 +44,8 @@ Value of the tag.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-HuksParam-value: boolean | number | bigint | Uint8Array--><!--Device-HuksParam-value: boolean | number | bigint | Uint8Array-End-->
-
 **System capability:** SystemCapability.Security.Huks.Core
-

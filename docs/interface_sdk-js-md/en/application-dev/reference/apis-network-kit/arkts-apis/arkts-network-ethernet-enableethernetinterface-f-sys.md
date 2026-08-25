@@ -16,11 +16,11 @@ Enable the ethernet interface.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ethernet-function enableEthernetInterface(): Promise<void>--><!--Device-ethernet-function enableEthernetInterface(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -28,16 +28,15 @@ Enable the ethernet interface.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | The promise returned when the ethernet interface is enabled. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) |
+| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |

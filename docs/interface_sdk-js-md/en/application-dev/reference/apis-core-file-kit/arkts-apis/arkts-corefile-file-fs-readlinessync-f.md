@@ -18,40 +18,40 @@ Reads the text content of a file line by line. This API returns the result synch
 
 **Since:** 11
 
-<!--Device-unnamed-declare function readLinesSync(filePath: string, options?: Options): ReaderIterator--><!--Device-unnamed-declare function readLinesSync(filePath: string, options?: Options): ReaderIterator-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| filePath | string | Yes | Application sandbox path of the file. |
-| options | [Options](arkts-corefile-file-fs-options-i.md) | No | Options for reading the text. The options are as follows:<br>- **encoding** (string): format of the data to be encoded.<br>It is valid only when the data is of the string type.<br>The default value is **'utf-8'**, which is the only value supported. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| filePath | string | Yes |
+| options | [Options](arkts-corefile-file-fs-options-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md) | ReaderIterator** object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 13900015 | File exists |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| 13900002 |
+| 13900012 |
+| 13900015 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900025 |
+| 13900027 |
+| 13900030 |
+| 13900033 |
+| 13900041 |
+| 13900042 |
+| 13900044 |
 
 **Examples**
 
@@ -66,4 +66,3 @@ for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
   console.info("content: " + it.value);
 }
 ```
-

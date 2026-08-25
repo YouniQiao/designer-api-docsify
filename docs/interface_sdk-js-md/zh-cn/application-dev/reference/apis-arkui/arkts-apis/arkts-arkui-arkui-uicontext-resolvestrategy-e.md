@@ -4,7 +4,7 @@ UIContext对象的解析策略。
 
 **起始版本：** 22
 
-<!--Device-unnamed-export const enum ResolveStrategy--><!--Device-unnamed-export const enum ResolveStrategy-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ CALLING_SCOPE = 0
 
 **起始版本：** 22
 
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ResolveStrategy-CALLING_SCOPE = 0--><!--Device-ResolveStrategy-CALLING_SCOPE = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ LAST_FOCUS = 1
 
 **起始版本：** 22
 
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ResolveStrategy-LAST_FOCUS = 1--><!--Device-ResolveStrategy-LAST_FOCUS = 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ MAX_INSTANCE_ID = 2
 
 **起始版本：** 22
 
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ResolveStrategy-MAX_INSTANCE_ID = 2--><!--Device-ResolveStrategy-MAX_INSTANCE_ID = 2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,11 @@ UNIQUE = 3
 
 **起始版本：** 22
 
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ResolveStrategy-UNIQUE = 3--><!--Device-ResolveStrategy-UNIQUE = 3-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,11 +90,11 @@ LAST_FOREGROUND = 4
 
 **起始版本：** 22
 
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ResolveStrategy-LAST_FOREGROUND = 4--><!--Device-ResolveStrategy-LAST_FOREGROUND = 4-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,11 +108,10 @@ UNDEFINED = 5
 
 **起始版本：** 22
 
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ResolveStrategy-UNDEFINED = 5--><!--Device-ResolveStrategy-UNDEFINED = 5-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,7 +4,7 @@ Describes the ranging state change information.
 
 **Since:** 26.0.0
 
-<!--Device-ranging-interface RangingStateChangeInfo--><!--Device-ranging-interface RangingStateChangeInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -26,9 +26,9 @@ Cause of ranging stop.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-RangingStateChangeInfo-cause: RangingStoppedCause--><!--Device-RangingStateChangeInfo-cause: RangingStoppedCause-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -44,27 +44,27 @@ Address of the ranging device.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-RangingStateChangeInfo-deviceId?: string--><!--Device-RangingStateChangeInfo-deviceId?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 ## handle
 
 ```TypeScript
-handle?: int
+handle?: number
 ```
 
 Indicates the handle number of ranging monitoring. The value should be an integer.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-RangingStateChangeInfo-handle?: int--><!--Device-RangingStateChangeInfo-handle?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -80,9 +80,8 @@ Ranging state.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RangingStateChangeInfo-state: RangingState--><!--Device-RangingStateChangeInfo-state: RangingState-End-->
-
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
-

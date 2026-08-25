@@ -1,76 +1,68 @@
 # Uint8ArrayConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface Uint8ArrayConstructor--><!--Device-unnamed-interface Uint8ArrayConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
+## [[Construct]]
 
 ```TypeScript
 new(length: number): Uint8Array
 ```
 
-**Since:** -1
-
-<!--Device-Uint8ArrayConstructor-new(length: number): Uint8Array--><!--Device-Uint8ArrayConstructor-new(length: number): Uint8Array-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| length | number | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| length | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-## constructor
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+## [[Construct]]
 
 ```TypeScript
 new(array: ArrayLike<number> | ArrayBufferLike): Uint8Array
 ```
 
-**Since:** -1
-
-<!--Device-Uint8ArrayConstructor-new(array: ArrayLike<number> | ArrayBufferLike): Uint8Array--><!--Device-Uint8ArrayConstructor-new(array: ArrayLike<number> | ArrayBufferLike): Uint8Array-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; \| [ArrayBufferLike](arkts-arraybufferlike-t.md) | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| array | ArrayLike & lt;number & gt; \ | [ArrayBufferLike](arkts-arraybufferlike-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-## constructor
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+## [[Construct]]
 
 ```TypeScript
 new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint8Array
 ```
 
-**Since:** -1
-
-<!--Device-Uint8ArrayConstructor-new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint8Array--><!--Device-Uint8ArrayConstructor-new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint8Array-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | [ArrayBufferLike](arkts-arraybufferlike-t.md) | Yes |  |
-| byteOffset | number | No |  |
-| length | number | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buffer | [ArrayBufferLike](arkts-arraybufferlike-t.md) | Yes |
+| byteOffset | number | No |
+| length | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## from
 
 ```TypeScript
@@ -79,20 +71,18 @@ from(arrayLike: ArrayLike<number>): Uint8Array
 
 Creates an array from an array-like or iterable object.
 
-**Since:** -1
-
-<!--Device-Uint8ArrayConstructor-from(arrayLike: ArrayLike<number>): Uint8Array--><!--Device-Uint8ArrayConstructor-from(arrayLike: ArrayLike<number>): Uint8Array-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;number&gt; | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arrayLike | ArrayLike & lt;number & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## from
 
 ```TypeScript
@@ -101,22 +91,20 @@ from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: a
 
 Creates an array from an array-like or iterable object.
 
-**Since:** -1
-
-<!--Device-Uint8ArrayConstructor-from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Uint8Array--><!--Device-Uint8ArrayConstructor-from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Uint8Array-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; | Yes |  |
-| mapfn | (v: T, k: number) =&gt; number | Yes |  |
-| thisArg | any | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arrayLike | ArrayLike & lt;T & gt; | Yes |
+| mapfn | (v: T, k: number) = & gt; number | Yes |
+| thisArg | any | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## of
 
 ```TypeScript
@@ -125,20 +113,18 @@ of(...items: number[]): Uint8Array
 
 Returns a new array from a set of elements.
 
-**Since:** -1
-
-<!--Device-Uint8ArrayConstructor-of(...items: number[]): Uint8Array--><!--Device-Uint8ArrayConstructor-of(...items: number[]): Uint8Array-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| items | number[] | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| items | number[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## BYTES_PER_ELEMENT
 
 ```TypeScript
@@ -149,9 +135,7 @@ The size in bytes of each element in the array.
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-Uint8ArrayConstructor-readonly BYTES_PER_ELEMENT: number--><!--Device-Uint8ArrayConstructor-readonly BYTES_PER_ELEMENT: number-End-->
+**ArkTS mode:** 
 
 ## prototype
 
@@ -161,7 +145,4 @@ readonly prototype: Uint8Array
 
 **Type:** Uint8Array
 
-**Since:** -1
-
-<!--Device-Uint8ArrayConstructor-readonly prototype: Uint8Array--><!--Device-Uint8ArrayConstructor-readonly prototype: Uint8Array-End-->
-
+**ArkTS mode:** 

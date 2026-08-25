@@ -1,14 +1,12 @@
-# ManualIsoQuery (System API)
+# ManualIsoQuery
 
 Provides APIs to check whether a camera device supports manual ISO setting and obtain the ISO range supported by the device.
 
-**Since:** 23
+**Since:** 24
 
-<!--Device-camera-interface ManualIsoQuery--><!--Device-camera-interface ManualIsoQuery-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -18,15 +16,21 @@ import { camera } from '@kit.CameraKit';
 
 ## getIsoRange
 
+ArkTS-Dyn:
+```TypeScript
+getIsoRange(): Array<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getIsoRange(): Array<int>
 ```
 
 Obtains the supported ISO range.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-ManualIsoQuery-getIsoRange(): Array<int>--><!--Device-ManualIsoQuery-getIsoRange(): Array<int>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -34,16 +38,16 @@ Obtains the supported ISO range.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;int&gt; | ISO range. The value range is [50, 100, ..., 6400]. The actual value depends on the bottom-layer capability. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;int & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 **Examples**
 
@@ -71,9 +75,9 @@ isManualIsoSupported(): boolean
 
 Checks whether manual ISO setting is supported.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-ManualIsoQuery-isManualIsoSupported(): boolean--><!--Device-ManualIsoQuery-isManualIsoSupported(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -81,16 +85,16 @@ Checks whether manual ISO setting is supported.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result for the support of manual ISO setting. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 **Examples**
 
@@ -109,4 +113,3 @@ function isManualIsoSupported(professionalPhotoSession: camera.ProfessionalPhoto
   return status;
 }
 ```
-

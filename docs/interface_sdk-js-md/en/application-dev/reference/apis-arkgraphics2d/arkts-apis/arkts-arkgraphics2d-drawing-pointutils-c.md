@@ -4,7 +4,7 @@ This class offers a comprehensive set of operations for handling common2D Point 
 
 **Since:** 26.0.0
 
-<!--Device-drawing-class PointUtils--><!--Device-drawing-class PointUtils-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -24,20 +24,26 @@ Negates the point's coordinates.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-PointUtils-static negate(point: common2D.Point): void--><!--Device-PointUtils-static negate(point: common2D.Point): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| point | common2D.Point | Yes | Specifies the point to be negated. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| point | common2D.Point | Yes |
 
 ## offset
 
+ArkTS-Dyn:
+```TypeScript
+static offset(point: common2D.Point, dx: number, dy: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 static offset(point: common2D.Point, dx: double, dy: double): void
 ```
@@ -46,19 +52,19 @@ Offsets the point's coordinates by dx, dy.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-PointUtils-static offset(point: common2D.Point, dx: double, dy: double): void--><!--Device-PointUtils-static offset(point: common2D.Point, dx: double, dy: double): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| point | common2D.Point | Yes | Specifies the point to be offset. |
-| dx | double | Yes | Indicates the distance to offset on the x-axis in pixels. |
-| dy | double | Yes | Indicates the distance to offset on the y-axis in pixels. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| point | common2D.Point | Yes |
+| dx | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| dy | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Examples**
 
@@ -114,4 +120,3 @@ import { drawing } from '@kit.ArkGraphics2D';
 let roundRect : drawing.RoundRect = new drawing.RoundRect({left: 0, top: 0, right: 300, bottom: 300}, 50, 50);
 roundRect.offset(100, 100);
 ```
-

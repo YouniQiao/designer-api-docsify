@@ -10,13 +10,12 @@ import { DriverExtensionAbility, DriverExtensionContext } from '@kit.DriverDevel
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [DriverExtensionAbility](arkts-driverdevelopment-app-ability-driverextensionability-driverextensionability-c.md) | DriverExtensionAbility模块提供驱动相关扩展能力，提供驱动创建、销毁、连接、断开等生命周期回调。 |
+| 名称 |
+| --- |
+| [DriverExtensionAbility](arkts-driverdevelopment-app-ability-driverextensionability-driverextensionability-c.md) |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-| [DriverExtensionContext](arkts-driverdevelopment-driverextensioncontext-t.md) | DriverExtensionAbility的上下文环境。 |
-
+| 名称 |
+| --- |
+| [DriverExtensionContext](arkts-driverdevelopment-driverextensioncontext-t.md) |

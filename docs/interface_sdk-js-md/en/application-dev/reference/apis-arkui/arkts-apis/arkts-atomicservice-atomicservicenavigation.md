@@ -1,4 +1,9 @@
-# @ohos.atomicservice.AtomicServiceNavigation
+# @ohos.atomicservice.AtomicServiceNavigation(This section describes the interfaces used by AtomicServiceNavigation)
+
+###### Child Components
+ Supported
+ Since API version 10, you are advised to use NavPathStack for page routing.
+
 
 ## Modules to Import
 
@@ -10,30 +15,29 @@ import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha,
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [AtomicServiceNavigation](arkts-arkui-atomicservice-atomicservicenavigation-atomicservicenavigation-s.md) | **AtomicServiceNavigation** is a component that serves as the root container of a page. By default, it includes a title bar, content area, and toolbar. The content area switches between the home page content (child components of NavDestination) and non-home page content through routing. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AtomicServiceNavigation(This section describes the interfaces used by AtomicServiceNavigation)](arkts-arkui-atomicservice-atomicservicenavigation-atomicservicenavigation-s.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [GradientBackground](arkts-arkui-atomicservice-atomicservicenavigation-gradientbackground-i.md) | Provides options for setting gradient colors for branding. |
-| [SideBarOptions](arkts-arkui-atomicservice-atomicservicenavigation-sidebaroptions-i.md) | Defines sidebar options. |
-| [TitleOptions](arkts-arkui-atomicservice-atomicservicenavigation-titleoptions-i.md) | Title bar options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [GradientBackground(This section describes the interfaces used by AtomicServiceNavigation)](arkts-arkui-atomicservice-atomicservicenavigation-gradientbackground-i.md) |
+| [SideBarOptions(This section describes the interfaces used by AtomicServiceNavigation)](arkts-arkui-atomicservice-atomicservicenavigation-sidebaroptions-i.md) |
+| [TitleOptions(This section describes the interfaces used by AtomicServiceNavigation)](arkts-arkui-atomicservice-atomicservicenavigation-titleoptions-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [BackgroundTheme](arkts-arkui-atomicservice-atomicservicenavigation-backgroundtheme-e.md) | Enumerates the navigation bar background themes. |
-| [GradientAlpha](arkts-arkui-atomicservice-atomicservicenavigation-gradientalpha-e.md) | Enumerates the opacity levels of the navigation bar background. |
-| [MixMode](arkts-arkui-atomicservice-atomicservicenavigation-mixmode-e.md) | Provides options for background color blending modes. |
-| [TitleBarType](arkts-arkui-atomicservice-atomicservicenavigation-titlebartype-e.md) | Enumerates the title bar types. The default type is **ROUND_ICON**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BackgroundTheme(This section describes the interfaces used by AtomicServiceNavigation)](arkts-arkui-atomicservice-atomicservicenavigation-backgroundtheme-e.md) |
+| [GradientAlpha(This section describes the interfaces used by AtomicServiceNavigation)](arkts-arkui-atomicservice-atomicservicenavigation-gradientalpha-e.md) |
+| [MixMode(This section describes the interfaces used by AtomicServiceNavigation)](arkts-arkui-atomicservice-atomicservicenavigation-mixmode-e.md) |
+| [TitleBarType(This section describes the interfaces used by AtomicServiceNavigation)](arkts-arkui-atomicservice-atomicservicenavigation-titlebartype-e.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [NavDestinationBuilder](arkts-arkui-navdestinationbuilder-t.md) | Defines the content of the **NavDestination** component. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [NavDestinationBuilder(This section describes the interfaces used by AtomicServiceNavigation)](arkts-arkui-navdestinationbuilder-t.md) |

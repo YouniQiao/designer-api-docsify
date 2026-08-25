@@ -4,7 +4,7 @@ Represents the base class providing overridable methods for [PixelMap](../../api
 
 **Since:** 10
 
-<!--Device-unnamed-export class DrawableDescriptor--><!--Device-unnamed-export class DrawableDescriptor-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,9 +24,9 @@ Creates a new DrawableDescriptor.
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-DrawableDescriptor-constructor()--><!--Device-DrawableDescriptor-constructor()-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -63,4 +63,3 @@ struct Example {
   }
 }
 ```
-

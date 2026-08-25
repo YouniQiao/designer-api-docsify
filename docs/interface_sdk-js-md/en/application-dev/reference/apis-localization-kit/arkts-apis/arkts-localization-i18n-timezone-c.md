@@ -2,9 +2,9 @@
 
 Provides time zone management capabilities, such as time zone name translation, offset retrieval, and transition rule retrieval.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-i18n-export class TimeZone--><!--Device-i18n-export class TimeZone-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -24,19 +24,19 @@ Obtains the default time zone object used by an application. If the default time
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-TimeZone-static getAppDefaultTimeZone(): TimeZone--><!--Device-TimeZone-static getAppDefaultTimeZone(): TimeZone-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [TimeZone](arkts-localization-i18n-timezone-c.md) | TimeZone object, first set by application, then system time zone, last GMT time zone. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [TimeZone](arkts-localization-i18n-timezone-c.md) |
 
 ## getAvailableIDs
 
@@ -46,19 +46,19 @@ static getAvailableIDs(): Array<string>
 
 Obtains the list of time zone IDs supported by the system.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TimeZone-static getAvailableIDs(): Array<string>--><!--Device-TimeZone-static getAvailableIDs(): Array<string>-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;string&gt; | List of time zone IDs supported by the system. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;string & gt; |
 
 **Examples**
 
@@ -85,19 +85,19 @@ static getAvailableZoneCityIDs(): Array<string>
 
 Obtains the list of time zone city IDs supported by the system.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TimeZone-static getAvailableZoneCityIDs(): Array<string>--><!--Device-TimeZone-static getAvailableZoneCityIDs(): Array<string>-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;string&gt; | List of time zone city IDs supported by the system. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;string & gt; |
 
 **Examples**
 
@@ -116,26 +116,26 @@ static getCityDisplayName(cityID: string, locale: string): string
 
 Obtains time zone city display name in the specified language.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TimeZone-static getCityDisplayName(cityID: string, locale: string): string--><!--Device-TimeZone-static getCityDisplayName(cityID: string, locale: string): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| cityID | string | Yes | Time zone city ID. |
-| locale | string | Yes | [System locale](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| cityID | string | Yes |
+| locale | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Time zone city display name in the specified language. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -153,26 +153,26 @@ getDisplayName(locale?: string, isDST?: boolean): string
 
 Obtains time zone display name in the specified language.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TimeZone-getDisplayName(locale?: string, isDST?: boolean): string--><!--Device-TimeZone-getDisplayName(locale?: string, isDST?: boolean): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locale | string | No | [System locale](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region. The default value is the current system locale. |
-| isDST | boolean | No | Whether DST information is displayed. The value **true** indicates that DST information is displayed, and the value **false** indicates the opposite. The default value is **false**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locale | string | No |
+| isDST | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Time zone display name in the specified language. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -198,19 +198,19 @@ getID(): string
 
 Obtains the ID of the specified **TimeZone** object.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TimeZone-getID(): string--><!--Device-TimeZone-getID(): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Time zone ID corresponding to the **TimeZone** object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -223,31 +223,37 @@ let timezoneID: string = timezone.getID(); // timezoneID = 'Asia/Shanghai'
 
 ## getOffset
 
+ArkTS-Dyn:
+```TypeScript
+getOffset(date?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getOffset(date?: double): int
 ```
 
 Obtains the offset of the specified time zone at the specified time.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TimeZone-getOffset(date?: double): int--><!--Device-TimeZone-getOffset(date?: double): int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| date | double | No | Specified time, in milliseconds. The default value is the system time. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| date | ArkTS-Dyn: number<br>ArkTS-Sta：double | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Time zone offset, in milliseconds. When the DST is used, the time zone offset is the raw time zone offset plus the DST offset. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -260,25 +266,31 @@ let offset: number = timezone.getOffset(1234567890); // offset = 28800000
 
 ## getRawOffset
 
+ArkTS-Dyn:
+```TypeScript
+getRawOffset(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getRawOffset(): int
 ```
 
 Obtains the raw offset of the specified time zone.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TimeZone-getRawOffset(): int--><!--Device-TimeZone-getRawOffset(): int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Raw offset of the time zone, in milliseconds. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -297,25 +309,25 @@ static getTimezoneFromCity(cityID: string): TimeZone
 
 Creates a **TimeZone** object corresponding to the specified time zone city.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TimeZone-static getTimezoneFromCity(cityID: string): TimeZone--><!--Device-TimeZone-static getTimezoneFromCity(cityID: string): TimeZone-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| cityID | string | Yes | Time zone city ID. The value must be a time zone city ID supported by the system. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| cityID | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [TimeZone](arkts-localization-i18n-timezone-c.md) | TimeZone** object corresponding to the specified time zone city ID. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [TimeZone](arkts-localization-i18n-timezone-c.md) |
 
 **Examples**
 
@@ -327,39 +339,45 @@ let timezone: i18n.TimeZone = i18n.TimeZone.getTimezoneFromCity('Shanghai');
 
 ## getTimezonesByLocation
 
+ArkTS-Dyn:
+```TypeScript
+static getTimezonesByLocation(longitude: number, latitude: number): Array<TimeZone>
+```
+
+ArkTS-Sta:
 ```TypeScript
 static getTimezonesByLocation(longitude: double, latitude: double): Array<TimeZone>
 ```
 
 Creates an array of **TimeZone** objects corresponding to the specified location.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TimeZone-static getTimezonesByLocation(longitude: double, latitude: double): Array<TimeZone>--><!--Device-TimeZone-static getTimezonesByLocation(longitude: double, latitude: double): Array<TimeZone>-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| longitude | double | Yes | Longitude. The value range is [-180, 179.9). A positive value is used for east longitude and a negative value is used for west longitude. |
-| latitude | double | Yes | Latitude. The value range is [-90, 89.9). A positive value is used for north latitude and a negative value is used for south latitude. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| longitude | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| latitude | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;[TimeZone](arkts-localization-i18n-timezone-c.md)&gt; | TimeZone** objects corresponding to the specified location. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;[TimeZone](arkts-localization-i18n-timezone-c.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [890001](../errorcode-i18n.md#890001-parameter-error) |
 
 **Examples**
 
@@ -383,19 +401,19 @@ public getZoneRules(): ZoneRules
 
 Obtains the time zone transition rules. For details about the time zone transition logic, see [DST Transition](../../../internationalization/i18n-dst-transition.md).
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-TimeZone-public getZoneRules(): ZoneRules--><!--Device-TimeZone-public getZoneRules(): ZoneRules-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ZoneRules](arkts-localization-i18n-zonerules-c.md) | Time zone transition rule, including the transition time and the offset before and after the transition. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ZoneRules](arkts-localization-i18n-zonerules-c.md) |
 
 **Examples**
 
@@ -432,25 +450,25 @@ Check if the given date use daylight saving time. The calculation will be based 
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-TimeZone-public isDaylightSavingTime(date: Date): boolean--><!--Device-TimeZone-public isDaylightSavingTime(date: Date): boolean-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| date | Date | Yes | Date and time. Note: The month starts from **0**, indicating January. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| date | Date | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the date use daylight saving time, and false otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## setAppDefaultTimeZoneById
 
@@ -462,23 +480,22 @@ Sets the default time zone for the current app, the value will be used on the ap
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-TimeZone-static setAppDefaultTimeZoneById(zoneID: string): void--><!--Device-TimeZone-static setAppDefaultTimeZoneById(zoneID: string): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| zoneID | string | Yes | Time zone ID that set default for app. for example, "Asia/Shanghai". <br> Time zone ID supported by the system |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| zoneID | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
-
+| Error Code ID |
+| --- |
+| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) |

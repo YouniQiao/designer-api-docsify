@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-ssap-interface ServerResponse--><!--Device-ssap-interface ServerResponse-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -26,27 +26,27 @@ address: string
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-ServerResponse-address: string--><!--Device-ServerResponse-address: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## requestId
 
 ```TypeScript
-requestId: int
+requestId: number
 ```
 
 表示请求ID。取值范围[0, 65535]。该ID必须与收到的[PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md)或 [PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md)中的requestId一致，用于关联请求与响应。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-ServerResponse-requestId: int--><!--Device-ServerResponse-requestId: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -62,9 +62,8 @@ value: ArrayBuffer
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ServerResponse-value: ArrayBuffer--><!--Device-ServerResponse-value: ArrayBuffer-End-->
-
 **系统能力：** SystemCapability.Communication.NearLink.Base
-

@@ -2,9 +2,9 @@
 
 Indicates the size of the enhanced input method panel, including the custom avoid area and touch area.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-inputMethodEngine-export interface EnhancedPanelRect--><!--Device-inputMethodEngine-export interface EnhancedPanelRect-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -26,9 +26,9 @@ Indicates whether to enable the full-screen mode. The default value is **false**
 
 **Default:** false
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-EnhancedPanelRect-fullScreenMode?: boolean--><!--Device-EnhancedPanelRect-fullScreenMode?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -40,13 +40,13 @@ landscapeAvoidY?: int
 
 Distance between the avoid line and the top of the panel in landscape mode, in px. The default value is **0**. <br> <br>- Other system components in the application avoid the input method panel area below the avoid line. <br>- When the panel is fixed, the distance between the avoid line and the bottom of the screen cannot exceed 70% of the screen height.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Default:** 0
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-EnhancedPanelRect-landscapeAvoidY?: int--><!--Device-EnhancedPanelRect-landscapeAvoidY?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -60,9 +60,9 @@ Region where the panel receives input events in landscape mode. <br> <br>- The a
 
 **Type:** Array&lt;window.Rect&gt;
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-EnhancedPanelRect-landscapeInputRegion?: Array<window.Rect>--><!--Device-EnhancedPanelRect-landscapeInputRegion?: Array<window.Rect>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -76,9 +76,9 @@ Size of the input method panel window in landscape mode. <br> <br>- This attribu
 
 **Type:** window.Rect
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-EnhancedPanelRect-landscapeRect?: window.Rect--><!--Device-EnhancedPanelRect-landscapeRect?: window.Rect-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -90,13 +90,13 @@ portraitAvoidY?: int
 
 Distance between the avoid line and the top of the panel in portrait mode, in px. The default value is **0**. <br> <br>- Other system components in the application avoid the input method panel area below the avoid line. <br>- When the panel is fixed, the distance between the avoid line and the bottom of the screen cannot exceed 70% of the screen height.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Default:** 0
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-EnhancedPanelRect-portraitAvoidY?: int--><!--Device-EnhancedPanelRect-portraitAvoidY?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -110,9 +110,9 @@ Region where the panel receives input events in portrait mode. <br> <br>- The ar
 
 **Type:** Array&lt;window.Rect&gt;
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-EnhancedPanelRect-portraitInputRegion?: Array<window.Rect>--><!--Device-EnhancedPanelRect-portraitInputRegion?: Array<window.Rect>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -126,9 +126,8 @@ Size of the input method panel window in portrait mode. <br> <br>- This attribut
 
 **Type:** window.Rect
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-EnhancedPanelRect-portraitRect?: window.Rect--><!--Device-EnhancedPanelRect-portraitRect?: window.Rect-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

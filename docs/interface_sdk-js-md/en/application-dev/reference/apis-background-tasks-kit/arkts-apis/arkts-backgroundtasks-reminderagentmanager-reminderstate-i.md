@@ -8,7 +8,7 @@ all callbacks associated with user-tapped button types under the application are
 
 **Since:** 23
 
-<!--Device-reminderAgentManager-interface ReminderState--><!--Device-reminderAgentManager-interface ReminderState-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -30,9 +30,9 @@ Button type.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-ReminderState-buttonType: ActionButtonType--><!--Device-ReminderState-buttonType: ActionButtonType-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -49,9 +49,9 @@ Whether a message is sent repeatedly.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-ReminderState-isMessageResent: boolean--><!--Device-ReminderState-isMessageResent: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -63,13 +63,12 @@ reminderId: int
 
 Reminder ID. The value range is all integers.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ReminderState-reminderId: int--><!--Device-ReminderState-reminderId: int-End-->
-
 **System capability:** SystemCapability.Notification.ReminderAgent
-

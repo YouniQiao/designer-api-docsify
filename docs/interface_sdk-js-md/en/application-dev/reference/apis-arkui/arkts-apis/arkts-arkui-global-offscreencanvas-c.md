@@ -4,7 +4,7 @@ OffscreenCanvas provides a Canvas object that can be rendered off-screen. It wor
 
 **Since:** 11
 
-<!--Device-unnamed-export declare class OffscreenCanvas--><!--Device-unnamed-export declare class OffscreenCanvas-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,20 +18,20 @@ The width of the offScreen Canvas object The height of the offScreen Canvas obje
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-OffscreenCanvas-constructor(width: number, height: number)--><!--Device-OffscreenCanvas-constructor(width: number, height: number)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| width | number | Yes |  |
-| height | number | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [width](#width) | number | Yes |
+| [height](#height) | number | Yes |
 
 ## getContext
 
@@ -43,26 +43,26 @@ Gets the context object for off-screen drawing.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-OffscreenCanvas-getContext(contextId: "2d", options?: CanvasRenderingContext2DSettings): OffscreenCanvasRenderingContext2D--><!--Device-OffscreenCanvas-getContext(contextId: "2d", options?: CanvasRenderingContext2DSettings): OffscreenCanvasRenderingContext2D-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| contextId | "2d" | Yes | creates a CanvasRenderingContext2D object representing a two-dimensional rendering context. |
-| options | CanvasRenderingContext2DSettings | No | object representing a three-dimensional rendering context. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [contextId](../../apis-arkts/arkts-apis/arkts-arkts-locks-asynclockinfo-c.md) | "2d" | Yes |
+| options | CanvasRenderingContext2DSettings | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| OffscreenCanvasRenderingContext2D | a render canvas for the offScreen Canvas object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [OffscreenCanvasRenderingContext2D](arkts-arkui-canvas-offscreencanvasrenderingcontext2d-c.md) |
 
 ## toDataURL
 
@@ -74,26 +74,26 @@ Converts the draw contents of the current off-screen draw object to a string in 
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-OffscreenCanvas-toDataURL(type?: string, quality?: number): string--><!--Device-OffscreenCanvas-toDataURL(type?: string, quality?: number): string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | string | No | indicating the image format. |
-| quality | number | No | between 0 and 1 indicating image quality if the type option is image/jpeg or image/webp. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | string | No |
+| quality | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A Promise returning a Blob object representing the image contained in the canvas. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## transferToImageBitmap
 
@@ -105,19 +105,19 @@ Converts the draw content in the current off-screen draw object to a Bitmap obje
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-OffscreenCanvas-transferToImageBitmap(): ImageBitmap--><!--Device-OffscreenCanvas-transferToImageBitmap(): ImageBitmap-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ImageBitmap](arkts-arkui-global-imagebitmap-c.md) | Returns An ImageBitmap object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageBitmap](arkts-arkui-global-imagebitmap-c.md) |
 
 ## height
 
@@ -131,11 +131,11 @@ The height of the offScreen Canvas object
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-OffscreenCanvas-height: number--><!--Device-OffscreenCanvas-height: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -151,11 +151,10 @@ The width of the offScreen Canvas object
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-OffscreenCanvas-width: number--><!--Device-OffscreenCanvas-width: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

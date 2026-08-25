@@ -4,7 +4,7 @@ Enum for dialog state.
 
 **Since:** 26.1.0
 
-<!--Device-unnamed-export enum DialogState--><!--Device-unnamed-export enum DialogState-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Indicates it is uninitialized.
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-DialogState-UNINITIALIZED = 0--><!--Device-DialogState-UNINITIALIZED = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Indicates it is initialized.
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-DialogState-INITIALIZED = 1--><!--Device-DialogState-INITIALIZED = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ Indicates it is appearing.
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-DialogState-APPEARING = 2--><!--Device-DialogState-APPEARING = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,11 @@ Indicates it is appeared.
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-DialogState-APPEARED = 3--><!--Device-DialogState-APPEARED = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,11 +90,11 @@ Indicates it is disappearing.
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-DialogState-DISAPPEARING = 4--><!--Device-DialogState-DISAPPEARING = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,11 +108,10 @@ Indicates it is disappeared.
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
-<!--Device-DialogState-DISAPPEARED = 5--><!--Device-DialogState-DISAPPEARED = 5-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

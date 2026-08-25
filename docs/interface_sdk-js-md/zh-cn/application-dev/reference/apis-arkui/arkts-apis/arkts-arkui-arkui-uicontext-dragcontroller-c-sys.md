@@ -7,7 +7,7 @@
 
 **起始版本：** 11
 
-<!--Device-unnamed-export class DragController--><!--Device-unnamed-export class DragController-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,9 +30,9 @@ interruptFollowHandMorphDropAnimation(): boolean
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-DragController-interruptFollowHandMorphDropAnimation(): boolean--><!--Device-DragController-interruptFollowHandMorphDropAnimation(): boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,7 +40,6 @@ interruptFollowHandMorphDropAnimation(): boolean
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回中断结果。<br>返回true表示中断成功，返回false表示当前不存在待中断的跟手变形落位动效。 |
-
+| 类型 |
+| --- |
+| boolean |

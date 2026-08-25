@@ -2,9 +2,9 @@
 
 通知内容。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-unnamed-export interface NotificationContent--><!--Device-unnamed-export interface NotificationContent-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -20,11 +20,11 @@ contentType?: notification.ContentType
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 11
 
 **替代接口：** [notificationContentType](#notificationcontenttype)
-
-<!--Device-NotificationContent-contentType?: notification.ContentType--><!--Device-NotificationContent-contentType?: notification.ContentType-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -38,9 +38,9 @@ longText?: NotificationLongTextContent
 
 **类型：** [NotificationLongTextContent](arkts-notification-notificationcontent-notificationlongtextcontent-i.md)
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationContent-longText?: NotificationLongTextContent--><!--Device-NotificationContent-longText?: NotificationLongTextContent-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -54,9 +54,9 @@ multiLine?: NotificationMultiLineContent
 
 **类型：** [NotificationMultiLineContent](arkts-notification-notificationcontent-notificationmultilinecontent-i.md)
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationContent-multiLine?: NotificationMultiLineContent--><!--Device-NotificationContent-multiLine?: NotificationMultiLineContent-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -70,9 +70,9 @@ normal?: NotificationBasicContent
 
 **类型：** [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationContent-normal?: NotificationBasicContent--><!--Device-NotificationContent-normal?: NotificationBasicContent-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -86,9 +86,9 @@ notificationContentType?: notificationManager.ContentType
 
 **类型：** notificationManager.ContentType
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-NotificationContent-notificationContentType?: notificationManager.ContentType--><!--Device-NotificationContent-notificationContentType?: notificationManager.ContentType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -102,9 +102,9 @@ picture?: NotificationPictureContent
 
 **类型：** [NotificationPictureContent](arkts-notification-notificationcontent-notificationpicturecontent-i.md)
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationContent-picture?: NotificationPictureContent--><!--Device-NotificationContent-picture?: NotificationPictureContent-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -118,9 +118,8 @@ systemLiveView?: NotificationSystemLiveViewContent
 
 **类型：** [NotificationSystemLiveViewContent](arkts-notification-notificationcontent-notificationsystemliveviewcontent-i.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-NotificationContent-systemLiveView?: NotificationSystemLiveViewContent--><!--Device-NotificationContent-systemLiveView?: NotificationSystemLiveViewContent-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
-

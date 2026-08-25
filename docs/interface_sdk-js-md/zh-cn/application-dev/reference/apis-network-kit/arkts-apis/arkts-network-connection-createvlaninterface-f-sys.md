@@ -9,7 +9,7 @@ import { connection } from '@kit.NetworkKit';
 ## createVlanInterface
 
 ```TypeScript
-function createVlanInterface(ifName: string, vlanId: int): Promise<void>
+function createVlanInterface(ifName: string, vlanId: number): Promise<void>
 ```
 
 在指定的以太网网卡上，创建一个由vlanId指定的虚拟局域网。使用Promise异步回调。
@@ -19,11 +19,11 @@ function createVlanInterface(ifName: string, vlanId: int): Promise<void>
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-connection-function createVlanInterface(ifName: string, vlanId: int): Promise<void>--><!--Device-connection-function createVlanInterface(ifName: string, vlanId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -31,26 +31,26 @@ function createVlanInterface(ifName: string, vlanId: int): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| ifName | string | 是 | 网卡名。 |
-| vlanId | int | 是 | vlan标识符，取值范围[0,4094]。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| ifName | string | 是 |
+| vlanId | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Nonsystem applications use system APIs. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-| [2100400](../errorcode-net-connection.md#2100400-传入网卡名不正确非以太网) | The input network interface name is incorrect. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
+| [2100400](../errorcode-net-connection.md#2100400-传入网卡名不正确非以太网) |
 
 **示例**
 
@@ -65,4 +65,3 @@ connection.createVlanInterface(ifName, vlanId).then(() => {
   console.error(`Failed to create vlan. Code:${error.code}, message:${error.message}`);
 });
 ```
-

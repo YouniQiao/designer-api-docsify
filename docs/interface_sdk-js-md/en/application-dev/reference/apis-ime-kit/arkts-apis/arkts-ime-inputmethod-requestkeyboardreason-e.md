@@ -2,9 +2,9 @@
 
 Enumerates the reasons for requesting the keyboard.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-inputMethod-export enum RequestKeyboardReason--><!--Device-inputMethod-export enum RequestKeyboardReason-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -16,9 +16,9 @@ NONE = 0
 
 The keyboard request is triggered for no reason.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-RequestKeyboardReason-NONE = 0--><!--Device-RequestKeyboardReason-NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -30,9 +30,9 @@ MOUSE = 1
 
 The keyboard request is triggered by a mouse operation.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-RequestKeyboardReason-MOUSE = 1--><!--Device-RequestKeyboardReason-MOUSE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -44,9 +44,9 @@ TOUCH = 2
 
 The keyboard request is triggered by a touch operation.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-RequestKeyboardReason-TOUCH = 2--><!--Device-RequestKeyboardReason-TOUCH = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -58,9 +58,8 @@ OTHER = 20
 
 The keyboard request is triggered by other reasons.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-RequestKeyboardReason-OTHER = 20--><!--Device-RequestKeyboardReason-OTHER = 20-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

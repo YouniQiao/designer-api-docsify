@@ -8,9 +8,8 @@ Defines the network link address information.
 
 **Since:** 11
 
-<!--Device-vpnExtension-export type LinkAddress = connection.LinkAddress--><!--Device-vpnExtension-export type LinkAddress = connection.LinkAddress-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Property type:** connection.LinkAddress
-

@@ -24,9 +24,9 @@ Creates the **TabContent** component, which represents the content associated wi
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-TabContentInterface-(): TabContentAttribute--><!--Device-TabContentInterface-(): TabContentAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,19 +34,18 @@ Creates the **TabContent** component, which represents the content associated wi
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) | Represents an indicator style object. |
-| [LabelStyle](arkts-arkui-labelstyle-i.md) | Represents a style object for the label text and font. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) |
+| [LabelStyle](arkts-arkui-labelstyle-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | Defines the input parameter object of the **drawable** attribute in the **DrawableTabBarIndicator** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |

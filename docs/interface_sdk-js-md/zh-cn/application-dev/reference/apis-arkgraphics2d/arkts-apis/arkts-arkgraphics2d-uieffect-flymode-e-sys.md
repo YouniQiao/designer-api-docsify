@@ -2,9 +2,9 @@
 
 飞入飞出形变场景模式枚举。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-uiEffect-enum FlyMode--><!--Device-uiEffect-enum FlyMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -18,9 +18,9 @@ BOTTOM = 0
 
 从底部进行飞入飞出形变。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-FlyMode-BOTTOM = 0--><!--Device-FlyMode-BOTTOM = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -34,11 +34,10 @@ TOP = 1
 
 从顶部进行飞入飞出形变。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-FlyMode-TOP = 1--><!--Device-FlyMode-TOP = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
-

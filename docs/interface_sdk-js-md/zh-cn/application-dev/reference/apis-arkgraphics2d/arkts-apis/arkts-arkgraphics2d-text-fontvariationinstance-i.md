@@ -4,7 +4,7 @@
 
 **起始版本：** 24
 
-<!--Device-text-interface FontVariationInstance--><!--Device-text-interface FontVariationInstance-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -26,9 +26,9 @@ coordinates: Array<FontVariation>
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-FontVariationInstance-coordinates: Array<FontVariation>--><!--Device-FontVariationInstance-coordinates: Array<FontVariation>-End-->
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -44,9 +44,9 @@ localName: string
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-FontVariationInstance-localName: string--><!--Device-FontVariationInstance-localName: string-End-->
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -62,9 +62,8 @@ name: string
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
-<!--Device-FontVariationInstance-name: string--><!--Device-FontVariationInstance-name: string-End-->
-
 **系统能力：** SystemCapability.Graphics.Drawing
-

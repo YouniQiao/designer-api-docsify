@@ -6,9 +6,7 @@ ChipV2ImageIcon定义图标图片的基类。继承自[ChipV2Icon](arkts-arkui-a
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @ObservedV2
-
-<!--Device-unnamed-export abstract class ChipV2ImageIcon--><!--Device-unnamed-export abstract class ChipV2ImageIcon-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,19 +26,19 @@ ChipV2ImageIcon的构造函数。
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipV2ImageIcon-constructor(config: ChipV2ImageIconConfig)--><!--Device-ChipV2ImageIcon-constructor(config: ChipV2ImageIconConfig)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| config | [ChipV2ImageIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md) | 是 | 图标共通属性配置，用于设置Image类型图标的基本显示属性，包含src、size、fillColor、activatedFillColor等配置 项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| config | [ChipV2ImageIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md) | 是 |
 
 ## activatedFillColor
 
@@ -54,13 +52,11 @@ ChipV2激活时图标填充颜色。默认值：\$r('sys.color.chip_active_icon_
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipV2ImageIcon-@Trace  public activatedFillColor?: ColorMetrics--><!--Device-ChipV2ImageIcon-@Trace  public activatedFillColor?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,13 +72,11 @@ public fillColor?: ColorMetrics
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipV2ImageIcon-@Trace  public fillColor?: ColorMetrics--><!--Device-ChipV2ImageIcon-@Trace  public fillColor?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,13 +92,11 @@ public modifier?: ImageModifier
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipV2ImageIcon-@Trace  public modifier?: ImageModifier--><!--Device-ChipV2ImageIcon-@Trace  public modifier?: ImageModifier-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -122,13 +114,11 @@ public size?: SizeT<LengthMetrics>
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipV2ImageIcon-@Trace  public size?: SizeT<LengthMetrics>--><!--Device-ChipV2ImageIcon-@Trace  public size?: SizeT<LengthMetrics>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -144,13 +134,10 @@ public src: ResourceStr
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ChipV2ImageIcon-@Trace  public src: ResourceStr--><!--Device-ChipV2ImageIcon-@Trace  public src: ResourceStr-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

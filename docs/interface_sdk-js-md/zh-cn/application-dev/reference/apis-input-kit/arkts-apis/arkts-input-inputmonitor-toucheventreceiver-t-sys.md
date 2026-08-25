@@ -6,9 +6,9 @@ type TouchEventReceiver = (touchEvent: TouchEvent) => boolean
 
 触屏输入事件的回调函数。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-inputMonitor-type TouchEventReceiver = (touchEvent: TouchEvent) => boolean--><!--Device-inputMonitor-type TouchEventReceiver = (touchEvent: TouchEvent) => boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
@@ -16,13 +16,12 @@ type TouchEventReceiver = (touchEvent: TouchEvent) => boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| touchEvent | [TouchEvent](arkts-input-multimodalinput-touchevent-touchevent-i.md) | 是 | 触屏输入事件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| touchEvent | [TouchEvent](arkts-input-multimodalinput-touchevent-touchevent-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 若返回true，本次触屏后续产生的事件不再分发到窗口；若返回false，本次触屏后续产生的事件还会分发到窗口。 |
-
+| 类型 |
+| --- |
+| boolean |

@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-export declare enum TabBarPosition--><!--Device-unnamed-export declare enum TabBarPosition-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ LEFT = 0
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-TabBarPosition-LEFT = 0--><!--Device-TabBarPosition-LEFT = 0-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,8 @@ BOTTOM = 1
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-TabBarPosition-BOTTOM = 1--><!--Device-TabBarPosition-BOTTOM = 1-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,7 +4,7 @@ The module defines the listener used to listen for ability foreground and backgr
 
 **Since:** 11
 
-<!--Device-unnamed-export default class AbilityForegroundStateObserver--><!--Device-unnamed-export default class AbilityForegroundStateObserver-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -20,7 +20,7 @@ Called when the ability is switched between foreground and background.
 
 **Since:** 11
 
-<!--Device-AbilityForegroundStateObserver-onAbilityStateChanged(abilityStateData: AbilityStateData): void--><!--Device-AbilityForegroundStateObserver-onAbilityStateChanged(abilityStateData: AbilityStateData): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -28,9 +28,9 @@ Called when the ability is switched between foreground and background.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| abilityStateData | [AbilityStateData](arkts-ability-abilitystatedata-c.md) | Yes | Ability state data. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| abilityStateData | [AbilityStateData](arkts-ability-abilitystatedata-c.md) | Yes |
 
 **Examples**
 
@@ -51,4 +51,3 @@ try {
   console.error(`error code: ${code}, error msg: ${message}`);
 }
 ```
-

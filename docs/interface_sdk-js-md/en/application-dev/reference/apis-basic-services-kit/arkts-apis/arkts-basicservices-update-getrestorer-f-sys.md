@@ -20,9 +20,9 @@ After obtaining the object, you can call the corresponding method to restore the
 - Restoring factory settings is irreversible and will permanently delete user data. Therefore, remind users to back up important data in advance. - The **ohos.permission.FACTORY_RESET** permission is required for calling **factoryReset**, **deepFactoryReset**, and **getDeepFactoryResetInfo**. - The **ohos.permission.FORCE_FACTORY_RESET** permission is required for calling **forceFactoryReset**. - During the operation, the device automatically restarts. The app status needs to be saved. - **deepFactoryReset** takes a long time (1 to 4 hours depending on the device storage capacity). Ensure that the device has sufficient battery power (recommended battery level:   
 > 50%). - You are advised to perform the factory reset operation after clicking the confirmation button in the dialog box or on the screen.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-update-function getRestorer(): Restorer--><!--Device-update-function getRestorer(): Restorer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -30,15 +30,15 @@ After obtaining the object, you can call the corresponding method to restore the
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Restorer](arkts-basicservices-update-restorer-i-sys.md) | Utility object used to perform factory reset operations. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Restorer](arkts-basicservices-update-restorer-i-sys.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -49,4 +49,3 @@ try {
   console.error(`Fail to get restorer: ${error}`);
 }
 ```
-

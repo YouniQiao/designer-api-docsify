@@ -16,9 +16,9 @@ Sends a response to the Unstructured Supplementary Service Data (USSD) service t
 
 **Since:** 26.0.0
 
-**Required permissions:** ohos.permission.SET_TELEPHONY_STATE
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-call-function sendUssdResponse(slotId: int, content: string): void--><!--Device-call-function sendUssdResponse(slotId: int, content: string): void-End-->
+**Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -26,18 +26,17 @@ Sends a response to the Unstructured Supplementary Service Data (USSD) service t
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| slotId | int | Yes | ID of the card slot that sends the response. |
-| content | string | Yes | Response content. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| content | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| 8400001 | Invalid parameter value. |
-| 8400002 | Operation failed. Cannot connect to service. |
-| 8400003 | System internal error, system database write fail. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 8400001 |
+| 8400002 |
+| 8400003 |

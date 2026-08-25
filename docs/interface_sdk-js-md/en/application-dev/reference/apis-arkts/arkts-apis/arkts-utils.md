@@ -1,4 +1,4 @@
-# @arkts.utils
+# @arkts.utils(Defines the utils for ArkTS)
 
 ## Modules to Import
 
@@ -10,7 +10,6 @@ import { ArkTSUtils } from '@kit.ArkTS';
 
 ### Namespaces
 
-| Name | Description |
-| --- | --- |
-| [utils](arkts-arkts-utils-n.md) |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [utils(Defines the utils for ArkTS)](arkts-arkts-utils-n.md) |

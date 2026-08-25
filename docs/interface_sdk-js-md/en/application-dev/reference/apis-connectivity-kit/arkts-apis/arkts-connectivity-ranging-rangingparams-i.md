@@ -4,7 +4,7 @@ Parameters for ranging operation.
 
 **Since:** 26.0.0
 
-<!--Device-ranging-interface RangingParams--><!--Device-ranging-interface RangingParams-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -26,9 +26,9 @@ Indicates the capability type for ranging.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-RangingParams-capabilityType: RangingTypes--><!--Device-RangingParams-capabilityType: RangingTypes-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -44,9 +44,8 @@ Address of the ranging device.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RangingParams-deviceId: string--><!--Device-RangingParams-deviceId: string-End-->
-
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
-

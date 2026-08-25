@@ -2,9 +2,9 @@
 
 Provides methods for setting network information, including the data roaming status, HTTP proxy configurations, and preferred networks.@namespace network
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-settings-namespace network--><!--Device-settings-namespace network-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -18,9 +18,8 @@ import { settings } from '@kit.BasicServicesKit';
 
 ### Constants
 
-| Name | Description |
-| --- | --- |
-| [DATA_ROAMING_STATUS](arkts-basicservices-network-con.md#data_roaming_status) | Specifies whether data roaming is enabled.<p>If the value is {@code true}, data roaming is enabled. If the value is {@code false}, data roaming is disabled. |
-| [HTTP_PROXY_CFG](arkts-basicservices-network-con.md#http_proxy_cfg) | Indicates the host name and port number of the global HTTP proxy. The host name and port number are separated by a colon (:). |
-| [NETWORK_PREFERENCE_USAGE](arkts-basicservices-network-con.md#network_preference_usage) | Indicates the user preferences of the network to use. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DATA_ROAMING_STATUS](arkts-basicservices-network-con.md#data_roaming_status) |
+| [HTTP_PROXY_CFG](arkts-basicservices-network-con.md#http_proxy_cfg) |
+| [NETWORK_PREFERENCE_USAGE](arkts-basicservices-network-con.md#network_preference_usage) |

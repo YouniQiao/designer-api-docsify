@@ -2,9 +2,9 @@
 
 表示签名、验签操作使用的参数集合，包括密钥使用目的、填充方式和摘要算法。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-certificateManager-export interface CMSignatureSpec--><!--Device-certificateManager-export interface CMSignatureSpec-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -24,9 +24,9 @@ digest?: CmKeyDigest
 
 **类型：** [CmKeyDigest](arkts-devicecertificate-certificatemanager-cmkeydigest-e.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CMSignatureSpec-digest?: CmKeyDigest--><!--Device-CMSignatureSpec-digest?: CmKeyDigest-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -40,9 +40,9 @@ padding?: CmKeyPadding
 
 **类型：** [CmKeyPadding](arkts-devicecertificate-certificatemanager-cmkeypadding-e.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CMSignatureSpec-padding?: CmKeyPadding--><!--Device-CMSignatureSpec-padding?: CmKeyPadding-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -56,9 +56,8 @@ purpose: CmKeyPurpose
 
 **类型：** [CmKeyPurpose](arkts-devicecertificate-certificatemanager-cmkeypurpose-e.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CMSignatureSpec-purpose: CmKeyPurpose--><!--Device-CMSignatureSpec-purpose: CmKeyPurpose-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
-

@@ -7,9 +7,9 @@ Options that contain the user ID.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-bundle-export interface BundleOptions--><!--Device-bundle-export interface BundleOptions-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -31,9 +31,8 @@ User ID. The default value is the user ID of the caller. The value must be great
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-<!--Device-BundleOptions-userId?: number--><!--Device-BundleOptions-userId?: number-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework
-

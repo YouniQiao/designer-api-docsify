@@ -2,9 +2,9 @@
 
 提供操作X.509证书扩展的API。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-cert-interface CertExtension--><!--Device-cert-interface CertExtension-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -16,33 +16,39 @@ import { cert } from '@kit.DeviceCertificateKit';
 
 ## checkCA
 
+ArkTS-Dyn:
+```TypeScript
+checkCA(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 checkCA(): int
 ```
 
 检查证书是否为CA证书。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CertExtension-checkCA(): int--><!--Device-CertExtension-checkCA(): int-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 当证书扩展中密钥用途扩展包含keyCertSign位，并且基本约束中cA字段为true时，表示证书为CA证书。 如果证书不是CA证书，则返回-1；否则返回基本约束中的路径长度。 如果证书是CA证书，但是基本约束中未给定路径长度，则返回-2，表示无路径长度限制。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
+| 错误码ID |
+| --- |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 **示例**
 
@@ -139,27 +145,27 @@ getEncoded(): EncodingBlob
 
 获取证书扩展的序列化数据。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CertExtension-getEncoded(): EncodingBlob--><!--Device-CertExtension-getEncoded(): EncodingBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | 获取的证书扩展序列化数据。 |
+| 类型 |
+| --- |
+| [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
+| 错误码ID |
+| --- |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 **示例**
 
@@ -1076,35 +1082,35 @@ getEntry(valueType: ExtensionEntryType, oid: DataBlob): DataBlob
 
 根据OID获取证书扩展项的值。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CertExtension-getEntry(valueType: ExtensionEntryType, oid: DataBlob): DataBlob--><!--Device-CertExtension-getEntry(valueType: ExtensionEntryType, oid: DataBlob): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| valueType | [ExtensionEntryType](arkts-devicecertificate-cert-extensionentrytype-e.md) | 是 | 指定要获取的扩展信息类型。 |
-| oid | DataBlob | 是 | 指定要获取的扩展项OID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [valueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-scanneroptionvalue-i.md) | [ExtensionEntryType](arkts-devicecertificate-cert-extensionentrytype-e.md) | 是 |
+| oid | [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| DataBlob | 获取的证书扩展项数据。 |
+| 类型 |
+| --- |
+| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 **示例**
 
@@ -1211,34 +1217,34 @@ getOidList(valueType: ExtensionOidType): DataArray
 
 获取证书扩展的OID列表。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CertExtension-getOidList(valueType: ExtensionOidType): DataArray--><!--Device-CertExtension-getOidList(valueType: ExtensionOidType): DataArray-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| valueType | [ExtensionOidType](arkts-devicecertificate-cert-extensionoidtype-e.md) | 是 | 指定要获取的OID类型。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [valueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-scanneroptionvalue-i.md) | [ExtensionOidType](arkts-devicecertificate-cert-extensionoidtype-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataArray](arkts-devicecertificate-cert-dataarray-i.md) | 获取的证书扩展OID列表。 |
+| 类型 |
+| --- |
+| [DataArray](arkts-devicecertificate-cert-dataarray-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 **示例**
 
@@ -1337,27 +1343,27 @@ hasUnsupportedCriticalExtension(): boolean
 
 判断是否存在不支持的关键扩展。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CertExtension-hasUnsupportedCriticalExtension(): boolean--><!--Device-CertExtension-hasUnsupportedCriticalExtension(): boolean-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 当存在不支持的关键扩展时，该方法返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
+| 错误码ID |
+| --- |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 **示例**
 
@@ -1425,4 +1431,3 @@ async function TestHasUnsupportedCriticalExtension() {
   }
 }
 ```
-

@@ -4,7 +4,7 @@ Describes the capability of a partner device.
 
 **Since:** 23
 
-<!--Device-partnerAgent-interface DeviceCapability--><!--Device-partnerAgent-interface DeviceCapability-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -26,9 +26,9 @@ Whether the partner device supports the Bluetooth Low Energy (BLE) advertiser ca
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-DeviceCapability-supportBleAdvertiser?: boolean--><!--Device-DeviceCapability-supportBleAdvertiser?: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -44,9 +44,8 @@ Whether the partner device supports the Bluetooth Basic Rate (BR) capability.
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DeviceCapability-supportBR?: boolean--><!--Device-DeviceCapability-supportBR?: boolean-End-->
-
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
-

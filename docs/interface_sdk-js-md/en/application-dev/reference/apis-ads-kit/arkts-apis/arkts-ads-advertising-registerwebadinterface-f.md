@@ -16,25 +16,25 @@ Injects an ad JavaScript object to the **Web** component (this API is only open 
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext): void--><!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| controller | web_webview.WebviewController | Yes | Web component controller. |
-| context | common.UIAbilityContext | Yes | Context of the UIAbility. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| controller | web_webview.WebviewController | Yes |
+| context | common.UIAbilityContext | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
+| Error Code ID |
+| --- |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) |
 
 **Examples**
 
@@ -104,28 +104,27 @@ Injects an ad JavaScript object to the **Web** component (this API is only open 
 
 **Since:** 16
 
-**Atomic service API:** This API can be used in atomic services since API version 16.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
-<!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext,     needRefresh: boolean): void--><!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext,     needRefresh: boolean): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 16.
 
 **System capability:** SystemCapability.Advertising.Ads
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| controller | web_webview.WebviewController | Yes | Web component controller. |
-| context | common.UIAbilityContext | Yes | Context of the UIAbility. |
-| needRefresh | boolean | Yes | Whether to refresh the page (true: yes; false: no). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| controller | web_webview.WebviewController | Yes |
+| context | common.UIAbilityContext | Yes |
+| needRefresh | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
+| Error Code ID |
+| --- |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) |
 
 **Examples**
 
 See [registerWebAdInterface](#registerwebadinterface)
-

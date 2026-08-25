@@ -4,7 +4,7 @@ Enumerates the selected state types of the chip. It allows you to specify how ac
 
 **Since:** 14
 
-<!--Device-unnamed-export declare enum AccessibilitySelectedType--><!--Device-unnamed-export declare enum AccessibilitySelectedType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Click type. The chip acts as a regular clickable component, without reporting an
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-AccessibilitySelectedType-CLICKED = 0--><!--Device-AccessibilitySelectedType-CLICKED = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Checkbox type. The chip reports its selected state to accessibility services usi
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-AccessibilitySelectedType-CHECKED = 1--><!--Device-AccessibilitySelectedType-CHECKED = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ Radio type. The chip reports its selected state to accessibility services using 
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-AccessibilitySelectedType-SELECTED = 2--><!--Device-AccessibilitySelectedType-SELECTED = 2-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

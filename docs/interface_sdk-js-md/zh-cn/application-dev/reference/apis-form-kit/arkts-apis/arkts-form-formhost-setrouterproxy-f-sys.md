@@ -21,11 +21,11 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback:
 > 接口。&gt;
 > - 一个formId最多只能设置一个跳转代理，多次设置后，最后设置的proxy生效。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REQUIRE_FORM
-
-<!--Device-formHost-function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback: AsyncCallback<void>): void--><!--Device-formHost-function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -33,23 +33,23 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback:
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | 是 | 卡片标识数组。 |
-| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 是 | 回调函数。返回跳转所需要的Want信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当指定卡片设置router跳转代理成功时，error为undefined；否则抛出异常。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formIds | Array & lt;string & gt; | 是 |
+| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
-| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
+| [16500060](../errorcode-form.md#16500060-连接服务失败) |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) |
+| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) |
 
 **示例**
 
@@ -295,11 +295,11 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<
 > 接口。&gt;
 > - 一个formId最多只能设置一个跳转代理，多次设置后，最后设置的proxy生效。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REQUIRE_FORM
-
-<!--Device-formHost-function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<void>--><!--Device-formHost-function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -307,30 +307,29 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | 是 | 卡片标识数组。 |
-| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 是 | 回调函数。返回跳转所需要的Want信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formIds | Array & lt;string & gt; | 是 |
+| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
-| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
+| [16500060](../errorcode-form.md#16500060-连接服务失败) |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) |
+| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) |
 
 **示例**
 
 参见 [setRouterProxy](#setrouterproxy)
-

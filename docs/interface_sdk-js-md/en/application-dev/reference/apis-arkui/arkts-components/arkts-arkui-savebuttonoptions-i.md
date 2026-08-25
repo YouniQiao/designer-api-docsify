@@ -11,7 +11,7 @@ Defines options for the save button, including icon, text, and button type.
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface SaveButtonOptions--><!--Device-unnamed-declare interface SaveButtonOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,11 +32,11 @@ Background type of the **SaveButton** component. Default value: ButtonType.Capsu
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SaveButtonOptions-buttonType?: ButtonType--><!--Device-SaveButtonOptions-buttonType?: ButtonType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,11 +52,11 @@ Icon style of the **SaveButton** component. <br>If this parameter is not specifi
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SaveButtonOptions-icon?: SaveIconStyle--><!--Device-SaveButtonOptions-icon?: SaveIconStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,10 @@ Text on the **SaveButton** component. <br>If this parameter is not specified, no
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-SaveButtonOptions-text?: SaveDescription--><!--Device-SaveButtonOptions-text?: SaveDescription-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

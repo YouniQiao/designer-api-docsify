@@ -4,7 +4,7 @@ ResultInfo info of batch operations.
 
 **Since:** 26.0.0
 
-<!--Device-photoAccessHelper-interface ResultInfo--><!--Device-photoAccessHelper-interface ResultInfo-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -24,13 +24,13 @@ readonly code: int
 
 result code of batch operations.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ResultInfo-readonly code: int--><!--Device-ResultInfo-readonly code: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -48,11 +48,10 @@ result info of batch operations.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ResultInfo-readonly result: Array<string|null>--><!--Device-ResultInfo-readonly result: Array<string|null>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

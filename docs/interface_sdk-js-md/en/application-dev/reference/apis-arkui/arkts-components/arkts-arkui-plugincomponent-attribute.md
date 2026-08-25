@@ -7,7 +7,7 @@ Gesture events can be distributed to and processed inside the provider page.In a
 
 **Since:** 9
 
-<!--Device-unnamed-declare class PluginComponentAttribute--><!--Device-unnamed-declare class PluginComponentAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -17,4 +17,3 @@ Gesture events can be distributed to and processed inside the provider page.In a
 
 ```TypeScript
 ```
-

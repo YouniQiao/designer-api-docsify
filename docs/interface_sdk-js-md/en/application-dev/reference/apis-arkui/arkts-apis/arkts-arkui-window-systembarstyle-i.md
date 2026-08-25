@@ -2,9 +2,9 @@
 
 Describes the properties of the status bar. These properties are valid for the page-level status bar.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-window-interface SystemBarStyle--><!--Device-window-interface SystemBarStyle-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -24,11 +24,10 @@ Color of the text on the status bar. The default value is **'#E5FFFFFF'**.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-SystemBarStyle-statusBarContentColor?: string--><!--Device-SystemBarStyle-statusBarContentColor?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
-

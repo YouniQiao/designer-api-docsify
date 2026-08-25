@@ -2,11 +2,11 @@
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [sensor/sensor](arkts-sensor.md)
-
-<!--Device-unnamed-export default class Sensor--><!--Device-unnamed-export default class Sensor-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -26,21 +26,21 @@ Obtains the wearing state of a wearable device.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#wear_detection)
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-Sensor-static getOnBodyState(options: GetOnBodyStateOptions): void--><!--Device-Sensor-static getOnBodyState(options: GetOnBodyStateOptions): void-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [GetOnBodyStateOptions](arkts-sensorservice-system-sensor-getonbodystateoptions-i.md) | Yes | Callback invoked when obtaining the wearing state of the device that houses the sensor. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [GetOnBodyStateOptions](arkts-sensorservice-system-sensor-getonbodystateoptions-i.md) | Yes |
 
 **Examples**
 
@@ -68,28 +68,28 @@ Subscribes to data changes of the acceleration sensor. If this API is called mul
 
 > **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
-> [ACCELEROMETER](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> ACCELEROMETER
 > instead. since API Version 8.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;, options?: Options)
+**Substitutes:** [on](arkts-sensorservice-sensor-on-f.md)(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;, options?: Options)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-Sensor-static subscribeAccelerometer(options: subscribeAccelerometerOptions): void--><!--Device-Sensor-static subscribeAccelerometer(options: subscribeAccelerometerOptions): void-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [subscribeAccelerometerOptions](arkts-sensorservice-system-sensor-subscribeaccelerometeroptions-i.md) | Yes | Type of data to return. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [subscribeAccelerometerOptions](arkts-sensorservice-system-sensor-subscribeaccelerometeroptions-i.md) | Yes |
 
 **Examples**
 
@@ -120,26 +120,26 @@ Subscribes to data changes of the barometer sensor. If this API is called multip
 
 > **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
-> [BAROMETER](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> BAROMETER
 > instead. since API Version 8.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback&lt;BarometerResponse&gt;, options?: Options)
+**Substitutes:** [on](arkts-sensorservice-sensor-on-f.md)(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback&lt;BarometerResponse&gt;, options?: Options)
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-Sensor-static subscribeBarometer(options: SubscribeBarometerOptions): void--><!--Device-Sensor-static subscribeBarometer(options: SubscribeBarometerOptions): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [SubscribeBarometerOptions](arkts-sensorservice-system-sensor-subscribebarometeroptions-i.md) | Yes | Type of data to return. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [SubscribeBarometerOptions](arkts-sensorservice-system-sensor-subscribebarometeroptions-i.md) | Yes |
 
 **Examples**
 
@@ -167,10 +167,12 @@ Subscribes to data changes of the compass sensor. If this API is called multiple
 
 > **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
-> [ORIENTATION](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> ORIENTATION
 > since API Version 8.
 
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 
@@ -178,15 +180,13 @@ Subscribes to data changes of the compass sensor. If this API is called multiple
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-Sensor-static subscribeCompass(options: SubscribeCompassOptions): void--><!--Device-Sensor-static subscribeCompass(options: SubscribeCompassOptions): void-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [SubscribeCompassOptions](arkts-sensorservice-system-sensor-subscribecompassoptions-i.md) | Yes | Type of data to return. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [SubscribeCompassOptions](arkts-sensorservice-system-sensor-subscribecompassoptions-i.md) | Yes |
 
 **Examples**
 
@@ -214,26 +214,26 @@ Subscribes to data changes of the device orientation sensor.If this API is calle
 
 > **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
-> [ORIENTATION](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> ORIENTATION
 > instead. since API Version 8.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback&lt;OrientationResponse&gt;, options?: Options)
+**Substitutes:** [on](arkts-sensorservice-sensor-on-f.md)(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback&lt;OrientationResponse&gt;, options?: Options)
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-Sensor-static subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): void--><!--Device-Sensor-static subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [SubscribeDeviceOrientationOptions](arkts-sensorservice-system-sensor-subscribedeviceorientationoptions-i.md) | Yes | Type of data to return. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [SubscribeDeviceOrientationOptions](arkts-sensorservice-system-sensor-subscribedeviceorientationoptions-i.md) | Yes |
 
 **Examples**
 
@@ -264,28 +264,28 @@ Subscribes to data changes of the gyroscope sensor.If this API is called multipl
 
 > **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
-> [GYROSCOPE](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> GYROSCOPE
 > instead. since API Version 8.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback&lt;GyroscopeResponse&gt;, options?: Options)
+**Substitutes:** [on](arkts-sensorservice-sensor-on-f.md)(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback&lt;GyroscopeResponse&gt;, options?: Options)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-Sensor-static subscribeGyroscope(options: SubscribeGyroscopeOptions): void--><!--Device-Sensor-static subscribeGyroscope(options: SubscribeGyroscopeOptions): void-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [SubscribeGyroscopeOptions](arkts-sensorservice-system-sensor-subscribegyroscopeoptions-i.md) | Yes | Type of data to return. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [SubscribeGyroscopeOptions](arkts-sensorservice-system-sensor-subscribegyroscopeoptions-i.md) | Yes |
 
 **Examples**
 
@@ -316,28 +316,28 @@ Subscribes to data changes of the heart rate sensor. If this API is called multi
 
 > **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
-> [HEART_RATE](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> HEART_RATE
 > instead. since API Version 8.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback&lt;HeartRateResponse&gt;, options?: Options)
+**Substitutes:** [on](arkts-sensorservice-sensor-on-f.md)(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback&lt;HeartRateResponse&gt;, options?: Options)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-Sensor-static subscribeHeartRate(options: SubscribeHeartRateOptions): void--><!--Device-Sensor-static subscribeHeartRate(options: SubscribeHeartRateOptions): void-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [SubscribeHeartRateOptions](arkts-sensorservice-system-sensor-subscribeheartrateoptions-i.md) | Yes | Type of data to return. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [SubscribeHeartRateOptions](arkts-sensorservice-system-sensor-subscribeheartrateoptions-i.md) | Yes |
 
 **Examples**
 
@@ -365,10 +365,12 @@ Subscribes to data changes of the ambient light sensor. If this API is called mu
 
 > **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
-> [AMBIENT_LIGHT](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> AMBIENT_LIGHT
 > since API Version 8.
 
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 
@@ -376,15 +378,13 @@ Subscribes to data changes of the ambient light sensor. If this API is called mu
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-Sensor-static subscribeLight(options: SubscribeLightOptions): void--><!--Device-Sensor-static subscribeLight(options: SubscribeLightOptions): void-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [SubscribeLightOptions](arkts-sensorservice-system-sensor-subscribelightoptions-i.md) | Yes | Type of data to return. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [SubscribeLightOptions](arkts-sensorservice-system-sensor-subscribelightoptions-i.md) | Yes |
 
 **Examples**
 
@@ -412,26 +412,26 @@ Subscribes to wearing status changes of a wearable device. If this API is called
 
 > **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
-> [WEAR_DETECTION](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> WEAR_DETECTION
 > instead. since API Version 8.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;, options?: Options)
+**Substitutes:** [on](arkts-sensorservice-sensor-on-f.md)(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;, options?: Options)
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-Sensor-static subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void--><!--Device-Sensor-static subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [SubscribeOnBodyStateOptions](arkts-sensorservice-system-sensor-subscribeonbodystateoptions-i.md) | Yes | Type of data to return. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [SubscribeOnBodyStateOptions](arkts-sensorservice-system-sensor-subscribeonbodystateoptions-i.md) | Yes |
 
 **Examples**
 
@@ -459,10 +459,12 @@ Subscribes to data changes of the proximity sensor. If this API is called multip
 
 > **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
-> [PROXIMITY](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> PROXIMITY
 > instead. since API Version 8.
 
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 
@@ -470,15 +472,13 @@ Subscribes to data changes of the proximity sensor. If this API is called multip
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-Sensor-static subscribeProximity(options: SubscribeProximityOptions): void--><!--Device-Sensor-static subscribeProximity(options: SubscribeProximityOptions): void-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [SubscribeProximityOptions](arkts-sensorservice-system-sensor-subscribeproximityoptions-i.md) | Yes | Type of data to return. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [SubscribeProximityOptions](arkts-sensorservice-system-sensor-subscribeproximityoptions-i.md) | Yes |
 
 **Examples**
 
@@ -506,28 +506,28 @@ Subscribes to data changes of the step counter sensor. If this API is called mul
 
 > **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
-> [PEDOMETER](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> PEDOMETER
 > instead. since API Version 8.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback&lt;PedometerResponse&gt;, options?: Options)
+**Substitutes:** [on](arkts-sensorservice-sensor-on-f.md)(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback&lt;PedometerResponse&gt;, options?: Options)
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-Sensor-static subscribeStepCounter(options: SubscribeStepCounterOptions): void--><!--Device-Sensor-static subscribeStepCounter(options: SubscribeStepCounterOptions): void-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [SubscribeStepCounterOptions](arkts-sensorservice-system-sensor-subscribestepcounteroptions-i.md) | Yes | Type of data to return. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [SubscribeStepCounterOptions](arkts-sensorservice-system-sensor-subscribestepcounteroptions-i.md) | Yes |
 
 **Examples**
 
@@ -555,20 +555,20 @@ Unsubscribes from data changes of the acceleration sensor.
 
 > **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
-> [ACCELEROMETER](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> ACCELEROMETER
 > instead. since API Version 8.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
-**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback?: Callback&lt;AccelerometerResponse&gt;)
+**Substitutes:** [off](arkts-sensorservice-sensor-off-f.md)(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback?: Callback&lt;AccelerometerResponse&gt;)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-Sensor-static unsubscribeAccelerometer(): void--><!--Device-Sensor-static unsubscribeAccelerometer(): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -588,18 +588,18 @@ Unsubscribes from data changes of the barometer sensor.
 
 > **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
-> [BAROMETER](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> BAROMETER
 > instead. since API Version 8.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
-**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback&lt;BarometerResponse&gt;)
+**Substitutes:** [off](arkts-sensorservice-sensor-off-f.md)(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback&lt;BarometerResponse&gt;)
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-Sensor-static unsubscribeBarometer(): void--><!--Device-Sensor-static unsubscribeBarometer(): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -619,18 +619,18 @@ Unsubscribes from data changes of the compass sensor.
 
 > **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
-> [ORIENTATION](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> ORIENTATION
 > instead.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
-**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
+**Substitutes:** [off](arkts-sensorservice-sensor-off-f.md)(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-Sensor-static unsubscribeCompass(): void--><!--Device-Sensor-static unsubscribeCompass(): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -650,18 +650,18 @@ Unsubscribes from data changes of the device orientation sensor.
 
 > **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
-> [ORIENTATION](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> ORIENTATION
 > instead. since API Version 8.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
-**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
+**Substitutes:** [off](arkts-sensorservice-sensor-off-f.md)(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-Sensor-static unsubscribeDeviceOrientation(): void--><!--Device-Sensor-static unsubscribeDeviceOrientation(): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -681,20 +681,20 @@ Unsubscribes from data changes of the gyroscope sensor.
 
 > **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
-> [GYROSCOPE](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> GYROSCOPE
 > instead. since API Version 8.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
-**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback?: Callback&lt;GyroscopeResponse&gt;)
+**Substitutes:** [off](arkts-sensorservice-sensor-off-f.md)(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback?: Callback&lt;GyroscopeResponse&gt;)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-Sensor-static unsubscribeGyroscope(): void--><!--Device-Sensor-static unsubscribeGyroscope(): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -714,20 +714,20 @@ Unsubscribes from data changes of the heart rate sensor.
 
 > **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
-> [HEART_RATE](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> HEART_RATE
 > instead. since API Version 8.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
-**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback?: Callback&lt;HeartRateResponse&gt;)
+**Substitutes:** [off](arkts-sensorservice-sensor-off-f.md)(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback?: Callback&lt;HeartRateResponse&gt;)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-Sensor-static unsubscribeHeartRate(): void--><!--Device-Sensor-static unsubscribeHeartRate(): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -747,18 +747,18 @@ Unsubscribes from data changes of the ambient light sensor.
 
 > **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
-> [AMBIENT_LIGHT](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> AMBIENT_LIGHT
 > instead. since API Version 8.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
-**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback&lt;LightResponse&gt;)
+**Substitutes:** [off](arkts-sensorservice-sensor-off-f.md)(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback&lt;LightResponse&gt;)
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-Sensor-static unsubscribeLight(): void--><!--Device-Sensor-static unsubscribeLight(): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -778,18 +778,18 @@ Unsubscribes from wearing status changes of a wearable device.
 
 > **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
-> [WEAR_DETECTION](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> WEAR_DETECTION
 > instead. since API Version 8.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
-**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback&lt;WearDetectionResponse&gt;)
+**Substitutes:** [off](arkts-sensorservice-sensor-off-f.md)(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback&lt;WearDetectionResponse&gt;)
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-Sensor-static unsubscribeOnBodyState(): void--><!--Device-Sensor-static unsubscribeOnBodyState(): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -809,18 +809,18 @@ Unsubscribes from data changes of the proximity sensor.
 
 > **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
-> [PROXIMITY](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> PROXIMITY
 > instead. since API Version 8.
 
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 
 **Substitutes:** [PROXIMITY](arkts-sensorservice-sensor-sensorid-e.md#proximity)
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-Sensor-static unsubscribeProximity(): void--><!--Device-Sensor-static unsubscribeProximity(): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -840,20 +840,20 @@ Unsubscribes from data changes of the step counter sensor.
 
 > **NOTE：**&gt;
 > Except for lite wearables, You are advised to use
-> [PEDOMETER](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> PEDOMETER
 > instead. since API Version 8.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
-**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback?: Callback&lt;PedometerResponse&gt;)
+**Substitutes:** [off](arkts-sensorservice-sensor-off-f.md)(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback?: Callback&lt;PedometerResponse&gt;)
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-Sensor-static unsubscribeStepCounter(): void--><!--Device-Sensor-static unsubscribeStepCounter(): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -862,4 +862,3 @@ Unsubscribes from data changes of the step counter sensor.
 ```TypeScript
 Sensor.unsubscribeStepCounter();
 ```
-

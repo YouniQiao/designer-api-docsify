@@ -23,11 +23,11 @@ Obtains an anonymous key certificate in offline mode for a specified user. This 
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-huks-function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,      params: HuksParam[]): Promise<HuksReturnResult>--><!--Device-huks-function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,      params: HuksParam[]): Promise<HuksReturnResult>-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -35,35 +35,34 @@ Obtains an anonymous key certificate in offline mode for a specified user. This 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| userId | number | Yes | User ID <br>The value range is all integers. |
-| keyAlias | string | Yes | Alias of the key. The certificate to be obtained stores the key. |
-| params | [HuksParam](arkts-universalkeystore-huks-huksparam-i.md)[] | Yes | Options for attesting the key. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| userId | number | Yes |
+| keyAlias | string | Yes |
+| params | [HuksParam](arkts-universalkeystore-huks-huksparam-i.md)[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | Promise used to return the result. When the call is successful, the **certChains** member of the **HuksReturnResult** object is the obtained certificate chain. Otherwise, the member is empty. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The app does not have sufficient permissions. Possible causes: The cross-account permission is not granted, the system is not unlocked by the user, or the user does not exist. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system apps use system APIs. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | The API is not supported. |
-| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | The function is not supported. Possible causes: 1. The algorithm mode is not supported. 2. The group key is not supported. 3. The extended encryption key is not supported. |
-| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | The algorithm parameter is missing. |
-| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | The algorithm parameter is invalid. |
-| [12000004](../errorcode-huks.md#12000004-file-error) | The file operation failed. |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | The IPC communication failed. |
-| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | The encryption engine is faulty. |
-| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | The queried entity does not exist. |
-| [12000012](../errorcode-huks.md#12000012-external-error) | The device environment or input parameter is abnormal. |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | The memory is insufficient. |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | The parameter is incorrect. Possible causes: 1. A mandatory parameter is left empty. 2. The parameter type is incorrect. 3. The parameter verification failed. |
-| [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) | The operation times out. This may be caused by network jitter. You can try again later. |
-| 12000027 | The network is unavailable. Check network connections. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [12000001](../errorcode-huks.md#12000001-feature-not-supported) |
+| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) |
+| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) |
+| [12000004](../errorcode-huks.md#12000004-file-error) |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) |
+| [12000012](../errorcode-huks.md#12000012-external-error) |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
+| [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) |
+| 12000027 |

@@ -4,7 +4,7 @@
 
 **起始版本：** 20
 
-<!--Device-unnamed-declare enum PdfLoadResult--><!--Device-unnamed-declare enum PdfLoadResult-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -18,7 +18,7 @@ PDF页面加载成功。
 
 **起始版本：** 20
 
-<!--Device-PdfLoadResult-LOAD_SUCCESS = 0--><!--Device-PdfLoadResult-LOAD_SUCCESS = 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -32,7 +32,7 @@ PDF文件加载失败。
 
 **起始版本：** 20
 
-<!--Device-PdfLoadResult-PARSE_ERROR_FILE = 1--><!--Device-PdfLoadResult-PARSE_ERROR_FILE = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -46,7 +46,7 @@ PDF文件格式不支持。
 
 **起始版本：** 20
 
-<!--Device-PdfLoadResult-PARSE_ERROR_FORMAT = 2--><!--Device-PdfLoadResult-PARSE_ERROR_FORMAT = 2-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -60,7 +60,7 @@ PDF文件密码不正确。
 
 **起始版本：** 20
 
-<!--Device-PdfLoadResult-PARSE_ERROR_PASSWORD = 3--><!--Device-PdfLoadResult-PARSE_ERROR_PASSWORD = 3-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -74,7 +74,6 @@ PDF文件处理失败。
 
 **起始版本：** 20
 
-<!--Device-PdfLoadResult-PARSE_ERROR_HANDLER = 4--><!--Device-PdfLoadResult-PARSE_ERROR_HANDLER = 4-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-

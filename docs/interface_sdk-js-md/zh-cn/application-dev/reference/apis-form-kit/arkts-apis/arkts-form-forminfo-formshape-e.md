@@ -2,9 +2,9 @@
 
 定义卡片形状枚举。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-formInfo-enum FormShape--><!--Device-formInfo-enum FormShape-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -16,11 +16,11 @@ RECT = 1
 
 矩形 form。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-FormShape-RECT = 1--><!--Device-FormShape-RECT = 1-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -32,11 +32,10 @@ CIRCLE = 2
 
 圆形 form。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-FormShape-CIRCLE = 2--><!--Device-FormShape-CIRCLE = 2-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.Form
-

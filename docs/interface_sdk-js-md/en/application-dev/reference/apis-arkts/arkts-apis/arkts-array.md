@@ -9,7 +9,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Array](arkts-arkts-array-c.md) | Represents a JS API-compatible Array. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Array](arkts-arkts-array-c.md) |

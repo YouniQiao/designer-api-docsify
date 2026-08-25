@@ -4,7 +4,7 @@ Provides the widget error information.
 
 **Since:** 18
 
-<!--Device-unnamed-interface ErrorInformation--><!--Device-unnamed-interface ErrorInformation-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,7 +27,7 @@ errcode: number
 
 **Since:** 18
 
-<!--Device-ErrorInformation-errcode: number--><!--Device-ErrorInformation-errcode: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,9 +45,8 @@ Error message.
 
 **Since:** 18
 
-<!--Device-ErrorInformation-msg: string--><!--Device-ErrorInformation-msg: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

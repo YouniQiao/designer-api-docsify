@@ -17,35 +17,35 @@ TextInput(value?: TextInputOptions)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-TextInputInterface-(value?: TextInputOptions): TextInputAttribute--><!--Device-TextInputInterface-(value?: TextInputOptions): TextInputAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [TextInputOptions](arkts-arkui-textinputoptions-i.md) | 否 | TextInput组件参数。默认值undefined。不设置该参数时，输入框初始化为空。 |
+| 参数名 | [类型](#类型) | 必填 |
+| --- | --- | --- |
+| value | [TextInputOptions](arkts-arkui-textinputoptions-i.md) | 否 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
+| 名称 |
+| --- |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-| [OnContentScrollCallback](arkts-arkui-oncontentscrollcallback-t.md) | 文本内容滚动回调。 |
-| [OnPasteCallback](arkts-arkui-onpastecallback-t.md) | 粘贴回调。 |
-| [OnTextSelectionChangeCallback](arkts-arkui-ontextselectionchangecallback-t.md) | 文本选择变化回调或光标位置变化回调。 |
+| 名称 |
+| --- |
+| [OnContentScrollCallback](arkts-arkui-oncontentscrollcallback-t.md) |
+| [OnPasteCallback](arkts-arkui-onpastecallback-t.md) |
+| [OnSubmitCallback](arkts-arkui-onsubmitcallback-t.md) |
+| [OnTextSelectionChangeCallback](arkts-arkui-ontextselectionchangecallback-t.md) |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-
+| 名称 |
+| --- |

@@ -14,21 +14,20 @@ function getDistributedAccountAbility(): DistributedAccountAbility
 
 Obtains a **DistributedAccountAbility** instance.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-distributedAccount-function getDistributedAccountAbility(): DistributedAccountAbility--><!--Device-distributedAccount-function getDistributedAccountAbility(): DistributedAccountAbility-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [DistributedAccountAbility](arkts-basicservices-distributedaccount-distributedaccountability-i.md) | DistributedAccountAbility** instance obtained. This instance provides APIs for querying and updating the login state of a distributed account. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DistributedAccountAbility](arkts-basicservices-distributedaccount-distributedaccountability-i.md) |
 
 **Examples**
 
 ```TypeScript
 const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
 ```
-

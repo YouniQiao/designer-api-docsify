@@ -4,7 +4,7 @@ Provides the conditions of querySecurityEvent.@interface SecurityEventRule
 
 **Since:** 12
 
-<!--Device-securityGuard-interface SecurityEventRule--><!--Device-securityGuard-interface SecurityEventRule-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -28,7 +28,7 @@ The begin time, format is YYYYMMDDHHMMSS.
 
 **Since:** 12
 
-<!--Device-SecurityEventRule-beginTime?: string--><!--Device-SecurityEventRule-beginTime?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -46,7 +46,7 @@ The end time, format is YYYYMMDDHHMMSS.
 
 **Since:** 12
 
-<!--Device-SecurityEventRule-endTime?: string--><!--Device-SecurityEventRule-endTime?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -64,7 +64,7 @@ The security event ids.
 
 **Since:** 12
 
-<!--Device-SecurityEventRule-eventId: number--><!--Device-SecurityEventRule-eventId: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -82,9 +82,8 @@ The query condition.
 
 **Since:** 12
 
-<!--Device-SecurityEventRule-param?: string--><!--Device-SecurityEventRule-param?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
-

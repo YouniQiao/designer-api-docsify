@@ -4,11 +4,11 @@
 
 **起始版本：** 6
 
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options)
-
-<!--Device-intl-export interface DateTimeOptions--><!--Device-intl-export interface DateTimeOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -24,11 +24,13 @@ import { intl } from '@kit.LocalizationKit';
 dateStyle?: string
 ```
 
-日期显示格式，取值包括："long", "short", "medium", "full", "auto"。不同取值的显示效果请参考附录表1。
+日期显示格式，取值包括："long", "short", "medium", "full", "auto"。不同取值的显示效果请参考[附录表1](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 20
 
@@ -37,8 +39,6 @@ dateStyle?: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DateTimeOptions-dateStyle?: string--><!--Device-DateTimeOptions-dateStyle?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -54,6 +54,8 @@ day?: string
 
 **起始版本：** 6
 
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormatOptions.day](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#day)
@@ -61,8 +63,6 @@ day?: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DateTimeOptions-day?: string--><!--Device-DateTimeOptions-day?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -72,11 +72,13 @@ day?: string
 dayPeriod?: string
 ```
 
-时段的显示格式，取值包括："long", "short", "narrow", "auto"。不同取值的显示效果请参考附录表10。
+时段的显示格式，取值包括："long", "short", "narrow", "auto"。不同取值的显示效果请参考[附录表10](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 20
 
@@ -86,8 +88,6 @@ dayPeriod?: string
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-DateTimeOptions-dayPeriod?: string--><!--Device-DateTimeOptions-dayPeriod?: string-End-->
-
 **系统能力：** SystemCapability.Global.I18n
 
 ## era
@@ -96,11 +96,13 @@ dayPeriod?: string
 era?: string
 ```
 
-纪元的显示格式，取值包括："long", "short", "narrow", "auto"。不同取值的显示效果请参考附录表9。
+纪元的显示格式，取值包括："long", "short", "narrow", "auto"。不同取值的显示效果请参考[附录表9](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 20
 
@@ -109,8 +111,6 @@ era?: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DateTimeOptions-era?: string--><!--Device-DateTimeOptions-era?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -126,6 +126,8 @@ formatMatcher?: string
 
 **起始版本：** 6
 
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormatOptions.formatMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#formatmatcher)
@@ -133,8 +135,6 @@ formatMatcher?: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DateTimeOptions-formatMatcher?: string--><!--Device-DateTimeOptions-formatMatcher?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -150,6 +150,8 @@ hour?: string
 
 **起始版本：** 6
 
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormatOptions.hour](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#hour)
@@ -157,8 +159,6 @@ hour?: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DateTimeOptions-hour?: string--><!--Device-DateTimeOptions-hour?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -174,6 +174,8 @@ true表示使用12小时制，false表示使用24小时制。同时设置hour12�
 
 **起始版本：** 6
 
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormatOptions.hour12](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#hour12)
@@ -181,8 +183,6 @@ true表示使用12小时制，false表示使用24小时制。同时设置hour12�
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DateTimeOptions-hour12?: boolean--><!--Device-DateTimeOptions-hour12?: boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -192,11 +192,13 @@ true表示使用12小时制，false表示使用24小时制。同时设置hour12�
 hourCycle?: string
 ```
 
-时制格式，取值包括："h11", "h12", "h23", "h24"。不设置dateStyle或timeStyle参数时的显示效果请参考附录表5。设置dateStyle或timeStyle参数时的显示效果请参考附录表6。
+时制格式，取值包括："h11", "h12", "h23", "h24"。不设置dateStyle或timeStyle参数时的显示效果请参考[附录表5](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。设置dateStyle或timeStyle参数时的显示效果请参考[附录表6](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 20
 
@@ -205,8 +207,6 @@ hourCycle?: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DateTimeOptions-hourCycle?: string--><!--Device-DateTimeOptions-hourCycle?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -222,13 +222,13 @@ locale?: string
 
 **起始版本：** 6
 
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+
 **废弃版本：** 20
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DateTimeOptions-locale?: string--><!--Device-DateTimeOptions-locale?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -244,6 +244,8 @@ localeMatcher?: string
 
 **起始版本：** 6
 
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormatOptions.localeMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#localematcher)
@@ -251,8 +253,6 @@ localeMatcher?: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DateTimeOptions-localeMatcher?: string--><!--Device-DateTimeOptions-localeMatcher?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -268,6 +268,8 @@ minute?: string
 
 **起始版本：** 6
 
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormatOptions.minute](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#minute)
@@ -275,8 +277,6 @@ minute?: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DateTimeOptions-minute?: string--><!--Device-DateTimeOptions-minute?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -286,11 +286,13 @@ minute?: string
 month?: string
 ```
 
-月份的显示格式，取值包括："numeric", "2-digit", "long", "short", "narrow", "auto"。不同取值的显示效果请参考附录表7。
+月份的显示格式，取值包括："numeric", "2-digit", "long", "short", "narrow", "auto"。不同取值的显示效果请参考[附录表7](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 20
 
@@ -299,8 +301,6 @@ month?: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DateTimeOptions-month?: string--><!--Device-DateTimeOptions-month?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -316,6 +316,8 @@ numberingSystem?: string
 
 **起始版本：** 6
 
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormatOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#numberingsystem)
@@ -323,8 +325,6 @@ numberingSystem?: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DateTimeOptions-numberingSystem?: string--><!--Device-DateTimeOptions-numberingSystem?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -340,6 +340,8 @@ second?: string
 
 **起始版本：** 6
 
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormatOptions.second](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#second)
@@ -347,8 +349,6 @@ second?: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DateTimeOptions-second?: string--><!--Device-DateTimeOptions-second?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -358,11 +358,13 @@ second?: string
 timeStyle?: string
 ```
 
-时间显示格式，取值包括："long", "short", "medium", "full", "auto"。不同取值的显示效果请参考附录表2。
+时间显示格式，取值包括："long", "short", "medium", "full", "auto"。不同取值的显示效果请参考[附录表2](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 20
 
@@ -371,8 +373,6 @@ timeStyle?: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DateTimeOptions-timeStyle?: string--><!--Device-DateTimeOptions-timeStyle?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -388,6 +388,8 @@ timeZone?: string
 
 **起始版本：** 6
 
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormatOptions.timeZone](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#timezone)
@@ -395,8 +397,6 @@ timeZone?: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DateTimeOptions-timeZone?: string--><!--Device-DateTimeOptions-timeZone?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -406,11 +406,13 @@ timeZone?: string
 timeZoneName?: string
 ```
 
-时区名称的本地化表示，取值包括："long", "short", "auto"。不同取值的显示效果请参考附录表8。
+时区名称的本地化表示，取值包括："long", "short", "auto"。不同取值的显示效果请参考[附录表8](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 20
 
@@ -420,8 +422,6 @@ timeZoneName?: string
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-DateTimeOptions-timeZoneName?: string--><!--Device-DateTimeOptions-timeZoneName?: string-End-->
-
 **系统能力：** SystemCapability.Global.I18n
 
 ## weekday
@@ -430,11 +430,13 @@ timeZoneName?: string
 weekday?: string
 ```
 
-星期的显示格式，取值包括："long", "short", "narrow", "auto"。不同取值的显示效果请参考附录表4。
+星期的显示格式，取值包括："long", "short", "narrow", "auto"。不同取值的显示效果请参考[附录表4](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 20
 
@@ -444,8 +446,6 @@ weekday?: string
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-DateTimeOptions-weekday?: string--><!--Device-DateTimeOptions-weekday?: string-End-->
-
 **系统能力：** SystemCapability.Global.I18n
 
 ## year
@@ -454,11 +454,13 @@ weekday?: string
 year?: string
 ```
 
-年份的显示格式，取值包括："numeric", "2-digit"。不同取值的显示效果请参考附录表3。
+年份的显示格式，取值包括："numeric", "2-digit"。不同取值的显示效果请参考[附录表3](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 20
 
@@ -468,7 +470,4 @@ year?: string
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-DateTimeOptions-year?: string--><!--Device-DateTimeOptions-year?: string-End-->
-
 **系统能力：** SystemCapability.Global.I18n
-

@@ -4,7 +4,7 @@ Enumerates of window posture mode.
 
 **Since:** 26.0.0
 
-<!--Device-window-enum WindowPostureMode--><!--Device-window-enum WindowPostureMode-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -22,9 +22,8 @@ Desktop mode, when the following conditions are met:
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WindowPostureMode-DESKTOP_MODE = 0--><!--Device-WindowPostureMode-DESKTOP_MODE = 0-End-->
-
 **System capability:** SystemCapability.Window.SessionManager
-

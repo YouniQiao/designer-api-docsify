@@ -8,20 +8,19 @@ Describes the video playback state. You can obtain the state through the **state
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [AVPlayerState](arkts-media-media-avplayerstate-t.md)
 
-<!--Device-media-type VideoPlayState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | 'error'--><!--Device-media-type VideoPlayState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | 'error'-End-->
-
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
-| Type | Description |
-| --- | --- |
-| 'idle' | The video player is idle. |
-| 'prepared' | Video playback is being prepared. |
-| 'playing' | Video playback is in progress. |
-| 'paused' | Video playback is paused. |
-| 'stopped' | Video playback is stopped. |
-| 'error' | Video playback is in the error state. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'idle' |
+| 'prepared' |
+| 'playing' |
+| 'paused' |
+| 'stopped' |
+| 'error' |

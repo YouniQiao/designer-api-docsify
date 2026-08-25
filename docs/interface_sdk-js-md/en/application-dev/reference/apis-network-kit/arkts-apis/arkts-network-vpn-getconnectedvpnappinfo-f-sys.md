@@ -16,9 +16,9 @@ Get the connected VPN App Info.
 
 **Since:** 20
 
-**Required permissions:** ohos.permission.MANAGE_VPN
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-vpn-function getConnectedVpnAppInfo(): Promise<Array<string>>--><!--Device-vpn-function getConnectedVpnAppInfo(): Promise<Array<string>>-End-->
+**Required permissions:** ohos.permission.MANAGE_VPN
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -26,16 +26,15 @@ Get the connected VPN App Info.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | The promise returned by the connected VPN App Info. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [19900001](../errorcode-net-vpn.md#19900001-invalid-parameter) | Invalid parameter value. |
-| [19900002](../errorcode-net-vpn.md#19900002-system-internal-error) | System internal error. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [19900001](../errorcode-net-vpn.md#19900001-invalid-parameter) |
+| [19900002](../errorcode-net-vpn.md#19900002-system-internal-error) |

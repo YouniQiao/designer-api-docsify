@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-declare interface SpatialEffectParams--><!--Device-unnamed-declare interface SpatialEffectParams-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,20 +18,20 @@
 ## occlusionWeight
 
 ```TypeScript
-occlusionWeight?: double
+occlusionWeight?: number
 ```
 
 空间效果的遮挡权重。 <br>取值范围:[0, 1]。默认值:0。
 
-**类型：** double
+**类型：** number
 
 **起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SpatialEffectParams-occlusionWeight?: double--><!--Device-SpatialEffectParams-occlusionWeight?: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,22 +40,21 @@ occlusionWeight?: double
 ## position
 
 ```TypeScript
-position: SpatialPosition | double
+position: SpatialPosition | number
 ```
 
 由角点或深度值定义的空间位置。
 
-**类型：** [SpatialPosition](arkts-arkui-spatialposition-i-sys.md) \| double
+**类型：** [SpatialPosition](arkts-arkui-spatialposition-i-sys.md) \| number
 
 **起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SpatialEffectParams-position: SpatialPosition | double--><!--Device-SpatialEffectParams-position: SpatialPosition | double-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
-

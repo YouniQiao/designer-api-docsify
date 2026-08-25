@@ -6,11 +6,11 @@ Defines a reminder for a scheduled timer.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ReminderRequestTimer](arkts-backgroundtasks-reminderagentmanager-reminderrequesttimer-i.md)
-
-<!--Device-reminderAgent-interface ReminderRequestTimer--><!--Device-reminderAgent-interface ReminderRequestTimer-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -32,11 +32,10 @@ Number of seconds in the countdown timer. Unit: s.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** triggerTimeInSeconds
 
-<!--Device-ReminderRequestTimer-triggerTimeInSeconds: number--><!--Device-ReminderRequestTimer-triggerTimeInSeconds: number-End-->
-
 **System capability:** SystemCapability.Notification.ReminderAgent
-

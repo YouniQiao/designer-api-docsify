@@ -2,9 +2,9 @@
 
 Profile information.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-eSIM-export interface EuiccProfile--><!--Device-eSIM-export interface EuiccProfile-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -24,11 +24,11 @@ accessRules: Array<AccessRule>
 
 Profile access rules.
 
-**Type:** Array&lt;[AccessRule](arkts-telephony-esim-accessrule-i.md)&gt;
+**Type:** Array&lt;[AccessRule](arkts-telephony-esim-accessrule-i-sys.md)&gt;
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-EuiccProfile-accessRules: Array<AccessRule>--><!--Device-EuiccProfile-accessRules: Array<AccessRule>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -44,9 +44,9 @@ Profile ICCID.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-EuiccProfile-iccid: string--><!--Device-EuiccProfile-iccid: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -62,9 +62,9 @@ Profile nickname.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-EuiccProfile-nickName: string--><!--Device-EuiccProfile-nickName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -80,9 +80,9 @@ Operation ID of the profile.
 
 **Type:** [OperatorId](arkts-telephony-esim-operatorid-i-sys.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-EuiccProfile-operatorId: OperatorId--><!--Device-EuiccProfile-operatorId: OperatorId-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -98,9 +98,9 @@ Profile policy rules.
 
 **Type:** [PolicyRules](arkts-telephony-esim-policyrules-e-sys.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-EuiccProfile-policyRules: PolicyRules--><!--Device-EuiccProfile-policyRules: PolicyRules-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -116,9 +116,9 @@ Profile class.
 
 **Type:** [ProfileClass](arkts-telephony-esim-profileclass-e-sys.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-EuiccProfile-profileClass: ProfileClass--><!--Device-EuiccProfile-profileClass: ProfileClass-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -134,9 +134,9 @@ Profile name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-EuiccProfile-profileName: string--><!--Device-EuiccProfile-profileName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -152,9 +152,9 @@ Service provider name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-EuiccProfile-serviceProviderName: string--><!--Device-EuiccProfile-serviceProviderName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -170,11 +170,10 @@ Profile status.
 
 **Type:** [ProfileState](arkts-telephony-esim-profilestate-e-sys.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-EuiccProfile-state: ProfileState--><!--Device-EuiccProfile-state: ProfileState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
-

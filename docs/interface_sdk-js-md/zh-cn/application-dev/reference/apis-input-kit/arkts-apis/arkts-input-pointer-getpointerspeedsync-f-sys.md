@@ -14,9 +14,9 @@ function getPointerSpeedSync(): int
 
 使用同步方式获取当前鼠标移动速度。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-pointer-function getPointerSpeedSync(): int--><!--Device-pointer-function getPointerSpeedSync(): int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -24,16 +24,16 @@ function getPointerSpeedSync(): int
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 返回鼠标移动速度，范围1-20。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -87,4 +87,3 @@ struct Index {
   }
 }
 ```
-

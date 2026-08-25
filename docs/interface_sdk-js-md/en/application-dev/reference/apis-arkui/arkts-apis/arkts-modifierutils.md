@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [ModifierUtils](arkts-arkui-modifierutils-c.md) | ModifierUtils provides utility methods for modifier and attribute operations. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ModifierUtils](arkts-arkui-modifierutils-c.md) |

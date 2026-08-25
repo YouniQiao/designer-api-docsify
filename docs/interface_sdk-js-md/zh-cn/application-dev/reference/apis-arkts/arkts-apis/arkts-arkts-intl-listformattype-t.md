@@ -8,17 +8,14 @@ export type ListFormatType = 'conjunction' | 'disjunction' | 'unit'
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Intl-export type ListFormatType = 'conjunction' | 'disjunction' | 'unit'--><!--Device-Intl-export type ListFormatType = 'conjunction' | 'disjunction' | 'unit'-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
 
-| 类型 | 说明 |
-| --- | --- |
-| 'conjunction' |  |
-| 'disjunction' |  |
-| 'unit' |  |
-
+| 类型 |
+| --- |
+| 'conjunction' |
+| 'disjunction' |
+| 'unit' |

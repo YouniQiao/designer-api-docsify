@@ -4,7 +4,7 @@ Define edit mode options.
 
 **Since:** 23
 
-<!--Device-unnamed-declare interface EditModeOptions--><!--Device-unnamed-declare interface EditModeOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -12,6 +12,24 @@ Define edit mode options.
 
 ```TypeScript
 ```
+
+## onGetPreviewBadge
+
+```TypeScript
+onGetPreviewBadge?: OnGetPreviewBadgeCallback
+```
+
+Called to return whether to display the number badge or the number displayed on the badge for the context menu preview. If not set, the number of selected items within the display range will be used. Returning false means not displaying the badge. Returning true means using the number of selected items within the display range. Returning a number to include selected items outside the display range.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableGatherSelectedItemsAnimation
 
@@ -27,11 +45,11 @@ Define whether to gather selected items in grid or list when item is long presse
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-EditModeOptions-enableGatherSelectedItemsAnimation?: boolean--><!--Device-EditModeOptions-enableGatherSelectedItemsAnimation?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,31 +67,11 @@ Enable two-finger swipe multi-selection. {@code true} indicates that two-finger 
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-EditModeOptions-enableTwoFingerMultiSelect?: boolean--><!--Device-EditModeOptions-enableTwoFingerMultiSelect?: boolean-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onGetPreviewBadge
-
-```TypeScript
-onGetPreviewBadge?: OnGetPreviewBadgeCallback
-```
-
-Called to return whether to display the number badge or the number displayed on the badge for the context menu preview. If not set, the number of selected items within the display range will be used. Returning false means not displaying the badge. Returning true means using the number of selected items within the display range. Returning a number to include selected items outside the display range.
-
-**Type:** [OnGetPreviewBadgeCallback](arkts-arkui-ongetpreviewbadgecallback-t.md)
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-EditModeOptions-onGetPreviewBadge?: OnGetPreviewBadgeCallback--><!--Device-EditModeOptions-onGetPreviewBadge?: OnGetPreviewBadgeCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -91,11 +89,10 @@ Use default multi-select style. {@code true} indicates that the check box is dis
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-EditModeOptions-useDefaultMultiSelectStyle?: boolean--><!--Device-EditModeOptions-useDefaultMultiSelectStyle?: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

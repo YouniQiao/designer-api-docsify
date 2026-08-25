@@ -16,9 +16,9 @@ function postQueryAsUser(userId:number, handle: AssetMap): Promise<void>
 
 **起始版本：** 12
 
-**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-asset-function postQueryAsUser(userId:number, handle: AssetMap): Promise<void>--><!--Device-asset-function postQueryAsUser(userId:number, handle: AssetMap): Promise<void>-End-->
+**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -26,30 +26,30 @@ function postQueryAsUser(userId:number, handle: AssetMap): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| userId | number | 是 | 用户ID。取值范围大于等于100。 |
-| handle | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | 是 | 待处理的查询句柄，当前包含[asset.preQueryAsUser](arkts-assetstore-asset-prequeryasuser-f-sys.md)执行成功返回的挑战值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| userId | number | 是 |
+| handle | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The caller doesn't have the permission. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [24000001](../errorcode-asset.md#24000001-关键资产服务不可用) | The ASSET service is unavailable. |
-| [24000006](../errorcode-asset.md#24000006-系统内存不足) | Insufficient memory. |
-| [24000010](../errorcode-asset.md#24000010-进程通信错误) | IPC failed. |
-| [24000011](../errorcode-asset.md#24000011-包管理服务异常) | Calling the Bundle Manager service failed. |
-| [24000012](../errorcode-asset.md#24000012-账号系统服务异常) | Calling the OS Account service failed. |
-| [24000013](../errorcode-asset.md#24000013-访问控制服务异常) | Calling the Access Token service failed. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24000001](../errorcode-asset.md#24000001-关键资产服务不可用) |
+| [24000006](../errorcode-asset.md#24000006-系统内存不足) |
+| [24000010](../errorcode-asset.md#24000010-进程通信错误) |
+| [24000011](../errorcode-asset.md#24000011-包管理服务异常) |
+| [24000012](../errorcode-asset.md#24000012-账号系统服务异常) |
+| [24000013](../errorcode-asset.md#24000013-访问控制服务异常) |
 
 **示例**
 
@@ -64,4 +64,3 @@ asset.postQueryAsUser(userId, handle).then(() => {
   console.info(`Succeeded in post-querying Asset from user space.`);
 });
 ```
-

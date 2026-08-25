@@ -4,7 +4,7 @@ Enumerates the display positions of a badge.
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum BadgePosition--><!--Device-unnamed-declare enum BadgePosition-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ The badge is displayed in the upper right corner of the parent component.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-BadgePosition-RightTop--><!--Device-BadgePosition-RightTop-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ The badge is vertically centered on the right of the parent component.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-BadgePosition-Right--><!--Device-BadgePosition-Right-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ The badge is vertically centered on the left of the parent component.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-BadgePosition-Left--><!--Device-BadgePosition-Left-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

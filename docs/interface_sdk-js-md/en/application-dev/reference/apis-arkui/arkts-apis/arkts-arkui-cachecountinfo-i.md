@@ -4,7 +4,7 @@ Define cache count information.@interface CacheCountInfo
 
 **Since:** 22
 
-<!--Device-unnamed-declare interface CacheCountInfo--><!--Device-unnamed-declare interface CacheCountInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ max cache count.
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-CacheCountInfo-maxCount: number--><!--Device-CacheCountInfo-maxCount: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ min cache count.
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-CacheCountInfo-minCount: number--><!--Device-CacheCountInfo-minCount: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

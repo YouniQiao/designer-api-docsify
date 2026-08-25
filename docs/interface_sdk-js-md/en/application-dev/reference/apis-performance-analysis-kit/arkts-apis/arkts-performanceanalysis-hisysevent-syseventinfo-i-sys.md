@@ -2,9 +2,9 @@
 
 Defines a system event.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-hiSysEvent-interface SysEventInfo--><!--Device-hiSysEvent-interface SysEventInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -26,9 +26,9 @@ Event domain.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SysEventInfo-domain: string--><!--Device-SysEventInfo-domain: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -44,9 +44,9 @@ Event type.
 
 **Type:** EventType
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SysEventInfo-eventType: EventType--><!--Device-SysEventInfo-eventType: EventType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -62,9 +62,9 @@ Event name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SysEventInfo-name: string--><!--Device-SysEventInfo-name: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -73,18 +73,17 @@ Event name.
 ## params
 
 ```TypeScript
-params?: Record<string, boolean | int | double | string | bigint | boolean[] | int[] | double[] | string[] | bigint[]> | null | undefined
+params?: object
 ```
 
 Event parameters.
 
-**Type:** Record&lt;string, boolean \| int \| double \| string \| bigint \| boolean[] \| int[] \| double[] \| string[] \| bigint[]&gt; \| null \| undefined
+**Type:** object
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SysEventInfo-params?: Record<string, boolean | int | double | string | bigint | boolean[] | int[] | double[] | string[] | bigint[]> | null | undefined--><!--Device-SysEventInfo-params?: Record<string, boolean | int | double | string | bigint | boolean[] | int[] | double[] | string[] | bigint[]> | null | undefined-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
-

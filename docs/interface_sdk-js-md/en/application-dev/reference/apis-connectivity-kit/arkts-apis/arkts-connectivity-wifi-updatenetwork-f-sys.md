@@ -16,13 +16,13 @@ Updates the specified Wi-Fi configuration.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** updateDeviceConfig
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG
-
-<!--Device-wifi-function updateNetwork(config: WifiDeviceConfig): number--><!--Device-wifi-function updateNetwork(config: WifiDeviceConfig): number-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -30,15 +30,15 @@ Updates the specified Wi-Fi configuration.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | Indicates the Wi-Fi configuration to update. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Returns the network ID in the updated Wi-Fi configuration if the update is successful; returns { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -71,4 +71,3 @@ try {
     console.error("failed:" + JSON.stringify(error));
 }
 ```
-

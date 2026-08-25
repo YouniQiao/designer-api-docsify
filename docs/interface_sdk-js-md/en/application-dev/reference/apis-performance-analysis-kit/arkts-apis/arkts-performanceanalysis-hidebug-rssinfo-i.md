@@ -4,7 +4,7 @@ Describes the physical memory information of the application process.@interface 
 
 **Since:** 24
 
-<!--Device-hidebug-interface RssInfo--><!--Device-hidebug-interface RssInfo-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -26,9 +26,9 @@ Size of the occupied physical memory (including the memory occupied by the share
 
 **Since:** 24
 
-**Atomic service API:** This API can be used in atomic services since API version 24.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-RssInfo-rss: bigint--><!--Device-RssInfo-rss: bigint-End-->
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -44,9 +44,8 @@ Size of the memory occupied by the process in swap space, in KB. The value of th
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
-<!--Device-RssInfo-swapRss: bigint--><!--Device-RssInfo-swapRss: bigint-End-->
-
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
-

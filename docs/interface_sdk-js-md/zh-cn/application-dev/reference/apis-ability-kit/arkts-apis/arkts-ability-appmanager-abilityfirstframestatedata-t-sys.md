@@ -1,18 +1,17 @@
 # AbilityFirstFrameStateData（系统接口）
 
 ```TypeScript
-export type AbilityFirstFrameStateData = _AbilityFirstFrameStateData
+export type AbilityFirstFrameStateData = _AbilityFirstFrameStateData.default
 ```
 
 UIAbility首帧绘制完成回调上报数据结构。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-appManager-export type AbilityFirstFrameStateData = _AbilityFirstFrameStateData--><!--Device-appManager-export type AbilityFirstFrameStateData = _AbilityFirstFrameStateData-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** _AbilityFirstFrameStateData
-
+**属性类型：** _AbilityFirstFrameStateData.default

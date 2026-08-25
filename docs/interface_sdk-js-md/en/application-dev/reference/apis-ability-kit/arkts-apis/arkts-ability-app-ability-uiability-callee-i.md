@@ -2,9 +2,9 @@
 
 Background communication object created by the system for the UIAbility, known as the Callee UIAbility (Callee), which is capable of receiving data sent from the Caller object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export interface Callee--><!--Device-unnamed-export interface Callee-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -14,7 +14,7 @@ Background communication object created by the system for the UIAbility, known a
 import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
-## off_string
+## off
 
 ```TypeScript
 off(method: string): void
@@ -22,27 +22,27 @@ off(method: string): void
 
 Unregisters a caller notification callback, which is invoked when the target UIAbility registers a function.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Callee-off(method: string): void--><!--Device-Callee-off(method: string): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| method | string | Yes | Registered notification message string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| method | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16200005](../errorcode-ability.md#16200005-method-not-registered) | The method has not been registered. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16200005](../errorcode-ability.md#16200005-method-not-registered) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
 
 **Examples**
 
@@ -63,7 +63,7 @@ export default class MainUIAbility extends UIAbility {
 }
 ```
 
-## on_string
+## on
 
 ```TypeScript
 on(method: string, callback: CalleeCallback): void
@@ -71,28 +71,28 @@ on(method: string, callback: CalleeCallback): void
 
 Registers a caller notification callback, which is invoked when the target UIAbility registers a function.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Callee-on(method: string, callback: CalleeCallback): void--><!--Device-Callee-on(method: string, callback: CalleeCallback): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| method | string | Yes | Method name agreed upon by the Caller UIAbility and Callee UIAbility, used by the Callee UIAbility to identify the type of message. |
-| callback | [CalleeCallback](arkts-ability-app-ability-uiability-calleecallback-i.md) | Yes | JS notification synchronization callback of the [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) type. The callback must return at least one empty [rpc.Parcelable](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-parcelable-i.md) object. Otherwise, the function execution fails. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| method | string | Yes |
+| callback | [CalleeCallback](arkts-ability-app-ability-uiability-calleecallback-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16200004](../errorcode-ability.md#16200004-method-registered) | The method has been registered. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16200004](../errorcode-ability.md#16200004-method-registered) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
 
 **Examples**
 
@@ -144,4 +144,3 @@ export default class MainUIAbility extends UIAbility {
   }
 }
 ```
-

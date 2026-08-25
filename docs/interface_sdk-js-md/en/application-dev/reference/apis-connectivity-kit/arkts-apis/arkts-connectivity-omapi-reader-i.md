@@ -4,7 +4,7 @@ Obtains the SE supported by the device. If eSE, SIM, and SIM2 are supported, thr
 
 **Since:** 10
 
-<!--Device-omapi-export interface Reader--><!--Device-omapi-export interface Reader-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.SecureElement
 
@@ -24,16 +24,16 @@ Closes all sessions opened on this reader. All channels opened by these sessions
 
 **Since:** 10
 
-<!--Device-Reader-closeSessions(): void--><!--Device-Reader-closeSessions(): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.SecureElement
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
 
 **Examples**
 
@@ -77,21 +77,21 @@ Obtains the name of this reader. The name is **SIM** for a SIM reader, **SIM2** 
 
 **Since:** 10
 
-<!--Device-Reader-getName(): string--><!--Device-Reader-getName(): string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.SecureElement
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | [Reader]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -122,22 +122,22 @@ Checks whether the SE corresponding to this reader is available.
 
 **Since:** 10
 
-<!--Device-Reader-isSecureElementPresent(): boolean--><!--Device-Reader-isSecureElementPresent(): boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.SecureElement
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true** if the SE is available; **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
 
 **Examples**
 
@@ -168,23 +168,23 @@ Opens a session to connect to an SE in this reader. Multiple sessions can be ope
 
 **Since:** 10
 
-<!--Device-Reader-openSession(): Session--><!--Device-Reader-openSession(): Session-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.SecureElement
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Session | Session instance opened. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Session](../../apis-camera-kit/arkts-apis/arkts-camera-camera-session-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
-| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
 
 **Examples**
 
@@ -209,4 +209,3 @@ function secureElementDemo() {
     }
 }
 ```
-

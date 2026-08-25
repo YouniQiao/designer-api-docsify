@@ -16,9 +16,9 @@ function setShortcutsEnabled(shortcutsInfo: Array<ShortcutInfo>, isEnabled: bool
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.MANAGE_SHORTCUTS
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-shortcutManager-function setShortcutsEnabled(shortcutsInfo: Array<ShortcutInfo>, isEnabled: boolean): Promise<void>--><!--Device-shortcutManager-function setShortcutsEnabled(shortcutsInfo: Array<ShortcutInfo>, isEnabled: boolean): Promise<void>-End-->
+**需要权限：** ohos.permission.MANAGE_SHORTCUTS
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -26,26 +26,26 @@ function setShortcutsEnabled(shortcutsInfo: Array<ShortcutInfo>, isEnabled: bool
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| shortcutsInfo | Array&lt;ShortcutInfo&gt; | 是 | 待启用或禁用的静态快捷方式。<br>**说明：**<br>本接口不区分主应用和分身应用，且仅对静态快捷方式生效，所以 ShortcutInfo中的appIndex和sourceType设置不生效。 |
-| isEnabled | boolean | 是 | 快捷方式是否启用。true：快捷方式启用；false：快捷方式禁用。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| shortcutsInfo | Array & lt;ShortcutInfo & gt; | 是 |
+| isEnabled | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. A non-system application is not allowed to call a system API. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle is not found. |
-| [17700070](../errorcode-bundle.md#17700070-指定的快捷方式id不合法) | The specified shortcut id is illegal. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700070](../errorcode-bundle.md#17700070-指定的快捷方式id不合法) |
 
 **示例**
 
@@ -81,4 +81,3 @@ try {
   console.error(`setShortcutsEnabled errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
 }
 ```
-

@@ -1,8 +1,6 @@
 # String
 
-**Since:** -1
-
-<!--Device-unnamed-interface String--><!--Device-unnamed-interface String-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,11 +15,9 @@
 
 Iterator
 
-**Since:** -1
-
-<!--Device-String-[Symbol.iterator](): IterableIterator<string>--><!--Device-String-[Symbol.iterator](): IterableIterator<string>-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

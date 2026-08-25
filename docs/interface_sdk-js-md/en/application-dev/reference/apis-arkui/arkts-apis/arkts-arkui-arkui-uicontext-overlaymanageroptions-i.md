@@ -1,10 +1,10 @@
 # OverlayManagerOptions
 
-Provides the parameters used for initializing [OverlayManager](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md).@interface OverlayManagerOptions
+Provides the parameters used for initializing [OverlayManager](arkts-arkui-arkui-uicontext-uicontext-c.md).@interface OverlayManagerOptions
 
 **Since:** 15
 
-<!--Device-unnamed-export interface OverlayManagerOptions--><!--Device-unnamed-export interface OverlayManagerOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,6 +16,29 @@ import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObs
 import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
 import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
+
+## onBackPress
+
+```TypeScript
+onBackPress?: OnOverlayBackPressCallback
+```
+
+Callback for intercepting back-press events on an overlay.  
+**NOTE：**
+1. When this callback is registered and **enableBackPressedEvent** is set to **true**,
+the back-press event will not close the overlay automatically. Instead, the overlay invokes this callback to decide whether the event should be propagated to the underlying components.
+2. Return **true** to intercept the event (the event is consumed and will not be passed
+to lower layers), or **false** to allow the event to propagate through to the components below the overlay.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableBackPressedEvent
 
@@ -31,36 +54,11 @@ hether to enable the swipe-to-dismiss gesture for **ComponentContent** under **O
 
 **Since:** 19
 
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-OverlayManagerOptions-enableBackPressedEvent?: boolean--><!--Device-OverlayManagerOptions-enableBackPressedEvent?: boolean-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onBackPress
-
-```TypeScript
-onBackPress?: OnOverlayBackPressCallback
-```
-
-Callback for intercepting back-press events on an overlay.  
-**NOTE：**
-1. When this callback is registered and **enableBackPressedEvent** is set to **true**,
-the back-press event will not close the overlay automatically. Instead, the overlay invokes this callback to decide whether the event should be propagated to the underlying components.
-2. Return **true** to intercept the event (the event is consumed and will not be passed
-to lower layers), or **false** to allow the event to propagate through to the components below the overlay.
-
-**Type:** [OnOverlayBackPressCallback](../../apis-default/arkts-apis/arkts-onoverlaybackpresscallback-t.md)
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OverlayManagerOptions-onBackPress?: OnOverlayBackPressCallback--><!--Device-OverlayManagerOptions-onBackPress?: OnOverlayBackPressCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,11 +76,10 @@ Whether to render the overlay root node. The value **true** means to render the 
 
 **Since:** 15
 
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
-<!--Device-OverlayManagerOptions-renderRootOverlay?: boolean--><!--Device-OverlayManagerOptions-renderRootOverlay?: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

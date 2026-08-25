@@ -5,11 +5,11 @@
 > **说明：**&gt;
 > 从API version 12开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-unnamed-declare namespace uiExtension--><!--Device-unnamed-declare namespace uiExtension-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,25 +23,24 @@ import { uiExtension } from '@kit.ArkUI';
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [AvoidAreaInfo](arkts-arkui-uiextension-avoidareainfo-i.md) | 用于表示窗口避让区的信息。 |
-| [RectChangeOptions](arkts-arkui-uiextension-rectchangeoptions-i.md) | 组件（EmbeddedComponent或UIExtensionComponent）矩形（位置及尺寸）变化返回的值及变化原因。 |
-| [WindowProxy](arkts-arkui-uiextension-windowproxy-i.md) | UIExtension窗口代理。 |
-| [WindowProxyProperties](arkts-arkui-uiextension-windowproxyproperties-i.md) | 用于表示组件的相关信息。 |
+| 名称 |
+| --- |
+| [AvoidAreaInfo](arkts-arkui-uiextension-avoidareainfo-i.md) |
+| [RectChangeOptions](arkts-arkui-uiextension-rectchangeoptions-i.md) |
+| [WindowProxy](arkts-arkui-uiextension-windowproxy-i.md) |
+| [WindowProxyProperties](arkts-arkui-uiextension-windowproxyproperties-i.md) |
 
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [WindowProxy](arkts-arkui-uiextension-windowproxy-i-sys.md) | UIExtension窗口代理。 |
+| 名称 |
+| --- |
+| [WindowProxy](arkts-arkui-uiextension-windowproxy-i-sys.md) |
 <!--DelEnd-->
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-| [EventFlag](arkts-arkui-uiextension-eventflag-e.md) | 事件类型枚举。 |
-| [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md) | 组件（EmbeddedComponent或UIExtensionComponent）矩形（位置及尺寸）变化的原因。 |
-
+| 名称 |
+| --- |
+| [EventFlag](arkts-arkui-uiextension-eventflag-e.md) |
+| [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md) |

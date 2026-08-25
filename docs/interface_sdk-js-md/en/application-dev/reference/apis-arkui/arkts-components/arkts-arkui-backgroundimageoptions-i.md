@@ -4,7 +4,7 @@ Define the options for background image.@interface BackgroundImageOptions
 
 **Since:** 18
 
-<!--Device-unnamed-interface BackgroundImageOptions--><!--Device-unnamed-interface BackgroundImageOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,13 +25,13 @@ Set the repeat style of the background image.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-BackgroundImageOptions-repeat?: ImageRepeat--><!--Device-BackgroundImageOptions-repeat?: ImageRepeat-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,13 +47,12 @@ Sets the synchronous or asynchronous mode for background image loading. The defa
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
-<!--Device-BackgroundImageOptions-syncLoad?: boolean--><!--Device-BackgroundImageOptions-syncLoad?: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,7 +4,7 @@ Declare the options of ToolBarV2ItemText
 
 **起始版本：** 18
 
-<!--Device-unnamed-export interface ToolBarV2ItemTextOptions--><!--Device-unnamed-export interface ToolBarV2ItemTextOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,15 +22,15 @@ activatedColor?: ColorMetrics
 
 Text fontColor when the item is activated.
 
-**类型：** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ToolBarV2ItemTextOptions-activatedColor?: ColorMetrics--><!--Device-ToolBarV2ItemTextOptions-activatedColor?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,15 +42,15 @@ color?: ColorMetrics
 
 Define text fontColor.
 
-**类型：** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ToolBarV2ItemTextOptions-color?: ColorMetrics--><!--Device-ToolBarV2ItemTextOptions-color?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,15 +62,14 @@ text: ResourceStr
 
 Define text content.
 
-**类型：** [ResourceStr](../../apis-default/arkts-apis/arkts-resourcestr-t.md)
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ToolBarV2ItemTextOptions-text: ResourceStr--><!--Device-ToolBarV2ItemTextOptions-text: ResourceStr-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

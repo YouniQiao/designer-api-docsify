@@ -1,31 +1,27 @@
 # WeakMapConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface WeakMapConstructor--><!--Device-unnamed-interface WeakMapConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
+## [[Construct]]
 
 ```TypeScript
 new <K extends object, V>(iterable: Iterable<readonly [K, V]>): WeakMap<K, V>
 ```
 
-**Since:** -1
-
-<!--Device-WeakMapConstructor-new <K extends object, V>(iterable: Iterable<readonly [K, V]>): WeakMap<K, V>--><!--Device-WeakMapConstructor-new <K extends object, V>(iterable: Iterable<readonly [K, V]>): WeakMap<K, V>-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| iterable | Iterable&lt;readonly [K, V]&gt; | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| iterable | Iterable & lt;readonly [K, V] & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

@@ -6,9 +6,7 @@ Locale class for locale-sensitive operations.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-Intl-export class Locale--><!--Device-Intl-export class Locale-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,20 +25,18 @@ Creates a new Locale.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Locale-public constructor(tag: BCP47LanguageTag | Locale, options?: LocaleOptions)--><!--Device-Locale-public constructor(tag: BCP47LanguageTag | Locale, options?: LocaleOptions)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| tag | BCP47LanguageTag \| Locale | Yes | the tag. |
-| options | LocaleOptions | No | the options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| tag | BCP47LanguageTag \| [Locale](../../apis-localization-kit/arkts-apis/arkts-localization-intl-locale-c.md) | Yes |
+| options | [LocaleOptions](arkts-arkts-intl-localeoptions-i.md) | No |
 
 ## defaultTag
 
@@ -52,19 +48,17 @@ Gets the default tag.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Locale-public static defaultTag(): string--><!--Device-Locale-public static defaultTag(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the default tag. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## initLocale
 
@@ -76,11 +70,9 @@ Initializes the locale.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Locale-public initLocale(): void--><!--Device-Locale-public initLocale(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -94,25 +86,23 @@ Checks if the tag is valid.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Locale-public isTagValid(tag: string): int--><!--Device-Locale-public isTagValid(tag: string): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| tag | string | Yes | the tag. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| tag | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | 1 if valid, 0 otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## langList
 
@@ -124,19 +114,17 @@ Gets the language list.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Locale-public langList(): string--><!--Device-Locale-public langList(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the language list. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## maximize
 
@@ -148,19 +136,17 @@ Gets the most likely values for language, script, and region.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Locale-public maximize(): Locale--><!--Device-Locale-public maximize(): Locale-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Locale | locale with maximized info. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Locale](../../apis-localization-kit/arkts-apis/arkts-localization-intl-locale-c.md) |
 
 ## maximizeInfo
 
@@ -172,25 +158,23 @@ Maximizes the locale info.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Locale-public maximizeInfo(lang: string): string--><!--Device-Locale-public maximizeInfo(lang: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| lang | string | Yes | the language. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [lang](arkts-arkts-lang-n.md) | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the maximized info. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## minimize
 
@@ -202,19 +186,17 @@ Removes information that would be added by maximize().
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Locale-public minimize(): Locale--><!--Device-Locale-public minimize(): Locale-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Locale | locale with minimized info. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Locale](../../apis-localization-kit/arkts-apis/arkts-localization-intl-locale-c.md) |
 
 ## numberingSystemList
 
@@ -226,19 +208,17 @@ Gets the numbering system list.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Locale-public numberingSystemList(): string--><!--Device-Locale-public numberingSystemList(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the numbering system list. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## parseTagImpl
 
@@ -250,25 +230,23 @@ Parses the tag.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Locale-public parseTagImpl(tag: string): string--><!--Device-Locale-public parseTagImpl(tag: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| tag | string | Yes | the tag. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| tag | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the parsed tag. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## regionList
 
@@ -280,19 +258,17 @@ Gets the region list.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Locale-public regionList(): string--><!--Device-Locale-public regionList(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the region list. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## scriptList
 
@@ -304,19 +280,17 @@ Gets the script list.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Locale-public scriptList(): string--><!--Device-Locale-public scriptList(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the script list. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -328,17 +302,174 @@ Returns the full locale identifier string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Locale-public toString(): BCP47LanguageTag--><!--Device-Locale-public toString(): BCP47LanguageTag-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| BCP47LanguageTag | the locale identifier. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md) |
 
+## baseName
+
+```TypeScript
+public get baseName(): string | undefined
+```
+
+Gets the base name.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## calendar
+
+```TypeScript
+public get calendar(): string | undefined
+```
+
+Gets the calendar.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## caseFirst
+
+```TypeScript
+public get caseFirst(): string | undefined
+```
+
+Gets the case first.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## collation
+
+```TypeScript
+public get collation(): string | undefined
+```
+
+Gets the collation.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## hourCycle
+
+```TypeScript
+public get hourCycle(): string | undefined
+```
+
+Gets the hour cycle.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## language
+
+```TypeScript
+public get language(): string | undefined
+```
+
+Gets the language.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## numberingSystem
+
+```TypeScript
+public get numberingSystem(): string | undefined
+```
+
+Gets the numbering system.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## numeric
+
+```TypeScript
+public get numeric(): boolean | undefined
+```
+
+Gets the numeric.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## region
+
+```TypeScript
+public get region(): string | undefined
+```
+
+Gets the region.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## script
+
+```TypeScript
+public get script(): string | undefined
+```
+
+Gets the script.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang

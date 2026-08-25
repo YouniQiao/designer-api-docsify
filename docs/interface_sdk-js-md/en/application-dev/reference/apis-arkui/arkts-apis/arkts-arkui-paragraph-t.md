@@ -8,11 +8,10 @@ Implements a carrier that stores the text content and style. It supports operati
 
 **Since:** 20
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-unnamed-declare type Paragraph = import('../api/@ohos.graphics.text').default.Paragraph--><!--Device-unnamed-declare type Paragraph = import('../api/@ohos.graphics.text').default.Paragraph-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** import('../api/@ohos.graphics.text').default.Paragraph
-

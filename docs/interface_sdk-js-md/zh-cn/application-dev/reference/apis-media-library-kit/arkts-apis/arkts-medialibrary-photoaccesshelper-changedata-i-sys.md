@@ -2,9 +2,9 @@
 
 监听器回调函数的返回值。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-photoAccessHelper-interface ChangeData--><!--Device-photoAccessHelper-interface ChangeData-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -24,9 +24,9 @@ sharedAlbumAssets of the same type
 
 **类型：** Array&lt;[SharedAlbumAsset](arkts-medialibrary-photoaccesshelper-sharedalbumasset-i-sys.md)&gt;
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-ChangeData-sharedAlbumAssets: Array<SharedAlbumAsset>--><!--Device-ChangeData-sharedAlbumAssets: Array<SharedAlbumAsset>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -42,9 +42,9 @@ sharedExtraPhotoAssets of the same type
 
 **类型：** Array&lt;SharedPhotoAsset&gt;
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-ChangeData-sharedExtraPhotoAssets: Array<SharedPhotoAsset>--><!--Device-ChangeData-sharedExtraPhotoAssets: Array<SharedPhotoAsset>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -60,11 +60,10 @@ sharedPhotoAssets of the same type
 
 **类型：** Array&lt;SharedPhotoAsset&gt;
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-ChangeData-sharedPhotoAssets: Array<SharedPhotoAsset>--><!--Device-ChangeData-sharedPhotoAssets: Array<SharedPhotoAsset>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
-

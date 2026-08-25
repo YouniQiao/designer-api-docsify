@@ -1,10 +1,10 @@
 # WatermarkConfiguration
 
-设置水印配置。水印位置从左上角开始计算。
+添加水印的配置参数。水印位置以视频左上角为原点计算。
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-interface WatermarkConfiguration--><!--Device-unnamed-interface WatermarkConfiguration-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -20,15 +20,15 @@ import { media } from '@kit.MediaKit';
 height?: int
 ```
 
-target height of the watermark in pixel The value range is all integers.
+水印图片的高度。 取值为正整数，取值范围为[1, 4096]，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-WatermarkConfiguration-height?: int--><!--Device-WatermarkConfiguration-height?: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -38,15 +38,15 @@ target height of the watermark in pixel The value range is all integers.
 left: int
 ```
 
-水印到左侧像素行的偏移量 取值为整数。
+水印相对于视频左侧位置的偏移量。 取值为整数，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-WatermarkConfiguration-left: int--><!--Device-WatermarkConfiguration-left: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -56,15 +56,15 @@ left: int
 top: int
 ```
 
-水印到顶部像素行的偏移量 取值为整数。
+水印相对于视频顶部位置的偏移量。 取值为整数，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-WatermarkConfiguration-top: int--><!--Device-WatermarkConfiguration-top: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -74,15 +74,14 @@ top: int
 width?: int
 ```
 
-target width of the watermark in pixel The value range is all integers.
+水印图片的宽度。 取值为正整数，取值范围为[1, 4096]，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-WatermarkConfiguration-width?: int--><!--Device-WatermarkConfiguration-width?: int-End-->
-
 **系统能力：** SystemCapability.Multimedia.Media.Core
-

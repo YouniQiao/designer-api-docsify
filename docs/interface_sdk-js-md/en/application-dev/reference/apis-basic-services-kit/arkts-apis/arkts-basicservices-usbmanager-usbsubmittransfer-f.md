@@ -20,28 +20,28 @@ Requests a USB data transfer.
 > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)
 > API to claim a communication interface.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-usbManager-function usbSubmitTransfer(transfer: UsbDataTransferParams): void--><!--Device-usbManager-function usbSubmitTransfer(transfer: UsbDataTransferParams): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| transfer | [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | Yes | As a USB data transfer interface, it is required for a client to initiate a transfer request. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| transfer | [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [14400001](../errorcode-usb.md#14400001-usb-device-connection-denied) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
-| [14400007](../errorcode-usb.md#14400007-resource-busy) | Resource busy. Possible causes:<br>1. The transfer has already been submitted.<br>2. The interface is claimed by another program or driver. |
-| [14400008](../errorcode-usb.md#14400008-no-device-disconnected) | No such device (it may have been disconnected). |
-| [14400009](../errorcode-usb.md#14400009-insufficient-memory) | Insufficient memory. Possible causes:<br>1. Memory allocation failed. |
-| [14400012](../errorcode-usb.md#14400012-io-error) | Transmission I/O error. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14400001](../errorcode-usb.md#14400001-usb-device-connection-denied) |
+| [14400007](../errorcode-usb.md#14400007-resource-busy) |
+| [14400008](../errorcode-usb.md#14400008-no-device-disconnected) |
+| [14400009](../errorcode-usb.md#14400009-insufficient-memory) |
+| [14400012](../errorcode-usb.md#14400012-io-error) |
 
 **Examples**
 
@@ -91,4 +91,3 @@ function usbSubmitTransfer() {
   }
 }
 ```
-

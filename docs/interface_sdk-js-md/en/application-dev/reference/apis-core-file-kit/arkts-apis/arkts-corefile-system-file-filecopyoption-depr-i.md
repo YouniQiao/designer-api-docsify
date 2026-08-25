@@ -4,9 +4,9 @@ Defines the options used in copy().
 
 **Since:** 3
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface FileCopyOption--><!--Device-unnamed-export interface FileCopyOption-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -23,15 +23,58 @@ complete?: () => void
 
 Callback invoked when the API call is complete.
 
-**Type:** () =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
 
-<!--Device-FileCopyOption-complete?: () => void--><!--Device-FileCopyOption-complete?: () => void-End-->
+**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
+
+## fail
+
+```TypeScript
+fail?: (data: string, code: number) => void
+```
+
+Callback invoked when the API call fails. **data** indicates the error information. **code** indicates the returned error code: **202**: invalid parameter **300**: I/O error **301**: file or directory not found
+
+**Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | string | Yes |
+| code | number | Yes |
+
+## success
+
+```TypeScript
+success?: (uri: string) => void
+```
+
+Callback invoked when the API call is successful. This API returns the URI of the destination location.
+
+**Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
+**Deprecated since:** 10
+
+**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
 
 ## dstUri
 
@@ -47,27 +90,9 @@ URI of the location to which the copy is to be saved. The directory of applicati
 
 **Since:** 3
 
-**Deprecated since:** 10
-
-<!--Device-FileCopyOption-dstUri: string--><!--Device-FileCopyOption-dstUri: string-End-->
-
-**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
-
-## fail
-
-```TypeScript
-fail?: (data: string, code: number) => void
-```
-
-Callback invoked when the API call fails. **data** indicates the error information. **code** indicates the returned error code: **202**: invalid parameter **300**: I/O error **301**: file or directory not found
-
-**Type:** (data: string, code: number) =&gt; void
-
-**Since:** 3
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
-
-<!--Device-FileCopyOption-fail?: (data: string, code: number) => void--><!--Device-FileCopyOption-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -85,27 +110,8 @@ URI of the file to copy. Restricted by the underlying file system of lite wearab
 
 **Since:** 3
 
-**Deprecated since:** 10
-
-<!--Device-FileCopyOption-srcUri: string--><!--Device-FileCopyOption-srcUri: string-End-->
-
-**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
-
-## success
-
-```TypeScript
-success?: (uri: string) => void
-```
-
-Callback invoked when the API call is successful. This API returns the URI of the destination location.
-
-**Type:** (uri: string) =&gt; void
-
-**Since:** 3
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
 
-<!--Device-FileCopyOption-success?: (uri: string) => void--><!--Device-FileCopyOption-success?: (uri: string) => void-End-->
-
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
-

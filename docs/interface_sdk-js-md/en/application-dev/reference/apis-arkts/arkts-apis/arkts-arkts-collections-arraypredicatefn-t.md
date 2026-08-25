@@ -9,23 +9,22 @@ Defines the ArkTS Array reduction function, which is used by the 'some' and 'eve
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-collections-type ArrayPredicateFn<ElementType, ArrayType> =    (value: ElementType, index: number, array: ArrayType) => boolean--><!--Device-collections-type ArrayPredicateFn<ElementType, ArrayType> =    (value: ElementType, index: number, array: ArrayType) => boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | ElementType | Yes | Element that is being processed. |
-| index | number | Yes | Index of the element in the ArkTS array. |
-| array | ArrayType | Yes | ArkTS array that is being traversed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ElementType | Yes |
+| index | number | Yes |
+| array | ArrayType | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | True if the value meets the predicate, otherwise false. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

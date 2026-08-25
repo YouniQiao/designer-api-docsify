@@ -4,11 +4,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md)
-
-<!--Device-unnamed-export interface EventTarget--><!--Device-unnamed-export interface EventTarget-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -28,20 +28,20 @@ addEventListener(type: string, listener: EventListener): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** addEventListener
-
-<!--Device-EventTarget-addEventListener(type: string, listener: EventListener): void--><!--Device-EventTarget-addEventListener(type: string, listener: EventListener): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | string | 是 | 监听的事件类型。 |
-| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | string | 是 |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 是 |
 
 **示例**
 
@@ -93,25 +93,25 @@ dispatchEvent(event: Event): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** dispatchEvent
-
-<!--Device-EventTarget-dispatchEvent(event: Event): boolean--><!--Device-EventTarget-dispatchEvent(event: Event): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | [Event](arkts-arkts-worker-event-i.md) | 是 | 需要分发的事件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [Event](arkts-arkts-worker-event-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean |  |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -196,11 +196,11 @@ removeAllListener(): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** removeAllListener
-
-<!--Device-EventTarget-removeAllListener(): void--><!--Device-EventTarget-removeAllListener(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -255,20 +255,20 @@ removeEventListener(type: string, callback?: EventListener): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** removeEventListener
-
-<!--Device-EventTarget-removeEventListener(type: string, callback?: EventListener): void--><!--Device-EventTarget-removeEventListener(type: string, callback?: EventListener): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | string | 是 | 需要移除的事件类型。 |
-| callback | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 否 | 要移除的事件监听的回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | string | 是 |
+| callback | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 否 |
 
 **示例**
 
@@ -314,4 +314,3 @@ workerPort.addEventListener("alert", () => {
 
 workerPort.removeEventListener('alert');
 ```
-

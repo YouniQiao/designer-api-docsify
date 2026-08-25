@@ -4,11 +4,11 @@ The ConfigurationConstant module provides the enumerated values of the environme
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ConfigurationConstant/ConfigurationConstant](arkts-app-ability-configurationconstant.md)
-
-<!--Device-unnamed-declare namespace ConfigurationConstant--><!--Device-unnamed-declare namespace ConfigurationConstant-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -21,7 +21,6 @@ The ConfigurationConstant module provides the enumerated values of the environme
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [ColorMode](arkts-ability-configurationconstant-colormode-depr-e.md) | Enumerates the color modes. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ColorMode](arkts-ability-configurationconstant-colormode-depr-e.md) |

@@ -2,9 +2,9 @@
 
 Describes the fields of notification intelligent unification information.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface UnifiedGroupInfo--><!--Device-unnamed-export interface UnifiedGroupInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -20,9 +20,9 @@ Unified group summary.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-UnifiedGroupInfo-content?: string--><!--Device-UnifiedGroupInfo-content?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -31,16 +31,16 @@ Unified group summary.
 ## extraInfo
 
 ```TypeScript
-extraInfo?: Record<string, RecordData>
+extraInfo?: { [key: string]: any }
 ```
 
 Other unification information.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** { [key: string]: any }
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-UnifiedGroupInfo-extraInfo?: Record<string, RecordData>--><!--Device-UnifiedGroupInfo-extraInfo?: Record<string, RecordData>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -56,9 +56,9 @@ Unified group ID.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-UnifiedGroupInfo-key?: string--><!--Device-UnifiedGroupInfo-key?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -74,9 +74,9 @@ Name of a unification scene.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-UnifiedGroupInfo-sceneName?: string--><!--Device-UnifiedGroupInfo-sceneName?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -92,11 +92,10 @@ Unified group title.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-UnifiedGroupInfo-title?: string--><!--Device-UnifiedGroupInfo-title?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

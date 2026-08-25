@@ -2,9 +2,9 @@
 
 Enumerates the node types.@enum { int }
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export enum NodeType--><!--Device-unnamed-export enum NodeType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -16,9 +16,9 @@ NODE = 1
 
 The node is an empty node.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NodeType-NODE = 1--><!--Device-NodeType-NODE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -30,9 +30,9 @@ GEOMETRY = 2
 
 Geometric type node.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NodeType-GEOMETRY = 2--><!--Device-NodeType-GEOMETRY = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -44,9 +44,9 @@ CAMERA = 3
 
 Camera type node.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NodeType-CAMERA = 3--><!--Device-NodeType-CAMERA = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -58,9 +58,9 @@ LIGHT = 4
 
 Light type node.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NodeType-LIGHT = 4--><!--Device-NodeType-LIGHT = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -72,9 +72,8 @@ CUSTOM = 255
 
 Custom node, which is usually defined in an extension plugin.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-NodeType-CUSTOM = 255--><!--Device-NodeType-CUSTOM = 255-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

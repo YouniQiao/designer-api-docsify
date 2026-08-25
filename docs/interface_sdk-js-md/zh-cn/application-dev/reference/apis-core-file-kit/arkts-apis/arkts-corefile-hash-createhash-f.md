@@ -17,31 +17,31 @@ function createHash(algorithm: string): HashStream
 > **说明：**&gt;
 > HashStream采用流式处理机制，支持分批次更新数据，适用于大文件或数据流的哈希计算，避免一次性加载大文件到内存。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-hash-function createHash(algorithm: string): HashStream--><!--Device-hash-function createHash(algorithm: string): HashStream-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| algorithm | string | 是 | 哈希计算采用的算法。可选 "md5"、"sha1" 或 "sha256"。建议采用安全强度更高的 "sha256"。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [algorithm](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-certchainvalidator-i.md) | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [HashStream](arkts-corefile-hash-hashstream-c.md) | HashStream类的实例，用于生成哈希摘要。 |
+| 类型 |
+| --- |
+| [HashStream](arkts-corefile-hash-hashstream-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error |
-| 13900020 | Invalid argument |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 13900020 |
+| 13900042 |
 
 **示例**
 
@@ -66,4 +66,3 @@ function hashFileWithStream() {
   });
 }
 ```
-

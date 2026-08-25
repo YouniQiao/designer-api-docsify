@@ -6,7 +6,7 @@ This module provides information related to `SendableResource`, including the ap
 
 **Since:** 12
 
-<!--Device-unnamed-interface SendableResource--><!--Device-unnamed-interface SendableResource-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -22,9 +22,9 @@ Application bundle name.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-SendableResource-bundleName: string--><!--Device-SendableResource-bundleName: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -40,9 +40,9 @@ Resource ID. The value ranges are as follows: <br>- Application resource ranges:
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-SendableResource-id: number--><!--Device-SendableResource-id: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -58,9 +58,9 @@ Application module name.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-SendableResource-moduleName: string--><!--Device-SendableResource-moduleName: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -76,9 +76,9 @@ Resource parameters, including the resource name (string type), replacement valu
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-SendableResource-params?: collections.Array <string | number>--><!--Device-SendableResource-params?: collections.Array <string | number>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -94,9 +94,8 @@ Resource type. The options are as follows: <br>- 10001: color <br>- 10002: float
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-SendableResource-type?: number--><!--Device-SendableResource-type?: number-End-->
-
 **System capability:** SystemCapability.Global.ResourceManager
-

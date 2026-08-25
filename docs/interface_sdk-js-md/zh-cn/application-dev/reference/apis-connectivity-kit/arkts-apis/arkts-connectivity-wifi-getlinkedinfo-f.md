@@ -16,21 +16,21 @@ function getLinkedInfo(): Promise<WifiLinkedInfo>
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [getLinkedInfo](arkts-connectivity-wifimanager-getlinkedinfo-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
-<!--Device-wifi-function getLinkedInfo(): Promise<WifiLinkedInfo>--><!--Device-wifi-function getLinkedInfo(): Promise<WifiLinkedInfo>-End-->
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;WifiLinkedInfo&gt; | 表示WLAN连接信息。 |
+| 类型 |
+| --- |
+| Promise & lt;WifiLinkedInfo & gt; |
 
 **示例**
 
@@ -63,23 +63,22 @@ function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [getLinkedInfo](arkts-connectivity-wifimanager-getlinkedinfo-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
-<!--Device-wifi-function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void--><!--Device-wifi-function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void-End-->
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | 是 |
 
 **示例**
 
 参见 [getLinkedInfo](#getlinkedinfo)
-

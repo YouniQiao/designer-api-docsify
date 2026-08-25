@@ -16,24 +16,24 @@ Formats a string by replacing the placeholders in it.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-util-function format(format: string, ...args: Object[]): string--><!--Device-util-function format(format: string, ...args: Object[]): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| format | string | Yes | Format string. This string contains zero or more placeholders, which specify the position and format of the arguments to be inserted. |
-| args | Object[] | Yes | Data used to replace the placeholders in **format**. If **null** is passed in, the first argument is returned by default. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [format](#format) | string | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Object[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Formatted string. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -100,4 +100,3 @@ formattedString = util.format('John finished %d%% of the %s', percentage, arg);
 console.info(formattedString);
 // Output: John finished 80% of the homework
 ```
-

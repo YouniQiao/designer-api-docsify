@@ -8,13 +8,12 @@ Defines a canvas object for drawing content on the **XComponent** component.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-unnamed-declare type DrawingCanvas = import('../api/@ohos.graphics.drawing').default.Canvas--><!--Device-unnamed-declare type DrawingCanvas = import('../api/@ohos.graphics.drawing').default.Canvas-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** import('../api/@ohos.graphics.drawing').default.Canvas
-

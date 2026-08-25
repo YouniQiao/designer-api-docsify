@@ -8,7 +8,7 @@
 
 **起始版本：** 18
 
-<!--Device-unnamed-export interface ArcAlphabetIndexerInterface--><!--Device-unnamed-export interface ArcAlphabetIndexerInterface-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -18,7 +18,7 @@
 import { ArcAlphabetIndexer, ArcAlphabetIndexerAttribute } from '@kit.ArkUI';
 ```
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (info: ArcAlphabetIndexerInitInfo): ArcAlphabetIndexerAttribute
@@ -28,21 +28,20 @@ import { ArcAlphabetIndexer, ArcAlphabetIndexerAttribute } from '@kit.ArkUI';
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
-<!--Device-ArcAlphabetIndexerInterface-(info: ArcAlphabetIndexerInitInfo): ArcAlphabetIndexerAttribute--><!--Device-ArcAlphabetIndexerInterface-(info: ArcAlphabetIndexerInitInfo): ArcAlphabetIndexerAttribute-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| info | [ArcAlphabetIndexerInitInfo](../../apis-default/arkts-apis/arkts-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | 是 | 定义弧形字母索引条的初始化参数，包含字母索引字符串数组和初始选中项索引值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| info | [ArcAlphabetIndexerInitInfo](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ArcAlphabetIndexerAttribute](../../apis-default/arkts-apis/arkts-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
-
+| 类型 |
+| --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |

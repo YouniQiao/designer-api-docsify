@@ -2,9 +2,9 @@
 
 Wi-Fi standard. @enum { int }
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-wifiManager-enum WifiStandard--><!--Device-wifiManager-enum WifiStandard-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -16,9 +16,9 @@ WIFI_STANDARD_UNDEFINED
 
 Undefined
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-WifiStandard-WIFI_STANDARD_UNDEFINED--><!--Device-WifiStandard-WIFI_STANDARD_UNDEFINED-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -30,9 +30,9 @@ WIFI_STANDARD_11A
 
 Wifi 802.11a
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-WifiStandard-WIFI_STANDARD_11A--><!--Device-WifiStandard-WIFI_STANDARD_11A-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -44,9 +44,9 @@ WIFI_STANDARD_11B
 
 Wifi 802.11b
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-WifiStandard-WIFI_STANDARD_11B--><!--Device-WifiStandard-WIFI_STANDARD_11B-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -58,9 +58,9 @@ WIFI_STANDARD_11G
 
 Wifi 802.11g
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-WifiStandard-WIFI_STANDARD_11G--><!--Device-WifiStandard-WIFI_STANDARD_11G-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -72,9 +72,9 @@ WIFI_STANDARD_11N
 
 Wifi 802.11n
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-WifiStandard-WIFI_STANDARD_11N--><!--Device-WifiStandard-WIFI_STANDARD_11N-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -86,9 +86,9 @@ WIFI_STANDARD_11AC
 
 Wifi 802.11ac
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-WifiStandard-WIFI_STANDARD_11AC--><!--Device-WifiStandard-WIFI_STANDARD_11AC-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -100,9 +100,9 @@ WIFI_STANDARD_11AX
 
 Wifi 802.11ax
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-WifiStandard-WIFI_STANDARD_11AX--><!--Device-WifiStandard-WIFI_STANDARD_11AX-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -114,9 +114,8 @@ WIFI_STANDARD_11AD
 
 Wifi 802.11ad
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-WifiStandard-WIFI_STANDARD_11AD--><!--Device-WifiStandard-WIFI_STANDARD_11AD-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
-

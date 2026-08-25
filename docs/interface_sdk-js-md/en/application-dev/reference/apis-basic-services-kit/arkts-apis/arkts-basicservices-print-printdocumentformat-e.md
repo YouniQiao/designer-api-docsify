@@ -4,7 +4,7 @@ Enumerates the data formats.
 
 **Since:** 23
 
-<!--Device-print-enum PrintDocumentFormat--><!--Device-print-enum PrintDocumentFormat-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -18,9 +18,9 @@ Auto-detected format.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_AUTO = 0--><!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_AUTO = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -34,9 +34,9 @@ JPEG.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_JPEG = 1--><!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_JPEG = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -50,9 +50,9 @@ PDF.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_PDF = 2--><!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_PDF = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -66,9 +66,9 @@ PostScript.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_POSTSCRIPT = 3--><!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_POSTSCRIPT = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -82,9 +82,9 @@ Text.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_TEXT = 4--><!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_TEXT = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -98,9 +98,8 @@ RAW.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_RAW = 5--><!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_RAW = 5-End-->
-
 **System capability:** SystemCapability.Print.PrintFramework
-

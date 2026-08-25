@@ -5,9 +5,9 @@
 > **说明：**&gt;
 > - 本Interface首批接口从API version 10开始支持。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-avSession-interface AVCastController--><!--Device-avSession-interface AVCastController-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -25,9 +25,9 @@ setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void
 
 设置播放的surfaceId，在投播sink端使用。结果通过callback异步回调方式返回。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-AVCastController-setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void--><!--Device-AVCastController-setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -35,18 +35,18 @@ setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| surfaceId | string | 是 | 设置播放的surfaceId。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，返回当前设置结果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| surfaceId | string | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
 
 **示例**
 
@@ -94,9 +94,9 @@ setDisplaySurface(surfaceId: string): Promise<void>
 
 设置播放的surfaceId，在投播sink端使用。结果通过Promise异步回调方式返回。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-AVCastController-setDisplaySurface(surfaceId: string): Promise<void>--><!--Device-AVCastController-setDisplaySurface(surfaceId: string): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -104,25 +104,24 @@ setDisplaySurface(surfaceId: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| surfaceId | string | 是 | 设置播放的surfaceId。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| surfaceId | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。返回设置结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
 
 **示例**
 
 参见 [setDisplaySurface](#setdisplaysurface)
-

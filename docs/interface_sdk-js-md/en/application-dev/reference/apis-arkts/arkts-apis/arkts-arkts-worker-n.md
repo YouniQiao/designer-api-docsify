@@ -4,7 +4,7 @@ JS cross-thread communication tool
 
 **Since:** 7
 
-<!--Device-unnamed-declare namespace worker--><!--Device-unnamed-declare namespace worker-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -18,23 +18,22 @@ import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, E
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [ThreadWorker](arkts-arkts-worker-threadworker-c.md) | Before using the following APIs, you must create a ThreadWorker instance. The ThreadWorker class inherits from WorkerEventTarget. |
-| [Worker](arkts-arkts-worker-worker-c.md) | The Worker class contains all Worker functions. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ThreadWorker](arkts-arkts-worker-threadworker-c.md) |
+| [Worker](arkts-arkts-worker-worker-c.md) |
 
 <!--Del-->
 ### Classes(System API)
 
-| Name | Description |
-| --- | --- |
-| [RestrictedWorker](arkts-arkts-worker-restrictedworker-c-sys.md) | The RestrictedWorker class contains all Worker functions. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [RestrictedWorker](arkts-arkts-worker-restrictedworker-c-sys.md) |
 <!--DelEnd-->
 
 ### Constants
 
-| Name | Description |
-| --- | --- |
-| [parentPort](arkts-arkts-worker-con.md#parentport) | The object used by the worker thread to communicate with the host thread. |
-| [workerPort](arkts-arkts-worker-con.md#workerport) | The object used by the worker thread to communicate with the host thread. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [parentPort](arkts-arkts-worker-con.md#parentport) |
+| [workerPort](arkts-arkts-worker-con.md#workerport) |

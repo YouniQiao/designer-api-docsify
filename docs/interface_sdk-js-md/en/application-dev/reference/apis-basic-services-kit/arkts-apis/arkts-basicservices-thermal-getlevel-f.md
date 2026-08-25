@@ -14,17 +14,17 @@ function getLevel(): ThermalLevel
 
 Obtains the current thermal level.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-thermal-function getLevel(): ThermalLevel--><!--Device-thermal-function getLevel(): ThermalLevel-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.ThermalManager
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md) | Thermal level. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md) |
 
 **Examples**
 
@@ -32,4 +32,3 @@ Obtains the current thermal level.
 let level = thermal.getLevel();
 console.info('thermal level is: ' + level);
 ```
-

@@ -16,9 +16,7 @@ Estimated time for fully charging the current device, in unit of milliseconds. T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-batteryInfo-function estimatedRemainingChargeTime(): long--><!--Device-batteryInfo-function estimatedRemainingChargeTime(): long-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -26,7 +24,6 @@ Estimated time for fully charging the current device, in unit of milliseconds. T
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Returns the estimated remaining time for the current device to be fully charged, in ms. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| long |

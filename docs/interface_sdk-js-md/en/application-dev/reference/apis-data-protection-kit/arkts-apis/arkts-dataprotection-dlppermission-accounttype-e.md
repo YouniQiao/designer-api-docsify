@@ -1,14 +1,40 @@
-# AccountType (System API)
+# AccountType
 
 Enumerates the types of authorized accounts.
 
-**Since:** 10
+**Since:** 21
 
-<!--Device-dlpPermission-export enum AccountType--><!--Device-dlpPermission-export enum AccountType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
-**System API:** This is a system API.
+## CLOUD_ACCOUNT
+
+```TypeScript
+CLOUD_ACCOUNT = 1
+```
+
+Cloud account.
+
+**Since:** 21
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
+**System capability:** SystemCapability.Security.DataLossPrevention
+
+## DOMAIN_ACCOUNT
+
+```TypeScript
+DOMAIN_ACCOUNT = 2
+```
+
+Domain account.
+
+**Since:** 21
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
+**System capability:** SystemCapability.Security.DataLossPrevention
 
 ## ENTERPRISE_ACCOUNT
 
@@ -20,7 +46,6 @@ Enterprise account.
 
 **Since:** 21
 
-<!--Device-AccountType-ENTERPRISE_ACCOUNT = 4--><!--Device-AccountType-ENTERPRISE_ACCOUNT = 4-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
-

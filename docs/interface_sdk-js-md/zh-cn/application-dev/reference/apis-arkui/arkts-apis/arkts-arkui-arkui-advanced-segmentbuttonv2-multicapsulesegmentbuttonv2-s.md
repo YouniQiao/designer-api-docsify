@@ -4,9 +4,7 @@
 
 **起始版本：** 18
 
-**装饰器类型：** @ComponentV2
-
-<!--Device-unnamed-export declare struct MultiCapsuleSegmentButtonV2--><!--Device-unnamed-export declare struct MultiCapsuleSegmentButtonV2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,6 +13,24 @@
 ```TypeScript
 import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesChange, SegmentButtonV2Item, SegmentButtonV2Items, TabSegmentButtonV2, CapsuleSegmentButtonV2, MultiCapsuleSegmentButtonV2 } from '@kit.ArkUI';
 ```
+
+## $selectedIndexes
+
+```TypeScript
+$selectedIndexes: OnSelectedIndexesChange
+```
+
+配置分段按钮选中项变更时触发的回调函数。默认值：undefined，未设置时不触发回调。
+
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## build
 
@@ -26,33 +42,11 @@ Sets the build function of the segmented button.
 
 **起始版本：** 18
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-build(): void--><!--Device-MultiCapsuleSegmentButtonV2-build(): void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## $selectedIndexes
-
-```TypeScript
-$selectedIndexes: OnSelectedIndexesChange
-```
-
-配置分段按钮选中项变更时触发的回调函数。默认值：undefined，未设置时不触发回调。
-
-**类型：** [OnSelectedIndexesChange](../../apis-default/arkts-apis/arkts-onselectedindexeschange-t.md)
-
-**起始版本：** 18
-
-**装饰器类型：** @Event
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Event  $selectedIndexes: OnSelectedIndexesChange--><!--Device-MultiCapsuleSegmentButtonV2-@Event  $selectedIndexes: OnSelectedIndexesChange-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,13 +62,11 @@ readonly itemBackgroundBlurStyle?: BlurStyle
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemBackgroundBlurStyle?: BlurStyle--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemBackgroundBlurStyle?: BlurStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,13 +82,11 @@ readonly itemBackgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemBackgroundBlurStyleOptions?: BackgroundBlurStyleOptions--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemBackgroundBlurStyleOptions?: BackgroundBlurStyleOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,13 +102,11 @@ readonly itemBackgroundColor?: ColorMetrics
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemBackgroundColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemBackgroundColor?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -134,13 +122,11 @@ readonly itemBackgroundEffect?: BackgroundEffectOptions
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemBackgroundEffect?: BackgroundEffectOptions--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemBackgroundEffect?: BackgroundEffectOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -156,13 +142,11 @@ readonly itemBorderRadius?: LengthMetrics
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemBorderRadius?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemBorderRadius?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -179,13 +163,11 @@ readonly itemFontColor?: ColorMetrics
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemFontColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemFontColor?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -202,13 +184,11 @@ readonly itemFontSize?: LengthMetrics
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemFontSize?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemFontSize?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -225,13 +205,11 @@ readonly itemFontWeight?: FontWeight
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemFontWeight?: FontWeight--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemFontWeight?: FontWeight-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -248,13 +226,11 @@ readonly itemIconFillColor?: ColorMetrics
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemIconFillColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemIconFillColor?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -271,13 +247,11 @@ readonly itemIconSize?: SizeT<LengthMetrics>
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemIconSize?: SizeT<LengthMetrics>--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemIconSize?: SizeT<LengthMetrics>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -294,13 +268,11 @@ readonly itemMaxFontScale?: number | Resource
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemMaxFontScale?: number | Resource--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemMaxFontScale?: number | Resource-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -317,13 +289,11 @@ readonly itemMinFontScale?: number | Resource
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemMinFontScale?: number | Resource--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemMinFontScale?: number | Resource-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -339,13 +309,11 @@ readonly itemMinHeight?: LengthMetrics
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemMinHeight?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemMinHeight?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -361,13 +329,11 @@ readonly itemPadding?: LocalizedPadding
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemPadding?: LocalizedPadding--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemPadding?: LocalizedPadding-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -379,17 +345,15 @@ readonly items: SegmentButtonV2Items
 
 配置分段按钮的选项集合信息。值为undefined时，不显示选项信息。该成员只读，不支持更改。
 
-**类型：** [SegmentButtonV2Items](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md)
+**类型：** [SegmentButtonV2Items](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md)
 
 **起始版本：** 18
 
-**装饰器类型：** @Require、@Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Require  @Param  readonly items: SegmentButtonV2Items--><!--Device-MultiCapsuleSegmentButtonV2-@Require  @Param  readonly items: SegmentButtonV2Items-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -405,13 +369,11 @@ readonly itemSelectedBackgroundColor?: ColorMetrics
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedBackgroundColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedBackgroundColor?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -428,13 +390,11 @@ readonly itemSelectedFontColor?: ColorMetrics
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedFontColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedFontColor?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -451,13 +411,11 @@ readonly itemSelectedFontSize?: LengthMetrics
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedFontSize?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedFontSize?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -474,13 +432,11 @@ readonly itemSelectedFontWeight?: FontWeight
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedFontWeight?: FontWeight--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedFontWeight?: FontWeight-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -497,13 +453,11 @@ readonly itemSelectedIconFillColor?: ColorMetrics
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedIconFillColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedIconFillColor?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -520,13 +474,11 @@ readonly itemSelectedSymbolFontColor?: ColorMetrics
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedSymbolFontColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSelectedSymbolFontColor?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -543,13 +495,11 @@ readonly itemSpace?: LengthMetrics
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSpace?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSpace?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -566,13 +516,11 @@ readonly itemSymbolFontColor?: ColorMetrics
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSymbolFontColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSymbolFontColor?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -589,13 +537,11 @@ readonly itemSymbolFontSize?: LengthMetrics
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSymbolFontSize?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly itemSymbolFontSize?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -611,13 +557,11 @@ readonly languageDirection?: Direction
 
 **起始版本：** 18
 
-**装饰器类型：** @Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly languageDirection?: Direction--><!--Device-MultiCapsuleSegmentButtonV2-@Param  readonly languageDirection?: Direction-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -633,13 +577,11 @@ onItemClicked?: Callback<number>
 
 **起始版本：** 18
 
-**装饰器类型：** @Event
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Event  onItemClicked?: Callback<number>--><!--Device-MultiCapsuleSegmentButtonV2-@Event  onItemClicked?: Callback<number>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -656,13 +598,10 @@ readonly selectedIndexes: number[]
 
 **起始版本：** 18
 
-**装饰器类型：** @Require、@Param
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MultiCapsuleSegmentButtonV2-@Require  @Param  readonly selectedIndexes: number[]--><!--Device-MultiCapsuleSegmentButtonV2-@Require  @Param  readonly selectedIndexes: number[]-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

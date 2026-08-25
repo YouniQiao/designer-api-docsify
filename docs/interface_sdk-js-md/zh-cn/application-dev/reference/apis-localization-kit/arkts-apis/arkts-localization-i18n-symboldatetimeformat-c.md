@@ -6,7 +6,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-i18n-export class SymbolDateTimeFormat--><!--Device-i18n-export class SymbolDateTimeFormat-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -26,26 +26,26 @@ public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SymbolDateTimeFormat-public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)--><!--Device-SymbolDateTimeFormat-public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locale | Intl.Locale | 否 | 区域对象。默认值：系统区域对象。 |
-| options | [SymbolDateTimeFormatOptions](../../apis-default/arkts-apis/arkts-i18n-symboldatetimeformatoptions-i.md) | 否 | 自定义符号时间日期格式化的配置项。默认值：区域对象默认的符号。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locale | Intl.Locale | 否 |
+| options | [SymbolDateTimeFormatOptions](arkts-localization-i18n-symboldatetimeformatoptions-i.md) | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) |
 
 **示例**
 
@@ -238,25 +238,25 @@ public format(date?: Date | number): string
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SymbolDateTimeFormat-public format(date?: Date | number): string--><!--Device-SymbolDateTimeFormat-public format(date?: Date | number): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| date | Date \| number | 否 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。 <br>默认值：系统时间。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| date | Date \| number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 使用自定义符号的时间日期字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -430,26 +430,26 @@ public formatRange(startDate: Date | number | bigint, endDate: Date | number | b
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SymbolDateTimeFormat-public formatRange(startDate: Date | number | bigint, endDate: Date | number | bigint): string--><!--Device-SymbolDateTimeFormat-public formatRange(startDate: Date | number | bigint, endDate: Date | number | bigint): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| startDate | Date \| number \| bigint | 是 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。 |
-| endDate | Date \| number \| bigint | 是 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| startDate | Date \| number \| bigint | 是 |
+| endDate | Date \| number \| bigint | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 格式化后的时间日期范围字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -489,26 +489,26 @@ public formatRangeToParts(startDate: Date | number | bigint, endDate: Date | num
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SymbolDateTimeFormat-public formatRangeToParts(startDate: Date | number | bigint, endDate: Date | number | bigint):      Intl.DateTimeRangeFormatPart[]--><!--Device-SymbolDateTimeFormat-public formatRangeToParts(startDate: Date | number | bigint, endDate: Date | number | bigint):      Intl.DateTimeRangeFormatPart[]-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| startDate | Date \| number \| bigint | 是 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。 |
-| endDate | Date \| number \| bigint | 是 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| startDate | Date \| number \| bigint | 是 |
+| endDate | Date \| number \| bigint | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Intl.DateTimeRangeFormatPart[] | 时间日期范围元素数组。 |
+| 类型 |
+| --- |
+| Intl.DateTimeRangeFormatPart[] |
 
 **示例**
 
@@ -547,25 +547,25 @@ public formatToParts(date?: Date | number): Intl.DateTimeFormatPart[]
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SymbolDateTimeFormat-public formatToParts(date?: Date | number): Intl.DateTimeFormatPart[]--><!--Device-SymbolDateTimeFormat-public formatToParts(date?: Date | number): Intl.DateTimeFormatPart[]-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| date | Date \| number | 否 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。 <br>默认值：系统时间。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| date | Date \| number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Intl.DateTimeFormatPart[] | 使用自定义符号的时间日期元素数组。 |
+| 类型 |
+| --- |
+| Intl.DateTimeFormatPart[] |
 
 **示例**
 
@@ -602,32 +602,32 @@ public parse(text: string, lenientMode: boolean): number
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SymbolDateTimeFormat-public parse(text: string, lenientMode: boolean): number--><!--Device-SymbolDateTimeFormat-public parse(text: string, lenientMode: boolean): number-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| text | string | 是 | 待解析的本地化时间日期字符串。 |
-| lenientMode | boolean | 是 | 是否采用宽松模式，true表示采用宽松模式，false表示不采用宽松模式。 <br>宽松模式下，能够处理不符合常规逻辑的时间日期值，如"5月32日"会自动转换成"6月1日"进行解析。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| text | string | 是 |
+| lenientMode | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 时间日期字符串解析后对应的时间戳，单位为毫秒（ms）。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) |
 
 **示例**
 
@@ -659,19 +659,19 @@ public resolvedOptions(): ResolvedSymbolDateTimeFormatOptions
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SymbolDateTimeFormat-public resolvedOptions(): ResolvedSymbolDateTimeFormatOptions--><!--Device-SymbolDateTimeFormat-public resolvedOptions(): ResolvedSymbolDateTimeFormatOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ResolvedSymbolDateTimeFormatOptions](../../apis-default/arkts-apis/arkts-i18n-resolvedsymboldatetimeformatoptions-i.md) | 自定义符号时间日期格式化对象配置项的解析结果。 |
+| 类型 |
+| --- |
+| [ResolvedSymbolDateTimeFormatOptions](arkts-localization-i18n-resolvedsymboldatetimeformatoptions-i.md) |
 
 **示例**
 
@@ -697,4 +697,3 @@ let formatter = new i18n.SymbolNumberFormat(locale, {
 });
 let result = formatter.resolvedOptions(); // result.style = 'unit', result.unit = 'day', result.zero = '(0)'
 ```
-

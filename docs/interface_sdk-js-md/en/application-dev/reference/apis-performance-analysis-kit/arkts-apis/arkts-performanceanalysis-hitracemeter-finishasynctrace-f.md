@@ -14,21 +14,21 @@ function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int):
 
 Stops an asynchronous trace with the trace output level specified.The **level**, **name**, and **taskId** used in **finishAsyncTrace()** must be the same as those of [startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md).
 
-**Since:** 23
+**Since:** 19
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
-<!--Device-hiTraceMeter-function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int): void--><!--Device-hiTraceMeter-function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Yes | Trace output level. |
-| name | string | Yes | Name of the trace to start. |
-| taskId | int | Yes | Task ID. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Yes |
+| name | string | Yes |
+| taskId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Examples**
 
@@ -68,4 +68,3 @@ hiTraceMeter.startAsyncTrace(COMMERCIAL, "myTestFunc", 1, "categoryTest", "key=v
 // Stop the second trace with the same name.
 hiTraceMeter.finishAsyncTrace(COMMERCIAL, "myTestFunc", 1);
 ```
-

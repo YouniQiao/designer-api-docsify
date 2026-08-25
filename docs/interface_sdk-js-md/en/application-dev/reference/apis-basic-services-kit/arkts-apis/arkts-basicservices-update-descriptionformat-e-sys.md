@@ -2,9 +2,9 @@
 
 Enumerates description file formats.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-update-export enum DescriptionFormat--><!--Device-update-export enum DescriptionFormat-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -18,9 +18,9 @@ STANDARD = 0
 
 Standard format. This format is applicable to scenarios where complete description is required.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DescriptionFormat-STANDARD = 0--><!--Device-DescriptionFormat-STANDARD = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -34,11 +34,10 @@ SIMPLIFIED = 1
 
 Simple format. This format is applicable to scenarios where only simplified description is required.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DescriptionFormat-SIMPLIFIED = 1--><!--Device-DescriptionFormat-SIMPLIFIED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
-

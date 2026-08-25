@@ -4,9 +4,9 @@
 
 **继承/实现关系：** MetallicRoughnessMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-unnamed-export interface MetallicRoughnessMaterial--><!--Device-unnamed-export interface MetallicRoughnessMaterial-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -20,9 +20,9 @@ ambientOcclusion: MaterialProperty
 
 **类型：** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-MetallicRoughnessMaterial-ambientOcclusion: MaterialProperty--><!--Device-MetallicRoughnessMaterial-ambientOcclusion: MaterialProperty-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -36,9 +36,9 @@ baseColor: MaterialProperty
 
 **类型：** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-MetallicRoughnessMaterial-baseColor: MaterialProperty--><!--Device-MetallicRoughnessMaterial-baseColor: MaterialProperty-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -52,9 +52,9 @@ clearCoat: MaterialProperty
 
 **类型：** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-MetallicRoughnessMaterial-clearCoat: MaterialProperty--><!--Device-MetallicRoughnessMaterial-clearCoat: MaterialProperty-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -68,9 +68,9 @@ clearCoatNormal: MaterialProperty
 
 **类型：** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-MetallicRoughnessMaterial-clearCoatNormal: MaterialProperty--><!--Device-MetallicRoughnessMaterial-clearCoatNormal: MaterialProperty-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -84,9 +84,9 @@ clearCoatRoughness: MaterialProperty
 
 **类型：** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-MetallicRoughnessMaterial-clearCoatRoughness: MaterialProperty--><!--Device-MetallicRoughnessMaterial-clearCoatRoughness: MaterialProperty-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -100,9 +100,9 @@ emissive: MaterialProperty
 
 **类型：** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-MetallicRoughnessMaterial-emissive: MaterialProperty--><!--Device-MetallicRoughnessMaterial-emissive: MaterialProperty-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -116,9 +116,9 @@ material: MaterialProperty
 
 **类型：** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-MetallicRoughnessMaterial-material: MaterialProperty--><!--Device-MetallicRoughnessMaterial-material: MaterialProperty-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -132,9 +132,9 @@ normal: MaterialProperty
 
 **类型：** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-MetallicRoughnessMaterial-normal: MaterialProperty--><!--Device-MetallicRoughnessMaterial-normal: MaterialProperty-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -148,9 +148,9 @@ sheen: MaterialProperty
 
 **类型：** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-MetallicRoughnessMaterial-sheen: MaterialProperty--><!--Device-MetallicRoughnessMaterial-sheen: MaterialProperty-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -164,9 +164,8 @@ specular: MaterialProperty
 
 **类型：** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-MetallicRoughnessMaterial-specular: MaterialProperty--><!--Device-MetallicRoughnessMaterial-specular: MaterialProperty-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

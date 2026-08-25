@@ -4,7 +4,7 @@ Enum of Illuminated type
 
 **Since:** 11
 
-<!--Device-unnamed-declare enum IlluminatedType--><!--Device-unnamed-declare enum IlluminatedType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,9 +20,9 @@ The component is not illuminated.
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-IlluminatedType-NONE = 0--><!--Device-IlluminatedType-NONE = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,9 +38,9 @@ The borders of the component can be illuminated.
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-IlluminatedType-BORDER = 1--><!--Device-IlluminatedType-BORDER = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,9 +56,9 @@ The content of the component can be illuminated.
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-IlluminatedType-CONTENT = 2--><!--Device-IlluminatedType-CONTENT = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,9 +74,9 @@ The borders and content of the component can be illuminated.
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-IlluminatedType-BORDER_CONTENT = 3--><!--Device-IlluminatedType-BORDER_CONTENT = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,9 +92,9 @@ The borders of the component can be illuminated, with a luminous effect applied 
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-IlluminatedType-BLOOM_BORDER = 4--><!--Device-IlluminatedType-BLOOM_BORDER = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -110,11 +110,10 @@ The borders and content of the component can be illuminated, with a luminous eff
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-IlluminatedType-BLOOM_BORDER_CONTENT = 5--><!--Device-IlluminatedType-BLOOM_BORDER_CONTENT = 5-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

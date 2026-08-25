@@ -2,9 +2,9 @@
 
 证书凭据授权请求信息。
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-certificateManagerDialog-export interface AuthorizeRequest--><!--Device-certificateManagerDialog-export interface AuthorizeRequest-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
@@ -24,11 +24,11 @@ certPurpose?: certificateManager.CertificatePurpose
 
 **类型：** certificateManager.CertificatePurpose
 
-**起始版本：** 23
+**起始版本：** 22
+
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AuthorizeRequest-certPurpose?: certificateManager.CertificatePurpose--><!--Device-AuthorizeRequest-certPurpose?: certificateManager.CertificatePurpose-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
@@ -42,11 +42,11 @@ certTypes: Array<CertificateType>
 
 **类型：** Array&lt;[CertificateType](arkts-devicecertificate-certificatemanagerdialog-certificatetype-e.md)&gt;
 
-**起始版本：** 23
+**起始版本：** 22
+
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AuthorizeRequest-certTypes: Array<CertificateType>--><!--Device-AuthorizeRequest-certTypes: Array<CertificateType>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
@@ -63,9 +63,9 @@ issuers?: Array<Uint8Array>
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AuthorizeRequest-issuers?: Array<Uint8Array>--><!--Device-AuthorizeRequest-issuers?: Array<Uint8Array>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
@@ -81,9 +81,9 @@ keyAlgIDs?: Array<string>
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AuthorizeRequest-keyAlgIDs?: Array<string>--><!--Device-AuthorizeRequest-keyAlgIDs?: Array<string>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
@@ -99,9 +99,8 @@ uri?: string
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AuthorizeRequest-uri?: string--><!--Device-AuthorizeRequest-uri?: string-End-->
-
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
-

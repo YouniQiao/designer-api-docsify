@@ -2,9 +2,9 @@
 
 触屏输入事件类型。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-export declare enum Action--><!--Device-unnamed-export declare enum Action-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -16,9 +16,9 @@ CANCEL = 0
 
 触屏取消。触屏down事件异常打断，未正常闭环，例如：手指按下后未抬起，屏幕发生旋转、折叠或有新hover等场景时触发cancel事件。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Action-CANCEL = 0--><!--Device-Action-CANCEL = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -30,9 +30,9 @@ DOWN = 1
 
 触屏按下。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Action-DOWN = 1--><!--Device-Action-DOWN = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -44,9 +44,9 @@ MOVE = 2
 
 触屏移动。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Action-MOVE = 2--><!--Device-Action-MOVE = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -58,9 +58,9 @@ UP = 3
 
 触屏抬起。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Action-UP = 3--><!--Device-Action-UP = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -74,9 +74,9 @@ PULL_DOWN = 4
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Action-PULL_DOWN = 4--><!--Device-Action-PULL_DOWN = 4-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -90,9 +90,9 @@ PULL_MOVE = 5
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Action-PULL_MOVE = 5--><!--Device-Action-PULL_MOVE = 5-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -106,9 +106,8 @@ PULL_UP = 6
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Action-PULL_UP = 6--><!--Device-Action-PULL_UP = 6-End-->
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
-

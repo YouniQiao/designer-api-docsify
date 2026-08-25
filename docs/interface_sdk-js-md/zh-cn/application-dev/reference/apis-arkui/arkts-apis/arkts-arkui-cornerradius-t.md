@@ -8,13 +8,12 @@ export type CornerRadius = Corners<Vector2>
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-unnamed-export type CornerRadius = Corners<Vector2>--><!--Device-unnamed-export type CornerRadius = Corners<Vector2>-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** [Corners](../../apis-default/arkts-apis/arkts-graphics-corners-i.md)&lt;[Vector2](../../apis-default/arkts-apis/arkts-graphics-vector2-i.md)&gt;
-
+**属性类型：** [Corners](arkts-arkui-graphics-corners-i.md)&lt;[Vector2](arkts-arkui-graphics-vector2-i.md)&gt;

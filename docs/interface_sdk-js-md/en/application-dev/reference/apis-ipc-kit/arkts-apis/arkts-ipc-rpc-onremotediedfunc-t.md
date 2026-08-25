@@ -8,7 +8,6 @@ Called to perform subsequent operations when a death notification of the remote 
 
 **Since:** 23
 
-<!--Device-rpc-type OnRemoteDiedFunc = () => void--><!--Device-rpc-type OnRemoteDiedFunc = () => void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
-

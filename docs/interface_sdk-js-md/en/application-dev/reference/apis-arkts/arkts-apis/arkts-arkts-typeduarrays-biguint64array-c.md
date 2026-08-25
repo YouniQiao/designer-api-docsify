@@ -4,9 +4,7 @@ class BigUint64Array
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class BigUint64Array--><!--Device-unnamed-export class BigUint64Array-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,25 +23,23 @@ Returns an instance of BigInt at passed index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public $_get(i: int): BigInt--><!--Device-BigUint64Array-public $_get(i: int): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| i | int | Yes | index to look at <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| i | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| BigInt | the raw value at the index. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## $_iterator
 
@@ -55,19 +51,17 @@ Iterable interface implementation.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public $_iterator(): IterableIterator<BigInt>--><!--Device-BigUint64Array-public $_iterator(): IterableIterator<BigInt>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;BigInt&gt; | iterator that yields each element in order. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;BigInt & gt; |
 
 ## $_set
 
@@ -79,20 +73,18 @@ Assigns val as element on index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public $_set(index: int, val: int): void--><!--Device-BigUint64Array-public $_set(index: int, val: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | index to change <br>The value should be an integer. |
-| val | int | Yes | value to set <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| val | int | Yes |
 
 ## $_set
 
@@ -104,20 +96,18 @@ Assigns val as element on index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public $_set(index: int, val: long): void--><!--Device-BigUint64Array-public $_set(index: int, val: long): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | index to change <br>The value should be an integer. |
-| val | long | Yes | value to set |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| val | long | Yes |
 
 ## $_set
 
@@ -129,20 +119,18 @@ Assigns val as element on index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public $_set(index: int, val: BigInt): void--><!--Device-BigUint64Array-public $_set(index: int, val: BigInt): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | index to change |
-| val | BigInt | Yes | value to set |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| val | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 ## at
 
@@ -154,25 +142,23 @@ Returns an instance of primitive type at passed index if index is correct.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public at(index: int): BigInt | undefined--><!--Device-BigUint64Array-public at(index: int): BigInt | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | index to look at <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| BigInt \| undefined | the element at the index, or undefined if out of bounds. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| BigInt \| undefined |
 
 ## constructor
 
@@ -184,11 +170,9 @@ Creates an empty BigUint64Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public constructor()--><!--Device-BigUint64Array-public constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -202,19 +186,17 @@ Creates an BigUint64Array with respect to length.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public constructor(length: int)--><!--Device-BigUint64Array-public constructor(length: int)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| length | int | Yes | Number of elements <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [length](#length) | int | Yes |
 
 ## constructor
 
@@ -226,19 +208,17 @@ Creates an BigUint64Array with respect to length.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public constructor(length: double)--><!--Device-BigUint64Array-public constructor(length: double)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| length | double | Yes | Number of elements |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [length](#length) | double | Yes |
 
 ## constructor
 
@@ -250,19 +230,17 @@ Creates an BigUint64Array from FixedArray&lt;int&gt;
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public constructor(numbers: FixedArray<int>)--><!--Device-BigUint64Array-public constructor(numbers: FixedArray<int>)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| numbers | FixedArray&lt;int&gt; | Yes | data initializer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| numbers | FixedArray & lt;int & gt; | Yes |
 
 ## constructor
 
@@ -274,19 +252,17 @@ Creates an BigUint64Array from FixedArray&lt;double&gt;
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public constructor(numbers: FixedArray<double>)--><!--Device-BigUint64Array-public constructor(numbers: FixedArray<double>)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| numbers | FixedArray&lt;double&gt; | Yes | data initializer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| numbers | FixedArray & lt;double & gt; | Yes |
 
 ## constructor
 
@@ -298,19 +274,17 @@ Creates an BigUint64Array from FixedArray&lt;bigint&gt;
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public constructor(numbers: FixedArray<bigint>)--><!--Device-BigUint64Array-public constructor(numbers: FixedArray<bigint>)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| numbers | FixedArray&lt;bigint&gt; | Yes | data initializer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| numbers | FixedArray & lt;bigint & gt; | Yes |
 
 ## constructor
 
@@ -322,19 +296,17 @@ Creates a new BigUint64Array initialized from another BigUint64Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public constructor(other: BigUint64Array)--><!--Device-BigUint64Array-public constructor(other: BigUint64Array)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | Yes | data initializer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | Yes |
 
 ## constructor
 
@@ -346,19 +318,17 @@ Creates an BigUint64Array with respect to data accessed via Iterable&lt;Number&g
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public constructor(elements: Iterable<BigInt>)--><!--Device-BigUint64Array-public constructor(elements: Iterable<BigInt>)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| elements | Iterable&lt;BigInt&gt; | Yes | data initializer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [elements](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-pagemediaentity-i.md) | Iterable & lt;BigInt & gt; | Yes |
 
 ## constructor
 
@@ -370,21 +340,19 @@ Creates an BigUint64Array with respect to data, byteOffset and length.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public constructor(buf: ArrayBufferLike, byteOffset: int, length: int)--><!--Device-BigUint64Array-public constructor(buf: ArrayBufferLike, byteOffset: int, length: int)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | ArrayBufferLike | Yes | data initializer |
-| byteOffset | int | Yes | byte offset from begin of the buf <br>The value should be an integer. |
-| length | int | Yes | size of elements of type long in newly created BigUint64Array <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | [ArrayBufferLike](arkts-arkts-arraybufferlike-t.md) | Yes |
+| [byteOffset](#byteoffset) | int | Yes |
+| [length](#length) | int | Yes |
 
 ## constructor
 
@@ -396,20 +364,18 @@ Creates an BigUint64Array with respect to buf and byteOffset.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public constructor(buf: ArrayBuffer, byteOffset: int)--><!--Device-BigUint64Array-public constructor(buf: ArrayBuffer, byteOffset: int)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | data initializer |
-| byteOffset | int | Yes | byte offset from begin of the buf <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | ArrayBuffer | Yes |
+| [byteOffset](#byteoffset) | int | Yes |
 
 ## constructor
 
@@ -421,21 +387,19 @@ Creates an BigUint64Array with respect to data, byteOffset and length.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public constructor(buf: ArrayBuffer, byteOffset: double | undefined, length: double | undefined)--><!--Device-BigUint64Array-public constructor(buf: ArrayBuffer, byteOffset: double | undefined, length: double | undefined)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | data initializer |
-| byteOffset | double \| undefined | Yes | byte offset from begin of the buf |
-| length | double \| undefined | Yes | size of elements of type long in newly created BigUint64Array |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | ArrayBuffer | Yes |
+| [byteOffset](#byteoffset) | double \| undefined | Yes |
+| [length](#length) | double \| undefined | Yes |
 
 ## constructor
 
@@ -447,20 +411,18 @@ Creates an BigUint64Array with respect to buf and byteOffset.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public constructor(buf: ArrayBuffer, byteOffset: double)--><!--Device-BigUint64Array-public constructor(buf: ArrayBuffer, byteOffset: double)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | data initializer |
-| byteOffset | double | Yes | byte offset from begin of the buf |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | ArrayBuffer | Yes |
+| [byteOffset](#byteoffset) | double | Yes |
 
 ## constructor
 
@@ -472,19 +434,17 @@ Creates an BigUint64Array with respect to buf.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public constructor(buf: ArrayLike<double> | ArrayBuffer)--><!--Device-BigUint64Array-public constructor(buf: ArrayLike<double> | ArrayBuffer)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | ArrayLike&lt;double&gt; \| ArrayBuffer | Yes | data initializer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | ArrayLike & lt;double & gt; \ | ArrayBuffer | Yes |
 
 ## copyWithin
 
@@ -496,27 +456,25 @@ Makes a copy of internal elements to targetPos from startPos to endPos.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public copyWithin(target: int, start: int, end?: int): BigUint64Array--><!--Device-BigUint64Array-public copyWithin(target: int, start: int, end?: int): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | int | Yes | insert index to place copied elements <br>The value should be an integer. |
-| start | int | Yes | start index to begin copy from <br>The value should be an integer. |
-| end | int | No | last index to end copy from, excluded. Defaults to the array length. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | int | Yes |
+| start | int | Yes |
+| end | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | the modified BigUint64Array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## copyWithin
 
@@ -528,25 +486,23 @@ Makes a copy of internal elements to targetPos from begin to end of BigUint64Arr
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public copyWithin(target: int): BigUint64Array--><!--Device-BigUint64Array-public copyWithin(target: int): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | int | Yes | insert index to place copied elements <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | the modified BigUint64Array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## entries
 
@@ -558,19 +514,17 @@ Returns an array of key, value pairs for every entry in the BigUint64Array
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public entries(): IterableIterator<[int, BigInt]>--><!--Device-BigUint64Array-public entries(): IterableIterator<[int, BigInt]>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;[int, BigInt]&gt; | iterator over [index, value] pairs for each element. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;[int, BigInt] & gt; |
 
 ## every
 
@@ -582,25 +536,23 @@ Determines whether the specified callback function returns true for all elements
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public every(predicate: (element: BigInt, index: int, array: BigUint64Array) => boolean): boolean--><!--Device-BigUint64Array-public every(predicate: (element: BigInt, index: int, array: BigUint64Array) => boolean): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (element: BigInt, index: int, array: BigUint64Array) =&gt; boolean | Yes | A function that accepts three arguments. The every method calls the predicate function for each element in the array until the predicate returns a false, or until the end of the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (element: BigInt, index: int, array: BigUint64Array) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true unless predicate function returns a false for an array element, in which case false is immediately returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## fill
 
@@ -612,27 +564,25 @@ Fills the BigUint64Array with specified value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public fill(value: long, start?: int, end?: int): BigUint64Array--><!--Device-BigUint64Array-public fill(value: long, start?: int, end?: int): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | long | Yes | new value. |
-| start | int | No | start index to begin fill from <br>The value should be an integer. |
-| end | int | No | last index to end fill from, excluded <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | long | Yes |
+| start | int | No |
+| end | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | modified BigUint64Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## fill
 
@@ -644,27 +594,25 @@ Fills the BigUint64Array with specified value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public fill(value: BigInt, start?: int, end?: int): BigUint64Array--><!--Device-BigUint64Array-public fill(value: BigInt, start?: int, end?: int): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | BigInt | Yes | new value. |
-| start | int | No | start index to begin fill from <br>The value should be an integer. |
-| end | int | No | last index to end fill from, excluded <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [BigInt](arkts-arkts-bigint-c.md) | Yes |
+| start | int | No |
+| end | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | modified BigUint64Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## filter
 
@@ -676,25 +624,23 @@ Creates a new BigUint64Array from current BigUint64Array based on a condition fn
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public filter(fn: (val: BigInt, index: int, array: BigUint64Array) => boolean): BigUint64Array--><!--Device-BigUint64Array-public filter(fn: (val: BigInt, index: int, array: BigUint64Array) => boolean): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fn | (val: BigInt, index: int, array: BigUint64Array) =&gt; boolean | Yes | the condition to apply for each element |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fn | (val: BigInt, index: int, array: BigUint64Array) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array with the elements that pass the test. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## find
 
@@ -706,25 +652,23 @@ Returns the value of the first element in the array where predicate is true, and
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public find(predicate: (value: BigInt, index: int, array: BigUint64Array) => boolean): BigInt | undefined--><!--Device-BigUint64Array-public find(predicate: (value: BigInt, index: int, array: BigUint64Array) => boolean): BigInt | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: BigInt, index: int, array: BigUint64Array) =&gt; boolean | Yes | find calls predicate once for each element of the array, in ascending order, until it finds one where predicate returns true. If such an element is found, find immediately returns that element value. Otherwise, find returns undefined |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: BigInt, index: int, array: BigUint64Array) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| BigInt \| undefined | the found element, or undefined if no element matches |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| BigInt \| undefined |
 
 ## findIndex
 
@@ -736,25 +680,23 @@ Returns the index of the first element in the array where predicate is true, and
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public findIndex(predicate: (value: BigInt, index: int, obj: BigUint64Array) => boolean): int--><!--Device-BigUint64Array-public findIndex(predicate: (value: BigInt, index: int, obj: BigUint64Array) => boolean): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: BigInt, index: int, obj: BigUint64Array) =&gt; boolean | Yes | find calls predicate once for each element of the array, in ascending order, until it finds one where predicate returns true. If such an element is found, findIndex immediately returns that element index. Otherwise, findIndex returns -1 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: BigInt, index: int, obj: BigUint64Array) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Index of the first matched element |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## findLast
 
@@ -766,25 +708,23 @@ Returns the last element in the BigUint64Array that satisfies the given predicat
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public findLast(fn: (val: BigInt, index: int, array: BigUint64Array) => boolean): BigInt--><!--Device-BigUint64Array-public findLast(fn: (val: BigInt, index: int, array: BigUint64Array) => boolean): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fn | (val: BigInt, index: int, array: BigUint64Array) =&gt; boolean | Yes | A function to test each element. Called with (value, index, array). Should return true for the element to be found. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fn | (val: BigInt, index: int, array: BigUint64Array) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| BigInt | the last element that satisfies the predicate. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## findLastIndex
 
@@ -796,25 +736,23 @@ Returns the index of the last element in the BigUint64Array that satisfies the g
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public findLastIndex(fn: (val: BigInt, index: int, array: BigUint64Array) => boolean): int--><!--Device-BigUint64Array-public findLastIndex(fn: (val: BigInt, index: int, array: BigUint64Array) => boolean): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fn | (val: BigInt, index: int, array: BigUint64Array) =&gt; boolean | Yes | A function to test each element. Called with (value, index, array). Should return true for the element to be found. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fn | (val: BigInt, index: int, array: BigUint64Array) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | the index of the last element that satisfies the predicate, -1 otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## forEach
 
@@ -826,19 +764,17 @@ Performs the specified action for each element in BigUint64Array
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public forEach(callbackfn: (value: BigInt, index: int, array: BigUint64Array) => void): void--><!--Device-BigUint64Array-public forEach(callbackfn: (value: BigInt, index: int, array: BigUint64Array) => void): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (value: BigInt, index: int, array: BigUint64Array) =&gt; void | Yes | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (value: BigInt, index: int, array: BigUint64Array) = & gt; void | Yes |
 
 ## from
 
@@ -850,25 +786,23 @@ Creates an array from an object of FixedArray&lt;BigInt&gt;.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public static from(arr: FixedArray<BigInt>): BigUint64Array--><!--Device-BigUint64Array-public static from(arr: FixedArray<BigInt>): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | FixedArray&lt;BigInt&gt; | Yes | An instance of the FixedArray type to convert to an array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | FixedArray & lt;BigInt & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | A new BigUint64Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## from
 
@@ -880,25 +814,23 @@ Creates an array from a set of type std.core.Set&lt;BigInt&gt;.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public static from(set: Set<BigInt>): BigUint64Array--><!--Device-BigUint64Array-public static from(set: Set<BigInt>): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| set | Set&lt;BigInt&gt; | Yes | A set object to convert to an array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [set](#set) | Set & lt;BigInt & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | A new BigUint64Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## from
 
@@ -910,25 +842,23 @@ Creates an array from an array of the same type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public static from(arr: BigUint64Array): BigUint64Array--><!--Device-BigUint64Array-public static from(arr: BigUint64Array): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | Yes | An array to convert to a new array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | A new BigUint64Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## from
 
@@ -940,25 +870,23 @@ Creates an array from an object of std.core.Array&lt;BigInt&gt;.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public static from(arr: Array<BigInt>): BigUint64Array--><!--Device-BigUint64Array-public static from(arr: Array<BigInt>): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | Array&lt;BigInt&gt; | Yes | An instance of the std.core.Array type to convert to an array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | Array & lt;BigInt & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | A new BigUint64Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## from
 
@@ -970,25 +898,23 @@ Creates an array from an array-like object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public static from(arr: ArrayLike<BigInt>): BigUint64Array--><!--Device-BigUint64Array-public static from(arr: ArrayLike<BigInt>): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | ArrayLike&lt;BigInt&gt; | Yes | An array-like object to convert to an array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | ArrayLike & lt;BigInt & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | A new BigUint64Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## from
 
@@ -1000,26 +926,24 @@ Creates an array from an array-like object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public static from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: double) => BigInt): BigUint64Array--><!--Device-BigUint64Array-public static from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: double) => BigInt): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; | Yes | An array-like object to convert to an array. |
-| mapfn | (v: T, k: double) =&gt; BigInt | Yes | A mapping function to call on every element of the array. Defaults to the identity function (returns the element unchanged). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arrayLike | ArrayLike & lt;T & gt; | Yes |
+| mapfn | (v: T, k: double) = & gt; BigInt | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | A new BigUint64Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## from
 
@@ -1031,26 +955,24 @@ Creates an array from an iterable object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public static from(arrayLike: Iterable<BigInt>, mapfn?: (v: BigInt, k: double) => BigInt): BigUint64Array--><!--Device-BigUint64Array-public static from(arrayLike: Iterable<BigInt>, mapfn?: (v: BigInt, k: double) => BigInt): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arrayLike | Iterable&lt;BigInt&gt; | Yes | An iterable object to convert to an array. |
-| mapfn | (v: BigInt, k: double) =&gt; BigInt | No | A mapping function to call on every element of the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arrayLike | Iterable & lt;BigInt & gt; | Yes |
+| mapfn | (v: BigInt, k: double) = & gt; BigInt | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | A new BigUint64Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## includes
 
@@ -1062,26 +984,24 @@ Determines whether BigUint64Array includes a certain element, returning true or 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public includes(searchElement: long, fromIndex: int): boolean--><!--Device-BigUint64Array-public includes(searchElement: long, fromIndex: int): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | long | Yes | The element to search for |
-| fromIndex | int | Yes | The position in this array at which to begin searching for searchElement <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | long | Yes |
+| fromIndex | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if searchElement is in BigUint64Array, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## includes
 
@@ -1093,25 +1013,23 @@ Determines whether BigUint64Array includes a certain element, returning true or 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public includes(searchElement: long): boolean--><!--Device-BigUint64Array-public includes(searchElement: long): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | long | Yes | The element to search for. The search starts at index 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if searchElement is in BigUint64Array, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## includes
 
@@ -1123,26 +1041,24 @@ Determines whether BigUint64Array includes a certain element, returning true or 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public includes(searchElement: BigInt, fromIndex?: int): boolean--><!--Device-BigUint64Array-public includes(searchElement: BigInt, fromIndex?: int): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | BigInt | Yes | The element to search for. |
-| fromIndex | int | No | The position in this array at which to begin searching. Defaults to 0. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | [BigInt](arkts-arkts-bigint-c.md) | Yes |
+| fromIndex | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if searchElement is in BigUint64Array, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## indexOf
 
@@ -1154,25 +1070,23 @@ Returns the index of the first occurrence of a value in BigUint64Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public indexOf(searchElement: int): int--><!--Device-BigUint64Array-public indexOf(searchElement: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | int | Yes | The value to locate in the array. The search starts at index 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | index of element if present, -1 otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## indexOf
 
@@ -1184,26 +1098,24 @@ Returns the index of the first occurrence of a value in BigUint64Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public indexOf(searchElement: int, fromIndex: int): int--><!--Device-BigUint64Array-public indexOf(searchElement: int, fromIndex: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | int | Yes | The value to locate in the array. |
-| fromIndex | int | Yes | The array index at which to begin the search. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | int | Yes |
+| fromIndex | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | index of element if present, -1 otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## indexOf
 
@@ -1215,26 +1127,24 @@ Returns the index of the first occurrence of a value in BigUint64Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public indexOf(searchElement: BigInt, fromIndex?: int): int--><!--Device-BigUint64Array-public indexOf(searchElement: BigInt, fromIndex?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | BigInt | Yes | The value to locate in the array. |
-| fromIndex | int | No | The array index at which to begin the search. Defaults to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | [BigInt](arkts-arkts-bigint-c.md) | Yes |
+| fromIndex | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | index of element if present, -1 otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## join
 
@@ -1246,25 +1156,23 @@ Adds all the elements of an array separated by the specified separator string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public join(separator?: string): string--><!--Device-BigUint64Array-public join(separator?: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| separator | string | No | A string used to separate one element of an array from the next in the resulting string. If omitted, the array elements are separated with a comma. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| separator | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | a string of all array elements joined by the separator. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## keys
 
@@ -1276,19 +1184,17 @@ Returns an list of indices in the BigUint64Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public keys(): IterableIterator<int>--><!--Device-BigUint64Array-public keys(): IterableIterator<int>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;int&gt; | iterator over the array indices. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;int & gt; |
 
 ## lastIndexOf
 
@@ -1300,25 +1206,23 @@ Returns the index of the last occurrence of a value in BigUint64Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public lastIndexOf(searchElement: int): int--><!--Device-BigUint64Array-public lastIndexOf(searchElement: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | int | Yes | The value to locate in the array. The search begins at index length - 1. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | right-most index of searchElement. It must be less than length. -1 if not found |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## lastIndexOf
 
@@ -1330,25 +1234,23 @@ Returns the index of the last occurrence of a value in BigUint64Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public lastIndexOf(searchElement: BigInt): int--><!--Device-BigUint64Array-public lastIndexOf(searchElement: BigInt): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | BigInt | Yes | The value to locate in the array. The search begins at index length - 1. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | right-most index of searchElement. It must be less than length. -1 if not found |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## lastIndexOf
 
@@ -1360,26 +1262,24 @@ Returns the index of the last occurrence of a value in BigUint64Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public lastIndexOf(searchElement: int, fromIndex: int): int--><!--Device-BigUint64Array-public lastIndexOf(searchElement: int, fromIndex: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | int | Yes | The value to locate in the array. |
-| fromIndex | int | Yes | The array index at which to begin the search. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | int | Yes |
+| fromIndex | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | right-most index of searchElement. It must be less or equal than fromIndex. -1 if not found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## lastIndexOf
 
@@ -1391,26 +1291,24 @@ Returns the index of the last occurrence of a value in BigUint64Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public lastIndexOf(searchElement: BigInt, fromIndex: int | undefined): int--><!--Device-BigUint64Array-public lastIndexOf(searchElement: BigInt, fromIndex: int | undefined): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | BigInt | Yes | The value to locate in the array. |
-| fromIndex | int \| undefined | Yes | The array index at which to begin the search. If fromIndex is undefined, the search starts at index 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | [BigInt](arkts-arkts-bigint-c.md) | Yes |
+| fromIndex | int \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | right-most index of searchElement. It must be less or equal than fromIndex. -1 if not found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## map
 
@@ -1422,25 +1320,23 @@ Creates a new BigUint64Array using fn(arr[i]) over all elements of current BigUi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public map(fn: (val: BigInt, index: int, array: BigUint64Array) => BigInt): BigUint64Array--><!--Device-BigUint64Array-public map(fn: (val: BigInt, index: int, array: BigUint64Array) => BigInt): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fn | (val: BigInt, index: int, array: BigUint64Array) =&gt; BigInt | Yes | a function to apply for each element of current BigUint64Array |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fn | (val: BigInt, index: int, array: BigUint64Array) = & gt; BigInt | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array with each element being the result of the callback function where for each element from current BigUint64Array fn was applied |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## of
 
@@ -1452,25 +1348,23 @@ Returns a new array from a set of elements.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public static of(...items: FixedArray<int>): BigUint64Array--><!--Device-BigUint64Array-public static of(...items: FixedArray<int>): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| items | FixedArray&lt;int&gt; | Yes | a set of elements to include in the new array object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| items | FixedArray & lt;int & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array containing the given elements. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## of
 
@@ -1482,25 +1376,23 @@ Returns a new array from a set of elements.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public static of(...items: FixedArray<long>): BigUint64Array--><!--Device-BigUint64Array-public static of(...items: FixedArray<long>): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| items | FixedArray&lt;long&gt; | Yes | a set of elements to include in the new array object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| items | FixedArray & lt;long & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## of
 
@@ -1512,25 +1404,23 @@ Returns a new array from a set of elements.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public static of(...items: FixedArray<bigint>): BigUint64Array--><!--Device-BigUint64Array-public static of(...items: FixedArray<bigint>): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| items | FixedArray&lt;bigint&gt; | Yes | a set of elements to include in the new array object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| items | FixedArray & lt;bigint & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## of
 
@@ -1542,25 +1432,23 @@ Returns a new array from a set of elements.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public static of(...items: FixedArray<double>): BigUint64Array--><!--Device-BigUint64Array-public static of(...items: FixedArray<double>): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| items | FixedArray&lt;double&gt; | Yes | a set of elements to include in the new array object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| items | FixedArray & lt;double & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## of
 
@@ -1572,19 +1460,17 @@ Returns a new array from a set of elements.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public static of(): BigUint64Array--><!--Device-BigUint64Array-public static of(): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## reduce
 
@@ -1597,26 +1483,24 @@ Calls the specified callback function for all the elements in an array. The retu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public reduce<U = BigInt>( callbackfn: (previousValue: U, currentValue: BigInt, currentIndex: int,        array: BigUint64Array) => U, initialValue: U): U--><!--Device-BigUint64Array-public reduce<U = BigInt>( callbackfn: (previousValue: U, currentValue: BigInt, currentIndex: int,        array: BigUint64Array) => U, initialValue: U): U-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: BigInt, currentIndex: int,         array: BigUint64Array) =&gt; U | Yes | A function that accepts four arguments. The reduce method calls the callbackfn function one time for each element in the array. |
-| initialValue | U | Yes | The parameter which value is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (previousValue: U, currentValue: BigInt, currentIndex: int,         array: BigUint64Array) = & gt; U | Yes |
+| initialValue | U | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| U | the accumulated result from the last call to the callback function. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| U |
 
 ## reduce
 
@@ -1629,25 +1513,23 @@ Calls the specified callback function for all the elements in an array. The retu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public reduce(callbackfn: (previousValue: BigInt, currentValue: BigInt, currentIndex: int,        array: BigUint64Array) => BigInt): BigInt--><!--Device-BigUint64Array-public reduce(callbackfn: (previousValue: BigInt, currentValue: BigInt, currentIndex: int,        array: BigUint64Array) => BigInt): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: BigInt, currentValue: BigInt, currentIndex: int,         array: BigUint64Array) =&gt; BigInt | Yes | A function that accepts four arguments. The reduce method calls the callbackfn function one time for each element in the array. The first call to the callbackfn function provides array first element value as an argument |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (previousValue: BigInt, currentValue: BigInt, currentIndex: int,         array: BigUint64Array) = & gt; BigInt | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| BigInt | the accumulated result from the last call to the callback function. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## reduceRight
 
@@ -1661,26 +1543,24 @@ Calls the specified callback function for all the elements in an array, in desce
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public reduceRight<U = BigInt>(        callbackfn: (previousValue: U, currentValue: BigInt, currentIndex: int, array: BigUint64Array) => U,        initialValue: U): U--><!--Device-BigUint64Array-public reduceRight<U = BigInt>(        callbackfn: (previousValue: U, currentValue: BigInt, currentIndex: int, array: BigUint64Array) => U,        initialValue: U): U-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: BigInt, currentIndex: int, array: BigUint64Array) =&gt; U | Yes | A function that accepts four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
-| initialValue | U | Yes | The parameter which value is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (previousValue: U, currentValue: BigInt, currentIndex: int, array: BigUint64Array) = & gt; U | Yes |
+| initialValue | U | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| U | the accumulated result from the last call to the callback function. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| U |
 
 ## reduceRight
 
@@ -1693,25 +1573,23 @@ Calls the specified callback function for all the elements in an array, in desce
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public reduceRight(callbackfn: (previousValue: BigInt, currentValue: BigInt, currentIndex: int,        array: BigUint64Array) => BigInt): BigInt--><!--Device-BigUint64Array-public reduceRight(callbackfn: (previousValue: BigInt, currentValue: BigInt, currentIndex: int,        array: BigUint64Array) => BigInt): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: BigInt, currentValue: BigInt, currentIndex: int,         array: BigUint64Array) =&gt; BigInt | Yes | A function that accepts four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. The first call to the callbackfn function provides array last element value as an argument |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (previousValue: BigInt, currentValue: BigInt, currentIndex: int,         array: BigUint64Array) = & gt; BigInt | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| BigInt | the accumulated result from the last call to the callback function. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## reverse
 
@@ -1723,19 +1601,17 @@ Creates a new BigUint64Array using reversed data from the current one
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public reverse(): BigUint64Array--><!--Device-BigUint64Array-public reverse(): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array with the elements in reverse order. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## set
 
@@ -1747,20 +1623,18 @@ Assigns val as element on index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public set(insertPos: int, val: long): void--><!--Device-BigUint64Array-public set(insertPos: int, val: long): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| insertPos | int | Yes | index to change <br>The value should be an integer. |
-| val | long | Yes | value to set |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| insertPos | int | Yes |
+| val | long | Yes |
 
 ## set
 
@@ -1772,20 +1646,18 @@ Assigns val as element on index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public set(insertPos: int, val: BigInt): void--><!--Device-BigUint64Array-public set(insertPos: int, val: BigInt): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| insertPos | int | Yes | index to change <br>The value should be an integer. |
-| val | BigInt | Yes | value to set |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| insertPos | int | Yes |
+| val | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 ## set
 
@@ -1797,20 +1669,18 @@ Copies all elements of arr to the current BigUint64Array starting from insertPos
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public set(arr: FixedArray<long>, insertPos: int): void--><!--Device-BigUint64Array-public set(arr: FixedArray<long>, insertPos: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | FixedArray&lt;long&gt; | Yes | array to copy data from |
-| insertPos | int | Yes | start index where data from arr will be inserted <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | FixedArray & lt;long & gt; | Yes |
+| insertPos | int | Yes |
 
 ## set
 
@@ -1822,20 +1692,18 @@ Copies all elements of arr to the current BigUint64Array starting from insertPos
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public set(arr: FixedArray<BigInt>, insertPos: int): void--><!--Device-BigUint64Array-public set(arr: FixedArray<BigInt>, insertPos: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | FixedArray&lt;BigInt&gt; | Yes | array to copy data from |
-| insertPos | int | Yes | start index where data from arr will be inserted <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | FixedArray & lt;BigInt & gt; | Yes |
+| insertPos | int | Yes |
 
 ## set
 
@@ -1847,19 +1715,17 @@ Copies all elements of arr to the current BigUint64Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public set(arr: FixedArray<long>): void--><!--Device-BigUint64Array-public set(arr: FixedArray<long>): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | FixedArray&lt;long&gt; | Yes | array to copy data from |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | FixedArray & lt;long & gt; | Yes |
 
 ## set
 
@@ -1871,19 +1737,17 @@ Copies all elements of arr to the current BigUint64Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public set(arr: FixedArray<BigInt>): void--><!--Device-BigUint64Array-public set(arr: FixedArray<BigInt>): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | FixedArray&lt;BigInt&gt; | Yes | array to copy data from |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | FixedArray & lt;BigInt & gt; | Yes |
 
 ## set
 
@@ -1895,19 +1759,17 @@ Copies all elements of arr to the current BigUint64Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public set(array: BigUint64Array): void--><!--Device-BigUint64Array-public set(array: BigUint64Array): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| array | [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | Yes | array to copy data from |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| array | [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | Yes |
 
 ## set
 
@@ -1919,20 +1781,18 @@ Copies all elements of arr to the current BigUint64Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public set(array: BigUint64Array, offset: int): void--><!--Device-BigUint64Array-public set(array: BigUint64Array, offset: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| array | [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | Yes | array to copy data from |
-| offset | int | Yes | start index where data from arr will be inserted <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| array | [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | Yes |
+| offset | int | Yes |
 
 ## set
 
@@ -1944,20 +1804,18 @@ Copies elements from an ArrayLike object to the BigUint64Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public set(array: ArrayLike<BigInt>, offset: int = 0): void--><!--Device-BigUint64Array-public set(array: ArrayLike<BigInt>, offset: int = 0): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| array | ArrayLike&lt;BigInt&gt; | Yes | An ArrayLike object containing the elements to copy. |
-| offset | int | Yes | Optional. The offset into the target array at which to begin writing values from the source array. The default value is 0. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| array | ArrayLike & lt;BigInt & gt; | Yes |
+| offset | int | Yes |
 
 ## slice
 
@@ -1969,26 +1827,24 @@ Creates a slice of current BigUint64Array using range [begin, end]
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public slice(begin?: int, end?: int): BigUint64Array--><!--Device-BigUint64Array-public slice(begin?: int, end?: int): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| begin | int | No | start - index to be taken into slice. Defaults to 0. <br>The value should be an integer. |
-| end | int | No | last index to be taken into slice. Defaults to the array length. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| begin | int | No |
+| end | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array with elements of current BigUint64Array[begin;end), where end index is excluded |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## slice
 
@@ -2000,25 +1856,23 @@ Creates a slice of current BigUint64Array using range [begin, this.lengthInt].
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public slice(begin: int): BigUint64Array--><!--Device-BigUint64Array-public slice(begin: int): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| begin | int | Yes | start index to be taken into slice. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| begin | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array with elements of current BigUint64Array[begin, this.lengthInt]. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## some
 
@@ -2030,25 +1884,23 @@ Determines whether the specified callback function returns true for any element 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public some(predicate: (element: BigInt, index: int, array: BigUint64Array) => boolean): boolean--><!--Device-BigUint64Array-public some(predicate: (element: BigInt, index: int, array: BigUint64Array) => boolean): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (element: BigInt, index: int, array: BigUint64Array) =&gt; boolean | Yes | A function that accepts three arguments. The some method calls the predicate function for each element in the array until the predicate returns a true or until the end of the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (element: BigInt, index: int, array: BigUint64Array) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | false unless predicate function returns true for an array element, in which case true is immediately returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## sort
 
@@ -2060,19 +1912,17 @@ Sorts in-place by numeric value in ascending order.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public sort(): this--><!--Device-BigUint64Array-public sort(): this-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| this | sorted BigUint64Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| this |
 
 ## sort
 
@@ -2084,25 +1934,23 @@ Sorts in-place
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public sort(compareFn?: (a: BigInt, b: BigInt) => int | BigInt): this--><!--Device-BigUint64Array-public sort(compareFn?: (a: BigInt, b: BigInt) => int | BigInt): this-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| compareFn | (a: BigInt, b: BigInt) =&gt; int \| BigInt | No | comparator used to determine the order of the elements. compareFn returns a negative value if first argument is less than second argument, zero if they're equal and a positive value otherwise. Defaults to an ascending numeric sort. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| compareFn | (a: BigInt, b: BigInt) = & gt; int \ | [BigInt](arkts-arkts-bigint-c.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| this | sorted BigUint64Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| this |
 
 ## subarray
 
@@ -2114,26 +1962,24 @@ Creates a new BigUint64Array that shares the same underlying ArrayBuffer as the 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public subarray(begin?: int, end?: int): BigUint64Array--><!--Device-BigUint64Array-public subarray(begin?: int, end?: int): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| begin | int | No | start index, inclusive. Defaults to 0. <br>The value should be an integer. |
-| end | int | No | last index, exclusive. Defaults to the array length. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| begin | int | No |
+| end | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array sharing the same underlying ArrayBuffer. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## toLocaleString
 
@@ -2145,26 +1991,24 @@ Converts this object to a locale-specific string representation
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string--><!--Device-BigUint64Array-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | No | A string with a BCP 47 language tag, or an array of such strings. |
-| options | object | No | An object with some or all of the properties of the Intl.NumberFormat options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | No |
+| options | object | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the locale-specific conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toReversed
 
@@ -2176,19 +2020,17 @@ Returns a new BigUint64Array with the elements in reverse order. The original ar
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public toReversed(): BigUint64Array--><!--Device-BigUint64Array-public toReversed(): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array with the elements reversed. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## toSorted
 
@@ -2200,19 +2042,17 @@ Returns a new BigUint64Array with the elements sorted in ascending order. The or
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public toSorted(): BigUint64Array--><!--Device-BigUint64Array-public toSorted(): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array with the elements sorted. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## toString
 
@@ -2224,19 +2064,17 @@ Returns a string representing the elements of the BigUint64Array, separated by c
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public toString(): string--><!--Device-BigUint64Array-public toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | a comma-separated string of the array elements. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## valueOf
 
@@ -2248,19 +2086,17 @@ Calls the given callback function once for each element in the BigUint64Array, i
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public valueOf(): BigUint64Array--><!--Device-BigUint64Array-public valueOf(): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | the BigUint64Array object itself |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## values
 
@@ -2272,19 +2108,17 @@ Returns array values iterator
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public values(): IterableIterator<BigInt>--><!--Device-BigUint64Array-public values(): IterableIterator<BigInt>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;BigInt&gt; | iterator that yields each element in order. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;BigInt & gt; |
 
 ## with
 
@@ -2296,26 +2130,24 @@ Returns a new BigUint64Array with the element at the given index replaced by the
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public with(index: int, value: long): BigUint64Array--><!--Device-BigUint64Array-public with(index: int, value: long): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | index to change <br>The value should be an integer. |
-| value | long | Yes | value to set |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| value | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array with the element at index replaced. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## with
 
@@ -2327,26 +2159,24 @@ Returns a new BigUint64Array with the element at the given index replaced by the
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public with(index: int, value: BigInt): BigUint64Array--><!--Device-BigUint64Array-public with(index: int, value: BigInt): BigUint64Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | index to change <br>The value should be an integer. |
-| value | BigInt | Yes | value to set |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| value | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array with the element at index replaced. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) |
 
 ## buffer
 
@@ -2360,11 +2190,41 @@ Underlying Buffer.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BigUint64Array-public readonly buffer: ArrayBuffer--><!--Device-BigUint64Array-public readonly buffer: ArrayBuffer-End-->
+**System capability:** SystemCapability.Utils.Lang
+
+## byteLength
+
+```TypeScript
+public get byteLength(): int
+```
+
+Number of bytes used
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## byteOffset
+
+```TypeScript
+public get byteOffset(): int
+```
+
+Byte offset within the underlying Buffer
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2380,11 +2240,25 @@ Number of bytes occupied by each element
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BigUint64Array-public static readonly BYTES_PER_ELEMENT: int = 8--><!--Device-BigUint64Array-public static readonly BYTES_PER_ELEMENT: int = 8-End-->
+**System capability:** SystemCapability.Utils.Lang
+
+## length
+
+```TypeScript
+public get length(): int
+```
+
+The number of elements stored in the BigUint64Array.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2400,11 +2274,8 @@ String \"BigUint64Array\"
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BigUint64Array-public readonly name: string = 'BigUint64Array'--><!--Device-BigUint64Array-public readonly name: string = 'BigUint64Array'-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

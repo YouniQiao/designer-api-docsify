@@ -6,9 +6,7 @@ Represents an error that occurs when a null pointer is dereferenced.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-unnamed-class NullPointerError--><!--Device-unnamed-class NullPointerError-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,18 +25,15 @@ Constructs a new NullPointerError instance with provided message and error speci
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NullPointerError-constructor(message?: string, options?: ErrorOptions)--><!--Device-NullPointerError-constructor(message?: string, options?: ErrorOptions)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | string | No | Error text |
-| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No | Error options |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | string | No |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No |

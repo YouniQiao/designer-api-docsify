@@ -2,9 +2,9 @@
 
 Enumerates the HDR modes of media assets.
 
-**Since:** 26.0.0
+**Since:** 22
 
-<!--Device-photoAccessHelper-enum HdrMode--><!--Device-photoAccessHelper-enum HdrMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ DEFAULT = 0
 
 Default type.
 
-**Since:** 26.0.0
+**Since:** 22
 
-<!--Device-HdrMode-DEFAULT = 0--><!--Device-HdrMode-DEFAULT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,9 @@ HDR_ISO_SINGLE = 1
 
 Single-layer HDR image that complies with ISO specifications.
 
-**Since:** 26.0.0
+**Since:** 22
 
-<!--Device-HdrMode-HDR_ISO_SINGLE = 1--><!--Device-HdrMode-HDR_ISO_SINGLE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,9 +50,9 @@ HDR_ISO_DUAL = 2
 
 Dual-layer HDR images that comply with ISO specifications.
 
-**Since:** 26.0.0
+**Since:** 22
 
-<!--Device-HdrMode-HDR_ISO_DUAL = 2--><!--Device-HdrMode-HDR_ISO_DUAL = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -66,9 +66,9 @@ HDR_CUVA = 3
 
 HDR image taken by a legacy device or camera.
 
-**Since:** 26.0.0
+**Since:** 22
 
-<!--Device-HdrMode-HDR_CUVA = 3--><!--Device-HdrMode-HDR_CUVA = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -82,9 +82,9 @@ HDR_VIVID_SINGLE = 4
 
 Single-layer image that complies with the HDR Vivid standard.
 
-**Since:** 26.0.0
+**Since:** 22
 
-<!--Device-HdrMode-HDR_VIVID_SINGLE = 4--><!--Device-HdrMode-HDR_VIVID_SINGLE = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -98,11 +98,10 @@ HDR_VIVID_DUAL = 5
 
 Dual-layer image that complies with the HDR Vivid standard.
 
-**Since:** 26.0.0
+**Since:** 22
 
-<!--Device-HdrMode-HDR_VIVID_DUAL = 5--><!--Device-HdrMode-HDR_VIVID_DUAL = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

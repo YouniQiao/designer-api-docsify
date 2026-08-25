@@ -28,42 +28,42 @@ function anonAttestKeyItemOffline(keyAlias: string, params: HuksParam[]): Promis
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-huks-function anonAttestKeyItemOffline(keyAlias: string, params: HuksParam[]): Promise<HuksReturnResult>--><!--Device-huks-function anonAttestKeyItemOffline(keyAlias: string, params: HuksParam[]): Promise<HuksReturnResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| keyAlias | string | 是 | 密钥别名，存放待获取证书密钥的别名。 |
-| params | [HuksParam](arkts-universalkeystore-huks-huksparam-i.md)[] | 是 | 用于获取证书时指定所需参数与数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| keyAlias | string | 是 |
+| params | [HuksParam](arkts-universalkeystore-huks-huksparam-i.md)[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | Promise对象，返回调用接口的结果。当调用成功时，HuksReturnResult的certChains成员为获取到的证书链。 |
+| 类型 |
+| --- |
+| Promise&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | The API is not supported. |
-| [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) | The algorithm mode is not supported. |
-| [12000004](../errorcode-huks.md#12000004-文件错误) | The file operation failed. |
-| [12000005](../errorcode-huks.md#12000005-进程通信错误) | The IPC communication failed. |
-| [12000006](../errorcode-huks.md#12000006-算法库操作失败) | The encryption engine is faulty. |
-| [12000011](../errorcode-huks.md#12000011-目标对象不存在) | The queried entity does not exist. |
-| [12000012](../errorcode-huks.md#12000012-外部错误) | The device environment or input parameter is abnormal. |
-| [12000014](../errorcode-huks.md#12000014-内存不足) | The memory is insufficient. |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | The parameter is incorrect. Possible causes: 1. A mandatory parameter is left empty. 2. The parameter type is incorrect. 3. The parameter verification failed. 4. The group ID specified by the access group tag is invalid. |
-| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) | The operation times out. This may be caused by network jitter. You can try again later. |
-| [12000027](../errorcode-huks.md#12000027-网络不可用) | The network is unavailable. Check network connections. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) |
+| [12000004](../errorcode-huks.md#12000004-文件错误) |
+| [12000005](../errorcode-huks.md#12000005-进程通信错误) |
+| [12000006](../errorcode-huks.md#12000006-算法库操作失败) |
+| [12000011](../errorcode-huks.md#12000011-目标对象不存在) |
+| [12000012](../errorcode-huks.md#12000012-外部错误) |
+| [12000014](../errorcode-huks.md#12000014-内存不足) |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) |
+| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) |
+| [12000027](../errorcode-huks.md#12000027-网络不可用) |
 
 **示例**
 
@@ -133,4 +133,3 @@ async function anonAttestKeyOffline() {
   await huks.anonAttestKeyItemOffline(aliasString, properties);
 }
 ```
-

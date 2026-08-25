@@ -4,9 +4,9 @@ Represents information about the recent file list.
 
 **Since:** 10
 
-**Deprecated since:** 23
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-recent-interface FileInfo--><!--Device-recent-interface FileInfo-End-->
+**Deprecated since:** 23
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -30,11 +30,11 @@ Time when the file was created. <br>Unit: second.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileInfo-readonly ctime: number--><!--Device-FileInfo-readonly ctime: number-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -52,11 +52,11 @@ File name.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileInfo-readonly fileName: string--><!--Device-FileInfo-readonly fileName: string-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -74,11 +74,11 @@ readonly mode: number
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileInfo-readonly mode: number--><!--Device-FileInfo-readonly mode: number-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -96,11 +96,11 @@ Time when the file was last modified. <br>Unit: ms.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileInfo-readonly mtime: number--><!--Device-FileInfo-readonly mtime: number-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -118,11 +118,11 @@ File size, in bytes.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileInfo-readonly size: number--><!--Device-FileInfo-readonly size: number-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -140,11 +140,11 @@ File path.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileInfo-readonly srcPath: string--><!--Device-FileInfo-readonly srcPath: string-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -162,13 +162,12 @@ File URI.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FileInfo-readonly uri: string--><!--Device-FileInfo-readonly uri: string-End-->
-
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
-

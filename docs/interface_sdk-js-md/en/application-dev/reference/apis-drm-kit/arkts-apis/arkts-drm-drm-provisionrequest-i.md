@@ -2,9 +2,9 @@
 
 Defines a device certificate provisioning request.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-drm-interface ProvisionRequest--><!--Device-drm-interface ProvisionRequest-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -24,11 +24,11 @@ Binary data of the provisioning request.
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-ProvisionRequest-data: Uint8Array--><!--Device-ProvisionRequest-data: Uint8Array-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -42,11 +42,10 @@ URL of the device certificate provisioning server.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-ProvisionRequest-defaultURL: string--><!--Device-ProvisionRequest-defaultURL: string-End-->
-
 **System capability:** SystemCapability.Multimedia.Drm.Core
-

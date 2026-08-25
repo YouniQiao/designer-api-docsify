@@ -4,7 +4,7 @@ Slider刻度点的无障碍文本信息。
 
 **起始版本：** 20
 
-<!--Device-unnamed-declare interface SliderStepItemAccessibility--><!--Device-unnamed-declare interface SliderStepItemAccessibility-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,10 @@ text?: ResourceStr
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SliderStepItemAccessibility-text?: ResourceStr--><!--Device-SliderStepItemAccessibility-text?: ResourceStr-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

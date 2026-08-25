@@ -6,7 +6,7 @@
 
 **起始版本：** 10
 
-<!--Device-unnamed-declare class CalendarPickerAttribute--><!--Device-unnamed-declare class CalendarPickerAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,20 +25,20 @@ edgeAlign(alignType: CalendarAlign, offset?: Offset)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CalendarPickerAttribute-edgeAlign(alignType: CalendarAlign, offset?: Offset): CalendarPickerAttribute--><!--Device-CalendarPickerAttribute-edgeAlign(alignType: CalendarAlign, offset?: Offset): CalendarPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| alignType | [CalendarAlign](arkts-arkui-calendaralign-e.md) | 是 | 对齐方式的类型。 <br>默认值：CalendarAlign.END |
-| offset | Offset | 否 | 按照对齐方式对齐后，选择器相对入口组件的偏移量。 <br>默认值：{dx: 0, dy: 0} <br>单位：vp |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [alignType](../arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | [CalendarAlign](arkts-arkui-calendaralign-e.md) | 是 |
+| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | 否 |
 
 ## edgeAlign
 
@@ -50,20 +50,20 @@ edgeAlign(alignType: Optional<CalendarAlign>, offset?: Offset)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CalendarPickerAttribute-edgeAlign(alignType: Optional<CalendarAlign>, offset?: Offset): CalendarPickerAttribute--><!--Device-CalendarPickerAttribute-edgeAlign(alignType: Optional<CalendarAlign>, offset?: Offset): CalendarPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| alignType | Optional&lt;[CalendarAlign](arkts-arkui-calendaralign-e.md)&gt; | 是 | 对齐方式的类型。 <br>默认值：CalendarAlign.END <br>当alignType的值为undefined时，使用默认值。 |
-| offset | Offset | 否 | 按照对齐方式对齐后，选择器相对入口组件的偏移量。 <br>默认值：{dx: 0, dy: 0} <br>单位：vp |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [alignType](../arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | Optional&lt;[CalendarAlign](arkts-arkui-calendaralign-e.md)&gt; | 是 |
+| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | 否 |
 
 ## markToday
 
@@ -75,19 +75,19 @@ markToday(enabled: boolean)
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CalendarPickerAttribute-markToday(enabled: boolean): CalendarPickerAttribute--><!--Device-CalendarPickerAttribute-markToday(enabled: boolean): CalendarPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enabled | boolean | 是 | 设置日历选择器中系统当前日期是否保持高亮显示。 <br>- true：系统当前日期在日历选择器内保持高亮显示。 <br>- false：系统当前日期在日历选择器内不保持高亮显示。 <br>默认值：false |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enabled | boolean | 是 |
 
 ## onChange
 
@@ -99,19 +99,19 @@ onChange(callback: Callback<Date>)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CalendarPickerAttribute-onChange(callback: Callback<Date>): CalendarPickerAttribute--><!--Device-CalendarPickerAttribute-onChange(callback: Callback<Date>): CalendarPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Callback&lt;Date&gt; | 是 | 日期选择时触发的回调函数。回调参数为Date类型的选中日期值，开发者可在回调函数中获取用户选中的日 期并进行相应处理。<br>**起始版本：** 18 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Callback & lt;Date & gt; | 是 |
 
 ## onChange
 
@@ -126,19 +126,19 @@ onChange(callback: Optional<Callback<Date>>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CalendarPickerAttribute-onChange(callback: Optional<Callback<Date>>): CalendarPickerAttribute--><!--Device-CalendarPickerAttribute-onChange(callback: Optional<Callback<Date>>): CalendarPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Optional&lt;Callback&lt;Date&gt;&gt; | 是 | 日期选择时触发的回调函数，回调参数为选中的日期值。 <br>当callback的值为undefined时，不使用回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Optional & lt;Callback & lt;Date & gt; & gt; | 是 |
 
 ## textStyle
 
@@ -150,19 +150,19 @@ textStyle(value: PickerTextStyle)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CalendarPickerAttribute-textStyle(value: PickerTextStyle): CalendarPickerAttribute--><!--Device-CalendarPickerAttribute-textStyle(value: PickerTextStyle): CalendarPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | PickerTextStyle | 是 | 设置入口区的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 |
 
 ## textStyle
 
@@ -174,17 +174,16 @@ textStyle(style: Optional<PickerTextStyle>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CalendarPickerAttribute-textStyle(style: Optional<PickerTextStyle>): CalendarPickerAttribute--><!--Device-CalendarPickerAttribute-textStyle(style: Optional<PickerTextStyle>): CalendarPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| style | Optional&lt;PickerTextStyle&gt; | 是 | 设置入口区的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} <br>当style的值为undefined时，使用默认值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| style | Optional & lt;PickerTextStyle & gt; | 是 |

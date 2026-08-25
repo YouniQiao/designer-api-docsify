@@ -4,7 +4,7 @@ Defines the parameters for a point-like particle. @interface PointParticleParame
 
 **Since:** 10
 
-<!--Device-unnamed-interface PointParticleParameters--><!--Device-unnamed-interface PointParticleParameters-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,10 @@ Particle radius.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-PointParticleParameters-radius: VP--><!--Device-PointParticleParameters-radius: VP-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

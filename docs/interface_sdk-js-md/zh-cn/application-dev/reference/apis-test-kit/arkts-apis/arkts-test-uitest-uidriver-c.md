@@ -7,11 +7,11 @@ UiDriver类为uitest测试框架的总入口，提供控件匹配/查找，按�
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [Driver](arkts-test-uitest-driver-c.md)
-
-<!--Device-unnamed-declare class UiDriver--><!--Device-unnamed-declare class UiDriver-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -36,33 +36,33 @@ assertComponentExist(by: By): Promise<void>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [assertComponentExist](arkts-test-uitest-driver-c.md#assertcomponentexist)
-
-<!--Device-UiDriver-assertComponentExist(by: By): Promise<void>--><!--Device-UiDriver-assertComponentExist(by: By): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| by | [By](arkts-test-uitest-by-c.md) | 是 | 目标控件的属性要求。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| by | [By](arkts-test-uitest-by-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | if the input parameters are invalid. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000003](../errorcode-uitest.md#17000003-断言失败) | if the assertion failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000003](../errorcode-uitest.md#17000003-断言失败) |
 
 **示例**
 
@@ -99,26 +99,26 @@ UiDriver对象采取如下操作：在目标坐标点单击。使用Promise异�
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [click](arkts-test-uitest-component-c.md#click)
-
-<!--Device-UiDriver-click(x: number, y: number): Promise<void>--><!--Device-UiDriver-click(x: number, y: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| x | number | 是 | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
-| y | number | 是 | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| x | number | 是 |
+| y | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
@@ -179,19 +179,19 @@ static create(): UiDriver
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [create](arkts-test-uitest-driver-c.md#create)
-
-<!--Device-UiDriver-static create(): UiDriver--><!--Device-UiDriver-static create(): UiDriver-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [UiDriver](arkts-test-uitest-uidriver-c.md) | 返回构造的UiDriver对象。 |
+| 类型 |
+| --- |
+| [UiDriver](arkts-test-uitest-uidriver-c.md) |
 
 **示例**
 
@@ -235,25 +235,25 @@ UiDriver对象在给定的时间内延时。使用Promise异步回调。
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [delayMs](arkts-test-uitest-driver-c.md#delayms)
-
-<!--Device-UiDriver-delayMs(duration: number): Promise<void>--><!--Device-UiDriver-delayMs(duration: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| duration | number | 是 | 给定的时间。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| duration | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
@@ -290,26 +290,26 @@ UiDriver对象采取如下操作：在目标坐标点双击。使用Promise异�
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [doubleClick](arkts-test-uitest-component-c.md#doubleclick)
-
-<!--Device-UiDriver-doubleClick(x: number, y: number): Promise<void>--><!--Device-UiDriver-doubleClick(x: number, y: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| x | number | 是 | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
-| y | number | 是 | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| x | number | 是 |
+| y | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
@@ -370,25 +370,25 @@ findComponent(by: By): Promise<UiComponent>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [findComponent](arkts-test-uitest-driver-c.md#findcomponent)(on: On)
-
-<!--Device-UiDriver-findComponent(by: By): Promise<UiComponent>--><!--Device-UiDriver-findComponent(by: By): Promise<UiComponent>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| by | [By](arkts-test-uitest-by-c.md) | 是 | 目标控件的属性要求。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| by | [By](arkts-test-uitest-by-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt; | Promise对象，返回控件对象。 |
+| 类型 |
+| --- |
+| Promise&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt; |
 
 **示例**
 
@@ -435,25 +435,25 @@ findComponents(by: By): Promise<Array<UiComponent>>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [findComponents](arkts-test-uitest-driver-c.md#findcomponents)(on: On)
-
-<!--Device-UiDriver-findComponents(by: By): Promise<Array<UiComponent>>--><!--Device-UiDriver-findComponents(by: By): Promise<Array<UiComponent>>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| by | [By](arkts-test-uitest-by-c.md) | 是 | 目标控件的属性要求。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| by | [By](arkts-test-uitest-by-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt;&gt; | Promise对象，返回控件对象的列表。 |
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt;&gt; |
 
 **示例**
 
@@ -500,26 +500,26 @@ UiDriver对象采取如下操作：在目标坐标点长按下鼠标左键。使
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [longClick](arkts-test-uitest-component-c.md#longclick)
-
-<!--Device-UiDriver-longClick(x: number, y: number): Promise<void>--><!--Device-UiDriver-longClick(x: number, y: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| x | number | 是 | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
-| y | number | 是 | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| x | number | 是 |
+| y | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
@@ -580,19 +580,19 @@ UiDriver对象进行点击BACK键的操作。使用Promise异步回调。
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [pressBack](arkts-test-uitest-driver-c.md#pressback)()
-
-<!--Device-UiDriver-pressBack(): Promise<void>--><!--Device-UiDriver-pressBack(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
@@ -639,25 +639,25 @@ UiDriver对象采取如下操作：捕获当前屏幕，并保存为PNG格式的
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [screenCap](arkts-test-uitest-driver-c.md#screencap)(savePath: string)
-
-<!--Device-UiDriver-screenCap(savePath: string): Promise<boolean>--><!--Device-UiDriver-screenCap(savePath: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| savePath | string | 是 | 文件保存路径。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| savePath | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回截图操作是否成功完成。true：成功完成，false：未成功完成。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **示例**
 
@@ -704,28 +704,28 @@ UiDriver对象采取如下操作：从给出的起始坐标点滑向给出的目
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [swipe](arkts-test-uitest-driver-c.md#swipe)
-
-<!--Device-UiDriver-swipe(startx: number, starty: number, endx: number, endy: number): Promise<void>--><!--Device-UiDriver-swipe(startx: number, starty: number, endx: number, endy: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| startx | number | 是 | 以number的形式传入起始点的横坐标信息，取值范围：大于等于0的整数。 |
-| starty | number | 是 | 以number的形式传入起始点的纵坐标信息，取值范围：大于等于0的整数。 |
-| endx | number | 是 | 以number的形式传入目的点的横坐标信息，取值范围：大于等于0的整数。 |
-| endy | number | 是 | 以number的形式传入目的点的纵坐标信息，取值范围：大于等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| startx | number | 是 |
+| starty | number | 是 |
+| endx | number | 是 |
+| endy | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
@@ -762,25 +762,25 @@ UiDriver对象采取如下操作：通过key值找到对应键并点击。使用
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [triggerKey](arkts-test-uitest-driver-c.md#triggerkey)(keyCode: int)
-
-<!--Device-UiDriver-triggerKey(keyCode: number): Promise<void>--><!--Device-UiDriver-triggerKey(keyCode: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| keyCode | number | 是 | 指定的key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| keyCode | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
@@ -816,4 +816,3 @@ async function demo() {
   await driver.triggerKey(KeyCode.KEYCODE_BACK); // 返回键
 }
 ```
-

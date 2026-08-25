@@ -14,21 +14,20 @@ function createAppAccountManager(): AppAccountManager
 
 Creates an **AppAccountManager** object.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-appAccount-function createAppAccountManager(): AppAccountManager--><!--Device-appAccount-function createAppAccountManager(): AppAccountManager-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [AppAccountManager](arkts-basicservices-appaccount-appaccountmanager-i.md) | AppAccountManager** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [AppAccountManager](arkts-basicservices-appaccount-appaccountmanager-i.md) |
 
 **Examples**
 
 ```TypeScript
 let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 ```
-

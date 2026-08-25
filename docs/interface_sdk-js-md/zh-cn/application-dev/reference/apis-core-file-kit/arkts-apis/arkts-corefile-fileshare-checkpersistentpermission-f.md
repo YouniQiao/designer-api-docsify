@@ -14,31 +14,31 @@ function checkPersistentPermission(policies: Array<PolicyInfo>): Promise<Array<b
 
 校验所选择的多个文件或目录URI是否已持久化授权，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 17
 
-<!--Device-fileShare-function checkPersistentPermission(policies: Array<PolicyInfo>): Promise<Array<boolean>>--><!--Device-fileShare-function checkPersistentPermission(policies: Array<PolicyInfo>): Promise<Array<boolean>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| policies | Array&lt;[PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md)&gt; | 是 | 需要校验持久化授权状态的URI策略信息数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| policies | Array&lt;[PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md)&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;boolean&gt;&gt; | Promise对象，返回URI权限的持久化状态数组。 |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;boolean & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| 13900042 | Out of memory |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| 13900042 |
 
 **示例**
 
@@ -83,4 +83,3 @@ async function checkPersistentPermissionExample() {
   }
 }
 ```
-

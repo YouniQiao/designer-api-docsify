@@ -8,11 +8,11 @@ Enumerates the bundle flags, which indicate the type of bundle information to ob
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md)
-
-<!--Device-bundle-enum BundleFlag--><!--Device-bundle-enum BundleFlag-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -26,11 +26,11 @@ Obtains the default application information.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [GET_BUNDLE_INFO_DEFAULT](arkts-ability-bundlemanager-bundleflag-e.md#get_bundle_info_default)
-
-<!--Device-BundleFlag-GET_BUNDLE_DEFAULT = 0x00000000--><!--Device-BundleFlag-GET_BUNDLE_DEFAULT = 0x00000000-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -44,11 +44,11 @@ Obtains the bundle information with the ability information.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [GET_BUNDLE_INFO_WITH_ABILITY](arkts-ability-bundlemanager-bundleflag-e.md#get_bundle_info_with_ability)
-
-<!--Device-BundleFlag-GET_BUNDLE_WITH_ABILITIES = 0x00000001--><!--Device-BundleFlag-GET_BUNDLE_WITH_ABILITIES = 0x00000001-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -62,11 +62,11 @@ Obtains the ability information with the permission information.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-**Substitutes:** [GET_ABILITY_INFO_WITH_PERMISSION](arkts-ability-bundlemanager-abilityflag-e-sys.md#get_ability_info_with_permission)
-
-<!--Device-BundleFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000002--><!--Device-BundleFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000002-End-->
+**Substitutes:** [GET_ABILITY_INFO_WITH_PERMISSION](arkts-ability-bundlemanager-abilityflag-e.md#get_ability_info_with_permission)
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -80,11 +80,11 @@ Obtains the ability information with the application information.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-**Substitutes:** [GET_ABILITY_INFO_WITH_APPLICATION](arkts-ability-bundlemanager-abilityflag-e-sys.md#get_ability_info_with_application)
-
-<!--Device-BundleFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000004--><!--Device-BundleFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000004-End-->
+**Substitutes:** [GET_ABILITY_INFO_WITH_APPLICATION](arkts-ability-bundlemanager-abilityflag-e.md#get_ability_info_with_application)
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -98,9 +98,9 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-BundleFlag-GET_APPLICATION_INFO_WITH_PERMISSION = 0x00000008--><!--Device-BundleFlag-GET_APPLICATION_INFO_WITH_PERMISSION = 0x00000008-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -114,11 +114,11 @@ Obtains the bundle information with the information about the required permissio
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION](arkts-ability-bundlemanager-bundleflag-e.md#get_bundle_info_with_requested_permission)
-
-<!--Device-BundleFlag-GET_BUNDLE_WITH_REQUESTED_PERMISSION = 0x00000010--><!--Device-BundleFlag-GET_BUNDLE_WITH_REQUESTED_PERMISSION = 0x00000010-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -132,9 +132,9 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-BundleFlag-GET_ALL_APPLICATION_INFO = 0xFFFF0000--><!--Device-BundleFlag-GET_ALL_APPLICATION_INFO = 0xFFFF0000-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -148,11 +148,11 @@ Obtains the ability metadata information.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [GET_ABILITY_INFO_WITH_METADATA](arkts-ability-bundlemanager-abilityflag-e-sys.md#get_ability_info_with_metadata)
-
-<!--Device-BundleFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000020--><!--Device-BundleFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000020-End-->
+**Substitutes:** [GET_ABILITY_INFO_WITH_METADATA](arkts-ability-bundlemanager-abilityflag-e.md#get_ability_info_with_metadata)
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -166,9 +166,9 @@ No uninstallation permission.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-BundleFlag-GET_APPLICATION_INFO_WITH_METADATA = 0x00000040--><!--Device-BundleFlag-GET_APPLICATION_INFO_WITH_METADATA = 0x00000040-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -182,11 +182,11 @@ Obtains the ability information of system applications.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [GET_ABILITY_INFO_ONLY_SYSTEM_APP](arkts-ability-bundlemanager-abilityflag-e-sys.md#get_ability_info_only_system_app)
-
-<!--Device-BundleFlag-GET_ABILITY_INFO_SYSTEMAPP_ONLY = 0x00000080--><!--Device-BundleFlag-GET_ABILITY_INFO_SYSTEMAPP_ONLY = 0x00000080-End-->
+**Substitutes:** [GET_ABILITY_INFO_ONLY_SYSTEM_APP](arkts-ability-bundlemanager-abilityflag-e.md#get_ability_info_only_system_app)
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -200,11 +200,11 @@ Obtains information about disabled abilities.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [GET_ABILITY_INFO_WITH_DISABLE](arkts-ability-bundlemanager-abilityflag-e-sys.md#get_ability_info_with_disable)
-
-<!--Device-BundleFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000100--><!--Device-BundleFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000100-End-->
+**Substitutes:** [GET_ABILITY_INFO_WITH_DISABLE](arkts-ability-bundlemanager-abilityflag-e.md#get_ability_info_with_disable)
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -218,9 +218,8 @@ No uninstallation permission.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-<!--Device-BundleFlag-GET_APPLICATION_INFO_WITH_DISABLE = 0x00000200--><!--Device-BundleFlag-GET_APPLICATION_INFO_WITH_DISABLE = 0x00000200-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework
-

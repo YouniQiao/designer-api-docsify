@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-Intl-export class NumberFormat--><!--Device-Intl-export class NumberFormat-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,20 +23,18 @@ public constructor(locales?: Intl.BCP47LanguageTag | Intl.BCP47LanguageTag[], op
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormat-public constructor(locales?: Intl.BCP47LanguageTag | Intl.BCP47LanguageTag[], options?: NumberFormatOptions)--><!--Device-NumberFormat-public constructor(locales?: Intl.BCP47LanguageTag | Intl.BCP47LanguageTag[], options?: NumberFormatOptions)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locales | [Intl.BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md) \| [Intl.BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md)[] | 否 | 区域设置。 |
-| options | NumberFormatOptions | 否 | 选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locales | [Intl.BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md) \| [Intl.BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md)[] | 否 |
+| options | [NumberFormatOptions](../../apis-telephony-kit/arkts-apis/arkts-telephony-call-numberformatoptions-i.md) | 否 |
 
 ## format
 
@@ -50,25 +46,23 @@ public format(value: long): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormat-public format(value: long): string--><!--Device-NumberFormat-public format(value: long): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | long | 是 | 待格式化的数值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 格式化后的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## format
 
@@ -80,25 +74,23 @@ public format(value: double): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormat-public format(value: double): string--><!--Device-NumberFormat-public format(value: double): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | double | 是 | 待格式化的数值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 格式化后的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## format
 
@@ -110,25 +102,23 @@ public format(value: double | bigint | long): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormat-public format(value: double | bigint | long): string--><!--Device-NumberFormat-public format(value: double | bigint | long): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | double \| bigint \| long | 是 | 待格式化的数值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | double \| bigint \| long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 格式化后的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## formatRange
 
@@ -140,26 +130,24 @@ public formatRange(start: double | bigint, end: double | bigint): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormat-public formatRange(start: double | bigint, end: double | bigint): string--><!--Device-NumberFormat-public formatRange(start: double | bigint, end: double | bigint): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| start | double \| bigint | 是 | 区间起始值。 |
-| end | double \| bigint | 是 | 区间结束值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| start | double \| bigint | 是 |
+| end | double \| bigint | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 格式化后的区间字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## formatRangeToParts
 
@@ -171,26 +159,24 @@ public formatRangeToParts(start: double | bigint, end: double | bigint): NumberR
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormat-public formatRangeToParts(start: double | bigint, end: double | bigint): NumberRangeFormatPart[]--><!--Device-NumberFormat-public formatRangeToParts(start: double | bigint, end: double | bigint): NumberRangeFormatPart[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| start | double \| bigint | 是 | 区间起始值。 |
-| end | double \| bigint | 是 | 区间结束值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| start | double \| bigint | 是 |
+| end | double \| bigint | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [NumberRangeFormatPart](arkts-arkts-intl-numberrangeformatpart-c.md)[] | 格式化后的区间各片段。 |
+| 类型 |
+| --- |
+| [NumberRangeFormatPart](arkts-arkts-intl-numberrangeformatpart-c.md)[] |
 
 ## formatToParts
 
@@ -202,25 +188,23 @@ public formatToParts(value: double | bigint): NumberFormatPart[]
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormat-public formatToParts(value: double | bigint): NumberFormatPart[]--><!--Device-NumberFormat-public formatToParts(value: double | bigint): NumberFormatPart[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | double \| bigint | 是 | 待格式化的数值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | double \| bigint | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [NumberFormatPart](arkts-arkts-intl-numberformatpart-c.md)[] | 格式化后的各个片段。 |
+| 类型 |
+| --- |
+| [NumberFormatPart](arkts-arkts-intl-numberformatpart-c.md)[] |
 
 ## resolvedOptions
 
@@ -232,19 +216,17 @@ public resolvedOptions(): ResolvedNumberFormatOptions
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormat-public resolvedOptions(): ResolvedNumberFormatOptions--><!--Device-NumberFormat-public resolvedOptions(): ResolvedNumberFormatOptions-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ResolvedNumberFormatOptions](arkts-arkts-intl-resolvednumberformatoptions-i.md) | 解析后的选项。 |
+| 类型 |
+| --- |
+| [ResolvedNumberFormatOptions](arkts-arkts-intl-resolvednumberformatoptions-i.md) |
 
 ## supportedLocalesOf
 
@@ -256,24 +238,21 @@ public static supportedLocalesOf(locales: string | string[], options?: NumberFor
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormat-public static supportedLocalesOf(locales: string | string[], options?: NumberFormatOptions): string[]--><!--Device-NumberFormat-public static supportedLocalesOf(locales: string | string[], options?: NumberFormatOptions): string[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locales | string \| string[] | 是 | 区域设置。 |
-| options | NumberFormatOptions | 否 | 选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locales | string \| string[] | 是 |
+| options | [NumberFormatOptions](../../apis-telephony-kit/arkts-apis/arkts-telephony-call-numberformatoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string[] | 支持的区域设置。 |
-
+| 类型 |
+| --- |
+| string[] |

@@ -4,7 +4,7 @@ Ad request callback.
 
 **Since:** 11
 
-<!--Device-unnamed-export interface RespCallback--><!--Device-unnamed-export interface RespCallback-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -14,7 +14,7 @@ Ad request callback.
 import { AdsServiceExtensionAbility, RespCallback } from '@kit.AdsKit';
 ```
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (respData: Map<string, Array<advertising.Advertisement>>): void
@@ -24,15 +24,15 @@ Data in the ad request callback.
 
 **Since:** 11
 
-<!--Device-RespCallback-(respData: Map<string, Array<advertising.Advertisement>>): void--><!--Device-RespCallback-(respData: Map<string, Array<advertising.Advertisement>>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Advertising.Ads
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| respData | Map&lt;string, Array&lt;advertising.Advertisement&gt;&gt; | Yes | Callback data of ad requests. It is a mapping collection that takes ad unit ID as the key and stores acquired ad content. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| respData | Map & lt;string, Array & lt;advertising.Advertisement & gt; & gt; | Yes |
 
 **Examples**
 
@@ -46,4 +46,3 @@ function setRespCallback(respCallback: RespCallback) {
   respCallback(respData);
 }
 ```
-

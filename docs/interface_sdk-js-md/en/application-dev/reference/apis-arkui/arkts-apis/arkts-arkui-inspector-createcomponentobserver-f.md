@@ -16,6 +16,8 @@ Sets the component after layout or draw criteria and returns the corresponding l
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 18
 
 **Substitutes:** createComponentObserver
@@ -24,25 +26,22 @@ Sets the component after layout or draw criteria and returns the corresponding l
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-inspector-function createComponentObserver(id: string): ComponentObserver--><!--Device-inspector-function createComponentObserver(id: string): ComponentObserver-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| id | string | Yes | component id. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| id | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ComponentObserver](../../apis-default/arkts-apis/arkts-inspector-componentobserver-i.md) | create listener for observer component event. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) |
 
 **Examples**
 
 ```TypeScript
 let listener:inspector.ComponentObserver = inspector.createComponentObserver('COMPONENT_ID'); // Listen for callback events for the component whose ID is COMPONENT_ID.
 ```
-

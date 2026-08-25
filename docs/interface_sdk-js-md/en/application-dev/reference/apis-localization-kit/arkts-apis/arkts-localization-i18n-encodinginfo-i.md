@@ -4,7 +4,7 @@ Defines the detect encoding result information.
 
 **Since:** 26.0.0
 
-<!--Device-i18n-export interface EncodingInfo--><!--Device-i18n-export interface EncodingInfo-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -22,15 +22,15 @@ confidence: int
 
 An integer between 0 to 100, determine the accuracy of the result. Higher value indicates a more reliable detection result.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-EncodingInfo-confidence: int--><!--Device-EncodingInfo-confidence: int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -46,11 +46,10 @@ Name of the detect encoding result, the value can be "UTF-8", "UTF-16BE", "UTF-1
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-EncodingInfo-encodingName: string--><!--Device-EncodingInfo-encodingName: string-End-->
-
 **System capability:** SystemCapability.Global.I18n
-

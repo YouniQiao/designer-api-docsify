@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export class EAWorker--><!--Device-unnamed-export class EAWorker-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,19 +23,17 @@ constructor(needInterop: boolean = false)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-EAWorker-constructor(needInterop: boolean = false)--><!--Device-EAWorker-constructor(needInterop: boolean = false)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| needInterop | boolean | 是 | 是否需要互操作能力。true表示支持互操作，false表示不支持，默认值为false。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| needInterop | boolean | 是 |
 
 ## constructor
 
@@ -49,20 +45,18 @@ constructor(name: string, needInterop: boolean = false)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-EAWorker-constructor(name: string, needInterop: boolean = false)--><!--Device-EAWorker-constructor(name: string, needInterop: boolean = false)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | Worker的名称。 |
-| needInterop | boolean | 是 | 是否需要互操作能力。true表示支持互操作，false表示不支持，默认值为false。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| needInterop | boolean | 是 |
 
 ## constructor
 
@@ -74,20 +68,18 @@ constructor(task: () => void, needInterop: boolean = false)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-EAWorker-constructor(task: () => void, needInterop: boolean = false)--><!--Device-EAWorker-constructor(task: () => void, needInterop: boolean = false)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| task | () =&gt; void | 是 | 要执行的任务函数。 |
-| needInterop | boolean | 是 | 是否需要互操作能力。true表示支持互操作，false表示不支持，默认值为false。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| task | () = & gt; void | 是 |
+| needInterop | boolean | 是 |
 
 ## constructor
 
@@ -99,21 +91,19 @@ constructor(name: string, task: () => void, needInterop: boolean = false)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-EAWorker-constructor(name: string, task: () => void, needInterop: boolean = false)--><!--Device-EAWorker-constructor(name: string, task: () => void, needInterop: boolean = false)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | Worker的名称。 |
-| task | () =&gt; void | 是 | 要执行的任务函数。 |
-| needInterop | boolean | 是 | 是否需要互操作能力。true表示支持互操作，false表示不支持，默认值为false。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| task | () = & gt; void | 是 |
+| needInterop | boolean | 是 |
 
 ## current
 
@@ -125,19 +115,17 @@ static current(): EAWorker | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-EAWorker-static current(): EAWorker | undefined--><!--Device-EAWorker-static current(): EAWorker | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [EAWorker](arkts-arkts-eaworker-c.md) \| undefined | 当前线程的Worker实例，不在Worker上下文中时返回undefined。 |
+| 类型 |
+| --- |
+| [EAWorker](arkts-arkts-eaworker-c.md) \| undefined |
 
 ## getName
 
@@ -149,19 +137,17 @@ getName(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-EAWorker-getName(): string--><!--Device-EAWorker-getName(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | Worker的名称。 |
+| 类型 |
+| --- |
+| string |
 
 ## getPriority
 
@@ -173,19 +159,17 @@ getPriority(): WorkerPriority
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-EAWorker-getPriority(): WorkerPriority--><!--Device-EAWorker-getPriority(): WorkerPriority-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [WorkerPriority](arkts-arkts-eaworker-workerpriority-e.md) | Worker的优先级。 |
+| 类型 |
+| --- |
+| [WorkerPriority](arkts-arkts-eaworker-workerpriority-e.md) |
 
 ## getUncaughtExceptionHandler
 
@@ -197,19 +181,17 @@ getUncaughtExceptionHandler(): ((error: Error) => void) | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-EAWorker-getUncaughtExceptionHandler(): ((error: Error) => void) | undefined--><!--Device-EAWorker-getUncaughtExceptionHandler(): ((error: Error) => void) | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [function](arkts-arkts-taskpool-task-c.md) \| undefined | 未捕获异常处理函数，未设置时返回undefined。 |
+| 类型 |
+| --- |
+| [function](arkts-arkts-taskpool-task-c.md) \| undefined |
 
 ## getWorkerId
 
@@ -221,19 +203,17 @@ getWorkerId(): int | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-EAWorker-getWorkerId(): int | undefined--><!--Device-EAWorker-getWorkerId(): int | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int \| undefined | Worker的ID，未启动时返回undefined。 |
+| 类型 |
+| --- |
+| int \| undefined |
 
 ## isAlive
 
@@ -245,19 +225,17 @@ isAlive(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-EAWorker-isAlive(): boolean--><!--Device-EAWorker-isAlive(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | Worker已启动则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## join
 
@@ -269,19 +247,17 @@ join(): Job<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-EAWorker-join(): Job<void>--><!--Device-EAWorker-join(): Job<void>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Job](arkts-arkts-job-c.md)&lt;void&gt; | Worker执行完成时解析的Job。 |
+| 类型 |
+| --- |
+| [Job](arkts-arkts-job-c.md)&lt;void&gt; |
 
 ## main
 
@@ -293,19 +269,17 @@ static main(): EAWorker
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-EAWorker-static main(): EAWorker--><!--Device-EAWorker-static main(): EAWorker-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [EAWorker](arkts-arkts-eaworker-c.md) | 主线程的Worker实例。 |
+| 类型 |
+| --- |
+| [EAWorker](arkts-arkts-eaworker-c.md) |
 
 ## postTask
 
@@ -317,19 +291,17 @@ postTask(task: () => void): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-EAWorker-postTask(task: () => void): void--><!--Device-EAWorker-postTask(task: () => void): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| task | () =&gt; void | 是 | 要提交的任务。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| task | () = & gt; void | 是 |
 
 ## postToMain
 
@@ -341,26 +313,24 @@ static postToMain<R>(coroFun: Function, ...args: FixedArray<Any>): Job<R>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-EAWorker-static postToMain<R>(coroFun: Function, ...args: FixedArray<Any>): Job<R>--><!--Device-EAWorker-static postToMain<R>(coroFun: Function, ...args: FixedArray<Any>): Job<R>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| coroFun | Function | 是 | 在主线程上执行的函数。 |
-| args | FixedArray&lt;Any&gt; | 是 | 传递给函数的参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| coroFun | Function | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | FixedArray & lt;Any & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Job](arkts-arkts-job-c.md)&lt;R&gt; | 包含函数结果的Job。 |
+| 类型 |
+| --- |
+| [Job](arkts-arkts-job-c.md)&lt;R&gt; |
 
 ## quit
 
@@ -372,11 +342,9 @@ quit(): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-EAWorker-quit(): void--><!--Device-EAWorker-quit(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -390,26 +358,24 @@ run<R>(task: Function, ...args: FixedArray<Any>): Job<R>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-EAWorker-run<R>(task: Function, ...args: FixedArray<Any>): Job<R>--><!--Device-EAWorker-run<R>(task: Function, ...args: FixedArray<Any>): Job<R>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| task | Function | 是 | 要执行的任务函数。 |
-| args | FixedArray&lt;Any&gt; | 是 | 传递给任务函数的参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| task | Function | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | FixedArray & lt;Any & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Job](arkts-arkts-job-c.md)&lt;R&gt; | 包含任务结果的Job。 |
+| 类型 |
+| --- |
+| [Job](arkts-arkts-job-c.md)&lt;R&gt; |
 
 ## setPriority
 
@@ -421,19 +387,17 @@ setPriority(priority: WorkerPriority): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-EAWorker-setPriority(priority: WorkerPriority): void--><!--Device-EAWorker-setPriority(priority: WorkerPriority): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| priority | [WorkerPriority](arkts-arkts-eaworker-workerpriority-e.md) | 是 | 要设置的优先级。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| priority | [WorkerPriority](arkts-arkts-eaworker-workerpriority-e.md) | 是 |
 
 ## setUncaughtExceptionHandler
 
@@ -445,19 +409,17 @@ setUncaughtExceptionHandler(handler: (error: Error) => void): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-EAWorker-setUncaughtExceptionHandler(handler: (error: Error) => void): void--><!--Device-EAWorker-setUncaughtExceptionHandler(handler: (error: Error) => void): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| handler | (error: Error) =&gt; void | 是 | 未捕获异常发生时调用的处理函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| handler | (error: Error) = & gt; void | 是 |
 
 ## start
 
@@ -469,11 +431,8 @@ start(): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-EAWorker-start(): void--><!--Device-EAWorker-start(): void-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

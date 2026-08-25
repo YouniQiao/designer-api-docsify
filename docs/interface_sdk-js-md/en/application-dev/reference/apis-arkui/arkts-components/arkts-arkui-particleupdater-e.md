@@ -4,7 +4,7 @@ Enumerates the updater types of a particle.@enum { string }
 
 **Since:** 10
 
-<!--Device-unnamed-declare enum ParticleUpdater--><!--Device-unnamed-declare enum ParticleUpdater-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ No change.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ParticleUpdater-NONE = 'none'--><!--Device-ParticleUpdater-NONE = 'none'-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Random change.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ParticleUpdater-RANDOM = 'random'--><!--Device-ParticleUpdater-RANDOM = 'random'-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ Change with the animation curve.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ParticleUpdater-CURVE = 'curve'--><!--Device-ParticleUpdater-CURVE = 'curve'-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

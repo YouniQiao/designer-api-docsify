@@ -16,7 +16,7 @@ Clears this file cache.
 
 **Since:** 23
 
-<!--Device-cacheDownload-function clearFileCache(): void--><!--Device-cacheDownload-function clearFileCache(): void-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -27,4 +27,3 @@ import { cacheDownload } from '@kit.BasicServicesKit';
   
 cacheDownload.clearFileCache();
 ```
-

@@ -2,9 +2,9 @@
 
 Enumerates the status codes returned when adding an item to a batch download.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-photoAccessHelper-enum CloudAssetDownloadCode--><!--Device-photoAccessHelper-enum CloudAssetDownloadCode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ ADD_DOWNLOAD_TASK_SUCCESS = 0
 
 The individual download item is successfully added.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-CloudAssetDownloadCode-ADD_DOWNLOAD_TASK_SUCCESS = 0--><!--Device-CloudAssetDownloadCode-ADD_DOWNLOAD_TASK_SUCCESS = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,11 +34,10 @@ DOWNLOAD_ASSET_NOT_EXIST = 1
 
 The requested asset does not exist.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-CloudAssetDownloadCode-DOWNLOAD_ASSET_NOT_EXIST = 1--><!--Device-CloudAssetDownloadCode-DOWNLOAD_ASSET_NOT_EXIST = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

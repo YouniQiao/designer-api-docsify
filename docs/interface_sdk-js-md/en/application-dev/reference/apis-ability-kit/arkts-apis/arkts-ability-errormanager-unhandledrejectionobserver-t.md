@@ -1,23 +1,22 @@
 # UnhandledRejectionObserver
 
 ```TypeScript
-export type UnhandledRejectionObserver = (reason: Error | Any, promise: Promise<Any>) => void
+export type UnhandledRejectionObserver = (reason: Error | any, promise: Promise<any>) => void
 ```
 
-The observer will be called by system when an unhandled rejection occurs.
+Defines an observer to capture the cause of a rejected promise.
 
-**Since:** 24
+**Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 24.
 
-<!--Device-errorManager-export type UnhandledRejectionObserver = (reason: Error | Any, promise: Promise<Any>) => void--><!--Device-errorManager-export type UnhandledRejectionObserver = (reason: Error | Any, promise: Promise<Any>) => void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| reason | Error \| Any | Yes | the reason of the rejection, typically of Error type |
-| promise | Promise&lt;Any&gt; | Yes | the promise that is rejected |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| reason | Error \| any | Yes |
+| promise | Promise & lt;any & gt; | Yes |

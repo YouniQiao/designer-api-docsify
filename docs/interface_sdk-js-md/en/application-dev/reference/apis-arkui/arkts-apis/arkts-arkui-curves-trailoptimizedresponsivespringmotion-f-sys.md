@@ -16,9 +16,9 @@ Creates a responsive spring animation curve. It is a special case of [springMoti
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-curves-function trailOptimizedResponsiveSpringMotion(response?: number, dampingFraction?: number, overlapDuration?: number, trail?: TrailOptimization): ICurve--><!--Device-curves-function trailOptimizedResponsiveSpringMotion(response?: number, dampingFraction?: number, overlapDuration?: number, trail?: TrailOptimization): ICurve-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,16 +26,15 @@ Creates a responsive spring animation curve. It is a special case of [springMoti
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| response | number | No | See **response** in **springMotion**.<br>Default value: **0.15**<br>Unit: second<br> Value range: (0, +∞)<br>**NOTE：**<br>If this parameter is set to a value less than or equal to 0, the default value **0.15** is used. |
-| dampingFraction | number | No | See **dampingFraction** in **springMotion**.<br>Default value: **0.86**<br> Unit: second<br>Value range: 0, +∞)<br>**NOTE：**<br>A value less than 0 evaluates to the default value **0.86**. |
-| overlapDuration | number | No | See **overlapDuration** in **springMotion**.<br>Default value: **0.25**<br> Unit: second<br>Value range: [0, +∞)<br>**NOTE：**<br>A value less than 0 evaluates to the default value **0.25**.<br>**ResponsiveSpringMotion** is a special case of **springMotion**, with the only difference in the default values. To apply custom settings for a spring animation, you are advised to use **springMotion**. When using **responsiveSpringMotion**, you are advised to retain the default settings.<br>The duration of the responsive spring animation depends on the **responsiveSpringMotion** parameters and the previous velocity, rather than the duration parameter in [animation, animateTo, or pageTransition. In addition, the interpolation cannot be obtained using the **interpolate** function of the curve. |
-| trail | [TrailOptimization](arkts-arkui-curves-trailoptimization-i-sys.md) | No | Trail optimization configuration. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| response | number | No |
+| dampingFraction | number | No |
+| overlapDuration | number | No |
+| trail | [TrailOptimization](arkts-arkui-curves-trailoptimization-i-sys.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ICurve | Curve. <br>**NOTE：**<br>1. To apply custom settings for a spring animation, you are advised to use **springMotion**. When using **responsiveSpringMotion**, you are advised to retain the default settings. <br>2. The duration of the responsive spring animation depends on the **responsiveSpringMotion** parameters and the previous velocity, rather than the duration parameter in [animation]{ |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ICurve](arkts-arkui-curves-icurve-i.md) |

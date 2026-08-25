@@ -6,7 +6,7 @@
 
 **起始版本：** 12
 
-<!--Device-vpn-export interface L2tpVpnConfig--><!--Device-vpn-export interface L2tpVpnConfig-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -28,7 +28,7 @@ ipsecCaCertConfig?: string
 
 **起始版本：** 12
 
-<!--Device-L2tpVpnConfig-ipsecCaCertConfig?: string--><!--Device-L2tpVpnConfig-ipsecCaCertConfig?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -44,7 +44,7 @@ ipsecCaCertFilePath?: string
 
 **起始版本：** 12
 
-<!--Device-L2tpVpnConfig-ipsecCaCertFilePath?: string--><!--Device-L2tpVpnConfig-ipsecCaCertFilePath?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -60,7 +60,7 @@ ipsecConfig?: string
 
 **起始版本：** 12
 
-<!--Device-L2tpVpnConfig-ipsecConfig?: string--><!--Device-L2tpVpnConfig-ipsecConfig?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -76,7 +76,7 @@ ipsecIdentifier?: string
 
 **起始版本：** 12
 
-<!--Device-L2tpVpnConfig-ipsecIdentifier?: string--><!--Device-L2tpVpnConfig-ipsecIdentifier?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -92,7 +92,7 @@ ipsecPreSharedKey?: string
 
 **起始版本：** 12
 
-<!--Device-L2tpVpnConfig-ipsecPreSharedKey?: string--><!--Device-L2tpVpnConfig-ipsecPreSharedKey?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -108,7 +108,7 @@ ipsecPrivateServerCertConfig?: string
 
 **起始版本：** 12
 
-<!--Device-L2tpVpnConfig-ipsecPrivateServerCertConfig?: string--><!--Device-L2tpVpnConfig-ipsecPrivateServerCertConfig?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -124,7 +124,7 @@ ipsecPrivateServerCertFilePath?: string
 
 **起始版本：** 12
 
-<!--Device-L2tpVpnConfig-ipsecPrivateServerCertFilePath?: string--><!--Device-L2tpVpnConfig-ipsecPrivateServerCertFilePath?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -140,7 +140,7 @@ ipsecPrivateUserCertConfig?: string
 
 **起始版本：** 12
 
-<!--Device-L2tpVpnConfig-ipsecPrivateUserCertConfig?: string--><!--Device-L2tpVpnConfig-ipsecPrivateUserCertConfig?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -156,7 +156,7 @@ ipsecPrivateUserCertFilePath?: string
 
 **起始版本：** 12
 
-<!--Device-L2tpVpnConfig-ipsecPrivateUserCertFilePath?: string--><!--Device-L2tpVpnConfig-ipsecPrivateUserCertFilePath?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -172,7 +172,7 @@ ipsecPublicServerCertConfig?: string
 
 **起始版本：** 12
 
-<!--Device-L2tpVpnConfig-ipsecPublicServerCertConfig?: string--><!--Device-L2tpVpnConfig-ipsecPublicServerCertConfig?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -188,7 +188,7 @@ ipsecPublicServerCertFilePath?: string
 
 **起始版本：** 12
 
-<!--Device-L2tpVpnConfig-ipsecPublicServerCertFilePath?: string--><!--Device-L2tpVpnConfig-ipsecPublicServerCertFilePath?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -204,7 +204,7 @@ ipsecPublicUserCertConfig?: string
 
 **起始版本：** 12
 
-<!--Device-L2tpVpnConfig-ipsecPublicUserCertConfig?: string--><!--Device-L2tpVpnConfig-ipsecPublicUserCertConfig?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -220,7 +220,7 @@ ipsecPublicUserCertFilePath?: string
 
 **起始版本：** 12
 
-<!--Device-L2tpVpnConfig-ipsecPublicUserCertFilePath?: string--><!--Device-L2tpVpnConfig-ipsecPublicUserCertFilePath?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -236,7 +236,7 @@ ipsecSecrets?: string
 
 **起始版本：** 12
 
-<!--Device-L2tpVpnConfig-ipsecSecrets?: string--><!--Device-L2tpVpnConfig-ipsecSecrets?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -252,7 +252,7 @@ l2tpSharedKey?: string
 
 **起始版本：** 12
 
-<!--Device-L2tpVpnConfig-l2tpSharedKey?: string--><!--Device-L2tpVpnConfig-l2tpSharedKey?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -268,7 +268,7 @@ optionsL2tpdClient?: string
 
 **起始版本：** 12
 
-<!--Device-L2tpVpnConfig-optionsL2tpdClient?: string--><!--Device-L2tpVpnConfig-optionsL2tpdClient?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -284,7 +284,7 @@ strongSwanConfig?: string
 
 **起始版本：** 12
 
-<!--Device-L2tpVpnConfig-strongSwanConfig?: string--><!--Device-L2tpVpnConfig-strongSwanConfig?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -300,9 +300,8 @@ xl2tpdConfig?: string
 
 **起始版本：** 12
 
-<!--Device-L2tpVpnConfig-xl2tpdConfig?: string--><!--Device-L2tpVpnConfig-xl2tpdConfig?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
-

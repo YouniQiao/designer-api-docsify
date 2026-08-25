@@ -5,9 +5,9 @@ Picture类，一些包含特殊信息的图片可以解码为Picture（也可以
 > **说明：**&gt;
 > - 本Interface首批接口从API version 13开始支持。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-image-interface Picture--><!--Device-image-interface Picture-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -25,29 +25,29 @@ getAuxiliaryPicture(type: AuxiliaryPictureType): AuxiliaryPicture | null
 
 根据类型获取辅助图。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-Picture-getAuxiliaryPicture(type: AuxiliaryPictureType): AuxiliaryPicture | null--><!--Device-Picture-getAuxiliaryPicture(type: AuxiliaryPictureType): AuxiliaryPicture | null-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) | 是 | 辅助图类型。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) \| null | 返回AuxiliaryPicture对象，如果没有则返回null。 |
+| 类型 |
+| --- |
+| [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) \| null |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -88,17 +88,17 @@ getGainmapPixelmap(): PixelMap | null
 
 获取增益图的pixelmap。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-Picture-getGainmapPixelmap(): PixelMap | null--><!--Device-Picture-getGainmapPixelmap(): PixelMap | null-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| PixelMap \| null | 返回Pixelmap对象，如果没有则返回null。 |
+| 类型 |
+| --- |
+| PixelMap \| null |
 
 **示例**
 
@@ -157,22 +157,22 @@ getHdrComposedPixelmap(): Promise<PixelMap>
 
 **起始版本：** 13
 
-<!--Device-Picture-getHdrComposedPixelmap(): Promise<PixelMap>--><!--Device-Picture-getHdrComposedPixelmap(): Promise<PixelMap>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;PixelMap&gt; | Promise对象，返回PixelMap。 |
+| 类型 |
+| --- |
+| Promise & lt;PixelMap & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7600901](../errorcode-image.md#7600901-未知错误) | Inner unknown error. Please check the logs for detailed information. |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation. e.g.,1. The picture does not has a gainmap. 2. MainPixelMap's allocator type is not DMA. |
+| 错误码ID |
+| --- |
+| [7600901](../errorcode-image.md#7600901-未知错误) |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) |
 
 **示例**
 
@@ -223,22 +223,22 @@ Obtains the hdr pixel map. This method uses a promise to return the PixelMap obj
 
 **起始版本：** 23
 
-<!--Device-Picture-getHdrComposedPixelmap(): Promise<PixelMap | undefined>--><!--Device-Picture-getHdrComposedPixelmap(): Promise<PixelMap | undefined>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;PixelMap \| undefined&gt; | A Promise instance used to return the PixelMap object. |
+| 类型 |
+| --- |
+| Promise & lt;PixelMap \ | undefined & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7600901](../errorcode-image.md#7600901-未知错误) | Unknown error. |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation. |
+| 错误码ID |
+| --- |
+| [7600901](../errorcode-image.md#7600901-未知错误) |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) |
 
 **示例**
 
@@ -254,29 +254,29 @@ getHdrComposedPixelmapWithOptions(options?: HdrComposeOptions): Promise<PixelMap
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-Picture-getHdrComposedPixelmapWithOptions(options?: HdrComposeOptions): Promise<PixelMap | undefined>--><!--Device-Picture-getHdrComposedPixelmapWithOptions(options?: HdrComposeOptions): Promise<PixelMap | undefined>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [HdrComposeOptions](arkts-image-image-hdrcomposeoptions-i.md) | 否 | 合成HDR的选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [HdrComposeOptions](arkts-image-image-hdrcomposeoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;PixelMap \| undefined&gt; | Promise对象，返回PixelMap或undefined。 |
+| 类型 |
+| --- |
+| Promise & lt;PixelMap \ | undefined & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation. |
+| 错误码ID |
+| --- |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) |
 
 **示例**
 
@@ -350,15 +350,15 @@ getMainPixelmap(): PixelMap
 
 **起始版本：** 13
 
-<!--Device-Picture-getMainPixelmap(): PixelMap--><!--Device-Picture-getMainPixelmap(): PixelMap-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| PixelMap | 同步返回PixelMap对象。 |
+| 类型 |
+| --- |
+| [PixelMap](arkts-image-image-pixelmap-i.md) |
 
 ## getMainPixelmap
 
@@ -370,15 +370,15 @@ Obtains the pixel map of the main image.
 
 **起始版本：** 23
 
-<!--Device-Picture-getMainPixelmap(): PixelMap | undefined--><!--Device-Picture-getMainPixelmap(): PixelMap | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| PixelMap \| undefined | Returns the pixel map. |
+| 类型 |
+| --- |
+| PixelMap \| undefined |
 
 ## getMetadata
 
@@ -390,28 +390,28 @@ getMetadata(metadataType: MetadataType): Promise<Metadata>
 
 **起始版本：** 13
 
-<!--Device-Picture-getMetadata(metadataType: MetadataType): Promise<Metadata>--><!--Device-Picture-getMetadata(metadataType: MetadataType): Promise<Metadata>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| metadataType | [MetadataType](arkts-image-image-metadatatype-e.md) | 是 | 元数据类型。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| metadataType | [MetadataType](arkts-image-image-metadatatype-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Metadata&gt; | Promise对象。返回元数据。 |
+| 类型 |
+| --- |
+| Promise & lt;Metadata & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
 
 **示例**
 
@@ -574,27 +574,27 @@ Obtains the metadata of main picture.
 
 **起始版本：** 23
 
-<!--Device-Picture-getMetadata(metadataType: MetadataType): Promise<Metadata | undefined>--><!--Device-Picture-getMetadata(metadataType: MetadataType): Promise<Metadata | undefined>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| metadataType | [MetadataType](arkts-image-image-metadatatype-e.md) | 是 | The type of metadata. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| metadataType | [MetadataType](arkts-image-image-metadatatype-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Metadata \| undefined&gt; | Return the metadata of main picture. |
+| 类型 |
+| --- |
+| Promise & lt;Metadata \ | undefined & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: Unsupported metadata type. |
+| 错误码ID |
+| --- |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
 
 **示例**
 
@@ -610,23 +610,23 @@ hdrComposeToMainPixelmap(): Promise<void>
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Picture-hdrComposeToMainPixelmap(): Promise<void>--><!--Device-Picture-hdrComposeToMainPixelmap(): Promise<void>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation. e.g.,1. The picture does not have a gainmap. 2. pixelMap's allocator type is not DMA. |
+| 错误码ID |
+| --- |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) |
 
 **示例**
 
@@ -656,24 +656,24 @@ marshalling(sequence: rpc.MessageSequence): void
 
 将picture序列化后写入MessageSequence。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-Picture-marshalling(sequence: rpc.MessageSequence): void--><!--Device-Picture-marshalling(sequence: rpc.MessageSequence): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | 是 | 新创建的MessageSequence。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sequence | rpc.MessageSequence | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) |
 
 **示例**
 
@@ -845,9 +845,9 @@ release(): void
 
 释放picture对象。由于图片占用内存较大，所以当Picture对象使用完成后，应主动调用该方法及时释放内存。释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-Picture-release(): void--><!--Device-Picture-release(): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1286,24 +1286,24 @@ setAuxiliaryPicture(type: AuxiliaryPictureType, auxiliaryPicture: AuxiliaryPictu
 
 设置辅助图。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-Picture-setAuxiliaryPicture(type: AuxiliaryPictureType, auxiliaryPicture: AuxiliaryPicture): void--><!--Device-Picture-setAuxiliaryPicture(type: AuxiliaryPictureType, auxiliaryPicture: AuxiliaryPicture): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) | 是 | 辅助图类型。 |
-| auxiliaryPicture | [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) | 是 | 辅助图对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) | 是 |
+| auxiliaryPicture | [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1359,23 +1359,23 @@ setMainPixelmap(pixelmap: PixelMap): void
 
 **起始版本：** 26.1.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
-<!--Device-Picture-setMainPixelmap(pixelmap: PixelMap): void--><!--Device-Picture-setMainPixelmap(pixelmap: PixelMap): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pixelmap | PixelMap | 是 | PixelMap对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pixelmap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7700204](../errorcode-image.md#7700204-无效参数) | 参数错误。 |
+| 错误码ID |
+| --- |
+| [7700204](../errorcode-image.md#7700204-无效参数) |
 
 **示例**
 
@@ -1403,31 +1403,31 @@ setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>
 
 设置主图的元数据。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-Picture-setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>--><!--Device-Picture-setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| metadataType | [MetadataType](arkts-image-image-metadatatype-e.md) | 是 | 元数据类型。 |
-| metadata | Metadata | 是 | 元数据对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| metadataType | [MetadataType](arkts-image-image-metadatatype-e.md) | 是 |
+| metadata | [Metadata](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-metadata-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
 
 **示例**
 
@@ -1584,4 +1584,3 @@ function setMetadata(pixelMap: image.PixelMap) { // 入参pixelMap内存类型�
   });
 }
 ```
-

@@ -2,9 +2,9 @@
 
 Defines the parameters for querying historical traffic of an NIC.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-statistics-export interface IfaceInfo--><!--Device-statistics-export interface IfaceInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -24,11 +24,11 @@ endTime: int
 
 End time of the query, which is a timestamp in seconds.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-IfaceInfo-endTime: int--><!--Device-IfaceInfo-endTime: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -44,9 +44,9 @@ NIC name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-IfaceInfo-iface: string--><!--Device-IfaceInfo-iface: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -60,13 +60,12 @@ startTime: int
 
 Start time of the query, which is a timestamp in seconds.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-IfaceInfo-startTime: int--><!--Device-IfaceInfo-startTime: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
-

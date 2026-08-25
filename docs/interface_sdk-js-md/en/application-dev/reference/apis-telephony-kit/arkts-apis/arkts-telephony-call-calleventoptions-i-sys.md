@@ -2,9 +2,9 @@
 
 Defines the call event options.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-call-export interface CallEventOptions--><!--Device-call-export interface CallEventOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -26,11 +26,10 @@ Enumerates call ability event IDs.
 
 **Type:** [CallAbilityEventId](arkts-telephony-call-callabilityeventid-e-sys.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-CallEventOptions-eventId: CallAbilityEventId--><!--Device-CallEventOptions-eventId: CallAbilityEventId-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
-

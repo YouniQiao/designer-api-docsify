@@ -1,4 +1,4 @@
-# @ohos.enterprise.dateTimeManager
+# @ohos.enterprise.dateTimeManager(System Time Management)
 
 The **dateTimeManager** module provides APIs for system time management.
 
@@ -10,7 +10,7 @@ The **dateTimeManager** module provides APIs for system time management.
 
 **Since:** 9
 
-<!--Device-unnamed-declare namespace dateTimeManager--><!--Device-unnamed-declare namespace dateTimeManager-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -27,13 +27,12 @@ import { dateTimeManager } from '@kit.MDMKit';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [disallowModifyDateTime](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md) | Disallows the device to modify the system time. This API uses an asynchronous callback to return the result. |
-| [disallowModifyDateTime](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md) | Disallows the device to modify the system time. This API uses a promise to return the result. |
-| [isModifyDateTimeDisallowed](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md) | Queries whether the system time of a device can be modified. This API uses an asynchronous callback to return the result. |
-| [isModifyDateTimeDisallowed](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md) | Queries whether the system time of a device can be modified. This API uses a promise to return the result. |
-| [setDateTime](arkts-mdm-datetimemanager-setdatetime-f-sys.md) | Sets the system time. This API uses an asynchronous callback to return the result. |
-| [setDateTime](arkts-mdm-datetimemanager-setdatetime-f-sys.md) | Sets the system time. This API uses a promise to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [disallowModifyDateTime(System Time Management)](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md) |
+| [disallowModifyDateTime(System Time Management)](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md) |
+| [isModifyDateTimeDisallowed(System Time Management)](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md) |
+| [isModifyDateTimeDisallowed(System Time Management)](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md) |
+| [setDateTime(System Time Management)](arkts-mdm-datetimemanager-setdatetime-f-sys.md) |
+| [setDateTime(System Time Management)](arkts-mdm-datetimemanager-setdatetime-f-sys.md) |
 <!--DelEnd-->
-

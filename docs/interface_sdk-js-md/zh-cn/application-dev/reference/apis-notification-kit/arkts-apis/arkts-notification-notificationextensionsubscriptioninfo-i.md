@@ -2,9 +2,9 @@
 
 用于描述通知扩展订阅的信息。
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-unnamed-export interface NotificationExtensionSubscriptionInfo--><!--Device-unnamed-export interface NotificationExtensionSubscriptionInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -18,9 +18,9 @@ addr: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-NotificationExtensionSubscriptionInfo-addr: string--><!--Device-NotificationExtensionSubscriptionInfo-addr: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -34,9 +34,8 @@ type: notificationExtensionSubscription.SubscribeType
 
 **类型：** notificationExtensionSubscription.SubscribeType
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-NotificationExtensionSubscriptionInfo-type: notificationExtensionSubscription.SubscribeType--><!--Device-NotificationExtensionSubscriptionInfo-type: notificationExtensionSubscription.SubscribeType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
-

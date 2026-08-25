@@ -14,11 +14,11 @@ function getPageContent(options?: ContentOptions): Promise<PageContent>
 
 Obtains the onscreen content when a window is displayed on the screen.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_SCREEN_CONTENT
-
-<!--Device-onScreen-function getPageContent(options?: ContentOptions): Promise<PageContent>--><!--Device-onScreen-function getPageContent(options?: ContentOptions): Promise<PageContent>-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -26,28 +26,28 @@ Obtains the onscreen content when a window is displayed on the screen.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [ContentOptions](arkts-multimodalawareness-onscreen-contentoptions-i-sys.md) | No | Options for obtaining the onscreen screen content. By default, the window ID is not specified, and other options are **False**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [ContentOptions](arkts-multimodalawareness-onscreen-contentoptions-i-sys.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md)&gt; | Indicates the promise which carries retrieved page content |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. An attempt was made to get page content forbidden by <br> permission: ohos.permission.GET_SCREEN_CONTENT. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function can not work correctly due to limited <br> device capabilities. |
-| [34000001](../errorcode-onScreen.md#34000001-service-exception) | Service exception. |
-| [34000002](../errorcode-onScreen.md#34000002-unsupported-application-or-page) | The application or page is not supported. |
-| [34000003](../errorcode-onScreen.md#34000003-invalid-window-id) | The window ID is invalid. Possible causes: 1. window id is not passed <br> when screen is splited. 2. passed window id is not on screen or floating. |
-| [34000004](../errorcode-onScreen.md#34000004-page-not-ready) | The page is not ready. |
-| [34000006](../errorcode-onScreen.md#34000006-request-timeout) | The request timed out. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [34000001](../errorcode-onScreen.md#34000001-service-exception) |
+| [34000002](../errorcode-onScreen.md#34000002-unsupported-application-or-page) |
+| [34000003](../errorcode-onScreen.md#34000003-invalid-window-id) |
+| [34000004](../errorcode-onScreen.md#34000004-page-not-ready) |
+| [34000006](../errorcode-onScreen.md#34000006-request-timeout) |
 
 **Examples**
 
@@ -69,4 +69,3 @@ try {
    console.error('get page content failed, errCode = ' + err.code);
 }
 ```
-

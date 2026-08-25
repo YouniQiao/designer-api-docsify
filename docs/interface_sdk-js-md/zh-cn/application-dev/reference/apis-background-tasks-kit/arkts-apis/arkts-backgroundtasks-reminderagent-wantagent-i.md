@@ -4,11 +4,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [WantAgent](arkts-backgroundtasks-reminderagentmanager-wantagent-i.md)
-
-<!--Device-reminderAgent-interface WantAgent--><!--Device-reminderAgent-interface WantAgent-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -30,11 +30,11 @@ abilityName: string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** abilityName
-
-<!--Device-WantAgent-abilityName: string--><!--Device-WantAgent-abilityName: string-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -50,11 +50,10 @@ pkgName: string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** pkgName
 
-<!--Device-WantAgent-pkgName: string--><!--Device-WantAgent-pkgName: string-End-->
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
-

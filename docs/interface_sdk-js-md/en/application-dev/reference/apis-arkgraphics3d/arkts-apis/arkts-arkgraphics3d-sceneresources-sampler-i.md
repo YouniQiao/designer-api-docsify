@@ -2,9 +2,9 @@
 
 Describes the sampling modes used during texture sampling.@interface { Sampler }
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-unnamed-export interface Sampler--><!--Device-unnamed-export interface Sampler-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,9 +18,9 @@ Sampling mode of the texture in the U (horizontal) direction. The default value 
 
 **Type:** [SamplerAddressMode](arkts-arkgraphics3d-sceneresources-sampleraddressmode-e.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Sampler-addressModeU?: SamplerAddressMode--><!--Device-Sampler-addressModeU?: SamplerAddressMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -34,9 +34,9 @@ Sampling mode of the texture in the V (vertical) direction. The default value is
 
 **Type:** [SamplerAddressMode](arkts-arkgraphics3d-sceneresources-sampleraddressmode-e.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Sampler-addressModeV?: SamplerAddressMode--><!--Device-Sampler-addressModeV?: SamplerAddressMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -50,9 +50,9 @@ Sampling mode when the texture is enlarged. The default value is LINEAR.
 
 **Type:** [SamplerFilter](arkts-arkgraphics3d-sceneresources-samplerfilter-e.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Sampler-magFilter?: SamplerFilter--><!--Device-Sampler-magFilter?: SamplerFilter-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -66,9 +66,9 @@ Sampling mode when the texture is reduced. The default value is LINEAR.
 
 **Type:** [SamplerFilter](arkts-arkgraphics3d-sceneresources-samplerfilter-e.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Sampler-minFilter?: SamplerFilter--><!--Device-Sampler-minFilter?: SamplerFilter-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -82,9 +82,8 @@ Sampling modes between different texture resolutions. The default value is LINEA
 
 **Type:** [SamplerFilter](arkts-arkgraphics3d-sceneresources-samplerfilter-e.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Sampler-mipMapMode?: SamplerFilter--><!--Device-Sampler-mipMapMode?: SamplerFilter-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

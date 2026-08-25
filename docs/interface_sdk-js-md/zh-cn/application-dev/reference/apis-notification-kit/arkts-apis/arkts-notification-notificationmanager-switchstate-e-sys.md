@@ -2,9 +2,9 @@
 
 描述通知相关开关的设置状态。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-notificationManager-export enum SwitchState--><!--Device-notificationManager-export enum SwitchState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -18,9 +18,9 @@ USER_MODIFIED_OFF = 0
 
 表示用户设置的关闭状态。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-SwitchState-USER_MODIFIED_OFF = 0--><!--Device-SwitchState-USER_MODIFIED_OFF = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -34,9 +34,9 @@ USER_MODIFIED_ON = 1
 
 表示用户设置的开启状态。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-SwitchState-USER_MODIFIED_ON = 1--><!--Device-SwitchState-USER_MODIFIED_ON = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -50,9 +50,9 @@ SYSTEM_DEFAULT_OFF = 2
 
 表示在用户设置前的初始关闭状态。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-SwitchState-SYSTEM_DEFAULT_OFF = 2--><!--Device-SwitchState-SYSTEM_DEFAULT_OFF = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -66,11 +66,10 @@ SYSTEM_DEFAULT_ON = 3
 
 表示在用户设置前的初始开启状态。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-SwitchState-SYSTEM_DEFAULT_ON = 3--><!--Device-SwitchState-SYSTEM_DEFAULT_ON = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
-

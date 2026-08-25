@@ -2,9 +2,9 @@
 
 Describes the rectangle information.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-screen-interface Rect--><!--Device-screen-interface Rect-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -24,11 +24,11 @@ height: long
 
 Height of the rectangle, in px. The value must be an integer.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-Rect-height: long--><!--Device-Rect-height: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -42,11 +42,11 @@ left: long
 
 X coordinate of the vertex in the top-left corner of the rectangle, in px. The value must be an integer.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-Rect-left: long--><!--Device-Rect-left: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -60,11 +60,11 @@ top: long
 
 Y coordinate of the vertex in the top-left corner of the rectangle, in px. The value must be an integer.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-Rect-top: long--><!--Device-Rect-top: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -78,13 +78,12 @@ width: long
 
 Width of the rectangle, in px. The value must be an integer.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-Rect-width: long--><!--Device-Rect-width: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
-

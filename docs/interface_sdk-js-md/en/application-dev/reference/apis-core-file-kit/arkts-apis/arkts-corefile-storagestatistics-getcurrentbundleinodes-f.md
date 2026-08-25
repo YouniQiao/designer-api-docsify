@@ -16,25 +16,25 @@ Get the current bundle inodes.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-storageStatistics-function getCurrentBundleInodes(): Promise<long>--><!--Device-storageStatistics-function getCurrentBundleInodes(): Promise<long>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;long&gt; | return Promise |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;long & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13600001 | IPC error. |
-| 13600002 | File system not supported. |
-| 13600017 | Failed to query the inode information of the application. |
+| Error Code ID |
+| --- |
+| 13600001 |
+| 13600002 |
+| 13600017 |
 
 **Examples**
 
@@ -47,4 +47,3 @@ storageStatistics.getCurrentBundleInodes().then((curInodes: number) => {
   console.error(`getCurrentBundleInodes failed. Code: ${err.code}, Message: ${err.message}`);
 });
 ```
-

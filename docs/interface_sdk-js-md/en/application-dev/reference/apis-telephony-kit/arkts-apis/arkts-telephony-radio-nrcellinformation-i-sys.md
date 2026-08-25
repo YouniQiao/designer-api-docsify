@@ -2,9 +2,9 @@
 
 Obtains NR cell information.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-radio-export interface NrCellInformation--><!--Device-radio-export interface NrCellInformation-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -26,9 +26,9 @@ Indicates the mobile country code.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-NrCellInformation-mcc: string--><!--Device-NrCellInformation-mcc: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -44,9 +44,9 @@ Indicates the mobile network code.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-NrCellInformation-mnc: string--><!--Device-NrCellInformation-mnc: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -60,11 +60,11 @@ nci: int
 
 Indicates the 5G network cell ID.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-NrCellInformation-nci: int--><!--Device-NrCellInformation-nci: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -78,11 +78,11 @@ nrArfcn: int
 
 Indicates the NR-ARFCN(NR Absolute Radio Frequency Channel Number).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-NrCellInformation-nrArfcn: int--><!--Device-NrCellInformation-nrArfcn: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -96,11 +96,11 @@ pci: int
 
 Indicates the physical cell identification.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-NrCellInformation-pci: int--><!--Device-NrCellInformation-pci: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -114,13 +114,12 @@ tac: int
 
 Indicates the tracking area code.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-NrCellInformation-tac: int--><!--Device-NrCellInformation-tac: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
-

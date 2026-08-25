@@ -6,12 +6,9 @@ type DisplayNamesLanguageDisplay =
         | "standard"
 ```
 
-**Since:** -1
+**ArkTS mode:** 
 
-<!--Device-Intl-type DisplayNamesLanguageDisplay =        | "dialect"        | "standard"--><!--Device-Intl-type DisplayNamesLanguageDisplay =        | "dialect"        | "standard"-End-->
-
-| Type | Description |
-| --- | --- |
-| "dialect" |  |
-| "standard" |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| "dialect" |
+| "standard" |

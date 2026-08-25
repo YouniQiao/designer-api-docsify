@@ -13,25 +13,25 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 export function type(tp: string): On
 ```
 
-Specifies the type of the target Component.
+指定目标控件的控件类型属性，返回 On 对象自身。
 
 **起始版本：** 23
 
-<!--Device-ON-export function type(tp: string): On--><!--Device-ON-export function type(tp: string): On-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| tp | string | 是 | The type value. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| tp | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | this { |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **示例**
 
@@ -63,28 +63,27 @@ let by: By = BY.type('Button'); // 使用静态构造器BY创建by对象，指�
 export function type(tp: string, pattern: MatchPattern): On
 ```
 
-Specifies the type of the target Component.
+指定目标控件的控件类型属性和匹配模式，返回 On 对象自身。
 
 **起始版本：** 23
 
-<!--Device-ON-export function type(tp: string, pattern: MatchPattern): On--><!--Device-ON-export function type(tp: string, pattern: MatchPattern): On-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| tp | string | 是 | The type value. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 是 | the [MatchPattern](arkts-test-uitest-matchpattern-e.md) of the text value,Set it default [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) if null or undefined. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| tp | string | 是 |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | this { |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **示例**
 
 参见 [type](#type)
-

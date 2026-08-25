@@ -9,7 +9,6 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ArrayLike](arkts-arkts-arraylike-i.md) | Represents an object that has a length property and can be indexed. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArrayLike](arkts-arkts-arraylike-i.md) |

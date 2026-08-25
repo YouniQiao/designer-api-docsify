@@ -4,11 +4,11 @@ Describes the advertising data.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [AdvertiseData](arkts-connectivity-bluetoothmanager-advertisedata-i.md)
-
-<!--Device-bluetooth-interface AdvertiseData--><!--Device-bluetooth-interface AdvertiseData-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -30,11 +30,11 @@ The specified manufacturer data list to this advertisement
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [manufactureData](arkts-connectivity-bluetoothmanager-advertisedata-i.md#manufacturedata)
-
-<!--Device-AdvertiseData-manufactureData: Array<ManufactureData>--><!--Device-AdvertiseData-manufactureData: Array<ManufactureData>-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -50,11 +50,11 @@ The specified service data list to this advertisement
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [serviceData](arkts-connectivity-bluetoothmanager-advertisedata-i.md#servicedata)
-
-<!--Device-AdvertiseData-serviceData: Array<ServiceData>--><!--Device-AdvertiseData-serviceData: Array<ServiceData>-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -70,11 +70,10 @@ The specified service UUID list to this advertisement
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [serviceUuids](arkts-connectivity-bluetoothmanager-advertisedata-i.md#serviceuuids)
 
-<!--Device-AdvertiseData-serviceUuids: Array<string>--><!--Device-AdvertiseData-serviceUuids: Array<string>-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

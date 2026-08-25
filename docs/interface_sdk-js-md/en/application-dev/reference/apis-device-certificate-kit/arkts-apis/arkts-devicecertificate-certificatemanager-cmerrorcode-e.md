@@ -2,9 +2,9 @@
 
 Enumerates the error codes used in the certificate management APIs.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-certificateManager-export enum CMErrorCode--><!--Device-certificateManager-export enum CMErrorCode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -16,9 +16,9 @@ CM_ERROR_NO_PERMISSION = 201
 
 The application does not have the permission to call the API.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CMErrorCode-CM_ERROR_NO_PERMISSION = 201--><!--Device-CMErrorCode-CM_ERROR_NO_PERMISSION = 201-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -30,9 +30,9 @@ CM_ERROR_INVALID_PARAMS = 401
 
 Invalid input parameter is found.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CMErrorCode-CM_ERROR_INVALID_PARAMS = 401--><!--Device-CMErrorCode-CM_ERROR_INVALID_PARAMS = 401-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -44,9 +44,9 @@ CM_ERROR_GENERIC = 17500001
 
 An internal error occurs when the interface is called.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CMErrorCode-CM_ERROR_GENERIC = 17500001--><!--Device-CMErrorCode-CM_ERROR_GENERIC = 17500001-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -58,9 +58,9 @@ CM_ERROR_NO_FOUND = 17500002
 
 The certificate or credential does not exist.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CMErrorCode-CM_ERROR_NO_FOUND = 17500002--><!--Device-CMErrorCode-CM_ERROR_NO_FOUND = 17500002-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -72,9 +72,9 @@ CM_ERROR_INCORRECT_FORMAT = 17500003
 
 The certificate or credential is in invalid format.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CMErrorCode-CM_ERROR_INCORRECT_FORMAT = 17500003--><!--Device-CMErrorCode-CM_ERROR_INCORRECT_FORMAT = 17500003-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -86,9 +86,9 @@ CM_ERROR_MAX_CERT_COUNT_REACHED = 17500004
 
 The number of certificates or credentials has reached the limit.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-CMErrorCode-CM_ERROR_MAX_CERT_COUNT_REACHED = 17500004--><!--Device-CMErrorCode-CM_ERROR_MAX_CERT_COUNT_REACHED = 17500004-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -100,9 +100,9 @@ CM_ERROR_NO_AUTHORIZATION = 17500005
 
 The application has not obtained user authorization.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-CMErrorCode-CM_ERROR_NO_AUTHORIZATION = 17500005--><!--Device-CMErrorCode-CM_ERROR_NO_AUTHORIZATION = 17500005-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -114,9 +114,9 @@ CM_ERROR_DEVICE_ENTER_ADVSECMODE = 17500007
 
 The device enters the advanced security mode. In this mode, CA certificate installation is restricted.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-CMErrorCode-CM_ERROR_DEVICE_ENTER_ADVSECMODE = 17500007--><!--Device-CMErrorCode-CM_ERROR_DEVICE_ENTER_ADVSECMODE = 17500007-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -128,9 +128,9 @@ CM_ERROR_STORE_PATH_NOT_SUPPORTED = 17500009
 
 The device does not support the specified certificate storage path.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-CMErrorCode-CM_ERROR_STORE_PATH_NOT_SUPPORTED = 17500009--><!--Device-CMErrorCode-CM_ERROR_STORE_PATH_NOT_SUPPORTED = 17500009-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -142,9 +142,9 @@ CM_ERROR_ACCESS_UKEY_SERVICE_FAILED = 17500010
 
 The USB Key service fails to be accessed.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-CMErrorCode-CM_ERROR_ACCESS_UKEY_SERVICE_FAILED = 17500010--><!--Device-CMErrorCode-CM_ERROR_ACCESS_UKEY_SERVICE_FAILED = 17500010-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -156,9 +156,8 @@ CM_ERROR_PARAMETER_VALIDATION_FAILED = 17500011
 
 The input parameter validation fails.For example, the parameter format is incorrect or the parameter range is invalid.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-CMErrorCode-CM_ERROR_PARAMETER_VALIDATION_FAILED = 17500011--><!--Device-CMErrorCode-CM_ERROR_PARAMETER_VALIDATION_FAILED = 17500011-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
-

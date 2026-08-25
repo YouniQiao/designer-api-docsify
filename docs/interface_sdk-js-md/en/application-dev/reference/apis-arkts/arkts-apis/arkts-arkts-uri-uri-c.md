@@ -2,9 +2,9 @@
 
 URI Represents a Uniform Resource Identifier (URI) reference.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-uri-export class URI--><!--Device-uri-export class URI-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -22,25 +22,25 @@ addEncodedSegment(pathSegment: string): URI
 
 Appends an encoded field to the path component of this URI to create a new URI and returns the new URI, while keeping the existing URI unchanged.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-URI-addEncodedSegment(pathSegment: string): URI--><!--Device-URI-addEncodedSegment(pathSegment: string): URI-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pathSegment | string | Yes | Encoding path segment to be added. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| pathSegment | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| URI | After adding, return the URI object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [URI](arkts-arkts-uri-uri-c.md) |
 
 **Examples**
 
@@ -58,26 +58,26 @@ addQueryValue(key: string, value: string): URI
 
 Adds a query parameter to this URI to create a new URI, while keeping the existing URI unchanged.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-URI-addQueryValue(key: string, value: string): URI--><!--Device-URI-addQueryValue(key: string, value: string): URI-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Key of the query parameter. |
-| value | string | Yes | Value of the query parameter. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| value | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| URI | Return URI object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [URI](arkts-arkts-uri-uri-c.md) |
 
 **Examples**
 
@@ -95,25 +95,25 @@ addSegment(pathSegment: string): URI
 
 Encodes a given field, appends it to the path component of this URI to create a new URI, and returns the new URI, while keeping the existing URI unchanged.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-URI-addSegment(pathSegment: string): URI--><!--Device-URI-addSegment(pathSegment: string): URI-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pathSegment | string | Yes | path segment to be added. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| pathSegment | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| URI | After adding, return the URI object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [URI](arkts-arkts-uri-uri-c.md) |
 
 **Examples**
 
@@ -131,19 +131,19 @@ checkHierarchical(): boolean
 
 Checks whether this URI is a hierarchical URI. The URI that starts with a slash (/) in scheme-specific-part is a hierarchical URI. Relative URIs are also hierarchical.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-URI-checkHierarchical(): boolean--><!--Device-URI-checkHierarchical(): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Return true as Hierarchical, otherwise return false. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -162,19 +162,19 @@ checkIsAbsolute(): boolean
 
 Checks whether this URI is an absolute URI (whether the scheme component is defined).
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-URI-checkIsAbsolute(): boolean--><!--Device-URI-checkIsAbsolute(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | boolean Indicates whether the URI is an absolute URI (whether the scheme component is defined). |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -193,19 +193,19 @@ checkOpaque(): boolean
 
 Checks whether this URI is an opaque URI. The URI that does not start with a slash (/) is an opaque URI.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-URI-checkOpaque(): boolean--><!--Device-URI-checkOpaque(): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Return true as Opaque, otherwise return false. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -224,19 +224,19 @@ checkRelative(): boolean
 
 Determine whether URI is Relative.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-URI-checkRelative(): boolean--><!--Device-URI-checkRelative(): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Return true as Relative, otherwise return false. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -255,19 +255,19 @@ clearQuery(): URI
 
 Clears the query component of this URI to create a new URI, while keeping the existing URI object unchanged.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-URI-clearQuery(): URI--><!--Device-URI-clearQuery(): URI-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| URI | After clearing, return the URI object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [URI](arkts-arkts-uri-uri-c.md) |
 
 **Examples**
 
@@ -284,25 +284,25 @@ constructor(uri: string)
 
 A constructor used to create a URI instance.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-URI-constructor(uri: string)--><!--Device-URI-constructor(uri: string)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Input object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [uri](arkts-uri.md) | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid uri string. |
+| Error Code ID |
+| --- |
+| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) |
 
 **Examples**
 
@@ -323,27 +323,27 @@ static createFromParts(scheme: string, ssp: string, fragment: string): URI
 
 Creates a URI based on the provided scheme, scheme-specific-part, and fragment components.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-URI-static createFromParts(scheme: string, ssp: string, fragment: string): URI--><!--Device-URI-static createFromParts(scheme: string, ssp: string, fragment: string): URI-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| scheme | string | Yes | of the URI. |
-| ssp | string | Yes | scheme-specific-part, everything between the scheme separator (':') and the fragment separator ('#'), which will get encoded. |
-| fragment | string | Yes | fragment, everything after the '#', null if undefined, will get encoded. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [scheme](#scheme) | string | Yes |
+| [ssp](arkts-arkts-uri-uri-c.md) | string | Yes |
+| [fragment](arkts-arkts-uri-uri-c.md) | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| URI | Return Uri consisting of a given scheme, SSP, and fragment. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [URI](arkts-arkts-uri-uri-c.md) |
 
 **Examples**
 
@@ -362,25 +362,25 @@ Check whether this URI is equivalent to other URI objects.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [equalsTo](#equalsto)
-
-<!--Device-URI-equals(other: URI): boolean--><!--Device-URI-equals(other: URI): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | URI | Yes | other other URI object to be compared |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [URI](arkts-arkts-uri-uri-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | boolean Tests whether this URI is equivalent to other URI objects. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -398,25 +398,25 @@ equalsTo(other: URI): boolean
 
 Checks whether this URI is the same as another URI object.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-URI-equalsTo(other: URI): boolean--><!--Device-URI-equalsTo(other: URI): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | URI | Yes | URI object to compare. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [URI](arkts-arkts-uri-uri-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | boolean Tests whether this URI is equivalent to other URI objects. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -434,26 +434,26 @@ getBooleanQueryValue(key: string, defaultValue: boolean): boolean
 
 Obtains the value of the Boolean type of a query parameter in this URI.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-URI-getBooleanQueryValue(key: string, defaultValue: boolean): boolean--><!--Device-URI-getBooleanQueryValue(key: string, defaultValue: boolean): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Indicates the key value to be queried. |
-| defaultValue | boolean | Yes | The default value returned when the key has no query parameters. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| defaultValue | boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Query returns defaultValue if the key does not exist. Query returns false if the value of the key is "false" or "0", otherwise returns true. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -478,19 +478,19 @@ getLastSegment(): string
 
 Obtains the last segment of this URI.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-URI-getLastSegment(): string--><!--Device-URI-getLastSegment(): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Returns the last decoded segment, or null if the path is empty. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -507,19 +507,19 @@ getQueryNames(): string[]
 
 Obtains all non-repeated keys in the query component of this URI.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-URI-getQueryNames(): string[]--><!--Device-URI-getQueryNames(): string[]-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string[] | Return a set of decoded names. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string[] |
 
 **Examples**
 
@@ -539,23 +539,23 @@ Obtains the first value of a given key from the query component of this URI. If 
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-URI-getQueryValue(key: string): string--><!--Device-URI-getQueryValue(key: string): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Key of the query parameter. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Return decoded value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -577,23 +577,23 @@ Obtains the first value of a given key from the query component of this URI. If 
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-URI-getQueryValue(key: string): string | null--><!--Device-URI-getQueryValue(key: string): string | null-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Key of the query parameter. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string \| null | Return decoded value, If no corresponding value is found return a null object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string \| null |
 
 **Examples**
 
@@ -607,25 +607,25 @@ getQueryValues(key: string): string[]
 
 Obtains the values of a given key from the query component of this URI.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-URI-getQueryValues(key: string): string[]--><!--Device-URI-getQueryValues(key: string): string[]-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Key of the URI query parameter. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string[] | Return a set of decoded values. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string[] |
 
 **Examples**
 
@@ -643,19 +643,19 @@ getSegment(): string[]
 
 Gets the decoded path segments.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-URI-getSegment(): string[]--><!--Device-URI-getSegment(): string[]-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string[] | Return decoded path segments, each without a leading or trailing "/". |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string[] |
 
 **Examples**
 
@@ -672,19 +672,19 @@ normalize(): URI
 
 Normalizes the path of this URI.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-URI-normalize(): URI--><!--Device-URI-normalize(): URI-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| URI | URI Used to normalize the path of this URI and return a URI object whose path has been normalized. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [URI](arkts-arkts-uri-uri-c.md) |
 
 **Examples**
 
@@ -709,19 +709,19 @@ toString(): string
 
 Converts this URI into an encoded string.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-URI-toString(): string--><!--Device-URI-toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | URI in a serialized string. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -742,9 +742,9 @@ Gets/Sets the decoding permission component part of this URI.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-URI-authority: string--><!--Device-URI-authority: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -760,9 +760,9 @@ Gets/Sets the encoded authority part of this URI.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-URI-encodedAuthority: string--><!--Device-URI-encodedAuthority: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -778,9 +778,9 @@ Gets/Sets the encoded fragment part of this URI, everything after the '#'.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-URI-encodedFragment: string--><!--Device-URI-encodedFragment: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -796,9 +796,9 @@ Gets/Sets the encoded path portion of the URI.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-URI-encodedPath: string--><!--Device-URI-encodedPath: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -814,9 +814,9 @@ Gets/Sets the encoded query component from this URI.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-URI-encodedQuery: string--><!--Device-URI-encodedQuery: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -832,9 +832,9 @@ Gets/Sets the scheme-specific part of this URI, i.e. everything between the sche
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-URI-encodedSSP: string--><!--Device-URI-encodedSSP: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -850,9 +850,9 @@ Gets/Sets Obtains the encoded user information part of the URI.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-URI-encodedUserInfo: string--><!--Device-URI-encodedUserInfo: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -868,9 +868,9 @@ Gets/Sets the fragment part of the URI.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-URI-fragment: string--><!--Device-URI-fragment: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -886,9 +886,9 @@ Gets the hostname portion of the URI without a port.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-URI-host: string--><!--Device-URI-host: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -904,9 +904,9 @@ Gets/Sets the path portion of the URI.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-URI-path: string--><!--Device-URI-path: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -922,9 +922,9 @@ Gets the port portion of the URI.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-URI-port: string--><!--Device-URI-port: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -940,9 +940,9 @@ Gets/Sets the query portion of the URI
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-URI-query: string--><!--Device-URI-query: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -958,9 +958,9 @@ Gets/Sets the protocol part of the URI.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-URI-scheme: string--><!--Device-URI-scheme: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -976,9 +976,9 @@ Gets/Sets the decoding scheme-specific part of the URI.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-URI-ssp: string--><!--Device-URI-ssp: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -994,9 +994,8 @@ Gets/Sets Obtains the user information part of the URI.
 
 **Since:** 8
 
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-URI-userInfo: string--><!--Device-URI-userInfo: string-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

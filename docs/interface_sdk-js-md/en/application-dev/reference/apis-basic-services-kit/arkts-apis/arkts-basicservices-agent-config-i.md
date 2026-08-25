@@ -2,9 +2,9 @@
 
 Provides the configuration information of an upload or download task.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-agent-interface Config--><!--Device-agent-interface Config-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -25,11 +25,11 @@ Task action.
 
 **Type:** Action
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Config-action: Action--><!--Device-Config-action: Action-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -42,13 +42,13 @@ begins?: long
 File start point of the task, in bytes. It is usually used for resumable transfers. The default value is **0**. The value is a closed interval.  
 - For the download task, the value is obtained by sending an HTTP range request to read the start position when the server starts to download files. - For the upload task, the value is obtained at the start position of the upload.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Config-begins?: long--><!--Device-Config-begins?: long-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -62,11 +62,11 @@ data?: string | Array<FormItem>
 
 **Type:** string \| Array&lt;[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Config-data?: string | Array<FormItem>--><!--Device-Config-data?: string | Array<FormItem>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -80,11 +80,11 @@ Task description. The value contains a maximum of 1024 characters. The default v
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Config-description?: string--><!--Device-Config-description?: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -97,29 +97,31 @@ ends?: long
 File end point of the task, in bytes. It is usually used for resumable transfers. The default value is **-1**. The value is a closed interval.  
 - For the download task, the value is obtained by sending an HTTP range request to read the end position when the server starts to download files. - For the upload task, the value is obtained at the end position of the upload.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Config-ends?: long--><!--Device-Config-ends?: long-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## extras
 
 ```TypeScript
-extras?: Record<string, string>
+extras?: object
 ```
 
-The extras for the configuration.
+Additional information of the task. This parameter is left empty by default.
 
-**Type:** Record&lt;string, string&gt;
+**Type:** object
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Config-extras?: Record<string, string>--><!--Device-Config-extras?: Record<string, string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -134,27 +136,30 @@ Whether to send progress notifications. This parameter applies only to backgroun
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Config-gauge?: boolean--><!--Device-Config-gauge?: boolean-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## headers
 
 ```TypeScript
-headers?: Record<string, string>
+headers?: object
 ```
 
-The HTTP headers. For upload request, the `Content-Type` is forced to `multipart/form-data`. For download request, the default `Content-Type` is `application/json`.
+HTTP headers to be included in the task.  
+- For the upload task, the default **Content-Type** is **multipart/form-data**. - For the download task, the default **Content-Type** is **application/json**.
 
-**Type:** Record&lt;string, string&gt;
+**Type:** object
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Config-headers?: Record<string, string>--><!--Device-Config-headers?: Record<string, string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -166,13 +171,13 @@ index?: int
 
 Path index of the task. It is usually used for resumable transfers. The default value is **0**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Config-index?: int--><!--Device-Config-index?: int-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -189,11 +194,11 @@ Whether the task is allowed on a metered network. The default value is **false**
 
 **Default:** false
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Config-metered?: boolean--><!--Device-Config-metered?: boolean-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -208,11 +213,11 @@ Standard HTTP method for the task. The value can be **GET**, **POST**, or **PUT*
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Config-method?: string--><!--Device-Config-method?: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -226,9 +231,9 @@ Minimum speed, which is disabled by default.
 
 **Type:** [MinSpeed](arkts-basicservices-agent-minspeed-i.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Config-minSpeed?: MinSpeed--><!--Device-Config-minSpeed?: MinSpeed-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -242,11 +247,11 @@ Task mode. The default mode is background. Since API version 20, the task mode f
 
 **Type:** [Mode](arkts-basicservices-agent-mode-e.md)
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Config-mode?: Mode--><!--Device-Config-mode?: Mode-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -262,9 +267,9 @@ The default value is **false**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-Config-multipart?: boolean--><!--Device-Config-multipart?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -280,11 +285,11 @@ Network used for the task. The default value is **ANY** (Wi-Fi or cellular).
 
 **Default:** Network.ANY
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Config-network?: Network--><!--Device-Config-network?: Network-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -298,9 +303,9 @@ Custom settings for the notification bar. The default value is **{}**.
 
 **Type:** Notification
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-Config-notification?: Notification--><!--Device-Config-notification?: Notification-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -316,11 +321,11 @@ Since API version 20, the overwrite mode for downloading files to the user file 
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Config-overwrite?: boolean--><!--Device-Config-overwrite?: boolean-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -335,11 +340,11 @@ The default value is **false**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Config-precise?: boolean--><!--Device-Config-precise?: boolean-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -351,11 +356,11 @@ priority?: int
 
 Priority of the task. The priority of a foreground task is higher than that of a background task. For tasks in the same mode, a smaller value indicates a higher priority.Default value: **0**
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Config-priority?: int--><!--Device-Config-priority?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -369,9 +374,9 @@ Proxy address. The value contains a maximum of 512 characters.It is in the forma
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Config-proxy?: string--><!--Device-Config-proxy?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -386,11 +391,11 @@ Whether redirection is allowed. The default value is **true**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Config-redirect?: boolean--><!--Device-Config-redirect?: boolean-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -405,11 +410,11 @@ Whether automatic retry is enabled for the task. This parameter is only applicab
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Config-retry?: boolean--><!--Device-Config-retry?: boolean-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -424,11 +429,11 @@ Whether the task is allowed on a roaming network. The default value is **true**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Config-roaming?: boolean--><!--Device-Config-roaming?: boolean-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -446,11 +451,11 @@ Since API version 20, the default file path can be the cache path of the caller 
 
 **Default:** ./
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Config-saveas?: string--><!--Device-Config-saveas?: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -464,9 +469,9 @@ Custom timeout interval. The default connection timeout interval is 60 seconds, 
 
 **Type:** Timeout
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Config-timeout?: Timeout--><!--Device-Config-timeout?: Timeout-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -480,11 +485,11 @@ Task title. The value contains a maximum of 256 characters. The default value is
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Config-title?: string--><!--Device-Config-title?: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -498,11 +503,11 @@ Task token. To query a task with a token, you need to provide the token and use 
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Config-token?: string--><!--Device-Config-token?: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -516,11 +521,10 @@ Resource URL. From API version 6 to 14, the value contains a maximum of 2048 cha
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-Config-url: string--><!--Device-Config-url: string-End-->
-
 **System capability:** SystemCapability.Request.FileTransferAgent
-

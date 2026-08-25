@@ -2,9 +2,9 @@
 
 Represents a text shadow.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-text-interface TextShadow--><!--Device-text-interface TextShadow-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -22,13 +22,13 @@ blurRadius?: double
 
 Blur radius, a floating-point value in physical pixels (px), with a default value of **0.0**.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-TextShadow-blurRadius?: double--><!--Device-TextShadow-blurRadius?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -42,11 +42,11 @@ Color of the text shadow. The default value is black Color(255, 0, 0, 0).
 
 **Type:** common2D.Color
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-TextShadow-color?: common2D.Color--><!--Device-TextShadow-color?: common2D.Color-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -60,11 +60,10 @@ Offset position of the text shadow relative to the current text. The horizontal 
 
 **Type:** common2D.Point
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-TextShadow-point?: common2D.Point--><!--Device-TextShadow-point?: common2D.Point-End-->
-
 **System capability:** SystemCapability.Graphics.Drawing
-

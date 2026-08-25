@@ -4,11 +4,11 @@
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 11
 
 **替代接口：** [AuthTipInfo](arkts-userauthentication-userauth-authtipinfo-i.md)
-
-<!--Device-userAuth-interface TipInfo--><!--Device-userAuth-interface TipInfo-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -30,11 +30,11 @@ module: number
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 11
 
 **替代接口：** [tipType](arkts-userauthentication-userauth-authtipinfo-i.md#tiptype)
-
-<!--Device-TipInfo-module: number--><!--Device-TipInfo-module: number-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -50,11 +50,10 @@ tip: number
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 11
 
 **替代接口：** [tipCode](arkts-userauthentication-userauth-authtipinfo-i.md#tipcode)
 
-<!--Device-TipInfo-tip: number--><!--Device-TipInfo-tip: number-End-->
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
-

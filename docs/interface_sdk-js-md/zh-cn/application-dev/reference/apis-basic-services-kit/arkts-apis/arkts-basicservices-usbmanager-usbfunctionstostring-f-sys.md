@@ -16,11 +16,11 @@ function usbFunctionsToString(funcs: FunctionType): string
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 12
 
 **替代接口：** [getStringFromFunctions](arkts-basicservices-usbmanager-getstringfromfunctions-f-sys.md)(funcs: FunctionType)
-
-<!--Device-usbManager-function usbFunctionsToString(funcs: FunctionType): string--><!--Device-usbManager-function usbFunctionsToString(funcs: FunctionType): string-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -28,21 +28,21 @@ function usbFunctionsToString(funcs: FunctionType): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| funcs | FunctionType | 是 | 功能列表对应的数字掩码，可通过位运算组合多个功能。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| funcs | [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换后的字符串形式的功能列表。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified.<br>2.Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -52,4 +52,3 @@ let funcs: usbManager.FunctionType = usbManager.FunctionType.ACM | usbManager.Fu
 // 将数字掩码转化为字符串
 let ret: string = usbManager.usbFunctionsToString(funcs);
 ```
-

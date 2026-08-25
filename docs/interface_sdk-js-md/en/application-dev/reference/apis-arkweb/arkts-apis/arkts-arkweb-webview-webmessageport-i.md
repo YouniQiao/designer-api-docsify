@@ -4,7 +4,7 @@ WebMessagePort is a message port interface in the Web component used for bidirec
 
 **Since:** 9
 
-<!--Device-webview-interface WebMessagePort--><!--Device-webview-interface WebMessagePort-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -20,13 +20,13 @@ import { webview } from '@kit.ArkWeb';
 close(): void
 ```
 
-Closes this message port when messages do not need to be sent. Before calling this method, call [createWebMessagePorts](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#createwebmessageports) to create a message port.
+Closes this message port when messages do not need to be sent. Before calling this method, call [createWebMessagePorts](arkts-arkweb-webview-webviewcontroller-c.md#createwebmessageports) to create a message port.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebMessagePort-close(): void--><!--Device-WebMessagePort-close(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -80,28 +80,28 @@ struct WebComponent {
 onMessageEvent(callback: (result: WebMessage) => void): void
 ```
 
-Registers a callback on the application message port to receive messages of the [WebMessage](../../apis-default/arkts-apis/arkts-webview-webmessage-t.md) type from the HTML5 side. For details about the sample code, see [postMessage](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#postmessage).
+Registers a callback on the application message port to receive messages of the [WebMessage](arkts-arkweb-webview-webmessage-t.md) type from the HTML5 side. For details about the sample code, see [postMessage](arkts-arkweb-webview-webviewcontroller-c.md#postmessage).
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebMessagePort-onMessageEvent(callback: (result: WebMessage) => void): void--><!--Device-WebMessagePort-onMessageEvent(callback: (result: WebMessage) => void): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (result: WebMessage) =&gt; void | Yes | Message received. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | (result: WebMessage) = & gt; void | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100006](../errorcode-webview.md#17100006-message-port-callback-cannot-be-registered) | Failed to register a message event for the port. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100006](../errorcode-webview.md#17100006-message-port-callback-cannot-be-registered) |
 
 **Examples**
 
@@ -151,28 +151,28 @@ struct WebComponent {
 onMessageEventExt(callback: (result: WebMessageExt) => void): void
 ```
 
-Registers a callback on the application message port to receive messages of the [WebMessageType](../../apis-default/arkts-apis/arkts-webview-webmessagetype-e.md) type from the HTML5 side.
+Registers a callback on the application message port to receive messages of the [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) type from the HTML5 side.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-WebMessagePort-onMessageEventExt(callback: (result: WebMessageExt) => void): void--><!--Device-WebMessagePort-onMessageEventExt(callback: (result: WebMessageExt) => void): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (result: WebMessageExt) =&gt; void | Yes | Message received. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | (result: WebMessageExt) = & gt; void | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100006](../errorcode-webview.md#17100006-message-port-callback-cannot-be-registered) | Failed to register a message event for the port. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100006](../errorcode-webview.md#17100006-message-port-callback-cannot-be-registered) |
 
 **Examples**
 
@@ -470,28 +470,28 @@ function postStringToApp() {
 postMessageEvent(message: WebMessage): void
 ```
 
-Sends a message of the [WebMessage](../../apis-default/arkts-apis/arkts-webview-webmessage-t.md) type to the HTML5 side. The onMessageEvent API must be invoked first. Otherwise, the message fails to be sent. For details about the sample code, see [postMessage](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#postmessage).
+Sends a message of the [WebMessage](arkts-arkweb-webview-webmessage-t.md) type to the HTML5 side. The onMessageEvent API must be invoked first. Otherwise, the message fails to be sent. For details about the sample code, see [postMessage](arkts-arkweb-webview-webviewcontroller-c.md#postmessage).
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-WebMessagePort-postMessageEvent(message: WebMessage): void--><!--Device-WebMessagePort-postMessageEvent(message: WebMessage): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | [WebMessage](../../apis-default/arkts-apis/arkts-webview-webmessage-t.md) | Yes | Message to send. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | [WebMessage](arkts-arkweb-webview-webmessage-t.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100010](../errorcode-webview.md#17100010-failure-to-send-messages-through-a-port) | Failed to post messages through the port. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100010](../errorcode-webview.md#17100010-failure-to-send-messages-through-a-port) |
 
 **Examples**
 
@@ -530,28 +530,28 @@ struct WebComponent {
 postMessageEventExt(message: WebMessageExt): void
 ```
 
-Sends a message of the [WebMessageType](../../apis-default/arkts-apis/arkts-webview-webmessagetype-e.md) type to the HTML5 side. You must call onMessageEventExt first. Otherwise, the message fails to be sent. For the complete sample code, see onMessageEventExt.
+Sends a message of the [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) type to the HTML5 side. You must call onMessageEventExt first. Otherwise, the message fails to be sent. For the complete sample code, see onMessageEventExt.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-WebMessagePort-postMessageEventExt(message: WebMessageExt): void--><!--Device-WebMessagePort-postMessageEventExt(message: WebMessageExt): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | [WebMessageExt](../../apis-default/arkts-apis/arkts-webview-webmessageext-c.md) | Yes | Message to send. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | [WebMessageExt](arkts-arkweb-webview-webmessageext-c.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100010](../errorcode-webview.md#17100010-failure-to-send-messages-through-a-port) | Failed to post messages through the port. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100010](../errorcode-webview.md#17100010-failure-to-send-messages-through-a-port) |
 
 ## isExtentionType
 
@@ -565,9 +565,8 @@ Whether to use the extended interface such as postMessageEventExt and onMessageE
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-WebMessagePort-isExtentionType?: boolean--><!--Device-WebMessagePort-isExtentionType?: boolean-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

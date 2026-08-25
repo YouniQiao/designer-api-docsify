@@ -9,14 +9,13 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Error](arkts-arkts-error-c.md) | Error class for representing errors. |
-| [NullPointerError](arkts-arkts-error-nullpointererror-c.md) | Represents an error that occurs when a null pointer is dereferenced. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Error](arkts-arkts-error-c.md) |
+| [NullPointerError](arkts-arkts-error-nullpointererror-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | Error options interface. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ErrorOptions](arkts-arkts-error-erroroptions-i.md) |

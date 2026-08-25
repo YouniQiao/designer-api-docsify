@@ -8,11 +8,11 @@ Enumerates display orientations.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md)
-
-<!--Device-bundle-export enum DisplayOrientation--><!--Device-bundle-export enum DisplayOrientation-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -26,11 +26,11 @@ Unspecified display orientation.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [UNSPECIFIED](arkts-ability-bundlemanager-displayorientation-e.md#unspecified)
-
-<!--Device-DisplayOrientation-UNSPECIFIED = 0--><!--Device-DisplayOrientation-UNSPECIFIED = 0-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -44,11 +44,11 @@ Landscape orientation.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [LANDSCAPE](arkts-ability-bundlemanager-displayorientation-e.md#landscape)
-
-<!--Device-DisplayOrientation-LANDSCAPE = 1--><!--Device-DisplayOrientation-LANDSCAPE = 1-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -62,11 +62,11 @@ Portrait orientation.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [PORTRAIT](arkts-ability-bundlemanager-displayorientation-e.md#portrait)
-
-<!--Device-DisplayOrientation-PORTRAIT = 2--><!--Device-DisplayOrientation-PORTRAIT = 2-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -80,11 +80,10 @@ Orientation same as that of the nearest ability in the stack.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [FOLLOW_RECENT](arkts-ability-bundlemanager-displayorientation-e.md#follow_recent)
 
-<!--Device-DisplayOrientation-FOLLOW_RECENT = 3--><!--Device-DisplayOrientation-FOLLOW_RECENT = 3-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework
-

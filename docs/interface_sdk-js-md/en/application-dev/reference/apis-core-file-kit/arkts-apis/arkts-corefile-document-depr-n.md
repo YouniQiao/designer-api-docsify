@@ -4,9 +4,9 @@ document
 
 **Since:** 6
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-unnamed-declare namespace document--><!--Device-unnamed-declare namespace document-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -14,4 +14,3 @@ document
 
 ```TypeScript
 ```
-

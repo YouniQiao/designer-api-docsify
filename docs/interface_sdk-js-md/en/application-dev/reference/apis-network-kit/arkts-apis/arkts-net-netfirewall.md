@@ -4,7 +4,7 @@ The **netFirewall** module implements the network firewall functionality for app
 
 **Since:** 14
 
-<!--Device-unnamed-declare namespace netFirewall--><!--Device-unnamed-declare namespace netFirewall-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -18,53 +18,52 @@ import { netFirewall } from '@kit.NetworkKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [addNetFirewallRule(Network Firewall)](arkts-network-netfirewall-addnetfirewallrule-f.md) | Adds a firewall rule for the system user ID. The supported rule types are IP, Domain, and DNS. This API uses a promise to return the result. |
-| [getNetFirewallPolicy(Network Firewall)](arkts-network-netfirewall-getnetfirewallpolicy-f.md) | Queries the firewall policy for a system user ID, including the firewall switch status and default inbound or outbound behavior (allow or deny). This API uses a promise to return the result.  **Required permission**: ohos.permission.GET_NET_FIREWALL |
-| [getNetFirewallRule(Network Firewall)](arkts-network-netfirewall-getnetfirewallrule-f.md) | Obtains a firewall rule based on the specified user ID and rule ID. This API uses a promise to return the result.  **Required permission**: ohos.permission.GET_NET_FIREWALL |
-| [getNetFirewallRules(Network Firewall)](arkts-network-netfirewall-getnetfirewallrules-f.md) | Obtains firewall rules by user ID. You need to specify the pagination query parameter when calling this API. Currently, firewall rules can be sorted by name. This API uses a promise to return the result.  **Required permission**: ohos.permission.GET_NET_FIREWALL |
-| [removeNetFirewallRule(Network Firewall)](arkts-network-netfirewall-removenetfirewallrule-f.md) | Deletes a specified firewall rule of a system user ID. This API uses a promise to return the result.  **Required permission**: ohos.permission.MANAGE_NET_FIREWALL |
-| [setNetFirewallPolicy(Network Firewall)](arkts-network-netfirewall-setnetfirewallpolicy-f.md) | Sets the firewall policy for a system user ID, including the firewall switch status and default inbound or outbound behavior (allow or deny). Different firewall policies can be configured for different system user IDs. This API uses a promise to return the result. |
-| [updateNetFirewallRule(Network Firewall)](arkts-network-netfirewall-updatenetfirewallrule-f.md) | Updates a firewall rule. This API uses a promise to return the result.  **Required permission**: ohos.permission.MANAGE_NET_FIREWALL |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [addNetFirewallRule(Network Firewall)](arkts-network-netfirewall-addnetfirewallrule-f.md) |
+| [getNetFirewallPolicy(Network Firewall)](arkts-network-netfirewall-getnetfirewallpolicy-f.md) |
+| [getNetFirewallRule(Network Firewall)](arkts-network-netfirewall-getnetfirewallrule-f.md) |
+| [getNetFirewallRules(Network Firewall)](arkts-network-netfirewall-getnetfirewallrules-f.md) |
+| [removeNetFirewallRule(Network Firewall)](arkts-network-netfirewall-removenetfirewallrule-f.md) |
+| [setNetFirewallPolicy(Network Firewall)](arkts-network-netfirewall-setnetfirewallpolicy-f.md) |
+| [updateNetFirewallRule(Network Firewall)](arkts-network-netfirewall-updatenetfirewallrule-f.md) |
 
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [getInterceptedRecords(Network Firewall)](arkts-network-netfirewall-getinterceptedrecords-f-sys.md) | Get intercepted records by userId, and it is necessary to specify the pagination query parameters. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getInterceptedRecords(Network Firewall)](arkts-network-netfirewall-getinterceptedrecords-f-sys.md) |
 <!--DelEnd-->
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [FirewallRulePage(Network Firewall)](arkts-network-netfirewall-firewallrulepage-i.md) | Defines the pagination structure for firewall rules. |
-| [NetFirewallDnsParams(Network Firewall)](arkts-network-netfirewall-netfirewalldnsparams-i.md) | Defines the DNS information of a firewall rule. |
-| [NetFirewallDomainParams(Network Firewall)](arkts-network-netfirewall-netfirewalldomainparams-i.md) | Defines domain name parameters of a firewall rule. Currently, Chinese domain names are not supported. |
-| [NetFirewallIpParams(Network Firewall)](arkts-network-netfirewall-netfirewallipparams-i.md) | Defines the IP parameters of the firewall rule. The IP address type can be IPv4 or IPv6. A single IP address or IP address segment is supported. |
-| [NetFirewallPolicy(Network Firewall)](arkts-network-netfirewall-netfirewallpolicy-i.md) | Defines the firewall policy, including the firewall switch status and default inbound or outbound action (allow or deny). |
-| [NetFirewallPortParams(Network Firewall)](arkts-network-netfirewall-netfirewallportparams-i.md) | Defines the port parameters of a firewall rule. |
-| [NetFirewallRule(Network Firewall)](arkts-network-netfirewall-netfirewallrule-i.md) | Defines a firewall rule. |
-| [RequestParam(Network Firewall)](arkts-network-netfirewall-requestparam-i.md) | Defines query parameters. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FirewallRulePage(Network Firewall)](arkts-network-netfirewall-firewallrulepage-i.md) |
+| [NetFirewallDnsParams(Network Firewall)](arkts-network-netfirewall-netfirewalldnsparams-i.md) |
+| [NetFirewallDomainParams(Network Firewall)](arkts-network-netfirewall-netfirewalldomainparams-i.md) |
+| [NetFirewallIpParams(Network Firewall)](arkts-network-netfirewall-netfirewallipparams-i.md) |
+| [NetFirewallPolicy(Network Firewall)](arkts-network-netfirewall-netfirewallpolicy-i.md) |
+| [NetFirewallPortParams(Network Firewall)](arkts-network-netfirewall-netfirewallportparams-i.md) |
+| [NetFirewallRule(Network Firewall)](arkts-network-netfirewall-netfirewallrule-i.md) |
+| [RequestParam(Network Firewall)](arkts-network-netfirewall-requestparam-i.md) |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [InterceptedRecord(Network Firewall)](arkts-network-netfirewall-interceptedrecord-i-sys.md) | Intercepted record. |
-| [InterceptedRecordPage(Network Firewall)](arkts-network-netfirewall-interceptedrecordpage-i-sys.md) | Intercepted record page information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [InterceptedRecord(Network Firewall)](arkts-network-netfirewall-interceptedrecord-i-sys.md) |
+| [InterceptedRecordPage(Network Firewall)](arkts-network-netfirewall-interceptedrecordpage-i-sys.md) |
 <!--DelEnd-->
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [FirewallRuleAction(Network Firewall)](arkts-network-netfirewall-firewallruleaction-e.md) | Enumerates the firewall rule actions, including allowing or denying network connections. |
-| [NetFirewallOrderField(Network Firewall)](arkts-network-netfirewall-netfirewallorderfield-e.md) | Enumerates the sorting methods of firewall rules. |
-| [NetFirewallOrderType(Network Firewall)](arkts-network-netfirewall-netfirewallordertype-e.md) | Enumerates the sorting order of firewall rules, which can be ascending or descending. |
-| [NetFirewallRuleDirection(Network Firewall)](arkts-network-netfirewall-netfirewallruledirection-e.md) | Enumerates the firewall rule directions, including inbound and outbound. |
-| [NetFirewallRuleType(Network Firewall)](arkts-network-netfirewall-netfirewallruletype-e.md) | Enumerates the firewall rule types, including IP, Domain, and DNS. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FirewallRuleAction(Network Firewall)](arkts-network-netfirewall-firewallruleaction-e.md) |
+| [NetFirewallOrderField(Network Firewall)](arkts-network-netfirewall-netfirewallorderfield-e.md) |
+| [NetFirewallOrderType(Network Firewall)](arkts-network-netfirewall-netfirewallordertype-e.md) |
+| [NetFirewallRuleDirection(Network Firewall)](arkts-network-netfirewall-netfirewallruledirection-e.md) |
+| [NetFirewallRuleType(Network Firewall)](arkts-network-netfirewall-netfirewallruletype-e.md) |

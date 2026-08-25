@@ -14,21 +14,20 @@ function create(): DisplaySync
 
 Creates a **DisplaySync** object, through which you can set the frame rate of the custom UI content.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-displaySync-function create(): DisplaySync--><!--Device-displaySync-function create(): DisplaySync-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [DisplaySync](arkts-arkgraphics2d-displaysync-displaysync-i.md) | DisplaySync** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DisplaySync](arkts-arkgraphics2d-displaysync-displaysync-i.md) |
 
 **Examples**
 
 ```TypeScript
 let backDisplaySync: displaySync.DisplaySync = displaySync.create();
 ```
-

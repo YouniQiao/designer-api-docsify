@@ -4,7 +4,7 @@ barrier参数，用于定义一条支持镜像模式的barrier的id、方向和�
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare interface LocalizedBarrierStyle--><!--Device-unnamed-declare interface LocalizedBarrierStyle-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ barrier的id，用于标识屏障，子组件可通过此id引用该屏障作为
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LocalizedBarrierStyle-id : string--><!--Device-LocalizedBarrierStyle-id : string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ localizedDirection : LocalizedBarrierDirection
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LocalizedBarrierStyle-localizedDirection : LocalizedBarrierDirection--><!--Device-LocalizedBarrierStyle-localizedDirection : LocalizedBarrierDirection-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,11 +65,10 @@ referencedId : Array<string>
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-LocalizedBarrierStyle-referencedId : Array<string>--><!--Device-LocalizedBarrierStyle-referencedId : Array<string>-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

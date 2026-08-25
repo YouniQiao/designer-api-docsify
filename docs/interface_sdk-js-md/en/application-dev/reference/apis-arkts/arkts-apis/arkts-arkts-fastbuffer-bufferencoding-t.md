@@ -8,23 +8,22 @@ This parameter specifies the type of a common encoding format.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-fastbuffer-type BufferEncoding = 'ascii' | 'utf8' | 'utf-8' | 'utf16le' | 'ucs2' | 'ucs-2' | 'base64' | 'base64url' | 'latin1' | 'binary' | 'hex'--><!--Device-fastbuffer-type BufferEncoding = 'ascii' | 'utf8' | 'utf-8' | 'utf16le' | 'ucs2' | 'ucs-2' | 'base64' | 'base64url' | 'latin1' | 'binary' | 'hex'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
-| Type | Description |
-| --- | --- |
-| 'ascii' |  |
-| 'utf8' |  |
-| 'utf-8' |  |
-| 'utf16le' |  |
-| 'ucs2' |  |
-| 'ucs-2' |  |
-| 'base64' |  |
-| 'base64url' |  |
-| 'latin1' |  |
-| 'binary' |  |
-| 'hex' |  |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| 'ascii' |
+| 'utf8' |
+| 'utf-8' |
+| 'utf16le' |
+| 'ucs2' |
+| 'ucs-2' |
+| 'base64' |
+| 'base64url' |
+| 'latin1' |
+| 'binary' |
+| 'hex' |

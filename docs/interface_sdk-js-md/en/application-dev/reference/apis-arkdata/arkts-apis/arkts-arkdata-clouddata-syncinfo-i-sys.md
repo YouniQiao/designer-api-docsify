@@ -2,9 +2,9 @@
 
 Represents information about the last device-cloud sync.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-cloudData-interface SyncInfo--><!--Device-cloudData-interface SyncInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -26,9 +26,9 @@ Result of the last device-cloud sync.
 
 **Type:** relationalStore.ProgressCode
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SyncInfo-code: relationalStore.ProgressCode--><!--Device-SyncInfo-code: relationalStore.ProgressCode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -44,9 +44,9 @@ End time of the last device-cloud sync.
 
 **Type:** Date
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SyncInfo-finishTime: Date--><!--Device-SyncInfo-finishTime: Date-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -62,9 +62,9 @@ Start time of the last device-cloud sync.
 
 **Type:** Date
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SyncInfo-startTime: Date--><!--Device-SyncInfo-startTime: Date-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -80,11 +80,10 @@ Status of the last device-cloud sync. The default value is **cloudData.SyncStatu
 
 **Type:** [SyncStatus](arkts-arkdata-clouddata-syncstatus-e-sys.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-SyncInfo-syncStatus?: SyncStatus--><!--Device-SyncInfo-syncStatus?: SyncStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
-

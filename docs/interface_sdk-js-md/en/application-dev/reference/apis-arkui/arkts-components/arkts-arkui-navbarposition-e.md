@@ -4,7 +4,7 @@ Position of the navigation page.
 
 **Since:** 9
 
-<!--Device-unnamed-declare enum NavBarPosition--><!--Device-unnamed-declare enum NavBarPosition-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ When two columns are displayed, the main column is at the start of the main axis
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-NavBarPosition-Start--><!--Device-NavBarPosition-Start-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,8 @@ When two columns are displayed, the main column is at the end of the main axis.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-NavBarPosition-End--><!--Device-NavBarPosition-End-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

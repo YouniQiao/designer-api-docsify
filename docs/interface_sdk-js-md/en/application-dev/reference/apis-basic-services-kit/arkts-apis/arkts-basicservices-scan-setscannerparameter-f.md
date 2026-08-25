@@ -14,33 +14,33 @@ function setScannerParameter(scannerId: string, optionIndex: int, value: Scanner
 
 Sets scanner parameters. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PRINT
-
-<!--Device-scan-function setScannerParameter(scannerId: string, optionIndex: int, value: ScannerOptionValue): Promise<void>--><!--Device-scan-function setScannerParameter(scannerId: string, optionIndex: int, value: ScannerOptionValue): Promise<void>-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| scannerId | string | Yes | Scanner ID. |
-| optionIndex | int | Yes | Index of the option to be set. |
-| value | [ScannerOptionValue](arkts-basicservices-scan-scanneroptionvalue-i.md) | Yes | Value to be set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| scannerId | string | Yes |
+| [optionIndex](arkts-basicservices-scan-scannerparameter-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| value | [ScannerOptionValue](arkts-basicservices-scan-scanneroptionvalue-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 **Examples**
 
@@ -60,4 +60,3 @@ scan.setScannerParameter(scannerId, optionIndex, value).then(() => {
     console.error('set scanner parameter failed: ' + JSON.stringify(error));
 })
 ```
-

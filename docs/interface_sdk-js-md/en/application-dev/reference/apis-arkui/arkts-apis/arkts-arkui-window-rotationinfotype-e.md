@@ -4,7 +4,7 @@ Enumerates the types of rotation information.
 
 **Since:** 23
 
-<!--Device-window-enum RotationInfoType--><!--Device-window-enum RotationInfoType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -18,7 +18,7 @@ Window's screen orientation, based on how the Window module defines landscape/po
 
 **Since:** 23
 
-<!--Device-RotationInfoType-WINDOW_ORIENTATION = 0--><!--Device-RotationInfoType-WINDOW_ORIENTATION = 0-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -32,7 +32,7 @@ Physical screen orientation, based on how the Display module defines landscape/p
 
 **Since:** 23
 
-<!--Device-RotationInfoType-DISPLAY_ORIENTATION = 1--><!--Device-RotationInfoType-DISPLAY_ORIENTATION = 1-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -46,7 +46,6 @@ Physical rotation angle of the device's screen (in degrees, clockwise).It maps t
 
 **Since:** 23
 
-<!--Device-RotationInfoType-DISPLAY_ROTATION = 2--><!--Device-RotationInfoType-DISPLAY_ROTATION = 2-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
-

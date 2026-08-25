@@ -8,13 +8,12 @@ Describes the basic information of a function.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-common-export type FunctionInfo = _FunctionInfo--><!--Device-common-export type FunctionInfo = _FunctionInfo-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
 
 **Property type:** _FunctionInfo
-

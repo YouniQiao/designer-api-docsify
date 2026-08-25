@@ -18,56 +18,56 @@ declare function createStreamSync(path: string, mode: string): Stream
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-unnamed-declare function createStreamSync(path: string, mode: string): Stream--><!--Device-unnamed-declare function createStreamSync(path: string, mode: string): Stream-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 文件的应用沙箱路径。 |
-| mode | string | 是 | r：打开只读文件，该文件必须存在。<br/>- r+：打开可读写的文件，该文件必须存在。<br/>- w：打开只写文件，若文件存在则文件长度清0，即该文件内容会消失。若文件不存在则 建立该文件。<br/>- w+：打开可读写文件，若文件存在则文件长度清0，即该文件内容会消失。若文件不存在则建立该文件。<br/>- a：以附加的方式打开只写文件。若文件不存在，则会建立该文件，如果文件存在，写入的数据会被加到 文件尾，即文件原先的内容会被保留。<br/>- a+：以附加方式打开可读写的文件。若文件不存在，则会建立该文件，如果文件存在，写入的数据会被加到文件尾后，即文件原先的内容会被保留。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| path | string | 是 |
+| mode | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Stream](arkts-corefile-file-fs-stream-i.md) | 返回文件流的结果。 |
+| 类型 |
+| --- |
+| [Stream](arkts-corefile-file-fs-stream-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 13900044 | Network is unreachable<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 13900044 |
 
 **示例**
 
@@ -77,4 +77,3 @@ let stream = fileIo.createStreamSync(filePath, "r+");
 console.info(`Succeeded in creating stream.`);
 stream.closeSync();
 ```
-

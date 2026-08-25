@@ -9,21 +9,21 @@ type SourceReadCallback = (uuid: long, requestedOffset: long, requestedLength: l
 > **注意：**&gt;
 > 客户端在处理完请求后应立刻返回。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-unnamed-type SourceReadCallback = (uuid: long, requestedOffset: long, requestedLength: long) => void--><!--Device-unnamed-type SourceReadCallback = (uuid: long, requestedOffset: long, requestedLength: long) => void-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uuid | long | 是 | 资源句柄的标识。 |
-| requestedOffset | long | 是 | 当前媒体数据相对于资源起始位置的偏移量。 |
-| requestedLength | long | 是 | 当前请求的长度。值为-1时，表示到达资源末尾，此时推送完成后需通过 finishLoading方法通知播放器推送结束。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uuid | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| requestedOffset | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| requestedLength | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
 
 **示例**
 
@@ -33,4 +33,3 @@ let sourceReadCallback: media.SourceReadCallback = (uuid: number, requestedOffse
   // 判断uuid是否合法、存储read请求，不要在read请求阻塞去推送数据和头信息。
 };
 ```
-

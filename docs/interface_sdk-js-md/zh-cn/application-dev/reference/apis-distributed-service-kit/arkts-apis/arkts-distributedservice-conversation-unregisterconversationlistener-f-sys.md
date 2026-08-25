@@ -16,11 +16,11 @@ function unregisterConversationListener(bundleName: string, abilityName: string)
 
 **起始版本：** 26.1.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.sec.ACCESS_UDID
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-conversation-function unregisterConversationListener(bundleName: string, abilityName: string): void--><!--Device-conversation-function unregisterConversationListener(bundleName: string, abilityName: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 
@@ -28,20 +28,20 @@ function unregisterConversationListener(bundleName: string, abilityName: string)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 要取消监听的Bundle名，Bundle名长度范围为1-127字节，需与注册监听时使用的Bundle名一致。 传入无效或空值时返回错误码401。 |
-| abilityName | string | 是 | 要取消监听的Ability名，Ability名长度范围为1-127字节，需与注册监听时使用的Ability名一致。 传入无效或空值时返回错误码401。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| abilityName | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. The application does not have the required permission to access distributed data. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameter. The bundleName or abilityName is invalid or empty. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [2000001](../errorcode-conversation.md#2000001-内部错误) | Internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [2000001](../errorcode-conversation.md#2000001-内部错误) |
 
 **示例**
 
@@ -60,4 +60,3 @@ try {
   console.error(`unregisterConversationListener errCode: ${e.code}, errMessage: ${e.message}`);
 }
 ```
-

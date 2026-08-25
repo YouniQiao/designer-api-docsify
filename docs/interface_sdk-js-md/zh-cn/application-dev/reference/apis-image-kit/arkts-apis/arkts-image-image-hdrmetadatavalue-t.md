@@ -6,16 +6,15 @@ type HdrMetadataValue = HdrMetadataType | HdrStaticMetadata | ArrayBuffer | HdrG
 
 PixelMap使用的HDR元数据值类型，与[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md)关键字对应。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-image-type HdrMetadataValue = HdrMetadataType | HdrStaticMetadata | ArrayBuffer | HdrGainmapMetadata--><!--Device-image-type HdrMetadataValue = HdrMetadataType | HdrStaticMetadata | ArrayBuffer | HdrGainmapMetadata-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
-| 类型 | 说明 |
-| --- | --- |
-| HdrMetadataType | Metadata value corresponding to the **HDR_METADATA_TYPE** key in [HdrMetadataKey]{ |
-| HdrStaticMetadata | Metadata value corresponding to the **HDR_STATIC_METADATA** key in [HdrMetadataKey]{ |
-| ArrayBuffer | Metadata value corresponding to the **HDR_DYNAMIC_METADATA** key in [HdrMetadataKey]{ |
-| HdrGainmapMetadata | Metadata value corresponding to the **HDR_GAINMAP_METADATA** key in [HdrMetadataKey]{ |
-
+| 类型 |
+| --- |
+| [HdrMetadataType](arkts-image-image-hdrmetadatatype-e.md) |
+| [HdrStaticMetadata](arkts-image-image-hdrstaticmetadata-i.md) |
+| ArrayBuffer |
+| [HdrGainmapMetadata](arkts-image-image-hdrgainmapmetadata-i.md) |

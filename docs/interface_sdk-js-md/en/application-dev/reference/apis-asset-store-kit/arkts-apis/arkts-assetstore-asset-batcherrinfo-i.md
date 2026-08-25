@@ -4,7 +4,7 @@ Result object containing error information with a specific index, error code, an
 
 **Since:** 26.0.0
 
-<!--Device-asset-interface BatchErrInfo--><!--Device-asset-interface BatchErrInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -26,7 +26,7 @@ The error code of the batch operation.
 
 **Since:** 26.0.0
 
-<!--Device-BatchErrInfo-errCode: number--><!--Device-BatchErrInfo-errCode: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -42,7 +42,7 @@ The index in the source assets array.
 
 **Since:** 26.0.0
 
-<!--Device-BatchErrInfo-index: number--><!--Device-BatchErrInfo-index: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -58,7 +58,6 @@ The error message of the batch operation.
 
 **Since:** 26.0.0
 
-<!--Device-BatchErrInfo-message: string--><!--Device-BatchErrInfo-message: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
-

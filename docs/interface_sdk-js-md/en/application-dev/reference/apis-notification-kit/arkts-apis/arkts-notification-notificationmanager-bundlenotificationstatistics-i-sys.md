@@ -4,7 +4,7 @@ Describes the notification statistics of a specified application.
 
 **Since:** 26.0.0
 
-<!--Device-notificationManager-export interface BundleNotificationStatistics--><!--Device-notificationManager-export interface BundleNotificationStatistics-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -28,7 +28,7 @@ Bundle information of the application.
 
 **Since:** 26.0.0
 
-<!--Device-BundleNotificationStatistics-bundle: BundleOption--><!--Device-BundleNotificationStatistics-bundle: BundleOption-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -37,16 +37,16 @@ Bundle information of the application.
 ## lastTime
 
 ```TypeScript
-lastTime: long
+lastTime: number
 ```
 
 Time when the app last published a notification.<br>Data format: timestamp.<br>Unit: millisecond.
 
-**Type:** long
+**Type:** number
 
 **Since:** 26.0.0
 
-<!--Device-BundleNotificationStatistics-lastTime: long--><!--Device-BundleNotificationStatistics-lastTime: long-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -55,18 +55,17 @@ Time when the app last published a notification.<br>Data format: timestamp.<br>U
 ## recentCount
 
 ```TypeScript
-recentCount: int
+recentCount: number
 ```
 
 Total number of notifications published by the application in the last seven days.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
-<!--Device-BundleNotificationStatistics-recentCount: int--><!--Device-BundleNotificationStatistics-recentCount: int-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

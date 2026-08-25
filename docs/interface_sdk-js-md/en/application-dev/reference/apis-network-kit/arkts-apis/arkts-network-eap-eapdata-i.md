@@ -4,7 +4,7 @@ Defines the EAP data.​
 
 **Since:** 20
 
-<!--Device-eap-interface EapData--><!--Device-eap-interface EapData-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -17,16 +17,16 @@ import { eap } from '@kit.NetworkKit';
 ## bufferLen
 
 ```TypeScript
-bufferLen: int
+bufferLen: number
 ```
 
 Data length.
 
-**Type:** int
+**Type:** number
 
 **Since:** 20
 
-<!--Device-EapData-bufferLen: int--><!--Device-EapData-bufferLen: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -42,23 +42,22 @@ Raw EAP data starting from the EAP header, which is not encrypted.
 
 **Since:** 20
 
-<!--Device-EapData-eapBuffer: Uint8Array--><!--Device-EapData-eapBuffer: Uint8Array-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## msgId
 
 ```TypeScript
-msgId: int
+msgId: number
 ```
 
 Pseudo random number used to associate the EAP data before and after processing.
 
-**Type:** int
+**Type:** number
 
 **Since:** 20
 
-<!--Device-EapData-msgId: int--><!--Device-EapData-msgId: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
-

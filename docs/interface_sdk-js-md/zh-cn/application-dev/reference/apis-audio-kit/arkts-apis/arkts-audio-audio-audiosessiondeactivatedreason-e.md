@@ -2,9 +2,9 @@
 
 表示音频会话停用原因的枚举。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-audio-enum AudioSessionDeactivatedReason--><!--Device-audio-enum AudioSessionDeactivatedReason-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -16,9 +16,9 @@ DEACTIVATED_LOWER_PRIORITY = 0
 
 应用焦点被抢占。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AudioSessionDeactivatedReason-DEACTIVATED_LOWER_PRIORITY = 0--><!--Device-AudioSessionDeactivatedReason-DEACTIVATED_LOWER_PRIORITY = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -30,9 +30,8 @@ DEACTIVATED_TIMEOUT = 1
 
 音频会话等待超时。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AudioSessionDeactivatedReason-DEACTIVATED_TIMEOUT = 1--><!--Device-AudioSessionDeactivatedReason-DEACTIVATED_TIMEOUT = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
-

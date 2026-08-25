@@ -2,9 +2,9 @@
 
 Enumerates the error code of the permission policy for the URI operation.@enum { int } PolicyErrorCode
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-fileShare-export enum PolicyErrorCode--><!--Device-fileShare-export enum PolicyErrorCode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -16,9 +16,9 @@ PERSISTENCE_FORBIDDEN = 1
 
 Indicates that the policy is not allowed to be persisted.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PolicyErrorCode-PERSISTENCE_FORBIDDEN = 1--><!--Device-PolicyErrorCode-PERSISTENCE_FORBIDDEN = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -30,9 +30,9 @@ INVALID_MODE = 2
 
 Indicates that the mode of this policy is invalid.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PolicyErrorCode-INVALID_MODE = 2--><!--Device-PolicyErrorCode-INVALID_MODE = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -44,9 +44,9 @@ INVALID_PATH = 3
 
 Indicates that the path of this policy is invalid.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PolicyErrorCode-INVALID_PATH = 3--><!--Device-PolicyErrorCode-INVALID_PATH = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -58,9 +58,8 @@ PERMISSION_NOT_PERSISTED = 4
 
 Indicates that the permission is not persistent.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-PolicyErrorCode-PERMISSION_NOT_PERSISTED = 4--><!--Device-PolicyErrorCode-PERMISSION_NOT_PERSISTED = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
-

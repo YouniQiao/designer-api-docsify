@@ -4,11 +4,11 @@ Specifies whether the device that houses the sensor is worn.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [WearDetectionResponse](arkts-sensorservice-sensor-weardetectionresponse-i.md)
-
-<!--Device-unnamed-export interface OnBodyStateResponse--><!--Device-unnamed-export interface OnBodyStateResponse-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -30,13 +30,12 @@ Boolean value indicating whether the device is worn. The value **true** indicate
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [value](arkts-sensorservice-sensor-weardetectionresponse-i.md#value)
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-OnBodyStateResponse-value: boolean--><!--Device-OnBodyStateResponse-value: boolean-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
-

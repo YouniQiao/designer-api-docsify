@@ -7,7 +7,7 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare class WaterFlowSections--><!--Device-unnamed-declare class WaterFlowSections-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,11 @@ constructor()
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-WaterFlowSections-constructor()--><!--Device-WaterFlowSections-constructor()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,19 +44,19 @@ length(): number
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-WaterFlowSections-length(): number--><!--Device-WaterFlowSections-length(): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 瀑布流中分组数量。 |
+| 类型 |
+| --- |
+| number |
 
 ## push
 
@@ -68,25 +68,25 @@ push(section: SectionOptions): boolean
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-WaterFlowSections-push(section: SectionOptions): boolean--><!--Device-WaterFlowSections-push(section: SectionOptions): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| section | [SectionOptions](arkts-arkui-sectionoptions-c.md) | 是 | 添加到瀑布流末尾的分组，包含该分组的FlowItem数量、列数/行数、间距、外边距和主轴大小回调等配置信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| section | [SectionOptions](arkts-arkui-sectionoptions-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 分组添加成功返回true，添加失败（新分组的itemsCount不是非负数）返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## splice
 
@@ -98,27 +98,27 @@ splice(start: number, deleteCount?: number, sections?: Array<SectionOptions>): b
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-WaterFlowSections-splice(start: number, deleteCount?: number, sections?: Array<SectionOptions>): boolean--><!--Device-WaterFlowSections-splice(start: number, deleteCount?: number, sections?: Array<SectionOptions>): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| start | number | 是 | 从0开始计算的索引，会转换为整数，表示要开始改变分组的位置。<br/>**说明：** <br/>1. 如果索引是负数，则从末尾开始计算，使用 `start + WaterFlowSections.length()`。<br/>2. 如果 `start &lt; -WaterFlowSections.length()`，则使用0。<br/>3. 如果 `start &gt;= WaterFlowSections.length()`，则在最后添加新分组。 |
-| deleteCount | number | 否 | 表示要从start开始删除的分组数量。<br/>**说明：** <br/>1. 如果省略了deleteCount，或者其值大于或等于由start指定的位置到 WaterFlowSections末尾的分组数量，那么从start到WaterFlowSections末尾的所有分组将被删除。<br/>2. 如果deleteCount是0或者负数，则不会删除任何分组。 |
-| sections | Array&lt;[SectionOptions](arkts-arkui-sectionoptions-c.md)&gt; | 否 | 表示要从start开始加入的分组。如果不指定，`splice()`将只从瀑布流中删除分组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| start | number | 是 |
+| deleteCount | number | 否 |
+| sections | Array&lt;[SectionOptions](arkts-arkui-sectionoptions-c.md)&gt; | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 分组修改成功返回true；修改失败（要加入的分组中有任意分组的itemsCount不是非负数）返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## update
 
@@ -130,26 +130,26 @@ update(sectionIndex:number, section: SectionOptions): boolean
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-WaterFlowSections-update(sectionIndex:number, section: SectionOptions): boolean--><!--Device-WaterFlowSections-update(sectionIndex:number, section: SectionOptions): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sectionIndex | number | 是 | 从0开始计算的索引，会转换为整数，表示要修改的分组的位置。<br/>**说明：** <br/>1. 如果索引是负数，则从末尾开始计算，使用 `sectionIndex + WaterFlowSections.length()`。<br/>2. 如果`sectionIndex &lt; -WaterFlowSections.length()`，则使用0。<br/>3. 如果`sectionIndex &gt;= WaterFlowSections.length()`，则在最后添加新分组。 |
-| section | [SectionOptions](arkts-arkui-sectionoptions-c.md) | 是 | 新的分组信息，用于替换指定索引位置的FlowItem分组配置，包括FlowItem数量、列数/行数、间距、外边距和主轴大小回调等。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sectionIndex | number | 是 |
+| section | [SectionOptions](arkts-arkui-sectionoptions-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 分组是否更新成功。分组更新成功返回true，更新失败（新分组的itemsCount不是非负数）返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## values
 
@@ -161,17 +161,16 @@ values(): Array<SectionOptions>
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-WaterFlowSections-values(): Array<SectionOptions>--><!--Device-WaterFlowSections-values(): Array<SectionOptions>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[SectionOptions](arkts-arkui-sectionoptions-c.md)&gt; | 瀑布流中所有分组配置信息。 |
-
+| 类型 |
+| --- |
+| Array&lt;[SectionOptions](arkts-arkui-sectionoptions-c.md)&gt; |

@@ -6,16 +6,15 @@ type PrinterChangeCallback = (event: PrinterEvent, printerInformation: PrinterIn
 
 将打印机事件和打印机信息作为参数的回调方法。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-print-type PrinterChangeCallback = (event: PrinterEvent, printerInformation: PrinterInformation) => void--><!--Device-print-type PrinterChangeCallback = (event: PrinterEvent, printerInformation: PrinterInformation) => void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | [PrinterEvent](arkts-basicservices-print-printerevent-e.md) | 是 | 表示打印机事件。 |
-| printerInformation | [PrinterInformation](arkts-basicservices-print-printerinformation-i.md) | 是 | 表示打印机信息。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [PrinterEvent](arkts-basicservices-print-printerevent-e.md) | 是 |
+| printerInformation | [PrinterInformation](arkts-basicservices-print-printerinformation-i.md) | 是 |

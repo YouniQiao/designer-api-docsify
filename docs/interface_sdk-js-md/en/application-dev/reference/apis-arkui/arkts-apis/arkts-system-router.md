@@ -17,23 +17,22 @@ import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, Ena
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Router(Page Routing)](arkts-arkui-system-router-router-c.md) | The **Router** module provides APIs to access pages through URIs. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Router(Page Routing)](arkts-arkui-system-router-router-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [BackRouterOptions(Page Routing)](arkts-arkui-system-router-backrouteroptions-i.md) | Defines the parameters for routing back. |
-| [DisableAlertBeforeBackPageOptions(Page Routing)](arkts-arkui-system-router-disablealertbeforebackpageoptions-i.md) | Defines the **DisableAlertBeforeBackPage** parameter. |
-| [EnableAlertBeforeBackPageOptions(Page Routing)](arkts-arkui-system-router-enablealertbeforebackpageoptions-i.md) | Defines the **EnableAlertBeforeBackPage** parameter. |
-| [RouterOptions(Page Routing)](arkts-arkui-system-router-routeroptions-i.md) | Defines the page routing parameters. |
-| [RouterState(Page Routing)](arkts-arkui-system-router-routerstate-i.md) | Defines the routing state. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BackRouterOptions(Page Routing)](arkts-arkui-system-router-backrouteroptions-i.md) |
+| [DisableAlertBeforeBackPageOptions(Page Routing)](arkts-arkui-system-router-disablealertbeforebackpageoptions-i.md) |
+| [EnableAlertBeforeBackPageOptions(Page Routing)](arkts-arkui-system-router-enablealertbeforebackpageoptions-i.md) |
+| [RouterOptions(Page Routing)](arkts-arkui-system-router-routeroptions-i.md) |
+| [RouterState(Page Routing)](arkts-arkui-system-router-routerstate-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [ParamsInterface(Page Routing)](arkts-arkui-paramsinterface-t.md) | List of routing parameters. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ParamsInterface(Page Routing)](arkts-arkui-paramsinterface-t.md) |

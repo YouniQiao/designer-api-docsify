@@ -5,9 +5,9 @@
 > **说明：**&gt;
 > - 当前页面仅包含本模块的系统接口。
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-unnamed-declare namespace keyManager--><!--Device-unnamed-declare namespace keyManager-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Encryption
 
@@ -22,8 +22,7 @@ import { keyManager } from '@kit.CoreFileKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [deactivateUserKey](arkts-corefile-keymanager-deactivateuserkey-f-sys.md) | 用户锁屏时，同步卸载指定用户对应密钥。**（该接口目前仅开放给锁屏应用）** |
+| 名称 |
+| --- |
+| [deactivateUserKey](arkts-corefile-keymanager-deactivateuserkey-f-sys.md) |
 <!--DelEnd-->
-

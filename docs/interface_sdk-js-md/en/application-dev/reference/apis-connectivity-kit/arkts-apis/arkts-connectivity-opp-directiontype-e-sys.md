@@ -4,7 +4,7 @@ Enum for file transfer direction.
 
 **Since:** 16
 
-<!--Device-opp-enum DirectionType--><!--Device-opp-enum DirectionType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -20,9 +20,9 @@ The file transfer direction to send.
 
 **Since:** 16
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
-<!--Device-DirectionType-OUTBOUND = 0--><!--Device-DirectionType-OUTBOUND = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -38,11 +38,10 @@ The file transfer direction to receive.
 
 **Since:** 16
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
-<!--Device-DirectionType-INBOUND = 1--><!--Device-DirectionType-INBOUND = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
-

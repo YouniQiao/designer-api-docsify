@@ -2,9 +2,9 @@
 
 Describes an audio effect property.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-audio-interface AudioEffectProperty--><!--Device-audio-interface AudioEffectProperty-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -26,9 +26,9 @@ Effect category this effect property belongs to.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-AudioEffectProperty-category: string--><!--Device-AudioEffectProperty-category: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -44,9 +44,9 @@ Effect flag of this effect property.
 
 **Type:** [EffectFlag](arkts-audio-audio-effectflag-e-sys.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-AudioEffectProperty-flag: EffectFlag--><!--Device-AudioEffectProperty-flag: EffectFlag-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -62,11 +62,10 @@ Name of effect property.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-AudioEffectProperty-name: string--><!--Device-AudioEffectProperty-name: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
-

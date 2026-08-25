@@ -2,9 +2,9 @@
 
 过滤条件。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-agent-interface Filter--><!--Device-agent-interface Filter-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -25,9 +25,9 @@ action?: Action
 
 **类型：** Action
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Filter-action?: Action--><!--Device-Filter-action?: Action-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -39,11 +39,11 @@ after?: long
 
 开始的Unix时间戳（毫秒），默认值为调用时刻减24小时。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Filter-after?: long--><!--Device-Filter-after?: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -55,11 +55,11 @@ before?: long
 
 结束的Unix时间戳（毫秒），默认为调用时刻。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Filter-before?: long--><!--Device-Filter-before?: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -74,9 +74,9 @@ mode?: Mode
 
 **类型：** [Mode](arkts-basicservices-agent-mode-e.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Filter-mode?: Mode--><!--Device-Filter-mode?: Mode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -90,9 +90,8 @@ state?: State
 
 **类型：** State
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Filter-state?: State--><!--Device-Filter-state?: State-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
-

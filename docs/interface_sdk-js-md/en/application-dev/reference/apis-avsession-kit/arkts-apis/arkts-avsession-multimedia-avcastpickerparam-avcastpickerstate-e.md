@@ -2,9 +2,9 @@
 
 Definition of av cast picker state
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-unnamed-export declare enum AVCastPickerState--><!--Device-unnamed-export declare enum AVCastPickerState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -16,11 +16,11 @@ STATE_APPEARING
 
 The picker starts showing.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVCastPickerState-STATE_APPEARING--><!--Device-AVCastPickerState-STATE_APPEARING-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -32,11 +32,10 @@ STATE_DISAPPEARING
 
 The picker finishes presenting.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AVCastPickerState-STATE_DISAPPEARING--><!--Device-AVCastPickerState-STATE_DISAPPEARING-End-->
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
-

@@ -2,11 +2,11 @@
 
 **Since:** 5
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
+
 **Deprecated since:** 8
 
 **Substitutes:** FeatureAbility
-
-<!--Device-unnamed-export declare class FeatureAbility--><!--Device-unnamed-export declare class FeatureAbility-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -20,23 +20,23 @@ Calls an AA.
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-FeatureAbility-static callAbility(param: CallAbilityParam): Promise<string>--><!--Device-FeatureAbility-static callAbility(param: CallAbilityParam): Promise<string>-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| param | [CallAbilityParam](arkts-arkui-featureability-callabilityparam-i.md) | Yes | Indicates the request param. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| param | [CallAbilityParam](arkts-arkui-featureability-callabilityparam-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | A Promise object is returned, which contains the result data returned by the AA. The result is a JSON string. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 ## continueAbility
 
@@ -48,17 +48,17 @@ Start FA migration.
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-FeatureAbility-static continueAbility(): Promise<Result>--><!--Device-FeatureAbility-static continueAbility(): Promise<Result>-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; | A Promise object is returned, which contains the result data returned by the AA. The result is a JSON string. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; |
 
 ## finishWithResult
 
@@ -70,25 +70,25 @@ FA call the interface to destroy itself and set the result as parameters.
 
 **Since:** 5
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
+
 **Deprecated since:** 8
 
 **Substitutes:** terminateSelfWithResult
-
-<!--Device-FeatureAbility-static finishWithResult(param: FinishWithResultParams): Promise<Result>--><!--Device-FeatureAbility-static finishWithResult(param: FinishWithResultParams): Promise<Result>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| param | [FinishWithResultParams](arkts-arkui-featureability-finishwithresultparams-i.md) | Yes | Indicates the request param. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| param | [FinishWithResultParams](arkts-arkui-featureability-finishwithresultparams-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; | A Promise object is returned, which contains the result whether to callback successfully. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; |
 
 ## getDeviceList
 
@@ -100,23 +100,23 @@ Get device information list.
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-FeatureAbility-static getDeviceList(flag: number): Promise<Result>--><!--Device-FeatureAbility-static getDeviceList(flag: number): Promise<Result>-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| flag | number | Yes | Default 0, get the information list of all devices in the network. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| flag | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; | A Promise object is returned, which contains the result whether the device information list is obtained successfully. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; |
 
 ## sendMsg
 
@@ -128,17 +128,17 @@ Sends messages to the destination device.
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-FeatureAbility-static sendMsg(options: SendMessageOptions): void--><!--Device-FeatureAbility-static sendMsg(options: SendMessageOptions): void-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [SendMessageOptions](arkts-arkui-featureability-sendmessageoptions-i.md) | Yes | Options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [SendMessageOptions](arkts-arkui-featureability-sendmessageoptions-i.md) | Yes |
 
 ## startAbility
 
@@ -150,25 +150,25 @@ Start a FA without callback result.
 
 **Since:** 5
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
+
 **Deprecated since:** 8
 
 **Substitutes:** startAbility
-
-<!--Device-FeatureAbility-static startAbility(request: RequestParams): Promise<Result>--><!--Device-FeatureAbility-static startAbility(request: RequestParams): Promise<Result>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| request | [RequestParams](arkts-arkui-featureability-requestparams-i.md) | Yes | Indicates the request param. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| request | [RequestParams](arkts-arkui-featureability-requestparams-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; | A Promise object is returned, which contains the result of whether to call Ability's interface successfully. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; |
 
 ## startAbilityForResult
 
@@ -180,25 +180,25 @@ Start a FA with callback result.
 
 **Since:** 5
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
+
 **Deprecated since:** 8
 
 **Substitutes:** startAbilityForResult
-
-<!--Device-FeatureAbility-static startAbilityForResult(request: RequestParams): Promise<Result>--><!--Device-FeatureAbility-static startAbilityForResult(request: RequestParams): Promise<Result>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| request | [RequestParams](arkts-arkui-featureability-requestparams-i.md) | Yes | Indicates the request param. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| request | [RequestParams](arkts-arkui-featureability-requestparams-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; | A Promise object is returned, which contains the result of the data FA returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; |
 
 ## subscribeAbilityEvent
 
@@ -210,24 +210,24 @@ Subscribe to events of an AA.
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-FeatureAbility-static subscribeAbilityEvent(param: SubscribeAbilityEventParam, func: Function): Promise<string>--><!--Device-FeatureAbility-static subscribeAbilityEvent(param: SubscribeAbilityEventParam, func: Function): Promise<string>-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| param | [SubscribeAbilityEventParam](arkts-arkui-featureability-subscribeabilityeventparam-i.md) | Yes | Indicates the request param. |
-| func | Function | Yes | Indicates the event reporting callback. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| param | [SubscribeAbilityEventParam](arkts-arkui-featureability-subscribeabilityeventparam-i.md) | Yes |
+| func | Function | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | A Promise object is returned, which contains the result data returned by the AA. The result is a JSON string. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 ## subscribeMsg
 
@@ -239,17 +239,17 @@ Listens for messages sent from other devices.
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-FeatureAbility-static subscribeMsg(options: SubscribeMessageOptions): void--><!--Device-FeatureAbility-static subscribeMsg(options: SubscribeMessageOptions): void-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [SubscribeMessageOptions](arkts-arkui-featureability-subscribemessageoptions-i.md) | Yes | Options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [SubscribeMessageOptions](arkts-arkui-featureability-subscribemessageoptions-i.md) | Yes |
 
 ## unsubscribeAbilityEvent
 
@@ -261,23 +261,23 @@ Unsubscribe from events of an AA.
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-FeatureAbility-static unsubscribeAbilityEvent(param: SubscribeAbilityEventParam): Promise<string>--><!--Device-FeatureAbility-static unsubscribeAbilityEvent(param: SubscribeAbilityEventParam): Promise<string>-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| param | [SubscribeAbilityEventParam](arkts-arkui-featureability-subscribeabilityeventparam-i.md) | Yes | Indicates the request param. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| param | [SubscribeAbilityEventParam](arkts-arkui-featureability-subscribeabilityeventparam-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | A Promise object is returned, which contains the result data returned by the AA. The result is a JSON string. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 ## unsubscribeMsg
 
@@ -289,9 +289,8 @@ Cancel the listening for messages sent from other devices.
 
 **Since:** 5
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
+
 **Deprecated since:** 8
 
-<!--Device-FeatureAbility-static unsubscribeMsg(): void--><!--Device-FeatureAbility-static unsubscribeMsg(): void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
-

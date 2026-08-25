@@ -8,19 +8,18 @@ Describes the supported data types for the **space** parameter in the constructo
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
-<!--Device-unnamed-declare type SpaceType = string | number | Resource--><!--Device-unnamed-declare type SpaceType = string | number | Resource-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| Type | Description |
-| --- | --- |
-| string | Represents a string value. It can take any string value. |
-| number | Represents a numeric value. It can take any numerical value. |
-| Resource | Represents a resource reference type. It can take values from system resources or application resources. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+| number |
+| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |

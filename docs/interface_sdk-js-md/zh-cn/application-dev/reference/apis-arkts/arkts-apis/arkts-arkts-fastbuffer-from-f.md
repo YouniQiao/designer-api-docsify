@@ -16,23 +16,23 @@ function from(array: number[]): FastBuffer
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-fastbuffer-function from(array: number[]): FastBuffer--><!--Device-fastbuffer-function from(array: number[]): FastBuffer-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| array | number[] | 是 | 指定数组，数组内各元素的取值范围为[0, 255]。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| array | number[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 新的FastBuffer对象。 |
+| 类型 |
+| --- |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
 
 **示例**
 
@@ -97,32 +97,32 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-fastbuffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): FastBuffer--><!--Device-fastbuffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): FastBuffer-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| arrayBuffer | ArrayBuffer \| SharedArrayBuffer | 是 | 用于创建FastBuffer对象的底层ArrayBuffer或SharedArrayBuffer，创建的FastBuffer将与该对象共享相同的内存区域。 |
-| byteOffset | number | 否 | 字节偏移量，默认值：0。 |
-| length | number | 否 | 字节长度，默认值：（arrayBuffer.byteLength - byteOffset）。取值范围：0 &lt;= length &lt;= arrayBuffer.byteLength - byteOffset。传入null时返回长度为0的FastBuffer对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [arrayBuffer](arkts-arkts-buffer-blob-c.md) | ArrayBuffer \| SharedArrayBuffer | 是 |
+| byteOffset | number | 否 |
+| length | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 返回一个FastBuffer对象，该对象与入参对象`arrayBuffer`共享相同的内存区域。修改FastBuffer对象的数据将同步修改原ArrayBuffer中对应位置的数据，修改原ArrayBuffer的数据也会同步修改FastBuffer中对应位置的数据。 |
+| 类型 |
+| --- |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| 错误码ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) |
 
 **示例**
 
@@ -139,29 +139,29 @@ function from(buffer: FastBuffer | Uint8Array): FastBuffer
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-fastbuffer-function from(buffer: FastBuffer | Uint8Array): FastBuffer--><!--Device-fastbuffer-function from(buffer: FastBuffer | Uint8Array): FastBuffer-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | 是 | 用于创建新FastBuffer对象的源数据。当入参为FastBuffer时，将复制其数据创建新对象；当入参为Uint8Array时，基于其内存创建新对象并保持内存关联。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 返回新的FastBuffer对象。 |
+| 类型 |
+| --- |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| 错误码ID |
+| --- |
+| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) |
 
 **示例**
 
@@ -178,26 +178,25 @@ function from(value: string, encoding?: BufferEncoding): FastBuffer
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-fastbuffer-function from(value: string, encoding?: BufferEncoding): FastBuffer--><!--Device-fastbuffer-function from(value: string, encoding?: BufferEncoding): FastBuffer-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | string | 是 | 用于创建FastBuffer对象的字符串。 |
-| encoding | BufferEncoding | 否 | 编码格式（当`value`为string时，才有意义）。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | string | 是 |
+| encoding | BufferEncoding | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 返回新的FastBuffer对象。 |
+| 类型 |
+| --- |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
 
 **示例**
 
 参见 [from](#from)
-

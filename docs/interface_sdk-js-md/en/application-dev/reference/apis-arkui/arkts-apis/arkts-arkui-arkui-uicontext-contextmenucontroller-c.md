@@ -5,12 +5,12 @@ Provides the capability to control the closing of context menus.
 > **NOTE：**&gt;
 > - The initial APIs of this class are supported since API version 12.&gt;
 > - In the following API examples, you must first use
-> [getContextMenuController()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcontextmenucontroller) in **UIContext** to obtain a
+> [getContextMenuController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcontextmenucontroller) in **UIContext** to obtain a
 > **ContextMenuController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 12
 
-<!--Device-unnamed-export declare class ContextMenuController--><!--Device-unnamed-export declare class ContextMenuController-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,11 +33,11 @@ Closes this context menu.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContextMenuController-close(): void--><!--Device-ContextMenuController-close(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -89,4 +89,3 @@ struct Index {
   }
 }
 ```
-

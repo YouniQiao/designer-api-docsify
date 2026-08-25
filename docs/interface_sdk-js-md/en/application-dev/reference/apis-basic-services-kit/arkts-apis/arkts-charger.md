@@ -5,9 +5,9 @@ The **charger** module enumerates charging types.
 > **NOTE：**&gt;
 > The APIs provided by this module are system APIs.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-unnamed-declare namespace charger--><!--Device-unnamed-declare namespace charger-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -24,8 +24,7 @@ import { charger } from '@kit.BasicServicesKit';
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [ChargeType](arkts-basicservices-charger-chargetype-e-sys.md) | Enumerates charging types. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ChargeType](arkts-basicservices-charger-chargetype-e-sys.md) |
 <!--DelEnd-->
-

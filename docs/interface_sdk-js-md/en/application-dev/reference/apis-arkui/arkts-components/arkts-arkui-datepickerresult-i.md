@@ -4,7 +4,7 @@ Defines the time format returned by the date picker.
 
 **Since:** 8
 
-<!--Device-unnamed-declare interface DatePickerResult--><!--Device-unnamed-declare interface DatePickerResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,9 +25,9 @@ Day of the selected date.Value range: depends on **start** and **end**. If **sta
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-DatePickerResult-day?: number--><!--Device-DatePickerResult-day?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,9 +43,9 @@ Zero-based month index of the selected date. **0** indicates January, and **11**
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-DatePickerResult-month?: number--><!--Device-DatePickerResult-month?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,9 +61,8 @@ Year of the selected date.Value range: depends on **start** and **end**. If **st
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-DatePickerResult-year?: number--><!--Device-DatePickerResult-year?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 Enumerates the material types in a scene. The material type defines how materials in a scene are rendered.@enum { int }
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export enum MaterialType--><!--Device-unnamed-export enum MaterialType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -16,9 +16,9 @@ SHADER = 1
 
 Shader-defined.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MaterialType-SHADER = 1--><!--Device-MaterialType-SHADER = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -30,9 +30,9 @@ METALLIC_ROUGHNESS = 2
 
 Metallic-Roughness model based on Physically Based Rendering (PBR), simulating realistic material lighting effects through metallicity and roughness parameters.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-MaterialType-METALLIC_ROUGHNESS = 2--><!--Device-MaterialType-METALLIC_ROUGHNESS = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -46,7 +46,7 @@ Material that is not affected by lighting.
 
 **Since:** 23
 
-<!--Device-MaterialType-UNLIT = 3--><!--Device-MaterialType-UNLIT = 3-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -60,7 +60,6 @@ Occlusion material: occludes other objects in the scene but does not occlude the
 
 **Since:** 23
 
-<!--Device-MaterialType-OCCLUSION = 4--><!--Device-MaterialType-OCCLUSION = 4-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

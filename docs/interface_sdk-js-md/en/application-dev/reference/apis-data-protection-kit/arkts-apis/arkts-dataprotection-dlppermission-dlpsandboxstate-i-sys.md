@@ -4,7 +4,7 @@ Represents the DLP sandbox state information.
 
 **Since:** 10
 
-<!--Device-dlpPermission-export interface DLPSandboxState--><!--Device-dlpPermission-export interface DLPSandboxState-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -28,7 +28,7 @@ Index of the DLP sandbox application. The value range is [1000, 1100]. If the va
 
 **Since:** 10
 
-<!--Device-DLPSandboxState-appIndex: number--><!--Device-DLPSandboxState-appIndex: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -46,9 +46,8 @@ Bundle name of the application.
 
 **Since:** 10
 
-<!--Device-DLPSandboxState-bundleName: string--><!--Device-DLPSandboxState-bundleName: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **System API:** This is a system API.
-

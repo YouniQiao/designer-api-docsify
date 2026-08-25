@@ -2,11 +2,9 @@
 
 Defines the extra options for snapshot taking.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-componentSnapshot-export interface SnapshotOptions--><!--Device-componentSnapshot-export interface SnapshotOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,17 +20,17 @@ import { componentSnapshot } from '@kit.ArkUI';
 colorMode?: ColorModeOptions
 ```
 
-Set the color space options for current snapshot taking.
+Color space used for the snapshot.Default value: **{colorSpace: SRGB, isAuto: false}**
 
 **Type:** [ColorModeOptions](arkts-arkui-componentsnapshot-colormodeoptions-i.md)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SnapshotOptions-colorMode?: ColorModeOptions--><!--Device-SnapshotOptions-colorMode?: ColorModeOptions-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,17 +40,17 @@ Set the color space options for current snapshot taking.
 dynamicRangeMode?: DynamicRangeModeOptions
 ```
 
-Set the dynamic range mode options for current snapshot taking.
+Dynamic range mode used for the snapshot.Default value: **{dynamicRangeMode: STANDARD, isAuto: false}**
 
 **Type:** [DynamicRangeModeOptions](arkts-arkui-componentsnapshot-dynamicrangemodeoptions-i.md)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SnapshotOptions-dynamicRangeMode?: DynamicRangeModeOptions--><!--Device-SnapshotOptions-dynamicRangeMode?: DynamicRangeModeOptions-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,37 +60,38 @@ Set the dynamic range mode options for current snapshot taking.
 region?: SnapshotRegionType
 ```
 
-Defines the rect region type of the snapshot.
+Rectangular region for the snapshot. The default region is the entire component.
 
 **Type:** [SnapshotRegionType](arkts-arkui-componentsnapshot-snapshotregiontype-t.md)
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SnapshotOptions-region?: SnapshotRegionType--><!--Device-SnapshotOptions-region?: SnapshotRegionType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## scale
 
 ```TypeScript
-scale?: double
+scale?: number
 ```
 
-Defines the scale property to render the snapshot.
+Scale ratio for rendering pixel maps during a snapshot. Note that a high scale ratio may increase the time taken for the snapshot or even result in a snapshot failure.Value range: [0, +∞). If the value is less than or equal to 0, the default value is used.Default value: **1**  
+**NOTE：**Avoid capturing images that are excessively large, ideally not larger than the screen size. If the size of the image to capture exceeds device-specific underlying limits, the capture will fail.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SnapshotOptions-scale?: double--><!--Device-SnapshotOptions-scale?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -102,17 +101,16 @@ Defines the scale property to render the snapshot.
 waitUntilRenderFinished?: boolean
 ```
 
-Whether to wait the rendering is finished.
+Whether to force the system to wait for all rendering commands to complete before taking the snapshot. The value **true** means to force the system to wait for all rendering commands to complete before taking the snapshot, and **false** means the opposite. This option ensures the snapshot reflects the most up-to-date content and should be enabled whenever possible. Note that enabling this option may increase the time required for the snapshot to complete, which depends on the size of the area that needs to be redrawn at the time.Default value: **false**
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SnapshotOptions-waitUntilRenderFinished?: boolean--><!--Device-SnapshotOptions-waitUntilRenderFinished?: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,9 +4,9 @@ Describes the gyroscope sensor data. It extends from [Response](arkts-sensorserv
 
 **Inheritance/Implementation:** GyroscopeResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sensor-interface GyroscopeResponse--><!--Device-sensor-interface GyroscopeResponse-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -24,13 +24,13 @@ x: double
 
 Angular velocity of rotation around the x-axis of the device, in rad/s. The value is equal to the reported physical quantity.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-GyroscopeResponse-x: double--><!--Device-GyroscopeResponse-x: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -42,13 +42,13 @@ y: double
 
 Angular velocity of rotation around the y-axis of the device, in rad/s. The value is equal to the reported physical quantity.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-GyroscopeResponse-y: double--><!--Device-GyroscopeResponse-y: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -60,13 +60,12 @@ z: double
 
 Angular velocity of rotation around the z-axis of the device, in rad/s. The value is equal to the reported physical quantity.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-GyroscopeResponse-z: double--><!--Device-GyroscopeResponse-z: double-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor
-

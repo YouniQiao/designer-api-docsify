@@ -4,7 +4,7 @@ EventResult is a class in ArkWeb Kit used to notify the **Web** component of the
 
 **Since:** 12
 
-<!--Device-unnamed-declare class EventResult--><!--Device-unnamed-declare class EventResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -23,9 +23,9 @@ Constructs a **EventResult** object.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-EventResult-constructor()--><!--Device-EventResult-constructor()-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -39,17 +39,17 @@ Sets the gesture event consumption result.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-EventResult-setGestureEventResult(result: boolean): void--><!--Device-EventResult-setGestureEventResult(result: boolean): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| result | boolean | Yes | Whether to consume the gesture event. <br>The value **true** means to consume the gesture event, and **false** means the opposite. <br>If **null** or **undefined** is passed in, the value is **true**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| result | boolean | Yes |
 
 **Examples**
 
@@ -67,16 +67,16 @@ Sets the gesture event consumption result and bubbling control.
 
 **Since:** 14
 
-<!--Device-EventResult-setGestureEventResult(result: boolean, stopPropagation: boolean): void--><!--Device-EventResult-setGestureEventResult(result: boolean, stopPropagation: boolean): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| result | boolean | Yes | Whether to consume the gesture event. <br>The value **true** means to consume the gesture event, and **false** means the opposite. <br>If **null** or **undefined** is passed in, the value is **true**. |
-| stopPropagation | boolean | Yes | Whether to stop propagation. This parameter is valid only when **result** is set to **true**. <br>The value **true** means to stop propagation, and **false** means the opposite. <br>If **null** or **undefined** is passed in, the value is **true**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| result | boolean | Yes |
+| stopPropagation | boolean | Yes |
 
 **Examples**
 
@@ -92,18 +92,17 @@ Sets the mouse event consumption result and bubbling control.
 
 **Since:** 20
 
-<!--Device-EventResult-setMouseEventResult(result: boolean, stopPropagation?: boolean): void--><!--Device-EventResult-setMouseEventResult(result: boolean, stopPropagation?: boolean): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| result | boolean | Yes | Whether to consume the mouse event. <br>true indicates consumption of the mouse event, and false indicates no consumption of the mouse event. <br>The value is true when null or undefined is passed in. |
-| stopPropagation | boolean | No | Whether to stop bubbling. This parameter takes effect only when result is true. <br>true indicates that bubbling is stopped, and false indicates that bubbling is not stopped. <br>The value is true when null or undefined is passed in. <br>Default value: true. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| result | boolean | Yes |
+| stopPropagation | boolean | No |
 
 **Examples**
 
 For details, see [onNativeEmbedMouseEvent](./arkts-basic-components-web-events.md#onnativeembedmouseevent20).
-

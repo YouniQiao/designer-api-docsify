@@ -2,9 +2,9 @@
 
 远端对象的代理持有者。用于获取代理对象。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-rpc-interface IRemoteBroker--><!--Device-rpc-interface IRemoteBroker-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -22,17 +22,17 @@ asObject(): IRemoteObject
 
 需派生类实现，获取代理或远端对象。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-IRemoteBroker-asObject(): IRemoteObject--><!--Device-IRemoteBroker-asObject(): IRemoteObject-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 如果调用者是RemoteObject对象，则直接返回本身；如果调用者是[RemoteProxy]{ |
+| 类型 |
+| --- |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) |
 
 **示例**
 
@@ -102,4 +102,3 @@ if (proxy != undefined) {
   let iRemoteObject = new TestProxy(proxy).asObject();
 }
 ```
-

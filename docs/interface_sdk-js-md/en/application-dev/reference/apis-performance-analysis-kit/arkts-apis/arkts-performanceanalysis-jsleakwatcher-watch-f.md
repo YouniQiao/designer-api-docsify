@@ -14,18 +14,18 @@ function watch(obj: object, msg: string): void
 
 Registers the object to be checked.
 
-**Since:** 26.1.0
+**Since:** 12
 
-<!--Device-jsLeakWatcher-function watch(obj: object, msg: string): void--><!--Device-jsLeakWatcher-function watch(obj: object, msg: string): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| obj | object | Yes | Name of the object to be checked.<br>Note: You can pass objects of any type. |
-| msg | string | Yes | Custom object information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | object | Yes |
+| msg | string | Yes |
 
 **Examples**
 
@@ -33,4 +33,3 @@ Registers the object to be checked.
 let obj:Object = new Object();
 jsLeakWatcher.watch(obj, "Trace Object");
 ```
-

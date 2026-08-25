@@ -1,4 +1,4 @@
-# @ohos.selectionInput.SelectionExtensionAbility
+# @ohos.selectionInput.SelectionExtensionAbility(SelectionExtensionAbility)
 
 ## Modules to Import
 
@@ -8,11 +8,8 @@ import { SelectionExtensionAbility } from '@kit.BasicServicesKit';
 
 ## Summary
 
-<!--Del-->
-### Classes(System API)
+### Classes
 
-| Name | Description |
-| --- | --- |
-| [SelectionExtensionAbility](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md) | This module provides APIs for word selection extension, which can implement extended interactions such as searching and translating text using a mouse or touchpad. Word selection extension services can be customized by inheriting SelectionExtensionAbility. You need to declare this ExtensionAbility in the project configuration. For details, see [Developing a Word Selection Extension Ability](../../../basic-services/selectionInput/selection-services-application-guide.md). This module provides the following capabilities:  - Lifecycle management: Use the [onConnect](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md#onconnect) and [onDisconnect](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md#ondisconnect) callbacks to process the connection and disconnection logic. - **context**: You can use **context** to call [startAbility](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c-sys.md#startability) to start the target ability in the same app, or use **context** as an input parameter of [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md) to create a word selection panel. |
-<!--DelEnd-->
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SelectionExtensionAbility(SelectionExtensionAbility)](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md) |

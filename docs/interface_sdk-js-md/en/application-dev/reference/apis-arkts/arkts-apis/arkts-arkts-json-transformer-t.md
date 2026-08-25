@@ -8,23 +8,22 @@ Defines the type of the conversion result function.When used as a parameter of [
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-json-type Transformer = (this: Object, key: string, value: Object) => Object | undefined | null--><!--Device-json-type Transformer = (this: Object, key: string, value: Object) => Object | undefined | null-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| this | Object | Yes | Object to which the key-value pair to parse belongs. |
-| key | string | Yes | Key to parse. |
-| value | Object | Yes | Value of the key. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| this | Object | Yes |
+| key | string | Yes |
+| value | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Object \| undefined \| null | Return an Object, undefined or null value |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Object \| undefined \| null |

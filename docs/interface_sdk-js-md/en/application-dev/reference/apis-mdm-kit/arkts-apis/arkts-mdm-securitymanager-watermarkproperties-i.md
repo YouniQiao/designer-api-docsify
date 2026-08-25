@@ -4,7 +4,7 @@ Defines watermark properties.
 
 **Since:** 26.0.0
 
-<!--Device-securityManager-export interface WatermarkProperties--><!--Device-securityManager-export interface WatermarkProperties-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -26,9 +26,9 @@ Number of columns for displaying the watermark.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-WatermarkProperties-intervalsCol: number--><!--Device-WatermarkProperties-intervalsCol: number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -44,9 +44,8 @@ Number of rows for displaying the watermark.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WatermarkProperties-intervalsRow: number--><!--Device-WatermarkProperties-intervalsRow: number-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

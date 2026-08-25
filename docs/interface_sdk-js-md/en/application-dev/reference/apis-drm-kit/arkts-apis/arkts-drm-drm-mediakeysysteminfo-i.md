@@ -2,9 +2,9 @@
 
 Defines the DRM information for encrypted content.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-drm-interface MediaKeySystemInfo--><!--Device-drm-interface MediaKeySystemInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -24,11 +24,11 @@ PSSH(protection scheme specific header) contain drm info.
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-MediaKeySystemInfo-pssh: Uint8Array--><!--Device-MediaKeySystemInfo-pssh: Uint8Array-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -42,11 +42,10 @@ Drm system ID.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-MediaKeySystemInfo-uuid: string--><!--Device-MediaKeySystemInfo-uuid: string-End-->
-
 **System capability:** SystemCapability.Multimedia.Drm.Core
-

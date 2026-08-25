@@ -18,27 +18,27 @@ Synchronizes the data of a file. This API returns the result synchronously.
 
 **Since:** 9
 
-<!--Device-unnamed-declare function fdatasyncSync(fd: number): void--><!--Device-unnamed-declare function fdatasyncSync(fd: number): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fd | number | Yes | FD of the file. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fd | number | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900020 | Invalid argument |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900005 |
+| 13900008 |
+| 13900020 |
+| 13900025 |
+| 13900027 |
+| 13900041 |
+| 13900042 |
 
 **Examples**
 
@@ -48,4 +48,3 @@ let file = fs.openSync(filePath);
 fs.fdatasyncSync(file.fd);
 fs.closeSync(file);
 ```
-

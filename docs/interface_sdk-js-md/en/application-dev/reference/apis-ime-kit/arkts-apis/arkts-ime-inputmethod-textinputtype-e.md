@@ -2,9 +2,9 @@
 
 Enumerates the text input types.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-inputMethod-export enum TextInputType--><!--Device-inputMethod-export enum TextInputType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -16,9 +16,9 @@ NONE = -1
 
 None.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-TextInputType-NONE = -1--><!--Device-TextInputType-NONE = -1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -30,9 +30,9 @@ TEXT = 0
 
 Text.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-TextInputType-TEXT = 0--><!--Device-TextInputType-TEXT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -44,9 +44,9 @@ MULTILINE
 
 Multi-line.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-TextInputType-MULTILINE--><!--Device-TextInputType-MULTILINE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -58,9 +58,9 @@ NUMBER
 
 Number.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-TextInputType-NUMBER--><!--Device-TextInputType-NUMBER-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -72,9 +72,9 @@ PHONE
 
 Phone number.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-TextInputType-PHONE--><!--Device-TextInputType-PHONE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -86,9 +86,9 @@ DATETIME
 
 Date.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-TextInputType-DATETIME--><!--Device-TextInputType-DATETIME-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -100,9 +100,9 @@ EMAIL_ADDRESS
 
 Email address.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-TextInputType-EMAIL_ADDRESS--><!--Device-TextInputType-EMAIL_ADDRESS-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -114,9 +114,9 @@ URL
 
 URL.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-TextInputType-URL--><!--Device-TextInputType-URL-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -128,9 +128,9 @@ VISIBLE_PASSWORD
 
 Password.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-TextInputType-VISIBLE_PASSWORD--><!--Device-TextInputType-VISIBLE_PASSWORD-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -142,9 +142,9 @@ NUMBER_PASSWORD
 
 Numeric password.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-TextInputType-NUMBER_PASSWORD--><!--Device-TextInputType-NUMBER_PASSWORD-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -156,9 +156,9 @@ SCREEN_LOCK_PASSWORD
 
 Lock screen password.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-TextInputType-SCREEN_LOCK_PASSWORD--><!--Device-TextInputType-SCREEN_LOCK_PASSWORD-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -170,9 +170,9 @@ USER_NAME
 
 Username.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-TextInputType-USER_NAME--><!--Device-TextInputType-USER_NAME-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -184,9 +184,9 @@ NEW_PASSWORD
 
 New password.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-TextInputType-NEW_PASSWORD--><!--Device-TextInputType-NEW_PASSWORD-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -198,9 +198,9 @@ NUMBER_DECIMAL
 
 Number with a decimal point.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-TextInputType-NUMBER_DECIMAL--><!--Device-TextInputType-NUMBER_DECIMAL-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -212,9 +212,8 @@ ONE_TIME_CODE
 
 Verification code.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-TextInputType-ONE_TIME_CODE--><!--Device-TextInputType-ONE_TIME_CODE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

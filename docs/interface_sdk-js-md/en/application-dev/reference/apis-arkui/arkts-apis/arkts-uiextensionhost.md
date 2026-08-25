@@ -7,11 +7,11 @@ Intended only for the **UIExtensionComponent** that has process isolation requir
 > [uiExtension](arkts-arkui-uiextension.md) interface.&gt;
 > The APIs provided by this module are system APIs.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-declare namespace uiExtensionHost--><!--Device-unnamed-declare namespace uiExtensionHost-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,9 +28,8 @@ import { uiExtensionHost } from '@kit.ArkUI';
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [UIExtensionHostWindowProxy](arkts-arkui-uiextensionhost-uiextensionhostwindowproxy-i-sys.md) | Transition Controller |
-| [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md) | Defines information about the host application window and **UIExtensionComponent**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [UIExtensionHostWindowProxy](arkts-arkui-uiextensionhost-uiextensionhostwindowproxy-i-sys.md) |
+| [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md) |
 <!--DelEnd-->
-

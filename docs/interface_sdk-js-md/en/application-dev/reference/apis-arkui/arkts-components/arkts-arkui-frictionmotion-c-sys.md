@@ -4,9 +4,9 @@ Friction animation model. You can build friction animation by friction force, in
 
 **Since:** 7
 
-**Deprecated since:** 22
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-unnamed-declare class FrictionMotion--><!--Device-unnamed-declare class FrictionMotion-End-->
+**Deprecated since:** 22
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,9 +27,9 @@ Constructor parameters
 
 **Since:** 7
 
-**Deprecated since:** 22
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-FrictionMotion-constructor(friction: number, position: number, velocity: number)--><!--Device-FrictionMotion-constructor(friction: number, position: number, velocity: number)-End-->
+**Deprecated since:** 22
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -37,9 +37,8 @@ Constructor parameters
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| friction | number | Yes |  |
-| position | number | Yes |  |
-| velocity | number | Yes |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| friction | number | Yes |
+| position | number | Yes |
+| velocity | number | Yes |

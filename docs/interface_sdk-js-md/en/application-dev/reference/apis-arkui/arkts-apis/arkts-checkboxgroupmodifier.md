@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [CheckboxGroupModifier](arkts-arkui-checkboxgroupmodifier-c.md) | Defines CheckboxGroup Modifier@extends CheckboxGroupAttribute @implements AttributeModifier&lt;CheckboxGroupAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CheckboxGroupModifier](arkts-arkui-checkboxgroupmodifier-c.md) |

@@ -14,11 +14,11 @@ function updateFormLockedState(formId: string, isLocked: boolean): Promise<void>
 
 Notifies the update of the widget lock state. This API uses a promise to return the result. If an application is locked, its widget will also be locked and masked in a locked style. To use the widget, you need to enter the password set for the widget.
 
-**Since:** 23
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
-
-<!--Device-formHost-function updateFormLockedState(formId: string, isLocked: boolean): Promise<void>--><!--Device-formHost-function updateFormLockedState(formId: string, isLocked: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -26,28 +26,28 @@ Notifies the update of the widget lock state. This API uses a promise to return 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| formId | string | Yes | Widget ID. |
-| isLocked | boolean | Yes | A Boolean value indicates whether a widget is in the locked state. The value **true** indicates that the widget is in the locked state, and the value **false** indicates the opposite. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| formId | string | Yes |
+| isLocked | boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | caller is not system app. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
-| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
-| [16501001](../errorcode-form.md#16501001-widget-id-not-exist) | The ID of the form to be operated does not exist. |
-| [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [16500060](../errorcode-form.md#16500060-service-connection-failure) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16501001](../errorcode-form.md#16501001-widget-id-not-exist) |
+| [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
 
 **Examples**
 
@@ -66,4 +66,3 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
-

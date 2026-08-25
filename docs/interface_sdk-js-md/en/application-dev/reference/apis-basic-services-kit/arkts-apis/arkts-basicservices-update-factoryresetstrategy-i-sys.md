@@ -4,7 +4,7 @@ Represents the factory reset strategy, which contains the **scope** (reset scope
 
 **Since:** 26.0.0
 
-<!--Device-update-export interface FactoryResetStrategy--><!--Device-update-export interface FactoryResetStrategy-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -28,9 +28,9 @@ Reset scope. The value **DATA** indicates that only data in the user partition i
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-FactoryResetStrategy-scope: FactoryResetScope--><!--Device-FactoryResetStrategy-scope: FactoryResetScope-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -48,11 +48,10 @@ Reset strategy, which specifies the specific strategy for the reset operation. T
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-FactoryResetStrategy-strategy: string--><!--Device-FactoryResetStrategy-strategy: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
-

@@ -13,9 +13,9 @@ Callback function called when updating one or more data records in the database.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-unnamed-type UpdateFn = (  uri: string,  predicates: dataSharePredicates.DataSharePredicates,  valueBucket: ValuesBucket,  callback: AsyncCallback<int>) => void--><!--Device-unnamed-type UpdateFn = (  uri: string,  predicates: dataSharePredicates.DataSharePredicates,  valueBucket: ValuesBucket,  callback: AsyncCallback<int>) => void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
 
@@ -23,10 +23,9 @@ Callback function called when updating one or more data records in the database.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Indicates the database table storing the data to update. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates filter criteria. If this parameter is null, all data records will be updated by default. |
-| valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Indicates the data to update. This parameter can be null. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Returns the number of data records updated. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| predicates | dataSharePredicates.DataSharePredicates | Yes |
+| valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes |

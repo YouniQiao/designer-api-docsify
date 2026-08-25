@@ -4,7 +4,7 @@ Provides the options for customizing the context menu on selection.
 
 **Since:** 16
 
-<!--Device-unnamed-declare interface TextMenuOptions--><!--Device-unnamed-declare interface TextMenuOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,10 @@ Menu display mode.Default value: **TextMenuShowMode.DEFAULT**
 
 **Since:** 16
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 16.
 
-<!--Device-TextMenuOptions-showMode?: TextMenuShowMode--><!--Device-TextMenuOptions-showMode?: TextMenuShowMode-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

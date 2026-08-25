@@ -6,13 +6,12 @@ export type SharedBundleInfo = _SharedBundleInfo
 
 Defines the shared bundle information.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-bundleManager-export type SharedBundleInfo = _SharedBundleInfo--><!--Device-bundleManager-export type SharedBundleInfo = _SharedBundleInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
 
 **Property type:** _SharedBundleInfo
-

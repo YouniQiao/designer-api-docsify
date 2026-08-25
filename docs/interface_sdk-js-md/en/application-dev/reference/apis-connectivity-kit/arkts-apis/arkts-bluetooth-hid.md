@@ -2,9 +2,9 @@
 
 Provides methods to accessing bluetooth HID(Human Interface Device)-related capabilities.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-unnamed-declare namespace hid--><!--Device-unnamed-declare namespace hid-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -18,45 +18,44 @@ import { hid } from '@kit.ConnectivityKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [createHidDeviceProfile](arkts-connectivity-hid-createhiddeviceprofile-f.md) | Creates the instance of HID device profile. |
-| [createHidHostProfile](arkts-connectivity-hid-createhidhostprofile-f.md) | create the instance of hid profile. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [createHidDeviceProfile](arkts-connectivity-hid-createhiddeviceprofile-f.md) |
+| [createHidHostProfile](arkts-connectivity-hid-createhidhostprofile-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [GetReportData](arkts-connectivity-hid-getreportdata-i.md) | Describe the GET_REPORT data is received from remote host. |
-| [HidDeviceProfile](arkts-connectivity-hid-hiddeviceprofile-i.md) | Manager HID device profile. |
-| [HidDeviceQos](arkts-connectivity-hid-hiddeviceqos-i.md) | Represents the Quality of Service (QoS) settings for a bluetooth hid device application. |
-| [HidDeviceSdp](arkts-connectivity-hid-hiddevicesdp-i.md) | Describe the HID device capability fields of this endpoint being queried. |
-| [InterruptData](arkts-connectivity-hid-interruptdata-i.md) | Describe the interrupt data is received from remote host. |
-| [ProtocolData](arkts-connectivity-hid-protocoldata-i.md) | Describe the protocol data is received from remote host. |
-| [SetReportData](arkts-connectivity-hid-setreportdata-i.md) | Describe the SET_REPORT data is received from remote host. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [GetReportData](arkts-connectivity-hid-getreportdata-i.md) |
+| [HidDeviceProfile](arkts-connectivity-hid-hiddeviceprofile-i.md) |
+| [HidDeviceQos](arkts-connectivity-hid-hiddeviceqos-i.md) |
+| [HidDeviceSdp](arkts-connectivity-hid-hiddevicesdp-i.md) |
+| [InterruptData](arkts-connectivity-hid-interruptdata-i.md) |
+| [ProtocolData](arkts-connectivity-hid-protocoldata-i.md) |
+| [SetReportData](arkts-connectivity-hid-setreportdata-i.md) |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [HidHostProfile](arkts-connectivity-hid-hidhostprofile-i-sys.md) | Manager hid host profile. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [HidHostProfile](arkts-connectivity-hid-hidhostprofile-i-sys.md) |
 <!--DelEnd-->
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [ErrorReason](arkts-connectivity-hid-errorreason-e.md) | Describe the error reason. |
-| [ProtocolType](arkts-connectivity-hid-protocoltype-e.md) | Describe the protocol type. |
-| [ReportType](arkts-connectivity-hid-reporttype-e.md) | Describe the report type. |
-| [ServiceType](arkts-connectivity-hid-servicetype-e.md) | Describe the l2cap service type. |
-| [Subclass](arkts-connectivity-hid-subclass-e.md) | Describe the subclass. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ErrorReason](arkts-connectivity-hid-errorreason-e.md) |
+| [ProtocolType](arkts-connectivity-hid-protocoltype-e.md) |
+| [ReportType](arkts-connectivity-hid-reporttype-e.md) |
+| [ServiceType](arkts-connectivity-hid-servicetype-e.md) |
+| [Subclass](arkts-connectivity-hid-subclass-e.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [BaseProfile](arkts-connectivity-hid-baseprofile-t.md) | Base interface of profile. |
-| [BluetoothAddress](arkts-connectivity-hid-bluetoothaddress-t.md) | Bluetooth device address. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BaseProfile](arkts-connectivity-hid-baseprofile-t.md) |
+| [BluetoothAddress](arkts-connectivity-hid-bluetoothaddress-t.md) |

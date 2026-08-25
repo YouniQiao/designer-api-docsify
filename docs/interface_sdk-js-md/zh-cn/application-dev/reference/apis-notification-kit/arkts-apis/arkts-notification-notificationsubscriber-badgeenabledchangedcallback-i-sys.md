@@ -4,11 +4,11 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-export interface BadgeEnabledChangedCallback--><!--Device-unnamed-export interface BadgeEnabledChangedCallback-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Notification.Notification
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (data: EnabledNotificationCallbackData): void
@@ -18,7 +18,7 @@
 
 **起始版本：** 12
 
-<!--Device-BadgeEnabledChangedCallback-(data: EnabledNotificationCallbackData): void--><!--Device-BadgeEnabledChangedCallback-(data: EnabledNotificationCallbackData): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -26,9 +26,9 @@
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | [EnabledNotificationCallbackData](arkts-notification-notificationsubscriber-enablednotificationcallbackdata-i-sys.md) | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | [EnabledNotificationCallbackData](arkts-notification-notificationsubscriber-enablednotificationcallbackdata-i-sys.md) | 是 |
 
 **示例**
 
@@ -70,4 +70,3 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
   console.error(`subscribeNotification failed, code is ${error.code}, message is ${error.message}`);
 });
 ```
-

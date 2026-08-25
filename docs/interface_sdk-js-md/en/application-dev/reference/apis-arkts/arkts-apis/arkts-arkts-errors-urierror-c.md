@@ -6,9 +6,7 @@ Represents an error that occurs when a global URI handling function was used in 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class URIError--><!--Device-unnamed-export class URIError-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,26 +25,24 @@ Constructs a new URIError instance with provided message and error specific info
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-URIError-static $_invoke(message?: string, options?: ErrorOptions): URIError--><!--Device-URIError-static $_invoke(message?: string, options?: ErrorOptions): URIError-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | string | No | Error text. |
-| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No | Error options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | string | No |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [URIError](arkts-arkts-errors-urierror-c.md) | Newly created URIError instance |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [URIError](arkts-arkts-errors-urierror-c.md) |
 
 ## constructor
 
@@ -58,18 +54,15 @@ Constructs a new URIError instance with provided message and error specific info
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-URIError-constructor(message?: string, options?: ErrorOptions)--><!--Device-URIError-constructor(message?: string, options?: ErrorOptions)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | string | No | Error text. |
-| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No | Error options. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | string | No |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No |

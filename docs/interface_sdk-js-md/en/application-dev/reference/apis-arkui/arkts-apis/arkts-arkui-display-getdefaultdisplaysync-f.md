@@ -14,25 +14,25 @@ function getDefaultDisplaySync(): Display
 
 Obtains the **Display** object of the screen where the application is located. If multiple abilities of an application are on different screens, the **Display** object of the main screen is returned. If multiple abilities of an application are on the same screen, the **Display** object of the screen is returned.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-display-function getDefaultDisplaySync(): Display--><!--Device-display-function getDefaultDisplaySync(): Display-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Display](arkts-arkui-display-display-i.md) | Default Display object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Display](arkts-arkui-display-display-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: Display is not created or destroyed. |
+| Error Code ID |
+| --- |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
 
 **Examples**
 
@@ -46,4 +46,3 @@ try {
   console.error(`Failed to get default display. Code: ${exception.code}, message: ${exception.message}`);
 }
 ```
-

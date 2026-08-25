@@ -1,16 +1,17 @@
 # SignatureInfo
 
 ```TypeScript
-export type SignatureInfo = _SignatureInfo
+export type SignatureInfo = _BundleInfo.SignatureInfo
 ```
 
 应用包的签名信息。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-bundleManager-export type SignatureInfo = _SignatureInfo--><!--Device-bundleManager-export type SignatureInfo = _SignatureInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-**属性类型：** _SignatureInfo
-
+**属性类型：** _BundleInfo.SignatureInfo

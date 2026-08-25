@@ -2,9 +2,9 @@
 
 Enumerates the disconnection reasons.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-abilityConnectionManager-enum DisconnectReason--><!--Device-abilityConnectionManager-enum DisconnectReason-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -16,11 +16,11 @@ PEER_APP_CLOSE_COLLABORATION = 0
 
 The peer application proactively disables collaboration.
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DisconnectReason-PEER_APP_CLOSE_COLLABORATION = 0--><!--Device-DisconnectReason-PEER_APP_CLOSE_COLLABORATION = 0-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -32,11 +32,11 @@ PEER_APP_EXIT = 1
 
 The peer application exits.
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DisconnectReason-PEER_APP_EXIT = 1--><!--Device-DisconnectReason-PEER_APP_EXIT = 1-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -48,11 +48,10 @@ NETWORK_DISCONNECTED = 2
 
 The network is disconnected.
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DisconnectReason-NETWORK_DISCONNECTED = 2--><!--Device-DisconnectReason-NETWORK_DISCONNECTED = 2-End-->
-
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
-

@@ -16,22 +16,22 @@ function onFreeze(observer: FreezeObserver): void
 
 **起始版本：** 24
 
-<!--Device-errorManager-function onFreeze(observer: FreezeObserver): void--><!--Device-errorManager-function onFreeze(observer: FreezeObserver): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| observer | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | 是 | 应用主线程freeze观测器。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | 调用者无效。 |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
 **示例**
 
@@ -50,4 +50,3 @@ export const FreezeRegister = () => {
   }
 };
 ```
-

@@ -17,11 +17,11 @@ Invoke a function by functionNamespace and functionName.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Required permissions:** ohos.permission.ACCESS_FUNCTION
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-functionManager-function invokeFunction(functionNamespace: string, functionName: string,    args: Record<string, Object>, options?: InvokeOptions): Promise<InvokeResult>--><!--Device-functionManager-function invokeFunction(functionNamespace: string, functionName: string,    args: Record<string, Object>, options?: InvokeOptions): Promise<InvokeResult>-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -29,27 +29,26 @@ Invoke a function by functionNamespace and functionName.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| functionNamespace | string | Yes | The namespace of the target function. |
-| functionName | string | Yes | The name of the target function. |
-| args | Record&lt;string, Object&gt; | Yes | The input arguments for the function. |
-| options | [InvokeOptions](arkts-ability-functionmanager-invokeoptions-i-sys.md) | No | The options for this invocation. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [functionNamespace](arkts-ability-functioninfo-i-sys.md) | string | Yes |
+| functionName | string | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Record & lt;string, Object & gt; | Yes |
+| options | [InvokeOptions](arkts-ability-functionmanager-invokeoptions-i-sys.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[InvokeResult](arkts-ability-functionmanager-invokeresult-i-sys.md)&gt; | The promise used to return the result of function invocation. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[InvokeResult](arkts-ability-functionmanager-invokeresult-i-sys.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| 35600050 | System Error. 1. Connect to system service failed; 2.System service failed to communicate with dependency module. |
-| 35600060 | The function does not exist. |
-| 35600061 | The function execute failed. |
-| 35600062 | The function execute timeout. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 35600050 |
+| 35600060 |
+| 35600061 |
+| 35600062 |

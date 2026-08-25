@@ -4,7 +4,7 @@ LinearGradient class
 
 **Since:** 10
 
-<!--Device-unnamed-declare class LinearGradient--><!--Device-unnamed-declare class LinearGradient-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,17 +23,16 @@ Creates a linear gradient color object.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-LinearGradient-constructor(colorStops: ColorStop[])--><!--Device-LinearGradient-constructor(colorStops: ColorStop[])-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| colorStops | [ColorStop](arkts-arkui-colorstop-i.md)[] | Yes | Gradient colors and color stops. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| colorStops | [ColorStop](arkts-arkui-colorstop-i.md)[] | Yes |

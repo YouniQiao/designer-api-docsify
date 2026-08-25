@@ -16,19 +16,19 @@ function initialize(): void
 
 **起始版本：** 9
 
-**需要权限：** ohos.permission.NFC_TAG
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-connectedTag-function initialize(): void--><!--Device-connectedTag-function initialize(): void-End-->
+**需要权限：** ohos.permission.NFC_TAG
 
 **系统能力：** SystemCapability.Communication.ConnectedTag
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3200101](../errorcode-nfc.md#3200101-有源nfc标签状态异常) | Connected NFC tag running state is abnormal in service. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3200101](../errorcode-nfc.md#3200101-有源nfc标签状态异常) |
 
 **示例**
 
@@ -42,4 +42,3 @@ try {
     console.error("initialize error:" + error);
 }
 ```
-

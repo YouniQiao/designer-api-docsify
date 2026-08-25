@@ -2,7 +2,7 @@
 
 **Since:** 4
 
-<!--Device-unnamed-export declare class Locate--><!--Device-unnamed-export declare class Locate-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ country or region, such ass 'CN'.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-Locate-countryOrRegion: string--><!--Device-Locate-countryOrRegion: string-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,9 +36,9 @@ text layout direction, ltr or rtl.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-Locate-dir: "ltr" | "rtl"--><!--Device-Locate-dir: "ltr" | "rtl"-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,9 +54,9 @@ language, such as 'zh'.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-Locate-language: string--><!--Device-Locate-language: string-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,9 +72,8 @@ The Unicode locale key set defined by the locale. If this locale does not have a
 
 **Since:** 5
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-Locate-unicodeSetting: object--><!--Device-Locate-unicodeSetting: object-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

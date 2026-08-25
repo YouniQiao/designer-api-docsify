@@ -1,8 +1,6 @@
 # RegExpMatchArray
 
-**Since:** -1
-
-<!--Device-unnamed-interface RegExpMatchArray--><!--Device-unnamed-interface RegExpMatchArray-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -19,7 +17,4 @@ groups?: {
 
 **Type:** {         [key: string]: string     }
 
-**Since:** -1
-
-<!--Device-RegExpMatchArray-groups?: {        [key: string]: string    }--><!--Device-RegExpMatchArray-groups?: {        [key: string]: string    }-End-->
-
+**ArkTS mode:** 

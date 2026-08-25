@@ -2,9 +2,9 @@
 
 Represents the request for querying permission usage records.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-privacyManager-interface PermissionUsedRequest--><!--Device-privacyManager-interface PermissionUsedRequest-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -24,13 +24,13 @@ beginTime?: long
 
 Start time of the query. Unit: milliseconds. Default value: **0**, indicating no limit on the start time.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Default:** 0
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-PermissionUsedRequest-beginTime?: long--><!--Device-PermissionUsedRequest-beginTime?: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -46,9 +46,9 @@ Bundle name of the target application.Default value: queries all applications.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-PermissionUsedRequest-bundleName?: string--><!--Device-PermissionUsedRequest-bundleName?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -64,9 +64,9 @@ ID of the device where the target application is located.Default value: local de
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-PermissionUsedRequest-deviceId?: string--><!--Device-PermissionUsedRequest-deviceId?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -80,13 +80,13 @@ endTime?: long
 
 End time of the query. It must not be earlier than beginTime; otherwise, error code 12100001 is returned. Unit: milliseconds. Default value: **0**, indicating no limit on the end time.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Default:** 0
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-PermissionUsedRequest-endTime?: long--><!--Device-PermissionUsedRequest-endTime?: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -102,9 +102,9 @@ Used to specify the query mode. When set to **FLAG_PERMISSION_USAGE_SUMMARY**, s
 
 **Type:** [PermissionUsageFlag](arkts-ability-privacymanager-permissionusageflag-e-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-PermissionUsedRequest-flag: PermissionUsageFlag--><!--Device-PermissionUsedRequest-flag: PermissionUsageFlag-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -122,9 +122,9 @@ Used to specify whether to query remote devices. The value **false** means to qu
 
 **Default:** false
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-PermissionUsedRequest-isRemote?: boolean--><!--Device-PermissionUsedRequest-isRemote?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -140,9 +140,9 @@ Set of permissions to query. Default value: Empty string. Means querying usage r
 
 **Type:** Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt;
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-PermissionUsedRequest-permissionNames?: Array<Permissions>--><!--Device-PermissionUsedRequest-permissionNames?: Array<Permissions>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -156,13 +156,12 @@ tokenId?: int
 
 Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field of ApplicationInfo.Default value: **0**, queries all applications.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-PermissionUsedRequest-tokenId?: int--><!--Device-PermissionUsedRequest-tokenId?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
-

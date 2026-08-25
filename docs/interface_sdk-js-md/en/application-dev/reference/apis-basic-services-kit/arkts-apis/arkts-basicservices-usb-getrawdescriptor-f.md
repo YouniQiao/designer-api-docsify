@@ -16,29 +16,28 @@ Obtains the raw USB descriptor.Before you do this, call [usb.getDevices](arkts-b
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getRawDescriptor](arkts-basicservices-usbmanager-getrawdescriptor-f.md)
-
-<!--Device-usb-function getRawDescriptor(pipe: USBDevicePipe): Uint8Array--><!--Device-usb-function getRawDescriptor(pipe: USBDevicePipe): Uint8Array-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pipe | USBDevicePipe | Yes | Device pipe, which is used to determine the bus number and device address. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [pipe](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md) | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint8Array | Returns the raw USB descriptor if the operation is successful; returns **undefined** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Uint8Array |
 
 **Examples**
 
 ```TypeScript
 let ret = usb.getRawDescriptor(devicepipe);
 ```
-

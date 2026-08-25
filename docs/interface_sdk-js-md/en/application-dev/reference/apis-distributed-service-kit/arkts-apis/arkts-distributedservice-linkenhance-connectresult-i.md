@@ -2,9 +2,9 @@
 
 Represents the connection result, which is returned after the client calls **connect()**.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-linkEnhance-interface ConnectResult--><!--Device-linkEnhance-interface ConnectResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -24,11 +24,11 @@ ID of the peer device. If the connection is successful, the device ID of the pee
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ConnectResult-deviceId: string--><!--Device-ConnectResult-deviceId: string-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -42,13 +42,13 @@ Number indicating the result code. If the connection is successful, **0** is ret
 - 32390200: The client connection times out. - 32390201: The server service is not started. - 32390300: Internal error.  
 For details about the error codes, see [Link Enhancement Error Codes](../errorcode-link-enhance.md).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ConnectResult-reason: int--><!--Device-ConnectResult-reason: int-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -62,11 +62,10 @@ Connection result. The value **true** indicates that the connection is successfu
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ConnectResult-success: boolean--><!--Device-ConnectResult-success: boolean-End-->
-
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
-

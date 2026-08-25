@@ -20,19 +20,19 @@ Queries state data of the current bundle within a specified period.
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-bundleState-function queryCurrentBundleActiveStates(    begin: number,    end: number,    callback: AsyncCallback<Array<BundleActiveState>>  ): void--><!--Device-bundleState-function queryCurrentBundleActiveStates(    begin: number,    end: number,    callback: AsyncCallback<Array<BundleActiveState>>  ): void-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| begin | number | 是 | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
-| end | number | 是 | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleActiveState](arkts-backgroundtasks-bundlestate-bundleactivestate-i.md)&gt;&gt; | 是 | the state data of the current bundle. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| begin | number | 是 |
+| end | number | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleActiveState](arkts-backgroundtasks-bundlestate-bundleactivestate-i.md)&gt;&gt; | 是 |
 
 **示例**
 
@@ -79,26 +79,25 @@ Queries state data of the current bundle within a specified period.
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-bundleState-function queryCurrentBundleActiveStates(begin: number, end: number): Promise<Array<BundleActiveState>>--><!--Device-bundleState-function queryCurrentBundleActiveStates(begin: number, end: number): Promise<Array<BundleActiveState>>-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| begin | number | 是 | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
-| end | number | 是 | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| begin | number | 是 |
+| end | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[BundleActiveState](arkts-backgroundtasks-bundlestate-bundleactivestate-i.md)&gt;&gt; | the state data of the current bundle. |
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;[BundleActiveState](arkts-backgroundtasks-bundlestate-bundleactivestate-i.md)&gt;&gt; |
 
 **示例**
 
 参见 [queryCurrentBundleActiveStates](#querycurrentbundleactivestates)
-

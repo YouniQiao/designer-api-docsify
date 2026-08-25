@@ -2,9 +2,9 @@
 
 Describes audio renderer configurations.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-audio-interface AudioRendererOptions--><!--Device-audio-interface AudioRendererOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -24,9 +24,9 @@ Whether the audio stream can be recorded by other applications. The default valu
 
 **Type:** [AudioPrivacyType](arkts-audio-audio-audioprivacytype-e.md)
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-AudioRendererOptions-privacyType?: AudioPrivacyType--><!--Device-AudioRendererOptions-privacyType?: AudioPrivacyType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 
@@ -40,9 +40,9 @@ Describes audio renderer information.
 
 **Type:** [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-AudioRendererOptions-rendererInfo: AudioRendererInfo--><!--Device-AudioRendererOptions-rendererInfo: AudioRendererInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -56,9 +56,8 @@ Describes audio stream information.
 
 **Type:** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-AudioRendererOptions-streamInfo: AudioStreamInfo--><!--Device-AudioRendererOptions-streamInfo: AudioStreamInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
-

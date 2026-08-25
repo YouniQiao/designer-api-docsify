@@ -4,7 +4,7 @@ AgentCard describes the basic information and capabilities provided by an Agent.
 
 **Since:** 24
 
-<!--Device-unnamed-export interface AgentCard--><!--Device-unnamed-export interface AgentCard-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -20,11 +20,11 @@ A unique identifier for the agent card.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-AgentCard-agentId: string--><!--Device-AgentCard-agentId: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -40,11 +40,11 @@ Application-related information for the agent.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-AgentCard-appInfo: AgentAppInfo--><!--Device-AgentCard-appInfo: AgentAppInfo-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -60,11 +60,11 @@ Capability set supported by the agent.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-AgentCard-capabilities?: AgentCapabilities--><!--Device-AgentCard-capabilities?: AgentCapabilities-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -80,11 +80,11 @@ The category of this agent.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-AgentCard-category: string--><!--Device-AgentCard-category: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -100,11 +100,11 @@ The set of interaction modes that the agent supports across all skills. This can
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-AgentCard-defaultInputModes: Array<string>--><!--Device-AgentCard-defaultInputModes: Array<string>-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -120,11 +120,11 @@ The media types supported as outputs from this agent.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-AgentCard-defaultOutputModes: Array<string>--><!--Device-AgentCard-defaultOutputModes: Array<string>-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -140,11 +140,11 @@ The description of the Agent's function.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-AgentCard-description: string--><!--Device-AgentCard-description: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -160,11 +160,11 @@ Url for the Agent's documentation.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-AgentCard-documentationUrl?: string--><!--Device-AgentCard-documentationUrl?: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -180,11 +180,11 @@ Extension configuration items for the agent.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-AgentCard-extension?: string--><!--Device-AgentCard-extension?: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -200,11 +200,11 @@ A url to an icon for the agent.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-AgentCard-iconUrl: string--><!--Device-AgentCard-iconUrl: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -220,11 +220,11 @@ The name of the Agent.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-AgentCard-name: string--><!--Device-AgentCard-name: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -240,11 +240,11 @@ Service provider information for the Agent.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-AgentCard-provider?: AgentProvider--><!--Device-AgentCard-provider?: AgentProvider-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -260,11 +260,11 @@ Skills represent the abilities of an agent.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-AgentCard-skills: Array<AgentSkill>--><!--Device-AgentCard-skills: Array<AgentSkill>-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -282,11 +282,11 @@ The type of the AgentCard. When `type` is `agentConstant.AgentCardType.LOW_CODE`
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-AgentCard-type?: agentConstant.AgentCardType--><!--Device-AgentCard-type?: agentConstant.AgentCardType-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -302,11 +302,10 @@ Version of the Agent (format defined by provider, e.g., "1.0.0").
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
-<!--Device-AgentCard-version: string--><!--Device-AgentCard-version: string-End-->
-
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-

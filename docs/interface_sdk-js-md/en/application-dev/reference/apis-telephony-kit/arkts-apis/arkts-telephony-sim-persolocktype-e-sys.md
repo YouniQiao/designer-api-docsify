@@ -2,9 +2,9 @@
 
 Indicates the personalized lock types.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sim-export enum PersoLockType--><!--Device-sim-export enum PersoLockType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -18,9 +18,9 @@ PN_PIN_LOCK = 0
 
 Indicates network personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-PersoLockType-PN_PIN_LOCK = 0--><!--Device-PersoLockType-PN_PIN_LOCK = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -34,9 +34,9 @@ PN_PUK_LOCK = 1
 
 Indicates network personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-PersoLockType-PN_PUK_LOCK = 1--><!--Device-PersoLockType-PN_PUK_LOCK = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -50,9 +50,9 @@ PU_PIN_LOCK = 2
 
 Indicates network subset personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-PersoLockType-PU_PIN_LOCK = 2--><!--Device-PersoLockType-PU_PIN_LOCK = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -66,9 +66,9 @@ PU_PUK_LOCK = 3
 
 Indicates network subset personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-PersoLockType-PU_PUK_LOCK = 3--><!--Device-PersoLockType-PU_PUK_LOCK = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -82,9 +82,9 @@ PP_PIN_LOCK = 4
 
 Indicates service provider personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-PersoLockType-PP_PIN_LOCK = 4--><!--Device-PersoLockType-PP_PIN_LOCK = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -98,9 +98,9 @@ PP_PUK_LOCK = 5
 
 Indicates service provider personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-PersoLockType-PP_PUK_LOCK = 5--><!--Device-PersoLockType-PP_PUK_LOCK = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -114,9 +114,9 @@ PC_PIN_LOCK = 6
 
 Indicates corporate personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-PersoLockType-PC_PIN_LOCK = 6--><!--Device-PersoLockType-PC_PIN_LOCK = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -130,9 +130,9 @@ PC_PUK_LOCK = 7
 
 Indicates corporate personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-PersoLockType-PC_PUK_LOCK = 7--><!--Device-PersoLockType-PC_PUK_LOCK = 7-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -146,9 +146,9 @@ SIM_PIN_LOCK = 8
 
 Indicates SIM/USIM personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-PersoLockType-SIM_PIN_LOCK = 8--><!--Device-PersoLockType-SIM_PIN_LOCK = 8-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -162,11 +162,10 @@ SIM_PUK_LOCK = 9
 
 Indicates SIM/USIM personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-PersoLockType-SIM_PUK_LOCK = 9--><!--Device-PersoLockType-SIM_PUK_LOCK = 9-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
-

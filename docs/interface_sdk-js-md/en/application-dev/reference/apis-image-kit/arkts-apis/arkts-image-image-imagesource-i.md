@@ -2,9 +2,9 @@
 
 The **ImageSource** class provides APIs to obtain image information.Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md) to create an ImageSource instance.All APIs in ImageSource cannot be called concurrently.Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-image-interface ImageSource--><!--Device-image-interface ImageSource-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -24,24 +24,24 @@ Obtains raw data from an image.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-ImageSource-createImageRawData(): Promise<ImageRawData>--><!--Device-ImageSource-createImageRawData(): Promise<ImageRawData>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[ImageRawData](arkts-image-image-imagerawdata-i.md)&gt; | A Promise instance used to return image raw data. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[ImageRawData](arkts-image-image-imagerawdata-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| Error Code ID |
+| --- |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
 
 ## createPicture
 
@@ -53,29 +53,29 @@ Creates a Picture object based on decoding options. This API uses a promise to r
 
 **Since:** 13
 
-<!--Device-ImageSource-createPicture(options?: DecodingOptionsForPicture): Promise<Picture>--><!--Device-ImageSource-createPicture(options?: DecodingOptionsForPicture): Promise<Picture>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [DecodingOptionsForPicture](arkts-image-image-decodingoptionsforpicture-i.md) | No | Decoding options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [DecodingOptionsForPicture](arkts-image-image-decodingoptionsforpicture-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; | Promise used to return the Picture object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decode failed. |
-| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options. For example, unsupported desiredPixelFormat causes a failure in converting an image into the desired pixel format.<br>**Applicable version:** 24 and later |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) |
+| [7700203](../errorcode-image.md#7700203-unsupported-options) |
 
 **Examples**
 
@@ -121,27 +121,27 @@ Creates a Picture object based on image decoding parameters. This method uses a 
 
 **Since:** 23
 
-<!--Device-ImageSource-createPicture(options?: DecodingOptionsForPicture): Promise<Picture | undefined>--><!--Device-ImageSource-createPicture(options?: DecodingOptionsForPicture): Promise<Picture | undefined>-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [DecodingOptionsForPicture](arkts-image-image-decodingoptionsforpicture-i.md) | No | Image decoding parameters. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [DecodingOptionsForPicture](arkts-image-image-decodingoptionsforpicture-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined&gt; | A Promise instance used to return the Picture object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
+| Error Code ID |
+| --- |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) |
 
 **Examples**
 
@@ -157,31 +157,31 @@ Creates a **Picture** object using a specified image (only GIF and HEIF&lt;sup&g
 
 **Since:** 20
 
-<!--Device-ImageSource-createPictureAtIndex(index: int): Promise<Picture>--><!--Device-ImageSource-createPictureAtIndex(index: int): Promise<Picture>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | Index of the image. The value range is [0, Number of frames – 1]. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; | Promise used to return the Picture object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options. For example, index is invalid. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
+| Error Code ID |
+| --- |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700103](../errorcode-image.md#7700103-image-oversized) |
+| [7700203](../errorcode-image.md#7700203-unsupported-options) |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) |
 
 **Examples**
 
@@ -209,31 +209,31 @@ Decodes an image at the specified index into a Picture object.
 
 **Since:** 23
 
-<!--Device-ImageSource-createPictureAtIndex(index : int): Promise<Picture | undefined>--><!--Device-ImageSource-createPictureAtIndex(index : int): Promise<Picture | undefined>-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | Image index. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined&gt; | Promise that returns the Picture object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options. For example, index is invalid. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
+| Error Code ID |
+| --- |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700103](../errorcode-image.md#7700103-image-oversized) |
+| [7700203](../errorcode-image.md#7700203-unsupported-options) |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) |
 
 **Examples**
 
@@ -256,25 +256,25 @@ Creates a PixelMap object based on decoding options. This API uses a promise to 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-ImageSource-createPixelMap(options?: DecodingOptions): Promise<PixelMap>--><!--Device-ImageSource-createPixelMap(options?: DecodingOptions): Promise<PixelMap>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No | Decoding options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;PixelMap & gt; |
 
 **Examples**
 
@@ -370,21 +370,21 @@ Creates a PixelMap object based on image decoding parameters. This method uses a
 
 **Since:** 23
 
-<!--Device-ImageSource-createPixelMap(options?: DecodingOptions): Promise<PixelMap | undefined>--><!--Device-ImageSource-createPixelMap(options?: DecodingOptions): Promise<PixelMap | undefined>-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No | Image decoding parameters. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;PixelMap \| undefined&gt; | A Promise instance used to return the PixelMap object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;PixelMap \ | undefined & gt; |
 
 **Examples**
 
@@ -407,19 +407,19 @@ Creates a PixelMap object based on the default parameters. This API uses an asyn
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-ImageSource-createPixelMap(callback: AsyncCallback<PixelMap>): void--><!--Device-ImageSource-createPixelMap(callback: AsyncCallback<PixelMap>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | Yes |
 
 **Examples**
 
@@ -435,15 +435,15 @@ Creates a PixelMap object. This method uses a callback to return the object.
 
 **Since:** 23
 
-<!--Device-ImageSource-createPixelMap(callback: AsyncCallback<PixelMap | undefined>): void--><!--Device-ImageSource-createPixelMap(callback: AsyncCallback<PixelMap | undefined>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap \| undefined&gt; | Yes | Callback used to return the PixelMap object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap \| undefined & gt; | Yes |
 
 **Examples**
 
@@ -466,20 +466,20 @@ Creates a PixelMap object based on decoding options. This API uses a promise to 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-ImageSource-createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): void--><!--Device-ImageSource-createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | Yes | Decoding options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | Yes |
 
 **Examples**
 
@@ -495,16 +495,16 @@ Creates a PixelMap object based on image decoding parameters. This method uses a
 
 **Since:** 23
 
-<!--Device-ImageSource-createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap | undefined>): void--><!--Device-ImageSource-createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap | undefined>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | Yes | Image decoding parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap \| undefined&gt; | Yes | Callback used to return the PixelMap object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap \| undefined & gt; | Yes |
 
 **Examples**
 
@@ -529,41 +529,41 @@ Creates an array of PixelMap objects based on decoding options. This API uses a 
 > for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this
 > function.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ImageSource-createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>--><!--Device-ImageSource-createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No | Decoding options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;PixelMap&gt;&gt; | Promise used to return an array of PixelMap objects. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Array & lt;PixelMap & gt; & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) | The shared memory data is abnormal. |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980109](../errorcode-image.md#62980109-cropping-error) | Failed to crop the image. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
-| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
-| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
+| Error Code ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-operation-failed) |
+| [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) |
+| [62980109](../errorcode-image.md#62980109-cropping-error) |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980116](../errorcode-image.md#62980116-decoding-failure) |
+| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) |
+| [62980137](../errorcode-image.md#62980137-invalid-image-operation) |
+| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) |
+| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) |
 
 **Examples**
 
@@ -642,35 +642,35 @@ Creates an array of PixelMap objects based on the default parameters. This API u
 > for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this
 > function.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ImageSource-createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void--><!--Device-ImageSource-createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PixelMap&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the array of PixelMap objects obtained; otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PixelMap&gt;&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) | The shared memory data is abnormal. |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980109](../errorcode-image.md#62980109-cropping-error) | Failed to crop the image. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
-| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
-| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
+| Error Code ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-operation-failed) |
+| [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) |
+| [62980109](../errorcode-image.md#62980109-cropping-error) |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980116](../errorcode-image.md#62980116-decoding-failure) |
+| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) |
+| [62980137](../errorcode-image.md#62980137-invalid-image-operation) |
+| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) |
+| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) |
 
 **Examples**
 
@@ -695,36 +695,36 @@ Creates an array of PixelMap objects based on decoding options. This API uses an
 > for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this
 > function.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ImageSource-createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<PixelMap>>): void--><!--Device-ImageSource-createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<PixelMap>>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | Yes | Decoding options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PixelMap&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the array of PixelMap objects obtained; otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PixelMap&gt;&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) | The shared memory data is abnormal. |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980109](../errorcode-image.md#62980109-cropping-error) | Failed to crop the image. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
-| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
-| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
+| Error Code ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-operation-failed) |
+| [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) |
+| [62980109](../errorcode-image.md#62980109-cropping-error) |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980116](../errorcode-image.md#62980116-decoding-failure) |
+| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) |
+| [62980137](../errorcode-image.md#62980137-invalid-image-operation) |
+| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) |
+| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) |
 
 **Examples**
 
@@ -746,21 +746,21 @@ Creates a PixelMap object based on decoding options. This API returns the result
 
 **Since:** 12
 
-<!--Device-ImageSource-createPixelMapSync(options?: DecodingOptions): PixelMap--><!--Device-ImageSource-createPixelMapSync(options?: DecodingOptions): PixelMap-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No | Decoding options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| PixelMap | PixelMap object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PixelMap](arkts-image-image-pixelmap-i.md) |
 
 **Examples**
 
@@ -816,21 +816,21 @@ Create a PixelMap object based on image decoding parameters synchronously.
 
 **Since:** 23
 
-<!--Device-ImageSource-createPixelMapSync(options?: DecodingOptions): PixelMap | undefined--><!--Device-ImageSource-createPixelMapSync(options?: DecodingOptions): PixelMap | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No | Image decoding parameters. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| PixelMap \| undefined | Return the PixelMap. If decoding fails, return undefined. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| PixelMap \| undefined |
 
 **Examples**
 
@@ -853,35 +853,35 @@ Creates a PixelMap object based on decoding options and memory type. This API us
 
 **Since:** 15
 
-<!--Device-ImageSource-createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType): Promise<PixelMap>--><!--Device-ImageSource-createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType): Promise<PixelMap>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No | Decoding options. |
-| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | No | Type of the memory. The default value is **AllocatorType.AUTO**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No |
+| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;PixelMap & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
-| [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
-| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options, e.g, cannot convert image into desired pixel format. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
-| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700103](../errorcode-image.md#7700103-image-oversized) |
+| [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) |
+| [7700203](../errorcode-image.md#7700203-unsupported-options) |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) |
+| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) |
 
 **Examples**
 
@@ -934,34 +934,34 @@ Creates a PixelMap based on decoding parameters, the memory type used by the Pix
 
 **Since:** 23
 
-<!--Device-ImageSource-createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType)      : Promise<PixelMap | undefined>--><!--Device-ImageSource-createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType)      : Promise<PixelMap | undefined>-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No | Image decoding parameters. |
-| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | No | Indicate which memory type will be used by the returned PixelMap. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No |
+| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;PixelMap \| undefined&gt; | A Promise instance used to return the PixelMap object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;PixelMap \ | undefined & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
-| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options, For example, unsupported desiredPixelFormat causes a failure in converting an imagge into the desired pixel format. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
-| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
+| Error Code ID |
+| --- |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700103](../errorcode-image.md#7700103-image-oversized) |
+| [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) |
+| [7700203](../errorcode-image.md#7700203-unsupported-options) |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) |
+| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) |
 
 **Examples**
 
@@ -983,35 +983,35 @@ Creates a PixelMap object based on decoding options and memory type. This API re
 
 **Since:** 15
 
-<!--Device-ImageSource-createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap--><!--Device-ImageSource-createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No | Decoding options. |
-| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | No | Type of the memory. The default value is **AllocatorType.AUTO**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No |
+| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| PixelMap | PixelMap object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PixelMap](arkts-image-image-pixelmap-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
-| [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
-| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options, e.g, cannot convert image into desired pixel format. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
-| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700103](../errorcode-image.md#7700103-image-oversized) |
+| [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) |
+| [7700203](../errorcode-image.md#7700203-unsupported-options) |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) |
+| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) |
 
 **Examples**
 
@@ -1066,34 +1066,34 @@ Creates a PixelMap based on decoding parameters synchronously, the memory type u
 
 **Since:** 23
 
-<!--Device-ImageSource-createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap | undefined--><!--Device-ImageSource-createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No | Image decoding parameters. |
-| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | No | Indicate which memory type will be used by the returned PixelMap. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | No |
+| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| PixelMap \| undefined | Return the PixelMap. If decoding fails, return undefined. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| PixelMap \| undefined |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
-| [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options, For example, unsupported desiredPixelFormat cause a failure in converting an image into the desired pixel format. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
-| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
+| Error Code ID |
+| --- |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700103](../errorcode-image.md#7700103-image-oversized) |
+| [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) |
+| [7700203](../errorcode-image.md#7700203-unsupported-options) |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) |
+| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) |
 
 **Examples**
 
@@ -1109,34 +1109,34 @@ Creates a thumbnail image based on image decoding parameters. This method uses a
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ImageSource-createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undefined>--><!--Device-ImageSource-createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undefined>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | No | Image decoding parameters for creating the thumbnail. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;PixelMap \| undefined&gt; | A Promise instance used to return the PixelMap object representing the thumbnail. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;PixelMap \ | undefined & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter, e.g, invalid generate size. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decode failed. |
-| [7700303](../errorcode-image.md#7700303-image-does-not-contain-thumbnail-data) | Image does not carry thumbnail data. |
-| [7700305](../errorcode-image.md#7700305-thumbnail-generation-failed) | Thumbnail generation failed. |
+| Error Code ID |
+| --- |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700103](../errorcode-image.md#7700103-image-oversized) |
+| [7700204](../errorcode-image.md#7700204-invalid-parameter) |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) |
+| [7700303](../errorcode-image.md#7700303-image-does-not-contain-thumbnail-data) |
+| [7700305](../errorcode-image.md#7700305-thumbnail-generation-failed) |
 
 ## createThumbnailSync
 
@@ -1148,67 +1148,73 @@ Synchronously creates a thumbnail image based on image decoding parameters. This
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ImageSource-createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined--><!--Device-ImageSource-createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | No | Image decoding parameters for creating the thumbnail. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| PixelMap \| undefined | The PixelMap object representing the generated thumbnail. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| PixelMap \| undefined |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter, e.g, invalid generate size. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decode failed. |
-| [7700303](../errorcode-image.md#7700303-image-does-not-contain-thumbnail-data) | Image does not carry thumbnail data. |
-| [7700305](../errorcode-image.md#7700305-thumbnail-generation-failed) | Thumbnail generation failed. |
+| Error Code ID |
+| --- |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700103](../errorcode-image.md#7700103-image-oversized) |
+| [7700204](../errorcode-image.md#7700204-invalid-parameter) |
+| [7700301](../errorcode-image.md#7700301-decoding-failure) |
+| [7700303](../errorcode-image.md#7700303-image-does-not-contain-thumbnail-data) |
+| [7700305](../errorcode-image.md#7700305-thumbnail-generation-failed) |
 
 ## getDelayTimeList
 
+ArkTS-Dyn:
+```TypeScript
+getDelayTimeList(): Promise<Array<number>>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getDelayTimeList(): Promise<Array<int>>
 ```
 
 Obtains an array of delay times. This API uses a promise to return the result. This API applies only to images in GIF or WebP format.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ImageSource-getDelayTimeList(): Promise<Array<int>>--><!--Device-ImageSource-getDelayTimeList(): Promise<Array<int>>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;int&gt;&gt; | Promise used to return an array of delay times. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Promise & lt;Array & lt;number & gt; & gt;<br>ArkTS-Sta：Promise & lt;Array & lt;int & gt; & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
-| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
+| Error Code ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-operation-failed) |
+| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980116](../errorcode-image.md#62980116-decoding-failure) |
+| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) |
+| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) |
+| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) |
 
 **Examples**
 
@@ -1240,36 +1246,42 @@ async function GetDelayTimeList(imageSourceObj : image.ImageSource) {
 
 ## getDelayTimeList
 
+ArkTS-Dyn:
+```TypeScript
+getDelayTimeList(callback: AsyncCallback<Array<number>>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 getDelayTimeList(callback: AsyncCallback<Array<int>>): void
 ```
 
 Obtains an array of delay times. This API uses an asynchronous callback to return the result. This API applies only to images in GIF or WebP format.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ImageSource-getDelayTimeList(callback: AsyncCallback<Array<int>>): void--><!--Device-ImageSource-getDelayTimeList(callback: AsyncCallback<Array<int>>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the array of delay times obtained; otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;int&gt;&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
-| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
+| Error Code ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-operation-failed) |
+| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980116](../errorcode-image.md#62980116-decoding-failure) |
+| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) |
+| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) |
+| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) |
 
 **Examples**
 
@@ -1277,32 +1289,38 @@ See [getDelayTimeList](#getdelaytimelist)
 
 ## getDisposalTypeList
 
+ArkTS-Dyn:
+```TypeScript
+getDisposalTypeList(): Promise<Array<number>>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getDisposalTypeList(): Promise<Array<int>>
 ```
 
 Obtains the list of disposal types. This API uses a promise to return the result. It is used only for GIF images.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-ImageSource-getDisposalTypeList(): Promise<Array<int>>--><!--Device-ImageSource-getDisposalTypeList(): Promise<Array<int>>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;int&gt;&gt; | Promise used to return an array of disposal types. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Promise & lt;Array & lt;number & gt; & gt;<br>ArkTS-Sta：Promise & lt;Array & lt;int & gt; & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
-| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
+| Error Code ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-operation-failed) |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980137](../errorcode-image.md#62980137-invalid-image-operation) |
+| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) |
 
 **Examples**
 
@@ -1320,37 +1338,43 @@ async function GetDisposalTypeList(imageSourceObj : image.ImageSource) {
 
 ## getFrameCount
 
+ArkTS-Dyn:
+```TypeScript
+getFrameCount(): Promise<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getFrameCount(): Promise<int>
 ```
 
 Obtains the number of frames. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ImageSource-getFrameCount(): Promise<int>--><!--Device-ImageSource-getFrameCount(): Promise<int>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;int&gt; | Promise used to return the number of frames. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980112](../errorcode-image.md#62980112-image-format-mismatch) | The image format does not match. |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
+| Error Code ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-operation-failed) |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
+| [62980112](../errorcode-image.md#62980112-image-format-mismatch) |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980116](../errorcode-image.md#62980116-decoding-failure) |
+| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) |
+| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) |
+| [62980137](../errorcode-image.md#62980137-invalid-image-operation) |
 
 **Examples**
 
@@ -1382,37 +1406,43 @@ async function GetFrameCount(imageSourceObj : image.ImageSource) {
 
 ## getFrameCount
 
+ArkTS-Dyn:
+```TypeScript
+getFrameCount(callback: AsyncCallback<number>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 getFrameCount(callback: AsyncCallback<int>): void
 ```
 
 Obtains the number of frames. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ImageSource-getFrameCount(callback: AsyncCallback<int>): void--><!--Device-ImageSource-getFrameCount(callback: AsyncCallback<int>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of frames obtained; otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980112](../errorcode-image.md#62980112-image-format-mismatch) | The image format does not match. |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
+| Error Code ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-operation-failed) |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
+| [62980112](../errorcode-image.md#62980112-image-format-mismatch) |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980116](../errorcode-image.md#62980116-decoding-failure) |
+| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) |
+| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) |
+| [62980137](../errorcode-image.md#62980137-invalid-image-operation) |
 
 **Examples**
 
@@ -1428,20 +1458,20 @@ Obtains the image information with the specified index. This API uses an asynchr
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-ImageSource-getImageInfo(index: int, callback: AsyncCallback<ImageInfo>): void--><!--Device-ImageSource-getImageInfo(index: int, callback: AsyncCallback<ImageInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | Index of the image source. The default value is **0**, indicating the first image. If this parameter is set to N, the (N+1)th image is used. For single-frame images, the value is always **0**. For multi-frame images such as animations, the value ranges from 0 to (Number of frames – 1). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | number | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Yes |
 
 **Examples**
 
@@ -1529,16 +1559,16 @@ Obtains information about an image with the specified sequence number and uses a
 
 **Since:** 23
 
-<!--Device-ImageSource-getImageInfo(index: int, callback: AsyncCallback<ImageInfo | undefined>): void--><!--Device-ImageSource-getImageInfo(index: int, callback: AsyncCallback<ImageInfo | undefined>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | Sequence number of an image. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined&gt; | Yes | Callback used to return the image information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined & gt; | Yes |
 
 **Examples**
 
@@ -1554,19 +1584,19 @@ Obtains the image information. This API uses an asynchronous callback to return 
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-ImageSource-getImageInfo(callback: AsyncCallback<ImageInfo>): void--><!--Device-ImageSource-getImageInfo(callback: AsyncCallback<ImageInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Yes |
 
 **Examples**
 
@@ -1582,15 +1612,15 @@ Obtains information about this image and uses a callback to return the result.
 
 **Since:** 23
 
-<!--Device-ImageSource-getImageInfo(callback: AsyncCallback<ImageInfo | undefined>): void--><!--Device-ImageSource-getImageInfo(callback: AsyncCallback<ImageInfo | undefined>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined&gt; | Yes | Callback used to return the image information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined & gt; | Yes |
 
 **Examples**
 
@@ -1606,25 +1636,25 @@ Obtains the image information. This API uses a promise to return the result.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-ImageSource-getImageInfo(index?: int): Promise<ImageInfo>--><!--Device-ImageSource-getImageInfo(index?: int): Promise<ImageInfo>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | No | Index of the image source. The default value is **0**, indicating the first image. If this parameter is set to N, the (N+1)th image is used. For single-frame images, the value is always **0**. For multi-frame images such as animations, the value ranges from 0 to (Number of frames – 1). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Promise used to return the image information. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; |
 
 **Examples**
 
@@ -1640,21 +1670,21 @@ Get image information from image source.
 
 **Since:** 23
 
-<!--Device-ImageSource-getImageInfo(index?: int): Promise<ImageInfo | undefined>--><!--Device-ImageSource-getImageInfo(index?: int): Promise<ImageInfo | undefined>-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | No | Sequence number of an image. If this parameter is not specified, the default value 0 is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined&gt; | A Promise instance used to return the image information. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined & gt; |
 
 **Examples**
 
@@ -1676,21 +1706,21 @@ Obtains the image information with the specified index. This API returns the res
 
 **Since:** 12
 
-<!--Device-ImageSource-getImageInfoSync(index?: int): ImageInfo--><!--Device-ImageSource-getImageInfoSync(index?: int): ImageInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | No | Index of the image source. The default value is **0**, indicating the first image. If this parameter is set to N, the (N+1)th image is used. For single-frame images, the value is always **0**. For multi-frame images such as animations, the value ranges from 0 to (Number of frames – 1). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ImageInfo](arkts-image-image-imageinfo-i.md) | Image information. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageInfo](arkts-image-image-imageinfo-i.md) |
 
 **Examples**
 
@@ -1730,21 +1760,21 @@ Get image information from image source synchronously.
 
 **Since:** 23
 
-<!--Device-ImageSource-getImageInfoSync(index?: int): ImageInfo | undefined--><!--Device-ImageSource-getImageInfoSync(index?: int): ImageInfo | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | No | Index of sequence image. If this parameter is specified, default value is 0 <br>The value range is all integers. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined | The image information. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined |
 
 **Examples**
 
@@ -1760,31 +1790,31 @@ Obtains the values of properties with the given names in this image. This API us
 
 **Since:** 12
 
-<!--Device-ImageSource-getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|null>>--><!--Device-ImageSource-getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|null>>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | Array&lt;PropertyKey&gt; | Yes | Array of properties names. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | Array & lt;PropertyKey & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Record&lt;PropertyKey, string \| null&gt;&gt; | Promise used to return the property values. If the operation fails, **null** is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Record & lt;PropertyKey, string \ | null & gt; & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed; |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [62980096](../errorcode-image.md#62980096-operation-failed) |
+| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
+| [62980116](../errorcode-image.md#62980116-decoding-failure) |
 
 **Examples**
 
@@ -1811,30 +1841,30 @@ Obtains the value of properties in an image. This method uses a promise to retur
 
 **Since:** 23
 
-<!--Device-ImageSource-getImageProperties(key: Array<PropertyKey>): Promise<Record<string, string|null>>--><!--Device-ImageSource-getImageProperties(key: Array<PropertyKey>): Promise<Record<string, string|null>>-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | Array&lt;PropertyKey&gt; | Yes | Name of the properties whose value is to be obtained. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | Array & lt;PropertyKey & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Array of Records instance used to return the property values. If the operation fails, the null is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Record & lt;string, string \ | null & gt; & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
+| Error Code ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-operation-failed) |
+| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
+| [62980116](../errorcode-image.md#62980116-decoding-failure) |
 
 **Examples**
 
@@ -1848,41 +1878,41 @@ getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<stri
 
 Obtains the value of a property with the specified index in this image. This API uses a promise to return the result.This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/ sup&gt; format and contain Exif information. (The supported formats may vary depending on the hardware.)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ImageSource-getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<string>--><!--Device-ImageSource-getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | PropertyKey | Yes | Name of the property. |
-| options | [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md) | No | Image properties, including the image index and default property value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | [PropertyKey](arkts-image-image-propertykey-e.md) | Yes |
+| options | [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Promise used to return the property value. If the operation fails, the default value is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types;3.Parameter verification failed; |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
-| [62980112](../errorcode-image.md#62980112-image-format-mismatch) | The image format does not match. |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) | Failed to create the image plugin. |
-| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
-| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
-| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [62980096](../errorcode-image.md#62980096-operation-failed) |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) |
+| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) |
+| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
+| [62980112](../errorcode-image.md#62980112-image-format-mismatch) |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) |
+| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) |
+| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) |
+| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) |
 
 **Examples**
 
@@ -1952,26 +1982,26 @@ Obtains the value of a property with the specified index in this image. This API
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 11
 
 **Substitutes:** [getImageProperty](#getimageproperty)(key: PropertyKey, options?: ImagePropertyOptions)
-
-<!--Device-ImageSource-getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>--><!--Device-ImageSource-getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Name of the property. |
-| options | [GetImagePropertyOptions](arkts-image-image-getimagepropertyoptions-i.md) | No | Image properties, including the image index and default property value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| options | [GetImagePropertyOptions](arkts-image-image-getimagepropertyoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Promise used to return the property value. If the operation fails, the default value is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Examples**
 
@@ -1987,20 +2017,20 @@ Obtains the value of a property with the specified index in this image. This API
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 11
 
 **Substitutes:** [getImageProperty](#getimageproperty)(key: PropertyKey, options?: ImagePropertyOptions)
-
-<!--Device-ImageSource-getImageProperty(key: string, callback: AsyncCallback<string>): void--><!--Device-ImageSource-getImageProperty(key: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Name of the property. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the property value obtained; otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
 **Examples**
 
@@ -2016,21 +2046,21 @@ Obtains the value of a property in this image. This API uses an asynchronous cal
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 11
 
 **Substitutes:** [getImageProperty](#getimageproperty)(key: PropertyKey, options?: ImagePropertyOptions)
-
-<!--Device-ImageSource-getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void--><!--Device-ImageSource-getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Name of the property. |
-| options | [GetImagePropertyOptions](arkts-image-image-getimagepropertyoptions-i.md) | Yes | Image properties, including the image index and default property value. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the property value obtained; otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| options | [GetImagePropertyOptions](arkts-image-image-getimagepropertyoptions-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
 **Examples**
 
@@ -2056,29 +2086,29 @@ Obtains the value of a specified Exif property. This API returns the result sync
 
 **Since:** 20
 
-<!--Device-ImageSource-getImagePropertySync(key: PropertyKey): string--><!--Device-ImageSource-getImagePropertySync(key: PropertyKey): string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | PropertyKey | Yes | Name of the property. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | [PropertyKey](arkts-image-image-propertykey-e.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Value of the specified Exif property. If retrieval fails, the default value of the property is returned. For details about the meaning of each data value, see [PropertyKey]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, key is not supported. |
+| Error Code ID |
+| --- |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700202](../errorcode-image.md#7700202-unsupported-metadata) |
 
 **Examples**
 
@@ -2107,29 +2137,29 @@ Obtains the value of a property in the image.
 
 **Since:** 23
 
-<!--Device-ImageSource-getImagePropertySync(key: PropertyKey): string | undefined--><!--Device-ImageSource-getImagePropertySync(key: PropertyKey): string | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | PropertyKey | Yes | Property name. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | [PropertyKey](arkts-image-image-propertykey-e.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string \| undefined | Value of the property. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string \| undefined |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, key is not supported. |
+| Error Code ID |
+| --- |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700202](../errorcode-image.md#7700202-unsupported-metadata) |
 
 **Examples**
 
@@ -2150,30 +2180,30 @@ Modifies the values of properties in this image. This API uses a promise to retu
 
 **Since:** 12
 
-<!--Device-ImageSource-modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>--><!--Device-ImageSource-modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| records | Record&lt;PropertyKey, string \| null&gt; | Yes | Array of property names and property values. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| records | Record & lt;PropertyKey, string \ | null & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed; |
-| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
-| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
-| [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) |
+| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) |
+| [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) |
 
 **Examples**
 
@@ -2208,29 +2238,29 @@ Modify the value of properties in an image with the specified keys.
 
 **Since:** 23
 
-<!--Device-ImageSource-modifyImageProperties(records: Record<string, string|null>): Promise<void>--><!--Device-ImageSource-modifyImageProperties(records: Record<string, string|null>): Promise<void>-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | Yes | Array of the property Records whose values are to be modified. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| records | Record & lt;string, string \ | null & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
-| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
-| [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
+| Error Code ID |
+| --- |
+| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) |
+| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) |
+| [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) |
 
 **Examples**
 
@@ -2256,31 +2286,31 @@ Modifies image properties in batches. This API uses a promise to return the resu
 > .&gt;
 > - This API applies only to images that are in JPEG, PNG, HEIF, or WEBP format and contain the Exif information.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-ImageSource-modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<void>--><!--Device-ImageSource-modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<void>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | Yes | Key-value pairs of image property names and property values. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| records | Record & lt;string, string \ | null & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
-| [7700304](../errorcode-image.md#7700304-failed-to-write-image-information-to-the-file) | Failed to write image properties to the file. |
+| Error Code ID |
+| --- |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700202](../errorcode-image.md#7700202-unsupported-metadata) |
+| [7700304](../errorcode-image.md#7700304-failed-to-write-image-information-to-the-file) |
 
 **Examples**
 
@@ -2319,34 +2349,34 @@ Modifies the value of a property in this image. This API uses a promise to retur
 > property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path
 > , but not an ImageSource instance created based on buffers.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ImageSource-modifyImageProperty(key: PropertyKey, value: string): Promise<void>--><!--Device-ImageSource-modifyImageProperty(key: PropertyKey, value: string): Promise<void>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | PropertyKey | Yes | Name of the property. |
-| value | string | Yes | New value of the property. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | [PropertyKey](arkts-image-image-propertykey-e.md) | Yes |
+| value | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; |
-| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
-| [62980133](../errorcode-image.md#62980133-image-property-value-out-of-range) | The EXIF data is out of range. |
-| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
-| [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) |
+| [62980133](../errorcode-image.md#62980133-image-property-value-out-of-range) |
+| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) |
+| [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) |
 
 **Examples**
 
@@ -2411,26 +2441,26 @@ Modifies the value of a property in this image. This API uses a promise to retur
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 11
 
 **Substitutes:** [modifyImageProperty](#modifyimageproperty)(key: PropertyKey, value: string)
-
-<!--Device-ImageSource-modifyImageProperty(key: string, value: string): Promise<void>--><!--Device-ImageSource-modifyImageProperty(key: string, value: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Name of the property. |
-| value | string | Yes | New value of the property. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| value | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Examples**
 
@@ -2451,21 +2481,21 @@ Modifies the value of a property in this image. This API uses an asynchronous ca
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 11
 
 **Substitutes:** [modifyImageProperty](#modifyimageproperty)(key: PropertyKey, value: string)
-
-<!--Device-ImageSource-modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-ImageSource-modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Name of the property. |
-| value | string | Yes | New value of the property. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| value | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Examples**
 
@@ -2473,6 +2503,12 @@ See [modifyImageProperty](#modifyimageproperty)
 
 ## readImageMetadata
 
+ArkTS-Dyn:
+```TypeScript
+readImageMetadata(propertyKeys?: string[], index?: number): Promise<ImageMetadata>
+```
+
+ArkTS-Sta:
 ```TypeScript
 readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>
 ```
@@ -2500,32 +2536,32 @@ Reads image metadata. You can use **propertyKeys** to specify the keys of metada
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-ImageSource-readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>--><!--Device-ImageSource-readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| propertyKeys | string[] | No | Array of properties names. If **propertyKeys** is not specified, all supported metadata is returned. |
-| index | int | No | Index of the property to be obtained. The default value is **0**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| propertyKeys | string[] | No |
+| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[ImageMetadata](arkts-image-image-imagemetadata-i.md)&gt; | Promise used to return the **ImageMetadata** object, which contains the metadata object corresponding to the image property name. You can obtain the image property values through this metadata object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[ImageMetadata](arkts-image-image-imagemetadata-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
-| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: 1. The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
+| Error Code ID |
+| --- |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700202](../errorcode-image.md#7700202-unsupported-metadata) |
+| [7700204](../errorcode-image.md#7700204-invalid-parameter) |
 
 **Examples**
 
@@ -2548,6 +2584,12 @@ async function ReadImageMetadata(imageSourceObj : image.ImageSource) {
 
 ## readImageMetadataByType
 
+ArkTS-Dyn:
+```TypeScript
+readImageMetadataByType(metadataTypes?: MetadataType[], index?: number): Promise<ImageMetadata>
+```
+
+ArkTS-Sta:
 ```TypeScript
 readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<ImageMetadata>
 ```
@@ -2561,32 +2603,32 @@ Reads the metadata of an image source. You can use **metadataTypes** to specify 
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-ImageSource-readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<ImageMetadata>--><!--Device-ImageSource-readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<ImageMetadata>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| metadataTypes | [MetadataType](arkts-image-image-metadatatype-e.md)[] | No | Metadata type array. If this parameter is left empty, all supported metadata is obtained. |
-| index | int | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| metadataTypes | [MetadataType](arkts-image-image-metadatatype-e.md)[] | No |
+| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[ImageMetadata](arkts-image-image-imagemetadata-i.md)&gt; | Promise used to return the **ImageMetadata** object, which contains the corresponding metadata object. You can obtain the image property values through this metadata object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[ImageMetadata](arkts-image-image-imagemetadata-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
-| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: 1.The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
+| Error Code ID |
+| --- |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700202](../errorcode-image.md#7700202-unsupported-metadata) |
+| [7700204](../errorcode-image.md#7700204-invalid-parameter) |
 
 **Examples**
 
@@ -2614,19 +2656,19 @@ release(callback: AsyncCallback<void>): void
 
 Releases this ImageSource instance. This API uses an asynchronous callback to return the result.Images occupy a large amount of memory. When you finish using an ImageSource instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-ImageSource-release(callback: AsyncCallback<void>): void--><!--Device-ImageSource-release(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Examples**
 
@@ -2833,19 +2875,19 @@ release(): Promise<void>
 
 Releases this ImageSource instance. This API uses a promise to return the result.Images occupy a large amount of memory. When you finish using an ImageSource instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-ImageSource-release(): Promise<void>--><!--Device-ImageSource-release(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Examples**
 
@@ -2853,32 +2895,38 @@ See [release](#release)
 
 ## updateData
 
+ArkTS-Dyn:
+```TypeScript
+updateData(buf: ArrayBuffer, isFinished: boolean, offset: number, length: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 updateData(buf: ArrayBuffer, isFinished: boolean, offset: int, length: int): Promise<void>
 ```
 
 Updates incremental data. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ImageSource-updateData(buf: ArrayBuffer, isFinished: boolean, offset: int, length: int): Promise<void>--><!--Device-ImageSource-updateData(buf: ArrayBuffer, isFinished: boolean, offset: int, length: int): Promise<void>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Buffer for storing the incremental data. |
-| isFinished | boolean | Yes | Whether data update is complete. The value **true** means that the data update is complete and the last segment of data is stored in the buffer. The value **false** means that the data update is still in progress. |
-| offset | int | Yes | Offset of the data in the buffer, measured from the start of the entire image file, in bytes.<br>**Since:** 11 |
-| length | int | Yes | Length of the buffer, in bytes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | ArrayBuffer | Yes |
+| isFinished | boolean | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| length | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Examples**
 
@@ -2912,6 +2960,18 @@ async function UpdateDatay(imageSourceObj : image.ImageSource) {
 
 ## updateData
 
+ArkTS-Dyn:
+```TypeScript
+updateData(
+      buf: ArrayBuffer,
+      isFinished: boolean,
+      offset: number,
+      length: number,
+      callback: AsyncCallback<void>
+    ): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 updateData(
       buf: ArrayBuffer,
@@ -2924,21 +2984,21 @@ updateData(
 
 Updates incremental data. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ImageSource-updateData(      buf: ArrayBuffer,      isFinished: boolean,      offset: int,      length: int,      callback: AsyncCallback<void>    ): void--><!--Device-ImageSource-updateData(      buf: ArrayBuffer,      isFinished: boolean,      offset: int,      length: int,      callback: AsyncCallback<void>    ): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Buffer for storing the incremental data. |
-| isFinished | boolean | Yes | Whether data update is complete. The value **true** means that the data update is complete and the last segment of data is stored in the buffer. The value **false** means that the data update is still in progress. |
-| offset | int | Yes | Offset of the data in the buffer, measured from the start of the entire image file, in bytes.<br>**Since:** 11 |
-| length | int | Yes | Length of the buffer, in bytes. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | ArrayBuffer | Yes |
+| isFinished | boolean | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| length | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Examples**
 
@@ -2968,31 +3028,31 @@ Modifies image properties in batches. This API uses a promise to return the resu
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-ImageSource-writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>--><!--Device-ImageSource-writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| imageMetadata | [ImageMetadata](arkts-image-image-imagemetadata-i.md) | Yes | Image metadata set. If all property values in **imageMetadata** are empty, all Exif metadata is cleared. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| imageMetadata | [ImageMetadata](arkts-image-image-imagemetadata-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
-| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: The imageSource object is released. |
+| Error Code ID |
+| --- |
+| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700202](../errorcode-image.md#7700202-unsupported-metadata) |
+| [7700204](../errorcode-image.md#7700204-invalid-parameter) |
 
 **Examples**
 
@@ -3023,9 +3083,8 @@ Supported image formats.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ImageSource-readonly supportedFormats: Array<string>--><!--Device-ImageSource-readonly supportedFormats: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
-

@@ -1,10 +1,10 @@
 # AppStateData
 
-The module defines the application state information. Once an application state change listener is registered using [on](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate), the system triggers the onForegroundApplicationChanged callback of ApplicationStateObserver to deliver notifications whenever the state of an application, process, or ability changes.
+The module defines the application state information. Once an application state change listener is registered using [on](arkts-ability-appmanager-on-f.md#onapplicationstate), the system triggers the [onForegroundApplicationChanged](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronforegroundapplicationchanged) callback of ApplicationStateObserver to deliver notifications whenever the state of an application, process, or ability changes.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-unnamed-declare class AppStateData--><!--Device-unnamed-declare class AppStateData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -18,9 +18,9 @@ Bundle name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-AppStateData-bundleName: string--><!--Device-AppStateData-bundleName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -36,9 +36,9 @@ Whether the application is in floating window mode.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-AppStateData-isFloatingWindowMode: boolean--><!--Device-AppStateData-isFloatingWindowMode: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -54,9 +54,9 @@ Whether the application is in split-screen mode.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-AppStateData-isSplitScreenMode: boolean--><!--Device-AppStateData-isSplitScreenMode: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -74,11 +74,11 @@ Application state.
 **4**: The application is running in the background.  
 **5**: The application has exited.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-AppStateData-state: int--><!--Device-AppStateData-state: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -90,11 +90,10 @@ uid: int
 
 UID of the application.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-AppStateData-uid: int--><!--Device-AppStateData-uid: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-

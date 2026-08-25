@@ -4,7 +4,7 @@
 
 **起始版本：** 11
 
-<!--Device-advertising-export interface MultiSlotsAdLoadListener--><!--Device-advertising-export interface MultiSlotsAdLoadListener-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -24,18 +24,18 @@ onAdLoadFailure(errorCode: number, errorMsg: string): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-MultiSlotsAdLoadListener-onAdLoadFailure(errorCode: number, errorMsg: string): void--><!--Device-MultiSlotsAdLoadListener-onAdLoadFailure(errorCode: number, errorMsg: string): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| errorCode | number | 是 | 广告请求失败的错误码。 |
-| errorMsg | string | 是 | 广告请求失败的错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| errorCode | number | 是 |
+| [errorMsg](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-operresult-i.md) | string | 是 |
 
 **示例**
 
@@ -77,17 +77,17 @@ onAdLoadSuccess(adsMap: Map<string, Array<Advertisement>>): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-MultiSlotsAdLoadListener-onAdLoadSuccess(adsMap: Map<string, Array<Advertisement>>): void--><!--Device-MultiSlotsAdLoadListener-onAdLoadSuccess(adsMap: Map<string, Array<Advertisement>>): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| adsMap | Map&lt;string, Array&lt;Advertisement&gt;&gt; | 是 | 广告数据，是以广告位ID为键，存储请求到的广告内容的映射集合。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| adsMap | Map & lt;string, Array & lt;Advertisement & gt; & gt; | 是 |
 
 **示例**
 
@@ -118,4 +118,3 @@ const multiSlotsAdLoadListener: advertising.MultiSlotsAdLoadListener = {
   }
 }
 ```
-

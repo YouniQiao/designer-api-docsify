@@ -8,7 +8,7 @@ Provides the container definition for media description key-value pairs.The medi
 
 **Since:** 23
 
-<!--Device-media-type MediaDescription = Record<string, Object>--><!--Device-media-type MediaDescription = Record<string, Object>-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -45,4 +45,3 @@ media.createAVPlayer((err: BusinessError, player: media.AVPlayer) => {
   }
 });
 ```
-

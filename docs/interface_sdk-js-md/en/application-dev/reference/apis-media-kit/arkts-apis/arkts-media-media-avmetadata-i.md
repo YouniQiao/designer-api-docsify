@@ -2,9 +2,9 @@
 
 Defines the audio and video metadata. Parameters that are not declared as read-only in [AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md) can be used as input parameters for recording of [AVRecorder](arkts-media-media-avrecorder-i.md).
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-media-interface AVMetadata--><!--Device-media-interface AVMetadata-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -24,9 +24,9 @@ Title of the album. This parameter is not supported in AVRecorder settings.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AVMetadata-album?: string--><!--Device-AVMetadata-album?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -40,9 +40,9 @@ Artist of the album. This parameter is not supported in AVRecorder settings.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AVMetadata-albumArtist?: string--><!--Device-AVMetadata-albumArtist?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -56,9 +56,9 @@ Artist of the media asset. This parameter is not supported in AVRecorder setting
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AVMetadata-artist?: string--><!--Device-AVMetadata-artist?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -72,9 +72,9 @@ Author of the media asset. This parameter is not supported in AVRecorder setting
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AVMetadata-author?: string--><!--Device-AVMetadata-author?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -88,9 +88,9 @@ Composer of the media asset. This parameter is not supported in AVRecorder setti
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AVMetadata-composer?: string--><!--Device-AVMetadata-composer?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -104,9 +104,9 @@ Custom key-value mappings obtained from **moov.meta.list**.
 
 **Type:** Record&lt;string, string&gt;
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AVMetadata-customInfo?: Record<string, string>--><!--Device-AVMetadata-customInfo?: Record<string, string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -120,9 +120,9 @@ Time when the media asset is created. This parameter is not supported in AVRecor
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AVMetadata-dateTime?: string--><!--Device-AVMetadata-dateTime?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -136,9 +136,9 @@ Time when the media asset is created. The value is in the YYYY-MM-DD HH:mm:ss fo
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AVMetadata-dateTimeFormat?: string--><!--Device-AVMetadata-dateTimeFormat?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -154,7 +154,7 @@ Description of the media asset. This parameter is not supported in AVRecorder se
 
 **Since:** 23
 
-<!--Device-AVMetadata-description?: string--><!--Device-AVMetadata-description?: string-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -168,9 +168,9 @@ Duration of the media asset. This parameter is not supported in AVRecorder setti
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AVMetadata-duration?: string--><!--Device-AVMetadata-duration?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -186,9 +186,9 @@ The identifier that represents the software or hardware and settings used for en
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AVMetadata-encoder?: string--><!--Device-AVMetadata-encoder?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -202,9 +202,9 @@ Type or genre of the media asset.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AVMetadata-genre?: string--><!--Device-AVMetadata-genre?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -218,9 +218,9 @@ Whether the media asset contains audio. This parameter is not supported in AVRec
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AVMetadata-hasAudio?: string--><!--Device-AVMetadata-hasAudio?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -234,9 +234,9 @@ Whether the media asset contains a video. This parameter is not supported in AVR
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AVMetadata-hasVideo?: string--><!--Device-AVMetadata-hasVideo?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -250,9 +250,9 @@ HDR type of the media asset. This parameter is not supported in AVRecorder setti
 
 **Type:** HdrType
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AVMetadata-hdrType?: HdrType--><!--Device-AVMetadata-hdrType?: HdrType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -266,9 +266,9 @@ Geographical location of the media asset.
 
 **Type:** Location
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AVMetadata-location?: Location--><!--Device-AVMetadata-location?: Location-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -282,9 +282,9 @@ MIME type of the media asset. This parameter is not supported in AVRecorder sett
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AVMetadata-mimeType?: string--><!--Device-AVMetadata-mimeType?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -298,9 +298,9 @@ Audio sampling rate, in Hz. This parameter is not supported in AVRecorder settin
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AVMetadata-sampleRate?: string--><!--Device-AVMetadata-sampleRate?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -314,9 +314,9 @@ Title of the media asset. This parameter is not supported in AVRecorder settings
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AVMetadata-title?: string--><!--Device-AVMetadata-title?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -330,9 +330,9 @@ Number of tracks of the media asset. This parameter is not supported in AVRecord
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AVMetadata-trackCount?: string--><!--Device-AVMetadata-trackCount?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -346,9 +346,9 @@ Tracks info of the media asset. This parameter is not supported in AVRecorder se
 
 **Type:** Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-AVMetadata-tracks?: Array<MediaDescription>--><!--Device-AVMetadata-tracks?: Array<MediaDescription>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -362,9 +362,9 @@ Video height, in px. This parameter is not supported in AVRecorder settings.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AVMetadata-videoHeight?: string--><!--Device-AVMetadata-videoHeight?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -378,9 +378,9 @@ Video rotation direction, in degrees.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AVMetadata-videoOrientation?: string--><!--Device-AVMetadata-videoOrientation?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -394,9 +394,8 @@ Video width, in px. This parameter is not supported in AVRecorder settings.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AVMetadata-videoWidth?: string--><!--Device-AVMetadata-videoWidth?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
-

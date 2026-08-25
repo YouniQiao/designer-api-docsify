@@ -1,20 +1,50 @@
-# WindowInfo (System API)
+# WindowInfo
 
 Describes the window information.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-window-interface WindowInfo--><!--Device-window-interface WindowInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
-
-**System API:** This is a system API.
 
 ## Modules to Import
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
 ```
+
+## abilityName
+
+```TypeScript
+abilityName: string
+```
+
+abilityName of window
+
+**Type:** string
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## bundleName
+
+```TypeScript
+bundleName: string
+```
+
+Bundle name of the application.
+
+**Type:** string
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**System capability:** SystemCapability.Window.SessionManager
 
 ## displayId
 
@@ -24,13 +54,13 @@ displayId?: int
 
 Indicates the ID of the display where the window is located.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-WindowInfo-displayId?: int--><!--Device-WindowInfo-displayId?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -44,9 +74,9 @@ Window size in the global coordinate system. In extended screen scenarios, the t
 
 **Type:** Rect
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-WindowInfo-globalDisplayRect?: Rect--><!--Device-WindowInfo-globalDisplayRect?: Rect-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -62,9 +92,72 @@ Indicates the actual display size and position of the window.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-WindowInfo-globalRect?: Rect--><!--Device-WindowInfo-globalRect?: Rect-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## isFocused
+
+```TypeScript
+isFocused?: boolean
+```
+
+Whether the window gains focus. **true** if the window gains focus, **false** otherwise. The return value is the same as that of the [isFocused()](arkts-arkui-window-window-i.md#isfocused) API.
+
+**Type:** boolean
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## rect
+
+```TypeScript
+rect: Rect
+```
+
+Window size.
+
+**Type:** Rect
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## windowId
+
+```TypeScript
+windowId: int
+```
+
+Window ID.
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## windowStatusType
+
+```TypeScript
+windowStatusType: WindowStatusType
+```
+
+Window mode.
+
+**Type:** WindowStatusType
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**System capability:** SystemCapability.Window.SessionManager

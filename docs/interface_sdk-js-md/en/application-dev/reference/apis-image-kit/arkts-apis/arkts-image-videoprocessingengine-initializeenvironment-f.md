@@ -14,28 +14,28 @@ function initializeEnvironment(): Promise<void>
 
 Initialize global environment for image processing.
 
-**Since:** 23
+**Since:** 18
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-videoProcessingEngine-function initializeEnvironment(): Promise<void>--><!--Device-videoProcessingEngine-function initializeEnvironment(): Promise<void>-End-->
+**Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function initializeEnvironment can not work correctly <br>due to limited device capabilities. |
-| [29200002](../errorcode-videoprocessingengine.md#29200002-initialization-failure) | The global environment initialization for image processing failed, <br>such as failure to initialize the GPU environment. |
-| [29200006](../errorcode-videoprocessingengine.md#29200006-operation-not-allowed) | The operation is not permitted. This may be caused by incorrect status. |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [29200002](../errorcode-videoprocessingengine.md#29200002-initialization-failure) |
+| [29200006](../errorcode-videoprocessingengine.md#29200006-operation-not-allowed) |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
 
 **Examples**
 
@@ -46,4 +46,3 @@ async function initializeEnvironment() {
   videoProcessingEngine.initializeEnvironment();
 }
 ```
-

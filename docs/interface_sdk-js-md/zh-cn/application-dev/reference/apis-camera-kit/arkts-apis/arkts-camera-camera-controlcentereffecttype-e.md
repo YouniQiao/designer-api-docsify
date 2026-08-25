@@ -2,9 +2,9 @@
 
 枚举，相机控制器支持的效果类型。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-camera-enum ControlCenterEffectType--><!--Device-camera-enum ControlCenterEffectType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -16,11 +16,11 @@ BEAUTY = 0
 
 美颜。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-ControlCenterEffectType-BEAUTY = 0--><!--Device-ControlCenterEffectType-BEAUTY = 0-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -32,11 +32,11 @@ PORTRAIT = 1
 
 人像虚化。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-ControlCenterEffectType-PORTRAIT = 1--><!--Device-ControlCenterEffectType-PORTRAIT = 1-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -50,9 +50,9 @@ AUTO_FRAMING = 2
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-ControlCenterEffectType-AUTO_FRAMING = 2--><!--Device-ControlCenterEffectType-AUTO_FRAMING = 2-End-->
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -66,11 +66,10 @@ COLOR_EFFECT = 3
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ControlCenterEffectType-COLOR_EFFECT = 3--><!--Device-ControlCenterEffectType-COLOR_EFFECT = 3-End-->
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
-

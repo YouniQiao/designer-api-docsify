@@ -4,7 +4,7 @@ Represents a vector of the T type that contains two values: x and y.
 
 **Since:** 12
 
-<!--Device-unnamed-interface Vector2T--><!--Device-unnamed-interface Vector2T-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +20,11 @@ X coordinate value of the vector.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Vector2T-x: T--><!--Device-Vector2T-x: T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,11 +40,10 @@ Y coordinate value of the vector.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-Vector2T-y: T--><!--Device-Vector2T-y: T-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

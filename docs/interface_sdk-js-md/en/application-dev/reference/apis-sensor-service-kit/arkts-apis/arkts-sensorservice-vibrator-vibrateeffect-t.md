@@ -6,18 +6,17 @@ type VibrateEffect = VibrateTime | VibratePreset | VibrateFromFile | VibrateFrom
 
 Enumerates vibration effects of the vibrator. You can specify the vibration effect when calling [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md) or [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md).
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-vibrator-type VibrateEffect = VibrateTime | VibratePreset | VibrateFromFile | VibrateFromPattern--><!--Device-vibrator-type VibrateEffect = VibrateTime | VibratePreset | VibrateFromFile | VibrateFromPattern-End-->
-
 **System capability:** SystemCapability.Sensors.MiscDevice
 
-| Type | Description |
-| --- | --- |
-| VibrateTime | Triggers vibration based on a specified duration. <br> This API can be used in atomic services since API version 11. |
-| VibratePreset | Triggers vibration based on a preset effect. |
-| VibrateFromFile | Triggers vibration based on a custom vibration configuration file. [since 10] |
-| VibrateFromPattern | Triggers vibration based on a custom effect. [since 18] |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md) |
+| [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md) |
+| [VibrateFromFile](arkts-sensorservice-vibrator-vibratefromfile-i.md) |
+| [VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md) |

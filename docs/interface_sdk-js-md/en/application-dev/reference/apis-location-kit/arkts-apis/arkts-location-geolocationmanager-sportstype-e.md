@@ -2,9 +2,9 @@
 
 Enum for sports type
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-geoLocationManager-export enum SportsType--><!--Device-geoLocationManager-export enum SportsType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -16,11 +16,11 @@ RUNNING = 1
 
 Indicates running.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-SportsType-RUNNING = 1--><!--Device-SportsType-RUNNING = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -32,11 +32,11 @@ WALKING = 2
 
 Indicates walking.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-SportsType-WALKING = 2--><!--Device-SportsType-WALKING = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -48,11 +48,11 @@ CYCLING = 3
 
 Indicates cycling.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-SportsType-CYCLING = 3--><!--Device-SportsType-CYCLING = 3-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -64,13 +64,12 @@ SKIING = 4
 
 Indicates Skiing.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-SportsType-SKIING = 4--><!--Device-SportsType-SKIING = 4-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Location.Location.Core
-

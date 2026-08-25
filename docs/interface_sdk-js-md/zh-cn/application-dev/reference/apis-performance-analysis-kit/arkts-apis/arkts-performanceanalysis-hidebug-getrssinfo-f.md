@@ -19,17 +19,17 @@ function getRssInfo(): RssInfo
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-hidebug-function getRssInfo(): RssInfo--><!--Device-hidebug-function getRssInfo(): RssInfo-End-->
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RssInfo](arkts-performanceanalysis-hidebug-rssinfo-i.md) | 应用进程的物理内存信息。 |
+| 类型 |
+| --- |
+| [RssInfo](arkts-performanceanalysis-hidebug-rssinfo-i.md) |
 
 **示例**
 
@@ -39,4 +39,3 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 let rssInfo: hidebug.RssInfo = hidebug.getRssInfo();
 console.info(`rss: ${rssInfo.rss}, swapRss: ${rssInfo.swapRss}`);
 ```
-

@@ -16,19 +16,19 @@ Replaces the current page with another one in the application and destroys the c
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [replaceUrl](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#replaceurl)(options: router.RouterOptions)
-
-<!--Device-router-function replace(options: RouterOptions): void--><!--Device-router-function replace(options: RouterOptions): void-End-->
+**Substitutes:** [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl)(options: router.RouterOptions)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | RouterOptions | Yes | Description of the new page. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes |
 
 **Examples**
 
@@ -61,4 +61,3 @@ router.replace({
   params: new RouterParams('message')
 });
 ```
-

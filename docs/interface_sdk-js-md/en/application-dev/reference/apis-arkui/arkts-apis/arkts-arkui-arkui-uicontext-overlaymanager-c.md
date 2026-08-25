@@ -4,7 +4,7 @@ Provides the capability to draw overlays.
 
 > **NOTE：**&gt;
 > - The initial APIs of this class are supported since API version 12.&gt;
-> - In the following API examples, you must first use [getOverlayManager()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getoverlaymanager) in
+> - In the following API examples, you must first use [getOverlayManager()](arkts-arkui-arkui-uicontext-uicontext-c.md#getoverlaymanager) in
 > **UIContext** to obtain an **OverlayManager** instance, and then call the APIs using the obtained instance.&gt;
 > - The nodes on **OverlayManager** are above the page level, but below such components as created through
 > **Dialog**, **Popup**, **Menu**, **BindSheet**, **BindContentCover**, and **Toast**.&gt;
@@ -15,7 +15,7 @@ Provides the capability to draw overlays.
 
 **Since:** 12
 
-<!--Device-unnamed-export class OverlayManager--><!--Device-unnamed-export class OverlayManager-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,20 +38,20 @@ Adds a specified **ComponentContent** node to the **OverlayManager**.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-OverlayManager-addComponentContent(content: ComponentContent, index?: number): void--><!--Device-OverlayManager-addComponentContent(content: ComponentContent, index?: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| content | ComponentContent | Yes | Content to add to the target node on the **OverlayManager**.<br> **NOTE：**<br> By default, the new node is centered on the page and stacked according to its stacking level. |
-| index | number | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes |
+| index | number | No |
 
 **Examples**
 
@@ -157,20 +157,20 @@ Creates an overlay node with the specified display order.This API allows you to 
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-OverlayManager-addComponentContentWithOrder(content: ComponentContent, levelOrder?: LevelOrder): void--><!--Device-OverlayManager-addComponentContentWithOrder(content: ComponentContent, levelOrder?: LevelOrder): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| content | ComponentContent | Yes | Content to add to the target node on the **OverlayManager**. <br>**NOTE：**<br> By default, the new node is centered on the page and stacked according to its stacking level. |
-| levelOrder | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes |
+| levelOrder | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | No |
 
 **Examples**
 
@@ -263,11 +263,11 @@ Hides all **ComponentContent** nodes on the **OverlayManager**.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-OverlayManager-hideAllComponentContents(): void--><!--Device-OverlayManager-hideAllComponentContents(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -285,19 +285,19 @@ Hides a specified **ComponentContent** node on the **OverlayManager**.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-OverlayManager-hideComponentContent(content: ComponentContent): void--><!--Device-OverlayManager-hideComponentContent(content: ComponentContent): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| content | ComponentContent | Yes | Content to hide on the **OverlayManager**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes |
 
 **Examples**
 
@@ -313,32 +313,32 @@ Opens an overlay with the specified ComponentContent and options.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OverlayManager-openOrderOverlay(content: ComponentContent, options?: OrderOverlayOptions): Promise<void>--><!--Device-OverlayManager-openOrderOverlay(content: ComponentContent, options?: OrderOverlayOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| content | ComponentContent | Yes | Content to add to the new node on the OverlayManager. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>By default, the new node is centered on the page and stacked according to its stacking level. </p> |
-| options | [OrderOverlayOptions](../../apis-default/arkts-apis/arkts-arkui-uicontext-orderoverlayoptions-i.md) | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes |
+| options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [103307](../errorcode-promptAction.md#103307-failed-to-open-the-overlay-due-to-a-system-pop-up-window) | The overlay cannot be opened due to the system pop-up window. |
+| Error Code ID |
+| --- |
+| [103307](../errorcode-promptAction.md#103307-failed-to-open-the-overlay-due-to-a-system-pop-up-window) |
 
 ## removeComponentContent
 
@@ -350,19 +350,19 @@ Removes a specified node from the **OverlayManager**.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-OverlayManager-removeComponentContent(content: ComponentContent): void--><!--Device-OverlayManager-removeComponentContent(content: ComponentContent): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| content | ComponentContent | Yes | Content to remove from the **OverlayManager**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes |
 
 **Examples**
 
@@ -378,11 +378,11 @@ Shows all **ComponentContent** nodes on the **OverlayManager**.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-OverlayManager-showAllComponentContents(): void--><!--Device-OverlayManager-showAllComponentContents(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -400,21 +400,20 @@ Shows a specified **ComponentContent** node on the **OverlayManager**.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-OverlayManager-showComponentContent(content: ComponentContent): void--><!--Device-OverlayManager-showComponentContent(content: ComponentContent): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| content | ComponentContent | Yes | Content to show on the **OverlayManager**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes |
 
 **Examples**
 
 See the example for [addComponentContent](#addcomponentcontent).
-

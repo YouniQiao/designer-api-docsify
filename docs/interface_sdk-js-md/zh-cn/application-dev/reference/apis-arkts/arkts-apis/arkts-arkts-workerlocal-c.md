@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export class WorkerLocal--><!--Device-unnamed-export class WorkerLocal-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,11 +23,9 @@ constructor()
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-WorkerLocal-constructor()--><!--Device-WorkerLocal-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -43,19 +39,17 @@ constructor(init: () => T)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-WorkerLocal-constructor(init: () => T)--><!--Device-WorkerLocal-constructor(init: () => T)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| init | () =&gt; T | 是 | 初始化函数，用于提供线程本地值的初始值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| init | () = & gt; T | 是 |
 
 ## delete
 
@@ -67,11 +61,9 @@ delete(): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-WorkerLocal-delete(): void--><!--Device-WorkerLocal-delete(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -85,19 +77,17 @@ get(): T
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-WorkerLocal-get(): T--><!--Device-WorkerLocal-get(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 当前工作线程的值。 |
+| 类型 |
+| --- |
+| T |
 
 ## set
 
@@ -109,17 +99,14 @@ set(value: T): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-WorkerLocal-set(value: T): void--><!--Device-WorkerLocal-set(value: T): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | T | 是 | 要设置的当前工作线程的值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | T | 是 |

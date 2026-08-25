@@ -2,9 +2,9 @@
 
 Sub-mesh resource.@interface SubMesh
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface SubMesh--><!--Device-unnamed-export interface SubMesh-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,9 +18,9 @@ Axis aligned bounding box.
 
 **Type:** [Aabb](arkts-arkgraphics3d-scenetypes-aabb-i.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SubMesh-readonly aabb: Aabb--><!--Device-SubMesh-readonly aabb: Aabb-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -34,9 +34,9 @@ Material.
 
 **Type:** [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SubMesh-material: Material--><!--Device-SubMesh-material: Material-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -50,9 +50,8 @@ Name. There is no special format requirement.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SubMesh-name: string--><!--Device-SubMesh-name: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

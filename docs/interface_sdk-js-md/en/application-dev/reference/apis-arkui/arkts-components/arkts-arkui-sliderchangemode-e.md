@@ -4,7 +4,7 @@ Enumerates the slider states.
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum SliderChangeMode--><!--Device-unnamed-declare enum SliderChangeMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ The user touches or clicks the thumb.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-SliderChangeMode-Begin--><!--Device-SliderChangeMode-Begin-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ The user is dragging the slider.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-SliderChangeMode-Moving--><!--Device-SliderChangeMode-Moving-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -55,11 +55,11 @@ The user stops dragging the slider by lifting their finger or releasing the mous
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-SliderChangeMode-End--><!--Device-SliderChangeMode-End-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,11 +73,10 @@ The user moves the thumb by touching or clicking the track.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-SliderChangeMode-Click--><!--Device-SliderChangeMode-Click-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

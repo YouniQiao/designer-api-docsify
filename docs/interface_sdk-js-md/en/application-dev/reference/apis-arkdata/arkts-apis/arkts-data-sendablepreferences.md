@@ -8,7 +8,7 @@ The **sendablePreferences** module provides APIs for processing data in the form
 
 **Since:** 12
 
-<!--Device-unnamed-declare namespace sendablePreferences--><!--Device-unnamed-declare namespace sendablePreferences-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -22,25 +22,24 @@ import { sendablePreferences } from '@kit.ArkData';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md) | Deletes a specified **Preferences** instance from the cache. If the **Preferences** instance has a corresponding persistent file, the persistent file is also deleted. This API uses a promise to return the result. Avoid using a deleted **Preferences** instance to perform data operations, which may cause data inconsistency. |
-| [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md) | Obtains a **Preferences** instance. This API uses a promise to return the result. |
-| [getPreferencesSync](arkts-arkdata-sendablepreferences-getpreferencessync-f.md) | Obtains a **Preferences** instance. This API returns the result synchronously. |
-| [removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md) | Removes a **Preferences** instance from the cache. This API uses a promise to return the result. After an application calls [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md) for the first time to obtain a **Preferences** instance, the obtained **Preferences** instance is cached. When the application calls [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md) again, the **Preferences** instance will be read from the cache instead of from the persistent file. After this API is called to remove the instance from the cache, calling **getPreferences** again will read data from the persistent file and create a **Preferences** instance. |
-| [removePreferencesFromCacheSync](arkts-arkdata-sendablepreferences-removepreferencesfromcachesync-f.md) | Removes a **Preferences** instance from the cache. This API returns the result synchronously. After an application calls [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md) for the first time to obtain a **Preferences** instance, the obtained **Preferences** instance is cached. When the application calls [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md) again, the **Preferences** instance will be read from the cache instead of from the persistent file. After this API is called to remove the instance from the cache, calling **getPreferences** again will read data from the persistent file and create a **Preferences** instance. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md) |
+| [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md) |
+| [getPreferencesSync](arkts-arkdata-sendablepreferences-getpreferencessync-f.md) |
+| [removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md) |
+| [removePreferencesFromCacheSync](arkts-arkdata-sendablepreferences-removepreferencesfromcachesync-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [Options](arkts-arkdata-sendablepreferences-options-i.md) | Represents the configuration options of a **Preferences** instance. |
-| [Preferences](arkts-arkdata-sendablepreferences-preferences-i.md) | Provides APIs for obtaining and modifying **Preferences** instances. **Preferences** inherits from [ISendable](../../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads) by reference. Before calling any API of **Preferences**, obtain a **Preferences** instance by using [sendablePreferences.getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Options](arkts-arkdata-sendablepreferences-options-i.md) |
+| [Preferences](arkts-arkdata-sendablepreferences-preferences-i.md) |
 
 ### Constants
 
-| Name | Description |
-| --- | --- |
-| [MAX_KEY_LENGTH](arkts-arkdata-sendablepreferences-con.md#max_key_length) | Maximum length of a key, which is 1024 bytes. |
-| [MAX_VALUE_LENGTH](arkts-arkdata-sendablepreferences-con.md#max_value_length) | Maximum length of a value, which is 16 MB. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [MAX_KEY_LENGTH](arkts-arkdata-sendablepreferences-con.md#max_key_length) |
+| [MAX_VALUE_LENGTH](arkts-arkdata-sendablepreferences-con.md#max_value_length) |

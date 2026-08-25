@@ -2,9 +2,9 @@
 
 Rotation axes state change information.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-mechanicManager-export interface RotationAxesStateChangeInfo--><!--Device-mechanicManager-export interface RotationAxesStateChangeInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -24,11 +24,11 @@ mechId: int
 
 ID of the mechanical device.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RotationAxesStateChangeInfo-mechId: int--><!--Device-RotationAxesStateChangeInfo-mechId: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -44,11 +44,10 @@ Rotate axis status.
 
 **Type:** [RotationAxesStatus](arkts-mechanic-mechanicmanager-rotationaxesstatus-i-sys.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RotationAxesStateChangeInfo-status: RotationAxesStatus--><!--Device-RotationAxesStateChangeInfo-status: RotationAxesStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
-

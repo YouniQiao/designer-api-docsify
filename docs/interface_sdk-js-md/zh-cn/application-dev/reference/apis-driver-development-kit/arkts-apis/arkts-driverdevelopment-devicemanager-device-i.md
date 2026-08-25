@@ -2,9 +2,9 @@
 
 外设信息。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-deviceManager-interface Device--><!--Device-deviceManager-interface Device-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
@@ -24,9 +24,9 @@ busType: BusType
 
 **类型：** [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Device-busType: BusType--><!--Device-Device-busType: BusType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
@@ -40,9 +40,9 @@ description: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Device-description: string--><!--Device-Device-description: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
@@ -54,11 +54,10 @@ deviceId: long
 
 设备ID。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Device-deviceId: long--><!--Device-Device-deviceId: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
-

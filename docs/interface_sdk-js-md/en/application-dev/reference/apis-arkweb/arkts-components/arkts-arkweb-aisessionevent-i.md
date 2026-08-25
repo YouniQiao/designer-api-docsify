@@ -4,7 +4,7 @@ Custom AI session configuration object, used to define the lifecycle callbacks o
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare interface AISessionEvent--><!--Device-unnamed-declare interface AISessionEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -12,6 +12,54 @@ Custom AI session configuration object, used to define the lifecycle callbacks o
 
 ```TypeScript
 ```
+
+## onCreateAISession
+
+```TypeScript
+onCreateAISession: OnCreateAISession
+```
+
+Callback function triggered when an AI session is created. Returns **true** to skip the system default behavior, and **false** to continue executing the system default logic.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## onDestroyAISession
+
+```TypeScript
+onDestroyAISession: OnDestroyAISession
+```
+
+Callback function triggered when an AI session is destroyed, used to clean up resources associated with the custom AI model.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## onExecuteAIAction
+
+```TypeScript
+onExecuteAIAction: OnExecuteAIAction
+```
+
+Callback function triggered when an AI session executes an action.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Web.Webview.Core
 
 ## aiSessionType
 
@@ -25,63 +73,8 @@ AI session type.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AISessionEvent-aiSessionType: AISessionType--><!--Device-AISessionEvent-aiSessionType: AISessionType-End-->
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-## onCreateAISession
-
-```TypeScript
-onCreateAISession: OnCreateAISession
-```
-
-Callback function triggered when an AI session is created. Returns **true** to skip the system default behavior, and **false** to continue executing the system default logic.
-
-**Type:** [OnCreateAISession](arkts-arkweb-oncreateaisession-t.md)
-
-**Since:** 26.0.0
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AISessionEvent-onCreateAISession: OnCreateAISession--><!--Device-AISessionEvent-onCreateAISession: OnCreateAISession-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-
-## onDestroyAISession
-
-```TypeScript
-onDestroyAISession: OnDestroyAISession
-```
-
-Callback function triggered when an AI session is destroyed, used to clean up resources associated with the custom AI model.
-
-**Type:** [OnDestroyAISession](arkts-arkweb-ondestroyaisession-t.md)
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AISessionEvent-onDestroyAISession: OnDestroyAISession--><!--Device-AISessionEvent-onDestroyAISession: OnDestroyAISession-End-->
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-## onExecuteAIAction
-
-```TypeScript
-onExecuteAIAction: OnExecuteAIAction
-```
-
-Callback function triggered when an AI session executes an action.
-
-**Type:** [OnExecuteAIAction](arkts-arkweb-onexecuteaiaction-t.md)
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AISessionEvent-onExecuteAIAction: OnExecuteAIAction--><!--Device-AISessionEvent-onExecuteAIAction: OnExecuteAIAction-End-->
-
-**System capability:** SystemCapability.Web.Webview.Core
-

@@ -1,4 +1,4 @@
-# @ohos.identifier.oaid
+# @ohos.identifier.oaid(OAID)
 
 This module provides the capability of obtaining and resetting the Open Anonymous Device Identifier (OAID).
 
@@ -10,7 +10,7 @@ This module provides the capability of obtaining and resetting the Open Anonymou
 
 **Since:** 10
 
-<!--Device-unnamed-declare namespace identifier--><!--Device-unnamed-declare namespace identifier-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Advertising.OAID
 
@@ -24,16 +24,15 @@ import { identifier } from '@kit.AdsKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getOAID](arkts-ads-identifier-getoaid-f.md) | Obtains the OAID. This API uses an asynchronous callback to return the result. |
-| [getOAID](arkts-ads-identifier-getoaid-f.md) | Obtains the OAID. This API uses a promise to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getOAID(OAID)](arkts-ads-identifier-getoaid-f.md) |
+| [getOAID(OAID)](arkts-ads-identifier-getoaid-f.md) |
 
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [resetOAID](arkts-ads-identifier-resetoaid-f-sys.md) | Resets the OAID. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [resetOAID(OAID)](arkts-ads-identifier-resetoaid-f-sys.md) |
 <!--DelEnd-->
-

@@ -2,9 +2,9 @@
 
 Represents the transparently transmitted data, which contains information required for a data change notification.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-cloudData-interface ExtraData--><!--Device-cloudData-interface ExtraData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -26,9 +26,9 @@ Event ID. The value **cloud_data_change** indicates cloud data changes.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ExtraData-eventId: string--><!--Device-ExtraData-eventId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -44,9 +44,9 @@ Data to be transmitted transparently. **extraData** is a JSON string that must c
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ExtraData-extraData: string--><!--Device-ExtraData-extraData: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -66,4 +66,3 @@ let extraData: cloudData.ExtraData = {
   extraData: '{"data": "{"accountId": "aaa", "bundleName": "com.bbb.xxx", "containerName": "alias", "databaseScopes": ["private", "shared"], "recordTypes": ["xxx", "yyy", "zzz"]}"}',
 }
 ```
-

@@ -4,7 +4,7 @@ Represents information about the recent image or video.
 
 **Since:** 13
 
-<!--Device-unnamed-export declare class RecentPhotoInfo--><!--Device-unnamed-export declare class RecentPhotoInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,9 +26,9 @@ Time when the recent image or video is taken, in ms. The value is the number of 
 
 **Since:** 13
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 26.0.0.
 
-<!--Device-RecentPhotoInfo-dateTaken?: number--><!--Device-RecentPhotoInfo-dateTaken?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -44,9 +44,8 @@ Hash value of the name of the recent image or video, which is used to help the a
 
 **Since:** 13
 
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 26.0.0.
+
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
-<!--Device-RecentPhotoInfo-identifier?: string--><!--Device-RecentPhotoInfo-identifier?: string-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

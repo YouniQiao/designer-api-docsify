@@ -2,9 +2,9 @@
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-bundleState-interface BundleActiveInfoResponse--><!--Device-bundleState-interface BundleActiveInfoResponse-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -14,3 +14,20 @@
 import { bundleState } from '@kit.BackgroundTasksKit';
 ```
 
+## [key: string]
+
+```TypeScript
+[key: string]: BundleStateInfo
+```
+
+the struct of BundleActiveInfoResponse.
+
+**Type:** [BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)
+
+**Since:** 7
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
+**Deprecated since:** 9
+
+**System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App

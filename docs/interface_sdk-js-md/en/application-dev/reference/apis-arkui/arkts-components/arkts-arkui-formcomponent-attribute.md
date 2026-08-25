@@ -4,7 +4,7 @@
 
 **Since:** 7
 
-<!--Device-unnamed-declare class FormComponentAttribute--><!--Device-unnamed-declare class FormComponentAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -14,4 +14,3 @@
 
 ```TypeScript
 ```
-

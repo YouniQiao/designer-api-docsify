@@ -4,9 +4,7 @@ A picker view to show available streaming device list.
 
 **Since:** 10
 
-**Decorator:** @Component
-
-<!--Device-unnamed-declare struct AVCastPicker--><!--Device-unnamed-declare struct AVCastPicker-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -15,6 +13,42 @@ A picker view to show available streaming device list.
 ```TypeScript
 import { AVCastPicker } from '@kit.AVSessionKit';
 ```
+
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+## onStateChange
+
+```TypeScript
+onStateChange?: (state: AVCastPickerState) => void
+```
+
+Picker state change callback.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| state | [AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md) | Yes |
 
 ## activeColor
 
@@ -28,11 +62,9 @@ Assigns the color of picker component at active state.
 
 **Since:** 11
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVCastPicker-@Prop  activeColor?: Color | number | string--><!--Device-AVCastPicker-@Prop  activeColor?: Color | number | string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -48,11 +80,9 @@ Set the picker color mode.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVCastPicker-@Prop  colorMode?: AVCastPickerColorMode--><!--Device-AVCastPicker-@Prop  colorMode?: AVCastPickerColorMode-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -68,11 +98,9 @@ Set the custom builder for the picker appearance. If not set, system will show t
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVCastPicker-@Prop  customPicker?: CustomBuilder--><!--Device-AVCastPicker-@Prop  customPicker?: CustomBuilder-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -88,29 +116,9 @@ Assigns the color of picker component at normal state .
 
 **Since:** 11
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVCastPicker-@Prop  normalColor?: Color | number | string--><!--Device-AVCastPicker-@Prop  normalColor?: Color | number | string-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-## onStateChange
-
-```TypeScript
-onStateChange?: (state: AVCastPickerState) => void
-```
-
-Picker state change callback.
-
-**Type:** (state: AVCastPickerState) =&gt; void
-
-**Since:** 11
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVCastPicker-onStateChange?: (state: AVCastPickerState) => void--><!--Device-AVCastPicker-onStateChange?: (state: AVCastPickerState) => void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -126,11 +134,9 @@ Set the picker style.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVCastPicker-@Prop  pickerStyle?: AVCastPickerStyle--><!--Device-AVCastPicker-@Prop  pickerStyle?: AVCastPickerStyle-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -146,11 +152,8 @@ Set the session type used by current picker component which can refer to AVSessi
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AVCastPicker-@Prop  sessionType?: string--><!--Device-AVCastPicker-@Prop  sessionType?: string-End-->
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
-

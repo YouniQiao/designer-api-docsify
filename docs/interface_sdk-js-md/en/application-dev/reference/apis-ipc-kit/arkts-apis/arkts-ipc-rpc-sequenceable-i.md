@@ -4,11 +4,11 @@ Writes objects of classes to a **MessageParcel** and reads them from the **Messa
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [Parcelable](arkts-ipc-rpc-parcelable-i.md)
-
-<!--Device-rpc-interface Sequenceable--><!--Device-rpc-interface Sequenceable-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -28,25 +28,25 @@ Marshals the sequenceable object into a **MessageParcel** object.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [marshalling](arkts-ipc-rpc-parcelable-i.md#marshalling)(dataOut: MessageSequence)
-
-<!--Device-Sequenceable-marshalling(dataOut: MessageParcel): boolean--><!--Device-Sequenceable-marshalling(dataOut: MessageParcel): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dataOut | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object to which the sequenceable object is to be marshaled. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dataOut | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -131,25 +131,25 @@ Unmarshals this sequenceable object from a **MessageParcel** object.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [unmarshalling](arkts-ipc-rpc-parcelable-i.md#unmarshalling)(dataIn: MessageSequence)
-
-<!--Device-Sequenceable-unmarshalling(dataIn: MessageParcel): boolean--><!--Device-Sequenceable-unmarshalling(dataIn: MessageParcel): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dataIn | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object in which the sequenceable object is to be unmarshaled. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dataIn | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -223,4 +223,3 @@ try {
   hilog.error(0x0000, 'testTag', 'error ' + error);
 }
 ```
-

@@ -16,25 +16,25 @@ function parse(text: string, reviver?: Transformer, options?: ParseOptions): Obj
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-json-function parse(text: string, reviver?: Transformer, options?: ParseOptions): Object | null--><!--Device-json-function parse(text: string, reviver?: Transformer, options?: ParseOptions): Object | null-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| text | string | 是 | 有效的JSON字符串，需符合JSON语法规范。 |
-| reviver | Transformer | 否 | 转换函数，用于修改解析生成的原始值；当需要对解析结果进行自定义转换时使用。默认值是undefined。 |
-| options | ParseOptions | 否 | 解析的配置选项，用于控制解析生成的类型。默认值是undefined。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| text | string | 是 |
+| reviver | [Transformer](arkts-arkts-ason-transformer-t.md) | 否 |
+| options | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Object \| null | 当传入的字符串为'null'时，返回null。 |
+| 类型 |
+| --- |
+| Object \| null |
 
 **示例**
 
@@ -72,4 +72,3 @@ console.info(typeof (numberObj as object)?.["largeNumber"]);
 console.info((numberObj as object)?.["largeNumber"]);
 // 打印结果：112233445566778899
 ```
-

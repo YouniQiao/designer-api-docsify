@@ -4,7 +4,7 @@ Defines the cursor style.
 
 **Since:** 10
 
-<!--Device-unnamed-interface CaretStyle--><!--Device-unnamed-interface CaretStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Caret color.Default value: **'#ff007dff'**
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-CaretStyle-color?: ResourceColor--><!--Device-CaretStyle-color?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ Caret size. It cannot be set in percentage.Default value: **'2vp'**
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-CaretStyle-width?: Length--><!--Device-CaretStyle-width?: Length-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

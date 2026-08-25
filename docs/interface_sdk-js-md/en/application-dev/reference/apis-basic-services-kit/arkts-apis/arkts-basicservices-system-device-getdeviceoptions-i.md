@@ -2,9 +2,9 @@
 
 **Since:** 3
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface GetDeviceOptions--><!--Device-unnamed-export interface GetDeviceOptions-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -22,13 +22,11 @@ complete?: () => void
 
 Called when the execution is completed.
 
-**Type:** () =&gt; void
-
 **Since:** 3
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-GetDeviceOptions-complete?: () => void--><!--Device-GetDeviceOptions-complete?: () => void-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -40,15 +38,20 @@ fail?: (data: any, code: number) => void
 
 Called when the device information fails to be obtained.
 
-**Type:** (data: any, code: number) =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 6
 
-<!--Device-GetDeviceOptions-fail?: (data: any, code: number) => void--><!--Device-GetDeviceOptions-fail?: (data: any, code: number) => void-End-->
-
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | any | Yes |
+| code | number | Yes |
 
 ## success
 
@@ -58,13 +61,16 @@ success?: (data: DeviceResponse) => void
 
 Called when the device information is obtained.
 
-**Type:** (data: DeviceResponse) =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 6
 
-<!--Device-GetDeviceOptions-success?: (data: DeviceResponse) => void--><!--Device-GetDeviceOptions-success?: (data: DeviceResponse) => void-End-->
-
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | [DeviceResponse](arkts-basicservices-system-device-deviceresponse-i.md) | Yes |

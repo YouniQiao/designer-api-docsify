@@ -2,9 +2,9 @@
 
 QuickImageDataHandler is a media asset handler used to customize the media asset processing logic in **onDataPrepared**.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-photoAccessHelper-interface QuickImageDataHandler--><!--Device-photoAccessHelper-interface QuickImageDataHandler-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -21,21 +21,21 @@ onDataPrepared(data: T, imageSource: image.ImageSource, map: Map<string, string>
 ```
 
 Called when the requested image is ready. If an error occurs, **data** returned by the callback is **undefined**.Information returned by **map**:  
-| Map Key | **Description**| |----------|-------| | 'quality' | Image quality. The value **high** means high quality, and **low** means poor quality.|
+| Map Key | **Description**| |----------|-------| | 'quality' |
 
 **Since:** 13
 
-<!--Device-QuickImageDataHandler-onDataPrepared(data: T, imageSource: image.ImageSource, map: Map<string, string>): void--><!--Device-QuickImageDataHandler-onDataPrepared(data: T, imageSource: image.ImageSource, map: Map<string, string>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | T | Yes | Data of the image asset that is ready. It is of the generic type and supports the [Picture](../../apis-image-kit/arkts-apis/arkts-image-image-picture-i.md) type. |
-| imageSource | image.ImageSource | Yes | Data of the image asset that is ready. |
-| map | Map&lt;string, string&gt; | Yes | Additional information about the image asset, such as the image quality. Currently, only **quality** is supported. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | T | Yes |
+| imageSource | image.ImageSource | Yes |
+| map | Map & lt;string, string & gt; | Yes |
 
 **Examples**
 
@@ -96,19 +96,18 @@ Indicates required media asset data quickly is prepared
 
 **Since:** 23
 
-<!--Device-QuickImageDataHandler-onDataPrepared(data: T | undefined, imageSource: image.ImageSource | null, map: Map<string, string>): void--><!--Device-QuickImageDataHandler-onDataPrepared(data: T | undefined, imageSource: image.ImageSource | null, map: Map<string, string>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | T \| undefined | Yes | the returned data of picture if data of media asset is invalid, return undefined. |
-| imageSource | image.ImageSource \| null | Yes | the returned data of imageSource if data of imageSource is invalid, return null. |
-| map | Map&lt;string, string&gt; | Yes | additional information for the data |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | T \| undefined | Yes |
+| imageSource | image.ImageSource \| null | Yes |
+| map | Map & lt;string, string & gt; | Yes |
 
 **Examples**
 
 See [onDataPrepared](#ondataprepared)
-

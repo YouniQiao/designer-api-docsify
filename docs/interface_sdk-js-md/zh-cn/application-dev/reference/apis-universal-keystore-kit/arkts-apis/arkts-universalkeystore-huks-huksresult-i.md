@@ -8,11 +8,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)
-
-<!--Device-huks-export interface HuksResult--><!--Device-huks-export interface HuksResult-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -35,9 +35,9 @@ certChains?: Array<string>
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-HuksResult-certChains?: Array<string>--><!--Device-HuksResult-certChains?: Array<string>-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -54,9 +54,9 @@ errorCode: number
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-HuksResult-errorCode: number--><!--Device-HuksResult-errorCode: number-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -73,9 +73,9 @@ outData?: Uint8Array
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-HuksResult-outData?: Uint8Array--><!--Device-HuksResult-outData?: Uint8Array-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -92,9 +92,8 @@ properties?: Array<HuksParam>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-<!--Device-HuksResult-properties?: Array<HuksParam>--><!--Device-HuksResult-properties?: Array<HuksParam>-End-->
-
 **系统能力：** SystemCapability.Security.Huks.Extension
-

@@ -7,9 +7,9 @@ This module provides essential functionalities for floating balls. It lets you c
 > canIUse() to check whether the device supports this system
 > capability and the corresponding APIs.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-unnamed-declare namespace floatingBall--><!--Device-unnamed-declare namespace floatingBall-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -23,25 +23,24 @@ import { floatingBall } from '@kit.ArkUI';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [create](arkts-arkui-floatingball-create-f.md) | Creates a floating ball controller. This API uses a promise to return the result. |
-| [isFloatingBallEnabled](arkts-arkui-floatingball-isfloatingballenabled-f.md) | Checks whether the device supports floating balls. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [create](arkts-arkui-floatingball-create-f.md) |
+| [isFloatingBallEnabled](arkts-arkui-floatingball-isfloatingballenabled-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [FloatingBallConfiguration](arkts-arkui-floatingball-floatingballconfiguration-i.md) | Describes the parameters for creating a floating ball controller. |
-| [FloatingBallController](arkts-arkui-floatingball-floatingballcontroller-i.md) | Implements a floating ball controller instance, which is used to start, update, and stop floating balls, and register callbacks.Before calling any of the following APIs, you must use [floatingBall.create()](arkts-arkui-floatingball-create-f.md) to create a floating ball controller instance. |
-| [FloatingBallParams](arkts-arkui-floatingball-floatingballparams-i.md) | Describes the parameters for starting and updating the floating ball. |
-| [FloatingBallWindowInfo](arkts-arkui-floatingball-floatingballwindowinfo-i.md) | Describes the floating ball window information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FloatingBallConfiguration](arkts-arkui-floatingball-floatingballconfiguration-i.md) |
+| [FloatingBallController](arkts-arkui-floatingball-floatingballcontroller-i.md) |
+| [FloatingBallParams](arkts-arkui-floatingball-floatingballparams-i.md) |
+| [FloatingBallWindowInfo](arkts-arkui-floatingball-floatingballwindowinfo-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md) | Enumerates the lifecycle states of the floating ball. |
-| [FloatingBallTemplate](arkts-arkui-floatingball-floatingballtemplate-e.md) | Enumerates the types of the floating ball template. |
-| [FloatingBallTextUpdateAnimationType](arkts-arkui-floatingball-floatingballtextupdateanimationtype-e.md) | Enumerates the animation types used when the floating ball text is updated. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md) |
+| [FloatingBallTemplate](arkts-arkui-floatingball-floatingballtemplate-e.md) |
+| [FloatingBallTextUpdateAnimationType](arkts-arkui-floatingball-floatingballtextupdateanimationtype-e.md) |

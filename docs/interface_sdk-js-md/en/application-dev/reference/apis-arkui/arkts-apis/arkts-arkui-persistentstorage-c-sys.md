@@ -8,7 +8,7 @@ For details about how to use PersistentStorage on the UI, see [PersistentStorage
 
 **Since:** 7
 
-<!--Device-unnamed-declare class PersistentStorage--><!--Device-unnamed-declare class PersistentStorage-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,7 +27,7 @@ Constructor.
 
 **Since:** 7
 
-<!--Device-PersistentStorage-constructor(appStorage: AppStorage, storage: Storage)--><!--Device-PersistentStorage-constructor(appStorage: AppStorage, storage: Storage)-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,10 +35,10 @@ Constructor.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| appStorage | [AppStorage](arkts-arkui-appstorage-c.md) | Yes | Application-level storage. |
-| storage | Storage | Yes | Storage. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| appStorage | [AppStorage](arkts-arkui-appstorage-c.md) | Yes |
+| storage | [Storage](../../apis-arkdata/arkts-apis/arkts-arkdata-system-storage-storage-c.md) | Yes |
 
 **Examples**
 
@@ -46,4 +46,3 @@ Constructor.
 let para: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(para);
 ```
-

@@ -8,17 +8,16 @@ declare type CanvasDirection = "inherit" | "ltr" | "rtl"
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-unnamed-declare type CanvasDirection = "inherit" | "ltr" | "rtl"--><!--Device-unnamed-declare type CanvasDirection = "inherit" | "ltr" | "rtl"-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 | 说明 |
-| --- | --- |
-| "inherit" | 继承canvas组件通用属性已设定的文本方向，若canvas组件未设置direction属性，则跟随系统文字方向。 |
-| "ltr" | 从左往右。 |
-| "rtl" | 从右往左。 |
-
+| 类型 |
+| --- |
+| "inherit" |
+| "ltr" |
+| "rtl" |

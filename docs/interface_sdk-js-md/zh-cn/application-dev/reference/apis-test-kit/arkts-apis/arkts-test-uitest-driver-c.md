@@ -2,9 +2,9 @@
 
 Driver类为uitest测试框架的总入口，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等能力。通过create创建实例。 该类提供的方法除Driver.create()和Driver.createUIEventObserver()以外的所有方法都使用Promise方式作为异步方法，需使用await方式调用。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-declare class Driver--><!--Device-unnamed-declare class Driver-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -23,33 +23,33 @@ assertComponentExist(on: On): Promise<void>
 
 断言API，用于断言当前界面是否存在满足给出的目标属性的控件。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-assertComponentExist(on: On): Promise<void>--><!--Device-Driver-assertComponentExist(on: On): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000003](../errorcode-uitest.md#17000003-断言失败) | Assertion failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000003](../errorcode-uitest.md#17000003-断言失败) |
 
 **示例**
 
@@ -75,39 +75,45 @@ async function demo() {
 
 ## click
 
+ArkTS-Dyn:
+```TypeScript
+click(x: number, y: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 click(x: int, y: int): Promise<void>
 ```
 
 在目标坐标点单击。仅支持在设备默认屏幕上操作，如需指定屏幕请使用[clickAt](#clickat)。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-click(x: int, y: int): Promise<void>--><!--Device-Driver-click(x: int, y: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| x | int | 是 | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
-| y | int | 是 | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| x | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| y | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -163,32 +169,32 @@ clickAt(point: Point): Promise<void>
 
 在目标坐标点进行单击。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-clickAt(point: Point): Promise<void>--><!--Device-Driver-clickAt(point: Point): Promise<void>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| point | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入目标点信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -212,31 +218,31 @@ clickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Driver-clickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>--><!--Device-Driver-clickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>-End-->
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| point | [Point](arkts-test-uitest-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
-| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 单击操作的选项。 只有''属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 <br>默认值：参考TouchOptions的默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 |
+| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -262,25 +268,25 @@ static create(): Driver
 
 静态方法，构造一个Driver对象，并返回该对象。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-static create(): Driver--><!--Device-Driver-static create(): Driver-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Driver](arkts-test-uitest-driver-c.md) | 返回构造的Driver对象。 |
+| 类型 |
+| --- |
+| [Driver](arkts-test-uitest-driver-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000001](../errorcode-uitest.md#17000001-初始化失败) | Initialization failed. |
+| 错误码ID |
+| --- |
+| [17000001](../errorcode-uitest.md#17000001-初始化失败) |
 
 **示例**
 
@@ -319,25 +325,25 @@ createUIEventObserver(): UIEventObserver
 
 创建一个UI事件监听器。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-createUIEventObserver(): UIEventObserver--><!--Device-Driver-createUIEventObserver(): UIEventObserver-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [UIEventObserver](arkts-test-uitest-uieventobserver-i.md) | 返回找到的目标窗口对象。 |
+| 类型 |
+| --- |
+| [UIEventObserver](arkts-test-uitest-uieventobserver-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -353,40 +359,46 @@ async function demo() {
 
 ## crownRotate
 
+ArkTS-Dyn:
+```TypeScript
+crownRotate(d: number, speed?: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 crownRotate(d: int, speed?: int): Promise<void>
 ```
 
 注入手表表冠旋转事件，可指定旋转速度。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-crownRotate(d: int, speed?: int): Promise<void>--><!--Device-Driver-crownRotate(d: int, speed?: int): Promise<void>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| d | int | 是 | 手表表冠旋转的格数，正值表示顺时针旋转，负值表示逆时针旋转，取值需为整数。 |
-| speed | int | 否 | 手表表冠旋转的格数，正值表示顺时针旋转，负值表示逆时针旋转，取值需为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| speed | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -405,38 +417,44 @@ async function demo() {
 
 ## delayMs
 
+ArkTS-Dyn:
+```TypeScript
+delayMs(duration: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 delayMs(duration: int): Promise<void>
 ```
 
 在给定的时间内延时。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-delayMs(duration: int): Promise<void>--><!--Device-Driver-delayMs(duration: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| duration | int | 是 | 给定的时间，单位：ms，取值范围：大于等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| duration | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -462,39 +480,45 @@ async function demo() {
 
 ## doubleClick
 
+ArkTS-Dyn:
+```TypeScript
+doubleClick(x: number, y: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 doubleClick(x: int, y: int): Promise<void>
 ```
 
 在目标坐标点双击。仅支持在设备默认屏幕上操作，如需指定屏幕请使用[doubleClickAt](#doubleclickat)。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-doubleClick(x: int, y: int): Promise<void>--><!--Device-Driver-doubleClick(x: int, y: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| x | int | 是 | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
-| y | int | 是 | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| x | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| y | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -550,32 +574,32 @@ doubleClickAt(point: Point): Promise<void>
 
 对目标坐标进行双击。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-doubleClickAt(point: Point): Promise<void>--><!--Device-Driver-doubleClickAt(point: Point): Promise<void>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| point | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入目标点信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -591,42 +615,48 @@ async function demo() {
 
 ## drag
 
+ArkTS-Dyn:
+```TypeScript
+drag(startx: number, starty: number, endx: number, endy: number, speed?: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 drag(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>
 ```
 
 从起始坐标点拖拽至目的坐标点。仅支持在设备默认屏幕上操作，不支持自定义拖拽前长按时长，如需指定屏幕或长按时长请使用[dragBetween](#dragbetween)。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-drag(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>--><!--Device-Driver-drag(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| startx | int | 是 | 以number的形式传入起始点的横坐标信息，取值范围：大于等于0的整数。 |
-| starty | int | 是 | 以number的形式传入起始点的纵坐标信息，取值范围：大于等于0的整数。 |
-| endx | int | 是 | 以number的形式传入目的点的横坐标信息，取值范围：大于等于0的整数。 |
-| endy | int | 是 | 以number的形式传入目的点的纵坐标信息，取值范围：大于等于0的整数。 |
-| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| startx | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| starty | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| endx | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| endy | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| speed | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -642,41 +672,47 @@ async function demo() {
 
 ## dragBetween
 
+ArkTS-Dyn:
+```TypeScript
+dragBetween(from: Point, to: Point, speed?: number, duration?: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 dragBetween(from: Point, to: Point, speed?: int, duration?: int): Promise<void>
 ```
 
 从起始坐标点拖拽至目标坐标点，支持指定拖拽速度和拖拽前长按时间。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-dragBetween(from: Point, to: Point, speed?: int, duration?: int): Promise<void>--><!--Device-Driver-dragBetween(from: Point, to: Point, speed?: int, duration?: int): Promise<void>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。   **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
-| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错误码。 |
-| duration | int | 否 | 拖拽前长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出17000007错误码，为null或undefined时使用默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 |
+| speed | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| duration | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -700,32 +736,32 @@ dragBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Driver-dragBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<void>--><!--Device-Driver-dragBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<void>-End-->
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 | 手指离开屏幕的坐标点。 |
-| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 拖动操作的选项。 只有“压力”、“速度”和“持续时间”属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 <br>默认值：参考TouchOptions的默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 |
+| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -747,6 +783,12 @@ async function demo() {
 
 ## dumpLayout
 
+ArkTS-Dyn:
+```TypeScript
+dumpLayout(savePath: string, displayId?: number): Promise<boolean>
+```
+
+ArkTS-Sta:
 ```TypeScript
 dumpLayout(savePath: string, displayId?: int): Promise<boolean>
 ```
@@ -755,31 +797,31 @@ Get the current layout information and save as file with json format.
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Driver-dumpLayout(savePath: string, displayId?: int): Promise<boolean>--><!--Device-Driver-dumpLayout(savePath: string, displayId?: int): Promise<boolean>-End-->
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| savePath | string | 是 | the path where to store the json, must be in the application sandbox directory. The path must be the [sandbox path](../../../file-management/app-sandbox-directory.md) of the current application. |
-| displayId | int | 否 | the Id of the specified display, default is the displayId of the main screen. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| savePath | string | 是 |
+| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | true if dump layout and file-storing are completed successfully,false otherwise. |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -804,30 +846,30 @@ findComponent(on: On): Promise<Component>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Driver-findComponent(on: On): Promise<Component>--><!--Device-Driver-findComponent(on: On): Promise<Component>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; | Promise对象，返回控件对象。 |
+| 类型 |
+| --- |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -871,28 +913,28 @@ Find the first matched [Component](arkts-test-uitest-component-c.md) on current 
 
 **起始版本：** 23
 
-<!--Device-Driver-findComponent(on: On): Promise<Component | null>--><!--Device-Driver-findComponent(on: On): Promise<Component | null>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md). |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Component](arkts-test-uitest-component-c.md) \| null&gt; | the first matched { |
+| 类型 |
+| --- |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md) \| null & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -908,30 +950,30 @@ findComponents(on: On): Promise<Array<Component>>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Driver-findComponents(on: On): Promise<Array<Component>>--><!--Device-Driver-findComponents(on: On): Promise<Array<Component>>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[Component](arkts-test-uitest-component-c.md)&gt;&gt; | Promise对象，返回控件对象的列表。 |
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;[Component](arkts-test-uitest-component-c.md)&gt;&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -975,28 +1017,28 @@ Find all the matched [Component](arkts-test-uitest-component-c.md)s on current U
 
 **起始版本：** 23
 
-<!--Device-Driver-findComponents(on: On): Promise<Array<Component> | null>--><!--Device-Driver-findComponents(on: On): Promise<Array<Component> | null>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md). |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[Component](arkts-test-uitest-component-c.md)&gt; \| null&gt; | the matched { |
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;[Component](arkts-test-uitest-component-c.md)&gt; \| null & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -1012,30 +1054,30 @@ findWindow(filter: WindowFilter): Promise<UiWindow>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Driver-findWindow(filter: WindowFilter): Promise<UiWindow>--><!--Device-Driver-findWindow(filter: WindowFilter): Promise<UiWindow>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | 是 | 目标窗口的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[UiWindow](arkts-test-uitest-uiwindow-c.md)&gt; | Promise对象，返回目标窗口对象。 |
+| 类型 |
+| --- |
+| Promise&lt;[UiWindow](arkts-test-uitest-uiwindow-c.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -1069,28 +1111,28 @@ Find the first matched [UiWindow](arkts-test-uitest-uiwindow-c.md) window.
 
 **起始版本：** 23
 
-<!--Device-Driver-findWindow(filter: WindowFilter): Promise<UiWindow | null>--><!--Device-Driver-findWindow(filter: WindowFilter): Promise<UiWindow | null>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | 是 | the filter condition of the target [UiWindow](arkts-test-uitest-uiwindow-c.md). |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[UiWindow](arkts-test-uitest-uiwindow-c.md) \| null&gt; | the first matched { |
+| 类型 |
+| --- |
+| Promise&lt;[UiWindow](arkts-test-uitest-uiwindow-c.md) \| null & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -1098,41 +1140,47 @@ Find the first matched [UiWindow](arkts-test-uitest-uiwindow-c.md) window.
 
 ## fling
 
+ArkTS-Dyn:
+```TypeScript
+fling(from: Point, to: Point, stepLen: number, speed: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 fling(from: Point, to: Point, stepLen: int, speed: int): Promise<void>
 ```
 
 模拟手指滑动后脱离屏幕的快速滑动操作。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-fling(from: Point, to: Point, stepLen: int, speed: int): Promise<void>--><!--Device-Driver-fling(from: Point, to: Point, stepLen: int, speed: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 | 手指接触屏幕的起始点坐标。 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 | 手指离开屏幕时的坐标点。 |
-| stepLen | int | 是 | 间隔距离，取值大于等于0的整数，单位：px。 |
-| speed | int | 是 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数时设为默认值600。为负数时抛出401错误码。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 |
+| stepLen | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| speed | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -1168,39 +1216,45 @@ async function demo() {
 
 ## fling
 
+ArkTS-Dyn:
+```TypeScript
+fling(direction: UiDirection, speed: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 fling(direction: UiDirection, speed: int): Promise<void>
 ```
 
 指定方向和滑动速率，模拟手指滑动后脱离屏幕的快速滑动操作。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-fling(direction: UiDirection, speed: int): Promise<void>--><!--Device-Driver-fling(direction: UiDirection, speed: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | 是 | 进行抛滑的方向。 |
-| speed | int | 是 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数时设为默认值600。为负数时抛出401错误码。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | 是 |
+| speed | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -1208,40 +1262,46 @@ fling(direction: UiDirection, speed: int): Promise<void>
 
 ## fling
 
+ArkTS-Dyn:
+```TypeScript
+fling(direction: UiDirection, speed: number, displayId: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 fling(direction: UiDirection, speed: int, displayId: int): Promise<void>
 ```
 
 指定方向、滑动速率和操作屏幕，模拟手指滑动后脱离屏幕的快速滑动操作。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-fling(direction: UiDirection, speed: int, displayId: int): Promise<void>--><!--Device-Driver-fling(direction: UiDirection, speed: int, displayId: int): Promise<void>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | 是 | 进行抛滑的方向。 |
-| speed | int | 是 | 滑动速率，取值范围为200-40000，默认值为600，单位：px/s。为不在范围内的非负数时设为默认值600。为负数时抛出401错误码。 |
-| displayId | int | 是 | 指定设备屏幕ID。取值范围：大于等于0的整数。 **说明：** 传入displayId不存在时，将抛出17000007异常。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | 是 |
+| speed | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -1255,25 +1315,25 @@ getDisplayDensity(): Promise<Point>
 
 获取当前设备屏幕的分辨率。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-getDisplayDensity(): Promise<Point>--><!--Device-Driver-getDisplayDensity(): Promise<Point>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; | Promise对象，返回Point对象，当前设备屏幕的分辨率为Point.x*Point.y。 |
+| 类型 |
+| --- |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -1299,38 +1359,44 @@ async function demo() {
 
 ## getDisplayDensity
 
+ArkTS-Dyn:
+```TypeScript
+getDisplayDensity(displayId: number): Promise<Point>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getDisplayDensity(displayId: int): Promise<Point>
 ```
 
 获取当前设备指定屏幕的分辨率。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-getDisplayDensity(displayId: int): Promise<Point>--><!--Device-Driver-getDisplayDensity(displayId: int): Promise<Point>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| displayId | int | 是 | 指定设备屏幕ID。取值范围：大于等于0的整数。   **说明：** 传入displayId不存在时，将抛出17000007异常。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; | Promise对象，返回Point对象，当前设备指定屏幕的分辨率为Point.x*Point.y。 |
+| 类型 |
+| --- |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -1344,25 +1410,25 @@ getDisplayRotation(): Promise<DisplayRotation>
 
 获取当前设备的屏幕显示方向。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-getDisplayRotation(): Promise<DisplayRotation>--><!--Device-Driver-getDisplayRotation(): Promise<DisplayRotation>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[DisplayRotation](arkts-test-uitest-displayrotation-e.md)&gt; | Promise对象，返回当前设备的显示方向。 |
+| 类型 |
+| --- |
+| Promise&lt;[DisplayRotation](arkts-test-uitest-displayrotation-e.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -1388,38 +1454,44 @@ async function demo() {
 
 ## getDisplayRotation
 
+ArkTS-Dyn:
+```TypeScript
+getDisplayRotation(displayId: number): Promise<DisplayRotation>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getDisplayRotation(displayId: int): Promise<DisplayRotation>
 ```
 
 获取当前设备指定屏幕的显示方向。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-getDisplayRotation(displayId: int): Promise<DisplayRotation>--><!--Device-Driver-getDisplayRotation(displayId: int): Promise<DisplayRotation>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| displayId | int | 是 | 指定设备屏幕ID。取值范围：大于等于0的整数。   **说明：** 传入displayId不存在时，将抛出17000007异常。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[DisplayRotation](arkts-test-uitest-displayrotation-e.md)&gt; | Promise对象，返回指定屏幕的显示方向。 |
+| 类型 |
+| --- |
+| Promise&lt;[DisplayRotation](arkts-test-uitest-displayrotation-e.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -1433,25 +1505,25 @@ getDisplaySize(): Promise<Point>
 
 获取当前设备的屏幕大小。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-getDisplaySize(): Promise<Point>--><!--Device-Driver-getDisplaySize(): Promise<Point>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; | Promise对象，返回Point对象，当前设备屏幕的大小为Point.x * Point.y。 |
+| 类型 |
+| --- |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -1477,38 +1549,44 @@ async function demo() {
 
 ## getDisplaySize
 
+ArkTS-Dyn:
+```TypeScript
+getDisplaySize(displayId: number): Promise<Point>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getDisplaySize(displayId: int): Promise<Point>
 ```
 
 获取当前设备指定屏幕的大小。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-getDisplaySize(displayId: int): Promise<Point>--><!--Device-Driver-getDisplaySize(displayId: int): Promise<Point>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| displayId | int | 是 | 指定设备屏幕ID。取值范围：大于等于0的整数。 **说明：** 传入displayId不存在时，将抛出17000007异常。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; | Promise对象，返回Point对象，当前设备指定屏幕的大小为Point.x * Point.y。 |
+| 类型 |
+| --- |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -1516,6 +1594,12 @@ getDisplaySize(displayId: int): Promise<Point>
 
 ## injectKnucklePointerAction
 
+ArkTS-Dyn:
+```TypeScript
+injectKnucklePointerAction(pointers: PointerMatrix, speed?: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>
 ```
@@ -1523,36 +1607,36 @@ injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>
 模拟指关节多点注入滑动操作。使用Promise异步回调。
 
 > **说明：**&gt;
-> 若设备关闭了指关节手势<!--RP4--><!--RP4End-->，则调用本接口返回17000005错误码。
+> 若设备关闭了指关节手势，则调用本接口返回17000005错误码。
 
-**起始版本：** 23
+**起始版本：** 22
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>--><!--Device-Driver-injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | 是 | 滑动轨迹，包括操作手指个数和滑动坐标序列。   **说明：**当前仅支持单指操作，PointerMatrix中的操作手指个数fingers必须设置为1。 |
-| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错误码。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | 是 |
+| speed | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -1576,39 +1660,45 @@ async function demo() {
 
 ## injectMultiPointerAction
 
+ArkTS-Dyn:
+```TypeScript
+injectMultiPointerAction(pointers: PointerMatrix, speed?: number): Promise<boolean>
+```
+
+ArkTS-Sta:
 ```TypeScript
 injectMultiPointerAction(pointers: PointerMatrix, speed?: int): Promise<boolean>
 ```
 
 向设备注入多指操作。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-injectMultiPointerAction(pointers: PointerMatrix, speed?: int): Promise<boolean>--><!--Device-Driver-injectMultiPointerAction(pointers: PointerMatrix, speed?: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | 是 | 滑动轨迹，包括操作手指个数和滑动坐标序列。 |
-| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | 是 |
+| speed | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回操作是否成功完成。true：完成，false：未完成。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -1640,40 +1730,46 @@ async function demo() {
 
 ## injectPenPointerAction
 
+ArkTS-Dyn:
+```TypeScript
+injectPenPointerAction(pointers: PointerMatrix, speed?: number, pressure?: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 injectPenPointerAction(pointers: PointerMatrix, speed?: int, pressure?: double): Promise<void>
 ```
 
 模拟手写笔多点连续注入操作。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-injectPenPointerAction(pointers: PointerMatrix, speed?: int, pressure?: double): Promise<void>--><!--Device-Driver-injectPenPointerAction(pointers: PointerMatrix, speed?: int, pressure?: double): Promise<void>-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | 是 | 滑动轨迹，包括操作手指个数和滑动坐标序列。   **说明：**当前仅支持单指操作，PointerMatrix中的操作手指个数fingers必须设置为1。 |
-| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
-| pressure | double | 否 | 手写笔多点连续注入的压力，默认为1.0，取值范围为0.0到1.0。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | 是 |
+| speed | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| pressure | ArkTS-Dyn: number<br>ArkTS-Sta：double | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [401](../../errorcode-universal.md#401-参数检查失败) |  |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1702,33 +1798,33 @@ inputText(p: Point, text: string): Promise<void>
 
 在指定坐标点输入文本，不清空组件内原有文本，直接在坐标处追加输入。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-inputText(p: Point, text: string): Promise<void>--><!--Device-Driver-inputText(p: Point, text: string): Promise<void>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | 是 | 输入文本的坐标点。 |
-| text | string | 是 | 输入的文本信息，当前支持英文、中文和特殊字符。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 |
+| text | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -1814,35 +1910,35 @@ inputText(p: Point, text: string, mode: InputTextMode): Promise<void>
 
 在指定坐标点输入文本，支持指定文本输入方式。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-inputText(p: Point, text: string, mode: InputTextMode): Promise<void>--><!--Device-Driver-inputText(p: Point, text: string, mode: InputTextMode): Promise<void>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | 是 | 输入文本的坐标点。 |
-| text | string | 是 | 输入的文本信息，当前支持英文、中文和特殊字符。 |
-| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | 是 | 输入文本的方式，取值请参考[InputTextMode](arkts-test-uitest-inputtextmode-i.md)。   **说明：**InputTextMode.addition取值为true时，将光标移动至文本末尾后输入指定文本。取值为false时，将在坐标点位置输入指定文本。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 |
+| text | string | 是 |
+| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |  |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 **示例**
 
@@ -1850,42 +1946,48 @@ inputText(p: Point, text: string, mode: InputTextMode): Promise<void>
 
 ## isComponentPresentWhenDrag
 
+ArkTS-Dyn:
+```TypeScript
+isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: number, duration?: number): Promise<boolean>
+```
+
+ArkTS-Sta:
 ```TypeScript
 isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: int, duration?: int): Promise<boolean>
 ```
 
 从起始点拖拽至终止点，并查找目标控件是否存在。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 22
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: int, duration?: int): Promise<boolean>--><!--Device-Driver-isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: int, duration?: int): Promise<boolean>-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。   **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
-| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错误码。 |
-| duration | int | 否 | 拖拽前长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出17000007错误码，为null或undefined时使用默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 |
+| speed | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| duration | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回拖拽操作期间目标控件是否存在。true：存在。false：不存在。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -1901,40 +2003,46 @@ async function demo() {
 
 ## isComponentPresentWhenLongClick
 
+ArkTS-Dyn:
+```TypeScript
+isComponentPresentWhenLongClick(on: On, point: Point, duration?: number): Promise<boolean>
+```
+
+ArkTS-Sta:
 ```TypeScript
 isComponentPresentWhenLongClick(on: On, point: Point, duration?: int): Promise<boolean>
 ```
 
 在坐标点长按，并查找目标控件是否存在。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 22
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-isComponentPresentWhenLongClick(on: On, point: Point, duration?: int): Promise<boolean>--><!--Device-Driver-isComponentPresentWhenLongClick(on: On, point: Point, duration?: int): Promise<boolean>-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
-| point | [Point](arkts-test-uitest-point-i.md) | 是 | 长按的坐标点。 |
-| duration | int | 否 | 长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出17000007错误码，为null或undefined时使用默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 |
+| duration | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回长按操作期间目标控件是否存在。true：存在。false：不存在。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -1950,41 +2058,47 @@ async function demo() {
 
 ## isComponentPresentWhenSwipe
 
+ArkTS-Dyn:
+```TypeScript
+isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: number): Promise<boolean>
+```
+
+ArkTS-Sta:
 ```TypeScript
 isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: int): Promise<boolean>
 ```
 
 从起始点滑向终止点，并查找目标控件是否存在。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 22
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: int): Promise<boolean>--><!--Device-Driver-isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: int): Promise<boolean>-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。   **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
-| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错误码。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 |
+| speed | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回滑动操作期间目标控件是否存在。true：存在。false：不存在。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -2000,6 +2114,12 @@ async function demo() {
 
 ## knuckleKnock
 
+ArkTS-Dyn:
+```TypeScript
+knuckleKnock(pointers: Array<Point>, times: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 knuckleKnock(pointers: Array<Point>, times: int): Promise<void>
 ```
@@ -2007,36 +2127,36 @@ knuckleKnock(pointers: Array<Point>, times: int): Promise<void>
 模拟指关节敲击屏幕操作。使用Promise异步回调。
 
 > **说明：**&gt;
-> 若设备关闭了指关节手势<!--RP4--><!--RP4End-->，则调用本接口返回17000005错误码。
+> 若设备关闭了指关节手势，则调用本接口返回17000005错误码。
 
-**起始版本：** 23
+**起始版本：** 22
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-knuckleKnock(pointers: Array<Point>, times: int): Promise<void>--><!--Device-Driver-knuckleKnock(pointers: Array<Point>, times: int): Promise<void>-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pointers | Array&lt;[Point](arkts-test-uitest-point-i.md)&gt; | 是 | 指关节敲击屏幕坐标点的数组，数组长度取值为1或2。 |
-| times | int | 是 | 指关节连续敲击屏幕的次数，取值为1或2。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pointers | Array&lt;[Point](arkts-test-uitest-point-i.md)&gt; | 是 |
+| times | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -2054,39 +2174,45 @@ async function demo() {
 
 ## longClick
 
+ArkTS-Dyn:
+```TypeScript
+longClick(x: number, y: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 longClick(x: int, y: int): Promise<void>
 ```
 
 在目标坐标点长按。仅支持在设备默认屏幕上操作且不支持自定义长按时长，如需指定屏幕或长按时长请使用[longClickAt](#longclickat)。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-longClick(x: int, y: int): Promise<void>--><!--Device-Driver-longClick(x: int, y: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| x | int | 是 | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
-| y | int | 是 | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| x | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| y | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -2136,39 +2262,45 @@ async function demo() {
 
 ## longClickAt
 
+ArkTS-Dyn:
+```TypeScript
+longClickAt(point: Point, duration?: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 longClickAt(point: Point, duration?: int): Promise<void>
 ```
 
 长按目标坐标点，支持指定长按时长。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-longClickAt(point: Point, duration?: int): Promise<void>--><!--Device-Driver-longClickAt(point: Point, duration?: int): Promise<void>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| point | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入目标点信息。 |
-| duration | int | 否 | 长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出17000007错误码，为null或undefined时使用默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 |
+| duration | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 ## longClickAtWithOptions
 
@@ -2180,31 +2312,31 @@ longClickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Driver-longClickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>--><!--Device-Driver-longClickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>-End-->
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| point | [Point](arkts-test-uitest-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
-| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 用于长单击操作的选项。 只有“持续时间”和“压力”属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 <br>默认值：参考TouchOptions的默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 |
+| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -2225,41 +2357,47 @@ async function demo() {
 
 ## mouseClick
 
+ArkTS-Dyn:
+```TypeScript
+mouseClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 mouseClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>
 ```
 
 在指定坐标点注入鼠标点击动作，支持同时按下对应键盘组合键。使用Promise异步回调。例如，Key值为2072时，按下Ctrl并进行鼠标点击动作。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-mouseClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>--><!--Device-Driver-mouseClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标点击的坐标。 |
-| btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
-| key1 | int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。<br>**起始版本：** 11 |
-| key2 | int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 |
+| btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 |
+| [key1](arkts-test-uitest-keyoptions-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| [key2](arkts-test-uitest-keyoptions-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -2275,41 +2413,47 @@ async function demo() {
 
 ## mouseDoubleClick
 
+ArkTS-Dyn:
+```TypeScript
+mouseDoubleClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 mouseDoubleClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>
 ```
 
 在指定坐标点注入鼠标双击动作，支持同时按下对应键盘组合键。使用Promise异步回调。例如，Key值为2072时，按下Ctrl并进行鼠标双击动作。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-mouseDoubleClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>--><!--Device-Driver-mouseDoubleClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标双击的坐标。 |
-| btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
-| key1 | int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值0。 |
-| key2 | int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值0。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 |
+| btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 |
+| [key1](arkts-test-uitest-keyoptions-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| [key2](arkts-test-uitest-keyoptions-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -2333,32 +2477,32 @@ mouseDrag(from: Point, to: Point, speed?: number): Promise<void>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-Driver-mouseDrag(from: Point, to: Point, speed?: number): Promise<void>--><!--Device-Driver-mouseDrag(from: Point, to: Point, speed?: number): Promise<void>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 | 起始点坐标。 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 | 终点坐标。 |
-| speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码 。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 |
+| speed | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -2384,41 +2528,47 @@ async function demo() {
 
 ## mouseDrag
 
+ArkTS-Dyn:
+```TypeScript
+mouseDrag(from: Point, to: Point, speed?: number, duration?: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 mouseDrag(from: Point, to: Point, speed?: int, duration?: int): Promise<void>
 ```
 
 鼠标按住鼠标左键从起始坐标点拖拽至终点坐标点，支持指定拖拽速度和拖拽前长按时间。使用Promise异步回调。 对于 API version 26.0.0 之前的版本，该接口不支持鼠标跨屏拖拽操作，起始点与终点需属于同一屏幕，否则将抛出401错误码； 从 API version 26.0.0 开始，该接口支持鼠标跨屏拖拽操作。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-mouseDrag(from: Point, to: Point, speed?: int, duration?: int): Promise<void>--><!--Device-Driver-mouseDrag(from: Point, to: Point, speed?: int, duration?: int): Promise<void>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 | 起始点坐标。 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 | 终点坐标。 |
-| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
-| duration | int | 否 | 拖拽前长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出401错误码，为null或undefined时使用默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 |
+| speed | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| duration | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -2434,33 +2584,33 @@ mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOpt
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Driver-mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOptions?: KeyOptions): Promise<void>--><!--Device-Driver-mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOptions?: KeyOptions): Promise<void>-End-->
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 | 起点。 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 | 终点。 |
-| touchOptions | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 速度和持续时间设置的触摸选项。 在此方法中，只有“速度”和“持续时间”属性有效。 设置其他属性会导致BusinessError 17000007。 <br>默认值：参考TouchOptions的默认值。 |
-| keyOptions | [KeyOptions](arkts-test-uitest-keyoptions-i.md) | 否 | 拖动期间要按的键代码的键选项。 <br>默认值：参考keyOptions的默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 |
+| touchOptions | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 |
+| keyOptions | [KeyOptions](arkts-test-uitest-keyoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -2493,33 +2643,33 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Prom
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-Driver-mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>--><!--Device-Driver-mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标长按的坐标。 |
-| btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
-| key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。 |
-| key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 |
+| btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 |
+| [key1](arkts-test-uitest-keyoptions-i.md) | number | 否 |
+| [key2](arkts-test-uitest-keyoptions-i.md) | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -2545,42 +2695,48 @@ async function demo() {
 
 ## mouseLongClick
 
+ArkTS-Dyn:
+```TypeScript
+mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number, duration?: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: int): Promise<void>
 ```
 
 在指定坐标点注入鼠标长按动作，支持同时按下对应键盘组合键，支持指定长按时长。使用Promise异步回调。例如，Key值为2072时，按下Ctrl并进行鼠标长按动作。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: int): Promise<void>--><!--Device-Driver-mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: int): Promise<void>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标长按的坐标。 |
-| btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
-| key1 | int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
-| key2 | int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
-| duration | int | 否 | 长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出401错误码，为null或undefined时使用默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 |
+| btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 |
+| [key1](arkts-test-uitest-keyoptions-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| [key2](arkts-test-uitest-keyoptions-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| duration | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -2594,32 +2750,32 @@ mouseMoveTo(p: Point): Promise<void>
 
 将鼠标光标移到目标点。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-mouseMoveTo(p: Point): Promise<void>--><!--Device-Driver-mouseMoveTo(p: Point): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | 是 | 目标点的坐标。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -2635,40 +2791,46 @@ async function demo() {
 
 ## mouseMoveWithTrack
 
+ArkTS-Dyn:
+```TypeScript
+mouseMoveWithTrack(from: Point, to: Point, speed?: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 mouseMoveWithTrack(from: Point, to: Point, speed?: int): Promise<void>
 ```
 
 鼠标从起始坐标点滑向终点坐标点。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-mouseMoveWithTrack(from: Point, to: Point, speed?: int): Promise<void>--><!--Device-Driver-mouseMoveWithTrack(from: Point, to: Point, speed?: int): Promise<void>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 | 起始点坐标。 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 | 终点坐标。 |
-| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 |
+| speed | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -2692,34 +2854,34 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): P
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-Driver-mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): Promise<void>--><!--Device-Driver-mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): Promise<void>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标点击的坐标。 |
-| down | boolean | 是 | 滚轮滑动方向是否向下。true表示向下滑动。false表示向上滚动。 |
-| d | number | 是 | 鼠标滚轮滚动的格数，取值大于等于0的整数，每格对应目标点位移120px。 |
-| key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。<br>**起始版本：** 11 |
-| key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 |
+| down | boolean | 是 |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
+| [key1](arkts-test-uitest-keyoptions-i.md) | number | 否 |
+| [key2](arkts-test-uitest-keyoptions-i.md) | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -2745,43 +2907,49 @@ async function demo() {
 
 ## mouseScroll
 
+ArkTS-Dyn:
+```TypeScript
+mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number, speed?: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 mouseScroll(p: Point, down: boolean, d: int, key1?: int, key2?: int, speed?: int): Promise<void>
 ```
 
 在指定坐标点注入鼠标滚轮滑动动作，支持同时按下对应键盘组合键并且指定滑动速度。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-mouseScroll(p: Point, down: boolean, d: int, key1?: int, key2?: int, speed?: int): Promise<void>--><!--Device-Driver-mouseScroll(p: Point, down: boolean, d: int, key1?: int, key2?: int, speed?: int): Promise<void>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标点击的坐标。 |
-| down | boolean | 是 | 滚轮滑动方向是否向下。true表示向下滑动。false表示向上滚动。 |
-| d | int | 是 | 鼠标滚轮滚动的格数，取值大于等于0的整数，每格对应目标点位移120px。 |
-| key1 | int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
-| key2 | int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
-| speed | int | 否 | 鼠标滚轮滚动的速度，范围：1-500的整数，单位：格/秒。为不在范围内的非负数或为null/undefined时设为默认值20。为负数时抛出401错误码。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 |
+| down | boolean | 是 |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [key1](arkts-test-uitest-keyoptions-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| [key2](arkts-test-uitest-keyoptions-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| speed | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -2795,32 +2963,32 @@ penClick(point: Point): Promise<void>
 
 模拟手写笔点击操作。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-penClick(point: Point): Promise<void>--><!--Device-Driver-penClick(point: Point): Promise<void>-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| point | [Point](arkts-test-uitest-point-i.md) | 是 | 点击的坐标点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [401](../../errorcode-universal.md#401-参数检查失败) |  |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -2842,32 +3010,32 @@ penDoubleClick(point: Point): Promise<void>
 
 模拟手写笔双击操作。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-penDoubleClick(point: Point): Promise<void>--><!--Device-Driver-penDoubleClick(point: Point): Promise<void>-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| point | [Point](arkts-test-uitest-point-i.md) | 是 | 双击的坐标点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [401](../../errorcode-universal.md#401-参数检查失败) |  |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -2883,39 +3051,45 @@ async function demo() {
 
 ## penLongClick
 
+ArkTS-Dyn:
+```TypeScript
+penLongClick(point: Point, pressure?: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 penLongClick(point: Point, pressure?: double): Promise<void>
 ```
 
 模拟手写笔长按操作。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-penLongClick(point: Point, pressure?: double): Promise<void>--><!--Device-Driver-penLongClick(point: Point, pressure?: double): Promise<void>-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| point | [Point](arkts-test-uitest-point-i.md) | 是 | 长按的坐标点。 |
-| pressure | double | 否 | 手写笔滑动操作的压力，默认为1.0，取值范围为0.0到1.0。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 |
+| pressure | ArkTS-Dyn: number<br>ArkTS-Sta：double | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [401](../../errorcode-universal.md#401-参数检查失败) |  |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -2931,41 +3105,47 @@ async function demo() {
 
 ## penSwipe
 
+ArkTS-Dyn:
+```TypeScript
+penSwipe(startPoint: Point, endPoint: Point, speed?: number, pressure?: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 penSwipe(startPoint: Point, endPoint: Point, speed?: int, pressure?: double): Promise<void>
 ```
 
 模拟手写笔的滑动操作。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-penSwipe(startPoint: Point, endPoint: Point, speed?: int, pressure?: double): Promise<void>--><!--Device-Driver-penSwipe(startPoint: Point, endPoint: Point, speed?: int, pressure?: double): Promise<void>-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| startPoint | [Point](arkts-test-uitest-point-i.md) | 是 | 起始位置的坐标点。 |
-| endPoint | [Point](arkts-test-uitest-point-i.md) | 是 | 结束位置的坐标点。 |
-| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
-| pressure | double | 否 | 手写笔滑动操作的压力，默认为1.0，取值范围为0.0到1.0。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| startPoint | [Point](arkts-test-uitest-point-i.md) | 是 |
+| endPoint | [Point](arkts-test-uitest-point-i.md) | 是 |
+| speed | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| pressure | ArkTS-Dyn: number<br>ArkTS-Sta：double | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [401](../../errorcode-universal.md#401-参数检查失败) |  |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -2987,25 +3167,25 @@ pressBack(): Promise<void>
 
 进行点击BACK键的操作。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-pressBack(): Promise<void>--><!--Device-Driver-pressBack(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -3041,38 +3221,44 @@ async function demo() {
 
 ## pressBack
 
+ArkTS-Dyn:
+```TypeScript
+pressBack(displayId: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 pressBack(displayId: int): Promise<void>
 ```
 
 对指定屏幕进行点击BACK键的操作。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-pressBack(displayId: int): Promise<void>--><!--Device-Driver-pressBack(displayId: int): Promise<void>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| displayId | int | 是 | 指定的屏幕ID，取值范围：大于等于0的整数。 **说明：** 传入displayId不存在时，将抛出17000007异常。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -3086,25 +3272,25 @@ pressHome(): Promise<void>
 
 设备注入返回桌面操作。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-pressHome(): Promise<void>--><!--Device-Driver-pressHome(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -3130,38 +3316,44 @@ async function demo() {
 
 ## pressHome
 
+ArkTS-Dyn:
+```TypeScript
+pressHome(displayId: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 pressHome(displayId: int): Promise<void>
 ```
 
 设备指定屏幕上注入返回桌面操作。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-pressHome(displayId: int): Promise<void>--><!--Device-Driver-pressHome(displayId: int): Promise<void>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| displayId | int | 是 | 指定设备屏幕ID。取值范围：大于等于0的整数。   **说明：** 传入displayId不存在时，将抛出17000007异常。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -3175,32 +3367,32 @@ screenCap(savePath: string): Promise<boolean>
 
 捕获当前屏幕，并保存为PNG格式的图片至给出的保存路径中。使用Promise异步回调。适用于支持截屏的场景。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-screenCap(savePath: string): Promise<boolean>--><!--Device-Driver-screenCap(savePath: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| savePath | string | 是 | 文件保存路径。路径需为当前应用的[沙箱路径](../../../file-management/app-sandbox-directory.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| savePath | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回截图操作是否成功完成。true：完成，false：未完成。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -3236,39 +3428,45 @@ async function demo() {
 
 ## screenCap
 
+ArkTS-Dyn:
+```TypeScript
+screenCap(savePath: string, displayId: number): Promise<boolean>
+```
+
+ArkTS-Sta:
 ```TypeScript
 screenCap(savePath: string, displayId: int): Promise<boolean>
 ```
 
 捕获指定屏幕，并保存为PNG格式的图片至给出的保存路径中。使用Promise异步回调。适用于支持截屏的场景。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-screenCap(savePath: string, displayId: int): Promise<boolean>--><!--Device-Driver-screenCap(savePath: string, displayId: int): Promise<boolean>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| savePath | string | 是 | 文件保存路径。路径需为当前应用的[沙箱路径](../../../file-management/app-sandbox-directory.md)。 |
-| displayId | int | 是 | 指定设备屏幕ID。取值范围：大于等于0的整数。 **说明：** 传入displayId不存在时，将抛出17000007异常。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| savePath | string | 是 |
+| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回截图操作是否成功完成。true：完成。false：未完成。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -3282,33 +3480,33 @@ screenCapture(savePath: string, rect?: Rect): Promise<boolean>
 
 捕获当前屏幕的指定区域，并保存为PNG格式的图片至给出的保存路径中。使用Promise异步回调。适用于支持截屏的场景。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-screenCapture(savePath: string, rect?: Rect): Promise<boolean>--><!--Device-Driver-screenCapture(savePath: string, rect?: Rect): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| savePath | string | 是 | 文件保存路径。路径需为当前应用的[沙箱路径](../../../file-management/app-sandbox-directory.md)。 |
-| rect | [Rect](arkts-test-uitest-rect-i.md) | 否 | 截图区域，默认为全屏。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| savePath | string | 是 |
+| rect | [Rect](arkts-test-uitest-rect-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回截图操作是否成功完成。true：成功完成，false：未成功完成。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -3335,32 +3533,32 @@ setDisplayRotation(rotation: DisplayRotation): Promise<void>
 
 将当前场景的显示方向设置为指定的显示方向。使用Promise异步回调。适用于可旋转的应用场景。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-setDisplayRotation(rotation: DisplayRotation): Promise<void>--><!--Device-Driver-setDisplayRotation(rotation: DisplayRotation): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rotation | [DisplayRotation](arkts-test-uitest-displayrotation-e.md) | 是 | 设备的显示方向。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| rotation | [DisplayRotation](arkts-test-uitest-displayrotation-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -3382,32 +3580,32 @@ setDisplayRotationEnabled(enabled: boolean): Promise<void>
 
 启用/禁用设备旋转屏幕的功能。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-setDisplayRotationEnabled(enabled: boolean): Promise<void>--><!--Device-Driver-setDisplayRotationEnabled(enabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enabled | boolean | 是 | 能否旋转屏幕的标识。true：可以旋转。false：不可以旋转。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enabled | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -3423,42 +3621,48 @@ async function demo() {
 
 ## swipe
 
+ArkTS-Dyn:
+```TypeScript
+swipe(startx: number, starty: number, endx: number, endy: number, speed?: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 swipe(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>
 ```
 
 从起始坐标点滑向目的坐标点。仅支持在设备默认屏幕上操作，如需指定屏幕请使用[swipeBetween](#swipebetween)。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-swipe(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>--><!--Device-Driver-swipe(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| startx | int | 是 | 以number的形式传入起始点的横坐标信息，取值范围：大于等于0的整数。 |
-| starty | int | 是 | 以number的形式传入起始点的纵坐标信息，取值范围：大于等于0的整数。 |
-| endx | int | 是 | 以number的形式传入目的点的横坐标信息，取值范围：大于等于0的整数。 |
-| endy | int | 是 | 以number的形式传入目的点的纵坐标信息，取值范围：大于等于0的整数。 |
-| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| startx | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| starty | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| endx | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| endy | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| speed | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -3484,40 +3688,46 @@ async function demo() {
 
 ## swipeBetween
 
+ArkTS-Dyn:
+```TypeScript
+swipeBetween(from: Point, to: Point, speed?: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 swipeBetween(from: Point, to: Point, speed?: int): Promise<void>
 ```
 
 从起始坐标点滑向目标坐标点。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-swipeBetween(from: Point, to: Point, speed?: int): Promise<void>--><!--Device-Driver-swipeBetween(from: Point, to: Point, speed?: int): Promise<void>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。   **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
-| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错误码。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 |
+| speed | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -3541,32 +3751,32 @@ swipeBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Driver-swipeBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<void>--><!--Device-Driver-swipeBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<void>-End-->
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| from | [Point](arkts-test-uitest-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
-| to | [Point](arkts-test-uitest-point-i.md) | 是 | 手指离开屏幕的坐标点。 |
-| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 滑动操作的选项。 只有“速度”和“压力”属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 <br>默认值：参考TouchOptions的默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 |
+| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -3587,41 +3797,47 @@ async function demo() {
 
 ## touchPadMultiFingerSwipe
 
+ArkTS-Dyn:
+```TypeScript
+touchPadMultiFingerSwipe(fingers: number, direction: UiDirection, options?: TouchPadSwipeOptions): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 touchPadMultiFingerSwipe(fingers: int, direction: UiDirection, options?: TouchPadSwipeOptions): Promise<void>
 ```
 
 模拟触摸板多指滑动手势。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-touchPadMultiFingerSwipe(fingers: int, direction: UiDirection, options?: TouchPadSwipeOptions): Promise<void>--><!--Device-Driver-touchPadMultiFingerSwipe(fingers: int, direction: UiDirection, options?: TouchPadSwipeOptions): Promise<void>-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| fingers | int | 是 | 触摸板多指滑动的手指数。取值为3或者4。 |
-| direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | 是 | 触摸板多指滑动的方向。 |
-| options | [TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md) | 否 | 触摸板多指滑动手势附加选项，默认取TouchPadSwipeOptions中各属性的默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| fingers | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | 是 |
+| options | [TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [401](../../errorcode-universal.md#401-参数检查失败) |  |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) |  |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
 
 **示例**
 
@@ -3637,42 +3853,48 @@ async function demo() {
 
 ## touchPadTwoFingersScroll
 
+ArkTS-Dyn:
+```TypeScript
+touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: number, speed?: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: int, speed?: int): Promise<void>
 ```
 
 模拟触摸板双指滚动手势。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 22
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: int, speed?: int): Promise<void>--><!--Device-Driver-touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: int, speed?: int): Promise<void>-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| point | [Point](arkts-test-uitest-point-i.md) | 是 | 触摸板双指滚动时鼠标光标的位置。 |
-| direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | 是 | 触摸板双指滚动的方向。 |
-| d | int | 是 | 触摸板双指滚动的格数，取值为大于等于0的整数，每格对应目标点位移120px。 |
-| speed | int | 否 | 触摸板双指滚动的速度，范围：1-500的整数，单位：格/秒。为不在范围内的非负数或为null/undefined时设为默认值20。为负数时抛出17000007错误码。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 |
+| direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | 是 |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| speed | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -3696,32 +3918,32 @@ triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Driver-triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>--><!--Device-Driver-triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key0 | number | 是 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
-| key1 | number | 是 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
-| key2 | number | 否 | 指定的第三个key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)， 默认值为0。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key0 | number | 是 |
+| [key1](arkts-test-uitest-keyoptions-i.md) | number | 是 |
+| [key2](arkts-test-uitest-keyoptions-i.md) | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -3748,41 +3970,47 @@ async function demo() {
 
 ## triggerCombineKeys
 
+ArkTS-Dyn:
+```TypeScript
+triggerCombineKeys(key0: number, key1: number, key2?: number, displayId?: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 triggerCombineKeys(key0: int, key1: int, key2?: int, displayId?: int): Promise<void>
 ```
 
 通过给定的key值，找到对应组合键，并在指定屏幕下进行点击。使用Promise异步回调。例如，Key值为(2072, 2019)时，找到key值对应的组合键并点击，如Ctrl+c。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-triggerCombineKeys(key0: int, key1: int, key2?: int, displayId?: int): Promise<void>--><!--Device-Driver-triggerCombineKeys(key0: int, key1: int, key2?: int, displayId?: int): Promise<void>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key0 | int | 是 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
-| key1 | int | 是 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
-| key2 | int | 否 | 指定的第三个key值，取值范围：大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。 |
-| displayId | int | 否 | 指定的屏幕ID，取值范围：大于等于0的整数，默认值为设备默认屏幕ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key0 | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [key1](arkts-test-uitest-keyoptions-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [key2](arkts-test-uitest-keyoptions-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -3790,38 +4018,44 @@ triggerCombineKeys(key0: int, key1: int, key2?: int, displayId?: int): Promise<v
 
 ## triggerKey
 
+ArkTS-Dyn:
+```TypeScript
+triggerKey(keyCode: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 triggerKey(keyCode: int): Promise<void>
 ```
 
 传入key值实现模拟点击对应按键的效果。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-triggerKey(keyCode: int): Promise<void>--><!--Device-Driver-triggerKey(keyCode: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| keyCode | int | 是 | 指定的key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| keyCode | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -3860,39 +4094,45 @@ async function demo() {
 
 ## triggerKey
 
+ArkTS-Dyn:
+```TypeScript
+triggerKey(keyCode: number, displayId: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 triggerKey(keyCode: int, displayId: int): Promise<void>
 ```
 
 在指定屏幕，传入key值实现模拟点击对应按键的效果。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-Driver-triggerKey(keyCode: int, displayId: int): Promise<void>--><!--Device-Driver-triggerKey(keyCode: int, displayId: int): Promise<void>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| keyCode | int | 是 | 指定的key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
-| displayId | int | 是 | 指定的屏幕ID，取值范围：大于等于0的整数。 **说明：** 传入displayId不存在时，将抛出17000007异常。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| keyCode | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -3909,34 +4149,34 @@ Trigger pen key operation.Supported combinations:
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Driver-triggerPenKey(key: PenKey, mode: PenMode, operation: PenKeyOperation, options?: PenKeyOperationOptions): Promise<void>--><!--Device-Driver-triggerPenKey(key: PenKey, mode: PenMode, operation: PenKeyOperation, options?: PenKeyOperationOptions): Promise<void>-End-->
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | [PenKey](arkts-test-uitest-penkey-e.md) | 是 | the pen key to operate. |
-| mode | [PenMode](arkts-test-uitest-penmode-e.md) | 是 | the pen mode. |
-| operation | [PenKeyOperation](arkts-test-uitest-penkeyoperation-e.md) | 是 | the operation type. |
-| options | [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md) | 否 | the operation options, including optional coordinate point. Default value: Refer to the default value of PenKeyOperationOption. <br>默认值：参考PenKeyOperationOption的默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | [PenKey](arkts-test-uitest-penkey-e.md) | 是 |
+| mode | [PenMode](arkts-test-uitest-penmode-e.md) | 是 |
+| operation | [PenKeyOperation](arkts-test-uitest-penkeyoperation-e.md) | 是 |
+| options | [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. Unsupported key, mode, and operation combination. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
 **示例**
 
@@ -3965,31 +4205,31 @@ waitForComponent(on: On, time: number): Promise<Component>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Driver-waitForComponent(on: On, time: number): Promise<Component>--><!--Device-Driver-waitForComponent(on: On, time: number): Promise<Component>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
-| time | number | 是 | 查找目标控件的持续时间。单位ms，取值范围：大于等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 |
+| time | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; | Promise对象，返回控件对象。 |
+| 类型 |
+| --- |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -4023,29 +4263,29 @@ Find the first matched [Component](arkts-test-uitest-component-c.md) on current 
 
 **起始版本：** 23
 
-<!--Device-Driver-waitForComponent(on: On, time: int): Promise<Component | null>--><!--Device-Driver-waitForComponent(on: On, time: int): Promise<Component | null>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md). |
-| time | int | 是 | duration of finding in milliseconds, not less than 0. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 |
+| time | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Component](arkts-test-uitest-component-c.md) \| null&gt; | the first matched { |
+| 类型 |
+| --- |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md) \| null & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -4053,39 +4293,45 @@ Find the first matched [Component](arkts-test-uitest-component-c.md) on current 
 
 ## waitForIdle
 
+ArkTS-Dyn:
+```TypeScript
+waitForIdle(idleTime: number, timeout: number): Promise<boolean>
+```
+
+ArkTS-Sta:
 ```TypeScript
 waitForIdle(idleTime: int, timeout: int): Promise<boolean>
 ```
 
 判断当前界面的所有控件是否已经空闲。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-waitForIdle(idleTime: int, timeout: int): Promise<boolean>--><!--Device-Driver-waitForIdle(idleTime: int, timeout: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| idleTime | int | 是 | 空闲时间的阈值。在这个时间段控件不发生变化，视为该控件空闲，单位：毫秒，取值范围：大于等于0的整数。 |
-| timeout | int | 是 | 等待空闲的最大时间，单位：毫秒，取值范围：大于等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| idleTime | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| timeout | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回当前界面的所有控件是否已经空闲。true：已经空闲，false：不空闲。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -4107,25 +4353,25 @@ wakeUpDisplay(): Promise<void>
 
 唤醒当前设备即设备亮屏。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Driver-wakeUpDisplay(): Promise<void>--><!--Device-Driver-wakeUpDisplay(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| 错误码ID |
+| --- |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 **示例**
 
@@ -4138,4 +4384,3 @@ async function demo() {
   await driver.wakeUpDisplay();
 }
 ```
-

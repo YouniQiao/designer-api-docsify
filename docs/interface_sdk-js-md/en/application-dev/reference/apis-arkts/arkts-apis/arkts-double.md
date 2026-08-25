@@ -9,7 +9,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Double](arkts-arkts-double-c.md) | Represents boxed double value and related operations |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Double](arkts-arkts-double-c.md) |

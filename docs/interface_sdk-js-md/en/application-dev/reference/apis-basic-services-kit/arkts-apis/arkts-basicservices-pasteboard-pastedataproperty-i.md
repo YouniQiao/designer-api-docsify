@@ -2,9 +2,9 @@
 
 Defines the properties of PasteData in the pasteboard, including the timestamp, data types, pasteable range, and additional data. The defined properties can be applied to the pasteboard only with the [setProperty](arkts-basicservices-pasteboard-pastedata-i.md#setproperty) method.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-pasteboard-interface PasteDataProperty--><!--Device-pasteboard-interface PasteDataProperty-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -17,16 +17,18 @@ import { pasteboard } from '@kit.BasicServicesKit';
 ## additions
 
 ```TypeScript
-additions: Record<string, RecordData>
+additions: Record<string, object>
 ```
 
-additional property data. key-value pairs.
+Additional property data. It does not allow for dynamic adding of properties. Properties can be added only by re- assigning values. This parameter is left empty by default. For details, see the example of **setProperty**.
 
-**Type:** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, object&gt;
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-PasteDataProperty-additions: Record<string, RecordData>--><!--Device-PasteDataProperty-additions: Record<string, RecordData>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -40,11 +42,11 @@ Whether the pasteboard content is for local access only. The default value is **
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PasteDataProperty-localOnly: boolean--><!--Device-PasteDataProperty-localOnly: boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -58,11 +60,11 @@ Data types of all records in PasteData.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PasteDataProperty-readonly mimeTypes: Array<string>--><!--Device-PasteDataProperty-readonly mimeTypes: Array<string>-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -76,11 +78,11 @@ Pasteable ranges of PasteData. The default value is **CROSSDEVICE**.
 
 **Type:** [ShareOption](arkts-basicservices-pasteboard-shareoption-e.md)
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PasteDataProperty-shareOption: ShareOption--><!--Device-PasteDataProperty-shareOption: ShareOption-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -94,11 +96,11 @@ Custom tag. This parameter is left empty by default.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PasteDataProperty-tag: string--><!--Device-PasteDataProperty-tag: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -110,13 +112,12 @@ readonly timestamp: long
 
 Timestamp when data is written to the pasteboard (unit: nanoseconds since the device is powered on).
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-PasteDataProperty-readonly timestamp: long--><!--Device-PasteDataProperty-readonly timestamp: long-End-->
-
 **System capability:** SystemCapability.MiscServices.Pasteboard
-

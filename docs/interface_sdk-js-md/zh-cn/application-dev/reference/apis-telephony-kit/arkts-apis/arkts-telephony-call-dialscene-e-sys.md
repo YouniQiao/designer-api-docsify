@@ -2,9 +2,9 @@
 
 拨号场景。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-call-export enum DialScene--><!--Device-call-export enum DialScene-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -18,9 +18,9 @@ CALL_NORMAL = 0
 
 呼叫正常。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-DialScene-CALL_NORMAL = 0--><!--Device-DialScene-CALL_NORMAL = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -34,9 +34,9 @@ CALL_PRIVILEGED = 1
 
 呼叫特权。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-DialScene-CALL_PRIVILEGED = 1--><!--Device-DialScene-CALL_PRIVILEGED = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -50,11 +50,10 @@ CALL_EMERGENCY = 2
 
 拨打紧急电话。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-DialScene-CALL_EMERGENCY = 2--><!--Device-DialScene-CALL_EMERGENCY = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
-

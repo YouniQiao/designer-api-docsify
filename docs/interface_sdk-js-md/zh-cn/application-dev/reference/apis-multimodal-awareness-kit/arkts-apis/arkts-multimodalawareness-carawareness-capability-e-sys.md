@@ -4,7 +4,7 @@
 
 **起始版本：** 26.1.0
 
-<!--Device-carAwareness-enum Capability--><!--Device-carAwareness-enum Capability-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -18,9 +18,9 @@ SPATIAL_POINT = 'SpatialPoint'
 
 **起始版本：** 26.1.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
-<!--Device-Capability-SPATIAL_POINT = 'SpatialPoint'--><!--Device-Capability-SPATIAL_POINT = 'SpatialPoint'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -36,9 +36,9 @@ SPATIAL_GESTURE = 'SpatialGesture'
 
 **起始版本：** 26.1.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
-<!--Device-Capability-SPATIAL_GESTURE = 'SpatialGesture'--><!--Device-Capability-SPATIAL_GESTURE = 'SpatialGesture'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -54,9 +54,9 @@ CAR_STATUS = 'CarStatus'
 
 **起始版本：** 26.1.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
-<!--Device-Capability-CAR_STATUS = 'CarStatus'--><!--Device-Capability-CAR_STATUS = 'CarStatus'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -72,9 +72,9 @@ CAR_CFG = 'CarCfg'
 
 **起始版本：** 26.1.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
-<!--Device-Capability-CAR_CFG = 'CarCfg'--><!--Device-Capability-CAR_CFG = 'CarCfg'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -90,11 +90,10 @@ HABIT_RECOMMENDATION = 'HabitRecommendation'
 
 **起始版本：** 26.1.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
-<!--Device-Capability-HABIT_RECOMMENDATION = 'HabitRecommendation'--><!--Device-Capability-HABIT_RECOMMENDATION = 'HabitRecommendation'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
 **系统接口：** 此接口为系统接口。
-

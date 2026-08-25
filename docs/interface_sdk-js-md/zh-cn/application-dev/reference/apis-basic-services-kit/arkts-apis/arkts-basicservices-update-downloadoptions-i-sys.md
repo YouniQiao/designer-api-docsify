@@ -2,9 +2,9 @@
 
 下载选项，包含allowNetwork(允许下载的网络类型)和order(升级指令)字段，用于控制下载行为。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-update-export interface DownloadOptions--><!--Device-update-export interface DownloadOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -26,9 +26,9 @@ allowNetwork: NetType
 
 **类型：** [NetType](arkts-basicservices-update-nettype-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-DownloadOptions-allowNetwork: NetType--><!--Device-DownloadOptions-allowNetwork: NetType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -44,11 +44,10 @@ order: Order
 
 **类型：** [Order](arkts-basicservices-update-order-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-DownloadOptions-order: Order--><!--Device-DownloadOptions-order: Order-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
-

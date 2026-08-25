@@ -2,9 +2,9 @@
 
 Enumerates number mark types.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-call-export enum MarkType--><!--Device-call-export enum MarkType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -18,9 +18,9 @@ MARK_TYPE_NONE = 0
 
 No mark.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MarkType-MARK_TYPE_NONE = 0--><!--Device-MarkType-MARK_TYPE_NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -34,9 +34,9 @@ MARK_TYPE_CRANK = 1
 
 Spam call.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MarkType-MARK_TYPE_CRANK = 1--><!--Device-MarkType-MARK_TYPE_CRANK = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -50,9 +50,9 @@ MARK_TYPE_FRAUD = 2
 
 Fraud call.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MarkType-MARK_TYPE_FRAUD = 2--><!--Device-MarkType-MARK_TYPE_FRAUD = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -66,9 +66,9 @@ MARK_TYPE_EXPRESS = 3
 
 Express & delivery.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MarkType-MARK_TYPE_EXPRESS = 3--><!--Device-MarkType-MARK_TYPE_EXPRESS = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -82,9 +82,9 @@ MARK_TYPE_PROMOTE_SALES = 4
 
 Advertising.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MarkType-MARK_TYPE_PROMOTE_SALES = 4--><!--Device-MarkType-MARK_TYPE_PROMOTE_SALES = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -98,9 +98,9 @@ MARK_TYPE_HOUSE_AGENT = 5
 
 Estate agent.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MarkType-MARK_TYPE_HOUSE_AGENT = 5--><!--Device-MarkType-MARK_TYPE_HOUSE_AGENT = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -114,9 +114,9 @@ MARK_TYPE_INSURANCE = 6
 
 Insurance & loans.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MarkType-MARK_TYPE_INSURANCE = 6--><!--Device-MarkType-MARK_TYPE_INSURANCE = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -130,9 +130,9 @@ MARK_TYPE_TAXI = 7
 
 Taxi.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MarkType-MARK_TYPE_TAXI = 7--><!--Device-MarkType-MARK_TYPE_TAXI = 7-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -146,9 +146,9 @@ MARK_TYPE_CUSTOM = 8
 
 User-defined.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MarkType-MARK_TYPE_CUSTOM = 8--><!--Device-MarkType-MARK_TYPE_CUSTOM = 8-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -162,9 +162,9 @@ MARK_TYPE_OTHERS = 9
 
 Other.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MarkType-MARK_TYPE_OTHERS = 9--><!--Device-MarkType-MARK_TYPE_OTHERS = 9-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -178,9 +178,9 @@ MARK_TYPE_YELLOW_PAGE = 10
 
 Yellow page.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MarkType-MARK_TYPE_YELLOW_PAGE = 10--><!--Device-MarkType-MARK_TYPE_YELLOW_PAGE = 10-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -194,11 +194,10 @@ MARK_TYPE_ENTERPRISE = 11
 
 Enterprise contact.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-MarkType-MARK_TYPE_ENTERPRISE = 11--><!--Device-MarkType-MARK_TYPE_ENTERPRISE = 11-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
-

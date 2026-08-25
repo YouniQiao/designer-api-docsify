@@ -20,13 +20,12 @@ import { InputMethodExtraConfig } from '@kit.IMEKit';
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [InputMethodExtraConfig(Input Method Extension Information)](arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md) | Represents the extension information of an input method. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [InputMethodExtraConfig(Input Method Extension Information)](arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [CustomValueType(Input Method Extension Information)](arkts-ime-customvaluetype-t.md) | Represents the extension information type. The specific type of the parameter depends on its functionality. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CustomValueType(Input Method Extension Information)](arkts-ime-customvaluetype-t.md) |

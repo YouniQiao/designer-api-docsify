@@ -8,7 +8,7 @@ Describes the options of the line.
 
 **Since:** 18
 
-<!--Device-unnamed-interface LineOptions--><!--Device-unnamed-interface LineOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,11 +29,11 @@ Height. If the value is invalid or the default value is used, the height require
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-LineOptions-height?: Length--><!--Device-LineOptions-height?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,11 +49,10 @@ Width. If the value is invalid or the default value is used, the width required 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-LineOptions-width?: Length--><!--Device-LineOptions-width?: Length-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -18,37 +18,37 @@ Creates a directory. This API returns the result synchronously.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-unnamed-declare function mkdirSync(path: string): void--><!--Device-unnamed-declare function mkdirSync(path: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the directory. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| path | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900020 | Invalid argument |
-| 13900025 | No space left on device |
-| 13900028 | Too many links |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900015 |
+| 13900018 |
+| 13900020 |
+| 13900025 |
+| 13900028 |
+| 13900030 |
+| 13900033 |
+| 13900041 |
+| 13900042 |
 
 **Examples**
 
@@ -73,40 +73,39 @@ Creates a directory. This API returns the result synchronously. The value **true
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-unnamed-declare function mkdirSync(path: string, recursion: boolean): void--><!--Device-unnamed-declare function mkdirSync(path: string, recursion: boolean): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the directory. |
-| recursion | boolean | Yes | Whether to create a directory recursively.<br> The value **true** means to create a directory recursively. The value **false** means to create a single-level directory. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| path | string | Yes |
+| recursion | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900020 | Invalid argument |
-| 13900025 | No space left on device |
-| 13900028 | Too many links |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900015 |
+| 13900018 |
+| 13900020 |
+| 13900025 |
+| 13900028 |
+| 13900030 |
+| 13900033 |
+| 13900041 |
+| 13900042 |
 
 **Examples**
 
 See [mkdirSync](#mkdirsync)
-

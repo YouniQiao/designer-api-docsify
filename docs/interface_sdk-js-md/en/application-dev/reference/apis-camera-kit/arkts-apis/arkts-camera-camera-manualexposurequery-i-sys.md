@@ -1,14 +1,12 @@
-# ManualExposureQuery (System API)
+# ManualExposureQuery
 
 Provides APIs to obtain the manual exposure range supported.
 
-**Since:** 23
+**Since:** 24
 
-<!--Device-camera-interface ManualExposureQuery--><!--Device-camera-interface ManualExposureQuery-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -18,15 +16,21 @@ import { camera } from '@kit.CameraKit';
 
 ## getSupportedExposureRange
 
+ArkTS-Dyn:
+```TypeScript
+getSupportedExposureRange(): Array<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getSupportedExposureRange(): Array<int>
 ```
 
 Obtains the supported manual exposure durations.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ManualExposureQuery-getSupportedExposureRange(): Array<int>--><!--Device-ManualExposureQuery-getSupportedExposureRange(): Array<int>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -34,17 +38,17 @@ Obtains the supported manual exposure durations.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;int&gt; | Array of manual exposure durations supported, in ms. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;int & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
 
 **Examples**
 
@@ -54,4 +58,3 @@ function getSupportedExposureRange(nightPhotoSession: camera.NightPhotoSession):
   return exposureRange;
 }
 ```
-

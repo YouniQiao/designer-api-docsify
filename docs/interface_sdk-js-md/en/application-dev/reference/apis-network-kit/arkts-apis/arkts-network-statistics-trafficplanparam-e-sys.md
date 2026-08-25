@@ -4,7 +4,7 @@ Defines the fields related to the traffic plan.
 
 **Since:** 26.0.0
 
-<!--Device-statistics-export enum TrafficPlanParam--><!--Device-statistics-export enum TrafficPlanParam-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -20,9 +20,9 @@ Display traffic switch.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-TrafficPlanParam-DISPLAY_TRAFFIC_SWITCH = 1--><!--Device-TrafficPlanParam-DISPLAY_TRAFFIC_SWITCH = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -38,9 +38,9 @@ Unlimit traffic switch.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-TrafficPlanParam-UNLIMIT_TRAFFIC_SWITCH = 2--><!--Device-TrafficPlanParam-UNLIMIT_TRAFFIC_SWITCH = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -56,9 +56,9 @@ Traffic limit.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-TrafficPlanParam-TRAFFIC_LIMIT = 3--><!--Device-TrafficPlanParam-TRAFFIC_LIMIT = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -74,9 +74,9 @@ Start date.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-TrafficPlanParam-START_DATE = 4--><!--Device-TrafficPlanParam-START_DATE = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -92,9 +92,9 @@ Over limit behavior.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-TrafficPlanParam-OVER_LIMIT_BEHAVIOR = 5--><!--Device-TrafficPlanParam-OVER_LIMIT_BEHAVIOR = 5-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -110,9 +110,9 @@ Monthly traffic limit percentage.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-TrafficPlanParam-MONTHLY_LIMIT_PERCENTAGE = 6--><!--Device-TrafficPlanParam-MONTHLY_LIMIT_PERCENTAGE = 6-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -128,11 +128,10 @@ Daily traffic limit percentage.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-TrafficPlanParam-DAILY_LIMIT_PERCENTAGE = 7--><!--Device-TrafficPlanParam-DAILY_LIMIT_PERCENTAGE = 7-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
-

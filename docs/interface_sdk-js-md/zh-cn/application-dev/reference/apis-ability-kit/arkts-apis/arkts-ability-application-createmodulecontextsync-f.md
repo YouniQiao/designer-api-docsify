@@ -19,33 +19,33 @@ export function createModuleContextSync(context: Context, moduleName: string): C
 
 **起始版本：** 26.1.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-application-export function createModuleContextSync(context: Context, moduleName: string): Context--><!--Device-application-export function createModuleContextSync(context: Context, moduleName: string): Context-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | 是 | 表示应用上下文。 |
-| moduleName | string | 是 | 表示应用模块名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [Context](arkts-ability-context-c.md) | 是 |
+| moduleName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Context](arkts-ability-context-c.md) | 返回创建的上下文。 |
+| 类型 |
+| --- |
+| [Context](arkts-ability-context-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000021](../errorcode-ability.md#16000021-模块名不存在) | The module does not exist. |
+| 错误码ID |
+| --- |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000021](../errorcode-ability.md#16000021-模块名不存在) |
 
 **示例**
 
@@ -58,4 +58,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

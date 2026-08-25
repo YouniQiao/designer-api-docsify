@@ -1,10 +1,6 @@
 # AsyncIterableIterator
 
-**Inheritance/Implementation:** AsyncIterableIterator extends AsyncIterator<T>
-
-**Since:** -1
-
-<!--Device-unnamed-interface AsyncIterableIterator--><!--Device-unnamed-interface AsyncIterableIterator-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,11 +13,9 @@
 [Symbol.asyncIterator](): AsyncIterableIterator<T>
 ```
 
-**Since:** -1
-
-<!--Device-AsyncIterableIterator-[Symbol.asyncIterator](): AsyncIterableIterator<T>--><!--Device-AsyncIterableIterator-[Symbol.asyncIterator](): AsyncIterableIterator<T>-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

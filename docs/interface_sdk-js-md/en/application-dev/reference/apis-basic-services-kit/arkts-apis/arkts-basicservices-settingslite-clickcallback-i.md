@@ -4,7 +4,7 @@ Defines a callback used to return whether the application started by double-pres
 
 **Since:** 24
 
-<!--Device-settingsLite-interface ClickCallback--><!--Device-settingsLite-interface ClickCallback-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **System capability:** SystemCapability.Applications.Settings.Core.Lite
 
@@ -24,15 +24,14 @@ Called to determine whether the application can be started by double-pressing th
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-ClickCallback-onResult(result: boolean): void--><!--Device-ClickCallback-onResult(result: boolean): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Applications.Settings.Core.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| result | boolean | Yes | The specified application is started by double-pressing the function key if true is returned. Otherwise, an unexpected application is started. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| result | boolean | Yes |

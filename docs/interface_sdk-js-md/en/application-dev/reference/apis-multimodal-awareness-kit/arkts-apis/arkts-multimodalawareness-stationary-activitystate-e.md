@@ -4,7 +4,7 @@ Enumerates the device statuses.
 
 **Since:** 9
 
-<!--Device-stationary-enum ActivityState--><!--Device-stationary-enum ActivityState-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 
@@ -18,7 +18,7 @@ Enter state.
 
 **Since:** 9
 
-<!--Device-ActivityState-ENTER = 1--><!--Device-ActivityState-ENTER = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 
@@ -32,7 +32,6 @@ Exit state.
 
 **Since:** 9
 
-<!--Device-ActivityState-EXIT = 2--><!--Device-ActivityState-EXIT = 2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
-

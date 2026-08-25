@@ -16,23 +16,23 @@ Creates an ImageSource instance based on a given URI.Images occupy a large amoun
 
 **Since:** 6
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-image-function createImageSource(uri: string): ImageSource--><!--Device-image-function createImageSource(uri: string): ImageSource-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. <br>The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng, .heic&lt;sup&gt;12+&lt;/sup&gt; (depending on the hardware), .svg&lt;sup&gt;10+&lt;/sup&gt;, and.ico&lt;sup&gt;11+&lt;/sup&gt;. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
 
 **Examples**
 
@@ -118,21 +118,21 @@ Creates an ImageSource instance based on the URI.
 
 **Since:** 23
 
-<!--Device-image-function createImageSource(uri: string): ImageSource | undefined--><!--Device-image-function createImageSource(uri: string): ImageSource | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Image source URI. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageSource \| undefined | returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ImageSource \| undefined |
 
 **Examples**
 
@@ -149,26 +149,26 @@ Creates an ImageSource instance based on a given URI.Images occupy a large amoun
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-image-function createImageSource(uri: string, options: SourceOptions): ImageSource--><!--Device-image-function createImageSource(uri: string, options: SourceOptions): ImageSource-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. <br>The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng, .heic&lt;sup&gt;12+&lt;/sup&gt; (depending on the hardware), .svg&lt;sup&gt;10+&lt;/sup&gt;, and.ico&lt;sup&gt;11+&lt;/sup&gt;. |
-| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes | Image properties, including the image pixel density, pixel format, and image size. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
 
 **Examples**
 
@@ -185,22 +185,22 @@ Creates an ImageSource instance based on the URI.
 
 **Since:** 23
 
-<!--Device-image-function createImageSource(uri: string, options: SourceOptions): ImageSource | undefined--><!--Device-image-function createImageSource(uri: string, options: SourceOptions): ImageSource | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Image source URI. |
-| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes | The config of Image source. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ImageSource \| undefined |
 
 **Examples**
 
@@ -210,30 +210,30 @@ See [createImageSource](#createimagesource)
 ## createImageSource
 
 ```TypeScript
-function createImageSource(fd: int): ImageSource
+function createImageSource(fd: number): ImageSource
 ```
 
 Creates an ImageSource instance based on a given file descriptor.Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-image-function createImageSource(fd: int): ImageSource--><!--Device-image-function createImageSource(fd: int): ImageSource-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fd | int | Yes | File descriptor. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fd | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
 
 **Examples**
 
@@ -250,21 +250,21 @@ Creates an ImageSource instance based on the file descriptor.
 
 **Since:** 23
 
-<!--Device-image-function createImageSource(fd: int): ImageSource | undefined--><!--Device-image-function createImageSource(fd: int): ImageSource | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fd | int | Yes | ID of a file descriptor |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fd | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ImageSource \| undefined |
 
 **Examples**
 
@@ -274,33 +274,33 @@ See [createImageSource](#createimagesource)
 ## createImageSource
 
 ```TypeScript
-function createImageSource(fd: int, options: SourceOptions): ImageSource
+function createImageSource(fd: number, options: SourceOptions): ImageSource
 ```
 
 Creates an ImageSource instance based on a given file descriptor.Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-image-function createImageSource(fd: int, options: SourceOptions): ImageSource--><!--Device-image-function createImageSource(fd: int, options: SourceOptions): ImageSource-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fd | int | Yes | File descriptor. |
-| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes | Image properties, including the image pixel density, pixel format, and image size. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fd | number | Yes |
+| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
 
 **Examples**
 
@@ -317,22 +317,22 @@ Creates an ImageSource instance based on the file descriptor.
 
 **Since:** 23
 
-<!--Device-image-function createImageSource(fd: int, options: SourceOptions): ImageSource | undefined--><!--Device-image-function createImageSource(fd: int, options: SourceOptions): ImageSource | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fd | int | Yes | ID of a file descriptor. |
-| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes | The config of Image source. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fd | int | Yes |
+| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ImageSource \| undefined |
 
 **Examples**
 
@@ -349,25 +349,25 @@ Creates an ImageSource instance based on buffers. The data passed by **buf** mus
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-image-function createImageSource(buf: ArrayBuffer): ImageSource--><!--Device-image-function createImageSource(buf: ArrayBuffer): ImageSource-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Array of image buffers. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | ArrayBuffer | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
 
 **Examples**
 
@@ -384,21 +384,21 @@ Creates an ImageSource instance based on the buffer.
 
 **Since:** 23
 
-<!--Device-image-function createImageSource(buf: ArrayBuffer): ImageSource | undefined--><!--Device-image-function createImageSource(buf: ArrayBuffer): ImageSource | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | The buffer of the image. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | ArrayBuffer | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ImageSource \| undefined |
 
 **Examples**
 
@@ -415,26 +415,26 @@ Creates an ImageSource instance based on buffers. The data passed by **buf** mus
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-image-function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSource--><!--Device-image-function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSource-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Array of image buffers. |
-| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes | Image properties, including the image pixel density, pixel format, and image size. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | ArrayBuffer | Yes |
+| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
 
 **Examples**
 
@@ -451,22 +451,22 @@ Creates an ImageSource instance based on the buffer.
 
 **Since:** 23
 
-<!--Device-image-function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSource | undefined--><!--Device-image-function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSource | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | The buffer of the image. |
-| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes | The config of Image source. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | ArrayBuffer | Yes |
+| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ImageSource \| undefined |
 
 **Examples**
 
@@ -483,24 +483,24 @@ Creates an ImageSource instance based on the raw file descriptor of an image res
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-image-function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?: SourceOptions): ImageSource--><!--Device-image-function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?: SourceOptions): ImageSource-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rawfile | resourceManager.RawFileDescriptor | Yes | Raw file descriptor of the image resource file. |
-| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | No | Image properties, including the image pixel density, pixel format, and image size. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rawfile | resourceManager.RawFileDescriptor | Yes |
+| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
 
 **Examples**
 
@@ -518,24 +518,23 @@ Creates an ImageSource instance based on the raw file descriptor.
 
 **Since:** 23
 
-<!--Device-image-function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?: SourceOptions)      : ImageSource | undefined--><!--Device-image-function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?: SourceOptions)      : ImageSource | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rawfile | resourceManager.RawFileDescriptor | Yes | The raw file descriptor of the image. |
-| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | No | The config of Image source. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rawfile | resourceManager.RawFileDescriptor | Yes |
+| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ImageSource \| undefined |
 
 **Examples**
 
 See [createImageSource](#createimagesource)
-

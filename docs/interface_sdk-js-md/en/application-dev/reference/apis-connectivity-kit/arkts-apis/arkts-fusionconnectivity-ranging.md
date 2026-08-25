@@ -1,12 +1,12 @@
-# @ohos.FusionConnectivity.ranging
+# @ohos.FusionConnectivity.ranging(Ranging Module)
 
 Provides APIs for Fusion Connectivity ranging.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-unnamed-declare namespace ranging--><!--Device-unnamed-declare namespace ranging-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -20,33 +20,32 @@ import { ranging } from '@kit.ConnectivityKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getRangingCapability](arkts-connectivity-ranging-getrangingcapability-f.md) | Queries whether the current device supports ranging capability. |
-| [isRangingSupported](arkts-connectivity-ranging-israngingsupported-f.md) | Checks whether the current device supports the ranging feature. |
-| [offRangingStateChange](arkts-connectivity-ranging-offrangingstatechange-f.md) | Unsubscribe from ranging state change events. |
-| [onRangingStateChange](arkts-connectivity-ranging-onrangingstatechange-f.md) | Registers a callback to receive ranging state change notifications.Notifies state changes for both active ranging and passive ranging operations. |
-| [startPassiveRanging](arkts-connectivity-ranging-startpassiveranging-f.md) | Starts passive ranging mode.Upon successful startup, returns a handle identifier for the passive ranging session and begins broadcasting ranging packets.The returned handle can be used to stop the passive ranging broadcast via stopPassiveRanging. |
-| [startRanging](arkts-connectivity-ranging-startranging-f.md) | Initiates ranging with a specified device. If the link to the target device is already established, ranging starts directly. If not connected, this interface will: 1. Attempt to establish connection and perform pairing/encryption. 2. Query service to verify the device supports ranging. Initiate ranging upon confirmation. Ranging state updates are notified via onRangingStateChange callback. |
-| [stopPassiveRanging](arkts-connectivity-ranging-stoppassiveranging-f.md) | Stops passive ranging mode.Stops the passive ranging broadcast and cleans up associated resources based on the specified handle and ranging capability type. |
-| [stopRanging](arkts-connectivity-ranging-stopranging-f.md) | Stops ongoing ranging operations. If no target device is specified, stops ranging for all devices associated with the callback. If a target device is specified, only stops ranging for that specific device. This method also releases all occupied resources. For proper resource management, stopRanging must be called after startRanging to avoid resource leaks. State changes are notified via the onRangingStateChange callback. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getRangingCapability(Ranging Module)](arkts-connectivity-ranging-getrangingcapability-f.md) |
+| [isRangingSupported(Ranging Module)](arkts-connectivity-ranging-israngingsupported-f.md) |
+| [offRangingStateChange(Ranging Module)](arkts-connectivity-ranging-offrangingstatechange-f.md) |
+| [onRangingStateChange(Ranging Module)](arkts-connectivity-ranging-onrangingstatechange-f.md) |
+| [startPassiveRanging(Ranging Module)](arkts-connectivity-ranging-startpassiveranging-f.md) |
+| [startRanging(Ranging Module)](arkts-connectivity-ranging-startranging-f.md) |
+| [stopPassiveRanging(Ranging Module)](arkts-connectivity-ranging-stoppassiveranging-f.md) |
+| [stopRanging(Ranging Module)](arkts-connectivity-ranging-stopranging-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [RangingCapabilitySupported](arkts-connectivity-ranging-rangingcapabilitysupported-i.md) | Describes the contents of the ranging support types. |
-| [RangingMeasurement](arkts-connectivity-ranging-rangingmeasurement-i.md) | Describes the measurement result. |
-| [RangingParams](arkts-connectivity-ranging-rangingparams-i.md) | Parameters for ranging operation. |
-| [RangingResult](arkts-connectivity-ranging-rangingresult-i.md) | Describes the contents of the ranging results. |
-| [RangingStateChangeInfo](arkts-connectivity-ranging-rangingstatechangeinfo-i.md) | Describes the ranging state change information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [RangingCapabilitySupported(Ranging Module)](arkts-connectivity-ranging-rangingcapabilitysupported-i.md) |
+| [RangingMeasurement(Ranging Module)](arkts-connectivity-ranging-rangingmeasurement-i.md) |
+| [RangingParams(Ranging Module)](arkts-connectivity-ranging-rangingparams-i.md) |
+| [RangingResult(Ranging Module)](arkts-connectivity-ranging-rangingresult-i.md) |
+| [RangingStateChangeInfo(Ranging Module)](arkts-connectivity-ranging-rangingstatechangeinfo-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [RangingConfidence](arkts-connectivity-ranging-rangingconfidence-e.md) | The enum of ranging measurement confidence. |
-| [RangingState](arkts-connectivity-ranging-rangingstate-e.md) | The enum of ranging state. |
-| [RangingStoppedCause](arkts-connectivity-ranging-rangingstoppedcause-e.md) | The enum of ranging stopped causes. |
-| [RangingTypes](arkts-connectivity-ranging-rangingtypes-e.md) | The enumeration of ranging capability types. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [RangingConfidence(Ranging Module)](arkts-connectivity-ranging-rangingconfidence-e.md) |
+| [RangingState(Ranging Module)](arkts-connectivity-ranging-rangingstate-e.md) |
+| [RangingStoppedCause(Ranging Module)](arkts-connectivity-ranging-rangingstoppedcause-e.md) |
+| [RangingTypes(Ranging Module)](arkts-connectivity-ranging-rangingtypes-e.md) |

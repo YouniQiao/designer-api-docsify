@@ -16,13 +16,13 @@ Deletes the persistent P2P group with the specified network ID.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** deletePersistentP2pGroup
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
-
-<!--Device-wifi-function deletePersistentGroup(netId: number): boolean--><!--Device-wifi-function deletePersistentGroup(netId: number): boolean-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -30,15 +30,15 @@ Deletes the persistent P2P group with the specified network ID.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| netId | number | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| netId | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -52,4 +52,3 @@ try {
     console.error("failed:" + JSON.stringify(error));
 }
 ```
-

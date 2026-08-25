@@ -4,7 +4,7 @@ UDPSocket连接。在调用UDPSocket的方法前，需要先通过[socket.constr
 
 **起始版本：** 7
 
-<!--Device-socket-export interface UDPSocket--><!--Device-socket-export interface UDPSocket-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -24,25 +24,25 @@ bind(address: NetAddress, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-UDPSocket-bind(address: NetAddress, callback: AsyncCallback<void>): void--><!--Device-UDPSocket-bind(address: NetAddress, callback: AsyncCallback<void>): void-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| address | NetAddress | 是 | 本端地址信息，参考 NetAddress。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。成功返回空，失败返回错误码、错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| address | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -177,30 +177,30 @@ bind(address: NetAddress): Promise<void>
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-UDPSocket-bind(address: NetAddress): Promise<void>--><!--Device-UDPSocket-bind(address: NetAddress): Promise<void>-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| address | NetAddress | 是 | 本端地址信息，参考 NetAddress。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| address | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -216,23 +216,23 @@ close(callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-UDPSocket-close(callback: AsyncCallback<void>): void--><!--Device-UDPSocket-close(callback: AsyncCallback<void>): void-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。关闭UDPSocket连接后触发回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -547,23 +547,23 @@ close(): Promise<void>
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-UDPSocket-close(): Promise<void>--><!--Device-UDPSocket-close(): Promise<void>-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -582,23 +582,23 @@ getLocalAddress(): Promise<NetAddress>
 
 **起始版本：** 12
 
-<!--Device-UDPSocket-getLocalAddress(): Promise<NetAddress>--><!--Device-UDPSocket-getLocalAddress(): Promise<NetAddress>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;NetAddress&gt; | 以Promise形式返回获取本地socket地址的结果。 |
+| 类型 |
+| --- |
+| Promise & lt;NetAddress & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
-| [2301009](../errorcode-net-socket.md#2301009-错误文件描述符) | Bad file descriptor. |
-| [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) | Socket operation on non-socket. |
+| 错误码ID |
+| --- |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) |
+| [2301009](../errorcode-net-socket.md#2301009-错误文件描述符) |
+| [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) |
 
 **示例**
 
@@ -864,23 +864,23 @@ getSocketFd(): Promise<int>
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
-<!--Device-UDPSocket-getSocketFd(): Promise<int>--><!--Device-UDPSocket-getSocketFd(): Promise<int>-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise对象，返回Socket的文件描述符。 |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -1208,23 +1208,23 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-UDPSocket-getState(callback: AsyncCallback<SocketStateBase>): void--><!--Device-UDPSocket-getState(callback: AsyncCallback<SocketStateBase>): void-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | 是 | 回调函数。成功返回UDPSocket状态信息，失败返回错误码、错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -1564,133 +1564,27 @@ getState(): Promise<SocketStateBase>
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-UDPSocket-getState(): Promise<SocketStateBase>--><!--Device-UDPSocket-getState(): Promise<SocketStateBase>-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | 以Promise形式返回获取UDPSocket状态的结果。 |
+| 类型 |
+| --- |
+| Promise&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
 参见 [getState](#getstate)
-
-## off('listening' | 'close')
-
-```TypeScript
-off(type: 'listening' | 'close', callback?: Callback<void>): void
-```
-
-取消订阅UDPSocket连接的数据包消息事件或关闭事件。使用callback异步回调。
-
-**起始版本：** 7
-
-<!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void--><!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'listening' \| 'close' | 是 | 取消订阅事件类型。&lt;br /&gt;- 'listening'：数据包消息事件。&lt;br /&gt;- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
-
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
-let callback1 = () => {
-  console.info("on listening, success");
-}
-udp.on('listening', callback1);
-// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
-udp.off('listening', callback1);
-udp.off('listening');
-let callback2 = () => {
-  console.info("on close, success");
-}
-udp.on('close', callback2);
-// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
-udp.off('close', callback2);
-udp.off('close');
-```
-
-## off('error')
-
-```TypeScript
-off(type: 'error', callback?: ErrorCallback): void
-```
-
-取消订阅UDPSocket连接的error事件。使用callback异步回调。
-
-**起始版本：** 7
-
-<!--Device-UDPSocket-off(type: 'error', callback?: ErrorCallback): void--><!--Device-UDPSocket-off(type: 'error', callback?: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'error' | 是 | 取消订阅的事件类型。'error'：error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
-
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
-let callback = (err: BusinessError) => {
-  console.error("on error, err:" + JSON.stringify(err));
-}
-udp.on('error', callback);
-// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
-udp.off('error', callback);
-udp.off('error');
-```
-
-## off('listening' | 'close')
-
-```TypeScript
-off(type: 'listening' | 'close', callback?: Callback<void>): void
-```
-
-取消订阅UDPSocket连接的数据包消息事件或关闭事件。使用callback异步回调。
-
-**起始版本：** 7
-
-<!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void--><!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'listening' \| 'close' | 是 | 取消订阅事件类型。&lt;br /&gt;- 'listening'：数据包消息事件。&lt;br /&gt;- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
-
-**示例**
-
-参见 off_close
 
 ## off('message')
 
@@ -1702,16 +1596,16 @@ off(type: 'message', callback?: Callback<SocketMessageInfo>): void
 
 **起始版本：** 7
 
-<!--Device-UDPSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void--><!--Device-UDPSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'message' | 是 | 取消订阅的事件类型。'message'：接收消息事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'message' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 否 |
 
 **示例**
 
@@ -1737,26 +1631,26 @@ udp.off('message', callback);
 udp.off('message');
 ```
 
-## on('listening' | 'close')
+## off('listening' | 'close')
 
 ```TypeScript
-on(type: 'listening' | 'close', callback: Callback<void>): void
+off(type: 'listening' | 'close', callback?: Callback<void>): void
 ```
 
-订阅UDPSocket连接的数据包消息事件或关闭事件。使用callback异步回调。
+取消订阅UDPSocket连接的数据包消息事件或关闭事件。使用callback异步回调。
 
 **起始版本：** 7
 
-<!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void--><!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'listening' \| 'close' | 是 | 订阅的事件类型。&lt;br /&gt;- 'listening'：数据包消息事件。&lt;br /&gt;- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。UDPSocket连接的某类数据包消息事件或关闭事件发生变化后触发回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'listening' \| 'close' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
 
 **示例**
 
@@ -1765,34 +1659,67 @@ import { socket } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
-udp.on('listening', () => {
-  console.info("on listening success");
-});
-udp.on('close', () => {
-  console.info("on close success");
-});
+let callback1 = () => {
+  console.info("on listening, success");
+}
+udp.on('listening', callback1);
+// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+udp.off('listening', callback1);
+udp.off('listening');
+let callback2 = () => {
+  console.info("on close, success");
+}
+udp.on('close', callback2);
+// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+udp.off('close', callback2);
+udp.off('close');
 ```
 
-## on('error')
+## off('listening' | 'close')
 
 ```TypeScript
-on(type: 'error', callback: ErrorCallback): void
+off(type: 'listening' | 'close', callback?: Callback<void>): void
 ```
 
-订阅UDPSocket连接的error事件。使用callback异步回调。
+取消订阅UDPSocket连接的数据包消息事件或关闭事件。使用callback异步回调。
 
 **起始版本：** 7
 
-<!--Device-UDPSocket-on(type: 'error', callback: ErrorCallback): void--><!--Device-UDPSocket-on(type: 'error', callback: ErrorCallback): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'error' | 是 | 订阅的事件类型。'error'：error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数。UDPSocket连接发生error事件后触发回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'listening' \| 'close' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+
+**示例**
+
+参见 off
+
+## off('error')
+
+```TypeScript
+off(type: 'error', callback?: ErrorCallback): void
+```
+
+取消订阅UDPSocket连接的error事件。使用callback异步回调。
+
+**起始版本：** 7
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'error' | 是 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
 
 **示例**
 
@@ -1801,35 +1728,14 @@ import { socket } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
-udp.on('error', (err: BusinessError) => {
-  console.error("on error, err:" + JSON.stringify(err))
-});
+let callback = (err: BusinessError) => {
+  console.error("on error, err:" + JSON.stringify(err));
+}
+udp.on('error', callback);
+// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+udp.off('error', callback);
+udp.off('error');
 ```
-
-## on('listening' | 'close')
-
-```TypeScript
-on(type: 'listening' | 'close', callback: Callback<void>): void
-```
-
-订阅UDPSocket连接的数据包消息事件或关闭事件。使用callback异步回调。
-
-**起始版本：** 7
-
-<!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void--><!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'listening' \| 'close' | 是 | 订阅的事件类型。&lt;br /&gt;- 'listening'：数据包消息事件。&lt;br /&gt;- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。UDPSocket连接的某类数据包消息事件或关闭事件发生变化后触发回调函数。 |
-
-**示例**
-
-参见 on_close
 
 ## on('message')
 
@@ -1841,16 +1747,16 @@ on(type: 'message', callback: Callback<SocketMessageInfo>): void
 
 **起始版本：** 7
 
-<!--Device-UDPSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void--><!--Device-UDPSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'message' | 是 | 订阅的事件类型。'message'：接收消息事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 是 | 回调函数。返回订阅某类事件后UDPSocket连接成功的状态信息。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'message' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 是 |
 
 **示例**
 
@@ -1873,6 +1779,100 @@ udp.on('message', (value: socket.SocketMessageInfo) => {
 });
 ```
 
+## on('listening' | 'close')
+
+```TypeScript
+on(type: 'listening' | 'close', callback: Callback<void>): void
+```
+
+订阅UDPSocket连接的数据包消息事件或关闭事件。使用callback异步回调。
+
+**起始版本：** 7
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'listening' \| 'close' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+udp.on('listening', () => {
+  console.info("on listening success");
+});
+udp.on('close', () => {
+  console.info("on close success");
+});
+```
+
+## on('listening' | 'close')
+
+```TypeScript
+on(type: 'listening' | 'close', callback: Callback<void>): void
+```
+
+订阅UDPSocket连接的数据包消息事件或关闭事件。使用callback异步回调。
+
+**起始版本：** 7
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'listening' \| 'close' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+**示例**
+
+参见 on
+
+## on('error')
+
+```TypeScript
+on(type: 'error', callback: ErrorCallback): void
+```
+
+订阅UDPSocket连接的error事件。使用callback异步回调。
+
+**起始版本：** 7
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'error' | 是 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+udp.on('error', (err: BusinessError) => {
+  console.error("on error, err:" + JSON.stringify(err))
+});
+```
+
 ## send
 
 ```TypeScript
@@ -1883,33 +1883,33 @@ send(options: UDPSendOptions, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-UDPSocket-send(options: UDPSendOptions, callback: AsyncCallback<void>): void--><!--Device-UDPSocket-send(options: UDPSendOptions, callback: AsyncCallback<void>): void-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [UDPSendOptions](arkts-network-socket-udpsendoptions-i.md) | 是 | UDPSocket发送参数，参考[UDPSendOptions](arkts-network-socket-udpsendoptions-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。成功返回空，失败返回错误码、错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [UDPSendOptions](arkts-network-socket-udpsendoptions-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2301206](../errorcode-net-socket.md#2301206-socks5连接代理服务器失败) | Socks5 failed to connect to the proxy server.<br>**适用版本：** 18+ |
-| [2301207](../errorcode-net-socket.md#2301207-socks5认证用户名或密码无效) | Socks5 username or password is invalid.<br>**适用版本：** 18+ |
-| [2301208](../errorcode-net-socket.md#2301208-socks5连接远程服务器失败) | Socks5 failed to connect to the remote server.<br>**适用版本：** 18+ |
-| [2301209](../errorcode-net-socket.md#2301209-socks5协商认证方式失败) | Socks5 failed to negotiate the authentication method.<br>**适用版本：** 18+ |
-| [2301210](../errorcode-net-socket.md#2301210-socks5发送消息失败) | Socks5 failed to send the message.<br>**适用版本：** 18+ |
-| [2301211](../errorcode-net-socket.md#2301211-socks5接收消息失败) | Socks5 failed to receive the message.<br>**适用版本：** 18+ |
-| [2301212](../errorcode-net-socket.md#2301212-socks5消息序列化失败) | Socks5 serialization error.<br>**适用版本：** 18+ |
-| [2301213](../errorcode-net-socket.md#2301213-socks5消息反序列化失败) | Socks5 deserialization error.<br>**适用版本：** 18+ |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2301206](../errorcode-net-socket.md#2301206-socks5连接代理服务器失败) |
+| [2301207](../errorcode-net-socket.md#2301207-socks5认证用户名或密码无效) |
+| [2301208](../errorcode-net-socket.md#2301208-socks5连接远程服务器失败) |
+| [2301209](../errorcode-net-socket.md#2301209-socks5协商认证方式失败) |
+| [2301210](../errorcode-net-socket.md#2301210-socks5发送消息失败) |
+| [2301211](../errorcode-net-socket.md#2301211-socks5接收消息失败) |
+| [2301212](../errorcode-net-socket.md#2301212-socks5消息序列化失败) |
+| [2301213](../errorcode-net-socket.md#2301213-socks5消息反序列化失败) |
 
 **示例**
 
@@ -2316,38 +2316,38 @@ send(options: UDPSendOptions): Promise<void>
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-UDPSocket-send(options: UDPSendOptions): Promise<void>--><!--Device-UDPSocket-send(options: UDPSendOptions): Promise<void>-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [UDPSendOptions](arkts-network-socket-udpsendoptions-i.md) | 是 | UDPSocket发送参数，参考[UDPSendOptions](arkts-network-socket-udpsendoptions-i.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [UDPSendOptions](arkts-network-socket-udpsendoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2301206](../errorcode-net-socket.md#2301206-socks5连接代理服务器失败) | Socks5 failed to connect to the proxy server.<br>**适用版本：** 18+ |
-| [2301207](../errorcode-net-socket.md#2301207-socks5认证用户名或密码无效) | Socks5 username or password is invalid.<br>**适用版本：** 18+ |
-| [2301208](../errorcode-net-socket.md#2301208-socks5连接远程服务器失败) | Socks5 failed to connect to the remote server.<br>**适用版本：** 18+ |
-| [2301209](../errorcode-net-socket.md#2301209-socks5协商认证方式失败) | Socks5 failed to negotiate the authentication method.<br>**适用版本：** 18+ |
-| [2301210](../errorcode-net-socket.md#2301210-socks5发送消息失败) | Socks5 failed to send the message.<br>**适用版本：** 18+ |
-| [2301211](../errorcode-net-socket.md#2301211-socks5接收消息失败) | Socks5 failed to receive the message.<br>**适用版本：** 18+ |
-| [2301212](../errorcode-net-socket.md#2301212-socks5消息序列化失败) | Socks5 serialization error.<br>**适用版本：** 18+ |
-| [2301213](../errorcode-net-socket.md#2301213-socks5消息反序列化失败) | Socks5 deserialization error.<br>**适用版本：** 18+ |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2301206](../errorcode-net-socket.md#2301206-socks5连接代理服务器失败) |
+| [2301207](../errorcode-net-socket.md#2301207-socks5认证用户名或密码无效) |
+| [2301208](../errorcode-net-socket.md#2301208-socks5连接远程服务器失败) |
+| [2301209](../errorcode-net-socket.md#2301209-socks5协商认证方式失败) |
+| [2301210](../errorcode-net-socket.md#2301210-socks5发送消息失败) |
+| [2301211](../errorcode-net-socket.md#2301211-socks5接收消息失败) |
+| [2301212](../errorcode-net-socket.md#2301212-socks5消息序列化失败) |
+| [2301213](../errorcode-net-socket.md#2301213-socks5消息反序列化失败) |
 
 **示例**
 
@@ -2366,25 +2366,25 @@ setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-UDPSocket-setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void--><!--Device-UDPSocket-setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md) | 是 | UDPSocket连接的其他属性，参考[UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -2881,32 +2881,31 @@ setExtraOptions(options: UDPExtraOptions): Promise<void>
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-UDPSocket-setExtraOptions(options: UDPExtraOptions): Promise<void>--><!--Device-UDPSocket-setExtraOptions(options: UDPExtraOptions): Promise<void>-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md) | 是 | UDPSocket连接的其他属性，参考[UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
 参见 [setExtraOptions](#setextraoptions)
-

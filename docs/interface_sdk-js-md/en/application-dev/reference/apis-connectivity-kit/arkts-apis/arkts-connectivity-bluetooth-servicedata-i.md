@@ -4,11 +4,11 @@ Describes the service data.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ServiceData](arkts-connectivity-bluetoothmanager-servicedata-i.md)
-
-<!--Device-bluetooth-interface ServiceData--><!--Device-bluetooth-interface ServiceData-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -30,11 +30,11 @@ Indicates the UUID of the service data to add
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [serviceUuid](arkts-connectivity-bluetoothmanager-servicedata-i.md#serviceuuid)
-
-<!--Device-ServiceData-serviceUuid: string--><!--Device-ServiceData-serviceUuid: string-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -50,11 +50,10 @@ Indicates the service data to add
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [serviceValue](arkts-connectivity-bluetoothmanager-servicedata-i.md#servicevalue)
 
-<!--Device-ServiceData-serviceValue: ArrayBuffer--><!--Device-ServiceData-serviceValue: ArrayBuffer-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

@@ -4,7 +4,7 @@ Provides player statistic info.
 
 **起始版本：** 12
 
-<!--Device-unnamed-interface PlaybackInfo--><!--Device-unnamed-interface PlaybackInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -14,3 +14,18 @@ Provides player statistic info.
 import { media } from '@kit.MediaKit';
 ```
 
+## [key:string]
+
+```TypeScript
+[key:string]: Object
+```
+
+key:value pair, key see @PlaybackInfoKey.
+
+**类型：** Object
+
+**起始版本：** 12
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
+**系统能力：** SystemCapability.Multimedia.Media.Core

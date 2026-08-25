@@ -4,11 +4,11 @@ P2P config. @interface WifiP2PConfig
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [WifiP2PConfig](arkts-connectivity-wifimanager-wifip2pconfig-i.md)
-
-<!--Device-wifi-interface WifiP2PConfig--><!--Device-wifi-interface WifiP2PConfig-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -30,11 +30,11 @@ Device mac address s
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [deviceAddress](arkts-connectivity-wifimanager-wifip2pconfig-i.md#deviceaddress)
-
-<!--Device-WifiP2PConfig-deviceAddress: string--><!--Device-WifiP2PConfig-deviceAddress: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -50,11 +50,11 @@ Group owner band
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [goBand](arkts-connectivity-wifimanager-wifip2pconfig-i.md#goband)
-
-<!--Device-WifiP2PConfig-goBand: GroupOwnerBand--><!--Device-WifiP2PConfig-goBand: GroupOwnerBand-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -70,11 +70,11 @@ Group name
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [groupName](arkts-connectivity-wifimanager-wifip2pconfig-i.md#groupname)
-
-<!--Device-WifiP2PConfig-groupName: string--><!--Device-WifiP2PConfig-groupName: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -90,11 +90,11 @@ Group network ID. When creating a group, -1 indicates creates a temporary group,
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [netId](arkts-connectivity-wifimanager-wifip2pconfig-i.md#netid)
-
-<!--Device-WifiP2PConfig-netId: number--><!--Device-WifiP2PConfig-netId: number-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -110,11 +110,10 @@ The passphrase of this {@code WifiP2pConfig} instance
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [passphrase](arkts-connectivity-wifimanager-wifip2pconfig-i.md#passphrase)
 
-<!--Device-WifiP2PConfig-passphrase: string--><!--Device-WifiP2PConfig-passphrase: string-End-->
-
 **System capability:** SystemCapability.Communication.WiFi.P2P
-

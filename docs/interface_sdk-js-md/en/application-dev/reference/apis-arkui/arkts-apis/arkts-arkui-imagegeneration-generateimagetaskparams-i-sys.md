@@ -4,9 +4,7 @@ Configuration parameter options for AI-generated image tasks.@interface Generate
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-imageGeneration-interface GenerateImageTaskParams--><!--Device-imageGeneration-interface GenerateImageTaskParams-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,15 +24,13 @@ imageCount?: int
 
 the number of AI-generated image in one task.
 
-**Type:** int
+**Type:** number
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GenerateImageTaskParams-imageCount?: int--><!--Device-GenerateImageTaskParams-imageCount?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,11 +48,9 @@ image information used for AI-generated image tasks.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GenerateImageTaskParams-images: Array<ImageItem>--><!--Device-GenerateImageTaskParams-images: Array<ImageItem>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,11 +68,9 @@ the size information of AI-generated image in one task.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GenerateImageTaskParams-imageSize: image.Size--><!--Device-GenerateImageTaskParams-imageSize: image.Size-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,11 +88,9 @@ Location reference map for multi-image generated tasks.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GenerateImageTaskParams-positionImage?: image.PixelMap--><!--Device-GenerateImageTaskParams-positionImage?: image.PixelMap-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -118,11 +108,9 @@ Description information for AI-generated image tasks.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GenerateImageTaskParams-prompt: string--><!--Device-GenerateImageTaskParams-prompt: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -140,11 +128,9 @@ Path information for lasso selection in AI-generated image tasks.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GenerateImageTaskParams-selectPath?: Array<common2D.Point>--><!--Device-GenerateImageTaskParams-selectPath?: Array<common2D.Point>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -162,13 +148,10 @@ the style of AI-generated image in one task.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GenerateImageTaskParams-style?: string--><!--Device-GenerateImageTaskParams-style?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

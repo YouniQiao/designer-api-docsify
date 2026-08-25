@@ -14,27 +14,27 @@ function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback:
 
 使能ArkTS对象泄漏检测。此接口通过一次调用即可检测ArkTS对象的内存泄漏，比之前需要调用四个函数（enable、watch、check、dump）的方法更加简洁。
 
-**起始版本：** 26.1.0
+**起始版本：** 20
 
-<!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback: Callback<Array<string>>): void--><!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback: Callback<Array<string>>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为26.1.0。
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isEnabled | boolean | 是 | 是否使能ArkTS对象内存泄漏检测功能。true：开启ArkTS内存泄漏检测功能；false：关闭ArkTS内存泄漏检测功能。 |
-| configs | Array&lt;string&gt; | 是 | 配置项，数组中每个元素为监测具体对象的类型。<br>可配置项包括：XComponent，NodeContainer，Window，CustomComponent 和Ability。<br>**说明：**传入空数组代表监测以上全部对象。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，用于接收jsLeakWatcher.enableLeakWatcher接口返回的内存泄漏文件列表和虚拟机内存快照文件。<br>回调函数中传入一个数组 对象，索引0为泄漏列表文件名，后缀为.jsleaklist；索引1为虚拟机内存快照文件名，后缀为.rawheap。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| isEnabled | boolean | 是 |
+| configs | Array & lt;string & gt; | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10801001](../errorcode-jsleakwatcher.md#10801001-参数isenabled无效) | The parameter isEnabled is invalid. |
-| [10801002](../errorcode-jsleakwatcher.md#10801002-参数config无效) | The parameter config is invalid. |
-| [10801003](../errorcode-jsleakwatcher.md#10801003-参数callback无效) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [10801001](../errorcode-jsleakwatcher.md#10801001-参数isenabled无效) |
+| [10801002](../errorcode-jsleakwatcher.md#10801002-参数config无效) |
+| [10801003](../errorcode-jsleakwatcher.md#10801003-参数callback无效) |
 
 **示例**
 
@@ -79,29 +79,28 @@ function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callb
 > **注意**&gt;
 > 当前jsLeakWatcher泄漏检测性能开销较大，会导致应用卡顿，建议增大检测间隔时间，减少卡顿频率。
 
-**起始版本：** 26.1.0
+**起始版本：** 24
 
-<!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callback: Callback<Array<string>>): void--><!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callback: Callback<Array<string>>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isEnabled | boolean | 是 | 是否使能ArkTS对象内存泄漏检测功能。<br>true：开启ArkTS内存泄漏检测功能。<br>false：关闭ArkTS内存泄漏检测功能。 |
-| configs | [LeakWatcherConfig](arkts-performanceanalysis-jsleakwatcher-leakwatcherconfig-i.md) | 是 | LeakWatcherConfig对象类型，对象中包含多个用于内存泄漏监测的可配置属性。<br>**说明：**对象中参数类型传入空值或假值代表该属性设置 为默认值。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，用于接收泄漏检测的导出文件路径。<br>回调函数中传入一个数组 对象，索引0为泄漏列表文件名，后缀为.jsleaklist；索引1为虚拟机内存快照文件名，后缀为.rawheap。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| isEnabled | boolean | 是 |
+| configs | [LeakWatcherConfig](arkts-performanceanalysis-jsleakwatcher-leakwatcherconfig-i.md) | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10801001](../errorcode-jsleakwatcher.md#10801001-参数isenabled无效) | The parameter isEnabled is invalid. |
-| [10801002](../errorcode-jsleakwatcher.md#10801002-参数config无效) | The parameter config is invalid. |
-| [10801003](../errorcode-jsleakwatcher.md#10801003-参数callback无效) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [10801001](../errorcode-jsleakwatcher.md#10801001-参数isenabled无效) |
+| [10801002](../errorcode-jsleakwatcher.md#10801002-参数config无效) |
+| [10801003](../errorcode-jsleakwatcher.md#10801003-参数callback无效) |
 
 **示例**
 
 参见 [enableLeakWatcher](#enableleakwatcher)
-

@@ -4,9 +4,9 @@
 
 **继承/实现关系：** Animation extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export interface Animation--><!--Device-unnamed-export interface Animation-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -18,9 +18,9 @@ finish(): void
 
 直接跳转到动画的最后，并将动画的进度设置为1。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Animation-finish(): void--><!--Device-Animation-finish(): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -50,17 +50,17 @@ onFinished(callback: Callback<void>): void
 
 动画播放结束时执行的回调函数，动画播放完成或者finish操作会触发这个回调。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Animation-onFinished(callback: Callback<void>): void--><!--Device-Animation-onFinished(callback: Callback<void>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，返回值为空。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
 
 **示例**
 
@@ -90,17 +90,17 @@ onStarted(callback: Callback<void>): void
 
 当动画开始播放时执行的回调函数，start操作以及restart操作也会触发这个回调。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Animation-onStarted(callback: Callback<void>): void--><!--Device-Animation-onStarted(callback: Callback<void>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，返回值为空。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
 
 **示例**
 
@@ -130,9 +130,9 @@ pause(): void
 
 将动画暂停，动画的播放进度保持在当前状态。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Animation-pause(): void--><!--Device-Animation-pause(): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -162,9 +162,9 @@ restart(): void
 
 从动画的起点开始播放动画。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Animation-restart(): void--><!--Device-Animation-restart(): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -188,23 +188,29 @@ function restart(): void {
 
 ## seek
 
+ArkTS-Dyn:
+```TypeScript
+seek(position: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 seek(position: double): void
 ```
 
 将动画进度跳转到指定位置，不改变动画的播放状态（已播放仍继续播放，已暂停仍暂停）。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Animation-seek(position: double): void--><!--Device-Animation-seek(position: double): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| position | double | 是 | 要重新播放动画的起始位置，取值区间为[0, 1]。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| position | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **示例**
 
@@ -232,9 +238,9 @@ start(): void
 
 基于当前进度开始播放一个动画。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Animation-start(): void--><!--Device-Animation-start(): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -264,9 +270,9 @@ stop(): void
 
 停止播放一个动画，并将动画的进度设置为0。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Animation-stop(): void--><!--Device-Animation-stop(): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -296,11 +302,11 @@ readonly duration: double
 
 动画持续时间，单位为秒（s），取值范围大于等于0。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Animation-readonly duration: double--><!--Device-Animation-readonly duration: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -314,9 +320,9 @@ enabled: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Animation-enabled: boolean--><!--Device-Animation-enabled: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -328,11 +334,11 @@ readonly progress: double
 
 动画进度状态，取值区间为[0, 1]。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Animation-readonly progress: double--><!--Device-Animation-readonly progress: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -346,9 +352,9 @@ readonly running: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Animation-readonly running: boolean--><!--Device-Animation-readonly running: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -360,11 +366,10 @@ speed?: double
 
 动画的播放速度因子。默认值为1.0，表示正常速度播放。如果设置为负值，动画将以反向速度播放。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Animation-speed?: double--><!--Device-Animation-speed?: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

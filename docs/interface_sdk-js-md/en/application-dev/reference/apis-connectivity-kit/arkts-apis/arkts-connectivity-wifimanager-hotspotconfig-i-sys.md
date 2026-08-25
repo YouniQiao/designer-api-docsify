@@ -2,9 +2,9 @@
 
 Wi-Fi hotspot configuration information.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-wifiManager-interface HotspotConfig--><!--Device-wifiManager-interface HotspotConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -24,11 +24,11 @@ band: int
 
 The frequency band of the Wi-Fi hotspot
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-HotspotConfig-band: int--><!--Device-HotspotConfig-band: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -42,11 +42,11 @@ channel?: int
 
 The channel of the Wi-Fi hotspot.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-HotspotConfig-channel?: int--><!--Device-HotspotConfig-channel?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -62,9 +62,9 @@ IP address of the dhcp server, it's a string, For example 192.168.43.1
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-HotspotConfig-ipAddress?: string--><!--Device-HotspotConfig-ipAddress?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -78,11 +78,11 @@ maxConn: int
 
 The maximum number of connections allowed by the Wi-Fi hotspot
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-HotspotConfig-maxConn: int--><!--Device-HotspotConfig-maxConn: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -98,9 +98,9 @@ The password of the Wi-Fi hotspot
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-HotspotConfig-preSharedKey: string--><!--Device-HotspotConfig-preSharedKey: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -116,9 +116,9 @@ The encryption mode of the Wi-Fi hotspot
 
 **Type:** WifiSecurityType
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-HotspotConfig-securityType: WifiSecurityType--><!--Device-HotspotConfig-securityType: WifiSecurityType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -134,11 +134,10 @@ The SSID of the Wi-Fi hotspot
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-HotspotConfig-ssid: string--><!--Device-HotspotConfig-ssid: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
-

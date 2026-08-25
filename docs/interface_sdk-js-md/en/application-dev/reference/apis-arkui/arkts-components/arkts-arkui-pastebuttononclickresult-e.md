@@ -4,7 +4,7 @@ Enumerates the authorization results after the **PasteButton** component is tapp
 
 **Since:** 10
 
-<!--Device-unnamed-declare enum PasteButtonOnClickResult--><!--Device-unnamed-declare enum PasteButtonOnClickResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Authorization is successful.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PasteButtonOnClickResult-SUCCESS = 0--><!--Device-PasteButtonOnClickResult-SUCCESS = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ Authorization fails.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-PasteButtonOnClickResult-TEMPORARY_AUTHORIZATION_FAILED = 1--><!--Device-PasteButtonOnClickResult-TEMPORARY_AUTHORIZATION_FAILED = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

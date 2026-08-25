@@ -4,7 +4,7 @@ Enumerates the advertising parameters.
 
 **Since:** 26.0.0
 
-<!--Device-advertising-interface AdvertisingParams--><!--Device-advertising-interface AdvertisingParams-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -26,9 +26,9 @@ Advertising data packet.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-AdvertisingParams-advertisingData: AdvertisingData--><!--Device-AdvertisingParams-advertisingData: AdvertisingData-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -44,9 +44,8 @@ Advertising settings.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AdvertisingParams-advertisingSettings: AdvertisingSettings--><!--Device-AdvertisingParams-advertisingSettings: AdvertisingSettings-End-->
-
 **System capability:** SystemCapability.Communication.NearLink.Base
-

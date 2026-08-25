@@ -6,9 +6,9 @@ export type AccessibilityElement = _AccessibilityElement
 
 表示无障碍节点元素，请参考[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-unnamed-export type AccessibilityElement = _AccessibilityElement--><!--Device-unnamed-export type AccessibilityElement = _AccessibilityElement-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -21,4 +21,3 @@ import { AccessibilityElement } from '@kit.AccessibilityKit';
 
 let accessibilityElement: AccessibilityElement;
 ```
-

@@ -2,9 +2,9 @@
 
 枚举，画质效果等级类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-image-enum ResolutionQuality--><!--Device-image-enum ResolutionQuality-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -18,9 +18,9 @@ LOW = 1
 
 低画质效果，解码耗时短。&lt;br/
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ResolutionQuality-LOW = 1--><!--Device-ResolutionQuality-LOW = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -34,9 +34,9 @@ MEDIUM = 2
 
 中等画质效果，解码耗时中等。&lt;br/
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ResolutionQuality-MEDIUM = 2--><!--Device-ResolutionQuality-MEDIUM = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -50,11 +50,10 @@ HIGH = 3
 
 最高等级画质效果，解码耗时长。&lt;br/
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ResolutionQuality-HIGH = 3--><!--Device-ResolutionQuality-HIGH = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
-

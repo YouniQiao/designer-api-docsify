@@ -2,9 +2,9 @@
 
 Represents the holding hand status. The holding hand status is returned if listening for holding hand status changes is enabled.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-motion-export enum HoldingHandStatus--><!--Device-motion-export enum HoldingHandStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -16,9 +16,9 @@ NOT_HELD = 0
 
 No holding.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-HoldingHandStatus-NOT_HELD = 0--><!--Device-HoldingHandStatus-NOT_HELD = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -30,9 +30,9 @@ LEFT_HAND_HELD = 1
 
 Holding with the left hand.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-HoldingHandStatus-LEFT_HAND_HELD = 1--><!--Device-HoldingHandStatus-LEFT_HAND_HELD = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -44,9 +44,9 @@ RIGHT_HAND_HELD = 2
 
 Holding with the right hand.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-HoldingHandStatus-RIGHT_HAND_HELD = 2--><!--Device-HoldingHandStatus-RIGHT_HAND_HELD = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -58,9 +58,9 @@ BOTH_HANDS_HELD = 3
 
 Holding with both hands.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-HoldingHandStatus-BOTH_HANDS_HELD = 3--><!--Device-HoldingHandStatus-BOTH_HANDS_HELD = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -72,9 +72,8 @@ UNKNOWN_STATUS = 16
 
 Unknown status.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-HoldingHandStatus-UNKNOWN_STATUS = 16--><!--Device-HoldingHandStatus-UNKNOWN_STATUS = 16-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
-

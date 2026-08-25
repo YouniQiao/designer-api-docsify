@@ -2,9 +2,9 @@
 
 Fly-in or fly-out deformation scene mode enumeration.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-uiEffect-enum FlyMode--><!--Device-uiEffect-enum FlyMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -18,9 +18,9 @@ BOTTOM = 0
 
 Fly-in or fly-out deformation from the bottom.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-FlyMode-BOTTOM = 0--><!--Device-FlyMode-BOTTOM = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -34,11 +34,10 @@ TOP = 1
 
 Fly-in or fly-out deformation from the top.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-FlyMode-TOP = 1--><!--Device-FlyMode-TOP = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
-

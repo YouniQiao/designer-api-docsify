@@ -12,11 +12,11 @@ AbilityComponent(value: { want: import('../api/@ohos.app.ability.Want').default 
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 10
 
 **替代接口：** UIExtensionComponentInterface
-
-<!--Device-AbilityComponentInterface-(value: { want: import('../api/@ohos.app.ability.Want').default }): AbilityComponentAttribute--><!--Device-AbilityComponentInterface-(value: { want: import('../api/@ohos.app.ability.Want').default }): AbilityComponentAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,9 +24,8 @@ AbilityComponent(value: { want: import('../api/@ohos.app.ability.Want').default 
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | { want: import('../api/@ohos.app.ability.Want').default } | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | { want: import('../api/@ohos.app.ability.Want').default } | 是 |
 
 ## 汇总
-

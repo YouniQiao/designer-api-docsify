@@ -4,9 +4,9 @@
 
 **起始版本：** 3
 
-**废弃版本：** 6
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-unnamed-export interface DeviceResponse--><!--Device-unnamed-export interface DeviceResponse-End-->
+**废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -28,9 +28,9 @@ apiVersion: number
 
 **起始版本：** 4
 
-**废弃版本：** 6
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为4。
 
-<!--Device-DeviceResponse-apiVersion: number--><!--Device-DeviceResponse-apiVersion: number-End-->
+**废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -46,9 +46,9 @@ brand: string
 
 **起始版本：** 3
 
-**废弃版本：** 6
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-DeviceResponse-brand: string--><!--Device-DeviceResponse-brand: string-End-->
+**废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -64,9 +64,9 @@ deviceType: string
 
 **起始版本：** 4
 
-**废弃版本：** 6
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为4。
 
-<!--Device-DeviceResponse-deviceType: string--><!--Device-DeviceResponse-deviceType: string-End-->
+**废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -82,9 +82,9 @@ language: string
 
 **起始版本：** 4
 
-**废弃版本：** 6
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为4。
 
-<!--Device-DeviceResponse-language: string--><!--Device-DeviceResponse-language: string-End-->
+**废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -100,9 +100,9 @@ manufacturer: string
 
 **起始版本：** 3
 
-**废弃版本：** 6
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-DeviceResponse-manufacturer: string--><!--Device-DeviceResponse-manufacturer: string-End-->
+**废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -118,9 +118,9 @@ model: string
 
 **起始版本：** 3
 
-**废弃版本：** 6
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-DeviceResponse-model: string--><!--Device-DeviceResponse-model: string-End-->
+**废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -136,9 +136,9 @@ product: string
 
 **起始版本：** 3
 
-**废弃版本：** 6
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-DeviceResponse-product: string--><!--Device-DeviceResponse-product: string-End-->
+**废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -154,9 +154,9 @@ region: string
 
 **起始版本：** 4
 
-**废弃版本：** 6
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为4。
 
-<!--Device-DeviceResponse-region: string--><!--Device-DeviceResponse-region: string-End-->
+**废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -172,9 +172,9 @@ screenDensity: number
 
 **起始版本：** 4
 
-**废弃版本：** 6
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为4。
 
-<!--Device-DeviceResponse-screenDensity: number--><!--Device-DeviceResponse-screenDensity: number-End-->
+**废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -192,9 +192,9 @@ screenShape: 'rect' | 'circle'
 
 **起始版本：** 4
 
-**废弃版本：** 6
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为4。
 
-<!--Device-DeviceResponse-screenShape: 'rect' | 'circle'--><!--Device-DeviceResponse-screenShape: 'rect' | 'circle'-End-->
+**废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -210,11 +210,11 @@ sdkMinorApiVersion?: number
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **废弃版本：** 26.0.0
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-DeviceResponse-sdkMinorApiVersion?: number--><!--Device-DeviceResponse-sdkMinorApiVersion?: number-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -230,11 +230,11 @@ sdkPatchApiVersion?: number
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **废弃版本：** 26.0.0
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-DeviceResponse-sdkPatchApiVersion?: number--><!--Device-DeviceResponse-sdkPatchApiVersion?: number-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -250,9 +250,9 @@ windowHeight: number
 
 **起始版本：** 3
 
-**废弃版本：** 6
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-DeviceResponse-windowHeight: number--><!--Device-DeviceResponse-windowHeight: number-End-->
+**废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -268,9 +268,8 @@ windowWidth: number
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 6
 
-<!--Device-DeviceResponse-windowWidth: number--><!--Device-DeviceResponse-windowWidth: number-End-->
-
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
-

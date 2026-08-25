@@ -2,9 +2,9 @@
 
 Enumerates the MIFARE Classic tag types.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-tag-enum MifareClassicType--><!--Device-tag-enum MifareClassicType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -16,11 +16,11 @@ TYPE_UNKNOWN = 0
 
 Unknown type.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-MifareClassicType-TYPE_UNKNOWN = 0--><!--Device-MifareClassicType-TYPE_UNKNOWN = 0-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -32,11 +32,11 @@ TYPE_CLASSIC = 1
 
 MIFARE Classic.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-MifareClassicType-TYPE_CLASSIC = 1--><!--Device-MifareClassicType-TYPE_CLASSIC = 1-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -48,11 +48,11 @@ TYPE_PLUS = 2
 
 MIFARE Plus.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-MifareClassicType-TYPE_PLUS = 2--><!--Device-MifareClassicType-TYPE_PLUS = 2-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -64,11 +64,10 @@ TYPE_PRO = 3
 
 MIFARE Pro.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-MifareClassicType-TYPE_PRO = 3--><!--Device-MifareClassicType-TYPE_PRO = 3-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
-

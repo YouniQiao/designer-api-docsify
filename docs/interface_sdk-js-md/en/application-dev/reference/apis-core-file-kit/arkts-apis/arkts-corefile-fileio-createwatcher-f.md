@@ -15,27 +15,27 @@ Listens for file or directory changes. This API uses an asynchronous callback to
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 10
 
 **Substitutes:** [createWatcher](arkts-corefile-file-fs-createwatcher-f.md)
-
-<!--Device-unnamed-declare function createWatcher(filename: string, events: number, callback: AsyncCallback<number>): Watcher--><!--Device-unnamed-declare function createWatcher(filename: string, events: number, callback: AsyncCallback<number>): Watcher-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| filename | string | Yes | Application sandbox path of the file. |
-| events | number | Yes | 1**: The file or directory is renamed.<br>- **2**: The file or directory is modified.<br>- **3**: The file or directory is modified and renamed. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Called each time a change is detected. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| filename | string | Yes |
+| events | number | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Watcher](arkts-corefile-fileio-watcher-depr-i.md) | Promise that returns the file change. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Watcher](arkts-corefile-fileio-watcher-depr-i.md) |
 
 **Examples**
 
@@ -45,4 +45,3 @@ fileio.createWatcher(filePath, 1, (err: BusinessError, event: number) => {
   console.info("event: " + event + "errmsg: " + JSON.stringify(err));
 });
 ```
-

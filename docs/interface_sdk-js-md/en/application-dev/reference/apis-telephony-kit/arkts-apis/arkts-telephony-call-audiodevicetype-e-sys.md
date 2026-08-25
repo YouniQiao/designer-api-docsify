@@ -2,9 +2,9 @@
 
 Enumerates audio device types.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-call-export enum AudioDeviceType--><!--Device-call-export enum AudioDeviceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -18,9 +18,9 @@ DEVICE_EARPIECE = 0
 
 Headset device.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-AudioDeviceType-DEVICE_EARPIECE = 0--><!--Device-AudioDeviceType-DEVICE_EARPIECE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -34,9 +34,9 @@ DEVICE_SPEAKER = 1
 
 Speaker device.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-AudioDeviceType-DEVICE_SPEAKER = 1--><!--Device-AudioDeviceType-DEVICE_SPEAKER = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -50,9 +50,9 @@ DEVICE_WIRED_HEADSET = 2
 
 Wired headset device.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-AudioDeviceType-DEVICE_WIRED_HEADSET = 2--><!--Device-AudioDeviceType-DEVICE_WIRED_HEADSET = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -66,9 +66,9 @@ DEVICE_BLUETOOTH_SCO = 3
 
 Bluetooth SCO device.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-AudioDeviceType-DEVICE_BLUETOOTH_SCO = 3--><!--Device-AudioDeviceType-DEVICE_BLUETOOTH_SCO = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -82,11 +82,10 @@ DEVICE_DISTRIBUTED_AUTOMOTIVE = 4
 
 Distributed head unit.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AudioDeviceType-DEVICE_DISTRIBUTED_AUTOMOTIVE = 4--><!--Device-AudioDeviceType-DEVICE_DISTRIBUTED_AUTOMOTIVE = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
-

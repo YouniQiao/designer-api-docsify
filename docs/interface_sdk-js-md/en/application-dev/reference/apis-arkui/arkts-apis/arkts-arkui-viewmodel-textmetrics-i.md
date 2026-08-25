@@ -4,7 +4,7 @@ TextMetrics@interface TextMetrics
 
 **Since:** 4
 
-<!--Device-unnamed-export interface TextMetrics--><!--Device-unnamed-export interface TextMetrics-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ height: number
 
 **Since:** 8
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-TextMetrics-height: number--><!--Device-TextMetrics-height: number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,8 @@ width: number
 
 **Since:** 4
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-TextMetrics-width: number--><!--Device-TextMetrics-width: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

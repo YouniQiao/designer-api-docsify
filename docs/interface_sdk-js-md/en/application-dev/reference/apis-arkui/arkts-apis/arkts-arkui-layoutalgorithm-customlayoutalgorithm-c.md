@@ -8,13 +8,11 @@ Custom layout algorithm class.
 > [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the
 > layout algorithm.
 
-**Inheritance/Implementation:** CustomLayoutAlgorithm implements [LayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-i.md)
+**Inheritance/Implementation:** CustomLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
 
 **Since:** 24
 
-**Decorator:** @ObservedV2
-
-<!--Device-unnamed-export class CustomLayoutAlgorithm--><!--Device-unnamed-export class CustomLayoutAlgorithm-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,15 +26,17 @@ Customizes the position of the child component to be arranged. When the position
 
 > **NOTE：**&gt;
 > In this callback, you can call
-> getChild() of
-> FrameNode to obtain the child
+> [getChild()](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#getchild12) of
+> [FrameNode](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#framenode-1) to obtain the child
 > component **FrameNode** and call
-> layout() of
-> FrameNode to set the position of the
+> [layout()](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#layout12) of
+> [FrameNode](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#framenode-1) to set the position of the
 > child component. For details, see
 > [Example 1](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md#example-1-implementing-waterfall-layout-using-a-custom-layout-algorithm).
 
 **Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,16 +44,14 @@ Customizes the position of the child component to be arranged. When the position
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
-<!--Device-CustomLayoutAlgorithm-onLayout(self: FrameNode, position: Position): void--><!--Device-CustomLayoutAlgorithm-onLayout(self: FrameNode, position: Position): void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Entity node of the dynamic layout component in the component tree. |
-| position | [Position](arkts-arkui-position-t.md) | Yes | Position information used in layout of the dynamic layout component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
+| position | [Position](arkts-arkui-position-t.md) | Yes |
 
 ## onMeasure
 
@@ -65,15 +63,17 @@ Customizes the size of the child component to be measured. When the size of the 
 
 > **NOTE：**&gt;
 > In this callback, you can call
-> getChild() of
-> FrameNode to obtain the child
+> [getChild()](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#getchild12) of
+> [FrameNode](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#framenode-1) to obtain the child
 > component **FrameNode** and call
-> measure() of
-> FrameNode to measure the size of the
+> [measure()](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#measure12) of
+> [FrameNode](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#framenode-1) to measure the size of the
 > child component. For details, see
 > [Example 1](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md#example-1-implementing-waterfall-layout-using-a-custom-layout-algorithm).
 
 **Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,14 +81,11 @@ Customizes the size of the child component to be measured. When the size of the 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
-<!--Device-CustomLayoutAlgorithm-onMeasure(self: FrameNode, constraint: LayoutConstraint): void--><!--Device-CustomLayoutAlgorithm-onMeasure(self: FrameNode, constraint: LayoutConstraint): void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | Entity node of the dynamic layout component in the component tree. |
-| constraint | [LayoutConstraint](../../apis-default/arkts-apis/arkts-framenode-layoutconstraint-i.md) | Yes | Layout constraint used by the dynamic layout component for measurement. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
+| constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | Yes |

@@ -6,9 +6,7 @@ A write lock that provides exclusive write access to a shared resource
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class WriteLock--><!--Device-unnamed-export class WriteLock-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,19 +25,17 @@ Constructs a new WriteLock associated with the given RWLock
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WriteLock-constructor(lock: RWLock)--><!--Device-WriteLock-constructor(lock: RWLock)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| lock | [RWLock](arkts-arkts-syncprimitives-rwlock-c.md) | Yes | the RWLock this WriteLock is associated with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [lock](#lock) | [RWLock](arkts-arkts-syncprimitives-rwlock-c.md) | Yes |
 
 ## lock
 
@@ -51,11 +47,9 @@ Acquires the write lock
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WriteLock-lock(): void--><!--Device-WriteLock-lock(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -69,11 +63,8 @@ Releases the write lock
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WriteLock-unlock(): void--><!--Device-WriteLock-unlock(): void-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

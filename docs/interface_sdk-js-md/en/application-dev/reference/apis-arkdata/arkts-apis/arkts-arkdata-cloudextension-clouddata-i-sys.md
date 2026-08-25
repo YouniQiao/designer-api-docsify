@@ -2,9 +2,9 @@
 
 Represents the cloud data.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-cloudExtension-export interface CloudData--><!--Device-cloudExtension-export interface CloudData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -26,9 +26,9 @@ Whether there is data to be queried on the server. The value true means there is
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CloudData-hasMore: boolean--><!--Device-CloudData-hasMore: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -44,9 +44,9 @@ Cursor for data query.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CloudData-nextCursor: string--><!--Device-CloudData-nextCursor: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -62,11 +62,10 @@ Array of data to be queried, which consists of the data value and ExtensionValue
 
 **Type:** Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CloudData-values: Array<Record<string, CloudType>>--><!--Device-CloudData-values: Array<Record<string, CloudType>>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
-

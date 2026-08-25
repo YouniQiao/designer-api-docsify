@@ -4,7 +4,7 @@ Defines the callback of the registration message notification of the UIAbility.
 
 **Since:** 9
 
-<!--Device-unnamed-export interface CalleeCallback--><!--Device-unnamed-export interface CalleeCallback-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -14,7 +14,7 @@ Defines the callback of the registration message notification of the UIAbility.
 import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (indata: rpc.MessageSequence): rpc.Parcelable
@@ -24,21 +24,20 @@ Defines the callback of Callee.
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-CalleeCallback-(indata: rpc.MessageSequence): rpc.Parcelable--><!--Device-CalleeCallback-(indata: rpc.MessageSequence): rpc.Parcelable-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| indata | rpc.MessageSequence | Yes | Data to be transferred. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| indata | rpc.MessageSequence | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| rpc.Parcelable | Returned data object. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| rpc.Parcelable |

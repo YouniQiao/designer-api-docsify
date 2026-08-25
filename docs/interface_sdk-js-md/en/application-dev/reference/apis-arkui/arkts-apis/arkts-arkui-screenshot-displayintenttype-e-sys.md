@@ -4,7 +4,7 @@ Enumerates the screenshot display intent type.@enum { int }
 
 **Since:** 26.0.0
 
-<!--Device-screenshot-enum DisplayIntentType--><!--Device-screenshot-enum DisplayIntentType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -20,9 +20,9 @@ Specifies that the screenshot renders with canonical display attributes optimizi
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-DisplayIntentType-CANONICAL = 0--><!--Device-DisplayIntentType-CANONICAL = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -38,11 +38,10 @@ Specifies that the screenshot renders with local display attributes optimizing o
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-DisplayIntentType-LOCAL = 1--><!--Device-DisplayIntentType-LOCAL = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
-

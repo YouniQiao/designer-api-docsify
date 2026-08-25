@@ -12,9 +12,9 @@ Enumerates the display modes of a foldable device.
 > inner screen's display mode is **FOLD_DISPLAY_MODE_MAIN**, and the outer screen's display mode is
 > **FOLD_DISPLAY_MODE_SUB**.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-display-enum FoldDisplayMode--><!--Device-display-enum FoldDisplayMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -26,11 +26,11 @@ FOLD_DISPLAY_MODE_UNKNOWN = 0
 
 The display mode of the device is unknown.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_UNKNOWN = 0--><!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_UNKNOWN = 0-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -42,11 +42,11 @@ FOLD_DISPLAY_MODE_FULL = 1
 
 The device is displayed in full screen.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_FULL = 1--><!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_FULL = 1-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -58,11 +58,11 @@ FOLD_DISPLAY_MODE_MAIN = 2
 
 The primary screen of the device is displayed.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_MAIN = 2--><!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_MAIN = 2-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -74,11 +74,11 @@ FOLD_DISPLAY_MODE_SUB = 3
 
 The secondary screen of the device is displayed.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_SUB = 3--><!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_SUB = 3-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -90,11 +90,10 @@ FOLD_DISPLAY_MODE_COORDINATION
 
 Both screens of the device are displayed in collaborative mode.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_COORDINATION--><!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_COORDINATION-End-->
-
 **System capability:** SystemCapability.Window.SessionManager
-

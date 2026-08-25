@@ -8,11 +8,10 @@ Callback to be invoked when the user stops scrolling and is positioned at the en
 
 **Since:** 23
 
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-unnamed-export type ScrollStopAtEndCallback = () => void--><!--Device-unnamed-export type ScrollStopAtEndCallback = () => void-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

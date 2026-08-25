@@ -4,9 +4,7 @@ Defines the line spacing options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare interface LineSpacingOptions--><!--Device-unnamed-export declare interface LineSpacingOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +20,8 @@ Used to set whether it will only take effect between lines.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-LineSpacingOptions-onlyBetweenLines?: boolean--><!--Device-LineSpacingOptions-onlyBetweenLines?: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -6,7 +6,7 @@
 
 **起始版本：** 11
 
-<!--Device-unnamed-export interface ExpandedMenuOptions--><!--Device-unnamed-export interface ExpandedMenuOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,15 +24,30 @@ action?: () => void
 
 点击菜单项的事件回调。同时配置builder和action时，点击图标会同时响应。不设置时点击无响应。
 
-**类型：** () =&gt; void
-
 **起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ExpandedMenuOptions-action?: () => void--><!--Device-ExpandedMenuOptions-action?: () => void-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## action
+
+```TypeScript
+action?: VoidCallback
+```
+
+点击菜单项的事件回调。
+
+**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full

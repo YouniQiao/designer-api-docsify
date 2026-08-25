@@ -7,9 +7,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export declare interface LayoutManager--><!--Device-unnamed-export declare interface LayoutManager-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,26 +21,24 @@ getCharacterPositionAtCoordinate(x: double, y: double): PositionWithAffinity | u
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LayoutManager-getCharacterPositionAtCoordinate(x: double, y: double): PositionWithAffinity | undefined--><!--Device-LayoutManager-getCharacterPositionAtCoordinate(x: double, y: double): PositionWithAffinity | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| x | double | 是 | 相对于组件的横坐标。<br/>单位：px。 |
-| y | double | 是 | 相对于组件的纵坐标。<br/>单位：px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| x | double | 是 |
+| y | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [PositionWithAffinity](arkts-arkui-textcommon-positionwithaffinity-i.md) \| undefined | 字符的位置信息。当[LayoutManager]{ |
+| 类型 |
+| --- |
+| [PositionWithAffinity](arkts-arkui-textcommon-positionwithaffinity-i.md) \| undefined |
 
 ## getCharacterPositionAtCoordinate
 
@@ -54,27 +50,25 @@ getCharacterPositionAtCoordinate(x: double, y: double, encoding?: TextEncoding):
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LayoutManager-getCharacterPositionAtCoordinate(x: double, y: double, encoding?: TextEncoding): PositionWithAffinity | undefined--><!--Device-LayoutManager-getCharacterPositionAtCoordinate(x: double, y: double, encoding?: TextEncoding): PositionWithAffinity | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| x | double | 是 | 相对于组件的横坐标。<br/>单位：px。 |
-| y | double | 是 | 相对于组件的纵坐标。<br/>单位：px。 |
-| encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | 否 | 字符位置使用的编码类型，默认值为TextEncoding.TEXT_ENCODING_UTF8。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| x | double | 是 |
+| y | double | 是 |
+| encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [PositionWithAffinity](arkts-arkui-textcommon-positionwithaffinity-i.md) \| undefined | 字符的位置信息。当[LayoutManager]{ |
+| 类型 |
+| --- |
+| [PositionWithAffinity](arkts-arkui-textcommon-positionwithaffinity-i.md) \| undefined |
 
 ## getCharacterRangeForGlyphRange
 
@@ -86,25 +80,23 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange): Array<TextRange> | undefi
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LayoutManager-getCharacterRangeForGlyphRange(glyphRange: TextRange): Array<TextRange> | undefined--><!--Device-LayoutManager-getCharacterRangeForGlyphRange(glyphRange: TextRange): Array<TextRange> | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| glyphRange | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 | 文本的字形范围。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| glyphRange | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[TextRange](arkts-arkui-textcommon-textrange-i.md)&gt; \| undefined | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围，当返回的范围是异常值时，范围内元素为-1。当 [LayoutManager]{ |
+| 类型 |
+| --- |
+| Array&lt;[TextRange](arkts-arkui-textcommon-textrange-i.md)&gt; \| undefined |
 
 ## getCharacterRangeForGlyphRange
 
@@ -116,26 +108,24 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): 
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LayoutManager-getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): Array<TextRange> | undefined--><!--Device-LayoutManager-getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): Array<TextRange> | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| glyphRange | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 | 文本的字形范围。 |
-| encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | 否 | 字符范围使用的编码类型，默认值为TextEncoding.TEXT_ENCODING_UTF8。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| glyphRange | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 |
+| encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[TextRange](arkts-arkui-textcommon-textrange-i.md)&gt; \| undefined | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围，当返回的范围是异常值时，范围内元素为-1。当 [LayoutManager]{ |
+| 类型 |
+| --- |
+| Array&lt;[TextRange](arkts-arkui-textcommon-textrange-i.md)&gt; \| undefined |
 
 ## getGlyphPositionAtCoordinate
 
@@ -147,26 +137,24 @@ getGlyphPositionAtCoordinate(x: double, y: double): PositionWithAffinity | undef
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LayoutManager-getGlyphPositionAtCoordinate(x: double, y: double): PositionWithAffinity | undefined--><!--Device-LayoutManager-getGlyphPositionAtCoordinate(x: double, y: double): PositionWithAffinity | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| x | double | 是 | 相对于组件的横坐标。<br/>单位：px。 |
-| y | double | 是 | 相对于组件的纵坐标。<br/>单位：px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| x | double | 是 |
+| y | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [PositionWithAffinity](arkts-arkui-textcommon-positionwithaffinity-i.md) \| undefined | 字形位置信息。 |
+| 类型 |
+| --- |
+| [PositionWithAffinity](arkts-arkui-textcommon-positionwithaffinity-i.md) \| undefined |
 
 ## getGlyphRangeForCharacterRange
 
@@ -178,25 +166,23 @@ getGlyphRangeForCharacterRange(charRange: TextRange): Array<TextRange> | undefin
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LayoutManager-getGlyphRangeForCharacterRange(charRange: TextRange): Array<TextRange> | undefined--><!--Device-LayoutManager-getGlyphRangeForCharacterRange(charRange: TextRange): Array<TextRange> | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| charRange | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 | 文本的字符范围。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| charRange | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[TextRange](arkts-arkui-textcommon-textrange-i.md)&gt; \| undefined | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围，当返回的范围是异常值时，范围内元素为-1。当 [LayoutManager]{ |
+| 类型 |
+| --- |
+| Array&lt;[TextRange](arkts-arkui-textcommon-textrange-i.md)&gt; \| undefined |
 
 ## getGlyphRangeForCharacterRange
 
@@ -208,26 +194,24 @@ getGlyphRangeForCharacterRange(charRange: TextRange, encoding?: TextEncoding): A
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LayoutManager-getGlyphRangeForCharacterRange(charRange: TextRange, encoding?: TextEncoding): Array<TextRange> | undefined--><!--Device-LayoutManager-getGlyphRangeForCharacterRange(charRange: TextRange, encoding?: TextEncoding): Array<TextRange> | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| charRange | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 | 文本的字符范围。 |
-| encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | 否 | 字符范围使用的编码类型，默认值为TextEncoding.TEXT_ENCODING_UTF8。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| charRange | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 |
+| encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[TextRange](arkts-arkui-textcommon-textrange-i.md)&gt; \| undefined | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围，当返回的范围是异常值时，范围内元素为-1。当 [LayoutManager]{ |
+| 类型 |
+| --- |
+| Array&lt;[TextRange](arkts-arkui-textcommon-textrange-i.md)&gt; \| undefined |
 
 ## getLineCount
 
@@ -239,19 +223,17 @@ getLineCount(): int | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LayoutManager-getLineCount(): int | undefined--><!--Device-LayoutManager-getLineCount(): int | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int \| undefined | 组件内容的总行数。 |
+| 类型 |
+| --- |
+| int \| undefined |
 
 ## getLineMetrics
 
@@ -263,25 +245,23 @@ ArkTS-Sta: getLineMetrics(lineNumber: int): LineMetrics | undefined获取指定�
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LayoutManager-getLineMetrics(lineNumber: int): LineMetrics | undefined--><!--Device-LayoutManager-getLineMetrics(lineNumber: int): LineMetrics | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| lineNumber | int | 是 | 行号，从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [lineNumber](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-linemetrics-i.md) | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [LineMetrics](arkts-arkui-linemetrics-t.md) \| undefined | 行信息、文本样式信息、以及字体属性信息。<br/>当行号小于0或超出实际行，返回无效值。 |
+| 类型 |
+| --- |
+| [LineMetrics](arkts-arkui-linemetrics-t.md) \| undefined |
 
 ## getRectsForRange
 
@@ -293,25 +273,22 @@ getRectsForRange(range: TextRange, widthStyle: RectWidthStyle, heightStyle: Rect
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LayoutManager-getRectsForRange(range: TextRange, widthStyle: RectWidthStyle, heightStyle: RectHeightStyle): Array<TextBox> | undefined--><!--Device-LayoutManager-getRectsForRange(range: TextRange, widthStyle: RectWidthStyle, heightStyle: RectHeightStyle): Array<TextBox> | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| range | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 | 需要获取的区域的文本区间。 |
-| widthStyle | [RectWidthStyle](arkts-arkui-rectwidthstyle-t.md) | 是 | 返回的矩形区域的宽度的规格。 |
-| heightStyle | [RectHeightStyle](arkts-arkui-rectheightstyle-t.md) | 是 | 返回的矩形区域的高度的规格。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| range | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 |
+| widthStyle | [RectWidthStyle](arkts-arkui-rectwidthstyle-t.md) | 是 |
+| heightStyle | [RectHeightStyle](arkts-arkui-rectheightstyle-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[TextBox](arkts-arkui-textbox-t.md)&gt; \| undefined | 矩形区域数组。 |
-
+| 类型 |
+| --- |
+| Array&lt;[TextBox](arkts-arkui-textbox-t.md)&gt; \| undefined |

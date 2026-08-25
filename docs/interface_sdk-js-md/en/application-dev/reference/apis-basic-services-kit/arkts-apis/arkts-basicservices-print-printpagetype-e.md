@@ -2,9 +2,9 @@
 
 Enumerates the print page types.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-print-enum PrintPageType--><!--Device-print-enum PrintPageType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -16,9 +16,9 @@ PAGE_ISO_A3 = 0
 
 A3.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintPageType-PAGE_ISO_A3 = 0--><!--Device-PrintPageType-PAGE_ISO_A3 = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -30,9 +30,9 @@ PAGE_ISO_A4 = 1
 
 A4.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintPageType-PAGE_ISO_A4 = 1--><!--Device-PrintPageType-PAGE_ISO_A4 = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -44,9 +44,9 @@ PAGE_ISO_A5 = 2
 
 A5.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintPageType-PAGE_ISO_A5 = 2--><!--Device-PrintPageType-PAGE_ISO_A5 = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -58,9 +58,9 @@ PAGE_JIS_B5 = 3
 
 B5.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintPageType-PAGE_JIS_B5 = 3--><!--Device-PrintPageType-PAGE_JIS_B5 = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -72,9 +72,9 @@ PAGE_ISO_C5 = 4
 
 C5.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintPageType-PAGE_ISO_C5 = 4--><!--Device-PrintPageType-PAGE_ISO_C5 = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -86,9 +86,9 @@ PAGE_ISO_DL = 5
 
 DL.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintPageType-PAGE_ISO_DL = 5--><!--Device-PrintPageType-PAGE_ISO_DL = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -100,9 +100,9 @@ PAGE_LETTER = 6
 
 Letter.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintPageType-PAGE_LETTER = 6--><!--Device-PrintPageType-PAGE_LETTER = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -114,9 +114,9 @@ PAGE_LEGAL = 7
 
 Legal.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintPageType-PAGE_LEGAL = 7--><!--Device-PrintPageType-PAGE_LEGAL = 7-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -128,9 +128,9 @@ PAGE_PHOTO_4X6 = 8
 
 4 x 6 photo paper.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintPageType-PAGE_PHOTO_4X6 = 8--><!--Device-PrintPageType-PAGE_PHOTO_4X6 = 8-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -142,9 +142,9 @@ PAGE_PHOTO_5X7 = 9
 
 5 x 7 photo paper.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintPageType-PAGE_PHOTO_5X7 = 9--><!--Device-PrintPageType-PAGE_PHOTO_5X7 = 9-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -156,9 +156,9 @@ PAGE_INT_DL_ENVELOPE = 10
 
 International envelope DL.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintPageType-PAGE_INT_DL_ENVELOPE = 10--><!--Device-PrintPageType-PAGE_INT_DL_ENVELOPE = 10-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -170,9 +170,8 @@ PAGE_B_TABLOID = 11
 
 B Tabloid.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintPageType-PAGE_B_TABLOID = 11--><!--Device-PrintPageType-PAGE_B_TABLOID = 11-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
-

@@ -5,9 +5,9 @@ The module provides version information about the dispatchInfo struct and dispat
 > **NOTE：**&gt;
 > The APIs provided by this module are system APIs.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export interface DispatchInfo--><!--Device-unnamed-export interface DispatchInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -23,9 +23,9 @@ Version of the dispatch API.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DispatchInfo-readonly dispatchAPIVersion: string--><!--Device-DispatchInfo-readonly dispatchAPIVersion: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -41,11 +41,10 @@ Version of the dispatchInfo struct.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DispatchInfo-readonly version: string--><!--Device-DispatchInfo-readonly version: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
-

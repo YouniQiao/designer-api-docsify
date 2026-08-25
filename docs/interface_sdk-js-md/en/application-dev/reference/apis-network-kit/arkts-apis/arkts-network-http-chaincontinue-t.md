@@ -8,11 +8,10 @@ Specifies whether to continue to process the interceptor chain.
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-http-export type ChainContinue = boolean--><!--Device-http-export type ChainContinue = boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Property type:** boolean
-

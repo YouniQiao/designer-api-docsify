@@ -2,9 +2,9 @@
 
 枚举，媒体资产（图片/视频）或相册变更事件的通知类型。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-photoAccessHelper-enum NotifyChangeType--><!--Device-photoAccessHelper-enum NotifyChangeType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,7 +18,7 @@ NOTIFY_CHANGE_YUV_READY = 3
 
 **起始版本：** 23
 
-<!--Device-NotifyChangeType-NOTIFY_CHANGE_YUV_READY = 3--><!--Device-NotifyChangeType-NOTIFY_CHANGE_YUV_READY = 3-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,9 @@ NOTIFY_CHANGE_ADD_ANALYSIS = 4
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-NotifyChangeType-NOTIFY_CHANGE_ADD_ANALYSIS = 4--><!--Device-NotifyChangeType-NOTIFY_CHANGE_ADD_ANALYSIS = 4-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -52,11 +52,10 @@ NOTIFY_CHANGE_REMOVE_ANALYSIS = 5
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-NotifyChangeType-NOTIFY_CHANGE_REMOVE_ANALYSIS = 5--><!--Device-NotifyChangeType-NOTIFY_CHANGE_REMOVE_ANALYSIS = 5-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
-

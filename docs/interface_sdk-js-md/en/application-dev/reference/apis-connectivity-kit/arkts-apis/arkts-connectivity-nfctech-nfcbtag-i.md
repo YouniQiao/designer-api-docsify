@@ -5,33 +5,39 @@ Provides APIs to access NFC-B (ISO 14443-3B) properties and perform I/O operatio
 
 **Inheritance/Implementation:** NfcBTag extends TagSession
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-export interface NfcBTag--><!--Device-unnamed-export interface NfcBTag-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## getRespAppData
 
+ArkTS-Dyn:
+```TypeScript
+getRespAppData(): number[]
+```
+
+ArkTS-Sta:
 ```TypeScript
 getRespAppData(): int[]
 ```
 
 Obtains the application data of this NFC-B tag.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NfcBTag-getRespAppData(): int[]--><!--Device-NfcBTag-getRespAppData(): int[]-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int[] | Application data obtained, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
 
 **Examples**
 
@@ -45,25 +51,31 @@ console.info("nfcB respAppData: " + respAppData);
 
 ## getRespProtocol
 
+ArkTS-Dyn:
+```TypeScript
+getRespProtocol(): number[]
+```
+
+ArkTS-Sta:
 ```TypeScript
 getRespProtocol(): int[]
 ```
 
 Obtains the protocol information of this NFC-B tag.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NfcBTag-getRespProtocol(): int[]--><!--Device-NfcBTag-getRespProtocol(): int[]-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int[] | Protocol information obtained, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
 
 **Examples**
 
@@ -74,4 +86,3 @@ import { tag } from '@kit.ConnectivityKit';
 let respProtocol : number[] = nfcB.getRespProtocol();
 console.info("nfcB respProtocol: " + respProtocol);
 ```
-

@@ -4,7 +4,7 @@ Provides the feature information of the new window requested to be created by th
 
 **Since:** 23
 
-<!--Device-unnamed-declare interface WindowFeatures--><!--Device-unnamed-declare interface WindowFeatures-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -25,7 +25,7 @@ Height of the new window, in pixels.
 
 **Since:** 23
 
-<!--Device-WindowFeatures-height: number--><!--Device-WindowFeatures-height: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -41,7 +41,7 @@ Width of the new window, in pixels.
 
 **Since:** 23
 
-<!--Device-WindowFeatures-width: number--><!--Device-WindowFeatures-width: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -57,7 +57,7 @@ X coordinate of the top-left corner of the new window, in pixels.
 
 **Since:** 23
 
-<!--Device-WindowFeatures-x: number--><!--Device-WindowFeatures-x: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -73,7 +73,6 @@ Y coordinate of the top-left corner of the new window, in pixels.
 
 **Since:** 23
 
-<!--Device-WindowFeatures-y: number--><!--Device-WindowFeatures-y: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

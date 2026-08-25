@@ -2,9 +2,9 @@
 
 Wi-Fi IP information.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-wifiManager-interface IpInfo--><!--Device-wifiManager-interface IpInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -22,11 +22,11 @@ gateway: int
 
 The gateway of the Wi-Fi connection
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IpInfo-gateway: int--><!--Device-IpInfo-gateway: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -38,11 +38,11 @@ ipAddress: int
 
 The IP address of the Wi-Fi connection
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IpInfo-ipAddress: int--><!--Device-IpInfo-ipAddress: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -54,11 +54,11 @@ leaseDuration: int
 
 The IP address lease duration of the Wi-Fi connection
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IpInfo-leaseDuration: int--><!--Device-IpInfo-leaseDuration: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -70,11 +70,11 @@ netmask: int
 
 The network mask of the Wi-Fi connection
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IpInfo-netmask: int--><!--Device-IpInfo-netmask: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -86,11 +86,11 @@ primaryDns: int
 
 The primary DNS server IP address of the Wi-Fi connection
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IpInfo-primaryDns: int--><!--Device-IpInfo-primaryDns: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -102,11 +102,11 @@ secondDns: int
 
 The secondary DNS server IP address of the Wi-Fi connection
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IpInfo-secondDns: int--><!--Device-IpInfo-secondDns: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -118,11 +118,10 @@ serverIp: int
 
 The DHCP server IP address of the Wi-Fi connection
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IpInfo-serverIp: int--><!--Device-IpInfo-serverIp: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
-

@@ -16,9 +16,9 @@ function configure(featureId: UserStatusFeature, detail: string): number
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-userStatus-function configure(featureId: UserStatusFeature, detail: string): number--><!--Device-userStatus-function configure(featureId: UserStatusFeature, detail: string): number-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -26,21 +26,20 @@ function configure(featureId: UserStatusFeature, detail: string): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| featureId | [UserStatusFeature](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md) | 是 | 表示要配置的用户状态检测功能类型。 |
-| detail | string | 是 | 配置参数，JSON格式字符串。包含params数组，每个参数包含description（参数名）和value（参数值数组）字段。 <br>具体格式和取值参见下方detail定义说明表格。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| featureId | [UserStatusFeature](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md) | 是 |
+| detail | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回配置执行结果。返回0表示操作成功，非零值表示操作失败。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [33900001](../errorcode-userStatus.md#33900001-服务异常) | Service exception. Possible causes: <br>1. System error, such as a null pointer and container-related exception. <br>2. Node-API invocation exception, such as invalid Node-API status. |
-
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [33900001](../errorcode-userStatus.md#33900001-服务异常) |

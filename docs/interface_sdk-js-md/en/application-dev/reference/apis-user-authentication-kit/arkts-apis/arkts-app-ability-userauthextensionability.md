@@ -1,4 +1,4 @@
-# @ohos.app.ability.UserAuthExtensionAbility
+# @ohos.app.ability.UserAuthExtensionAbility(User Authentication Extension Ability)
 
 ## Modules to Import
 
@@ -10,7 +10,6 @@ import { UserAuthExtensionAbility } from '@kit.UserAuthenticationKit';
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [UserAuthExtensionAbility](arkts-userauthentication-app-ability-userauthextensionability-userauthextensionability-c.md) | The class of user authentication extension ability.@extends UIExtensionAbility |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [UserAuthExtensionAbility(User Authentication Extension Ability)](arkts-userauthentication-app-ability-userauthextensionability-userauthextensionability-c.md) |

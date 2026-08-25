@@ -2,9 +2,9 @@
 
 Represents the information about the joint asset in the RDB store to bind. Currently, only the RDB stores are supported.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-distributedDataObject-interface BindInfo--><!--Device-distributedDataObject-interface BindInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -24,9 +24,9 @@ Name of the target asset in the RDB store.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-BindInfo-assetName: string--><!--Device-BindInfo-assetName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -40,9 +40,9 @@ Column in which the target asset is located in the RDB store.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-BindInfo-field: string--><!--Device-BindInfo-field: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -56,9 +56,9 @@ Primary key of the target asset in the RDB store.
 
 **Type:** commonType.ValuesBucket
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-BindInfo-primaryKey: commonType.ValuesBucket--><!--Device-BindInfo-primaryKey: commonType.ValuesBucket-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -72,9 +72,9 @@ RDB store to which the target asset (asset to bind) belongs.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-BindInfo-storeName: string--><!--Device-BindInfo-storeName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -88,9 +88,8 @@ Table to which the target asset is located in the RDB store.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-BindInfo-tableName: string--><!--Device-BindInfo-tableName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-

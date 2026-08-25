@@ -2,9 +2,9 @@
 
 [UploadConfig](arkts-basicservices-request-uploadconfig-i.md)中的文件列表。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-request-interface File--><!--Device-request-interface File-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -24,9 +24,9 @@ multipart提交时，请求头中的文件名。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-File-filename: string--><!--Device-File-filename: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -40,9 +40,9 @@ multipart提交时，表单项目的名称，缺省为file。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-File-name: string--><!--Device-File-name: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -56,9 +56,9 @@ type: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-File-type: string--><!--Device-File-type: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -72,9 +72,8 @@ uri: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-File-uri: string--><!--Device-File-uri: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
-

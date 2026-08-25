@@ -6,7 +6,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-i18n-export class SymbolNumberFormat--><!--Device-i18n-export class SymbolNumberFormat-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -26,20 +26,20 @@ public constructor(locale?: Intl.Locale, options?: SymbolNumberFormatOptions)
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SymbolNumberFormat-public constructor(locale?: Intl.Locale, options?: SymbolNumberFormatOptions)--><!--Device-SymbolNumberFormat-public constructor(locale?: Intl.Locale, options?: SymbolNumberFormatOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locale | Intl.Locale | 否 | 区域对象。默认值：系统区域对象。 |
-| options | [SymbolNumberFormatOptions](../../apis-default/arkts-apis/arkts-i18n-symbolnumberformatoptions-i.md) | 否 | 自定义数字格式化符号的配置项。默认值：区域默认的符号。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locale | Intl.Locale | 否 |
+| options | [SymbolNumberFormatOptions](arkts-localization-i18n-symbolnumberformatoptions-i.md) | 否 |
 
 **示例**
 
@@ -232,25 +232,25 @@ public format(value: number | bigint): string
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SymbolNumberFormat-public format(value: number | bigint): string--><!--Device-SymbolNumberFormat-public format(value: number | bigint): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number \| bigint | 是 | 待格式化的数字。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number \| bigint | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 使用自定义符号的数字字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -424,26 +424,26 @@ public formatRange(startRange: number, endRange: number): string
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SymbolNumberFormat-public formatRange(startRange: number, endRange: number): string--><!--Device-SymbolNumberFormat-public formatRange(startRange: number, endRange: number): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| startRange | number | 是 | 起始数字。 |
-| endRange | number | 是 | 终止数字。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| startRange | number | 是 |
+| endRange | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 使用自定义符号的数字范围字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -482,26 +482,26 @@ public formatRangeToParts(startRange: number, endRange: number): Intl.NumberForm
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SymbolNumberFormat-public formatRangeToParts(startRange: number, endRange: number): Intl.NumberFormatPart[]--><!--Device-SymbolNumberFormat-public formatRangeToParts(startRange: number, endRange: number): Intl.NumberFormatPart[]-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| startRange | number | 是 | 起始数字。 |
-| endRange | number | 是 | 终止数字。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| startRange | number | 是 |
+| endRange | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Intl.NumberFormatPart[] | 使用自定义符号的数字元素数组。 |
+| 类型 |
+| --- |
+| Intl.NumberFormatPart[] |
 
 **示例**
 
@@ -540,25 +540,25 @@ public formatToParts(value?: number | bigint): Intl.NumberFormatPart[]
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SymbolNumberFormat-public formatToParts(value?: number | bigint): Intl.NumberFormatPart[]--><!--Device-SymbolNumberFormat-public formatToParts(value?: number | bigint): Intl.NumberFormatPart[]-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number \| bigint | 否 | 待格式化的数字。默认值：NaN。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number \| bigint | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Intl.NumberFormatPart[] | 使用自定义符号的数字元素数组。 |
+| 类型 |
+| --- |
+| Intl.NumberFormatPart[] |
 
 **示例**
 
@@ -595,32 +595,32 @@ public parse(text: string, lenientMode: boolean): number
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SymbolNumberFormat-public parse(text: string, lenientMode: boolean): number--><!--Device-SymbolNumberFormat-public parse(text: string, lenientMode: boolean): number-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| text | string | 是 | 待解析的本地化数字字符串。 |
-| lenientMode | boolean | 是 | 是否采用宽松模式，true表示采用宽松模式，false表示不采用宽松模式。 <br>宽松模式下，能够识别错误的千分符，如"1,23,456"可以正确解析为"123456"。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| text | string | 是 |
+| lenientMode | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 本地化数字字符串解析后的数字。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) |
 
 **示例**
 
@@ -652,19 +652,19 @@ public resolvedOptions(): ResolvedSymbolNumberFormatOptions
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SymbolNumberFormat-public resolvedOptions(): ResolvedSymbolNumberFormatOptions--><!--Device-SymbolNumberFormat-public resolvedOptions(): ResolvedSymbolNumberFormatOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ResolvedSymbolNumberFormatOptions](../../apis-default/arkts-apis/arkts-i18n-resolvedsymbolnumberformatoptions-i.md) | 自定义符号数字格式化对象配置项的解析结果。 |
+| 类型 |
+| --- |
+| [ResolvedSymbolNumberFormatOptions](arkts-localization-i18n-resolvedsymbolnumberformatoptions-i.md) |
 
 **示例**
 
@@ -690,4 +690,3 @@ let formatter = new i18n.SymbolNumberFormat(locale, {
 });
 let result = formatter.resolvedOptions(); // result.style = 'unit', result.unit = 'day', result.zero = '(0)'
 ```
-

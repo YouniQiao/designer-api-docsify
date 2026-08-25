@@ -6,9 +6,7 @@ Represents boxed float value and related operations.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class Float--><!--Device-unnamed-export class Float-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,25 +25,23 @@ Performs floating point addition with provided instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public add(other: Float): Float--><!--Device-Float-public add(other: Float): Float-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Float | Yes | right hand side of the addition. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Float | result of the addition. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Float |
 
 ## bitCastFromInt
 
@@ -57,25 +53,23 @@ Converts bit representation to corresponding IEEE-754 floating point representat
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static bitCastFromInt(bits: int): float--><!--Device-Float-public static bitCastFromInt(bits: int): float-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bits | int | Yes | bits to convert. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [bits](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-deflatependingoutputinfo-i.md) | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| float | converted value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| float |
 
 ## bitCastToInt
 
@@ -87,25 +81,23 @@ Converts IEEE-754 floating point representation to corresponding bit representat
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static bitCastToInt(val: float): int--><!--Device-Float-public static bitCastToInt(val: float): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | float | Yes | value to convert. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | bit representation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## compare
 
@@ -117,26 +109,24 @@ Compares two floats to see if they differ by at most DELTA.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static compare(lhs: float, rhs: float): boolean--><!--Device-Float-public static compare(lhs: float, rhs: float): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| lhs | float | Yes | left-hand side float for comparison. |
-| rhs | float | Yes | right-hand side float for comparison. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| lhs | float | Yes |
+| rhs | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if equal with respect to DELTA. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## compareTo
 
@@ -148,25 +138,23 @@ Compares this instance to other Float object. The result is less than 0 if this 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public compareTo(other: Float): int--><!--Device-Float-public compareTo(other: Float): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Float | Yes | Float object to compare with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | result of the comparison (-1, 0, or 1). |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## constructor
 
@@ -178,11 +166,9 @@ Constructs a new Float instance with initial value zero.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public constructor()--><!--Device-Float-public constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -196,19 +182,17 @@ Constructs a new Float instance with provided initial value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public constructor(value: float)--><!--Device-Float-public constructor(value: float)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | float | Yes | the initial value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | float | Yes |
 
 ## constructor
 
@@ -220,19 +204,17 @@ Constructs a new Float instance with provided initial value (double type literal
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public constructor(value: double)--><!--Device-Float-public constructor(value: double)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | the initial value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | double | Yes |
 
 ## div
 
@@ -244,25 +226,23 @@ Performs floating point division with provided instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public div(other: Float): Float--><!--Device-Float-public div(other: Float): Float-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Float | Yes | right hand side of the division. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Float | result of the division. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Float |
 
 ## equals
 
@@ -274,25 +254,23 @@ Checks for equality with provided object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public equals(other: Any): boolean--><!--Device-Float-public equals(other: Any): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Any | Yes | object to be checked against. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Any | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if equal, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isFinite
 
@@ -304,25 +282,23 @@ Checks if float is a finite floating point value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static isFinite(v: float): boolean--><!--Device-Float-public static isFinite(v: float): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| v | float | Yes | the float to test. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| v | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the argument is finite. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isFinite
 
@@ -334,19 +310,17 @@ Checks if the underlying float is a finite floating point value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public isFinite(): boolean--><!--Device-Float-public isFinite(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the underlying float is finite. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isGreaterEqualThan
 
@@ -358,25 +332,23 @@ Checks if this instance value is greater than or equal to value of provided inst
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public isGreaterEqualThan(other: Float): boolean--><!--Device-Float-public isGreaterEqualThan(other: Float): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Float | Yes | right hand side of the comparison. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if this value is greater than or equal to provided. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isGreaterThan
 
@@ -388,25 +360,23 @@ Checks if this instance value is greater than value of provided instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public isGreaterThan(other: Float): boolean--><!--Device-Float-public isGreaterThan(other: Float): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Float | Yes | right hand side of the comparison. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if this value is greater than provided. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isInteger
 
@@ -418,25 +388,23 @@ Checks if float is similar to an integer value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static isInteger(v: float): boolean--><!--Device-Float-public static isInteger(v: float): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| v | float | Yes | the float to test. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| v | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the argument is similar to an integer. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isInteger
 
@@ -448,19 +416,17 @@ Checks if the underlying float is similar to an integer value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public isInteger(): boolean--><!--Device-Float-public isInteger(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the underlying float is similar to an integer. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isLessEqualThan
 
@@ -472,25 +438,23 @@ Checks if this instance value is less than or equal to value of provided instanc
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public isLessEqualThan(other: Float): boolean--><!--Device-Float-public isLessEqualThan(other: Float): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Float | Yes | right hand side of the comparison. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if this value is less than or equal to provided. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isLessThan
 
@@ -502,25 +466,23 @@ Checks if this instance value is less than value of provided instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public isLessThan(other: Float): boolean--><!--Device-Float-public isLessThan(other: Float): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Float | Yes | right hand side of the comparison. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if this value is less than provided. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isNaN
 
@@ -532,25 +494,23 @@ Checks if float is NaN.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static isNaN(v: float): boolean--><!--Device-Float-public static isNaN(v: float): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| v | float | Yes | the float to test. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| v | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the argument is NaN. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isNaN
 
@@ -562,19 +522,17 @@ Checks if the underlying float is NaN.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public isNaN(): boolean--><!--Device-Float-public isNaN(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the underlying float is NaN. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isSafeInteger
 
@@ -586,25 +544,23 @@ Checks if float is a safe integer value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static isSafeInteger(v: float): boolean--><!--Device-Float-public static isSafeInteger(v: float): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| v | float | Yes | the float to test. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| v | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the argument is a safe integer. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isSafeInteger
 
@@ -616,19 +572,17 @@ Checks if the underlying float is a safe integer value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public isSafeInteger(): boolean--><!--Device-Float-public isSafeInteger(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the underlying float is a safe integer. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## mul
 
@@ -640,25 +594,23 @@ Performs floating point multiplication with provided instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public mul(other: Float): Float--><!--Device-Float-public mul(other: Float): Float-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Float | Yes | right hand side of the multiplication. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Float | result of the multiplication. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Float |
 
 ## sub
 
@@ -670,25 +622,23 @@ Performs floating point subtraction with provided instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public sub(other: Float): Float--><!--Device-Float-public sub(other: Float): Float-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Float | Yes | right hand side of the subtraction. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Float | result of the subtraction. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Float |
 
 ## toByte
 
@@ -700,19 +650,17 @@ Returns value of this instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public toByte(): byte--><!--Device-Float-public toByte(): byte-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| byte | value as byte. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| byte |
 
 ## toByte
 
@@ -724,25 +672,23 @@ Returns the primitive as byte value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static toByte(value: float): byte--><!--Device-Float-public static toByte(value: float): byte-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | float | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| byte | casted value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| byte |
 
 ## toDouble
 
@@ -754,19 +700,17 @@ Returns value of this instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public toDouble(): double--><!--Device-Float-public toDouble(): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | value as double. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## toDouble
 
@@ -778,25 +722,23 @@ Returns the primitive as double value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static toDouble(value: float): double--><!--Device-Float-public static toDouble(value: float): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | float | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | casted value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## toFloat
 
@@ -808,19 +750,17 @@ Returns value of this instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public toFloat(): float--><!--Device-Float-public toFloat(): float-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| float | value as float. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| float |
 
 ## toFloat
 
@@ -832,25 +772,23 @@ Returns the primitive as float value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static toFloat(value: float): float--><!--Device-Float-public static toFloat(value: float): float-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | float | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| float | casted value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| float |
 
 ## toInt
 
@@ -862,19 +800,17 @@ Returns value of this instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public toInt(): int--><!--Device-Float-public toInt(): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | value as int. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## toInt
 
@@ -886,25 +822,23 @@ Returns the primitive as int value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static toInt(value: float): int--><!--Device-Float-public static toInt(value: float): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | float | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | casted value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## toLocaleString
 
@@ -916,19 +850,17 @@ Converts this object to a locale-specific string representation.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public toLocaleString(): string--><!--Device-Float-public toLocaleString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the locale-specific conversion. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toLong
 
@@ -940,19 +872,17 @@ Returns value of this instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public toLong(): long--><!--Device-Float-public toLong(): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | value as long. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## toLong
 
@@ -964,25 +894,23 @@ Returns the primitive as long value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static toLong(value: float): long--><!--Device-Float-public static toLong(value: float): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | float | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | casted value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## toShort
 
@@ -994,19 +922,17 @@ Returns value of this instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public toShort(): short--><!--Device-Float-public toShort(): short-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| short | value as short. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| short |
 
 ## toShort
 
@@ -1018,25 +944,23 @@ Returns the primitive as short value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static toShort(value: float): short--><!--Device-Float-public static toShort(value: float): short-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | float | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| short | casted value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| short |
 
 ## toString
 
@@ -1048,26 +972,24 @@ Returns a string representation of float by radix r.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static toString(f: float, r: int): string--><!--Device-Float-public static toString(f: float, r: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| f | float | Yes | the float value. |
-| r | int | Yes | the radix. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [f](arkts-arkts-float-c.md) | float | Yes |
+| r | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the string representation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -1079,25 +1001,23 @@ Returns a string representation of float in base 10.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static toString(f: float): string--><!--Device-Float-public static toString(f: float): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| f | float | Yes | the float value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [f](arkts-arkts-float-c.md) | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the string representation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -1109,25 +1029,23 @@ Converts this object to a string in the given radix.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public toString(r: int): string--><!--Device-Float-public toString(r: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| r | int | Yes | the radix. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| r | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the conversion. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -1139,19 +1057,17 @@ Converts this object to a string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public toString(): string--><!--Device-Float-public toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the conversion. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## BIT_SIZE
 
@@ -1165,11 +1081,9 @@ Size of this type in bits.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static BIT_SIZE: byte = 32--><!--Device-Float-public static BIT_SIZE: byte = 32-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1185,11 +1099,9 @@ Size of this type in bytes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static BYTE_SIZE: byte = 4--><!--Device-Float-public static BYTE_SIZE: byte = 4-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1205,11 +1117,9 @@ Minimal possible difference between two float values.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static DELTA: float = Float.bitCastFromInt(0x34000000)--><!--Device-Float-public static DELTA: float = Float.bitCastFromInt(0x34000000)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1225,11 +1135,9 @@ Minimal possible difference between two float values.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static EPSILON: float = Float.DELTA--><!--Device-Float-public static EPSILON: float = Float.DELTA-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1239,11 +1147,7 @@ Minimal possible difference between two float values.
 f
 ```
 
-**Since:** -1
-
-**ArkTS mode:** ArkTS-Sta since version -1.
-
-<!--Device-Float-f--><!--Device-Float-f-End-->
+**ArkTS mode:** 
 
 ## MAX_SAFE_INTEGER
 
@@ -1257,11 +1161,9 @@ Maximal integer value that can be used as a float without loss of precision.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static MAX_SAFE_INTEGER: float = 16777215--><!--Device-Float-public static MAX_SAFE_INTEGER: float = 16777215-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1277,11 +1179,9 @@ Maximal value that this type can have as a float.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static MAX_VALUE: float = 3.40282346638528860e+38--><!--Device-Float-public static MAX_VALUE: float = 3.40282346638528860e+38-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1297,11 +1197,9 @@ Minimal value that this type can have as a float.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static MIN_VALUE: float = 1.4e-45--><!--Device-Float-public static MIN_VALUE: float = 1.4e-45-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1317,11 +1215,9 @@ Represents the NaN value according to IEEE-754 specification.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static NaN: float = Double.toFloat(0.0 / 0.0)--><!--Device-Float-public static NaN: float = Double.toFloat(0.0 / 0.0)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1337,11 +1233,9 @@ Represents the -Infinity value according to IEEE-754 specification.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static NEGATIVE_INFINITY: float = Double.toFloat(-1.0 / 0.0)--><!--Device-Float-public static NEGATIVE_INFINITY: float = Double.toFloat(-1.0 / 0.0)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1357,11 +1251,9 @@ Represents the +Infinity value according to IEEE-754 specification.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static POSITIVE_INFINITY: float = Double.toFloat(1.0 / 0.0)--><!--Device-Float-public static POSITIVE_INFINITY: float = Double.toFloat(1.0 / 0.0)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1377,11 +1269,8 @@ Number of significant precision bits in this floating type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Float-public static PRECISION: byte = 24--><!--Device-Float-public static PRECISION: byte = 24-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

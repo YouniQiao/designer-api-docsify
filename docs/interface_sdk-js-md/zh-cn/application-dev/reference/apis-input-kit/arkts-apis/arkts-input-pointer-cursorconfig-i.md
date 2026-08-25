@@ -2,9 +2,9 @@
 
 自定义光标配置。
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-pointer-interface CursorConfig--><!--Device-pointer-interface CursorConfig-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -24,9 +24,8 @@ followSystem : boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-CursorConfig-followSystem : boolean--><!--Device-CursorConfig-followSystem : boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
-

@@ -6,7 +6,7 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 8
 
-<!--Device-unnamed-declare class SelectAttribute--><!--Device-unnamed-declare class SelectAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,19 +28,19 @@ Creates an arrow modifier to customize the drop-down arrow icon style of the **S
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-SelectAttribute-arrowModifier(modifier: Optional<SymbolGlyphModifier>): SelectAttribute--><!--Device-SelectAttribute-arrowModifier(modifier: Optional<SymbolGlyphModifier>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| modifier | Optional&lt;SymbolGlyphModifier&gt; | Yes | Arrow modifier to apply to the **Select** button for customizing the drop-down arrow icon style. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| modifier | Optional & lt;SymbolGlyphModifier & gt; | Yes |
 
 ## arrowPosition
 
@@ -52,19 +52,19 @@ Sets the alignment between the text and arrow of an option.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SelectAttribute-arrowPosition(value: ArrowPosition): SelectAttribute--><!--Device-SelectAttribute-arrowPosition(value: ArrowPosition): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [ArrowPosition](arkts-arkui-arrowposition-e.md) | Yes | Alignment between the text and arrow of an option.<br>Default value: **ArrowPosition.END |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | [ArrowPosition](arkts-arkui-arrowposition-e.md) | Yes |
 
 ## arrowPosition
 
@@ -76,19 +76,19 @@ Sets the alignment between the text and arrow of an option. Compared with [arrow
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectAttribute-arrowPosition(position: Optional<ArrowPosition>): SelectAttribute--><!--Device-SelectAttribute-arrowPosition(position: Optional<ArrowPosition>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| position | Optional&lt;[ArrowPosition](arkts-arkui-arrowposition-e.md)&gt; | Yes | Alignment between the text and arrow of an option.<br>If **position** is set to **undefined**, the default value **ArrowPosition.END** is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| position | Optional&lt;[ArrowPosition](arkts-arkui-arrowposition-e.md)&gt; | Yes |
 
 ## avoidance
 
@@ -100,19 +100,19 @@ Sets the avoidance mode for the drop-down menu.
 
 **Since:** 19
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-SelectAttribute-avoidance(mode: AvoidanceMode): SelectAttribute--><!--Device-SelectAttribute-avoidance(mode: AvoidanceMode): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | [AvoidanceMode](arkts-arkui-avoidancemode-e.md) | Yes | Avoidance mode for the drop-down menu.<br>Default value: **AvoidanceMode.COVER_TARGET |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mode | [AvoidanceMode](arkts-arkui-avoidancemode-e.md) | Yes |
 
 ## controlSize
 
@@ -124,19 +124,19 @@ Sets the size of the **Select** component.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SelectAttribute-controlSize(value: ControlSize): SelectAttribute--><!--Device-SelectAttribute-controlSize(value: ControlSize): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | ControlSize | Yes | Size of the **Select** component.<br>Default value: **ControlSize.NORMAL |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | [ControlSize](#controlsize) | Yes |
 
 ## controlSize
 
@@ -148,19 +148,19 @@ Sets the size of the **Select** component. Compared with [controlSize](#controls
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectAttribute-controlSize(size: Optional<ControlSize>): SelectAttribute--><!--Device-SelectAttribute-controlSize(size: Optional<ControlSize>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | Optional&lt;ControlSize&gt; | Yes | Size of the **Select** component.<br>If **size** is set to **undefined**, the default value **ControlSize.NORMAL** is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| size | Optional & lt;ControlSize & gt; | Yes |
 
 ## divider
 
@@ -172,19 +172,19 @@ Sets the divider style. If this attribute is not set, the divider is displayed b
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SelectAttribute-divider(options: Optional<DividerOptions> | null): SelectAttribute--><!--Device-SelectAttribute-divider(options: Optional<DividerOptions> | null): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | Optional&lt;DividerOptions&gt; \| null | Yes | Divider options.<br>1. If **DividerOptions** is set, the divider is displayed in the configured style.<br>Default value:<br>{<br>strokeWidth: '1px' , <br>color: '#33182 431'<br>}<br>2. If this parameter is set to **null**, the divider is not displayed.<br>3. If the value of **strokeWidth** is too larger, the divider may overlap the text. The divider extends both upwards and downwards from the bottom of each item.<br>4. The default values for **startMargin** and **endMargin** are consistent with the style of the divider when the **divider** attribute is not set. If the sum of **startMargin** and **endMargin** is equal to the value of **optionWidth**, the divider is not displayed. If the sum of **startMargin** and **endMargin** exceeds the value of **optionWidth**, the divider line is displayed in the default style. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | Optional & lt;DividerOptions & gt; \ | null | Yes |
 
 ## dividerStyle
 
@@ -196,19 +196,19 @@ Sets the divider style. If this attribute is not set, the divider is displayed b
 
 **Since:** 19
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-SelectAttribute-dividerStyle(style: Optional<DividerStyleOptions>): SelectAttribute--><!--Device-SelectAttribute-dividerStyle(style: Optional<DividerStyleOptions>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| style | Optional&lt;DividerStyleOptions&gt; | Yes | Divider options.<br>1. If **DividerOptions** is set, the divider is displayed in the configured style.<br>Default value:<br>{<br>strokeWidth: '1px' , <br>color: '#33182431'<br>}<br>2. If this parameter is set to **null** or **undefined**, the default divider is displayed.<br>3. When **mode** is set to **FLOAT_ABOVE_MENU**, be careful with the **strokeWidth** settings to avoid covering text. The divider extends both upwards and downwards from the bottom of each item. When **mode** is **EMBEDDED_IN_MENU**, the divider expands to fill its own space within the menu.<br>4. The default values for **startMargin** and **endMargin** are consistent with the style of the divider when the **divider** attribute is not set. If the sum of **startMargin** and **endMargin** is equal to the value of **optionWidth**, the divider is not displayed. If the sum of **startMargin** and **endMargin** exceeds the value of **optionWidth**, the divider line is displayed in the default style. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| style | Optional & lt;DividerStyleOptions & gt; | Yes |
 
 ## font
 
@@ -220,17 +220,17 @@ Sets the text style of the drop-down button. When **size** is set to **0**, the 
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-SelectAttribute-font(value: Font): SelectAttribute--><!--Device-SelectAttribute-font(value: Font): SelectAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Font | Yes | Text style of the drop-down list button.<br>For API versions 11 and earlier, the default value is as follows:<br>{<br>size: `\\$r('sys.float.ohos_id_text_size_button1')`,<br>weight: FontWeight.Medium<br>} <br>Since API version 12: The default value of **size** is **\\$r('sys.float.ohos_id_text_size_button2')** in the case of **controlSize.SMALL** and **\\$r('sys.float.ohos_id_text_size_button1')** in other cases. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | [Font](#font) | Yes |
 
 ## font
 
@@ -242,19 +242,19 @@ Sets the text style of the drop-down button. When **size** is set to **0**, the 
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectAttribute-font(selectFont: Optional<Font>): SelectAttribute--><!--Device-SelectAttribute-font(selectFont: Optional<Font>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| selectFont | Optional&lt;Font&gt; | Yes | Text style of the drop-down list button.<br>If **controlSize** is set to **controlSize.SMALL**, the default value of **size** is **\\$r('sys.float.ohos_id_text_size_button2')**. Otherwise, the default value is **\\$r('sys.float.ohos_id_text_size_button1')**.<br>If **selectFont** is set to **undefined**, the default font style is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| selectFont | Optional & lt;Font & gt; | Yes |
 
 ## fontColor
 
@@ -266,17 +266,17 @@ Sets the font color of the drop-down button.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-SelectAttribute-fontColor(value: ResourceColor): SelectAttribute--><!--Device-SelectAttribute-fontColor(value: ResourceColor): SelectAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | ResourceColor | Yes | Font color of the drop-down button.<br>Default value: **\\$r('sys.color.ohos_id_color_text_primary')** with the opacity of **\\$r('sys.color.ohos_id_alpha_content_primary') |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
 
 ## fontColor
 
@@ -288,19 +288,19 @@ Sets the font color of the drop-down button. Compared with [fontColor](#fontcolo
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectAttribute-fontColor(resColor: Optional<ResourceColor>): SelectAttribute--><!--Device-SelectAttribute-fontColor(resColor: Optional<ResourceColor>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| resColor | Optional&lt;ResourceColor&gt; | Yes | Font color of the drop-down button.<br>When **resColor** is set to **undefined**, the default value is a blend of **\\$r('sys.color.ohos_id_color_text_primary')** with the opacity of **\\$r('sys.color.ohos_id_alpha_content_primary')**.<br>If **value** is set to **undefined**, the previous value is retained. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| resColor | Optional & lt;ResourceColor & gt; | Yes |
 
 ## keyboardAvoidMode
 
@@ -312,19 +312,19 @@ Sets whether the drop-down menu avoids the soft keyboard. If this API is not use
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-SelectAttribute-keyboardAvoidMode(mode: Optional<MenuKeyboardAvoidMode>): SelectAttribute--><!--Device-SelectAttribute-keyboardAvoidMode(mode: Optional<MenuKeyboardAvoidMode>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | Optional&lt;MenuKeyboardAvoidMode&gt; | Yes | Whether the drop-down menu avoids the soft keyboard. If the value is **undefined**, it is treated as **MenuKeyboardAvoidMode.NONE**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mode | Optional & lt;MenuKeyboardAvoidMode & gt; | Yes |
 
 ## menuAlign
 
@@ -336,20 +336,20 @@ Sets the alignment between the drop-down button and the drop-down menu.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SelectAttribute-menuAlign(alignType: MenuAlignType, offset?: Offset): SelectAttribute--><!--Device-SelectAttribute-menuAlign(alignType: MenuAlignType, offset?: Offset): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| alignType | [MenuAlignType](arkts-arkui-menualigntype-e.md) | Yes | Alignment type.<br>Default value: **MenuAlignType.START |
-| offset | Offset | No | Offset of the drop-down menu relative to the drop-down button after alignment based on the alignment type.<br> Default value: **{dx: 0, dy: 0} |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [alignType](../arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | [MenuAlignType](arkts-arkui-menualigntype-e.md) | Yes |
+| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | No |
 
 ## menuAlign
 
@@ -361,20 +361,20 @@ Sets the alignment between the drop-down button and the drop-down menu. Compared
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectAttribute-menuAlign(alignType: Optional<MenuAlignType>, offset?: Offset): SelectAttribute--><!--Device-SelectAttribute-menuAlign(alignType: Optional<MenuAlignType>, offset?: Offset): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| alignType | Optional&lt;[MenuAlignType](arkts-arkui-menualigntype-e.md)&gt; | Yes | Alignment type.<br>If **alignType** is set to **undefined**, the default value **MenuAlignType.START** is used. |
-| offset | Offset | No | Offset of the drop-down menu relative to the drop-down button after alignment based on the alignment type.<br> Default value: **{dx: 0, dy: 0} |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [alignType](../arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | Optional&lt;[MenuAlignType](arkts-arkui-menualigntype-e.md)&gt; | Yes |
+| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | No |
 
 ## menuBackgroundBlurStyle
 
@@ -389,19 +389,19 @@ Sets the background blur style of the drop-down menu.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SelectAttribute-menuBackgroundBlurStyle(value: BlurStyle): SelectAttribute--><!--Device-SelectAttribute-menuBackgroundBlurStyle(value: BlurStyle): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | BlurStyle | Yes | Background blur style of the drop-down menu.<br>Default value: **BlurStyle.COMPONENT_ULTRA_THICK |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes |
 
 ## menuBackgroundBlurStyle
 
@@ -413,19 +413,19 @@ Sets the background blur style of the drop-down menu. Compared with [menuBackgro
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectAttribute-menuBackgroundBlurStyle(style: Optional<BlurStyle>): SelectAttribute--><!--Device-SelectAttribute-menuBackgroundBlurStyle(style: Optional<BlurStyle>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| style | Optional&lt;BlurStyle&gt; | Yes | Background blur style of the drop-down menu.<br>If **style** is set to **undefined**, the default value **BlurStyle.COMPONENT_ULTRA_THICK** is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| style | Optional & lt;BlurStyle & gt; | Yes |
 
 ## menuBackgroundBlurStyleOptions
 
@@ -437,19 +437,19 @@ Defines the select menu's background blur style with options
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-SelectAttribute-menuBackgroundBlurStyleOptions(blurStyle: Optional<BackgroundBlurStyleOptions>): SelectAttribute--><!--Device-SelectAttribute-menuBackgroundBlurStyleOptions(blurStyle: Optional<BackgroundBlurStyleOptions>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| blurStyle | Optional&lt;BackgroundBlurStyleOptions&gt; | Yes | The background blur style of menu. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| blurStyle | Optional & lt;BackgroundBlurStyleOptions & gt; | Yes |
 
 ## menuBackgroundColor
 
@@ -464,19 +464,19 @@ Sets the background color of the drop-down menu.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SelectAttribute-menuBackgroundColor(value: ResourceColor): SelectAttribute--><!--Device-SelectAttribute-menuBackgroundColor(value: ResourceColor): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | ResourceColor | Yes | Background color of the drop-down menu.<br>Default value:<br>Versions earlier than API version 11: **\\$r('sys.color.ohos_id_color_card_bg')**<br>Since API version 11: **Color.Transparent |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
 
 ## menuBackgroundColor
 
@@ -488,19 +488,19 @@ Sets the background color of the drop-down menu. Compared with [menuBackgroundCo
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectAttribute-menuBackgroundColor(resColor: Optional<ResourceColor>): SelectAttribute--><!--Device-SelectAttribute-menuBackgroundColor(resColor: Optional<ResourceColor>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| resColor | Optional&lt;ResourceColor&gt; | Yes | Background color of the drop-down menu.<br>If **resColor** is set to **undefined**, the default value **Color.Transparent** is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| resColor | Optional & lt;ResourceColor & gt; | Yes |
 
 ## menuBackgroundEffect
 
@@ -512,19 +512,19 @@ Defines the select menu's background effect with options
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-SelectAttribute-menuBackgroundEffect(effect: Optional<BackgroundEffectOptions>): SelectAttribute--><!--Device-SelectAttribute-menuBackgroundEffect(effect: Optional<BackgroundEffectOptions>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| effect | Optional&lt;BackgroundEffectOptions&gt; | Yes | Background effect, including saturation, brightness, and color. <br>The configuration does not take effect when it is undefined. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| effect | Optional & lt;BackgroundEffectOptions & gt; | Yes |
 
 ## menuItemContentModifier
 
@@ -539,19 +539,19 @@ Creates a content modifier for the drop-down menu. After **menuItemContentModifi
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SelectAttribute-menuItemContentModifier(modifier: ContentModifier<MenuItemConfiguration>): SelectAttribute--><!--Device-SelectAttribute-menuItemContentModifier(modifier: ContentModifier<MenuItemConfiguration>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| modifier | ContentModifier&lt;[MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)&gt; | Yes | Content modifier to apply to the drop-down menu.<br> **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| modifier | ContentModifier&lt;[MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)&gt; | Yes |
 
 ## menuItemContentModifier
 
@@ -566,19 +566,19 @@ Creates a content modifier for the drop-down menu. Compared with [menuItemConten
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectAttribute-menuItemContentModifier(modifier: Optional<ContentModifier<MenuItemConfiguration>>): SelectAttribute--><!--Device-SelectAttribute-menuItemContentModifier(modifier: Optional<ContentModifier<MenuItemConfiguration>>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| modifier | Optional&lt;ContentModifier&lt;[MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)&gt;&gt; | Yes | Content modifier to apply to the drop-down menu.<br>**modifier**: content modifier. You need a custom class to implement the **ContentModifier** API.<br> If **modifier** is set to **undefined**, no content modifier is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| modifier | Optional&lt;ContentModifier&lt;[MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)&gt;&gt; | Yes |
 
 ## menuOutline
 
@@ -590,19 +590,43 @@ Sets the outline style for the drop-down menu.
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-SelectAttribute-menuOutline(outline: MenuOutlineOptions): SelectAttribute--><!--Device-SelectAttribute-menuOutline(outline: MenuOutlineOptions): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| outline | [MenuOutlineOptions](arkts-arkui-menuoutlineoptions-i.md) | Yes | Outline style of the drop-down menu. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| outline | [MenuOutlineOptions](arkts-arkui-menuoutlineoptions-i.md) | Yes |
+
+## menuSystemMaterial
+
+```TypeScript
+menuSystemMaterial(material: Optional<SystemUiMaterial>)
+```
+
+Set system-styled materials for select's menu. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of select's menu.Device Behavior Differences:The effect of the same material may vary across different devices depending on their computing power.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| material | Optional & lt;SystemUiMaterial & gt; | Yes |
 
 ## minKeyboardAvoidDistance
 
@@ -614,19 +638,19 @@ Sets the minimum distance for the **Select** component to avoid the soft keyboar
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-SelectAttribute-minKeyboardAvoidDistance(distance: Optional<LengthMetrics>): SelectAttribute--><!--Device-SelectAttribute-minKeyboardAvoidDistance(distance: Optional<LengthMetrics>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| distance | Optional&lt;LengthMetrics&gt; | Yes | Sets the minimum distance for the drop-down menu to avoid the soft keyboard. If the value is set to a negative number or **undefined**, the value 8 vp will be used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| distance | Optional & lt;LengthMetrics & gt; | Yes |
 
 ## onSelect
 
@@ -638,17 +662,17 @@ Triggered when a drop-down menu option is selected.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-SelectAttribute-onSelect(callback: (index: number, value: string) => void): SelectAttribute--><!--Device-SelectAttribute-onSelect(callback: (index: number, value: string) => void): SelectAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (index: number, value: string) =&gt; void | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | (index: number, value: string) = & gt; void | Yes |
 
 ## onSelect
 
@@ -660,19 +684,19 @@ Triggered when a drop-down menu option is selected. Compared with onSelect, this
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectAttribute-onSelect(callback: Optional<OnSelectCallback>): SelectAttribute--><!--Device-SelectAttribute-onSelect(callback: Optional<OnSelectCallback>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | Optional&lt;[OnSelectCallback](arkts-arkui-onselectcallback-t.md)&gt; | Yes | Callback invoked when a drop-down menu option is selected.<br>If **callback** is set to **undefined**, the callback function is not used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | Optional&lt;[OnSelectCallback](arkts-arkui-onselectcallback-t.md)&gt; | Yes |
 
 ## optionBgColor
 
@@ -684,17 +708,17 @@ Sets the background color of options in the drop-down menu.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-SelectAttribute-optionBgColor(value: ResourceColor): SelectAttribute--><!--Device-SelectAttribute-optionBgColor(value: ResourceColor): SelectAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | ResourceColor | Yes | Background color of options in the drop-down menu.<br>Default value:<br>Versions earlier than API version 11: **Color.White**<br>Since API version 11: **Color.Transparent |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
 
 ## optionBgColor
 
@@ -706,19 +730,19 @@ Sets the background color of options in the drop-down menu. Compared with [optio
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectAttribute-optionBgColor(resColor: Optional<ResourceColor>): SelectAttribute--><!--Device-SelectAttribute-optionBgColor(resColor: Optional<ResourceColor>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| resColor | Optional&lt;ResourceColor&gt; | Yes | Background color of options in the drop-down menu.<br>When the value of resColor is undefined, the background color of the drop-down menu item is Color.White. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| resColor | Optional & lt;ResourceColor & gt; | Yes |
 
 ## optionFont
 
@@ -730,17 +754,17 @@ Sets the text font of options in the drop-down menu. When **size** is set to **0
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-SelectAttribute-optionFont(value: Font): SelectAttribute--><!--Device-SelectAttribute-optionFont(value: Font): SelectAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Font | Yes | Text font of options in the drop-down menu.<br>Default value:<br>{<br>size: \\$r('sys.float.ohos_id_text_size_body1'),<br>weight: FontWeight.Regular<br>} |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | [Font](#font) | Yes |
 
 ## optionFont
 
@@ -752,19 +776,19 @@ Sets the text font of options in the drop-down menu. When **size** is set to **0
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectAttribute-optionFont(selectFont: Optional<Font>): SelectAttribute--><!--Device-SelectAttribute-optionFont(selectFont: Optional<Font>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| selectFont | Optional&lt;Font&gt; | Yes | Text font of options in the drop-down menu.<br>If **selectFont** is set to **undefined**, the default value is used:<br>{<br>size: \\$r('sys.float.ohos_id_text_size_body1'),<br>weight: FontWeight.Regular<br>} |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| selectFont | Optional & lt;Font & gt; | Yes |
 
 ## optionFontColor
 
@@ -776,17 +800,17 @@ Sets the font color of options in the drop-down menu.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-SelectAttribute-optionFontColor(value: ResourceColor): SelectAttribute--><!--Device-SelectAttribute-optionFontColor(value: ResourceColor): SelectAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | ResourceColor | Yes | Font color of options in the drop-down menu.<br>Default value: **\\$r('sys.color.ohos_id_color_text_primary') |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
 
 ## optionFontColor
 
@@ -798,19 +822,19 @@ Sets the font color of options in the drop-down menu. Compared with [optionFontC
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectAttribute-optionFontColor(resColor: Optional<ResourceColor>): SelectAttribute--><!--Device-SelectAttribute-optionFontColor(resColor: Optional<ResourceColor>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| resColor | Optional&lt;ResourceColor&gt; | Yes | Font color of options in the drop-down menu.<br>If **resColor** is set to **undefined**, the default value **\\$r('sys.color.ohos_id_color_text_primary')** is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| resColor | Optional & lt;ResourceColor & gt; | Yes |
 
 ## optionHeight
 
@@ -822,19 +846,19 @@ Sets the maximum height for the drop-down menu. Percentage values are not suppor
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SelectAttribute-optionHeight(value: Dimension): SelectAttribute--><!--Device-SelectAttribute-optionHeight(value: Dimension): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Dimension | Yes | Maximum height of the drop-down menu. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes |
 
 ## optionHeight
 
@@ -846,19 +870,19 @@ Sets the maximum height for the drop-down menu. Percentage values are not suppor
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectAttribute-optionHeight(height: Optional<Dimension>): SelectAttribute--><!--Device-SelectAttribute-optionHeight(height: Optional<Dimension>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| height | Optional&lt;Dimension&gt; | Yes | Maximum height of the drop-down menu.<br>If **height** is set to **undefined**, the default value, which is 80% of the available screen height, is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| height | Optional & lt;Dimension & gt; | Yes |
 
 ## optionTextModifier
 
@@ -873,19 +897,19 @@ Creates an option text modifier to customize the text style of unselected option
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-SelectAttribute-optionTextModifier(modifier: Optional<TextModifier>): SelectAttribute--><!--Device-SelectAttribute-optionTextModifier(modifier: Optional<TextModifier>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| modifier | Optional&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes | Option text modifier to apply to the **Select** component for customizing the text style of unselected options in the drop-down menu. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| modifier | Optional&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes |
 
 ## optionWidth
 
@@ -897,19 +921,19 @@ Sets the width for the drop-down menu option. Percentage values are not supporte
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SelectAttribute-optionWidth(value: Dimension | OptionWidthMode ): SelectAttribute--><!--Device-SelectAttribute-optionWidth(value: Dimension | OptionWidthMode ): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Dimension \| OptionWidthMode | Yes | Width of the drop-down menu option. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | Dimension \| [OptionWidthMode](../arkts-apis/arkts-arkui-optionwidthmode-e.md) | Yes |
 
 ## optionWidth
 
@@ -921,19 +945,19 @@ Sets the width for the drop-down menu option. Percentage values are not supporte
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectAttribute-optionWidth(width: Optional<Dimension | OptionWidthMode> ): SelectAttribute--><!--Device-SelectAttribute-optionWidth(width: Optional<Dimension | OptionWidthMode> ): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| width | Optional&lt;Dimension \| OptionWidthMode&gt; | Yes | Width of the drop-down menu option.<br>If **width** is set to **undefined**, it has no effect. In this case, the option width uses the default value, which is the width of two columns. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| width | Optional & lt;Dimension \ | OptionWidthMode & gt; | Yes |
 
 ## selected
 
@@ -945,17 +969,17 @@ Sets the index of the initially selected option in the drop-down menu, where the
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-SelectAttribute-selected(value: number | Resource): SelectAttribute--><!--Device-SelectAttribute-selected(value: number | Resource): SelectAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number \| Resource | Yes | Index of the initially selected option. The index is zero-based.<br>**Since:** 11 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
 
 ## selected
 
@@ -967,19 +991,19 @@ Sets the index of the initially selected option in the drop-down menu, where the
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectAttribute-selected(numCount: Optional<number | Resource>): SelectAttribute--><!--Device-SelectAttribute-selected(numCount: Optional<number | Resource>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| numCount | Optional&lt;number \| Resource&gt; | Yes | Index of the initially selected option.<br>When **numCount** is set to **undefined**, the first option is selected. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| numCount | Optional & lt;number \ | Resource & gt; | Yes |
 
 ## selectedOptionBgColor
 
@@ -991,17 +1015,17 @@ Sets the background color of the selected option in the drop-down menu.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-SelectAttribute-selectedOptionBgColor(value: ResourceColor): SelectAttribute--><!--Device-SelectAttribute-selectedOptionBgColor(value: ResourceColor): SelectAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | ResourceColor | Yes | Background color of the selected option in the drop-down menu.<br>Default value: **\\$r('sys.color.ohos_id_color_component_activated')** with the opacity of **\\$r('sys.color.ohos_id_alpha_highlight_bg') |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
 
 ## selectedOptionBgColor
 
@@ -1013,19 +1037,19 @@ Sets the background color of the selected option in the drop-down menu. Compared
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectAttribute-selectedOptionBgColor(resColor: Optional<ResourceColor>): SelectAttribute--><!--Device-SelectAttribute-selectedOptionBgColor(resColor: Optional<ResourceColor>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| resColor | Optional&lt;ResourceColor&gt; | Yes | Background color of the selected option in the drop-down menu.<br> When **resColor** is set to **undefined**, the default value is a blend of **\\$r('sys.color.ohos_id_color_component_activated')** with the opacity of **\\$r('sys.color.ohos_id_alpha_highlight_bg')**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| resColor | Optional & lt;ResourceColor & gt; | Yes |
 
 ## selectedOptionFont
 
@@ -1037,17 +1061,17 @@ Sets the text font of the selected option in the drop-down menu. When **size** i
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-SelectAttribute-selectedOptionFont(value: Font): SelectAttribute--><!--Device-SelectAttribute-selectedOptionFont(value: Font): SelectAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Font | Yes | Text font of the selected option in the drop-down menu.<br>Default value:<br>{<br>size: \\$r('sys.float.ohos_id_text_size_body1'),<br>weight: FontWeight.Regular<br>} |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | [Font](#font) | Yes |
 
 ## selectedOptionFont
 
@@ -1059,19 +1083,19 @@ Sets the text font of the selected option in the drop-down menu. When **size** i
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectAttribute-selectedOptionFont(selectFont: Optional<Font>): SelectAttribute--><!--Device-SelectAttribute-selectedOptionFont(selectFont: Optional<Font>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| selectFont | Optional&lt;Font&gt; | Yes | Text font of the selected option in the drop-down menu.<br>If **selectFont** is set to **undefined**, the default value is used:<br>{<br>size: \\$r('sys.float.ohos_id_text_size_body1'),<br> weight: FontWeight.Regular<br>} |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| selectFont | Optional & lt;Font & gt; | Yes |
 
 ## selectedOptionFontColor
 
@@ -1083,17 +1107,17 @@ Sets the font color of the selected option in the drop-down menu.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-SelectAttribute-selectedOptionFontColor(value: ResourceColor): SelectAttribute--><!--Device-SelectAttribute-selectedOptionFontColor(value: ResourceColor): SelectAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | ResourceColor | Yes | Font color of the selected option in the drop-down menu.<br>Default value: **\\$r('sys.color.ohos_id_color_text_primary_activated') |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
 
 ## selectedOptionFontColor
 
@@ -1105,19 +1129,19 @@ Sets the font color of the selected option in the drop-down menu. Compared with 
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectAttribute-selectedOptionFontColor(resColor: Optional<ResourceColor>): SelectAttribute--><!--Device-SelectAttribute-selectedOptionFontColor(resColor: Optional<ResourceColor>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| resColor | Optional&lt;ResourceColor&gt; | Yes | Font color of the selected option in the drop-down menu.<br>If **resColor** is set to **undefined**, the default value **\\$r('sys.color.ohos_id_color_text_primary_activated')** is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| resColor | Optional & lt;ResourceColor & gt; | Yes |
 
 ## selectedOptionTextModifier
 
@@ -1132,19 +1156,19 @@ Creates a selected-option text modifier to customize the text style of selected 
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-SelectAttribute-selectedOptionTextModifier(modifier: Optional<TextModifier>): SelectAttribute--><!--Device-SelectAttribute-selectedOptionTextModifier(modifier: Optional<TextModifier>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| modifier | Optional&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes | Selected-option text modifier to apply to the **Select** component for customizing the text style of selected options in the drop-down menu.<br>You can manage and maintain the text style as needed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| modifier | Optional&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes |
 
 ## showDefaultSelectedIcon
 
@@ -1156,19 +1180,19 @@ Sets whether to display the default selection icon.
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-SelectAttribute-showDefaultSelectedIcon(show: boolean): SelectAttribute--><!--Device-SelectAttribute-showDefaultSelectedIcon(show: boolean): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| show | boolean | Yes | Whether to display the default selection icon.<br>**true**: The default icon is displayed. **false**: The default icon is not displayed. The background color is highlighted to indicate that the icon is selected.<br>Default value: **false**<br>When **show** is set to **true** and the background color of the selected option is set, both the background color of the selected option and the icon selected by default are displayed. If the background color of the selected item is not set via **selectedOptionBgColor**, the background color is not highlighted and only the icon selected by default is displayed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| show | boolean | Yes |
 
 ## showInSubWindow
 
@@ -1180,19 +1204,19 @@ Sets whether the drop-down menu is displayed in the subwindow. If this API is no
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-SelectAttribute-showInSubWindow(showInSubWindow: Optional<boolean>): SelectAttribute--><!--Device-SelectAttribute-showInSubWindow(showInSubWindow: Optional<boolean>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| showInSubWindow | Optional&lt;boolean&gt; | Yes | Whether the drop-down menu is displayed in the subwindow.<br> **true**: The drop-down menu is displayed in the subwindow.<br>**false**: The drop-down menu is not displayed in the subwindow. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [showInSubWindow](#showinsubwindow) | Optional & lt;boolean & gt; | Yes |
 
 ## space
 
@@ -1204,19 +1228,19 @@ Sets the spacing between the text and arrow of a drop-down menu option. This att
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SelectAttribute-space(value: Length): SelectAttribute--><!--Device-SelectAttribute-space(value: Length): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Length | Yes | Spacing between the text and arrow of a drop-down menu option.<br>Default value: **8**<br>Note: For the string type, percentage values are not supported. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
 
 ## space
 
@@ -1228,19 +1252,19 @@ Sets the spacing between the text and arrow of a drop-down menu option. This att
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectAttribute-space(spaceLength: Optional<Length>): SelectAttribute--><!--Device-SelectAttribute-space(spaceLength: Optional<Length>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| spaceLength | Optional&lt;Length&gt; | Yes | Spacing between the text and arrow of an option.<br>If **spaceLength** is set to **undefined**, the default value **8** is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| spaceLength | Optional & lt;Length & gt; | Yes |
 
 ## textModifier
 
@@ -1255,19 +1279,19 @@ Creates a text modifier to customize the text style of the **Select** button. Af
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-SelectAttribute-textModifier(modifier: Optional<TextModifier>): SelectAttribute--><!--Device-SelectAttribute-textModifier(modifier: Optional<TextModifier>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| modifier | Optional&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes | Text modifier to apply to the **Select** button for customizing the text style. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| modifier | Optional&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes |
 
 ## value
 
@@ -1279,17 +1303,17 @@ Sets the text content of drop-down button. After a menu option is selected, the 
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-SelectAttribute-value(value: ResourceStr): SelectAttribute--><!--Device-SelectAttribute-value(value: ResourceStr): SelectAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | ResourceStr | Yes | Text of the drop-down button.<br>Note: If the text exceeds the column width, it will be truncated.<br>**Since:** 11 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
 
 ## value
 
@@ -1301,17 +1325,16 @@ Sets the text content of drop-down button. After a menu option is selected, the 
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SelectAttribute-value(resStr: Optional<ResourceStr>): SelectAttribute--><!--Device-SelectAttribute-value(resStr: Optional<ResourceStr>): SelectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| resStr | Optional&lt;ResourceStr&gt; | Yes | Text of the drop-down button.<br>If **resStr** is set to **undefined**, the previous value is retained. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| resStr | Optional & lt;ResourceStr & gt; | Yes |

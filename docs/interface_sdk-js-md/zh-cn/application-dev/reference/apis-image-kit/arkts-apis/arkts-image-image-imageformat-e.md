@@ -2,9 +2,9 @@
 
 表示图片格式的枚举。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-image-enum ImageFormat--><!--Device-image-enum ImageFormat-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -16,9 +16,9 @@ YCBCR_422_SP = 1000
 
 YCBCR422半平面格式。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ImageFormat-YCBCR_422_SP = 1000--><!--Device-ImageFormat-YCBCR_422_SP = 1000-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -30,9 +30,8 @@ JPEG = 2000
 
 JPEG编码格式。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ImageFormat-JPEG = 2000--><!--Device-ImageFormat-JPEG = 2000-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
-

@@ -4,9 +4,7 @@ Provides an atomic wrapper for safe concurrent access to a byte value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class AtomicByte--><!--Device-unnamed-export class AtomicByte-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,26 +23,24 @@ Atomically compares the current value with the expected value and replaces it if
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicByte-compareAndSwap(expected: byte, val: byte): byte--><!--Device-AtomicByte-compareAndSwap(expected: byte, val: byte): byte-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| expected | byte | Yes | the expected current value. |
-| val | byte | Yes | the new value to store if the comparison succeeds. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| expected | byte | Yes |
+| val | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| byte | the previous value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| byte |
 
 ## constructor
 
@@ -56,19 +52,17 @@ Constructs a new AtomicByte with the provided initial value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicByte-constructor(val: byte)--><!--Device-AtomicByte-constructor(val: byte)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | byte | Yes | the initial value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | byte | Yes |
 
 ## exchange
 
@@ -80,25 +74,23 @@ Atomically exchanges the current value with a new value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicByte-exchange(val: byte): byte--><!--Device-AtomicByte-exchange(val: byte): byte-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | byte | Yes | the new value to exchange with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| byte | the previous value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| byte |
 
 ## fetchAdd
 
@@ -110,25 +102,23 @@ Atomically adds a value to the current value and returns the previous value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicByte-fetchAdd(val: byte): byte--><!--Device-AtomicByte-fetchAdd(val: byte): byte-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | byte | Yes | the value to add. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| byte | the previous value before the addition |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| byte |
 
 ## fetchAnd
 
@@ -140,25 +130,23 @@ Atomically performs a bitwise AND operation and returns the previous value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicByte-fetchAnd(val: byte): byte--><!--Device-AtomicByte-fetchAnd(val: byte): byte-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | byte | Yes | the value to AND with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| byte | the previous value before the operation |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| byte |
 
 ## fetchOr
 
@@ -170,25 +158,23 @@ Atomically performs a bitwise OR operation and returns the previous value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicByte-fetchOr(val: byte): byte--><!--Device-AtomicByte-fetchOr(val: byte): byte-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | byte | Yes | the value to OR with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| byte | the previous value before the operation |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| byte |
 
 ## fetchSub
 
@@ -200,25 +186,23 @@ Atomically subtracts a value from the current value and returns the previous val
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicByte-fetchSub(val: byte): byte--><!--Device-AtomicByte-fetchSub(val: byte): byte-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | byte | Yes | the value to subtract. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| byte | the previous value before the subtraction |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| byte |
 
 ## fetchXor
 
@@ -230,25 +214,23 @@ Atomically performs a bitwise XOR operation and returns the previous value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicByte-fetchXor(val: byte): byte--><!--Device-AtomicByte-fetchXor(val: byte): byte-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | byte | Yes | the value to XOR with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| byte | the previous value before the operation |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| byte |
 
 ## isLockFree
 
@@ -260,19 +242,17 @@ Checks whether atomic operations on this type are lock-free
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicByte-static isLockFree(): boolean--><!--Device-AtomicByte-static isLockFree(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if atomic operations are lock-free, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## load
 
@@ -284,19 +264,17 @@ Atomically loads the current value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicByte-load(): byte--><!--Device-AtomicByte-load(): byte-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| byte | the current value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| byte |
 
 ## store
 
@@ -308,17 +286,14 @@ Atomically stores a new value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicByte-store(val: byte): void--><!--Device-AtomicByte-store(val: byte): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | byte | Yes | the new value to store. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | byte | Yes |

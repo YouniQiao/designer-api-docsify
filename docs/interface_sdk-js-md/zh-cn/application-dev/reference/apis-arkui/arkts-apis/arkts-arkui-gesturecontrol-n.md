@@ -4,9 +4,9 @@
 
 **起始版本：** 11
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-unnamed-declare namespace GestureControl--><!--Device-unnamed-declare namespace GestureControl-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,7 +19,6 @@
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-| [GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md) | 定义手势类型。 |
-
+| 名称 |
+| --- |
+| [GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md) |

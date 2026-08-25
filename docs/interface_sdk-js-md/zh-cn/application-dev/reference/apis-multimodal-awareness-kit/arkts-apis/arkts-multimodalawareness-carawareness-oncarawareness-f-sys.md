@@ -17,9 +17,9 @@ function onCarAwareness(capability: Capability, callback: Callback<CarAwarenessI
 
 **起始版本：** 26.1.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
-<!--Device-carAwareness-function onCarAwareness(capability: Capability, callback: Callback<CarAwarenessInfo[]>, options?:  CarAwarenessOptions): void--><!--Device-carAwareness-function onCarAwareness(capability: Capability, callback: Callback<CarAwarenessInfo[]>, options?:  CarAwarenessOptions): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -27,17 +27,16 @@ function onCarAwareness(capability: Capability, callback: Callback<CarAwarenessI
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| capability | Capability | 是 | 表示特定能力。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CarAwarenessInfo](arkts-multimodalawareness-carawareness-carawarenessinfo-i-sys.md)[]&gt; | 是 | Callback used to return obtaining corresponding capability data. |
-| options | [CarAwarenessOptions](arkts-multimodalawareness-carawareness-carawarenessoptions-i-sys.md) | 否 | Indicates options to specific capability. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| capability | [Capability](arkts-multimodalawareness-carawareness-capability-e.md) | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CarAwarenessInfo](arkts-multimodalawareness-carawareness-carawarenessinfo-i-sys.md)[]&gt; | 是 |
+| options | [CarAwarenessOptions](arkts-multimodalawareness-carawareness-carawarenessoptions-i-sys.md) | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission check failed. A non-system application uses the system capability. |
-| [34000001](../errorcode-carAwareness.md#34000001-服务异常) | Service exception. |
-| [34000002](../errorcode-carAwareness.md#34000002-指定能力不支持) | Specific capability not supported. |
-
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [34000001](../errorcode-carAwareness.md#34000001-服务异常) |
+| [34000002](../errorcode-carAwareness.md#34000002-指定能力不支持) |

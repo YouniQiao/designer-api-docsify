@@ -14,25 +14,25 @@ function isEncoding(encoding: string): boolean
 
 判断`encoding`是否为支持的编码格式。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-buffer-function isEncoding(encoding: string): boolean--><!--Device-buffer-function isEncoding(encoding: string): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| encoding | string | 是 | 编码格式，支持的格式范围为[BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| encoding | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 是支持的编码格式返回true，反之则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -48,4 +48,3 @@ console.info(buffer.isEncoding('utf/8').toString());
 console.info(buffer.isEncoding('').toString());
 // 输出结果：false
 ```
-

@@ -14,17 +14,17 @@ function isVectorSupported(): boolean
 
 Checks whether the system supports vector stores.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-relationalStore-function isVectorSupported(): boolean--><!--Device-relationalStore-function isVectorSupported(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the system supports vector stores; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -62,4 +62,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

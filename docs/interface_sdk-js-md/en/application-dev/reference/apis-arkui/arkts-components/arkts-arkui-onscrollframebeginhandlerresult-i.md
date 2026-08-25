@@ -4,7 +4,7 @@ The data returned by the event handler when onScrollFrameBegin.
 
 **Since:** 18
 
-<!--Device-unnamed-interface OnScrollFrameBeginHandlerResult--><!--Device-unnamed-interface OnScrollFrameBeginHandlerResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,9 +25,8 @@ Actual scroll offset relative to the previous frame.<br>Unit: vp Anonymous Objec
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-OnScrollFrameBeginHandlerResult-offsetRemain: number--><!--Device-OnScrollFrameBeginHandlerResult-offsetRemain: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

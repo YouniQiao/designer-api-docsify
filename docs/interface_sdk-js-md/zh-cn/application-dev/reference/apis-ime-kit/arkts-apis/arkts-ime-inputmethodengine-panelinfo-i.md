@@ -2,9 +2,9 @@
 
 输入法面板属性。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-inputMethodEngine-export interface PanelInfo--><!--Device-inputMethodEngine-export interface PanelInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -26,9 +26,9 @@ flag?: PanelFlag
 
 **默认值：** FLG_FIXED
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-PanelInfo-flag?: PanelFlag--><!--Device-PanelInfo-flag?: PanelFlag-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -42,9 +42,8 @@ type: PanelType
 
 **类型：** PanelType
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-PanelInfo-type: PanelType--><!--Device-PanelInfo-type: PanelType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
-

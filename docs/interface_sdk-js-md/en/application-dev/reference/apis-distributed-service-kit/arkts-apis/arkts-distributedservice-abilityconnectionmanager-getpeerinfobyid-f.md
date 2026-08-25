@@ -9,36 +9,36 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ## getPeerInfoById
 
 ```TypeScript
-function getPeerInfoById(sessionId: int): PeerInfo | undefined
+function getPeerInfoById(sessionId: number): PeerInfo | undefined
 ```
 
 Obtains information about the peer application in the specified session.
 
 **Since:** 18
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-abilityConnectionManager-function getPeerInfoById(sessionId: int): PeerInfo | undefined--><!--Device-abilityConnectionManager-function getPeerInfoById(sessionId: int): PeerInfo | undefined-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sessionId | int | Yes | ID of the collaboration session. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sessionId | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| PeerInfo \| undefined | Information about the peer application if the corresponding **peerInfo** exists; **undefined** if the session ID is not found. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| PeerInfo \| undefined |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -62,31 +62,30 @@ Get the application information in the ability connection session
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-abilityConnectionManager-function getPeerInfoById(sessionId: int): PeerInfo | null--><!--Device-abilityConnectionManager-function getPeerInfoById(sessionId: int): PeerInfo | null-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sessionId | int | Yes | Ability connection Session id. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sessionId | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| PeerInfo \| undefined | Returns the collaborative application information at the sink end. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| PeerInfo \| undefined |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
 See [getPeerInfoById](#getpeerinfobyid)
-

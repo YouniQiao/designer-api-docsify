@@ -5,9 +5,9 @@ The **ShellCmdResult** module provides the shell command execution result.
 > **NOTE：**&gt;
 > The APIs of this module can be used only in [JsUnit](../../../application-test/unittest-guidelines.md).
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-unnamed-export interface ShellCmdResult--><!--Device-unnamed-export interface ShellCmdResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -19,13 +19,13 @@ exitCode: int
 
 Result code of the shell command.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ShellCmdResult-exitCode: int--><!--Device-ShellCmdResult-exitCode: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -39,11 +39,10 @@ Standard output of the shell command.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ShellCmdResult-stdResult: string--><!--Device-ShellCmdResult-stdResult: string-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-

@@ -4,9 +4,9 @@
 
 **起始版本：** 7
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-deviceManager-enum ExchangeMedium--><!--Device-deviceManager-enum ExchangeMedium-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -22,9 +22,9 @@ AUTO = 0
 
 **起始版本：** 7
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ExchangeMedium-AUTO = 0--><!--Device-ExchangeMedium-AUTO = 0-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -40,9 +40,9 @@ BLE = 1
 
 **起始版本：** 7
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ExchangeMedium-BLE = 1--><!--Device-ExchangeMedium-BLE = 1-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -58,9 +58,9 @@ WiFi发现类型。
 
 **起始版本：** 7
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ExchangeMedium-COAP = 2--><!--Device-ExchangeMedium-COAP = 2-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -76,11 +76,10 @@ USB发现类型。
 
 **起始版本：** 7
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ExchangeMedium-USB = 3--><!--Device-ExchangeMedium-USB = 3-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
-

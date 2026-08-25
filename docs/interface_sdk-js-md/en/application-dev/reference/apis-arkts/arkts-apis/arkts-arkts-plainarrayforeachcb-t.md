@@ -8,19 +8,18 @@ The type of PlainArray callback function.
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-unnamed-export type PlainArrayForEachCb<T> = (value: T, key: int, PlainArray: PlainArray<T>) => void--><!--Device-unnamed-export type PlainArrayForEachCb<T> = (value: T, key: int, PlainArray: PlainArray<T>) => void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | T | Yes | The value of current element |
-| key | int | Yes | The key of current element The value should be an integer. |
-| PlainArray | [PlainArray](arkts-arkts-util-plainarray-plainarray-c.md)&lt;T&gt; | Yes | The PlainArray instance being traversed |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | T | Yes |
+| key | int | Yes |
+| [PlainArray](arkts-arkts-util-plainarray-plainarray-c.md) | [PlainArray](arkts-arkts-util-plainarray-plainarray-c.md)&lt;T&gt; | Yes |

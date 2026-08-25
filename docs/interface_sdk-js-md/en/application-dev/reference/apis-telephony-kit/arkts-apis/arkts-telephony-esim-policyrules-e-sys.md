@@ -2,9 +2,9 @@
 
 Enumerates the profile policy rules.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-eSIM-export enum PolicyRules--><!--Device-eSIM-export enum PolicyRules-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -18,9 +18,9 @@ POLICY_RULE_DISABLE_NOT_ALLOWED = 1
 
 A profile cannot be disabled after being enabled.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PolicyRules-POLICY_RULE_DISABLE_NOT_ALLOWED = 1--><!--Device-PolicyRules-POLICY_RULE_DISABLE_NOT_ALLOWED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -34,9 +34,9 @@ POLICY_RULE_DELETE_NOT_ALLOWED = 1 << 1
 
 The profile cannot be deleted.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PolicyRules-POLICY_RULE_DELETE_NOT_ALLOWED = 1 << 1--><!--Device-PolicyRules-POLICY_RULE_DELETE_NOT_ALLOWED = 1 << 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -50,11 +50,10 @@ POLICY_RULE_DISABLE_AND_DELETE = 1 << 2
 
 A profile must be deleted immediately after being enabled.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PolicyRules-POLICY_RULE_DISABLE_AND_DELETE = 1 << 2--><!--Device-PolicyRules-POLICY_RULE_DISABLE_AND_DELETE = 1 << 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
-

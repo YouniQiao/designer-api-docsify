@@ -4,7 +4,7 @@ Provides an interface for the options for the floating bar mode.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-interface FloatingTabBarStyle--><!--Device-unnamed-interface FloatingTabBarStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,11 @@ Whether to adapt to the handedness.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-FloatingTabBarStyle-adaptToHandedness?: boolean--><!--Device-FloatingTabBarStyle-adaptToHandedness?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,11 +47,11 @@ The distance between the bar and the bottom of tab. It cannot be set in percenta
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-FloatingTabBarStyle-barBottomMargin?: Length--><!--Device-FloatingTabBarStyle-barBottomMargin?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,11 +67,11 @@ The width of the left and right margins of the bar. It cannot be set in percenta
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-FloatingTabBarStyle-barSideMargin?: Length--><!--Device-FloatingTabBarStyle-barSideMargin?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -87,11 +87,11 @@ The bar width of the tab width at different breakpoints.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-FloatingTabBarStyle-barWidth?: FloatingTabBarWidth--><!--Device-FloatingTabBarStyle-barWidth?: FloatingTabBarWidth-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -107,11 +107,11 @@ The color of the mask.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-FloatingTabBarStyle-maskColor?: ResourceColor--><!--Device-FloatingTabBarStyle-maskColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -127,11 +127,11 @@ The height of the mask. It cannot be set in percentage.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-FloatingTabBarStyle-maskHeight?: Length--><!--Device-FloatingTabBarStyle-maskHeight?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -147,11 +147,10 @@ The style of the material.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-FloatingTabBarStyle-systemMaterial?: UIMaterial.ImmersiveMaterial--><!--Device-FloatingTabBarStyle-systemMaterial?: UIMaterial.ImmersiveMaterial-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

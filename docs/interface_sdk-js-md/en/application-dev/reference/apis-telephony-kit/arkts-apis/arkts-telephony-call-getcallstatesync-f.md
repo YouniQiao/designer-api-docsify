@@ -14,17 +14,17 @@ function getCallStateSync(): CallState
 
 Obtains the call status.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-call-function getCallStateSync(): CallState--><!--Device-call-function getCallStateSync(): CallState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| CallState | Promise used to return the result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [CallState](arkts-telephony-call-callstate-e.md) |
 
 **Examples**
 
@@ -32,4 +32,3 @@ Obtains the call status.
 let callState: call.CallState = call.getCallStateSync();
 console.info(`the call state is:` + callState);
 ```
-

@@ -6,13 +6,12 @@ export type LiveViewTypes = _LiveViewTypes
 
 Enumerates live view types.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-notificationManager-export type LiveViewTypes = _LiveViewTypes--><!--Device-notificationManager-export type LiveViewTypes = _LiveViewTypes-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
 
 **Property type:** _LiveViewTypes
-

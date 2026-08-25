@@ -4,9 +4,7 @@ Defines Counter Component.
 
 **Since:** 26.0.0
 
-**Decorator:** @ComponentV2
-
-<!--Device-unnamed-declare struct CounterV2Component--><!--Device-unnamed-declare struct CounterV2Component-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,6 +14,22 @@ Defines Counter Component.
 import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUI';
 ```
 
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## options
 
 ```TypeScript
@@ -24,17 +38,14 @@ options: CounterV2Options
 
 The options of a counter component.
 
-**Type:** [CounterV2Options](../../apis-default/arkts-apis/arkts-arkui-advanced-counterv2-counterv2options-c.md)
+**Type:** [CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)
 
 **Since:** 26.0.0
 
-**Decorator:** @Param
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-CounterV2Component-@Param    options: CounterV2Options--><!--Device-CounterV2Component-@Param    options: CounterV2Options-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

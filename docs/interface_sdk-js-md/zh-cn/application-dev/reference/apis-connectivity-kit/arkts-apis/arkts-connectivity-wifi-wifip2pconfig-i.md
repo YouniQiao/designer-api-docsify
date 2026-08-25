@@ -4,11 +4,11 @@ P2P配置。 @interface WifiP2PConfig
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [WifiP2PConfig](arkts-connectivity-wifimanager-wifip2pconfig-i.md)
-
-<!--Device-wifi-interface WifiP2PConfig--><!--Device-wifi-interface WifiP2PConfig-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -30,11 +30,11 @@ deviceAddress: string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [deviceAddress](arkts-connectivity-wifimanager-wifip2pconfig-i.md#deviceaddress)
-
-<!--Device-WifiP2PConfig-deviceAddress: string--><!--Device-WifiP2PConfig-deviceAddress: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -50,11 +50,11 @@ goBand: GroupOwnerBand
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [goBand](arkts-connectivity-wifimanager-wifip2pconfig-i.md#goband)
-
-<!--Device-WifiP2PConfig-goBand: GroupOwnerBand--><!--Device-WifiP2PConfig-goBand: GroupOwnerBand-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -70,11 +70,11 @@ groupName: string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [groupName](arkts-connectivity-wifimanager-wifip2pconfig-i.md#groupname)
-
-<!--Device-WifiP2PConfig-groupName: string--><!--Device-WifiP2PConfig-groupName: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -90,11 +90,11 @@ netId: number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [netId](arkts-connectivity-wifimanager-wifip2pconfig-i.md#netid)
-
-<!--Device-WifiP2PConfig-netId: number--><!--Device-WifiP2PConfig-netId: number-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -110,11 +110,10 @@ passphrase: string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [passphrase](arkts-connectivity-wifimanager-wifip2pconfig-i.md#passphrase)
 
-<!--Device-WifiP2PConfig-passphrase: string--><!--Device-WifiP2PConfig-passphrase: string-End-->
-
 **系统能力：** SystemCapability.Communication.WiFi.P2P
-

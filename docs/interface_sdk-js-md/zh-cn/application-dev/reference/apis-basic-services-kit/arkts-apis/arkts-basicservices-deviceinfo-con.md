@@ -10,7 +10,7 @@ const abiList: string
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const abiList: string--><!--Device-deviceInfo-const abiList: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -24,7 +24,7 @@ const bootCount: number
 
 **起始版本：** 21
 
-<!--Device-deviceInfo-const bootCount: number--><!--Device-deviceInfo-const bootCount: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -38,7 +38,7 @@ Bootloader版本号，用于标识设备启动引导程序的版本信息。示�
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const bootloaderVersion: string--><!--Device-deviceInfo-const bootloaderVersion: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -52,9 +52,9 @@ const brand: string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-deviceInfo-const brand: string--><!--Device-deviceInfo-const brand: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -68,7 +68,7 @@ const buildHost: string
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const buildHost: string--><!--Device-deviceInfo-const buildHost: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -82,7 +82,7 @@ const buildRootHash: string
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const buildRootHash: string--><!--Device-deviceInfo-const buildRootHash: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -96,7 +96,7 @@ const buildTime: string
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const buildTime: string--><!--Device-deviceInfo-const buildTime: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -110,7 +110,7 @@ const buildType: string
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const buildType: string--><!--Device-deviceInfo-const buildType: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -124,7 +124,7 @@ const buildUser: string
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const buildUser: string--><!--Device-deviceInfo-const buildUser: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -138,7 +138,7 @@ Build版本号，标识编译构建的版本号，值为osFullName中的第四�
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const buildVersion: number--><!--Device-deviceInfo-const buildVersion: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -153,7 +153,7 @@ const chipType: string
 
 **起始版本：** 21
 
-<!--Device-deviceInfo-const chipType: string--><!--Device-deviceInfo-const chipType: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -167,9 +167,9 @@ const deviceColor: string
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-deviceInfo-const deviceColor: string--><!--Device-deviceInfo-const deviceColor: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -183,9 +183,9 @@ const deviceType: string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-deviceInfo-const deviceType: string--><!--Device-deviceInfo-const deviceType: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -200,9 +200,9 @@ const diskSN: string
 
 **起始版本：** 15
 
-**需要权限：** ohos.permission.ACCESS_DISK_PHY_INFO
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
-<!--Device-deviceInfo-const diskSN: string--><!--Device-deviceInfo-const diskSN: string-End-->
+**需要权限：** ohos.permission.ACCESS_DISK_PHY_INFO
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -216,7 +216,7 @@ const displayVersion: string
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const displayVersion: string--><!--Device-deviceInfo-const displayVersion: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -230,7 +230,7 @@ const distributionOSApiName: string
 
 **起始版本：** 13
 
-<!--Device-deviceInfo-const distributionOSApiName: string--><!--Device-deviceInfo-const distributionOSApiName: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -244,7 +244,7 @@ const distributionOSApiVersion: number
 
 **起始版本：** 10
 
-<!--Device-deviceInfo-const distributionOSApiVersion: number--><!--Device-deviceInfo-const distributionOSApiVersion: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -258,7 +258,7 @@ const distributionOSName: string
 
 **起始版本：** 10
 
-<!--Device-deviceInfo-const distributionOSName: string--><!--Device-deviceInfo-const distributionOSName: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -272,7 +272,7 @@ const distributionOSReleaseType: string
 
 **起始版本：** 10
 
-<!--Device-deviceInfo-const distributionOSReleaseType: string--><!--Device-deviceInfo-const distributionOSReleaseType: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -286,7 +286,7 @@ const distributionOSVersion: string
 
 **起始版本：** 10
 
-<!--Device-deviceInfo-const distributionOSVersion: string--><!--Device-deviceInfo-const distributionOSVersion: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -300,7 +300,7 @@ Feature版本号，标识规划的新特性版本，值为osFullName中的第三
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const featureVersion: number--><!--Device-deviceInfo-const featureVersion: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -314,7 +314,7 @@ const firstApiVersion: number
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const firstApiVersion: number--><!--Device-deviceInfo-const firstApiVersion: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -328,7 +328,7 @@ const hardwareModel: string
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const hardwareModel: string--><!--Device-deviceInfo-const hardwareModel: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -343,9 +343,9 @@ const hardwareProfile: string
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-deviceInfo-const hardwareProfile: string--><!--Device-deviceInfo-const hardwareProfile: string-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -359,7 +359,7 @@ const incrementalVersion: string
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const incrementalVersion: string--><!--Device-deviceInfo-const incrementalVersion: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -373,7 +373,7 @@ Major版本号，随主版本更新增加，值为osFullName中的第一位数�
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const majorVersion: number--><!--Device-deviceInfo-const majorVersion: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -387,7 +387,7 @@ const manufacture: string
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const manufacture: string--><!--Device-deviceInfo-const manufacture: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -401,7 +401,7 @@ const marketName: string
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const marketName: string--><!--Device-deviceInfo-const marketName: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -418,7 +418,7 @@ ODID（Open Developer Identifier，开发者匿名设备标识符）。
 
 **起始版本：** 12
 
-<!--Device-deviceInfo-const ODID: string--><!--Device-deviceInfo-const ODID: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -432,9 +432,9 @@ const osFullName: string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-deviceInfo-const osFullName: string--><!--Device-deviceInfo-const osFullName: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -452,7 +452,7 @@ const osReleaseType: string
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const osReleaseType: string--><!--Device-deviceInfo-const osReleaseType: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -467,7 +467,7 @@ const performanceClass: PerformanceClassLevel
 
 **起始版本：** 19
 
-<!--Device-deviceInfo-const performanceClass: PerformanceClassLevel--><!--Device-deviceInfo-const performanceClass: PerformanceClassLevel-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -481,9 +481,9 @@ const productModel: string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-deviceInfo-const productModel: string--><!--Device-deviceInfo-const productModel: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -497,9 +497,9 @@ const productModelAlias: string
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
-<!--Device-deviceInfo-const productModelAlias: string--><!--Device-deviceInfo-const productModelAlias: string-End-->
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -513,7 +513,7 @@ const productSeries: string
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const productSeries: string--><!--Device-deviceInfo-const productSeries: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -527,9 +527,9 @@ const sdkApiVersion: number
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-deviceInfo-const sdkApiVersion: number--><!--Device-deviceInfo-const sdkApiVersion: number-End-->
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -545,11 +545,11 @@ const sdkMinorApiVersion: number
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-deviceInfo-const sdkMinorApiVersion: number--><!--Device-deviceInfo-const sdkMinorApiVersion: number-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -565,11 +565,11 @@ const sdkPatchApiVersion: number
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-deviceInfo-const sdkPatchApiVersion: number--><!--Device-deviceInfo-const sdkPatchApiVersion: number-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -583,7 +583,7 @@ const securityPatchTag: string
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const securityPatchTag: string--><!--Device-deviceInfo-const securityPatchTag: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -597,7 +597,7 @@ Senior版本号，随局部架构、重大特性增加，值为osFullName中的�
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const seniorVersion: number--><!--Device-deviceInfo-const seniorVersion: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -612,9 +612,9 @@ const serial: string
 
 **起始版本：** 6
 
-**需要权限：** ohos.permission.sec.ACCESS_UDID
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-deviceInfo-const serial: string--><!--Device-deviceInfo-const serial: string-End-->
+**需要权限：** ohos.permission.sec.ACCESS_UDID
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -628,7 +628,7 @@ const softwareModel: string
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const softwareModel: string--><!--Device-deviceInfo-const softwareModel: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -643,9 +643,9 @@ const udid: string
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.sec.ACCESS_UDID
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-deviceInfo-const udid: string--><!--Device-deviceInfo-const udid: string-End-->
+**需要权限：** ohos.permission.sec.ACCESS_UDID
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -659,7 +659,6 @@ const versionId: string
 
 **起始版本：** 6
 
-<!--Device-deviceInfo-const versionId: string--><!--Device-deviceInfo-const versionId: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
-

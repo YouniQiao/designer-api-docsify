@@ -9,7 +9,6 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [Comparable](arkts-arkts-comparable-i.md) | Can be implemented by any type that supports comparison. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Comparable](arkts-arkts-comparable-i.md) |

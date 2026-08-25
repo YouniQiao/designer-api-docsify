@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-sendablePhotoAccessHelper-const enum AlbumSubtype--><!--Device-sendablePhotoAccessHelper-const enum AlbumSubtype-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,7 +18,7 @@ HIDDEN = 1027
 
 **起始版本：** 12
 
-<!--Device-AlbumSubtype-HIDDEN = 1027--><!--Device-AlbumSubtype-HIDDEN = 1027-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,7 +34,7 @@ TRASH = 1028
 
 **起始版本：** 12
 
-<!--Device-AlbumSubtype-TRASH = 1028--><!--Device-AlbumSubtype-TRASH = 1028-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,7 +50,7 @@ SCREENSHOT = 1029
 
 **起始版本：** 12
 
-<!--Device-AlbumSubtype-SCREENSHOT = 1029--><!--Device-AlbumSubtype-SCREENSHOT = 1029-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -66,7 +66,7 @@ CAMERA = 1030
 
 **起始版本：** 12
 
-<!--Device-AlbumSubtype-CAMERA = 1030--><!--Device-AlbumSubtype-CAMERA = 1030-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -82,7 +82,7 @@ SOURCE_GENERIC = 2049
 
 **起始版本：** 12
 
-<!--Device-AlbumSubtype-SOURCE_GENERIC = 2049--><!--Device-AlbumSubtype-SOURCE_GENERIC = 2049-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -98,7 +98,7 @@ CLASSIFY = 4097
 
 **起始版本：** 12
 
-<!--Device-AlbumSubtype-CLASSIFY = 4097--><!--Device-AlbumSubtype-CLASSIFY = 4097-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -114,7 +114,7 @@ GEOGRAPHY_LOCATION = 4099
 
 **起始版本：** 12
 
-<!--Device-AlbumSubtype-GEOGRAPHY_LOCATION = 4099--><!--Device-AlbumSubtype-GEOGRAPHY_LOCATION = 4099-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -130,7 +130,7 @@ GEOGRAPHY_CITY = 4100
 
 **起始版本：** 12
 
-<!--Device-AlbumSubtype-GEOGRAPHY_CITY = 4100--><!--Device-AlbumSubtype-GEOGRAPHY_CITY = 4100-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -146,7 +146,7 @@ SHOOTING_MODE = 4101
 
 **起始版本：** 12
 
-<!--Device-AlbumSubtype-SHOOTING_MODE = 4101--><!--Device-AlbumSubtype-SHOOTING_MODE = 4101-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -162,7 +162,7 @@ PORTRAIT = 4102
 
 **起始版本：** 12
 
-<!--Device-AlbumSubtype-PORTRAIT = 4102--><!--Device-AlbumSubtype-PORTRAIT = 4102-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -178,7 +178,7 @@ GROUP_PHOTO = 4103
 
 **起始版本：** 12
 
-<!--Device-AlbumSubtype-GROUP_PHOTO = 4103--><!--Device-AlbumSubtype-GROUP_PHOTO = 4103-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -194,7 +194,7 @@ HIGHLIGHT = 4104
 
 **起始版本：** 12
 
-<!--Device-AlbumSubtype-HIGHLIGHT = 4104--><!--Device-AlbumSubtype-HIGHLIGHT = 4104-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -210,9 +210,8 @@ HIGHLIGHT_SUGGESTIONS = 4105
 
 **起始版本：** 12
 
-<!--Device-AlbumSubtype-HIGHLIGHT_SUGGESTIONS = 4105--><!--Device-AlbumSubtype-HIGHLIGHT_SUGGESTIONS = 4105-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
-

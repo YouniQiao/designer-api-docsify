@@ -1,4 +1,7 @@
-# @ohos.multimodalInput.gestureEvent
+# @ohos.multimodalInput.gestureEvent(Gesture Event)
+
+The **gestureEvent** module provides APIs for gesture events reported by devices.
+
 
 ## Modules to Import
 
@@ -10,34 +13,33 @@ import { ActionType, FourFingersSwipe, Pinch, Rotate, ThreeFingersSwipe, ThreeFi
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [FourFingersSwipe](arkts-input-multimodalinput-gestureevent-fourfingersswipe-i.md) | Defines a four-finger swipe gesture event. |
-| [Pinch](arkts-input-multimodalinput-gestureevent-pinch-i.md) | Defines a pinch event. |
-| [Rotate](arkts-input-multimodalinput-gestureevent-rotate-i.md) | Defines a rotation gesture event. |
-| [ThreeFingersSwipe](arkts-input-multimodalinput-gestureevent-threefingersswipe-i.md) | Defines a three-finger swipe gesture event. |
-| [ThreeFingersTap](arkts-input-multimodalinput-gestureevent-threefingerstap-i.md) | Defines a three-finger tap gesture event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FourFingersSwipe(Gesture Event)](arkts-input-multimodalinput-gestureevent-fourfingersswipe-i.md) |
+| [Pinch(Gesture Event)](arkts-input-multimodalinput-gestureevent-pinch-i.md) |
+| [Rotate(Gesture Event)](arkts-input-multimodalinput-gestureevent-rotate-i.md) |
+| [ThreeFingersSwipe(Gesture Event)](arkts-input-multimodalinput-gestureevent-threefingersswipe-i.md) |
+| [ThreeFingersTap(Gesture Event)](arkts-input-multimodalinput-gestureevent-threefingerstap-i.md) |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [SwipeInward](arkts-input-multimodalinput-gestureevent-swipeinward-i-sys.md) | Defines an inward swipe event. |
-| [TouchGestureEvent](arkts-input-multimodalinput-gestureevent-touchgestureevent-i-sys.md) | Defines a touchscreen gesture event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SwipeInward(Gesture Event)](arkts-input-multimodalinput-gestureevent-swipeinward-i-sys.md) |
+| [TouchGestureEvent(Gesture Event)](arkts-input-multimodalinput-gestureevent-touchgestureevent-i-sys.md) |
 <!--DelEnd-->
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md) | Enumerates gesture event types. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ActionType(Gesture Event)](arkts-input-multimodalinput-gestureevent-actiontype-e.md) |
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [TouchGestureAction](arkts-input-multimodalinput-gestureevent-touchgestureaction-e-sys.md) | Enumerates touchscreen gesture types. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [TouchGestureAction(Gesture Event)](arkts-input-multimodalinput-gestureevent-touchgestureaction-e-sys.md) |
 <!--DelEnd-->
-

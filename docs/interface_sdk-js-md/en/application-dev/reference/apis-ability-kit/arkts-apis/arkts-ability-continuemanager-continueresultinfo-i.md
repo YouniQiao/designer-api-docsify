@@ -2,9 +2,9 @@
 
 Describes the quick start result returned by the callback.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-continueManager-interface ContinueResultInfo--><!--Device-continueManager-interface ContinueResultInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -24,11 +24,11 @@ Description of the operation result.This API can be used only in the stage model
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ContinueResultInfo-resultInfo?: string--><!--Device-ContinueResultInfo-resultInfo?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -42,11 +42,10 @@ Status code of the operation result.
 
 **Type:** [ContinueStateCode](arkts-ability-continuemanager-continuestatecode-e.md)
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ContinueResultInfo-resultState: ContinueStateCode--><!--Device-ContinueResultInfo-resultState: ContinueStateCode-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
-

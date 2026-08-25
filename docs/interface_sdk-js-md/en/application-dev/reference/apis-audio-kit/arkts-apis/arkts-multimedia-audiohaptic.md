@@ -3,9 +3,9 @@
 Audio-haptic enables users to get rhythmic auditory and haptic feedback while having incoming calls or messages.  
 **Device behavior difference**: For a device without a vibration component, no vibration effect is generated.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-unnamed-declare namespace audioHaptic--><!--Device-unnamed-declare namespace audioHaptic-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -19,31 +19,30 @@ import { audioHaptic } from '@kit.AudioKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md) | Obtains an [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) instance. This object is singleton in one process. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [AudioHapticFileDescriptor](arkts-audio-audiohaptic-audiohapticfiledescriptor-i.md) | Describes the audio-haptic file descriptor. |
-| [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) | Manages the audio-haptic feature. Before calling any API in AudioHapticManager, you must use [getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md) to create an AudioHapticManager instance. |
-| [AudioHapticPlayer](arkts-audio-audiohaptic-audiohapticplayer-i.md) | Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use [createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createplayer) to create an AudioHapticPlayer instance. |
-| [AudioHapticPlayerOptions](arkts-audio-audiohaptic-audiohapticplayeroptions-i.md) | Describes the options for the audio-haptic player. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AudioHapticFileDescriptor](arkts-audio-audiohaptic-audiohapticfiledescriptor-i.md) |
+| [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) |
+| [AudioHapticPlayer](arkts-audio-audiohaptic-audiohapticplayer-i.md) |
+| [AudioHapticPlayerOptions](arkts-audio-audiohaptic-audiohapticplayeroptions-i.md) |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [AudioHapticPlayer](arkts-audio-audiohaptic-audiohapticplayer-i-sys.md) | Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use [createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createplayer) to create an AudioHapticPlayer instance. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AudioHapticPlayer](arkts-audio-audiohaptic-audiohapticplayer-i-sys.md) |
 <!--DelEnd-->
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [AudioHapticType](arkts-audio-audiohaptic-audiohaptictype-e.md) | Enumerates the audio haptic types. |
-| [AudioLatencyMode](arkts-audio-audiohaptic-audiolatencymode-e.md) | Enumerates the audio latency modes. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AudioHapticType](arkts-audio-audiohaptic-audiohaptictype-e.md) |
+| [AudioLatencyMode](arkts-audio-audiohaptic-audiolatencymode-e.md) |

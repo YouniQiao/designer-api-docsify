@@ -2,11 +2,11 @@
 
 Provides basic profile methods.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-declare namespace baseProfile--><!--Device-unnamed-declare namespace baseProfile-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -20,37 +20,36 @@ import { baseProfile } from '@kit.ConnectivityKit';
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [BaseProfile](arkts-connectivity-baseprofile-baseprofile-i.md) | Base interface of profile. |
-| [StateChangeParam](arkts-connectivity-baseprofile-statechangeparam-i.md) | Profile state change parameters. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BaseProfile](arkts-connectivity-baseprofile-baseprofile-i.md) |
+| [StateChangeParam](arkts-connectivity-baseprofile-statechangeparam-i.md) |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [BaseProfile](arkts-connectivity-baseprofile-baseprofile-i-sys.md) | Base interface of profile. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BaseProfile](arkts-connectivity-baseprofile-baseprofile-i-sys.md) |
 <!--DelEnd-->
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [DisconnectCause](arkts-connectivity-baseprofile-disconnectcause-e.md) | Enum for cause of disconnect. |
-| [PanRole](arkts-connectivity-baseprofile-panrole-e.md) | Enum for PAN profile role. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DisconnectCause](arkts-connectivity-baseprofile-disconnectcause-e.md) |
+| [PanRole](arkts-connectivity-baseprofile-panrole-e.md) |
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [ConnectionStrategy](arkts-connectivity-baseprofile-connectionstrategy-e-sys.md) | Enum for connection strategy of the profile |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ConnectionStrategy](arkts-connectivity-baseprofile-connectionstrategy-e-sys.md) |
 <!--DelEnd-->
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md) | Indicate the profile connection state. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md) |

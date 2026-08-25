@@ -4,9 +4,9 @@ FormEditExtensionContext是 [FormEditExtensionAbility](arkts-form-app-form-forme
 
 **继承/实现关系：** FormEditExtensionContext extends UIExtensionContext
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-unnamed-declare class FormEditExtensionContext--><!--Device-unnamed-declare class FormEditExtensionContext-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -19,34 +19,34 @@ startSecondPage(want: Want): Promise<AbilityResult>
 拉起需要被编辑的卡片提供方页面。使用Promise异步回调。  
 - 用户在卡片编辑界面点击编辑按钮，需要打开卡片提供方的编辑页面。 - 用户需要修改卡片配置或内容时，拉起卡片提供方应用进行编辑。
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-FormEditExtensionContext-startSecondPage(want: Want): Promise<AbilityResult>--><!--Device-FormEditExtensionContext-startSecondPage(want: Want): Promise<AbilityResult>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 需要拉起的编辑页面信息。必须包含bundleName字段，且parameters中需包含secPageAbilityName。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[AbilityResult](../../apis-ability-kit/arkts-apis/arkts-ability-abilityresult-abilityresult-i.md)&gt; | Promise对象，返回被启动方退出时的结果码和数据。 |
+| 类型 |
+| --- |
+| Promise&lt;[AbilityResult](../../apis-ability-kit/arkts-apis/arkts-ability-abilityresult-abilityresult-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | An IPC connection error happened. |
-| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
+| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) |
 
 **示例**
 
@@ -123,33 +123,33 @@ startUIAbility(want: Want): Promise<void>
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-FormEditExtensionContext-startUIAbility(want: Want): Promise<void>--><!--Device-FormEditExtensionContext-startUIAbility(want: Want): Promise<void>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 用于指定要拉起的UIAbility的Want信息。必须包含abilityName字段。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | An IPC connection error happened. |
-| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
-| [16000130](../../apis-ability-kit/errorcode-ability.md#16000130-uiability不属于调用方) | The target UIAbility does not belong to the caller. |
-| [16501014](../errorcode-form.md#16501014-半模态卡片编辑页不在前台) | The form edit page is not in the foreground. The current operation is not supported. |
-| [16000121](../../apis-ability-kit/errorcode-ability.md#16000121-待启动的目标组件类型不是uiability) | The target component type is not a UIAbility. |
+| 错误码ID |
+| --- |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
+| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) |
+| [16000130](../../apis-ability-kit/errorcode-ability.md#16000130-uiability不属于调用方) |
+| [16501014](../errorcode-form.md#16501014-半模态卡片编辑页不在前台) |
+| [16000121](../../apis-ability-kit/errorcode-ability.md#16000121-待启动的目标组件类型不是uiability) |
 
 **示例**
 
@@ -211,4 +211,3 @@ export default class ExampleFormEditAbility extends FormEditExtensionAbility {
   }
 }
 ```
-

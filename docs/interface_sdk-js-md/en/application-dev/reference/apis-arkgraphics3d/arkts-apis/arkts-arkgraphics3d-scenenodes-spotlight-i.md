@@ -10,9 +10,9 @@ Spotlight, which inherits from Light.A spotlight emits a conical beam of light i
 
 **Inheritance/Implementation:** SpotLight extends [Light](arkts-arkgraphics3d-scenenodes-light-i.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface SpotLight--><!--Device-unnamed-export interface SpotLight-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -24,13 +24,13 @@ innerAngle?: double
 
 Angle from the center of the spotlight to the start of the decay, corresponding to the semi-apex angle of the cone, within which the light intensity does not decay with angle. The unit is radian (rad), and the default value is 0. The value must be greater than or equal to 0 and less than or equal to outerAngle.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Default:** 0
 
 **Since:** 23
 
-<!--Device-SpotLight-innerAngle?: double--><!--Device-SpotLight-innerAngle?: double-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -42,13 +42,12 @@ outerAngle?: double
 
 Angle from the center of the spotlight to the end of the decay, corresponding to the semi-apex angle of the cone, beyond which there is no light intensity. The unit is radian (rad), and the default value is PI/4. The value must be greater than or equal to innerAngle and less than or equal to PI/2.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Default:** PI / 4.0
 
 **Since:** 23
 
-<!--Device-SpotLight-outerAngle?: double--><!--Device-SpotLight-outerAngle?: double-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

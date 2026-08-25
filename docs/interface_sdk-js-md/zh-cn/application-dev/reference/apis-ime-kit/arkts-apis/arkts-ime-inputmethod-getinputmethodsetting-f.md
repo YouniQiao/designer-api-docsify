@@ -16,23 +16,22 @@ function getInputMethodSetting(): InputMethodSetting
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getSetting](arkts-ime-inputmethod-getsetting-f.md)
-
-<!--Device-inputMethod-function getInputMethodSetting(): InputMethodSetting--><!--Device-inputMethod-function getInputMethodSetting(): InputMethodSetting-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) | 返回当前客户端设置实例。 |
+| 类型 |
+| --- |
+| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) |
 
 **示例**
 
 ```TypeScript
 let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getInputMethodSetting();
 ```
-

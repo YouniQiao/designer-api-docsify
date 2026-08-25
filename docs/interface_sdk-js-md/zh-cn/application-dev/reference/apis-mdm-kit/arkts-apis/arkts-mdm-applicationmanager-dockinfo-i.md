@@ -4,7 +4,7 @@
 
 **起始版本：** 24
 
-<!--Device-applicationManager-interface DockInfo--><!--Device-applicationManager-interface DockInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -26,9 +26,9 @@ abilityName: string
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
-<!--Device-DockInfo-abilityName: string--><!--Device-DockInfo-abilityName: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -44,9 +44,9 @@ bundleName: string
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
-<!--Device-DockInfo-bundleName: string--><!--Device-DockInfo-bundleName: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -62,9 +62,8 @@ index: number
 
 **起始版本：** 24
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DockInfo-index: number--><!--Device-DockInfo-index: number-End-->
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
-

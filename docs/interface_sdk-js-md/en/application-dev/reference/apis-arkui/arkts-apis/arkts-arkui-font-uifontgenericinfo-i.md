@@ -1,10 +1,10 @@
 # UIFontGenericInfo
 
-**Since:** 23
+UI font configuration of the system.
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**Since:** 11
 
-<!--Device-font-interface UIFontGenericInfo--><!--Device-font-interface UIFontGenericInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,17 +20,17 @@ import { font } from '@kit.ArkUI';
 adjust: Array<UIFontAdjustInfo>
 ```
 
-Adjust info of the font set.
+Weight of the font when displayed, which corresponds to the original weight.
 
 **Type:** Array&lt;[UIFontAdjustInfo](arkts-arkui-font-uifontadjustinfo-i.md)&gt;
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIFontGenericInfo-adjust: Array<UIFontAdjustInfo>--><!--Device-UIFontGenericInfo-adjust: Array<UIFontAdjustInfo>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,17 +40,17 @@ Adjust info of the font set.
 alias: Array<UIFontAliasInfo>
 ```
 
-Alias info of the font set.
+Font alias configuration information.
 
 **Type:** Array&lt;[UIFontAliasInfo](arkts-arkui-font-uifontaliasinfo-i.md)&gt;
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIFontGenericInfo-alias: Array<UIFontAliasInfo>--><!--Device-UIFontGenericInfo-alias: Array<UIFontAliasInfo>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,17 +60,16 @@ Alias info of the font set.
 family: string
 ```
 
-Name of the font set.
+Font family name, which is the value of **family** specified in the font file.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIFontGenericInfo-family: string--><!--Device-UIFontGenericInfo-family: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,7 +4,7 @@ Preferred compatible mode.
 
 **Since:** 26.0.0
 
-<!--Device-photoAccessHelper-enum PreferredCompatibleMode--><!--Device-photoAccessHelper-enum PreferredCompatibleMode-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,11 +18,11 @@ Performs transcoding based on the configured asset compatibility capabilities.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-PreferredCompatibleMode-DEFAULT = 0--><!--Device-PreferredCompatibleMode-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -36,11 +36,11 @@ No transcoding is performed. The asset is returned in its original format.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-PreferredCompatibleMode-CURRENT = 1--><!--Device-PreferredCompatibleMode-CURRENT = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -54,11 +54,10 @@ All assets are transcoded to the most widely compatible format.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-PreferredCompatibleMode-COMPATIBLE = 2--><!--Device-PreferredCompatibleMode-COMPATIBLE = 2-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

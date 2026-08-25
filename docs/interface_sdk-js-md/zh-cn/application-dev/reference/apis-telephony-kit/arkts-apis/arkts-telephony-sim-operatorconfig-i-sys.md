@@ -1,8 +1,8 @@
 # OperatorConfig（系统接口）
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-sim-export interface OperatorConfig--><!--Device-sim-export interface OperatorConfig-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -22,9 +22,9 @@ field: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-OperatorConfig-field: string--><!--Device-OperatorConfig-field: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -38,11 +38,10 @@ value: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-OperatorConfig-value: string--><!--Device-OperatorConfig-value: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
-

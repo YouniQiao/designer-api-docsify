@@ -4,7 +4,7 @@
 
 **起始版本：** 18
 
-<!--Device-unnamed-interface ErrorInformation--><!--Device-unnamed-interface ErrorInformation-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,7 +27,7 @@ errcode: number
 
 **起始版本：** 18
 
-<!--Device-ErrorInformation-errcode: number--><!--Device-ErrorInformation-errcode: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,9 +45,8 @@ msg: string
 
 **起始版本：** 18
 
-<!--Device-ErrorInformation-msg: string--><!--Device-ErrorInformation-msg: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
-

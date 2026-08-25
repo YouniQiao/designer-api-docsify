@@ -14,30 +14,30 @@ function updateId(uri: string, id: double): string
 
 更新指定uri中的ID。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-dataUriUtils-function updateId(uri: string, id: double): string--><!--Device-dataUriUtils-function updateId(uri: string, id: double): string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uri | string | 是 | 表示uri对象 |
-| id | double | 是 | 表示要更新的ID |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uri | string | 是 |
+| id | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回更新ID之后的uri对象。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -56,4 +56,3 @@ try {
   console.error(`update id err, code: ${(err as BusinessError).code}, msg: ${(err as BusinessError).message}`);
 }
 ```
-

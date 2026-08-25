@@ -1,8 +1,6 @@
 # DateTimeFormatOptions
 
-**Since:** -1
-
-<!--Device-Intl-interface DateTimeFormatOptions--><!--Device-Intl-interface DateTimeFormatOptions-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,21 +15,17 @@ day?: "numeric" | "2-digit" | undefined
 
 **Type:** "numeric" \| "2-digit" \| undefined
 
-**Since:** -1
-
-<!--Device-DateTimeFormatOptions-day?: "numeric" | "2-digit" | undefined--><!--Device-DateTimeFormatOptions-day?: "numeric" | "2-digit" | undefined-End-->
+**ArkTS mode:** 
 
 ## era
 
 ```TypeScript
-era?: "long" | "short" | "narrow" | undefined
+era?: "number" | "short" | "narrow" | undefined
 ```
 
 **Type:** "long" \| "short" \| "narrow" \| undefined
 
-**Since:** -1
-
-<!--Device-DateTimeFormatOptions-era?: "long" | "short" | "narrow" | undefined--><!--Device-DateTimeFormatOptions-era?: "long" | "short" | "narrow" | undefined-End-->
+**ArkTS mode:** 
 
 ## formatMatcher
 
@@ -41,9 +35,7 @@ formatMatcher?: "best fit" | "basic" | undefined
 
 **Type:** "best fit" \| "basic" \| undefined
 
-**Since:** -1
-
-<!--Device-DateTimeFormatOptions-formatMatcher?: "best fit" | "basic" | undefined--><!--Device-DateTimeFormatOptions-formatMatcher?: "best fit" | "basic" | undefined-End-->
+**ArkTS mode:** 
 
 ## hour
 
@@ -53,9 +45,7 @@ hour?: "numeric" | "2-digit" | undefined
 
 **Type:** "numeric" \| "2-digit" \| undefined
 
-**Since:** -1
-
-<!--Device-DateTimeFormatOptions-hour?: "numeric" | "2-digit" | undefined--><!--Device-DateTimeFormatOptions-hour?: "numeric" | "2-digit" | undefined-End-->
+**ArkTS mode:** 
 
 ## hour12
 
@@ -65,9 +55,7 @@ hour12?: boolean | undefined
 
 **Type:** boolean \| undefined
 
-**Since:** -1
-
-<!--Device-DateTimeFormatOptions-hour12?: boolean | undefined--><!--Device-DateTimeFormatOptions-hour12?: boolean | undefined-End-->
+**ArkTS mode:** 
 
 ## localeMatcher
 
@@ -77,9 +65,7 @@ localeMatcher?: "best fit" | "lookup" | undefined
 
 **Type:** "best fit" \| "lookup" \| undefined
 
-**Since:** -1
-
-<!--Device-DateTimeFormatOptions-localeMatcher?: "best fit" | "lookup" | undefined--><!--Device-DateTimeFormatOptions-localeMatcher?: "best fit" | "lookup" | undefined-End-->
+**ArkTS mode:** 
 
 ## minute
 
@@ -89,21 +75,17 @@ minute?: "numeric" | "2-digit" | undefined
 
 **Type:** "numeric" \| "2-digit" \| undefined
 
-**Since:** -1
-
-<!--Device-DateTimeFormatOptions-minute?: "numeric" | "2-digit" | undefined--><!--Device-DateTimeFormatOptions-minute?: "numeric" | "2-digit" | undefined-End-->
+**ArkTS mode:** 
 
 ## month
 
 ```TypeScript
-month?: "numeric" | "2-digit" | "long" | "short" | "narrow" | undefined
+month?: "numeric" | "2-digit" | "number" | "short" | "narrow" | undefined
 ```
 
 **Type:** "numeric" \| "2-digit" \| "long" \| "short" \| "narrow" \| undefined
 
-**Since:** -1
-
-<!--Device-DateTimeFormatOptions-month?: "numeric" | "2-digit" | "long" | "short" | "narrow" | undefined--><!--Device-DateTimeFormatOptions-month?: "numeric" | "2-digit" | "long" | "short" | "narrow" | undefined-End-->
+**ArkTS mode:** 
 
 ## second
 
@@ -113,9 +95,7 @@ second?: "numeric" | "2-digit" | undefined
 
 **Type:** "numeric" \| "2-digit" \| undefined
 
-**Since:** -1
-
-<!--Device-DateTimeFormatOptions-second?: "numeric" | "2-digit" | undefined--><!--Device-DateTimeFormatOptions-second?: "numeric" | "2-digit" | undefined-End-->
+**ArkTS mode:** 
 
 ## timeZone
 
@@ -125,33 +105,27 @@ timeZone?: string | undefined
 
 **Type:** string \| undefined
 
-**Since:** -1
-
-<!--Device-DateTimeFormatOptions-timeZone?: string | undefined--><!--Device-DateTimeFormatOptions-timeZone?: string | undefined-End-->
+**ArkTS mode:** 
 
 ## timeZoneName
 
 ```TypeScript
-timeZoneName?: "short" | "long" | "shortOffset" | "longOffset" | "shortGeneric" | "longGeneric" | undefined
+timeZoneName?: "short" | "number" | "shortOffset" | "longOffset" | "shortGeneric" | "longGeneric" | undefined
 ```
 
 **Type:** "short" \| "long" \| "shortOffset" \| "longOffset" \| "shortGeneric" \| "longGeneric" \| undefined
 
-**Since:** -1
-
-<!--Device-DateTimeFormatOptions-timeZoneName?: "short" | "long" | "shortOffset" | "longOffset" | "shortGeneric" | "longGeneric" | undefined--><!--Device-DateTimeFormatOptions-timeZoneName?: "short" | "long" | "shortOffset" | "longOffset" | "shortGeneric" | "longGeneric" | undefined-End-->
+**ArkTS mode:** 
 
 ## weekday
 
 ```TypeScript
-weekday?: "long" | "short" | "narrow" | undefined
+weekday?: "number" | "short" | "narrow" | undefined
 ```
 
 **Type:** "long" \| "short" \| "narrow" \| undefined
 
-**Since:** -1
-
-<!--Device-DateTimeFormatOptions-weekday?: "long" | "short" | "narrow" | undefined--><!--Device-DateTimeFormatOptions-weekday?: "long" | "short" | "narrow" | undefined-End-->
+**ArkTS mode:** 
 
 ## year
 
@@ -161,7 +135,4 @@ year?: "numeric" | "2-digit" | undefined
 
 **Type:** "numeric" \| "2-digit" \| undefined
 
-**Since:** -1
-
-<!--Device-DateTimeFormatOptions-year?: "numeric" | "2-digit" | undefined--><!--Device-DateTimeFormatOptions-year?: "numeric" | "2-digit" | undefined-End-->
-
+**ArkTS mode:** 

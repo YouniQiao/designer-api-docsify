@@ -1,4 +1,4 @@
-# @ohos.arkui.advanced.FoldSplitContainer
+# @ohos.arkui.advanced.FoldSplitContainer(Defines FoldSplitContainer component.)
 
 ## Modules to Import
 
@@ -10,29 +10,29 @@ import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayout
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [FoldSplitContainer](arkts-arkui-arkui-advanced-foldsplitcontainer-foldsplitcontainer-s.md) | **FoldSplitContainer** is a layout container designed to manage regions for two-panel and three-panel arrangements on a foldable device across various states, including the expanded state, the semi-folded state, and the folded state. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FoldSplitContainer(Defines FoldSplitContainer component.)](arkts-arkui-arkui-advanced-foldsplitcontainer-foldsplitcontainer-s.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ExpandedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-expandedregionlayoutoptions-i.md) | Layout information for the expanded state. |
-| [FoldedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-foldedregionlayoutoptions-i.md) | Provides the layout information of the folded state. |
-| [HoverModeRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-hovermoderegionlayoutoptions-i.md) | Layout information for the semi-folded state. |
-| [HoverModeStatus](arkts-arkui-arkui-advanced-foldsplitcontainer-hovermodestatus-i.md) | Provides information about the device or application's folding, rotation, and window state. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ExpandedRegionLayoutOptions(Defines FoldSplitContainer component.)](arkts-arkui-arkui-advanced-foldsplitcontainer-expandedregionlayoutoptions-i.md) |
+| [FoldedRegionLayoutOptions(Defines FoldSplitContainer component.)](arkts-arkui-arkui-advanced-foldsplitcontainer-foldedregionlayoutoptions-i.md) |
+| [HoverModeRegionLayoutOptions(Defines FoldSplitContainer component.)](arkts-arkui-arkui-advanced-foldsplitcontainer-hovermoderegionlayoutoptions-i.md) |
+| [HoverModeStatus(Defines FoldSplitContainer component.)](arkts-arkui-arkui-advanced-foldsplitcontainer-hovermodestatus-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [ExtraRegionPosition](arkts-arkui-arkui-advanced-foldsplitcontainer-extraregionposition-e.md) | Provides the position information of the extra region. |
-| [PresetSplitRatio](arkts-arkui-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md) | Enumerates the split ratios. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ExtraRegionPosition(Defines FoldSplitContainer component.)](arkts-arkui-arkui-advanced-foldsplitcontainer-extraregionposition-e.md) |
+| [PresetSplitRatio(Defines FoldSplitContainer component.)](arkts-arkui-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [OnHoverStatusChangeHandler](arkts-arkui-onhoverstatuschangehandler-t.md) | Implements a handler for the **onHoverStatusChange** event. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [OnHoverStatusChangeHandler(Defines FoldSplitContainer component.)](arkts-arkui-onhoverstatuschangehandler-t.md) |
+| [RegionBuilder(Defines FoldSplitContainer component.)](arkts-arkui-regionbuilder-t.md) |

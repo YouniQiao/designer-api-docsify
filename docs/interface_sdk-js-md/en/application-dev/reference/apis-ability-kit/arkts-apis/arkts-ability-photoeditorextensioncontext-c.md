@@ -4,9 +4,9 @@ The context of Photo Editor extension. It allows access to PhotoEditorExtension-
 
 **Inheritance/Implementation:** PhotoEditorExtensionContext extends ExtensionContext
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-declare class PhotoEditorExtensionContext--><!--Device-unnamed-declare class PhotoEditorExtensionContext-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
@@ -18,33 +18,33 @@ saveEditedContentWithImage(pixeMap: image.PixelMap, option: image.PackingOption)
 
 Save image data by image pixmap.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-PhotoEditorExtensionContext-saveEditedContentWithImage(pixeMap: image.PixelMap, option: image.PackingOption): Promise<AbilityResult>--><!--Device-PhotoEditorExtensionContext-saveEditedContentWithImage(pixeMap: image.PixelMap, option: image.PackingOption): Promise<AbilityResult>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pixeMap | image.PixelMap | Yes | Image pixmap. |
-| option | image.PackingOption | Yes | Option for image packing. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| pixeMap | image.PixelMap | Yes |
+| option | image.PackingOption | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Returns the result of save. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Params error. Possible causes: 1.Mandatory parameters are left unspecified. <br>2.Incorrect parameter types. |
-| [29600001](../errorcode-ability.md#29600001-internal-error-during-image-editing) | Internal error. |
-| [29600002](../errorcode-ability.md#29600002-internal-error-during-image-editing) | Image input error. |
-| [29600003](../errorcode-ability.md#29600003-image-too-large) | Image too big. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [29600001](../errorcode-ability.md#29600001-internal-error-during-image-editing) |
+| [29600002](../errorcode-ability.md#29600002-internal-error-during-image-editing) |
+| [29600003](../errorcode-ability.md#29600003-image-too-large) |
 
 **Examples**
 
@@ -96,32 +96,32 @@ saveEditedContentWithUri(uri: string): Promise<AbilityResult>
 
 Save image data by uri.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-PhotoEditorExtensionContext-saveEditedContentWithUri(uri: string): Promise<AbilityResult>--><!--Device-PhotoEditorExtensionContext-saveEditedContentWithUri(uri: string): Promise<AbilityResult>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Image editing URI. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Returns the result of save. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Params error. Possible causes: 1.Mandatory parameters are left unspecified. <br>2.Incorrect parameter types. |
-| [29600001](../errorcode-ability.md#29600001-internal-error-during-image-editing) | Internal error. |
-| [29600002](../errorcode-ability.md#29600002-internal-error-during-image-editing) | Image input error. |
-| [29600003](../errorcode-ability.md#29600003-image-too-large) | Image too big. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [29600001](../errorcode-ability.md#29600001-internal-error-during-image-editing) |
+| [29600002](../errorcode-ability.md#29600002-internal-error-during-image-editing) |
+| [29600003](../errorcode-ability.md#29600003-image-too-large) |
 
 **Examples**
 
@@ -181,4 +181,3 @@ struct Index {
   }
 }
 ```
-

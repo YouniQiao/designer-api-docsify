@@ -2,9 +2,9 @@
 
 Defines the user authentication parameters. This API is used to configure user authentication parameters, including the challenge value, authentication type list, authentication trust level, and authentication result reuse configuration. By properly configuring these parameters, you can meet authentication requirements in different service scenarios.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-userAuth-interface AuthParam--><!--Device-userAuth-interface AuthParam-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -26,9 +26,9 @@ Credential ID list, which is used to specify the credentials to be authenticated
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-AuthParam-credentialIdList?: Uint8Array[]--><!--Device-AuthParam-credentialIdList?: Uint8Array[]-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -42,15 +42,14 @@ userId?: int
 
 ID of the target user to be authenticated, which specifies the user to be authenticated. This parameter is passed when a specific user instead of the current login user needs to be authenticated. If this parameter is not passed, the ID of the current login user is used by default. The value is a non-negative integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Default:** The ID of the current user. The value is a positive integer greater than or equal to 0.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-AuthParam-userId?: int--><!--Device-AuthParam-userId?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **System API:** This is a system API.
-

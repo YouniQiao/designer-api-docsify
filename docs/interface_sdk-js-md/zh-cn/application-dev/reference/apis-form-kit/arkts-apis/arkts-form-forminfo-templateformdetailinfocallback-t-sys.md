@@ -8,9 +8,9 @@ type TemplateFormDetailInfoCallback = (info: Array<TemplateFormDetailInfo>) => v
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-formInfo-type TemplateFormDetailInfoCallback = (info: Array<TemplateFormDetailInfo>) => void--><!--Device-formInfo-type TemplateFormDetailInfoCallback = (info: Array<TemplateFormDetailInfo>) => void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -18,9 +18,9 @@ type TemplateFormDetailInfoCallback = (info: Array<TemplateFormDetailInfo>) => v
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| info | Array&lt;[TemplateFormDetailInfo](arkts-form-forminfo-templateformdetailinfo-i-sys.md)&gt; | 是 | 模板卡真实卡片信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| info | Array&lt;[TemplateFormDetailInfo](arkts-form-forminfo-templateformdetailinfo-i-sys.md)&gt; | 是 |
 
 **示例**
 
@@ -46,4 +46,3 @@ let templateFormDetailInfoCallback: formInfo.TemplateFormDetailInfoCallback =
     console.info('template form detail info callback success.');
   };
 ```
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-ASON-const enum ParseReturnType--><!--Device-ASON-const enum ParseReturnType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -18,9 +18,9 @@ OBJECT = 0
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-ParseReturnType-OBJECT = 0--><!--Device-ParseReturnType-OBJECT = 0-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -34,9 +34,8 @@ MAP = 1
 
 **起始版本：** 13
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
+
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ParseReturnType-MAP = 1--><!--Device-ParseReturnType-MAP = 1-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

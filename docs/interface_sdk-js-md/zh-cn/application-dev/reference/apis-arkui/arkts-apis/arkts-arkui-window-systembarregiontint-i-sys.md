@@ -2,9 +2,9 @@
 
 单个导航栏或状态栏回调信息。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-window-interface SystemBarRegionTint--><!--Device-window-interface SystemBarRegionTint-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -26,9 +26,9 @@ backgroundColor?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-SystemBarRegionTint-backgroundColor?: string--><!--Device-SystemBarRegionTint-backgroundColor?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -44,9 +44,9 @@ contentColor?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-SystemBarRegionTint-contentColor?: string--><!--Device-SystemBarRegionTint-contentColor?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -62,9 +62,9 @@ isEnable?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-SystemBarRegionTint-isEnable?: boolean--><!--Device-SystemBarRegionTint-isEnable?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -80,9 +80,9 @@ region?: Rect
 
 **类型：** Rect
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-SystemBarRegionTint-region?: Rect--><!--Device-SystemBarRegionTint-region?: Rect-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -98,11 +98,10 @@ type: WindowType
 
 **类型：** WindowType
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-SystemBarRegionTint-type: WindowType--><!--Device-SystemBarRegionTint-type: WindowType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
-

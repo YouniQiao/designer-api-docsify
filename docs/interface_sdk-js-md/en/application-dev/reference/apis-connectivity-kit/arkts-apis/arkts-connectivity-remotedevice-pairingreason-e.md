@@ -4,7 +4,7 @@ Enum for the pairing reason.
 
 **Since:** 26.0.0
 
-<!--Device-remoteDevice-enum PairingReason--><!--Device-remoteDevice-enum PairingReason-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -18,9 +18,9 @@ Pairing succeed.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-PairingReason-PAIRING_REASON_SUCCESS = 0--><!--Device-PairingReason-PAIRING_REASON_SUCCESS = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -34,9 +34,9 @@ Pairing failed.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-PairingReason-PAIRING_REASON_FAILURE = 1--><!--Device-PairingReason-PAIRING_REASON_FAILURE = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -50,9 +50,9 @@ Pairing failed: ACB connection failed. The remote device may be powered off or o
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-PairingReason-PAIRING_REASON_ACB_CONNECTION_FAIL = 2--><!--Device-PairingReason-PAIRING_REASON_ACB_CONNECTION_FAIL = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -66,9 +66,9 @@ Pairing failed: ACB connection limit exceeded.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-PairingReason-PAIRING_REASON_EXCEED_ACB_MAX = 3--><!--Device-PairingReason-PAIRING_REASON_EXCEED_ACB_MAX = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -82,9 +82,9 @@ Pairing failed: Cancelled by remote device.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-PairingReason-PAIRING_REASON_REMOTE_CANCELED = 4--><!--Device-PairingReason-PAIRING_REASON_REMOTE_CANCELED = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -98,9 +98,9 @@ Pairing failed: Cancelled by local device.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-PairingReason-PAIRING_REASON_LOCAL_CANCELED = 5--><!--Device-PairingReason-PAIRING_REASON_LOCAL_CANCELED = 5-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -114,9 +114,8 @@ Pairing failed: Authentication failed.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PairingReason-PAIRING_REASON_AUTH_FAIL = 6--><!--Device-PairingReason-PAIRING_REASON_AUTH_FAIL = 6-End-->
-
 **System capability:** SystemCapability.Communication.NearLink.Base
-

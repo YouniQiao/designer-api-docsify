@@ -4,7 +4,7 @@
 
 **起始版本：** 9
 
-<!--Device-stationary-enum ActivityState--><!--Device-stationary-enum ActivityState-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Stationary
 
@@ -18,7 +18,7 @@ ENTER = 1
 
 **起始版本：** 9
 
-<!--Device-ActivityState-ENTER = 1--><!--Device-ActivityState-ENTER = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Stationary
 
@@ -32,7 +32,6 @@ EXIT = 2
 
 **起始版本：** 9
 
-<!--Device-ActivityState-EXIT = 2--><!--Device-ActivityState-EXIT = 2-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Stationary
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 22
 
-<!--Device-unnamed-declare interface ImageAlt--><!--Device-unnamed-declare interface ImageAlt-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,13 +25,13 @@ error?: ResourceStr | PixelMap
 
 **起始版本：** 22
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ImageAlt-error?: ResourceStr | PixelMap--><!--Device-ImageAlt-error?: ResourceStr | PixelMap-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,13 +47,12 @@ placeholder?: ResourceStr | PixelMap
 
 **起始版本：** 22
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-ImageAlt-placeholder?: ResourceStr | PixelMap--><!--Device-ImageAlt-placeholder?: ResourceStr | PixelMap-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

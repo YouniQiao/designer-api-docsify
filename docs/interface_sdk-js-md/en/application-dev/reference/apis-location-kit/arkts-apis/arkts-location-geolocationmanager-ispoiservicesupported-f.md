@@ -14,19 +14,19 @@ function isPoiServiceSupported(): boolean
 
 Check whether the POI service is supported.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
-<!--Device-geoLocationManager-function isPoiServiceSupported(): boolean--><!--Device-geoLocationManager-function isPoiServiceSupported(): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Location.Location.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -36,4 +36,3 @@ import { geoLocationManager } from '@kit.LocationKit';
 let poiServiceState = geoLocationManager.isPoiServiceSupported();
 console.info("poiServiceState:" + poiServiceState);
 ```
-

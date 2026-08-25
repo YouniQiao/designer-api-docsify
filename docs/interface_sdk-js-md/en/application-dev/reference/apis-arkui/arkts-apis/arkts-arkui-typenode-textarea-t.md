@@ -8,13 +8,12 @@ Represents a FrameNode of the **TextArea** type.
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-typeNode-type TextArea = TypedFrameNode<TextAreaInterface, TextAreaAttribute>--><!--Device-typeNode-type TextArea = TypedFrameNode<TextAreaInterface, TextAreaAttribute>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;TextAreaInterface, TextAreaAttribute&gt;
-
+**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;TextAreaInterface, TextAreaAttribute&gt;

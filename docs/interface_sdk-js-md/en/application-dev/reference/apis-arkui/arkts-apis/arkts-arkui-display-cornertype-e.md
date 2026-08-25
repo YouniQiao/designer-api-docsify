@@ -4,7 +4,7 @@ Enumerates the types of corners on the screen.
 
 **Since:** 23
 
-<!--Device-display-enum CornerType--><!--Device-display-enum CornerType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -18,9 +18,9 @@ Top-left corner of the screen.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-CornerType-TOP_LEFT = 0--><!--Device-CornerType-TOP_LEFT = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -34,9 +34,9 @@ Top-right corner of the screen.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-CornerType-TOP_RIGHT = 1--><!--Device-CornerType-TOP_RIGHT = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -50,9 +50,9 @@ Bottom-right corner of the screen.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-CornerType-BOTTOM_RIGHT  = 2--><!--Device-CornerType-BOTTOM_RIGHT  = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -66,9 +66,8 @@ Bottom-left corner of the screen.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-CornerType-BOTTOM_LEFT  = 3--><!--Device-CornerType-BOTTOM_LEFT  = 3-End-->
-
 **System capability:** SystemCapability.Window.SessionManager
-

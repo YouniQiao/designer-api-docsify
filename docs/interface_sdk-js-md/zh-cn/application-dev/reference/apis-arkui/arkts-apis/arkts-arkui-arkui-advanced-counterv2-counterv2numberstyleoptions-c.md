@@ -1,12 +1,12 @@
 # CounterV2NumberStyleOptions
 
-CounterV2NumberStyleOptions定义了列表型和紧凑型CounterV2的属性和事件。继承于[CounterV2InlineStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md)，包含该接口及 [CounterV2CommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counterv2-counterv2commonoptions-c.md)所有属性。本节仅展示新增属性，继承属性请参见父接口。
+CounterV2NumberStyleOptions定义了列表型和紧凑型CounterV2的属性和事件。继承于[CounterV2InlineStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md)，包含该接口及 [CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md)所有属性。本节仅展示新增属性，继承属性请参见父接口。
 
-**继承/实现关系：** CounterV2NumberStyleOptions extends [CounterV2InlineStyleOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md)
+**继承/实现关系：** CounterV2NumberStyleOptions extends [CounterV2InlineStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md)
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-declare class CounterV2NumberStyleOptions--><!--Device-unnamed-declare class CounterV2NumberStyleOptions-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,6 +15,78 @@ CounterV2NumberStyleOptions定义了列表型和紧凑型CounterV2的属性和�
 ```TypeScript
 import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUI';
 ```
+
+## onBlurDecrease
+
+```TypeScript
+onBlurDecrease?: VoidCallback
+```
+
+当CounterV2组件的“减少按钮”失去焦点时，触发该回调。使用场景：当需要在减少按钮失焦时执行自定义操作（如验证输入、保存状态等）时传入此回调。默认值：undefined，表示不触发该回调。值为undefined时，按默认值处理。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onBlurIncrease
+
+```TypeScript
+onBlurIncrease?: VoidCallback
+```
+
+当CounterV2组件的“增加按钮”失去焦点时，触发该回调。使用场景：当需要在增加按钮失焦时执行自定义操作（如验证输入、保存状态等）时传入此回调。默认值：undefined，表示不触发该回调。值为undefined时，按默认值处理。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onFocusDecrease
+
+```TypeScript
+onFocusDecrease?: VoidCallback
+```
+
+当CounterV2组件的“减少按钮”获取焦点时，触发该回调。使用场景：当需要在减少按钮获焦时执行自定义操作（如改变样式、记录日志等）时传入此回调。默认值：undefined，表示不触发该回调。值为undefined时，按默认值处理。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onFocusIncrease
+
+```TypeScript
+onFocusIncrease?: VoidCallback
+```
+
+当CounterV2组件的“增加按钮”获取焦点时，触发该回调。使用场景：当需要在增加按钮获焦时执行自定义操作（如改变样式、记录日志等）时传入此回调。默认值：undefined，表示不触发该回调。值为undefined时，按默认值处理。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## label
 
@@ -28,11 +100,11 @@ label?: ResourceStr
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CounterV2NumberStyleOptions-label?: ResourceStr--><!--Device-CounterV2NumberStyleOptions-label?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,17 +114,15 @@ label?: ResourceStr
 onBlurDecrease?: VoidCallback
 ```
 
-当CounterV2组件的“减少按钮”失去焦点时，触发该回调。使用场景：当需要在减少按钮失焦时执行自定义操作（如验证输入、保存状态等）时传入此回调。默认值：undefined，表示不触发该回调。值为undefined时，按默认值处理。
+当CounterV2组件的"减小按钮"失去焦点时，触发该回调。默认值：undefined，表示不触发该回调。
 
 **类型：** VoidCallback
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CounterV2NumberStyleOptions-onBlurDecrease?: VoidCallback--><!--Device-CounterV2NumberStyleOptions-onBlurDecrease?: VoidCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,17 +132,15 @@ onBlurDecrease?: VoidCallback
 onBlurIncrease?: VoidCallback
 ```
 
-当CounterV2组件的“增加按钮”失去焦点时，触发该回调。使用场景：当需要在增加按钮失焦时执行自定义操作（如验证输入、保存状态等）时传入此回调。默认值：undefined，表示不触发该回调。值为undefined时，按默认值处理。
+当CounterV2组件的"增加按钮"失去焦点时，触发该回调。默认值：undefined，表示不触发该回调。
 
 **类型：** VoidCallback
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CounterV2NumberStyleOptions-onBlurIncrease?: VoidCallback--><!--Device-CounterV2NumberStyleOptions-onBlurIncrease?: VoidCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,17 +150,15 @@ onBlurIncrease?: VoidCallback
 onFocusDecrease?: VoidCallback
 ```
 
-当CounterV2组件的“减少按钮”获取焦点时，触发该回调。使用场景：当需要在减少按钮获焦时执行自定义操作（如改变样式、记录日志等）时传入此回调。默认值：undefined，表示不触发该回调。值为undefined时，按默认值处理。
+当CounterV2组件的"减小按钮"获取焦点时，触发该回调。默认值：undefined，表示不触发该回调。
 
 **类型：** VoidCallback
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CounterV2NumberStyleOptions-onFocusDecrease?: VoidCallback--><!--Device-CounterV2NumberStyleOptions-onFocusDecrease?: VoidCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -102,17 +168,14 @@ onFocusDecrease?: VoidCallback
 onFocusIncrease?: VoidCallback
 ```
 
-当CounterV2组件的“增加按钮”获取焦点时，触发该回调。使用场景：当需要在增加按钮获焦时执行自定义操作（如改变样式、记录日志等）时传入此回调。默认值：undefined，表示不触发该回调。值为undefined时，按默认值处理。
+当CounterV2组件的"增加按钮"获取焦点时，触发该回调。默认值：undefined，表示不触发该回调。
 
 **类型：** VoidCallback
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CounterV2NumberStyleOptions-onFocusIncrease?: VoidCallback--><!--Device-CounterV2NumberStyleOptions-onFocusIncrease?: VoidCallback-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

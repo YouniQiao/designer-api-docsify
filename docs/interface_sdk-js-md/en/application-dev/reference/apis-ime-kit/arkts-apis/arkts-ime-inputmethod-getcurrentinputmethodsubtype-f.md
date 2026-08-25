@@ -14,17 +14,17 @@ function getCurrentInputMethodSubtype(): InputMethodSubtype
 
 Obtains the current input method subtype.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-inputMethod-function getCurrentInputMethodSubtype(): InputMethodSubtype--><!--Device-inputMethod-function getCurrentInputMethodSubtype(): InputMethodSubtype-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | Current input method subtype. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) |
 
 **Examples**
 
@@ -33,4 +33,3 @@ import { InputMethodSubtype } from '@kit.IMEKit';
 
 let currentImeSubType: InputMethodSubtype = inputMethod.getCurrentInputMethodSubtype();
 ```
-

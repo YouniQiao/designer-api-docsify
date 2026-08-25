@@ -4,7 +4,7 @@ Defines the options for saving documents.
 
 **Since:** 9
 
-<!--Device-picker-class DocumentSaveOptions--><!--Device-picker-class DocumentSaveOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -20,7 +20,7 @@ import { picker } from '@kit.CoreFileKit';
 autoCreateEmptyFile?: boolean
 ```
 
-Whether to create empty files, The default value is true, indicating that empty files will be created.
+A Boolean value indicates whether to pre-create empty files when saving files. The default value is **true**, in which case the Picker pre-creates empty files and returns an array of the file URIs. If it is set to **false**, no empty files are pre-created, and only an array of the file URIs is returned.
 
 **Type:** boolean
 
@@ -28,9 +28,9 @@ Whether to create empty files, The default value is true, indicating that empty 
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-DocumentSaveOptions-autoCreateEmptyFile?: boolean--><!--Device-DocumentSaveOptions-autoCreateEmptyFile?: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.UserFileService.FolderSelection
 
@@ -40,15 +40,15 @@ Whether to create empty files, The default value is true, indicating that empty 
 defaultFilePathUri?: string
 ```
 
-Path of the document or directory to save.
+URI of the file or directory that can be selected. It is empty by default (the recently opened page is displayed).
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-DocumentSaveOptions-defaultFilePathUri?: string--><!--Device-DocumentSaveOptions-defaultFilePathUri?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -58,15 +58,15 @@ Path of the document or directory to save.
 fileSuffixChoices?: Array<string>
 ```
 
-Document suffix of the document to save. The value is a string array. Each element specifies an option, which includes at most two parts with a vertical bar (|) in between. The first part is the description, and the second part is the document suffix. If there is no "|", the option does not have the description. By default, all documents are saved.
+Document suffix of the document to save.The value is a string array. Each element specifies an option, which includes at most two parts with a vertical bar (|) in between. The first part is the description, and the second part is the document suffix. If there is no "|", the option does not have the description. By default, all documents are saved.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-DocumentSaveOptions-fileSuffixChoices?: Array<string>--><!--Device-DocumentSaveOptions-fileSuffixChoices?: Array<string>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -76,15 +76,15 @@ Document suffix of the document to save. The value is a string array. Each eleme
 newFileNames?: Array<string>
 ```
 
-Name of the document to save. If this parameter is not specified, the user needs to enter the the document name.
+Name of the document to save. If this parameter is not specified, the user needs to enter the file name.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 9
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-DocumentSaveOptions-newFileNames?: Array<string>--><!--Device-DocumentSaveOptions-newFileNames?: Array<string>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -94,15 +94,14 @@ Name of the document to save. If this parameter is not specified, the user needs
 pickerMode?: DocumentPickerMode
 ```
 
-Mode for starting Picker. Default value: DEFAULT. If pickerMode is DOWNLOAD, the settings of newFileNames, defaultFilePathUri, and fileSuffixChoices do not take effect.
+Mode for starting Picker.Default value: **DEFAULT**. If **pickerMode** is **DOWNLOAD**, the settings of **newFileNames**, **defaultFilePathUri**, and **fileSuffixChoices** do not take effect.
 
 **Type:** [DocumentPickerMode](arkts-corefile-picker-documentpickermode-e.md)
 
-**Since:** 23
+**Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-DocumentSaveOptions-pickerMode?: DocumentPickerMode--><!--Device-DocumentSaveOptions-pickerMode?: DocumentPickerMode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
-

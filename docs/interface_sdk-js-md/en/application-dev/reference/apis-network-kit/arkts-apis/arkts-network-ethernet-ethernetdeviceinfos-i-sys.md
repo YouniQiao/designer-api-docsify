@@ -4,7 +4,7 @@ Defines Ethernet device information.
 
 **Since:** 20
 
-<!--Device-ethernet-export interface EthernetDeviceInfos--><!--Device-ethernet-export interface EthernetDeviceInfos-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -28,7 +28,7 @@ Device connection mode.
 
 **Since:** 20
 
-<!--Device-EthernetDeviceInfos-connectionMode: DeviceConnectionType--><!--Device-EthernetDeviceInfos-connectionMode: DeviceConnectionType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -46,7 +46,7 @@ Device name.
 
 **Since:** 20
 
-<!--Device-EthernetDeviceInfos-deviceName: string--><!--Device-EthernetDeviceInfos-deviceName: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -64,7 +64,7 @@ Interface name.
 
 **Since:** 20
 
-<!--Device-EthernetDeviceInfos-ifaceName: string--><!--Device-EthernetDeviceInfos-ifaceName: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -82,7 +82,7 @@ Maximum connection rate.
 
 **Since:** 20
 
-<!--Device-EthernetDeviceInfos-maximumRate: string--><!--Device-EthernetDeviceInfos-maximumRate: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -100,7 +100,7 @@ Product name.
 
 **Since:** 20
 
-<!--Device-EthernetDeviceInfos-productName: string--><!--Device-EthernetDeviceInfos-productName: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -118,7 +118,7 @@ Supplier ID.
 
 **Since:** 20
 
-<!--Device-EthernetDeviceInfos-supplierId: string--><!--Device-EthernetDeviceInfos-supplierId: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -136,9 +136,8 @@ Vendor name.
 
 **Since:** 20
 
-<!--Device-EthernetDeviceInfos-supplierName: string--><!--Device-EthernetDeviceInfos-supplierName: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
-

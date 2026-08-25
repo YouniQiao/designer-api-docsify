@@ -14,30 +14,30 @@ function createPictureFromParcel(sequence: rpc.MessageSequence): Picture
 
 从MessageSequence中获取Picture。由于图片占用内存较大，所以当Picture对象使用完成后，应主动调用[release](arkts-image-image-picture-i.md#release)方法及时释放内存。释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-image-function createPictureFromParcel(sequence: rpc.MessageSequence): Picture--><!--Device-image-function createPictureFromParcel(sequence: rpc.MessageSequence): Picture-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | 是 | 保存有Picture信息的MessageSequence。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sequence | rpc.MessageSequence | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Picture](arkts-image-image-picture-i.md) | 返回Picture对象。 |
+| 类型 |
+| --- |
+| [Picture](arkts-image-image-picture-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) |
 
 **示例**
 
@@ -149,4 +149,3 @@ function MarshallingUnMarshallingFunc(context: common.UIAbilityContext): void {
   }
 }
 ```
-

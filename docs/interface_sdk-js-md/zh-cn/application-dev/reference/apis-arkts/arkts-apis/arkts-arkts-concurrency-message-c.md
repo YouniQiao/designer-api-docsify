@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-concurrency-export class Message--><!--Device-concurrency-export class Message-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,19 +23,17 @@ constructor(handler: concurrency.MessageHandler)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Message-constructor(handler: concurrency.MessageHandler)--><!--Device-Message-constructor(handler: concurrency.MessageHandler)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| handler | concurrency.MessageHandler | 是 | 处理该消息的MessageHandler。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| handler | concurrency.MessageHandler | 是 |
 
 ## constructor
 
@@ -49,20 +45,18 @@ constructor(what: int, handler: concurrency.MessageHandler)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Message-constructor(what: int, handler: concurrency.MessageHandler)--><!--Device-Message-constructor(what: int, handler: concurrency.MessageHandler)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| what | int | 是 | 消息标识符，用于表明消息的类型或目的，由开发者自行约定。 <br>该值应为整数。 |
-| handler | concurrency.MessageHandler | 是 | 处理该消息的MessageHandler。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| what | int | 是 |
+| handler | concurrency.MessageHandler | 是 |
 
 ## constructor
 
@@ -74,21 +68,19 @@ constructor(what: int, obj: Any, handler: concurrency.MessageHandler)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Message-constructor(what: int, obj: Any, handler: concurrency.MessageHandler)--><!--Device-Message-constructor(what: int, obj: Any, handler: concurrency.MessageHandler)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| what | int | 是 | 消息标识符。 <br>该值应为整数。 |
-| obj | Any | 是 | 消息携带的数据对象。 |
-| handler | concurrency.MessageHandler | 是 | 处理该消息的MessageHandler。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| what | int | 是 |
+| obj | Any | 是 |
+| handler | concurrency.MessageHandler | 是 |
 
 ## constructor
 
@@ -100,20 +92,18 @@ constructor(callback: () => void, handler: concurrency.MessageHandler)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Message-constructor(callback: () => void, handler: concurrency.MessageHandler)--><!--Device-Message-constructor(callback: () => void, handler: concurrency.MessageHandler)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | () =&gt; void | 是 | 消息处理时执行的回调函数。 |
-| handler | concurrency.MessageHandler | 是 | 处理该消息的MessageHandler。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | () = & gt; void | 是 |
+| handler | concurrency.MessageHandler | 是 |
 
 ## equals
 
@@ -125,25 +115,23 @@ equals(other: concurrency.Message): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Message-equals(other: concurrency.Message): boolean--><!--Device-Message-equals(other: concurrency.Message): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [concurrency.Message](arkts-arkts-concurrency-message-c.md) | 是 | 用于比较的另一个消息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [concurrency.Message](arkts-arkts-concurrency-message-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 两个消息相等则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## getCallback
 
@@ -155,19 +143,17 @@ getCallback(): (() => void) | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Message-getCallback(): (() => void) | undefined--><!--Device-Message-getCallback(): (() => void) | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [function](arkts-arkts-taskpool-task-c.md) \| undefined | 消息的回调函数，未设置时返回undefined。 |
+| 类型 |
+| --- |
+| [function](arkts-arkts-taskpool-task-c.md) \| undefined |
 
 ## getObject
 
@@ -179,19 +165,17 @@ getObject(): Any
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Message-getObject(): Any--><!--Device-Message-getObject(): Any-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Any | 消息携带的数据对象。 |
+| 类型 |
+| --- |
+| Any |
 
 ## getTarget
 
@@ -203,19 +187,17 @@ getTarget(): concurrency.MessageHandler
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Message-getTarget(): concurrency.MessageHandler--><!--Device-Message-getTarget(): concurrency.MessageHandler-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| concurrency.MessageHandler | 目标处理器。 |
+| 类型 |
+| --- |
+| concurrency.MessageHandler |
 
 ## getWhat
 
@@ -227,19 +209,17 @@ getWhat(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Message-getWhat(): int--><!--Device-Message-getWhat(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 消息的标识符。 |
+| 类型 |
+| --- |
+| int |
 
 ## sendToTarget
 
@@ -251,11 +231,8 @@ sendToTarget(): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Message-sendToTarget(): void--><!--Device-Message-sendToTarget(): void-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

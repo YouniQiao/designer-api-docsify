@@ -4,7 +4,7 @@ Scene options used by 3D scene control@interface SceneOptions
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface SceneOptions--><!--Device-unnamed-declare interface SceneOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -27,9 +27,9 @@ Scene type when 3D rendering
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-SceneOptions-modelType?: ModelType--><!--Device-SceneOptions-modelType?: ModelType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -45,9 +45,8 @@ ResourceStr type for 3D rendering, Scene type for 3d scene controlling
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-SceneOptions-scene?: ResourceStr | Scene--><!--Device-SceneOptions-scene?: ResourceStr | Scene-End-->
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

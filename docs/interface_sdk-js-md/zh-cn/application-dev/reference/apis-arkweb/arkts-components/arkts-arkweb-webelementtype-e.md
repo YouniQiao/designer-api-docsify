@@ -4,7 +4,7 @@
 
 **起始版本：** 13
 
-<!--Device-unnamed-declare enum WebElementType--><!--Device-unnamed-declare enum WebElementType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -18,7 +18,7 @@ IMAGE = 1
 
 **起始版本：** 13
 
-<!--Device-WebElementType-IMAGE = 1--><!--Device-WebElementType-IMAGE = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -32,7 +32,7 @@ LINK = 2
 
 **起始版本：** 20
 
-<!--Device-WebElementType-LINK = 2--><!--Device-WebElementType-LINK = 2-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -46,7 +46,6 @@ TEXT = 3
 
 **起始版本：** 21
 
-<!--Device-WebElementType-TEXT = 3--><!--Device-WebElementType-TEXT = 3-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-

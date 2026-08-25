@@ -4,7 +4,7 @@ System panel status.
 
 **Since:** 26.0.0
 
-<!--Device-inputMethodSystemPanelManager-interface SystemPanelStatus--><!--Device-inputMethodSystemPanelManager-interface SystemPanelStatus-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -28,9 +28,9 @@ The input type of the input method.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-SystemPanelStatus-inputType: InputMethodInputType--><!--Device-SystemPanelStatus-inputType: InputMethodInputType-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -48,9 +48,9 @@ Whether the system panel needs to be raised.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-SystemPanelStatus-isPanelRaised: boolean--><!--Device-SystemPanelStatus-isPanelRaised: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -68,9 +68,9 @@ Whether the system panel's function button is needed.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-SystemPanelStatus-needFuncButton: boolean--><!--Device-SystemPanelStatus-needFuncButton: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -88,11 +88,10 @@ The panel flag of the input method's soft keyboard panel.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-SystemPanelStatus-panelFlag: PanelFlag--><!--Device-SystemPanelStatus-panelFlag: PanelFlag-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **System API:** This is a system API.
-

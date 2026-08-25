@@ -4,7 +4,7 @@ Defines the options of translate.
 
 **Since:** 7
 
-<!--Device-unnamed-declare interface TranslateOptions--><!--Device-unnamed-declare interface TranslateOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Translation distance along the x-axis. For the number type, the unit is VP, and 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-TranslateOptions-x?: number | string--><!--Device-TranslateOptions-x?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ Translation distance along the y-axis. For the number type, the unit is VP, and 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-TranslateOptions-y?: number | string--><!--Device-TranslateOptions-y?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,11 +65,10 @@ Distance to translate along the z-axis. The value is a floating point number, th
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-TranslateOptions-z?: number | string--><!--Device-TranslateOptions-z?: number | string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

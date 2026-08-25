@@ -16,25 +16,25 @@ export function getApplicationContextInstance(): ApplicationContext
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-application-export function getApplicationContextInstance(): ApplicationContext--><!--Device-application-export function getApplicationContextInstance(): ApplicationContext-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ApplicationContext](arkts-ability-applicationcontext-c.md) | 应用上下文。 |
+| 类型 |
+| --- |
+| [ApplicationContext](arkts-ability-applicationcontext-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: Memory operation error. |
+| 错误码ID |
+| --- |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 **示例**
 
@@ -54,4 +54,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

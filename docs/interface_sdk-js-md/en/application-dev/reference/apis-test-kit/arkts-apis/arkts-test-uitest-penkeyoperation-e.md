@@ -4,7 +4,7 @@ Pen key operation type enum.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare enum PenKeyOperation--><!--Device-unnamed-declare enum PenKeyOperation-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -18,9 +18,9 @@ Single click.
 
 **Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-PenKeyOperation-CLICK = 0--><!--Device-PenKeyOperation-CLICK = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -34,9 +34,8 @@ Double click.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-PenKeyOperation-DOUBLE_CLICK = 1--><!--Device-PenKeyOperation-DOUBLE_CLICK = 1-End-->
-
 **System capability:** SystemCapability.Test.UiTest
-

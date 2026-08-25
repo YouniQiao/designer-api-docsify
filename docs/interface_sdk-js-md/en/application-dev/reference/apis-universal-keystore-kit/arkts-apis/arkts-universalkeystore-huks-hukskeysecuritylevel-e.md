@@ -4,7 +4,7 @@ Enumerates the key security levels.
 
 **Since:** 26.0.0
 
-<!--Device-huks-export enum HuksKeySecurityLevel--><!--Device-huks-export enum HuksKeySecurityLevel-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -18,9 +18,9 @@ The key is generated and used in the trusted execution environment.
 
 **Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-HuksKeySecurityLevel-HUKS_KEY_SECURITY_LEVEL_TEE = 0--><!--Device-HuksKeySecurityLevel-HUKS_KEY_SECURITY_LEVEL_TEE = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -34,11 +34,10 @@ The key is generated and used in the secure environment.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Required permissions:** ohos.permission.ACCESS_SE_KEY
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-HuksKeySecurityLevel-HUKS_KEY_SECURITY_LEVEL_SE = 1--><!--Device-HuksKeySecurityLevel-HUKS_KEY_SECURITY_LEVEL_SE = 1-End-->
-
 **System capability:** SystemCapability.Security.Huks.Core
-

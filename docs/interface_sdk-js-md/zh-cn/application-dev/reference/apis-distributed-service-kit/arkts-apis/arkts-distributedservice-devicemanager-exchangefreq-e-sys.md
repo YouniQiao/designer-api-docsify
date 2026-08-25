@@ -4,9 +4,9 @@
 
 **起始版本：** 7
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-deviceManager-enum ExchangeFreq--><!--Device-deviceManager-enum ExchangeFreq-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -22,9 +22,9 @@ LOW = 0
 
 **起始版本：** 7
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ExchangeFreq-LOW = 0--><!--Device-ExchangeFreq-LOW = 0-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -40,9 +40,9 @@ MID = 1
 
 **起始版本：** 7
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ExchangeFreq-MID = 1--><!--Device-ExchangeFreq-MID = 1-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -58,9 +58,9 @@ HIGH = 2
 
 **起始版本：** 7
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ExchangeFreq-HIGH = 2--><!--Device-ExchangeFreq-HIGH = 2-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -76,11 +76,10 @@ SUPER_HIGH = 3
 
 **起始版本：** 7
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ExchangeFreq-SUPER_HIGH = 3--><!--Device-ExchangeFreq-SUPER_HIGH = 3-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
-

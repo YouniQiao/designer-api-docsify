@@ -4,9 +4,9 @@ The module allows you to query the charging status and remaining power of a devi
 
 **Since:** 3
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export default class Battery--><!--Device-unnamed-export default class Battery-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Lite
 
@@ -26,17 +26,17 @@ Obtains the current charging state and battery level.
 
 **Since:** 3
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-Battery-static getStatus(options?: GetStatusOptions): void--><!--Device-Battery-static getStatus(options?: GetStatusOptions): void-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [GetStatusOptions](arkts-basicservices-system-battery-getstatusoptions-i.md) | No | Object that contains the API calling result. This parameter is optional and is left blank by default. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [GetStatusOptions](arkts-basicservices-system-battery-getstatusoptions-i.md) | No |
 
 **Examples**
 
@@ -50,4 +50,3 @@ Battery.getStatus({
     }
 });
 ```
-

@@ -9,11 +9,11 @@ Vector是一种线性数据结构，底层基于数组实现，解决了需要�
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md)
-
-<!--Device-unnamed-declare class Vector--><!--Device-unnamed-declare class Vector-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -33,17 +33,17 @@ import { Vector } from '@kit.ArkTS';
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-[Symbol.iterator](): IterableIterator<T>--><!--Device-Vector-[Symbol.iterator](): IterableIterator<T>-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器，用于遍历Vector实例中的元素。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |
 
 **示例**
 
@@ -79,23 +79,23 @@ add(element: T): boolean
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-add(element: T): boolean--><!--Device-Vector-add(element: T): boolean-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| element | T | 是 | 添加的元素。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| element | T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 插入成功返回true，失败返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -129,9 +129,9 @@ clear(): void
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-clear(): void--><!--Device-Vector-clear(): void-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -156,17 +156,17 @@ clone(): Vector<T>
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-clone(): Vector<T>--><!--Device-Vector-clone(): Vector<T>-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; | 返回与原实例内容相同的克隆Vector对象实例，修改克隆实例不影响原实例。 |
+| 类型 |
+| --- |
+| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; |
 
 **示例**
 
@@ -189,9 +189,9 @@ Vector的构造函数。
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-constructor()--><!--Device-Vector-constructor()-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -211,17 +211,17 @@ convertToArray(): Array<T>
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-convertToArray(): Array<T>--><!--Device-Vector-convertToArray(): Array<T>-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;T&gt; | 返回包含Vector中所有元素的数组。 |
+| 类型 |
+| --- |
+| Array & lt;T & gt; |
 
 **示例**
 
@@ -244,17 +244,17 @@ copyToArray(array: Array<T>): void
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-copyToArray(array: Array<T>): void--><!--Device-Vector-copyToArray(array: Array<T>): void-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| array | Array&lt;T&gt; | 是 | 接收复制元素的目标数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| array | Array & lt;T & gt; | 是 |
 
 ## forEach
 
@@ -266,18 +266,18 @@ forEach(callbackFn: (value: T, index?: number, vector?: Vector<T>) => void, this
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-forEach(callbackFn: (value: T, index?: number, vector?: Vector<T>) => void, thisArg?: Object): void--><!--Device-Vector-forEach(callbackFn: (value: T, index?: number, vector?: Vector<T>) => void, thisArg?: Object): void-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; void | 是 | 回调函数，用于遍历Vector中的每个元素。 |
-| thisArg | Object | 否 | callbackFn被调用时用作this值，默认值为当前实例对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackFn | (value: T, index?: number, vector?: Vector & lt;T & gt;) = & gt; void | 是 |
+| thisArg | Object | 否 |
 
 **示例**
 
@@ -304,23 +304,23 @@ get(index: number): T
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-get(index: number): T--><!--Device-Vector-get(index: number): T-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | number | 是 | 查找的下标值，取值范围：0 ≤ index &lt; length。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 返回获取到的元素。 |
+| 类型 |
+| --- |
+| T |
 
 **示例**
 
@@ -343,17 +343,17 @@ getCapacity(): number
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-getCapacity(): number--><!--Device-Vector-getCapacity(): number-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回Vector的容量大小。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -376,17 +376,17 @@ getFirstElement(): T
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-getFirstElement(): T--><!--Device-Vector-getFirstElement(): T-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 返回Vector实例中的第一个元素；若Vector为空，返回undefined。 |
+| 类型 |
+| --- |
+| T |
 
 **示例**
 
@@ -409,24 +409,24 @@ getIndexFrom(element: T, index: number): number
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-getIndexFrom(element: T, index: number): number--><!--Device-Vector-getIndexFrom(element: T, index: number): number-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| element | T | 是 | 要查找的元素。 |
-| index | number | 是 | 从指定索引向前搜索的起始位置，取值范围为[0, length-1]。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| element | T | 是 |
+| index | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回该元素的下标，如果查找失败，则返回 -1。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -449,23 +449,23 @@ getIndexOf(element: T): number
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-getIndexOf(element: T): number--><!--Device-Vector-getIndexOf(element: T): number-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| element | T | 是 | 指定元素。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| element | T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回指定元素第一次出现时的下标值，查找失败返回-1。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -491,17 +491,17 @@ getLastElement(): T
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-getLastElement(): T--><!--Device-Vector-getLastElement(): T-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 返回Vector实例中的最后一个元素；若Vector为空，返回undefined。 |
+| 类型 |
+| --- |
+| T |
 
 **示例**
 
@@ -524,24 +524,24 @@ getLastIndexFrom(element: T, index: number): number
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-getLastIndexFrom(element: T, index: number): number--><!--Device-Vector-getLastIndexFrom(element: T, index: number): number-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| element | T | 是 | 要查找的元素。 |
-| index | number | 是 | 从指定索引开始搜索，取值范围[0, length-1]。超出范围时返回-1。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| element | T | 是 |
+| index | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回该元素的下标，如果查找失败，则返回-1。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -564,23 +564,23 @@ getLastIndexOf(element: T): number
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-getLastIndexOf(element: T): number--><!--Device-Vector-getLastIndexOf(element: T): number-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| element | T | 是 | 指定元素。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| element | T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回指定元素最后一次出现时的下标值，查找失败返回-1。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -606,23 +606,23 @@ has(element: T): boolean
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-has(element: T): boolean--><!--Device-Vector-has(element: T): boolean-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| element | T | 是 | 指定的元素。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| element | T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 是否包含指定元素，true表示包含该元素，false表示不包含。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -647,17 +647,17 @@ increaseCapacityTo(newCapacity: number): void
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-increaseCapacityTo(newCapacity: number): void--><!--Device-Vector-increaseCapacityTo(newCapacity: number): void-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| newCapacity | number | 是 | 新容量，需大于或等于当前Vector中的元素个数。传入值小于元素个数时不生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| newCapacity | number | 是 |
 
 **示例**
 
@@ -684,18 +684,18 @@ insert(element: T, index: number): void
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-insert(element: T, index: number): void--><!--Device-Vector-insert(element: T, index: number): void-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| element | T | 是 | 被插入的元素。 |
-| index | number | 是 | 被插入的位置索引，取值范围为[0, length]。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| element | T | 是 |
+| index | number | 是 |
 
 **示例**
 
@@ -720,17 +720,17 @@ isEmpty(): boolean
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-isEmpty(): boolean--><!--Device-Vector-isEmpty(): boolean-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 为空返回true，不为空返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -753,23 +753,23 @@ remove(element: T): boolean
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-remove(element: T): boolean--><!--Device-Vector-remove(element: T): boolean-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| element | T | 是 | 待删除的元素。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| element | T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 删除成功返回true，删除失败返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -792,23 +792,23 @@ removeByIndex(index: number): T
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-removeByIndex(index: number): T--><!--Device-Vector-removeByIndex(index: number): T-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | number | 是 | 要删除元素的位置下标值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 返回被删除的元素。Vector为空时返回undefined，下标越界时抛出异常。 |
+| 类型 |
+| --- |
+| T |
 
 **示例**
 
@@ -832,18 +832,18 @@ removeByRange(fromIndex: number, toIndex: number): void
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-removeByRange(fromIndex: number, toIndex: number): void--><!--Device-Vector-removeByRange(fromIndex: number, toIndex: number): void-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| fromIndex | number | 是 | 起始下标，包含该下标对应的元素。 |
-| toIndex | number | 是 | 终止下标，不包含该下标对应的元素。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| fromIndex | number | 是 |
+| toIndex | number | 是 |
 
 **示例**
 
@@ -868,18 +868,18 @@ replaceAllElements(callbackFn: (value: T, index?: number, vector?: Vector<T>) =>
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-replaceAllElements(callbackFn: (value: T, index?: number, vector?: Vector<T>) => T, thisArg?: Object): void--><!--Device-Vector-replaceAllElements(callbackFn: (value: T, index?: number, vector?: Vector<T>) => T, thisArg?: Object): void-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; T | 是 | 回调函数，用于操作Vector中的元素，并用操作后的结果替换原元素。 |
-| thisArg | Object | 否 | callbackFn被调用时用作this值，默认值为当前实例对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackFn | (value: T, index?: number, vector?: Vector & lt;T & gt;) = & gt; T | 是 |
+| thisArg | Object | 否 |
 
 **示例**
 
@@ -907,24 +907,24 @@ set(index: number, element: T): T
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-set(index: number, element: T): T--><!--Device-Vector-set(index: number, element: T): T-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | number | 是 | 查找的下标值，取值范围为[0, length-1]。 |
-| element | T | 是 | 用来替换的元素。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
+| element | T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 返回被替换位置上的原元素。 |
+| 类型 |
+| --- |
+| T |
 
 ## setLength
 
@@ -936,17 +936,17 @@ setLength(newSize: number): void
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-setLength(newSize: number): void--><!--Device-Vector-setLength(newSize: number): void-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| newSize | number | 是 | 设置的新长度，取值原则：newSize ≥ 0。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| newSize | number | 是 |
 
 **示例**
 
@@ -970,17 +970,17 @@ sort(comparator?: (firstValue: T, secondValue: T) => number): void
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-sort(comparator?: (firstValue: T, secondValue: T) => number): void--><!--Device-Vector-sort(comparator?: (firstValue: T, secondValue: T) => number): void-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| comparator | (firstValue: T, secondValue: T) =&gt; number | 否 | 回调函数，若不传入此参数，则按照默认排序规则对元素进行排序。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| comparator | (firstValue: T, secondValue: T) = & gt; number | 否 |
 
 **示例**
 
@@ -1009,24 +1009,24 @@ subVector(fromIndex: number, toIndex: number): Vector<T>
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-subVector(fromIndex: number, toIndex: number): Vector<T>--><!--Device-Vector-subVector(fromIndex: number, toIndex: number): Vector<T>-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| fromIndex | number | 是 | 起始下标，取值范围：0 ≤ fromIndex &lt; length。 |
-| toIndex | number | 是 | 终止下标，取值范围：0 ≤ toIndex ≤ length，且toIndex应大于fromIndex。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| fromIndex | number | 是 |
+| toIndex | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; | 返回包含从起始下标到终止下标（不包括终止下标）元素的Vector对象实例。 |
+| 类型 |
+| --- |
+| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; |
 
 **示例**
 
@@ -1055,17 +1055,17 @@ toString(): string
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-toString(): string--><!--Device-Vector-toString(): string-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回用","将Vector中的元素按顺序拼接成的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -1088,9 +1088,9 @@ trimToCurrentLength(): void
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Vector-trimToCurrentLength(): void--><!--Device-Vector-trimToCurrentLength(): void-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1117,9 +1117,8 @@ Vector的元素个数。
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-<!--Device-Vector-length: number--><!--Device-Vector-length: number-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

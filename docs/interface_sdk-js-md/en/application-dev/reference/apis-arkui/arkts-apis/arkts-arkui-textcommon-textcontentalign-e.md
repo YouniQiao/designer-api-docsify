@@ -4,9 +4,7 @@ Alignment of text content.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-unnamed-export declare enum TextContentAlign--><!--Device-unnamed-export declare enum TextContentAlign-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +18,9 @@ Top the text.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TextContentAlign-TOP = 0--><!--Device-TextContentAlign-TOP = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +34,9 @@ Center alignment.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TextContentAlign-CENTER = 1--><!--Device-TextContentAlign-CENTER = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,11 +50,8 @@ Bottom alignment.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TextContentAlign-BOTTOM = 2--><!--Device-TextContentAlign-BOTTOM = 2-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

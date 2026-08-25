@@ -16,28 +16,28 @@ Creates a image PixelMap from sendable image PixelMap.
 
 **起始版本：** 12
 
-<!--Device-sendableImage-function convertToPixelMap(pixelmap: PixelMap): image.PixelMap--><!--Device-sendableImage-function convertToPixelMap(pixelmap: PixelMap): image.PixelMap-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pixelmap | PixelMap | 是 | the src pixelmap. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pixelmap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| image.PixelMap | Returns the instance if the operation is successful. Otherwise, an exception will be thrown. |
+| 类型 |
+| --- |
+| image.PixelMap |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | If the image parameter invalid. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980104](../errorcode-image.md#62980104-图片初始化错误) | Failed to initialize the internal object. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [62980104](../errorcode-image.md#62980104-图片初始化错误) |
 
 **示例**
 
@@ -58,4 +58,3 @@ function convertToPixelMap() {
   }
 }
 ```
-

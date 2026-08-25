@@ -8,19 +8,18 @@ declare type CanvasTextAlign = "center" | "end" | "left" | "right" | "start"
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-unnamed-declare type CanvasTextAlign = "center" | "end" | "left" | "right" | "start"--><!--Device-unnamed-declare type CanvasTextAlign = "center" | "end" | "left" | "right" | "start"-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 | 说明 |
-| --- | --- |
-| "center" | 文本居中对齐。 |
-| "end" | 文本对齐界线结束的地方。 |
-| "left" | 文本左对齐。 |
-| "right" | 文本右对齐。 |
-| "start" | 文本对齐界线开始的地方。 |
-
+| 类型 |
+| --- |
+| "center" |
+| "end" |
+| "left" |
+| "right" |
+| "start" |

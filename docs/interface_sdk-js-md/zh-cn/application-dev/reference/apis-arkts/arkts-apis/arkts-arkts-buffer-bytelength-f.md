@@ -19,24 +19,24 @@ function byteLength(
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-buffer-function byteLength(    string: string | Buffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer,    encoding?: BufferEncoding  ): number--><!--Device-buffer-function byteLength(    string: string | Buffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer,    encoding?: BufferEncoding  ): number-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| string | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | 是 | 要计算字节长度的字符串或其他数据对象。 |
-| encoding | BufferEncoding | 否 | 编码格式（string参数为string类型时才有意义）。默认值：'utf8'。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| string | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | 是 |
+| encoding | BufferEncoding | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回指定字符串的字节数。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -70,26 +70,25 @@ function byteLength(
 
 **起始版本：** 23
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-buffer-function byteLength(    doc: string | Buffer | TypedArray | DataView | ArrayBuffer,    encoding?: BufferEncoding  ): int--><!--Device-buffer-function byteLength(    doc: string | Buffer | TypedArray | DataView | ArrayBuffer,    encoding?: BufferEncoding  ): int-End-->
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| doc | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer | 是 | 要计算字节长度的字符串或其他数据对象。 |
-| encoding | BufferEncoding | 否 | 编码格式（doc参数为string类型时才有意义）。默认值：'utf8'。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| doc | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer | 是 |
+| encoding | BufferEncoding | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 返回指定字符串的字节数 |
+| 类型 |
+| --- |
+| int |
 
 **示例**
 
 参见 [byteLength](#bytelength)
-

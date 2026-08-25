@@ -2,9 +2,9 @@
 
 Provides APIs to operate the authenticator.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-appAccount-class Authenticator--><!--Device-appAccount-class Authenticator-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -29,27 +29,27 @@ Adds an application account implicitly based on the specified authentication typ
 
 > **NOTE：**&gt;
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> createAccountImplicitly
+> [createAccountImplicitly](../../../reference/apis-basic-services-kit/js-apis-appAccount.md#createaccountimplicitly9-2)
 > instead.
 
 **Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
 **Substitutes:** [createAccountImplicitly](#createaccountimplicitly)(options: CreateAccountImplicitlyOptions, callback: AuthCallback)
 
-<!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
-
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| callerBundleName | string | Yes | Bundle name of the authentication requester. |
-| options | { [key: string]: any } | Yes | Options for the authentication. |
-| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes | Authenticator callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| authType | string | Yes |
+| callerBundleName | string | Yes |
+| options | { [key: string]: any } | Yes |
+| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes |
 
 **Examples**
 
@@ -102,18 +102,18 @@ Authenticates an application account. This API uses an asynchronous callback to 
 
 **Since:** 9
 
-<!--Device-Authenticator-auth(name: string, authType: string, options: Record<string, Object>, callback: AuthCallback): void--><!--Device-Authenticator-auth(name: string, authType: string, options: Record<string, Object>, callback: AuthCallback): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| options | Record&lt;string, Object&gt; | Yes | Options for the authentication. |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| authType | string | Yes |
+| options | Record & lt;string, Object & gt; | Yes |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes |
 
 **Examples**
 
@@ -218,18 +218,18 @@ Authenticates an application account. This API uses an asynchronous callback to 
 
 **Since:** 23
 
-<!--Device-Authenticator-auth(name: string, authType: string, options: Record<string, RecordData>, callback: AuthCallback): void--><!--Device-Authenticator-auth(name: string, authType: string, options: Record<string, RecordData>, callback: AuthCallback): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| options | Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt; | Yes | Options for the authentication. |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| authType | string | Yes |
+| options | Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt; | Yes |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes |
 
 **Examples**
 
@@ -251,27 +251,27 @@ Authenticates an application account to obtain the OAuth token. This API uses an
 
 > **NOTE：**&gt;
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> auth instead.
+> [auth](../../../reference/apis-basic-services-kit/js-apis-appAccount.md#auth9-2) instead.
 
 **Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
 **Substitutes:** [auth](#auth)(name: string, authType: string, options: Record&lt;string, Object&gt;, callback: AuthCallback)
 
-<!--Device-Authenticator-authenticate(      name: string,      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-Authenticator-authenticate(      name: string,      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
-
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| callerBundleName | string | Yes | Bundle name of the authentication requester. |
-| options | { [key: string]: any } | Yes | Options for the authentication. |
-| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes | Authenticator callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| authType | string | Yes |
+| callerBundleName | string | Yes |
+| options | { [key: string]: any } | Yes |
+| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes |
 
 **Examples**
 
@@ -322,19 +322,19 @@ checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback):
 
 Checks the account labels. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Authenticator-checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback): void--><!--Device-Authenticator-checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| labels | Array&lt;string&gt; | Yes | Labels to check. |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| labels | Array & lt;string & gt; | Yes |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes |
 
 **Examples**
 
@@ -384,18 +384,18 @@ checkAccountRemovable(name: string, callback: AuthCallback): void
 
 Checks whether an application account can be deleted. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Authenticator-checkAccountRemovable(name: string, callback: AuthCallback): void--><!--Device-Authenticator-checkAccountRemovable(name: string, callback: AuthCallback): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes |
 
 **Examples**
 
@@ -409,18 +409,18 @@ createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthC
 
 Creates an application account implicitly based on the specified account owner. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Authenticator-createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthCallback): void--><!--Device-Authenticator-createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthCallback): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) | Yes | Options for implicitly creating the account. |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) | Yes |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes |
 
 **Examples**
 
@@ -522,17 +522,17 @@ getRemoteObject(): rpc.RemoteObject
 
 Obtains the remote object of an authenticator. This API cannot be overloaded.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Authenticator-getRemoteObject(): rpc.RemoteObject--><!--Device-Authenticator-getRemoteObject(): rpc.RemoteObject-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| rpc.RemoteObject | Remote object of the authenticator, which is used for inter-process communication. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| rpc.RemoteObject |
 
 **Examples**
 
@@ -589,18 +589,18 @@ setProperties(options: SetPropertiesOptions, callback: AuthCallback): void
 
 Sets the authenticator properties. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Authenticator-setProperties(options: SetPropertiesOptions, callback: AuthCallback): void--><!--Device-Authenticator-setProperties(options: SetPropertiesOptions, callback: AuthCallback): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [SetPropertiesOptions](arkts-basicservices-appaccount-setpropertiesoptions-i.md) | Yes | Authenticator properties to set. |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [SetPropertiesOptions](arkts-basicservices-appaccount-setpropertiesoptions-i.md) | Yes |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes |
 
 **Examples**
 
@@ -614,19 +614,19 @@ verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthC
 
 Verifies the credential of an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Authenticator-verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthCallback): void--><!--Device-Authenticator-verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthCallback): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| options | [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md) | Yes | Options for credential verification. |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| options | [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md) | Yes |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes |
 
 **Examples**
 
@@ -675,4 +675,3 @@ try {
 ```
 
 This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
-

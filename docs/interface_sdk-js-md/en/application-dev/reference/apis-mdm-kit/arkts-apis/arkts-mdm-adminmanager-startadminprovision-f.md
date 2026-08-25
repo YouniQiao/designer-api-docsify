@@ -16,29 +16,29 @@ Enables the device administrator application to open a page for the BYOD adminis
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Required permissions:** ohos.permission.START_PROVISIONING_MESSAGE
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-adminManager-function startAdminProvision(admin: Want, type: AdminType, context: common.Context, parameters: Record<string, string>): void--><!--Device-adminManager-function startAdminProvision(admin: Want, type: AdminType, context: common.Context, parameters: Record<string, string>): void-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| type | [AdminType](arkts-mdm-adminmanager-admintype-e.md) | Yes | Type of the activated device administrator application. Only the **ADMIN_TYPE_BYOD** type is supported. |
-| context | common.Context | Yes | Context information of the administrator application. |
-| parameters | Record&lt;string, string&gt; | Yes | Custom parameters. The key value must contain **activateId** and may optionally include **customizedInfo** and **localDeactivationPolicy**. <br>- **activateId**: project activation ID. <br>- **customizedInfo**: enterprise-defined information. <br>- **localDeactivationPolicy**: local deactivation delay (unit: hour). This parameter is supported since API version 22. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+| type | [AdminType](arkts-mdm-adminmanager-admintype-e.md) | Yes |
+| context | common.Context | Yes |
+| parameters | Record & lt;string, string & gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -66,4 +66,3 @@ try {
   console.error('startAdminProvision::errorCode: ' + error.code + ' errorMessage: ' + error.message);
 }
 ```
-

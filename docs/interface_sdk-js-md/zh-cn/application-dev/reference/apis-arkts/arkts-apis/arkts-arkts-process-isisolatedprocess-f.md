@@ -16,21 +16,20 @@ function isIsolatedProcess(): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-process-function isIsolatedProcess(): boolean--><!--Device-process-function isIsolatedProcess(): boolean-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回判断结果。如果进程被隔离则返回 true；否则， 返回 false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
 ```TypeScript
 let result = process.isIsolatedProcess();
 ```
-

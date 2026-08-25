@@ -2,9 +2,9 @@
 
 Defines the options for obtaining domain account information.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-osAccount-interface GetDomainAccountInfoOptions--><!--Device-osAccount-interface GetDomainAccountInfoOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -26,9 +26,9 @@ Domain account name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-GetDomainAccountInfoOptions-accountName: string--><!--Device-GetDomainAccountInfoOptions-accountName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -44,9 +44,9 @@ Domain name, which is **undefined** by default.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-GetDomainAccountInfoOptions-domain?: string--><!--Device-GetDomainAccountInfoOptions-domain?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -62,11 +62,10 @@ ID of the server to which the domain account belongs, which is **undefined** by 
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-GetDomainAccountInfoOptions-serverConfigId?: string--><!--Device-GetDomainAccountInfoOptions-serverConfigId?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-

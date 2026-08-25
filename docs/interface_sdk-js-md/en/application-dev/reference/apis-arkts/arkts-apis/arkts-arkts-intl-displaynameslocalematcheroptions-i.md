@@ -4,9 +4,7 @@ Options for locale matching when using supportedLocalesOf.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-Intl-export interface DisplayNamesLocaleMatcherOptions--><!--Device-Intl-export interface DisplayNamesLocaleMatcherOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,11 +25,8 @@ Locale matcher option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DisplayNamesLocaleMatcherOptions-localeMatcher?: RelativeTimeFormatLocaleMatcher--><!--Device-DisplayNamesLocaleMatcherOptions-localeMatcher?: RelativeTimeFormatLocaleMatcher-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

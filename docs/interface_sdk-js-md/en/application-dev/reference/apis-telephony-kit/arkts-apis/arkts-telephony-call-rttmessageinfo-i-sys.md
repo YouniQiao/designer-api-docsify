@@ -2,9 +2,9 @@
 
 Indicates the info of the rtt message.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-call-export interface RttMessageInfo--><!--Device-call-export interface RttMessageInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -24,11 +24,11 @@ callId: int
 
 Indicates the id of rtt.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-RttMessageInfo-callId: int--><!--Device-RttMessageInfo-callId: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -44,11 +44,10 @@ Indicates the rtt messgae.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-RttMessageInfo-rttMessage: string--><!--Device-RttMessageInfo-rttMessage: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
-

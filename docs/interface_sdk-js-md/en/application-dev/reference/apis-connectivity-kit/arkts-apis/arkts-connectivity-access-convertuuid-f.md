@@ -14,23 +14,23 @@ function convertUuid(uuid: string): string
 
 Convert 2-byte and 4-byte UUID strings to the 16-byte UUID string standard used in Bluetooth.
 
-**Since:** 26.0.0
+**Since:** 22
 
-<!--Device-access-function convertUuid(uuid: string): string--><!--Device-access-function convertUuid(uuid: string): string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uuid | string | Yes | 2-byte, 4-byte, 16-byte UUID string data. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uuid | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Return the converted 16-byte UUID string. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -45,4 +45,3 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
-

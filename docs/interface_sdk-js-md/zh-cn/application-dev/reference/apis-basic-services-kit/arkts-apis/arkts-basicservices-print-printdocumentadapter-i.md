@@ -2,9 +2,9 @@
 
 第三方应用程序实现此接口来渲染要打印的文件。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-print-interface PrintDocumentAdapter--><!--Device-print-interface PrintDocumentAdapter-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -22,27 +22,27 @@ onJobStateChanged(jobId: string, state: PrintDocumentAdapterState): void
 
 实现这个接口来监听打印任务状态的改变。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PRINT
-
-<!--Device-PrintDocumentAdapter-onJobStateChanged(jobId: string, state: PrintDocumentAdapterState): void--><!--Device-PrintDocumentAdapter-onJobStateChanged(jobId: string, state: PrintDocumentAdapterState): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| jobId | string | 是 | 表示打印任务ID。 |
-| state | [PrintDocumentAdapterState](arkts-basicservices-print-printdocumentadapterstate-e.md) | 是 | 表示打印任务更改为该状态。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| jobId | string | 是 |
+| state | [PrintDocumentAdapterState](arkts-basicservices-print-printdocumentadapterstate-e.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -73,6 +73,13 @@ class MyPrintDocumentAdapter implements print.PrintDocumentAdapter {
 
 ## onStartLayoutWrite
 
+ArkTS-Dyn:
+```TypeScript
+onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttributes, fd: number,
+      writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttributes, fd: int,
       writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void
@@ -80,30 +87,30 @@ onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttr
 
 打印服务会通过本接口将一个空的pdf文件的文件描述符传给三方应用，由三方应用使用新的打印参数更新待打印文件，更新文件完成后通过本接口的回调方法writeResultCallback通知打印服务。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PRINT
-
-<!--Device-PrintDocumentAdapter-onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttributes, fd: int,      writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void--><!--Device-PrintDocumentAdapter-onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttributes, fd: int,      writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| jobId | string | 是 | 表示打印任务ID。 |
-| oldAttrs | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | 是 | 表示旧打印参数。 |
-| newAttrs | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | 是 | 表示新打印参数。 |
-| fd | int | 是 | 表示打印文件传给接口调用方的pdf文件的文件描述符。 |
-| writeResultCallback | (jobId: string, writeResult: PrintFileCreationState) =&gt; void | 是 | 表示三方应用使用新的打印参数更新待打印文件完成后的回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| jobId | string | 是 |
+| oldAttrs | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | 是 |
+| newAttrs | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | 是 |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| writeResultCallback | (jobId: string, writeResult: PrintFileCreationState) = & gt; void | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -160,4 +167,3 @@ class MyPrintDocumentAdapter implements print.PrintDocumentAdapter {
     }
 }
 ```
-

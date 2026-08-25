@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-distributedDeviceManager-interface DeviceNameChangeResult--><!--Device-distributedDeviceManager-interface DeviceNameChangeResult-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -26,7 +26,6 @@ deviceName: string
 
 **起始版本：** 23
 
-<!--Device-DeviceNameChangeResult-deviceName: string--><!--Device-DeviceNameChangeResult-deviceName: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
-

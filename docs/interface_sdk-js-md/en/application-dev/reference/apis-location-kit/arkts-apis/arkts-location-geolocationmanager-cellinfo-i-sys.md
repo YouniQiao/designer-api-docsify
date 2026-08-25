@@ -4,7 +4,7 @@ Cell information.
 
 **Since:** 23
 
-<!--Device-geoLocationManager-export interface CellInfo--><!--Device-geoLocationManager-export interface CellInfo-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -28,9 +28,9 @@ Indicates additional information map.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-CellInfo-additionsMap?: Map<string, string>--><!--Device-CellInfo-additionsMap?: Map<string, string>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -44,13 +44,13 @@ arfcn: int
 
 Indicates absolute radio frequency channel number (ARFCN). The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-CellInfo-arfcn: int--><!--Device-CellInfo-arfcn: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -64,13 +64,13 @@ cellId: long
 
 Indicates ID of cell.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-CellInfo-cellId: long--><!--Device-CellInfo-cellId: long-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -84,13 +84,13 @@ lac: int
 
 Indicates location area code(LAC). The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-CellInfo-lac: int--><!--Device-CellInfo-lac: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -104,13 +104,13 @@ mcc: int
 
 Indicates mobile country code (MCC). The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-CellInfo-mcc: int--><!--Device-CellInfo-mcc: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -124,13 +124,13 @@ mnc: int
 
 Indicates mobile network code (MNC). The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-CellInfo-mnc: int--><!--Device-CellInfo-mnc: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -144,13 +144,13 @@ pci: int
 
 Indicates physical cell identifier (PCI). The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-CellInfo-pci: int--><!--Device-CellInfo-pci: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -164,13 +164,13 @@ rat: int
 
 Indicates radio access technology (RAT). The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-CellInfo-rat: int--><!--Device-CellInfo-rat: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -184,13 +184,13 @@ signalIntensity: int
 
 Indicates signal intensity. The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-CellInfo-signalIntensity: int--><!--Device-CellInfo-signalIntensity: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -204,13 +204,13 @@ tac?: int
 
 Indicates tracking area code (TAC). The value range is all integers.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 26.1.0
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-CellInfo-tac?: int--><!--Device-CellInfo-tac?: int-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -224,15 +224,14 @@ timeSinceBoot: long
 
 Indicates timestamp since boot.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-CellInfo-timeSinceBoot: long--><!--Device-CellInfo-timeSinceBoot: long-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
-

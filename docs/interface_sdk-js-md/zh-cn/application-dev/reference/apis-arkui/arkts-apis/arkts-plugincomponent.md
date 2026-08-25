@@ -1,24 +1,31 @@
-# @ohos.pluginComponent
-
-插件组件管理器，提供插件组件的请求、推送和事件监听等管理能力。
-
-## 导入模块
-
-```TypeScript
-import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
-```
+# pluginComponent
 
 ## 汇总
 
-### 命名空间
+<!--Del-->
+### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [pluginComponentManager](arkts-arkui-plugincomponentmanager-n.md) | 插件组件管理器，提供插件组件的请求、推送和事件监听等管理能力。 |
+| 名称 |
+| --- |
+| [PluginComponent](arkts-arkui-plugincomponent-plugincomponent-f-sys.md) |
+| [PluginComponent](arkts-arkui-plugincomponent-plugincomponent-f-sys.md) |
+<!--DelEnd-->
 
-### 接口
+<!--Del-->
+### 接口（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i.md) | 插件组件模板参数。 |
+| 名称 |
+| --- |
+| [PluginComponentAttribute](arkts-arkui-plugincomponent-plugincomponentattribute-i-sys.md) |
+| [PluginComponentOptions](arkts-arkui-plugincomponent-plugincomponentoptions-i-sys.md) |
+| [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i-sys.md) |
+| [PluginErrorData](arkts-arkui-plugincomponent-pluginerrordata-i-sys.md) |
+<!--DelEnd-->
 
+<!--Del-->
+### 类型（系统接口）
+
+| 名称 |
+| --- |
+| [PluginErrorCallback](arkts-arkui-pluginerrorcallback-t-sys.md) |
+<!--DelEnd-->

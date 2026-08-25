@@ -16,25 +16,25 @@ Creates a distributed data object.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [create](arkts-arkdata-distributeddataobject-create-f.md)
-
-<!--Device-distributedDataObject-function createDistributedObject(source: object): DistributedObject--><!--Device-distributedDataObject-function createDistributedObject(source: object): DistributedObject-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| source | object | Yes | Properties of the distributed data object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| source | object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [DistributedObject](arkts-arkdata-distributeddataobject-distributedobject-i.md) | Distributed data object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DistributedObject](arkts-arkdata-distributeddataobject-distributedobject-i.md) |
 
 **Examples**
 
@@ -54,4 +54,3 @@ class SourceObject {
 let source: SourceObject = new SourceObject("jack", 18, false);
 let g_object: distributedDataObject.DistributedObject = distributedDataObject.createDistributedObject(source);
 ```
-

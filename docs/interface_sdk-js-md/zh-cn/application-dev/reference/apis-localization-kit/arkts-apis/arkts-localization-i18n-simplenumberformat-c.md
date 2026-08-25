@@ -2,9 +2,9 @@
 
 基于框架字符串提供数字格式化的能力。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-i18n-export class SimpleNumberFormat--><!--Device-i18n-export class SimpleNumberFormat-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -16,31 +16,37 @@ import { i18n } from '@kit.LocalizationKit';
 
 ## format
 
+ArkTS-Dyn:
+```TypeScript
+format(value: number): string
+```
+
+ArkTS-Sta:
 ```TypeScript
 format(value: double): string
 ```
 
 对数字进行格式化。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-SimpleNumberFormat-format(value: double): string--><!--Device-SimpleNumberFormat-format(value: double): string-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | double | 是 | 数字对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 格式化后的数字字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -203,4 +209,3 @@ let advancedMeasureFormat: i18n.AdvancedMeasureFormat = new i18n.AdvancedMeasure
 });
 let result = advancedMeasureFormat.format(100); // result = '37.778°C'
 ```
-

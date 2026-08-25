@@ -18,9 +18,9 @@ Creates a root view container for route navigation, suitable for page routing us
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-NavigationInterface-(): NavigationAttribute--><!--Device-NavigationInterface-(): NavigationAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,19 +34,19 @@ Binds a navigation controller to the **Navigation** component, suitable for page
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-NavigationInterface-(pathInfos: NavPathStack): NavigationAttribute--><!--Device-NavigationInterface-(pathInfos: NavPathStack): NavigationAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pathInfos | [NavPathStack](arkts-arkui-navpathstack-c.md) | Yes | Navigation controller object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| pathInfos | [NavPathStack](arkts-arkui-navpathstack-c.md) | Yes |
 
 ## Navigation
 
@@ -58,35 +58,39 @@ Binds a routing stack to the **Navigation** component and specifies a **NavDesti
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-NavigationInterface-(pathInfos: NavPathStack, homeDestination: HomePathInfo): NavigationAttribute--><!--Device-NavigationInterface-(pathInfos: NavPathStack, homeDestination: HomePathInfo): NavigationAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pathInfos | [NavPathStack](arkts-arkui-navpathstack-c.md) | Yes | Information about the routing stack. |
-| homeDestination | [HomePathInfo](arkts-arkui-homepathinfo-i.md) | Yes | Home page **NavDestination** information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| pathInfos | [NavPathStack](arkts-arkui-navpathstack-c.md) | Yes |
+| homeDestination | [HomePathInfo](arkts-arkui-homepathinfo-i.md) | Yes |
 
 ## Summary
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [InterceptionCallback](arkts-arkui-interceptioncallback-t.md) |
+| [InterceptionModeCallback](arkts-arkui-interceptionmodecallback-t.md) |
+| [InterceptionShowCallback](arkts-arkui-interceptionshowcallback-t.md) |
+| [NavBar](arkts-arkui-navbar-t.md) |
+| [SystemBarStyle](arkts-arkui-systembarstyle-t.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |

@@ -2,9 +2,9 @@
 
 Defines the processing result of the camera picker.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-cameraPicker-class PickerResult--><!--Device-cameraPicker-class PickerResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -24,11 +24,11 @@ Media type.
 
 **Type:** [PickerMediaType](arkts-camera-camerapicker-pickermediatype-e.md)
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PickerResult-mediaType: PickerMediaType--><!--Device-PickerResult-mediaType: PickerMediaType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -40,13 +40,13 @@ resultCode: int
 
 Result code. The value **0** means that the processing is successful, and **-1** means that the processing fails.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PickerResult-resultCode: int--><!--Device-PickerResult-resultCode: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -60,11 +60,10 @@ URI of the result. If **saveUri** is empty, **resultUri** is a public media path
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PickerResult-resultUri: string--><!--Device-PickerResult-resultUri: string-End-->
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
-

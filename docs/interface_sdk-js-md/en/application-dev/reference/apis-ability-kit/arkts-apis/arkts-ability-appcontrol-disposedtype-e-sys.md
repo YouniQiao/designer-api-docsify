@@ -2,9 +2,9 @@
 
 Enumerates the types of application disposals.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-appControl-export enum DisposedType--><!--Device-appControl-export enum DisposedType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -18,9 +18,9 @@ BLOCK_APPLICATION = 1
 
 All abilities of the application are blocked. That is, the entire application is blocked.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DisposedType-BLOCK_APPLICATION = 1--><!--Device-DisposedType-BLOCK_APPLICATION = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -34,9 +34,9 @@ BLOCK_ABILITY = 2
 
 A specific ability of the application is blocked.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DisposedType-BLOCK_ABILITY = 2--><!--Device-DisposedType-BLOCK_ABILITY = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -50,11 +50,10 @@ NON_BLOCK = 3
 
 The application is not blocked.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DisposedType-NON_BLOCK = 3--><!--Device-DisposedType-NON_BLOCK = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **System API:** This is a system API.
-

@@ -14,27 +14,27 @@ function createCmsParser(): CmsParser
 
 Creates a **CmsParser** object.
 
-**Since:** 23
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
-<!--Device-cert-function createCmsParser(): CmsParser--><!--Device-cert-function createCmsParser(): CmsParser-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [CmsParser](arkts-devicecertificate-cert-cmsparser-i.md) | CmsParser object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [CmsParser](arkts-devicecertificate-cert-cmsparser-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| Error Code ID |
+| --- |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 **Examples**
 
@@ -147,4 +147,3 @@ async function testCmsVerifyTest() {
   }
 }
 ```
-

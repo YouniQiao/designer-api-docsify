@@ -15,23 +15,20 @@ The encodeURIComponent() function encodes a URI by replacing each instance of ce
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function encodeURIComponent(uriComponent: string | double | boolean): string--><!--Device-unnamed-export function encodeURIComponent(uriComponent: string | double | boolean): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uriComponent | string \| double \| boolean | Yes | a string to be encoded as a URI component. (a path, query string, fragment, etc.). Other values are converted to strings. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uriComponent | string \| double \| boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A new string representing the provided uriComponent encoded as a URI component. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |

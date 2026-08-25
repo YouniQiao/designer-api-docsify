@@ -26,23 +26,23 @@ Creates an AVPlayer instance. This API uses an asynchronous callback to return t
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-media-function createAVPlayer(callback: AsyncCallback<AVPlayer>): void--><!--Device-media-function createAVPlayer(callback: AsyncCallback<AVPlayer>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, an AVPlayer instance is returned; otherwise, **null** is returned. The instance can be used to play audio and video. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md)&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
+| Error Code ID |
+| --- |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
 
 **Examples**
 
@@ -87,21 +87,21 @@ Creates an **AVPlayer** instance. This API uses an asynchronous callback to retu
 
 **Since:** 23
 
-<!--Device-media-function createAVPlayer(callback: AsyncCallback<AVPlayer | undefined>): void--><!--Device-media-function createAVPlayer(callback: AsyncCallback<AVPlayer | undefined>): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md) \| undefined&gt; | Yes | used to return the result. If the operation is successful, an **AVPlayer** instance is returned; otherwise, **undefined** is returned. The instance can be used to play audio and video. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md) \| undefined & gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
+| Error Code ID |
+| --- |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
 
 **Examples**
 
@@ -128,23 +128,23 @@ Creates an AVPlayer instance. This API uses a promise to return the result.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-media-function createAVPlayer(): Promise<AVPlayer>--><!--Device-media-function createAVPlayer(): Promise<AVPlayer>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[AVPlayer](arkts-media-media-avplayer-i.md)&gt; | Promise used to return the result. If the operation is successful, an AVPlayer instance is returned for audio and video playback. Otherwise, **null** is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[AVPlayer](arkts-media-media-avplayer-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| Error Code ID |
+| --- |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
 
 **Examples**
 
@@ -161,23 +161,22 @@ Creates an **AVPlayer** instance. This API uses a promise to return the result. 
 
 **Since:** 23
 
-<!--Device-media-function createAVPlayer(): Promise<AVPlayer | undefined>--><!--Device-media-function createAVPlayer(): Promise<AVPlayer | undefined>-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[AVPlayer](arkts-media-media-avplayer-i.md) \| undefined&gt; | A Promise instance used to return the result. If the operation is successful, an **AVPlayer** instance is returned; **undefined** is returned otherwise. The instance can be used to play audio and video. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[AVPlayer](arkts-media-media-avplayer-i.md) \| undefined & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| Error Code ID |
+| --- |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
 
 **Examples**
 
 See [createAVPlayer](#createavplayer)
-

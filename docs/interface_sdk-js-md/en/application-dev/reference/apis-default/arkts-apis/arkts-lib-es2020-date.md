@@ -9,7 +9,6 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [Date](arkts-lib-es2020-date-date-i.md) |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Date](arkts-lib-es2020-date-date-i.md) |

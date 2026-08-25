@@ -10,16 +10,24 @@ import { EditorEventInfo, EditorMenuOptions, ExpandedMenuOptions, SelectionMenu,
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [SelectionMenu](arkts-arkui-arkui-advanced-selectionmenu-selectionmenu-f.md) | 入参为空时，文本选择菜单组件SelectionMenu内容区大小及组件大小为零。例如，富文本组件RichEditor使用 bindSelectionMenu接口绑定一个SelectionMenu的右键菜单，则右键富文本组件区域时无任何菜单弹出。 |
+| 名称 |
+| --- |
+| [SelectionMenu](arkts-arkui-arkui-advanced-selectionmenu-selectionmenu-f.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [EditorEventInfo](arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) | 选中内容信息。 |
-| [EditorMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-editormenuoptions-i.md) | 编辑菜单选项。 |
-| [ExpandedMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-expandedmenuoptions-i.md) | 扩展下拉菜单。继承自MenuItemOptions。 |
-| [SelectionMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | SelectionMenuOptions定义SelectionMenu的可选菜单类型项及其配置参数。 |
+| 名称 |
+| --- |
+| [EditorEventInfo](arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) |
+| [EditorMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-editormenuoptions-i.md) |
+| [ExpandedMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-expandedmenuoptions-i.md) |
+| [SelectionMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) |
 
+### 类型
+
+| 名称 |
+| --- |
+| [SelectionMenuOnCopyCallback](arkts-arkui-selectionmenuoncopycallback-t.md) |
+| [SelectionMenuOnCutCallback](arkts-arkui-selectionmenuoncutcallback-t.md) |
+| [SelectionMenuOnPasteCallback](arkts-arkui-selectionmenuonpastecallback-t.md) |
+| [SelectionMenuOnSelectAllCallback](arkts-arkui-selectionmenuonselectallcallback-t.md) |

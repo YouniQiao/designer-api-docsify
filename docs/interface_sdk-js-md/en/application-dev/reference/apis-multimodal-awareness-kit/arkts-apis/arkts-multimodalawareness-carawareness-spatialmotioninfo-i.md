@@ -4,7 +4,7 @@ Interface for spatial motion response info.
 
 **Since:** 26.1.0
 
-<!--Device-carAwareness-export interface SpatialMotionInfo--><!--Device-carAwareness-export interface SpatialMotionInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -26,9 +26,9 @@ Indicates hand movements on the screen.
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
-<!--Device-SpatialMotionInfo-event: number--><!--Device-SpatialMotionInfo-event: number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -44,9 +44,9 @@ Indicates X-coordinate of the hand on the screen.
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
-<!--Device-SpatialMotionInfo-pointX: number--><!--Device-SpatialMotionInfo-pointX: number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -62,9 +62,9 @@ Indicates Y-coordinate of the hand on the screen.
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
-<!--Device-SpatialMotionInfo-pointY: number--><!--Device-SpatialMotionInfo-pointY: number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -80,9 +80,8 @@ Indicates timestamp . Unit: milliseconds.
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SpatialMotionInfo-timestamp: number--><!--Device-SpatialMotionInfo-timestamp: number-End-->
-
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
-

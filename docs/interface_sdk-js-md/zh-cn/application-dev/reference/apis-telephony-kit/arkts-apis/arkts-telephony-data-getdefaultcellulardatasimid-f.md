@@ -14,17 +14,17 @@ function getDefaultCellularDataSimId(): int
 
 获取默认移动数据的SIM卡ID。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-data-function getDefaultCellularDataSimId(): int--><!--Device-data-function getDefaultCellularDataSimId(): int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CellularData
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 获取默认移动数据的SIM卡ID。<br/>与SIM卡绑定，从1开始递增。<br/>- 0：无SIM卡。<br/>- 9999：esim场景下，默认移动数据的SIM卡ID为9999。<br/>- 9 9999：天际通场景下，默认移动数据的SIM卡ID为99999。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -33,4 +33,3 @@ import { data } from '@kit.TelephonyKit';
 
 console.info("Result: "+ data.getDefaultCellularDataSimId());
 ```
-

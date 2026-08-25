@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-mechanicManager-export interface MechEvent--><!--Device-mechanicManager-export interface MechEvent-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -28,7 +28,7 @@ event: MechEventType
 
 **起始版本：** 26.0.0
 
-<!--Device-MechEvent-event: MechEventType--><!--Device-MechEvent-event: MechEventType-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -42,13 +42,12 @@ mechId: int
 
 具身设备ID。 取值限定为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-<!--Device-MechEvent-mechId: int--><!--Device-MechEvent-mechId: int-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
-

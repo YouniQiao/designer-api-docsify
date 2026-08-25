@@ -5,9 +5,9 @@
 > **说明：**&gt;
 > - 应用开启锁屏下敏感数据保护功能，需在[requestPermissions](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)中配置权限ohos.permission.PROTECT_SCREEN_LOCK_DATA。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-declare namespace screenLockFileManager--><!--Device-unnamed-declare namespace screenLockFileManager-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.ScreenLockFileManager
 
@@ -21,28 +21,27 @@ import { screenLockFileManager } from '@kit.AbilityKit';
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [acquireAccess(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager-acquireaccess-f.md) | 以同步方法申请调用方应用锁屏下敏感数据访问权限。申请成功后，敏感数据密钥的引用计数增加，防止密钥在屏幕被锁定达到系统配置的时长阈值后被销毁。该方法需与[releaseAccess](arkts-ability-screenlockfilemanager-releaseaccess-f.md)配对使用。调用此接口前，请确保应用已开启锁屏下敏感数据保护功能，并通过[queryAppKeyState](arkts-ability-screenlockfilemanager-queryappkeystate-f.md)接口查询密钥状态为KEY_EXIST。 |
-| [queryAppKeyState(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager-queryappkeystate-f.md) | 以同步方法查询调用方应用锁屏下敏感数据密钥的状态。 |
-| [releaseAccess(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager-releaseaccess-f.md) | 以同步方法释放调用方应用锁屏下敏感数据访问权限。释放成功后，敏感数据密钥的引用计数减少，当计数归零时，密钥可以在屏幕被锁定达到系统配置的时长阈值后被销毁。调用此接口前，请确保应用已开启锁屏下敏感数据保护功能，并且先调用[acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md)接口成功申请权限后才能使用。 |
+| 名称 |
+| --- |
+| [acquireAccess(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager-acquireaccess-f.md) |
+| [queryAppKeyState(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager-queryappkeystate-f.md) |
+| [releaseAccess(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager-releaseaccess-f.md) |
 
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [acquireAccess(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager-acquireaccess-f-sys.md) | 以同步方法申请锁屏下指定类型的敏感数据访问权限。申请成功后，敏感数据密钥的引用计数增加，防止密钥在锁屏达到系统配置的时长阈值后被销毁。该方法需与[releaseAccess](arkts-ability-screenlockfilemanager-releaseaccess-f.md)配对使用。调用此接口前，请确保应用已开启锁屏下敏感数据保护功能，并通过[queryAppKeyState](arkts-ability-screenlockfilemanager-queryappkeystate-f.md)接口查询密钥状态为KEY_EXIST。 |
-| [queryAppKeyState(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager-queryappkeystate-f-sys.md) | 以同步方法查询锁屏下指定类型敏感数据密钥的状态。 |
-| [releaseAccess(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager-releaseaccess-f-sys.md) | 以同步方法释放锁屏下指定类型敏感数据访问权限。释放成功后，敏感数据密钥的引用计数减少，当引用计数归零时，密钥可以在锁屏达到系统配置的时长阈值后被销毁。调用此接口前，请确保应用已开启锁屏下敏感数据保护功能，并且先调用[acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md)接口成功申请权限后才能使用。 |
+| 名称 |
+| --- |
+| [acquireAccess(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager-acquireaccess-f-sys.md) |
+| [queryAppKeyState(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager-queryappkeystate-f-sys.md) |
+| [releaseAccess(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager-releaseaccess-f-sys.md) |
 <!--DelEnd-->
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-| [AccessStatus(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager-accessstatus-e.md) | 表示锁屏下敏感数据访问权限申请状态的枚举。 |
-| [DataType(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager-datatype-e.md) | 表示锁屏下访问敏感数据类型的枚举。 |
-| [KeyStatus(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager-keystatus-e.md) | 表示锁屏下敏感数据密钥状态的枚举。 |
-| [ReleaseStatus(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager-releasestatus-e.md) | 表示锁屏下敏感数据访问权限释放状态的枚举。 |
-
+| 名称 |
+| --- |
+| [AccessStatus(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager-accessstatus-e.md) |
+| [DataType(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager-datatype-e.md) |
+| [KeyStatus(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager-keystatus-e.md) |
+| [ReleaseStatus(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager-releasestatus-e.md) |

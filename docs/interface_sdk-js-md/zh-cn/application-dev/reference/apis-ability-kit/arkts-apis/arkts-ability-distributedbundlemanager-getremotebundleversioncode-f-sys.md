@@ -16,11 +16,11 @@ function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promi
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-distributedBundleManager-function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promise<long>--><!--Device-distributedBundleManager-function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promise<long>-End-->
 
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 
@@ -28,27 +28,27 @@ function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| deviceId | string | 是 | 远程设备ID。可以通过 [getAvailableDeviceList](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) 获取所有可信设备列表，取值为可信设备信息下networkId字段。 |
-| bundleName | string | 是 | 应用的包名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| deviceId | string | 是 |
+| bundleName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;long&gt; | Promise对象，调用成功返回版本信息；调用失败返回错误对象。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;long & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
-| [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
-| [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) |
+| [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) |
 
 **示例**
 
@@ -92,4 +92,3 @@ try {
   console.error(`getRemoteBundleVersionCode failed: error code is ${code}  and error msg is ${message}`);
 }
 ```
-

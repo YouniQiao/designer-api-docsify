@@ -4,7 +4,7 @@ Describes the calendar account information.
 
 **Since:** 10
 
-<!--Device-calendarManager-interface CalendarAccount--><!--Device-calendarManager-interface CalendarAccount-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -26,9 +26,9 @@ Account name displayed on the calendar application (defined by users). If this p
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-CalendarAccount-displayName?: string--><!--Device-CalendarAccount-displayName?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -44,9 +44,9 @@ Account name (defined by developers), with a maximum of 5,000 characters.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-CalendarAccount-readonly name: string--><!--Device-CalendarAccount-readonly name: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -62,9 +62,8 @@ Account type.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-CalendarAccount-type: CalendarType--><!--Device-CalendarAccount-type: CalendarType-End-->
-
 **System capability:** SystemCapability.Applications.CalendarData
-

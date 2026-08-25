@@ -4,7 +4,7 @@ Enumerates contact data fields.
 
 **Since:** 15
 
-<!--Device-contact-enum DataField--><!--Device-contact-enum DataField-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -18,9 +18,9 @@ Phone number of the contact.
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
-<!--Device-DataField-PHONE = 1--><!--Device-DataField-PHONE = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Applications.Contacts
 
@@ -34,9 +34,9 @@ Organization of the contact.
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
-<!--Device-DataField-ORGANIZATION = 2--><!--Device-DataField-ORGANIZATION = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Applications.Contacts
 
@@ -50,9 +50,8 @@ Email of the contact.
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
-<!--Device-DataField-EMAIL = 0--><!--Device-DataField-EMAIL = 0-End-->
-
 **System capability:** SystemCapability.Applications.Contacts
-

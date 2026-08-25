@@ -2,9 +2,9 @@
 
 Defines a struct for the device-cloud sync statistics of a database table.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-relationalStore-interface Statistic--><!--Device-relationalStore-interface Statistic-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -22,11 +22,11 @@ failed: int
 
 Number of rows that failed to be synced between the device and cloud in the database table.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Statistic-failed: int--><!--Device-Statistic-failed: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -38,11 +38,11 @@ remained: int
 
 Number of rows that are not executed for device-cloud sync in the database table.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Statistic-remained: int--><!--Device-Statistic-remained: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -54,11 +54,11 @@ successful: int
 
 Number of rows that are successfully synced between the device and cloud in the database table.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Statistic-successful: int--><!--Device-Statistic-successful: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -70,11 +70,10 @@ total: int
 
 Total number of rows to be synced between the device and cloud in the database table.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Statistic-total: int--><!--Device-Statistic-total: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-

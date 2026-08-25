@@ -14,36 +14,36 @@ function writeSync(portId: int, buffer: Uint8Array, timeout?: int): int
 
 Writes data to the serial port device synchronously. The length of data written each time cannot exceed 4 KB; otherwise, data loss may occur. You are advised to write long data in multiple packets.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-serialManager-function writeSync(portId: int, buffer: Uint8Array, timeout?: int): int--><!--Device-serialManager-function writeSync(portId: int, buffer: Uint8Array, timeout?: int): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| portId | int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md). |
-| buffer | Uint8Array | Yes | Destination buffer for writing data, with a maximum length of 4 KB. |
-| timeout | int | No | Timeout interval.Unit: milliseconds. Whether the buffer of the target port is writable within the specified time. If yes, the API is processed properly; otherwise, a timeout message is returned after the specified time. The default value **0** indicates that the API returns the result immediately when the target port is not writable. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [portId](arkts-basicservices-serialmanager-serialport-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| buffer | Uint8Array | Yes |
+| timeout | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Length of the data written. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
-| [31400001](../errorcode-usb.md#31400001-serial-port-service-error) |  |
-| [31400003](../errorcode-usb.md#31400003-port-number-not-exist) |  |
-| [31400005](../errorcode-usb.md#31400005-device-not-opened) |  |
-| [31400006](../errorcode-usb.md#31400006-data-transfer-timeout) |  |
-| [31400007](../errorcode-usb.md#31400007-io-exception) |  |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [31400001](../errorcode-usb.md#31400001-serial-port-service-error) |
+| [31400003](../errorcode-usb.md#31400003-port-number-not-exist) |
+| [31400005](../errorcode-usb.md#31400005-device-not-opened) |
+| [31400006](../errorcode-usb.md#31400006-data-transfer-timeout) |
+| [31400007](../errorcode-usb.md#31400007-io-exception) |
 
 **Examples**
 
@@ -95,4 +95,3 @@ function writeSync() {
   }
 }
 ```
-

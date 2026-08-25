@@ -1,8 +1,8 @@
 # LockInfo（系统接口）
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-sim-export interface LockInfo--><!--Device-sim-export interface LockInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -22,9 +22,9 @@ lockType: LockType
 
 **类型：** [LockType](arkts-telephony-sim-locktype-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-LockInfo-lockType: LockType--><!--Device-LockInfo-lockType: LockType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -38,9 +38,9 @@ password: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-LockInfo-password: string--><!--Device-LockInfo-password: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -54,11 +54,10 @@ state: LockState
 
 **类型：** [LockState](arkts-telephony-sim-lockstate-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-LockInfo-state: LockState--><!--Device-LockInfo-state: LockState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
-

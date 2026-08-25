@@ -2,9 +2,9 @@
 
 Obtains the network information.
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-radio-export interface NetworkInformation--><!--Device-radio-export interface NetworkInformation-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -26,9 +26,9 @@ Indicates the name of the operator.
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkInformation-operatorName: string--><!--Device-NetworkInformation-operatorName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -44,9 +44,9 @@ Indicates the number of the operator.
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkInformation-operatorNumeric: string--><!--Device-NetworkInformation-operatorNumeric: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -62,9 +62,9 @@ Indicates the radio Technology.
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkInformation-radioTech: string--><!--Device-NetworkInformation-radioTech: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -80,11 +80,10 @@ Indicates the status of network information.
 
 **类型：** [NetworkInformationState](arkts-telephony-radio-networkinformationstate-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkInformation-state: NetworkInformationState--><!--Device-NetworkInformation-state: NetworkInformationState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
-

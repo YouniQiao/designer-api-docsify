@@ -8,13 +8,12 @@ Basic layout algorithm of the [DynamicLayout](../../../reference/apis-arkui/arku
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
-<!--Device-unnamed-export interface LayoutAlgorithm--><!--Device-unnamed-export interface LayoutAlgorithm-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

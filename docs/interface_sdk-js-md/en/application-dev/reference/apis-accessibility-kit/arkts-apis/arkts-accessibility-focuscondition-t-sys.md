@@ -9,18 +9,17 @@ Describes the method for querying focusable nodes.
 
 **Since:** 23
 
-<!--Device-unnamed-export type FocusCondition = 'forward' | 'backward' |'findLast' | 'getForwardScrollAncestor' | 'getBackwardScrollAncestor' | 'getScrollableAncestor'--><!--Device-unnamed-export type FocusCondition = 'forward' | 'backward' |'findLast' | 'getForwardScrollAncestor' | 'getBackwardScrollAncestor' | 'getScrollableAncestor'-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
 
-| Type | Description |
-| --- | --- |
-| 'forward' | The next focusable node after the current node. The value is fixed to the 'forward'string. |
-| 'backward' | The previous focusable node before the current node. The value is fixed to the 'backward'string. |
-| 'findLast' | The last node among the child nodes of the starting node. The value is fixed to the 'findLast' string. |
-| 'getForwardScrollAncestor' | The scrollable parent component that supports forward scrolling. The value is fixed to the 'getForwardScrollAncestor' string. |
-| 'getBackwardScrollAncestor' | The scrollable parent component that supports backward scrolling. The value is fixed to the 'getBackwardScrollAncestor' string. |
-| 'getScrollableAncestor' | The scrollable parent component that supports scrolling in any direction. The value is fixed to the 'getScrollableAncestor' string. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'forward' |
+| 'backward' |
+| 'findLast' |
+| 'getForwardScrollAncestor' |
+| 'getBackwardScrollAncestor' |
+| 'getScrollableAncestor' |

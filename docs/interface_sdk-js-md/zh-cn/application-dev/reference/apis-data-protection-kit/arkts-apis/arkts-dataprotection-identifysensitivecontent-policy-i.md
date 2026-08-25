@@ -4,7 +4,7 @@
 
 **起始版本：** 21
 
-<!--Device-identifySensitiveContent-export interface Policy--><!--Device-identifySensitiveContent-export interface Policy-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -26,7 +26,7 @@ keywords: Array<string>
 
 **起始版本：** 21
 
-<!--Device-Policy-keywords: Array<string>--><!--Device-Policy-keywords: Array<string>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -42,7 +42,7 @@ regex: string
 
 **起始版本：** 21
 
-<!--Device-Policy-regex: string--><!--Device-Policy-regex: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -58,7 +58,6 @@ sensitiveLabel: string
 
 **起始版本：** 21
 
-<!--Device-Policy-sensitiveLabel: string--><!--Device-Policy-sensitiveLabel: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
-

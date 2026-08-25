@@ -4,11 +4,9 @@ A namespace that provides reflection and proxy functionality.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-namespace reflect--><!--Device-unnamed-namespace reflect-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -21,13 +19,12 @@ A namespace that provides reflection and proxy functionality.
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Proxy](arkts-arkts-reflect-proxy-c.md) | A base class for creating proxy objects that delegate method calls and property access to an `InvocationHandler`. Provides static methods for generating proxy classes and instantiating proxy objects dynamically at runtime. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Proxy](arkts-arkts-reflect-proxy-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [InvocationHandler](arkts-arkts-reflect-invocationhandler-i.md) | Interface for handling method invocations on a proxy object. Defines methods to manage property access, assignment, and method invocation. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [InvocationHandler](arkts-arkts-reflect-invocationhandler-i.md) |

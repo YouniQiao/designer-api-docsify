@@ -4,7 +4,7 @@ Defines the ChainWeightOptions interface.@interface ChainWeightOptions
 
 **Since:** 14
 
-<!--Device-unnamed-declare interface ChainWeightOptions--><!--Device-unnamed-declare interface ChainWeightOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Horizontal ChainWeight.
 
 **Since:** 14
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-ChainWeightOptions-horizontal?: number--><!--Device-ChainWeightOptions-horizontal?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ Vertical ChainWeight.
 
 **Since:** 14
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-ChainWeightOptions-vertical?: number--><!--Device-ChainWeightOptions-vertical?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

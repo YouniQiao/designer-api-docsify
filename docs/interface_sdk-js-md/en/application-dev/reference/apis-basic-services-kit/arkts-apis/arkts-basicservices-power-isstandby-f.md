@@ -14,23 +14,23 @@ function isStandby(): boolean
 
 Checks whether the device is in standby mode.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-power-function isStandby(): boolean--><!--Device-power-function isStandby(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | The value **true** indicates that the device is in standby mode, and the value **false** indicates the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [4900101](../errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
+| Error Code ID |
+| --- |
+| [4900101](../errorcode-power.md#4900101-service-connection-failure) |
 
 **Examples**
 
@@ -42,4 +42,3 @@ try {
     console.error('check isStandby failed, err: ' + err);
 }
 ```
-

@@ -4,9 +4,9 @@ Provides a **FileAccessHelper** object.
 
 **Since:** 9
 
-**Deprecated since:** 23
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-fileAccess-interface FileAccessHelper--><!--Device-fileAccess-interface FileAccessHelper-End-->
+**Deprecated since:** 23
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -28,13 +28,13 @@ Checks whether a file or directory exists. This API uses a promise to return the
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
-**Substitutes:** [access](../../apis-default/arkts-apis/arkts-fileio-access-f.md)(path: string, mode?: AccessModeType)
+**Substitutes:** [access](arkts-corefile-fileio-access-f.md)(path: string, mode?: AccessModeType)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-access(sourceFileUri: string) : Promise<boolean>--><!--Device-FileAccessHelper-access(sourceFileUri: string) : Promise<boolean>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -42,54 +42,54 @@ Checks whether a file or directory exists. This API uses a promise to return the
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceFileUri | string | Yes | Indicates the selected file or directory. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sourceFileUri | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Returns whether it exists. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 14000001 |
+| 14000002 |
+| 14000003 |
+| 14000004 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -155,13 +155,13 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
-**Substitutes:** [access](../../apis-default/arkts-apis/arkts-fileio-access-f.md)(path: string, callback: AsyncCallback&lt;boolean&gt;)
+**Substitutes:** [access](arkts-corefile-fileio-access-f.md)(path: string, callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-access(sourceFileUri: string, callback: AsyncCallback<boolean>): void--><!--Device-FileAccessHelper-access(sourceFileUri: string, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -169,49 +169,49 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceFileUri | string | Yes | Indicates the selected file or directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The callback is used to return whether it exists. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sourceFileUri | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 14000001 |
+| 14000002 |
+| 14000003 |
+| 14000004 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -227,13 +227,13 @@ Copies a file or directory. This API uses a promise to return the result.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
-**Substitutes:** [copy](../../apis-default/arkts-apis/arkts-fileio-copy-f.md)(srcUri: string, destUri: string, options?: CopyOptions)
+**Substitutes:** [copy](arkts-corefile-fileio-copy-f.md)(srcUri: string, destUri: string, options?: CopyOptions)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, force?: boolean): Promise<Array<CopyResult>>--><!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, force?: boolean): Promise<Array<CopyResult>>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -241,17 +241,17 @@ Copies a file or directory. This API uses a promise to return the result.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
-| force | boolean | No | Whether to forcibly overwrite the file with the same name. If **force** is **true**, the file with the same name will be overwritten. If **force** is **false** or not specified, the file with the same name will not be overwritten. The default value is **false**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sourceUri | string | Yes |
+| destUri | string | Yes |
+| force | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Promise used to return the result. If the file or directory is copied successfully, no information is returned. If the file copy fails, a **copyResult** array is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; |
 
 **Examples**
 
@@ -331,13 +331,13 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
-**Substitutes:** [copy](../../apis-default/arkts-apis/arkts-fileio-copy-f.md)(srcUri: string, destUri: string, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [copy](arkts-corefile-fileio-copy-f.md)(srcUri: string, destUri: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResult>>): void--><!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResult>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -345,11 +345,11 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the file or directory is copied successfully, no information is returned. If the copy fails, a **copyResult** array is returned. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sourceUri | string | Yes |
+| destUri | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Yes |
 
 **Examples**
 
@@ -365,13 +365,13 @@ Copies a file or directory. If a file with the same name already exists, you can
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
-**Substitutes:** [copy](../../apis-default/arkts-apis/arkts-fileio-copy-f.md)(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [copy](arkts-corefile-fileio-copy-f.md)(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<CopyResult>>): void--><!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<CopyResult>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -379,12 +379,12 @@ Copies a file or directory. If a file with the same name already exists, you can
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
-| force | boolean | Yes | Whether to forcibly overwrite the original file with the same name. If **force** is set to **true**, the original file is forcibly overwritten. If **force** is left empty or set to **false**, the original file is not overwritten. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the file or directory is copied successfully, no information is returned. If the copy fails, a **copyResult** array is returned. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sourceUri | string | Yes |
+| destUri | string | Yes |
+| force | boolean | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Yes |
 
 **Examples**
 
@@ -400,15 +400,15 @@ Copies a file with an alternative file name. This API uses a promise to return t
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 23
 
-**Substitutes:** [copyFile](../../apis-default/arkts-apis/arkts-fileio-copyfile-f.md)(src: string | number, dest: string | number, mode?: number)
+**Substitutes:** [copyFile](arkts-corefile-fileio-copyfile-f.md)(src: string | number, dest: string | number, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileAccessHelper-copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>--><!--Device-FileAccessHelper-copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -416,46 +416,46 @@ Copies a file with an alternative file name. This API uses a promise to return t
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
-| fileName | string | Yes | File name to use if there is a file with the same name as the source file in the destination directory. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sourceUri | string | Yes |
+| destUri | string | Yes |
+| fileName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | URI of the file generated. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900014 |
+| 13900015 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900030 |
+| 13900042 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -514,15 +514,15 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 23
 
-**Substitutes:** [copyFile](../../apis-default/arkts-apis/arkts-fileio-copyfile-f.md)(src: string | number, dest: string | number, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [copyFile](arkts-corefile-fileio-copyfile-f.md)(src: string | number, dest: string | number, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileAccessHelper-copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -530,41 +530,41 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
-| fileName | string | Yes | File name to use if there is a file with the same name as the source file in the destination directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | URI of the file generated. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sourceUri | string | Yes |
+| destUri | string | Yes |
+| fileName | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900014 |
+| 13900015 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900030 |
+| 13900042 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -580,13 +580,13 @@ Creates a file in a directory. This API uses a promise to return the result.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
-**Substitutes:** [createRandomAccessFile](../../apis-default/arkts-apis/arkts-fileio-createrandomaccessfile-f.md)(file: string | File, mode?: number, options?: RandomAccessFileOptions)
+**Substitutes:** [createRandomAccessFile](arkts-corefile-fileio-createrandomaccessfile-f.md)(file: string | File, mode?: number, options?: RandomAccessFileOptions)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-createFile(uri: string, displayName: string) : Promise<string>--><!--Device-FileAccessHelper-createFile(uri: string, displayName: string) : Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -594,55 +594,55 @@ Creates a file in a directory. This API uses a promise to return the result.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Represents a specific parent directory. |
-| displayName | string | Yes | Indicates the new file name, and supports with suffix. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| displayName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Returns the new file's URI. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 14000001 |
+| 14000002 |
+| 14000003 |
+| 14000004 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -707,13 +707,13 @@ Creates a file in a directory. This API uses an asynchronous callback to return 
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
-**Substitutes:** [createRandomAccessFile](../../apis-default/arkts-apis/arkts-fileio-createrandomaccessfile-f.md)(file: string | File, callback: AsyncCallback&lt;RandomAccessFile&gt;)
+**Substitutes:** [createRandomAccessFile](arkts-corefile-fileio-createrandomaccessfile-f.md)(file: string | File, callback: AsyncCallback&lt;RandomAccessFile&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-createFile(uri: string, displayName: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-createFile(uri: string, displayName: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -721,50 +721,50 @@ Creates a file in a directory. This API uses an asynchronous callback to return 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Represents a specific parent directory. |
-| displayName | string | Yes | Indicates the new file name, and supports with suffix. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback is used to return the new file's URI. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| displayName | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 14000001 |
+| 14000002 |
+| 14000003 |
+| 14000004 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -780,13 +780,13 @@ Deletes a file or directory. This API uses a promise to return the result.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
 **Substitutes:** [delete](arkts-corefile-file-fs-atomicfile-c.md#delete)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-delete(uri: string) : Promise<number>--><!--Device-FileAccessHelper-delete(uri: string) : Promise<number>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -794,54 +794,54 @@ Deletes a file or directory. This API uses a promise to return the result.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Indicates the file or directory to be deleted. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;number&gt; |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 14000001 |
+| 14000002 |
+| 14000003 |
+| 14000004 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -900,13 +900,13 @@ Deletes a file or directory. This API uses an asynchronous callback to return th
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
 **Substitutes:** [delete](arkts-corefile-file-fs-atomicfile-c.md#delete)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-delete(uri: string, callback: AsyncCallback<number>): void--><!--Device-FileAccessHelper-delete(uri: string, callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -914,49 +914,49 @@ Deletes a file or directory. This API uses an asynchronous callback to return th
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Indicates the file or directory to be deleted. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 14000001 |
+| 14000002 |
+| 14000003 |
+| 14000004 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -972,13 +972,13 @@ Obtains a **FileInfo** object based on a relative path. This API uses a promise 
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
-**Substitutes:** [stat](../../apis-default/arkts-apis/arkts-fileio-stat-f.md)(file: string | number)
+**Substitutes:** [stat](arkts-corefile-fileio-stat-f.md)(file: string | number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-getFileInfoFromRelativePath(relativePath: string) : Promise<FileInfo>--><!--Device-FileAccessHelper-getFileInfoFromRelativePath(relativePath: string) : Promise<FileInfo>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -986,15 +986,15 @@ Obtains a **FileInfo** object based on a relative path. This API uses a promise 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| relativePath | string | Yes | Indicates the selected file or directory. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| relativePath | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;FileInfo&gt; | Returns a FileInfo. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;FileInfo & gt; |
 
 **Examples**
 
@@ -1050,13 +1050,13 @@ Obtains a **FileInfo** object based on a relative path. This API uses an asynchr
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
-**Substitutes:** [stat](../../apis-default/arkts-apis/arkts-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
+**Substitutes:** [stat](arkts-corefile-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-getFileInfoFromRelativePath(relativePath: string, callback: AsyncCallback<FileInfo>) : void--><!--Device-FileAccessHelper-getFileInfoFromRelativePath(relativePath: string, callback: AsyncCallback<FileInfo>) : void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -1064,10 +1064,10 @@ Obtains a **FileInfo** object based on a relative path. This API uses an asynchr
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| relativePath | string | Yes | Indicates the selected file or directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileInfo&gt; | Yes | The callback is used to return a fileinfo object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| relativePath | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileInfo&gt; | Yes |
 
 **Examples**
 
@@ -1083,13 +1083,13 @@ Obtains a **FileInfo** object based on a URI. This API uses a promise to return 
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
-**Substitutes:** [stat](../../apis-default/arkts-apis/arkts-fileio-stat-f.md)(file: string | number)
+**Substitutes:** [stat](arkts-corefile-fileio-stat-f.md)(file: string | number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-getFileInfoFromUri(uri: string) : Promise<FileInfo>--><!--Device-FileAccessHelper-getFileInfoFromUri(uri: string) : Promise<FileInfo>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -1097,15 +1097,15 @@ Obtains a **FileInfo** object based on a URI. This API uses a promise to return 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Indicates the selected file or directory. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;FileInfo&gt; | Returns a FileInfo. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;FileInfo & gt; |
 
 **Examples**
 
@@ -1163,13 +1163,13 @@ Obtains a **FileInfo** object based on a URI. This API uses an asynchronous call
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
-**Substitutes:** [stat](../../apis-default/arkts-apis/arkts-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
+**Substitutes:** [stat](arkts-corefile-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-getFileInfoFromUri(uri: string, callback: AsyncCallback<FileInfo>) : void--><!--Device-FileAccessHelper-getFileInfoFromUri(uri: string, callback: AsyncCallback<FileInfo>) : void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -1177,10 +1177,10 @@ Obtains a **FileInfo** object based on a URI. This API uses an asynchronous call
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Indicates the selected file or directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileInfo&gt; | Yes | The callback is used to return a fileinfo object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileInfo&gt; | Yes |
 
 **Examples**
 
@@ -1196,11 +1196,11 @@ Obtains information about the device root nodes of the file management services 
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-getRoots(): Promise<RootIterator>--><!--Device-FileAccessHelper-getRoots(): Promise<RootIterator>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -1208,48 +1208,48 @@ Obtains information about the device root nodes of the file management services 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[RootIterator](arkts-corefile-fileaccess-rootiterator-i-sys.md)&gt; | Returns a RootIterator. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[RootIterator](arkts-corefile-fileaccess-rootiterator-i-sys.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 14000001 |
+| 14000002 |
+| 14000003 |
+| 14000004 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -1322,11 +1322,11 @@ Obtains information about the device root nodes of the file management services 
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-getRoots(callback: AsyncCallback<RootIterator>): void--><!--Device-FileAccessHelper-getRoots(callback: AsyncCallback<RootIterator>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -1334,48 +1334,48 @@ Obtains information about the device root nodes of the file management services 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RootIterator](arkts-corefile-fileaccess-rootiterator-i-sys.md)&gt; | Yes | The callback is used to return a RootIterator. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RootIterator](arkts-corefile-fileaccess-rootiterator-i-sys.md)&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 14000001 |
+| 14000002 |
+| 14000003 |
+| 14000004 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -1391,13 +1391,13 @@ Creates a directory in a specified directory. This API uses a promise to return 
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
-**Substitutes:** [mkdir](../../apis-default/arkts-apis/arkts-fileio-mkdir-f.md)(path: string)
+**Substitutes:** [mkdir](arkts-corefile-fileio-mkdir-f.md)(path: string)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-mkDir(parentUri: string, displayName: string) : Promise<string>--><!--Device-FileAccessHelper-mkDir(parentUri: string, displayName: string) : Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -1405,55 +1405,55 @@ Creates a directory in a specified directory. This API uses a promise to return 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| parentUri | string | Yes | Represents a specific parent directory. |
-| displayName | string | Yes | Indicates the new directory name. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| parentUri | string | Yes |
+| displayName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Returns the new directory's URI. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 14000001 |
+| 14000002 |
+| 14000003 |
+| 14000004 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -1518,13 +1518,13 @@ Creates a directory in a specified directory. This API uses an asynchronous call
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
-**Substitutes:** [mkdir](../../apis-default/arkts-apis/arkts-fileio-mkdir-f.md)(path: string, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [mkdir](arkts-corefile-fileio-mkdir-f.md)(path: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-mkDir(parentUri: string, displayName: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-mkDir(parentUri: string, displayName: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -1532,50 +1532,50 @@ Creates a directory in a specified directory. This API uses an asynchronous call
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| parentUri | string | Yes | Represents a specific parent directory. |
-| displayName | string | Yes | Indicates the new directory name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback is used to return the new directory's URI. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| parentUri | string | Yes |
+| displayName | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 14000001 |
+| 14000002 |
+| 14000003 |
+| 14000004 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -1591,13 +1591,13 @@ Moves a file or directory. This API uses a promise to return the result. Current
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
+**Substitutes:** [moveFile](arkts-corefile-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-move(sourceFile: string, destFile: string) : Promise<string>--><!--Device-FileAccessHelper-move(sourceFile: string, destFile: string) : Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -1605,55 +1605,55 @@ Moves a file or directory. This API uses a promise to return the result. Current
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceFile | string | Yes | Indicates the file or directory to be moved. |
-| destFile | string | Yes | Represents the destination folder. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sourceFile | string | Yes |
+| [destFile](arkts-corefile-file-fs-conflictfiles-i.md) | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Promise used to return the URI of the file or directory in the destination directory. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 14000001 |
+| 14000002 |
+| 14000003 |
+| 14000004 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -1713,13 +1713,13 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [moveFile](arkts-corefile-fileio-movefile-f.md)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -1727,50 +1727,50 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceFile | string | Yes | Indicates the file or directory to be moved. |
-| destFile | string | Yes | Represents the destination folder. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback is used to return the generated new file or directory. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sourceFile | string | Yes |
+| [destFile](arkts-corefile-file-fs-conflictfiles-i.md) | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 14000001 |
+| 14000002 |
+| 14000003 |
+| 14000004 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -1786,15 +1786,15 @@ Moves a file, and renames it if a file with the same name already exists in the 
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
+**Substitutes:** [moveFile](arkts-corefile-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileAccessHelper-moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>--><!--Device-FileAccessHelper-moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -1802,46 +1802,46 @@ Moves a file, and renames it if a file with the same name already exists in the 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file to move. |
-| destUri | string | Yes | URI of the destination directory, to which the file is moved. |
-| fileName | string | Yes | New name of the file. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sourceUri | string | Yes |
+| destUri | string | Yes |
+| fileName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Promise used to return the URI of the file in the destination directory. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900014 |
+| 13900015 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900030 |
+| 13900042 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -1903,15 +1903,15 @@ Moves a file, and renames it if a file with the same name already exists in the 
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [moveFile](arkts-corefile-fileio-movefile-f.md)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileAccessHelper-moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -1919,41 +1919,41 @@ Moves a file, and renames it if a file with the same name already exists in the 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file to move. |
-| destUri | string | Yes | URI of the destination directory, to which the file is moved. |
-| fileName | string | Yes | New name of the file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback invoked to return the URI of the file in the destination directory. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sourceUri | string | Yes |
+| destUri | string | Yes |
+| fileName | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900014 |
+| 13900015 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900030 |
+| 13900042 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -1969,15 +1969,15 @@ Moves a file or directory. This API uses a promise to return the result. You can
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
+**Substitutes:** [moveFile](arkts-corefile-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<MoveResult>>--><!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<MoveResult>>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -1985,46 +1985,46 @@ Moves a file or directory. This API uses a promise to return the result. You can
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file or directory to move. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. |
-| force | boolean | No | Whether to forcibly overwrite the file with the same name. The value **true** means to overwrite the file forcibly; the value **false** means the opposite. The default value is **false**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sourceUri | string | Yes |
+| destUri | string | Yes |
+| force | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | Promise used to return the result. If the operation is successful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900014 |
+| 13900015 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900030 |
+| 13900042 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -2104,15 +2104,15 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [moveFile](arkts-corefile-fileio-movefile-f.md)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveResult>>): void--><!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveResult>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -2120,40 +2120,40 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file or directory to move. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the operation is successful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sourceUri | string | Yes |
+| destUri | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900014 |
+| 13900015 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900030 |
+| 13900042 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -2169,15 +2169,15 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [moveFile](arkts-corefile-fileio-movefile-f.md)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<MoveResult>>): void--><!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<MoveResult>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -2185,41 +2185,41 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file or directory to move. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. |
-| force | boolean | Yes | Whether to forcibly overwrite the file with the same name. The value **true** means to overwrite the file forcibly; the value **false** means the opposite. The default value is **false**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the operation is successful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sourceUri | string | Yes |
+| destUri | string | Yes |
+| force | boolean | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900014 |
+| 13900015 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900030 |
+| 13900042 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -2235,13 +2235,13 @@ Opens a file. This API uses a promise to return the result.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
-**Substitutes:** [open](../../apis-default/arkts-apis/arkts-fileio-open-f.md)(path: string, mode?: number)
+**Substitutes:** [open](arkts-corefile-fileio-open-f.md)(path: string, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-openFile(uri: string, flags: OPENFLAGS) : Promise<number>--><!--Device-FileAccessHelper-openFile(uri: string, flags: OPENFLAGS) : Promise<number>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -2249,55 +2249,55 @@ Opens a file. This API uses a promise to return the result.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Indicates the path of the file to open. |
-| flags | [OPENFLAGS](arkts-corefile-fileaccess-openflags-e-sys.md) | Yes | Indicate options of opening a file. The default value is read-only. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| flags | [OPENFLAGS](arkts-corefile-fileaccess-openflags-e-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;number&gt; | Returns the file descriptor. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 14000001 |
+| 14000002 |
+| 14000003 |
+| 14000004 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -2354,13 +2354,13 @@ Opens a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
-**Substitutes:** [open](../../apis-default/arkts-apis/arkts-fileio-open-f.md)(path: string, callback: AsyncCallback&lt;File&gt;)
+**Substitutes:** [open](arkts-corefile-fileio-open-f.md)(path: string, callback: AsyncCallback&lt;File&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-openFile(uri: string, flags: OPENFLAGS, callback: AsyncCallback<number>): void--><!--Device-FileAccessHelper-openFile(uri: string, flags: OPENFLAGS, callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -2368,50 +2368,50 @@ Opens a file. This API uses an asynchronous callback to return the result.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Indicates the path of the file to open. |
-| flags | [OPENFLAGS](arkts-corefile-fileaccess-openflags-e-sys.md) | Yes | Indicate options of opening a file. The default value is read-only. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | The callback is used to return the file descriptor. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| flags | [OPENFLAGS](arkts-corefile-fileaccess-openflags-e-sys.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 14000001 |
+| 14000002 |
+| 14000003 |
+| 14000004 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -2427,13 +2427,13 @@ Queries the attribute information about a file or directory based on a URI. This
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
-**Substitutes:** [stat](../../apis-default/arkts-apis/arkts-fileio-stat-f.md)(file: string | number)
+**Substitutes:** [stat](arkts-corefile-fileio-stat-f.md)(file: string | number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-query(uri: string, metaJson: string) : Promise<string>--><!--Device-FileAccessHelper-query(uri: string, metaJson: string) : Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -2441,16 +2441,16 @@ Queries the attribute information about a file or directory based on a URI. This
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | File or directory URI obtained from [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md). |
-| metaJson | string | Yes | Attribute [FILEKEY](arkts-corefile-fileaccess-filekey-e-sys.md) to query. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| metaJson | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Promise used to return a JSON string that contains the file attribute and the value obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Examples**
 
@@ -2509,13 +2509,13 @@ Queries the attribute information about a file or directory based on a URI. This
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
-**Substitutes:** [stat](../../apis-default/arkts-apis/arkts-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
+**Substitutes:** [stat](arkts-corefile-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void--><!--Device-FileAccessHelper-query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -2523,11 +2523,11 @@ Queries the attribute information about a file or directory based on a URI. This
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | File or directory URI obtained from [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md). |
-| metaJson | string | Yes | Attribute [FILEKEY](arkts-corefile-fileaccess-filekey-e-sys.md) to query. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return a JSON string that contains the file attribute and the value obtained. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| metaJson | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
 **Examples**
 
@@ -2543,13 +2543,13 @@ Registers a callback to listen for a URI. URIs and callbacks can be in many-to-m
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
-**Substitutes:** [createWatcher](../../apis-default/arkts-apis/arkts-fileio-createwatcher-f.md)
+**Substitutes:** [createWatcher](arkts-corefile-fileio-createwatcher-f.md)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-registerObserver(uri: string, notifyForDescendants: boolean, callback: Callback<NotifyMessage>): void--><!--Device-FileAccessHelper-registerObserver(uri: string, notifyForDescendants: boolean, callback: Callback<NotifyMessage>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -2557,17 +2557,17 @@ Registers a callback to listen for a URI. URIs and callbacks can be in many-to-m
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | URI of the file or directory. |
-| notifyForDescendants | boolean | Yes | Whether to observe changes of the files in the directory. The value **true** means to observe changes of the files in the directory; the value **false** means the opposite. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md)&gt; | Yes | Callback invoked to return the notification. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| notifyForDescendants | boolean | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md)&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 14300002 | Invalid uri |
+| Error Code ID |
+| --- |
+| 14300002 |
 
 ## rename
 
@@ -2579,13 +2579,13 @@ Renames a file or directory. This API uses a promise to return the result.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
-**Substitutes:** [rename](../../apis-default/arkts-apis/arkts-fileio-rename-f.md)(oldPath: string, newPath: string)
+**Substitutes:** [rename](arkts-corefile-fileio-rename-f.md)(oldPath: string, newPath: string)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-rename(uri: string, displayName: string) : Promise<string>--><!--Device-FileAccessHelper-rename(uri: string, displayName: string) : Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -2593,55 +2593,55 @@ Renames a file or directory. This API uses a promise to return the result.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Indicates the selected file or directory. |
-| displayName | string | Yes | Indicates the new directory or file name. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| displayName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Returns a URI representing the new file or directory. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 14000001 |
+| 14000002 |
+| 14000003 |
+| 14000004 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -2699,13 +2699,13 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
-**Substitutes:** [rename](../../apis-default/arkts-apis/arkts-fileio-rename-f.md)(oldPath: string, newPath: string, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [rename](arkts-corefile-fileio-rename-f.md)(oldPath: string, newPath: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-rename(uri: string, displayName: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-rename(uri: string, displayName: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -2713,50 +2713,50 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Indicates the selected file or directory. |
-| displayName | string | Yes | Indicates the new directory or file name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback is used to return a URI representing the new file or directory. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| displayName | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900006 | No such device or address |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900029 | Resource deadlock would occur |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900034 | Operation would block |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
-| 14000001 | Invalid display name |
-| 14000002 | Invalid uri |
-| 14000003 | Invalid file extension |
-| 14000004 | File has been put into trash bin |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900004 |
+| 13900006 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900015 |
+| 13900017 |
+| 13900018 |
+| 13900019 |
+| 13900020 |
+| 13900022 |
+| 13900023 |
+| 13900024 |
+| 13900025 |
+| 13900027 |
+| 13900029 |
+| 13900030 |
+| 13900033 |
+| 13900034 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
+| 14000001 |
+| 14000002 |
+| 14000003 |
+| 14000004 |
+| 14300001 |
+| 14300002 |
+| 14300003 |
+| 14300004 |
 
 **Examples**
 
@@ -2772,11 +2772,11 @@ Unregisters a callback that is used to listen for the specified URI.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-unregisterObserver(uri: string, callback?: Callback<NotifyMessage>): void--><!--Device-FileAccessHelper-unregisterObserver(uri: string, callback?: Callback<NotifyMessage>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -2784,14 +2784,13 @@ Unregisters a callback that is used to listen for the specified URI.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | URI of the file or directory. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the specified URI will be unregistered. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md)&gt; | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 14300002 | Invalid uri |
-
+| Error Code ID |
+| --- |
+| 14300002 |

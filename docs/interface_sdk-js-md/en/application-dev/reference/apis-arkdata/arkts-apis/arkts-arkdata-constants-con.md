@@ -10,11 +10,11 @@ max batch operation size. Maximum number of batch operations.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** MAX_BATCH_SIZE
-
-<!--Device-Constants-const MAX_BATCH_SIZE = 128--><!--Device-Constants-const MAX_BATCH_SIZE = 128-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -28,11 +28,11 @@ max key length. Maximum length of a key in the KV store, in bytes.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** MAX_KEY_LENGTH
-
-<!--Device-Constants-const MAX_KEY_LENGTH = 1024--><!--Device-Constants-const MAX_KEY_LENGTH = 1024-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -46,11 +46,11 @@ max device coordinate key length. Maximum length of a device key, in bytes.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** MAX_KEY_LENGTH_DEVICEs
-
-<!--Device-Constants-const MAX_KEY_LENGTH_DEVICE = 896--><!--Device-Constants-const MAX_KEY_LENGTH_DEVICE = 896-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -64,11 +64,11 @@ max query length. Maximum query length, in bytes.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** MAX_QUERY_LENGTH
-
-<!--Device-Constants-const MAX_QUERY_LENGTH = 512000--><!--Device-Constants-const MAX_QUERY_LENGTH = 512000-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -82,11 +82,11 @@ max store id length. Maximum length of a KV store ID, in bytes.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** MAX_STORE_ID_LENGTH
-
-<!--Device-Constants-const MAX_STORE_ID_LENGTH = 128--><!--Device-Constants-const MAX_STORE_ID_LENGTH = 128-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -100,11 +100,10 @@ max value length. Maximum length of a value in the KV store, in bytes.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** MAX_VALUE_LENGTH
 
-<!--Device-Constants-const MAX_VALUE_LENGTH = 4194303--><!--Device-Constants-const MAX_VALUE_LENGTH = 4194303-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
-

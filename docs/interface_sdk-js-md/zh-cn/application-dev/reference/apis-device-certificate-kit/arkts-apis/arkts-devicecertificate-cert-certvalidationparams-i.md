@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-cert-interface CertValidationParams--><!--Device-cert-interface CertValidationParams-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -28,11 +28,11 @@ allowDownloadIntermediateCa?: boolean
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CertValidationParams-allowDownloadIntermediateCa?: boolean--><!--Device-CertValidationParams-allowDownloadIntermediateCa?: boolean-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -48,11 +48,11 @@ date?: string
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CertValidationParams-date?: string--><!--Device-CertValidationParams-date?: string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -68,11 +68,11 @@ emailAddresses?: Array<string>
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CertValidationParams-emailAddresses?: Array<string>--><!--Device-CertValidationParams-emailAddresses?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -88,11 +88,11 @@ hostnames?: Array<string>
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CertValidationParams-hostnames?: Array<string>--><!--Device-CertValidationParams-hostnames?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -108,11 +108,11 @@ ignoreErrs?: Array<CertResult>
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CertValidationParams-ignoreErrs?: Array<CertResult>--><!--Device-CertValidationParams-ignoreErrs?: Array<CertResult>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -128,11 +128,11 @@ keyUsage?: Array<KeyUsageType>
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CertValidationParams-keyUsage?: Array<KeyUsageType>--><!--Device-CertValidationParams-keyUsage?: Array<KeyUsageType>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -150,11 +150,11 @@ partialChain?: boolean
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CertValidationParams-partialChain?: boolean--><!--Device-CertValidationParams-partialChain?: boolean-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -170,11 +170,11 @@ revokedParams?: X509CertRevokedParams
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CertValidationParams-revokedParams?: X509CertRevokedParams--><!--Device-CertValidationParams-revokedParams?: X509CertRevokedParams-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -190,11 +190,11 @@ trustedCerts?: Array<X509Cert>
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CertValidationParams-trustedCerts?: Array<X509Cert>--><!--Device-CertValidationParams-trustedCerts?: Array<X509Cert>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -212,11 +212,11 @@ trustSystemCa?: boolean
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CertValidationParams-trustSystemCa?: boolean--><!--Device-CertValidationParams-trustSystemCa?: boolean-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -232,11 +232,11 @@ untrustedCerts?: Array<X509Cert>
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CertValidationParams-untrustedCerts?: Array<X509Cert>--><!--Device-CertValidationParams-untrustedCerts?: Array<X509Cert>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -252,11 +252,11 @@ userId?: Uint8Array
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CertValidationParams-userId?: Uint8Array--><!--Device-CertValidationParams-userId?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -274,11 +274,10 @@ validateDate?: boolean
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-CertValidationParams-validateDate?: boolean--><!--Device-CertValidationParams-validateDate?: boolean-End-->
-
 **系统能力：** SystemCapability.Security.Cert
-

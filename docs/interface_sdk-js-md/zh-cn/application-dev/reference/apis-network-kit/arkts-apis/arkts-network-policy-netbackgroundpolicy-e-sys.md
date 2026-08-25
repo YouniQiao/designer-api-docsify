@@ -4,7 +4,7 @@
 
 **起始版本：** 10
 
-<!--Device-policy-export enum NetBackgroundPolicy--><!--Device-policy-export enum NetBackgroundPolicy-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -20,7 +20,7 @@ NET_BACKGROUND_POLICY_NONE = 0
 
 **起始版本：** 10
 
-<!--Device-NetBackgroundPolicy-NET_BACKGROUND_POLICY_NONE = 0--><!--Device-NetBackgroundPolicy-NET_BACKGROUND_POLICY_NONE = 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -36,7 +36,7 @@ NET_BACKGROUND_POLICY_ENABLE = 1
 
 **起始版本：** 10
 
-<!--Device-NetBackgroundPolicy-NET_BACKGROUND_POLICY_ENABLE = 1--><!--Device-NetBackgroundPolicy-NET_BACKGROUND_POLICY_ENABLE = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -52,7 +52,7 @@ NET_BACKGROUND_POLICY_DISABLE = 2
 
 **起始版本：** 10
 
-<!--Device-NetBackgroundPolicy-NET_BACKGROUND_POLICY_DISABLE = 2--><!--Device-NetBackgroundPolicy-NET_BACKGROUND_POLICY_DISABLE = 2-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -68,9 +68,8 @@ NET_BACKGROUND_POLICY_TRUSTLIST = 3
 
 **起始版本：** 10
 
-<!--Device-NetBackgroundPolicy-NET_BACKGROUND_POLICY_TRUSTLIST = 3--><!--Device-NetBackgroundPolicy-NET_BACKGROUND_POLICY_TRUSTLIST = 3-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
-

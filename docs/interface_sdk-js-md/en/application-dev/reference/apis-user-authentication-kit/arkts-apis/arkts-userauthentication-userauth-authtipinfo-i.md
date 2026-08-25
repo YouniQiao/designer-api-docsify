@@ -2,9 +2,9 @@
 
 Represents the intermediate authentication status. This API is used to describe various intermediate states generated during authentication, including the authentication type and specific status code corresponding to each state. The application can obtain these intermediate states through [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) to provide more refined user feedback and status awareness during authentication.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-userAuth-interface AuthTipInfo--><!--Device-userAuth-interface AuthTipInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -24,11 +24,11 @@ Intermediate status. It indicates the specific intermediate status type, such as
 
 **Type:** [UserAuthTipCode](arkts-userauthentication-userauth-userauthtipcode-e.md)
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-AuthTipInfo-tipCode: UserAuthTipCode--><!--Device-AuthTipInfo-tipCode: UserAuthTipCode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -42,11 +42,10 @@ Authentication type of the intermediate status. It indicates the authentication 
 
 **Type:** [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-AuthTipInfo-tipType: UserAuthType--><!--Device-AuthTipInfo-tipType: UserAuthType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
-

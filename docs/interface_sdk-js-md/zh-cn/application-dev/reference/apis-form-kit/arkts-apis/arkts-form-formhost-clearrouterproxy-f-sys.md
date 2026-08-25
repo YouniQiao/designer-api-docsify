@@ -14,11 +14,11 @@ function clearRouterProxy(formIds: Array<string>, callback: AsyncCallback<void>)
 
 清除卡片跳转代理。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REQUIRE_FORM
-
-<!--Device-formHost-function clearRouterProxy(formIds: Array<string>, callback: AsyncCallback<void>): void--><!--Device-formHost-function clearRouterProxy(formIds: Array<string>, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -26,22 +26,22 @@ function clearRouterProxy(formIds: Array<string>, callback: AsyncCallback<void>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | 是 | 卡片标识数组。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当指定卡片清除router跳转代理成功时，error为undefined；否则抛出异常。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formIds | Array & lt;string & gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
-| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
+| [16500060](../errorcode-form.md#16500060-连接服务失败) |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) |
+| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) |
 
 **示例**
 
@@ -128,11 +128,11 @@ function clearRouterProxy(formIds: Array<string>): Promise<void>
 
 清除卡片跳转代理。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REQUIRE_FORM
-
-<!--Device-formHost-function clearRouterProxy(formIds: Array<string>): Promise<void>--><!--Device-formHost-function clearRouterProxy(formIds: Array<string>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -140,29 +140,28 @@ function clearRouterProxy(formIds: Array<string>): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | 是 | 卡片标识数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formIds | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
-| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
+| [16500060](../errorcode-form.md#16500060-连接服务失败) |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) |
+| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) |
 
 **示例**
 
 参见 [clearRouterProxy](#clearrouterproxy)
-

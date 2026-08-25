@@ -2,9 +2,9 @@
 
 Defines the data structure of the task information for query. The fields available vary depending on the query type.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-agent-interface TaskInfo--><!--Device-agent-interface TaskInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -24,9 +24,9 @@ The bundle name. For system query only.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-TaskInfo-readonly bundle?: string--><!--Device-TaskInfo-readonly bundle?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -42,11 +42,10 @@ The UID of an application. For system query only.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-TaskInfo-readonly uid?: string--><!--Device-TaskInfo-readonly uid?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **System API:** This is a system API.
-

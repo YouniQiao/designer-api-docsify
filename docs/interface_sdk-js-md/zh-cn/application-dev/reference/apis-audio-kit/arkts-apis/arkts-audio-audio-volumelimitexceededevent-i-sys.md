@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-audio-interface VolumeLimitExceededEvent--><!--Device-audio-interface VolumeLimitExceededEvent-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -24,13 +24,13 @@ currentVolume: int
 
 当前音量等级。 该值介于通过 [getMinSystemVolume](arkts-audio-audio-audiovolumemanager-i-sys.md#getminsystemvolume) 和 [getMaxSystemVolume](arkts-audio-audio-audiovolumemanager-i-sys.md#getmaxsystemvolume) 获取的值之间。 取值限定为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-VolumeLimitExceededEvent-currentVolume: int--><!--Device-VolumeLimitExceededEvent-currentVolume: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -44,13 +44,13 @@ volumeThreshold: int
 
 当前卷音量型的音量大小阈值。 该值介于通过 [getMinSystemVolume](arkts-audio-audio-audiovolumemanager-i-sys.md#getminsystemvolume) 和 [getMaxSystemVolume](arkts-audio-audio-audiovolumemanager-i-sys.md#getmaxsystemvolume) 获取的值之间。 取值限定为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-VolumeLimitExceededEvent-volumeThreshold: int--><!--Device-VolumeLimitExceededEvent-volumeThreshold: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -68,11 +68,10 @@ volumeType: AudioVolumeType
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-VolumeLimitExceededEvent-volumeType: AudioVolumeType--><!--Device-VolumeLimitExceededEvent-volumeType: AudioVolumeType-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
-

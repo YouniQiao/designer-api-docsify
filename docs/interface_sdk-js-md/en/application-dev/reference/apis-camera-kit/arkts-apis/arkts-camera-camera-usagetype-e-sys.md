@@ -2,9 +2,9 @@
 
 Enum for usage type used in capture session.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-camera-enum UsageType--><!--Device-camera-enum UsageType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -18,11 +18,10 @@ BOKEH = 0
 
 Bokeh usage type.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-UsageType-BOKEH = 0--><!--Device-UsageType-BOKEH = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

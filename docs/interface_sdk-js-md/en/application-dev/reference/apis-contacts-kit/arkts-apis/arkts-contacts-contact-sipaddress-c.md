@@ -4,7 +4,7 @@ Defines a contact's SIP address.
 
 **Since:** 7
 
-<!--Device-contact-class SipAddress--><!--Device-contact-class SipAddress-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -26,9 +26,9 @@ Custom SIP address type, the default value is **0**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SipAddress-static readonly CUSTOM_LABEL: 0--><!--Device-SipAddress-static readonly CUSTOM_LABEL: 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -44,9 +44,9 @@ Invalid SIP address type, the default value is **-1**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SipAddress-static readonly INVALID_LABEL_ID: -1--><!--Device-SipAddress-static readonly INVALID_LABEL_ID: -1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -62,9 +62,9 @@ SIP address type.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SipAddress-labelId?: number--><!--Device-SipAddress-labelId?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -80,9 +80,9 @@ SIP address type name.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SipAddress-labelName?: string--><!--Device-SipAddress-labelName?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -98,9 +98,9 @@ Home SIP address, the default value is **1**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SipAddress-static readonly SIP_HOME: 1--><!--Device-SipAddress-static readonly SIP_HOME: 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -116,9 +116,9 @@ Other SIP address, the default value is **3**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SipAddress-static readonly SIP_OTHER: 3--><!--Device-SipAddress-static readonly SIP_OTHER: 3-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -134,9 +134,9 @@ Work SIP address, the default value is **2**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SipAddress-static readonly SIP_WORK: 2--><!--Device-SipAddress-static readonly SIP_WORK: 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -152,9 +152,8 @@ SIP address.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-SipAddress-sipAddress: string--><!--Device-SipAddress-sipAddress: string-End-->
-
 **System capability:** SystemCapability.Applications.ContactsData
-

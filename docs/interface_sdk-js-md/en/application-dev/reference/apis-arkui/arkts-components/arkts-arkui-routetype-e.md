@@ -4,7 +4,7 @@ Sets the type of page transition.
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum RouteType--><!--Device-unnamed-declare enum RouteType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ The page is not redirected. The animation specified by **PageTransitionEnter** t
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-RouteType-None = 0--><!--Device-RouteType-None = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,9 @@ Redirects to the next page. To redirect the user from page A to page B, set **Ro
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-RouteType-Push = 1--><!--Device-RouteType-Push = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,9 +50,8 @@ Redirects to a specified page. To redirect the user from page B back to page A, 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-RouteType-Pop = 2--><!--Device-RouteType-Pop = 2-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

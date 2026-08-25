@@ -11,8 +11,7 @@ import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';
 <!--Del-->
 ### 类（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [WallpaperExtensionAbility](arkts-basicservices-wallpaperextensionability-c-sys.md) | class of wallpaper extension ability. |
+| 名称 |
+| --- |
+| [WallpaperExtensionAbility](arkts-basicservices-wallpaperextensionability-c-sys.md) |
 <!--DelEnd-->
-

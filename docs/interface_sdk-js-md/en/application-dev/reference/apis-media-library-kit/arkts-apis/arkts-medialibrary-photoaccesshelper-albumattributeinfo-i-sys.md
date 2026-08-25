@@ -4,7 +4,7 @@ Album attribute info.
 
 **Since:** 26.0.0
 
-<!--Device-photoAccessHelper-interface AlbumAttributeInfo--><!--Device-photoAccessHelper-interface AlbumAttributeInfo-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -28,11 +28,10 @@ The album attribute value.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AlbumAttributeInfo-attrValue?: string--><!--Device-AlbumAttributeInfo-attrValue?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

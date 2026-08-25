@@ -2,9 +2,9 @@
 
 授予或激活权限失败的URI策略结果。@interface { object }
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-fileShare-export interface PolicyErrorResult--><!--Device-fileShare-export interface PolicyErrorResult-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -24,9 +24,9 @@ code: PolicyErrorCode
 
 **类型：** [PolicyErrorCode](arkts-corefile-fileshare-policyerrorcode-e.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-PolicyErrorResult-code: PolicyErrorCode--><!--Device-PolicyErrorResult-code: PolicyErrorCode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -40,9 +40,9 @@ message: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-PolicyErrorResult-message: string--><!--Device-PolicyErrorResult-message: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -56,9 +56,8 @@ uri: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-PolicyErrorResult-uri: string--><!--Device-PolicyErrorResult-uri: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
-

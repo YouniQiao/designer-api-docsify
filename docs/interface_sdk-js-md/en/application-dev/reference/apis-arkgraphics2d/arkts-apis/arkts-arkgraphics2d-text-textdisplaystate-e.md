@@ -4,7 +4,7 @@ Enumerates text display states. Native result after text typesetting, which is i
 
 **Since:** 26.0.0
 
-<!--Device-text-enum TextDisplayState--><!--Device-text-enum TextDisplayState-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -18,11 +18,11 @@ Unknown display state, which is the default state.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-TextDisplayState-UNKNOWN = 0--><!--Device-TextDisplayState-UNKNOWN = 0-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -36,11 +36,11 @@ Complete display state, in which the text is not truncated or omitted and all co
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-TextDisplayState-ALL = 1--><!--Device-TextDisplayState-ALL = 1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -54,11 +54,11 @@ Cropping display state, in which the part of the text that exceeds the typesetti
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-TextDisplayState-CLIP = 2--><!--Device-TextDisplayState-CLIP = 2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -72,11 +72,10 @@ Ellipsized display state, in which part of the content is replaced by specified 
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-TextDisplayState-OMITTED = 3--><!--Device-TextDisplayState-OMITTED = 3-End-->
-
 **System capability:** SystemCapability.Graphics.Drawing
-

@@ -15,23 +15,23 @@ declare function mutableBuilder<Args extends Object[]>(builder: BuilderCallback)
 
 **起始版本：** 22
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
-<!--Device-unnamed-declare function mutableBuilder<Args extends Object[]>(builder: BuilderCallback): MutableBuilder<Args>--><!--Device-unnamed-declare function mutableBuilder<Args extends Object[]>(builder: BuilderCallback): MutableBuilder<Args>-End-->
-
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| builder | [BuilderCallback](arkts-arkui-buildercallback-t.md) | 是 | `@Builder`装饰的全局函数，作为`mutableBuilder`封装的目标构建函数。该函数需符合`BuilderCallback`类型，即 `(...args: Args) =&gt; void`，是一个无返回值的函数，其参数列表`...args`的类型由泛型`Args`指定。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| builder | [BuilderCallback](arkts-arkui-buildercallback-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [MutableBuilder](arkts-arkui-mutablebuilder-c.md)&lt;Args&gt; | `MutableBuilder&lt;Args&gt;`的实例，用于封装全局` |
+| 类型 |
+| --- |
+| [MutableBuilder](arkts-arkui-mutablebuilder-c.md)&lt;Args&gt; |
 
 **示例**
 
@@ -77,4 +77,3 @@ struct MyApp {
   }
 }
 ```
-

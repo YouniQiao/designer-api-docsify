@@ -8,15 +8,14 @@ type ReportExecuteAbilityEvent = (want: WantAgent) => void
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-avMusicTemplate-type ReportExecuteAbilityEvent = (want: WantAgent) => void--><!--Device-avMusicTemplate-type ReportExecuteAbilityEvent = (want: WantAgent) => void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md) | 是 | 媒体应用页面启动信息。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md) | 是 |

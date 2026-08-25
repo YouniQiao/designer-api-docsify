@@ -8,11 +8,10 @@ Describes the user authorization settings.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-notificationExtensionSubscription-export type UserGrantSetting = _UserGrantSetting--><!--Device-notificationExtensionSubscription-export type UserGrantSetting = _UserGrantSetting-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **Property type:** _UserGrantSetting
-

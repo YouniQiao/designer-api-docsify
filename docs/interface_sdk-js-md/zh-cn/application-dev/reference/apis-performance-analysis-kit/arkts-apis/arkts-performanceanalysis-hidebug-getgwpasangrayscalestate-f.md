@@ -14,17 +14,17 @@ function getGwpAsanGrayscaleState(): number
 
 获取当前GWP-ASan剩余使能天数。
 
-**起始版本：** 22
+**起始版本：** 20
 
-<!--Device-hidebug-function getGwpAsanGrayscaleState(): number--><!--Device-hidebug-function getGwpAsanGrayscaleState(): number-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为22。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 获取当前GWP-ASan剩余使能天数。若当前未使能，返回值0。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -50,19 +50,18 @@ function getGwpAsanGrayscaleState(): int
 
 获取当前GWP-ASan剩余使能天数。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-hidebug-function getGwpAsanGrayscaleState(): int--><!--Device-hidebug-function getGwpAsanGrayscaleState(): int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 获取当前GWP-ASan剩余使能天数。若当前未使能，返回值0。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
 参见 [getGwpAsanGrayscaleState](#getgwpasangrayscalestate)
-

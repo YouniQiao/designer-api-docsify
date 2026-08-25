@@ -2,9 +2,9 @@
 
 Enumerates the certificate types.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-certificateManager-export enum CertType--><!--Device-certificateManager-export enum CertType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -16,9 +16,9 @@ CA_CERT_SYSTEM = 0
 
 System CA certificate.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-CertType-CA_CERT_SYSTEM = 0--><!--Device-CertType-CA_CERT_SYSTEM = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -30,9 +30,8 @@ CA_CERT_USER = 1
 
 User CA certificate.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-CertType-CA_CERT_USER = 1--><!--Device-CertType-CA_CERT_USER = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
-

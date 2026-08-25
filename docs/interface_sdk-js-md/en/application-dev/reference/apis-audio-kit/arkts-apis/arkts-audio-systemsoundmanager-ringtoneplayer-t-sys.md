@@ -6,13 +6,12 @@ type RingtonePlayer = _RingtonePlayer
 
 Ringtone player object.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-systemSoundManager-type RingtonePlayer = _RingtonePlayer--><!--Device-systemSoundManager-type RingtonePlayer = _RingtonePlayer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
 
 **Property type:** _RingtonePlayer
-

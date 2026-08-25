@@ -4,7 +4,7 @@ Provides methods to accessing bluetooth MAP(Message Access Profile)-related capa
 
 **Since:** 11
 
-<!--Device-unnamed-declare namespace map--><!--Device-unnamed-declare namespace map-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -18,29 +18,28 @@ import { map } from '@kit.ConnectivityKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [createMapMseProfile](arkts-connectivity-map-createmapmseprofile-f.md) | create the instance of MAP MSE profile. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [createMapMseProfile](arkts-connectivity-map-createmapmseprofile-f.md) |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [MapMseProfile](arkts-connectivity-map-mapmseprofile-i-sys.md) | Manager MAP MSE profile. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [MapMseProfile](arkts-connectivity-map-mapmseprofile-i-sys.md) |
 <!--DelEnd-->
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [BaseProfile](arkts-connectivity-map-baseprofile-t.md) | Base interface of profile. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BaseProfile](arkts-connectivity-map-baseprofile-t.md) |
 
 <!--Del-->
 ### Types(System API)
 
-| Name | Description |
-| --- | --- |
-| [AccessAuthorization](arkts-connectivity-map-accessauthorization-t-sys.md) | Indicate the phone book access authorization. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AccessAuthorization](arkts-connectivity-map-accessauthorization-t-sys.md) |
 <!--DelEnd-->
-

@@ -4,7 +4,7 @@ Discovery failure result.
 
 **Since:** 23
 
-<!--Device-distributedDeviceManager-interface DiscoveryFailureResult--><!--Device-distributedDeviceManager-interface DiscoveryFailureResult-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -26,7 +26,6 @@ Discovery failure cause code.
 
 **Since:** 23
 
-<!--Device-DiscoveryFailureResult-reason: int--><!--Device-DiscoveryFailureResult-reason: int-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
-

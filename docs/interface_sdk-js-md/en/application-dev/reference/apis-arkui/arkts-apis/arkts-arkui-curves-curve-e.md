@@ -1,12 +1,10 @@
 # Curve
 
-enum Curve.@enum { number }
+Defines an interpolation curve. For details about the curves and animations, see <!--RP1--> [Bezier Curve](../../../../design/ux-design/animation-attributes.md)<!--RP1End-->.
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-curves-export enum Curve--><!--Device-curves-export enum Curve-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +16,11 @@ Linear
 
 Linear. Indicates that the animation has the same velocity from start to finish.
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Curve-Linear--><!--Device-Curve-Linear-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,13 +32,11 @@ Ease
 
 Ease. Indicates that the animation starts at a low speed, then speeds up, and slows down before the end, CubicBezier(0.25, 0.1, 0.25, 1.0).
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Curve-Ease--><!--Device-Curve-Ease-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,13 +48,11 @@ EaseIn
 
 EaseIn. Indicates that the animation starts at a low speed, Cubic Bezier (0.42, 0.0, 1.0, 1.0).
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Curve-EaseIn--><!--Device-Curve-EaseIn-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,13 +64,11 @@ EaseOut
 
 EaseOut. Indicates that the animation ends at low speed, CubicBezier (0.0, 0.0, 0.58, 1.0).
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Curve-EaseOut--><!--Device-Curve-EaseOut-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,13 +80,11 @@ EaseInOut
 
 EaseInOut. Indicates that the animation starts and ends at low speed, CubicBezier (0.42, 0.0, 0.58, 1.0).
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Curve-EaseInOut--><!--Device-Curve-EaseInOut-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,13 +96,11 @@ FastOutSlowIn
 
 FastOutSlowIn. Standard curve, cubic-bezier (0.4, 0.0, 0.2, 1.0).
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Curve-FastOutSlowIn--><!--Device-Curve-FastOutSlowIn-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,13 +112,11 @@ LinearOutSlowIn
 
 LinearOutSlowIn. Deceleration curve, cubic-bezier (0.0, 0.0, 0.2, 1.0).
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Curve-LinearOutSlowIn--><!--Device-Curve-LinearOutSlowIn-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -144,13 +128,11 @@ FastOutLinearIn
 
 FastOutLinearIn. Acceleration curve, cubic-bezier (0.4, 0.0, 1.0, 1.0).
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Curve-FastOutLinearIn--><!--Device-Curve-FastOutLinearIn-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -162,13 +144,11 @@ ExtremeDeceleration
 
 ExtremeDeceleration. Abrupt curve, cubic-bezier (0.0, 0.0, 0.0, 1.0).
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Curve-ExtremeDeceleration--><!--Device-Curve-ExtremeDeceleration-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -180,13 +160,11 @@ Sharp
 
 Sharp. Sharp curves, cubic-bezier (0.33, 0.0, 0.67, 1.0).
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Curve-Sharp--><!--Device-Curve-Sharp-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -198,13 +176,11 @@ Rhythm
 
 Rhythm. Rhythmic curve, cubic-bezier (0.7, 0.0, 0.2, 1.0).
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Curve-Rhythm--><!--Device-Curve-Rhythm-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -216,13 +192,11 @@ Smooth
 
 Smooth. Smooth curves, cubic-bezier (0.4, 0.0, 0.4, 1.0).
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Curve-Smooth--><!--Device-Curve-Smooth-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -234,13 +208,17 @@ Friction
 
 Friction. Damping curves, CubicBezier (0.2, 0.0, 0.2, 1.0).
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Curve-Friction--><!--Device-Curve-Friction-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { curves } from '@kit.ArkUI';
+curves.initCurve(Curve.EaseIn) // Create a default ease-in curve, where the interpolation starts slowly and then picks up speed.
+```

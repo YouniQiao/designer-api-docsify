@@ -2,9 +2,9 @@
 
 Describes the configuration of the edit box.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-inputMethod-export interface TextConfig--><!--Device-inputMethod-export interface TextConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -26,9 +26,9 @@ Whether to capitalize the first letter in the edit box. If it is not set or is s
 
 **Default:** CapitalizeMode.NONE
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-TextConfig-capitalizeMode?: CapitalizeMode--><!--Device-TextConfig-capitalizeMode?: CapitalizeMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -42,9 +42,9 @@ Cursor information.
 
 **Type:** [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md)
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-TextConfig-cursorInfo?: CursorInfo--><!--Device-TextConfig-cursorInfo?: CursorInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -58,9 +58,9 @@ Edit box attribute.
 
 **Type:** [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md)
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-TextConfig-inputAttribute: InputAttribute--><!--Device-TextConfig-inputAttribute: InputAttribute-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -74,9 +74,9 @@ Whether the edit box is new. The value **true** means the edit box is new; the v
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-TextConfig-newEditBox?: boolean--><!--Device-TextConfig-newEditBox?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -90,9 +90,9 @@ Text selection range.
 
 **Type:** Range
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-TextConfig-selection?: Range--><!--Device-TextConfig-selection?: Range-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -104,11 +104,10 @@ windowId?: int
 
 ID of the window where the edit box is located. The value must be an integer. <br> <br>You are advised to call [getWindowProperties](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#getwindowproperties) to obtain the window ID.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-TextConfig-windowId?: int--><!--Device-TextConfig-windowId?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

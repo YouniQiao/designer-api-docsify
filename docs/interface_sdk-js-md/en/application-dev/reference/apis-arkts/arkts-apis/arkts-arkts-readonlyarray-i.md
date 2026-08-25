@@ -6,9 +6,7 @@ A read-only array that provides methods for reading elements.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export interface ReadonlyArray--><!--Device-unnamed-export interface ReadonlyArray-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,25 +25,23 @@ Combines two or more arrays.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-concat(...items: FixedArray<ConcatArray<T>>): Array<T>--><!--Device-ReadonlyArray-concat(...items: FixedArray<ConcatArray<T>>): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| items | FixedArray&lt;ConcatArray&lt;T&gt;&gt; | Yes | Arrays to add. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| items | FixedArray & lt;ConcatArray & lt;T & gt; & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | New combined array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 ## entries
 
@@ -57,19 +53,17 @@ Returns a new iterator object that contains key-value pairs for each index in th
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-entries(): IterableIterator<[int, T]>--><!--Device-ReadonlyArray-entries(): IterableIterator<[int, T]>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;[int, T]&gt; | New iterator object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;[int, T] & gt; |
 
 ## every
 
@@ -81,25 +75,23 @@ Tests whether all elements in the array pass the test implemented by the provide
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-every(predicate: (value: T, index: int, array: ReadonlyArray<T>) => boolean): boolean--><!--Device-ReadonlyArray-every(predicate: (value: T, index: int, array: ReadonlyArray<T>) => boolean): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: int, array: ReadonlyArray&lt;T&gt;) =&gt; boolean | Yes | Function to test each element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: int, array: ReadonlyArray & lt;T & gt;) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | True if all elements pass the test, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## filter
 
@@ -111,25 +103,23 @@ Creates a new array with all elements that pass the test implemented by the prov
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-filter(predicate: (value: T, index: int, array: ReadonlyArray<T>) => boolean): Array<T>--><!--Device-ReadonlyArray-filter(predicate: (value: T, index: int, array: ReadonlyArray<T>) => boolean): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: int, array: ReadonlyArray&lt;T&gt;) =&gt; boolean | Yes | Function to test each element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: int, array: ReadonlyArray & lt;T & gt;) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | New array with elements that pass the test. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 ## find
 
@@ -141,25 +131,23 @@ Returns the first element in the array that satisfies the provided testing funct
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-find(predicate: (value: T, index: int, obj: ReadonlyArray<T>) => boolean): T | undefined--><!--Device-ReadonlyArray-find(predicate: (value: T, index: int, obj: ReadonlyArray<T>) => boolean): T | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: int, obj: ReadonlyArray&lt;T&gt;) =&gt; boolean | Yes | Function to test each element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: int, obj: ReadonlyArray & lt;T & gt;) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T \| undefined | First element satisfying the test, or undefined if none found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T \| undefined |
 
 ## findIndex
 
@@ -171,25 +159,23 @@ Returns the index of the first element in the array that satisfies the provided 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-findIndex(predicate: (value: T, index: int, obj: ReadonlyArray<T>) => boolean): int--><!--Device-ReadonlyArray-findIndex(predicate: (value: T, index: int, obj: ReadonlyArray<T>) => boolean): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: int, obj: ReadonlyArray&lt;T&gt;) =&gt; boolean | Yes | Function to test each element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: int, obj: ReadonlyArray & lt;T & gt;) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Index of first element satisfying the test, or -1 if none found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## findLast
 
@@ -201,25 +187,23 @@ Returns the last element in the array that satisfies the provided testing functi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-findLast(predicate: (value: T, index: int, obj: ReadonlyArray<T>) => boolean): T | undefined--><!--Device-ReadonlyArray-findLast(predicate: (value: T, index: int, obj: ReadonlyArray<T>) => boolean): T | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: int, obj: ReadonlyArray&lt;T&gt;) =&gt; boolean | Yes | Function to test each element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: int, obj: ReadonlyArray & lt;T & gt;) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T \| undefined | Last element satisfying the test, or undefined if none found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T \| undefined |
 
 ## findLastIndex
 
@@ -231,25 +215,23 @@ Returns the index of the last element in the array that satisfies the provided t
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-findLastIndex(predicate: (value: T, index: int, obj: ReadonlyArray<T>) => boolean): int--><!--Device-ReadonlyArray-findLastIndex(predicate: (value: T, index: int, obj: ReadonlyArray<T>) => boolean): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: int, obj: ReadonlyArray&lt;T&gt;) =&gt; boolean | Yes | Function to test each element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: int, obj: ReadonlyArray & lt;T & gt;) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Index of last element satisfying the test, or -1 if none found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## forEach
 
@@ -261,19 +243,17 @@ Executes a provided function once for each array element.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-forEach(action: (value: T, index: int, array: ReadonlyArray<T>) => void): void--><!--Device-ReadonlyArray-forEach(action: (value: T, index: int, array: ReadonlyArray<T>) => void): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| action | (value: T, index: int, array: ReadonlyArray&lt;T&gt;) =&gt; void | Yes | Function to execute for each element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| action | (value: T, index: int, array: ReadonlyArray & lt;T & gt;) = & gt; void | Yes |
 
 ## includes
 
@@ -285,26 +265,24 @@ Determines whether an array includes a certain value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-includes(searchElement: T, fromIndex?: int): boolean--><!--Device-ReadonlyArray-includes(searchElement: T, fromIndex?: int): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | T | Yes | The value to search for. |
-| fromIndex | int | No | The position in this array at which to begin searching. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | T | Yes |
+| fromIndex | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | True if the value is found, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## indexOf
 
@@ -316,26 +294,24 @@ Returns the first index at which a given element can be found in the array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-indexOf(searchElement: T, fromIndex?: int): int--><!--Device-ReadonlyArray-indexOf(searchElement: T, fromIndex?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | T | Yes | The element to search for. |
-| fromIndex | int | No | The position in this array at which to begin searching. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | T | Yes |
+| fromIndex | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | First index of the element, or -1 if not found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## join
 
@@ -347,25 +323,23 @@ Joins all elements of an array into a string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-join(separator?: string): string--><!--Device-ReadonlyArray-join(separator?: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| separator | string | No | Specifies a string to separate adjacent elements. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| separator | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string with all array elements joined. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## keys
 
@@ -377,19 +351,17 @@ Returns a new iterator object that contains the keys for each index in the array
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-keys(): IterableIterator<int>--><!--Device-ReadonlyArray-keys(): IterableIterator<int>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;int&gt; | New iterator object containing keys. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;int & gt; |
 
 ## lastIndexOf
 
@@ -401,25 +373,23 @@ Returns the last index at which a given element can be found in the array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-lastIndexOf(searchElement: T): int--><!--Device-ReadonlyArray-lastIndexOf(searchElement: T): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | T | Yes | The element to search for. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Last index of the element, or -1 if not found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## lastIndexOf
 
@@ -431,26 +401,24 @@ Returns the last index at which a given element can be found in the array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-lastIndexOf(searchElement: T, fromIndex?: int): int--><!--Device-ReadonlyArray-lastIndexOf(searchElement: T, fromIndex?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | T | Yes | The element to search for. |
-| fromIndex | int | No | The position in this array at which to begin searching backward. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | T | Yes |
+| fromIndex | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Last index of the element, or -1 if not found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## map
 
@@ -462,25 +430,23 @@ Transforms each element of the array using a mapper function and returns a new a
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-map<U>(mapper: (value: T, index: int, array: ReadonlyArray<T>) => U): Array<U>--><!--Device-ReadonlyArray-map<U>(mapper: (value: T, index: int, array: ReadonlyArray<T>) => U): Array<U>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mapper | (value: T, index: int, array: ReadonlyArray&lt;T&gt;) =&gt; U | Yes | Function to transform each element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mapper | (value: T, index: int, array: ReadonlyArray & lt;T & gt;) = & gt; U | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;U&gt; | New array with transformed elements. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;U & gt; |
 
 ## reduce
 
@@ -492,25 +458,23 @@ Applies a function against an accumulator to reduce the array to a single value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-reduce(reducer: (previousValue: T, currentValue: T, currentIndex: int, array: ReadonlyArray<T>) => T): T--><!--Device-ReadonlyArray-reduce(reducer: (previousValue: T, currentValue: T, currentIndex: int, array: ReadonlyArray<T>) => T): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| reducer | (previousValue: T, currentValue: T, currentIndex: int, array: ReadonlyArray&lt;T&gt;) =&gt; T | Yes | Function to execute on each element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| reducer | (previousValue: T, currentValue: T, currentIndex: int, array: ReadonlyArray & lt;T & gt;) = & gt; T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | The value resulting from the reduction. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 ## reduce
 
@@ -523,26 +487,24 @@ Applies a function against an accumulator to reduce the array to a single value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-reduce<U>(reducer: (previousValue: U, currentValue: T, currentIndex: int, array: ReadonlyArray<T>) => U,      initialValue: U): U--><!--Device-ReadonlyArray-reduce<U>(reducer: (previousValue: U, currentValue: T, currentIndex: int, array: ReadonlyArray<T>) => U,      initialValue: U): U-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| reducer | (previousValue: U, currentValue: T, currentIndex: int, array: ReadonlyArray&lt;T&gt;) =&gt; U | Yes | Function to execute on each element. |
-| initialValue | U | Yes | Initial value for the accumulator. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| reducer | (previousValue: U, currentValue: T, currentIndex: int, array: ReadonlyArray & lt;T & gt;) = & gt; U | Yes |
+| initialValue | U | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| U | The value resulting from the reduction. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| U |
 
 ## reduceRight
 
@@ -554,25 +516,23 @@ Applies a function against an accumulator to reduce the array from right to left
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-reduceRight(reducer: (previousValue: T, currentValue: T, currentIndex: int, array: ReadonlyArray<T>) => T): T--><!--Device-ReadonlyArray-reduceRight(reducer: (previousValue: T, currentValue: T, currentIndex: int, array: ReadonlyArray<T>) => T): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| reducer | (previousValue: T, currentValue: T, currentIndex: int, array: ReadonlyArray&lt;T&gt;) =&gt; T | Yes | Function to execute on each element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| reducer | (previousValue: T, currentValue: T, currentIndex: int, array: ReadonlyArray & lt;T & gt;) = & gt; T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | The value resulting from the reduction. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 ## reduceRight
 
@@ -585,26 +545,24 @@ Applies a function against an accumulator to reduce the array from right to left
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-reduceRight<U>(reducer: (previousValue: U, currentValue: T, currentIndex: int, array: ReadonlyArray<T>) => U,      initialValue: U): U--><!--Device-ReadonlyArray-reduceRight<U>(reducer: (previousValue: U, currentValue: T, currentIndex: int, array: ReadonlyArray<T>) => U,      initialValue: U): U-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| reducer | (previousValue: U, currentValue: T, currentIndex: int, array: ReadonlyArray&lt;T&gt;) =&gt; U | Yes | Function to execute on each element. |
-| initialValue | U | Yes | Initial value for the accumulator. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| reducer | (previousValue: U, currentValue: T, currentIndex: int, array: ReadonlyArray & lt;T & gt;) = & gt; U | Yes |
+| initialValue | U | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| U | The value resulting from the reduction. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| U |
 
 ## slice
 
@@ -616,26 +574,24 @@ Returns a shallow copy of a portion of an array into a new array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-slice(start?: int, end?: int): Array<T>--><!--Device-ReadonlyArray-slice(start?: int, end?: int): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | int | No | Start index (inclusive). Defaults to 0. <br>The value should be an integer. |
-| end | int | No | End index (exclusive). Defaults to array length. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | int | No |
+| end | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | New array containing the extracted elements. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 ## some
 
@@ -647,25 +603,23 @@ Tests whether at least one element in the array passes the test implemented by t
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-some(predicate: (value: T, index: int, array: ReadonlyArray<T>) => boolean): boolean--><!--Device-ReadonlyArray-some(predicate: (value: T, index: int, array: ReadonlyArray<T>) => boolean): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: int, array: ReadonlyArray&lt;T&gt;) =&gt; boolean | Yes | Function to test each element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: int, array: ReadonlyArray & lt;T & gt;) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | True if at least one element passes the test, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## values
 
@@ -677,17 +631,14 @@ Returns a new iterator object that contains the values for each index in the arr
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ReadonlyArray-values(): IterableIterator<T>--><!--Device-ReadonlyArray-values(): IterableIterator<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;T&gt; | New iterator object containing values. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;T & gt; |

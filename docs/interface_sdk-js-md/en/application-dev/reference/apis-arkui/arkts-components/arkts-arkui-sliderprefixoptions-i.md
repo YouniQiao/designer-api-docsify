@@ -6,11 +6,11 @@ Provides accessibility configuration of the slider prefix.
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-unnamed-interface SliderPrefixOptions--><!--Device-unnamed-interface SliderPrefixOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,4 +18,3 @@ Provides accessibility configuration of the slider prefix.
 
 ```TypeScript
 ```
-

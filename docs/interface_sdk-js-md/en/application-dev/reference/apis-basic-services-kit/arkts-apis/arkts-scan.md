@@ -6,9 +6,9 @@ This module provides JavaScript APIs of the scan framework for discovering and c
 > 
 > This topic describes only public APIs provided by the module.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-unnamed-declare namespace scan--><!--Device-unnamed-declare namespace scan-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -22,66 +22,65 @@ import { scan } from '@kit.BasicServicesKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [cancelScan](arkts-basicservices-scan-cancelscan-f.md) | Cancels scanning. This API uses a promise to return the result. |
-| [closeScanner](arkts-basicservices-scan-closescanner-f.md) | Closes a scanner. This API uses a promise to return the result. |
-| [exit](arkts-basicservices-scan-exit-f.md) | Exits the scan service. This API uses a promise to return the result. |
-| [getPictureScanProgress](arkts-basicservices-scan-getpicturescanprogress-f.md) | Obtains the progress of scanning a picture. This API uses a promise to return the result. |
-| [getScannerCurrentSetting](arkts-basicservices-scan-getscannercurrentsetting-f.md) | Obtains the current scanner settings. This API uses a promise to return the result. |
-| [getScannerParameter](arkts-basicservices-scan-getscannerparameter-f.md) | Obtains scanner parameters. This API uses a promise to return the result. |
-| [init](arkts-basicservices-scan-init-f.md) | Initializes the scan service. This API uses a promise to return the result. |
-| [off_scanDeviceFound](arkts-basicservices-scan-offscandevicefound-f.md) | Unregisters a callback used to listen for the scanner discovery event. This API uses an asynchronous callback to return the result. |
-| [off_scanDeviceSync](arkts-basicservices-scan-offscandevicesync-f.md) | Unregisters a callback used to listen for the scanner sync event. This API uses an asynchronous callback to return the result. |
-| [offScanDeviceFound](arkts-basicservices-scan-offscandevicefound-f.md) | Unregister event callback for scanner device found. |
-| [offScanDeviceSync](arkts-basicservices-scan-offscandevicesync-f.md) | Unregister event callback for scanner device sync. |
-| [on_scanDeviceFound](arkts-basicservices-scan-onscandevicefound-f.md) | Registers a callback used to listen for the scanner discovery event. This API uses an asynchronous callback to return the result. |
-| [on_scanDeviceSync](arkts-basicservices-scan-onscandevicesync-f.md) | Registers a callback used to listen for the scanner sync event. This API uses an asynchronous callback to return the result. |
-| [onScanDeviceFound](arkts-basicservices-scan-onscandevicefound-f.md) | Register event callback for scanner device found. |
-| [onScanDeviceSync](arkts-basicservices-scan-onscandevicesync-f.md) | Register event callback for scanner device sync. |
-| [openScanner](arkts-basicservices-scan-openscanner-f.md) | Opens a scanner. This API uses a promise to return the result. |
-| [setScanAutoOption](arkts-basicservices-scan-setscanautooption-f.md) | Sets the scan option to auto mode. This API uses a promise to return the result. |
-| [setScannerParameter](arkts-basicservices-scan-setscannerparameter-f.md) | Sets scanner parameters. This API uses a promise to return the result. |
-| [startScan](arkts-basicservices-scan-startscan-f.md) | Starts scanning. This API uses a promise to return the result. |
-| [startScannerDiscovery](arkts-basicservices-scan-startscannerdiscovery-f.md) | Starts scanner discovery. This API uses a promise to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [cancelScan](arkts-basicservices-scan-cancelscan-f.md) |
+| [closeScanner](arkts-basicservices-scan-closescanner-f.md) |
+| [exit](arkts-basicservices-scan-exit-f.md) |
+| [getPictureScanProgress](arkts-basicservices-scan-getpicturescanprogress-f.md) |
+| [getScannerCurrentSetting](arkts-basicservices-scan-getscannercurrentsetting-f.md) |
+| [getScannerParameter](arkts-basicservices-scan-getscannerparameter-f.md) |
+| [init](arkts-basicservices-scan-init-f.md) |
+| [off](arkts-basicservices-scan-off-f.md#offscandevicefound) |
+| [off](arkts-basicservices-scan-off-f.md#offscandevicesync) |
+| [offScanDeviceFound](arkts-basicservices-scan-offscandevicefound-f.md) |
+| [offScanDeviceSync](arkts-basicservices-scan-offscandevicesync-f.md) |
+| [on](arkts-basicservices-scan-on-f.md#onscandevicefound) |
+| [on](arkts-basicservices-scan-on-f.md#onscandevicesync) |
+| [onScanDeviceFound](arkts-basicservices-scan-onscandevicefound-f.md) |
+| [onScanDeviceSync](arkts-basicservices-scan-onscandevicesync-f.md) |
+| [openScanner](arkts-basicservices-scan-openscanner-f.md) |
+| [setScanAutoOption](arkts-basicservices-scan-setscanautooption-f.md) |
+| [setScannerParameter](arkts-basicservices-scan-setscannerparameter-f.md) |
+| [startScan](arkts-basicservices-scan-startscan-f.md) |
+| [startScannerDiscovery](arkts-basicservices-scan-startscannerdiscovery-f.md) |
 
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [addScanner](arkts-basicservices-scan-addscanner-f-sys.md) | Adds a scanner. This API uses a promise to return the result. |
-| [deleteScanner](arkts-basicservices-scan-deletescanner-f-sys.md) | Deletes a scanner. This API uses a promise to return the result. |
-| [getAddedScanners](arkts-basicservices-scan-getaddedscanners-f-sys.md) | Obtains the added scanners. This API uses a promise to return the result. |
-| [off_scanDeviceAdd](arkts-basicservices-scan-offscandeviceadd-f-sys.md) | Unregisters the callback used to listen for the scanner addition event. This API uses an asynchronous callback to return the result. |
-| [off_scanDeviceDel](arkts-basicservices-scan-offscandevicedel-f-sys.md) | Unregisters the callback used to listen for the scanner deletion event. This API uses an asynchronous callback to return the result. |
-| [offScanDeviceAdd](arkts-basicservices-scan-offscandeviceadd-f-sys.md) | Unregister event callback for scanner device add (system API). |
-| [offScanDeviceDel](arkts-basicservices-scan-offscandevicedel-f-sys.md) | Unregister event callback for scanner device delete (system API). |
-| [on_scanDeviceAdd](arkts-basicservices-scan-onscandeviceadd-f-sys.md) | Registers a callback used to listen for the scanner addition event. This API uses an asynchronous callback to return the result. |
-| [on_scanDeviceDel](arkts-basicservices-scan-onscandevicedel-f-sys.md) | Registers a callback used to listen for the scanner deletion event. This API uses an asynchronous callback to return the result. |
-| [onScanDeviceAdd](arkts-basicservices-scan-onscandeviceadd-f-sys.md) | Register event callback for scanner device add (system API). |
-| [onScanDeviceDel](arkts-basicservices-scan-onscandevicedel-f-sys.md) | Register event callback for scanner device delete (system API). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [addScanner](arkts-basicservices-scan-addscanner-f-sys.md) |
+| [deleteScanner](arkts-basicservices-scan-deletescanner-f-sys.md) |
+| [getAddedScanners](arkts-basicservices-scan-getaddedscanners-f-sys.md) |
+| [off](arkts-basicservices-scan-off-f-sys.md#offscandeviceadd) |
+| [off](arkts-basicservices-scan-off-f-sys.md#offscandevicedel) |
+| [offScanDeviceAdd](arkts-basicservices-scan-offscandeviceadd-f-sys.md) |
+| [offScanDeviceDel](arkts-basicservices-scan-offscandevicedel-f-sys.md) |
+| [on](arkts-basicservices-scan-on-f-sys.md#onscandeviceadd) |
+| [on](arkts-basicservices-scan-on-f-sys.md#onscandevicedel) |
+| [onScanDeviceAdd](arkts-basicservices-scan-onscandeviceadd-f-sys.md) |
+| [onScanDeviceDel](arkts-basicservices-scan-onscandevicedel-f-sys.md) |
 <!--DelEnd-->
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [PictureScanProgress](arkts-basicservices-scan-picturescanprogress-i.md) | Defines the progress of scanning pictures. |
-| [Range](arkts-basicservices-scan-range-i.md) | Defines the range. |
-| [ScannerDevice](arkts-basicservices-scan-scannerdevice-i.md) | Defines the scanner. |
-| [ScannerOptionValue](arkts-basicservices-scan-scanneroptionvalue-i.md) | Defines the scanner option value. |
-| [ScannerParameter](arkts-basicservices-scan-scannerparameter-i.md) | Defines the scanner parameters. |
-| [ScannerSyncDevice](arkts-basicservices-scan-scannersyncdevice-i.md) | Defines the device to be synced from the scanner. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PictureScanProgress](arkts-basicservices-scan-picturescanprogress-i.md) |
+| [Range](arkts-basicservices-scan-range-i.md) |
+| [ScannerDevice](arkts-basicservices-scan-scannerdevice-i.md) |
+| [ScannerOptionValue](arkts-basicservices-scan-scanneroptionvalue-i.md) |
+| [ScannerParameter](arkts-basicservices-scan-scannerparameter-i.md) |
+| [ScannerSyncDevice](arkts-basicservices-scan-scannersyncdevice-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [ConstraintType](arkts-basicservices-scan-constrainttype-e.md) | Enumerates the parameter constraint types. |
-| [OptionValueType](arkts-basicservices-scan-optionvaluetype-e.md) | Enumerates the option value types. |
-| [PhysicalUnit](arkts-basicservices-scan-physicalunit-e.md) | Enumerates the physical units. |
-| [ScanErrorCode](arkts-basicservices-scan-scanerrorcode-e.md) | Enumerates the scan error codes. |
-| [ScannerDiscoveryMode](arkts-basicservices-scan-scannerdiscoverymode-e.md) | Enumerates the scanner discovery modes. |
-| [ScannerSyncMode](arkts-basicservices-scan-scannersyncmode-e.md) | Enumerates the scanner sync codes. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ConstraintType](arkts-basicservices-scan-constrainttype-e.md) |
+| [OptionValueType](arkts-basicservices-scan-optionvaluetype-e.md) |
+| [PhysicalUnit](arkts-basicservices-scan-physicalunit-e.md) |
+| [ScanErrorCode](arkts-basicservices-scan-scanerrorcode-e.md) |
+| [ScannerDiscoveryMode](arkts-basicservices-scan-scannerdiscoverymode-e.md) |
+| [ScannerSyncMode](arkts-basicservices-scan-scannersyncmode-e.md) |

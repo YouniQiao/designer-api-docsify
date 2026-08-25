@@ -8,7 +8,7 @@ Defines the callback type used in registering to listen for PrinterState. The va
 
 **起始版本：** 23
 
-<!--Device-print-type PrinterStateChangeCallback = (state: PrinterState, info: PrinterInfo) => void--><!--Device-print-type PrinterStateChangeCallback = (state: PrinterState, info: PrinterInfo) => void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -16,8 +16,7 @@ Defines the callback type used in registering to listen for PrinterState. The va
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| state | [PrinterState](arkts-basicservices-print-printerstate-e.md) | 是 | the state of printer |
-| info | [PrinterInfo](arkts-basicservices-print-printerinfo-i-sys.md) | 是 | the information of the latest printer |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| state | [PrinterState](arkts-basicservices-print-printerstate-e.md) | 是 |
+| info | [PrinterInfo](arkts-basicservices-print-printerinfo-i.md) | 是 |

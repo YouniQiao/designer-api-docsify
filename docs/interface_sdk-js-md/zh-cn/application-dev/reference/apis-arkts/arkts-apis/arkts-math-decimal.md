@@ -10,21 +10,20 @@ import { Decimal } from '@kit.ArkTS';
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [Decimal(定义ArkTS的Decimal类型。Decimal支持任意精度的十进制运算。)](arkts-arkts-math-decimal-decimal-c.md) | 任意精度的Decimal类型。 |
+| 名称 |
+| --- |
+| [Decimal(定义ArkTS的Decimal类型。Decimal支持任意精度的十进制运算。)](arkts-arkts-math-decimal-decimal-c.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [DecimalConfig(定义ArkTS的Decimal类型。Decimal支持任意精度的十进制运算。)](arkts-arkts-math-decimal-decimalconfig-i.md) | 提供Decimal的配置属性，可使用Decimal.set方法进行配置。 |
+| 名称 |
+| --- |
+| [DecimalConfig(定义ArkTS的Decimal类型。Decimal支持任意精度的十进制运算。)](arkts-arkts-math-decimal-decimalconfig-i.md) |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-| [Modulo(定义ArkTS的Decimal类型。Decimal支持任意精度的十进制运算。)](arkts-arkts-modulo-t.md) | 表示可设置的取模方法舍入类型。 |
-| [Rounding(定义ArkTS的Decimal类型。Decimal支持任意精度的十进制运算。)](arkts-arkts-rounding-t.md) | 表示可设置的舍入类型。 |
-| [Value(定义ArkTS的Decimal类型。Decimal支持任意精度的十进制运算。)](arkts-arkts-value-t.md) | 表示用于构建Decimal的参数类型。 |
-
+| 名称 |
+| --- |
+| [Modulo(定义ArkTS的Decimal类型。Decimal支持任意精度的十进制运算。)](arkts-arkts-modulo-t.md) |
+| [Rounding(定义ArkTS的Decimal类型。Decimal支持任意精度的十进制运算。)](arkts-arkts-rounding-t.md) |
+| [Value(定义ArkTS的Decimal类型。Decimal支持任意精度的十进制运算。)](arkts-arkts-value-t.md) |

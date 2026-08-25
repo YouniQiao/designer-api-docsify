@@ -4,7 +4,7 @@ Enumerates the scrolling directions.
 
 **Since:** 8
 
-<!--Device-unnamed-declare enum ScrollBarDirection--><!--Device-unnamed-declare enum ScrollBarDirection-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ Vertical scrollbar.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ScrollBarDirection-Vertical--><!--Device-ScrollBarDirection-Vertical-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,8 @@ Horizontal scrollbar.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ScrollBarDirection-Horizontal--><!--Device-ScrollBarDirection-Horizontal-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

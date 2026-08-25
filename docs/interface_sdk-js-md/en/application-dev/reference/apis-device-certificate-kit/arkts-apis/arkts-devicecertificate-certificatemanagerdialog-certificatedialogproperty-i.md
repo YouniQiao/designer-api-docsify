@@ -2,9 +2,9 @@
 
 Defines the property of the certificate management dialog box.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-certificateManagerDialog-export interface CertificateDialogProperty--><!--Device-certificateManagerDialog-export interface CertificateDialogProperty-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
@@ -24,11 +24,10 @@ Whether to display the button for installing the certificate. The value **true**
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CertificateDialogProperty-showInstallButton: boolean--><!--Device-CertificateDialogProperty-showInstallButton: boolean-End-->
-
 **System capability:** SystemCapability.Security.CertificateManagerDialog
-

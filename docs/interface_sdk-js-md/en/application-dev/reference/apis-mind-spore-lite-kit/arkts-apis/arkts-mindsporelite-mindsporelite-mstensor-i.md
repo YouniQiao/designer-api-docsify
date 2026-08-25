@@ -2,9 +2,9 @@
 
 Provides MSTensor definition
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-mindSporeLite-interface MSTensor--><!--Device-mindSporeLite-interface MSTensor-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -22,19 +22,19 @@ getData(): ArrayBuffer
 
 Get MSTensor data
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MSTensor-getData(): ArrayBuffer--><!--Device-MSTensor-getData(): ArrayBuffer-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ArrayBuffer | the data of tensor |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArrayBuffer |
 
 **Examples**
 
@@ -74,25 +74,25 @@ setData(inputArray: ArrayBuffer): void
 
 Set MSTensor data
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MSTensor-setData(inputArray: ArrayBuffer): void--><!--Device-MSTensor-setData(inputArray: ArrayBuffer): void-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| inputArray | ArrayBuffer | Yes | indicates the buffer of tensor |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| inputArray | ArrayBuffer | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 1000013 | Failed to set MSTensor data. Possible causes: 1. The input array buffer size is incorrect. |
+| Error Code ID |
+| --- |
+| 1000013 |
 
 **Examples**
 
@@ -126,13 +126,13 @@ dataSize: int
 
 The data size of the tensor, the unit is byte.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MSTensor-dataSize: int--><!--Device-MSTensor-dataSize: int-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -146,11 +146,11 @@ The data type of the tensor.
 
 **Type:** DataType
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MSTensor-dtype: DataType--><!--Device-MSTensor-dtype: DataType-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -162,13 +162,13 @@ elementNum: int
 
 The number of elements in the tensor.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MSTensor-elementNum: int--><!--Device-MSTensor-elementNum: int-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -182,11 +182,11 @@ The format of the tensor.
 
 **Type:** [Format](arkts-mindsporelite-mindsporelite-format-e.md)
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MSTensor-format: Format--><!--Device-MSTensor-format: Format-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -200,11 +200,11 @@ The name of the tensor.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MSTensor-name: string--><!--Device-MSTensor-name: string-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -216,13 +216,12 @@ shape: int[]
 
 The shape of the tensor.
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MSTensor-shape: int[]--><!--Device-MSTensor-shape: int[]-End-->
-
 **System capability:** SystemCapability.AI.MindSporeLite
-

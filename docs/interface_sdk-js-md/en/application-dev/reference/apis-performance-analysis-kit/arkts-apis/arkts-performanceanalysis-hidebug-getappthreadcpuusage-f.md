@@ -18,17 +18,17 @@ Obtains the CPU usage of application threads.
 > This API involves cross-process communication and takes a long time. To avoid performance problems, you are
 > advised not to call this API in the main thread.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-hidebug-function getAppThreadCpuUsage(): ThreadCpuUsage[]--><!--Device-hidebug-function getAppThreadCpuUsage(): ThreadCpuUsage[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ThreadCpuUsage](arkts-performanceanalysis-hidebug-threadcpuusage-i.md)[] | CPU usage of all threads of the current application process. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ThreadCpuUsage](arkts-performanceanalysis-hidebug-threadcpuusage-i.md)[] |
 
 **Examples**
 
@@ -40,4 +40,3 @@ for (let i = 0; i < appThreadCpuUsage.length; i++) {
   console.info(`threadId=${appThreadCpuUsage[i].threadId}, cpuUsage=${appThreadCpuUsage[i].cpuUsage}`);
 }
 ```
-

@@ -4,7 +4,7 @@ VerifyPinHandler is a class in the Web component that handles PIN code verificat
 
 **Since:** 22
 
-<!--Device-unnamed-declare class VerifyPinHandler--><!--Device-unnamed-declare class VerifyPinHandler-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -23,15 +23,15 @@ Notifies the Web component of the PIN authentication result. The app calls this 
 
 **Since:** 22
 
-<!--Device-VerifyPinHandler-confirm(result: PinVerifyResult): void--><!--Device-VerifyPinHandler-confirm(result: PinVerifyResult): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| result | [PinVerifyResult](arkts-arkweb-pinverifyresult-e.md) | Yes | PIN authentication result. If successful, the Web component allows subsequent page operations; if failed, page navigation or content loading may be blocked. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| result | [PinVerifyResult](arkts-arkweb-pinverifyresult-e.md) | Yes |
 
 ## constructor
 
@@ -43,7 +43,6 @@ A constructor used to create a **VerifyPinHandler** instance.
 
 **Since:** 22
 
-<!--Device-VerifyPinHandler-constructor()--><!--Device-VerifyPinHandler-constructor()-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

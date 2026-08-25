@@ -4,7 +4,7 @@ Defines the configuration of a geofence.
 
 **Since:** 23
 
-<!--Device-unnamed-export interface Geofence--><!--Device-unnamed-export interface Geofence-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -22,7 +22,7 @@ Coordinate system type of the center point.
 
 **Since:** 23
 
-<!--Device-Geofence-coordinateSystemType:CoordinateSystemType--><!--Device-Geofence-coordinateSystemType:CoordinateSystemType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -36,11 +36,11 @@ delayTime?:int
 
 Delay time of the geofence, in seconds. That is, the delay time before the geofence is triggered after entering the geofence. Value range: [0, 300]. Default value: **0**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
-<!--Device-Geofence-delayTime?:int--><!--Device-Geofence-delayTime?:int-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -54,11 +54,11 @@ latitude:double
 
 Latitude of the geofence center. The value ranges from -90 to 90.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
-<!--Device-Geofence-latitude:double--><!--Device-Geofence-latitude:double-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -72,11 +72,11 @@ longitude:double
 
 Longitude of the geofence center. The value ranges from -180 to 180.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
-<!--Device-Geofence-longitude:double--><!--Device-Geofence-longitude:double-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -94,7 +94,7 @@ Event type for monitoring a geofence.
 
 **Since:** 23
 
-<!--Device-Geofence-monitorEvent:MonitorEvent--><!--Device-Geofence-monitorEvent:MonitorEvent-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -108,13 +108,12 @@ radius:double
 
 Radius of the geofence, in meters. Value range: [200, 2000].
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
-<!--Device-Geofence-radius:double--><!--Device-Geofence-radius:double-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

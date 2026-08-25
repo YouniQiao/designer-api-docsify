@@ -11,9 +11,9 @@ UIObserver提供了UI组件行为变化的无感监听能力，支持监听Navig
 
 **起始版本：** 11
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
-<!--Device-unnamed-declare namespace uiObserver--><!--Device-unnamed-declare namespace uiObserver-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,60 +27,84 @@ import { uiObserver } from '@kit.ArkUI';
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [off_densityUpdate](arkts-arkui-uiobserver-offdensityupdate-f.md#offdensityupdate) | 取消监听屏幕像素密度的变化。 |
-| [off_didLayout](arkts-arkui-uiobserver-offdidlayout-f.md#offdidlayout) | 取消监听每一帧布局完成情况。 |
-| [off_navDestinationSwitch](arkts-arkui-uiobserver-offnavdestinationswitch-f.md#offnavdestinationswitch) | 取消监听Navigation的页面切换事件。 |
-| [off_navDestinationSwitch](arkts-arkui-uiobserver-offnavdestinationswitch-f.md#offnavdestinationswitch) | 取消监听Navigation的页面切换事件。与[uiObserver.off](arkts-arkui-uiobserver-offnavdestinationupdate-f.md#offnavdestinationupdate)相比，新增了observerOptions参数，即支持设置监听选项。 |
-| [off_navDestinationUpdate](arkts-arkui-uiobserver-offnavdestinationupdate-f.md#offnavdestinationupdate) | 取消监听NavDestination组件的状态变化。与[uiObserver.off](arkts-arkui-uiobserver-offnavdestinationupdate-f.md#offnavdestinationupdate)相比，新增了options参数，即支持指定监听的Navigation的id。 |
-| [off_navDestinationUpdate](arkts-arkui-uiobserver-offnavdestinationupdate-f.md#offnavdestinationupdate) | 取消监听NavDestination组件的状态变化。 |
-| [off_routerPageUpdate](arkts-arkui-uiobserver-offrouterpageupdate-f.md#offrouterpageupdate) | 取消监听router中page页面的状态变化。 |
-| [off_scrollEvent](arkts-arkui-uiobserver-offscrollevent-f.md#offscrollevent) | Removes a callback function that was previously registered with `on()`. |
-| [off_scrollEvent](arkts-arkui-uiobserver-offscrollevent-f.md#offscrollevent) | Removes a callback function that was previously registered with `on()`. |
-| [off_tabContentUpdate](arkts-arkui-uiobserver-offtabcontentupdate-f.md#offtabcontentupdate) | 取消监听指定Tabs组件id的TabContent页面切换事件。 |
-| [off_tabContentUpdate](arkts-arkui-uiobserver-offtabcontentupdate-f.md#offtabcontentupdate) | 取消监听TabContent页面的切换事件。 |
-| [off_willDraw](arkts-arkui-uiobserver-offwilldraw-f.md#offwilldraw) | 取消监听每一帧绘制指令下发情况。 |
-| [on_densityUpdate](arkts-arkui-uiobserver-ondensityupdate-f.md#ondensityupdate) | 监听屏幕像素密度变化。 |
-| [on_didLayout](arkts-arkui-uiobserver-ondidlayout-f.md#ondidlayout) | 监听每一帧布局完成情况。 |
-| [on_navDestinationSwitch](arkts-arkui-uiobserver-onnavdestinationswitch-f.md#onnavdestinationswitch) | 监听Navigation的页面切换事件。 |
-| [on_navDestinationSwitch](arkts-arkui-uiobserver-onnavdestinationswitch-f.md#onnavdestinationswitch) | 监听Navigation的页面切换事件。与[uiObserver.on](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#onnavdestinationupdate)相比，新增了observerOptions参数，即支持设置监听选项。 |
-| [on_navDestinationUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#onnavdestinationupdate) | 监听NavDestination组件的状态变化。与 * [uiObserver.on](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#onnavdestinationupdate)相比，新增了options参数，即支持指定监听的Navigation的id。 |
-| [on_navDestinationUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#onnavdestinationupdate) | 监听NavDestination组件的状态变化。 |
-| [on_routerPageUpdate](arkts-arkui-uiobserver-onrouterpageupdate-f.md#onrouterpageupdate) | 监听router中page页面的状态变化。 |
-| [on_scrollEvent](arkts-arkui-uiobserver-onscrollevent-f.md#onscrollevent) | Registers a callback function to be called when the scroll event start or stop. |
-| [on_scrollEvent](arkts-arkui-uiobserver-onscrollevent-f.md#onscrollevent) | Registers a callback function to be called when the scroll event start or stop. |
-| [on_tabContentUpdate](arkts-arkui-uiobserver-ontabcontentupdate-f.md#ontabcontentupdate) | 监听指定Tabs组件id的TabContent页面切换事件。相比[on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#onnavdestinationupdate)，本接口不支持监听Tabs组件初始化时，显示首个页签的事件。 |
-| [on_tabContentUpdate](arkts-arkui-uiobserver-ontabcontentupdate-f.md#ontabcontentupdate) | 监听TabContent页面的切换事件。相比[on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#onnavdestinationupdate)，本接口不支持监听Tabs组件初始化时，显示首个页签的事件。 |
-| [on_willDraw](arkts-arkui-uiobserver-onwilldraw-f.md#onwilldraw) | 监听每一帧绘制指令下发情况。 |
+| 名称 |
+| --- |
+| [off](arkts-arkui-uiobserver-off-f.md#offnavdestinationupdate) |
+| [off](arkts-arkui-uiobserver-off-f.md#offnavdestinationupdate) |
+| [off](arkts-arkui-uiobserver-off-f.md#offscrollevent) |
+| [off](arkts-arkui-uiobserver-off-f.md#offscrollevent) |
+| [off](arkts-arkui-uiobserver-off-f.md#offrouterpageupdate) |
+| [off](arkts-arkui-uiobserver-off-f.md#offdensityupdate) |
+| [off](arkts-arkui-uiobserver-off-f.md#offwilldraw) |
+| [off](arkts-arkui-uiobserver-off-f.md#offdidlayout) |
+| [off](arkts-arkui-uiobserver-off-f.md#offtabcontentupdate) |
+| [off](arkts-arkui-uiobserver-off-f.md#offtabcontentupdate) |
+| [off](arkts-arkui-uiobserver-off-f.md#offnavdestinationswitch) |
+| [off](arkts-arkui-uiobserver-off-f.md#offnavdestinationswitch) |
+| [offDensityUpdate](arkts-arkui-uiobserver-offdensityupdate-f.md) |
+| [offDidLayout](arkts-arkui-uiobserver-offdidlayout-f.md) |
+| [offNavDestinationSwitch](arkts-arkui-uiobserver-offnavdestinationswitch-f.md) |
+| [offNavDestinationSwitch](arkts-arkui-uiobserver-offnavdestinationswitch-f.md) |
+| [offNavDestinationUpdate](arkts-arkui-uiobserver-offnavdestinationupdate-f.md) |
+| [offNavDestinationUpdate](arkts-arkui-uiobserver-offnavdestinationupdate-f.md) |
+| [offRouterPageUpdate](arkts-arkui-uiobserver-offrouterpageupdate-f.md) |
+| [offScrollEvent](arkts-arkui-uiobserver-offscrollevent-f.md) |
+| [offScrollEvent](arkts-arkui-uiobserver-offscrollevent-f.md) |
+| [offTabContentUpdate](arkts-arkui-uiobserver-offtabcontentupdate-f.md) |
+| [offTabContentUpdate](arkts-arkui-uiobserver-offtabcontentupdate-f.md) |
+| [offWillDraw](arkts-arkui-uiobserver-offwilldraw-f.md) |
+| [on](arkts-arkui-uiobserver-on-f.md#onnavdestinationupdate) |
+| [on](arkts-arkui-uiobserver-on-f.md#onnavdestinationupdate) |
+| [on](arkts-arkui-uiobserver-on-f.md#onscrollevent) |
+| [on](arkts-arkui-uiobserver-on-f.md#onscrollevent) |
+| [on](arkts-arkui-uiobserver-on-f.md#onrouterpageupdate) |
+| [on](arkts-arkui-uiobserver-on-f.md#ondensityupdate) |
+| [on](arkts-arkui-uiobserver-on-f.md#onwilldraw) |
+| [on](arkts-arkui-uiobserver-on-f.md#ondidlayout) |
+| [on](arkts-arkui-uiobserver-on-f.md#ontabcontentupdate) |
+| [on](arkts-arkui-uiobserver-on-f.md#ontabcontentupdate) |
+| [on](arkts-arkui-uiobserver-on-f.md#onnavdestinationswitch) |
+| [on](arkts-arkui-uiobserver-on-f.md#onnavdestinationswitch) |
+| [onDensityUpdate](arkts-arkui-uiobserver-ondensityupdate-f.md) |
+| [onDidLayout](arkts-arkui-uiobserver-ondidlayout-f.md) |
+| [onNavDestinationSwitch](arkts-arkui-uiobserver-onnavdestinationswitch-f.md) |
+| [onNavDestinationSwitch](arkts-arkui-uiobserver-onnavdestinationswitch-f.md) |
+| [onNavDestinationUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md) |
+| [onNavDestinationUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md) |
+| [onRouterPageUpdate](arkts-arkui-uiobserver-onrouterpageupdate-f.md) |
+| [onScrollEvent](arkts-arkui-uiobserver-onscrollevent-f.md) |
+| [onScrollEvent](arkts-arkui-uiobserver-onscrollevent-f.md) |
+| [onTabContentUpdate](arkts-arkui-uiobserver-ontabcontentupdate-f.md) |
+| [onTabContentUpdate](arkts-arkui-uiobserver-ontabcontentupdate-f.md) |
+| [onWillDraw](arkts-arkui-uiobserver-onwilldraw-f.md) |
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [DensityInfo](arkts-arkui-uiobserver-densityinfo-c.md) | 屏幕像素密度变化回调包含的信息。 |
-| [RouterPageInfo](arkts-arkui-uiobserver-routerpageinfo-c.md) | RouterPageInfo包含的信息，由系统返回给开发者。 |
-| [WindowSizeLayoutBreakpointInfo](arkts-arkui-uiobserver-windowsizelayoutbreakpointinfo-c.md) | 窗口尺寸布局断点变化回调的信息。 |
+| 名称 |
+| --- |
+| [DensityInfo](arkts-arkui-uiobserver-densityinfo-c.md) |
+| [RouterPageInfo](arkts-arkui-uiobserver-routerpageinfo-c.md) |
+| [WindowSizeLayoutBreakpointInfo](arkts-arkui-uiobserver-windowsizelayoutbreakpointinfo-c.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) | NavDestination组件信息，由系统返回给开发者。 |
-| [NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md) | Navigation组件页面切换的信息。 |
-| [NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | Navigation组件页面切换事件的监听选项。 |
-| [NavigationInfo](arkts-arkui-uiobserver-navigationinfo-i.md) | Navigation组件信息。 |
-| [ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | Observer选项。 |
-| [ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md) | ScrollEvent info.@interface ScrollEventInfo |
-| [TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md) | TabContent页面的切换信息。 |
-| [TextChangeEventInfo](arkts-arkui-uiobserver-textchangeeventinfo-i.md) | Text change event info@interface TextChangeEventInfo |
+| 名称 |
+| --- |
+| [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) |
+| [NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md) |
+| [NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) |
+| [NavigationInfo](arkts-arkui-uiobserver-navigationinfo-i.md) |
+| [ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) |
+| [ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md) |
+| [TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md) |
+| [TextChangeEventInfo](arkts-arkui-uiobserver-textchangeeventinfo-i.md) |
+| [WindowSizeLayoutBreakpointInfo](arkts-arkui-uiobserver-windowsizelayoutbreakpointinfo-i.md) |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-| [NavDestinationState](arkts-arkui-uiobserver-navdestinationstate-e.md) | NavDestination组件状态。 |
-| [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md) | routerPage生命周期触发时对应的状态。RouterPageState用于[RouterPageInfo](../../apis-default/arkts-apis/arkts-uiobserver-routerpageinfo-c.md)中，作为 [routerPageUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#onnavdestinationupdate)无感监听的返回值。 |
-| [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md) | ScrollEvent type.@enum { number } |
-| [TabContentState](arkts-arkui-uiobserver-tabcontentstate-e.md) | TabContent组件的状态。 |
-
+| 名称 |
+| --- |
+| [NavDestinationState](arkts-arkui-uiobserver-navdestinationstate-e.md) |
+| [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md) |
+| [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md) |
+| [TabContentState](arkts-arkui-uiobserver-tabcontentstate-e.md) |

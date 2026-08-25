@@ -2,9 +2,9 @@
 
 Represents the storage information about a certificate, including the certificate type and location.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-certificateManager-export interface CertStoreProperty--><!--Device-certificateManager-export interface CertStoreProperty-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -24,9 +24,9 @@ Certificate algorithm. This parameter is valid only when **certType** is set to 
 
 **Type:** [CertAlgorithm](arkts-devicecertificate-certificatemanager-certalgorithm-e.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-CertStoreProperty-certAlg?: CertAlgorithm--><!--Device-CertStoreProperty-certAlg?: CertAlgorithm-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -40,9 +40,9 @@ Scope of the certificate. This parameter is mandatory when **certType** is **CA_
 
 **Type:** [CertScope](arkts-devicecertificate-certificatemanager-certscope-e.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-CertStoreProperty-certScope?: CertScope--><!--Device-CertStoreProperty-certScope?: CertScope-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -56,9 +56,8 @@ Type of the certificate.
 
 **Type:** CertType
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-CertStoreProperty-certType: CertType--><!--Device-CertStoreProperty-certType: CertType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
-

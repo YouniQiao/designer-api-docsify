@@ -16,9 +16,9 @@ function onMission(listener: MissionListener): long
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.MANAGE_MISSIONS
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-missionManager-function onMission(listener: MissionListener): long--><!--Device-missionManager-function onMission(listener: MissionListener): long-End-->
+**需要权限：** ohos.permission.MANAGE_MISSIONS
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -26,22 +26,22 @@ function onMission(listener: MissionListener): long
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| listener | MissionListener | 是 | 系统任务监听器。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| listener | [MissionListener](arkts-ability-missionmanager-missionlistener-t-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 监听器的index值，由系统创建，在注册系统任务状态监听时分配，和监听器一一对应 。 |
+| 类型 |
+| --- |
+| long |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -134,4 +134,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

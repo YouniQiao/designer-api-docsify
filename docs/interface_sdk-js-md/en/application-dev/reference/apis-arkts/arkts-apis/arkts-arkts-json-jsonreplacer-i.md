@@ -4,9 +4,7 @@ Interface for customizing JSON serialization.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export interface JsonReplacer--><!--Device-unnamed-export interface JsonReplacer-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,17 +23,14 @@ Method to customize JSON serialization.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonReplacer-jsonReplacer(): Record<string, Any>--><!--Device-JsonReplacer-jsonReplacer(): Record<string, Any>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Record&lt;string, Any&gt; | A record representing the serialized object |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Record & lt;string, Any & gt; |

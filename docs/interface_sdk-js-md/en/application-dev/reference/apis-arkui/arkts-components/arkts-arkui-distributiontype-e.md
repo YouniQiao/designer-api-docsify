@@ -4,7 +4,7 @@ Enumerates the color distribution types of a particle.@enum { number }
 
 **Since:** 12
 
-<!--Device-unnamed-declare enum DistributionType--><!--Device-unnamed-declare enum DistributionType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ The initial color random values are distributed uniformly.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DistributionType-UNIFORM = 0--><!--Device-DistributionType-UNIFORM = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ The initial color random values are distributed according to a Gaussian distribu
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-DistributionType-GAUSSIAN = 1--><!--Device-DistributionType-GAUSSIAN = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

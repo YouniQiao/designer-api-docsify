@@ -5,9 +5,9 @@
 **实现机制**：  
 - 校验机制：验证升级包是否为官方发布且未被篡改，检查签名、完整性和版本兼容性。 - 安装机制：解压并写入升级包内容到系统分区，准备重启应用新版本。 - 安全保证：必须先校验升级包，确保来源可信后方可安装。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-update-export interface LocalUpdater--><!--Device-update-export interface LocalUpdater-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -30,11 +30,11 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>)
 - 必须先调用verifyUpgradePackage校验升级包并校验通过后，才能调用本方法安装升级包。 - 未校验直接调用本方法可能导致安装失败或系统损坏，必须先调用verifyUpgradePackage校验升级包。 - 调用成功后，系统将解压并写入升级包内容到系统分区，准备重启以应用新版本，开发者可通过监听事件跟踪安装进度。 - 通过安装升级包可以完成系统版本更新。  
 使用场景：从本地存储设备(如SD卡)进行系统升级、完成本地升级流程。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
-
-<!--Device-LocalUpdater-applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>): void--><!--Device-LocalUpdater-applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -42,19 +42,19 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| upgradeFiles | Array&lt;[UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md)&gt; | 是 | 升级文件数组，用于指定要安装的本地升级包列表。必须先调用verifyUpgradePackage校验升级包并校验通过后才能使用此参数安 装。每个元素包含fileType(文件类型)和filePath(文件路径)字段，filePath长度范围[1，255]，单位：字符。超出范围时抛出异常，由开发者提供升级包文件路径。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收安装升级包结果。回调参数包括： err(错误对象，成功时为null，失败时为错误对象)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| upgradeFiles | Array&lt;[UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md)&gt; | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter verification failed. |
-| 11500104 | IPC error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 11500104 |
 
 **示例**
 
@@ -105,11 +105,11 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>
 - 必须先调用verifyUpgradePackage校验升级包并校验通过后，才能调用本方法安装升级包。 - 未校验直接调用本方法可能导致安装失败或系统损坏，必须先调用verifyUpgradePackage校验升级包。 - 调用成功后，系统将解压并写入升级包内容到系统分区，准备重启以应用新版本，可通过监听事件跟踪安装进度。 - 通过安装升级包可以完成系统版本更新。  
 使用场景：从本地存储设备(如SD卡)进行系统升级、完成本地升级流程。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
-
-<!--Device-LocalUpdater-applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>--><!--Device-LocalUpdater-applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -117,30 +117,30 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| upgradeFiles | Array&lt;[UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md)&gt; | 是 | 升级文件数组，用于指定要安装的本地升级包列表。必须先调用verifyUpgradePackage校验升级包并校验通过后才能使用此参数安 装。每个元素包含fileType(文件类型)和filePath(文件路径)字段，filePath长度范围[1，255], 单位：字符。超出范围时抛出异常，由开发者提供升级包文件路径。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| upgradeFiles | Array&lt;[UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md)&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。成功时resolve无返回结果，失败时reject返回错误信息。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter verification failed. |
-| 11500104 | IPC error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 11500104 |
 
 **示例**
 
 参见 [applyNewVersion](#applynewversion)
 
-## off_EventClassifyInfo
+## off
 
 ```TypeScript
 off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void
@@ -151,9 +151,9 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 **配对调用说明**：  
 - 与on()配对使用，用于取消已注册的事件监听。 - 须在已通过on()注册监听后，才能调用本方法取消监听。 - 建议在升级流程结束后或页面销毁时调用，及时释放资源。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-LocalUpdater-off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void--><!--Device-LocalUpdater-off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -161,18 +161,40 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | 是 | 事件信息对象（EventClassifyInfo），用于指定要取消监听的升级事件类型。必须先通过on方法注册监听后才能使用此参数 取消监听。 |
-| taskCallback | [UpgradeTaskCallback](arkts-basicservices-update-upgradetaskcallback-t-sys.md) | 否 | 事件回调，用于取消指定回调监听。回调签名：(eventInfo: EventInfo) =&gt; void，其中eventInfo为事件信 息对象，包含eventId和taskBody字段。当需要取消特定回调监听时传入此参数；不传入此参数时默认为undefined，表示取消该事件类型的所有监听。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | 是 |
+| taskCallback | [UpgradeTaskCallback](arkts-basicservices-update-upgradetaskcallback-t-sys.md) | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
+
+```TypeScript
+const eventClassifyInfo: update.EventClassifyInfo = {
+  eventClassify: update.EventClassify.TASK, // 订阅升级更新事件
+  extraInfo: ""
+};
+try {
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: "com.ohos.ota.updateclient",
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC,
+      subType: update.BusinessSubType.FIRMWARE
+    }
+  };
+  let updater = update.getOnlineUpdater(upgradeInfo);
+  updater.off(eventClassifyInfo, (eventInfo: update.EventInfo) => {
+    console.info(`updater off ${JSON.stringify(eventInfo)}`);
+  });
+} catch(error) {
+  console.error(`Fail to get updater error: ${error}`);
+}
+```
 
 ```TypeScript
 const eventClassifyInfo: update.EventClassifyInfo = {
@@ -192,7 +214,7 @@ try {
 }
 ```
 
-## on_EventClassifyInfo
+## on
 
 ```TypeScript
 on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void
@@ -205,9 +227,9 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 **使用建议**：  
 - 在调用applyNewVersion等长时间操作前注册监听。 - 在操作完成或收到最终事件后取消监听。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-LocalUpdater-on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void--><!--Device-LocalUpdater-on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -215,18 +237,40 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | 是 | 事件信息对象(EventClassifyInfo)，用于指定要注册监听的升级事件类型。 |
-| taskCallback | [UpgradeTaskCallback](arkts-basicservices-update-upgradetaskcallback-t-sys.md) | 是 | 事件回调，用于接收升级任务事件通知。回调签名：(eventInfo: EventInfo) =&gt; void，其中eventInfo为事 件信息对象，包含eventId（事件ID）和taskBody（任务数据）字段。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | 是 |
+| taskCallback | [UpgradeTaskCallback](arkts-basicservices-update-upgradetaskcallback-t-sys.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
+
+```TypeScript
+const eventClassifyInfo: update.EventClassifyInfo = {
+  eventClassify: update.EventClassify.TASK, // 订阅升级更新事件
+  extraInfo: ""
+};
+try {
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: "com.ohos.ota.updateclient",
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC,
+      subType: update.BusinessSubType.FIRMWARE
+    }
+  };
+  let updater = update.getOnlineUpdater(upgradeInfo);
+  updater.on(eventClassifyInfo, (eventInfo: update.EventInfo) => {
+    console.info(`updater on ${JSON.stringify(eventInfo)}`);
+  });
+} catch(error) {
+  console.error(`Fail to get updater error: ${error}`);
+}
+```
 
 ```TypeScript
 const eventClassifyInfo: update.EventClassifyInfo = {
@@ -259,11 +303,11 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: Asyn
 **相关方法**：  
 - applyNewVersion()：安装升级包（校验通过后调用）。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
-
-<!--Device-LocalUpdater-verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: AsyncCallback<void>): void--><!--Device-LocalUpdater-verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -271,20 +315,20 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: Asyn
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| upgradeFile | [UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md) | 是 | 升级文件（UpgradeFile），包含文件类型和文件路径，用于指定要校验的本地升级包。 |
-| certsFile | string | 是 | 证书文件路径，用于校验升级包签名。证书文件必须从设备厂商官网下载，确保来源可信。支持绝对路径或相对路径，路径长度范围[1，255]，单位：字符。仅支持字母、数字、下划 线、连字符、点号和斜杠等路径合法字符。超出长度范围或包含无效字符时抛出异常。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收校验结果。回调参数包括： err(错误对象，成功时为null，失败时为错误对象)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| upgradeFile | [UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md) | 是 |
+| certsFile | string | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter verification failed. |
-| 11500104 | IPC error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 11500104 |
 
 **示例**
 
@@ -335,11 +379,11 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>
 **调用顺序说明**：  
 - 升级包必须从设备厂商官网或官方渠道下载，确保来源可信。使用非官方渠道下载的升级包可能存在安全风险。 - 必须先调用verifyUpgradePackage校验升级包并校验通过后，才能调用applyNewVersion安装升级包。 - 未校验直接调用applyNewVersion会导致安装失败，可能造成系统损坏。 - 校验通过后的升级包可用于后续安装流程。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
-
-<!--Device-LocalUpdater-verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>--><!--Device-LocalUpdater-verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -347,27 +391,26 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| upgradeFile | [UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md) | 是 | 升级文件（UpgradeFile），包含文件类型和文件路径，用于指定要校验的本地升级包。 |
-| certsFile | string | 是 | 证书文件路径，用于校验升级包签名。证书文件必须从设备厂商官网下载，确保来源可信。支持绝对路径或相对路径，路径长度范围[1，255]，单位：字符。仅支持字母、数字、下划 线、连字符、点号和斜杠等路径合法字符。超出长度范围或包含无效字符时抛出异常。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| upgradeFile | [UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md) | 是 |
+| certsFile | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。成功时resolve无返回结果，失败时reject返回错误信息。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter verification failed. |
-| 11500104 | IPC error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 11500104 |
 
 **示例**
 
 参见 [verifyUpgradePackage](#verifyupgradepackage)
-

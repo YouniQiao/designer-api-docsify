@@ -1,10 +1,10 @@
 # Stat
 
-文件具体信息，包含文件大小、权限模式、访问时间、修改时间等属性。在调用Stat的方法前，需要先通过stat()方法（同步或异步）构建一个 Stat实例。
+文件具体信息，包含文件大小、权限模式、访问时间、修改时间等属性。在调用Stat的方法前，需要先通过[stat()](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiostat)方法（同步或异步）构建一个 Stat实例。
 
 **起始版本：** 9
 
-<!--Device-unnamed-declare interface Stat--><!--Device-unnamed-declare interface Stat-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -26,22 +26,22 @@ isBlockDevice(): boolean
 
 **起始版本：** 9
 
-<!--Device-Stat-isBlockDevice(): boolean--><!--Device-Stat-isBlockDevice(): boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 表示文件是否是块特殊设备。true：是块特殊设备；false：不是块特殊设备。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900005 | I/O error |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900005 |
+| 13900042 |
 
 **示例**
 
@@ -60,22 +60,22 @@ isCharacterDevice(): boolean
 
 **起始版本：** 9
 
-<!--Device-Stat-isCharacterDevice(): boolean--><!--Device-Stat-isCharacterDevice(): boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 表示文件是否是字符特殊设备。true：是字符特殊设备；false：不是字符特殊设备。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900005 | I/O error |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900005 |
+| 13900042 |
 
 **示例**
 
@@ -94,24 +94,24 @@ isDirectory(): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Stat-isDirectory(): boolean--><!--Device-Stat-isDirectory(): boolean-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 表示文件是否是目录。true：是目录；false：不是目录。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900005 | I/O error |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900005 |
+| 13900042 |
 
 **示例**
 
@@ -130,22 +130,22 @@ isFIFO(): boolean
 
 **起始版本：** 9
 
-<!--Device-Stat-isFIFO(): boolean--><!--Device-Stat-isFIFO(): boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 表示文件是否是 FIFO。true：是FIFO；false：不是FIFO。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900005 | I/O error |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900005 |
+| 13900042 |
 
 **示例**
 
@@ -164,24 +164,24 @@ isFile(): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Stat-isFile(): boolean--><!--Device-Stat-isFile(): boolean-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 表示文件是否是普通文件。true：是普通文件；false：不是普通文件。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900005 | I/O error |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900005 |
+| 13900042 |
 
 **示例**
 
@@ -200,22 +200,22 @@ isSocket(): boolean
 
 **起始版本：** 9
 
-<!--Device-Stat-isSocket(): boolean--><!--Device-Stat-isSocket(): boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 表示文件是否是套接字。true：是套接字；false：不是套接字。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900005 | I/O error |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900005 |
+| 13900042 |
 
 **示例**
 
@@ -234,22 +234,22 @@ isSymbolicLink(): boolean
 
 **起始版本：** 9
 
-<!--Device-Stat-isSymbolicLink(): boolean--><!--Device-Stat-isSymbolicLink(): boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 表示文件是否是符号链接。true：是符号链接；false：不是符号链接。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900005 | I/O error |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900005 |
+| 13900042 |
 
 **示例**
 
@@ -271,9 +271,9 @@ readonly atime: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Stat-readonly atime: number--><!--Device-Stat-readonly atime: number-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -290,7 +290,7 @@ readonly atimeNs?:bigint
 
 **起始版本：** 15
 
-<!--Device-Stat-readonly atimeNs?:bigint--><!--Device-Stat-readonly atimeNs?:bigint-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -306,7 +306,7 @@ readonly ctime: number
 
 **起始版本：** 9
 
-<!--Device-Stat-readonly ctime: number--><!--Device-Stat-readonly ctime: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -322,7 +322,7 @@ readonly ctimeNs?:bigint
 
 **起始版本：** 15
 
-<!--Device-Stat-readonly ctimeNs?:bigint--><!--Device-Stat-readonly ctimeNs?:bigint-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -338,7 +338,7 @@ readonly gid: number
 
 **起始版本：** 9
 
-<!--Device-Stat-readonly gid: number--><!--Device-Stat-readonly gid: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -354,7 +354,7 @@ readonly ino: bigint
 
 **起始版本：** 9
 
-<!--Device-Stat-readonly ino: bigint--><!--Device-Stat-readonly ino: bigint-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -370,7 +370,7 @@ readonly location: LocationType
 
 **起始版本：** 11
 
-<!--Device-Stat-readonly location: LocationType--><!--Device-Stat-readonly location: LocationType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -396,9 +396,9 @@ readonly mode: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Stat-readonly mode: number--><!--Device-Stat-readonly mode: number-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -414,9 +414,9 @@ readonly mtime: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Stat-readonly mtime: number--><!--Device-Stat-readonly mtime: number-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -432,7 +432,7 @@ readonly mtimeNs?:bigint
 
 **起始版本：** 15
 
-<!--Device-Stat-readonly mtimeNs?:bigint--><!--Device-Stat-readonly mtimeNs?:bigint-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -448,9 +448,9 @@ readonly size: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Stat-readonly size: number--><!--Device-Stat-readonly size: number-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -466,7 +466,6 @@ readonly uid: number
 
 **起始版本：** 9
 
-<!--Device-Stat-readonly uid: number--><!--Device-Stat-readonly uid: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
-

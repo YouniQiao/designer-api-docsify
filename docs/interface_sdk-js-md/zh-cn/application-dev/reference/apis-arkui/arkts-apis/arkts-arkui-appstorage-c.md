@@ -10,7 +10,7 @@ AppStorage是与应用进程绑定的全局UI状态存储中心，由UI框架在
 
 **起始版本：** 7
 
-<!--Device-unnamed-declare class AppStorage--><!--Device-unnamed-declare class AppStorage-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,19 +29,19 @@ static Clear(): boolean
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 10
 
 **替代接口：** [clear](#clear)
-
-<!--Device-AppStorage-static Clear(): boolean--><!--Device-AppStorage-static Clear(): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果AppStorage中的属性已经没有订阅者则删除成功，返回true。否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -60,17 +60,17 @@ static clear(): boolean
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-AppStorage-static clear(): boolean--><!--Device-AppStorage-static clear(): boolean-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果AppStorage中的属性已经没有订阅者则删除成功，返回true；如果当前仍有订阅者，返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -95,25 +95,25 @@ static Delete(propName: string): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [delete](#delete)
-
-<!--Device-AppStorage-static Delete(propName: string): boolean--><!--Device-AppStorage-static Delete(propName: string): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果AppStorage中有对应的属性，且该属性已经没有订阅者，则删除成功，返回true。如果属性不存在，或者该属性还存在订阅者，则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -141,23 +141,23 @@ static delete(propName: string): boolean
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-AppStorage-static delete(propName: string): boolean--><!--Device-AppStorage-static delete(propName: string): boolean-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果AppStorage中有对应的属性，且该属性已经没有订阅者，则删除成功，返回true。如果属性不存在，或者该属性还存在订阅者，则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -190,25 +190,25 @@ static Get<T>(propName: string): T | undefined
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [get](#get)
-
-<!--Device-AppStorage-static Get<T>(propName: string): T | undefined--><!--Device-AppStorage-static Get<T>(propName: string): T | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T \| undefined | AppStorage中propName对应的属性值，如果不存在则返回undefined。 |
+| 类型 |
+| --- |
+| T \| undefined |
 
 **示例**
 
@@ -227,23 +227,23 @@ static get<T>(propName: string): T | undefined
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-AppStorage-static get<T>(propName: string): T | undefined--><!--Device-AppStorage-static get<T>(propName: string): T | undefined-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T \| undefined | AppStorage中propName对应的属性值，如果不存在则返回undefined。 |
+| 类型 |
+| --- |
+| T \| undefined |
 
 **示例**
 
@@ -280,25 +280,25 @@ static Has(propName: string): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [has](#has)
-
-<!--Device-AppStorage-static Has(propName: string): boolean--><!--Device-AppStorage-static Has(propName: string): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果propName对应的属性在AppStorage中存在，则返回true。不存在则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -316,23 +316,23 @@ static has(propName: string): boolean
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-AppStorage-static has(propName: string): boolean--><!--Device-AppStorage-static has(propName: string): boolean-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果propName对应的属性在AppStorage中存在，则返回true。不存在则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -359,23 +359,23 @@ static IsMutable(propName: string): boolean
 
 **起始版本：** 7
 
-**废弃版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-AppStorage-static IsMutable(propName: string): boolean--><!--Device-AppStorage-static IsMutable(propName: string): boolean-End-->
+**废弃版本：** 10
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回AppStorage中propName对应的属性是否是可变的。当前该返回值恒为true。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -394,19 +394,19 @@ static Keys(): IterableIterator<string>
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [keys](#keys)
-
-<!--Device-AppStorage-static Keys(): IterableIterator<string>--><!--Device-AppStorage-static Keys(): IterableIterator<string>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | AppStorage中所有的属性名。 |
+| 类型 |
+| --- |
+| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; |
 
 **示例**
 
@@ -438,17 +438,17 @@ static keys(): IterableIterator<string>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-AppStorage-static keys(): IterableIterator<string>--><!--Device-AppStorage-static keys(): IterableIterator<string>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | AppStorage中所有的属性名。 |
+| 类型 |
+| --- |
+| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; |
 
 **示例**
 
@@ -486,25 +486,25 @@ static Link(propName: string): any
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [link](#link)
-
-<!--Device-AppStorage-static Link(propName: string): any--><!--Device-AppStorage-static Link(propName: string): any-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| any | 返回双向绑定的数据，如果AppStorage中不存在对应的propName，则返回undefined。 |
+| 类型 |
+| --- |
+| any |
 
 **示例**
 
@@ -525,23 +525,23 @@ static link<T>(propName: string): SubscribedAbstractProperty<T>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-AppStorage-static link<T>(propName: string): SubscribedAbstractProperty<T>--><!--Device-AppStorage-static link<T>(propName: string): SubscribedAbstractProperty<T>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | 返回双向绑定的数据，如果AppStorage中不存在对应的propName，则返回undefined。 |
+| 类型 |
+| --- |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
 
 **示例**
 
@@ -573,25 +573,25 @@ static Prop(propName: string): any
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [prop](#prop)
-
-<!--Device-AppStorage-static Prop(propName: string): any--><!--Device-AppStorage-static Prop(propName: string): any-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| any | 返回单向绑定的数据，如果AppStorage中不存在对应的propName，则返回undefined。 |
+| 类型 |
+| --- |
+| any |
 
 **示例**
 
@@ -612,23 +612,23 @@ static prop<T>(propName: string): SubscribedAbstractProperty<T>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-AppStorage-static prop<T>(propName: string): SubscribedAbstractProperty<T>--><!--Device-AppStorage-static prop<T>(propName: string): SubscribedAbstractProperty<T>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | 返回单向绑定的数据，如果AppStorage中不存在对应的propName，则返回undefined。 |
+| 类型 |
+| --- |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
 
 **示例**
 
@@ -657,23 +657,23 @@ static ref<T>(propName: string): AbstractProperty<T> | undefined
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-AppStorage-static ref<T>(propName: string): AbstractProperty<T> | undefined--><!--Device-AppStorage-static ref<T>(propName: string): AbstractProperty<T> | undefined-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; \| undefined | 返回AppStorage中propName对应属性的引用，如果AppStorage中不存在对应的propName，则返回undefined。 |
+| 类型 |
+| --- |
+| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; \| undefined |
 
 **示例**
 
@@ -702,26 +702,26 @@ static Set<T>(propName: string, newValue: T): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [set](#set)
-
-<!--Device-AppStorage-static Set<T>(propName: string, newValue: T): boolean--><!--Device-AppStorage-static Set<T>(propName: string, newValue: T): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
-| newValue | T | 是 | propName对应属性的新值，从API version 12开始可以为null或undefined。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
+| newValue | T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果AppStorage中不存在propName对应的属性，返回false。设置成功则返回true。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -741,24 +741,24 @@ static set<T>(propName: string, newValue: T): boolean
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-AppStorage-static set<T>(propName: string, newValue: T): boolean--><!--Device-AppStorage-static set<T>(propName: string, newValue: T): boolean-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
-| newValue | T | 是 | propName对应属性的新值，从API version 12开始可以为null或undefined。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
+| newValue | T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果AppStorage中不存在propName对应的属性，或设值失败，则返回false。设置成功则返回true。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -820,26 +820,26 @@ static SetAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractPrope
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [setAndLink](#setandlink)
-
-<!--Device-AppStorage-static SetAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>--><!--Device-AppStorage-static SetAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
-| defaultValue | T | 是 | 当propName在AppStorage中不存在时，使用defaultValue在AppStorage中初始化propName对应属性的值，defaultValue不能为 null或undefined。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
+| defaultValue | T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | SubscribedAbstractProperty&lt;T&gt;的实例，为AppStorage中propName对应属性的双向绑定的数据。 |
+| 类型 |
+| --- |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
 
 **示例**
 
@@ -859,24 +859,24 @@ static setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractPrope
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-AppStorage-static setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>--><!--Device-AppStorage-static setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
-| defaultValue | T | 是 | 当propName在AppStorage中不存在时，使用defaultValue在AppStorage中初始化propName对应属性的值。从API version 12开 始，defaultValue可以为null或undefined。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
+| defaultValue | T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | SubscribedAbstractProperty&lt;T&gt;的实例，为AppStorage中propName对应属性的双向绑定的数据。 |
+| 类型 |
+| --- |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
 
 **示例**
 
@@ -903,26 +903,26 @@ static SetAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractPrope
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [setAndProp](#setandprop)
-
-<!--Device-AppStorage-static SetAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractProperty<S>--><!--Device-AppStorage-static SetAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractProperty<S>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
-| defaultValue | S | 是 | 当propName在AppStorage中不存在时，使用defaultValue在AppStorage中初始化propName对应属性的值，defaultValue不能为 null或undefined。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
+| defaultValue | S | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;S&gt; | SubscribedAbstractProperty&lt;S&gt;的实例，为AppStorage中propName对应属性的单向绑定的数据。 |
+| 类型 |
+| --- |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;S&gt; |
 
 **示例**
 
@@ -941,24 +941,24 @@ static setAndProp<T>(propName: string, defaultValue: T): SubscribedAbstractPrope
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-AppStorage-static setAndProp<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>--><!--Device-AppStorage-static setAndProp<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
-| defaultValue | T | 是 | 当propName在AppStorage中不存在时，使用defaultValue在AppStorage中初始化propName对应属性的值。从API version 12开 始，defaultValue可以为null或undefined。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
+| defaultValue | T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | SubscribedAbstractProperty&lt;T&gt;的实例，为AppStorage中propName对应属性的单向绑定的数据。 |
+| 类型 |
+| --- |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
 
 **示例**
 
@@ -983,24 +983,24 @@ static setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-AppStorage-static setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>--><!--Device-AppStorage-static setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
-| defaultValue | T | 是 | 当propName在AppStorage中不存在时，使用defaultValue在AppStorage中初始化propName对应属性的值，defaultValue可以为 null或undefined。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
+| defaultValue | T | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; | AbstractProperty&lt;T&gt;的实例，为AppStorage中propName对应属性的引用。 |
+| 类型 |
+| --- |
+| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; |
 
 **示例**
 
@@ -1027,20 +1027,20 @@ static SetOrCreate<T>(propName: string, newValue: T): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [setOrCreate](#setorcreate)
-
-<!--Device-AppStorage-static SetOrCreate<T>(propName: string, newValue: T): void--><!--Device-AppStorage-static SetOrCreate<T>(propName: string, newValue: T): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
-| newValue | T | 是 | propName对应属性的新值，从API version 12开始可以为null或undefined。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
+| newValue | T | 是 |
 
 **示例**
 
@@ -1058,18 +1058,18 @@ static setOrCreate<T>(propName: string, newValue: T): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-AppStorage-static setOrCreate<T>(propName: string, newValue: T): void--><!--Device-AppStorage-static setOrCreate<T>(propName: string, newValue: T): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | AppStorage中的属性名。 |
-| newValue | T | 是 | propName对应属性的新值，从API version 12开始可以为null或undefined。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
+| newValue | T | 是 |
 
 **示例**
 
@@ -1095,19 +1095,19 @@ static Size(): number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [size](#size)
-
-<!--Device-AppStorage-static Size(): number--><!--Device-AppStorage-static Size(): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | AppStorage中属性的数量。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -1126,17 +1126,17 @@ static size(): number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-AppStorage-static size(): number--><!--Device-AppStorage-static size(): number-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | AppStorage中属性的数量。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -1161,23 +1161,22 @@ static staticClear(): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [Clear](#clear)
-
-<!--Device-AppStorage-static staticClear(): boolean--><!--Device-AppStorage-static staticClear(): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 删除AppStorage中所有的属性。仅当没有任何订阅者时删除成功，返回true；如果仍有订阅者，返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
 ```TypeScript
 let clearResult = AppStorage.staticClear();
 ```
-

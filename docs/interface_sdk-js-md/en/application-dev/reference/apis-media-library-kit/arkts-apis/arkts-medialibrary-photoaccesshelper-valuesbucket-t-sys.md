@@ -6,13 +6,12 @@ type ValuesBucket = Record<string, ValueType>
 
 Defines the type of key and value in a KV pair.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-photoAccessHelper-type ValuesBucket = Record<string, ValueType>--><!--Device-photoAccessHelper-type ValuesBucket = Record<string, ValueType>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
 
 **Property type:** Record&lt;string, ValueType&gt;
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare interface ImageAttachmentLayoutStyle--><!--Device-unnamed-declare interface ImageAttachmentLayoutStyle-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ borderRadius?: LengthMetrics | BorderRadiuses
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ImageAttachmentLayoutStyle-borderRadius?: LengthMetrics | BorderRadiuses--><!--Device-ImageAttachmentLayoutStyle-borderRadius?: LengthMetrics | BorderRadiuses-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ margin?: LengthMetrics | Margin
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ImageAttachmentLayoutStyle-margin?: LengthMetrics | Margin--><!--Device-ImageAttachmentLayoutStyle-margin?: LengthMetrics | Margin-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,15 +61,14 @@ padding?: LengthMetrics | Padding
 
 设置图片内边距。默认值：0单位：vp
 
-**类型：** LengthMetrics \| Padding
+**类型：** LengthMetrics \| [Padding](arkts-arkui-units-padding-i.md)
 
 **起始版本：** 12
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ImageAttachmentLayoutStyle-padding?: LengthMetrics | Padding--><!--Device-ImageAttachmentLayoutStyle-padding?: LengthMetrics | Padding-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

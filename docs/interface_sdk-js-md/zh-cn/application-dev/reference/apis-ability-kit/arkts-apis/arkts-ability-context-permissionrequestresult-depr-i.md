@@ -4,7 +4,7 @@
 
 **起始版本：** 7
 
-<!--Device-unnamed-interface PermissionRequestResult--><!--Device-unnamed-interface PermissionRequestResult-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -22,9 +22,9 @@ authResults: Array<number>
 
 **起始版本：** 7
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-PermissionRequestResult-authResults: Array<number>--><!--Device-PermissionRequestResult-authResults: Array<number>-End-->
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -42,9 +42,9 @@ permissions: Array<string>
 
 **起始版本：** 7
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-PermissionRequestResult-permissions: Array<string>--><!--Device-PermissionRequestResult-permissions: Array<string>-End-->
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -62,9 +62,8 @@ requestCode: number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-PermissionRequestResult-requestCode: number--><!--Device-PermissionRequestResult-requestCode: number-End-->
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-

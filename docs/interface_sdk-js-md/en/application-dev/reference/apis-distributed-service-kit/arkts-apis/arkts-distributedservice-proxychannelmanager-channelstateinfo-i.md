@@ -2,9 +2,9 @@
 
 Represents the connection state information of the proxy channel.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-proxyChannelManager-interface ChannelStateInfo--><!--Device-proxyChannelManager-interface ChannelStateInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -22,13 +22,13 @@ channelId: int
 
 Channel ID of the proxy channel. The value range is 1 to 2147483647.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ChannelStateInfo-channelId: int--><!--Device-ChannelStateInfo-channelId: int-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -42,11 +42,10 @@ Connection state of the channel. For the value range, see [ChannelState](arkts-d
 
 **Type:** [ChannelState](arkts-distributedservice-proxychannelmanager-channelstate-e.md)
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ChannelStateInfo-state: ChannelState--><!--Device-ChannelStateInfo-state: ChannelState-End-->
-
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
-

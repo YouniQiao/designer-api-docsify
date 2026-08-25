@@ -14,9 +14,9 @@ Describes the multi-line text notification. This API is inherited from Notificat
 
 **Inheritance/Implementation:** NotificationMultiLineContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-export interface NotificationMultiLineContent--><!--Device-unnamed-export interface NotificationMultiLineContent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -30,13 +30,12 @@ lineWantAgents?: Array<WantAgent>
 
 **Type:** Array&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)&gt;
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_AGENT_CONTROLLER
-
-<!--Device-NotificationMultiLineContent-lineWantAgents?: Array<WantAgent>--><!--Device-NotificationMultiLineContent-lineWantAgents?: Array<WantAgent>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

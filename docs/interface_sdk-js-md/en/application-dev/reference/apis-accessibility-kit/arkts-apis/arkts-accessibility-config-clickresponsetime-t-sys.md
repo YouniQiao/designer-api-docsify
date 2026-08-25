@@ -6,17 +6,16 @@ type ClickResponseTime = 'Short' | 'Medium' | 'Long'
 
 Click duration of different lengths.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-config-type ClickResponseTime = 'Short' | 'Medium' | 'Long'--><!--Device-config-type ClickResponseTime = 'Short' | 'Medium' | 'Long'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
 
-| Type | Description |
-| --- | --- |
-| 'Short' | Indicates short (default). |
-| 'Medium' | Medium. |
-| 'Long' | Long. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'Short' |
+| 'Medium' |
+| 'Long' |

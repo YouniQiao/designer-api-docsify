@@ -18,7 +18,7 @@
 
 **起始版本：** 15
 
-<!--Device-unnamed-declare class LayoutPolicy--><!--Device-unnamed-declare class LayoutPolicy-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -39,13 +39,13 @@ static readonly fixAtIdealSize: LayoutPolicy
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本20开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-LayoutPolicy-static readonly fixAtIdealSize: LayoutPolicy--><!--Device-LayoutPolicy-static readonly fixAtIdealSize: LayoutPolicy-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,13 +61,13 @@ static readonly matchParent: LayoutPolicy
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本15开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-LayoutPolicy-static readonly matchParent: LayoutPolicy--><!--Device-LayoutPolicy-static readonly matchParent: LayoutPolicy-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -83,13 +83,12 @@ static readonly wrapContent: LayoutPolicy
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本20开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-LayoutPolicy-static readonly wrapContent: LayoutPolicy--><!--Device-LayoutPolicy-static readonly wrapContent: LayoutPolicy-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

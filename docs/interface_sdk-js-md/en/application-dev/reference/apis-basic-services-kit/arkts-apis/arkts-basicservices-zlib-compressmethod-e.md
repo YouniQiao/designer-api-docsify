@@ -2,9 +2,9 @@
 
 The deflate compression method (the only one supported in this version).
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-zlib-export enum CompressMethod--><!--Device-zlib-export enum CompressMethod-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -16,11 +16,10 @@ DEFLATED = 8
 
 Compression method.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-CompressMethod-DEFLATED = 8--><!--Device-CompressMethod-DEFLATED = 8-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.Zlib
-

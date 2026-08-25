@@ -2,9 +2,9 @@
 
 身份认证组件回调接口。认证组件通过该回调接口获取用户认证框架发送的命令，并根据命令内容执行相应的认证操作。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-userAuth-interface IAuthWidgetCallback--><!--Device-userAuth-interface IAuthWidgetCallback-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -26,7 +26,7 @@ sendCommand(cmdData: string): void
 
 **起始版本：** 10
 
-<!--Device-IAuthWidgetCallback-sendCommand(cmdData: string): void--><!--Device-IAuthWidgetCallback-sendCommand(cmdData: string): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -34,9 +34,9 @@ sendCommand(cmdData: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| cmdData | string | 是 | 命令数据。JSON格式的字符串，包含用户认证框架向身份认证控件发送的具体命令内容。JSON结构根据不同的命令类型包含相应字段，常见字段包括：commandType（ string，命令类型）、authType（array，认证类型列表）、result（number，认证结果码）等。控件需解析此数据并根据命令类型执行相应操作。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| cmdData | string | 是 |
 
 **示例**
 
@@ -92,13 +92,14 @@ sendCommand: AuthWidgetCallbackSendCommandFunc
 
 回调函数，用于用户认证框架向组件发送命令。
 
-**类型：** [AuthWidgetCallbackSendCommandFunc](arkts-userauthentication-userauth-authwidgetcallbacksendcommandfunc-t-sys.md)
-
 **起始版本：** 23
 
-<!--Device-IAuthWidgetCallback-sendCommand: AuthWidgetCallbackSendCommandFunc--><!--Device-IAuthWidgetCallback-sendCommand: AuthWidgetCallbackSendCommandFunc-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
 
+**示例**
+
+参见 [sendCommand](#sendcommand)

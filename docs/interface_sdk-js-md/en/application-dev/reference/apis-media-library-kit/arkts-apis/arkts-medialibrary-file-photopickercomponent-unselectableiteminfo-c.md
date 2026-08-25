@@ -4,7 +4,7 @@ UnselectableItemInfo
 
 **Since:** 26.1.0
 
-<!--Device-unnamed-export declare class UnselectableItemInfo--><!--Device-unnamed-export declare class UnselectableItemInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,11 +26,11 @@ MimeType.
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-UnselectableItemInfo-public mimeType?: string--><!--Device-UnselectableItemInfo-public mimeType?: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -46,11 +46,10 @@ PhotoSubtype. Asset subtype, non-special type images default to DEFAULT(0).
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
-<!--Device-UnselectableItemInfo-public photoSubType?: photoAccessHelper.PhotoSubtype--><!--Device-UnselectableItemInfo-public photoSubType?: photoAccessHelper.PhotoSubtype-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

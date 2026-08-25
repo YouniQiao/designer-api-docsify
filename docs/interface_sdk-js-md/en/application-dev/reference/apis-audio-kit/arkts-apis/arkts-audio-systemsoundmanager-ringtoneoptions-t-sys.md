@@ -6,13 +6,12 @@ type RingtoneOptions = _RingtoneOptions
 
 Interface for ringtone options.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-systemSoundManager-type RingtoneOptions = _RingtoneOptions--><!--Device-systemSoundManager-type RingtoneOptions = _RingtoneOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
 
 **Property type:** _RingtoneOptions
-

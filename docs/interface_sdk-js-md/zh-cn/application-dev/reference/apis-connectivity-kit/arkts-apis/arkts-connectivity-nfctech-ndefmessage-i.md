@@ -1,8 +1,8 @@
 # NdefMessage
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-export interface NdefMessage--><!--Device-unnamed-export interface NdefMessage-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -14,19 +14,19 @@ getNdefRecords(): tag.NdefRecord[]
 
 获取NDEF消息中的所有记录。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NdefMessage-getNdefRecords(): tag.NdefRecord[]--><!--Device-NdefMessage-getNdefRecords(): tag.NdefRecord[]-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| tag.NdefRecord[] | NDEF标签的Record列表，详见NDEF技术规范《NFCForum-TS-NDEF_1.0》。 |
+| 类型 |
+| --- |
+| tag.NdefRecord[] |
 
 **示例**
 
@@ -40,4 +40,3 @@ import { tag } from '@kit.ConnectivityKit';
 let ndefRecords : tag.NdefRecord[] = ndefMessage.getNdefRecords();
 console.info("ndef ndefRecords number: " + ndefRecords.length);
 ```
-

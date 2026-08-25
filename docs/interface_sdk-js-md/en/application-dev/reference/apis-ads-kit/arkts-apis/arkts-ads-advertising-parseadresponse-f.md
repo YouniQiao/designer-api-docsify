@@ -17,26 +17,26 @@ Parses and processes the body of an ad response (this API is only open to some p
 
 **Since:** 12
 
-<!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,     context: common.UIAbilityContext): void--><!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,     context: common.UIAbilityContext): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| adResponse | string | Yes | Ad response body. |
-| listener | [MultiSlotsAdLoadListener](arkts-ads-advertising-multislotsadloadlistener-i.md) | Yes | Callback listener for ad requests. |
-| context | common.UIAbilityContext | Yes | Context of the UIAbility. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| adResponse | string | Yes |
+| listener | [MultiSlotsAdLoadListener](arkts-ads-advertising-multislotsadloadlistener-i.md) | Yes |
+| context | common.UIAbilityContext | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported. |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
-| [21800005](../errorcode-ads.md#21800005-ad-data-parsing-failure) | Failed to parse the ad response. |
+| Error Code ID |
+| --- |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../errorcode-ads.md#801-ad-request-failure) |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) |
+| [21800005](../errorcode-ads.md#21800005-ad-data-parsing-failure) |
 
 **Examples**
 
@@ -64,4 +64,3 @@ function parseAdResponse(adResponse: string, context: common.UIAbilityContext): 
   advertising.parseAdResponse(adResponse, multiSlotsAdLoaderListener, context);
 }
 ```
-

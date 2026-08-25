@@ -4,7 +4,7 @@ Defines the base information of the interaction UI to be displayed after the cur
 
 **Since:** 26.1.0
 
-<!--Device-insightIntent-interface InteractionUI--><!--Device-insightIntent-interface InteractionUI-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -28,11 +28,10 @@ Type of the interaction UI.
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-InteractionUI-interactionUIType: string--><!--Device-InteractionUI-interactionUIType: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
-

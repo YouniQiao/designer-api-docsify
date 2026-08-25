@@ -16,28 +16,28 @@ function toSendableAsset(asset: NonSendableAsset): Asset
 
 **起始版本：** 12
 
-<!--Device-sendableRelationalStore-function toSendableAsset(asset: NonSendableAsset): Asset--><!--Device-sendableRelationalStore-function toSendableAsset(asset: NonSendableAsset): Asset-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| asset | [NonSendableAsset](arkts-arkdata-sendablerelationalstore-nonsendableasset-t.md) | 是 | 不可跨线程传递的Asset数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [asset](../../apis-asset-store-kit/arkts-apis/arkts-security-asset.md) | [NonSendableAsset](arkts-arkdata-sendablerelationalstore-nonsendableasset-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Asset | 可跨线程传递的Asset数据。 |
+| 类型 |
+| --- |
+| [Asset](arkts-arkdata-commontype-asset-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
 
 **示例**
 
@@ -52,4 +52,3 @@ const asset1: sendableRelationalStore.NonSendableAsset = {
 };
 const sendableAsset = sendableRelationalStore.toSendableAsset(asset1);
 ```
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 6
 
-<!--Device-intl-export interface NumberOptions--><!--Device-intl-export interface NumberOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -20,15 +20,15 @@ import { intl } from '@kit.LocalizationKit';
 compactDisplay?: string
 ```
 
-紧凑显示格式，取值包括："long", "short"。默认值：short。不同取值的显示效果请参考附录表18。
+紧凑显示格式，取值包括："long", "short"。默认值：short。不同取值的显示效果请参考[附录表18](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-compactDisplay?: string--><!--Device-NumberOptions-compactDisplay?: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -44,9 +44,9 @@ currency?: string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-currency?: string--><!--Device-NumberOptions-currency?: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -56,15 +56,15 @@ currency?: string
 currencyDisplay?: string
 ```
 
-货币的显示方式（需设置style为currency），取值包括："symbol", "narrowSymbol", "code", "name"。默认值：symbol。不同取值的显示效果请参考附录表20。
+货币的显示方式（需设置style为currency），取值包括："symbol", "narrowSymbol", "code", "name"。默认值：symbol。不同取值的显示效果请参考[附录表20](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-currencyDisplay?: string--><!--Device-NumberOptions-currencyDisplay?: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -74,15 +74,15 @@ currencyDisplay?: string
 currencySign?: string
 ```
 
-货币单位的符号显示（需设置style为currency），取值包括： "standard"，"accounting"。默认值：standard。不同取值的显示效果请参考附录表19。
+货币单位的符号显示（需设置style为currency），取值包括： "standard"，"accounting"。默认值：standard。不同取值的显示效果请参考[附录表19](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-currencySign?: string--><!--Device-NumberOptions-currencySign?: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -98,9 +98,9 @@ locale?: string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-locale?: string--><!--Device-NumberOptions-locale?: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -116,9 +116,9 @@ localeMatcher?: string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-localeMatcher?: string--><!--Device-NumberOptions-localeMatcher?: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -128,15 +128,15 @@ localeMatcher?: string
 maximumFractionDigits?: int
 ```
 
-表示要使用的最大分数位数，取值范围：[1, 21]。默认值：3。不同取值的显示效果请参考附录表13。
+表示要使用的最大分数位数，取值范围：[1, 21]。默认值：3。不同取值的显示效果请参考[附录表13](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-maximumFractionDigits?: int--><!--Device-NumberOptions-maximumFractionDigits?: int-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -146,15 +146,15 @@ maximumFractionDigits?: int
 maximumSignificantDigits?: int
 ```
 
-表示要使用的最大有效位数，取值范围：[1, 21]。默认值：21。不同取值的显示效果请参考附录表15。
+表示要使用的最大有效位数，取值范围：[1, 21]。默认值：21。不同取值的显示效果请参考[附录表15](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-maximumSignificantDigits?: int--><!--Device-NumberOptions-maximumSignificantDigits?: int-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -164,15 +164,15 @@ maximumSignificantDigits?: int
 minimumFractionDigits?: int
 ```
 
-表示要使用的最小分数位数，取值范围：[0, 20]。默认值：0。不同取值的显示效果请参考附录表12。
+表示要使用的最小分数位数，取值范围：[0, 20]。默认值：0。不同取值的显示效果请参考[附录表12](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-minimumFractionDigits?: int--><!--Device-NumberOptions-minimumFractionDigits?: int-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -182,15 +182,15 @@ minimumFractionDigits?: int
 minimumIntegerDigits?: int
 ```
 
-表示要使用的最小整数位数，取值范围：[1, 21]。默认值：1。不同取值的显示效果请参考附录表11。
+表示要使用的最小整数位数，取值范围：[1, 21]。默认值：1。不同取值的显示效果请参考[附录表11](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-minimumIntegerDigits?: int--><!--Device-NumberOptions-minimumIntegerDigits?: int-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -200,15 +200,15 @@ minimumIntegerDigits?: int
 minimumSignificantDigits?: int
 ```
 
-表示要使用的最小有效位数，取值范围：[1, 21]。默认值：1。不同取值的显示效果请参考附录表14。
+表示要使用的最小有效位数，取值范围：[1, 21]。默认值：1。不同取值的显示效果请参考[附录表14](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-minimumSignificantDigits?: int--><!--Device-NumberOptions-minimumSignificantDigits?: int-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -218,15 +218,15 @@ minimumSignificantDigits?: int
 notation?: string
 ```
 
-数字的表示方法，取值包括："standard", "scientific", "engineering", "compact"。默认值：standard。不同取值的显示效果请参考附录表17。
+数字的表示方法，取值包括："standard", "scientific", "engineering", "compact"。默认值：standard。不同取值的显示效果请参考[附录表17](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-notation?: string--><!--Device-NumberOptions-notation?: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -242,9 +242,9 @@ numberingSystem?: string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-numberingSystem?: string--><!--Device-NumberOptions-numberingSystem?: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -256,13 +256,13 @@ roundingIncrement?: int
 
 表示舍入增量，取值范围：1，2，5，10，20，25，50，100，200，250，500，1000，2000，2500，5000。默认值：1。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-roundingIncrement?: int--><!--Device-NumberOptions-roundingIncrement?: int-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -278,9 +278,9 @@ roundingMode?: string
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-roundingMode?: string--><!--Device-NumberOptions-roundingMode?: string-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -296,9 +296,9 @@ roundingPriority?: string
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-roundingPriority?: string--><!--Device-NumberOptions-roundingPriority?: string-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -314,9 +314,9 @@ signDisplay?: string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-signDisplay?: string--><!--Device-NumberOptions-signDisplay?: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -332,9 +332,9 @@ style?: string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-style?: string--><!--Device-NumberOptions-style?: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -350,9 +350,9 @@ unit?: string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-unit?: string--><!--Device-NumberOptions-unit?: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -362,15 +362,15 @@ unit?: string
 unitDisplay?: string
 ```
 
-单位的显示格式（需设置style为unit），取值包括："long", "short", "narrow"。默认值：short。不同取值的显示效果请参考附录表21。
+单位的显示格式（需设置style为unit），取值包括："long", "short", "narrow"。默认值：short。不同取值的显示效果请参考[附录表21](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-unitDisplay?: string--><!--Device-NumberOptions-unitDisplay?: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -380,15 +380,15 @@ unitDisplay?: string
 unitUsage?: string
 ```
 
-单位的使用场景（需设置style为unit），取值包括："default", "area-land-agricult", "area-land-commercl", "area-land-residntl","length-person", "length-person-small", "length-rainfall", "length-road", "length-road-small", "length-snowfall","length-vehicle", "length-visiblty", "length-visiblty-small", "length-person-informal", "length-person-small-informal","length-road-informal", "speed-road-travel", "speed-wind", "temperature-person", "temperature-weather","volume-vehicle-fuel", "elapsed-time-second", "size-file-byte", "size-shortfile-byte"。默认值：default。不同取值的显示效果请参考附录表22。
+单位的使用场景（需设置style为unit），取值包括："default", "area-land-agricult", "area-land-commercl", "area-land-residntl","length-person", "length-person-small", "length-rainfall", "length-road", "length-road-small", "length-snowfall","length-vehicle", "length-visiblty", "length-visiblty-small", "length-person-informal", "length-person-small-informal","length-road-informal", "speed-road-travel", "speed-wind", "temperature-person", "temperature-weather","volume-vehicle-fuel", "elapsed-time-second", "size-file-byte", "size-shortfile-byte"。默认值：default。不同取值的显示效果请参考[附录表22](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberOptions-unitUsage?: string--><!--Device-NumberOptions-unitUsage?: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -398,15 +398,14 @@ unitUsage?: string
 useGrouping?: boolean
 ```
 
-true表示分组显示，false表示不分组显示。默认值：true。不同取值的显示效果请参考附录表16。
+true表示分组显示，false表示不分组显示。默认值：true。不同取值的显示效果请参考[附录表16](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** boolean
 
 **起始版本：** 6
 
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-NumberOptions-useGrouping?: boolean--><!--Device-NumberOptions-useGrouping?: boolean-End-->
-
 **系统能力：** SystemCapability.Global.I18n
-

@@ -2,9 +2,9 @@
 
 Provides USB Key certificate credential attribute information.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-certificateManager-export interface UkeyInfo--><!--Device-certificateManager-export interface UkeyInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -24,9 +24,8 @@ Credential usage. Default value: PURPOSE_DEFAULT.
 
 **Type:** [CertificatePurpose](arkts-devicecertificate-certificatemanager-certificatepurpose-e.md)
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-UkeyInfo-certPurpose?: CertificatePurpose--><!--Device-UkeyInfo-certPurpose?: CertificatePurpose-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
-

@@ -4,9 +4,7 @@ A worker that executes tasks concurrently with priority support
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class EAWorker--><!--Device-unnamed-export class EAWorker-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,19 +23,17 @@ Constructs a new EAWorker instance
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EAWorker-constructor(needInterop: boolean = false)--><!--Device-EAWorker-constructor(needInterop: boolean = false)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| needInterop | boolean | Yes | whether interoperability is needed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| needInterop | boolean | Yes |
 
 ## constructor
 
@@ -49,20 +45,18 @@ Constructs a new EAWorker instance with a name
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EAWorker-constructor(name: string, needInterop: boolean = false)--><!--Device-EAWorker-constructor(name: string, needInterop: boolean = false)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | the name of the worker. |
-| needInterop | boolean | Yes | whether interoperability is needed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| needInterop | boolean | Yes |
 
 ## constructor
 
@@ -74,20 +68,18 @@ Constructs a new EAWorker instance with a task
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EAWorker-constructor(task: () => void, needInterop: boolean = false)--><!--Device-EAWorker-constructor(task: () => void, needInterop: boolean = false)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| task | () =&gt; void | Yes | the task to execute. |
-| needInterop | boolean | Yes | whether interoperability is needed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| task | () = & gt; void | Yes |
+| needInterop | boolean | Yes |
 
 ## constructor
 
@@ -99,21 +91,19 @@ Constructs a new EAWorker instance with a name and task
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EAWorker-constructor(name: string, task: () => void, needInterop: boolean = false)--><!--Device-EAWorker-constructor(name: string, task: () => void, needInterop: boolean = false)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | the name of the worker. |
-| task | () =&gt; void | Yes | the task to execute. |
-| needInterop | boolean | Yes | whether interoperability is needed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| task | () = & gt; void | Yes |
+| needInterop | boolean | Yes |
 
 ## current
 
@@ -125,19 +115,17 @@ Returns the current worker instance
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EAWorker-static current(): EAWorker | undefined--><!--Device-EAWorker-static current(): EAWorker | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [EAWorker](arkts-arkts-eaworker-c.md) \| undefined | the current worker instance, or undefined if not in a worker context |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [EAWorker](arkts-arkts-eaworker-c.md) \| undefined |
 
 ## getName
 
@@ -149,19 +137,17 @@ Returns the name of the worker
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EAWorker-getName(): string--><!--Device-EAWorker-getName(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the name of the worker |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## getPriority
 
@@ -173,19 +159,17 @@ Returns the priority of the worker
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EAWorker-getPriority(): WorkerPriority--><!--Device-EAWorker-getPriority(): WorkerPriority-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WorkerPriority](arkts-arkts-eaworker-workerpriority-e.md) | the priority of the worker |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [WorkerPriority](arkts-arkts-eaworker-workerpriority-e.md) |
 
 ## getUncaughtExceptionHandler
 
@@ -197,19 +181,17 @@ Returns the uncaught exception handler for the worker
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EAWorker-getUncaughtExceptionHandler(): ((error: Error) => void) | undefined--><!--Device-EAWorker-getUncaughtExceptionHandler(): ((error: Error) => void) | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [function](arkts-arkts-taskpool-task-c.md) \| undefined | the uncaught exception handler, or undefined if not set |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [function](arkts-arkts-taskpool-task-c.md) \| undefined |
 
 ## getWorkerId
 
@@ -221,19 +203,17 @@ Returns the worker ID
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EAWorker-getWorkerId(): int | undefined--><!--Device-EAWorker-getWorkerId(): int | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int \| undefined | the worker ID, or undefined if not started |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int \| undefined |
 
 ## isAlive
 
@@ -245,19 +225,17 @@ Checks whether the worker is alive
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EAWorker-isAlive(): boolean--><!--Device-EAWorker-isAlive(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the worker is alive, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## join
 
@@ -269,19 +247,17 @@ Waits for the worker to finish execution
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EAWorker-join(): Job<void>--><!--Device-EAWorker-join(): Job<void>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Job](arkts-arkts-job-c.md)&lt;void&gt; | a Job that resolves when the worker has finished |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Job](arkts-arkts-job-c.md)&lt;void&gt; |
 
 ## main
 
@@ -293,19 +269,17 @@ Returns the main worker instance
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EAWorker-static main(): EAWorker--><!--Device-EAWorker-static main(): EAWorker-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [EAWorker](arkts-arkts-eaworker-c.md) | the main worker instance |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [EAWorker](arkts-arkts-eaworker-c.md) |
 
 ## postTask
 
@@ -317,19 +291,17 @@ Posts a task to the worker for execution
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EAWorker-postTask(task: () => void): void--><!--Device-EAWorker-postTask(task: () => void): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| task | () =&gt; void | Yes | the task to post. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| task | () = & gt; void | Yes |
 
 ## postToMain
 
@@ -341,26 +313,24 @@ Posts a task to the main worker and returns a Job with the result
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EAWorker-static postToMain<R>(coroFun: Function, ...args: FixedArray<Any>): Job<R>--><!--Device-EAWorker-static postToMain<R>(coroFun: Function, ...args: FixedArray<Any>): Job<R>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| coroFun | Function | Yes | the coroutine function to run on the main worker. |
-| args | FixedArray&lt;Any&gt; | Yes | the arguments to pass to the function. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| coroFun | Function | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | FixedArray & lt;Any & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Job](arkts-arkts-job-c.md)&lt;R&gt; | a Job that resolves with the function result |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Job](arkts-arkts-job-c.md)&lt;R&gt; |
 
 ## quit
 
@@ -372,11 +342,9 @@ Terminates the worker
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EAWorker-quit(): void--><!--Device-EAWorker-quit(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -390,26 +358,24 @@ Runs a task on the worker and returns a Job with the result
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EAWorker-run<R>(task: Function, ...args: FixedArray<Any>): Job<R>--><!--Device-EAWorker-run<R>(task: Function, ...args: FixedArray<Any>): Job<R>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| task | Function | Yes | the task function to run. |
-| args | FixedArray&lt;Any&gt; | Yes | the arguments to pass to the task. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| task | Function | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | FixedArray & lt;Any & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Job](arkts-arkts-job-c.md)&lt;R&gt; | a Job that resolves with the task result |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Job](arkts-arkts-job-c.md)&lt;R&gt; |
 
 ## setPriority
 
@@ -421,19 +387,17 @@ Sets the priority of the worker
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EAWorker-setPriority(priority: WorkerPriority): void--><!--Device-EAWorker-setPriority(priority: WorkerPriority): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| priority | [WorkerPriority](arkts-arkts-eaworker-workerpriority-e.md) | Yes | the priority to set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| priority | [WorkerPriority](arkts-arkts-eaworker-workerpriority-e.md) | Yes |
 
 ## setUncaughtExceptionHandler
 
@@ -445,19 +409,17 @@ Sets the uncaught exception handler for the worker
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EAWorker-setUncaughtExceptionHandler(handler: (error: Error) => void): void--><!--Device-EAWorker-setUncaughtExceptionHandler(handler: (error: Error) => void): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| handler | (error: Error) =&gt; void | Yes | the handler to call when an uncaught exception occurs. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| handler | (error: Error) = & gt; void | Yes |
 
 ## start
 
@@ -469,11 +431,8 @@ Starts the worker
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EAWorker-start(): void--><!--Device-EAWorker-start(): void-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

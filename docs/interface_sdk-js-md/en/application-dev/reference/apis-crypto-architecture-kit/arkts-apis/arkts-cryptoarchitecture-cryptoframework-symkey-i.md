@@ -4,9 +4,9 @@ Provides APIs for symmetric key operations. It is a child class of [Key](arkts-c
 
 **Inheritance/Implementation:** SymKey extends [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-cryptoFramework-interface SymKey--><!--Device-cryptoFramework-interface SymKey-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.SymKey
@@ -26,11 +26,11 @@ clearMem(): void
 
 Clears the key data in memory. This API returns the result synchronously. Call this API when the symmetric key instance is no longer required.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SymKey-clearMem(): void--><!--Device-SymKey-clearMem(): void-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.SymKey
@@ -67,4 +67,3 @@ async function testClearMem() {
     });
 }
 ```
-

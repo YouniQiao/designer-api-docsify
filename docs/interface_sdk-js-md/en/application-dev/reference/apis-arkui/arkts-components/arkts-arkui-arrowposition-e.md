@@ -4,7 +4,7 @@ Enumerates arrow positions.
 
 **Since:** 10
 
-<!--Device-unnamed-declare enum ArrowPosition--><!--Device-unnamed-declare enum ArrowPosition-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ The text is in front of the arrow.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ArrowPosition-END = 0--><!--Device-ArrowPosition-END = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ The arrow is in front of the text.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ArrowPosition-START = 1--><!--Device-ArrowPosition-START = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

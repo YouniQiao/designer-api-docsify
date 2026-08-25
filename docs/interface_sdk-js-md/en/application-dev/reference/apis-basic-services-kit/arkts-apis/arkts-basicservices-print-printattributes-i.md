@@ -2,9 +2,9 @@
 
 Defines the print attributes.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-print-interface PrintAttributes--><!--Device-print-interface PrintAttributes-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -24,9 +24,9 @@ Color mode of the files to print.
 
 **Type:** [PrintColorMode](arkts-basicservices-print-printcolormode-e.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintAttributes-colorMode?: PrintColorMode--><!--Device-PrintAttributes-colorMode?: PrintColorMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -38,11 +38,11 @@ copyNumber?: int
 
 Number of printed file copies. The default value is **1**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintAttributes-copyNumber?: int--><!--Device-PrintAttributes-copyNumber?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -56,9 +56,9 @@ Print direction mode.
 
 **Type:** [PrintDirectionMode](arkts-basicservices-print-printdirectionmode-e.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintAttributes-directionMode?: PrintDirectionMode--><!--Device-PrintAttributes-directionMode?: PrintDirectionMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -72,9 +72,9 @@ Duplex mode of the files to print.
 
 **Type:** [PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintAttributes-duplexMode?: PrintDuplexMode--><!--Device-PrintAttributes-duplexMode?: PrintDuplexMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -88,9 +88,9 @@ Page range of the file to print.
 
 **Type:** [PrintPageRange](arkts-basicservices-print-printpagerange-i.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintAttributes-pageRange?: PrintPageRange--><!--Device-PrintAttributes-pageRange?: PrintPageRange-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -104,9 +104,8 @@ Page size of the file to print.
 
 **Type:** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md) \| [PrintPageType](arkts-basicservices-print-printpagetype-e.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintAttributes-pageSize?: PrintPageSize | PrintPageType--><!--Device-PrintAttributes-pageSize?: PrintPageSize | PrintPageType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
-

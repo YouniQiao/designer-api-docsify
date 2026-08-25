@@ -4,7 +4,7 @@ Defines the options of the dialog box.
 
 **Since:** 11
 
-<!--Device-promptAction-interface BaseDialogOptions--><!--Device-promptAction-interface BaseDialogOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,9 +28,9 @@ Sets the distortion animation Mode of the dialog.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-BaseDialogOptions-distortionMode?: DistortionMode--><!--Device-BaseDialogOptions-distortionMode?: DistortionMode-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,11 +50,10 @@ Sets the edgeLight animation Mode of the dialog.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-BaseDialogOptions-edgeLightMode?: EdgeLightMode--><!--Device-BaseDialogOptions-edgeLightMode?: EdgeLightMode-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

@@ -4,7 +4,7 @@ Provides the method for operating on a remote device. Before using this method, 
 
 **Since:** 26.0.0
 
-<!--Device-remoteDevice-interface RemoteDevice--><!--Device-remoteDevice-interface RemoteDevice-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -24,27 +24,27 @@ Obtains the logical link connection status with a remote device. This method is 
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RemoteDevice-getAcbState(): AcbState--><!--Device-RemoteDevice-getAcbState(): AcbState-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| AcbState | Logical link connection state with a remote device. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [AcbState](arkts-connectivity-remotedevice-acbstate-t.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| 36100003 |
+| 36100099 |
 
 ## getConnectionState
 
@@ -56,27 +56,27 @@ Obtains the connection status between the local and remote devices. Unlike [getA
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RemoteDevice-getConnectionState(): ConnectionState--><!--Device-RemoteDevice-getConnectionState(): ConnectionState-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ConnectionState | Connection status between the local and remote devices. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| 36100003 |
+| 36100099 |
 
 ## getDeviceClass
 
@@ -88,27 +88,27 @@ Obtains the type of a remote device.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RemoteDevice-getDeviceClass(): DeviceClass--><!--Device-RemoteDevice-getDeviceClass(): DeviceClass-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| DeviceClass | Remote device type. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DeviceClass](arkts-connectivity-connection-deviceclass-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| 36100003 |
+| 36100099 |
 
 ## getDeviceInformation
 
@@ -120,27 +120,27 @@ Obtains the information of a remote device.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RemoteDevice-getDeviceInformation(): DeviceInformation--><!--Device-RemoteDevice-getDeviceInformation(): DeviceInformation-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [DeviceInformation](arkts-connectivity-remotedevice-deviceinformation-i.md) | Information of a remote device. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DeviceInformation](arkts-connectivity-remotedevice-deviceinformation-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| 36100003 |
+| 36100099 |
 
 ## getDeviceName
 
@@ -152,27 +152,27 @@ Obtains the name of a remote device.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RemoteDevice-getDeviceName(): string--><!--Device-RemoteDevice-getDeviceName(): string-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Remote device name. The value contains a maximum of 30 characters. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| 36100003 |
+| 36100099 |
 
 ## getPairingState
 
@@ -184,27 +184,27 @@ Obtains the pairing status with a remote device.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RemoteDevice-getPairingState(): PairingState--><!--Device-RemoteDevice-getPairingState(): PairingState-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| PairingState | Pairing status with a remote device. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| 36100003 |
+| 36100099 |
 
 ## startPairing
 
@@ -216,25 +216,24 @@ Initiates pairing with a remote device. This API uses a promise to return the re
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RemoteDevice-startPairing(): Promise<void>--><!--Device-RemoteDevice-startPairing(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| 36100003 |
+| 36100099 |

@@ -4,7 +4,7 @@ Enumerates data panel types.
 
 **Since:** 8
 
-<!--Device-unnamed-declare enum DataPanelType--><!--Device-unnamed-declare enum DataPanelType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Line data panel.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-DataPanelType-Line--><!--Device-DataPanelType-Line-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ Circle data panel.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-DataPanelType-Circle--><!--Device-DataPanelType-Circle-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

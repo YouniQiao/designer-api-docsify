@@ -4,7 +4,7 @@ Edge light animation mode enumeration.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare enum EdgeLightMode--><!--Device-unnamed-declare enum EdgeLightMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,9 +20,9 @@ Adaptive edge light animation.Turned off on low-performance devices and turned o
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-EdgeLightMode-EDGELIGHT_AUTO = 0--><!--Device-EdgeLightMode-EDGELIGHT_AUTO = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,9 +38,9 @@ Enable edge light animation.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-EdgeLightMode-EDGELIGHT_ENABLED = 1--><!--Device-EdgeLightMode-EDGELIGHT_ENABLED = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,11 +56,10 @@ Disable edge light animation.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-EdgeLightMode-EDGELIGHT_DISABLED = 2--><!--Device-EdgeLightMode-EDGELIGHT_DISABLED = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

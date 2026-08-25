@@ -2,9 +2,9 @@
 
 主窗口信息。
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-window-interface MainWindowInfo--><!--Device-window-interface MainWindowInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -22,11 +22,11 @@ displayId: long
 
 ID of the display to which the main window belongs.
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-MainWindowInfo-displayId: long--><!--Device-MainWindowInfo-displayId: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -40,9 +40,9 @@ label: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-MainWindowInfo-label: string--><!--Device-MainWindowInfo-label: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -56,9 +56,9 @@ Foreground/Background status of the main window. **true** if the main window is 
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-MainWindowInfo-showing: boolean--><!--Device-MainWindowInfo-showing: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -70,11 +70,10 @@ windowId: int
 
 ID of the main window.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-MainWindowInfo-windowId: int--><!--Device-MainWindowInfo-windowId: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
-

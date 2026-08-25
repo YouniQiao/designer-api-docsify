@@ -2,11 +2,9 @@
 
 Rotation Result.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-componentUtils-export interface RotateResult--><!--Device-componentUtils-export interface RotateResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,120 +17,119 @@ import { componentUtils } from '@kit.ArkUI';
 ## angle
 
 ```TypeScript
-angle: double
+angle: number
 ```
 
-Rotation angle.
+Rotation angle.Unit: deg
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RotateResult-angle: double--><!--Device-RotateResult-angle: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## centerX
 
 ```TypeScript
-centerX: double
+centerX: number
 ```
 
-Transform the x-axis coordinate of the center point.
+X-coordinate of the center point.Unit: vp
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RotateResult-centerX: double--><!--Device-RotateResult-centerX: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## centerY
 
 ```TypeScript
-centerY: double
+centerY: number
 ```
 
-Transform the y-axis coordinate of the center point.
+Y-coordinate of the center point.Unit: vp
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RotateResult-centerY: double--><!--Device-RotateResult-centerY: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
-Axis of rotation vector x coordinate.
+X-coordinate of the rotation vector.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RotateResult-x: double--><!--Device-RotateResult-x: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
-Axis of rotation vector y coordinate.
+Y-coordinate of the rotation vector.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RotateResult-y: double--><!--Device-RotateResult-y: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## z
 
 ```TypeScript
-z: double
+z: number
 ```
 
-Axis of rotation vector z coordinate.
+Z coordinate of the rotation vector.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RotateResult-z: double--><!--Device-RotateResult-z: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

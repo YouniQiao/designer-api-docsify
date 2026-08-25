@@ -9,9 +9,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export declare class PinchGesture--><!--Device-unnamed-export declare class PinchGesture-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,26 +23,24 @@ static $_instantiate(factory: () => PinchGesture, value?: PinchGestureHandlerOpt
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PinchGesture-static $_instantiate(factory: () => PinchGesture, value?: PinchGestureHandlerOptions): PinchGesture--><!--Device-PinchGesture-static $_instantiate(factory: () => PinchGesture, value?: PinchGestureHandlerOptions): PinchGesture-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| factory | () =&gt; PinchGesture | 是 |  |
-| value | [PinchGestureHandlerOptions](arkts-arkui-gesture-pinchgesturehandleroptions-i.md) | 否 | 捏合手势处理器配置参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| factory | () = & gt; PinchGesture | 是 |
+| value | [PinchGestureHandlerOptions](arkts-arkui-gesture-pinchgesturehandleroptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [PinchGesture](arkts-arkui-gesture-pinchgesture-c.md) |  |
+| 类型 |
+| --- |
+| [PinchGesture](arkts-arkui-gesture-pinchgesture-c.md) |
 
 ## onActionCancel
 
@@ -56,25 +52,23 @@ Pinch手势识别成功并接收到触摸取消事件的回调。与[onActionCan
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PinchGesture-onActionCancel(event: Callback<GestureEvent>): this--><!--Device-PinchGesture-onActionCancel(event: Callback<GestureEvent>): this-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 | 手势事件回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| this |  |
+| 类型 |
+| --- |
+| this |
 
 ## onActionEnd
 
@@ -86,25 +80,23 @@ Pinch手势识别成功，当抬起最后一根满足手势触发条件的手指
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PinchGesture-onActionEnd(event: Callback<GestureEvent>): this--><!--Device-PinchGesture-onActionEnd(event: Callback<GestureEvent>): this-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 | 手势事件回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| this |  |
+| 类型 |
+| --- |
+| this |
 
 ## onActionStart
 
@@ -116,25 +108,23 @@ Pinch手势识别成功后触发回调。
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PinchGesture-onActionStart(event: Callback<GestureEvent>): this--><!--Device-PinchGesture-onActionStart(event: Callback<GestureEvent>): this-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 | 手势事件回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| this |  |
+| 类型 |
+| --- |
+| this |
 
 ## onActionUpdate
 
@@ -146,23 +136,20 @@ Pinch手势移动过程中回调。
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PinchGesture-onActionUpdate(event: Callback<GestureEvent>): this--><!--Device-PinchGesture-onActionUpdate(event: Callback<GestureEvent>): this-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 | 手势事件回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| this |  |
-
+| 类型 |
+| --- |
+| this |

@@ -4,7 +4,7 @@ Enumerates the event service types.
 
 **Since:** 10
 
-<!--Device-calendarManager-export enum ServiceType--><!--Device-calendarManager-export enum ServiceType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -18,9 +18,9 @@ Join a meeting.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-ServiceType-MEETING = 'Meeting'--><!--Device-ServiceType-MEETING = 'Meeting'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -34,9 +34,9 @@ Watch a video.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-ServiceType-WATCHING = 'Watching'--><!--Device-ServiceType-WATCHING = 'Watching'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -50,9 +50,9 @@ Make a payment.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-ServiceType-REPAYMENT = 'Repayment'--><!--Device-ServiceType-REPAYMENT = 'Repayment'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -66,9 +66,9 @@ Watch live TV.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-ServiceType-LIVE = 'Live'--><!--Device-ServiceType-LIVE = 'Live'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -82,9 +82,9 @@ Go shopping.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-ServiceType-SHOPPING = 'Shopping'--><!--Device-ServiceType-SHOPPING = 'Shopping'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -98,9 +98,9 @@ View the trip.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-ServiceType-TRIP = 'Trip'--><!--Device-ServiceType-TRIP = 'Trip'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -114,9 +114,9 @@ Join class.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-ServiceType-CLASS = 'Class'--><!--Device-ServiceType-CLASS = 'Class'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -130,9 +130,9 @@ Watch a sports event.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-ServiceType-SPORTS_EVENTS = 'SportsEvents'--><!--Device-ServiceType-SPORTS_EVENTS = 'SportsEvents'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -146,9 +146,8 @@ Start exercising.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ServiceType-SPORTS_EXERCISE = 'SportsExercise'--><!--Device-ServiceType-SPORTS_EXERCISE = 'SportsExercise'-End-->
-
 **System capability:** SystemCapability.Applications.CalendarData
-

@@ -4,7 +4,7 @@ Defines information about the call status.
 
 **Since:** 23
 
-<!--Device-observer-export interface CCallStateInfo--><!--Device-observer-export interface CCallStateInfo-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -26,7 +26,7 @@ Call type.
 
 **Since:** 23
 
-<!--Device-CCallStateInfo-state: CCallState--><!--Device-CCallStateInfo-state: CCallState-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -42,7 +42,6 @@ Phone number.
 
 **Since:** 23
 
-<!--Device-CCallStateInfo-teleNumber: string--><!--Device-CCallStateInfo-teleNumber: string-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
-

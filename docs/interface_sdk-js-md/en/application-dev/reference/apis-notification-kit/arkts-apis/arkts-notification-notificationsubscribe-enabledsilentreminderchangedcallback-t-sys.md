@@ -8,13 +8,12 @@ Defines a callback function to listen for the enabling state changes of the appl
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-notificationSubscribe-export type EnabledSilentReminderChangedCallback = _EnabledSilentReminderChangedCallback--><!--Device-notificationSubscribe-export type EnabledSilentReminderChangedCallback = _EnabledSilentReminderChangedCallback-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
 
 **Property type:** _EnabledSilentReminderChangedCallback
-

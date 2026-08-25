@@ -8,7 +8,7 @@ The process data.
 
 **Since:** 14
 
-<!--Device-unnamed-export type ProcessData = _ProcessData.default--><!--Device-unnamed-export type ProcessData = _ProcessData.default-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -44,4 +44,3 @@ let applicationStateObserver: appManager.ApplicationStateObserver = {
 };
 let observerCode = appManager.on('applicationState', applicationStateObserver);
 ```
-

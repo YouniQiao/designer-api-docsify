@@ -2,9 +2,9 @@
 
 Enumerates the asset statuses.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-commonType-enum AssetStatus--><!--Device-commonType-enum AssetStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
@@ -16,9 +16,9 @@ ASSET_NORMAL
 
 The asset is in normal status.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AssetStatus-ASSET_NORMAL--><!--Device-AssetStatus-ASSET_NORMAL-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
@@ -30,9 +30,9 @@ ASSET_INSERT
 
 The asset is to be inserted to the cloud.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AssetStatus-ASSET_INSERT--><!--Device-AssetStatus-ASSET_INSERT-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
@@ -44,9 +44,9 @@ ASSET_UPDATE
 
 The asset is to be updated to the cloud.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AssetStatus-ASSET_UPDATE--><!--Device-AssetStatus-ASSET_UPDATE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
@@ -58,9 +58,9 @@ ASSET_DELETE
 
 The asset is to be deleted from the cloud.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AssetStatus-ASSET_DELETE--><!--Device-AssetStatus-ASSET_DELETE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
@@ -72,9 +72,9 @@ ASSET_ABNORMAL
 
 The asset is in abnormal status.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AssetStatus-ASSET_ABNORMAL--><!--Device-AssetStatus-ASSET_ABNORMAL-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
@@ -86,9 +86,8 @@ ASSET_DOWNLOADING
 
 The asset is being downloaded to a local device.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AssetStatus-ASSET_DOWNLOADING--><!--Device-AssetStatus-ASSET_DOWNLOADING-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
-

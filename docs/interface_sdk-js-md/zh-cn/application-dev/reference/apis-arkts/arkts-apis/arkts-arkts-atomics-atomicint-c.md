@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export class AtomicInt--><!--Device-unnamed-export class AtomicInt-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,26 +23,24 @@ compareAndSwap(expected: int, val: int): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicInt-compareAndSwap(expected: int, val: int): int--><!--Device-AtomicInt-compareAndSwap(expected: int, val: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| expected | int | 是 | 预期的当前值。 <br>该值应为整数。 |
-| val | int | 是 | 匹配成功时要写入的新值。 <br>该值应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| expected | int | 是 |
+| val | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 修改前的旧值。 |
+| 类型 |
+| --- |
+| int |
 
 ## constructor
 
@@ -56,19 +52,17 @@ constructor(val: int)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicInt-constructor(val: int)--><!--Device-AtomicInt-constructor(val: int)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | int | 是 | 初始值。 <br>该值应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | int | 是 |
 
 ## exchange
 
@@ -80,25 +74,23 @@ exchange(val: int): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicInt-exchange(val: int): int--><!--Device-AtomicInt-exchange(val: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | int | 是 | 要写入的新值。 <br>该值应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 更新前的旧值。 |
+| 类型 |
+| --- |
+| int |
 
 ## fetchAdd
 
@@ -110,25 +102,23 @@ fetchAdd(val: int): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicInt-fetchAdd(val: int): int--><!--Device-AtomicInt-fetchAdd(val: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | int | 是 | 执行加法运算的操作数。 <br>该值应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 加法执行前的旧值。 |
+| 类型 |
+| --- |
+| int |
 
 ## fetchAnd
 
@@ -140,25 +130,23 @@ fetchAnd(val: int): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicInt-fetchAnd(val: int): int--><!--Device-AtomicInt-fetchAnd(val: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | int | 是 | 执行按位与运算的操作数。 <br>该值应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 按位与运算前的旧值。 |
+| 类型 |
+| --- |
+| int |
 
 ## fetchOr
 
@@ -170,25 +158,23 @@ fetchOr(val: int): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicInt-fetchOr(val: int): int--><!--Device-AtomicInt-fetchOr(val: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | int | 是 | 执行按位或运算的操作数。 <br>该值应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 按位或运算前的旧值。 |
+| 类型 |
+| --- |
+| int |
 
 ## fetchSub
 
@@ -200,25 +186,23 @@ fetchSub(val: int): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicInt-fetchSub(val: int): int--><!--Device-AtomicInt-fetchSub(val: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | int | 是 | 执行减法运算的操作数。 <br>该值应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 减法执行前的旧值。 |
+| 类型 |
+| --- |
+| int |
 
 ## fetchXor
 
@@ -230,25 +214,23 @@ fetchXor(val: int): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicInt-fetchXor(val: int): int--><!--Device-AtomicInt-fetchXor(val: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | int | 是 | 执行按位异或运算的操作数。 <br>该值应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 按位异或运算前的旧值。 |
+| 类型 |
+| --- |
+| int |
 
 ## isLockFree
 
@@ -260,19 +242,17 @@ static isLockFree(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicInt-static isLockFree(): boolean--><!--Device-AtomicInt-static isLockFree(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true表示无锁实现，false表示内部可能使用阻塞式同步机制。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## load
 
@@ -284,19 +264,17 @@ load(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicInt-load(): int--><!--Device-AtomicInt-load(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 当前保存的值。 |
+| 类型 |
+| --- |
+| int |
 
 ## store
 
@@ -308,17 +286,14 @@ store(val: int): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicInt-store(val: int): void--><!--Device-AtomicInt-store(val: int): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | int | 是 | 要写入的新值。 <br>该值应为整数。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | int | 是 |

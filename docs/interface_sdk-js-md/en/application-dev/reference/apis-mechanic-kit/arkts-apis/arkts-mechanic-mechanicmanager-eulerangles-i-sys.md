@@ -2,9 +2,9 @@
 
 Absolute euler angles relative to the home position.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-mechanicManager-export interface EulerAngles--><!--Device-mechanicManager-export interface EulerAngles-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -24,11 +24,11 @@ pitch?: double
 
 Pitch angle, ranging from -Math.PI to Math.PI, measured in radians.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-EulerAngles-pitch?: double--><!--Device-EulerAngles-pitch?: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -42,11 +42,11 @@ roll?: double
 
 Roll angle, ranging from -Math.PI to Math.PI, measured in radians.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-EulerAngles-roll?: double--><!--Device-EulerAngles-roll?: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -60,13 +60,12 @@ yaw?: double
 
 Yaw angle, ranging from -Math.PI to Math.PI, measured in radians.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-EulerAngles-yaw?: double--><!--Device-EulerAngles-yaw?: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
-

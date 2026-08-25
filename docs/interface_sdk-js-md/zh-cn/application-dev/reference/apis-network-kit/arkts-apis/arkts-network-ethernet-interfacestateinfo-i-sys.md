@@ -4,7 +4,7 @@
 
 **起始版本：** 11
 
-<!--Device-ethernet-export interface InterfaceStateInfo--><!--Device-ethernet-export interface InterfaceStateInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -28,7 +28,7 @@ active: boolean
 
 **起始版本：** 11
 
-<!--Device-InterfaceStateInfo-active: boolean--><!--Device-InterfaceStateInfo-active: boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -46,9 +46,8 @@ iface: string
 
 **起始版本：** 11
 
-<!--Device-InterfaceStateInfo-iface: string--><!--Device-InterfaceStateInfo-iface: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。
-

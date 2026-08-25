@@ -2,9 +2,9 @@
 
 提供ImageProcessor类型，包括图像处理功能。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-videoProcessingEngine-interface ImageProcessor--><!--Device-videoProcessingEngine-interface ImageProcessor-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
@@ -16,42 +16,48 @@ import { videoProcessingEngine } from '@kit.ImageKit';
 
 ## enhanceDetail
 
+ArkTS-Dyn:
+```TypeScript
+enhanceDetail(sourceImage: image.PixelMap, width: number, height: number, level?: QualityLevel): Promise<image.PixelMap>
+```
+
+ArkTS-Sta:
 ```TypeScript
 enhanceDetail(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): Promise<image.PixelMap>
 ```
 
 根据指定的宽度和高度对源图像进行必要的缩放处理，生成目标图像。 <br>提供不同质量等级的缩放方式，用于平衡处理性能和图像质量。该方法使用Promise返回处理结果。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): Promise<image.PixelMap>--><!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): Promise<image.PixelMap>-End-->
+**卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sourceImage | image.PixelMap | 是 | 源PixelMap。 |
-| width | int | 是 | 缩放后的宽度。 |
-| height | int | 是 | 缩放后的高度。 |
-| level | QualityLevel | 否 | 处理质量等级。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sourceImage | image.PixelMap | 是 |
+| width | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| height | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象，用于返回处理后的PixelMap对象。 |
+| 类型 |
+| --- |
+| Promise & lt;image.PixelMap & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | 不支持该能力。由于设备能力受限，enhanceDetail函数无法正常工作。 |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-内存不足) | 内存不足。 |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-值无效) | 输入参数无效。以下情况会返回该错误： <br>1 - 输入或输出图像缓冲区无效，例如图像缓冲区的宽度或高度过大，或者色彩空间不正确。 <br>2 - 参数无效，例如细节增强质量等级不正确。 |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-内存不足) |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-值无效) |
 
 **示例**
 
@@ -81,41 +87,47 @@ async function enhanceDetail(sourceImage: image.PixelMap, scale: number) {
 
 ## enhanceDetail
 
+ArkTS-Dyn:
+```TypeScript
+enhanceDetail(sourceImage: image.PixelMap, scale: number, level?: QualityLevel): Promise<image.PixelMap>
+```
+
+ArkTS-Sta:
 ```TypeScript
 enhanceDetail(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): Promise<image.PixelMap>
 ```
 
 根据指定的缩放比例对源图像进行必要的缩放处理，生成目标图像。 <br>提供不同质量等级的缩放方式，用于平衡处理性能和图像质量。该方法使用Promise返回处理结果。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): Promise<image.PixelMap>--><!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): Promise<image.PixelMap>-End-->
+**卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sourceImage | image.PixelMap | 是 | 源PixelMap。 |
-| scale | double | 是 | 缩放比例。 |
-| level | QualityLevel | 否 | 处理质量等级。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sourceImage | image.PixelMap | 是 |
+| scale | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象，用于返回处理后的PixelMap对象。 |
+| 类型 |
+| --- |
+| Promise & lt;image.PixelMap & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | 不支持该能力。由于设备能力受限，enhanceDetail函数无法正常工作。 |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-内存不足) | 内存不足。 |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-值无效) | 输入参数无效。以下情况会返回该错误： <br>1 - 输入或输出图像缓冲区无效，例如图像缓冲区的宽度或高度过大，或者色彩空间不正确。 <br>2 - 参数无效，例如细节增强质量等级不正确。 |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-内存不足) |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-值无效) |
 
 **示例**
 
@@ -123,43 +135,49 @@ enhanceDetail(sourceImage: image.PixelMap, scale: double, level?: QualityLevel):
 
 ## enhanceDetailSync
 
+ArkTS-Dyn:
+```TypeScript
+enhanceDetailSync(sourceImage: image.PixelMap, width: number, height: number, level?: QualityLevel): image.PixelMap
+```
+
+ArkTS-Sta:
 ```TypeScript
 enhanceDetailSync(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): image.PixelMap
 ```
 
 根据指定的宽度和高度对源图像进行必要的缩放处理，生成目标图像。 <br>提供不同质量等级的缩放方式，用于平衡处理性能和图像质量。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): image.PixelMap--><!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): image.PixelMap-End-->
+**卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sourceImage | image.PixelMap | 是 | 源PixelMap。 |
-| width | int | 是 | 缩放后的宽度。 |
-| height | int | 是 | 缩放后的高度。 |
-| level | QualityLevel | 否 | 处理质量等级。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sourceImage | image.PixelMap | 是 |
+| width | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| height | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| image.PixelMap | 操作成功时返回处理后的PixelMap对象，否则返回undefined。 |
+| 类型 |
+| --- |
+| image.PixelMap |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | 不支持该能力。由于设备能力受限，enhanceDetailSync函数无法正常工作。 |
-| [29200004](../errorcode-videoprocessingengine.md#29200004-处理失败) | 图像缓冲区处理失败。例如，处理超时。 |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-内存不足) | 内存不足。 |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-值无效) | 输入参数无效。以下情况会返回该错误： <br>1 - 输入或输出图像缓冲区无效，例如图像缓冲区的宽度或高度过大，或者色彩空间不正确。 <br>2 - 参数无效，例如细节增强质量等级不正确。 |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [29200004](../errorcode-videoprocessingengine.md#29200004-处理失败) |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-内存不足) |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-值无效) |
 
 **示例**
 
@@ -189,44 +207,49 @@ sync function enhanceDetailSync(sourceImage: image.PixelMap, scale: number) {
 
 ## enhanceDetailSync
 
+ArkTS-Dyn:
+```TypeScript
+enhanceDetailSync(sourceImage: image.PixelMap, scale: number, level?: QualityLevel): image.PixelMap
+```
+
+ArkTS-Sta:
 ```TypeScript
 enhanceDetailSync(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): image.PixelMap
 ```
 
 根据指定的缩放比例对源图像进行必要的缩放处理，生成目标图像。 <br>提供不同质量等级的缩放方式，用于平衡处理性能和图像质量。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): image.PixelMap--><!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): image.PixelMap-End-->
+**卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sourceImage | image.PixelMap | 是 | 源PixelMap。 |
-| scale | double | 是 | 缩放比例。 |
-| level | QualityLevel | 否 | 处理质量等级。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sourceImage | image.PixelMap | 是 |
+| scale | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| image.PixelMap | 操作成功时返回处理后的PixelMap对象，否则返回undefined。 |
+| 类型 |
+| --- |
+| image.PixelMap |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | 不支持该能力。由于设备能力受限，enhanceDetailSync函数无法正常工作。 |
-| [29200004](../errorcode-videoprocessingengine.md#29200004-处理失败) | 图像缓冲区处理失败。例如，处理超时。 |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-内存不足) | 内存不足。 |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-值无效) | 输入参数无效。以下情况会返回该错误： <br>1 - 输入或输出图像缓冲区无效，例如图像缓冲区的宽度或高度过大，或者色彩空间不正确。 <br>2 - 参数无效，例如细节增强质量等级不正确。 |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [29200004](../errorcode-videoprocessingengine.md#29200004-处理失败) |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-内存不足) |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-值无效) |
 
 **示例**
 
 参见 [enhanceDetailSync](#enhancedetailsync)
-

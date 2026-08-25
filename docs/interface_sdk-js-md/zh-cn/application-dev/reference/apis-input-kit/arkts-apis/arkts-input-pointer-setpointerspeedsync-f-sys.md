@@ -14,9 +14,9 @@ function setPointerSpeedSync(speed: int): void
 
 使用同步方式设置鼠标移动速度。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-pointer-function setPointerSpeedSync(speed: int): void--><!--Device-pointer-function setPointerSpeedSync(speed: int): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -24,16 +24,16 @@ function setPointerSpeedSync(speed: int): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| speed | int | 是 | 鼠标移动速度，取值范围[1, 20]，默认为10。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| speed | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -87,4 +87,3 @@ struct Index {
   }
 }
 ```
-

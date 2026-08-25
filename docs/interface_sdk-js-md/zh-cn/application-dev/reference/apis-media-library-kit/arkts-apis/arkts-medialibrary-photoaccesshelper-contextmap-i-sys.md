@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-photoAccessHelper-interface ContextMap--><!--Device-photoAccessHelper-interface ContextMap-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -28,11 +28,10 @@ topicField: FieldType[]
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-ContextMap-topicField: FieldType[]--><!--Device-ContextMap-topicField: FieldType[]-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
-

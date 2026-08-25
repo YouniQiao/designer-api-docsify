@@ -4,9 +4,7 @@ Provides an atomic wrapper for safe concurrent access to a char value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class AtomicChar--><!--Device-unnamed-export class AtomicChar-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,26 +23,24 @@ Atomically compares the current value with the expected value and replaces it if
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicChar-compareAndSwap(expected: char, val: char): char--><!--Device-AtomicChar-compareAndSwap(expected: char, val: char): char-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| expected | char | Yes | the expected current value. |
-| val | char | Yes | the new value to store if the comparison succeeds. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| expected | char | Yes |
+| val | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| char | the previous value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| char |
 
 ## constructor
 
@@ -56,19 +52,17 @@ Constructs a new AtomicChar with the provided initial value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicChar-constructor(val: char)--><!--Device-AtomicChar-constructor(val: char)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | char | Yes | the initial value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | char | Yes |
 
 ## exchange
 
@@ -80,25 +74,23 @@ Atomically exchanges the current value with a new value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicChar-exchange(val: char): char--><!--Device-AtomicChar-exchange(val: char): char-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | char | Yes | the new value to exchange with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| char | the previous value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| char |
 
 ## isLockFree
 
@@ -110,19 +102,17 @@ Checks whether atomic operations on this type are lock-free
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicChar-static isLockFree(): boolean--><!--Device-AtomicChar-static isLockFree(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if atomic operations are lock-free, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## load
 
@@ -134,19 +124,17 @@ Atomically loads the current value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicChar-load(): char--><!--Device-AtomicChar-load(): char-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| char | the current value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| char |
 
 ## store
 
@@ -158,17 +146,14 @@ Atomically stores a new value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicChar-store(val: char): void--><!--Device-AtomicChar-store(val: char): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | char | Yes | the new value to store. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | char | Yes |

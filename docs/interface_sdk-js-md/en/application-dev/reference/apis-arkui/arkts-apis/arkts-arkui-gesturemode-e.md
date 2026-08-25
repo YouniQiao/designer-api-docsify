@@ -4,7 +4,7 @@ Defines the recognition mode of a gesture group.
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum GestureMode--><!--Device-unnamed-declare enum GestureMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ Sequential recognition. Gestures are recognized in the registration sequence unt
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-GestureMode-Sequence--><!--Device-GestureMode-Sequence-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,9 @@ Parallel recognition. Registered gestures are recognized concurrently until all 
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-GestureMode-Parallel--><!--Device-GestureMode-Parallel-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,9 +50,8 @@ Exclusive recognition. All registered gestures are processed simultaneously. Onc
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-GestureMode-Exclusive--><!--Device-GestureMode-Exclusive-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

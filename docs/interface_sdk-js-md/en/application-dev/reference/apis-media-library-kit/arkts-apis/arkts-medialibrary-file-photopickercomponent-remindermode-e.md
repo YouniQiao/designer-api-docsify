@@ -4,7 +4,7 @@ Enumerates the types of the reminder when the number of selected items reaches t
 
 **Since:** 12
 
-<!--Device-unnamed-export declare enum ReminderMode--><!--Device-unnamed-export declare enum ReminderMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ No reminder.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-ReminderMode-NONE = 0--><!--Device-ReminderMode-NONE = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,9 @@ Toast message.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-ReminderMode-TOAST = 1--><!--Device-ReminderMode-TOAST = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,9 +50,8 @@ Grayed-out hint.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ReminderMode-MASK = 2--><!--Device-ReminderMode-MASK = 2-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

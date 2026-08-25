@@ -2,9 +2,9 @@
 
 Defines the format parameters of the video thumbnail to be obtained.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-media-interface PixelMapParams--><!--Device-media-interface PixelMapParams-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
@@ -25,9 +25,9 @@ Auto flip the thumbnail when video has mirror attribute (Vertical Flip or Horizo
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-PixelMapParams-autoFlip?: boolean--><!--Device-PixelMapParams-autoFlip?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
@@ -44,11 +44,10 @@ Color format of the thumbnail.
 
 **类型：** [PixelFormat](arkts-media-media-pixelformat-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-PixelMapParams-colorFormat?: PixelFormat--><!--Device-PixelMapParams-colorFormat?: PixelFormat-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
 **系统接口：** 此接口为系统接口。
-

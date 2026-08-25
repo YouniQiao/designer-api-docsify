@@ -11,9 +11,7 @@
 
 **起始版本：** 10
 
-**装饰器类型：** @Component
-
-<!--Device-unnamed-export declare struct SwipeRefresher--><!--Device-unnamed-export declare struct SwipeRefresher-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,6 +20,22 @@
 ```TypeScript
 import { SwipeRefresher } from '@kit.ArkUI';
 ```
+
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## content
 
@@ -36,13 +50,11 @@ content?: ResourceStr
 
 **起始版本：** 10
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SwipeRefresher-@Prop  content?: ResourceStr--><!--Device-SwipeRefresher-@Prop  content?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,13 +70,10 @@ isLoading: boolean
 
 **起始版本：** 10
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SwipeRefresher-@Prop  isLoading: boolean--><!--Device-SwipeRefresher-@Prop  isLoading: boolean-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

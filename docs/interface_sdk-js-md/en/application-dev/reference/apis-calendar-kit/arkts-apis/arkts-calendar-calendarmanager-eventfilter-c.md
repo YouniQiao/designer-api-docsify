@@ -4,7 +4,7 @@ Implements an event filter.You can use [filterById()](#filterbyid), [filterByTim
 
 **Since:** 10
 
-<!--Device-calendarManager-class EventFilter--><!--Device-calendarManager-class EventFilter-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -24,21 +24,21 @@ Defines a filter based on the event ID.
 
 **Since:** 10
 
-<!--Device-EventFilter-static filterById(ids: number[]): EventFilter--><!--Device-EventFilter-static filterById(ids: number[]): EventFilter-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| ids | number[] | Yes | An array of event IDs, where each event ID must be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| ids | number[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | EventFilter object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) |
 
 **Examples**
 
@@ -98,22 +98,22 @@ Defines a filter based on the event time.
 
 **Since:** 10
 
-<!--Device-EventFilter-static filterByTime(start: number, end: number): EventFilter--><!--Device-EventFilter-static filterByTime(start: number, end: number): EventFilter-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | number | Yes | Start time. The value is a 13-digit timestamp. |
-| end | number | Yes | End time. The value is a 13-digit timestamp. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | number | Yes |
+| end | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | EventFilter object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) |
 
 **Examples**
 
@@ -168,21 +168,21 @@ Filters events by event title. This API supports fuzzy match.
 
 **Since:** 10
 
-<!--Device-EventFilter-static filterByTitle(title: string): EventFilter--><!--Device-EventFilter-static filterByTitle(title: string): EventFilter-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| title | string | Yes | Event title, with a maximum of 5,000 characters. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| title | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | EventFilter object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) |
 
 **Examples**
 
@@ -217,4 +217,3 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
   }
 });
 ```
-

@@ -27,23 +27,23 @@ function callbackWrapper(original: Function): (err: Object, value: Object) => vo
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
-<!--Device-util-function callbackWrapper(original: Function): (err: Object, value: Object) => void--><!--Device-util-function callbackWrapper(original: Function): (err: Object, value: Object) => void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| original | Function | 是 | 异步函数，要求函数返回Promise对象。该异步函数的resolve值会作为回调的第二个参数传入，reject原因会作为回调的第一个参数传入。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| original | Function | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [function](arkts-arkts-taskpool-task-c.md) | 返回一个回调函数，该函数第一个参数 **err** 是拒绝原因（如果Promise已解决，则为null），第二个参数 **value** 是已解决的值。 |
+| 类型 |
+| --- |
+| [function](arkts-arkts-taskpool-task-c.md) |
 
 **示例**
 
@@ -74,4 +74,3 @@ cb(args, (err : Object, ret : string) => {
   console.info(ret); // 输出结果：hello world
 });
 ```
-

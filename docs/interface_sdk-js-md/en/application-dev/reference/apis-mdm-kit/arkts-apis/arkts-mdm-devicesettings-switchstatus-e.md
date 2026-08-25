@@ -4,7 +4,7 @@ Enumerates switch states.
 
 **Since:** 26.0.0
 
-<!--Device-deviceSettings-enum SwitchStatus--><!--Device-deviceSettings-enum SwitchStatus-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,9 +18,9 @@ On.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-SwitchStatus-ON = 0--><!--Device-SwitchStatus-ON = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -34,9 +34,9 @@ Off.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-SwitchStatus-OFF = 1--><!--Device-SwitchStatus-OFF = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -50,9 +50,8 @@ Forced-on.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SwitchStatus-FORCE_ON = 2--><!--Device-SwitchStatus-FORCE_ON = 2-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

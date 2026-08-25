@@ -2,9 +2,9 @@
 
 Describes the filter criteria for querying the live view.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-unnamed-export interface NotificationFilter--><!--Device-unnamed-export interface NotificationFilter-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -20,9 +20,9 @@ Bundle information of the live view.
 
 **Type:** [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationFilter-bundle: BundleOption--><!--Device-NotificationFilter-bundle: BundleOption-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -38,9 +38,9 @@ List of extra keys. If this parameter is left empty, all extra information is in
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationFilter-extraInfoKeys?: Array<string>--><!--Device-NotificationFilter-extraInfoKeys?: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -56,11 +56,10 @@ Notification information, including the notification ID and label.
 
 **Type:** notificationSubscribe.NotificationKey
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationFilter-notificationKey: notificationSubscribe.NotificationKey--><!--Device-NotificationFilter-notificationKey: notificationSubscribe.NotificationKey-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

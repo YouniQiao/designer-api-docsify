@@ -2,9 +2,9 @@
 
 证书链数据，在证书链校验时，作为入参传入。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-cert-interface CertChainData--><!--Device-cert-interface CertChainData-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -22,13 +22,13 @@ count: int
 
 传入的数据中，包含的证书数量。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CertChainData-count: int--><!--Device-CertChainData-count: int-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -42,11 +42,11 @@ data: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CertChainData-data: Uint8Array--><!--Device-CertChainData-data: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -60,11 +60,10 @@ encodingFormat: EncodingFormat
 
 **类型：** [EncodingFormat](arkts-devicecertificate-cert-encodingformat-e.md)
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-CertChainData-encodingFormat: EncodingFormat--><!--Device-CertChainData-encodingFormat: EncodingFormat-End-->
-
 **系统能力：** SystemCapability.Security.Cert
-

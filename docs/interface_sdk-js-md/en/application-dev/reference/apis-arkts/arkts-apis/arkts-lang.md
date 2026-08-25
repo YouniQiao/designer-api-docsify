@@ -12,13 +12,18 @@ import { lang, Retention, RetentionPolicy } from '@kit.ArkTS';
 
 ### Namespaces
 
-| Name | Description |
-| --- | --- |
-| [lang](arkts-arkts-lang-n.md) | ArkTS language |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [lang](arkts-arkts-lang-n.md) |
+
+### Interfaces
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Retention](arkts-arkts-lang-retention-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [RetentionPolicy](arkts-arkts-lang-retentionpolicy-e.md) | Enum for Retention annotation field type. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [RetentionPolicy](arkts-arkts-lang-retentionpolicy-e.md) |

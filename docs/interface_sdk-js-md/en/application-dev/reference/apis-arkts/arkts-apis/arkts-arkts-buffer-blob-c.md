@@ -2,9 +2,9 @@
 
 Process data as blob type
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-buffer-class Blob--><!--Device-buffer-class Blob-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -22,19 +22,19 @@ arrayBuffer(): Promise<ArrayBuffer>
 
 Puts the **Blob** data into an **ArrayBuffer** object. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Blob-arrayBuffer(): Promise<ArrayBuffer>--><!--Device-Blob-arrayBuffer(): Promise<ArrayBuffer>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;ArrayBuffer&gt; |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;ArrayBuffer & gt; |
 
 **Examples**
 
@@ -60,18 +60,18 @@ A constructor used to create a **Blob** object.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Blob-constructor(sources: string[] | ArrayBuffer[] | TypedArray[] | DataView[] | Blob[], options?: Object)--><!--Device-Blob-constructor(sources: string[] | ArrayBuffer[] | TypedArray[] | DataView[] | Blob[], options?: Object)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sources | string[] \| ArrayBuffer[] \| TypedArray[] \| DataView[] \| [Blob](arkts-arkts-buffer-blob-c.md)[] | Yes | Data sources of the **Blob** object. |
-| options | Object | No | options:<br>- **endings**: specifies how the terminator **'\n'** is output. The value can be **'native'** or **'transparent'**. **'native'** means that the terminator follows the system. **'transparent'** means that the terminator stored in the **Blob** object remains unchanged. The default value is **'transparent'**.<br>- **type**: type of the data in the **Blob** object. This type represents the MIME type of the data. However, it is not used for type format validation. The default value is **''**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sources | string[] \| ArrayBuffer[] \| TypedArray[] \| DataView[] \| [Blob](arkts-arkts-buffer-blob-c.md)[] | Yes |
+| options | Object | No |
 
 **Examples**
 
@@ -98,18 +98,18 @@ Creates a new Blob object containing a concatenation of the given sources.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-Blob-constructor(sources: ArrayUnionType, options?: BlobOptions)--><!--Device-Blob-constructor(sources: ArrayUnionType, options?: BlobOptions)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sources | [ArrayUnionType](arkts-arkts-buffer-arrayuniontype-t.md) | Yes | The sources to store within the Blob |
-| options | [BlobOptions](arkts-arkts-buffer-bloboptions-i.md) | No | Blob options {endings: string, type: string} endings: One of either 'transparent' or 'native'. type: The Blob content-type |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sources | [ArrayUnionType](arkts-arkts-buffer-arrayuniontype-t.md) | Yes |
+| options | [BlobOptions](arkts-arkts-buffer-bloboptions-i.md) | No |
 
 **Examples**
 
@@ -117,33 +117,39 @@ See [constructor](#constructor)
 
 ## slice
 
+ArkTS-Dyn:
+```TypeScript
+slice(start?: number, end?: number, type?: string): Blob
+```
+
+ArkTS-Sta:
 ```TypeScript
 slice(start?: int, end?: int, type?: string): Blob
 ```
 
 Creates and returns a **Blob** object that contains specified data from this **Blob** object.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Blob-slice(start?: int, end?: int, type?: string): Blob--><!--Device-Blob-slice(start?: int, end?: int, type?: string): Blob-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | int | No | Offset to the start position of data. The default value is **0**. |
-| end | int | No | Offset to the end position of data. The default value is the data length in the original **Blob** object. |
-| type | string | No | Type of the data in the new **Blob** object. The default value is **''**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| end | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| [type](#type) | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Blob](arkts-arkts-buffer-blob-c.md) |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Blob](arkts-arkts-buffer-blob-c.md) |
 
 **Examples**
 
@@ -164,19 +170,19 @@ text(): Promise<string>
 
 Decodes data using UTF-8 and returns a string. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Blob-text(): Promise<string>--><!--Device-Blob-text(): Promise<string>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Examples**
 
@@ -191,3 +197,38 @@ pro.then((val: string) => {
 });
 ```
 
+## size
+
+```TypeScript
+get size(): int
+```
+
+Total size of the Blob instance, in bytes.
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## type
+
+```TypeScript
+get type(): string
+```
+
+Type of the data in the Blob instance.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Utils.Lang

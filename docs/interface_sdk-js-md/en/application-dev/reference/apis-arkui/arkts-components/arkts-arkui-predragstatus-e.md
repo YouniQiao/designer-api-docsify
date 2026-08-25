@@ -4,7 +4,7 @@ Defines the states before the drag gesture is triggered.
 
 **Since:** 12
 
-<!--Device-unnamed-declare enum PreDragStatus--><!--Device-unnamed-declare enum PreDragStatus-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ A drag gesture is being detected. (Triggered when the component is long pressed 
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PreDragStatus-ACTION_DETECTING_STATUS = 0--><!--Device-PreDragStatus-ACTION_DETECTING_STATUS = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ The component is ready to be dragged. (Triggered when the component is long pres
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PreDragStatus-READY_TO_TRIGGER_DRAG_ACTION = 1--><!--Device-PreDragStatus-READY_TO_TRIGGER_DRAG_ACTION = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ A lift animation is started. (Triggered when the component is long pressed for 8
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PreDragStatus-PREVIEW_LIFT_STARTED = 2--><!--Device-PreDragStatus-PREVIEW_LIFT_STARTED = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,11 @@ A lift animation is finished. (Triggered at the completion of the lift animation
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PreDragStatus-PREVIEW_LIFT_FINISHED = 3--><!--Device-PreDragStatus-PREVIEW_LIFT_FINISHED = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,11 +90,11 @@ A drop animation is started. (Triggered when the drop animation starts.)
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PreDragStatus-PREVIEW_LANDING_STARTED = 4--><!--Device-PreDragStatus-PREVIEW_LANDING_STARTED = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,11 +108,11 @@ A drop animation is finished. (Triggered when the drop animation ends.)
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PreDragStatus-PREVIEW_LANDING_FINISHED = 5--><!--Device-PreDragStatus-PREVIEW_LANDING_FINISHED = 5-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,11 +126,11 @@ A drop animation is terminated. (Triggered when the finger is lifted off the scr
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PreDragStatus-ACTION_CANCELED_BEFORE_DRAG = 6--><!--Device-PreDragStatus-ACTION_CANCELED_BEFORE_DRAG = 6-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -144,11 +144,10 @@ The component is ready to be dragged. (Triggered when the component is long pres
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-PreDragStatus-PREPARING_FOR_DRAG_DETECTION = 7--><!--Device-PreDragStatus-PREPARING_FOR_DRAG_DETECTION = 7-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

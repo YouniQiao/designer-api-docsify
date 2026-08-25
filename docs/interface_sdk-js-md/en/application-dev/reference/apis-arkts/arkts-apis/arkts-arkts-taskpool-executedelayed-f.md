@@ -16,35 +16,35 @@ Executes a task after a given delay. In this execution mode, you can set the tas
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-taskpool-function executeDelayed(delayTime: number, task: Task, priority?: Priority): Promise<Object>--><!--Device-taskpool-function executeDelayed(delayTime: number, task: Task, priority?: Priority): Promise<Object>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| delayTime | number | Yes | Delay, in ms. The value must be greater than or equal to 0. The value should be an integer. <br>Unit:milliseconds. |
-| task | Task | Yes | Task to be executed with a delay. |
-| priority | Priority | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| delayTime | number | Yes |
+| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Object&gt; | Promise used to return an object that carries the function execution result. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Object & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) | The delayTime is less than zero. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization.<br>**Applicable version:** 12 and later |
-| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent.<br>**Applicable version:** 12 and later |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
+| Error Code ID |
+| --- |
+| [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
 
 **Examples**
 
@@ -96,35 +96,34 @@ Executes the generic task with a delay without verifying the parameter type and 
 
 **Since:** 13
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
-<!--Device-taskpool-function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: GenericsTask<A, R>, priority?: Priority): Promise<R>--><!--Device-taskpool-function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: GenericsTask<A, R>, priority?: Priority): Promise<R>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| delayTime | number | Yes | Delay, in ms. The value must be greater than or equal to 0. The value should be an integer. <br>Unit:milliseconds. |
-| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | Yes | Generic task to be executed with a delay. |
-| priority | Priority | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| delayTime | number | Yes |
+| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | Yes |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;R&gt; | Promise used to return an object that carries the function execution result. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;R & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) | The delayTime is less than zero. |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again. |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
+| Error Code ID |
+| --- |
+| [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
 
 **Examples**
 
 See [executeDelayed](#executedelayed)
-

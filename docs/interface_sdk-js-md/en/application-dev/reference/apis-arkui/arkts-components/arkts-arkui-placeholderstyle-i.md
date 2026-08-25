@@ -4,7 +4,7 @@ Style of the placeholder text.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface PlaceholderStyle--><!--Device-unnamed-declare interface PlaceholderStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Style of the placeholder text.The default value follows the theme.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PlaceholderStyle-font?: Font--><!--Device-PlaceholderStyle-font?: Font-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ Color of the placeholder text.The default value follows the theme.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PlaceholderStyle-fontColor?: ResourceColor--><!--Device-PlaceholderStyle-fontColor?: ResourceColor-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

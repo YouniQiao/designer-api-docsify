@@ -6,7 +6,7 @@ The &lt;button&gt; component includes capsule, circle, text, arc, and download b
 
 **Since:** 4
 
-<!--Device-unnamed-export interface ButtonElement--><!--Device-unnamed-export interface ButtonElement-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,15 +20,14 @@ Progress bar of the download button. The value ranges from 0 to 100. The progres
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-ButtonElement-setProgress(param: { progress: number }): void--><!--Device-ButtonElement-setProgress(param: { progress: number }): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| param | { progress: number } | Yes |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| param | { progress: number } | Yes |

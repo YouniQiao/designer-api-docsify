@@ -2,9 +2,9 @@
 
 表示当前设备的状态。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-resourceManager-export class Configuration--><!--Device-resourceManager-export class Configuration-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -24,11 +24,11 @@ colorMode: ColorMode
 
 **类型：** ColorMode
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-Configuration-colorMode: ColorMode--><!--Device-Configuration-colorMode: ColorMode-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -42,11 +42,11 @@ deviceType: DeviceType
 
 **类型：** DeviceType
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-Configuration-deviceType: DeviceType--><!--Device-Configuration-deviceType: DeviceType-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -60,11 +60,11 @@ direction: Direction
 
 **类型：** Direction
 
-**起始版本：** 23
+**起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Configuration-direction: Direction--><!--Device-Configuration-direction: Direction-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -78,11 +78,11 @@ locale: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Configuration-locale: string--><!--Device-Configuration-locale: string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -94,13 +94,13 @@ mcc : int
 
 移动国家码。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-Configuration-mcc : int--><!--Device-Configuration-mcc : int-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -112,13 +112,13 @@ mnc : int
 
 移动网络码。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-Configuration-mnc : int--><!--Device-Configuration-mnc : int-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -132,11 +132,10 @@ screenDensity: ScreenDensity
 
 **类型：** ScreenDensity
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-Configuration-screenDensity: ScreenDensity--><!--Device-Configuration-screenDensity: ScreenDensity-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
-

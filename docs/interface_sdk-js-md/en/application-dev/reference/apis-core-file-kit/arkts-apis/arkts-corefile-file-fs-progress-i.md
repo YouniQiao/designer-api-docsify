@@ -4,7 +4,7 @@ Defines the copy progress information.
 
 **Since:** 11
 
-<!--Device-unnamed-interface Progress--><!--Device-unnamed-interface Progress-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -28,7 +28,7 @@ Size of the copied data, in bytes.
 
 **Since:** 11
 
-<!--Device-Progress-readonly processedSize: number--><!--Device-Progress-readonly processedSize: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -44,7 +44,6 @@ Total size of the data to be copied, in bytes.
 
 **Since:** 11
 
-<!--Device-Progress-readonly totalSize: number--><!--Device-Progress-readonly totalSize: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
-

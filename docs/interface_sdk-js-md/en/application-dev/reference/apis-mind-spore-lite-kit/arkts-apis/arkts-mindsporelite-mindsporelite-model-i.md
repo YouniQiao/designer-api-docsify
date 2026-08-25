@@ -2,9 +2,9 @@
 
 Provides manages model function. Including get inputs, predict ,resize.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-mindSporeLite-interface Model--><!--Device-mindSporeLite-interface Model-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -26,28 +26,28 @@ exportModel(
 
 Export train model to file
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Model-exportModel(      modelFile: string,      quantizationType?: QuantizationType,      exportInferenceOnly?: boolean,      outputTensorName?: string[]): boolean--><!--Device-Model-exportModel(      modelFile: string,      quantizationType?: QuantizationType,      exportInferenceOnly?: boolean,      outputTensorName?: string[]): boolean-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| modelFile | string | Yes | model file path. |
-| quantizationType | [QuantizationType](arkts-mindsporelite-mindsporelite-quantizationtype-e.md) | No | the quantization type, default NO_QUANT. |
-| exportInferenceOnly | boolean | No | whether to export a inference only model, default true. |
-| outputTensorName | string[] | No | the set of name of output tensor the exported inference model, |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| modelFile | string | Yes |
+| quantizationType | [QuantizationType](arkts-mindsporelite-mindsporelite-quantizationtype-e.md) | No |
+| exportInferenceOnly | boolean | No |
+| outputTensorName | string[] | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | the boolean result if the operation is successful |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -75,28 +75,28 @@ exportWeightsCollaborateWithMicro(
 
 Export model's weights, which can be used in micro only. Only valid for Lite Train
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Model-exportWeightsCollaborateWithMicro(      weightFile: string,      isInference?: boolean,      enableFp16?: boolean,      changeableWeightsName?: string[]): boolean--><!--Device-Model-exportWeightsCollaborateWithMicro(      weightFile: string,      isInference?: boolean,      enableFp16?: boolean,      changeableWeightsName?: string[]): boolean-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| weightFile | string | Yes | weight file path |
-| isInference | boolean | No | whether to export weights from inference model, only support this is `true` for now, default true |
-| enableFp16 | boolean | No | float-weight is whether to be saved in float16 format, default false |
-| changeableWeightsName | string[] | No | changeable weights name |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| weightFile | string | Yes |
+| isInference | boolean | No |
+| enableFp16 | boolean | No |
+| changeableWeightsName | string[] | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | the boolean result if the operation is successful |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -119,19 +119,19 @@ getInputs(): MSTensor[]
 
 Get model input tensors.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Model-getInputs(): MSTensor[]--><!--Device-Model-getInputs(): MSTensor[]-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | the MSTensor array of the inputs. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] |
 
 **Examples**
 
@@ -155,19 +155,19 @@ getWeights(): MSTensor[]
 
 Obtain all weights of the model
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Model-getWeights(): MSTensor[]--><!--Device-Model-getWeights(): MSTensor[]-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | the weight tensors of the model |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] |
 
 **Examples**
 
@@ -209,20 +209,20 @@ predict(inputs: MSTensor[], callback: Callback<MSTensor[]>): void
 
 Infer model
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Model-predict(inputs: MSTensor[], callback: Callback<MSTensor[]>): void--><!--Device-Model-predict(inputs: MSTensor[], callback: Callback<MSTensor[]>): void-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| inputs | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[]&gt; | Yes | the callback of MSTensor array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [inputs](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-shader-i.md) | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[]&gt; | Yes |
 
 **Examples**
 
@@ -291,25 +291,25 @@ predict(inputs: MSTensor[]): Promise<MSTensor[]>
 
 Infer model
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Model-predict(inputs: MSTensor[]): Promise<MSTensor[]>--><!--Device-Model-predict(inputs: MSTensor[]): Promise<MSTensor[]>-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| inputs | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [inputs](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-shader-i.md) | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[]&gt; | the promise returned by the function. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[]&gt; |
 
 **Examples**
 
@@ -317,32 +317,38 @@ See [predict](#predict)
 
 ## resize
 
+ArkTS-Dyn:
+```TypeScript
+resize(inputs: MSTensor[], dims: Array<Array<number>>): boolean
+```
+
+ArkTS-Sta:
 ```TypeScript
 resize(inputs: MSTensor[], dims: Array<Array<int>>): boolean
 ```
 
 resize model input
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Model-resize(inputs: MSTensor[], dims: Array<Array<int>>): boolean--><!--Device-Model-resize(inputs: MSTensor[], dims: Array<Array<int>>): boolean-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| inputs | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs. |
-| dims | Array&lt;Array&lt;int&gt;&gt; | Yes | indicates the target new shape array |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [inputs](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-shader-i.md) | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes |
+| dims | ArkTS-Dyn: Array & lt;Array & lt;number & gt; & gt;<br>ArkTS-Sta：Array & lt;Array & lt;int & gt; & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | the boolean result if the resize operation is successful |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -363,25 +369,25 @@ runStep(inputs: MSTensor[]): boolean
 
 Train model by step
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Model-runStep(inputs: MSTensor[]): boolean--><!--Device-Model-runStep(inputs: MSTensor[]): boolean-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| inputs | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [inputs](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-shader-i.md) | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | the boolean result if the runStep operation is successful |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -399,33 +405,39 @@ mindSporeLite.loadTrainModelFromFile(modelFile).then((mindSporeLiteModel: mindSp
 
 ## setupVirtualBatch
 
+ArkTS-Dyn:
+```TypeScript
+setupVirtualBatch(virtualBatchMultiplier: number, lr: number, momentum: number): boolean
+```
+
+ArkTS-Sta:
 ```TypeScript
 setupVirtualBatch(virtualBatchMultiplier: int, lr: double, momentum: double): boolean
 ```
 
 Setup training with virtual batches
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Model-setupVirtualBatch(virtualBatchMultiplier: int, lr: double, momentum: double): boolean--><!--Device-Model-setupVirtualBatch(virtualBatchMultiplier: int, lr: double, momentum: double): boolean-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| virtualBatchMultiplier | int | Yes | virtual batch multiplier, use any number &lt; 1 to disable |
-| lr | double | Yes | learning rate to use for virtual batch, -1 for internal configuration |
-| momentum | double | Yes | batch norm momentum to use for virtual batch, -1 for internal configuration |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| virtualBatchMultiplier | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| lr | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| momentum | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | the boolean result if the operation is successful |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -462,25 +474,25 @@ updateWeights(weights: MSTensor[]): boolean
 
 Update weights of the model
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Model-updateWeights(weights: MSTensor[]): boolean--><!--Device-Model-updateWeights(weights: MSTensor[]): boolean-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| weights | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| weights | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | the boolean result if updating weights operation is successful |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -518,13 +530,13 @@ learningRate?: double
 
 The learning rate of the training model
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Model-learningRate?: double--><!--Device-Model-learningRate?: double-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -538,11 +550,10 @@ The running mode of the model
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Model-trainMode?: boolean--><!--Device-Model-trainMode?: boolean-End-->
-
 **System capability:** SystemCapability.AI.MindSporeLite
-

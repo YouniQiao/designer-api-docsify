@@ -2,9 +2,9 @@
 
 可变字体属性。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-text-interface FontVariation--><!--Device-text-interface FontVariation-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -24,11 +24,11 @@ axis: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FontVariation-axis: string--><!--Device-FontVariation-axis: string-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -44,9 +44,9 @@ isNormalized?: boolean
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-FontVariation-isNormalized?: boolean--><!--Device-FontVariation-isNormalized?: boolean-End-->
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -58,13 +58,12 @@ value: double
 
 可变字体属性键值对的值。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
-<!--Device-FontVariation-value: double--><!--Device-FontVariation-value: double-End-->
-
 **系统能力：** SystemCapability.Graphics.Drawing
-

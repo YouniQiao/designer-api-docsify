@@ -2,9 +2,9 @@
 
 Describes the activation information of a continuous task.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-backgroundTaskManager-interface ContinuousTaskActiveInfo--><!--Device-backgroundTaskManager-interface ContinuousTaskActiveInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -22,11 +22,10 @@ id: int
 
 ID of the activated continuous task.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ContinuousTaskActiveInfo-id: int--><!--Device-ContinuousTaskActiveInfo-id: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
-

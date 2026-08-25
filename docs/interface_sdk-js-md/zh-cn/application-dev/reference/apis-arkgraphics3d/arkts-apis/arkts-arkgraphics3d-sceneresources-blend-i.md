@@ -2,9 +2,9 @@
 
 用于控制材质的透明效果。@interface Blend
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-unnamed-export interface Blend--><!--Device-unnamed-export interface Blend-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -18,9 +18,8 @@ enabled: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Blend-enabled: boolean--><!--Device-Blend-enabled: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

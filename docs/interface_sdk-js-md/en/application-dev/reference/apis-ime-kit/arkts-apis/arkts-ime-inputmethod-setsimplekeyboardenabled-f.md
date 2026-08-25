@@ -14,17 +14,17 @@ function setSimpleKeyboardEnabled(enable: boolean): void
 
 Enables or disables the simple keyboard.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-inputMethod-function setSimpleKeyboardEnabled(enable: boolean): void--><!--Device-inputMethod-function setSimpleKeyboardEnabled(enable: boolean): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable the simple keyboard. The value **true** means that the simple keyboard is enabled; the value **false** means the opposite. <br> The native edit box takes effect when it is focused next time, while the self-drawing component takes effect when the input method is attached by calling [attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach) next time. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enable | boolean | Yes |
 
 **Examples**
 
@@ -32,4 +32,3 @@ Enables or disables the simple keyboard.
 let enable: boolean = false;
   inputMethod.setSimpleKeyboardEnabled(enable);
 ```
-

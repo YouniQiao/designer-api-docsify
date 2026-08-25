@@ -1,16 +1,35 @@
 # TextPickerModifier
 
-Defines TextPicker Modifier@implements { TextPickerAttribute, AttributeModifier&lt;TextPickerAttribute&gt; }
+Defines TextPicker Modifier@extends TextPickerAttribute @implements AttributeModifier&lt;TextPickerAttribute&gt;
 
-**Inheritance/Implementation:** TextPickerModifier implements TextPickerAttribute, AttributeModifier<TextPickerAttribute>
+**Inheritance/Implementation:** TextPickerModifier extends TextPickerAttribute and implements AttributeModifier<TextPickerAttribute>
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export declare class TextPickerModifier--><!--Device-unnamed-export declare class TextPickerModifier-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## applyNormalAttribute
+
+```TypeScript
+applyNormalAttribute?(instance: TextPickerAttribute): void
+```
+
+Defines the normal update attribute function.
+
+**Since:** 12
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| instance | [TextPickerAttribute](arkts-arkui-textpicker-textpickerattribute-i.md) | Yes |

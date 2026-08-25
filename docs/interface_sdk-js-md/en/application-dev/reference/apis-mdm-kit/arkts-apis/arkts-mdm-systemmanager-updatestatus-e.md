@@ -4,7 +4,7 @@ Enumerates the system update statuses.
 
 **Since:** 12
 
-<!--Device-systemManager-enum UpdateStatus--><!--Device-systemManager-enum UpdateStatus-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,9 +18,9 @@ The system update package of the specified version does not exist.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-UpdateStatus-NO_UPDATE_PACKAGE = -4--><!--Device-UpdateStatus-NO_UPDATE_PACKAGE = -4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -34,9 +34,9 @@ The system update package is waiting to be installed.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-UpdateStatus-UPDATE_WAITING = -3--><!--Device-UpdateStatus-UPDATE_WAITING = -3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -50,9 +50,9 @@ The system update is being performed.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-UpdateStatus-UPDATING = -2--><!--Device-UpdateStatus-UPDATING = -2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -66,9 +66,9 @@ The update failed.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-UpdateStatus-UPDATE_FAILURE = -1--><!--Device-UpdateStatus-UPDATE_FAILURE = -1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -82,9 +82,8 @@ The update is successful.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UpdateStatus-UPDATE_SUCCESS = 0--><!--Device-UpdateStatus-UPDATE_SUCCESS = 0-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

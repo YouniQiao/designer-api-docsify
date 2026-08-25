@@ -14,7 +14,9 @@ function createRandom(): Random
 
 Creates a **Random** instance.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
@@ -22,23 +24,21 @@ Creates a **Random** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-cryptoFramework-function createRandom(): Random--><!--Device-cryptoFramework-function createRandom(): Random-End-->
-
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Rand
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Random](arkts-cryptoarchitecture-cryptoframework-random-i.md) | Returns the **Random** instance created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Random](arkts-cryptoarchitecture-cryptoframework-random-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| Error Code ID |
+| --- |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 **Examples**
 
@@ -53,4 +53,3 @@ try {
   console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
 }
 ```
-

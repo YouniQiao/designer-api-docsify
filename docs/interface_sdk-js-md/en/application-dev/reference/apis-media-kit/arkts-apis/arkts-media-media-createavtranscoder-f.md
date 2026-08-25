@@ -19,23 +19,23 @@ Creates an AVTranscoder instance. This API uses a promise to return the result.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-media-function createAVTranscoder(): Promise<AVTranscoder>--><!--Device-media-function createAVTranscoder(): Promise<AVTranscoder>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[AVTranscoder](arkts-media-media-avtranscoder-i.md)&gt; | Promise used to return the result. If the operation is successful, an AVTranscoder instance is returned; otherwise, **null** is returned. The instance can be used for video transcoding. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[AVTranscoder](arkts-media-media-avtranscoder-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| Error Code ID |
+| --- |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
 
 **Examples**
 
@@ -67,23 +67,22 @@ Creates an **AVTranscoder** instance. This API uses a promise to return the resu
 
 **Since:** 23
 
-<!--Device-media-function createAVTranscoder(): Promise<AVTranscoder | undefined>--><!--Device-media-function createAVTranscoder(): Promise<AVTranscoder | undefined>-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[AVTranscoder](arkts-media-media-avtranscoder-i.md) \| undefined&gt; | Promise used to return the result. If the operation is successful, an **AVTranscoder** instance is returned; otherwise, **undefined** is returned. The instance can be used for video transcoding. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[AVTranscoder](arkts-media-media-avtranscoder-i.md) \| undefined & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| Error Code ID |
+| --- |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
 
 **Examples**
 
 See [createAVTranscoder](#createavtranscoder)
-

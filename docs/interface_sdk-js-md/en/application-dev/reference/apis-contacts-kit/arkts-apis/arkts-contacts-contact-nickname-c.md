@@ -4,7 +4,7 @@ Defines a contact's nickname.
 
 **Since:** 7
 
-<!--Device-contact-class NickName--><!--Device-contact-class NickName-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -26,9 +26,9 @@ Contact nickname.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-NickName-nickName: string--><!--Device-NickName-nickName: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -41,4 +41,3 @@ let nickName: contact.NickName = {
     nickName: "nickName"
 };
 ```
-

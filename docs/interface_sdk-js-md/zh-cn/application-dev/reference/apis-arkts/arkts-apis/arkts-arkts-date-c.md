@@ -4,9 +4,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-unnamed-export class Date--><!--Device-unnamed-export class Date-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,11 +23,9 @@ constructor()
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-constructor()--><!--Device-Date-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -43,19 +39,17 @@ constructor(value: long | string | Date)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-constructor(value: long | string | Date)--><!--Device-Date-constructor(value: long | string | Date)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | long \| string \| Date | 是 | 表示日期的值，可以是毫秒时间戳（long）、 日期字符串（string），或已有的Date对象（Date）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | long \| string \| Date | 是 |
 
 ## constructor
 
@@ -67,25 +61,23 @@ constructor(year: int, monthIndex: int, day?: int, hours?: int, minutes?: int, s
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-constructor(year: int, monthIndex: int, day?: int, hours?: int, minutes?: int, seconds?: int, ms?: int)--><!--Device-Date-constructor(year: int, monthIndex: int, day?: int, hours?: int, minutes?: int, seconds?: int, ms?: int)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| year | int | 是 | 年。 <br>取值约束：可以为任意整数。 |
-| monthIndex | int | 是 | 月。 <br>取值约束：可以为任意整数。 |
-| day | int | 否 | 日。 <br>取值约束：可以为任意整数。 |
-| hours | int | 否 | 小时。 <br>取值约束：可以为任意整数。 |
-| minutes | int | 否 | 分钟。 <br>取值约束：可以为任意整数。 |
-| seconds | int | 否 | 秒。 <br>取值约束：可以为任意整数。 |
-| ms | int | 否 | 毫秒。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| year | int | 是 |
+| monthIndex | int | 是 |
+| day | int | 否 |
+| hours | int | 否 |
+| minutes | int | 否 |
+| seconds | int | 否 |
+| ms | int | 否 |
 
 ## getDate
 
@@ -97,19 +89,17 @@ public getDate(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public getDate(): int--><!--Device-Date-public getDate(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 按本地时间计算的月份中的第几天（1到31）。 |
+| 类型 |
+| --- |
+| int |
 
 ## getDay
 
@@ -121,19 +111,17 @@ public getDay(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public getDay(): int--><!--Device-Date-public getDay(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 星期几（0表示周日，1表示周一，……，6表示周六）。 |
+| 类型 |
+| --- |
+| int |
 
 ## getFullYear
 
@@ -145,19 +133,17 @@ public getFullYear(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public getFullYear(): int--><!--Device-Date-public getFullYear(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 完整年份。 |
+| 类型 |
+| --- |
+| int |
 
 ## getHours
 
@@ -169,19 +155,17 @@ public getHours(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public getHours(): int--><!--Device-Date-public getHours(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 按本地时间计算的指定日期的小时数（0到23）。 |
+| 类型 |
+| --- |
+| int |
 
 ## getLocalTimezoneOffset
 
@@ -193,25 +177,23 @@ public static getLocalTimezoneOffset(ms: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public static getLocalTimezoneOffset(ms: long): long--><!--Device-Date-public static getLocalTimezoneOffset(ms: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| ms | long | 是 | 以毫秒表示的时间。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| ms | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 本地时间偏移量。 |
+| 类型 |
+| --- |
+| long |
 
 ## getMilliseconds
 
@@ -223,19 +205,17 @@ public getMilliseconds(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public getMilliseconds(): int--><!--Device-Date-public getMilliseconds(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 按本地时间计算的指定日期的毫秒数（0到999）。 |
+| 类型 |
+| --- |
+| int |
 
 ## getMinutes
 
@@ -247,19 +227,17 @@ public getMinutes(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public getMinutes(): int--><!--Device-Date-public getMinutes(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 0到59之间的整数。 表示按本地时间计算的给定日期的分钟数。 |
+| 类型 |
+| --- |
+| int |
 
 ## getMonth
 
@@ -271,19 +249,17 @@ public getMonth(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public getMonth(): int--><!--Device-Date-public getMonth(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 月份（0到11），其中0表示一月，11表示十二月。 |
+| 类型 |
+| --- |
+| int |
 
 ## getSeconds
 
@@ -295,19 +271,17 @@ public getSeconds(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public getSeconds(): int--><!--Device-Date-public getSeconds(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 0到59之间的整数。 表示按本地时间计算的给定日期的秒数。 |
+| 类型 |
+| --- |
+| int |
 
 ## getTime
 
@@ -319,19 +293,17 @@ public getTime(): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public getTime(): long--><!--Device-Date-public getTime(): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## getTimezoneName
 
@@ -343,25 +315,23 @@ public static getTimezoneName(ms: long): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public static getTimezoneName(ms: long): string--><!--Device-Date-public static getTimezoneName(ms: long): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| ms | long | 是 | 以毫秒表示的时间。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| ms | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 时区名称。 |
+| 类型 |
+| --- |
+| string |
 
 ## getTimezoneOffset
 
@@ -373,19 +343,17 @@ public getTimezoneOffset(): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public getTimezoneOffset(): long--><!--Device-Date-public getTimezoneOffset(): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 以分钟表示的时区偏移量（早于UTC的时区为负值）。 |
+| 类型 |
+| --- |
+| long |
 
 ## getUTCDate
 
@@ -397,19 +365,17 @@ public getUTCDate(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public getUTCDate(): int--><!--Device-Date-public getUTCDate(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 按世界时计算的月份中的第几天（1到31）。 |
+| 类型 |
+| --- |
+| int |
 
 ## getUTCDay
 
@@ -421,19 +387,17 @@ public getUTCDay(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public getUTCDay(): int--><!--Device-Date-public getUTCDay(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 星期几（0表示周日，1表示周一，……，6表示周六）。 |
+| 类型 |
+| --- |
+| int |
 
 ## getUTCFullYear
 
@@ -445,19 +409,17 @@ public getUTCFullYear(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public getUTCFullYear(): int--><!--Device-Date-public getUTCFullYear(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 按世界时计算的年份。 |
+| 类型 |
+| --- |
+| int |
 
 ## getUTCHours
 
@@ -469,19 +431,17 @@ public getUTCHours(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public getUTCHours(): int--><!--Device-Date-public getUTCHours(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 按世界时计算的指定日期的小时数（0到23）。 |
+| 类型 |
+| --- |
+| int |
 
 ## getUTCMilliseconds
 
@@ -493,19 +453,17 @@ public getUTCMilliseconds(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public getUTCMilliseconds(): int--><!--Device-Date-public getUTCMilliseconds(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int |  |
+| 类型 |
+| --- |
+| int |
 
 ## getUTCMinutes
 
@@ -517,19 +475,17 @@ public getUTCMinutes(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public getUTCMinutes(): int--><!--Device-Date-public getUTCMinutes(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| int |
 
 ## getUTCMonth
 
@@ -541,19 +497,17 @@ public getUTCMonth(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public getUTCMonth(): int--><!--Device-Date-public getUTCMonth(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| int |
 
 ## getUTCSeconds
 
@@ -565,19 +519,17 @@ public getUTCSeconds(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public getUTCSeconds(): int--><!--Device-Date-public getUTCSeconds(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 按世界时计算的指定日期的秒数。 |
+| 类型 |
+| --- |
+| int |
 
 ## getYear
 
@@ -589,19 +541,17 @@ public getYear(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public getYear(): int--><!--Device-Date-public getYear(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 年份值。 |
+| 类型 |
+| --- |
+| int |
 
 ## isDateValid
 
@@ -613,19 +563,17 @@ public isDateValid(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public isDateValid(): boolean--><!--Device-Date-public isDateValid(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果该日期合法则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## now
 
@@ -637,19 +585,17 @@ static now(): long
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-static now(): long--><!--Device-Date-static now(): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 以毫秒表示的当前时间。 |
+| 类型 |
+| --- |
+| long |
 
 ## parse
 
@@ -661,25 +607,23 @@ static parse(dateStr: string): long
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-static parse(dateStr: string): long--><!--Device-Date-static parse(dateStr: string): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dateStr | string | 是 | 待解析的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dateStr | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setDate
 
@@ -691,25 +635,23 @@ public setDate(value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setDate(value: int): long--><!--Device-Date-public setDate(value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的日期（日）。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long |  |
+| 类型 |
+| --- |
+| long |
 
 ## setFullYear
 
@@ -721,25 +663,23 @@ public setFullYear(value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setFullYear(value: int): long--><!--Device-Date-public setFullYear(value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的年份。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setFullYear
 
@@ -751,26 +691,24 @@ public setFullYear(value: int, month: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setFullYear(value: int, month: int): long--><!--Device-Date-public setFullYear(value: int, month: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的年份。 <br>取值约束：可以为任意整数。 |
-| month | int | 是 | 新的月份。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
+| month | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setFullYear
 
@@ -782,27 +720,25 @@ public setFullYear(value: int, month: int, date: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setFullYear(value: int, month: int, date: int): long--><!--Device-Date-public setFullYear(value: int, month: int, date: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的年份。 <br>取值约束：可以为任意整数。 |
-| month | int | 是 | 新的月份。 <br>取值约束：可以为任意整数。 |
-| date | int | 是 | 新的日期。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
+| month | int | 是 |
+| date | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setHours
 
@@ -814,25 +750,23 @@ public setHours(value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setHours(value: int): long--><!--Device-Date-public setHours(value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的小时数。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setHours
 
@@ -844,26 +778,24 @@ public setHours(value: int, min: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setHours(value: int, min: int): long--><!--Device-Date-public setHours(value: int, min: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的小时数。 <br>取值约束：可以为任意整数。 |
-| min | int | 是 | 分钟。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
+| min | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setHours
 
@@ -875,27 +807,25 @@ public setHours(value: int, min: int, sec: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setHours(value: int, min: int, sec: int): long--><!--Device-Date-public setHours(value: int, min: int, sec: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的小时数。 <br>取值约束：可以为任意整数。 |
-| min | int | 是 | 分钟。 <br>取值约束：可以为任意整数。 |
-| sec | int | 是 | 秒。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
+| min | int | 是 |
+| sec | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setHours
 
@@ -907,28 +837,26 @@ public setHours(value: int, min: int, sec: int, ms: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setHours(value: int, min: int, sec: int, ms: int): long--><!--Device-Date-public setHours(value: int, min: int, sec: int, ms: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的小时数。 <br>取值约束：可以为任意整数。 |
-| min | int | 是 | 分钟。 <br>取值约束：可以为任意整数。 |
-| sec | int | 是 | 秒。 <br>取值约束：可以为任意整数。 |
-| ms | int | 是 | 毫秒。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
+| min | int | 是 |
+| sec | int | 是 |
+| ms | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setMilliseconds
 
@@ -940,25 +868,23 @@ public setMilliseconds(value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setMilliseconds(value: int): long--><!--Device-Date-public setMilliseconds(value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的毫秒数。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setMinutes
 
@@ -970,25 +896,23 @@ public setMinutes(value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setMinutes(value: int): long--><!--Device-Date-public setMinutes(value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的分钟数。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setMinutes
 
@@ -1000,26 +924,24 @@ public setMinutes(value: int, sec: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setMinutes(value: int, sec: int): long--><!--Device-Date-public setMinutes(value: int, sec: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的分钟数。 <br>取值约束：可以为任意整数。 |
-| sec | int | 是 | 秒。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
+| sec | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setMinutes
 
@@ -1031,27 +953,25 @@ public setMinutes(value: int, sec: int, ms: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setMinutes(value: int, sec: int, ms: int): long--><!--Device-Date-public setMinutes(value: int, sec: int, ms: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的分钟数。 <br>取值约束：可以为任意整数。 |
-| sec | int | 是 | 秒。 <br>取值约束：可以为任意整数。 |
-| ms | int | 是 | 毫秒。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
+| sec | int | 是 |
+| ms | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setMonth
 
@@ -1063,25 +983,23 @@ public setMonth(month: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setMonth(month: int): long--><!--Device-Date-public setMonth(month: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| month | int | 是 | 新的月份。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| month | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setMonth
 
@@ -1093,26 +1011,24 @@ public setMonth(month: int, date: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setMonth(month: int, date: int): long--><!--Device-Date-public setMonth(month: int, date: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| month | int | 是 | 新的月份。 <br>取值约束：可以为任意整数。 |
-| date | int | 是 | 日期值。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| month | int | 是 |
+| date | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setSeconds
 
@@ -1124,25 +1040,23 @@ public setSeconds(value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setSeconds(value: int): long--><!--Device-Date-public setSeconds(value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的秒数。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setSeconds
 
@@ -1154,26 +1068,24 @@ public setSeconds(value: int, ms: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setSeconds(value: int, ms: int): long--><!--Device-Date-public setSeconds(value: int, ms: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的秒数。 <br>取值约束：可以为任意整数。 |
-| ms | int | 是 | 毫秒。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
+| ms | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setTime
 
@@ -1185,25 +1097,23 @@ public setTime(value: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setTime(value: long): long--><!--Device-Date-public setTime(value: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | long | 是 | 以毫秒表示的新时间。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 自纪元起经过的毫秒数。 |
+| 类型 |
+| --- |
+| long |
 
 ## setTimezoneOffset
 
@@ -1215,25 +1125,23 @@ public setTimezoneOffset(value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setTimezoneOffset(value: int): long--><!--Device-Date-public setTimezoneOffset(value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 相对于UTC、以分钟表示的时区偏移量。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 以毫秒表示的新时间值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setUTCDate
 
@@ -1245,25 +1153,23 @@ public setUTCDate(value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setUTCDate(value: int): long--><!--Device-Date-public setUTCDate(value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的日期（日）。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long |  |
+| 类型 |
+| --- |
+| long |
 
 ## setUTCDay
 
@@ -1275,25 +1181,23 @@ public setUTCDay(value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setUTCDay(value: int): long--><!--Device-Date-public setUTCDay(value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 按世界时计算的星期几。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 待设置的世界时日期（日）。 |
+| 类型 |
+| --- |
+| long |
 
 ## setUTCFullYear
 
@@ -1305,25 +1209,23 @@ public setUTCFullYear(value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setUTCFullYear(value: int): long--><!--Device-Date-public setUTCFullYear(value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的年份。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setUTCFullYear
 
@@ -1335,26 +1237,24 @@ public setUTCFullYear(value: int, month: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setUTCFullYear(value: int, month: int): long--><!--Device-Date-public setUTCFullYear(value: int, month: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的年份。 <br>取值约束：可以为任意整数。 |
-| month | int | 是 | 新的月份。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
+| month | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setUTCFullYear
 
@@ -1366,27 +1266,25 @@ public setUTCFullYear(value: int, month: int, date: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setUTCFullYear(value: int, month: int, date: int): long--><!--Device-Date-public setUTCFullYear(value: int, month: int, date: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的年份。 <br>取值约束：可以为任意整数。 |
-| month | int | 是 | 新的月份。 <br>取值约束：可以为任意整数。 |
-| date | int | 是 | 新的日期。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
+| month | int | 是 |
+| date | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setUTCHours
 
@@ -1398,25 +1296,23 @@ public setUTCHours(value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setUTCHours(value: int): long--><!--Device-Date-public setUTCHours(value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的小时数。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setUTCHours
 
@@ -1428,26 +1324,24 @@ public setUTCHours(value: int, min: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setUTCHours(value: int, min: int): long--><!--Device-Date-public setUTCHours(value: int, min: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的小时数。 <br>取值约束：可以为任意整数。 |
-| min | int | 是 | 分钟。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
+| min | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setUTCHours
 
@@ -1459,27 +1353,25 @@ public setUTCHours(value: int, min: int, sec: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setUTCHours(value: int, min: int, sec: int): long--><!--Device-Date-public setUTCHours(value: int, min: int, sec: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的小时数。 <br>取值约束：可以为任意整数。 |
-| min | int | 是 | 分钟。 <br>取值约束：可以为任意整数。 |
-| sec | int | 是 | 秒。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
+| min | int | 是 |
+| sec | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setUTCHours
 
@@ -1491,28 +1383,26 @@ public setUTCHours(value: int, min: int, sec: int, ms: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setUTCHours(value: int, min: int, sec: int, ms: int): long--><!--Device-Date-public setUTCHours(value: int, min: int, sec: int, ms: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的小时数。 <br>取值约束：可以为任意整数。 |
-| min | int | 是 | 分钟。 <br>取值约束：可以为任意整数。 |
-| sec | int | 是 | 秒。 <br>取值约束：可以为任意整数。 |
-| ms | int | 是 | 毫秒。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
+| min | int | 是 |
+| sec | int | 是 |
+| ms | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setUTCMilliseconds
 
@@ -1524,25 +1414,23 @@ public setUTCMilliseconds(value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setUTCMilliseconds(value: int): long--><!--Device-Date-public setUTCMilliseconds(value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的毫秒数。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setUTCMinutes
 
@@ -1554,25 +1442,23 @@ public setUTCMinutes(value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setUTCMinutes(value: int): long--><!--Device-Date-public setUTCMinutes(value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的分钟数。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setUTCMinutes
 
@@ -1584,26 +1470,24 @@ public setUTCMinutes(value: int, sec: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setUTCMinutes(value: int, sec: int): long--><!--Device-Date-public setUTCMinutes(value: int, sec: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的分钟数。 <br>取值约束：可以为任意整数。 |
-| sec | int | 是 | 秒。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
+| sec | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setUTCMinutes
 
@@ -1615,27 +1499,25 @@ public setUTCMinutes(value: int, sec: int, ms: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setUTCMinutes(value: int, sec: int, ms: int): long--><!--Device-Date-public setUTCMinutes(value: int, sec: int, ms: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的分钟数。 <br>取值约束：可以为任意整数。 |
-| sec | int | 是 | 秒。 <br>取值约束：可以为任意整数。 |
-| ms | int | 是 | 毫秒。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
+| sec | int | 是 |
+| ms | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setUTCMonth
 
@@ -1647,25 +1529,23 @@ public setUTCMonth(month: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setUTCMonth(month: int): long--><!--Device-Date-public setUTCMonth(month: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| month | int | 是 | 新的月份。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| month | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setUTCMonth
 
@@ -1677,26 +1557,24 @@ public setUTCMonth(month: int, date: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setUTCMonth(month: int, date: int): long--><!--Device-Date-public setUTCMonth(month: int, date: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| month | int | 是 | 新的月份。 <br>取值约束：可以为任意整数。 |
-| date | int | 是 | 日期值。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| month | int | 是 |
+| date | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## setUTCSeconds
 
@@ -1708,25 +1586,23 @@ public setUTCSeconds(value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setUTCSeconds(value: int): long--><!--Device-Date-public setUTCSeconds(value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的秒数。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long |  |
+| 类型 |
+| --- |
+| long |
 
 ## setUTCSeconds
 
@@ -1738,26 +1614,24 @@ public setUTCSeconds(value: int, ms: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setUTCSeconds(value: int, ms: int): long--><!--Device-Date-public setUTCSeconds(value: int, ms: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的秒数。 <br>取值约束：可以为任意整数。 |
-| ms | int | 是 | 毫秒。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
+| ms | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long |  |
+| 类型 |
+| --- |
+| long |
 
 ## setYear
 
@@ -1769,19 +1643,17 @@ public setYear(value: int): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public setYear(value: int): void--><!--Device-Date-public setYear(value: int): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 新的年份。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
 
 ## toDateString
 
@@ -1793,19 +1665,17 @@ public toDateString(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public toDateString(): string--><!--Device-Date-public toDateString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 日期字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toISOString
 
@@ -1817,19 +1687,17 @@ public toISOString(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public toISOString(): string--><!--Device-Date-public toISOString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 符合ISO 8601格式的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toJSON
 
@@ -1841,19 +1709,17 @@ public toJSON(): string | null
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public toJSON(): string | null--><!--Device-Date-public toJSON(): string | null-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string \| null | 对应的JSON字符串；如果日期非法，则返回null。 |
+| 类型 |
+| --- |
+| string \| null |
 
 ## toLocaleDateString
 
@@ -1866,26 +1732,24 @@ public toLocaleDateString(locales?: Intl.LocalesArgument,
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public toLocaleDateString(locales?: Intl.LocalesArgument,        options?: Intl.DateTimeFormatOptions): string--><!--Device-Date-public toLocaleDateString(locales?: Intl.LocalesArgument,        options?: Intl.DateTimeFormatOptions): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | 否 | 区域设置。 |
-| options | Intl.DateTimeFormatOptions | 否 | 格式化选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | 否 |
+| options | Intl.DateTimeFormatOptions | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 本地化的日期字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toLocaleString
 
@@ -1897,26 +1761,24 @@ public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string--><!--Device-Date-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | 否 | 包含BCP 47语言标签的字符串，或由此类 字符串组成的数组。 |
-| options | object | 否 | 包含配置属性的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | 否 |
+| options | object | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 表示数组元素的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toLocaleTimeString
 
@@ -1928,19 +1790,17 @@ public toLocaleTimeString(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public toLocaleTimeString(): string--><!--Device-Date-public toLocaleTimeString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 本地化的时间字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toLocaleTimeString
 
@@ -1953,26 +1813,24 @@ public toLocaleTimeString(locales?: Intl.LocalesArgument,
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public toLocaleTimeString(locales?: Intl.LocalesArgument,        options?: Intl.DateTimeFormatOptions): string--><!--Device-Date-public toLocaleTimeString(locales?: Intl.LocalesArgument,        options?: Intl.DateTimeFormatOptions): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | 否 | 区域设置。 |
-| options | Intl.DateTimeFormatOptions | 否 | 格式化选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | 否 |
+| options | Intl.DateTimeFormatOptions | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 本地化的时间字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toString
 
@@ -1984,19 +1842,17 @@ public toString(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public toString(): string--><!--Device-Date-public toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 字符串表示。 |
+| 类型 |
+| --- |
+| string |
 
 ## toTimeString
 
@@ -2008,19 +1864,17 @@ public toTimeString(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public toTimeString(): string--><!--Device-Date-public toTimeString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 时间字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toUTCString
 
@@ -2032,19 +1886,17 @@ public toUTCString(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public toUTCString(): string--><!--Device-Date-public toUTCString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 世界时的字符串表示。 |
+| 类型 |
+| --- |
+| string |
 
 ## UTC
 
@@ -2056,25 +1908,23 @@ public static UTC(d: Date): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public static UTC(d: Date): long--><!--Device-Date-public static UTC(d: Date): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| d | Date | 是 | 待转换为毫秒的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | Date | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## UTC
 
@@ -2086,25 +1936,23 @@ public static UTC(year: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public static UTC(year: int): long--><!--Device-Date-public static UTC(year: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| year | int | 是 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| year | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## UTC
 
@@ -2116,31 +1964,29 @@ public static UTC(year: int, month: int, day?: int, hours?: int, minutes?: int, 
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public static UTC(year: int, month: int, day?: int, hours?: int, minutes?: int, seconds?: int, ms?: int): long--><!--Device-Date-public static UTC(year: int, month: int, day?: int, hours?: int, minutes?: int, seconds?: int, ms?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| year | int | 是 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
-| month | int | 是 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
-| day | int | 否 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
-| hours | int | 否 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
-| minutes | int | 否 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
-| seconds | int | 否 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
-| ms | int | 否 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| year | int | 是 |
+| month | int | 是 |
+| day | int | 否 |
+| hours | int | 否 |
+| minutes | int | 否 |
+| seconds | int | 否 |
+| ms | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
+| 类型 |
+| --- |
+| long |
 
 ## valueOf
 
@@ -2152,17 +1998,14 @@ public valueOf(): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public valueOf(): long--><!--Device-Date-public valueOf(): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | `Date`对象的原始值。 |
-
+| 类型 |
+| --- |
+| long |

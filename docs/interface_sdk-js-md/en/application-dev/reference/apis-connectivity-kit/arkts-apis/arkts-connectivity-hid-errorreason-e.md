@@ -4,7 +4,7 @@ Describe the error reason.
 
 **Since:** 23
 
-<!--Device-hid-enum ErrorReason--><!--Device-hid-enum ErrorReason-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -18,9 +18,9 @@ Constant representing success response for set report.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-ErrorReason-RSP_SUCCESS = 0--><!--Device-ErrorReason-RSP_SUCCESS = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -34,9 +34,9 @@ Constant representing error response for set report due to not ready.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-ErrorReason-RSP_NOT_READY = 1--><!--Device-ErrorReason-RSP_NOT_READY = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -50,9 +50,9 @@ Constant representing error response for set report due to invalid report ID.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-ErrorReason-RSP_INVALID_REPORT_ID = 2--><!--Device-ErrorReason-RSP_INVALID_REPORT_ID = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -66,9 +66,9 @@ Constant representing error response for set report due to unsupported request.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-ErrorReason-RSP_UNSUPPORTED_REQ = 3--><!--Device-ErrorReason-RSP_UNSUPPORTED_REQ = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -82,9 +82,9 @@ Constant representing error response for set report due to invalid parameter.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-ErrorReason-RSP_INVALID_PARAM = 4--><!--Device-ErrorReason-RSP_INVALID_PARAM = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -98,9 +98,8 @@ Constant representing error response for Set Report with unknown reason.
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ErrorReason-RSP_UNKNOWN = 14--><!--Device-ErrorReason-RSP_UNKNOWN = 14-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

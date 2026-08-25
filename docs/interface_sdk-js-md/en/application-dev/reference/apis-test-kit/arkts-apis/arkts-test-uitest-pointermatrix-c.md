@@ -2,9 +2,9 @@
 
 Implements a **PointerMatrix** object that stores coordinates and behaviors of each action of each finger in a multi-touch operation. After creating an object using create, use [setPoint](#setpoint) to set the coordinates of each finger at each step. Then pass the coordinates to [injectMultiPointerAction](arkts-test-uitest-driver-c.md#injectmultipointeraction) to perform a multi-finger operation.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-declare class PointerMatrix--><!--Device-unnamed-declare class PointerMatrix-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -17,38 +17,44 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 
 ## create
 
+ArkTS-Dyn:
+```TypeScript
+static create(fingers: number, steps: number): PointerMatrix
+```
+
+ArkTS-Sta:
 ```TypeScript
 static create(fingers: int, steps: int): PointerMatrix
 ```
 
 Creates a **PointerMatrix** object and returns the object created. This API is a static API.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PointerMatrix-static create(fingers: int, steps: int): PointerMatrix--><!--Device-PointerMatrix-static create(fingers: int, steps: int): PointerMatrix-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fingers | int | Yes | Number of fingers injected during the multi-finger operation. The value is an integer ranging from 1 to 10. If the value is out of range, error code 401 is thrown. |
-| steps | int | Yes | Number of steps performed by a finger. The value is an integer ranging from 1 to 1000. If the value is out of range, error code 401 is thrown. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fingers | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| steps | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | PointerMatrix** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -81,33 +87,39 @@ async function demo() {
 
 ## setPoint
 
+ArkTS-Dyn:
+```TypeScript
+setPoint(finger: number, step: number, point: Point): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setPoint(finger: int, step: int, point: Point): void
 ```
 
 Sets the coordinates for the action corresponding to the specified finger and step in the **PointerMatrix** object.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PointerMatrix-setPoint(finger: int, step: int, point: Point): void--><!--Device-PointerMatrix-setPoint(finger: int, step: int, point: Point): void-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| finger | int | Yes | Number of fingers. The value is an integer greater than or equal to 0 and cannot exceed the number of fingers set when the **PointerMatrix** object is constructed. |
-| step | int | Yes | Number of steps. The value is an integer greater than or equal to 0 and cannot exceed the number of steps set when the **PointerMatrix** object is constructed. |
-| point | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the action. It is recommended that the distance between adjacent coordinates be within the range of 10 px to 80 px. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| finger | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| step | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| point | [Point](arkts-test-uitest-point-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -129,4 +141,3 @@ async function demo() {
   pointers.setPoint(1, 4, { x: 250, y: 320 });
 }
 ```
-

@@ -14,25 +14,25 @@ function deinitializeEnvironment(): Promise<void>
 
 Deinitialize global environment for image processing.
 
-**Since:** 23
+**Since:** 18
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-videoProcessingEngine-function deinitializeEnvironment(): Promise<void>--><!--Device-videoProcessingEngine-function deinitializeEnvironment(): Promise<void>-End-->
+**Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [29200006](../errorcode-videoprocessingengine.md#29200006-operation-not-allowed) | The operation is not permitted. This may be caused by incorrect status. |
+| Error Code ID |
+| --- |
+| [29200006](../errorcode-videoprocessingengine.md#29200006-operation-not-allowed) |
 
 **Examples**
 
@@ -44,4 +44,3 @@ async function deinitializeEnvironment() {
   videoProcessingEngine.deinitializeEnvironment();
 }
 ```
-

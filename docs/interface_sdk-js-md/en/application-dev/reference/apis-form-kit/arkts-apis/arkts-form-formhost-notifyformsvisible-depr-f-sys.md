@@ -15,13 +15,13 @@ Instructs the widgets to make themselves visible. This API uses an asynchronous 
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
-
-<!--Device-formHost-function notifyFormsVisible(formIds: Array<string>, isVisible: boolean, callback: AsyncCallback<void>): void--><!--Device-formHost-function notifyFormsVisible(formIds: Array<string>, isVisible: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -29,11 +29,11 @@ Instructs the widgets to make themselves visible. This API uses an asynchronous 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
-| isVisible | boolean | Yes | Whether to make the widgets visible. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification is sent, **error** is undefined; otherwise, **error** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| formIds | Array & lt;string & gt; | Yes |
+| isVisible | boolean | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Examples**
 
@@ -70,13 +70,13 @@ Instructs the widgets to make themselves visible. This API uses a promise to ret
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
-
-<!--Device-formHost-function notifyFormsVisible(formIds: Array<string>, isVisible: boolean): Promise<void>--><!--Device-formHost-function notifyFormsVisible(formIds: Array<string>, isVisible: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -84,18 +84,17 @@ Instructs the widgets to make themselves visible. This API uses a promise to ret
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
-| isVisible | boolean | Yes | Whether to make the widgets visible. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| formIds | Array & lt;string & gt; | Yes |
+| isVisible | boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Examples**
 
 See [notifyFormsVisible](#notifyformsvisible)
-

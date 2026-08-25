@@ -17,17 +17,17 @@ function getCaptionsManager(): CaptionsManager
 
 **起始版本：** 8
 
-**废弃版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-accessibility-function getCaptionsManager(): CaptionsManager--><!--Device-accessibility-function getCaptionsManager(): CaptionsManager-End-->
+**废弃版本：** 12
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [CaptionsManager](arkts-accessibility-accessibility-captionsmanager-i.md) | 无障碍字幕配置管理。 |
+| 类型 |
+| --- |
+| [CaptionsManager](arkts-accessibility-accessibility-captionsmanager-i.md) |
 
 **示例**
 
@@ -36,4 +36,3 @@ import { accessibility } from '@kit.AccessibilityKit';
 
 let captionsManager = accessibility.getCaptionsManager();
 ```
-

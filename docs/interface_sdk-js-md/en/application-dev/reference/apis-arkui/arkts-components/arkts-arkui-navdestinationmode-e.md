@@ -4,7 +4,7 @@ Mode of the **NavDestination** component.
 
 **Since:** 11
 
-<!--Device-unnamed-declare enum NavDestinationMode--><!--Device-unnamed-declare enum NavDestinationMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Standard mode.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NavDestinationMode-STANDARD = 0--><!--Device-NavDestinationMode-STANDARD = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ The navigation destination is transparent by default. Stack operations do not af
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-NavDestinationMode-DIALOG = 1--><!--Device-NavDestinationMode-DIALOG = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

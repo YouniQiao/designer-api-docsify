@@ -2,9 +2,9 @@
 
 描述占位符样式。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-text-interface PlaceholderSpan--><!--Device-text-interface PlaceholderSpan-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -24,11 +24,11 @@ align: PlaceholderAlignment
 
 **类型：** [PlaceholderAlignment](arkts-arkgraphics2d-text-placeholderalignment-e.md)
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PlaceholderSpan-align: PlaceholderAlignment--><!--Device-PlaceholderSpan-align: PlaceholderAlignment-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -42,11 +42,11 @@ baseline: TextBaseline
 
 **类型：** [TextBaseline](arkts-arkgraphics2d-text-textbaseline-e.md)
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PlaceholderSpan-baseline: TextBaseline--><!--Device-PlaceholderSpan-baseline: TextBaseline-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -58,13 +58,13 @@ baselineOffset: double
 
 基线偏移量，浮点数，单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PlaceholderSpan-baselineOffset: double--><!--Device-PlaceholderSpan-baselineOffset: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -76,13 +76,13 @@ height: double
 
 占位符的高度，浮点数，单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PlaceholderSpan-height: double--><!--Device-PlaceholderSpan-height: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -94,13 +94,12 @@ width: double
 
 占位符的宽度，浮点数，单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
-<!--Device-PlaceholderSpan-width: double--><!--Device-PlaceholderSpan-width: double-End-->
-
 **系统能力：** SystemCapability.Graphics.Drawing
-

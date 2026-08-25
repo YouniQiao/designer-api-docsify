@@ -5,7 +5,8 @@ Defines the controller of the custom dialog box.
 ## Objects to Import
 
 ```ts
-dialogController : CustomDialogController | null = new CustomDialogController(CustomDialogControllerOptions) ```
+dialogController : CustomDialogController | null = new CustomDialogController(CustomDialogControllerOptions)
+```
 
 > **NOTE：**&gt;
 > - **CustomDialogController** is effective only when it is a member variable of the @CustomDialog and @Component
@@ -17,7 +18,7 @@ dialogController : CustomDialogController | null = new CustomDialogController(Cu
 
 **Since:** 7
 
-<!--Device-unnamed-declare class CustomDialogController--><!--Device-unnamed-declare class CustomDialogController-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +35,9 @@ close()
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-CustomDialogController-close()--><!--Device-CustomDialogController-close()-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,17 +63,17 @@ Constructor for a custom dialog box.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-CustomDialogController-constructor(value: CustomDialogControllerOptions)--><!--Device-CustomDialogController-constructor(value: CustomDialogControllerOptions)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [CustomDialogControllerOptions](arkts-arkui-customdialogcontrolleroptions-i.md) | Yes | Parameters of the custom dialog box. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [CustomDialogControllerOptions](arkts-arkui-customdialogcontrolleroptions-i.md) | Yes |
 
 ## getState
 
@@ -84,19 +85,19 @@ Obtains the state of the custom dialog box.
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-CustomDialogController-getState(): PromptActionCommonState--><!--Device-CustomDialogController-getState(): PromptActionCommonState-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [PromptActionCommonState](arkts-arkui-promptactioncommonstate-t.md) | State of the custom dialog box. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PromptActionCommonState](arkts-arkui-promptactioncommonstate-t.md) |
 
 ## open
 
@@ -114,9 +115,8 @@ Opens the content of the custom dialog box. This API can be called multiple time
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-CustomDialogController-open()--><!--Device-CustomDialogController-open()-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

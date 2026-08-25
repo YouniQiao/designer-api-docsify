@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [MenuModifier](arkts-arkui-menumodifier-c.md) | Defines Menu Modifier@extends MenuAttribute @implements AttributeModifier&lt;MenuAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [MenuModifier](arkts-arkui-menumodifier-c.md) |

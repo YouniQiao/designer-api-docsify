@@ -4,9 +4,7 @@ A thread-local storage container that maintains a separate value per worker
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class WorkerLocal--><!--Device-unnamed-export class WorkerLocal-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,11 +23,9 @@ Constructs a new WorkerLocal instance with no initial value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WorkerLocal-constructor()--><!--Device-WorkerLocal-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -43,19 +39,17 @@ Constructs a new WorkerLocal instance with an initializer function
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WorkerLocal-constructor(init: () => T)--><!--Device-WorkerLocal-constructor(init: () => T)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| init | () =&gt; T | Yes | the initializer function that provides the initial value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| init | () = & gt; T | Yes |
 
 ## delete
 
@@ -67,11 +61,9 @@ Removes the value for the current worker
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WorkerLocal-delete(): void--><!--Device-WorkerLocal-delete(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -85,19 +77,17 @@ Returns the value for the current worker
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WorkerLocal-get(): T--><!--Device-WorkerLocal-get(): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | the value for the current worker |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 ## set
 
@@ -109,17 +99,14 @@ Sets the value for the current worker
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WorkerLocal-set(value: T): void--><!--Device-WorkerLocal-set(value: T): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | T | Yes | the value to set for the current worker. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | T | Yes |

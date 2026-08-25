@@ -2,9 +2,9 @@
 
 定义了通知请求的数据结构，用于描述一条通知的全部信息，包括通知内容、标识、展示样式、交互行为等。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-unnamed-export interface NotificationRequest--><!--Device-unnamed-export interface NotificationRequest-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -18,9 +18,9 @@ actionButtons?: Array<NotificationActionButton>
 
 **类型：** Array&lt;[NotificationActionButton](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)&gt;
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-actionButtons?: Array<NotificationActionButton>--><!--Device-NotificationRequest-actionButtons?: Array<NotificationActionButton>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -34,9 +34,9 @@ appMessageId?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-NotificationRequest-appMessageId?: string--><!--Device-NotificationRequest-appMessageId?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -48,11 +48,11 @@ autoDeletedTime?: long
 
 通知定时清除时间。设置该参数可使通知在指定时间后自动清除。默认值为0。 传入小于0的值或过去的时间值，该参数不生效。数据格式：时间戳。单位：毫秒。例如，希望某通知存留3秒（3000ms）后对其进行清除，则对应的清除时间为：new Date().getTime() + 3000。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-autoDeletedTime?: long--><!--Device-NotificationRequest-autoDeletedTime?: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -64,11 +64,11 @@ badgeIconStyle?: int
 
 通知角标类型。预留能力，暂未支持。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-badgeIconStyle?: int--><!--Device-NotificationRequest-badgeIconStyle?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -80,11 +80,11 @@ badgeNumber?: long
 
 应用图标上显示的通知数，该数量累计展示，默认值为0。当`badgeNumber`取值小于或等于0时，将忽略本次角标设定。当角标累加设定个数取值大于99时，通知角标将显示99+。例如，应用发布3条通知，`badgeNumber`依次设置为2、0、3，应用将依次展示为2、2、5。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-NotificationRequest-badgeNumber?: long--><!--Device-NotificationRequest-badgeNumber?: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -96,11 +96,11 @@ color?: long
 
 通知背景颜色。预留能力，暂未支持。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-color?: long--><!--Device-NotificationRequest-color?: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -114,9 +114,9 @@ colorEnabled?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-colorEnabled?: boolean--><!--Device-NotificationRequest-colorEnabled?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -130,9 +130,9 @@ content: NotificationContent
 
 **类型：** [NotificationContent](arkts-notification-notificationcontent-notificationcontent-i.md)
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-content: NotificationContent--><!--Device-NotificationRequest-content: NotificationContent-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -146,9 +146,9 @@ readonly creatorBundleName?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-readonly creatorBundleName?: string--><!--Device-NotificationRequest-readonly creatorBundleName?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -160,11 +160,11 @@ readonly creatorPid?: int
 
 创建通知的PID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-readonly creatorPid?: int--><!--Device-NotificationRequest-readonly creatorPid?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -176,11 +176,11 @@ readonly creatorUid?: int
 
 创建通知的应用UID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-readonly creatorUid?: int--><!--Device-NotificationRequest-readonly creatorUid?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -192,11 +192,11 @@ readonly creatorUserId?: int
 
 创建通知的用户ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-NotificationRequest-readonly creatorUserId?: int--><!--Device-NotificationRequest-readonly creatorUserId?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -208,11 +208,11 @@ deliveryTime?: long
 
 通知发送时间。系统自动生成，无需开发者配置。数据格式：时间戳。单位：毫秒。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-deliveryTime?: long--><!--Device-NotificationRequest-deliveryTime?: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -226,26 +226,26 @@ distributedOption?: DistributedOptions
 
 **类型：** [DistributedOptions](arkts-notification-notificationrequest-distributedoptions-i.md)
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-NotificationRequest-distributedOption?: DistributedOptions--><!--Device-NotificationRequest-distributedOption?: DistributedOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
 ## extraInfo
 
 ```TypeScript
-extraInfo?: Record<string, RecordData>
+extraInfo?: { [key: string]: any }
 ```
 
 扩展参数。为应用提供定制服务。默认为空。以下Key由系统赋值，开发者手动修改也不会生效，系统在数据传递时会自动修改为实际值。  
 - 'ohos.notificationManager.wantUri'：用户点击通知时传递给应用的[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) 中的uri字段，使用 [getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md#getactivenotifications) 接口获取该信息。
 
-**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** { [key: string]: any }
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-extraInfo?: Record<string, RecordData>--><!--Device-NotificationRequest-extraInfo?: Record<string, RecordData>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -259,9 +259,9 @@ groupName?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-NotificationRequest-groupName?: string--><!--Device-NotificationRequest-groupName?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -275,9 +275,9 @@ readonly hashCode?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-readonly hashCode?: string--><!--Device-NotificationRequest-readonly hashCode?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -289,11 +289,11 @@ id?: int
 
 通知ID，默认值为0。若已存在相同ID的通知，则更新该通知；若不存在相同ID的通知，则创建新的通知。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-id?: int--><!--Device-NotificationRequest-id?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -308,9 +308,9 @@ isAlertOnce?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-isAlertOnce?: boolean--><!--Device-NotificationRequest-isAlertOnce?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -324,9 +324,9 @@ isCountDown?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-isCountDown?: boolean--><!--Device-NotificationRequest-isCountDown?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -340,9 +340,9 @@ isFloatingIcon?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-isFloatingIcon?: boolean--><!--Device-NotificationRequest-isFloatingIcon?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -356,9 +356,9 @@ isOngoing?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-isOngoing?: boolean--><!--Device-NotificationRequest-isOngoing?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -372,9 +372,9 @@ isStopwatch?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-isStopwatch?: boolean--><!--Device-NotificationRequest-isStopwatch?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -388,9 +388,9 @@ isUnremovable?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-isUnremovable?: boolean--><!--Device-NotificationRequest-isUnremovable?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -404,9 +404,9 @@ label?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-label?: string--><!--Device-NotificationRequest-label?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -420,9 +420,9 @@ largeIcon?: image.PixelMap
 
 **类型：** image.PixelMap
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-largeIcon?: image.PixelMap--><!--Device-NotificationRequest-largeIcon?: image.PixelMap-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -436,9 +436,9 @@ notificationFlags?: NotificationFlags
 
 **类型：** [NotificationFlags](arkts-notification-notificationflags-notificationflags-i.md)
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-NotificationRequest-notificationFlags?: NotificationFlags--><!--Device-NotificationRequest-notificationFlags?: NotificationFlags-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -452,9 +452,25 @@ notificationSlotType?: notificationManager.SlotType
 
 **类型：** notificationManager.SlotType
 
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.Notification.Notification
+
+## overlayIcon
+
+```TypeScript
+overlayIcon?: image.PixelMap
+```
+
+通知重叠图标，默认为空。图标像素的总字节数不超过192KB（图标像素的总字节数通过 [getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取），超出后设置不生效。 未设置`overlayIcon`时，通知将不展示重叠图标。此接口只在[notificationSlotType](#notificationrequest)类型设置为SOCIAL_COMMUNICATION时生效。 建议图标像素长宽为128*128。实际显示效果依赖于设备能力和通知中心UI样式。
+
+**类型：** image.PixelMap
+
 **起始版本：** 23
 
-<!--Device-NotificationRequest-notificationSlotType?: notificationManager.SlotType--><!--Device-NotificationRequest-notificationSlotType?: notificationManager.SlotType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -470,9 +486,9 @@ priorityNotificationType?: notificationManager.PriorityNotificationType
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-NotificationRequest-priorityNotificationType?: notificationManager.PriorityNotificationType--><!--Device-NotificationRequest-priorityNotificationType?: notificationManager.PriorityNotificationType-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -486,9 +502,9 @@ removalWantAgent?: WantAgent
 
 **类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-NotificationRequest-removalWantAgent?: WantAgent--><!--Device-NotificationRequest-removalWantAgent?: WantAgent-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -502,9 +518,9 @@ showDeliveryTime?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-showDeliveryTime?: boolean--><!--Device-NotificationRequest-showDeliveryTime?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -520,11 +536,11 @@ slotType?: notification.SlotType
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 11
 
 **替代接口：** [notificationSlotType](#notificationslottype)
-
-<!--Device-NotificationRequest-slotType?: notification.SlotType--><!--Device-NotificationRequest-slotType?: notification.SlotType-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -538,9 +554,9 @@ smallIcon?: image.PixelMap
 
 **类型：** image.PixelMap
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-smallIcon?: image.PixelMap--><!--Device-NotificationRequest-smallIcon?: image.PixelMap-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -556,9 +572,9 @@ sound?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-NotificationRequest-sound?: string--><!--Device-NotificationRequest-sound?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -573,9 +589,9 @@ tapDismissed?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-tapDismissed?: boolean--><!--Device-NotificationRequest-tapDismissed?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -589,9 +605,9 @@ template?: NotificationTemplate
 
 **类型：** [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md)
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-NotificationRequest-template?: NotificationTemplate--><!--Device-NotificationRequest-template?: NotificationTemplate-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -606,9 +622,9 @@ updateOnly?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-NotificationRequest-updateOnly?: boolean--><!--Device-NotificationRequest-updateOnly?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -622,9 +638,8 @@ wantAgent?: WantAgent
 
 **类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-NotificationRequest-wantAgent?: WantAgent--><!--Device-NotificationRequest-wantAgent?: WantAgent-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
-

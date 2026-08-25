@@ -16,7 +16,7 @@ function resetOAID(): void
 
 **起始版本：** 10
 
-<!--Device-identifier-function resetOAID(): void--><!--Device-identifier-function resetOAID(): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Advertising.OAID
 
@@ -24,11 +24,11 @@ function resetOAID(): void
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17300001](../errorcode-oaid.md#17300001-系统内部错误) | System internal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
-| 17300002 | Not in the trust list.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [17300001](../errorcode-oaid.md#17300001-系统内部错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 17300002 |
 
 **示例**
 
@@ -37,4 +37,3 @@ import { identifier } from '@kit.AdsKit';
 
 identifier.resetOAID();
 ```
-

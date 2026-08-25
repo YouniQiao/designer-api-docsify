@@ -4,7 +4,7 @@ Enum for the file transfer result.
 
 **Since:** 16
 
-<!--Device-opp-enum TransferResult--><!--Device-opp-enum TransferResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -20,9 +20,9 @@ Success
 
 **Since:** 16
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
-<!--Device-TransferResult-SUCCESS = 0--><!--Device-TransferResult-SUCCESS = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -38,9 +38,9 @@ The transfer file type is not supported.
 
 **Since:** 16
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
-<!--Device-TransferResult-ERROR_UNSUPPORTED_TYPE = 1--><!--Device-TransferResult-ERROR_UNSUPPORTED_TYPE = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -56,9 +56,9 @@ The peer device cannot process the request.
 
 **Since:** 16
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
-<!--Device-TransferResult-ERROR_BAD_REQUEST = 2--><!--Device-TransferResult-ERROR_BAD_REQUEST = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -74,9 +74,9 @@ The peer device refuses to receive the file.
 
 **Since:** 16
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
-<!--Device-TransferResult-ERROR_NOT_ACCEPTABLE = 3--><!--Device-TransferResult-ERROR_NOT_ACCEPTABLE = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -92,9 +92,9 @@ The peer device cancels the ongoing file transfer process.
 
 **Since:** 16
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
-<!--Device-TransferResult-ERROR_CANCELED = 4--><!--Device-TransferResult-ERROR_CANCELED = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -110,9 +110,9 @@ Failed to connect to the peer device.
 
 **Since:** 16
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
-<!--Device-TransferResult-ERROR_CONNECTION_FAILED = 5--><!--Device-TransferResult-ERROR_CONNECTION_FAILED = 5-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -128,9 +128,9 @@ Indicates that the file transfer fails.
 
 **Since:** 16
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
-<!--Device-TransferResult-ERROR_TRANSFER_FAILED = 6--><!--Device-TransferResult-ERROR_TRANSFER_FAILED = 6-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -146,11 +146,10 @@ Unknown error
 
 **Since:** 16
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
-<!--Device-TransferResult-ERROR_UNKNOWN = 7--><!--Device-TransferResult-ERROR_UNKNOWN = 7-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
-

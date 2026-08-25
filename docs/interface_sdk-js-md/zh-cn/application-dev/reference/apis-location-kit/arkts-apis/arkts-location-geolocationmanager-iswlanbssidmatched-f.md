@@ -1,0 +1,66 @@
+# isWlanBssidMatched
+
+## 导入模块
+
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+```
+
+## isWlanBssidMatched
+
+```TypeScript
+function isWlanBssidMatched(
+      wlanBssidArray: Array<string>, rssiThreshold: int, needStartScan: boolean): Promise<boolean>
+```
+
+判断指定的BSSID是否存在于最新的WLAN扫描结果里。使用Promise异步回调。
+
+**起始版本：** 21
+
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
+
+**需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
+
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.Location.Location.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| wlanBssidArray | Array & lt;string & gt; | 是 |
+| [rssiThreshold](arkts-location-geolocationmanager-bluetoothsearchrequestparams-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [needStartScan](arkts-location-geolocationmanager-locatingrequireddataconfig-i-sys.md) | boolean | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3301100](../errorcode-geoLocationManager.md#3301100-位置功能的开关未开启导致功能失败) |
+| [3301800](../errorcode-geoLocationManager.md#3301800-启动wi-fi或蓝牙扫描失败) |
+
+**示例**
+
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+
+try {
+  let wlanBssidArray: Array<string> = ["02:1b:32:23:ea:91", "02:1b:32:23:ea:93"];
+  let rssiThreshold: number = -70;
+  let needStartScan: boolean = true;
+  geoLocationManager.isWlanBssidMatched(wlanBssidArray, rssiThreshold, needStartScan).then((res) => {
+    console.info("Wlan Bssid Matched Result:" + res);
+  })
+} catch (error) {
+  console.error("isWlanBssidMatched: errCode" + error.code + ", errMessage" + error.message);
+}
+```

@@ -4,7 +4,7 @@ Params carried by the framework when prompting for a companion device passcode.@
 
 **Since:** 26.1.0
 
-<!--Device-companionDeviceAuth-interface PasscodePromptParams--><!--Device-companionDeviceAuth-interface PasscodePromptParams-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -28,11 +28,10 @@ Challenge carried by the framework when prompting for a companion device passcod
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-PasscodePromptParams-challenge: Uint8Array--><!--Device-PasscodePromptParams-challenge: Uint8Array-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **System API:** This is a system API.
-

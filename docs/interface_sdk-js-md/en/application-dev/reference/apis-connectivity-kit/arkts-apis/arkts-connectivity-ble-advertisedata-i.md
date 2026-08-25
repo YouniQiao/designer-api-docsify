@@ -2,9 +2,9 @@
 
 Describes the advertising data.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ble-interface AdvertiseData--><!--Device-ble-interface AdvertiseData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -26,13 +26,13 @@ Indicates the local name data type in the advertisement packet. If both the prop
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Required permissions:** ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-AdvertiseData-advertiseName?: string--><!--Device-AdvertiseData-advertiseName?: string-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -46,13 +46,13 @@ Indicates whether the device name will be included in the advertisement packet.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AdvertiseData-includeDeviceName?: boolean--><!--Device-AdvertiseData-includeDeviceName?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -66,13 +66,13 @@ Indicates whether the tx power will be included in the advertisement packet.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-AdvertiseData-includeTxPower?: boolean--><!--Device-AdvertiseData-includeTxPower?: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -86,13 +86,13 @@ The specified manufacturer data list to this advertisement
 
 **Type:** Array&lt;ManufactureData&gt;
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AdvertiseData-manufactureData: Array<ManufactureData>--><!--Device-AdvertiseData-manufactureData: Array<ManufactureData>-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -106,13 +106,13 @@ The specified service data list to this advertisement
 
 **Type:** Array&lt;ServiceData&gt;
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AdvertiseData-serviceData: Array<ServiceData>--><!--Device-AdvertiseData-serviceData: Array<ServiceData>-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -126,13 +126,12 @@ The specified service UUID list to this advertisement
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AdvertiseData-serviceUuids: Array<string>--><!--Device-AdvertiseData-serviceUuids: Array<string>-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

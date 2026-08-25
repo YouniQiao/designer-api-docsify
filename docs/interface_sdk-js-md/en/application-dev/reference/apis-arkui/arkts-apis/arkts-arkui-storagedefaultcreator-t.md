@@ -4,48 +4,12 @@
 export declare type StorageDefaultCreator<T> = () => T
 ```
 
-Obtains the default constructor.
+Function that returns the default creator.
 
-**Since:** 12
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-unnamed-export declare type StorageDefaultCreator<T> = () => T--><!--Device-unnamed-export declare type StorageDefaultCreator<T> = () => T-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-```TypeScript
-import { PersistenceV2 } from '@kit.ArkUI';
-
-@ObservedV2
-class SampleClass {
-  @Trace id: number = 0;
-  count: number = 1;
-}
-
-@ObservedV2
-class FatherSampleClass {
-  @Trace sampleClass: SampleClass = new SampleClass();
-}
-
-// Persist the key-value pair whose key is SampleClass and value is new SampleClass(), and assign it to source.
-// StorageDefaultCreator refers to () => new FatherSampleClass().
-const source: FatherSampleClass | undefined = PersistenceV2.connect(FatherSampleClass, () => new FatherSampleClass());
-
-@Entry
-@Component
-struct SampleComp {
-  data: FatherSampleClass | undefined = source;
-
-  build() {
-    Column() {
-      Text(`${this.data?.sampleClass.id}`)
-    }
-  }
-}
-```
-

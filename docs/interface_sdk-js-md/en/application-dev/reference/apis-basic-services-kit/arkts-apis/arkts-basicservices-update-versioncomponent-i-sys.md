@@ -2,9 +2,9 @@
 
 Represents a version component.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-update-export interface VersionComponent--><!--Device-update-export interface VersionComponent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -26,9 +26,9 @@ Component ID, which uniquely identifies a component in the upgrade package. The 
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VersionComponent-componentId: string--><!--Device-VersionComponent-componentId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -44,9 +44,9 @@ Component type.
 
 **Type:** ComponentType
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VersionComponent-componentType: ComponentType--><!--Device-VersionComponent-componentType: ComponentType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -62,9 +62,9 @@ Information about the version description file.
 
 **Type:** [DescriptionInfo](arkts-basicservices-update-descriptioninfo-i-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VersionComponent-descriptionInfo: DescriptionInfo--><!--Device-VersionComponent-descriptionInfo: DescriptionInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -80,9 +80,9 @@ Display version number.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VersionComponent-displayVersion: string--><!--Device-VersionComponent-displayVersion: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -98,9 +98,9 @@ Effective mode. The value **COLD** indicates the cold upgrade, which takes effec
 
 **Type:** [EffectiveMode](arkts-basicservices-update-effectivemode-e-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VersionComponent-effectiveMode: EffectiveMode--><!--Device-VersionComponent-effectiveMode: EffectiveMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -116,9 +116,9 @@ Internal version number.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VersionComponent-innerVersion: string--><!--Device-VersionComponent-innerVersion: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -134,9 +134,9 @@ OTA mode. Pass this parameter to specify a specific upgrade mode, which is appli
 
 **Type:** [OtaMode](arkts-basicservices-update-otamode-e-sys.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-VersionComponent-otaMode?: OtaMode--><!--Device-VersionComponent-otaMode?: OtaMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -150,11 +150,11 @@ size: int
 
 Size of the upgrade package, in bytes. The value range is [0, +∞]. An exception is thrown if the value is out of range.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VersionComponent-size: int--><!--Device-VersionComponent-size: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -170,11 +170,10 @@ Upgrade action. The value **UPGRADE** indicates that the upgrade package is a di
 
 **Type:** [UpgradeAction](arkts-basicservices-update-upgradeaction-e-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VersionComponent-upgradeAction: UpgradeAction--><!--Device-VersionComponent-upgradeAction: UpgradeAction-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
-

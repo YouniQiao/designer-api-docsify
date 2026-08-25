@@ -4,7 +4,7 @@ Enumerates the expansion mode of child nodes.
 
 **Since:** 15
 
-<!--Device-unnamed-export enum ExpandMode--><!--Device-unnamed-export enum ExpandMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ The child nodes of the current FrameNode are not expanded. If the FrameNode cont
 
 **Since:** 15
 
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-ExpandMode-NOT_EXPAND = 0--><!--Device-ExpandMode-NOT_EXPAND = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ The child nodes of the current FrameNode are expanded. If the FrameNode contains
 
 **Since:** 15
 
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-ExpandMode-EXPAND = 1--><!--Device-ExpandMode-EXPAND = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ The child nodes of the current FrameNode are expanded on demand. If the FrameNod
 
 **Since:** 15
 
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-ExpandMode-LAZY_EXPAND = 2--><!--Device-ExpandMode-LAZY_EXPAND = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,10 @@ The child nodes of the current FrameNode are not expanded. If the FrameNode cont
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ExpandMode-LAZY_NOT_EXPAND = 3--><!--Device-ExpandMode-LAZY_NOT_EXPAND = 3-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,7 +4,7 @@ Provides detailed information about the first meaningful paint on the web page, 
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface FirstMeaningfulPaint--><!--Device-unnamed-declare interface FirstMeaningfulPaint-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -25,9 +25,9 @@ Time taken for the first meaningful paint of the page, in milliseconds.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-FirstMeaningfulPaint-firstMeaningfulPaintTime?: number--><!--Device-FirstMeaningfulPaint-firstMeaningfulPaintTime?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -43,9 +43,8 @@ Start time of the navigation, in microseconds.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-FirstMeaningfulPaint-navigationStartTime?: number--><!--Device-FirstMeaningfulPaint-navigationStartTime?: number-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

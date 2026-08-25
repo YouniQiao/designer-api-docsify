@@ -2,9 +2,9 @@
 
 Enumerates the callbacks to filter. It can be used with [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md) to filter the callbacks you want to listen for.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-appManager-export enum FilterCallback--><!--Device-appManager-export enum FilterCallback-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -16,11 +16,11 @@ Enumerates the callbacks to filter. It can be used with [AppStateFilter](arkts-a
 ON_FOREGROUND_APPLICATION_CHANGED = 1 << 0
 ```
 
-Corresponds to the ApplicationStateObserver.onForegroundApplicationChanged callback, which is executed when the application's foreground/background state changes.
+Corresponds to the [ApplicationStateObserver.onForegroundApplicationChanged](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronforegroundapplicationchanged) callback, which is executed when the application's foreground/background state changes.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-FilterCallback-ON_FOREGROUND_APPLICATION_CHANGED = 1 << 0--><!--Device-FilterCallback-ON_FOREGROUND_APPLICATION_CHANGED = 1 << 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -32,11 +32,11 @@ Corresponds to the ApplicationStateObserver.onForegroundApplicationChanged callb
 ON_ABILITY_STATE_CHANGED = 1 << 1
 ```
 
-Corresponds to the ApplicationStateObserver.onAbilityStateChanged callback, which is executed when the ability state changes.
+Corresponds to the [ApplicationStateObserver.onAbilityStateChanged](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronabilitystatechanged) callback, which is executed when the ability state changes.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-FilterCallback-ON_ABILITY_STATE_CHANGED = 1 << 1--><!--Device-FilterCallback-ON_ABILITY_STATE_CHANGED = 1 << 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -48,11 +48,11 @@ Corresponds to the ApplicationStateObserver.onAbilityStateChanged callback, whic
 ON_PROCESS_CREATED = 1 << 2
 ```
 
-Corresponds to the ApplicationStateObserver.onProcessCreated callback, which is executed when a process is created.
+Corresponds to the [ApplicationStateObserver.onProcessCreated](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronprocesscreated) callback, which is executed when a process is created.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-FilterCallback-ON_PROCESS_CREATED = 1 << 2--><!--Device-FilterCallback-ON_PROCESS_CREATED = 1 << 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -64,11 +64,11 @@ Corresponds to the ApplicationStateObserver.onProcessCreated callback, which is 
 ON_PROCESS_DIED = 1 << 3
 ```
 
-Corresponds to the ApplicationStateObserver.onProcessDied callback, which is executed when a process is destroyed.
+Corresponds to the [ApplicationStateObserver.onProcessDied](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronprocessdied) callback, which is executed when a process is destroyed.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-FilterCallback-ON_PROCESS_DIED = 1 << 3--><!--Device-FilterCallback-ON_PROCESS_DIED = 1 << 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -80,11 +80,11 @@ Corresponds to the ApplicationStateObserver.onProcessDied callback, which is exe
 ON_PROCESS_STATE_CHANGED = 1 << 4
 ```
 
-Corresponds to the ApplicationStateObserver.onProcessStateChanged callback, which is executed when the process state is updated.
+Corresponds to the [ApplicationStateObserver.onProcessStateChanged](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronprocessstatechanged) callback, which is executed when the process state is updated.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-FilterCallback-ON_PROCESS_STATE_CHANGED = 1 << 4--><!--Device-FilterCallback-ON_PROCESS_STATE_CHANGED = 1 << 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -96,11 +96,11 @@ Corresponds to the ApplicationStateObserver.onProcessStateChanged callback, whic
 ON_APP_STARTED = 1 << 5
 ```
 
-Corresponds to the ApplicationStateObserver.onAppStarted callback, which is executed when the application's first process is created.
+Corresponds to the [ApplicationStateObserver.onAppStarted](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronappstarted) callback, which is executed when the application's first process is created.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-FilterCallback-ON_APP_STARTED = 1 << 5--><!--Device-FilterCallback-ON_APP_STARTED = 1 << 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -112,13 +112,12 @@ Corresponds to the ApplicationStateObserver.onAppStarted callback, which is exec
 ON_APP_STOPPED = 1 << 6
 ```
 
-Corresponds to the ApplicationStateObserver.onAppStopped callback, which is executed when the application's last process is destroyed.
+Corresponds to the [ApplicationStateObserver.onAppStopped](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronappstopped) callback, which is executed when the application's last process is destroyed.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-FilterCallback-ON_APP_STOPPED = 1 << 6--><!--Device-FilterCallback-ON_APP_STOPPED = 1 << 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
-

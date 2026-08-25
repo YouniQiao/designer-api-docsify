@@ -1,4 +1,4 @@
-# @ohos.hiAppEvent
+# @ohos.hiAppEvent(应用事件打点)
 
 本模块提供了应用事件打点能力，包括对打点数据的落盘，以及对打点功能的管理配置。
 
@@ -14,7 +14,6 @@
 
 ### 命名空间
 
-| 名称 | 说明 |
-| --- | --- |
-| [hiAppEvent](arkts-performanceanalysis-hiappevent-depr-n.md) | 本模块提供了应用事件打点能力，包括对打点数据的落盘，以及对打点功能的管理配置。 |
-
+| 名称 |
+| --- |
+| [hiAppEvent(应用事件打点)](arkts-performanceanalysis-hiappevent-depr-n.md) |

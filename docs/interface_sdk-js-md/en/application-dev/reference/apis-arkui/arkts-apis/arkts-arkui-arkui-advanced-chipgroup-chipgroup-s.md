@@ -13,9 +13,7 @@
 
 **Since:** 12
 
-**Decorator:** @Component
-
-<!--Device-unnamed-export declare struct ChipGroup--><!--Device-unnamed-export declare struct ChipGroup-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,6 +22,38 @@
 ```TypeScript
 import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
 ```
+
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## suffix
+
+```TypeScript
+suffix?: ChipGroupSuffixBuilder
+```
+
+The builder function which will be rendered in the suffix of ChipGroup.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundSystemMaterial
 
@@ -37,13 +67,11 @@ Set system-styled materials for the component. Different materials have differen
 
 **Since:** 26.0.0
 
-**Decorator:** @Prop
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipGroup-@Prop  backgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroup-@Prop  backgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,13 +87,11 @@ Top and bottom padding, used to control the overall height. The type is [ChipGro
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipGroup-@Prop  chipGroupPadding?: ChipGroupPaddingOptions--><!--Device-ChipGroup-@Prop  chipGroupPadding?: ChipGroupPaddingOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -81,13 +107,11 @@ Left and right padding and spacing between chips. For details, see [ChipGroupSpa
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipGroup-@Prop  chipGroupSpace?: ChipGroupSpaceOptions--><!--Device-ChipGroup-@Prop  chipGroupSpace?: ChipGroupSpaceOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -103,13 +127,11 @@ Specific attributes of each chip. For details, see [ChipGroupItemOptions[]][Chip
 
 **Since:** 12
 
-**Decorator:** @Require, @Prop
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipGroup-@Require  @Prop  items: ChipGroupItemOptions[]--><!--Device-ChipGroup-@Require  @Prop  items: ChipGroupItemOptions[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -125,13 +147,11 @@ Style attributes of the chip, such as the color and size. For details, see [Chip
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipGroup-@Prop  itemStyle?: ChipItemStyle--><!--Device-ChipGroup-@Prop  itemStyle?: ChipItemStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -148,13 +168,11 @@ Whether to select multiple chips.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipGroup-@Prop  multiple?: boolean--><!--Device-ChipGroup-@Prop  multiple?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -170,11 +188,11 @@ Callback invoked when the chip status changes.If the value is **undefined**, the
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipGroup-onChange?: Callback<Array<number>>--><!--Device-ChipGroup-onChange?: Callback<Array<number>>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -190,13 +208,11 @@ Set system-styled materials for the component when selected. Different materials
 
 **Since:** 26.0.0
 
-**Decorator:** @Prop
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipGroup-@Prop  selectedBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroup-@Prop  selectedBackgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -212,13 +228,11 @@ Index of the selected chip.Default value: **[0]**If the value is **undefined**, 
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipGroup-@Prop  selectedIndexes?: Array<number>--><!--Device-ChipGroup-@Prop  selectedIndexes?: Array<number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -234,13 +248,10 @@ Callback used to customize a builder. To display custom content on the rightmost
 
 **Since:** 12
 
-**Decorator:** @BuilderParam
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ChipGroup-@BuilderParam  suffix?: Callback<void>--><!--Device-ChipGroup-@BuilderParam  suffix?: Callback<void>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

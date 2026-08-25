@@ -19,20 +19,20 @@ function setEventHubMultithreadingEnabled(context: common.Context, enabled: bool
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-sendableContextManager-function setEventHubMultithreadingEnabled(context: common.Context, enabled: boolean): void--><!--Device-sendableContextManager-function setEventHubMultithreadingEnabled(context: common.Context, enabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | common.Context | 是 | Context对象。其中，Eventhub支持传递的序列化数据类型参见 序列化支持的类型，数据大小不超过16MB。 |
-| enabled | boolean | 是 | 表示是否启用Context的EventHub跨线程通信能力。true表示启用，false表示禁用。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | common.Context | 是 |
+| enabled | boolean | 是 |
 
 **示例**
 
@@ -133,4 +133,3 @@ workerPort.onerror = (e: ErrorEvent) => {
   hilog.error(DOMAIN, 'testTag', '%{public}s', 'onerror');
 };
 ```
-

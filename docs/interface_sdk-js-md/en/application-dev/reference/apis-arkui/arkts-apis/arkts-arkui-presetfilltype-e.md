@@ -4,7 +4,7 @@ Specify the number of columns for different responsive breakpoints.@enum { numbe
 
 **Since:** 22
 
-<!--Device-unnamed-declare enum PresetFillType--><!--Device-unnamed-declare enum PresetFillType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ For Lists and Swipers: One column is displayed on SM (and smaller),two on MD, an
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-PresetFillType-BREAKPOINT_DEFAULT = 0--><!--Device-PresetFillType-BREAKPOINT_DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ For SM (and smaller),MD, and LG (and larger) devices, one,two,and three columns 
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-PresetFillType-BREAKPOINT_SM1MD2LG3 = 1--><!--Device-PresetFillType-BREAKPOINT_SM1MD2LG3 = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ For SM (and smaller),MD, and LG (and larger) devices,two,three,and five columns 
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-PresetFillType-BREAKPOINT_SM2MD3LG5 = 2--><!--Device-PresetFillType-BREAKPOINT_SM2MD3LG5 = 2-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

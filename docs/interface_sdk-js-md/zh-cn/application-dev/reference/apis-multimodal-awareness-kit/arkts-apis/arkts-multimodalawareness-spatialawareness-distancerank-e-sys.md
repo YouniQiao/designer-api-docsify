@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-spatialAwareness-export enum DistanceRank--><!--Device-spatialAwareness-export enum DistanceRank-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
@@ -20,9 +20,9 @@ RANK_ULTRA_SHORT_RANGE = 'rankUltraShort'
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-DistanceRank-RANK_ULTRA_SHORT_RANGE = 'rankUltraShort'--><!--Device-DistanceRank-RANK_ULTRA_SHORT_RANGE = 'rankUltraShort'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
@@ -38,9 +38,9 @@ RANK_SHORT_RANGE = 'rankShort'
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-DistanceRank-RANK_SHORT_RANGE = 'rankShort'--><!--Device-DistanceRank-RANK_SHORT_RANGE = 'rankShort'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
@@ -56,9 +56,9 @@ RANK_SHORT_MEDIUM_RANGE = 'rankMediumShort'
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-DistanceRank-RANK_SHORT_MEDIUM_RANGE = 'rankMediumShort'--><!--Device-DistanceRank-RANK_SHORT_MEDIUM_RANGE = 'rankMediumShort'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
@@ -74,11 +74,10 @@ RANK_MEDIUM_RANGE = 'rankMedium'
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-DistanceRank-RANK_MEDIUM_RANGE = 'rankMedium'--><!--Device-DistanceRank-RANK_MEDIUM_RANGE = 'rankMedium'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **系统接口：** 此接口为系统接口。
-

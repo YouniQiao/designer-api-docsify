@@ -7,7 +7,7 @@
 
 **起始版本：** 23
 
-<!--Device-relationalStore-class LiteResultSet--><!--Device-relationalStore-class LiteResultSet-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -19,6 +19,12 @@ import { relationalStore } from '@kit.ArkData';
 
 ## getFloat32Array
 
+ArkTS-Dyn:
+```TypeScript
+getFloat32Array(columnIndex: number): Float32Array
+```
+
+ArkTS-Sta:
 ```TypeScript
 getFloat32Array(columnIndex: int): Float32Array
 ```
@@ -27,9 +33,9 @@ getFloat32Array(columnIndex: int): Float32Array
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-LiteResultSet-getFloat32Array(columnIndex: int): Float32Array--><!--Device-LiteResultSet-getFloat32Array(columnIndex: int): Float32Array-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -37,22 +43,21 @@ getFloat32Array(columnIndex: int): Float32Array
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| columnIndex | int | 是 | 指定的列索引，从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Float32Array | 以浮点数组的形式返回指定列的值。 |
+| 类型 |
+| --- |
+| Float32Array |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
-| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) | Column index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) | Type conversion failed. |
-
+| 错误码ID |
+| --- |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) |
+| [14800013](../errorcode-data-rdb.md#14800013-列索引越界) |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) |

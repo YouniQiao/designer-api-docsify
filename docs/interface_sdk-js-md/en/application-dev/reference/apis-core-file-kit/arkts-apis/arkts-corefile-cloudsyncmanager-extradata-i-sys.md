@@ -2,9 +2,9 @@
 
 Represents the cloud data change information.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-cloudSyncManager-interface ExtraData--><!--Device-cloudSyncManager-interface ExtraData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -26,9 +26,9 @@ Change event ID.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ExtraData-eventId: string--><!--Device-ExtraData-eventId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -44,11 +44,10 @@ Represents the cloud data change information.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ExtraData-extraData: string--><!--Device-ExtraData-extraData: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **System API:** This is a system API.
-

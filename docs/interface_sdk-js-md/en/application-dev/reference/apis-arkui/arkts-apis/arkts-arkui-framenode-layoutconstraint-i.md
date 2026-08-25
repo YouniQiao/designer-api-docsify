@@ -4,7 +4,7 @@ Describes the layout constraints of the component.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface LayoutConstraint--><!--Device-unnamed-declare interface LayoutConstraint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +20,11 @@ Maximum size.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-LayoutConstraint-maxSize: Size--><!--Device-LayoutConstraint-maxSize: Size-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,11 +40,11 @@ Minimum size.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-LayoutConstraint-minSize: Size--><!--Device-LayoutConstraint-minSize: Size-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,11 +60,10 @@ Size reference for calculating the percentage of a child node.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-LayoutConstraint-percentReference: Size--><!--Device-LayoutConstraint-percentReference: Size-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

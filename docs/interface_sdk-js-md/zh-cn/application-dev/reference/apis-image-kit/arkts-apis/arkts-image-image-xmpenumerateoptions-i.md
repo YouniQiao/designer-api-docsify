@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-image-interface XMPEnumerateOptions--><!--Device-image-interface XMPEnumerateOptions-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -26,9 +26,9 @@ isRecursive?: boolean
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-XMPEnumerateOptions-isRecursive?: boolean--><!--Device-XMPEnumerateOptions-isRecursive?: boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -44,9 +44,8 @@ onlyQualifier?: boolean
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-XMPEnumerateOptions-onlyQualifier?: boolean--><!--Device-XMPEnumerateOptions-onlyQualifier?: boolean-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
-

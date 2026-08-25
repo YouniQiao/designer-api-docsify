@@ -4,9 +4,9 @@
 
 **继承/实现关系：** SceneResourceFactory extends [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export interface SceneResourceFactory--><!--Device-unnamed-export interface SceneResourceFactory-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -18,23 +18,23 @@ createCamera(params: SceneNodeParameters): Promise<Camera>
 
 根据节点参数创建相机，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SceneResourceFactory-createCamera(params: SceneNodeParameters): Promise<Camera>--><!--Device-SceneResourceFactory-createCamera(params: SceneNodeParameters): Promise<Camera>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | 是 | 场景节点参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Camera](arkts-arkgraphics3d-scenenodes-camera-i.md)&gt; | Promise对象，返回相机对象。 |
+| 类型 |
+| --- |
+| Promise&lt;[Camera](arkts-arkgraphics3d-scenenodes-camera-i.md)&gt; |
 
 **示例**
 
@@ -90,24 +90,24 @@ createCamera(params: SceneNodeParameters, cameraParams: CameraParameters): Promi
 
 根据节点参数与相机参数创建相机，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-SceneResourceFactory-createCamera(params: SceneNodeParameters, cameraParams: CameraParameters): Promise<Camera>--><!--Device-SceneResourceFactory-createCamera(params: SceneNodeParameters, cameraParams: CameraParameters): Promise<Camera>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | 是 | 场景节点参数。 |
-| cameraParams | [CameraParameters](arkts-arkgraphics3d-scene-cameraparameters-i.md) | 是 | 相机参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | 是 |
+| cameraParams | [CameraParameters](arkts-arkgraphics3d-scene-cameraparameters-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Camera](arkts-arkgraphics3d-scenenodes-camera-i.md)&gt; | Promise对象，返回相机对象。 |
+| 类型 |
+| --- |
+| Promise&lt;[Camera](arkts-arkgraphics3d-scenenodes-camera-i.md)&gt; |
 
 **示例**
 
@@ -121,23 +121,23 @@ createEffect(params: EffectParameters): Promise<Effect>
 
 根据特效参数创建特效对象，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-SceneResourceFactory-createEffect(params: EffectParameters): Promise<Effect>--><!--Device-SceneResourceFactory-createEffect(params: EffectParameters): Promise<Effect>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| params | [EffectParameters](arkts-arkgraphics3d-scene-effectparameters-i.md) | 是 | 特效参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| params | [EffectParameters](arkts-arkgraphics3d-scene-effectparameters-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Effect](arkts-arkgraphics3d-sceneresources-effect-i.md)&gt; | Promise对象，返回特效对象。 |
+| 类型 |
+| --- |
+| Promise&lt;[Effect](arkts-arkgraphics3d-sceneresources-effect-i.md)&gt; |
 
 **示例**
 
@@ -172,23 +172,23 @@ createEnvironment(params: SceneResourceParameters): Promise<Environment>
 
 根据场景资源参数创建环境，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SceneResourceFactory-createEnvironment(params: SceneResourceParameters): Promise<Environment>--><!--Device-SceneResourceFactory-createEnvironment(params: SceneResourceParameters): Promise<Environment>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | 是 | 场景资源参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Environment](arkts-arkgraphics3d-sceneresources-environment-i.md)&gt; | Promise对象，返回环境对象。 |
+| 类型 |
+| --- |
+| Promise&lt;[Environment](arkts-arkgraphics3d-sceneresources-environment-i.md)&gt; |
 
 **示例**
 
@@ -222,24 +222,24 @@ createGeometry(params: SceneNodeParameters, mesh:MeshResource): Promise<Geometry
 
 根据场景节点参数和网格数据创建几何对象，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-SceneResourceFactory-createGeometry(params: SceneNodeParameters, mesh:MeshResource): Promise<Geometry>--><!--Device-SceneResourceFactory-createGeometry(params: SceneNodeParameters, mesh:MeshResource): Promise<Geometry>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | 是 | 场景节点参数。 |
-| mesh | [MeshResource](arkts-arkgraphics3d-sceneresources-meshresource-i.md) | 是 | 网格数据参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | 是 |
+| mesh | [MeshResource](arkts-arkgraphics3d-sceneresources-meshresource-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Geometry](arkts-arkgraphics3d-scenenodes-geometry-i.md)&gt; | Promise对象，返回几何对象。 |
+| 类型 |
+| --- |
+| Promise&lt;[Geometry](arkts-arkgraphics3d-scenenodes-geometry-i.md)&gt; |
 
 **示例**
 
@@ -279,24 +279,24 @@ createLight(params: SceneNodeParameters, lightType: LightType): Promise<Light>
 
 根据节点参数和灯光类型创建灯光，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SceneResourceFactory-createLight(params: SceneNodeParameters, lightType: LightType): Promise<Light>--><!--Device-SceneResourceFactory-createLight(params: SceneNodeParameters, lightType: LightType): Promise<Light>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | 是 | 场景节点参数。 |
-| lightType | [LightType](arkts-arkgraphics3d-scenenodes-lighttype-e.md) | 是 | 灯光类型。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | 是 |
+| [lightType](arkts-arkgraphics3d-scenenodes-light-i.md) | [LightType](arkts-arkgraphics3d-scenenodes-lighttype-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Light](arkts-arkgraphics3d-scenenodes-light-i.md)&gt; | Promise对象，返回灯光对象。 |
+| 类型 |
+| --- |
+| Promise&lt;[Light](arkts-arkgraphics3d-scenenodes-light-i.md)&gt; |
 
 **示例**
 
@@ -329,24 +329,24 @@ createMaterial(params: SceneResourceParameters, materialType: MaterialType): Pro
 
 根据场景资源参数和材质类型创建材质，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SceneResourceFactory-createMaterial(params: SceneResourceParameters, materialType: MaterialType): Promise<Material>--><!--Device-SceneResourceFactory-createMaterial(params: SceneResourceParameters, materialType: MaterialType): Promise<Material>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | 是 | 场景资源参数。 |
-| materialType | [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e.md) | 是 | 材质类型。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | 是 |
+| [materialType](arkts-arkgraphics3d-sceneresources-material-i.md) | [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Material](arkts-arkgraphics3d-sceneresources-material-i.md)&gt; | Promise对象，返回材质对象。 |
+| 类型 |
+| --- |
+| Promise&lt;[Material](arkts-arkgraphics3d-sceneresources-material-i.md)&gt; |
 
 **示例**
 
@@ -379,23 +379,23 @@ createNode(params: SceneNodeParameters): Promise<Node>
 
 创建节点，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SceneResourceFactory-createNode(params: SceneNodeParameters): Promise<Node>--><!--Device-SceneResourceFactory-createNode(params: SceneNodeParameters): Promise<Node>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | 是 | 场景节点参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Node](arkts-arkgraphics3d-scenenodes-node-i.md)&gt; | Promise对象，返回节点对象。 |
+| 类型 |
+| --- |
+| Promise&lt;[Node](arkts-arkgraphics3d-scenenodes-node-i.md)&gt; |
 
 **示例**
 
@@ -420,4 +420,3 @@ function createNodePromise(): Promise<Node> {
   });
 }
 ```
-

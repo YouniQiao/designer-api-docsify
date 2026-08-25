@@ -8,9 +8,9 @@ Called when the system acquire the form data.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-unnamed-type OnAcquireFormDataFn = (formId: string) => Record<string, Object>--><!--Device-unnamed-type OnAcquireFormDataFn = (formId: string) => Record<string, Object>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -18,13 +18,12 @@ Called when the system acquire the form data.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| formId | string | Yes | Indicates the ID of the form. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| formId | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Record&lt;string, Object&gt; | Returns the wantParams object. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Record & lt;string, Object & gt; |

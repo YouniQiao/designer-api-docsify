@@ -2,9 +2,9 @@
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-unnamed-export interface SubscribeMessageResponse--><!--Device-unnamed-export interface SubscribeMessageResponse-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -20,9 +20,9 @@ Peer ability name, which is case sensitive.
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-SubscribeMessageResponse-abilityName: string--><!--Device-SubscribeMessageResponse-abilityName: string-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -38,9 +38,9 @@ Name of the bundle where the peer ability has been located. The name is case sen
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-SubscribeMessageResponse-bundleName: string--><!--Device-SubscribeMessageResponse-bundleName: string-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -56,9 +56,9 @@ Peer device ID.
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-SubscribeMessageResponse-deviceId: string--><!--Device-SubscribeMessageResponse-deviceId: string-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -74,9 +74,8 @@ Messages received from the device.
 
 **Since:** 5
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
+
 **Deprecated since:** 8
 
-<!--Device-SubscribeMessageResponse-message: string--><!--Device-SubscribeMessageResponse-message: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
-

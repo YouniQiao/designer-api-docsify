@@ -9,7 +9,7 @@
 
 **起始版本：** 11
 
-<!--Device-huks-export enum HuksAuthStorageLevel--><!--Device-huks-export enum HuksAuthStorageLevel-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -25,9 +25,9 @@ HUKS_AUTH_STORAGE_LEVEL_DE = 0
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-HuksAuthStorageLevel-HUKS_AUTH_STORAGE_LEVEL_DE = 0--><!--Device-HuksAuthStorageLevel-HUKS_AUTH_STORAGE_LEVEL_DE = 0-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -43,9 +43,9 @@ HUKS_AUTH_STORAGE_LEVEL_CE = 1
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-HuksAuthStorageLevel-HUKS_AUTH_STORAGE_LEVEL_CE = 1--><!--Device-HuksAuthStorageLevel-HUKS_AUTH_STORAGE_LEVEL_CE = 1-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -61,11 +61,10 @@ HUKS_AUTH_STORAGE_LEVEL_ECE = 2
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-HuksAuthStorageLevel-HUKS_AUTH_STORAGE_LEVEL_ECE = 2--><!--Device-HuksAuthStorageLevel-HUKS_AUTH_STORAGE_LEVEL_ECE = 2-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本11：SystemCapability.Security.Huks.Extension
-

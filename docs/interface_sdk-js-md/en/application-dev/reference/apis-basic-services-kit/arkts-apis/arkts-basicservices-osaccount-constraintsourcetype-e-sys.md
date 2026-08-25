@@ -2,9 +2,9 @@
 
 Enumerates the constraint sources.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-osAccount-enum ConstraintSourceType--><!--Device-osAccount-enum ConstraintSourceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -18,9 +18,9 @@ CONSTRAINT_NOT_EXIST = 0
 
 The constraint does not exist.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ConstraintSourceType-CONSTRAINT_NOT_EXIST = 0--><!--Device-ConstraintSourceType-CONSTRAINT_NOT_EXIST = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -34,9 +34,9 @@ CONSTRAINT_TYPE_BASE = 1
 
 Constraint from system settings.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ConstraintSourceType-CONSTRAINT_TYPE_BASE = 1--><!--Device-ConstraintSourceType-CONSTRAINT_TYPE_BASE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -50,9 +50,9 @@ CONSTRAINT_TYPE_DEVICE_OWNER = 2
 
 Constraint from the device owners' settings.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ConstraintSourceType-CONSTRAINT_TYPE_DEVICE_OWNER = 2--><!--Device-ConstraintSourceType-CONSTRAINT_TYPE_DEVICE_OWNER = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -66,11 +66,10 @@ CONSTRAINT_TYPE_PROFILE_OWNER = 3
 
 Constraint from the profile owners' settings.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ConstraintSourceType-CONSTRAINT_TYPE_PROFILE_OWNER = 3--><!--Device-ConstraintSourceType-CONSTRAINT_TYPE_PROFILE_OWNER = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-

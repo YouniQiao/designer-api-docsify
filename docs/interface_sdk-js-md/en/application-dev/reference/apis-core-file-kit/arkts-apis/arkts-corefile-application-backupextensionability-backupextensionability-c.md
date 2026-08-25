@@ -2,9 +2,9 @@
 
 Class to be override for backup extension ability.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-unnamed-declare class BackupExtensionAbility--><!--Device-unnamed-declare class BackupExtensionAbility-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -24,11 +24,11 @@ onBackup(): void
 
 Callback to be called when the backup procedure is started. Developer could override this method to build files to be backup.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BackupExtensionAbility-onBackup(): void--><!--Device-BackupExtensionAbility-onBackup(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -50,25 +50,25 @@ onBackupEx(backupInfo: string): string | Promise<string>
 
 Callback to be called when the backup procedure is started. Developer could override this method to restore.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BackupExtensionAbility-onBackupEx(backupInfo: string): string | Promise<string>--><!--Device-BackupExtensionAbility-onBackupEx(backupInfo: string): string | Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| backupInfo | string | Yes | BackupInfo to be backup, the param is a JSON string, it is an array, each array element includes detail and type now. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| backupInfo | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string \| Promise&lt;string&gt; | Return backup result, support promise, the result is a JSON string, it includes type, errorCode and errorInfo now. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string \| Promise & lt;string & gt; |
 
 **Examples**
 
@@ -141,19 +141,19 @@ onProcess(): string
 
 Callback to be called when getting backup/restore process info. Developer could override this method to provide the backup/restore process info.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BackupExtensionAbility-onProcess(): string--><!--Device-BackupExtensionAbility-onProcess(): string-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Return the backup/restore process info. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -233,31 +233,37 @@ function appJob(progressInfo: MigrateProgressInfo, args: number) : string {
 
 ## onRelease
 
+ArkTS-Dyn:
+```TypeScript
+onRelease(scenario: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 onRelease(scenario: int): Promise<void>
 ```
 
 Callback to be called before extension ability exits. Developer could override this method to clean abnormal data.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BackupExtensionAbility-onRelease(scenario: int): Promise<void>--><!--Device-BackupExtensionAbility-onRelease(scenario: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| scenario | int | Yes | The value 1 indicates backup and the value 2 indicates restoration. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| scenario | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Examples**
 
@@ -300,19 +306,19 @@ onRestore(bundleVersion: BundleVersion): void
 
 Callback to be called when the restore procedure is started. Developer could override this method to restore from copies for various bundle versions.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BackupExtensionAbility-onRestore(bundleVersion: BundleVersion): void--><!--Device-BackupExtensionAbility-onRestore(bundleVersion: BundleVersion): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleVersion | [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | Yes | Bundle version to be restore. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bundleVersion | [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | Yes |
 
 **Examples**
 
@@ -334,26 +340,26 @@ onRestoreEx(bundleVersion: BundleVersion, restoreInfo: string): string | Promise
 
 Callback to be called when the restore procedure is started. Developer could override this method to restore.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BackupExtensionAbility-onRestoreEx(bundleVersion: BundleVersion, restoreInfo: string): string | Promise<string>--><!--Device-BackupExtensionAbility-onRestoreEx(bundleVersion: BundleVersion, restoreInfo: string): string | Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleVersion | [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | Yes | Bundle version to be restore. |
-| restoreInfo | string | Yes | RestoreInfo to be restore, the param is a JSON string, it is an array, each array element includes detail and type now. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bundleVersion | [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | Yes |
+| restoreInfo | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string \| Promise&lt;string&gt; | Return restore result, support promise. the result is a JSON string, it includes type, errorCode and errorInfo now. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string \| Promise & lt;string & gt; |
 
 **Examples**
 
@@ -428,11 +434,10 @@ Indicates backup extension ability context.
 
 **Type:** [BackupExtensionContext](arkts-corefile-file-backupextensioncontext-backupextensioncontext-c.md)
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BackupExtensionAbility-context: BackupExtensionContext--><!--Device-BackupExtensionAbility-context: BackupExtensionContext-End-->
-
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
-

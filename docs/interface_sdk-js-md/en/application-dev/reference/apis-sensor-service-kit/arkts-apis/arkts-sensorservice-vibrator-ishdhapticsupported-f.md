@@ -14,23 +14,23 @@ function isHdHapticSupported(): boolean
 
 Checks whether HD vibration is supported.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-vibrator-function isHdHapticSupported(): boolean--><!--Device-vibrator-function isHdHapticSupported(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Boolean value indicating whether HD vibration is supported. The value **true** indicates that HD vibration is supported, and the value **false** indicates the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) | Device operation failed. |
+| Error Code ID |
+| --- |
+| [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) |
 
 **Examples**
 
@@ -48,4 +48,3 @@ try {
   console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
 }
 ```
-

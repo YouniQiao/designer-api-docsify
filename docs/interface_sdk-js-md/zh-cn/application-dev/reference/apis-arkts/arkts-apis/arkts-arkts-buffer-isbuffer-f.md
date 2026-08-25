@@ -14,25 +14,25 @@ function isBuffer(obj: Object): boolean
 
 判断`obj`是否为Buffer。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-buffer-function isBuffer(obj: Object): boolean--><!--Device-buffer-function isBuffer(obj: Object): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| obj | Object | 是 | 要判断是否为Buffer的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| obj | Object | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果obj是Buffer，则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -55,4 +55,3 @@ let result4 = buffer.isBuffer(new Uint8Array(1024));
 console.info("result4 = " + result4);
 // 输出结果：result4 = false
 ```
-

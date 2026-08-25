@@ -1,8 +1,6 @@
 # WeakSet
 
-**Since:** -1
-
-<!--Device-unnamed-interface WeakSet--><!--Device-unnamed-interface WeakSet-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,20 +15,18 @@ add(value: T): this
 
 Appends a new object to the end of the WeakSet.
 
-**Since:** -1
-
-<!--Device-WeakSet-add(value: T): this--><!--Device-WeakSet-add(value: T): this-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | T | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## delete
 
 ```TypeScript
@@ -39,37 +35,33 @@ delete(value: T): boolean
 
 Removes the specified element from the WeakSet.
 
-**Since:** -1
-
-<!--Device-WeakSet-delete(value: T): boolean--><!--Device-WeakSet-delete(value: T): boolean-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | T | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## has
 
 ```TypeScript
 has(value: T): boolean
 ```
 
-**Since:** -1
-
-<!--Device-WeakSet-has(value: T): boolean--><!--Device-WeakSet-has(value: T): boolean-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | T | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

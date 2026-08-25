@@ -16,25 +16,25 @@ function createHtmlData(htmlText: string): PasteData
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [createData](arkts-basicservices-pasteboard-createdata-f.md)(mimeType: string, value: ValueType)
-
-<!--Device-pasteboard-function createHtmlData(htmlText: string): PasteData--><!--Device-pasteboard-function createHtmlData(htmlText: string): PasteData-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| htmlText | string | 是 | HTML内容，需符合标准HTML格式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [htmlText](arkts-basicservices-pasteboard-pastedatarecord-i.md) | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | 剪贴板内容对象。 |
+| 类型 |
+| --- |
+| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) |
 
 **示例**
 
@@ -42,4 +42,3 @@ function createHtmlData(htmlText: string): PasteData
 let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";
 let pasteData: pasteboard.PasteData = pasteboard.createHtmlData(html);
 ```
-

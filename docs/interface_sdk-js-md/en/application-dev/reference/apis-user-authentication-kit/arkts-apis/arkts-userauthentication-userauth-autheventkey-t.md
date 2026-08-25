@@ -8,14 +8,13 @@ Defines the keyword of the authentication event type. It is used as a parameter 
 
 **Since:** 9
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-userAuth-type AuthEventKey = 'result' | 'tip'--><!--Device-userAuth-type AuthEventKey = 'result' | 'tip'-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
-| Type | Description |
-| --- | --- |
-| 'result' | If the first parameter of [on]{ |
-| 'tip' | If the first parameter of [on]{ |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'result' |
+| 'tip' |

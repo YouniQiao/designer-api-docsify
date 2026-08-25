@@ -2,29 +2,11 @@
 
 Defines the key information about an image or video file.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-photoAccessHelper-enum PhotoKeys--><!--Device-photoAccessHelper-enum PhotoKeys-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-## POSITION
-
-```TypeScript
-POSITION = 'position'
-```
-
-File location type.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-PhotoKeys-POSITION = 'position'--><!--Device-PhotoKeys-POSITION = 'position'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
 
 ## DATE_TRASHED
 
@@ -34,9 +16,9 @@ DATE_TRASHED = 'date_trashed'
 
 Date when the file was deleted. The value is the number of seconds elapsed since the Epoch time.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-PhotoKeys-DATE_TRASHED = 'date_trashed'--><!--Device-PhotoKeys-DATE_TRASHED = 'date_trashed'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,9 +32,9 @@ HIDDEN = 'hidden'
 
 Whether the file is hidden.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-PhotoKeys-HIDDEN = 'hidden'--><!--Device-PhotoKeys-HIDDEN = 'hidden'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -66,9 +48,9 @@ USER_COMMENT = 'user_comment'
 
 User comment information.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-PhotoKeys-USER_COMMENT = 'user_comment'--><!--Device-PhotoKeys-USER_COMMENT = 'user_comment'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -82,9 +64,9 @@ CAMERA_SHOT_KEY = 'camera_shot_key'
 
 Key for the Ultra Snapshot feature, which allows the camera to take photos or record videos with the screen off. (This parameter is available only for the system camera, and the key value is defined by the system camera.)
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-PhotoKeys-CAMERA_SHOT_KEY = 'camera_shot_key'--><!--Device-PhotoKeys-CAMERA_SHOT_KEY = 'camera_shot_key'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -98,9 +80,9 @@ DATE_YEAR = 'date_year'
 
 Year when the file was created.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PhotoKeys-DATE_YEAR = 'date_year'--><!--Device-PhotoKeys-DATE_YEAR = 'date_year'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -114,9 +96,9 @@ DATE_MONTH = 'date_month'
 
 Month when the file was created.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PhotoKeys-DATE_MONTH = 'date_month'--><!--Device-PhotoKeys-DATE_MONTH = 'date_month'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -130,9 +112,9 @@ DATE_DAY = 'date_day'
 
 Date when the file was created.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PhotoKeys-DATE_DAY = 'date_day'--><!--Device-PhotoKeys-DATE_DAY = 'date_day'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -146,9 +128,9 @@ PENDING = 'pending'
 
 Pending state.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PhotoKeys-PENDING = 'pending'--><!--Device-PhotoKeys-PENDING = 'pending'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -163,9 +145,9 @@ DATE_TRASHED_MS = 'date_trashed_ms'
 Date when the file was deleted. The value is the number of milliseconds elapsed since the Epoch time.  
 **NOTE：**: The photos queried cannot be sorted based on this field.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-PhotoKeys-DATE_TRASHED_MS = 'date_trashed_ms'--><!--Device-PhotoKeys-DATE_TRASHED_MS = 'date_trashed_ms'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -179,9 +161,9 @@ MOVING_PHOTO_EFFECT_MODE = 'moving_photo_effect_mode'
 
 Effect of the moving photo.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-PhotoKeys-MOVING_PHOTO_EFFECT_MODE = 'moving_photo_effect_mode'--><!--Device-PhotoKeys-MOVING_PHOTO_EFFECT_MODE = 'moving_photo_effect_mode'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -195,9 +177,9 @@ THUMBNAIL_READY = 'thumbnail_ready'
 
 Whether a thumbnail is generated.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-PhotoKeys-THUMBNAIL_READY = 'thumbnail_ready'--><!--Device-PhotoKeys-THUMBNAIL_READY = 'thumbnail_ready'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -211,9 +193,9 @@ CE_AVAILABLE = 'ce_available'
 
 Cloud enhancement identifier.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-PhotoKeys-CE_AVAILABLE = 'ce_available'--><!--Device-PhotoKeys-CE_AVAILABLE = 'ce_available'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -227,9 +209,9 @@ SUPPORTED_WATERMARK_TYPE = 'supported_watermark_type'
 
 Watermark type to set.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PhotoKeys-SUPPORTED_WATERMARK_TYPE = 'supported_watermark_type'--><!--Device-PhotoKeys-SUPPORTED_WATERMARK_TYPE = 'supported_watermark_type'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -243,9 +225,9 @@ THUMBNAIL_VISIBLE = 'thumbnail_visible'
 
 Whether the thumbnail of the media asset is visible.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PhotoKeys-THUMBNAIL_VISIBLE = 'thumbnail_visible'--><!--Device-PhotoKeys-THUMBNAIL_VISIBLE = 'thumbnail_visible'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -259,25 +241,9 @@ IS_CE_AUTO = 'is_auto'
 
 Whether automatic cloud enhancement is supported.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PhotoKeys-IS_CE_AUTO = 'is_auto'--><!--Device-PhotoKeys-IS_CE_AUTO = 'is_auto'-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-## OWNER_ALBUM_ID
-
-```TypeScript
-OWNER_ALBUM_ID = 'owner_album_id'
-```
-
-ID of the album to which the photo belongs.
-
-**Since:** 23
-
-<!--Device-PhotoKeys-OWNER_ALBUM_ID = 'owner_album_id'--><!--Device-PhotoKeys-OWNER_ALBUM_ID = 'owner_album_id'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -291,9 +257,9 @@ IS_RECENT_SHOW = 'is_recent_show'
 
 Whether the asset is displayed in the **Recent** list.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PhotoKeys-IS_RECENT_SHOW = 'is_recent_show'--><!--Device-PhotoKeys-IS_RECENT_SHOW = 'is_recent_show'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -307,9 +273,9 @@ SUM_SIZE = 'sum(size)'
 
 Total size of files. When **SUM_SIZE** is filled in **fetchColumns**, only the first asset is obtained, and the property includes the total size of all assets.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-PhotoKeys-SUM_SIZE = 'sum(size)'--><!--Device-PhotoKeys-SUM_SIZE = 'sum(size)'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -323,9 +289,9 @@ EXIF_ROTATE = 'exif_rotate'
 
 Rotational angle of the file.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-PhotoKeys-EXIF_ROTATE = 'exif_rotate'--><!--Device-PhotoKeys-EXIF_ROTATE = 'exif_rotate'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -339,9 +305,9 @@ HAS_APPLINK = 'has_applink'
 
 Whether to enable or disable the app link association.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-PhotoKeys-HAS_APPLINK = 'has_applink'--><!--Device-PhotoKeys-HAS_APPLINK = 'has_applink'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -355,9 +321,9 @@ APPLINK = 'applink'
 
 Information about the app link association.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-PhotoKeys-APPLINK = 'applink'--><!--Device-PhotoKeys-APPLINK = 'applink'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -371,9 +337,9 @@ HDR_MODE = 'hdr_mode'
 
 HDR mode of the file.
 
-**Since:** 26.0.0
+**Since:** 22
 
-<!--Device-PhotoKeys-HDR_MODE = 'hdr_mode'--><!--Device-PhotoKeys-HDR_MODE = 'hdr_mode'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -387,9 +353,9 @@ CLOUD_ID = 'cloud_id'
 
 Unique ID of the file on the cloud.
 
-**Since:** 26.0.0
+**Since:** 22
 
-<!--Device-PhotoKeys-CLOUD_ID = 'cloud_id'--><!--Device-PhotoKeys-CLOUD_ID = 'cloud_id'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -403,9 +369,9 @@ EXIST_COMPATIBLE_DUPLICATE = 'exist_compatible_duplicate'
 
 Whether a JPEG-compatible copy exists.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-PhotoKeys-EXIST_COMPATIBLE_DUPLICATE = 'exist_compatible_duplicate'--><!--Device-PhotoKeys-EXIST_COMPATIBLE_DUPLICATE = 'exist_compatible_duplicate'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -421,7 +387,7 @@ Display status of the composite image asset.
 
 **Since:** 23
 
-<!--Device-PhotoKeys-COMPOSITE_DISPLAY_STATUS = 'composite_display_status'--><!--Device-PhotoKeys-COMPOSITE_DISPLAY_STATUS = 'composite_display_status'-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -435,9 +401,9 @@ VIDEO_MODE = 'video_mode'
 
 Log mode of a video file.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-PhotoKeys-VIDEO_MODE = 'video_mode'--><!--Device-PhotoKeys-VIDEO_MODE = 'video_mode'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -451,9 +417,9 @@ ASSET_SOURCE_TYPE = 'file_source_type'
 
 Source type of assets, read only
 
-**Since:** 26.0.0
+**Since:** 22
 
-<!--Device-PhotoKeys-ASSET_SOURCE_TYPE = 'file_source_type'--><!--Device-PhotoKeys-ASSET_SOURCE_TYPE = 'file_source_type'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -467,9 +433,9 @@ FUSION_ASSET_STORAGE_PATH = 'storage_path'
 
 Storage path of fusion assets, read only
 
-**Since:** 26.0.0
+**Since:** 22
 
-<!--Device-PhotoKeys-FUSION_ASSET_STORAGE_PATH = 'storage_path'--><!--Device-PhotoKeys-FUSION_ASSET_STORAGE_PATH = 'storage_path'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -483,9 +449,9 @@ EDIT_DATA_EXIST = 'edit_data_exist'
 
 Edit data for the asset already exists.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-PhotoKeys-EDIT_DATA_EXIST = 'edit_data_exist'--><!--Device-PhotoKeys-EDIT_DATA_EXIST = 'edit_data_exist'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -501,9 +467,9 @@ Package name of a file.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PhotoKeys-PACKAGE_NAME = 'package_name'--><!--Device-PhotoKeys-PACKAGE_NAME = 'package_name'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -519,9 +485,9 @@ Image risk control
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PhotoKeys-PHOTO_RISK_STATUS = 'photo_risk_status'--><!--Device-PhotoKeys-PHOTO_RISK_STATUS = 'photo_risk_status'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -537,9 +503,9 @@ Year when an asset is added.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-PhotoKeys-DATE_ADDED_YEAR = 'date_added_year'--><!--Device-PhotoKeys-DATE_ADDED_YEAR = 'date_added_year'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -555,9 +521,9 @@ Month when an asset is added.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-PhotoKeys-DATE_ADDED_MONTH = 'date_added_month'--><!--Device-PhotoKeys-DATE_ADDED_MONTH = 'date_added_month'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -573,9 +539,9 @@ Date when an asset is added.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-PhotoKeys-DATE_ADDED_DAY = 'date_added_day'--><!--Device-PhotoKeys-DATE_ADDED_DAY = 'date_added_day'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -591,9 +557,9 @@ LIVEPHOTO_4D_STATUS = 'livephoto_4d_status'
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-PhotoKeys-LIVEPHOTO_4D_STATUS = 'livephoto_4d_status'--><!--Device-PhotoKeys-LIVEPHOTO_4D_STATUS = 'livephoto_4d_status'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -609,9 +575,9 @@ Unique id of asset.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-PhotoKeys-UNIQUE_ID = 'unique_id'--><!--Device-PhotoKeys-UNIQUE_ID = 'unique_id'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -627,9 +593,9 @@ hidden time of asset.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-PhotoKeys-HIDDEN_TIME = 'hidden_time'--><!--Device-PhotoKeys-HIDDEN_TIME = 'hidden_time'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -645,9 +611,9 @@ Status of thumbnail, read only
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-PhotoKeys-THUMB_STATUS = 'thumb_status'--><!--Device-PhotoKeys-THUMB_STATUS = 'thumb_status'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -663,9 +629,9 @@ Size of lcd file, read only
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-PhotoKeys-LCD_FILE_SIZE = 'lcd_file_size'--><!--Device-PhotoKeys-LCD_FILE_SIZE = 'lcd_file_size'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -681,9 +647,9 @@ File hidden state of filemanager.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-PhotoKeys-FILE_HIDDEN = 'file_hidden'--><!--Device-PhotoKeys-FILE_HIDDEN = 'file_hidden'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -699,11 +665,10 @@ Size of the asset attachment, in bytes.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-PhotoKeys-ATTACHMENT_SIZE = 'attachment_size'--><!--Device-PhotoKeys-ATTACHMENT_SIZE = 'attachment_size'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

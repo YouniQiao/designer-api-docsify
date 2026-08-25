@@ -2,9 +2,9 @@
 
 网络代理配置信息
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-connection-export interface HttpProxy--><!--Device-connection-export interface HttpProxy-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -24,11 +24,11 @@ exclusionList: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HttpProxy-exclusionList: Array<string>--><!--Device-HttpProxy-exclusionList: Array<string>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -42,11 +42,11 @@ host: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HttpProxy-host: string--><!--Device-HttpProxy-host: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -61,9 +61,9 @@ password?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-HttpProxy-password?: string--><!--Device-HttpProxy-password?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -75,13 +75,13 @@ port: int
 
 主机端口。取值范围[0,65535]。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HttpProxy-port: int--><!--Device-HttpProxy-port: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -96,9 +96,8 @@ username?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-HttpProxy-username?: string--><!--Device-HttpProxy-username?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
-

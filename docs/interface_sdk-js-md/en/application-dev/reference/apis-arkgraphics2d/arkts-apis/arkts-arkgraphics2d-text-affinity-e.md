@@ -2,9 +2,9 @@
 
 Enumerates the affinity modes.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-text-enum Affinity--><!--Device-text-enum Affinity-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -16,11 +16,11 @@ UPSTREAM = 0
 
 The position has affinity for the upstream side of the text position.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-Affinity-UPSTREAM = 0--><!--Device-Affinity-UPSTREAM = 0-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,11 +32,10 @@ DOWNSTREAM = 1
 
 The position has affinity for the downstream side of the text position.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-Affinity-DOWNSTREAM = 1--><!--Device-Affinity-DOWNSTREAM = 1-End-->
-
 **System capability:** SystemCapability.Graphics.Drawing
-

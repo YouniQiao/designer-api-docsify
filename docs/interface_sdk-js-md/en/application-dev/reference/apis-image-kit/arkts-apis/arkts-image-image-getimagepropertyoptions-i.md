@@ -4,11 +4,11 @@ Describes the image properties.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 11
 
 **Substitutes:** [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md)
-
-<!--Device-image-interface GetImagePropertyOptions--><!--Device-image-interface GetImagePropertyOptions-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -30,11 +30,11 @@ Default property value. The default value is null.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 11
 
 **Substitutes:** [defaultValue](arkts-image-image-imagepropertyoptions-i.md#defaultvalue)
-
-<!--Device-GetImagePropertyOptions-defaultValue?: string--><!--Device-GetImagePropertyOptions-defaultValue?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -50,11 +50,10 @@ Index of the image. The default value is **0**.
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
+**Deprecated since:** 11  
 
 **Substitutes:** [index](arkts-image-image-imagepropertyoptions-i.md#index)
 
-<!--Device-GetImagePropertyOptions-index?: number--><!--Device-GetImagePropertyOptions-index?: number-End-->
-
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
-

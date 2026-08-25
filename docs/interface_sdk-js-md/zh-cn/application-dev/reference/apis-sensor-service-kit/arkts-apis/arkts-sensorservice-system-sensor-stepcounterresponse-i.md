@@ -4,13 +4,13 @@
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** [PedometerResponse](arkts-sensorservice-sensor-pedometerresponse-i.md)
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
-
-<!--Device-unnamed-export interface StepCounterResponse--><!--Device-unnamed-export interface StepCounterResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -32,6 +32,8 @@ steps: number
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** [steps](arkts-sensorservice-sensor-pedometerresponse-i.md#steps)
@@ -40,7 +42,4 @@ steps: number
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-StepCounterResponse-steps: number--><!--Device-StepCounterResponse-steps: number-End-->
-
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
-

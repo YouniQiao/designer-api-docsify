@@ -2,9 +2,9 @@
 
 描述WLAN信道带宽。 @enum { int }
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-wifiManager-enum WifiChannelWidth--><!--Device-wifiManager-enum WifiChannelWidth-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -16,9 +16,9 @@ WIDTH_20MHZ = 0
 
 20MHz。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-WifiChannelWidth-WIDTH_20MHZ = 0--><!--Device-WifiChannelWidth-WIDTH_20MHZ = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -30,9 +30,9 @@ WIDTH_40MHZ = 1
 
 40MHz。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-WifiChannelWidth-WIDTH_40MHZ = 1--><!--Device-WifiChannelWidth-WIDTH_40MHZ = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -44,9 +44,9 @@ WIDTH_80MHZ = 2
 
 80MHz。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-WifiChannelWidth-WIDTH_80MHZ = 2--><!--Device-WifiChannelWidth-WIDTH_80MHZ = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -58,9 +58,9 @@ WIDTH_160MHZ = 3
 
 160MHz。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-WifiChannelWidth-WIDTH_160MHZ = 3--><!--Device-WifiChannelWidth-WIDTH_160MHZ = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -72,9 +72,9 @@ WIDTH_80MHZ_PLUS = 4
 
 80MHz以上。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-WifiChannelWidth-WIDTH_80MHZ_PLUS = 4--><!--Device-WifiChannelWidth-WIDTH_80MHZ_PLUS = 4-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -86,9 +86,8 @@ WIDTH_INVALID
 
 无效。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-WifiChannelWidth-WIDTH_INVALID--><!--Device-WifiChannelWidth-WIDTH_INVALID-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
-

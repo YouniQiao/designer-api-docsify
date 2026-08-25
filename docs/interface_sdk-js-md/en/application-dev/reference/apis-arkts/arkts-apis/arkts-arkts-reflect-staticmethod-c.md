@@ -6,9 +6,7 @@ Represents static method of class
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-reflect-class StaticMethod--><!--Device-reflect-class StaticMethod-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,25 +25,23 @@ Compare whether the current Static Method object is equal to another object.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StaticMethod-equals(other: StaticMethod): boolean--><!--Device-StaticMethod-equals(other: StaticMethod): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [StaticMethod](arkts-arkts-reflect-staticmethod-c.md) | Yes | Another Static Method object used for comparison. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [StaticMethod](arkts-arkts-reflect-staticmethod-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | If two objects point to the same method, return true; otherwise, return false. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## invoke
 
@@ -57,25 +53,23 @@ Invokes a method
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StaticMethod-invoke(args?: FixedArray<Any>): Any--><!--Device-StaticMethod-invoke(args?: FixedArray<Any>): Any-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| args | FixedArray&lt;Any&gt; | No | method parameters |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | FixedArray & lt;Any & gt; | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Any | method return value. `undefined` for `void`. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Any |
 
 ## isAsyn
 
@@ -87,19 +81,17 @@ Determine whether the static method is an asynchronous method.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StaticMethod-isAsyn(): boolean--><!--Device-StaticMethod-isAsyn(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | If it is an asynchronous method, return true; otherwise, return false. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isGetter
 
@@ -111,19 +103,17 @@ Determine whether the static method is a getter visitor for a property.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StaticMethod-isGetter(): boolean--><!--Device-StaticMethod-isGetter(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | If it is a getter visitor, return true; otherwise, return false. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isSetter
 
@@ -135,17 +125,14 @@ Determine whether the static method is a setter visitor for a property.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StaticMethod-isSetter(): boolean--><!--Device-StaticMethod-isSetter(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | If it is a setter visitor, return true; otherwise, return false. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

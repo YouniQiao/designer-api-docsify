@@ -6,7 +6,7 @@ The &lt;camera&gt; component provides preview and photographing functions.@exten
 
 **Since:** 6
 
-<!--Device-unnamed-export interface CameraElement--><!--Device-unnamed-export interface CameraElement-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,15 +20,14 @@ Take photos with specified parameters.
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-CameraElement-takePhoto(options: CameraTakePhotoOptions): void--><!--Device-CameraElement-takePhoto(options: CameraTakePhotoOptions): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [CameraTakePhotoOptions](arkts-arkui-viewmodel-cameratakephotooptions-i.md) | Yes | the parameters of camera. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [CameraTakePhotoOptions](arkts-arkui-viewmodel-cameratakephotooptions-i.md) | Yes |

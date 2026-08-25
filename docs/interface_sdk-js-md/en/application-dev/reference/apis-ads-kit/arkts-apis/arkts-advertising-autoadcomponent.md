@@ -1,4 +1,4 @@
-# @ohos.advertising.AutoAdComponent
+# @ohos.advertising.AutoAdComponent(Carousel Ad Component)
 
 ## Modules to Import
 
@@ -10,7 +10,6 @@ import { AutoAdComponent } from '@kit.AdsKit';
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [AutoAdComponent](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | The AutoAdComponent module provides the capability of displaying carousel ads. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AutoAdComponent(Carousel Ad Component)](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) |

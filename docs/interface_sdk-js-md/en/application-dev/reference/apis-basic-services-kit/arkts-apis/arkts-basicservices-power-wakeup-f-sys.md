@@ -14,12 +14,12 @@ function wakeup(detail: string): void
 
 Wakes up a device.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 19+: ohos.permission.POWER_MANAGER
-
-<!--Device-power-function wakeup(detail: string): void--><!--Device-power-function wakeup(detail: string): void-End-->
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
@@ -27,18 +27,18 @@ Wakes up a device.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| detail | string | Yes | Wakeup reason. The value must be a string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| detail | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; |
-| [4900101](../errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 19 and later |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [4900101](../errorcode-power.md#4900101-service-connection-failure) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 **Examples**
 
@@ -49,4 +49,3 @@ try {
     console.error('wakeup failed, err: ' + err);
 }
 ```
-

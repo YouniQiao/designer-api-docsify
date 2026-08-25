@@ -16,28 +16,28 @@ function setDate(date: Date, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md)
 
 **需要权限：** ohos.permission.SET_TIME
 
-<!--Device-systemTime-function setDate(date: Date, callback: AsyncCallback<void>): void--><!--Device-systemTime-function setDate(date: Date, callback: AsyncCallback<void>): void-End-->
-
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| date | Date | 是 | 目标日期。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| date | Date | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| -1 | Parameter check failed, permission denied, or system error. |
+| 错误码ID |
+| --- |
+| -1 |
 
 **示例**
 
@@ -86,35 +86,34 @@ function setDate(date: Date): Promise<void>
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md)
 
 **需要权限：** ohos.permission.SET_TIME
 
-<!--Device-systemTime-function setDate(date: Date): Promise<void>--><!--Device-systemTime-function setDate(date: Date): Promise<void>-End-->
-
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| date | Date | 是 | 目标日期。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| date | Date | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| -1 | Parameter check failed, permission denied, or system error. |
+| 错误码ID |
+| --- |
+| -1 |
 
 **示例**
 
 参见 [setDate](#setdate)
-

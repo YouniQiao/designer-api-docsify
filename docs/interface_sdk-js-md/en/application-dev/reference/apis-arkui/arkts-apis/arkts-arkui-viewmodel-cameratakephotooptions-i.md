@@ -4,7 +4,7 @@ CameraTakePhotoOptions@interface CameraTakePhotoOptions
 
 **Since:** 6
 
-<!--Device-unnamed-export interface CameraTakePhotoOptions--><!--Device-unnamed-export interface CameraTakePhotoOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,15 +16,19 @@ complete?: (result: Object) => void
 
 Callback function at the end of the interface invoking (executed both successfully and unsuccessfully).
 
-**Type:** (result: Object) =&gt; void
-
 **Since:** 6
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-CameraTakePhotoOptions-complete?: (result: Object) => void--><!--Device-CameraTakePhotoOptions-complete?: (result: Object) => void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| result | Object | Yes |
 
 ## fail
 
@@ -34,15 +38,41 @@ fail?: (result: Object) => void
 
 Callback function for interface invocation failure.
 
-**Type:** (result: Object) =&gt; void
-
 **Since:** 6
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-CameraTakePhotoOptions-fail?: (result: Object) => void--><!--Device-CameraTakePhotoOptions-fail?: (result: Object) => void-End-->
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| result | Object | Yes |
+
+## success
+
+```TypeScript
+success?: (result: Object) => void
+```
+
+Callback function for successful interface invocation.
+
+**Since:** 6
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| result | Object | Yes |
 
 ## quality
 
@@ -56,27 +86,8 @@ Picture quality.
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-CameraTakePhotoOptions-quality: "high" | "normal" | "low"--><!--Device-CameraTakePhotoOptions-quality: "high" | "normal" | "low"-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## success
-
-```TypeScript
-success?: (result: Object) => void
-```
-
-Callback function for successful interface invocation.
-
-**Type:** (result: Object) =&gt; void
-
-**Since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-CameraTakePhotoOptions-success?: (result: Object) => void--><!--Device-CameraTakePhotoOptions-success?: (result: Object) => void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

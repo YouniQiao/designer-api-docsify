@@ -2,9 +2,9 @@
 
 Manages configurations of the embedding model.@interface ModelConfig
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-intelligence-interface ModelConfig--><!--Device-intelligence-interface ModelConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
@@ -24,9 +24,9 @@ If NPU is used for accelerating, a local path is required for model caching.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-ModelConfig-cachePath?: string--><!--Device-ModelConfig-cachePath?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
@@ -40,9 +40,9 @@ Indicates whether NPU is used.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-ModelConfig-isNpuAvailable: boolean--><!--Device-ModelConfig-isNpuAvailable: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
@@ -58,9 +58,9 @@ Indicates cloud embedding model information.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ModelConfig-modelInfo?: CloudModelInfo--><!--Device-ModelConfig-modelInfo?: CloudModelInfo-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
@@ -76,9 +76,9 @@ Indicates cloud embedding model network policy.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ModelConfig-networkPolicy?: NetworkPolicy--><!--Device-ModelConfig-networkPolicy?: NetworkPolicy-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
@@ -92,9 +92,8 @@ Version of the model. The outputs of text or image embedding models with the sam
 
 **Type:** [ModelVersion](arkts-arkdata-intelligence-modelversion-e.md)
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-ModelConfig-version: ModelVersion--><!--Device-ModelConfig-version: ModelVersion-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
-

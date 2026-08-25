@@ -16,10 +16,10 @@ function injectEvent({ KeyEvent: KeyEvent }): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **需要权限：** 
 - API版本12+：ohos.permission.INJECT_INPUT_EVENT
-
-<!--Device-inputEventClient-function injectEvent({ KeyEvent: KeyEvent }): void--><!--Device-inputEventClient-function injectEvent({ KeyEvent: KeyEvent }): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -27,17 +27,17 @@ function injectEvent({ KeyEvent: KeyEvent }): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| { KeyEvent: KeyEvent } | 0.0 | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| { KeyEvent: KeyEvent } | 0.0 | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 12+ |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -123,9 +123,9 @@ function injectEvent(keyEvent: KeyEventInfo): void
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.INJECT_INPUT_EVENT
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-inputEventClient-function injectEvent(keyEvent: KeyEventInfo): void--><!--Device-inputEventClient-function injectEvent(keyEvent: KeyEventInfo): void-End-->
+**需要权限：** ohos.permission.INJECT_INPUT_EVENT
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -133,19 +133,18 @@ function injectEvent(keyEvent: KeyEventInfo): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| keyEvent | [KeyEventInfo](arkts-input-inputeventclient-keyeventinfo-i-sys.md) | 是 | 按键注入描述信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [keyEvent](arkts-input-inputeventclient-keyeventdata-i-sys.md) | [KeyEventInfo](arkts-input-inputeventclient-keyeventinfo-i-sys.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
 参见 [injectEvent](#injectevent)
-

@@ -9,38 +9,38 @@ import { eap } from '@kit.NetworkKit';
 ## regCustomEapHandler
 
 ```TypeScript
-function regCustomEapHandler(netType: int, eapCode: int, eapType: int, callback: Callback<EapData>): void
+function regCustomEapHandler(netType: number, eapCode: number, eapType: number, callback: Callback<EapData>): void
 ```
 
 Registers a custom handler of Extensible Authentication Protocol (EAP) packets for extensible authentication. This API returns the result asynchronously through a callback.The system will encapsulate the eligible EAP packets into the callback function for enterprise applications to retrieve.
 
 **Since:** 20
 
-**Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-eap-function regCustomEapHandler(netType: int, eapCode: int, eapType: int, callback: Callback<EapData>): void--><!--Device-eap-function regCustomEapHandler(netType: int, eapCode: int, eapType: int, callback: Callback<EapData>): void-End-->
+**Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| netType | int | Yes | Network type. The value can be **1** or **2**. <br>The value **1** indicates WLAN, and the value **2** indicates Ethernet. |
-| eapCode | int | Yes | EAP code. The value can be any of the following: <br>code=1 Request, code=2 Response, code=3 Success, code=4 Failure. |
-| eapType | int | Yes | EAP method. The value range is [0, 255]. <br>Common values include the following: eapType=1 Identity, eapType=2 Notification, eapType=3 NAK, eapType=4 MD5-Challenge, eapType=5 OTP (One-Time Password), eapType=6 GTC (Generic Token Card), eapType=13 EAP-TLS, eapType=21 EAP-TTLS, eapType=25 EAP-PEAP, eapType=254 Expanded Types, and eapType=255 Experimental use. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EapData](arkts-network-eap-eapdata-i.md)&gt; | Yes | Callback function, which returns the packet of the specified eapCode+ eapType. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [netType](arkts-network-policy-networkmatchrule-i-sys.md) | number | Yes |
+| eapCode | number | Yes |
+| eapType | number | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EapData](arkts-network-eap-eapdata-i.md)&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [33200006](../errorcode-net-eap.md#33200006-invalid-network-type) | Invalid net type |
-| [33200007](../errorcode-net-eap.md#33200007-invalid-eapcode-value) | Invalid eap code |
-| [33200008](../errorcode-net-eap.md#33200008-invalid-eaptype-value) | Invalid eap type |
-| [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) | netmanager stop |
-| [33200099](../errorcode-net-eap.md#33200099-internal-program-error) | internal error |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [33200006](../errorcode-net-eap.md#33200006-invalid-network-type) |
+| [33200007](../errorcode-net-eap.md#33200007-invalid-eapcode-value) |
+| [33200008](../errorcode-net-eap.md#33200008-invalid-eaptype-value) |
+| [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) |
+| [33200099](../errorcode-net-eap.md#33200099-internal-program-error) |
 
 **Examples**
 
@@ -60,4 +60,3 @@ try {
   console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
 }
 ```
-

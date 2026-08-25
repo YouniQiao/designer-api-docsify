@@ -4,7 +4,7 @@ Enumerates the OCSP digest algorithm.
 
 **Since:** 26.0.0
 
-<!--Device-cert-enum OcspDigest--><!--Device-cert-enum OcspDigest-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -18,11 +18,11 @@ SHA1 digest algorithm.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OcspDigest-SHA1 = 0--><!--Device-OcspDigest-SHA1 = 0-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -36,11 +36,11 @@ SHA224 digest algorithm.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OcspDigest-SHA224 = 1--><!--Device-OcspDigest-SHA224 = 1-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -54,11 +54,11 @@ SHA256 digest algorithm.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OcspDigest-SHA256 = 2--><!--Device-OcspDigest-SHA256 = 2-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -72,11 +72,11 @@ SHA384 digest algorithm.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OcspDigest-SHA384 = 3--><!--Device-OcspDigest-SHA384 = 3-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -90,11 +90,10 @@ SHA512 digest algorithm.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-OcspDigest-SHA512 = 4--><!--Device-OcspDigest-SHA512 = 4-End-->
-
 **System capability:** SystemCapability.Security.Cert
-

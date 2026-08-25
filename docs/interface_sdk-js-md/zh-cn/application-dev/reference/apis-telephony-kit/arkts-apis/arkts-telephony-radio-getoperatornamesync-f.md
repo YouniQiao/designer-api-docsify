@@ -14,23 +14,23 @@ function getOperatorNameSync(slotId: int): string
 
 获取运营商名称。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-radio-function getOperatorNameSync(slotId: int): string--><!--Device-radio-function getOperatorNameSync(slotId: int): string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回运营商名称。例如：中国移动。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -39,4 +39,3 @@ let slotId: number = 0;
 let operatorName: string = radio.getOperatorNameSync(slotId);
 console.info(`operator name is:` + operatorName);
 ```
-

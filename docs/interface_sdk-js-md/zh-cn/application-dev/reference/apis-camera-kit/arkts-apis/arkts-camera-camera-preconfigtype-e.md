@@ -2,9 +2,9 @@
 
 枚举，提供预配置的类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-camera-enum PreconfigType--><!--Device-camera-enum PreconfigType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -16,11 +16,11 @@ PRECONFIG_720P = 0
 
 720P预配置。
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PreconfigType-PRECONFIG_720P = 0--><!--Device-PreconfigType-PRECONFIG_720P = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -32,11 +32,11 @@ PRECONFIG_1080P = 1
 
 1080P预配置。
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PreconfigType-PRECONFIG_1080P = 1--><!--Device-PreconfigType-PRECONFIG_1080P = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -48,11 +48,11 @@ PRECONFIG_4K = 2
 
 4K预配置。
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PreconfigType-PRECONFIG_4K = 2--><!--Device-PreconfigType-PRECONFIG_4K = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -64,11 +64,11 @@ PRECONFIG_HIGH_QUALITY = 3
 
 高质量预配置。
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PreconfigType-PRECONFIG_HIGH_QUALITY = 3--><!--Device-PreconfigType-PRECONFIG_HIGH_QUALITY = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -82,11 +82,10 @@ PRECONFIG_HIGH_QUALITY_PHOTOSESSION_BT2020 = 4
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
-<!--Device-PreconfigType-PRECONFIG_HIGH_QUALITY_PHOTOSESSION_BT2020 = 4--><!--Device-PreconfigType-PRECONFIG_HIGH_QUALITY_PHOTOSESSION_BT2020 = 4-End-->
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
-

@@ -13,25 +13,25 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 export function id(id: string): On
 ```
 
-Specifies the id of the target Component.
+Specifies the ID attribute of the target component.
 
 **Since:** 23
 
-<!--Device-ON-export function id(id: string): On--><!--Device-ON-export function id(id: string): On-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| id | string | Yes | the id value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [id](#id) | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | this { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **Examples**
 
@@ -63,28 +63,27 @@ let by: By = BY.id(123); // Use the static constructor BY to create a By object 
 export function id(id: string, pattern: MatchPattern): On
 ```
 
-Specifies the id of the target Component.
+Specifies the ID attribute of the target component.
 
 **Since:** 23
 
-<!--Device-ON-export function id(id: string, pattern: MatchPattern): On--><!--Device-ON-export function id(id: string, pattern: MatchPattern): On-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| id | string | Yes | the id value. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Yes | the [MatchPattern](arkts-test-uitest-matchpattern-e.md) of the text value. <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [id](#id) | string | Yes |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | this { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **Examples**
 
 See [id](#id)
-

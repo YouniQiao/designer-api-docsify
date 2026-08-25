@@ -4,7 +4,7 @@
 
 **起始版本：** 10
 
-<!--Device-unnamed-declare interface RandomAccessFile--><!--Device-unnamed-declare interface RandomAccessFile-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -26,20 +26,20 @@ close(): void
 
 **起始版本：** 10
 
-<!--Device-RandomAccessFile-close(): void--><!--Device-RandomAccessFile-close(): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900025 | No space left on device |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900025 |
+| 13900041 |
+| 13900042 |
 
 **示例**
 
@@ -193,26 +193,26 @@ getReadStream(): ReadStream
 
 **起始版本：** 12
 
-<!--Device-RandomAccessFile-getReadStream(): ReadStream--><!--Device-RandomAccessFile-getReadStream(): ReadStream-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | 文件可读流。 |
+| 类型 |
+| --- |
+| [ReadStream](arkts-corefile-file-fs-readstream-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900020 | Invalid argument |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900020 |
+| 13900042 |
 
 **示例**
 
@@ -234,26 +234,26 @@ getWriteStream(): WriteStream
 
 **起始版本：** 12
 
-<!--Device-RandomAccessFile-getWriteStream(): WriteStream--><!--Device-RandomAccessFile-getWriteStream(): WriteStream-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [WriteStream](arkts-corefile-file-fs-writestream-c.md) | 文件可写流。 |
+| 类型 |
+| --- |
+| [WriteStream](arkts-corefile-file-fs-writestream-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900020 | Invalid argument |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900020 |
+| 13900042 |
 
 **示例**
 
@@ -278,37 +278,37 @@ read(
 
 **起始版本：** 10
 
-<!--Device-RandomAccessFile-read(    buffer: ArrayBuffer,    options?: ReadOptions  ): Promise<number>--><!--Device-RandomAccessFile-read(    buffer: ArrayBuffer,    options?: ReadOptions  ): Promise<number>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 否 | 支持如下选项：<br/>- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认为缓冲区长度。<br/>- offset， number类型，表示期望读取文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始读。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer | 是 |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回读取的结果，单位为Byte。 |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
-| 13900042 | Unknown error |
-| 13900044 | Network is unreachable<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900019 |
+| 13900020 |
+| 13900034 |
+| 13900042 |
+| 13900044 |
 
 **示例**
 
@@ -775,30 +775,30 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
-<!--Device-RandomAccessFile-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void--><!--Device-RandomAccessFile-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回实际读取的数据长度，单位为Byte。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900019 |
+| 13900020 |
+| 13900034 |
+| 13900042 |
 
 **示例**
 
@@ -818,31 +818,31 @@ read(
 
 **起始版本：** 10
 
-<!--Device-RandomAccessFile-read(    buffer: ArrayBuffer,    options: ReadOptions,    callback: AsyncCallback<number>  ): void--><!--Device-RandomAccessFile-read(    buffer: ArrayBuffer,    options: ReadOptions,    callback: AsyncCallback<number>  ): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 是 | 支持如下选项：<br/>- length，number类型，表示读取数据的长度，单位为Byte。可选，默认为缓冲区长度。<br/>- offset，number 类型，表示读取文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从filePointer开始读。<br>**起始版本：** 11 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回实际读取的数据长度，单位为Byte。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer | 是 |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900019 |
+| 13900020 |
+| 13900034 |
+| 13900042 |
 
 **示例**
 
@@ -861,37 +861,37 @@ readSync(
 
 **起始版本：** 10
 
-<!--Device-RandomAccessFile-readSync(    buffer: ArrayBuffer,    options?: ReadOptions  ): number--><!--Device-RandomAccessFile-readSync(    buffer: ArrayBuffer,    options?: ReadOptions  ): number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 否 | 支持如下选项：<br/>- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset， number类型，表示期望读取文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始读。<br/><br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer | 是 |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 实际读取的长度，单位为Byte。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
-| 13900042 | Unknown error |
-| 13900044 | Network is unreachable<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900019 |
+| 13900020 |
+| 13900034 |
+| 13900042 |
+| 13900044 |
 
 **示例**
 
@@ -953,25 +953,25 @@ setFilePointer(filePointer: number): void
 
 **起始版本：** 10
 
-<!--Device-RandomAccessFile-setFilePointer(filePointer: number): void--><!--Device-RandomAccessFile-setFilePointer(filePointer: number): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| filePointer | number | 是 | RandomAccessFile对象的偏移指针，单位为Byte。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [filePointer](#filepointer) | number | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900020 | Invalid argument |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900020 |
+| 13900042 |
 
 **示例**
 
@@ -995,39 +995,39 @@ write(
 
 **起始版本：** 10
 
-<!--Device-RandomAccessFile-write(    buffer: ArrayBuffer | string,    options?: WriteOptions  ): Promise<number>--><!--Device-RandomAccessFile-write(    buffer: ArrayBuffer | string,    options?: WriteOptions  ): Promise<number>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 否 | 支持如下选项：<br/>- length，number类型，表示期望写入数据的长度，单位为Byte。默认缓冲区长度。<br/>- offset，number类 型，表示期望写入文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始写。<br/>- encoding，string类型，当数据是string 类型时有效，表示数据的编码方式，默认'utf-8'。仅支持'utf-8'。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer \| string | 是 |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回实际写入的长度，单位为Byte。 |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900020 | Invalid argument |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900034 | Operation would block |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900001 |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900020 |
+| 13900024 |
+| 13900025 |
+| 13900034 |
+| 13900041 |
+| 13900042 |
 
 **示例**
 
@@ -1476,33 +1476,33 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
-<!--Device-RandomAccessFile-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-RandomAccessFile-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回实际写入数据长度，单位为Byte。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer \| string | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900020 | Invalid argument |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900034 | Operation would block |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900001 |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900020 |
+| 13900024 |
+| 13900025 |
+| 13900034 |
+| 13900041 |
+| 13900042 |
 
 **示例**
 
@@ -1522,34 +1522,34 @@ write(
 
 **起始版本：** 10
 
-<!--Device-RandomAccessFile-write(    buffer: ArrayBuffer | string,    options: WriteOptions,    callback: AsyncCallback<number>  ): void--><!--Device-RandomAccessFile-write(    buffer: ArrayBuffer | string,    options: WriteOptions,    callback: AsyncCallback<number>  ): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 是 | 支持如下选项：<br/>- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认为缓冲区长度。<br/>- offset， number类型，表示期望写入文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始写。<br/>- encoding，string类型，当数据 是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持'utf-8'。<br>**起始版本：** 11 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回实际写入数据长度，单位为Byte。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer \| string | 是 |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900020 | Invalid argument |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900034 | Operation would block |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900001 |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900020 |
+| 13900024 |
+| 13900025 |
+| 13900034 |
+| 13900041 |
+| 13900042 |
 
 **示例**
 
@@ -1568,39 +1568,39 @@ writeSync(
 
 **起始版本：** 10
 
-<!--Device-RandomAccessFile-writeSync(    buffer: ArrayBuffer | string,    options?: WriteOptions  ): number--><!--Device-RandomAccessFile-writeSync(    buffer: ArrayBuffer | string,    options?: WriteOptions  ): number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 否 | 支持如下选项：<br/>- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset， number类型，表示期望写入文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始写。<br/>- encoding，string类型，当数据 是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持'utf-8'。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer \| string | 是 |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 实际写入的长度，单位为Byte。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900020 | Invalid argument |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900034 | Operation would block |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900001 |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900020 |
+| 13900024 |
+| 13900025 |
+| 13900034 |
+| 13900041 |
+| 13900042 |
 
 **示例**
 
@@ -1653,7 +1653,7 @@ readonly fd: number
 
 **起始版本：** 10
 
-<!--Device-RandomAccessFile-readonly fd: number--><!--Device-RandomAccessFile-readonly fd: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -1669,7 +1669,6 @@ RandomAccessFile对象的偏移指针，表示当前读写位置，单位为Byte
 
 **起始版本：** 10
 
-<!--Device-RandomAccessFile-readonly filePointer: number--><!--Device-RandomAccessFile-readonly filePointer: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
-

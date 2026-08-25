@@ -4,7 +4,7 @@ Information about the contact synchronization progress.Contains the sync ID, cur
 
 **Since:** 26.0.0
 
-<!--Device-contact-interface ContactSyncProgress--><!--Device-contact-interface ContactSyncProgress-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -17,7 +17,7 @@ import { contact } from '@kit.ContactsKit';
 ## currentBatch
 
 ```TypeScript
-currentBatch: int
+currentBatch: number
 ```
 
 Indicates the identifier of the current batch of contacts to be synchronized.The range of values is from 1 to totalBatches.
@@ -26,18 +26,18 @@ Indicates the identifier of the current batch of contacts to be synchronized.The
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ContactSyncProgress-currentBatch: int--><!--Device-ContactSyncProgress-currentBatch: int-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## syncId
 
 ```TypeScript
-syncId: int
+syncId: number
 ```
 
 Indicates the sync identifier used for synchronizing all contacts.The value should start from 0.
@@ -46,18 +46,18 @@ Indicates the sync identifier used for synchronizing all contacts.The value shou
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ContactSyncProgress-syncId: int--><!--Device-ContactSyncProgress-syncId: int-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## totalBatches
 
 ```TypeScript
-totalBatches: int
+totalBatches: number
 ```
 
 Indicates the total number of batches of contacts to be synchronized.
@@ -66,11 +66,10 @@ Indicates the total number of batches of contacts to be synchronized.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ContactSyncProgress-totalBatches: int--><!--Device-ContactSyncProgress-totalBatches: int-End-->
-
 **System capability:** SystemCapability.Applications.ContactsData
-

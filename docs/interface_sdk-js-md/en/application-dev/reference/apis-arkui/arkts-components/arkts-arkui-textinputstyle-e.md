@@ -4,7 +4,7 @@ Text input style.
 
 **Since:** 9
 
-<!--Device-unnamed-declare enum TextInputStyle--><!--Device-unnamed-declare enum TextInputStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ Default style. The caret width is fixed at 1.5 vp, and the caret height is subje
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-TextInputStyle-Default--><!--Device-TextInputStyle-Default-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,8 @@ Inline style. The background height of the selected text is the same as the heig
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-TextInputStyle-Inline--><!--Device-TextInputStyle-Inline-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

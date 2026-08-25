@@ -4,9 +4,9 @@
 
 **继承/实现关系：** ShaderMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export interface ShaderMaterial--><!--Device-unnamed-export interface ShaderMaterial-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -20,9 +20,8 @@ colorShader?: Shader
 
 **类型：** [Shader](arkts-arkgraphics3d-sceneresources-shader-i.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ShaderMaterial-colorShader?: Shader--><!--Device-ShaderMaterial-colorShader?: Shader-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

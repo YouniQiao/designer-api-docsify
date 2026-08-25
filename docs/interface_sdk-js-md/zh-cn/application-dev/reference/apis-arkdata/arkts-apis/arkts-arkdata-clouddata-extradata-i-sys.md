@@ -2,9 +2,9 @@
 
 透传数据，携带通知数据变更所需要的信息。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-cloudData-interface ExtraData--><!--Device-cloudData-interface ExtraData-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -26,9 +26,9 @@ eventId: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ExtraData-eventId: string--><!--Device-ExtraData-eventId: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -44,9 +44,9 @@ extraData: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ExtraData-extraData: string--><!--Device-ExtraData-extraData: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -66,4 +66,3 @@ let extraData: cloudData.ExtraData = {
   extraData: '{"data": "{"accountId": "aaa", "bundleName": "com.bbb.xxx", "containerName": "alias", "databaseScopes": ["private", "shared"], "recordTypes": ["xxx", "yyy", "zzz"]}"}',
 }
 ```
-

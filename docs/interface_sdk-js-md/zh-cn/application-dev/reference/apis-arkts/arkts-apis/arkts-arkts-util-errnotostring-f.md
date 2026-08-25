@@ -16,23 +16,23 @@ function errnoToString(errno: number): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
-<!--Device-util-function errnoToString(errno: number): string--><!--Device-util-function errnoToString(errno: number): string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| errno | number | 是 | 系统发生错误产生的错误码。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [errno](../../apis-universal-keystore-kit/arkts-apis/arkts-universalkeystore-huksexternalcrypto-huksexternalerrorinfo-i.md) | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 错误码对应的详细信息，包含可读的错误描述文本，便于开发者定位问题。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -42,4 +42,3 @@ let result = util.errnoToString(errnum);
 console.info("result = " + result);
 // 输出结果：result = operation not permitted
 ```
-

@@ -2,9 +2,9 @@
 
 Describes the settings for BLE advertising.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ble-interface AdvertiseSetting--><!--Device-ble-interface AdvertiseSetting-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -24,13 +24,13 @@ Indicates whether the BLE is connectable, default is {@code true}
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AdvertiseSetting-connectable?: boolean--><!--Device-AdvertiseSetting-connectable?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -42,15 +42,15 @@ interval?: int
 
 Minimum slot value for the advertising interval, which is {@code 32} (20 ms) Maximum slot value for the advertising interval, which is {@code 16777215} (10485.759375s) Default slot value for the advertising interval, which is {@code 1600} (1s)
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AdvertiseSetting-interval?: int--><!--Device-AdvertiseSetting-interval?: int-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -66,11 +66,11 @@ Indicates whether the advertisement is extended, default is {@code false}
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-AdvertiseSetting-isExtended?: boolean--><!--Device-AdvertiseSetting-isExtended?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -82,15 +82,14 @@ txPower?: int
 
 Minimum transmission power level for advertising, which is {@code -127} Maximum transmission power level for advertising, which is {@code 1} Default transmission power level for advertising, which is {@code -7}
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AdvertiseSetting-txPower?: int--><!--Device-AdvertiseSetting-txPower?: int-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

@@ -2,9 +2,9 @@
 
 事件ID。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-update-export enum EventId--><!--Device-update-export enum EventId-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -18,9 +18,9 @@ EVENT_TASK_BASE = EventClassify.TASK
 
 任务事件。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-EventId-EVENT_TASK_BASE = EventClassify.TASK--><!--Device-EventId-EVENT_TASK_BASE = EventClassify.TASK-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -34,9 +34,9 @@ EVENT_TASK_RECEIVE = 0x01000001
 
 收到任务。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-EventId-EVENT_TASK_RECEIVE = 0x01000001--><!--Device-EventId-EVENT_TASK_RECEIVE = 0x01000001-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -50,9 +50,9 @@ EVENT_TASK_CANCEL = 0x01000002
 
 取消任务。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-EventId-EVENT_TASK_CANCEL = 0x01000002--><!--Device-EventId-EVENT_TASK_CANCEL = 0x01000002-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -66,9 +66,9 @@ EVENT_DOWNLOAD_WAIT = 0x01000003
 
 待下载。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-EventId-EVENT_DOWNLOAD_WAIT = 0x01000003--><!--Device-EventId-EVENT_DOWNLOAD_WAIT = 0x01000003-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -82,9 +82,9 @@ EVENT_DOWNLOAD_START = 0x01000004
 
 开始下载。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-EventId-EVENT_DOWNLOAD_START = 0x01000004--><!--Device-EventId-EVENT_DOWNLOAD_START = 0x01000004-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -98,9 +98,9 @@ EVENT_DOWNLOAD_UPDATE = 0x01000005
 
 下载进度更新。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-EventId-EVENT_DOWNLOAD_UPDATE = 0x01000005--><!--Device-EventId-EVENT_DOWNLOAD_UPDATE = 0x01000005-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -114,9 +114,9 @@ EVENT_DOWNLOAD_PAUSE = 0x01000006
 
 下载暂停。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-EventId-EVENT_DOWNLOAD_PAUSE = 0x01000006--><!--Device-EventId-EVENT_DOWNLOAD_PAUSE = 0x01000006-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -130,9 +130,9 @@ EVENT_DOWNLOAD_RESUME = 0x01000007
 
 恢复下载。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-EventId-EVENT_DOWNLOAD_RESUME = 0x01000007--><!--Device-EventId-EVENT_DOWNLOAD_RESUME = 0x01000007-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -146,9 +146,9 @@ EVENT_DOWNLOAD_SUCCESS = 0x01000008
 
 下载成功。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-EventId-EVENT_DOWNLOAD_SUCCESS = 0x01000008--><!--Device-EventId-EVENT_DOWNLOAD_SUCCESS = 0x01000008-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -162,9 +162,9 @@ EVENT_DOWNLOAD_FAIL = 0x01000009
 
 下载失败。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-EventId-EVENT_DOWNLOAD_FAIL = 0x01000009--><!--Device-EventId-EVENT_DOWNLOAD_FAIL = 0x01000009-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -178,9 +178,9 @@ EVENT_UPGRADE_WAIT = 0x0100000a
 
 待升级。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-EventId-EVENT_UPGRADE_WAIT = 0x0100000a--><!--Device-EventId-EVENT_UPGRADE_WAIT = 0x0100000a-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -194,9 +194,9 @@ EVENT_UPGRADE_START = 0x0100000b
 
 开始升级。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-EventId-EVENT_UPGRADE_START = 0x0100000b--><!--Device-EventId-EVENT_UPGRADE_START = 0x0100000b-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -210,9 +210,9 @@ EVENT_UPGRADE_UPDATE = 0x0100000c
 
 升级中。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-EventId-EVENT_UPGRADE_UPDATE = 0x0100000c--><!--Device-EventId-EVENT_UPGRADE_UPDATE = 0x0100000c-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -226,9 +226,9 @@ EVENT_APPLY_WAIT = 0x0100000d
 
 待生效。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-EventId-EVENT_APPLY_WAIT = 0x0100000d--><!--Device-EventId-EVENT_APPLY_WAIT = 0x0100000d-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -242,9 +242,9 @@ EVENT_APPLY_START = 0x0100000e
 
 开始生效。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-EventId-EVENT_APPLY_START = 0x0100000e--><!--Device-EventId-EVENT_APPLY_START = 0x0100000e-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -258,9 +258,9 @@ EVENT_UPGRADE_SUCCESS = 0x0100000f
 
 升级成功。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-EventId-EVENT_UPGRADE_SUCCESS = 0x0100000f--><!--Device-EventId-EVENT_UPGRADE_SUCCESS = 0x0100000f-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -274,11 +274,10 @@ EVENT_UPGRADE_FAIL = 0x01000010
 
 升级失败。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-EventId-EVENT_UPGRADE_FAIL = 0x01000010--><!--Device-EventId-EVENT_UPGRADE_FAIL = 0x01000010-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
-

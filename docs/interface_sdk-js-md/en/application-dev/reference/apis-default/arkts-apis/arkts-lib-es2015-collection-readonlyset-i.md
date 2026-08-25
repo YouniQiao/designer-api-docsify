@@ -1,8 +1,6 @@
 # ReadonlySet
 
-**Since:** -1
-
-<!--Device-unnamed-interface ReadonlySet--><!--Device-unnamed-interface ReadonlySet-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -15,16 +13,14 @@
 forEach(callbackfn: (value: T, value2: T, set: ReadonlySet<T>) => void, thisArg?: any): void
 ```
 
-**Since:** -1
-
-<!--Device-ReadonlySet-forEach(callbackfn: (value: T, value2: T, set: ReadonlySet<T>) => void, thisArg?: any): void--><!--Device-ReadonlySet-forEach(callbackfn: (value: T, value2: T, set: ReadonlySet<T>) => void, thisArg?: any): void-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (value: T, value2: T, set: ReadonlySet&lt;T&gt;) =&gt; void | Yes |  |
-| thisArg | any | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (value: T, value2: T, set: ReadonlySet & lt;T & gt;) = & gt; void | Yes |
+| thisArg | any | No |
 
 ## has
 
@@ -32,20 +28,18 @@ forEach(callbackfn: (value: T, value2: T, set: ReadonlySet<T>) => void, thisArg?
 has(value: T): boolean
 ```
 
-**Since:** -1
-
-<!--Device-ReadonlySet-has(value: T): boolean--><!--Device-ReadonlySet-has(value: T): boolean-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | T | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## size
 
 ```TypeScript
@@ -54,7 +48,4 @@ readonly size: number
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-ReadonlySet-readonly size: number--><!--Device-ReadonlySet-readonly size: number-End-->
-
+**ArkTS mode:** 

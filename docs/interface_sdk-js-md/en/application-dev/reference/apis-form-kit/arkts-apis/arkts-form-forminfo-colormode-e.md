@@ -4,9 +4,9 @@ Color mode.
 
 **Since:** 9
 
-**Deprecated since:** 20
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-formInfo-enum ColorMode--><!--Device-formInfo-enum ColorMode-End-->
+**Deprecated since:** 20
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -20,11 +20,11 @@ Automatic mode.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ColorMode-MODE_AUTO = -1--><!--Device-ColorMode-MODE_AUTO = -1-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -38,11 +38,11 @@ Dark mode.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ColorMode-MODE_DARK = 0--><!--Device-ColorMode-MODE_DARK = 0-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -56,11 +56,10 @@ Light mode.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ColorMode-MODE_LIGHT = 1--><!--Device-ColorMode-MODE_LIGHT = 1-End-->
-
 **System capability:** SystemCapability.Ability.Form
-

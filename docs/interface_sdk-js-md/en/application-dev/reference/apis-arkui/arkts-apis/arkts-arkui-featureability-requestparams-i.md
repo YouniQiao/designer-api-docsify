@@ -2,9 +2,9 @@
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-unnamed-export interface RequestParams--><!--Device-unnamed-export interface RequestParams-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -20,9 +20,9 @@ Ability name, which is case sensitive.
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-RequestParams-abilityName?: string--><!--Device-RequestParams-abilityName?: string-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -38,9 +38,9 @@ Without specifying the bundle name and ability name, you can start the applicati
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-RequestParams-action?: string--><!--Device-RequestParams-action?: string-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -56,9 +56,9 @@ The name of the bundle to start. It should be used with abilityname and case sen
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-RequestParams-bundleName?: string--><!--Device-RequestParams-bundleName?: string-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -74,9 +74,9 @@ Data sent to the ability which need to be serializable.
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-RequestParams-data?: object--><!--Device-RequestParams-data?: object-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -92,9 +92,9 @@ If more than one FA meets the conditions, the user can select the device from th
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-RequestParams-deviceType?: number--><!--Device-RequestParams-deviceType?: number-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -110,9 +110,9 @@ The list of entities to which the FA to be called. If it is not filled in, all e
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-RequestParams-entities?: Array<string>--><!--Device-RequestParams-entities?: Array<string>-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -128,9 +128,9 @@ Configuration switch when start FA.
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-RequestParams-flag?: number--><!--Device-RequestParams-flag?: number-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -146,9 +146,8 @@ Specify the url of the page which the FA to be called. Use home page directly by
 
 **Since:** 5
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
+
 **Deprecated since:** 8
 
-<!--Device-RequestParams-url?: string--><!--Device-RequestParams-url?: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
-

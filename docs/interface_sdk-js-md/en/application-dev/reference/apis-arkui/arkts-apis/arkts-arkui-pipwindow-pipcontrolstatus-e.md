@@ -2,9 +2,9 @@
 
 Enumerates the statuses of components displayed on the PiP controller.
 
-**Since:** 26.0.0
+**Since:** 12
 
-<!--Device-PiPWindow-enum PiPControlStatus--><!--Device-PiPWindow-enum PiPControlStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -16,11 +16,11 @@ PLAY = 1
 
 Play.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-PiPControlStatus-PLAY = 1--><!--Device-PiPControlStatus-PLAY = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -32,11 +32,11 @@ PAUSE = 0
 
 Pause.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-PiPControlStatus-PAUSE = 0--><!--Device-PiPControlStatus-PAUSE = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -48,11 +48,11 @@ OPEN = 1
 
 Open.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-PiPControlStatus-OPEN = 1--><!--Device-PiPControlStatus-OPEN = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -64,11 +64,10 @@ CLOSE = 0
 
 Close.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-PiPControlStatus-CLOSE = 0--><!--Device-PiPControlStatus-CLOSE = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Window.SessionManager
-

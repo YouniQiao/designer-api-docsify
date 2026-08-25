@@ -7,11 +7,11 @@
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [BundleInfo](#bundleinfo)
-
-<!--Device-unnamed-export interface BundleInfo--><!--Device-unnamed-export interface BundleInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -29,11 +29,11 @@ Ability configuration information.The value is obtained by passing in GET_BUNDLE
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** abilitiesInfo
-
-<!--Device-BundleInfo-readonly abilityInfos: Array<AbilityInfo>--><!--Device-BundleInfo-readonly abilityInfos: Array<AbilityInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -51,11 +51,11 @@ ID of the application to which the bundle belongs.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** appId
-
-<!--Device-BundleInfo-readonly appId: string--><!--Device-BundleInfo-readonly appId: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -73,11 +73,11 @@ Application configuration information.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** appInfo
-
-<!--Device-BundleInfo-readonly appInfo: ApplicationInfo--><!--Device-BundleInfo-readonly appInfo: ApplicationInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -95,9 +95,9 @@ Earliest SDK version required for running the bundle.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-BundleInfo-readonly compatibleVersion: number--><!--Device-BundleInfo-readonly compatibleVersion: number-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -115,9 +115,9 @@ CPU and ABI information of the bundle.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-BundleInfo-readonly cpuAbi: string--><!--Device-BundleInfo-readonly cpuAbi: string-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -135,9 +135,9 @@ Whether installation-free is supported for the entry module. **true** if support
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-BundleInfo-readonly entryInstallationFree: boolean--><!--Device-BundleInfo-readonly entryInstallationFree: boolean-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -155,9 +155,9 @@ Name of the entry module.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-BundleInfo-readonly entryModuleName: string--><!--Device-BundleInfo-readonly entryModuleName: string-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -175,11 +175,11 @@ Module configuration information.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** hapModulesInfo
-
-<!--Device-BundleInfo-readonly hapModuleInfos: Array<HapModuleInfo>--><!--Device-BundleInfo-readonly hapModuleInfos: Array<HapModuleInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -197,11 +197,11 @@ Time when the HAP file was installed.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** installTime
-
-<!--Device-BundleInfo-readonly installTime: number--><!--Device-BundleInfo-readonly installTime: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -219,9 +219,9 @@ Whether the native libraries in the bundle are compressed. **true** if compresse
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-BundleInfo-readonly isCompressNativeLibs: boolean--><!--Device-BundleInfo-readonly isCompressNativeLibs: boolean-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -239,9 +239,9 @@ Whether the application can be installed in silent mode.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-BundleInfo-readonly isSilentInstallation: string--><!--Device-BundleInfo-readonly isSilentInstallation: string-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -259,11 +259,11 @@ Earliest version compatible with the bundle in the distributed scenario.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** minCompatibleVersionCode
-
-<!--Device-BundleInfo-readonly minCompatibleVersionCode: number--><!--Device-BundleInfo-readonly minCompatibleVersionCode: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -281,11 +281,11 @@ Bundle name.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** name
-
-<!--Device-BundleInfo-readonly name: string--><!--Device-BundleInfo-readonly name: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -303,11 +303,11 @@ Detailed information of the permissions to request from the system.The value is 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** reqPermissionDetails
-
-<!--Device-BundleInfo-readonly reqPermissionDetails: Array<ReqPermissionDetail>--><!--Device-BundleInfo-readonly reqPermissionDetails: Array<ReqPermissionDetail>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -325,11 +325,11 @@ Permissions to request from the system for running the application.The value is 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** permissions
-
-<!--Device-BundleInfo-readonly reqPermissions: Array<string>--><!--Device-BundleInfo-readonly reqPermissions: Array<string>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -347,11 +347,11 @@ Permission grant state. The value **0** means that the request is successful, an
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** permissionGrantStates
-
-<!--Device-BundleInfo-readonly reqPermissionStates: Array<number>--><!--Device-BundleInfo-readonly reqPermissionStates: Array<number>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -369,11 +369,11 @@ Latest SDK version required for running the bundle.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** targetVersion
-
-<!--Device-BundleInfo-readonly targetVersion: number--><!--Device-BundleInfo-readonly targetVersion: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -391,11 +391,11 @@ Bundle type.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** bundleType
-
-<!--Device-BundleInfo-readonly type: string--><!--Device-BundleInfo-readonly type: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -413,11 +413,11 @@ UID of the application to which the bundle belongs.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** uid
-
-<!--Device-BundleInfo-readonly uid: number--><!--Device-BundleInfo-readonly uid: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -435,11 +435,11 @@ Time when the HAP file was updated.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** updateTime
-
-<!--Device-BundleInfo-readonly updateTime: number--><!--Device-BundleInfo-readonly updateTime: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -457,11 +457,11 @@ Vendor of the bundle.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** vendor
-
-<!--Device-BundleInfo-readonly vendor: string--><!--Device-BundleInfo-readonly vendor: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -479,11 +479,11 @@ Version number of the bundle.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** versionCode
-
-<!--Device-BundleInfo-readonly versionCode: number--><!--Device-BundleInfo-readonly versionCode: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -501,11 +501,10 @@ Version description of the bundle.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** versionName
 
-<!--Device-BundleInfo-readonly versionName: string--><!--Device-BundleInfo-readonly versionName: string-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework
-

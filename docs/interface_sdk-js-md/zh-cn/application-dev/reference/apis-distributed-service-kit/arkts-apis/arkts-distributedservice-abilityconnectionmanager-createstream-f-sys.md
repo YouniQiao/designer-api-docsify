@@ -14,11 +14,11 @@ function createStream(sessionId: int, param: StreamParam): Promise<int>
 
 Creating a Stream.
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-abilityConnectionManager-function createStream(sessionId: int, param: StreamParam): Promise<int>--><!--Device-abilityConnectionManager-function createStream(sessionId: int, param: StreamParam): Promise<int>-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -26,26 +26,26 @@ Creating a Stream.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sessionId | int | 是 | Ability connection Session id. |
-| param | [StreamParam](arkts-distributedservice-abilityconnectionmanager-streamparam-i-sys.md) | 是 | Transport Stream Parameters |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sessionId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| param | [StreamParam](arkts-distributedservice-abilityconnectionmanager-streamparam-i-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | The promise returned by the function, contain the ID of a transport stream. |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [32300001](../errorcode-device-manager.md#32300001-重复创建传输流) | Only one stream can be created for the current session. |
-| [32300003](../errorcode-device-manager.md#32300003-比特率不支持) | Bitrate not supported. |
-| [32300004](../errorcode-device-manager.md#32300004-色彩空间不支持) | Color space not supported. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [32300001](../errorcode-device-manager.md#32300001-重复创建传输流) |
+| [32300003](../errorcode-device-manager.md#32300003-比特率不支持) |
+| [32300004](../errorcode-device-manager.md#32300004-色彩空间不支持) |
 
 **示例**
 
@@ -72,4 +72,3 @@ abilityConnectionManager.createStream(sessionId ,{name: 'receive', role: 0}).the
   abilityConnectionManager.startStream(streamId);
 })
 ```
-

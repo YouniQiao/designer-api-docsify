@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-Intl-export interface NumberFormatOptions--><!--Device-Intl-export interface NumberFormatOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,11 +25,9 @@ compactDisplay?: 'short' | 'long'
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormatOptions-compactDisplay?: 'short' | 'long'--><!--Device-NumberFormatOptions-compactDisplay?: 'short' | 'long'-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -47,11 +43,9 @@ currency?: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormatOptions-currency?: string--><!--Device-NumberFormatOptions-currency?: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -67,11 +61,9 @@ currencyDisplay?: 'code' | 'symbol' | 'narrowSymbol' | 'name'
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormatOptions-currencyDisplay?: 'code' | 'symbol' | 'narrowSymbol' | 'name'--><!--Device-NumberFormatOptions-currencyDisplay?: 'code' | 'symbol' | 'narrowSymbol' | 'name'-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -87,11 +79,9 @@ currencySign?: 'standard' | 'accounting'
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormatOptions-currencySign?: 'standard' | 'accounting'--><!--Device-NumberFormatOptions-currencySign?: 'standard' | 'accounting'-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -107,11 +97,9 @@ localeMatcher?: 'lookup' | 'best fit'
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormatOptions-localeMatcher?: 'lookup' | 'best fit'--><!--Device-NumberFormatOptions-localeMatcher?: 'lookup' | 'best fit'-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -127,11 +115,9 @@ maximumFractionDigits?: double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormatOptions-maximumFractionDigits?: double--><!--Device-NumberFormatOptions-maximumFractionDigits?: double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -147,11 +133,9 @@ maximumSignificantDigits?: double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormatOptions-maximumSignificantDigits?: double--><!--Device-NumberFormatOptions-maximumSignificantDigits?: double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -167,11 +151,9 @@ minimumFractionDigits?: double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormatOptions-minimumFractionDigits?: double--><!--Device-NumberFormatOptions-minimumFractionDigits?: double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -187,11 +169,9 @@ minimumIntegerDigits?: double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormatOptions-minimumIntegerDigits?: double--><!--Device-NumberFormatOptions-minimumIntegerDigits?: double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -207,11 +187,9 @@ minimumSignificantDigits?: double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormatOptions-minimumSignificantDigits?: double--><!--Device-NumberFormatOptions-minimumSignificantDigits?: double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -227,11 +205,9 @@ notation?: 'standard' | 'scientific' | 'engineering' | 'compact'
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormatOptions-notation?: 'standard' | 'scientific' | 'engineering' | 'compact'--><!--Device-NumberFormatOptions-notation?: 'standard' | 'scientific' | 'engineering' | 'compact'-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -247,11 +223,9 @@ signDisplay?: 'auto' | 'never' | 'always' | 'exceptZero'
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormatOptions-signDisplay?: 'auto' | 'never' | 'always' | 'exceptZero'--><!--Device-NumberFormatOptions-signDisplay?: 'auto' | 'never' | 'always' | 'exceptZero'-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -267,11 +241,9 @@ style?: 'decimal' | 'percent' | 'currency' | 'unit'
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormatOptions-style?: 'decimal' | 'percent' | 'currency' | 'unit'--><!--Device-NumberFormatOptions-style?: 'decimal' | 'percent' | 'currency' | 'unit'-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -287,11 +259,9 @@ unit?: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormatOptions-unit?: string--><!--Device-NumberFormatOptions-unit?: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -307,11 +277,9 @@ unitDisplay?: 'short' | 'long' | 'narrow'
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-NumberFormatOptions-unitDisplay?: 'short' | 'long' | 'narrow'--><!--Device-NumberFormatOptions-unitDisplay?: 'short' | 'long' | 'narrow'-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -327,11 +295,8 @@ useGrouping?: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-NumberFormatOptions-useGrouping?: boolean--><!--Device-NumberFormatOptions-useGrouping?: boolean-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

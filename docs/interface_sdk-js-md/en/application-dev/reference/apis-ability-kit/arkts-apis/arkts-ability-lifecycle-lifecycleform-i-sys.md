@@ -4,7 +4,7 @@ interface of form lifecycle.@interface LifecycleForm
 
 **Since:** 7
 
-<!--Device-unnamed-export declare interface LifecycleForm--><!--Device-unnamed-export declare interface LifecycleForm-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -23,9 +23,9 @@ Called when the system shares the form.
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-LifecycleForm-onShare?(formId: string): { [key: string]: any }--><!--Device-LifecycleForm-onShare?(formId: string): { [key: string]: any }-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -33,15 +33,15 @@ Called when the system shares the form.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| formId | string | Yes | Indicates the ID of the deleted form. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| formId | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| object | Returns the wantParams object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| object |
 
 ## onShareForm
 
@@ -53,9 +53,9 @@ Called when the system shares the form. The ability of this function is same as 
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-LifecycleForm-onShareForm?(formId: string): Record<string, Object>--><!--Device-LifecycleForm-onShareForm?(formId: string): Record<string, Object>-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -63,13 +63,12 @@ Called when the system shares the form. The ability of this function is same as 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| formId | string | Yes | Indicates the ID of the deleted form. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| formId | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Record&lt;string, Object&gt; | Returns the wantParams object. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Record & lt;string, Object & gt; |

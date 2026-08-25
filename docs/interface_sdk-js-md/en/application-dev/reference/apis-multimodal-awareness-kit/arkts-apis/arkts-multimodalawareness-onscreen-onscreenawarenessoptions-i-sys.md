@@ -4,7 +4,7 @@ Defines the list of onscreen awareness parameters, which is used to obtain onscr
 
 **Since:** 23
 
-<!--Device-onScreen-export interface OnscreenAwarenessOptions--><!--Device-onScreen-export interface OnscreenAwarenessOptions-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -28,11 +28,10 @@ List of awareness parameters. The parameter result is a key-value data object.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-OnscreenAwarenessOptions-parameters?: Record<string, Object>--><!--Device-OnscreenAwarenessOptions-parameters?: Record<string, Object>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
-

@@ -12,9 +12,9 @@ Enumerates the fill types of a path.
 > of the ray and path is 2 (not 0), and therefore **p** is colored. Under the **EVEN_ODD** filling rule, the number
 > of intersection points of the ray and path is 2 (an even number), and therefore **p** is not colored.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-drawing-enum PathFillType--><!--Device-drawing-enum PathFillType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -26,9 +26,9 @@ WINDING = 0
 
 Specifies that "inside" is computed by a non-zero sum of signed edge crossings. Specifically, draws a point and emits a ray in any direction. A count is used to record the number of intersection points of the ray and path, and the initial count is 0. When encountering a clockwise intersection point (the path passes from the left to the right of the ray), the count increases by 1. When encountering a counterclockwise intersection point (the path passes from the right to the left of the ray), the count decreases by 1. If the final count is not 0, the point is inside the path and needs to be colored. If the final count is 0, the point is not colored.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-PathFillType-WINDING = 0--><!--Device-PathFillType-WINDING = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -40,9 +40,9 @@ EVEN_ODD = 1
 
 Specifies that "inside" is computed by an odd number of edge crossings. Specifically, draws a point and emits a ray in any direction. If the number of intersection points of the ray and path is an odd number, the point is considered to be inside the path and needs to be colored. If the number is an even number, the point is not colored.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-PathFillType-EVEN_ODD = 1--><!--Device-PathFillType-EVEN_ODD = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -54,9 +54,9 @@ INVERSE_WINDING = 2
 
 Same as **WINDING**, but draws outside of the path, rather than inside.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-PathFillType-INVERSE_WINDING = 2--><!--Device-PathFillType-INVERSE_WINDING = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -68,9 +68,8 @@ INVERSE_EVEN_ODD = 3
 
 Same as **EVEN_ODD**, but draws outside of the path, rather than inside.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-PathFillType-INVERSE_EVEN_ODD = 3--><!--Device-PathFillType-INVERSE_EVEN_ODD = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
-

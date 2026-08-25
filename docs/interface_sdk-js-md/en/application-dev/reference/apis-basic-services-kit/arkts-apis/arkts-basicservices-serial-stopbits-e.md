@@ -4,7 +4,7 @@ Stop bits in serial port communication.
 
 **Since:** 26.0.0
 
-<!--Device-serial-enum StopBits--><!--Device-serial-enum StopBits-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.BusManager.Serial
 
@@ -18,9 +18,9 @@ One stop bit.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-StopBits-ONE = 1--><!--Device-StopBits-ONE = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
 
@@ -34,9 +34,8 @@ TWO = 2
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-StopBits-TWO = 2--><!--Device-StopBits-TWO = 2-End-->
-
 **System capability:** SystemCapability.BusManager.Serial
-

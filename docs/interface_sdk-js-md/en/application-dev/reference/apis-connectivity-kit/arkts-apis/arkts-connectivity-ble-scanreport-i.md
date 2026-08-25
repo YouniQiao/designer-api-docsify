@@ -2,9 +2,9 @@
 
 Describes the contents of the scan report.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-ble-interface ScanReport--><!--Device-ble-interface ScanReport-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -24,13 +24,13 @@ The type of scan report
 
 **Type:** [ScanReportType](arkts-connectivity-ble-scanreporttype-e.md)
 
-**Since:** 23
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-ScanReport-reportType: ScanReportType--><!--Device-ScanReport-reportType: ScanReportType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -44,13 +44,12 @@ Describes the contents of the scan results.
 
 **Type:** Array&lt;ScanResult&gt;
 
-**Since:** 23
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-ScanReport-scanResult: Array<ScanResult>--><!--Device-ScanReport-scanResult: Array<ScanResult>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

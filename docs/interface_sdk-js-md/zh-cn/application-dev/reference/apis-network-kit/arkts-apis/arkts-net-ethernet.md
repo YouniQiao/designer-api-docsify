@@ -1,10 +1,10 @@
-# @ohos.net.ethernet
+# @ohos.net.ethernet(以太网连接管理)
 
 本模块提供以太网连接管理能力，包括有线网络能力、获取有线网络的IP地址等信息。
 
 **起始版本：** 9
 
-<!--Device-unnamed-declare namespace ethernet--><!--Device-unnamed-declare namespace ethernet-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -18,59 +18,58 @@ import { ethernet } from '@kit.NetworkKit';
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [getMacAddress](arkts-network-ethernet-getmacaddress-f.md) | 获取所有以太网网卡名称及对应网卡的MAC地址信息，使用Promise方式作为异步方法。 |
+| 名称 |
+| --- |
+| [getMacAddress(以太网连接管理)](arkts-network-ethernet-getmacaddress-f.md) |
 
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [disableEthernetInterface](arkts-network-ethernet-disableethernetinterface-f-sys.md) | 禁用以太网接口。 |
-| [enableEthernetInterface](arkts-network-ethernet-enableethernetinterface-f-sys.md) | 启用以太网接口。 |
-| [getAllActiveIfaces](arkts-network-ethernet-getallactiveifaces-f-sys.md) | 获取活动的网络接口，使用callback异步回调。 |
-| [getAllActiveIfaces](arkts-network-ethernet-getallactiveifaces-f-sys.md) | 获取活动的网络接口，使用Promise异步回调。 |
-| [getEthernetDeviceInfos](arkts-network-ethernet-getethernetdeviceinfos-f-sys.md) | 获取本机以太网卡的设备信息（如供应商名称、产品名称、最大连接速率等）使用Promise异步回调。 |
-| [getIfaceConfig](arkts-network-ethernet-getifaceconfig-f-sys.md) | 获取指定网络接口信息，使用callback异步回调。 |
-| [getIfaceConfig](arkts-network-ethernet-getifaceconfig-f-sys.md) | 获取指定网络接口信息，使用Promise异步回调。 |
-| [isEthernetEnabled](arkts-network-ethernet-isethernetenabled-f-sys.md) | 检查全局以太网开关是否启用。 |
-| [isIfaceActive](arkts-network-ethernet-isifaceactive-f-sys.md) | 判断接口是否已激活，使用callback异步回调。 |
-| [isIfaceActive](arkts-network-ethernet-isifaceactive-f-sys.md) | 判断接口是否已激活，使用Promise异步回调。 |
-| [off_interfaceStateChange](arkts-network-ethernet-offinterfacestatechange-f-sys.md#offinterfacestatechange) | 注销网卡热插拔事件，使用callback异步回调。 |
-| [on_interfaceStateChange](arkts-network-ethernet-oninterfacestatechange-f-sys.md#oninterfacestatechange) | 注册网卡热插拔事件，使用callback异步回调。 |
-| [setIfaceConfig](arkts-network-ethernet-setifaceconfig-f-sys.md) | 设置网络接口配置信息，使用callback异步回调。 |
-| [setIfaceConfig](arkts-network-ethernet-setifaceconfig-f-sys.md) | 设置网络接口配置信息，使用Promise异步回调。 |
+| 名称 |
+| --- |
+| [disableEthernetInterface(以太网连接管理)](arkts-network-ethernet-disableethernetinterface-f-sys.md) |
+| [enableEthernetInterface(以太网连接管理)](arkts-network-ethernet-enableethernetinterface-f-sys.md) |
+| [getAllActiveIfaces(以太网连接管理)](arkts-network-ethernet-getallactiveifaces-f-sys.md) |
+| [getAllActiveIfaces(以太网连接管理)](arkts-network-ethernet-getallactiveifaces-f-sys.md) |
+| [getEthernetDeviceInfos(以太网连接管理)](arkts-network-ethernet-getethernetdeviceinfos-f-sys.md) |
+| [getIfaceConfig(以太网连接管理)](arkts-network-ethernet-getifaceconfig-f-sys.md) |
+| [getIfaceConfig(以太网连接管理)](arkts-network-ethernet-getifaceconfig-f-sys.md) |
+| [isEthernetEnabled(以太网连接管理)](arkts-network-ethernet-isethernetenabled-f-sys.md) |
+| [isIfaceActive(以太网连接管理)](arkts-network-ethernet-isifaceactive-f-sys.md) |
+| [isIfaceActive(以太网连接管理)](arkts-network-ethernet-isifaceactive-f-sys.md) |
+| [off(以太网连接管理)](arkts-network-ethernet-off-f-sys.md#offinterfacestatechange) |
+| [on(以太网连接管理)](arkts-network-ethernet-on-f-sys.md#oninterfacestatechange) |
+| [setIfaceConfig(以太网连接管理)](arkts-network-ethernet-setifaceconfig-f-sys.md) |
+| [setIfaceConfig(以太网连接管理)](arkts-network-ethernet-setifaceconfig-f-sys.md) |
 <!--DelEnd-->
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [MacAddressInfo](arkts-network-ethernet-macaddressinfo-i.md) | 以太网网卡名称及MAC地址信息。 |
+| 名称 |
+| --- |
+| [MacAddressInfo(以太网连接管理)](arkts-network-ethernet-macaddressinfo-i.md) |
 
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [EthernetDeviceInfos](arkts-network-ethernet-ethernetdeviceinfos-i-sys.md) | 以太网设备信息。 |
-| [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | 以太网连接配置网络信息。 |
-| [InterfaceStateInfo](arkts-network-ethernet-interfacestateinfo-i-sys.md) | 监听以太网卡状态变化。 |
+| 名称 |
+| --- |
+| [EthernetDeviceInfos(以太网连接管理)](arkts-network-ethernet-ethernetdeviceinfos-i-sys.md) |
+| [InterfaceConfiguration(以太网连接管理)](arkts-network-ethernet-interfaceconfiguration-i-sys.md) |
+| [InterfaceStateInfo(以太网连接管理)](arkts-network-ethernet-interfacestateinfo-i-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [DeviceConnectionType](arkts-network-ethernet-deviceconnectiontype-e-sys.md) | 以太网设备连接模式。 |
-| [IPSetMode](arkts-network-ethernet-ipsetmode-e-sys.md) | 以太网连接模式。 |
+| 名称 |
+| --- |
+| [DeviceConnectionType(以太网连接管理)](arkts-network-ethernet-deviceconnectiontype-e-sys.md) |
+| [IPSetMode(以太网连接管理)](arkts-network-ethernet-ipsetmode-e-sys.md) |
 <!--DelEnd-->
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-| [HttpProxy](arkts-network-ethernet-httpproxy-t.md) | 网络代理配置信息。 |
-
+| 名称 |
+| --- |
+| [HttpProxy(以太网连接管理)](arkts-network-ethernet-httpproxy-t.md) |

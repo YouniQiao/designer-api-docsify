@@ -2,9 +2,9 @@
 
 包的配置信息。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-export interface BundleConfigInfo--><!--Device-unnamed-export interface BundleConfigInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -20,9 +20,9 @@ readonly bundleName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-BundleConfigInfo-readonly bundleName: string--><!--Device-BundleConfigInfo-readonly bundleName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -38,11 +38,10 @@ readonly version: Version
 
 **类型：** [Version](arkts-ability-bundlepackinfo-version-i-sys.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-BundleConfigInfo-readonly version: Version--><!--Device-BundleConfigInfo-readonly version: Version-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
-

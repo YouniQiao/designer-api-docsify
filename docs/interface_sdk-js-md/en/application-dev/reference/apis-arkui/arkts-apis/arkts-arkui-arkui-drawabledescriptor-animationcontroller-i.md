@@ -4,7 +4,7 @@ Implements an animation controller object. It provides APIs for playing, stoppin
 
 **Since:** 21
 
-<!--Device-unnamed-export interface AnimationController--><!--Device-unnamed-export interface AnimationController-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,19 +24,19 @@ Obtains the current animation playback status.
 
 **Since:** 21
 
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
-
-<!--Device-AnimationController-getStatus(): AnimationStatus--><!--Device-AnimationController-getStatus(): AnimationStatus-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| AnimationStatus | Current animation state: initial, running, paused, or stopped. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [AnimationStatus](arkts-arkui-animationstatus-e.md) |
 
 **Examples**
 
@@ -91,11 +91,11 @@ Pauses playback on the current frame.
 
 **Since:** 21
 
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
-
-<!--Device-AnimationController-pause(): void--><!--Device-AnimationController-pause(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -136,11 +136,11 @@ Resumes playback from the current frame.
 
 **Since:** 21
 
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
-
-<!--Device-AnimationController-resume(): void--><!--Device-AnimationController-resume(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -181,11 +181,11 @@ Starts playback from the first frame.
 
 **Since:** 21
 
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
-
-<!--Device-AnimationController-start(): void--><!--Device-AnimationController-start(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -226,11 +226,11 @@ Stops playback and resets to the first frame.
 
 **Since:** 21
 
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
-
-<!--Device-AnimationController-stop(): void--><!--Device-AnimationController-stop(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -260,4 +260,3 @@ struct Example {
   }
 }
 ```
-

@@ -12,28 +12,28 @@ import { pointer } from '@kit.InputKit';
 function setCustomCursorSync(windowId: int, pixelMap: image.PixelMap, focusX?: int, focusY?: int): void
 ```
 
-Sets a custom pointer style for a specified window synchronously. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see [setCustomCursor](../../apis-default/arkts-apis/arkts-arkui-uicontext-cursorcontroller-c.md#setcustomcursor).
+Sets a custom pointer style for a specified window synchronously. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see [setCustomCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setcustomcursor).
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-pointer-function setCustomCursorSync(windowId: int, pixelMap: image.PixelMap, focusX?: int, focusY?: int): void--><!--Device-pointer-function setCustomCursorSync(windowId: int, pixelMap: image.PixelMap, focusX?: int, focusY?: int): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| windowId | int | Yes | Window ID. The value must be an integer greater than 0. |
-| pixelMap | image.PixelMap | Yes | Custom cursor resource. |
-| focusX | int | No | Custom pointer focus X, in px. The value must be greater than or equal to 0. The default value is **0**. |
-| focusY | int | No | Custom pointer focus Y, in px. The value must be greater than or equal to 0. The default value is **0**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| windowId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| pixelMap | image.PixelMap | Yes |
+| [focusX](arkts-input-pointer-customcursor-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| [focusY](arkts-input-pointer-customcursor-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -76,4 +76,3 @@ struct Index {
   }
 }
 ```
-

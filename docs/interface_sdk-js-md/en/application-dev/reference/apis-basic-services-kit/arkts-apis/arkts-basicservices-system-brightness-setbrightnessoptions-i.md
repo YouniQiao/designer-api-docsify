@@ -4,9 +4,9 @@ Options for setting the screen brightness.
 
 **Since:** 3
 
-**Deprecated since:** 7
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface SetBrightnessOptions--><!--Device-unnamed-export interface SetBrightnessOptions-End-->
+**Deprecated since:** 7
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -24,13 +24,11 @@ complete?: () => void
 
 Called when an API call is complete.
 
-**Type:** () =&gt; void
-
 **Since:** 3
 
-**Deprecated since:** 7
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-SetBrightnessOptions-complete?: () => void--><!--Device-SetBrightnessOptions-complete?: () => void-End-->
+**Deprecated since:** 7
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -42,15 +40,20 @@ fail?: (data: string, code: number) => void
 
 Called when an API call has failed. **data** indicates the error information, and **code** indicates the error code.
 
-**Type:** (data: string, code: number) =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 7
 
-<!--Device-SetBrightnessOptions-fail?: (data: string, code: number) => void--><!--Device-SetBrightnessOptions-fail?: (data: string, code: number) => void-End-->
-
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | string | Yes |
+| code | number | Yes |
 
 ## success
 
@@ -60,13 +63,11 @@ success?: () => void
 
 Called when an API call is successful.
 
-**Type:** () =&gt; void
-
 **Since:** 3
 
-**Deprecated since:** 7
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-SetBrightnessOptions-success?: () => void--><!--Device-SetBrightnessOptions-success?: () => void-End-->
+**Deprecated since:** 7
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -83,9 +84,8 @@ Screen brightness. The value is an integer ranging from **1** to **255**.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 7
 
-<!--Device-SetBrightnessOptions-value: number--><!--Device-SetBrightnessOptions-value: number-End-->
-
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
-

@@ -16,13 +16,13 @@ Enables a Wi-Fi hotspot.<p>This method is asynchronous. After the Wi-Fi hotspot 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [enableHotspot](arkts-connectivity-wifimanager-enablehotspot-f-sys.md)
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
-
-<!--Device-wifi-function enableHotspot(): boolean--><!--Device-wifi-function enableHotspot(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -30,9 +30,9 @@ Enables a Wi-Fi hotspot.<p>This method is asynchronous. After the Wi-Fi hotspot 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -45,4 +45,3 @@ try {
     console.error("failed:" + JSON.stringify(error));
 }
 ```
-

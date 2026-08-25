@@ -4,7 +4,7 @@ Represents the update error information.
 
 **Since:** 12
 
-<!--Device-systemManager-interface ErrorInfo--><!--Device-systemManager-interface ErrorInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -26,9 +26,9 @@ Error code.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-ErrorInfo-code: number--><!--Device-ErrorInfo-code: number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -44,9 +44,8 @@ Error message.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ErrorInfo-message: string--><!--Device-ErrorInfo-message: string-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

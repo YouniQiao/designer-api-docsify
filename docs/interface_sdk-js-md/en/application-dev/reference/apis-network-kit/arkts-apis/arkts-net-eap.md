@@ -1,10 +1,10 @@
-# @ohos.net.eap
+# @ohos.net.eap(Extensible Authentication)
 
 The **eap** module provides the extensible authentication mechanism to enable third-party clients to access custom 80 2.1X (a port-based network access control protocol) authentication, such as Extensible Authentication Protocol (EAP) authentication.
 
 **Since:** 20
 
-<!--Device-unnamed-declare namespace eap--><!--Device-unnamed-declare namespace eap-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -18,26 +18,25 @@ import { eap } from '@kit.NetworkKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [logOffEthEap](arkts-network-eap-logoffetheap-f.md) | Revokes the EAP-authenticated state of an Ethernet NIC. |
-| [regCustomEapHandler](arkts-network-eap-regcustomeaphandler-f.md) | Registers a custom handler of Extensible Authentication Protocol (EAP) packets for extensible authentication. This API returns the result asynchronously through a callback.The system will encapsulate the eligible EAP packets into the callback function for enterprise applications to retrieve. |
-| [replyCustomEapData](arkts-network-eap-replycustomeapdata-f.md) | Notifies the system of the extensible authentication result. |
-| [startEthEap](arkts-network-eap-startetheap-f.md) | Starts EAP authentication on an Ethernet NIC. |
-| [unregCustomEapHandler](arkts-network-eap-unregcustomeaphandler-f.md) | Unregisters the custom handler of EAP packets for extensible authentication. This API returns the result asynchronously through a callback. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [logOffEthEap(Extensible Authentication)](arkts-network-eap-logoffetheap-f.md) |
+| [regCustomEapHandler(Extensible Authentication)](arkts-network-eap-regcustomeaphandler-f.md) |
+| [replyCustomEapData(Extensible Authentication)](arkts-network-eap-replycustomeapdata-f.md) |
+| [startEthEap(Extensible Authentication)](arkts-network-eap-startetheap-f.md) |
+| [unregCustomEapHandler(Extensible Authentication)](arkts-network-eap-unregcustomeaphandler-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [EapData](arkts-network-eap-eapdata-i.md) | Defines the EAP data.​ |
-| [EthEapProfile](arkts-network-eap-etheapprofile-i.md) | Represents the EAP profile information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [EapData(Extensible Authentication)](arkts-network-eap-eapdata-i.md) |
+| [EthEapProfile(Extensible Authentication)](arkts-network-eap-etheapprofile-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [CustomResult](arkts-network-eap-customresult-e.md) | Enumerates the EAP authentication results.​ |
-| [EapMethod](arkts-network-eap-eapmethod-e.md) | Enumerates the EAP authentication methods. |
-| [Phase2Method](arkts-network-eap-phase2method-e.md) | Enumerates the Phase 2 authentication methods. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CustomResult(Extensible Authentication)](arkts-network-eap-customresult-e.md) |
+| [EapMethod(Extensible Authentication)](arkts-network-eap-eapmethod-e.md) |
+| [Phase2Method(Extensible Authentication)](arkts-network-eap-phase2method-e.md) |

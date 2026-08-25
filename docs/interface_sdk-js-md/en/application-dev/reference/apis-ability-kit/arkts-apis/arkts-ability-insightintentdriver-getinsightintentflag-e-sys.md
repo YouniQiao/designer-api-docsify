@@ -30,9 +30,9 @@ Enumerates the flags of intent information ([InsightIntentInfo](arkts-ability-in
 > | subIntentInfoForConfiguration&lt;sup&gt;23+&lt;/sup
 &gt; | No| No|
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-insightIntentDriver-enum GetInsightIntentFlag--><!--Device-insightIntentDriver-enum GetInsightIntentFlag-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -46,11 +46,11 @@ GET_FULL_INSIGHT_INTENT = 0x00000001
 
 Used to query all intent information (except entities) in [InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md). To query entities information, use **GET_ENTITY_INFO**.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GetInsightIntentFlag-GET_FULL_INSIGHT_INTENT = 0x00000001--><!--Device-GetInsightIntentFlag-GET_FULL_INSIGHT_INTENT = 0x00000001-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -64,11 +64,11 @@ GET_SUMMARY_INSIGHT_INTENT = 0x00000002
 
 Used to query brief intent information in [InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md).
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GetInsightIntentFlag-GET_SUMMARY_INSIGHT_INTENT = 0x00000002--><!--Device-GetInsightIntentFlag-GET_SUMMARY_INSIGHT_INTENT = 0x00000002-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -82,13 +82,12 @@ GET_ENTITY_INFO = 0x00000004
 
 Used to query [EntityInfo](arkts-ability-insightintentdriver-entityinfo-i-sys.md). It must be used together with **GET_FULL_INSIGHT_INTENT** or **GET_SUMMARY_INSIGHT_INTENT**. Example usage: `GET_FULL_INSIGHT_INTENT | GET_ENTITY_INFO`.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GetInsightIntentFlag-GET_ENTITY_INFO = 0x00000004--><!--Device-GetInsightIntentFlag-GET_ENTITY_INFO = 0x00000004-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
-

@@ -2,9 +2,9 @@
 
 Enumerates the audio device flags.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-audio-enum DeviceFlag--><!--Device-audio-enum DeviceFlag-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -16,9 +16,9 @@ NONE_DEVICES_FLAG = 0
 
 None devices.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DeviceFlag-NONE_DEVICES_FLAG = 0--><!--Device-DeviceFlag-NONE_DEVICES_FLAG = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -32,9 +32,9 @@ DISTRIBUTED_OUTPUT_DEVICES_FLAG = 4
 
 Distributed output devices.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DeviceFlag-DISTRIBUTED_OUTPUT_DEVICES_FLAG = 4--><!--Device-DeviceFlag-DISTRIBUTED_OUTPUT_DEVICES_FLAG = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -48,9 +48,9 @@ DISTRIBUTED_INPUT_DEVICES_FLAG = 8
 
 Distributed input devices.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DeviceFlag-DISTRIBUTED_INPUT_DEVICES_FLAG = 8--><!--Device-DeviceFlag-DISTRIBUTED_INPUT_DEVICES_FLAG = 8-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -64,11 +64,10 @@ ALL_DISTRIBUTED_DEVICES_FLAG = 12
 
 All Distributed devices.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DeviceFlag-ALL_DISTRIBUTED_DEVICES_FLAG = 12--><!--Device-DeviceFlag-ALL_DISTRIBUTED_DEVICES_FLAG = 12-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
-

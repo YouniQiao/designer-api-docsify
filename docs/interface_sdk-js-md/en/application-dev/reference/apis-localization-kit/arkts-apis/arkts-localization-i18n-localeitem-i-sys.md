@@ -2,9 +2,9 @@
 
 Represents the locale information, which consists of the language, script, and country/region.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-i18n-export interface LocaleItem--><!--Device-i18n-export interface LocaleItem-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -26,9 +26,9 @@ Representation of ID in the specified locale in SystemLocaleManager.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-LocaleItem-displayName: string--><!--Device-LocaleItem-displayName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -44,9 +44,9 @@ Language code or country/region code, for example, "zh" or "CN".
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-LocaleItem-id: string--><!--Device-LocaleItem-id: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -62,9 +62,9 @@ Local name of the ID.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-LocaleItem-localName?: string--><!--Device-LocaleItem-localName?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -80,11 +80,10 @@ Language or country/region suggestion type.
 
 **Type:** [SuggestionType](arkts-localization-i18n-suggestiontype-e-sys.md)
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-LocaleItem-suggestionType: SuggestionType--><!--Device-LocaleItem-suggestionType: SuggestionType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 14
 
-<!--Device-netFirewall-interface InterceptedRecord--><!--Device-netFirewall-interface InterceptedRecord-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -19,16 +19,16 @@ import { netFirewall } from '@kit.NetworkKit';
 ## appUid
 
 ```TypeScript
-appUid?: int
+appUid?: number
 ```
 
 Application or service ID.
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 14
 
-<!--Device-InterceptedRecord-appUid?: int--><!--Device-InterceptedRecord-appUid?: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -44,7 +44,7 @@ domain?: string
 
 **起始版本：** 14
 
-<!--Device-InterceptedRecord-domain?: string--><!--Device-InterceptedRecord-domain?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -60,7 +60,7 @@ localIp?: string
 
 **起始版本：** 14
 
-<!--Device-InterceptedRecord-localIp?: string--><!--Device-InterceptedRecord-localIp?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -69,16 +69,16 @@ localIp?: string
 ## localPort
 
 ```TypeScript
-localPort?: int
+localPort?: number
 ```
 
 Local port.
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 14
 
-<!--Device-InterceptedRecord-localPort?: int--><!--Device-InterceptedRecord-localPort?: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -87,16 +87,16 @@ Local port.
 ## protocol
 
 ```TypeScript
-protocol?: int
+protocol?: number
 ```
 
 Transport layer protocol.
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 14
 
-<!--Device-InterceptedRecord-protocol?: int--><!--Device-InterceptedRecord-protocol?: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -112,7 +112,7 @@ remoteIp?: string
 
 **起始版本：** 14
 
-<!--Device-InterceptedRecord-remoteIp?: string--><!--Device-InterceptedRecord-remoteIp?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -121,16 +121,16 @@ remoteIp?: string
 ## remotePort
 
 ```TypeScript
-remotePort?: int
+remotePort?: number
 ```
 
 Remote port.
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 14
 
-<!--Device-InterceptedRecord-remotePort?: int--><!--Device-InterceptedRecord-remotePort?: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -139,18 +139,17 @@ Remote port.
 ## time
 
 ```TypeScript
-time: int
+time: number
 ```
 
 Time stamp.
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 14
 
-<!--Device-InterceptedRecord-time: int--><!--Device-InterceptedRecord-time: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **系统接口：** 此接口为系统接口。
-

@@ -4,11 +4,11 @@ Widget information.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [FormInfo](arkts-form-forminfo-forminfo-i.md)
-
-<!--Device-formInfo-interface FormInfo--><!--Device-formInfo-interface FormInfo-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -29,11 +29,11 @@ Name of the ability to which the widget belongs.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [abilityName](arkts-form-forminfo-forminfo-i.md#abilityname)
-
-<!--Device-FormInfo-abilityName: string--><!--Device-FormInfo-abilityName: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -49,11 +49,11 @@ Name of the bundle to which the widget belongs.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [bundleName](arkts-form-forminfo-forminfo-i.md#bundlename)
-
-<!--Device-FormInfo-bundleName: string--><!--Device-FormInfo-bundleName: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -69,11 +69,11 @@ Color mode of the widget.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [colorMode](arkts-form-forminfo-forminfo-i.md#colormode)
-
-<!--Device-FormInfo-colorMode: ColorMode--><!--Device-FormInfo-colorMode: ColorMode-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -89,11 +89,11 @@ Custom data of the widget.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [customizeData](arkts-form-forminfo-forminfo-i.md#customizedata)
-
-<!--Device-FormInfo-customizeData: { [key: string]: [value: string] }--><!--Device-FormInfo-customizeData: { [key: string]: [value: string] }-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -109,11 +109,11 @@ Default dimension of the widget.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [defaultDimension](arkts-form-forminfo-forminfo-i.md#defaultdimension)
-
-<!--Device-FormInfo-defaultDimension: number--><!--Device-FormInfo-defaultDimension: number-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -129,11 +129,11 @@ Description of the widget.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [description](arkts-form-forminfo-forminfo-i.md#description)
-
-<!--Device-FormInfo-description: string--><!--Device-FormInfo-description: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -149,11 +149,11 @@ Configuration ability of the widget.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [formConfigAbility](arkts-form-forminfo-forminfo-i.md#formconfigability)
-
-<!--Device-FormInfo-formConfigAbility: string--><!--Device-FormInfo-formConfigAbility: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -170,11 +170,11 @@ Whether to send a notification when the widget is visible.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [formVisibleNotify](arkts-form-forminfo-forminfo-i.md#formvisiblenotify)
-
-<!--Device-FormInfo-formVisibleNotify: boolean--><!--Device-FormInfo-formVisibleNotify: boolean-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -191,11 +191,11 @@ Whether the widget is the default one.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [isDefault](arkts-form-forminfo-forminfo-i.md#isdefault)
-
-<!--Device-FormInfo-isDefault: boolean--><!--Device-FormInfo-isDefault: boolean-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -211,11 +211,11 @@ Component name of the JS widget.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [jsComponentName](arkts-form-forminfo-forminfo-i.md#jscomponentname)
-
-<!--Device-FormInfo-jsComponentName: string--><!--Device-FormInfo-jsComponentName: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -231,11 +231,11 @@ Name of the module to which the widget belongs.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [moduleName](arkts-form-forminfo-forminfo-i.md#modulename)
-
-<!--Device-FormInfo-moduleName: string--><!--Device-FormInfo-moduleName: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -251,11 +251,11 @@ Widget name.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [name](arkts-form-forminfo-forminfo-i.md#name)
-
-<!--Device-FormInfo-name: string--><!--Device-FormInfo-name: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -271,9 +271,9 @@ Name of the associated bundle to which the widget belongs.
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-FormInfo-relatedBundleName: string--><!--Device-FormInfo-relatedBundleName: string-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -289,11 +289,11 @@ Time when the widget was updated.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [scheduledUpdateTime](arkts-form-forminfo-forminfo-i.md#scheduledupdatetime)
-
-<!--Device-FormInfo-scheduledUpdateTime: string--><!--Device-FormInfo-scheduledUpdateTime: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -309,11 +309,11 @@ Dimensions supported by the widget.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [supportDimensions](arkts-form-forminfo-forminfo-i.md#supportdimensions)
-
-<!--Device-FormInfo-supportDimensions: Array<number>--><!--Device-FormInfo-supportDimensions: Array<number>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -329,11 +329,11 @@ Type of the widget. Currently, only JS widgets are supported.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [type](arkts-form-forminfo-forminfo-i.md#type)
-
-<!--Device-FormInfo-type: FormType--><!--Device-FormInfo-type: FormType-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -349,11 +349,11 @@ Update period of the widget.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [updateDuration](arkts-form-forminfo-forminfo-i.md#updateduration)
-
-<!--Device-FormInfo-updateDuration: number--><!--Device-FormInfo-updateDuration: number-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -370,11 +370,10 @@ Whether the widget is updatable.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [updateEnabled](arkts-form-forminfo-forminfo-i.md#updateenabled)
 
-<!--Device-FormInfo-updateEnabled: boolean--><!--Device-FormInfo-updateEnabled: boolean-End-->
-
 **System capability:** SystemCapability.Ability.Form
-

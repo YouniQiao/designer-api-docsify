@@ -4,7 +4,7 @@ Provides parameters for scrolling to the edge of a scrollable container.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface ScrollEdgeOptions--><!--Device-unnamed-declare interface ScrollEdgeOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,10 @@ Fixed velocity for scrolling to the edge of the container. If the value specifie
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ScrollEdgeOptions-velocity?: number--><!--Device-ScrollEdgeOptions-velocity?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

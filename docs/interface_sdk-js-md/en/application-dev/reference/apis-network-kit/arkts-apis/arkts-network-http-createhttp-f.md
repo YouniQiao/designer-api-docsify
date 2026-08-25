@@ -17,19 +17,19 @@ Creates an HTTP request. You can use this API to initiate or destroy an HTTP req
 > **NOTE：**&gt;
 > When the request is no longer needed, call destroy() to release resources. Otherwise, memory leaks may occur.
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-http-function createHttp(): HttpRequest--><!--Device-http-function createHttp(): HttpRequest-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| HttpRequest | An **HttpRequest** object, which contains the **request**, **requestInStream**, **requestSync**, **enableAutoCookie**, **destroy**, **on**, and **off** methods. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [HttpRequest](arkts-network-http-httprequest-i.md) |
 
 **Examples**
 
@@ -44,4 +44,3 @@ import { http } from '@kit.NetworkKit';
 
 let httpRequest = http.createHttp();
 ```
-

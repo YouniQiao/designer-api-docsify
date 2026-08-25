@@ -2,9 +2,9 @@
 
 The module describes the size and position information of an auto-fill pop-up.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export default interface AutoFillPopupConfig--><!--Device-unnamed-export default interface AutoFillPopupConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -20,11 +20,11 @@ Position of the auto-fill pop-up. If this parameter is not set, the position is 
 
 **Type:** [PopupPlacement](arkts-ability-autofillpopupconfig-popupplacement-e-sys.md)
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AutoFillPopupConfig-placement?: PopupPlacement--><!--Device-AutoFillPopupConfig-placement?: PopupPlacement-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -40,13 +40,12 @@ Width and height of the auto-fill pop-up. If this parameter is not set, the widt
 
 **Type:** [PopupSize](arkts-ability-autofillpopupconfig-popupsize-i-sys.md)
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AutoFillPopupConfig-popupSize?: PopupSize--><!--Device-AutoFillPopupConfig-popupSize?: PopupSize-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
-

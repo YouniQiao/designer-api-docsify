@@ -5,9 +5,9 @@ XmlDynamicSerializer类用于动态生成XML字符串。当无法确定XML内容
 > **说明：**&gt;
 > 使用该类构造的对象无需自行创建ArrayBuffer，程序动态扩容，可以不断添加XML元素，最终序列化结果字符串长度上限为100000。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-xml-class XmlDynamicSerializer--><!--Device-xml-class XmlDynamicSerializer-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -28,26 +28,26 @@ addEmptyElement(name: string): void
 > **说明：**&gt;
 > 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的元素名称。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-XmlDynamicSerializer-addEmptyElement(name: string): void--><!--Device-XmlDynamicSerializer-addEmptyElement(name: string): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 该空元素的元素名，所组成的XML长度不能超过100000。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+| 错误码ID |
+| --- |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
 
 **示例**
 
@@ -81,25 +81,25 @@ constructor(encoding?: string)
 
 构造并返回一个XmlDynamicSerializer对象，该对象支持动态扩容生成XML字符串，无需预先指定缓存大小。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-XmlDynamicSerializer-constructor(encoding?: string)--><!--Device-XmlDynamicSerializer-constructor(encoding?: string)-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| encoding | string | 否 | 编码格式，默认'utf-8'（目前仅支持'utf-8'）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| encoding | string | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200066](../errorcode-utils.md#10200066-编码格式错误) | 编码格式错误，目前仅支持utf-8。 |
+| 错误码ID |
+| --- |
+| [10200066](../errorcode-utils.md#10200066-编码格式错误) |
 
 **示例**
 
@@ -168,20 +168,20 @@ endElement(): void
 > **说明：**&gt;
 > 调用该接口前必须先调用[startElement](arkts-arkts-xml-xmlserializer-c.md#startelement)接口写入元素开始标记。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-XmlDynamicSerializer-endElement(): void--><!--Device-XmlDynamicSerializer-endElement(): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
-| [10200065](../errorcode-utils.md#10200065-元素开始标记与元素结束标记未匹配使用) | startElement和endElement不匹配。 |
+| 错误码ID |
+| --- |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
+| [10200065](../errorcode-utils.md#10200065-元素开始标记与元素结束标记未匹配使用) |
 
 **示例**
 
@@ -220,19 +220,19 @@ getOutput(): ArrayBuffer
 
 返回XML字符串的ArrayBuffer。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-XmlDynamicSerializer-getOutput(): ArrayBuffer--><!--Device-XmlDynamicSerializer-getOutput(): ArrayBuffer-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ArrayBuffer | 用于接收写入XML信息的ArrayBuffer内存。 |
+| 类型 |
+| --- |
+| ArrayBuffer |
 
 **示例**
 
@@ -260,28 +260,28 @@ setAttributes(name: string, value: string): void
 > **说明：**&gt;
 > 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的属性名称以及添加多个同名的属性名称。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-XmlDynamicSerializer-setAttributes(name: string, value: string): void--><!--Device-XmlDynamicSerializer-setAttributes(name: string, value: string): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 属性名。所组成的XML长度不能超过100000，不可为空字符。 |
-| value | string | 是 | 属性值。所组成的XML长度不能超过100000字符。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| value | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
-| [10200063](../errorcode-utils.md#10200063-xml文件声明或属性位置设置错误) | xml位置非法。 |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+| 错误码ID |
+| --- |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
+| [10200063](../errorcode-utils.md#10200063-xml文件声明或属性位置设置错误) |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
 
 **示例**
 
@@ -322,26 +322,26 @@ setCdata(text: string): void
 > **说明：**&gt;
 > 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许在CDATA标签中添加包含"\]\]\&gt;"字符串的数据。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-XmlDynamicSerializer-setCdata(text: string): void--><!--Device-XmlDynamicSerializer-setCdata(text: string): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| text | string | 是 | CDATA标签中的数据内容。所组成的XML长度不能超过100000。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| text | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+| 错误码ID |
+| --- |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
 
 **示例**
 
@@ -364,26 +364,26 @@ setComment(text: string): void
 
 写入注释内容，所生成的注释结构为：`<!--` + 注释内容 + `-->`。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-XmlDynamicSerializer-setComment(text: string): void--><!--Device-XmlDynamicSerializer-setComment(text: string): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| text | string | 是 | 当前元素的注释内容。所组成的XML长度不能超过100000，不可为空字符。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| text | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+| 错误码ID |
+| --- |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
 
 **示例**
 
@@ -417,20 +417,20 @@ setDeclaration(): void
 
 编写带有编码的文件声明，调用后将在XML文本中生成`&lt;?xml version="1.0" encoding="utf-8"?&gt;`格式的声明。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-XmlDynamicSerializer-setDeclaration(): void--><!--Device-XmlDynamicSerializer-setDeclaration(): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
-| [10200063](../errorcode-utils.md#10200063-xml文件声明或属性位置设置错误) | xml位置非法。 |
+| 错误码ID |
+| --- |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
+| [10200063](../errorcode-utils.md#10200063-xml文件声明或属性位置设置错误) |
 
 **示例**
 
@@ -465,26 +465,26 @@ setDocType(text: string): void
 
 写入文档类型。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-XmlDynamicSerializer-setDocType(text: string): void--><!--Device-XmlDynamicSerializer-setDocType(text: string): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| text | string | 是 | 文档类型声明的内容。所组成的XML长度不能超过100000。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| text | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+| 错误码ID |
+| --- |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
 
 **示例**
 
@@ -523,27 +523,27 @@ setNamespace(prefix: string, namespace: string): void
 > 先调用setNamespace设置命名空间，再调用startElement开启元素。&gt;
 > 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的前缀以及对同一个元素设置多个命名空间。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-XmlDynamicSerializer-setNamespace(prefix: string, namespace: string): void--><!--Device-XmlDynamicSerializer-setNamespace(prefix: string, namespace: string): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| prefix | string | 是 | 当前元素及其子元素的前缀。所组成的XML长度不能超过100000，不可为空字符串。 |
-| namespace | string | 是 | 当前元素及其子元素的命名空间。所组成的XML长度不能超过100000，不可为空字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| prefix | string | 是 |
+| namespace | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+| 错误码ID |
+| --- |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
 
 **示例**
 
@@ -586,26 +586,26 @@ setText(text: string): void
 > 该接口必须在[startElement](#startelement)之后、
 > [endElement](#endelement)之前调用，用于设置当前元素的文本内容。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-XmlDynamicSerializer-setText(text: string): void--><!--Device-XmlDynamicSerializer-setText(text: string): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| text | string | 是 | 标签值。所组成的XML长度不能超过100000，不可为空字符。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| text | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+| 错误码ID |
+| --- |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
 
 **示例**
 
@@ -649,26 +649,26 @@ startElement(name: string): void
 > - 调用该接口后须调用[endElement](arkts-arkts-xml-xmlserializer-c.md#endelement)写入元素结束标记，以确保节点正确闭合。&gt;
 > - 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的元素名称。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-XmlDynamicSerializer-startElement(name: string): void--><!--Device-XmlDynamicSerializer-startElement(name: string): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 当前元素的元素名。所组成的XML长度不能超过100000，不可为空字符。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+| 错误码ID |
+| --- |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
 
 **示例**
 
@@ -698,4 +698,3 @@ let uint8 = new Uint8Array(arrayBuffer);
 let result = util.TextDecoder.create().decodeToString(uint8);
 console.info(result); // <note>Happy</note>
 ```
-

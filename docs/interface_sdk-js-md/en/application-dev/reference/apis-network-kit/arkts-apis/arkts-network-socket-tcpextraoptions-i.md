@@ -6,7 +6,7 @@ Defines other properties of the **TCPSocket** object. This object is inherited f
 
 **Since:** 7
 
-<!--Device-socket-export interface TCPExtraOptions--><!--Device-socket-export interface TCPExtraOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -28,7 +28,7 @@ Whether to keep the connection alive. The default value is **false**. The value 
 
 **Since:** 7
 
-<!--Device-TCPExtraOptions-keepAlive?: boolean--><!--Device-TCPExtraOptions-keepAlive?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -44,25 +44,25 @@ Whether to enable OOBInline. The default value is **false**. The value **true** 
 
 **Since:** 7
 
-<!--Device-TCPExtraOptions-OOBInline?: boolean--><!--Device-TCPExtraOptions-OOBInline?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## socketLinger
 
 ```TypeScript
-socketLinger?: {on: boolean, linger: int}
+socketLinger?: {on: boolean, linger: number}
 ```
 
 Socket linger.  
 - **on**: whether to enable socket linger. The value true means to enable socket linger and false means the opposite. - **linger**: linger time, in ms. The value ranges from **0** to **65535**.  
 Specify this parameter only when **on** is set to **true**.
 
-**Type:** {on: boolean, linger: int}
+**Type:** {on: boolean, linger: number}
 
 **Since:** 7
 
-<!--Device-TCPExtraOptions-socketLinger?: {on: boolean, linger: int}--><!--Device-TCPExtraOptions-socketLinger?: {on: boolean, linger: int}-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -78,9 +78,9 @@ Whether to enable TCP Fast Open (TFO) in the TCP socket connection. This functio
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-TCPExtraOptions-tcpFastOpen?: boolean--><!--Device-TCPExtraOptions-tcpFastOpen?: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -96,7 +96,6 @@ Whether to enable no-delay on the TCP socket connection. The default value is **
 
 **Since:** 7
 
-<!--Device-TCPExtraOptions-TCPNoDelay?: boolean--><!--Device-TCPExtraOptions-TCPNoDelay?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
-

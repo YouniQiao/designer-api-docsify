@@ -6,7 +6,7 @@ Defines the text span style options.Inherits [RichEditorSpanStyleOptions](arkts-
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface RichEditorUpdateTextSpanStyleOptions--><!--Device-unnamed-declare interface RichEditorUpdateTextSpanStyleOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,11 @@ Text style.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RichEditorUpdateTextSpanStyleOptions-textStyle: RichEditorTextStyle--><!--Device-RichEditorUpdateTextSpanStyleOptions-textStyle: RichEditorTextStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,11 +47,10 @@ URL information.Default value: **undefined**
 
 **Since:** 19
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-RichEditorUpdateTextSpanStyleOptions-urlStyle?: RichEditorUrlStyle--><!--Device-RichEditorUpdateTextSpanStyleOptions-urlStyle?: RichEditorUrlStyle-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

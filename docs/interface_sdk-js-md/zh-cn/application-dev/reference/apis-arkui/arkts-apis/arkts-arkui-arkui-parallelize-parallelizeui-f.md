@@ -8,7 +8,6 @@
 ## ParallelizeUI
 
 ```TypeScript
-@Builder
 export declare function ParallelizeUI(
   options: ParallelOption | undefined,
   content_: CustomBuilder,
@@ -19,28 +18,23 @@ export declare function ParallelizeUI(
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**装饰器类型：** @Builder
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-unnamed-@Builderexport declare function ParallelizeUI(  options: ParallelOption | undefined,  content_: CustomBuilder,): void--><!--Device-unnamed-@Builderexport declare function ParallelizeUI(  options: ParallelOption | undefined,  content_: CustomBuilder,): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [ParallelOption](arkts-arkui-arkui-parallelize-paralleloption-i.md) \| undefined | 是 | 使用ParallelizeUI方法创建组件时选择是否开启并行化的参数，当options参数为undefined时，默认开启并行化创建。 |
-| content_ | [CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md) | 是 | 定义要创建的UI内容，通过尾随闭包"{...}"的形式传入。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [ParallelOption](arkts-arkui-arkui-parallelize-paralleloption-i.md) \| undefined | 是 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 |
 
 
 ## ParallelizeUI
 
 ```TypeScript
-@Builder
 export declare function ParallelizeUI<T>(
   options: ParallelOption | undefined,
   param: () => T,
@@ -52,29 +46,24 @@ export declare function ParallelizeUI<T>(
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**装饰器类型：** @Builder
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-unnamed-@Builderexport declare function ParallelizeUI<T>(  options: ParallelOption | undefined,  param: () => T,  content_: CustomBuilderT<T>,): void--><!--Device-unnamed-@Builderexport declare function ParallelizeUI<T>(  options: ParallelOption | undefined,  param: () => T,  content_: CustomBuilderT<T>,): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [ParallelOption](arkts-arkui-arkui-parallelize-paralleloption-i.md) \| undefined | 是 | 使用ParallelizeUI方法创建组件时选择是否开启并行化的参数，当options参数为undefined时，默认开启并行化创建。 |
-| param | () =&gt; T | 是 | 参数生成函数，用于生成content_调用时的参数。该函数会在UI线程调用，开发者可将并行创建需要用到的数据在此处进行拷贝。避免数据多线程读写引发的安全性问题。 |
-| content_ | [CustomBuilderT](../../apis-default/arkts-apis/arkts-custombuildert-t.md)&lt;T&gt; | 是 | 定义要创建的UI内容。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [ParallelOption](arkts-arkui-arkui-parallelize-paralleloption-i.md) \| undefined | 是 |
+| param | () = & gt; T | 是 |
+| content_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | 是 |
 
 
 ## ParallelizeUI
 
 ```TypeScript
-@Builder
 export declare function ParallelizeUI<V, T>(
   options: ParallelOption | undefined,
   arr: Array<V>,
@@ -87,22 +76,17 @@ export declare function ParallelizeUI<V, T>(
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**装饰器类型：** @Builder
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-unnamed-@Builderexport declare function ParallelizeUI<V, T>(  options: ParallelOption | undefined,  arr: Array<V>,  param: (item: V, index: int) => T,  content_: CustomBuilderT<T>): void--><!--Device-unnamed-@Builderexport declare function ParallelizeUI<V, T>(  options: ParallelOption | undefined,  arr: Array<V>,  param: (item: V, index: int) => T,  content_: CustomBuilderT<T>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [ParallelOption](arkts-arkui-arkui-parallelize-paralleloption-i.md) \| undefined | 是 | 使用ParallelizeUI方法创建组件时选择是否开启并行化的参数，当options参数为undefined时，默认开启并行化创建。 |
-| arr | Array&lt;V&gt; | 是 | 数据源，为Array类型的数组。 |
-| param | (item: V, index: int) =&gt; T | 是 | 参数生成函数，用于生成content_调用时的参数。该函数会在UI线程调用，开发者可将并行创建需要用到的数据在此处进行拷贝。避免数据多线程读写 引发的安全性问题。<br/>说明：<br/>- item是当前数据项，index是数据项索引值。 |
-| content_ | [CustomBuilderT](../../apis-default/arkts-apis/arkts-custombuildert-t.md)&lt;T&gt; | 是 | 定义要创建的UI内容。param参数为param函数调用后返回的对象。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [ParallelOption](arkts-arkui-arkui-parallelize-paralleloption-i.md) \| undefined | 是 |
+| arr | Array & lt;V & gt; | 是 |
+| param | (item: V, index: int) = & gt; T | 是 |
+| content_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | 是 |

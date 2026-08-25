@@ -5,8 +5,7 @@
 <!--Del-->
 ### Classes(System API)
 
-| Name | Description |
-| --- | --- |
-| [WindowExtensionContext](arkts-arkui-windowextensioncontext-c-sys.md) | The WindowExtensionContext module provides the context environment for the WindowExtensionAbility. It inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).The module provides the capabilities of the [WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md), including starting the ability. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [WindowExtensionContext](arkts-arkui-windowextensioncontext-c-sys.md) |
 <!--DelEnd-->
-

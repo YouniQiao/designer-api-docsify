@@ -2,9 +2,9 @@
 
 提供文本音译相关的能力，包括音译支持范围获取和文本音译等。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-i18n-export class Transliterator--><!--Device-i18n-export class Transliterator-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -22,19 +22,19 @@ static getAvailableIDs(): string[]
 
 获取音译支持的转换ID列表。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Transliterator-static getAvailableIDs(): string[]--><!--Device-Transliterator-static getAvailableIDs(): string[]-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string[] | 音译支持的转换ID列表。 |
+| 类型 |
+| --- |
+| string[] |
 
 **示例**
 
@@ -61,25 +61,25 @@ static getInstance(id: string): Transliterator
 
 创建指定转换ID的音译对象。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Transliterator-static getInstance(id: string): Transliterator--><!--Device-Transliterator-static getInstance(id: string): Transliterator-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| id | string | 是 | 音译支持的转换ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| id | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Transliterator](../../apis-default/arkts-apis/arkts-i18n-transliterator-c.md) | 音译对象。 |
+| 类型 |
+| --- |
+| [Transliterator](arkts-localization-i18n-transliterator-c.md) |
 
 **示例**
 
@@ -115,25 +115,25 @@ transform(text: string): string
 
 将输入文本从源格式转换为目标格式。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Transliterator-transform(text: string): string--><!--Device-Transliterator-transform(text: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| text | string | 是 | 输入文本。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| text | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换后的文本。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -156,4 +156,3 @@ transliterator = i18n.Transliterator.getInstance('Han-Latin/Names');
 let transliterateNames: string = transliterator.transform('单老师'); // transliterateNames = 'shàn lǎo shī'
 transliterateNames = transliterator.transform('长孙无忌'); // transliterateNames = 'zhǎng sūn wú jì'
 ```
-

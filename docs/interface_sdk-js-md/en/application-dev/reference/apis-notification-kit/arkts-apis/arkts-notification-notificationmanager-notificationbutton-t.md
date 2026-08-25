@@ -6,11 +6,10 @@ export type NotificationButton = _NotificationButton
 
 Describes the notification button.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-notificationManager-export type NotificationButton = _NotificationButton--><!--Device-notificationManager-export type NotificationButton = _NotificationButton-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **Property type:** _NotificationButton
-

@@ -6,9 +6,6 @@ type ReturnType<T extends (...args: any) => any> = T extends (...args: any) => i
 
 Obtain the return type of a function type
 
-**Since:** -1
-
-<!--Device-unnamed-type ReturnType<T extends (...args: any) => any> = T extends (...args: any) => infer R ? R : any--><!--Device-unnamed-type ReturnType<T extends (...args: any) => any> = T extends (...args: any) => infer R ? R : any-End-->
+**ArkTS mode:** 
 
 **Property type:** T extends (...args: any) =&gt; infer R ? R : any
-

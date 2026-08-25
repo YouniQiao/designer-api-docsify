@@ -17,11 +17,11 @@ Execute a CLI command
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Required permissions:** ohos.permission.EXEC_CLI_TOOL
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-cliManager-function execTool(toolName: string, subCommand: string, args: Record<string, Object>, challenge: string,    execOptions?: ExecOptions): Promise<CliSessionInfo>--><!--Device-cliManager-function execTool(toolName: string, subCommand: string, args: Record<string, Object>, challenge: string,    execOptions?: ExecOptions): Promise<CliSessionInfo>-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -29,27 +29,26 @@ Execute a CLI command
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| toolName | string | Yes | The name of target tool. |
-| subCommand | string | Yes | The subCommand of this execute action. |
-| args | Record&lt;string, Object&gt; | Yes | The input args of tool. |
-| challenge | string | Yes | The unique identifier get from access token manager. |
-| execOptions | [ExecOptions](arkts-ability-climanager-execoptions-i-sys.md) | No | The options of this action. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [toolName](arkts-ability-climanager-clisessioninfo-i-sys.md) | string | Yes |
+| subCommand | string | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Record & lt;string, Object & gt; | Yes |
+| challenge | string | Yes |
+| execOptions | [ExecOptions](arkts-ability-climanager-execoptions-i-sys.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[CliSessionInfo](arkts-ability-climanager-clisessioninfo-i-sys.md)&gt; | execute result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[CliSessionInfo](arkts-ability-climanager-clisessioninfo-i-sys.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied, interface caller does not have permission"ohos.permission.EXEC_CLI_TOOL". |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. Interface caller is not a system app. |
-| 35600030 | No tool with the specified name exists. |
-| 35600031 | Maximum number of processes has been reached. |
-| 35600050 | System Error. 1. Connect to system service failed; 2. The system service failed to communicate with the dependent module. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 35600030 |
+| 35600031 |
+| 35600050 |

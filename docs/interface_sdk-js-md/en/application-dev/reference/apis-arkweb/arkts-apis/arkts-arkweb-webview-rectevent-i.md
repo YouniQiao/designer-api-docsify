@@ -4,7 +4,7 @@ Defines a rectangle.
 
 **Since:** 12
 
-<!--Device-webview-interface RectEvent--><!--Device-webview-interface RectEvent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -26,7 +26,7 @@ Height of the rectangle.Unit: px.
 
 **Since:** 12
 
-<!--Device-RectEvent-height: number--><!--Device-RectEvent-height: number-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -42,7 +42,7 @@ Width of the rectangle.Unit: px.
 
 **Since:** 12
 
-<!--Device-RectEvent-width: number--><!--Device-RectEvent-width: number-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -58,7 +58,7 @@ X-coordinate of the upper left corner of the rectangular area.Unit: px.
 
 **Since:** 12
 
-<!--Device-RectEvent-x: number--><!--Device-RectEvent-x: number-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -74,7 +74,6 @@ Y-coordinate of the upper left corner of the rectangular area.Unit: px.
 
 **Since:** 12
 
-<!--Device-RectEvent-y: number--><!--Device-RectEvent-y: number-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

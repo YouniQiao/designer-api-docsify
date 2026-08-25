@@ -4,7 +4,7 @@ Provides the template type of the float view.
 
 **Since:** 26.0.0
 
-<!--Device-floatView-enum FloatViewTemplateType--><!--Device-floatView-enum FloatViewTemplateType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -18,9 +18,9 @@ Rectangle with rounded corners.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-FloatViewTemplateType-ROUNDED_RECTANGLE = 0--><!--Device-FloatViewTemplateType-ROUNDED_RECTANGLE = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -34,9 +34,8 @@ Horizontal bar rectangle.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FloatViewTemplateType-HORIZONTAL_BAR = 1--><!--Device-FloatViewTemplateType-HORIZONTAL_BAR = 1-End-->
-
 **System capability:** SystemCapability.Window.SessionManager
-

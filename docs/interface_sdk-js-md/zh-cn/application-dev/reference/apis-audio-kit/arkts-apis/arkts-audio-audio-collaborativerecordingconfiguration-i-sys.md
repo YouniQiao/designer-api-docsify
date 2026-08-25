@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-audio-interface CollaborativeRecordingConfiguration--><!--Device-audio-interface CollaborativeRecordingConfiguration-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -28,9 +28,9 @@ devices?: AudioDeviceDescriptors
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-CollaborativeRecordingConfiguration-devices?: AudioDeviceDescriptors--><!--Device-CollaborativeRecordingConfiguration-devices?: AudioDeviceDescriptors-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -48,11 +48,10 @@ enabled: boolean
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-CollaborativeRecordingConfiguration-enabled: boolean--><!--Device-CollaborativeRecordingConfiguration-enabled: boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
-

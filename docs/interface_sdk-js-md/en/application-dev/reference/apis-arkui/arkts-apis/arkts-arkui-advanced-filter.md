@@ -10,20 +10,32 @@ import { Filter, FilterParams, FilterResult, FilterType } from '@kit.ArkUI';
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [FilterParams](arkts-arkui-arkui-advanced-filter-filterparams-c.md) | This parameter is used to define the input of each filtering dimension. |
-| [FilterResult](arkts-arkui-arkui-advanced-filter-filterresult-c.md) | This parameter specifies the selection result of a filtering dimension. The index starts from 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FilterParams](arkts-arkui-arkui-advanced-filter-filterparams-c.md) |
+| [FilterResult](arkts-arkui-arkui-advanced-filter-filterresult-c.md) |
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [Filter](arkts-arkui-arkui-advanced-filter-filter-s.md) | Declare Filter.The Filter is used in scenarios where multi-dimensional filtering is required. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Filter](arkts-arkui-arkui-advanced-filter-filter-s.md) |
+
+### Interfaces
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FilterParams](arkts-arkui-arkui-advanced-filter-filterparams-i.md) |
+| [FilterResult](arkts-arkui-arkui-advanced-filter-filterresult-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [FilterType](arkts-arkui-arkui-advanced-filter-filtertype-e.md) | Declare FilterType @enum { FilterType } |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FilterType](arkts-arkui-arkui-advanced-filter-filtertype-e.md) |
 
+### Types
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [OnFilterChangedCallback](arkts-arkui-onfilterchangedcallback-t.md) |

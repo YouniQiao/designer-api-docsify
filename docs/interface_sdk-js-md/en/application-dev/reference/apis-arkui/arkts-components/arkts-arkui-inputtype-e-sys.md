@@ -4,7 +4,7 @@ Sets the single-line text box type.
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum InputType--><!--Device-unnamed-declare enum InputType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,10 @@ ScreenLock Password entry mode.
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-InputType-SCREEN_LOCK_PASSWORD = 9--><!--Device-InputType-SCREEN_LOCK_PASSWORD = 9-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

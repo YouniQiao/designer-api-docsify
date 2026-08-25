@@ -21,37 +21,36 @@ Unwraps a key. This API uses a promise to return the result.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-huks-function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8Array): Promise<HuksReturnResult>--><!--Device-huks-function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8Array): Promise<HuksReturnResult>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Security.Huks.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| keyAlias | string | Yes | Alias of the key to be unwrapped. |
-| params | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Encryption type of the key to be imported. |
-| wrappedKey | Uint8Array | Yes | Ciphertext of the key to be exported. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| keyAlias | string | Yes |
+| params | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes |
+| [wrappedKey](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-kemencapresult-i.md) | Uint8Array | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | Promise that returns the operation result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
-| [801](../../errorcode-universal.md#801-api-not-supported) | api is not supported |
-| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
-| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
-| [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) | Failed to obtain the security information via UserIAM |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the input parameter is invalid |
-| [12000026](../errorcode-huks.md#12000026-secure-element-fault) | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [12000004](../errorcode-huks.md#12000004-file-error) |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) |
+| [12000012](../errorcode-huks.md#12000012-external-error) |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
+| [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
+| [12000026](../errorcode-huks.md#12000026-secure-element-fault) |

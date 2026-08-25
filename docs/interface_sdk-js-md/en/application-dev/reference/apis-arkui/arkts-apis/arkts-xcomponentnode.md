@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [XComponentNode](arkts-arkui-xcomponentnode-c.md) | Defines XComponent Node.@extends FrameNode |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [XComponentNode](arkts-arkui-xcomponentnode-c.md) |

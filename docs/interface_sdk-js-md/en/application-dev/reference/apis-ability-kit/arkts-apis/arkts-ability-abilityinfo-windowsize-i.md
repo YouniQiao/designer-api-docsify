@@ -3,9 +3,9 @@
 Describes the window size.  
 **Atomic service API**: This API can be used in atomic services since API version 11.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export interface WindowSize--><!--Device-unnamed-export interface WindowSize-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -17,13 +17,13 @@ readonly maxWindowHeight: long
 
 Maximum height of the window in free window mode. The unit is vp.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WindowSize-readonly maxWindowHeight: long--><!--Device-WindowSize-readonly maxWindowHeight: long-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -35,13 +35,13 @@ readonly maxWindowRatio: double
 
 Maximum aspect ratio of the window in free window mode. The value ranges from 0 to 1. An example value is 0.12.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WindowSize-readonly maxWindowRatio: double--><!--Device-WindowSize-readonly maxWindowRatio: double-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -53,13 +53,13 @@ readonly maxWindowWidth: long
 
 Maximum width of the window in free window mode. The unit is vp.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WindowSize-readonly maxWindowWidth: long--><!--Device-WindowSize-readonly maxWindowWidth: long-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -71,13 +71,13 @@ readonly minWindowHeight: long
 
 Minimum height of the window in free window mode. The unit is vp.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WindowSize-readonly minWindowHeight: long--><!--Device-WindowSize-readonly minWindowHeight: long-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -89,13 +89,13 @@ readonly minWindowRatio: double
 
 Minimum aspect ratio of the window in free window mode. The value ranges from 0 to 1. An example value is 0.5.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WindowSize-readonly minWindowRatio: double--><!--Device-WindowSize-readonly minWindowRatio: double-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -107,13 +107,12 @@ readonly minWindowWidth: long
 
 Minimum width of the window in free window mode. The unit is vp.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-WindowSize-readonly minWindowWidth: long--><!--Device-WindowSize-readonly minWindowWidth: long-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
-

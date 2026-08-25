@@ -4,7 +4,7 @@ USB设备ID信息。
 
 **起始版本：** 12
 
-<!--Device-usbManager-export interface UsbDeviceId--><!--Device-usbManager-export interface UsbDeviceId-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -26,9 +26,9 @@ productId: number
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-UsbDeviceId-productId: number--><!--Device-UsbDeviceId-productId: number-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -44,9 +44,8 @@ vendorId: number
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-UsbDeviceId-vendorId: number--><!--Device-UsbDeviceId-vendorId: number-End-->
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
-

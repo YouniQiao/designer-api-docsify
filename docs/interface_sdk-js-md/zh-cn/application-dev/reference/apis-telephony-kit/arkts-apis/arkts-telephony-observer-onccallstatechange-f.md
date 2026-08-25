@@ -16,28 +16,28 @@ function onCCallStateChange(callback: Callback<CCallStateInfo>, options?: Observ
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.MANAGE_CALL_FOR_DEVICES
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-observer-function onCCallStateChange(callback: Callback<CCallStateInfo>, options?: ObserverOptions): void--><!--Device-observer-function onCCallStateChange(callback: Callback<CCallStateInfo>, options?: ObserverOptions): void-End-->
+**需要权限：** ohos.permission.MANAGE_CALL_FOR_DEVICES
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CCallStateInfo](arkts-telephony-observer-ccallstateinfo-i.md)&gt; | 是 | 回调函数，返回通话状态信息对象。<br/>应用可获取到CCallState。<br/> |
-| options | ObserverOptions | 否 | 电话相关事件订阅参数可选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CCallStateInfo](arkts-telephony-observer-ccallstateinfo-i.md)&gt; | 是 |
+| options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [8800001](../errorcode-telephony.md#8800001-输入参数不在处理范围内) | Invalid parameter value. |
-| [8800002](../errorcode-telephony.md#8800002-服务连接失败) | Service connection failed. |
-| [8800003](../errorcode-telephony.md#8800003-系统内部错误) | System internal error. |
-| [8800999](../errorcode-telephony.md#8800999-内部错误) | Unknown error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [8800001](../errorcode-telephony.md#8800001-输入参数不在处理范围内) |
+| [8800002](../errorcode-telephony.md#8800002-服务连接失败) |
+| [8800003](../errorcode-telephony.md#8800003-系统内部错误) |
+| [8800999](../errorcode-telephony.md#8800999-内部错误) |
 
 **示例**
 
@@ -54,4 +54,3 @@ let options: observer.ObserverOptions = {
 observer.onCCallStateChange(callback, options);
 observer.onCCallStateChange(callback);
 ```
-

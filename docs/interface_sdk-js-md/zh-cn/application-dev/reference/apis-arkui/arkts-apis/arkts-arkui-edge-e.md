@@ -4,7 +4,7 @@ Edge.@enum { number }
 
 **起始版本：** 11
 
-<!--Device-unnamed-declare enum Edge--><!--Device-unnamed-declare enum Edge-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ The top is centered horizontally.
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-Edge-Top--><!--Device-Edge-Top-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,9 @@ Center horizontal and vertical.
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-Edge-Center--><!--Device-Edge-Center-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,9 +50,9 @@ The bottom is centered horizontally.
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-Edge-Bottom--><!--Device-Edge-Bottom-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,9 +66,9 @@ Cross axis direction text baseline alignment.
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-Edge-Baseline--><!--Device-Edge-Baseline-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,9 +82,9 @@ Align the head of the cross axis direction.
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-Edge-Start--><!--Device-Edge-Start-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,9 +98,9 @@ Middle
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-Edge-Middle--><!--Device-Edge-Middle-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -114,9 +114,8 @@ Align the head of the cross axis direction.
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-Edge-End--><!--Device-Edge-End-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,7 +4,7 @@ Authorization status information.
 
 **Since:** 26.0.0
 
-<!--Device-abilityToolAccessCtrl-interface AuthStatusInfo--><!--Device-abilityToolAccessCtrl-interface AuthStatusInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -27,7 +27,7 @@ Authorization status.
 
 **Since:** 26.0.0
 
-<!--Device-AuthStatusInfo-authStatus?: AuthStatus--><!--Device-AuthStatusInfo-authStatus?: AuthStatus-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -36,18 +36,17 @@ Authorization status.
 ## flag
 
 ```TypeScript
-flag?: long
+flag?: number
 ```
 
 Authorization flag. Value range: (-∞,+∞).
 
-**Type:** long
+**Type:** number
 
 **Since:** 26.0.0
 
-<!--Device-AuthStatusInfo-flag?: long--><!--Device-AuthStatusInfo-flag?: long-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
-

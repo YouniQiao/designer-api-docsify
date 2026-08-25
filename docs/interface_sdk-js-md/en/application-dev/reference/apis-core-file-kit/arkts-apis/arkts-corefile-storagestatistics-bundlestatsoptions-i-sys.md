@@ -4,7 +4,7 @@ Options for obtaining the bundle statistics.
 
 **Since:** 26.1.0
 
-<!--Device-storageStatistics-export interface BundleStatsOptions--><!--Device-storageStatistics-export interface BundleStatsOptions-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -24,13 +24,13 @@ index?: int
 
 Index of an application clone. The default value is **0**, which indicates the application itself. When an application clone is created, an index is assigned from 1 sequentially to **appIndex** of [BundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourceinfo-i-sys.md).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-BundleStatsOptions-index?: int--><!--Device-BundleStatsOptions-index?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -48,11 +48,10 @@ Flag for obtaining the bundle statistics.
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-BundleStatsOptions-statFlag?: GetBundleStatsFlag--><!--Device-BundleStatsOptions-statFlag?: GetBundleStatsFlag-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **System API:** This is a system API.
-

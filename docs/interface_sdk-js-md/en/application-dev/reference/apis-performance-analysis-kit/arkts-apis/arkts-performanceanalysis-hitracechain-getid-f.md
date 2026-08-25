@@ -14,17 +14,17 @@ function getId(): HiTraceId
 
 Obtains the trace ID. This API returns the result synchronously.Obtains the HiTrace ID in the TLS of the current thread.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-hiTraceChain-function getId(): HiTraceId--><!--Device-hiTraceChain-function getId(): HiTraceId-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | HiTraceId** instance. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) |
 
 **Examples**
 
@@ -40,4 +40,3 @@ if (curTraceId.chainId != traceId.chainId) {
 // End the call chain trace after the service logic is executed for several times.
 hiTraceChain.end(traceId);
 ```
-

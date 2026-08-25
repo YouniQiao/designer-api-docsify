@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-unnamed-export declare interface FocusMoveResult--><!--Device-unnamed-export declare interface FocusMoveResult-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -22,7 +22,7 @@ result: FocusMoveResultCode
 
 **起始版本：** 23
 
-<!--Device-FocusMoveResult-result: FocusMoveResultCode--><!--Device-FocusMoveResult-result: FocusMoveResultCode-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -40,9 +40,8 @@ target: Array<AccessibilityElement>
 
 **起始版本：** 23
 
-<!--Device-FocusMoveResult-target: Array<AccessibilityElement>--><!--Device-FocusMoveResult-target: Array<AccessibilityElement>-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
-

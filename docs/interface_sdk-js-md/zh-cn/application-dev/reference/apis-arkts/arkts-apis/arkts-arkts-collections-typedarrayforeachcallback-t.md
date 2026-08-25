@@ -9,17 +9,16 @@ ArkTS TypedArray遍历函数类型，被TypedArray类的'forEach'接口使用。
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-collections-type TypedArrayForEachCallback<ElementType, ArrayType> =    (value: ElementType, index: number, array: ArrayType) => void--><!--Device-collections-type TypedArrayForEachCallback<ElementType, ArrayType> =    (value: ElementType, index: number, array: ArrayType) => void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ElementType | 是 | 当前遍历的ArkTS TypedArray元素。 |
-| index | number | 是 | 当前遍历的ArkTS TypedArray元素索引，从0开始。 |
-| array | ArrayType | 是 | 当前遍历的ArkTS TypedArray实例。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | ElementType | 是 |
+| index | number | 是 |
+| array | ArrayType | 是 |

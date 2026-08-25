@@ -2,9 +2,9 @@
 
 启动动画配置，仅对全屏应用生效。不同应用间跳转场景不生效，仍保持系统默认动效。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-window-interface StartAnimationSystemParams--><!--Device-window-interface StartAnimationSystemParams-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -26,9 +26,9 @@ animationConfig?: WindowAnimationConfig
 
 **类型：** [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-StartAnimationSystemParams-animationConfig?: WindowAnimationConfig--><!--Device-StartAnimationSystemParams-animationConfig?: WindowAnimationConfig-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -44,11 +44,10 @@ type: AnimationType
 
 **类型：** [AnimationType](arkts-arkui-window-animationtype-e.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-StartAnimationSystemParams-type: AnimationType--><!--Device-StartAnimationSystemParams-type: AnimationType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
 **系统接口：** 此接口为系统接口。
-

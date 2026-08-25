@@ -6,11 +6,11 @@ Defines XComponent Node.@extends FrameNode
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 12
 
 **Substitutes:** XComponent
-
-<!--Device-unnamed-export declare class XComponentNode--><!--Device-unnamed-export declare class XComponentNode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,27 +24,27 @@ Set the render type of the builderNode.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 12
 
 **Substitutes:** appendChild
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-XComponentNode-changeRenderType(type: NodeRenderType): boolean--><!--Device-XComponentNode-changeRenderType(type: NodeRenderType): boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md) | Yes | render type |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns if change the render type successfully. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## constructor
 
@@ -57,25 +57,25 @@ constructor.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 12
 
 **Substitutes:** createNode
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-XComponentNode-constructor(uiContext: UIContext, options: RenderOptions,    id: string, type: XComponentType, libraryName?: string)--><!--Device-XComponentNode-constructor(uiContext: UIContext, options: RenderOptions,    id: string, type: XComponentType, libraryName?: string)-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UIContext used to create the FrameNode |
-| options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | Yes | Render options of the Builder Node |
-| id | string | Yes | XComponent id defined by the application |
-| type | XComponentType | Yes | XComponent type |
-| libraryName | string | No | The name of the library to be loaded by XComponent |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
+| options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | Yes |
+| id | string | Yes |
+| type | [XComponentType](arkts-arkui-enums-xcomponenttype-e.md) | Yes |
+| libraryName | string | No |
 
 ## onCreate
 
@@ -87,21 +87,21 @@ Called when the XComponent surface has been created.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 12
 
 **Substitutes:** onLoad
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-XComponentNode-onCreate(event?: Object): void--><!--Device-XComponentNode-onCreate(event?: Object): void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | Object | No | event from native when the library loaded |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | Object | No |
 
 ## onDestroy
 
@@ -113,13 +113,12 @@ Called when the XComponent surface has been destroyed.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 12
 
 **Substitutes:** onDestroy
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-XComponentNode-onDestroy(): void--><!--Device-XComponentNode-onDestroy(): void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

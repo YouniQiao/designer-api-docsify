@@ -7,9 +7,9 @@ Checks whether a bundle has been installed.
 
 **Since:** 3
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface CheckPackageHasInstalledOptions--><!--Device-unnamed-export interface CheckPackageHasInstalledOptions-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -18,6 +18,67 @@ Checks whether a bundle has been installed.
 ```TypeScript
 import { Package, CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from '@kit.AbilityKit';
 ```
+
+## complete
+
+```TypeScript
+complete?: () => void
+```
+
+Called when API call is complete.
+
+**Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
+**Deprecated since:** 9
+
+**System capability:** SystemCapability.BundleManager.BundleFramework
+
+## fail
+
+```TypeScript
+fail?: (data: any, code: number) => void
+```
+
+Called when API call has failed.
+
+**Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
+**Deprecated since:** 9
+
+**System capability:** SystemCapability.BundleManager.BundleFramework
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | any | Yes |
+| code | number | Yes |
+
+## success
+
+```TypeScript
+success?: (data: CheckPackageHasInstalledResponse) => void
+```
+
+Called when API call is successful.
+
+**Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
+**Deprecated since:** 9
+
+**System capability:** SystemCapability.BundleManager.BundleFramework
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | [CheckPackageHasInstalledResponse](arkts-ability-system-package-checkpackagehasinstalledresponse-i.md) | Yes |
 
 ## bundleName
 
@@ -31,63 +92,8 @@ Bundle name.
 
 **Since:** 3
 
-**Deprecated since:** 9
-
-<!--Device-CheckPackageHasInstalledOptions-bundleName: string--><!--Device-CheckPackageHasInstalledOptions-bundleName: string-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework
-
-## complete
-
-```TypeScript
-complete?: () => void
-```
-
-Called when API call is complete.
-
-**Type:** () =&gt; void
-
-**Since:** 3
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
-<!--Device-CheckPackageHasInstalledOptions-complete?: () => void--><!--Device-CheckPackageHasInstalledOptions-complete?: () => void-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework
-
-## fail
-
-```TypeScript
-fail?: (data: any, code: number) => void
-```
-
-Called when API call has failed.
-
-**Type:** (data: any, code: number) =&gt; void
-
-**Since:** 3
-
-**Deprecated since:** 9
-
-<!--Device-CheckPackageHasInstalledOptions-fail?: (data: any, code: number) => void--><!--Device-CheckPackageHasInstalledOptions-fail?: (data: any, code: number) => void-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework
-
-## success
-
-```TypeScript
-success?: (data: CheckPackageHasInstalledResponse) => void
-```
-
-Called when API call is successful.
-
-**Type:** (data: CheckPackageHasInstalledResponse) =&gt; void
-
-**Since:** 3
-
-**Deprecated since:** 9
-
-<!--Device-CheckPackageHasInstalledOptions-success?: (data: CheckPackageHasInstalledResponse) => void--><!--Device-CheckPackageHasInstalledOptions-success?: (data: CheckPackageHasInstalledResponse) => void-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework
-

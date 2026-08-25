@@ -2,9 +2,9 @@
 
 Defines the OS upgrade status.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-eSIM-export enum OsuStatus--><!--Device-eSIM-export enum OsuStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -18,9 +18,9 @@ EUICC_UPGRADE_IN_PROGRESS = 1
 
 Upgrading.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-OsuStatus-EUICC_UPGRADE_IN_PROGRESS = 1--><!--Device-OsuStatus-EUICC_UPGRADE_IN_PROGRESS = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -34,9 +34,9 @@ EUICC_UPGRADE_FAILED = 2
 
 Upgrade failed.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-OsuStatus-EUICC_UPGRADE_FAILED = 2--><!--Device-OsuStatus-EUICC_UPGRADE_FAILED = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -50,9 +50,9 @@ EUICC_UPGRADE_SUCCESSFUL = 3
 
 Update succeeded.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-OsuStatus-EUICC_UPGRADE_SUCCESSFUL = 3--><!--Device-OsuStatus-EUICC_UPGRADE_SUCCESSFUL = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -66,9 +66,9 @@ EUICC_UPGRADE_ALREADY_LATEST = 4
 
 Already the latest version.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-OsuStatus-EUICC_UPGRADE_ALREADY_LATEST = 4--><!--Device-OsuStatus-EUICC_UPGRADE_ALREADY_LATEST = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -82,11 +82,10 @@ EUICC_UPGRADE_SERVICE_UNAVAILABLE = 5
 
 Update service unavailable.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-OsuStatus-EUICC_UPGRADE_SERVICE_UNAVAILABLE = 5--><!--Device-OsuStatus-EUICC_UPGRADE_SERVICE_UNAVAILABLE = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
-

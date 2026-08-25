@@ -1,15 +1,13 @@
 # SymbolConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface SymbolConstructor--><!--Device-unnamed-interface SymbolConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (description?: string | number): symbol
@@ -17,20 +15,18 @@
 
 Returns a new unique Symbol value.
 
-**Since:** -1
-
-<!--Device-SymbolConstructor-(description?: string | number): symbol--><!--Device-SymbolConstructor-(description?: string | number): symbol-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| description | string \| number | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| description | string \| number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## for
 
 ```TypeScript
@@ -39,20 +35,18 @@ for(key: string): symbol
 
 Returns a Symbol object from the global symbol registry matching the given key if found. Otherwise, returns a new symbol with this key.
 
-**Since:** -1
-
-<!--Device-SymbolConstructor-for(key: string): symbol--><!--Device-SymbolConstructor-for(key: string): symbol-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## keyFor
 
 ```TypeScript
@@ -61,20 +55,18 @@ keyFor(sym: symbol): string | undefined
 
 Returns a key from the global symbol registry matching the given Symbol if found. Otherwise, returns a undefined.
 
-**Since:** -1
-
-<!--Device-SymbolConstructor-keyFor(sym: symbol): string | undefined--><!--Device-SymbolConstructor-keyFor(sym: symbol): string | undefined-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sym | symbol | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sym | symbol | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## prototype
 
 ```TypeScript
@@ -85,7 +77,4 @@ A reference to the prototype.
 
 **Type:** Symbol
 
-**Since:** -1
-
-<!--Device-SymbolConstructor-readonly prototype: Symbol--><!--Device-SymbolConstructor-readonly prototype: Symbol-End-->
-
+**ArkTS mode:** 

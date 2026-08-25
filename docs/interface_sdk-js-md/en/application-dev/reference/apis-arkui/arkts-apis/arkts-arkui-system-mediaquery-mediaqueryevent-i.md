@@ -1,12 +1,10 @@
 # MediaQueryEvent
 
-Defines the MediaQuery event.@interface MediaQueryEvent
+Defines a media query event.
 
-**Since:** 23
+**Since:** 3
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export interface MediaQueryEvent--><!--Device-unnamed-export interface MediaQueryEvent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 3; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,17 +20,14 @@ import { SystemMediaQuery, MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 matches: boolean
 ```
 
-The result of match result.
+Matching result. The value **true** means that the query condition is met, and **false** means the opposite.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 3
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 3; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MediaQueryEvent-matches: boolean--><!--Device-MediaQueryEvent-matches: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

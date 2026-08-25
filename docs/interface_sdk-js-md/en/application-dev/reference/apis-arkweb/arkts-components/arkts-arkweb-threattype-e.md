@@ -4,7 +4,7 @@ Enumerates the website threat types.
 
 **Since:** 11
 
-<!--Device-unnamed-declare enum ThreatType--><!--Device-unnamed-declare enum ThreatType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,9 +18,9 @@ Illegal website.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-ThreatType-THREAT_ILLEGAL = 0--><!--Device-ThreatType-THREAT_ILLEGAL = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -34,9 +34,9 @@ Fraudulent website.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-ThreatType-THREAT_FRAUD = 1--><!--Device-ThreatType-THREAT_FRAUD = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -50,9 +50,9 @@ Website that poses security risks.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-ThreatType-THREAT_RISK = 2--><!--Device-ThreatType-THREAT_RISK = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -66,9 +66,9 @@ Website suspected to contain unsafe content.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-ThreatType-THREAT_WARNING = 3--><!--Device-ThreatType-THREAT_WARNING = 3-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -82,7 +82,7 @@ Website that passes the security check and no risk is found.
 
 **Since:** 21
 
-<!--Device-ThreatType-THREAT_NONE = 4--><!--Device-ThreatType-THREAT_NONE = 4-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -96,7 +96,6 @@ Website that does not perform security check.
 
 **Since:** 21
 
-<!--Device-ThreatType-THREAT_UNPROCESSED = 5--><!--Device-ThreatType-THREAT_UNPROCESSED = 5-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

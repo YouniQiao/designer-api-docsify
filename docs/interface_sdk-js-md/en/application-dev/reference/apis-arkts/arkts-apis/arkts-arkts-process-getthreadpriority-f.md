@@ -16,25 +16,25 @@ Obtains the thread priority based on the specified TID.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getThreadPriority](arkts-arkts-process-processmanager-c.md#getthreadpriority)
-
-<!--Device-process-function getThreadPriority(v: number): number--><!--Device-process-function getThreadPriority(v: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| v | number | Yes | TID. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| v | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Priority of the thread. The priority depends on the operating system. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -48,4 +48,3 @@ let pro = new process.ProcessManager();
 let tid = process.tid;
 let pres = pro.getThreadPriority(tid);
 ```
-

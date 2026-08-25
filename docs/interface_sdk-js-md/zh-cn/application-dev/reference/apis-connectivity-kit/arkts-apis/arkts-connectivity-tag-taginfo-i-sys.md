@@ -2,9 +2,9 @@
 
 在对相关Tag类型卡片进行读写之前，必须先获取[TagInfo](arkts-connectivity-tag-taginfo-i.md)相关属性值，以确认设备读取到的Tag卡片支持哪些技术类型。这样Tag应用程序才能调用正确的接口和所读取到的Tag卡片进行通信。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-tag-export interface TagInfo--><!--Device-tag-export interface TagInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -25,11 +25,11 @@ extrasData: PacMap[]
 
 **类型：** [PacMap](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-pacmap-i.md)[]
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
-
-<!--Device-TagInfo-extrasData: PacMap[]--><!--Device-TagInfo-extrasData: PacMap[]-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -46,11 +46,11 @@ NFC服务进程的远端对象，用于客户端和服务之间的接口通信�
 
 **类型：** rpc.RemoteObject
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
-
-<!--Device-TagInfo-remoteTagService: rpc.RemoteObject--><!--Device-TagInfo-remoteTagService: rpc.RemoteObject-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -65,15 +65,14 @@ tagRfDiscId: int
 标签发现时分配的ID值。  
 **系统接口：** 此接口为系统接口。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
-
-<!--Device-TagInfo-tagRfDiscId: int--><!--Device-TagInfo-tagRfDiscId: int-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **系统接口：** 此接口为系统接口。
-

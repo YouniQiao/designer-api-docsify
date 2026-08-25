@@ -4,9 +4,7 @@ Represent JSON class
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-unnamed-export class JSON--><!--Device-unnamed-export class JSON-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,26 +23,24 @@ Parses a JSON string to the specified Type
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-parse<T>(text: string, type: Type): T | null | undefined--><!--Device-JSON-parse<T>(text: string, type: Type): T | null | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| text | string | Yes | JSON string to parse |
-| type | [Type](../../apis-default/arkts-apis/arkts-util-type-e.md) | Yes | Target type for parsing |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| text | string | Yes |
+| type | [Type](arkts-arkts-util-type-e.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T \| null \| undefined | Parsed object |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T \| null \| undefined |
 
 ## parse
 
@@ -57,28 +53,26 @@ Parses a JSON string to the specified Type with reviver function
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-parse<T>(text: string, reviver: ((key: string, value: Any) => Any) | undefined, type: Type,        options?: jsonx.ParseOptions): T | null | undefined--><!--Device-JSON-parse<T>(text: string, reviver: ((key: string, value: Any) => Any) | undefined, type: Type,        options?: jsonx.ParseOptions): T | null | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| text | string | Yes | JSON string to parse |
-| reviver | ((key: string, value: Any) =&gt; Any) \| undefined | Yes | Function to transform values |
-| type | [Type](../../apis-default/arkts-apis/arkts-util-type-e.md) | Yes | Target type for parsing |
-| options | jsonx.ParseOptions | No | Parse options |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| text | string | Yes |
+| reviver | ((key: string, value: Any) = & gt; Any) \ | undefined | Yes |
+| type | [Type](arkts-arkts-util-type-e.md) | Yes |
+| options | jsonx.ParseOptions | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T \| null \| undefined | Parsed object |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T \| null \| undefined |
 
 ## parse
 
@@ -90,26 +84,24 @@ Parses a JSON string to the specified Class
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-parse<T>(json: string, type: Class): T | null | undefined--><!--Device-JSON-parse<T>(json: string, type: Class): T | null | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| json | string | Yes | JSON string to parse |
-| type | [Class](arkts-arkts-class-c.md) | Yes | Target class for parsing |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [json](arkts-util-json.md) | string | Yes |
+| type | [Class](arkts-arkts-class-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T \| null \| undefined | Parsed object |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T \| null \| undefined |
 
 ## parse
 
@@ -122,28 +114,26 @@ Parses a JSON string to the specified Class with reviver function
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-parse<T>(json: string, reviver: ((key: string, value: Any) => Any) | undefined, type: Class,        options?: jsonx.ParseOptions): T | null | undefined--><!--Device-JSON-parse<T>(json: string, reviver: ((key: string, value: Any) => Any) | undefined, type: Class,        options?: jsonx.ParseOptions): T | null | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| json | string | Yes | JSON string to parse |
-| reviver | ((key: string, value: Any) =&gt; Any) \| undefined | Yes | Function to transform values |
-| type | [Class](arkts-arkts-class-c.md) | Yes | Target class for parsing |
-| options | jsonx.ParseOptions | No | Parse options |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [json](arkts-util-json.md) | string | Yes |
+| reviver | ((key: string, value: Any) = & gt; Any) \ | undefined | Yes |
+| type | [Class](arkts-arkts-class-c.md) | Yes |
+| options | jsonx.ParseOptions | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T \| null \| undefined | Parsed object |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T \| null \| undefined |
 
 ## parseJsonArray
 
@@ -155,26 +145,24 @@ Parses a JSON object string and returns an Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-public static parseJsonArray(text: string, options?: jsonx.ParseOptions): Array<JsonRecordType>--><!--Device-JSON-public static parseJsonArray(text: string, options?: jsonx.ParseOptions): Array<JsonRecordType>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| text | string | Yes | The JSON string to parse |
-| options | jsonx.ParseOptions | No | BigInt parsing options |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| text | string | Yes |
+| options | jsonx.ParseOptions | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;[JsonRecordType](arkts-arkts-jsonrecordtype-t.md)&gt; | The parsed Array object |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;[JsonRecordType](arkts-arkts-jsonrecordtype-t.md)&gt; |
 
 ## parseJsonElement
 
@@ -186,26 +174,24 @@ Parses a JSON string and returns a JsonElement.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-parseJsonElement(text: string, options?: jsonx.ParseOptions): jsonx.JsonElement--><!--Device-JSON-parseJsonElement(text: string, options?: jsonx.ParseOptions): jsonx.JsonElement-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| text | string | Yes | The JSON string to parse |
-| options | jsonx.ParseOptions | No | BigInt parsing options |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| text | string | Yes |
+| options | jsonx.ParseOptions | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| jsonx.JsonElement | The parsed JSON element |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| jsonx.JsonElement |
 
 ## parseJsonElement
 
@@ -218,27 +204,25 @@ Parses a JSON string with a reviver function and returns a JsonElement.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-parseJsonElement(text: string, reviver: (key: string, value: jsonx.JsonElement) => jsonx.JsonElement,        options?: jsonx.ParseOptions): jsonx.JsonElement--><!--Device-JSON-parseJsonElement(text: string, reviver: (key: string, value: jsonx.JsonElement) => jsonx.JsonElement,        options?: jsonx.ParseOptions): jsonx.JsonElement-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| text | string | Yes | The JSON string to parse |
-| reviver | (key: string, value: jsonx.JsonElement) =&gt; jsonx.JsonElement | Yes | Function to transform values |
-| options | jsonx.ParseOptions | No | BigInt parsing options |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| text | string | Yes |
+| reviver | (key: string, value: jsonx.JsonElement) = & gt; jsonx.JsonElement | Yes |
+| options | jsonx.ParseOptions | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| jsonx.JsonElement | The parsed JSON element |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| jsonx.JsonElement |
 
 ## parseJsonRecord
 
@@ -250,26 +234,24 @@ Parses a JSON object string and returns a Record.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-public static parseJsonRecord(text: string, options?: jsonx.ParseOptions): Record<string, JsonRecordType>--><!--Device-JSON-public static parseJsonRecord(text: string, options?: jsonx.ParseOptions): Record<string, JsonRecordType>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| text | string | Yes | The JSON string to parse |
-| options | jsonx.ParseOptions | No | BigInt parsing options |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| text | string | Yes |
+| options | jsonx.ParseOptions | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Record&lt;string, [JsonRecordType](arkts-arkts-jsonrecordtype-t.md)&gt; | The parsed Record object |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Record&lt;string, [JsonRecordType](arkts-arkts-jsonrecordtype-t.md)&gt; |
 
 ## parseUpdate
 
@@ -281,26 +263,24 @@ Parses a JSON string and populates the fields of an existing instance. Unlike pa
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-parseUpdate<T>(json: string, instance: T): T--><!--Device-JSON-parseUpdate<T>(json: string, instance: T): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| json | string | Yes | JSON string to parse |
-| instance | T | Yes | Existing instance whose fields will be populated |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [json](arkts-util-json.md) | string | Yes |
+| instance | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | The same instance after population |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 ## parseUpdate
 
@@ -317,28 +297,26 @@ Parses a JSON string and populates the fields of an existing instance, with an o
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-parseUpdate<T>(        json: string,        reviver: ((key: string, value: Any) => Any) | undefined,        instance: T,        options?: jsonx.ParseOptions    ): T--><!--Device-JSON-parseUpdate<T>(        json: string,        reviver: ((key: string, value: Any) => Any) | undefined,        instance: T,        options?: jsonx.ParseOptions    ): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| json | string | Yes | JSON string to parse. |
-| reviver | ((key: string, value: Any) =&gt; Any) \| undefined | Yes | Optional function to transform each parsed value, or undefined. |
-| instance | T | Yes | Existing instance whose fields will be populated. |
-| options | jsonx.ParseOptions | No | Optional ParseOptions (e.g. bigIntMode). If not specified, default parsing options are applied. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [json](arkts-util-json.md) | string | Yes |
+| reviver | ((key: string, value: Any) = & gt; Any) \ | undefined | Yes |
+| instance | T | Yes |
+| options | jsonx.ParseOptions | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | The same instance after population |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 ## stringify
 
@@ -350,25 +328,23 @@ Converts byte to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(d: byte): string--><!--Device-JSON-stringify(d: byte): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | byte | Yes | byte to be converted to a JSON as a Number |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of byte |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -380,25 +356,23 @@ Converts char to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(d: char): string--><!--Device-JSON-stringify(d: char): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | char | Yes | char to be converted to a JSON as a string |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of char |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -410,25 +384,23 @@ Converts short to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(d: short): string--><!--Device-JSON-stringify(d: short): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | short | Yes | short to be converted to a JSON as a Number |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of short |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -440,25 +412,23 @@ Converts int to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(d: int): string--><!--Device-JSON-stringify(d: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | int | Yes | int to be converted to a JSON as a Number <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of int |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -470,25 +440,23 @@ Converts long to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(d: long): string--><!--Device-JSON-stringify(d: long): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | long | Yes | long to be converted to a JSON as a Number |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of long |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -500,25 +468,23 @@ Converts float to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(d: float): string--><!--Device-JSON-stringify(d: float): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | float | Yes | float to be converted to a JSON as a Number |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of float |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -530,25 +496,23 @@ Converts double to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(d: double): string--><!--Device-JSON-stringify(d: double): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | double | Yes | double to be converted to a JSON as a Number |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of double |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -560,25 +524,23 @@ Converts bigint to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(d: bigint): string--><!--Device-JSON-stringify(d: bigint): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | bigint | Yes | bigint to be converted to a JSON as a Number |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | bigint | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of bigint |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -590,25 +552,23 @@ Converts boolean to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(d: boolean): string--><!--Device-JSON-stringify(d: boolean): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | boolean | Yes | boolean to be converted to a JSON as a Boolean literal |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of boolean |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -620,25 +580,23 @@ Converts string to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(d: string): string--><!--Device-JSON-stringify(d: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | string | Yes | string to be converted to a JSON as a string |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -650,25 +608,23 @@ Converts bytes array to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(d: FixedArray<byte>): string--><!--Device-JSON-stringify(d: FixedArray<byte>): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | FixedArray&lt;byte&gt; | Yes | bytes array to be converted to a JSON as an Array of Numbers |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | FixedArray & lt;byte & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of bytes array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -680,25 +636,23 @@ Converts chars array to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(d: FixedArray<char>): string--><!--Device-JSON-stringify(d: FixedArray<char>): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | FixedArray&lt;char&gt; | Yes | chars array to be converted to a JSON as an Array of Strings |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | FixedArray & lt;char & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of chars array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -710,25 +664,23 @@ Converts shorts array to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(d: FixedArray<short>): string--><!--Device-JSON-stringify(d: FixedArray<short>): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | FixedArray&lt;short&gt; | Yes | shorts array to be converted to a JSON as an Array of Numbers |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | FixedArray & lt;short & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of shorts array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -740,25 +692,23 @@ Converts ints array to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(d: FixedArray<int>): string--><!--Device-JSON-stringify(d: FixedArray<int>): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | FixedArray&lt;int&gt; | Yes | ints array to be converted to a JSON as an Array of Numbers |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | FixedArray & lt;int & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of ints array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -770,25 +720,23 @@ Converts longs array to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(d: FixedArray<long>): string--><!--Device-JSON-stringify(d: FixedArray<long>): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | FixedArray&lt;long&gt; | Yes | longs array to be converted to a JSON as an Array of Numbers |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | FixedArray & lt;long & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of longs array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -800,25 +748,23 @@ Converts array of floats to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(d: FixedArray<float>): string--><!--Device-JSON-stringify(d: FixedArray<float>): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | FixedArray&lt;float&gt; | Yes | array of float to be converted to a JSON as an Array of Numbers |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | FixedArray & lt;float & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of array of floats |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -830,25 +776,23 @@ Converts doubles array to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(d: FixedArray<double>): string--><!--Device-JSON-stringify(d: FixedArray<double>): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | FixedArray&lt;double&gt; | Yes | doubles array to be converted to a JSON as an Array of Numbers |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | FixedArray & lt;double & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of doubles array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -860,25 +804,23 @@ Converts booleans array to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(d: FixedArray<boolean>): string--><!--Device-JSON-stringify(d: FixedArray<boolean>): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | FixedArray&lt;boolean&gt; | Yes | booleans array to be converted to a JSON as an Array of Boolean literals |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | FixedArray & lt;boolean & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of booleans array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -890,25 +832,23 @@ Converts Array of Double to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(d: Array<Double>): string--><!--Device-JSON-stringify(d: Array<Double>): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | Array&lt;Double&gt; | Yes | Array of Double to be converted |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | Array & lt;Double & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -920,25 +860,23 @@ Converts ArrayLike of Double to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(d: ArrayLike<Double>): string--><!--Device-JSON-stringify(d: ArrayLike<Double>): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | ArrayLike&lt;Double&gt; | Yes | ArrayLike of Double to be converted |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | ArrayLike & lt;Double & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of ArrayLike |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -950,25 +888,23 @@ Converts JsonReplacer to JSON format
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(obj: JsonReplacer): string--><!--Device-JSON-stringify(obj: JsonReplacer): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| obj | [JsonReplacer](arkts-arkts-json-jsonreplacer-i.md) | Yes | JsonReplacer object to be converted |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | [JsonReplacer](arkts-arkts-json-jsonreplacer-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -980,25 +916,23 @@ Converts an object to a JavaScript Object Notation (JSON) string.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(obj: Any): string--><!--Device-JSON-stringify(obj: Any): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| obj | Any | Yes | An object to be converted |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | Any | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of Object |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -1010,27 +944,25 @@ Converts an object to a JavaScript Object Notation (JSON) string.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(obj: Any, replacer: ((key: string, value: Any) => Any) | undefined | null, space?: string | int): string--><!--Device-JSON-stringify(obj: Any, replacer: ((key: string, value: Any) => Any) | undefined | null, space?: string | int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| obj | Any | Yes | An object to be converted. |
-| replacer | ((key: string, value: Any) =&gt; Any) \| undefined \| null | Yes | A that transforms the results. |
-| space | string \| int | No | If space is a string, the string is used as the indentation character for each level.If space is an integer, the specified number of spaces (up to a maximum of 10) is used for indentation.If not provided, no formatting is applied. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | Any | Yes |
+| replacer | ((key: string, value: Any) = & gt; Any) \ | undefined \| null | Yes |
+| space | string \| int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of Object |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -1042,27 +974,25 @@ Converts an object to a JavaScript Object Notation (JSON) string.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(obj: Any, replacer: FixedArray<double | string>, space?: int | string): string--><!--Device-JSON-stringify(obj: Any, replacer: FixedArray<double | string>, space?: int | string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| obj | Any | Yes | An object to be converted. |
-| replacer | FixedArray&lt;double \| string&gt; | Yes | An array of property names to include. |
-| space | int \| string | No | If space is a string, the string is used as the indentation character for each level.If space is an integer, the specified number of spaces (up to a maximum of 10) is used for indentation.If not provided, no formatting is applied. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | Any | Yes |
+| replacer | FixedArray & lt;double \ | string & gt; | Yes |
+| space | int \| string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of Object |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringify
 
@@ -1075,27 +1005,25 @@ Converts an object to a JavaScript Object Notation (JSON) string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringify(obj: Any, replacer: Array<double | string> | Array<string> | Array<double>,      space?: int | string): string--><!--Device-JSON-stringify(obj: Any, replacer: Array<double | string> | Array<string> | Array<double>,      space?: int | string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| obj | Any | Yes | An object to be converted. |
-| replacer | Array&lt;double \| string&gt; \| Array&lt;string&gt; \| Array&lt;double&gt; | Yes | An array of property names to include.<br>**Since:** 26.0.0 |
-| space | int \| string | No | A string or number for indentation. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | Any | Yes |
+| replacer | Array & lt;double \ | string & gt; \ | Array & lt;string & gt; \ | Array & lt;double & gt; | Yes |
+| space | int \| string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of Object |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringifyJsonElement
 
@@ -1107,25 +1035,23 @@ Converts a JsonElementSerializable to a JSON string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-public static stringifyJsonElement(elem: jsonx.JsonElementSerializable): string--><!--Device-JSON-public static stringifyJsonElement(elem: jsonx.JsonElementSerializable): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| elem | jsonx.JsonElementSerializable | Yes | The JsonElementDeserializable to stringify |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| elem | jsonx.JsonElementSerializable | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | The JSON string representation |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringifyJsonElement
 
@@ -1138,27 +1064,25 @@ Converts a JsonElementSerializable to a JSON string with custom formatting.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-public static stringifyJsonElement(elem: jsonx.JsonElementSerializable, replacer?: (double | string)[],        space?: int | string): string--><!--Device-JSON-public static stringifyJsonElement(elem: jsonx.JsonElementSerializable, replacer?: (double | string)[],        space?: int | string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| elem | jsonx.JsonElementSerializable | Yes | The JsonElementSerializable to stringify |
-| replacer | (double \| string)[] | No | An array with elements indicating names of the properties to include |
-| space | int \| string | No | A string or number for white space indentation |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| elem | jsonx.JsonElementSerializable | Yes |
+| replacer | (double \| string)[] | No |
+| space | int \| string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | The JSON string representation |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringifyJsonElement
 
@@ -1170,25 +1094,23 @@ Converts a JsonElement to a JSON string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-public static stringifyJsonElement(elem: jsonx.JsonElement): string--><!--Device-JSON-public static stringifyJsonElement(elem: jsonx.JsonElement): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| elem | jsonx.JsonElement | Yes | The JsonElement to stringify |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| elem | jsonx.JsonElement | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | The JSON string representation |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringifyJsonElement
 
@@ -1201,27 +1123,25 @@ Converts a JsonElement to a JSON string with custom formatting.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-public static stringifyJsonElement(elem: jsonx.JsonElement, replacer?: (double | string)[],        space?: int | string): string--><!--Device-JSON-public static stringifyJsonElement(elem: jsonx.JsonElement, replacer?: (double | string)[],        space?: int | string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| elem | jsonx.JsonElement | Yes | The JsonElement to stringify |
-| replacer | (double \| string)[] | No | An array with elements indicating names of the properties to include |
-| space | int \| string | No | A string or number for white space indentation |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| elem | jsonx.JsonElement | Yes |
+| replacer | (double \| string)[] | No |
+| space | int \| string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | The JSON string representation |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringifyWithGetters
 
@@ -1233,25 +1153,23 @@ Converts an object to a JavaScript Object Notation (JSON) string, invoking any i
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringifyWithGetters(obj: Any): string--><!--Device-JSON-stringifyWithGetters(obj: Any): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| obj | Any | Yes | : - An object to be converted. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | Any | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of Object, including annotated getter values |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringifyWithGetters
 
@@ -1266,27 +1184,25 @@ Converts an object to a JavaScript Object Notation (JSON) string, invoking any i
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringifyWithGetters(      obj: Any,      replacer: ((key: string, value: Any) => Any) | undefined | null,      space?: int | string): string--><!--Device-JSON-stringifyWithGetters(      obj: Any,      replacer: ((key: string, value: Any) => Any) | undefined | null,      space?: int | string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| obj | Any | Yes | : - An object to be converted. |
-| replacer | ((key: string, value: Any) =&gt; Any) \| undefined \| null | Yes | A function that transforms the results. |
-| space | int \| string | No | A string or number that's used to insert white space |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | Any | Yes |
+| replacer | ((key: string, value: Any) = & gt; Any) \ | undefined \| null | Yes |
+| space | int \| string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of Object, including annotated getter values |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## stringifyWithGetters
 
@@ -1301,25 +1217,22 @@ Converts an object to a JavaScript Object Notation (JSON) string, invoking any i
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JSON-stringifyWithGetters(      obj: Any,      replacer: Array<double | string> | Array<string> | Array<double>,      space?: int | string): string--><!--Device-JSON-stringifyWithGetters(      obj: Any,      replacer: Array<double | string> | Array<string> | Array<double>,      space?: int | string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| obj | Any | Yes | : - An object to be converted. |
-| replacer | Array&lt;double \| string&gt; \| Array&lt;string&gt; \| Array&lt;double&gt; | Yes | An array with elements indicating names of the properties in the object that should be included in the resulting JSON string. Annotated getter methods whose names appear in this array are also included. |
-| space | int \| string | No | A string or number that's used to insert white space |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | Any | Yes |
+| replacer | Array & lt;double \ | string & gt; \ | Array & lt;string & gt; \ | Array & lt;double & gt; | Yes |
+| space | int \| string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | JSON representation of Object, including annotated getter values |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |

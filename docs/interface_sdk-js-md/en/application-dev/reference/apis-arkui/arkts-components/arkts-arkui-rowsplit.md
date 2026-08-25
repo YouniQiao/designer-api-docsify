@@ -12,11 +12,10 @@ Creates a horizontal split layout container with dividers between child componen
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-RowSplitInterface-(): RowSplitAttribute--><!--Device-RowSplitInterface-(): RowSplitAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Summary
-

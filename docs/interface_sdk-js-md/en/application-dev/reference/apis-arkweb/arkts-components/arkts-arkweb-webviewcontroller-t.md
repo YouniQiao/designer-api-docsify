@@ -8,11 +8,10 @@ Defines methods for the web controller.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-unnamed-declare type WebviewController = import('../api/@ohos.web.webview').default.WebviewController--><!--Device-unnamed-declare type WebviewController = import('../api/@ohos.web.webview').default.WebviewController-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Property type:** import('../api/@ohos.web.webview').default.WebviewController
-

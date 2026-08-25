@@ -1,14 +1,12 @@
-# Material (System API)
+# Material
 
 System material object on the UI.
 
-**Since:** 23
+**Since:** 26.0.0
 
-<!--Device-uiMaterial-class Material--><!--Device-uiMaterial-class Material-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -26,11 +24,11 @@ A constructor used to create a **Material** object.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
-
-<!--Device-Material-constructor(options?: MaterialOptions)--><!--Device-Material-constructor(options?: MaterialOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,7 +36,6 @@ A constructor used to create a **Material** object.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [MaterialOptions](arkts-arkui-uimaterial-materialoptions-i-sys.md) | No | System material options, including the material type. <br>Default value: **{type:MaterialType.NONE}**. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [MaterialOptions](arkts-arkui-uimaterial-materialoptions-i-sys.md) | No |

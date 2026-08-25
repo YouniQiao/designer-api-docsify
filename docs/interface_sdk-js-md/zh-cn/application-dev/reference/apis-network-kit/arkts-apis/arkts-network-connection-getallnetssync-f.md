@@ -14,27 +14,27 @@ function getAllNetsSync(): Array<NetHandle>
 
 获取所有处于连接状态的网络列表。使用同步方式返回。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
-
-<!--Device-connection-function getAllNetsSync(): Array<NetHandle>--><!--Device-connection-function getAllNetsSync(): Array<NetHandle>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;NetHandle&gt; | 返回所有处于连接状态的网络列表。 |
+| 类型 |
+| --- |
+| Array & lt;NetHandle & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
 **示例**
 
@@ -43,4 +43,3 @@ import { connection } from '@kit.NetworkKit';
 
 let netHandle = connection.getAllNetsSync();
 ```
-

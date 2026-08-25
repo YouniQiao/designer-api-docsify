@@ -6,7 +6,7 @@ Defines the lazy vertical waterflow layout attribute.@extends LazyWaterFlowLayou
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export declare class LazyVWaterFlowLayoutAttribute--><!--Device-unnamed-export declare class LazyVWaterFlowLayoutAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,6 +15,35 @@ Defines the lazy vertical waterflow layout attribute.@extends LazyWaterFlowLayou
 ```TypeScript
 import { LazyVWaterFlowLayout, LazyVWaterFlowLayoutAttribute, LazyWaterFlowLayoutAttribute } from '@kit.ArkUI';
 ```
+
+## attributeModifier
+
+```TypeScript
+default attributeModifier(
+      modifier: AttributeModifier<LazyVWaterFlowLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this
+```
+
+Sets the attribute modifier.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| modifier | AttributeModifier&lt;[LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-c.md)&gt; \| AttributeModifier & lt;CommonMethod & gt; \ | undefined | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| this |
 
 ## columnsTemplate
 
@@ -26,23 +55,44 @@ This parameter specifies the number of columns in the current waterflow layout.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-LazyVWaterFlowLayoutAttribute-columnsTemplate(value: string | ItemFillPolicy | undefined): LazyVWaterFlowLayoutAttribute--><!--Device-LazyVWaterFlowLayoutAttribute-columnsTemplate(value: string | ItemFillPolicy | undefined): LazyVWaterFlowLayoutAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string \| ItemFillPolicy \| undefined | Yes | Number of columns in the layout. <br>Default value: '1fr'<br>When the value is a string, it sets the number of columns or the minimum column width of the current &lt;em&gt;LazyVWaterFlowLayout&lt;/em&gt;. For example, &lt;em&gt;columnsTemplate('1fr 1fr 2fr')&lt;/em&gt; divides the &lt;em&gt;LazyVWaterFlowLayout&lt;/em&gt; into 3 columns, splitting the width into 4 equal parts: column 1 takes 1 part, column 2 takes 1 part, and column 3 takes 2 parts. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | string \| ItemFillPolicy \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [LazyVWaterFlowLayoutAttribute](../../apis-default/arkts-apis/arkts-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-c.md) |
 
+## setLazyVWaterFlowLayoutOptions
+
+```TypeScript
+default setLazyVWaterFlowLayoutOptions(): this
+```
+
+Set LazyVWaterFlowLayout options.
+
+**Since:** 26.1.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.1.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| this |

@@ -14,37 +14,37 @@ function getCoreFileSyncState(uri: string): FileState
 
 同步方法获取云盘文件同步上行状态。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-cloudSync-function getCoreFileSyncState(uri: string): FileState--><!--Device-cloudSync-function getCoreFileSyncState(uri: string): FileState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uri | string | 是 | 待获取云盘文件同步上行状态的文件URI。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uri | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [FileState](arkts-corefile-cloudsync-filestate-e.md) | 返回给定云盘文件的同步上行状态。 |
+| 类型 |
+| --- |
+| [FileState](arkts-corefile-cloudsync-filestate-e.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13600001 | IPC error. Possible causes: <br>1.IPC failed or timed out. 2.Failed to load the service. |
-| 13900002 | No such file or directory. |
-| 13900004 | Interrupted system call |
-| 13900010 | Try again |
-| 13900012 | Permission denied by the file system |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 13900031 | Function not implemented |
-| 14000002 | Invalid URI. |
-| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 错误码ID |
+| --- |
+| 13600001 |
+| 13900002 |
+| 13900004 |
+| 13900010 |
+| 13900012 |
+| 13900020 |
+| 13900031 |
+| 14000002 |
+| 22400005 |
 
 **示例**
 
@@ -79,4 +79,3 @@ try {
   console.error(`getCoreFileSyncState failed with error ${error.code}, message is ${error.message}`);
 }
 ```
-

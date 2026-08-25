@@ -9,7 +9,7 @@ Particle acceleration.
 
 **Since:** 18
 
-<!--Device-unnamed-declare interface AccelerationOptions--><!--Device-unnamed-declare interface AccelerationOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,11 @@ Acceleration direction (in angles).Default value: **{range:[0.0,0.0]}**
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-AccelerationOptions-angle?: ParticlePropertyOptions<number, ACC_ANGLE_UPDATER>--><!--Device-AccelerationOptions-angle?: ParticlePropertyOptions<number, ACC_ANGLE_UPDATER>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,11 +50,10 @@ Acceleration speed.Default value: **{range:[0.0,0.0]}**
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-AccelerationOptions-speed?: ParticlePropertyOptions<number, ACC_SPEED_UPDATER>--><!--Device-AccelerationOptions-speed?: ParticlePropertyOptions<number, ACC_SPEED_UPDATER>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

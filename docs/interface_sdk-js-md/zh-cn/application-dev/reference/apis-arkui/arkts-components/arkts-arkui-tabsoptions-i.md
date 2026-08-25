@@ -4,7 +4,7 @@ Tabs组件参数，设置Tabs的页签位置，当前显示页签的索引，Tab
 
 **起始版本：** 15
 
-<!--Device-unnamed-declare interface TabsOptions--><!--Device-unnamed-declare interface TabsOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +28,11 @@ TabContent组件的 tabBar 属性为底部页签样式时不支持拖拽功能�
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TabsOptions-barModifier?: CommonModifier--><!--Device-TabsOptions-barModifier?: CommonModifier-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,9 +50,9 @@ barPosition?: BarPosition
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-TabsOptions-barPosition?: BarPosition--><!--Device-TabsOptions-barPosition?: BarPosition-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,9 +68,9 @@ controller?: TabsController
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-TabsOptions-controller?: TabsController--><!--Device-TabsOptions-controller?: TabsController-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -89,9 +89,8 @@ index?: number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-TabsOptions-index?: number--><!--Device-TabsOptions-index?: number-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

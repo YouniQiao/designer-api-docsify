@@ -7,7 +7,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-audio-interface AudioDebuggingManager--><!--Device-audio-interface AudioDebuggingManager-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -19,6 +19,12 @@ import { audio } from '@kit.AudioKit';
 
 ## printAppInfo
 
+ArkTS-Dyn:
+```TypeScript
+printAppInfo(fd: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 printAppInfo(fd: int): void
 ```
@@ -27,20 +33,26 @@ printAppInfo(fd: int): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AudioDebuggingManager-printAppInfo(fd: int): void--><!--Device-AudioDebuggingManager-printAppInfo(fd: int): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| fd | int | 是 | 文件描述符，指定快照信息的写入位置。小于0或不可写时，快照信息将输出到运行日志；否则输出到fd指向的文件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 ## printCapturerInfo
 
+ArkTS-Dyn:
+```TypeScript
+printCapturerInfo(capturer: AudioCapturer, fd: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 printCapturerInfo(capturer: AudioCapturer, fd: int): void
 ```
@@ -49,21 +61,27 @@ printCapturerInfo(capturer: AudioCapturer, fd: int): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AudioDebuggingManager-printCapturerInfo(capturer: AudioCapturer, fd: int): void--><!--Device-AudioDebuggingManager-printCapturerInfo(capturer: AudioCapturer, fd: int): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| capturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | 是 | 目标录音实例。 |
-| fd | int | 是 | 文件描述符，指定快照信息的写入位置。小于0或不可写时，快照信息将输出到运行日志；否则输出到fd指向的文件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| capturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | 是 |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 ## printLoopbackInfo
 
+ArkTS-Dyn:
+```TypeScript
+printLoopbackInfo(loopback: AudioLoopback, fd: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 printLoopbackInfo(loopback: AudioLoopback, fd: int): void
 ```
@@ -72,21 +90,27 @@ printLoopbackInfo(loopback: AudioLoopback, fd: int): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AudioDebuggingManager-printLoopbackInfo(loopback: AudioLoopback, fd: int): void--><!--Device-AudioDebuggingManager-printLoopbackInfo(loopback: AudioLoopback, fd: int): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| loopback | [AudioLoopback](arkts-audio-audio-audioloopback-i.md) | 是 | 目标耳返实例。 |
-| fd | int | 是 | 文件描述符，指定快照信息的写入位置。小于0或不可写时，快照信息将输出到运行日志；否则输出到fd指向的文件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| loopback | [AudioLoopback](arkts-audio-audio-audioloopback-i.md) | 是 |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 ## printRendererInfo
 
+ArkTS-Dyn:
+```TypeScript
+printRendererInfo(renderer: AudioRenderer, fd: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 printRendererInfo(renderer: AudioRenderer, fd: int): void
 ```
@@ -95,21 +119,27 @@ printRendererInfo(renderer: AudioRenderer, fd: int): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AudioDebuggingManager-printRendererInfo(renderer: AudioRenderer, fd: int): void--><!--Device-AudioDebuggingManager-printRendererInfo(renderer: AudioRenderer, fd: int): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| renderer | [AudioRenderer](arkts-audio-audio-audiorenderer-i.md) | 是 | 目标音频播放实例。 |
-| fd | int | 是 | 文件描述符，指定快照信息的写入位置。小于0或不可写时，快照信息将输出到运行日志；否则输出到fd指向的文件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| renderer | [AudioRenderer](arkts-audio-audio-audiorenderer-i.md) | 是 |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 ## printSessionInfo
 
+ArkTS-Dyn:
+```TypeScript
+printSessionInfo(session: AudioSessionManager, fd: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 printSessionInfo(session: AudioSessionManager, fd: int): void
 ```
@@ -118,16 +148,15 @@ printSessionInfo(session: AudioSessionManager, fd: int): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AudioDebuggingManager-printSessionInfo(session: AudioSessionManager, fd: int): void--><!--Device-AudioDebuggingManager-printSessionInfo(session: AudioSessionManager, fd: int): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| session | [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md) | 是 | 目标会话管理器实例。 |
-| fd | int | 是 | 文件描述符，指定快照信息的写入位置。小于0或不可写时，快照信息将输出到运行日志；否则输出到fd指向的文件。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| session | [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md) | 是 |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |

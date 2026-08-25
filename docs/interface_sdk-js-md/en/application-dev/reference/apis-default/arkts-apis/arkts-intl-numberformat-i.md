@@ -1,8 +1,6 @@
 # NumberFormat
 
-**Since:** -1
-
-<!--Device-Intl-interface NumberFormat--><!--Device-Intl-interface NumberFormat-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -15,31 +13,27 @@
 format(value: number): string
 ```
 
-**Since:** -1
-
-<!--Device-NumberFormat-format(value: number): string--><!--Device-NumberFormat-format(value: number): string-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## resolvedOptions
 
 ```TypeScript
 resolvedOptions(): ResolvedNumberFormatOptions
 ```
 
-**Since:** -1
-
-<!--Device-NumberFormat-resolvedOptions(): ResolvedNumberFormatOptions--><!--Device-NumberFormat-resolvedOptions(): ResolvedNumberFormatOptions-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

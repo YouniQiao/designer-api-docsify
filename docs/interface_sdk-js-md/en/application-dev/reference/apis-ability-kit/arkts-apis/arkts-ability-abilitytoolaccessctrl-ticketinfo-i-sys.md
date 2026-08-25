@@ -4,7 +4,7 @@ Ticket information.
 
 **Since:** 26.0.0
 
-<!--Device-abilityToolAccessCtrl-interface TicketInfo--><!--Device-abilityToolAccessCtrl-interface TicketInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -27,7 +27,7 @@ Challenge value.
 
 **Since:** 26.0.0
 
-<!--Device-TicketInfo-challenge: string--><!--Device-TicketInfo-challenge: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -45,7 +45,7 @@ Ticket message.
 
 **Since:** 26.0.0
 
-<!--Device-TicketInfo-message: string--><!--Device-TicketInfo-message: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -63,9 +63,8 @@ Ticket string.
 
 **Since:** 26.0.0
 
-<!--Device-TicketInfo-ticket: string--><!--Device-TicketInfo-ticket: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
-

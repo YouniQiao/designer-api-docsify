@@ -15,9 +15,9 @@ Represents a custom communication object. <br> <br>
 &gt; 
 > If this object is unregistered, its [onTerminated](#onterminated) callback will be triggered.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-inputMethodEngine-interface MessageHandler--><!--Device-inputMethodEngine-interface MessageHandler-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -25,6 +25,49 @@ Represents a custom communication object. <br> <br>
 
 ```TypeScript
 import { inputMethodEngine } from '@kit.IMEKit';
+```
+
+## onMessage
+
+```TypeScript
+onMessage: OnMessageCallback
+```
+
+onMessage(msgId: string, msgParam?: ArrayBuffer): void <br> <br>Receives the custom data callback sent by the edit box application attached to the input method application. <br> <br>   
+> **NOTE：**&lt;br
+&gt; 
+> &lt;br
+&gt; 
+> This callback is triggered when the registered [MessageHandler](#messagehandler) receives custom communication data sent by the edit box application attached to the input method application. &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> The **msgId** parameter is mandatory, and the **msgParam** parameter is optional. If only the custom **msgId** data is received, confirm it with the data sender.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility()
+  .on('inputStart',
+    (kbController: inputMethodEngine.KeyboardController, client: inputMethodEngine.InputClient) => {
+      let keyboardController: inputMethodEngine.KeyboardController = kbController;
+      let inputClient: inputMethodEngine.InputClient = client;
+      let messageHandler: inputMethodEngine.MessageHandler = {
+        onTerminated(): void {
+          console.info('OnTerminated.');
+        },
+        onMessage(msgId: string, msgParam?: ArrayBuffer): void {
+          console.info('recv message.');
+        }
+      }
+      inputClient.recvMessage(messageHandler);
+    });
 ```
 
 ## onMessage
@@ -46,36 +89,20 @@ Receives the custom data callback sent by the edit box application attached to t
 
 **Since:** 15
 
-<!--Device-MessageHandler-onMessage(msgId: string, msgParam?: ArrayBuffer): void--><!--Device-MessageHandler-onMessage(msgId: string, msgParam?: ArrayBuffer): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| msgId | string | Yes | Identifier of the received custom communication data. |
-| msgParam | ArrayBuffer | No | Message body of the received custom communication data. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [msgId](../../apis-network-kit/arkts-apis/arkts-network-eap-eapdata-i.md) | string | Yes |
+| msgParam | ArrayBuffer | No |
 
 **Examples**
 
-```TypeScript
-inputMethodEngine.getInputMethodAbility()
-  .on('inputStart',
-    (kbController: inputMethodEngine.KeyboardController, client: inputMethodEngine.InputClient) => {
-      let keyboardController: inputMethodEngine.KeyboardController = kbController;
-      let inputClient: inputMethodEngine.InputClient = client;
-      let messageHandler: inputMethodEngine.MessageHandler = {
-        onTerminated(): void {
-          console.info('OnTerminated.');
-        },
-        onMessage(msgId: string, msgParam?: ArrayBuffer): void {
-          console.info('recv message.');
-        }
-      }
-      inputClient.recvMessage(messageHandler);
-    });
-```
+See [onMessage](#onmessage)
 
 ## onTerminated
 
@@ -96,7 +123,7 @@ Listens for MessageHandler termination. <br> <br>
 
 **Since:** 15
 
-<!--Device-MessageHandler-onTerminated(): void--><!--Device-MessageHandler-onTerminated(): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -119,31 +146,6 @@ inputMethodEngine.getInputMethodAbility()
       inputClient.recvMessage(messageHandler);
     });
 ```
-
-## onMessage
-
-```TypeScript
-onMessage: OnMessageCallback
-```
-
-onMessage(msgId: string, msgParam?: ArrayBuffer): void <br> <br>Receives the custom data callback sent by the edit box application attached to the input method application. <br> <br>   
-> **NOTE：**&lt;br
-&gt; 
-> &lt;br
-&gt; 
-> This callback is triggered when the registered [MessageHandler](#messagehandler) receives custom communication data sent by the edit box application attached to the input method application. &lt;br
-&gt; 
-> &lt;br
-&gt; 
-> The **msgId** parameter is mandatory, and the **msgParam** parameter is optional. If only the custom **msgId** data is received, confirm it with the data sender.
-
-**Type:** OnMessageCallback
-
-**Since:** 23
-
-<!--Device-MessageHandler-onMessage: OnMessageCallback--><!--Device-MessageHandler-onMessage: OnMessageCallback-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## onTerminated
 
@@ -166,7 +168,6 @@ Listens for MessageHandler termination. <br> <br>
 
 **Since:** 23
 
-<!--Device-MessageHandler-onTerminated: Callback<void>--><!--Device-MessageHandler-onTerminated: Callback<void>-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

@@ -2,9 +2,9 @@
 
 拖拽对象的数据摘要。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-dragInteraction-interface Summary--><!--Device-dragInteraction-interface Summary-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Drag
 
@@ -24,11 +24,11 @@ dataSize: int
 
 拖拽对象数据长度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-Summary-dataSize: int--><!--Device-Summary-dataSize: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Drag
 
@@ -44,11 +44,10 @@ dataType: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-Summary-dataType: string--><!--Device-Summary-dataType: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Drag
 
 **系统接口：** 此接口为系统接口。
-

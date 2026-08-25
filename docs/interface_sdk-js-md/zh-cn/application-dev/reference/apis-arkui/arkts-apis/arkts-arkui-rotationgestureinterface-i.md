@@ -6,7 +6,7 @@
 
 **起始版本：** 7
 
-<!--Device-unnamed-interface RotationGestureInterface--><!--Device-unnamed-interface RotationGestureInterface-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,7 +15,7 @@
 ```TypeScript
 ```
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (value?: { fingers?: number; angle?: number }): RotationGestureInterface
@@ -25,25 +25,25 @@
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-RotationGestureInterface-(value?: { fingers?: number; angle?: number }): RotationGestureInterface--><!--Device-RotationGestureInterface-(value?: { fingers?: number; angle?: number }): RotationGestureInterface-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | { fingers?: number; angle?: number } | 否 | 设置旋转手势事件参数。 <br> - fingers：触发旋转手势所需的最少手指数，&nbsp;最小为2指，最大为5指。<br/>默认值：2 <br/>取值范围：[2, 5]。当设置的值小于2或大于5时，会被转化 为默认值。<br/>触发手势时手指数量可以多于fingers参数值，但仅最先落下的两指参与手势计算。 <br> - angle：触发旋转手势所需的最小角度变化，单位为deg。<br/>默认值：1 <br/>**说明：** <br/>当改变度数的值小于等于0或大于360时，会被转化为默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | { fingers?: number; angle?: number } | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
+| 类型 |
+| --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (options?: RotationGestureHandlerOptions): RotationGestureInterface
@@ -53,25 +53,25 @@
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RotationGestureInterface-(options?: RotationGestureHandlerOptions): RotationGestureInterface--><!--Device-RotationGestureInterface-(options?: RotationGestureHandlerOptions): RotationGestureInterface-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [RotationGestureHandlerOptions](arkts-arkui-rotationgesturehandleroptions-i.md) | 否 | 旋转手势处理器配置参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [RotationGestureHandlerOptions](arkts-arkui-rotationgesturehandleroptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
+| 类型 |
+| --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |
 
 ## onActionCancel
 
@@ -83,23 +83,23 @@ Rotation手势识别成功，接收到触摸取消事件触发的回调。该回
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-RotationGestureInterface-onActionCancel(event: () => void): RotationGestureInterface--><!--Device-RotationGestureInterface-onActionCancel(event: () => void): RotationGestureInterface-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | () =&gt; void | 是 | 手势事件回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | () = & gt; void | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
+| 类型 |
+| --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |
 
 ## onActionCancel
 
@@ -111,25 +111,25 @@ Rotation手势识别成功，接收到触摸取消事件触发的回调。与onA
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RotationGestureInterface-onActionCancel(event: Callback<GestureEvent>): RotationGestureInterface--><!--Device-RotationGestureInterface-onActionCancel(event: Callback<GestureEvent>): RotationGestureInterface-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 手势事件回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
+| 类型 |
+| --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |
 
 ## onActionEnd
 
@@ -141,23 +141,23 @@ Rotation手势识别成功，当抬起最后一根满足手势触发条件的手
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-RotationGestureInterface-onActionEnd(event: (event: GestureEvent) => void): RotationGestureInterface--><!--Device-RotationGestureInterface-onActionEnd(event: (event: GestureEvent) => void): RotationGestureInterface-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | 是 | 手势事件回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
+| 类型 |
+| --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |
 
 ## onActionStart
 
@@ -169,23 +169,23 @@ Rotation手势识别成功后触发的回调。
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-RotationGestureInterface-onActionStart(event: (event: GestureEvent) => void): RotationGestureInterface--><!--Device-RotationGestureInterface-onActionStart(event: (event: GestureEvent) => void): RotationGestureInterface-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | 是 | 手势事件回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
+| 类型 |
+| --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |
 
 ## onActionUpdate
 
@@ -197,21 +197,20 @@ Rotation手势移动过程中触发的回调。
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-RotationGestureInterface-onActionUpdate(event: (event: GestureEvent) => void): RotationGestureInterface--><!--Device-RotationGestureInterface-onActionUpdate(event: (event: GestureEvent) => void): RotationGestureInterface-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | 是 | 手势事件回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
-
+| 类型 |
+| --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |

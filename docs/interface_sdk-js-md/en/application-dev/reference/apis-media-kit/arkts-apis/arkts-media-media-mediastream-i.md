@@ -2,9 +2,9 @@
 
 Media Stream. AVPlayer use this for mediaData access, current version only support live stream.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-media-interface MediaStream--><!--Device-media-interface MediaStream-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -22,13 +22,13 @@ bitrate: int
 
 biterate of this mediaStream.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 19
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
-<!--Device-MediaStream-bitrate: int--><!--Device-MediaStream-bitrate: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -40,13 +40,13 @@ height: int
 
 video height.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 19
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
-<!--Device-MediaStream-height: int--><!--Device-MediaStream-height: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -60,11 +60,11 @@ url for this mediaStream
 
 **Type:** string
 
-**Since:** 23
+**Since:** 19
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
-<!--Device-MediaStream-url: string--><!--Device-MediaStream-url: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -76,13 +76,12 @@ width: int
 
 video width.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 19
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
-<!--Device-MediaStream-width: int--><!--Device-MediaStream-width: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-window-interface MaximizeOptions--><!--Device-window-interface MaximizeOptions-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -28,9 +28,9 @@ acrossDisplayPresentation?: AcrossDisplayPresentation
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-MaximizeOptions-acrossDisplayPresentation?: AcrossDisplayPresentation--><!--Device-MaximizeOptions-acrossDisplayPresentation?: AcrossDisplayPresentation-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -48,9 +48,9 @@ maximizePresentation?: MaximizePresentation
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-MaximizeOptions-maximizePresentation?: MaximizePresentation--><!--Device-MaximizeOptions-maximizePresentation?: MaximizePresentation-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -66,9 +66,8 @@ snapshotAnimationConfig?: WindowSnapshotAnimationConfig
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-MaximizeOptions-snapshotAnimationConfig?: WindowSnapshotAnimationConfig--><!--Device-MaximizeOptions-snapshotAnimationConfig?: WindowSnapshotAnimationConfig-End-->
-
 **系统能力：** SystemCapability.Window.SessionManager
-

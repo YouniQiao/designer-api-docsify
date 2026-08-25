@@ -1,12 +1,10 @@
 # ActionType (System API)
 
-Enumerates the input event type.@enum { number }
+Enumerates the trigger modes for user scenes (typically scenes involving animations).
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-performanceMonitor-export enum ActionType--><!--Device-performanceMonitor-export enum ActionType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,15 +16,13 @@ Enumerates the input event type.@enum { number }
 LAST_DOWN = 0
 ```
 
-The user presses the finger on the screen.
+Pressing against the screen.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ActionType-LAST_DOWN = 0--><!--Device-ActionType-LAST_DOWN = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,15 +34,13 @@ The user presses the finger on the screen.
 LAST_UP = 1
 ```
 
-The user lifts up the finger from the screen.
+Lifting a finger off the screen.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ActionType-LAST_UP = 1--><!--Device-ActionType-LAST_UP = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,17 +52,14 @@ The user lifts up the finger from the screen.
 FIRST_MOVE = 2
 ```
 
-The user first moves the finger after pressing down the screen.
+First swiping on the screen.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ActionType-FIRST_MOVE = 2--><!--Device-ActionType-FIRST_MOVE = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

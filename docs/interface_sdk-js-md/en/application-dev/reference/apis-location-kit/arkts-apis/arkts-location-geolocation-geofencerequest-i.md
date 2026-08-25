@@ -4,13 +4,13 @@ Configuring parameters in geo fence requests@interface GeofenceRequest
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [GeofenceRequest](arkts-location-geolocationmanager-geofencerequest-i.md)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-geolocation-export interface GeofenceRequest--><!--Device-geolocation-export interface GeofenceRequest-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -30,11 +30,11 @@ geofence: Geofence
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [geofence](arkts-location-geolocationmanager-geofencerequest-i.md#geofence)
-
-<!--Device-GeofenceRequest-geofence: Geofence--><!--Device-GeofenceRequest-geofence: Geofence-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -48,11 +48,11 @@ priority: LocationRequestPriority
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** priority
-
-<!--Device-GeofenceRequest-priority: LocationRequestPriority--><!--Device-GeofenceRequest-priority: LocationRequestPriority-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -66,11 +66,10 @@ scenario: LocationRequestScenario
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [scenario](arkts-location-geolocationmanager-geofencerequest-i.md#scenario)
 
-<!--Device-GeofenceRequest-scenario: LocationRequestScenario--><!--Device-GeofenceRequest-scenario: LocationRequestScenario-End-->
-
 **System capability:** SystemCapability.Location.Location.Geofence
-

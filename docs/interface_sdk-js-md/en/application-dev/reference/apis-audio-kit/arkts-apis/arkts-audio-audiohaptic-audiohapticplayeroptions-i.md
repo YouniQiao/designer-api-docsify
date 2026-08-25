@@ -2,9 +2,9 @@
 
 Describes the options for the audio-haptic player.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-audioHaptic-interface AudioHapticPlayerOptions--><!--Device-audioHaptic-interface AudioHapticPlayerOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -24,9 +24,9 @@ Whether to mute the audio. **true** to mute, **false** otherwise. If this parame
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AudioHapticPlayerOptions-muteAudio?: boolean--><!--Device-AudioHapticPlayerOptions-muteAudio?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -40,9 +40,8 @@ Whether to mute haptics feedback. **true** to mute, **false** otherwise. If this
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AudioHapticPlayerOptions-muteHaptics?: boolean--><!--Device-AudioHapticPlayerOptions-muteHaptics?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
-

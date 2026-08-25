@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export class AtomicLong--><!--Device-unnamed-export class AtomicLong-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,26 +23,24 @@ compareAndSwap(expected: long, val: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicLong-compareAndSwap(expected: long, val: long): long--><!--Device-AtomicLong-compareAndSwap(expected: long, val: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| expected | long | 是 | 预期的当前值。 |
-| val | long | 是 | 匹配成功时要写入的新值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| expected | long | 是 |
+| val | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 修改前的旧值。 |
+| 类型 |
+| --- |
+| long |
 
 ## constructor
 
@@ -56,19 +52,17 @@ constructor(val: long)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicLong-constructor(val: long)--><!--Device-AtomicLong-constructor(val: long)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | long | 是 | 初始值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | long | 是 |
 
 ## exchange
 
@@ -80,25 +74,23 @@ exchange(val: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicLong-exchange(val: long): long--><!--Device-AtomicLong-exchange(val: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | long | 是 | 要写入的新值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 更新前的旧值。 |
+| 类型 |
+| --- |
+| long |
 
 ## fetchAdd
 
@@ -110,25 +102,23 @@ fetchAdd(val: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicLong-fetchAdd(val: long): long--><!--Device-AtomicLong-fetchAdd(val: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | long | 是 | 执行加法运算的操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 加法执行前的旧值。 |
+| 类型 |
+| --- |
+| long |
 
 ## fetchAnd
 
@@ -140,25 +130,23 @@ fetchAnd(val: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicLong-fetchAnd(val: long): long--><!--Device-AtomicLong-fetchAnd(val: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | long | 是 | 执行按位与运算的操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 按位与运算前的旧值。 |
+| 类型 |
+| --- |
+| long |
 
 ## fetchOr
 
@@ -170,25 +158,23 @@ fetchOr(val: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicLong-fetchOr(val: long): long--><!--Device-AtomicLong-fetchOr(val: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | long | 是 | 执行按位或运算的操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 按位或运算前的旧值。 |
+| 类型 |
+| --- |
+| long |
 
 ## fetchSub
 
@@ -200,25 +186,23 @@ fetchSub(val: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicLong-fetchSub(val: long): long--><!--Device-AtomicLong-fetchSub(val: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | long | 是 | 执行减法运算的操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 减法执行前的旧值。 |
+| 类型 |
+| --- |
+| long |
 
 ## fetchXor
 
@@ -230,25 +214,23 @@ fetchXor(val: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicLong-fetchXor(val: long): long--><!--Device-AtomicLong-fetchXor(val: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | long | 是 | 执行按位异或运算的操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 按位异或运算前的旧值。 |
+| 类型 |
+| --- |
+| long |
 
 ## isLockFree
 
@@ -260,19 +242,17 @@ static isLockFree(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicLong-static isLockFree(): boolean--><!--Device-AtomicLong-static isLockFree(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true表示无锁实现，false表示内部可能使用阻塞式同步机制。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## load
 
@@ -284,19 +264,17 @@ load(): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicLong-load(): long--><!--Device-AtomicLong-load(): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 当前保存的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## store
 
@@ -308,17 +286,14 @@ store(val: long): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicLong-store(val: long): void--><!--Device-AtomicLong-store(val: long): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | long | 是 | 要写入的新值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | long | 是 |

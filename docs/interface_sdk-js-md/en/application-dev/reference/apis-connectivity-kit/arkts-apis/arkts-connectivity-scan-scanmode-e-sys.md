@@ -4,7 +4,7 @@ Enumerates the scan modes.
 
 **Since:** 26.0.0
 
-<!--Device-scan-enum ScanMode--><!--Device-scan-enum ScanMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -18,11 +18,10 @@ High-power scan mode. The scan frequency is high, and the power consumption is h
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ScanMode-SCAN_MODE_LOW_LATENCY = 2--><!--Device-ScanMode-SCAN_MODE_LOW_LATENCY = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
-

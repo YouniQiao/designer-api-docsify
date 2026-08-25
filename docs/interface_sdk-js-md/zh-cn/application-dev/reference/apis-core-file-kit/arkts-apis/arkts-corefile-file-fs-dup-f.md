@@ -18,33 +18,33 @@ declare function dup(fd: number): File
 
 **起始版本：** 10
 
-<!--Device-unnamed-declare function dup(fd: number): File--><!--Device-unnamed-declare function dup(fd: number): File-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| fd | number | 是 | 文件描述符。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| fd | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [File](arkts-corefile-file-fs-file-i.md) | 打开的File对象。 |
+| 类型 |
+| --- |
+| [File](arkts-corefile-file-fs-file-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900014 | Device or resource busy |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900014 |
+| 13900020 |
+| 13900022 |
+| 13900042 |
 
 **示例**
 
@@ -71,4 +71,3 @@ console.info(`Succeeded in getting file name of the file2 is ${file2.name}`);
 fileIo.closeSync(file1);
 fileIo.closeSync(file2);
 ```
-

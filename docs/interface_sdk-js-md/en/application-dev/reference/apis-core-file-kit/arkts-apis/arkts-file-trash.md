@@ -7,11 +7,11 @@ The **file.trash** module provides APIs for querying, recovering, or permanently
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-declare namespace trash--><!--Device-unnamed-declare namespace trash-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -28,18 +28,17 @@ import { trash } from '@kit.CoreFileKit';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [completelyDelete](arkts-corefile-trash-completelydelete-f-sys.md) | Permanently deletes a file or directory from the **Recently deleted** list. |
-| [listFile](arkts-corefile-trash-listfile-f-sys.md) | Lists the files and directories in the **Recently deleted** list. |
-| [recover](arkts-corefile-trash-recover-f-sys.md) | Recovers a file or directory from the trash. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [completelyDelete](arkts-corefile-trash-completelydelete-f-sys.md) |
+| [listFile](arkts-corefile-trash-listfile-f-sys.md) |
+| [recover](arkts-corefile-trash-recover-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [FileInfo](arkts-corefile-trash-fileinfo-i-sys.md) | Represents information about a file or directory in the **Recently deleted** list. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FileInfo](arkts-corefile-trash-fileinfo-i-sys.md) |
 <!--DelEnd-->
-

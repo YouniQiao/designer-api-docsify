@@ -14,9 +14,9 @@ function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>
 
 Obtains all information about the requested efficiency resources, including the resource type. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-backgroundTaskManager-function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>--><!--Device-backgroundTaskManager-function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -24,18 +24,18 @@ Obtains all information about the requested efficiency resources, including the 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[EfficiencyResourcesInfo](arkts-backgroundtasks-backgroundtaskmanager-efficiencyresourcesinfo-i-sys.md)[]&gt; | Promise used to return all information about efficiency resources. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[EfficiencyResourcesInfo](arkts-backgroundtasks-backgroundtaskmanager-efficiencyresourcesinfo-i-sys.md)[]&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [18700001](../errorcode-backgroundTaskMgr.md#18700001-caller-information-verification-failure-for-an-energy-resource-request) | Caller information verification failed for an energy resource request. |
-| [18700002](../errorcode-backgroundTaskMgr.md#18700002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; <br> 2. Failed to apply for memory. |
-| [18700004](../errorcode-backgroundTaskMgr.md#18700004-system-service-failure) | System service operation failed. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [18700001](../errorcode-backgroundTaskMgr.md#18700001-caller-information-verification-failure-for-an-energy-resource-request) |
+| [18700002](../errorcode-backgroundTaskMgr.md#18700002-parcel-operation-failure) |
+| [18700004](../errorcode-backgroundTaskMgr.md#18700004-system-service-failure) |
 
 **Examples**
 
@@ -53,4 +53,3 @@ try {
     console.error(`Operation getAllEfficiencyResources failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
 }
 ```
-

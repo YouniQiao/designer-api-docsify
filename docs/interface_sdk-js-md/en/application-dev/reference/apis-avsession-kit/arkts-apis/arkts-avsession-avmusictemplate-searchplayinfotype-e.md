@@ -4,7 +4,7 @@ Enumeration of SearchPlayInfoType.@enum { string }
 
 **Since:** 23
 
-<!--Device-avMusicTemplate-enum SearchPlayInfoType--><!--Device-avMusicTemplate-enum SearchPlayInfoType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -18,9 +18,9 @@ playMusic.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-SearchPlayInfoType-PLAY_MUSIC = 'playMusic'--><!--Device-SearchPlayInfoType-PLAY_MUSIC = 'playMusic'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -34,9 +34,9 @@ playVideo.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-SearchPlayInfoType-PLAY_VIDEO = 'playVideo'--><!--Device-SearchPlayInfoType-PLAY_VIDEO = 'playVideo'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -50,9 +50,9 @@ play music list.
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-SearchPlayInfoType-PLAY_MUSIC_LIST = 'playMusicList'--><!--Device-SearchPlayInfoType-PLAY_MUSIC_LIST = 'playMusicList'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -66,9 +66,8 @@ play video list.
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SearchPlayInfoType-PLAY_VIDEO_LIST = 'playVideoList'--><!--Device-SearchPlayInfoType-PLAY_VIDEO_LIST = 'playVideoList'-End-->
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-

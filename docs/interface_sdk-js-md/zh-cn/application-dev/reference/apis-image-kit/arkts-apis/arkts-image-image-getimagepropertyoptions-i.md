@@ -7,11 +7,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 11
 
 **替代接口：** [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md)
-
-<!--Device-image-interface GetImagePropertyOptions--><!--Device-image-interface GetImagePropertyOptions-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -33,11 +33,11 @@ defaultValue?: string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 11
 
 **替代接口：** [defaultValue](arkts-image-image-imagepropertyoptions-i.md#defaultvalue)
-
-<!--Device-GetImagePropertyOptions-defaultValue?: string--><!--Device-GetImagePropertyOptions-defaultValue?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -53,11 +53,10 @@ index?: number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 11
 
 **替代接口：** [index](arkts-image-image-imagepropertyoptions-i.md#index)
 
-<!--Device-GetImagePropertyOptions-index?: number--><!--Device-GetImagePropertyOptions-index?: number-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
-

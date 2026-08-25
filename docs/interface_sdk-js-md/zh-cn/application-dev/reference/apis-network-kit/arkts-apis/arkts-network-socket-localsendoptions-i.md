@@ -4,7 +4,7 @@ LocalSocket发送请求的参数。
 
 **起始版本：** 11
 
-<!--Device-socket-export interface LocalSendOptions--><!--Device-socket-export interface LocalSendOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -26,7 +26,7 @@ data: string | ArrayBuffer
 
 **起始版本：** 11
 
-<!--Device-LocalSendOptions-data: string | ArrayBuffer--><!--Device-LocalSendOptions-data: string | ArrayBuffer-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -42,7 +42,6 @@ encoding?: string
 
 **起始版本：** 11
 
-<!--Device-LocalSendOptions-encoding?: string--><!--Device-LocalSendOptions-encoding?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
-

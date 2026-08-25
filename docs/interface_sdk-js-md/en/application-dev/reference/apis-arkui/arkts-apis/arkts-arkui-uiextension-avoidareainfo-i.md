@@ -2,9 +2,9 @@
 
 Represents the information about the avoidance area of the window.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-uiExtension-interface AvoidAreaInfo--><!--Device-uiExtension-interface AvoidAreaInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,13 +24,13 @@ Avoidance area for the content of the window.
 
 **Type:** window.AvoidArea
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-AvoidAreaInfo-area: window.AvoidArea--><!--Device-AvoidAreaInfo-area: window.AvoidArea-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,13 +44,12 @@ Type of the avoidance area of the window.
 
 **Type:** window.AvoidAreaType
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-AvoidAreaInfo-type: window.AvoidAreaType--><!--Device-AvoidAreaInfo-type: window.AvoidAreaType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

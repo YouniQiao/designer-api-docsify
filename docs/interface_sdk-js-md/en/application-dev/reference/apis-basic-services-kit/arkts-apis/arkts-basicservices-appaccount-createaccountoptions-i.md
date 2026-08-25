@@ -2,9 +2,9 @@
 
 Defines the options for creating an application account.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-appAccount-interface CreateAccountOptions--><!--Device-appAccount-interface CreateAccountOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -24,9 +24,8 @@ Custom data. By default, no value is passed in.
 
 **Type:** Record&lt;string, string&gt;
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-CreateAccountOptions-customData?: Record<string, string>--><!--Device-CreateAccountOptions-customData?: Record<string, string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
-

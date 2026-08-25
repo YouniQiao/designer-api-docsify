@@ -2,9 +2,9 @@
 
 The **appAccount** module provides APIs for adding, deleting, modifying, and querying application account information, and supports inter-application authentication and distributed data synchronization.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-declare namespace appAccount--><!--Device-unnamed-declare namespace appAccount-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -18,38 +18,37 @@ import { appAccount } from '@kit.BasicServicesKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [createAppAccountManager](arkts-basicservices-appaccount-createappaccountmanager-f.md) | Creates an **AppAccountManager** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [createAppAccountManager](arkts-basicservices-appaccount-createappaccountmanager-f.md) |
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Authenticator](arkts-basicservices-appaccount-authenticator-c.md) | Provides APIs to operate the authenticator. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Authenticator](arkts-basicservices-appaccount-authenticator-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md) | Defines application account information. |
-| [AppAccountManager](arkts-basicservices-appaccount-appaccountmanager-i.md) | Defines the application account manager, which is used to manage account information of applications. |
-| [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Implements authenticator callbacks. |
-| [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Provides OAuth authenticator callbacks. |
-| [AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md) | Defines OAuth authenticator information. |
-| [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | Defines the authentication result. |
-| [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md) | Defines authorization token information. |
-| [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) | Defines the options for implicitly creating an application account. |
-| [CreateAccountOptions](arkts-basicservices-appaccount-createaccountoptions-i.md) | Defines the options for creating an application account. |
-| [OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md) | Defines authorization token information. |
-| [SelectAccountsOptions](arkts-basicservices-appaccount-selectaccountsoptions-i.md) | Defines the options for selecting accounts. |
-| [SetPropertiesOptions](arkts-basicservices-appaccount-setpropertiesoptions-i.md) | Represents the options for setting authenticator properties. |
-| [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md) | Represents the options for verifying the user credential. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md) |
+| [AppAccountManager](arkts-basicservices-appaccount-appaccountmanager-i.md) |
+| [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) |
+| [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) |
+| [AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md) |
+| [AuthResult](arkts-basicservices-appaccount-authresult-i.md) |
+| [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md) |
+| [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) |
+| [CreateAccountOptions](arkts-basicservices-appaccount-createaccountoptions-i.md) |
+| [OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md) |
+| [SelectAccountsOptions](arkts-basicservices-appaccount-selectaccountsoptions-i.md) |
+| [SetPropertiesOptions](arkts-basicservices-appaccount-setpropertiesoptions-i.md) |
+| [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [Constants](arkts-basicservices-appaccount-constants-e.md) | Enumerates the constants. |
-| [ResultCode](arkts-basicservices-appaccount-resultcode-e.md) | Enumerates the result codes. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Constants](arkts-basicservices-appaccount-constants-e.md) |
+| [ResultCode](arkts-basicservices-appaccount-resultcode-e.md) |

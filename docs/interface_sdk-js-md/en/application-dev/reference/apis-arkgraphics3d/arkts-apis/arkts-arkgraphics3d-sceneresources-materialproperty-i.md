@@ -2,9 +2,9 @@
 
 Defines the textures, property factors, and texture samplers used by a material.@interface MaterialProperty
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-unnamed-export interface MaterialProperty--><!--Device-unnamed-export interface MaterialProperty-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,9 +18,9 @@ PBR property factor, with different meanings for different properties.
 
 **Type:** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-MaterialProperty-factor: Vec4--><!--Device-MaterialProperty-factor: Vec4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -34,9 +34,9 @@ Texture map based on PBR properties to convey the texture information of the mat
 
 **Type:** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) \| null
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-MaterialProperty-image: Image | null--><!--Device-MaterialProperty-image: Image | null-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -50,9 +50,8 @@ Texture sampler, with the default value set to LINEAR for magnification, minific
 
 **Type:** [Sampler](arkts-arkgraphics3d-sceneresources-sampler-i.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-MaterialProperty-sampler?: Sampler--><!--Device-MaterialProperty-sampler?: Sampler-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

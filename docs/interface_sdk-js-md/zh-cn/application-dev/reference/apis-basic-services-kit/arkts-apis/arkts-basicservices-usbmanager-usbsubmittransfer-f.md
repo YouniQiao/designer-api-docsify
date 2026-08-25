@@ -18,28 +18,28 @@ function usbSubmitTransfer(transfer: UsbDataTransferParams): void
 > 本接口为异步接口，调用后立刻返回，实际读写操作的结果以回调的方式返回。&gt;
 > 在调用该接口前需要通过[usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) claim通信接口。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-usbManager-function usbSubmitTransfer(transfer: UsbDataTransferParams): void--><!--Device-usbManager-function usbSubmitTransfer(transfer: UsbDataTransferParams): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| transfer | [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | 是 | 作为通用USB数据传输接口，客户端需要填充这个对象中的参数，用以发起传输请求。在调用该接口前需要通过 [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) claim通信接口。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| transfer | [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [14400001](../errorcode-usb.md#14400001-usb设备访问权限被拒绝) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
-| [14400007](../errorcode-usb.md#14400007-资源繁忙) | Resource busy. Possible causes:<br>1. The transfer has already been submitted.<br>2. The interface is claimed by another program or driver. |
-| [14400008](../errorcode-usb.md#14400008-没有设备连接已断开) | No such device (it may have been disconnected). |
-| [14400009](../errorcode-usb.md#14400009-内存不足) | Insufficient memory. Possible causes:<br>1. Memory allocation failed. |
-| [14400012](../errorcode-usb.md#14400012-io错误) | Transmission I/O error. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [14400001](../errorcode-usb.md#14400001-usb设备访问权限被拒绝) |
+| [14400007](../errorcode-usb.md#14400007-资源繁忙) |
+| [14400008](../errorcode-usb.md#14400008-没有设备连接已断开) |
+| [14400009](../errorcode-usb.md#14400009-内存不足) |
+| [14400012](../errorcode-usb.md#14400012-io错误) |
 
 **示例**
 
@@ -108,4 +108,3 @@ async function usbSubmitTransfer() {
   }
 }
 ```
-

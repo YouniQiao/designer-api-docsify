@@ -9,7 +9,7 @@ Defines velocity options.
 
 **Since:** 18
 
-<!--Device-unnamed-declare interface VelocityOptions--><!--Device-unnamed-declare interface VelocityOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,11 @@ Direction (in angles) in which the particle moves, with the geometric center of 
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-VelocityOptions-angle: ParticleTuple<number, number>--><!--Device-VelocityOptions-angle: ParticleTuple<number, number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,11 +50,10 @@ Time rate at which the particle moves.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-VelocityOptions-speed: ParticleTuple<number, number>--><!--Device-VelocityOptions-speed: ParticleTuple<number, number>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

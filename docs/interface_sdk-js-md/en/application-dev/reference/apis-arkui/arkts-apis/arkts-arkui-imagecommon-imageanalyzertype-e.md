@@ -4,9 +4,7 @@ Image AI analysis type. When not set, subject recognition and text recognition a
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare enum ImageAnalyzerType--><!--Device-unnamed-export declare enum ImageAnalyzerType-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** 
 - API version 23 and later: SystemCapability.ArkUI.ArkUI.Full
@@ -21,11 +19,9 @@ Subject recognition function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ImageAnalyzerType-SUBJECT = 0--><!--Device-ImageAnalyzerType-SUBJECT = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -39,11 +35,9 @@ Text recognition function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ImageAnalyzerType-TEXT--><!--Device-ImageAnalyzerType-TEXT-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -57,11 +51,8 @@ Object lookup function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ImageAnalyzerType-OBJECT_LOOKUP--><!--Device-ImageAnalyzerType-OBJECT_LOOKUP-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

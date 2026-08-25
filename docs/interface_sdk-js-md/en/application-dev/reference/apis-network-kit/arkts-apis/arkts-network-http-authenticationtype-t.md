@@ -6,17 +6,16 @@ export type AuthenticationType = 'basic' | 'ntlm' | 'digest'
 
 Enumerates server authentication modes in a session.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-http-export type AuthenticationType = 'basic' | 'ntlm' | 'digest'--><!--Device-http-export type AuthenticationType = 'basic' | 'ntlm' | 'digest'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-| Type | Description |
-| --- | --- |
-| 'basic' | Basic authentication mode. This field has a fixed value of **basic**. |
-| 'ntlm' | NTLM authentication mode. This field has a fixed value of **ntlm**. |
-| 'digest' | Digest authentication mode. This field has a fixed value of **digest**. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'basic' |
+| 'ntlm' |
+| 'digest' |

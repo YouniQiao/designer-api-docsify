@@ -9,7 +9,7 @@ Describes the duration of the video.
 
 **Since:** 18
 
-<!--Device-unnamed-interface PreparedInfo--><!--Device-unnamed-interface PreparedInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,10 @@ Duration of the video. Unit: second. The value range is all integers. Value rang
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-PreparedInfo-duration: number--><!--Device-PreparedInfo-duration: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

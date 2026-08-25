@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [PhotoEditorExtensionContext](arkts-ability-photoeditorextensioncontext-c.md) | The context of Photo Editor extension. It allows access to PhotoEditorExtension-specific resources.@extends ExtensionContext |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PhotoEditorExtensionContext](arkts-ability-photoeditorextensioncontext-c.md) |

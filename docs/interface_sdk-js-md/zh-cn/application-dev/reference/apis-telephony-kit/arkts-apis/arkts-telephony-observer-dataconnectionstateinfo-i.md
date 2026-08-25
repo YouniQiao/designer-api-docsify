@@ -2,9 +2,9 @@
 
 数据连接状态相关信息。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-observer-export interface DataConnectionStateInfo--><!--Device-observer-export interface DataConnectionStateInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -24,9 +24,9 @@ network: RatType
 
 **类型：** [RatType](arkts-telephony-observer-rattype-t.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-DataConnectionStateInfo-network: RatType--><!--Device-DataConnectionStateInfo-network: RatType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -40,9 +40,8 @@ state: DataConnectState
 
 **类型：** DataConnectState
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-DataConnectionStateInfo-state: DataConnectState--><!--Device-DataConnectionStateInfo-state: DataConnectState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
-

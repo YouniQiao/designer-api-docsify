@@ -6,7 +6,7 @@ In addition to the universal events, the following events are supported.
 
 **起始版本：** 11
 
-<!--Device-unnamed-declare class FolderStackAttribute--><!--Device-unnamed-declare class FolderStackAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,19 +28,19 @@ alignContent(value: Alignment)
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FolderStackAttribute-alignContent(value: Alignment): FolderStackAttribute--><!--Device-FolderStackAttribute-alignContent(value: Alignment): FolderStackAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Alignment | 是 | 子组件在容器内的对齐方式，取值包括TopStart、Top、TopEnd、Start、Center、End、BottomStart、Bottom、BottomEnd。 <br>默认值：Alignment.Center <br>非法值：按默认值处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) | 是 |
 
 ## autoHalfFold
 
@@ -55,19 +55,19 @@ autoHalfFold(value: boolean)
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FolderStackAttribute-autoHalfFold(value: boolean): FolderStackAttribute--><!--Device-FolderStackAttribute-autoHalfFold(value: boolean): FolderStackAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean | 是 | 是否开启自动旋转。 <br>默认值：true。设置为true时，FolderStack在半折叠状态（见FoldStatus）进行布局时自动旋转；设置为false时，FolderStack在半折叠状态下不 会自动旋转。仅在系统自动旋转关闭时生效；系统自动旋转开启时，此属性不生效，FolderStack遵循系统旋转行为。该参数仅在双折叠设备上生效，当FolderStack的父组件为if/else条件渲染节点时，该参数将失效。 <br>非法值：按默认值处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | boolean | 是 |
 
 ## enableAnimation
 
@@ -82,19 +82,19 @@ enableAnimation(value: boolean)
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FolderStackAttribute-enableAnimation(value: boolean): FolderStackAttribute--><!--Device-FolderStackAttribute-enableAnimation(value: boolean): FolderStackAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean | 是 | 是否使用默认动效。 <br>默认值：true，设置true表示使用默认动效，设置false表示不使用默认动效。 <br>非法值：按默认值处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | boolean | 是 |
 
 ## onFolderStateChange
 
@@ -109,19 +109,19 @@ onFolderStateChange(callback: OnFoldStatusChangeCallback)
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FolderStackAttribute-onFolderStateChange(callback: OnFoldStatusChangeCallback): FolderStackAttribute--><!--Device-FolderStackAttribute-onFolderStateChange(callback: OnFoldStatusChangeCallback): FolderStackAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [OnFoldStatusChangeCallback](arkts-arkui-onfoldstatuschangecallback-t.md) | 是 | 当前设备的折叠状态改变时触发的回调。<br>**起始版本：** 18 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [OnFoldStatusChangeCallback](arkts-arkui-onfoldstatuschangecallback-t.md) | 是 |
 
 ## onHoverStatusChange
 
@@ -136,17 +136,16 @@ onHoverStatusChange(handler: OnHoverStatusChangeCallback)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FolderStackAttribute-onHoverStatusChange(handler: OnHoverStatusChangeCallback): FolderStackAttribute--><!--Device-FolderStackAttribute-onHoverStatusChange(handler: OnHoverStatusChangeCallback): FolderStackAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| handler | [OnHoverStatusChangeCallback](arkts-arkui-onhoverstatuschangecallback-t.md) | 是 | 当前设备的悬停状态改变时触发的回调。<br>**起始版本：** 18 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| handler | [OnHoverStatusChangeCallback](arkts-arkui-onhoverstatuschangecallback-t.md) | 是 |

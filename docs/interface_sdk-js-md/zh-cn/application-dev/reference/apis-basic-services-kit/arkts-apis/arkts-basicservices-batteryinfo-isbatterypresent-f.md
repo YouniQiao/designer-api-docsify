@@ -16,17 +16,15 @@ function isBatteryPresent(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-batteryInfo-function isBatteryPresent(): boolean--><!--Device-batteryInfo-function isBatteryPresent(): boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回true表示支持电池或电池在位，返回false表示不支持电池或电池不在位。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -35,4 +33,3 @@ function isBatteryPresent(): boolean
 let result = batteryInfo.isBatteryPresent();
 console.info("The result is: " + result);
 ```
-

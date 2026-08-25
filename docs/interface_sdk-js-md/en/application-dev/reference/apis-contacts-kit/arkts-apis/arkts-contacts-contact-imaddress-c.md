@@ -4,7 +4,7 @@ Enumerates IM addresses.
 
 **Since:** 7
 
-<!--Device-contact-class ImAddress--><!--Device-contact-class ImAddress-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -26,9 +26,9 @@ Custom instant message type, the default value is **-1**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ImAddress-static readonly CUSTOM_LABEL: -1--><!--Device-ImAddress-static readonly CUSTOM_LABEL: -1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -44,9 +44,9 @@ AIM, the default value is **0**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ImAddress-static readonly IM_AIM: 0--><!--Device-ImAddress-static readonly IM_AIM: 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -62,9 +62,9 @@ ICQ, the default value is **6**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ImAddress-static readonly IM_ICQ: 6--><!--Device-ImAddress-static readonly IM_ICQ: 6-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -80,9 +80,9 @@ JABBER, the default value is **7**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ImAddress-static readonly IM_JABBER: 7--><!--Device-ImAddress-static readonly IM_JABBER: 7-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -98,9 +98,9 @@ MSN, the default value is **1**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ImAddress-static readonly IM_MSN: 1--><!--Device-ImAddress-static readonly IM_MSN: 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -116,9 +116,9 @@ QQ, the default value is **4**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ImAddress-static readonly IM_QQ: 4--><!--Device-ImAddress-static readonly IM_QQ: 4-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -134,9 +134,9 @@ Skype, the default value is **3**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ImAddress-static readonly IM_SKYPE: 3--><!--Device-ImAddress-static readonly IM_SKYPE: 3-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -152,9 +152,9 @@ Yahoo, the default value is **2**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ImAddress-static readonly IM_YAHOO: 2--><!--Device-ImAddress-static readonly IM_YAHOO: 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -170,9 +170,9 @@ IM address.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ImAddress-imAddress: string--><!--Device-ImAddress-imAddress: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -188,9 +188,9 @@ Invalid instant message type, the default value is **-2**.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ImAddress-static readonly INVALID_LABEL_ID: -2--><!--Device-ImAddress-static readonly INVALID_LABEL_ID: -2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -206,9 +206,9 @@ Instant message type.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ImAddress-labelId?: number--><!--Device-ImAddress-labelId?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -224,9 +224,8 @@ Name of the instant message type.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ImAddress-labelName?: string--><!--Device-ImAddress-labelName?: string-End-->
-
 **System capability:** SystemCapability.Applications.ContactsData
-

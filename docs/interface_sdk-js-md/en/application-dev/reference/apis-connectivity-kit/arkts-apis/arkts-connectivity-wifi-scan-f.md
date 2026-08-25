@@ -16,21 +16,21 @@ Scans Wi-Fi hotspot.<p>This API works in asynchronous mode.</p>
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [scan](arkts-connectivity-wifimanager-scan-f.md)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.LOCATION
 
-<!--Device-wifi-function scan(): boolean--><!--Device-wifi-function scan(): boolean-End-->
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -43,4 +43,3 @@ try {
 	console.error("failed:" + JSON.stringify(error));
 }
 ```
-

@@ -4,9 +4,7 @@ Segmenter class for locale-sensitive text segmentation.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-Intl-export class Segmenter--><!--Device-Intl-export class Segmenter-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,20 +23,18 @@ Creates a new Segmenter.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Segmenter-public constructor(locales?: BCP47LanguageTag | BCP47LanguageTag[], options?: SegmenterOptions)--><!--Device-Segmenter-public constructor(locales?: BCP47LanguageTag | BCP47LanguageTag[], options?: SegmenterOptions)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | BCP47LanguageTag \| BCP47LanguageTag[] | No | the locales. |
-| options | [SegmenterOptions](arkts-arkts-intl-segmenteroptions-i.md) | No | the options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | BCP47LanguageTag \| [BCP47LanguageTag[]](arkts-arkts-intl-bcp47languagetag-t.md) | No |
+| options | [SegmenterOptions](arkts-arkts-intl-segmenteroptions-i.md) | No |
 
 ## resolvedOptions
 
@@ -50,19 +46,17 @@ Returns resolved options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Segmenter-public resolvedOptions(): ResolvedSegmenterOptions--><!--Device-Segmenter-public resolvedOptions(): ResolvedSegmenterOptions-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ResolvedSegmenterOptions](arkts-arkts-intl-resolvedsegmenteroptions-i.md) | the resolved options. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [ResolvedSegmenterOptions](arkts-arkts-intl-resolvedsegmenteroptions-i.md) |
 
 ## segment
 
@@ -74,25 +68,23 @@ Segments a document.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Segmenter-public segment(doc: string): Segments--><!--Device-Segmenter-public segment(doc: string): Segments-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| doc | string | Yes | the text to segment. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| doc | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Segments](arkts-arkts-intl-segments-c.md) | the segments. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Segments](arkts-arkts-intl-segments-c.md) |
 
 ## supportedLocalesOf
 
@@ -105,24 +97,21 @@ Returns supported locales.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Segmenter-public static supportedLocalesOf(locales: BCP47LanguageTag | BCP47LanguageTag[],             options?: PickLocaleMatchSegmenterOptions): BCP47LanguageTag[]--><!--Device-Segmenter-public static supportedLocalesOf(locales: BCP47LanguageTag | BCP47LanguageTag[],             options?: PickLocaleMatchSegmenterOptions): BCP47LanguageTag[]-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | BCP47LanguageTag \| BCP47LanguageTag[] | Yes | the locales. |
-| options | [PickLocaleMatchSegmenterOptions](arkts-arkts-intl-picklocalematchsegmenteroptions-i.md) | No | the options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | BCP47LanguageTag \| [BCP47LanguageTag[]](arkts-arkts-intl-bcp47languagetag-t.md) | Yes |
+| options | [PickLocaleMatchSegmenterOptions](arkts-arkts-intl-picklocalematchsegmenteroptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| BCP47LanguageTag[] | supported locales. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BCP47LanguageTag[]](arkts-arkts-intl-bcp47languagetag-t.md) |

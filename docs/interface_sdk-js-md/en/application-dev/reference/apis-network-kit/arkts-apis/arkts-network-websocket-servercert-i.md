@@ -2,9 +2,9 @@
 
 Certificate information, which includes the paths of the WebSocketServer certificate file and private key file.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-webSocket-export interface ServerCert--><!--Device-webSocket-export interface ServerCert-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -24,9 +24,9 @@ Path of the server certificate file.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-ServerCert-certPath: string--><!--Device-ServerCert-certPath: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -40,9 +40,8 @@ Path of the private key file of the server certificate.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-ServerCert-keyPath: string--><!--Device-ServerCert-keyPath: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
-

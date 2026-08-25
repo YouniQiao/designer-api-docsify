@@ -10,7 +10,6 @@ import { EmbeddableUIAbility } from '@kit.AbilityKit';
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md) | EmbeddableUIAbility is an embeddable UIAbility component provided for atomic services. It inherits from [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md). You can implement EmbeddableUIAbility to enable atomic services to be launched by other applications either as a standalone window or embedded within the host application's UI. For details about the inheritance relationship of each ability, see Inheritance Relationship. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md) |

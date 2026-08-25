@@ -4,7 +4,7 @@ MediaLibrary availability.
 
 **Since:** 26.0.0
 
-<!--Device-photoAccessHelper-interface MediaLibraryAvailability--><!--Device-photoAccessHelper-interface MediaLibraryAvailability-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,9 +26,9 @@ MediaLibrary availability status.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-MediaLibraryAvailability-availabilityStatus: AvailabilityStatus--><!--Device-MediaLibraryAvailability-availabilityStatus: AvailabilityStatus-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -44,9 +44,8 @@ MediaLibrary unavailability reason.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MediaLibraryAvailability-unavailabilityReason: string--><!--Device-MediaLibraryAvailability-unavailabilityReason: string-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

@@ -16,23 +16,23 @@ function generateRandomUUID(entropyCache?: boolean): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
-<!--Device-util-function generateRandomUUID(entropyCache?: boolean): string--><!--Device-util-function generateRandomUUID(entropyCache?: boolean): string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| entropyCache | boolean | 否 | 是否使用已缓存的UUID，true表示使用缓存的UUID以提升性能（最多缓存128个UUID，缓存用尽后会重新生成以保证随机性）， false表示不使用缓存的UUID，默认true。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| entropyCache | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 表示此UUID的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -41,4 +41,3 @@ let uuid = util.generateRandomUUID(true);
 console.info("RFC 4122 Version 4 UUID:" + uuid);
 // 输出随机生成的UUID
 ```
-

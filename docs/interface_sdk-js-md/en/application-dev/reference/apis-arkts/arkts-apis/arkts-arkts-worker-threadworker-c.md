@@ -6,7 +6,7 @@ Before using the following APIs, you must create a ThreadWorker instance. The Th
 
 **Since:** 9
 
-<!--Device-worker-class ThreadWorker--><!--Device-worker-class ThreadWorker-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,25 +26,25 @@ Adds an event listener for the Worker thread. This API provides the same functio
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ThreadWorker-addEventListener(type: string, listener: WorkerEventListener): void--><!--Device-ThreadWorker-addEventListener(type: string, listener: WorkerEventListener): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | string | Yes | Type of the event to listen for. |
-| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | Yes | Callback to invoke when an event of the specified type occurs. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | string | Yes |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
 
 **Examples**
 
@@ -96,25 +96,25 @@ A constructor used to create a ThreadWorker instance.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ThreadWorker-constructor(scriptURL: string, options?: WorkerOptions)--><!--Device-ThreadWorker-constructor(scriptURL: string, options?: WorkerOptions)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| scriptURL | string | Yes | URL of the Worker thread file. For details about the rules, see Precautions for File URLs. |
-| options | [WorkerOptions](arkts-arkts-worker-workeroptions-i.md) | No | Options that can be set for the Worker instance. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| scriptURL | string | Yes |
+| options | [WorkerOptions](arkts-arkts-worker-workeroptions-i.md) | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed. |
-| [10200007](../errorcode-utils.md#10200007-abnormal-worker-file-path) | The worker file path is invalid. |
+| Error Code ID |
+| --- |
+| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) |
+| [10200007](../errorcode-utils.md#10200007-abnormal-worker-file-path) |
 
 **Examples**
 
@@ -148,29 +148,29 @@ Dispatches the event defined for the Worker thread.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ThreadWorker-dispatchEvent(event: Event): boolean--><!--Device-ThreadWorker-dispatchEvent(event: Event): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | [Event](arkts-arkts-worker-event-i.md) | Yes | Event to dispatch. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | [Event](arkts-arkts-worker-event-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
 
 **Examples**
 
@@ -245,7 +245,7 @@ workerPort.onmessage = (event: MessageEvents) => {
 }
 ```
 
-## off_string
+## off
 
 ```TypeScript
 off(type: string, listener?: WorkerEventListener): void
@@ -255,25 +255,25 @@ Removes an event listener for the Worker thread. This API provides the same func
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ThreadWorker-off(type: string, listener?: WorkerEventListener): void--><!--Device-ThreadWorker-off(type: string, listener?: WorkerEventListener): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | string | Yes | Type of the event for which the event listener is removed. |
-| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | No | listener Callback of the event listener to remove. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | string | Yes |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
 
 **Examples**
 
@@ -303,7 +303,16 @@ workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not
 workerInstance.off("alert");
 ```
 
-## on_string
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+// Use on, once, or addEventListener to add a listener for the "alert" event, and use off to remove the listener.
+workerInstance.off("alert");
+```
+
+## on
 
 ```TypeScript
 on(type: string, listener: WorkerEventListener): void
@@ -313,25 +322,25 @@ Adds an event listener for the Worker thread. This API provides the same functio
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ThreadWorker-on(type: string, listener: WorkerEventListener): void--><!--Device-ThreadWorker-on(type: string, listener: WorkerEventListener): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | string | Yes | Type of the event to listen for. |
-| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | Yes | Callback to invoke when an event of the specified type occurs. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | string | Yes |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
 
 **Examples**
 
@@ -350,7 +359,40 @@ workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not
 workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
 ```
 
-## once_string
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+workerInstance.on("alert", () => {
+    console.info("alert listener callback");
+})
+```
+
+## onAllErrors
+
+```TypeScript
+onAllErrors?: ErrorCallback
+```
+
+Called when an exception occurs within the lifecycle of the Worker thread. The event handler is executed in the host thread.onerror can capture only exceptions generated by synchronous methods within the onmessage callback. It cannot capture exceptions from multithreaded callbacks or modularization-related exceptions. Once an exception is captured, the Worker thread will proceed to the destruction process and cannot be used.onAllErrors can capture global exceptions generated during the onmessage callback, timer callback, and file execution of the Worker thread. After an exception is captured by onAllErrors, the Worker thread remains alive and can continue to be used. You are advised to use onAllErrors instead of onerror.
+
+**Since:** 18
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
+
+## once
 
 ```TypeScript
 once(type: string, listener: WorkerEventListener): void
@@ -360,25 +402,25 @@ Adds an event listener for the Worker thread and removes the event listener afte
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ThreadWorker-once(type: string, listener: WorkerEventListener): void--><!--Device-ThreadWorker-once(type: string, listener: WorkerEventListener): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | string | Yes | Type of the event to listen for |
-| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | Yes | listener Callback to invoke when an event of the specified type occurs |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | string | Yes |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
 
 **Examples**
 
@@ -398,6 +440,132 @@ workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not
 // workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
 ```
 
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+workerInstance.once("alert", () => {
+    console.info("alert listener callback");
+})
+```
+
+## onerror
+
+```TypeScript
+onerror?: (err: ErrorEvent) => void
+```
+
+Called when an exception occurs during worker execution. The event handler is executed in the host thread. In the callback function, the err type is ErrorEvent, indicating the received abnormal data.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| err | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
+
+## onexit
+
+```TypeScript
+onexit?: (code: number) => void
+```
+
+Called when the Worker thread exits. The event handler is executed in the host thread. In the callback function, the code value is of the number type, where the value 1 indicates abnormal exit and 0 indicates normal exit.The default value is undefined.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| code | number | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
+
+## onmessage
+
+```TypeScript
+onmessage?: (event: MessageEvents) => void
+```
+
+Called when the host thread receives a message sent by the Worker thread through workerPort.postMessage. The event handler is executed in the host thread. In the callback function, the event type is MessageEvents, indicating the received message data.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
+
+## onmessageerror
+
+```TypeScript
+onmessageerror?: (event: MessageEvents) => void
+```
+
+Called when the Worker thread receives a message that cannot be serialized. The event handler is executed in the host thread. In the callback function, the event type is MessageEvents, indicating the received message data.
+
+**Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
+
 ## postMessage
 
 ```TypeScript
@@ -408,25 +576,25 @@ Sends a message from the host thread to the Worker thread by transferring object
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ThreadWorker-postMessage(message: Object, transfer: ArrayBuffer[]): void--><!--Device-ThreadWorker-postMessage(message: Object, transfer: ArrayBuffer[]): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | Object | Yes | Data to be sent to the Worker thread. The data object must be sequenceable. For details about the supported parameter types, see Sequenceable Data Types. |
-| transfer | ArrayBuffer[] | Yes | ArrayBuffer instance holding an array of objects for which the ownership is transferred to the Worker thread. After the transfer, the objects are available only in the Worker thread. The array cannot be null. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | Object | Yes |
+| transfer | ArrayBuffer[] | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 **Examples**
 
@@ -640,25 +808,25 @@ Sends a message from the host thread to the Worker thread by transferring object
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ThreadWorker-postMessage(message: Object, options?: PostMessageOptions): void--><!--Device-ThreadWorker-postMessage(message: Object, options?: PostMessageOptions): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | Object | Yes | Data to be sent to the Worker thread. The data object must be sequenceable. For details about the supported parameter types, see Sequenceable Data Types. |
-| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | No | If this parameter is specified, it functions the same as ArrayBuffer[]. Specifically, the ownership of the objects in the array is transferred to the Worker thread and becomes unavailable in the host thread. The objects are available only in the Worker thread. If this parameter is not specified, the default value undefined is used, and information is transferred to the Worker thread by copying data. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | Object | Yes |
+| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 **Examples**
 
@@ -674,25 +842,25 @@ Sends a message from the host thread to the Worker thread. In the message, a sen
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-ThreadWorker-postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void--><!--Device-ThreadWorker-postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | Object | Yes | Data to be sent to the Worker thread. The data object must be sequenceable or sendable. For details about the supported sequenceable types, see Sequenceable Data Types. For details about the supported sendable types, see Sendable Data Types. |
-| transfer | ArrayBuffer[] | No | ArrayBuffer instance holding an array of objects for which the ownership is transferred to the Worker thread. After the transfer, the objects are available only in the Worker thread. The array cannot be null. The default value is an empty array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | Object | Yes |
+| transfer | ArrayBuffer[] | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 **Examples**
 
@@ -787,24 +955,24 @@ Registers an object with the ThreadWorker instance of the host thread. In this w
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-ThreadWorker-registerGlobalCallObject(instanceName: string, globalCallObject: Object): void--><!--Device-ThreadWorker-registerGlobalCallObject(instanceName: string, globalCallObject: Object): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| instanceName | string | Yes | Key used for registration, based on which the registered object is identified during method calling. |
-| globalCallObject | Object | Yes | Object to register. The ThreadWorker instance holds a strong reference to the object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [instanceName](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-globalerror-i.md) | string | Yes |
+| globalCallObject | Object | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
 
 **Examples**
 
@@ -863,17 +1031,17 @@ Removes all event listeners for the Worker thread.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ThreadWorker-removeAllListener(): void--><!--Device-ThreadWorker-removeAllListener(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
 
 **Examples**
 
@@ -926,24 +1094,24 @@ Removes an event listener for the Worker thread. This API provides the same func
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ThreadWorker-removeEventListener(type: string, callback?: WorkerEventListener): void--><!--Device-ThreadWorker-removeEventListener(type: string, callback?: WorkerEventListener): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | string | Yes | Type of the event for which the event listener is to be removed. |
-| callback | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | No | Callback to invoke when the listener is removed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | string | Yes |
+| callback | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
 
 **Examples**
 
@@ -1000,17 +1168,17 @@ Terminates the Worker thread to stop it from receiving messages.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ThreadWorker-terminate(): void--><!--Device-ThreadWorker-terminate(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
 
 **Examples**
 
@@ -1040,23 +1208,23 @@ Unregisters an object with the ThreadWorker instance of the host thread. This AP
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-ThreadWorker-unregisterGlobalCallObject(instanceName?: string): void--><!--Device-ThreadWorker-unregisterGlobalCallObject(instanceName?: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| instanceName | string | No | Key used for registration. If this parameter is left blank, all registered objects registered in the ThreadWorker instance are unregistered. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [instanceName](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-globalerror-i.md) | string | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| Error Code ID |
+| --- |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
 
 **Examples**
 
@@ -1082,94 +1250,3 @@ workerInstance.unregisterGlobalCallObject("myObj");
 //workerInstance.unregisterGlobalCallObject();
 workerInstance.postMessage("start worker");
 ```
-
-## onAllErrors
-
-```TypeScript
-onAllErrors?: ErrorCallback
-```
-
-Called when an exception occurs within the lifecycle of the Worker thread. The event handler is executed in the host thread.onerror can capture only exceptions generated by synchronous methods within the onmessage callback. It cannot capture exceptions from multithreaded callbacks or modularization-related exceptions. Once an exception is captured, the Worker thread will proceed to the destruction process and cannot be used.onAllErrors can capture global exceptions generated during the onmessage callback, timer callback, and file execution of the Worker thread. After an exception is captured by onAllErrors, the Worker thread remains alive and can continue to be used. You are advised to use onAllErrors instead of onerror.
-
-**Type:** [ErrorCallback](arkts-arkts-errorcallback-t.md)
-
-**Since:** 18
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ThreadWorker-onAllErrors?: ErrorCallback--><!--Device-ThreadWorker-onAllErrors?: ErrorCallback-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## onerror
-
-```TypeScript
-onerror?: (err: ErrorEvent) => void
-```
-
-Called when an exception occurs during worker execution. The event handler is executed in the host thread. In the callback function, the err type is ErrorEvent, indicating the received abnormal data.
-
-**Type:** (err: ErrorEvent) =&gt; void
-
-**Since:** 9
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ThreadWorker-onerror?: (err: ErrorEvent) => void--><!--Device-ThreadWorker-onerror?: (err: ErrorEvent) => void-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## onexit
-
-```TypeScript
-onexit?: (code: number) => void
-```
-
-Called when the Worker thread exits. The event handler is executed in the host thread. In the callback function, the code value is of the number type, where the value 1 indicates abnormal exit and 0 indicates normal exit.The default value is undefined.
-
-**Type:** (code: number) =&gt; void
-
-**Since:** 9
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ThreadWorker-onexit?: (code: number) => void--><!--Device-ThreadWorker-onexit?: (code: number) => void-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## onmessage
-
-```TypeScript
-onmessage?: (event: MessageEvents) => void
-```
-
-Called when the host thread receives a message sent by the Worker thread through workerPort.postMessage. The event handler is executed in the host thread. In the callback function, the event type is MessageEvents, indicating the received message data.
-
-**Type:** (event: MessageEvents) =&gt; void
-
-**Since:** 9
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ThreadWorker-onmessage?: (event: MessageEvents) => void--><!--Device-ThreadWorker-onmessage?: (event: MessageEvents) => void-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## onmessageerror
-
-```TypeScript
-onmessageerror?: (event: MessageEvents) => void
-```
-
-Called when the Worker thread receives a message that cannot be serialized. The event handler is executed in the host thread. In the callback function, the event type is MessageEvents, indicating the received message data.
-
-**Type:** (event: MessageEvents) =&gt; void
-
-**Since:** 9
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ThreadWorker-onmessageerror?: (event: MessageEvents) => void--><!--Device-ThreadWorker-onmessageerror?: (event: MessageEvents) => void-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-

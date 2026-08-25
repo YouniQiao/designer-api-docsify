@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [SearchModifier](arkts-arkui-searchmodifier-c.md) | Defines Search Modifier |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SearchModifier](arkts-arkui-searchmodifier-c.md) |

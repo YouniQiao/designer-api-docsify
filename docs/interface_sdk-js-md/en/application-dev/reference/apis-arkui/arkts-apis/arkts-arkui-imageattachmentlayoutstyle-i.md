@@ -4,7 +4,7 @@ Defines the ImageAttachment Layout Style.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface ImageAttachmentLayoutStyle--><!--Device-unnamed-declare interface ImageAttachmentLayoutStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Radius of the image border corners.Default value: **0**.Unit: vp
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ImageAttachmentLayoutStyle-borderRadius?: LengthMetrics | BorderRadiuses--><!--Device-ImageAttachmentLayoutStyle-borderRadius?: LengthMetrics | BorderRadiuses-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ Image margin.Default value: **0**.Unit: vp
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ImageAttachmentLayoutStyle-margin?: LengthMetrics | Margin--><!--Device-ImageAttachmentLayoutStyle-margin?: LengthMetrics | Margin-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,15 +61,14 @@ padding?: LengthMetrics | Padding
 
 Image padding.Default value: **0**.Unit: vp
 
-**Type:** LengthMetrics \| Padding
+**Type:** LengthMetrics \| [Padding](arkts-arkui-units-padding-i.md)
 
 **Since:** 12
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ImageAttachmentLayoutStyle-padding?: LengthMetrics | Padding--><!--Device-ImageAttachmentLayoutStyle-padding?: LengthMetrics | Padding-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

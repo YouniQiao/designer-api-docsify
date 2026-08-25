@@ -4,11 +4,11 @@ The **statfs** module provides APIs for obtaining file system information, inclu
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [statfs](arkts-file-statvfs.md)
-
-<!--Device-unnamed-declare namespace Statfs--><!--Device-unnamed-declare namespace Statfs-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -21,10 +21,9 @@ The **statfs** module provides APIs for obtaining file system information, inclu
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md#getfreebytes) | Obtains the free size of the specified file system, in bytes. This API uses an asynchronous callback to return the result. |
-| [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md#getfreebytes) | Obtains the free size of the specified file system, in bytes. This API uses a promise to return the result. |
-| [getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md#gettotalbytes) | Obtains the total size of the specified file system, in bytes. This API uses an asynchronous callback to return the result. |
-| [getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md#gettotalbytes) | Obtains the total size of the specified file system, in byte. This API uses a promise to return the result. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md#getfreebytes) |
+| [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md#getfreebytes) |
+| [getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md#gettotalbytes) |
+| [getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md#gettotalbytes) |

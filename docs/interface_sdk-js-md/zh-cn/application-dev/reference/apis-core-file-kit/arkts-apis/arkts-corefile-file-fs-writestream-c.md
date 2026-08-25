@@ -1,12 +1,12 @@
 # WriteStream
 
-文件可写流，需要先通过 fileIo.createWriteStream方法来构建一 个WriteStream实例。WriteStream继承自数据流基类[stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md)。
+文件可写流，需要先通过 [fileIo.createWriteStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatewritestream12)方法来构建一 个WriteStream实例。WriteStream继承自数据流基类[stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md)。
 
 **继承/实现关系：** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md)
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare class WriteStream--><!--Device-unnamed-declare class WriteStream-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -28,20 +28,20 @@ close(): void
 
 **起始版本：** 12
 
-<!--Device-WriteStream-close(): void--><!--Device-WriteStream-close(): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900025 | No space left on device |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900025 |
+| 13900041 |
+| 13900042 |
 
 **示例**
 
@@ -195,7 +195,7 @@ constructor()
 
 **起始版本：** 12
 
-<!--Device-WriteStream-constructor()--><!--Device-WriteStream-constructor()-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -209,31 +209,31 @@ seek(offset: number, whence?: WhenceType): number
 
 **起始版本：** 12
 
-<!--Device-WriteStream-seek(offset: number, whence?: WhenceType): number--><!--Device-WriteStream-seek(offset: number, whence?: WhenceType): number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| offset | number | 是 | 相对偏移位置，单位为Byte。 |
-| whence | [WhenceType](arkts-corefile-file-fs-whencetype-e.md) | 否 | 偏移指针相对位置类型。默认值：SEEK_SET，文件起始位置处。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| offset | number | 是 |
+| whence | [WhenceType](arkts-corefile-file-fs-whencetype-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 当前可写流偏移指针位置（相对于文件头的偏移量，单位为Byte）。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error |
-| 13900020 | Invalid argument |
-| 13900026 | Illegal seek |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 13900020 |
+| 13900026 |
+| 13900042 |
 
 **示例**
 
@@ -265,7 +265,7 @@ readonly bytesWritten: number
 
 **起始版本：** 12
 
-<!--Device-WriteStream-readonly bytesWritten: number--><!--Device-WriteStream-readonly bytesWritten: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -281,7 +281,6 @@ readonly path: string
 
 **起始版本：** 12
 
-<!--Device-WriteStream-readonly path: string--><!--Device-WriteStream-readonly path: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
-

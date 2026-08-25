@@ -4,7 +4,7 @@ Enumerates the display modes of the title bar.
 
 **Since:** 8
 
-<!--Device-unnamed-declare enum NavigationTitleMode--><!--Device-unnamed-declare enum NavigationTitleMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,9 +19,9 @@ When the content is more than one screen in a scrollable component, the main tit
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-NavigationTitleMode-Free = 0--><!--Device-NavigationTitleMode-Free = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,9 +35,9 @@ The title is fixed at full mode.Default value: If there is only a main title, th
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-NavigationTitleMode-Full--><!--Device-NavigationTitleMode-Full-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,9 +51,8 @@ The title is fixed at mini mode.Default value:In versions earlier than API versi
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-NavigationTitleMode-Mini--><!--Device-NavigationTitleMode-Mini-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

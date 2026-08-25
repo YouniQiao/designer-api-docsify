@@ -14,33 +14,33 @@ function createCertCRLCollection(certs: Array<X509Cert>, crls?: Array<X509CRL>):
 
 Creates an object for a collection of X.509 certificates and CRLs.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-cert-function createCertCRLCollection(certs: Array<X509Cert>, crls?: Array<X509CRL>): CertCRLCollection--><!--Device-cert-function createCertCRLCollection(certs: Array<X509Cert>, crls?: Array<X509CRL>): CertCRLCollection-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| certs | Array&lt;X509Cert&gt; | Yes | X.509 certificates. |
-| crls | Array&lt;[X509CRL](arkts-devicecertificate-cert-x509crl-i.md)&gt; | No | Array of X509CRL. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [certs](../../apis-universal-keystore-kit/arkts-apis/arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md) | Array & lt;X509Cert & gt; | Yes |
+| [crls](arkts-devicecertificate-cert-x509certrevokedparams-i.md) | Array&lt;[X509CRL](arkts-devicecertificate-cert-x509crl-i.md)&gt; | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [CertCRLCollection](arkts-devicecertificate-cert-certcrlcollection-i.md) | CertCRLCollection** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [CertCRLCollection](arkts-devicecertificate-cert-certcrlcollection-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
 
 **Examples**
 
@@ -122,4 +122,3 @@ async function createCollection() {
   }
 }
 ```
-

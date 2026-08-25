@@ -4,11 +4,11 @@ Defines a **LightResponse** object.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [LightResponse](arkts-sensorservice-sensor-lightresponse-i.md)
-
-<!--Device-unnamed-export interface LightResponse--><!--Device-unnamed-export interface LightResponse-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -30,13 +30,12 @@ Light intensity, in lux.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [intensity](arkts-sensorservice-sensor-lightresponse-i.md#intensity)
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-LightResponse-intensity: number--><!--Device-LightResponse-intensity: number-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
-

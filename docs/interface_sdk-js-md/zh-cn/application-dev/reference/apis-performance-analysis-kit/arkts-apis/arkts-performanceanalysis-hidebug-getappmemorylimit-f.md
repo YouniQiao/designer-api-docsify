@@ -14,17 +14,17 @@ function getAppMemoryLimit(): MemoryLimit
 
 获取应用程序进程的内存限制。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-hidebug-function getAppMemoryLimit(): MemoryLimit--><!--Device-hidebug-function getAppMemoryLimit(): MemoryLimit-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [MemoryLimit](arkts-performanceanalysis-hidebug-memorylimit-i.md) | 应用程序进程内存限制。 |
+| 类型 |
+| --- |
+| [MemoryLimit](arkts-performanceanalysis-hidebug-memorylimit-i.md) |
 
 **示例**
 
@@ -35,4 +35,3 @@ let appMemoryLimit:hidebug.MemoryLimit = hidebug.getAppMemoryLimit();
 console.info(`rssLimit: ${appMemoryLimit.rssLimit}, vssLimit: ${appMemoryLimit.vssLimit},` +
   `vmHeapLimit: ${appMemoryLimit.vmHeapLimit}, vmTotalHeapSize: ${appMemoryLimit.vmTotalHeapSize}`);
 ```
-

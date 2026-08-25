@@ -4,9 +4,7 @@ Defines the LeadingMarginSpanDrawInfo interface.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-unnamed-export declare interface LeadingMarginSpanDrawInfo--><!--Device-unnamed-export declare interface LeadingMarginSpanDrawInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +20,9 @@ The baseline offset of the line. The unit is px.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-LeadingMarginSpanDrawInfo-baseline: double--><!--Device-LeadingMarginSpanDrawInfo-baseline: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,11 +38,9 @@ The bottom position of the line. The unit is px.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-LeadingMarginSpanDrawInfo-bottom: double--><!--Device-LeadingMarginSpanDrawInfo-bottom: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,11 +56,9 @@ The direction of text.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-LeadingMarginSpanDrawInfo-direction: TextDirection--><!--Device-LeadingMarginSpanDrawInfo-direction: TextDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,11 +74,9 @@ The end index of the first character in the current line relative to the compone
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-LeadingMarginSpanDrawInfo-end: int--><!--Device-LeadingMarginSpanDrawInfo-end: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -102,11 +92,9 @@ Whether current line is first line of a paragraph.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-LeadingMarginSpanDrawInfo-first: boolean--><!--Device-LeadingMarginSpanDrawInfo-first: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -122,11 +110,9 @@ The start index of the first character in the current line relative to the compo
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-LeadingMarginSpanDrawInfo-start: int--><!--Device-LeadingMarginSpanDrawInfo-start: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -142,11 +128,9 @@ The top position of the line. The unit is px.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-LeadingMarginSpanDrawInfo-top: double--><!--Device-LeadingMarginSpanDrawInfo-top: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -162,11 +146,8 @@ The x offset of the line. The unit is px.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-LeadingMarginSpanDrawInfo-x: double--><!--Device-LeadingMarginSpanDrawInfo-x: double-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

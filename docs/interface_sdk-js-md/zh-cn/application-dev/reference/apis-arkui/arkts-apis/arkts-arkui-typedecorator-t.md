@@ -8,25 +8,25 @@ export declare type TypeDecorator = <T>(type: TypeConstructor<T>) => PropertyDec
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-unnamed-export declare type TypeDecorator = <T>(type: TypeConstructor<T>) => PropertyDecorator--><!--Device-unnamed-export declare type TypeDecorator = <T>(type: TypeConstructor<T>) => PropertyDecorator-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [TypeConstructor](arkts-arkui-arkui-statemanagement-typeconstructor-i.md)&lt;T&gt; | 是 | 标记类属性的类型，仅支持自定义class类型，传入其他类型会导致持久化失败。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [TypeConstructor](arkts-arkui-arkui-statemanagement-typeconstructor-i.md)&lt;T&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| PropertyDecorator | 属性装饰器，用于装饰嵌套类中属于自定义class类的属性。 |
+| 类型 |
+| --- |
+| PropertyDecorator |
 
 **示例**
 
@@ -84,4 +84,3 @@ class Sample {
   @Trace value: Array<Array<number>> = new Array();
 }
 ```
-

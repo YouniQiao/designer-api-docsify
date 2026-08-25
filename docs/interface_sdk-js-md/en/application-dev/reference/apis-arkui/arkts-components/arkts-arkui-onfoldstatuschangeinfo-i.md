@@ -9,7 +9,7 @@ Called when the folding state changes. This API takes effect only in landscape m
 
 **Since:** 18
 
-<!--Device-unnamed-interface OnFoldStatusChangeInfo--><!--Device-unnamed-interface OnFoldStatusChangeInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,10 @@ Current fold state of the device.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-OnFoldStatusChangeInfo-foldStatus: FoldStatus--><!--Device-OnFoldStatusChangeInfo-foldStatus: FoldStatus-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

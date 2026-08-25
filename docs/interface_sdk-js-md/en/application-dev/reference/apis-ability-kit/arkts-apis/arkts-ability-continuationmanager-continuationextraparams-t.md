@@ -8,6 +8,8 @@ Defines the extra parameters required by the device selection module in the cont
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 22
 
 **Substitutes:** [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
@@ -16,9 +18,6 @@ Defines the extra parameters required by the device selection module in the cont
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-continuationManager-export type ContinuationExtraParams = _ContinuationExtraParams--><!--Device-continuationManager-export type ContinuationExtraParams = _ContinuationExtraParams-End-->
-
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 **Property type:** _ContinuationExtraParams
-

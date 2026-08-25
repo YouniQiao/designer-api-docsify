@@ -6,11 +6,11 @@ The class of agent UI extension ability. This class cannot be used in Harmony Ar
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-unnamed-declare class AgentUIExtensionAbility--><!--Device-unnamed-declare class AgentUIExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -19,4 +19,3 @@ The class of agent UI extension ability. This class cannot be used in Harmony Ar
 ```TypeScript
 import { AgentUIExtensionAbility } from '@kit.AbilityKit';
 ```
-

@@ -2,9 +2,9 @@
 
 日志文件对象接口。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-logLibrary-interface LogEntry--><!--Device-logLibrary-interface LogEntry-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
@@ -24,11 +24,11 @@ mtime: long
 
 上次修改该文件的时间，表示距1970年1月1日0时0分0秒的秒数。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-LogEntry-mtime: long--><!--Device-LogEntry-mtime: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
@@ -44,9 +44,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-LogEntry-name: string--><!--Device-LogEntry-name: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
@@ -60,13 +60,12 @@ size: long
 
 文件大小，以字节为单位。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-LogEntry-size: long--><!--Device-LogEntry-size: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
 **系统接口：** 此接口为系统接口。
-

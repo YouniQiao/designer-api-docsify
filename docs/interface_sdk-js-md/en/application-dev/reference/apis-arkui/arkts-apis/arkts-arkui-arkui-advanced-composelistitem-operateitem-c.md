@@ -4,7 +4,7 @@ Defines the type of the element on the right of the **ComposeListItem** componen
 
 **Since:** 10
 
-<!--Device-unnamed-export declare class OperateItem--><!--Device-unnamed-export declare class OperateItem-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,11 @@ Arrow with a size of 12 x 24 vp.If this parameter is not set or is set to **unde
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-OperateItem-arrow?: OperateIcon--><!--Device-OperateItem-arrow?: OperateIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,11 +46,11 @@ Button.If this parameter is not set or is set to **undefined**, the button is no
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-OperateItem-button?: OperateButton--><!--Device-OperateItem-button?: OperateButton-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,11 +66,11 @@ Check box with a size of 24 x 24 vp.If this parameter is not set or is set to **
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-OperateItem-checkbox?: OperateCheck--><!--Device-OperateItem-checkbox?: OperateCheck-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,11 +86,11 @@ First icon with a size of 24 x 24 vp.If this parameter is not set or is set to *
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-OperateItem-icon?: OperateIcon--><!--Device-OperateItem-icon?: OperateIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -106,11 +106,11 @@ Image with a size of 48 x 48 vp.If this parameter is not set or is set to **unde
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-OperateItem-image?: ResourceStr--><!--Device-OperateItem-image?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,11 +126,11 @@ Radio button with a size of 24 x 24 vp.If this parameter is not set or is set to
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-OperateItem-radio?: OperateCheck--><!--Device-OperateItem-radio?: OperateCheck-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -146,11 +146,11 @@ Second icon with a size of 24 x 24 vp.If this parameter is not set or is set to 
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-OperateItem-subIcon?: OperateIcon--><!--Device-OperateItem-subIcon?: OperateIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -166,11 +166,11 @@ Switch.If this parameter is not set or is set to **undefined**, the switch is no
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-OperateItem-switch?: OperateCheck--><!--Device-OperateItem-switch?: OperateCheck-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -186,11 +186,11 @@ Symbol icon with a size of 48 x 48 vp.If this parameter is not set or is set to 
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-OperateItem-symbolStyle?: SymbolGlyphModifier--><!--Device-OperateItem-symbolStyle?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -206,11 +206,28 @@ Text.If this parameter is not set or is set to **undefined**, the text is not di
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-OperateItem-text?: ResourceStr--><!--Device-OperateItem-text?: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## toggle
+
+```TypeScript
+public toggle?: OperateCheck
+```
+
+Sets the toggle.
+
+**Type:** [OperateCheck](arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

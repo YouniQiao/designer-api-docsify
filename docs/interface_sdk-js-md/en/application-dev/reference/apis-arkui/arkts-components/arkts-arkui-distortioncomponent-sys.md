@@ -12,9 +12,9 @@ Creates a DistortionComponent with content.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-DistortionComponentInterface-(options?: DistortionComponentOptions): DistortionComponentAttribute--><!--Device-DistortionComponentInterface-(options?: DistortionComponentOptions): DistortionComponentAttribute-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,19 +22,18 @@ Creates a DistortionComponent with content.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [DistortionComponentOptions](arkts-arkui-distortioncomponentoptions-i-sys.md) | No | DistortionComponent Options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [DistortionComponentOptions](arkts-arkui-distortioncomponentoptions-i-sys.md) | No |
 
 ## Summary
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |

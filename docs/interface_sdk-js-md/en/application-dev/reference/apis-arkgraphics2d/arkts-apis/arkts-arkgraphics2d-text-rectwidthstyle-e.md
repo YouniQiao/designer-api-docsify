@@ -2,9 +2,9 @@
 
 Enumerates the rectangle width styles.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-text-enum RectWidthStyle--><!--Device-text-enum RectWidthStyle-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -16,11 +16,11 @@ TIGHT = 0
 
 If **letterSpacing** is not set, the rectangle conforms tightly to the text it contains. However, if **letterSpacing** is set, a gap is introduced between the rectangle and text.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-RectWidthStyle-TIGHT = 0--><!--Device-RectWidthStyle-TIGHT = 0-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,11 +32,10 @@ MAX = 1
 
 The rectangle's width is extended to align with the widest rectangle across all lines.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-RectWidthStyle-MAX = 1--><!--Device-RectWidthStyle-MAX = 1-End-->
-
 **System capability:** SystemCapability.Graphics.Drawing
-

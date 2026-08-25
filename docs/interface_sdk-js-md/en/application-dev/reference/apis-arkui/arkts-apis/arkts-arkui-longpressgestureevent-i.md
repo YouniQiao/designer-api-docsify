@@ -6,7 +6,7 @@ Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md). This object
 
 **Since:** 11
 
-<!--Device-unnamed-interface LongPressGestureEvent--><!--Device-unnamed-interface LongPressGestureEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,10 @@ Whether the event is a repeated trigger event. **true**: The event is repeated. 
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-LongPressGestureEvent-repeat: boolean--><!--Device-LongPressGestureEvent-repeat: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

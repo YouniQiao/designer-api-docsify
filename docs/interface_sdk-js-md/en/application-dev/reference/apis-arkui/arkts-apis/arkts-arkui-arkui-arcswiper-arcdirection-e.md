@@ -4,7 +4,7 @@ Declare the direction of arc indicator.
 
 **Since:** 18
 
-<!--Device-unnamed-export enum ArcDirection--><!--Device-unnamed-export enum ArcDirection-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -18,9 +18,9 @@ THREE_CLOCK_DIRECTION = 0
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
 
-<!--Device-ArcDirection-THREE_CLOCK_DIRECTION = 0--><!--Device-ArcDirection-THREE_CLOCK_DIRECTION = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -34,9 +34,9 @@ SIX_CLOCK_DIRECTION = 1
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
 
-<!--Device-ArcDirection-SIX_CLOCK_DIRECTION = 1--><!--Device-ArcDirection-SIX_CLOCK_DIRECTION = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -50,9 +50,8 @@ NINE_CLOCK_DIRECTION = 2
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ArcDirection-NINE_CLOCK_DIRECTION = 2--><!--Device-ArcDirection-NINE_CLOCK_DIRECTION = 2-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
-

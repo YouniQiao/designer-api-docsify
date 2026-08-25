@@ -2,9 +2,9 @@
 
 Enum for tone customized type.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-systemSoundManager-enum ToneCustomizedType--><!--Device-systemSoundManager-enum ToneCustomizedType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -18,9 +18,9 @@ PRE_INSTALLED = 0
 
 Pre-installed tone type.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-ToneCustomizedType-PRE_INSTALLED = 0--><!--Device-ToneCustomizedType-PRE_INSTALLED = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -34,11 +34,10 @@ CUSTOMIZED = 1
 
 Customized tone type.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-ToneCustomizedType-CUSTOMIZED = 1--><!--Device-ToneCustomizedType-CUSTOMIZED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
-

@@ -4,7 +4,7 @@ Define IMonitorValue interface
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface IMonitorValue--><!--Device-unnamed-declare interface IMonitorValue-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,13 +25,13 @@ Get the previous value.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
-
-<!--Device-IMonitorValue-before: T--><!--Device-IMonitorValue-before: T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,13 +47,13 @@ Get current value.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
-
-<!--Device-IMonitorValue-now: T--><!--Device-IMonitorValue-now: T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,13 +69,12 @@ Monitored path input by the user.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
-<!--Device-IMonitorValue-path: string--><!--Device-IMonitorValue-path: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -6,11 +6,10 @@ export type WantAgent = object
 
 Target WantAgent object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export type WantAgent = object--><!--Device-unnamed-export type WantAgent = object-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Property type:** object
-

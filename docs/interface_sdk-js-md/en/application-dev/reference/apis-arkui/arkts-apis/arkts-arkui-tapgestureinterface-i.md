@@ -10,7 +10,7 @@ TapGesture is used to trigger a tap gesture with one, two, or more taps.
 
 **Since:** 7
 
-<!--Device-unnamed-interface TapGestureInterface--><!--Device-unnamed-interface TapGestureInterface-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,7 +19,7 @@ TapGesture is used to trigger a tap gesture with one, two, or more taps.
 ```TypeScript
 ```
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (value?: TapGestureParameters): TapGestureInterface
@@ -29,23 +29,23 @@ Creates a tap gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-ges
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-TapGestureInterface-(value?: TapGestureParameters): TapGestureInterface--><!--Device-TapGestureInterface-(value?: TapGestureParameters): TapGestureInterface-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [TapGestureParameters](arkts-arkui-tapgestureparameters-i.md) | No | Parameters for the tap gesture.<br>**Since:** 12 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [TapGestureParameters](arkts-arkui-tapgestureparameters-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) |
 
 ## onAction
 
@@ -57,21 +57,20 @@ Triggered when the tap gesture is recognized.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-TapGestureInterface-onAction(event: (event: GestureEvent) => void): TapGestureInterface--><!--Device-TapGestureInterface-onAction(event: (event: GestureEvent) => void): TapGestureInterface-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes | Callback for the tap event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | (event: GestureEvent) = & gt; void | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) |

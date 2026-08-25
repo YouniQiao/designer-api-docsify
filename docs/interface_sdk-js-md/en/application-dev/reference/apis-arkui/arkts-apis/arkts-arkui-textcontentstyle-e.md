@@ -4,7 +4,7 @@ The polymorphic style of the text box.
 
 **Since:** 10
 
-<!--Device-unnamed-declare enum TextContentStyle--><!--Device-unnamed-declare enum TextContentStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Default style. The caret width is fixed at 1.5 vp, and the caret height is subje
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-TextContentStyle-DEFAULT--><!--Device-TextContentStyle-DEFAULT-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ Inline input style. The background height of the selected text is the same as th
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-TextContentStyle-INLINE--><!--Device-TextContentStyle-INLINE-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

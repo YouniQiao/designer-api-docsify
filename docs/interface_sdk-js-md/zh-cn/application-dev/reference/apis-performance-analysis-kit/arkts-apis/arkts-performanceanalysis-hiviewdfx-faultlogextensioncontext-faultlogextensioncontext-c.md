@@ -8,11 +8,11 @@ FaultLogExtensionContext是 [FaultLogExtensionAbility](arkts-performanceanalysis
 
 **继承/实现关系：** FaultLogExtensionContext extends ExtensionContext
 
-**起始版本：** 23
+**起始版本：** 21
+
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-unnamed-export default class FaultLogExtensionContext--><!--Device-unnamed-export default class FaultLogExtensionContext-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -21,4 +21,3 @@ FaultLogExtensionContext是 [FaultLogExtensionAbility](arkts-performanceanalysis
 ```TypeScript
 import { FaultLogExtensionContext } from '@kit.PerformanceAnalysisKit';
 ```
-

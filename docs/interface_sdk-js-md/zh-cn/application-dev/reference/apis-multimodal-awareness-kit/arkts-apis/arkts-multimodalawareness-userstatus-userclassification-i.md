@@ -2,11 +2,11 @@
 
 表示用户年龄群组分类检测结果。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 24
-
-<!--Device-userStatus-export interface UserClassification--><!--Device-userStatus-export interface UserClassification-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -26,11 +26,11 @@ ageGroup?: UserAgeGroup
 
 **类型：** [UserAgeGroup](arkts-multimodalawareness-userstatus-useragegroup-e.md)
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 24
-
-<!--Device-UserClassification-ageGroup?: UserAgeGroup--><!--Device-UserClassification-ageGroup?: UserAgeGroup-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -44,11 +44,10 @@ confidence?: float
 
 **类型：** float
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 24
 
-<!--Device-UserClassification-confidence?: float--><!--Device-UserClassification-confidence?: float-End-->
-
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
-

@@ -4,7 +4,7 @@ Enumerates the error codes that may be returned when an ability is started.
 
 **Since:** 7
 
-<!--Device-particleAbility-export enum ErrorCode--><!--Device-particleAbility-export enum ErrorCode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -18,9 +18,8 @@ Invalid parameter.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-ErrorCode-INVALID_PARAMETER = -1--><!--Device-ErrorCode-INVALID_PARAMETER = -1-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
-

@@ -4,7 +4,7 @@ ServiceDie data.
 
 **Since:** 23
 
-<!--Device-distributedDeviceManager-interface ServiceDieData--><!--Device-distributedDeviceManager-interface ServiceDieData-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -13,4 +13,3 @@ ServiceDie data.
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
-

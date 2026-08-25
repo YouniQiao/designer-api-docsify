@@ -16,11 +16,11 @@ function subscribeContinuousTaskState(subscriber: BackgroundTaskSubscriber): voi
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **需要权限：** ohos.permission.GET_BACKGROUND_TASK_INFO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-backgroundTaskManager-function subscribeContinuousTaskState(subscriber: BackgroundTaskSubscriber): void--><!--Device-backgroundTaskManager-function subscribeContinuousTaskState(subscriber: BackgroundTaskSubscriber): void-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -28,18 +28,18 @@ function subscribeContinuousTaskState(subscriber: BackgroundTaskSubscriber): voi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| subscriber | [BackgroundTaskSubscriber](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubscriber-i-sys.md) | 是 | 后台任务监听对象，包含长时任务开始，长时任务更新，长时任务结束。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| subscriber | [BackgroundTaskSubscriber](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubscriber-i-sys.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [9800004](../errorcode-backgroundTaskMgr.md#9800004-系统服务失败) | System service operation failed. |
-| [9800005](../errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) | Continuous task verification failed. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [9800004](../errorcode-backgroundTaskMgr.md#9800004-系统服务失败) |
+| [9800005](../errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) |
 
 **示例**
 
@@ -66,4 +66,3 @@ try {
   console.error(`Operation subscribeContinuousTaskState failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
 }
 ```
-

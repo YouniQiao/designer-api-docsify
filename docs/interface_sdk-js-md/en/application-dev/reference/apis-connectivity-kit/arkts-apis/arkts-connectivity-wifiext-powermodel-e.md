@@ -4,11 +4,11 @@ The power model enumeration.@enum { number } PowerModel
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)
-
-<!--Device-wifiext-export enum PowerModel--><!--Device-wifiext-export enum PowerModel-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
 
@@ -22,11 +22,11 @@ Sleeping model.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)
-
-<!--Device-PowerModel-SLEEPING = 0--><!--Device-PowerModel-SLEEPING = 0-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
 
@@ -40,11 +40,11 @@ General model.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)
-
-<!--Device-PowerModel-GENERAL = 1--><!--Device-PowerModel-GENERAL = 1-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
 
@@ -58,11 +58,10 @@ Through wall model.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)
 
-<!--Device-PowerModel-THROUGH_WALL = 2--><!--Device-PowerModel-THROUGH_WALL = 2-End-->
-
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
-

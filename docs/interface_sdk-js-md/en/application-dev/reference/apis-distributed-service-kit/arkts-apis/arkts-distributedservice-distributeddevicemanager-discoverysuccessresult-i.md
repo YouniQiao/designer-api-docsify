@@ -4,7 +4,7 @@ Discovery successful result.
 
 **Since:** 23
 
-<!--Device-distributedDeviceManager-interface DiscoverySuccessResult--><!--Device-distributedDeviceManager-interface DiscoverySuccessResult-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -26,7 +26,6 @@ Basic description information of a distributed device.
 
 **Since:** 23
 
-<!--Device-DiscoverySuccessResult-device: DeviceBasicInfo--><!--Device-DiscoverySuccessResult-device: DeviceBasicInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
-

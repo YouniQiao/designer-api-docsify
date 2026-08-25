@@ -1,18 +1,17 @@
 # AbilityFirstFrameStateObserver (System API)
 
 ```TypeScript
-export type AbilityFirstFrameStateObserver = _AbilityFirstFrameStateObserver
+export type AbilityFirstFrameStateObserver = _AbilityFirstFrameStateObserver.default
 ```
 
 Defines the listener for the completion of the first frame rendering of the UIAbility.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-appManager-export type AbilityFirstFrameStateObserver = _AbilityFirstFrameStateObserver--><!--Device-appManager-export type AbilityFirstFrameStateObserver = _AbilityFirstFrameStateObserver-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
 
-**Property type:** _AbilityFirstFrameStateObserver
-
+**Property type:** _AbilityFirstFrameStateObserver.default

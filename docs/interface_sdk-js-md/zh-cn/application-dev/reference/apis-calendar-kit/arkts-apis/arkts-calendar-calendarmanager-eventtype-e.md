@@ -4,7 +4,7 @@
 
 **起始版本：** 10
 
-<!--Device-calendarManager-enum EventType--><!--Device-calendarManager-enum EventType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -18,9 +18,9 @@ NORMAL = 0
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-EventType-NORMAL = 0--><!--Device-EventType-NORMAL = 0-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -34,9 +34,8 @@ IMPORTANT = 1
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-EventType-IMPORTANT = 1--><!--Device-EventType-IMPORTANT = 1-End-->
-
 **系统能力：** SystemCapability.Applications.CalendarData
-

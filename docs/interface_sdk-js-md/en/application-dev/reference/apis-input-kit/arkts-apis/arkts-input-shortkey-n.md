@@ -1,10 +1,10 @@
-# shortKey
+# shortKey(Preset Global Shortcut Keys)
 
 The shortKey module provides APIs to set the delay for starting an ability using a shortcut key. For example, you can set the delay to 3 seconds so that a screenshot is taken when you press and hold the shortcut key for 3 seconds.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-unnamed-declare namespace shortKey--><!--Device-unnamed-declare namespace shortKey-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.ShortKey
 
@@ -22,9 +22,8 @@ import { FingerprintEvent } from '@kit.InputKit';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md) | Sets the delay for starting an ability using shortcut keys. This API uses an asynchronous callback to return the result. |
-| [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md) | Sets the delay for starting an ability using shortcut keys. This API uses a promise to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [setKeyDownDuration(Preset Global Shortcut Keys)](arkts-input-shortkey-setkeydownduration-f-sys.md) |
+| [setKeyDownDuration(Preset Global Shortcut Keys)](arkts-input-shortkey-setkeydownduration-f-sys.md) |
 <!--DelEnd-->
-

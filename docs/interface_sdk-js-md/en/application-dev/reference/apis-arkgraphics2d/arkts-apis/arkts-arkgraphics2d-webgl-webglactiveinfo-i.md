@@ -4,7 +4,7 @@ WebGL 1.0
 
 **Since:** 7
 
-<!--Device-unnamed-interface WebGLActiveInfo--><!--Device-unnamed-interface WebGLActiveInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -20,9 +20,9 @@ Name of the attribute
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLActiveInfo-readonly name: string--><!--Device-WebGLActiveInfo-readonly name: string-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -38,9 +38,9 @@ Size of the attribute
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLActiveInfo-readonly size: GLint--><!--Device-WebGLActiveInfo-readonly size: GLint-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -56,9 +56,8 @@ Type of the attribute
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGLActiveInfo-readonly type: GLenum--><!--Device-WebGLActiveInfo-readonly type: GLenum-End-->
-
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
-

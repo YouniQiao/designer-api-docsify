@@ -4,7 +4,7 @@ Enumerates the content types for autofill.
 
 **Since:** 12
 
-<!--Device-unnamed-declare enum ContentType--><!--Device-unnamed-declare enum ContentType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Username. Password Vault, when enabled, can automatically save and fill in usern
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-USER_NAME = 0--><!--Device-ContentType-USER_NAME = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Password. Password Vault, when enabled, can automatically save and fill in passw
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-PASSWORD = 1--><!--Device-ContentType-PASSWORD = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ New password. Password Vault, when enabled, can automatically generate a new pas
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-NEW_PASSWORD = 2--><!--Device-ContentType-NEW_PASSWORD = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,11 @@ Full street address. The scenario-based autofill feature, when enabled, can auto
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-FULL_STREET_ADDRESS = 3--><!--Device-ContentType-FULL_STREET_ADDRESS = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,11 +90,11 @@ House number. The scenario-based autofill feature, when enabled, can automatical
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-HOUSE_NUMBER = 4--><!--Device-ContentType-HOUSE_NUMBER = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,11 +108,11 @@ District and county. The scenario-based autofill feature, when enabled, can auto
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-DISTRICT_ADDRESS = 5--><!--Device-ContentType-DISTRICT_ADDRESS = 5-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,11 +126,11 @@ City. The scenario-based autofill feature, when enabled, can automatically save 
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-CITY_ADDRESS = 6--><!--Device-ContentType-CITY_ADDRESS = 6-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -144,11 +144,11 @@ Province. The scenario-based autofill feature, when enabled, can automatically s
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-PROVINCE_ADDRESS = 7--><!--Device-ContentType-PROVINCE_ADDRESS = 7-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -162,11 +162,11 @@ Country. The scenario-based autofill feature, when enabled, can automatically sa
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-COUNTRY_ADDRESS = 8--><!--Device-ContentType-COUNTRY_ADDRESS = 8-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -180,11 +180,11 @@ Full name. The scenario-based autofill feature, when enabled, can automatically 
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-PERSON_FULL_NAME = 9--><!--Device-ContentType-PERSON_FULL_NAME = 9-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -198,11 +198,11 @@ Last name. The scenario-based autofill feature, when enabled, can automatically 
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-PERSON_LAST_NAME = 10--><!--Device-ContentType-PERSON_LAST_NAME = 10-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -216,11 +216,11 @@ First name. The scenario-based autofill feature, when enabled, can automatically
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-PERSON_FIRST_NAME = 11--><!--Device-ContentType-PERSON_FIRST_NAME = 11-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -234,11 +234,11 @@ Phone number. The scenario-based autofill feature, when enabled, can automatical
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-PHONE_NUMBER = 12--><!--Device-ContentType-PHONE_NUMBER = 12-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -252,11 +252,11 @@ Country code. The scenario-based autofill feature, when enabled, can automatical
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-PHONE_COUNTRY_CODE = 13--><!--Device-ContentType-PHONE_COUNTRY_CODE = 13-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -270,11 +270,11 @@ Phone number with country code. The scenario-based autofill feature, when enable
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-FULL_PHONE_NUMBER = 14--><!--Device-ContentType-FULL_PHONE_NUMBER = 14-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -288,11 +288,11 @@ Email address. The scenario-based autofill feature, when enabled, can automatica
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-EMAIL_ADDRESS = 15--><!--Device-ContentType-EMAIL_ADDRESS = 15-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -306,11 +306,11 @@ Bank card number. The scenario-based autofill feature, when enabled, can automat
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-BANK_CARD_NUMBER = 16--><!--Device-ContentType-BANK_CARD_NUMBER = 16-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -324,11 +324,11 @@ ID card number. The scenario-based autofill feature, when enabled, can automatic
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-ID_CARD_NUMBER = 17--><!--Device-ContentType-ID_CARD_NUMBER = 17-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -342,11 +342,11 @@ Nickname. The scenario-based autofill feature, when enabled, can automatically s
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-NICKNAME = 23--><!--Device-ContentType-NICKNAME = 23-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -360,11 +360,11 @@ Address information without street address. The scenario-based autofill feature,
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-DETAIL_INFO_WITHOUT_STREET = 24--><!--Device-ContentType-DETAIL_INFO_WITHOUT_STREET = 24-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -378,11 +378,11 @@ Standard address. The scenario-based autofill feature, when enabled, can automat
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-FORMAT_ADDRESS = 25--><!--Device-ContentType-FORMAT_ADDRESS = 25-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -396,11 +396,11 @@ Passport number. The scenario-based autofill feature, when enabled, can automati
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ContentType-PASSPORT_NUMBER = 26--><!--Device-ContentType-PASSPORT_NUMBER = 26-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -414,11 +414,11 @@ Passport validity period. The scenario-based autofill feature, when enabled, can
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ContentType-VALIDITY = 27--><!--Device-ContentType-VALIDITY = 27-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -432,11 +432,11 @@ Passport place of issue. The scenario-based autofill feature, when enabled, can 
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ContentType-ISSUE_AT = 28--><!--Device-ContentType-ISSUE_AT = 28-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -450,11 +450,11 @@ Invoice title. The scenario-based autofill feature, when enabled, can automatica
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ContentType-ORGANIZATION = 29--><!--Device-ContentType-ORGANIZATION = 29-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -468,11 +468,11 @@ Tax ID. The scenario-based autofill feature, when enabled, can automatically sav
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ContentType-TAX_ID = 30--><!--Device-ContentType-TAX_ID = 30-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -486,11 +486,11 @@ Location. The scenario-based autofill feature, when enabled, can automatically s
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ContentType-ADDRESS_CITY_AND_STATE = 31--><!--Device-ContentType-ADDRESS_CITY_AND_STATE = 31-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -504,11 +504,11 @@ Flight number. Currently not supported for automatic saving and auto-filling.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ContentType-FLIGHT_NUMBER = 32--><!--Device-ContentType-FLIGHT_NUMBER = 32-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -522,11 +522,11 @@ Driver's license number. Currently not supported for automatic saving and auto-f
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ContentType-LICENSE_NUMBER = 33--><!--Device-ContentType-LICENSE_NUMBER = 33-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -540,11 +540,11 @@ Driver's license file number. Currently not supported for automatic saving and a
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ContentType-LICENSE_FILE_NUMBER = 34--><!--Device-ContentType-LICENSE_FILE_NUMBER = 34-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -558,11 +558,11 @@ License plate number. The scenario-based autofill feature, when enabled, can aut
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ContentType-LICENSE_PLATE = 35--><!--Device-ContentType-LICENSE_PLATE = 35-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -576,11 +576,11 @@ Vehicle registration engine number. Currently not supported for automatic saving
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ContentType-ENGINE_NUMBER = 36--><!--Device-ContentType-ENGINE_NUMBER = 36-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -594,11 +594,10 @@ Chassis number. Currently not supported for automatic saving and auto-filling.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ContentType-LICENSE_CHASSIS_NUMBER = 37--><!--Device-ContentType-LICENSE_CHASSIS_NUMBER = 37-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

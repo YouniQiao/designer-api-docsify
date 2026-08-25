@@ -2,9 +2,9 @@
 
 Declares group type.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-usageStatistics-export enum GroupType--><!--Device-usageStatistics-export enum GroupType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -18,9 +18,9 @@ ALIVE_GROUP = 10
 
 Indicates the alive group.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GroupType-ALIVE_GROUP = 10--><!--Device-GroupType-ALIVE_GROUP = 10-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -34,9 +34,9 @@ DAILY_GROUP = 20
 
 Indicates the daily group.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GroupType-DAILY_GROUP = 20--><!--Device-GroupType-DAILY_GROUP = 20-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -50,9 +50,9 @@ FIXED_GROUP = 30
 
 Indicates the fixed group.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GroupType-FIXED_GROUP = 30--><!--Device-GroupType-FIXED_GROUP = 30-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -66,9 +66,9 @@ RARE_GROUP = 40
 
 Indicates the rare group.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GroupType-RARE_GROUP = 40--><!--Device-GroupType-RARE_GROUP = 40-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -82,9 +82,9 @@ LIMITED_GROUP = 50
 
 Indicates the limit group.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GroupType-LIMITED_GROUP = 50--><!--Device-GroupType-LIMITED_GROUP = 50-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -98,11 +98,10 @@ NEVER_GROUP = 60
 
 Indicates the never group.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GroupType-NEVER_GROUP = 60--><!--Device-GroupType-NEVER_GROUP = 60-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **System API:** This is a system API.
-

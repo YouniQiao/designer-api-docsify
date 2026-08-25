@@ -2,9 +2,9 @@
 
 Enum for auxiliary status.
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-camera-enum AuxiliaryStatus--><!--Device-camera-enum AuxiliaryStatus-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -18,9 +18,9 @@ LOCKED = 0
 
 Auxiliary locked.
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-AuxiliaryStatus-LOCKED = 0--><!--Device-AuxiliaryStatus-LOCKED = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -34,9 +34,9 @@ ON = 1
 
 Turn on auxiliary.
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-AuxiliaryStatus-ON = 1--><!--Device-AuxiliaryStatus-ON = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -50,11 +50,10 @@ OFF = 2
 
 Turn off auxiliary.
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-AuxiliaryStatus-OFF = 2--><!--Device-AuxiliaryStatus-OFF = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
-

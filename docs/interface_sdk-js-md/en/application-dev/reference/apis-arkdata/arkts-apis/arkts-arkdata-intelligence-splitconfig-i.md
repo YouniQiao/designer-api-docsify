@@ -2,9 +2,9 @@
 
 Manages text chunk process configurations.@interface SplitConfig
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-intelligence-interface SplitConfig--><!--Device-intelligence-interface SplitConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
@@ -22,11 +22,11 @@ overlapRatio: double
 
 The ratio of overlap between adjacent chunks.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-SplitConfig-overlapRatio: double--><!--Device-SplitConfig-overlapRatio: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
@@ -38,11 +38,10 @@ size: int
 
 The maximun size of chunks.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-SplitConfig-size: int--><!--Device-SplitConfig-size: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
-

@@ -2,9 +2,9 @@
 
 Provides information about the document to print. This API must be implemented by a third-party application.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-print-interface PrintDocumentAdapter--><!--Device-print-interface PrintDocumentAdapter-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -22,27 +22,27 @@ onJobStateChanged(jobId: string, state: PrintDocumentAdapterState): void
 
 Registers a listener for print job state changes.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PRINT
-
-<!--Device-PrintDocumentAdapter-onJobStateChanged(jobId: string, state: PrintDocumentAdapterState): void--><!--Device-PrintDocumentAdapter-onJobStateChanged(jobId: string, state: PrintDocumentAdapterState): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| jobId | string | Yes | ID of the print job. |
-| state | [PrintDocumentAdapterState](arkts-basicservices-print-printdocumentadapterstate-e.md) | Yes | New state of the print job. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| jobId | string | Yes |
+| state | [PrintDocumentAdapterState](arkts-basicservices-print-printdocumentadapterstate-e.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -73,6 +73,13 @@ class MyPrintDocumentAdapter implements print.PrintDocumentAdapter {
 
 ## onStartLayoutWrite
 
+ArkTS-Dyn:
+```TypeScript
+onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttributes, fd: number,
+      writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttributes, fd: int,
       writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void
@@ -80,30 +87,30 @@ onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttr
 
 Sends an empty PDF file descriptor to a third-party application. The third-party application updates the file with the new print attributes and then calls **writeResultCallback** to print the file.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PRINT
-
-<!--Device-PrintDocumentAdapter-onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttributes, fd: int,      writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void--><!--Device-PrintDocumentAdapter-onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttributes, fd: int,      writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| jobId | string | Yes | ID of the print job. |
-| oldAttrs | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Yes | Old print attributes. |
-| newAttrs | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Yes | New print attributes. |
-| fd | int | Yes | PDF file descriptor sent to the API caller. |
-| writeResultCallback | (jobId: string, writeResult: PrintFileCreationState) =&gt; void | Yes | Callback used to print the updated file. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| jobId | string | Yes |
+| oldAttrs | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Yes |
+| newAttrs | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Yes |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| writeResultCallback | (jobId: string, writeResult: PrintFileCreationState) = & gt; void | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -130,4 +137,3 @@ class MyPrintDocumentAdapter implements print.PrintDocumentAdapter {
     }
 }
 ```
-

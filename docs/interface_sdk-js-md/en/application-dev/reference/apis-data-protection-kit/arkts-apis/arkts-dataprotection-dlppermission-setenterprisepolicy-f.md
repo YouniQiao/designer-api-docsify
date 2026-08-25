@@ -19,27 +19,27 @@ Sets the protection policy for enterprise applications. After the API is success
 
 **Since:** 21
 
-**Required permissions:** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
-<!--Device-dlpPermission-function setEnterprisePolicy(policy: EnterprisePolicy): void--><!--Device-dlpPermission-function setEnterprisePolicy(policy: EnterprisePolicy): void-End-->
+**Required permissions:** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| policy | [EnterprisePolicy](arkts-dataprotection-dlppermission-enterprisepolicy-i.md) | Yes | Enterprise application protection policy to be set. Access control and behavior restrictions of enterprise DLP files are implemented based on the policy. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| policy | [EnterprisePolicy](arkts-dataprotection-dlppermission-enterprisepolicy-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-| [19100021](../errorcode-dlp.md#19100021-failed-to-set-enterprise-application-policy) | Failed to set the enterprise policy. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
+| [19100021](../errorcode-dlp.md#19100021-failed-to-set-enterprise-application-policy) |
 
 **Examples**
 
@@ -90,4 +90,3 @@ try {
   console.error('error:' + err.code + err.message); // Throw an error if the operation fails.
 }
 ```
-

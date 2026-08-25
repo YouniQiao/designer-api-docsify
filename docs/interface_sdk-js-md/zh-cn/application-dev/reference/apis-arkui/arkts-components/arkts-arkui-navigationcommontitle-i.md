@@ -4,7 +4,7 @@ Navigation通用标题。
 
 **起始版本：** 9
 
-<!--Device-unnamed-declare interface NavigationCommonTitle--><!--Device-unnamed-declare interface NavigationCommonTitle-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,9 +25,9 @@ main: string | Resource
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-NavigationCommonTitle-main: string | Resource--><!--Device-NavigationCommonTitle-main: string | Resource-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,9 +43,8 @@ sub: string | Resource
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-NavigationCommonTitle-sub: string | Resource--><!--Device-NavigationCommonTitle-sub: string | Resource-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

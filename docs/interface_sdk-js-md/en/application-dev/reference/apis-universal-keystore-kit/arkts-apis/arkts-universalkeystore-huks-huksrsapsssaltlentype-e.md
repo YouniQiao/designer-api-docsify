@@ -4,7 +4,7 @@ Enumerates the **salt_len** types to set when PSS padding is used in RSA signing
 
 **Since:** 10
 
-<!--Device-huks-export enum HuksRsaPssSaltLenType--><!--Device-huks-export enum HuksRsaPssSaltLenType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -20,9 +20,9 @@ HUKS_RSA_PSS_SALT_LEN_DIGEST = 0
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-HuksRsaPssSaltLenType-HUKS_RSA_PSS_SALT_LEN_DIGEST = 0--><!--Device-HuksRsaPssSaltLenType-HUKS_RSA_PSS_SALT_LEN_DIGEST = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -38,11 +38,10 @@ HUKS_RSA_PSS_SALT_LEN_MAX = 1
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-HuksRsaPssSaltLenType-HUKS_RSA_PSS_SALT_LEN_MAX = 1--><!--Device-HuksRsaPssSaltLenType-HUKS_RSA_PSS_SALT_LEN_MAX = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 10 to 11: SystemCapability.Security.Huks.Extension
-

@@ -15,28 +15,28 @@ function isCellularDataEnabledSync(): boolean
 Checks whether the cellular data service is enabled. This API returns the result synchronously.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
-
-<!--Device-data-function isCellularDataEnabledSync(): boolean--><!--Device-data-function isCellularDataEnabledSync(): boolean-End-->
 
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the cellular data service is enabled. <br>**true**: The cellular data service is enabled. <br>**false**: The cellular data service is disabled. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
 **Examples**
 
@@ -50,4 +50,3 @@ try {
     console.error(`isCellularDataEnabledSync fail. code: ${err.code}, message: ${err.message}`);  
 }
 ```
-

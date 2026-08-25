@@ -4,7 +4,7 @@
 
 **起始版本：** 7
 
-<!--Device-contact-class ImAddress--><!--Device-contact-class ImAddress-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -26,9 +26,9 @@ static readonly CUSTOM_LABEL: -1
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ImAddress-static readonly CUSTOM_LABEL: -1--><!--Device-ImAddress-static readonly CUSTOM_LABEL: -1-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -44,9 +44,9 @@ AIM即时消息类型，默认值为0。
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ImAddress-static readonly IM_AIM: 0--><!--Device-ImAddress-static readonly IM_AIM: 0-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -62,9 +62,9 @@ ICQ即时消息类型，默认值为6。
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ImAddress-static readonly IM_ICQ: 6--><!--Device-ImAddress-static readonly IM_ICQ: 6-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -80,9 +80,9 @@ JABBER即时消息类型，默认值为7。
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ImAddress-static readonly IM_JABBER: 7--><!--Device-ImAddress-static readonly IM_JABBER: 7-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -98,9 +98,9 @@ MSN即时消息类型，默认值为1。
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ImAddress-static readonly IM_MSN: 1--><!--Device-ImAddress-static readonly IM_MSN: 1-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -116,9 +116,9 @@ QQ即时消息类型，默认值为4。
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ImAddress-static readonly IM_QQ: 4--><!--Device-ImAddress-static readonly IM_QQ: 4-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -134,9 +134,9 @@ SKYPE即时消息类型，默认值为3。
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ImAddress-static readonly IM_SKYPE: 3--><!--Device-ImAddress-static readonly IM_SKYPE: 3-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -152,9 +152,9 @@ YAHOO即时消息类型，默认值为2。
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ImAddress-static readonly IM_YAHOO: 2--><!--Device-ImAddress-static readonly IM_YAHOO: 2-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -170,9 +170,9 @@ imAddress: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ImAddress-imAddress: string--><!--Device-ImAddress-imAddress: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -188,9 +188,9 @@ static readonly INVALID_LABEL_ID: -2
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ImAddress-static readonly INVALID_LABEL_ID: -2--><!--Device-ImAddress-static readonly INVALID_LABEL_ID: -2-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -206,9 +206,9 @@ labelId?: number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ImAddress-labelId?: number--><!--Device-ImAddress-labelId?: number-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -224,9 +224,9 @@ labelName?: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ImAddress-labelName?: string--><!--Device-ImAddress-labelName?: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -249,4 +249,3 @@ let imAddress: contact.ImAddress = {
 let imAddress = new contact.ImAddress();
 imAddress.imAddress = 'imAddress';
 ```
-

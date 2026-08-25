@@ -10,7 +10,7 @@ Not supported
 
 ## Sequential Keyboard Navigation Specifications
 
-| Key | Description | |------------|-----------------------------| | Tab | Switch the focus between components. | | Left and right arrow keys | Increase or decrease the rating on preview at the specified step, without changing the actual rating.| | Home | Move the focus to the first star, without changing the actual rating. | | End | Move the focus to the last star, without changing the actual rating. | | Space/Enter | Submit the rating result based on the current rating. |
+| [Key](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-key-i.md) | Description | |------------|-----------------------------| | Tab | Switch the focus between components. | | Left and right arrow keys | Increase or decrease the rating on preview at the specified step, without changing the actual rating.| | Home | Move the focus to the first star, without changing the actual rating. | | End | Move the focus to the last star, without changing the actual rating. | | Space/Enter |
 
 ## Rating
 
@@ -20,29 +20,29 @@ Rating(options?: RatingOptions)
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-RatingInterface-(options?: RatingOptions): RatingAttribute--><!--Device-RatingInterface-(options?: RatingOptions): RatingAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [RatingOptions](arkts-arkui-ratingoptions-i.md) | No | Rating bar options.<br> The default values of the parameters in **RatingOptions** apply if this parameter is not set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [RatingOptions](arkts-arkui-ratingoptions-i.md) | No |
 
 ## Summary
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [OnRatingChangeCallback](arkts-arkui-onratingchangecallback-t.md) |

@@ -2,11 +2,11 @@
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** [geoLocationManager/geoLocationManager](arkts-geolocationmanager.md)
-
-<!--Device-unnamed-export default class Geolocation--><!--Device-unnamed-export default class Geolocation-End-->
 
 **System capability:** SystemCapability.Location.Location.Lite
 
@@ -26,6 +26,8 @@ Obtains the geographic location.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md)
@@ -34,15 +36,13 @@ Obtains the geographic location.
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-Geolocation-static getLocation(options?: GetLocationOption): void--><!--Device-Geolocation-static getLocation(options?: GetLocationOption): void-End-->
-
 **System capability:** SystemCapability.Location.Location.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [GetLocationOption](arkts-location-system-geolocation-getlocationoption-i.md) | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [GetLocationOption](arkts-location-system-geolocation-getlocationoption-i.md) | No |
 
 **Examples**
 
@@ -71,19 +71,19 @@ Obtains the location types supported by the system.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-Geolocation-static getLocationType(options?: GetLocationTypeOption): void--><!--Device-Geolocation-static getLocationType(options?: GetLocationTypeOption): void-End-->
 
 **System capability:** SystemCapability.Location.Location.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [GetLocationTypeOption](arkts-location-system-geolocation-getlocationtypeoption-i.md) | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [GetLocationTypeOption](arkts-location-system-geolocation-getlocationtypeoption-i.md) | No |
 
 **Examples**
 
@@ -112,18 +112,18 @@ Obtains the supported coordinate system types.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-Geolocation-static getSupportedCoordTypes(): Array<string>--><!--Device-Geolocation-static getSupportedCoordTypes(): Array<string>-End-->
 
 **System capability:** SystemCapability.Location.Location.Lite
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 **Examples**
 
 ```TypeScript
@@ -144,6 +144,8 @@ Listens to the geographical location. If this method is called multiple times, t
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** locationChange
@@ -152,15 +154,13 @@ Listens to the geographical location. If this method is called multiple times, t
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-Geolocation-static subscribe(options: SubscribeLocationOption): void--><!--Device-Geolocation-static subscribe(options: SubscribeLocationOption): void-End-->
-
 **System capability:** SystemCapability.Location.Location.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [SubscribeLocationOption](arkts-location-system-geolocation-subscribelocationoption-i.md) | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [SubscribeLocationOption](arkts-location-system-geolocation-subscribelocationoption-i.md) | Yes |
 
 **Examples**
 
@@ -189,6 +189,8 @@ Cancels listening to the geographical location.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** locationChange
@@ -196,8 +198,6 @@ Cancels listening to the geographical location.
 **Required permissions:** ohos.permission.LOCATION
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-Geolocation-static unsubscribe(): void--><!--Device-Geolocation-static unsubscribe(): void-End-->
 
 **System capability:** SystemCapability.Location.Location.Lite
 
@@ -210,4 +210,3 @@ export default {
   }
 }
 ```
-

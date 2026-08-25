@@ -14,11 +14,11 @@ function updateSendRate(bundleName: string, sendRate: int): boolean
 
 更新备份应用发送文件描述符的速率。
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.BACKUP
-
-<!--Device-backup-function updateSendRate(bundleName: string, sendRate: int): boolean--><!--Device-backup-function updateSendRate(bundleName: string, sendRate: int): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -26,24 +26,24 @@ function updateSendRate(bundleName: string, sendRate: int): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 需要控制文件描述符发送速率的应用名称。 |
-| sendRate | int | 是 | 文件描述符发送速率，单位为个/秒，取值范围为0至800。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| sendRate | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 设置结果，true表示成功，false表示失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -67,4 +67,3 @@ function updateSendRate() {
   }
 }
 ```
-

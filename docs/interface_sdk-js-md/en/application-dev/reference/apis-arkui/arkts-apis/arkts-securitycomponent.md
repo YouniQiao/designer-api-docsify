@@ -4,22 +4,21 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Declares the interface for the method of a security component.@interface SecurityComponentMethod |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i-sys.md) | Declares the interface for the method of a security component.@interface SecurityComponentMethod |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i-sys.md) |
 <!--DelEnd-->
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [SecurityComponentLayoutDirection](arkts-arkui-securitycomponent-securitycomponentlayoutdirection-e.md) | Enumerates the layout direction of the icon and text.@enum { int } |
-| [SecurityComponentRoleType](arkts-arkui-securitycomponent-securitycomponentroletype-e.md) | Enumerates security component types. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SecurityComponentLayoutDirection](arkts-arkui-securitycomponent-securitycomponentlayoutdirection-e.md) |
+| [SecurityComponentRoleType](arkts-arkui-securitycomponent-securitycomponentroletype-e.md) |

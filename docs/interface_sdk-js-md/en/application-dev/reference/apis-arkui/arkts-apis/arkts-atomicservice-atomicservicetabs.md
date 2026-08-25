@@ -16,26 +16,25 @@ import { AtomicServiceTabs, TabBarOptions, TabBarPosition, TabContentBuilder, On
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [TabBarOptions(Provides an advanced struct of tabs for atomic services)](arkts-arkui-atomicservice-atomicservicetabs-tabbaroptions-c.md) | Array of tab bar container configurations. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [TabBarOptions(Provides an advanced struct of tabs for atomic services)](arkts-arkui-atomicservice-atomicservicetabs-tabbaroptions-c.md) |
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [AtomicServiceTabs(Provides an advanced struct of tabs for atomic services)](arkts-arkui-atomicservice-atomicservicetabs-atomicservicetabs-s.md) | **AtomicServiceTabs** is an advanced component designed to streamline the use of the **Tabs** component by limiting customization options. It restricts the display to a maximum of five tabs, with fixed styles, positions, and sizes for the tabs. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AtomicServiceTabs(Provides an advanced struct of tabs for atomic services)](arkts-arkui-atomicservice-atomicservicetabs-atomicservicetabs-s.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [TabBarPosition(Provides an advanced struct of tabs for atomic services)](arkts-arkui-atomicservice-atomicservicetabs-tabbarposition-e.md) | Position of the tab bar. The default value is **TabBarPosition.BOTTOM**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [TabBarPosition(Provides an advanced struct of tabs for atomic services)](arkts-arkui-atomicservice-atomicservicetabs-tabbarposition-e.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [OnContentWillChangeCallback(Provides an advanced struct of tabs for atomic services)](arkts-arkui-oncontentwillchangecallback-t.md) | Defines the callback function triggered when the page content changes. |
-| [TabContentBuilder(Provides an advanced struct of tabs for atomic services)](arkts-arkui-tabcontentbuilder-t.md) | Defines the content view container. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [OnContentWillChangeCallback(Provides an advanced struct of tabs for atomic services)](arkts-arkui-oncontentwillchangecallback-t.md) |
+| [TabContentBuilder(Provides an advanced struct of tabs for atomic services)](arkts-arkui-tabcontentbuilder-t.md) |

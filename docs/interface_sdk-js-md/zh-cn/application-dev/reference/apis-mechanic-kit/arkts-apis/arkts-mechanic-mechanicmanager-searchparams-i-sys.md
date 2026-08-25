@@ -2,9 +2,9 @@
 
 Parameters for target searching.
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-mechanicManager-export interface SearchParams--><!--Device-mechanicManager-export interface SearchParams-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -26,11 +26,10 @@ Search direction.
 
 **类型：** [SearchDirection](arkts-mechanic-mechanicmanager-searchdirection-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-SearchParams-direction: SearchDirection--><!--Device-SearchParams-direction: SearchDirection-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
-

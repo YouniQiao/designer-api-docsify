@@ -14,9 +14,7 @@ MultiNavigation是一个支持分栏导航的组件，提供多层页面栈管�
 
 **起始版本：** 14
 
-**装饰器类型：** @Component
-
-<!--Device-unnamed-export declare struct MultiNavigation--><!--Device-unnamed-export declare struct MultiNavigation-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,25 +24,19 @@ MultiNavigation是一个支持分栏导航的组件，提供多层页面栈管�
 import { SplitPolicy, MultiNavigation, MultiNavPathStack } from '@kit.ArkUI';
 ```
 
-## multiStack
+## build
 
 ```TypeScript
-multiStack: MultiNavPathStack
+build(): void
 ```
 
-设置路由栈。
+The method to build multiNavigation.
 
-**类型：** [MultiNavPathStack](../../apis-default/arkts-apis/arkts-arkui-advanced-multinavigation-multinavpathstack-c.md)
+**起始版本：** 23
 
-**起始版本：** 14
-
-**装饰器类型：** @State
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiNavigation-@State  multiStack: MultiNavPathStack--><!--Device-MultiNavigation-@State  multiStack: MultiNavPathStack-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,17 +48,13 @@ navDestination: NavDestinationBuildFunction
 
 设置加载目标页面的路由规则。
 
-**类型：** [NavDestinationBuildFunction](arkts-arkui-navdestinationbuildfunction-t.md)
-
 **起始版本：** 14
 
-**装饰器类型：** @BuilderParam
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiNavigation-@BuilderParam  navDestination: NavDestinationBuildFunction--><!--Device-MultiNavigation-@BuilderParam  navDestination: NavDestinationBuildFunction-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,15 +66,13 @@ onHomeShowOnTop?: OnHomeShowOnTopCallback
 
 设置主页处于栈顶时的回调。不传入时不监听主页栈顶状态变化。
 
-**类型：** [OnHomeShowOnTopCallback](../../apis-default/arkts-apis/arkts-onhomeshowontopcallback-t.md)
-
 **起始版本：** 14
+
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MultiNavigation-onHomeShowOnTop?: OnHomeShowOnTopCallback--><!--Device-MultiNavigation-onHomeShowOnTop?: OnHomeShowOnTopCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,15 +84,50 @@ onNavigationModeChange?: OnNavigationModeChangeCallback
 
 设置MultiNavigation模式变更时的回调。当需要在导航模式变化时执行特定业务逻辑（如调整页面布局、更新UI状态等）时传入此回调。不传入时不监听导航模式变更事件，导航模式变更时无回调触发。
 
-**类型：** [OnNavigationModeChangeCallback](../../apis-default/arkts-apis/arkts-onnavigationmodechangecallback-t.md)
-
 **起始版本：** 14
+
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MultiNavigation-onNavigationModeChange?: OnNavigationModeChangeCallback--><!--Device-MultiNavigation-onNavigationModeChange?: OnNavigationModeChangeCallback-End-->
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## multiStack
+
+```TypeScript
+multiStack: MultiNavPathStack
+```
+
+设置路由栈。
+
+**类型：** [MultiNavPathStack](arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md)
+
+**起始版本：** 14
+
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## navDestination
+
+```TypeScript
+navDestination: PageMapBuilder | undefined
+```
+
+设置加载目标页面的路由规则。取值为undefined时，不会加载。
+
+**类型：** [PageMapBuilder](arkts-arkui-pagemapbuilder-t.md) \| undefined
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full

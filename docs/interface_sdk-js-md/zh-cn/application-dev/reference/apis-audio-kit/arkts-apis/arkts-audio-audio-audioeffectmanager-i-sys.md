@@ -2,9 +2,9 @@
 
 音频效果管理。在使用AudioEffectManager的接口前，需要使用[getEffectManager](arkts-audio-audio-audiomanager-i-sys.md#geteffectmanager)获取 AudioEffectManager实例。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-audio-interface AudioEffectManager--><!--Device-audio-interface AudioEffectManager-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -24,11 +24,11 @@ getAudioEffectProperty(): Array<AudioEffectProperty>
 
 获取当前音效模式，同步返回结果。
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
-
-<!--Device-AudioEffectManager-getAudioEffectProperty(): Array<AudioEffectProperty>--><!--Device-AudioEffectManager-getAudioEffectProperty(): Array<AudioEffectProperty>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -36,17 +36,17 @@ getAudioEffectProperty(): Array<AudioEffectProperty>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[AudioEffectProperty](arkts-audio-audio-audioeffectproperty-i-sys.md)&gt; | 返回当前音效模式。 |
+| 类型 |
+| --- |
+| Array&lt;[AudioEffectProperty](arkts-audio-audio-audioeffectproperty-i-sys.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 **示例**
 
@@ -64,6 +64,12 @@ try {
 
 ## getNoiseReductionMode
 
+ArkTS-Dyn:
+```TypeScript
+getNoiseReductionMode(clientUid: number, device: AudioDeviceDescriptor): NoiseReductionMode
+```
+
+ArkTS-Sta:
 ```TypeScript
 getNoiseReductionMode(clientUid: int, device: AudioDeviceDescriptor): NoiseReductionMode
 ```
@@ -72,11 +78,11 @@ getNoiseReductionMode(clientUid: int, device: AudioDeviceDescriptor): NoiseReduc
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AudioEffectManager-getNoiseReductionMode(clientUid: int, device: AudioDeviceDescriptor): NoiseReductionMode--><!--Device-AudioEffectManager-getNoiseReductionMode(clientUid: int, device: AudioDeviceDescriptor): NoiseReductionMode-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -84,24 +90,24 @@ getNoiseReductionMode(clientUid: int, device: AudioDeviceDescriptor): NoiseReduc
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| clientUid | int | 是 | 当前使用实时录制类型的客户端应用的UID。 |
-| device | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | 通过录制选择的设备描述符。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| clientUid | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| device | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md) | 当前设备的降噪模式。 |
+| 类型 |
+| --- |
+| [NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 **示例**
 
@@ -118,11 +124,11 @@ getSupportedAudioEffectProperty(): Array<AudioEffectProperty>
 
 获取支持的下行音效模式，同步返回结果。
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
-
-<!--Device-AudioEffectManager-getSupportedAudioEffectProperty(): Array<AudioEffectProperty>--><!--Device-AudioEffectManager-getSupportedAudioEffectProperty(): Array<AudioEffectProperty>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -130,17 +136,17 @@ getSupportedAudioEffectProperty(): Array<AudioEffectProperty>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[AudioEffectProperty](arkts-audio-audio-audioeffectproperty-i-sys.md)&gt; | 返回当前设备支持的音效模式。 |
+| 类型 |
+| --- |
+| Array&lt;[AudioEffectProperty](arkts-audio-audio-audioeffectproperty-i-sys.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 **示例**
 
@@ -166,11 +172,11 @@ getSupportedNoiseReductionModes(device: AudioDeviceDescriptor): Array<NoiseReduc
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AudioEffectManager-getSupportedNoiseReductionModes(device: AudioDeviceDescriptor): Array<NoiseReductionMode>--><!--Device-AudioEffectManager-getSupportedNoiseReductionModes(device: AudioDeviceDescriptor): Array<NoiseReductionMode>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -178,23 +184,23 @@ getSupportedNoiseReductionModes(device: AudioDeviceDescriptor): Array<NoiseReduc
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| device | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | 已连接输入设备的设备描述符。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| device | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md)&gt; | 输入设备支持的降噪模式列表。 |
+| 类型 |
+| --- |
+| Array&lt;[NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 **示例**
 
@@ -223,9 +229,9 @@ isAudioSeparationEffectSupported(): boolean
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AudioEffectManager-isAudioSeparationEffectSupported(): boolean--><!--Device-AudioEffectManager-isAudioSeparationEffectSupported(): boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -233,15 +239,15 @@ isAudioSeparationEffectSupported(): boolean
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 当前设备是否支持音频分离效果。true表示支持，false表示不支持。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -262,9 +268,9 @@ offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AudioEffectManager-offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void--><!--Device-AudioEffectManager-offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -272,16 +278,16 @@ offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 需要取消的回调函数，默认值为空。如果不使用此参数，则取消之前在当前进程中订阅的所有回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 **示例**
 
@@ -302,9 +308,9 @@ offNoiseReductionSettingChange(device: AudioDeviceDescriptor,
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AudioEffectManager-offNoiseReductionSettingChange(device: AudioDeviceDescriptor,      callback?: Callback<NoiseReductionConfigAction>): void--><!--Device-AudioEffectManager-offNoiseReductionSettingChange(device: AudioDeviceDescriptor,      callback?: Callback<NoiseReductionConfigAction>): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -312,17 +318,17 @@ offNoiseReductionSettingChange(device: AudioDeviceDescriptor,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| device | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | 外部连接设备的描述符。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NoiseReductionConfigAction](arkts-audio-audio-noisereductionconfigaction-i-sys.md)&gt; | 否 | 降噪模式回调，设备需要进行设置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| device | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NoiseReductionConfigAction](arkts-audio-audio-noisereductionconfigaction-i-sys.md)&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## onAudioSeparationEffectEnabledChange
 
@@ -334,9 +340,9 @@ onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AudioEffectManager-onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void--><!--Device-AudioEffectManager-onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -344,15 +350,15 @@ onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。当音频分离效果启用状态变化时，返回true表示启用，false表示禁用。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -374,9 +380,9 @@ onNoiseReductionSettingChange(device: AudioDeviceDescriptor, callback: Callback<
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AudioEffectManager-onNoiseReductionSettingChange(device: AudioDeviceDescriptor, callback: Callback<NoiseReductionConfigAction>): void--><!--Device-AudioEffectManager-onNoiseReductionSettingChange(device: AudioDeviceDescriptor, callback: Callback<NoiseReductionConfigAction>): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -384,17 +390,17 @@ onNoiseReductionSettingChange(device: AudioDeviceDescriptor, callback: Callback<
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| device | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | 外部连接设备的描述符，用于设置降噪模式。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NoiseReductionConfigAction](arkts-audio-audio-noisereductionconfigaction-i-sys.md)&gt; | 是 | 降噪模式需要设备设置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| device | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NoiseReductionConfigAction](arkts-audio-audio-noisereductionconfigaction-i-sys.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## setAudioEffectProperty
 
@@ -404,11 +410,11 @@ setAudioEffectProperty(propertyArray: Array<AudioEffectProperty>): void
 
 设置当前音效模式，同步返回结果。
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
-
-<!--Device-AudioEffectManager-setAudioEffectProperty(propertyArray: Array<AudioEffectProperty>): void--><!--Device-AudioEffectManager-setAudioEffectProperty(propertyArray: Array<AudioEffectProperty>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -416,18 +422,18 @@ setAudioEffectProperty(propertyArray: Array<AudioEffectProperty>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propertyArray | Array&lt;[AudioEffectProperty](arkts-audio-audio-audioeffectproperty-i-sys.md)&gt; | 是 | 需要设置的音效模式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propertyArray | Array&lt;[AudioEffectProperty](arkts-audio-audio-audioeffectproperty-i-sys.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Possible causes: 1. More than one effect property name of the same effect property category are in the input array. 2. The input audioEffectProperties are not supported by the current device. 3. The name or catergory of the input audioEffectProperties is incorrect. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 **示例**
 
@@ -446,6 +452,12 @@ try {
 
 ## setAudioSeparationEffectEnabled
 
+ArkTS-Dyn:
+```TypeScript
+setAudioSeparationEffectEnabled(enabled: boolean, uid: number, streamId?: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Promise<void>
 ```
@@ -462,11 +474,11 @@ setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Pr
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AudioEffectManager-setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Promise<void>--><!--Device-AudioEffectManager-setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -474,27 +486,27 @@ setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Pr
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enabled | boolean | 是 | 音频分离效果的启用状态。true表示启用，false表示禁用。 |
-| uid | int | 是 | 表示目标应用进程ID。 |
-| streamId | long | 否 | 目标音频播放流的ID，默认值为-1。<br>如果没有传入此参数，则根据uid控制应用级别的音频分离效果开关。<br>播放应用可通过 [AudioRenderer.getAudioStreamIdSync](arkts-audio-audio-audiorenderer-i.md#getaudiostreamidsync)获取 streamId。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enabled | boolean | 是 |
+| uid | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| streamId | ArkTS-Dyn: number<br>ArkTS-Sta：long | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Effect is not supported in this device. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs like service died. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 **示例**
 
@@ -511,6 +523,12 @@ audioEffectManager.setAudioSeparationEffectEnabled(true, 10001).then(() => {
 
 ## setAudioSeparationEffectVolume
 
+ArkTS-Dyn:
+```TypeScript
+setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double): Promise<void>
 ```
@@ -519,11 +537,11 @@ setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double):
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AudioEffectManager-setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double): Promise<void>--><!--Device-AudioEffectManager-setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -531,26 +549,26 @@ setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double):
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [AudioSeparationVolumeType](arkts-audio-audio-audioseparationvolumetype-e-sys.md) | 是 | 音频分离效果的音量类型。 |
-| volume | double | 是 | 目标音量值，取值范围为[0, 1]。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [AudioSeparationVolumeType](arkts-audio-audio-audioseparationvolumetype-e-sys.md) | 是 |
+| volume | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Effect is not supported in this device. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs like service died. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 **示例**
 
@@ -567,6 +585,12 @@ audioEffectManager.setAudioSeparationEffectVolume(audio.AudioSeparationVolumeTyp
 
 ## setNoiseReductionMode
 
+ArkTS-Dyn:
+```TypeScript
+setNoiseReductionMode(clientUid: number, device: AudioDeviceDescriptor, noiseReductionMode: NoiseReductionMode): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setNoiseReductionMode(clientUid: int, device: AudioDeviceDescriptor, noiseReductionMode: NoiseReductionMode): void
 ```
@@ -575,11 +599,11 @@ setNoiseReductionMode(clientUid: int, device: AudioDeviceDescriptor, noiseReduct
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AudioEffectManager-setNoiseReductionMode(clientUid: int, device: AudioDeviceDescriptor, noiseReductionMode: NoiseReductionMode): void--><!--Device-AudioEffectManager-setNoiseReductionMode(clientUid: int, device: AudioDeviceDescriptor, noiseReductionMode: NoiseReductionMode): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -587,20 +611,20 @@ setNoiseReductionMode(clientUid: int, device: AudioDeviceDescriptor, noiseReduct
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| clientUid | int | 是 | 当前使用实时录音类型的客户端应用的Uid。该值应为整数。 |
-| device | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 | 通过录制选择的设备描述符。 |
-| noiseReductionMode | [NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md) | 是 | 降噪模式需要在当前设备上进行设置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| clientUid | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| device | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 |
+| [noiseReductionMode](arkts-audio-audio-noisereductionconfigaction-i-sys.md) | [NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Live audio capture service exception. Indicates an internal failure in the audio service during live stream creation, start, read, stop, release, or noise reduction handling. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 **示例**
 
@@ -631,11 +655,11 @@ updateDeviceNoiseReductionCapability(capability: NoiseReductionCapability): void
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AudioEffectManager-updateDeviceNoiseReductionCapability(capability: NoiseReductionCapability): void--><!--Device-AudioEffectManager-updateDeviceNoiseReductionCapability(capability: NoiseReductionCapability): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -643,15 +667,14 @@ updateDeviceNoiseReductionCapability(capability: NoiseReductionCapability): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| capability | [NoiseReductionCapability](arkts-audio-audio-noisereductioncapability-i-sys.md) | 是 | 外部设备的降噪能力，包括设备描述符和设备支持的模式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| capability | [NoiseReductionCapability](arkts-audio-audio-noisereductioncapability-i-sys.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |

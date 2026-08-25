@@ -2,9 +2,9 @@
 
 Represents an X.509 GeneralName as defined in RFC 5280, which can appear in Subject Alternative Name and other extensions.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-cert-interface GeneralName--><!--Device-cert-interface GeneralName-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -24,11 +24,11 @@ DER-encoded value of the GeneralName.
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-GeneralName-name?: Uint8Array--><!--Device-GeneralName-name?: Uint8Array-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -42,11 +42,10 @@ Type of the GeneralName.
 
 **Type:** [GeneralNameType](arkts-devicecertificate-cert-generalnametype-e.md)
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-GeneralName-type: GeneralNameType--><!--Device-GeneralName-type: GeneralNameType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Cert
-

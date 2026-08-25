@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export class AtomicByte--><!--Device-unnamed-export class AtomicByte-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,26 +23,24 @@ compareAndSwap(expected: byte, val: byte): byte
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicByte-compareAndSwap(expected: byte, val: byte): byte--><!--Device-AtomicByte-compareAndSwap(expected: byte, val: byte): byte-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| expected | byte | 是 | 预期的当前值。 |
-| val | byte | 是 | 匹配成功时要写入的新值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| expected | byte | 是 |
+| val | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| byte | 修改前的旧值。 |
+| 类型 |
+| --- |
+| byte |
 
 ## constructor
 
@@ -56,19 +52,17 @@ constructor(val: byte)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicByte-constructor(val: byte)--><!--Device-AtomicByte-constructor(val: byte)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | byte | 是 | 初始值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | byte | 是 |
 
 ## exchange
 
@@ -80,25 +74,23 @@ exchange(val: byte): byte
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicByte-exchange(val: byte): byte--><!--Device-AtomicByte-exchange(val: byte): byte-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | byte | 是 | 要写入的新值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| byte | 更新前的旧值。 |
+| 类型 |
+| --- |
+| byte |
 
 ## fetchAdd
 
@@ -110,25 +102,23 @@ fetchAdd(val: byte): byte
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicByte-fetchAdd(val: byte): byte--><!--Device-AtomicByte-fetchAdd(val: byte): byte-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | byte | 是 | 执行加法运算的操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| byte | 加法执行前的旧值。 |
+| 类型 |
+| --- |
+| byte |
 
 ## fetchAnd
 
@@ -140,25 +130,23 @@ fetchAnd(val: byte): byte
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicByte-fetchAnd(val: byte): byte--><!--Device-AtomicByte-fetchAnd(val: byte): byte-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | byte | 是 | 执行按位与运算的操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| byte | 按位与运算前的旧值。 |
+| 类型 |
+| --- |
+| byte |
 
 ## fetchOr
 
@@ -170,25 +158,23 @@ fetchOr(val: byte): byte
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicByte-fetchOr(val: byte): byte--><!--Device-AtomicByte-fetchOr(val: byte): byte-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | byte | 是 | 执行按位或运算的操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| byte | 按位或运算前的旧值。 |
+| 类型 |
+| --- |
+| byte |
 
 ## fetchSub
 
@@ -200,25 +186,23 @@ fetchSub(val: byte): byte
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicByte-fetchSub(val: byte): byte--><!--Device-AtomicByte-fetchSub(val: byte): byte-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | byte | 是 | 执行减法运算的操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| byte | 减法执行前的旧值。 |
+| 类型 |
+| --- |
+| byte |
 
 ## fetchXor
 
@@ -230,25 +214,23 @@ fetchXor(val: byte): byte
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicByte-fetchXor(val: byte): byte--><!--Device-AtomicByte-fetchXor(val: byte): byte-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | byte | 是 | 执行按位异或运算的操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| byte | 按位异或运算前的旧值。 |
+| 类型 |
+| --- |
+| byte |
 
 ## isLockFree
 
@@ -260,19 +242,17 @@ static isLockFree(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicByte-static isLockFree(): boolean--><!--Device-AtomicByte-static isLockFree(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true表示无锁实现，false表示内部可能使用阻塞式同步机制。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## load
 
@@ -284,19 +264,17 @@ load(): byte
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicByte-load(): byte--><!--Device-AtomicByte-load(): byte-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| byte | 当前保存的值。 |
+| 类型 |
+| --- |
+| byte |
 
 ## store
 
@@ -308,17 +286,14 @@ store(val: byte): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicByte-store(val: byte): void--><!--Device-AtomicByte-store(val: byte): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | byte | 是 | 要写入的新值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | byte | 是 |

@@ -4,7 +4,7 @@ The **DataAbility** module provides APIs to create predicates for querying data 
 
 **Since:** 7
 
-<!--Device-unnamed-declare namespace dataAbility--><!--Device-unnamed-declare namespace dataAbility-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -18,19 +18,18 @@ import { dataAbility } from '@kit.ArkData';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [createRdbPredicates](arkts-arkdata-dataability-createrdbpredicates-f.md) | Creates an **RdbPredicates** object with a table name and **DataAbilityPredicates** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [createRdbPredicates](arkts-arkdata-dataability-createrdbpredicates-f.md) |
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | Provides APIs for creating diverse query conditions. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [ValueType](arkts-arkdata-dataability-valuetype-t.md) | Defines the value types. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ValueType](arkts-arkdata-dataability-valuetype-t.md) |

@@ -6,11 +6,10 @@ type BaseProfile = baseProfile.BaseProfile
 
 Base interface of profile.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-a2dp-type BaseProfile = baseProfile.BaseProfile--><!--Device-a2dp-type BaseProfile = baseProfile.BaseProfile-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Property type:** baseProfile.BaseProfile
-

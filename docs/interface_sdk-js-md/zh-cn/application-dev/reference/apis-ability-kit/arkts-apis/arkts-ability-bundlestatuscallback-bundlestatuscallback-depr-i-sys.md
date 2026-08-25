@@ -8,13 +8,13 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [bundleMonitor/bundleMonitor](arkts-bundle-bundlemonitor.md)
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
-
-<!--Device-unnamed-export interface BundleStatusCallback--><!--Device-unnamed-export interface BundleStatusCallback-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -28,9 +28,9 @@ add: (bundleName: string, userId: number) => void
 
 获取应用安装时的信息。
 
-**类型：** (bundleName: string, userId: number) =&gt; void
-
 **起始版本：** 8
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -38,11 +38,16 @@ add: (bundleName: string, userId: number) => void
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
 
-<!--Device-BundleStatusCallback-add: (bundleName: string, userId: number) => void--><!--Device-BundleStatusCallback-add: (bundleName: string, userId: number) => void-End-->
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| userId | number | 是 |
 
 ## remove
 
@@ -52,9 +57,9 @@ remove: (bundleName: string, userId: number) => void
 
 获取应用卸载时的信息。
 
-**类型：** (bundleName: string, userId: number) =&gt; void
-
 **起始版本：** 8
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -62,11 +67,16 @@ remove: (bundleName: string, userId: number) => void
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
 
-<!--Device-BundleStatusCallback-remove: (bundleName: string, userId: number) => void--><!--Device-BundleStatusCallback-remove: (bundleName: string, userId: number) => void-End-->
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| userId | number | 是 |
 
 ## update
 
@@ -76,9 +86,9 @@ update: (bundleName: string, userId: number) => void
 
 获取应用更新时的信息。
 
-**类型：** (bundleName: string, userId: number) =&gt; void
-
 **起始版本：** 8
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -86,9 +96,13 @@ update: (bundleName: string, userId: number) => void
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
 
-<!--Device-BundleStatusCallback-update: (bundleName: string, userId: number) => void--><!--Device-BundleStatusCallback-update: (bundleName: string, userId: number) => void-End-->
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
 
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| userId | number | 是 |

@@ -2,9 +2,9 @@
 
 Enumerates gesture event types.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-unnamed-export declare enum ActionType--><!--Device-unnamed-export declare enum ActionType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -16,9 +16,9 @@ CANCEL = 0
 
 Canceled.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ActionType-CANCEL = 0--><!--Device-ActionType-CANCEL = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -30,9 +30,9 @@ BEGIN = 1
 
 Started.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ActionType-BEGIN = 1--><!--Device-ActionType-BEGIN = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -44,9 +44,9 @@ UPDATE = 2
 
 Updated.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ActionType-UPDATE = 2--><!--Device-ActionType-UPDATE = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -58,9 +58,8 @@ END = 3
 
 Ended.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ActionType-END = 3--><!--Device-ActionType-END = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
-

@@ -6,11 +6,11 @@ type NotifyMissionsChangedCallback = (deviceId: string) => void
 
 任务回调函数已更改。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-unnamed-type NotifyMissionsChangedCallback = (deviceId: string) => void--><!--Device-unnamed-type NotifyMissionsChangedCallback = (deviceId: string) => void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -18,7 +18,6 @@ type NotifyMissionsChangedCallback = (deviceId: string) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| deviceId | string | 是 | Indicates the deviceId mission changed. |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| deviceId | string | 是 |

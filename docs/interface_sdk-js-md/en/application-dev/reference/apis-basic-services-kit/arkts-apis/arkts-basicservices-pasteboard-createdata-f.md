@@ -14,32 +14,32 @@ function createData(mimeType: string, value: ValueType): PasteData
 
 Creates a **PasteData** object of the specified type.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-pasteboard-function createData(mimeType: string, value: ValueType): PasteData--><!--Device-pasteboard-function createData(mimeType: string, value: ValueType): PasteData-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mimeType | string | Yes | Type of PasteData. The value can be a predefined MIME type listed in [Constants](arkts-pasteboard.md#constants), including HTML, Want, plain text, URI, and PixelMap, or a custom type. The value of **mimeType** cannot exceed 1024 bytes. |
-| value | ValueType | Yes | Content of PasteData. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mimeType | string | Yes |
+| value | [ValueType](arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | PasteData** object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 
 ## createData
@@ -50,27 +50,26 @@ function createData(data: Record<string, ValueType>): PasteData
 
 Creates a **PasteData** object that contains multiple types of data.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-pasteboard-function createData(data: Record<string, ValueType>): PasteData--><!--Device-pasteboard-function createData(data: Record<string, ValueType>): PasteData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | Record&lt;string, ValueType&gt; | Yes | The key of **Record** can be the MIME type corresponding to the PasteData, including HTML, Want, plain text, URI, and PixelMap defined in [Constants](arkts-pasteboard.md#constants). Alternatively, the key could be a custom type, whose parameter, the length of **mimeType**, cannot exceed 1024 bytes. The value of **Record** is the data corresponding to the type specified in the key. The first type specified by the key-value in **Record** is used as the default type of the first **PasteDataRecord** in the **PasteData** object. Data of non-default types can be read only by using the [getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getdata) API. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | Record & lt;string, ValueType & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | PasteData** object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
-
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

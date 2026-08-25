@@ -4,7 +4,7 @@ Describes the error message returned when a pre-download error occurs.
 
 **Since:** 23
 
-<!--Device-cacheDownload-interface DownloadError--><!--Device-cacheDownload-interface DownloadError-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -26,7 +26,7 @@ Specific error type returned by the pre-download error callback.
 
 **Since:** 23
 
-<!--Device-DownloadError-readonly errorCode: ErrorCode--><!--Device-DownloadError-readonly errorCode: ErrorCode-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -42,7 +42,6 @@ Error message. A [universal error code](../../errorcode-universal.md) or [HTTP e
 
 **Since:** 23
 
-<!--Device-DownloadError-readonly message: string--><!--Device-DownloadError-readonly message: string-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
-

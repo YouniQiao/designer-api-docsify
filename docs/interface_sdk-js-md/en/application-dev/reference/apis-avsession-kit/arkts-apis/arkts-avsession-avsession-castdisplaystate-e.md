@@ -2,9 +2,9 @@
 
 Enumerates the cast display states.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-avSession-enum CastDisplayState--><!--Device-avSession-enum CastDisplayState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
 
@@ -16,11 +16,11 @@ STATE_OFF = 1
 
 Screen off.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-CastDisplayState-STATE_OFF = 1--><!--Device-CastDisplayState-STATE_OFF = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
 
@@ -32,11 +32,10 @@ STATE_ON = 2
 
 Screen on.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-CastDisplayState-STATE_ON = 2--><!--Device-CastDisplayState-STATE_ON = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
-

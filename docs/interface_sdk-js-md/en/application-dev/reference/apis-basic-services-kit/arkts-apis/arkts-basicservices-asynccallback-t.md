@@ -8,16 +8,13 @@ Defines a common callback that carries an error parameter and asynchronous retur
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export type AsyncCallback<T, E = void> = (err: BusinessError<E> | null, data: T | undefined) => void--><!--Device-unnamed-export type AsyncCallback<T, E = void> = (err: BusinessError<E> | null, data: T | undefined) => void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Base
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| err | [BusinessError](arkts-basicservices-base-businesserror-i.md)&lt;E&gt; \| null | Yes | Common error information about the API invoking failure. |
-| data | T \| undefined | Yes | Common callback information. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| err | [BusinessError](arkts-basicservices-base-businesserror-i.md)&lt;E&gt; \| null | Yes |
+| data | T \| undefined | Yes |

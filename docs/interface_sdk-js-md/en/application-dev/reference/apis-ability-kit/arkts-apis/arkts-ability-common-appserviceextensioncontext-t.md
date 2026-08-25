@@ -1,18 +1,17 @@
 # AppServiceExtensionContext
 
 ```TypeScript
-export type AppServiceExtensionContext = _AppServiceExtensionContext
+export type AppServiceExtensionContext = _AppServiceExtensionContext.default
 ```
 
-Defines the context environment for the [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md). It inherits from Context.
+Defines the context environment for the [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md). It inherits from Context.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-common-export type AppServiceExtensionContext = _AppServiceExtensionContext--><!--Device-common-export type AppServiceExtensionContext = _AppServiceExtensionContext-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _AppServiceExtensionContext
-
+**Property type:** _AppServiceExtensionContext.default

@@ -10,7 +10,6 @@ import { InputEvent } from '@kit.InputKit';
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [InputEvent(输入事件)](arkts-input-multimodalinput-inputevent-inputevent-i.md) | 输入事件。@interface InputEvent [since 9 - 11] |
-
+| 名称 |
+| --- |
+| [InputEvent(输入事件)](arkts-input-multimodalinput-inputevent-inputevent-i.md) |

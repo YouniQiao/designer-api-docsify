@@ -4,7 +4,7 @@ Enumerates the data source types for printing.
 
 **Since:** 23
 
-<!--Device-print-enum DocFlavor--><!--Device-print-enum DocFlavor-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -18,9 +18,9 @@ File data.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-DocFlavor-FILE_DESCRIPTOR = 0--><!--Device-DocFlavor-FILE_DESCRIPTOR = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -34,9 +34,8 @@ Binary data.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DocFlavor-BYTES = 1--><!--Device-DocFlavor-BYTES = 1-End-->
-
 **System capability:** SystemCapability.Print.PrintFramework
-

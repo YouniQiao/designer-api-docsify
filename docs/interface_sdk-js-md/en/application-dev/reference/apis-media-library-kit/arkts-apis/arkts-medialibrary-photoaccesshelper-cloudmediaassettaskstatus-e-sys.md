@@ -2,9 +2,9 @@
 
 Enumerates the statuses of tasks used for downloading cloud media assets.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-photoAccessHelper-enum CloudMediaAssetTaskStatus--><!--Device-photoAccessHelper-enum CloudMediaAssetTaskStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ DOWNLOADING = 0
 
 The task is in progress.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CloudMediaAssetTaskStatus-DOWNLOADING = 0--><!--Device-CloudMediaAssetTaskStatus-DOWNLOADING = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,9 @@ PAUSED = 1
 
 The task is paused.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CloudMediaAssetTaskStatus-PAUSED = 1--><!--Device-CloudMediaAssetTaskStatus-PAUSED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,11 +50,10 @@ IDLE = 2
 
 There is no download task.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CloudMediaAssetTaskStatus-IDLE = 2--><!--Device-CloudMediaAssetTaskStatus-IDLE = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

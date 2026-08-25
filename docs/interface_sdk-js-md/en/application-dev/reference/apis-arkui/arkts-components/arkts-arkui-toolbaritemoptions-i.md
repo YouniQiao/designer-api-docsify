@@ -4,7 +4,7 @@ Provides optional parameters for **ToolBarItem** configuration.
 
 **Since:** 20
 
-<!--Device-unnamed-interface ToolBarItemOptions--><!--Device-unnamed-interface ToolBarItemOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,9 +27,8 @@ Placement position of the toolbar item.Default value: **ToolBarItemPlacement.TOP
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ToolBarItemOptions-placement?: ToolBarItemPlacement--><!--Device-ToolBarItemOptions-placement?: ToolBarItemPlacement-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

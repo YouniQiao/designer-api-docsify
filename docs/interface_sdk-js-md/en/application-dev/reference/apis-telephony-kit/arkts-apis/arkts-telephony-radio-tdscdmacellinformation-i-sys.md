@@ -2,9 +2,9 @@
 
 Obtains TDSCDMA cell information.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-radio-export interface TdscdmaCellInformation--><!--Device-radio-export interface TdscdmaCellInformation-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -24,11 +24,11 @@ cellId: int
 
 Indicates the cell ID.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-TdscdmaCellInformation-cellId: int--><!--Device-TdscdmaCellInformation-cellId: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -42,11 +42,11 @@ cpid: int
 
 Indicates the cell parameter ID.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-TdscdmaCellInformation-cpid: int--><!--Device-TdscdmaCellInformation-cpid: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -60,11 +60,11 @@ lac: int
 
 Indicates the location area code.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-TdscdmaCellInformation-lac: int--><!--Device-TdscdmaCellInformation-lac: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -80,9 +80,9 @@ Indicates the mobile country code.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-TdscdmaCellInformation-mcc: string--><!--Device-TdscdmaCellInformation-mcc: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -98,9 +98,9 @@ Indicates the mobile network code.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-TdscdmaCellInformation-mnc: string--><!--Device-TdscdmaCellInformation-mnc: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -114,13 +114,12 @@ uarfcn: int
 
 Indicates the absolute radio frequency number.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-TdscdmaCellInformation-uarfcn: int--><!--Device-TdscdmaCellInformation-uarfcn: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
-

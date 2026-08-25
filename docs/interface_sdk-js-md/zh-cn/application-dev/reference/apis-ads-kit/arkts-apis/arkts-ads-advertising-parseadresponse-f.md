@@ -16,26 +16,26 @@ function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,
 
 **起始版本：** 12
 
-<!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener, context: common.UIAbilityContext): void--><!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener, context: common.UIAbilityContext): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| adResponse | string | 是 | 广告响应体。 |
-| listener | [MultiSlotsAdLoadListener](arkts-ads-advertising-multislotsadloadlistener-i.md) | 是 | 请求广告回调监听。 |
-| context | common.UIAbilityContext | 是 | UIAbility的上下文环境。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| adResponse | string | 是 |
+| listener | [MultiSlotsAdLoadListener](arkts-ads-advertising-multislotsadloadlistener-i.md) | 是 |
+| context | common.UIAbilityContext | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid input parameter.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Device not supported. |
-| [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
-| [21800005](../errorcode-ads.md#21800005-广告数据解析失败) | Failed to parse the ad response. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [21800001](../errorcode-ads.md#21800001-系统内部错误) |
+| [21800005](../errorcode-ads.md#21800005-广告数据解析失败) |
 
 **示例**
 
@@ -63,4 +63,3 @@ function parseAdResponse(adResponse: string, context: common.UIAbilityContext): 
   advertising.parseAdResponse(adResponse, multiSlotsAdLoaderListener, context);
 }
 ```
-

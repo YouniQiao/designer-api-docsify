@@ -4,7 +4,7 @@
 
 **起始版本：** 10
 
-<!--Device-calendarManager-export enum RecurrenceFrequency--><!--Device-calendarManager-export enum RecurrenceFrequency-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -18,9 +18,9 @@ YEARLY = 0
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-RecurrenceFrequency-YEARLY = 0--><!--Device-RecurrenceFrequency-YEARLY = 0-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -34,9 +34,9 @@ MONTHLY = 1
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-RecurrenceFrequency-MONTHLY = 1--><!--Device-RecurrenceFrequency-MONTHLY = 1-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -50,9 +50,9 @@ WEEKLY = 2
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-RecurrenceFrequency-WEEKLY = 2--><!--Device-RecurrenceFrequency-WEEKLY = 2-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -66,9 +66,8 @@ DAILY = 3
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-RecurrenceFrequency-DAILY = 3--><!--Device-RecurrenceFrequency-DAILY = 3-End-->
-
 **系统能力：** SystemCapability.Applications.CalendarData
-

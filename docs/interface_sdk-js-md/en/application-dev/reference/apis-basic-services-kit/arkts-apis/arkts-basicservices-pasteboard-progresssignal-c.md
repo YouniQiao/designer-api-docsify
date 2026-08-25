@@ -2,9 +2,9 @@
 
 Defines a function for canceling the paste task. This parameter is valid only when [ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md) is set to **NONE**.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-pasteboard-export class ProgressSignal--><!--Device-pasteboard-export class ProgressSignal-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -22,11 +22,11 @@ cancel(): void
 
 Cancels an ongoing paste task.
 
-**Since:** 23
+**Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
-<!--Device-ProgressSignal-cancel(): void--><!--Device-ProgressSignal-cancel(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -73,4 +73,3 @@ struct PasteboardTest {
   }
 }
 ```
-

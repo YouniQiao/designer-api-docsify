@@ -2,9 +2,9 @@
 
 Defines a downloadable profile.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-eSIM-export interface DownloadableProfile--><!--Device-eSIM-export interface DownloadableProfile-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -22,11 +22,11 @@ accessRules?: Array<AccessRule>
 
 Access rule array.
 
-**Type:** Array&lt;[AccessRule](arkts-telephony-esim-accessrule-i.md)&gt;
+**Type:** Array&lt;[AccessRule](arkts-telephony-esim-accessrule-i-sys.md)&gt;
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DownloadableProfile-accessRules?: Array<AccessRule>--><!--Device-DownloadableProfile-accessRules?: Array<AccessRule>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -40,9 +40,9 @@ Activation code. For a profile that does not require an activation code, the val
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DownloadableProfile-activationCode: string--><!--Device-DownloadableProfile-activationCode: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -56,9 +56,9 @@ Carrier name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DownloadableProfile-carrierName?: string--><!--Device-DownloadableProfile-carrierName?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -72,9 +72,8 @@ Confirmation code.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DownloadableProfile-confirmationCode?: string--><!--Device-DownloadableProfile-confirmationCode?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
-

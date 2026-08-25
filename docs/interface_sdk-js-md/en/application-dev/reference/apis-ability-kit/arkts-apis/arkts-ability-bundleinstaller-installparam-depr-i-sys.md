@@ -4,11 +4,11 @@ Describes the parameters required for bundle installation, recovery, or uninstal
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [InstallParam](arkts-ability-installer-installparam-i-sys.md)
-
-<!--Device-unnamed-export interface InstallParam--><!--Device-unnamed-export interface InstallParam-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -30,11 +30,11 @@ Installation flag.The value can be:
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [installFlag](arkts-ability-installer-installparam-i-sys.md#installflag)
-
-<!--Device-InstallParam-installFlag: number--><!--Device-InstallParam-installFlag: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -54,11 +54,11 @@ Whether to retain the bundle data when the application is uninstalled. The defau
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [isKeepData](arkts-ability-installer-installparam-i-sys.md#iskeepdata)
-
-<!--Device-InstallParam-isKeepData: boolean--><!--Device-InstallParam-isKeepData: boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -78,13 +78,12 @@ User ID. The default value is the user ID of the caller.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [userId](arkts-ability-installer-installparam-i-sys.md#userid)
 
-<!--Device-InstallParam-userId: number--><!--Device-InstallParam-userId: number-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **System API:** This is a system API.
-

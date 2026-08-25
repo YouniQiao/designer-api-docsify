@@ -2,9 +2,9 @@
 
 Defines the data structure of a notification request, which is used to describe all information about a notification, including the notification content, identifier, display style, and interaction behavior.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-export interface NotificationRequest--><!--Device-unnamed-export interface NotificationRequest-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -18,9 +18,9 @@ Notification button. This parameter is left empty by default. A notification can
 
 **Type:** Array&lt;[NotificationActionButton](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)&gt;
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-actionButtons?: Array<NotificationActionButton>--><!--Device-NotificationRequest-actionButtons?: Array<NotificationActionButton>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -34,9 +34,9 @@ Unique identifier field carried when an application sends a notification, used f
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NotificationRequest-appMessageId?: string--><!--Device-NotificationRequest-appMessageId?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -48,11 +48,11 @@ autoDeletedTime?: long
 
 Scheduled auto-delete time for the notification. You can set this parameter to automatically delete the notification after the specified time. Default value: **0**. This parameter does not take effect if a value less than 0 or a past time is passed in. Data format: timestamp. Unit: millisecond. For example, to delete a notification after it has been retained for 3 seconds (3000 ms), the corresponding deletion time is: **new Date().getTime()** + 3000.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-autoDeletedTime?: long--><!--Device-NotificationRequest-autoDeletedTime?: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -64,11 +64,11 @@ badgeIconStyle?: int
 
 Notification badge type. Not supported currently.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-badgeIconStyle?: int--><!--Device-NotificationRequest-badgeIconStyle?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -80,11 +80,11 @@ badgeNumber?: long
 
 Number of notifications displayed on the application icon. The value is accumulated. The default value is **0**.If the value of **badgeNumber** is less than or equal to 0, the badge number is not displayed;if the value is greater than 99, **99+** is displayed on the badge.For example, if an application publishes three notifications, and `badgeNumber` is set to **2**, **0**, and **3** in sequence, the application displays **2**, **2**, and **5** accordingly.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-NotificationRequest-badgeNumber?: long--><!--Device-NotificationRequest-badgeNumber?: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -96,11 +96,11 @@ color?: long
 
 Background color of the notification. Not supported currently.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-color?: long--><!--Device-NotificationRequest-color?: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -114,9 +114,9 @@ Whether the notification background color can be enabled. Not supported currentl
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-colorEnabled?: boolean--><!--Device-NotificationRequest-colorEnabled?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -130,9 +130,9 @@ Notification display content, including the notification title and body.
 
 **Type:** [NotificationContent](arkts-notification-notificationcontent-notificationcontent-i.md)
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-content: NotificationContent--><!--Device-NotificationRequest-content: NotificationContent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -146,9 +146,9 @@ Name of the application that creates the notification.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-readonly creatorBundleName?: string--><!--Device-NotificationRequest-readonly creatorBundleName?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -160,11 +160,11 @@ readonly creatorPid?: int
 
 PID used for creating the notification.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-readonly creatorPid?: int--><!--Device-NotificationRequest-readonly creatorPid?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -176,11 +176,11 @@ readonly creatorUid?: int
 
 UID of the application that creates the notification.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-readonly creatorUid?: int--><!--Device-NotificationRequest-readonly creatorUid?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -192,11 +192,11 @@ readonly creatorUserId?: int
 
 ID of the user who creates the notification.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-NotificationRequest-readonly creatorUserId?: int--><!--Device-NotificationRequest-readonly creatorUserId?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -208,11 +208,11 @@ deliveryTime?: long
 
 Notification delivery time. This parameter is automatically generated by the system and does not require configuration. Data format: timestamp. Unit: millisecond.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-deliveryTime?: long--><!--Device-NotificationRequest-deliveryTime?: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -226,26 +226,26 @@ Distributed notification options. Not supported currently.
 
 **Type:** [DistributedOptions](arkts-notification-notificationrequest-distributedoptions-i.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-NotificationRequest-distributedOption?: DistributedOptions--><!--Device-NotificationRequest-distributedOption?: DistributedOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 ## extraInfo
 
 ```TypeScript
-extraInfo?: Record<string, RecordData>
+extraInfo?: { [key: string]: any }
 ```
 
 Extended parameters, used to provide custom services for applications. This parameter is left blank by default.The key value is assigned by the system. Manual modification does not take effect. The system automatically changes the value to the actual value during data transmission.  
 - **ohos.notificationManager.wantUri**: **uri** field in the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) object, which is passed to the application when the user taps a notification. This field can be obtained via the [getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md#getactivenotifications) API call.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** { [key: string]: any }
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-extraInfo?: Record<string, RecordData>--><!--Device-NotificationRequest-extraInfo?: Record<string, RecordData>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -259,9 +259,9 @@ Group to which the notification belongs. When different notifications have the s
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-NotificationRequest-groupName?: string--><!--Device-NotificationRequest-groupName?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -275,9 +275,9 @@ Unique ID of the notification.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-readonly hashCode?: string--><!--Device-NotificationRequest-readonly hashCode?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -289,11 +289,11 @@ id?: int
 
 Notification ID. The default value is **0**. If a notification with the same ID exists, the notification is updated. If no notification with the same ID exists, a new notification is created.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-id?: int--><!--Device-NotificationRequest-id?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -308,9 +308,9 @@ Whether to send a notification only once when the notification is published or u
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-isAlertOnce?: boolean--><!--Device-NotificationRequest-isAlertOnce?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -324,9 +324,9 @@ Whether to display the countdown time. Not supported currently.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-isCountDown?: boolean--><!--Device-NotificationRequest-isCountDown?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -340,9 +340,9 @@ Whether the notification is displayed as a floating icon in the status bar. Not 
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-isFloatingIcon?: boolean--><!--Device-NotificationRequest-isFloatingIcon?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -356,9 +356,9 @@ Not supported currently.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-isOngoing?: boolean--><!--Device-NotificationRequest-isOngoing?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -372,9 +372,9 @@ Whether to display the stopwatch. Not supported currently.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-isStopwatch?: boolean--><!--Device-NotificationRequest-isStopwatch?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -388,9 +388,9 @@ Not supported currently.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-isUnremovable?: boolean--><!--Device-NotificationRequest-isUnremovable?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -404,9 +404,9 @@ Notification label. The **label** field functions similarly to an ID and can be 
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-label?: string--><!--Device-NotificationRequest-label?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -420,9 +420,9 @@ Large notification icon. This parameter is left empty by default. The total numb
 
 **Type:** image.PixelMap
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-largeIcon?: image.PixelMap--><!--Device-NotificationRequest-largeIcon?: image.PixelMap-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -436,12 +436,12 @@ Notification flags. The default value is empty. This parameter is writable since
 
 **Type:** [NotificationFlags](arkts-notification-notificationflags-notificationflags-i.md)
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Model restriction:** 
 - API version 23 and later: This API can be used in both the stage model and FA model.
-
-<!--Device-NotificationRequest-notificationFlags?: NotificationFlags--><!--Device-NotificationRequest-notificationFlags?: NotificationFlags-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -455,9 +455,25 @@ Notification slot type. The default value is **OTHER_TYPES**. The notification r
 
 **Type:** notificationManager.SlotType
 
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**System capability:** SystemCapability.Notification.Notification
+
+## overlayIcon
+
+```TypeScript
+overlayIcon?: image.PixelMap
+```
+
+Notification overlay icon. This parameter is left empty by default. The total bytes of the icon pixels cannot exceed 192 KB.
+
+**Type:** image.PixelMap
+
 **Since:** 23
 
-<!--Device-NotificationRequest-notificationSlotType?: notificationManager.SlotType--><!--Device-NotificationRequest-notificationSlotType?: notificationManager.SlotType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -473,9 +489,9 @@ Notification priority type. The default value is **OTHER**. If this parameter is
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-NotificationRequest-priorityNotificationType?: notificationManager.PriorityNotificationType--><!--Device-NotificationRequest-priorityNotificationType?: notificationManager.PriorityNotificationType-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -489,9 +505,9 @@ Behavior intent of an application, which is triggered when a notification is rem
 
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-NotificationRequest-removalWantAgent?: WantAgent--><!--Device-NotificationRequest-removalWantAgent?: WantAgent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -505,9 +521,9 @@ Whether to display the time when the notification is delivered. Not supported cu
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-showDeliveryTime?: boolean--><!--Device-NotificationRequest-showDeliveryTime?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -523,11 +539,11 @@ Notification slot type. The default value is **OTHER_TYPES**.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 11
 
 **Substitutes:** [notificationSlotType](#notificationslottype)
-
-<!--Device-NotificationRequest-slotType?: notification.SlotType--><!--Device-NotificationRequest-slotType?: notification.SlotType-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -541,9 +557,9 @@ Small notification icon. This parameter is left empty by default. The total numb
 
 **Type:** image.PixelMap
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-smallIcon?: image.PixelMap--><!--Device-NotificationRequest-smallIcon?: image.PixelMap-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -559,9 +575,9 @@ Supported formats: M4A, AAC, MP3, OGG, WAV, FLAC, and AMR.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NotificationRequest-sound?: string--><!--Device-NotificationRequest-sound?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -576,9 +592,9 @@ Whether the notification is automatically cleared when the notification carries 
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-tapDismissed?: boolean--><!--Device-NotificationRequest-tapDismissed?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -592,9 +608,9 @@ Notification template. This parameter is left empty by default.
 
 **Type:** [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-NotificationRequest-template?: NotificationTemplate--><!--Device-NotificationRequest-template?: NotificationTemplate-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -609,9 +625,9 @@ Whether to update notifications only. The default value is **false**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-NotificationRequest-updateOnly?: boolean--><!--Device-NotificationRequest-updateOnly?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -625,9 +641,8 @@ Behavior intent of an application, which is triggered when a notification is cli
 
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationRequest-wantAgent?: WantAgent--><!--Device-NotificationRequest-wantAgent?: WantAgent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
-

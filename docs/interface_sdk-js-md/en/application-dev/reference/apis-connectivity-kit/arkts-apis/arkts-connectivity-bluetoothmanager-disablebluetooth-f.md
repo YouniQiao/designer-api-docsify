@@ -16,6 +16,8 @@ Disables Bluetooth on a device. On API 10 and above, the permission required by 
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** [disableBluetooth](arkts-connectivity-access-disablebluetooth-f.md)
@@ -24,18 +26,16 @@ Disables Bluetooth on a device. On API 10 and above, the permission required by 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH
 
-<!--Device-bluetoothManager-function disableBluetooth(): void--><!--Device-bluetoothManager-function disableBluetooth(): void-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2900001 | Service stopped. |
-| 2900099 | Operation failed. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| 2900001 |
+| 2900099 |
 
 **Examples**
 
@@ -47,4 +47,3 @@ try {
     console.error("errCode:" + (err as BusinessError).code + ", errMessage:" + (err as BusinessError).message);
 }
 ```
-

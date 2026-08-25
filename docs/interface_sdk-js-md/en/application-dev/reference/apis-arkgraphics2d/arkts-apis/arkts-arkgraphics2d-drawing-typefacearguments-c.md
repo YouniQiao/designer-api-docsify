@@ -8,9 +8,9 @@ This module defines a struct for setting typeface arguments.
 > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-drawing-class TypefaceArguments--><!--Device-drawing-class TypefaceArguments-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -30,24 +30,24 @@ Defines the typeface weight.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-TypefaceArguments-addVariation(axis: string, value: number)--><!--Device-TypefaceArguments-addVariation(axis: string, value: number)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| axis | string | Yes | Indicates the axis tag, which must contain four ASCII characters. |
-| value | number | Yes | Indicates the value of the axis field. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| axis | string | Yes |
+| value | number | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| Error Code ID |
+| --- |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
 
 **Examples**
 
@@ -68,26 +68,26 @@ Adds variation axis for the TypefaceArguments.
 
 **Since:** 24
 
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-TypefaceArguments-addVariation(axis: string, value: double) : void--><!--Device-TypefaceArguments-addVariation(axis: string, value: double) : void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| axis | string | Yes | Indicates the axis tag, which must contain four ASCII characters. |
-| value | double | Yes | Indicates the value of the axis field. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| axis | string | Yes |
+| value | double | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| Error Code ID |
+| --- |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
 
 **Examples**
 
@@ -101,11 +101,11 @@ constructor()
 
 Constructor for typeface arguments.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-TypefaceArguments-constructor()--><!--Device-TypefaceArguments-constructor()-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -289,4 +289,3 @@ class DrawingRenderNode extends RenderNode {
 import { drawing } from '@kit.ArkGraphics2D';
 let typeFaceArgument = new drawing.TypefaceArguments();
 ```
-

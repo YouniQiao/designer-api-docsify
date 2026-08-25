@@ -6,13 +6,12 @@ export type PluginModuleInfo = _PluginModuleInfo
 
 插件的模块信息。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-bundleManager-export type PluginModuleInfo = _PluginModuleInfo--><!--Device-bundleManager-export type PluginModuleInfo = _PluginModuleInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
 
 **属性类型：** _PluginModuleInfo
-

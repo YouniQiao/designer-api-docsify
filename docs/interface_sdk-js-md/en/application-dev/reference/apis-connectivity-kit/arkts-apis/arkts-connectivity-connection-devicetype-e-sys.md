@@ -2,9 +2,9 @@
 
 Enum for the custom type of remote device.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-connection-enum DeviceType--><!--Device-connection-enum DeviceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -18,11 +18,11 @@ DEVICE_TYPE_DEFAULT = 0
 
 Default type, the type is consistent with COD.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceType-DEVICE_TYPE_DEFAULT = 0--><!--Device-DeviceType-DEVICE_TYPE_DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -36,11 +36,11 @@ DEVICE_TYPE_CAR = 1
 
 Car bluetooth.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceType-DEVICE_TYPE_CAR = 1--><!--Device-DeviceType-DEVICE_TYPE_CAR = 1-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -54,11 +54,11 @@ DEVICE_TYPE_HEADSET = 2
 
 Headset bluetooth.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceType-DEVICE_TYPE_HEADSET = 2--><!--Device-DeviceType-DEVICE_TYPE_HEADSET = 2-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -72,11 +72,11 @@ DEVICE_TYPE_HEARING = 3
 
 Hearing Aid.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceType-DEVICE_TYPE_HEARING = 3--><!--Device-DeviceType-DEVICE_TYPE_HEARING = 3-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -90,11 +90,11 @@ DEVICE_TYPE_GLASSES = 4
 
 Glasses device.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceType-DEVICE_TYPE_GLASSES = 4--><!--Device-DeviceType-DEVICE_TYPE_GLASSES = 4-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -108,11 +108,11 @@ DEVICE_TYPE_WATCH = 5
 
 Watch device.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceType-DEVICE_TYPE_WATCH = 5--><!--Device-DeviceType-DEVICE_TYPE_WATCH = 5-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -126,11 +126,11 @@ DEVICE_TYPE_SPEAKER = 6
 
 Speaker device.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceType-DEVICE_TYPE_SPEAKER = 6--><!--Device-DeviceType-DEVICE_TYPE_SPEAKER = 6-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -144,13 +144,12 @@ DEVICE_TYPE_OTHERS = 7
 
 Others bluetooth.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceType-DEVICE_TYPE_OTHERS = 7--><!--Device-DeviceType-DEVICE_TYPE_OTHERS = 7-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
-

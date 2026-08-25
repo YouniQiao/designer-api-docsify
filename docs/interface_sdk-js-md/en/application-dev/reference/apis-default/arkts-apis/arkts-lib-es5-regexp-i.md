@@ -1,8 +1,6 @@
 # RegExp
 
-**Since:** -1
-
-<!--Device-unnamed-interface RegExp--><!--Device-unnamed-interface RegExp-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -15,23 +13,21 @@
 compile(pattern: string, flags?: string): this
 ```
 
-**Since:** -1
+**ArkTS mode:** 
 
-**Deprecated since:** legacy feature for browser compatibility
-
-<!--Device-RegExp-compile(pattern: string, flags?: string): this--><!--Device-RegExp-compile(pattern: string, flags?: string): this-End-->
+**Deprecated since:** legacy feature for browser compatibility 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pattern | string | Yes |  |
-| flags | string | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | string | Yes |
+| flags | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## exec
 
 ```TypeScript
@@ -40,20 +36,18 @@ exec(string: string): RegExpExecArray | null
 
 Executes a search on a string using a regular expression pattern, and returns an array containing the results of that search.
 
-**Since:** -1
-
-<!--Device-RegExp-exec(string: string): RegExpExecArray | null--><!--Device-RegExp-exec(string: string): RegExpExecArray | null-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| string | string | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| string | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## test
 
 ```TypeScript
@@ -62,20 +56,18 @@ test(string: string): boolean
 
 Returns a Boolean value that indicates whether or not a pattern exists in a searched string.
 
-**Since:** -1
-
-<!--Device-RegExp-test(string: string): boolean--><!--Device-RegExp-test(string: string): boolean-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| string | string | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| string | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## global
 
 ```TypeScript
@@ -86,9 +78,7 @@ Returns a Boolean value indicating the state of the global flag (g) used with a 
 
 **Type:** boolean
 
-**Since:** -1
-
-<!--Device-RegExp-readonly global: boolean--><!--Device-RegExp-readonly global: boolean-End-->
+**ArkTS mode:** 
 
 ## ignoreCase
 
@@ -100,9 +90,7 @@ Returns a Boolean value indicating the state of the ignoreCase flag (i) used wit
 
 **Type:** boolean
 
-**Since:** -1
-
-<!--Device-RegExp-readonly ignoreCase: boolean--><!--Device-RegExp-readonly ignoreCase: boolean-End-->
+**ArkTS mode:** 
 
 ## lastIndex
 
@@ -112,9 +100,7 @@ lastIndex: number
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-RegExp-lastIndex: number--><!--Device-RegExp-lastIndex: number-End-->
+**ArkTS mode:** 
 
 ## multiline
 
@@ -126,9 +112,7 @@ Returns a Boolean value indicating the state of the multiline flag (m) used with
 
 **Type:** boolean
 
-**Since:** -1
-
-<!--Device-RegExp-readonly multiline: boolean--><!--Device-RegExp-readonly multiline: boolean-End-->
+**ArkTS mode:** 
 
 ## source
 
@@ -140,7 +124,4 @@ Returns a copy of the text of the regular expression pattern. Read-only. The reg
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-RegExp-readonly source: string--><!--Device-RegExp-readonly source: string-End-->
-
+**ArkTS mode:** 

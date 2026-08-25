@@ -16,33 +16,33 @@ Places a function to be executed in the internal queue of the task pool. The fun
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-taskpool-function execute(func: Function, ...args: Object[]): Promise<Object>--><!--Device-taskpool-function execute(func: Function, ...args: Object[]): Promise<Object>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| func | Function | Yes | Function to be executed. The function must be decorated using [@Concurrent](../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see Sequenceable Data Types. |
-| args | Object[] | Yes | Arguments of the function. For details about the supported parameter types, see Sequenceable Data Types. The default value is **undefined**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| func | Function | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Object[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;unknown&gt; | <br>**Applicable version:** 9 - 11 |
-| Promise&lt;Object&gt; | Promise used to return an object that carries the function execution result.<br>**Applicable version:** 11 and later |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;unknown & gt; |
+| Promise & lt;Object & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed.<br>**Applicable version:** 9 - 11 |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
+| Error Code ID |
+| --- |
+| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) |
 
 **Examples**
 
@@ -239,31 +239,31 @@ Verifies the passed-in parameter types and return value type of a concurrent fun
 
 **Since:** 13
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
-<!--Device-taskpool-function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R>, ...args: A): Promise<R>--><!--Device-taskpool-function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R>, ...args: A): Promise<R>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | Yes | Function to be executed. The function must be decorated using [@Concurrent](../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see Sequenceable Data Types. |
-| args | A | Yes | Arguments of the function. For details about the supported parameter types, see Sequenceable Data Types. The default value is **undefined**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| func | (...args: A) = & gt; R \ | Promise & lt;R & gt; | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | A | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;R&gt; | Promise used to return an object that carries the function execution result. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;R & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
+| Error Code ID |
+| --- |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) |
 
 **Examples**
 
@@ -280,35 +280,35 @@ Places a task in the internal queue of the task pool. The task will not be execu
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-taskpool-function execute(task: Task, priority?: Priority): Promise<Object>--><!--Device-taskpool-function execute(task: Task, priority?: Priority): Promise<Object>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| task | Task | Yes | Task to be executed. |
-| priority | Priority | No | Priority of the task to be executed. The default value is **taskpool.Priority.MEDIUM**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;unknown&gt; | <br>**Applicable version:** 9 - 17 |
-| Promise&lt;Object&gt; | Promise used to return an object that carries the function execution result.<br>**Applicable version:** 11 and later |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;unknown & gt; |
+| Promise & lt;Object & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed.<br>**Applicable version:** 9 - 17 |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
+| Error Code ID |
+| --- |
+| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
 
 **Examples**
 
@@ -325,33 +325,33 @@ Places the generic task in the internal queue of the task pool. The parameter ty
 
 **Since:** 13
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
-<!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?: Priority): Promise<R>--><!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?: Priority): Promise<R>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | Yes | Generic task to be executed. |
-| priority | Priority | No | Priority of the task to be executed. The default value is **taskpool.Priority.MEDIUM**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | Yes |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;R&gt; | Promise used to return an object that carries the function execution result. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;R & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again. |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
+| Error Code ID |
+| --- |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
 
 **Examples**
 
@@ -368,31 +368,31 @@ Places a task group in the internal queue of the task pool. The tasks in the tas
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-taskpool-function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>--><!--Device-taskpool-function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | Yes | Task group to be executed. |
-| priority | Priority | No | Priority of the task group. The default value is **taskpool.Priority.MEDIUM**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | Yes |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Object[]&gt; | Promise used to return an object array that carries the function execution result. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Object[] & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| 10200059 | TaskGroup cannot be re-executed.<br>**Applicable version:** 24 and later |
+| Error Code ID |
+| --- |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| 10200059 |
 
 **Examples**
 
@@ -409,34 +409,34 @@ Execute a concurrent task with Configs.
 
 **Since:** 24
 
-**Atomic service API:** This API can be used in atomic services since API version 24.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-taskpool-function execute(task: Task, configs: Configs): Promise<Object>--><!--Device-taskpool-function execute(task: Task, configs: Configs): Promise<Object>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| task | Task | Yes | Task to be executed. |
-| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | Yes | Configs of the task. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes |
+| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Object&gt; |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Object & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again. |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs. |
-| 10200058 | Task timed out. |
+| Error Code ID |
+| --- |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| 10200058 |
 
 **Examples**
 
@@ -453,34 +453,34 @@ Execute a concurrent generics task with Configs.
 
 **Since:** 24
 
-**Atomic service API:** This API can be used in atomic services since API version 24.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: Configs): Promise<R>--><!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: Configs): Promise<R>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | Yes | Generic task to be executed. |
-| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | Yes | Configs of the task. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | Yes |
+| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;R&gt; |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;R & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again. |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs. |
-| 10200058 | Task timed out. |
+| Error Code ID |
+| --- |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| 10200058 |
 
 **Examples**
 
@@ -497,34 +497,33 @@ Execute a concurrent task group with Configs.
 
 **Since:** 24
 
-**Atomic service API:** This API can be used in atomic services since API version 24.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-taskpool-function execute(group: TaskGroup, configs: Configs): Promise<Object[]>--><!--Device-taskpool-function execute(group: TaskGroup, configs: Configs): Promise<Object[]>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | Yes | Task group to be executed. |
-| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | Yes | Configs of each task in the TaskGroup. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | Yes |
+| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Object[]&gt; |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Object[] & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| 10200059 | TaskGroup cannot be re-executed. |
-| 10200070 | TaskGroup timed out. |
+| Error Code ID |
+| --- |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| 10200059 |
+| 10200070 |
 
 **Examples**
 
 See [execute](#execute)
-

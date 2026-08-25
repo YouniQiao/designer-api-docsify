@@ -14,23 +14,23 @@ function getSensorListSync(): Array<Sensor>
 
 Obtains information about all sensors on the device. This API returns the result synchronously.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-sensor-function getSensorListSync(): Array<Sensor>--><!--Device-sensor-function getSensorListSync(): Array<Sensor>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;Sensor&gt; | List of sensor attributes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;Sensor & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| Error Code ID |
+| --- |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
 
 **Examples**
 
@@ -49,4 +49,3 @@ try {
     console.error(`Failed to get singleSensor . Code: ${e.code}, message: ${e.message}`);
 }
 ```
-

@@ -14,19 +14,19 @@ function createZip(): Promise<Zip>
 
 Creates this **Zip** instance. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-zlib-function createZip(): Promise<Zip>--><!--Device-zlib-function createZip(): Promise<Zip>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[Zip](arkts-basicservices-zlib-zip-i.md)&gt; | Promise used to return the **Zip** instance created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[Zip](arkts-basicservices-zlib-zip-i.md)&gt; |
 
 **Examples**
 
@@ -39,4 +39,3 @@ zlib.createZip().then(data => {
   console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
 })
 ```
-

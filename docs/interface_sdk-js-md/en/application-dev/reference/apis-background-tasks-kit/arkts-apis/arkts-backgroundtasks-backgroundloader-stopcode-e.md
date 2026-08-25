@@ -4,7 +4,7 @@ Enumerates the stop code, which is used to ON_STOP function.
 
 **Since:** 26.0.0
 
-<!--Device-backgroundLoader-export enum StopCode--><!--Device-backgroundLoader-export enum StopCode-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -18,9 +18,9 @@ Success code.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-StopCode-SUCCESS = 0--><!--Device-StopCode-SUCCESS = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -34,9 +34,9 @@ System error during task execution.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-StopCode-SYSTEM_ERROR = 1--><!--Device-StopCode-SYSTEM_ERROR = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -50,9 +50,9 @@ Perceptible anomalies during task execution.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-StopCode-PERCEPTIBLE_ERROR = 2--><!--Device-StopCode-PERCEPTIBLE_ERROR = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -66,9 +66,9 @@ Timeout during task execution.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-StopCode-TIMEOUT_ERROR = 3--><!--Device-StopCode-TIMEOUT_ERROR = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -82,9 +82,8 @@ Anomalies during task execution.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-StopCode-EXECUTE_ERROR = 4--><!--Device-StopCode-EXECUTE_ERROR = 4-End-->
-
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
-

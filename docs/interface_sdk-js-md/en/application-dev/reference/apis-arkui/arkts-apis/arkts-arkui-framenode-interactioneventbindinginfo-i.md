@@ -4,7 +4,7 @@ Describes the binding state of interaction events on components. When querying r
 
 **Since:** 19
 
-<!--Device-unnamed-declare interface InteractionEventBindingInfo--><!--Device-unnamed-declare interface InteractionEventBindingInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,11 +21,11 @@ Whether the event is bound declaratively.
 
 **Since:** 19
 
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-InteractionEventBindingInfo-baseEventRegistered: boolean--><!--Device-InteractionEventBindingInfo-baseEventRegistered: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -41,11 +41,11 @@ Whether the component has built-in events (events that are defined internally by
 
 **Since:** 19
 
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-InteractionEventBindingInfo-builtInEventRegistered: boolean--><!--Device-InteractionEventBindingInfo-builtInEventRegistered: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,11 +61,11 @@ Whether the event is bound through node event registration ([registerNodeEvent](
 
 **Since:** 19
 
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-InteractionEventBindingInfo-nativeEventRegistered: boolean--><!--Device-InteractionEventBindingInfo-nativeEventRegistered: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -75,17 +75,16 @@ Whether the event is bound through node event registration ([registerNodeEvent](
 nodeEventRegistered: boolean
 ```
 
-Whether the event is bound through a custom component node. For the implementation example, see Basic Event Example.The value **true** means that the event is bound through a custom component node, and **false** means the opposite.
+Whether the event is bound through a custom component node. For the implementation example, see [Basic Event Example](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#basic-event-example).The value **true** means that the event is bound through a custom component node, and **false** means the opposite.
 
 **Type:** boolean
 
 **Since:** 19
 
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-InteractionEventBindingInfo-nodeEventRegistered: boolean--><!--Device-InteractionEventBindingInfo-nodeEventRegistered: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

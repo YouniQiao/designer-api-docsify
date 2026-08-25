@@ -1,10 +1,10 @@
 # Location
 
-Provides the geographical location definitions for media resources.
+提供媒体资源的地理位置定义。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-unnamed-interface Location--><!--Device-unnamed-interface Location-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -20,13 +20,13 @@ import { media } from '@kit.MediaKit';
 latitude: double
 ```
 
-Latitude.
+纬度。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-Location-latitude: double--><!--Device-Location-latitude: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -36,13 +36,12 @@ Latitude.
 longitude: double
 ```
 
-Longitude.
+经度。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-Location-longitude: double--><!--Device-Location-longitude: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
-

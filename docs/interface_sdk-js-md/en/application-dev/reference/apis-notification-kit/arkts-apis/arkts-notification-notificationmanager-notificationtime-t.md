@@ -6,11 +6,10 @@ export type NotificationTime = _NotificationTime
 
 Describes the notification timing information.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-notificationManager-export type NotificationTime = _NotificationTime--><!--Device-notificationManager-export type NotificationTime = _NotificationTime-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **Property type:** _NotificationTime
-

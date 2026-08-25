@@ -1,4 +1,4 @@
-# @ohos.enterprise.dateTimeManager
+# @ohos.enterprise.dateTimeManager(系统时间管理)
 
 本模块提供系统时间管理能力。
 
@@ -9,7 +9,7 @@
 
 **起始版本：** 9
 
-<!--Device-unnamed-declare namespace dateTimeManager--><!--Device-unnamed-declare namespace dateTimeManager-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -26,13 +26,12 @@ import { dateTimeManager } from '@kit.MDMKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [disallowModifyDateTime](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md) | 禁止设备修改系统时间。使用callback异步回调。 |
-| [disallowModifyDateTime](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md) | 禁止设备修改系统时间。使用Promise异步回调。 |
-| [isModifyDateTimeDisallowed](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md) | 查询设备是否允许修改系统时间。使用callback异步回调。 |
-| [isModifyDateTimeDisallowed](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md) | 查询设备是否允许修改系统时间。使用Promise异步回调。 |
-| [setDateTime](arkts-mdm-datetimemanager-setdatetime-f-sys.md) | 设置系统时间。使用callback异步回调。 |
-| [setDateTime](arkts-mdm-datetimemanager-setdatetime-f-sys.md) | 设置系统时间。使用Promise异步回调。 |
+| 名称 |
+| --- |
+| [disallowModifyDateTime(系统时间管理)](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md) |
+| [disallowModifyDateTime(系统时间管理)](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md) |
+| [isModifyDateTimeDisallowed(系统时间管理)](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md) |
+| [isModifyDateTimeDisallowed(系统时间管理)](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md) |
+| [setDateTime(系统时间管理)](arkts-mdm-datetimemanager-setdatetime-f-sys.md) |
+| [setDateTime(系统时间管理)](arkts-mdm-datetimemanager-setdatetime-f-sys.md) |
 <!--DelEnd-->
-

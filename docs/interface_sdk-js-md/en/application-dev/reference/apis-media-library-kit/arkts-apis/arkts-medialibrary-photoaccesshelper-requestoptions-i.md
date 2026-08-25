@@ -2,9 +2,9 @@
 
 Represents request options.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-photoAccessHelper-interface RequestOptions--><!--Device-photoAccessHelper-interface RequestOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -24,9 +24,9 @@ HDR video transcoding policy, which can be **FAST_ORIGINAL_FORMAT_MODE** (mainta
 
 **Type:** [CompatibleMode](arkts-medialibrary-photoaccesshelper-compatiblemode-e.md)
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-RequestOptions-compatibleMode?: CompatibleMode--><!--Device-RequestOptions-compatibleMode?: CompatibleMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -40,9 +40,9 @@ Delivery mode of the requested asset. The value can be **FAST_MODE**, **HIGH_QUA
 
 **Type:** [DeliveryMode](arkts-medialibrary-photoaccesshelper-deliverymode-e.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-RequestOptions-deliveryMode: DeliveryMode--><!--Device-RequestOptions-deliveryMode: DeliveryMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -56,9 +56,8 @@ Callback used to return the HDR-to-SDR conversion progress.
 
 **Type:** [MediaAssetProgressHandler](arkts-medialibrary-photoaccesshelper-mediaassetprogresshandler-i.md)
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-RequestOptions-mediaAssetProgressHandler?: MediaAssetProgressHandler--><!--Device-RequestOptions-mediaAssetProgressHandler?: MediaAssetProgressHandler-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

@@ -1,8 +1,6 @@
 # Boolean
 
-**Since:** -1
-
-<!--Device-unnamed-interface Boolean--><!--Device-unnamed-interface Boolean-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,11 +15,9 @@ valueOf(): boolean
 
 Returns the primitive value of the specified object.
 
-**Since:** -1
-
-<!--Device-Boolean-valueOf(): boolean--><!--Device-Boolean-valueOf(): boolean-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

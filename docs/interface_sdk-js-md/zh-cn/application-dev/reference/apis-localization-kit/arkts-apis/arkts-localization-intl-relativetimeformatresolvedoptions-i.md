@@ -4,11 +4,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 20
 
 **替代接口：** [Intl.ResolvedRelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#return_value)
-
-<!--Device-intl-export interface RelativeTimeFormatResolvedOptions--><!--Device-intl-export interface RelativeTimeFormatResolvedOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -30,13 +30,13 @@ locale: string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 20
 
 **替代接口：** [Intl.ResolvedRelativeTimeFormatOptions.locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#locale)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RelativeTimeFormatResolvedOptions-locale: string--><!--Device-RelativeTimeFormatResolvedOptions-locale: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -52,13 +52,13 @@ numberingSystem: string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 20
 
 **替代接口：** [Intl.ResolvedRelativeTimeFormatOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#numberingsystem)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RelativeTimeFormatResolvedOptions-numberingSystem: string--><!--Device-RelativeTimeFormatResolvedOptions-numberingSystem: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -68,19 +68,19 @@ numberingSystem: string
 numeric: string
 ```
 
-输出消息的格式，表示格式化结果中是否使用数字表示相对日期或时间。取值包括："always", "auto"。不同取值的显示效果请参考附录表23。
+输出消息的格式，表示格式化结果中是否使用数字表示相对日期或时间。取值包括："always", "auto"。不同取值的显示效果请参考[附录表23](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 8
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 20
 
 **替代接口：** [Intl.ResolvedRelativeTimeFormatOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#numeric)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RelativeTimeFormatResolvedOptions-numeric: string--><!--Device-RelativeTimeFormatResolvedOptions-numeric: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -90,11 +90,13 @@ numeric: string
 style: string
 ```
 
-国际化消息的长度，取值包括："long", "short", "narrow"。不同取值的显示效果请参考附录表24。
+国际化消息的长度，取值包括："long", "short", "narrow"。不同取值的显示效果请参考[附录表24](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 8
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 20
 
@@ -102,7 +104,4 @@ style: string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-RelativeTimeFormatResolvedOptions-style: string--><!--Device-RelativeTimeFormatResolvedOptions-style: string-End-->
-
 **系统能力：** SystemCapability.Global.I18n
-

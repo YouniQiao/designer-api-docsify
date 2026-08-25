@@ -4,7 +4,7 @@ Defines the parameter type for **globalConnect**.
 
 **Since:** 18
 
-<!--Device-unnamed-export class ConnectOptions--><!--Device-unnamed-export class ConnectOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -13,6 +13,24 @@ Defines the parameter type for **globalConnect**.
 ```TypeScript
 import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from '@kit.ArkUI';
 ```
+
+## defaultCreator
+
+```TypeScript
+defaultCreator?: StorageDefaultCreator<T>
+```
+
+Default constructor. You are advised to pass this parameter. If **globalConnect** is connected to the key for the first time, an error is reported if this parameter is not passed in.
+
+**Since:** 18
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## areaMode
 
@@ -26,31 +44,11 @@ Encryption level, ranging from EL1 to EL5 (corresponding to the value from 0 to 
 
 **Since:** 18
 
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ConnectOptions-areaMode?: contextConstant.AreaMode--><!--Device-ConnectOptions-areaMode?: contextConstant.AreaMode-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## defaultCreator
-
-```TypeScript
-defaultCreator?: StorageDefaultCreator<T>
-```
-
-Default constructor. You are advised to pass this parameter. If **globalConnect** is connected to the key for the first time, an error is reported if this parameter is not passed in.
-
-**Type:** [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)&lt;T&gt;
-
-**Since:** 18
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ConnectOptions-defaultCreator?: StorageDefaultCreator<T>--><!--Device-ConnectOptions-defaultCreator?: StorageDefaultCreator<T>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,11 +64,11 @@ Input key. If no value is passed in, the type name is used as the key.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ConnectOptions-key?: string--><!--Device-ConnectOptions-key?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,11 +84,10 @@ Specified type.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ConnectOptions-type: TypeConstructorWithArgs<T>--><!--Device-ConnectOptions-type: TypeConstructorWithArgs<T>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

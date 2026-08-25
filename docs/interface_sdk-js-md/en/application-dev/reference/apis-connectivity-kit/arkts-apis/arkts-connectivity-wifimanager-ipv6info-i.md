@@ -2,9 +2,9 @@
 
 Wi-Fi IPv6 information.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-wifiManager-interface Ipv6Info--><!--Device-wifiManager-interface Ipv6Info-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -24,9 +24,9 @@ The gateway of the Wi-Fi connection
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Ipv6Info-gateway: string--><!--Device-Ipv6Info-gateway: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -40,9 +40,9 @@ The global IPv6 address of the Wi-Fi connection
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Ipv6Info-globalIpv6Address: string--><!--Device-Ipv6Info-globalIpv6Address: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -56,9 +56,9 @@ The link IPv6 address of the Wi-Fi connection
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Ipv6Info-linkIpv6Address: string--><!--Device-Ipv6Info-linkIpv6Address: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -72,9 +72,9 @@ The network mask of the Wi-Fi connection
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Ipv6Info-netmask: string--><!--Device-Ipv6Info-netmask: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -88,9 +88,9 @@ The primary DNS server IPV6 address of the Wi-Fi connection
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Ipv6Info-primaryDNS: string--><!--Device-Ipv6Info-primaryDNS: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -104,9 +104,9 @@ The rand Global IPv6 address of the Wi-Fi connection
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Ipv6Info-randomGlobalIpv6Address: string--><!--Device-Ipv6Info-randomGlobalIpv6Address: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -120,9 +120,9 @@ The rand unique IPv6 address of the Wi-Fi connection
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Ipv6Info-randomUniqueIpv6Address?: string--><!--Device-Ipv6Info-randomUniqueIpv6Address?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -136,9 +136,9 @@ The secondary DNS server IPV6 address of the Wi-Fi connection
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Ipv6Info-secondDNS: string--><!--Device-Ipv6Info-secondDNS: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -152,9 +152,8 @@ The unique IPv6 address of the Wi-Fi connection
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Ipv6Info-uniqueIpv6Address?: string--><!--Device-Ipv6Info-uniqueIpv6Address?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
-

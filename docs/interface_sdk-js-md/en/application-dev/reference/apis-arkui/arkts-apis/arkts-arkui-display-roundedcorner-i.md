@@ -4,7 +4,7 @@ Describes a single rounded corner on the screen.
 
 **Since:** 23
 
-<!--Device-display-interface RoundedCorner--><!--Device-display-interface RoundedCorner-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -26,11 +26,11 @@ Coordinates of the center point of the rounded corner.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-RoundedCorner-readonly position: Position--><!--Device-RoundedCorner-readonly position: Position-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -42,15 +42,15 @@ readonly radius: int
 
 The radius of round corner, measured in px.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-RoundedCorner-readonly radius: int--><!--Device-RoundedCorner-readonly radius: int-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -66,11 +66,10 @@ Type of the rounded corner.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-RoundedCorner-readonly type: CornerType--><!--Device-RoundedCorner-readonly type: CornerType-End-->
-
 **System capability:** SystemCapability.Window.SessionManager
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 9
 
-<!--Device-unnamed-declare enum ContextMenuSourceType--><!--Device-unnamed-declare enum ContextMenuSourceType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -18,9 +18,9 @@ None = 0
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-ContextMenuSourceType-None = 0--><!--Device-ContextMenuSourceType-None = 0-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -34,9 +34,9 @@ Mouse = 1
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-ContextMenuSourceType-Mouse = 1--><!--Device-ContextMenuSourceType-Mouse = 1-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -50,9 +50,8 @@ LongPress = 2
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ContextMenuSourceType-LongPress = 2--><!--Device-ContextMenuSourceType-LongPress = 2-End-->
-
 **系统能力：** SystemCapability.Web.Webview.Core
-

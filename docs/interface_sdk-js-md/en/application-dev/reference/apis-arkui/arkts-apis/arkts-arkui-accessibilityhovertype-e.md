@@ -4,7 +4,7 @@ Type of accessibility hover event.@enum {number}
 
 **Since:** 12
 
-<!--Device-unnamed-declare enum AccessibilityHoverType--><!--Device-unnamed-declare enum AccessibilityHoverType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Hover enter type.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AccessibilityHoverType-HOVER_ENTER = 0--><!--Device-AccessibilityHoverType-HOVER_ENTER = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Hover move type.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AccessibilityHoverType-HOVER_MOVE = 1--><!--Device-AccessibilityHoverType-HOVER_MOVE = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ Hover exit type.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AccessibilityHoverType-HOVER_EXIT = 2--><!--Device-AccessibilityHoverType-HOVER_EXIT = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,10 @@ Hover cancel type.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AccessibilityHoverType-HOVER_CANCEL = 3--><!--Device-AccessibilityHoverType-HOVER_CANCEL = 3-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

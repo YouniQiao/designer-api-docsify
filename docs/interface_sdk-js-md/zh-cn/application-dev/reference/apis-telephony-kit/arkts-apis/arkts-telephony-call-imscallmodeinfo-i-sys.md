@@ -2,9 +2,9 @@
 
 视频通话模式信息。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-call-export interface ImsCallModeInfo--><!--Device-call-export interface ImsCallModeInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -24,11 +24,11 @@ callId: int
 
 呼叫Id。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ImsCallModeInfo-callId: int--><!--Device-ImsCallModeInfo-callId: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -44,9 +44,9 @@ imsCallMode: ImsCallMode
 
 **类型：** [ImsCallMode](arkts-telephony-call-imscallmode-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ImsCallModeInfo-imsCallMode: ImsCallMode--><!--Device-ImsCallModeInfo-imsCallMode: ImsCallMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -62,9 +62,9 @@ isRequestInfo: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ImsCallModeInfo-isRequestInfo: boolean--><!--Device-ImsCallModeInfo-isRequestInfo: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -80,11 +80,10 @@ result: VideoRequestResultType
 
 **类型：** [VideoRequestResultType](arkts-telephony-call-videorequestresulttype-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ImsCallModeInfo-result: VideoRequestResultType--><!--Device-ImsCallModeInfo-result: VideoRequestResultType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
-

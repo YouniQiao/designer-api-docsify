@@ -2,9 +2,9 @@
 
 提供USB Key证书凭据属性信息。
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-certificateManager-export interface UkeyInfo--><!--Device-certificateManager-export interface UkeyInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -24,9 +24,8 @@ certPurpose?: CertificatePurpose
 
 **类型：** [CertificatePurpose](arkts-devicecertificate-certificatemanager-certificatepurpose-e.md)
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-UkeyInfo-certPurpose?: CertificatePurpose--><!--Device-UkeyInfo-certPurpose?: CertificatePurpose-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
-

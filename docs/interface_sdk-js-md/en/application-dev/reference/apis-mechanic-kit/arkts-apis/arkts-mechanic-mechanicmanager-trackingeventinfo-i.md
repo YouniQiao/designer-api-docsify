@@ -2,9 +2,9 @@
 
 Tracking event callback info.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-mechanicManager-export interface TrackingEventInfo--><!--Device-mechanicManager-export interface TrackingEventInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -24,9 +24,8 @@ Tracking event.
 
 **Type:** [TrackingEvent](arkts-mechanic-mechanicmanager-trackingevent-e.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-TrackingEventInfo-event: TrackingEvent--><!--Device-TrackingEventInfo-event: TrackingEvent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
-

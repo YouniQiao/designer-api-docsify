@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-screen-interface OrientationOptions--><!--Device-screen-interface OrientationOptions-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -30,9 +30,9 @@ ignoreRotationLock?: boolean
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-OrientationOptions-ignoreRotationLock?: boolean--><!--Device-OrientationOptions-ignoreRotationLock?: boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -52,11 +52,10 @@ needAnimation?: boolean
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-OrientationOptions-needAnimation?: boolean--><!--Device-OrientationOptions-needAnimation?: boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
 **系统接口：** 此接口为系统接口。
-

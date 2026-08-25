@@ -8,9 +8,7 @@
 
 **起始版本：** 18
 
-**装饰器类型：** @Component
-
-<!--Device-unnamed-export declare struct ArcButton--><!--Device-unnamed-export declare struct ArcButton-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -19,6 +17,20 @@
 ```TypeScript
 import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition, ArcButtonStyleMode, ArcButtonStatus } from '@kit.ArkUI';
 ```
+
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 ## options
 
@@ -32,11 +44,8 @@ readonly options: ArcButtonOptions
 
 **起始版本：** 18
 
-**装饰器类型：** @Require
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ArcButton-@Require    readonly options: ArcButtonOptions--><!--Device-ArcButton-@Require    readonly options: ArcButtonOptions-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
-

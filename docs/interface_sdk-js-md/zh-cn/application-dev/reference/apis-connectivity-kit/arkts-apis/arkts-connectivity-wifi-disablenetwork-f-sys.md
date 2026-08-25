@@ -16,13 +16,13 @@ function disableNetwork(netId: number): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** disableDeviceConfig
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
-
-<!--Device-wifi-function disableNetwork(netId: number): boolean--><!--Device-wifi-function disableNetwork(netId: number): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -30,15 +30,15 @@ function disableNetwork(netId: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| netId | number | 是 | 网络配置ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| netId | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 指定网络已去使能返回{ |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -52,4 +52,3 @@ try {
     console.error("failed:" + JSON.stringify(error));
 }
 ```
-

@@ -20,9 +20,9 @@ function setSync(key: string, value: string): void
 > - set：异步方法，使用callback或Promise异步返回结果，适用于需要异步处理的场景。&gt;
 > 开发者应根据具体场景选择合适的方法。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-systemParameterEnhance-function setSync(key: string, value: string): void--><!--Device-systemParameterEnhance-function setSync(key: string, value: string): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -30,19 +30,19 @@ function setSync(key: string, value: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | string | 是 | 待设置的系统参数key。最大长度128字节，只允许字母数字加"."，"-"，"@"，":"或"_"，不允许".."。 |
-| value | string | 是 | 待设置的系统参数值。最大长度96字节（包括结束符）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | string | 是 |
+| value | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.incorrect parameter types; 3.parameter verification failed. |
-| [14700102](../errorcode-system-parameterV9.md#14700102-系统参数值无效) | Invalid system parameter value. |
-| [14700103](../errorcode-device-info.md#14700103-操作因权限被拒绝) | The operation on the system permission is denied. |
-| [14700104](../errorcode-system-parameterV9.md#14700104-系统内部错误包括内存不足死锁等) | System internal error such as out memory or deadlock. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [14700102](../errorcode-system-parameterV9.md#14700102-系统参数值无效) |
+| [14700103](../errorcode-device-info.md#14700103-操作因权限被拒绝) |
+| [14700104](../errorcode-system-parameterV9.md#14700104-系统内部错误包括内存不足死锁等) |
 
 **示例**
 
@@ -56,4 +56,3 @@ try {
   console.error(`Failed to set system parameter. Code: ${err.code}, message: ${err.message}`);
 }
 ```
-

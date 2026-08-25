@@ -4,7 +4,7 @@ Provides the information contained in the callback when the screen pixel density
 
 **Since:** 12
 
-<!--Device-uiObserver-export class DensityInfo--><!--Device-uiObserver-export class DensityInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,15 +22,15 @@ context: UIContext
 
 Context corresponding to the page when the screen pixel density changes.
 
-**Type:** [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md)
+**Type:** [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 
 **Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DensityInfo-context: UIContext--><!--Device-DensityInfo-context: UIContext-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,11 +46,10 @@ Screen pixel density after the change.Value range: [0, +∞)
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-DensityInfo-density: number--><!--Device-DensityInfo-density: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

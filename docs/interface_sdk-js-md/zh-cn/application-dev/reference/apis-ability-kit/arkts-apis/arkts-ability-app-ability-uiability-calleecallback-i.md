@@ -4,7 +4,7 @@
 
 **起始版本：** 9
 
-<!--Device-unnamed-export interface CalleeCallback--><!--Device-unnamed-export interface CalleeCallback-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -14,7 +14,7 @@
 import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (indata: rpc.MessageSequence): rpc.Parcelable
@@ -24,21 +24,20 @@ import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteS
 
 **起始版本：** 9
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-CalleeCallback-(indata: rpc.MessageSequence): rpc.Parcelable--><!--Device-CalleeCallback-(indata: rpc.MessageSequence): rpc.Parcelable-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| indata | rpc.MessageSequence | 是 | 发送需传递的数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| indata | rpc.MessageSequence | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| rpc.Parcelable | 返回的数据对象。 |
-
+| 类型 |
+| --- |
+| rpc.Parcelable |

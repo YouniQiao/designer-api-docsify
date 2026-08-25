@@ -2,9 +2,9 @@
 
 Enumerates the rendering pipeline types.@enum { int }
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-unnamed-export enum RenderingPipelineType--><!--Device-unnamed-export enum RenderingPipelineType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -16,9 +16,9 @@ FORWARD_LIGHTWEIGHT = 0
 
 Lightweight forward rendering pipeline that directly renders to the back buffer. It supports per-pixel effects (for example, tone mapping), but not complex effects (for example, bloom), in shaders.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-RenderingPipelineType-FORWARD_LIGHTWEIGHT = 0--><!--Device-RenderingPipelineType-FORWARD_LIGHTWEIGHT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -30,9 +30,8 @@ FORWARD = 1
 
 High-quality forward rendering pipeline designed for complex visual effects (for example, bloom).
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-RenderingPipelineType-FORWARD = 1--><!--Device-RenderingPipelineType-FORWARD = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

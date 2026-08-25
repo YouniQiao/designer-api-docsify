@@ -4,11 +4,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)
-
-<!--Device-wifiext-export enum PowerModel--><!--Device-wifiext-export enum PowerModel-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
 
@@ -22,11 +22,11 @@ SLEEPING = 0
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)
-
-<!--Device-PowerModel-SLEEPING = 0--><!--Device-PowerModel-SLEEPING = 0-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
 
@@ -40,11 +40,11 @@ GENERAL = 1
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)
-
-<!--Device-PowerModel-GENERAL = 1--><!--Device-PowerModel-GENERAL = 1-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
 
@@ -58,11 +58,10 @@ THROUGH_WALL = 2
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)
 
-<!--Device-PowerModel-THROUGH_WALL = 2--><!--Device-PowerModel-THROUGH_WALL = 2-End-->
-
 **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
-

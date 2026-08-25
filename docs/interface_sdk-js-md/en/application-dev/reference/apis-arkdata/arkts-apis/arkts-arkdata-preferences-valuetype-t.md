@@ -1,30 +1,27 @@
 # ValueType
 
 ```TypeScript
-type ValueType = long | double | string | boolean | Array<long> | Array<double> | Array<string> | Array<boolean>
-    | Uint8Array | RecordData | bigint
+type ValueType = number | string | boolean | Array<number> | Array<string> | Array<boolean> | Uint8Array | object | bigint
 ```
 
-Indicates possible value types@FaAndStageModel
+Enumerates the value types.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-preferences-type ValueType = long | double | string | boolean | Array<long> | Array<double> | Array<string> | Array<boolean>    | Uint8Array | RecordData | bigint--><!--Device-preferences-type ValueType = long | double | string | boolean | Array<long> | Array<double> | Array<string> | Array<boolean>    | Uint8Array | RecordData | bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-**System capability:** 
-- API version 23 and later: SystemCapability.DistributedDataManager.Preferences.Core
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-| Type | Description |
-| --- | --- |
-| long | The value is a 64-bit integer. |
-| double | The value is a 64-bit floating-point number. |
-| string | The value is a string. |
-| boolean | The value is true or false. |
-| Array&lt;long&gt; | The value is an array of 64-bit integers. |
-| Array&lt;double&gt; | The value is an array of 64-bit floating-point numbers. |
-| Array&lt;string&gt; | The value is an array of strings. |
-| Array&lt;boolean&gt; | The value is an array of booleans. |
-| Uint8Array | The value is an array of 8-bit unsigned integers. |
-| RecordData | The value is a nested record structure. |
-| bigint | The value is an arbitrary-precision integer. |
+**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
+| string |
+| boolean |
+| Array & lt;number & gt; |
+| Array & lt;string & gt; |
+| Array & lt;boolean & gt; |
+| Uint8Array |
+| object |
+| bigint |

@@ -9,7 +9,7 @@ Offset of the overlay from the upper left corner. By default, the overlay is in 
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface OverlayOffset--><!--Device-unnamed-declare interface OverlayOffset-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,11 @@ Horizontal offset.Unit: vp.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-OverlayOffset-x?: number--><!--Device-OverlayOffset-x?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,11 +50,10 @@ Vertical offset.Unit: vp.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-OverlayOffset-y?: number--><!--Device-OverlayOffset-y?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

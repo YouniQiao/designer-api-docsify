@@ -1,10 +1,10 @@
 # ControllerHandler
 
-ControllerHandler is a helper class provided by ArkWeb for handling the allocation of controllers for newly created Web components. When a web page requests to create a new window through methods such as `window.open`, and the Web component has enabled the [multiWindowAccess](arkts-arkweb-web-attribute.md#multiwindowaccess) capability, the system provides the ControllerHandler object to the app through the [onWindowNew](arkts-arkweb-web-attribute.md#onwindownew) event. Developers need to call its [setWebController](#setwebcontroller) method to set a valid [WebviewController](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md) object for the new window, associating the new window with the Web component actually created on the page. The web kernel blocks the render process while waiting for the setWebController call. If the app decides not to create a new window, it must call `setWebController(null)` to notify the web kernel; otherwise, the render process will remain blocked. Typical usage scenarios include opening a new web window in a custom dialog box, a new page, or a split screen, where the app needs to explicitly manage the URL display and security isolation of the new window.
+ControllerHandler is a helper class provided by ArkWeb for handling the allocation of controllers for newly created Web components. When a web page requests to create a new window through methods such as `window.open`, and the Web component has enabled the [multiWindowAccess](arkts-arkweb-web-attribute.md#multiwindowaccess) capability, the system provides the ControllerHandler object to the app through the [onWindowNew](arkts-arkweb-web-attribute.md#onwindownew) event. Developers need to call its [setWebController](#setwebcontroller) method to set a valid [WebviewController](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md) object for the new window, associating the new window with the Web component actually created on the page. The web kernel blocks the render process while waiting for the setWebController call. If the app decides not to create a new window, it must call `setWebController(null)` to notify the web kernel; otherwise, the render process will remain blocked. Typical usage scenarios include opening a new web window in a custom dialog box, a new page, or a split screen, where the app needs to explicitly manage the URL display and security isolation of the new window.
 
 **Since:** 9
 
-<!--Device-unnamed-declare class ControllerHandler--><!--Device-unnamed-declare class ControllerHandler-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -23,9 +23,9 @@ Constructs a **ControllerHandler** API.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ControllerHandler-constructor()--><!--Device-ControllerHandler-constructor()-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -39,15 +39,14 @@ Sets the WebviewController object for the newly created Web component. If the ap
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ControllerHandler-setWebController(controller: WebviewController): void--><!--Device-ControllerHandler-setWebController(controller: WebviewController): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| controller | [WebviewController](arkts-arkweb-webviewcontroller-t.md) | Yes | WebviewController** object of the **Web** component. If opening a new window is not needed, set it to **null**. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| controller | [WebviewController](arkts-arkweb-webviewcontroller-t.md) | Yes |

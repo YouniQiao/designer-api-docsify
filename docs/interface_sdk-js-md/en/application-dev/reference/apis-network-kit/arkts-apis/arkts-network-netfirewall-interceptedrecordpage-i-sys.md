@@ -4,7 +4,7 @@ Intercepted record page information.
 
 **Since:** 14
 
-<!--Device-netFirewall-interface InterceptedRecordPage--><!--Device-netFirewall-interface InterceptedRecordPage-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -28,7 +28,7 @@ Page data: all records displayed on this page.
 
 **Since:** 14
 
-<!--Device-InterceptedRecordPage-data: Array<InterceptedRecord>--><!--Device-InterceptedRecordPage-data: Array<InterceptedRecord>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -37,16 +37,16 @@ Page data: all records displayed on this page.
 ## page
 
 ```TypeScript
-page: int
+page: number
 ```
 
 Current page number: indicates the page number of this query.
 
-**Type:** int
+**Type:** number
 
 **Since:** 14
 
-<!--Device-InterceptedRecordPage-page: int--><!--Device-InterceptedRecordPage-page: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -55,16 +55,16 @@ Current page number: indicates the page number of this query.
 ## pageSize
 
 ```TypeScript
-pageSize: int
+pageSize: number
 ```
 
 Page size: maximum number of records on a page for this query.
 
-**Type:** int
+**Type:** number
 
 **Since:** 14
 
-<!--Device-InterceptedRecordPage-pageSize: int--><!--Device-InterceptedRecordPage-pageSize: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -73,18 +73,17 @@ Page size: maximum number of records on a page for this query.
 ## totalPage
 
 ```TypeScript
-totalPage: int
+totalPage: number
 ```
 
 Total pages: total number of pages.
 
-**Type:** int
+**Type:** number
 
 **Since:** 14
 
-<!--Device-InterceptedRecordPage-totalPage: int--><!--Device-InterceptedRecordPage-totalPage: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **System API:** This is a system API.
-

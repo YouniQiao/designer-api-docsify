@@ -16,31 +16,31 @@ function getPowerSaveMode(pid: int): Promise<PowerSaveMode>
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.BACKGROUND_MANAGER_POWER_SAVE_MODE
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-backgroundProcessManager-function getPowerSaveMode(pid: int): Promise<PowerSaveMode>--><!--Device-backgroundProcessManager-function getPowerSaveMode(pid: int): Promise<PowerSaveMode>-End-->
+**需要权限：** ohos.permission.BACKGROUND_MANAGER_POWER_SAVE_MODE
 
 **系统能力：** SystemCapability.Resourceschedule.BackgroundProcessManager
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pid | int | 是 | 进程号。<br>取值范围：大于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pid | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[PowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-powersavemode-e.md)&gt; | Promise对象。返回进程能效模式状态。 |
+| 类型 |
+| --- |
+| Promise&lt;[PowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-powersavemode-e.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [31800002](../errorcode-backgroundProcessManager.md#31800002-参数错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [31800002](../errorcode-backgroundProcessManager.md#31800002-参数错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 **示例**
 
@@ -59,4 +59,3 @@ try {
   console.error(`getPowerSaveMode failed, errCode: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
-

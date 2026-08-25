@@ -11,11 +11,11 @@ The **SystemParameter** module provides system services with easy access to key-
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [systemParameterEnhance](arkts-systemparameterenhance.md)
-
-<!--Device-unnamed-declare namespace systemParameter--><!--Device-unnamed-declare namespace systemParameter-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -32,14 +32,13 @@ import { systemParameter } from '@kit.BasicServicesKit';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [get](arkts-basicservices-systemparameter-get-f-sys.md) | Obtains a value of the specified key. This API uses an asynchronous callback to return the result. |
-| [get](arkts-basicservices-systemparameter-get-f-sys.md) | Obtains a value of the specified key. This API uses an asynchronous callback to return the result. |
-| [get](arkts-basicservices-systemparameter-get-f-sys.md) | Obtains a value of the specified key. This API uses a promise to return the result. |
-| [getSync](arkts-basicservices-systemparameter-getsync-f-sys.md) | Obtains a value of the specified key. |
-| [set](arkts-basicservices-systemparameter-set-f-sys.md) | Sets a value for the specified key. This API uses an asynchronous callback to return the result. |
-| [set](arkts-basicservices-systemparameter-set-f-sys.md) | Sets a value for the specified key. This API uses a promise to return the result. |
-| [setSync](arkts-basicservices-systemparameter-setsync-f-sys.md) | Sets a value for the specified key. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [get](arkts-basicservices-systemparameter-get-f-sys.md) |
+| [get](arkts-basicservices-systemparameter-get-f-sys.md) |
+| [get](arkts-basicservices-systemparameter-get-f-sys.md) |
+| [getSync](arkts-basicservices-systemparameter-getsync-f-sys.md) |
+| [set](arkts-basicservices-systemparameter-set-f-sys.md) |
+| [set](arkts-basicservices-systemparameter-set-f-sys.md) |
+| [setSync](arkts-basicservices-systemparameter-setsync-f-sys.md) |
 <!--DelEnd-->
-

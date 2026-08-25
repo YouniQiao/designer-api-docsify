@@ -4,7 +4,7 @@ Defines the scan filters
 
 **Since:** 26.0.0
 
-<!--Device-scan-interface ScanFilters--><!--Device-scan-interface ScanFilters-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -26,9 +26,9 @@ Device address. By default, this field is not used if it is not set. The address
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ScanFilters-address?: string--><!--Device-ScanFilters-address?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -44,9 +44,9 @@ Device name. The value contains 0 to 30 characters. By default, this field is no
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ScanFilters-deviceName?: string--><!--Device-ScanFilters-deviceName?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -62,9 +62,9 @@ Manufacturer data. By default, this field is not used if it is not set. **manufa
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ScanFilters-manufacturerData?: ArrayBuffer--><!--Device-ScanFilters-manufacturerData?: ArrayBuffer-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -80,45 +80,44 @@ Manufacturer data mask. By default, this field is not used if it is not set. Thi
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ScanFilters-manufacturerDataMask?: ArrayBuffer--><!--Device-ScanFilters-manufacturerDataMask?: ArrayBuffer-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## manufacturerId
 
 ```TypeScript
-manufacturerId?: int
+manufacturerId?: number
 ```
 
 Manufacturer ID. The value range is [1, 65535]. By default, this field is not used if it is not set.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ScanFilters-manufacturerId?: int--><!--Device-ScanFilters-manufacturerId?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## rssi
 
 ```TypeScript
-rssi?: int
+rssi?: number
 ```
 
 RSSI threshold, in dBm. The value range is this threshold will be filtered out. You are advised to set the threshold within the range of default, the signal strength is not filtered if this parameter is not set. The value should be an integer.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ScanFilters-rssi?: int--><!--Device-ScanFilters-rssi?: int-End-->
-
 **System capability:** SystemCapability.Communication.NearLink.Base
-

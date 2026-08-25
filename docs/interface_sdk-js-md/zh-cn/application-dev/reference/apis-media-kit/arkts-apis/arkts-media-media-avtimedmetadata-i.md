@@ -1,10 +1,10 @@
 # AVTimedMetaData
 
-Interface for defining time base metadata
+描述基于时间的元数据的信息。
 
 **起始版本：** 26.0.0
 
-<!--Device-media-interface AVTimedMetaData--><!--Device-media-interface AVTimedMetaData-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -20,15 +20,15 @@ import { media } from '@kit.MediaKit';
 classify?: string
 ```
 
-The classification label of the time base metadata.
+基于时间的元数据的分类标签。
 
 **类型：** string
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVTimedMetaData-classify?: string--><!--Device-AVTimedMetaData-classify?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -38,15 +38,15 @@ The classification label of the time base metadata.
 contents: Record<string, object>
 ```
 
-Key-value pair set corresponding to time primitive information
+基于时间的元数据对应的键值对集合。
 
 **类型：** Record&lt;string, object&gt;
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVTimedMetaData-contents: Record<string, object>--><!--Device-AVTimedMetaData-contents: Record<string, object>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -56,15 +56,15 @@ Key-value pair set corresponding to time primitive information
 duration: int
 ```
 
-Duration of the time primitive information The value should be an integer. <br>Unit:milliseconds.
+基于时间的元数据的持续时长。 取值限定为整数。 <br>单位：毫秒。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVTimedMetaData-duration: int--><!--Device-AVTimedMetaData-duration: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -74,15 +74,15 @@ Duration of the time primitive information The value should be an integer. <br>U
 id?: string
 ```
 
-Defines the unique token of the time base metadata, The tag must be unique in other time metadata of the video source.
+基于时间的元数据的唯一标记。 该标记在视频源的数据信息中须保持唯一。
 
 **类型：** string
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVTimedMetaData-id?: string--><!--Device-AVTimedMetaData-id?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -92,15 +92,14 @@ Defines the unique token of the time base metadata, The tag must be unique in ot
 start: int
 ```
 
-Defines the offset value of the time primitive information relative to the start time of the entire media. The value should be an integer. <br>Unit:milliseconds.
+基于时间的元数据相对整个媒体起始时间的偏移值。 取值限定为整数。 <br>单位：毫秒。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AVTimedMetaData-start: int--><!--Device-AVTimedMetaData-start: int-End-->
-
 **系统能力：** SystemCapability.Multimedia.Media.Core
-

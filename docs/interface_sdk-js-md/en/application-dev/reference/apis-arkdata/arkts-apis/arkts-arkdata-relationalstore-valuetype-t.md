@@ -6,22 +6,21 @@ type ValueType = null | long | double | string | boolean | Uint8Array | Asset | 
 
 Indicates possible value types
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-relationalStore-type ValueType = null | long | double | string | boolean | Uint8Array | Asset | Assets | Float32Array | bigint--><!--Device-relationalStore-type ValueType = null | long | double | string | boolean | Uint8Array | Asset | Assets | Float32Array | bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-| Type | Description |
-| --- | --- |
-| null | The value is a null |
-| long | The value is a long |
-| double | The value is a double |
-| string | The value is a string |
-| boolean | The value is a boolean |
-| Uint8Array | The value is an array of the Uint8 |
-| Asset | The value is an asset [since 10] |
-| Assets | The value is an array of the asset [since 10] |
-| Float32Array | The value is an array of the float32 [since 12] |
-| bigint | The value is an integer of any length [since 12] |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| null |
+| long |
+| double |
+| string |
+| boolean |
+| Uint8Array |
+| [Asset](arkts-arkdata-commontype-asset-i.md) |
+| [Assets](arkts-arkdata-sendablerelationalstore-assets-t.md) |
+| Float32Array |
+| bigint |

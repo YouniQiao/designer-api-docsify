@@ -7,11 +7,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [InterruptEvent](arkts-audio-audio-interruptevent-i.md)
-
-<!--Device-audio-interface InterruptAction--><!--Device-audio-interface InterruptAction-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -33,11 +33,11 @@ actionType: InterruptActionType
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** eventType
-
-<!--Device-InterruptAction-actionType: InterruptActionType--><!--Device-InterruptAction-actionType: InterruptActionType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -53,11 +53,11 @@ activated?: boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [hintType](arkts-audio-audio-interruptevent-i.md#hinttype)
-
-<!--Device-InterruptAction-activated?: boolean--><!--Device-InterruptAction-activated?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -73,11 +73,11 @@ hint?: InterruptHint
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [hintType](arkts-audio-audio-interruptevent-i.md#hinttype)
-
-<!--Device-InterruptAction-hint?: InterruptHint--><!--Device-InterruptAction-hint?: InterruptHint-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -93,11 +93,10 @@ type?: InterruptType
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** eventType
 
-<!--Device-InterruptAction-type?: InterruptType--><!--Device-InterruptAction-type?: InterruptType-End-->
-
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
-

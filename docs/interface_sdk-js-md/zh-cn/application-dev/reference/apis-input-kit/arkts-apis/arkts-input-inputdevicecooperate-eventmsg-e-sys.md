@@ -4,11 +4,11 @@
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 23
 
 **替代接口：** [CooperateState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md)
-
-<!--Device-inputDeviceCooperate-enum EventMsg--><!--Device-inputDeviceCooperate-enum EventMsg-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 
@@ -24,11 +24,11 @@ MSG_COOPERATE_INFO_START = 200
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 23
 
 **替代接口：** [COOPERATE_ACTIVATE](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_activate)
-
-<!--Device-EventMsg-MSG_COOPERATE_INFO_START = 200--><!--Device-EventMsg-MSG_COOPERATE_INFO_START = 200-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 
@@ -44,11 +44,11 @@ MSG_COOPERATE_INFO_SUCCESS = 201
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 23
 
 **替代接口：** [COOPERATE_ACTIVATE_SUCCESS](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_activate_success)
-
-<!--Device-EventMsg-MSG_COOPERATE_INFO_SUCCESS = 201--><!--Device-EventMsg-MSG_COOPERATE_INFO_SUCCESS = 201-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 
@@ -64,11 +64,11 @@ MSG_COOPERATE_INFO_FAIL = 202
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 23
 
 **替代接口：** [COOPERATE_ACTIVATE_FAILURE](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_activate_failure)
-
-<!--Device-EventMsg-MSG_COOPERATE_INFO_FAIL = 202--><!--Device-EventMsg-MSG_COOPERATE_INFO_FAIL = 202-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 
@@ -84,11 +84,11 @@ MSG_COOPERATE_STATE_ON = 500
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 23
 
 **替代接口：** [COOPERATE_PREPARE](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_prepare)
-
-<!--Device-EventMsg-MSG_COOPERATE_STATE_ON = 500--><!--Device-EventMsg-MSG_COOPERATE_STATE_ON = 500-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 
@@ -104,13 +104,12 @@ MSG_COOPERATE_STATE_OFF = 501
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 23
 
 **替代接口：** [COOPERATE_UNPREPARE](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_unprepare)
 
-<!--Device-EventMsg-MSG_COOPERATE_STATE_OFF = 501--><!--Device-EventMsg-MSG_COOPERATE_STATE_OFF = 501-End-->
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 
 **系统接口：** 此接口为系统接口。
-

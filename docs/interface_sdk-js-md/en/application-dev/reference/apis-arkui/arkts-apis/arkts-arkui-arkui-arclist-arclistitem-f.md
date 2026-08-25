@@ -9,7 +9,6 @@ import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@k
 ## ArcListItem
 
 ```TypeScript
-@ComponentBuilder
 export declare function ArcListItem(
     content_?: CustomBuilder,
 ): ArcListItemAttribute
@@ -19,31 +18,26 @@ Defines ArcListItem Component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-**Decorator:** @ComponentBuilder
-
-<!--Device-unnamed-@ComponentBuilderexport declare function ArcListItem(    content_?: CustomBuilder,): ArcListItemAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function ArcListItem(    content_?: CustomBuilder,): ArcListItemAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| content_ | CustomBuilder | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |
 
 
 ## ArcListItem
 
 ```TypeScript
-@Builder
 export declare function ArcListItem(
     style_: CustomBuilderT<ArcListItemAttribute>,
     content_?: CustomBuilder
@@ -54,26 +48,21 @@ Defines ArcListItem Component.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.1.0.
-
-**Decorator:** @Builder
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-@Builderexport declare function ArcListItem(    style_: CustomBuilderT<ArcListItemAttribute>,    content_?: CustomBuilder): ArcListItemAttribute--><!--Device-unnamed-@Builderexport declare function ArcListItem(    style_: CustomBuilderT<ArcListItemAttribute>,    content_?: CustomBuilder): ArcListItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md)&gt; | Yes | The style to create an ArcListItem. |
-| content_ | CustomBuilder | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| style_ | CustomBuilderT&lt;[ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md)&gt; | Yes |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) | The attribute of the ArcListItem. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |

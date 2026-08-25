@@ -25,17 +25,17 @@ Subscribes to the state changes of flash alerts mode. This API uses an asynchron
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-accessibility-function onFlashReminderStateChange(callback: Callback<boolean>): void--><!--Device-accessibility-function onFlashReminderStateChange(callback: Callback<boolean>): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. It notifies the state when the flashing reminder mode enabled state changes. The value **true** indicates that the flashing reminder mode is enabled, and **false** indicates that the flashing reminder mode is disabled. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |
 
 **Examples**
 
@@ -60,4 +60,3 @@ struct Index {
   }
 }
 ```
-

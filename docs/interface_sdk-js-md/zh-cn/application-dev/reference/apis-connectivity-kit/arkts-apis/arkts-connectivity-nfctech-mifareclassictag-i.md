@@ -4,52 +4,58 @@ MifareClassicTag提供对MIFARE Classic属性和I/O操作的访问，继承自[T
 
 **继承/实现关系：** MifareClassicTag extends TagSession
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-export interface MifareClassicTag--><!--Device-unnamed-export interface MifareClassicTag-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## authenticateSector
 
+ArkTS-Dyn:
+```TypeScript
+authenticateSector(sectorIndex: number, key: number[], isKeyA: boolean): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean): Promise<void>
 ```
 
 使用密钥对扇区进行身份验证，只有身份验证成功的扇区可以进行操作。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MifareClassicTag-authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean): Promise<void>--><!--Device-MifareClassicTag-authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean): Promise<void>-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sectorIndex | int | 是 | 待验证的扇区索引，从0开始。 |
-| key | int[] | 是 | 用于扇区验证的密钥（6字节）。 |
-| isKeyA | boolean | 是 | isKeyA标志。true 表示KeyA，false 表示KeyB。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sectorIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| key | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | 是 |
+| isKeyA | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
@@ -115,39 +121,45 @@ function nfcTechDemo() {
 
 ## authenticateSector
 
+ArkTS-Dyn:
+```TypeScript
+authenticateSector(sectorIndex: number, key: number[], isKeyA: boolean, callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean, callback: AsyncCallback<void>): void
 ```
 
 使用密钥对扇区进行身份验证，只有身份验证成功的扇区可以进行操作。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MifareClassicTag-authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean, callback: AsyncCallback<void>): void-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sectorIndex | int | 是 | 待验证的扇区索引，从0开始。 |
-| key | int[] | 是 | 用于扇区验证的密钥（6字节）。 |
-| isKeyA | boolean | 是 | isKeyA标志。true 表示KeyA，false 表示KeyB。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当身份验证成功时，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sectorIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| key | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | 是 |
+| isKeyA | boolean | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The Tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
@@ -155,43 +167,49 @@ authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean, callback: Asyn
 
 ## decrementBlock
 
+ArkTS-Dyn:
+```TypeScript
+decrementBlock(blockIndex: number, value: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 decrementBlock(blockIndex: int, value: int): Promise<void>
 ```
 
 对指定块的内容，减少指定的数值，并将结果存储在内部传输缓冲器中。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MifareClassicTag-decrementBlock(blockIndex: int, value: int): Promise<void>--><!--Device-MifareClassicTag-decrementBlock(blockIndex: int, value: int): Promise<void>-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blockIndex | int | 是 | 要被运算的块索引，从0开始。 |
-| value | int | 是 | 要减少的数值，非负数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
@@ -258,38 +276,44 @@ function nfcTechDemo() {
 
 ## decrementBlock
 
+ArkTS-Dyn:
+```TypeScript
+decrementBlock(blockIndex: number, value: number, callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 decrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void
 ```
 
 对指定块的内容，减少指定的数值。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MifareClassicTag-decrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-decrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blockIndex | int | 是 | 要被运算的块索引，从0开始。 |
-| value | int | 是 | 要减少的数值，非负数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当对块减少指定数值成功时，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The Tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
@@ -297,37 +321,43 @@ decrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void
 
 ## getBlockCountInSector
 
+ArkTS-Dyn:
+```TypeScript
+getBlockCountInSector(sectorIndex: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getBlockCountInSector(sectorIndex: int): int
 ```
 
 获取指定扇区中的块数。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MifareClassicTag-getBlockCountInSector(sectorIndex: int): int--><!--Device-MifareClassicTag-getBlockCountInSector(sectorIndex: int): int-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sectorIndex | int | 是 | 扇区序号，从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sectorIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 该扇区内的块数量。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -348,37 +378,43 @@ try {
 
 ## getBlockIndex
 
+ArkTS-Dyn:
+```TypeScript
+getBlockIndex(sectorIndex: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getBlockIndex(sectorIndex: int): int
 ```
 
 获取特定扇区的第一个块的序号。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MifareClassicTag-getBlockIndex(sectorIndex: int): int--><!--Device-MifareClassicTag-getBlockIndex(sectorIndex: int): int-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sectorIndex | int | 是 | 扇区序号，从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sectorIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 该扇区内的第一个块的序号，从0开始。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -399,25 +435,31 @@ try {
 
 ## getSectorCount
 
+ArkTS-Dyn:
+```TypeScript
+getSectorCount(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getSectorCount(): int
 ```
 
 获取MIFARE Classic标签中的扇区数。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MifareClassicTag-getSectorCount(): int--><!--Device-MifareClassicTag-getSectorCount(): int-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 标签中的扇区数量。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -432,37 +474,43 @@ console.info("mifareClassic sectorCount: " + sectorCount);
 
 ## getSectorIndex
 
+ArkTS-Dyn:
+```TypeScript
+getSectorIndex(blockIndex: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getSectorIndex(blockIndex: int): int
 ```
 
 获取包含指定块号的扇区序号。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MifareClassicTag-getSectorIndex(blockIndex: int): int--><!--Device-MifareClassicTag-getSectorIndex(blockIndex: int): int-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blockIndex | int | 是 | 块序号，从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 扇区序号，从0开始。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -483,25 +531,31 @@ try {
 
 ## getTagSize
 
+ArkTS-Dyn:
+```TypeScript
+getTagSize(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getTagSize(): int
 ```
 
 获取标签的存储空间大小，具体请参见[MifareClassicSize](arkts-connectivity-tag-mifareclassicsize-e.md)。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MifareClassicTag-getTagSize(): int--><!--Device-MifareClassicTag-getTagSize(): int-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 标签的大小，单位为字节，请参见[MifareClassicSize]{ |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -522,19 +576,19 @@ getType(): tag.MifareClassicType
 
 获取MIFARE Classic标签的类型。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MifareClassicTag-getType(): tag.MifareClassicType--><!--Device-MifareClassicTag-getType(): tag.MifareClassicType-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| tag.MifareClassicType | MifareClassic标签的类型。 |
+| 类型 |
+| --- |
+| tag.MifareClassicType |
 
 **示例**
 
@@ -556,43 +610,49 @@ console.info("mifareUltralight getType: " + getType);
 
 ## incrementBlock
 
+ArkTS-Dyn:
+```TypeScript
+incrementBlock(blockIndex: number, value: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 incrementBlock(blockIndex: int, value: int): Promise<void>
 ```
 
 对指定块的内容，增加指定的数值，并将结果存储在内部传输缓冲器中。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MifareClassicTag-incrementBlock(blockIndex: int, value: int): Promise<void>--><!--Device-MifareClassicTag-incrementBlock(blockIndex: int, value: int): Promise<void>-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blockIndex | int | 是 | 要指定增加的块索引，从0开始。 |
-| value | int | 是 | 要指定增加的数据，非负数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
@@ -658,38 +718,44 @@ function nfcTechDemo() {
 
 ## incrementBlock
 
+ArkTS-Dyn:
+```TypeScript
+incrementBlock(blockIndex: number, value: number, callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 incrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void
 ```
 
 对指定块的内容，增加指定的数值，并将结果存储在内部传输缓冲器中。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MifareClassicTag-incrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-incrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blockIndex | int | 是 | 要被运算的块索引，从0开始。 |
-| value | int | 是 | 要增加的数值，非负数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当对块增加指定数值成功时，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The Tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
@@ -703,19 +769,19 @@ isEmulatedTag(): boolean
 
 检查标签是不是被模拟的。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MifareClassicTag-isEmulatedTag(): boolean--><!--Device-MifareClassicTag-isEmulatedTag(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 检查结果，true: 是；false：否。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -730,42 +796,48 @@ console.info("mifareClassic isEmulatedTag: " + isEmulatedTag);
 
 ## readSingleBlock
 
+ArkTS-Dyn:
+```TypeScript
+readSingleBlock(blockIndex: number): Promise<number[]>
+```
+
+ArkTS-Sta:
 ```TypeScript
 readSingleBlock(blockIndex: int): Promise<int[]>
 ```
 
 读取标签中一个块存储的内容，一个块大小为16字节。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MifareClassicTag-readSingleBlock(blockIndex: int): Promise<int[]>--><!--Device-MifareClassicTag-readSingleBlock(blockIndex: int): Promise<int[]>-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blockIndex | int | 是 | 要读取的块索引，从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int[]&gt; | Promise对象。返回读取的块数据。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;number[] & gt;<br>ArkTS-Sta：Promise & lt;int[] & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
@@ -829,37 +901,43 @@ function nfcTechDemo() {
 
 ## readSingleBlock
 
+ArkTS-Dyn:
+```TypeScript
+readSingleBlock(blockIndex: number, callback: AsyncCallback<number[]>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 readSingleBlock(blockIndex: int, callback: AsyncCallback<int[]>): void
 ```
 
 读取标签中一个块存储的内容，一个块大小为16字节。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MifareClassicTag-readSingleBlock(blockIndex: int, callback: AsyncCallback<int[]>): void--><!--Device-MifareClassicTag-readSingleBlock(blockIndex: int, callback: AsyncCallback<int[]>): void-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blockIndex | int | 是 | 要读取的块索引，从0开始。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | 是 | 以callback形式异步返回读取到的块数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The Tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
@@ -867,42 +945,48 @@ readSingleBlock(blockIndex: int, callback: AsyncCallback<int[]>): void
 
 ## restoreFromBlock
 
+ArkTS-Dyn:
+```TypeScript
+restoreFromBlock(blockIndex: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 restoreFromBlock(blockIndex: int): Promise<void>
 ```
 
 将指定块的值复制到临时寄存器。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MifareClassicTag-restoreFromBlock(blockIndex: int): Promise<void>--><!--Device-MifareClassicTag-restoreFromBlock(blockIndex: int): Promise<void>-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blockIndex | int | 是 | 被操作的块的索引，从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
@@ -966,37 +1050,43 @@ function nfcTechDemo() {
 
 ## restoreFromBlock
 
+ArkTS-Dyn:
+```TypeScript
+restoreFromBlock(blockIndex: number, callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 restoreFromBlock(blockIndex: int, callback: AsyncCallback<void>): void
 ```
 
 将指定块的值复制到临时寄存器。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MifareClassicTag-restoreFromBlock(blockIndex: int, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-restoreFromBlock(blockIndex: int, callback: AsyncCallback<void>): void-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blockIndex | int | 是 | 被操作的块的索引，从0开始。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当复制指定块内容到临时寄存器成功时，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The Tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
@@ -1004,42 +1094,48 @@ restoreFromBlock(blockIndex: int, callback: AsyncCallback<void>): void
 
 ## transferToBlock
 
+ArkTS-Dyn:
+```TypeScript
+transferToBlock(blockIndex: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 transferToBlock(blockIndex: int): Promise<void>
 ```
 
 将临时寄存器的值转移到指定的块。使用Promise异步异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MifareClassicTag-transferToBlock(blockIndex: int): Promise<void>--><!--Device-MifareClassicTag-transferToBlock(blockIndex: int): Promise<void>-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blockIndex | int | 是 | 被操作的块的索引，从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
@@ -1103,37 +1199,43 @@ function nfcTechDemo() {
 
 ## transferToBlock
 
+ArkTS-Dyn:
+```TypeScript
+transferToBlock(blockIndex: number, callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 transferToBlock(blockIndex: int, callback: AsyncCallback<void>): void
 ```
 
 将临时寄存器的值转移到指定的块。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MifareClassicTag-transferToBlock(blockIndex: int, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-transferToBlock(blockIndex: int, callback: AsyncCallback<void>): void-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blockIndex | int | 是 | 被操作的块的索引，从0开始。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当临时寄存器的值转移到指定块成功时，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The Tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
@@ -1141,43 +1243,49 @@ transferToBlock(blockIndex: int, callback: AsyncCallback<void>): void
 
 ## writeSingleBlock
 
+ArkTS-Dyn:
+```TypeScript
+writeSingleBlock(blockIndex: number, data: number[]): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeSingleBlock(blockIndex: int, data: int[]): Promise<void>
 ```
 
 向标签中一个块存储写入内容，一个块大小为16字节。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MifareClassicTag-writeSingleBlock(blockIndex: int, data: int[]): Promise<void>--><!--Device-MifareClassicTag-writeSingleBlock(blockIndex: int, data: int[]): Promise<void>-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blockIndex | int | 是 | 要写入的块索引，从0开始。 |
-| data | int[] | 是 | 要写入的数据，大小必须是16个字节。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| data | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
@@ -1245,40 +1353,45 @@ function nfcTechDemo() {
 
 ## writeSingleBlock
 
+ArkTS-Dyn:
+```TypeScript
+writeSingleBlock(blockIndex: number, data: number[], callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeSingleBlock(blockIndex: int, data: int[], callback: AsyncCallback<void>): void
 ```
 
 向标签中一个块存储写入内容，一个块大小为16字节。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MifareClassicTag-writeSingleBlock(blockIndex: int, data: int[], callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-writeSingleBlock(blockIndex: int, data: int[], callback: AsyncCallback<void>): void-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blockIndex | int | 是 | 要写入的块索引，从0开始。 |
-| data | int[] | 是 | 要写入的数据，大小必须是16个字节。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当向块存储写入内容成功时，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| data | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The Tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
 参见 [writeSingleBlock](#writesingleblock)
-

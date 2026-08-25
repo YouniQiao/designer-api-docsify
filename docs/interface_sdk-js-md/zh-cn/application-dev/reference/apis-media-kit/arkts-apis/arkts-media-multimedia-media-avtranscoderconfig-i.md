@@ -2,9 +2,9 @@
 
 Describes the video transcoding parameters.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-interface AVTranscoderConfig--><!--Device-unnamed-interface AVTranscoderConfig-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -22,13 +22,13 @@ audioBitrate?: int
 
 Bitrate of the output audio, in bit/s. The value range is [1-500000]. The default value is 48 kbit/s.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVTranscoderConfig-audioBitrate?: int--><!--Device-AVTranscoderConfig-audioBitrate?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -42,11 +42,11 @@ Encoding format of the output audio. Currently, only AAC is supported. The defau
 
 **类型：** [CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVTranscoderConfig-audioCodec?: CodecMimeType--><!--Device-AVTranscoderConfig-audioCodec?: CodecMimeType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -60,11 +60,11 @@ Indicates whether to enable B Frame Encoding for reduce file size.
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVTranscoderConfig-enableBFrame?: boolean--><!--Device-AVTranscoderConfig-enableBFrame?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -78,11 +78,11 @@ Container format of the output video file. Currently, only MP4 is supported.
 
 **类型：** [ContainerFormatType](arkts-media-multimedia-media-containerformattype-e.md)
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVTranscoderConfig-fileFormat: ContainerFormatType--><!--Device-AVTranscoderConfig-fileFormat: ContainerFormatType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -94,13 +94,13 @@ videoBitrate?: int
 
 Bitrate of the output video, in bit/s. The default bitrate depends on the resolution of the output video. The default bitrate is 1 Mbit/s for the resolution in the range [240p, 480P], 2 Mbit/s for the range (480P,720P], 4 Mbit/s for the range (720P,1080P], and 8 Mbit/s for 1080p or higher.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVTranscoderConfig-videoBitrate?: int--><!--Device-AVTranscoderConfig-videoBitrate?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -114,11 +114,11 @@ Encoding format of the output video. Currently, only AVC and HEVC are supported.
 
 **类型：** [CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVTranscoderConfig-videoCodec?: CodecMimeType--><!--Device-AVTranscoderConfig-videoCodec?: CodecMimeType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -130,13 +130,13 @@ videoFrameHeight?: int
 
 Height of the output video frame, in px. The value range is [240 - 2160]. The default value is the height of the source video frame.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVTranscoderConfig-videoFrameHeight?: int--><!--Device-AVTranscoderConfig-videoFrameHeight?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -148,13 +148,12 @@ videoFrameWidth?: int
 
 Width of the output video frame, in px. The value range is [240 - 3840]. The default value is the width of the source video frame.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AVTranscoderConfig-videoFrameWidth?: int--><!--Device-AVTranscoderConfig-videoFrameWidth?: int-End-->
-
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
-

@@ -2,9 +2,9 @@
 
 Describes wakeup hap information.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-intelligentVoice-interface WakeupHapInfo--><!--Device-intelligentVoice-interface WakeupHapInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -26,9 +26,9 @@ Ability name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-WakeupHapInfo-abilityName: string--><!--Device-WakeupHapInfo-abilityName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -44,11 +44,10 @@ Bundle name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-WakeupHapInfo-bundleName: string--><!--Device-WakeupHapInfo-bundleName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
-

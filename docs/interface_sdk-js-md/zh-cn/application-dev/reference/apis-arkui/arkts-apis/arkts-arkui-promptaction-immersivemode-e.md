@@ -4,7 +4,7 @@
 
 **起始版本：** 15
 
-<!--Device-unnamed-export enum ImmersiveMode--><!--Device-unnamed-export enum ImmersiveMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ DEFAULT = 0
 
 **起始版本：** 15
 
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ImmersiveMode-DEFAULT = 0--><!--Device-ImmersiveMode-DEFAULT = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ EXTEND = 1
 
 **起始版本：** 15
 
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ImmersiveMode-EXTEND = 1--><!--Device-ImmersiveMode-EXTEND = 1-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

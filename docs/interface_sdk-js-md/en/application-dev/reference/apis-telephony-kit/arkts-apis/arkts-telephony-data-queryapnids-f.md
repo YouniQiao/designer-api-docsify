@@ -14,31 +14,31 @@ function queryApnIds(apnInfo: ApnInfo): Promise<Array<int>>
 
 Obtains the APN ID corresponding to the specified **ApnInfo**. This API returns the result asynchronously.
 
-**Since:** 23
+**Since:** 16
+
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_APN_SETTING
-
-<!--Device-data-function queryApnIds(apnInfo: ApnInfo): Promise<Array<int>>--><!--Device-data-function queryApnIds(apnInfo: ApnInfo): Promise<Array<int>>-End-->
 
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| apnInfo | [ApnInfo](arkts-telephony-data-apninfo-i.md) | Yes | APN to query. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| apnInfo | [ApnInfo](arkts-telephony-data-apninfo-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Promise & lt;Array & lt;number & gt; & gt;<br>ArkTS-Sta：Promise & lt;Array & lt;int & gt; & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 **Examples**
 
@@ -60,4 +60,3 @@ data.queryApnIds(apnInfo).then((apnIds: Array<number>) => {
     console.error(`queryApnIds failed. code: ${err.code}, message: ${err.message}`);
 });
 ```
-

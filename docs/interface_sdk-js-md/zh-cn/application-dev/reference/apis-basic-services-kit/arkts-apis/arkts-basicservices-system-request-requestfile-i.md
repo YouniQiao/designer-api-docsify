@@ -2,11 +2,11 @@
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 9
 
 **替代接口：** [File](arkts-basicservices-request-file-i.md)
-
-<!--Device-unnamed-export interface RequestFile--><!--Device-unnamed-export interface RequestFile-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -28,11 +28,11 @@ multipart 提交时，请求头中的文件名。
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 9
 
 **替代接口：** filename
-
-<!--Device-RequestFile-filename?: string--><!--Device-RequestFile-filename?: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -48,11 +48,11 @@ multipart 提交时，表单项目的名称，缺省为file。
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 9
 
 **替代接口：** name
-
-<!--Device-RequestFile-name?: string--><!--Device-RequestFile-name?: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -68,11 +68,11 @@ type?: string
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 9
 
 **替代接口：** contentType
-
-<!--Device-RequestFile-type?: string--><!--Device-RequestFile-type?: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -88,11 +88,10 @@ uri: string
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 9
 
 **替代接口：** path
 
-<!--Device-RequestFile-uri: string--><!--Device-RequestFile-uri: string-End-->
-
 **系统能力：** SystemCapability.MiscServices.Upload
-

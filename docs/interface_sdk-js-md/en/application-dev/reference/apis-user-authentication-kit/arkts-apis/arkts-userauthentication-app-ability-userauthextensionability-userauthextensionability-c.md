@@ -4,11 +4,11 @@ The class of user authentication extension ability.@extends UIExtensionAbility
 
 **Inheritance/Implementation:** UserAuthExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export default class UserAuthExtensionAbility--><!--Device-unnamed-export default class UserAuthExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -19,4 +19,3 @@ The class of user authentication extension ability.@extends UIExtensionAbility
 ```TypeScript
 import { UserAuthExtensionAbility } from '@kit.UserAuthenticationKit';
 ```
-

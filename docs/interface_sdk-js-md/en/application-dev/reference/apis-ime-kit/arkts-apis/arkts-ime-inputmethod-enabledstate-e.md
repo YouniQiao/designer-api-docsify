@@ -2,9 +2,9 @@
 
 Indicates whether the input method is enabled.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-inputMethod-export enum EnabledState--><!--Device-inputMethod-export enum EnabledState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -16,9 +16,9 @@ DISABLED = 0
 
 Disabled.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-EnabledState-DISABLED = 0--><!--Device-EnabledState-DISABLED = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -30,9 +30,9 @@ BASIC_MODE
 
 Basic mode.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-EnabledState-BASIC_MODE--><!--Device-EnabledState-BASIC_MODE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -44,9 +44,8 @@ FULL_EXPERIENCE_MODE
 
 Full experience mode.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-EnabledState-FULL_EXPERIENCE_MODE--><!--Device-EnabledState-FULL_EXPERIENCE_MODE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

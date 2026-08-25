@@ -4,9 +4,9 @@ BackupExtensionAbility的上下文环境，继承自ExtensionContext。 用于�
 
 **继承/实现关系：** BackupExtensionContext extends ExtensionContext
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-declare class BackupExtensionContext--><!--Device-unnamed-declare class BackupExtensionContext-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -28,9 +28,8 @@ readonly backupDir: string
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-BackupExtensionContext-readonly backupDir: string--><!--Device-BackupExtensionContext-readonly backupDir: string-End-->
-
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
-

@@ -4,9 +4,9 @@ Defines the options used in list().
 
 **Since:** 3
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface FileListOption--><!--Device-unnamed-export interface FileListOption-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -23,13 +23,11 @@ complete?: () => void
 
 Callback invoked when the API call is complete.
 
-**Type:** () =&gt; void
-
 **Since:** 3
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-FileListOption-complete?: () => void--><!--Device-FileListOption-complete?: () => void-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -41,15 +39,20 @@ fail?: (data: string, code: number) => void
 
 Callback invoked when the API call fails. **data** indicates the error information. **code** indicates the returned error code: **202**: invalid parameter **300**: I/O error **301**: file or directory not found
 
-**Type:** (data: string, code: number) =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
 
-<!--Device-FileListOption-fail?: (data: string, code: number) => void--><!--Device-FileListOption-fail?: (data: string, code: number) => void-End-->
-
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | string | Yes |
+| code | number | Yes |
 
 ## success
 
@@ -59,15 +62,19 @@ success?: (data: FileListResponse) => void
 
 Callback invoked when the API call is successful. **data** is [FileListResponse](arkts-corefile-system-file-filelistresponse-depr-i.md#filelistresponse).
 
-**Type:** (data: FileListResponse) =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
 
-<!--Device-FileListOption-success?: (data: FileListResponse) => void--><!--Device-FileListOption-success?: (data: FileListResponse) => void-End-->
-
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | [FileListResponse](arkts-corefile-system-file-filelistresponse-depr-i.md) | Yes |
 
 ## uri
 
@@ -83,9 +90,8 @@ URI of the directory. Restricted by the underlying file system of lite wearables
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 10
 
-<!--Device-FileListOption-uri: string--><!--Device-FileListOption-uri: string-End-->
-
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
-

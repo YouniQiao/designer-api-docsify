@@ -14,9 +14,9 @@ function getAVScreenCaptureConfigurableParameters(sessionId: int): Promise<strin
 
 get Configurations which user can changes from AVScreenCapture server
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-media-function getAVScreenCaptureConfigurableParameters(sessionId: int): Promise<string>--><!--Device-media-function getAVScreenCaptureConfigurableParameters(sessionId: int): Promise<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -24,22 +24,22 @@ get Configurations which user can changes from AVScreenCapture server
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sessionId | int | Yes | The AVScreenCapture server session ID. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sessionId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Returns a configurable configuration item string. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [5400109](../errorcode-media.md#5400109-session-id-does-not-exist) | Sessions not exist. Return by promise. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |  |
+| Error Code ID |
+| --- |
+| [5400109](../errorcode-media.md#5400109-session-id-does-not-exist) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -55,4 +55,3 @@ try {
   console.error(`getAVScreenCaptureConfigurableParameters error, error message: ${error.message}`);
 }
 ```
-

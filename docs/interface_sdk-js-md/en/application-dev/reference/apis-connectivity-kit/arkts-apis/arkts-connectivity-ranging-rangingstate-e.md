@@ -4,7 +4,7 @@ The enum of ranging state.
 
 **Since:** 26.0.0
 
-<!--Device-ranging-enum RangingState--><!--Device-ranging-enum RangingState-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -18,9 +18,9 @@ The current ranging state is stopped.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-RangingState-RANGING_STOPPED = 0--><!--Device-RangingState-RANGING_STOPPED = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -34,9 +34,8 @@ The current ranging state is started.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RangingState-RANGING_STARTED = 1--><!--Device-RangingState-RANGING_STARTED = 1-End-->
-
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
-

@@ -4,7 +4,7 @@ Serial port device information.
 
 **Since:** 26.0.0
 
-<!--Device-serial-interface SerialPortInfo--><!--Device-serial-interface SerialPortInfo-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.BusManager.Serial
 
@@ -26,9 +26,9 @@ Manufacturer name of the USB virtual serial port device.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-SerialPortInfo-manufacturer?: string--><!--Device-SerialPortInfo-manufacturer?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
 
@@ -44,9 +44,9 @@ Port name.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-SerialPortInfo-portName: string--><!--Device-SerialPortInfo-portName: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
 
@@ -58,13 +58,13 @@ productId?: int
 
 Product ID of the USB virtual serial port device.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-SerialPortInfo-productId?: int--><!--Device-SerialPortInfo-productId?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
 
@@ -76,13 +76,12 @@ vendorId?: int
 
 Vendor ID of the USB virtual serial port.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SerialPortInfo-vendorId?: int--><!--Device-SerialPortInfo-vendorId?: int-End-->
-
 **System capability:** SystemCapability.BusManager.Serial
-

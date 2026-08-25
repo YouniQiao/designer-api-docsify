@@ -4,7 +4,7 @@ Describes the style of the sidebar control button.
 
 **Since:** 8
 
-<!--Device-unnamed-declare interface ButtonStyle--><!--Device-unnamed-declare interface ButtonStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,9 +25,9 @@ Height of the sidebar control button.Default value:API version 9 and earlier ver
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ButtonStyle-height?: number--><!--Device-ButtonStyle-height?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,9 +43,9 @@ Icons of the sidebar control button.If the resource fails to be obtained or this
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ButtonStyle-icons?: ButtonIconOptions--><!--Device-ButtonStyle-icons?: ButtonIconOptions-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,9 +61,9 @@ Spacing between the sidebar control button and the left of the container.Default
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ButtonStyle-left?: number--><!--Device-ButtonStyle-left?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -79,9 +79,9 @@ Spacing between the sidebar control button and the top of the container.Default 
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ButtonStyle-top?: number--><!--Device-ButtonStyle-top?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -97,9 +97,8 @@ Width of the sidebar control button.Default value:API version 9 and earlier vers
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ButtonStyle-width?: number--><!--Device-ButtonStyle-width?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,9 +4,9 @@
 
 **起始版本：** 8
 
-**废弃版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-FaultLogger-interface FaultLogInfo--><!--Device-FaultLogger-interface FaultLogInfo-End-->
+**废弃版本：** 18
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -28,9 +28,9 @@ fullLog: string
 
 **起始版本：** 8
 
-**废弃版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-FaultLogInfo-fullLog: string--><!--Device-FaultLogInfo-fullLog: string-End-->
+**废弃版本：** 18
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -46,9 +46,9 @@ module: string
 
 **起始版本：** 8
 
-**废弃版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-FaultLogInfo-module: string--><!--Device-FaultLogInfo-module: string-End-->
+**废弃版本：** 18
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -64,9 +64,9 @@ pid: number
 
 **起始版本：** 8
 
-**废弃版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-FaultLogInfo-pid: number--><!--Device-FaultLogInfo-pid: number-End-->
+**废弃版本：** 18
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -82,9 +82,9 @@ reason: string
 
 **起始版本：** 8
 
-**废弃版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-FaultLogInfo-reason: string--><!--Device-FaultLogInfo-reason: string-End-->
+**废弃版本：** 18
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -100,9 +100,9 @@ summary: string
 
 **起始版本：** 8
 
-**废弃版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-FaultLogInfo-summary: string--><!--Device-FaultLogInfo-summary: string-End-->
+**废弃版本：** 18
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -118,9 +118,9 @@ timestamp: number
 
 **起始版本：** 8
 
-**废弃版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-FaultLogInfo-timestamp: number--><!--Device-FaultLogInfo-timestamp: number-End-->
+**废弃版本：** 18
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -136,9 +136,9 @@ type: FaultType
 
 **起始版本：** 8
 
-**废弃版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-FaultLogInfo-type: FaultType--><!--Device-FaultLogInfo-type: FaultType-End-->
+**废弃版本：** 18
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -154,9 +154,8 @@ uid: number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 18
 
-<!--Device-FaultLogInfo-uid: number--><!--Device-FaultLogInfo-uid: number-End-->
-
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
-

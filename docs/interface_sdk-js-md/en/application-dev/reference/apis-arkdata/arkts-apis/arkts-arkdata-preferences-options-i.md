@@ -2,9 +2,9 @@
 
 Represents the configuration of a **Preferences** instance.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-preferences-interface Options--><!--Device-preferences-interface Options-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -24,13 +24,13 @@ Application group ID. <!--RP1-->Currently, this parameter is not supported.<!--R
 
 **Type:** string \| null \| undefined
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Options-dataGroupId?: string | null | undefined--><!--Device-Options-dataGroupId?: string | null | undefined-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -44,11 +44,11 @@ Name of the **Preferences** instance. It must be longer than 0 bytes and less th
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Options-name: string--><!--Device-Options-name: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -62,11 +62,10 @@ Storage mode to be used by the **Preferences** instance. This parameter is optio
 
 **Type:** [StorageType](arkts-arkdata-preferences-storagetype-e.md) \| null \| undefined
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-Options-storageType?: StorageType | null | undefined--><!--Device-Options-storageType?: StorageType | null | undefined-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
-

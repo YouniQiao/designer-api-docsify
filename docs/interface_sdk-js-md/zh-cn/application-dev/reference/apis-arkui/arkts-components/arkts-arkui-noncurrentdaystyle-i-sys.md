@@ -4,9 +4,9 @@ Non current day style.
 
 **起始版本：** 7
 
-**废弃版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-unnamed-interface NonCurrentDayStyle--><!--Device-unnamed-interface NonCurrentDayStyle-End-->
+**废弃版本：** 20
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,11 +29,11 @@ Non-current month day color.
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-NonCurrentDayStyle-nonCurrentMonthDayColor?: ResourceColor--><!--Device-NonCurrentDayStyle-nonCurrentMonthDayColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,11 +51,11 @@ Lunar style of non-current month.
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-NonCurrentDayStyle-nonCurrentMonthLunarColor?: ResourceColor--><!--Device-NonCurrentDayStyle-nonCurrentMonthLunarColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,11 +73,11 @@ Non-Current Month Off Day Marker Color.
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-NonCurrentDayStyle-nonCurrentMonthOffDayMarkColor?: ResourceColor--><!--Device-NonCurrentDayStyle-nonCurrentMonthOffDayMarkColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -95,13 +95,12 @@ Non-Current Month Workday Marker Color.
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-NonCurrentDayStyle-nonCurrentMonthWorkDayMarkColor?: ResourceColor--><!--Device-NonCurrentDayStyle-nonCurrentMonthWorkDayMarkColor?: ResourceColor-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
-

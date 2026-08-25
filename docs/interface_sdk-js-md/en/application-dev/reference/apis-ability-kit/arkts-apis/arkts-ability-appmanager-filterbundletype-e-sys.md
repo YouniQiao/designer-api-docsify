@@ -2,9 +2,9 @@
 
 Enumerates the types of applications to filter. It can be used with [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md) to filter the application types you want to listen for.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-appManager-export enum FilterBundleType--><!--Device-appManager-export enum FilterBundleType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -18,9 +18,9 @@ APP = 1 << 0
 
 Application.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-FilterBundleType-APP = 1 << 0--><!--Device-FilterBundleType-APP = 1 << 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -34,11 +34,10 @@ ATOMIC_SERVICE = 1 << 1
 
 Atomic service.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-FilterBundleType-ATOMIC_SERVICE = 1 << 1--><!--Device-FilterBundleType-ATOMIC_SERVICE = 1 << 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
-

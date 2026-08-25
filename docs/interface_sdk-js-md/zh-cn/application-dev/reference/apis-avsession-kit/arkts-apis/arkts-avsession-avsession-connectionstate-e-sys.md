@@ -2,9 +2,9 @@
 
 连接状态枚举。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-avSession-enum ConnectionState--><!--Device-avSession-enum ConnectionState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -18,11 +18,11 @@ STATE_AUTHENTICATING = 10
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ConnectionState-STATE_AUTHENTICATING = 10--><!--Device-ConnectionState-STATE_AUTHENTICATING = 10-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -38,11 +38,11 @@ STATE_MIRROR_TO_STREAM = 11
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ConnectionState-STATE_MIRROR_TO_STREAM = 11--><!--Device-ConnectionState-STATE_MIRROR_TO_STREAM = 11-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -58,13 +58,12 @@ STATE_STREAM_TO_MIRROR = 12
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ConnectionState-STATE_STREAM_TO_MIRROR = 12--><!--Device-ConnectionState-STATE_STREAM_TO_MIRROR = 12-End-->
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **系统接口：** 此接口为系统接口。
-

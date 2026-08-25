@@ -1,4 +1,4 @@
-# @ohos.advertising
+# @ohos.advertising(Ads Service Framework)
 
 The advertising module provides APIs for requesting and displaying ads.
 
@@ -8,7 +8,7 @@ The advertising module provides APIs for requesting and displaying ads.
 
 **Since:** 11
 
-<!--Device-unnamed-declare namespace advertising--><!--Device-unnamed-declare namespace advertising-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -22,35 +22,34 @@ import { advertising } from '@kit.AdsKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [deleteWebAdInterface](arkts-ads-advertising-deletewebadinterface-f.md) | Deletes the ad JavaScript object injected through **registerWebAdInterface** (this API is only open to some pre-installed system applications). |
-| [getAdRequestBody](arkts-ads-advertising-getadrequestbody-f.md) | Obtains the body of an ad request. This API uses a promise to return the result (this API is only open to some pre-installed system applications). |
-| [parseAdResponse](arkts-ads-advertising-parseadresponse-f.md) | Parses and processes the body of an ad response (this API is only open to some pre-installed system applications). |
-| [registerWebAdInterface](arkts-ads-advertising-registerwebadinterface-f.md) | Injects an ad JavaScript object to the **Web** component (this API is only open to some pre-installed system applications). |
-| [registerWebAdInterface](arkts-ads-advertising-registerwebadinterface-f.md) | Injects an ad JavaScript object to the **Web** component (this API is only open to some pre-installed system applications). |
-| [showAd](arkts-ads-advertising-showad-f.md) | Shows a full-screen ad. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [deleteWebAdInterface(Ads Service Framework)](arkts-ads-advertising-deletewebadinterface-f.md) |
+| [getAdRequestBody(Ads Service Framework)](arkts-ads-advertising-getadrequestbody-f.md) |
+| [parseAdResponse(Ads Service Framework)](arkts-ads-advertising-parseadresponse-f.md) |
+| [registerWebAdInterface(Ads Service Framework)](arkts-ads-advertising-registerwebadinterface-f.md) |
+| [registerWebAdInterface(Ads Service Framework)](arkts-ads-advertising-registerwebadinterface-f.md) |
+| [showAd(Ads Service Framework)](arkts-ads-advertising-showad-f.md) |
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [AdLoader](arkts-ads-advertising-adloader-c.md) | Provides the APIs for loading ads. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AdLoader(Ads Service Framework)](arkts-ads-advertising-adloader-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md) | Defines the ad display parameters. |
-| [AdInteractionListener](arkts-ads-advertising-adinteractionlistener-i.md) | Defines the ad status change callback. |
-| [AdLoadListener](arkts-ads-advertising-adloadlistener-i.md) | Enumerates the callbacks used for the request for loading an ad. |
-| [AdOptions](arkts-ads-advertising-adoptions-i.md) | Defines the ad configuration. |
-| [AdRequestParams](arkts-ads-advertising-adrequestparams-i.md) | Defines the ad request parameters. |
-| [MultiSlotsAdLoadListener](arkts-ads-advertising-multislotsadloadlistener-i.md) | Enumerates the callbacks used for the request for loading multiple ads. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AdDisplayOptions(Ads Service Framework)](arkts-ads-advertising-addisplayoptions-i.md) |
+| [AdInteractionListener(Ads Service Framework)](arkts-ads-advertising-adinteractionlistener-i.md) |
+| [AdLoadListener(Ads Service Framework)](arkts-ads-advertising-adloadlistener-i.md) |
+| [AdOptions(Ads Service Framework)](arkts-ads-advertising-adoptions-i.md) |
+| [AdRequestParams(Ads Service Framework)](arkts-ads-advertising-adrequestparams-i.md) |
+| [MultiSlotsAdLoadListener(Ads Service Framework)](arkts-ads-advertising-multislotsadloadlistener-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [Advertisement](arkts-ads-advertising-advertisement-t.md) | Defines the requested ad content. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Advertisement(Ads Service Framework)](arkts-ads-advertising-advertisement-t.md) |

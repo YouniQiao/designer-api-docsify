@@ -4,7 +4,7 @@ Defines the class of System Env Key.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare class SystemEnvKey--><!--Device-unnamed-declare class SystemEnvKey-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,11 +23,11 @@ constructor.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-SystemEnvKey-protected constructor()--><!--Device-SystemEnvKey-protected constructor()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ The corresponding type of the system env key.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-SystemEnvKey-private type?: T--><!--Device-SystemEnvKey-private type?: T-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

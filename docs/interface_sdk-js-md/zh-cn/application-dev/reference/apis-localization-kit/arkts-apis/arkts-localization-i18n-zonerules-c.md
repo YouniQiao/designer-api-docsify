@@ -2,9 +2,9 @@
 
 提供查询时区跳变规则的能力。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-i18n-export class ZoneRules--><!--Device-i18n-export class ZoneRules-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -16,31 +16,37 @@ import { i18n } from '@kit.LocalizationKit';
 
 ## nextTransition
 
+ArkTS-Dyn:
+```TypeScript
+public nextTransition(date?: number): ZoneOffsetTransition
+```
+
+ArkTS-Sta:
 ```TypeScript
 public nextTransition(date?: double): ZoneOffsetTransition
 ```
 
 获取指定时间的下一个时区跳变对象。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-ZoneRules-public nextTransition(date?: double): ZoneOffsetTransition--><!--Device-ZoneRules-public nextTransition(date?: double): ZoneOffsetTransition-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| date | double | 否 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| date | ArkTS-Dyn: number<br>ArkTS-Sta：double | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ZoneOffsetTransition](../../apis-default/arkts-apis/arkts-i18n-zoneoffsettransition-c.md) | 时区跳变对象。 |
+| 类型 |
+| --- |
+| [ZoneOffsetTransition](arkts-localization-i18n-zoneoffsettransition-c.md) |
 
 **示例**
 
@@ -55,4 +61,3 @@ let date = new Date(2025, 4, 13);
 // 获取蒂华纳时区2025年5月13日后的下一个跳变对象
 let zoneOffsetTransition: i18n.ZoneOffsetTransition = zoneRules.nextTransition(date.getTime());
 ```
-

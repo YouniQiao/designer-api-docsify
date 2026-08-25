@@ -15,19 +15,19 @@ Obtains the **AbilityDelegatorArgs** object of the application.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getArguments](arkts-test-abilitydelegatorregistry-getarguments-f.md)
-
-<!--Device-abilityDelegatorRegistry-function getArguments(): AbilityDelegatorArgs--><!--Device-abilityDelegatorRegistry-function getArguments(): AbilityDelegatorArgs-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md) | [AbilityDelegatorArgs]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md) |
 
 **Examples**
 
@@ -39,4 +39,3 @@ console.info(`getArguments bundleName: ${args.bundleName}`);
 console.info(`getArguments testCaseNames: ${args.testCaseNames}`);
 console.info(`getArguments testRunnerClassName: ${args.testRunnerClassName}`);
 ```
-

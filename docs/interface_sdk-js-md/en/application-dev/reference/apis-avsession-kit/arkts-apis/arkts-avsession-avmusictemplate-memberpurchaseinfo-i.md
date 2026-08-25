@@ -4,7 +4,7 @@ The definition of member purchase information.@interface MemberPurchaseInfo
 
 **Since:** 23
 
-<!--Device-avMusicTemplate-interface MemberPurchaseInfo--><!--Device-avMusicTemplate-interface MemberPurchaseInfo-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -26,9 +26,9 @@ Member purchase diagram content.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-MemberPurchaseInfo-diagramContent: string--><!--Device-MemberPurchaseInfo-diagramContent: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -44,9 +44,9 @@ Member purchase diagram.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-MemberPurchaseInfo-diagramData?: image.PixelMap--><!--Device-MemberPurchaseInfo-diagramData?: image.PixelMap-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -62,9 +62,9 @@ The URL for the member purchase illustration must be in 21:9 aspect ratio.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-MemberPurchaseInfo-diagramUrl: string--><!--Device-MemberPurchaseInfo-diagramUrl: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -80,9 +80,9 @@ Unique id of the member purchase information.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-MemberPurchaseInfo-id: string--><!--Device-MemberPurchaseInfo-id: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -98,9 +98,8 @@ Member purchase type
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MemberPurchaseInfo-memberPurchaseType: MemberPurchaseType--><!--Device-MemberPurchaseInfo-memberPurchaseType: MemberPurchaseType-End-->
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-

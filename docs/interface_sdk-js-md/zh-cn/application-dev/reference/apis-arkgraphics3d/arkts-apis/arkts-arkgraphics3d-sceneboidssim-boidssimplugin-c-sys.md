@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-export declare class BoidsSimPlugin--><!--Device-unnamed-export declare class BoidsSimPlugin-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -20,9 +20,9 @@ static getDefaultBoidsSimWorld(scene: Scene): BoidsSimWorld | null
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-BoidsSimPlugin-static getDefaultBoidsSimWorld(scene: Scene): BoidsSimWorld | null--><!--Device-BoidsSimPlugin-static getDefaultBoidsSimWorld(scene: Scene): BoidsSimWorld | null-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -30,15 +30,15 @@ static getDefaultBoidsSimWorld(scene: Scene): BoidsSimWorld | null
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| scene | [Scene](arkts-arkgraphics3d-scene-c.md) | 是 | 目标场景的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| scene | [Scene](arkts-arkgraphics3d-scene-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BoidsSimWorld](arkts-arkgraphics3d-sceneboidssim-boidssimworld-c-sys.md) \| null | 返回群组模拟世界实例，若不存在则返回null。 |
+| 类型 |
+| --- |
+| [BoidsSimWorld](arkts-arkgraphics3d-sceneboidssim-boidssimworld-c-sys.md) \| null |
 
 **示例**
 
@@ -64,4 +64,3 @@ async function initBoidsSim(): Promise<BoidsSimWorld | null> {
   return world;
 }
 ```
-

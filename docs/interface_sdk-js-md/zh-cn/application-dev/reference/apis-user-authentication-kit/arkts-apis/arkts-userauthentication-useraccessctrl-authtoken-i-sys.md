@@ -2,9 +2,9 @@
 
 认证令牌数据。表示校验通过后返回解析后的AuthToken数据，包含认证的详细信息，如挑战值、认证信任等级、认证类型、用户ID等。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-userAccessCtrl-interface AuthToken--><!--Device-userAccessCtrl-interface AuthToken-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -26,9 +26,9 @@ authTrustLevel: userAuth.AuthTrustLevel
 
 **类型：** userAuth.AuthTrustLevel
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-AuthToken-authTrustLevel: userAuth.AuthTrustLevel--><!--Device-AuthToken-authTrustLevel: userAuth.AuthTrustLevel-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -44,9 +44,9 @@ authType: userAuth.UserAuthType
 
 **类型：** userAuth.UserAuthType
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-AuthToken-authType: userAuth.UserAuthType--><!--Device-AuthToken-authType: userAuth.UserAuthType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -62,9 +62,9 @@ challenge: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-AuthToken-challenge: Uint8Array--><!--Device-AuthToken-challenge: Uint8Array-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -80,9 +80,9 @@ credentialId?: bigint
 
 **类型：** bigint
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-AuthToken-credentialId?: bigint--><!--Device-AuthToken-credentialId?: bigint-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -98,9 +98,9 @@ enrolledId?: bigint
 
 **类型：** bigint
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-AuthToken-enrolledId?: bigint--><!--Device-AuthToken-enrolledId?: bigint-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -116,9 +116,9 @@ secureUid?: bigint
 
 **类型：** bigint
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-AuthToken-secureUid?: bigint--><!--Device-AuthToken-secureUid?: bigint-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -134,9 +134,9 @@ AuthToken签发后经过的时间。自AuthToken签发至当前的时间间隔�
 
 **类型：** bigint
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-AuthToken-timeInterval: bigint--><!--Device-AuthToken-timeInterval: bigint-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -152,9 +152,9 @@ tokenType: AuthTokenType
 
 **类型：** [AuthTokenType](arkts-userauthentication-useraccessctrl-authtokentype-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-AuthToken-tokenType: AuthTokenType--><!--Device-AuthToken-tokenType: AuthTokenType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -168,13 +168,12 @@ userId: int
 
 用户ID。表示完成认证的用户标识，取值为非负整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-AuthToken-userId: int--><!--Device-AuthToken-userId: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
-

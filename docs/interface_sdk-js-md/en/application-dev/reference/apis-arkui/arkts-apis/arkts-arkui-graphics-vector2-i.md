@@ -4,7 +4,7 @@ Defines a vector that contains the x and y coordinate values.
 
 **Since:** 11
 
-<!--Device-unnamed-interface Vector2--><!--Device-unnamed-interface Vector2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +20,11 @@ X coordinate value of the vector.Value range: (-∞, +∞).
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Vector2-x: number--><!--Device-Vector2-x: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,11 +40,10 @@ Y coordinate value of the vector.Value range: (-∞, +∞).
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-Vector2-y: number--><!--Device-Vector2-y: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

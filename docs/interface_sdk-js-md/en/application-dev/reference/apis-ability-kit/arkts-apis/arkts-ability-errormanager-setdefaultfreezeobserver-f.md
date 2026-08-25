@@ -16,29 +16,28 @@ Set the default freeze observer, This function will be executed right after the 
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-errorManager-function setDefaultFreezeObserver(defaultObserver?: FreezeObserver) : FreezeObserver--><!--Device-errorManager-function setDefaultFreezeObserver(defaultObserver?: FreezeObserver) : FreezeObserver-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| defaultObserver | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | No | The default freeze observer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| defaultObserver | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | Returns the original default freeze observer. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [16000205](../errorcode-ability.md#16000205-api-not-called-in-main-thread) | The API is not called on the main thread. |
-
+| Error Code ID |
+| --- |
+| [16000205](../errorcode-ability.md#16000205-api-not-called-in-main-thread) |

@@ -7,9 +7,9 @@ Represents the child class of [MacSpec](arkts-cryptoarchitecture-cryptoframework
 
 **Inheritance/Implementation:** CmacSpec extends [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-cryptoFramework-interface CmacSpec--><!--Device-cryptoFramework-interface CmacSpec-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Mac
 
@@ -29,11 +29,10 @@ Symmetric cipher algorithm used by CMAC.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-CmacSpec-cipherName: string--><!--Device-CmacSpec-cipherName: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Mac
-

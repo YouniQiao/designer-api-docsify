@@ -4,7 +4,7 @@ Defines the constraint change information.
 
 **Since:** 23
 
-<!--Device-osAccount-interface ConstraintChangeInfo--><!--Device-osAccount-interface ConstraintChangeInfo-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -22,13 +22,13 @@ import { osAccount } from '@kit.BasicServicesKit';
 constraint: string
 ```
 
-[Constraint](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) that has been changed.
+[Constraint](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) that has been changed.
 
 **Type:** string
 
 **Since:** 23
 
-<!--Device-ConstraintChangeInfo-constraint: string--><!--Device-ConstraintChangeInfo-constraint: string-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -46,9 +46,8 @@ Enabling state of the changed constraint. The default value is **false**.The val
 
 **Since:** 23
 
-<!--Device-ConstraintChangeInfo-isEnabled: boolean--><!--Device-ConstraintChangeInfo-isEnabled: boolean-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-

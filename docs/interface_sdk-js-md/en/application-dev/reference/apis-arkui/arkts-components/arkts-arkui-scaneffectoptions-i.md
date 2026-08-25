@@ -4,7 +4,7 @@ Defines the scan effect options.
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface ScanEffectOptions--><!--Device-unnamed-declare interface ScanEffectOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,11 +29,10 @@ Whether to enable the scan effect. Only the progress indicator of the [linear, r
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ScanEffectOptions-enableScanEffect?: boolean--><!--Device-ScanEffectOptions-enableScanEffect?: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

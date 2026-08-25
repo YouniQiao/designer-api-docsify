@@ -10,24 +10,41 @@ import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@k
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [ArcList](arkts-arkui-arkui-arclist-arclist-f.md) | 创建弧形列表实例，传入弧形列表配置项参数。 |
-| [ArcList](arkts-arkui-arkui-arclist-arclist-f.md) | 定义ArcList组件。 |
-| [ArcListItem](arkts-arkui-arkui-arclist-arclistitem-f.md) | 创建弧形列表子组件。 |
-| [ArcListItem](arkts-arkui-arkui-arclist-arclistitem-f.md) | 定义ArcListItem组件。 |
+| 名称 |
+| --- |
+| [ArcList](arkts-arkui-arkui-arclist-arclist-f.md) |
+| [ArcList](arkts-arkui-arkui-arclist-arclist-f.md) |
+| [ArcListItem](arkts-arkui-arkui-arclist-arclistitem-f.md) |
+| [ArcListItem](arkts-arkui-arkui-arclist-arclistitem-f.md) |
+
+### 类
+
+| 名称 |
+| --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) | 除支持通用属性外，还支持以下属性： |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) | 除支持通用属性外，还支持以下属性： |
-| [ArkListOptions](arkts-arkui-arkui-arclist-arklistoptions-i.md) | 包含创建ArcList组件的基础参数。 |
+| 名称 |
+| --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |
+| [ArcListInterface](arkts-arkui-arkui-arclist-arclistinterface-i.md) |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) |
+| [ArcListItemInterface](arkts-arkui-arkui-arclist-arclistiteminterface-i.md) |
+| [ArkListOptions](arkts-arkui-arkui-arclist-arklistoptions-i.md) |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-| [ArcScrollIndexHandler](arkts-arkui-arcscrollindexhandler-t.md) | 有子组件划入或划出ArcList显示区域时触发的回调。 |
+| 名称 |
+| --- |
+| [ArcScrollIndexHandler](arkts-arkui-arcscrollindexhandler-t.md) |
 
+### 常量
+
+| 名称 |
+| --- |
+| [ArcList](arkts-arkui-arkui-arclist-con.md#arclist) |
+| [ArcListInstance](arkts-arkui-arkui-arclist-con.md#arclistinstance) |
+| [ArcListItem](arkts-arkui-arkui-arclist-con.md#arclistitem) |
+| [ArcListItemInstance](arkts-arkui-arkui-arclist-con.md#arclistiteminstance) |

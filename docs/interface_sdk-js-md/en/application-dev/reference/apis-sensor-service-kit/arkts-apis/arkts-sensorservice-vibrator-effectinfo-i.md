@@ -2,9 +2,9 @@
 
 Defines the preset effect.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-vibrator-interface EffectInfo--><!--Device-vibrator-interface EffectInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -24,9 +24,8 @@ Whether the preset effect is supported. The value **true** indicates that the pr
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-EffectInfo-isEffectSupported: boolean--><!--Device-EffectInfo-isEffectSupported: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
-

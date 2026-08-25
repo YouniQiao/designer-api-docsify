@@ -25,21 +25,21 @@ function getState(): RouterState
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 18
 
 **替代接口：** [getState](arkts-arkui-arkui-uicontext-router-c.md#getstate)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-router-function getState(): RouterState--><!--Device-router-function getState(): RouterState-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RouterState | 栈顶页面的状态信息，包含页面索引、名称、路径和参数。 |
+| 类型 |
+| --- |
+| [RouterState](arkts-arkui-router-routerstate-i.md) |
 
 **示例**
 
@@ -49,4 +49,3 @@ console.info('current index = ' + page.index);
 console.info('current name = ' + page.name);
 console.info('current path = ' + page.path);
 ```
-

@@ -4,7 +4,7 @@ LocalSocket连接。在调用LocalSocket的方法前，需要先通过 [socket.c
 
 **起始版本：** 11
 
-<!--Device-socket-export interface LocalSocket--><!--Device-socket-export interface LocalSocket-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -28,30 +28,30 @@ bind(address: LocalAddress): Promise<void>
 
 **起始版本：** 11
 
-<!--Device-LocalSocket-bind(address: LocalAddress): Promise<void>--><!--Device-LocalSocket-bind(address: LocalAddress): Promise<void>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| address | [LocalAddress](arkts-network-socket-localaddress-i.md) | 是 | 本端地址信息，参考[LocalAddress](arkts-network-socket-localaddress-i.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| address | [LocalAddress](arkts-network-socket-localaddress-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2301013](../errorcode-net-socket.md#2301013-权限不足) | Insufficient permissions. |
-| 2301022 | Invalid argument. |
-| 2301098 | Address already in use. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2301013](../errorcode-net-socket.md#2301013-权限不足) |
+| 2301022 |
+| 2301098 |
 
 **示例**
 
@@ -186,21 +186,21 @@ close(): Promise<void>
 
 **起始版本：** 11
 
-<!--Device-LocalSocket-close(): Promise<void>--><!--Device-LocalSocket-close(): Promise<void>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [2301009](../errorcode-net-socket.md#2301009-错误文件描述符) | Bad file descriptor. |
+| 错误码ID |
+| --- |
+| [2301009](../errorcode-net-socket.md#2301009-错误文件描述符) |
 
 **示例**
 
@@ -518,31 +518,31 @@ connect(options: LocalConnectOptions): Promise<void>
 
 **起始版本：** 11
 
-<!--Device-LocalSocket-connect(options: LocalConnectOptions): Promise<void>--><!--Device-LocalSocket-connect(options: LocalConnectOptions): Promise<void>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [LocalConnectOptions](arkts-network-socket-localconnectoptions-i.md) | 是 | LocalSocket连接的参数，参考 [LocalConnectOptions](arkts-network-socket-localconnectoptions-i.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [LocalConnectOptions](arkts-network-socket-localconnectoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 以Promise形式返回LocalSocket连接服务端的结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2301013](../errorcode-net-socket.md#2301013-权限不足) | Insufficient permissions. |
-| 2301022 | Invalid argument. |
-| 2301111 | Connection refused. |
-| 2301099 | Cannot assign requested address. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2301013](../errorcode-net-socket.md#2301013-权限不足) |
+| 2301022 |
+| 2301111 |
+| 2301099 |
 
 **示例**
 
@@ -1000,21 +1000,21 @@ getExtraOptions(): Promise<ExtraOptionsBase>
 
 **起始版本：** 11
 
-<!--Device-LocalSocket-getExtraOptions(): Promise<ExtraOptionsBase>--><!--Device-LocalSocket-getExtraOptions(): Promise<ExtraOptionsBase>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md)&gt; | 以Promise形式返回设置LocalSocket套接字的属性。 |
+| 类型 |
+| --- |
+| Promise&lt;[ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [2301009](../errorcode-net-socket.md#2301009-错误文件描述符) | Bad file descriptor. |
+| 错误码ID |
+| --- |
+| [2301009](../errorcode-net-socket.md#2301009-错误文件描述符) |
 
 **示例**
 
@@ -1083,23 +1083,23 @@ getLocalAddress(): Promise<string>
 
 **起始版本：** 12
 
-<!--Device-LocalSocket-getLocalAddress(): Promise<string>--><!--Device-LocalSocket-getLocalAddress(): Promise<string>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | 以Promise形式返回获取本地socket地址的结果。 |
+| 类型 |
+| --- |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
-| [2301009](../errorcode-net-socket.md#2301009-错误文件描述符) | Bad file descriptor. |
-| [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) | Socket operation on non-socket. |
+| 错误码ID |
+| --- |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) |
+| [2301009](../errorcode-net-socket.md#2301009-错误文件描述符) |
+| [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) |
 
 **示例**
 
@@ -1364,15 +1364,15 @@ getSocketFd(): Promise<int>
 
 **起始版本：** 11
 
-<!--Device-LocalSocket-getSocketFd(): Promise<int>--><!--Device-LocalSocket-getSocketFd(): Promise<int>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | 以Promise形式返回socket的文件描述符。 |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **示例**
 
@@ -1700,15 +1700,15 @@ getState(): Promise<SocketStateBase>
 
 **起始版本：** 11
 
-<!--Device-LocalSocket-getState(): Promise<SocketStateBase>--><!--Device-LocalSocket-getState(): Promise<SocketStateBase>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | 以Promise形式返回获取LocalSocket状态的结果。 |
+| 类型 |
+| --- |
+| Promise&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; |
 
 **示例**
 
@@ -2035,132 +2035,6 @@ tlsServer.getState().then(() => {
 });
 ```
 
-## off('close')
-
-```TypeScript
-off(type: 'close', callback?: Callback<void>): void
-```
-
-取消订阅LocalSocket的关闭事件。使用callback异步回调。
-
-**起始版本：** 11
-
-<!--Device-LocalSocket-off(type: 'close', callback?: Callback<void>): void--><!--Device-LocalSocket-off(type: 'close', callback?: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'close' | 是 | 取消订阅的事件类型。'close'：LocalSocket的关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let client: socket.LocalSocket = socket.constructLocalSocketInstance();
-let callback = () => {
-  console.info("on close success");
-}
-client.on('close', callback);
-// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
-client.off('close', callback);
-client.off('close');
-```
-
-## off('connect')
-
-```TypeScript
-off(type: 'connect', callback?: Callback<void>): void
-```
-
-取消订阅LocalSocket的连接事件。使用callback异步回调。
-
-**起始版本：** 11
-
-<!--Device-LocalSocket-off(type: 'connect', callback?: Callback<void>): void--><!--Device-LocalSocket-off(type: 'connect', callback?: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'connect' | 是 | 取消订阅的事件类型。'connect'：LocalSocket的connect事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let client: socket.LocalSocket = socket.constructLocalSocketInstance();
-let callback = () => {
-  console.info("on connect success");
-}
-client.on('connect', callback);
-// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
-client.off('connect', callback);
-client.off('connect');
-```
-
-## off('error')
-
-```TypeScript
-off(type: 'error', callback?: ErrorCallback): void
-```
-
-取消订阅LocalSocket连接的error事件。使用callback异步回调。
-
-**起始版本：** 11
-
-<!--Device-LocalSocket-off(type: 'error', callback?: ErrorCallback): void--><!--Device-LocalSocket-off(type: 'error', callback?: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'error' | 是 | 取消订阅的事件类型。'error'：LocalSocket的error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let client: socket.LocalSocket = socket.constructLocalSocketInstance();
-let callback = (err: Object) => {
-  console.error("on error, err:" + JSON.stringify(err));
-}
-client.on('error', callback);
-// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
-client.off('error', callback);
-client.off('error');
-```
-
 ## off('message')
 
 ```TypeScript
@@ -2171,22 +2045,22 @@ off(type: 'message', callback?: Callback<LocalSocketMessageInfo>): void
 
 **起始版本：** 11
 
-<!--Device-LocalSocket-off(type: 'message', callback?: Callback<LocalSocketMessageInfo>): void--><!--Device-LocalSocket-off(type: 'message', callback?: Callback<LocalSocketMessageInfo>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'message' | 是 | 取消订阅的事件类型。'message'：接收消息事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'message' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -2208,32 +2082,74 @@ client.on('message', callback);
 client.off('message');
 ```
 
-## on('close')
+## off('connect')
 
 ```TypeScript
-on(type: 'close', callback: Callback<void>): void
+off(type: 'connect', callback?: Callback<void>): void
 ```
 
-订阅LocalSocket的关闭事件。使用callback异步回调。
+取消订阅LocalSocket的连接事件。使用callback异步回调。
 
 **起始版本：** 11
 
-<!--Device-LocalSocket-on(type: 'close', callback: Callback<void>): void--><!--Device-LocalSocket-on(type: 'close', callback: Callback<void>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'close' | 是 | 订阅LocalSocket的关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 以callback的形式异步返回关闭localsocket的结果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'connect' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+let callback = () => {
+  console.info("on connect success");
+}
+client.on('connect', callback);
+// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+client.off('connect', callback);
+client.off('connect');
+```
+
+## off('close')
+
+```TypeScript
+off(type: 'close', callback?: Callback<void>): void
+```
+
+取消订阅LocalSocket的关闭事件。使用callback异步回调。
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'close' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -2245,34 +2161,37 @@ let callback = () => {
   console.info("on close success");
 }
 client.on('close', callback);
+// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+client.off('close', callback);
+client.off('close');
 ```
 
-## on('connect')
+## off('error')
 
 ```TypeScript
-on(type: 'connect', callback: Callback<void>): void
+off(type: 'error', callback?: ErrorCallback): void
 ```
 
-订阅LocalSocket的连接事件。使用callback异步回调。
+取消订阅LocalSocket连接的error事件。使用callback异步回调。
 
 **起始版本：** 11
 
-<!--Device-LocalSocket-on(type: 'connect', callback: Callback<void>): void--><!--Device-LocalSocket-on(type: 'connect', callback: Callback<void>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'connect' | 是 | 订阅的事件类型。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 以callback的形式异步返回与服务端连接的结果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'error' | 是 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -2280,47 +2199,13 @@ on(type: 'connect', callback: Callback<void>): void
 import { socket } from '@kit.NetworkKit';
 
 let client: socket.LocalSocket = socket.constructLocalSocketInstance();
-client.on('connect', () => {
-  console.info("on connect success")
-});
-```
-
-## on('error')
-
-```TypeScript
-on(type: 'error', callback: ErrorCallback): void
-```
-
-订阅LocalSocket连接的error事件。使用callback异步回调。
-
-**起始版本：** 11
-
-<!--Device-LocalSocket-on(type: 'error', callback: ErrorCallback): void--><!--Device-LocalSocket-on(type: 'error', callback: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'error' | 是 | 订阅LocalSocket的error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 以callback的形式异步返回出现错误的结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let client: socket.LocalSocket = socket.constructLocalSocketInstance();
-client.on('error', (err: Object) => {
-  console.error("on error, err:" + JSON.stringify(err))
-});
+let callback = (err: Object) => {
+  console.error("on error, err:" + JSON.stringify(err));
+}
+client.on('error', callback);
+// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+client.off('error', callback);
+client.off('error');
 ```
 
 ## on('message')
@@ -2333,22 +2218,22 @@ on(type: 'message', callback: Callback<LocalSocketMessageInfo>): void
 
 **起始版本：** 11
 
-<!--Device-LocalSocket-on(type: 'message', callback: Callback<LocalSocketMessageInfo>): void--><!--Device-LocalSocket-on(type: 'message', callback: Callback<LocalSocketMessageInfo>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'message' | 是 | 订阅的事件类型。'message'：接收消息事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | 是 | 以callback的形式异步返回接收的消息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'message' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -2367,6 +2252,121 @@ client.on('message', (value: socket.LocalSocketMessageInfo) => {
 });
 ```
 
+## on('connect')
+
+```TypeScript
+on(type: 'connect', callback: Callback<void>): void
+```
+
+订阅LocalSocket的连接事件。使用callback异步回调。
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'connect' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+client.on('connect', () => {
+  console.info("on connect success")
+});
+```
+
+## on('close')
+
+```TypeScript
+on(type: 'close', callback: Callback<void>): void
+```
+
+订阅LocalSocket的关闭事件。使用callback异步回调。
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'close' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+let callback = () => {
+  console.info("on close success");
+}
+client.on('close', callback);
+```
+
+## on('error')
+
+```TypeScript
+on(type: 'error', callback: ErrorCallback): void
+```
+
+订阅LocalSocket连接的error事件。使用callback异步回调。
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'error' | 是 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+**示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+client.on('error', (err: Object) => {
+  console.error("on error, err:" + JSON.stringify(err))
+});
+```
+
 ## send
 
 ```TypeScript
@@ -2380,28 +2380,28 @@ send(options: LocalSendOptions): Promise<void>
 
 **起始版本：** 11
 
-<!--Device-LocalSocket-send(options: LocalSendOptions): Promise<void>--><!--Device-LocalSocket-send(options: LocalSendOptions): Promise<void>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [LocalSendOptions](arkts-network-socket-localsendoptions-i.md) | 是 | LocalSocket发送请求的参数，参考[LocalSendOptions](arkts-network-socket-localsendoptions-i.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [LocalSendOptions](arkts-network-socket-localsendoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| 2301011 | Operation would block. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 2301011 |
 
 **示例**
 
@@ -2811,28 +2811,28 @@ setExtraOptions(options: ExtraOptionsBase): Promise<void>
 
 **起始版本：** 11
 
-<!--Device-LocalSocket-setExtraOptions(options: ExtraOptionsBase): Promise<void>--><!--Device-LocalSocket-setExtraOptions(options: ExtraOptionsBase): Promise<void>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md) | 是 | LocalSocket连接的其他属性，参考[ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 以Promise形式返回设置LocalSocket套接字属性的结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2301009](../errorcode-net-socket.md#2301009-错误文件描述符) | Bad file descriptor. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2301009](../errorcode-net-socket.md#2301009-错误文件描述符) |
 
 **示例**
 
@@ -3315,4 +3315,3 @@ tlsServer.setExtraOptions(tcpExtraOptions).then(() => {
   console.error('setExtraOptions fail');
 });
 ```
-

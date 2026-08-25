@@ -14,31 +14,31 @@ function getInsertSqlInfo(table: string, values: ValuesBucket, conflict?: Confli
 
 Obtains the SQL statement used to insert data. This API returns the result synchronously.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-relationalStore-function getInsertSqlInfo(table: string, values: ValuesBucket, conflict?: ConflictResolution):SqlInfo--><!--Device-relationalStore-function getInsertSqlInfo(table: string, values: ValuesBucket, conflict?: ConflictResolution):SqlInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| table | string | Yes | Name of the database table to which data is to be written. |
-| values | ValuesBucket | Yes | Field information and corresponding values of the data to be written to the database. |
-| conflict | ConflictResolution | No | Resolution used to resolve the conflict. <br>Default value: **relationalStore.ConflictResolution.ON_CONFLICT_NONE**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| table | string | Yes |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SqlInfo](arkts-arkdata-relationalstore-sqlinfo-i.md) | SqlInfo** object. **sql** indicates the returned SQL statement, and **args** indicates the parameters in the executed SQL statement. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SqlInfo](arkts-arkdata-relationalstore-sqlinfo-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| Error Code ID |
+| --- |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
 
 **Examples**
 
@@ -55,4 +55,3 @@ const sqlInfo: relationalStore.SqlInfo = relationalStore.getInsertSqlInfo(
   relationalStore.ConflictResolution.ON_CONFLICT_NONE
 );
 ```
-

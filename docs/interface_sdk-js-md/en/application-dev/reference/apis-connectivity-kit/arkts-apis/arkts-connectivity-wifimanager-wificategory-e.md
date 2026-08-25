@@ -2,9 +2,9 @@
 
 Wi-Fi Category. @enum { int }
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-wifiManager-enum WifiCategory--><!--Device-wifiManager-enum WifiCategory-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -16,9 +16,9 @@ DEFAULT = 1
 
 Default.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-WifiCategory-DEFAULT = 1--><!--Device-WifiCategory-DEFAULT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -30,9 +30,9 @@ WIFI6 = 2
 
 Wifi6.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-WifiCategory-WIFI6 = 2--><!--Device-WifiCategory-WIFI6 = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -44,9 +44,9 @@ WIFI6_PLUS = 3
 
 Wifi6+.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-WifiCategory-WIFI6_PLUS = 3--><!--Device-WifiCategory-WIFI6_PLUS = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -58,9 +58,9 @@ WIFI7 = 4
 
 Wifi7.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-WifiCategory-WIFI7 = 4--><!--Device-WifiCategory-WIFI7 = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -72,9 +72,8 @@ WIFI7_PLUS = 5
 
 Wifi7+.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-WifiCategory-WIFI7_PLUS = 5--><!--Device-WifiCategory-WIFI7_PLUS = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
-

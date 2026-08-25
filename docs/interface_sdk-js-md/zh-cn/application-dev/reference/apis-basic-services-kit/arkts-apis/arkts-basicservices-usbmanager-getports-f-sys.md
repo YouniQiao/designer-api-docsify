@@ -16,11 +16,11 @@ function getPorts(): Array<USBPort>
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 12
 
 **替代接口：** [getPortList](arkts-basicservices-usbmanager-getportlist-f-sys.md)()
-
-<!--Device-usbManager-function getPorts(): Array<USBPort>--><!--Device-usbManager-function getPorts(): Array<USBPort>-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -28,9 +28,9 @@ function getPorts(): Array<USBPort>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;USBPort&gt; | USB端口描述信息列表。 |
+| 类型 |
+| --- |
+| Array & lt;USBPort & gt; |
 
 **示例**
 
@@ -38,4 +38,3 @@ function getPorts(): Array<USBPort>
 // 获取所有USB端口描述信息
 let ret: Array<usbManager.USBPort> = usbManager.getPorts();
 ```
-

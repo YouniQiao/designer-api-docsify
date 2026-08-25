@@ -4,7 +4,7 @@ Defines the specific reasons for the blank screen, which identify the underlying
 
 **Since:** 22
 
-<!--Device-unnamed-declare enum DetectedBlankScreenReason--><!--Device-unnamed-declare enum DetectedBlankScreenReason-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,7 +18,7 @@ No contentful node is detected.This may be triggered when the detection policy i
 
 **Since:** 22
 
-<!--Device-DetectedBlankScreenReason-NO_CONTENTFUL_NODES = 0--><!--Device-DetectedBlankScreenReason-NO_CONTENTFUL_NODES = 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,7 +32,6 @@ The number of contentful nodes detected is less than or equal to the threshold.T
 
 **Since:** 22
 
-<!--Device-DetectedBlankScreenReason-SUB_THRESHOLD_CONTENTFUL_NODES = 1--><!--Device-DetectedBlankScreenReason-SUB_THRESHOLD_CONTENTFUL_NODES = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

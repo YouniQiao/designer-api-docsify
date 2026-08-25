@@ -2,9 +2,9 @@
 
 Collaboration event information.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-abilityConnectionManager-interface CollaborateEventInfo--><!--Device-abilityConnectionManager-interface CollaborateEventInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -24,11 +24,11 @@ Content of a collaboration event.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-CollaborateEventInfo-eventMsg?: string--><!--Device-CollaborateEventInfo-eventMsg?: string-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -42,11 +42,10 @@ Collaboration event type.
 
 **Type:** [CollaborateEventType](arkts-distributedservice-abilityconnectionmanager-collaborateeventtype-e.md)
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CollaborateEventInfo-eventType: CollaborateEventType--><!--Device-CollaborateEventInfo-eventType: CollaborateEventType-End-->
-
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
-

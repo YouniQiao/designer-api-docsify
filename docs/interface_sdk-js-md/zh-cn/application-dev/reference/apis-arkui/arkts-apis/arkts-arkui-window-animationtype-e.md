@@ -2,9 +2,9 @@
 
 窗口动画类型枚举。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-window-enum AnimationType--><!--Device-window-enum AnimationType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -16,9 +16,8 @@ FADE_IN_OUT = 0
 
 表示窗口动画类型为淡入淡出。淡入动画在窗口显示过程中生效，淡出动画在窗口隐藏过程中生效。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-AnimationType-FADE_IN_OUT = 0--><!--Device-AnimationType-FADE_IN_OUT = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
-

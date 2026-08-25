@@ -4,7 +4,7 @@ Describes the asset conflict policy.
 
 **Since:** 26.0.0
 
-<!--Device-relationalStore-enum AssetConflictPolicy--><!--Device-relationalStore-enum AssetConflictPolicy-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -18,9 +18,9 @@ Indicates the default conflict policy.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AssetConflictPolicy-CONFLICT_POLICY_DEFAULT = 0--><!--Device-AssetConflictPolicy-CONFLICT_POLICY_DEFAULT = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -34,9 +34,9 @@ Indicates the time-first conflict policy.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AssetConflictPolicy-CONFLICT_POLICY_TIME_FIRST = 1--><!--Device-AssetConflictPolicy-CONFLICT_POLICY_TIME_FIRST = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -50,9 +50,8 @@ Indicates the temporary path conflict policy.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AssetConflictPolicy-CONFLICT_POLICY_TEMP_PATH = 2--><!--Device-AssetConflictPolicy-CONFLICT_POLICY_TEMP_PATH = 2-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-

@@ -12,9 +12,9 @@ Constructor parameters
 
 **Since:** 7
 
-**Deprecated since:** 22
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-AnimatorInterface-(value: string): AnimatorAttribute--><!--Device-AnimatorInterface-(value: string): AnimatorAttribute-End-->
+**Deprecated since:** 22
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,9 +22,8 @@ Constructor parameters
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | string | Yes |
 
 ## Summary
-

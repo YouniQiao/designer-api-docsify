@@ -2,7 +2,7 @@
 
 **Since:** 6
 
-<!--Device-unnamed-export interface BluetoothDevice--><!--Device-unnamed-export interface BluetoothDevice-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 
@@ -24,9 +24,9 @@ Address of BluetoothDevice
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-BluetoothDevice-addr: string--><!--Device-BluetoothDevice-addr: string-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 
@@ -42,9 +42,9 @@ The addrType of address, may be public or random
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-BluetoothDevice-addrType: 'public' | 'random'--><!--Device-BluetoothDevice-addrType: 'public' | 'random'-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 
@@ -60,9 +60,9 @@ The data of BluetoothDevice
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-BluetoothDevice-data: string--><!--Device-BluetoothDevice-data: string-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 
@@ -78,9 +78,9 @@ RSSI of the remote device
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-BluetoothDevice-rssi: number--><!--Device-BluetoothDevice-rssi: number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 
@@ -96,9 +96,8 @@ Transmission power level for advertising
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-BluetoothDevice-txpower: string--><!--Device-BluetoothDevice-txpower: string-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
-

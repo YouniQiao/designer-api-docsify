@@ -15,25 +15,25 @@ Configures the application event logging function, such as setting the event log
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [configure](arkts-performanceanalysis-hiappevent-configure-f.md)
-
-<!--Device-hiAppEvent-function configure(config: ConfigOption): boolean--><!--Device-hiAppEvent-function configure(config: ConfigOption): boolean-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| config | ConfigOption | Yes | Configuration items for application event logging. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| config | [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the configuration is successful; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -50,4 +50,3 @@ let config2: hiAppEvent.ConfigOption = {
 };
 hiAppEvent.configure(config2);
 ```
-

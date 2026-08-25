@@ -15,23 +15,20 @@ The decodeURI() function decodes a Uniform Resource Identifier (URI) previously 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function decodeURI(uri: string): string--><!--Device-unnamed-export function decodeURI(uri: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | The URI string that needs to be decoded |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | The decoded URI |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |

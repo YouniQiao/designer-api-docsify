@@ -2,9 +2,9 @@
 
 Enumerates the priority levels for video recording quality.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-camera-enum QualityPrioritization--><!--Device-camera-enum QualityPrioritization-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -16,11 +16,11 @@ HIGH_QUALITY = 0
 
 Prioritizes high-quality video recording.
 
-**Since:** 23
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-QualityPrioritization-HIGH_QUALITY = 0--><!--Device-QualityPrioritization-HIGH_QUALITY = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -32,11 +32,10 @@ POWER_BALANCE = 1
 
 Prioritizes video recording quality while balancing power consumption.
 
-**Since:** 23
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-QualityPrioritization-POWER_BALANCE = 1--><!--Device-QualityPrioritization-POWER_BALANCE = 1-End-->
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
-

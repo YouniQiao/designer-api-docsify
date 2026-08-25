@@ -8,11 +8,11 @@ Enumerates the ability types.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [AbilityType](arkts-ability-bundlemanager-abilitytype-e.md)
-
-<!--Device-bundle-export enum AbilityType--><!--Device-bundle-export enum AbilityType-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -26,9 +26,9 @@ Unknown ability type.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-AbilityType-UNKNOWN = 0--><!--Device-AbilityType-UNKNOWN = 0-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -42,11 +42,11 @@ FA developed using the Page template to provide the capability of interacting wi
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [PAGE](arkts-ability-bundlemanager-abilitytype-e.md#page)
-
-<!--Device-AbilityType-PAGE = 1--><!--Device-AbilityType-PAGE = 1-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -60,11 +60,11 @@ PA developed using the Service template to provide the capability of running tas
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [SERVICE](arkts-ability-bundlemanager-abilitytype-e.md#service)
-
-<!--Device-AbilityType-SERVICE = 2--><!--Device-AbilityType-SERVICE = 2-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -78,11 +78,10 @@ PA developed using the Data template to provide unified data access for external
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [DATA](arkts-ability-bundlemanager-abilitytype-e.md#data)
 
-<!--Device-AbilityType-DATA = 3--><!--Device-AbilityType-DATA = 3-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework
-

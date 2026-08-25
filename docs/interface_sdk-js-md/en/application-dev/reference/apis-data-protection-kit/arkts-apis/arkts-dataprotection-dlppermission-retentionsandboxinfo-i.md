@@ -4,7 +4,7 @@ Represents the sandbox retention information.
 
 **Since:** 10
 
-<!--Device-dlpPermission-export interface RetentionSandboxInfo--><!--Device-dlpPermission-export interface RetentionSandboxInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -26,7 +26,7 @@ Index of the DLP sandbox application. The value ranges from 1001 to 1100.
 
 **Since:** 10
 
-<!--Device-RetentionSandboxInfo-appIndex: number--><!--Device-RetentionSandboxInfo-appIndex: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -42,7 +42,7 @@ Bundle name of the application. The value contains 7 to 128 bytes. If the value 
 
 **Since:** 10
 
-<!--Device-RetentionSandboxInfo-bundleName: string--><!--Device-RetentionSandboxInfo-bundleName: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -58,7 +58,6 @@ URI list of the DLP files. The array has no length limit, but each string cannot
 
 **Since:** 10
 
-<!--Device-RetentionSandboxInfo-docUris: Array<string>--><!--Device-RetentionSandboxInfo-docUris: Array<string>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
-

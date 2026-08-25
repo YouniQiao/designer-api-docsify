@@ -4,7 +4,7 @@
 
 **起始版本：** 26.1.0
 
-<!--Device-unnamed-export class DialogPresenter--><!--Device-unnamed-export class DialogPresenter-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,32 +27,32 @@ dismiss(target: int | ComponentContent<Object>): Promise<void>
 
 **起始版本：** 26.1.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DialogPresenter-dismiss(target: int | ComponentContent<Object>): Promise<void>--><!--Device-DialogPresenter-dismiss(target: int | ComponentContent<Object>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| target | int \| ComponentContent&lt;Object&gt; | 是 | 要取消的对话ID或组件内容。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| target | number \| ComponentContent & lt;Object & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 不会返回任何值的Promise。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | Dialog content error. The ComponentContent is incorrect. |
-| [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) | Dialog content not found. The ComponentContent cannot be found. |
+| 错误码ID |
+| --- |
+| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
+| [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
 
 ## present
 
@@ -64,32 +64,32 @@ present(options?: dialog.DialogStyleOptions): Promise<DialogResult>
 
 **起始版本：** 26.1.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DialogPresenter-present(options?: dialog.DialogStyleOptions): Promise<DialogResult>--><!--Device-DialogPresenter-present(options?: dialog.DialogStyleOptions): Promise<DialogResult>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | dialog.DialogStyleOptions | 否 | 对话框选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | dialog.DialogStyleOptions | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[DialogResult](arkts-arkui-arkui-dialog-dialogresult-i.md)&gt; | 用于返回对话结果的Promise。 |
+| 类型 |
+| --- |
+| Promise&lt;[DialogResult](arkts-arkui-arkui-dialog-dialogresult-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [103306](../errorcode-promptAction.md#103306-节点挂载失败导致无法打开弹出框) | The dialog cannot be opened due to node mount failure. |
-| [103308](../errorcode-promptAction.md#103308-子窗口创建失败导致无法打开弹出框) | The dialog cannot be opened due to subwindow create failure. |
+| 错误码ID |
+| --- |
+| [103306](../errorcode-promptAction.md#103306-节点挂载失败导致无法打开弹出框) |
+| [103308](../errorcode-promptAction.md#103308-子窗口创建失败导致无法打开弹出框) |
 
 ## present
 
@@ -104,35 +104,35 @@ present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>,
 
 **起始版本：** 26.1.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DialogPresenter-present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>, options?: dialog.DialogCustomOptions): Promise<DialogResult>--><!--Device-DialogPresenter-present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>, options?: dialog.DialogCustomOptions): Promise<DialogResult>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| content | [CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| ComponentContent&lt;Object&gt; | 是 | 自定义对话框内容。 |
-| options | dialog.DialogCustomOptions | 否 | 自定义对话框选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| ComponentContent & lt;Object & gt; | 是 |
+| options | dialog.DialogCustomOptions | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[DialogResult](arkts-arkui-arkui-dialog-dialogresult-i.md)&gt; | 用于返回对话结果的Promise。 |
+| 类型 |
+| --- |
+| Promise&lt;[DialogResult](arkts-arkui-arkui-dialog-dialogresult-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | Dialog content error. The ComponentContent is incorrect. |
-| [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) | Dialog content already exist. The ComponentContent has already been opened. |
-| [103306](../errorcode-promptAction.md#103306-节点挂载失败导致无法打开弹出框) | The dialog cannot be opened due to node mount failure. |
-| [103308](../errorcode-promptAction.md#103308-子窗口创建失败导致无法打开弹出框) | The dialog cannot be opened due to subwindow create failure. |
+| 错误码ID |
+| --- |
+| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
+| [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) |
+| [103306](../errorcode-promptAction.md#103306-节点挂载失败导致无法打开弹出框) |
+| [103308](../errorcode-promptAction.md#103308-子窗口创建失败导致无法打开弹出框) |
 
 ## update
 
@@ -144,31 +144,30 @@ update(content: ComponentContent<Object>, options?: dialog.DialogBaseOptions): P
 
 **起始版本：** 26.1.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DialogPresenter-update(content: ComponentContent<Object>, options?: dialog.DialogBaseOptions): Promise<void>--><!--Device-DialogPresenter-update(content: ComponentContent<Object>, options?: dialog.DialogBaseOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| content | ComponentContent&lt;Object&gt; | 是 | 用于标识对话框的内容。 |
-| options | dialog.DialogBaseOptions | 否 | 要更新的选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| content | ComponentContent & lt;Object & gt; | 是 |
+| options | dialog.DialogBaseOptions | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 不会返回任何值的Promise。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | Dialog content error. The ComponentContent is incorrect. |
-| [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) | Dialog content not found. The ComponentContent cannot be found. |
-
+| 错误码ID |
+| --- |
+| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
+| [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |

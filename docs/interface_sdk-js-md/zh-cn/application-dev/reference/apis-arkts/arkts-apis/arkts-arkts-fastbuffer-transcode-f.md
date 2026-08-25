@@ -16,25 +16,25 @@ function transcode(source: FastBuffer | Uint8Array, fromEnc: string, toEnc: stri
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-fastbuffer-function transcode(source: FastBuffer | Uint8Array, fromEnc: string, toEnc: string): FastBuffer--><!--Device-fastbuffer-function transcode(source: FastBuffer | Uint8Array, fromEnc: string, toEnc: string): FastBuffer-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| source | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | 是 | 需要进行编码转换的源数据对象，将从fromEnc编码转换为toEnc编码。 |
-| fromEnc | string | 是 | 当前编码格式。支持的格式范围为'ascii' \| 'utf8' \| 'utf16le' \| 'ucs2' \| 'latin1' \| 'binary'。传入空字符串时， 表示使用编码格式'utf8'。 |
-| toEnc | string | 是 | 目标编码。支持的格式范围为'ascii' \| 'utf8' \| 'utf16le' \| 'ucs2' \| 'latin1' \| 'binary'。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| source | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | 是 |
+| fromEnc | string | 是 | 当前编码格式。支持的格式范围为'ascii' \| 'utf8' \| 'utf16le' \| 'ucs2' \| 'latin1' \|
+| toEnc | string | 是 | 目标编码。支持的格式范围为'ascii' \| 'utf8' \| 'utf16le' \| 'ucs2' \| 'latin1' \|
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 将当前编码转换成目标编码，并返回一个新的FastBuffer对象。 |
+| 类型 |
+| --- |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
 
 **示例**
 
@@ -45,4 +45,3 @@ let newBuf = fastbuffer.transcode(fastbuffer.from('buffer'), 'utf-8', 'ascii');
 console.info('newBuf = ' + newBuf.toString('ascii'));
 // 输出结果：newBuf = buffer
 ```
-

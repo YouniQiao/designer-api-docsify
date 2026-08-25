@@ -16,29 +16,29 @@ Get value from settingsdata(synchronous method)
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getValueSync](#getvaluesync)
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-settings-function getValueSync(dataAbilityHelper: DataAbilityHelper, name: string, defValue: string): string--><!--Device-settings-function getValueSync(dataAbilityHelper: DataAbilityHelper, name: string, defValue: string): string-End-->
-
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | Yes | Indicates dataAbilityHelper instance. |
-| name | string | Yes | Indicates the name of the character string. |
-| defValue | string | Yes | Indicates the default value of the character string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | Yes |
+| name | string | Yes |
+| defValue | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Returns settingsdata value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -80,27 +80,27 @@ function getValueSync(context: Context, name: string, defValue: string): string
 
 Get value from settingsdata(synchronous method)
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-settings-function getValueSync(context: Context, name: string, defValue: string): string--><!--Device-settings-function getValueSync(context: Context, name: string, defValue: string): string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
-| name | string | Yes | Indicates the name of the character string. |
-| defValue | string | Yes | Indicates the default value of the character string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes |
+| name | string | Yes |
+| defValue | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Returns settingsdata value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -115,30 +115,29 @@ function getValueSync(context: Context, name: string, defValue: string, domainNa
 
 Get value from settingsdata(synchronous method). [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-settings-function getValueSync(context: Context, name: string, defValue: string, domainName: string): string--><!--Device-settings-function getValueSync(context: Context, name: string, defValue: string, domainName: string): string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
-| name | string | Yes | Indicates the name of the character string. |
-| defValue | string | Yes | Indicates the default value of the character string. |
-| domainName | string | Yes | Indicates the name of the domain name to set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes |
+| name | string | Yes |
+| defValue | string | Yes |
+| domainName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Returns settingsdata value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
 See [getValueSync](#getvaluesync)
-

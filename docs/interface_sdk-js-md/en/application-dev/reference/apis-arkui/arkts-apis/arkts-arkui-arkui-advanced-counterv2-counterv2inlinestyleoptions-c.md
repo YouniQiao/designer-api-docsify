@@ -2,11 +2,11 @@
 
 Defines the inline style options.
 
-**Inheritance/Implementation:** CounterV2InlineStyleOptions extends [CounterV2CommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counterv2-counterv2commonoptions-c.md)
+**Inheritance/Implementation:** CounterV2InlineStyleOptions extends [CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md)
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare class CounterV2InlineStyleOptions--><!--Device-unnamed-declare class CounterV2InlineStyleOptions-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,6 +16,24 @@ Defines the inline style options.
 import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUI';
 ```
 
+## onChange
+
+```TypeScript
+onChange?: OnInlineCounterV2Change
+```
+
+Trigger an event when the value of the counter has been changed.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## max
 
 ```TypeScript
@@ -24,17 +42,17 @@ max?: int
 
 Set maximum value of the counter component
 
-**Type:** int
+**Type:** number
 
 **Default:** 999
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CounterV2InlineStyleOptions-max?: int--><!--Device-CounterV2InlineStyleOptions-max?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,37 +64,17 @@ min?: int
 
 Set minimum value of the counter component
 
-**Type:** int
+**Type:** number
 
 **Default:** 0
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CounterV2InlineStyleOptions-min?: int--><!--Device-CounterV2InlineStyleOptions-min?: int-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onChange
-
-```TypeScript
-onChange?: OnInlineCounterV2Change
-```
-
-Trigger an event when the value of the counter has been changed.
-
-**Type:** [OnInlineCounterV2Change](../../apis-default/arkts-apis/arkts-oninlinecounterv2change-t.md)
-
-**Since:** 26.0.0
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CounterV2InlineStyleOptions-onChange?: OnInlineCounterV2Change--><!--Device-CounterV2InlineStyleOptions-onChange?: OnInlineCounterV2Change-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,17 +86,17 @@ textWidth?: double
 
 Set text width of the counter component, ranges greater than or equal to 0. If undefined is passed, the text width will adapt to the text content.
 
-**Type:** double
+**Type:** number
 
 **Default:** undefined
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CounterV2InlineStyleOptions-textWidth?: double--><!--Device-CounterV2InlineStyleOptions-textWidth?: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -110,17 +108,16 @@ value?: int
 
 Set initial value of the counter component, ranges from min to max.
 
-**Type:** int
+**Type:** number
 
 **Default:** 0
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-CounterV2InlineStyleOptions-value?: int--><!--Device-CounterV2InlineStyleOptions-value?: int-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

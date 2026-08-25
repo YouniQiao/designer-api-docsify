@@ -8,13 +8,12 @@ Sets or returns the position of the component.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-unnamed-export type PositionT<T> = Vector2T<T>--><!--Device-unnamed-export type PositionT<T> = Vector2T<T>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** [Vector2T](arkts-arkui-graphics-vector2t-i.md)&lt;T&gt;
-

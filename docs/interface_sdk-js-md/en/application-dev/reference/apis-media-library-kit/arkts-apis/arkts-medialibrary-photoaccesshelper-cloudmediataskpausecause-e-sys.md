@@ -2,9 +2,9 @@
 
 Enumerates the reasons why a cloud media asset download task is paused.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-photoAccessHelper-enum CloudMediaTaskPauseCause--><!--Device-photoAccessHelper-enum CloudMediaTaskPauseCause-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ NO_PAUSE = 0
 
 Downloading is proceeding normally without any pauses.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CloudMediaTaskPauseCause-NO_PAUSE = 0--><!--Device-CloudMediaTaskPauseCause-NO_PAUSE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,9 @@ TEMPERATURE_LIMIT = 1
 
 Downloading is proceeding normally without any pauses.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CloudMediaTaskPauseCause-TEMPERATURE_LIMIT = 1--><!--Device-CloudMediaTaskPauseCause-TEMPERATURE_LIMIT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,9 +50,9 @@ ROM_LIMIT = 2
 
 The local disk space is insufficient.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CloudMediaTaskPauseCause-ROM_LIMIT = 2--><!--Device-CloudMediaTaskPauseCause-ROM_LIMIT = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -66,9 +66,9 @@ NETWORK_FLOW_LIMIT = 3
 
 The local disk space is insufficient.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CloudMediaTaskPauseCause-NETWORK_FLOW_LIMIT = 3--><!--Device-CloudMediaTaskPauseCause-NETWORK_FLOW_LIMIT = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -82,9 +82,9 @@ WIFI_UNAVAILABLE = 4
 
 The network is abnormal.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CloudMediaTaskPauseCause-WIFI_UNAVAILABLE = 4--><!--Device-CloudMediaTaskPauseCause-WIFI_UNAVAILABLE = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -98,9 +98,9 @@ POWER_LIMIT = 5
 
 The network is abnormal.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CloudMediaTaskPauseCause-POWER_LIMIT = 5--><!--Device-CloudMediaTaskPauseCause-POWER_LIMIT = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -114,9 +114,9 @@ BACKGROUND_TASK_UNAVAILABLE = 6
 
 The device is not in charging screen-off mode.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CloudMediaTaskPauseCause-BACKGROUND_TASK_UNAVAILABLE = 6--><!--Device-CloudMediaTaskPauseCause-BACKGROUND_TASK_UNAVAILABLE = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -130,9 +130,9 @@ FREQUENT_USER_REQUESTS = 7
 
 The user is making requests too frequently.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CloudMediaTaskPauseCause-FREQUENT_USER_REQUESTS = 7--><!--Device-CloudMediaTaskPauseCause-FREQUENT_USER_REQUESTS = 7-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -146,9 +146,9 @@ CLOUD_ERROR = 8
 
 There is an error with the cloud service.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CloudMediaTaskPauseCause-CLOUD_ERROR = 8--><!--Device-CloudMediaTaskPauseCause-CLOUD_ERROR = 8-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -162,11 +162,10 @@ USER_PAUSED = 9
 
 The download has been paused by the user.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CloudMediaTaskPauseCause-USER_PAUSED = 9--><!--Device-CloudMediaTaskPauseCause-USER_PAUSED = 9-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

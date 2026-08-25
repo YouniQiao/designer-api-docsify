@@ -4,7 +4,7 @@ Defines the outline of the drop-down menu.
 
 **Since:** 20
 
-<!--Device-unnamed-declare interface MenuOutlineOptions--><!--Device-unnamed-declare interface MenuOutlineOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,15 +21,15 @@ color?: ResourceColor | EdgeColors
 
 Color of the outline.Default value: **#19ffffff**
 
-**Type:** ResourceColor \| EdgeColors
+**Type:** ResourceColor \| [EdgeColors](../arkts-apis/arkts-arkui-units-edgecolors-i.md)
 
 **Since:** 20
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-MenuOutlineOptions-color?: ResourceColor | EdgeColors--><!--Device-MenuOutlineOptions-color?: ResourceColor | EdgeColors-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -41,15 +41,14 @@ width?: Dimension | EdgeOutlineWidths
 
 Width of the outline. Percentage values are not supported.Default value: **0**
 
-**Type:** Dimension \| EdgeOutlineWidths
+**Type:** Dimension \| [EdgeOutlineWidths](../arkts-apis/arkts-arkui-units-edgeoutlinewidths-i.md)
 
 **Since:** 20
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-MenuOutlineOptions-width?: Dimension | EdgeOutlineWidths--><!--Device-MenuOutlineOptions-width?: Dimension | EdgeOutlineWidths-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

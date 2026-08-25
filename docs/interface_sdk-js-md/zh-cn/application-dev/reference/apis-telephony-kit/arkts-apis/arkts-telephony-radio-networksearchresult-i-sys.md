@@ -2,9 +2,9 @@
 
 Obtains the network search results.
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-radio-export interface NetworkSearchResult--><!--Device-radio-export interface NetworkSearchResult-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -26,9 +26,9 @@ Indicates whether the network search was successful.
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkSearchResult-isNetworkSearchSuccess: boolean--><!--Device-NetworkSearchResult-isNetworkSearchSuccess: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -44,11 +44,10 @@ Obtains the network search results.
 
 **类型：** Array&lt;[NetworkInformation](arkts-telephony-radio-networkinformation-i-sys.md)&gt;
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkSearchResult-networkSearchResult: Array<NetworkInformation>--><!--Device-NetworkSearchResult-networkSearchResult: Array<NetworkInformation>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
-

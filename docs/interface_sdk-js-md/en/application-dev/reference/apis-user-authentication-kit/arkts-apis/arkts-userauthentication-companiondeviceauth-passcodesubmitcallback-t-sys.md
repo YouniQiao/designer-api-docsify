@@ -8,9 +8,9 @@ Defines the callback used to submit a passcode entered by the user.
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-companionDeviceAuth-type PasscodeSubmitCallback = (passcode: Uint8Array) => void--><!--Device-companionDeviceAuth-type PasscodeSubmitCallback = (passcode: Uint8Array) => void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -18,7 +18,6 @@ Defines the callback used to submit a passcode entered by the user.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| passcode | Uint8Array | Yes | Passcode entered by the user (for example, the Passcode of a USB security key). |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| passcode | Uint8Array | Yes |

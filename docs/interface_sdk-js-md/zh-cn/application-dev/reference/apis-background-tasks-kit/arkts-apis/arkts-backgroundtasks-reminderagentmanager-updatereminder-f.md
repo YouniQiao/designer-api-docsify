@@ -14,34 +14,34 @@ function updateReminder(reminderId: int, reminderReq: ReminderRequest): Promise<
 
 更新指定id的代理提醒，使用Promise异步回调。仅[有效（未过期）](../../../task-management/agent-powered-reminder.md#约束与限制)、未显示在通知中心的代理提醒支持更新。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PUBLISH_AGENT_REMINDER
-
-<!--Device-reminderAgentManager-function updateReminder(reminderId: int, reminderReq: ReminderRequest): Promise<void>--><!--Device-reminderAgentManager-function updateReminder(reminderId: int, reminderReq: ReminderRequest): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| reminderId | int | 是 | 需要更新的代理提醒的id。 代理提醒id会在 [发布代理提醒](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md) 时作为返回值返回。 |
-| reminderReq | ReminderRequest | 是 | 代理提醒对象实例，用于设置提醒类型、响铃时长等具体信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| reminderId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [reminderReq](arkts-backgroundtasks-reminderagentmanager-reminderinfo-i.md) | [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [1700003](../errorcode-reminderAgentManager.md#1700003-提醒不存在) | The reminder does not exist. |
-| [1700007](../errorcode-reminderAgentManager.md#1700007-参数错误) | If the input parameter is not valid parameter. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [1700003](../errorcode-reminderAgentManager.md#1700003-提醒不存在) |
+| [1700007](../errorcode-reminderAgentManager.md#1700007-参数错误) |
 
 **示例**
 
@@ -81,4 +81,3 @@ reminderAgentManager.updateReminder(reminderId, timer).then(() => {
   console.error(`Failed to update reminder. Code is ${err.code}, message is ${err.message}`);
 });
 ```
-

@@ -4,7 +4,7 @@ Parse's options
 
 **Since:** 12
 
-<!--Device-ASON-interface ParseOptions--><!--Device-ASON-interface ParseOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,9 +26,9 @@ Enum defining modes for handling bigint.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-ParseOptions-bigIntMode: BigIntMode--><!--Device-ParseOptions-bigIntMode: BigIntMode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -44,9 +44,8 @@ The return types for parsing.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ParseOptions-parseReturnType: ParseReturnType--><!--Device-ParseOptions-parseReturnType: ParseReturnType-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

@@ -4,7 +4,7 @@ Represents the operation result of crypto extension.
 
 **Since:** 22
 
-<!--Device-unnamed-export interface HuksCryptoExtensionResult--><!--Device-unnamed-export interface HuksCryptoExtensionResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -17,7 +17,7 @@ import { CryptoExtensionAbility, HuksCryptoExtensionCertInfo, HuksCryptoExtensio
 ## authState
 
 ```TypeScript
-authState?: int
+authState?: number
 ```
 
 Auth state.
@@ -26,7 +26,7 @@ Auth state.
 
 **Since:** 22
 
-<!--Device-HuksCryptoExtensionResult-authState?: int--><!--Device-HuksCryptoExtensionResult-authState?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -42,7 +42,7 @@ The cert array.
 
 **Since:** 22
 
-<!--Device-HuksCryptoExtensionResult-certs?: Array<HuksCryptoExtensionCertInfo>--><!--Device-HuksCryptoExtensionResult-certs?: Array<HuksCryptoExtensionCertInfo>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -58,9 +58,9 @@ The detailed error information returned.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-HuksCryptoExtensionResult-errInfo?: huksExternalCrypto.HuksExternalErrorInfo--><!--Device-HuksCryptoExtensionResult-errInfo?: huksExternalCrypto.HuksExternalErrorInfo-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -76,7 +76,7 @@ The provider resource handle.
 
 **Since:** 22
 
-<!--Device-HuksCryptoExtensionResult-handle?: string--><!--Device-HuksCryptoExtensionResult-handle?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -92,7 +92,7 @@ Returned data.
 
 **Since:** 22
 
-<!--Device-HuksCryptoExtensionResult-outData?: Uint8Array--><!--Device-HuksCryptoExtensionResult-outData?: Uint8Array-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -108,7 +108,7 @@ Returned property info.
 
 **Since:** 22
 
-<!--Device-HuksCryptoExtensionResult-property?: Array<huksExternalCrypto.HuksExternalCryptoParam>--><!--Device-HuksCryptoExtensionResult-property?: Array<huksExternalCrypto.HuksExternalCryptoParam>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -124,16 +124,16 @@ The returned resource ID.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-HuksCryptoExtensionResult-resourceId?: string--><!--Device-HuksCryptoExtensionResult-resourceId?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## resultCode
 
 ```TypeScript
-resultCode: int
+resultCode: number
 ```
 
 Returned code.
@@ -142,14 +142,14 @@ Returned code.
 
 **Since:** 22
 
-<!--Device-HuksCryptoExtensionResult-resultCode: int--><!--Device-HuksCryptoExtensionResult-resultCode: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## retryCount
 
 ```TypeScript
-retryCount?: int
+retryCount?: number
 ```
 
 The remaining retry count when the PIN is incorrect.
@@ -158,7 +158,6 @@ The remaining retry count when the PIN is incorrect.
 
 **Since:** 22
 
-<!--Device-HuksCryptoExtensionResult-retryCount?: int--><!--Device-HuksCryptoExtensionResult-retryCount?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
-

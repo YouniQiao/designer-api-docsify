@@ -16,15 +16,15 @@ Creates a **TCPSocketServer** object.
 
 **Since:** 10
 
-<!--Device-socket-function constructTCPSocketServerInstance(): TCPSocketServer--><!--Device-socket-function constructTCPSocketServerInstance(): TCPSocketServer-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [TCPSocketServer](arkts-network-socket-tcpsocketserver-i.md) | TCPSocketServer** object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [TCPSocketServer](arkts-network-socket-tcpsocketserver-i.md) |
 
 **Examples**
 
@@ -32,4 +32,3 @@ Creates a **TCPSocketServer** object.
 import { socket } from '@kit.NetworkKit';
 let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
 ```
-

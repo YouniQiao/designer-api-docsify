@@ -6,21 +6,20 @@ type WindowUpdateType = 'add' | 'remove' | 'bounds' | 'active' | 'focus'
 
 Window update type.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
-<!--Device-accessibility-type WindowUpdateType = 'add' | 'remove' | 'bounds' | 'active' | 'focus'--><!--Device-accessibility-type WindowUpdateType = 'add' | 'remove' | 'bounds' | 'active' | 'focus'-End-->
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-| Type | Description |
-| --- | --- |
-| 'add' | Window adding. |
-| 'remove' | Window deletion. |
-| 'bounds' | Window boundary change. |
-| 'active' | Window activity change. |
-| 'focus' | Window focus change. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'add' |
+| 'remove' |
+| 'bounds' |
+| 'active' |
+| 'focus' |

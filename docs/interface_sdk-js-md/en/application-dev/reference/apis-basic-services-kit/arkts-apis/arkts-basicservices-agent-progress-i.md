@@ -2,9 +2,9 @@
 
 Describes the data structure of the task progress.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-agent-interface Progress--><!--Device-agent-interface Progress-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -17,16 +17,18 @@ import { request } from '@kit.BasicServicesKit';
 ## extras
 
 ```TypeScript
-readonly extras?: Record<string, string>
+readonly extras?: object
 ```
 
-The extras for an interaction. Such as headers and body of response from server. But when the Content-Disposition header responded, <br>the body will be into the uri of its attachment only, the body here is empty. {"headers": {"key": v}, "body": "contents"}. The "body" field is not supported in cross-platform scenarios.
+Extra information of the task, for example, the header and body of the response from the server. The default value is empty.
 
-**Type:** Record&lt;string, string&gt;
+**Type:** object
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Progress-readonly extras?: Record<string, string>--><!--Device-Progress-readonly extras?: Record<string, string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -38,13 +40,13 @@ readonly index: int
 
 Index of the file that is being processed in the task.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Progress-readonly index: int--><!--Device-Progress-readonly index: int-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -56,13 +58,13 @@ readonly processed: long
 
 Size of processed data in the current file in the task, in bytes.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Progress-readonly processed: long--><!--Device-Progress-readonly processed: long-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -74,13 +76,13 @@ readonly sizes: Array<long>
 
 Size of a file in a task, in bytes. If the server uses the chunk mode for data transmission and the total file size cannot be obtained from the request header, the value of **sizes** is treated as **-1**.
 
-**Type:** Array&lt;long&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt;
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Progress-readonly sizes: Array<long>--><!--Device-Progress-readonly sizes: Array<long>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -94,11 +96,10 @@ Current task status.
 
 **Type:** State
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-Progress-readonly state: State--><!--Device-Progress-readonly state: State-End-->
-
 **System capability:** SystemCapability.Request.FileTransferAgent
-

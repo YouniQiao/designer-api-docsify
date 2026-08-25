@@ -2,11 +2,11 @@
 
 This module provides app domain verification info.@namespace appDomainVerify
 
-**Since:** 23
+**Since:** 13
+
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-declare namespace appDomainVerify--><!--Device-unnamed-declare namespace appDomainVerify-End-->
 
 **System capability:** SystemCapability.BundleManager.AppDomainVerify
 
@@ -23,9 +23,8 @@ import { appDomainVerify } from '@kit.AbilityKit';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [queryAssociatedBundleNames(Define capabilities to access app domain verification info.)](arkts-ability-appdomainverify-queryassociatedbundlenames-f-sys.md) | query bundleNames associated with domain. |
-| [queryAssociatedDomains(Define capabilities to access app domain verification info.)](arkts-ability-appdomainverify-queryassociateddomains-f-sys.md) | query domains verify associated with bundleName. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [queryAssociatedBundleNames(Define capabilities to access app domain verification info.)](arkts-ability-appdomainverify-queryassociatedbundlenames-f-sys.md) |
+| [queryAssociatedDomains(Define capabilities to access app domain verification info.)](arkts-ability-appdomainverify-queryassociateddomains-f-sys.md) |
 <!--DelEnd-->
-

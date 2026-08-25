@@ -10,30 +10,29 @@ import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, Lab
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [Chip](arkts-arkui-arkui-advanced-chip-chip-f.md) | Build function of Chip. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Chip](arkts-arkui-arkui-advanced-chip-chip-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [AccessibilityOptions](arkts-arkui-arkui-advanced-chip-accessibilityoptions-i.md) | Defines the accessibility options of the suffix icon. |
-| [ChipOptions](arkts-arkui-arkui-advanced-chip-chipoptions-i.md) | Defines the type and style parameters of the chip. |
-| [ChipSuffixSymbolGlyphOptions](arkts-arkui-arkui-advanced-chip-chipsuffixsymbolglyphoptions-i.md) | Defines the accessibility options of the symbol-type suffix icon. |
-| [ChipSymbolGlyphOptions](arkts-arkui-arkui-advanced-chip-chipsymbolglyphoptions-i.md) | Defines the prefix and suffix icon options. |
-| [CloseOptions](arkts-arkui-arkui-advanced-chip-closeoptions-i.md) | Defines the default close icon behavior attributes for the chip, including accessibility attributes. The default value of **accessibilityText** is **"Delete"**.Inherits from [AccessibilityOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-accessibilityoptions-i.md). |
-| [IconCommonOptions](arkts-arkui-arkui-advanced-chip-iconcommonoptions-i.md) | Defines the common icon options of the chip. |
-| [LabelMarginOptions](arkts-arkui-arkui-advanced-chip-labelmarginoptions-i.md) | Defines the spacing between the text and the left and right icons. |
-| [LabelOptions](arkts-arkui-arkui-advanced-chip-labeloptions-i.md) | Defines text configuration options. |
-| [LocalizedLabelMarginOptions](arkts-arkui-arkui-advanced-chip-localizedlabelmarginoptions-i.md) | Defines the spacing between the localized text and the left and right icons. |
-| [PrefixIconOptions](arkts-arkui-arkui-advanced-chip-prefixiconoptions-i.md) | Defines the prefix icon options.Inherits from [IconCommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-iconcommonoptions-i.md). |
-| [SuffixIconOptions](arkts-arkui-arkui-advanced-chip-suffixiconoptions-i.md) | Defines the suffix icon options.Inherits from [IconCommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-iconcommonoptions-i.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AccessibilityOptions](arkts-arkui-arkui-advanced-chip-accessibilityoptions-i.md) |
+| [ChipOptions](arkts-arkui-arkui-advanced-chip-chipoptions-i.md) |
+| [ChipSuffixSymbolGlyphOptions](arkts-arkui-arkui-advanced-chip-chipsuffixsymbolglyphoptions-i.md) |
+| [ChipSymbolGlyphOptions](arkts-arkui-arkui-advanced-chip-chipsymbolglyphoptions-i.md) |
+| [CloseOptions](arkts-arkui-arkui-advanced-chip-closeoptions-i.md) |
+| [IconCommonOptions](arkts-arkui-arkui-advanced-chip-iconcommonoptions-i.md) |
+| [LabelMarginOptions](arkts-arkui-arkui-advanced-chip-labelmarginoptions-i.md) |
+| [LabelOptions](arkts-arkui-arkui-advanced-chip-labeloptions-i.md) |
+| [LocalizedLabelMarginOptions](arkts-arkui-arkui-advanced-chip-localizedlabelmarginoptions-i.md) |
+| [PrefixIconOptions](arkts-arkui-arkui-advanced-chip-prefixiconoptions-i.md) |
+| [SuffixIconOptions](arkts-arkui-arkui-advanced-chip-suffixiconoptions-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [AccessibilitySelectedType](arkts-arkui-arkui-advanced-chip-accessibilityselectedtype-e.md) | Enumerates the selected state types of the chip. It allows you to specify how accessibility services convey the component's selected state to users. Different selected state types provide distinct semantics and user experiences. |
-| [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) | Enumerates the chip size types. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AccessibilitySelectedType](arkts-arkui-arkui-advanced-chip-accessibilityselectedtype-e.md) |
+| [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) |

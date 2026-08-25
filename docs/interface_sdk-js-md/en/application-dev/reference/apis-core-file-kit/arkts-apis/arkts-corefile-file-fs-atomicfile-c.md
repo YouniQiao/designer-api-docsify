@@ -4,7 +4,7 @@ AtomicFile is a class used to perform atomic read and write operations on files.
 
 **Since:** 15
 
-<!--Device-unnamed-export class AtomicFile--><!--Device-unnamed-export class AtomicFile-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -26,21 +26,21 @@ Creates an **AtomicFile** class for a file in a specified path.
 
 **Since:** 15
 
-<!--Device-AtomicFile-constructor(path: string)--><!--Device-AtomicFile-constructor(path: string)-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the file. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| path | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## delete
 
@@ -52,19 +52,19 @@ Deletes the **AtomicFile** class, including the original files and temporary fil
 
 **Since:** 15
 
-<!--Device-AtomicFile-delete(): void--><!--Device-AtomicFile-delete(): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 |  |
-| 13900002 |  |
-| 13900012 |  |
-| 13900027 |  |
-| 13900042 |  |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900012 |
+| 13900027 |
+| 13900042 |
 
 **Examples**
 
@@ -105,15 +105,15 @@ Rolls back the file after the file fails to be written.
 
 **Since:** 15
 
-<!--Device-AtomicFile-failWrite(): void--><!--Device-AtomicFile-failWrite(): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900042 |  |
+| Error Code ID |
+| --- |
+| 13900042 |
 
 **Examples**
 
@@ -147,15 +147,15 @@ Finishes writing file data when the write operation is complete.
 
 **Since:** 15
 
-<!--Device-AtomicFile-finishWrite(): void--><!--Device-AtomicFile-finishWrite(): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900042 |  |
+| Error Code ID |
+| --- |
+| 13900042 |
 
 **Examples**
 
@@ -188,24 +188,24 @@ Obtains the file object through the **AtomicFile** object.The FD needs to be clo
 
 **Since:** 15
 
-<!--Device-AtomicFile-getBaseFile(): File--><!--Device-AtomicFile-getBaseFile(): File-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [File](arkts-corefile-file-fs-file-i.md) | File object opened. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [File](arkts-corefile-file-fs-file-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900002 |  |
-| 13900005 |  |
-| 13900012 |  |
-| 13900042 |  |
+| Error Code ID |
+| --- |
+| 13900002 |
+| 13900005 |
+| 13900012 |
+| 13900042 |
 
 **Examples**
 
@@ -240,24 +240,24 @@ Creates a **ReadStream** instance.
 
 **Since:** 15
 
-<!--Device-AtomicFile-openRead(): ReadStream--><!--Device-AtomicFile-openRead(): ReadStream-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | ReadStream** instance obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ReadStream](arkts-corefile-file-fs-readstream-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 |  |
-| 13900002 |  |
-| 13900012 |  |
-| 13900042 |  |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900012 |
+| 13900042 |
 
 **Examples**
 
@@ -301,22 +301,22 @@ Reads all content of a file.
 
 **Since:** 15
 
-<!--Device-AtomicFile-readFully(): ArrayBuffer--><!--Device-AtomicFile-readFully(): ArrayBuffer-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ArrayBuffer | Full content of a file. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArrayBuffer |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900005 |  |
-| 13900042 |  |
+| Error Code ID |
+| --- |
+| 13900005 |
+| 13900042 |
 
 **Examples**
 
@@ -356,25 +356,25 @@ Starts to write new file data in the **WriteStream** object returned.If the file
 
 **Since:** 15
 
-<!--Device-AtomicFile-startWrite(): WriteStream--><!--Device-AtomicFile-startWrite(): WriteStream-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WriteStream](arkts-corefile-file-fs-writestream-c.md) | WriteStream** instance obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WriteStream](arkts-corefile-file-fs-writestream-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 |  |
-| 13900002 |  |
-| 13900012 |  |
-| 13900027 |  |
-| 13900042 |  |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900012 |
+| 13900027 |
+| 13900042 |
 
 **Examples**
 
@@ -397,4 +397,3 @@ try {
   console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
 }
 ```
-

@@ -2,9 +2,9 @@
 
 枚举，应用访问媒体资源时，对媒体资源进行信息脱敏的类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-photoAccessHelper-enum HideSensitiveType--><!--Device-photoAccessHelper-enum HideSensitiveType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ HIDE_LOCATION_AND_SHOOTING_PARAM = 0
 
 脱敏地理位置和拍摄参数。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-HideSensitiveType-HIDE_LOCATION_AND_SHOOTING_PARAM = 0--><!--Device-HideSensitiveType-HIDE_LOCATION_AND_SHOOTING_PARAM = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,9 @@ HIDE_LOCATION_ONLY = 1
 
 脱敏地理位置信息。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-HideSensitiveType-HIDE_LOCATION_ONLY = 1--><!--Device-HideSensitiveType-HIDE_LOCATION_ONLY = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,9 +50,9 @@ HIDE_SHOOTING_PARAM_ONLY = 2
 
 脱敏拍摄参数。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-HideSensitiveType-HIDE_SHOOTING_PARAM_ONLY = 2--><!--Device-HideSensitiveType-HIDE_SHOOTING_PARAM_ONLY = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -66,9 +66,9 @@ NO_HIDE_SENSITIVE_TYPE = 3
 
 不脱敏。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-HideSensitiveType-NO_HIDE_SENSITIVE_TYPE = 3--><!--Device-HideSensitiveType-NO_HIDE_SENSITIVE_TYPE = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -85,9 +85,8 @@ DEFAULT = 4
 
 **起始版本：** 23
 
-<!--Device-HideSensitiveType-DEFAULT = 4--><!--Device-HideSensitiveType-DEFAULT = 4-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
-

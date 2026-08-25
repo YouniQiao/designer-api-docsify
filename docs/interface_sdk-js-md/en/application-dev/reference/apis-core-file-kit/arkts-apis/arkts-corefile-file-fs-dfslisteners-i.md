@@ -4,7 +4,7 @@ Provides APIs for observing events. listening for the distributed file system st
 
 **Since:** 12
 
-<!--Device-unnamed-export interface DfsListeners--><!--Device-unnamed-export interface DfsListeners-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -22,18 +22,17 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 onStatus(networkId: string, status: number): void
 ```
 
-Called to return the specified status. Its parameters are passed in by connectDfs.
+Called to return the specified status. Its parameters are passed in by [connectDfs](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioconnectdfs12).
 
 **Since:** 12
 
-<!--Device-DfsListeners-onStatus(networkId: string, status: number): void--><!--Device-DfsListeners-onStatus(networkId: string, status: number): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| networkId | string | Yes | Network ID of the device. |
-| status | number | Yes | Status code of the distributed file system. The status code is the error code returned by **onStatus** invoked by **connectDfs**. If the device is abnormal when **connectDfs()** is called, **onStatus** will be called to return the error code:<br>- [13900046](../errorcode-filemanagement.md#13900046-connection-interrupted-by-software): The connection is interrupted by software. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| networkId | string | Yes |
+| status | number | Yes |

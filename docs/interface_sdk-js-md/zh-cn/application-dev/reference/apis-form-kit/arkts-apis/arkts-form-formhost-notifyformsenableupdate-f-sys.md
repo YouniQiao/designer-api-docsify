@@ -18,11 +18,11 @@ function notifyFormsEnableUpdate(
 
 通知卡片是否启用更新状态。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REQUIRE_FORM
-
-<!--Device-formHost-function notifyFormsEnableUpdate(    formIds: Array<string>,    isEnableUpdate: boolean,    callback: AsyncCallback<void>  ): void--><!--Device-formHost-function notifyFormsEnableUpdate(    formIds: Array<string>,    isEnableUpdate: boolean,    callback: AsyncCallback<void>  ): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -30,23 +30,23 @@ function notifyFormsEnableUpdate(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | 是 | 卡片标识列表。 |
-| isEnableUpdate | boolean | 是 | 表示卡片是否启用更新状态。 <br>true: 表示卡片启用更新状态。false: 表示卡片没有启用更新状态。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当通知卡片是否启用更新状态成功，error为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formIds | Array & lt;string & gt; | 是 |
+| isEnableUpdate | boolean | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
-| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
+| [16500060](../errorcode-form.md#16500060-连接服务失败) |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) |
+| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) |
 
 **示例**
 
@@ -133,11 +133,11 @@ function notifyFormsEnableUpdate(formIds: Array<string>, isEnableUpdate: boolean
 
 通知卡片是否启用更新状态。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REQUIRE_FORM
-
-<!--Device-formHost-function notifyFormsEnableUpdate(formIds: Array<string>, isEnableUpdate: boolean): Promise<void>--><!--Device-formHost-function notifyFormsEnableUpdate(formIds: Array<string>, isEnableUpdate: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -145,30 +145,29 @@ function notifyFormsEnableUpdate(formIds: Array<string>, isEnableUpdate: boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | 是 | 卡片标识列表。 |
-| isEnableUpdate | boolean | 是 | 表示卡片是否启用更新状态。 <br>true: 表示卡片启用更新状态。 <br>false: 表示卡片没有启用更新状态。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formIds | Array & lt;string & gt; | 是 |
+| isEnableUpdate | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
-| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
+| [16500060](../errorcode-form.md#16500060-连接服务失败) |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) |
+| [16501003](../errorcode-form.md#16501003-无法操作指定卡片) |
 
 **示例**
 
 参见 [notifyFormsEnableUpdate](#notifyformsenableupdate)
-

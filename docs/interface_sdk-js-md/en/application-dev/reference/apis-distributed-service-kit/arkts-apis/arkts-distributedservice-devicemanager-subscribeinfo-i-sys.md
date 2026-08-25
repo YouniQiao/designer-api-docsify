@@ -4,9 +4,9 @@ Defines subscription information.
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-deviceManager-interface SubscribeInfo--><!--Device-deviceManager-interface SubscribeInfo-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -30,9 +30,9 @@ Discovery capability.
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SubscribeInfo-capability: SubscribeCap--><!--Device-SubscribeInfo-capability: SubscribeCap-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -50,9 +50,9 @@ Frequency of device discovery.
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SubscribeInfo-freq: ExchangeFreq--><!--Device-SubscribeInfo-freq: ExchangeFreq-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -70,9 +70,9 @@ Whether the account is the same as the current account. The value **true** indic
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SubscribeInfo-isSameAccount: boolean--><!--Device-SubscribeInfo-isSameAccount: boolean-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -90,9 +90,9 @@ Whether to wake up the device. The value **true** means to wake up the device an
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SubscribeInfo-isWakeRemote: boolean--><!--Device-SubscribeInfo-isWakeRemote: boolean-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -110,9 +110,9 @@ Medium used for device discovery.
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SubscribeInfo-medium: ExchangeMedium--><!--Device-SubscribeInfo-medium: ExchangeMedium-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -130,9 +130,9 @@ Device discovery mode.
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SubscribeInfo-mode: DiscoverMode--><!--Device-SubscribeInfo-mode: DiscoverMode-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -150,11 +150,10 @@ Subscription ID, used to identify a device discovery period. The value ranges fr
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SubscribeInfo-subscribeId: number--><!--Device-SubscribeInfo-subscribeId: number-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
-

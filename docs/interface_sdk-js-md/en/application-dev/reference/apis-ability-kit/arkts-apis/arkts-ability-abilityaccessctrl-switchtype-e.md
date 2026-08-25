@@ -2,9 +2,9 @@
 
 Enumerates the global switch types.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-abilityAccessCtrl-export enum SwitchType--><!--Device-abilityAccessCtrl-export enum SwitchType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -16,13 +16,13 @@ CAMERA = 0
 
 Global switch of the camera.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-SwitchType-CAMERA = 0--><!--Device-SwitchType-CAMERA = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -34,13 +34,13 @@ MICROPHONE = 1
 
 Global switch of the microphone.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-SwitchType-MICROPHONE = 1--><!--Device-SwitchType-MICROPHONE = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -52,13 +52,12 @@ LOCATION = 2
 
 Global switch of the location service.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-SwitchType-LOCATION = 2--><!--Device-SwitchType-LOCATION = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.AccessToken
-

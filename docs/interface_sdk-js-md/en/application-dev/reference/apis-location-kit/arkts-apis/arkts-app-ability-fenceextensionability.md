@@ -10,7 +10,6 @@ import { FenceExtensionAbility } from '@kit.LocationKit';
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [FenceExtensionAbility](arkts-location-app-ability-fenceextensionability-fenceextensionability-c.md) | Class of fence extension ability. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FenceExtensionAbility](arkts-location-app-ability-fenceextensionability-fenceextensionability-c.md) |

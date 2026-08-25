@@ -4,9 +4,9 @@
 
 **继承/实现关系：** IncrementalBackupData extends [IncrementalBackupTime](arkts-corefile-backup-incrementalbackuptime-i-sys.md), [FileManifestData](arkts-corefile-backup-filemanifestdata-i-sys.md), [BackupParams](arkts-corefile-backup-backupparams-i-sys.md), [BackupPriority](arkts-corefile-backup-backuppriority-i-sys.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-backup-interface IncrementalBackupData--><!--Device-backup-interface IncrementalBackupData-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -17,4 +17,3 @@
 ```TypeScript
 import { backup } from '@kit.CoreFileKit';
 ```
-

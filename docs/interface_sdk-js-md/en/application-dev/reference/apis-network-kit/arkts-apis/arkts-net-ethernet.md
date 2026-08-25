@@ -1,10 +1,10 @@
-# @ohos.net.ethernet
+# @ohos.net.ethernet(Ethernet Connection Management)
 
 The **ethernet** module provides Ethernet management functions such as configuring a network proxy and obtaining the network IP address.
 
 **Since:** 9
 
-<!--Device-unnamed-declare namespace ethernet--><!--Device-unnamed-declare namespace ethernet-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -18,59 +18,58 @@ import { ethernet } from '@kit.NetworkKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getMacAddress](arkts-network-ethernet-getmacaddress-f.md) | Obtains the names and MAC addresses of all Ethernet NICs. This API uses a promise to return the result.  **Required permission**: ohos.permission.GET_ETHERNET_LOCAL_MAC |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getMacAddress(Ethernet Connection Management)](arkts-network-ethernet-getmacaddress-f.md) |
 
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [disableEthernetInterface](arkts-network-ethernet-disableethernetinterface-f-sys.md) | Disable the ethernet interface. |
-| [enableEthernetInterface](arkts-network-ethernet-enableethernetinterface-f-sys.md) | Enable the ethernet interface. |
-| [getAllActiveIfaces](arkts-network-ethernet-getallactiveifaces-f-sys.md) | Obtains the active network interface. This API uses an asynchronous callback to return the result. |
-| [getAllActiveIfaces](arkts-network-ethernet-getallactiveifaces-f-sys.md) | Obtains the active network interface. This API uses a promise to return the result. |
-| [getEthernetDeviceInfos](arkts-network-ethernet-getethernetdeviceinfos-f-sys.md) | Obtains the device information (such as the vendor name, product name, and maximum connection rate) of the local Ethernet NIC. This API uses a promise to return the result. |
-| [getIfaceConfig](arkts-network-ethernet-getifaceconfig-f-sys.md) | Obtains the information about a specified network interface. This API uses an asynchronous callback to return the result. |
-| [getIfaceConfig](arkts-network-ethernet-getifaceconfig-f-sys.md) | Obtains the information about a specified network interface. This API uses a promise to return the result. |
-| [isEthernetEnabled](arkts-network-ethernet-isethernetenabled-f-sys.md) | Check whether the global ethernet switch is enabled. |
-| [isIfaceActive](arkts-network-ethernet-isifaceactive-f-sys.md) | Checks whether the interface is activated. This API uses an asynchronous callback to return the result. |
-| [isIfaceActive](arkts-network-ethernet-isifaceactive-f-sys.md) | Checks whether the interface is activated. This API uses a promise to return the result. |
-| [off_interfaceStateChange](arkts-network-ethernet-offinterfacestatechange-f-sys.md#offinterfacestatechange) | Unregisters the observer for NIC hot swap events. This API uses an asynchronous callback to return the result. |
-| [on_interfaceStateChange](arkts-network-ethernet-oninterfacestatechange-f-sys.md#oninterfacestatechange) | Registers the observer for NIC hot swap events. This API uses an asynchronous callback to return the result. |
-| [setIfaceConfig](arkts-network-ethernet-setifaceconfig-f-sys.md) | Sets the network interface configuration information. This API uses an asynchronous callback to return the result. |
-| [setIfaceConfig](arkts-network-ethernet-setifaceconfig-f-sys.md) | Sets the network interface configuration information. This API uses a promise to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [disableEthernetInterface(Ethernet Connection Management)](arkts-network-ethernet-disableethernetinterface-f-sys.md) |
+| [enableEthernetInterface(Ethernet Connection Management)](arkts-network-ethernet-enableethernetinterface-f-sys.md) |
+| [getAllActiveIfaces(Ethernet Connection Management)](arkts-network-ethernet-getallactiveifaces-f-sys.md) |
+| [getAllActiveIfaces(Ethernet Connection Management)](arkts-network-ethernet-getallactiveifaces-f-sys.md) |
+| [getEthernetDeviceInfos(Ethernet Connection Management)](arkts-network-ethernet-getethernetdeviceinfos-f-sys.md) |
+| [getIfaceConfig(Ethernet Connection Management)](arkts-network-ethernet-getifaceconfig-f-sys.md) |
+| [getIfaceConfig(Ethernet Connection Management)](arkts-network-ethernet-getifaceconfig-f-sys.md) |
+| [isEthernetEnabled(Ethernet Connection Management)](arkts-network-ethernet-isethernetenabled-f-sys.md) |
+| [isIfaceActive(Ethernet Connection Management)](arkts-network-ethernet-isifaceactive-f-sys.md) |
+| [isIfaceActive(Ethernet Connection Management)](arkts-network-ethernet-isifaceactive-f-sys.md) |
+| [off(Ethernet Connection Management)](arkts-network-ethernet-off-f-sys.md#offinterfacestatechange) |
+| [on(Ethernet Connection Management)](arkts-network-ethernet-on-f-sys.md#oninterfacestatechange) |
+| [setIfaceConfig(Ethernet Connection Management)](arkts-network-ethernet-setifaceconfig-f-sys.md) |
+| [setIfaceConfig(Ethernet Connection Management)](arkts-network-ethernet-setifaceconfig-f-sys.md) |
 <!--DelEnd-->
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [MacAddressInfo](arkts-network-ethernet-macaddressinfo-i.md) | Defines the name and MAC address of an Ethernet NIC. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [MacAddressInfo(Ethernet Connection Management)](arkts-network-ethernet-macaddressinfo-i.md) |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [EthernetDeviceInfos](arkts-network-ethernet-ethernetdeviceinfos-i-sys.md) | Defines Ethernet device information. |
-| [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | Defines the network configuration for the Ethernet connection. |
-| [InterfaceStateInfo](arkts-network-ethernet-interfacestateinfo-i-sys.md) | Listens for status changes of an Ethernet NIC. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [EthernetDeviceInfos(Ethernet Connection Management)](arkts-network-ethernet-ethernetdeviceinfos-i-sys.md) |
+| [InterfaceConfiguration(Ethernet Connection Management)](arkts-network-ethernet-interfaceconfiguration-i-sys.md) |
+| [InterfaceStateInfo(Ethernet Connection Management)](arkts-network-ethernet-interfacestateinfo-i-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [DeviceConnectionType](arkts-network-ethernet-deviceconnectiontype-e-sys.md) | Enumerates Ethernet device connection modes. |
-| [IPSetMode](arkts-network-ethernet-ipsetmode-e-sys.md) | Defines the configuration mode of the Ethernet connection. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DeviceConnectionType(Ethernet Connection Management)](arkts-network-ethernet-deviceconnectiontype-e-sys.md) |
+| [IPSetMode(Ethernet Connection Management)](arkts-network-ethernet-ipsetmode-e-sys.md) |
 <!--DelEnd-->
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [HttpProxy](arkts-network-ethernet-httpproxy-t.md) | Defines the network proxy configuration. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [HttpProxy(Ethernet Connection Management)](arkts-network-ethernet-httpproxy-t.md) |

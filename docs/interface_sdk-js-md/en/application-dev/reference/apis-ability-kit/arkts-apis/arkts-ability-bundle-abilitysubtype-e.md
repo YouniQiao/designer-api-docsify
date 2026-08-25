@@ -7,9 +7,9 @@ Enumerates the ability subtypes.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-bundle-export enum AbilitySubType--><!--Device-bundle-export enum AbilitySubType-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -23,9 +23,9 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-AbilitySubType-UNSPECIFIED = 0--><!--Device-AbilitySubType-UNSPECIFIED = 0-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -39,9 +39,8 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-<!--Device-AbilitySubType-CA = 1--><!--Device-AbilitySubType-CA = 1-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework
-

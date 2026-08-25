@@ -4,9 +4,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export declare class CommonTransition--><!--Device-unnamed-export declare class CommonTransition-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,25 +18,23 @@ opacity(value: double): this
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-CommonTransition-opacity(value: double): this--><!--Device-CommonTransition-opacity(value: double): this-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | double | 是 | 设置入场的起点透明度值或者退场的终点透明度值。<br/>取值范围：[0, 1] |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| this | 返回当前组件。 |
+| 类型 |
+| --- |
+| this |
 
 ## scale
 
@@ -50,25 +46,23 @@ scale(value: ScaleOptions): this
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-CommonTransition-scale(value: ScaleOptions): this--><!--Device-CommonTransition-scale(value: ScaleOptions): this-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [ScaleOptions](../arkts-components/arkts-arkui-scaleoptions-i.md) | 是 | 设置页面转场时的缩放效果，为入场时起点和退场时终点的值。<br/>- x：横向放大倍数（或缩小比例）。<br/>- y：纵向放大倍数（或缩小比例）。<br/>- z：竖向放大倍数（或缩小比例）。<br/>- centerX、centerY缩放中心点。centerX和centerY默认值是"50%"，即默认以页面的中心点为旋转中心点。<br/>- 中心点为(0, 0)代表页面的左 上角。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ScaleOptions](../arkts-components/arkts-arkui-scaleoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| this | 返回当前组件。 |
+| 类型 |
+| --- |
+| this |
 
 ## slide
 
@@ -80,25 +74,23 @@ slide(value: SlideEffect): this
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-CommonTransition-slide(value: SlideEffect): this--><!--Device-CommonTransition-slide(value: SlideEffect): this-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [SlideEffect](arkts-arkui-pagetransition-slideeffect-e.md) | 是 | 页面转场时的滑入滑出效果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [SlideEffect](arkts-arkui-pagetransition-slideeffect-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| this | 返回当前组件。 |
+| 类型 |
+| --- |
+| this |
 
 ## translate
 
@@ -110,23 +102,20 @@ translate(value: TranslateOptions): this
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-CommonTransition-translate(value: TranslateOptions): this--><!--Device-CommonTransition-translate(value: TranslateOptions): this-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [TranslateOptions](../arkts-components/arkts-arkui-translateoptions-i.md) | 是 | 设置页面转场时的平移效果，为入场时起点和退场时终点的值，和slide同时设置时默认生效slide。<br/>- x：横向的平移距离。<br/>- y：纵向 的平移距离。<br/>- z：竖向的平移距离。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [TranslateOptions](../arkts-components/arkts-arkui-translateoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| this | 返回当前组件。 |
-
+| 类型 |
+| --- |
+| this |

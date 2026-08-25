@@ -2,9 +2,9 @@
 
 Defines the notification key value.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-notificationSubscribe-export interface NotificationKey--><!--Device-notificationSubscribe-export interface NotificationKey-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -24,11 +24,11 @@ id: int
 
 Notification ID.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-NotificationKey-id: int--><!--Device-NotificationKey-id: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -44,11 +44,10 @@ Notification label. This parameter is left empty by default.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-NotificationKey-label?: string--><!--Device-NotificationKey-label?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

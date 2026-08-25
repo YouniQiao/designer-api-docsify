@@ -26,25 +26,24 @@ function getParams(): Object
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 18
 
 **替代接口：** [getParams](arkts-arkui-arkui-uicontext-router-c.md#getparams)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-router-function getParams(): Object--><!--Device-router-function getParams(): Object-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Object | 发起跳转的页面往当前页传入的参数。 |
+| 类型 |
+| --- |
+| Object |
 
 **示例**
 
 ```TypeScript
 this.getUIContext().getRouter().getParams();
 ```
-

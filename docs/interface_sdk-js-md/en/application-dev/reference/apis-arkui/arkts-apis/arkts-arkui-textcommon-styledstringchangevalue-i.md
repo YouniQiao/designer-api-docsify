@@ -4,9 +4,7 @@ Define the StyledString changed value.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export interface StyledStringChangeValue--><!--Device-unnamed-export interface StyledStringChangeValue-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +20,9 @@ Preview StyledString.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StyledStringChangeValue-previewText?: StyledString--><!--Device-StyledStringChangeValue-previewText?: StyledString-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,11 +38,9 @@ Range of the content to be replaced.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StyledStringChangeValue-range: TextRange--><!--Device-StyledStringChangeValue-range: TextRange-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,11 +56,8 @@ StyledString to replace.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-StyledStringChangeValue-replacementString: StyledString--><!--Device-StyledStringChangeValue-replacementString: StyledString-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

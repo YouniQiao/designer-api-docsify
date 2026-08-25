@@ -1,0 +1,81 @@
+# RadioOptions
+
+Input parameter for creating a radio box.@interface RadioOptions
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## group
+
+```TypeScript
+group: string
+```
+
+Radio group name.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## indicatorBuilder
+
+```TypeScript
+indicatorBuilder?: CustomBuilder
+```
+
+builder for IndicatorType.CUSTOM
+
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## indicatorType
+
+```TypeScript
+indicatorType?: RadioIndicatorType
+```
+
+Indicator Type.
+
+**Type:** [RadioIndicatorType](arkts-arkui-radio-radioindicatortype-e.md)
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## value
+
+```TypeScript
+value: string
+```
+
+Radio name.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

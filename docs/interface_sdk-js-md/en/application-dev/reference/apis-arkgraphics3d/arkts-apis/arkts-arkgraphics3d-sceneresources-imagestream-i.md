@@ -6,7 +6,7 @@ ImageStream resource.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export interface ImageStream--><!--Device-unnamed-export interface ImageStream-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -22,9 +22,8 @@ The surfaceId of the ImageStream.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ImageStream-readonly surfaceId: string--><!--Device-ImageStream-readonly surfaceId: string-End-->
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

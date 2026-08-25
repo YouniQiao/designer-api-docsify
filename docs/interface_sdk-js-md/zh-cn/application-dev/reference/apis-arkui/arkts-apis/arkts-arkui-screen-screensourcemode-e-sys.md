@@ -2,9 +2,9 @@
 
 屏幕显示内容来源模式枚举。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-screen-enum ScreenSourceMode--><!--Device-screen-enum ScreenSourceMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -18,9 +18,9 @@ SCREEN_MAIN = 0
 
 表示屏幕为默认主屏。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-ScreenSourceMode-SCREEN_MAIN = 0--><!--Device-ScreenSourceMode-SCREEN_MAIN = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -34,9 +34,9 @@ SCREEN_MIRROR = 1
 
 表示屏幕内容来自镜像。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-ScreenSourceMode-SCREEN_MIRROR = 1--><!--Device-ScreenSourceMode-SCREEN_MIRROR = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -50,9 +50,9 @@ SCREEN_EXTEND = 2
 
 表示屏幕内容来自扩展。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-ScreenSourceMode-SCREEN_EXTEND = 2--><!--Device-ScreenSourceMode-SCREEN_EXTEND = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -66,11 +66,10 @@ SCREEN_ALONE = 3
 
 表示屏幕为未指定来源。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-ScreenSourceMode-SCREEN_ALONE = 3--><!--Device-ScreenSourceMode-SCREEN_ALONE = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
-

@@ -2,9 +2,9 @@
 
 系统避让区变化后返回当前避让区域以及避让区域类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-window-interface AvoidAreaOptions--><!--Device-window-interface AvoidAreaOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -24,11 +24,11 @@ area: AvoidArea
 
 **类型：** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-AvoidAreaOptions-area: AvoidArea--><!--Device-AvoidAreaOptions-area: AvoidArea-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -42,11 +42,10 @@ type: AvoidAreaType
 
 **类型：** [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-AvoidAreaOptions-type: AvoidAreaType--><!--Device-AvoidAreaOptions-type: AvoidAreaType-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
-

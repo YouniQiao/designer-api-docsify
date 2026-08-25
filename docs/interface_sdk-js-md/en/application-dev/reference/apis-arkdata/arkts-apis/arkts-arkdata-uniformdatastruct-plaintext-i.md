@@ -2,9 +2,9 @@
 
 Represents data of the plain text type.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-uniformDataStruct-interface PlainText--><!--Device-uniformDataStruct-interface PlainText-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -26,9 +26,9 @@ Text abstract. It is an empty string by default.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-PlainText-abstract?: string--><!--Device-PlainText-abstract?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -42,11 +42,11 @@ Object of the dictionary type used to describe the attributes of the text conten
 
 **Type:** Record&lt;string, string&gt;
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PlainText-details?: Record<string, string>--><!--Device-PlainText-details?: Record<string, string>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -62,9 +62,9 @@ Indicates the abstract of the PlainText.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-PlainText-textAbstract?: string--><!--Device-PlainText-textAbstract?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -78,11 +78,11 @@ Plaintext content.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PlainText-textContent: string--><!--Device-PlainText-textContent: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -96,11 +96,11 @@ Uniform data type, which has a fixed value of **general.plain-text**. For detail
 
 **Type:** 'general.plain-text'
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PlainText-readonly uniformDataType: 'general.plain-text'--><!--Device-PlainText-readonly uniformDataType: 'general.plain-text'-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -127,4 +127,3 @@ if(plainText.details != undefined){
 }
 let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
 ```
-

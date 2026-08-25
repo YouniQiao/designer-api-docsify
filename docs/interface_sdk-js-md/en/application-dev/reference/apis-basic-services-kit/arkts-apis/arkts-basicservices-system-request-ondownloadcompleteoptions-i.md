@@ -2,11 +2,11 @@
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** on
-
-<!--Device-unnamed-export interface OnDownloadCompleteOptions--><!--Device-unnamed-export interface OnDownloadCompleteOptions-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -24,15 +24,13 @@ complete?: () => void
 
 Called when API call is complete.
 
-**Type:** () =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
 **Substitutes:** on
-
-<!--Device-OnDownloadCompleteOptions-complete?: () => void--><!--Device-OnDownloadCompleteOptions-complete?: () => void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -44,17 +42,22 @@ fail?: (data: any, code: number) => void
 
 Called when API call has failed. Header information and HTTP status code returned when the upload task fails.
 
-**Type:** (data: any, code: number) =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
 **Substitutes:** on
 
-<!--Device-OnDownloadCompleteOptions-fail?: (data: any, code: number) => void--><!--Device-OnDownloadCompleteOptions-fail?: (data: any, code: number) => void-End-->
-
 **System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | any | Yes |
+| code | number | Yes |
 
 ## success
 
@@ -64,17 +67,21 @@ success?: (data: OnDownloadCompleteResponse) => void
 
 Called when API call is successful.
 
-**Type:** (data: OnDownloadCompleteResponse) =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
 **Substitutes:** on
 
-<!--Device-OnDownloadCompleteOptions-success?: (data: OnDownloadCompleteResponse) => void--><!--Device-OnDownloadCompleteOptions-success?: (data: OnDownloadCompleteResponse) => void-End-->
-
 **System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | [OnDownloadCompleteResponse](arkts-basicservices-system-request-ondownloadcompleteresponse-i.md) | Yes |
 
 ## token
 
@@ -88,11 +95,10 @@ Result token returned by the download API.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** tid
 
-<!--Device-OnDownloadCompleteOptions-token: string--><!--Device-OnDownloadCompleteOptions-token: string-End-->
-
 **System capability:** SystemCapability.MiscServices.Download
-

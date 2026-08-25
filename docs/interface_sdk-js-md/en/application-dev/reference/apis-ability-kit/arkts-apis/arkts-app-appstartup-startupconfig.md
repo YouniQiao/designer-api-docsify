@@ -10,7 +10,6 @@ import { StartupConfig } from '@kit.AbilityKit';
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | The module defines the configuration of [AppStartup](../../../application-models/app-startup.md). |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) |

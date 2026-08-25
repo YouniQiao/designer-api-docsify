@@ -16,15 +16,15 @@ function constructTLSSocketInstance(): TLSSocket
 
 **起始版本：** 9
 
-<!--Device-socket-function constructTLSSocketInstance(): TLSSocket--><!--Device-socket-function constructTLSSocketInstance(): TLSSocket-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [TLSSocket](arkts-network-socket-tlssocket-i.md) | 返回一个TLSSocket对象。 |
+| 类型 |
+| --- |
+| [TLSSocket](arkts-network-socket-tlssocket-i.md) |
 
 **示例**
 
@@ -74,32 +74,31 @@ function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket
 
 **起始版本：** 12
 
-<!--Device-socket-function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket--><!--Device-socket-function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| tcpSocket | TCPSocket | 是 | 需要进行升级的TCPSocket对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| tcpSocket | [TCPSocket](arkts-network-socket-tcpsocket-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [TLSSocket](arkts-network-socket-tlssocket-i.md) | 返回一个TLSSocket对象。 |
+| 类型 |
+| --- |
+| [TLSSocket](arkts-network-socket-tlssocket-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
-| 2303601 | Invalid socket FD. |
-| 2303602 | Socket is not connected. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) |
+| 2303601 |
+| 2303602 |
 
 **示例**
 
 参见 [constructTLSSocketInstance](#constructtlssocketinstance)
-

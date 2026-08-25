@@ -2,9 +2,9 @@
 
 枚举，表示云端媒体资产的删除方式。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-photoAccessHelper-enum CloudMediaRetainType--><!--Device-photoAccessHelper-enum CloudMediaRetainType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ RETAIN_FORCE = 0
 
 删除原文件在云空间的本地元数据和缩略图。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-CloudMediaRetainType-RETAIN_FORCE = 0--><!--Device-CloudMediaRetainType-RETAIN_FORCE = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,11 +34,10 @@ HDC_RETAIN_FORCE = 1
 
 删除原文件在家庭存储设备的本地元数据和缩略图。
 
-**起始版本：** 26.0.0
+**起始版本：** 22
 
-<!--Device-CloudMediaRetainType-HDC_RETAIN_FORCE = 1--><!--Device-CloudMediaRetainType-HDC_RETAIN_FORCE = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
-

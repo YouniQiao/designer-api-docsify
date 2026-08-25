@@ -10,7 +10,6 @@ import { SwipeRefresher } from '@kit.ArkUI';
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [SwipeRefresher](arkts-arkui-arkui-advanced-swiperefresher-swiperefresher-s.md) | Declare component SwipeRefresher |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SwipeRefresher](arkts-arkui-arkui-advanced-swiperefresher-swiperefresher-s.md) |

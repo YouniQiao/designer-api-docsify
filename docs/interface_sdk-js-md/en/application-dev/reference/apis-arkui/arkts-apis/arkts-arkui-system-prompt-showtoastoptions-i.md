@@ -4,11 +4,11 @@ Defines the options of ShowToast.@interface ShowToastOptions
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [ShowToastOptions](arkts-arkui-promptaction-showtoastoptions-i.md)
-
-<!--Device-unnamed-export interface ShowToastOptions--><!--Device-unnamed-export interface ShowToastOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,11 @@ The distance between toast dialog box and the bottom of screen.
 
 **Since:** 5
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
+
 **Deprecated since:** 8
 
 **Substitutes:** [bottom](arkts-arkui-promptaction-showtoastoptions-i.md#bottom)
-
-<!--Device-ShowToastOptions-bottom?: string | number--><!--Device-ShowToastOptions-bottom?: string | number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,11 +50,11 @@ Duration of toast dialog box. The default value is 1500. The recommended value r
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [duration](arkts-arkui-promptaction-showtoastoptions-i.md#duration)
-
-<!--Device-ShowToastOptions-duration?: number--><!--Device-ShowToastOptions-duration?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,11 +70,10 @@ Text to display.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [message](arkts-arkui-promptaction-showtoastoptions-i.md#message)
 
-<!--Device-ShowToastOptions-message: string--><!--Device-ShowToastOptions-message: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

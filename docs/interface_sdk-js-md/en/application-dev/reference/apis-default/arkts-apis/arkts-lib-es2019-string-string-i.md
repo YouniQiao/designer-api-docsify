@@ -1,8 +1,6 @@
 # String
 
-**Since:** -1
-
-<!--Device-unnamed-interface String--><!--Device-unnamed-interface String-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,14 +15,12 @@ trimEnd(): string
 
 Removes the trailing white space and line terminator characters from a string.
 
-**Since:** -1
-
-<!--Device-String-trimEnd(): string--><!--Device-String-trimEnd(): string-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## trimLeft
 
 ```TypeScript
@@ -33,16 +29,14 @@ trimLeft(): string
 
 Removes the leading white space and line terminator characters from a string.
 
-**Since:** -1
+**ArkTS mode:** 
 
 **Deprecated since:** legacy feature for browser compatibility. Use `trimStart` instead
 
-<!--Device-String-trimLeft(): string--><!--Device-String-trimLeft(): string-End-->
-
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## trimRight
 
 ```TypeScript
@@ -51,16 +45,14 @@ trimRight(): string
 
 Removes the trailing white space and line terminator characters from a string.
 
-**Since:** -1
+**ArkTS mode:** 
 
 **Deprecated since:** legacy feature for browser compatibility. Use `trimEnd` instead
 
-<!--Device-String-trimRight(): string--><!--Device-String-trimRight(): string-End-->
-
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## trimStart
 
 ```TypeScript
@@ -69,11 +61,9 @@ trimStart(): string
 
 Removes the leading white space and line terminator characters from a string.
 
-**Since:** -1
-
-<!--Device-String-trimStart(): string--><!--Device-String-trimStart(): string-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

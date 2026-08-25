@@ -4,33 +4,39 @@ NfcATag 提供 NFC-A(ISO 14443-3A)技术的属性和I/O操作的访问，继承�
 
 **继承/实现关系：** NfcATag extends TagSession
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-unnamed-export interface NfcATag--><!--Device-unnamed-export interface NfcATag-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## getAtqa
 
+ArkTS-Dyn:
+```TypeScript
+getAtqa(): number[]
+```
+
+ArkTS-Sta:
 ```TypeScript
 getAtqa(): int[]
 ```
 
 获取NFC-A标签的Atqa值。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NfcATag-getAtqa(): int[]--><!--Device-NfcATag-getAtqa(): int[]-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int[] | NfcA 标签的Atqa值，每个number十六进制表示，范围是0x00~0xFF。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
 
 **示例**
 
@@ -44,25 +50,31 @@ console.info("nfcA atqa: " + atqa);
 
 ## getSak
 
+ArkTS-Dyn:
+```TypeScript
+getSak(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getSak(): int
 ```
 
 获取NFC-A标签的SAK值。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NfcATag-getSak(): int--><!--Device-NfcATag-getSak(): int-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | NfcA 标签的SAK值，十六进制表示，范围是0x00~0xFF。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -73,4 +85,3 @@ import { tag } from '@kit.ConnectivityKit';
 let sak : number = nfcA.getSak();
 console.info("nfcA sak: " + sak);
 ```
-

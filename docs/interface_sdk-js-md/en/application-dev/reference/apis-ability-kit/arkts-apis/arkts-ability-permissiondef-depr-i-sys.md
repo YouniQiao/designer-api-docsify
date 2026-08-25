@@ -9,11 +9,11 @@ The module provides permission details defined in the configuration file.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [PermissionDef](arkts-ability-permissiondef-i-sys.md)
-
-<!--Device-unnamed-export interface PermissionDef--><!--Device-unnamed-export interface PermissionDef-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -33,11 +33,11 @@ ID of the permission description.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** descriptionId
-
-<!--Device-PermissionDef-descriptionId: number--><!--Device-PermissionDef-descriptionId: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -57,11 +57,11 @@ Grant mode of the permission. The value **0** means that the system automaticall
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** grantMode
-
-<!--Device-PermissionDef-grantMode: number--><!--Device-PermissionDef-grantMode: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -81,11 +81,11 @@ ID of the permission label.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** labelId
-
-<!--Device-PermissionDef-labelId: number--><!--Device-PermissionDef-labelId: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -105,13 +105,12 @@ Name of the permission.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** permissionName
 
-<!--Device-PermissionDef-permissionName: string--><!--Device-PermissionDef-permissionName: string-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **System API:** This is a system API.
-

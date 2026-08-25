@@ -4,9 +4,7 @@ Declare struct ExceptionPrompt higher-order component.
 
 **Since:** 12
 
-**Decorator:** @Component
-
-<!--Device-unnamed-export declare struct ExceptionPrompt--><!--Device-unnamed-export declare struct ExceptionPrompt-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +24,11 @@ The build function is a member function that must return an ArkTS component type
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ExceptionPrompt-build(): void--><!--Device-ExceptionPrompt-build(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,15 +40,13 @@ onActionTextClick?: () => void
 
 Callback when click the icon button.
 
-**Type:** () =&gt; void
-
 **Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ExceptionPrompt-onActionTextClick?: () => void--><!--Device-ExceptionPrompt-onActionTextClick?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,33 +58,32 @@ onTipClick?: () => void
 
 Callback when clicking the text on the left.
 
-**Type:** () =&gt; void
-
 **Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ExceptionPrompt-onTipClick?: () => void--><!--Device-ExceptionPrompt-onTipClick?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## options
 
+```TypeScript
+options: PromptOptions
+```
+
 Configuration information of ExceptionPrompt.
 
-**Type:** [PromptOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-exceptionprompt-promptoptions-i.md)
+**Type:** [PromptOptions](arkts-arkui-arkui-advanced-exceptionprompt-promptoptions-i.md)
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ExceptionPrompt-@Prop options: PromptOptions--><!--Device-ExceptionPrompt-@Prop options: PromptOptions-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

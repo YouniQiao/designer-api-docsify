@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [WaterFlowModifier](arkts-arkui-waterflowmodifier-c.md) | Defines WaterFlow Modifier@extends WaterFlowAttribute @implements AttributeModifier&lt;WaterFlowAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [WaterFlowModifier](arkts-arkui-waterflowmodifier-c.md) |

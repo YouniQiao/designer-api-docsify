@@ -2,11 +2,8 @@
 
 ## Summary
 
-<!--Del-->
-### Interfaces(System API)
+### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [AutoFillRect](arkts-ability-autofillrect-i-sys.md) | AutoFillRect describes the rectangle used for auto-fill. |
-<!--DelEnd-->
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AutoFillRect](arkts-ability-autofillrect-i.md) |

@@ -4,9 +4,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-unnamed-export class StringBuilder--><!--Device-unnamed-export class StringBuilder-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,25 +23,23 @@ append(s: string): StringBuilder
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-append(s: string): StringBuilder--><!--Device-StringBuilder-append(s: string): StringBuilder-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| s | string | 是 | 待追加的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| s | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | 内部缓冲区已更新的构建器。 |
+| 类型 |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |
 
 ## append
 
@@ -55,25 +51,23 @@ append(i: boolean): StringBuilder
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-append(i: boolean): StringBuilder--><!--Device-StringBuilder-append(i: boolean): StringBuilder-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | boolean | 是 | 待追加的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | 内部缓冲区已更新的构建器。 |
+| 类型 |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |
 
 ## append
 
@@ -85,25 +79,23 @@ append(i: byte): StringBuilder
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-append(i: byte): StringBuilder--><!--Device-StringBuilder-append(i: byte): StringBuilder-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | byte | 是 | 待追加的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | 内部缓冲区已更新的构建器。 |
+| 类型 |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |
 
 ## append
 
@@ -115,25 +107,23 @@ append(i: char): StringBuilder
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-append(i: char): StringBuilder--><!--Device-StringBuilder-append(i: char): StringBuilder-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | char | 是 | 待追加的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | char | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | 内部缓冲区已更新的构建器。 |
+| 类型 |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |
 
 ## append
 
@@ -145,25 +135,23 @@ append(i: short): StringBuilder
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-append(i: short): StringBuilder--><!--Device-StringBuilder-append(i: short): StringBuilder-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | short | 是 | 待追加的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | 内部缓冲区已更新的构建器。 |
+| 类型 |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |
 
 ## append
 
@@ -175,25 +163,23 @@ append(i: int): StringBuilder
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-append(i: int): StringBuilder--><!--Device-StringBuilder-append(i: int): StringBuilder-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | int | 是 | 待追加的值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | 内部缓冲区已更新的构建器。 |
+| 类型 |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |
 
 ## append
 
@@ -205,25 +191,23 @@ append(i: long): StringBuilder
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-append(i: long): StringBuilder--><!--Device-StringBuilder-append(i: long): StringBuilder-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | long | 是 | 待追加的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | 内部缓冲区已更新的构建器。 |
+| 类型 |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |
 
 ## append
 
@@ -235,25 +219,23 @@ append(i: float): StringBuilder
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-append(i: float): StringBuilder--><!--Device-StringBuilder-append(i: float): StringBuilder-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | float | 是 | 待追加的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | float | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | 内部缓冲区已更新的构建器。 |
+| 类型 |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |
 
 ## append
 
@@ -265,25 +247,23 @@ append(i: double): StringBuilder
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-append(i: double): StringBuilder--><!--Device-StringBuilder-append(i: double): StringBuilder-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | double | 是 | 待追加的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | 内部缓冲区已更新的构建器。 |
+| 类型 |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |
 
 ## append
 
@@ -295,25 +275,23 @@ append(o: Object): StringBuilder
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-append(o: Object): StringBuilder--><!--Device-StringBuilder-append(o: Object): StringBuilder-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| o | Object | 是 | 将被转换为字符串的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| o | Object | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | 内部缓冲区已更新的构建器。 |
+| 类型 |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |
 
 ## concatStrings
 
@@ -325,26 +303,24 @@ static concatStrings(lhs: string, rhs: string): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-static concatStrings(lhs: string, rhs: string): string--><!--Device-StringBuilder-static concatStrings(lhs: string, rhs: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| lhs | string | 是 | 左侧字符串（前缀）。 |
-| rhs | string | 是 | 右侧字符串（后缀）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| lhs | string | 是 |
+| rhs | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 连接后的结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## constructor
 
@@ -356,11 +332,9 @@ constructor()
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-constructor()--><!--Device-StringBuilder-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -374,19 +348,17 @@ constructor(fromChars: FixedArray<char>)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-constructor(fromChars: FixedArray<char>)--><!--Device-StringBuilder-constructor(fromChars: FixedArray<char>)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| fromChars | FixedArray&lt;char&gt; | 是 | 用于初始化构建器的字符数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| fromChars | FixedArray & lt;char & gt; | 是 |
 
 ## constructor
 
@@ -398,19 +370,17 @@ constructor(fromChars: char[])
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-constructor(fromChars: char[])--><!--Device-StringBuilder-constructor(fromChars: char[])-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| fromChars | char[] | 是 | 用于初始化构建器的字符数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| fromChars | char[] | 是 |
 
 ## constructor
 
@@ -422,19 +392,17 @@ constructor(s: string)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-constructor(s: string)--><!--Device-StringBuilder-constructor(s: string)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| s | string | 是 | 用于初始化构建器的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| s | string | 是 |
 
 ## toString
 
@@ -446,19 +414,17 @@ toString(): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-toString(): string--><!--Device-StringBuilder-toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 构建器当前缓冲区对应的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toString
 
@@ -470,25 +436,23 @@ static toString(i: boolean): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-static toString(i: boolean): string--><!--Device-StringBuilder-static toString(i: boolean): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | boolean | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## toString
 
@@ -500,25 +464,23 @@ static toString(i: byte): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-static toString(i: byte): string--><!--Device-StringBuilder-static toString(i: byte): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | byte | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## toString
 
@@ -530,25 +492,23 @@ static toString(i: char): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-static toString(i: char): string--><!--Device-StringBuilder-static toString(i: char): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | char | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | char | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## toString
 
@@ -560,25 +520,23 @@ static toString(i: short): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-static toString(i: short): string--><!--Device-StringBuilder-static toString(i: short): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | short | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## toString
 
@@ -590,25 +548,23 @@ static toString(i: int): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-static toString(i: int): string--><!--Device-StringBuilder-static toString(i: int): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | int | 是 | 待转换的值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## toString
 
@@ -620,25 +576,23 @@ static toString(i: long): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-static toString(i: long): string--><!--Device-StringBuilder-static toString(i: long): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | long | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## toString
 
@@ -650,25 +604,23 @@ static toString(f: float): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-static toString(f: float): string--><!--Device-StringBuilder-static toString(f: float): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| f | float | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [f](arkts-arkts-float-c.md) | float | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## toString
 
@@ -680,23 +632,36 @@ static toString(d: double): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StringBuilder-static toString(d: double): string--><!--Device-StringBuilder-static toString(d: double): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| d | double | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换结果。 |
+| 类型 |
+| --- |
+| string |
 
+## stringLength
+
+```TypeScript
+public get stringLength(): int
+```
+
+当前已累积字符串的长度。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang

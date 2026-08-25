@@ -4,9 +4,7 @@ Core class representing a JSON element that can hold any valid JSON value. Provi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-jsonx-export class JsonElement--><!--Device-jsonx-export class JsonElement-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,25 +23,23 @@ Gets a JSON element from an array by index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-$_get(index: int): JsonElement--><!--Device-JsonElement-$_get(index: int): JsonElement-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to look up. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | The JSON element associated with the index. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) |
 
 ## $_get
 
@@ -55,25 +51,23 @@ Gets a JSON element from an object by key.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-$_get(key: string): JsonElement--><!--Device-JsonElement-$_get(key: string): JsonElement-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to look up. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | The JSON element associated with the key. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) |
 
 ## $_iterator
 
@@ -85,19 +79,17 @@ Iterator over object properties if jsonType == JsonType.JsonObject. on type erro
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-$_iterator(): IterableIterator<[string, JsonElement]>--><!--Device-JsonElement-$_iterator(): IterableIterator<[string, JsonElement]>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;[string, JsonElement]&gt; | An iterator over the object properties. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;[string, JsonElement] & gt; |
 
 ## asArray
 
@@ -109,19 +101,17 @@ Gets an array value from the element.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-asArray(): Array<JsonElement>--><!--Device-JsonElement-asArray(): Array<JsonElement>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;[JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | The array value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;[JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; |
 
 ## asBigInt
 
@@ -133,19 +123,17 @@ Gets a bigint value from the element.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-asBigInt(): bigint--><!--Device-JsonElement-asBigInt(): bigint-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint | The bigint value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| bigint |
 
 ## asBoolean
 
@@ -157,19 +145,17 @@ Gets a boolean value from the element.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-asBoolean(): boolean--><!--Device-JsonElement-asBoolean(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | The boolean value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## asDouble
 
@@ -181,19 +167,17 @@ Gets a double value from the element.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-asDouble(): double--><!--Device-JsonElement-asDouble(): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | The double value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## asInteger
 
@@ -205,19 +189,17 @@ Gets an integer value from the element.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-asInteger(): int--><!--Device-JsonElement-asInteger(): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | The integer value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## asLong
 
@@ -229,19 +211,17 @@ Gets a long value from the element.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-asLong(): long--><!--Device-JsonElement-asLong(): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The long value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## asNull
 
@@ -253,19 +233,17 @@ Gets a null value from the element.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-asNull(): null--><!--Device-JsonElement-asNull(): null-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| null | The null value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| null |
 
 ## asString
 
@@ -277,19 +255,17 @@ Gets a string value from the element.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-asString(): string--><!--Device-JsonElement-asString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | The string value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## constructor
 
@@ -301,11 +277,9 @@ Default parameterless constructor. Creates an undefined JSON element.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-constructor()--><!--Device-JsonElement-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -319,19 +293,17 @@ Copy constructor (deep copy). Creates a new JSON element by copying the values f
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-constructor(other: JsonElement)--><!--Device-JsonElement-constructor(other: JsonElement)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | Yes | The JSON element to copy from. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | Yes |
 
 ## constructor
 
@@ -343,19 +315,17 @@ Creates a new JSON element from a key-value structure.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-constructor(elements: Record<string, JsonElement>)--><!--Device-JsonElement-constructor(elements: Record<string, JsonElement>)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| elements | Record&lt;string, [JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | Yes | The key-value structure to create from. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [elements](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-pagemediaentity-i.md) | Record&lt;string, [JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | Yes |
 
 ## createArray
 
@@ -367,25 +337,23 @@ Creates a new JSON element containing an array of JSON elements.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-static createArray(elements: Array<JsonElement>): JsonElement--><!--Device-JsonElement-static createArray(elements: Array<JsonElement>): JsonElement-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| elements | Array&lt;[JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | Yes | The array of JSON elements to store. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [elements](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-pagemediaentity-i.md) | Array&lt;[JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | A new JsonElement containing the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) |
 
 ## createBigInt
 
@@ -397,25 +365,23 @@ Creates a new JSON element containing a bigint value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-static createBigInt(value: bigint): JsonElement--><!--Device-JsonElement-static createBigInt(value: bigint): JsonElement-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | bigint | Yes | The bigint value to store. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | bigint | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | A new JsonElement containing the bigint value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) |
 
 ## createBoolean
 
@@ -427,25 +393,23 @@ Creates a new JSON element containing a boolean value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-static createBoolean(value: boolean): JsonElement--><!--Device-JsonElement-static createBoolean(value: boolean): JsonElement-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | boolean | Yes | The boolean value to store. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | A new JsonElement containing the boolean value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) |
 
 ## createDouble
 
@@ -457,25 +421,23 @@ Creates a new JSON element containing a double value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-static createDouble(value: double): JsonElement--><!--Device-JsonElement-static createDouble(value: double): JsonElement-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | The double value to store. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | A new JsonElement containing the double value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) |
 
 ## createInteger
 
@@ -487,25 +449,23 @@ Creates a new JSON element containing an integer value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-static createInteger(value: int): JsonElement--><!--Device-JsonElement-static createInteger(value: int): JsonElement-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | int | Yes | The integer value to store. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | A new JsonElement containing the integer value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) |
 
 ## createLong
 
@@ -517,25 +477,23 @@ Creates a new JSON element containing a long value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-static createLong(value: long): JsonElement--><!--Device-JsonElement-static createLong(value: long): JsonElement-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | long | Yes | The long value to store. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | A new JsonElement containing the long value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) |
 
 ## createNull
 
@@ -547,19 +505,17 @@ Creates a new JSON element containing a null value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-static createNull(): JsonElement--><!--Device-JsonElement-static createNull(): JsonElement-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | A new JsonElement containing null. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) |
 
 ## createObject
 
@@ -571,25 +527,23 @@ Creates a new JSON element containing an object with key-value pairs.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-static createObject(map: Map<string, JsonElement>): JsonElement--><!--Device-JsonElement-static createObject(map: Map<string, JsonElement>): JsonElement-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| map | Map&lt;string, [JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | Yes | The map of key-value pairs to store. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| map | Map&lt;string, [JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | A new JsonElement containing the object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) |
 
 ## createString
 
@@ -601,25 +555,23 @@ Creates a new JSON element containing a string value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-static createString(value: string): JsonElement--><!--Device-JsonElement-static createString(value: string): JsonElement-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string | Yes | The string value to store. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | A new JsonElement containing the string value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) |
 
 ## createUndefined
 
@@ -631,19 +583,17 @@ Creates a new JSON element containing an undefined value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-static createUndefined(): JsonElement--><!--Device-JsonElement-static createUndefined(): JsonElement-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | A new JsonElement containing undefined. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) |
 
 ## getArray
 
@@ -655,25 +605,23 @@ Gets a JSON element from an object by key and ensures it is an array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-getArray(key: string): Array<JsonElement>--><!--Device-JsonElement-getArray(key: string): Array<JsonElement>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to look up. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;[JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | The JSON element associated with the key. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;[JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; |
 
 ## getBigInt
 
@@ -685,25 +633,23 @@ Gets a bigint value from an object by key and ensures it is a bigint.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-getBigInt(key: string): bigint--><!--Device-JsonElement-getBigInt(key: string): bigint-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to look up. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint | The bigint value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| bigint |
 
 ## getBoolean
 
@@ -715,25 +661,23 @@ Gets a boolean value from an object by key.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-getBoolean(key: string): boolean--><!--Device-JsonElement-getBoolean(key: string): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to look up. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | The boolean value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## getDouble
 
@@ -745,25 +689,23 @@ Gets a double value from an object by key and ensures it is a double.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-getDouble(key: string): double--><!--Device-JsonElement-getDouble(key: string): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to look up. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | The double value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## getElement
 
@@ -775,25 +717,23 @@ Gets a JSON element from an object by key.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-getElement(key: string): JsonElement--><!--Device-JsonElement-getElement(key: string): JsonElement-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to look up. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | The JSON element associated with the key. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) |
 
 ## getInteger
 
@@ -805,25 +745,23 @@ Gets an integer value from an object by key and ensures it is an integer.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-getInteger(key: string): int--><!--Device-JsonElement-getInteger(key: string): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to look up. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | The integer value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## getLong
 
@@ -835,25 +773,23 @@ Gets a long value from an object by key and ensures it is a long.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-getLong(key: string): long--><!--Device-JsonElement-getLong(key: string): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to look up. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The long value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## getNull
 
@@ -865,25 +801,23 @@ Gets a null value from an object by key.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-getNull(key: string): null--><!--Device-JsonElement-getNull(key: string): null-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to look up. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| null | The null value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| null |
 
 ## getString
 
@@ -895,25 +829,23 @@ Gets a string value from an object by key.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-getString(key: string): string--><!--Device-JsonElement-getString(key: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to look up. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | The string value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## removeElement
 
@@ -925,25 +857,23 @@ Removes a JSON element from an object by key.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-removeElement(key: string): boolean--><!--Device-JsonElement-removeElement(key: string): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to remove. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | True if the element was removed, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## setArray
 
@@ -955,19 +885,17 @@ Sets the current JsonElement to an array value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-setArray(value: Array<JsonElement>): void--><!--Device-JsonElement-setArray(value: Array<JsonElement>): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Array&lt;[JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | Yes | The array value to set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | Array&lt;[JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | Yes |
 
 ## setBigInt
 
@@ -979,19 +907,17 @@ Sets the current JsonElement to a bigint value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-setBigInt(value: bigint): void--><!--Device-JsonElement-setBigInt(value: bigint): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | bigint | Yes | The bigint value to set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | bigint | Yes |
 
 ## setBoolean
 
@@ -1003,19 +929,17 @@ Sets the current JsonElement to a boolean value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-setBoolean(value: boolean): void--><!--Device-JsonElement-setBoolean(value: boolean): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | boolean | Yes | The boolean value to set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | boolean | Yes |
 
 ## setDouble
 
@@ -1027,19 +951,17 @@ Sets the current JsonElement to a double value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-setDouble(value: double): void--><!--Device-JsonElement-setDouble(value: double): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | The double value to set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | double | Yes |
 
 ## setElement
 
@@ -1051,20 +973,18 @@ Sets a JSON element in an object by key.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-setElement(key: string, value: JsonElement): void--><!--Device-JsonElement-setElement(key: string, value: JsonElement): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to set. |
-| value | [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | Yes | The JSON element to set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| value | [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | Yes |
 
 ## setInteger
 
@@ -1076,19 +996,17 @@ Sets the current JsonElement to an integer value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-setInteger(value: int): void--><!--Device-JsonElement-setInteger(value: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | int | Yes | The integer value to set. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | int | Yes |
 
 ## setLong
 
@@ -1100,19 +1018,17 @@ Sets the current JsonElement to a long value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-setLong(value: long): void--><!--Device-JsonElement-setLong(value: long): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | long | Yes | The long value to set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | long | Yes |
 
 ## setNull
 
@@ -1124,11 +1040,9 @@ Sets the current JsonElement to a null value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-setNull(): void--><!--Device-JsonElement-setNull(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1142,19 +1056,17 @@ Sets the current JsonElement to a string value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-setString(value: string): void--><!--Device-JsonElement-setString(value: string): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string | Yes | The string value to set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | string | Yes |
 
 ## setUndefined
 
@@ -1166,11 +1078,9 @@ Sets the current JsonElement to an undefined value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-setUndefined(): void--><!--Device-JsonElement-setUndefined(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1184,19 +1094,17 @@ Attempts to get an array value from the element. Returns undefined if the value 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-tryAsArray(): Array<JsonElement> | undefined--><!--Device-JsonElement-tryAsArray(): Array<JsonElement> | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;[JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; \| undefined | The array value if found, undefined otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;[JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; \| undefined |
 
 ## tryAsBigInt
 
@@ -1208,19 +1116,17 @@ Attempts to get a bigint value from the element. Returns undefined if the value 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-tryAsBigInt(): bigint | undefined--><!--Device-JsonElement-tryAsBigInt(): bigint | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint \| undefined | The bigint value if found, undefined otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| bigint \| undefined |
 
 ## tryAsBoolean
 
@@ -1232,19 +1138,17 @@ Attempts to get a boolean value from the element. Returns undefined if the value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-tryAsBoolean(): boolean | undefined--><!--Device-JsonElement-tryAsBoolean(): boolean | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean \| undefined | The boolean value if found, undefined otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean \| undefined |
 
 ## tryAsDouble
 
@@ -1256,19 +1160,17 @@ Attempts to get a double value from the element. Returns undefined if the value 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-tryAsDouble(): double | undefined--><!--Device-JsonElement-tryAsDouble(): double | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double \| undefined | The double value if found, undefined otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double \| undefined |
 
 ## tryAsInteger
 
@@ -1280,19 +1182,17 @@ Attempts to get an integer value from the element. Returns undefined if the valu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-tryAsInteger(): int | undefined--><!--Device-JsonElement-tryAsInteger(): int | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int \| undefined | The integer value if found, undefined otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int \| undefined |
 
 ## tryAsLong
 
@@ -1304,19 +1204,17 @@ Attempts to get a long value from the element. Returns undefined if the value is
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-tryAsLong(): long | undefined--><!--Device-JsonElement-tryAsLong(): long | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long \| undefined | The long value if found, undefined otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long \| undefined |
 
 ## tryAsNull
 
@@ -1328,19 +1226,17 @@ Attempts to get a null value from the element. Returns undefined if the value is
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-tryAsNull(): null | undefined--><!--Device-JsonElement-tryAsNull(): null | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| null \| undefined | The null value if found, undefined otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| null \| undefined |
 
 ## tryAsString
 
@@ -1352,19 +1248,17 @@ Attempts to get a string value from the element. Returns undefined if the value 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-tryAsString(): string | undefined--><!--Device-JsonElement-tryAsString(): string | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string \| undefined | The string value if found, undefined otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string \| undefined |
 
 ## tryGetArray
 
@@ -1376,25 +1270,23 @@ Attempts to get a JSON element from an object by key and ensures it is an array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-tryGetArray(key: string): Array<JsonElement>--><!--Device-JsonElement-tryGetArray(key: string): Array<JsonElement>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to look up. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;[JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | The JSON element if found, an empty array otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;[JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; |
 
 ## tryGetBigInt
 
@@ -1406,26 +1298,24 @@ Attempts to get a bigint value from an object by key. Returns the fallback value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-tryGetBigInt(key: string, fallback: bigint = 0n): bigint--><!--Device-JsonElement-tryGetBigInt(key: string, fallback: bigint = 0n): bigint-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to look up. |
-| fallback | bigint | Yes | The fallback value to return if the key is not found. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| fallback | bigint | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint | The bigint value if found, fallback value otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| bigint |
 
 ## tryGetBoolean
 
@@ -1437,26 +1327,24 @@ Attempts to get a boolean value from an object by key. Returns the fallback valu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-tryGetBoolean(key: string, fallback: boolean = false): boolean--><!--Device-JsonElement-tryGetBoolean(key: string, fallback: boolean = false): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to look up. |
-| fallback | boolean | Yes | The fallback value to return if the key is not found. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| fallback | boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | The boolean value if found, fallback value otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## tryGetDouble
 
@@ -1468,26 +1356,24 @@ Attempts to get a double value from an object by key and ensures it is a double.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-tryGetDouble(key: string, fallback?: double): double | undefined--><!--Device-JsonElement-tryGetDouble(key: string, fallback?: double): double | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to look up. |
-| fallback | double | No | The fallback value to return if the key is not found. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| fallback | double | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double \| undefined | The double value if found, fallback value otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double \| undefined |
 
 ## tryGetElement
 
@@ -1499,25 +1385,23 @@ Attempts to get a JSON element from an object by key. Returns undefined if the k
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-tryGetElement(key: string): JsonElement | undefined--><!--Device-JsonElement-tryGetElement(key: string): JsonElement | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to look up. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) \| undefined | The JSON element if found, undefined otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) \| undefined |
 
 ## tryGetInteger
 
@@ -1529,26 +1413,24 @@ Attempts to get an integer value from an object by key. Returns the fallback val
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-tryGetInteger(key: string, fallback: int = 0): int--><!--Device-JsonElement-tryGetInteger(key: string, fallback: int = 0): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to look up. |
-| fallback | int | Yes | The fallback value to return if the key is not found. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| fallback | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | The integer value if found, fallback value otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## tryGetLong
 
@@ -1560,26 +1442,24 @@ Attempts to get a long value from an object by key. Returns the fallback value i
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-tryGetLong(key: string, fallback: long = 0): long--><!--Device-JsonElement-tryGetLong(key: string, fallback: long = 0): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to look up. |
-| fallback | long | Yes | The fallback value to return if the key is not found. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| fallback | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The long value if found, fallback value otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## tryGetNull
 
@@ -1591,25 +1471,23 @@ Attempts to get a null value from an object by key. Returns undefined if the key
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-tryGetNull(key: string): null | undefined--><!--Device-JsonElement-tryGetNull(key: string): null | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to look up. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| null \| undefined | The null value if found, undefined otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| null \| undefined |
 
 ## tryGetString
 
@@ -1621,24 +1499,57 @@ Attempts to get a string value from an object by key. Returns the fallback value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonElement-tryGetString(key: string, fallback: string = ""): string--><!--Device-JsonElement-tryGetString(key: string, fallback: string = ""): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | The key to look up. |
-| fallback | string | Yes | The fallback value to return if the key is not found. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| fallback | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | The string value if found, fallback value otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
+## jsonKey
+
+```TypeScript
+get jsonKey(): string
+```
+
+Gets the key associated with this JSON element.
+
+**Type:** string
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## jsonType
+
+```TypeScript
+get jsonType(): JsonType
+```
+
+Gets the type of the JSON element.
+
+**Type:** [JsonType](arkts-arkts-jsonx-jsontype-e.md)
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang

@@ -16,15 +16,15 @@ Creates a **UDPSocket** object.
 
 **Since:** 7
 
-<!--Device-socket-function constructUDPSocketInstance(): UDPSocket--><!--Device-socket-function constructUDPSocketInstance(): UDPSocket-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| UDPSocket | UDPSocket** object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [UDPSocket](arkts-network-socket-udpsocket-i.md) |
 
 **Examples**
 
@@ -32,4 +32,3 @@ Creates a **UDPSocket** object.
 import { socket } from '@kit.NetworkKit';
 let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
 ```
-

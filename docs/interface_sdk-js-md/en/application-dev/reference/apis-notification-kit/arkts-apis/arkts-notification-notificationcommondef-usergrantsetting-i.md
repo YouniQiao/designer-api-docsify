@@ -4,7 +4,7 @@ Describes the user authorization settings.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export interface UserGrantSetting--><!--Device-unnamed-export interface UserGrantSetting-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -20,9 +20,9 @@ List of apps for which the **Allow access to notifications on this device** swit
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-UserGrantSetting-readonly grantedBundleInfos?: Array<GrantedBundleInfo>--><!--Device-UserGrantSetting-readonly grantedBundleInfos?: Array<GrantedBundleInfo>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -38,9 +38,8 @@ Whether the **Allow access to notifications on this device** switch is toggled o
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UserGrantSetting-readonly userGrantEnabled: boolean--><!--Device-UserGrantSetting-readonly userGrantEnabled: boolean-End-->
-
 **System capability:** SystemCapability.Notification.Notification
-

@@ -2,9 +2,9 @@
 
 枚举，可获取的设备种类。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-audio-enum DeviceFlag--><!--Device-audio-enum DeviceFlag-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -16,9 +16,9 @@ NONE_DEVICES_FLAG = 0
 
 无设备。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-DeviceFlag-NONE_DEVICES_FLAG = 0--><!--Device-DeviceFlag-NONE_DEVICES_FLAG = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -32,9 +32,9 @@ DISTRIBUTED_OUTPUT_DEVICES_FLAG = 4
 
 分布式输出设备。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-DeviceFlag-DISTRIBUTED_OUTPUT_DEVICES_FLAG = 4--><!--Device-DeviceFlag-DISTRIBUTED_OUTPUT_DEVICES_FLAG = 4-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -48,9 +48,9 @@ DISTRIBUTED_INPUT_DEVICES_FLAG = 8
 
 分布式输入设备。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-DeviceFlag-DISTRIBUTED_INPUT_DEVICES_FLAG = 8--><!--Device-DeviceFlag-DISTRIBUTED_INPUT_DEVICES_FLAG = 8-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -64,11 +64,10 @@ ALL_DISTRIBUTED_DEVICES_FLAG = 12
 
 分布式输入和输出设备。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-DeviceFlag-ALL_DISTRIBUTED_DEVICES_FLAG = 12--><!--Device-DeviceFlag-ALL_DISTRIBUTED_DEVICES_FLAG = 12-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
-

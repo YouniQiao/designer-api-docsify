@@ -1,10 +1,10 @@
 # WantAgentInfo
 
-Defines the information required for triggering a WantAgent object. The information can be used as an input parameter in getWantAgent to obtain a specified WantAgent object.
+Defines the information required for triggering a WantAgent object. The information can be used as an input parameter in [getWantAgent](../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent.md#wantagentgetwantagent) to obtain a specified WantAgent object.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-export interface WantAgentInfo--><!--Device-unnamed-export interface WantAgentInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -18,11 +18,11 @@ Array of flags for using the WantAgent object.
 
 **Type:** Array&lt;abilityWantAgent.WantAgentFlags&gt;
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-WantAgentInfo-actionFlags?: Array<abilityWantAgent.WantAgentFlags>--><!--Device-WantAgentInfo-actionFlags?: Array<abilityWantAgent.WantAgentFlags>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -36,43 +36,47 @@ Operation type.
 
 **Type:** abilityWantAgent.OperationType
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-WantAgentInfo-actionType?: abilityWantAgent.OperationType--><!--Device-WantAgentInfo-actionType?: abilityWantAgent.OperationType-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## extraInfo
 
 ```TypeScript
-extraInfo?: Record<string, RecordData>
+extraInfo?: { [key: string]: any }
 ```
 
-Extra information about how the Want starts an ability. If there is no extra information to set, this constant can be left empty.
+Extra information.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** { [key: string]: any }
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-WantAgentInfo-extraInfo?: Record<string, RecordData>--><!--Device-WantAgentInfo-extraInfo?: Record<string, RecordData>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## extraInfos
 
 ```TypeScript
-extraInfos?: Record<string, RecordData>
+extraInfos?: Record<string, Object>
 ```
 
-Extra information about how the Want starts an ability. If there is no extra information to set, this constant can be left empty. The ability of this property is same as extraInfo. If both are set, this property will be used.
+Extra information. You are advised to use this property to replace **extraInfo**. When this property is set, **extraInfo** does not take effect.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, Object&gt;
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-WantAgentInfo-extraInfos?: Record<string, RecordData>--><!--Device-WantAgentInfo-extraInfos?: Record<string, RecordData>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -88,13 +92,13 @@ Operation type.This attribute is supported since API version 7 and deprecated si
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 11
 
 **Substitutes:** [actionType](#actiontype)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-WantAgentInfo-operationType?: wantAgent.OperationType--><!--Device-WantAgentInfo-operationType?: wantAgent.OperationType-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -106,13 +110,13 @@ requestCode: int
 
 Custom request code, which is used to identify the operation to execute.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-WantAgentInfo-requestCode: int--><!--Device-WantAgentInfo-requestCode: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -128,13 +132,13 @@ Array of flags for using the WantAgent object.This attribute is supported since 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 11
 
 **Substitutes:** [actionFlags](#actionflags)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-WantAgentInfo-wantAgentFlags?: Array<wantAgent.WantAgentFlags>--><!--Device-WantAgentInfo-wantAgentFlags?: Array<wantAgent.WantAgentFlags>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -148,11 +152,10 @@ Array of all Want objects. Currently, only one Want is supported. The array is r
 
 **Type:** Array&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt;
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-WantAgentInfo-wants: Array<Want>--><!--Device-WantAgentInfo-wants: Array<Want>-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-

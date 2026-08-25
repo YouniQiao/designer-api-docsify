@@ -6,9 +6,7 @@ Date time range format part.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-Intl-export interface DateTimeRangeFormatPart--><!--Device-Intl-export interface DateTimeRangeFormatPart-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -29,11 +27,8 @@ Part source.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DateTimeRangeFormatPart-source: DateTimeRangeFormatPartSource--><!--Device-DateTimeRangeFormatPart-source: DateTimeRangeFormatPartSource-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

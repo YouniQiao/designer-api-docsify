@@ -2,9 +2,9 @@
 
 Describes the security mode.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-inputMethodEngine-export enum SecurityMode--><!--Device-inputMethodEngine-export enum SecurityMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -16,9 +16,9 @@ BASIC = 0
 
 Basic access mode, where network access is restricted.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-SecurityMode-BASIC = 0--><!--Device-SecurityMode-BASIC = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -30,9 +30,8 @@ FULL
 
 Full access mode, where network access is not restricted.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-SecurityMode-FULL--><!--Device-SecurityMode-FULL-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

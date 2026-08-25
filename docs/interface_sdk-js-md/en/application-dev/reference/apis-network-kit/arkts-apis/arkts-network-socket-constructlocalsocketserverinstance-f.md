@@ -16,15 +16,15 @@ Creates a **LocalSocketServer** object.
 
 **Since:** 11
 
-<!--Device-socket-function constructLocalSocketServerInstance(): LocalSocketServer--><!--Device-socket-function constructLocalSocketServerInstance(): LocalSocketServer-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [LocalSocketServer](arkts-network-socket-localsocketserver-i.md) | LocalSocketServer** object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [LocalSocketServer](arkts-network-socket-localsocketserver-i.md) |
 
 **Examples**
 
@@ -32,4 +32,3 @@ Creates a **LocalSocketServer** object.
 import { socket } from '@kit.NetworkKit';
 let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
 ```
-

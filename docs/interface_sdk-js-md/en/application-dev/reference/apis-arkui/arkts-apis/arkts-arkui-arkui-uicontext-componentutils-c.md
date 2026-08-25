@@ -4,12 +4,12 @@ Provides API for obtaining the coordinates and size of the drawing area of a com
 
 > **NOTE：**&gt;
 > - The initial APIs of this class are supported since API version 10.&gt;
-> - In the following API examples, you must first use [getComponentUtils()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcomponentutils) in
+> - In the following API examples, you must first use [getComponentUtils()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentutils) in
 > **UIContext** to obtain a **ComponentUtils** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
 
-<!--Device-unnamed-export class ComponentUtils--><!--Device-unnamed-export class ComponentUtils-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,31 +36,31 @@ Obtains the size, position, translation, scaling, rotation, and affine matrix in
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ComponentUtils-getRectangleById(id: string): componentUtils.ComponentInfo--><!--Device-ComponentUtils-getRectangleById(id: string): componentUtils.ComponentInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| id | string | Yes | Unique component ID. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| id | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| componentUtils.ComponentInfo | Size, position, translation, scaling, rotation, and affine matrix information of the component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| componentUtils.ComponentInfo |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | UI execution context not found. |
+| Error Code ID |
+| --- |
+| [100001](../errorcode-internal.md#100001-internal-error) |
 
 **Examples**
 
@@ -98,4 +98,3 @@ struct Index {
   }
 }
 ```
-

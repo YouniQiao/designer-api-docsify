@@ -2,9 +2,9 @@
 
 ASR voice mute mode.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-audio-enum AsrVoiceMuteMode--><!--Device-audio-enum AsrVoiceMuteMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -18,9 +18,9 @@ OUTPUT_MUTE = 0
 
 Mute the local output stream.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AsrVoiceMuteMode-OUTPUT_MUTE = 0--><!--Device-AsrVoiceMuteMode-OUTPUT_MUTE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -34,9 +34,9 @@ INPUT_MUTE = 1
 
 Mute the local MIC input stream.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AsrVoiceMuteMode-INPUT_MUTE = 1--><!--Device-AsrVoiceMuteMode-INPUT_MUTE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -50,9 +50,9 @@ TTS_MUTE = 2
 
 Send tts output stream to TX and mute the local output stream.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AsrVoiceMuteMode-TTS_MUTE = 2--><!--Device-AsrVoiceMuteMode-TTS_MUTE = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -66,9 +66,9 @@ CALL_MUTE = 3
 
 Mute the voice call stream.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AsrVoiceMuteMode-CALL_MUTE = 3--><!--Device-AsrVoiceMuteMode-CALL_MUTE = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -82,11 +82,10 @@ OUTPUT_MUTE_EX = 4
 
 Based on the OUTPUT_MUTE, send output stream to voice call record.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AsrVoiceMuteMode-OUTPUT_MUTE_EX = 4--><!--Device-AsrVoiceMuteMode-OUTPUT_MUTE_EX = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
-

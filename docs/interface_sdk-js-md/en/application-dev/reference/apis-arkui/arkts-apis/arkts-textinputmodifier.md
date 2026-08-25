@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [TextInputModifier](arkts-arkui-textinputmodifier-c.md) | Defines TextInput Modifier |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [TextInputModifier](arkts-arkui-textinputmodifier-c.md) |

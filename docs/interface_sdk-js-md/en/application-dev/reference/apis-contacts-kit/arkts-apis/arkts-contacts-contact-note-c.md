@@ -4,7 +4,7 @@ Defines a contact's note.
 
 **Since:** 7
 
-<!--Device-contact-class Note--><!--Device-contact-class Note-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -26,9 +26,9 @@ Notes of the contact.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Note-noteContent: string--><!--Device-Note-noteContent: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -41,4 +41,3 @@ let note: contact.Note = {
     noteContent: "noteContent"
 };
 ```
-

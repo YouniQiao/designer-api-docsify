@@ -2,9 +2,9 @@
 
 **Since:** 3
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export default class Storage--><!--Device-unnamed-export default class Storage-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
@@ -23,21 +23,21 @@ Clears the stored content.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 6
 
 **Substitutes:** clear
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-Storage-static clear(options?: ClearStorageOptions): void--><!--Device-Storage-static clear(options?: ClearStorageOptions): void-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [ClearStorageOptions](arkts-arkdata-system-storage-clearstorageoptions-i.md) | No | Indicates the target options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [ClearStorageOptions](arkts-arkdata-system-storage-clearstorageoptions-i.md) | No |
 
 **Examples**
 
@@ -66,21 +66,21 @@ Deletes the stored content.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 6
 
 **Substitutes:** delete
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-Storage-static delete(options: DeleteStorageOptions): void--><!--Device-Storage-static delete(options: DeleteStorageOptions): void-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [DeleteStorageOptions](arkts-arkdata-system-storage-deletestorageoptions-i.md) | Yes | Indicates the target options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [DeleteStorageOptions](arkts-arkdata-system-storage-deletestorageoptions-i.md) | Yes |
 
 **Examples**
 
@@ -110,21 +110,21 @@ Reads the stored content.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 6
 
 **Substitutes:** get
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-Storage-static get(options: GetStorageOptions): void--><!--Device-Storage-static get(options: GetStorageOptions): void-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [GetStorageOptions](arkts-arkdata-system-storage-getstorageoptions-i.md) | Yes | Indicates the target options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [GetStorageOptions](arkts-arkdata-system-storage-getstorageoptions-i.md) | Yes |
 
 **Examples**
 
@@ -157,19 +157,19 @@ Modifies the stored content.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-Storage-static set(options: SetStorageOptions): void--><!--Device-Storage-static set(options: SetStorageOptions): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [SetStorageOptions](arkts-arkdata-system-storage-setstorageoptions-i.md) | Yes | Indicates the target options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [SetStorageOptions](arkts-arkdata-system-storage-setstorageoptions-i.md) | Yes |
 
 **Examples**
 
@@ -189,4 +189,3 @@ export default {
   }
 }
 ```
-

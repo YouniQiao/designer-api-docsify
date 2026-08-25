@@ -11,9 +11,9 @@ This module provides APIs for controlling the Data Loss Prevention (DLP) feature
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-unnamed-declare namespace dlpSetDlpFeature--><!--Device-unnamed-declare namespace dlpSetDlpFeature-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -30,25 +30,24 @@ import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [setDlpFeature(DLP)](arkts-dataprotection-dlpsetdlpfeature-setdlpfeature-f-sys.md) | Sets the DLP status. This API uses a promise to return the result. The system enables or disables the DLP protection function based on the DLP status specified using this API.When this feature is enabled, right-click the file to be encrypted, and the encryption option is displayed in the shortcut menu. Files in .txt, .pdf, .xls, .xlsx, .ppt, .pptx, .doc, and .docx formats can be encrypted.This API is used to enable or disable the DLP function in enterprise policies. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [setDlpFeature(DLP)](arkts-dataprotection-dlpsetdlpfeature-setdlpfeature-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [DLPFeatureInfo(DLP)](arkts-dataprotection-dlpsetdlpfeature-dlpfeatureinfo-i-sys.md) | Sets the DLP status. |
-| [StatusInfoResult(DLP)](arkts-dataprotection-dlpsetdlpfeature-statusinforesult-i-sys.md) | Describes the DLP settings. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DLPFeatureInfo(DLP)](arkts-dataprotection-dlpsetdlpfeature-dlpfeatureinfo-i-sys.md) |
+| [StatusInfoResult(DLP)](arkts-dataprotection-dlpsetdlpfeature-statusinforesult-i-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [DlpFeatureStatus(DLP)](arkts-dataprotection-dlpsetdlpfeature-dlpfeaturestatus-e-sys.md) | Enumerates DLP statuses. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DlpFeatureStatus(DLP)](arkts-dataprotection-dlpsetdlpfeature-dlpfeaturestatus-e-sys.md) |
 <!--DelEnd-->
-

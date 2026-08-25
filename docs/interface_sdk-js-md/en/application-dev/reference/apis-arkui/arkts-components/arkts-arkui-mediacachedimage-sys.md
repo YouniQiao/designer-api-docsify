@@ -12,9 +12,9 @@ Image resource to be obtained.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-MediaCachedImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor | ASTCResource): MediaCachedImageAttribute--><!--Device-MediaCachedImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor | ASTCResource): MediaCachedImageAttribute-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,14 +22,13 @@ Image resource to be obtained.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | PixelMap \| ResourceStr \| DrawableDescriptor \| [ASTCResource](arkts-arkui-astcresource-i-sys.md) | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | PixelMap \| ResourceStr \| DrawableDescriptor \| [ASTCResource](arkts-arkui-astcresource-i-sys.md) | Yes |
 
 ## Summary
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |

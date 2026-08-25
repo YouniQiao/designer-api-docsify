@@ -4,7 +4,7 @@ Enumerates the selection states of check boxes in the check box group.
 
 **Since:** 8
 
-<!--Device-unnamed-declare enum SelectStatus--><!--Device-unnamed-declare enum SelectStatus-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ All check boxes in the group are selected.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-SelectStatus-All--><!--Device-SelectStatus-All-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Some check boxes in the group are selected.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-SelectStatus-Part--><!--Device-SelectStatus-Part-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ None of the check boxes in the group are selected.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-SelectStatus-None--><!--Device-SelectStatus-None-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

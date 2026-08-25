@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-advertising-interface AdvertisingStateChangeInfo--><!--Device-advertising-interface AdvertisingStateChangeInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -17,18 +17,18 @@ import { advertising } from '@kit.ConnectivityKit';
 ## advertisingId
 
 ```TypeScript
-advertisingId: int
+advertisingId: number
 ```
 
 表示广播ID。取值范围[0, 255]。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-AdvertisingStateChangeInfo-advertisingId: int--><!--Device-AdvertisingStateChangeInfo-advertisingId: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -44,9 +44,8 @@ state: AdvertisingState
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AdvertisingStateChangeInfo-state: AdvertisingState--><!--Device-AdvertisingStateChangeInfo-state: AdvertisingState-End-->
-
 **系统能力：** SystemCapability.Communication.NearLink.Base
-

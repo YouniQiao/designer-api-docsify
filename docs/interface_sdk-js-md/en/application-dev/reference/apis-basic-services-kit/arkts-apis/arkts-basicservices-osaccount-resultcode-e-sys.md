@@ -2,9 +2,9 @@
 
 Enumerates the authentication result codes.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-osAccount-enum ResultCode--><!--Device-osAccount-enum ResultCode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -18,9 +18,9 @@ SUCCESS = 0
 
 The authentication is successful or the authentication feature is supported.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ResultCode-SUCCESS = 0--><!--Device-ResultCode-SUCCESS = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -34,9 +34,9 @@ FAIL = 1
 
 The authentication executor failed to identify the user.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ResultCode-FAIL = 1--><!--Device-ResultCode-FAIL = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -50,9 +50,9 @@ GENERAL_ERROR = 2
 
 Other errors.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ResultCode-GENERAL_ERROR = 2--><!--Device-ResultCode-GENERAL_ERROR = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -66,9 +66,9 @@ CANCELED = 3
 
 The authentication is canceled.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ResultCode-CANCELED = 3--><!--Device-ResultCode-CANCELED = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -82,9 +82,9 @@ TIMEOUT = 4
 
 The authentication timed out.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ResultCode-TIMEOUT = 4--><!--Device-ResultCode-TIMEOUT = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -98,9 +98,9 @@ TYPE_NOT_SUPPORT = 5
 
 The authentication credential type is not supported.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ResultCode-TYPE_NOT_SUPPORT = 5--><!--Device-ResultCode-TYPE_NOT_SUPPORT = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -114,9 +114,9 @@ TRUST_LEVEL_NOT_SUPPORT = 6
 
 The authentication trust level is not supported.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ResultCode-TRUST_LEVEL_NOT_SUPPORT = 6--><!--Device-ResultCode-TRUST_LEVEL_NOT_SUPPORT = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -130,9 +130,9 @@ BUSY = 7
 
 The authentication executor is busy. Try again after a few seconds.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ResultCode-BUSY = 7--><!--Device-ResultCode-BUSY = 7-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -146,9 +146,9 @@ INVALID_PARAMETERS = 8
 
 Incorrect parameters are detected.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ResultCode-INVALID_PARAMETERS = 8--><!--Device-ResultCode-INVALID_PARAMETERS = 8-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -162,9 +162,9 @@ LOCKED = 9
 
 The authentication executor is locked.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ResultCode-LOCKED = 9--><!--Device-ResultCode-LOCKED = 9-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -178,11 +178,10 @@ NOT_ENROLLED = 10
 
 The authentication executor is not enrolled.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ResultCode-NOT_ENROLLED = 10--><!--Device-ResultCode-NOT_ENROLLED = 10-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-

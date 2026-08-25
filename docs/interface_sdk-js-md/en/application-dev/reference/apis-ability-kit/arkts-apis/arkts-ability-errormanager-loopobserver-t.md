@@ -8,11 +8,10 @@ Defines the LoopObserver module. It can be used as a parameter of **errormanager
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-errorManager-export type LoopObserver = _LoopObserver--><!--Device-errorManager-export type LoopObserver = _LoopObserver-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Property type:** _LoopObserver
-

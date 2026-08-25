@@ -4,9 +4,9 @@
 
 **继承/实现关系：** RotationVectorResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-sensor-interface RotationVectorResponse--><!--Device-sensor-interface RotationVectorResponse-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -24,11 +24,11 @@ w: double
 
 旋转矢量的标量分量，描述设备相对于某个参考方向的旋转状态。单位：rad（弧度）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-RotationVectorResponse-w: double--><!--Device-RotationVectorResponse-w: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -40,11 +40,11 @@ x: double
 
 旋转矢量的x轴分量，表示设备旋转状态在x轴方向的投影。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-RotationVectorResponse-x: double--><!--Device-RotationVectorResponse-x: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -56,11 +56,11 @@ y: double
 
 旋转矢量的y轴分量，表示设备旋转状态在y轴方向的投影。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-RotationVectorResponse-y: double--><!--Device-RotationVectorResponse-y: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -72,11 +72,10 @@ z: double
 
 旋转矢量的z轴分量，表示设备旋转状态在z轴方向的投影。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-RotationVectorResponse-z: double--><!--Device-RotationVectorResponse-z: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
-

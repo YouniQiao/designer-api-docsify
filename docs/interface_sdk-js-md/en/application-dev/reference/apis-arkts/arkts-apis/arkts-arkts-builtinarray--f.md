@@ -15,11 +15,9 @@ Returns a new Array with the element at the given index replaced with the given 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function--><!--Device-unnamed-export function-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -34,11 +32,9 @@ Returns a new Array with the element at the given index replaced with the given 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function--><!--Device-unnamed-export function-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -53,11 +49,9 @@ Returns a new Array with the element at the given index replaced with the given 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function--><!--Device-unnamed-export function-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -72,11 +66,9 @@ Returns a new Array with the element at the given index replaced with the given 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function--><!--Device-unnamed-export function-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -91,11 +83,9 @@ Returns a new Array with the element at the given index replaced with the given 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function--><!--Device-unnamed-export function-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -110,11 +100,9 @@ Returns a new Array with the element at the given index replaced with the given 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function--><!--Device-unnamed-export function-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -129,11 +117,9 @@ Returns a new Array with the element at the given index replaced with the given 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function--><!--Device-unnamed-export function-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -148,11 +134,8 @@ Returns a new Array with the element at the given index replaced with the given 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export function--><!--Device-unnamed-export function-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

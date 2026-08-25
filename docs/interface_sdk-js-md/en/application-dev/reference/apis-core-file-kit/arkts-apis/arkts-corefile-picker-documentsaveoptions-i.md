@@ -4,9 +4,9 @@ Defines the options for saving documents.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-picker-interface DocumentSaveOptions--><!--Device-picker-interface DocumentSaveOptions-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -15,4 +15,3 @@ Defines the options for saving documents.
 ```TypeScript
 import { picker } from '@kit.CoreFileKit';
 ```
-

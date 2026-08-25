@@ -2,9 +2,9 @@
 
 Describes the PiP window information.
 
-**Since:** 26.0.0
+**Since:** 15
 
-<!--Device-PiPWindow-interface PiPWindowInfo--><!--Device-PiPWindow-interface PiPWindowInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -24,11 +24,11 @@ Size of the PiP window.
 
 **Type:** [PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)
 
-**Since:** 26.0.0
+**Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 26.0.0.
 
-<!--Device-PiPWindowInfo-size: PiPWindowSize--><!--Device-PiPWindowInfo-size: PiPWindowSize-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -40,13 +40,12 @@ windowId: int
 
 ID of the PiP window.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 26.0.0
+**Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 26.0.0.
 
-<!--Device-PiPWindowInfo-windowId: int--><!--Device-PiPWindowInfo-windowId: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Window.SessionManager
-

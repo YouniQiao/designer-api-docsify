@@ -2,9 +2,9 @@
 
 Indicates the mode of the ims rtt.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-call-export enum ImsRttMode--><!--Device-call-export enum ImsRttMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -18,9 +18,9 @@ LOCAL_REQUEST_UPGRADE = 0
 
 Indicates the rtt is local request update.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-ImsRttMode-LOCAL_REQUEST_UPGRADE = 0--><!--Device-ImsRttMode-LOCAL_REQUEST_UPGRADE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -34,9 +34,9 @@ LOCAL_REQUEST_DOWNGRADE = 1
 
 Indicates the rtt is local request downgrade.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-ImsRttMode-LOCAL_REQUEST_DOWNGRADE = 1--><!--Device-ImsRttMode-LOCAL_REQUEST_DOWNGRADE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -50,9 +50,9 @@ REMOTE_REQUEST_UPGRADE_LOCAL_ACCEPT = 2
 
 Indicates the rtt is remote request local accept.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-ImsRttMode-REMOTE_REQUEST_UPGRADE_LOCAL_ACCEPT = 2--><!--Device-ImsRttMode-REMOTE_REQUEST_UPGRADE_LOCAL_ACCEPT = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -66,11 +66,10 @@ REMOTE_REQUEST_UPGRADE_LOCAL_REJECT = 3
 
 Indicates the rtt is remote request update local reject.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-ImsRttMode-REMOTE_REQUEST_UPGRADE_LOCAL_REJECT = 3--><!--Device-ImsRttMode-REMOTE_REQUEST_UPGRADE_LOCAL_REJECT = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
-

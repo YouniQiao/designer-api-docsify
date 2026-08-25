@@ -2,9 +2,9 @@
 
 Enumerates the supported Advanced Audio Coding (AAC) formats.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-media-enum AacProfile--><!--Device-media-enum AacProfile-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -16,11 +16,11 @@ AAC_LC = 0
 
 Standard AAC Low Complexity profile.
 
-**Since:** 23
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
-<!--Device-AacProfile-AAC_LC = 0--><!--Device-AacProfile-AAC_LC = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -32,11 +32,11 @@ AAC_HE = 1
 
 Standard AAC High Efficiency profile.
 
-**Since:** 23
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
-<!--Device-AacProfile-AAC_HE = 1--><!--Device-AacProfile-AAC_HE = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -48,11 +48,10 @@ AAC_HE_V2 = 2
 
 AAC High Efficiency Version 2 profile (also known as HE-AAC v2).
 
-**Since:** 23
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
-<!--Device-AacProfile-AAC_HE_V2 = 2--><!--Device-AacProfile-AAC_HE_V2 = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
-

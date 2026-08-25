@@ -1,14 +1,30 @@
 # BigIntConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface BigIntConstructor--><!--Device-unnamed-interface BigIntConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
+## [[Call]]
+
+```TypeScript
+(value: bigint | boolean | number | string): bigint
+```
+
+**ArkTS mode:** 
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | bigint \| boolean \| number \| string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## asIntN
 
 ```TypeScript
@@ -17,21 +33,19 @@ asIntN(bits: number, int: bigint): bigint
 
 Interprets the low bits of a BigInt as a 2's-complement signed integer. All higher bits are discarded.
 
-**Since:** -1
-
-<!--Device-BigIntConstructor-asIntN(bits: number, int: bigint): bigint--><!--Device-BigIntConstructor-asIntN(bits: number, int: bigint): bigint-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bits | number | Yes |  |
-| int | bigint | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [bits](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-deflatependingoutputinfo-i.md) | number | Yes |
+| int | bigint | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## asUintN
 
 ```TypeScript
@@ -40,41 +54,19 @@ asUintN(bits: number, int: bigint): bigint
 
 Interprets the low bits of a BigInt as an unsigned integer. All higher bits are discarded.
 
-**Since:** -1
-
-<!--Device-BigIntConstructor-asUintN(bits: number, int: bigint): bigint--><!--Device-BigIntConstructor-asUintN(bits: number, int: bigint): bigint-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bits | number | Yes |  |
-| int | bigint | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [bits](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-deflatependingoutputinfo-i.md) | number | Yes |
+| int | bigint | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-## constructor
-
-```TypeScript
-(value: bigint | boolean | number | string): bigint
-```
-
-**Since:** -1
-
-<!--Device-BigIntConstructor-(value: bigint | boolean | number | string): bigint--><!--Device-BigIntConstructor-(value: bigint | boolean | number | string): bigint-End-->
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | bigint \| boolean \| number \| string | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## prototype
 
 ```TypeScript
@@ -83,7 +75,4 @@ readonly prototype: BigInt
 
 **Type:** [BigInt](arkts-lib-es2020-bigint-bigint-i.md)
 
-**Since:** -1
-
-<!--Device-BigIntConstructor-readonly prototype: BigInt--><!--Device-BigIntConstructor-readonly prototype: BigInt-End-->
-
+**ArkTS mode:** 

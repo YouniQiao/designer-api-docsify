@@ -2,9 +2,9 @@
 
 Describes the range of the selected text.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-inputMethod-export interface Range--><!--Device-inputMethod-export interface Range-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -22,11 +22,11 @@ end: int
 
 Index of the last selected character in the text box. The value is an integer greater than or equal to 0, and cannot exceed the actual text length. The **end** value must be greater than the **start** value.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Range-end: int--><!--Device-Range-end: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -38,11 +38,10 @@ start: int
 
 Index of the first selected character in the text box. The value is an integer greater than or equal to 0, and cannot exceed the actual text length.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Range-start: int--><!--Device-Range-start: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

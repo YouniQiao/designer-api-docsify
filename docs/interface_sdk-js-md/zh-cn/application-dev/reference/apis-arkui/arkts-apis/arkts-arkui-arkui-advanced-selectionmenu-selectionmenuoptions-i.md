@@ -4,7 +4,7 @@ SelectionMenuOptions定义SelectionMenu的可选菜单类型项及其配置参�
 
 **起始版本：** 11
 
-<!--Device-unnamed-export interface SelectionMenuOptions--><!--Device-unnamed-export interface SelectionMenuOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -13,6 +13,106 @@ SelectionMenuOptions定义SelectionMenu的可选菜单类型项及其配置参�
 ```TypeScript
 import { EditorEventInfo, EditorMenuOptions, ExpandedMenuOptions, SelectionMenu, SelectionMenuOptions } from '@kit.ArkUI';
 ```
+
+## onCopy
+
+```TypeScript
+onCopy?: (event?: EditorEventInfo) => void
+```
+
+替代内置系统菜单复制项的事件回调。生效前提是一定要有controller参数，有系统默认菜单才能替换内置复制功能。  
+**说明：**event为返回信息。
+
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [EditorEventInfo](arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) | 否 |
+
+## onCut
+
+```TypeScript
+onCut?: (event?: EditorEventInfo) => void
+```
+
+替代内置系统菜单剪切项的事件回调。生效前提是一定要有controller参数，有系统默认菜单才能替换内置剪切功能。  
+**说明：**event为返回信息。
+
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [EditorEventInfo](arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) | 否 |
+
+## onPaste
+
+```TypeScript
+onPaste?: (event?: EditorEventInfo) => void
+```
+
+替代内置系统菜单粘贴项的事件回调。生效前提是一定要有controller参数，有系统默认菜单才能替换内置粘贴功能。  
+**说明：**event为返回信息。
+
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [EditorEventInfo](arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) | 否 |
+
+## onSelectAll
+
+```TypeScript
+onSelectAll?: (event?: EditorEventInfo) => void
+```
+
+替代内置系统菜单全选项的事件回调。生效前提是一定要有controller参数，有系统默认菜单才能替换内置全选功能。  
+**说明：**event为返回信息。
+
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [EditorEventInfo](arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) | 否 |
 
 ## backgroundSystemMaterial
 
@@ -26,11 +126,11 @@ backgroundSystemMaterial?: uiMaterial.Material
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectionMenuOptions-backgroundSystemMaterial?: uiMaterial.Material--><!--Device-SelectionMenuOptions-backgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,15 +142,15 @@ controller?: RichEditorController
 
 扩展下拉菜单。expandedMenuOptions参数为空时无更多按钮，不显示扩展下拉菜单。expandedMenuOptions参数不为空时显示更多按钮，配置菜单项收起在更多按钮中，点击更多按钮展示。controller为空时不显示更多按钮，expandedMenuOptions参数不为空则在下拉菜单中显示。
 
-**类型：** [RichEditorController](../arkts-components/arkts-arkui-richeditor-richeditorcontroller-c.md)
+**类型：** [RichEditorController](arkts-arkui-richeditor-richeditorcontroller-c.md)
 
 **起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectionMenuOptions-controller?: RichEditorController--><!--Device-SelectionMenuOptions-controller?: RichEditorController-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,11 +166,11 @@ editorMenuOptions?: Array<EditorMenuOptions>
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectionMenuOptions-editorMenuOptions?: Array<EditorMenuOptions>--><!--Device-SelectionMenuOptions-editorMenuOptions?: Array<EditorMenuOptions>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,95 +186,10 @@ expandedMenuOptions?: Array<ExpandedMenuOptions>
 
 **起始版本：** 11
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectionMenuOptions-expandedMenuOptions?: Array<ExpandedMenuOptions>--><!--Device-SelectionMenuOptions-expandedMenuOptions?: Array<ExpandedMenuOptions>-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onCopy
-
-```TypeScript
-onCopy?: (event?: EditorEventInfo) => void
-```
-
-替代内置系统菜单复制项的事件回调。生效前提是一定要有controller参数，有系统默认菜单才能替换内置复制功能。  
-**说明：**event为返回信息。
-
-**类型：** (event?: EditorEventInfo) =&gt; void
-
-**起始版本：** 11
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SelectionMenuOptions-onCopy?: (event?: EditorEventInfo) => void--><!--Device-SelectionMenuOptions-onCopy?: (event?: EditorEventInfo) => void-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onCut
-
-```TypeScript
-onCut?: (event?: EditorEventInfo) => void
-```
-
-替代内置系统菜单剪切项的事件回调。生效前提是一定要有controller参数，有系统默认菜单才能替换内置剪切功能。  
-**说明：**event为返回信息。
-
-**类型：** (event?: EditorEventInfo) =&gt; void
-
-**起始版本：** 11
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectionMenuOptions-onCut?: (event?: EditorEventInfo) => void--><!--Device-SelectionMenuOptions-onCut?: (event?: EditorEventInfo) => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onPaste
-
-```TypeScript
-onPaste?: (event?: EditorEventInfo) => void
-```
-
-替代内置系统菜单粘贴项的事件回调。生效前提是一定要有controller参数，有系统默认菜单才能替换内置粘贴功能。  
-**说明：**event为返回信息。
-
-**类型：** (event?: EditorEventInfo) =&gt; void
-
-**起始版本：** 11
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectionMenuOptions-onPaste?: (event?: EditorEventInfo) => void--><!--Device-SelectionMenuOptions-onPaste?: (event?: EditorEventInfo) => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onSelectAll
-
-```TypeScript
-onSelectAll?: (event?: EditorEventInfo) => void
-```
-
-替代内置系统菜单全选项的事件回调。生效前提是一定要有controller参数，有系统默认菜单才能替换内置全选功能。  
-**说明：**event为返回信息。
-
-**类型：** (event?: EditorEventInfo) =&gt; void
-
-**起始版本：** 11
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectionMenuOptions-onSelectAll?: (event?: EditorEventInfo) => void--><!--Device-SelectionMenuOptions-onSelectAll?: (event?: EditorEventInfo) => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

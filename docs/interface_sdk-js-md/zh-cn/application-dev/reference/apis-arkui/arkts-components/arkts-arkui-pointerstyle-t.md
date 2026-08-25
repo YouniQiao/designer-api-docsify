@@ -14,13 +14,12 @@ declare type PointerStyle = import('../api/@ohos.multimodalInput.pointer').defau
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-unnamed-declare type PointerStyle = import('../api/@ohos.multimodalInput.pointer').default.PointerStyle--><!--Device-unnamed-declare type PointerStyle = import('../api/@ohos.multimodalInput.pointer').default.PointerStyle-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **属性类型：** import('../api/@ohos.multimodalInput.pointer').default.PointerStyle
-

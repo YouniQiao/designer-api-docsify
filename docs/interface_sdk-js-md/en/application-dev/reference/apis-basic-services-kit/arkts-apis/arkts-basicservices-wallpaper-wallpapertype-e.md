@@ -2,9 +2,9 @@
 
 Indicates wallpaper type.@enum { int } WallpaperType
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-wallpaper-enum WallpaperType--><!--Device-wallpaper-enum WallpaperType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -16,9 +16,9 @@ WALLPAPER_SYSTEM
 
 Indicates the home screen wallpaper.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-WallpaperType-WALLPAPER_SYSTEM--><!--Device-WallpaperType-WALLPAPER_SYSTEM-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -30,9 +30,8 @@ WALLPAPER_LOCKSCREEN
 
 Indicates the lock screen wallpaper.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-WallpaperType-WALLPAPER_LOCKSCREEN--><!--Device-WallpaperType-WALLPAPER_LOCKSCREEN-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
-

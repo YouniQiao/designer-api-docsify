@@ -4,7 +4,7 @@ Provides APIs to encode strings into byte arrays. Multiple encoding formats are 
 
 **Since:** 7
 
-<!--Device-util-class TextEncoder--><!--Device-util-class TextEncoder-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -24,9 +24,9 @@ A constructor used to create a **TextEncoder** object.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-<!--Device-TextEncoder-constructor()--><!--Device-TextEncoder-constructor()-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -148,17 +148,17 @@ A constructor used to create a **TextEncoder** object.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-TextEncoder-constructor(encoding?: string)--><!--Device-TextEncoder-constructor(encoding?: string)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| encoding | string | No | Encoding format. The default format is **'utf-8'**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [encoding](#encoding) | string | No |
 
 **Examples**
 
@@ -174,23 +174,23 @@ Creates a **TextEncoder** object.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-TextEncoder-static create(encoding?: string): TextEncoder--><!--Device-TextEncoder-static create(encoding?: string): TextEncoder-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| encoding | string | No | Encoding format. The default format is **'utf-8'**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [encoding](#encoding) | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [TextEncoder](../../apis-default/arkts-apis/arkts-util-textencoder-c.md) | TextEncoder** object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [TextEncoder](arkts-arkts-util-textencoder-c.md) |
 
 **Examples**
 
@@ -219,25 +219,25 @@ Encodes the input content in to a Uint8Array object.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-**Substitutes:** [encodeInto](../../apis-default/arkts-apis/arkts-util-textencoder-c.md#encodeinto)
-
-<!--Device-TextEncoder-encode(input?: string): Uint8Array--><!--Device-TextEncoder-encode(input?: string): Uint8Array-End-->
+**Substitutes:** [encodeInto](#encodeinto)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| input | string | No | String to encode. The default value is an empty string. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| input | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint8Array | Uint8Array object obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint8Array |
 
 **Examples**
 
@@ -276,23 +276,23 @@ Encodes the input content into a Uint8Array object.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-TextEncoder-encodeInto(input?: string): Uint8Array--><!--Device-TextEncoder-encodeInto(input?: string): Uint8Array-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| input | string | No | String to encode. The default value is an empty string. If the input parameter is an empty string, the return value is undefined. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| input | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint8Array | Uint8Array object obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint8Array |
 
 **Examples**
 
@@ -322,26 +322,26 @@ Writes the generated UTF-8 encoded text to an array.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-**Substitutes:** [encodeIntoUint8Array](../../apis-default/arkts-apis/arkts-util-textencoder-c.md#encodeintouint8array)
-
-<!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }--><!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }-End-->
+**Substitutes:** [encodeIntoUint8Array](#encodeintouint8array)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| input | string | Yes | String to encode. |
-| dest | Uint8Array | Yes | Uint8Array object used to store the UTF-8 encoded text. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| input | string | Yes |
+| dest | Uint8Array | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| object | Object obtained. **read** indicates the number of encoded characters, and **written** indicates the number of bytes in the encoded characters. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| object |
 
 **Examples**
 
@@ -357,25 +357,25 @@ Encodes the input content and stores the result into a Uint8Array object.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-TextEncoder-encodeIntoUint8Array(input: string, dest: Uint8Array): EncodeIntoUint8ArrayInfo--><!--Device-TextEncoder-encodeIntoUint8Array(input: string, dest: Uint8Array): EncodeIntoUint8ArrayInfo-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| input | string | Yes | String to encode. |
-| dest | Uint8Array | Yes | Uint8Array object used to store the UTF-8 encoded text. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| input | string | Yes |
+| dest | Uint8Array | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| object | Return the object, where read represents the number of characters that have been encoded, and written represents the number of bytes occupied by the encoded characters.<br>**Applicable version:** 9 - 10 |
-| [EncodeIntoUint8ArrayInfo](../../apis-default/arkts-apis/arkts-util-encodeintouint8arrayinfo-i.md) | Object obtained. **read** indicates the number of encoded characters, and **written** indicates the number of bytes in the encoded characters.<br>**Applicable version:** 11 and later |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| object |
+| [EncodeIntoUint8ArrayInfo](arkts-arkts-util-encodeintouint8arrayinfo-i.md) |
 
 **Examples**
 
@@ -404,9 +404,8 @@ Encoding format.<br>The following formats are supported: utf-8, gb2312, gb18030,
 
 **Since:** 7
 
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-TextEncoder-readonly encoding = 'utf-8'--><!--Device-TextEncoder-readonly encoding = 'utf-8'-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

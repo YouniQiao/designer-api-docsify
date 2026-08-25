@@ -4,7 +4,7 @@ Enumerates the camera imaging modes.
 
 **Since:** 26.0.0
 
-<!--Device-camera-enum CameraImagingMode--><!--Device-camera-enum CameraImagingMode-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -20,9 +20,9 @@ Auto imaging mode.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-CameraImagingMode-AUTO = 0--><!--Device-CameraImagingMode-AUTO = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -38,9 +38,9 @@ RGB imaging mode.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-CameraImagingMode-RGB = 1--><!--Device-CameraImagingMode-RGB = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -56,11 +56,10 @@ IR imaging mode.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-CameraImagingMode-IR = 2--><!--Device-CameraImagingMode-IR = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

@@ -4,11 +4,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md)
-
-<!--Device-hiAppEvent-enum EventType--><!--Device-hiAppEvent-enum EventType-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -22,11 +22,11 @@ FAULT = 1
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [FAULT](arkts-performanceanalysis-hiappevent-eventtype-e.md#fault)
-
-<!--Device-EventType-FAULT = 1--><!--Device-EventType-FAULT = 1-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -40,11 +40,11 @@ STATISTIC = 2
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [STATISTIC](arkts-performanceanalysis-hiappevent-eventtype-e.md#statistic)
-
-<!--Device-EventType-STATISTIC = 2--><!--Device-EventType-STATISTIC = 2-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -58,11 +58,11 @@ SECURITY = 3
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [SECURITY](arkts-performanceanalysis-hiappevent-eventtype-e.md#security)
-
-<!--Device-EventType-SECURITY = 3--><!--Device-EventType-SECURITY = 3-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -76,11 +76,10 @@ BEHAVIOR = 4
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [BEHAVIOR](arkts-performanceanalysis-hiappevent-eventtype-e.md#behavior)
 
-<!--Device-EventType-BEHAVIOR = 4--><!--Device-EventType-BEHAVIOR = 4-End-->
-
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-

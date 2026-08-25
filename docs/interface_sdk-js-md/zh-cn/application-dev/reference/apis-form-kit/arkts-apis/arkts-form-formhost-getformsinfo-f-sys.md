@@ -14,11 +14,11 @@ function getFormsInfo(bundleName: string, callback: AsyncCallback<Array<formInfo
 
 获取设备上指定应用程序提供的卡片信息（不包含模板卡片）。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
-
-<!--Device-formHost-function getFormsInfo(bundleName: string, callback: AsyncCallback<Array<formInfo.FormInfo>>): void--><!--Device-formHost-function getFormsInfo(bundleName: string, callback: AsyncCallback<Array<formInfo.FormInfo>>): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -26,22 +26,22 @@ function getFormsInfo(bundleName: string, callback: AsyncCallback<Array<formInfo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 要查询的应用Bundle名称。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | 是 | 回调函数。当获取设备上指定应用程序提供的卡片信息成功，error为undefined，data为查询到的卡 片信息；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
-| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
-| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
+| [16500060](../errorcode-form.md#16500060-连接服务失败) |
+| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) |
 
 **示例**
 
@@ -212,11 +212,11 @@ function getFormsInfo(
 
 获取设备上指定应用程序提供的卡片信息（不包含模板卡片）。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
-
-<!--Device-formHost-function getFormsInfo(    bundleName: string,    moduleName: string,    callback: AsyncCallback<Array<formInfo.FormInfo>>  ): void--><!--Device-formHost-function getFormsInfo(    bundleName: string,    moduleName: string,    callback: AsyncCallback<Array<formInfo.FormInfo>>  ): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -224,23 +224,23 @@ function getFormsInfo(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 要查询的应用Bundle名称。 |
-| moduleName | string | 是 | 要查询的模块名称。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | 是 | 回调函数。当获取设备上指定应用程序提供的卡片信息成功，error为undefined，data为查询到的卡 片信息；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| moduleName | string | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
-| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
-| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
+| [16500060](../errorcode-form.md#16500060-连接服务失败) |
+| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) |
 
 **示例**
 
@@ -255,11 +255,11 @@ function getFormsInfo(bundleName: string, moduleName?: string): Promise<Array<fo
 
 获取设备上指定应用程序提供的卡片信息（不包含模板卡片）。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
-
-<!--Device-formHost-function getFormsInfo(bundleName: string, moduleName?: string): Promise<Array<formInfo.FormInfo>>--><!--Device-formHost-function getFormsInfo(bundleName: string, moduleName?: string): Promise<Array<formInfo.FormInfo>>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -267,28 +267,28 @@ function getFormsInfo(bundleName: string, moduleName?: string): Promise<Array<fo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 要查询的应用Bundle名称。 |
-| moduleName | string | 否 | 要查询的模块名称，缺省默认为空。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| moduleName | string | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Promise对象。返回查询到的卡片信息。 |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;formInfo.FormInfo & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
-| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
-| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
+| [16500060](../errorcode-form.md#16500060-连接服务失败) |
+| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) |
 
 **示例**
 
@@ -303,11 +303,11 @@ function getFormsInfo(filter: formInfo.FormInfoFilter): Promise<Array<formInfo.F
 
 获取设备上指定应用程序提供的卡片信息（不包含模板卡片）。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
-
-<!--Device-formHost-function getFormsInfo(filter: formInfo.FormInfoFilter): Promise<Array<formInfo.FormInfo>>--><!--Device-formHost-function getFormsInfo(filter: formInfo.FormInfoFilter): Promise<Array<formInfo.FormInfo>>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -315,29 +315,28 @@ function getFormsInfo(filter: formInfo.FormInfoFilter): Promise<Array<formInfo.F
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| filter | formInfo.FormInfoFilter | 是 | 卡片信息过滤器。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| filter | formInfo.FormInfoFilter | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Promise对象。返回查询到符合条件的卡片信息。 |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;formInfo.FormInfo & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
-| [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
-| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
+| [16500060](../errorcode-form.md#16500060-连接服务失败) |
+| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) |
 
 **示例**
 
 参见 [getFormsInfo](#getformsinfo)
-

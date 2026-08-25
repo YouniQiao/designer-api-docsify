@@ -16,13 +16,13 @@ function getPermissionDef(permissionName: string, callback: AsyncCallback<Permis
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** null
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
-
-<!--Device-bundle-function getPermissionDef(permissionName: string, callback: AsyncCallback<PermissionDef>): void--><!--Device-bundle-function getPermissionDef(permissionName: string, callback: AsyncCallback<PermissionDef>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -30,10 +30,10 @@ function getPermissionDef(permissionName: string, callback: AsyncCallback<Permis
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| permissionName | string | 是 | 需要查询的权限的名称。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionDef](arkts-ability-permissiondef-depr-i-sys.md)&gt; | 是 | 程序启动作为入参的回调函数，返回定义的权限信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| permissionName | string | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionDef](arkts-ability-permissiondef-depr-i-sys.md)&gt; | 是 |
 
 **示例**
 
@@ -73,13 +73,13 @@ function getPermissionDef(permissionName: string): Promise<PermissionDef>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** null
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
-
-<!--Device-bundle-function getPermissionDef(permissionName: string): Promise<PermissionDef>--><!--Device-bundle-function getPermissionDef(permissionName: string): Promise<PermissionDef>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -87,17 +87,16 @@ function getPermissionDef(permissionName: string): Promise<PermissionDef>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| permissionName | string | 是 | 需要查询的权限的名称。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| permissionName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[PermissionDef](arkts-ability-permissiondef-depr-i-sys.md)&gt; | Promise对象，获取成功时返回权限详细信息。 |
+| 类型 |
+| --- |
+| Promise&lt;[PermissionDef](arkts-ability-permissiondef-depr-i-sys.md)&gt; |
 
 **示例**
 
 参见 [getPermissionDef](#getpermissiondef)
-

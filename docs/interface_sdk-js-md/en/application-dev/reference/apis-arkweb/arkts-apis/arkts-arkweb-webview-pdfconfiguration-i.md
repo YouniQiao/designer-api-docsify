@@ -1,13 +1,13 @@
 # PdfConfiguration
 
-Input parameter of the [createPdf](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#createpdf) function.
+Input parameter of the [createPdf](arkts-arkweb-webview-webviewcontroller-c.md#createpdf) function.
 
 > **NOTE：**&gt;
 > The number of pixels is calculated as follows: Number of pixels = 96 x Number of inches.
 
 **Since:** 14
 
-<!--Device-webview-interface PdfConfiguration--><!--Device-webview-interface PdfConfiguration-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -29,9 +29,9 @@ Page Height.Value range: greater than or equal to 0. If the value is out of rang
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
-<!--Device-PdfConfiguration-height: number--><!--Device-PdfConfiguration-height: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -47,9 +47,9 @@ Bottom margin.The value range is [0.0, half of the page height). If the value is
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
-<!--Device-PdfConfiguration-marginBottom: number--><!--Device-PdfConfiguration-marginBottom: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -65,9 +65,9 @@ Left margin.The value range is [0.0, half of the page width). If the value is no
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
-<!--Device-PdfConfiguration-marginLeft: number--><!--Device-PdfConfiguration-marginLeft: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -83,9 +83,9 @@ Right margin.The value range is [0.0, half of the page width). If the value is n
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
-<!--Device-PdfConfiguration-marginRight: number--><!--Device-PdfConfiguration-marginRight: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -101,9 +101,9 @@ Top margin.The value range is [0.0, half of the page height). If the value is no
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
-<!--Device-PdfConfiguration-marginTop: number--><!--Device-PdfConfiguration-marginTop: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -119,9 +119,9 @@ Scale multiple.The value range is [0.0, 2.0]. If the value is less than 0.0, set
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
-<!--Device-PdfConfiguration-scale?: number--><!--Device-PdfConfiguration-scale?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -137,9 +137,9 @@ Whether to print the background color. The value **true** means to print the bac
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
-<!--Device-PdfConfiguration-shouldPrintBackground?: boolean--><!--Device-PdfConfiguration-shouldPrintBackground?: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -155,9 +155,8 @@ Page Width.Value range: greater than or equal to 0. If the value is out of range
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-PdfConfiguration-width: number--><!--Device-PdfConfiguration-width: number-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

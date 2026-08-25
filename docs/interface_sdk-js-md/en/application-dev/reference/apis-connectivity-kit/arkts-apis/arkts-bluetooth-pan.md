@@ -4,9 +4,9 @@ Provides methods to accessing bluetooth PAN(Personal Area Networking Profile)-re
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-unnamed-declare namespace pan--><!--Device-unnamed-declare namespace pan-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -20,27 +20,26 @@ import { pan } from '@kit.ConnectivityKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [createPanProfile](arkts-connectivity-pan-createpanprofile-f.md) | create the instance of pan profile. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [createPanProfile](arkts-connectivity-pan-createpanprofile-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [PanProfile](arkts-connectivity-pan-panprofile-i.md) | Manager pan host profile. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PanProfile](arkts-connectivity-pan-panprofile-i.md) |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [PanProfile](arkts-connectivity-pan-panprofile-i-sys.md) | Manager pan host profile. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PanProfile](arkts-connectivity-pan-panprofile-i-sys.md) |
 <!--DelEnd-->
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [BaseProfile](arkts-connectivity-pan-baseprofile-t.md) | Base interface of profile. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BaseProfile](arkts-connectivity-pan-baseprofile-t.md) |

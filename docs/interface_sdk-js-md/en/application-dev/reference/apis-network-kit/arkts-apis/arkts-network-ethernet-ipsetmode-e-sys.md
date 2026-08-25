@@ -4,7 +4,7 @@ Defines the configuration mode of the Ethernet connection.
 
 **Since:** 9
 
-<!--Device-ethernet-export enum IPSetMode--><!--Device-ethernet-export enum IPSetMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -20,7 +20,7 @@ Static network configuration for an Ethernet connection.
 
 **Since:** 9
 
-<!--Device-IPSetMode-STATIC = 0--><!--Device-IPSetMode-STATIC = 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -36,7 +36,7 @@ Dynamic network configuration for an Ethernet connection.
 
 **Since:** 9
 
-<!--Device-IPSetMode-DHCP = 1--><!--Device-IPSetMode-DHCP = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -52,7 +52,7 @@ Static network configuration for a LAN connection.
 
 **Since:** 11
 
-<!--Device-IPSetMode-LAN_STATIC = 2--><!--Device-IPSetMode-LAN_STATIC = 2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -68,9 +68,8 @@ Dynamic network configuration for a LAN connection.
 
 **Since:** 11
 
-<!--Device-IPSetMode-LAN_DHCP = 3--><!--Device-IPSetMode-LAN_DHCP = 3-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
-

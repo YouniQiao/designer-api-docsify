@@ -4,11 +4,11 @@ Defines device information.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 11
 
 **Substitutes:** [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
-
-<!--Device-deviceManager-interface DeviceInfo--><!--Device-deviceManager-interface DeviceInfo-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -32,9 +32,9 @@ Authentication type of the device.
 
 **Since:** 10
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-DeviceInfo-authForm: AuthForm--><!--Device-DeviceInfo-authForm: AuthForm-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -52,11 +52,11 @@ Unique identifier of the device.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 11
 
 **Substitutes:** [deviceId](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#deviceid)
-
-<!--Device-DeviceInfo-deviceId: string--><!--Device-DeviceInfo-deviceId: string-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -74,11 +74,11 @@ Device name.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 11
 
 **Substitutes:** [deviceName](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#devicename)
-
-<!--Device-DeviceInfo-deviceName: string--><!--Device-DeviceInfo-deviceName: string-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -96,11 +96,11 @@ Device type.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 11
 
 **Substitutes:** [deviceType](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#devicetype)
-
-<!--Device-DeviceInfo-deviceType: DeviceType--><!--Device-DeviceInfo-deviceType: DeviceType-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -118,11 +118,11 @@ Network ID of the device.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 11
 
 **Substitutes:** [networkId](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#networkid)
-
-<!--Device-DeviceInfo-networkId: string--><!--Device-DeviceInfo-networkId: string-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -140,11 +140,10 @@ Distance between the discovered device and the device that initiates device disc
 
 **Since:** 9
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-DeviceInfo-range: number--><!--Device-DeviceInfo-range: number-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
-

@@ -4,7 +4,7 @@ Enumerates the text menu display modes.
 
 **Since:** 16
 
-<!--Device-unnamed-declare enum TextMenuShowMode--><!--Device-unnamed-declare enum TextMenuShowMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ The menu is displayed in the current window.
 
 **Since:** 16
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 16.
-
-<!--Device-TextMenuShowMode-DEFAULT = 0--><!--Device-TextMenuShowMode-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -37,11 +37,10 @@ The menu is preferentially displayed in a separate window. If a separate window 
 
 **Since:** 16
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 16.
 
-<!--Device-TextMenuShowMode-PREFER_WINDOW = 1--><!--Device-TextMenuShowMode-PREFER_WINDOW = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,11 +4,11 @@ Wi-Fi device configuration information.@interface WifiDeviceConfig
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md)
-
-<!--Device-wifi-interface WifiDeviceConfig--><!--Device-wifi-interface WifiDeviceConfig-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -30,11 +30,11 @@ The UID of the Wi-Fi configuration creator
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [creatorUid](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#creatoruid)
-
-<!--Device-WifiDeviceConfig-creatorUid: number--><!--Device-WifiDeviceConfig-creatorUid: number-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -52,11 +52,11 @@ Disable reason
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [disableReason](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#disablereason)
-
-<!--Device-WifiDeviceConfig-disableReason: number--><!--Device-WifiDeviceConfig-disableReason: number-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -74,11 +74,11 @@ IP Type
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ipType](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#iptype)
-
-<!--Device-WifiDeviceConfig-ipType: IpType--><!--Device-WifiDeviceConfig-ipType: IpType-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -96,11 +96,11 @@ Allocated networkId
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
-**Substitutes:** [netId](arkts-connectivity-wifimanager-wifideviceconfig-i.md#netid)
-
-<!--Device-WifiDeviceConfig-netId: number--><!--Device-WifiDeviceConfig-netId: number-End-->
+**Substitutes:** [netId](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#netid)
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -118,11 +118,11 @@ Random mac address, the length is 6
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [randomMacAddr](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#randommacaddr)
-
-<!--Device-WifiDeviceConfig-randomMacAddr: string--><!--Device-WifiDeviceConfig-randomMacAddr: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -140,11 +140,11 @@ Random mac type
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [randomMacType](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#randommactype)
-
-<!--Device-WifiDeviceConfig-randomMacType: number--><!--Device-WifiDeviceConfig-randomMacType: number-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -162,13 +162,12 @@ IP config of static
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [staticIp](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#staticip)
 
-<!--Device-WifiDeviceConfig-staticIp: IpConfig--><!--Device-WifiDeviceConfig-staticIp: IpConfig-End-->
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
-

@@ -14,31 +14,31 @@ function setSecurityLabelSync(path: string, type: DataLevel): void
 
 Sets the data security level for a file or directory in synchronous mode. The level can only be adjusted from low to high, or set to the same level.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-securityLabel-function setSecurityLabelSync(path: string, type: DataLevel): void--><!--Device-securityLabel-function setSecurityLabelSync(path: string, type: DataLevel): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| path | string | Yes | File path. |
-| type | [DataLevel](arkts-corefile-securitylabel-datalevel-t.md) | Yes | Data security level. The value can only be **s0**, **s1**, **s2**, **s3**, or **s4**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| path | string | Yes |
+| type | [DataLevel](arkts-corefile-securitylabel-datalevel-t.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900007 | Arg list too long |
-| 13900015 | File exists |
-| 13900020 | Invalid argument |
-| 13900025 | No space left on device |
-| 13900037 | No data available |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900007 |
+| 13900015 |
+| 13900020 |
+| 13900025 |
+| 13900037 |
+| 13900041 |
+| 13900042 |
 
 **Examples**
 
@@ -46,4 +46,3 @@ Sets the data security level for a file or directory in synchronous mode. The le
 let filePath = pathDir + '/test.txt';
 securityLabel.setSecurityLabelSync(filePath, "s0");
 ```
-

@@ -16,21 +16,21 @@ Creates an **SEService** instance for connecting to all available SEs in the sys
 
 **Since:** 12
 
-<!--Device-omapi-function createService(): Promise<SEService>--><!--Device-omapi-function createService(): Promise<SEService>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.SecureElement
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[SEService](arkts-connectivity-omapi-seservice-i.md)&gt; | Promise used to return the **SEService** instance created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[SEService](arkts-connectivity-omapi-seservice-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -54,4 +54,3 @@ function secureElementDemo() {
     });
 }
 ```
-

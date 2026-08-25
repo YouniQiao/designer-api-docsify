@@ -4,7 +4,7 @@ How menu display is triggered.
 
 **Since:** 8
 
-<!--Device-unnamed-declare enum ResponseType--><!--Device-unnamed-declare enum ResponseType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ Shows the shortcut menu by right-clicking the text.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ResponseType-RightClick--><!--Device-ResponseType-RightClick-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,8 @@ The menu is displayed when the component is long-pressed.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseType-LongPress--><!--Device-ResponseType-LongPress-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

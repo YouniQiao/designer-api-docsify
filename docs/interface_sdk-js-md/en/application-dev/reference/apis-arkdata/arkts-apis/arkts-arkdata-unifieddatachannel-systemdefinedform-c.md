@@ -4,13 +4,9 @@ Represents the service widget data defined by the system. It is a child class of
 
 **Inheritance/Implementation:** SystemDefinedForm extends [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)
 
-**Since:** 23
+**Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-unifiedDataChannel-class SystemDefinedForm--><!--Device-unifiedDataChannel-class SystemDefinedForm-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -19,6 +15,106 @@ Represents the service widget data defined by the system. It is a child class of
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
+
+## abilityName
+
+```TypeScript
+set abilityName(value: string)
+```
+
+Indicates the ability name of form.
+
+**Type:** string
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+## bundleName
+
+```TypeScript
+set bundleName(value: string)
+```
+
+Indicates the bundle name of form
+
+**Type:** string
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+## formId
+
+```TypeScript
+set formId(value: int)
+```
+
+Indicates the id of form
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+## formName
+
+```TypeScript
+set formName(value: string)
+```
+
+Indicates the name of form
+
+**Type:** string
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+## module
+
+```TypeScript
+set module(value: string)
+```
+
+Indicates the module of form
+
+**Type:** string
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **Examples**
 
@@ -37,4 +133,3 @@ form.details = {
 };
 let unifiedData = new unifiedDataChannel.UnifiedData(form);
 ```
-

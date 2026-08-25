@@ -4,7 +4,7 @@ The proxy object of the AgentExtensionAbility, used to send messages to the Agen
 
 **Since:** 24
 
-<!--Device-unnamed-export interface AgentProxy--><!--Device-unnamed-export interface AgentProxy-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -20,9 +20,9 @@ Send authentication to the AgentExtensionAbility.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-AgentProxy-authorize(handshakeData: string): void--><!--Device-AgentProxy-authorize(handshakeData: string): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -30,15 +30,15 @@ Send authentication to the AgentExtensionAbility.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| handshakeData | string | Yes | Indicates the handshake data to send. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| handshakeData | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [35600002](../errorcode-ability.md#35600002-failed-to-send-ipc-messages) | Failed to send the IPC message. |
+| Error Code ID |
+| --- |
+| [35600002](../errorcode-ability.md#35600002-failed-to-send-ipc-messages) |
 
 ## sendData
 
@@ -50,9 +50,9 @@ Send data to the AgentExtensionAbility.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-AgentProxy-sendData(data: string): void--><!--Device-AgentProxy-sendData(data: string): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -60,13 +60,12 @@ Send data to the AgentExtensionAbility.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | string | Yes | Indicates the data to send. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [35600002](../errorcode-ability.md#35600002-failed-to-send-ipc-messages) | Failed to send the IPC message. |
-
+| Error Code ID |
+| --- |
+| [35600002](../errorcode-ability.md#35600002-failed-to-send-ipc-messages) |

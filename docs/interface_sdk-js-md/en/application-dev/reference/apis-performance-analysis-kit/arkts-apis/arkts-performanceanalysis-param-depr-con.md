@@ -10,11 +10,11 @@ Distributed service instance id.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** DISTRIBUTED_SERVICE_INSTANCE_ID
-
-<!--Device-Param-const DISTRIBUTED_SERVICE_INSTANCE_ID: string--><!--Device-Param-const DISTRIBUTED_SERVICE_INSTANCE_ID: string-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -28,11 +28,11 @@ Distributed service name.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** DISTRIBUTED_SERVICE_NAME
-
-<!--Device-Param-const DISTRIBUTED_SERVICE_NAME: string--><!--Device-Param-const DISTRIBUTED_SERVICE_NAME: string-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -46,11 +46,10 @@ User id.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** USER_ID
 
-<!--Device-Param-const USER_ID: string--><!--Device-Param-const USER_ID: string-End-->
-
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
-

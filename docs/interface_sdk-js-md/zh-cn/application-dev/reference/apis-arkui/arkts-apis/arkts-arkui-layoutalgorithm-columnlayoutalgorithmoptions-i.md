@@ -4,7 +4,7 @@
 
 **起始版本：** 24
 
-<!--Device-unnamed-interface ColumnLayoutAlgorithmOptions--><!--Device-unnamed-interface ColumnLayoutAlgorithmOptions-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,19 +16,19 @@ alignItems?: HorizontalAlign
 
 所有子组件在水平方向上的对齐格式。默认值：HorizontalAlign.Center非法值：按默认值处理。
 
-**类型：** [HorizontalAlign](../../apis-default/arkts-apis/arkts-enums-horizontalalign-e.md)
+**类型：** [HorizontalAlign](arkts-arkui-enums-horizontalalign-e.md)
 
 **默认值：** HorizontalAlign.Center
 
 **起始版本：** 24
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ColumnLayoutAlgorithmOptions-alignItems?: HorizontalAlign--><!--Device-ColumnLayoutAlgorithmOptions-alignItems?: HorizontalAlign-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,13 +46,13 @@ isReverse?: boolean
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ColumnLayoutAlgorithmOptions-isReverse?: boolean--><!--Device-ColumnLayoutAlgorithmOptions-isReverse?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,19 +64,19 @@ justifyContent?: FlexAlign
 
 所有子组件在垂直方向上的对齐格式。默认值：FlexAlign.Start非法值：按默认值处理。
 
-**类型：** [FlexAlign](../../apis-default/arkts-apis/arkts-enums-flexalign-e.md)
+**类型：** [FlexAlign](arkts-arkui-enums-flexalign-e.md)
 
 **默认值：** FlexAlign.Start
 
 **起始版本：** 24
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ColumnLayoutAlgorithmOptions-justifyContent?: FlexAlign--><!--Device-ColumnLayoutAlgorithmOptions-justifyContent?: FlexAlign-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,11 +88,13 @@ space?: LengthMetrics
 
 纵向布局元素垂直方向间距。默认值：LengthMetrics.vp(0)非法值：按默认值处理。
 
-**类型：** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 
 **起始版本：** 24
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -100,7 +102,4 @@ space?: LengthMetrics
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-ColumnLayoutAlgorithmOptions-space?: LengthMetrics--><!--Device-ColumnLayoutAlgorithmOptions-space?: LengthMetrics-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

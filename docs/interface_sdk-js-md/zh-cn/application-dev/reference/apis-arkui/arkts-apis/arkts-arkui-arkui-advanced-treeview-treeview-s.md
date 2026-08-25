@@ -8,13 +8,9 @@
 > 外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到TreeView本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议TreeView设置通用属性和通用事
 > 件。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**装饰器类型：** @Component
-
-<!--Device-unnamed-export declare struct TreeView--><!--Device-unnamed-export declare struct TreeView-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,13 +30,9 @@ The method to build component.
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**装饰器类型：** @Builder
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-TreeView-@Builder  build(): void--><!--Device-TreeView-@Builder  build(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,13 +46,12 @@ treeController: TreeController
 
 **类型：** [TreeController](arkts-arkui-arkui-advanced-treeview-treecontroller-c.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-TreeView-treeController: TreeController--><!--Device-TreeView-treeController: TreeController-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-unnamed-declare interface WindowFeatures--><!--Device-unnamed-declare interface WindowFeatures-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -25,7 +25,7 @@ height: number
 
 **起始版本：** 23
 
-<!--Device-WindowFeatures-height: number--><!--Device-WindowFeatures-height: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -41,7 +41,7 @@ width: number
 
 **起始版本：** 23
 
-<!--Device-WindowFeatures-width: number--><!--Device-WindowFeatures-width: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -57,7 +57,7 @@ x: number
 
 **起始版本：** 23
 
-<!--Device-WindowFeatures-x: number--><!--Device-WindowFeatures-x: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -73,7 +73,6 @@ y: number
 
 **起始版本：** 23
 
-<!--Device-WindowFeatures-y: number--><!--Device-WindowFeatures-y: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-

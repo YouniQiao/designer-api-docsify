@@ -1,10 +1,6 @@
 # Generator
 
-**Inheritance/Implementation:** Generator extends Iterator<T, TReturn, TNext>
-
-**Since:** -1
-
-<!--Device-unnamed-interface Generator--><!--Device-unnamed-interface Generator-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,71 +13,63 @@
 [Symbol.iterator](): Generator<T, TReturn, TNext>
 ```
 
-**Since:** -1
-
-<!--Device-Generator-[Symbol.iterator](): Generator<T, TReturn, TNext>--><!--Device-Generator-[Symbol.iterator](): Generator<T, TReturn, TNext>-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## next
 
 ```TypeScript
 next(...args: [] | [TNext]): IteratorResult<T, TReturn>
 ```
 
-**Since:** -1
-
-<!--Device-Generator-next(...args: [] | [TNext]): IteratorResult<T, TReturn>--><!--Device-Generator-next(...args: [] | [TNext]): IteratorResult<T, TReturn>-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| args | [] \| [TNext] | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | [] \| [TNext] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## return
 
 ```TypeScript
 return(value: TReturn): IteratorResult<T, TReturn>
 ```
 
-**Since:** -1
-
-<!--Device-Generator-return(value: TReturn): IteratorResult<T, TReturn>--><!--Device-Generator-return(value: TReturn): IteratorResult<T, TReturn>-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | TReturn | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | TReturn | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## throw
 
 ```TypeScript
 throw(e: any): IteratorResult<T, TReturn>
 ```
 
-**Since:** -1
-
-<!--Device-Generator-throw(e: any): IteratorResult<T, TReturn>--><!--Device-Generator-throw(e: any): IteratorResult<T, TReturn>-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| e | any | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [e](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | any | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

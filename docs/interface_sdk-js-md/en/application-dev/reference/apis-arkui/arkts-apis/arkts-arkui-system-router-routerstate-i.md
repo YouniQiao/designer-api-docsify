@@ -4,11 +4,11 @@ Defines the routing state.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** RouterState
-
-<!--Device-unnamed-export interface RouterState--><!--Device-unnamed-export interface RouterState-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,11 @@ Index of the current page in the stack. The index starts from 1 from the bottom 
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** index
-
-<!--Device-RouterState-index: number--><!--Device-RouterState-index: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,11 +50,11 @@ Name of the current page, that is, the file name.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** name
-
-<!--Device-RouterState-name: string--><!--Device-RouterState-name: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,11 +70,10 @@ Path of the current page.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** path
 
-<!--Device-RouterState-path: string--><!--Device-RouterState-path: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

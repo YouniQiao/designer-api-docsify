@@ -4,9 +4,7 @@ Resolved relative time format options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-Intl-export interface ResolvedRelativeTimeFormatOptions--><!--Device-Intl-export interface ResolvedRelativeTimeFormatOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,11 +25,9 @@ Locale identifier.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedRelativeTimeFormatOptions-locale: string--><!--Device-ResolvedRelativeTimeFormatOptions-locale: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -47,11 +43,9 @@ Numbering system option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedRelativeTimeFormatOptions-numberingSystem: string--><!--Device-ResolvedRelativeTimeFormatOptions-numberingSystem: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -67,11 +61,9 @@ Numeric option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedRelativeTimeFormatOptions-numeric: RelativeTimeFormatNumeric--><!--Device-ResolvedRelativeTimeFormatOptions-numeric: RelativeTimeFormatNumeric-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -87,11 +79,8 @@ Style option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ResolvedRelativeTimeFormatOptions-style: RelativeTimeFormatStyle--><!--Device-ResolvedRelativeTimeFormatOptions-style: RelativeTimeFormatStyle-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

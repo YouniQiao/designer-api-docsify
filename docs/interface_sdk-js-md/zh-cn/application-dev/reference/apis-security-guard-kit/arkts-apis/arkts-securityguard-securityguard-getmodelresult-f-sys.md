@@ -16,9 +16,9 @@ function getModelResult(rule: ModelRule): Promise<ModelResult>
 
 **起始版本：** 12
 
-**需要权限：** ohos.permission.QUERY_SECURITY_MODEL_RESULT
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-securityGuard-function getModelResult(rule: ModelRule): Promise<ModelResult>--><!--Device-securityGuard-function getModelResult(rule: ModelRule): Promise<ModelResult>-End-->
+**需要权限：** ohos.permission.QUERY_SECURITY_MODEL_RESULT
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 
@@ -26,21 +26,20 @@ function getModelResult(rule: ModelRule): Promise<ModelResult>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rule | [ModelRule](arkts-securityguard-securityguard-modelrule-i-sys.md) | 是 | 安全模型规则，指定模型名称与参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| rule | [ModelRule](arkts-securityguard-securityguard-modelrule-i-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[ModelResult](arkts-securityguard-securityguard-modelresult-i-sys.md)&gt; | 以Promise形式返回模型结果。 |
+| 类型 |
+| --- |
+| Promise&lt;[ModelResult](arkts-securityguard-securityguard-modelresult-i-sys.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | check permission fail. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | non-system application uses the system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |

@@ -6,7 +6,7 @@ Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md). This object
 
 **Since:** 11
 
-<!--Device-unnamed-interface SwipeGestureEvent--><!--Device-unnamed-interface SwipeGestureEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +28,11 @@ Angle of the swipe gesture, that is, the angle between the instantaneous directi
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SwipeGestureEvent-angle: number--><!--Device-SwipeGestureEvent-angle: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,11 +48,10 @@ Swipe gesture speed, defined as the average swipe speed of all fingers relative 
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-SwipeGestureEvent-speed: number--><!--Device-SwipeGestureEvent-speed: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

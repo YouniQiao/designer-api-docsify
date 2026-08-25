@@ -2,9 +2,9 @@
 
 The module describes the parameters transferred to the child process. When starting a child process through [childProcessManager](arkts-app-ability-childprocessmanager.md), you can transfer parameters to the child process through **ChildProcessArgs**.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface ChildProcessArgs--><!--Device-unnamed-export interface ChildProcessArgs-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -24,11 +24,11 @@ Custom parameters to be transparently transmitted to the child process. The para
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ChildProcessArgs-entryParams?: string--><!--Device-ChildProcessArgs-entryParams?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -41,13 +41,13 @@ fds?: Record<string, int>
 File Descriptor (FD) handles, which are used for communication between the main process and child process. They are passed to the child process in the form of key-value pairs, where **key** is a custom string and **value** is a DF handle. The FD handles can be obtained through **args.fds** in [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart).&lt;b&gt;NOTE&lt;/b&gt;  
 - **fds** supports a maximum of 16 groups. In each group, **key** contains a maximum of 20 characters. - The ID of a handle passed to the child process may change, but the handle always points to the same file.
 
-**Type:** Record&lt;string, int&gt;
+**Type:** ArkTS-Dyn: Record&lt;string, number&gt;  <br>ArkTS-Sta：Record&lt;string, int&gt;
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ChildProcessArgs-fds?: Record<string, int>--><!--Device-ChildProcessArgs-fds?: Record<string, int>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -102,4 +102,3 @@ export default class DemoProcess extends ChildProcess {
   }
 }
 ```
-

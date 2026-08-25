@@ -8,9 +8,9 @@ The **tagSession** module provides common APIs for establishing connections and 
 > following instructions in
 > [SystemCapability](https://developer.huawei.com/consumer/en/doc/harmonyos-references/syscap).
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-export interface TagSession--><!--Device-unnamed-export interface TagSession-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -22,23 +22,23 @@ connect(): void
 
 Connects to this tag. Call this API to set up a connection before reading data from or writing data to a tag.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-TagSession-connect(): void--><!--Device-TagSession-connect(): void-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
 
 **Examples**
 
@@ -70,21 +70,21 @@ Connects to this tag. Call this API to set up a connection before reading data f
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** connect
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-<!--Device-TagSession-connectTag(): boolean--><!--Device-TagSession-connectTag(): boolean-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -112,21 +112,21 @@ Obtains the maximum length of the data that can be sent to this tag.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getMaxTransmitSize](#getmaxtransmitsize)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-<!--Device-TagSession-getMaxSendLength(): number--><!--Device-TagSession-getMaxSendLength(): number-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Maximum data length obtained. The value cannot be a negative number. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -142,35 +142,41 @@ console.info("tag maxSendLen: " + maxSendLen);
 
 ## getMaxTransmitSize
 
+ArkTS-Dyn:
+```TypeScript
+getMaxTransmitSize(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getMaxTransmitSize(): int
 ```
 
 Obtains the maximum length of the data that can be sent to this tag.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-TagSession-getMaxTransmitSize(): int--><!--Device-TagSession-getMaxTransmitSize(): int-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Maximum data length obtained. The value cannot be a negative number. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
 
 **Examples**
 
@@ -202,21 +208,21 @@ Obtains the timeout period for sending data to this tag, in milliseconds.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getTimeout](#gettimeout)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-<!--Device-TagSession-getSendDataTimeout(): number--><!--Device-TagSession-getSendDataTimeout(): number-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Timeout period obtained, in milliseconds. The value cannot be a negative number. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -244,21 +250,21 @@ Obtains the **tagInfo** object provided by the NFC service when the tag is dispa
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getTagInfo](arkts-connectivity-tag-gettaginfo-f.md)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-<!--Device-TagSession-getTagInfo(): tag.TagInfo--><!--Device-TagSession-getTagInfo(): tag.TagInfo-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| tag.TagInfo | Taginfo** object obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| tag.TagInfo |
 
 **Examples**
 
@@ -274,35 +280,41 @@ console.info("tag tagInfo: " + tagInfo);
 
 ## getTimeout
 
+ArkTS-Dyn:
+```TypeScript
+getTimeout(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getTimeout(): int
 ```
 
 Obtains the timeout period for sending data to this tag, in milliseconds.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-TagSession-getTimeout(): int--><!--Device-TagSession-getTimeout(): int-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Timeout period obtained, in milliseconds. The value cannot be a negative number. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
 
 **Examples**
 
@@ -328,25 +340,25 @@ isConnected(): boolean
 
 Checks whether the tag is connected. If you receive a message indicating that the tag has not been connected, call [tagSession.connect](#connect) to connect the tag.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TagSession-isConnected(): boolean--><!--Device-TagSession-isConnected(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the tag is connected; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -378,19 +390,19 @@ Checks whether the tag is connected.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** isConnected
-
-<!--Device-TagSession-isTagConnected(): boolean--><!--Device-TagSession-isTagConnected(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the tag is connected; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -418,13 +430,13 @@ Resets the connection to this tag.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [resetConnection](#resetconnection)
 
 **Required permissions:** ohos.permission.NFC_TAG
-
-<!--Device-TagSession-reset(): void--><!--Device-TagSession-reset(): void-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -447,23 +459,23 @@ resetConnection(): void
 
 Resets the connection to this tag.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-TagSession-resetConnection(): void--><!--Device-TagSession-resetConnection(): void-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
 
 **Examples**
 
@@ -495,27 +507,27 @@ Sends data to the tag. This API uses a promise to return the result.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** transmit
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-<!--Device-TagSession-sendData(data: number[]): Promise<number[]>--><!--Device-TagSession-sendData(data: number[]): Promise<number[]>-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | number[] | Yes | Data to send. The data consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | number[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;number[]&gt; | Promise used to return the response from the tag. The response consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;number[] & gt; |
 
 **Examples**
 
@@ -584,22 +596,22 @@ Sends data to the tag. This API uses an asynchronous callback to return the resu
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** transmit
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-<!--Device-TagSession-sendData(data: number[], callback: AsyncCallback<number[]>): void--><!--Device-TagSession-sendData(data: number[], callback: AsyncCallback<number[]>): void-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | number[] | Yes | Data to send. The data consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | Yes | Callback used to return the response from the tag. The response consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | number[] | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | Yes |
 
 **Examples**
 
@@ -619,27 +631,27 @@ Sets the maximum time allowed for sending data to this tag, in ms.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** setTimeout
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-<!--Device-TagSession-setSendDataTimeout(timeout: number): boolean--><!--Device-TagSession-setSendDataTimeout(timeout: number): boolean-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| timeout | number | Yes | Timeout period to set, in milliseconds. The value cannot be a negative number. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| timeout | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the timeout period is set successfully; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -656,36 +668,42 @@ console.info("tag setSendDataTimeout setStatus: " + setStatus);
 
 ## setTimeout
 
+ArkTS-Dyn:
+```TypeScript
+setTimeout(timeout: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setTimeout(timeout: int): void
 ```
 
 Sets the maximum time allowed for sending data to this tag, in ms.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-TagSession-setTimeout(timeout: int): void--><!--Device-TagSession-setTimeout(timeout: int): void-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| timeout | int | Yes | Timeout period to set, in milliseconds. The value cannot be a negative number. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| timeout | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
 
 **Examples**
 
@@ -706,43 +724,49 @@ try {
 
 ## transmit
 
+ArkTS-Dyn:
+```TypeScript
+transmit(data: number[]): Promise<number[]>
+```
+
+ArkTS-Sta:
 ```TypeScript
 transmit(data: int[]): Promise<int[]>
 ```
 
 Sends data to the tag. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-TagSession-transmit(data: int[]): Promise<int[]>--><!--Device-TagSession-transmit(data: int[]): Promise<int[]>-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | int[] | Yes | Data to send. The data consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;int[]&gt; | Promise used to return the response from the tag. The response consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Promise & lt;number[] & gt;<br>ArkTS-Sta：Promise & lt;int[] & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) |
 
 **Examples**
 
@@ -813,40 +837,45 @@ function tagSessionDemo() {
 
 ## transmit
 
+ArkTS-Dyn:
+```TypeScript
+transmit(data: number[], callback: AsyncCallback<number[]>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 transmit(data: int[], callback: AsyncCallback<int[]>): void
 ```
 
 Sends data to the tag. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-TagSession-transmit(data: int[], callback: AsyncCallback<int[]>): void--><!--Device-TagSession-transmit(data: int[], callback: AsyncCallback<int[]>): void-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | int[] | Yes | Data to send. The data consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | Yes | Callback used to return the response from the tag. The response consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | Yes |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) |
 
 **Examples**
 
 See [transmit](#transmit)
-

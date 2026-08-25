@@ -4,7 +4,7 @@ Edge.
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum Edge--><!--Device-unnamed-declare enum Edge-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ The top is centered horizontally.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Edge-Top--><!--Device-Edge-Top-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,9 @@ Center horizontal and vertical.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Edge-Center--><!--Device-Edge-Center-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,9 +50,9 @@ The bottom is centered horizontally.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Edge-Bottom--><!--Device-Edge-Bottom-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,9 +66,9 @@ Cross axis direction text baseline alignment.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Edge-Baseline--><!--Device-Edge-Baseline-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,9 +82,9 @@ Align the head of the cross axis direction.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Edge-Start--><!--Device-Edge-Start-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,9 +98,9 @@ Middle
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Edge-Middle--><!--Device-Edge-Middle-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -114,9 +114,8 @@ Align the head of the cross axis direction.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-Edge-End--><!--Device-Edge-End-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

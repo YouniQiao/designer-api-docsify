@@ -4,11 +4,11 @@ WebController is the controller class of the ArkWeb component, used to control v
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** WebviewController
-
-<!--Device-unnamed-declare class WebController--><!--Device-unnamed-declare class WebController-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -27,19 +27,19 @@ Checks whether going to the previous page can be performed on the current page.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** accessBackward
-
-<!--Device-WebController-accessBackward(): boolean--><!--Device-WebController-accessBackward(): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true** is returned if going to the previous page can be performed on the current page; otherwise, **false** is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -73,19 +73,19 @@ Checks whether going to the next page can be performed on the current page.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** accessForward
-
-<!--Device-WebController-accessForward(): boolean--><!--Device-WebController-accessForward(): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | If going to the next page can be performed on the current page, **true** is returned; otherwise, **false** is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -119,25 +119,25 @@ Checks whether the current page can move forward or backward by the given step.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** accessStep
-
-<!--Device-WebController-accessStep(step: number): boolean--><!--Device-WebController-accessStep(step: number): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| step | number | Yes | Number of the steps to take. A positive number means to go forward, and a negative number means to go backward. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| step | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the page can go forward or backward by the given step. The value **true** means it can, and **false** means it cannot. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -168,15 +168,15 @@ struct WebComponent {
 backward()
 ```
 
-Goes backward by one page in the history stack. You are advised to call [accessBackward&lt;sup&gt;9+&lt;/sup&gt;](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#accessbackward) to check whether the current page can go backward before calling **backward**.
+Goes backward by one page in the history stack. You are advised to call [accessBackward&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#accessbackward) to check whether the current page can go backward before calling **backward**.
 
 **Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
 **Substitutes:** backward
-
-<!--Device-WebController-backward()--><!--Device-WebController-backward()-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -211,11 +211,11 @@ Clears the browsing history.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** clearHistory
-
-<!--Device-WebController-clearHistory(): void--><!--Device-WebController-clearHistory(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -250,11 +250,11 @@ Constructs a **WebController** object.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** constructor
-
-<!--Device-WebController-constructor()--><!--Device-WebController-constructor()-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -268,19 +268,19 @@ Deletes a specific application JavaScript object that is registered with the win
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** deleteJavaScriptRegister
-
-<!--Device-WebController-deleteJavaScriptRegister(name: string)--><!--Device-WebController-deleteJavaScriptRegister(name: string)-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the registered JavaScript object, which can be used to invoke the corresponding object on the application side from the web side. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
 
 **Examples**
 
@@ -310,15 +310,15 @@ struct WebComponent {
 forward()
 ```
 
-Goes forward by one page in the history stack. You are advised to call [accessForward&lt;sup&gt;9+&lt;/sup&gt;](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#accessforward) to check whether the current page can go forward before calling **forward**.
+Goes forward by one page in the history stack. You are advised to call [accessForward&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#accessforward) to check whether the current page can go forward before calling **forward**.
 
 **Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
 **Substitutes:** forward
-
-<!--Device-WebController-forward()--><!--Device-WebController-forward()-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -353,19 +353,19 @@ Obtains the cookie management object of the **Web** component.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 9
 
-**Substitutes:** [WebCookieManager](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md)
-
-<!--Device-WebController-getCookieManager(): WebCookie--><!--Device-WebController-getCookieManager(): WebCookie-End-->
+**Substitutes:** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md)
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WebCookie](arkts-arkweb-webcookie-c.md) | Cookie management object of the **Web** component. For details, see [WebCookie]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WebCookie](arkts-arkweb-webcookie-c.md) |
 
 **Examples**
 
@@ -398,19 +398,19 @@ Obtains the element type of the area being clicked.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getHitTest](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#gethittest)
-
-<!--Device-WebController-getHitTest(): HitTestType--><!--Device-WebController-getHitTest(): HitTestType-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [HitTestType](arkts-arkweb-hittesttype-e.md) | Element type of the area being clicked. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [HitTestType](arkts-arkweb-hittesttype-e.md) |
 
 **Examples**
 
@@ -444,19 +444,19 @@ If **baseUrl** is empty, the specified character string will be loaded using the
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** loadData
-
-<!--Device-WebController-loadData(options: { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string })--><!--Device-WebController-loadData(options: { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string })-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string } | Yes | The options with the data or URL and other information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string } | Yes |
 
 **Examples**
 
@@ -493,19 +493,19 @@ Loads the specified URL with the given HTTP headers.The object injected through 
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** loadUrl
-
-<!--Device-WebController-loadUrl(options: { url: string | Resource, headers?: Array<Header> })--><!--Device-WebController-loadUrl(options: { url: string | Resource, headers?: Array<Header> })-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | { url: string \| Resource, headers?: Array&lt;[Header](arkts-arkweb-header-i.md)&gt; } | Yes | The options with the URL and other information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | { url: string \| Resource, headers?: Array&lt;[Header](arkts-arkweb-header-i.md)&gt; } | Yes |
 
 **Examples**
 
@@ -538,11 +538,11 @@ Called when the **Web** component enters the active state.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** onActive
-
-<!--Device-WebController-onActive(): void--><!--Device-WebController-onActive(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -577,11 +577,11 @@ Called when the **Web** component enters the inactive state.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** onInactive
-
-<!--Device-WebController-onInactive(): void--><!--Device-WebController-onInactive(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -616,11 +616,11 @@ Called when the **Web** component refreshes the web page.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** refresh
-
-<!--Device-WebController-refresh()--><!--Device-WebController-refresh()-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -655,19 +655,19 @@ Injects a JavaScript object into the window object and calls the methods of the 
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** registerJavaScriptProxy
-
-<!--Device-WebController-registerJavaScriptProxy(options: { object: object, name: string, methodList: Array<string> })--><!--Device-WebController-registerJavaScriptProxy(options: { object: object, name: string, methodList: Array<string> })-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | { object: object, name: string, methodList: Array&lt;string&gt; } | Yes | The option with the JavaScript object and method list. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | { object: object, name: string, methodList: Array & lt;string & gt; } | Yes |
 
 **Examples**
 
@@ -740,11 +740,11 @@ Makes the current web page obtain focus.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** requestFocus
-
-<!--Device-WebController-requestFocus()--><!--Device-WebController-requestFocus()-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -779,19 +779,19 @@ Executes a JavaScript script. This API uses an asynchronous callback to return t
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** runJavaScript
-
-<!--Device-WebController-runJavaScript(options: { script: string, callback?: (result: string) => void })--><!--Device-WebController-runJavaScript(options: { script: string, callback?: (result: string) => void })-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | { script: string, callback?: (result: string) =&gt; void } | Yes | The options with a piece of code and a callback. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | { script: string, callback?: (result: string) = & gt; void } | Yes |
 
 **Examples**
 
@@ -854,11 +854,11 @@ Stops page loading.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** stop
-
-<!--Device-WebController-stop()--><!--Device-WebController-stop()-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -893,19 +893,19 @@ Sets a zoom factor for the current web page.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [zoom](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#zoom)
-
-<!--Device-WebController-zoom(factor: number): void--><!--Device-WebController-zoom(factor: number): void-End-->
+**Substitutes:** [zoom](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoom)
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| factor | number | Yes | Zoom factor. The value **1** indicates that the current zoom ratio remains unchanged. A value less than **1** indicates zooming out, and a value greater than **1** indicates zooming in. The value ranges from (0, 100]. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [factor](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | number | Yes |
 
 **Examples**
 
@@ -928,4 +928,3 @@ struct WebComponent {
   }
 }
 ```
-

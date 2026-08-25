@@ -8,16 +8,15 @@ function that returns backup BundlePara.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-backup-type BundlePara = undefined | string--><!--Device-backup-type BundlePara = undefined | string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
 
-| Type | Description |
-| --- | --- |
-| undefined |  |
-| string |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| undefined |
+| string |

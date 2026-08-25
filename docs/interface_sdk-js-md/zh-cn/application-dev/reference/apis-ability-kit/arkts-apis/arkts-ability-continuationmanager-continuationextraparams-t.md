@@ -8,6 +8,8 @@ export type ContinuationExtraParams = _ContinuationExtraParams
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 22
 
 **替代接口：** [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
@@ -16,9 +18,6 @@ export type ContinuationExtraParams = _ContinuationExtraParams
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-continuationManager-export type ContinuationExtraParams = _ContinuationExtraParams--><!--Device-continuationManager-export type ContinuationExtraParams = _ContinuationExtraParams-End-->
-
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
 **属性类型：** _ContinuationExtraParams
-

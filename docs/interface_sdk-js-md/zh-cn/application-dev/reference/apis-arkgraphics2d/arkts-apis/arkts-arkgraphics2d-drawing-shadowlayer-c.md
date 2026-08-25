@@ -7,9 +7,9 @@
 > - 本模块使用屏幕物理像素单位px。&gt;
 > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-drawing-class ShadowLayer--><!--Device-drawing-class ShadowLayer-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -29,30 +29,30 @@ static create(blurRadius: number, x: number, y: number, color: common2D.Color): 
 
 **起始版本：** 12
 
-<!--Device-ShadowLayer-static create(blurRadius: number, x: number, y: number, color: common2D.Color): ShadowLayer--><!--Device-ShadowLayer-static create(blurRadius: number, x: number, y: number, color: common2D.Color): ShadowLayer-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blurRadius | number | 是 | 阴影的半径，必须为大于0的浮点数。单位为物理像素px。 |
-| x | number | 是 | x轴上的偏移量，该参数为浮点数。单位为物理像素px。 |
-| y | number | 是 | y轴上的偏移量，该参数为浮点数。单位为物理像素px。 |
-| color | common2D.Color | 是 | ARGB格式的颜色。每个颜色通道的值是[0, 255]的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | number | 是 |
+| x | number | 是 |
+| y | number | 是 |
+| color | common2D.Color | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) | 返回创建的阴影层对象。 |
+| 类型 |
+| --- |
+| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -124,30 +124,30 @@ static create(blurRadius: double, x: double, y: double, color: common2D.Color): 
 
 **起始版本：** 23
 
-<!--Device-ShadowLayer-static create(blurRadius: double, x: double, y: double, color: common2D.Color): ShadowLayer | undefined--><!--Device-ShadowLayer-static create(blurRadius: double, x: double, y: double, color: common2D.Color): ShadowLayer | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blurRadius | double | 是 | 阴影的半径，必须为大于0的浮点数。单位为物理像素px。 |
-| x | double | 是 | x轴上的偏移量，该参数为浮点数。单位为物理像素px。 |
-| y | double | 是 | y轴上的偏移量，该参数为浮点数。单位为物理像素px。 |
-| color | common2D.Color | 是 | ARGB格式的颜色。每个颜色通道的值是[0, 255]的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | double | 是 |
+| x | double | 是 |
+| y | double | 是 |
+| color | common2D.Color | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| undefined | 返回创建的阴影层对象。创建失败时返回undefined。 |
+| 类型 |
+| --- |
+| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| undefined |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -163,30 +163,30 @@ static create(blurRadius: number, x: number, y: number, color: common2D.Color | 
 
 **起始版本：** 18
 
-<!--Device-ShadowLayer-static create(blurRadius: number, x: number, y: number, color: common2D.Color | number): ShadowLayer--><!--Device-ShadowLayer-static create(blurRadius: number, x: number, y: number, color: common2D.Color | number): ShadowLayer-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blurRadius | number | 是 | 阴影的半径，必须为大于0的浮点数。单位为物理像素px。 |
-| x | number | 是 | x轴上的偏移量，该参数为浮点数。单位为物理像素px。 |
-| y | number | 是 | y轴上的偏移量，该参数为浮点数。单位为物理像素px。 |
-| color | common2D.Color \| number | 是 | 颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，必须是16进制ARGB格式的无符 号整数，取值范围为[0, 0xFFFFFFFF]。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | number | 是 |
+| x | number | 是 |
+| y | number | 是 |
+| color | common2D.Color \| number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) | 返回创建的阴影层对象。 |
+| 类型 |
+| --- |
+| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -202,32 +202,31 @@ static create(blurRadius: double, x: double, y: double, color: common2D.Color | 
 
 **起始版本：** 23
 
-<!--Device-ShadowLayer-static create(blurRadius: double, x: double, y: double, color: common2D.Color | int): ShadowLayer | undefined--><!--Device-ShadowLayer-static create(blurRadius: double, x: double, y: double, color: common2D.Color | int): ShadowLayer | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blurRadius | double | 是 | 阴影的半径，必须为大于0的浮点数。单位为物理像素px。 |
-| x | double | 是 | x轴上的偏移量，该参数为浮点数。单位为物理像素px。 |
-| y | double | 是 | y轴上的偏移量，该参数为浮点数。单位为物理像素px。 |
-| color | common2D.Color \| int | 是 | 颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，必须是16进制ARGB格式的无符 号整数，取值范围为[0, 0xFFFFFFFF]。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | double | 是 |
+| x | double | 是 |
+| y | double | 是 |
+| color | common2D.Color \| int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| undefined | 返回创建的阴影层对象。创建失败时返回undefined。 |
+| 类型 |
+| --- |
+| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| undefined |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
 参见 [create](#create)
-

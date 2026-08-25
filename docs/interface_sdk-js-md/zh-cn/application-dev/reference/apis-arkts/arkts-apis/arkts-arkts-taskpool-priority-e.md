@@ -4,7 +4,7 @@
 
 **起始版本：** 9
 
-<!--Device-taskpool-enum Priority--><!--Device-taskpool-enum Priority-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -18,9 +18,9 @@ HIGH = 0
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Priority-HIGH = 0--><!--Device-Priority-HIGH = 0-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -34,9 +34,9 @@ MEDIUM = 1
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Priority-MEDIUM = 1--><!--Device-Priority-MEDIUM = 1-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -50,9 +50,9 @@ LOW = 2
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Priority-LOW = 2--><!--Device-Priority-LOW = 2-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -66,9 +66,9 @@ IDLE = 3
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Priority-IDLE = 3--><!--Device-Priority-IDLE = 3-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -107,4 +107,3 @@ for (let i: number = 0; i < taskArray.length; i+=4) { // 4: 每次执行4个任�
   taskpool.execute(taskArray[i + 3], taskpool.Priority.IDLE);
 }
 ```
-

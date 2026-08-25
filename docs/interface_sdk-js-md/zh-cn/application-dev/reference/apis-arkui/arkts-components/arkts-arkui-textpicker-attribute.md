@@ -6,7 +6,7 @@
 
 **起始版本：** 8
 
-<!--Device-unnamed-declare class TextPickerAttribute--><!--Device-unnamed-declare class TextPickerAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,19 +25,19 @@ canLoop(value: boolean)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-canLoop(value: boolean): TextPickerAttribute--><!--Device-TextPickerAttribute-canLoop(value: boolean): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean | 是 | 是否可循环滚动。 <br>- true：可循环。 <br>- false：不可循环。 <br>默认值：true |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | boolean | 是 |
 
 ## canLoop
 
@@ -49,19 +49,19 @@ canLoop(isLoop: Optional<boolean>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-canLoop(isLoop: Optional<boolean>): TextPickerAttribute--><!--Device-TextPickerAttribute-canLoop(isLoop: Optional<boolean>): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isLoop | Optional&lt;boolean&gt; | 是 | 是否可循环滚动。 <br>- true：可循环。 <br>- false：不可循环。 <br>默认值：true <br>当isLoop的值为undefined时，使用默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| isLoop | Optional & lt;boolean & gt; | 是 |
 
 ## defaultPickerItemHeight
 
@@ -73,17 +73,17 @@ defaultPickerItemHeight(value: number | string)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-TextPickerAttribute-defaultPickerItemHeight(value: number | string): TextPickerAttribute--><!--Device-TextPickerAttribute-defaultPickerItemHeight(value: number | string): TextPickerAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number \| string | 是 | 选择项的高度。 <br>取值范围： <br>number类型：[0, +∞)，单位为vp。 <br>string类型：仅支持number类型取值的字符串形式，例如"56"。 <br>默认值：选中项56vp，非选中项36vp。 <br>**说明：** <br>设置该参数后，选中项与非选中项的高度均为所设置的值。 <br>当value的值为负数时，使用默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number \| string | 是 |
 
 ## defaultPickerItemHeight
 
@@ -95,19 +95,19 @@ defaultPickerItemHeight(height: Optional<number | string>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-defaultPickerItemHeight(height: Optional<number | string>): TextPickerAttribute--><!--Device-TextPickerAttribute-defaultPickerItemHeight(height: Optional<number | string>): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| height | Optional&lt;number \| string&gt; | 是 | 选择项的高度。 <br>取值范围： <br>number类型：[0, +∞)，单位为vp。 <br>string类型：仅支持number类型取值的字符串形式，例如"56"。 <br>默认值：选中项56vp，非选中项36vp。 <br>**说明：** <br>1. 设置该参数后，选中项与非选中项的高度均为所设置的值。 <br>2. 当height的值为undefined时，维持上次取值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| height | Optional & lt;number \ | string & gt; | 是 |
 
 ## defaultTextStyle
 
@@ -119,19 +119,19 @@ defaultTextStyle(style: TextPickerTextStyle)
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-defaultTextStyle(style: TextPickerTextStyle): TextPickerAttribute--><!--Device-TextPickerAttribute-defaultTextStyle(style: TextPickerTextStyle): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| style | [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md) | 是 | 设置关闭滑动过程中文本样式变化的动效时，各个选项的文本样式。 <br>默认值：与Text组件默认值相同。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| style | [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md) | 是 |
 
 ## digitalCrownSensitivity
 
@@ -143,19 +143,19 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): TextPickerAttribute--><!--Device-TextPickerAttribute-digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sensitivity | Optional&lt;CrownSensitivity&gt; | 是 | 表冠响应灵敏度。 <br>默认值：CrownSensitivity.MEDIUM，响应速度适中。不同灵敏度值影响表冠滚动速度与选择项切换速度的对应关系， 具体各枚举值的效果请参考CrownSensitivity。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sensitivity | Optional & lt;CrownSensitivity & gt; | 是 |
 
 ## disableTextStyleAnimation
 
@@ -167,19 +167,19 @@ disableTextStyleAnimation(disabled: boolean)
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-disableTextStyleAnimation(disabled: boolean): TextPickerAttribute--><!--Device-TextPickerAttribute-disableTextStyleAnimation(disabled: boolean): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| disabled | boolean | 是 | 是否关闭滑动过程中文本样式变化的动效。 <br>- true：关闭文本样式变化动效。 <br>- false：不关闭文本样式变化动效。 <br>默认值：false <br>**说明：** <br>设置为true时，滑动过程中无字号、字重、字体颜色等变化动效，且文本均显示为[defaultTextStyle] [defaultTextStyle](#defaulttextstyle)属性设置的样式。如未设置[defaultTextStyle] [defaultTextStyle](#defaulttextstyle)，则显示为Text组件默认样式。设置为false时，使用系统默认的滑动文本 样式变化动效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| disabled | boolean | 是 |
 
 ## disappearTextStyle
 
@@ -191,19 +191,19 @@ disappearTextStyle(value: PickerTextStyle)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-disappearTextStyle(value: PickerTextStyle): TextPickerAttribute--><!--Device-TextPickerAttribute-disappearTextStyle(value: PickerTextStyle): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | PickerTextStyle | 是 | 边缘项的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff182431', <br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular <br>} <br>} <br>**说明：**未调用该方法设置样式时，使用默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 |
 
 ## disappearTextStyle
 
@@ -215,19 +215,19 @@ disappearTextStyle(style: Optional<PickerTextStyle>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-disappearTextStyle(style: Optional<PickerTextStyle>): TextPickerAttribute--><!--Device-TextPickerAttribute-disappearTextStyle(style: Optional<PickerTextStyle>): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| style | Optional&lt;PickerTextStyle&gt; | 是 | 边缘项的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff182431', <br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular <br>} <br>} <br>当style的值为undefined时，使用默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| style | Optional & lt;PickerTextStyle & gt; | 是 |
 
 ## disappearTextStyle
 
@@ -239,19 +239,19 @@ disappearTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-disappearTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>): TextPickerAttribute--><!--Device-TextPickerAttribute-disappearTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| style | Optional&lt;PickerTextStyle \| [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | 是 | 边缘项的文本颜色、字号、字体粗细、最大字号、最小字号、超长 文本截断方式。 <br>默认值： <br>{<br>color: '#ff182431', <br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular <br>}, <br>minFontSize: 0, <br>maxFontSize: 0, <br>overflow: TextOverflow.Clip <br>} <br>当style的值为undefined时，使用默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| style | Optional & lt;PickerTextStyle \ | [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | 是 |
 
 ## divider
 
@@ -264,19 +264,19 @@ divider(value: DividerOptions | null)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-divider(value: DividerOptions | null): TextPickerAttribute--><!--Device-TextPickerAttribute-divider(value: DividerOptions | null): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [DividerOptions](arkts-arkui-divideroptions-i.md) \| null | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [DividerOptions](arkts-arkui-divideroptions-i.md) \| null | 是 |
 
 ## divider
 
@@ -289,19 +289,19 @@ divider(textDivider: Optional<DividerOptions | null>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-divider(textDivider: Optional<DividerOptions | null>): TextPickerAttribute--><!--Device-TextPickerAttribute-divider(textDivider: Optional<DividerOptions | null>): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| textDivider | Optional&lt;[DividerOptions](arkts-arkui-divideroptions-i.md) \| null&gt; | 是 | 默认值： <br>{<br>strokeWidth: '2px', <br>startMargin: 0, <br>endMargin: 0, <br>color: '#33000000'<br>} <br>1. 当textDivider的值为undefined时，使用默认值。 <br>2. 当textDivider设置为有效的[DividerOptions](arkts-arkui-divideroptions-i.md)时，按设置的样式显示分割线。 <br>3. 当textDivider设置为null时，不显示分割线。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| textDivider | Optional&lt;[DividerOptions](arkts-arkui-divideroptions-i.md) \| null & gt; | 是 |
 
 ## enableHapticFeedback
 
@@ -313,19 +313,19 @@ enableHapticFeedback(enable: Optional<boolean>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-enableHapticFeedback(enable: Optional<boolean>): TextPickerAttribute--><!--Device-TextPickerAttribute-enableHapticFeedback(enable: Optional<boolean>): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enable | Optional&lt;boolean&gt; | 是 | 设置是否开启触控反馈。 <br>- true：开启触控反馈。 <br>- false：不开启触控反馈。 <br>默认值：true <br>设置为true后，其生效情况取决于系统的硬件是否支持。若硬件不支持触控反馈功能，开启该功能不会产生触控反馈效果，也不会抛出异常。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enable | Optional & lt;boolean & gt; | 是 |
 
 ## gradientHeight
 
@@ -337,19 +337,19 @@ gradientHeight(value: Dimension)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-gradientHeight(value: Dimension): TextPickerAttribute--><!--Device-TextPickerAttribute-gradientHeight(value: Dimension): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Dimension | 是 | 内容区上下边缘的渐隐高度。 <br>默认值：36vp <br>取值范围：[0, +∞)，支持百分比。 <br>**说明：** <br>1. value设置为百分比时，100%为TextPicker高度的一半。 <br>2. value设置为0时不显示渐隐效果。 <br>3. value设置为数字且超过TextPicker高度的一半时，使用默认值。 <br>4. 当value的值为负数时，使用默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 是 |
 
 ## gradientHeight
 
@@ -361,19 +361,19 @@ gradientHeight(height: Optional<Dimension>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-gradientHeight(height: Optional<Dimension>): TextPickerAttribute--><!--Device-TextPickerAttribute-gradientHeight(height: Optional<Dimension>): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| height | Optional&lt;Dimension&gt; | 是 | 内容区上下边缘的渐隐高度。 <br>默认值：36vp <br>取值范围：0, +∞)，支持百分比。 <br>**说明：** <br>1. height设置为百分比时，100%为TextPicker高度的一半。 <br>2. height设置为0时不显示渐隐效果。 <br>3. height设置为数字且超过TextPicker高度的一半时，使用默认值。 <br>4. 当height的值为undefined或负数时，使用默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| height | Optional & lt;Dimension & gt; | 是 |
 
 ## onAccept
 
@@ -388,17 +388,17 @@ onAccept(callback: (value: string, index: number) => void)
 
 **起始版本：** 8
 
-**废弃版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-TextPickerAttribute-onAccept(callback: (value: string, index: number) => void): TextPickerAttribute--><!--Device-TextPickerAttribute-onAccept(callback: (value: string, index: number) => void): TextPickerAttribute-End-->
+**废弃版本：** 10
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (value: string, index: number) =&gt; void | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (value: string, index: number) = & gt; void | 是 |
 
 ## onCancel
 
@@ -413,17 +413,17 @@ onCancel(callback: () => void)
 
 **起始版本：** 8
 
-**废弃版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-TextPickerAttribute-onCancel(callback: () => void): TextPickerAttribute--><!--Device-TextPickerAttribute-onCancel(callback: () => void): TextPickerAttribute-End-->
+**废弃版本：** 10
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | () =&gt; void | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | () = & gt; void | 是 |
 
 ## onChange
 
@@ -435,17 +435,17 @@ onChange(callback: (value: string | string[], index: number | number[]) => void)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-TextPickerAttribute-onChange(callback: (value: string | string[], index: number | number[]) => void): TextPickerAttribute--><!--Device-TextPickerAttribute-onChange(callback: (value: string | string[], index: number | number[]) => void): TextPickerAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (value: string \| string[], index: number \| number[]) =&gt; void | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (value: string \| string[], index: number \| number[]) = & gt; void | 是 |
 
 ## onChange
 
@@ -457,19 +457,19 @@ onChange(callback: Optional<OnTextPickerChangeCallback>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-onChange(callback: Optional<OnTextPickerChangeCallback>): TextPickerAttribute--><!--Device-TextPickerAttribute-onChange(callback: Optional<OnTextPickerChangeCallback>): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Optional&lt;[OnTextPickerChangeCallback](arkts-arkui-ontextpickerchangecallback-t.md)&gt; | 是 | 滑动选中TextPicker文本内容后，触发的回调。 <br>当callback的值为undefined时，不使用回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Optional&lt;[OnTextPickerChangeCallback](arkts-arkui-ontextpickerchangecallback-t.md)&gt; | 是 |
 
 ## onEnterSelectedArea
 
@@ -496,19 +496,19 @@ onEnterSelectedArea(callback: TextPickerEnterSelectedAreaCallback)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-onEnterSelectedArea(callback: TextPickerEnterSelectedAreaCallback): TextPickerAttribute--><!--Device-TextPickerAttribute-onEnterSelectedArea(callback: TextPickerEnterSelectedAreaCallback): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [TextPickerEnterSelectedAreaCallback](arkts-arkui-textpickerenterselectedareacallback-t.md) | 是 | 滑动TextPicker过程中，选项进入分割线区域时触发的回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [TextPickerEnterSelectedAreaCallback](arkts-arkui-textpickerenterselectedareacallback-t.md) | 是 |
 
 ## onScrollStop
 
@@ -527,19 +527,19 @@ onScrollStop(callback: TextPickerScrollStopCallback)
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-onScrollStop(callback: TextPickerScrollStopCallback): TextPickerAttribute--><!--Device-TextPickerAttribute-onScrollStop(callback: TextPickerScrollStopCallback): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [TextPickerScrollStopCallback](arkts-arkui-textpickerscrollstopcallback-t.md) | 是 | 文本选择器的选项列滑动停止时触发该事件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [TextPickerScrollStopCallback](arkts-arkui-textpickerscrollstopcallback-t.md) | 是 |
 
 ## onScrollStop
 
@@ -557,19 +557,19 @@ onScrollStop(callback: Optional<TextPickerScrollStopCallback>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-onScrollStop(callback: Optional<TextPickerScrollStopCallback>): TextPickerAttribute--><!--Device-TextPickerAttribute-onScrollStop(callback: Optional<TextPickerScrollStopCallback>): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Optional&lt;[TextPickerScrollStopCallback](arkts-arkui-textpickerscrollstopcallback-t.md)&gt; | 是 | 文本选择器的选项列滑动停止时触发该事件。 <br>当callback的值为undefined时，不使用回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Optional&lt;[TextPickerScrollStopCallback](arkts-arkui-textpickerscrollstopcallback-t.md)&gt; | 是 |
 
 ## selectedBackgroundStyle
 
@@ -581,19 +581,19 @@ selectedBackgroundStyle(style: Optional<PickerBackgroundStyle>)
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-selectedBackgroundStyle(style: Optional<PickerBackgroundStyle>): TextPickerAttribute--><!--Device-TextPickerAttribute-selectedBackgroundStyle(style: Optional<PickerBackgroundStyle>): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| style | Optional&lt;[PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)&gt; | 是 | 选中项背景的颜色和边框圆角半径， 多列模式时会同时设置所有列的选中项背景的颜色和圆角半径。 <br>默认值： <br>{<br>color: \\$r('sys.color.comp_background_tertiary'), <br>borderRadius: \\$r('sys.float.corner_radius_level12') <br>} |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| style | Optional&lt;[PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)&gt; | 是 |
 
 ## selectedIndex
 
@@ -605,19 +605,19 @@ selectedIndex(value: number | number[])
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-selectedIndex(value: number | number[]): TextPickerAttribute--><!--Device-TextPickerAttribute-selectedIndex(value: number | number[]): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number \| number[] | 是 | 选中项在数据选择列表中的索引值，索引从0开始。 <br>默认值：0 <br>当value的值为负数或者超过数据选择列表的最大索引值时，使用默认值。 <br> |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number \| number[] | 是 |
 
 ## selectedIndex
 
@@ -629,19 +629,19 @@ selectedIndex(index: Optional<number | number[]>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-selectedIndex(index: Optional<number | number[]>): TextPickerAttribute--><!--Device-TextPickerAttribute-selectedIndex(index: Optional<number | number[]>): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | Optional&lt;number \| number[]&gt; | 是 | 选中项在数据选择列表中的索引值，索引从0开始。 <br>默认值：0 <br>当index的值为undefined时，使用[TextPickerOptions](arkts-arkui-textpickeroptions-i.md)中的selected值。 <br>当index的值为负数或者超过数据选择列表的最大索引值时，使用默认值。 <br> |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | Optional & lt;number \ | number[] & gt; | 是 |
 
 ## selectedTextStyle
 
@@ -653,19 +653,19 @@ selectedTextStyle(value: PickerTextStyle)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-selectedTextStyle(value: PickerTextStyle): TextPickerAttribute--><!--Device-TextPickerAttribute-selectedTextStyle(value: PickerTextStyle): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | PickerTextStyle | 是 | 选中项的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff007dff', <br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium <br>} <br>} <br>**说明：**未调用该方法设置样式时，使用默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 |
 
 ## selectedTextStyle
 
@@ -677,19 +677,19 @@ selectedTextStyle(style: Optional<PickerTextStyle>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-selectedTextStyle(style: Optional<PickerTextStyle>): TextPickerAttribute--><!--Device-TextPickerAttribute-selectedTextStyle(style: Optional<PickerTextStyle>): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| style | Optional&lt;PickerTextStyle&gt; | 是 | 选中项的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff007dff', <br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium <br>} <br>} <br>当style的值为undefined时，使用默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| style | Optional & lt;PickerTextStyle & gt; | 是 |
 
 ## selectedTextStyle
 
@@ -701,19 +701,19 @@ selectedTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-selectedTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>): TextPickerAttribute--><!--Device-TextPickerAttribute-selectedTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| style | Optional&lt;PickerTextStyle \| [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | 是 | 选中项的文本颜色、字号、字体粗细、最大字号、最小字号、超长 文本截断方式。 <br>默认值： <br>{<br>color: '#ff007dff', <br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium <br>}, <br>minFontSize: 0, <br>maxFontSize: 0, <br>overflow: TextOverflow.Clip <br>} <br>当style的值为undefined时，使用默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| style | Optional & lt;PickerTextStyle \ | [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | 是 |
 
 ## textStyle
 
@@ -725,19 +725,19 @@ textStyle(value: PickerTextStyle)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-textStyle(value: PickerTextStyle): TextPickerAttribute--><!--Device-TextPickerAttribute-textStyle(value: PickerTextStyle): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | PickerTextStyle | 是 | 待选项的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} <br>**说明：**未调用该方法设置样式时，使用默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 |
 
 ## textStyle
 
@@ -749,19 +749,19 @@ textStyle(style: Optional<PickerTextStyle>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-textStyle(style: Optional<PickerTextStyle>): TextPickerAttribute--><!--Device-TextPickerAttribute-textStyle(style: Optional<PickerTextStyle>): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| style | Optional&lt;PickerTextStyle&gt; | 是 | 待选项的文本颜色、字号、字体粗细。 <br>默认值： <br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} <br>当style的值为undefined时，使用默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| style | Optional & lt;PickerTextStyle & gt; | 是 |
 
 ## textStyle
 
@@ -773,17 +773,16 @@ textStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerAttribute-textStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>): TextPickerAttribute--><!--Device-TextPickerAttribute-textStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>): TextPickerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| style | Optional&lt;PickerTextStyle \| [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | 是 | 待选项的文本颜色、字号、字体粗细、最大字号、最小字号、超长 文本截断方式。 <br>默认值： <br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>}, <br>minFontSize: 0, <br>maxFontSize: 0, <br>overflow: TextOverflow.Clip <br>} <br>当style的值为undefined时，使用默认值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| style | Optional & lt;PickerTextStyle \ | [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | 是 |

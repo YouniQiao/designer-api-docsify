@@ -7,9 +7,9 @@ Provides APIs for user authentication. The user authentication widget is support
 > Each **UserAuthInstance** can be used for only one authentication process. To perform authentication again, you
 > must obtain a new **UserAuthInstance** instance.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-userAuth-interface UserAuthInstance--><!--Device-userAuth-interface UserAuthInstance-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -31,23 +31,23 @@ Cancels this authentication. This API is commonly used in the following scenario
 
 > **UserAuthInstance** must be the instance being authenticated.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-UserAuthInstance-cancel(): void--><!--Device-UserAuthInstance-cancel(): void-End-->
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Incorrect parameter types. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 **Examples**
 
@@ -108,82 +108,6 @@ try {
 }
 ```
 
-## off('authTip')
-
-```TypeScript
-off(type: 'authTip', callback?: AuthTipCallback): void
-```
-
-Unsubscribes from the authentication tip information. This API is commonly used in the following scenarios: cleaning up subscription listeners and releasing resources after authentication is complete; unsubscribing when it is no longer necessary to listen for tip information during the authentication process; unsubscribing when a page is destroyed or a component is unmounted.
-
-> **NOTE：**
-
-> The [UserAuthInstance](#userauthinstance) instance used to invoke this API must be the one used
-> to subscribe to the event.
-
-**Since:** 20
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-UserAuthInstance-off(type: 'authTip', callback?: AuthTipCallback): void--><!--Device-UserAuthInstance-off(type: 'authTip', callback?: AuthTipCallback): void-End-->
-
-**System capability:** SystemCapability.UserIAM.UserAuth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'authTip' | Yes | Event type. The supported event is **'authTip'**. This API unsubscribes from the event triggered by [on('authTip')](#onresult) after the [start()](#start) call and the initiation of authentication. |
-| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | No | Callback used to return the intermediate authentication status. If this parameter is not passed, the value passed when the [on('authTip')](#onresult) API is called is used by default. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-try {
-  const rand = cryptoFramework.createRandom();
-  const len: number = 16;
-  let randData: Uint8Array | null = null;
-  let retryCount = 0;
-  while(retryCount < 3){
-    randData = rand?.generateRandomSync(len)?.data;
-    if(randData){
-      break;
-    }
-    retryCount++;
-  }
-  if(!randData){
-    return;
-  }
-  const authParam: userAuth.AuthParam = {
-    challenge: randData,
-    authType: [userAuth.UserAuthType.PIN],
-    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
-  };
-  const widgetParam: userAuth.WidgetParam = {
-    title: 'Enter password',
-  };
-  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
-  console.info('get userAuth instance success');
-  userAuthInstance.off('authTip', (authTipInfo: userAuth.AuthTipInfo) => {
-    console.info(`userAuthInstance callback authTipInfo = ${JSON.stringify(authTipInfo)}`);
-  });
-  console.info('auth off success');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`auth catch error. Code is ${err?.code}, message is ${err?.message}`);
-}
-```
-
 ## off('result')
 
 ```TypeScript
@@ -199,25 +123,25 @@ Unsubscribes from the user authentication result. This API is commonly used in t
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-UserAuthInstance-off(type: 'result', callback?: IAuthCallback): void--><!--Device-UserAuthInstance-off(type: 'result', callback?: IAuthCallback): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'result' | Yes | Event type. The value is **result**, which indicates the authentication result. |
-| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | No | Callback used to return the user authentication result. If this parameter is not passed, the value passed when the [on('result')](#onresult) API is called is used by default. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'result' | Yes |
+| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 **Examples**
 
@@ -263,6 +187,130 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  const rand = cryptoFramework.createRandom();
+  const len: number = 16;
+  let randData: Uint8Array | null = null;
+  let retryCount = 0;
+  while(retryCount < 3){
+    randData = rand?.generateRandomSync(len)?.data;
+    if(randData){
+      break;
+    }
+    retryCount++;
+  }
+  if(!randData){
+    return;
+  }
+  const authParam: userAuth.AuthParam = {
+    challenge: randData,
+    authType: [userAuth.UserAuthType.PIN],
+    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+  };
+  const widgetParam: userAuth.WidgetParam = {
+    title: 'Enter password',
+  };
+  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+  console.info('get userAuth instance success');
+  userAuthInstance.off('authTip', (authTipInfo: userAuth.AuthTipInfo) => {
+    console.info(`userAuthInstance callback authTipInfo = ${JSON.stringify(authTipInfo)}`);
+  });
+  console.info('auth off success');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`auth catch error. Code is ${err?.code}, message is ${err?.message}`);
+}
+```
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
+let authType = userAuth.UserAuthType.FACE;
+let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
+try {
+  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
+  // Subscribe to the authentication result.
+  auth.on('result', {
+    callback: (result: userAuth.AuthResultInfo) => {
+      console.info(`authV9 result ${result.result}`);
+      console.info(`authV9 token ${result.token}`);
+      console.info(`authV9 remainAttempts ${result.remainAttempts}`);
+      console.info(`authV9 lockoutDuration ${result.lockoutDuration}`);
+    }
+  });
+  // Unsubscribe from the authentication result.
+  auth.off('result');
+  console.info('cancel subscribe authentication event success');
+} catch (error) {
+  console.error(`cancel subscribe authentication event failed, error = ${error}`);
+  // do error.
+}
+```
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const userAuthWidgetMgrVersion = 1;
+try {
+  let userAuthWidgetMgr = userAuth.getUserAuthWidgetMgr(userAuthWidgetMgrVersion);
+  console.info('get userAuthWidgetMgr instance success');
+  userAuthWidgetMgr.off('command', {
+    sendCommand(cmdData) {
+      console.info(`The cmdData is ${cmdData}`);
+    }
+  })
+  console.info('cancel subscribe authentication event success');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`userAuth widgetMgr catch error: Code is ${err?.code}, message is ${err?.message}`);
+}
+```
+
+## off('authTip')
+
+```TypeScript
+off(type: 'authTip', callback?: AuthTipCallback): void
+```
+
+Unsubscribes from the authentication tip information. This API is commonly used in the following scenarios: cleaning up subscription listeners and releasing resources after authentication is complete; unsubscribing when it is no longer necessary to listen for tip information during the authentication process; unsubscribing when a page is destroyed or a component is unmounted.
+
+> **NOTE：**
+
+> The [UserAuthInstance](#userauthinstance) instance used to invoke this API must be the one used
+> to subscribe to the event.
+
+**Since:** 20
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+**System capability:** SystemCapability.UserIAM.UserAuth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'authTip' | Yes |
+| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+
+**Examples**
+
+See off
+
 ## offAuthTip
 
 ```TypeScript
@@ -278,21 +326,21 @@ Unsubscribes from the event for intermediate authentication status.
 
 **Since:** 23
 
-<!--Device-UserAuthInstance-offAuthTip(callback?: AuthTipCallback): void--><!--Device-UserAuthInstance-offAuthTip(callback?: AuthTipCallback): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | No | Indicates the listener. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| Error Code ID |
+| --- |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 ## offResult
 
@@ -310,30 +358,30 @@ Unsubscribes from the user authentication result.
 
 **Since:** 23
 
-<!--Device-UserAuthInstance-offResult(callback?: IAuthCallback): void--><!--Device-UserAuthInstance-offResult(callback?: IAuthCallback): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | No | Callback to unregister. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
-## on('authTip')
+## on('result')
 
 ```TypeScript
-on(type: 'authTip', callback: AuthTipCallback): void
+on(type: 'result', callback: IAuthCallback): void
 ```
 
-Subscribes to authentication tip information. This API is used to obtain the widget startup and exit messages and each authentication failure. This API uses an asynchronous callback to return the result.
+Subscribes to the user authentication result. This API is used to obtain the final identity authentication result after the user completes identity authentication interaction with the authentication component. Before the authentication widget disappears, the intermediate authentication failures will not be returned through this API. Only the final authentication result (success or failure) is returned through this API. To perceive each authentication failure and intermediate status during the entire authentication process, use the [on('authTip')](#onauthtip) API for subscription.
 
 > **NOTE：**
 
@@ -342,28 +390,29 @@ Subscribes to authentication tip information. This API is used to obtain the wid
 > configured) and receives the authentication result, and if other windows need to be displayed, the application
 > needs to obtain the flag message released by the component pop-up window and subscribe to the component release
 > message (**authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED**) through the
-> [on('authTip')](#onresult) API.
+> [on('authTip')](#onauthtip) API.
 
-**Since:** 20
+**Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-UserAuthInstance-on(type: 'authTip', callback: AuthTipCallback): void--><!--Device-UserAuthInstance-on(type: 'authTip', callback: AuthTipCallback): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'authTip' | Yes | Event type. The supported event is **'authTip'**. This event is triggered when [start()](#start) is called and authentication is initiated. |
-| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | Yes | Callback used to return the intermediate authentication status. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'result' | Yes |
+| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 **Examples**
 
@@ -410,13 +459,73 @@ try {
 }
 ```
 
-## on('result')
-
 ```TypeScript
-on(type: 'result', callback: IAuthCallback): void
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
+let authType = userAuth.UserAuthType.FACE;
+let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
+try {
+  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
+  // Subscribe to the authentication result.
+  auth.on('result', {
+    callback: (result: userAuth.AuthResultInfo) => {
+      console.info(`authV9 result ${result.result}`);
+      console.info(`authV9 token ${result.token}`);
+      console.info(`authV9 remainAttempts ${result.remainAttempts}`);
+      console.info(`authV9 lockoutDuration ${result.lockoutDuration}`);
+    }
+  });
+  // Subscribe to authentication tip information.
+  auth.on('tip', {
+    callback : (result : userAuth.TipInfo) => {
+      switch (result.tip) {
+        case userAuth.FaceTips.FACE_AUTH_TIP_TOO_BRIGHT:
+          // Do something.
+          break;
+        case userAuth.FaceTips.FACE_AUTH_TIP_TOO_DARK:
+          // Do something.
+          break;
+        default:
+          // do others.
+      }
+    }
+  } as userAuth.AuthEvent);
+  auth.start();
+  console.info('authV9 start success');
+} catch (error) {
+  console.error(`authV9 error = ${error}`);
+  // do error.
+}
 ```
 
-Subscribes to the user authentication result. This API is used to obtain the final identity authentication result after the user completes identity authentication interaction with the authentication component. Before the authentication widget disappears, the intermediate authentication failures will not be returned through this API. Only the final authentication result (success or failure) is returned through this API. To perceive each authentication failure and intermediate status during the entire authentication process, use the [on('authTip')](#onresult) API for subscription.
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const userAuthWidgetMgrVersion = 1;
+try {
+  let userAuthWidgetMgr = userAuth.getUserAuthWidgetMgr(userAuthWidgetMgrVersion);
+  console.info('get userAuthWidgetMgr instance success');
+  userAuthWidgetMgr.on('command', {
+    sendCommand(cmdData) {
+      console.info(`The cmdData is ${cmdData}`);
+    }
+  })
+  console.info('subscribe authentication event success');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`userAuth widgetMgr catch error: Code is ${err?.code}, message is ${err?.message}`);
+}
+```
+
+## on('authTip')
+
+```TypeScript
+on(type: 'authTip', callback: AuthTipCallback): void
+```
+
+Subscribes to authentication tip information. This API is used to obtain the widget startup and exit messages and each authentication failure. This API uses an asynchronous callback to return the result.
 
 > **NOTE：**
 
@@ -425,29 +534,32 @@ Subscribes to the user authentication result. This API is used to obtain the fin
 > configured) and receives the authentication result, and if other windows need to be displayed, the application
 > needs to obtain the flag message released by the component pop-up window and subscribe to the component release
 > message (**authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED**) through the
-> [on('authTip')](#onresult) API.
+> [on('authTip')](#onauthtip) API.
 
-**Since:** 10
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-UserAuthInstance-on(type: 'result', callback: IAuthCallback): void--><!--Device-UserAuthInstance-on(type: 'result', callback: IAuthCallback): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'result' | Yes | Event type used to return the authentication result. It is triggered when [start()](#start) is called, identity authentication is initiated, and the authentication interaction is completed. |
-| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | Yes | Callback used to return the user authentication result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'authTip' | Yes |
+| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| Error Code ID |
+| --- |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+
+**Examples**
+
+See on
 
 ## onAuthTip
 
@@ -459,21 +571,21 @@ Turn on authentication tip event listening.
 
 **Since:** 23
 
-<!--Device-UserAuthInstance-onAuthTip(callback: AuthTipCallback): void--><!--Device-UserAuthInstance-onAuthTip(callback: AuthTipCallback): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | Yes | Indicates the listener. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| Error Code ID |
+| --- |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 ## onResult
 
@@ -485,22 +597,22 @@ Subscribes to the user authentication result. This API is used to obtain the fin
 
 **Since:** 23
 
-<!--Device-UserAuthInstance-onResult(callback: IAuthCallback): void--><!--Device-UserAuthInstance-onResult(callback: IAuthCallback): void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | Yes | Callback used to return the user authentication result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 **Examples**
 
@@ -539,7 +651,9 @@ Starts authentication. This API is commonly used in the following service scenar
 > Each **UserAuthInstance** can be used for authentication only once. To perform authentication again, you must
 > obtain a new **UserAuthInstance**.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 20+: ohos.permission.ACCESS_BIOMETRIC or ohos.permission.USER_AUTH_FROM_BACKGROUND
@@ -547,27 +661,25 @@ Starts authentication. This API is commonly used in the following service scenar
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-UserAuthInstance-start(): void--><!--Device-UserAuthInstance-start(): void-End-->
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Possible causes: <br>1. No permission to access biometric. <br>2. No permission to start authentication from background. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Incorrect parameter types. |
-| [12500001](../errorcode-useriam.md#12500001-authentication-failed) | Authentication failed.<br>**Applicable version:** 10 - 19 |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
-| [12500003](../errorcode-useriam.md#12500003-authentication-canceled) | Authentication canceled. |
-| [12500004](../errorcode-useriam.md#12500004-authentication-timed-out) | Authentication timeout.<br>**Applicable version:** 10 - 19 |
-| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
-| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) | The authentication trust level is not supported. |
-| [12500007](../errorcode-useriam.md#12500007-authentication-service-is-busy) | Authentication service is busy.<br>**Applicable version:** 10 - 19 |
-| [12500009](../errorcode-useriam.md#12500009-authentication-locked) | Authentication is locked out. |
-| [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) | The type of credential has not been enrolled. |
-| [12500011](../errorcode-useriam.md#12500011-switched-to-custom-authentication) | Switched to the customized authentication process. |
-| [12500013](../errorcode-useriam.md#12500013-password-expired) | Operation failed because of PIN expired.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12500001](../errorcode-useriam.md#12500001-authentication-failed) |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| [12500003](../errorcode-useriam.md#12500003-authentication-canceled) |
+| [12500004](../errorcode-useriam.md#12500004-authentication-timed-out) |
+| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) |
+| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) |
+| [12500007](../errorcode-useriam.md#12500007-authentication-service-is-busy) |
+| [12500009](../errorcode-useriam.md#12500009-authentication-locked) |
+| [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) |
+| [12500011](../errorcode-useriam.md#12500011-switched-to-custom-authentication) |
+| [12500013](../errorcode-useriam.md#12500013-password-expired) |
 
 **Examples**
 
@@ -624,4 +736,3 @@ try {
   console.error(`authV9 start auth failed, error = ${error}`);
 }
 ```
-

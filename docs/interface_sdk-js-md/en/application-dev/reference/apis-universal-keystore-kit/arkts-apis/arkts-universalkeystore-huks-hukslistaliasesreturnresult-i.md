@@ -4,7 +4,7 @@ Defines the returned key alias array.
 
 **Since:** 12
 
-<!--Device-huks-export interface HuksListAliasesReturnResult--><!--Device-huks-export interface HuksListAliasesReturnResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -26,9 +26,8 @@ Array of key aliases.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-HuksListAliasesReturnResult-keyAliases: Array<string>--><!--Device-HuksListAliasesReturnResult-keyAliases: Array<string>-End-->
-
 **System capability:** SystemCapability.Security.Huks.Extension
-

@@ -16,24 +16,23 @@ Open the app detail settings page.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-settings-function openAppDetailSettingsPage(context: Context, bundleName: string, appIndex?: int): void--><!--Device-settings-function openAppDetailSettingsPage(context: Context, bundleName: string, appIndex?: int): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. Only UIAbilityContext and UIExtensionContext are supported. |
-| bundleName | string | Yes | Application bundle name. |
-| appIndex | int | No | Application index. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes |
+| bundleName | string | Yes |
+| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [16900010](../errorcode-settings.md#16900010-parameter-check-failed) | Parameter error. |
-| [16900020](../errorcode-settings.md#16900020-failed-to-open-the-settings-page) | Failed to open the settings page via redirection. |
-
+| Error Code ID |
+| --- |
+| [16900010](../errorcode-settings.md#16900010-parameter-check-failed) |
+| [16900020](../errorcode-settings.md#16900020-failed-to-open-the-settings-page) |

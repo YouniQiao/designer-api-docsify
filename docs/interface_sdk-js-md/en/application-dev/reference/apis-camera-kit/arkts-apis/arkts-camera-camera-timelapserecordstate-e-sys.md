@@ -2,9 +2,9 @@
 
 Enumerates the time-lapse recording states.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-camera-enum TimeLapseRecordState--><!--Device-camera-enum TimeLapseRecordState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -18,9 +18,9 @@ IDLE = 0
 
 Recording not started.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-TimeLapseRecordState-IDLE = 0--><!--Device-TimeLapseRecordState-IDLE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -34,11 +34,10 @@ RECORDING = 1
 
 Recording.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-TimeLapseRecordState-RECORDING = 1--><!--Device-TimeLapseRecordState-RECORDING = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

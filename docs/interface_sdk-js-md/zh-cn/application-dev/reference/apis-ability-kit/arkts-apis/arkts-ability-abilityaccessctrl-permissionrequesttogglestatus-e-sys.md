@@ -16,9 +16,9 @@
 - **[AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md)：** 程序访问控制管理类，提供权限校验、权限弹窗申请、设置页授权引导和权限状态监听等能力。  
 
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-abilityAccessCtrl-export enum PermissionRequestToggleStatus--><!--Device-abilityAccessCtrl-export enum PermissionRequestToggleStatus-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -32,9 +32,9 @@ CLOSED = 0
 
 表示关闭指定权限的弹窗开关。应用调用[requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser) 等接口请求该权限时，不会弹出权限弹窗。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-PermissionRequestToggleStatus-CLOSED = 0--><!--Device-PermissionRequestToggleStatus-CLOSED = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -48,11 +48,10 @@ OPEN = 1
 
 表示开启指定权限的弹窗开关。应用调用[requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser) 等接口请求该权限时，会正常弹出权限弹窗。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-PermissionRequestToggleStatus-OPEN = 1--><!--Device-PermissionRequestToggleStatus-OPEN = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
-

@@ -6,7 +6,7 @@ Provides progress indicator configuration. Inherits from CommonConfiguration.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface ProgressConfiguration--><!--Device-unnamed-declare interface ProgressConfiguration-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +28,11 @@ Total progress.Default value: **100**
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ProgressConfiguration-total: number--><!--Device-ProgressConfiguration-total: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,11 +48,10 @@ Current progress. Values less than 0 are adjusted to **0**. Values greater than 
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ProgressConfiguration-value: number--><!--Device-ProgressConfiguration-value: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 Callback used to return the result, which contains:
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-webSocket-export interface WebSocketMessage--><!--Device-webSocket-export interface WebSocketMessage-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -24,9 +24,9 @@ Client information, including the IP address and port number.
 
 **Type:** [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-WebSocketMessage-clientConnection: WebSocketConnection--><!--Device-WebSocketMessage-clientConnection: WebSocketConnection-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -40,9 +40,8 @@ Message data sent by the client.
 
 **Type:** string \| ArrayBuffer
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-WebSocketMessage-data: string | ArrayBuffer--><!--Device-WebSocketMessage-data: string | ArrayBuffer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
-

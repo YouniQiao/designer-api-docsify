@@ -4,7 +4,7 @@ Defines the parameters of the center of gravity.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare interface GravityCenterOptions--><!--Device-unnamed-declare interface GravityCenterOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,9 +27,9 @@ Specifies whether the current component is the center of gravity. <br>Default va
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-GravityCenterOptions-gravityCenter?: boolean--><!--Device-GravityCenterOptions-gravityCenter?: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,20 +38,19 @@ Specifies whether the current component is the center of gravity. <br>Default va
 ## gravityIntensity
 
 ```TypeScript
-gravityIntensity?: double
+gravityIntensity?: number
 ```
 
 Defines the gravitational strength of the attraction/repulsion force at the gravitational center. <br>Default value:0. <br>Negative numbers are repulsion, positive numbers are attractionn.
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-GravityCenterOptions-gravityIntensity?: double--><!--Device-GravityCenterOptions-gravityIntensity?: double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

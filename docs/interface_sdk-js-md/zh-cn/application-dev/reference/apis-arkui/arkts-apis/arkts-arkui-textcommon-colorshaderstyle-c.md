@@ -6,9 +6,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-unnamed-export declare class ColorShaderStyle--><!--Device-unnamed-export declare class ColorShaderStyle-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,19 +20,17 @@ constructor(color: ResourceColor)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ColorShaderStyle-constructor(color: ResourceColor)--><!--Device-ColorShaderStyle-constructor(color: ResourceColor)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 显示为纯色效果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [color](#color) | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 |
 
 ## color
 
@@ -48,11 +44,8 @@ color: ResourceColor
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ColorShaderStyle-color: ResourceColor--><!--Device-ColorShaderStyle-color: ResourceColor-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

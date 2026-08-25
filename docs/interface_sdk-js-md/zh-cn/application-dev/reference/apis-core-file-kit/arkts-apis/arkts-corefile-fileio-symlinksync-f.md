@@ -15,20 +15,20 @@ declare function symlinkSync(target: string, srcPath: string): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [symlinkSync](arkts-corefile-file-fs-symlinksync-f.md)
-
-<!--Device-unnamed-declare function symlinkSync(target: string, srcPath: string): void--><!--Device-unnamed-declare function symlinkSync(target: string, srcPath: string): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| target | string | 是 | 目标文件的应用沙箱路径。 |
-| srcPath | string | 是 | 符号链接文件的应用沙箱路径。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| target | string | 是 |
+| srcPath | string | 是 |
 
 **示例**
 
@@ -37,4 +37,3 @@ let srcFile = pathDir + "/test.txt";
 let dstFile = pathDir + '/test';
 fileio.symlinkSync(srcFile, dstFile);
 ```
-

@@ -14,9 +14,9 @@ function updateNtpTime(): Promise<void>
 
 Updates the NTP time from the NTP server This API returns the result asynchronously. In this way, the NTP time is updated from the NTP server only once within one hour.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-systemDateTime-function updateNtpTime(): Promise<void>--><!--Device-systemDateTime-function updateNtpTime(): Promise<void>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -24,16 +24,16 @@ Updates the NTP time from the NTP server This API returns the result asynchronou
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [13000001](../errorcode-time.md#13000001-network-or-os-error) | Network connection error or OS error. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [13000001](../errorcode-time.md#13000001-network-or-os-error) |
 
 **Examples**
 
@@ -51,4 +51,3 @@ try {
   console.error(`Failed to update ntp time. message: ${error.message}, code: ${error.code}`);
 }
 ```
-

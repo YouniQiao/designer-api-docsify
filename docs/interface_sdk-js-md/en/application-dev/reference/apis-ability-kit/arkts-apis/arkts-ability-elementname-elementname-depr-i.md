@@ -8,11 +8,11 @@ The module provides element name information, which can be obtained through Cont
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ElementName](#elementname)
-
-<!--Device-unnamed-export interface ElementName--><!--Device-unnamed-export interface ElementName-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -30,11 +30,11 @@ Ability name.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** abilityName
-
-<!--Device-ElementName-abilityName: string--><!--Device-ElementName-abilityName: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -52,11 +52,11 @@ Bundle name.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** bundleName
-
-<!--Device-ElementName-bundleName: string--><!--Device-ElementName-bundleName: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -74,11 +74,11 @@ Device ID.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** deviceId
-
-<!--Device-ElementName-deviceId?: string--><!--Device-ElementName-deviceId?: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -96,11 +96,11 @@ Short name of the ability.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** shortName
-
-<!--Device-ElementName-shortName?: string--><!--Device-ElementName-shortName?: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -118,11 +118,10 @@ Resource ID.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** uri
 
-<!--Device-ElementName-uri?: string--><!--Device-ElementName-uri?: string-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework
-

@@ -4,7 +4,7 @@ Enumerates the type of information returned by an asset query operation.
 
 **Since:** 11
 
-<!--Device-asset-enum ReturnType--><!--Device-asset-enum ReturnType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -19,9 +19,9 @@ The query result contains the asset in plaintext and its attributes.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-ReturnType-ALL = 0--><!--Device-ReturnType-ALL = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -36,9 +36,8 @@ The query result contains only the asset attributes.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-ReturnType-ATTRIBUTES = 1--><!--Device-ReturnType-ATTRIBUTES = 1-End-->
-
 **System capability:** SystemCapability.Security.Asset
-

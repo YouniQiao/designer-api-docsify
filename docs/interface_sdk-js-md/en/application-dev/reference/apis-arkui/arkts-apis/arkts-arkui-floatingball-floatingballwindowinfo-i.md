@@ -2,9 +2,9 @@
 
 Describes the floating ball window information.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-floatingBall-interface FloatingBallWindowInfo--><!--Device-floatingBall-interface FloatingBallWindowInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -22,11 +22,10 @@ readonly windowId: int
 
 ID of the floating ball window. The value range is all integers.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-FloatingBallWindowInfo-readonly windowId: int--><!--Device-FloatingBallWindowInfo-readonly windowId: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
-

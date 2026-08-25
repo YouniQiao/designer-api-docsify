@@ -2,9 +2,9 @@
 
 折叠折痕区域。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-display-interface FoldCreaseRegion--><!--Device-display-interface FoldCreaseRegion-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -24,11 +24,11 @@ readonly creaseRects: Array<Rect>
 
 **类型：** Array&lt;Rect&gt;
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FoldCreaseRegion-readonly creaseRects: Array<Rect>--><!--Device-FoldCreaseRegion-readonly creaseRects: Array<Rect>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -40,13 +40,12 @@ readonly displayId: long
 
 屏幕ID，用于识别折痕所在的屏幕。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-FoldCreaseRegion-readonly displayId: long--><!--Device-FoldCreaseRegion-readonly displayId: long-End-->
-
 **系统能力：** SystemCapability.Window.SessionManager
-

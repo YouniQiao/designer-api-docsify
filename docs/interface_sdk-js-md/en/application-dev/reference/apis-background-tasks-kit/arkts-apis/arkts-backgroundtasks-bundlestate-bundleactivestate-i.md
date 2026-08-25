@@ -2,9 +2,9 @@
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-bundleState-interface BundleActiveState--><!--Device-bundleState-interface BundleActiveState-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -26,9 +26,9 @@ The usage priority group of the application.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-BundleActiveState-appUsagePriorityGroup?: number--><!--Device-BundleActiveState-appUsagePriorityGroup?: number-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -44,9 +44,9 @@ The bundle name.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-BundleActiveState-bundleName?: string--><!--Device-BundleActiveState-bundleName?: string-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -62,9 +62,9 @@ The shortcut ID.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-BundleActiveState-indexOfLink?: string--><!--Device-BundleActiveState-indexOfLink?: string-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -80,9 +80,9 @@ The class name.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-BundleActiveState-nameOfClass?: string--><!--Device-BundleActiveState-nameOfClass?: string-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -98,9 +98,9 @@ The time when this state occurred, in milliseconds. <br> Unit:ms
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-BundleActiveState-stateOccurredTime?: number--><!--Device-BundleActiveState-stateOccurredTime?: number-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -116,9 +116,8 @@ The state type.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-<!--Device-BundleActiveState-stateType?: number--><!--Device-BundleActiveState-stateType?: number-End-->
-
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
-

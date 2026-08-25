@@ -6,11 +6,10 @@ export type NotificationInfo = _NotificationInfo
 
 Describes the notification information delivered to the [onReceiveMessage](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#onreceivemessage) callback of ExtensionAbility for notification subscriptions.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-notificationExtensionSubscription-export type NotificationInfo = _NotificationInfo--><!--Device-notificationExtensionSubscription-export type NotificationInfo = _NotificationInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **Property type:** _NotificationInfo
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-unnamed-export enum PolygonMode--><!--Device-unnamed-export enum PolygonMode-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -18,7 +18,7 @@ FILL = 0
 
 **起始版本：** 23
 
-<!--Device-PolygonMode-FILL = 0--><!--Device-PolygonMode-FILL = 0-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -32,7 +32,7 @@ LINE = 1
 
 **起始版本：** 23
 
-<!--Device-PolygonMode-LINE = 1--><!--Device-PolygonMode-LINE = 1-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -46,7 +46,6 @@ POINT = 2
 
 **起始版本：** 23
 
-<!--Device-PolygonMode-POINT = 2--><!--Device-PolygonMode-POINT = 2-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

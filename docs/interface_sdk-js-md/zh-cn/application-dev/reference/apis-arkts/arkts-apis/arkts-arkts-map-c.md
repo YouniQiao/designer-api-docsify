@@ -6,9 +6,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-unnamed-export class Map--><!--Device-unnamed-export class Map-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,19 +25,17 @@ $_iterator(): IterableIterator<[K, V]>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Map-$_iterator(): IterableIterator<[K, V]>--><!--Device-Map-$_iterator(): IterableIterator<[K, V]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 遍历所有Entry的迭代器。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 ## clear
 
@@ -51,11 +47,9 @@ clear(): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Map-clear(): void--><!--Device-Map-clear(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -69,19 +63,17 @@ constructor(initialCapacity: int)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Map-constructor(initialCapacity: int)--><!--Device-Map-constructor(initialCapacity: int)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| initialCapacity | int | 是 | Map的初始容量。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| initialCapacity | int | 是 |
 
 ## constructor
 
@@ -93,19 +85,17 @@ constructor(values: FixedArray<[K, V]>)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Map-constructor(values: FixedArray<[K, V]>)--><!--Device-Map-constructor(values: FixedArray<[K, V]>)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| values | FixedArray&lt;[K, V]&gt; | 是 | 包含键值对的FixedArray。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [values](#values) | FixedArray & lt;[K, V] & gt; | 是 |
 
 ## constructor
 
@@ -117,19 +107,17 @@ constructor(entries: Array<[K, V]>)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Map-constructor(entries: Array<[K, V]>)--><!--Device-Map-constructor(entries: Array<[K, V]>)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| entries | Array&lt;[K, V]&gt; | 是 | 包含键值对的数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [entries](#entries) | Array & lt;[K, V] & gt; | 是 |
 
 ## constructor
 
@@ -141,19 +129,17 @@ constructor(map: Map<K, V>)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Map-constructor(map: Map<K, V>)--><!--Device-Map-constructor(map: Map<K, V>)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| map | Map&lt;K, V&gt; | 是 | 用于创建新Map的源Map。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| map | Map & lt;K, V & gt; | 是 |
 
 ## constructor
 
@@ -165,19 +151,17 @@ constructor(entries?: Iterable<[K, V]> | readonly ((readonly [K, V]) | null | un
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Map-constructor(entries?: Iterable<[K, V]> | readonly ((readonly [K, V]) | null | undefined)[] | null)--><!--Device-Map-constructor(entries?: Iterable<[K, V]> | readonly ((readonly [K, V]) | null | undefined)[] | null)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| entries | Iterable&lt;[K, V]&gt; \| readonly ((readonly [K, V]) \| null \| undefined)[] \| null | 否 | 包含键值对的可迭代对象或类数组对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [entries](#entries) | Iterable & lt;[K, V] & gt; \ | readonly ((readonly [K, V]) \| null \| undefined)[] \| null | 否 |
 
 ## delete
 
@@ -189,25 +173,23 @@ delete(key: K): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Map-delete(key: K): boolean--><!--Device-Map-delete(key: K): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | K | 是 | 待移除的键。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | K | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果该Entry被移除则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## entries
 
@@ -219,19 +201,17 @@ entries(): IterableIterator<[K, V]>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Map-entries(): IterableIterator<[K, V]>--><!--Device-Map-entries(): IterableIterator<[K, V]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 由Entry组成的数组。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 ## forEach
 
@@ -243,19 +223,17 @@ forEach(callbackfn: (v: V, k: K, map: Map<K, V>) => void): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Map-forEach(callbackfn: (v: V, k: K, map: Map<K, V>) => void): void--><!--Device-Map-forEach(callbackfn: (v: V, k: K, map: Map<K, V>) => void): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackfn | (v: V, k: K, map: Map&lt;K, V&gt;) =&gt; void | 是 | 对每个键值对调用的回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackfn | (v: V, k: K, map: Map & lt;K, V & gt;) = & gt; void | 是 |
 
 ## get
 
@@ -267,25 +245,23 @@ get(key: K): V | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Map-get(key: K): V | undefined--><!--Device-Map-get(key: K): V | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | K | 是 | 待在Map中查找的键。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | K | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| V \| undefined | 键存在时所关联的值。 |
+| 类型 |
+| --- |
+| V \| undefined |
 
 ## get
 
@@ -297,26 +273,24 @@ get(key: K, def: V): V
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Map-get(key: K, def: V): V--><!--Device-Map-get(key: K, def: V): V-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | K | 是 | 待在Map中查找的键。 |
-| def | V | 是 | 键不存在于Map中时返回的默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | K | 是 |
+| def | V | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| V | 键存在时返回对应的值，否则返回默认值。 |
+| 类型 |
+| --- |
+| V |
 
 ## has
 
@@ -328,25 +302,23 @@ has(key: K): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Map-has(key: K): boolean--><!--Device-Map-has(key: K): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | K | 是 | 待在Map中查找的键。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | K | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果该键存在于Map中则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## keys
 
@@ -358,19 +330,17 @@ keys(): IterableIterator<K>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Map-keys(): IterableIterator<K>--><!--Device-Map-keys(): IterableIterator<K>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | 包含所有键的迭代器。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; |
 
 ## keySet
 
@@ -382,19 +352,17 @@ public keySet(): Set<K>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Map-public keySet(): Set<K>--><!--Device-Map-public keySet(): Set<K>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Set&lt;K&gt; | 包含所有键的新Set实例。 |
+| 类型 |
+| --- |
+| Set & lt;K & gt; |
 
 ## set
 
@@ -406,26 +374,24 @@ set(key: K, val: V): this
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Map-set(key: K, val: V): this--><!--Device-Map-set(key: K, val: V): this-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | K | 是 | 待存入Map的键。 |
-| val | V | 是 | 待存入Map的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | K | 是 |
+| val | V | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| this | 当前Map。 |
+| 类型 |
+| --- |
+| this |
 
 ## toString
 
@@ -437,19 +403,17 @@ toString(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Map-toString(): string--><!--Device-Map-toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 表示该Map的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## values
 
@@ -461,17 +425,32 @@ values(): IterableIterator<V>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Map-values(): IterableIterator<V>--><!--Device-Map-values(): IterableIterator<V>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;V&gt; | 包含所有值的迭代器。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;V&gt; |
 
+## size
+
+```TypeScript
+get size(): int
+```
+
+返回Map中键值对的number。
+
+**类型：** int
+
+**起始版本：** 24
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang

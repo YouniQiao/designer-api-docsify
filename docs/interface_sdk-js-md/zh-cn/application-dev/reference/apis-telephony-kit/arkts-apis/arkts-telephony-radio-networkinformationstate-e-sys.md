@@ -2,9 +2,9 @@
 
 Obtains network information status.
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-radio-export enum NetworkInformationState--><!--Device-radio-export enum NetworkInformationState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -18,9 +18,9 @@ NETWORK_UNKNOWN = 0
 
 Indicates that the network state is unknown.
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkInformationState-NETWORK_UNKNOWN = 0--><!--Device-NetworkInformationState-NETWORK_UNKNOWN = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -34,9 +34,9 @@ NETWORK_AVAILABLE = 1
 
 Indicates that the network is available for registration.
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkInformationState-NETWORK_AVAILABLE = 1--><!--Device-NetworkInformationState-NETWORK_AVAILABLE = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -50,9 +50,9 @@ NETWORK_CURRENT = 2
 
 Indicates that you have already registered with the network.
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkInformationState-NETWORK_CURRENT = 2--><!--Device-NetworkInformationState-NETWORK_CURRENT = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -66,11 +66,10 @@ NETWORK_FORBIDDEN = 3
 
 Indicates that the network is unavailable for registration.
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkInformationState-NETWORK_FORBIDDEN = 3--><!--Device-NetworkInformationState-NETWORK_FORBIDDEN = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
-

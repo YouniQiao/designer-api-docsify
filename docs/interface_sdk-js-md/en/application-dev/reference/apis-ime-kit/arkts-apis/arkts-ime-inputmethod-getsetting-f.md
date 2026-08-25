@@ -14,27 +14,26 @@ function getSetting(): InputMethodSetting
 
 Obtains an [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) instance.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-inputMethod-function getSetting(): InputMethodSetting--><!--Device-inputMethod-function getSetting(): InputMethodSetting-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) | InputMethodSetting** instance. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [12800007](../errorcode-inputmethod-framework.md#12800007-input-method-setter-error) | input method setter error. Possible cause: create InputMethodSetting object failed. |
+| Error Code ID |
+| --- |
+| [12800007](../errorcode-inputmethod-framework.md#12800007-input-method-setter-error) |
 
 **Examples**
 
 ```TypeScript
 let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
 ```
-

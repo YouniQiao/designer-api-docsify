@@ -20,27 +20,27 @@ Shows a full-screen ad.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-advertising-function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.UIAbilityContext): void--><!--Device-advertising-function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.UIAbilityContext): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| ad | Advertisement | Yes | Ad object. |
-| options | [AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md) | Yes | Ad display parameters. |
-| context | common.UIAbilityContext | No | Context of the UIAbility. If this parameter is not set, the value is obtained from @ohos.app.ability.common.<br>**Since:** 12 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| ad | [Advertisement](arkts-ads-advertisement-advertisement-i.md) | Yes |
+| options | [AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md) | Yes |
+| context | common.UIAbilityContext | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
-| [21800004](../errorcode-ads.md#21800004-ad-display-failure) | Failed to display the ad. |
+| Error Code ID |
+| --- |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) |
+| [21800004](../errorcode-ads.md#21800004-ad-display-failure) |
 
 **Examples**
 
@@ -57,4 +57,3 @@ function showAd(ad: advertising.Advertisement, context?: common.UIAbilityContext
   advertising.showAd(ad, adDisplayOptions, context);
 }
 ```
-

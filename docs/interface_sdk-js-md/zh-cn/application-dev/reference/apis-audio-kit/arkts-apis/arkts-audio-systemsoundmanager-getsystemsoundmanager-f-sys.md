@@ -14,9 +14,9 @@ function getSystemSoundManager(): SystemSoundManager
 
 获取系统声音管理器。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-systemSoundManager-function getSystemSoundManager(): SystemSoundManager--><!--Device-systemSoundManager-function getSystemSoundManager(): SystemSoundManager-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -24,13 +24,12 @@ function getSystemSoundManager(): SystemSoundManager
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SystemSoundManager](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md) | 系统声音管理类。 |
+| 类型 |
+| --- |
+| [SystemSoundManager](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md) |
 
 **示例**
 
 ```TypeScript
 let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
 ```
-

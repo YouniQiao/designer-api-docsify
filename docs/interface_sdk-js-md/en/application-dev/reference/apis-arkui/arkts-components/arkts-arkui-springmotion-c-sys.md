@@ -4,9 +4,9 @@ Spring animation model. You can build a spring animation based on the start poin
 
 **Since:** 7
 
-**Deprecated since:** 22
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-unnamed-declare class SpringMotion--><!--Device-unnamed-declare class SpringMotion-End-->
+**Deprecated since:** 22
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,9 +27,9 @@ Constructor parameters
 
 **Since:** 7
 
-**Deprecated since:** 22
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SpringMotion-constructor(start: number, end: number, velocity: number, prop: SpringProp)--><!--Device-SpringMotion-constructor(start: number, end: number, velocity: number, prop: SpringProp)-End-->
+**Deprecated since:** 22
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -37,10 +37,9 @@ Constructor parameters
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | number | Yes |  |
-| end | number | Yes |  |
-| velocity | number | Yes |  |
-| prop | [SpringProp](arkts-arkui-springprop-c-sys.md) | Yes |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | number | Yes |
+| end | number | Yes |
+| velocity | number | Yes |
+| prop | [SpringProp](arkts-arkui-springprop-c-sys.md) | Yes |

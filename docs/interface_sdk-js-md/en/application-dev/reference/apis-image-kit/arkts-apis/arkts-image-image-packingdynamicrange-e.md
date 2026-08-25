@@ -2,9 +2,9 @@
 
 Enumerates the desired dynamic range of an image during encoding.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-image-enum PackingDynamicRange--><!--Device-image-enum PackingDynamicRange-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -16,9 +16,9 @@ AUTO = 0
 
 Adaptive. The [pixelmap](arkts-image-image-pixelmap-i.md) is encoded based on the format. If the PixelMap is in HDR format, it is encoded based on the HDR content; otherwise, it is encoded based on the SDR content.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-PackingDynamicRange-AUTO = 0--><!--Device-PackingDynamicRange-AUTO = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -30,9 +30,8 @@ SDR = 1
 
 The image is decoded according to the standard dynamic range.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-PackingDynamicRange-SDR = 1--><!--Device-PackingDynamicRange-SDR = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
-

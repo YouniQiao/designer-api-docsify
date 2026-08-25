@@ -4,9 +4,9 @@ This module provides constants for agent.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-unnamed-declare namespace agentConstant--><!--Device-unnamed-declare namespace agentConstant-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -20,15 +20,14 @@ import { agentConstant } from '@kit.AbilityKit';
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [AgentCardType](arkts-ability-agentconstant-agentcardtype-e.md) | The type of an AgentCard. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AgentCardType](arkts-ability-agentconstant-agentcardtype-e.md) |
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [AgentCardType](arkts-ability-agentconstant-agentcardtype-e-sys.md) | The type of an AgentCard. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AgentCardType](arkts-ability-agentconstant-agentcardtype-e-sys.md) |
 <!--DelEnd-->
-

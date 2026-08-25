@@ -2,9 +2,9 @@
 
 Enum for network capability type.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-radio-export enum NetworkCapabilityType--><!--Device-radio-export enum NetworkCapabilityType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -18,9 +18,9 @@ SERVICE_TYPE_LTE = 0
 
 Indicates LTE network switch type.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-NetworkCapabilityType-SERVICE_TYPE_LTE = 0--><!--Device-NetworkCapabilityType-SERVICE_TYPE_LTE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -34,11 +34,10 @@ SERVICE_TYPE_NR = 1
 
 Indicates NR network switch type.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-NetworkCapabilityType-SERVICE_TYPE_NR = 1--><!--Device-NetworkCapabilityType-SERVICE_TYPE_NR = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
-

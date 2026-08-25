@@ -2,9 +2,9 @@
 
 马达振动属性。用于 [startVibration](arkts-sensorservice-vibrator-startvibration-f.md) 接口的attribute参数，指定马达ID、设备ID和振动使用场景。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-vibrator-interface VibrateAttribute--><!--Device-vibrator-interface VibrateAttribute-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -20,15 +20,15 @@ import { vibrator } from '@kit.SensorServiceKit';
 deviceId?: int
 ```
 
-设备ID。默认值：-1，表示本地设备。使用场景：在多设备场景下需指定远程设备时设置此参数；不填写时默认控制本地设备。从API version 19开始，设备ID可以使用 [getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md)或[on](arkts-sensorservice-vibrator-onvibratorstatechange-f.md)查询。从API version 19开始，该接口支持在原子化服务中使用。
+设备ID。默认值：-1，表示本地设备。使用场景：在多设备场景下需指定远程设备时设置此参数；不填写时默认控制本地设备。从API version 19开始，设备ID可以使用 [getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md)或[on](arkts-sensorservice-vibrator-on-f.md#onvibratorstatechange)查询。从API version 19开始，该接口支持在原子化服务中使用。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 19
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
-<!--Device-VibrateAttribute-deviceId?: int--><!--Device-VibrateAttribute-deviceId?: int-End-->
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -40,13 +40,13 @@ id?: int
 
 马达ID。默认值：0。使用场景：当设备存在多个马达时，可通过指定不同的马达ID来选择特定马达触发振动。马达ID可以通过 [getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md)查询。不填写时默认使用马达ID为0的马达。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-VibrateAttribute-id?: int--><!--Device-VibrateAttribute-id?: int-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -60,11 +60,10 @@ usage: Usage
 
 **类型：** [Usage](arkts-sensorservice-vibrator-usage-t.md)
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-VibrateAttribute-usage: Usage--><!--Device-VibrateAttribute-usage: Usage-End-->
-
 **系统能力：** SystemCapability.Sensors.MiscDevice
-

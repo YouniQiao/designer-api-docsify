@@ -4,7 +4,6 @@
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [SearchModifier](arkts-arkui-searchmodifier-c.md) | Defines Search Modifier |
-
+| 名称 |
+| --- |
+| [SearchModifier](arkts-arkui-searchmodifier-c.md) |

@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-call-export enum XCallType--><!--Device-call-export enum XCallType-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -20,7 +20,7 @@ XCALL_ECALL_TYPE = 0
 
 **起始版本：** 26.0.0
 
-<!--Device-XCallType-XCALL_ECALL_TYPE = 0--><!--Device-XCallType-XCALL_ECALL_TYPE = 0-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -36,7 +36,7 @@ XCALL_BCALL_TYPE = 1
 
 **起始版本：** 26.0.0
 
-<!--Device-XCallType-XCALL_BCALL_TYPE = 1--><!--Device-XCallType-XCALL_BCALL_TYPE = 1-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -52,9 +52,8 @@ XCALL_ICALL_TYPE = 2
 
 **起始版本：** 26.0.0
 
-<!--Device-XCallType-XCALL_ICALL_TYPE = 2--><!--Device-XCallType-XCALL_ICALL_TYPE = 2-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
-

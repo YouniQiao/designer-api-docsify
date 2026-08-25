@@ -11,17 +11,16 @@ Profiler tools for inspectors.@namespace Profiler
 
 ### Namespaces
 
-| Name | Description |
-| --- | --- |
-| [Profiler](arkts-arkui-profiler-n.md) | Profiler tools for inspectors.@namespace Profiler |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Profiler](arkts-arkui-profiler-n.md) |
 
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [getInspectorNodeById](arkts-arkui-inspector-getinspectornodebyid-f-sys.md) | Get inspector node info by node id. |
-| [getInspectorNodes](arkts-arkui-inspector-getinspectornodes-f-sys.md) | Get inspector node infos. |
-| [setAppBgColor](arkts-arkui-inspector-setappbgcolor-f-sys.md) | Set app background color. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getInspectorNodeById](arkts-arkui-inspector-getinspectornodebyid-f-sys.md) |
+| [getInspectorNodes](arkts-arkui-inspector-getinspectornodes-f-sys.md) |
+| [setAppBgColor](arkts-arkui-inspector-setappbgcolor-f-sys.md) |
 <!--DelEnd-->
-

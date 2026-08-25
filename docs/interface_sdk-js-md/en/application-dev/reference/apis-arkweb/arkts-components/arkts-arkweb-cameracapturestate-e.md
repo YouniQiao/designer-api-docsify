@@ -4,7 +4,7 @@ Defines the camera capture states, which identify the current working status of 
 
 **Since:** 23
 
-<!--Device-unnamed-declare enum CameraCaptureState--><!--Device-unnamed-declare enum CameraCaptureState-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,7 +18,7 @@ The camera is not working.
 
 **Since:** 23
 
-<!--Device-CameraCaptureState-NONE = 0--><!--Device-CameraCaptureState-NONE = 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,7 +32,7 @@ The camera is paused.
 
 **Since:** 23
 
-<!--Device-CameraCaptureState-PAUSED = 1--><!--Device-CameraCaptureState-PAUSED = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -46,7 +46,6 @@ The camera is active.
 
 **Since:** 23
 
-<!--Device-CameraCaptureState-ACTIVE = 2--><!--Device-CameraCaptureState-ACTIVE = 2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

@@ -4,7 +4,7 @@ Enumerates the access modes to verify. If this parameter is left blank, the syst
 
 **Since:** 12
 
-<!--Device-unnamed-declare enum AccessModeType--><!--Device-unnamed-declare enum AccessModeType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -18,9 +18,9 @@ Whether the file exists.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-AccessModeType-EXIST = 0--><!--Device-AccessModeType-EXIST = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -34,9 +34,9 @@ Verify the write permission on the file.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-AccessModeType-WRITE = 2--><!--Device-AccessModeType-WRITE = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -50,9 +50,9 @@ Verify the read permission on the file.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-AccessModeType-READ = 4--><!--Device-AccessModeType-READ = 4-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -66,9 +66,8 @@ Verify the read/write permission on the file.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AccessModeType-READ_WRITE = 6--><!--Device-AccessModeType-READ_WRITE = 6-End-->
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
-

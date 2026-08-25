@@ -2,9 +2,9 @@
 
 Enum for location icon status.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-geoLocationManager-export enum LocationIconStatus--><!--Device-geoLocationManager-export enum LocationIconStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -18,9 +18,9 @@ LOCATING_NOT_STARTED = 0
 
 The locating service is not started.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-LocationIconStatus-LOCATING_NOT_STARTED = 0--><!--Device-LocationIconStatus-LOCATING_NOT_STARTED = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -34,9 +34,9 @@ LOCATING_STARTED = 1
 
 The normal locating service is started.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-LocationIconStatus-LOCATING_STARTED = 1--><!--Device-LocationIconStatus-LOCATING_STARTED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -50,11 +50,10 @@ HD_LOCATING_STARTED = 2
 
 The HD locating service(RTK) is started.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-LocationIconStatus-HD_LOCATING_STARTED = 2--><!--Device-LocationIconStatus-HD_LOCATING_STARTED = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
-

@@ -16,21 +16,21 @@ Queries the Wi-Fi status
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [isWifiActive](arkts-connectivity-wifimanager-iswifiactive-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
-<!--Device-wifi-function isWifiActive(): boolean--><!--Device-wifi-function isWifiActive(): boolean-End-->
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -44,4 +44,3 @@ try {
 	console.error("failed:" + JSON.stringify(error));
 }
 ```
-

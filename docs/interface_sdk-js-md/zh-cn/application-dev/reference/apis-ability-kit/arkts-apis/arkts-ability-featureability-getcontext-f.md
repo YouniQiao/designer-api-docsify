@@ -16,17 +16,17 @@ function getContext(): Context
 
 **起始版本：** 6
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-featureAbility-function getContext(): Context--><!--Device-featureAbility-function getContext(): Context-End-->
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Context | 返回应用程序上下文。 |
+| 类型 |
+| --- |
+| [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) |
 
 **示例**
 
@@ -43,4 +43,3 @@ context.getBundleName((error, data) => {
   }
 });
 ```
-

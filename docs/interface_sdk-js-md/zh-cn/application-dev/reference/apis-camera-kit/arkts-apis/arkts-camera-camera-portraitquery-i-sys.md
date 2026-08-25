@@ -2,9 +2,9 @@
 
 Queries portrait parameters.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-camera-interface PortraitQuery--><!--Device-camera-interface PortraitQuery-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -24,9 +24,9 @@ getSupportedPortraitEffects(): Array<PortraitEffect>
 
 Obtains the supported portrait effects.
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-PortraitQuery-getSupportedPortraitEffects(): Array<PortraitEffect>--><!--Device-PortraitQuery-getSupportedPortraitEffects(): Array<PortraitEffect>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -34,16 +34,16 @@ Obtains the supported portrait effects.
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[PortraitEffect](arkts-camera-camera-portraiteffect-e-sys.md)&gt; | Array of portrait effects supported. |
+| 类型 |
+| --- |
+| Array&lt;[PortraitEffect](arkts-camera-camera-portraiteffect-e-sys.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11+ |
+| 错误码ID |
+| --- |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -53,4 +53,3 @@ function getSupportedPortraitEffects(portraitPhotoSession: camera.PortraitPhotoS
   return portraitEffects;
 }
 ```
-

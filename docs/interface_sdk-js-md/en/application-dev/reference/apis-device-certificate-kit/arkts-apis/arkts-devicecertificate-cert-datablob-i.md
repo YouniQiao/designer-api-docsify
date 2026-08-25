@@ -2,9 +2,9 @@
 
 Encapsulates binary data. The core field **data** is of the Uint8Array type.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-cert-interface DataBlob--><!--Device-cert-interface DataBlob-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -24,11 +24,10 @@ Indicates the content of the data blob.
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-DataBlob-data: Uint8Array--><!--Device-DataBlob-data: Uint8Array-End-->
-
 **System capability:** SystemCapability.Security.Cert
-

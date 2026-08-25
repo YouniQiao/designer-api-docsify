@@ -14,32 +14,32 @@ function concat(list: Buffer[] | Uint8Array[], totalLength?: int): Buffer
 
 Concatenates an array of **Buffer** objects of the specified length into a new object.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-buffer-function concat(list: Buffer[] | Uint8Array[], totalLength?: int): Buffer--><!--Device-buffer-function concat(list: Buffer[] | Uint8Array[], totalLength?: int): Buffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| list | Buffer[] \| Uint8Array[] | Yes | Array of objects to concatenate. |
-| totalLength | int | No | Total length of bytes to be copied. The default value is **0**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| list | Buffer[] \| Uint8Array[] | Yes |
+| totalLength | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Buffer | Buffer** object created. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Buffer |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "length" is out of range. It must be &gt;= 0 and &lt;= uint32 max. Received value is: [length] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -52,4 +52,3 @@ let buf = buffer.concat([buf1, buf2]);
 console.info(buf.toString('hex'));
 // Output: 3132333461626364
 ```
-

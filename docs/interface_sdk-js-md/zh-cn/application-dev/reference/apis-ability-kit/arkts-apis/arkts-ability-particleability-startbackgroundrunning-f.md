@@ -16,6 +16,8 @@ function startBackgroundRunning(id: number, request: NotificationRequest, callba
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [startBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md)
@@ -24,17 +26,15 @@ function startBackgroundRunning(id: number, request: NotificationRequest, callba
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-particleAbility-function startBackgroundRunning(id: number, request: NotificationRequest, callback: AsyncCallback<void>): void--><!--Device-particleAbility-function startBackgroundRunning(id: number, request: NotificationRequest, callback: AsyncCallback<void>): void-End-->
-
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| id | number | 是 | 长时任务通知id号。 |
-| request | [NotificationRequest](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md) | 是 | 通知参数，用于显示通知栏的信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当向系统申请长时任务成功，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| id | number | 是 |
+| request | [NotificationRequest](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **示例**
 
@@ -129,6 +129,8 @@ function startBackgroundRunning(id: number, request: NotificationRequest): Promi
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [startBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md)
@@ -137,24 +139,21 @@ function startBackgroundRunning(id: number, request: NotificationRequest): Promi
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-particleAbility-function startBackgroundRunning(id: number, request: NotificationRequest): Promise<void>--><!--Device-particleAbility-function startBackgroundRunning(id: number, request: NotificationRequest): Promise<void>-End-->
-
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| id | number | 是 | 长时任务通知id号。 |
-| request | [NotificationRequest](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md) | 是 | 通知参数，用于显示通知栏的信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| id | number | 是 |
+| request | [NotificationRequest](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
 参见 [startBackgroundRunning](#startbackgroundrunning)
-

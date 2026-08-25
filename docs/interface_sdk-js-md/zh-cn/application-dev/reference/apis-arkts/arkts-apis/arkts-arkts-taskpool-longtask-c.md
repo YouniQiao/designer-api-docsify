@@ -6,9 +6,9 @@
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-taskpool-class LongTask--><!--Device-taskpool-class LongTask-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -29,4 +29,3 @@ function printArgs(args: string): string {
 
 let task: taskpool.LongTask = new taskpool.LongTask(printArgs, "this is my first LongTask");
 ```
-

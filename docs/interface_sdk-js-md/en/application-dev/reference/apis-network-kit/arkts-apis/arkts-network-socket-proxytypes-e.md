@@ -4,7 +4,7 @@ Enumerates socket proxy types.
 
 **Since:** 18
 
-<!--Device-socket-export enum ProxyTypes--><!--Device-socket-export enum ProxyTypes-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -18,7 +18,7 @@ No proxy.
 
 **Since:** 18
 
-<!--Device-ProxyTypes-NONE = 0--><!--Device-ProxyTypes-NONE = 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -32,7 +32,6 @@ SOCKS5 proxy.
 
 **Since:** 18
 
-<!--Device-ProxyTypes-SOCKS5 = 1--><!--Device-ProxyTypes-SOCKS5 = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Communication.NetStack
-

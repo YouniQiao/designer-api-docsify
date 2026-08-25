@@ -4,9 +4,9 @@ Device connection state.
 
 **Since:** 8
 
-**Deprecated since:** 22
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-continuationManager-export enum DeviceConnectState--><!--Device-continuationManager-export enum DeviceConnectState-End-->
+**Deprecated since:** 22
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
@@ -20,13 +20,13 @@ The device is in the initial state.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-DeviceConnectState-IDLE = 0--><!--Device-DeviceConnectState-IDLE = 0-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
@@ -40,13 +40,13 @@ The device is being connected.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-DeviceConnectState-CONNECTING = 1--><!--Device-DeviceConnectState-CONNECTING = 1-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
@@ -60,13 +60,13 @@ The device is connected.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-DeviceConnectState-CONNECTED = 2--><!--Device-DeviceConnectState-CONNECTED = 2-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
@@ -80,13 +80,12 @@ The device is being disconnected.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-DeviceConnectState-DISCONNECTING = 3--><!--Device-DeviceConnectState-DISCONNECTING = 3-End-->
-
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
-

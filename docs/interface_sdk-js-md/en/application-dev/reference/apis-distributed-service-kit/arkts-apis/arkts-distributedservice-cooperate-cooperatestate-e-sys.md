@@ -2,9 +2,9 @@
 
 Enumerates the screen hopping states.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-cooperate-enum CooperateState--><!--Device-cooperate-enum CooperateState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -18,9 +18,9 @@ COOPERATE_PREPARE = 0
 
 The preparation for screen hopping is finished.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CooperateState-COOPERATE_PREPARE = 0--><!--Device-CooperateState-COOPERATE_PREPARE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -34,9 +34,9 @@ COOPERATE_UNPREPARE = 1
 
 The preparation for screen hopping is cancelled.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CooperateState-COOPERATE_UNPREPARE = 1--><!--Device-CooperateState-COOPERATE_UNPREPARE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -50,9 +50,9 @@ COOPERATE_ACTIVATE = 2
 
 Screen hopping starts.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CooperateState-COOPERATE_ACTIVATE = 2--><!--Device-CooperateState-COOPERATE_ACTIVATE = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -66,9 +66,9 @@ COOPERATE_ACTIVATE_SUCCESS = 3
 
 Starting screen hopping succeeds.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CooperateState-COOPERATE_ACTIVATE_SUCCESS = 3--><!--Device-CooperateState-COOPERATE_ACTIVATE_SUCCESS = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -82,9 +82,9 @@ COOPERATE_ACTIVATE_FAILURE = 4
 
 Screen hopping fails to start.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CooperateState-COOPERATE_ACTIVATE_FAILURE = 4--><!--Device-CooperateState-COOPERATE_ACTIVATE_FAILURE = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -98,9 +98,9 @@ COOPERATE_DEACTIVATE_SUCCESS = 5
 
 Stopping screen hopping succeeds.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CooperateState-COOPERATE_DEACTIVATE_SUCCESS = 5--><!--Device-CooperateState-COOPERATE_DEACTIVATE_SUCCESS = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -114,9 +114,9 @@ COOPERATE_DEACTIVATE_FAILURE = 6
 
 Screen hopping fails to stop.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CooperateState-COOPERATE_DEACTIVATE_FAILURE = 6--><!--Device-CooperateState-COOPERATE_DEACTIVATE_FAILURE = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -130,11 +130,10 @@ COOPERATE_SESSION_DISCONNECTED = 7
 
 The screen hopping session is disconnected.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CooperateState-COOPERATE_SESSION_DISCONNECTED = 7--><!--Device-CooperateState-COOPERATE_SESSION_DISCONNECTED = 7-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **System API:** This is a system API.
-

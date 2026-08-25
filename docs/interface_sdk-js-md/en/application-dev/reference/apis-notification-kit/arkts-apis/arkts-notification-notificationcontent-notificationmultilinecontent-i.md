@@ -14,9 +14,9 @@ Describes the multi-line text notification. This API is inherited from Notificat
 
 **Inheritance/Implementation:** NotificationMultiLineContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-export interface NotificationMultiLineContent--><!--Device-unnamed-export interface NotificationMultiLineContent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -30,9 +30,9 @@ Notification summary content, which is a summary of the notification content and
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationMultiLineContent-briefText: string--><!--Device-NotificationMultiLineContent-briefText: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -46,9 +46,9 @@ List of multi-line text displayed after the notification is expanded. Each line 
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationMultiLineContent-lines: Array<string>--><!--Device-NotificationMultiLineContent-lines: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -62,9 +62,8 @@ Title when the notification is expanded. It cannot be an empty string. The size 
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationMultiLineContent-longTitle: string--><!--Device-NotificationMultiLineContent-longTitle: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
-

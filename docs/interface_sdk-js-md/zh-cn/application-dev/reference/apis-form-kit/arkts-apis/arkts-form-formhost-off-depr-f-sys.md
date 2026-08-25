@@ -1,0 +1,36 @@
+# off（系统接口）
+
+## 导入模块
+
+```TypeScript
+```
+
+## off('formUninstall')
+
+```TypeScript
+function off(type: 'formUninstall', callback?: Callback<string>): void
+```
+
+取消订阅卡片卸载事件。使用callback异步回调。
+
+> **说明：**&gt;
+> 卡片卸载与卡片移除不同。当应用卸载时，对应的卡片会自动卸载。
+
+**起始版本：** 8
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
+**废弃版本：** 9
+
+**替代接口：** [off](arkts-form-formhost-off-f-sys.md)
+
+**系统能力：** SystemCapability.Ability.Form
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'formUninstall' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 |

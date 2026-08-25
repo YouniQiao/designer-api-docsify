@@ -8,18 +8,17 @@ Represents the function used by the **MultiNavigation** component to load naviga
 
 **Since:** 14
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-unnamed-declare type NavDestinationBuildFunction = (name: string, param?: object) => void--><!--Device-unnamed-declare type NavDestinationBuildFunction = (name: string, param?: object) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | ID of the navigation destination page. |
-| param | object | No | Parameters passed when the page is created during navigation. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| param | object | No |

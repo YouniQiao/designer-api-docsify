@@ -4,7 +4,7 @@
 
 **起始版本：** 7
 
-<!--Device-unnamed-interface PermissionOptions--><!--Device-unnamed-interface PermissionOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -22,9 +22,9 @@ pid?: number
 
 **起始版本：** 7
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-PermissionOptions-pid?: number--><!--Device-PermissionOptions-pid?: number-End-->
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -42,9 +42,8 @@ uid?: number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-PermissionOptions-uid?: number--><!--Device-PermissionOptions-uid?: number-End-->
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-

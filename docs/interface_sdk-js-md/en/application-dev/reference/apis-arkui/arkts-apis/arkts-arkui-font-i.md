@@ -4,7 +4,7 @@ Sets the text style.
 
 **Since:** 7
 
-<!--Device-unnamed-declare interface Font--><!--Device-unnamed-declare interface Font-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,9 +25,9 @@ Font family. <br>To specify multiple fonts, separate them with commas (,), and f
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Font-family?: string | Resource--><!--Device-Font-family?: string | Resource-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,9 +43,9 @@ Font size. If the value is of the number type, the unit fp is used. Percentage s
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Font-size?: Length--><!--Device-Font-size?: Length-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,9 +61,9 @@ Font style. Default value: FontStyle.Normal.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Font-style?: FontStyle--><!--Device-Font-style?: FontStyle-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -79,9 +79,8 @@ Font weight. For the number type, the value ranges from 100 to 900, at an interv
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-Font-weight?: FontWeight | number | string--><!--Device-Font-weight?: FontWeight | number | string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

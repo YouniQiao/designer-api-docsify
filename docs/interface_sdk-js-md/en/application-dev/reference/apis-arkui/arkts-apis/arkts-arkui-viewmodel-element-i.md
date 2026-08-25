@@ -4,7 +4,7 @@ Element@interface Element
 
 **Since:** 4
 
-<!--Device-unnamed-export interface Element--><!--Device-unnamed-export interface Element-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,17 +18,17 @@ Adds a node to the end of the child node list of the current node.
 
 **Since:** 8
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Element-addChild(child: Element): void--><!--Device-Element-addChild(child: Element): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| child | [Element](arkts-arkui-viewmodel-element-i.md) | Yes | Subnode object to be added |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| child | [Element](arkts-arkui-viewmodel-element-i.md) | Yes |
 
 ## animate
 
@@ -40,24 +40,24 @@ Creates and runs an animation shortcut on the component. Specify the keyframes a
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-Element-animate(keyframes: Array<AnimateStyle>, options: AnimateOptions): AnimationResult--><!--Device-Element-animate(keyframes: Array<AnimateStyle>, options: AnimateOptions): AnimationResult-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| keyframes | Array&lt;[AnimateStyle](arkts-arkui-viewmodel-animatestyle-i.md)&gt; | Yes | keyframes is used to describe key frame parameters of the animation. |
-| options | [AnimateOptions](arkts-arkui-viewmodel-animateoptions-i.md) | Yes | Options. is used to describe animation parameters. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| keyframes | Array&lt;[AnimateStyle](arkts-arkui-viewmodel-animatestyle-i.md)&gt; | Yes |
+| options | [AnimateOptions](arkts-arkui-viewmodel-animateoptions-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [AnimationResult](arkts-arkui-viewmodel-animationresult-i.md) | This method returns the animation object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [AnimationResult](arkts-arkui-viewmodel-animationresult-i.md) |
 
 ## createIntersectionObserver
 
@@ -69,23 +69,23 @@ If 0.5 is returned, 50% of the current component is visible.
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-Element-createIntersectionObserver(param: { ratios: Array<number> }): observer--><!--Device-Element-createIntersectionObserver(param: { ratios: Array<number> }): observer-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| param | { ratios: Array&lt;number&gt; } | Yes | Scope of Monitoring components. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| param | { ratios: Array & lt;number & gt; } | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [observer](arkts-arkui-viewmodel-observer-i.md) |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [observer](arkts-arkui-viewmodel-observer-i.md) |
 
 ## focus
 
@@ -97,17 +97,17 @@ Requests or cancels the focus for a component. If focus is set to true, the focu
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-Element-focus(obj?: FocusParamObj): void--><!--Device-Element-focus(obj?: FocusParamObj): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| obj | [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) | No | { focus: true \| false } |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) | No | { focus: true \|
 
 ## getBoundingClientRect
 
@@ -119,17 +119,17 @@ Obtains the size and position of the element.
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-Element-getBoundingClientRect(): RectObj--><!--Device-Element-getBoundingClientRect(): RectObj-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [RectObj](arkts-arkui-viewmodel-rectobj-i.md) | RectObj the size position of the element. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [RectObj](arkts-arkui-viewmodel-rectobj-i.md) |
 
 ## rotation
 
@@ -141,17 +141,17 @@ Requests or cancels the crown rotation focus for a component. If focus is set to
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-Element-rotation(obj?: FocusParamObj): void--><!--Device-Element-rotation(obj?: FocusParamObj): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| obj | [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) | No | { focus: true \| false } |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) | No | { focus: true \|
 
 ## setAttribute
 
@@ -163,18 +163,18 @@ Sets the value of an attribute on a specified element. If the attribute already 
 
 **Since:** 8
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Element-setAttribute(name: string, value: string): void--><!--Device-Element-setAttribute(name: string, value: string): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | attribute name |
-| value | string | Yes | attribute value¡¢ |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| value | string | Yes |
 
 ## setStyle
 
@@ -186,22 +186,21 @@ Sets a style value on a specified element. If the style exists and the style val
 
 **Since:** 8
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Element-setStyle(name: string, value: string): boolean--><!--Device-Element-setStyle(name: string, value: string): boolean-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | style name |
-| value | string | Yes | style value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| value | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | If the setting is successful, true is returned. If the setting fails, false is returned. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

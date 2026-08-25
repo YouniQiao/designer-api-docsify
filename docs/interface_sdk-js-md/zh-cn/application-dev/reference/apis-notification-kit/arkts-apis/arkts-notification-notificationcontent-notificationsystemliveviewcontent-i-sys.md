@@ -7,9 +7,9 @@
 
 **继承/实现关系：** NotificationSystemLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-unnamed-export interface NotificationSystemLiveViewContent--><!--Device-unnamed-export interface NotificationSystemLiveViewContent-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -23,9 +23,9 @@ cardButtons?: Array<NotificationIconButton>
 
 **类型：** Array&lt;[NotificationIconButton](arkts-notification-notificationcontent-notificationiconbutton-i-sys.md)&gt;
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-NotificationSystemLiveViewContent-cardButtons?: Array<NotificationIconButton>--><!--Device-NotificationSystemLiveViewContent-cardButtons?: Array<NotificationIconButton>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -41,11 +41,10 @@ liveViewType?: LiveViewTypes
 
 **类型：** [LiveViewTypes](arkts-notification-notificationcontent-liveviewtypes-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-NotificationSystemLiveViewContent-liveViewType?: LiveViewTypes--><!--Device-NotificationSystemLiveViewContent-liveViewType?: LiveViewTypes-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
-

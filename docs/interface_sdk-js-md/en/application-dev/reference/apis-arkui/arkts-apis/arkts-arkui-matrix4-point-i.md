@@ -1,12 +1,10 @@
 # Point
 
-Set poly to poly point.@interface Point
+Defines the data structure of a coordinate point.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-matrix4-export interface Point--><!--Device-matrix4-export interface Point-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,40 +17,39 @@ import { matrix4 } from '@kit.ArkUI';
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
-Point x.
+X-coordinate.Value range: (-∞, +∞)
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Point-x: double--><!--Device-Point-x: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
-Point y.
+Y-coordinate.Value range: (-∞, +∞)
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Point-y: double--><!--Device-Point-y: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

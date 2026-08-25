@@ -4,7 +4,7 @@ Represents the running mode of a device administrator application.
 
 **Since:** 19
 
-<!--Device-adminManager-export enum RunningMode--><!--Device-adminManager-export enum RunningMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -20,7 +20,7 @@ Default user running mode, indicating that the application runs under the defaul
 
 **Since:** 19
 
-<!--Device-RunningMode-DEFAULT = 0--><!--Device-RunningMode-DEFAULT = 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -36,9 +36,8 @@ Multi-user running mode, indicating that the application runs under multiple use
 
 **Since:** 19
 
-<!--Device-RunningMode-MULTI_USER = 1--><!--Device-RunningMode-MULTI_USER = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
-

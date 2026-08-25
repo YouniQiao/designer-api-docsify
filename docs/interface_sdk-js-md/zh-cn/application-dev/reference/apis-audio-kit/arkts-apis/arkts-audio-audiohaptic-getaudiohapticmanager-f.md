@@ -14,21 +14,20 @@ function getAudioHapticManager(): AudioHapticManager
 
 获取音振管理器。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-audioHaptic-function getAudioHapticManager(): AudioHapticManager--><!--Device-audioHaptic-function getAudioHapticManager(): AudioHapticManager-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) | 音振管理器。 |
+| 类型 |
+| --- |
+| [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) |
 
 **示例**
 
 ```TypeScript
 let audioHapticManagerInstance: audioHaptic.AudioHapticManager = audioHaptic.getAudioHapticManager();
 ```
-

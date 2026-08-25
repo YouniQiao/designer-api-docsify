@@ -2,9 +2,9 @@
 
 Defines a three-finger tap gesture event.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-unnamed-export declare interface ThreeFingersTap--><!--Device-unnamed-export declare interface ThreeFingersTap-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -24,9 +24,8 @@ Gesture event type, for example, gesture start, gesture update, or gesture end.
 
 **Type:** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ThreeFingersTap-type: ActionType--><!--Device-ThreeFingersTap-type: ActionType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
-

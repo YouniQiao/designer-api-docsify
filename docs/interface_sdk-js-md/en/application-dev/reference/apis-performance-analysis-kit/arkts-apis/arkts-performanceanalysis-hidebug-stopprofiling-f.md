@@ -16,11 +16,11 @@ Stops the VM profiling method. **stopProfiling()** and **startProfiling(filename
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [stopJsCpuProfiling](arkts-performanceanalysis-hidebug-stopjscpuprofiling-f.md)
-
-<!--Device-hidebug-function stopProfiling(): void--><!--Device-hidebug-function stopProfiling(): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -35,4 +35,3 @@ hidebug.startProfiling("cpuprofiler-20220216");
 // code block
 hidebug.stopProfiling();
 ```
-

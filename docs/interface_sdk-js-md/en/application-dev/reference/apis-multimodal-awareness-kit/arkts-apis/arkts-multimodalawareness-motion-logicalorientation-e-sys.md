@@ -4,7 +4,7 @@ Enum for logical orientation calculated by smart algorithms.
 
 **Since:** 26.0.0
 
-<!--Device-motion-export enum LogicalOrientation--><!--Device-motion-export enum LogicalOrientation-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -20,9 +20,9 @@ Indicates the orientation is unknown or cannot be determined(e.g., non-grip).
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-LogicalOrientation-UNKNOWN = -1--><!--Device-LogicalOrientation-UNKNOWN = -1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -38,9 +38,9 @@ Indicates upright.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-LogicalOrientation-UPRIGHT = 0--><!--Device-LogicalOrientation-UPRIGHT = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -56,9 +56,9 @@ Indicates left.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-LogicalOrientation-LEFT = 1--><!--Device-LogicalOrientation-LEFT = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -74,9 +74,9 @@ Indicates the logical orientation is inverted.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-LogicalOrientation-INVERTED = 2--><!--Device-LogicalOrientation-INVERTED = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -92,11 +92,10 @@ Indicates right.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-LogicalOrientation-RIGHT = 3--><!--Device-LogicalOrientation-RIGHT = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **System API:** This is a system API.
-

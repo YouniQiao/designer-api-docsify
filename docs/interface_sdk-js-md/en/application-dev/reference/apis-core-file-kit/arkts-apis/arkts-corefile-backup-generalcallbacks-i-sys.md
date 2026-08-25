@@ -2,9 +2,9 @@
 
 General callbacks for both backup and restore procedure. The backup service will notify the client by these callbacks.@interface GeneralCallbacks
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-backup-interface GeneralCallbacks--><!--Device-backup-interface GeneralCallbacks-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -16,6 +16,51 @@ General callbacks for both backup and restore procedure. The backup service will
 import { backup } from '@kit.CoreFileKit';
 ```
 
+## onBackupSizeReport
+
+```TypeScript
+onBackupSizeReport?: OnBackupSizeReport
+```
+
+Callback called when the backup_sa service return result information. The first return string parameter indicates the result of the scanned bundle datasize.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+**System capability:** SystemCapability.FileManagement.StorageService.Backup
+
+**System API:** This is a system API.
+
+## onFileReadyBatch
+
+```TypeScript
+onFileReadyBatch?: OnFileReadyBatch
+```
+
+Callback called when the backup service tries to send files to the client. The File argument indicates a file to send to the client. The returned file is owned by the backup service and will be cleaned by the service once the file is closed.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.StorageService.Backup
+
+**System API:** This is a system API.
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13600001 |
+| 13900005 |
+| 13900011 |
+| 13900020 |
+| 13900025 |
+
 ## onProcess
 
 ```TypeScript
@@ -26,9 +71,9 @@ Callback called when the backup_sa service return result information. The first 
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-GeneralCallbacks-onProcess(bundleName: string, process: string): void--><!--Device-GeneralCallbacks-onProcess(bundleName: string, process: string): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -36,25 +81,25 @@ Callback called when the backup_sa service return result information. The first 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleName | string | Yes | the bundleName that triggers the callback. |
-| process | string | Yes | the process info of the bundle. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bundleName | string | Yes |
+| process | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
-| 13500006 | Tar error |
-| 13500008 | Untar error |
-| 13600001 | IPC error |
-| 13900001 | Operation not permitted |
-| 13900005 | I/O error |
-| 13900011 | Out of memory |
-| 13900020 | Invalid argument |
-| 13900025 | No space left on device |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| 13500006 |
+| 13500008 |
+| 13600001 |
+| 13900001 |
+| 13900005 |
+| 13900011 |
+| 13900020 |
+| 13900025 |
 
 **Examples**
 
@@ -67,6 +112,43 @@ onProcess: (bundleName: string, process: string) => {
 }
 ```
 
+## onProcess
+
+```TypeScript
+onProcess: OnProcess
+```
+
+Callback called when the backup_sa service return result information. The first return string parameter indicates the result of the bundle.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.StorageService.Backup
+
+**System API:** This is a system API.
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| 13500006 |
+| 13500008 |
+| 13600001 |
+| 13900001 |
+| 13900005 |
+| 13900011 |
+| 13900020 |
+| 13900025 |
+
+**Examples**
+
+See [onProcess](#onprocess)
+
 ## onResultReport
 
 ```TypeScript
@@ -77,9 +159,9 @@ Callback called when the backup service return result information. The first ret
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-GeneralCallbacks-onResultReport(bundleName: string, result: string): void--><!--Device-GeneralCallbacks-onResultReport(bundleName: string, result: string): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -87,22 +169,22 @@ Callback called when the backup service return result information. The first ret
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleName | string | Yes | the bundleName that triggers the callback. |
-| result | string | Yes | the result of the bundle. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bundleName | string | Yes |
+| result | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
-| 13600001 | IPC error |
-| 13900005 | I/O error |
-| 13900011 | Out of memory |
-| 13900025 | No space left on device |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| 13600001 |
+| 13900005 |
+| 13900011 |
+| 13900025 |
+| 13900042 |
 
 **Examples**
 
@@ -115,6 +197,40 @@ onResultReport: (bundleName: string, result: string) => {
 }
 ```
 
+## onResultReport
+
+```TypeScript
+onResultReport: OnResultReport
+```
+
+Callback called when the backup service return result information. The first return string parameter indicates the bundleName that triggers the callback. The second return string parameter indicates the result of the bundle.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.StorageService.Backup
+
+**System API:** This is a system API.
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| 13600001 |
+| 13900005 |
+| 13900011 |
+| 13900025 |
+| 13900042 |
+
+**Examples**
+
+See [onResultReport](#onresultreport)
+
 ## onAllBundlesEnd
 
 ```TypeScript
@@ -125,9 +241,9 @@ Callback called when the all the bundles to backup/restore are done or aborted u
 
 **Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;undefined&gt;
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-GeneralCallbacks-onAllBundlesEnd: AsyncCallback<undefined>--><!--Device-GeneralCallbacks-onAllBundlesEnd: AsyncCallback<undefined>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -143,27 +259,9 @@ Callback called when the backup service dies unexpectedly.
 
 **Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;undefined&gt;
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-GeneralCallbacks-onBackupServiceDied: Callback<undefined>--><!--Device-GeneralCallbacks-onBackupServiceDied: Callback<undefined>-End-->
-
-**System capability:** SystemCapability.FileManagement.StorageService.Backup
-
-**System API:** This is a system API.
-
-## onBackupSizeReport
-
-```TypeScript
-onBackupSizeReport?: OnBackupSizeReport
-```
-
-Callback called when the backup_sa service return result information. The first return string parameter indicates the result of the scanned bundle datasize.
-
-**Type:** [OnBackupSizeReport](arkts-corefile-backup-onbackupsizereport-t-sys.md)
-
-**Since:** 23
-
-<!--Device-GeneralCallbacks-onBackupSizeReport?: OnBackupSizeReport--><!--Device-GeneralCallbacks-onBackupSizeReport?: OnBackupSizeReport-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -172,18 +270,16 @@ Callback called when the backup_sa service return result information. The first 
 ## onBundleBegin
 
 ```TypeScript
-onBundleBegin: AsyncCallback<string, BundlePara>
+onBundleBegin: AsyncCallback<string, void | string>
 ```
 
 Callback called when a backup/restore procedure for an bundle is started. The first return string parameter indicates the name of the bundle. The second return string parameter indicates that when BusinessError errors occur, the callback data is the name of the bundle.
 
-**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, [BundlePara](arkts-corefile-backup-bundlepara-t-sys.md)&gt;
+**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
 
-**Since:** 23
+**Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeneralCallbacks-onBundleBegin: AsyncCallback<string, BundlePara>--><!--Device-GeneralCallbacks-onBundleBegin: AsyncCallback<string, BundlePara>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -192,18 +288,16 @@ Callback called when a backup/restore procedure for an bundle is started. The fi
 ## onBundleEnd
 
 ```TypeScript
-onBundleEnd: AsyncCallback<string, BundlePara>
+onBundleEnd: AsyncCallback<string, void | string>
 ```
 
 Callback called when a backup/restore procedure for an bundle ends successfully or gets aborted unexpectedly. The first return string parameter indicates the name of the bundle. The second return string parameter indicates that when BusinessError errors occur, the callback data is the name of the bundle.
 
-**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, [BundlePara](arkts-corefile-backup-bundlepara-t-sys.md)&gt;
+**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
 
-**Since:** 23
+**Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeneralCallbacks-onBundleEnd: AsyncCallback<string, BundlePara>--><!--Device-GeneralCallbacks-onBundleEnd: AsyncCallback<string, BundlePara>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -219,29 +313,9 @@ Callback called when the backup service tries to send files to the client. The F
 
 **Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;File&gt;
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-GeneralCallbacks-onFileReady: AsyncCallback<File>--><!--Device-GeneralCallbacks-onFileReady: AsyncCallback<File>-End-->
-
-**System capability:** SystemCapability.FileManagement.StorageService.Backup
-
-**System API:** This is a system API.
-
-## onFileReadyBatch
-
-```TypeScript
-onFileReadyBatch?: OnFileReadyBatch
-```
-
-Callback called when the backup service tries to send files to the client. The File argument indicates a file to send to the client. The returned file is owned by the backup service and will be cleaned by the service once the file is closed.
-
-**Type:** [OnFileReadyBatch](arkts-corefile-backup-onfilereadybatch-t-sys.md)
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeneralCallbacks-onFileReadyBatch?: OnFileReadyBatch--><!--Device-GeneralCallbacks-onFileReadyBatch?: OnFileReadyBatch-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -259,51 +333,10 @@ Callback called when the migrate result is reported. The first return string par
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-GeneralCallbacks-onMigrateResult?: AsyncCallback<string, void | string>--><!--Device-GeneralCallbacks-onMigrateResult?: AsyncCallback<string, void | string>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
-
-## onProcess
-
-```TypeScript
-onProcess: OnProcess
-```
-
-Callback called when the backup_sa service return result information. The first return string parameter indicates the result of the bundle.
-
-**Type:** [OnProcess](arkts-corefile-backup-onprocess-t-sys.md)
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeneralCallbacks-onProcess: OnProcess--><!--Device-GeneralCallbacks-onProcess: OnProcess-End-->
-
-**System capability:** SystemCapability.FileManagement.StorageService.Backup
-
-**System API:** This is a system API.
-
-## onResultReport
-
-```TypeScript
-onResultReport: OnResultReport
-```
-
-Callback called when the backup service return result information. The first return string parameter indicates the bundleName that triggers the callback. The second return string parameter indicates the result of the bundle.
-
-**Type:** [OnResultReport](arkts-corefile-backup-onresultreport-t-sys.md)
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeneralCallbacks-onResultReport: OnResultReport--><!--Device-GeneralCallbacks-onResultReport: OnResultReport-End-->
-
-**System capability:** SystemCapability.FileManagement.StorageService.Backup
-
-**System API:** This is a system API.
-

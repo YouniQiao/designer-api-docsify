@@ -4,7 +4,7 @@
 
 **起始版本：** 26.1.0
 
-<!--Device-carAwareness-enum Capability--><!--Device-carAwareness-enum Capability-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -18,9 +18,9 @@ SPATIAL_MOTION = 'SpatialMotion'
 
 **起始版本：** 26.1.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
-<!--Device-Capability-SPATIAL_MOTION = 'SpatialMotion'--><!--Device-Capability-SPATIAL_MOTION = 'SpatialMotion'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -34,9 +34,9 @@ REALTIME_WEATHER = 'RealTimeWeather'
 
 **起始版本：** 26.1.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
-<!--Device-Capability-REALTIME_WEATHER = 'RealTimeWeather'--><!--Device-Capability-REALTIME_WEATHER = 'RealTimeWeather'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -50,9 +50,8 @@ REFUELING = 'Refueling'
 
 **起始版本：** 26.1.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Capability-REFUELING = 'Refueling'--><!--Device-Capability-REFUELING = 'Refueling'-End-->
-
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
-

@@ -2,9 +2,9 @@
 
 Defines the axis range of an input device.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputDevice-interface AxisRange--><!--Device-inputDevice-interface AxisRange-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -24,9 +24,9 @@ Axis type of an input device.
 
 **Type:** AxisType
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-AxisRange-axis: AxisType--><!--Device-AxisRange-axis: AxisType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -38,11 +38,11 @@ flat: int
 
 Benchmark value of the axis.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-AxisRange-flat: int--><!--Device-AxisRange-flat: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -54,11 +54,11 @@ fuzz: int
 
 Fuzzy value of the axis.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-AxisRange-fuzz: int--><!--Device-AxisRange-fuzz: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -70,11 +70,11 @@ max: int
 
 Maximum value of the axis.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-AxisRange-max: int--><!--Device-AxisRange-max: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -86,11 +86,11 @@ min: int
 
 Minimum value of the axis.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-AxisRange-min: int--><!--Device-AxisRange-min: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -102,11 +102,11 @@ resolution: int
 
 Resolution of the axis.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-AxisRange-resolution: int--><!--Device-AxisRange-resolution: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -120,9 +120,8 @@ Input sources supported by the input device, including the keyboard, mouse, touc
 
 **Type:** SourceType
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-AxisRange-source: SourceType--><!--Device-AxisRange-source: SourceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
-

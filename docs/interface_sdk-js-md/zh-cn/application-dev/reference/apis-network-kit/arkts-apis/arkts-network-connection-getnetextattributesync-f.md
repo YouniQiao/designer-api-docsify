@@ -16,32 +16,32 @@ function getNetExtAttributeSync(netHandle: NetHandle): string
 
 **起始版本：** 20
 
-**需要权限：** ohos.permission.GET_NETWORK_INFO
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-connection-function getNetExtAttributeSync(netHandle: NetHandle): string--><!--Device-connection-function getNetExtAttributeSync(netHandle: NetHandle): string-End-->
+**需要权限：** ohos.permission.GET_NETWORK_INFO
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| netHandle | NetHandle | 是 | 网络句柄。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 以同步方式返回的网络扩展属性。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
 **示例**
 
@@ -55,4 +55,3 @@ if (netHandle.netId != 0) {
   console.info("Succeeded to getNetExtAttribute: " + netExtAttribute);
 }
 ```
-

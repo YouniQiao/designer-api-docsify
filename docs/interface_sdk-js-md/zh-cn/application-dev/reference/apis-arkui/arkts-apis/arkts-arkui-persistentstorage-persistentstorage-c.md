@@ -4,9 +4,7 @@ Defines the PersistentStorage interface.
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export declare class PersistentStorage--><!--Device-unnamed-export declare class PersistentStorage-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,19 +18,17 @@ static deleteProp(key: string): void
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PersistentStorage-static deleteProp(key: string): void--><!--Device-PersistentStorage-static deleteProp(key: string): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | string | 是 | PersistentStorage中的属性名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | string | 是 |
 
 ## keys
 
@@ -44,19 +40,17 @@ static keys(): Array<string>
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PersistentStorage-static keys(): Array<string>--><!--Device-PersistentStorage-static keys(): Array<string>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;string&gt; | 返回所有持久化属性的属性名的数组。 |
+| 类型 |
+| --- |
+| Array & lt;string & gt; |
 
 ## persistProp
 
@@ -74,26 +68,24 @@ static persistProp<T>(key: string, defaultValue: T, toJson?: ToJSONType<T>, from
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-PersistentStorage-static persistProp<T>(key: string, defaultValue: T, toJson?: ToJSONType<T>, fromJson?: FromJSONType<T>): boolean--><!--Device-PersistentStorage-static persistProp<T>(key: string, defaultValue: T, toJson?: ToJSONType<T>, fromJson?: FromJSONType<T>): boolean-End-->
-
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | string | 是 | 属性名。 |
-| defaultValue | T | 是 | 当在[PersistentStorage](#persistentstorage)和 AppStorage中未查询到key时，使用 defaultValue中。 |
-| toJson | [ToJSONType](arkts-arkui-tojsontype-t.md)&lt;T&gt; | 否 | 见[ToJSONType](arkts-arkui-tojsontype-t.md)，用于序列化。对于复杂类型（除boolean、int、double、long、string外）， 开发者必须实现该方法才能成功序列化。 |
-| fromJson | [FromJSONType](arkts-arkui-fromjsontype-t.md)&lt;T&gt; | 否 | 见[FromJSONType](arkts-arkui-fromjsontype-t.md)，用于反序列化。对于复杂类型（除boolean、int、double、long、 string外），开发者必须实现该方法才能成功反序列化。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | string | 是 |
+| defaultValue | T | 是 |
+| toJson | [ToJSONType](arkts-arkui-tojsontype-t.md)&lt;T&gt; | 否 |
+| fromJson | [FromJSONType](arkts-arkui-fromjsontype-t.md)&lt;T&gt; | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果PersistentStorage文件中存在key对应的属性，则返回false。否则将依次从AppStorage、磁盘中查找对应属性，若存在，则返回true，若不存在，则创建并持久化 key对应的属性，并返回true。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## persistProps
 
@@ -105,17 +97,14 @@ static persistProps(props: PersistPropsOptions<Any>[]): void
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PersistentStorage-static persistProps(props: PersistPropsOptions<Any>[]): void--><!--Device-PersistentStorage-static persistProps(props: PersistPropsOptions<Any>[]): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| props | [PersistPropsOptions](arkts-arkui-persistentstorage-persistpropsoptions-i.md)&lt;Any&gt;[] | 是 | 持久化数组。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| props | [PersistPropsOptions](arkts-arkui-persistentstorage-persistpropsoptions-i.md)&lt;Any&gt;[] | 是 |

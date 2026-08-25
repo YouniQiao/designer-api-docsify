@@ -180,6 +180,7 @@
   <!--Del-->
   - [isDistributedEnabledBySlot(系统接口)](arkts-notification-notificationmanager-isdistributedenabledbyslot-f-sys.md)<!--DelEnd-->
   - [isGeofenceEnabled](arkts-notification-notificationmanager-isgeofenceenabled-f.md)
+  - [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md)
   <!--Del-->
   - [isNotificationEnabled(系统接口)](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md)<!--DelEnd-->
   - [isNotificationEnabledSync](arkts-notification-notificationmanager-isnotificationenabledsync-f.md)
@@ -201,13 +202,13 @@
   - [isSupportDoNotDisturbMode(系统接口)](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md)<!--DelEnd-->
   - [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md)
   <!--Del-->
-  - [off_checkNotification(系统接口)](arkts-notification-notificationmanager-offchecknotification-f-sys.md)<!--DelEnd-->
+  - [off(系统接口)](arkts-notification-notificationmanager-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offBadgeNumberQuery(系统接口)](arkts-notification-notificationmanager-offbadgenumberquery-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offCheckNotification(系统接口)](arkts-notification-notificationmanager-offchecknotification-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on_checkNotification(系统接口)](arkts-notification-notificationmanager-onchecknotification-f-sys.md)<!--DelEnd-->
+  - [on(系统接口)](arkts-notification-notificationmanager-on-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onBadgeNumberQuery(系统接口)](arkts-notification-notificationmanager-onbadgenumberquery-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -486,8 +487,7 @@
     - [NotificationFlags](arkts-notification-notificationflags-notificationflags-i.md)
     <!--Del-->
     - [NotificationFlags(系统接口)](arkts-notification-notificationflags-notificationflags-i-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [NotificationFlagStatus(系统接口)](arkts-notification-notificationflags-notificationflagstatus-e-sys.md)<!--DelEnd-->
+    - [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
   - [NotificationInfo](arkts-notificationinfo.md)
     - [NotificationInfo](arkts-notification-notificationinfo-i.md)
   - [notificationRequest](arkts-notificationrequest.md)

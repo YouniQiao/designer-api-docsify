@@ -4,7 +4,7 @@ Sets the construction parameters of the current EffectComponent, including the r
 
 **Since:** 20
 
-<!--Device-unnamed-declare interface EffectComponentOptions--><!--Device-unnamed-declare interface EffectComponentOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,10 @@ Rendering layer of the EffectComponent.Default value: EffectLayer.NONE
 
 **Since:** 20
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-EffectComponentOptions-effectLayer?: EffectLayer--><!--Device-EffectComponentOptions-effectLayer?: EffectLayer-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

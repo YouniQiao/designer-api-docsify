@@ -16,7 +16,7 @@ Resets the OAID.
 
 **Since:** 10
 
-<!--Device-identifier-function resetOAID(): void--><!--Device-identifier-function resetOAID(): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Advertising.OAID
 
@@ -24,11 +24,11 @@ Resets the OAID.
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17300001](../errorcode-oaid.md#17300001-system-internal-error) | System internal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
-| [17300002](../errorcode-oaid.md#17300002-not-in-the-trust-list) | Not in the trust list.<br>**Applicable version:** 12 and later |
+| Error Code ID |
+| --- |
+| [17300001](../errorcode-oaid.md#17300001-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17300002](../errorcode-oaid.md#17300002-not-in-the-trust-list) |
 
 **Examples**
 
@@ -37,4 +37,3 @@ import { identifier } from '@kit.AdsKit';
 
 identifier.resetOAID();
 ```
-

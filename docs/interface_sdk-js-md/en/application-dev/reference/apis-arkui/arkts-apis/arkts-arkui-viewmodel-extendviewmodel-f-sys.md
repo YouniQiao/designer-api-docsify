@@ -10,9 +10,9 @@ export declare function extendViewModel<T extends ViewModel, Data>(
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-unnamed-export declare function extendViewModel<T extends ViewModel, Data>(  options: CombinedOptions<T, Data>): ViewModel & Data--><!--Device-unnamed-export declare function extendViewModel<T extends ViewModel, Data>(  options: CombinedOptions<T, Data>): ViewModel & Data-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -20,13 +20,12 @@ export declare function extendViewModel<T extends ViewModel, Data>(
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [CombinedOptions](arkts-arkui-combinedoptions-t-sys.md)&lt;T, Data&gt; | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [CombinedOptions](arkts-arkui-combinedoptions-t-sys.md)&lt;T, Data&gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ViewModel](arkts-arkui-viewmodel-viewmodel-i.md) & Data |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ViewModel](arkts-arkui-viewmodel-viewmodel-i.md) & Data |

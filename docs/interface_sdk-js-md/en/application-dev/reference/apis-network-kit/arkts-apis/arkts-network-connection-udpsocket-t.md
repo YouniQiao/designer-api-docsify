@@ -8,9 +8,8 @@ Defines a **UDPSocket** object, which can be created using [socket.constructUDPS
 
 **Since:** 8
 
-<!--Device-connection-type UDPSocket = socket.UDPSocket--><!--Device-connection-type UDPSocket = socket.UDPSocket-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Property type:** socket.UDPSocket
-

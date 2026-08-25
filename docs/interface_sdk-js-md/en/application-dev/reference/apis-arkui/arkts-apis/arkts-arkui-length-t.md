@@ -8,17 +8,16 @@ Defines the length property with string, number and resource unit.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
-<!--Device-unnamed-declare type Length = string | number | Resource--><!--Device-unnamed-declare type Length = string | number | Resource-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| Type | Description |
-| --- | --- |
-| string |  |
-| number |  |
-| Resource |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+| number |
+| [Resource](arkts-arkui-resource-t.md) |

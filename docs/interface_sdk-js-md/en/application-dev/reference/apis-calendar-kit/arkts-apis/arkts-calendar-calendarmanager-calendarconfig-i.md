@@ -4,7 +4,7 @@ Describes the calendar configuration information.
 
 **Since:** 10
 
-<!--Device-calendarManager-interface CalendarConfig--><!--Device-calendarManager-interface CalendarConfig-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -26,7 +26,7 @@ Calendar color. If the value is a number, the value ranges from 0x000001 to 0xFF
 
 **Since:** 10
 
-<!--Device-CalendarConfig-color?: number | string--><!--Device-CalendarConfig-color?: number | string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -42,7 +42,6 @@ Whether to enable the reminder for events in the calendar. The value **true** me
 
 **Since:** 10
 
-<!--Device-CalendarConfig-enableReminder?: boolean--><!--Device-CalendarConfig-enableReminder?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Applications.CalendarData
-

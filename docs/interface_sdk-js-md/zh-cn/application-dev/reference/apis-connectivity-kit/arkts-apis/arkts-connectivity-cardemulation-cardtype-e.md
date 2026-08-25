@@ -2,9 +2,9 @@
 
 定义卡模拟应用所使用的业务类型，是支付类型，还是其他类型。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-cardEmulation-enum CardType--><!--Device-cardEmulation-enum CardType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
@@ -16,11 +16,11 @@ PAYMENT = "payment"
 
 卡模拟应用所使用的业务是支付类型。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CardType-PAYMENT = "payment"--><!--Device-CardType-PAYMENT = "payment"-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
@@ -32,11 +32,10 @@ OTHER = "other"
 
 卡模拟应用所使用的业务是其他类型。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-CardType-OTHER = "other"--><!--Device-CardType-OTHER = "other"-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
-

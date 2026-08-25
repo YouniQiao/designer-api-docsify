@@ -4,7 +4,7 @@ Defined the draw modifier of node. Provides draw callbacks for the associated No
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare class DrawModifier--><!--Device-unnamed-declare class DrawModifier-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,19 +23,19 @@ drawBehind Method. Executed before drawing associated Node.
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DrawModifier-drawBehind?(drawContext: DrawContext): void--><!--Device-DrawModifier-drawBehind?(drawContext: DrawContext): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| drawContext | [DrawContext](arkts-arkui-drawcontext-t.md) | 是 | The drawContext used to draw. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| drawContext | [DrawContext](arkts-arkui-drawcontext-t.md) | 是 |
 
 **示例**
 
@@ -51,19 +51,19 @@ drawContent Method. Executed when associated Node is drawing, the default drawCo
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DrawModifier-drawContent?(drawContext: DrawContext): void--><!--Device-DrawModifier-drawContent?(drawContext: DrawContext): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| drawContext | [DrawContext](arkts-arkui-drawcontext-t.md) | 是 | The drawContext used to draw. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| drawContext | [DrawContext](arkts-arkui-drawcontext-t.md) | 是 |
 
 **示例**
 
@@ -79,19 +79,19 @@ drawForeground(drawContext: DrawContext): void
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DrawModifier-drawForeground(drawContext: DrawContext): void--><!--Device-DrawModifier-drawForeground(drawContext: DrawContext): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| drawContext | [DrawContext](arkts-arkui-drawcontext-t.md) | 是 | 用来绘制的drawContext |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| drawContext | [DrawContext](arkts-arkui-drawcontext-t.md) | 是 |
 
 **示例**
 
@@ -107,19 +107,19 @@ drawFront Method. Executed after drawing associated Node.
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DrawModifier-drawFront?(drawContext: DrawContext): void--><!--Device-DrawModifier-drawFront?(drawContext: DrawContext): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| drawContext | [DrawContext](arkts-arkui-drawcontext-t.md) | 是 | The drawContext used to draw. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| drawContext | [DrawContext](arkts-arkui-drawcontext-t.md) | 是 |
 
 **示例**
 
@@ -135,19 +135,19 @@ drawOverlay(drawContext: DrawContext): void
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DrawModifier-drawOverlay(drawContext: DrawContext): void--><!--Device-DrawModifier-drawOverlay(drawContext: DrawContext): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| drawContext | [DrawContext](arkts-arkui-drawcontext-t.md) | 是 | 用于绘制的drawContext |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| drawContext | [DrawContext](arkts-arkui-drawcontext-t.md) | 是 |
 
 **示例**
 
@@ -220,15 +220,14 @@ Invalidate the component, which will cause a re-render of the component.
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DrawModifier-invalidate(): void--><!--Device-DrawModifier-invalidate(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **示例**
 
 请参考[示例1（通过DrawModifier进行自定义绘制）](#示例1通过drawmodifier进行自定义绘制)。
-

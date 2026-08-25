@@ -4,7 +4,7 @@ Returns the notification classification information.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export interface NotificationClassification--><!--Device-unnamed-export interface NotificationClassification-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -22,9 +22,9 @@ Notification classification identified by the system.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-NotificationClassification-readonly classification?: string--><!--Device-NotificationClassification-readonly classification?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -42,11 +42,10 @@ Notification sub-classification identified by the system.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-NotificationClassification-readonly subClassification?: string--><!--Device-NotificationClassification-readonly subClassification?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 7
 
-<!--Device-contact-class Organization--><!--Device-contact-class Organization-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -26,9 +26,9 @@ name: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-Organization-name: string--><!--Device-Organization-name: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -44,9 +44,9 @@ title?: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-Organization-title?: string--><!--Device-Organization-title?: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -62,4 +62,3 @@ let organization: contact.Organization = {
     title: 'title'
 };
 ```
-

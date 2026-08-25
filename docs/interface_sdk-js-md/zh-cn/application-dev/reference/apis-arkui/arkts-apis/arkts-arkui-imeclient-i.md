@@ -4,7 +4,7 @@
 
 **起始版本：** 20
 
-<!--Device-unnamed-declare interface IMEClient--><!--Device-unnamed-declare interface IMEClient-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,19 +23,19 @@ setExtraConfig(config: InputMethodExtraConfig): void
 
 **起始版本：** 22
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-IMEClient-setExtraConfig(config: InputMethodExtraConfig): void--><!--Device-IMEClient-setExtraConfig(config: InputMethodExtraConfig): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| config | [InputMethodExtraConfig](arkts-arkui-inputmethodextraconfig-t.md) | 是 | 输入法扩展信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| config | [InputMethodExtraConfig](arkts-arkui-inputmethodextraconfig-t.md) | 是 |
 
 ## nodeId
 
@@ -49,11 +49,10 @@ nodeId: number
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
-<!--Device-IMEClient-nodeId: number--><!--Device-IMEClient-nodeId: number-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

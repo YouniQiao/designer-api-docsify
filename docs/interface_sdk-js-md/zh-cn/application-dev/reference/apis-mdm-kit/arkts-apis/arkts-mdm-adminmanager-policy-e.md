@@ -4,7 +4,7 @@
 
 **起始版本：** 20
 
-<!--Device-adminManager-export enum Policy--><!--Device-adminManager-export enum Policy-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,9 +18,9 @@ BLOCK_LIST = 0
 
 **起始版本：** 20
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-Policy-BLOCK_LIST = 0--><!--Device-Policy-BLOCK_LIST = 0-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -34,9 +34,8 @@ TRUST_LIST = 1
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Policy-TRUST_LIST = 1--><!--Device-Policy-TRUST_LIST = 1-End-->
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
-

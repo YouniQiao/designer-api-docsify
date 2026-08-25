@@ -16,13 +16,13 @@ function enableWifi(): boolean
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [enableWifi](arkts-connectivity-wifimanager-enablewifi-f.md)
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
-
-<!--Device-wifi-function enableWifi(): boolean--><!--Device-wifi-function enableWifi(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -30,9 +30,9 @@ function enableWifi(): boolean
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 操作成功时返回{ |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -45,4 +45,3 @@ try {
     console.error("failed:" + JSON.stringify(error));
 }
 ```
-

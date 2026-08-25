@@ -4,9 +4,7 @@ Represents the result of a fulfilled promise.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class PromiseFulfilledResult--><!--Device-unnamed-export class PromiseFulfilledResult-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,11 +23,9 @@ Constructs an empty PromiseFulfilledResult.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PromiseFulfilledResult-constructor()--><!--Device-PromiseFulfilledResult-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -43,19 +39,17 @@ Constructs a PromiseFulfilledResult with the given value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PromiseFulfilledResult-constructor(value: T)--><!--Device-PromiseFulfilledResult-constructor(value: T)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | T | Yes | the fulfilled value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | T | Yes |
 
 ## status
 
@@ -69,11 +63,9 @@ The status of the promise.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PromiseFulfilledResult-status: string--><!--Device-PromiseFulfilledResult-status: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -89,11 +81,8 @@ The value of the fulfilled promise.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PromiseFulfilledResult-value: T--><!--Device-PromiseFulfilledResult-value: T-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

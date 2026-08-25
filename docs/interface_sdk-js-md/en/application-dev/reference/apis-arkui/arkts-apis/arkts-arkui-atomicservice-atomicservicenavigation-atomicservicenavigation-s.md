@@ -4,9 +4,7 @@
 
 **Since:** 12
 
-**Decorator:** @Component
-
-<!--Device-unnamed-export declare struct AtomicServiceNavigation--><!--Device-unnamed-export declare struct AtomicServiceNavigation-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,6 +13,22 @@
 ```TypeScript
 import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha, BackgroundTheme, TitleBarType, SideBarOptions, TitleOptions, GradientBackground } from '@kit.ArkUI';
 ```
+
+## navDestinationBuilder
+
+```TypeScript
+navDestinationBuilder?: NavDestinationBuilder
+```
+
+The builder of navDestination.
+
+**Since:** 12
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## gradientBackground
 
@@ -28,11 +42,9 @@ The background with gradient colors of Navigation.
 
 **Since:** 18
 
-**Decorator:** @Prop
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-AtomicServiceNavigation-@Prop  gradientBackground?: GradientBackground--><!--Device-AtomicServiceNavigation-@Prop  gradientBackground?: GradientBackground-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,11 +60,9 @@ Hide navigation title bar.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AtomicServiceNavigation-@Prop  hideTitleBar?: boolean--><!--Device-AtomicServiceNavigation-@Prop  hideTitleBar?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,11 +78,9 @@ The layout style users defined and inserted.
 
 **Since:** 18
 
-**Decorator:** @BuilderParam
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-AtomicServiceNavigation-@BuilderParam  menus?: CustomBuilder | Array<NavigationMenuItem>--><!--Device-AtomicServiceNavigation-@BuilderParam  menus?: CustomBuilder | Array<NavigationMenuItem>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,11 +96,9 @@ Sets the minimum width of content.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AtomicServiceNavigation-@Prop  minContentWidth?: Dimension--><!--Device-AtomicServiceNavigation-@Prop  minContentWidth?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,11 +114,9 @@ Sets the mode of navigation.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AtomicServiceNavigation-@Prop  mode?: NavigationMode--><!--Device-AtomicServiceNavigation-@Prop  mode?: NavigationMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -128,9 +132,9 @@ Trigger callback when navigation mode changes.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-AtomicServiceNavigation-modeChangeCallback?: Callback<NavigationMode>--><!--Device-AtomicServiceNavigation-modeChangeCallback?: Callback<NavigationMode>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -146,11 +150,9 @@ Sets the width of navigation bar.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AtomicServiceNavigation-@Prop  navBarWidth?: Length--><!--Device-AtomicServiceNavigation-@Prop  navBarWidth?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -169,31 +171,9 @@ Sets the minimum width and the maximum width of navigation bar.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AtomicServiceNavigation-@Prop  navBarWidthRange?: [    Dimension,    Dimension  ]--><!--Device-AtomicServiceNavigation-@Prop  navBarWidthRange?: [    Dimension,    Dimension  ]-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## navDestinationBuilder
-
-```TypeScript
-navDestinationBuilder?: NavDestinationBuilder
-```
-
-The builder of navDestination.
-
-**Type:** [NavDestinationBuilder](arkts-arkui-navdestinationbuilder-t.md)
-
-**Since:** 12
-
-**Decorator:** @BuilderParam
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AtomicServiceNavigation-@BuilderParam  navDestinationBuilder?: NavDestinationBuilder--><!--Device-AtomicServiceNavigation-@BuilderParam  navDestinationBuilder?: NavDestinationBuilder-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -209,11 +189,9 @@ the content of Navigation.
 
 **Since:** 12
 
-**Decorator:** @BuilderParam
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AtomicServiceNavigation-@BuilderParam  navigationContent?: Callback<void>--><!--Device-AtomicServiceNavigation-@BuilderParam  navigationContent?: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -229,11 +207,9 @@ the information of route page.Providers methods for controlling destination page
 
 **Since:** 12
 
-**Decorator:** @State
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AtomicServiceNavigation-@State  navPathStack?: NavPathStack--><!--Device-AtomicServiceNavigation-@State  navPathStack?: NavPathStack-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -249,11 +225,9 @@ Set side bar content.
 
 **Since:** 18
 
-**Decorator:** @BuilderParam
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-AtomicServiceNavigation-@BuilderParam  sideBarContent?: Callback<void>--><!--Device-AtomicServiceNavigation-@BuilderParam  sideBarContent?: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -269,11 +243,9 @@ Set side bar options.
 
 **Since:** 18
 
-**Decorator:** @Prop
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-AtomicServiceNavigation-@Prop  sideBarOptions?: SideBarOptions--><!--Device-AtomicServiceNavigation-@Prop  sideBarOptions?: SideBarOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -289,9 +261,9 @@ Trigger callback when the visibility of navigation bar change.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-AtomicServiceNavigation-stateChangeCallback?: Callback<boolean>--><!--Device-AtomicServiceNavigation-stateChangeCallback?: Callback<boolean>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -307,11 +279,9 @@ Sets the Navigation title.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AtomicServiceNavigation-@Prop  title?: ResourceStr--><!--Device-AtomicServiceNavigation-@Prop  title?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -327,11 +297,8 @@ The color of Navigation's TitleBar.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AtomicServiceNavigation-@Prop  titleOptions?: TitleOptions--><!--Device-AtomicServiceNavigation-@Prop  titleOptions?: TitleOptions-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

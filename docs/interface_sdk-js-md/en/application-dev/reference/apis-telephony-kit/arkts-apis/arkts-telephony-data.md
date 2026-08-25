@@ -1,10 +1,10 @@
-# @ohos.telephony.data
+# @ohos.telephony.data(Cellular Data)
 
 The **data** module provides basic mobile data management functions. With the APIs provided by this module, you can obtain the default slot of the SIM card used for mobile data, obtain the cellular data flow type and connection status, and check whether cellular data and roaming are enabled.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-declare namespace data--><!--Device-unnamed-declare namespace data-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -18,55 +18,54 @@ import { data } from '@kit.TelephonyKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getActiveApnName](arkts-telephony-data-getactiveapnname-f.md) | Obtains the access point name (APN) of the default SIM card used for mobile data. This API returns the result asynchronously.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
-| [getCellularDataFlowType](arkts-telephony-data-getcellulardataflowtype-f.md) | Obtains the data flow type of the cellular network (corresponding to the uplink and downlink arrows next to the signal bar). This API uses an asynchronous callback to return the result.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
-| [getCellularDataFlowType](arkts-telephony-data-getcellulardataflowtype-f.md) | Obtains the data flow type of the cellular network (corresponding to the uplink and downlink arrows next to the signal bar). This API uses a promise to return the result.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
-| [getCellularDataState](arkts-telephony-data-getcellulardatastate-f.md) | Obtains the cellular data connection status. This API uses an asynchronous callback to return the result.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
-| [getCellularDataState](arkts-telephony-data-getcellulardatastate-f.md) | Obtains the cellular data connection status. This API uses a promise to return the result.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
-| [getDefaultCellularDataSimId](arkts-telephony-data-getdefaultcellulardatasimid-f.md) | Obtains the default ID of the SIM card used for mobile data. |
-| [getDefaultCellularDataSlotId](arkts-telephony-data-getdefaultcellulardataslotid-f.md) | Obtains the default slot of the SIM card used for mobile data. This API uses an asynchronous callback to return the result. |
-| [getDefaultCellularDataSlotId](arkts-telephony-data-getdefaultcellulardataslotid-f.md) | Obtains the default slot of the SIM card used for mobile data. This API uses a promise to return the result. |
-| [getDefaultCellularDataSlotIdSync](arkts-telephony-data-getdefaultcellulardataslotidsync-f.md) | Obtains the default SIM card used for mobile data synchronously. |
-| [isCellularDataEnabled](arkts-telephony-data-iscellulardataenabled-f.md) | Checks whether the cellular data service is enabled. This API uses an asynchronous callback to return the result.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
-| [isCellularDataEnabled](arkts-telephony-data-iscellulardataenabled-f.md) | Checks whether the cellular data service is enabled. This API uses a promise to return the result.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
-| [isCellularDataEnabledSync](arkts-telephony-data-iscellulardataenabledsync-f.md) | Checks whether the cellular data service is enabled. This API returns the result synchronously.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
-| [isCellularDataRoamingEnabled](arkts-telephony-data-iscellulardataroamingenabled-f.md) | Checks whether roaming is enabled for the cellular data service. This API uses an asynchronous callback to return the result.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
-| [isCellularDataRoamingEnabled](arkts-telephony-data-iscellulardataroamingenabled-f.md) | Checks whether roaming is enabled for the cellular data service. This API uses a promise to return the result.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
-| [isCellularDataRoamingEnabledSync](arkts-telephony-data-iscellulardataroamingenabledsync-f.md) | Checks whether roaming is enabled for the cellular data service. This API returns the result synchronously.  **Required permission**: ohos.permission.GET_NETWORK_INFO |
-| [queryAllApns](arkts-telephony-data-queryallapns-f.md) | Obtains the access point name (APN) of the default SIM card used for mobile data. This API returns the result asynchronously. |
-| [queryApnIds](arkts-telephony-data-queryapnids-f.md) | Obtains the APN ID corresponding to the specified **ApnInfo**. This API returns the result asynchronously. |
-| [setPreferredApn](arkts-telephony-data-setpreferredapn-f.md) | Sets the APN corresponding to the specified **apnId** as the preferred APN. This API returns the result asynchronously. |
-| [showSystemApnSettings](arkts-telephony-data-showsystemapnsettings-f.md) | Open the system APN selection menu, which is presented in a semi-modal form and can be used to select a specific APN. This API uses a promise to return the result. If there is no SIM card or the device does not support the APN menu, the menu cannot be displayed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getActiveApnName(Cellular Data)](arkts-telephony-data-getactiveapnname-f.md) |
+| [getCellularDataFlowType(Cellular Data)](arkts-telephony-data-getcellulardataflowtype-f.md) |
+| [getCellularDataFlowType(Cellular Data)](arkts-telephony-data-getcellulardataflowtype-f.md) |
+| [getCellularDataState(Cellular Data)](arkts-telephony-data-getcellulardatastate-f.md) |
+| [getCellularDataState(Cellular Data)](arkts-telephony-data-getcellulardatastate-f.md) |
+| [getDefaultCellularDataSimId(Cellular Data)](arkts-telephony-data-getdefaultcellulardatasimid-f.md) |
+| [getDefaultCellularDataSlotId(Cellular Data)](arkts-telephony-data-getdefaultcellulardataslotid-f.md) |
+| [getDefaultCellularDataSlotId(Cellular Data)](arkts-telephony-data-getdefaultcellulardataslotid-f.md) |
+| [getDefaultCellularDataSlotIdSync(Cellular Data)](arkts-telephony-data-getdefaultcellulardataslotidsync-f.md) |
+| [isCellularDataEnabled(Cellular Data)](arkts-telephony-data-iscellulardataenabled-f.md) |
+| [isCellularDataEnabled(Cellular Data)](arkts-telephony-data-iscellulardataenabled-f.md) |
+| [isCellularDataEnabledSync(Cellular Data)](arkts-telephony-data-iscellulardataenabledsync-f.md) |
+| [isCellularDataRoamingEnabled(Cellular Data)](arkts-telephony-data-iscellulardataroamingenabled-f.md) |
+| [isCellularDataRoamingEnabled(Cellular Data)](arkts-telephony-data-iscellulardataroamingenabled-f.md) |
+| [isCellularDataRoamingEnabledSync(Cellular Data)](arkts-telephony-data-iscellulardataroamingenabledsync-f.md) |
+| [queryAllApns(Cellular Data)](arkts-telephony-data-queryallapns-f.md) |
+| [queryApnIds(Cellular Data)](arkts-telephony-data-queryapnids-f.md) |
+| [setPreferredApn(Cellular Data)](arkts-telephony-data-setpreferredapn-f.md) |
+| [showSystemApnSettings(Cellular Data)](arkts-telephony-data-showsystemapnsettings-f.md) |
 
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [disableCellularData](arkts-telephony-data-disablecellulardata-f-sys.md) | Disables the cellular data service. This API uses an asynchronous callback to return the result. |
-| [disableCellularData](arkts-telephony-data-disablecellulardata-f-sys.md) | Disables the cellular data service. This API uses a promise to return the result. |
-| [disableCellularDataRoaming](arkts-telephony-data-disablecellulardataroaming-f-sys.md) | Disables the cellular data roaming service. This API uses an asynchronous callback to return the result. |
-| [disableCellularDataRoaming](arkts-telephony-data-disablecellulardataroaming-f-sys.md) | Disables the cellular data roaming service. This API uses a promise to return the result. |
-| [enableCellularData](arkts-telephony-data-enablecellulardata-f-sys.md) | Enables the cellular data service. This API uses an asynchronous callback to return the result. |
-| [enableCellularData](arkts-telephony-data-enablecellulardata-f-sys.md) | Enables the cellular data service. This API uses a promise to return the result. |
-| [enableCellularDataRoaming](arkts-telephony-data-enablecellulardataroaming-f-sys.md) | Enables the cellular data roaming service. This API uses an asynchronous callback to return the result. |
-| [enableCellularDataRoaming](arkts-telephony-data-enablecellulardataroaming-f-sys.md) | Enables the cellular data roaming service. This API uses a promise to return the result. |
-| [setDefaultCellularDataSlotId](arkts-telephony-data-setdefaultcellulardataslotid-f-sys.md) | Sets the default slot of the SIM card used for mobile data. This API uses an asynchronous callback to return the result. |
-| [setDefaultCellularDataSlotId](arkts-telephony-data-setdefaultcellulardataslotid-f-sys.md) | Sets the default slot of the SIM card used for mobile data. This API uses a promise to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [disableCellularData(Cellular Data)](arkts-telephony-data-disablecellulardata-f-sys.md) |
+| [disableCellularData(Cellular Data)](arkts-telephony-data-disablecellulardata-f-sys.md) |
+| [disableCellularDataRoaming(Cellular Data)](arkts-telephony-data-disablecellulardataroaming-f-sys.md) |
+| [disableCellularDataRoaming(Cellular Data)](arkts-telephony-data-disablecellulardataroaming-f-sys.md) |
+| [enableCellularData(Cellular Data)](arkts-telephony-data-enablecellulardata-f-sys.md) |
+| [enableCellularData(Cellular Data)](arkts-telephony-data-enablecellulardata-f-sys.md) |
+| [enableCellularDataRoaming(Cellular Data)](arkts-telephony-data-enablecellulardataroaming-f-sys.md) |
+| [enableCellularDataRoaming(Cellular Data)](arkts-telephony-data-enablecellulardataroaming-f-sys.md) |
+| [setDefaultCellularDataSlotId(Cellular Data)](arkts-telephony-data-setdefaultcellulardataslotid-f-sys.md) |
+| [setDefaultCellularDataSlotId(Cellular Data)](arkts-telephony-data-setdefaultcellulardataslotid-f-sys.md) |
 <!--DelEnd-->
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ApnInfo](arkts-telephony-data-apninfo-i.md) | Defines the APN information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ApnInfo(Cellular Data)](arkts-telephony-data-apninfo-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [DataConnectState](arkts-telephony-data-dataconnectstate-e.md) | Describes the connection status of a cellular data link. |
-| [DataFlowType](arkts-telephony-data-dataflowtype-e.md) | Defines the cellular data flow type. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DataConnectState(Cellular Data)](arkts-telephony-data-dataconnectstate-e.md) |
+| [DataFlowType(Cellular Data)](arkts-telephony-data-dataflowtype-e.md) |

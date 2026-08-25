@@ -2,9 +2,9 @@
 
 Defines the parameters for querying historical traffic of an application.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-statistics-export interface UidInfo--><!--Device-statistics-export interface UidInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -26,9 +26,9 @@ NIC information, including the NIC name and query time range.
 
 **Type:** [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md)
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-UidInfo-ifaceInfo: IfaceInfo--><!--Device-UidInfo-ifaceInfo: IfaceInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -42,13 +42,12 @@ uid: int
 
 Application UID.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-UidInfo-uid: int--><!--Device-UidInfo-uid: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
-

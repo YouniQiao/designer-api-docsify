@@ -4,7 +4,7 @@ Defines the options for initializing a **SubHeaderV2OperationItem** object.
 
 **Since:** 18
 
-<!--Device-unnamed-export interface SubHeaderV2OperationItemOptions--><!--Device-unnamed-export interface SubHeaderV2OperationItemOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -13,6 +13,24 @@ Defines the options for initializing a **SubHeaderV2OperationItem** object.
 ```TypeScript
 import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, SubHeaderV2OperationType, SubHeaderV2OperationItem, SubHeaderV2OperationItemType } from '@kit.ArkUI';
 ```
+
+## action
+
+```TypeScript
+action?: SubHeaderV2OperationItemAction
+```
+
+Event triggered when the item is operated. Default value: **() =&gt; void**.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityDescription
 
@@ -26,11 +44,11 @@ Accessibility description.Default value: **"Double-tap to activate"**
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SubHeaderV2OperationItemOptions-accessibilityDescription?: ResourceStr--><!--Device-SubHeaderV2OperationItemOptions-accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,11 +70,11 @@ Accessibility level of the icon on the right side of the subheader.The options a
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SubHeaderV2OperationItemOptions-accessibilityLevel?: string--><!--Device-SubHeaderV2OperationItemOptions-accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,31 +90,11 @@ Accessibility text of the icon on the right side of the subheader.Default value:
 
 **Since:** 18
 
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SubHeaderV2OperationItemOptions-accessibilityText?: ResourceStr--><!--Device-SubHeaderV2OperationItemOptions-accessibilityText?: ResourceStr-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## action
-
-```TypeScript
-action?: SubHeaderV2OperationItemAction
-```
-
-Event triggered when the item is operated. Default value: **() =&gt; void**.
-
-**Type:** [SubHeaderV2OperationItemAction](../../apis-default/arkts-apis/arkts-subheaderv2operationitemaction-t.md)
-
-**Since:** 18
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SubHeaderV2OperationItemOptions-action?: SubHeaderV2OperationItemAction--><!--Device-SubHeaderV2OperationItemOptions-action?: SubHeaderV2OperationItemAction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,15 +106,15 @@ content: SubHeaderV2OperationItemType
 
 Content of the item in the operation area.
 
-**Type:** [SubHeaderV2OperationItemType](../../apis-default/arkts-apis/arkts-subheaderv2operationitemtype-t.md)
+**Type:** [SubHeaderV2OperationItemType](arkts-arkui-subheaderv2operationitemtype-t.md)
 
 **Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SubHeaderV2OperationItemOptions-content: SubHeaderV2OperationItemType--><!--Device-SubHeaderV2OperationItemOptions-content: SubHeaderV2OperationItemType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -136,11 +134,11 @@ Whether to receive default focus.
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SubHeaderV2OperationItemOptions-defaultFocus?: boolean--><!--Device-SubHeaderV2OperationItemOptions-defaultFocus?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -156,11 +154,10 @@ Set the id for SubHeaderV2OperationItem.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
-<!--Device-SubHeaderV2OperationItemOptions-id?: string--><!--Device-SubHeaderV2OperationItemOptions-id?: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

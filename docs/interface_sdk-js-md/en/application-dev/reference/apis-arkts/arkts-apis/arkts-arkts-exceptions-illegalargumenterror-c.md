@@ -6,9 +6,7 @@ Represents an error thrown when a method is passed an illegal argument.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class IllegalArgumentError--><!--Device-unnamed-export class IllegalArgumentError-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,18 +25,15 @@ Constructs an IllegalArgumentError instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-IllegalArgumentError-constructor(message?: string, options?: ErrorOptions)--><!--Device-IllegalArgumentError-constructor(message?: string, options?: ErrorOptions)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | string | No | The error message. |
-| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No | Error options, usually containing the error stack information. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | string | No |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No |

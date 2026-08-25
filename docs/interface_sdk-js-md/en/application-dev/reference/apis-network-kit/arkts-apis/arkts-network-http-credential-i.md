@@ -2,9 +2,9 @@
 
 Represents the credential used for server identity verification in a session, including the user name and password.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-http-export interface Credential--><!--Device-http-export interface Credential-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -24,11 +24,11 @@ Password of credential. Default is ''.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-Credential-password: string--><!--Device-Credential-password: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -42,11 +42,10 @@ Username of credential. Default is ''.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-Credential-username: string--><!--Device-Credential-username: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Communication.NetStack
-

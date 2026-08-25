@@ -16,7 +16,7 @@ Defines an explicit animation. When an animation is required, call this API expl
 > **NOTE：**&gt;
 > - Since API version 10, you can use
 > [animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto) in
-> [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to specify the UI execution context.&gt;
+> [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) to specify the UI execution context.&gt;
 > - Avoid using **animateTo** in **aboutToAppear** or **aboutToDisappear**.&gt;
 > - When **animateTo** is called in
 > [aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear), the
@@ -37,6 +37,8 @@ Defines an explicit animation. When an animation is required, call this API expl
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 18
 
 **Substitutes:** animateTo
@@ -45,14 +47,11 @@ Defines an explicit animation. When an animation is required, call this API expl
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-unnamed-declare function animateTo(value: AnimateParam, event: () => void): void--><!--Device-unnamed-declare function animateTo(value: AnimateParam, event: () => void): void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [AnimateParam](arkts-arkui-animateparam-i.md) | Yes |  |
-| event | () =&gt; void | Yes |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [AnimateParam](arkts-arkui-animateparam-i.md) | Yes |
+| event | () = & gt; void | Yes |

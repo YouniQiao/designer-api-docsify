@@ -4,7 +4,7 @@ Data bits in serial port communication.
 
 **Since:** 26.0.0
 
-<!--Device-serial-enum DataBits--><!--Device-serial-enum DataBits-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.BusManager.Serial
 
@@ -18,9 +18,9 @@ Five data bits.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-DataBits-FIVE = 5--><!--Device-DataBits-FIVE = 5-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
 
@@ -34,9 +34,9 @@ Six data bits.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-DataBits-SIX = 6--><!--Device-DataBits-SIX = 6-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
 
@@ -50,9 +50,9 @@ SEVEN = 7
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-DataBits-SEVEN = 7--><!--Device-DataBits-SEVEN = 7-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
 
@@ -66,9 +66,8 @@ Eight data bits.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataBits-EIGHT = 8--><!--Device-DataBits-EIGHT = 8-End-->
-
 **System capability:** SystemCapability.BusManager.Serial
-

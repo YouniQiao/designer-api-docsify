@@ -16,25 +16,25 @@ Cancels a task in the task pool. If the task is in the internal queue of the tas
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-taskpool-function cancel(task: Task): void--><!--Device-taskpool-function cancel(task: Task): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| task | Task | Yes | Task to cancel. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200015](../errorcode-utils.md#10200015-failed-to-cancel-a-task-that-does-not-exist) | The task to cancel does not exist. |
-| [10200016](../errorcode-utils.md#10200016-failed-to-cancel-a-task-being-executed) | The task to cancel is being executed.<br>**Applicable version:** 9 - 17 |
-| [10200055](../errorcode-utils.md#10200055-asynchronous-queue-task-canceled) | The asyncRunner task has been canceled.<br>**Applicable version:** 18 and later |
+| Error Code ID |
+| --- |
+| [10200015](../errorcode-utils.md#10200015-failed-to-cancel-a-task-that-does-not-exist) |
+| [10200016](../errorcode-utils.md#10200016-failed-to-cancel-a-task-being-executed) |
+| [10200055](../errorcode-utils.md#10200055-asynchronous-queue-task-canceled) |
 
 **Examples**
 
@@ -127,23 +127,23 @@ Cancels a task group in the task pool. If a task group is canceled before all th
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-taskpool-function cancel(group: TaskGroup): void--><!--Device-taskpool-function cancel(group: TaskGroup): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | Yes | Task group to cancel. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200018](../errorcode-utils.md#10200018-failed-to-cancel-a-task-group-that-does-not-exist) | The task group to cancel does not exist. |
+| Error Code ID |
+| --- |
+| [10200018](../errorcode-utils.md#10200018-failed-to-cancel-a-task-group-that-does-not-exist) |
 
 **Examples**
 
@@ -160,26 +160,25 @@ Cancels a task in the task pool by task ID. If the task is in the internal queue
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-taskpool-function cancel(taskId: number): void--><!--Device-taskpool-function cancel(taskId: number): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| taskId | number | Yes | ID of the task to cancel. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| taskId | number | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200015](../errorcode-utils.md#10200015-failed-to-cancel-a-task-that-does-not-exist) | The task to cancel does not exist. |
-| [10200055](../errorcode-utils.md#10200055-asynchronous-queue-task-canceled) | The asyncRunner task has been canceled. |
+| Error Code ID |
+| --- |
+| [10200015](../errorcode-utils.md#10200015-failed-to-cancel-a-task-that-does-not-exist) |
+| [10200055](../errorcode-utils.md#10200055-asynchronous-queue-task-canceled) |
 
 **Examples**
 
 See [cancel](#cancel)
-

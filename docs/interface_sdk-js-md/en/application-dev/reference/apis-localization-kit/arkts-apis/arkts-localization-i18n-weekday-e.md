@@ -2,9 +2,9 @@
 
 Enumerates the first day of a week. The value ranges from Monday to Sunday.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-i18n-export enum WeekDay--><!--Device-i18n-export enum WeekDay-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -16,11 +16,11 @@ MON = 1
 
 Monday.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-WeekDay-MON = 1--><!--Device-WeekDay-MON = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -32,11 +32,11 @@ TUE = 2
 
 Tuesday.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-WeekDay-TUE = 2--><!--Device-WeekDay-TUE = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -48,11 +48,11 @@ WED = 3
 
 Wednesday.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-WeekDay-WED = 3--><!--Device-WeekDay-WED = 3-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -64,11 +64,11 @@ THU = 4
 
 Thursday.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-WeekDay-THU = 4--><!--Device-WeekDay-THU = 4-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -80,11 +80,11 @@ FRI = 5
 
 Friday.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-WeekDay-FRI = 5--><!--Device-WeekDay-FRI = 5-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -96,11 +96,11 @@ SAT = 6
 
 Saturday.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-WeekDay-SAT = 6--><!--Device-WeekDay-SAT = 6-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -112,11 +112,10 @@ SUN = 7
 
 Sunday.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-WeekDay-SUN = 7--><!--Device-WeekDay-SUN = 7-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Global.I18n
-

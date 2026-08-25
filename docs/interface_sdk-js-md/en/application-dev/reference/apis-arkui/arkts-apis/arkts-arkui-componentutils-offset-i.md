@@ -2,11 +2,9 @@
 
 Defines the offset property.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-componentUtils-export interface Offset--><!--Device-componentUtils-export interface Offset-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,40 +17,39 @@ import { componentUtils } from '@kit.ArkUI';
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
-Coordinate x of the Position.
+X-coordinate.Unit: px
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Offset-x: double--><!--Device-Offset-x: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
-Coordinate y of the Position.
+Y-coordinate.Unit: px
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Offset-y: double--><!--Device-Offset-y: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 Describes the camera device information.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-camera-interface CameraDevice--><!--Device-camera-interface CameraDevice-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -26,11 +26,11 @@ Automotive camera position attribute.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CameraDevice-readonly automotiveCameraPosition?: AutomotiveCameraPosition--><!--Device-CameraDevice-readonly automotiveCameraPosition?: AutomotiveCameraPosition-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -44,11 +44,11 @@ Camera ID.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-CameraDevice-readonly cameraId: string--><!--Device-CameraDevice-readonly cameraId: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -60,13 +60,13 @@ readonly cameraOrientation: int
 
 Camera installation angle, which does not change as the screen rotates. The value range is [0, 360], in degrees.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-CameraDevice-readonly cameraOrientation: int--><!--Device-CameraDevice-readonly cameraOrientation: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -80,11 +80,11 @@ Camera position.
 
 **Type:** [CameraPosition](arkts-camera-camera-cameraposition-e.md)
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-CameraDevice-readonly cameraPosition: CameraPosition--><!--Device-CameraDevice-readonly cameraPosition: CameraPosition-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -98,11 +98,11 @@ Camera type.
 
 **Type:** [CameraType](arkts-camera-camera-cameratype-e.md)
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-CameraDevice-readonly cameraType: CameraType--><!--Device-CameraDevice-readonly cameraType: CameraType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -116,11 +116,11 @@ Camera connection type.
 
 **Type:** [ConnectionType](arkts-camera-camera-connectiontype-e.md)
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-CameraDevice-readonly connectionType: ConnectionType--><!--Device-CameraDevice-readonly connectionType: ConnectionType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -136,11 +136,47 @@ List of physical cameras that form the logical camera.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
-<!--Device-CameraDevice-readonly constituentCameraDevices?: Array<CameraDevice>--><!--Device-CameraDevice-readonly constituentCameraDevices?: Array<CameraDevice>-End-->
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## hostDeviceName
+
+```TypeScript
+readonly hostDeviceName: string
+```
+
+Remote device name. If no remote device is available, an empty value is returned.
+
+**Type:** string
+
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## hostDeviceType
+
+```TypeScript
+readonly hostDeviceType: HostDeviceType
+```
+
+Remote device type.
+
+**Type:** [HostDeviceType](arkts-camera-camera-hostdevicetype-e.md)
+
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -156,11 +192,11 @@ Whether a camera is a logical camera (consisting of multiple physical cameras). 
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-CameraDevice-readonly isLogicalCamera?: boolean--><!--Device-CameraDevice-readonly isLogicalCamera?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -172,15 +208,33 @@ readonly lensDistortion?: Array<double>
 
 Array of lens distortion parameters.
 
-**Type:** Array&lt;double&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
 **Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
-<!--Device-CameraDevice-readonly lensDistortion?: Array<double>--><!--Device-CameraDevice-readonly lensDistortion?: Array<double>-End-->
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## lensEquivalentFocalLength
+
+```TypeScript
+readonly lensEquivalentFocalLength?: Array<int>
+```
+
+Equivalent focal length of the camera lens.
+
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -192,15 +246,15 @@ readonly lensFocalLength?: double
 
 Actual focal length of the lens.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-CameraDevice-readonly lensFocalLength?: double--><!--Device-CameraDevice-readonly lensFocalLength?: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -212,15 +266,15 @@ readonly lensIntrinsicCalibration?: Array<double>
 
 Array of lens intrinsic calibration parameters.
 
-**Type:** Array&lt;double&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
 **Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-CameraDevice-readonly lensIntrinsicCalibration?: Array<double>--><!--Device-CameraDevice-readonly lensIntrinsicCalibration?: Array<double>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -232,15 +286,15 @@ readonly minimumFocusDistance?: double
 
 Minimum focus distance of the camera.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-CameraDevice-readonly minimumFocusDistance?: double--><!--Device-CameraDevice-readonly minimumFocusDistance?: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -256,11 +310,11 @@ Arrangement mode of the sensor color filter.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-CameraDevice-readonly sensorColorFilterArrangement?: SensorColorFilterArrangement--><!--Device-CameraDevice-readonly sensorColorFilterArrangement?: SensorColorFilterArrangement-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -272,15 +326,15 @@ readonly sensorPhysicalSize?: Array<double>
 
 Physical dimensions (width and height) of the sensor.
 
-**Type:** Array&lt;double&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
 **Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-CameraDevice-readonly sensorPhysicalSize?: Array<double>--><!--Device-CameraDevice-readonly sensorPhysicalSize?: Array<double>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -292,15 +346,14 @@ readonly sensorPixelArraySize?: Array<int>
 
 Pixel array dimensions (width and height, in pixels) of the sensor.
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
-<!--Device-CameraDevice-readonly sensorPixelArraySize?: Array<int>--><!--Device-CameraDevice-readonly sensorPixelArraySize?: Array<int>-End-->
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
-

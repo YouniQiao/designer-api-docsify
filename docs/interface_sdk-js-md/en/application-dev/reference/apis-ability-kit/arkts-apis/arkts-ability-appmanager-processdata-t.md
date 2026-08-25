@@ -1,16 +1,15 @@
 # ProcessData
 
 ```TypeScript
-export type ProcessData = _ProcessData
+export type ProcessData = _ProcessData.default
 ```
 
 Defines the process data.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-appManager-export type ProcessData = _ProcessData--><!--Device-appManager-export type ProcessData = _ProcessData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _ProcessData
-
+**Property type:** _ProcessData.default

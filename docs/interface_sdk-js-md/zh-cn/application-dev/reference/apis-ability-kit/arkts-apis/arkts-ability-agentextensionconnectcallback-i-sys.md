@@ -4,7 +4,7 @@
 
 **起始版本：** 24
 
-<!--Device-unnamed-export interface AgentExtensionConnectCallback--><!--Device-unnamed-export interface AgentExtensionConnectCallback-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -20,9 +20,9 @@ onAuth(handshakeData: string): void
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-AgentExtensionConnectCallback-onAuth(handshakeData: string): void--><!--Device-AgentExtensionConnectCallback-onAuth(handshakeData: string): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -30,9 +30,9 @@ onAuth(handshakeData: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| handshakeData | string | 是 | 接收到的来自AgentExtensionAbility服务端的安全认证数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| handshakeData | string | 是 |
 
 ## onData
 
@@ -44,9 +44,9 @@ onData(data: string): void
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-AgentExtensionConnectCallback-onData(data: string): void--><!--Device-AgentExtensionConnectCallback-onData(data: string): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -54,9 +54,9 @@ onData(data: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | string | 是 | 接收到的来自AgentExtensionAbility服务端的数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | string | 是 |
 
 ## onDisconnect
 
@@ -68,11 +68,10 @@ onDisconnect(): void
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-AgentExtensionConnectCallback-onDisconnect(): void--><!--Device-AgentExtensionConnectCallback-onDisconnect(): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
-

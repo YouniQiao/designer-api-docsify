@@ -2,9 +2,9 @@
 
 Obtains NR cell information.
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-radio-export interface NrCellInformation--><!--Device-radio-export interface NrCellInformation-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -26,9 +26,9 @@ Indicates the mobile country code.
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-NrCellInformation-mcc: string--><!--Device-NrCellInformation-mcc: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -44,9 +44,9 @@ Indicates the mobile network code.
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-NrCellInformation-mnc: string--><!--Device-NrCellInformation-mnc: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -60,11 +60,11 @@ nci: int
 
 Indicates the 5G network cell ID.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-NrCellInformation-nci: int--><!--Device-NrCellInformation-nci: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -78,11 +78,11 @@ nrArfcn: int
 
 Indicates the NR-ARFCN(NR Absolute Radio Frequency Channel Number).
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-NrCellInformation-nrArfcn: int--><!--Device-NrCellInformation-nrArfcn: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -96,11 +96,11 @@ pci: int
 
 Indicates the physical cell identification.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-NrCellInformation-pci: int--><!--Device-NrCellInformation-pci: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -114,13 +114,12 @@ tac: int
 
 Indicates the tracking area code.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-NrCellInformation-tac: int--><!--Device-NrCellInformation-tac: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
-

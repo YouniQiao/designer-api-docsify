@@ -2,9 +2,9 @@
 
 Enumerates sensibility type. @enum {number}
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-intelligentVoice-enum SensibilityType--><!--Device-intelligentVoice-enum SensibilityType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -18,9 +18,9 @@ LOW_SENSIBILITY = 1
 
 Low sensibility.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SensibilityType-LOW_SENSIBILITY = 1--><!--Device-SensibilityType-LOW_SENSIBILITY = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -34,9 +34,9 @@ MIDDLE_SENSIBILITY = 2
 
 Middle sensibility.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SensibilityType-MIDDLE_SENSIBILITY = 2--><!--Device-SensibilityType-MIDDLE_SENSIBILITY = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -50,11 +50,10 @@ HIGH_SENSIBILITY = 3
 
 High sensibility.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SensibilityType-HIGH_SENSIBILITY = 3--><!--Device-SensibilityType-HIGH_SENSIBILITY = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
-

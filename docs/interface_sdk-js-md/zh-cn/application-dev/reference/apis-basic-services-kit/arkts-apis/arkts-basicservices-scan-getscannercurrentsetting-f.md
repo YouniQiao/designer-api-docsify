@@ -14,32 +14,32 @@ function getScannerCurrentSetting(scannerId: string, optionIndex: int): Promise<
 
 获取当前扫描仪设置。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PRINT
-
-<!--Device-scan-function getScannerCurrentSetting(scannerId: string, optionIndex: int): Promise<ScannerOptionValue>--><!--Device-scan-function getScannerCurrentSetting(scannerId: string, optionIndex: int): Promise<ScannerOptionValue>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| scannerId | string | 是 | 扫描仪的ID。 |
-| optionIndex | int | 是 | 要获取的选项的索引。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| scannerId | string | 是 |
+| [optionIndex](arkts-basicservices-scan-scannerparameter-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[ScannerOptionValue](arkts-basicservices-scan-scanneroptionvalue-i.md)&gt; | Promise对象，返回扫描仪选项值。 |
+| 类型 |
+| --- |
+| Promise&lt;[ScannerOptionValue](arkts-basicservices-scan-scanneroptionvalue-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -55,4 +55,3 @@ scan.getScannerCurrentSetting(scannerId, optionIndex).then((value: scan.ScannerO
     console.error('get scanner current setting failed: ' + JSON.stringify(error));
 })
 ```
-

@@ -2,9 +2,9 @@
 
 The Buffer object is a method of handling buffers dedicated to binary data.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-buffer-class Buffer--><!--Device-buffer-class Buffer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -30,33 +30,33 @@ Compares this **Buffer** object with another object.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Buffer-compare(      target: Buffer | Uint8Array,      targetStart?: number,      targetEnd?: number,      sourceStart?: number,      sourceEnd?: number    ): -1 | 0 | 1--><!--Device-Buffer-compare(      target: Buffer | Uint8Array,      targetStart?: number,      targetEnd?: number,      sourceStart?: number,      sourceEnd?: number    ): -1 | 0 | 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | Buffer \| Uint8Array | Yes | Target **Buffer** object to compare. |
-| targetStart | number | No | Offset to the start of the data to compare in the target **Buffer** object. The default value is **0**. |
-| targetEnd | number | No | Offset to the end of the data to compare in the target **Buffer** object (not inclusive). The default value is the length of the target **Buffer** object. |
-| sourceStart | number | No | Offset to the start of the data to compare in this **Buffer** object. The default value is **0**. |
-| sourceEnd | number | No | Offset to the end of the data to compare in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | Buffer \| Uint8Array | Yes |
+| targetStart | number | No |
+| targetEnd | number | No |
+| sourceStart | number | No |
+| sourceEnd | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| -1 \| 0 \| 1 | Comparison result. The value **0** is returned if the two **Buffer** objects are the same; **1** is returned if this object comes after the target object when sorted; **-1** is returned if this object comes before the target object when sorted. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| -1 \| 0 \| 1 |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be &gt;= 0 and &lt;= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -101,33 +101,33 @@ Compares buf with target and returns a number indicating whether buf comes befor
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-Buffer-compare(      target: Buffer | Uint8Array,      targetStart?: int,      targetEnd?: int,      sourceStart?: int,      sourceEnd?: int    ): int--><!--Device-Buffer-compare(      target: Buffer | Uint8Array,      targetStart?: int,      targetEnd?: int,      sourceStart?: int,      sourceEnd?: int    ): int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | Buffer \| Uint8Array | Yes | The buffer to compare with this buffer |
-| targetStart | int | No | targetStart [targetStart = 0] The offset within target at which to begin comparison |
-| targetEnd | int | No | targetEnd [targetEnd = target.length] The offset within target at which to end comparison (not inclusive) |
-| sourceStart | int | No | sourceStart [sourceStart = 0] The offset within buf at which to begin comparison |
-| sourceEnd | int | No | sourceEnd [sourceEnd = buf.length] The offset within buf at which to end comparison (not inclusive) |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | Buffer \| Uint8Array | Yes |
+| targetStart | int | No |
+| targetEnd | int | No |
+| sourceStart | int | No |
+| sourceEnd | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | number is returned if target is the same as buf |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be &gt;= 0 and &lt;= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -135,40 +135,46 @@ See [compare](#compare)
 
 ## copy
 
+ArkTS-Dyn:
+```TypeScript
+copy(target: Buffer | Uint8Array, targetStart?: number, sourceStart?: number, sourceEnd?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEnd?: int): int
 ```
 
 Copies data at the specified position in this **Buffer** object to the specified position in another **Buffer** object.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEnd?: int): int--><!--Device-Buffer-copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEnd?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | Buffer \| Uint8Array | Yes | Buffer** or **Uint8Array** object to which data is copied. |
-| targetStart | int | No | Offset to the start position in the target object where data is copied. The default value is **0**. |
-| sourceStart | int | No | Offset to the start position in this **Buffer** object where data is copied. The default value is **0**. |
-| sourceEnd | int | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | Buffer \| Uint8Array | Yes |
+| targetStart | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| sourceStart | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| sourceEnd | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Total length of the data copied, in bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/sourceStart/sourceEnd]" is out of range. It must be &gt;= 0. Received value is: [targetStart/sourceStart/sourceEnd] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -189,26 +195,32 @@ console.info(buf2.toString('ascii', 0, 25));
 
 ## entries
 
+ArkTS-Dyn:
+```TypeScript
+entries(): IterableIterator<[number, number]>
+```
+
+ArkTS-Sta:
 ```TypeScript
 entries(): IterableIterator<[int, long]>
 ```
 
 Creates and returns an iterator that contains key-value pairs of this **Buffer** object.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-entries(): IterableIterator<[int, long]>--><!--Device-Buffer-entries(): IterableIterator<[int, long]>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;[number, number]&gt; | Iterator that contains the key and value, both of which are of the number type.<br>**Applicable version:** 9 - 10 |
-| IterableIterator&lt;[int, long]&gt; | <br>**Applicable version:** 11 and later |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;[number, number] & gt; |
+| ArkTS-Dyn: IterableIterator & lt;[number, number] & gt;<br>ArkTS-Sta：IterableIterator & lt;[int, long] & gt; |
 
 **Examples**
 
@@ -240,25 +252,25 @@ equals(otherBuffer: Uint8Array | Buffer): boolean
 
 Checks whether this **Buffer** object is the same as another **Buffer** object.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-equals(otherBuffer: Uint8Array | Buffer): boolean--><!--Device-Buffer-equals(otherBuffer: Uint8Array | Buffer): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| otherBuffer | Uint8Array \| Buffer | Yes | Buffer** object to compare. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| otherBuffer | Uint8Array \| Buffer | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** is returned if the two objects are the same; otherwise, **false** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -277,6 +289,17 @@ console.info(buf1.equals(buf3).toString());
 
 ## fill
 
+ArkTS-Dyn:
+```TypeScript
+fill(
+      value: string | Buffer | Uint8Array | number | number | number,
+      offset?: number,
+      end?: number,
+      encoding?: BufferEncoding
+    ): Buffer
+```
+
+ArkTS-Sta:
 ```TypeScript
 fill(
       value: string | Buffer | Uint8Array | int | double | long,
@@ -288,34 +311,34 @@ fill(
 
 Fills this **Buffer** object at the specified position. By default, data is filled cyclically.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-fill(      value: string | Buffer | Uint8Array | int | double | long,      offset?: int,      end?: int,      encoding?: BufferEncoding    ): Buffer--><!--Device-Buffer-fill(      value: string | Buffer | Uint8Array | int | double | long,      offset?: int,      end?: int,      encoding?: BufferEncoding    ): Buffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string \| Buffer \| Uint8Array \| int \| double \| long | Yes | Value to fill.<br>**Since:** 11 |
-| offset | int | No | Offset to the start position in this **Buffer** object where data is filled. The default value is **0**. |
-| end | int | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
-| encoding | BufferEncoding | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: string \| Buffer \| Uint8Array \| number \| number \| number<br>ArkTS-Sta：string \ | Buffer \| Uint8Array \| int \| double \| long | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| end | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| encoding | BufferEncoding | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Buffer | Buffer** object filled with the specified value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Buffer |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[offset/end]" is out of range. It must be &gt;= 0 and &lt;= [right range]. Received value is: [offset/end] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -329,33 +352,39 @@ console.info(b.toString());
 
 ## includes
 
+ArkTS-Dyn:
+```TypeScript
+includes(value: string | number | number | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): boolean
+```
+
+ArkTS-Sta:
 ```TypeScript
 includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): boolean
 ```
 
 Checks whether this **Buffer** object contains the specified value.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): boolean--><!--Device-Buffer-includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string \| int \| double \| long \| Buffer \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
-| byteOffset | int | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is **0**. |
-| encoding | BufferEncoding | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array<br>ArkTS-Sta：string \ | int \| double \| long \| Buffer \| Uint8Array | Yes |
+| [byteOffset](#byteoffset) | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| encoding | BufferEncoding | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** is returned if the object contains the specified value; otherwise, **false** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -371,33 +400,39 @@ console.info(buf.includes('be').toString());
 
 ## indexOf
 
+ArkTS-Dyn:
+```TypeScript
+indexOf(value: string | number | number | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 indexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int
 ```
 
 Obtains the index of the first occurrence of the specified value in this **Buffer** object. If no match is found, **-1** is returned.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-indexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int--><!--Device-Buffer-indexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string \| int \| double \| long \| Buffer \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
-| byteOffset | int | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is **0**. |
-| encoding | BufferEncoding | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array<br>ArkTS-Sta：string \ | int \| double \| long \| Buffer \| Uint8Array | Yes |
+| [byteOffset](#byteoffset) | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| encoding | BufferEncoding | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Index obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -413,25 +448,31 @@ console.info(buf.indexOf('is').toString());
 
 ## keys
 
+ArkTS-Dyn:
+```TypeScript
+keys(): IterableIterator<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 keys(): IterableIterator<int>
 ```
 
 Creates and returns an iterator that contains the keys of this **Buffer** object.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-keys(): IterableIterator<int>--><!--Device-Buffer-keys(): IterableIterator<int>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;int&gt; | Iterator created. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: IterableIterator & lt;number & gt;<br>ArkTS-Sta：IterableIterator & lt;int & gt; |
 
 **Examples**
 
@@ -455,33 +496,39 @@ Output: 0
 
 ## lastIndexOf
 
+ArkTS-Dyn:
+```TypeScript
+lastIndexOf(value: string | number | number | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 lastIndexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int
 ```
 
 Obtains the index of the last occurrence of the specified value in this **Buffer** object. If no match is found, **-1** is returned.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-lastIndexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int--><!--Device-Buffer-lastIndexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string \| int \| double \| long \| Buffer \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
-| byteOffset | int | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is the length of this **Buffer** object. |
-| encoding | BufferEncoding | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array<br>ArkTS-Sta：string \ | int \| double \| long \| Buffer \| Uint8Array | Yes |
+| [byteOffset](#byteoffset) | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| encoding | BufferEncoding | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Index obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -497,37 +544,43 @@ console.info(buf.lastIndexOf('buffer').toString());
 
 ## readBigInt64BE
 
+ArkTS-Dyn:
+```TypeScript
+readBigInt64BE(offset?: number): bigint
+```
+
+ArkTS-Sta:
 ```TypeScript
 readBigInt64BE(offset?: int): bigint
 ```
 
 Reads a 64-bit, big-endian, signed big integer from this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readBigInt64BE(offset?: int): bigint--><!--Device-Buffer-readBigInt64BE(offset?: int): bigint-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint | Data read. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| bigint |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -547,37 +600,43 @@ console.info("result = " + result);
 
 ## readBigInt64LE
 
+ArkTS-Dyn:
+```TypeScript
+readBigInt64LE(offset?: number): bigint
+```
+
+ArkTS-Sta:
 ```TypeScript
 readBigInt64LE(offset?: int): bigint
 ```
 
 Reads a 64-bit, little-endian, signed big integer from this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readBigInt64LE(offset?: int): bigint--><!--Device-Buffer-readBigInt64LE(offset?: int): bigint-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint | Data read. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| bigint |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -597,37 +656,43 @@ console.info("result = " + result);
 
 ## readBigUInt64BE
 
+ArkTS-Dyn:
+```TypeScript
+readBigUInt64BE(offset?: number): bigint
+```
+
+ArkTS-Sta:
 ```TypeScript
 readBigUInt64BE(offset?: int): bigint
 ```
 
 Reads a 64-bit, big-endian, unsigned big integer from this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readBigUInt64BE(offset?: int): bigint--><!--Device-Buffer-readBigUInt64BE(offset?: int): bigint-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint | Data read. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| bigint |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -646,37 +711,43 @@ console.info("result = " + result);
 
 ## readBigUInt64LE
 
+ArkTS-Dyn:
+```TypeScript
+readBigUInt64LE(offset?: number): bigint
+```
+
+ArkTS-Sta:
 ```TypeScript
 readBigUInt64LE(offset?: int): bigint
 ```
 
 Reads a 64-bit, little-endian, unsigned big integer from this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readBigUInt64LE(offset?: int): bigint--><!--Device-Buffer-readBigUInt64LE(offset?: int): bigint-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint | Data read. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| bigint |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -696,37 +767,43 @@ console.info("result = " + result);
 
 ## readDoubleBE
 
+ArkTS-Dyn:
+```TypeScript
+readDoubleBE(offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readDoubleBE(offset?: int): double
 ```
 
 Reads a 64-bit, big-endian, double-precision floating-point number from this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readDoubleBE(offset?: int): double--><!--Device-Buffer-readDoubleBE(offset?: int): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | Data read. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -744,37 +821,43 @@ console.info("result = " + result);
 
 ## readDoubleLE
 
+ArkTS-Dyn:
+```TypeScript
+readDoubleLE(offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readDoubleLE(offset?: int): double
 ```
 
 Reads a 64-bit, little-endian, double-precision floating-point number from this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readDoubleLE(offset?: int): double--><!--Device-Buffer-readDoubleLE(offset?: int): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | Data read. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -792,37 +875,43 @@ console.info("result = " + result);
 
 ## readFloatBE
 
+ArkTS-Dyn:
+```TypeScript
+readFloatBE(offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readFloatBE(offset?: int): double
 ```
 
 Reads a 32-bit, big-endian, single-precision floating-point number from this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readFloatBE(offset?: int): double--><!--Device-Buffer-readFloatBE(offset?: int): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | Data read. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -840,37 +929,43 @@ console.info("result = " + result);
 
 ## readFloatLE
 
+ArkTS-Dyn:
+```TypeScript
+readFloatLE(offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readFloatLE(offset?: int): double
 ```
 
 Reads a 32-bit, little-endian, single-precision floating-point number from this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readFloatLE(offset?: int): double--><!--Device-Buffer-readFloatLE(offset?: int): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | Data read. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -888,37 +983,43 @@ console.info("result = " + result);
 
 ## readInt16BE
 
+ArkTS-Dyn:
+```TypeScript
+readInt16BE(offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readInt16BE(offset?: int): long
 ```
 
 Reads a 16-bit, big-endian, signed integer from this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readInt16BE(offset?: int): long--><!--Device-Buffer-readInt16BE(offset?: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Data read. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 2. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -936,37 +1037,43 @@ console.info("result = " + result);
 
 ## readInt16LE
 
+ArkTS-Dyn:
+```TypeScript
+readInt16LE(offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readInt16LE(offset?: int): long
 ```
 
 Reads a 16-bit, little-endian, signed integer from this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readInt16LE(offset?: int): long--><!--Device-Buffer-readInt16LE(offset?: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Data read. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 2. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -984,37 +1091,43 @@ console.info("result = " + result);
 
 ## readInt32BE
 
+ArkTS-Dyn:
+```TypeScript
+readInt32BE(offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readInt32BE(offset?: int): long
 ```
 
 Reads a 32-bit, big-endian, signed integer from this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readInt32BE(offset?: int): long--><!--Device-Buffer-readInt32BE(offset?: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Data read. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1032,37 +1145,43 @@ console.info("result = " + result);
 
 ## readInt32LE
 
+ArkTS-Dyn:
+```TypeScript
+readInt32LE(offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readInt32LE(offset?: int): long
 ```
 
 Reads a 32-bit, little-endian, signed integer from this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readInt32LE(offset?: int): long--><!--Device-Buffer-readInt32LE(offset?: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Data read. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1080,37 +1199,43 @@ console.info("result = " + result);
 
 ## readInt8
 
+ArkTS-Dyn:
+```TypeScript
+readInt8(offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readInt8(offset?: int): long
 ```
 
 Reads an 8-bit signed integer from this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readInt8(offset?: int): long--><!--Device-Buffer-readInt8(offset?: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 1 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Data read. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 1. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1130,38 +1255,44 @@ console.info("result = " + result);
 
 ## readIntBE
 
+ArkTS-Dyn:
+```TypeScript
+readIntBE(offset: number, byteLength: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readIntBE(offset: int, byteLength: int): long
 ```
 
 Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as a big-endian, two's complement signed value that supports up to 48 bits of precision.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readIntBE(offset: int, byteLength: int): long--><!--Device-Buffer-readIntBE(offset: int, byteLength: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | Yes | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - byteLength |
-| byteLength | int | Yes | Number of bytes to read. Value range: 1 &lt;= byteLength &lt;= 6 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| byteLength | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Data read. If the offset is a decimal, undefined is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1180,38 +1311,44 @@ console.info("result = " + result);
 
 ## readIntLE
 
+ArkTS-Dyn:
+```TypeScript
+readIntLE(offset: number, byteLength: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readIntLE(offset: int, byteLength: int): long
 ```
 
 Reads the specified number of bytes from this **Buffer** object at the specified offset and interprets the result as a little-endian, two's complement signed value that supports up to 48 bits of precision.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readIntLE(offset: int, byteLength: int): long--><!--Device-Buffer-readIntLE(offset: int, byteLength: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | Yes | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - byteLength |
-| byteLength | int | Yes | Number of bytes to read. Value range: 1 &lt;= byteLength &lt;= 6 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| byteLength | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Data read. If the offset is a decimal, undefined is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1229,37 +1366,43 @@ console.info("result = " + result);
 
 ## readUInt16BE
 
+ArkTS-Dyn:
+```TypeScript
+readUInt16BE(offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readUInt16BE(offset?: int): long
 ```
 
 Reads a 16-bit, big-endian, unsigned integer from this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readUInt16BE(offset?: int): long--><!--Device-Buffer-readUInt16BE(offset?: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Data read. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 2. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1279,37 +1422,43 @@ console.info("result = " + result);
 
 ## readUInt16LE
 
+ArkTS-Dyn:
+```TypeScript
+readUInt16LE(offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readUInt16LE(offset?: int): long
 ```
 
 Reads a 16-bit, little-endian, unsigned integer from this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readUInt16LE(offset?: int): long--><!--Device-Buffer-readUInt16LE(offset?: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Data read. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 2. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1329,37 +1478,43 @@ console.info("result = " + result);
 
 ## readUInt32BE
 
+ArkTS-Dyn:
+```TypeScript
+readUInt32BE(offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readUInt32BE(offset?: int): long
 ```
 
 Reads a 32-bit, big-endian, unsigned integer from this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readUInt32BE(offset?: int): long--><!--Device-Buffer-readUInt32BE(offset?: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Data read. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1377,37 +1532,43 @@ console.info("result = " + result);
 
 ## readUInt32LE
 
+ArkTS-Dyn:
+```TypeScript
+readUInt32LE(offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readUInt32LE(offset?: int): long
 ```
 
 Reads a 32-bit, little-endian, unsigned integer from this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readUInt32LE(offset?: int): long--><!--Device-Buffer-readUInt32LE(offset?: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Data read. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1425,37 +1586,43 @@ console.info("result = " + result);
 
 ## readUInt8
 
+ArkTS-Dyn:
+```TypeScript
+readUInt8(offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readUInt8(offset?: int): long
 ```
 
 Reads an 8-bit unsigned integer from this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readUInt8(offset?: int): long--><!--Device-Buffer-readUInt8(offset?: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 1 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Data read. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 1. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1475,38 +1642,44 @@ console.info("result = " + result);
 
 ## readUIntBE
 
+ArkTS-Dyn:
+```TypeScript
+readUIntBE(offset: number, byteLength: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readUIntBE(offset: int, byteLength: int): long
 ```
 
 Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as an unsigned, big-endian integer that supports up to 48 bits of precision.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readUIntBE(offset: int, byteLength: int): long--><!--Device-Buffer-readUIntBE(offset: int, byteLength: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | Yes | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - byteLength |
-| byteLength | int | Yes | Number of bytes to read. Value range: 1 &lt;= byteLength &lt;= 6 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| byteLength | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Data read. If the offset is a decimal, undefined is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1524,38 +1697,44 @@ console.info("result = " + result);
 
 ## readUIntLE
 
+ArkTS-Dyn:
+```TypeScript
+readUIntLE(offset: number, byteLength: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 readUIntLE(offset: int, byteLength: int): long
 ```
 
 Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as an unsigned, little-endian integer that supports up to 48 bits of precision.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-readUIntLE(offset: int, byteLength: int): long--><!--Device-Buffer-readUIntLE(offset: int, byteLength: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | Yes | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - byteLength |
-| byteLength | int | Yes | Number of bytes to read. Value range: 1 &lt;= byteLength &lt;= 6 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| byteLength | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Data read. If the offset is a decimal, undefined is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -1573,32 +1752,38 @@ console.info("result = " + result);
 
 ## subarray
 
+ArkTS-Dyn:
+```TypeScript
+subarray(start?: number, end?: number): Buffer
+```
+
+ArkTS-Sta:
 ```TypeScript
 subarray(start?: int, end?: int): Buffer
 ```
 
 Truncates this **Buffer** object from the specified position to create a new **Buffer** object.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-subarray(start?: int, end?: int): Buffer--><!--Device-Buffer-subarray(start?: int, end?: int): Buffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | int | No | Offset to the start position in this **Buffer** object where data is truncated. The default value is **0**. |
-| end | int | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| end | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Buffer | Buffer** object created. When the value of **start** or **end** is less than **0**, an empty buffer is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Buffer |
 
 **Examples**
 
@@ -1623,25 +1808,25 @@ swap16(): Buffer
 
 Converts this **Buffer** object into an array of unsigned 16-bit integers and swaps the byte order in place.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-swap16(): Buffer--><!--Device-Buffer-swap16(): Buffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Buffer | Buffer** object swapped. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Buffer |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 16-bits |
+| Error Code ID |
+| --- |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) |
 
 **Examples**
 
@@ -1664,25 +1849,25 @@ swap32(): Buffer
 
 Converts this **Buffer** object into an array of unsigned 32-bit integers and swaps the byte order in place.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-swap32(): Buffer--><!--Device-Buffer-swap32(): Buffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Buffer | Buffer** object swapped. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Buffer |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 32-bits |
+| Error Code ID |
+| --- |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) |
 
 **Examples**
 
@@ -1705,25 +1890,25 @@ swap64(): Buffer
 
 Converts this **Buffer** object into an array of unsigned 64-bit integers and swaps the byte order in place.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-swap64(): Buffer--><!--Device-Buffer-swap64(): Buffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Buffer | Buffer** object swapped. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Buffer |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 64-bits |
+| Error Code ID |
+| --- |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) |
 
 **Examples**
 
@@ -1748,17 +1933,17 @@ Converts this **Buffer** object into a JSON object.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Buffer-toJSON(): Object--><!--Device-Buffer-toJSON(): Object-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Object | JSON object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Object |
 
 **Examples**
 
@@ -1781,17 +1966,17 @@ Converts this Buffer instance into a JsonElement.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-Buffer-toJSON(): jsonx.JsonElement--><!--Device-Buffer-toJSON(): jsonx.JsonElement-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| jsonx.JsonElement | A new JsonElement containing the Buffer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| jsonx.JsonElement |
 
 **Examples**
 
@@ -1807,25 +1992,25 @@ Converts the data at the specified position in this **Buffer** object into a str
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Buffer-toString(encoding?: string, start?: number, end?: number): string--><!--Device-Buffer-toString(encoding?: string, start?: number, end?: number): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| encoding | string | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
-| start | number | No | Offset to the start position of the data to convert. The default value is **0**. |
-| end | number | No | Offset to the end position of data. The default value is the length of this **Buffer** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| encoding | string | No |
+| start | number | No |
+| end | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | String. When the value of **start** is greater than or equal to **Buffer.length** or **start** is greater than **end**, an empty string is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -1850,19 +2035,19 @@ Decodes buf to a string according to the specified character encoding in encodin
 
 **Since:** 24
 
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-Buffer-toString(): string--><!--Device-Buffer-toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -1878,27 +2063,27 @@ Decodes buf to a string according to the specified character encoding in encodin
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-Buffer-toString(encoding?: BufferEncoding, start?: int, end?: int): string--><!--Device-Buffer-toString(encoding?: BufferEncoding, start?: int, end?: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| encoding | BufferEncoding | No | encoding [encoding='utf8'] The character encoding to use |
-| start | int | No | start [start = 0] The byte offset to start decoding at The value should be an integer. |
-| end | int | No | end [end = buf.length] The byte offset to stop decoding at (not inclusive) The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| encoding | BufferEncoding | No |
+| start | int | No |
+| end | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -1906,25 +2091,31 @@ See [toString](#tostring)
 
 ## values
 
+ArkTS-Dyn:
+```TypeScript
+values(): IterableIterator<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 values(): IterableIterator<long>
 ```
 
 Creates and returns an iterator that contains the values of this **Buffer** object.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-values(): IterableIterator<long>--><!--Device-Buffer-values(): IterableIterator<long>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;long&gt; | Iterator. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: IterableIterator & lt;number & gt;<br>ArkTS-Sta：IterableIterator & lt;long & gt; |
 
 **Examples**
 
@@ -1950,40 +2141,46 @@ while (!next.done) {
 
 ## write
 
+ArkTS-Dyn:
+```TypeScript
+write(str: string, offset?: number, length?: number, encoding?: string): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 write(str: string, offset?: int, length?: int, encoding?: string): int
 ```
 
 Writes a string of the specified length to this **Buffer** object at the specified position in the given encoding format.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-write(str: string, offset?: int, length?: int, encoding?: string): int--><!--Device-Buffer-write(str: string, offset?: int, length?: int, encoding?: string): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| str | string | Yes | String to write. |
-| offset | int | No | Offset. The default value is **0**. |
-| length | int | No | Maximum number of bytes to write. The default value is **Buffer.length** minus **offset**. |
-| encoding | string | No | Encoding format of the string. The default value is **'utf8'**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| str | string | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| [length](#length) | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| encoding | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Number of bytes written. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[offset/length]" is out of range. It must be &gt;= 0 and &lt;= buf.length. Received value is: [offset/length] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2003,38 +2200,44 @@ console.info("length = " + length);
 
 ## writeBigInt64BE
 
+ArkTS-Dyn:
+```TypeScript
+writeBigInt64BE(value: bigint, offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeBigInt64BE(value: bigint, offset?: int): int
 ```
 
 Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeBigInt64BE(value: bigint, offset?: int): int--><!--Device-Buffer-writeBigInt64BE(value: bigint, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | bigint | Yes | Data to write. |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | bigint | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2049,38 +2252,44 @@ console.info("result = " + result);
 
 ## writeBigInt64LE
 
+ArkTS-Dyn:
+```TypeScript
+writeBigInt64LE(value: bigint, offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeBigInt64LE(value: bigint, offset?: int): int
 ```
 
 Writes a 64-bit, little-endian, signed big integer to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeBigInt64LE(value: bigint, offset?: int): int--><!--Device-Buffer-writeBigInt64LE(value: bigint, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | bigint | Yes | Data to write. |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | bigint | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2095,38 +2304,44 @@ console.info("result = " + result);
 
 ## writeBigUInt64BE
 
+ArkTS-Dyn:
+```TypeScript
+writeBigUInt64BE(value: bigint, offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeBigUInt64BE(value: bigint, offset?: int): int
 ```
 
 Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeBigUInt64BE(value: bigint, offset?: int): int--><!--Device-Buffer-writeBigUInt64BE(value: bigint, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | bigint | Yes | Data to write. |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | bigint | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2141,38 +2356,44 @@ console.info("result = " + result);
 
 ## writeBigUInt64LE
 
+ArkTS-Dyn:
+```TypeScript
+writeBigUInt64LE(value: bigint, offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeBigUInt64LE(value: bigint, offset?: int): int
 ```
 
 Writes a 64-bit, little-endian, unsigned big integer to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeBigUInt64LE(value: bigint, offset?: int): int--><!--Device-Buffer-writeBigUInt64LE(value: bigint, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | bigint | Yes | Data to write. |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | bigint | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2187,38 +2408,44 @@ console.info("result = " + result);
 
 ## writeDoubleBE
 
+ArkTS-Dyn:
+```TypeScript
+writeDoubleBE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeDoubleBE(value: double, offset?: int): int
 ```
 
 Writes a 64-bit, big-endian, double-precision floating-point number to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeDoubleBE(value: double, offset?: int): int--><!--Device-Buffer-writeDoubleBE(value: double, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | Data to write. |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2233,38 +2460,44 @@ console.info("result = " + result);
 
 ## writeDoubleLE
 
+ArkTS-Dyn:
+```TypeScript
+writeDoubleLE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeDoubleLE(value: double, offset?: int): int
 ```
 
 Writes a 64-bit, little-endian, double-precision floating-point number to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeDoubleLE(value: double, offset?: int): int--><!--Device-Buffer-writeDoubleLE(value: double, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | Data to write. |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 8 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 8. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2279,38 +2512,44 @@ console.info("result = " + result);
 
 ## writeFloatBE
 
+ArkTS-Dyn:
+```TypeScript
+writeFloatBE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeFloatBE(value: double, offset?: int): int
 ```
 
 Writes a 32-bit, big-endian, single-precision floating-point number to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeFloatBE(value: double, offset?: int): int--><!--Device-Buffer-writeFloatBE(value: double, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | Data to write. |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2325,38 +2564,44 @@ console.info("result = " + result);
 
 ## writeFloatLE
 
+ArkTS-Dyn:
+```TypeScript
+writeFloatLE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeFloatLE(value: double, offset?: int): int
 ```
 
 Writes a 32-bit, little-endian, single-precision floating-point number to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeFloatLE(value: double, offset?: int): int--><!--Device-Buffer-writeFloatLE(value: double, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | Data to write. |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be &gt;= 0 and &lt;= buf.length - 4. Received value is: [offset] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2371,38 +2616,44 @@ console.info("result = " + result);
 
 ## writeInt16BE
 
+ArkTS-Dyn:
+```TypeScript
+writeInt16BE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeInt16BE(value: long, offset?: int): int
 ```
 
 Writes a 16-bit, big-endian, signed integer to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeInt16BE(value: long, offset?: int): int--><!--Device-Buffer-writeInt16BE(value: long, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | long | Yes | Data to write. |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2417,38 +2668,44 @@ console.info("result = " + result);
 
 ## writeInt16LE
 
+ArkTS-Dyn:
+```TypeScript
+writeInt16LE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeInt16LE(value: long, offset?: int): int
 ```
 
 Writes a 16-bit, little-endian, signed integer to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeInt16LE(value: long, offset?: int): int--><!--Device-Buffer-writeInt16LE(value: long, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | long | Yes | Data to write. |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2463,38 +2720,44 @@ console.info("result = " + result);
 
 ## writeInt32BE
 
+ArkTS-Dyn:
+```TypeScript
+writeInt32BE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeInt32BE(value: long, offset?: int): int
 ```
 
 Writes a 32-bit, big-endian, signed integer to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeInt32BE(value: long, offset?: int): int--><!--Device-Buffer-writeInt32BE(value: long, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | long | Yes | Data to write. |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2509,38 +2772,44 @@ console.info("result = " + result);
 
 ## writeInt32LE
 
+ArkTS-Dyn:
+```TypeScript
+writeInt32LE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeInt32LE(value: long, offset?: int): int
 ```
 
 Writes a 32-bit, little-endian, signed integer to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeInt32LE(value: long, offset?: int): int--><!--Device-Buffer-writeInt32LE(value: long, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | long | Yes | Data to write. |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2555,38 +2824,44 @@ console.info("result = " + result);
 
 ## writeInt8
 
+ArkTS-Dyn:
+```TypeScript
+writeInt8(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeInt8(value: long, offset?: int): int
 ```
 
 Writes an 8-bit signed integer to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeInt8(value: long, offset?: int): int--><!--Device-Buffer-writeInt8(value: long, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | long | Yes | Data to write. |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 1 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2604,39 +2879,45 @@ console.info("result1 = " + result1);
 
 ## writeIntBE
 
+ArkTS-Dyn:
+```TypeScript
+writeIntBE(value: number, offset: number, byteLength: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeIntBE(value: long, offset: int, byteLength: int): int
 ```
 
 Writes a big-endian signed value of the specified length to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeIntBE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeIntBE(value: long, offset: int, byteLength: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | long | Yes | Data to write. |
-| offset | int | Yes | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - byteLength |
-| byteLength | int | Yes | Number of bytes to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| byteLength | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2651,39 +2932,45 @@ console.info("result = " + result);
 
 ## writeIntLE
 
+ArkTS-Dyn:
+```TypeScript
+writeIntLE(value: number, offset: number, byteLength: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeIntLE(value: long, offset: int, byteLength: int): int
 ```
 
 Writes a little-endian signed value of the specified length to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeIntLE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeIntLE(value: long, offset: int, byteLength: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | long | Yes | Data to write. |
-| offset | int | Yes | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - byteLength |
-| byteLength | int | Yes | Number of bytes to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| byteLength | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2698,38 +2985,44 @@ console.info("result = " + result);
 
 ## writeUInt16BE
 
+ArkTS-Dyn:
+```TypeScript
+writeUInt16BE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeUInt16BE(value: long, offset?: int): int
 ```
 
 Writes a 16-bit, big-endian, unsigned integer to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeUInt16BE(value: long, offset?: int): int--><!--Device-Buffer-writeUInt16BE(value: long, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | long | Yes | Data to write. |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2747,38 +3040,44 @@ console.info("result1 = " + result1);
 
 ## writeUInt16LE
 
+ArkTS-Dyn:
+```TypeScript
+writeUInt16LE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeUInt16LE(value: long, offset?: int): int
 ```
 
 Writes a 16-bit, little-endian, unsigned integer to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeUInt16LE(value: long, offset?: int): int--><!--Device-Buffer-writeUInt16LE(value: long, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | long | Yes | Data to write. |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2796,38 +3095,44 @@ console.info("result1 = " + result1);
 
 ## writeUInt32BE
 
+ArkTS-Dyn:
+```TypeScript
+writeUInt32BE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeUInt32BE(value: long, offset?: int): int
 ```
 
 Writes a 32-bit, big-endian, unsigned integer to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeUInt32BE(value: long, offset?: int): int--><!--Device-Buffer-writeUInt32BE(value: long, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | long | Yes | Data to write. |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2842,38 +3147,44 @@ console.info("result = " + result);
 
 ## writeUInt32LE
 
+ArkTS-Dyn:
+```TypeScript
+writeUInt32LE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeUInt32LE(value: long, offset?: int): int
 ```
 
 Writes a 32-bit, little-endian, unsigned integer to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeUInt32LE(value: long, offset?: int): int--><!--Device-Buffer-writeUInt32LE(value: long, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | long | Yes | Data to write. |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 4 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2888,38 +3199,44 @@ console.info("result = " + result);
 
 ## writeUInt8
 
+ArkTS-Dyn:
+```TypeScript
+writeUInt8(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeUInt8(value: long, offset?: int): int
 ```
 
 Writes an 8-bit unsigned integer to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeUInt8(value: long, offset?: int): int--><!--Device-Buffer-writeUInt8(value: long, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | long | Yes | Data to write. |
-| offset | int | No | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - 1 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2943,39 +3260,45 @@ console.info("result3 = " + result3);
 
 ## writeUIntBE
 
+ArkTS-Dyn:
+```TypeScript
+writeUIntBE(value: number, offset: number, byteLength: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeUIntBE(value: long, offset: int, byteLength: int): int
 ```
 
 Writes an unsigned big-endian value of the specified length to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeUIntBE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeUIntBE(value: long, offset: int, byteLength: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | long | Yes | Data to write. |
-| offset | int | Yes | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - byteLength |
-| byteLength | int | Yes | Number of bytes to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| byteLength | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -2990,39 +3313,45 @@ console.info("result = " + result);
 
 ## writeUIntLE
 
+ArkTS-Dyn:
+```TypeScript
+writeUIntLE(value: number, offset: number, byteLength: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeUIntLE(value: long, offset: int, byteLength: int): int
 ```
 
 Writes an unsigned little-endian value of the specified length to this **Buffer** object at the specified offset.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Buffer-writeUIntLE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeUIntLE(value: long, offset: int, byteLength: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | long | Yes | Data to write. |
-| offset | int | Yes | Offset. The default value is **0**. Value range: 0 &lt;= offset &lt;= Buffer.length - byteLength |
-| byteLength | int | Yes | Number of bytes to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| byteLength | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset plus the number of written bytes. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [param] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -3034,6 +3363,24 @@ let result = buf.writeUIntLE(0x1234567890ab, 0, 6);
 console.info("result = " + result);
 // Output: result = 6
 ```
+
+## [index: int]
+
+```TypeScript
+[index: int]: long
+```
+
+Returns the item at that index.
+
+**Type:** long
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+**System capability:** SystemCapability.Utils.Lang
 
 ## buffer
 
@@ -3047,9 +3394,9 @@ buffer: ArrayBuffer
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-Buffer-buffer: ArrayBuffer--><!--Device-Buffer-buffer: ArrayBuffer-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -3065,9 +3412,9 @@ Offset of the **Buffer** object in the memory pool.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-Buffer-byteOffset: number--><!--Device-Buffer-byteOffset: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -3083,9 +3430,8 @@ Length of the **Buffer** object, in bytes.
 
 **Since:** 9
 
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-Buffer-length: number--><!--Device-Buffer-length: number-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

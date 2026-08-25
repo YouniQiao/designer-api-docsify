@@ -4,7 +4,7 @@ Defines a common callback used to return the processing result when an asynchron
 
 **Since:** 6
 
-<!--Device-unnamed-export interface Callback--><!--Device-unnamed-export interface Callback-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.Base
 
@@ -15,7 +15,7 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.Basi
 import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } from '@kit.BasicServicesKit';
 ```
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (data: T): void
@@ -23,31 +23,16 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } fro
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-Callback-(data: T): void--><!--Device-Callback-(data: T): void-End-->
 
 **System capability:** SystemCapability.Base
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | T | Yes | Common callback information. The type is defined by the developer. The callback is used to return data of the corresponding type. No data is returned if the callback fails. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-interface ErrorDataType {
-    url: string;
-}
-
-const businessError = new BusinessError<ErrorDataType>(201, 'no permission', {
-    url: 'http://'
-});
-```
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | T | Yes |

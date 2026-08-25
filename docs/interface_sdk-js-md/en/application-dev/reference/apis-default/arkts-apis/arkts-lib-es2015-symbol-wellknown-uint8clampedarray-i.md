@@ -1,8 +1,6 @@
 # Uint8ClampedArray
 
-**Since:** -1
-
-<!--Device-unnamed-interface Uint8ClampedArray--><!--Device-unnamed-interface Uint8ClampedArray-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,7 +15,4 @@ readonly [Symbol.toStringTag]: "Uint8ClampedArray"
 
 **Type:** "Uint8ClampedArray"
 
-**Since:** -1
-
-<!--Device-Uint8ClampedArray-readonly [Symbol.toStringTag]: "Uint8ClampedArray"--><!--Device-Uint8ClampedArray-readonly [Symbol.toStringTag]: "Uint8ClampedArray"-End-->
-
+**ArkTS mode:** 

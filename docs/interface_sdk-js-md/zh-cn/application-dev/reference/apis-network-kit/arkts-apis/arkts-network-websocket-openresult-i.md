@@ -4,7 +4,7 @@ WebSocket连接成功后的详细信息。
 
 **起始版本：** 23
 
-<!--Device-webSocket-export interface OpenResult--><!--Device-webSocket-export interface OpenResult-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -26,7 +26,7 @@ result message.
 
 **起始版本：** 23
 
-<!--Device-OpenResult-message: string--><!--Device-OpenResult-message: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -42,7 +42,6 @@ result status.
 
 **起始版本：** 23
 
-<!--Device-OpenResult-status: int--><!--Device-OpenResult-status: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
-

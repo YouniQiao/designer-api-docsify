@@ -4,7 +4,7 @@ Defines the features of the kiosk mode.
 
 **Since:** 20
 
-<!--Device-applicationManager-enum KioskFeature--><!--Device-applicationManager-enum KioskFeature-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,9 +18,9 @@ Allow access to the notification center (by swiping down from the upper left cor
 
 **Since:** 20
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-KioskFeature-ALLOW_NOTIFICATION_CENTER = 1--><!--Device-KioskFeature-ALLOW_NOTIFICATION_CENTER = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -34,9 +34,9 @@ Allow access to the control panel (by swiping down from the upper right corner w
 
 **Since:** 20
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-KioskFeature-ALLOW_CONTROL_CENTER = 2--><!--Device-KioskFeature-ALLOW_CONTROL_CENTER = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -50,9 +50,9 @@ Allow access to the recent task bar (by swiping up from the bottom with one fing
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-KioskFeature-ALLOW_GESTURE_CONTROL = 3--><!--Device-KioskFeature-ALLOW_GESTURE_CONTROL = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -66,9 +66,8 @@ Allow access to the side dock (by swiping inward from the edge with one finger a
 
 **Since:** 24
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-KioskFeature-ALLOW_SIDE_DOCK = 4--><!--Device-KioskFeature-ALLOW_SIDE_DOCK = 4-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

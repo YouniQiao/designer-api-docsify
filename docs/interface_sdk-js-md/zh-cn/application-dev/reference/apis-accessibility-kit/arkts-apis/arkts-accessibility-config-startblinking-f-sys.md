@@ -16,11 +16,11 @@ function startBlinking(mode: BlinkingMode, scenario: BlinkingScenario): BlinkRes
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-config-function startBlinking(mode: BlinkingMode, scenario: BlinkingScenario): BlinkResultCode--><!--Device-config-function startBlinking(mode: BlinkingMode, scenario: BlinkingScenario): BlinkResultCode-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -28,24 +28,24 @@ function startBlinking(mode: BlinkingMode, scenario: BlinkingScenario): BlinkRes
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mode | [BlinkingMode](arkts-accessibility-config-blinkingmode-e-sys.md) | 是 | 表示屏幕闪烁或闪光灯闪烁的模式。 |
-| scenario | [BlinkingScenario](arkts-accessibility-config-blinkingscenario-e-sys.md) | 是 | 表示触发闪烁的场景。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mode | [BlinkingMode](arkts-accessibility-config-blinkingmode-e-sys.md) | 是 |
+| scenario | [BlinkingScenario](arkts-accessibility-config-blinkingscenario-e-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BlinkResultCode](arkts-accessibility-config-blinkresultcode-e-sys.md) | 接口调用返回的结果码。 |
+| 类型 |
+| --- |
+| [BlinkResultCode](arkts-accessibility-config-blinkresultcode-e-sys.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. <br>The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. <br>A non-system application calls a system API. |
-| [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) | System abnormality.Possible causes: <br>1.Internal operation failed. <br>2.Failed to obtain the required service or client object (null pointer). <br>3.IPC communication failed. <br>4.Failed to obtain the accessibility service proxy. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) |
 
 **示例**
 
@@ -59,4 +59,3 @@ try {
   console.error(`Failed to call startBlinking, code is ${err.code}, message is ${err.message}`);
 }
 ```
-

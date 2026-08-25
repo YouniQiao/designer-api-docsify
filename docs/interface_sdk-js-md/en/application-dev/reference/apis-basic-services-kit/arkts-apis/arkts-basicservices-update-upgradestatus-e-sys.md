@@ -2,9 +2,9 @@
 
 Enumerates update states.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-update-export enum UpgradeStatus--><!--Device-update-export enum UpgradeStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -18,9 +18,9 @@ WAITING_DOWNLOAD = 20
 
 Waiting for download.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-UpgradeStatus-WAITING_DOWNLOAD = 20--><!--Device-UpgradeStatus-WAITING_DOWNLOAD = 20-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -34,9 +34,9 @@ DOWNLOADING = 21
 
 Downloading.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-UpgradeStatus-DOWNLOADING = 21--><!--Device-UpgradeStatus-DOWNLOADING = 21-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -50,9 +50,9 @@ DOWNLOAD_PAUSED = 22
 
 Download paused.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-UpgradeStatus-DOWNLOAD_PAUSED = 22--><!--Device-UpgradeStatus-DOWNLOAD_PAUSED = 22-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -66,9 +66,9 @@ DOWNLOAD_FAIL = 23
 
 Download failed.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-UpgradeStatus-DOWNLOAD_FAIL = 23--><!--Device-UpgradeStatus-DOWNLOAD_FAIL = 23-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -82,9 +82,9 @@ WAITING_INSTALL = 30
 
 Waiting for installation.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-UpgradeStatus-WAITING_INSTALL = 30--><!--Device-UpgradeStatus-WAITING_INSTALL = 30-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -98,9 +98,9 @@ UPDATING = 31
 
 Updating.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-UpgradeStatus-UPDATING = 31--><!--Device-UpgradeStatus-UPDATING = 31-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -114,9 +114,9 @@ WAITING_APPLY = 40
 
 Waiting for applying the upgrade.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-UpgradeStatus-WAITING_APPLY = 40--><!--Device-UpgradeStatus-WAITING_APPLY = 40-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -130,9 +130,9 @@ APPLYING = 41
 
 Applying the update.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-UpgradeStatus-APPLYING = 41--><!--Device-UpgradeStatus-APPLYING = 41-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -146,9 +146,9 @@ UPGRADE_SUCCESS = 50
 
 Update succeeded.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-UpgradeStatus-UPGRADE_SUCCESS = 50--><!--Device-UpgradeStatus-UPGRADE_SUCCESS = 50-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -162,11 +162,10 @@ UPGRADE_FAIL = 51
 
 Update failed.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-UpgradeStatus-UPGRADE_FAIL = 51--><!--Device-UpgradeStatus-UPGRADE_FAIL = 51-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
-

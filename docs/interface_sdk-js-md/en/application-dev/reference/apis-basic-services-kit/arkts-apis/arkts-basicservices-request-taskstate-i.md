@@ -1,10 +1,10 @@
 # TaskState
 
-Upload task information, which is the callback parameter of the [on('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#onprogress) and [off('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#offprogress) APIs.
+Upload task information, which is the callback parameter of the on('complete' | 'fail') and off('complete' | 'fail') APIs.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-request-interface TaskState--><!--Device-request-interface TaskState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -24,9 +24,9 @@ Description of the upload task result.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-TaskState-message: string--><!--Device-TaskState-message: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -40,9 +40,9 @@ File path.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-TaskState-path: string--><!--Device-TaskState-path: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -54,11 +54,10 @@ responseCode: int
 
 Return value of an upload task. The value **0** means that the task is successful, and other values means that the task fails. For details about the task result, see **message**.You are advised to create an upload task by using [request.agent.create](arkts-basicservices-agent-create-f.md)and handle exceptions based on standard error codes.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-TaskState-responseCode: int--><!--Device-TaskState-responseCode: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Upload
-

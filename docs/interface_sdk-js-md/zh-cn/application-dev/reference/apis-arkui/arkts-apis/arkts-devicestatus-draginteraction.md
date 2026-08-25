@@ -5,9 +5,9 @@
 > **说明：**&gt;
 > - 本模块接口均为系统接口。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-unnamed-declare namespace dragInteraction--><!--Device-unnamed-declare namespace dragInteraction-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Drag
 
@@ -24,30 +24,29 @@ import { dragInteraction } from '@kit.ArkUI';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [getDataSummary](arkts-arkui-draginteraction-getdatasummary-f-sys.md) | 获取所有拖拽对象的摘要。 |
-| [off_drag](arkts-arkui-draginteraction-offdrag-f-sys.md#offdrag) | 取消监听拖拽状态。 |
-| [offDragStateChange](arkts-arkui-draginteraction-offdragstatechange-f-sys.md) | Disables listening for dragging state change events. |
-| [on_drag](arkts-arkui-draginteraction-ondrag-f-sys.md#ondrag) | 注册监听拖拽状态。 |
-| [onDragStateChange](arkts-arkui-draginteraction-ondragstatechange-f-sys.md) | Listens for dragging state change events. |
-| [setAppDragSwitchState](arkts-arkui-draginteraction-setappdragswitchstate-f-sys.md) | 控制统一拖拽适配应用开关。 |
-| [setDragSwitchState](arkts-arkui-draginteraction-setdragswitchstate-f-sys.md) | 控制统一拖拽功能总开关。 |
+| 名称 |
+| --- |
+| [getDataSummary](arkts-arkui-draginteraction-getdatasummary-f-sys.md) |
+| [off](arkts-arkui-draginteraction-off-f-sys.md#offdrag) |
+| [offDragStateChange](arkts-arkui-draginteraction-offdragstatechange-f-sys.md) |
+| [on](arkts-arkui-draginteraction-on-f-sys.md#ondrag) |
+| [onDragStateChange](arkts-arkui-draginteraction-ondragstatechange-f-sys.md) |
+| [setAppDragSwitchState](arkts-arkui-draginteraction-setappdragswitchstate-f-sys.md) |
+| [setDragSwitchState](arkts-arkui-draginteraction-setdragswitchstate-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [Summary](arkts-arkui-draginteraction-summary-i-sys.md) | 拖拽对象的数据摘要。 |
+| 名称 |
+| --- |
+| [Summary](arkts-arkui-draginteraction-summary-i-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [DragState](arkts-arkui-draginteraction-dragstate-e-sys.md) | 拖拽状态。 |
+| 名称 |
+| --- |
+| [DragState](arkts-arkui-draginteraction-dragstate-e-sys.md) |
 <!--DelEnd-->
-

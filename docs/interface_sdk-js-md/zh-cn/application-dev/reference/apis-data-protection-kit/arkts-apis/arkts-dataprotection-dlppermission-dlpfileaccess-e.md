@@ -4,7 +4,7 @@ DLP文件授权类型的枚举。
 
 **起始版本：** 10
 
-<!--Device-dlpPermission-export enum DLPFileAccess--><!--Device-dlpPermission-export enum DLPFileAccess-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -18,7 +18,7 @@ NO_PERMISSION = 0
 
 **起始版本：** 10
 
-<!--Device-DLPFileAccess-NO_PERMISSION = 0--><!--Device-DLPFileAccess-NO_PERMISSION = 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -32,7 +32,7 @@ READ_ONLY = 1
 
 **起始版本：** 10
 
-<!--Device-DLPFileAccess-READ_ONLY = 1--><!--Device-DLPFileAccess-READ_ONLY = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -46,7 +46,7 @@ CONTENT_EDIT = 2
 
 **起始版本：** 10
 
-<!--Device-DLPFileAccess-CONTENT_EDIT = 2--><!--Device-DLPFileAccess-CONTENT_EDIT = 2-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -60,7 +60,6 @@ FULL_CONTROL = 3
 
 **起始版本：** 10
 
-<!--Device-DLPFileAccess-FULL_CONTROL = 3--><!--Device-DLPFileAccess-FULL_CONTROL = 3-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
-

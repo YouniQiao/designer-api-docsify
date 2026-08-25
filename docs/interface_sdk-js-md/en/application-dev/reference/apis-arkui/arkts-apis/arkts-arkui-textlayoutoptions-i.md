@@ -4,7 +4,7 @@ Defines the text layout options.
 
 **Since:** 20
 
-<!--Device-unnamed-declare interface TextLayoutOptions--><!--Device-unnamed-declare interface TextLayoutOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,9 +25,8 @@ Layout width of the measured text. If not set, the width is the maximum width oc
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TextLayoutOptions-constraintWidth?: LengthMetrics--><!--Device-TextLayoutOptions-constraintWidth?: LengthMetrics-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

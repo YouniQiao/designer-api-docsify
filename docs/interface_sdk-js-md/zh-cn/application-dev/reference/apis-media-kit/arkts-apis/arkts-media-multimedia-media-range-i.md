@@ -2,9 +2,9 @@
 
 包含上下限的范围。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-unnamed-interface Range--><!--Device-unnamed-interface Range-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -22,11 +22,11 @@ max: int
 
 最大值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-Range-max: int--><!--Device-Range-max: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -38,11 +38,10 @@ min: int
 
 最小值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-Range-min: int--><!--Device-Range-min: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
-

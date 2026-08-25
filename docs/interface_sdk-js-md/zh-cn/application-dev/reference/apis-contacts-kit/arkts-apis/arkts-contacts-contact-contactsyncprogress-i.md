@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-contact-interface ContactSyncProgress--><!--Device-contact-interface ContactSyncProgress-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -17,7 +17,7 @@ import { contact } from '@kit.ContactsKit';
 ## currentBatch
 
 ```TypeScript
-currentBatch: int
+currentBatch: number
 ```
 
 表示要同步的当前联系人批次的标识符。值的范围是从1到totalBatches。
@@ -26,18 +26,18 @@ currentBatch: int
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ContactSyncProgress-currentBatch: int--><!--Device-ContactSyncProgress-currentBatch: int-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## syncId
 
 ```TypeScript
-syncId: int
+syncId: number
 ```
 
 表示用于同步所有联系人的同步标识符。该值应从0开始。
@@ -46,18 +46,18 @@ syncId: int
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ContactSyncProgress-syncId: int--><!--Device-ContactSyncProgress-syncId: int-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## totalBatches
 
 ```TypeScript
-totalBatches: int
+totalBatches: number
 ```
 
 表示要同步的联系人批次总数。
@@ -66,11 +66,10 @@ totalBatches: int
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ContactSyncProgress-totalBatches: int--><!--Device-ContactSyncProgress-totalBatches: int-End-->
-
 **系统能力：** SystemCapability.Applications.ContactsData
-

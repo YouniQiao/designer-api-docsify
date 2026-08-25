@@ -2,9 +2,9 @@
 
 Defines the information about the redirected-to ability.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-reminderAgentManager-interface WantAgent--><!--Device-reminderAgentManager-interface WantAgent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -24,25 +24,25 @@ Name of the target ability.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-WantAgent-abilityName: string--><!--Device-WantAgent-abilityName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## parameters
 
 ```TypeScript
-parameters?: RecordData
+parameters?: Record<string, Object>
 ```
 
-The description of the WantParams object in an Want
+Parameters to be transferred to the target.
 
-**Type:** [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)
+**Type:** Record&lt;string, Object&gt;
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-WantAgent-parameters?: RecordData--><!--Device-WantAgent-parameters?: RecordData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -56,9 +56,9 @@ Name of the target package.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-WantAgent-pkgName: string--><!--Device-WantAgent-pkgName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -72,9 +72,8 @@ URI of the target ability.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-WantAgent-uri?: string--><!--Device-WantAgent-uri?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
-

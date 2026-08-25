@@ -2,9 +2,9 @@
 
 Enumerates the types of changes that trigger the media asset or album change events.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-photoAccessHelper-enum NotifyChangeType--><!--Device-photoAccessHelper-enum NotifyChangeType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,7 +18,7 @@ A high-quality image is ready in deferred photo delivery scenarios.Image quality
 
 **Since:** 23
 
-<!--Device-NotifyChangeType-NOTIFY_CHANGE_YUV_READY = 3--><!--Device-NotifyChangeType-NOTIFY_CHANGE_YUV_READY = 3-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,9 @@ A media asset (image or video) is created in the smart analysis album.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-NotifyChangeType-NOTIFY_CHANGE_ADD_ANALYSIS = 4--><!--Device-NotifyChangeType-NOTIFY_CHANGE_ADD_ANALYSIS = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -52,11 +52,10 @@ A media asset (image or video) is deleted from the smart analysis album.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-NotifyChangeType-NOTIFY_CHANGE_REMOVE_ANALYSIS = 5--><!--Device-NotifyChangeType-NOTIFY_CHANGE_REMOVE_ANALYSIS = 5-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

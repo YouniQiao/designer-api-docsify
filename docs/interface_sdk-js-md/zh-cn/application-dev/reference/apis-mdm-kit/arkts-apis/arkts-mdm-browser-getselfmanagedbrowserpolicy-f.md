@@ -16,17 +16,17 @@ function getSelfManagedBrowserPolicy(): ArrayBuffer
 
 **起始版本：** 15
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
-<!--Device-browser-function getSelfManagedBrowserPolicy(): ArrayBuffer--><!--Device-browser-function getSelfManagedBrowserPolicy(): ArrayBuffer-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ArrayBuffer | 浏览器策略。 |
+| 类型 |
+| --- |
+| ArrayBuffer |
 
 **示例**
 
@@ -44,4 +44,3 @@ try {
   console.error(`Failed to get self managed browser policy. Code is ${err.code}, message is ${err.message}`);
 }
 ```
-

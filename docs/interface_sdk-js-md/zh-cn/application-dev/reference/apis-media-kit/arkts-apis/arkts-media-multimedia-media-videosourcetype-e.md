@@ -2,9 +2,9 @@
 
 表示视频录制中视频源类型的枚举。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-enum VideoSourceType--><!--Device-unnamed-enum VideoSourceType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -16,9 +16,9 @@ VIDEO_SOURCE_TYPE_SURFACE_YUV = 0
 
 输入surface中携带的是raw data。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-VideoSourceType-VIDEO_SOURCE_TYPE_SURFACE_YUV = 0--><!--Device-VideoSourceType-VIDEO_SOURCE_TYPE_SURFACE_YUV = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -30,9 +30,8 @@ VIDEO_SOURCE_TYPE_SURFACE_ES = 1
 
 输入surface中携带的是ES data。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-VideoSourceType-VIDEO_SOURCE_TYPE_SURFACE_ES = 1--><!--Device-VideoSourceType-VIDEO_SOURCE_TYPE_SURFACE_ES = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
-

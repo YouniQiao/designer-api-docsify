@@ -8,15 +8,14 @@ type OnIntelligentTrackingPreventionCallback = (details: IntelligentTrackingPrev
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-unnamed-type OnIntelligentTrackingPreventionCallback = (details: IntelligentTrackingPreventionDetails) => void--><!--Device-unnamed-type OnIntelligentTrackingPreventionCallback = (details: IntelligentTrackingPreventionDetails) => void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| details | [IntelligentTrackingPreventionDetails](arkts-arkweb-intelligenttrackingpreventiondetails-i.md) | 是 | 提供智能防跟踪拦截的详细信息。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| details | [IntelligentTrackingPreventionDetails](arkts-arkweb-intelligenttrackingpreventiondetails-i.md) | 是 |

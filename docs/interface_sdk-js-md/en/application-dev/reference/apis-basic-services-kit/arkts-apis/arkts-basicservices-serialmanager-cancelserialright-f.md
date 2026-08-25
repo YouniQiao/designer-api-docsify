@@ -14,27 +14,27 @@ function cancelSerialRight(portId: int): void
 
 Cancels the permission to access the serial port device when the application is running. This API is used to close the enabled serial port device.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-serialManager-function cancelSerialRight(portId: int): void--><!--Device-serialManager-function cancelSerialRight(portId: int): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| portId | int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [portId](arkts-basicservices-serialmanager-serialport-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
-| [14400005](../errorcode-usb.md#14400005-database-operation-exception) |  |
-| [31400001](../errorcode-usb.md#31400001-serial-port-service-error) |  |
-| [31400002](../errorcode-usb.md#31400002-no-serial-port-device-access-permission) |  |
-| [31400003](../errorcode-usb.md#31400003-port-number-not-exist) |  |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14400005](../errorcode-usb.md#14400005-database-operation-exception) |
+| [31400001](../errorcode-usb.md#31400001-serial-port-service-error) |
+| [31400002](../errorcode-usb.md#31400002-no-serial-port-device-access-permission) |
+| [31400003](../errorcode-usb.md#31400003-port-number-not-exist) |
 
 **Examples**
 
@@ -76,4 +76,3 @@ function cancelSerialRight() {
   }
 }
 ```
-

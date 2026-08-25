@@ -6,7 +6,7 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 10
 
-<!--Device-unnamed-declare class RichEditorAttribute--><!--Device-unnamed-declare class RichEditorAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,19 +25,19 @@ Triggered when content is about to be deleted in the input method.This callback 
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RichEditorAttribute-aboutToDelete(callback: Callback<RichEditorDeleteValue, boolean>): RichEditorAttribute--><!--Device-RichEditorAttribute-aboutToDelete(callback: Callback<RichEditorDeleteValue, boolean>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | Callback&lt;[RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md), boolean&gt; | Yes | [RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md) indicates the text or image span where the content to be deleted is located.<br>**true**: Content is deleted.<br>**false**: Content is not deleted.<br>Callback invoked when content is about to be deleted in the input method. It is executed when a candidate word is touched in preview text.<br>**Since:** 12 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | Callback&lt;[RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md), boolean&gt; | Yes |
 
 ## aboutToIMEInput
 
@@ -49,19 +49,19 @@ Triggered when content is about to be entered in the input method.This callback 
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RichEditorAttribute-aboutToIMEInput(callback: Callback<RichEditorInsertValue, boolean>): RichEditorAttribute--><!--Device-RichEditorAttribute-aboutToIMEInput(callback: Callback<RichEditorInsertValue, boolean>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | Callback&lt;[RichEditorInsertValue](arkts-arkui-richeditorinsertvalue-i.md), boolean&gt; | Yes | [RichEditorInsertValue](arkts-arkui-richeditorinsertvalue-i.md) indicates whether content will be entered in the input method.<br>**true**: The component adds the content.<br> **false**: The component does not add the content.<br>Callback invoked when content is about to be entered in the input method.<br>**Since:** 12 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | Callback&lt;[RichEditorInsertValue](arkts-arkui-richeditorinsertvalue-i.md), boolean&gt; | Yes |
 
 ## barState
 
@@ -78,19 +78,19 @@ Sets the display mode of the **RichEditor** scrollbar.
 
 **Since:** 13
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-RichEditorAttribute-barState(state: BarState): RichEditorAttribute--><!--Device-RichEditorAttribute-barState(state: BarState): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| state | BarState | Yes | Scrollbar display mode.<br>Default value: **BarState.Auto |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| state | [BarState](#barstate) | Yes |
 
 ## bindSelectionMenu
 
@@ -103,22 +103,22 @@ Sets the custom context menu on text selection. If the custom menu is too long, 
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RichEditorAttribute-bindSelectionMenu(spanType: RichEditorSpanType, content: CustomBuilder, responseType: ResponseType | RichEditorResponseType,    options?: SelectionMenuOptions): RichEditorAttribute--><!--Device-RichEditorAttribute-bindSelectionMenu(spanType: RichEditorSpanType, content: CustomBuilder, responseType: ResponseType | RichEditorResponseType,    options?: SelectionMenuOptions): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| spanType | [RichEditorSpanType](arkts-arkui-richeditorspantype-e.md) | Yes | Menu type.<br>Default value:<br>RichEditorSpanType.TEXT |
-| content | CustomBuilder | Yes | Menu content. |
-| responseType | ResponseType \| [RichEditorResponseType](arkts-arkui-richeditorresponsetype-e.md) | Yes | Response type of the menu.<br> Default value:<br> ResponseType.LongPress<br>**Since:** 11 |
-| options | [SelectionMenuOptions](arkts-arkui-selectionmenuoptions-i.md) | No | Menu options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| spanType | [RichEditorSpanType](arkts-arkui-richeditorspantype-e.md) | Yes |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
+| responseType | ResponseType \| [RichEditorResponseType](arkts-arkui-richeditorresponsetype-e.md) | Yes |
+| options | [SelectionMenuOptions](arkts-arkui-selectionmenuoptions-i.md) | No |
 
 ## caretColor
 
@@ -130,19 +130,19 @@ Sets the color of the caret and selection handle in the text box.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorAttribute-caretColor(value: ResourceColor): RichEditorAttribute--><!--Device-RichEditorAttribute-caretColor(value: ResourceColor): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | ResourceColor | Yes | Color of the caret and selection handle in the text box.<br>Default value: **'#007DFF' |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
 
 ## compressLeadingPunctuation
 
@@ -159,19 +159,19 @@ Sets whether to enable punctuation compression at the beginning of a line.
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-RichEditorAttribute-compressLeadingPunctuation(enabled: Optional<boolean>): RichEditorAttribute--><!--Device-RichEditorAttribute-compressLeadingPunctuation(enabled: Optional<boolean>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | Yes | Whether to enable punctuation compression at the beginning of a line.<br> true indicates that punctuation compression is enabled at the beginning of a line. false indicates that punctuation compression is disabled at the beginning of a line. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enabled | Optional & lt;boolean & gt; | Yes |
 
 ## copyOptions
 
@@ -185,19 +185,19 @@ If copyOptions is not set to CopyOptions.None, a text selection menu will be dis
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RichEditorAttribute-copyOptions(value: CopyOptions): RichEditorAttribute--><!--Device-RichEditorAttribute-copyOptions(value: CopyOptions): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | CopyOptions | Yes | Whether copy and paste is allowed for text content.<br>Default value: **CopyOptions.LocalDevice |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [CopyOptions](#copyoptions) | Yes |
 
 ## customKeyboard
 
@@ -215,20 +215,20 @@ Sets a custom keyboard.When a custom keyboard is set, activating the text box op
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RichEditorAttribute-customKeyboard(value: CustomBuilder | ComponentContent | undefined,                 options?: KeyboardOptions | undefined): RichEditorAttribute--><!--Device-RichEditorAttribute-customKeyboard(value: CustomBuilder | ComponentContent | undefined,                 options?: KeyboardOptions | undefined): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | CustomBuilder \| ComponentContent \| undefined | Yes | Custom keyboard.<br>When undefined is passed, the system keyboard is used by default.<br>**Since:** 23 |
-| options | [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) \| undefined | No | Whether to support keyboard avoidance.<br>When undefined is passed, avoidance is not supported by default.<br>**Since:** 23 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | CustomBuilder \| ComponentContent \| undefined | Yes |
+| options | [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) \| undefined | No |
 
 ## dataDetectorConfig
 
@@ -242,19 +242,19 @@ Configures special entity recognition settings, including entity types to detect
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorAttribute-dataDetectorConfig(config: TextDataDetectorConfig): RichEditorAttribute--><!--Device-RichEditorAttribute-dataDetectorConfig(config: TextDataDetectorConfig): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| config | TextDataDetectorConfig | Yes | Text recognition configuration. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| config | [TextDataDetectorConfig](../arkts-apis/arkts-arkui-textdatadetectorconfig-i.md) | Yes |
 
 ## editMenuOptions
 
@@ -272,19 +272,19 @@ Sets the extended options of the default system menu, including the text content
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorAttribute-editMenuOptions(editMenu: EditMenuOptions): RichEditorAttribute--><!--Device-RichEditorAttribute-editMenuOptions(editMenu: EditMenuOptions): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| editMenu | EditMenuOptions | Yes | Extended options of the custom context menu on selection. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| editMenu | [EditMenuOptions](#editmenuoptions) | Yes |
 
 ## enableAutoSpacing
 
@@ -296,19 +296,19 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-RichEditorAttribute-enableAutoSpacing(enable: Optional<boolean>): RichEditorAttribute--><!--Device-RichEditorAttribute-enableAutoSpacing(enable: Optional<boolean>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enable | Optional&lt;boolean&gt; | Yes | Whether to enable automatic spacing between Chinese and Western characters.<br>**true** to enable, **false** otherwise.<br>Default value: **false**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enable | Optional & lt;boolean & gt; | Yes |
 
 ## enableDataDetector
 
@@ -320,19 +320,19 @@ Enables recognition for special entities within the text.For this API to work, t
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorAttribute-enableDataDetector(enable: boolean): RichEditorAttribute--><!--Device-RichEditorAttribute-enableDataDetector(enable: boolean): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable text recognition.<br>**true** to enable, **false** otherwise.<br> Default value: **false**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enable | boolean | Yes |
 
 ## enableHapticFeedback
 
@@ -349,19 +349,19 @@ Sets whether to enable haptic feedback.
 
 **Since:** 13
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-RichEditorAttribute-enableHapticFeedback(isEnabled: boolean): RichEditorAttribute--><!--Device-RichEditorAttribute-enableHapticFeedback(isEnabled: boolean): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isEnabled | boolean | Yes | Whether to enable haptic feedback.<br>Default value: **true**. **true** to enable; **false** otherwise.<br>**NOTE：**<br>Haptic feedback takes effect only when the application has the ohos.permission.VIBRATE permission, the user has enabled haptic feedback, and the system hardware supports it. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| isEnabled | boolean | Yes |
 
 ## enableKeyboardOnFocus
 
@@ -378,19 +378,19 @@ Sets whether to enable the input method when the **RichEditor** component obtain
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorAttribute-enableKeyboardOnFocus(isEnabled: boolean): RichEditorAttribute--><!--Device-RichEditorAttribute-enableKeyboardOnFocus(isEnabled: boolean): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isEnabled | boolean | Yes | Whether to bring up the keyboard when a component obtains focus in a way other than clicking.<br>**true**: yes; **false**: no<br>Default value: **true |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| isEnabled | boolean | Yes |
 
 ## enablePreviewText
 
@@ -407,19 +407,19 @@ Sets whether to enable preview text.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorAttribute-enablePreviewText(enable: boolean): RichEditorAttribute--><!--Device-RichEditorAttribute-enablePreviewText(enable: boolean): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable preview text.<br>**true** to enable, **false** otherwise.<br>Default value: **true |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enable | boolean | Yes |
 
 ## enableSelectedDataDetector
 
@@ -431,19 +431,19 @@ Sets whether to enable the AI menu function for text selection. After this funct
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-RichEditorAttribute-enableSelectedDataDetector(enable: boolean | undefined): RichEditorAttribute--><!--Device-RichEditorAttribute-enableSelectedDataDetector(enable: boolean | undefined): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enable | boolean \| undefined | Yes | Whether to enable text recognition. The value **true** means to enable text recognition, and **false** means the opposite.<br>If **undefined** or **null** is passed, the attribute is reset to the default value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enable | boolean \| undefined | Yes |
 
 ## enterKeyType
 
@@ -455,19 +455,19 @@ Sets the Enter key type of the soft keyboard.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorAttribute-enterKeyType(value: EnterKeyType): RichEditorAttribute--><!--Device-RichEditorAttribute-enterKeyType(value: EnterKeyType): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | EnterKeyType | Yes | Type of the Enter key.<br>Default value: **EnterKeyType.NEW_LINE |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [EnterKeyType](#enterkeytype) | Yes |
 
 ## fallbackLineSpacing
 
@@ -479,19 +479,19 @@ For multi-line text overlay, the line height can be automatically adjusted based
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-RichEditorAttribute-fallbackLineSpacing(enabled: Optional<boolean>): RichEditorAttribute--><!--Device-RichEditorAttribute-fallbackLineSpacing(enabled: Optional<boolean>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | Yes | Whether the line height is adaptive based on the actual text height.<br>The value true indicates that the line height is automatically adjusted based on the actual text height. The value false indicates that the line height is not automatically adjusted based on the actual text height. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enabled | Optional & lt;boolean & gt; | Yes |
 
 ## horizontalScrolling
 
@@ -503,19 +503,19 @@ Whether to enable horizontal scrolling when text is wider than the view. The def
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-RichEditorAttribute-horizontalScrolling(enabled: Optional<boolean>): RichEditorAttribute--><!--Device-RichEditorAttribute-horizontalScrolling(enabled: Optional<boolean>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | Yes | whether to enable horizontal scrolling. True means enable this feature, false means disable this feature. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enabled | Optional & lt;boolean & gt; | Yes |
 
 ## includeFontPadding
 
@@ -527,19 +527,19 @@ Sets whether to add a spacing between the first and last lines to avoid text tru
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-RichEditorAttribute-includeFontPadding(include: Optional<boolean>): RichEditorAttribute--><!--Device-RichEditorAttribute-includeFontPadding(include: Optional<boolean>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| include | Optional&lt;boolean&gt; | Yes | Whether to add a spacing between the first and last lines to avoid text truncation.<br>The value true indicates that the space between the first line and the last line is added. The value false indicates that the space between the first line and the last line is not added. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| include | Optional & lt;boolean & gt; | Yes |
 
 ## keyboardAppearance
 
@@ -551,19 +551,19 @@ Sets the keyboard appearance.
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-RichEditorAttribute-keyboardAppearance(appearance: Optional<KeyboardAppearance>): RichEditorAttribute--><!--Device-RichEditorAttribute-keyboardAppearance(appearance: Optional<KeyboardAppearance>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| appearance | Optional&lt;KeyboardAppearance&gt; | Yes | Keyboard appearance.<br>Default value: **KeyboardAppearance.NONE_IMMERSIVE |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| appearance | Optional & lt;KeyboardAppearance & gt; | Yes |
 
 ## maxLength
 
@@ -575,19 +575,19 @@ Sets the maximum length of the component content. When the total length of the c
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-RichEditorAttribute-maxLength(maxLength: Optional<number>): RichEditorAttribute--><!--Device-RichEditorAttribute-maxLength(maxLength: Optional<number>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| maxLength | Optional&lt;number&gt; | Yes | Maximum number of characters for text input.<br>Default value: **Infinity**, which means unlimited input. The **undefined** type is supported.<br>**NOTE：**<br>If this attribute is not set or is set to an invalid value, the default value is used. If a decimal number is specified, the integer part is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [maxLength](#maxlength) | Optional & lt;number & gt; | Yes |
 
 ## maxLines
 
@@ -599,19 +599,19 @@ Sets the maximum number of lines that the rich text can display. When **maxLines
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-RichEditorAttribute-maxLines(maxLines: Optional<number>): RichEditorAttribute--><!--Device-RichEditorAttribute-maxLines(maxLines: Optional<number>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| maxLines | Optional&lt;number&gt; | Yes | Maximum number of lines that the rich text can display. When **maxLines** is set, content that exceeds the specified number of lines can be scrolled to display. If both the component height and **maxLines** are set, the component height takes precedence.<br>Default value: **UINT32_MAX**, which means unlimited input. The **undefined** type is supported.<br>Value range: (0, UINT32_MAX] |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [maxLines](#maxlines) | Optional & lt;number & gt; | Yes |
 
 ## onCopy
 
@@ -623,19 +623,19 @@ Triggered during copy. You can use this method to override the system's default 
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorAttribute-onCopy(callback: Callback<CopyEvent>): RichEditorAttribute--><!--Device-RichEditorAttribute-onCopy(callback: Callback<CopyEvent>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | Callback&lt;[CopyEvent](arkts-arkui-copyevent-i.md)&gt; | Yes | User copy event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | Callback&lt;[CopyEvent](arkts-arkui-copyevent-i.md)&gt; | Yes |
 
 ## onCut
 
@@ -647,19 +647,19 @@ Triggered during cutting. You can use this method to override the system's defau
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorAttribute-onCut(callback: Callback<CutEvent>): RichEditorAttribute--><!--Device-RichEditorAttribute-onCut(callback: Callback<CutEvent>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | Callback&lt;[CutEvent](arkts-arkui-cutevent-i.md)&gt; | Yes | Defines a custom cut event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | Callback&lt;[CutEvent](arkts-arkui-cutevent-i.md)&gt; | Yes |
 
 ## onDeleteComplete
 
@@ -671,19 +671,19 @@ Triggered when content is deleted in the input method.This callback is not suppo
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RichEditorAttribute-onDeleteComplete(callback: Callback<void>): RichEditorAttribute--><!--Device-RichEditorAttribute-onDeleteComplete(callback: Callback<void>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; | Yes | Triggered when deletion in the input method is completed.<br>**Since:** 12 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | Callback & lt;void & gt; | Yes |
 
 ## onDidChange
 
@@ -700,19 +700,19 @@ Triggered after an addition or deletion operation is performed in the component.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorAttribute-onDidChange(callback: OnDidChangeCallback) : RichEditorAttribute--><!--Device-RichEditorAttribute-onDidChange(callback: OnDidChangeCallback) : RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | OnDidChangeCallback | Yes | The triggered function after content changed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [OnDidChangeCallback](../arkts-apis/arkts-arkui-ondidchangecallback-t.md) | Yes |
 
 ## onDidIMEInput
 
@@ -729,19 +729,19 @@ Triggered when text input in the input method is complete.This callback is not s
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorAttribute-onDidIMEInput(callback: Callback<TextRange>): RichEditorAttribute--><!--Device-RichEditorAttribute-onDidIMEInput(callback: Callback<TextRange>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | Callback&lt;TextRange&gt; | Yes | TextRange** indicates the text range for the current input.<br>Callback invoked when text input in the input method is complete. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | Callback & lt;TextRange & gt; | Yes |
 
 ## onEditingChange
 
@@ -753,19 +753,19 @@ Triggered when the content editing state in the component changes.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorAttribute-onEditingChange(callback: Callback<boolean>): RichEditorAttribute--><!--Device-RichEditorAttribute-onEditingChange(callback: Callback<boolean>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | Callback&lt;boolean&gt; | Yes | Callback invoked when the editing state of all content in the component changes. The value **true** indicates the editing state, and **false** indicates the non-editing state. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | Callback & lt;boolean & gt; | Yes |
 
 ## onIMEInputComplete
 
@@ -777,19 +777,19 @@ Triggered when text input in the input method is complete.This callback can retu
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RichEditorAttribute-onIMEInputComplete(callback: Callback<RichEditorTextSpanResult>): RichEditorAttribute--><!--Device-RichEditorAttribute-onIMEInputComplete(callback: Callback<RichEditorTextSpanResult>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | Callback&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)&gt; | Yes | [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md) indicates the text span information after text input is complete.<br>Callback invoked when text input in the input method is complete.<br>**Since:** 12 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | Callback&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)&gt; | Yes |
 
 ## onPaste
 
@@ -801,19 +801,19 @@ Triggered when a paste operation is performed. You can use this API to override 
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorAttribute-onPaste(callback: PasteEventCallback): RichEditorAttribute--><!--Device-RichEditorAttribute-onPaste(callback: PasteEventCallback): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [PasteEventCallback](arkts-arkui-pasteeventcallback-t.md) | Yes | Callback used to subscribe to the pasted text content.<br>**Since:** 12 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [PasteEventCallback](arkts-arkui-pasteeventcallback-t.md) | Yes |
 
 ## onReady
 
@@ -825,19 +825,19 @@ Triggered after the **RichEditor** component is initialized.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RichEditorAttribute-onReady(callback: Callback<void>): RichEditorAttribute--><!--Device-RichEditorAttribute-onReady(callback: Callback<void>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; | Yes | Triggered when initialization of the **RichEditor** component is complete.<br>**Since:** 12 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | Callback & lt;void & gt; | Yes |
 
 ## onSelect
 
@@ -849,19 +849,19 @@ Invoked when content is selected.If a mouse device is used for selection, this c
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RichEditorAttribute-onSelect(callback: Callback<RichEditorSelection>): RichEditorAttribute--><!--Device-RichEditorAttribute-onSelect(callback: Callback<RichEditorSelection>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | Callback&lt;[RichEditorSelection](arkts-arkui-richeditorselection-i.md)&gt; | Yes | [RichEditorSelection](arkts-arkui-richeditorselection-i.md) indicates information about all the selected spans.<br>Callback invoked when content is selected.<br>**Since:** 12 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | Callback&lt;[RichEditorSelection](arkts-arkui-richeditorselection-i.md)&gt; | Yes |
 
 ## onSelectionChange
 
@@ -873,19 +873,19 @@ Triggered when the selection area or caret position changes in the editing state
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorAttribute-onSelectionChange(callback: Callback<RichEditorRange>): RichEditorAttribute--><!--Device-RichEditorAttribute-onSelectionChange(callback: Callback<RichEditorRange>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | Callback&lt;[RichEditorRange](arkts-arkui-richeditorrange-i.md)&gt; | Yes | [RichEditorRange](arkts-arkui-richeditorrange-i.md) indicates the start and end positions of the content selection area.<br>Callback invoked when the content selection area changes or the caret position changes in the editing state. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | Callback&lt;[RichEditorRange](arkts-arkui-richeditorrange-i.md)&gt; | Yes |
 
 ## onSubmit
 
@@ -897,19 +897,19 @@ Triggered when the Enter key on the soft keyboard is pressed.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorAttribute-onSubmit(callback: SubmitCallback): RichEditorAttribute--><!--Device-RichEditorAttribute-onSubmit(callback: SubmitCallback): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [SubmitCallback](arkts-arkui-submitcallback-t.md) | Yes | Callback used to return the subscription event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [SubmitCallback](arkts-arkui-submitcallback-t.md) | Yes |
 
 ## onWillAttachIME
 
@@ -921,19 +921,19 @@ Triggers a callback before a component is bound to an input method.Call the [set
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-RichEditorAttribute-onWillAttachIME(callback: Callback<IMEClient> | undefined): RichEditorAttribute--><!--Device-RichEditorAttribute-onWillAttachIME(callback: Callback<IMEClient> | undefined): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | Callback&lt;IMEClient&gt; \| undefined | Yes | Callback triggered before the component is bound to an input method.<br>If the value is undefined, the bound callback event is cleared. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | Callback & lt;IMEClient & gt; \ | undefined | Yes |
 
 ## onWillChange
 
@@ -950,19 +950,19 @@ Invoked when any addition or deletion operation is about to be performed in the 
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorAttribute-onWillChange(callback: Callback<RichEditorChangeValue, boolean>) : RichEditorAttribute--><!--Device-RichEditorAttribute-onWillChange(callback: Callback<RichEditorChangeValue, boolean>) : RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | Callback&lt;[RichEditorChangeValue](arkts-arkui-richeditorchangevalue-i.md), boolean&gt; | Yes | The triggered function before text content is about to change. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | Callback&lt;[RichEditorChangeValue](arkts-arkui-richeditorchangevalue-i.md), boolean&gt; | Yes |
 
 ## orphanCharOptimization
 
@@ -974,17 +974,17 @@ Whether to avoid an orphan word on the last line of the paragraph.
 
 **Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-RichEditorAttribute-orphanCharOptimization(enabled: Optional<boolean>): RichEditorAttribute--><!--Device-RichEditorAttribute-orphanCharOptimization(enabled: Optional<boolean>): RichEditorAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | Yes | The default value is false, indicates the flag whether to enable this feature. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enabled | Optional & lt;boolean & gt; | Yes |
 
 ## placeholder
 
@@ -1001,20 +1001,20 @@ Sets the placeholder text, which is displayed when there is no input.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorAttribute-placeholder(value: ResourceStr, style?: PlaceholderStyle): RichEditorAttribute--><!--Device-RichEditorAttribute-placeholder(value: ResourceStr, style?: PlaceholderStyle): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | ResourceStr | Yes | Placeholder text. |
-| style | [PlaceholderStyle](arkts-arkui-placeholderstyle-i.md) | No | Style of the placeholder text.<br>By default, the style follows the theme. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
+| style | [PlaceholderStyle](arkts-arkui-placeholderstyle-i.md) | No |
 
 ## punctuationOverflow
 
@@ -1026,19 +1026,19 @@ Whether to enable punctuation overflow at line ends.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-RichEditorAttribute-punctuationOverflow(enabled: Optional<boolean>): RichEditorAttribute--><!--Device-RichEditorAttribute-punctuationOverflow(enabled: Optional<boolean>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | Yes | Whether to enable the feature, the default value is false. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enabled | Optional & lt;boolean & gt; | Yes |
 
 ## scrollBarColor
 
@@ -1050,19 +1050,19 @@ Sets the color of the scrollbar.
 
 **Since:** 21
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
-
-<!--Device-RichEditorAttribute-scrollBarColor(color: Optional<ColorMetrics>): RichEditorAttribute--><!--Device-RichEditorAttribute-scrollBarColor(color: Optional<ColorMetrics>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| color | Optional&lt;ColorMetrics&gt; | Yes | Color of the scrollbar.<br>Default value: **'#66182431'**, displayed as gray.<br>Note: If an abnormal value is set, the default value is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| color | Optional & lt;ColorMetrics & gt; | Yes |
 
 ## selectedBackgroundColor
 
@@ -1074,19 +1074,19 @@ Sets the background color of the selected text. If the opacity is not set, a 20%
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorAttribute-selectedBackgroundColor(value: ResourceColor): RichEditorAttribute--><!--Device-RichEditorAttribute-selectedBackgroundColor(value: ResourceColor): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | ResourceColor | Yes | Background color of the selected text.<br>By default, a 20% opacity is applied. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
 
 ## selectedDragPreviewStyle
 
@@ -1098,19 +1098,19 @@ Sets the drag and view style.
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-RichEditorAttribute-selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined): RichEditorAttribute--><!--Device-RichEditorAttribute-selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | SelectedDragPreviewStyle \| undefined | Yes | Drag and preview style. If this attribute is set to undefined, the style will be reset. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | SelectedDragPreviewStyle \| undefined | Yes |
 
 ## singleLine
 
@@ -1126,19 +1126,19 @@ Sets whether to enable the single-line mode. If this interface is not used, the 
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-RichEditorAttribute-singleLine(isEnable: boolean | undefined): RichEditorAttribute--><!--Device-RichEditorAttribute-singleLine(isEnable: boolean | undefined): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isEnable | boolean \| undefined | Yes | Whether to enable the single-line mode.<br>The value true indicates that the single-line mode is enabled, and the value false indicates that the single-line mode is disabled.<br>If this attribute is set to undefined or null, the value false is used and the single-line mode is not enabled. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| isEnable | boolean \| undefined | Yes |
 
 ## stopBackPress
 
@@ -1150,19 +1150,19 @@ Sets whether to prevent the back button press from being propagated to other com
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-RichEditorAttribute-stopBackPress(isStopped: Optional<boolean>): RichEditorAttribute--><!--Device-RichEditorAttribute-stopBackPress(isStopped: Optional<boolean>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isStopped | Optional&lt;boolean&gt; | Yes | Whether to prevent the back button press from being propagated to other components or applications.<br>**true** to prevent, **false** otherwise.<br>Default value: **true**. If an invalid value is provided, the default value is used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| isStopped | Optional & lt;boolean & gt; | Yes |
 
 ## undoStyle
 
@@ -1174,17 +1174,16 @@ Sets whether to retain the original content style when undoing or redoing an act
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-RichEditorAttribute-undoStyle(style: Optional<UndoStyle>): RichEditorAttribute--><!--Device-RichEditorAttribute-undoStyle(style: Optional<UndoStyle>): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| style | Optional&lt;[UndoStyle](arkts-arkui-undostyle-e.md)&gt; | Yes | Whether to retain the original style when undoing an operation. Default value: **UndoStyle.CLEAR_STYLE**. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| style | Optional&lt;[UndoStyle](arkts-arkui-undostyle-e.md)&gt; | Yes |

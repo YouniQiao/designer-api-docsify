@@ -2,9 +2,9 @@
 
 枚举，空间音频渲染场景类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-audio-enum AudioSpatializationSceneType--><!--Device-audio-enum AudioSpatializationSceneType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -18,9 +18,9 @@ DEFAULT = 0
 
 空间音频默认渲染场景。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AudioSpatializationSceneType-DEFAULT = 0--><!--Device-AudioSpatializationSceneType-DEFAULT = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -34,9 +34,9 @@ MUSIC = 1
 
 空间音频音乐渲染场景。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AudioSpatializationSceneType-MUSIC = 1--><!--Device-AudioSpatializationSceneType-MUSIC = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -50,9 +50,9 @@ MOVIE = 2
 
 空间音频电影渲染场景。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AudioSpatializationSceneType-MOVIE = 2--><!--Device-AudioSpatializationSceneType-MOVIE = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -66,11 +66,10 @@ AUDIOBOOK = 3
 
 空间音频有声读物渲染场景。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AudioSpatializationSceneType-AUDIOBOOK = 3--><!--Device-AudioSpatializationSceneType-AUDIOBOOK = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
-

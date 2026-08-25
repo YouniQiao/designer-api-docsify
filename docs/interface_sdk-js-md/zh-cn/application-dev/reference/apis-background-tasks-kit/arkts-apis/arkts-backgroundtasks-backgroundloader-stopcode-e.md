@@ -4,7 +4,7 @@
 
 **起始版本：** 26.1.0
 
-<!--Device-backgroundLoader-export enum StopCode--><!--Device-backgroundLoader-export enum StopCode-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -18,9 +18,9 @@ SUCCESS = 0
 
 **起始版本：** 26.1.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
-<!--Device-StopCode-SUCCESS = 0--><!--Device-StopCode-SUCCESS = 0-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -34,9 +34,9 @@ SYSTEM_ERROR = 1
 
 **起始版本：** 26.1.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
-<!--Device-StopCode-SYSTEM_ERROR = 1--><!--Device-StopCode-SYSTEM_ERROR = 1-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -50,9 +50,9 @@ PERCEPTIBLE_ERROR = 2
 
 **起始版本：** 26.1.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
-<!--Device-StopCode-PERCEPTIBLE_ERROR = 2--><!--Device-StopCode-PERCEPTIBLE_ERROR = 2-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -66,9 +66,9 @@ TIMEOUT_ERROR = 3
 
 **起始版本：** 26.1.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
-<!--Device-StopCode-TIMEOUT_ERROR = 3--><!--Device-StopCode-TIMEOUT_ERROR = 3-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -82,9 +82,8 @@ EXECUTE_ERROR = 4
 
 **起始版本：** 26.1.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-StopCode-EXECUTE_ERROR = 4--><!--Device-StopCode-EXECUTE_ERROR = 4-End-->
-
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
-

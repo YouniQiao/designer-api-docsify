@@ -14,11 +14,11 @@ function startRtt(callId: int, type: ImsRttMode): Promise<void>
 
 Start rtt.
 
-**Since:** 23
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PLACE_CALL
-
-<!--Device-call-function startRtt(callId: int, type: ImsRttMode): Promise<void>--><!--Device-call-function startRtt(callId: int, type: ImsRttMode): Promise<void>-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -26,25 +26,24 @@ Start rtt.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callId | int | Yes | Indicates the identifier of the call. |
-| type | [ImsRttMode](arkts-telephony-call-imsrttmode-e-sys.md) | Yes | Indicates the type of operation. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| type | [ImsRttMode](arkts-telephony-call-imsrttmode-e-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | The promise returned by the startRtt. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| 8400001 | Invalid parameter value. |
-| 8400002 | Operation failed. Cannot connect to service. |
-| 8400003 | System internal error. |
-| 8400999 | Unknown error code. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 8400001 |
+| 8400002 |
+| 8400003 |
+| 8400999 |

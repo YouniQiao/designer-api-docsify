@@ -2,9 +2,9 @@
 
 Enumerates the **DefaultChangeUri** subtypes.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-photoAccessHelper-enum DefaultChangeUri--><!--Device-photoAccessHelper-enum DefaultChangeUri-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -16,11 +16,10 @@ DEFAULT_HIDDEN_ALBUM_URI = 'file://media/HiddenAlbum'
 
 URI of an album in the hidden albums that are displayed by album, that is, the URI of an album with hidden files. Such albums do not include the preset hidden album and the albums in the trash. This URI is used to subscribe to the change notifications of the hidden albums displayed by album.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DefaultChangeUri-DEFAULT_HIDDEN_ALBUM_URI = 'file://media/HiddenAlbum'--><!--Device-DefaultChangeUri-DEFAULT_HIDDEN_ALBUM_URI = 'file://media/HiddenAlbum'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

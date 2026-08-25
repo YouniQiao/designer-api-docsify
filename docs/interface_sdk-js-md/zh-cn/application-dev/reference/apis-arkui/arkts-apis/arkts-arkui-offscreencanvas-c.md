@@ -10,7 +10,7 @@ OffscreenCanvas组件用于绘制自定义图形。使用[Canvas](arkts-arkui-ca
 
 **起始版本：** 8
 
-<!--Device-unnamed-declare class OffscreenCanvas--><!--Device-unnamed-declare class OffscreenCanvas-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,20 +29,20 @@ constructor(width: number, height: number)
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-OffscreenCanvas-constructor(width: number, height: number)--><!--Device-OffscreenCanvas-constructor(width: number, height: number)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| width | number | 是 | OffscreenCanvas组件的宽度。 <br>异常值NaN和Infinity按无效值处理。 <br>默认单位为vp。 |
-| height | number | 是 | OffscreenCanvas组件的高度。 <br>异常值NaN和Infinity按无效值处理。 <br>默认单位为vp。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [width](#width) | number | 是 |
+| [height](#height) | number | 是 |
 
 **示例**
 
@@ -95,23 +95,23 @@ constructor(width: number, height: number, unit: LengthMetricsUnit)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-OffscreenCanvas-constructor(width: number, height: number, unit: LengthMetricsUnit)--><!--Device-OffscreenCanvas-constructor(width: number, height: number, unit: LengthMetricsUnit)-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| width | number | 是 | OffscreenCanvas组件的宽度。 <br>异常值NaN和Infinity按无效值处理。 <br>默认单位为vp。 |
-| height | number | 是 | OffscreenCanvas组件的高度。 <br>异常值NaN和Infinity按无效值处理。 <br>默认单位为vp。 |
-| unit | LengthMetricsUnit | 是 | 用来配置OffscreenCanvas对象的单位模式，配置后无法动态更改， 配置方法同 [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。 <br>异常值NaN和Infinity按默认值处理。 <br>默认值：DEFAULT。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [width](#width) | number | 是 |
+| [height](#height) | number | 是 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 |
 
 **示例**
 
@@ -127,26 +127,26 @@ getContext(contextType: "2d", options?: RenderingContextSettings): OffscreenCanv
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-OffscreenCanvas-getContext(contextType: "2d", options?: RenderingContextSettings): OffscreenCanvasRenderingContext2D--><!--Device-OffscreenCanvas-getContext(contextType: "2d", options?: RenderingContextSettings): OffscreenCanvasRenderingContext2D-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| contextType | "2d" | 是 | OffscreenCanvas组件绘图上下文的类型，当前仅支持"2d"类型。 <br>"2d"：创建一个表示二维渲染上下文的OffscreenCanvasRenderingContext2D对象。 <br>异常值undefined和null按无效值处理，当前接口返回undefined。 |
-| options | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的参数， 见RenderingContextSettings。 <br>异常值undefined和null按RenderingContextSettings的默认值处理。 <br>默认值：null。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| contextType | "2d" | 是 |
+| options | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md) | OffscreenCanvas组件的绘图上下文。 如果getContext方法的入参contextType为"2d"以外类型（包括null或者undefined），返回undefined， 使用前应判断返回值是否为undefined。 |
+| 类型 |
+| --- |
+| [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md) |
 
 **示例**
 
@@ -207,19 +207,19 @@ transferToImageBitmap(): ImageBitmap
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-OffscreenCanvas-transferToImageBitmap(): ImageBitmap--><!--Device-OffscreenCanvas-transferToImageBitmap(): ImageBitmap-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageBitmap](arkts-arkui-imagebitmap-c.md) | 创建的ImageBitmap对象。 |
+| 类型 |
+| --- |
+| [ImageBitmap](arkts-arkui-imagebitmap-c.md) |
 
 **示例**
 
@@ -304,11 +304,11 @@ OffscreenCanvas组件的高度。 <br>默认单位为vp。
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-OffscreenCanvas-height: number--><!--Device-OffscreenCanvas-height: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -324,11 +324,10 @@ OffscreenCanvas组件的宽度。 <br>默认单位为vp。
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-OffscreenCanvas-width: number--><!--Device-OffscreenCanvas-width: number-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

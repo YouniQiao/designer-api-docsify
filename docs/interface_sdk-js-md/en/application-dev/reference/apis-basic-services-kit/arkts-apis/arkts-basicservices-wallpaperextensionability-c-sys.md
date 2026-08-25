@@ -4,9 +4,9 @@ class of wallpaper extension ability.
 
 **Since:** 10
 
-**Deprecated since:** 23
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-unnamed-declare class WallpaperExtensionAbility--><!--Device-unnamed-declare class WallpaperExtensionAbility-End-->
+**Deprecated since:** 23
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -28,11 +28,11 @@ Called once to initialize the extension ability.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WallpaperExtensionAbility-onCreate(want: object): void--><!--Device-WallpaperExtensionAbility-onCreate(want: object): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -40,9 +40,9 @@ Called once to initialize the extension ability.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| want | object | Yes | Indicates connection information about the wallpaper extension ability. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| want | object | Yes |
 
 **Examples**
 
@@ -67,11 +67,11 @@ Called once to destroy the extension ability.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WallpaperExtensionAbility-onDestroy(): void--><!--Device-WallpaperExtensionAbility-onDestroy(): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -99,11 +99,11 @@ The onWallpaperChange callback is triggered when the user modifies the wallpaper
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WallpaperExtensionAbility-onWallpaperChange(wallpaperType: number): void--><!--Device-WallpaperExtensionAbility-onWallpaperChange(wallpaperType: number): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -111,9 +111,9 @@ The onWallpaperChange callback is triggered when the user modifies the wallpaper
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| wallpaperType | number | Yes | Indicates the wallpaper type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| wallpaperType | number | Yes |
 
 **Examples**
 
@@ -127,4 +127,3 @@ class WallpaperExt extends WallpaperExtensionAbility {
     }
 }
 ```
-

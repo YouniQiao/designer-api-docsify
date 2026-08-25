@@ -10,13 +10,12 @@ import { DriverExtensionAbility, DriverExtensionContext } from '@kit.DriverDevel
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [DriverExtensionAbility](arkts-driverdevelopment-app-ability-driverextensionability-driverextensionability-c.md) | The **DriverExtensionAbility** module provides the ExtensionAbility related to drivers. It provides lifecycle callbacks to be invoked when a driver is created, destroyed, connected, or disconnected. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DriverExtensionAbility](arkts-driverdevelopment-app-ability-driverextensionability-driverextensionability-c.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [DriverExtensionContext](arkts-driverdevelopment-driverextensioncontext-t.md) | Define a DriverExtensionContext for store context. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DriverExtensionContext](arkts-driverdevelopment-driverextensioncontext-t.md) |

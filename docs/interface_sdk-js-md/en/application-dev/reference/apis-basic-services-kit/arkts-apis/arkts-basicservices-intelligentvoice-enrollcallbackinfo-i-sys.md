@@ -2,9 +2,9 @@
 
 Describes enroll callback information.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-intelligentVoice-interface EnrollCallbackInfo--><!--Device-intelligentVoice-interface EnrollCallbackInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -26,9 +26,9 @@ Describes enroll event context.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-EnrollCallbackInfo-context: string--><!--Device-EnrollCallbackInfo-context: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -44,11 +44,10 @@ Result.
 
 **Type:** [EnrollResult](arkts-basicservices-intelligentvoice-enrollresult-e-sys.md)
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-EnrollCallbackInfo-result: EnrollResult--><!--Device-EnrollCallbackInfo-result: EnrollResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
-

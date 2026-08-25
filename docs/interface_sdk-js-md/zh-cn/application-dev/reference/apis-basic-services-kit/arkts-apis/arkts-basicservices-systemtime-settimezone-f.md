@@ -16,28 +16,28 @@ function setTimezone(timezone: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [setTimezone](arkts-basicservices-systemdatetime-settimezone-f-sys.md)
 
 **需要权限：** ohos.permission.SET_TIME_ZONE
 
-<!--Device-systemTime-function setTimezone(timezone: string, callback: AsyncCallback<void>): void--><!--Device-systemTime-function setTimezone(timezone: string, callback: AsyncCallback<void>): void-End-->
-
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| timezone | string | 是 | 系统时区。具体可见 支持的系统时区 。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| timezone | string | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| -1 | Parameter check failed, permission denied, or system error. |
+| 错误码ID |
+| --- |
+| -1 |
 
 **示例**
 
@@ -84,35 +84,34 @@ function setTimezone(timezone: string): Promise<void>
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [setTimezone](arkts-basicservices-systemdatetime-settimezone-f-sys.md)
 
 **需要权限：** ohos.permission.SET_TIME_ZONE
 
-<!--Device-systemTime-function setTimezone(timezone: string): Promise<void>--><!--Device-systemTime-function setTimezone(timezone: string): Promise<void>-End-->
-
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| timezone | string | 是 | 系统时区。具体可见 支持的系统时区 。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| timezone | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| -1 | Parameter check failed, permission denied, or system error. |
+| 错误码ID |
+| --- |
+| -1 |
 
 **示例**
 
 参见 [setTimezone](#settimezone)
-

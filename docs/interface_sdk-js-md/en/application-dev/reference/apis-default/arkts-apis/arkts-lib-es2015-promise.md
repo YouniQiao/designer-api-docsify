@@ -9,7 +9,6 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [PromiseConstructor](arkts-lib-es2015-promise-promiseconstructor-i.md) |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PromiseConstructor](arkts-lib-es2015-promise-promiseconstructor-i.md) |

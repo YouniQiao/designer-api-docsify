@@ -4,7 +4,7 @@ Records the number of affected data rows and the result set.
 
 **Since:** 23
 
-<!--Device-relationalStore-interface Result--><!--Device-relationalStore-interface Result-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -22,13 +22,13 @@ readonly changed: long
 
 Number of affected rows.@readonly
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-Result-readonly changed: long--><!--Device-Result-readonly changed: long-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -44,9 +44,8 @@ Result set of the affected data. Defaults to 1,024 rows of data, with a maximum 
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Result-readonly resultSet: LiteResultSet--><!--Device-Result-readonly resultSet: LiteResultSet-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-

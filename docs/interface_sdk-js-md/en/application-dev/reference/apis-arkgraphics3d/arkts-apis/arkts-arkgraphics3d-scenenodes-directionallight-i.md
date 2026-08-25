@@ -4,9 +4,8 @@ Directional light, which inherits from Light.@extends Light @interface Direction
 
 **Inheritance/Implementation:** DirectionalLight extends [Light](arkts-arkgraphics3d-scenenodes-light-i.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface DirectionalLight--><!--Device-unnamed-export interface DirectionalLight-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

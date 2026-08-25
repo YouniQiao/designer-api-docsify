@@ -16,9 +16,9 @@ function getEthernetDeviceInfos(): Promise<Array<EthernetDeviceInfos>>
 
 **起始版本：** 20
 
-**需要权限：** ohos.permission.GET_NETWORK_INFO
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-ethernet-function getEthernetDeviceInfos(): Promise<Array<EthernetDeviceInfos>>--><!--Device-ethernet-function getEthernetDeviceInfos(): Promise<Array<EthernetDeviceInfos>>-End-->
+**需要权限：** ohos.permission.GET_NETWORK_INFO
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -26,17 +26,17 @@ function getEthernetDeviceInfos(): Promise<Array<EthernetDeviceInfos>>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[EthernetDeviceInfos](arkts-network-ethernet-ethernetdeviceinfos-i-sys.md)&gt;&gt; | Promise对象，返回本次执行结果。成功返回以太网设备信息列表，失败返回对应错误码。 |
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;[EthernetDeviceInfos](arkts-network-ethernet-ethernetdeviceinfos-i-sys.md)&gt;&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [2201005](../errorcode-net-ethernet.md#2201005-设备信息不存在) | Device information does not exist. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [2201005](../errorcode-net-ethernet.md#2201005-设备信息不存在) |
 
 **示例**
 
@@ -53,4 +53,3 @@ ethernet.getEthernetDeviceInfos().then((data: Array<ethernet.EthernetDeviceInfos
   console.error("getEthernetDeviceInfos err = " + err.code);
 });
 ```
-

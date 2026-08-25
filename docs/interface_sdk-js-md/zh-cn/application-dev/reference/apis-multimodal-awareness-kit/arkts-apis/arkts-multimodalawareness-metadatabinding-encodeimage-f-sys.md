@@ -14,9 +14,9 @@ function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.
 
 在图片中加入信息。通过特定的编码算法将metadata信息嵌入到图片中，编码过程对图片的视觉呈现影响极小，嵌入的信息可通过decodeImage接口解析。可用于防伪、版权保护等场景。 <br>使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-metadataBinding-function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.PixelMap>--><!--Device-metadataBinding-function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.PixelMap>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.MetadataBinding
 
@@ -24,22 +24,21 @@ function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| srcImage | image.PixelMap | 是 | 待编码的原始图片，用于嵌入metadata信息。 |
-| metadata | string | 是 | 嵌入的信息。字符串编码格式建议使用UTF-8，长度不应超过128Bytes，且避免包含不可打印字符。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| srcImage | image.PixelMap | 是 |
+| metadata | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象。返回嵌入信息的图片。 |
+| 类型 |
+| --- |
+| Promise & lt;image.PixelMap & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission check failed. A non-system application uses the system API. |
-| [32100001](../errorcode-metadataBinding.md#32100001-文件创建失败) | Internal handling failed. |
-| [32100002](../errorcode-metadataBinding.md#32100002-编码程序执行失败) | Encode process fail. Possible causes: <br>1. Image processing error. <br>2. Channel coding error. |
-
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [32100001](../errorcode-metadataBinding.md#32100001-文件创建失败) |
+| [32100002](../errorcode-metadataBinding.md#32100002-编码程序执行失败) |

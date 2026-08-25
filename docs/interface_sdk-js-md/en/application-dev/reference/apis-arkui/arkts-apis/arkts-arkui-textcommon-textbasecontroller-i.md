@@ -4,9 +4,7 @@ Define the text selection controller.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare interface TextBaseController--><!--Device-unnamed-export declare interface TextBaseController-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +18,9 @@ Close the select menu when menu is on.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TextBaseController-closeSelectionMenu(): void--><!--Device-TextBaseController-closeSelectionMenu(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,19 +34,17 @@ Get LayoutManager.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TextBaseController-getLayoutManager(): LayoutManager | undefined--><!--Device-TextBaseController-getLayoutManager(): LayoutManager | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [LayoutManager](arkts-arkui-textcommon-layoutmanager-i.md) \| undefined | Return the LayoutManager. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [LayoutManager](arkts-arkui-textcommon-layoutmanager-i.md) \| undefined |
 
 ## setSelection
 
@@ -62,19 +56,16 @@ Set selection to select a range of content.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TextBaseController-setSelection(selectionStart: int, selectionEnd: int, options?: SelectionOptions): void--><!--Device-TextBaseController-setSelection(selectionStart: int, selectionEnd: int, options?: SelectionOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| selectionStart | int | Yes | The start position of the selected text. |
-| selectionEnd | int | Yes | The end position of the selected text. |
-| options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | No | Indicates the options of selection. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| selectionStart | int | Yes |
+| selectionEnd | int | Yes |
+| options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | No |

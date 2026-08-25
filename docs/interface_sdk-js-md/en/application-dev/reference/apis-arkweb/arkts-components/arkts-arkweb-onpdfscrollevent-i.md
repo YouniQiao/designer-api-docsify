@@ -4,7 +4,7 @@ Defines the callback function triggered when the PDF page is scrolled to the bot
 
 **Since:** 20
 
-<!--Device-unnamed-declare interface OnPdfScrollEvent--><!--Device-unnamed-declare interface OnPdfScrollEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -25,7 +25,6 @@ URL of the page.
 
 **Since:** 20
 
-<!--Device-OnPdfScrollEvent-url:string--><!--Device-OnPdfScrollEvent-url:string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

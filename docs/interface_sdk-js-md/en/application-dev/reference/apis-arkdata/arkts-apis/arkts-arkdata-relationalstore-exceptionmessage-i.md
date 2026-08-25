@@ -2,9 +2,9 @@
 
 Represents an exception message about the SQL statement executed by the database.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-relationalStore-interface ExceptionMessage--><!--Device-relationalStore-interface ExceptionMessage-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -22,11 +22,11 @@ code: int
 
 Error code returned by the executed SQL statement. For details about the values and meanings, see [SQLite Error Codes](https://www.sqlite.org/rescode.html).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ExceptionMessage-code: int--><!--Device-ExceptionMessage-code: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -40,9 +40,9 @@ Exception message returned by the executed SQL statement.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ExceptionMessage-message: string--><!--Device-ExceptionMessage-message: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -56,9 +56,8 @@ SQL statement that reports the error.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ExceptionMessage-sql: string--><!--Device-ExceptionMessage-sql: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-

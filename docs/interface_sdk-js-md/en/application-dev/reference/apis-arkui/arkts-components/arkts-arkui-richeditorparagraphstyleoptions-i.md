@@ -9,7 +9,7 @@ Defines the paragraph style options.Inherits [RichEditorRange](arkts-arkui-riche
 
 **Since:** 11
 
-<!--Device-unnamed-declare interface RichEditorParagraphStyleOptions--><!--Device-unnamed-declare interface RichEditorParagraphStyleOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,10 @@ Paragraph style.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-RichEditorParagraphStyleOptions-style: RichEditorParagraphStyle--><!--Device-RichEditorParagraphStyleOptions-style: RichEditorParagraphStyle-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

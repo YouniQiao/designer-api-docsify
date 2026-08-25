@@ -17,19 +17,19 @@ use new function to set the value. Anonymous Object Rectification.
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-EllipseInterface-new (options?: EllipseOptions): EllipseAttribute--><!--Device-EllipseInterface-new (options?: EllipseOptions): EllipseAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | 否 | ellipse options |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | 否 |
 
 ## Ellipse
 
@@ -41,24 +41,23 @@ Ellipse(options?: EllipseOptions)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-EllipseInterface-(options?: EllipseOptions): EllipseAttribute--><!--Device-EllipseInterface-(options?: EllipseOptions): EllipseAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | 否 | 椭圆绘制配置选项，包含宽度和高度设置。不传入时使用默认尺寸（宽度和高度均为0）。 <br>异常值undefined和null按照无效值处理，本次设置不生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | 否 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-
+| 名称 |
+| --- |

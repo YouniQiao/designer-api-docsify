@@ -1,11 +1,11 @@
-# param
+# param(Application Event Logging)
 
 Provides parameter name constants.  
-| Name | Type | Read Only | Description | | ------------------------------- | ------ | ------ | ------------------ | | USER_ID | string | Yes| Custom user ID. | | DISTRIBUTED_SERVICE_NAME | string | Yes| Distributed service name. | | DISTRIBUTED_SERVICE_INSTANCE_ID | string | Yes| Distributed service instance ID.|
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Read Only | Description | | ------------------------------- | ------ | ------ | ------------------ | | USER_ID | string | Yes| Custom user ID. | | DISTRIBUTED_SERVICE_NAME | string | Yes| Distributed service name. | | DISTRIBUTED_SERVICE_INSTANCE_ID | string | Yes|
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-hiAppEvent-namespace param--><!--Device-hiAppEvent-namespace param-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -19,9 +19,8 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 
 ### Constants
 
-| Name | Description |
-| --- | --- |
-| [USER_ID](arkts-performanceanalysis-param-con.md#user_id) | Custom user ID. |
-| [DISTRIBUTED_SERVICE_NAME](arkts-performanceanalysis-param-con.md#distributed_service_name) | Distributed service name. |
-| [DISTRIBUTED_SERVICE_INSTANCE_ID](arkts-performanceanalysis-param-con.md#distributed_service_instance_id) | Distributed service instance ID. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [USER_ID(Application Event Logging)](arkts-performanceanalysis-param-con.md#user_id) |
+| [DISTRIBUTED_SERVICE_NAME(Application Event Logging)](arkts-performanceanalysis-param-con.md#distributed_service_name) |
+| [DISTRIBUTED_SERVICE_INSTANCE_ID(Application Event Logging)](arkts-performanceanalysis-param-con.md#distributed_service_instance_id) |

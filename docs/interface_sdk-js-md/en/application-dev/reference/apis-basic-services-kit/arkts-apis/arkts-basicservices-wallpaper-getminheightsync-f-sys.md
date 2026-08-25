@@ -14,9 +14,9 @@ function getMinHeightSync(): int
 
 Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpaper has been set.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-wallpaper-function getMinHeightSync(): int--><!--Device-wallpaper-function getMinHeightSync(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -24,15 +24,15 @@ Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpape
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | the number returned by the function. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -44,4 +44,3 @@ try {
   console.error(`failed to getMinHeightSync. Code: ${error.code}, Message: ${error.message}`);
 }
 ```
-

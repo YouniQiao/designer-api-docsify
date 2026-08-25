@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [RatingModifier](arkts-arkui-ratingmodifier-c.md) | Defines Rating Modifier@extends RatingAttribute @implements AttributeModifier&lt;RatingAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [RatingModifier](arkts-arkui-ratingmodifier-c.md) |

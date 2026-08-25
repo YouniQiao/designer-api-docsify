@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-concurrency-export class MessageHandler--><!--Device-concurrency-export class MessageHandler-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,20 +23,18 @@ constructor(handler: (message: concurrency.Message) => void, worker: EAWorker | 
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-MessageHandler-constructor(handler: (message: concurrency.Message) => void, worker: EAWorker | undefined = EAWorker.current())--><!--Device-MessageHandler-constructor(handler: (message: concurrency.Message) => void, worker: EAWorker | undefined = EAWorker.current())-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| handler | (message: concurrency.Message) =&gt; void | 是 | 处理消息的函数。 |
-| worker | [EAWorker](arkts-arkts-eaworker-c.md) \| undefined | 是 | 与该处理器关联的Worker，默认为当前线程的Worker。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| handler | (message: concurrency.Message) = & gt; void | 是 |
+| worker | [EAWorker](arkts-arkts-eaworker-c.md) \| undefined | 是 |
 
 ## getWorker
 
@@ -50,19 +46,17 @@ getWorker(): EAWorker
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-MessageHandler-getWorker(): EAWorker--><!--Device-MessageHandler-getWorker(): EAWorker-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [EAWorker](arkts-arkts-eaworker-c.md) | 关联的Worker实例。 |
+| 类型 |
+| --- |
+| [EAWorker](arkts-arkts-eaworker-c.md) |
 
 ## hasCallbacks
 
@@ -74,25 +68,23 @@ hasCallbacks(callback: () => void): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-MessageHandler-hasCallbacks(callback: () => void): boolean--><!--Device-MessageHandler-hasCallbacks(callback: () => void): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | () =&gt; void | 是 | 要检查的回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | () = & gt; void | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 存在则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## hasMessages
 
@@ -104,25 +96,23 @@ hasMessages(what: int): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-MessageHandler-hasMessages(what: int): boolean--><!--Device-MessageHandler-hasMessages(what: int): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| what | int | 是 | 要检查的消息标识符。 <br>该值应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| what | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 存在则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## hasMessages
 
@@ -134,26 +124,24 @@ hasMessages(what: int, obj: Any): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-MessageHandler-hasMessages(what: int, obj: Any): boolean--><!--Device-MessageHandler-hasMessages(what: int, obj: Any): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| what | int | 是 | 要检查的消息标识符。 <br>该值应为整数。 |
-| obj | Any | 是 | 要检查的数据对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| what | int | 是 |
+| obj | Any | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 存在则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## post
 
@@ -165,25 +153,23 @@ post(callback: () => void): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-MessageHandler-post(callback: () => void): boolean--><!--Device-MessageHandler-post(callback: () => void): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | () =&gt; void | 是 | 要执行的回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | () = & gt; void | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 成功添加到消息队列则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## removeCallbacks
 
@@ -195,25 +181,23 @@ removeCallbacks(callback: () => void): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-MessageHandler-removeCallbacks(callback: () => void): boolean--><!--Device-MessageHandler-removeCallbacks(callback: () => void): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | () =&gt; void | 是 | 要移除的回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | () = & gt; void | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 成功移除则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## removeMessages
 
@@ -225,25 +209,23 @@ removeMessages(what: int): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-MessageHandler-removeMessages(what: int): boolean--><!--Device-MessageHandler-removeMessages(what: int): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| what | int | 是 | 要移除的消息标识符。 <br>该值应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| what | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 成功移除则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## removeMessages
 
@@ -255,26 +237,24 @@ removeMessages(what: int, obj: Any): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-MessageHandler-removeMessages(what: int, obj: Any): boolean--><!--Device-MessageHandler-removeMessages(what: int, obj: Any): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| what | int | 是 | 要移除的消息标识符。 <br>该值应为整数。 |
-| obj | Any | 是 | 要匹配的数据对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| what | int | 是 |
+| obj | Any | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 成功移除则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## sendEmptyMessage
 
@@ -286,25 +266,23 @@ sendEmptyMessage(what: int): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-MessageHandler-sendEmptyMessage(what: int): boolean--><!--Device-MessageHandler-sendEmptyMessage(what: int): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| what | int | 是 | 要发送的消息标识符。 <br>该值应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| what | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 成功发送则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## sendMessage
 
@@ -316,23 +294,20 @@ sendMessage(message: concurrency.Message): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-MessageHandler-sendMessage(message: concurrency.Message): boolean--><!--Device-MessageHandler-sendMessage(message: concurrency.Message): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| message | concurrency.Message | 是 | 要发送的消息对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| message | concurrency.Message | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 成功发送则返回true，否则返回false。 |
-
+| 类型 |
+| --- |
+| boolean |

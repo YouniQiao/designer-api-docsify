@@ -14,17 +14,17 @@ function getRule() : bigint
 
 Obtains a collection of thread, process, and alarm rules that have been added.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-hichecker-function getRule() : bigint--><!--Device-hichecker-function getRule() : bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint | Collection of added rules. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| bigint |
 
 **Examples**
 
@@ -35,4 +35,3 @@ hichecker.addCheckRule(hichecker.RULE_CAUTION_PRINT_LOG);
 // Obtain the collection of added rules.
 hichecker.getRule();   // return 1n;
 ```
-

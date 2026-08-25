@@ -2,9 +2,9 @@
 
 Represents the optional parameter used to create an OS account.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-osAccount-interface CreateOsAccountOptions--><!--Device-osAccount-interface CreateOsAccountOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -26,9 +26,9 @@ Trustlist of the preinstalled applications, which can be installed on the device
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-CreateOsAccountOptions-allowedPreinstalledBundles?: Array<string>--><!--Device-CreateOsAccountOptions-allowedPreinstalledBundles?: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -44,9 +44,9 @@ Forbidden list of the preinstalled applications, which cannot be installed on th
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-CreateOsAccountOptions-disallowedPreinstalledBundles?: Array<string>--><!--Device-CreateOsAccountOptions-disallowedPreinstalledBundles?: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -55,7 +55,7 @@ Forbidden list of the preinstalled applications, which cannot be installed on th
 ## shortName
 
 ```TypeScript
-shortName?: string
+shortName: string
 ```
 
 Short name of the account (used as the name of the personal folder).  
@@ -66,9 +66,9 @@ Short name of the account (used as the name of the personal folder).
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-CreateOsAccountOptions-shortName?: string--><!--Device-CreateOsAccountOptions-shortName?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -86,9 +86,8 @@ Token obtained from the authentication management API. The value is left empty b
 
 **Since:** 24
 
-<!--Device-CreateOsAccountOptions-token?: Uint8Array--><!--Device-CreateOsAccountOptions-token?: Uint8Array-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-

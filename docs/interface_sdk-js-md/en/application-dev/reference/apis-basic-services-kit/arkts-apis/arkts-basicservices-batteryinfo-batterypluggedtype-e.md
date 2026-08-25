@@ -1,12 +1,10 @@
 # BatteryPluggedType
 
-Enumerates charger types.@enum { int }
+Enumerates charger types.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-batteryInfo-export enum BatteryPluggedType--><!--Device-batteryInfo-export enum BatteryPluggedType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -18,11 +16,9 @@ NONE
 
 Unknown charger type.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-BatteryPluggedType-NONE--><!--Device-BatteryPluggedType-NONE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -34,11 +30,9 @@ AC
 
 AC charger.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-BatteryPluggedType-AC--><!--Device-BatteryPluggedType-AC-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -50,11 +44,9 @@ USB
 
 USB charger.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-BatteryPluggedType-USB--><!--Device-BatteryPluggedType-USB-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -66,11 +58,8 @@ WIRELESS
 
 Wireless charger.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-BatteryPluggedType-WIRELESS--><!--Device-BatteryPluggedType-WIRELESS-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
-

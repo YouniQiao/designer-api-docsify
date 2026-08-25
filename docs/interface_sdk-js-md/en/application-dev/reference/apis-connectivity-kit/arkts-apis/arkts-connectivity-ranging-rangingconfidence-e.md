@@ -4,7 +4,7 @@ The enum of ranging measurement confidence.
 
 **Since:** 26.0.0
 
-<!--Device-ranging-enum RangingConfidence--><!--Device-ranging-enum RangingConfidence-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -18,9 +18,9 @@ High confidence measurement.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-RangingConfidence-HIGH = 0--><!--Device-RangingConfidence-HIGH = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -34,9 +34,9 @@ Medium confidence measurement.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-RangingConfidence-MEDIUM = 1--><!--Device-RangingConfidence-MEDIUM = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -50,9 +50,8 @@ low confidence measurement.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RangingConfidence-LOW = 2--><!--Device-RangingConfidence-LOW = 2-End-->
-
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
-

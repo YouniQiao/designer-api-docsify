@@ -8,11 +8,11 @@ const MAX_KEY_LENGTH: int
 
 Maximum key length, which is 1,024 bytes.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-preferences-const MAX_KEY_LENGTH: int--><!--Device-preferences-const MAX_KEY_LENGTH: int-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -24,11 +24,10 @@ const MAX_VALUE_LENGTH: int
 
 Maximum value length, which is 16 MB.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-preferences-const MAX_VALUE_LENGTH: int--><!--Device-preferences-const MAX_VALUE_LENGTH: int-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
-

@@ -16,17 +16,17 @@ Unlock the screen.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-screenLock-function unlockScreen(callback: AsyncCallback<void>): void--><!--Device-screenLock-function unlockScreen(callback: AsyncCallback<void>): void-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of unlockScreen. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Examples**
 
@@ -63,19 +63,18 @@ Unlock the screen.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-screenLock-function unlockScreen(): Promise<void>--><!--Device-screenLock-function unlockScreen(): Promise<void>-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Examples**
 
 See [unlockScreen](#unlockscreen)
-

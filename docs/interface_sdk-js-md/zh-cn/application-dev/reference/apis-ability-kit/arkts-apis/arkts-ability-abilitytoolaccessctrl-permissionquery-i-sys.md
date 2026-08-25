@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-abilityToolAccessCtrl-interface PermissionQuery--><!--Device-abilityToolAccessCtrl-interface PermissionQuery-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -18,16 +18,16 @@
 ## callerTokenId
 
 ```TypeScript
-callerTokenId?: long
+callerTokenId?: number
 ```
 
 主叫token标识。 取值范围：(-∞,+∞)。
 
-**类型：** long
+**类型：** number
 
 **起始版本：** 26.0.0
 
-<!--Device-PermissionQuery-callerTokenId?: long--><!--Device-PermissionQuery-callerTokenId?: long-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -45,7 +45,7 @@ domainId?: string
 
 **起始版本：** 26.0.0
 
-<!--Device-PermissionQuery-domainId?: string--><!--Device-PermissionQuery-domainId?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -63,7 +63,7 @@ needTicket?: boolean
 
 **起始版本：** 26.0.0
 
-<!--Device-PermissionQuery-needTicket?: boolean--><!--Device-PermissionQuery-needTicket?: boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -81,7 +81,7 @@ operationInfo: OperationInfo[]
 
 **起始版本：** 26.0.0
 
-<!--Device-PermissionQuery-operationInfo: OperationInfo[]--><!--Device-PermissionQuery-operationInfo: OperationInfo[]-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -99,7 +99,7 @@ remoteInfo?: RemoteInfo
 
 **起始版本：** 26.1.0
 
-<!--Device-PermissionQuery-remoteInfo?: RemoteInfo--><!--Device-PermissionQuery-remoteInfo?: RemoteInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -108,18 +108,17 @@ remoteInfo?: RemoteInfo
 ## ticketExpireTimeMs
 
 ```TypeScript
-ticketExpireTimeMs?: long
+ticketExpireTimeMs?: number
 ```
 
 凭据过期时间，单位为毫秒。 取值范围：(-∞,+∞)。
 
-**类型：** long
+**类型：** number
 
 **起始版本：** 26.0.0
 
-<!--Device-PermissionQuery-ticketExpireTimeMs?: long--><!--Device-PermissionQuery-ticketExpireTimeMs?: long-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
-

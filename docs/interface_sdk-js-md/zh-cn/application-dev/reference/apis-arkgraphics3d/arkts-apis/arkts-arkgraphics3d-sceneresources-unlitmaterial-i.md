@@ -6,7 +6,7 @@
 
 **起始版本：** 23
 
-<!--Device-unnamed-export interface UnlitMaterial--><!--Device-unnamed-export interface UnlitMaterial-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -22,7 +22,6 @@ baseColor: MaterialProperty
 
 **起始版本：** 23
 
-<!--Device-UnlitMaterial-baseColor: MaterialProperty--><!--Device-UnlitMaterial-baseColor: MaterialProperty-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

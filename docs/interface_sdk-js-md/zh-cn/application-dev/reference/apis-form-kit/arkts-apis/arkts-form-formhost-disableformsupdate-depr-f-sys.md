@@ -15,13 +15,13 @@ function disableFormsUpdate(formIds: Array<string>, callback: AsyncCallback<void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [disableFormsUpdate](arkts-form-formhost-disableformsupdate-f-sys.md)
 
 **需要权限：** ohos.permission.REQUIRE_FORM
-
-<!--Device-formHost-function disableFormsUpdate(formIds: Array<string>, callback: AsyncCallback<void>): void--><!--Device-formHost-function disableFormsUpdate(formIds: Array<string>, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -29,10 +29,10 @@ function disableFormsUpdate(formIds: Array<string>, callback: AsyncCallback<void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | 是 | 卡片标识列表。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当向卡片框架发送通知以使指定的卡片不可以更新成功，error为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formIds | Array & lt;string & gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **示例**
 
@@ -69,13 +69,13 @@ function disableFormsUpdate(formIds: Array<string>): Promise<void>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [disableFormsUpdate](arkts-form-formhost-disableformsupdate-f-sys.md)
 
 **需要权限：** ohos.permission.REQUIRE_FORM
-
-<!--Device-formHost-function disableFormsUpdate(formIds: Array<string>): Promise<void>--><!--Device-formHost-function disableFormsUpdate(formIds: Array<string>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -83,17 +83,16 @@ function disableFormsUpdate(formIds: Array<string>): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | 是 | 卡片标识列表。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formIds | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
 参见 [disableFormsUpdate](#disableformsupdate)
-

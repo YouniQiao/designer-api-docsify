@@ -4,7 +4,7 @@ Enumerates the nested scrolling modes of the **Swiper** component and its parent
 
 **Since:** 11
 
-<!--Device-unnamed-declare enum SwiperNestedScrollMode--><!--Device-unnamed-declare enum SwiperNestedScrollMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ The scrolling is contained within the **Swiper** component, and no scroll chaini
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SwiperNestedScrollMode-SELF_ONLY = 0--><!--Device-SwiperNestedScrollMode-SELF_ONLY = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ The **Swiper** component scrolls first, and when it hits the boundary, the paren
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-SwiperNestedScrollMode-SELF_FIRST = 1--><!--Device-SwiperNestedScrollMode-SELF_FIRST = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

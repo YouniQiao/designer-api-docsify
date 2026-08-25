@@ -2,9 +2,9 @@
 
 The request of standby resources.@interface ResourceRequest
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-deviceStandby-export interface ResourceRequest--><!--Device-deviceStandby-export interface ResourceRequest-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -24,11 +24,11 @@ duration: int
 
 The exemption duration. <br>Unit:s
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ResourceRequest-duration: int--><!--Device-ResourceRequest-duration: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -44,9 +44,9 @@ The application name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ResourceRequest-name: string--><!--Device-ResourceRequest-name: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -62,9 +62,9 @@ The reason for the request.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ResourceRequest-reason: string--><!--Device-ResourceRequest-reason: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -78,11 +78,11 @@ resourceTypes: int
 
 The set of resource types that an application requests.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ResourceRequest-resourceTypes: int--><!--Device-ResourceRequest-resourceTypes: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -96,13 +96,12 @@ uid: int
 
 The application uid.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ResourceRequest-uid: int--><!--Device-ResourceRequest-uid: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
 **System API:** This is a system API.
-

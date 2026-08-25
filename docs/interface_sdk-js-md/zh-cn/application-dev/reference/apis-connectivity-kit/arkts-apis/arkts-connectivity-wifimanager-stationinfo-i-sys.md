@@ -2,9 +2,9 @@
 
 WLAN站点信息。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-wifiManager-interface StationInfo--><!--Device-wifiManager-interface StationInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
@@ -26,9 +26,9 @@ WLAN客户端的IP地址
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-StationInfo-ipAddress: string--><!--Device-StationInfo-ipAddress: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
@@ -44,9 +44,9 @@ WLAN客户端的MAC地址
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-StationInfo-macAddress: string--><!--Device-StationInfo-macAddress: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
@@ -62,9 +62,9 @@ WLAN客户端的MAC地址类型
 
 **类型：** [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-StationInfo-macAddressType?: DeviceAddressType--><!--Device-StationInfo-macAddressType?: DeviceAddressType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
@@ -80,11 +80,10 @@ WLAN客户端的网络名称
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-StationInfo-name: string--><!--Device-StationInfo-name: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
-

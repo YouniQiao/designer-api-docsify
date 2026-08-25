@@ -4,7 +4,7 @@ Enumerates key actions.
 
 **Since:** 23
 
-<!--Device-systemManager-enum KeyAction--><!--Device-systemManager-enum KeyAction-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,9 +18,9 @@ Any key action other than press and release.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-KeyAction-UNKNOWN = -1--><!--Device-KeyAction-UNKNOWN = -1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -34,9 +34,9 @@ Key press.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-KeyAction-DOWN = 0--><!--Device-KeyAction-DOWN = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -50,9 +50,8 @@ Key release.
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-KeyAction-UP = 1--><!--Device-KeyAction-UP = 1-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

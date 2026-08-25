@@ -4,7 +4,7 @@
 
 **起始版本：** 14
 
-<!--Device-unnamed-declare class UrlStyle--><!--Device-unnamed-declare class UrlStyle-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,19 +23,19 @@ constructor(url: string)
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-UrlStyle-constructor(url: string)--><!--Device-UrlStyle-constructor(url: string)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| url | string | 是 | 超链接URL设置项。需为有效的URL地址。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [url](#url) | string | 是 |
 
 ## url
 
@@ -49,11 +49,10 @@ readonly url: string
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
-<!--Device-UrlStyle-readonly url: string--><!--Device-UrlStyle-readonly url: string-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

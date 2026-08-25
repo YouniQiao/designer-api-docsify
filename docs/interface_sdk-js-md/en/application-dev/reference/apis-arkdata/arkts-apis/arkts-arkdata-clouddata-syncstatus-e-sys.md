@@ -2,9 +2,9 @@
 
 Enumerates the device-cloud sync task statuses.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-cloudData-enum SyncStatus--><!--Device-cloudData-enum SyncStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -18,9 +18,9 @@ RUNNING = 0
 
 The device-cloud sync task is running.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-SyncStatus-RUNNING = 0--><!--Device-SyncStatus-RUNNING = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -34,11 +34,10 @@ FINISHED = 1
 
 The device-cloud sync task is completed.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-SyncStatus-FINISHED = 1--><!--Device-SyncStatus-FINISHED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
-

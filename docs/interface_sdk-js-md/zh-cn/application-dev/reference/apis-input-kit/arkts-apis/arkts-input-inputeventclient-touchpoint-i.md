@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-inputEventClient-interface TouchPoint--><!--Device-inputEventClient-interface TouchPoint-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -22,13 +22,13 @@ displayId: int
 
 触点所在屏幕的唯一标识，必须为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TouchPoint-displayId: int--><!--Device-TouchPoint-displayId: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -40,13 +40,13 @@ displayX: int
 
 触点相对于屏幕左边缘的X坐标，单位为像素（px），必须为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TouchPoint-displayX: int--><!--Device-TouchPoint-displayX: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -58,13 +58,13 @@ displayY: int
 
 触点相对于屏幕上边缘的Y坐标，单位为像素（px），必须为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TouchPoint-displayY: int--><!--Device-TouchPoint-displayY: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -76,13 +76,12 @@ id: int
 
 触点唯一标识。取值范围为[0, 9]，且必须为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-TouchPoint-id: int--><!--Device-TouchPoint-id: int-End-->
-
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
-

@@ -4,9 +4,9 @@ Week Style.
 
 **Since:** 7
 
-**Deprecated since:** 20
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-unnamed-interface WeekStyle--><!--Device-unnamed-interface WeekStyle-End-->
+**Deprecated since:** 20
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,11 +29,11 @@ Style of week space.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-WeekStyle-weekAndDayRowSpace?: number--><!--Device-WeekStyle-weekAndDayRowSpace?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,11 +51,11 @@ Style of week color.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-WeekStyle-weekColor?: ResourceColor--><!--Device-WeekStyle-weekColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,11 +73,11 @@ Style of week day color.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-WeekStyle-weekendDayColor?: ResourceColor--><!--Device-WeekStyle-weekendDayColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -95,11 +95,11 @@ Style of lunar color.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-WeekStyle-weekendLunarColor?: ResourceColor--><!--Device-WeekStyle-weekendLunarColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -117,11 +117,11 @@ Style of week font size.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-WeekStyle-weekFontSize?: number--><!--Device-WeekStyle-weekFontSize?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -139,11 +139,11 @@ Style of week height.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-WeekStyle-weekHeight?: number--><!--Device-WeekStyle-weekHeight?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -161,13 +161,12 @@ Style of week width.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
-<!--Device-WeekStyle-weekWidth?: number--><!--Device-WeekStyle-weekWidth?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

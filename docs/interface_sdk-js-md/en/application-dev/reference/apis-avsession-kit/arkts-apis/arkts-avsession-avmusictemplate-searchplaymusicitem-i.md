@@ -4,7 +4,7 @@ The definition of SearchPlayMusicItem.@interface SearchPlayMusicItem
 
 **Since:** 23
 
-<!--Device-avMusicTemplate-interface SearchPlayMusicItem--><!--Device-avMusicTemplate-interface SearchPlayMusicItem-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -26,9 +26,9 @@ Unique id of the Media.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-SearchPlayMusicItem-entityId: string--><!--Device-SearchPlayMusicItem-entityId: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -44,9 +44,8 @@ Name of the Media.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SearchPlayMusicItem-entityName?: string--><!--Device-SearchPlayMusicItem-entityName?: string-End-->
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-

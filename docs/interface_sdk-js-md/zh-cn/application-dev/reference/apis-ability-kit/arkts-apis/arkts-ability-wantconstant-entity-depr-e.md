@@ -4,9 +4,9 @@ want实体的常数。用于表示目标Ability额外的类别信息。
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-wantConstant-export enum Entity--><!--Device-wantConstant-export enum Entity-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -20,9 +20,9 @@ ENTITY_DEFAULT = 'entity.system.default'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Entity-ENTITY_DEFAULT = 'entity.system.default'--><!--Device-Entity-ENTITY_DEFAULT = 'entity.system.default'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -36,9 +36,9 @@ ENTITY_HOME = 'entity.system.home'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Entity-ENTITY_HOME = 'entity.system.home'--><!--Device-Entity-ENTITY_HOME = 'entity.system.home'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -52,9 +52,9 @@ ENTITY_VOICE = 'entity.system.voice'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Entity-ENTITY_VOICE = 'entity.system.voice'--><!--Device-Entity-ENTITY_VOICE = 'entity.system.voice'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -68,9 +68,9 @@ ENTITY_BROWSABLE = 'entity.system.browsable'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Entity-ENTITY_BROWSABLE = 'entity.system.browsable'--><!--Device-Entity-ENTITY_BROWSABLE = 'entity.system.browsable'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -84,9 +84,8 @@ ENTITY_VIDEO = 'entity.system.video'
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
-<!--Device-Entity-ENTITY_VIDEO = 'entity.system.video'--><!--Device-Entity-ENTITY_VIDEO = 'entity.system.video'-End-->
-
 **系统能力：** SystemCapability.Ability.AbilityBase
-

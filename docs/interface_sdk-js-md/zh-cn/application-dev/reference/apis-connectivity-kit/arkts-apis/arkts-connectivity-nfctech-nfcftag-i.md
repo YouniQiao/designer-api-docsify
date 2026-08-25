@@ -4,33 +4,39 @@ NfcFTag 提供对NFC-F(JIS 6319-4)技术的属性和I/O操作的访问，继承�
 
 **继承/实现关系：** NfcFTag extends TagSession
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-unnamed-export interface NfcFTag--><!--Device-unnamed-export interface NfcFTag-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## getPmm
 
+ArkTS-Dyn:
+```TypeScript
+getPmm(): number[]
+```
+
+ArkTS-Sta:
 ```TypeScript
 getPmm(): int[]
 ```
 
 从标签实例获取PMm（由IC代码和制造商参数组成）。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NfcFTag-getPmm(): int[]--><!--Device-NfcFTag-getPmm(): int[]-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int[] | NfcF 标签的PMm信息，每个number十六进制表示，范围是0x00~0xFF。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
 
 **示例**
 
@@ -44,25 +50,31 @@ console.info("nfcF pmm: " + pmm);
 
 ## getSystemCode
 
+ArkTS-Dyn:
+```TypeScript
+getSystemCode(): number[]
+```
+
+ArkTS-Sta:
 ```TypeScript
 getSystemCode(): int[]
 ```
 
 从标签实例获取系统代码。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NfcFTag-getSystemCode(): int[]--><!--Device-NfcFTag-getSystemCode(): int[]-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int[] | NfcF 标签的系统代码，每个number十六进制表示，范围是0x00~0xFF。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
 
 **示例**
 
@@ -73,4 +85,3 @@ import { tag } from '@kit.ConnectivityKit';
 let systemCode : number[] = nfcF.getSystemCode();
 console.info("nfcF systemCode: " + systemCode);
 ```
-

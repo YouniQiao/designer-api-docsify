@@ -2,9 +2,9 @@
 
 表示设备选择策略的枚举。
 
-**起始版本：** 24
+**起始版本：** 21
 
-<!--Device-audio-enum AudioDevcieSelectStrategy--><!--Device-audio-enum AudioDevcieSelectStrategy-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -18,9 +18,9 @@ SELECT_STRATEGY_DEFAULT = 0
 
 默认设备选择策略。
 
-**起始版本：** 24
+**起始版本：** 21
 
-<!--Device-AudioDevcieSelectStrategy-SELECT_STRATEGY_DEFAULT = 0--><!--Device-AudioDevcieSelectStrategy-SELECT_STRATEGY_DEFAULT = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -34,11 +34,10 @@ SELECT_STRATEGY_INDEPENDENT = 1
 
 独立设备选择策略。
 
-**起始版本：** 24
+**起始版本：** 21
 
-<!--Device-AudioDevcieSelectStrategy-SELECT_STRATEGY_INDEPENDENT = 1--><!--Device-AudioDevcieSelectStrategy-SELECT_STRATEGY_INDEPENDENT = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
-

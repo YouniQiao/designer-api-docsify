@@ -4,7 +4,7 @@
 
 **起始版本：** 10
 
-<!--Device-unnamed-export interface Watcher--><!--Device-unnamed-export interface Watcher-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -26,28 +26,28 @@ start(): void
 
 **起始版本：** 10
 
-<!--Device-Watcher-start(): void--><!--Device-Watcher-start(): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900002 | No such file or directory |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900020 | Invalid argument |
-| 13900021 | File table overflow |
-| 13900022 | Too many open files |
-| 13900025 | No space left on device |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900002 |
+| 13900005 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900015 |
+| 13900018 |
+| 13900020 |
+| 13900021 |
+| 13900022 |
+| 13900025 |
+| 13900030 |
+| 13900042 |
 
 **示例**
 
@@ -68,28 +68,28 @@ stop(): void
 
 **起始版本：** 10
 
-<!--Device-Watcher-stop(): void--><!--Device-Watcher-stop(): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900002 | No such file or directory |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900020 | Invalid argument |
-| 13900021 | File table overflow |
-| 13900022 | Too many open files |
-| 13900025 | No space left on device |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900002 |
+| 13900005 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900015 |
+| 13900018 |
+| 13900020 |
+| 13900021 |
+| 13900022 |
+| 13900025 |
+| 13900030 |
+| 13900042 |
 
 **示例**
 
@@ -99,4 +99,3 @@ let watcher = fileIo.createWatcher(filePath, 0xfff, () => {});
 watcher.start();
 watcher.stop();
 ```
-

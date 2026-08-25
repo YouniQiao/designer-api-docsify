@@ -2,9 +2,9 @@
 
 Audio capabilities.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-avSession-interface AudioCapabilities--><!--Device-avSession-interface AudioCapabilities-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -24,11 +24,10 @@ Audio stream information.
 
 **Type:** Array&lt;audio.AudioStreamInfo&gt;
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-AudioCapabilities-readonly streamInfos: Array<audio.AudioStreamInfo>--><!--Device-AudioCapabilities-readonly streamInfos: Array<audio.AudioStreamInfo>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
-

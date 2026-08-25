@@ -1,18 +1,17 @@
 # AbilityFirstFrameStateData (System API)
 
 ```TypeScript
-export type AbilityFirstFrameStateData = _AbilityFirstFrameStateData
+export type AbilityFirstFrameStateData = _AbilityFirstFrameStateData.default
 ```
 
 Defines the data structure reported when the first frame rendering of the UIAbility is complete.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-appManager-export type AbilityFirstFrameStateData = _AbilityFirstFrameStateData--><!--Device-appManager-export type AbilityFirstFrameStateData = _AbilityFirstFrameStateData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
 
-**Property type:** _AbilityFirstFrameStateData
-
+**Property type:** _AbilityFirstFrameStateData.default

@@ -2,9 +2,9 @@
 
 Describes the extended parameter information.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-installer-export interface Parameters--><!--Device-installer-export interface Parameters-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -26,9 +26,9 @@ Key of an extended parameter.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-Parameters-key: string--><!--Device-Parameters-key: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -44,11 +44,10 @@ Value of the extended parameter.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-Parameters-value: string--><!--Device-Parameters-value: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
-

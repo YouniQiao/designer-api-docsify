@@ -16,11 +16,11 @@ function setPriorityStrategyByBundles(strategies: Map<BundleOption, long>): Prom
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-notificationManager-function setPriorityStrategyByBundles(strategies: Map<BundleOption, long>): Promise<void>--><!--Device-notificationManager-function setPriorityStrategyByBundles(strategies: Map<BundleOption, long>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -28,26 +28,26 @@ function setPriorityStrategyByBundles(strategies: Map<BundleOption, long>): Prom
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| strategies | Map&lt;BundleOption, long&gt; | 是 | 应用通知优先策略的键值对集合。与 PriorityStrategyStatus的枚举进行按位或运算得到值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| strategies | ArkTS-Dyn: Map & lt;BundleOption, number & gt;<br>ArkTS-Sta：Map & lt;BundleOption, long & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [1600001](../errorcode-notification.md#1600001-内部错误) |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
+| [1600012](../errorcode-notification.md#1600012-内存空间不足) |
+| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 **示例**
 
@@ -81,4 +81,3 @@ notificationManager.setPriorityStrategyByBundles(strategies).then(() => {
     console.error(`setPriorityStrategyByBundles failed, code is ${error.code}, message is ${error.message}`);
 });
 ```
-

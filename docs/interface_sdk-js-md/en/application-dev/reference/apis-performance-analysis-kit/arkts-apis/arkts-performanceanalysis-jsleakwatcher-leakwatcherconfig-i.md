@@ -2,9 +2,9 @@
 
 Defines the **LeakWatcherConfig** object, which contains multiple configurable properties for memory leak monitoring.
 
-**Since:** 26.1.0
+**Since:** 24
 
-<!--Device-jsLeakWatcher-export interface LeakWatcherConfig--><!--Device-jsLeakWatcher-export interface LeakWatcherConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -22,11 +22,11 @@ bgLeakCountThreshold?: int
 
 Threshold for the number of leak objects in a background application. Dump is triggered when this threshold is reached.During the GC/Dump phase, dump is triggered when the value is greater than or equal to 1.The default threshold is **1**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 26.1.0
+**Since:** 24
 
-<!--Device-LeakWatcherConfig-bgLeakCountThreshold?: int--><!--Device-LeakWatcherConfig-bgLeakCountThreshold?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -38,11 +38,11 @@ checkInterval?: int
 
 Interval between each round of leak detection, in milliseconds.The default value is 30 seconds.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 26.1.0
+**Since:** 24
 
-<!--Device-LeakWatcherConfig-checkInterval?: int--><!--Device-LeakWatcherConfig-checkInterval?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -54,11 +54,11 @@ dumpHeapWaitTimeMs?: int
 
 Delay interval for executing dump. This parameter ensures that GC can be scheduled and executed before dump. The delay interval is less than or equal to the leak detection interval, in milliseconds.If the configured delay exceeds the leak detection interval, the delay defaults to that of the leak detection interval.If no new leaked object exists, dump will not be triggered.By default, the dump is performed 5 seconds after the GC ends.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 26.1.0
+**Since:** 24
 
-<!--Device-LeakWatcherConfig-dumpHeapWaitTimeMs?: int--><!--Device-LeakWatcherConfig-dumpHeapWaitTimeMs?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -72,9 +72,9 @@ Class name of the object to be excluded from monitoring.This parameter applies o
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 26.1.0
+**Since:** 24
 
-<!--Device-LeakWatcherConfig-exclusionList?: Array<string>--><!--Device-LeakWatcherConfig-exclusionList?: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -86,11 +86,11 @@ fgLeakCountThreshold?: int
 
 Threshold for the number of leaked objects in a foreground application. Dump is triggered when this threshold is reached.During the GC/Dump phase, dump is triggered when the value is greater than or equal to 5.The default threshold is **5**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 26.1.0
+**Since:** 24
 
-<!--Device-LeakWatcherConfig-fgLeakCountThreshold?: int--><!--Device-LeakWatcherConfig-fgLeakCountThreshold?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -102,11 +102,11 @@ maxStoredHeapDumps?: int
 
 Maximum number of dump files that can be saved. To prevent the disk space from being used up, the .rawheap and.jsleaklist files with the minimum timestamp are deleted when the number of dump files exceeds the maximum.By default, 10 .rawheap files and 10 .jsleaklist files are saved.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 26.1.0
+**Since:** 24
 
-<!--Device-LeakWatcherConfig-maxStoredHeapDumps?: int--><!--Device-LeakWatcherConfig-maxStoredHeapDumps?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -120,9 +120,9 @@ Type of the monitored object.By default, all component types are monitored.
 
 **Type:** [MonitorObjectType](arkts-performanceanalysis-jsleakwatcher-monitorobjecttype-e.md)
 
-**Since:** 26.1.0
+**Since:** 24
 
-<!--Device-LeakWatcherConfig-monitorObjectTypes: MonitorObjectType--><!--Device-LeakWatcherConfig-monitorObjectTypes: MonitorObjectType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -134,11 +134,10 @@ objectUniqueIDs?: Array<int>
 
 List of IDs of monitored objects.This parameter applies only to custom components and does not affect the monitoring of other component types.For example, if the object class name ID set in the trustlist is the same as that in the custom ID list, the custom ID list takes effect.The default value is an empty array.
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
-**Since:** 26.1.0
+**Since:** 24
 
-<!--Device-LeakWatcherConfig-objectUniqueIDs?: Array<int>--><!--Device-LeakWatcherConfig-objectUniqueIDs?: Array<int>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
-

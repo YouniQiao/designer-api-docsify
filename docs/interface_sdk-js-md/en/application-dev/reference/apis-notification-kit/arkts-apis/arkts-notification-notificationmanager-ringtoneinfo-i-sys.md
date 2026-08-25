@@ -2,9 +2,9 @@
 
 Describes the custom ringtone information.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-notificationManager-export interface RingtoneInfo--><!--Device-notificationManager-export interface RingtoneInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -26,9 +26,9 @@ File name of the ringtone.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-RingtoneInfo-ringtoneFileName?: string--><!--Device-RingtoneInfo-ringtoneFileName?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -44,9 +44,9 @@ Title of the ringtone.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-RingtoneInfo-ringtoneTitle?: string--><!--Device-RingtoneInfo-ringtoneTitle?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -62,9 +62,9 @@ Type of the ringtone.
 
 **Type:** RingtoneType
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-RingtoneInfo-ringtoneType: RingtoneType--><!--Device-RingtoneInfo-ringtoneType: RingtoneType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -80,11 +80,10 @@ URI of the ringtone.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-RingtoneInfo-ringtoneUri?: string--><!--Device-RingtoneInfo-ringtoneUri?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

@@ -10,23 +10,22 @@ Get the java interface instance. The java instance needs to register, otherwise 
 
 **Since:** 5
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
+
 **Deprecated since:** 8
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-unnamed-export declare function createLocalParticleAbility(name?: string): any--><!--Device-unnamed-export declare function createLocalParticleAbility(name?: string): any-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | No | Java interface name, including package path, such as com.example.test.timeinterfaceimpl. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| any | A promise object is returned. The resolve callback is the object of PA. The reject callback returns the object containing code and error data. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| any |

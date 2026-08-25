@@ -2,9 +2,9 @@
 
 Defines the call restriction information.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-call-export interface CallRestrictionInfo--><!--Device-call-export interface CallRestrictionInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -26,9 +26,9 @@ Enumerates call restriction modes.
 
 **Type:** [CallRestrictionMode](arkts-telephony-call-callrestrictionmode-e-sys.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-CallRestrictionInfo-mode: CallRestrictionMode--><!--Device-CallRestrictionInfo-mode: CallRestrictionMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -44,9 +44,9 @@ Password.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-CallRestrictionInfo-password: string--><!--Device-CallRestrictionInfo-password: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -62,11 +62,10 @@ Call restriction type.
 
 **Type:** [CallRestrictionType](arkts-telephony-call-callrestrictiontype-e-sys.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-CallRestrictionInfo-type: CallRestrictionType--><!--Device-CallRestrictionInfo-type: CallRestrictionType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
-

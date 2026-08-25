@@ -4,7 +4,7 @@ WebGL 1.0
 
 **Since:** 7
 
-<!--Device-unnamed-interface WebGLShaderPrecisionFormat--><!--Device-unnamed-interface WebGLShaderPrecisionFormat-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -20,9 +20,9 @@ Precision
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLShaderPrecisionFormat-readonly precision: GLint--><!--Device-WebGLShaderPrecisionFormat-readonly precision: GLint-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -38,9 +38,9 @@ Maximum range
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLShaderPrecisionFormat-readonly rangeMax: GLint--><!--Device-WebGLShaderPrecisionFormat-readonly rangeMax: GLint-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -56,9 +56,8 @@ Minimum range
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGLShaderPrecisionFormat-readonly rangeMin: GLint--><!--Device-WebGLShaderPrecisionFormat-readonly rangeMin: GLint-End-->
-
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
-

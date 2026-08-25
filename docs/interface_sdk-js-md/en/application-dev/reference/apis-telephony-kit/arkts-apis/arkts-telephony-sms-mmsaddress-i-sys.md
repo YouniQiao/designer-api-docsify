@@ -2,9 +2,9 @@
 
 Defines an MMSC address.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sms-export interface MmsAddress--><!--Device-sms-export interface MmsAddress-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -26,9 +26,9 @@ Network address.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsAddress-address: string--><!--Device-MmsAddress-address: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -44,11 +44,10 @@ Character set.
 
 **Type:** [MmsCharSets](arkts-telephony-sms-mmscharsets-e-sys.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsAddress-charset: MmsCharSets--><!--Device-MmsAddress-charset: MmsCharSets-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
-

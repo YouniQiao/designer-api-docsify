@@ -4,7 +4,7 @@ Defines the Bias.@interface Bias
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface Bias--><!--Device-unnamed-declare interface Bias-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,13 +27,13 @@ Horizontal ratio of the Bias, it must be &gt;= 0.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-Bias-horizontal?: number--><!--Device-Bias-horizontal?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,13 +51,12 @@ Vertical ratio of the Bias, it must be &gt;= 0.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-Bias-vertical?: number--><!--Device-Bias-vertical?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

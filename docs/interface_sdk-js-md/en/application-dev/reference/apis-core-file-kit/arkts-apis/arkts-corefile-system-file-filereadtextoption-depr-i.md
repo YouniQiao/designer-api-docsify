@@ -4,9 +4,9 @@ Defines the options used in readText().
 
 **Since:** 3
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface FileReadTextOption--><!--Device-unnamed-export interface FileReadTextOption-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -23,15 +23,58 @@ complete?: () => void
 
 Callback invoked when the API call is complete.
 
-**Type:** () =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
 
-<!--Device-FileReadTextOption-complete?: () => void--><!--Device-FileReadTextOption-complete?: () => void-End-->
+**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
+
+## fail
+
+```TypeScript
+fail?: (data: string, code: number) => void
+```
+
+Callback invoked when the API call fails. **data** indicates the error information. **code** indicates the returned error code: **202**: invalid parameter **300**: I/O error **301**: file or directory not found **302**: text to read exceeding 4 KB
+
+**Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | string | Yes |
+| code | number | Yes |
+
+## success
+
+```TypeScript
+success?: (data: FileReadTextResponse) => void
+```
+
+Callback invoked when the API call is successful. **data** is [FileReadTextResponse](arkts-corefile-system-file-filereadtextresponse-depr-i.md#filereadtextresponse).
+
+**Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
+**Deprecated since:** 10
+
+**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | [FileReadTextResponse](arkts-corefile-system-file-filereadtextresponse-depr-i.md) | Yes |
 
 ## encoding
 
@@ -45,27 +88,9 @@ Encoding format. The default format is **UTF-8**.
 
 **Since:** 3
 
-**Deprecated since:** 10
-
-<!--Device-FileReadTextOption-encoding?: string--><!--Device-FileReadTextOption-encoding?: string-End-->
-
-**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
-
-## fail
-
-```TypeScript
-fail?: (data: string, code: number) => void
-```
-
-Callback invoked when the API call fails. **data** indicates the error information. **code** indicates the returned error code: **202**: invalid parameter **300**: I/O error **301**: file or directory not found **302**: text to read exceeding 4 KB
-
-**Type:** (data: string, code: number) =&gt; void
-
-**Since:** 3
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
-
-<!--Device-FileReadTextOption-fail?: (data: string, code: number) => void--><!--Device-FileReadTextOption-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -81,9 +106,9 @@ Length of the text to be read, in bytes. The default value is **4096**.
 
 **Since:** 3
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-FileReadTextOption-length?: number--><!--Device-FileReadTextOption-length?: number-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -99,27 +124,9 @@ Position where the reading starts, in bytes. The default value is the start posi
 
 **Since:** 3
 
-**Deprecated since:** 10
-
-<!--Device-FileReadTextOption-position?: number--><!--Device-FileReadTextOption-position?: number-End-->
-
-**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
-
-## success
-
-```TypeScript
-success?: (data: FileReadTextResponse) => void
-```
-
-Callback invoked when the API call is successful. **data** is [FileReadTextResponse](arkts-corefile-system-file-filereadtextresponse-depr-i.md#filereadtextresponse).
-
-**Type:** (data: FileReadTextResponse) =&gt; void
-
-**Since:** 3
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
-
-<!--Device-FileReadTextOption-success?: (data: FileReadTextResponse) => void--><!--Device-FileReadTextOption-success?: (data: FileReadTextResponse) => void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -137,9 +144,8 @@ URI of the file to which the content is written. Restricted by the underlying fi
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 10
 
-<!--Device-FileReadTextOption-uri: string--><!--Device-FileReadTextOption-uri: string-End-->
-
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
-

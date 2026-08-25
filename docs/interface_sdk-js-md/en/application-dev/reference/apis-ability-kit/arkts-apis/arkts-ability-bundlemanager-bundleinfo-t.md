@@ -1,16 +1,17 @@
 # BundleInfo
 
 ```TypeScript
-export type BundleInfo = _BundleInfo
+export type BundleInfo = _BundleInfo.BundleInfo
 ```
 
 Defines the bundle information.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-bundleManager-export type BundleInfo = _BundleInfo--><!--Device-bundleManager-export type BundleInfo = _BundleInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _BundleInfo
-
+**Property type:** _BundleInfo.BundleInfo

@@ -1,16 +1,15 @@
 # AbilityStateData
 
 ```TypeScript
-export type AbilityStateData = _AbilityStateData
+export type AbilityStateData = _AbilityStateData.default
 ```
 
 AbilityStateData二级模块。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-abilityManager-export type AbilityStateData = _AbilityStateData--><!--Device-abilityManager-export type AbilityStateData = _AbilityStateData-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-**属性类型：** _AbilityStateData
-
+**属性类型：** _AbilityStateData.default

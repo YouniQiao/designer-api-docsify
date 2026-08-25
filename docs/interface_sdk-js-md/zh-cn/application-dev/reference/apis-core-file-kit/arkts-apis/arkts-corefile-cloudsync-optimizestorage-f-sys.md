@@ -14,11 +14,11 @@ function optimizeStorage():Promise<void>
 
 优化图库已同步云空间的本地资源，按照本地剩余空间执行自动老化策略。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 17
+
+**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
-
-<!--Device-cloudSync-function optimizeStorage():Promise<void>--><!--Device-cloudSync-function optimizeStorage():Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -26,18 +26,18 @@ function optimizeStorage():Promise<void>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. <br>2.Incorrect parameter types. |
-| 13600001 | IPC error. |
-| 13900042 | Unknown error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 13600001 |
+| 13900042 |
 
 **示例**
 
@@ -64,4 +64,3 @@ cloudSync.optimizeStorage().then<void>((): void => {
   console.error("optimize storage failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
-

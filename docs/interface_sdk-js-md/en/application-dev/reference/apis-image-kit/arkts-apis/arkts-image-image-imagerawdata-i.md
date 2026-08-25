@@ -4,7 +4,7 @@ Describes raw data in an image.
 
 **Since:** 24
 
-<!--Device-image-interface ImageRawData--><!--Device-image-interface ImageRawData-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -22,13 +22,13 @@ bitsPerPixel: int
 
 Number of bits that each pixel actually occupies in the buffer data.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-ImageRawData-bitsPerPixel: int--><!--Device-ImageRawData-bitsPerPixel: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -44,9 +44,8 @@ Binary data of the raw image.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ImageRawData-buffer: ArrayBuffer--><!--Device-ImageRawData-buffer: ArrayBuffer-End-->
-
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
-

@@ -4,7 +4,7 @@ Defines a common callback that carries an error parameter. It is used to return 
 
 **Since:** 6
 
-<!--Device-unnamed-export interface ErrorCallback--><!--Device-unnamed-export interface ErrorCallback-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.Base
 
@@ -15,7 +15,7 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.Basi
 import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } from '@kit.BasicServicesKit';
 ```
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (err: T): void
@@ -23,29 +23,14 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } fro
 
 **Since:** 6
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-ErrorCallback-(err: T): void--><!--Device-ErrorCallback-(err: T): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Base
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| err | T | Yes | Common error information returned when the API fails to be called. The default type is **BusinessError**, including the error code (**code**) and optional additional data (**data**). |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-interface ErrorDataType {
-    url: string;
-}
-
-const businessError = new BusinessError<ErrorDataType>(201, 'no permission', {
-    url: 'http://'
-});
-```
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| err | T | Yes |

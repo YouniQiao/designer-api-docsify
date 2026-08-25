@@ -1,4 +1,8 @@
-# @ohos.advertising.AdsServiceExtensionAbility
+# @ohos.advertising.AdsServiceExtensionAbility(ExtensionAbility for Ads)
+
+The AdsServiceExtensionAbility module provides ExtensionAbilities for the ads service. Device vendors can implement
+ the callbacks for ads requests.
+
 
 ## Modules to Import
 
@@ -11,14 +15,13 @@ import { AdsServiceExtensionAbility, RespCallback } from '@kit.AdsKit';
 <!--Del-->
 ### Classes(System API)
 
-| Name | Description |
-| --- | --- |
-| [AdsServiceExtensionAbility](arkts-ads-advertising-adsserviceextensionability-adsserviceextensionability-c-sys.md) | Provides the capability of integrating advertising services with vendors. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AdsServiceExtensionAbility(ExtensionAbility for Ads)](arkts-ads-advertising-adsserviceextensionability-adsserviceextensionability-c-sys.md) |
 <!--DelEnd-->
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | Ad request callback. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [RespCallback(ExtensionAbility for Ads)](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) |

@@ -2,9 +2,9 @@
 
 Enumerates the data change types.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-cloudSync-enum NotifyType--><!--Device-cloudSync-enum NotifyType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -16,9 +16,9 @@ NOTIFY_ADDED = 0
 
 A file is created.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NotifyType-NOTIFY_ADDED = 0--><!--Device-NotifyType-NOTIFY_ADDED = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -30,9 +30,9 @@ NOTIFY_MODIFIED = 1
 
 The file is modified.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NotifyType-NOTIFY_MODIFIED = 1--><!--Device-NotifyType-NOTIFY_MODIFIED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -44,9 +44,9 @@ NOTIFY_DELETED = 2
 
 The file is deleted.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NotifyType-NOTIFY_DELETED = 2--><!--Device-NotifyType-NOTIFY_DELETED = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -58,9 +58,8 @@ NOTIFY_RENAMED = 3
 
 The file is renamed or moved.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NotifyType-NOTIFY_RENAMED = 3--><!--Device-NotifyType-NOTIFY_RENAMED = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-

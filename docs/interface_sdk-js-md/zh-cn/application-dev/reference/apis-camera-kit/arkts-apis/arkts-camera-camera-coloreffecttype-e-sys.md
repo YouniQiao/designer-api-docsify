@@ -2,9 +2,9 @@
 
 Enumerates the color effect types.
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-camera-enum ColorEffectType--><!--Device-camera-enum ColorEffectType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -18,9 +18,9 @@ NORMAL = 0
 
 Regular color effect.
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ColorEffectType-NORMAL = 0--><!--Device-ColorEffectType-NORMAL = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -34,9 +34,9 @@ BRIGHT = 1
 
 Bright color effect.
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ColorEffectType-BRIGHT = 1--><!--Device-ColorEffectType-BRIGHT = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -50,9 +50,9 @@ SOFT = 2
 
 Soft color effect.
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ColorEffectType-SOFT = 2--><!--Device-ColorEffectType-SOFT = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -66,11 +66,10 @@ BLACK_WHITE = 3
 
 Black and white color effect.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ColorEffectType-BLACK_WHITE = 3--><!--Device-ColorEffectType-BLACK_WHITE = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
-

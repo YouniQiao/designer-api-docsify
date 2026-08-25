@@ -8,11 +8,10 @@ export type NotificationParameters = _NotificationParameters
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-notificationManager-export type NotificationParameters = _NotificationParameters--><!--Device-notificationManager-export type NotificationParameters = _NotificationParameters-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.Notification
 
 **属性类型：** _NotificationParameters
-

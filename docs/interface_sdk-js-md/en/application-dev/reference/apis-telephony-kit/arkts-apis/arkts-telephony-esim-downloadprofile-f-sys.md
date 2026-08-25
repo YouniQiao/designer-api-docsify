@@ -15,11 +15,11 @@ function downloadProfile(slotId: int, portIndex: int, profile: DownloadableProfi
 
 Downloads a profile. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
-
-<!--Device-eSIM-function downloadProfile(slotId: int, portIndex: int, profile: DownloadableProfile,                           configuration: DownloadConfiguration): Promise<DownloadProfileResult>--><!--Device-eSIM-function downloadProfile(slotId: int, portIndex: int, profile: DownloadableProfile,                           configuration: DownloadConfiguration): Promise<DownloadProfileResult>-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -27,29 +27,29 @@ Downloads a profile. This API uses a promise to return the result.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
-| portIndex | int | Yes | Port index of the slot. |
-| profile | [DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md) | Yes | Downloadable profile. |
-| configuration | [DownloadConfiguration](arkts-telephony-esim-downloadconfiguration-i-sys.md) | Yes | Download configuration. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| portIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| profile | [DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md) | Yes |
+| configuration | [DownloadConfiguration](arkts-telephony-esim-downloadconfiguration-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[DownloadProfileResult](arkts-telephony-esim-downloadprofileresult-i-sys.md)&gt; | Promise used to return the profile download result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[DownloadProfileResult](arkts-telephony-esim-downloadprofileresult-i-sys.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [3120001](../errorcode-telephony.md#3120001-service-connection-error) | Service connection failed. |
-| [3120002](../errorcode-telephony.md#3120002-system-internal-error) | System internal error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3120001](../errorcode-telephony.md#3120001-service-connection-error) |
+| [3120002](../errorcode-telephony.md#3120002-system-internal-error) |
 
 **Examples**
 
@@ -80,4 +80,3 @@ eSIM.downloadProfile(1, 0, profile, configuration).then((data: eSIM.DownloadProf
     console.error(`downloadProfile, DownloadProfileResult: err->${JSON.stringify(err)}`);
 });
 ```
-

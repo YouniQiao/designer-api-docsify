@@ -4,7 +4,7 @@ As an input parameter when connecting a web native messaging extension, it is us
 
 **Since:** 21
 
-<!--Device-webNativeMessagingExtensionManager-interface WebExtensionConnectionCallback--><!--Device-webNativeMessagingExtensionManager-interface WebExtensionConnectionCallback-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -24,17 +24,17 @@ Called when a connection is set up.
 
 **Since:** 21
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
-<!--Device-WebExtensionConnectionCallback-onConnect(connection: ConnectionNativeInfo): void--><!--Device-WebExtensionConnectionCallback-onConnect(connection: ConnectionNativeInfo): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| connection | [ConnectionNativeInfo](../../apis-default/arkts-apis/arkts-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | Connection information, including the connection ID, extension application bundle name, browser extension source URL, and extension process ID. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| connection | [ConnectionNativeInfo](arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes |
 
 **Examples**
 
@@ -91,17 +91,17 @@ Called when a connection is interrupted.
 
 **Since:** 21
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
-<!--Device-WebExtensionConnectionCallback-onDisconnect(connection: ConnectionNativeInfo): void--><!--Device-WebExtensionConnectionCallback-onDisconnect(connection: ConnectionNativeInfo): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| connection | [ConnectionNativeInfo](../../apis-default/arkts-apis/arkts-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | Connection information, including the connection ID, extension application package name, browser extension source URL, and extension process ID. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| connection | [ConnectionNativeInfo](arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes |
 
 **Examples**
 
@@ -158,18 +158,18 @@ Called when the connection fails.
 
 **Since:** 21
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
-<!--Device-WebExtensionConnectionCallback-onFailed(code: NmErrorCode, errMsg: string): void--><!--Device-WebExtensionConnectionCallback-onFailed(code: NmErrorCode, errMsg: string): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| code | [NmErrorCode](../../apis-default/arkts-apis/arkts-webnativemessagingextensionmanager-nmerrorcode-e.md) | Yes | Error code. |
-| errMsg | string | Yes | Error message. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| code | [NmErrorCode](arkts-arkweb-webnativemessagingextensionmanager-nmerrorcode-e.md) | Yes |
+| errMsg | string | Yes |
 
 **Examples**
 
@@ -215,4 +215,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

@@ -4,33 +4,39 @@ NfcVTag 提供对NFC-V(ISO 15693)技术的属性和I/O操作的访问，继承�
 
 **继承/实现关系：** NfcVTag extends TagSession
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-unnamed-export interface NfcVTag--><!--Device-unnamed-export interface NfcVTag-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## getDsfId
 
+ArkTS-Dyn:
+```TypeScript
+getDsfId(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getDsfId(): int
 ```
 
 从标签实例获取数据存储格式标识符（DSFID）。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NfcVTag-getDsfId(): int--><!--Device-NfcVTag-getDsfId(): int-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | NfcV 标签的数据存储格式标识符，十六进制表示，范围是0x00~0xFF。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -44,25 +50,31 @@ console.info("nfcV dsfId: " + dsfId);
 
 ## getResponseFlags
 
+ArkTS-Dyn:
+```TypeScript
+getResponseFlags(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getResponseFlags(): int
 ```
 
 从标签实例获取响应标志。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NfcVTag-getResponseFlags(): int--><!--Device-NfcVTag-getResponseFlags(): int-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | NfcV 标签的响应标志，十六进制表示，范围是0x00~0xFF。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -73,4 +85,3 @@ import { tag } from '@kit.ConnectivityKit';
 let responseFlags : number = nfcV.getResponseFlags();
 console.info("nfcV responseFlags: " + responseFlags);
 ```
-

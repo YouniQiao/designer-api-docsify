@@ -4,7 +4,7 @@ Enum for query entity mode.
 
 **Since:** 26.0.0
 
-<!--Device-insightIntent-enum QueryType--><!--Device-insightIntent-enum QueryType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -18,11 +18,11 @@ Query all entities.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-QueryType-ALL = 'all'--><!--Device-QueryType-ALL = 'all'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -36,11 +36,10 @@ Query entities by property.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-QueryType-BY_PROPERTY = 'byProperty'--><!--Device-QueryType-BY_PROPERTY = 'byProperty'-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-

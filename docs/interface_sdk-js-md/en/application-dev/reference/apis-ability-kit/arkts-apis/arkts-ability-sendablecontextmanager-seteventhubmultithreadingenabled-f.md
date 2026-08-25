@@ -20,20 +20,20 @@ Enables the cross-thread data transfer feature of [EventHub](arkts-ability-event
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-sendableContextManager-function setEventHubMultithreadingEnabled(context: common.Context, enabled: boolean): void--><!--Device-sendableContextManager-function setEventHubMultithreadingEnabled(context: common.Context, enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | common.Context | Yes | Context object. For details about the serialization data types supported by Eventhub, see Sequenceable Data Types. The data size cannot exceed 16 MB. |
-| enabled | boolean | Yes | Whether to enable the cross-thread data transfer feature.<br>- **true**: The cross-thread data transfer feature is enabled, and data is passed by reference.<br>- **false**: The cross-thread data transfer feature is disabled. Data is passed through serialization, which means that the data of the sender thread is independent of that of the receiver thread. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | common.Context | Yes |
+| enabled | boolean | Yes |
 
 **Examples**
 
@@ -134,4 +134,3 @@ workerPort.onerror = (e: ErrorEvent) => {
   hilog.error(DOMAIN, 'testTag', '%{public}s', 'onerror');
 };
 ```
-

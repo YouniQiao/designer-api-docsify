@@ -4,7 +4,7 @@ Declare Color options interface of the ProgressButtonV2.@interface ProgressButto
 
 **Since:** 18
 
-<!--Device-unnamed-export declare interface ProgressButtonV2ColorOptions--><!--Device-unnamed-export declare interface ProgressButtonV2ColorOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,11 @@ Set background color of the ProgressButtonV2.
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ProgressButtonV2ColorOptions-backgroundColor?: ColorMetrics--><!--Device-ProgressButtonV2ColorOptions-backgroundColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,11 +46,11 @@ Set border color of the ProgressButtonV2.
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ProgressButtonV2ColorOptions-borderColor?: ColorMetrics--><!--Device-ProgressButtonV2ColorOptions-borderColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,11 +66,11 @@ Set progress color of the ProgressButtonV2.
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ProgressButtonV2ColorOptions-progressColor?: ColorMetrics--><!--Device-ProgressButtonV2ColorOptions-progressColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,11 +86,10 @@ Set text color of the ProgressButtonV2.
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ProgressButtonV2ColorOptions-textColor?: ColorMetrics--><!--Device-ProgressButtonV2ColorOptions-textColor?: ColorMetrics-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

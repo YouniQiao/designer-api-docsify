@@ -4,7 +4,7 @@
 
 **起始版本：** 15
 
-<!--Device-netFirewall-enum FirewallRuleAction--><!--Device-netFirewall-enum FirewallRuleAction-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -18,7 +18,7 @@ RULE_ALLOW = 0
 
 **起始版本：** 15
 
-<!--Device-FirewallRuleAction-RULE_ALLOW = 0--><!--Device-FirewallRuleAction-RULE_ALLOW = 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -32,7 +32,6 @@ RULE_DENY = 1
 
 **起始版本：** 15
 
-<!--Device-FirewallRuleAction-RULE_DENY = 1--><!--Device-FirewallRuleAction-RULE_DENY = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 7
 
-<!--Device-unnamed-declare abstract class SubscribaleAbstract--><!--Device-unnamed-declare abstract class SubscribaleAbstract-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,7 +25,7 @@ public addOwningProperty(subscriber: IPropertySubscriber): void
 
 **起始版本：** 7
 
-<!--Device-SubscribaleAbstract-public addOwningProperty(subscriber: IPropertySubscriber): void--><!--Device-SubscribaleAbstract-public addOwningProperty(subscriber: IPropertySubscriber): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,9 +33,9 @@ public addOwningProperty(subscriber: IPropertySubscriber): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| subscriber | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 是 | 要添加的订阅者，该订阅者将接收属性变化通知。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| subscriber | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 是 |
 
 ## constructor
 
@@ -47,7 +47,7 @@ constructor()
 
 **起始版本：** 7
 
-<!--Device-SubscribaleAbstract-constructor()--><!--Device-SubscribaleAbstract-constructor()-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,7 +70,7 @@ protected notifyPropertyHasChanged(propName: string, newValue: any): void
 
 **起始版本：** 7
 
-<!--Device-SubscribaleAbstract-protected notifyPropertyHasChanged(propName: string, newValue: any): void--><!--Device-SubscribaleAbstract-protected notifyPropertyHasChanged(propName: string, newValue: any): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,10 +78,10 @@ protected notifyPropertyHasChanged(propName: string, newValue: any): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propName | string | 是 | 要通知变更的属性名称。 |
-| newValue | any | 是 | 更改后的新值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propName | string | 是 |
+| newValue | any | 是 |
 
 ## removeOwningProperty
 
@@ -93,7 +93,7 @@ public removeOwningProperty(property: IPropertySubscriber): void
 
 **起始版本：** 7
 
-<!--Device-SubscribaleAbstract-public removeOwningProperty(property: IPropertySubscriber): void--><!--Device-SubscribaleAbstract-public removeOwningProperty(property: IPropertySubscriber): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -101,9 +101,9 @@ public removeOwningProperty(property: IPropertySubscriber): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| property | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 是 | 要删除的订阅者， 需为已通过[addOwningProperty](#addowningproperty)添加的订阅者。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| property | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 是 |
 
 ## removeOwningPropertyById
 
@@ -115,7 +115,7 @@ public removeOwningPropertyById(subscriberId: number): void
 
 **起始版本：** 7
 
-<!--Device-SubscribaleAbstract-public removeOwningPropertyById(subscriberId: number): void--><!--Device-SubscribaleAbstract-public removeOwningPropertyById(subscriberId: number): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -123,9 +123,9 @@ public removeOwningPropertyById(subscriberId: number): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| subscriberId | number | 是 | 要删除的订阅者ID， 需为已通过[addOwningProperty](#addowningproperty)添加的订阅者ID， 通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)方法获取。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| subscriberId | number | 是 |
 
 ## owningProperties_
 
@@ -139,9 +139,8 @@ private owningProperties_: Set<number>
 
 **起始版本：** 7
 
-<!--Device-SubscribaleAbstract-private owningProperties_: Set<number>--><!--Device-SubscribaleAbstract-private owningProperties_: Set<number>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
-

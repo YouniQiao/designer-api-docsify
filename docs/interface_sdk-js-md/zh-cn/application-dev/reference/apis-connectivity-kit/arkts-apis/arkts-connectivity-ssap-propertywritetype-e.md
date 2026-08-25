@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-ssap-enum PropertyWriteType--><!--Device-ssap-enum PropertyWriteType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -18,9 +18,9 @@ WRITE = 1
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-PropertyWriteType-WRITE = 1--><!--Device-PropertyWriteType-WRITE = 1-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -34,9 +34,8 @@ WRITE_NO_RESPONSE = 2
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-PropertyWriteType-WRITE_NO_RESPONSE = 2--><!--Device-PropertyWriteType-WRITE_NO_RESPONSE = 2-End-->
-
 **系统能力：** SystemCapability.Communication.NearLink.Base
-

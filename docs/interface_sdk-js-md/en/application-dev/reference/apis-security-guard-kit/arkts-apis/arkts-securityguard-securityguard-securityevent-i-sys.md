@@ -4,7 +4,7 @@ Provides the SecurityEvent type, including the event id, version info, report co
 
 **Since:** 12
 
-<!--Device-securityGuard-interface SecurityEvent--><!--Device-securityGuard-interface SecurityEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -28,7 +28,7 @@ The report content
 
 **Since:** 12
 
-<!--Device-SecurityEvent-content: string--><!--Device-SecurityEvent-content: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -46,7 +46,7 @@ The event id
 
 **Since:** 12
 
-<!--Device-SecurityEvent-eventId: number--><!--Device-SecurityEvent-eventId: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -64,7 +64,7 @@ The event timestamp, format is YYYYMMDDHHMMSS.
 
 **Since:** 12
 
-<!--Device-SecurityEvent-timestamp?: string--><!--Device-SecurityEvent-timestamp?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -82,9 +82,8 @@ The version of a security event. Different versions indicate different data form
 
 **Since:** 12
 
-<!--Device-SecurityEvent-version: string--><!--Device-SecurityEvent-version: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
-

@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [PolylineModifier](arkts-arkui-polylinemodifier-c.md) | Defines Polyline Modifier@implements PolylineAttribute, AttributeModifier&lt;PolylineAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PolylineModifier](arkts-arkui-polylinemodifier-c.md) |

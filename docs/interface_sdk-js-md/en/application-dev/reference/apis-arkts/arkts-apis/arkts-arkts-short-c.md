@@ -6,9 +6,7 @@ Represents boxed short value and related operations
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class Short--><!--Device-unnamed-export class Short-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,25 +25,23 @@ Performs integral addition of this instance with provided one, returns the resul
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public add(other: Short): Short--><!--Device-Short-public add(other: Short): Short-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Short | Yes | Right hand side of the addition. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Short | Result of the addition. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Short |
 
 ## compareTo
 
@@ -57,25 +53,23 @@ Compares this instance to other Short object. The result is less than 0 if this 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public compareTo(other: Short): int--><!--Device-Short-public compareTo(other: Short): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Short | Yes | Short object to compare with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | result of the comparison, -1 if this instance is less than provided object, 0 if equal, 1 if greater. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## constructor
 
@@ -87,11 +81,9 @@ Constructs a new Short instance with initial value zero.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public constructor()--><!--Device-Short-public constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -105,19 +97,17 @@ Constructs a new Short instance with provided initial value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public constructor(value: short)--><!--Device-Short-public constructor(value: short)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | short | Yes | the initial value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | short | Yes |
 
 ## div
 
@@ -129,25 +119,23 @@ Performs integral division of this instance with provided one, returns the resul
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public div(other: Short): Short--><!--Device-Short-public div(other: Short): Short-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Short | Yes | Right hand side of the division. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Short | Result of the division. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Short |
 
 ## equals
 
@@ -159,25 +147,23 @@ Checks for equality this instance with provided object, treated as a Short.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public equals(other: Any): boolean--><!--Device-Short-public equals(other: Any): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Any | Yes | object to be checked against. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Any | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if provided object and this instance have same value, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isGreaterEqualThan
 
@@ -189,25 +175,23 @@ Checks if this instance value is greater than or equal to value of provided inst
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public isGreaterEqualThan(other: Short): boolean--><!--Device-Short-public isGreaterEqualThan(other: Short): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Short | Yes | Right hand side of the comparison. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if this value is greater than or equal to provided, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isGreaterThan
 
@@ -219,25 +203,23 @@ Checks if this instance value is greater than value of provided instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public isGreaterThan(other: Short): boolean--><!--Device-Short-public isGreaterThan(other: Short): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Short | Yes | Right hand side of the comparison. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if this value is greater than provided, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isLessEqualThan
 
@@ -249,25 +231,23 @@ Checks if this instance value is less than or equal to value of provided instanc
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public isLessEqualThan(other: Short): boolean--><!--Device-Short-public isLessEqualThan(other: Short): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Short | Yes | Right hand side of the comparison. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if this value is less than or equal to provided, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isLessThan
 
@@ -279,25 +259,23 @@ Checks if this instance value is less than value of provided instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public isLessThan(other: Short): boolean--><!--Device-Short-public isLessThan(other: Short): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Short | Yes | Right hand side of the comparison. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if this value is less than provided, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## mul
 
@@ -309,25 +287,23 @@ Performs integral multiplication of this instance with provided one, returns the
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public mul(other: Short): Short--><!--Device-Short-public mul(other: Short): Short-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Short | Yes | Right hand side of the multiplication. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Short | Result of the multiplication. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Short |
 
 ## parseInt
 
@@ -339,26 +315,24 @@ Parses from string an integer of specified radix.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public static parseInt(s: string, r: int): short--><!--Device-Short-public static parseInt(s: string, r: int): short-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| s | string | Yes | the string to convert. |
-| r | int | Yes | the radix of conversion; should be [2, 36]; 0 assumed to be 10. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| s | string | Yes |
+| r | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| short | the result of parsing. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| short |
 
 ## sub
 
@@ -370,25 +344,23 @@ Performs integral subtraction of this instance with provided one, returns the re
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public sub(other: Short): Short--><!--Device-Short-public sub(other: Short): Short-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Short | Yes | Right hand side of the subtraction. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Short | Result of the subtraction. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Short |
 
 ## toByte
 
@@ -400,19 +372,17 @@ Returns value of this instance as byte.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public toByte(): byte--><!--Device-Short-public toByte(): byte-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| byte | value as byte. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| byte |
 
 ## toByte
 
@@ -424,25 +394,23 @@ Returns the primitive as byte value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public static toByte(value: short): byte--><!--Device-Short-public static toByte(value: short): byte-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | short | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| byte | casted value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| byte |
 
 ## toChar
 
@@ -454,19 +422,17 @@ Returns value of this instance as char.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public toChar(): char--><!--Device-Short-public toChar(): char-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| char | value as char. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| char |
 
 ## toChar
 
@@ -478,25 +444,23 @@ Returns the primitive as char value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public static toChar(value: short): char--><!--Device-Short-public static toChar(value: short): char-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | short | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| char | casted value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| char |
 
 ## toDouble
 
@@ -508,19 +472,17 @@ Returns value of this instance as double.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public toDouble(): double--><!--Device-Short-public toDouble(): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | value as double. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## toDouble
 
@@ -532,25 +494,23 @@ Returns the primitive as double value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public static toDouble(value: short): double--><!--Device-Short-public static toDouble(value: short): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | short | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | casted value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## toFloat
 
@@ -562,19 +522,17 @@ Returns value of this instance as float.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public toFloat(): float--><!--Device-Short-public toFloat(): float-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| float | value as float. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| float |
 
 ## toFloat
 
@@ -586,25 +544,23 @@ Returns the primitive as float value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public static toFloat(value: short): float--><!--Device-Short-public static toFloat(value: short): float-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | short | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| float | casted value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| float |
 
 ## toInt
 
@@ -616,19 +572,17 @@ Returns value of this instance as int.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public toInt(): int--><!--Device-Short-public toInt(): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | value as int. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## toInt
 
@@ -640,25 +594,23 @@ Returns the primitive as int value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public static toInt(value: short): int--><!--Device-Short-public static toInt(value: short): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | short | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | casted value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## toLocaleString
 
@@ -670,26 +622,24 @@ Converts this object to a locale-specific string representation
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.NumberFormatOptions): string--><!--Device-Short-public toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.NumberFormatOptions): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | No | A string with a BCP 47 language tag, or an array of such strings. |
-| options | Intl.NumberFormatOptions | No | An object with some or all of the properties of the Intl.NumberFormat options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | No |
+| options | Intl.NumberFormatOptions | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the locale-specific conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toLocaleString
 
@@ -701,26 +651,24 @@ Converts this object to a locale-specific string representation
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string--><!--Device-Short-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | No | A string with a BCP 47 language tag, or an array of such strings. |
-| options | object | No | An object with some or all of the properties of the Intl.NumberFormat options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | No |
+| options | object | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the locale-specific conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toLong
 
@@ -732,19 +680,17 @@ Returns value of this instance as long.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public toLong(): long--><!--Device-Short-public toLong(): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | value as long. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## toLong
 
@@ -756,25 +702,23 @@ Returns the primitive as long value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public static toLong(value: short): long--><!--Device-Short-public static toLong(value: short): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | short | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | casted value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## toShort
 
@@ -786,19 +730,17 @@ Returns value of this instance as short.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public toShort(): short--><!--Device-Short-public toShort(): short-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| short | value as short. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| short |
 
 ## toShort
 
@@ -810,25 +752,23 @@ Returns the primitive as short value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public static toShort(value: short): short--><!--Device-Short-public static toShort(value: short): short-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | short | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| short | casted value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| short |
 
 ## toString
 
@@ -840,25 +780,23 @@ Converts the primitive to a string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public static toString(v: short): string--><!--Device-Short-public static toString(v: short): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| v | short | Yes | value to be converted. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| v | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the conversion. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -870,19 +808,17 @@ Converts this object to a string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public toString(): string--><!--Device-Short-public toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the conversion. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -894,25 +830,23 @@ Converts this object to a string with specified radix.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public toString(radix: int): string--><!--Device-Short-public toString(radix: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| radix | int | Yes | the radix of conversion. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| radix | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the conversion. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -924,25 +858,23 @@ Converts this object to a string with specified radix.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public toString(radix: double): string--><!--Device-Short-public toString(radix: double): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| radix | double | Yes | the radix of conversion. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| radix | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the conversion. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## BIT_SIZE
 
@@ -956,11 +888,9 @@ Size of this type in bits.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public static BIT_SIZE: byte = 16--><!--Device-Short-public static BIT_SIZE: byte = 16-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -976,11 +906,9 @@ Size of this type in bytes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public static BYTE_SIZE: byte = 2--><!--Device-Short-public static BYTE_SIZE: byte = 2-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -996,11 +924,9 @@ Maximal value that this type can have as a short.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Short-public static MAX_VALUE: short = 32767--><!--Device-Short-public static MAX_VALUE: short = 32767-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1016,11 +942,8 @@ Minimal value that this type can have as a short.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Short-public static MIN_VALUE: short = -32768--><!--Device-Short-public static MIN_VALUE: short = -32768-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

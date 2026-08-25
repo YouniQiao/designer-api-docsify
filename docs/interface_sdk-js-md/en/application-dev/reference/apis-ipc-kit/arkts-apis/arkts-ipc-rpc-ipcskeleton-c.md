@@ -2,9 +2,9 @@
 
 Obtains IPC context, including the UID and PID, local and remote device IDs, and whether the method is invoked on the same device.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-rpc-class IPCSkeleton--><!--Device-rpc-class IPCSkeleton-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -22,23 +22,23 @@ static flushCmdBuffer(object: IRemoteObject): void
 
 Flushes all suspended commands from the specified **RemoteProxy** to the corresponding **RemoteObject**. This API is a static method. You are advised to call this API before performing any sensitive operation.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IPCSkeleton-static flushCmdBuffer(object: IRemoteObject): void--><!--Device-IPCSkeleton-static flushCmdBuffer(object: IRemoteObject): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes | RemoteProxy** specified. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -77,25 +77,25 @@ Flushes all suspended commands from the specified **RemoteProxy** to the corresp
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-**Substitutes:** static flushCmdBuffer(object: IRemoteObject)
-
-<!--Device-IPCSkeleton-static flushCommands(object: IRemoteObject): number--><!--Device-IPCSkeleton-static flushCommands(object: IRemoteObject): number-End-->
+**Substitutes:** static
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes | RemoteProxy** specified. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Returns **0** if the operation is successful; returns an error code if the input object is null or a **RemoteObject**, or if the operation fails. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -132,17 +132,17 @@ static getCallingDeviceID(): string
 
 Obtains the ID of the device hosting the caller's process. This API is a static method.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-IPCSkeleton-static getCallingDeviceID(): string--><!--Device-IPCSkeleton-static getCallingDeviceID(): string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Device ID obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -166,23 +166,29 @@ class Stub extends rpc.RemoteObject {
 
 ## getCallingPid
 
+ArkTS-Dyn:
+```TypeScript
+static getCallingPid(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 static getCallingPid(): int
 ```
 
 Obtains the PID of the caller. This API is a static method, which is invoked by the **RemoteObject** object in the **onRemoteRequest** method. If this method is not invoked in the IPC context (**onRemoteRequest**), the PID of the process will be returned.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-IPCSkeleton-static getCallingPid(): int--><!--Device-IPCSkeleton-static getCallingPid(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | PID of the caller. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -228,23 +234,29 @@ try {
 
 ## getCallingTokenId
 
+ArkTS-Dyn:
+```TypeScript
+static getCallingTokenId(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 static getCallingTokenId(): long
 ```
 
 Obtains the caller's token ID, which is used to verify the caller identity.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-IPCSkeleton-static getCallingTokenId(): long--><!--Device-IPCSkeleton-static getCallingTokenId(): long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Token ID of the caller obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Examples**
 
@@ -268,23 +280,29 @@ class Stub extends rpc.RemoteObject {
 
 ## getCallingUid
 
+ArkTS-Dyn:
+```TypeScript
+static getCallingUid(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 static getCallingUid(): int
 ```
 
 Obtains the UID of the caller. This API is a static method, which is invoked by the **RemoteObject** object in the **onRemoteRequest** method. If this method is not invoked in the IPC context (**onRemoteRequest**), the UID of the process will be returned.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-IPCSkeleton-static getCallingUid(): int--><!--Device-IPCSkeleton-static getCallingUid(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | UID of the caller. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -336,17 +354,17 @@ static getContextObject(): IRemoteObject
 
 Obtains the system capability manager. This API is a static method.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-IPCSkeleton-static getContextObject(): IRemoteObject--><!--Device-IPCSkeleton-static getContextObject(): IRemoteObject-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | System capability manager obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) |
 
 **Examples**
 
@@ -370,17 +388,17 @@ static getLocalDeviceID(): string
 
 Obtains the local device ID. This API is a static method.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-IPCSkeleton-static getLocalDeviceID(): string--><!--Device-IPCSkeleton-static getLocalDeviceID(): string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Local device ID obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -410,17 +428,17 @@ static isLocalCalling(): boolean
 
 Checks whether the peer process is a process of the local device. This API is a static method.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-IPCSkeleton-static isLocalCalling(): boolean--><!--Device-IPCSkeleton-static isLocalCalling(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the local and peer processes are on the same device; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -450,17 +468,17 @@ static resetCallingIdentity(): string
 
 Resets the UID and PID of the remote user to those of the local user. This API is a static method and is used in scenarios such as identity authentication.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-IPCSkeleton-static resetCallingIdentity(): string--><!--Device-IPCSkeleton-static resetCallingIdentity(): string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | String containing the UID and PID of the remote user. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -490,23 +508,23 @@ static restoreCallingIdentity(identity: string): void
 
 Restores the UID and PID of the remote user. This API is a static method. It is usually called after **resetCallingIdentity**, and the UID and PID of the remote user returned by **resetCallingIdentity** are required.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IPCSkeleton-static restoreCallingIdentity(identity: string): void--><!--Device-IPCSkeleton-static restoreCallingIdentity(identity: string): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| identity | string | Yes | A string containing the UID and PID of the remote user. The length of the string must be less than 40960. are returned by **resetCallingIdentity**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| identity | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -539,25 +557,25 @@ Sets the UID and PID of the remote user. This API is a static method. It is usua
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-**Substitutes:** static restoreCallingIdentity(identity: string)
-
-<!--Device-IPCSkeleton-static setCallingIdentity(identity: string): boolean--><!--Device-IPCSkeleton-static setCallingIdentity(identity: string): boolean-End-->
+**Substitutes:** static
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| identity | string | Yes | String containing the remote user's UID and PID, which are returned by **resetCallingIdentity**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| identity | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -580,4 +598,3 @@ class Stub extends rpc.RemoteObject {
   }
 }
 ```
-

@@ -2,9 +2,9 @@
 
 Enumerates the display mode for the screen capture picker.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-media-enum PickerMode--><!--Device-media-enum PickerMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -16,9 +16,9 @@ WINDOW_ONLY = 0
 
 Displays only a list of windows.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-PickerMode-WINDOW_ONLY = 0--><!--Device-PickerMode-WINDOW_ONLY = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -30,9 +30,9 @@ SCREEN_ONLY = 1
 
 Displays only a list of screens.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-PickerMode-SCREEN_ONLY = 1--><!--Device-PickerMode-SCREEN_ONLY = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -44,9 +44,9 @@ SCREEN_AND_WINDOW = 2
 
 Displays both screens and windows.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-PickerMode-SCREEN_AND_WINDOW = 2--><!--Device-PickerMode-SCREEN_AND_WINDOW = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -60,9 +60,9 @@ Show application options only.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-PickerMode-APP_ONLY = 3--><!--Device-PickerMode-APP_ONLY = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -76,9 +76,9 @@ Show both window and application options.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-PickerMode-WINDOW_AND_APP = 4--><!--Device-PickerMode-WINDOW_AND_APP = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -92,9 +92,9 @@ Show both screen and application options.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-PickerMode-SCREEN_AND_APP = 5--><!--Device-PickerMode-SCREEN_AND_APP = 5-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -108,9 +108,8 @@ Show screen, window, and application options.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PickerMode-SCREEN_WINDOW_AND_APP = 6--><!--Device-PickerMode-SCREEN_WINDOW_AND_APP = 6-End-->
-
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
-

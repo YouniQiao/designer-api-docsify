@@ -14,40 +14,40 @@ function buildX509CertChain(param: CertChainBuildParameters): Promise<CertChainB
 
 表示使用CertChainBuildParameters对象方式创建X.509证书链对象。使用Promise方式返回结果。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-cert-function buildX509CertChain(param: CertChainBuildParameters): Promise<CertChainBuildResult>--><!--Device-cert-function buildX509CertChain(param: CertChainBuildParameters): Promise<CertChainBuildResult>-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Cert
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| param | [CertChainBuildParameters](arkts-devicecertificate-cert-certchainbuildparameters-i.md) | 是 | 构建证书链的参数对象。 <br> [CertChainBuildParameters](arkts-devicecertificate-cert-certchainbuildparameters-i.md)中的maxLength要小于证书集合中证书数量。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| param | [CertChainBuildParameters](arkts-devicecertificate-cert-certchainbuildparameters-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[CertChainBuildResult](arkts-devicecertificate-cert-certchainbuildresult-i.md)&gt; | Promise对象，返回创建的CertChainBuildResult实例。 |
+| 类型 |
+| --- |
+| Promise&lt;[CertChainBuildResult](arkts-devicecertificate-cert-certchainbuildresult-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
-| [19030002](../errorcode-cert.md#19030002-证书签名验证错误) | The certificate signature verification failed. |
-| [19030003](../errorcode-cert.md#19030003-证书尚未生效) | The certificate has not taken effect. |
-| [19030004](../errorcode-cert.md#19030004-证书过期) | The certificate has expired. |
-| [19030005](../errorcode-cert.md#19030005-无法获取证书的颁发者) | Failed to obtain the certificate issuer. |
-| [19030006](../errorcode-cert.md#19030006-证书的密钥用途不含证书签名) | The key cannot be used for signing a certificate. |
-| [19030007](../errorcode-cert.md#19030007-证书的密钥用途不含数字签名) | The key cannot be used for a digital signature. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19030002](../errorcode-cert.md#19030002-证书签名验证错误) |
+| [19030003](../errorcode-cert.md#19030003-证书尚未生效) |
+| [19030004](../errorcode-cert.md#19030004-证书过期) |
+| [19030005](../errorcode-cert.md#19030005-无法获取证书的颁发者) |
+| [19030006](../errorcode-cert.md#19030006-证书的密钥用途不含证书签名) |
+| [19030007](../errorcode-cert.md#19030007-证书的密钥用途不含数字签名) |
 
 **示例**
 
@@ -254,4 +254,3 @@ async function buildX509CertChain() {
   }
 }
 ```
-

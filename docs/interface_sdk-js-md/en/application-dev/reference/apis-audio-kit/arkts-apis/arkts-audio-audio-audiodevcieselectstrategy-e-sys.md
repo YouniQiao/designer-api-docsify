@@ -2,9 +2,9 @@
 
 Enumerates the device select strategy.
 
-**Since:** 24
+**Since:** 21
 
-<!--Device-audio-enum AudioDevcieSelectStrategy--><!--Device-audio-enum AudioDevcieSelectStrategy-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -18,9 +18,9 @@ SELECT_STRATEGY_DEFAULT = 0
 
 The default follow device select strategy.
 
-**Since:** 24
+**Since:** 21
 
-<!--Device-AudioDevcieSelectStrategy-SELECT_STRATEGY_DEFAULT = 0--><!--Device-AudioDevcieSelectStrategy-SELECT_STRATEGY_DEFAULT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -34,11 +34,10 @@ SELECT_STRATEGY_INDEPENDENT = 1
 
 The independent device select strategy.
 
-**Since:** 24
+**Since:** 21
 
-<!--Device-AudioDevcieSelectStrategy-SELECT_STRATEGY_INDEPENDENT = 1--><!--Device-AudioDevcieSelectStrategy-SELECT_STRATEGY_INDEPENDENT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
-

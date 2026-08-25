@@ -1,12 +1,12 @@
 # HashStream
 
-The **HashStream** class is a utility for creating a message digest of data. You can use [createHash](arkts-corefile-hash-createhash-f.md) to create a **HashStream** instance.
+The **HashStream** class is a utility for creating a message digest of data. You can use [createHash](../../../reference/apis-core-file-kit/js-apis-file-hash.md#hashcreatehash12) to create a **HashStream** instance.
 
 **Inheritance/Implementation:** HashStream extends [stream.Transform](../../apis-arkts/arkts-apis/arkts-arkts-stream-transform-c.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-hash-class HashStream--><!--Device-hash-class HashStream-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -24,24 +24,24 @@ digest(): string
 
 Generates a message digest.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HashStream-digest(): string--><!--Device-HashStream-digest(): string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Hash value, which is a hexadecimal string consisting of digits and uppercase letters. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| 13900042 |
 
 **Examples**
 
@@ -63,24 +63,24 @@ update(data: ArrayBuffer): void
 
 Updates the data for generating a message digest. This API can be called multiple times.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HashStream-update(data: ArrayBuffer): void--><!--Device-HashStream-update(data: ArrayBuffer): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | ArrayBuffer | Yes | Data to be calculated. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | ArrayBuffer | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| 13900042 |
 
 **Examples**
 
@@ -93,4 +93,3 @@ const hashResult = hs.digest();
 // 88A00F46836CD629D0B79DE98532AFDE3AEAD79A5C53E4848102F433046D0106
 console.info(`hashResult: ${hashResult}`);
 ```
-

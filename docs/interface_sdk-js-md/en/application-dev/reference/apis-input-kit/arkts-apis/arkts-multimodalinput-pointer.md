@@ -1,10 +1,10 @@
-# @ohos.multimodalInput.pointer
+# @ohos.multimodalInput.pointer(Mouse Pointer)
 
 The **pointer** module provides APIs related to pointer attribute management, such as querying and setting pointer attributes.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-declare namespace pointer--><!--Device-unnamed-declare namespace pointer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -18,107 +18,106 @@ import { pointer } from '@kit.InputKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getPointerStyle](arkts-input-pointer-getpointerstyle-f.md) | Obtains the mouse pointer style type of a specified window. This API can obtain only the mouse pointer style type of windows within the current application process. This API uses an asynchronous callback to return the result. |
-| [getPointerStyle](arkts-input-pointer-getpointerstyle-f.md) | Obtains the mouse pointer style type. This API can obtain only the mouse pointer style type of windows within the current application process. This API uses a promise to return the result. |
-| [getPointerStyleSync](arkts-input-pointer-getpointerstylesync-f.md) | Queries the mouse pointer style type of a specified window, such as east arrow, west arrow, south arrow, and north arrow. This API can obtain only the mouse pointer style type of windows within the current application process. |
-| [isPointerVisible](arkts-input-pointer-ispointervisible-f.md) | Obtains the visible status of the mouse pointer. This API uses an asynchronous callback to return the result. |
-| [isPointerVisible](arkts-input-pointer-ispointervisible-f.md) | Obtains the visible status of the mouse pointer. This API uses a promise to return the result. |
-| [isPointerVisibleSync](arkts-input-pointer-ispointervisiblesync-f.md) | Checks whether the mouse pointer is visible in the current window. This API returns the result synchronously. |
-| [setCustomCursor](arkts-input-pointer-setcustomcursor-f.md) | Sets a custom pointer style for a specified window. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see [setCustomCursor](../../apis-default/arkts-apis/arkts-arkui-uicontext-cursorcontroller-c.md#setcustomcursor). This API uses a promise to return the result. |
-| [setCustomCursor](arkts-input-pointer-setcustomcursor-f.md) | Sets a custom pointer style for a specified window. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see [setCustomCursor](../../apis-default/arkts-apis/arkts-arkui-uicontext-cursorcontroller-c.md#setcustomcursor). This API uses a promise to return the result.The cursor may be switched back to the system style in the following cases: application window layout change, hot zone switching, page redirection, moving of the cursor out of the window and then back to the window, or moving of the cursor in different areas of the window. In this case, you need to reset the cursor style. |
-| [setCustomCursorSync](arkts-input-pointer-setcustomcursorsync-f.md) | Sets a custom pointer style for a specified window synchronously. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see [setCustomCursor](../../apis-default/arkts-apis/arkts-arkui-uicontext-cursorcontroller-c.md#setcustomcursor). |
-| [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md) | Sets the mouse pointer style type for a specified window. This API can set only the mouse pointer style type of windows within the current application process. For details about how to set the mouse pointer style type of the host window through the **UIExtensionAbility** process, see [setCursor](../../apis-default/arkts-apis/arkts-arkui-uicontext-cursorcontroller-c.md#setcursor). This API uses an asynchronous callback to return the result. |
-| [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md) | Sets the mouse pointer style type for a specified window. This API can set only the mouse pointer style type of windows within the current application process. For details about how to set the mouse pointer style type of the host window through the **UIExtensionAbility** process, see [setCursor](../../apis-default/arkts-apis/arkts-arkui-uicontext-cursorcontroller-c.md#setcursor). This uses a promise to return the result. |
-| [setPointerStyleSync](arkts-input-pointer-setpointerstylesync-f.md) | Sets the mouse pointer style type for a specified window and returns the result synchronously. This API can set only the mouse pointer style type of windows within the current application process. For details about how to set the mouse pointer style type of the host window through the **UIExtensionAbility** process, see [setCursor](../../apis-default/arkts-apis/arkts-arkui-uicontext-cursorcontroller-c.md#setcursor). |
-| [setPointerVisible](arkts-input-pointer-setpointervisible-f.md) | Sets whether the mouse pointer is visible in the current window. This API uses an asynchronous callback to return the result. |
-| [setPointerVisible](arkts-input-pointer-setpointervisible-f.md) | Sets whether the mouse pointer is visible in the current window. This API uses a promise to return the result. |
-| [setPointerVisibleSync](arkts-input-pointer-setpointervisiblesync-f.md) | Sets whether the mouse pointer is visible in the current window. This API returns the result synchronously. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getPointerStyle(Mouse Pointer)](arkts-input-pointer-getpointerstyle-f.md) |
+| [getPointerStyle(Mouse Pointer)](arkts-input-pointer-getpointerstyle-f.md) |
+| [getPointerStyleSync(Mouse Pointer)](arkts-input-pointer-getpointerstylesync-f.md) |
+| [isPointerVisible(Mouse Pointer)](arkts-input-pointer-ispointervisible-f.md) |
+| [isPointerVisible(Mouse Pointer)](arkts-input-pointer-ispointervisible-f.md) |
+| [isPointerVisibleSync(Mouse Pointer)](arkts-input-pointer-ispointervisiblesync-f.md) |
+| [setCustomCursor(Mouse Pointer)](arkts-input-pointer-setcustomcursor-f.md) |
+| [setCustomCursor(Mouse Pointer)](arkts-input-pointer-setcustomcursor-f.md) |
+| [setCustomCursorSync(Mouse Pointer)](arkts-input-pointer-setcustomcursorsync-f.md) |
+| [setPointerStyle(Mouse Pointer)](arkts-input-pointer-setpointerstyle-f.md) |
+| [setPointerStyle(Mouse Pointer)](arkts-input-pointer-setpointerstyle-f.md) |
+| [setPointerStyleSync(Mouse Pointer)](arkts-input-pointer-setpointerstylesync-f.md) |
+| [setPointerVisible(Mouse Pointer)](arkts-input-pointer-setpointervisible-f.md) |
+| [setPointerVisible(Mouse Pointer)](arkts-input-pointer-setpointervisible-f.md) |
+| [setPointerVisibleSync(Mouse Pointer)](arkts-input-pointer-setpointervisiblesync-f.md) |
 
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [getHoverScrollState](arkts-input-pointer-gethoverscrollstate-f-sys.md) | Obtains the mouse hover scrolling switch state. This API uses an asynchronous callback to return the result. |
-| [getHoverScrollState](arkts-input-pointer-gethoverscrollstate-f-sys.md) | Obtains the status of the mouse hover scroll switch. This API uses a promise to return the result. |
-| [getMousePrimaryButton](arkts-input-pointer-getmouseprimarybutton-f-sys.md) | Obtains the current primary mouse button. This API uses an asynchronous callback to return the result. |
-| [getMousePrimaryButton](arkts-input-pointer-getmouseprimarybutton-f-sys.md) | Obtains the current primary mouse button. This API uses a promise to return the result. |
-| [getMouseScrollDirection](arkts-input-pointer-getmousescrolldirection-f-sys.md) | Obtains the scroll direction of the mouse wheel. This API uses a promise to return the result asynchronously. |
-| [getMouseScrollRows](arkts-input-pointer-getmousescrollrows-f-sys.md) | Obtains the number of mouse scroll lines. This API uses an asynchronous callback to return the result. |
-| [getMouseScrollRows](arkts-input-pointer-getmousescrollrows-f-sys.md) | Obtains the number of mouse scroll lines. This API uses a promise to return the result. |
-| [getPointerColor](arkts-input-pointer-getpointercolor-f-sys.md) | Obtains the mouse pointer color. This API uses an asynchronous callback to return the result. |
-| [getPointerColor](arkts-input-pointer-getpointercolor-f-sys.md) | Obtains the current mouse pointer color. This API uses a promise to return the result. |
-| [getPointerColorSync](arkts-input-pointer-getpointercolorsync-f-sys.md) | Obtains the pointer color. This API returns the result synchronously. |
-| [getPointerSize](arkts-input-pointer-getpointersize-f-sys.md) | Obtains the current mouse pointer size. This API uses an asynchronous callback to return the result. |
-| [getPointerSize](arkts-input-pointer-getpointersize-f-sys.md) | Obtains the current mouse pointer size. This API uses a promise to return the result. |
-| [getPointerSizeSync](arkts-input-pointer-getpointersizesync-f-sys.md) | Obtains the pointer size. This API returns the result synchronously. |
-| [getPointerSpeed](arkts-input-pointer-getpointerspeed-f-sys.md) | Obtains the mouse pointer speed. This API uses an asynchronous callback to return the result. |
-| [getPointerSpeed](arkts-input-pointer-getpointerspeed-f-sys.md) | Obtains the mouse pointer speed. This API uses a promise to return the result. |
-| [getPointerSpeedSync](arkts-input-pointer-getpointerspeedsync-f-sys.md) | Obtains the mouse pointer speed. This API returns the result synchronously. |
-| [getTouchpadDoubleTapAndDragState](arkts-input-pointer-gettouchpaddoubletapanddragstate-f-sys.md) | Obtains the touchpad double-tap and drag switch state. This API uses an asynchronous callback to return the result. |
-| [getTouchpadDoubleTapAndDragState](arkts-input-pointer-gettouchpaddoubletapanddragstate-f-sys.md) | Obtains the touchpad double-tap and drag switch state. This API uses a promise to return the result. |
-| [getTouchpadPinchSwitch](arkts-input-pointer-gettouchpadpinchswitch-f-sys.md) | Obtains the touchpad pinch switch state. This API uses an asynchronous callback to return the result. |
-| [getTouchpadPinchSwitch](arkts-input-pointer-gettouchpadpinchswitch-f-sys.md) | Obtains the touchpad pinch switch state. This API uses a promise to return the result. |
-| [getTouchpadPointerSpeed](arkts-input-pointer-gettouchpadpointerspeed-f-sys.md) | Obtains the touchpad pointer speed. This API uses an asynchronous callback to return the result. |
-| [getTouchpadPointerSpeed](arkts-input-pointer-gettouchpadpointerspeed-f-sys.md) | Obtains the touchpad pointer speed. This API uses a promise to return the result. |
-| [getTouchpadRightClickType](arkts-input-pointer-gettouchpadrightclicktype-f-sys.md) | Obtains the touchpad right-click menu type. This API uses an asynchronous callback to return the result. |
-| [getTouchpadRightClickType](arkts-input-pointer-gettouchpadrightclicktype-f-sys.md) | Obtains the touchpad right-click menu type. This API uses a promise to return the result. |
-| [getTouchpadScrollDirection](arkts-input-pointer-gettouchpadscrolldirection-f-sys.md) | Obtains the touchpad scroll direction. This API uses an asynchronous callback to return the result. |
-| [getTouchpadScrollDirection](arkts-input-pointer-gettouchpadscrolldirection-f-sys.md) | Obtains the scroll direction of the touchpad. This API uses a promise to return the result. |
-| [getTouchpadScrollSwitch](arkts-input-pointer-gettouchpadscrollswitch-f-sys.md) | Obtains the touchpad scroll switch state. This API uses an asynchronous callback to return the result. |
-| [getTouchpadScrollSwitch](arkts-input-pointer-gettouchpadscrollswitch-f-sys.md) | Obtains the touchpad scroll switch state. This API uses a promise to return the result. |
-| [getTouchpadSwipeSwitch](arkts-input-pointer-gettouchpadswipeswitch-f-sys.md) | Obtains the touchpad multi-finger swipe switch state. This API uses an asynchronous callback to return the result. |
-| [getTouchpadSwipeSwitch](arkts-input-pointer-gettouchpadswipeswitch-f-sys.md) | Obtains the touchpad multi-finger swipe switch state. This API uses a promise to return the result. |
-| [getTouchpadTapSwitch](arkts-input-pointer-gettouchpadtapswitch-f-sys.md) | Obtains the touchpad tap switch state. This API uses an asynchronous callback to return the result. |
-| [getTouchpadTapSwitch](arkts-input-pointer-gettouchpadtapswitch-f-sys.md) | Obtains the touchpad tap switch state. This API uses a promise to return the result. |
-| [setHoverScrollState](arkts-input-pointer-sethoverscrollstate-f-sys.md) | Sets the mouse hover scrolling switch state. This API uses an asynchronous callback to return the result. |
-| [setHoverScrollState](arkts-input-pointer-sethoverscrollstate-f-sys.md) | Sets the status of the mouse hover scroll switch. This API uses a promise to return the result. |
-| [setMousePrimaryButton](arkts-input-pointer-setmouseprimarybutton-f-sys.md) | Sets the primary mouse button. This API uses an asynchronous callback to return the result. |
-| [setMousePrimaryButton](arkts-input-pointer-setmouseprimarybutton-f-sys.md) | Sets the primary mouse button. This API uses a promise to return the result. |
-| [setMouseScrollDirection](arkts-input-pointer-setmousescrolldirection-f-sys.md) | Sets the scroll direction of the mouse wheel. This API uses a promise to return the result asynchronously. |
-| [setMouseScrollRows](arkts-input-pointer-setmousescrollrows-f-sys.md) | Sets the number of mouse scroll lines. This API uses an asynchronous callback to return the result. |
-| [setMouseScrollRows](arkts-input-pointer-setmousescrollrows-f-sys.md) | Sets the number of mouse scroll lines. This API uses a promise to return the result. |
-| [setPointerColor](arkts-input-pointer-setpointercolor-f-sys.md) | Sets the mouse pointer color. This API uses an asynchronous callback to return the result. |
-| [setPointerColor](arkts-input-pointer-setpointercolor-f-sys.md) | Sets the mouse pointer color. This API uses a promise to return the result. |
-| [setPointerColorSync](arkts-input-pointer-setpointercolorsync-f-sys.md) | Sets the pointer color. This API returns the result synchronously. |
-| [setPointerSize](arkts-input-pointer-setpointersize-f-sys.md) | Sets the mouse pointer size. This API uses an asynchronous callback to return the result. |
-| [setPointerSize](arkts-input-pointer-setpointersize-f-sys.md) | Sets the mouse pointer size. This API uses a promise to return the result. |
-| [setPointerSizeSync](arkts-input-pointer-setpointersizesync-f-sys.md) | Sets the pointer size. This API returns the result synchronously. |
-| [setPointerSpeed](arkts-input-pointer-setpointerspeed-f-sys.md) | Sets the mouse pointer speed. This API uses an asynchronous callback to return the result. |
-| [setPointerSpeed](arkts-input-pointer-setpointerspeed-f-sys.md) | Sets the mouse pointer speed. This API uses a promise to return the result. |
-| [setPointerSpeedSync](arkts-input-pointer-setpointerspeedsync-f-sys.md) | Sets the mouse pointer speed. This API returns the result synchronously. |
-| [setTouchpadDoubleTapAndDragState](arkts-input-pointer-settouchpaddoubletapanddragstate-f-sys.md) | Sets the touchpad double-tap and drag switch state. This API uses an asynchronous callback to return the result. |
-| [setTouchpadDoubleTapAndDragState](arkts-input-pointer-settouchpaddoubletapanddragstate-f-sys.md) | Sets the touchpad double-tap and drag switch state. This API uses a promise to return the result. |
-| [setTouchpadPinchSwitch](arkts-input-pointer-settouchpadpinchswitch-f-sys.md) | Sets the touchpad pinch switch. This API uses an asynchronous callback to return the result. |
-| [setTouchpadPinchSwitch](arkts-input-pointer-settouchpadpinchswitch-f-sys.md) | Sets the touchpad pinch switch. This API uses a promise to return the result. |
-| [setTouchpadPointerSpeed](arkts-input-pointer-settouchpadpointerspeed-f-sys.md) | Sets the touchpad pointer speed. This API uses an asynchronous callback to return the result. |
-| [setTouchpadPointerSpeed](arkts-input-pointer-settouchpadpointerspeed-f-sys.md) | Sets the touchpad pointer speed. This API uses a promise to return the result. |
-| [setTouchpadRightClickType](arkts-input-pointer-settouchpadrightclicktype-f-sys.md) | Sets the touchpad right-click menu type. This API uses an asynchronous callback to return the result. |
-| [setTouchpadRightClickType](arkts-input-pointer-settouchpadrightclicktype-f-sys.md) | Sets the touchpad right-click menu type. This API uses a promise to return the result. |
-| [setTouchpadScrollDirection](arkts-input-pointer-settouchpadscrolldirection-f-sys.md) | Sets the touchpad scroll direction. This API uses an asynchronous callback to return the result. |
-| [setTouchpadScrollDirection](arkts-input-pointer-settouchpadscrolldirection-f-sys.md) | Sets the touchpad scroll direction. This API uses a promise to return the result. |
-| [setTouchpadScrollSwitch](arkts-input-pointer-settouchpadscrollswitch-f-sys.md) | Sets the touchpad scroll switch. This API uses an asynchronous callback to return the result. |
-| [setTouchpadScrollSwitch](arkts-input-pointer-settouchpadscrollswitch-f-sys.md) | Sets the touchpad scroll switch. This API uses a promise to return the result. |
-| [setTouchpadSwipeSwitch](arkts-input-pointer-settouchpadswipeswitch-f-sys.md) | Sets the touchpad multi-finger swipe switch. This API uses an asynchronous callback to return the result. |
-| [setTouchpadSwipeSwitch](arkts-input-pointer-settouchpadswipeswitch-f-sys.md) | Sets the touchpad multi-finger swipe switch. This API uses a promise to return the result. |
-| [setTouchpadTapSwitch](arkts-input-pointer-settouchpadtapswitch-f-sys.md) | Sets the touchpad tap switch. This API uses an asynchronous callback to return the result. |
-| [setTouchpadTapSwitch](arkts-input-pointer-settouchpadtapswitch-f-sys.md) | Sets the touchpad tap switch. This API uses a promise to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getHoverScrollState(Mouse Pointer)](arkts-input-pointer-gethoverscrollstate-f-sys.md) |
+| [getHoverScrollState(Mouse Pointer)](arkts-input-pointer-gethoverscrollstate-f-sys.md) |
+| [getMousePrimaryButton(Mouse Pointer)](arkts-input-pointer-getmouseprimarybutton-f-sys.md) |
+| [getMousePrimaryButton(Mouse Pointer)](arkts-input-pointer-getmouseprimarybutton-f-sys.md) |
+| [getMouseScrollDirection(Mouse Pointer)](arkts-input-pointer-getmousescrolldirection-f-sys.md) |
+| [getMouseScrollRows(Mouse Pointer)](arkts-input-pointer-getmousescrollrows-f-sys.md) |
+| [getMouseScrollRows(Mouse Pointer)](arkts-input-pointer-getmousescrollrows-f-sys.md) |
+| [getPointerColor(Mouse Pointer)](arkts-input-pointer-getpointercolor-f-sys.md) |
+| [getPointerColor(Mouse Pointer)](arkts-input-pointer-getpointercolor-f-sys.md) |
+| [getPointerColorSync(Mouse Pointer)](arkts-input-pointer-getpointercolorsync-f-sys.md) |
+| [getPointerSize(Mouse Pointer)](arkts-input-pointer-getpointersize-f-sys.md) |
+| [getPointerSize(Mouse Pointer)](arkts-input-pointer-getpointersize-f-sys.md) |
+| [getPointerSizeSync(Mouse Pointer)](arkts-input-pointer-getpointersizesync-f-sys.md) |
+| [getPointerSpeed(Mouse Pointer)](arkts-input-pointer-getpointerspeed-f-sys.md) |
+| [getPointerSpeed(Mouse Pointer)](arkts-input-pointer-getpointerspeed-f-sys.md) |
+| [getPointerSpeedSync(Mouse Pointer)](arkts-input-pointer-getpointerspeedsync-f-sys.md) |
+| [getTouchpadDoubleTapAndDragState(Mouse Pointer)](arkts-input-pointer-gettouchpaddoubletapanddragstate-f-sys.md) |
+| [getTouchpadDoubleTapAndDragState(Mouse Pointer)](arkts-input-pointer-gettouchpaddoubletapanddragstate-f-sys.md) |
+| [getTouchpadPinchSwitch(Mouse Pointer)](arkts-input-pointer-gettouchpadpinchswitch-f-sys.md) |
+| [getTouchpadPinchSwitch(Mouse Pointer)](arkts-input-pointer-gettouchpadpinchswitch-f-sys.md) |
+| [getTouchpadPointerSpeed(Mouse Pointer)](arkts-input-pointer-gettouchpadpointerspeed-f-sys.md) |
+| [getTouchpadPointerSpeed(Mouse Pointer)](arkts-input-pointer-gettouchpadpointerspeed-f-sys.md) |
+| [getTouchpadRightClickType(Mouse Pointer)](arkts-input-pointer-gettouchpadrightclicktype-f-sys.md) |
+| [getTouchpadRightClickType(Mouse Pointer)](arkts-input-pointer-gettouchpadrightclicktype-f-sys.md) |
+| [getTouchpadScrollDirection(Mouse Pointer)](arkts-input-pointer-gettouchpadscrolldirection-f-sys.md) |
+| [getTouchpadScrollDirection(Mouse Pointer)](arkts-input-pointer-gettouchpadscrolldirection-f-sys.md) |
+| [getTouchpadScrollSwitch(Mouse Pointer)](arkts-input-pointer-gettouchpadscrollswitch-f-sys.md) |
+| [getTouchpadScrollSwitch(Mouse Pointer)](arkts-input-pointer-gettouchpadscrollswitch-f-sys.md) |
+| [getTouchpadSwipeSwitch(Mouse Pointer)](arkts-input-pointer-gettouchpadswipeswitch-f-sys.md) |
+| [getTouchpadSwipeSwitch(Mouse Pointer)](arkts-input-pointer-gettouchpadswipeswitch-f-sys.md) |
+| [getTouchpadTapSwitch(Mouse Pointer)](arkts-input-pointer-gettouchpadtapswitch-f-sys.md) |
+| [getTouchpadTapSwitch(Mouse Pointer)](arkts-input-pointer-gettouchpadtapswitch-f-sys.md) |
+| [setHoverScrollState(Mouse Pointer)](arkts-input-pointer-sethoverscrollstate-f-sys.md) |
+| [setHoverScrollState(Mouse Pointer)](arkts-input-pointer-sethoverscrollstate-f-sys.md) |
+| [setMousePrimaryButton(Mouse Pointer)](arkts-input-pointer-setmouseprimarybutton-f-sys.md) |
+| [setMousePrimaryButton(Mouse Pointer)](arkts-input-pointer-setmouseprimarybutton-f-sys.md) |
+| [setMouseScrollDirection(Mouse Pointer)](arkts-input-pointer-setmousescrolldirection-f-sys.md) |
+| [setMouseScrollRows(Mouse Pointer)](arkts-input-pointer-setmousescrollrows-f-sys.md) |
+| [setMouseScrollRows(Mouse Pointer)](arkts-input-pointer-setmousescrollrows-f-sys.md) |
+| [setPointerColor(Mouse Pointer)](arkts-input-pointer-setpointercolor-f-sys.md) |
+| [setPointerColor(Mouse Pointer)](arkts-input-pointer-setpointercolor-f-sys.md) |
+| [setPointerColorSync(Mouse Pointer)](arkts-input-pointer-setpointercolorsync-f-sys.md) |
+| [setPointerSize(Mouse Pointer)](arkts-input-pointer-setpointersize-f-sys.md) |
+| [setPointerSize(Mouse Pointer)](arkts-input-pointer-setpointersize-f-sys.md) |
+| [setPointerSizeSync(Mouse Pointer)](arkts-input-pointer-setpointersizesync-f-sys.md) |
+| [setPointerSpeed(Mouse Pointer)](arkts-input-pointer-setpointerspeed-f-sys.md) |
+| [setPointerSpeed(Mouse Pointer)](arkts-input-pointer-setpointerspeed-f-sys.md) |
+| [setPointerSpeedSync(Mouse Pointer)](arkts-input-pointer-setpointerspeedsync-f-sys.md) |
+| [setTouchpadDoubleTapAndDragState(Mouse Pointer)](arkts-input-pointer-settouchpaddoubletapanddragstate-f-sys.md) |
+| [setTouchpadDoubleTapAndDragState(Mouse Pointer)](arkts-input-pointer-settouchpaddoubletapanddragstate-f-sys.md) |
+| [setTouchpadPinchSwitch(Mouse Pointer)](arkts-input-pointer-settouchpadpinchswitch-f-sys.md) |
+| [setTouchpadPinchSwitch(Mouse Pointer)](arkts-input-pointer-settouchpadpinchswitch-f-sys.md) |
+| [setTouchpadPointerSpeed(Mouse Pointer)](arkts-input-pointer-settouchpadpointerspeed-f-sys.md) |
+| [setTouchpadPointerSpeed(Mouse Pointer)](arkts-input-pointer-settouchpadpointerspeed-f-sys.md) |
+| [setTouchpadRightClickType(Mouse Pointer)](arkts-input-pointer-settouchpadrightclicktype-f-sys.md) |
+| [setTouchpadRightClickType(Mouse Pointer)](arkts-input-pointer-settouchpadrightclicktype-f-sys.md) |
+| [setTouchpadScrollDirection(Mouse Pointer)](arkts-input-pointer-settouchpadscrolldirection-f-sys.md) |
+| [setTouchpadScrollDirection(Mouse Pointer)](arkts-input-pointer-settouchpadscrolldirection-f-sys.md) |
+| [setTouchpadScrollSwitch(Mouse Pointer)](arkts-input-pointer-settouchpadscrollswitch-f-sys.md) |
+| [setTouchpadScrollSwitch(Mouse Pointer)](arkts-input-pointer-settouchpadscrollswitch-f-sys.md) |
+| [setTouchpadSwipeSwitch(Mouse Pointer)](arkts-input-pointer-settouchpadswipeswitch-f-sys.md) |
+| [setTouchpadSwipeSwitch(Mouse Pointer)](arkts-input-pointer-settouchpadswipeswitch-f-sys.md) |
+| [setTouchpadTapSwitch(Mouse Pointer)](arkts-input-pointer-settouchpadtapswitch-f-sys.md) |
+| [setTouchpadTapSwitch(Mouse Pointer)](arkts-input-pointer-settouchpadtapswitch-f-sys.md) |
 <!--DelEnd-->
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [CursorConfig](arkts-input-pointer-cursorconfig-i.md) | Defines custom cursor configuration. |
-| [CustomCursor](arkts-input-pointer-customcursor-i.md) | Defines custom cursor resources. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CursorConfig(Mouse Pointer)](arkts-input-pointer-cursorconfig-i.md) |
+| [CustomCursor(Mouse Pointer)](arkts-input-pointer-customcursor-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [PointerStyle](arkts-input-pointer-pointerstyle-e.md) | Mouse pointer style types. |
-| [PrimaryButton](arkts-input-pointer-primarybutton-e.md) | Type of the primary mouse button. |
-| [RightClickType](arkts-input-pointer-rightclicktype-e.md) | Enumerates shortcut menu triggering modes. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PointerStyle(Mouse Pointer)](arkts-input-pointer-pointerstyle-e.md) |
+| [PrimaryButton(Mouse Pointer)](arkts-input-pointer-primarybutton-e.md) |
+| [RightClickType(Mouse Pointer)](arkts-input-pointer-rightclicktype-e.md) |

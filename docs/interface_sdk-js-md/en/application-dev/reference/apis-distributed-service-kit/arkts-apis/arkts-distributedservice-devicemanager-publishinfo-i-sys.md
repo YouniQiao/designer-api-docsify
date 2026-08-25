@@ -4,9 +4,9 @@ Defines published device information.
 
 **Since:** 9
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-deviceManager-interface PublishInfo--><!--Device-deviceManager-interface PublishInfo-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -30,9 +30,9 @@ Frequency of device discovery.
 
 **Since:** 9
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-PublishInfo-freq: ExchangeFreq--><!--Device-PublishInfo-freq: ExchangeFreq-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -50,9 +50,9 @@ Device discovery mode.
 
 **Since:** 9
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-PublishInfo-mode: DiscoverMode--><!--Device-PublishInfo-mode: DiscoverMode-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -70,9 +70,9 @@ ID used to identify a publication period.
 
 **Since:** 9
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-PublishInfo-publishId: number--><!--Device-PublishInfo-publishId: number-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -90,11 +90,10 @@ Whether the device supports ranging. The value **true** indicates that the devic
 
 **Since:** 9
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-PublishInfo-ranging: boolean--><!--Device-PublishInfo-ranging: boolean-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
-

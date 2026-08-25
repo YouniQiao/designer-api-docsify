@@ -11,8 +11,7 @@ import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';
 <!--Del-->
 ### Classes(System API)
 
-| Name | Description |
-| --- | --- |
-| [WallpaperExtensionAbility](arkts-basicservices-wallpaperextensionability-c-sys.md) | class of wallpaper extension ability. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [WallpaperExtensionAbility](arkts-basicservices-wallpaperextensionability-c-sys.md) |
 <!--DelEnd-->
-

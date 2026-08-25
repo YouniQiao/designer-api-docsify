@@ -9,21 +9,24 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [JSON](arkts-arkts-json-json-c.md) | Represent JSON class |
-| [JsonParseError](arkts-arkts-json-jsonparseerror-c.md) | Error thrown when parsing JSON fails. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [JSON](arkts-arkts-json-json-c.md) |
+| [JsonParseError](arkts-arkts-json-jsonparseerror-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [JsonReplacer](arkts-arkts-json-jsonreplacer-i.md) | Interface for customizing JSON serialization. |
-| [JsonSerializable](arkts-arkts-json-jsonserializable-i.md) | Interface for objects that can be converted to JSON. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [JSONParseIgnore](arkts-arkts-json-jsonparseignore-i.md) |
+| [JSONRename](arkts-arkts-json-jsonrename-i.md) |
+| [JsonReplacer](arkts-arkts-json-jsonreplacer-i.md) |
+| [JsonSerializable](arkts-arkts-json-jsonserializable-i.md) |
+| [JSONStringifyGetter](arkts-arkts-json-jsonstringifygetter-i.md) |
+| [JSONStringifyIgnore](arkts-arkts-json-jsonstringifyignore-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [JsonRecordType](arkts-arkts-jsonrecordtype-t.md) | Represents all types that can be serialized to JSON or parsed from JSON. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [JsonRecordType](arkts-arkts-jsonrecordtype-t.md) |

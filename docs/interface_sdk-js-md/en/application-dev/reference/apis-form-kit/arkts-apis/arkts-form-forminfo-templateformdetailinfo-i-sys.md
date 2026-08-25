@@ -4,7 +4,7 @@ TemplateFormDetailInfo
 
 **Since:** 23
 
-<!--Device-formInfo-interface TemplateFormDetailInfo--><!--Device-formInfo-interface TemplateFormDetailInfo-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -28,9 +28,9 @@ Obtains the ability name of the template form.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-TemplateFormDetailInfo-abilityName: string--><!--Device-TemplateFormDetailInfo-abilityName: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -48,9 +48,9 @@ Obtains the bundle name of the template form.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-TemplateFormDetailInfo-bundleName: string--><!--Device-TemplateFormDetailInfo-bundleName: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -68,9 +68,9 @@ Obtains the form description of the template form.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-TemplateFormDetailInfo-description: string--><!--Device-TemplateFormDetailInfo-description: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -88,9 +88,9 @@ Obtains the form detail Id of the template form.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-TemplateFormDetailInfo-detailId: string--><!--Device-TemplateFormDetailInfo-detailId: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -108,9 +108,9 @@ Obtains the form dimension of the template form.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-TemplateFormDetailInfo-dimension: FormDimension--><!--Device-TemplateFormDetailInfo-dimension: FormDimension-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -128,9 +128,9 @@ Obtains the form display name of the template form.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-TemplateFormDetailInfo-displayName: string--><!--Device-TemplateFormDetailInfo-displayName: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -148,9 +148,9 @@ Obtains the form name of the template form.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-TemplateFormDetailInfo-formName: string--><!--Device-TemplateFormDetailInfo-formName: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -168,11 +168,10 @@ Obtains the module name of the template form.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-TemplateFormDetailInfo-moduleName: string--><!--Device-TemplateFormDetailInfo-moduleName: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
-

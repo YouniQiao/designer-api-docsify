@@ -14,11 +14,11 @@ function cleanAllBundleCache(): Promise<void>
 
 Clears the global cache. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.REMOVE_CACHE_FILES
-
-<!--Device-bundleManager-function cleanAllBundleCache(): Promise<void>--><!--Device-bundleManager-function cleanAllBundleCache(): Promise<void>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -26,16 +26,16 @@ Clears the global cache. This API uses a promise to return the result.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -55,4 +55,3 @@ try {
   hilog.error(0x0000, 'testTag', 'cleanAllBundleCache failed: %{public}s', message);
 }
 ```
-

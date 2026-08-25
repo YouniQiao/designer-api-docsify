@@ -2,9 +2,9 @@
 
 WLAN EAP认证方式。 @enum { int }
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-wifiManager-enum EapMethod--><!--Device-wifiManager-enum EapMethod-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -16,9 +16,9 @@ EAP_NONE
 
 不指定。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-EapMethod-EAP_NONE--><!--Device-EapMethod-EAP_NONE-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -30,9 +30,9 @@ EAP_PEAP
 
 PEAP类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-EapMethod-EAP_PEAP--><!--Device-EapMethod-EAP_PEAP-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -44,9 +44,9 @@ EAP_TLS
 
 TLS类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-EapMethod-EAP_TLS--><!--Device-EapMethod-EAP_TLS-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -58,9 +58,9 @@ EAP_TTLS
 
 TTLS类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-EapMethod-EAP_TTLS--><!--Device-EapMethod-EAP_TTLS-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -72,9 +72,9 @@ EAP_PWD
 
 PWD类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-EapMethod-EAP_PWD--><!--Device-EapMethod-EAP_PWD-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -86,9 +86,9 @@ EAP_SIM
 
 SIM类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-EapMethod-EAP_SIM--><!--Device-EapMethod-EAP_SIM-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -100,9 +100,9 @@ EAP_AKA
 
 AKA类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-EapMethod-EAP_AKA--><!--Device-EapMethod-EAP_AKA-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -114,9 +114,9 @@ EAP_AKA_PRIME
 
 AKA Prime类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-EapMethod-EAP_AKA_PRIME--><!--Device-EapMethod-EAP_AKA_PRIME-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -128,9 +128,8 @@ EAP_UNAUTH_TLS
 
 UNAUTH TLS类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-EapMethod-EAP_UNAUTH_TLS--><!--Device-EapMethod-EAP_UNAUTH_TLS-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
-

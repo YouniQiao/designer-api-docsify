@@ -4,7 +4,7 @@ Returns the notification voice broadcast content.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export interface VoiceContent--><!--Device-unnamed-export interface VoiceContent-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -22,11 +22,10 @@ Text voice broadcast content.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-VoiceContent-readonly textContent?: string--><!--Device-VoiceContent-readonly textContent?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

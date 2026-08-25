@@ -4,9 +4,9 @@ Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md)。变焦类，对�
 
 **继承/实现关系：** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-camera-interface Zoom--><!--Device-camera-interface Zoom-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -24,9 +24,9 @@ getZoomCenterPoint(): Point
 
 Gets zoom center point.
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Zoom-getZoomCenterPoint(): Point--><!--Device-Zoom-getZoomCenterPoint(): Point-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -34,16 +34,16 @@ Gets zoom center point.
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Point | The current zoom center point. |
+| 类型 |
+| --- |
+| [Point](arkts-camera-camera-point-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 ## prepareZoom
 
@@ -53,9 +53,9 @@ prepareZoom(): void
 
 Instructs the bottom layer to prepare for zooming, for example, powering on the sensor.
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-Zoom-prepareZoom(): void--><!--Device-Zoom-prepareZoom(): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -63,10 +63,10 @@ Instructs the bottom layer to prepare for zooming, for example, powering on the 
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 **示例**
 
@@ -92,9 +92,9 @@ setZoomCenterPoint(point: Point): void
 
 Sets zoom center point.
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Zoom-setZoomCenterPoint(point: Point): void--><!--Device-Zoom-setZoomCenterPoint(point: Point): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -102,16 +102,16 @@ Sets zoom center point.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| point | Point | 是 | Target zoom center point. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| point | [Point](arkts-camera-camera-point-i.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 ## unprepareZoom
 
@@ -121,9 +121,9 @@ unprepareZoom(): void
 
 Instructs the bottom layer to unprepare for zooming.
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-Zoom-unprepareZoom(): void--><!--Device-Zoom-unprepareZoom(): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -131,10 +131,10 @@ Instructs the bottom layer to unprepare for zooming.
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 **示例**
 
@@ -151,4 +151,3 @@ function unprepareZoom(sessionExtendsZoom: camera.Zoom): void {
   }
 }
 ```
-

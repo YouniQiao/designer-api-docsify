@@ -2,9 +2,9 @@
 
 This module provides APIs for applications to obtain custom configurations, such as channel IDs.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-declare namespace customConfig--><!--Device-unnamed-declare namespace customConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Customization.CustomConfig
 
@@ -18,7 +18,6 @@ import { customConfig } from '@kit.BasicServicesKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getChannelId](arkts-basicservices-customconfig-getchannelid-f.md) | Obtains a pre-installed channel ID of this application. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getChannelId](arkts-basicservices-customconfig-getchannelid-f.md) |

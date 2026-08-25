@@ -1,11 +1,11 @@
 # SliderBlockType
 
 Slider组件滑块形状枚举。  
-| 名称 | 值 | 说明 | | ------- | -- | ---------------------- | | DEFAULT | 0 | 使用默认滑块（圆形）。 | | IMAGE | 1 | 使用图片资源作为滑块。 | | SHAPE | 2 | 使用自定义形状作为滑块。 |
+| 名称 | 值 | 说明 | | ------- | -- | ---------------------- | | [DEFAULT](#default) | 0 | 使用默认滑块（圆形）。 | | [IMAGE](#image) | 1 | 使用图片资源作为滑块。 | | [SHAPE](#shape) | 2 |
 
 **起始版本：** 10
 
-<!--Device-unnamed-declare enum SliderBlockType--><!--Device-unnamed-declare enum SliderBlockType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,11 +19,11 @@ Round slider.
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SliderBlockType-DEFAULT = 0--><!--Device-SliderBlockType-DEFAULT = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -37,11 +37,11 @@ Slider with an image background.
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SliderBlockType-IMAGE = 1--><!--Device-SliderBlockType-IMAGE = 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -55,11 +55,10 @@ Slider in a custom shape.
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SliderBlockType-SHAPE = 2--><!--Device-SliderBlockType-SHAPE = 2-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

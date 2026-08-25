@@ -2,9 +2,9 @@
 
 This module provides APIs for obtaining file system information, including the total size and free size of a file system, in bytes.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-declare namespace statfs--><!--Device-unnamed-declare namespace statfs-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -18,12 +18,11 @@ import { statfs } from '@kit.CoreFileKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getFreeSize](arkts-corefile-statfs-getfreesize-f.md) | Obtains the free size of the specified file system, in bytes. This API uses a promise to return the result. |
-| [getFreeSize](arkts-corefile-statfs-getfreesize-f.md) | Obtains the free size of the specified file system, in bytes. This API uses an asynchronous callback to return the result. |
-| [getFreeSizeSync](arkts-corefile-statfs-getfreesizesync-f.md) | Obtains the free size of the specified file system, in bytes. This API returns the result synchronously. |
-| [getTotalSize](arkts-corefile-statfs-gettotalsize-f.md) | Obtains the total size of the specified file system, in bytes. This API uses a promise to return the result. |
-| [getTotalSize](arkts-corefile-statfs-gettotalsize-f.md) | Obtains the total size of the specified file system, in bytes. This API uses an asynchronous callback to return the result. |
-| [getTotalSizeSync](arkts-corefile-statfs-gettotalsizesync-f.md) | Obtains the total size of the specified file system, in bytes. This API returns the result synchronously. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getFreeSize](arkts-corefile-statfs-getfreesize-f.md) |
+| [getFreeSize](arkts-corefile-statfs-getfreesize-f.md) |
+| [getFreeSizeSync](arkts-corefile-statfs-getfreesizesync-f.md) |
+| [getTotalSize](arkts-corefile-statfs-gettotalsize-f.md) |
+| [getTotalSize](arkts-corefile-statfs-gettotalsize-f.md) |
+| [getTotalSizeSync](arkts-corefile-statfs-gettotalsizesync-f.md) |

@@ -14,11 +14,11 @@ function setRttCapability(accountId: int, isEnable: boolean): Promise<void>
 
 Set rtt capability.
 
-**Since:** 23
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PLACE_CALL
-
-<!--Device-call-function setRttCapability(accountId: int, isEnable: boolean): Promise<void>--><!--Device-call-function setRttCapability(accountId: int, isEnable: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -26,25 +26,24 @@ Set rtt capability.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| accountId | int | Yes | Indicates the identifier of the account to set rtt capability. |
-| isEnable | boolean | Yes | Indicates whether Rtt capability is enabled. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| isEnable | boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setRttCapability. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| 8400001 | Invalid parameter value. |
-| 8400002 | Operation failed. Cannot connect to service. |
-| 8400003 | System internal error. |
-| 8400999 | Unknown error code. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 8400001 |
+| 8400002 |
+| 8400003 |
+| 8400999 |

@@ -10,7 +10,7 @@ MeasureUtils提供文本宽度、高度等相关计算能力，适用于文本�
 
 **起始版本：** 12
 
-<!--Device-unnamed-export class MeasureUtils--><!--Device-unnamed-export class MeasureUtils-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,24 +33,24 @@ getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Pa
 
 **起始版本：** 20
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
-<!--Device-MeasureUtils-getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Paragraph>--><!--Device-MeasureUtils-getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Paragraph>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| styledString | StyledString | 是 | 待转换的属性字符串。 |
-| options | [TextLayoutOptions](arkts-arkui-textcommon-textlayoutoptions-i.md) | 否 | 文本布局选项。省略时使用默认布局配置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | 是 |
+| options | [TextLayoutOptions](arkts-arkui-textcommon-textlayoutoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;Paragraph&gt; | 根据文本布局选项转换后得到的[Paragraph]{ |
+| 类型 |
+| --- |
+| Array & lt;Paragraph & gt; |
 
 **示例**
 
@@ -338,25 +338,25 @@ measureText(options: MeasureOptions): number
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MeasureUtils-measureText(options: MeasureOptions): number--><!--Device-MeasureUtils-measureText(options: MeasureOptions): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | 是 | 文本测量配置选项。包含文本内容（textContent）、字体大小（fontSize）等属性。constraintWidth、maxLines等布局约束属性对measureText的计算结果无影响，如需计算布局约束下的宽度，请使用measureTextSize方法。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 文本宽度。<br>**说明：**<br>浮点数会向上取整。<br>单位：px |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -401,23 +401,22 @@ measureTextSize(options: MeasureOptions): SizeOptions
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MeasureUtils-measureTextSize(options: MeasureOptions): SizeOptions--><!--Device-MeasureUtils-measureTextSize(options: MeasureOptions): SizeOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | 是 | 文本测量配置选项。包含文本内容（textContent）、字体大小（fontSize）、约束宽度（constraintWidth）、最大行数（maxLines）等属性，用于配置被计算文本的测量参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SizeOptions](../../apis-default/arkts-apis/arkts-units-sizeoptions-i.md) | 返回文本所占布局宽度和高度。<br>**说明：**<br>未设置constraintWidth时，文本宽度返回值会向上取整；传参constraintWidth时，文本宽度返回值不被取整。<br>文本宽度以及高度返回值单位均为px。 |
-
+| 类型 |
+| --- |
+| [SizeOptions](arkts-arkui-units-sizeoptions-i.md) |

@@ -3,9 +3,9 @@
 The module provides capabilities for image decoding, encoding, editing, metadata processing, and image receiving. This module contains the following classes:  
 - [ImageSource](arkts-image-image-imagesource-i.md): provides the capabilities of obtaining [image information](arkts-image-image-imageinfo-i.md), decoding images to PixelMaps or Pictures, and reading and modifying [image properties](arkts-image-image-propertykey-e.md). Supported image formats for decoding include png, jpeg, bmp, gif, webp, dng, and heic&lt;sup&gt;12+&lt;/sup&gt;. - [ImagePacker](arkts-image-image-imagepacker-i.md): provides the capability of encoding images into compressed data streams or files. Encoding requires the ImageSource, PixelMap, or Picture of an image as the input. Supported image formats for encoding include jpeg, webp, png, heic&lt;sup&gt;12+&lt;/sup&gt;, and gif&lt;sup&gt;18+&lt;/sup&gt;. - [PixelMap](arkts-image-image-pixelmap-i.md): contains pixel data and [image information](arkts-image-image-imageinfo-i.md). It can be used for reading/writing pixel data and performing operations such as cropping, scaling, translating, rotating, and mirroring. It can also be directly passed to the [Image component](arkts-image-image-image-i.md) for display. Additionally, it provides APIs for obtaining and setting the color gamut and HDR metadata of images. - [Picture](arkts-image-image-picture-i.md): a multi-picture object composed of a main picture, auxiliary pictures, and metadata. The main picture contains the primary image information; auxiliary pictures store additional information related to the main picture; metadata stores other information related to the image. Picture provides methods for obtaining the main picture, compositing HDR images, obtaining and setting auxiliary pictures, and obtaining and setting metadata. - [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md): used to display special information alongside the main picture, enriching the overall content of the image. The supported types of auxiliary pictures can be found in [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md). - [Metadata](arkts-image-image-metadata-i.md): used to store image metadata. The supported metadata types can be found in [MetadataType](arkts-image-image-metadatatype-e.md). It includes Exif metadata and watermark cropping metadata, both stored in Key-Value pairs. The keys for Exif metadata can be found in [PropertyKey](arkts-image-image-propertykey-e.md), and the keys for watermark cropping metadata can be found in [FragmentPropertyKey](arkts-image-image-fragmentmappropertykey-e.md). - [ImageReceiver](arkts-image-image-imagereceiver-i.md): acts as a consumer of images, used for receiving and reading images from a surface. - [ImageCreator](arkts-image-image-imagecreator-i.md): acts as a producer of images, used for writing images into a surface. - [Image](arkts-image-image-image-i.md): used by ImageReceiver and ImageCreator for transferring image objects, with the actual content determined by the producer. For example, the Image object provided by a camera preview stream contains YUV data, whereas the Image object provided by a camera photo contains a JPEG file.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-unnamed-declare namespace image--><!--Device-unnamed-declare namespace image-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -19,213 +19,212 @@ import { image } from '@kit.ImageKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md) | Creates an AuxiliaryPicture instance based on the ArrayBuffer image data, auxiliary picture size, and auxiliary picture type. This API accepts only continuous pixel data in BGRA format and will create an auxiliary picture in RGBA format.Images occupy a large amount of memory. When you finish using an AuxiliaryPicture instance, call [release](arkts-image-image-auxiliarypicture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [createAuxiliaryPictureUsingAllocator](arkts-image-image-createauxiliarypictureusingallocator-f.md) | Create an &lt;b&gt;AuxiliaryPicture&lt;/b&gt; object, the memory type used by the AuxiliaryPicture can be specified by allocatorType IMAGE_ALLOCATOR_TYPE. By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the AuxiliaryPicture returned by this interface, please always consider the impact of stride. The created auxiliary picture is initialized with the input pixels. |
-| [createEmptyPixelMap](arkts-image-image-createemptypixelmap-f.md) | Creates an empty PixelMap.The following pixel format is not supported for PixelMap creation: ASTC_4x4. |
-| [createImageCreator](arkts-image-image-createimagecreator-f.md) | Creates an ImageCreator instance by specifying the image width, height, format, and capacity. Images occupy a large amount of memory. When you finish using an ImageCreator instance, call [release](arkts-image-image-imagecreator-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [createImageCreator](arkts-image-image-createimagecreator-f.md) | Creates an ImageCreator instance by specifying the image size, format, and capacity. Images occupy a large amount of memory. When you finish using an ImageCreator instance, call [release](arkts-image-image-imagecreator-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [createImagePacker](arkts-image-image-createimagepacker-f.md) | Creates an ImagePacker instance.Images occupy a large amount of memory. When you finish using an ImagePacker instance, call [release](arkts-image-image-imagepacker-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [createImageReceiver](arkts-image-image-createimagereceiver-f.md) | Creates an ImageReceiver instance by specifying the image width, height, format, and capacity. The ImageReceiver acts as the receiver and consumer of images. Its parameter properties do not actually affect the received images. The configuration of image properties should be done on the sending side (the producer), such as when creating a camera preview stream with [createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createpreviewoutput). Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call [release](arkts-image-image-imagereceiver-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [createImageReceiver](arkts-image-image-createimagereceiver-f.md) | Creates an ImageReceiver instance by specifying the image size, format, and capacity. The ImageReceiver acts as the receiver and consumer of images. Its parameter properties do not actually affect the received images. The configuration of image properties should be done on the sending side (the producer), such as when creating a camera preview stream with [createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createpreviewoutput). Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call [release](arkts-image-image-imagereceiver-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [createImageReceiver](arkts-image-image-createimagereceiver-f.md) | Creates an ImageReceiver instance. |
-| [createImageReceiver](arkts-image-image-createimagereceiver-f.md) | Creates an ImageReceiver instance. |
-| [createImageSource](arkts-image-image-createimagesource-f.md) | Creates an ImageSource instance based on a given URI.Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [createImageSource](arkts-image-image-createimagesource-f.md) | Creates an ImageSource instance based on the URI. |
-| [createImageSource](arkts-image-image-createimagesource-f.md) | Creates an ImageSource instance based on a given URI.Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [createImageSource](arkts-image-image-createimagesource-f.md) | Creates an ImageSource instance based on the URI. |
-| [createImageSource](arkts-image-image-createimagesource-f.md) | Creates an ImageSource instance based on a given file descriptor.Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [createImageSource](arkts-image-image-createimagesource-f.md) | Creates an ImageSource instance based on the file descriptor. |
-| [createImageSource](arkts-image-image-createimagesource-f.md) | Creates an ImageSource instance based on a given file descriptor.Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [createImageSource](arkts-image-image-createimagesource-f.md) | Creates an ImageSource instance based on the file descriptor. |
-| [createImageSource](arkts-image-image-createimagesource-f.md) | Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call [image.createPixelMapSync](arkts-image-image-imagesource-i.md#createpixelmapsync). Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [createImageSource](arkts-image-image-createimagesource-f.md) | Creates an ImageSource instance based on the buffer. |
-| [createImageSource](arkts-image-image-createimagesource-f.md) | Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call [image.createPixelMapSync](arkts-image-image-imagesource-i.md#createpixelmapsync). Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [createImageSource](arkts-image-image-createimagesource-f.md) | Creates an ImageSource instance based on the buffer. |
-| [createImageSource](arkts-image-image-createimagesource-f.md) | Creates an ImageSource instance based on the raw file descriptor of an image resource file. Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [createImageSource](arkts-image-image-createimagesource-f.md) | Creates an ImageSource instance based on the raw file descriptor. |
-| [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md) | Creates an ImageSource instance in incremental mode based on buffers. Such an instance does not support reading or writing of Exif information.Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.The ImageSource instance created in incremental mode supports the following capabilities (applicable to synchronous, callback, and promise modes):  - Obtaining image information: Call [getImageInfo](arkts-image-image-imagesource-i.md#getimageinfo) to obtain image information by index, or call [getImageInfo](arkts-image-image-imagesource-i.md#getimageinfo) to directly obtain image information. - Obtaining an image property: Call [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty) to obtain the value of a property with the specified index in an image. - Obtaining image properties: Call [getImageProperties](arkts-image-image-imagesource-i.md#getimageproperties) to obtain the values of properties with the given names in an image. - Updating incremental data: Call [updateData](arkts-image-image-imagesource-i.md#updatedata). - Creating a PixelMap object: Call [createPixelMap](arkts-image-image-imagesource-i.md#createpixelmap) or [createPixelMap](arkts-image-image-imagesource-i.md#createpixelmap) to create a PixelMap object based on decoding options; call [createPixelMap](arkts-image-image-imagesource-i.md#createpixelmap) to create a PixelMap object based on default parameters. - Releasing an ImageSource instance: Call [release](arkts-image-image-imagesource-i.md#release). |
-| [createIncrementalSource](arkts-image-image-createincrementalsource-f.md) | Creates an ImageSource instance based on the buffer in incremental. |
-| [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md) | Creates an ImageSource instance in incremental mode based on buffers. Such an instance does not support reading or writing of Exif information.The capabilities supported by the ImageSource instance created by this API are the same as those supported by the instance created by [CreateIncrementalSource(buf: ArrayBuffer): ImageSource](arkts-image-image-createincrementalsource-f.md). Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [createIncrementalSource](arkts-image-image-createincrementalsource-f.md) | Creates an ImageSource instance based on the buffer in incremental. |
-| [createPicture](arkts-image-image-createpicture-f.md) | Creates a Picture object based on a main PixelMap.Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [createPictureFromParcel](arkts-image-image-createpicturefromparcel-f.md) | Creates a Picture object from a MessageSequence object.Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [createPixelMap](arkts-image-image-createpixelmap-f.md) | Create pixelmap by data buffer.Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md) instead for better exception handling capabilities. |
-| [createPixelMap](arkts-image-image-createpixelmap-f.md) | Create pixelmap by data buffer.Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md) instead for better exception handling capabilities. |
-| [createPixelMapFromParcel](arkts-image-image-createpixelmapfromparcel-f.md) | Creates a PixelMap object based on MessageSequence parameter. |
-| [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md) | Creates a PixelMap from existing pixel data. The pixel data will be copied and converted to the specified pixel format to initialize the PixelMap.The following pixel formats are not supported for PixelMap creation: RGBA_1010102, YCBCR_P010, YCRCB_P010, ASTC_4x4. |
-| [createPixelMapFromPixelsSync](arkts-image-image-createpixelmapfrompixelssync-f.md) | Creates a PixelMap from existing pixel data. The pixel data will be copied and converted to the specified pixel format to initialize the PixelMap.The following pixel formats are not supported for PixelMap creation: RGBA_1010102, YCBCR_P010, YCRCB_P010, ASTC_4x4. |
-| [createPixelMapFromSurface](arkts-image-image-createpixelmapfromsurface-f.md) | Creates a PixelMap object from surface id. |
-| [createPixelMapFromSurface](arkts-image-image-createpixelmapfromsurface-f.md) | Creates a PixelMap object from surface id. |
-| [createPixelMapFromSurfaceSync](arkts-image-image-createpixelmapfromsurfacesync-f.md) | Creates a PixelMap object from surface id. |
-| [createPixelMapFromSurfaceSync](arkts-image-image-createpixelmapfromsurfacesync-f.md) | Creates a PixelMap object from surface id. |
-| [createPixelMapFromSurfaceWithTransformation](arkts-image-image-createpixelmapfromsurfacewithtransformation-f.md) | Creates a PixelMap object based on the ID of a Surface with transformation. |
-| [createPixelMapFromSurfaceWithTransformationSync](arkts-image-image-createpixelmapfromsurfacewithtransformationsync-f.md) | Creates a PixelMap object based on the ID of a Surface with transformation. |
-| [createPixelMapSync](arkts-image-image-createpixelmapsync-f.md) | Create pixelmap by data buffer.Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixelsSync](arkts-image-image-createpixelmapfrompixelssync-f.md) instead for better exception handling capabilities. |
-| [createPixelMapSync](arkts-image-image-createpixelmapsync-f.md) | Create an empty pixelmap.Starting from API 26.0.0, it is recommended to use [createEmptyPixelMap](arkts-image-image-createemptypixelmap-f.md) instead for better exception handling capabilities. |
-| [createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md) | Create pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride. |
-| [createPixelMapUsingAllocatorSync](arkts-image-image-createpixelmapusingallocatorsync-f.md) | Create pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride. |
-| [createPixelMapUsingAllocatorSync](arkts-image-image-createpixelmapusingallocatorsync-f.md) | Create an empty pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride. |
-| [createPremultipliedPixelMap](arkts-image-image-createpremultipliedpixelmap-f.md) | Transforms pixelmap from unpremultiplied alpha format to premultiplied alpha format. |
-| [createPremultipliedPixelMap](arkts-image-image-createpremultipliedpixelmap-f.md) | Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha format. |
-| [createUnpremultipliedPixelMap](arkts-image-image-createunpremultipliedpixelmap-f.md) | Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha format. |
-| [createUnpremultipliedPixelMap](arkts-image-image-createunpremultipliedpixelmap-f.md) | Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha format. |
-| [getImagePackerSupportedFormats](arkts-image-image-getimagepackersupportedformats-f.md) | Obtains the supported encoding formats, represented by MIME types. |
-| [getImageSourceSupportedFormats](arkts-image-image-getimagesourcesupportedformats-f.md) | Obtains the supported decoding formats, represented by MIME types. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md) |
+| [createAuxiliaryPictureUsingAllocator](arkts-image-image-createauxiliarypictureusingallocator-f.md) |
+| [createEmptyPixelMap](arkts-image-image-createemptypixelmap-f.md) |
+| [createImageCreator](arkts-image-image-createimagecreator-f.md) |
+| [createImageCreator](arkts-image-image-createimagecreator-f.md) |
+| [createImagePacker](arkts-image-image-createimagepacker-f.md) |
+| [createImageReceiver](arkts-image-image-createimagereceiver-f.md) |
+| [createImageReceiver](arkts-image-image-createimagereceiver-f.md) |
+| [createImageReceiver](arkts-image-image-createimagereceiver-f.md) |
+| [createImageReceiver](arkts-image-image-createimagereceiver-f.md) |
+| [createImageSource](arkts-image-image-createimagesource-f.md) |
+| [createImageSource](arkts-image-image-createimagesource-f.md) |
+| [createImageSource](arkts-image-image-createimagesource-f.md) |
+| [createImageSource](arkts-image-image-createimagesource-f.md) |
+| [createImageSource](arkts-image-image-createimagesource-f.md) |
+| [createImageSource](arkts-image-image-createimagesource-f.md) |
+| [createImageSource](arkts-image-image-createimagesource-f.md) |
+| [createImageSource](arkts-image-image-createimagesource-f.md) |
+| [createImageSource](arkts-image-image-createimagesource-f.md) |
+| [createImageSource](arkts-image-image-createimagesource-f.md) |
+| [createImageSource](arkts-image-image-createimagesource-f.md) |
+| [createImageSource](arkts-image-image-createimagesource-f.md) |
+| [createImageSource](arkts-image-image-createimagesource-f.md) |
+| [createImageSource](arkts-image-image-createimagesource-f.md) |
+| [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md) |
+| [createIncrementalSource](arkts-image-image-createincrementalsource-f.md) |
+| [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md) |
+| [createIncrementalSource](arkts-image-image-createincrementalsource-f.md) |
+| [createPicture](arkts-image-image-createpicture-f.md) |
+| [createPictureFromParcel](arkts-image-image-createpicturefromparcel-f.md) |
+| [createPixelMap](arkts-image-image-createpixelmap-f.md) |
+| [createPixelMap](arkts-image-image-createpixelmap-f.md) |
+| [createPixelMapFromParcel](arkts-image-image-createpixelmapfromparcel-f.md) |
+| [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md) |
+| [createPixelMapFromPixelsSync](arkts-image-image-createpixelmapfrompixelssync-f.md) |
+| [createPixelMapFromSurface](arkts-image-image-createpixelmapfromsurface-f.md) |
+| [createPixelMapFromSurface](arkts-image-image-createpixelmapfromsurface-f.md) |
+| [createPixelMapFromSurfaceSync](arkts-image-image-createpixelmapfromsurfacesync-f.md) |
+| [createPixelMapFromSurfaceSync](arkts-image-image-createpixelmapfromsurfacesync-f.md) |
+| [createPixelMapFromSurfaceWithTransformation](arkts-image-image-createpixelmapfromsurfacewithtransformation-f.md) |
+| [createPixelMapFromSurfaceWithTransformationSync](arkts-image-image-createpixelmapfromsurfacewithtransformationsync-f.md) |
+| [createPixelMapSync](arkts-image-image-createpixelmapsync-f.md) |
+| [createPixelMapSync](arkts-image-image-createpixelmapsync-f.md) |
+| [createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md) |
+| [createPixelMapUsingAllocatorSync](arkts-image-image-createpixelmapusingallocatorsync-f.md) |
+| [createPixelMapUsingAllocatorSync](arkts-image-image-createpixelmapusingallocatorsync-f.md) |
+| [createPremultipliedPixelMap](arkts-image-image-createpremultipliedpixelmap-f.md) |
+| [createPremultipliedPixelMap](arkts-image-image-createpremultipliedpixelmap-f.md) |
+| [createUnpremultipliedPixelMap](arkts-image-image-createunpremultipliedpixelmap-f.md) |
+| [createUnpremultipliedPixelMap](arkts-image-image-createunpremultipliedpixelmap-f.md) |
+| [getImagePackerSupportedFormats](arkts-image-image-getimagepackersupportedformats-f.md) |
+| [getImageSourceSupportedFormats](arkts-image-image-getimagesourcesupportedformats-f.md) |
 
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [createPictureByHdrAndSdrPixelMap](arkts-image-image-createpicturebyhdrandsdrpixelmap-f-sys.md) | Creates a Picture object based on an HDR PixelMap and an SDR PixelMap. The system uses the HDR PixelMap and SDR PixelMap to generate a gainmap. The returned Picture object contains the SDR PixelMap and the generated gainmap, both in RGBA8888 format. This API uses a promise to return the result. |
-| [createPictureByHdrAndSdrPixelMap](arkts-image-image-createpicturebyhdrandsdrpixelmap-f-sys.md) | Creates a Picture object by a HDR PixelMap and a SDR PixelMap with specified options. A gainmap will be generated using the HDR and SDR PixelMap, and the returned Picture will contain the SDR PixelMap and the generated gainmap. |
-| [decomposeToPicture](arkts-image-image-decomposetopicture-f-sys.md) | Decomposes an HDR Pixelmap object to a Picture object which contains an SDR PixelMap and a gainmap. This API uses a promise to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [createPictureByHdrAndSdrPixelMap](arkts-image-image-createpicturebyhdrandsdrpixelmap-f-sys.md) |
+| [createPictureByHdrAndSdrPixelMap](arkts-image-image-createpicturebyhdrandsdrpixelmap-f-sys.md) |
+| [decomposeToPicture](arkts-image-image-decomposetopicture-f-sys.md) |
 <!--DelEnd-->
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [AvisMetadata](arkts-image-image-avismetadata-c.md) | Avis metadata. |
-| [DngMetadata](arkts-image-image-dngmetadata-c.md) | DNG metadata. |
-| [ExifMetadata](arkts-image-image-exifmetadata-c.md) | ExifMetadata implements Metadata Exchangeable Image File Format (Exif) metadata. |
-| [GifMetadata](arkts-image-image-gifmetadata-c.md) | Gif metadata. |
-| [HeifsMetadata](arkts-image-image-heifsmetadata-c.md) | HeifsMetadata implements Metadata HEIF image sequence metadata. |
-| [JfifMetadata](arkts-image-image-jfifmetadata-c.md) | JFIF metadata. |
-| [MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md) | MakerNoteHuaweiMetadata implements Metadata Photo metadata from Huawei cameras. |
-| [PngMetadata](arkts-image-image-pngmetadata-c.md) | Png metadata. |
-| [TiffMetadata](arkts-image-image-tiffmetadata-c.md) | TIFF metadata. |
-| [WebPMetadata](arkts-image-image-webpmetadata-c.md) | WebP metadata. |
-| [XMPMetadata](arkts-image-image-xmpmetadata-c.md) | XMPMetadata instance. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AvisMetadata](arkts-image-image-avismetadata-c.md) |
+| [DngMetadata](arkts-image-image-dngmetadata-c.md) |
+| [ExifMetadata](arkts-image-image-exifmetadata-c.md) |
+| [GifMetadata](arkts-image-image-gifmetadata-c.md) |
+| [HeifsMetadata](arkts-image-image-heifsmetadata-c.md) |
+| [JfifMetadata](arkts-image-image-jfifmetadata-c.md) |
+| [MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md) |
+| [PngMetadata](arkts-image-image-pngmetadata-c.md) |
+| [TiffMetadata](arkts-image-image-tiffmetadata-c.md) |
+| [WebPMetadata](arkts-image-image-webpmetadata-c.md) |
+| [XMPMetadata](arkts-image-image-xmpmetadata-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) | The **AuxiliaryPicture** class is used to read or write auxiliary picture data of an image and obtain auxiliary picture information of an image. The supported types of auxiliary pictures can be found in [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md).Before calling any API in AuxiliaryPicture, you must create an AuxiliaryPicture instance using [image.createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md) or [getAuxiliaryPicture](arkts-image-image-picture-i.md#getauxiliarypicture) in Picture.Images occupy a large amount of memory. When you finish using an AuxiliaryPicture instance, call [release](arkts-image-image-auxiliarypicture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [AuxiliaryPictureInfo](arkts-image-image-auxiliarypictureinfo-i.md) | Describes the auxiliary picture information. |
-| [BinaryBufferInfo](arkts-image-image-binarybufferinfo-i.md) | Describes binary buffer info. |
-| [Component](arkts-image-image-component-i.md) | Describes the color components of an image. |
-| [DecodingOptions](arkts-image-image-decodingoptions-i.md) | Describes the image decoding options. |
-| [DecodingOptionsForPicture](arkts-image-image-decodingoptionsforpicture-i.md) | Describes the image decoding options. |
-| [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | Describes thumbnail decoding parameters. |
-| [GainmapChannel](arkts-image-image-gainmapchannel-i.md) | Describes the data content of a single channel of the gain map. For details, see ISO 21496-1. |
-| [GetImagePropertyOptions](arkts-image-image-getimagepropertyoptions-i.md) | Describes the image properties. |
-| [HdrComposeOptions](arkts-image-image-hdrcomposeoptions-i.md) | Describes compose parameters. |
-| [HdrGainmapMetadata](arkts-image-image-hdrgainmapmetadata-i.md) | Describes the metadata keys used by a gain map, that is, the values available for **HDR_GAINMAP_METADATA** in [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md). For details, see ISO 21496-1. |
-| [HdrStaticMetadata](arkts-image-image-hdrstaticmetadata-i.md) | Describes the static metadata keys, that is, the values available for **HDR_STATIC_METADATA** in [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md). |
-| [Image](arkts-image-image-image-i.md) | The **Image** class is used to obtain image content.An Image instance is returned when [readNextImage](arkts-image-image-imagereceiver-i.md#readnextimage) and [readLatestImage](arkts-image-image-imagereceiver-i.md#readlatestimage) are called.Image properties are initialized only during image creation and cannot be changed later. These properties do not affect the actual image content. You should always rely on the properties written by the image producer, that is, the content actually sent to the [ImageReceiver](arkts-image-image-imagereceiver-i.md) by the data source. Images occupy a large amount of memory. When you finish using an Image instance, call [release](arkts-image-image-image-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [ImageBufferData](arkts-image-image-imagebufferdata-i.md) | Describes the image buffer data. |
-| [ImageCreator](arkts-image-image-imagecreator-i.md) | The ImageCreator class provides APIs for applications to request an image data area and compile image data.Before calling any APIs in ImageCreator, you must use [image.createImageCreator](arkts-image-image-createimagecreator-f.md) to create an ImageCreator instance. ImageCreator does not support multiple threads.Images occupy a large amount of memory. When you finish using an ImageCreator instance, call [release](arkts-image-image-imagecreator-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [ImageInfo](arkts-image-image-imageinfo-i.md) | Describes image information. |
-| [ImageMetadata](arkts-image-image-imagemetadata-i.md) | Metadata set of an image. |
-| [ImagePacker](arkts-image-image-imagepacker-i.md) | The **ImagePacker** class provides APIs to compress and encode images.Before calling any API in ImagePacker, you must use [image.createImagePacker](arkts-image-image-createimagepacker-f.md) to create an ImagePacker instance. During encoding, do not modify or release the ImageSource, PixelMap, or Picture object that is being used as the input. Otherwise, a crash or other undefined behavior may occur.Images occupy a large amount of memory. When you finish using an ImagePacker instance, call [release](arkts-image-image-imagepacker-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.Currently, the following formats are supported: jpeg, webp, png, heic&lt;sup&gt;12+&lt;/sup&gt;, and gif&lt;sup&gt;18+&lt;/sup&gt;. (The supported formats may vary depending on the hardware. You can refer to the **supportedFormats** property of ImagePacker to see which ones are supported.) |
-| [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md) | Describes the image properties. |
-| [ImageRawData](arkts-image-image-imagerawdata-i.md) | Describes raw data in an image. |
-| [ImageReceiver](arkts-image-image-imagereceiver-i.md) | The **ImageReceiver** class provides APIs to obtain the surface ID of a component, read the latest image, read the next image, and release the ImageReceiver instance. The ImageReceiver acts as the receiver and consumer of images. Its parameter properties do not actually affect the received images. The configuration of image properties should be done on the sending side (the producer), such as when creating a camera preview stream with [createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createpreviewoutput). Before calling any APIs in ImageReceiver, you must use [image.createImageReceiver](arkts-image-image-createimagereceiver-f.md) to create an ImageReceiver instance. Since API version 23, you are advised to use [image.createImageReceiver](arkts-image-image-createimagereceiver-f.md) to create an **ImageReceiver** instance based on the passed [ImageReceiverOptions](arkts-image-image-imagereceiveroptions-i.md). Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call [release](arkts-image-image-imagereceiver-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [ImageReceiverOptions](arkts-image-image-imagereceiveroptions-i.md) | Describes the initialization options for ImageReceiver. |
-| [ImageSource](arkts-image-image-imagesource-i.md) | The **ImageSource** class provides APIs to obtain image information.Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md) to create an ImageSource instance.All APIs in ImageSource cannot be called concurrently.Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [InitializationOptions](arkts-image-image-initializationoptions-i.md) | Defines PixelMap initialization options. |
-| [Metadata](arkts-image-image-metadata-i.md) | The **Metadata** class provides APIs for storing image metadata. For details about the supported metadata types, see [MetadataType](arkts-image-image-metadatatype-e.md). |
-| [PackingOption](arkts-image-image-packingoption-i.md) | Describes the options for image encoding. |
-| [PackingOptionsForSequence](arkts-image-image-packingoptionsforsequence-i.md) | Defines the options for encoding animated images. |
-| [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md) | Describes the options for tiff image packing. |
-| [PackingSizeLimit](arkts-image-image-packingsizelimit-i.md) | Packing image size limit. |
-| [Picture](arkts-image-image-picture-i.md) | An image that contains special information can be decoded into a picture object, which generally contains the main picture, auxiliary picture, and metadata. The main picture contains most information about the image and is mainly used to render the image. The auxiliary picture is used to store data related to but different from the main picture, revealing more comprehensive details. The metadata is generally used to store information about the image file. The picture object class is used to read or write picture objects. Before calling any API in Picture, you must use [image.createPicture](arkts-image-image-createpicture-f.md) to create a Picture object.Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | The **PixelMap** class provides APIs to read or write image data and obtain image information. Before calling any API in PixelMap, you must use [image.createPixelMap](arkts-image-image-createpixelmap-f.md) to create a PixelMap object. Currently, the maximum size of a serialized PixelMap is 128 MB. A larger size will cause a display failure. The size is calculated as follows: Width x Height x [Bytes per pixel](arkts-image-image-pixelmapformat-e.md). Since API version 11, PixelMap supports cross-thread calls through [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md). If a PixelMap object is invoked by another thread through [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md), all APIs of the PixelMap object cannot be called in the original thread. Otherwise, error 501 is reported, indicating that the server cannot complete the request. Before calling any API in PixelMap, you can use [image.createPixelMap](arkts-image-image-createpixelmap-f.md) to pass pixel data to create a PixelMap object, or use [ImageSource](#ohosmultimediaimage) to decode an image to a PixelMap object. To develop an atomic service, use [ImageSource](#ohosmultimediaimage) to create a PixelMap object. Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [PositionArea](arkts-image-image-positionarea-i.md) | Describes area information in an image. |
-| [Region](arkts-image-image-region-i.md) | Describes the region information. |
-| [Size](arkts-image-image-size-i.md) | Describes the size of an image. |
-| [SourceOptions](arkts-image-image-sourceoptions-i.md) | Defines image source initialization options. |
-| [XMPEnumerateOptions](arkts-image-image-xmpenumerateoptions-i.md) | Describes XMP enumerate option parameters. |
-| [XMPNamespace](arkts-image-image-xmpnamespace-i.md) | Describes XMP namespace parameters. |
-| [XMPTag](arkts-image-image-xmptag-i.md) | Describes XMP Tag parameters. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) |
+| [AuxiliaryPictureInfo](arkts-image-image-auxiliarypictureinfo-i.md) |
+| [BinaryBufferInfo](arkts-image-image-binarybufferinfo-i.md) |
+| [Component](arkts-image-image-component-i.md) |
+| [DecodingOptions](arkts-image-image-decodingoptions-i.md) |
+| [DecodingOptionsForPicture](arkts-image-image-decodingoptionsforpicture-i.md) |
+| [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) |
+| [GainmapChannel](arkts-image-image-gainmapchannel-i.md) |
+| [GetImagePropertyOptions](arkts-image-image-getimagepropertyoptions-i.md) |
+| [HdrComposeOptions](arkts-image-image-hdrcomposeoptions-i.md) |
+| [HdrGainmapMetadata](arkts-image-image-hdrgainmapmetadata-i.md) |
+| [HdrStaticMetadata](arkts-image-image-hdrstaticmetadata-i.md) |
+| [Image](arkts-image-image-image-i.md) |
+| [ImageBufferData](arkts-image-image-imagebufferdata-i.md) |
+| [ImageCreator](arkts-image-image-imagecreator-i.md) |
+| [ImageInfo](arkts-image-image-imageinfo-i.md) |
+| [ImageMetadata](arkts-image-image-imagemetadata-i.md) |
+| [ImagePacker](arkts-image-image-imagepacker-i.md) |
+| [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md) |
+| [ImageRawData](arkts-image-image-imagerawdata-i.md) |
+| [ImageReceiver](arkts-image-image-imagereceiver-i.md) |
+| [ImageReceiverOptions](arkts-image-image-imagereceiveroptions-i.md) |
+| [ImageSource](arkts-image-image-imagesource-i.md) |
+| [InitializationOptions](arkts-image-image-initializationoptions-i.md) |
+| [Metadata](arkts-image-image-metadata-i.md) |
+| [PackingOption](arkts-image-image-packingoption-i.md) |
+| [PackingOptionsForSequence](arkts-image-image-packingoptionsforsequence-i.md) |
+| [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md) |
+| [PackingSizeLimit](arkts-image-image-packingsizelimit-i.md) |
+| [Picture](arkts-image-image-picture-i.md) |
+| [PixelMap](arkts-image-image-pixelmap-i.md) |
+| [PositionArea](arkts-image-image-positionarea-i.md) |
+| [Region](arkts-image-image-region-i.md) |
+| [Size](arkts-image-image-size-i.md) |
+| [SourceOptions](arkts-image-image-sourceoptions-i.md) |
+| [XMPEnumerateOptions](arkts-image-image-xmpenumerateoptions-i.md) |
+| [XMPNamespace](arkts-image-image-xmpnamespace-i.md) |
+| [XMPTag](arkts-image-image-xmptag-i.md) |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [DecodingOptions](arkts-image-image-decodingoptions-i-sys.md) | Describes the image decoding options. |
-| [GainmapParams](arkts-image-image-gainmapparams-i-sys.md) | Describes gainmap generation parameters. |
-| [HdrDecomposeOptions](arkts-image-image-hdrdecomposeoptions-i-sys.md) | Describes the options for decomposing an HDR Pixelmap to a Picture containing an SDR PixelMap and a gainmap. |
-| [ImageSource](arkts-image-image-imagesource-i-sys.md) | The **ImageSource** class provides APIs to obtain image information.Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md) to create an ImageSource instance.All APIs in ImageSource cannot be called concurrently.Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
-| [SourceOptions](arkts-image-image-sourceoptions-i-sys.md) | Defines image source initialization options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DecodingOptions](arkts-image-image-decodingoptions-i-sys.md) |
+| [GainmapParams](arkts-image-image-gainmapparams-i-sys.md) |
+| [HdrDecomposeOptions](arkts-image-image-hdrdecomposeoptions-i-sys.md) |
+| [ImageSource](arkts-image-image-imagesource-i-sys.md) |
+| [SourceOptions](arkts-image-image-sourceoptions-i-sys.md) |
 <!--DelEnd-->
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [AllocatorType](arkts-image-image-allocatortype-e.md) | Enumerates the types of the memory used for image decoding. |
-| [AlphaType](arkts-image-image-alphatype-e.md) | Enumerates the alpha types of images. |
-| [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | Enumerates the anti-aliasing levels. |
-| [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) | Enumerates the auxiliary pictures types.Auxiliary pictures do not directly participate in image display, and not all images contain auxiliary pictures.Before obtaining and using a specific auxiliary picture, call [getAuxiliaryPicture](arkts-image-image-picture-i.md#getauxiliarypicture) in Picture to obtain the auxiliary picture. |
-| [AvisPropertyKey](arkts-image-image-avispropertykey-e.md) | Enumerates the properties available for the metadata of a Avis image. |
-| [ComponentType](arkts-image-image-componenttype-e.md) | Enumerates the color component types of images. |
-| [CropAndScaleStrategy](arkts-image-image-cropandscalestrategy-e.md) | Enumerates the order of cropping and scaling.If the **cropAndScaleStrategy** parameter is not specified in [DecodingOptions](arkts-image-image-decodingoptions-i.md) and both **desiredRegion** and **desiredSize** are set, the final decoding result may vary slightly due to differences in decoding algorithms used for different image formats.For example, if the original image size is 200x200, and you specify **desiredSize:{width: 150, height: 150}, desiredRegion:{x: 0, y: 0, width: 100, height: 100}**, the expectation is to decode the top-left 1/4 region of the original image and then scale the pixelMap size to 150x150.For JPEG and WebP images (as well as some DNG images that decode a JPEG preview within the file and therefore are treated as JPEG format), the system first performs downsampling. For instance, it might downsample by 7/8 and then crop the region based on a 175x175 image size. As a result, the final cropped region will be slightly larger than the top-left 1/4 of the original image.For SVG images, which are vector-based and can be scaled without losing clarity, the system scales the image based on the ratio of **desiredSize** to the original image size and then crops the region. This results in a decoded region that may differ from the exact 1/4 region of the original image.To ensure consistent results when both **desiredRegion** and **desiredSize** are set, set the **cropAndScaleStrategy** parameter to **CROP_FIRST**. |
-| [DecodingDynamicRange](arkts-image-image-decodingdynamicrange-e.md) | Enumerates the desired dynamic range of an image during decoding. |
-| [DngPropertyKey](arkts-image-image-dngpropertykey-e.md) | Enumerates the properties available for the metadata of a DNG image. |
-| [FocusMode](arkts-image-image-focusmode-e.md) | Enumerates the focus modes. |
-| [FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md) | Enumerates the fragment map information. |
-| [GifPropertyKey](arkts-image-image-gifpropertykey-e.md) | Enumerates the GIF image information. |
-| [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md) | Enumerates the keys of HDR metadata used by [pixelmap](arkts-image-image-pixelmap-i.md). |
-| [HdrMetadataType](arkts-image-image-hdrmetadatatype-e.md) | Enumerates the values available for **HDR_METADATA_TYPE** in [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md). |
-| [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md) | Enumerates the properties available for the metadata of a HEIFS image. |
-| [ImageFormat](arkts-image-image-imageformat-e.md) | Enumerates the image formats. |
-| [JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md) | Enumerates the properties available for the metadata of a JFIF image. |
-| [MetadataType](arkts-image-image-metadatatype-e.md) | Enumerates image metadata types. |
-| [Orientation](arkts-image-image-orientation-e.md) | Enumerates image orientation. |
-| [PackingDynamicRange](arkts-image-image-packingdynamicrange-e.md) | Enumerates the desired dynamic range of an image during encoding. |
-| [PixelMapFormat](arkts-image-image-pixelmapformat-e.md) | Enumerates the pixel formats of images. |
-| [PngPropertyKey](arkts-image-image-pngpropertykey-e.md) | Enumerates the properties available for the metadata of a PNG image. |
-| [PropertyKey](arkts-image-image-propertykey-e.md) | Enumerates the types of Exchangeable Image File Format (Exif) data of an image.  - The key in the format example is **image.PropertyKey.*XXX*** (where *XXX* is the name of an enumeration name, for example, **image.PropertyKey.NEW_SUBFILE_TYPE**). - The format example is used only to show how to modify values and read results. For details about how to use them, see [modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty) (to modify a single Exif field), [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties) (to modify multiple Exif fields), [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty) (to read a single Exif field), and [getImageProperties](arkts-image-image-imagesource-i.md#getimageproperties) (to read multiple Exif fields). |
-| [ScaleMode](arkts-image-image-scalemode-e.md) | Enumerates the scale modes of images. |
-| [TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md) | Enumerates the properties available for the metadata of a TIFF image. |
-| [WebPPropertyKey](arkts-image-image-webppropertykey-e.md) | Enumerates the properties available for the metadata of a WebP image. |
-| [XmageColorMode](arkts-image-image-xmagecolormode-e.md) | Enumerates the XMAGE color modes. |
-| [XMPTagType](arkts-image-image-xmptagtype-e.md) | Enumerates XMP tag type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AllocatorType](arkts-image-image-allocatortype-e.md) |
+| [AlphaType](arkts-image-image-alphatype-e.md) |
+| [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) |
+| [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) |
+| [AvisPropertyKey](arkts-image-image-avispropertykey-e.md) |
+| [ComponentType](arkts-image-image-componenttype-e.md) |
+| [CropAndScaleStrategy](arkts-image-image-cropandscalestrategy-e.md) |
+| [DecodingDynamicRange](arkts-image-image-decodingdynamicrange-e.md) |
+| [DngPropertyKey](arkts-image-image-dngpropertykey-e.md) |
+| [FocusMode](arkts-image-image-focusmode-e.md) |
+| [FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md) |
+| [GifPropertyKey](arkts-image-image-gifpropertykey-e.md) |
+| [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md) |
+| [HdrMetadataType](arkts-image-image-hdrmetadatatype-e.md) |
+| [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md) |
+| [ImageFormat](arkts-image-image-imageformat-e.md) |
+| [JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md) |
+| [MetadataType](arkts-image-image-metadatatype-e.md) |
+| [Orientation](arkts-image-image-orientation-e.md) |
+| [PackingDynamicRange](arkts-image-image-packingdynamicrange-e.md) |
+| [PixelMapFormat](arkts-image-image-pixelmapformat-e.md) |
+| [PngPropertyKey](arkts-image-image-pngpropertykey-e.md) |
+| [PropertyKey](arkts-image-image-propertykey-e.md) |
+| [ScaleMode](arkts-image-image-scalemode-e.md) |
+| [TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md) |
+| [WebPPropertyKey](arkts-image-image-webppropertykey-e.md) |
+| [XmageColorMode](arkts-image-image-xmagecolormode-e.md) |
+| [XMPTagType](arkts-image-image-xmptagtype-e.md) |
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [PropertyKey](arkts-image-image-propertykey-e-sys.md) | Enumerates the types of Exchangeable Image File Format (Exif) data of an image.  - The key in the format example is **image.PropertyKey.*XXX*** (where *XXX* is the name of an enumeration name, for example, **image.PropertyKey.NEW_SUBFILE_TYPE**). - The format example is used only to show how to modify values and read results. For details about how to use them, see [modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty) (to modify a single Exif field), [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties) (to modify multiple Exif fields), [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty) (to read a single Exif field), and [getImageProperties](arkts-image-image-imagesource-i.md#getimageproperties) (to read multiple Exif fields). |
-| [ResolutionQuality](arkts-image-image-resolutionquality-e-sys.md) | Enumerates the image quality levels. |
-| [SVGResourceLimitLevel](arkts-image-image-svgresourcelimitlevel-e-sys.md) | Enumerates SVG resource limit levels.Higher level allows using less resources during parsing and rendering an SVG image. System-defined default resource limits are always enforced regardless of the specified level. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PropertyKey](arkts-image-image-propertykey-e-sys.md) |
+| [ResolutionQuality](arkts-image-image-resolutionquality-e-sys.md) |
+| [SVGResourceLimitLevel](arkts-image-image-svgresourcelimitlevel-e-sys.md) |
 <!--DelEnd-->
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [HdrMetadataValue](arkts-image-image-hdrmetadatavalue-t.md) | Describes the HDR metadata values used by a PixelMap, which corresponds to the values available for [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [HdrMetadataValue](arkts-image-image-hdrmetadatavalue-t.md) |
 
 ### Constants
 
-| Name | Description |
-| --- | --- |
-| [CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW](arkts-image-image-con.md#capture_mode_front_lens_night_view) | Capture mode: night view with front lens.The value is 7. |
-| [CAPTURE_MODE_LIGHT_GRAFFITI](arkts-image-image-con.md#capture_mode_light_graffiti) | Capture mode: light graffiti.The value is 10. |
-| [CAPTURE_MODE_MOVING_PHOTO](arkts-image-image-con.md#capture_mode_moving_photo) | Capture mode: moving photos.The value is 20. |
-| [CAPTURE_MODE_PANORAMA](arkts-image-image-con.md#capture_mode_panorama) | Capture mode: panorama.The value is 8. |
-| [CAPTURE_MODE_PORTRAIT](arkts-image-image-con.md#capture_mode_portrait) | Capture mode: portrait.The value is 23. |
-| [CAPTURE_MODE_PROFESSIONAL](arkts-image-image-con.md#capture_mode_professional) | Capture mode: professional.The value is 2. |
-| [CAPTURE_MODE_REAR_LENS_NIGHT_VIEW](arkts-image-image-con.md#capture_mode_rear_lens_night_view) | Capture mode: night view with rear lens.The value is 42. |
-| [CAPTURE_MODE_SILKY_WATER](arkts-image-image-con.md#capture_mode_silky_water) | Capture mode: silky water.The value is 11. |
-| [CAPTURE_MODE_SNAP_SHOT](arkts-image-image-con.md#capture_mode_snap_shot) | Capture mode: snap shot.The value is 62. |
-| [CAPTURE_MODE_STAR_TRACK](arkts-image-image-con.md#capture_mode_star_track) | Capture mode: star track.The value is 12. |
-| [CAPTURE_MODE_SUPER_MACRO](arkts-image-image-con.md#capture_mode_super_macro) | Capture mode: super macro.The value is 47. |
-| [CAPTURE_MODE_TAIL_LIGHT](arkts-image-image-con.md#capture_mode_tail_light) | Capture mode: tail light.The value is 9. |
-| [CAPTURE_MODE_WIDEAPERTURE](arkts-image-image-con.md#capture_mode_wideaperture) | Capture mode: wide aperture.The value is 19. |
-| [DUBLIN_CORE](arkts-image-image-con.md#dublin_core) | XMP namespace: dublin core. Namespace uri: 'http://purl.org/dc/elements/1.1/', prefix: 'dc' |
-| [EXIF](arkts-image-image-con.md#exif) | XMP namespace: exif. Namespace uri: 'http://ns.adobe.com/exif/1.0/', prefix: 'exif' |
-| [TIFF](arkts-image-image-con.md#tiff) | XMP namespace: tiff. Namespace uri: 'http://ns.adobe.com/tiff/1.0/', prefix: 'tiff' |
-| [XMAGE_WATERMARK_MODE_AT_THE_BOTTOM](arkts-image-image-con.md#xmage_watermark_mode_at_the_bottom) | The XMAGE watermark is at the bottom of the photo.The value is 9. |
-| [XMAGE_WATERMARK_MODE_BORDER](arkts-image-image-con.md#xmage_watermark_mode_border) | The XMAGE watermark is around the edges of the photo.The value is 10. |
-| [XMP_BASIC](arkts-image-image-con.md#xmp_basic) | XMP namespace: XMP basic. Namespace uri: 'http://ns.adobe.com/xap/1.0/', prefix: 'xmp' |
-| [XMP_RIGHTS](arkts-image-image-con.md#xmp_rights) | XMP namespace: XMP rights. Namespace uri: 'http://ns.adobe.com/xap/1.0/rights/', prefix: 'xmpRights' |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW](arkts-image-image-con.md#capture_mode_front_lens_night_view) |
+| [CAPTURE_MODE_LIGHT_GRAFFITI](arkts-image-image-con.md#capture_mode_light_graffiti) |
+| [CAPTURE_MODE_MOVING_PHOTO](arkts-image-image-con.md#capture_mode_moving_photo) |
+| [CAPTURE_MODE_PANORAMA](arkts-image-image-con.md#capture_mode_panorama) |
+| [CAPTURE_MODE_PORTRAIT](arkts-image-image-con.md#capture_mode_portrait) |
+| [CAPTURE_MODE_PROFESSIONAL](arkts-image-image-con.md#capture_mode_professional) |
+| [CAPTURE_MODE_REAR_LENS_NIGHT_VIEW](arkts-image-image-con.md#capture_mode_rear_lens_night_view) |
+| [CAPTURE_MODE_SILKY_WATER](arkts-image-image-con.md#capture_mode_silky_water) |
+| [CAPTURE_MODE_SNAP_SHOT](arkts-image-image-con.md#capture_mode_snap_shot) |
+| [CAPTURE_MODE_STAR_TRACK](arkts-image-image-con.md#capture_mode_star_track) |
+| [CAPTURE_MODE_SUPER_MACRO](arkts-image-image-con.md#capture_mode_super_macro) |
+| [CAPTURE_MODE_TAIL_LIGHT](arkts-image-image-con.md#capture_mode_tail_light) |
+| [CAPTURE_MODE_WIDEAPERTURE](arkts-image-image-con.md#capture_mode_wideaperture) |
+| [DUBLIN_CORE](arkts-image-image-con.md#dublin_core) |
+| [EXIF](arkts-image-image-con.md#exif) |
+| [TIFF](arkts-image-image-con.md#tiff) |
+| [XMAGE_WATERMARK_MODE_AT_THE_BOTTOM](arkts-image-image-con.md#xmage_watermark_mode_at_the_bottom) |
+| [XMAGE_WATERMARK_MODE_BORDER](arkts-image-image-con.md#xmage_watermark_mode_border) |
+| [XMP_BASIC](arkts-image-image-con.md#xmp_basic) |
+| [XMP_RIGHTS](arkts-image-image-con.md#xmp_rights) |

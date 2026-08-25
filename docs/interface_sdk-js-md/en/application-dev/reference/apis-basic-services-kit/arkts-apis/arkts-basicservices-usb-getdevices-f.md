@@ -16,19 +16,19 @@ Obtains the USB device list.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getDevices](arkts-basicservices-usbmanager-getdevices-f.md)
-
-<!--Device-usb-function getDevices(): Array<Readonly<USBDevice>>--><!--Device-usb-function getDevices(): Array<Readonly<USBDevice>>-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;Readonly&lt;USBDevice&gt;&gt; | USB device list. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;Readonly & lt;USBDevice & gt; & gt; |
 
 **Examples**
 
@@ -88,4 +88,3 @@ console.info(`devicesList = ${devicesList}`);
   ]
  */
 ```
-

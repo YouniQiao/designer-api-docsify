@@ -7,9 +7,9 @@ Defines an asymmetric key pair, which includes a public key and a private key.<b
 > of the scope, its **pubKey** and **priKey** objects will be destructed.&gt;
 > The service must reference the **KeyPair** object instead of the internal **pubKey** or **priKey** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-cryptoFramework-interface KeyPair--><!--Device-cryptoFramework-interface KeyPair-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -31,11 +31,11 @@ KeyPair's private key.
 
 **Type:** [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md)
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyPair-readonly priKey: PriKey--><!--Device-KeyPair-readonly priKey: PriKey-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -51,13 +51,12 @@ KeyPair's public key.
 
 **Type:** [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md)
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyPair-readonly pubKey: PubKey--><!--Device-KeyPair-readonly pubKey: PubKey-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
-

@@ -2,9 +2,9 @@
 
 三指滑动手势事件。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-unnamed-export declare interface ThreeFingersSwipe--><!--Device-unnamed-export declare interface ThreeFingersSwipe-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -24,9 +24,9 @@ type: ActionType
 
 **类型：** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-ThreeFingersSwipe-type: ActionType--><!--Device-ThreeFingersSwipe-type: ActionType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -38,11 +38,11 @@ x: int
 
 坐标x，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-ThreeFingersSwipe-x: int--><!--Device-ThreeFingersSwipe-x: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -54,11 +54,10 @@ y: int
 
 坐标y，单位为像素（px）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-ThreeFingersSwipe-y: int--><!--Device-ThreeFingersSwipe-y: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
-

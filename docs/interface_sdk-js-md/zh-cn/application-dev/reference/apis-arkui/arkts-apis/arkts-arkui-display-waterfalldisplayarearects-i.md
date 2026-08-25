@@ -2,9 +2,9 @@
 
 瀑布屏曲面部分显示区域。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-display-interface WaterfallDisplayAreaRects--><!--Device-display-interface WaterfallDisplayAreaRects-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -24,11 +24,11 @@ readonly bottom: Rect
 
 **类型：** Rect
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-WaterfallDisplayAreaRects-readonly bottom: Rect--><!--Device-WaterfallDisplayAreaRects-readonly bottom: Rect-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -42,11 +42,11 @@ readonly left: Rect
 
 **类型：** Rect
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-WaterfallDisplayAreaRects-readonly left: Rect--><!--Device-WaterfallDisplayAreaRects-readonly left: Rect-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -60,11 +60,11 @@ readonly right: Rect
 
 **类型：** Rect
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-WaterfallDisplayAreaRects-readonly right: Rect--><!--Device-WaterfallDisplayAreaRects-readonly right: Rect-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -78,11 +78,10 @@ readonly top: Rect
 
 **类型：** Rect
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-WaterfallDisplayAreaRects-readonly top: Rect--><!--Device-WaterfallDisplayAreaRects-readonly top: Rect-End-->
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
-

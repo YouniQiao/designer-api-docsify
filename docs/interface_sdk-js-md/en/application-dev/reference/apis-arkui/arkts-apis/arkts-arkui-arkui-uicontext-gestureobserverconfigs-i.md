@@ -4,7 +4,7 @@ Specifies the gesture callback phases to listen for (passing an empty array will
 
 **Since:** 20
 
-<!--Device-unnamed-export interface GestureObserverConfigs--><!--Device-unnamed-export interface GestureObserverConfigs-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,15 +25,14 @@ actionPhases: Array<GestureActionPhase>
 
 Gesture event object.
 
-**Type:** Array&lt;[GestureActionPhase](../../apis-default/arkts-apis/arkts-arkui-uicontext-gestureactionphase-e.md)&gt;
+**Type:** Array&lt;[GestureActionPhase](arkts-arkui-arkui-uicontext-gestureactionphase-e.md)&gt;
 
 **Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-GestureObserverConfigs-actionPhases: Array<GestureActionPhase>--><!--Device-GestureObserverConfigs-actionPhases: Array<GestureActionPhase>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

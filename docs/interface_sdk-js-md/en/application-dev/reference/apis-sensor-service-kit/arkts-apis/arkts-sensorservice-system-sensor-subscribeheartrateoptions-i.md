@@ -4,13 +4,13 @@ Defines the type of data to return for a subscription to data changes of the hea
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [HEART_RATE](arkts-sensorservice-sensor-sensorid-e.md#heart_rate)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
-
-<!--Device-unnamed-export interface SubscribeHeartRateOptions--><!--Device-unnamed-export interface SubscribeHeartRateOptions-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -28,21 +28,26 @@ fail?: (data: string, code: number) => void
 
 Callback invoked when an API call fails.
 
-**Type:** (data: string, code: number) =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+**Substitutes:** [on](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-SubscribeHeartRateOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeHeartRateOptions-fail?: (data: string, code: number) => void-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | string | Yes |
+| code | number | Yes |
 
 ## success
 
@@ -52,19 +57,22 @@ success: (data: HeartRateResponse) => void
 
 Callback invoked when the heart rate sensor data changes. This callback is invoked every five seconds.
 
-**Type:** (data: HeartRateResponse) =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+**Substitutes:** [on](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-SubscribeHeartRateOptions-success: (data: HeartRateResponse) => void--><!--Device-SubscribeHeartRateOptions-success: (data: HeartRateResponse) => void-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | [HeartRateResponse](arkts-sensorservice-system-sensor-heartrateresponse-i.md) | Yes |

@@ -2,9 +2,9 @@
 
 节点类型枚举。@enum { int }
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export enum NodeType--><!--Device-unnamed-export enum NodeType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -16,9 +16,9 @@ NODE = 1
 
 节点是空节点。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-NodeType-NODE = 1--><!--Device-NodeType-NODE = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -30,9 +30,9 @@ GEOMETRY = 2
 
 几何类型节点。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-NodeType-GEOMETRY = 2--><!--Device-NodeType-GEOMETRY = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -44,9 +44,9 @@ CAMERA = 3
 
 相机类型节点。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-NodeType-CAMERA = 3--><!--Device-NodeType-CAMERA = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -58,9 +58,9 @@ LIGHT = 4
 
 灯光类型节点。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-NodeType-LIGHT = 4--><!--Device-NodeType-LIGHT = 4-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -72,9 +72,8 @@ CUSTOM = 255
 
 自定义类型节点，通常这意味着该节点是在扩展插件中定义的类型。
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-NodeType-CUSTOM = 255--><!--Device-NodeType-CUSTOM = 255-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

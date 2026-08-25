@@ -4,9 +4,7 @@ Performance-oriented class for string construction
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-unnamed-export class StringBuilder--><!--Device-unnamed-export class StringBuilder-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,25 +23,23 @@ Appends a string to the builder's internal buffer
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-append(s: string): StringBuilder--><!--Device-StringBuilder-append(s: string): StringBuilder-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| s | string | Yes | string to be appended |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| s | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | builder with updated internal buffer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |
 
 ## append
 
@@ -55,25 +51,23 @@ Appends a boolean as string to the builder's internal buffer
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-append(i: boolean): StringBuilder--><!--Device-StringBuilder-append(i: boolean): StringBuilder-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| i | boolean | Yes | value to be appended |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| i | boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | builder with updated internal buffer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |
 
 ## append
 
@@ -85,25 +79,23 @@ Appends a byte as string to the builder's internal buffer
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-append(i: byte): StringBuilder--><!--Device-StringBuilder-append(i: byte): StringBuilder-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| i | byte | Yes | value to be appended |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| i | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | builder with updated internal buffer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |
 
 ## append
 
@@ -115,25 +107,23 @@ Appends a char to the builder's internal buffer
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-append(i: char): StringBuilder--><!--Device-StringBuilder-append(i: char): StringBuilder-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| i | char | Yes | value to be appended |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| i | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | builder with updated internal buffer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |
 
 ## append
 
@@ -145,25 +135,23 @@ Appends a short as string to the builder's internal buffer
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-append(i: short): StringBuilder--><!--Device-StringBuilder-append(i: short): StringBuilder-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| i | short | Yes | value to be appended |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| i | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | builder with updated internal buffer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |
 
 ## append
 
@@ -175,25 +163,23 @@ Appends an int as string to the builder's internal buffer
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-append(i: int): StringBuilder--><!--Device-StringBuilder-append(i: int): StringBuilder-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| i | int | Yes | value to be appended <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| i | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | builder with updated internal buffer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |
 
 ## append
 
@@ -205,25 +191,23 @@ Appends a long as string to the builder's internal buffer
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-append(i: long): StringBuilder--><!--Device-StringBuilder-append(i: long): StringBuilder-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| i | long | Yes | value to be appended |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| i | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | builder with updated internal buffer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |
 
 ## append
 
@@ -235,25 +219,23 @@ Appends a float as string to the builder's internal buffer
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-append(i: float): StringBuilder--><!--Device-StringBuilder-append(i: float): StringBuilder-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| i | float | Yes | value to be appended |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| i | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | builder with updated internal buffer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |
 
 ## append
 
@@ -265,25 +247,23 @@ Appends a double as string to the builder's internal buffer
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-append(i: double): StringBuilder--><!--Device-StringBuilder-append(i: double): StringBuilder-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| i | double | Yes | value to be appended |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| i | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | builder with updated internal buffer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |
 
 ## append
 
@@ -295,25 +275,23 @@ Appends an object representation as string to the builder's internal buffer
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-append(o: Object): StringBuilder--><!--Device-StringBuilder-append(o: Object): StringBuilder-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| o | Object | Yes | object that will be converted to a stringitg |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| o | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | builder with updated internal buffer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |
 
 ## concatStrings
 
@@ -325,26 +303,24 @@ Concatenates two strings and return a result as a new string
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-static concatStrings(lhs: string, rhs: string): string--><!--Device-StringBuilder-static concatStrings(lhs: string, rhs: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| lhs | string | Yes | left string (prefix) |
-| rhs | string | Yes | right string (suffix) |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| lhs | string | Yes |
+| rhs | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of concatenation |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## constructor
 
@@ -356,11 +332,9 @@ Construct a new builder instance with the initial buffer of 16 chars
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-constructor()--><!--Device-StringBuilder-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -374,19 +348,17 @@ Construct a new builder instance with the provided array of chars
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-constructor(fromChars: FixedArray<char>)--><!--Device-StringBuilder-constructor(fromChars: FixedArray<char>)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fromChars | FixedArray&lt;char&gt; | Yes | array that will be used to initialize the builder |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fromChars | FixedArray & lt;char & gt; | Yes |
 
 ## constructor
 
@@ -398,19 +370,17 @@ Construct a new builder instance with the provided array of chars
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-constructor(fromChars: char[])--><!--Device-StringBuilder-constructor(fromChars: char[])-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fromChars | char[] | Yes | array that will be used to initialize the builder |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fromChars | char[] | Yes |
 
 ## constructor
 
@@ -422,19 +392,17 @@ Constructs a new builder instance with provided string
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-constructor(s: string)--><!--Device-StringBuilder-constructor(s: string)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| s | string | Yes | string that will be used to initialize the builder |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| s | string | Yes |
 
 ## toString
 
@@ -446,19 +414,17 @@ Returns the string that was formed as a result of all append operations
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-toString(): string--><!--Device-StringBuilder-toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | builder's current buffer as string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -470,25 +436,23 @@ Converts the primitive to a string
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-static toString(i: boolean): string--><!--Device-StringBuilder-static toString(i: boolean): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| i | boolean | Yes | value to be converted |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| i | boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -500,25 +464,23 @@ Converts the primitive to a string
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-static toString(i: byte): string--><!--Device-StringBuilder-static toString(i: byte): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| i | byte | Yes | value to be converted |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| i | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -530,25 +492,23 @@ Converts the primitive to a string
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-static toString(i: char): string--><!--Device-StringBuilder-static toString(i: char): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| i | char | Yes | value to be converted |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| i | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -560,25 +520,23 @@ Converts the primitive to a string
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-static toString(i: short): string--><!--Device-StringBuilder-static toString(i: short): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| i | short | Yes | value to be converted |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| i | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -590,25 +548,23 @@ Converts the primitive to a string
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-static toString(i: int): string--><!--Device-StringBuilder-static toString(i: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| i | int | Yes | value to be converted <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| i | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -620,25 +576,23 @@ Converts the primitive to a string
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-static toString(i: long): string--><!--Device-StringBuilder-static toString(i: long): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| i | long | Yes | value to be converted |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| i | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -650,25 +604,23 @@ Converts the primitive to a string
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-static toString(f: float): string--><!--Device-StringBuilder-static toString(f: float): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| f | float | Yes | value to be converted |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [f](arkts-arkts-float-c.md) | float | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -680,23 +632,36 @@ Converts the primitive to a string
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StringBuilder-static toString(d: double): string--><!--Device-StringBuilder-static toString(d: double): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | double | Yes | value to be converted |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
+## stringLength
+
+```TypeScript
+public get stringLength(): int
+```
+
+Length of string accumulated so far
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang

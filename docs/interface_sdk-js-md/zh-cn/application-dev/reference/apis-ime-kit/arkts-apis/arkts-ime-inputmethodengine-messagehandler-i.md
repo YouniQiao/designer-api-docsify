@@ -19,9 +19,9 @@
 &gt; 
 > 若取消注册全局已注册的对象时，会触发被取消对象中[onTerminated](#onterminated)回调函数。
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-inputMethodEngine-interface MessageHandler--><!--Device-inputMethodEngine-interface MessageHandler-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -29,6 +29,47 @@
 
 ```TypeScript
 import { inputMethodEngine } from '@kit.IMEKit';
+```
+
+## onMessage
+
+```TypeScript
+onMessage: OnMessageCallback
+```
+
+接收已绑定当前输入法应用的编辑框应用发送的自定义数据回调函数。 <br> <br>   
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 当已注册的[MessageHandler](#messagehandler)接收到来自已绑定当前输入法应用的编辑框应用所发送的自定义通信数据时，会触发该回调函数。 &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> msgId为必选参数，msgParam为可选参数。存在收到仅有msgId自定义数据的可能，需与数据发送方确认自定义数据。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodAbility()
+  .on('inputStart',
+    (keyboardController: inputMethodEngine.KeyboardController, inputClient: inputMethodEngine.InputClient) => {
+      let messageHandler: inputMethodEngine.MessageHandler = {
+        onTerminated(): void {
+          console.info('OnTerminated.');
+        },
+        onMessage(msgId: string, msgParam?: ArrayBuffer): void {
+          console.info(`recv message, msgId is ${msgId}, msgParam is ${JSON.stringify(msgParam)}`);
+        }
+      }
+      inputClient.recvMessage(messageHandler);
+    });
 ```
 
 ## onMessage
@@ -50,34 +91,20 @@ onMessage(msgId: string, msgParam?: ArrayBuffer): void
 
 **起始版本：** 15
 
-<!--Device-MessageHandler-onMessage(msgId: string, msgParam?: ArrayBuffer): void--><!--Device-MessageHandler-onMessage(msgId: string, msgParam?: ArrayBuffer): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| msgId | string | 是 | 接收到的自定义通信数据的标识符。 |
-| msgParam | ArrayBuffer | 否 | 接收到的自定义通信数据的消息体。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [msgId](../../apis-network-kit/arkts-apis/arkts-network-eap-eapdata-i.md) | string | 是 |
+| msgParam | ArrayBuffer | 否 |
 
 **示例**
 
-```TypeScript
-inputMethodEngine.getInputMethodAbility()
-  .on('inputStart',
-    (keyboardController: inputMethodEngine.KeyboardController, inputClient: inputMethodEngine.InputClient) => {
-      let messageHandler: inputMethodEngine.MessageHandler = {
-        onTerminated(): void {
-          console.info('OnTerminated.');
-        },
-        onMessage(msgId: string, msgParam?: ArrayBuffer): void {
-          console.info(`recv message, msgId is ${msgId}, msgParam is ${JSON.stringify(msgParam)}`);
-        }
-      }
-      inputClient.recvMessage(messageHandler);
-    });
-```
+参见 [onMessage](#onmessage)
 
 ## onTerminated
 
@@ -98,7 +125,7 @@ onTerminated(): void
 
 **起始版本：** 15
 
-<!--Device-MessageHandler-onTerminated(): void--><!--Device-MessageHandler-onTerminated(): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -119,31 +146,6 @@ inputMethodEngine.getInputMethodAbility()
       inputClient.recvMessage(messageHandler);
     });
 ```
-
-## onMessage
-
-```TypeScript
-onMessage: OnMessageCallback
-```
-
-接收已绑定当前输入法应用的编辑框应用发送的自定义数据回调函数。 <br> <br>   
-> **说明：** &lt;br
-&gt; 
-> &lt;br
-&gt; 
-> 当已注册的[MessageHandler](#messagehandler)接收到来自已绑定当前输入法应用的编辑框应用所发送的自定义通信数据时，会触发该回调函数。 &lt;br
-&gt; 
-> &lt;br
-&gt; 
-> msgId为必选参数，msgParam为可选参数。存在收到仅有msgId自定义数据的可能，需与数据发送方确认自定义数据。
-
-**类型：** OnMessageCallback
-
-**起始版本：** 23
-
-<!--Device-MessageHandler-onMessage: OnMessageCallback--><!--Device-MessageHandler-onMessage: OnMessageCallback-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## onTerminated
 
@@ -172,7 +174,6 @@ onTerminated: Callback<void>
 
 **起始版本：** 23
 
-<!--Device-MessageHandler-onTerminated: Callback<void>--><!--Device-MessageHandler-onTerminated: Callback<void>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
-

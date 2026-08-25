@@ -6,7 +6,7 @@ Provides APIs for basic image operations, including obtaining image information 
 
 **Since:** 12
 
-<!--Device-sendableImage-interface Image--><!--Device-sendableImage-interface Image-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -26,21 +26,21 @@ Obtains the component buffer from the Image instance based on the color componen
 
 **Since:** 12
 
-<!--Device-Image-getComponent(componentType: image.ComponentType): Promise<image.Component>--><!--Device-Image-getComponent(componentType: image.ComponentType): Promise<image.Component>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| componentType | image.ComponentType | Yes | Color component type of the image. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| componentType | image.ComponentType | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;image.Component&gt; | Promise used to return the component buffer. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;image.Component & gt; |
 
 **Examples**
 
@@ -74,15 +74,15 @@ Releases this Image instance. This API uses a promise to return the result.The c
 
 **Since:** 12
 
-<!--Device-Image-release(): Promise<void>--><!--Device-Image-release(): Promise<void>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Examples**
 
@@ -167,7 +167,7 @@ Image area to be cropped.
 
 **Since:** 12
 
-<!--Device-Image-clipRect: Region--><!--Device-Image-clipRect: Region-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -183,7 +183,7 @@ Image format. For details, see OH_NativeBuffer_Format.
 
 **Since:** 12
 
-<!--Device-Image-readonly format: number--><!--Device-Image-readonly format: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -199,7 +199,7 @@ Image size.If the Image object stores camera preview stream data (YUV image data
 
 **Since:** 12
 
-<!--Device-Image-readonly size: Size--><!--Device-Image-readonly size: Size-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -215,7 +215,6 @@ Image timestamp. Timestamps, measured in nanoseconds, are usually monotonically 
 
 **Since:** 12
 
-<!--Device-Image-readonly timestamp: number--><!--Device-Image-readonly timestamp: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
-

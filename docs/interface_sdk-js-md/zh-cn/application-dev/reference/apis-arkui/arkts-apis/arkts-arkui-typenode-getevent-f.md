@@ -10,26 +10,26 @@ function getEvent(node: FrameNode, nodeType: 'Scroll'): UIScrollEvent | undefine
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function getEvent(node: FrameNode, nodeType: 'Scroll'): UIScrollEvent | undefined--><!--Device-typeNode-function getEvent(node: FrameNode, nodeType: 'Scroll'): UIScrollEvent | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取事件时所需的目标节点。 |
-| nodeType | 'Scroll' | 是 | 获取Scroll节点类型的滚动事件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Scroll' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| UIScrollEvent \| undefined | Scroll节点类型的滚动事件，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| UIScrollEvent \| undefined |
 
 
 ## getEvent
@@ -42,26 +42,26 @@ function getEvent(node: FrameNode, nodeType: 'List'): UIListEvent | undefined
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function getEvent(node: FrameNode, nodeType: 'List'): UIListEvent | undefined--><!--Device-typeNode-function getEvent(node: FrameNode, nodeType: 'List'): UIListEvent | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取事件时所需的目标节点。 |
-| nodeType | 'List' | 是 | 获取List节点类型的滚动事件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'List' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| UIListEvent \| undefined | List节点类型的滚动事件，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| UIListEvent \| undefined |
 
 
 ## getEvent
@@ -74,26 +74,26 @@ function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | un
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | undefined--><!--Device-typeNode-function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取事件时所需的目标节点。 |
-| nodeType | 'WaterFlow' | 是 | 获取WaterFlow节点类型的滚动事件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'WaterFlow' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| UIWaterFlowEvent \| undefined | WaterFlow节点类型的滚动事件，若获取失败，则返回undefined。 |
+| 类型 |
+| --- |
+| UIWaterFlowEvent \| undefined |
 
 
 ## getEvent
@@ -106,24 +106,23 @@ function getEvent(node: FrameNode, nodeType: 'Grid'): UIGridEvent | undefined
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function getEvent(node: FrameNode, nodeType: 'Grid'): UIGridEvent | undefined--><!--Device-typeNode-function getEvent(node: FrameNode, nodeType: 'Grid'): UIGridEvent | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取事件时所需的目标节点。 |
-| nodeType | 'Grid' | 是 | 获取Grid节点类型的滚动事件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Grid' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| UIGridEvent \| undefined | Grid节点类型的滚动事件，若获取失败，则返回undefined。 |
-
+| 类型 |
+| --- |
+| UIGridEvent \| undefined |

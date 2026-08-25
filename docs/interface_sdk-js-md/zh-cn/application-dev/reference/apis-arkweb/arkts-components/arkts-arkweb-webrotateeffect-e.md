@@ -4,7 +4,7 @@
 
 **起始版本：** 22
 
-<!--Device-unnamed-declare enum WebRotateEffect--><!--Device-unnamed-declare enum WebRotateEffect-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -18,7 +18,7 @@ TOPLEFT_EFFECT = 0
 
 **起始版本：** 22
 
-<!--Device-WebRotateEffect-TOPLEFT_EFFECT = 0--><!--Device-WebRotateEffect-TOPLEFT_EFFECT = 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -32,7 +32,6 @@ RESIZE_COVER_EFFECT = 1
 
 **起始版本：** 22
 
-<!--Device-WebRotateEffect-RESIZE_COVER_EFFECT = 1--><!--Device-WebRotateEffect-RESIZE_COVER_EFFECT = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-

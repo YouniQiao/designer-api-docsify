@@ -17,35 +17,35 @@ Defines the constructor of TextInput.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-TextInputInterface-(value?: TextInputOptions): TextInputAttribute--><!--Device-TextInputInterface-(value?: TextInputOptions): TextInputAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [TextInputOptions](arkts-arkui-textinputoptions-i.md) | No | Parameters of the **TextInput** component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [TextInputOptions](arkts-arkui-textinputoptions-i.md) | No |
 
 ## Summary
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [OnContentScrollCallback](arkts-arkui-oncontentscrollcallback-t.md) | Defines the callback for text content scrolling. |
-| [OnPasteCallback](arkts-arkui-onpastecallback-t.md) | Defines the callback used to return the pasted text content. |
-| [OnTextSelectionChangeCallback](arkts-arkui-ontextselectionchangecallback-t.md) | Defines the callback for text selection changes or caret position changes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [OnContentScrollCallback](arkts-arkui-oncontentscrollcallback-t.md) |
+| [OnPasteCallback](arkts-arkui-onpastecallback-t.md) |
+| [OnSubmitCallback](arkts-arkui-onsubmitcallback-t.md) |
+| [OnTextSelectionChangeCallback](arkts-arkui-ontextselectionchangecallback-t.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |

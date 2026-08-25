@@ -16,11 +16,11 @@ Unregister the callback for updating form config.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-formHost-function offUpdateFormsConfigCallback(callback?: formInfo.UpdateFormsConfigCallback): void--><!--Device-formHost-function offUpdateFormsConfigCallback(callback?: formInfo.UpdateFormsConfigCallback): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -28,15 +28,14 @@ Unregister the callback for updating form config.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | formInfo.UpdateFormsConfigCallback | No | Identifies the callback for updating form config. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | formInfo.UpdateFormsConfigCallback | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |

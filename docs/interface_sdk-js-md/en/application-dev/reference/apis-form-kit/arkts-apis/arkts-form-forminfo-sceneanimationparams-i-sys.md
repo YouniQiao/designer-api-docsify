@@ -2,9 +2,9 @@
 
 The scene animation form params.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-formInfo-interface SceneAnimationParams--><!--Device-formInfo-interface SceneAnimationParams-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -26,9 +26,9 @@ Ability name of the scene animation form.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-SceneAnimationParams-abilityName: string--><!--Device-SceneAnimationParams-abilityName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -44,9 +44,9 @@ Indicates disabled desktop behaviors, only takes effect for system app.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-SceneAnimationParams-disabledDesktopBehaviors?: string--><!--Device-SceneAnimationParams-disabledDesktopBehaviors?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -64,11 +64,10 @@ The trigger types of the scene animation.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-SceneAnimationParams-triggerTypes?: Array<SceneAnimationTriggerType>--><!--Device-SceneAnimationParams-triggerTypes?: Array<SceneAnimationTriggerType>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
-

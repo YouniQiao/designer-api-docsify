@@ -16,29 +16,29 @@ export function sendableResourceToResource(resource: SendableResource): Resource
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-sendableResourceManager-export function sendableResourceToResource(resource: SendableResource): Resource--><!--Device-sendableResourceManager-export function sendableResourceToResource(resource: SendableResource): Resource-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resource | SendableResource | 是 | SendableResource对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| resource | [SendableResource](arkts-localization-sendableresource-sendableresource-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Resource | 转换后的Resource对象。 |
+| 类型 |
+| --- |
+| [Resource](arkts-localization-resource-resource-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -66,4 +66,3 @@ try {
     console.error(`sendableResourceToResource failed, error code: ${code}, message: ${message}.`);
 }
 ```
-

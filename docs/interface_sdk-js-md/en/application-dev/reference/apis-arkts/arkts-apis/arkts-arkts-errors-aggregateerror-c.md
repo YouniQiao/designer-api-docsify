@@ -6,9 +6,7 @@ AggregateError object represents an error when several errors need to be wrapped
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class AggregateError--><!--Device-unnamed-export class AggregateError-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,27 +25,25 @@ Constructs a new AggregateError instance with provided message and error specifi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AggregateError-static $_invoke(errors: Iterable<Error>, message?: string, options?: ErrorOptions): AggregateError--><!--Device-AggregateError-static $_invoke(errors: Iterable<Error>, message?: string, options?: ErrorOptions): AggregateError-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| errors | Iterable&lt;Error&gt; | Yes | Errors to be aggregated. |
-| message | string | No | Error text. |
-| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No | Error options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [errors](#errors) | Iterable & lt;Error & gt; | Yes |
+| message | string | No |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [AggregateError](arkts-arkts-errors-aggregateerror-c.md) | Newly created AggregateError instance |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [AggregateError](arkts-arkts-errors-aggregateerror-c.md) |
 
 ## $_invoke
 
@@ -59,27 +55,25 @@ Constructs a new AggregateError instance with provided message and error specifi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AggregateError-static $_invoke(errors: Error[], message?: string, options?: ErrorOptions): AggregateError--><!--Device-AggregateError-static $_invoke(errors: Error[], message?: string, options?: ErrorOptions): AggregateError-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| errors | Error[] | Yes | Errors to be aggregated. |
-| message | string | No | Error text. |
-| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No | Error options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [errors](#errors) | Error[] | Yes |
+| message | string | No |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [AggregateError](arkts-arkts-errors-aggregateerror-c.md) | Newly created AggregateError instance |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [AggregateError](arkts-arkts-errors-aggregateerror-c.md) |
 
 ## constructor
 
@@ -91,21 +85,19 @@ Constructs a new AggregateError instance with provided errors, message and error
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AggregateError-constructor(errors: Iterable<Error>, message?: string, options?: ErrorOptions)--><!--Device-AggregateError-constructor(errors: Iterable<Error>, message?: string, options?: ErrorOptions)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| errors | Iterable&lt;Error&gt; | Yes | Errors to be aggregated. |
-| message | string | No | Error text. |
-| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No | Error options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [errors](#errors) | Iterable & lt;Error & gt; | Yes |
+| message | string | No |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No |
 
 ## constructor
 
@@ -117,21 +109,19 @@ Constructs a new AggregateError instance with provided errors, message and error
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AggregateError-constructor(errors: Error[], message?: string, options?: ErrorOptions)--><!--Device-AggregateError-constructor(errors: Error[], message?: string, options?: ErrorOptions)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| errors | Error[] | Yes | Errors to be aggregated. |
-| message | string | No | Error text. |
-| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No | Error options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [errors](#errors) | Error[] | Yes |
+| message | string | No |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | No |
 
 ## errors
 
@@ -145,11 +135,8 @@ Defines an array with aggregated errors
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AggregateError-errors: Array<Error>--><!--Device-AggregateError-errors: Array<Error>-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

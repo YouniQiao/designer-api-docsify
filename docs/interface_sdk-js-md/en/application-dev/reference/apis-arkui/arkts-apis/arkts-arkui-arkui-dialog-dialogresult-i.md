@@ -4,7 +4,7 @@ Response result for dialog.
 
 **Since:** 26.1.0
 
-<!--Device-unnamed-export interface DialogResult--><!--Device-unnamed-export interface DialogResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -17,20 +17,19 @@ import { dialog, DialogBaseAlignment, DialogButtonOrientation, DialogState, Dial
 ## dialogId
 
 ```TypeScript
-dialogId: int
+dialogId: number
 ```
 
 Id of the dialog. The value should be an integer.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.1.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
-<!--Device-DialogResult-dialogId: int--><!--Device-DialogResult-dialogId: int-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

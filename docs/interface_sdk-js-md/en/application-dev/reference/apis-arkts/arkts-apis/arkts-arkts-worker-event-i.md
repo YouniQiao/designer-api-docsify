@@ -4,7 +4,7 @@ Defines the event.
 
 **Since:** 7
 
-<!--Device-unnamed-export interface Event--><!--Device-unnamed-export interface Event-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,9 +26,9 @@ Timestamp (accurate to millisecond) when the event is created. This parameter is
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-Event-readonly timeStamp: number--><!--Device-Event-readonly timeStamp: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -44,9 +44,8 @@ Type of the Event.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-Event-readonly type: string--><!--Device-Event-readonly type: string-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

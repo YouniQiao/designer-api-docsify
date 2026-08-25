@@ -1,25 +1,21 @@
 # Float64ArrayConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface Float64ArrayConstructor--><!--Device-unnamed-interface Float64ArrayConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
+## [[Construct]]
 
 ```TypeScript
 new (): Float64Array
 ```
 
-**Since:** -1
-
-<!--Device-Float64ArrayConstructor-new (): Float64Array--><!--Device-Float64ArrayConstructor-new (): Float64Array-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

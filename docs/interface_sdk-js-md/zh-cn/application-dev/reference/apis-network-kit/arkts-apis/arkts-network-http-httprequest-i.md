@@ -2,9 +2,9 @@
 
 HTTP请求任务。在调用HttpRequest的方法前，需要先通过[createHttp()](arkts-network-http-createhttp-f.md)创建一个任务。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-http-export interface HttpRequest--><!--Device-http-export interface HttpRequest-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -22,11 +22,11 @@ destroy(): void
 
 终止HTTP请求任务，同时释放系统资源。
 
-**起始版本：** 23
+**起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HttpRequest-destroy(): void--><!--Device-HttpRequest-destroy(): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -60,17 +60,17 @@ enableAutoCookie(enable: boolean): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-HttpRequest-enableAutoCookie(enable: boolean): void--><!--Device-HttpRequest-enableAutoCookie(enable: boolean): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enable | boolean | 是 | 是否自动携带Cookie。true表示开启，false表示关闭。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enable | boolean | 是 |
 
 **示例**
 
@@ -98,28 +98,30 @@ httpRequest.request(url, {
 });
 ```
 
-## off("dataEnd")
+## off("headerReceive")
 
 ```TypeScript
-off(type: "dataEnd", callback?: Callback<void>): void
+off(type: "headerReceive", callback?: AsyncCallback<Object>): void
 ```
 
-取消订阅HTTP流式响应数据接收完毕事件。
+取消订阅HTTP Response Header事件。
 
-**起始版本：** 10
+**起始版本：** 6
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-HttpRequest-off(type: "dataEnd", callback?: Callback<void>): void--><!--Device-HttpRequest-off(type: "dataEnd", callback?: Callback<void>): void-End-->
+**废弃版本：** 8
+
+**替代接口：** [off_headersReceive](#offheadersreceive)
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | "dataEnd" | 是 | 取消订阅的事件类型：'dataEnd'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | "headerReceive" | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | 否 |
 
 **示例**
 
@@ -127,10 +129,42 @@ off(type: "dataEnd", callback?: Callback<void>): void
 import { http } from '@kit.NetworkKit';
 
 let httpRequest = http.createHttp();
-httpRequest.on("dataEnd", () => {
-  console.info("Receive dataEnd !");
+httpRequest.off("headerReceive");
+```
+
+## off("headersReceive")
+
+```TypeScript
+off(type: "headersReceive", callback?: Callback<Object>): void
+```
+
+取消订阅HTTP Response Header 事件。
+
+**起始版本：** 8
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | "headersReceive" | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | 否 |
+
+**示例**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("headersReceive", (header: Object) => {
+  console.info("header: " + JSON.stringify(header));
 });
-httpRequest.off("dataEnd");
+httpRequest.off("headersReceive");
 ```
 
 ## off("dataReceive")
@@ -143,18 +177,18 @@ off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-HttpRequest-off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void-End-->
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | "dataReceive" | 是 | 取消订阅的事件类型：'dataReceive'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | "dataReceive" | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 否 |
 
 **示例**
 
@@ -168,6 +202,41 @@ httpRequest.on("dataReceive", (data: ArrayBuffer) => {
 httpRequest.off("dataReceive");
 ```
 
+## off("dataEnd")
+
+```TypeScript
+off(type: "dataEnd", callback?: Callback<void>): void
+```
+
+取消订阅HTTP流式响应数据接收完毕事件。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | "dataEnd" | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+
+**示例**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataEnd", () => {
+  console.info("Receive dataEnd !");
+});
+httpRequest.off("dataEnd");
+```
+
 ## off('dataReceiveProgress')
 
 ```TypeScript
@@ -178,18 +247,18 @@ off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): 
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-HttpRequest-off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void-End-->
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'dataReceiveProgress' | 是 | 取消订阅的事件类型：'dataReceiveProgress'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | 否 | 回调函数。 可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订 阅。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'dataReceiveProgress' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | 否 |
 
 **示例**
 
@@ -213,18 +282,18 @@ off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-HttpRequest-off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void-End-->
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'dataSendProgress' | 是 | 取消订阅的事件类型：'dataSendProgress'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'dataSendProgress' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | 否 |
 
 **示例**
 
@@ -248,215 +317,6 @@ httpRequest.onDataSendProgress((data: http.DataSendProgressInfo) => {
 httpRequest.offDataSendProgress();
 ```
 
-## off("headerReceive")
-
-```TypeScript
-off(type: "headerReceive", callback?: AsyncCallback<Object>): void
-```
-
-取消订阅HTTP Response Header事件。
-
-**起始版本：** 6
-
-**废弃版本：** 8
-
-**替代接口：** [off_headersReceive](#offheadersreceive)
-
-<!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void--><!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | "headerReceive" | 是 | 取消订阅的事件类型，'headerReceive'。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
-
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.off("headerReceive");
-```
-
-## off("headersReceive")
-
-```TypeScript
-off(type: "headersReceive", callback?: Callback<Object>): void
-```
-
-取消订阅HTTP Response Header 事件。
-
-**起始版本：** 8
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HttpRequest-off(type: "headersReceive", callback?: Callback<Object>): void--><!--Device-HttpRequest-off(type: "headersReceive", callback?: Callback<Object>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | "headersReceive" | 是 | 取消订阅的事件类型：'headersReceive'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。<br>**起始版本：** 11 |
-
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("headersReceive", (header: Object) => {
-  console.info("header: " + JSON.stringify(header));
-});
-httpRequest.off("headersReceive");
-```
-
-## on("dataEnd")
-
-```TypeScript
-on(type: "dataEnd", callback: Callback<void>): void
-```
-
-订阅HTTP流式响应数据接收完毕事件。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HttpRequest-on(type: "dataEnd", callback: Callback<void>): void--><!--Device-HttpRequest-on(type: "dataEnd", callback: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | "dataEnd" | 是 | 订阅的事件类型，'dataEnd'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。当订阅成功时，err为undefined，否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataEnd", () => {
-  console.info("Receive dataEnd !");
-});
-httpRequest.off("dataEnd");
-```
-
-## on("dataReceive")
-
-```TypeScript
-on(type: "dataReceive", callback: Callback<ArrayBuffer>): void
-```
-
-订阅HTTP流式响应数据接收事件。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HttpRequest-on(type: "dataReceive", callback: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-on(type: "dataReceive", callback: Callback<ArrayBuffer>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | "dataReceive" | 是 | 订阅的事件类型，'dataReceive'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 是 | 回调函数。当订阅成功时，err为undefined，data为获取到的HTTP流式数据接收数据，类型为ArrayBuffer；否则为错误对 象。 |
-
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceive", (data: ArrayBuffer) => {
-  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
-});
-httpRequest.off("dataReceive");
-```
-
-## on('dataReceiveProgress')
-
-```TypeScript
-on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void
-```
-
-订阅HTTP流式响应数据接收进度事件。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HttpRequest-on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'dataReceiveProgress' | 是 | 订阅的事件类型，'dataReceiveProgress'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | 是 | 回调函数。当订阅成功时，回调内容是 [DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)，订阅失败时为undefined。<br>**起始版本：** 11 |
-
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
-  console.info("dataReceiveProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataReceiveProgress");
-```
-
-## on('dataSendProgress')
-
-```TypeScript
-on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void
-```
-
-订阅HTTP网络请求数据发送进度事件。
-
-**起始版本：** 11
-
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HttpRequest-on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'dataSendProgress' | 是 | 订阅的事件类型，'dataSendProgress'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | 是 | 回调函数。当订阅成功时，回调内容是 [DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)，订阅失败时为undefined。 |
-
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
-  console.info("dataSendProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataSendProgress");
-```
-
 ## on("headerReceive")
 
 ```TypeScript
@@ -467,20 +327,20 @@ on(type: "headerReceive", callback: AsyncCallback<Object>): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
 **替代接口：** [on_headersReceive](#onheadersreceive)
-
-<!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void--><!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | "headerReceive" | 是 | 订阅的事件类型，'headerReceive'。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | 是 | 回调函数。当订阅成功，error为undefined，data为获取到HTTP响应头；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | "headerReceive" | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | 是 |
 
 **示例**
 
@@ -504,18 +364,18 @@ on(type: "headersReceive", callback: Callback<Object>): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-HttpRequest-on(type: "headersReceive", callback: Callback<Object>): void--><!--Device-HttpRequest-on(type: "headersReceive", callback: Callback<Object>): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | "headersReceive" | 是 | 订阅的事件类型：'headersReceive'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | 是 | 回调函数，返回HTTP响应头对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | "headersReceive" | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | 是 |
 
 **示例**
 
@@ -529,7 +389,147 @@ httpRequest.on("headersReceive", (header: Object) => {
 httpRequest.off("headersReceive");
 ```
 
-## once_headersReceive("headersReceive")
+## on("dataReceive")
+
+```TypeScript
+on(type: "dataReceive", callback: Callback<ArrayBuffer>): void
+```
+
+订阅HTTP流式响应数据接收事件。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | "dataReceive" | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 是 |
+
+**示例**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataReceive", (data: ArrayBuffer) => {
+  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
+});
+httpRequest.off("dataReceive");
+```
+
+## on("dataEnd")
+
+```TypeScript
+on(type: "dataEnd", callback: Callback<void>): void
+```
+
+订阅HTTP流式响应数据接收完毕事件。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | "dataEnd" | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+**示例**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataEnd", () => {
+  console.info("Receive dataEnd !");
+});
+httpRequest.off("dataEnd");
+```
+
+## on('dataReceiveProgress')
+
+```TypeScript
+on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void
+```
+
+订阅HTTP流式响应数据接收进度事件。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'dataReceiveProgress' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | 是 |
+
+**示例**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
+  console.info("dataReceiveProgress:" + JSON.stringify(data));
+});
+httpRequest.off("dataReceiveProgress");
+```
+
+## on('dataSendProgress')
+
+```TypeScript
+on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void
+```
+
+订阅HTTP网络请求数据发送进度事件。
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'dataSendProgress' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | 是 |
+
+**示例**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
+  console.info("dataSendProgress:" + JSON.stringify(data));
+});
+httpRequest.off("dataSendProgress");
+```
+
+## once("headersReceive")
 
 ```TypeScript
 once(type: "headersReceive", callback: Callback<Object>): void
@@ -539,18 +539,18 @@ once(type: "headersReceive", callback: Callback<Object>): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-HttpRequest-once(type: "headersReceive", callback: Callback<Object>): void--><!--Device-HttpRequest-once(type: "headersReceive", callback: Callback<Object>): void-End-->
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | "headersReceive" | 是 | 订阅事件，固定为'headersReceive'。headersReceive：响应头接收事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | 是 | 回调函数。返回HTTP响应头对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | "headersReceive" | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | 是 |
 
 **示例**
 
@@ -580,61 +580,61 @@ request(url: string, callback: AsyncCallback<HttpResponse>): void
 
 > (3) 若URL包含中文或其他语言，需先调用encodeURL(URL)编码，再发起请求。
 
-**起始版本：** 23
+**起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INTERNET
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-HttpRequest-request(url: string, callback: AsyncCallback<HttpResponse>): void--><!--Device-HttpRequest-request(url: string, callback: AsyncCallback<HttpResponse>): void-End-->
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| url | string | 是 | 发起网络请求的URL地址。示例：https://www.test.com |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpResponse&gt; | 是 | 回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| url | string | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpResponse&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2300001](../errorcode-net-http.md#2300001-不支持的协议) | Unsupported protocol. |
-| [2300003](../errorcode-net-http.md#2300003-url格式错误) | Invalid URL format or missing URL. |
-| [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) | Failed to resolve the proxy name. |
-| [2300006](../errorcode-net-http.md#2300006-域名解析失败) | Failed to resolve the host name. |
-| [2300007](../errorcode-net-http.md#2300007-无法连接到服务器) | Failed to connect to the server. |
-| [2300008](../errorcode-net-http.md#2300008-服务器返回非法数据) | Invalid server response. |
-| [2300009](../errorcode-net-http.md#2300009-拒绝对远程资源的访问) | Access to the remote resource denied. |
-| [2300016](../errorcode-net-http.md#2300016-http2帧层错误) | Error in the HTTP2 framing layer. |
-| [2300018](../errorcode-net-http.md#2300018-服务器返回数据不完整) | Transferred a partial file. |
-| [2300023](../errorcode-net-http.md#2300023-向磁盘应用程序写入接收数据失败) | Failed to write the received data to the disk or application. |
-| [2300025](../errorcode-net-http.md#2300025-上传失败) | Upload failed. |
-| [2300026](../errorcode-net-http.md#2300026-从文件应用程序中打开读取本地数据失败) | Failed to open or read local data from the file or application. |
-| [2300027](../errorcode-net-http.md#2300027-内存不足) | Out of memory. |
-| [2300028](../errorcode-net-http.md#2300028-操作超时) | Operation timeout. |
-| [2300047](../errorcode-net-http.md#2300047-重定向次数达到最大值) | The number of redirections reaches the maximum allowed. |
-| [2300052](../errorcode-net-http.md#2300052-服务器没有返回内容) | The server returned nothing (no header or data). |
-| [2300055](../errorcode-net-http.md#2300055-发送网络数据失败) | Failed to send data to the peer. |
-| [2300056](../errorcode-net-http.md#2300056-接收网络数据失败) | Failed to receive data from the peer. |
-| [2300058](../errorcode-net-http.md#2300058-本地ssl证书错误) | Local SSL certificate error. |
-| [2300059](../errorcode-net-http.md#2300059-无法使用指定的加密算法) | The specified SSL cipher cannot be used. |
-| [2300060](../errorcode-net-http.md#2300060-远程服务器ssl证书或ssh密钥不正确) | Invalid SSL peer certificate or SSH remote key. |
-| [2300061](../errorcode-net-http.md#2300061-无法识别或错误的http编码格式) | Invalid HTTP encoding format. |
-| [2300063](../errorcode-net-http.md#2300063-超出最大文件大小) | Maximum file size exceeded. |
-| [2300070](../errorcode-net-http.md#2300070-服务器磁盘空间不足) | Remote disk full. |
-| [2300073](../errorcode-net-http.md#2300073-服务器返回文件已存在) | Remote file already exists. |
-| [2300077](../errorcode-net-http.md#2300077-ssl-ca证书不存在或没有访问权限) | The SSL CA certificate does not exist or is inaccessible. |
-| [2300078](../errorcode-net-http.md#2300078-url请求的文件不存在) | Remote file not found. |
-| [2300094](../errorcode-net-http.md#2300094-身份校验失败) | Authentication error. |
-| [2300999](../errorcode-net-http.md#2300999-内部错误) | Internal error. |
-| [2300998](../errorcode-net-http.md#2300998-不允许访问域名) | It is not allowed to access this domain.<br>**适用版本：** 12+ |
-| [2300997](../errorcode-net-http.md#2300997-明文http被拦截) | Cleartext traffic not permitted.<br>**适用版本：** 18+ |
-| 2300996 | The request was intercepted by the HTTP global interceptor.<br>**适用版本：** 26.0.0+ |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2300001](../errorcode-net-http.md#2300001-不支持的协议) |
+| [2300003](../errorcode-net-http.md#2300003-url格式错误) |
+| [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) |
+| [2300006](../errorcode-net-http.md#2300006-域名解析失败) |
+| [2300007](../errorcode-net-http.md#2300007-无法连接到服务器) |
+| [2300008](../errorcode-net-http.md#2300008-服务器返回非法数据) |
+| [2300009](../errorcode-net-http.md#2300009-拒绝对远程资源的访问) |
+| [2300016](../errorcode-net-http.md#2300016-http2帧层错误) |
+| [2300018](../errorcode-net-http.md#2300018-服务器返回数据不完整) |
+| [2300023](../errorcode-net-http.md#2300023-向磁盘应用程序写入接收数据失败) |
+| [2300025](../errorcode-net-http.md#2300025-上传失败) |
+| [2300026](../errorcode-net-http.md#2300026-从文件应用程序中打开读取本地数据失败) |
+| [2300027](../errorcode-net-http.md#2300027-内存不足) |
+| [2300028](../errorcode-net-http.md#2300028-操作超时) |
+| [2300047](../errorcode-net-http.md#2300047-重定向次数达到最大值) |
+| [2300052](../errorcode-net-http.md#2300052-服务器没有返回内容) |
+| [2300055](../errorcode-net-http.md#2300055-发送网络数据失败) |
+| [2300056](../errorcode-net-http.md#2300056-接收网络数据失败) |
+| [2300058](../errorcode-net-http.md#2300058-本地ssl证书错误) |
+| [2300059](../errorcode-net-http.md#2300059-无法使用指定的加密算法) |
+| [2300060](../errorcode-net-http.md#2300060-远程服务器ssl证书或ssh密钥不正确) |
+| [2300061](../errorcode-net-http.md#2300061-无法识别或错误的http编码格式) |
+| [2300063](../errorcode-net-http.md#2300063-超出最大文件大小) |
+| [2300070](../errorcode-net-http.md#2300070-服务器磁盘空间不足) |
+| [2300073](../errorcode-net-http.md#2300073-服务器返回文件已存在) |
+| [2300077](../errorcode-net-http.md#2300077-ssl-ca证书不存在或没有访问权限) |
+| [2300078](../errorcode-net-http.md#2300078-url请求的文件不存在) |
+| [2300094](../errorcode-net-http.md#2300094-身份校验失败) |
+| [2300999](../errorcode-net-http.md#2300999-内部错误) |
+| [2300998](../errorcode-net-http.md#2300998-不允许访问域名) |
+| [2300997](../errorcode-net-http.md#2300997-明文http被拦截) |
+| 2300996 |
 
 **示例**
 
@@ -810,62 +810,62 @@ request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpRe
 
 > (3) 若URL包含中文或其他语言，需先调用encodeURL(URL)编码，再发起请求。
 
-**起始版本：** 23
+**起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INTERNET
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-HttpRequest-request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void--><!--Device-HttpRequest-request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void-End-->
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| url | string | 是 | 发起网络请求的URL地址。 |
-| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | 是 | 参考[HttpRequestOptions](arkts-network-http-httprequestoptions-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpResponse&gt; | 是 | 回调函数。当请求成功时，回调内容是[HttpResponse](arkts-network-http-httpresponse-i.md) ，请求失败时 为undefined。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| url | string | 是 |
+| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpResponse&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2300001](../errorcode-net-http.md#2300001-不支持的协议) | Unsupported protocol. |
-| [2300003](../errorcode-net-http.md#2300003-url格式错误) | Invalid URL format or missing URL. |
-| [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) | Failed to resolve the proxy name. |
-| [2300006](../errorcode-net-http.md#2300006-域名解析失败) | Failed to resolve the host name. |
-| [2300007](../errorcode-net-http.md#2300007-无法连接到服务器) | Failed to connect to the server. |
-| [2300008](../errorcode-net-http.md#2300008-服务器返回非法数据) | Invalid server response. |
-| [2300009](../errorcode-net-http.md#2300009-拒绝对远程资源的访问) | Access to the remote resource denied. |
-| [2300016](../errorcode-net-http.md#2300016-http2帧层错误) | Error in the HTTP2 framing layer. |
-| [2300018](../errorcode-net-http.md#2300018-服务器返回数据不完整) | Transferred a partial file. |
-| [2300023](../errorcode-net-http.md#2300023-向磁盘应用程序写入接收数据失败) | Failed to write the received data to the disk or application. |
-| [2300025](../errorcode-net-http.md#2300025-上传失败) | Upload failed. |
-| [2300026](../errorcode-net-http.md#2300026-从文件应用程序中打开读取本地数据失败) | Failed to open or read local data from the file or application. |
-| [2300027](../errorcode-net-http.md#2300027-内存不足) | Out of memory. |
-| [2300028](../errorcode-net-http.md#2300028-操作超时) | Operation timeout. |
-| [2300047](../errorcode-net-http.md#2300047-重定向次数达到最大值) | The number of redirections reaches the maximum allowed. |
-| [2300052](../errorcode-net-http.md#2300052-服务器没有返回内容) | The server returned nothing (no header or data). |
-| [2300055](../errorcode-net-http.md#2300055-发送网络数据失败) | Failed to send data to the peer. |
-| [2300056](../errorcode-net-http.md#2300056-接收网络数据失败) | Failed to receive data from the peer. |
-| [2300058](../errorcode-net-http.md#2300058-本地ssl证书错误) | Local SSL certificate error. |
-| [2300059](../errorcode-net-http.md#2300059-无法使用指定的加密算法) | The specified SSL cipher cannot be used. |
-| [2300060](../errorcode-net-http.md#2300060-远程服务器ssl证书或ssh密钥不正确) | Invalid SSL peer certificate or SSH remote key. |
-| [2300061](../errorcode-net-http.md#2300061-无法识别或错误的http编码格式) | Invalid HTTP encoding format. |
-| [2300063](../errorcode-net-http.md#2300063-超出最大文件大小) | Maximum file size exceeded. |
-| [2300070](../errorcode-net-http.md#2300070-服务器磁盘空间不足) | Remote disk full. |
-| [2300073](../errorcode-net-http.md#2300073-服务器返回文件已存在) | Remote file already exists. |
-| [2300077](../errorcode-net-http.md#2300077-ssl-ca证书不存在或没有访问权限) | The SSL CA certificate does not exist or is inaccessible. |
-| [2300078](../errorcode-net-http.md#2300078-url请求的文件不存在) | Remote file not found. |
-| [2300094](../errorcode-net-http.md#2300094-身份校验失败) | Authentication error. |
-| [2300999](../errorcode-net-http.md#2300999-内部错误) | Internal error. |
-| [2300998](../errorcode-net-http.md#2300998-不允许访问域名) | It is not allowed to access this domain.<br>**适用版本：** 12+ |
-| [2300997](../errorcode-net-http.md#2300997-明文http被拦截) | Cleartext traffic not permitted.<br>**适用版本：** 18+ |
-| 2300996 | The request was intercepted by the HTTP global interceptor.<br>**适用版本：** 26.0.0+ |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2300001](../errorcode-net-http.md#2300001-不支持的协议) |
+| [2300003](../errorcode-net-http.md#2300003-url格式错误) |
+| [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) |
+| [2300006](../errorcode-net-http.md#2300006-域名解析失败) |
+| [2300007](../errorcode-net-http.md#2300007-无法连接到服务器) |
+| [2300008](../errorcode-net-http.md#2300008-服务器返回非法数据) |
+| [2300009](../errorcode-net-http.md#2300009-拒绝对远程资源的访问) |
+| [2300016](../errorcode-net-http.md#2300016-http2帧层错误) |
+| [2300018](../errorcode-net-http.md#2300018-服务器返回数据不完整) |
+| [2300023](../errorcode-net-http.md#2300023-向磁盘应用程序写入接收数据失败) |
+| [2300025](../errorcode-net-http.md#2300025-上传失败) |
+| [2300026](../errorcode-net-http.md#2300026-从文件应用程序中打开读取本地数据失败) |
+| [2300027](../errorcode-net-http.md#2300027-内存不足) |
+| [2300028](../errorcode-net-http.md#2300028-操作超时) |
+| [2300047](../errorcode-net-http.md#2300047-重定向次数达到最大值) |
+| [2300052](../errorcode-net-http.md#2300052-服务器没有返回内容) |
+| [2300055](../errorcode-net-http.md#2300055-发送网络数据失败) |
+| [2300056](../errorcode-net-http.md#2300056-接收网络数据失败) |
+| [2300058](../errorcode-net-http.md#2300058-本地ssl证书错误) |
+| [2300059](../errorcode-net-http.md#2300059-无法使用指定的加密算法) |
+| [2300060](../errorcode-net-http.md#2300060-远程服务器ssl证书或ssh密钥不正确) |
+| [2300061](../errorcode-net-http.md#2300061-无法识别或错误的http编码格式) |
+| [2300063](../errorcode-net-http.md#2300063-超出最大文件大小) |
+| [2300070](../errorcode-net-http.md#2300070-服务器磁盘空间不足) |
+| [2300073](../errorcode-net-http.md#2300073-服务器返回文件已存在) |
+| [2300077](../errorcode-net-http.md#2300077-ssl-ca证书不存在或没有访问权限) |
+| [2300078](../errorcode-net-http.md#2300078-url请求的文件不存在) |
+| [2300094](../errorcode-net-http.md#2300094-身份校验失败) |
+| [2300999](../errorcode-net-http.md#2300999-内部错误) |
+| [2300998](../errorcode-net-http.md#2300998-不允许访问域名) |
+| [2300997](../errorcode-net-http.md#2300997-明文http被拦截) |
+| 2300996 |
 
 **示例**
 
@@ -888,67 +888,67 @@ request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>
 
 > (3) 若URL包含中文或其他语言，需先调用encodeURL(URL)编码，再发起请求。
 
-**起始版本：** 23
+**起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INTERNET
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-HttpRequest-request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>--><!--Device-HttpRequest-request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>-End-->
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| url | string | 是 | 发起网络请求的URL地址。 |
-| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | 否 | 参考[HttpRequestOptions](arkts-network-http-httprequestoptions-i.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| url | string | 是 |
+| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;HttpResponse&gt; | Promise对象，返回请求的响应结果。 |
+| 类型 |
+| --- |
+| Promise & lt;HttpResponse & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2300001](../errorcode-net-http.md#2300001-不支持的协议) | Unsupported protocol. |
-| [2300003](../errorcode-net-http.md#2300003-url格式错误) | Invalid URL format or missing URL. |
-| [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) | Failed to resolve the proxy name. |
-| [2300006](../errorcode-net-http.md#2300006-域名解析失败) | Failed to resolve the host name. |
-| [2300007](../errorcode-net-http.md#2300007-无法连接到服务器) | Failed to connect to the server. |
-| [2300008](../errorcode-net-http.md#2300008-服务器返回非法数据) | Invalid server response. |
-| [2300009](../errorcode-net-http.md#2300009-拒绝对远程资源的访问) | Access to the remote resource denied. |
-| [2300016](../errorcode-net-http.md#2300016-http2帧层错误) | Error in the HTTP2 framing layer. |
-| [2300018](../errorcode-net-http.md#2300018-服务器返回数据不完整) | Transferred a partial file. |
-| [2300023](../errorcode-net-http.md#2300023-向磁盘应用程序写入接收数据失败) | Failed to write the received data to the disk or application. |
-| [2300025](../errorcode-net-http.md#2300025-上传失败) | Upload failed. |
-| [2300026](../errorcode-net-http.md#2300026-从文件应用程序中打开读取本地数据失败) | Failed to open or read local data from the file or application. |
-| [2300027](../errorcode-net-http.md#2300027-内存不足) | Out of memory. |
-| [2300028](../errorcode-net-http.md#2300028-操作超时) | Operation timeout. |
-| [2300047](../errorcode-net-http.md#2300047-重定向次数达到最大值) | The number of redirections reaches the maximum allowed. |
-| [2300052](../errorcode-net-http.md#2300052-服务器没有返回内容) | The server returned nothing (no header or data). |
-| [2300055](../errorcode-net-http.md#2300055-发送网络数据失败) | Failed to send data to the peer. |
-| [2300056](../errorcode-net-http.md#2300056-接收网络数据失败) | Failed to receive data from the peer. |
-| [2300058](../errorcode-net-http.md#2300058-本地ssl证书错误) | Local SSL certificate error. |
-| [2300059](../errorcode-net-http.md#2300059-无法使用指定的加密算法) | The specified SSL cipher cannot be used. |
-| [2300060](../errorcode-net-http.md#2300060-远程服务器ssl证书或ssh密钥不正确) | Invalid SSL peer certificate or SSH remote key. |
-| [2300061](../errorcode-net-http.md#2300061-无法识别或错误的http编码格式) | Invalid HTTP encoding format. |
-| [2300063](../errorcode-net-http.md#2300063-超出最大文件大小) | Maximum file size exceeded. |
-| [2300070](../errorcode-net-http.md#2300070-服务器磁盘空间不足) | Remote disk full. |
-| [2300073](../errorcode-net-http.md#2300073-服务器返回文件已存在) | Remote file already exists. |
-| [2300077](../errorcode-net-http.md#2300077-ssl-ca证书不存在或没有访问权限) | The SSL CA certificate does not exist or is inaccessible. |
-| [2300078](../errorcode-net-http.md#2300078-url请求的文件不存在) | Remote file not found. |
-| [2300094](../errorcode-net-http.md#2300094-身份校验失败) | Authentication error. |
-| [2300999](../errorcode-net-http.md#2300999-内部错误) | Internal error. |
-| [2300998](../errorcode-net-http.md#2300998-不允许访问域名) | It is not allowed to access this domain.<br>**适用版本：** 12+ |
-| [2300997](../errorcode-net-http.md#2300997-明文http被拦截) | Cleartext traffic not permitted.<br>**适用版本：** 18+ |
-| 2300996 | The request was intercepted by the HTTP global interceptor.<br>**适用版本：** 26.0.0+ |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2300001](../errorcode-net-http.md#2300001-不支持的协议) |
+| [2300003](../errorcode-net-http.md#2300003-url格式错误) |
+| [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) |
+| [2300006](../errorcode-net-http.md#2300006-域名解析失败) |
+| [2300007](../errorcode-net-http.md#2300007-无法连接到服务器) |
+| [2300008](../errorcode-net-http.md#2300008-服务器返回非法数据) |
+| [2300009](../errorcode-net-http.md#2300009-拒绝对远程资源的访问) |
+| [2300016](../errorcode-net-http.md#2300016-http2帧层错误) |
+| [2300018](../errorcode-net-http.md#2300018-服务器返回数据不完整) |
+| [2300023](../errorcode-net-http.md#2300023-向磁盘应用程序写入接收数据失败) |
+| [2300025](../errorcode-net-http.md#2300025-上传失败) |
+| [2300026](../errorcode-net-http.md#2300026-从文件应用程序中打开读取本地数据失败) |
+| [2300027](../errorcode-net-http.md#2300027-内存不足) |
+| [2300028](../errorcode-net-http.md#2300028-操作超时) |
+| [2300047](../errorcode-net-http.md#2300047-重定向次数达到最大值) |
+| [2300052](../errorcode-net-http.md#2300052-服务器没有返回内容) |
+| [2300055](../errorcode-net-http.md#2300055-发送网络数据失败) |
+| [2300056](../errorcode-net-http.md#2300056-接收网络数据失败) |
+| [2300058](../errorcode-net-http.md#2300058-本地ssl证书错误) |
+| [2300059](../errorcode-net-http.md#2300059-无法使用指定的加密算法) |
+| [2300060](../errorcode-net-http.md#2300060-远程服务器ssl证书或ssh密钥不正确) |
+| [2300061](../errorcode-net-http.md#2300061-无法识别或错误的http编码格式) |
+| [2300063](../errorcode-net-http.md#2300063-超出最大文件大小) |
+| [2300070](../errorcode-net-http.md#2300070-服务器磁盘空间不足) |
+| [2300073](../errorcode-net-http.md#2300073-服务器返回文件已存在) |
+| [2300077](../errorcode-net-http.md#2300077-ssl-ca证书不存在或没有访问权限) |
+| [2300078](../errorcode-net-http.md#2300078-url请求的文件不存在) |
+| [2300094](../errorcode-net-http.md#2300094-身份校验失败) |
+| [2300999](../errorcode-net-http.md#2300999-内部错误) |
+| [2300998](../errorcode-net-http.md#2300998-不允许访问域名) |
+| [2300997](../errorcode-net-http.md#2300997-明文http被拦截) |
+| 2300996 |
 
 **示例**
 
@@ -964,59 +964,59 @@ requestInStream(url: string, callback: AsyncCallback<int>): void
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **需要权限：** ohos.permission.INTERNET
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HttpRequest-requestInStream(url: string, callback: AsyncCallback<int>): void--><!--Device-HttpRequest-requestInStream(url: string, callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| url | string | 是 | 发起网络请求的URL地址。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当请求成功，err为undefined，返回HTTP请求响应错误码，具体含义见 [ResponseCode](arkts-network-http-responsecode-e.md)；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| url | string | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2300001](../errorcode-net-http.md#2300001-不支持的协议) | Unsupported protocol. |
-| [2300003](../errorcode-net-http.md#2300003-url格式错误) | Invalid URL format or missing URL. |
-| [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) | Failed to resolve the proxy name. |
-| [2300006](../errorcode-net-http.md#2300006-域名解析失败) | Failed to resolve the host name. |
-| [2300007](../errorcode-net-http.md#2300007-无法连接到服务器) | Failed to connect to the server. |
-| [2300008](../errorcode-net-http.md#2300008-服务器返回非法数据) | Invalid server response. |
-| [2300009](../errorcode-net-http.md#2300009-拒绝对远程资源的访问) | Access to the remote resource denied. |
-| [2300016](../errorcode-net-http.md#2300016-http2帧层错误) | Error in the HTTP2 framing layer. |
-| [2300018](../errorcode-net-http.md#2300018-服务器返回数据不完整) | Transferred a partial file. |
-| [2300023](../errorcode-net-http.md#2300023-向磁盘应用程序写入接收数据失败) | Failed to write the received data to the disk or application. |
-| [2300025](../errorcode-net-http.md#2300025-上传失败) | Upload failed. |
-| [2300026](../errorcode-net-http.md#2300026-从文件应用程序中打开读取本地数据失败) | Failed to open or read local data from the file or application. |
-| [2300027](../errorcode-net-http.md#2300027-内存不足) | Out of memory. |
-| [2300028](../errorcode-net-http.md#2300028-操作超时) | Operation timeout. |
-| [2300047](../errorcode-net-http.md#2300047-重定向次数达到最大值) | The number of redirections reaches the maximum allowed. |
-| [2300052](../errorcode-net-http.md#2300052-服务器没有返回内容) | The server returned nothing (no header or data). |
-| [2300055](../errorcode-net-http.md#2300055-发送网络数据失败) | Failed to send data to the peer. |
-| [2300056](../errorcode-net-http.md#2300056-接收网络数据失败) | Failed to receive data from the peer. |
-| [2300058](../errorcode-net-http.md#2300058-本地ssl证书错误) | Local SSL certificate error. |
-| [2300059](../errorcode-net-http.md#2300059-无法使用指定的加密算法) | The specified SSL cipher cannot be used. |
-| [2300060](../errorcode-net-http.md#2300060-远程服务器ssl证书或ssh密钥不正确) | Invalid SSL peer certificate or SSH remote key. |
-| [2300061](../errorcode-net-http.md#2300061-无法识别或错误的http编码格式) | Invalid HTTP encoding format. |
-| [2300063](../errorcode-net-http.md#2300063-超出最大文件大小) | Maximum file size exceeded. |
-| [2300070](../errorcode-net-http.md#2300070-服务器磁盘空间不足) | Remote disk full. |
-| [2300073](../errorcode-net-http.md#2300073-服务器返回文件已存在) | Remote file already exists. |
-| [2300077](../errorcode-net-http.md#2300077-ssl-ca证书不存在或没有访问权限) | The SSL CA certificate does not exist or is inaccessible. |
-| [2300078](../errorcode-net-http.md#2300078-url请求的文件不存在) | Remote file not found. |
-| [2300094](../errorcode-net-http.md#2300094-身份校验失败) | Authentication error. |
-| [2300999](../errorcode-net-http.md#2300999-内部错误) | Internal error. |
-| [2300998](../errorcode-net-http.md#2300998-不允许访问域名) | It is not allowed to access this domain.<br>**适用版本：** 12+ |
-| [2300997](../errorcode-net-http.md#2300997-明文http被拦截) | Cleartext traffic not permitted.<br>**适用版本：** 18+ |
-| 2300996 | The request was intercepted by the HTTP global interceptor.<br>**适用版本：** 26.0.0+ |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2300001](../errorcode-net-http.md#2300001-不支持的协议) |
+| [2300003](../errorcode-net-http.md#2300003-url格式错误) |
+| [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) |
+| [2300006](../errorcode-net-http.md#2300006-域名解析失败) |
+| [2300007](../errorcode-net-http.md#2300007-无法连接到服务器) |
+| [2300008](../errorcode-net-http.md#2300008-服务器返回非法数据) |
+| [2300009](../errorcode-net-http.md#2300009-拒绝对远程资源的访问) |
+| [2300016](../errorcode-net-http.md#2300016-http2帧层错误) |
+| [2300018](../errorcode-net-http.md#2300018-服务器返回数据不完整) |
+| [2300023](../errorcode-net-http.md#2300023-向磁盘应用程序写入接收数据失败) |
+| [2300025](../errorcode-net-http.md#2300025-上传失败) |
+| [2300026](../errorcode-net-http.md#2300026-从文件应用程序中打开读取本地数据失败) |
+| [2300027](../errorcode-net-http.md#2300027-内存不足) |
+| [2300028](../errorcode-net-http.md#2300028-操作超时) |
+| [2300047](../errorcode-net-http.md#2300047-重定向次数达到最大值) |
+| [2300052](../errorcode-net-http.md#2300052-服务器没有返回内容) |
+| [2300055](../errorcode-net-http.md#2300055-发送网络数据失败) |
+| [2300056](../errorcode-net-http.md#2300056-接收网络数据失败) |
+| [2300058](../errorcode-net-http.md#2300058-本地ssl证书错误) |
+| [2300059](../errorcode-net-http.md#2300059-无法使用指定的加密算法) |
+| [2300060](../errorcode-net-http.md#2300060-远程服务器ssl证书或ssh密钥不正确) |
+| [2300061](../errorcode-net-http.md#2300061-无法识别或错误的http编码格式) |
+| [2300063](../errorcode-net-http.md#2300063-超出最大文件大小) |
+| [2300070](../errorcode-net-http.md#2300070-服务器磁盘空间不足) |
+| [2300073](../errorcode-net-http.md#2300073-服务器返回文件已存在) |
+| [2300077](../errorcode-net-http.md#2300077-ssl-ca证书不存在或没有访问权限) |
+| [2300078](../errorcode-net-http.md#2300078-url请求的文件不存在) |
+| [2300094](../errorcode-net-http.md#2300094-身份校验失败) |
+| [2300999](../errorcode-net-http.md#2300999-内部错误) |
+| [2300998](../errorcode-net-http.md#2300998-不允许访问域名) |
+| [2300997](../errorcode-net-http.md#2300997-明文http被拦截) |
+| 2300996 |
 
 **示例**
 
@@ -1180,60 +1180,60 @@ requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallbac
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **需要权限：** ohos.permission.INTERNET
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HttpRequest-requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<int>): void--><!--Device-HttpRequest-requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| url | string | 是 | 发起网络请求的URL地址。 |
-| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | 是 | 参考[HttpRequestOptions](arkts-network-http-httprequestoptions-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当请求成功，err为undefined，返回HTTP请求响应错误码，具体含义见 [ResponseCode](arkts-network-http-responsecode-e.md)；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| url | string | 是 |
+| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2300001](../errorcode-net-http.md#2300001-不支持的协议) | Unsupported protocol. |
-| [2300003](../errorcode-net-http.md#2300003-url格式错误) | Invalid URL format or missing URL. |
-| [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) | Failed to resolve the proxy name. |
-| [2300006](../errorcode-net-http.md#2300006-域名解析失败) | Failed to resolve the host name. |
-| [2300007](../errorcode-net-http.md#2300007-无法连接到服务器) | Failed to connect to the server. |
-| [2300008](../errorcode-net-http.md#2300008-服务器返回非法数据) | Invalid server response. |
-| [2300009](../errorcode-net-http.md#2300009-拒绝对远程资源的访问) | Access to the remote resource denied. |
-| [2300016](../errorcode-net-http.md#2300016-http2帧层错误) | Error in the HTTP2 framing layer. |
-| [2300018](../errorcode-net-http.md#2300018-服务器返回数据不完整) | Transferred a partial file. |
-| [2300023](../errorcode-net-http.md#2300023-向磁盘应用程序写入接收数据失败) | Failed to write the received data to the disk or application. |
-| [2300025](../errorcode-net-http.md#2300025-上传失败) | Upload failed. |
-| [2300026](../errorcode-net-http.md#2300026-从文件应用程序中打开读取本地数据失败) | Failed to open or read local data from the file or application. |
-| [2300027](../errorcode-net-http.md#2300027-内存不足) | Out of memory. |
-| [2300028](../errorcode-net-http.md#2300028-操作超时) | Operation timeout. |
-| [2300047](../errorcode-net-http.md#2300047-重定向次数达到最大值) | The number of redirections reaches the maximum allowed. |
-| [2300052](../errorcode-net-http.md#2300052-服务器没有返回内容) | The server returned nothing (no header or data). |
-| [2300055](../errorcode-net-http.md#2300055-发送网络数据失败) | Failed to send data to the peer. |
-| [2300056](../errorcode-net-http.md#2300056-接收网络数据失败) | Failed to receive data from the peer. |
-| [2300058](../errorcode-net-http.md#2300058-本地ssl证书错误) | Local SSL certificate error. |
-| [2300059](../errorcode-net-http.md#2300059-无法使用指定的加密算法) | The specified SSL cipher cannot be used. |
-| [2300060](../errorcode-net-http.md#2300060-远程服务器ssl证书或ssh密钥不正确) | Invalid SSL peer certificate or SSH remote key. |
-| [2300061](../errorcode-net-http.md#2300061-无法识别或错误的http编码格式) | Invalid HTTP encoding format. |
-| [2300063](../errorcode-net-http.md#2300063-超出最大文件大小) | Maximum file size exceeded. |
-| [2300070](../errorcode-net-http.md#2300070-服务器磁盘空间不足) | Remote disk full. |
-| [2300073](../errorcode-net-http.md#2300073-服务器返回文件已存在) | Remote file already exists. |
-| [2300077](../errorcode-net-http.md#2300077-ssl-ca证书不存在或没有访问权限) | The SSL CA certificate does not exist or is inaccessible. |
-| [2300078](../errorcode-net-http.md#2300078-url请求的文件不存在) | Remote file not found. |
-| [2300094](../errorcode-net-http.md#2300094-身份校验失败) | Authentication error. |
-| [2300999](../errorcode-net-http.md#2300999-内部错误) | Internal error. |
-| [2300998](../errorcode-net-http.md#2300998-不允许访问域名) | It is not allowed to access this domain.<br>**适用版本：** 12+ |
-| [2300997](../errorcode-net-http.md#2300997-明文http被拦截) | Cleartext traffic not permitted.<br>**适用版本：** 18+ |
-| 2300996 | The request was intercepted by the HTTP global interceptor.<br>**适用版本：** 26.0.0+ |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2300001](../errorcode-net-http.md#2300001-不支持的协议) |
+| [2300003](../errorcode-net-http.md#2300003-url格式错误) |
+| [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) |
+| [2300006](../errorcode-net-http.md#2300006-域名解析失败) |
+| [2300007](../errorcode-net-http.md#2300007-无法连接到服务器) |
+| [2300008](../errorcode-net-http.md#2300008-服务器返回非法数据) |
+| [2300009](../errorcode-net-http.md#2300009-拒绝对远程资源的访问) |
+| [2300016](../errorcode-net-http.md#2300016-http2帧层错误) |
+| [2300018](../errorcode-net-http.md#2300018-服务器返回数据不完整) |
+| [2300023](../errorcode-net-http.md#2300023-向磁盘应用程序写入接收数据失败) |
+| [2300025](../errorcode-net-http.md#2300025-上传失败) |
+| [2300026](../errorcode-net-http.md#2300026-从文件应用程序中打开读取本地数据失败) |
+| [2300027](../errorcode-net-http.md#2300027-内存不足) |
+| [2300028](../errorcode-net-http.md#2300028-操作超时) |
+| [2300047](../errorcode-net-http.md#2300047-重定向次数达到最大值) |
+| [2300052](../errorcode-net-http.md#2300052-服务器没有返回内容) |
+| [2300055](../errorcode-net-http.md#2300055-发送网络数据失败) |
+| [2300056](../errorcode-net-http.md#2300056-接收网络数据失败) |
+| [2300058](../errorcode-net-http.md#2300058-本地ssl证书错误) |
+| [2300059](../errorcode-net-http.md#2300059-无法使用指定的加密算法) |
+| [2300060](../errorcode-net-http.md#2300060-远程服务器ssl证书或ssh密钥不正确) |
+| [2300061](../errorcode-net-http.md#2300061-无法识别或错误的http编码格式) |
+| [2300063](../errorcode-net-http.md#2300063-超出最大文件大小) |
+| [2300070](../errorcode-net-http.md#2300070-服务器磁盘空间不足) |
+| [2300073](../errorcode-net-http.md#2300073-服务器返回文件已存在) |
+| [2300077](../errorcode-net-http.md#2300077-ssl-ca证书不存在或没有访问权限) |
+| [2300078](../errorcode-net-http.md#2300078-url请求的文件不存在) |
+| [2300094](../errorcode-net-http.md#2300094-身份校验失败) |
+| [2300999](../errorcode-net-http.md#2300999-内部错误) |
+| [2300998](../errorcode-net-http.md#2300998-不允许访问域名) |
+| [2300997](../errorcode-net-http.md#2300997-明文http被拦截) |
+| 2300996 |
 
 **示例**
 
@@ -1249,65 +1249,65 @@ requestInStream(url: string, options?: HttpRequestOptions): Promise<int>
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **需要权限：** ohos.permission.INTERNET
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HttpRequest-requestInStream(url: string, options?: HttpRequestOptions): Promise<int>--><!--Device-HttpRequest-requestInStream(url: string, options?: HttpRequestOptions): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| url | string | 是 | 发起网络请求的URL地址。 |
-| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | 否 | 参考[HttpRequestOptions](arkts-network-http-httprequestoptions-i.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| url | string | 是 |
+| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | 以Promise形式返回发起请求的结果，具体含义见[ResponseCode]{ |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2300001](../errorcode-net-http.md#2300001-不支持的协议) | Unsupported protocol. |
-| [2300003](../errorcode-net-http.md#2300003-url格式错误) | Invalid URL format or missing URL. |
-| [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) | Failed to resolve the proxy name. |
-| [2300006](../errorcode-net-http.md#2300006-域名解析失败) | Failed to resolve the host name. |
-| [2300007](../errorcode-net-http.md#2300007-无法连接到服务器) | Failed to connect to the server. |
-| [2300008](../errorcode-net-http.md#2300008-服务器返回非法数据) | Invalid server response. |
-| [2300009](../errorcode-net-http.md#2300009-拒绝对远程资源的访问) | Access to the remote resource denied. |
-| [2300016](../errorcode-net-http.md#2300016-http2帧层错误) | Error in the HTTP2 framing layer. |
-| [2300018](../errorcode-net-http.md#2300018-服务器返回数据不完整) | Transferred a partial file. |
-| [2300023](../errorcode-net-http.md#2300023-向磁盘应用程序写入接收数据失败) | Failed to write the received data to the disk or application. |
-| [2300025](../errorcode-net-http.md#2300025-上传失败) | Upload failed. |
-| [2300026](../errorcode-net-http.md#2300026-从文件应用程序中打开读取本地数据失败) | Failed to open or read local data from the file or application. |
-| [2300027](../errorcode-net-http.md#2300027-内存不足) | Out of memory. |
-| [2300028](../errorcode-net-http.md#2300028-操作超时) | Operation timeout. |
-| [2300047](../errorcode-net-http.md#2300047-重定向次数达到最大值) | The number of redirections reaches the maximum allowed. |
-| [2300052](../errorcode-net-http.md#2300052-服务器没有返回内容) | The server returned nothing (no header or data). |
-| [2300055](../errorcode-net-http.md#2300055-发送网络数据失败) | Failed to send data to the peer. |
-| [2300056](../errorcode-net-http.md#2300056-接收网络数据失败) | Failed to receive data from the peer. |
-| [2300058](../errorcode-net-http.md#2300058-本地ssl证书错误) | Local SSL certificate error. |
-| [2300059](../errorcode-net-http.md#2300059-无法使用指定的加密算法) | The specified SSL cipher cannot be used. |
-| [2300060](../errorcode-net-http.md#2300060-远程服务器ssl证书或ssh密钥不正确) | Invalid SSL peer certificate or SSH remote key. |
-| [2300061](../errorcode-net-http.md#2300061-无法识别或错误的http编码格式) | Invalid HTTP encoding format. |
-| [2300063](../errorcode-net-http.md#2300063-超出最大文件大小) | Maximum file size exceeded. |
-| [2300070](../errorcode-net-http.md#2300070-服务器磁盘空间不足) | Remote disk full. |
-| [2300073](../errorcode-net-http.md#2300073-服务器返回文件已存在) | Remote file already exists. |
-| [2300077](../errorcode-net-http.md#2300077-ssl-ca证书不存在或没有访问权限) | The SSL CA certificate does not exist or is inaccessible. |
-| [2300078](../errorcode-net-http.md#2300078-url请求的文件不存在) | Remote file not found. |
-| [2300094](../errorcode-net-http.md#2300094-身份校验失败) | Authentication error. |
-| [2300999](../errorcode-net-http.md#2300999-内部错误) | Internal error. |
-| [2300998](../errorcode-net-http.md#2300998-不允许访问域名) | It is not allowed to access this domain.<br>**适用版本：** 12+ |
-| [2300997](../errorcode-net-http.md#2300997-明文http被拦截) | Cleartext traffic not permitted.<br>**适用版本：** 18+ |
-| 2300996 | The request was intercepted by the HTTP global interceptor.<br>**适用版本：** 26.0.0+ |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2300001](../errorcode-net-http.md#2300001-不支持的协议) |
+| [2300003](../errorcode-net-http.md#2300003-url格式错误) |
+| [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) |
+| [2300006](../errorcode-net-http.md#2300006-域名解析失败) |
+| [2300007](../errorcode-net-http.md#2300007-无法连接到服务器) |
+| [2300008](../errorcode-net-http.md#2300008-服务器返回非法数据) |
+| [2300009](../errorcode-net-http.md#2300009-拒绝对远程资源的访问) |
+| [2300016](../errorcode-net-http.md#2300016-http2帧层错误) |
+| [2300018](../errorcode-net-http.md#2300018-服务器返回数据不完整) |
+| [2300023](../errorcode-net-http.md#2300023-向磁盘应用程序写入接收数据失败) |
+| [2300025](../errorcode-net-http.md#2300025-上传失败) |
+| [2300026](../errorcode-net-http.md#2300026-从文件应用程序中打开读取本地数据失败) |
+| [2300027](../errorcode-net-http.md#2300027-内存不足) |
+| [2300028](../errorcode-net-http.md#2300028-操作超时) |
+| [2300047](../errorcode-net-http.md#2300047-重定向次数达到最大值) |
+| [2300052](../errorcode-net-http.md#2300052-服务器没有返回内容) |
+| [2300055](../errorcode-net-http.md#2300055-发送网络数据失败) |
+| [2300056](../errorcode-net-http.md#2300056-接收网络数据失败) |
+| [2300058](../errorcode-net-http.md#2300058-本地ssl证书错误) |
+| [2300059](../errorcode-net-http.md#2300059-无法使用指定的加密算法) |
+| [2300060](../errorcode-net-http.md#2300060-远程服务器ssl证书或ssh密钥不正确) |
+| [2300061](../errorcode-net-http.md#2300061-无法识别或错误的http编码格式) |
+| [2300063](../errorcode-net-http.md#2300063-超出最大文件大小) |
+| [2300070](../errorcode-net-http.md#2300070-服务器磁盘空间不足) |
+| [2300073](../errorcode-net-http.md#2300073-服务器返回文件已存在) |
+| [2300077](../errorcode-net-http.md#2300077-ssl-ca证书不存在或没有访问权限) |
+| [2300078](../errorcode-net-http.md#2300078-url请求的文件不存在) |
+| [2300094](../errorcode-net-http.md#2300094-身份校验失败) |
+| [2300999](../errorcode-net-http.md#2300999-内部错误) |
+| [2300998](../errorcode-net-http.md#2300998-不允许访问域名) |
+| [2300997](../errorcode-net-http.md#2300997-明文http被拦截) |
+| 2300996 |
 
 **示例**
 
@@ -1332,64 +1332,64 @@ requestSync(url: string, options?: HttpRequestOptions): HttpResponse
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **需要权限：** ohos.permission.INTERNET
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-HttpRequest-requestSync(url: string, options?: HttpRequestOptions): HttpResponse--><!--Device-HttpRequest-requestSync(url: string, options?: HttpRequestOptions): HttpResponse-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| url | string | 是 | 发起网络请求的URL地址。 |
-| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | 否 | 参考[HttpRequestOptions](arkts-network-http-httprequestoptions-i.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| url | string | 是 |
+| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| HttpResponse | 同步返回HTTP请求响应结果。 |
+| 类型 |
+| --- |
+| [HttpResponse](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-httpresponse-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2300001](../errorcode-net-http.md#2300001-不支持的协议) | Unsupported protocol. |
-| [2300003](../errorcode-net-http.md#2300003-url格式错误) | Invalid URL format or missing URL. |
-| [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) | Failed to resolve the proxy name. |
-| [2300006](../errorcode-net-http.md#2300006-域名解析失败) | Failed to resolve the host name. |
-| [2300007](../errorcode-net-http.md#2300007-无法连接到服务器) | Failed to connect to the server. |
-| [2300008](../errorcode-net-http.md#2300008-服务器返回非法数据) | Invalid server response. |
-| [2300009](../errorcode-net-http.md#2300009-拒绝对远程资源的访问) | Access to the remote resource denied. |
-| [2300016](../errorcode-net-http.md#2300016-http2帧层错误) | Error in the HTTP2 framing layer. |
-| [2300018](../errorcode-net-http.md#2300018-服务器返回数据不完整) | Transferred a partial file. |
-| [2300023](../errorcode-net-http.md#2300023-向磁盘应用程序写入接收数据失败) | Failed to write the received data to the disk or application. |
-| [2300025](../errorcode-net-http.md#2300025-上传失败) | Upload failed. |
-| [2300026](../errorcode-net-http.md#2300026-从文件应用程序中打开读取本地数据失败) | Failed to open or read local data from the file or application. |
-| [2300027](../errorcode-net-http.md#2300027-内存不足) | Out of memory. |
-| [2300028](../errorcode-net-http.md#2300028-操作超时) | Operation timeout. |
-| [2300047](../errorcode-net-http.md#2300047-重定向次数达到最大值) | The number of redirections reaches the maximum allowed. |
-| [2300052](../errorcode-net-http.md#2300052-服务器没有返回内容) | The server returned nothing (no header or data). |
-| [2300055](../errorcode-net-http.md#2300055-发送网络数据失败) | Failed to send data to the peer. |
-| [2300056](../errorcode-net-http.md#2300056-接收网络数据失败) | Failed to receive data from the peer. |
-| [2300058](../errorcode-net-http.md#2300058-本地ssl证书错误) | Local SSL certificate error. |
-| [2300059](../errorcode-net-http.md#2300059-无法使用指定的加密算法) | The specified SSL cipher cannot be used. |
-| [2300060](../errorcode-net-http.md#2300060-远程服务器ssl证书或ssh密钥不正确) | Invalid SSL peer certificate or SSH remote key. |
-| [2300061](../errorcode-net-http.md#2300061-无法识别或错误的http编码格式) | Invalid HTTP encoding format. |
-| [2300063](../errorcode-net-http.md#2300063-超出最大文件大小) | Maximum file size exceeded. |
-| [2300070](../errorcode-net-http.md#2300070-服务器磁盘空间不足) | Remote disk full. |
-| [2300073](../errorcode-net-http.md#2300073-服务器返回文件已存在) | Remote file already exists. |
-| [2300077](../errorcode-net-http.md#2300077-ssl-ca证书不存在或没有访问权限) | The SSL CA certificate does not exist or is inaccessible. |
-| [2300078](../errorcode-net-http.md#2300078-url请求的文件不存在) | Remote file not found. |
-| [2300094](../errorcode-net-http.md#2300094-身份校验失败) | Authentication error. |
-| 2300996 | The request was intercepted by the HTTP global interceptor. |
-| [2300997](../errorcode-net-http.md#2300997-明文http被拦截) | Cleartext traffic not permitted. |
-| [2300998](../errorcode-net-http.md#2300998-不允许访问域名) | It is not allowed to access this domain. |
-| [2300999](../errorcode-net-http.md#2300999-内部错误) | Internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2300001](../errorcode-net-http.md#2300001-不支持的协议) |
+| [2300003](../errorcode-net-http.md#2300003-url格式错误) |
+| [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) |
+| [2300006](../errorcode-net-http.md#2300006-域名解析失败) |
+| [2300007](../errorcode-net-http.md#2300007-无法连接到服务器) |
+| [2300008](../errorcode-net-http.md#2300008-服务器返回非法数据) |
+| [2300009](../errorcode-net-http.md#2300009-拒绝对远程资源的访问) |
+| [2300016](../errorcode-net-http.md#2300016-http2帧层错误) |
+| [2300018](../errorcode-net-http.md#2300018-服务器返回数据不完整) |
+| [2300023](../errorcode-net-http.md#2300023-向磁盘应用程序写入接收数据失败) |
+| [2300025](../errorcode-net-http.md#2300025-上传失败) |
+| [2300026](../errorcode-net-http.md#2300026-从文件应用程序中打开读取本地数据失败) |
+| [2300027](../errorcode-net-http.md#2300027-内存不足) |
+| [2300028](../errorcode-net-http.md#2300028-操作超时) |
+| [2300047](../errorcode-net-http.md#2300047-重定向次数达到最大值) |
+| [2300052](../errorcode-net-http.md#2300052-服务器没有返回内容) |
+| [2300055](../errorcode-net-http.md#2300055-发送网络数据失败) |
+| [2300056](../errorcode-net-http.md#2300056-接收网络数据失败) |
+| [2300058](../errorcode-net-http.md#2300058-本地ssl证书错误) |
+| [2300059](../errorcode-net-http.md#2300059-无法使用指定的加密算法) |
+| [2300060](../errorcode-net-http.md#2300060-远程服务器ssl证书或ssh密钥不正确) |
+| [2300061](../errorcode-net-http.md#2300061-无法识别或错误的http编码格式) |
+| [2300063](../errorcode-net-http.md#2300063-超出最大文件大小) |
+| [2300070](../errorcode-net-http.md#2300070-服务器磁盘空间不足) |
+| [2300073](../errorcode-net-http.md#2300073-服务器返回文件已存在) |
+| [2300077](../errorcode-net-http.md#2300077-ssl-ca证书不存在或没有访问权限) |
+| [2300078](../errorcode-net-http.md#2300078-url请求的文件不存在) |
+| [2300094](../errorcode-net-http.md#2300094-身份校验失败) |
+| 2300996 |
+| [2300997](../errorcode-net-http.md#2300997-明文http被拦截) |
+| [2300998](../errorcode-net-http.md#2300998-不允许访问域名) |
+| [2300999](../errorcode-net-http.md#2300999-内部错误) |
 
 **示例**
 
@@ -1432,4 +1432,3 @@ try {
 }
 httpRequest.destroy();
 ```
-

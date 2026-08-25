@@ -4,7 +4,7 @@ Provide console
 
 **Since:** 3
 
-<!--Device-unnamed-export declare class console--><!--Device-unnamed-export declare class console-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -18,17 +18,17 @@ Prints "debug" logs.
 
 **Since:** 3
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-console-static debug(message: string): void--><!--Device-console-static debug(message: string): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | string | Yes | Text to print @static |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | string | Yes |
 
 ## error
 
@@ -40,17 +40,17 @@ Prints "error" logs.
 
 **Since:** 3
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-console-static error(message: string): void--><!--Device-console-static error(message: string): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | string | Yes | Text to print @static |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | string | Yes |
 
 ## info
 
@@ -62,17 +62,17 @@ Prints "info" logs.
 
 **Since:** 3
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-console-static info(message: string): void--><!--Device-console-static info(message: string): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | string | Yes | Text to print @static |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | string | Yes |
 
 ## log
 
@@ -84,17 +84,17 @@ Prints "log" logs.
 
 **Since:** 3
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-console-static log(message: string): void--><!--Device-console-static log(message: string): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | string | Yes | Text to print @static |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | string | Yes |
 
 ## warn
 
@@ -106,15 +106,14 @@ Prints "warn" logs.
 
 **Since:** 3
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-console-static warn(message: string): void--><!--Device-console-static warn(message: string): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | string | Yes | Text to print @static |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | string | Yes |

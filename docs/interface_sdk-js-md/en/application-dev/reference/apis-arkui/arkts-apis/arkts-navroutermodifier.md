@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [NavRouterModifier](arkts-arkui-navroutermodifier-c.md) | Defines NavRouter Modifier@extends NavRouterAttribute @implements AttributeModifier&lt;NavRouterAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [NavRouterModifier](arkts-arkui-navroutermodifier-c.md) |

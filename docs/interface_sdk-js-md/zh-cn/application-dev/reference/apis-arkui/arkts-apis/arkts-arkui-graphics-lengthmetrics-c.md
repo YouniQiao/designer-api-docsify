@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare class LengthMetrics--><!--Device-unnamed-declare class LengthMetrics-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,25 +18,25 @@ autoRefresh?(value: boolean): LengthMetrics
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LengthMetrics-autoRefresh?(value: boolean): LengthMetrics--><!--Device-LengthMetrics-autoRefresh?(value: boolean): LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean | 是 | 使用[resource](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md#resource)方法构造的LengthMetrics对象是否在系统配置变化时自动刷新值。 <br>true表示主动监听系统配置变化，在变化时值刷新为对应配置下的资源值。 <br>false表示不主动监听系统配置变化。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) | 返回设置自动刷新属性后的LengthMetrics对象。 |
+| 类型 |
+| --- |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
 
 ## constructor
 
@@ -48,20 +48,20 @@ LengthMetrics的构造函数。若参数unit不传入值或传入undefined，返
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LengthMetrics-constructor(value: number, unit?:LengthUnit)--><!--Device-LengthMetrics-constructor(value: number, unit?:LengthUnit)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number | 是 | 长度属性的值。 <br>取值范围：(-∞, +∞) |
-| unit | [LengthUnit](../../apis-default/arkts-apis/arkts-graphics-lengthunit-e.md) | 否 | 长度属性的单位，默认为VP。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | number | 是 |
+| [unit](#unit) | [LengthUnit](arkts-arkui-graphics-lengthunit-e.md) | 否 |
 
 ## fp
 
@@ -73,25 +73,25 @@ static fp(value: number): LengthMetrics
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LengthMetrics-static fp(value: number): LengthMetrics--><!--Device-LengthMetrics-static fp(value: number): LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number | 是 | 长度属性的值。 <br>取值范围：(-∞, +∞) |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) | 单位为FP的长度属性对象。 |
+| 类型 |
+| --- |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
 
 ## lpx
 
@@ -103,25 +103,25 @@ static lpx(value: number): LengthMetrics
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LengthMetrics-static lpx(value: number): LengthMetrics--><!--Device-LengthMetrics-static lpx(value: number): LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number | 是 | 长度属性的值。 <br>取值范围：(-∞, +∞) |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) | 单位为LPX的长度属性对象。 |
+| 类型 |
+| --- |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
 
 ## percent
 
@@ -133,25 +133,25 @@ static percent(value: number): LengthMetrics
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LengthMetrics-static percent(value: number): LengthMetrics--><!--Device-LengthMetrics-static percent(value: number): LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number | 是 | 长度属性的值。 <br>取值范围：[0, 1] <br>超出范围时按边界值处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) | 单位为PERCENT的长度属性对象，值为1表示100%。 |
+| 类型 |
+| --- |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
 
 ## px
 
@@ -163,25 +163,25 @@ static px(value: number): LengthMetrics
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LengthMetrics-static px(value: number): LengthMetrics--><!--Device-LengthMetrics-static px(value: number): LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number | 是 | 长度属性的值。 <br>取值范围：(-∞, +∞) |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) | 单位为PX的长度属性对象。 |
+| 类型 |
+| --- |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
 
 ## resource
 
@@ -193,25 +193,25 @@ static resource(value: Resource): LengthMetrics
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LengthMetrics-static resource(value: Resource): LengthMetrics--><!--Device-LengthMetrics-static resource(value: Resource): LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 长度属性的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) | Resource类型资源的长度属性对象。 |
+| 类型 |
+| --- |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
 
 **示例**
 
@@ -269,25 +269,25 @@ static vp(value: number): LengthMetrics
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LengthMetrics-static vp(value: number): LengthMetrics--><!--Device-LengthMetrics-static vp(value: number): LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number | 是 | 长度属性的值。 <br>取值范围：(-∞, +∞) |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) | 单位为VP的长度属性对象。 |
+| 类型 |
+| --- |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
 
 ## unit
 
@@ -297,17 +297,17 @@ public unit: LengthUnit
 
 长度属性的单位，默认为VP。
 
-**类型：** [LengthUnit](../../apis-default/arkts-apis/arkts-graphics-lengthunit-e.md)
+**类型：** [LengthUnit](arkts-arkui-graphics-lengthunit-e.md)
 
 **默认值：** VP
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LengthMetrics-public unit: LengthUnit--><!--Device-LengthMetrics-public unit: LengthUnit-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -323,11 +323,10 @@ public value: number
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-LengthMetrics-public value: number--><!--Device-LengthMetrics-public value: number-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

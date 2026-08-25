@@ -4,7 +4,7 @@ CarAwareness Capability.
 
 **Since:** 26.1.0
 
-<!--Device-carAwareness-enum Capability--><!--Device-carAwareness-enum Capability-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -18,9 +18,9 @@ spatial point specific capability
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
-<!--Device-Capability-SPATIAL_POINT = 'SpatialPoint'--><!--Device-Capability-SPATIAL_POINT = 'SpatialPoint'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -36,9 +36,9 @@ spatial gesture specific capability
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
-<!--Device-Capability-SPATIAL_GESTURE = 'SpatialGesture'--><!--Device-Capability-SPATIAL_GESTURE = 'SpatialGesture'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -54,9 +54,9 @@ car status specific capability
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
-<!--Device-Capability-CAR_STATUS = 'CarStatus'--><!--Device-Capability-CAR_STATUS = 'CarStatus'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -72,9 +72,9 @@ car config specific capability
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
-<!--Device-Capability-CAR_CFG = 'CarCfg'--><!--Device-Capability-CAR_CFG = 'CarCfg'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -90,11 +90,10 @@ habit recommendation specific capability
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
-<!--Device-Capability-HABIT_RECOMMENDATION = 'HabitRecommendation'--><!--Device-Capability-HABIT_RECOMMENDATION = 'HabitRecommendation'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
 **System API:** This is a system API.
-

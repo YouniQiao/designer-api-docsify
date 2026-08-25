@@ -9,7 +9,6 @@
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [Constructor](arkts-arkts-reflectconstructor-constructor-c.md) | 表示类的构造函数。 |
-
+| 名称 |
+| --- |
+| [Constructor](arkts-arkts-reflectconstructor-constructor-c.md) |

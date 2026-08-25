@@ -4,9 +4,7 @@ Defines the options of font.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare interface FontSettingOptions--><!--Device-unnamed-export declare interface FontSettingOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +20,8 @@ Define whether VariableFontWeight is supported.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FontSettingOptions-enableVariableFontWeight?: boolean--><!--Device-FontSettingOptions-enableVariableFontWeight?: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

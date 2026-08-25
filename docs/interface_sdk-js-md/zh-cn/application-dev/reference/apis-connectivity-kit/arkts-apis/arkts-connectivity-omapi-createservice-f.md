@@ -16,21 +16,21 @@ function createService(): Promise<SEService>
 
 **起始版本：** 12
 
-<!--Device-omapi-function createService(): Promise<SEService>--><!--Device-omapi-function createService(): Promise<SEService>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[SEService](arkts-connectivity-omapi-seservice-i.md)&gt; | 以Promise形式异步返回可用的SE服务实例。 |
+| 类型 |
+| --- |
+| Promise&lt;[SEService](arkts-connectivity-omapi-seservice-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 **示例**
 
@@ -54,4 +54,3 @@ function secureElementDemo() {
     });
 }
 ```
-

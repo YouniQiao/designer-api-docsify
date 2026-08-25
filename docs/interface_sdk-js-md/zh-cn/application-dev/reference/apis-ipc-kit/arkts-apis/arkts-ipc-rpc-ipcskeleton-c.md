@@ -2,9 +2,9 @@
 
 用于获取IPC上下文信息，包括获取UID和PID、获取本端和对端设备ID、检查接口调用是否在同一设备上。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-rpc-class IPCSkeleton--><!--Device-rpc-class IPCSkeleton-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -22,23 +22,23 @@ static flushCmdBuffer(object: IRemoteObject): void
 
 静态方法，将所有挂起的命令从指定的RemoteProxy刷新到相应的RemoteObject。建议在任何时间执行敏感操作之前调用此方法。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-IPCSkeleton-static flushCmdBuffer(object: IRemoteObject): void--><!--Device-IPCSkeleton-static flushCmdBuffer(object: IRemoteObject): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 是 | 指定的RemoteProxy。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -77,25 +77,25 @@ static flushCommands(object: IRemoteObject): number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-**替代接口：** static flushCmdBuffer(object: IRemoteObject)
-
-<!--Device-IPCSkeleton-static flushCommands(object: IRemoteObject): number--><!--Device-IPCSkeleton-static flushCommands(object: IRemoteObject): number-End-->
+**替代接口：** static
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 是 | 指定的RemoteProxy。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 如果操作成功，返回0；如果输入对象为空或RemoteObject，或者操作失败，返回错误代码。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -132,17 +132,17 @@ static getCallingDeviceID(): string
 
 静态方法，获取调用者进程所在的设备ID。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-IPCSkeleton-static getCallingDeviceID(): string--><!--Device-IPCSkeleton-static getCallingDeviceID(): string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回调用者进程所在的设备ID。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -166,23 +166,29 @@ class Stub extends rpc.RemoteObject {
 
 ## getCallingPid
 
+ArkTS-Dyn:
+```TypeScript
+static getCallingPid(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 static getCallingPid(): int
 ```
 
 静态方法，获取调用者的PID。此方法由[RemoteObject](arkts-ipc-rpc-remoteobject-c.md)对象在IPC上下文环境（ [onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest)）中调用，不在则返回本进程的PID。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-IPCSkeleton-static getCallingPid(): int--><!--Device-IPCSkeleton-static getCallingPid(): int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 返回调用者的PID。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -286,23 +292,29 @@ try {
 
 ## getCallingTokenId
 
+ArkTS-Dyn:
+```TypeScript
+static getCallingTokenId(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 static getCallingTokenId(): long
 ```
 
 静态方法，获取调用者的TokenId，用于被调用方对调用方的身份校验。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-IPCSkeleton-static getCallingTokenId(): long--><!--Device-IPCSkeleton-static getCallingTokenId(): long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 返回调用者的TokenId。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **示例**
 
@@ -353,23 +365,29 @@ class Stub extends rpc.RemoteObject {
 
 ## getCallingUid
 
+ArkTS-Dyn:
+```TypeScript
+static getCallingUid(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 static getCallingUid(): int
 ```
 
 静态方法，获取调用者的UID。此方法由[RemoteObject](arkts-ipc-rpc-remoteobject-c.md)对象在IPC上下文环境（ [onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest)）中调用，不在则返回本进程的UID。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-IPCSkeleton-static getCallingUid(): int--><!--Device-IPCSkeleton-static getCallingUid(): int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 返回调用者的UID。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -477,17 +495,17 @@ static getContextObject(): IRemoteObject
 
 静态方法，获取系统服务管理器（SAMGR）对象。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-IPCSkeleton-static getContextObject(): IRemoteObject--><!--Device-IPCSkeleton-static getContextObject(): IRemoteObject-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 返回系统能力管理者。 |
+| 类型 |
+| --- |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) |
 
 **示例**
 
@@ -511,17 +529,17 @@ static getLocalDeviceID(): string
 
 静态方法，获取本端设备ID。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-IPCSkeleton-static getLocalDeviceID(): string--><!--Device-IPCSkeleton-static getLocalDeviceID(): string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回本地设备的ID。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -551,17 +569,17 @@ static isLocalCalling(): boolean
 
 静态方法，检查当前通信对端是否是本设备的进程。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-IPCSkeleton-static isLocalCalling(): boolean--><!--Device-IPCSkeleton-static isLocalCalling(): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：调用在同一台设备，false：调用未在同一台设备。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -591,17 +609,17 @@ static resetCallingIdentity(): string
 
 静态方法，将远程用户的UID和PID替换为本地用户的UID和PID。它可以用于身份验证等场景。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-IPCSkeleton-static resetCallingIdentity(): string--><!--Device-IPCSkeleton-static resetCallingIdentity(): string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回包含远程用户的UID和PID的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -631,23 +649,23 @@ static restoreCallingIdentity(identity: string): void
 
 静态方法，将UID和PID恢复为远程用户的UID和PID。它通常在使用resetCallingIdentity后调用，需要resetCallingIdentity返回的远程用户的UID和PID。该接口仅支持在IPC上下文（ [onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest)）中使用，否则直接返回。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-IPCSkeleton-static restoreCallingIdentity(identity: string): void--><!--Device-IPCSkeleton-static restoreCallingIdentity(identity: string): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| identity | string | 是 | 标识表示包含远程用户UID和PID的字符串，其长度应小于40960。由resetCallingIdentity返回。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| identity | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -680,25 +698,25 @@ static setCallingIdentity(identity: string): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-**替代接口：** static restoreCallingIdentity(identity: string)
-
-<!--Device-IPCSkeleton-static setCallingIdentity(identity: string): boolean--><!--Device-IPCSkeleton-static setCallingIdentity(identity: string): boolean-End-->
+**替代接口：** static
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| identity | string | 是 | 标识表示包含远程用户UID和PID的字符串。由resetCallingIdentity返回。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| identity | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：设置成功，false：设置失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -721,4 +739,3 @@ class Stub extends rpc.RemoteObject {
   }
 }
 ```
-

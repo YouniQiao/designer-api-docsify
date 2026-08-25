@@ -4,7 +4,7 @@
 
 **起始版本：** 8
 
-<!--Device-connectedTag-enum NfcRfType--><!--Device-connectedTag-enum NfcRfType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.Communication.ConnectedTag
 
@@ -18,7 +18,7 @@ NFC离场事件。
 
 **起始版本：** 8
 
-<!--Device-NfcRfType-NFC_RF_LEAVE = 0--><!--Device-NfcRfType-NFC_RF_LEAVE = 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.Communication.ConnectedTag
 
@@ -32,7 +32,6 @@ NFC进场事件。
 
 **起始版本：** 8
 
-<!--Device-NfcRfType-NFC_RF_ENTER = 1--><!--Device-NfcRfType-NFC_RF_ENTER = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.Communication.ConnectedTag
-

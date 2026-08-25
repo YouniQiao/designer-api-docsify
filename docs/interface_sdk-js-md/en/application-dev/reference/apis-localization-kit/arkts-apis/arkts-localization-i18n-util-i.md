@@ -4,11 +4,11 @@ Provides util functions.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [I18NUtil](arkts-localization-i18n-i18nutil-c.md)
-
-<!--Device-i18n-export interface Util--><!--Device-i18n-export interface Util-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -28,29 +28,29 @@ Converts one measurement unit into another and formats the unit based on the spe
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [unitConvert](arkts-localization-i18n-i18nutil-c.md#unitconvert)
-
-<!--Device-Util-unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string--><!--Device-Util-unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fromUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted. |
-| toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted to. |
-| value | double | Yes | Value of the measurement unit to be converted. |
-| locale | string | Yes | Locale ID used for formatting, for example, **zh-Hans-CN**. |
-| style | string | No | Style used for formatting. The value can be **long**, **short**, or **narrow**. The default value is **short**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fromUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes |
+| toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes |
+| value | number | Yes |
+| locale | string | Yes |
+| style | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | String obtained after formatting based on the measurement unit specified by **toUnit**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -62,4 +62,3 @@ let toUnit: i18n.UnitInfo = { unit: 'liter', measureSystem: 'SI' };
 let convertResult: string =
   i18n.I18NUtil.unitConvert(fromUnit, toUnit, 1000, 'en-US', 'long'); // convertResult = '236.588 liters'
 ```
-

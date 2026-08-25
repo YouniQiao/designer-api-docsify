@@ -16,26 +16,26 @@ Sets the device configuration.Before you do this, call [usb.getDevices](arkts-ba
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [setConfiguration](arkts-basicservices-usbmanager-setconfiguration-f.md)
-
-<!--Device-usb-function setConfiguration(pipe: USBDevicePipe, config: USBConfig): number--><!--Device-usb-function setConfiguration(pipe: USBDevicePipe, config: USBConfig): number-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pipe | USBDevicePipe | Yes | Device pipe, which is used to determine the bus number and device address. |
-| config | [USBConfig](arkts-basicservices-usb-usbconfig-i.md) | Yes | USB configuration to set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [pipe](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md) | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes |
+| config | [USBConfig](arkts-basicservices-usb-usbconfig-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Returns **0** if the USB configuration is successfully set; returns an error code otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -43,4 +43,3 @@ Sets the device configuration.Before you do this, call [usb.getDevices](arkts-ba
 let ret = usb.setConfiguration(devicepipe, config);
 console.info(`setConfiguration = ${ret}`);
 ```
-

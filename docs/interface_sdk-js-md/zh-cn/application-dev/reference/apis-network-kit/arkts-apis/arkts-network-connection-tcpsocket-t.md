@@ -8,9 +8,8 @@ type TCPSocket = socket.TCPSocket
 
 **起始版本：** 8
 
-<!--Device-connection-type TCPSocket = socket.TCPSocket--><!--Device-connection-type TCPSocket = socket.TCPSocket-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **属性类型：** socket.TCPSocket
-

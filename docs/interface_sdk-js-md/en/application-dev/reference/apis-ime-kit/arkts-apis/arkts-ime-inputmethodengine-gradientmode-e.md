@@ -2,9 +2,9 @@
 
 Enumerates the gradient modes of the input method.<br> <br> | Name | Value| Description | | ------------ | -- | ------------------ | | NONE | 0 | The gradient mode is not used.| | LINEAR_GRADIENT | 1 | Linear gradient.|
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-inputMethodEngine-export enum GradientMode--><!--Device-inputMethodEngine-export enum GradientMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -16,9 +16,9 @@ NONE = 0
 
 Disable gradient mode.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-GradientMode-NONE = 0--><!--Device-GradientMode-NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -30,9 +30,8 @@ LINEAR_GRADIENT = 1
 
 Linear gradient mode.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-GradientMode-LINEAR_GRADIENT = 1--><!--Device-GradientMode-LINEAR_GRADIENT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

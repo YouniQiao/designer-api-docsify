@@ -14,35 +14,35 @@ function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Prom
 
 设置功能键（如：CapsLock键）使能状态。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 15
+
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INPUT_KEYBOARD_CONTROLLER
-
-<!--Device-inputDevice-function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Promise<void>--><!--Device-inputDevice-function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| functionKey | FunctionKey | 是 | 需要设置的功能键类型。 |
-| enabled | boolean | 是 | 功能键使能状态。取值为true表示使能功能键，取值为false表示不使能功能键。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| functionKey | [FunctionKey](arkts-input-inputdevice-functionkey-e.md) | 是 |
+| enabled | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
-| [3900002](../errorcode-inputdevice.md#3900002-键盘设备没有连接) | There is currently no keyboard device connected. |
-| [3900003](../errorcode-inputdevice.md#3900003-非输入法应用调用) | It is prohibited for non-input applications. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3900002](../errorcode-inputdevice.md#3900002-键盘设备没有连接) |
+| [3900003](../errorcode-inputdevice.md#3900003-非输入法应用调用) |
 
 **示例**
 
@@ -104,4 +104,3 @@ struct Index {
   }
 }
 ```
-

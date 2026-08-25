@@ -16,27 +16,27 @@ function isSupported(feature: number): boolean
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-cardEmulation-function isSupported(feature: number): boolean--><!--Device-cardEmulation-function isSupported(feature: number): boolean-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| feature | number | 是 | 卡模拟类型值，详细请见[FeatureType](arkts-connectivity-cardemulation-featuretype-e.md)枚举值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [feature](../../apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md) | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true: 支持该类型卡模拟， false: 不支持该类型卡模拟。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -59,4 +59,3 @@ if (!isHceSupported) {
     console.error('this device is not supported for HCE, ignore it.');
 }
 ```
-

@@ -6,11 +6,11 @@ Define the attribute functions of ability component.@extends CommonMethod&lt;Abi
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** UIExtensionComponentAttribute
-
-<!--Device-unnamed-declare class AbilityComponentAttribute--><!--Device-unnamed-declare class AbilityComponentAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,4 +20,3 @@ Define the attribute functions of ability component.@extends CommonMethod&lt;Abi
 
 ```TypeScript
 ```
-

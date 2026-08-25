@@ -14,17 +14,17 @@ function getAppVMMemoryInfo(): VMMemoryInfo
 
 Obtains VM memory information.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-hidebug-function getAppVMMemoryInfo(): VMMemoryInfo--><!--Device-hidebug-function getAppVMMemoryInfo(): VMMemoryInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [VMMemoryInfo](arkts-performanceanalysis-hidebug-vmmemoryinfo-i.md) | VM memory information. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [VMMemoryInfo](arkts-performanceanalysis-hidebug-vmmemoryinfo-i.md) |
 
 **Examples**
 
@@ -35,4 +35,3 @@ let vmMemory: hidebug.VMMemoryInfo = hidebug.getAppVMMemoryInfo();
 console.info(`totalHeap = ${vmMemory.totalHeap}, heapUsed = ${vmMemory.heapUsed},` +
   `allArraySize = ${vmMemory.allArraySize}` );
 ```
-

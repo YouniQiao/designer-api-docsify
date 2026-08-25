@@ -4,7 +4,7 @@ Defines a response to a client request.
 
 **Since:** 26.0.0
 
-<!--Device-ssap-interface ServerResponse--><!--Device-ssap-interface ServerResponse-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -26,27 +26,27 @@ Client device address. The address format is **11:22:33:AA:BB:FF**.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ServerResponse-address: string--><!--Device-ServerResponse-address: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## requestId
 
 ```TypeScript
-requestId: int
+requestId: number
 ```
 
 Request ID. The value range is [0, 65535]. The ID must be the same as the value of **requestId** in the received [PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md) or [PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md), which is used to associate the request with the response.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ServerResponse-requestId: int--><!--Device-ServerResponse-requestId: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -62,9 +62,8 @@ Data value of the response.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ServerResponse-value: ArrayBuffer--><!--Device-ServerResponse-value: ArrayBuffer-End-->
-
 **System capability:** SystemCapability.Communication.NearLink.Base
-

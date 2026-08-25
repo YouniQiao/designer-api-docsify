@@ -2,9 +2,9 @@
 
 The quickFixManager module provides APIs for quick fix. With quick fix, you can fix bugs in your application by applying patches, which is more efficient than by updating the entire application.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-declare namespace quickFixManager--><!--Device-unnamed-declare namespace quickFixManager-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 
@@ -21,22 +21,21 @@ import { quickFixManager } from '@kit.AbilityKit';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md) | Applies a quick fix patch. This API uses an asynchronous callback to return the result. |
-| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md) | Applies a quick fix patch. This API uses a promise to return the result. |
-| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md) | Obtains the quick fix information of the application. This API uses an asynchronous callback to return the result. |
-| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md) | Obtains the quick fix information of the application. This API uses a promise to return the result. |
-| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md) | Revokes quick fix. This API uses an asynchronous callback to return the result. |
-| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md) | Revokes quick fix. This API uses a promise to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md) |
+| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md) |
+| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md) |
+| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md) |
+| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md) |
+| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [ApplicationQuickFixInfo](arkts-ability-quickfixmanager-applicationquickfixinfo-i-sys.md) | Defines the quick fix information at the application level. |
-| [HapModuleQuickFixInfo](arkts-ability-quickfixmanager-hapmodulequickfixinfo-i-sys.md) | Defines the quick fix information at the HAP file level. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ApplicationQuickFixInfo](arkts-ability-quickfixmanager-applicationquickfixinfo-i-sys.md) |
+| [HapModuleQuickFixInfo](arkts-ability-quickfixmanager-hapmodulequickfixinfo-i-sys.md) |
 <!--DelEnd-->
-

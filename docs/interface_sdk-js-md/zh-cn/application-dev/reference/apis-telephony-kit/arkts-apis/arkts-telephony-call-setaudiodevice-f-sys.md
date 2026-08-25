@@ -14,11 +14,11 @@ function setAudioDevice(device: AudioDevice, callback: AsyncCallback<void>): voi
 
 设置通话音频设备。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
-
-<!--Device-call-function setAudioDevice(device: AudioDevice, callback: AsyncCallback<void>): void--><!--Device-call-function setAudioDevice(device: AudioDevice, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -26,22 +26,22 @@ function setAudioDevice(device: AudioDevice, callback: AsyncCallback<void>): voi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| device | [AudioDevice](arkts-telephony-call-audiodevice-i-sys.md) | 是 | 音频设备。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调函数的方式返回设置通话音频设备的结果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| device | [AudioDevice](arkts-telephony-call-audiodevice-i-sys.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
-| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
 **示例**
 
@@ -82,11 +82,11 @@ function setAudioDevice(device: AudioDevice): Promise<void>
 
 设置通话音频设备。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
-
-<!--Device-call-function setAudioDevice(device: AudioDevice): Promise<void>--><!--Device-call-function setAudioDevice(device: AudioDevice): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -94,29 +94,28 @@ function setAudioDevice(device: AudioDevice): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| device | [AudioDevice](arkts-telephony-call-audiodevice-i-sys.md) | 是 | 音频设备。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| device | [AudioDevice](arkts-telephony-call-audiodevice-i-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 以Promise形式异步返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
-| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
-| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
-| [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
-| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
 **示例**
 
 参见 [setAudioDevice](#setaudiodevice)
-

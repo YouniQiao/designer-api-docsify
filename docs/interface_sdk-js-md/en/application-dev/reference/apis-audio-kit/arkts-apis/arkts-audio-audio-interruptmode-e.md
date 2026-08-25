@@ -2,9 +2,9 @@
 
 Enumerates the audio interruption modes.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-audio-enum InterruptMode--><!--Device-audio-enum InterruptMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -16,11 +16,11 @@ SHARE_MODE = 0
 
 Mode that different stream share one interrupt unit.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-InterruptMode-SHARE_MODE = 0--><!--Device-InterruptMode-SHARE_MODE = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -32,11 +32,10 @@ INDEPENDENT_MODE = 1
 
 Mode that each stream has independent interrupt unit.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-InterruptMode-INDEPENDENT_MODE = 1--><!--Device-InterruptMode-INDEPENDENT_MODE = 1-End-->
-
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
-

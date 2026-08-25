@@ -4,7 +4,7 @@ Definition callback of receiving the query data.@interface Querier
 
 **Since:** 12
 
-<!--Device-securityGuard-interface Querier--><!--Device-securityGuard-interface Querier-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -24,11 +24,9 @@ onComplete: () => void
 
 Triggered when data is complete.
 
-**Type:** () =&gt; void
-
 **Since:** 12
 
-<!--Device-Querier-onComplete: () => void--><!--Device-Querier-onComplete: () => void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -42,15 +40,19 @@ onError: (message: string) => void
 
 Triggered when error.
 
-**Type:** (message: string) =&gt; void
-
 **Since:** 12
 
-<!--Device-Querier-onError: (message: string) => void--><!--Device-Querier-onError: (message: string) => void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | string | Yes |
 
 ## onQuery
 
@@ -60,13 +62,16 @@ onQuery: (events: Array<SecurityEvent>) => void
 
 Triggered when data is returned.
 
-**Type:** (events: Array&lt;[SecurityEvent](arkts-securityguard-securityguard-securityevent-i-sys.md)&gt;) =&gt; void
-
 **Since:** 12
 
-<!--Device-Querier-onQuery: (events: Array<SecurityEvent>) => void--><!--Device-Querier-onQuery: (events: Array<SecurityEvent>) => void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
 
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| events | Array&lt;[SecurityEvent](arkts-securityguard-securityguard-securityevent-i-sys.md)&gt; | Yes |

@@ -4,7 +4,7 @@
 
 **起始版本：** 7
 
-<!--Device-dataAbility-class DataAbilityPredicates--><!--Device-dataAbility-class DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -24,15 +24,15 @@ and(): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-and(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-and(): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回带有和条件的DataAbility谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -52,22 +52,22 @@ beginsWith(field: string, value: string): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-beginsWith(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-beginsWith(field: string, value: string): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | string | 是 | 指示要与谓词匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -85,15 +85,15 @@ beginWrap(): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-beginWrap(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-beginWrap(): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回带有左括号的DataAbility谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -116,23 +116,23 @@ between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| low | ValueType | 是 | 指示与谓词匹配的最小值。 |
-| high | ValueType | 是 | 指示与谓词匹配的最大值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
+| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -150,22 +150,22 @@ contains(field: string, value: string): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-contains(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-contains(field: string, value: string): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | string | 是 | 指示要与谓词匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -183,15 +183,15 @@ distinct(): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-distinct(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-distinct(): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回可用于过滤重复记录的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -209,22 +209,22 @@ endsWith(field: string, value: string): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-endsWith(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-endsWith(field: string, value: string): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | string | 是 | 指示要与谓词匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -242,15 +242,15 @@ endWrap(): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-endWrap(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-endWrap(): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回带有右括号的DataAbility谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -273,22 +273,22 @@ equalTo(field: string, value: ValueType): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-equalTo(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-equalTo(field: string, value: ValueType): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -306,22 +306,22 @@ glob(field: string, value: string): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-glob(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-glob(field: string, value: string): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | string | 是 | 指示要与谓词匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -345,22 +345,22 @@ greaterThan(field: string, value: ValueType): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-greaterThan(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-greaterThan(field: string, value: ValueType): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -378,22 +378,22 @@ greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -411,21 +411,21 @@ groupBy(fields: Array<string>): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-groupBy(fields: Array<string>): DataAbilityPredicates--><!--Device-DataAbilityPredicates-groupBy(fields: Array<string>): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| fields | Array&lt;string&gt; | 是 | 指定分组依赖的列名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [fields](arkts-arkdata-cloudextension-table-i-sys.md) | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回分组查询列的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -443,22 +443,22 @@ in(field: string, value: Array<ValueType>): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-in(field: string, value: Array<ValueType>): DataAbilityPredicates--><!--Device-DataAbilityPredicates-in(field: string, value: Array<ValueType>): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | Array&lt;ValueType&gt; | 是 | 以ValueType类型数组形式指定的要匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | Array & lt;ValueType & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -476,21 +476,21 @@ indexedBy(field: string): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-indexedBy(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-indexedBy(field: string): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 创建的索引列名称。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回具有指定索引列的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -547,21 +547,21 @@ isNotNull(field: string): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-isNotNull(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-isNotNull(field: string): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -579,21 +579,21 @@ isNull(field: string): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-isNull(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-isNull(field: string): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -611,22 +611,22 @@ lessThan(field: string, value: ValueType): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-lessThan(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-lessThan(field: string, value: ValueType): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -644,22 +644,22 @@ lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -677,22 +677,22 @@ like(field: string, value: string): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-like(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-like(field: string, value: string): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | string | 是 | 指示要与谓词匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -710,21 +710,21 @@ limitAs(value: number): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-limitAs(value: number): DataAbilityPredicates--><!--Device-DataAbilityPredicates-limitAs(value: number): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number | 是 | 最大数据记录数，取值为正整数。传入值小于等于0时，不会限制记录数量。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回可用于设置最大数据记录数的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -742,23 +742,23 @@ notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicate
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| low | ValueType | 是 | 指示与谓词匹配的最小值。 |
-| high | ValueType | 是 | 指示与谓词匹配的最大值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
+| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -776,22 +776,22 @@ notEqualTo(field: string, value: ValueType): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-notEqualTo(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-notEqualTo(field: string, value: ValueType): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -809,22 +809,22 @@ notIn(field: string, value: Array<ValueType>): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-notIn(field: string, value: Array<ValueType>): DataAbilityPredicates--><!--Device-DataAbilityPredicates-notIn(field: string, value: Array<ValueType>): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | Array&lt;ValueType&gt; | 是 | 以ValueType类型数组形式指定的要匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | Array & lt;ValueType & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -842,21 +842,21 @@ offsetAs(rowOffset: number): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-offsetAs(rowOffset: number): DataAbilityPredicates--><!--Device-DataAbilityPredicates-offsetAs(rowOffset: number): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rowOffset | number | 是 | 返回结果的起始位置，取值为正整数。传入值小于等于0时，查询结果将从第一个元素位置返回。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| rowOffset | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回具有指定返回结果起始位置的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -875,15 +875,15 @@ or(): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-or(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-or(): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回带有或条件的DataAbility谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -903,21 +903,21 @@ orderByAsc(field: string): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-orderByAsc(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-orderByAsc(field: string): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -936,21 +936,21 @@ orderByDesc(field: string): DataAbilityPredicates
 
 **起始版本：** 7
 
-<!--Device-DataAbilityPredicates-orderByDesc(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-orderByDesc(field: string): DataAbilityPredicates-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| 类型 |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
 **示例**
 
@@ -958,4 +958,3 @@ orderByDesc(field: string): DataAbilityPredicates
 // 优先按"AGE"排序，相同时按"SALARY"排序
 dataAbilityPredicates.orderByDesc("AGE").orderByDesc("SALARY");
 ```
-

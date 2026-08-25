@@ -4,7 +4,7 @@ Enumerates the destroy modes of the **Web** component. When the Web component is
 
 **Since:** 20
 
-<!--Device-webview-enum WebDestroyMode--><!--Device-webview-enum WebDestroyMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,7 +18,7 @@ Normal mode. The system determines the destroy time of **Web** component resourc
 
 **Since:** 20
 
-<!--Device-WebDestroyMode-NORMAL_MODE = 0--><!--Device-WebDestroyMode-NORMAL_MODE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,7 +32,6 @@ Quick mode. When the **Web** component is destroyed, the related internal resour
 
 **Since:** 20
 
-<!--Device-WebDestroyMode-FAST_MODE = 1--><!--Device-WebDestroyMode-FAST_MODE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

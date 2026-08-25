@@ -4,7 +4,7 @@ Definition of device adress information.
 
 **Since:** 26.0.0
 
-<!--Device-mechanicManager-export interface AddressInfo--><!--Device-mechanicManager-export interface AddressInfo-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -28,9 +28,9 @@ Address of device.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AddressInfo-address: string--><!--Device-AddressInfo-address: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -48,11 +48,10 @@ Type of address.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AddressInfo-addressType: AddressType--><!--Device-AddressInfo-addressType: AddressType-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
-

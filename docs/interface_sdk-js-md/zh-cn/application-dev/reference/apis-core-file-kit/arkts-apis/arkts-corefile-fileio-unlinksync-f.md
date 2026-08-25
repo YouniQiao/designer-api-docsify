@@ -15,19 +15,19 @@ declare function unlinkSync(path: string): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [unlinkSync](arkts-corefile-file-fs-unlinksync-f.md)
-
-<!--Device-unnamed-declare function unlinkSync(path: string): void--><!--Device-unnamed-declare function unlinkSync(path: string): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 待删除文件的应用沙箱路径。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| path | string | 是 |
 
 **示例**
 
@@ -35,4 +35,3 @@ declare function unlinkSync(path: string): void
 let filePath = pathDir + "/test.txt";
 fileio.unlinkSync(filePath);
 ```
-

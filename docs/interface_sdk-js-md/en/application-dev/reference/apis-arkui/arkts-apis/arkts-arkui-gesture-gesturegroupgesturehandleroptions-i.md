@@ -4,9 +4,7 @@ Defines the GestureGroupGestureHandler options.@interface GestureGroupGestureHan
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export interface GestureGroupGestureHandlerOptions--><!--Device-unnamed-export interface GestureGroupGestureHandlerOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +20,9 @@ Indicates the gestures included in the gesture group.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GestureGroupGestureHandlerOptions-gestures: GestureHandler[]--><!--Device-GestureGroupGestureHandlerOptions-gestures: GestureHandler[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,11 +38,8 @@ Indicates the mode of gesture group.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-GestureGroupGestureHandlerOptions-mode: GestureMode--><!--Device-GestureGroupGestureHandlerOptions-mode: GestureMode-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

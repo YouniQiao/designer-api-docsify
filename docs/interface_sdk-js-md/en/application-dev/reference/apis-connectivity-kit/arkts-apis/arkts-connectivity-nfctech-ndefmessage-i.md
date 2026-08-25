@@ -2,9 +2,9 @@
 
 Provides methods for Message of NDEF.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export interface NdefMessage--><!--Device-unnamed-export interface NdefMessage-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -16,19 +16,19 @@ getNdefRecords(): tag.NdefRecord[]
 
 Obtains all NDEF records.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NdefMessage-getNdefRecords(): tag.NdefRecord[]--><!--Device-NdefMessage-getNdefRecords(): tag.NdefRecord[]-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| tag.NdefRecord[] | List of NDEF records obtained. For details, see *NFCForum-TS-NDEF_1.0*. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| tag.NdefRecord[] |
 
 **Examples**
 
@@ -42,4 +42,3 @@ import { tag } from '@kit.ConnectivityKit';
 let ndefRecords : tag.NdefRecord[] = ndefMessage.getNdefRecords();
 console.info("ndef ndefRecords number: " + ndefRecords.length);
 ```
-

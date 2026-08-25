@@ -2,9 +2,9 @@
 
 卡片当前使用状态枚举。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-formInfo-enum FormUsageState--><!--Device-formInfo-enum FormUsageState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -18,9 +18,9 @@ USED = 0
 
 表示卡片在使用中。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-FormUsageState-USED = 0--><!--Device-FormUsageState-USED = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -34,11 +34,10 @@ UNUSED = 1
 
 表示卡片未被使用。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-FormUsageState-UNUSED = 1--><!--Device-FormUsageState-UNUSED = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
-

@@ -16,21 +16,21 @@ Stops discovering Wi-Fi P2P devices.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** stopDiscoverP2pDevices
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
-<!--Device-wifi-function stopDiscoverDevices(): boolean--><!--Device-wifi-function stopDiscoverDevices(): boolean-End-->
-
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -43,4 +43,3 @@ try {
 	console.error("failed:" + JSON.stringify(error));
 }
 ```
-

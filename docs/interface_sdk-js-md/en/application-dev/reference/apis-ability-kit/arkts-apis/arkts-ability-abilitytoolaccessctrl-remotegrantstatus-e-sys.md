@@ -4,7 +4,7 @@ Remote grant status.
 
 **Since:** 26.1.0
 
-<!--Device-abilityToolAccessCtrl-enum RemoteGrantStatus--><!--Device-abilityToolAccessCtrl-enum RemoteGrantStatus-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -20,7 +20,7 @@ Enable remote grant.
 
 **Since:** 26.1.0
 
-<!--Device-RemoteGrantStatus-ENABLE = 0x01--><!--Device-RemoteGrantStatus-ENABLE = 0x01-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -36,9 +36,8 @@ Disable remote grant.
 
 **Since:** 26.1.0
 
-<!--Device-RemoteGrantStatus-DISABLE = 0x02--><!--Device-RemoteGrantStatus-DISABLE = 0x02-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
-

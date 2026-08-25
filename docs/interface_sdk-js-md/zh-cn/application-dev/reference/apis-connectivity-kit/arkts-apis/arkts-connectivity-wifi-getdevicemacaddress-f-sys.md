@@ -16,13 +16,13 @@ function getDeviceMacAddress(): string[]
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [getDeviceMacAddress](arkts-connectivity-wifimanager-getdevicemacaddress-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_LOCAL_MAC and ohos.permission.GET_WIFI_INFO
-
-<!--Device-wifi-function getDeviceMacAddress(): string[]--><!--Device-wifi-function getDeviceMacAddress(): string[]-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -30,9 +30,9 @@ function getDeviceMacAddress(): string[]
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string[] | MAC地址。 |
+| 类型 |
+| --- |
+| string[] |
 
 **示例**
 
@@ -46,4 +46,3 @@ try {
     console.error("failed:" + JSON.stringify(error));
 }
 ```
-

@@ -16,23 +16,23 @@ function promisify(original: (err: Object, value: Object) => void): Function
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
-<!--Device-util-function promisify(original: (err: Object, value: Object) => void): Function--><!--Device-util-function promisify(original: (err: Object, value: Object) => void): Function-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| original | (err: Object, value: Object) =&gt; void | 是 | 回调函数中第一个参数 **err** 是拒绝原因（如果Promise已解决，则为null），第二个参数 **value** 是已解决的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| original | (err: Object, value: Object) = & gt; void | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Function | 返回一个Promise函数，该Promise在原始回调函数成功执行时resolve为回调的value值，在原始回调函数执行出错时reject为错误对象。 |
+| 类型 |
+| --- |
+| Function |
 
 **示例**
 
@@ -65,4 +65,3 @@ let val = util.promisify(func);
 let res = await val(42);
 console.info(new String(res)); // 输出结果：42
 ```
-

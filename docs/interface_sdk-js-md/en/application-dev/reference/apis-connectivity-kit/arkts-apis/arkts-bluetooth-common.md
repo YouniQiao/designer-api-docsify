@@ -4,7 +4,7 @@ Provide common Bluetooth interfaces and types.
 
 **Since:** 21
 
-<!--Device-unnamed-declare namespace common--><!--Device-unnamed-declare namespace common-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -18,14 +18,13 @@ import { common } from '@kit.ConnectivityKit';
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [BluetoothAddress](arkts-connectivity-common-bluetoothaddress-i.md) | Describe the type of Bluetooth address. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BluetoothAddress](arkts-connectivity-common-bluetoothaddress-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [BluetoothAddressType](arkts-connectivity-common-bluetoothaddresstype-e.md) | Enum for the type of Bluetooth address. |
-| [BluetoothRawAddressType](arkts-connectivity-common-bluetoothrawaddresstype-e.md) | Enum for the type of Bluetooth raw address. The enum is used only when the [addressType](arkts-connectivity-common-bluetoothaddress-i.md#addresstype) is [REAL](arkts-connectivity-common-bluetoothaddresstype-e.md#real). |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BluetoothAddressType](arkts-connectivity-common-bluetoothaddresstype-e.md) |
+| [BluetoothRawAddressType](arkts-connectivity-common-bluetoothrawaddresstype-e.md) |

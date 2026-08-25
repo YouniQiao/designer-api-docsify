@@ -9,22 +9,21 @@
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [Promise(定义ArkTS的异步操作)](arkts-arkts-promise-c.md) | 表示异步操作的最终完成或失败。 |
-| [PromiseFulfilledResult(定义ArkTS的异步操作)](arkts-arkts-promise-promisefulfilledresult-c.md) | 表示已解析Promise的结果。 |
-| [PromiseRejectedResult(定义ArkTS的异步操作)](arkts-arkts-promise-promiserejectedresult-c.md) | 表示已拒绝Promise的结果。 |
-| [PromiseStatus(定义ArkTS的异步操作)](arkts-arkts-promise-promisestatus-c.md) | 表示Promise的状态。 |
+| 名称 |
+| --- |
+| [Promise(定义ArkTS的异步操作)](arkts-arkts-promise-c.md) |
+| [PromiseFulfilledResult(定义ArkTS的异步操作)](arkts-arkts-promise-promisefulfilledresult-c.md) |
+| [PromiseRejectedResult(定义ArkTS的异步操作)](arkts-arkts-promise-promiserejectedresult-c.md) |
+| [PromiseStatus(定义ArkTS的异步操作)](arkts-arkts-promise-promisestatus-c.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [PromiseLike(定义ArkTS的异步操作)](arkts-arkts-promise-promiselike-i.md) | 表示一个thenable对象。 |
+| 名称 |
+| --- |
+| [PromiseLike(定义ArkTS的异步操作)](arkts-arkts-promise-promiselike-i.md) |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-| [PromiseSettledResult(定义ArkTS的异步操作)](arkts-arkts-promisesettledresult-t.md) | 表示Promise的完成结果。 |
-
+| 名称 |
+| --- |
+| [PromiseSettledResult(定义ArkTS的异步操作)](arkts-arkts-promisesettledresult-t.md) |

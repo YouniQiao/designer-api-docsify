@@ -14,11 +14,11 @@ function getSupportedPkids(slotId: int) : Promise<string>
 
 获取手机支持的公钥ID信息。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_TELEPHONY_ESIM_STATE
-
-<!--Device-eSIM-function getSupportedPkids(slotId: int) : Promise<string>--><!--Device-eSIM-function getSupportedPkids(slotId: int) : Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -26,25 +26,25 @@ function getSupportedPkids(slotId: int) : Promise<string>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回TLV(Tag-Length-Value)格式的，手机支持的公钥ID信息。 |
+| 类型 |
+| --- |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3120001](../errorcode-telephony.md#3120001-服务连接失败) | Service connection failed. |
-| [3120002](../errorcode-telephony.md#3120002-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3120001](../errorcode-telephony.md#3120001-服务连接失败) |
+| [3120002](../errorcode-telephony.md#3120002-系统内部错误) |
 
 **示例**
 
@@ -58,4 +58,3 @@ try {
     console.error(`getSupportedPkids, promise: err->${JSON.stringify(err)}`)
 }
 ```
-

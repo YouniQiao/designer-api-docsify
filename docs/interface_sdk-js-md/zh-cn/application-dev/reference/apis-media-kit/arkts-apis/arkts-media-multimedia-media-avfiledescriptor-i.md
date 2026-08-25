@@ -2,9 +2,9 @@
 
 Media file descriptor. The caller needs to ensure that the fd is valid and the offset and length are correct.
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-interface AVFileDescriptor--><!--Device-unnamed-interface AVFileDescriptor-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -22,13 +22,13 @@ fd: int
 
 The file descriptor of audio or video source from file system. The caller is responsible to close the file descriptor.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVFileDescriptor-fd: int--><!--Device-AVFileDescriptor-fd: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -40,13 +40,13 @@ length?: long
 
 The length in bytes of the data to be read. By default, the length is the rest of bytes in the file from the offset.
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVFileDescriptor-length?: long--><!--Device-AVFileDescriptor-length?: long-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -58,13 +58,12 @@ offset?: long
 
 The offset into the file where the data to be read, in bytes. By default, the offset is zero.
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AVFileDescriptor-offset?: long--><!--Device-AVFileDescriptor-offset?: long-End-->
-
 **系统能力：** SystemCapability.Multimedia.Media.Core
-

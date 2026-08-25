@@ -4,7 +4,7 @@
 
 **起始版本：** 8
 
-<!--Device-huks-export interface HuksParam--><!--Device-huks-export interface HuksParam-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -26,9 +26,9 @@ tag: HuksTag
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-HuksParam-tag: HuksTag--><!--Device-HuksParam-tag: HuksTag-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -44,9 +44,8 @@ value: boolean | number | bigint | Uint8Array
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-HuksParam-value: boolean | number | bigint | Uint8Array--><!--Device-HuksParam-value: boolean | number | bigint | Uint8Array-End-->
-
 **系统能力：** SystemCapability.Security.Huks.Core
-

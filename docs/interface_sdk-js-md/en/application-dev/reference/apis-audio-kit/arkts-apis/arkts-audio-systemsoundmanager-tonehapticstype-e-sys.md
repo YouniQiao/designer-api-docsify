@@ -2,9 +2,9 @@
 
 Enum for haptics in tone scenario.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-systemSoundManager-enum ToneHapticsType--><!--Device-systemSoundManager-enum ToneHapticsType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -18,9 +18,9 @@ CALL_SIM_CARD_0 = 0
 
 Haptics in incoming call scenario for sim card 0.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-ToneHapticsType-CALL_SIM_CARD_0 = 0--><!--Device-ToneHapticsType-CALL_SIM_CARD_0 = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -34,9 +34,9 @@ CALL_SIM_CARD_1 = 1
 
 Haptics in incoming call scenario for sim card 1.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-ToneHapticsType-CALL_SIM_CARD_1 = 1--><!--Device-ToneHapticsType-CALL_SIM_CARD_1 = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -52,9 +52,9 @@ Haptics in incoming call scenario for esim card 0.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ToneHapticsType-CALL_ESIM_CARD_0 = 2--><!--Device-ToneHapticsType-CALL_ESIM_CARD_0 = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -70,9 +70,9 @@ Haptics in incoming call scenario for esim card 1.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ToneHapticsType-CALL_ESIM_CARD_1 = 3--><!--Device-ToneHapticsType-CALL_ESIM_CARD_1 = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -86,9 +86,9 @@ TEXT_MESSAGE_SIM_CARD_0 = 20
 
 Haptics in text message scenario for sim card 0.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-ToneHapticsType-TEXT_MESSAGE_SIM_CARD_0 = 20--><!--Device-ToneHapticsType-TEXT_MESSAGE_SIM_CARD_0 = 20-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -102,9 +102,9 @@ TEXT_MESSAGE_SIM_CARD_1 = 21
 
 Haptics in text message scenario for sim card 1.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-ToneHapticsType-TEXT_MESSAGE_SIM_CARD_1 = 21--><!--Device-ToneHapticsType-TEXT_MESSAGE_SIM_CARD_1 = 21-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -120,9 +120,9 @@ Haptics in text message scenario for esim card 0.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ToneHapticsType-TEXT_MESSAGE_ESIM_CARD_0 = 22--><!--Device-ToneHapticsType-TEXT_MESSAGE_ESIM_CARD_0 = 22-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -138,9 +138,9 @@ Haptics in text message scenario for esim card 1.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ToneHapticsType-TEXT_MESSAGE_ESIM_CARD_1 = 23--><!--Device-ToneHapticsType-TEXT_MESSAGE_ESIM_CARD_1 = 23-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -154,11 +154,10 @@ NOTIFICATION = 40
 
 Haptics in notification scenario.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-ToneHapticsType-NOTIFICATION = 40--><!--Device-ToneHapticsType-NOTIFICATION = 40-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
-

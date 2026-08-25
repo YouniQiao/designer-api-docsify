@@ -14,17 +14,17 @@ function getSystemMemInfo(): SystemMemInfo
 
 获取系统内存信息。读取/proc/meminfo节点的数据。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-hidebug-function getSystemMemInfo(): SystemMemInfo--><!--Device-hidebug-function getSystemMemInfo(): SystemMemInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SystemMemInfo](arkts-performanceanalysis-hidebug-systemmeminfo-i.md) | 系统内存信息。 |
+| 类型 |
+| --- |
+| [SystemMemInfo](arkts-performanceanalysis-hidebug-systemmeminfo-i.md) |
 
 **示例**
 
@@ -36,4 +36,3 @@ let systemMemInfo: hidebug.SystemMemInfo = hidebug.getSystemMemInfo();
 console.info(`totalMem: ${systemMemInfo.totalMem}, freeMem: ${systemMemInfo.freeMem}, ` +
   `availableMem: ${systemMemInfo.availableMem}`);
 ```
-

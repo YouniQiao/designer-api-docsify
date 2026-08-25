@@ -16,38 +16,38 @@ Registers a specified external Provider. This API uses a promise to return the r
 
 **Since:** 22
 
-**Required permissions:** ohos.permission.CRYPTO_EXTENSION_REGISTER
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-huksExternalCrypto-function registerProvider(providerName: string, params: Array<HuksExternalCryptoParam>): Promise<void>--><!--Device-huksExternalCrypto-function registerProvider(providerName: string, params: Array<HuksExternalCryptoParam>): Promise<void>-End-->
+**Required permissions:** ohos.permission.CRYPTO_EXTENSION_REGISTER
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| providerName | string | Yes | Provider name, which contains a maximum of 128 characters. It is recommended that the value contain the vendor information, be globally unique, and not contain sensitive data such as personal contact information.<br>A maximum of 10 providers can be registered. |
-| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | Yes | Parameters to be passed during the operation. The mandatory tag is [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md), indicating the ability name. Set this parameter based on the actual service requirements. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| providerName | string | Yes |
+| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | check permission failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | api is not supported. |
-| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | the ability name param is missing. |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient. |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the input parameter is invalid. |
-| [12000019](../errorcode-huks.md#12000019-provider-name-already-registered) | the provider is already registered. |
-| [12000020](../errorcode-huks.md#12000020-dependent-module-error) | an error occurred in the dependent module. |
-| [12000025](../errorcode-huks.md#12000025-resource-limit-exceeded) | the number of providers exceeds the limit. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
+| [12000019](../errorcode-huks.md#12000019-provider-name-already-registered) |
+| [12000020](../errorcode-huks.md#12000020-dependent-module-error) |
+| [12000025](../errorcode-huks.md#12000025-resource-limit-exceeded) |
 
 **Examples**
 
@@ -74,4 +74,3 @@ huksExternalCrypto.registerProvider(providerName, extProperties)
         console.info(`promise: registerProvider success`);
     });
 ```
-

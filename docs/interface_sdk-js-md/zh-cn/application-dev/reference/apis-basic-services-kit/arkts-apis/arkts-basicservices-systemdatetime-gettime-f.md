@@ -14,23 +14,23 @@ function getTime(isNanoseconds?: boolean): long
 
 使用同步方式获取自Unix纪元以来到当前系统时间所经过的时间。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-systemDateTime-function getTime(isNanoseconds?: boolean): long--><!--Device-systemDateTime-function getTime(isNanoseconds?: boolean): long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isNanoseconds | boolean | 否 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| isNanoseconds | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 自Unix纪元以来到当前系统时间所经过的时间。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **示例**
 
@@ -59,4 +59,3 @@ try {
   console.error(`Failed to get time. message: ${error.message}, code: ${error.code}`);
 }
 ```
-

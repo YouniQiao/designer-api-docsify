@@ -4,7 +4,7 @@
 
 **起始版本：** 10
 
-<!--Device-calendarManager-class EventFilter--><!--Device-calendarManager-class EventFilter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -24,21 +24,21 @@ static filterById(ids: number[]): EventFilter
 
 **起始版本：** 10
 
-<!--Device-EventFilter-static filterById(ids: number[]): EventFilter--><!--Device-EventFilter-static filterById(ids: number[]): EventFilter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| ids | number[] | 是 | 日程id数组，日程id需为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| ids | number[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | 返回日程过滤器对象。 |
+| 类型 |
+| --- |
+| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) |
 
 **示例**
 
@@ -104,22 +104,22 @@ static filterByTime(start: number, end: number): EventFilter
 
 **起始版本：** 10
 
-<!--Device-EventFilter-static filterByTime(start: number, end: number): EventFilter--><!--Device-EventFilter-static filterByTime(start: number, end: number): EventFilter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| start | number | 是 | 开始时间。格式为13位时间戳。 |
-| end | number | 是 | 结束时间。格式为13位时间戳。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| start | number | 是 |
+| end | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | 返回日程过滤器对象。 |
+| 类型 |
+| --- |
+| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) |
 
 **示例**
 
@@ -180,21 +180,21 @@ static filterByTitle(title: string): EventFilter
 
 **起始版本：** 10
 
-<!--Device-EventFilter-static filterByTitle(title: string): EventFilter--><!--Device-EventFilter-static filterByTitle(title: string): EventFilter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| title | string | 是 | 日程标题。长度建议为[0,5000]字符。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| title | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | 返回日程过滤器对象。 |
+| 类型 |
+| --- |
+| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) |
 
 **示例**
 
@@ -234,4 +234,3 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
   }
 });
 ```
-

@@ -13,9 +13,7 @@ The **SubHeader** component is positioned at the top of list items or content se
 
 **Since:** 10
 
-**Decorator:** @Component
-
-<!--Device-unnamed-export declare struct SubHeader--><!--Device-unnamed-export declare struct SubHeader-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,6 +22,40 @@ The **SubHeader** component is positioned at the top of list items or content se
 ```TypeScript
 import { OperationOption, OperationType, SelectOptions, SubHeader, SymbolOptions } from '@kit.ArkUI';
 ```
+
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## titleBuilder
+
+```TypeScript
+titleBuilder?: () => void
+```
+
+Content of the custom title area.Default value: **undefined**, indicating that no custom title is used.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## contentMargin
 
@@ -39,13 +71,11 @@ Margin of the content. Negative numbers are not supported.Default value:`{start:
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SubHeader-@Prop  contentMargin?: LocalizedMargin--><!--Device-SubHeader-@Prop  contentMargin?: LocalizedMargin-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -63,13 +93,11 @@ Padding of the content.Default value:If a secondary title, with or without an ic
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SubHeader-@Prop  contentPadding?: LocalizedPadding--><!--Device-SubHeader-@Prop  contentPadding?: LocalizedPadding-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,13 +113,11 @@ Icon.Default value: **undefined**, indicating that no icon is displayed.The **ic
 
 **Since:** 10
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SubHeader-@Prop  icon?: ResourceStr--><!--Device-SubHeader-@Prop  icon?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -107,11 +133,11 @@ Icon symbol options. This parameter is available when **icon** is set to a symbo
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SubHeader-iconSymbolOptions?: SymbolOptions--><!--Device-SubHeader-iconSymbolOptions?: SymbolOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -127,11 +153,11 @@ Items in the operation area (right).Default value: **undefined**, indicating tha
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SubHeader-operationItem?: Array<OperationOption>--><!--Device-SubHeader-operationItem?: Array<OperationOption>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -147,11 +173,11 @@ Icon symbol options.This parameter is available when **operationType** is set to
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SubHeader-operationSymbolOptions?: Array<SymbolOptions>--><!--Device-SubHeader-operationSymbolOptions?: Array<SymbolOptions>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -167,13 +193,11 @@ Style of elements in the operation area (right).Default value: **OperationType.B
 
 **Since:** 10
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SubHeader-@Prop  operationType?: OperationType--><!--Device-SubHeader-@Prop  operationType?: OperationType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -189,13 +213,11 @@ Primary title.Default value: **undefined**, indicating that no primary title is 
 
 **Since:** 10
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SubHeader-@Prop  primaryTitle?: ResourceStr--><!--Device-SubHeader-@Prop  primaryTitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -211,11 +233,11 @@ Text attributes of the primary title, such as the font color, font size, and fon
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SubHeader-primaryTitleModifier?: TextModifier--><!--Device-SubHeader-primaryTitleModifier?: TextModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -231,13 +253,11 @@ Secondary title.Default value: **undefined**, indicating that no secondary title
 
 **Since:** 10
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SubHeader-@Prop  secondaryTitle?: ResourceStr--><!--Device-SubHeader-@Prop  secondaryTitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -253,11 +273,11 @@ Text attributes of the secondary title, such as the font color, font size, and f
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SubHeader-secondaryTitleModifier?: TextModifier--><!--Device-SubHeader-secondaryTitleModifier?: TextModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -273,11 +293,11 @@ Content and events for selection.Default value: **undefined**, indicating that n
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SubHeader-select?: SelectOptions--><!--Device-SubHeader-select?: SelectOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -293,35 +313,11 @@ Customized content to be read in the title.Default value: **undefined**.If the v
 
 **Since:** 23
 
-**Decorator:** @Prop
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-SubHeader-@Prop  titleAccessibilityText?: ResourceStr--><!--Device-SubHeader-@Prop  titleAccessibilityText?: ResourceStr-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## titleBuilder
-
-```TypeScript
-titleBuilder?: () => void
-```
-
-Content of the custom title area.Default value: **undefined**, indicating that no custom title is used.
-
-**Type:** () =&gt; void
-
-**Since:** 12
-
-**Decorator:** @BuilderParam
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SubHeader-@BuilderParam  titleBuilder?: () => void--><!--Device-SubHeader-@BuilderParam  titleBuilder?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -337,13 +333,10 @@ Set the titleId for title.
 
 **Since:** 24
 
-**Decorator:** @Prop
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
-<!--Device-SubHeader-@Prop  titleId?: string--><!--Device-SubHeader-@Prop  titleId?: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

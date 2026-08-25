@@ -2,9 +2,9 @@
 
 Wi-Fi IP type enumeration.@enum { int }
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-wifiManager-enum IpType--><!--Device-wifiManager-enum IpType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -18,9 +18,9 @@ STATIC
 
 Use statically configured IP settings
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IpType-STATIC--><!--Device-IpType-STATIC-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -34,9 +34,9 @@ DHCP
 
 Use dynamically configured IP settings
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IpType-DHCP--><!--Device-IpType-DHCP-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -50,11 +50,10 @@ UNKNOWN
 
 No IP details are assigned
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-IpType-UNKNOWN--><!--Device-IpType-UNKNOWN-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
-

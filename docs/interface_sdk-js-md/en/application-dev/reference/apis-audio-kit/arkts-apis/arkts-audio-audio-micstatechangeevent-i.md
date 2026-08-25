@@ -2,9 +2,9 @@
 
 Describes the event received by the application when the microphone mute status is changed.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-audio-interface MicStateChangeEvent--><!--Device-audio-interface MicStateChangeEvent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -24,9 +24,8 @@ Mute status of the microphone **true** if muted, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MicStateChangeEvent-mute: boolean--><!--Device-MicStateChangeEvent-mute: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
-

@@ -7,26 +7,26 @@ This module defines the notification template, which is used to specify the temp
 > the system to automatically render the notification style that complies with the specifications.
 > Application scenario: Currently, only the upload and download scenarios are supported.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-unnamed-export interface NotificationTemplate--><!--Device-unnamed-export interface NotificationTemplate-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 ## data
 
 ```TypeScript
-data: Record<string, RecordData>
+data: Record<string, Object>
 ```
 
 Template data.  
 - **title**: Download title. Mandatory field, with the value being a string type. - **fileName**: Download file name. Mandatory field, with the value being a string type. - **progressValue**: Download progress, with the value being a numeric type. The recommended value range is 0 to 100, representing the percentage progress. When **progressValue** is less than or equal to 0, the progress is 0; when it is greater than or equal to 100, the progress ring disappears, indicating that the download is complete.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, Object&gt;
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-NotificationTemplate-data: Record<string, RecordData>--><!--Device-NotificationTemplate-data: Record<string, RecordData>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -40,9 +40,8 @@ Template name. Currently, only the progress bar notification template indicating
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-NotificationTemplate-name: string--><!--Device-NotificationTemplate-name: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
-

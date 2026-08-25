@@ -19,9 +19,9 @@ Cancels listening to the event of notifyVisible type change. <p>You can use this
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-formObserver-function offNotifyVisible(    hostBundleName?: string,    observerCallback?: Callback<Array<formInfo.RunningFormInfo>>  ): void--><!--Device-formObserver-function offNotifyVisible(    hostBundleName?: string,    observerCallback?: Callback<Array<formInfo.RunningFormInfo>>  ): void-End-->
+**需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -29,18 +29,18 @@ Cancels listening to the event of notifyVisible type change. <p>You can use this
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| hostBundleName | string | 否 | Indicates the bundle name of the form host application. |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | 否 | The callback is used to return the running form info. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [hostBundleName](arkts-form-forminfo-runningforminfo-i-sys.md) | string | 否 |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -69,4 +69,3 @@ try {
   hilog.error(DOMAIN, TAG, `formObserverStaticTest catch error, code: ${code}, message: ${message})`);
 }
 ```
-

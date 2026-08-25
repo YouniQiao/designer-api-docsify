@@ -1,16 +1,16 @@
 # OnGetStartIndexByIndexCallback (System API)
 
 ```TypeScript
-declare type OnGetStartIndexByIndexCallback = (targetIndex: int) => StartLineInfo
+declare type OnGetStartIndexByIndexCallback = (targetIndex: number) => StartLineInfo
 ```
 
 Defines the callback type used in onGetStartIndexByIndex of GridLayoutOptions.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-unnamed-declare type OnGetStartIndexByIndexCallback = (targetIndex: int) => StartLineInfo--><!--Device-unnamed-declare type OnGetStartIndexByIndexCallback = (targetIndex: int) => StartLineInfo-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +18,12 @@ Defines the callback type used in onGetStartIndexByIndex of GridLayoutOptions.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| targetIndex | int | Yes | The target index to scroll to. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| targetIndex | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [StartLineInfo](arkts-arkui-startlineinfo-i-sys.md) | - |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [StartLineInfo](arkts-arkui-startlineinfo-i-sys.md) |

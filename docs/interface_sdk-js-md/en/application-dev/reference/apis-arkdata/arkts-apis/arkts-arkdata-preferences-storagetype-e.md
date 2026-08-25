@@ -12,9 +12,9 @@ Enumerates the storage types of preferences.
 > - If you need to change the storage directory of preferences, you cannot move or overwrite files. Instead, you
 > need to read the data and then write the data.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-preferences-enum StorageType--><!--Device-preferences-enum StorageType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -26,11 +26,11 @@ XML = 0
 
 [XML](../../../database/data-persistence-by-preferences.md#xml) format, which is the default storage type of **Preferences**.In this mode, data is stored in XML format. Data operations are performed in the memory. To persist data, call **flush()**.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-StorageType-XML = 0--><!--Device-StorageType-XML = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -42,11 +42,10 @@ GSKV
 
 [GSKV](../../../database/data-persistence-by-preferences.md#gskv) format.Data is stored in GSKV mode. Data operations are flushed on a real-time basis without calling **flush()**.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-StorageType-GSKV--><!--Device-StorageType-GSKV-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
-

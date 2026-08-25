@@ -6,18 +6,17 @@ type PiPActionEventType = PiPVideoActionEvent | PiPCallActionEvent | PiPMeetingA
 
 Enumerates the types of action events of the PiP controller.
 
-**Since:** 26.0.0
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PiPWindow-type PiPActionEventType = PiPVideoActionEvent | PiPCallActionEvent | PiPMeetingActionEvent | PiPLiveActionEvent--><!--Device-PiPWindow-type PiPActionEventType = PiPVideoActionEvent | PiPCallActionEvent | PiPMeetingActionEvent | PiPLiveActionEvent-End-->
-
 **System capability:** SystemCapability.Window.SessionManager
 
-| Type | Description |
-| --- | --- |
-| PiPVideoActionEvent | Action event for components displayed on the video playback controller. |
-| PiPCallActionEvent | Action event for components displayed on the video call controller. |
-| PiPMeetingActionEvent | Action event for components displayed on the video meeting controller. |
-| PiPLiveActionEvent | Action event for components displayed on the live video controller. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PiPVideoActionEvent](arkts-arkui-pipwindow-pipvideoactionevent-t.md) |
+| [PiPCallActionEvent](arkts-arkui-pipwindow-pipcallactionevent-t.md) |
+| [PiPMeetingActionEvent](arkts-arkui-pipwindow-pipmeetingactionevent-t.md) |
+| [PiPLiveActionEvent](arkts-arkui-pipwindow-pipliveactionevent-t.md) |

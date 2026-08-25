@@ -4,9 +4,7 @@ Declare Component ProgressButton
 
 **Since:** 22
 
-**Decorator:** @Component
-
-<!--Device-unnamed-export declare struct ProgressButton--><!--Device-unnamed-export declare struct ProgressButton-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,6 +14,22 @@ Declare Component ProgressButton
 import { ProgressButton } from '@kit.ArkUI';
 ```
 
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## clickCallback
 
 ```TypeScript
@@ -24,37 +38,41 @@ clickCallback: () => void
 
 Sets the ProgressButton clickCallback.
 
-**Type:** () =&gt; void
-
 **Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-ProgressButton-clickCallback: () => void--><!--Device-ProgressButton-clickCallback: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## colorOptions
 
+```TypeScript
+colorOptions?: ProgressButtonColorOptions
+```
+
 Set Color options of the ProgressButton.
 
-**Type:** [ProgressButtonColorOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-progressbutton-progressbuttoncoloroptions-i.md)
+**Type:** [ProgressButtonColorOptions](arkts-arkui-arkui-advanced-progressbutton-progressbuttoncoloroptions-i.md)
 
 **Since:** 22
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-ProgressButton-@Prop colorOptions?: ProgressButtonColorOptions--><!--Device-ProgressButton-@Prop colorOptions?: ProgressButtonColorOptions-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## content
+
+```TypeScript
+content: ResourceStr
+```
 
 Sets the ProgressButton content.
 
@@ -62,17 +80,19 @@ Sets the ProgressButton content.
 
 **Since:** 20
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-ProgressButton-@Prop content: ResourceStr--><!--Device-ProgressButton-@Prop content: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enable
+
+```TypeScript
+enable: boolean
+```
 
 Sets the ProgressButton enable state.
 
@@ -80,17 +100,19 @@ Sets the ProgressButton enable state.
 
 **Since:** 22
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-ProgressButton-@Prop enable: boolean--><!--Device-ProgressButton-@Prop enable: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## progress
+
+```TypeScript
+progress: number
+```
 
 Sets the ProgressButton progress.
 
@@ -98,17 +120,19 @@ Sets the ProgressButton progress.
 
 **Since:** 22
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-ProgressButton-@Prop progress: number--><!--Device-ProgressButton-@Prop progress: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## progressButtonRadius
+
+```TypeScript
+progressButtonRadius?: LengthMetrics
+```
 
 Set border rounded corner radius of progress.
 
@@ -116,13 +140,11 @@ Set border rounded corner radius of progress.
 
 **Since:** 18
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ProgressButton-@Prop progressButtonRadius?: LengthMetrics--><!--Device-ProgressButton-@Prop progressButtonRadius?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,11 +160,10 @@ Sets the ProgressButton progressButtonWidth.
 
 **Since:** 22
 
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-ProgressButton-progressButtonWidth?: Length--><!--Device-ProgressButton-progressButtonWidth?: Length-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

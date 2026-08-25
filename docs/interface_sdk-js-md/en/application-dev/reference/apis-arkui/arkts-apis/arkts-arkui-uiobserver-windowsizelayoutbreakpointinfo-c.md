@@ -4,7 +4,7 @@ Provides information about window size layout breakpoint changes.
 
 **Since:** 22
 
-<!--Device-uiObserver-export class WindowSizeLayoutBreakpointInfo--><!--Device-uiObserver-export class WindowSizeLayoutBreakpointInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,11 @@ Layout breakpoint for window height.
 
 **Since:** 22
 
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-WindowSizeLayoutBreakpointInfo-readonly heightBreakpoint: HeightBreakpoint--><!--Device-WindowSizeLayoutBreakpointInfo-readonly heightBreakpoint: HeightBreakpoint-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,11 +46,10 @@ Layout breakpoint for window width.
 
 **Since:** 22
 
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-WindowSizeLayoutBreakpointInfo-readonly widthBreakpoint: WidthBreakpoint--><!--Device-WindowSizeLayoutBreakpointInfo-readonly widthBreakpoint: WidthBreakpoint-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

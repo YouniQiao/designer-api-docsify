@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-cloudData-interface ClearConfig--><!--Device-cloudData-interface ClearConfig-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -28,11 +28,10 @@ dbInfo: Record<string, DBActionInfo>
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-ClearConfig-dbInfo: Record<string, DBActionInfo>--><!--Device-ClearConfig-dbInfo: Record<string, DBActionInfo>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
-

@@ -9,25 +9,24 @@ Called before scroll to allow developer to control real offset the Scrollable ca
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-unnamed-declare type OnWillScrollCallback =(scrollOffset: number, scrollState: ScrollState, scrollSource: ScrollSource) => void | ScrollResult--><!--Device-unnamed-declare type OnWillScrollCallback =(scrollOffset: number, scrollState: ScrollState, scrollSource: ScrollSource) => void | ScrollResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| scrollOffset | number | 是 | offset this frame will scroll, which may or may not be reached. |
-| scrollState | ScrollState | 是 | current scroll state. |
-| scrollSource | ScrollSource | 是 | source of current scroll. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| scrollOffset | number | 是 |
+| scrollState | [ScrollState](arkts-arkui-scrollstate-e.md) | 是 |
+| scrollSource | [ScrollSource](../arkts-apis/arkts-arkui-enums-scrollsource-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| void \| [ScrollResult](arkts-arkui-scrollresult-c.md) | the remain offset for the scrollable, same as scrollOffset when no ScrollResult is returned. |
-
+| 类型 |
+| --- |
+| void \| [ScrollResult](arkts-arkui-scrollresult-c.md) |

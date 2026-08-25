@@ -2,9 +2,9 @@
 
 Provides text line breaking capabilities, such as obtaining, moving, and identifying break points.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-i18n-export class BreakIterator--><!--Device-i18n-export class BreakIterator-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -16,25 +16,31 @@ import { i18n } from '@kit.LocalizationKit';
 
 ## current
 
+ArkTS-Dyn:
+```TypeScript
+current(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 current(): int
 ```
 
 Obtains the position of the break iterator in the text.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-BreakIterator-current(): int--><!--Device-BreakIterator-current(): int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Position of the break iterator in the text. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -48,25 +54,31 @@ let currentPos: number = iterator.current(); // currentPos = 0
 
 ## first
 
+ArkTS-Dyn:
+```TypeScript
+first(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 first(): int
 ```
 
 Moves the break iterator to the first line break point, which is always at the beginning of the processed text.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-BreakIterator-first(): int--><!--Device-BreakIterator-first(): int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset of the first line break point in the processed text. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -80,31 +92,37 @@ let firstPos: number = iterator.first(); // firstPos = 0
 
 ## following
 
+ArkTS-Dyn:
+```TypeScript
+following(offset: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 following(offset: int): int
 ```
 
 Moves the line break iterator to the line break point after the specified position.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-BreakIterator-following(offset: int): int--><!--Device-BreakIterator-following(offset: int): int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | Yes | Offset of the line break point. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Position of the break iterator in the text after movement. The value **-1** is returned if the position of the break iterator is outside of the processed text after movement. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -126,19 +144,19 @@ getLineBreakText(): string
 
 Obtains the text processed by the **BreakIterator** object.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-BreakIterator-getLineBreakText(): string--><!--Device-BreakIterator-getLineBreakText(): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Text being processed by the **BreakIterator** object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -152,31 +170,37 @@ let breakText: string = iterator.getLineBreakText(); // breakText = 'Apple is my
 
 ## isBoundary
 
+ArkTS-Dyn:
+```TypeScript
+isBoundary(offset: number): boolean
+```
+
+ArkTS-Sta:
 ```TypeScript
 isBoundary(offset: int): boolean
 ```
 
 Checks whether the specified position is a line break point.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-BreakIterator-isBoundary(offset: int): boolean--><!--Device-BreakIterator-isBoundary(offset: int): boolean-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| offset | int | Yes | Specified position in the text. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the specified position is a line break point. The value **true** indicates that the specified position is a line break point, and the value **false** indicates the opposite. If **true** is returned, the break iterator is moved to the position specified by **offset**. Otherwise, the break iterator is moved to the text line break point after the position specified by **offset**, which is equivalent to calling **following**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -191,25 +215,31 @@ isBoundary = iterator.isBoundary(5); // isBoundary = false;
 
 ## last
 
+ArkTS-Dyn:
+```TypeScript
+last(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 last(): int
 ```
 
 Moves the break iterator to the last line break point, which is always the next position after the end of the processed text.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-BreakIterator-last(): int--><!--Device-BreakIterator-last(): int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Offset of the last line break point in the processed text. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -223,31 +253,37 @@ let lastPos: number = iterator.last(); // lastPos = 27
 
 ## next
 
+ArkTS-Dyn:
+```TypeScript
+next(index?: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 next(index?: int): int
 ```
 
 Moves the break iterator backward by the specified number of line break points.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-BreakIterator-next(index?: int): int--><!--Device-BreakIterator-next(index?: int): int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | No | Number of line break points for moving the break iterator. The value is an integer. A positive number means to move the break iterator backward, and a negative number means to move the break iterator forward. The default value is **1**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Position of the break iterator in the text after movement. The value **-1** is returned if the position of the break iterator is outside of the processed text after movement. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -263,25 +299,31 @@ pos = iterator.next(10); // pos = -1
 
 ## previous
 
+ArkTS-Dyn:
+```TypeScript
+previous(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 previous(): int
 ```
 
 Moves the break iterator foreward by one line break point.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-BreakIterator-previous(): int--><!--Device-BreakIterator-previous(): int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Position of the break iterator in the text after movement. The value **-1** is returned if the position of the break iterator is outside of the processed text after movement. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -303,19 +345,19 @@ setLineBreakText(text: string): void
 
 Sets the text to be processed by the **BreakIterator** object.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-BreakIterator-setLineBreakText(text: string): void--><!--Device-BreakIterator-setLineBreakText(text: string): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| text | string | Yes | Input text. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| text | string | Yes |
 
 **Examples**
 
@@ -325,4 +367,3 @@ import { i18n } from '@kit.LocalizationKit';
 let iterator: i18n.BreakIterator = i18n.getLineInstance('en');
 iterator.setLineBreakText('Apple is my favorite fruit.'); // Set the text to be processed.
 ```
-

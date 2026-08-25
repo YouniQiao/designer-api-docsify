@@ -1,0 +1,239 @@
+# ExtendableImage
+
+扩展图像组件定义@implements ImageAttribute
+
+**继承/实现关系：** ExtendableImage implements [ImageAttribute](arkts-arkui-image-imageattribute-i.md)
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## $_instantiate
+
+```TypeScript
+static $_instantiate<T extends ExtendableImage>(
+    factory: ConstructorT<T>, 
+    src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined,
+    imageAIOptions?: ImageAIOptions
+  ): T
+```
+
+扩展图像组件构造器
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | 是 |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | 否 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| T |
+
+## $_instantiate
+
+```TypeScript
+static $_instantiate<T extends ExtendableImage>(
+    factory: ConstructorT<T>, 
+    src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined,
+    imageAIOptions?: ImageAIOptions,
+    reloadKey?: string
+  ): T
+```
+
+扩展图像组件构造器
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | 是 |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | 否 |
+| reloadKey | string | 否 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| T |
+
+## $_instantiate
+
+```TypeScript
+static $_instantiate<T extends ExtendableImage>(
+    factory: ConstructorT<T>, 
+    src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined,
+    reloadKey?: string
+  ): T
+```
+
+扩展图像组件
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | 是 |
+| reloadKey | string | 否 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| T |
+
+## _instantiateImpl
+
+```TypeScript
+static _instantiateImpl<T extends ExtendableImage>(
+    styles: CustomBuilderT<T>, 
+    factory: ConstructorT<T>
+  ): void
+```
+
+扩展图像组件构入口
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | 是 |
+| factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |
+
+## setImageOptions
+
+```TypeScript
+public setImageOptions(
+    src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined, 
+    imageAIOptions?: ImageAIOptions
+  ): this
+```
+
+设置图像组件选项
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | 是 |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | 否 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [ExtendableImage](arkts-arkui-image-extendableimage-c.md) |
+
+## setImageOptions
+
+```TypeScript
+public setImageOptions(
+    src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined, 
+    imageAIOptions?: ImageAIOptions,
+    reloadKey?: string
+  ): this
+```
+
+设置图像组件选项
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | 是 |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | 否 |
+| reloadKey | string | 否 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [ExtendableImage](arkts-arkui-image-extendableimage-c.md) |
+
+## setImageOptions
+
+```TypeScript
+public setImageOptions(
+    src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined, 
+    reloadKey?: string
+  ): this
+```
+
+设置图像组件选项
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | 是 |
+| reloadKey | string | 否 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [ExtendableImage](arkts-arkui-image-extendableimage-c.md) |

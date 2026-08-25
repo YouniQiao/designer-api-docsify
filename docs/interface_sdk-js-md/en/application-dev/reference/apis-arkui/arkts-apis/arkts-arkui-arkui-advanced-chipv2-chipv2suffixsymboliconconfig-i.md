@@ -6,7 +6,7 @@ Defines accessibility config of suffix symbol.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export interface ChipV2SuffixSymbolIconConfig--><!--Device-unnamed-export interface ChipV2SuffixSymbolIconConfig-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,15 +24,31 @@ action?: VoidCallback
 
 Called when suffix symbol is clicked.
 
-**Type:** VoidCallback
-
 **Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2SuffixSymbolIconConfig-action?: VoidCallback--><!--Device-ChipV2SuffixSymbolIconConfig-action?: VoidCallback-End-->
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## action
+
+```TypeScript
+action?: VoidCallback
+```
+
+Called when suffix symbol is clicked.
+
+**Type:** VoidCallback
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,11 +64,11 @@ Set activated accessibility config for suffix symbol.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2SuffixSymbolIconConfig-activatedAccessibility?: ChipV2AccessibilityConfig--><!--Device-ChipV2SuffixSymbolIconConfig-activatedAccessibility?: ChipV2AccessibilityConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,11 +84,10 @@ Set normal accessibility config for suffix symbol.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2SuffixSymbolIconConfig-normalAccessibility?: ChipV2AccessibilityConfig--><!--Device-ChipV2SuffixSymbolIconConfig-normalAccessibility?: ChipV2AccessibilityConfig-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -12,7 +12,7 @@ Set a new value of form info.
 
 **起始版本：** 7
 
-<!--Device-FormComponentInterface-(value: FormInfo): FormComponentAttribute--><!--Device-FormComponentInterface-(value: FormInfo): FormComponentAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,19 +20,18 @@ Set a new value of form info.
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [FormInfo](arkts-arkui-forminfo-i-sys.md) | 是 | [since 9 - 11] |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [FormInfo](arkts-arkui-forminfo-i-sys.md) | 是 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
+| 名称 |
+| --- |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-
+| 名称 |
+| --- |

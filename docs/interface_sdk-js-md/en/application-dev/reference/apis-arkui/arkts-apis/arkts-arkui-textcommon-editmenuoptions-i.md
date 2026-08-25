@@ -4,9 +4,23 @@ EditMenuOptions
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-unnamed-export declare interface EditMenuOptions--><!--Device-unnamed-export declare interface EditMenuOptions-End-->
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onPrepareMenu
+
+```TypeScript
+onPrepareMenu?: OnPrepareMenuCallback
+```
+
+Callback before displaying the menu when the selection range changes.
+
+**Since:** 24
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +36,9 @@ Passes the default menu, invokes before every display to generate a menu for tri
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EditMenuOptions-onCreateMenu: OnCreateMenuCallback | undefined--><!--Device-EditMenuOptions-onCreateMenu: OnCreateMenuCallback | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,31 +54,8 @@ Invoke upon clicking an item, capable of intercepting the default system menu ex
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EditMenuOptions-onMenuItemClick: OnMenuItemClickCallback | undefined--><!--Device-EditMenuOptions-onMenuItemClick: OnMenuItemClickCallback | undefined-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onPrepareMenu
-
-```TypeScript
-onPrepareMenu?: OnPrepareMenuCallback
-```
-
-Callback before displaying the menu when the selection range changes.
-
-**Type:** [OnPrepareMenuCallback](arkts-arkui-onpreparemenucallback-t.md)
-
-**Since:** 24
-
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EditMenuOptions-onPrepareMenu?: OnPrepareMenuCallback--><!--Device-EditMenuOptions-onPrepareMenu?: OnPrepareMenuCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-

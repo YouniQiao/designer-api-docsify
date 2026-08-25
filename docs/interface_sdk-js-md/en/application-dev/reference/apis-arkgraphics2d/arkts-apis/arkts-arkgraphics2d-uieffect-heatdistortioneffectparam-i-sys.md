@@ -4,7 +4,7 @@ The parameters of heat distortion effect.
 
 **Since:** 26.0.0
 
-<!--Device-uiEffect-interface HeatDistortionEffectParam--><!--Device-uiEffect-interface HeatDistortionEffectParam-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -19,18 +19,18 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 ## intensity
 
 ```TypeScript
-intensity: double
+intensity: number
 ```
 
 The intensity of the heat distortion. The value range is [0, 1], and values outside the range will be clamped during implementation. 0 means no distortion, and 1 represents the maximum distortion level.
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-HeatDistortionEffectParam-intensity: double--><!--Device-HeatDistortionEffectParam-intensity: double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -39,18 +39,18 @@ The intensity of the heat distortion. The value range is [0, 1], and values outs
 ## noiseScale
 
 ```TypeScript
-noiseScale: double
+noiseScale: number
 ```
 
 The noise scale of the heat distortion, controlling the fineness of the noise texture. The value range is [0.1, 5.0], and values outside the range will be clamped during implementation. A larger value results in a finer noise texture.
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-HeatDistortionEffectParam-noiseScale: double--><!--Device-HeatDistortionEffectParam-noiseScale: double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -59,18 +59,18 @@ The noise scale of the heat distortion, controlling the fineness of the noise te
 ## progress
 
 ```TypeScript
-progress: double
+progress: number
 ```
 
 The animation progress of the heat distortion. The value range is [0, 1], and values outside the range will be clamped during implementation. 0 corresponds to the start of the animation, and 1 corresponds to the end of the animation.
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-HeatDistortionEffectParam-progress: double--><!--Device-HeatDistortionEffectParam-progress: double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -79,20 +79,19 @@ The animation progress of the heat distortion. The value range is [0, 1], and va
 ## riseWeight
 
 ```TypeScript
-riseWeight: double
+riseWeight: number
 ```
 
 The rise weight of the heat distortion, controlling the rising speed of bubbles. The value range is [0, 1], and values outside the range will be clamped during implementation. A larger value results in more obvious upward movement.
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-HeatDistortionEffectParam-riseWeight: double--><!--Device-HeatDistortionEffectParam-riseWeight: double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
-

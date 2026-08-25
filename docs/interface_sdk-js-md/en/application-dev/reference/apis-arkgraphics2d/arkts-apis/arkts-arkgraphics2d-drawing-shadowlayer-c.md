@@ -8,9 +8,9 @@ Implements a shadow layer.
 > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-drawing-class ShadowLayer--><!--Device-drawing-class ShadowLayer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -30,30 +30,30 @@ Creates a **ShadowLayer** object.
 
 **Since:** 12
 
-<!--Device-ShadowLayer-static create(blurRadius: number, x: number, y: number, color: common2D.Color): ShadowLayer--><!--Device-ShadowLayer-static create(blurRadius: number, x: number, y: number, color: common2D.Color): ShadowLayer-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| blurRadius | number | Yes | Radius of the shadow layer. The value must be a floating point number greater than 0. |
-| x | number | Yes | Offset on the X axis. The value is a floating point number. |
-| y | number | Yes | Offset on the Y axis. The value is a floating point number. |
-| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | number | Yes |
+| x | number | Yes |
+| y | number | Yes |
+| color | common2D.Color | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) | ShadowLayer** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -92,30 +92,30 @@ Creates a ShadowLayer object.
 
 **Since:** 23
 
-<!--Device-ShadowLayer-static create(blurRadius: double, x: double, y: double, color: common2D.Color): ShadowLayer | undefined--><!--Device-ShadowLayer-static create(blurRadius: double, x: double, y: double, color: common2D.Color): ShadowLayer | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| blurRadius | double | Yes | Radius of the shadow layer. The value must be a floating point number greater than 0. |
-| x | double | Yes | Offset on the X axis. The value is a floating point number. |
-| y | double | Yes | Offset on the Y axis. The value is a floating point number. |
-| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | double | Yes |
+| x | double | Yes |
+| y | double | Yes |
+| color | common2D.Color | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| undefined | ShadowLayer object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| undefined |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -131,30 +131,30 @@ Creates a **ShadowLayer** object.
 
 **Since:** 18
 
-<!--Device-ShadowLayer-static create(blurRadius: number, x: number, y: number, color: common2D.Color | number): ShadowLayer--><!--Device-ShadowLayer-static create(blurRadius: number, x: number, y: number, color: common2D.Color | number): ShadowLayer-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| blurRadius | number | Yes | Radius of the shadow layer. The value must be a floating point number greater than 0. |
-| x | number | Yes | Offset on the X axis. The value is a floating point number. |
-| y | number | Yes | Offset on the Y axis. The value is a floating point number. |
-| color | common2D.Color \| number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | number | Yes |
+| x | number | Yes |
+| y | number | Yes |
+| color | common2D.Color \| number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) | ShadowLayer** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -170,32 +170,31 @@ Creates a ShadowLayer object.
 
 **Since:** 23
 
-<!--Device-ShadowLayer-static create(blurRadius: double, x: double, y: double, color: common2D.Color | int): ShadowLayer | undefined--><!--Device-ShadowLayer-static create(blurRadius: double, x: double, y: double, color: common2D.Color | int): ShadowLayer | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| blurRadius | double | Yes | Radius of the shadow layer. The value must be a floating point number greater than 0. |
-| x | double | Yes | Offset on the X axis. The value is a floating point number. |
-| y | double | Yes | Offset on the Y axis. The value is a floating point number. |
-| color | common2D.Color \| int | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | double | Yes |
+| x | double | Yes |
+| y | double | Yes |
+| color | common2D.Color \| int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| undefined | ShadowLayer object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| undefined |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
 See [create](#create)
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-image-enum XmageColorMode--><!--Device-image-enum XmageColorMode-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -18,9 +18,9 @@ NORMAL = 0
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-XmageColorMode-NORMAL = 0--><!--Device-XmageColorMode-NORMAL = 0-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -34,9 +34,9 @@ BRIGHT = 1
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-XmageColorMode-BRIGHT = 1--><!--Device-XmageColorMode-BRIGHT = 1-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -50,9 +50,9 @@ SOFT = 2
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-XmageColorMode-SOFT = 2--><!--Device-XmageColorMode-SOFT = 2-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -66,9 +66,8 @@ MONO = 3
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-XmageColorMode-MONO = 3--><!--Device-XmageColorMode-MONO = 3-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
-

@@ -4,7 +4,7 @@ Describes the details of the child components in the visible area of a list.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface VisibleListContentInfo--><!--Device-unnamed-declare interface VisibleListContentInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Index of the list item or list item group in the list display area.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-VisibleListContentInfo-index: number--><!--Device-VisibleListContentInfo-index: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ Position of the top or bottom edge of the viewport in the list item group to whi
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-VisibleListContentInfo-itemGroupArea?: ListItemGroupArea--><!--Device-VisibleListContentInfo-itemGroupArea?: ListItemGroupArea-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,11 +65,10 @@ Index of the starting or ending list item in the list item group to which the to
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-VisibleListContentInfo-itemIndexInGroup?: number--><!--Device-VisibleListContentInfo-itemIndexInGroup?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 Enumerates the device types.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-audio-enum DeviceType--><!--Device-audio-enum DeviceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -16,9 +16,9 @@ ACCESSORY = 26
 
 Accessory devices, such as the mic on remote control.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-DeviceType-ACCESSORY = 26--><!--Device-DeviceType-ACCESSORY = 26-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -32,9 +32,9 @@ BLUETOOTH_SPP = 33
 
 Bluetooth device using the spp profile.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-DeviceType-BLUETOOTH_SPP = 33--><!--Device-DeviceType-BLUETOOTH_SPP = 33-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -48,11 +48,10 @@ NEARLINK_PORT = 34
 
 Nearlink port.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-DeviceType-NEARLINK_PORT = 34--><!--Device-DeviceType-NEARLINK_PORT = 34-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
-

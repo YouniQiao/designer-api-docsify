@@ -4,7 +4,7 @@ Defines modal transition type.
 
 **Since:** 10
 
-<!--Device-unnamed-declare enum ModalTransition--><!--Device-unnamed-declare enum ModalTransition-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Use default animation. Upward animation when entering and downward animation whe
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ModalTransition-DEFAULT = 0--><!--Device-ModalTransition-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Use none animation.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ModalTransition-NONE = 1--><!--Device-ModalTransition-NONE = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ Opacity gradient animation for the modal.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ModalTransition-ALPHA = 2--><!--Device-ModalTransition-ALPHA = 2-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-jsonx-export interface JsonElementDeserializable--><!--Device-jsonx-export interface JsonElementDeserializable-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,17 +23,14 @@ fromJSON(jsonElem: JsonElement): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-JsonElementDeserializable-fromJSON(jsonElem: JsonElement): void--><!--Device-JsonElementDeserializable-fromJSON(jsonElem: JsonElement): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| jsonElem | [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | 是 | 待反序列化的JsonElement。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| jsonElem | [JsonElement](arkts-arkts-jsonx-jsonelement-c.md) | 是 |

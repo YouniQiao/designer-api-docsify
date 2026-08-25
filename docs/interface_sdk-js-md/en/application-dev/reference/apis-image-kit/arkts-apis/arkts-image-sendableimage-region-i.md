@@ -6,7 +6,7 @@ Describes the region information. It inherits from [lang.ISendable](../../../ark
 
 **Since:** 12
 
-<!--Device-sendableImage-interface Region--><!--Device-sendableImage-interface Region-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -28,11 +28,11 @@ Region size.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-Region-size: Size--><!--Device-Region-size: Size-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -48,11 +48,11 @@ X coordinate, in px.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-Region-x: number--><!--Device-Region-x: number-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -68,11 +68,10 @@ Y coordinate, in px.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-Region-y: number--><!--Device-Region-y: number-End-->
-
 **System capability:** SystemCapability.Multimedia.Image.Core
-

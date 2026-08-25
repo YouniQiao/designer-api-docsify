@@ -1,10 +1,6 @@
 # RegExpMatchArray
 
-**Inheritance/Implementation:** RegExpMatchArray extends Array<string>
-
-**Since:** -1
-
-<!--Device-unnamed-interface RegExpMatchArray--><!--Device-unnamed-interface RegExpMatchArray-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -21,9 +17,7 @@ The first match. This will always be present because `null` will be returned if 
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-RegExpMatchArray-0: string--><!--Device-RegExpMatchArray-0: string-End-->
+**ArkTS mode:** 
 
 ## index
 
@@ -35,9 +29,7 @@ The index of the search at which the result was found.
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-RegExpMatchArray-index?: number--><!--Device-RegExpMatchArray-index?: number-End-->
+**ArkTS mode:** 
 
 ## input
 
@@ -49,7 +41,4 @@ A copy of the search string.
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-RegExpMatchArray-input?: string--><!--Device-RegExpMatchArray-input?: string-End-->
-
+**ArkTS mode:** 

@@ -6,7 +6,7 @@ Define configuration of the open VPN network.
 
 **Since:** 12
 
-<!--Device-vpn-export interface OpenVpnConfig--><!--Device-vpn-export interface OpenVpnConfig-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -30,7 +30,7 @@ The ask pass for the openvpn VPN network.
 
 **Since:** 12
 
-<!--Device-OpenVpnConfig-askpass?: string--><!--Device-OpenVpnConfig-askpass?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -39,16 +39,16 @@ The ask pass for the openvpn VPN network.
 ## ovpnAuthType
 
 ```TypeScript
-ovpnAuthType?: int
+ovpnAuthType?: number
 ```
 
 The auth type for the openvpn VPN network.
 
-**Type:** int
+**Type:** number
 
 **Since:** 12
 
-<!--Device-OpenVpnConfig-ovpnAuthType?: int--><!--Device-OpenVpnConfig-ovpnAuthType?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -66,7 +66,7 @@ The ca cert file path for the openvpn VPN network.
 
 **Since:** 12
 
-<!--Device-OpenVpnConfig-ovpnCaCertFilePath?: string--><!--Device-OpenVpnConfig-ovpnCaCertFilePath?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -84,7 +84,7 @@ The config for the openvpn VPN network.
 
 **Since:** 12
 
-<!--Device-OpenVpnConfig-ovpnConfig?: string--><!--Device-OpenVpnConfig-ovpnConfig?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -102,7 +102,7 @@ The config file path for the openvpn VPN network.
 
 **Since:** 12
 
-<!--Device-OpenVpnConfig-ovpnConfigFilePath?: string--><!--Device-OpenVpnConfig-ovpnConfigFilePath?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -120,7 +120,7 @@ The port for the openvpn VPN network.
 
 **Since:** 12
 
-<!--Device-OpenVpnConfig-ovpnPort?: string--><!--Device-OpenVpnConfig-ovpnPort?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -138,7 +138,7 @@ The private key file path for the openvpn VPN network.
 
 **Since:** 12
 
-<!--Device-OpenVpnConfig-ovpnPrivateKeyFilePath?: string--><!--Device-OpenVpnConfig-ovpnPrivateKeyFilePath?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -147,16 +147,16 @@ The private key file path for the openvpn VPN network.
 ## ovpnProtocol
 
 ```TypeScript
-ovpnProtocol?: int
+ovpnProtocol?: number
 ```
 
 The protocol for the openvpn VPN network.
 
-**Type:** int
+**Type:** number
 
 **Since:** 12
 
-<!--Device-OpenVpnConfig-ovpnProtocol?: int--><!--Device-OpenVpnConfig-ovpnProtocol?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -174,9 +174,8 @@ The user cert file path for the openvpn VPN network.
 
 **Since:** 12
 
-<!--Device-OpenVpnConfig-ovpnUserCertFilePath?: string--><!--Device-OpenVpnConfig-ovpnUserCertFilePath?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
-

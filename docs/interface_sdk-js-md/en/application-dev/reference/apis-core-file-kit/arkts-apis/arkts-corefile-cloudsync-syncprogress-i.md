@@ -2,9 +2,9 @@
 
 Represents information about the device-cloud sync progress.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-cloudSync-interface SyncProgress--><!--Device-cloudSync-interface SyncProgress-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -24,9 +24,9 @@ Sync error.
 
 **Type:** ErrorType
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SyncProgress-error: ErrorType--><!--Device-SyncProgress-error: ErrorType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -40,9 +40,8 @@ Device-cloud sync state.
 
 **Type:** [SyncState](arkts-corefile-cloudsync-syncstate-e.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SyncProgress-state: SyncState--><!--Device-SyncProgress-state: SyncState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-

@@ -4,7 +4,7 @@ Describes the information about the resource request sent by the **Web** compone
 
 **Since:** 12
 
-<!--Device-webview-interface RequestInfo--><!--Device-webview-interface RequestInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -26,9 +26,9 @@ Form data in the request body.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-RequestInfo-formData: string--><!--Device-RequestInfo-formData: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -44,9 +44,9 @@ Method of the request.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-RequestInfo-method: string--><!--Device-RequestInfo-method: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -62,9 +62,8 @@ URL of the request.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-RequestInfo-url: string--><!--Device-RequestInfo-url: string-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

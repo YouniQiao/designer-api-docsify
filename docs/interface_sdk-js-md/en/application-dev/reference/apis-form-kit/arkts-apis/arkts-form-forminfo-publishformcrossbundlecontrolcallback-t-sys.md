@@ -8,9 +8,9 @@ publish form cross bundle control callback.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-formInfo-type PublishFormCrossBundleControlCallback = (info: PublishFormCrossBundleInfo) => boolean--><!--Device-formInfo-type PublishFormCrossBundleControlCallback = (info: PublishFormCrossBundleInfo) => boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -18,15 +18,15 @@ publish form cross bundle control callback.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| info | [PublishFormCrossBundleInfo](arkts-form-forminfo-publishformcrossbundleinfo-i-sys.md) | Yes | Publish form cross bundle info. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| info | [PublishFormCrossBundleInfo](arkts-form-forminfo-publishformcrossbundleinfo-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Publish form cross bundle control result, true indicates success, false indicates failure. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -39,4 +39,3 @@ let publishFormCrossBundleControlCallback: formInfo.PublishFormCrossBundleContro
     return true;
   };
 ```
-

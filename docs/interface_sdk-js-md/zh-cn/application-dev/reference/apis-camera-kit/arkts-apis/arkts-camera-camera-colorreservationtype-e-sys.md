@@ -2,9 +2,9 @@
 
 Enumerates the color reservation types.
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-camera-enum ColorReservationType--><!--Device-camera-enum ColorReservationType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -18,9 +18,9 @@ NONE = 0
 
 No color reservation.
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-ColorReservationType-NONE = 0--><!--Device-ColorReservationType-NONE = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -34,11 +34,10 @@ PORTRAIT = 1
 
 Portrait color reservation.
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-ColorReservationType-PORTRAIT = 1--><!--Device-ColorReservationType-PORTRAIT = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
-

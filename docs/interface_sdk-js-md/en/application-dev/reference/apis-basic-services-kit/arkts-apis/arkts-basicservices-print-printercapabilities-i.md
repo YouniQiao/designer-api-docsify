@@ -2,9 +2,9 @@
 
 Defines the printer capabilities.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-print-interface PrinterCapabilities--><!--Device-print-interface PrinterCapabilities-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -24,9 +24,9 @@ Printer capability details.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrinterCapabilities-options?: string--><!--Device-PrinterCapabilities-options?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -40,9 +40,9 @@ List of color modes supported by the printer.
 
 **Type:** Array&lt;[PrintColorMode](arkts-basicservices-print-printcolormode-e.md)&gt;
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrinterCapabilities-supportedColorModes: Array<PrintColorMode>--><!--Device-PrinterCapabilities-supportedColorModes: Array<PrintColorMode>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -56,9 +56,9 @@ List of single- and double-sided modes supported by the printer.
 
 **Type:** Array&lt;[PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)&gt;
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrinterCapabilities-supportedDuplexModes: Array<PrintDuplexMode>--><!--Device-PrinterCapabilities-supportedDuplexModes: Array<PrintDuplexMode>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -72,9 +72,9 @@ List of paper types supported by the printer.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrinterCapabilities-supportedMediaTypes?: Array<string>--><!--Device-PrinterCapabilities-supportedMediaTypes?: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -88,9 +88,9 @@ List of print directions supported by the printer.
 
 **Type:** Array&lt;[PrintOrientationMode](arkts-basicservices-print-printorientationmode-e.md)&gt;
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrinterCapabilities-supportedOrientations?: Array<PrintOrientationMode>--><!--Device-PrinterCapabilities-supportedOrientations?: Array<PrintOrientationMode>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -104,9 +104,9 @@ List of paper sizes supported by the printer.
 
 **Type:** Array&lt;[PrintPageSize](arkts-basicservices-print-printpagesize-i.md)&gt;
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrinterCapabilities-supportedPageSizes: Array<PrintPageSize>--><!--Device-PrinterCapabilities-supportedPageSizes: Array<PrintPageSize>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -120,9 +120,9 @@ List of print quality supported by the printer.
 
 **Type:** Array&lt;[PrintQuality](arkts-basicservices-print-printquality-e.md)&gt;
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrinterCapabilities-supportedQualities?: Array<PrintQuality>--><!--Device-PrinterCapabilities-supportedQualities?: Array<PrintQuality>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -138,9 +138,9 @@ Ability to configure job vendor-specific attributes.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-PrinterCapabilities-vendorJobAttrAbility?: string--><!--Device-PrinterCapabilities-vendorJobAttrAbility?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -156,9 +156,8 @@ Ability to configure printer vendor-specific preferences.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PrinterCapabilities-vendorPrinterPrefAbility?: string--><!--Device-PrinterCapabilities-vendorPrinterPrefAbility?: string-End-->
-
 **System capability:** SystemCapability.Print.PrintFramework
-

@@ -2,11 +2,8 @@
 
 ## Summary
 
-<!--Del-->
-### Enums(System API)
+### Enums
 
-| Name | Description |
-| --- | --- |
-| [AutoFillTriggerType](arkts-ability-autofilltriggertype-e-sys.md) | This module specifies how the autofill service is triggered, based on different user gestures. |
-<!--DelEnd-->
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AutoFillTriggerType](arkts-ability-autofilltriggertype-e.md) |

@@ -4,7 +4,7 @@ Album operation attribute.
 
 **Since:** 26.0.0
 
-<!--Device-photoAccessHelper-enum AlbumAttribute--><!--Device-photoAccessHelper-enum AlbumAttribute-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -20,9 +20,9 @@ The album nickname operation attribute.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AlbumAttribute-NICK_NAME_ATTR = 'nickname'--><!--Device-AlbumAttribute-NICK_NAME_ATTR = 'nickname'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -38,9 +38,9 @@ The album extra_info operation attribute.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AlbumAttribute-EXTRA_INFO_ATTR = 'extra_info'--><!--Device-AlbumAttribute-EXTRA_INFO_ATTR = 'extra_info'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -56,9 +56,9 @@ The album is_removed operation attribute.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AlbumAttribute-IS_REMOVED_ATTR = 'is_removed'--><!--Device-AlbumAttribute-IS_REMOVED_ATTR = 'is_removed'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -74,11 +74,10 @@ The album friend_id operation attribute.
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-AlbumAttribute-FRIEND_ID_ATTR = 'friend_id'--><!--Device-AlbumAttribute-FRIEND_ID_ATTR = 'friend_id'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

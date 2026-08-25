@@ -5,9 +5,9 @@ The module provides information about a remote ability, which can be obtained th
 > **NOTE：**&gt;
 > The APIs provided by this module are system APIs.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export interface RemoteAbilityInfo--><!--Device-unnamed-export interface RemoteAbilityInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 
@@ -23,9 +23,9 @@ Element name information of the remote ability.
 
 **Type:** [ElementName](arkts-ability-elementname-i.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-RemoteAbilityInfo-readonly elementName: ElementName--><!--Device-RemoteAbilityInfo-readonly elementName: ElementName-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 
@@ -41,9 +41,9 @@ Icon of the remote ability.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-RemoteAbilityInfo-readonly icon: string--><!--Device-RemoteAbilityInfo-readonly icon: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 
@@ -59,11 +59,10 @@ Label of the remote ability.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-RemoteAbilityInfo-readonly label: string--><!--Device-RemoteAbilityInfo-readonly label: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 
 **System API:** This is a system API.
-

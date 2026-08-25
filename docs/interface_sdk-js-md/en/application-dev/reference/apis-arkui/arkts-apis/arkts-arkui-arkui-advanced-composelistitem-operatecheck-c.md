@@ -4,7 +4,7 @@ Defines the type where the element on the right of the **ComposeListItem** compo
 
 **Since:** 10
 
-<!--Device-unnamed-export declare class OperateCheck--><!--Device-unnamed-export declare class OperateCheck-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -13,6 +13,32 @@ Defines the type where the element on the right of the **ComposeListItem** compo
 ```TypeScript
 import { ComposeListItem, ContentItem, IconType, OperateButton, OperateCheck, OperateIcon, OperateItem } from '@kit.ArkUI';
 ```
+
+## onChange
+
+```TypeScript
+onChange?: (value: boolean) => void
+```
+
+Callback invoked when the selected state of the switch, check box, or radio button on the right is changed.  
+**true**: from not selected to selected.  
+**false**: from selected to not selected.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | boolean | Yes |
 
 ## accessibilityDescription
 
@@ -26,11 +52,11 @@ Accessible description of the switch, check box, or radio button on the right. Y
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-OperateCheck-accessibilityDescription?: ResourceStr--><!--Device-OperateCheck-accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,11 +78,11 @@ Accessibility level of the switch, check box, or radio button on the right. It d
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-OperateCheck-accessibilityLevel?: string--><!--Device-OperateCheck-accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +98,11 @@ Accessibility text, that is, accessible label name, of the switch, check box, or
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-OperateCheck-accessibilityText?: ResourceStr--><!--Device-OperateCheck-accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,33 +120,10 @@ Whether the switch, check box, or radio button on the right is selected.Default 
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-OperateCheck-isCheck?: boolean--><!--Device-OperateCheck-isCheck?: boolean-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onChange
-
-```TypeScript
-onChange?: (value: boolean) => void
-```
-
-Callback invoked when the selected state of the switch, check box, or radio button on the right is changed.  
-**true**: from not selected to selected.  
-**false**: from selected to not selected.
-
-**Type:** (value: boolean) =&gt; void
-
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-OperateCheck-onChange?: (value: boolean) => void--><!--Device-OperateCheck-onChange?: (value: boolean) => void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

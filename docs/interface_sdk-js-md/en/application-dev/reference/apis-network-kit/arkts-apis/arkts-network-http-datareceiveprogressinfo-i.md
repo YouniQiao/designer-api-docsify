@@ -4,7 +4,7 @@ Defines the data receiving progress information.
 
 **Since:** 11
 
-<!--Device-http-export interface DataReceiveProgressInfo--><!--Device-http-export interface DataReceiveProgressInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -17,36 +17,35 @@ import { http } from '@kit.NetworkKit';
 ## receiveSize
 
 ```TypeScript
-receiveSize: int
+receiveSize: number
 ```
 
 Amount of data that has been received, in bytes.
 
-**Type:** int
+**Type:** number
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-DataReceiveProgressInfo-receiveSize: int--><!--Device-DataReceiveProgressInfo-receiveSize: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## totalSize
 
 ```TypeScript
-totalSize: int
+totalSize: number
 ```
 
 Amount of data to be received, in bytes.
 
-**Type:** int
+**Type:** number
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
-<!--Device-DataReceiveProgressInfo-totalSize: int--><!--Device-DataReceiveProgressInfo-totalSize: int-End-->
-
 **System capability:** SystemCapability.Communication.NetStack
-

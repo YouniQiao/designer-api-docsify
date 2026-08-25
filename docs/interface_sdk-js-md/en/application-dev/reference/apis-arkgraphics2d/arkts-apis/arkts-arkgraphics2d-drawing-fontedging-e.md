@@ -2,9 +2,9 @@
 
 Enumerates the font edging types.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-drawing-enum FontEdging--><!--Device-drawing-enum FontEdging-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -16,11 +16,11 @@ ALIAS = 0
 
 No anti-aliasing processing is used.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-FontEdging-ALIAS = 0--><!--Device-FontEdging-ALIAS = 0-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,11 +32,11 @@ ANTI_ALIAS = 1
 
 Uses anti-aliasing to smooth the jagged edges.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-FontEdging-ANTI_ALIAS = 1--><!--Device-FontEdging-ANTI_ALIAS = 1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -48,11 +48,10 @@ SUBPIXEL_ANTI_ALIAS = 2
 
 Uses sub-pixel anti-aliasing to provide a smoother effect for jagged edges.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-FontEdging-SUBPIXEL_ANTI_ALIAS = 2--><!--Device-FontEdging-SUBPIXEL_ANTI_ALIAS = 2-End-->
-
 **System capability:** SystemCapability.Graphics.Drawing
-

@@ -2,9 +2,9 @@
 
 网络策略参数枚举。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-cloudData-enum NetWorkStrategy--><!--Device-cloudData-enum NetWorkStrategy-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -16,9 +16,9 @@ WIFI = 1
 
 WIFI网络策略。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-NetWorkStrategy-WIFI = 1--><!--Device-NetWorkStrategy-WIFI = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -30,9 +30,8 @@ CELLULAR = 2
 
 蜂窝网络策略。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-NetWorkStrategy-CELLULAR = 2--><!--Device-NetWorkStrategy-CELLULAR = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
-

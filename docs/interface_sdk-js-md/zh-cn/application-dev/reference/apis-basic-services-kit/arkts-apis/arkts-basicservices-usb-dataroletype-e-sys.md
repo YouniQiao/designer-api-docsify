@@ -4,11 +4,11 @@
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 9
 
 **替代接口：** [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md)
-
-<!--Device-usb-export enum DataRoleType--><!--Device-usb-export enum DataRoleType-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -24,11 +24,11 @@ NONE = 0
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 9
 
 **替代接口：** [NONE](arkts-basicservices-usbmanager-dataroletype-e-sys.md#none)
-
-<!--Device-DataRoleType-NONE = 0--><!--Device-DataRoleType-NONE = 0-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -44,11 +44,11 @@ HOST = 1
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 9
 
 **替代接口：** [HOST](arkts-basicservices-usbmanager-dataroletype-e-sys.md#host)
-
-<!--Device-DataRoleType-HOST = 1--><!--Device-DataRoleType-HOST = 1-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -64,13 +64,12 @@ DEVICE = 2
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 9
 
 **替代接口：** [DEVICE](arkts-basicservices-usbmanager-dataroletype-e-sys.md#device)
 
-<!--Device-DataRoleType-DEVICE = 2--><!--Device-DataRoleType-DEVICE = 2-End-->
-
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。
-

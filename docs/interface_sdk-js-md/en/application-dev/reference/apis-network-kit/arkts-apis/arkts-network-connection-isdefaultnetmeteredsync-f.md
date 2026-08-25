@@ -17,25 +17,25 @@ Checks whether the data traffic over the current network is metered. For example
 
 **Since:** 10
 
-**Required permissions:** ohos.permission.GET_NETWORK_INFO
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-connection-function isDefaultNetMeteredSync(): boolean--><!--Device-connection-function isDefaultNetMeteredSync(): boolean-End-->
+**Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Boolean value indicating whether data traffic over the current network is metered. The value **true** indicates that the data traffic is metered, and the value **false** indicates the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
 **Examples**
 
@@ -44,4 +44,3 @@ import { connection } from '@kit.NetworkKit';
 
 let isMetered = connection.isDefaultNetMeteredSync();
 ```
-

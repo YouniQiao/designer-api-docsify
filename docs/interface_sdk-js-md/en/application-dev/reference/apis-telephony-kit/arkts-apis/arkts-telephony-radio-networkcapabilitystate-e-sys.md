@@ -2,9 +2,9 @@
 
 Enum for network capability state.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-radio-export enum NetworkCapabilityState--><!--Device-radio-export enum NetworkCapabilityState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -18,9 +18,9 @@ SERVICE_CAPABILITY_OFF = 0
 
 Indicates turn off network switch.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-NetworkCapabilityState-SERVICE_CAPABILITY_OFF = 0--><!--Device-NetworkCapabilityState-SERVICE_CAPABILITY_OFF = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -34,11 +34,10 @@ SERVICE_CAPABILITY_ON = 1
 
 Indicates turn on network switch.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-NetworkCapabilityState-SERVICE_CAPABILITY_ON = 1--><!--Device-NetworkCapabilityState-SERVICE_CAPABILITY_ON = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
-

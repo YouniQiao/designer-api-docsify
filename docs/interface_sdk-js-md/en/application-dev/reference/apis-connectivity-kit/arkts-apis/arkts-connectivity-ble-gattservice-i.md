@@ -2,9 +2,9 @@
 
 Describes the Gatt service.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ble-interface GattService--><!--Device-ble-interface GattService-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -24,13 +24,13 @@ The [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) list belo
 
 **Type:** Array&lt;BLECharacteristic&gt;
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-GattService-characteristics: Array<BLECharacteristic>--><!--Device-GattService-characteristics: Array<BLECharacteristic>-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -44,13 +44,13 @@ The list of GATT services contained in the service
 
 **Type:** Array&lt;GattService&gt;
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-GattService-includeServices?: Array<GattService>--><!--Device-GattService-includeServices?: Array<GattService>-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -64,13 +64,13 @@ Indicates whether the GattService instance is primary or secondary.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-GattService-isPrimary: boolean--><!--Device-GattService-isPrimary: boolean-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -84,13 +84,12 @@ The UUID of a GattService instance
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-GattService-serviceUuid: string--><!--Device-GattService-serviceUuid: string-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

@@ -14,31 +14,31 @@ function create(config: FloatingBallConfiguration): Promise<FloatingBallControll
 
 创建闪控球控制器，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-floatingBall-function create(config: FloatingBallConfiguration): Promise<FloatingBallController>--><!--Device-floatingBall-function create(config: FloatingBallConfiguration): Promise<FloatingBallController>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| config | [FloatingBallConfiguration](arkts-arkui-floatingball-floatingballconfiguration-i.md) | 是 | 创建闪控球控制器的参数。该参数不能为空，并且构造该参数的context不能为空。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| config | [FloatingBallConfiguration](arkts-arkui-floatingball-floatingballconfiguration-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[FloatingBallController](arkts-arkui-floatingball-floatingballcontroller-i.md)&gt; | Promise对象。返回当前创建的闪控球控制器。 |
+| 类型 |
+| --- |
+| Promise&lt;[FloatingBallController](arkts-arkui-floatingball-floatingballcontroller-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) | Wrong parameters for operating the floating ball. Possible causes: <br>1.The context parameter is null. <br>2.The FloatingBallConfiguration parameter is null. |
-| [1300023](../errorcode-window.md#1300023-闪控球内部错误) | Floating ball internal error. Possible causes: <br>1.The application context or main window is invalid. <br>2.System internal error, such as null pointer or insufficient memory. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) |
+| [1300023](../errorcode-window.md#1300023-闪控球内部错误) |
 
 **示例**
 
@@ -64,4 +64,3 @@ try {
   console.error(`Failed to create floating ball controller. Cause:${e.code}, message:${e.message}`);
 }
 ```
-

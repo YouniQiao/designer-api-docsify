@@ -14,24 +14,24 @@ function begin(name: string, flags?: int): HiTraceId
 
 Starts call chain trace. This API returns the result synchronously.If the current thread's TLS does not contain a valid HiTrace ID, this function generates one, stores it in TLS, and returns it.If the current thread's TLS already contains a valid HiTrace ID, this function does not start tracing and returns an invalid HiTrace ID with all property values being 0.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-hiTraceChain-function begin(name: string, flags?: int): HiTraceId--><!--Device-hiTraceChain-function begin(name: string, flags?: int): HiTraceId-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Traced service name. It is recommended that the length of this parameter be less than or equal to 63 bytes. The excess part will be truncated. |
-| flags | int | No | Trace flag combination. For details, see [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md). The default value is **0**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| flags | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | HiTraceId** instance. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) |
 
 **Examples**
 
@@ -41,4 +41,3 @@ let traceId = hiTraceChain.begin("business", hiTraceChain.HiTraceFlag.INCLUDE_AS
 // End the call chain trace after the service logic is executed for several times.
 hiTraceChain.end(traceId);
 ```
-

@@ -14,26 +14,26 @@ function getDistanceBetweenLocations(location1: Location, location2: Location): 
 
 Obtains the distance between two locations.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-geoLocationManager-function getDistanceBetweenLocations(location1: Location, location2: Location): double--><!--Device-geoLocationManager-function getDistanceBetweenLocations(location1: Location, location2: Location): double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Location.Location.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| location1 | Location | Yes | Indicates first location. |
-| location2 | Location | Yes | Indicates second location. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| location1 | [Location](arkts-location-geolocationmanager-location-i.md) | Yes |
+| location2 | [Location](arkts-location-geolocationmanager-location-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | Returns the distance between two locations. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **Examples**
 
@@ -69,4 +69,3 @@ try {
   console.error("getDistanceBetweenLocations: errCode" + error.code + ", errMessage" + error.message);
 }
 ```
-

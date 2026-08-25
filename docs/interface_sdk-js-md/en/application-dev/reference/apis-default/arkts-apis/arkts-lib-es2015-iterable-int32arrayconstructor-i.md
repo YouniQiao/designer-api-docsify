@@ -1,34 +1,30 @@
 # Int32ArrayConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface Int32ArrayConstructor--><!--Device-unnamed-interface Int32ArrayConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
+## [[Construct]]
 
 ```TypeScript
 new (elements: Iterable<number>): Int32Array
 ```
 
-**Since:** -1
-
-<!--Device-Int32ArrayConstructor-new (elements: Iterable<number>): Int32Array--><!--Device-Int32ArrayConstructor-new (elements: Iterable<number>): Int32Array-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| elements | Iterable&lt;number&gt; | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [elements](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-pagemediaentity-i.md) | Iterable & lt;number & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## from
 
 ```TypeScript
@@ -37,19 +33,17 @@ from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, this
 
 Creates an array from an array-like or iterable object.
 
-**Since:** -1
-
-<!--Device-Int32ArrayConstructor-from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Int32Array--><!--Device-Int32ArrayConstructor-from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Int32Array-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arrayLike | Iterable&lt;number&gt; | Yes |  |
-| mapfn | (v: number, k: number) =&gt; number | No |  |
-| thisArg | any | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arrayLike | Iterable & lt;number & gt; | Yes |
+| mapfn | (v: number, k: number) = & gt; number | No |
+| thisArg | any | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

@@ -4,7 +4,7 @@ Sets the color of the mask.
 
 **Since:** 18
 
-<!--Device-unnamed-declare interface PopupMaskType--><!--Device-unnamed-declare interface PopupMaskType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,10 @@ Color of the mask.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-PopupMaskType-color: ResourceColor--><!--Device-PopupMaskType-color: ResourceColor-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -1,5 +1,11 @@
 # @system.package
 
+> **NOTE**
+ >
+ > - The APIs of this module have been deprecated since API version 9. You are advised to use
+ > [@ohos.bundle.bundleManager](arkts-bundle-bundlemanager.md) instead.
+
+
 ## Modules to Import
 
 ```TypeScript
@@ -10,14 +16,13 @@ import { Package, CheckPackageHasInstalledOptions, CheckPackageHasInstalledRespo
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Package](arkts-ability-system-package-package-c.md) | > **NOTE：**&gt; > This API has been supported since API version 3 and deprecated since API version 9. Checks whether a bundle has been installed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Package](arkts-ability-system-package-package-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [CheckPackageHasInstalledOptions](arkts-ability-system-package-checkpackagehasinstalledoptions-i.md) | > **NOTE：**&gt; > This API has been supported since API version 3 and deprecated since API version 9. Checks whether a bundle has been installed. |
-| [CheckPackageHasInstalledResponse](arkts-ability-system-package-checkpackagehasinstalledresponse-i.md) | > **NOTE：**&gt; > This API has been supported since API version 3 and deprecated since API version 9. Checks whether a bundle has been installed. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CheckPackageHasInstalledOptions](arkts-ability-system-package-checkpackagehasinstalledoptions-i.md) |
+| [CheckPackageHasInstalledResponse](arkts-ability-system-package-checkpackagehasinstalledresponse-i.md) |

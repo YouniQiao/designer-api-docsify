@@ -2,9 +2,9 @@
 
 Describes the scanned Wi-Fi information.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-wifiManager-interface WifiScanInfo--><!--Device-wifiManager-interface WifiScanInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -24,11 +24,10 @@ Whether the Wi-Fi hotspot is HiLinkPro network.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-WifiScanInfo-isHiLinkProNetwork?: boolean--><!--Device-WifiScanInfo-isHiLinkProNetwork?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
-

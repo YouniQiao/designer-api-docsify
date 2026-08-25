@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-securityGuard-interface SecurityEvent--><!--Device-securityGuard-interface SecurityEvent-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 
@@ -28,7 +28,7 @@ content: string
 
 **起始版本：** 12
 
-<!--Device-SecurityEvent-content: string--><!--Device-SecurityEvent-content: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 
@@ -46,7 +46,7 @@ eventId: number
 
 **起始版本：** 12
 
-<!--Device-SecurityEvent-eventId: number--><!--Device-SecurityEvent-eventId: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 
@@ -64,7 +64,7 @@ timestamp?: string
 
 **起始版本：** 12
 
-<!--Device-SecurityEvent-timestamp?: string--><!--Device-SecurityEvent-timestamp?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 
@@ -82,9 +82,8 @@ version: string
 
 **起始版本：** 12
 
-<!--Device-SecurityEvent-version: string--><!--Device-SecurityEvent-version: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 
 **系统接口：** 此接口为系统接口。
-

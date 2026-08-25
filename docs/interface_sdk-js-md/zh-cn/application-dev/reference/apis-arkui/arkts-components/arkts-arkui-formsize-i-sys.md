@@ -4,7 +4,7 @@
 
 **起始版本：** 18
 
-<!--Device-unnamed-interface FormSize--><!--Device-unnamed-interface FormSize-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,7 +28,7 @@ height: number
 
 **起始版本：** 18
 
-<!--Device-FormSize-height: number--><!--Device-FormSize-height: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,9 +47,8 @@ width: number
 
 **起始版本：** 18
 
-<!--Device-FormSize-width: number--><!--Device-FormSize-width: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
-

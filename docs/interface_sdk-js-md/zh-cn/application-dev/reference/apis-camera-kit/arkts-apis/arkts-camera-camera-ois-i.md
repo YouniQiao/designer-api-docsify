@@ -6,7 +6,7 @@ OIS (Optical Image Stabilization) interface.
 
 **起始版本：** 24
 
-<!--Device-camera-interface OIS--><!--Device-camera-interface OIS-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -26,29 +26,35 @@ Sets the OIS mode.
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-OIS-setOISMode(mode: OISMode): void--><!--Device-OIS-setOISMode(mode: OISMode): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mode | [OISMode](arkts-camera-camera-oismode-e.md) | 是 | The OIS mode to set. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mode | [OISMode](arkts-camera-camera-oismode-e.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 错误码ID |
+| --- |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 ## setOISModeCustom
 
+ArkTS-Dyn:
+```TypeScript
+setOISModeCustom(pitch: number, yaw: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setOISModeCustom(pitch: double, yaw: double): void
 ```
@@ -57,25 +63,24 @@ Sets custom OIS bias values for each axis.
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-OIS-setOISModeCustom(pitch: double, yaw: double): void--><!--Device-OIS-setOISModeCustom(pitch: double, yaw: double): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pitch | double | 是 | Bias value for pitch axis. |
-| yaw | double | 是 | Bias value for yaw axis. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pitch | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| yaw | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-
+| 错误码ID |
+| --- |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |

@@ -4,12 +4,12 @@ Provides the capability to control text menus.
 
 > **NOTE：**&gt;
 > - In the following non-static API examples, you must first use
-> [getTextMenuController()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#gettextmenucontroller) in **UIContext** to obtain a
+> [getTextMenuController()](arkts-arkui-arkui-uicontext-uicontext-c.md#gettextmenucontroller) in **UIContext** to obtain a
 > **TextMenuController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 16
 
-<!--Device-unnamed-export class TextMenuController--><!--Device-unnamed-export class TextMenuController-End-->
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,19 +58,19 @@ Disables specified system service menu items in the text selection menu.
 
 **Since:** 20
 
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-TextMenuController-static disableMenuItems(items: Array<TextMenuItemId>): void--><!--Device-TextMenuController-static disableMenuItems(items: Array<TextMenuItemId>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| items | Array&lt;TextMenuItemId&gt; | Yes | List of menu items to disable. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| items | Array & lt;TextMenuItemId & gt; | Yes |
 
 **Examples**
 
@@ -147,19 +147,19 @@ Disables all system service menu items in the text selection menu.
 
 **Since:** 20
 
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-TextMenuController-static disableSystemServiceMenuItems(disable: boolean): void--><!--Device-TextMenuController-static disableSystemServiceMenuItems(disable: boolean): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| disable | boolean | Yes | Whether to disable system service menu items. The value **true** means to disable system service menu items, and **false** means the opposite. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| disable | boolean | Yes |
 
 **Examples**
 
@@ -215,19 +215,19 @@ Sets menu options.
 
 **Since:** 16
 
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 16.
-
-<!--Device-TextMenuController-setMenuOptions(options: TextMenuOptions): void--><!--Device-TextMenuController-setMenuOptions(options: TextMenuOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | TextMenuOptions | Yes | Menu options. <br>Default value: {showMode: TextMenuShowMode.DEFAULT}. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [TextMenuOptions](arkts-arkui-textcommon-textmenuoptions-i.md) | Yes |
 
 **Examples**
 
@@ -269,4 +269,3 @@ struct Index {
   }
 }
 ```
-

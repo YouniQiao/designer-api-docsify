@@ -4,7 +4,7 @@ Watermark handling result.
 
 **Since:** 24
 
-<!--Device-print-enum WatermarkHandleResult--><!--Device-print-enum WatermarkHandleResult-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -18,9 +18,9 @@ Watermark handling success.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-WatermarkHandleResult-WATERMARK_HANDLE_SUCCESS = 0--><!--Device-WatermarkHandleResult-WATERMARK_HANDLE_SUCCESS = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -34,9 +34,8 @@ Watermark handling failure.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WatermarkHandleResult-WATERMARK_HANDLE_FAILURE = 1--><!--Device-WatermarkHandleResult-WATERMARK_HANDLE_FAILURE = 1-End-->
-
 **System capability:** SystemCapability.Print.PrintFramework
-

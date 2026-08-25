@@ -2,9 +2,9 @@
 
 表示获取证书存储位置的参数集合，包括证书的类型及证书的位置。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-certificateManager-export interface CertStoreProperty--><!--Device-certificateManager-export interface CertStoreProperty-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -24,9 +24,9 @@ certAlg?: CertAlgorithm
 
 **类型：** [CertAlgorithm](arkts-devicecertificate-certificatemanager-certalgorithm-e.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-CertStoreProperty-certAlg?: CertAlgorithm--><!--Device-CertStoreProperty-certAlg?: CertAlgorithm-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -40,9 +40,9 @@ certScope?: CertScope
 
 **类型：** [CertScope](arkts-devicecertificate-certificatemanager-certscope-e.md)
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-CertStoreProperty-certScope?: CertScope--><!--Device-CertStoreProperty-certScope?: CertScope-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -56,9 +56,8 @@ certType: CertType
 
 **类型：** CertType
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-CertStoreProperty-certType: CertType--><!--Device-CertStoreProperty-certType: CertType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
-

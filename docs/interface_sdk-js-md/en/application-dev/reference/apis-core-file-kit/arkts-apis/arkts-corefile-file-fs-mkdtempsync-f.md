@@ -18,45 +18,44 @@ Creates a temporary directory. This API returns the result synchronously.
 
 **Since:** 9
 
-<!--Device-unnamed-declare function mkdtempSync(prefix: string): string--><!--Device-unnamed-declare function mkdtempSync(prefix: string): string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| prefix | string | Yes | String to be replaced with six randomly generated characters to create a unique temporary directory. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| prefix | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Unique directory generated. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900020 | Invalid argument |
-| 13900025 | No space left on device |
-| 13900028 | Too many links |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900015 |
+| 13900018 |
+| 13900020 |
+| 13900025 |
+| 13900028 |
+| 13900030 |
+| 13900033 |
+| 13900041 |
+| 13900042 |
 
 **Examples**
 
 ```TypeScript
 let res = fs.mkdtempSync(pathDir + "/XXXXXX");
 ```
-

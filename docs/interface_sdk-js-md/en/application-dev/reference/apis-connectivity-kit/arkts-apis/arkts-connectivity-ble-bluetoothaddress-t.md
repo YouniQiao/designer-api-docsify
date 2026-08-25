@@ -8,11 +8,10 @@ Bluetooth device address.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-ble-type BluetoothAddress = common.BluetoothAddress--><!--Device-ble-type BluetoothAddress = common.BluetoothAddress-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Property type:** common.BluetoothAddress
-

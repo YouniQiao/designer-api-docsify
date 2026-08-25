@@ -2,9 +2,9 @@
 
 Enum for GNSS fence type.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-<!--Device-geoLocationManager-export enum GnssFenceType--><!--Device-geoLocationManager-export enum GnssFenceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -18,11 +18,11 @@ POLYGON = 1
 
 Indicates the polygon fence.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GnssFenceType-POLYGON = 1--><!--Device-GnssFenceType-POLYGON = 1-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -36,13 +36,12 @@ CIRCULAR = 2
 
 Indicates the circular fence.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GnssFenceType-CIRCULAR = 2--><!--Device-GnssFenceType-CIRCULAR = 2-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **System API:** This is a system API.
-

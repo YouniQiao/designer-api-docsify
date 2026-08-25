@@ -1,134 +1,19 @@
 # Offset
 
 ```TypeScript
-declare type Offset = {
-  /**
-   * dx property.
-   *
-   * @type { Length }
-   * @syscap SystemCapability.ArkUI.ArkUI.Full
-   * @FaAndStageModel
-   * @since 7
-   */
-  /**
-   * dx property.
-   *
-   * @type { Length }
-   * @syscap SystemCapability.ArkUI.ArkUI.Full
-   * @FaAndStageModel
-   * @crossplatform
-   * @since 10
-   */
-  /**
-   * dx property.
-   *
-   * @type { Length }
-   * @syscap SystemCapability.ArkUI.ArkUI.Full
-   * @FaAndStageModel
-   * @crossplatform
-   * @atomicservice
-   * @since 11
-   */
-  dx: Length;
-
-  /**
-   * dy property.
-   *
-   * @type { Length }
-   * @syscap SystemCapability.ArkUI.ArkUI.Full
-   * @FaAndStageModel
-   * @since 7
-   */
-  /**
-   * dy property.
-   *
-   * @type { Length }
-   * @syscap SystemCapability.ArkUI.ArkUI.Full
-   * @FaAndStageModel
-   * @crossplatform
-   * @since 10
-   */
-  /**
-   * dy property.
-   *
-   * @type { Length }
-   * @syscap SystemCapability.ArkUI.ArkUI.Full
-   * @FaAndStageModel
-   * @crossplatform
-   * @atomicservice
-   * @since 11
-   */
-  dy: Length;
-}
+export type Offset = Vector2
 ```
 
-Defines the offset property.
+Sets the offset of the component or effect.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-unnamed-declare type Offset = {  /**   * dx property.   *   * @type { Length }   * @syscap SystemCapability.ArkUI.ArkUI.Full   * @FaAndStageModel   * @since 7   */  /**   * dx property.   *   * @type { Length }   * @syscap SystemCapability.ArkUI.ArkUI.Full   * @FaAndStageModel   * @crossplatform   * @since 10   */  /**   * dx property.   *   * @type { Length }   * @syscap SystemCapability.ArkUI.ArkUI.Full   * @FaAndStageModel   * @crossplatform   * @atomicservice   * @since 11   */  dx: Length;  /**   * dy property.   *   * @type { Length }   * @syscap SystemCapability.ArkUI.ArkUI.Full   * @FaAndStageModel   * @since 7   */  /**   * dy property.   *   * @type { Length }   * @syscap SystemCapability.ArkUI.ArkUI.Full   * @FaAndStageModel   * @crossplatform   * @since 10   */  /**   * dy property.   *   * @type { Length }   * @syscap SystemCapability.ArkUI.ArkUI.Full   * @FaAndStageModel   * @crossplatform   * @atomicservice   * @since 11   */  dy: Length;}--><!--Device-unnamed-declare type Offset = {  /**   * dx property.   *   * @type { Length }   * @syscap SystemCapability.ArkUI.ArkUI.Full   * @FaAndStageModel   * @since 7   */  /**   * dx property.   *   * @type { Length }   * @syscap SystemCapability.ArkUI.ArkUI.Full   * @FaAndStageModel   * @crossplatform   * @since 10   */  /**   * dx property.   *   * @type { Length }   * @syscap SystemCapability.ArkUI.ArkUI.Full   * @FaAndStageModel   * @crossplatform   * @atomicservice   * @since 11   */  dx: Length;  /**   * dy property.   *   * @type { Length }   * @syscap SystemCapability.ArkUI.ArkUI.Full   * @FaAndStageModel   * @since 7   */  /**   * dy property.   *   * @type { Length }   * @syscap SystemCapability.ArkUI.ArkUI.Full   * @FaAndStageModel   * @crossplatform   * @since 10   */  /**   * dy property.   *   * @type { Length }   * @syscap SystemCapability.ArkUI.ArkUI.Full   * @FaAndStageModel   * @crossplatform   * @atomicservice   * @since 11   */  dy: Length;}-End-->
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** {
-  /**
-   * dx property.
-   *
-   * @type { Length }
-   * @syscap SystemCapability.ArkUI.ArkUI.Full
-   * @FaAndStageModel
-   * @since 7
-   */
-  /**
-   * dx property.
-   *
-   * @type { Length }
-   * @syscap SystemCapability.ArkUI.ArkUI.Full
-   * @FaAndStageModel
-   * @crossplatform
-   * @since 10
-   */
-  /**
-   * dx property.
-   *
-   * @type { Length }
-   * @syscap SystemCapability.ArkUI.ArkUI.Full
-   * @FaAndStageModel
-   * @crossplatform
-   * @atomicservice
-   * @since 11
-   */
-  dx: Length;
-
-  /**
-   * dy property.
-   *
-   * @type { Length }
-   * @syscap SystemCapability.ArkUI.ArkUI.Full
-   * @FaAndStageModel
-   * @since 7
-   */
-  /**
-   * dy property.
-   *
-   * @type { Length }
-   * @syscap SystemCapability.ArkUI.ArkUI.Full
-   * @FaAndStageModel
-   * @crossplatform
-   * @since 10
-   */
-  /**
-   * dy property.
-   *
-   * @type { Length }
-   * @syscap SystemCapability.ArkUI.ArkUI.Full
-   * @FaAndStageModel
-   * @crossplatform
-   * @atomicservice
-   * @since 11
-   */
-  dy: Length;
-}
-
+**Property type:** [Vector2](arkts-arkui-graphics-vector2-i.md)

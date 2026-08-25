@@ -2,9 +2,9 @@
 
 A class for querying depth fusion capabilities.
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-camera-interface DepthFusionQuery--><!--Device-camera-interface DepthFusionQuery-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -18,15 +18,21 @@ import { camera } from '@kit.CameraKit';
 
 ## getDepthFusionThreshold
 
+ArkTS-Dyn:
+```TypeScript
+getDepthFusionThreshold(): Array<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getDepthFusionThreshold(): Array<double>
 ```
 
 Obtains the depth fusion threshold.
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-DepthFusionQuery-getDepthFusionThreshold(): Array<double>--><!--Device-DepthFusionQuery-getDepthFusionThreshold(): Array<double>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -34,16 +40,16 @@ Obtains the depth fusion threshold.
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;double&gt; | Depth fusion threshold. |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;double & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 **示例**
 
@@ -69,9 +75,9 @@ isDepthFusionSupported(): boolean
 
 Checks whether depth fusion is supported.
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-DepthFusionQuery-isDepthFusionSupported(): boolean--><!--Device-DepthFusionQuery-isDepthFusionSupported(): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -79,16 +85,16 @@ Checks whether depth fusion is supported.
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | Check result for the support of depth fusion. **true** if supported, **false** otherwise. |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 **示例**
 
@@ -105,4 +111,3 @@ function isDepthFusionSupported(DepthFusionQuery: camera.DepthFusionQuery): void
   }
 }
 ```
-

@@ -4,7 +4,7 @@ Represents the file system encryption status.
 
 **Since:** 11
 
-<!--Device-securityManager-export interface DeviceEncryptionStatus--><!--Device-securityManager-export interface DeviceEncryptionStatus-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -28,11 +28,10 @@ Whether the file system of the device is encrypted.The value **true** means the 
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-DeviceEncryptionStatus-isEncrypted: boolean--><!--Device-DeviceEncryptionStatus-isEncrypted: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
-

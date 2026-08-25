@@ -2,9 +2,9 @@
 
 Defines the data summary of the dragged object.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-dragInteraction-interface Summary--><!--Device-dragInteraction-interface Summary-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 
@@ -24,11 +24,11 @@ dataSize: int
 
 Data length of the dragged object.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Summary-dataSize: int--><!--Device-Summary-dataSize: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 
@@ -44,11 +44,10 @@ Type of the dragged object.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Summary-dataType: string--><!--Device-Summary-dataType: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 
 **System API:** This is a system API.
-

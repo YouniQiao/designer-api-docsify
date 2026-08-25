@@ -2,9 +2,9 @@
 
 用于表示RGBA格式的颜色，包含四个分量，依次为红色、绿色、蓝色和透明度。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export interface Color--><!--Device-unnamed-export interface Color-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -16,11 +16,11 @@ a: double
 
 透明度分量，取值范围是[0, 1]。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Color-a: double--><!--Device-Color-a: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -32,11 +32,11 @@ b: double
 
 蓝色分量，取值范围是[0, 1]。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Color-b: double--><!--Device-Color-b: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -48,11 +48,11 @@ g: double
 
 绿色分量，取值范围是[0, 1]。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Color-g: double--><!--Device-Color-g: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -64,11 +64,10 @@ r: double
 
 红色分量，取值范围是[0, 1]。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Color-r: double--><!--Device-Color-r: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

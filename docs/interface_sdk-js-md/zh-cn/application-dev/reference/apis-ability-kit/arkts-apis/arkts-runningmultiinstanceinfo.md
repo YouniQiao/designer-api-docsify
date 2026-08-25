@@ -5,8 +5,7 @@
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [RunningMultiInstanceInfo](arkts-ability-runningmultiinstanceinfo-i-sys.md) | 定义多实例应用在运行态的结构信息，通过appManager的 [getRunningMultiAppInfo](arkts-ability-appmanager-getrunningmultiappinfo-f-sys.md)来获取。 |
+| 名称 |
+| --- |
+| [RunningMultiInstanceInfo](arkts-ability-runningmultiinstanceinfo-i-sys.md) |
 <!--DelEnd-->
-

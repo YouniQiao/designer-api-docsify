@@ -20,26 +20,25 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 
 ### 命名空间
 
-| 名称 | 说明 |
-| --- | --- |
-| [promptAction](arkts-arkui-promptaction-n.md) | 创建并显示即时反馈、对话框和操作菜单，适用于系统通知、交互确认、菜单选择等场景。 |
+| 名称 |
+| --- |
+| [promptAction](arkts-arkui-promptaction-n.md) |
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 弹窗层级，可以控制弹窗显示的顺序。 |
+| 名称 |
+| --- |
+| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [DismissDialogAction](arkts-arkui-promptaction-dismissdialogaction-i.md) | Dialog关闭的信息。 |
+| 名称 |
+| --- |
+| [DismissDialogAction](arkts-arkui-promptaction-dismissdialogaction-i.md) |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-| [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md) | 页面内弹窗蒙层显示区域模式。 |
-| [LevelMode](arkts-arkui-promptaction-levelmode-e.md) | 弹窗显示层级模式。 |
-
+| 名称 |
+| --- |
+| [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md) |
+| [LevelMode](arkts-arkui-promptaction-levelmode-e.md) |

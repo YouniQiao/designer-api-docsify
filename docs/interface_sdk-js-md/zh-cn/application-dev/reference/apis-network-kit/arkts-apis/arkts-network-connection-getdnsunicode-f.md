@@ -16,30 +16,30 @@ function getDnsUnicode(host: string, flag?: ConversionProcess): string
 
 **起始版本：** 23
 
-<!--Device-connection-function getDnsUnicode(host: string, flag?: ConversionProcess): string--><!--Device-connection-function getDnsUnicode(host: string, flag?: ConversionProcess): string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| host | string | 是 | 要转换的主机名（host）。 |
-| flag | [ConversionProcess](arkts-network-connection-conversionprocess-e.md) | 否 | 转换流程参数，默认值为NO_CONFIGURATION。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| host | string | 是 |
+| flag | [ConversionProcess](arkts-network-connection-conversionprocess-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回转换结果。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
 **示例**
 
@@ -51,4 +51,3 @@ console.info("Succeeded to getDnsUnicode: " + result);  // 预期结果：www.�
 let result = connection.getDnsUnicode("www.example.com", connection.ConversionProcess.NO_CONFIGURATION);
 console.info("Succeeded to getDnsUnicode: " + result);  // 预期结果：www.example.com
 ```
-

@@ -4,7 +4,7 @@ ConvertXML representation refers to extensible markup language.
 
 **Since:** 8
 
-<!--Device-xml-class ConvertXML--><!--Device-xml-class ConvertXML-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -24,26 +24,26 @@ Converts an XML text to a JavaScript object.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [fastConvertToJSObject](#fastconverttojsobject)
-
-<!--Device-ConvertXML-convert(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-convert(xml: string, options?: ConvertOptions): Object-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| xml | string | Yes | Input XML text. |
-| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No | Options for conversion. The default value is a **ConvertOptions** object, which consists of the default values of the attributes in the object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [xml](arkts-convertxml.md) | string | Yes |
+| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Object | JavaScript object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Object |
 
 **Examples**
 
@@ -86,34 +86,34 @@ Converts an XML text to an object of the object type.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 14
 
 **Substitutes:** [fastConvertToJSObject](#fastconverttojsobject)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ConvertXML-convertToJSObject(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-convertToJSObject(xml: string, options?: ConvertOptions): Object-End-->
-
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| xml | string | Yes | If the XML text to convert contains the ampersand (&), replace it with the entity reference **&amp;**. |
-| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No | Options for conversion. The default value is a **ConvertOptions** object, which consists of the default values of the attributes in the object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [xml](arkts-convertxml.md) | string | Yes |
+| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Object | JavaScript object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Object |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid xml string. |
+| Error Code ID |
+| --- |
+| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) |
 
 **Examples**
 
@@ -166,30 +166,30 @@ Converts an XML text to an object of the object type.
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
-<!--Device-ConvertXML-fastConvertToJSObject(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-fastConvertToJSObject(xml: string, options?: ConvertOptions): Object-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| xml | string | Yes | XML text to convert. If the XML text contains the ampersand (&), replace it with the entity reference **&amp;**. |
-| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No | Options for conversion. The default value is a **ConvertOptions** object, which consists of the default values of the attributes in the object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [xml](arkts-convertxml.md) | string | Yes |
+| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Object | JavaScript object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Object |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid xml string. |
+| Error Code ID |
+| --- |
+| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) |
 
 **Examples**
 
@@ -235,32 +235,32 @@ Convert XML text to JavaScript objects, this method supports parsing large XML t
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-ConvertXML-largeConvertToJSObject(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-largeConvertToJSObject(xml: string, options?: ConvertOptions): Object-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| xml | string | Yes | XML text to convert. If the XML text contains the ampersand (&), replace it with the entity reference &amp;. |
-| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No | Options for conversion. The default value is a ConvertOptions object, which consists of the default values of the attributes in the object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [xml](arkts-convertxml.md) | string | Yes |
+| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Object | Returns a JavaScript object converting from XML text. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Object |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid xml string. |
+| Error Code ID |
+| --- |
+| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) |
 
 **Examples**
 
@@ -303,4 +303,3 @@ try {
 // Output (non-compact)
 // {"_declaration":{"_attributes":{"version":"1.0","encoding":"utf-8"}},"_elements":[{"_type":"instruction","_name":"custom-pi","_instruction":"processing=\"example\""},{"_type":"element","_name":"catalog","_attributes":{"id":"books"},"_elements":[{"_type":"comment","_comment":" Bestseller Example "},{"_type":"element","_name":"book","_parent":"catalog","_attributes":{"category":"fiction","ref":"B101"},"_elements":[{"_type":"element","_name":"title","_parent":"book","_elements":[{"_type":"text","_text":"Echoes & Whispers"}]},{"_type":"element","_name":"price","_parent":"book","_attributes":{"unit":"USD"},"_elements":[{"_type":"text","_text":"19.99"}]},{"_type":"element","_name":"descr","_parent":"book","_elements":[{"_type":"cdata","_cdata":"<b>suspense</b>novel & Legendary Stories"}]},{"_type":"element","_name":"popular","_parent":"book"}]}]}]}
 ```
-

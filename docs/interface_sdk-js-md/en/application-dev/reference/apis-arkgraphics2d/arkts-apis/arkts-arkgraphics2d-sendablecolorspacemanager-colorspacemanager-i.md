@@ -6,7 +6,7 @@ Implements management of color space objects. ColorSpaceManager is a core class 
 
 **Since:** 12
 
-<!--Device-sendableColorSpaceManager-interface ColorSpaceManager--><!--Device-sendableColorSpaceManager-interface ColorSpaceManager-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -26,21 +26,21 @@ Obtains the color space type.
 
 **Since:** 12
 
-<!--Device-ColorSpaceManager-getColorSpaceName(): colorSpaceManager.ColorSpace--><!--Device-ColorSpaceManager-getColorSpaceName(): colorSpaceManager.ColorSpace-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| colorSpaceManager.ColorSpace | Color space type. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| colorSpaceManager.ColorSpace |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 12 - 22 |
+| Error Code ID |
+| --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
 
 **Examples**
 
@@ -58,21 +58,21 @@ Obtains the gamma of the color space.
 
 **Since:** 12
 
-<!--Device-ColorSpaceManager-getGamma(): number--><!--Device-ColorSpaceManager-getGamma(): number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Gamma of the color space. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 12 - 22 |
+| Error Code ID |
+| --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
 
 **Examples**
 
@@ -90,21 +90,21 @@ Obtains the white point value of the color space. The chromaticity coordinates [
 
 **Since:** 12
 
-<!--Device-ColorSpaceManager-getWhitePoint(): collections.Array<number>--><!--Device-ColorSpaceManager-getWhitePoint(): collections.Array<number>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| collections.Array&lt;number&gt; | Coordinates [x, y] of the white point. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| collections.Array & lt;number & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 12 - 22 |
+| Error Code ID |
+| --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
 
 **Examples**
 
@@ -112,4 +112,3 @@ Obtains the white point value of the color space. The chromaticity coordinates [
 import { collections } from '@kit.ArkTS';
 let point: collections.Array<number> = colorSpace.getWhitePoint();
 ```
-

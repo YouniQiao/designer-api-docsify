@@ -4,7 +4,7 @@
 
 **起始版本：** 10
 
-<!--Device-policy-export interface QuotaPolicy--><!--Device-policy-export interface QuotaPolicy-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -19,16 +19,16 @@ import { policy } from '@kit.NetworkKit';
 ## lastLimitRemind
 
 ```TypeScript
-lastLimitRemind?: long
+lastLimitRemind?: number
 ```
 
 最新一次配额耗尽的时间。默认值：-1。
 
-**类型：** long
+**类型：** number
 
 **起始版本：** 10
 
-<!--Device-QuotaPolicy-lastLimitRemind?: long--><!--Device-QuotaPolicy-lastLimitRemind?: long-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -37,16 +37,16 @@ lastLimitRemind?: long
 ## lastWarningRemind
 
 ```TypeScript
-lastWarningRemind?: long
+lastWarningRemind?: number
 ```
 
 最新一次发出警告的时间。默认值：-1。
 
-**类型：** long
+**类型：** number
 
 **起始版本：** 10
 
-<!--Device-QuotaPolicy-lastWarningRemind?: long--><!--Device-QuotaPolicy-lastWarningRemind?: long-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -64,7 +64,7 @@ limitAction: LimitAction
 
 **起始版本：** 10
 
-<!--Device-QuotaPolicy-limitAction: LimitAction--><!--Device-QuotaPolicy-limitAction: LimitAction-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -73,16 +73,16 @@ limitAction: LimitAction
 ## limitBytes
 
 ```TypeScript
-limitBytes: long
+limitBytes: number
 ```
 
 流量设置的配额。
 
-**类型：** long
+**类型：** number
 
 **起始版本：** 10
 
-<!--Device-QuotaPolicy-limitBytes: long--><!--Device-QuotaPolicy-limitBytes: long-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -100,7 +100,7 @@ metered: boolean
 
 **起始版本：** 10
 
-<!--Device-QuotaPolicy-metered: boolean--><!--Device-QuotaPolicy-metered: boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -118,7 +118,7 @@ periodDuration: string
 
 **起始版本：** 10
 
-<!--Device-QuotaPolicy-periodDuration: string--><!--Device-QuotaPolicy-periodDuration: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -127,18 +127,17 @@ periodDuration: string
 ## warningBytes
 
 ```TypeScript
-warningBytes: long
+warningBytes: number
 ```
 
 发出警告的流量阈值。
 
-**类型：** long
+**类型：** number
 
 **起始版本：** 10
 
-<!--Device-QuotaPolicy-warningBytes: long--><!--Device-QuotaPolicy-warningBytes: long-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
-

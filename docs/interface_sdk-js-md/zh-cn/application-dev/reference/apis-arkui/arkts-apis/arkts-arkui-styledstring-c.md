@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare class StyledString--><!--Device-unnamed-declare class StyledString-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,20 +23,20 @@ constructor(value: string | ImageAttachment | CustomSpan, styles?: Array<StyleOp
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StyledString-constructor(value: string | ImageAttachment | CustomSpan, styles?: Array<StyleOptions>)--><!--Device-StyledString-constructor(value: string | ImageAttachment | CustomSpan, styles?: Array<StyleOptions>)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | string \| [ImageAttachment](arkts-arkui-imageattachment-c.md) \| [CustomSpan](arkts-arkui-customspan-c.md) | 是 | 属性字符串文本内容。 <br>**说明：** <br>当value的类型为ImageAttachment或CustomSpan时，styles参数不生效。 <br>需要设置styles时，通过[setStyle](arkts-arkui-mutablestyledstring-c.md#setstyle)等方法实现。 |
-| styles | Array&lt;[StyleOptions](arkts-arkui-styleoptions-i.md)&gt; | 否 | 属性字符串初始化选项。 <br>**说明：** <br>start为异常值时，按默认值0处理； <br>当length为异常值时，length等于属性字符串在start后的实际长度； <br>当StyledStringKey与StyledStringValue不匹配时，styles不生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | string \| [ImageAttachment](arkts-arkui-imageattachment-c.md) \| [CustomSpan](arkts-arkui-customspan-c.md) | 是 |
+| styles | Array&lt;[StyleOptions](arkts-arkui-styleoptions-i.md)&gt; | 否 |
 
 ## equals
 
@@ -48,25 +48,25 @@ equals(other: StyledString): boolean
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StyledString-equals(other: StyledString): boolean--><!--Device-StyledString-equals(other: StyledString): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [StyledString](arkts-arkui-styledstring-c.md) | 是 | StyledString类型的比较对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [StyledString](arkts-arkui-styledstring-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 两个属性字符串是否相等。 <br>true表示相等，false表示不相等。 <br>**说明：** <br>当属性字符串的文本及样式均一致，视为相等。 <br>不比较[GestureStyle]{ |
+| 类型 |
+| --- |
+| boolean |
 
 ## fromHtml
 
@@ -78,32 +78,32 @@ static fromHtml(html: string): Promise<StyledString>
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StyledString-static fromHtml(html: string): Promise<StyledString>--><!--Device-StyledString-static fromHtml(html: string): Promise<StyledString>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| html | string | 是 | html格式的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| html | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; | 属性字符串。resolve返回转换后的属性字符串；reject抛出异常。 |
+| 类型 |
+| --- |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [170001](../errorcode-styled-string.md#170001-转换错误) | Convert Error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [170001](../errorcode-styled-string.md#170001-转换错误) |
 
 ## getString
 
@@ -115,19 +115,19 @@ getString(): string
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StyledString-getString(): string--><!--Device-StyledString-getString(): string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 属性字符串文本内容。 <br>**说明：** <br>当属性字符串中包含图片或[CustomSpan]{ |
+| 类型 |
+| --- |
+| string |
 
 ## getStyles
 
@@ -139,33 +139,33 @@ getStyles(start: number, length: number, styledKey?: StyledStringKey): Array<Spa
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StyledString-getStyles(start: number, length: number, styledKey?: StyledStringKey): Array<SpanStyle>--><!--Device-StyledString-getStyles(start: number, length: number, styledKey?: StyledStringKey): Array<SpanStyle>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| start | number | 是 | 指定范围属性字符串的下标。 |
-| length | number | 是 | 指定范围属性字符串的长度。 |
-| styledKey | [StyledStringKey](arkts-arkui-styledstringkey-e.md) | 否 | 指定范围属性字符串样式的枚举值。 <br>**说明：** <br>当不传入该参数时默认获取开发者设置的[StyledStringKey](arkts-arkui-styledstringkey-e.md)所有枚举值样式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| start | number | 是 |
+| [length](#length) | number | 是 |
+| styledKey | [StyledStringKey](arkts-arkui-styledstringkey-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[SpanStyle](arkts-arkui-spanstyle-i.md)&gt; | 各样式对象的数组。 <br>**说明：** <br>当指定范围属性字符串未设置任何样式，则返回空数组。 <br>当start和length越界或者必填传入undefined时，会抛出异常； <br>当styledKey传入异常值或undefined时，会抛出异常。 <br>当styledKey为CustomSpan时，返回的是创建CustomSpan时传入的样式对象，即修改该样式对象也会影响实际的显示效果。 |
+| 类型 |
+| --- |
+| Array&lt;[SpanStyle](arkts-arkui-spanstyle-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## subStyledString
 
@@ -177,32 +177,32 @@ subStyledString(start: number, length?: number): StyledString
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StyledString-subStyledString(start: number, length?: number): StyledString--><!--Device-StyledString-subStyledString(start: number, length?: number): StyledString-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| start | number | 是 | 子属性字符串开始位置的下标。 |
-| length | number | 否 | 子属性字符串的长度。 <br>不传入时默认取被查询属性字符串对象的长度与start的值的差。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| start | number | 是 |
+| [length](#length) | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [StyledString](arkts-arkui-styledstring-c.md) | 子属性字符串。 <br>**说明：** <br>当start为合法入参时，length的默认值是被查询属性字符串对象的长度与start的值的差。 <br>当start和length越界或者必填传入undefined时，会抛出异常。 |
+| 类型 |
+| --- |
+| [StyledString](arkts-arkui-styledstring-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## toHtml
 
@@ -214,31 +214,31 @@ static toHtml(styledString: StyledString): string
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StyledString-static toHtml(styledString: StyledString): string--><!--Device-StyledString-static toHtml(styledString: StyledString): string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | 是 | 要转换成HTML格式字符串的属性字符串对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | HTML格式字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## length
 
@@ -253,11 +253,10 @@ readonly length: number
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-StyledString-readonly length: number--><!--Device-StyledString-readonly length: number-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

@@ -9,7 +9,7 @@ import { netFirewall } from '@kit.NetworkKit';
 ## addNetFirewallRule
 
 ```TypeScript
-function addNetFirewallRule(rule: NetFirewallRule): Promise<int>
+function addNetFirewallRule(rule: NetFirewallRule): Promise<number>
 ```
 
 添加系统用户ID的防火墙规则，目前支持的规则类型有：IP、Domain、DNS。使用Promise异步回调。
@@ -45,40 +45,40 @@ function addNetFirewallRule(rule: NetFirewallRule): Promise<int>
 
 **起始版本：** 15
 
-**需要权限：** ohos.permission.MANAGE_NET_FIREWALL
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
-<!--Device-netFirewall-function addNetFirewallRule(rule: NetFirewallRule): Promise<int>--><!--Device-netFirewall-function addNetFirewallRule(rule: NetFirewallRule): Promise<int>-End-->
+**需要权限：** ohos.permission.MANAGE_NET_FIREWALL
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rule | [NetFirewallRule](arkts-network-netfirewall-netfirewallrule-i.md) | 是 | 防火墙规则。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| rule | [NetFirewallRule](arkts-network-netfirewall-netfirewallrule-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | 以Promise形式返回防火墙规则ID，防火墙规则ID由系统自动生成。 |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Operation failed. Cannot connect to service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-| [29400000](../errorcode-net-netfirewall.md#29400000-指定用户不存在) | The specified user does not exist. |
-| [29400001](../errorcode-net-netfirewall.md#29400001-防火墙规则数量超过最大值) | The number of firewall rules exceeds the maximum. |
-| [29400002](../errorcode-net-netfirewall.md#29400002-防火墙规则中的ip地址规则数量超过最大值) | The number of IP address rules in the firewall rule exceeds the maximum. |
-| [29400003](../errorcode-net-netfirewall.md#29400003-防火墙规则中的port规则数量超过最大值) | The number of port rules in the firewall rule exceeds the maximum. |
-| [29400004](../errorcode-net-netfirewall.md#29400004-防火墙规则中的域名规则数量超过最大值) | The number of domain rules in the firewall rule exceeds the maximum. |
-| [29400005](../errorcode-net-netfirewall.md#29400005-模糊域名规则数量超过最大值) | The number of domain rules exceeds the maximum. |
-| [29400007](../errorcode-net-netfirewall.md#29400007-dns规则重复) | The dns rule is duplication. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
+| [29400000](../errorcode-net-netfirewall.md#29400000-指定用户不存在) |
+| [29400001](../errorcode-net-netfirewall.md#29400001-防火墙规则数量超过最大值) |
+| [29400002](../errorcode-net-netfirewall.md#29400002-防火墙规则中的ip地址规则数量超过最大值) |
+| [29400003](../errorcode-net-netfirewall.md#29400003-防火墙规则中的port规则数量超过最大值) |
+| [29400004](../errorcode-net-netfirewall.md#29400004-防火墙规则中的域名规则数量超过最大值) |
+| [29400005](../errorcode-net-netfirewall.md#29400005-模糊域名规则数量超过最大值) |
+| [29400007](../errorcode-net-netfirewall.md#29400007-dns规则重复) |
 
 **示例**
 
@@ -187,4 +187,3 @@ netFirewall.addNetFirewallRule(dnsRule).then((result: number) => {
   console.error('add firewall rule failed: ', JSON.stringify(reason));
 });
 ```
-

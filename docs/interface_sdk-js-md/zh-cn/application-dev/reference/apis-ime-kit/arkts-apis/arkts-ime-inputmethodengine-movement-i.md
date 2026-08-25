@@ -2,9 +2,9 @@
 
 选中文本时，光标移动的方向
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-inputMethodEngine-export interface Movement--><!--Device-inputMethodEngine-export interface Movement-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -24,9 +24,8 @@ direction: Direction
 
 **类型：** Direction
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Movement-direction: Direction--><!--Device-Movement-direction: Direction-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
-

@@ -8,9 +8,9 @@ const DEFAULT_INTERRUPT_GROUP_ID: int
 
 默认焦点组ID。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-audio-const DEFAULT_INTERRUPT_GROUP_ID: int--><!--Device-audio-const DEFAULT_INTERRUPT_GROUP_ID: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -22,9 +22,8 @@ const DEFAULT_VOLUME_GROUP_ID: int
 
 默认音量组ID。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-audio-const DEFAULT_VOLUME_GROUP_ID: int--><!--Device-audio-const DEFAULT_VOLUME_GROUP_ID: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
-

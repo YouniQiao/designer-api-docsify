@@ -13,9 +13,7 @@ The **Toolbar** component is designed to present a set of action options related
 
 **Since:** 10
 
-**Decorator:** @Component
-
-<!--Device-unnamed-export declare struct ToolBar--><!--Device-unnamed-export declare struct ToolBar-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,6 +22,22 @@ The **Toolbar** component is designed to present a set of action options related
 ```TypeScript
 import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
 ```
+
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## activateIndex
 
@@ -37,13 +51,11 @@ Index of the active item.The value must be greater than or equal to -1.The defau
 
 **Since:** 10
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ToolBar-@Prop  activateIndex?: number--><!--Device-ToolBar-@Prop  activateIndex?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,11 +71,11 @@ Toolbar controller, which cannot be used for controlling individual toolbar item
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ToolBar-controller: TabsController--><!--Device-ToolBar-controller: TabsController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -79,13 +91,11 @@ Modifier for the toolbar header divider, which can be used to customize the divi
 
 **Since:** 13
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-ToolBar-@Prop  dividerModifier?: DividerModifier--><!--Device-ToolBar-@Prop  dividerModifier?: DividerModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -101,13 +111,11 @@ Toolbar list.
 
 **Since:** 10
 
-**Decorator:** @ObjectLink
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ToolBar-@ObjectLink  toolBarList: ToolBarOptions--><!--Device-ToolBar-@ObjectLink  toolBarList: ToolBarOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -123,13 +131,10 @@ Modifier for the toolbar, which can be used to set the toolbar's height, backgro
 
 **Since:** 13
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
-<!--Device-ToolBar-@Prop  toolBarModifier?: ToolBarModifier--><!--Device-ToolBar-@Prop  toolBarModifier?: ToolBarModifier-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

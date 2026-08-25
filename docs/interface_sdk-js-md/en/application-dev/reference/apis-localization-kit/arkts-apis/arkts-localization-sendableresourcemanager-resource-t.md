@@ -8,11 +8,10 @@ Represents resource-related information, including the application bundle name, 
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-sendableResourceManager-export type Resource = _Resource--><!--Device-sendableResourceManager-export type Resource = _Resource-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Property type:** _Resource
-

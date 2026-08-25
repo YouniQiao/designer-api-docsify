@@ -2,9 +2,9 @@
 
 网络类型。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-radio-export enum NetworkType--><!--Device-radio-export enum NetworkType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -16,9 +16,9 @@ NETWORK_TYPE_UNKNOWN = 0
 
 未知网络类型。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkType-NETWORK_TYPE_UNKNOWN = 0--><!--Device-NetworkType-NETWORK_TYPE_UNKNOWN = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -30,9 +30,9 @@ NETWORK_TYPE_GSM = 1
 
 网络类型为GSM(Global System For Mobile Communication)。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkType-NETWORK_TYPE_GSM = 1--><!--Device-NetworkType-NETWORK_TYPE_GSM = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -44,9 +44,9 @@ NETWORK_TYPE_CDMA = 2
 
 网络类型为CDMA(Code Division Multiple Access)。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkType-NETWORK_TYPE_CDMA = 2--><!--Device-NetworkType-NETWORK_TYPE_CDMA = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -58,9 +58,9 @@ NETWORK_TYPE_WCDMA = 3
 
 网络类型为WCDMA(Wideband Code Division Multiple Access)。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkType-NETWORK_TYPE_WCDMA = 3--><!--Device-NetworkType-NETWORK_TYPE_WCDMA = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -72,9 +72,9 @@ NETWORK_TYPE_TDSCDMA = 4
 
 网络类型为TDSCDMA(TimeDivision-Synchronous Code Division Multiple Access)。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkType-NETWORK_TYPE_TDSCDMA = 4--><!--Device-NetworkType-NETWORK_TYPE_TDSCDMA = 4-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -86,9 +86,9 @@ NETWORK_TYPE_LTE = 5
 
 网络类型为LTE(Long Term Evolution)。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkType-NETWORK_TYPE_LTE = 5--><!--Device-NetworkType-NETWORK_TYPE_LTE = 5-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -100,9 +100,8 @@ NETWORK_TYPE_NR = 6
 
 网络类型为NR(New Radio)。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkType-NETWORK_TYPE_NR = 6--><!--Device-NetworkType-NETWORK_TYPE_NR = 6-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
-

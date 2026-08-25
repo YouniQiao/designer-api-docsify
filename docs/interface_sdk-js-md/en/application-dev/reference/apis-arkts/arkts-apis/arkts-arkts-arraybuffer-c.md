@@ -4,9 +4,7 @@ JS ArrayBuffer API-compatible class. Used to represent a generic, fixed-length r
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-unnamed-export class ArrayBuffer--><!--Device-unnamed-export class ArrayBuffer-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,25 +23,23 @@ Returns the byte at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public at(pos: int): byte--><!--Device-ArrayBuffer-public at(pos: int): byte-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pos | int | Yes | The position in the buffer. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| pos | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| byte | The byte value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| byte |
 
 ## atomicAddI16
 
@@ -55,27 +51,25 @@ Atomically adds a value to the element at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicAddI16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicAddI16(index: int, byteOffset: int, value: short): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | short | Yes | The value to add. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicAddI32
 
@@ -87,27 +81,25 @@ Atomically adds a value to the element at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicAddI32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicAddI32(index: int, byteOffset: int, value: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | int | Yes | The value to add. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicAddI64
 
@@ -119,27 +111,25 @@ Atomically adds a value to the element at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicAddI64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicAddI64(index: int, byteOffset: int, value: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | long | Yes | The value to add. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicAddI8
 
@@ -151,27 +141,25 @@ Atomically adds a value to the element at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicAddI8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicAddI8(index: int, byteOffset: int, value: byte): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | byte | Yes | The value to add. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicAddU16
 
@@ -183,27 +171,25 @@ Atomically adds a value to the element at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicAddU16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicAddU16(index: int, byteOffset: int, value: short): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | short | Yes | The value to add. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicAddU32
 
@@ -215,27 +201,25 @@ Atomically adds a value to the element at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicAddU32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicAddU32(index: int, byteOffset: int, value: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | int | Yes | The value to add. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicAddU64
 
@@ -247,27 +231,25 @@ Atomically adds a value to the element at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicAddU64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicAddU64(index: int, byteOffset: int, value: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | long | Yes | The value to add. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicAddU8
 
@@ -279,27 +261,25 @@ Atomically adds a value to the element at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicAddU8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicAddU8(index: int, byteOffset: int, value: byte): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | byte | Yes | The value to add. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicAndI16
 
@@ -311,27 +291,25 @@ Atomically performs a bitwise AND operation on the element at the specified inde
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicAndI16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicAndI16(index: int, byteOffset: int, value: short): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | short | Yes | The value to AND with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicAndI32
 
@@ -343,27 +321,25 @@ Atomically performs a bitwise AND operation on the element at the specified inde
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicAndI32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicAndI32(index: int, byteOffset: int, value: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | int | Yes | The value to AND with. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicAndI64
 
@@ -375,27 +351,25 @@ Atomically performs a bitwise AND operation on the element at the specified inde
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicAndI64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicAndI64(index: int, byteOffset: int, value: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | long | Yes | The value to AND with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicAndI8
 
@@ -407,27 +381,25 @@ Atomically performs a bitwise AND operation on the element at the specified inde
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicAndI8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicAndI8(index: int, byteOffset: int, value: byte): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | byte | Yes | The value to AND with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicAndU16
 
@@ -439,27 +411,25 @@ Atomically performs a bitwise AND operation on the element at the specified inde
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicAndU16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicAndU16(index: int, byteOffset: int, value: short): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | short | Yes | The value to AND with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicAndU32
 
@@ -471,27 +441,25 @@ Atomically performs a bitwise AND operation on the element at the specified inde
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicAndU32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicAndU32(index: int, byteOffset: int, value: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | int | Yes | The value to AND with. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicAndU64
 
@@ -503,27 +471,25 @@ Atomically performs a bitwise AND operation on the element at the specified inde
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicAndU64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicAndU64(index: int, byteOffset: int, value: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | long | Yes | The value to AND with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicAndU8
 
@@ -535,27 +501,25 @@ Atomically performs a bitwise AND operation on the element at the specified inde
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicAndU8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicAndU8(index: int, byteOffset: int, value: byte): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | byte | Yes | The value to AND with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicCompareExchangeI16
 
@@ -567,28 +531,26 @@ Atomically compares and exchanges the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicCompareExchangeI16(index: int, byteOffset: int, expectedValue: short, replacementValue: short): long--><!--Device-ArrayBuffer-public atomicCompareExchangeI16(index: int, byteOffset: int, expectedValue: short, replacementValue: short): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| expectedValue | short | Yes | The expected value. |
-| replacementValue | short | Yes | The replacement value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| expectedValue | short | Yes |
+| replacementValue | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicCompareExchangeI32
 
@@ -600,28 +562,26 @@ Atomically compares and exchanges the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicCompareExchangeI32(index: int, byteOffset: int, expectedValue: int, replacementValue: int): long--><!--Device-ArrayBuffer-public atomicCompareExchangeI32(index: int, byteOffset: int, expectedValue: int, replacementValue: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| expectedValue | int | Yes | The expected value. <br>The value should be an integer. |
-| replacementValue | int | Yes | The replacement value. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| expectedValue | int | Yes |
+| replacementValue | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicCompareExchangeI64
 
@@ -633,28 +593,26 @@ Atomically compares and exchanges the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicCompareExchangeI64(index: int, byteOffset: int, expectedValue: long, replacementValue: long): long--><!--Device-ArrayBuffer-public atomicCompareExchangeI64(index: int, byteOffset: int, expectedValue: long, replacementValue: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| expectedValue | long | Yes | The expected value. |
-| replacementValue | long | Yes | The replacement value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| expectedValue | long | Yes |
+| replacementValue | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicCompareExchangeI8
 
@@ -666,28 +624,26 @@ Atomically compares and exchanges the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicCompareExchangeI8(index: int, byteOffset: int, expectedValue: byte, replacementValue: byte): long--><!--Device-ArrayBuffer-public atomicCompareExchangeI8(index: int, byteOffset: int, expectedValue: byte, replacementValue: byte): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| expectedValue | byte | Yes | The expected value. |
-| replacementValue | byte | Yes | The replacement value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| expectedValue | byte | Yes |
+| replacementValue | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicCompareExchangeU16
 
@@ -699,28 +655,26 @@ Atomically compares and exchanges the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicCompareExchangeU16(index: int, byteOffset: int, expectedValue: short, replacementValue: short): long--><!--Device-ArrayBuffer-public atomicCompareExchangeU16(index: int, byteOffset: int, expectedValue: short, replacementValue: short): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| expectedValue | short | Yes | The expected value. |
-| replacementValue | short | Yes | The replacement value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| expectedValue | short | Yes |
+| replacementValue | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicCompareExchangeU32
 
@@ -732,28 +686,26 @@ Atomically compares and exchanges the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicCompareExchangeU32(index: int, byteOffset: int, expectedValue: int, replacementValue: int): long--><!--Device-ArrayBuffer-public atomicCompareExchangeU32(index: int, byteOffset: int, expectedValue: int, replacementValue: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| expectedValue | int | Yes | The expected value. <br>The value should be an integer. |
-| replacementValue | int | Yes | The replacement value. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| expectedValue | int | Yes |
+| replacementValue | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicCompareExchangeU64
 
@@ -765,28 +717,26 @@ Atomically compares and exchanges the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicCompareExchangeU64(index: int, byteOffset: int, expectedValue: long, replacementValue: long): long--><!--Device-ArrayBuffer-public atomicCompareExchangeU64(index: int, byteOffset: int, expectedValue: long, replacementValue: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| expectedValue | long | Yes | The expected value. |
-| replacementValue | long | Yes | The replacement value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| expectedValue | long | Yes |
+| replacementValue | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicCompareExchangeU8
 
@@ -798,28 +748,26 @@ Atomically compares and exchanges the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicCompareExchangeU8(index: int, byteOffset: int, expectedValue: byte, replacementValue: byte): long--><!--Device-ArrayBuffer-public atomicCompareExchangeU8(index: int, byteOffset: int, expectedValue: byte, replacementValue: byte): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| expectedValue | byte | Yes | The expected value. |
-| replacementValue | byte | Yes | The replacement value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| expectedValue | byte | Yes |
+| replacementValue | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicExchangeI16
 
@@ -831,27 +779,25 @@ Atomically exchanges the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicExchangeI16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicExchangeI16(index: int, byteOffset: int, value: short): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | short | Yes | The value to exchange. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicExchangeI32
 
@@ -863,27 +809,25 @@ Atomically exchanges the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicExchangeI32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicExchangeI32(index: int, byteOffset: int, value: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | int | Yes | The value to exchange. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicExchangeI64
 
@@ -895,27 +839,25 @@ Atomically exchanges the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicExchangeI64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicExchangeI64(index: int, byteOffset: int, value: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | long | Yes | The value to exchange. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicExchangeI8
 
@@ -927,27 +869,25 @@ Atomically exchanges the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicExchangeI8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicExchangeI8(index: int, byteOffset: int, value: byte): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | byte | Yes | The value to exchange. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicExchangeU16
 
@@ -959,27 +899,25 @@ Atomically exchanges the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicExchangeU16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicExchangeU16(index: int, byteOffset: int, value: short): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | short | Yes | The value to exchange. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicExchangeU32
 
@@ -991,27 +929,25 @@ Atomically exchanges the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicExchangeU32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicExchangeU32(index: int, byteOffset: int, value: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | int | Yes | The value to exchange. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicExchangeU64
 
@@ -1023,27 +959,25 @@ Atomically exchanges the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicExchangeU64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicExchangeU64(index: int, byteOffset: int, value: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | long | Yes | The value to exchange. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicExchangeU8
 
@@ -1055,27 +989,25 @@ Atomically exchanges the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicExchangeU8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicExchangeU8(index: int, byteOffset: int, value: byte): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | byte | Yes | The value to exchange. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicLoadI16
 
@@ -1087,26 +1019,24 @@ Atomically loads the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicLoadI16(index: int, byteOffset: int): long--><!--Device-ArrayBuffer-public atomicLoadI16(index: int, byteOffset: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicLoadI32
 
@@ -1118,26 +1048,24 @@ Atomically loads the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicLoadI32(index: int, byteOffset: int): long--><!--Device-ArrayBuffer-public atomicLoadI32(index: int, byteOffset: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicLoadI64
 
@@ -1149,26 +1077,24 @@ Atomically loads the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicLoadI64(index: int, byteOffset: int): long--><!--Device-ArrayBuffer-public atomicLoadI64(index: int, byteOffset: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicLoadI8
 
@@ -1180,26 +1106,24 @@ Atomically loads the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicLoadI8(index: int, byteOffset: int): long--><!--Device-ArrayBuffer-public atomicLoadI8(index: int, byteOffset: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicLoadU16
 
@@ -1211,26 +1135,24 @@ Atomically loads the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicLoadU16(index: int, byteOffset: int): long--><!--Device-ArrayBuffer-public atomicLoadU16(index: int, byteOffset: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicLoadU32
 
@@ -1242,26 +1164,24 @@ Atomically loads the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicLoadU32(index: int, byteOffset: int): long--><!--Device-ArrayBuffer-public atomicLoadU32(index: int, byteOffset: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicLoadU64
 
@@ -1273,26 +1193,24 @@ Atomically loads the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicLoadU64(index: int, byteOffset: int): long--><!--Device-ArrayBuffer-public atomicLoadU64(index: int, byteOffset: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicLoadU8
 
@@ -1304,26 +1222,24 @@ Atomically loads the value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicLoadU8(index: int, byteOffset: int): long--><!--Device-ArrayBuffer-public atomicLoadU8(index: int, byteOffset: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicOrI16
 
@@ -1335,27 +1251,25 @@ Atomically performs a bitwise OR operation on the element at the specified index
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicOrI16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicOrI16(index: int, byteOffset: int, value: short): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | short | Yes | The value to OR with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicOrI32
 
@@ -1367,27 +1281,25 @@ Atomically performs a bitwise OR operation on the element at the specified index
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicOrI32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicOrI32(index: int, byteOffset: int, value: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | int | Yes | The value to OR with. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicOrI64
 
@@ -1399,27 +1311,25 @@ Atomically performs a bitwise OR operation on the element at the specified index
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicOrI64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicOrI64(index: int, byteOffset: int, value: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | long | Yes | The value to OR with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicOrI8
 
@@ -1431,27 +1341,25 @@ Atomically performs a bitwise OR operation on the element at the specified index
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicOrI8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicOrI8(index: int, byteOffset: int, value: byte): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | byte | Yes | The value to OR with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicOrU16
 
@@ -1463,27 +1371,25 @@ Atomically performs a bitwise OR operation on the element at the specified index
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicOrU16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicOrU16(index: int, byteOffset: int, value: short): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | short | Yes | The value to OR with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicOrU32
 
@@ -1495,27 +1401,25 @@ Atomically performs a bitwise OR operation on the element at the specified index
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicOrU32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicOrU32(index: int, byteOffset: int, value: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | int | Yes | The value to OR with. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicOrU64
 
@@ -1527,27 +1431,25 @@ Atomically performs a bitwise OR operation on the element at the specified index
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicOrU64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicOrU64(index: int, byteOffset: int, value: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | long | Yes | The value to OR with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicOrU8
 
@@ -1559,27 +1461,25 @@ Atomically performs a bitwise OR operation on the element at the specified index
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicOrU8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicOrU8(index: int, byteOffset: int, value: byte): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | byte | Yes | The value to OR with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicStoreI16
 
@@ -1591,27 +1491,25 @@ Atomically stores a value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicStoreI16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicStoreI16(index: int, byteOffset: int, value: short): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | short | Yes | The value to store. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The stored value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicStoreI32
 
@@ -1623,27 +1521,25 @@ Atomically stores a value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicStoreI32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicStoreI32(index: int, byteOffset: int, value: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | int | Yes | The value to store. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The stored value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicStoreI64
 
@@ -1655,27 +1551,25 @@ Atomically stores a value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicStoreI64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicStoreI64(index: int, byteOffset: int, value: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | long | Yes | The value to store. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The stored value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicStoreI8
 
@@ -1687,27 +1581,25 @@ Atomically stores a value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicStoreI8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicStoreI8(index: int, byteOffset: int, value: byte): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | byte | Yes | The value to store. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The stored value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicStoreU16
 
@@ -1719,27 +1611,25 @@ Atomically stores a value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicStoreU16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicStoreU16(index: int, byteOffset: int, value: short): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | short | Yes | The value to store. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The stored value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicStoreU32
 
@@ -1751,27 +1641,25 @@ Atomically stores a value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicStoreU32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicStoreU32(index: int, byteOffset: int, value: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | int | Yes | The value to store. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The stored value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicStoreU64
 
@@ -1783,27 +1671,25 @@ Atomically stores a value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicStoreU64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicStoreU64(index: int, byteOffset: int, value: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | long | Yes | The value to store. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The stored value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicStoreU8
 
@@ -1815,27 +1701,25 @@ Atomically stores a value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicStoreU8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicStoreU8(index: int, byteOffset: int, value: byte): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | byte | Yes | The value to store. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The stored value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicSubI16
 
@@ -1847,27 +1731,25 @@ Atomically subtracts a value from the element at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicSubI16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicSubI16(index: int, byteOffset: int, value: short): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | short | Yes | The value to subtract. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicSubI32
 
@@ -1879,27 +1761,25 @@ Atomically subtracts a value from the element at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicSubI32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicSubI32(index: int, byteOffset: int, value: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | int | Yes | The value to subtract. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicSubI64
 
@@ -1911,27 +1791,25 @@ Atomically subtracts a value from the element at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicSubI64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicSubI64(index: int, byteOffset: int, value: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | long | Yes | The value to subtract. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicSubI8
 
@@ -1943,27 +1821,25 @@ Atomically subtracts a value from the element at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicSubI8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicSubI8(index: int, byteOffset: int, value: byte): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | byte | Yes | The value to subtract. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicSubU16
 
@@ -1975,27 +1851,25 @@ Atomically subtracts a value from the element at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicSubU16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicSubU16(index: int, byteOffset: int, value: short): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | short | Yes | The value to subtract. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicSubU32
 
@@ -2007,27 +1881,25 @@ Atomically subtracts a value from the element at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicSubU32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicSubU32(index: int, byteOffset: int, value: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | int | Yes | The value to subtract. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicSubU64
 
@@ -2039,27 +1911,25 @@ Atomically subtracts a value from the element at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicSubU64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicSubU64(index: int, byteOffset: int, value: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | long | Yes | The value to subtract. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicSubU8
 
@@ -2071,27 +1941,25 @@ Atomically subtracts a value from the element at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicSubU8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicSubU8(index: int, byteOffset: int, value: byte): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | byte | Yes | The value to subtract. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicXorI16
 
@@ -2103,27 +1971,25 @@ Atomically performs a bitwise XOR operation on the element at the specified inde
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicXorI16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicXorI16(index: int, byteOffset: int, value: short): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | short | Yes | The value to XOR with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicXorI32
 
@@ -2135,27 +2001,25 @@ Atomically performs a bitwise XOR operation on the element at the specified inde
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicXorI32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicXorI32(index: int, byteOffset: int, value: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | int | Yes | The value to XOR with. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicXorI64
 
@@ -2167,27 +2031,25 @@ Atomically performs a bitwise XOR operation on the element at the specified inde
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicXorI64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicXorI64(index: int, byteOffset: int, value: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | long | Yes | The value to XOR with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicXorI8
 
@@ -2199,27 +2061,25 @@ Atomically performs a bitwise XOR operation on the element at the specified inde
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicXorI8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicXorI8(index: int, byteOffset: int, value: byte): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | byte | Yes | The value to XOR with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicXorU16
 
@@ -2231,27 +2091,25 @@ Atomically performs a bitwise XOR operation on the element at the specified inde
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicXorU16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicXorU16(index: int, byteOffset: int, value: short): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | short | Yes | The value to XOR with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | short | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicXorU32
 
@@ -2263,27 +2121,25 @@ Atomically performs a bitwise XOR operation on the element at the specified inde
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicXorU32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicXorU32(index: int, byteOffset: int, value: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | int | Yes | The value to XOR with. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicXorU64
 
@@ -2295,27 +2151,25 @@ Atomically performs a bitwise XOR operation on the element at the specified inde
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicXorU64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicXorU64(index: int, byteOffset: int, value: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | long | Yes | The value to XOR with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## atomicXorU8
 
@@ -2327,27 +2181,25 @@ Atomically performs a bitwise XOR operation on the element at the specified inde
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public atomicXorU8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicXorU8(index: int, byteOffset: int, value: byte): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The index to access. <br>The value must be an integer greater than or equal to 0. |
-| byteOffset | int | Yes | The byte offset within the ArrayBuffer (unit: byte). <br>The value must be an integer greater than or equal to 0. |
-| value | byte | Yes | The value to XOR with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| byteOffset | int | Yes |
+| value | byte | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The value after the operation. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## bytesLength
 
@@ -2359,26 +2211,24 @@ Returns the byte length of a string in a given encoding.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public static bytesLength(text: string, encoding: string): int--><!--Device-ArrayBuffer-public static bytesLength(text: string, encoding: string): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| text | string | Yes | Source string. |
-| encoding | string | Yes | Encoding type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| text | string | Yes |
+| encoding | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Calculated byte length. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## constructor
 
@@ -2390,20 +2240,18 @@ Creates an ArrayBuffer with size equal to the length parameter.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-constructor(length: int, maxByteLength?: int)--><!--Device-ArrayBuffer-constructor(length: int, maxByteLength?: int)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| length | int | Yes | The size of the ArrayBuffer in bytes. <br>The value must be an integer greater than or equal to 0. |
-| maxByteLength | int | No | Optional maximum size the ArrayBuffer can be resized to. <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| length | int | Yes |
+| maxByteLength | int | No |
 
 ## constructor
 
@@ -2415,20 +2263,18 @@ Creates an ArrayBuffer with size equal to the length parameter.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public constructor(length: double, maxByteLength?: double)--><!--Device-ArrayBuffer-public constructor(length: double, maxByteLength?: double)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| length | double | Yes | The size of the ArrayBuffer in bytes. <br>The value must be greater than or equal to 0. |
-| maxByteLength | double | No | Optional maximum size the ArrayBuffer can be resized to. <br>The value must be greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| length | double | Yes |
+| maxByteLength | double | No |
 
 ## from
 
@@ -2440,25 +2286,23 @@ Creates a new ArrayBuffer from an array of bytes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public static from(arr: FixedArray<byte>): ArrayBuffer--><!--Device-ArrayBuffer-public static from(arr: FixedArray<byte>): ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | FixedArray&lt;byte&gt; | Yes | Source byte array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | FixedArray & lt;byte & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ArrayBuffer | The new ArrayBuffer. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArrayBuffer |
 
 ## from
 
@@ -2470,25 +2314,23 @@ Creates a new ArrayBuffer from a Uint8Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public static from(u8arr: Uint8Array): ArrayBuffer--><!--Device-ArrayBuffer-public static from(u8arr: Uint8Array): ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| u8arr | Uint8Array | Yes | Source typed array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| u8arr | Uint8Array | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ArrayBuffer | The new ArrayBuffer. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArrayBuffer |
 
 ## from
 
@@ -2500,25 +2342,23 @@ Creates a new ArrayBuffer from an array of numbers.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public static from(array: double[]): ArrayBuffer--><!--Device-ArrayBuffer-public static from(array: double[]): ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| array | double[] | Yes | Source number array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| array | double[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ArrayBuffer | The new ArrayBuffer. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArrayBuffer |
 
 ## from
 
@@ -2530,26 +2370,24 @@ Creates a new ArrayBuffer from a string with specific encoding.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public static from(str: string, encoding: string): ArrayBuffer--><!--Device-ArrayBuffer-public static from(str: string, encoding: string): ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| str | string | Yes | Source string. |
-| encoding | string | Yes | String encoding (e.g., "utf8"). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| str | string | Yes |
+| encoding | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ArrayBuffer | The new ArrayBuffer. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArrayBuffer |
 
 ## from
 
@@ -2561,27 +2399,25 @@ Creates a new ArrayBuffer from a segment of an existing ArrayBuffer.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public static from(buff: ArrayBuffer, byteOffset: int, length: int): ArrayBuffer--><!--Device-ArrayBuffer-public static from(buff: ArrayBuffer, byteOffset: int, length: int): ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buff | ArrayBuffer | Yes | Source buffer. |
-| byteOffset | int | Yes | Start offset in source. <br>The value should be an integer. |
-| length | int | Yes | Number of bytes to copy. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buff | ArrayBuffer | Yes |
+| byteOffset | int | Yes |
+| length | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ArrayBuffer | The new ArrayBuffer. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArrayBuffer |
 
 ## from
 
@@ -2593,27 +2429,25 @@ Creates a new ArrayBuffer from a segment of an existing ArrayBuffer with number 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public static from(buffer: ArrayBuffer, byteOffset?: double, length?: double): ArrayBuffer--><!--Device-ArrayBuffer-public static from(buffer: ArrayBuffer, byteOffset?: double, length?: double): ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Source buffer. |
-| byteOffset | double | No | Start offset. |
-| length | double | No | Byte length. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buffer | ArrayBuffer | Yes |
+| byteOffset | double | No |
+| length | double | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ArrayBuffer | The new ArrayBuffer. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArrayBuffer |
 
 ## fromObject
 
@@ -2625,27 +2459,25 @@ Creates a new ArrayBuffer from an object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public static fromObject(obj: Object, byteOffsetOrEncoding: int | string, length: int): ArrayBuffer--><!--Device-ArrayBuffer-public static fromObject(obj: Object, byteOffsetOrEncoding: int | string, length: int): ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| obj | Object | Yes | Source object (string or ArrayBuffer). |
-| byteOffsetOrEncoding | int \| string | Yes | Byte offset or encoding string. |
-| length | int | Yes | Length to copy. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | Object | Yes |
+| byteOffsetOrEncoding | int \| string | Yes |
+| length | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ArrayBuffer | The new ArrayBuffer. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArrayBuffer |
 
 ## getByteLength
 
@@ -2657,19 +2489,17 @@ Returns the length of the ArrayBuffer in bytes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public getByteLength(): int--><!--Device-ArrayBuffer-public getByteLength(): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | The byte length. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## isView
 
@@ -2681,25 +2511,23 @@ Checks if the passed object is one of the ArrayBuffer views.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public static isView(obj: Object): boolean--><!--Device-ArrayBuffer-public static isView(obj: Object): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| obj | Object | Yes | The object to check. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns true if the object is a view; otherwise false. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## resize
 
@@ -2711,19 +2539,17 @@ Resizes the ArrayBuffer to the specified length.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public resize(newLen : int): void--><!--Device-ArrayBuffer-public resize(newLen : int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| newLen | int | Yes | The new byte length. <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| newLen | int | Yes |
 
 ## set
 
@@ -2735,20 +2561,18 @@ Sets the byte value at the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public set(pos: int, val: byte): void--><!--Device-ArrayBuffer-public set(pos: int, val: byte): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pos | int | Yes | The position in the buffer. <br>The value should be an integer. |
-| val | byte | Yes | The byte value to set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| pos | int | Yes |
+| val | byte | Yes |
 
 ## slice
 
@@ -2760,26 +2584,24 @@ Creates a new ArrayBuffer with a copy of bytes in the range [begin, end).
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public slice(begin: int, end?: int): ArrayBuffer--><!--Device-ArrayBuffer-public slice(begin: int, end?: int): ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| begin | int | Yes | An inclusive index to start copying from. <br>The value should be an integer. |
-| end | int | No | An exclusive index to stop copying. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| begin | int | Yes |
+| end | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ArrayBuffer | The new ArrayBuffer. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArrayBuffer |
 
 ## slice
 
@@ -2791,26 +2613,24 @@ Creates a new ArrayBuffer with a copy of bytes in the range [begin, end).
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public slice(begin: double, end?: double): ArrayBuffer--><!--Device-ArrayBuffer-public slice(begin: double, end?: double): ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| begin | double | Yes | An inclusive index to start copying from. |
-| end | double | No | An exclusive index to stop copying. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| begin | double | Yes |
+| end | double | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ArrayBuffer | The new ArrayBuffer. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ArrayBuffer |
 
 ## stringify
 
@@ -2822,28 +2642,26 @@ Converts a segment of an ArrayBuffer to a string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public static stringify(buffer: ArrayBuffer, encoding: string, start: int, end: int): string--><!--Device-ArrayBuffer-public static stringify(buffer: ArrayBuffer, encoding: string, start: int, end: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Source buffer. |
-| encoding | string | Yes | Encoding to use. |
-| start | int | Yes | Start index. <br>The value should be an integer. |
-| end | int | Yes | End index. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buffer | ArrayBuffer | Yes |
+| encoding | string | Yes |
+| start | int | Yes |
+| end | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Decoded string. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -2855,17 +2673,68 @@ Returns the string representation of the ArrayBuffer.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArrayBuffer-public toString(): string--><!--Device-ArrayBuffer-public toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | The string representation of the ArrayBuffer. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
+## byteLength
+
+```TypeScript
+get byteLength(): int
+```
+
+Read-only property for the byte length of the ArrayBuffer.
+
+**Type:** int
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## detached
+
+```TypeScript
+get detached(): boolean
+```
+
+Returns true if the ArrayBuffer has been detached.
+
+**Type:** boolean
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## resizable
+
+```TypeScript
+get resizable(): boolean
+```
+
+Returns true if the ArrayBuffer can be resized.
+
+**Type:** boolean
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang

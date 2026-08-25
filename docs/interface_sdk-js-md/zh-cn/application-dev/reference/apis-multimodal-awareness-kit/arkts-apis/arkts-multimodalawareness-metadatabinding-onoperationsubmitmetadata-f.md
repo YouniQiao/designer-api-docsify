@@ -16,23 +16,23 @@ function onOperationSubmitMetadata(bundleName: string, callback: Callback<int>):
 
 **起始版本：** 23
 
-<!--Device-metadataBinding-function onOperationSubmitMetadata(bundleName: string, callback: Callback<int>): void--><!--Device-metadataBinding-function onOperationSubmitMetadata(bundleName: string, callback: Callback<int>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.MetadataBinding
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 第三方应用的包名。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回截图事件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [32100001](../errorcode-metadataBinding.md#32100001-文件创建失败) | Internal handling failed. |
-| [32100004](../errorcode-metadataBinding.md#32100004-订阅失败) | Subscribe Failed. Possible causes: <br>1. Abnormal system capability. <br>2. IPC communication abnormality. <br>3. Algorithm loading exception. |
+| 错误码ID |
+| --- |
+| [32100001](../errorcode-metadataBinding.md#32100001-文件创建失败) |
+| [32100004](../errorcode-metadataBinding.md#32100004-订阅失败) |
 
 **示例**
 
@@ -51,4 +51,3 @@ try {
   console.info("register screenshot event error");
 }
 ```
-

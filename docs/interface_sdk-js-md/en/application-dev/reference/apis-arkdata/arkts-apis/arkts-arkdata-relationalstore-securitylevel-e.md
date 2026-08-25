@@ -7,9 +7,9 @@ Enumerates the KV store security levels. Use the enum name rather than the enum 
 > device. For details, see [Access Control Mechanism in Cross-Device Sync]
 > (../../../database/sync-app-data-across-devices-overview.md#access-control-mechanism-in-cross-device-sync).
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-relationalStore-enum SecurityLevel--><!--Device-relationalStore-enum SecurityLevel-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -21,9 +21,9 @@ S1 = 1
 
 The RDB store security level is low. If data leakage occurs, minor impact will be caused on the database. An example would be a graph store containing non-sensitive system data such as wallpapers.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SecurityLevel-S1 = 1--><!--Device-SecurityLevel-S1 = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -35,9 +35,9 @@ S2 = 2
 
 The RDB store security level is medium. If data leakage occurs, moderate impact will be caused on the database. An example would be a graph store containing audio and video data created by users or call logs.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SecurityLevel-S2 = 2--><!--Device-SecurityLevel-S2 = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -49,9 +49,9 @@ S3 = 3
 
 The RDB store security level is high. If data leakage occurs, major impact will be caused on the database. An example would be a graph store containing user fitness, health, and location data.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SecurityLevel-S3 = 3--><!--Device-SecurityLevel-S3 = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -63,9 +63,8 @@ S4 = 4
 
 The RDB store security level is critical. If data leakage occurs, severe impact will be caused on the database. An example would be a graph store containing authentication credentials and financial data.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SecurityLevel-S4 = 4--><!--Device-SecurityLevel-S4 = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-

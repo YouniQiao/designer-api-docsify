@@ -16,21 +16,21 @@ function getPacFileUrl(): string
 
 **起始版本：** 20
 
-<!--Device-connection-function getPacFileUrl(): string--><!--Device-connection-function getPacFileUrl(): string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 当前PAC脚本的URL地址，如果没有PAC脚本则返回空字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
+| 错误码ID |
+| --- |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 
 **示例**
 
@@ -40,4 +40,3 @@ import { connection } from '@kit.NetworkKit';
 let pacFileUrl = connection.getPacFileUrl();
 console.info("Succeeded to get pacFileUrl");
 ```
-

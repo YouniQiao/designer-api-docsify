@@ -4,7 +4,7 @@ JFIF metadata.
 
 **Since:** 26.0.0
 
-<!--Device-image-class JfifMetadata--><!--Device-image-class JfifMetadata-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -22,13 +22,13 @@ readonly densityUnit?: int
 
 JFIF density unit. The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-JfifMetadata-readonly densityUnit?: int--><!--Device-JfifMetadata-readonly densityUnit?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -44,9 +44,9 @@ whether the JFIF image is progressive.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-JfifMetadata-readonly isProgressive?: boolean--><!--Device-JfifMetadata-readonly isProgressive?: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -58,13 +58,13 @@ readonly version?: int[]
 
 JFIF version.
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-JfifMetadata-readonly version?: int[]--><!--Device-JfifMetadata-readonly version?: int[]-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -76,13 +76,13 @@ readonly xDensity?: int
 
 JFIF x density. The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-JfifMetadata-readonly xDensity?: int--><!--Device-JfifMetadata-readonly xDensity?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -94,13 +94,12 @@ readonly yDensity?: int
 
 JFIF y density. The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-JfifMetadata-readonly yDensity?: int--><!--Device-JfifMetadata-readonly yDensity?: int-End-->
-
 **System capability:** SystemCapability.Multimedia.Image.Core
-

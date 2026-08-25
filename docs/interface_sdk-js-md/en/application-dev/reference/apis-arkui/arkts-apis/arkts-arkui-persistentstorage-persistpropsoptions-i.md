@@ -4,9 +4,39 @@ Defining PersistPropsOptions interface
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-unnamed-export declare interface PersistPropsOptions--><!--Device-unnamed-export declare interface PersistPropsOptions-End-->
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## fromJson
+
+```TypeScript
+fromJson?: FromJSONType<T>
+```
+
+Used to deserialize data
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## toJson
+
+```TypeScript
+toJson?: ToJSONType<T>
+```
+
+Used to serialize data
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,31 +52,9 @@ If AppStorage does not include this property it will be initialized with this va
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PersistPropsOptions-defaultValue: T--><!--Device-PersistPropsOptions-defaultValue: T-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## fromJson
-
-```TypeScript
-fromJson?: FromJSONType<T>
-```
-
-Used to deserialize data
-
-**Type:** [FromJSONType](arkts-arkui-fromjsontype-t.md)&lt;T&gt;
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PersistPropsOptions-fromJson?: FromJSONType<T>--><!--Device-PersistPropsOptions-fromJson?: FromJSONType<T>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,31 +70,8 @@ Property name
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PersistPropsOptions-key: string--><!--Device-PersistPropsOptions-key: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## toJson
-
-```TypeScript
-toJson?: ToJSONType<T>
-```
-
-Used to serialize data
-
-**Type:** [ToJSONType](arkts-arkui-tojsontype-t.md)&lt;T&gt;
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PersistPropsOptions-toJson?: ToJSONType<T>--><!--Device-PersistPropsOptions-toJson?: ToJSONType<T>-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-

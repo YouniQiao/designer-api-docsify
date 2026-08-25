@@ -3,9 +3,9 @@
 修正坐标的模式。默认值为NONE。  
 **系统API**: 此接口为系统接口。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-unnamed-export declare enum FixedMode--><!--Device-unnamed-export declare enum FixedMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -19,9 +19,9 @@ NONE = 0
 
 正常模式。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-FixedMode-NONE = 0--><!--Device-FixedMode-NONE = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -35,11 +35,10 @@ AUTO = 1
 
 单手模式。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-FixedMode-AUTO = 1--><!--Device-FixedMode-AUTO = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **系统接口：** 此接口为系统接口。
-

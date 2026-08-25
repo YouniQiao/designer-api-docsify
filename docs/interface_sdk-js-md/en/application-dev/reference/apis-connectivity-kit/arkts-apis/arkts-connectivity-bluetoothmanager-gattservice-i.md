@@ -4,11 +4,11 @@ Describes the Gatt service.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** [GattService](arkts-connectivity-ble-gattservice-i.md)
-
-<!--Device-bluetoothManager-interface GattService--><!--Device-bluetoothManager-interface GattService-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -30,11 +30,11 @@ The [BLECharacteristic](arkts-connectivity-bluetoothmanager-blecharacteristic-i.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** [characteristics](arkts-connectivity-ble-gattservice-i.md#characteristics)
-
-<!--Device-GattService-characteristics: Array<BLECharacteristic>--><!--Device-GattService-characteristics: Array<BLECharacteristic>-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -50,11 +50,11 @@ The list of GATT services contained in the service
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** [includeServices](arkts-connectivity-ble-gattservice-i.md#includeservices)
-
-<!--Device-GattService-includeServices?: Array<GattService>--><!--Device-GattService-includeServices?: Array<GattService>-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -70,11 +70,11 @@ Indicates whether the GattService instance is primary or secondary.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** [isPrimary](arkts-connectivity-ble-gattservice-i.md#isprimary)
-
-<!--Device-GattService-isPrimary: boolean--><!--Device-GattService-isPrimary: boolean-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -90,11 +90,10 @@ The UUID of a GattService instance
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** [serviceUuid](arkts-connectivity-ble-gattservice-i.md#serviceuuid)
 
-<!--Device-GattService-serviceUuid: string--><!--Device-GattService-serviceUuid: string-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

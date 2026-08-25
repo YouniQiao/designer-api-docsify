@@ -4,7 +4,7 @@ Enumerates cache update strategies.
 
 **Since:** 23
 
-<!--Device-cacheDownload-enum CacheStrategy--><!--Device-cacheDownload-enum CacheStrategy-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -18,7 +18,7 @@ Forcibly updates the cache, regardless of whether the cache already exists.
 
 **Since:** 23
 
-<!--Device-CacheStrategy-FORCE = 0--><!--Device-CacheStrategy-FORCE = 0-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -32,7 +32,6 @@ Updates the cache only when the cache does not exist.
 
 **Since:** 23
 
-<!--Device-CacheStrategy-LAZY = 1--><!--Device-CacheStrategy-LAZY = 1-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
-

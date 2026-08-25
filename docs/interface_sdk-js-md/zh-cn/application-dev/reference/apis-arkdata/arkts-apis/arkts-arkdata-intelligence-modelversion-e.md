@@ -2,9 +2,9 @@
 
 模型版本枚举。@enum { int }
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-intelligence-enum ModelVersion--><!--Device-intelligence-enum ModelVersion-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
@@ -16,9 +16,8 @@ BASIC_MODEL = 0
 
 基本嵌入模型版本。
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-ModelVersion-BASIC_MODEL = 0--><!--Device-ModelVersion-BASIC_MODEL = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
-

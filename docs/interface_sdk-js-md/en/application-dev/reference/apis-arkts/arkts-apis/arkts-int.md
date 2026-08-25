@@ -9,7 +9,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Int](arkts-arkts-int-c.md) | Represents boxed int value and related operations |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Int](arkts-arkts-int-c.md) |

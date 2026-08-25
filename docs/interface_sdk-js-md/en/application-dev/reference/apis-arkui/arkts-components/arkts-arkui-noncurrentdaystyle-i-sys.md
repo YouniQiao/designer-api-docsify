@@ -4,9 +4,9 @@ Non current day style.
 
 **Since:** 7
 
-**Deprecated since:** 20
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-unnamed-interface NonCurrentDayStyle--><!--Device-unnamed-interface NonCurrentDayStyle-End-->
+**Deprecated since:** 20
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,11 +29,11 @@ Non-current month day color.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-NonCurrentDayStyle-nonCurrentMonthDayColor?: ResourceColor--><!--Device-NonCurrentDayStyle-nonCurrentMonthDayColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,11 +51,11 @@ Lunar style of non-current month.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-NonCurrentDayStyle-nonCurrentMonthLunarColor?: ResourceColor--><!--Device-NonCurrentDayStyle-nonCurrentMonthLunarColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,11 +73,11 @@ Non-Current Month Off Day Marker Color.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-NonCurrentDayStyle-nonCurrentMonthOffDayMarkColor?: ResourceColor--><!--Device-NonCurrentDayStyle-nonCurrentMonthOffDayMarkColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -95,13 +95,12 @@ Non-Current Month Workday Marker Color.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
-<!--Device-NonCurrentDayStyle-nonCurrentMonthWorkDayMarkColor?: ResourceColor--><!--Device-NonCurrentDayStyle-nonCurrentMonthWorkDayMarkColor?: ResourceColor-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

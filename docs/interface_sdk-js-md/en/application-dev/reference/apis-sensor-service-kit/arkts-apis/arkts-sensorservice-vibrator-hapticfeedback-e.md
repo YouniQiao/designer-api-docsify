@@ -2,9 +2,9 @@
 
 Defines the vibration effect. The frequency of the same vibration effect may vary depending on the vibrator, but the frequency trend remains consistent. These vibration effects correspond to the specific **EffectId** values. For details, see the sample code that demonstrates how to use [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md) or [vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md) to deliver the vibration effect defined by [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md).
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-vibrator-enum HapticFeedback--><!--Device-vibrator-enum HapticFeedback-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -16,9 +16,9 @@ EFFECT_SOFT = 'haptic.effect.soft'
 
 Soft vibration, low frequency.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HapticFeedback-EFFECT_SOFT = 'haptic.effect.soft'--><!--Device-HapticFeedback-EFFECT_SOFT = 'haptic.effect.soft'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -30,9 +30,9 @@ EFFECT_HARD = 'haptic.effect.hard'
 
 Hard vibration, medium frequency.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HapticFeedback-EFFECT_HARD = 'haptic.effect.hard'--><!--Device-HapticFeedback-EFFECT_HARD = 'haptic.effect.hard'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -44,9 +44,9 @@ EFFECT_SHARP = 'haptic.effect.sharp'
 
 Sharp vibration, high frequency.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HapticFeedback-EFFECT_SHARP = 'haptic.effect.sharp'--><!--Device-HapticFeedback-EFFECT_SHARP = 'haptic.effect.sharp'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -58,9 +58,9 @@ EFFECT_NOTICE_SUCCESS = 'haptic.notice.success'
 
 Vibration for a success notification.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-HapticFeedback-EFFECT_NOTICE_SUCCESS = 'haptic.notice.success'--><!--Device-HapticFeedback-EFFECT_NOTICE_SUCCESS = 'haptic.notice.success'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -72,9 +72,9 @@ EFFECT_NOTICE_FAILURE = 'haptic.notice.fail'
 
 Vibration for a failure notification.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-HapticFeedback-EFFECT_NOTICE_FAILURE = 'haptic.notice.fail'--><!--Device-HapticFeedback-EFFECT_NOTICE_FAILURE = 'haptic.notice.fail'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -86,9 +86,8 @@ EFFECT_NOTICE_WARNING = 'haptic.notice.warning'
 
 Vibration for an alert.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-HapticFeedback-EFFECT_NOTICE_WARNING = 'haptic.notice.warning'--><!--Device-HapticFeedback-EFFECT_NOTICE_WARNING = 'haptic.notice.warning'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
-

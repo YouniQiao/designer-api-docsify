@@ -4,7 +4,7 @@ WebGL 1.0
 
 **Since:** 7
 
-<!--Device-unnamed-interface WebGLRenderingContextOverloads--><!--Device-unnamed-interface WebGLRenderingContextOverloads-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -18,19 +18,19 @@ Sets buffer data
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-bufferData(target: GLenum, size: GLsizeiptr, usage: GLenum): void--><!--Device-WebGLRenderingContextOverloads-bufferData(target: GLenum, size: GLsizeiptr, usage: GLenum): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer target |
-| size | [GLsizeiptr](arkts-arkgraphics2d-glsizeiptr-t.md) | Yes | Buffer size |
-| usage | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer usage |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| size | [GLsizeiptr](arkts-arkgraphics2d-glsizeiptr-t.md) | Yes |
+| usage | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 ## bufferData
 
@@ -42,19 +42,19 @@ Sets buffer data from BufferSource
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-bufferData(target: GLenum, data: BufferSource | null, usage: GLenum): void--><!--Device-WebGLRenderingContextOverloads-bufferData(target: GLenum, data: BufferSource | null, usage: GLenum): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer target |
-| data | BufferSource \| null | Yes | Buffer data |
-| usage | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer usage |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| data | BufferSource \| null | Yes |
+| usage | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 ## bufferSubData
 
@@ -66,19 +66,19 @@ Sets buffer sub data
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-bufferSubData(target: GLenum, offset: GLintptr, data: BufferSource): void--><!--Device-WebGLRenderingContextOverloads-bufferSubData(target: GLenum, offset: GLintptr, data: BufferSource): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer target |
-| offset | [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Offset |
-| data | BufferSource | Yes | Data to set |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| offset | [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes |
+| data | BufferSource | Yes |
 
 ## compressedTexImage2D
 
@@ -98,23 +98,23 @@ Compressed texture image 2D
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-compressedTexImage2D(      target: GLenum,      level: GLint,      internalformat: GLenum,      width: GLsizei,      height: GLsizei,      border: GLint,      data: ArrayBufferView,    ): void--><!--Device-WebGLRenderingContextOverloads-compressedTexImage2D(      target: GLenum,      level: GLint,      internalformat: GLenum,      width: GLsizei,      height: GLsizei,      border: GLint,      data: ArrayBufferView,    ): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
-| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
-| internalformat | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Internal format |
-| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
-| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
-| border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
-| data | ArrayBufferView | Yes | Compressed image data |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| internalformat | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| data | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
 
 ## compressedTexSubImage2D
 
@@ -135,24 +135,24 @@ Compressed texture sub image 2D
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-compressedTexSubImage2D(      target: GLenum,      level: GLint,      xoffset: GLint,      yoffset: GLint,      width: GLsizei,      height: GLsizei,      format: GLenum,      data: ArrayBufferView,    ): void--><!--Device-WebGLRenderingContextOverloads-compressedTexSubImage2D(      target: GLenum,      level: GLint,      xoffset: GLint,      yoffset: GLint,      width: GLsizei,      height: GLsizei,      format: GLenum,      data: ArrayBufferView,    ): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
-| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
-| xoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
-| yoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
-| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
-| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
-| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Format |
-| data | ArrayBufferView | Yes | Compressed image data |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| xoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| yoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| data | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
 
 ## readPixels
 
@@ -172,23 +172,23 @@ Reads pixels from the framebuffer
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-readPixels(      x: GLint,      y: GLint,      width: GLsizei,      height: GLsizei,      format: GLenum,      type: GLenum,      pixels: ArrayBufferView | null,    ): void--><!--Device-WebGLRenderingContextOverloads-readPixels(      x: GLint,      y: GLint,      width: GLsizei,      height: GLsizei,      format: GLenum,      type: GLenum,      pixels: ArrayBufferView | null,    ): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X coordinate |
-| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y coordinate |
-| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
-| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
-| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
-| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
-| pixels | ArrayBufferView \| null | Yes | Pixel buffer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | ArrayBufferView \| null | Yes |
 
 ## texImage2D
 
@@ -210,25 +210,25 @@ Sets texture image 2D from pixels
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-texImage2D(      target: GLenum,      level: GLint,      internalformat: GLint,      width: GLsizei,      height: GLsizei,      border: GLint,      format: GLenum,      type: GLenum,      pixels: ArrayBufferView | null,    ): void--><!--Device-WebGLRenderingContextOverloads-texImage2D(      target: GLenum,      level: GLint,      internalformat: GLint,      width: GLsizei,      height: GLsizei,      border: GLint,      format: GLenum,      type: GLenum,      pixels: ArrayBufferView | null,    ): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
-| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
-| internalformat | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Internal format |
-| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
-| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
-| border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
-| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
-| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
-| pixels | ArrayBufferView \| null | Yes | Pixel data |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| internalformat | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | ArrayBufferView \| null | Yes |
 
 ## texImage2D
 
@@ -247,22 +247,22 @@ Sets texture image 2D from TexImageSource
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-texImage2D(      target: GLenum,      level: GLint,      internalformat: GLint,      format: GLenum,      type: GLenum,      source: TexImageSource,    ): void--><!--Device-WebGLRenderingContextOverloads-texImage2D(      target: GLenum,      level: GLint,      internalformat: GLint,      format: GLenum,      type: GLenum,      source: TexImageSource,    ): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
-| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
-| internalformat | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Internal format |
-| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
-| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
-| source | [TexImageSource](arkts-arkgraphics2d-teximagesource-t.md) | Yes | Image source |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| internalformat | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| source | [TexImageSource](arkts-arkgraphics2d-teximagesource-t.md) | Yes |
 
 ## texSubImage2D
 
@@ -284,25 +284,25 @@ Sets texture sub image 2D from pixels
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-texSubImage2D(      target: GLenum,      level: GLint,      xoffset: GLint,      yoffset: GLint,      width: GLsizei,      height: GLsizei,      format: GLenum,      type: GLenum,      pixels: ArrayBufferView | null,    ): void--><!--Device-WebGLRenderingContextOverloads-texSubImage2D(      target: GLenum,      level: GLint,      xoffset: GLint,      yoffset: GLint,      width: GLsizei,      height: GLsizei,      format: GLenum,      type: GLenum,      pixels: ArrayBufferView | null,    ): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
-| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
-| xoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
-| yoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
-| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
-| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
-| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
-| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
-| pixels | ArrayBufferView \| null | Yes | Pixel data |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| xoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| yoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | ArrayBufferView \| null | Yes |
 
 ## texSubImage2D
 
@@ -322,23 +322,23 @@ Sets texture sub image 2D from TexImageSource
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-texSubImage2D(      target: GLenum,      level: GLint,      xoffset: GLint,      yoffset: GLint,      format: GLenum,      type: GLenum,      source: TexImageSource,    ): void--><!--Device-WebGLRenderingContextOverloads-texSubImage2D(      target: GLenum,      level: GLint,      xoffset: GLint,      yoffset: GLint,      format: GLenum,      type: GLenum,      source: TexImageSource,    ): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
-| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
-| xoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
-| yoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
-| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
-| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
-| source | [TexImageSource](arkts-arkgraphics2d-teximagesource-t.md) | Yes | Image source |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| xoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| yoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| source | [TexImageSource](arkts-arkgraphics2d-teximagesource-t.md) | Yes |
 
 ## uniform1fv
 
@@ -350,18 +350,18 @@ Sets uniform1fv value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-uniform1fv(location: WebGLUniformLocation | null, v: Float32List): void--><!--Device-WebGLRenderingContextOverloads-uniform1fv(location: WebGLUniformLocation | null, v: Float32List): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
-| v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Value array |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
+| v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
 
 ## uniform1iv
 
@@ -373,18 +373,18 @@ Sets uniform1iv value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-uniform1iv(location: WebGLUniformLocation | null, v: Int32List): void--><!--Device-WebGLRenderingContextOverloads-uniform1iv(location: WebGLUniformLocation | null, v: Int32List): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
-| v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Value array |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
+| v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes |
 
 ## uniform2fv
 
@@ -396,18 +396,18 @@ Sets uniform2fv value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-uniform2fv(location: WebGLUniformLocation | null, v: Float32List): void--><!--Device-WebGLRenderingContextOverloads-uniform2fv(location: WebGLUniformLocation | null, v: Float32List): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
-| v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Value array |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
+| v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
 
 ## uniform2iv
 
@@ -419,18 +419,18 @@ Sets uniform2iv value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-uniform2iv(location: WebGLUniformLocation | null, v: Int32List): void--><!--Device-WebGLRenderingContextOverloads-uniform2iv(location: WebGLUniformLocation | null, v: Int32List): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
-| v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Value array |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
+| v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes |
 
 ## uniform3fv
 
@@ -442,18 +442,18 @@ Sets uniform3fv value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-uniform3fv(location: WebGLUniformLocation | null, v: Float32List): void--><!--Device-WebGLRenderingContextOverloads-uniform3fv(location: WebGLUniformLocation | null, v: Float32List): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
-| v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Value array |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
+| v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
 
 ## uniform3iv
 
@@ -465,18 +465,18 @@ Sets uniform3iv value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-uniform3iv(location: WebGLUniformLocation | null, v: Int32List): void--><!--Device-WebGLRenderingContextOverloads-uniform3iv(location: WebGLUniformLocation | null, v: Int32List): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
-| v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Value array |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
+| v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes |
 
 ## uniform4fv
 
@@ -488,18 +488,18 @@ Sets uniform4fv value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-uniform4fv(location: WebGLUniformLocation | null, v: Float32List): void--><!--Device-WebGLRenderingContextOverloads-uniform4fv(location: WebGLUniformLocation | null, v: Float32List): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
-| v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Value array |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
+| v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
 
 ## uniform4iv
 
@@ -511,18 +511,18 @@ Sets uniform4iv value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-uniform4iv(location: WebGLUniformLocation | null, v: Int32List): void--><!--Device-WebGLRenderingContextOverloads-uniform4iv(location: WebGLUniformLocation | null, v: Int32List): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
-| v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Value array |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
+| v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes |
 
 ## uniformMatrix2fv
 
@@ -534,19 +534,19 @@ Sets uniformMatrix2fv value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-uniformMatrix2fv(location: WebGLUniformLocation | null, transpose: GLboolean, value: Float32List): void--><!--Device-WebGLRenderingContextOverloads-uniformMatrix2fv(location: WebGLUniformLocation | null, transpose: GLboolean, value: Float32List): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
-| transpose | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to transpose |
-| value | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Matrix value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
+| transpose | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
+| value | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
 
 ## uniformMatrix3fv
 
@@ -558,19 +558,19 @@ Sets uniformMatrix3fv value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-uniformMatrix3fv(location: WebGLUniformLocation | null, transpose: GLboolean, value: Float32List): void--><!--Device-WebGLRenderingContextOverloads-uniformMatrix3fv(location: WebGLUniformLocation | null, transpose: GLboolean, value: Float32List): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
-| transpose | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to transpose |
-| value | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Matrix value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
+| transpose | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
+| value | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
 
 ## uniformMatrix4fv
 
@@ -582,17 +582,16 @@ Sets uniformMatrix4fv value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextOverloads-uniformMatrix4fv(location: WebGLUniformLocation | null, transpose: GLboolean, value: Float32List): void--><!--Device-WebGLRenderingContextOverloads-uniformMatrix4fv(location: WebGLUniformLocation | null, transpose: GLboolean, value: Float32List): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
-| transpose | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to transpose |
-| value | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Matrix value |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
+| transpose | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
+| value | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |

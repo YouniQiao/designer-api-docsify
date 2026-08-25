@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-export enum AccessibilitySourceType--><!--Device-unnamed-export enum AccessibilitySourceType-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -20,9 +20,9 @@ DEFAULT = 1
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AccessibilitySourceType-DEFAULT = 1--><!--Device-AccessibilitySourceType-DEFAULT = 1-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -38,9 +38,9 @@ ADDED_FROM_ACCESSIBILITY_VIRTUAL_NODE = 2
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AccessibilitySourceType-ADDED_FROM_ACCESSIBILITY_VIRTUAL_NODE = 2--><!--Device-AccessibilitySourceType-ADDED_FROM_ACCESSIBILITY_VIRTUAL_NODE = 2-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -56,11 +56,10 @@ UPDATED_FROM_ACCESSIBILITY_VIRTUAL_NODE = 3
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AccessibilitySourceType-UPDATED_FROM_ACCESSIBILITY_VIRTUAL_NODE = 3--><!--Device-AccessibilitySourceType-UPDATED_FROM_ACCESSIBILITY_VIRTUAL_NODE = 3-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
-

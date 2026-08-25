@@ -15,27 +15,27 @@ function write(eventName: string, eventType: EventType, keyValues: object): Prom
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [write](arkts-performanceanalysis-hiappevent-write-f.md)
-
-<!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object): Promise<void>--><!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object): Promise<void>-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| eventName | string | 是 | 事件名称。 |
-| eventType | EventType | 是 | 事件类型。 |
-| keyValues | object | 是 | 事件参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| eventName | string | 是 |
+| eventType | [EventType](../../apis-arkts/arkts-apis/arkts-arkts-xml-eventtype-e.md) | 是 |
+| keyValues | object | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，可以在其then()、catch()方法中分别对事件写入成功、写入异常的情况进行异步处理。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
@@ -86,24 +86,23 @@ function write(eventName: string, eventType: EventType, keyValues: object, callb
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [write](arkts-performanceanalysis-hiappevent-write-f.md)
-
-<!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object, callback: AsyncCallback<void>): void--><!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| eventName | string | 是 | 事件名称。 |
-| eventType | EventType | 是 | 事件类型。 |
-| keyValues | object | 是 | 事件参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 事件回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| eventName | string | 是 |
+| eventType | [EventType](../../apis-arkts/arkts-apis/arkts-arkts-xml-eventtype-e.md) | 是 |
+| keyValues | object | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **示例**
 
 参见 [write](#write)
-

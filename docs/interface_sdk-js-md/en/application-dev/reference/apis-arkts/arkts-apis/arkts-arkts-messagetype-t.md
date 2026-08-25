@@ -8,14 +8,13 @@ Type of message, only "message" and "messageerror".
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-unnamed-type MessageType = 'message' | 'messageerror'--><!--Device-unnamed-type MessageType = 'message' | 'messageerror'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
-| Type | Description |
-| --- | --- |
-| 'message' |  |
-| 'messageerror' |  |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| 'message' |
+| 'messageerror' |

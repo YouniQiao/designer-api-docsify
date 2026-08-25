@@ -4,7 +4,7 @@ Enumerates the result types of operating virtual nodes for accessibility.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export enum OperateVirtualNodeResult--><!--Device-unnamed-export enum OperateVirtualNodeResult-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -20,9 +20,9 @@ The operation is successful.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-OperateVirtualNodeResult-SUCCESS = 0--><!--Device-OperateVirtualNodeResult-SUCCESS = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -38,9 +38,9 @@ The node to be operated does not exist.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-OperateVirtualNodeResult-ACCESSIBILITY_ELEMENT_NOT_EXIST = 1--><!--Device-OperateVirtualNodeResult-ACCESSIBILITY_ELEMENT_NOT_EXIST = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -56,9 +56,9 @@ The current root node cannot be modified.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-OperateVirtualNodeResult-CANNOT_MODIFY_ROOT_NODE = 2--><!--Device-OperateVirtualNodeResult-CANNOT_MODIFY_ROOT_NODE = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -74,9 +74,9 @@ The accessibility node property is empty.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-OperateVirtualNodeResult-ACCESSIBILITY_PROPERTY_IS_EMPTY = 3--><!--Device-OperateVirtualNodeResult-ACCESSIBILITY_PROPERTY_IS_EMPTY = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -92,9 +92,9 @@ Failed to allocate a virtual node ID.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-OperateVirtualNodeResult-ALLOCATE_ID_FAILED = 4--><!--Device-OperateVirtualNodeResult-ALLOCATE_ID_FAILED = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -110,9 +110,9 @@ The array of newly added virtual nodes is empty.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-OperateVirtualNodeResult-VIRTUAL_NODE_PARAMETER_IS_EMPTY = 5--><!--Device-OperateVirtualNodeResult-VIRTUAL_NODE_PARAMETER_IS_EMPTY = 5-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -128,9 +128,9 @@ System exception.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-OperateVirtualNodeResult-INTERNAL_ERROR = 6--><!--Device-OperateVirtualNodeResult-INTERNAL_ERROR = 6-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -146,11 +146,10 @@ Virtual node operations are not supported.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-OperateVirtualNodeResult-VIRTUAL_NODE_NOT_SUPPORTED = 7--><!--Device-OperateVirtualNodeResult-VIRTUAL_NODE_NOT_SUPPORTED = 7-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
-

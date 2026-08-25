@@ -2,9 +2,9 @@
 
 Wi-Fi band type. @enum { int }
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-wifiManager-enum WifiBandType--><!--Device-wifiManager-enum WifiBandType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -16,9 +16,9 @@ WIFI_BAND_NONE
 
 Default.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-WifiBandType-WIFI_BAND_NONE--><!--Device-WifiBandType-WIFI_BAND_NONE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -30,9 +30,9 @@ WIFI_BAND_2G
 
 Band 2.4G.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-WifiBandType-WIFI_BAND_2G--><!--Device-WifiBandType-WIFI_BAND_2G-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -44,9 +44,9 @@ WIFI_BAND_5G
 
 Band 5G.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-WifiBandType-WIFI_BAND_5G--><!--Device-WifiBandType-WIFI_BAND_5G-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -58,9 +58,9 @@ WIFI_BAND_6G
 
 Band 6G.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-WifiBandType-WIFI_BAND_6G--><!--Device-WifiBandType-WIFI_BAND_6G-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -72,9 +72,8 @@ WIFI_BAND_60G
 
 Band 60G.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-WifiBandType-WIFI_BAND_60G--><!--Device-WifiBandType-WIFI_BAND_60G-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
-

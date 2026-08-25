@@ -13,13 +13,12 @@ HTTP请求指定特定网络的类型枚举。
 
 **起始版本：** 23
 
-<!--Device-http-export type PathPreference = 'auto' | 'primaryCellular' | 'secondaryCellular'--><!--Device-http-export type PathPreference = 'auto' | 'primaryCellular' | 'secondaryCellular'-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
-| 类型 | 说明 |
-| --- | --- |
-| 'auto' | 表示HTTP请求指定默认的网络连接。 |
-| 'primaryCellular' | 表示在蜂窝网络激活的场景下，HTTP请求指定默认的蜂窝网络连接。 |
-| 'secondaryCellular' | 表示在双蜂窝网络激活的场景下，HTTP请求指定副卡的蜂窝网络连接。 |
-
+| 类型 |
+| --- |
+| 'auto' |
+| 'primaryCellular' |
+| 'secondaryCellular' |

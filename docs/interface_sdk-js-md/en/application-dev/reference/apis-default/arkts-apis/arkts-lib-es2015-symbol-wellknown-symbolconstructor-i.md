@@ -1,8 +1,6 @@
 # SymbolConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface SymbolConstructor--><!--Device-unnamed-interface SymbolConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -19,9 +17,7 @@ A method that determines if a constructor object recognizes an object as one of 
 
 **Type:** unique symbol
 
-**Since:** -1
-
-<!--Device-SymbolConstructor-readonly hasInstance: unique symbol--><!--Device-SymbolConstructor-readonly hasInstance: unique symbol-End-->
+**ArkTS mode:** 
 
 ## isConcatSpreadable
 
@@ -33,9 +29,7 @@ A Boolean value that if true indicates that an object should flatten to its arra
 
 **Type:** unique symbol
 
-**Since:** -1
-
-<!--Device-SymbolConstructor-readonly isConcatSpreadable: unique symbol--><!--Device-SymbolConstructor-readonly isConcatSpreadable: unique symbol-End-->
+**ArkTS mode:** 
 
 ## match
 
@@ -47,9 +41,7 @@ A regular expression method that matches the regular expression against a string
 
 **Type:** unique symbol
 
-**Since:** -1
-
-<!--Device-SymbolConstructor-readonly match: unique symbol--><!--Device-SymbolConstructor-readonly match: unique symbol-End-->
+**ArkTS mode:** 
 
 ## replace
 
@@ -61,9 +53,7 @@ A regular expression method that replaces matched substrings of a string. Called
 
 **Type:** unique symbol
 
-**Since:** -1
-
-<!--Device-SymbolConstructor-readonly replace: unique symbol--><!--Device-SymbolConstructor-readonly replace: unique symbol-End-->
+**ArkTS mode:** 
 
 ## search
 
@@ -75,9 +65,7 @@ A regular expression method that returns the index within a string that matches 
 
 **Type:** unique symbol
 
-**Since:** -1
-
-<!--Device-SymbolConstructor-readonly search: unique symbol--><!--Device-SymbolConstructor-readonly search: unique symbol-End-->
+**ArkTS mode:** 
 
 ## species
 
@@ -89,9 +77,7 @@ A function valued property that is the constructor function that is used to crea
 
 **Type:** unique symbol
 
-**Since:** -1
-
-<!--Device-SymbolConstructor-readonly species: unique symbol--><!--Device-SymbolConstructor-readonly species: unique symbol-End-->
+**ArkTS mode:** 
 
 ## split
 
@@ -103,9 +89,7 @@ A regular expression method that splits a string at the indices that match the r
 
 **Type:** unique symbol
 
-**Since:** -1
-
-<!--Device-SymbolConstructor-readonly split: unique symbol--><!--Device-SymbolConstructor-readonly split: unique symbol-End-->
+**ArkTS mode:** 
 
 ## toPrimitive
 
@@ -117,9 +101,7 @@ A method that converts an object to a corresponding primitive value. Called by t
 
 **Type:** unique symbol
 
-**Since:** -1
-
-<!--Device-SymbolConstructor-readonly toPrimitive: unique symbol--><!--Device-SymbolConstructor-readonly toPrimitive: unique symbol-End-->
+**ArkTS mode:** 
 
 ## toStringTag
 
@@ -131,9 +113,7 @@ A String value that is used in the creation of the default string description of
 
 **Type:** unique symbol
 
-**Since:** -1
-
-<!--Device-SymbolConstructor-readonly toStringTag: unique symbol--><!--Device-SymbolConstructor-readonly toStringTag: unique symbol-End-->
+**ArkTS mode:** 
 
 ## unscopables
 
@@ -145,7 +125,4 @@ An Object whose own property names are property names that are excluded from the
 
 **Type:** unique symbol
 
-**Since:** -1
-
-<!--Device-SymbolConstructor-readonly unscopables: unique symbol--><!--Device-SymbolConstructor-readonly unscopables: unique symbol-End-->
-
+**ArkTS mode:** 

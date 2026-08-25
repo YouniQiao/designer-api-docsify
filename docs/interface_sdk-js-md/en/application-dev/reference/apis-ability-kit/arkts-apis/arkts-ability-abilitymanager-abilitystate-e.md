@@ -2,9 +2,9 @@
 
 Enumerates the ability states. This enum can be used together with [AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md) to return the ability state.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-abilityManager-export enum AbilityState--><!--Device-abilityManager-export enum AbilityState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -16,9 +16,9 @@ INITIAL = 0
 
 The ability is in the initial state.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-AbilityState-INITIAL = 0--><!--Device-AbilityState-INITIAL = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -30,9 +30,9 @@ FOCUS = 2
 
 The ability has the focus.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-AbilityState-FOCUS = 2--><!--Device-AbilityState-FOCUS = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -44,9 +44,9 @@ FOREGROUND = 9
 
 The ability is in the foreground state.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-AbilityState-FOREGROUND = 9--><!--Device-AbilityState-FOREGROUND = 9-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -58,9 +58,9 @@ BACKGROUND = 10
 
 The ability is in the background state.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-AbilityState-BACKGROUND = 10--><!--Device-AbilityState-BACKGROUND = 10-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -72,9 +72,9 @@ FOREGROUNDING = 11
 
 The ability is in the state of being switched to the foreground.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-AbilityState-FOREGROUNDING = 11--><!--Device-AbilityState-FOREGROUNDING = 11-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -86,9 +86,8 @@ BACKGROUNDING = 12
 
 The ability is in the state of being switched to the background.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-AbilityState-BACKGROUNDING = 12--><!--Device-AbilityState-BACKGROUNDING = 12-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-

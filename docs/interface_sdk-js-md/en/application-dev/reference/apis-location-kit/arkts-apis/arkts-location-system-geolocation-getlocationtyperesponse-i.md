@@ -2,9 +2,9 @@
 
 **Since:** 3
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface GetLocationTypeResponse--><!--Device-unnamed-export interface GetLocationTypeResponse-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Location.Location.Lite
 
@@ -24,11 +24,10 @@ types: Array<string>
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-GetLocationTypeResponse-types: Array<string>--><!--Device-GetLocationTypeResponse-types: Array<string>-End-->
-
 **System capability:** SystemCapability.Location.Location.Lite
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 6
 
-<!--Device-intl-export class NumberFormat--><!--Device-intl-export class NumberFormat-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -24,9 +24,9 @@ constructor()
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberFormat-constructor()--><!--Device-NumberFormat-constructor()-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -136,18 +136,18 @@ constructor(locale: string | Array<string>, options?: NumberOptions)
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberFormat-constructor(locale: string | Array<string>, options?: NumberOptions)--><!--Device-NumberFormat-constructor(locale: string | Array<string>, options?: NumberOptions)-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
-| options | [NumberOptions](../../apis-default/arkts-apis/arkts-intl-numberoptions-i.md) | 否 | 创建数字格式化对象时可设置的配置项。 <br>默认值：所有属性都取默认值时的配置项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locale | string \| Array & lt;string & gt; | 是 |
+| options | [NumberOptions](arkts-localization-intl-numberoptions-i.md) | 否 |
 
 **示例**
 
@@ -163,23 +163,23 @@ format(num: double): string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberFormat-format(num: double): string--><!--Device-NumberFormat-format(num: double): string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| num | double | 是 | 数字对象。<br>**起始版本：** 12 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| num | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 格式化后的数字字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -230,24 +230,24 @@ formatRange(startRange: double, endRange: double): string
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberFormat-formatRange(startRange: double, endRange: double): string--><!--Device-NumberFormat-formatRange(startRange: double, endRange: double): string-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| startRange | double | 是 | 数字范围的起始值。 |
-| endRange | double | 是 | 数字范围的终止值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| startRange | number | 是 |
+| endRange | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 格式化后的数字范围字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -278,17 +278,17 @@ resolvedOptions(): NumberOptions
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
-<!--Device-NumberFormat-resolvedOptions(): NumberOptions--><!--Device-NumberFormat-resolvedOptions(): NumberOptions-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [NumberOptions](../../apis-default/arkts-apis/arkts-intl-numberoptions-i.md) | 创建数字格式化对象时设置的配置项。 |
+| 类型 |
+| --- |
+| [NumberOptions](arkts-localization-intl-numberoptions-i.md) |
 
 **示例**
 
@@ -331,4 +331,3 @@ let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat('en-GB', { 
 let options: intl.RelativeTimeFormatResolvedOptions = formatter.resolvedOptions();
 let style: string = options.style; // style = 'short'
 ```
-

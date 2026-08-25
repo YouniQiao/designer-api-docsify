@@ -19,23 +19,23 @@ function getSdkVersion(options: HuksOptions): string
 
 **起始版本：** 8
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-huks-function getSdkVersion(options: HuksOptions): string--><!--Device-huks-function getSdkVersion(options: HuksOptions): string-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | 空对象（此处传空即可）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回sdk版本。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -48,4 +48,3 @@ let emptyOptions: huks.HuksOptions = {
 };
 let result = huks.getSdkVersion(emptyOptions);
 ```
-

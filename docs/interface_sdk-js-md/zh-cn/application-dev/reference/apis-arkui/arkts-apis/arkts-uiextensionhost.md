@@ -7,11 +7,11 @@
 > 从API version 11开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。&gt;
 > 本模块接口为系统接口。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-unnamed-declare namespace uiExtensionHost--><!--Device-unnamed-declare namespace uiExtensionHost-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,9 +28,8 @@ import { uiExtensionHost } from '@kit.ArkUI';
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [UIExtensionHostWindowProxy](arkts-arkui-uiextensionhost-uiextensionhostwindowproxy-i-sys.md) | Transition Controller |
-| [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md) | 用于表示宿主应用窗口和UIExtensionComponent组件的信息。 |
+| 名称 |
+| --- |
+| [UIExtensionHostWindowProxy](arkts-arkui-uiextensionhost-uiextensionhostwindowproxy-i-sys.md) |
+| [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md) |
 <!--DelEnd-->
-

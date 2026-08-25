@@ -4,13 +4,13 @@
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** [AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md)
 
 **需要权限：** ohos.permission.ACCELEROMETER
-
-<!--Device-unnamed-export interface AccelerometerResponse--><!--Device-unnamed-export interface AccelerometerResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -32,6 +32,8 @@ x: number
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** [x](arkts-sensorservice-sensor-accelerometerresponse-i.md#x)
@@ -39,8 +41,6 @@ x: number
 **需要权限：** ohos.permission.ACCELEROMETER
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-AccelerometerResponse-x: number--><!--Device-AccelerometerResponse-x: number-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -56,6 +56,8 @@ y: number
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** [y](arkts-sensorservice-sensor-accelerometerresponse-i.md#y)
@@ -63,8 +65,6 @@ y: number
 **需要权限：** ohos.permission.ACCELEROMETER
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-AccelerometerResponse-y: number--><!--Device-AccelerometerResponse-y: number-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -80,6 +80,8 @@ z: number
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** [z](arkts-sensorservice-sensor-accelerometerresponse-i.md#z)
@@ -88,7 +90,4 @@ z: number
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-AccelerometerResponse-z: number--><!--Device-AccelerometerResponse-z: number-End-->
-
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
-

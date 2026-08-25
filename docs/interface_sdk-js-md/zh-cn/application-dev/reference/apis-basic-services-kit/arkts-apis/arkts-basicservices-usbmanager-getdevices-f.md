@@ -17,23 +17,23 @@ function getDevices(): Array<Readonly<USBDevice>>
 > **说明：**&gt;
 > 三方应用无法通过getDevices()接口直接获取serial字段的设备序列号信息（该字段对三方应用不可用）。如需获取序列号，需要在申请设备访问权限后，自行发起控制传输获取。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-usbManager-function getDevices(): Array<Readonly<USBDevice>>--><!--Device-usbManager-function getDevices(): Array<Readonly<USBDevice>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;Readonly&lt;USBDevice&gt;&gt; | 设备信息列表。 |
+| 类型 |
+| --- |
+| Array & lt;Readonly & lt;USBDevice & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 **示例**
 
@@ -94,4 +94,3 @@ if (devicesList) {
   ]
  */
 ```
-

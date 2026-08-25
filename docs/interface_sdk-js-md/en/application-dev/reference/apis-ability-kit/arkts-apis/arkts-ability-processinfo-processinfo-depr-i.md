@@ -1,10 +1,10 @@
 # ProcessInfo
 
-The module defines process information. You can use getProcessInfo to obtain information about the processes running on the current ability.
+The module defines process information. You can use [getProcessInfo](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetprocessinfo7) to obtain information about the processes running on the current ability.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-export interface ProcessInfo--><!--Device-unnamed-export interface ProcessInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -16,11 +16,11 @@ pid: int
 
 The id of the current process
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-ProcessInfo-pid: int--><!--Device-ProcessInfo-pid: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -34,9 +34,8 @@ The name of the current process
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-ProcessInfo-processName: string--><!--Device-ProcessInfo-processName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-

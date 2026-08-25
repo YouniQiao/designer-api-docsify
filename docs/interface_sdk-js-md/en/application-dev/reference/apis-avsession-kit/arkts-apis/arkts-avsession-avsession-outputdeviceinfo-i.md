@@ -2,9 +2,9 @@
 
 Target Device Information Definition
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-avSession-interface OutputDeviceInfo--><!--Device-avSession-interface OutputDeviceInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -24,11 +24,10 @@ Arrays of device information
 
 **Type:** Array&lt;DeviceInfo&gt;
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-OutputDeviceInfo-devices: Array<DeviceInfo>--><!--Device-OutputDeviceInfo-devices: Array<DeviceInfo>-End-->
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
-

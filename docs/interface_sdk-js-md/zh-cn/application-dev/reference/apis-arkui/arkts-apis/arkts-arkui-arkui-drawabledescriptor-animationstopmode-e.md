@@ -4,7 +4,7 @@
 
 **起始版本：** 24
 
-<!--Device-unnamed-export enum AnimationStopMode--><!--Device-unnamed-export enum AnimationStopMode-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ FIRST_FRAME = 0
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AnimationStopMode-FIRST_FRAME = 0--><!--Device-AnimationStopMode-FIRST_FRAME = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ LAST_FRAME = 1
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AnimationStopMode-LAST_FRAME = 1--><!--Device-AnimationStopMode-LAST_FRAME = 1-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

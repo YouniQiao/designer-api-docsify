@@ -4,7 +4,7 @@ Socket代理信息。
 
 **起始版本：** 18
 
-<!--Device-socket-export interface ProxyOptions--><!--Device-socket-export interface ProxyOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -26,7 +26,7 @@ address: NetAddress
 
 **起始版本：** 18
 
-<!--Device-ProxyOptions-address: NetAddress--><!--Device-ProxyOptions-address: NetAddress-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -42,7 +42,7 @@ password?: string
 
 **起始版本：** 18
 
-<!--Device-ProxyOptions-password?: string--><!--Device-ProxyOptions-password?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -58,7 +58,7 @@ type: ProxyTypes
 
 **起始版本：** 18
 
-<!--Device-ProxyOptions-type: ProxyTypes--><!--Device-ProxyOptions-type: ProxyTypes-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -74,7 +74,6 @@ username?: string
 
 **起始版本：** 18
 
-<!--Device-ProxyOptions-username?: string--><!--Device-ProxyOptions-username?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.Communication.NetStack
-

@@ -1,10 +1,10 @@
 # OfflineResourceType
 
-Enumerates the offline resource types corresponding to the [OfflineResourceMap](../../apis-default/arkts-apis/arkts-webview-offlineresourcemap-i.md) object.
+Enumerates the offline resource types corresponding to the [OfflineResourceMap](arkts-arkweb-webview-offlineresourcemap-i.md) object.
 
 **Since:** 12
 
-<!--Device-webview-enum OfflineResourceType--><!--Device-webview-enum OfflineResourceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,7 +18,7 @@ Resource of the image type.
 
 **Since:** 12
 
-<!--Device-OfflineResourceType-IMAGE--><!--Device-OfflineResourceType-IMAGE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,7 +32,7 @@ Resource of the CSS type.
 
 **Since:** 12
 
-<!--Device-OfflineResourceType-CSS--><!--Device-OfflineResourceType-CSS-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -46,7 +46,7 @@ JavaScript resources loaded via the &lt;script src="" /&gt; tag.
 
 **Since:** 12
 
-<!--Device-OfflineResourceType-CLASSIC_JS--><!--Device-OfflineResourceType-CLASSIC_JS-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -60,7 +60,6 @@ JavaScript resources loaded via the &lt;script src="" type="module" /&gt; tag.
 
 **Since:** 12
 
-<!--Device-OfflineResourceType-MODULE_JS--><!--Device-OfflineResourceType-MODULE_JS-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

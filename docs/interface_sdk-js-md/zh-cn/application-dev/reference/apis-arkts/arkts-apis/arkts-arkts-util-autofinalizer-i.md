@@ -7,7 +7,7 @@
 
 **起始版本：** 22
 
-<!--Device-util-interface AutoFinalizer--><!--Device-util-interface AutoFinalizer-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,15 +27,14 @@ onFinalization(heldValue: T): void
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
-<!--Device-AutoFinalizer-onFinalization(heldValue: T): void--><!--Device-AutoFinalizer-onFinalization(heldValue: T): void-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| heldValue | T | 是 | 传递给 finalizer 的值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| heldValue | T | 是 |

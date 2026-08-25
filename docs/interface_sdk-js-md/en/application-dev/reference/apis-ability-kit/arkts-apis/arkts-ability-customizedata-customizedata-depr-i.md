@@ -8,11 +8,11 @@ The CustomizeData module provides custom metadata.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [Metadata](arkts-ability-metadata-i.md)
-
-<!--Device-unnamed-export interface CustomizeData--><!--Device-unnamed-export interface CustomizeData-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -30,11 +30,11 @@ Custom format of the data element. The value is an index to the resource that id
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** resource
-
-<!--Device-CustomizeData-extra: string--><!--Device-CustomizeData-extra: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -52,11 +52,11 @@ Key that identifies a data element.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** name
-
-<!--Device-CustomizeData-name: string--><!--Device-CustomizeData-name: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -74,11 +74,10 @@ Value of the data element.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** value
 
-<!--Device-CustomizeData-value: string--><!--Device-CustomizeData-value: string-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework
-

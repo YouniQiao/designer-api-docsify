@@ -4,7 +4,7 @@ Defines the accessibility options of the suffix icon.
 
 **Since:** 14
 
-<!--Device-unnamed-export interface AccessibilityOptions--><!--Device-unnamed-export interface AccessibilityOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,11 @@ Accessibility description. You can provide comprehensive text explanations to he
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-AccessibilityOptions-accessibilityDescription?: ResourceStr--><!--Device-AccessibilityOptions-accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,11 +52,11 @@ Accessibility level. It determines whether the component can be recognized by ac
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-AccessibilityOptions-accessibilityLevel?: string--><!--Device-AccessibilityOptions-accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,10 @@ Accessibility text, that is, accessible label name. If a component does not cont
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-AccessibilityOptions-accessibilityText?: ResourceStr--><!--Device-AccessibilityOptions-accessibilityText?: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

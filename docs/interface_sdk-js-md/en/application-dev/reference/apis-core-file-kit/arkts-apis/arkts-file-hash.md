@@ -2,9 +2,9 @@
 
 The **FileHash** module implements hash processing on files.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-declare namespace hash--><!--Device-unnamed-declare namespace hash-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -18,15 +18,14 @@ import { hash } from '@kit.CoreFileKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [createHash](arkts-corefile-hash-createhash-f.md) | Creates a **HashStream** instance, which can be used to generate a message digest (a hash value) using the given algorithm. |
-| [hash](arkts-corefile-hash-f.md) | Calculates a hash value for a file. This API uses a promise to return the result. |
-| [hash](arkts-corefile-hash-f.md) | Calculates a hash value for a file. This API uses an asynchronous callback to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [createHash](arkts-corefile-hash-createhash-f.md) |
+| [hash](arkts-corefile-hash-f.md) |
+| [hash](arkts-corefile-hash-f.md) |
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [HashStream](arkts-corefile-hash-hashstream-c.md) | The **HashStream** class is a utility for creating a message digest of data. You can use [createHash](arkts-corefile-hash-createhash-f.md) to create a **HashStream** instance. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [HashStream](arkts-corefile-hash-hashstream-c.md) |

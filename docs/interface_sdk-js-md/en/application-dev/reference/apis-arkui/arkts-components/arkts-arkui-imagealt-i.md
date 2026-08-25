@@ -4,7 +4,7 @@ Sets the placeholder image.
 
 **Since:** 22
 
-<!--Device-unnamed-declare interface ImageAlt--><!--Device-unnamed-declare interface ImageAlt-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,13 +25,13 @@ Placeholder image displayed when loading fails.
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
-
-<!--Device-ImageAlt-error?: ResourceStr | PixelMap--><!--Device-ImageAlt-error?: ResourceStr | PixelMap-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,13 +47,12 @@ Placeholder image displayed during loading.
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
-<!--Device-ImageAlt-placeholder?: ResourceStr | PixelMap--><!--Device-ImageAlt-placeholder?: ResourceStr | PixelMap-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

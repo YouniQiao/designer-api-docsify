@@ -19,17 +19,17 @@ Obtains the size of the shared dirty memory of a process. This API is implemente
 > in the main thread. You can use this API in the asynchronous thread started by calling
 > [@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md) or [@ohos.worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md) to avoid frame freezing.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-hidebug-function getSharedDirty() : bigint--><!--Device-hidebug-function getSharedDirty() : bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint | Size of the shared dirty memory of the process, in KB. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| bigint |
 
 **Examples**
 
@@ -38,4 +38,3 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 let sharedDirty: bigint = hidebug.getSharedDirty();
 ```
-

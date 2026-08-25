@@ -2,9 +2,9 @@
 
 创建扩展窗口时需要配置的参数。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-window-interface ExtensionWindowConfig--><!--Device-window-interface ExtensionWindowConfig-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -26,11 +26,11 @@ subWindowOptions?: SubWindowOptions
 
 **类型：** [SubWindowOptions](arkts-arkui-window-subwindowoptions-i.md)
 
-**起始版本：** 23
+**起始版本：** 14
+
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ExtensionWindowConfig-subWindowOptions?: SubWindowOptions--><!--Device-ExtensionWindowConfig-subWindowOptions?: SubWindowOptions-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -46,11 +46,11 @@ systemWindowOptions?: SystemWindowOptions
 
 **类型：** [SystemWindowOptions](arkts-arkui-window-systemwindowoptions-i-sys.md)
 
-**起始版本：** 23
+**起始版本：** 14
+
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ExtensionWindowConfig-systemWindowOptions?: SystemWindowOptions--><!--Device-ExtensionWindowConfig-systemWindowOptions?: SystemWindowOptions-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -66,11 +66,11 @@ windowAttribute: ExtensionWindowAttribute
 
 **类型：** [ExtensionWindowAttribute](arkts-arkui-window-extensionwindowattribute-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 14
+
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ExtensionWindowConfig-windowAttribute: ExtensionWindowAttribute--><!--Device-ExtensionWindowConfig-windowAttribute: ExtensionWindowAttribute-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -86,11 +86,11 @@ windowName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 14
+
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ExtensionWindowConfig-windowName: string--><!--Device-ExtensionWindowConfig-windowName: string-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -106,13 +106,12 @@ windowRect: Rect
 
 **类型：** Rect
 
-**起始版本：** 23
+**起始版本：** 14
+
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ExtensionWindowConfig-windowRect: Rect--><!--Device-ExtensionWindowConfig-windowRect: Rect-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
 **系统接口：** 此接口为系统接口。
-

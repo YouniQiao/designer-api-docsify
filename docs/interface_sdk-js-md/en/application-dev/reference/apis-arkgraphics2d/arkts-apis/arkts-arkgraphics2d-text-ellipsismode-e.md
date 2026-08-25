@@ -3,9 +3,9 @@
 Enumerates the ellipsis styles.  
 **EllipsisMode.START** and **EllipsisMode.MIDDLE** take effect only when text overflows in a single line.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-text-enum EllipsisMode--><!--Device-text-enum EllipsisMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -17,11 +17,11 @@ START = 0
 
 Ellipsis at the beginning. This enumerated value is valid only when **maxLines** is set to **1** in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-EllipsisMode-START = 0--><!--Device-EllipsisMode-START = 0-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -33,11 +33,11 @@ MIDDLE = 1
 
 Ellipsis in the middle. This enumerated value is valid only when **maxLines** is set to **1** in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-EllipsisMode-MIDDLE = 1--><!--Device-EllipsisMode-MIDDLE = 1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -49,11 +49,11 @@ END = 2
 
 Ellipsis at the end. This enumerated value is valid when **maxLines** is set to any value in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-EllipsisMode-END = 2--><!--Device-EllipsisMode-END = 2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -67,9 +67,9 @@ Ellipsis at the beginning. This enumerated value is valid when **maxLines** is s
 
 **Since:** 24
 
-**Atomic service API:** This API can be used in atomic services since API version 24.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-EllipsisMode-MULTILINE_START = 3--><!--Device-EllipsisMode-MULTILINE_START = 3-End-->
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -83,9 +83,8 @@ Ellipsis in the middle. This enumerated value is valid when **maxLines** is set 
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
-<!--Device-EllipsisMode-MULTILINE_MIDDLE = 4--><!--Device-EllipsisMode-MULTILINE_MIDDLE = 4-End-->
-
 **System capability:** SystemCapability.Graphics.Drawing
-

@@ -1,37 +1,13 @@
 # GeneratorFunction
 
-**Since:** -1
-
-<!--Device-unnamed-interface GeneratorFunction--><!--Device-unnamed-interface GeneratorFunction-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
-
-```TypeScript
-new (...args: any[]): Generator
-```
-
-Creates a new Generator object.
-
-**Since:** -1
-
-<!--Device-GeneratorFunction-new (...args: any[]): Generator--><!--Device-GeneratorFunction-new (...args: any[]): Generator-End-->
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| args | any[] | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-## constructor
+## [[Call]]
 
 ```TypeScript
 (...args: any[]): Generator
@@ -39,20 +15,38 @@ Creates a new Generator object.
 
 Creates a new Generator object.
 
-**Since:** -1
-
-<!--Device-GeneratorFunction-(...args: any[]): Generator--><!--Device-GeneratorFunction-(...args: any[]): Generator-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| args | any[] | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | any[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+## [[Construct]]
+
+```TypeScript
+new (...args: any[]): Generator
+```
+
+Creates a new Generator object.
+
+**ArkTS mode:** 
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | any[] | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## length
 
 ```TypeScript
@@ -63,9 +57,7 @@ The length of the arguments.
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-GeneratorFunction-readonly length: number--><!--Device-GeneratorFunction-readonly length: number-End-->
+**ArkTS mode:** 
 
 ## name
 
@@ -77,9 +69,7 @@ Returns the name of the function.
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-GeneratorFunction-readonly name: string--><!--Device-GeneratorFunction-readonly name: string-End-->
+**ArkTS mode:** 
 
 ## prototype
 
@@ -91,7 +81,4 @@ A reference to the prototype.
 
 **Type:** Generator
 
-**Since:** -1
-
-<!--Device-GeneratorFunction-readonly prototype: Generator--><!--Device-GeneratorFunction-readonly prototype: Generator-End-->
-
+**ArkTS mode:** 

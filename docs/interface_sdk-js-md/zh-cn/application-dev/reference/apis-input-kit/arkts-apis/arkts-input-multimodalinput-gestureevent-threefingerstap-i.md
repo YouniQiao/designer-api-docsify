@@ -2,9 +2,9 @@
 
 三指轻点手势事件。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-unnamed-export declare interface ThreeFingersTap--><!--Device-unnamed-export declare interface ThreeFingersTap-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -24,9 +24,8 @@ type: ActionType
 
 **类型：** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ThreeFingersTap-type: ActionType--><!--Device-ThreeFingersTap-type: ActionType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
-

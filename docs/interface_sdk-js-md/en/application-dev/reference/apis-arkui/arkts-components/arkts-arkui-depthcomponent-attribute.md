@@ -6,7 +6,7 @@ Style the DepthComponent.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare class DepthComponentAttribute--><!--Device-unnamed-declare class DepthComponentAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,4 +16,3 @@ Style the DepthComponent.
 
 ```TypeScript
 ```
-

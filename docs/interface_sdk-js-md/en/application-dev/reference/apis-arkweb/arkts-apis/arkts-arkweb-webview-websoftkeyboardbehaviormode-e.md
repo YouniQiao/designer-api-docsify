@@ -4,7 +4,7 @@ Enumerates the behavior modes of the web soft keyboard.
 
 **Since:** 22
 
-<!--Device-webview-enum WebSoftKeyboardBehaviorMode--><!--Device-webview-enum WebSoftKeyboardBehaviorMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,7 +18,7 @@ When the **Web** component is focused or unfocused, or its status changes to ina
 
 **Since:** 22
 
-<!--Device-WebSoftKeyboardBehaviorMode-DEFAULT = 0--><!--Device-WebSoftKeyboardBehaviorMode-DEFAULT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,7 +32,6 @@ When the **Web** component's status changes between inactive and active, the sys
 
 **Since:** 22
 
-<!--Device-WebSoftKeyboardBehaviorMode-DISABLE_AUTO_KEYBOARD_ON_ACTIVE = 1--><!--Device-WebSoftKeyboardBehaviorMode-DISABLE_AUTO_KEYBOARD_ON_ACTIVE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

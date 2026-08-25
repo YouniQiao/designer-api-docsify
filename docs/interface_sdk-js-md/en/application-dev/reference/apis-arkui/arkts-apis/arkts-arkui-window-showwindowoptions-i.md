@@ -2,9 +2,9 @@
 
 Describes the parameters for displaying a child window or system window.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-window-interface ShowWindowOptions--><!--Device-window-interface ShowWindowOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -24,11 +24,10 @@ Whether the window automatically gains focus when [showWindow()](arkts-arkui-win
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-ShowWindowOptions-focusOnShow?: boolean--><!--Device-ShowWindowOptions-focusOnShow?: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Window.SessionManager
-

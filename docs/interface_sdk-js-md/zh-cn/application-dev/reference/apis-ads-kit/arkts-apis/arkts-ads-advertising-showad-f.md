@@ -20,27 +20,27 @@ function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.U
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-advertising-function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.UIAbilityContext): void--><!--Device-advertising-function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.UIAbilityContext): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| ad | Advertisement | 是 | 广告对象。 |
-| options | [AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md) | 是 | 广告展示参数。 |
-| context | common.UIAbilityContext | 否 | UIAbility的上下文环境，不设置从api: [@ohos.app.ability.common](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ js-apis-app-ability-common)中获取。<br>**起始版本：** 12 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| ad | [Advertisement](arkts-ads-advertisement-advertisement-i.md) | 是 |
+| options | [AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md) | 是 |
+| context | common.UIAbilityContext | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
-| [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
-| [21800004](../errorcode-ads.md#21800004-广告展示失败) | Failed to display the ad. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [21800001](../errorcode-ads.md#21800001-系统内部错误) |
+| [21800004](../errorcode-ads.md#21800004-广告展示失败) |
 
 **示例**
 
@@ -57,4 +57,3 @@ function showAd(ad: advertising.Advertisement, context?: common.UIAbilityContext
   advertising.showAd(ad, adDisplayOptions, context);
 }
 ```
-

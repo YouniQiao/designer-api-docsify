@@ -14,17 +14,17 @@ function getCurrentInputMethodSubtype(): InputMethodSubtype
 
 获取当前输入法的子类型。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-inputMethod-function getCurrentInputMethodSubtype(): InputMethodSubtype--><!--Device-inputMethod-function getCurrentInputMethodSubtype(): InputMethodSubtype-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | 返回当前输入法子类型对象。 |
+| 类型 |
+| --- |
+| [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) |
 
 **示例**
 
@@ -46,4 +46,3 @@ try {
   console.error(`Failed to getCurrentInputMethodSubtype. Code: ${error.code}, message: ${error.message}`);
 }
 ```
-

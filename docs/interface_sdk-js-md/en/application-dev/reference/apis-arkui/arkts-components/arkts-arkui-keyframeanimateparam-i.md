@@ -4,7 +4,7 @@ Provides animation configuration options.
 
 **Since:** 11
 
-<!--Device-unnamed-declare interface KeyframeAnimateParam--><!--Device-unnamed-declare interface KeyframeAnimateParam-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -12,6 +12,24 @@ Provides animation configuration options.
 
 ```TypeScript
 ```
+
+## onFinish
+
+```TypeScript
+onFinish?: () => void
+```
+
+Callback invoked when the animation playback is complete. This API is called after the keyframe animation has played for the specified number of times. If transition animations are disabled in developer options, or if a **UIAbility** switches from the foreground to the background, any ongoing finite keyframe animation will stop immediately and trigger the playback completion callback.
+
+**Since:** 11
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## delay
 
@@ -28,11 +46,11 @@ Overall delay of the animation, in milliseconds. By default, the animation is pl
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyframeAnimateParam-delay?: number--><!--Device-KeyframeAnimateParam-delay?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,11 +69,11 @@ Expected frame rate range of the animation.Default value: {min:0, max:0, expecte
 
 **Since:** 19
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-KeyframeAnimateParam-expectedFrameRateRange?: ExpectedFrameRateRange--><!--Device-KeyframeAnimateParam-expectedFrameRateRange?: ExpectedFrameRateRange-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -75,31 +93,10 @@ Number of times that the animation is played. By default, the animation is playe
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyframeAnimateParam-iterations?: number--><!--Device-KeyframeAnimateParam-iterations?: number-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onFinish
-
-```TypeScript
-onFinish?: () => void
-```
-
-Callback invoked when the animation playback is complete. This API is called after the keyframe animation has played for the specified number of times. If transition animations are disabled in developer options, or if a **UIAbility** switches from the foreground to the background, any ongoing finite keyframe animation will stop immediately and trigger the playback completion callback.
-
-**Type:** () =&gt; void
-
-**Since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-KeyframeAnimateParam-onFinish?: () => void--><!--Device-KeyframeAnimateParam-onFinish?: () => void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

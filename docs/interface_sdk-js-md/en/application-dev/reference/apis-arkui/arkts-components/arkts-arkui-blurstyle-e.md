@@ -4,7 +4,7 @@ Enumerates blur styles.
 
 **Since:** 9
 
-<!--Device-unnamed-declare enum BlurStyle--><!--Device-unnamed-declare enum BlurStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Thin material.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-BlurStyle-Thin--><!--Device-BlurStyle-Thin-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Regular material.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-BlurStyle-Regular--><!--Device-BlurStyle-Regular-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ Thick material.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-BlurStyle-Thick--><!--Device-BlurStyle-Thick-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,13 +72,13 @@ Material that creates the minimum depth of field effect.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-BlurStyle-BACKGROUND_THIN--><!--Device-BlurStyle-BACKGROUND_THIN-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,13 +92,13 @@ Material that creates a medium shallow depth of field effect.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-BlurStyle-BACKGROUND_REGULAR--><!--Device-BlurStyle-BACKGROUND_REGULAR-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,13 +112,13 @@ Material that creates a high shallow depth of field effect.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-BlurStyle-BACKGROUND_THICK--><!--Device-BlurStyle-BACKGROUND_THICK-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -132,13 +132,13 @@ Material that creates the maximum depth of field effect.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-BlurStyle-BACKGROUND_ULTRA_THICK--><!--Device-BlurStyle-BACKGROUND_ULTRA_THICK-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -152,13 +152,13 @@ No blur.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-BlurStyle-NONE--><!--Device-BlurStyle-NONE-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -172,13 +172,13 @@ Component ultra-thin material.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-BlurStyle-COMPONENT_ULTRA_THIN = 8--><!--Device-BlurStyle-COMPONENT_ULTRA_THIN = 8-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -192,13 +192,13 @@ Component thin material.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-BlurStyle-COMPONENT_THIN = 9--><!--Device-BlurStyle-COMPONENT_THIN = 9-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -212,13 +212,13 @@ Component regular material.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-BlurStyle-COMPONENT_REGULAR = 10--><!--Device-BlurStyle-COMPONENT_REGULAR = 10-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -232,13 +232,13 @@ Component thick material.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-BlurStyle-COMPONENT_THICK = 11--><!--Device-BlurStyle-COMPONENT_THICK = 11-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -252,13 +252,12 @@ Component ultra-thick material.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
-<!--Device-BlurStyle-COMPONENT_ULTRA_THICK = 12--><!--Device-BlurStyle-COMPONENT_ULTRA_THICK = 12-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

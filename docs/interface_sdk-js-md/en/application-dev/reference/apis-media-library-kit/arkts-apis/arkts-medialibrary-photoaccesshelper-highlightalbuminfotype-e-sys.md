@@ -2,9 +2,9 @@
 
 Enumerates the types of the highlights album information.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-photoAccessHelper-enum HighlightAlbumInfoType--><!--Device-photoAccessHelper-enum HighlightAlbumInfoType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ COVER_INFO = 0
 
 Cover information.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HighlightAlbumInfoType-COVER_INFO = 0--><!--Device-HighlightAlbumInfoType-COVER_INFO = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,9 @@ PLAY_INFO = 1
 
 Music information.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HighlightAlbumInfoType-PLAY_INFO = 1--><!--Device-HighlightAlbumInfoType-PLAY_INFO = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,11 +50,10 @@ ALBUM_INFO = 2
 
 Album information.
 
-**Since:** 26.0.0
+**Since:** 21
 
-<!--Device-HighlightAlbumInfoType-ALBUM_INFO = 2--><!--Device-HighlightAlbumInfoType-ALBUM_INFO = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

@@ -4,7 +4,7 @@ Network access policy.
 
 **Since:** 12
 
-<!--Device-policy-export interface NetworkAccessPolicy--><!--Device-policy-export interface NetworkAccessPolicy-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -28,7 +28,7 @@ Whether the application is allowed to access the cellular network. The value **t
 
 **Since:** 12
 
-<!--Device-NetworkAccessPolicy-allowCellular?: boolean--><!--Device-NetworkAccessPolicy-allowCellular?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -46,7 +46,7 @@ Whether the application is allowed to access the Wi-Fi network. The value **true
 
 **Since:** 12
 
-<!--Device-NetworkAccessPolicy-allowWiFi?: boolean--><!--Device-NetworkAccessPolicy-allowWiFi?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -64,7 +64,7 @@ Whether the application is always allowed to access the cellular network. The va
 
 **Since:** 18
 
-<!--Device-NetworkAccessPolicy-alwaysAllowCellular?: boolean--><!--Device-NetworkAccessPolicy-alwaysAllowCellular?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -82,9 +82,8 @@ Whether the application is always allowed to access the Wi-Fi network. The value
 
 **Since:** 18
 
-<!--Device-NetworkAccessPolicy-alwaysAllowWiFi?: boolean--><!--Device-NetworkAccessPolicy-alwaysAllowWiFi?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
-

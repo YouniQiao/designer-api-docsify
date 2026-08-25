@@ -1,23 +1,22 @@
 # OnSelectCallback
 
 ```TypeScript
-declare type OnSelectCallback = (index: number, selectValue: string) => void
+export type OnSelectCallback = (index: int, selectStr: string) => void
 ```
 
-Called when an item in the drop-down list box is selected.
+Callback of selecting an item from the select event.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-unnamed-declare type OnSelectCallback = (index: number, selectValue: string) => void--><!--Device-unnamed-declare type OnSelectCallback = (index: number, selectValue: string) => void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | number | Yes | Index of the selected option. The index is zero-based. |
-| selectValue | string | Yes | Value of the selected option. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| selectStr | string | Yes |

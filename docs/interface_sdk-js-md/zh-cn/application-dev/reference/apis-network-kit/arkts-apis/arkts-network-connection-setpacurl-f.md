@@ -19,26 +19,26 @@ function setPacUrl(pacUrl: string): void
 
 **起始版本：** 15
 
-**需要权限：** ohos.permission.SET_PAC_URL
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
-<!--Device-connection-function setPacUrl(pacUrl: string): void--><!--Device-connection-function setPacUrl(pacUrl: string): void-End-->
+**需要权限：** ohos.permission.SET_PAC_URL
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pacUrl | string | 是 | 需要设置的PAC脚本的地址，该接口不会对脚本地址进行校验。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pacUrl | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
 **示例**
 
@@ -48,4 +48,3 @@ import { connection } from '@kit.NetworkKit';
 let pacUrl = "xxx";
 connection.setPacUrl(pacUrl);
 ```
-

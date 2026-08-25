@@ -4,7 +4,7 @@ EventResult是ArkWeb Kit中用于通知Web组件同层事件消费结果的类�
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare class EventResult--><!--Device-unnamed-declare class EventResult-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -23,9 +23,9 @@ EventResult的构造函数。
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-EventResult-constructor()--><!--Device-EventResult-constructor()-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -39,17 +39,17 @@ setGestureEventResult(result: boolean): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-EventResult-setGestureEventResult(result: boolean): void--><!--Device-EventResult-setGestureEventResult(result: boolean): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| result | boolean | 是 | 是否消费该手势事件。 <br>true表示消费该手势事件，false表示不消费该手势事件。 <br>传入null或undefined时为true。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| result | boolean | 是 |
 
 **示例**
 
@@ -67,16 +67,16 @@ setGestureEventResult(result: boolean, stopPropagation: boolean): void
 
 **起始版本：** 14
 
-<!--Device-EventResult-setGestureEventResult(result: boolean, stopPropagation: boolean): void--><!--Device-EventResult-setGestureEventResult(result: boolean, stopPropagation: boolean): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| result | boolean | 是 | 是否消费该手势事件。 <br>true表示消费该手势事件，false表示不消费该手势事件。 <br>传入null或undefined时为true。 |
-| stopPropagation | boolean | 是 | 是否阻止冒泡，在result为true时生效。 <br>true表示阻止冒泡，false表示不阻止冒泡。 <br>传入null或undefined时为true。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| result | boolean | 是 |
+| stopPropagation | boolean | 是 |
 
 **示例**
 
@@ -92,18 +92,17 @@ setMouseEventResult(result: boolean, stopPropagation?: boolean): void
 
 **起始版本：** 20
 
-<!--Device-EventResult-setMouseEventResult(result: boolean, stopPropagation?: boolean): void--><!--Device-EventResult-setMouseEventResult(result: boolean, stopPropagation?: boolean): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| result | boolean | 是 | 是否消费该鼠标事件。 <br>true表示消费该鼠标事件，false表示不消费该鼠标事件。 <br>传入null或undefined时为true。 |
-| stopPropagation | boolean | 否 | 是否阻止冒泡，在result为true时生效。 <br>true表示阻止冒泡，false表示不阻止冒泡。 <br>传入null或undefined时为true。 <br>默认值：true。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| result | boolean | 是 |
+| stopPropagation | boolean | 否 |
 
 **示例**
 
 鼠标事件示例代码参考[onNativeEmbedMouseEvent](./arkts-basic-components-web-events.md#onnativeembedmouseevent20)。
-

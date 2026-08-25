@@ -8,13 +8,12 @@ Define a responsive item filling pattern that can be used in WaterFlow,Grid,List
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-unnamed-declare type ResponsiveFillType = PresetFillType--><!--Device-unnamed-declare type ResponsiveFillType = PresetFillType-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** PresetFillType
-

@@ -2,11 +2,11 @@
 
 Photo Functions object.
 
-**Inheritance/Implementation:** PhotoFunctions extends [FlashQuery](arkts-camera-camera-flashquery-i.md), [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md), [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md), [FocusQuery](arkts-camera-camera-focusquery-i.md), [ZoomQuery](arkts-camera-camera-zoomquery-i.md), [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md), [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md), [ColorManagementQuery](arkts-camera-camera-colormanagementquery-i.md), [MacroQuery](arkts-camera-camera-macroquery-i-sys.md), [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md)
+**Inheritance/Implementation:** PhotoFunctions extends [FlashQuery](arkts-camera-camera-flashquery-i.md), [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md), [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md), [FocusQuery](arkts-camera-camera-focusquery-i.md), [ZoomQuery](arkts-camera-camera-zoomquery-i.md), [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md), [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md), [ColorManagementQuery](arkts-camera-camera-colormanagementquery-i.md), [MacroQuery](arkts-camera-camera-macroquery-i.md), [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md)
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-camera-interface PhotoFunctions--><!--Device-camera-interface PhotoFunctions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -17,4 +17,3 @@ Photo Functions object.
 ```TypeScript
 import { camera } from '@kit.CameraKit';
 ```
-

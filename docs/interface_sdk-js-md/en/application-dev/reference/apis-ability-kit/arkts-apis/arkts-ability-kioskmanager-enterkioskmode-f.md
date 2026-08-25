@@ -14,35 +14,35 @@ function enterKioskMode(context: UIAbilityContext): Promise<void>
 
 Enters kiosk mode. This API uses a promise to return the result. This API can be properly called only on phones, PC/2-in-1 devices, and tablets. On other devices, it returns the error code 801.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-kioskManager-function enterKioskMode(context: UIAbilityContext): Promise<void>--><!--Device-kioskManager-function enterKioskMode(context: UIAbilityContext): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) | Yes | Context of the UIAbility that needs to enter kiosk mode. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
-| [16000110](../errorcode-ability.md#16000110-application-is-not-in-the-kiosk-mode-list) | The current application is not in Kiosk app list and cannot enter Kiosk mode. |
-| [16000111](../errorcode-ability.md#16000111-application-is-already-in-kiosk-mode) | The system is already in Kiosk mode and cannot enter Kiosk mode again. |
-| [16000113](../errorcode-ability.md#16000113-ability-is-not-in-the-foreground) | Current ability is not in foreground.<br>**Applicable version:** 20 - 26.0.0 |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000110](../errorcode-ability.md#16000110-application-is-not-in-the-kiosk-mode-list) |
+| [16000111](../errorcode-ability.md#16000111-application-is-already-in-kiosk-mode) |
+| [16000113](../errorcode-ability.md#16000113-ability-is-not-in-the-foreground) |
 
 **Examples**
 
@@ -75,4 +75,3 @@ struct Index {
   }
 }
 ```
-

@@ -4,7 +4,7 @@ Represents the information about the web native message connection.
 
 **Since:** 21
 
-<!--Device-webNativeMessagingExtensionManager-interface ConnectionNativeInfo--><!--Device-webNativeMessagingExtensionManager-interface ConnectionNativeInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -26,9 +26,9 @@ Bundle name of the web native message extension application.
 
 **Since:** 21
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
-<!--Device-ConnectionNativeInfo-bundleName: string--><!--Device-ConnectionNativeInfo-bundleName: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -44,9 +44,9 @@ Unique identifier of the Web native message extension connection, returned by co
 
 **Since:** 21
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
-<!--Device-ConnectionNativeInfo-connectionId: number--><!--Device-ConnectionNativeInfo-connectionId: number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -62,9 +62,9 @@ Source URL of the browser extension.
 
 **Since:** 21
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
-<!--Device-ConnectionNativeInfo-extensionOrigin: string--><!--Device-ConnectionNativeInfo-extensionOrigin: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -80,9 +80,8 @@ Process ID of the web native message extension.
 
 **Since:** 21
 
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ConnectionNativeInfo-extensionPid: number--><!--Device-ConnectionNativeInfo-extensionPid: number-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

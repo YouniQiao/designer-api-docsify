@@ -2,9 +2,9 @@
 
 Describes the codec channel mode.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-a2dp-enum CodecChannelMode--><!--Device-a2dp-enum CodecChannelMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -16,9 +16,9 @@ CODEC_CHANNEL_MODE_NONE = 0
 
 Codec channel mode none.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CodecChannelMode-CODEC_CHANNEL_MODE_NONE = 0--><!--Device-CodecChannelMode-CODEC_CHANNEL_MODE_NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -30,9 +30,9 @@ CODEC_CHANNEL_MODE_MONO = 1
 
 Codec channel mode MONO.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CodecChannelMode-CODEC_CHANNEL_MODE_MONO = 1--><!--Device-CodecChannelMode-CODEC_CHANNEL_MODE_MONO = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -44,9 +44,8 @@ CODEC_CHANNEL_MODE_STEREO = 2
 
 Codec channel mode STEREO.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CodecChannelMode-CODEC_CHANNEL_MODE_STEREO = 2--><!--Device-CodecChannelMode-CODEC_CHANNEL_MODE_STEREO = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

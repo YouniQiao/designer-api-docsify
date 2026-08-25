@@ -6,9 +6,9 @@
 > - 本模块使用屏幕物理像素单位px。&gt;
 > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-drawing-class ColorFilter--><!--Device-drawing-class ColorFilter-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -28,28 +28,28 @@ static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): Color
 
 **起始版本：** 11
 
-<!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): ColorFilter--><!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): ColorFilter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| color | common2D.Color | 是 | ARGB格式的颜色，每个颜色通道的值是[0, 255]的整数。 |
-| mode | BlendMode | 是 | 混合模式，用于指定两个着色器叠加时的颜色混合算法。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| color | common2D.Color | 是 |
+| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ColorFilter | 返回基于指定颜色和混合模式创建的颜色滤波器。 |
+| 类型 |
+| --- |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -86,28 +86,28 @@ static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): Color
 
 **起始版本：** 23
 
-<!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): ColorFilter | undefined--><!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): ColorFilter | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| color | common2D.Color | 是 | ARGB格式的颜色，每个颜色通道的值是[0, 255]的整数。 |
-| mode | BlendMode | 是 | 混合模式，用于指定两个着色器叠加时的颜色混合算法。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| color | common2D.Color | 是 |
+| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ColorFilter \| undefined | 返回基于指定颜色和混合模式创建的颜色滤波器。创建失败时返回undefined。 |
+| 类型 |
+| --- |
+| ColorFilter \| undefined |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -123,28 +123,28 @@ static createBlendModeColorFilter(color: common2D.Color | number, mode: BlendMod
 
 **起始版本：** 18
 
-<!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color | number, mode: BlendMode): ColorFilter--><!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color | number, mode: BlendMode): ColorFilter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| color | common2D.Color \| number | 是 | 颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，用16进制ARGB格式的无符号整 数表示，取值范围为[0, 0xFFFFFFFF]。 |
-| mode | BlendMode | 是 | 混合模式，用于指定两个着色器叠加时的颜色混合算法。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| color | common2D.Color \| number | 是 |
+| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ColorFilter | 返回基于指定颜色和混合模式创建的颜色滤波器。 |
+| 类型 |
+| --- |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -160,28 +160,28 @@ static createBlendModeColorFilter(color: common2D.Color | int, mode: BlendMode):
 
 **起始版本：** 23
 
-<!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color | int, mode: BlendMode): ColorFilter | undefined--><!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color | int, mode: BlendMode): ColorFilter | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| color | common2D.Color \| int | 是 | 颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，用16进制ARGB格式的无符号整 数表示，取值范围为[0, 0xFFFFFFFF]。 |
-| mode | BlendMode | 是 | 混合模式，用于指定两个着色器叠加时的颜色混合算法。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| color | common2D.Color \| int | 是 |
+| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ColorFilter \| undefined | 返回基于指定颜色和混合模式创建的颜色滤波器。创建失败时返回undefined。 |
+| 类型 |
+| --- |
+| ColorFilter \| undefined |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -197,28 +197,28 @@ static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFi
 
 **起始版本：** 11
 
-<!--Device-ColorFilter-static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFilter--><!--Device-ColorFilter-static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFilter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| outer | ColorFilter | 是 | 组合滤波器中后生效的颜色滤波器。 |
-| inner | ColorFilter | 是 | 组合滤波器中先生效的颜色滤波器。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| outer | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 是 |
+| inner | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ColorFilter | 返回创建的组合颜色滤波器。 |
+| 类型 |
+| --- |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -241,28 +241,28 @@ static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFi
 
 **起始版本：** 23
 
-<!--Device-ColorFilter-static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFilter | undefined--><!--Device-ColorFilter-static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFilter | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| outer | ColorFilter | 是 | 组合滤波器中后生效的颜色滤波器。 |
-| inner | ColorFilter | 是 | 组合滤波器中先生效的颜色滤波器。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| outer | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 是 |
+| inner | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ColorFilter \| undefined | 返回创建的组合颜色滤波器。创建失败时返回undefined。 |
+| 类型 |
+| --- |
+| ColorFilter \| undefined |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -278,22 +278,22 @@ static createLightingColorFilter(mutColor: common2D.Color | number, addColor: co
 
 **起始版本：** 20
 
-<!--Device-ColorFilter-static createLightingColorFilter(mutColor: common2D.Color | number, addColor: common2D.Color | number): ColorFilter--><!--Device-ColorFilter-static createLightingColorFilter(mutColor: common2D.Color | number, addColor: common2D.Color | number): ColorFilter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mutColor | common2D.Color \| number | 是 | 用来进行乘法运算的颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，用16进 制ARGB格式的无符号整数表示，取值范围为[0, 0xFFFFFFFF]。 |
-| addColor | common2D.Color \| number | 是 | 用来进行加法运算的颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，用16进 制ARGB格式的无符号整数表示，取值范围为[0, 0xFFFFFFFF]。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mutColor | common2D.Color \| number | 是 |
+| addColor | common2D.Color \| number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ColorFilter | 返回创建的光照颜色滤波器。 |
+| 类型 |
+| --- |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) |
 
 **示例**
 
@@ -314,22 +314,22 @@ static createLightingColorFilter(mutColor: common2D.Color | int, addColor: commo
 
 **起始版本：** 24
 
-<!--Device-ColorFilter-static createLightingColorFilter(mutColor: common2D.Color | int, addColor: common2D.Color | int): ColorFilter | undefined--><!--Device-ColorFilter-static createLightingColorFilter(mutColor: common2D.Color | int, addColor: common2D.Color | int): ColorFilter | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mutColor | common2D.Color \| int | 是 | 用来进行乘法运算的颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，用16进 制ARGB格式的无符号整数表示，取值范围为[0, 0xFFFFFFFF]。 |
-| addColor | common2D.Color \| int | 是 | 用来进行加法运算的颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，用16进 制ARGB格式的无符号整数表示，取值范围为[0, 0xFFFFFFFF]。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mutColor | common2D.Color \| int | 是 |
+| addColor | common2D.Color \| int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ColorFilter \| undefined | 返回创建的光照颜色滤波器。创建失败时返回undefined。 |
+| 类型 |
+| --- |
+| ColorFilter \| undefined |
 
 **示例**
 
@@ -345,15 +345,15 @@ static createLinearToSRGBGamma(): ColorFilter
 
 **起始版本：** 11
 
-<!--Device-ColorFilter-static createLinearToSRGBGamma(): ColorFilter--><!--Device-ColorFilter-static createLinearToSRGBGamma(): ColorFilter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ColorFilter | 返回创建的颜色滤波器。 |
+| 类型 |
+| --- |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) |
 
 **示例**
 
@@ -373,15 +373,15 @@ static createLinearToSRGBGamma(): ColorFilter | undefined
 
 **起始版本：** 23
 
-<!--Device-ColorFilter-static createLinearToSRGBGamma(): ColorFilter | undefined--><!--Device-ColorFilter-static createLinearToSRGBGamma(): ColorFilter | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ColorFilter \| undefined | 返回创建的颜色滤波器。创建失败时返回undefined。 |
+| 类型 |
+| --- |
+| ColorFilter \| undefined |
 
 **示例**
 
@@ -397,15 +397,15 @@ static createLumaColorFilter(): ColorFilter
 
 **起始版本：** 11
 
-<!--Device-ColorFilter-static createLumaColorFilter(): ColorFilter--><!--Device-ColorFilter-static createLumaColorFilter(): ColorFilter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ColorFilter | 返回创建的颜色滤波器。 |
+| 类型 |
+| --- |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) |
 
 **示例**
 
@@ -425,15 +425,15 @@ static createLumaColorFilter(): ColorFilter | undefined
 
 **起始版本：** 23
 
-<!--Device-ColorFilter-static createLumaColorFilter(): ColorFilter | undefined--><!--Device-ColorFilter-static createLumaColorFilter(): ColorFilter | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ColorFilter \| undefined | 返回创建的颜色滤波器。创建失败时返回undefined。 |
+| 类型 |
+| --- |
+| ColorFilter \| undefined |
 
 **示例**
 
@@ -449,27 +449,27 @@ static createMatrixColorFilter(matrix: Array<double>): ColorFilter
 
 **起始版本：** 12
 
-<!--Device-ColorFilter-static createMatrixColorFilter(matrix: Array<double>): ColorFilter--><!--Device-ColorFilter-static createMatrixColorFilter(matrix: Array<double>): ColorFilter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| matrix | Array&lt;double&gt; | 是 | 长度为20的数组，表示用于颜色变换的4×5矩阵。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| matrix | Array & lt;number & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ColorFilter | 返回创建的颜色滤波器。 |
+| 类型 |
+| --- |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -511,27 +511,27 @@ static createMatrixColorFilter(matrix: Array<double>): ColorFilter | undefined
 
 **起始版本：** 23
 
-<!--Device-ColorFilter-static createMatrixColorFilter(matrix: Array<double>): ColorFilter | undefined--><!--Device-ColorFilter-static createMatrixColorFilter(matrix: Array<double>): ColorFilter | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| matrix | Array&lt;double&gt; | 是 | 长度为20的数组，表示用于颜色变换的4×5矩阵。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| matrix | Array & lt;double & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ColorFilter \| undefined | 返回创建的颜色滤波器。创建失败时返回undefined。 |
+| 类型 |
+| --- |
+| ColorFilter \| undefined |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -547,15 +547,15 @@ static createSRGBGammaToLinear(): ColorFilter
 
 **起始版本：** 11
 
-<!--Device-ColorFilter-static createSRGBGammaToLinear(): ColorFilter--><!--Device-ColorFilter-static createSRGBGammaToLinear(): ColorFilter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ColorFilter | 返回创建的颜色滤波器。 |
+| 类型 |
+| --- |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) |
 
 **示例**
 
@@ -575,17 +575,16 @@ static createSRGBGammaToLinear(): ColorFilter | undefined
 
 **起始版本：** 23
 
-<!--Device-ColorFilter-static createSRGBGammaToLinear(): ColorFilter | undefined--><!--Device-ColorFilter-static createSRGBGammaToLinear(): ColorFilter | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ColorFilter \| undefined | 返回创建的颜色滤波器。创建失败时返回undefined。 |
+| 类型 |
+| --- |
+| ColorFilter \| undefined |
 
 **示例**
 
 参见 [createSRGBGammaToLinear](#createsrgbgammatolinear)
-

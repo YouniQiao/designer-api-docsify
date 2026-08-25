@@ -2,9 +2,9 @@
 
 Bundle monitor@namespace bundleMonitor
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-declare namespace bundleMonitor--><!--Device-unnamed-declare namespace bundleMonitor-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -21,31 +21,30 @@ import { bundleMonitor } from '@kit.AbilityKit';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [off_BundleChangedEvent](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_bundlechangedevent) | Unregister to monitor the installation status |
-| [offAdd](arkts-ability-bundlemonitor-offadd-f-sys.md) | Unregister installation listener. |
-| [offRemove](arkts-ability-bundlemonitor-offremove-f-sys.md) | Unregister uninstallation listener. |
-| [offUpdate](arkts-ability-bundlemonitor-offupdate-f-sys.md) | Unregister update listener. |
-| [on_BundleChangedEvent](arkts-ability-bundlemonitor-onbundlechangedevent-f-sys.md#on_bundlechangedevent) | Register to monitor the installation status |
-| [onAdd](arkts-ability-bundlemonitor-onadd-f-sys.md) | Register installation listener. |
-| [onRemove](arkts-ability-bundlemonitor-onremove-f-sys.md) | Register uninstallation listener. |
-| [onUpdate](arkts-ability-bundlemonitor-onupdate-f-sys.md) | Register update listener. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [off](arkts-ability-bundlemonitor-off-f-sys.md) |
+| [offAdd](arkts-ability-bundlemonitor-offadd-f-sys.md) |
+| [offRemove](arkts-ability-bundlemonitor-offremove-f-sys.md) |
+| [offUpdate](arkts-ability-bundlemonitor-offupdate-f-sys.md) |
+| [on](arkts-ability-bundlemonitor-on-f-sys.md) |
+| [onAdd](arkts-ability-bundlemonitor-onadd-f-sys.md) |
+| [onRemove](arkts-ability-bundlemonitor-onremove-f-sys.md) |
+| [onUpdate](arkts-ability-bundlemonitor-onupdate-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md) | This module defines the result information of monitoring install, update and uninstall. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Types(System API)
 
-| Name | Description |
-| --- | --- |
-| [BundleChangedEvent](arkts-ability-bundlemonitor-bundlechangedevent-t-sys.md) | Indicates the event type of bundle change |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BundleChangedEvent](arkts-ability-bundlemonitor-bundlechangedevent-t-sys.md) |
 <!--DelEnd-->
-

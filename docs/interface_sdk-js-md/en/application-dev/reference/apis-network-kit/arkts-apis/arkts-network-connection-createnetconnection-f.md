@@ -19,26 +19,26 @@ Creates a **NetConnection** object, which can be used to listen for the network 
 > [register](arkts-network-connection-netconnection-i.md#register) to register the notification of the specified network status
 > change.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-connection-function createNetConnection(netSpecifier?: NetSpecifier, timeout?: int): NetConnection--><!--Device-connection-function createNetConnection(netSpecifier?: NetSpecifier, timeout?: int): NetConnection-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| netSpecifier | [NetSpecifier](arkts-network-connection-netspecifier-i.md) | No | Specification of the network to be listened for. If this parameter is not specified, the default network is listened for. |
-| timeout | int | No | Timeout interval for obtaining the network specified by **netSpecifier**. The input value must be an uint32_t integer. This parameter is valid only when **netSpecifier** is present. The default value is **0**. <br>**Note：**: If the network to be listened for does not exist, the system attempts to activate the network. If the timeout interval is exceeded and the network status listener is registered, the **netUnavailable** event is triggered. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| netSpecifier | [NetSpecifier](arkts-network-connection-netspecifier-i.md) | No |
+| timeout | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [NetConnection](arkts-network-connection-netconnection-i.md) | Type of the network connection object to be listened for. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [NetConnection](arkts-network-connection-netconnection-i.md) |
 
 **Examples**
 
@@ -64,4 +64,3 @@ let netConnectionCellularAndWifi = connection.createNetConnection({
   }
 });
 ```
-

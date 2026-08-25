@@ -9,7 +9,7 @@ Sets the spacing between child components of the **Row** component.
 
 **Since:** 18
 
-<!--Device-unnamed-interface RowOptionsV2--><!--Device-unnamed-interface RowOptionsV2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,13 +33,12 @@ Spacing between child components. This parameter does not take effect if the val
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
-<!--Device-RowOptionsV2-space?: SpaceType--><!--Device-RowOptionsV2-space?: SpaceType-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 系统账号管理类。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-osAccount-interface AccountManager--><!--Device-osAccount-interface AccountManager-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -16,17 +16,23 @@ import { osAccount } from '@kit.BasicServicesKit';
 
 ## activateOsAccount
 
+ArkTS-Dyn:
+```TypeScript
+activateOsAccount(localId: number, callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 activateOsAccount(localId: int, callback: AsyncCallback<void>): void
 ```
 
 激活指定系统账号。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
-
-<!--Device-AccountManager-activateOsAccount(localId: int, callback: AsyncCallback<void>): void--><!--Device-AccountManager-activateOsAccount(localId: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -34,24 +40,24 @@ activateOsAccount(localId: int, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当账号激活成功时，err为null，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300009](../errorcode-account.md#12300009-账号已激活) | Account has been activated.<br>**适用版本：** 7 - 11 |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated.<br>**适用版本：** 12+ |
-| [12300016](../errorcode-account.md#12300016-账号登录数已达上限) | The number of logged in accounts reaches the upper limit.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| [12300008](../errorcode-account.md#12300008-受限的账号) |
+| [12300009](../errorcode-account.md#12300009-账号已激活) |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) |
+| [12300016](../errorcode-account.md#12300016-账号登录数已达上限) |
 
 **示例**
 
@@ -184,17 +190,23 @@ try {
 
 ## activateOsAccount
 
+ArkTS-Dyn:
+```TypeScript
+activateOsAccount(localId: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 activateOsAccount(localId: int): Promise<void>
 ```
 
 激活指定系统账号。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
-
-<!--Device-AccountManager-activateOsAccount(localId: int): Promise<void>--><!--Device-AccountManager-activateOsAccount(localId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -202,29 +214,29 @@ activateOsAccount(localId: int): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300009](../errorcode-account.md#12300009-账号已激活) | Account has been activated.<br>**适用版本：** 7 - 11 |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated.<br>**适用版本：** 12+ |
-| [12300016](../errorcode-account.md#12300016-账号登录数已达上限) | The number of logged in accounts reaches the upper limit.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| [12300008](../errorcode-account.md#12300008-受限的账号) |
+| [12300009](../errorcode-account.md#12300009-账号已激活) |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) |
+| [12300016](../errorcode-account.md#12300016-账号登录数已达上限) |
 
 **示例**
 
@@ -232,6 +244,12 @@ activateOsAccount(localId: int): Promise<void>
 
 ## activateOsAccount
 
+ArkTS-Dyn:
+```TypeScript
+activateOsAccount(localId: number, displayId: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 activateOsAccount(localId: int, displayId: long): Promise<void>
 ```
@@ -240,9 +258,9 @@ activateOsAccount(localId: int, displayId: long): Promise<void>
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-AccountManager-activateOsAccount(localId: int, displayId: long): Promise<void>--><!--Device-AccountManager-activateOsAccount(localId: int, displayId: long): Promise<void>-End-->
+**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -250,31 +268,31 @@ activateOsAccount(localId: int, displayId: long): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
-| displayId | long | 是 | 逻辑屏ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated. |
-| [12300016](../errorcode-account.md#12300016-账号登录数已达上限) | The number of logged in accounts reaches the upper limit. |
-| [12300018](../errorcode-account.md#12300018-逻辑屏未找到) | Display not found. |
-| [12300019](../errorcode-account.md#12300019-不支持跨逻辑屏激活) | Cross-display activation not supported. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| [12300008](../errorcode-account.md#12300008-受限的账号) |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) |
+| [12300016](../errorcode-account.md#12300016-账号登录数已达上限) |
+| [12300018](../errorcode-account.md#12300018-逻辑屏未找到) |
+| [12300019](../errorcode-account.md#12300019-不支持跨逻辑屏激活) |
 
 **示例**
 
@@ -282,17 +300,23 @@ activateOsAccount(localId: int, displayId: long): Promise<void>
 
 ## bindDomainAccount
 
+ArkTS-Dyn:
+```TypeScript
+bindDomainAccount(localId: number, domainAccountInfo: DomainAccountInfo): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 bindDomainAccount(localId: int, domainAccountInfo: DomainAccountInfo): Promise<void>
 ```
 
 在指定系统账号上绑定指定域账号。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-bindDomainAccount(localId: int, domainAccountInfo: DomainAccountInfo): Promise<void>--><!--Device-AccountManager-bindDomainAccount(localId: int, domainAccountInfo: DomainAccountInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -300,31 +324,31 @@ bindDomainAccount(localId: int, domainAccountInfo: DomainAccountInfo): Promise<v
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 要查询的系统账号ID。 |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 域账号信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [domainAccountInfo](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid domain account information. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | The OS account not found. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted OS account. Possible causes: The OS account cannot be bound. |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target OS account or domain account is being operated. |
-| [12300021](../errorcode-account.md#12300021-系统账号已绑定域账号) | The OS account is already bound. |
-| [12300022](../errorcode-account.md#12300022-域账号已被绑定) | The domain account is already bound. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| [12300008](../errorcode-account.md#12300008-受限的账号) |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) |
+| [12300021](../errorcode-account.md#12300021-系统账号已绑定域账号) |
+| [12300022](../errorcode-account.md#12300022-域账号已被绑定) |
 
 **示例**
 
@@ -380,11 +404,11 @@ createOsAccount(localName: string, type: OsAccountType, callback: AsyncCallback<
 
 创建一个系统账号。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-createOsAccount(localName: string, type: OsAccountType, callback: AsyncCallback<OsAccountInfo>): void--><!--Device-AccountManager-createOsAccount(localName: string, type: OsAccountType, callback: AsyncCallback<OsAccountInfo>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -392,26 +416,26 @@ createOsAccount(localName: string, type: OsAccountType, callback: AsyncCallback<
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localName | string | 是 | 创建的系统账号的名称。 |
-| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 | 创建的系统账号的类型。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果创建成功，err为null，data为新创建的系统账号的信息；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localName | string | 是 |
+| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localName or type. |
-| [12300004](../errorcode-account.md#12300004-账号已存在) | Local name already exists.<br>**适用版本：** 12+ |
-| [12300005](../errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
-| [12300006](../errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
-| [12300007](../errorcode-account.md#12300007-账号数量已达上限) | The number of accounts has reached the upper limit. |
-| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upper limit.<br>**适用版本：** 24+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300004](../errorcode-account.md#12300004-账号已存在) |
+| [12300005](../errorcode-account.md#12300005-不支持多用户) |
+| [12300006](../errorcode-account.md#12300006-不支持的账号类型) |
+| [12300007](../errorcode-account.md#12300007-账号数量已达上限) |
+| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) |
 
 **示例**
 
@@ -518,11 +542,11 @@ createOsAccount(localName: string, type: OsAccountType, options?: CreateOsAccoun
 
 创建一个系统账号。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-createOsAccount(localName: string, type: OsAccountType, options?: CreateOsAccountOptions): Promise<OsAccountInfo>--><!--Device-AccountManager-createOsAccount(localName: string, type: OsAccountType, options?: CreateOsAccountOptions): Promise<OsAccountInfo>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -530,33 +554,33 @@ createOsAccount(localName: string, type: OsAccountType, options?: CreateOsAccoun
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localName | string | 是 | 创建的系统账号的名称。 |
-| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 | 创建的系统账号的类型。 |
-| options | [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md) | 否 | 创建系统账号的选项，默认为空。<br/>从API version 12开始支持该可选参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localName | string | 是 |
+| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 |
+| options | [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Promise对象，返回新创建的系统账号的信息。 |
+| 类型 |
+| --- |
+| Promise&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localName, type or options. |
-| [12300004](../errorcode-account.md#12300004-账号已存在) | Local name already exists.<br>**适用版本：** 12+ |
-| [12300005](../errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
-| [12300006](../errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
-| [12300007](../errorcode-account.md#12300007-账号数量已达上限) | The number of accounts has reached the upper limit. |
-| [12300015](../errorcode-account.md#12300015-短名称已存在) | The short name already exists.<br>**适用版本：** 12+ |
-| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upper limit.<br>**适用版本：** 24+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300004](../errorcode-account.md#12300004-账号已存在) |
+| [12300005](../errorcode-account.md#12300005-不支持多用户) |
+| [12300006](../errorcode-account.md#12300006-不支持的账号类型) |
+| [12300007](../errorcode-account.md#12300007-账号数量已达上限) |
+| [12300015](../errorcode-account.md#12300015-短名称已存在) |
+| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) |
 
 **示例**
 
@@ -574,11 +598,11 @@ createOsAccountForDomain(
 
 根据域账号信息，创建一个系统账号并将其与域账号关联。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-createOsAccountForDomain(      type: OsAccountType,      domainInfo: DomainAccountInfo,      callback: AsyncCallback<OsAccountInfo>    ): void--><!--Device-AccountManager-createOsAccountForDomain(      type: OsAccountType,      domainInfo: DomainAccountInfo,      callback: AsyncCallback<OsAccountInfo>    ): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -586,27 +610,27 @@ createOsAccountForDomain(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 | 创建的系统账号的类型。 |
-| domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 域账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果创建成功，err为null，data为新创建的系统账号的信息；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 |
+| [domainInfo](arkts-basicservices-osaccount-osaccountinfo-i.md) | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 12+ |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or domainInfo. |
-| [12300004](../errorcode-account.md#12300004-账号已存在) | Account already exists. |
-| [12300005](../errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
-| [12300006](../errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
-| [12300007](../errorcode-account.md#12300007-账号数量已达上限) | The number of accounts has reached the upper limit. |
-| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upper limit.<br>**适用版本：** 24+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300004](../errorcode-account.md#12300004-账号已存在) |
+| [12300005](../errorcode-account.md#12300005-不支持多用户) |
+| [12300006](../errorcode-account.md#12300006-不支持的账号类型) |
+| [12300007](../errorcode-account.md#12300007-账号数量已达上限) |
+| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) |
 
 **示例**
 
@@ -717,11 +741,11 @@ createOsAccountForDomain(type: OsAccountType, domainInfo: DomainAccountInfo, opt
 
 根据传入的域账号信息，创建与其关联的系统账号。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-createOsAccountForDomain(type: OsAccountType, domainInfo: DomainAccountInfo, options?: CreateOsAccountForDomainOptions): Promise<OsAccountInfo>--><!--Device-AccountManager-createOsAccountForDomain(type: OsAccountType, domainInfo: DomainAccountInfo, options?: CreateOsAccountForDomainOptions): Promise<OsAccountInfo>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -729,34 +753,34 @@ createOsAccountForDomain(type: OsAccountType, domainInfo: DomainAccountInfo, opt
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 | 创建的系统账号的类型。 |
-| domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 域账号信息。 |
-| options | [CreateOsAccountForDomainOptions](arkts-basicservices-osaccount-createosaccountfordomainoptions-i.md) | 否 | 创建账号的可选参数，默认为空。 <br/>从API version 12开始支持该可选参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 |
+| [domainInfo](arkts-basicservices-osaccount-osaccountinfo-i.md) | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 |
+| options | [CreateOsAccountForDomainOptions](arkts-basicservices-osaccount-createosaccountfordomainoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Promise对象，返回新创建的系统账号的信息。 |
+| 类型 |
+| --- |
+| Promise&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 12+ |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type, domainInfo or options. |
-| [12300004](../errorcode-account.md#12300004-账号已存在) | Account already exists. |
-| [12300005](../errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
-| [12300006](../errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
-| [12300007](../errorcode-account.md#12300007-账号数量已达上限) | The number of accounts has reached the upper limit. |
-| [12300015](../errorcode-account.md#12300015-短名称已存在) | The short name already exists.<br>**适用版本：** 12+ |
-| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upper limit.<br>**适用版本：** 24+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300004](../errorcode-account.md#12300004-账号已存在) |
+| [12300005](../errorcode-account.md#12300005-不支持多用户) |
+| [12300006](../errorcode-account.md#12300006-不支持的账号类型) |
+| [12300007](../errorcode-account.md#12300007-账号数量已达上限) |
+| [12300015](../errorcode-account.md#12300015-短名称已存在) |
+| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) |
 
 **示例**
 
@@ -764,17 +788,23 @@ createOsAccountForDomain(type: OsAccountType, domainInfo: DomainAccountInfo, opt
 
 ## deactivateOsAccount
 
+ArkTS-Dyn:
+```TypeScript
+deactivateOsAccount(localId: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 deactivateOsAccount(localId: int): Promise<void>
 ```
 
 注销（退出登录）指定系统账号。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
-
-<!--Device-AccountManager-deactivateOsAccount(localId: int): Promise<void>--><!--Device-AccountManager-deactivateOsAccount(localId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -782,27 +812,27 @@ deactivateOsAccount(localId: int): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| [12300008](../errorcode-account.md#12300008-受限的账号) |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) |
 
 **示例**
 
@@ -849,15 +879,21 @@ try {
 
 ## getBundleIdForUid
 
+ArkTS-Dyn:
+```TypeScript
+getBundleIdForUid(uid: number, callback: AsyncCallback<number>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 getBundleIdForUid(uid: int, callback: AsyncCallback<int>): void
 ```
 
 通过uid查询对应的bundleId。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-AccountManager-getBundleIdForUid(uid: int, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getBundleIdForUid(uid: int, callback: AsyncCallback<int>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -865,19 +901,19 @@ getBundleIdForUid(uid: int, callback: AsyncCallback<int>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uid | int | 是 | 进程uid。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。如果查询成功，err为null，data为与uid对应的bundleId；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uid | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid uid. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
 
 **示例**
 
@@ -969,15 +1005,21 @@ try {
 
 ## getBundleIdForUid
 
+ArkTS-Dyn:
+```TypeScript
+getBundleIdForUid(uid: number): Promise<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getBundleIdForUid(uid: int): Promise<int>
 ```
 
 通过uid查询对应的bundleId。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-AccountManager-getBundleIdForUid(uid: int): Promise<int>--><!--Device-AccountManager-getBundleIdForUid(uid: int): Promise<int>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -985,24 +1027,24 @@ getBundleIdForUid(uid: int): Promise<int>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uid | int | 是 | 进程uid。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uid | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise对象，返回与uid对应的bundleId。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid uid. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
 
 **示例**
 
@@ -1010,15 +1052,21 @@ getBundleIdForUid(uid: int): Promise<int>
 
 ## getBundleIdForUidSync
 
+ArkTS-Dyn:
+```TypeScript
+getBundleIdForUidSync(uid: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getBundleIdForUidSync(uid: int): int
 ```
 
 通过uid查询对应的bundleId。使用同步方式返回结果。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-AccountManager-getBundleIdForUidSync(uid: int): int--><!--Device-AccountManager-getBundleIdForUidSync(uid: int): int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1026,23 +1074,23 @@ getBundleIdForUidSync(uid: int): int
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uid | int | 是 | 进程uid。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uid | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 表示与进程uid对应的bundleId。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid uid. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
 
 **示例**
 
@@ -1082,17 +1130,23 @@ try {
 
 ## getEnabledOsAccountConstraints
 
+ArkTS-Dyn:
+```TypeScript
+getEnabledOsAccountConstraints(localId: number): Promise<Array<string>>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getEnabledOsAccountConstraints(localId: int): Promise<Array<string>>
 ```
 
 获取指定系统账号已使能的全部约束。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-getEnabledOsAccountConstraints(localId: int): Promise<Array<string>>--><!--Device-AccountManager-getEnabledOsAccountConstraints(localId: int): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1100,25 +1154,25 @@ getEnabledOsAccountConstraints(localId: int): Promise<Array<string>>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回指定系统账号已使能的全部 约束。 |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
 
 **示例**
 
@@ -1165,6 +1219,12 @@ try {
 
 ## getForegroundOsAccountDisplayId
 
+ArkTS-Dyn:
+```TypeScript
+getForegroundOsAccountDisplayId(localId: number): Promise<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getForegroundOsAccountDisplayId(localId: int): Promise<long>
 ```
@@ -1173,9 +1233,9 @@ getForegroundOsAccountDisplayId(localId: int): Promise<long>
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-AccountManager-getForegroundOsAccountDisplayId(localId: int): Promise<long>--><!--Device-AccountManager-getForegroundOsAccountDisplayId(localId: int): Promise<long>-End-->
+**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1183,24 +1243,24 @@ getForegroundOsAccountDisplayId(localId: int): Promise<long>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;long&gt; | Promise对象，返回逻辑屏ID。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;long & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300017](../errorcode-account.md#12300017-前台系统账号未找到) | The foreground OS account is not found. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300017](../errorcode-account.md#12300017-前台系统账号未找到) |
 
 **示例**
 
@@ -1246,6 +1306,12 @@ try {
 
 ## getForegroundOsAccountLocalId
 
+ArkTS-Dyn:
+```TypeScript
+getForegroundOsAccountLocalId(displayId: number): Promise<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getForegroundOsAccountLocalId(displayId: long): Promise<int>
 ```
@@ -1254,9 +1320,9 @@ getForegroundOsAccountLocalId(displayId: long): Promise<int>
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-AccountManager-getForegroundOsAccountLocalId(displayId: long): Promise<int>--><!--Device-AccountManager-getForegroundOsAccountLocalId(displayId: long): Promise<int>-End-->
+**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1264,24 +1330,24 @@ getForegroundOsAccountLocalId(displayId: long): Promise<int>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| displayId | long | 是 | 逻辑屏ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise对象，返回系统账号ID。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300017](../errorcode-account.md#12300017-前台系统账号未找到) | The foreground OS account is not found. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300017](../errorcode-account.md#12300017-前台系统账号未找到) |
 
 **示例**
 
@@ -1366,17 +1432,23 @@ try {
 
 ## getOsAccountConstraintSourceTypes
 
+ArkTS-Dyn:
+```TypeScript
+getOsAccountConstraintSourceTypes(localId: number, constraint: string, callback: AsyncCallback<Array<ConstraintSourceTypeInfo>>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 getOsAccountConstraintSourceTypes(localId: int, constraint: string, callback: AsyncCallback<Array<ConstraintSourceTypeInfo>>): void
 ```
 
 查询指定系统账号的指定约束来源信息。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-getOsAccountConstraintSourceTypes(localId: int, constraint: string, callback: AsyncCallback<Array<ConstraintSourceTypeInfo>>): void--><!--Device-AccountManager-getOsAccountConstraintSourceTypes(localId: int, constraint: string, callback: AsyncCallback<Array<ConstraintSourceTypeInfo>>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1384,22 +1456,22 @@ getOsAccountConstraintSourceTypes(localId: int, constraint: string, callback: As
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 要查询的系统账号ID。 |
-| constraint | string | 是 | 要查询的约束名称。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | 是 | 回调函数。如果成功，err为null，data为指定系统账号的指定 约束来源信息；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| constraint | string | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or constraint. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
 
 **示例**
 
@@ -1490,17 +1562,23 @@ try {
 
 ## getOsAccountConstraintSourceTypes
 
+ArkTS-Dyn:
+```TypeScript
+getOsAccountConstraintSourceTypes(localId: number, constraint: string): Promise<Array<ConstraintSourceTypeInfo>>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getOsAccountConstraintSourceTypes(localId: int, constraint: string): Promise<Array<ConstraintSourceTypeInfo>>
 ```
 
 查询指定系统账号的指定约束来源信息。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-getOsAccountConstraintSourceTypes(localId: int, constraint: string): Promise<Array<ConstraintSourceTypeInfo>>--><!--Device-AccountManager-getOsAccountConstraintSourceTypes(localId: int, constraint: string): Promise<Array<ConstraintSourceTypeInfo>>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1508,27 +1586,27 @@ getOsAccountConstraintSourceTypes(localId: int, constraint: string): Promise<Arr
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 要查询的系统账号ID。 |
-| constraint | string | 是 | 要查询的约束名称。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| constraint | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | Promise对象，返回指定系统账号的指定 约束来源信息。 |
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or constraint. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
 
 **示例**
 
@@ -1536,17 +1614,23 @@ getOsAccountConstraintSourceTypes(localId: int, constraint: string): Promise<Arr
 
 ## getOsAccountProfilePhoto
 
+ArkTS-Dyn:
+```TypeScript
+getOsAccountProfilePhoto(localId: number, callback: AsyncCallback<string>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 getOsAccountProfilePhoto(localId: int, callback: AsyncCallback<string>): void
 ```
 
 获取指定系统账号的头像信息。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-getOsAccountProfilePhoto(localId: int, callback: AsyncCallback<string>): void--><!--Device-AccountManager-getOsAccountProfilePhoto(localId: int, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1554,21 +1638,21 @@ getOsAccountProfilePhoto(localId: int, callback: AsyncCallback<string>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。如果获取成功，err为null，data为指定系统账号的头像信息；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
 
 **示例**
 
@@ -1659,17 +1743,23 @@ try {
 
 ## getOsAccountProfilePhoto
 
+ArkTS-Dyn:
+```TypeScript
+getOsAccountProfilePhoto(localId: number): Promise<string>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getOsAccountProfilePhoto(localId: int): Promise<string>
 ```
 
 获取指定系统账号的头像信息。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-getOsAccountProfilePhoto(localId: int): Promise<string>--><!--Device-AccountManager-getOsAccountProfilePhoto(localId: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1677,26 +1767,26 @@ getOsAccountProfilePhoto(localId: int): Promise<string>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回指定系统账号的头像信息。 |
+| 类型 |
+| --- |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
 
 **示例**
 
@@ -1704,17 +1794,23 @@ getOsAccountProfilePhoto(localId: int): Promise<string>
 
 ## getOsAccountType
 
+ArkTS-Dyn:
+```TypeScript
+getOsAccountType(localId: number): Promise<OsAccountType>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getOsAccountType(localId: int): Promise<OsAccountType>
 ```
 
 查询指定系统账号的类型。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-getOsAccountType(localId: int): Promise<OsAccountType>--><!--Device-AccountManager-getOsAccountType(localId: int): Promise<OsAccountType>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1722,25 +1818,25 @@ getOsAccountType(localId: int): Promise<OsAccountType>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 要查询的系统账号ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)&gt; | Promise对象，返回指定系统账号的类型。 |
+| 类型 |
+| --- |
+| Promise&lt;[OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
 
 **示例**
 
@@ -1874,11 +1970,11 @@ isMainOsAccount(callback: AsyncCallback<boolean>): void
 
 查询当前进程是否处于主用户。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-isMainOsAccount(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isMainOsAccount(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1886,18 +1982,18 @@ isMainOsAccount(callback: AsyncCallback<boolean>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，返回true表示当前账号为主账号，返回false表示当前账号非主账号。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
 
 **示例**
 
@@ -1991,11 +2087,11 @@ isMainOsAccount(): Promise<boolean>
 
 查询当前进程是否处于主用户。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-isMainOsAccount(): Promise<boolean>--><!--Device-AccountManager-isMainOsAccount(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2003,17 +2099,17 @@ isMainOsAccount(): Promise<boolean>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回true表示当前账号为主账号，返回false表示当前账号非主账号。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
 
 **示例**
 
@@ -2021,17 +2117,23 @@ isMainOsAccount(): Promise<boolean>
 
 ## isOsAccountActivated
 
+ArkTS-Dyn:
+```TypeScript
+isOsAccountActivated(localId: number): Promise<boolean>
+```
+
+ArkTS-Sta:
 ```TypeScript
 isOsAccountActivated(localId: int): Promise<boolean>
 ```
 
 判断指定系统账号是否处于激活状态。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-isOsAccountActivated(localId: int): Promise<boolean>--><!--Device-AccountManager-isOsAccountActivated(localId: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2039,25 +2141,25 @@ isOsAccountActivated(localId: int): Promise<boolean>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示账号已激活；返回false表示账号未激活。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
 
 **示例**
 
@@ -2104,17 +2206,23 @@ try {
 
 ## isOsAccountConstraintEnabled
 
+ArkTS-Dyn:
+```TypeScript
+isOsAccountConstraintEnabled(localId: number, constraint: string): Promise<boolean>
+```
+
+ArkTS-Sta:
 ```TypeScript
 isOsAccountConstraintEnabled(localId: int, constraint: string): Promise<boolean>
 ```
 
 判断指定系统账号是否使能指定约束。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-isOsAccountConstraintEnabled(localId: int, constraint: string): Promise<boolean>--><!--Device-AccountManager-isOsAccountConstraintEnabled(localId: int, constraint: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2122,26 +2230,26 @@ isOsAccountConstraintEnabled(localId: int, constraint: string): Promise<boolean>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
-| constraint | string | 是 | 指定的约束名称。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| constraint | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示已使能指定的约束；返回false表示未使能指定的约束。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
 
 **示例**
 
@@ -2231,17 +2339,23 @@ try {
 
 ## isOsAccountUnlocked
 
+ArkTS-Dyn:
+```TypeScript
+isOsAccountUnlocked(localId: number): Promise<boolean>
+```
+
+ArkTS-Sta:
 ```TypeScript
 isOsAccountUnlocked(localId: int): Promise<boolean>
 ```
 
 检查指定系统账号是否已验证。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-isOsAccountUnlocked(localId: int): Promise<boolean>--><!--Device-AccountManager-isOsAccountUnlocked(localId: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2249,25 +2363,25 @@ isOsAccountUnlocked(localId: int): Promise<boolean>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。不填则检查当前系统账号是否已验证。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示当前账号已认证解锁；返回false表示当前账号未认证解锁。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
 
 **示例**
 
@@ -2361,9 +2475,9 @@ off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): vo
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void--><!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void-End-->
+**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2371,21 +2485,21 @@ off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): vo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | 是 | 取消订阅类型，activate表示取消订阅账号已激活完成的事件，activating取消订阅账号正在激活的事件。 |
-| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅系统账号激活完成与激活中的事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'activate' \| 'activating' | 是 |
+| name | string | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
 
 **示例**
 
@@ -2407,83 +2521,17 @@ try {
 }
 ```
 
-## off('activate' | 'activating')
-
 ```TypeScript
-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.off('switching');
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
+}
 ```
-
-取消订阅系统账号的激活完成与激活中的事件。使用callback异步回调。
-
-**起始版本：** 7
-
-**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
-
-<!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void--><!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void-End-->
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | 是 | 取消订阅类型，activate表示取消订阅账号已激活完成的事件，activating取消订阅账号正在激活的事件。 |
-| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅系统账号激活完成与激活中的事件回调，默认为空，表示取消该类型事件的所有回调。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
-
-**示例**
-
-参见 off_activate
-
-## off('switched')
-
-```TypeScript
-off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void
-```
-
-取消订阅系统账号的前后台切换结束事件。使用callback异步回调。
-
-**起始版本：** 12
-
-**需要权限：** 
-- API版本23+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-- API版本12 - 22：ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void-End-->
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'switched' | 是 | 取消订阅类型，switched表示取消订阅的是系统账号的前后台切换结束事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台切换结束事件回调，默认为空，表示取消该类型事件的所有回调。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
-
-**示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2497,6 +2545,46 @@ try {
 }
 ```
 
+## off('activate' | 'activating')
+
+```TypeScript
+off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void
+```
+
+取消订阅系统账号的激活完成与激活中的事件。使用callback异步回调。
+
+**起始版本：** 7
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
+**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'activate' \| 'activating' | 是 |
+| name | string | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+
+**示例**
+
+参见 off
+
 ## off('switching')
 
 ```TypeScript
@@ -2507,11 +2595,11 @@ off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **需要权限：** 
 - API版本23+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 - API版本12 - 22：ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2519,33 +2607,63 @@ off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'switching' | 是 | 取消订阅类型，switching表示取消订阅的是系统账号的前后台正在切换事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台正在切换事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'switching' | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+参见 off
 
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.off('switching');
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
-}
+## off('switched')
+
+```TypeScript
+off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void
 ```
+
+取消订阅系统账号的前后台切换结束事件。使用callback异步回调。
+
+**起始版本：** 12
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
+**需要权限：** 
+- API版本23+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+- API版本12 - 22：ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'switched' | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+
+**示例**
+
+参见 off
 
 ## offActivate
 
@@ -2557,9 +2675,9 @@ offActivate(name: string, callback?: Callback<int>): void
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-AccountManager-offActivate(name: string, callback?: Callback<int>): void--><!--Device-AccountManager-offActivate(name: string, callback?: Callback<int>): void-End-->
+**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2567,19 +2685,19 @@ offActivate(name: string, callback?: Callback<int>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅系统账号激活完成的事件回调。默认为空，表示取消该类型事件的所有回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
 
 **示例**
 
@@ -2608,9 +2726,9 @@ offActivating(name: string, callback?: Callback<int>): void
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-AccountManager-offActivating(name: string, callback?: Callback<int>): void--><!--Device-AccountManager-offActivating(name: string, callback?: Callback<int>): void-End-->
+**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2618,19 +2736,19 @@ offActivating(name: string, callback?: Callback<int>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅系统账号激活中的事件回调。默认为空，表示取消该类型事件的所有回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
 
 **示例**
 
@@ -2659,7 +2777,7 @@ offConstraintChanged(callback?: Callback<ConstraintChangeInfo>): void
 
 **起始版本：** 23
 
-<!--Device-AccountManager-offConstraintChanged(callback?: Callback<ConstraintChangeInfo>): void--><!--Device-AccountManager-offConstraintChanged(callback?: Callback<ConstraintChangeInfo>): void-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2667,16 +2785,16 @@ offConstraintChanged(callback?: Callback<ConstraintChangeInfo>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | 否 | 表示用于接收约束变更事件的回调函数。<br>默认为undefined，表示清除所有订阅记录。<br>非undefined时，表示清 除与该回调函数关联的订阅记录。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
 
 **示例**
 
@@ -2714,9 +2832,9 @@ offSwitched(callback?: Callback<OsAccountSwitchEventData>): void
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-AccountManager-offSwitched(callback?: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-offSwitched(callback?: Callback<OsAccountSwitchEventData>): void-End-->
+**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2724,17 +2842,17 @@ offSwitched(callback?: Callback<OsAccountSwitchEventData>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台切换结束事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
 
 **示例**
 
@@ -2760,9 +2878,9 @@ offSwitching(callback?: Callback<OsAccountSwitchEventData>): void
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-AccountManager-offSwitching(callback?: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-offSwitching(callback?: Callback<OsAccountSwitchEventData>): void-End-->
+**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2770,17 +2888,17 @@ offSwitching(callback?: Callback<OsAccountSwitchEventData>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台正在切换事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
 
 **示例**
 
@@ -2806,9 +2924,9 @@ on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
 
 **起始版本：** 7
 
-**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-AccountManager-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void--><!--Device-AccountManager-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void-End-->
+**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2816,21 +2934,21 @@ on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | 是 | 订阅类型，activate表示订阅的是账号已激活完成的事件，activating表示订阅的是账号正在激活的事件。 |
-| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 订阅系统账号激活完成与激活中的事件回调，表示激活完成后或正在激活中的系统账号ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'activate' \| 'activating' | 是 |
+| name | string | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
 
 **示例**
 
@@ -2852,83 +2970,23 @@ try {
 }
 ```
 
-## on('activate' | 'activating')
-
 ```TypeScript
-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+
+function onSwitchingCallback(eventData: osAccount.OsAccountSwitchEventData){
+  console.info('receive eventData:' + JSON.stringify(eventData));
+}
+
+try {
+  accountManager.on('switching', onSwitchingCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
+}
 ```
-
-订阅系统账号的激活完成与激活中的事件。使用callback异步回调。
-
-**起始版本：** 7
-
-**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
-
-<!--Device-AccountManager-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void--><!--Device-AccountManager-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void-End-->
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | 是 | 订阅类型，activate表示订阅的是账号已激活完成的事件，activating表示订阅的是账号正在激活的事件。 |
-| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 订阅系统账号激活完成与激活中的事件回调，表示激活完成后或正在激活中的系统账号ID。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
-
-**示例**
-
-参见 on_activate
-
-## on('switched')
-
-```TypeScript
-on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void
-```
-
-订阅系统账号的前后台切换结束事件。使用callback异步回调。
-
-**起始版本：** 12
-
-**需要权限：** 
-- API版本23+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-- API版本12 - 22：ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void-End-->
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'switched' | 是 | 订阅类型，switched表示订阅的是系统账号的前后台切换结束事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台切换结束事件回调，包含切换来源和切换目标的系统账号ID。<br/>**说明：** 从API version 23开始，事件数据中新增可选字段displayId，表示发生切换事件的逻辑屏ID。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
-
-**示例**
 
 ```TypeScript
 import { osAccount } from '@kit.BasicServicesKit';
@@ -2948,6 +3006,46 @@ try {
 }
 ```
 
+## on('activate' | 'activating')
+
+```TypeScript
+on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
+```
+
+订阅系统账号的激活完成与激活中的事件。使用callback异步回调。
+
+**起始版本：** 7
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
+**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'activate' \| 'activating' | 是 |
+| name | string | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+
+**示例**
+
+参见 on
+
 ## on('switching')
 
 ```TypeScript
@@ -2958,11 +3056,11 @@ on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **需要权限：** 
 - API版本23+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 - API版本12 - 22：ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2970,39 +3068,63 @@ on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'switching' | 是 | 订阅类型，switching表示订阅的是系统账号的前后台正在切换事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台正在切换事件回调，包含切换来源和切换目标的系统账号ID。<br/>**说明：** 从API version 23开始，事件数据中新增可选字段displayId，表示发生切换事件的逻辑屏ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'switching' | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
 
 **示例**
 
+参见 on
+
+## on('switched')
+
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-
-function onSwitchingCallback(eventData: osAccount.OsAccountSwitchEventData){
-  console.info('receive eventData:' + JSON.stringify(eventData));
-}
-
-try {
-  accountManager.on('switching', onSwitchingCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
-}
+on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void
 ```
+
+订阅系统账号的前后台切换结束事件。使用callback异步回调。
+
+**起始版本：** 12
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
+**需要权限：** 
+- API版本23+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+- API版本12 - 22：ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'switched' | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+
+**示例**
+
+参见 on
 
 ## onActivate
 
@@ -3014,9 +3136,9 @@ onActivate(name: string, callback: Callback<int>): void
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-AccountManager-onActivate(name: string, callback: Callback<int>): void--><!--Device-AccountManager-onActivate(name: string, callback: Callback<int>): void-End-->
+**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3024,19 +3146,19 @@ onActivate(name: string, callback: Callback<int>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 订阅系统账号激活完成的事件回调。表示激活完成后的系统账号ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
 
 **示例**
 
@@ -3064,9 +3186,9 @@ onActivating(name: string, callback: Callback<int>): void
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-AccountManager-onActivating(name: string, callback: Callback<int>): void--><!--Device-AccountManager-onActivating(name: string, callback: Callback<int>): void-End-->
+**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3074,19 +3196,19 @@ onActivating(name: string, callback: Callback<int>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 订阅系统账号激活中的事件回调，表示正在激活中的系统账号ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
 
 **示例**
 
@@ -3114,7 +3236,7 @@ onConstraintChanged(constraints: string[], callback: Callback<ConstraintChangeIn
 
 **起始版本：** 23
 
-<!--Device-AccountManager-onConstraintChanged(constraints: string[], callback: Callback<ConstraintChangeInfo>): void--><!--Device-AccountManager-onConstraintChanged(constraints: string[], callback: Callback<ConstraintChangeInfo>): void-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3122,18 +3244,18 @@ onConstraintChanged(constraints: string[], callback: Callback<ConstraintChangeIn
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| constraints | string[] | 是 | 表示待订阅的约束列 表。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | 是 | 表示用于接收约束变更事件的回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [constraints](arkts-basicservices-osaccount-osaccountinfo-i.md) | string[] | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | One or more constraints are invalid. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
 
 **示例**
 
@@ -3164,9 +3286,9 @@ onSwitched(callback: Callback<OsAccountSwitchEventData>): void
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-AccountManager-onSwitched(callback: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-onSwitched(callback: Callback<OsAccountSwitchEventData>): void-End-->
+**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3174,17 +3296,17 @@ onSwitched(callback: Callback<OsAccountSwitchEventData>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台切换结束事件回调，包含切换来源和切换目标的系统账号ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
 
 **示例**
 
@@ -3213,9 +3335,9 @@ onSwitching(callback: Callback<OsAccountSwitchEventData>): void
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-AccountManager-onSwitching(callback: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-onSwitching(callback: Callback<OsAccountSwitchEventData>): void-End-->
+**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3223,17 +3345,17 @@ onSwitching(callback: Callback<OsAccountSwitchEventData>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台正在切换事件回调，包含切换来源和切换目标的系统账号ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
 
 **示例**
 
@@ -3260,11 +3382,11 @@ queryAllCreatedOsAccounts(callback: AsyncCallback<Array<OsAccountInfo>>): void
 
 查询已创建的所有系统账号的信息列表。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-queryAllCreatedOsAccounts(callback: AsyncCallback<Array<OsAccountInfo>>): void--><!--Device-AccountManager-queryAllCreatedOsAccounts(callback: AsyncCallback<Array<OsAccountInfo>>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3272,18 +3394,18 @@ queryAllCreatedOsAccounts(callback: AsyncCallback<Array<OsAccountInfo>>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。如果查询成功，err为null，data为已创建的所有系统账号的信息列表；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt;&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
 
 **示例**
 
@@ -3376,11 +3498,11 @@ queryAllCreatedOsAccounts(): Promise<Array<OsAccountInfo>>
 
 查询已创建的所有系统账号的信息列表。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-queryAllCreatedOsAccounts(): Promise<Array<OsAccountInfo>>--><!--Device-AccountManager-queryAllCreatedOsAccounts(): Promise<Array<OsAccountInfo>>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3388,17 +3510,17 @@ queryAllCreatedOsAccounts(): Promise<Array<OsAccountInfo>>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt;&gt; | Promise对象，返回已创建的所有系统账号的信息列表。 |
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt;&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
 
 **示例**
 
@@ -3406,15 +3528,21 @@ queryAllCreatedOsAccounts(): Promise<Array<OsAccountInfo>>
 
 ## queryMaxLoggedInOsAccountNumber
 
+ArkTS-Dyn:
+```TypeScript
+queryMaxLoggedInOsAccountNumber(): Promise<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 queryMaxLoggedInOsAccountNumber(): Promise<int>
 ```
 
 查询允许同时登录的系统账号的最大数量。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AccountManager-queryMaxLoggedInOsAccountNumber(): Promise<int>--><!--Device-AccountManager-queryMaxLoggedInOsAccountNumber(): Promise<int>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3422,16 +3550,16 @@ queryMaxLoggedInOsAccountNumber(): Promise<int>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise对象，返回允许登录的系统账号的最大数量。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
 
 **示例**
 
@@ -3476,15 +3604,21 @@ try {
 
 ## queryMaxOsAccountNumber
 
+ArkTS-Dyn:
+```TypeScript
+queryMaxOsAccountNumber(callback: AsyncCallback<number>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 queryMaxOsAccountNumber(callback: AsyncCallback<int>): void
 ```
 
 查询允许创建的系统账号的最大数量。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-AccountManager-queryMaxOsAccountNumber(callback: AsyncCallback<int>): void--><!--Device-AccountManager-queryMaxOsAccountNumber(callback: AsyncCallback<int>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3492,17 +3626,17 @@ queryMaxOsAccountNumber(callback: AsyncCallback<int>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数，如果查询成功，err为null，data为允许创建的系统账号的最大数量；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
 
 **示例**
 
@@ -3589,15 +3723,21 @@ try {
 
 ## queryMaxOsAccountNumber
 
+ArkTS-Dyn:
+```TypeScript
+queryMaxOsAccountNumber(): Promise<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 queryMaxOsAccountNumber(): Promise<int>
 ```
 
 查询允许创建的系统账号的最大数量。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-AccountManager-queryMaxOsAccountNumber(): Promise<int>--><!--Device-AccountManager-queryMaxOsAccountNumber(): Promise<int>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3605,16 +3745,16 @@ queryMaxOsAccountNumber(): Promise<int>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise对象，返回允许创建的系统账号的最大数量。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
 
 **示例**
 
@@ -3628,11 +3768,11 @@ queryOsAccount(): Promise<OsAccountInfo>
 
 查询当前进程所属的系统账号的信息。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.GET_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-queryOsAccount(): Promise<OsAccountInfo>--><!--Device-AccountManager-queryOsAccount(): Promise<OsAccountInfo>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3640,17 +3780,17 @@ queryOsAccount(): Promise<OsAccountInfo>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Promise对象，返回当前进程所属的系统账号信息。 |
+| 类型 |
+| --- |
+| Promise&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
 
 **示例**
 
@@ -3695,17 +3835,23 @@ try {
 
 ## queryOsAccountById
 
+ArkTS-Dyn:
+```TypeScript
+queryOsAccountById(localId: number, callback: AsyncCallback<OsAccountInfo>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 queryOsAccountById(localId: int, callback: AsyncCallback<OsAccountInfo>): void
 ```
 
 查询指定系统账号的信息。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
-
-<!--Device-AccountManager-queryOsAccountById(localId: int, callback: AsyncCallback<OsAccountInfo>): void--><!--Device-AccountManager-queryOsAccountById(localId: int, callback: AsyncCallback<OsAccountInfo>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3713,21 +3859,21 @@ queryOsAccountById(localId: int, callback: AsyncCallback<OsAccountInfo>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 要查询的系统账号的ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果查询成功，err为null，data为查到的系统账号的信息；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
 
 **示例**
 
@@ -3818,17 +3964,23 @@ try {
 
 ## queryOsAccountById
 
+ArkTS-Dyn:
+```TypeScript
+queryOsAccountById(localId: number): Promise<OsAccountInfo>
+```
+
+ArkTS-Sta:
 ```TypeScript
 queryOsAccountById(localId: int): Promise<OsAccountInfo>
 ```
 
 查询指定系统账号的信息。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
-
-<!--Device-AccountManager-queryOsAccountById(localId: int): Promise<OsAccountInfo>--><!--Device-AccountManager-queryOsAccountById(localId: int): Promise<OsAccountInfo>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3836,26 +3988,26 @@ queryOsAccountById(localId: int): Promise<OsAccountInfo>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 要查询的系统账号的ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Promise对象，返回查到的系统账号的信息。 |
+| 类型 |
+| --- |
+| Promise&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
 
 **示例**
 
@@ -3863,17 +4015,23 @@ queryOsAccountById(localId: int): Promise<OsAccountInfo>
 
 ## removeOsAccount
 
+ArkTS-Dyn:
+```TypeScript
+removeOsAccount(localId: number, callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 removeOsAccount(localId: int, callback: AsyncCallback<void>): void
 ```
 
 删除指定系统账号。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-removeOsAccount(localId: int, callback: AsyncCallback<void>): void--><!--Device-AccountManager-removeOsAccount(localId: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3881,23 +4039,23 @@ removeOsAccount(localId: int, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果删除账号成功，err为null，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated on. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| [12300008](../errorcode-account.md#12300008-受限的账号) |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) |
 
 **示例**
 
@@ -4067,17 +4225,23 @@ try {
 
 ## removeOsAccount
 
+ArkTS-Dyn:
+```TypeScript
+removeOsAccount(localId: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 removeOsAccount(localId: int): Promise<void>
 ```
 
 删除指定系统账号。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-removeOsAccount(localId: int): Promise<void>--><!--Device-AccountManager-removeOsAccount(localId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -4085,28 +4249,28 @@ removeOsAccount(localId: int): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| [12300008](../errorcode-account.md#12300008-受限的账号) |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) |
 
 **示例**
 
@@ -4114,6 +4278,12 @@ removeOsAccount(localId: int): Promise<void>
 
 ## removeOsAccount
 
+ArkTS-Dyn:
+```TypeScript
+removeOsAccount(localId: number, options: RemoveOsAccountOptions): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 removeOsAccount(localId: int, options: RemoveOsAccountOptions): Promise<void>
 ```
@@ -4122,9 +4292,9 @@ removeOsAccount(localId: int, options: RemoveOsAccountOptions): Promise<void>
 
 **起始版本：** 24
 
-**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-AccountManager-removeOsAccount(localId: int, options: RemoveOsAccountOptions): Promise<void>--><!--Device-AccountManager-removeOsAccount(localId: int, options: RemoveOsAccountOptions): Promise<void>-End-->
+**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -4132,29 +4302,29 @@ removeOsAccount(localId: int, options: RemoveOsAccountOptions): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
-| options | [RemoveOsAccountOptions](arkts-basicservices-osaccount-removeosaccountoptions-i-sys.md) | 是 | 删除系统账号的选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| options | [RemoveOsAccountOptions](arkts-basicservices-osaccount-removeosaccountoptions-i-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or options. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated on. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| [12300008](../errorcode-account.md#12300008-受限的账号) |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) |
 
 **示例**
 
@@ -4162,17 +4332,23 @@ removeOsAccount(localId: int, options: RemoveOsAccountOptions): Promise<void>
 
 ## setOsAccountConstraints
 
+ArkTS-Dyn:
+```TypeScript
+setOsAccountConstraints(localId: number, constraints: Array<string>, enable: boolean, callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setOsAccountConstraints(localId: int, constraints: Array<string>, enable: boolean, callback: AsyncCallback<void>): void
 ```
 
 为指定系统账号设置/删除约束。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-setOsAccountConstraints(localId: int, constraints: Array<string>, enable: boolean, callback: AsyncCallback<void>): void--><!--Device-AccountManager-setOsAccountConstraints(localId: int, constraints: Array<string>, enable: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -4180,24 +4356,24 @@ setOsAccountConstraints(localId: int, constraints: Array<string>, enable: boolea
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
-| constraints | Array&lt;string&gt; | 是 | 待设置/删除的 约束列表。 |
-| enable | boolean | 是 | 设置(true)/删除(false) 。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [constraints](arkts-basicservices-osaccount-osaccountinfo-i.md) | Array & lt;string & gt; | 是 |
+| enable | boolean | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or constraints. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| [12300008](../errorcode-account.md#12300008-受限的账号) |
 
 **示例**
 
@@ -4290,17 +4466,23 @@ try {
 
 ## setOsAccountConstraints
 
+ArkTS-Dyn:
+```TypeScript
+setOsAccountConstraints(localId: number, constraints: Array<string>, enable: boolean): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 setOsAccountConstraints(localId: int, constraints: Array<string>, enable: boolean): Promise<void>
 ```
 
 为指定系统账号设置/删除约束。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-setOsAccountConstraints(localId: int, constraints: Array<string>, enable: boolean): Promise<void>--><!--Device-AccountManager-setOsAccountConstraints(localId: int, constraints: Array<string>, enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -4308,29 +4490,29 @@ setOsAccountConstraints(localId: int, constraints: Array<string>, enable: boolea
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
-| constraints | Array&lt;string&gt; | 是 | 待设置/删除的 约束列表。 |
-| enable | boolean | 是 | 设置(true)/删除(false)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [constraints](arkts-basicservices-osaccount-osaccountinfo-i.md) | Array & lt;string & gt; | 是 |
+| enable | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or constraints. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| [12300008](../errorcode-account.md#12300008-受限的账号) |
 
 **示例**
 
@@ -4338,17 +4520,23 @@ setOsAccountConstraints(localId: int, constraints: Array<string>, enable: boolea
 
 ## setOsAccountName
 
+ArkTS-Dyn:
+```TypeScript
+setOsAccountName(localId: number, localName: string, callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setOsAccountName(localId: int, localName: string, callback: AsyncCallback<void>): void
 ```
 
 设置指定系统账号的账号名。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-setOsAccountName(localId: int, localName: string, callback: AsyncCallback<void>): void--><!--Device-AccountManager-setOsAccountName(localId: int, localName: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -4356,23 +4544,23 @@ setOsAccountName(localId: int, localName: string, callback: AsyncCallback<void>)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
-| localName | string | 是 | 账号名，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| localName | string | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or localName. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| [12300008](../errorcode-account.md#12300008-受限的账号) |
 
 **示例**
 
@@ -4467,17 +4655,23 @@ try {
 
 ## setOsAccountName
 
+ArkTS-Dyn:
+```TypeScript
+setOsAccountName(localId: number, localName: string): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 setOsAccountName(localId: int, localName: string): Promise<void>
 ```
 
 设置指定系统账号的账号名。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-setOsAccountName(localId: int, localName: string): Promise<void>--><!--Device-AccountManager-setOsAccountName(localId: int, localName: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -4485,28 +4679,28 @@ setOsAccountName(localId: int, localName: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
-| localName | string | 是 | 账号名，最大长度为1024个字符。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| localName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or localName. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| [12300008](../errorcode-account.md#12300008-受限的账号) |
 
 **示例**
 
@@ -4514,17 +4708,23 @@ setOsAccountName(localId: int, localName: string): Promise<void>
 
 ## setOsAccountProfilePhoto
 
+ArkTS-Dyn:
+```TypeScript
+setOsAccountProfilePhoto(localId: number, photo: string, callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setOsAccountProfilePhoto(localId: int, photo: string, callback: AsyncCallback<void>): void
 ```
 
 为指定系统账号设置头像信息。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-setOsAccountProfilePhoto(localId: int, photo: string, callback: AsyncCallback<void>): void--><!--Device-AccountManager-setOsAccountProfilePhoto(localId: int, photo: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -4532,23 +4732,23 @@ setOsAccountProfilePhoto(localId: int, photo: string, callback: AsyncCallback<vo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
-| photo | string | 是 | 头像信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| photo | string | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or photo. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| [12300008](../errorcode-account.md#12300008-受限的账号) |
 
 **示例**
 
@@ -4655,17 +4855,23 @@ try {
 
 ## setOsAccountProfilePhoto
 
+ArkTS-Dyn:
+```TypeScript
+setOsAccountProfilePhoto(localId: number, photo: string): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 setOsAccountProfilePhoto(localId: int, photo: string): Promise<void>
 ```
 
 为指定系统账号设置头像信息。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-setOsAccountProfilePhoto(localId: int, photo: string): Promise<void>--><!--Device-AccountManager-setOsAccountProfilePhoto(localId: int, photo: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -4673,28 +4879,28 @@ setOsAccountProfilePhoto(localId: int, photo: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
-| photo | string | 是 | 头像信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| photo | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or photo. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| [12300008](../errorcode-account.md#12300008-受限的账号) |
 
 **示例**
 
@@ -4702,6 +4908,12 @@ setOsAccountProfilePhoto(localId: int, photo: string): Promise<void>
 
 ## setOsAccountType
 
+ArkTS-Dyn:
+```TypeScript
+setOsAccountType(localId: number, type: OsAccountType, options?: SetOsAccountTypeOptions): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 setOsAccountType(localId: int, type: OsAccountType, options?: SetOsAccountTypeOptions): Promise<void>
 ```
@@ -4710,9 +4922,9 @@ setOsAccountType(localId: int, type: OsAccountType, options?: SetOsAccountTypeOp
 
 **起始版本：** 24
 
-**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-AccountManager-setOsAccountType(localId: int, type: OsAccountType, options?: SetOsAccountTypeOptions): Promise<void>--><!--Device-AccountManager-setOsAccountType(localId: int, type: OsAccountType, options?: SetOsAccountTypeOptions): Promise<void>-End-->
+**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -4720,31 +4932,31 @@ setOsAccountType(localId: int, type: OsAccountType, options?: SetOsAccountTypeOp
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
-| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 | 系统账号类型。 |
-| options | [SetOsAccountTypeOptions](arkts-basicservices-osaccount-setosaccounttypeoptions-i-sys.md) | 否 | 设置系统账号类型的选项。默认为空。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 |
+| options | [SetOsAccountTypeOptions](arkts-basicservices-osaccount-setosaccounttypeoptions-i-sys.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or options. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted OS account. |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated. |
-| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upper limit. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../errorcode-account.md#12300002-无效参数) |
+| [12300003](../errorcode-account.md#12300003-账号不存在) |
+| [12300008](../errorcode-account.md#12300008-受限的账号) |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) |
+| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) |
 
 **示例**
 
@@ -4793,4 +5005,3 @@ try {
   console.error(`setOsAccountType exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
-

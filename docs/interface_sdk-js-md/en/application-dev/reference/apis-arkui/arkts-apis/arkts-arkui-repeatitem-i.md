@@ -4,7 +4,7 @@ Construct a new type for each item.
 
 **Since:** 12
 
-<!--Device-unnamed-interface RepeatItem--><!--Device-unnamed-interface RepeatItem-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,13 +25,13 @@ Index corresponding to the current data item.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-RepeatItem-index: number--><!--Device-RepeatItem-index: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,13 +47,12 @@ Each data item in the **arr** array. **T** indicates the data type passed in.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-RepeatItem-item: T--><!--Device-RepeatItem-item: T-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

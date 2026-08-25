@@ -8,16 +8,15 @@ declare type DialogOptionsShadow = ShadowOptions | ShadowStyle
 
 **起始版本：** 18
 
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-promptAction-declare type DialogOptionsShadow = ShadowOptions | ShadowStyle--><!--Device-promptAction-declare type DialogOptionsShadow = ShadowOptions | ShadowStyle-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 | 说明 |
-| --- | --- |
-| ShadowOptions |  |
-| ShadowStyle |  |
-
+| 类型 |
+| --- |
+| [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) |
+| [ShadowStyle](arkts-arkui-common-shadowstyle-e.md) |

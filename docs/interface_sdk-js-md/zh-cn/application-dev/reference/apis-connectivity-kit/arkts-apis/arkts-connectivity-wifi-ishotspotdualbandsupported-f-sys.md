@@ -16,13 +16,13 @@ function isHotspotDualBandSupported(): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [isHotspotDualBandSupported](arkts-connectivity-wifimanager-ishotspotdualbandsupported-f-sys.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO and ohos.permission.MANAGE_WIFI_HOTSPOT
-
-<!--Device-wifi-function isHotspotDualBandSupported(): boolean--><!--Device-wifi-function isHotspotDualBandSupported(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
@@ -30,9 +30,9 @@ function isHotspotDualBandSupported(): boolean
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true:支持，{ |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -46,4 +46,3 @@ try {
     console.error("failed:" + JSON.stringify(error));
 }
 ```
-

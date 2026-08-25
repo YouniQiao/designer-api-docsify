@@ -18,17 +18,17 @@ function setJsRawHeapTrimLevel(level: JsRawHeapTrimLevel): void
 > 默认裁剪级别是TRIM_LEVEL_1。如果设置了TRIM_LEVEL_2裁剪，需使用API version 20之后的rawheap-translator工具才能将.rawheap文件转换为.heapsnapshot文件，否则可能导致转换失败。&gt;
 > 该接口影响dumpJsRawHeapData的结果。
 
-**起始版本：** 26.1.0
+**起始版本：** 20
 
-<!--Device-hidebug-function setJsRawHeapTrimLevel(level: JsRawHeapTrimLevel): void--><!--Device-hidebug-function setJsRawHeapTrimLevel(level: JsRawHeapTrimLevel): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为26.1.0。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| level | [JsRawHeapTrimLevel](arkts-performanceanalysis-hidebug-jsrawheaptrimlevel-e.md) | 是 | 转储堆快照的裁剪级别，默认为TRIM_LEVEL_1。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| level | [JsRawHeapTrimLevel](arkts-performanceanalysis-hidebug-jsrawheaptrimlevel-e.md) | 是 |
 
 **示例**
 
@@ -37,4 +37,3 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 hidebug.setJsRawHeapTrimLevel(hidebug.JsRawHeapTrimLevel.TRIM_LEVEL_2);
 ```
-

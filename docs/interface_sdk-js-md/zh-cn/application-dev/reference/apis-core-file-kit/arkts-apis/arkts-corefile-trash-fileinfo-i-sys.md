@@ -4,9 +4,9 @@
 
 **起始版本：** 10
 
-**废弃版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-trash-interface FileInfo--><!--Device-trash-interface FileInfo-End-->
+**废弃版本：** 23
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -30,11 +30,11 @@ readonly ctime: number
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-FileInfo-readonly ctime: number--><!--Device-FileInfo-readonly ctime: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -52,11 +52,11 @@ readonly fileName: string
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-FileInfo-readonly fileName: string--><!--Device-FileInfo-readonly fileName: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -74,11 +74,11 @@ readonly mode: number
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-FileInfo-readonly mode: number--><!--Device-FileInfo-readonly mode: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -96,11 +96,11 @@ readonly mtime: number
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-FileInfo-readonly mtime: number--><!--Device-FileInfo-readonly mtime: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -118,11 +118,11 @@ readonly size: number
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-FileInfo-readonly size: number--><!--Device-FileInfo-readonly size: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -140,11 +140,11 @@ readonly srcPath: string
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-FileInfo-readonly srcPath: string--><!--Device-FileInfo-readonly srcPath: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -162,13 +162,12 @@ readonly uri: string
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-FileInfo-readonly uri: string--><!--Device-FileInfo-readonly uri: string-End-->
-
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
-

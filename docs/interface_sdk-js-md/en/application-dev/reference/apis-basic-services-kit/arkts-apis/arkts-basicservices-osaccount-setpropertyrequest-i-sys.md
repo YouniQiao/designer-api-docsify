@@ -2,9 +2,9 @@
 
 Defines the request for setting property information.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-osAccount-interface SetPropertyRequest--><!--Device-osAccount-interface SetPropertyRequest-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -26,9 +26,9 @@ Authentication credential type.
 
 **Type:** AuthType
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-SetPropertyRequest-authType: AuthType--><!--Device-SetPropertyRequest-authType: AuthType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -44,9 +44,9 @@ Type of the property to set.
 
 **Type:** [SetPropertyType](arkts-basicservices-osaccount-setpropertytype-e-sys.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-SetPropertyRequest-key: SetPropertyType--><!--Device-SetPropertyRequest-key: SetPropertyType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -62,11 +62,10 @@ Information to set.
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-SetPropertyRequest-setInfo: Uint8Array--><!--Device-SetPropertyRequest-setInfo: Uint8Array-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-

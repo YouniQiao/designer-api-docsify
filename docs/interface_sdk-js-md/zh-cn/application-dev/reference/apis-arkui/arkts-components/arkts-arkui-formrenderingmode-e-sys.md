@@ -4,7 +4,7 @@
 
 **起始版本：** 11
 
-<!--Device-unnamed-declare enum FormRenderingMode--><!--Device-unnamed-declare enum FormRenderingMode-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,7 +20,7 @@ FULL_COLOR = 0
 
 **起始版本：** 11
 
-<!--Device-FormRenderingMode-FULL_COLOR = 0--><!--Device-FormRenderingMode-FULL_COLOR = 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,9 +36,8 @@ SINGLE_COLOR = 1
 
 **起始版本：** 11
 
-<!--Device-FormRenderingMode-SINGLE_COLOR = 1--><!--Device-FormRenderingMode-SINGLE_COLOR = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
-

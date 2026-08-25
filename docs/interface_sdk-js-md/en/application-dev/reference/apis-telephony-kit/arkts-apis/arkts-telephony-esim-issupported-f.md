@@ -14,31 +14,31 @@ function isSupported(slotId: int): boolean
 
 Checks whether the specified card slot supports the eSIM function.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-eSIM-function isSupported(slotId: int): boolean--><!--Device-eSIM-function isSupported(slotId: int): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the specified card slot supports the eSIM function. If yes, **true** is returned. If no, **false** is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [3120001](../errorcode-telephony.md#3120001-service-connection-error) | Service connection failed. |
-| [3120002](../errorcode-telephony.md#3120002-system-internal-error) | System internal error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [3120001](../errorcode-telephony.md#3120001-service-connection-error) |
+| [3120002](../errorcode-telephony.md#3120002-system-internal-error) |
 
 **Examples**
 
@@ -48,4 +48,3 @@ import { eSIM } from '@kit.TelephonyKit';
 let isSupported: boolean = eSIM.isSupported(1);
 console.info(`the esim is Supported:` + isSupported);
 ```
-

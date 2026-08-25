@@ -3,96 +3,95 @@
 ## MAX_RECORD_NUM
 
 ```TypeScript
-const MAX_RECORD_NUM: int
+const MAX_RECORD_NUM = 512
 ```
 
-Maximum number of records in a **PasteData** object. In versions earlier than API version 10, the value is 512, indicating that no more records can be added once the number of records reaches 512. Since API version 10, no limit is placed on the number of records in a **PasteData** object. Unit: Numbers, the value must be an integer within [512, 512].
+Maximum number of records in a **PasteData** object. In versions earlier than API version 10, the value is 512, indicating that no more records can be added once the number of records reaches 512.Since API version 10, no limit is placed on the number of records in a **PasteData** object.
 
-**Since:** 23
+**Since:** 7
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-<!--Device-pasteboard-const MAX_RECORD_NUM: int--><!--Device-pasteboard-const MAX_RECORD_NUM: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## MIMETYPE_PIXELMAP
 
 ```TypeScript
-const MIMETYPE_PIXELMAP: string
+const MIMETYPE_PIXELMAP = 'pixelMap'
 ```
 
-MIME type of the PixelMap content. The value is 'pixelMap'.
+MIME type of the PixelMap content.
 
-**Since:** 23
+**Since:** 9
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-pasteboard-const MIMETYPE_PIXELMAP: string--><!--Device-pasteboard-const MIMETYPE_PIXELMAP: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## MIMETYPE_TEXT_HTML
 
 ```TypeScript
-const MIMETYPE_TEXT_HTML: string
+const MIMETYPE_TEXT_HTML = 'text/html'
 ```
 
-MIME type of the HTML content. The value is 'text/html'.
+MIME type of the HTML content.
 
-**Since:** 23
+**Since:** 7
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-<!--Device-pasteboard-const MIMETYPE_TEXT_HTML: string--><!--Device-pasteboard-const MIMETYPE_TEXT_HTML: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## MIMETYPE_TEXT_PLAIN
 
 ```TypeScript
-const MIMETYPE_TEXT_PLAIN: string
+const MIMETYPE_TEXT_PLAIN = 'text/plain'
 ```
 
-MIME type of the plain text content. The value is 'text/plain'.
+MIME type of the plain text content.
 
-**Since:** 23
+**Since:** 7
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-<!--Device-pasteboard-const MIMETYPE_TEXT_PLAIN: string--><!--Device-pasteboard-const MIMETYPE_TEXT_PLAIN: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## MIMETYPE_TEXT_URI
 
 ```TypeScript
-const MIMETYPE_TEXT_URI: string
+const MIMETYPE_TEXT_URI = 'text/uri'
 ```
 
-MIME type of the URI content. The value is 'text/uri'.
+MIME type of the URI content.
 
-**Since:** 23
+**Since:** 7
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-<!--Device-pasteboard-const MIMETYPE_TEXT_URI: string--><!--Device-pasteboard-const MIMETYPE_TEXT_URI: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## MIMETYPE_TEXT_WANT
 
 ```TypeScript
-const MIMETYPE_TEXT_WANT: string
+const MIMETYPE_TEXT_WANT = 'text/want'
 ```
 
-MIME type of the Want content. The value is 'text/want'.
+MIME type of the Want content.
 
-**Since:** 23
+**Since:** 7
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-<!--Device-pasteboard-const MIMETYPE_TEXT_WANT: string--><!--Device-pasteboard-const MIMETYPE_TEXT_WANT: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
-

@@ -4,11 +4,11 @@ Defines a button displayed in the reminder notification.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ActionButton](arkts-backgroundtasks-reminderagentmanager-actionbutton-i.md)
-
-<!--Device-reminderAgent-interface ActionButton--><!--Device-reminderAgent-interface ActionButton-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -30,11 +30,11 @@ Text on the button.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** title
-
-<!--Device-ActionButton-title: string--><!--Device-ActionButton-title: string-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -50,11 +50,10 @@ Button type.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** type
 
-<!--Device-ActionButton-type: ActionButtonType--><!--Device-ActionButton-type: ActionButtonType-End-->
-
 **System capability:** SystemCapability.Notification.ReminderAgent
-

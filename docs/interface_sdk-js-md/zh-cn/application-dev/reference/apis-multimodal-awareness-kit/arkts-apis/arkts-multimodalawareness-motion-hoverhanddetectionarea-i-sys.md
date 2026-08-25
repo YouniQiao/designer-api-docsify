@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-motion-export interface HoverHandDetectionArea--><!--Device-motion-export interface HoverHandDetectionArea-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
@@ -24,13 +24,13 @@ height: int
 
 矩形区域的高度，单位为px，该参数应为整数，取值范围为：[1,2147483647]。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-HoverHandDetectionArea-height: int--><!--Device-HoverHandDetectionArea-height: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
@@ -44,13 +44,13 @@ left: int
 
 矩形区域的左边界，单位为px，该参数应为整数，取值范围为：[-2147483648,2147483647]。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-HoverHandDetectionArea-left: int--><!--Device-HoverHandDetectionArea-left: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
@@ -64,13 +64,13 @@ top: int
 
 矩形区域的上边界，单位为px，该参数应为整数，取值范围为：[-2147483648,2147483647]。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-HoverHandDetectionArea-top: int--><!--Device-HoverHandDetectionArea-top: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
@@ -84,15 +84,14 @@ width: int
 
 矩形区域的宽度，单位为px，该参数应为整数，取值范围为：[1,2147483647]。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-HoverHandDetectionArea-width: int--><!--Device-HoverHandDetectionArea-width: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 **系统接口：** 此接口为系统接口。
-

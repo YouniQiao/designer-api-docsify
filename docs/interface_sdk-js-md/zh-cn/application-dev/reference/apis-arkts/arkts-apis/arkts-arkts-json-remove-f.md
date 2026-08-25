@@ -16,18 +16,18 @@ function remove(obj: object, property: string): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-json-function remove(obj: object, property: string): void--><!--Device-json-function remove(obj: object, property: string): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| obj | object | 是 | ArkTS对象，仅支持最外层为字典形式（即大括号而非中括号包围）的合法JSON串解析后的对象。 |
-| property | string | 是 | 要删除的属性名称，用于指定需从ArkTS对象中移除的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| obj | object | 是 |
+| property | string | 是 |
 
 **示例**
 
@@ -41,4 +41,3 @@ let result = JSON.has(inputObj, "name");
 console.info("result = " + result);
 // 打印结果：result = false
 ```
-

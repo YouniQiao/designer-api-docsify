@@ -9,24 +9,23 @@ Defines the delegate function for custom transition animations of the **NavDesti
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-unnamed-declare type NavDestinationTransitionDelegate =    (operation: NavigationOperation, isEnter: boolean) => Array<NavDestinationTransition> | undefined--><!--Device-unnamed-declare type NavDestinationTransitionDelegate =    (operation: NavigationOperation, isEnter: boolean) => Array<NavDestinationTransition> | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| operation | NavigationOperation | Yes | Type of navigation operation for the current page transition. |
-| isEnter | boolean | Yes | Whether the current page is an entry page.<br>**true**: The current page is an entry page.<br>**false**: The current page is not an entry page. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| operation | [NavigationOperation](arkts-arkui-navigationoperation-e.md) | Yes |
+| isEnter | boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;[NavDestinationTransition](arkts-arkui-navdestinationtransition-i.md)&gt; \| undefined | Array of custom animations for the **NavDestination** page. If **undefined** is returned, the default system animation is used. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;[NavDestinationTransition](arkts-arkui-navdestinationtransition-i.md)&gt; \| undefined |

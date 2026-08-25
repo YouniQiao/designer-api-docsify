@@ -2,9 +2,9 @@
 
 Defines the upgrade options, which are used to specify the upgrade operation type.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-update-export interface UpgradeOptions--><!--Device-update-export interface UpgradeOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -26,11 +26,10 @@ Upgrade command, which specifies the execution mode of the upgrade operation. Th
 
 **Type:** [Order](arkts-basicservices-update-order-e-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-UpgradeOptions-order: Order--><!--Device-UpgradeOptions-order: Order-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
-

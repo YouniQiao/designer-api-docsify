@@ -2,9 +2,9 @@
 
 应用启动时的窗口参数配置。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-window-interface WindowCreateParams--><!--Device-window-interface WindowCreateParams-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -24,9 +24,9 @@ The params of start animation
 
 **类型：** [StartAnimationParams](arkts-arkui-window-startanimationparams-i.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-WindowCreateParams-animationParams?: StartAnimationParams--><!--Device-WindowCreateParams-animationParams?: StartAnimationParams-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -42,9 +42,8 @@ needAnimation?: boolean
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-WindowCreateParams-needAnimation?: boolean--><!--Device-WindowCreateParams-needAnimation?: boolean-End-->
-
 **系统能力：** SystemCapability.Window.SessionManager
-

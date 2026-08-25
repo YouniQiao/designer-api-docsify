@@ -4,7 +4,7 @@ Packing image size limit.
 
 **Since:** 26.0.0
 
-<!--Device-image-interface PackingSizeLimit--><!--Device-image-interface PackingSizeLimit-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -26,9 +26,9 @@ Specify the scaling algorithm during zooming.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-PackingSizeLimit-level: AntiAliasingLevel--><!--Device-PackingSizeLimit-level: AntiAliasingLevel-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -44,9 +44,8 @@ Maximum packing size
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PackingSizeLimit-maxSize: Size--><!--Device-PackingSizeLimit-maxSize: Size-End-->
-
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
-

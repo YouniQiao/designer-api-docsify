@@ -4,7 +4,7 @@ Provides the shadow attributes, including the blur radius, color, and offset alo
 
 **Since:** 7
 
-<!--Device-unnamed-declare interface ShadowOptions--><!--Device-unnamed-declare interface ShadowOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,11 @@ Color of the shadow.The default color is black.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ShadowOptions-color?: Color | string | Resource | ColoringStrategy--><!--Device-ShadowOptions-color?: Color | string | Resource | ColoringStrategy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,11 +50,11 @@ Whether to fill the inside of the component with shadow. **true**: Fill the insi
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ShadowOptions-fill?: boolean--><!--Device-ShadowOptions-fill?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,17 +65,17 @@ offsetX?: number | Resource
 ```
 
 Offset of the shadow along the x-axis.Default value: **0**Unit: px  
-**NOTE：**To use a value in the unit of vp, you can use [vp2px](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.If **offsetX** is of the Resource type, its value must be of the number type.
+**NOTE：**To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.If **offsetX** is of the Resource type, its value must be of the number type.
 
 **Type:** number \| Resource
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ShadowOptions-offsetX?: number | Resource--><!--Device-ShadowOptions-offsetX?: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,17 +86,17 @@ offsetY?: number | Resource
 ```
 
 Offset of the shadow along the y-axis.Default value: **0**Unit: px  
-**NOTE：**To use a value in the unit of vp, you can use [vp2px](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.If **offsetY** is of the Resource type, its value must be of the number type.
+**NOTE：**To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.If **offsetY** is of the Resource type, its value must be of the number type.
 
 **Type:** number \| Resource
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ShadowOptions-offsetY?: number | Resource--><!--Device-ShadowOptions-offsetY?: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -107,17 +107,17 @@ radius: number | Resource
 ```
 
 Blur radius of the shadow.Value range: [0, +∞)Unit: px  
-**NOTE：**A value less than 0 evaluates to the value **0**.To use a value in the unit of vp, you can use [vp2px](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.If **radius** is of the Resource type, its value must be of the number type.
+**NOTE：**A value less than 0 evaluates to the value **0**.To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.If **radius** is of the Resource type, its value must be of the number type.
 
 **Type:** number \| Resource
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ShadowOptions-radius: number | Resource--><!--Device-ShadowOptions-radius: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -135,11 +135,10 @@ Shadow type.Default value: **COLOR**
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ShadowOptions-type?: ShadowType--><!--Device-ShadowOptions-type?: ShadowType-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

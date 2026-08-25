@@ -2,9 +2,9 @@
 
 Enumerates the path operation types contained in an iterator. It is used to read path operation instructions.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-drawing-enum PathIteratorVerb--><!--Device-drawing-enum PathIteratorVerb-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -16,9 +16,9 @@ MOVE = 0
 
 Sets the start point.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PathIteratorVerb-MOVE = 0--><!--Device-PathIteratorVerb-MOVE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -30,9 +30,9 @@ LINE = 1
 
 Adds a line segment.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PathIteratorVerb-LINE = 1--><!--Device-PathIteratorVerb-LINE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -44,9 +44,9 @@ QUAD = 2
 
 Adds a quadratic Bezier curve for smooth transitions.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PathIteratorVerb-QUAD = 2--><!--Device-PathIteratorVerb-QUAD = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -58,9 +58,9 @@ CONIC = 3
 
 Adds a conic curve.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PathIteratorVerb-CONIC = 3--><!--Device-PathIteratorVerb-CONIC = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -72,9 +72,9 @@ CUBIC = 4
 
 Adds a cubic Bezier curve for smooth transitions.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PathIteratorVerb-CUBIC = 4--><!--Device-PathIteratorVerb-CUBIC = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -86,9 +86,9 @@ CLOSE = 5
 
 Closes a path.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PathIteratorVerb-CLOSE = 5--><!--Device-PathIteratorVerb-CLOSE = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -100,9 +100,8 @@ DONE = CLOSE + 1
 
 The path setting is complete.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PathIteratorVerb-DONE = CLOSE + 1--><!--Device-PathIteratorVerb-DONE = CLOSE + 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
-

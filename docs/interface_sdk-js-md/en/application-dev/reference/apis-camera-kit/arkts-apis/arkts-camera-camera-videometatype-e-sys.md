@@ -2,9 +2,9 @@
 
 Video meta type.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-camera-enum VideoMetaType--><!--Device-camera-enum VideoMetaType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -18,11 +18,10 @@ VIDEO_META_MAKER_INFO = 0
 
 Video meta type for storing maker info.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-VideoMetaType-VIDEO_META_MAKER_INFO = 0--><!--Device-VideoMetaType-VIDEO_META_MAKER_INFO = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

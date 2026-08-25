@@ -4,7 +4,7 @@ Controller for launching the atomic service.
 
 **Since:** 12
 
-<!--Device-unnamed-export declare class LaunchController--><!--Device-unnamed-export declare class LaunchController-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,13 +24,10 @@ public launchAtomicService: LaunchAtomicServiceCallback
 
 Function to launch atomicservice.
 
-**Type:** [LaunchAtomicServiceCallback](arkts-arkui-launchatomicservicecallback-t-sys.md)
-
 **Since:** 12
 
-<!--Device-LaunchController-public launchAtomicService: LaunchAtomicServiceCallback--><!--Device-LaunchController-public launchAtomicService: LaunchAtomicServiceCallback-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

@@ -4,7 +4,7 @@ Defines a range of dates.
 
 **Since:** 19
 
-<!--Device-unnamed-declare interface DateRange--><!--Device-unnamed-declare interface DateRange-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Defines the end date of the date range.
 
 **Since:** 19
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-DateRange-end?: Date--><!--Device-DateRange-end?: Date-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ Defines the start date of the date range.
 
 **Since:** 19
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-DateRange-start?: Date--><!--Device-DateRange-start?: Date-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -15,25 +15,25 @@ function getActiveApnName(): Promise<string>
 Obtains the access point name (APN) of the default SIM card used for mobile data. This API returns the result asynchronously.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
-
-<!--Device-data-function getActiveApnName(): Promise<string>--><!--Device-data-function getActiveApnName(): Promise<string>-End-->
 
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Promise used to return the result. If mobile data is not activated, an empty string is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 **Examples**
 
@@ -47,4 +47,3 @@ data.getActiveApnName().then((apn: string) => {
     console.error(`getActiveApnName failed. code: ${err.code}, message: ${err.message}`);
 });
 ```
-

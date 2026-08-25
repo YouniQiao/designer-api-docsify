@@ -4,11 +4,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [DoNotDisturbType](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md)
-
-<!--Device-notification-export enum DoNotDisturbType--><!--Device-notification-export enum DoNotDisturbType-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -24,11 +24,11 @@ TYPE_NONE = 0
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [TYPE_NONE](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#type_none)
-
-<!--Device-DoNotDisturbType-TYPE_NONE = 0--><!--Device-DoNotDisturbType-TYPE_NONE = 0-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -44,11 +44,11 @@ TYPE_ONCE = 1
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [TYPE_ONCE](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#type_once)
-
-<!--Device-DoNotDisturbType-TYPE_ONCE = 1--><!--Device-DoNotDisturbType-TYPE_ONCE = 1-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -64,11 +64,11 @@ TYPE_DAILY = 2
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [TYPE_DAILY](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#type_daily)
-
-<!--Device-DoNotDisturbType-TYPE_DAILY = 2--><!--Device-DoNotDisturbType-TYPE_DAILY = 2-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -84,13 +84,12 @@ TYPE_CLEARLY = 3
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [TYPE_CLEARLY](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#type_clearly)
 
-<!--Device-DoNotDisturbType-TYPE_CLEARLY = 3--><!--Device-DoNotDisturbType-TYPE_CLEARLY = 3-End-->
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
-

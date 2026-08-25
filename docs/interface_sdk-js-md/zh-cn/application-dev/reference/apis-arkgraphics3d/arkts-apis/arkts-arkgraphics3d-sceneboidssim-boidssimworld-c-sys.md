@@ -7,7 +7,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-export declare class BoidsSimWorld--><!--Device-unnamed-export declare class BoidsSimWorld-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -23,9 +23,9 @@ addBoidsSimComponent(node: Node, param: BoidsSimParameters): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-BoidsSimWorld-addBoidsSimComponent(node: Node, param: BoidsSimParameters): void--><!--Device-BoidsSimWorld-addBoidsSimComponent(node: Node, param: BoidsSimParameters): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -33,10 +33,10 @@ addBoidsSimComponent(node: Node, param: BoidsSimParameters): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 目标场景的节点。 |
-| param | [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) | 是 | 群组行为参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 |
+| param | [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) | 是 |
 
 **示例**
 
@@ -74,9 +74,9 @@ addBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-BoidsSimWorld-addBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void--><!--Device-BoidsSimWorld-addBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -84,10 +84,10 @@ addBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 目标场景的节点。 |
-| param | [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) | 是 | 引力场参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 |
+| param | [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) | 是 |
 
 **示例**
 
@@ -120,9 +120,9 @@ addBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): v
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-BoidsSimWorld-addBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): void--><!--Device-BoidsSimWorld-addBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -130,10 +130,10 @@ addBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): v
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 目标场景的节点。 |
-| param | [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) | 是 | 斥力场参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 |
+| param | [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) | 是 |
 
 **示例**
 
@@ -166,9 +166,9 @@ getBoidsSimComponent(node: Node): BoidsSimParameters | null
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-BoidsSimWorld-getBoidsSimComponent(node: Node): BoidsSimParameters | null--><!--Device-BoidsSimWorld-getBoidsSimComponent(node: Node): BoidsSimParameters | null-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -176,15 +176,15 @@ getBoidsSimComponent(node: Node): BoidsSimParameters | null
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 目标场景的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) \| null | 返回群组行为参数，若节点未挂载该组件则返回null。 |
+| 类型 |
+| --- |
+| [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) \| null |
 
 **示例**
 
@@ -209,9 +209,9 @@ getBoidsSimGravityComponent(node: Node): BoidsSimGravityParameters | null
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-BoidsSimWorld-getBoidsSimGravityComponent(node: Node): BoidsSimGravityParameters | null--><!--Device-BoidsSimWorld-getBoidsSimGravityComponent(node: Node): BoidsSimGravityParameters | null-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -219,15 +219,15 @@ getBoidsSimGravityComponent(node: Node): BoidsSimGravityParameters | null
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 目标场景的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) \| null | 返回引力场参数，若节点未挂载该组件则返回null。 |
+| 类型 |
+| --- |
+| [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) \| null |
 
 **示例**
 
@@ -252,9 +252,9 @@ getBoidsSimRepulsionComponent(node: Node): BoidsSimRepulsionParameters | null
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-BoidsSimWorld-getBoidsSimRepulsionComponent(node: Node): BoidsSimRepulsionParameters | null--><!--Device-BoidsSimWorld-getBoidsSimRepulsionComponent(node: Node): BoidsSimRepulsionParameters | null-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -262,15 +262,15 @@ getBoidsSimRepulsionComponent(node: Node): BoidsSimRepulsionParameters | null
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 目标场景的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) \| null | 返回斥力场参数，若节点未挂载该组件则返回null。 |
+| 类型 |
+| --- |
+| [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) \| null |
 
 **示例**
 
@@ -295,9 +295,9 @@ pause(): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-BoidsSimWorld-pause(): void--><!--Device-BoidsSimWorld-pause(): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -323,9 +323,9 @@ play(): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-BoidsSimWorld-play(): void--><!--Device-BoidsSimWorld-play(): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -351,9 +351,9 @@ removeBoidsSimComponent(node: Node): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-BoidsSimWorld-removeBoidsSimComponent(node: Node): void--><!--Device-BoidsSimWorld-removeBoidsSimComponent(node: Node): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -361,9 +361,9 @@ removeBoidsSimComponent(node: Node): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 目标场景的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 |
 
 **示例**
 
@@ -385,9 +385,9 @@ removeBoidsSimGravityComponent(node: Node): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-BoidsSimWorld-removeBoidsSimGravityComponent(node: Node): void--><!--Device-BoidsSimWorld-removeBoidsSimGravityComponent(node: Node): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -395,9 +395,9 @@ removeBoidsSimGravityComponent(node: Node): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 目标场景的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 |
 
 **示例**
 
@@ -419,9 +419,9 @@ removeBoidsSimRepulsionComponent(node: Node): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-BoidsSimWorld-removeBoidsSimRepulsionComponent(node: Node): void--><!--Device-BoidsSimWorld-removeBoidsSimRepulsionComponent(node: Node): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -429,9 +429,9 @@ removeBoidsSimRepulsionComponent(node: Node): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 目标场景的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 |
 
 **示例**
 
@@ -453,9 +453,9 @@ setBoidsSimComponent(node: Node, param: BoidsSimParameters): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-BoidsSimWorld-setBoidsSimComponent(node: Node, param: BoidsSimParameters): void--><!--Device-BoidsSimWorld-setBoidsSimComponent(node: Node, param: BoidsSimParameters): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -463,10 +463,10 @@ setBoidsSimComponent(node: Node, param: BoidsSimParameters): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 目标场景的节点。 |
-| param | [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) | 是 | 群组行为参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 |
+| param | [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) | 是 |
 
 **示例**
 
@@ -494,9 +494,9 @@ setBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-BoidsSimWorld-setBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void--><!--Device-BoidsSimWorld-setBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -504,10 +504,10 @@ setBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 目标场景的节点。 |
-| param | [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) | 是 | 引力场参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 |
+| param | [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) | 是 |
 
 **示例**
 
@@ -530,9 +530,9 @@ setBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): v
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-BoidsSimWorld-setBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): void--><!--Device-BoidsSimWorld-setBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -540,10 +540,10 @@ setBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): v
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 目标场景的节点。 |
-| param | [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) | 是 | 斥力场参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 |
+| param | [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) | 是 |
 
 **示例**
 
@@ -566,9 +566,9 @@ stop(): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-BoidsSimWorld-stop(): void--><!--Device-BoidsSimWorld-stop(): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -584,3 +584,22 @@ function stopBoidsSim(world: BoidsSimWorld): void {
 }
 ```
 
+## isPlaying
+
+```TypeScript
+get isPlaying(): boolean
+```
+
+当前模拟是否正在播放。true表示正在播放，false表示已经暂停。
+
+**类型：** boolean
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUi.Graphics3D
+
+**系统接口：** 此接口为系统接口。

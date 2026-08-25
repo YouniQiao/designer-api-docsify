@@ -8,25 +8,25 @@ Called to return a FormState object. <p>You must override this callback if you w
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-unnamed-type OnAcquireFormStateFn = (want: Want) => formInfo.FormState--><!--Device-unnamed-type OnAcquireFormStateFn = (want: Want) => formInfo.FormState-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Indicates the description of the form for which the FormState is obtained. The description covers the bundle name, ability name, module name, form name, and form dimensions. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| formInfo.FormState | Returns the { |
+| 类型 |
+| --- |
+| formInfo.FormState |
 
 **示例**
 
@@ -43,4 +43,3 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
   }
 }
 ```
-

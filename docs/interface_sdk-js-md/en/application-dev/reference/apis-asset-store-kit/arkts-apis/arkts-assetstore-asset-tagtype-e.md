@@ -4,7 +4,7 @@ Enumerates the asset attribute types.
 
 **Since:** 11
 
-<!--Device-asset-enum TagType--><!--Device-asset-enum TagType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -18,9 +18,9 @@ Boolean.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-TagType-BOOL = 0x01 << 28--><!--Device-TagType-BOOL = 0x01 << 28-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -34,9 +34,9 @@ Number.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-TagType-NUMBER = 0x02 << 28--><!--Device-TagType-NUMBER = 0x02 << 28-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -50,9 +50,8 @@ Byte array.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-TagType-BYTES = 0x03 << 28--><!--Device-TagType-BYTES = 0x03 << 28-End-->
-
 **System capability:** SystemCapability.Security.Asset
-

@@ -4,33 +4,39 @@ NfcBTag 提供对NFC-B(ISO 14443-3B)技术的属性和I/O操作的访问，继�
 
 **继承/实现关系：** NfcBTag extends TagSession
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-unnamed-export interface NfcBTag--><!--Device-unnamed-export interface NfcBTag-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## getRespAppData
 
+ArkTS-Dyn:
+```TypeScript
+getRespAppData(): number[]
+```
+
+ArkTS-Sta:
 ```TypeScript
 getRespAppData(): int[]
 ```
 
 获取标签的应用程序数据。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NfcBTag-getRespAppData(): int[]--><!--Device-NfcBTag-getRespAppData(): int[]-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int[] | NfcB 标签的应用程序数据，每个number十六进制表示，范围是0x00~0xFF。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
 
 **示例**
 
@@ -44,25 +50,31 @@ console.info("nfcB respAppData: " + respAppData);
 
 ## getRespProtocol
 
+ArkTS-Dyn:
+```TypeScript
+getRespProtocol(): number[]
+```
+
+ArkTS-Sta:
 ```TypeScript
 getRespProtocol(): int[]
 ```
 
 获取标签的协议信息。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NfcBTag-getRespProtocol(): int[]--><!--Device-NfcBTag-getRespProtocol(): int[]-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int[] | NfcB 标签的协议信息，每个number十六进制表示，范围是0x00~0xFF。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
 
 **示例**
 
@@ -73,4 +85,3 @@ import { tag } from '@kit.ConnectivityKit';
 let respProtocol : number[] = nfcB.getRespProtocol();
 console.info("nfcB respProtocol: " + respProtocol);
 ```
-

@@ -6,7 +6,7 @@
 
 **起始版本：** 11
 
-<!--Device-unnamed-interface CapsuleSegmentButtonConstructionOptions--><!--Device-unnamed-interface CapsuleSegmentButtonConstructionOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +28,11 @@ buttons: SegmentButtonItemTuple
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CapsuleSegmentButtonConstructionOptions-buttons: SegmentButtonItemTuple--><!--Device-CapsuleSegmentButtonConstructionOptions-buttons: SegmentButtonItemTuple-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,11 +50,10 @@ multiply?: boolean
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-CapsuleSegmentButtonConstructionOptions-multiply?: boolean--><!--Device-CapsuleSegmentButtonConstructionOptions-multiply?: boolean-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

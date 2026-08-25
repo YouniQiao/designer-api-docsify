@@ -1,8 +1,6 @@
 # ObjectConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface ObjectConstructor--><!--Device-unnamed-interface ObjectConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,20 +15,18 @@ fromEntries<T = any>(entries: Iterable<readonly [PropertyKey, T]>): { [k: string
 
 Returns an object created by key-value entries for properties and methods
 
-**Since:** -1
-
-<!--Device-ObjectConstructor-fromEntries<T = any>(entries: Iterable<readonly [PropertyKey, T]>): { [k: string]: T }--><!--Device-ObjectConstructor-fromEntries<T = any>(entries: Iterable<readonly [PropertyKey, T]>): { [k: string]: T }-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| entries | Iterable&lt;readonly [PropertyKey, T]&gt; | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| entries | Iterable & lt;readonly [PropertyKey, T] & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## fromEntries
 
 ```TypeScript
@@ -39,17 +35,15 @@ fromEntries(entries: Iterable<readonly any[]>): any
 
 Returns an object created by key-value entries for properties and methods
 
-**Since:** -1
-
-<!--Device-ObjectConstructor-fromEntries(entries: Iterable<readonly any[]>): any--><!--Device-ObjectConstructor-fromEntries(entries: Iterable<readonly any[]>): any-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| entries | Iterable&lt;readonly any[]&gt; | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| entries | Iterable & lt;readonly any[] & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

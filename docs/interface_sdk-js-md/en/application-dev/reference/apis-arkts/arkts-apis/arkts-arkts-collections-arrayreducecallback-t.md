@@ -9,24 +9,23 @@ Defines the ArkTS Array reduction function, which is used by the 'reduceRight' A
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-collections-type ArrayReduceCallback<AccType, ElementType, ArrayType> =    (previousValue: AccType, currentValue: ElementType, currentIndex: number, array: ArrayType) => AccType--><!--Device-collections-type ArrayReduceCallback<AccType, ElementType, ArrayType> =    (previousValue: AccType, currentValue: ElementType, currentIndex: number, array: ArrayType) => AccType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| previousValue | AccType | Yes | Accumulated value of the current traversal. |
-| currentValue | ElementType | Yes | Element that is being traversed in the ArkTS array. |
-| currentIndex | number | Yes | Index of the element in the ArkTS array. |
-| array | ArrayType | Yes | ArkTS array that is being traversed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| previousValue | AccType | Yes |
+| [currentValue](../../apis-notification-kit/arkts-apis/arkts-notification-notificationcontent-notificationprogress-i.md) | ElementType | Yes |
+| currentIndex | number | Yes |
+| array | ArrayType | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| AccType | The result of the reduction. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| AccType |

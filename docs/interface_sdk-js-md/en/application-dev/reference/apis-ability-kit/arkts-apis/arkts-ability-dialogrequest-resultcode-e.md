@@ -2,9 +2,9 @@
 
 Enumerates the result codes of the request for the modal dialog box.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-dialogRequest-export enum ResultCode--><!--Device-dialogRequest-export enum ResultCode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -16,9 +16,9 @@ RESULT_OK = 0
 
 The request succeeds.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ResultCode-RESULT_OK = 0--><!--Device-ResultCode-RESULT_OK = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -30,9 +30,8 @@ RESULT_CANCEL = 1
 
 The request fails.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ResultCode-RESULT_CANCEL = 1--><!--Device-ResultCode-RESULT_CANCEL = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-

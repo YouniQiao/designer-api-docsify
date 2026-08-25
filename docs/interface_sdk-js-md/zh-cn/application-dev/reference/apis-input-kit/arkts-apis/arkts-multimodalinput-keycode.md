@@ -10,7 +10,6 @@ import { KeyCode } from '@kit.InputKit';
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-| [KeyCode(键值)](arkts-input-multimodalinput-keycode-keycode-e.md) | 按键设备的键值，按键设备包括键盘、光盘、游戏手柄等。 |
-
+| 名称 |
+| --- |
+| [KeyCode(键值)](arkts-input-multimodalinput-keycode-keycode-e.md) |

@@ -1,8 +1,6 @@
 # BigIntToLocaleStringOptions
 
-**Since:** -1
-
-<!--Device-unnamed-interface BigIntToLocaleStringOptions--><!--Device-unnamed-interface BigIntToLocaleStringOptions-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -19,9 +17,7 @@ used only when notation is "compact"
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-BigIntToLocaleStringOptions-compactDisplay?: string--><!--Device-BigIntToLocaleStringOptions-compactDisplay?: string-End-->
+**ArkTS mode:** 
 
 ## currency
 
@@ -33,9 +29,7 @@ The currency to use in currency formatting. Possible values are the ISO 4217 cur
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-BigIntToLocaleStringOptions-currency?: string--><!--Device-BigIntToLocaleStringOptions-currency?: string-End-->
+**ArkTS mode:** 
 
 ## currencyDisplay
 
@@ -47,9 +41,7 @@ How to display the currency in currency formatting. It is only used when [[Style
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-BigIntToLocaleStringOptions-currencyDisplay?: string--><!--Device-BigIntToLocaleStringOptions-currencyDisplay?: string-End-->
+**ArkTS mode:** 
 
 ## localeMatcher
 
@@ -61,9 +53,7 @@ The locale matching algorithm to use.The default is "best fit". For information 
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-BigIntToLocaleStringOptions-localeMatcher?: string--><!--Device-BigIntToLocaleStringOptions-localeMatcher?: string-End-->
+**ArkTS mode:** 
 
 ## maximumFractionDigits
 
@@ -75,9 +65,7 @@ The maximum number of fraction digits to use. Possible values are from 0 to 20; 
 
 **Type:** 0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9 \| 10 \| 11 \| 12 \| 13 \| 14 \| 15 \| 16 \| 17 \| 18 \| 19 \| 20
 
-**Since:** -1
-
-<!--Device-BigIntToLocaleStringOptions-maximumFractionDigits?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20--><!--Device-BigIntToLocaleStringOptions-maximumFractionDigits?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20-End-->
+**ArkTS mode:** 
 
 ## maximumSignificantDigits
 
@@ -89,9 +77,7 @@ The maximum number of significant digits to use. Possible values are from 1 to 2
 
 **Type:** 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9 \| 10 \| 11 \| 12 \| 13 \| 14 \| 15 \| 16 \| 17 \| 18 \| 19 \| 20 \| 21
 
-**Since:** -1
-
-<!--Device-BigIntToLocaleStringOptions-maximumSignificantDigits?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21--><!--Device-BigIntToLocaleStringOptions-maximumSignificantDigits?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21-End-->
+**ArkTS mode:** 
 
 ## minimumFractionDigits
 
@@ -103,9 +89,7 @@ The minimum number of fraction digits to use. Possible values are from 0 to 20; 
 
 **Type:** 0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9 \| 10 \| 11 \| 12 \| 13 \| 14 \| 15 \| 16 \| 17 \| 18 \| 19 \| 20
 
-**Since:** -1
-
-<!--Device-BigIntToLocaleStringOptions-minimumFractionDigits?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20--><!--Device-BigIntToLocaleStringOptions-minimumFractionDigits?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20-End-->
+**ArkTS mode:** 
 
 ## minimumIntegerDigits
 
@@ -117,9 +101,7 @@ The minimum number of integer digits to use. Possible values are from 1 to 21; t
 
 **Type:** 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9 \| 10 \| 11 \| 12 \| 13 \| 14 \| 15 \| 16 \| 17 \| 18 \| 19 \| 20 \| 21
 
-**Since:** -1
-
-<!--Device-BigIntToLocaleStringOptions-minimumIntegerDigits?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21--><!--Device-BigIntToLocaleStringOptions-minimumIntegerDigits?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21-End-->
+**ArkTS mode:** 
 
 ## minimumSignificantDigits
 
@@ -131,9 +113,7 @@ The minimum number of significant digits to use. Possible values are from 1 to 2
 
 **Type:** 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9 \| 10 \| 11 \| 12 \| 13 \| 14 \| 15 \| 16 \| 17 \| 18 \| 19 \| 20 \| 21
 
-**Since:** -1
-
-<!--Device-BigIntToLocaleStringOptions-minimumSignificantDigits?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21--><!--Device-BigIntToLocaleStringOptions-minimumSignificantDigits?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21-End-->
+**ArkTS mode:** 
 
 ## notation
 
@@ -145,9 +125,7 @@ The formatting that should be displayed for the number, the defaults is "standar
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-BigIntToLocaleStringOptions-notation?: string--><!--Device-BigIntToLocaleStringOptions-notation?: string-End-->
+**ArkTS mode:** 
 
 ## numberingSystem
 
@@ -157,9 +135,7 @@ numberingSystem?: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-BigIntToLocaleStringOptions-numberingSystem?: string--><!--Device-BigIntToLocaleStringOptions-numberingSystem?: string-End-->
+**ArkTS mode:** 
 
 ## style
 
@@ -171,9 +147,7 @@ The formatting style to use , the default is "decimal".
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-BigIntToLocaleStringOptions-style?: string--><!--Device-BigIntToLocaleStringOptions-style?: string-End-->
+**ArkTS mode:** 
 
 ## unit
 
@@ -185,9 +159,7 @@ The unit to use in unit formatting, Possible values are core unit identifiers, d
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-BigIntToLocaleStringOptions-unit?: string--><!--Device-BigIntToLocaleStringOptions-unit?: string-End-->
+**ArkTS mode:** 
 
 ## unitDisplay
 
@@ -199,9 +171,7 @@ The unit formatting style to use in unit formatting, the defaults is "short".
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-BigIntToLocaleStringOptions-unitDisplay?: string--><!--Device-BigIntToLocaleStringOptions-unitDisplay?: string-End-->
+**ArkTS mode:** 
 
 ## useGrouping
 
@@ -213,7 +183,4 @@ Whether to use grouping separators, such as thousands separators or thousand/lak
 
 **Type:** boolean
 
-**Since:** -1
-
-<!--Device-BigIntToLocaleStringOptions-useGrouping?: boolean--><!--Device-BigIntToLocaleStringOptions-useGrouping?: boolean-End-->
-
+**ArkTS mode:** 

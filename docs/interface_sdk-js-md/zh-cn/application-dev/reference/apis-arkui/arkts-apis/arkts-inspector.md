@@ -11,17 +11,16 @@ inspector的性能分析（Profiler）工具。@namespace Profiler
 
 ### 命名空间
 
-| 名称 | 说明 |
-| --- | --- |
-| [Profiler](arkts-arkui-profiler-n.md) | inspector的性能分析（Profiler）工具。@namespace Profiler |
+| 名称 |
+| --- |
+| [Profiler](arkts-arkui-profiler-n.md) |
 
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [getInspectorNodeById](arkts-arkui-inspector-getinspectornodebyid-f-sys.md) | 根据节点id获取inspector节点信息。 |
-| [getInspectorNodes](arkts-arkui-inspector-getinspectornodes-f-sys.md) | 获取inspector节点信息。 |
-| [setAppBgColor](arkts-arkui-inspector-setappbgcolor-f-sys.md) | 设置应用背景颜色。 |
+| 名称 |
+| --- |
+| [getInspectorNodeById](arkts-arkui-inspector-getinspectornodebyid-f-sys.md) |
+| [getInspectorNodes](arkts-arkui-inspector-getinspectornodes-f-sys.md) |
+| [setAppBgColor](arkts-arkui-inspector-setappbgcolor-f-sys.md) |
 <!--DelEnd-->
-

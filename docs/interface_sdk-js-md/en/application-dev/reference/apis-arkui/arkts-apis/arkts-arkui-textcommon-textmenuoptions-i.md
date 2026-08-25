@@ -4,9 +4,7 @@ Defines text menu options.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare interface TextMenuOptions--><!--Device-unnamed-export declare interface TextMenuOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +20,8 @@ Text menu show mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TextMenuOptions-showMode?: TextMenuShowMode--><!--Device-TextMenuOptions-showMode?: TextMenuShowMode-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

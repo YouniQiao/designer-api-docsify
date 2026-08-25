@@ -4,9 +4,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-reflect-interface InvocationHandler--><!--Device-reflect-interface InvocationHandler-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,26 +23,24 @@ get(proxy: Proxy, method: InstanceMethod): Any
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InvocationHandler-get(proxy: Proxy, method: InstanceMethod): Any--><!--Device-InvocationHandler-get(proxy: Proxy, method: InstanceMethod): Any-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| proxy | [Proxy](arkts-arkts-reflect-proxy-c.md) | 是 | 被访问的代理对象。 |
-| method | [InstanceMethod](arkts-arkts-reflect-instancemethod-c.md) | 是 | 被拦截的方法。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| proxy | [Proxy](arkts-arkts-reflect-proxy-c.md) | 是 |
+| method | [InstanceMethod](arkts-arkts-reflect-instancemethod-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Any | 属性的值。 |
+| 类型 |
+| --- |
+| Any |
 
 ## invoke
 
@@ -56,27 +52,25 @@ invoke(proxy: Proxy, method: InstanceMethod, args: FixedArray<Any>): Any
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InvocationHandler-invoke(proxy: Proxy, method: InstanceMethod, args: FixedArray<Any>): Any--><!--Device-InvocationHandler-invoke(proxy: Proxy, method: InstanceMethod, args: FixedArray<Any>): Any-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| proxy | [Proxy](arkts-arkts-reflect-proxy-c.md) | 是 | 调用该方法的代理对象。 |
-| method | [InstanceMethod](arkts-arkts-reflect-instancemethod-c.md) | 是 | 被拦截的方法。 |
-| args | FixedArray&lt;Any&gt; | 是 | 传入该方法的参数数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| proxy | [Proxy](arkts-arkts-reflect-proxy-c.md) | 是 |
+| method | [InstanceMethod](arkts-arkts-reflect-instancemethod-c.md) | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | FixedArray & lt;Any & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Any | 方法调用的结果。 |
+| 类型 |
+| --- |
+| Any |
 
 ## set
 
@@ -88,19 +82,16 @@ set(proxy: Proxy, method: InstanceMethod, value: Any): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InvocationHandler-set(proxy: Proxy, method: InstanceMethod, value: Any): void--><!--Device-InvocationHandler-set(proxy: Proxy, method: InstanceMethod, value: Any): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| proxy | [Proxy](arkts-arkts-reflect-proxy-c.md) | 是 | 被修改的代理对象。 |
-| method | [InstanceMethod](arkts-arkts-reflect-instancemethod-c.md) | 是 | 被拦截的方法。 |
-| value | Any | 是 | 通过setter传入用于赋值的值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| proxy | [Proxy](arkts-arkts-reflect-proxy-c.md) | 是 |
+| method | [InstanceMethod](arkts-arkts-reflect-instancemethod-c.md) | 是 |
+| value | Any | 是 |

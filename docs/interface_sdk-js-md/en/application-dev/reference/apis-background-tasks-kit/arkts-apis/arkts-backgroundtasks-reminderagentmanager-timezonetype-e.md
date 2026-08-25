@@ -4,7 +4,7 @@ Enumerates the time zone types. When the time zone is changed, the reminder time
 
 **Since:** 26.0.0
 
-<!--Device-reminderAgentManager-export enum TimeZoneType--><!--Device-reminderAgentManager-export enum TimeZoneType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -18,9 +18,9 @@ Default value. When the time zone is changed, the reminder time is calculated in
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-TimeZoneType-DEFAULT = 0--><!--Device-TimeZoneType-DEFAULT = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -34,9 +34,9 @@ Fixed time zone, which is used in scenarios such as ticket booking and meetings.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-TimeZoneType-FIXED_TIME_ZONE = 1--><!--Device-TimeZoneType-FIXED_TIME_ZONE = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -50,9 +50,8 @@ System time zone, which is used in scenarios such as setting the alarm clock, fi
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TimeZoneType-SYSTEM_TIME_ZONE = 2--><!--Device-TimeZoneType-SYSTEM_TIME_ZONE = 2-End-->
-
 **System capability:** SystemCapability.Notification.ReminderAgent
-

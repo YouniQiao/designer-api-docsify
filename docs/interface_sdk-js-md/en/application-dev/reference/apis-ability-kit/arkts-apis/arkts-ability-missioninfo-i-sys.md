@@ -2,9 +2,9 @@
 
 The module defines detailed information about a mission. The information can be obtained through [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md).
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-unnamed-export interface MissionInfo--><!--Device-unnamed-export interface MissionInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -18,11 +18,11 @@ abilityState: int
 
 Indicates the ability state of this mission.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-MissionInfo-abilityState: int--><!--Device-MissionInfo-abilityState: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -38,9 +38,9 @@ Indicates whether the mission is continuable.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MissionInfo-continuable: boolean--><!--Device-MissionInfo-continuable: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -56,9 +56,9 @@ Indicates icon path of the mission.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MissionInfo-iconPath: string--><!--Device-MissionInfo-iconPath: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -74,9 +74,9 @@ Indicates label of the mission.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MissionInfo-label: string--><!--Device-MissionInfo-label: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -92,9 +92,9 @@ Indicates locked state.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MissionInfo-lockedState: boolean--><!--Device-MissionInfo-lockedState: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -108,11 +108,11 @@ missionId: int
 
 Indicates mission id.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MissionInfo-missionId: int--><!--Device-MissionInfo-missionId: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -126,11 +126,11 @@ runningState: int
 
 Indicates running state.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MissionInfo-runningState: int--><!--Device-MissionInfo-runningState: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -146,9 +146,9 @@ Indicates the recent created or updated time of the mission.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MissionInfo-timestamp: string--><!--Device-MissionInfo-timestamp: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -164,9 +164,9 @@ Indicates whether the mission is unclearable.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-MissionInfo-unclearable: boolean--><!--Device-MissionInfo-unclearable: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -182,11 +182,10 @@ Indicates want of the mission.
 
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MissionInfo-want: Want--><!--Device-MissionInfo-want: Want-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
-

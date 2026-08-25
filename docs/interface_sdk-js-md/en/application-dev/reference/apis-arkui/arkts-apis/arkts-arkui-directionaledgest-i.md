@@ -4,7 +4,7 @@ Defines the DirectionalEdgesT interface.@interface DirectionalEdgesT
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface DirectionalEdgesT--><!--Device-unnamed-declare interface DirectionalEdgesT-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,13 +25,13 @@ Bottom edge.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-DirectionalEdgesT-bottom: T--><!--Device-DirectionalEdgesT-bottom: T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,13 +47,13 @@ End edge.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-DirectionalEdgesT-end: T--><!--Device-DirectionalEdgesT-end: T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,13 +69,13 @@ Start edge.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-DirectionalEdgesT-start: T--><!--Device-DirectionalEdgesT-start: T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -91,13 +91,12 @@ Top edge.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-DirectionalEdgesT-top: T--><!--Device-DirectionalEdgesT-top: T-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

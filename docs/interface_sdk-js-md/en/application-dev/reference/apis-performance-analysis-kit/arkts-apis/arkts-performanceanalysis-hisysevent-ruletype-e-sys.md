@@ -2,9 +2,9 @@
 
 Enumerates matching rule types.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-hiSysEvent-enum RuleType--><!--Device-hiSysEvent-enum RuleType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -18,9 +18,9 @@ WHOLE_WORD = 1
 
 Whole word matching.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-RuleType-WHOLE_WORD = 1--><!--Device-RuleType-WHOLE_WORD = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -34,9 +34,9 @@ PREFIX = 2
 
 Prefix matching.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-RuleType-PREFIX = 2--><!--Device-RuleType-PREFIX = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -50,11 +50,10 @@ REGULAR = 3
 
 Regular expression matching.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-RuleType-REGULAR = 3--><!--Device-RuleType-REGULAR = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
-

@@ -16,9 +16,9 @@ Call event listening in registered form. <p>This interface requires permission t
 
 **Since:** 23
 
-**Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-formObserver-function onCall(observerCallback: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function onCall(observerCallback: Callback<formInfo.RunningFormInfo>): void-End-->
+**Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -26,17 +26,17 @@ Call event listening in registered form. <p>This interface requires permission t
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the running form info. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 
 ## onCall
@@ -49,9 +49,9 @@ Call event listening in registered form. <p>This interface requires permission t
 
 **Since:** 23
 
-**Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-formObserver-function onCall(hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function onCall(hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void-End-->
+**Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -59,16 +59,15 @@ Call event listening in registered form. <p>This interface requires permission t
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| hostBundleName | string | Yes | Indicates the bundle name of the form host application. |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the running form info. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [hostBundleName](arkts-form-forminfo-runningforminfo-i-sys.md) | string | Yes |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

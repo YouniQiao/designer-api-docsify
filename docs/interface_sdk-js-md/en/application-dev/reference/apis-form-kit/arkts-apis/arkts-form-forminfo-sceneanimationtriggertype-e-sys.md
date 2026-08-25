@@ -4,7 +4,7 @@ The trigger type of the scene animation.@enum { int }
 
 **Since:** 26.0.0
 
-<!--Device-formInfo-enum SceneAnimationTriggerType--><!--Device-formInfo-enum SceneAnimationTriggerType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -20,11 +20,10 @@ Shake.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-SceneAnimationTriggerType-SHAKE = 1--><!--Device-SceneAnimationTriggerType-SHAKE = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
-

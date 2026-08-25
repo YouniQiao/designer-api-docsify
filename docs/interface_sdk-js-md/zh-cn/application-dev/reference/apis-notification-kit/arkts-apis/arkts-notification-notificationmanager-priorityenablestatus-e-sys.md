@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-notificationManager-export enum PriorityEnableStatus--><!--Device-notificationManager-export enum PriorityEnableStatus-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -20,7 +20,7 @@ DISABLE = 0
 
 **起始版本：** 23
 
-<!--Device-PriorityEnableStatus-DISABLE = 0--><!--Device-PriorityEnableStatus-DISABLE = 0-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -36,7 +36,7 @@ ENABLE_BY_INTELLIGENT = 1
 
 **起始版本：** 23
 
-<!--Device-PriorityEnableStatus-ENABLE_BY_INTELLIGENT = 1--><!--Device-PriorityEnableStatus-ENABLE_BY_INTELLIGENT = 1-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -52,9 +52,8 @@ ENABLE = 2
 
 **起始版本：** 23
 
-<!--Device-PriorityEnableStatus-ENABLE = 2--><!--Device-PriorityEnableStatus-ENABLE = 2-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
-

@@ -8,15 +8,14 @@ Defines a callback invoked when the **Web** component enters full screen mode.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-unnamed-type OnFullScreenEnterCallback = (event: FullScreenEnterEvent) => void--><!--Device-unnamed-type OnFullScreenEnterCallback = (event: FullScreenEnterEvent) => void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | [FullScreenEnterEvent](arkts-arkweb-fullscreenenterevent-i.md) | Yes | Callback event for the **Web** component to enter full screen mode. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | [FullScreenEnterEvent](arkts-arkweb-fullscreenenterevent-i.md) | Yes |

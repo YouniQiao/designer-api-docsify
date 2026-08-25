@@ -4,11 +4,11 @@ LruBuffer 算法在缓存空间不足时使用新数据替换最不常使用的�
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [LRUCache](arkts-arkts-util-lrucache-c.md)
-
-<!--Device-util-class LruBuffer--><!--Device-util-class LruBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -28,19 +28,19 @@ import { util } from '@kit.ArkTS';
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** iterator]
-
-<!--Device-LruBuffer-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-LruBuffer-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回以键值对形式的二维数组。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 **示例**
 
@@ -73,22 +73,22 @@ afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [afterRemoval](arkts-arkts-util-lrucache-c.md#afterremoval)
-
-<!--Device-LruBuffer-afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void--><!--Device-LruBuffer-afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isEvict | boolean | 是 | 容量是否不足。如果值为 **true**，则由于容量不足而调用此 API。 |
-| key | K | 是 | 被移除的 key。 |
-| value | V | 是 | 被移除的值。 |
-| newValue | V | 是 | 如果调用了 **put()** 方法并且要添加的 key 已存在时该 key 的新值。其他情况下此参数为空。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| isEvict | boolean | 是 |
+| key | K | 是 |
+| value | V | 是 |
+| newValue | V | 是 |
 
 **示例**
 
@@ -125,11 +125,11 @@ clear(): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [clear](arkts-arkts-util-lrucache-c.md#clear)
-
-<!--Device-LruBuffer-clear(): void--><!--Device-LruBuffer-clear(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -180,19 +180,19 @@ constructor(capacity?: number)
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** constructor
-
-<!--Device-LruBuffer-constructor(capacity?: number)--><!--Device-LruBuffer-constructor(capacity?: number)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| capacity | number | 否 | 要创建的缓存的容量。默认值为 **64**。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| capacity | number | 否 |
 
 **示例**
 
@@ -347,25 +347,25 @@ contains(key: K): boolean
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [contains](arkts-arkts-util-lrucache-c.md#contains)
-
-<!--Device-LruBuffer-contains(key: K): boolean--><!--Device-LruBuffer-contains(key: K): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | K | 是 | 要检查的 key。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | K | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 检查结果。如果缓存包含指定的 key，则返回 **true**；否则返回 **false**。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -593,25 +593,25 @@ createDefault(key: K): V
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [createDefault](arkts-arkts-util-lrucache-c.md#createdefault)
-
-<!--Device-LruBuffer-createDefault(key: K): V--><!--Device-LruBuffer-createDefault(key: K): V-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | K | 是 | 缺少值的 key。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | K | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| V | key 对应的值。 |
+| 类型 |
+| --- |
+| V |
 
 **示例**
 
@@ -637,19 +637,19 @@ entries(): IterableIterator<[K, V]>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [entries](arkts-arkts-util-lrucache-c.md#entries)
-
-<!--Device-LruBuffer-entries(): IterableIterator<[K, V]>--><!--Device-LruBuffer-entries(): IterableIterator<[K, V]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 可迭代的数组。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 **示例**
 
@@ -700,25 +700,25 @@ get(key: K): V | undefined
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [get](arkts-arkts-util-lrucache-c.md#get)
-
-<!--Device-LruBuffer-get(key: K): V | undefined--><!--Device-LruBuffer-get(key: K): V | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | K | 是 | 要查询值的 key。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | K | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| V \| undefined | key 对应的值。如果未找到匹配项，则返回 **undefined**。 |
+| 类型 |
+| --- |
+| V \| undefined |
 
 **示例**
 
@@ -760,19 +760,19 @@ getCapacity(): number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getCapacity](arkts-arkts-util-lrucache-c.md#getcapacity)
-
-<!--Device-LruBuffer-getCapacity(): number--><!--Device-LruBuffer-getCapacity(): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 缓存的容量。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -811,19 +811,19 @@ getCreateCount(): number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getCreateCount](arkts-arkts-util-lrucache-c.md#getcreatecount)
-
-<!--Device-LruBuffer-getCreateCount(): number--><!--Device-LruBuffer-getCreateCount(): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | createDefault()** 的返回值数量。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -889,19 +889,19 @@ getMatchCount(): number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getMatchCount](arkts-arkts-util-lrucache-c.md#getmatchcount)
-
-<!--Device-LruBuffer-getMatchCount(): number--><!--Device-LruBuffer-getMatchCount(): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 查询值匹配的次数。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -946,19 +946,19 @@ getMissCount(): number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getMissCount](arkts-arkts-util-lrucache-c.md#getmisscount)
-
-<!--Device-LruBuffer-getMissCount(): number--><!--Device-LruBuffer-getMissCount(): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 查询值未匹配的次数。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -1003,19 +1003,19 @@ getPutCount(): number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getPutCount](arkts-arkts-util-lrucache-c.md#getputcount)
-
-<!--Device-LruBuffer-getPutCount(): number--><!--Device-LruBuffer-getPutCount(): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 向缓存添加的次数。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -1057,19 +1057,19 @@ getRemovalCount(): number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getRemovalCount](arkts-arkts-util-lrucache-c.md#getremovalcount)
-
-<!--Device-LruBuffer-getRemovalCount(): number--><!--Device-LruBuffer-getRemovalCount(): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 从缓存中移除的次数。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -1117,19 +1117,19 @@ isEmpty(): boolean
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [isEmpty](arkts-arkts-util-lrucache-c.md#isempty)
-
-<!--Device-LruBuffer-isEmpty(): boolean--><!--Device-LruBuffer-isEmpty(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果缓存不包含任何值，则返回 **true**。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -1171,19 +1171,19 @@ keys(): K[]
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [keys](arkts-arkts-util-lrucache-c.md#keys)
-
-<!--Device-LruBuffer-keys(): K[]--><!--Device-LruBuffer-keys(): K[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| K[] | 此缓存中的所有 key，按从最近最多访问到最近最少访问的顺序排列。 |
+| 类型 |
+| --- |
+| K[] |
 
 **示例**
 
@@ -1223,26 +1223,26 @@ put(key: K, value: V): V
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [put](arkts-arkts-util-lrucache-c.md#put)
-
-<!--Device-LruBuffer-put(key: K, value: V): V--><!--Device-LruBuffer-put(key: K, value: V): V-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | K | 是 | 要添加的键值对的 key。 |
-| value | V | 是 | 要添加的键值对的 value。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | K | 是 |
+| value | V | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| V | 添加的值。如果 key 已存在，则返回已存在的值；如果 **key** 或 **value** 传入 **null**，则抛出错误。 |
+| 类型 |
+| --- |
+| V |
 
 **示例**
 
@@ -1270,25 +1270,25 @@ remove(key: K): V | undefined
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [remove](arkts-arkts-util-lrucache-c.md#remove)
-
-<!--Device-LruBuffer-remove(key: K): V | undefined--><!--Device-LruBuffer-remove(key: K): V | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | K | 是 | 要移除的 key。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | K | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| V \| undefined | 包含被移除键值对的 **Optional** 对象。如果 key 不存在，则返回空的 **Optional** 对象；如果 **key** 传入 **null**，则抛出错误。 |
+| 类型 |
+| --- |
+| V \| undefined |
 
 **示例**
 
@@ -1330,19 +1330,19 @@ toString(): string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [toString](arkts-arkts-util-lrucache-c.md#tostring)
-
-<!--Device-LruBuffer-toString(): string--><!--Device-LruBuffer-toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 此缓存的字符串表示形式。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -1493,19 +1493,19 @@ updateCapacity(newCapacity: number): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [updateCapacity](arkts-arkts-util-lrucache-c.md#updatecapacity)
-
-<!--Device-LruBuffer-updateCapacity(newCapacity: number): void--><!--Device-LruBuffer-updateCapacity(newCapacity: number): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| newCapacity | number | 是 | 缓存的新容量。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| newCapacity | number | 是 |
 
 **示例**
 
@@ -1538,19 +1538,19 @@ values(): V[]
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [values](arkts-arkts-util-lrucache-c.md#values)
-
-<!--Device-LruBuffer-values(): V[]--><!--Device-LruBuffer-values(): V[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| V[] | 此缓存中的所有值，按从最近最多访问到最近最少访问的顺序排列。 |
+| 类型 |
+| --- |
+| V[] |
 
 **示例**
 
@@ -1594,11 +1594,10 @@ length: number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** length
 
-<!--Device-LruBuffer-length: number--><!--Device-LruBuffer-length: number-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

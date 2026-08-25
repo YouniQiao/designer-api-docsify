@@ -4,7 +4,7 @@ NavDestination可见性发生变化的原因。
 
 **起始版本：** 21
 
-<!--Device-unnamed-declare enum VisibilityChangeReason--><!--Device-unnamed-declare enum VisibilityChangeReason-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ TRANSITION = 0
 
 **起始版本：** 21
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
-
-<!--Device-VisibilityChangeReason-TRANSITION = 0--><!--Device-VisibilityChangeReason-TRANSITION = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ CONTENT_COVER = 1
 
 **起始版本：** 21
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
-
-<!--Device-VisibilityChangeReason-CONTENT_COVER = 1--><!--Device-VisibilityChangeReason-CONTENT_COVER = 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ APP_STATE = 2
 
 **起始版本：** 21
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
-<!--Device-VisibilityChangeReason-APP_STATE = 2--><!--Device-VisibilityChangeReason-APP_STATE = 2-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

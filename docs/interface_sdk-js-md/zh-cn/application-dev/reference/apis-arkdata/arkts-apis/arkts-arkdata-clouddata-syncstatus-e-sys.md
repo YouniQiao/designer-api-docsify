@@ -2,9 +2,9 @@
 
 端云同步任务的状态。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-cloudData-enum SyncStatus--><!--Device-cloudData-enum SyncStatus-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -18,9 +18,9 @@ RUNNING = 0
 
 端云同步任务正在运行中。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-SyncStatus-RUNNING = 0--><!--Device-SyncStatus-RUNNING = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -34,11 +34,10 @@ FINISHED = 1
 
 端云同步任务已完成。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-SyncStatus-FINISHED = 1--><!--Device-SyncStatus-FINISHED = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
-

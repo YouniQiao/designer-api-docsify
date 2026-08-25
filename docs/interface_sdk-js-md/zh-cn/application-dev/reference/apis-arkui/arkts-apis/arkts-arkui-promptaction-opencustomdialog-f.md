@@ -20,6 +20,8 @@ function openCustomDialog(options: CustomDialogOptions): Promise<number>
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **废弃版本：** 18
 
 **替代接口：** openCustomDialog
@@ -28,28 +30,26 @@ function openCustomDialog(options: CustomDialogOptions): Promise<number>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-promptAction-function openCustomDialog(options: CustomDialogOptions): Promise<number>--><!--Device-promptAction-function openCustomDialog(options: CustomDialogOptions): Promise<number>-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [CustomDialogOptions](../../apis-default/arkts-apis/arkts-promptaction-customdialogoptions-i.md) | 是 | 自定义弹窗的内容。 <br>**说明：** 如果BaseDialogOptions中的isModal与 showInSubWindow同时设置为true， 则只生效showInSubWindow = true，此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [CustomDialogOptions](arkts-arkui-promptaction-customdialogoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;number&gt; | 返回供closeCustomDialog使用的对话框id。 |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 
 **示例**
 
@@ -516,4 +516,3 @@ struct Next {
   }
 }
 ```
-

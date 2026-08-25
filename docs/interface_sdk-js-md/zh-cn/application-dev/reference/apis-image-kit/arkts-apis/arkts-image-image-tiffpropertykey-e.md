@@ -15,7 +15,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-image-enum TiffPropertyKey--><!--Device-image-enum TiffPropertyKey-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -29,9 +29,9 @@ Compression scheme used for image data (e.g., None, LZW, JPEG, Deflate).
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffPropertyKey-COMPRESSION = 'TiffCompression'--><!--Device-TiffPropertyKey-COMPRESSION = 'TiffCompression'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -45,9 +45,9 @@ Defines how pixel colors are interpreted (e.g., RGB, grayscale).
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffPropertyKey-PHOTOMETRIC_INTERPRETATION = 'TiffPhotometricInterpretation'--><!--Device-TiffPropertyKey-PHOTOMETRIC_INTERPRETATION = 'TiffPhotometricInterpretation'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -61,9 +61,9 @@ Tone transfer curve mapping pixel values to output intensity.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffPropertyKey-TRANSFER_FUNCTION = 'TiffTransferFunction'--><!--Device-TiffPropertyKey-TRANSFER_FUNCTION = 'TiffTransferFunction'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -77,9 +77,9 @@ Indicates image orientation for correct display rotation/flip.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffPropertyKey-ORIENTATION = 'TiffOrientation'--><!--Device-TiffPropertyKey-ORIENTATION = 'TiffOrientation'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -93,9 +93,9 @@ Horizontal resolution (pixels per resolution unit).
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffPropertyKey-X_RESOLUTION = 'TiffXResolution'--><!--Device-TiffPropertyKey-X_RESOLUTION = 'TiffXResolution'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -109,9 +109,9 @@ Vertical resolution (pixels per resolution unit).
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffPropertyKey-Y_RESOLUTION = 'TiffYResolution'--><!--Device-TiffPropertyKey-Y_RESOLUTION = 'TiffYResolution'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -125,9 +125,9 @@ Unit for X/Y resolution.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffPropertyKey-RESOLUTION_UNIT = 'TiffResolutionUnit'--><!--Device-TiffPropertyKey-RESOLUTION_UNIT = 'TiffResolutionUnit'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -141,9 +141,9 @@ Chromaticity coordinates of the reference white point.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffPropertyKey-WHITE_POINT = 'TiffWhitePoint'--><!--Device-TiffPropertyKey-WHITE_POINT = 'TiffWhitePoint'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -157,9 +157,9 @@ Chromaticity coordinates of the RGB primaries.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffPropertyKey-PRIMARY_CHROMATICITIES = 'TiffPrimaryChromaticities'--><!--Device-TiffPropertyKey-PRIMARY_CHROMATICITIES = 'TiffPrimaryChromaticities'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -173,9 +173,9 @@ Height of each image tile in pixels.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffPropertyKey-TILE_LENGTH = 'TiffTileLength'--><!--Device-TiffPropertyKey-TILE_LENGTH = 'TiffTileLength'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -189,9 +189,9 @@ Width of each image tile in pixels.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffPropertyKey-TILE_WIDTH = 'TiffTileWidth'--><!--Device-TiffPropertyKey-TILE_WIDTH = 'TiffTileWidth'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -205,9 +205,9 @@ Name of the document or image.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffPropertyKey-DOCUMENT_NAME = 'TiffDocumentName'--><!--Device-TiffPropertyKey-DOCUMENT_NAME = 'TiffDocumentName'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -221,9 +221,9 @@ Description of the image content.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffPropertyKey-IMAGE_DESCRIPTION = 'TiffImageDescription'--><!--Device-TiffPropertyKey-IMAGE_DESCRIPTION = 'TiffImageDescription'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -237,9 +237,9 @@ Name of the image creator or artist.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffPropertyKey-ARTIST = 'TiffArtist'--><!--Device-TiffPropertyKey-ARTIST = 'TiffArtist'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -253,9 +253,9 @@ Copyright notice for the image.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffPropertyKey-COPYRIGHT = 'TiffCopyright'--><!--Device-TiffPropertyKey-COPYRIGHT = 'TiffCopyright'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -269,9 +269,9 @@ Date and time associated with the image (typically last modification).
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffPropertyKey-DATE_TIME = 'TiffDateTime'--><!--Device-TiffPropertyKey-DATE_TIME = 'TiffDateTime'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -285,9 +285,9 @@ Manufacturer of the capture device.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffPropertyKey-MAKE = 'TiffMake'--><!--Device-TiffPropertyKey-MAKE = 'TiffMake'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -301,9 +301,9 @@ Model name/number of the capture device.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffPropertyKey-MODEL = 'TiffModel'--><!--Device-TiffPropertyKey-MODEL = 'TiffModel'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -317,9 +317,9 @@ Software used to create or process the image.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffPropertyKey-SOFTWARE = 'TiffSoftware'--><!--Device-TiffPropertyKey-SOFTWARE = 'TiffSoftware'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -333,9 +333,8 @@ Host computer/system used for image processing.
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-TiffPropertyKey-HOST_COMPUTER = 'TiffHostComputer'--><!--Device-TiffPropertyKey-HOST_COMPUTER = 'TiffHostComputer'-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
-

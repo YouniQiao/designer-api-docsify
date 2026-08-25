@@ -2,9 +2,9 @@
 
 Enumerates the geometry types.@enum { int }
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-unnamed-export enum GeometryType--><!--Device-unnamed-export enum GeometryType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -16,9 +16,9 @@ CUSTOM = 0
 
 Custom geometry type.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-GeometryType-CUSTOM = 0--><!--Device-GeometryType-CUSTOM = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -30,9 +30,9 @@ CUBE = 1
 
 Cube.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-GeometryType-CUBE = 1--><!--Device-GeometryType-CUBE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -44,9 +44,9 @@ PLANE = 2
 
 Plane.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-GeometryType-PLANE = 2--><!--Device-GeometryType-PLANE = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -58,9 +58,9 @@ SPHERE = 3
 
 Sphere.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-GeometryType-SPHERE = 3--><!--Device-GeometryType-SPHERE = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -74,7 +74,6 @@ Cylinder.
 
 **Since:** 23
 
-<!--Device-GeometryType-CYLINDER = 4--><!--Device-GeometryType-CYLINDER = 4-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

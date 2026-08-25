@@ -4,7 +4,7 @@ Image animator element @interface ImageAnimatorElement
 
 **Since:** 4
 
-<!--Device-unnamed-export interface ImageAnimatorElement--><!--Device-unnamed-export interface ImageAnimatorElement-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -18,17 +18,17 @@ Obtains the playback state. Available values are as follows: Playing Paused Stop
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-ImageAnimatorElement-getState(): "Playing" | "Paused" | "Stopped"--><!--Device-ImageAnimatorElement-getState(): "Playing" | "Paused" | "Stopped"-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| "Playing" \| "Paused" \| "Stopped" |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| "Playing" \| "Paused" \| "Stopped" |
 
 ## pause
 
@@ -40,9 +40,9 @@ Pauses the frame animation playback of an image.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-ImageAnimatorElement-pause(): void--><!--Device-ImageAnimatorElement-pause(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -56,9 +56,9 @@ Resumes the frame animation playback of an image.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-ImageAnimatorElement-resume(): void--><!--Device-ImageAnimatorElement-resume(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -72,9 +72,9 @@ Starts to play the frame animation of an image. If this method is called again, 
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-ImageAnimatorElement-start(): void--><!--Device-ImageAnimatorElement-start(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -88,9 +88,8 @@ Stops the frame animation playback of an image.
 
 **Since:** 4
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-ImageAnimatorElement-stop(): void--><!--Device-ImageAnimatorElement-stop(): void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
-

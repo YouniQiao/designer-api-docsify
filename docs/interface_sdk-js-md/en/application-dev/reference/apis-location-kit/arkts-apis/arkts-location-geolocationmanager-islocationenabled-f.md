@@ -14,26 +14,26 @@ function isLocationEnabled(): boolean
 
 Obtain current location switch status.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-geoLocationManager-function isLocationEnabled(): boolean--><!--Device-geoLocationManager-function isLocationEnabled(): boolean-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call \\${geoLocationManager.isLocationEnabled} due to limited device capabilities. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
 
 **Examples**
 
@@ -46,4 +46,3 @@ try {
   console.error("errCode:" + err.code + ", message:" + err.message);
 }
 ```
-

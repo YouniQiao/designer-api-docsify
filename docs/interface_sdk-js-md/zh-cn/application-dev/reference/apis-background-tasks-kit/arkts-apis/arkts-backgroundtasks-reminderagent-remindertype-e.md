@@ -4,11 +4,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [ReminderType](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md)
-
-<!--Device-reminderAgent-export enum ReminderType--><!--Device-reminderAgent-export enum ReminderType-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -22,11 +22,11 @@ REMINDER_TYPE_TIMER = 0
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** REMINDER_TYPE_TIMER
-
-<!--Device-ReminderType-REMINDER_TYPE_TIMER = 0--><!--Device-ReminderType-REMINDER_TYPE_TIMER = 0-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -40,11 +40,11 @@ REMINDER_TYPE_CALENDAR = 1
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** REMINDER_TYPE_CALENDAR
-
-<!--Device-ReminderType-REMINDER_TYPE_CALENDAR = 1--><!--Device-ReminderType-REMINDER_TYPE_CALENDAR = 1-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -58,11 +58,10 @@ REMINDER_TYPE_ALARM = 2
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** REMINDER_TYPE_ALARM
 
-<!--Device-ReminderType-REMINDER_TYPE_ALARM = 2--><!--Device-ReminderType-REMINDER_TYPE_ALARM = 2-End-->
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
-

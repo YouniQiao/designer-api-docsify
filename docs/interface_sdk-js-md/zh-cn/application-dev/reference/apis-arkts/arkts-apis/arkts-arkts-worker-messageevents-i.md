@@ -6,7 +6,7 @@
 
 **起始版本：** 9
 
-<!--Device-unnamed-export interface MessageEvents--><!--Device-unnamed-export interface MessageEvents-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -28,9 +28,8 @@ readonly data: any
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MessageEvents-readonly data: any--><!--Device-MessageEvents-readonly data: any-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

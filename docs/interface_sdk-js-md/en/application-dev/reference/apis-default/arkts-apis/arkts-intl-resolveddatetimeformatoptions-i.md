@@ -1,8 +1,6 @@
 # ResolvedDateTimeFormatOptions
 
-**Since:** -1
-
-<!--Device-Intl-interface ResolvedDateTimeFormatOptions--><!--Device-Intl-interface ResolvedDateTimeFormatOptions-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,9 +15,7 @@ calendar: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ResolvedDateTimeFormatOptions-calendar: string--><!--Device-ResolvedDateTimeFormatOptions-calendar: string-End-->
+**ArkTS mode:** 
 
 ## day
 
@@ -29,9 +25,7 @@ day?: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ResolvedDateTimeFormatOptions-day?: string--><!--Device-ResolvedDateTimeFormatOptions-day?: string-End-->
+**ArkTS mode:** 
 
 ## era
 
@@ -41,9 +35,7 @@ era?: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ResolvedDateTimeFormatOptions-era?: string--><!--Device-ResolvedDateTimeFormatOptions-era?: string-End-->
+**ArkTS mode:** 
 
 ## hour
 
@@ -53,9 +45,7 @@ hour?: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ResolvedDateTimeFormatOptions-hour?: string--><!--Device-ResolvedDateTimeFormatOptions-hour?: string-End-->
+**ArkTS mode:** 
 
 ## hour12
 
@@ -65,9 +55,7 @@ hour12?: boolean
 
 **Type:** boolean
 
-**Since:** -1
-
-<!--Device-ResolvedDateTimeFormatOptions-hour12?: boolean--><!--Device-ResolvedDateTimeFormatOptions-hour12?: boolean-End-->
+**ArkTS mode:** 
 
 ## locale
 
@@ -77,9 +65,7 @@ locale: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ResolvedDateTimeFormatOptions-locale: string--><!--Device-ResolvedDateTimeFormatOptions-locale: string-End-->
+**ArkTS mode:** 
 
 ## minute
 
@@ -89,9 +75,7 @@ minute?: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ResolvedDateTimeFormatOptions-minute?: string--><!--Device-ResolvedDateTimeFormatOptions-minute?: string-End-->
+**ArkTS mode:** 
 
 ## month
 
@@ -101,9 +85,7 @@ month?: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ResolvedDateTimeFormatOptions-month?: string--><!--Device-ResolvedDateTimeFormatOptions-month?: string-End-->
+**ArkTS mode:** 
 
 ## numberingSystem
 
@@ -113,9 +95,7 @@ numberingSystem: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ResolvedDateTimeFormatOptions-numberingSystem: string--><!--Device-ResolvedDateTimeFormatOptions-numberingSystem: string-End-->
+**ArkTS mode:** 
 
 ## second
 
@@ -125,9 +105,7 @@ second?: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ResolvedDateTimeFormatOptions-second?: string--><!--Device-ResolvedDateTimeFormatOptions-second?: string-End-->
+**ArkTS mode:** 
 
 ## timeZone
 
@@ -137,9 +115,7 @@ timeZone: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ResolvedDateTimeFormatOptions-timeZone: string--><!--Device-ResolvedDateTimeFormatOptions-timeZone: string-End-->
+**ArkTS mode:** 
 
 ## timeZoneName
 
@@ -149,9 +125,7 @@ timeZoneName?: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ResolvedDateTimeFormatOptions-timeZoneName?: string--><!--Device-ResolvedDateTimeFormatOptions-timeZoneName?: string-End-->
+**ArkTS mode:** 
 
 ## weekday
 
@@ -161,9 +135,7 @@ weekday?: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ResolvedDateTimeFormatOptions-weekday?: string--><!--Device-ResolvedDateTimeFormatOptions-weekday?: string-End-->
+**ArkTS mode:** 
 
 ## year
 
@@ -173,7 +145,4 @@ year?: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ResolvedDateTimeFormatOptions-year?: string--><!--Device-ResolvedDateTimeFormatOptions-year?: string-End-->
-
+**ArkTS mode:** 

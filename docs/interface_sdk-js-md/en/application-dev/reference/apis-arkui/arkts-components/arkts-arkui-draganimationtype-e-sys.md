@@ -4,7 +4,7 @@ Enumerates drag animation types.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare enum DragAnimationType--><!--Device-unnamed-declare enum DragAnimationType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,9 +20,9 @@ Default drag animation.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-DragAnimationType-DEFAULT = 0--><!--Device-DragAnimationType-DEFAULT = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +38,10 @@ Follow-hand morph drag animation.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-DragAnimationType-FOLLOW_HAND_MORPH = 1--><!--Device-DragAnimationType-FOLLOW_HAND_MORPH = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

@@ -15,26 +15,24 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<boolean>, start: int): FixedArray<boolean>--><!--Device-unnamed-export function toSpliced(self: FixedArray<boolean>, start: int): FixedArray<boolean>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;boolean&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | Yes | The zero-based index at which to start changing the array. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;boolean & gt; | Yes |
+| start | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;boolean&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;boolean & gt; |
 
 
 ## toSpliced
@@ -48,28 +46,26 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<boolean>, start: int, del: int, ...items: FixedArray<boolean>)    : FixedArray<boolean>--><!--Device-unnamed-export function toSpliced(self: FixedArray<boolean>, start: int, del: int, ...items: FixedArray<boolean>)    : FixedArray<boolean>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;boolean&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | Yes | The zero-based index at which to start changing the array. <br>The value should be an integer. |
-| del | int | Yes | The number of elements to remove. <br>The value should be an integer. |
-| items | FixedArray&lt;boolean&gt; | Yes | The elements to add to the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;boolean & gt; | Yes |
+| start | int | Yes |
+| del | int | Yes |
+| items | FixedArray & lt;boolean & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;boolean&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;boolean & gt; |
 
 
 ## toSpliced
@@ -82,27 +78,25 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<boolean>, start?: int, del?: int): FixedArray<boolean>--><!--Device-unnamed-export function toSpliced(self: FixedArray<boolean>, start?: int, del?: int): FixedArray<boolean>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;boolean&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | No | The zero-based index at which to start changing the array. <br>The value should be an integer. |
-| del | int | No | The number of elements to remove. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;boolean & gt; | Yes |
+| start | int | No |
+| del | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;boolean&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;boolean & gt; |
 
 
 ## toSpliced
@@ -115,26 +109,24 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<byte>, start: int): FixedArray<byte>--><!--Device-unnamed-export function toSpliced(self: FixedArray<byte>, start: int): FixedArray<byte>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;byte&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | Yes | The zero-based index at which to start changing the array. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;byte & gt; | Yes |
+| start | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;byte&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;byte & gt; |
 
 
 ## toSpliced
@@ -148,28 +140,26 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<byte>, start: int, del: int, ...items: FixedArray<byte>):     FixedArray<byte>--><!--Device-unnamed-export function toSpliced(self: FixedArray<byte>, start: int, del: int, ...items: FixedArray<byte>):     FixedArray<byte>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;byte&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | Yes | The zero-based index at which to start changing the array. <br>The value should be an integer. |
-| del | int | Yes | The number of elements to remove. <br>The value should be an integer. |
-| items | FixedArray&lt;byte&gt; | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;byte & gt; | Yes |
+| start | int | Yes |
+| del | int | Yes |
+| items | FixedArray & lt;byte & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;byte&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;byte & gt; |
 
 
 ## toSpliced
@@ -182,27 +172,25 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<byte>, start?: int, del?: int): FixedArray<byte>--><!--Device-unnamed-export function toSpliced(self: FixedArray<byte>, start?: int, del?: int): FixedArray<byte>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;byte&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | No | The zero-based index at which to start changing the array. <br>The value should be an integer. |
-| del | int | No | The number of elements to remove. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;byte & gt; | Yes |
+| start | int | No |
+| del | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;byte&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;byte & gt; |
 
 
 ## toSpliced
@@ -215,26 +203,24 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<short>, start: int): FixedArray<short>--><!--Device-unnamed-export function toSpliced(self: FixedArray<short>, start: int): FixedArray<short>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;short&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | Yes | The zero-based index at which to start changing the array. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;short & gt; | Yes |
+| start | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;short&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;short & gt; |
 
 
 ## toSpliced
@@ -248,28 +234,26 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<short>, start: int, del: int, ...items: FixedArray<short>):     FixedArray<short>--><!--Device-unnamed-export function toSpliced(self: FixedArray<short>, start: int, del: int, ...items: FixedArray<short>):     FixedArray<short>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;short&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | Yes | The zero-based index at which to start changing the array. <br>The value should be an integer. |
-| del | int | Yes | The number of elements to remove. <br>The value should be an integer. |
-| items | FixedArray&lt;short&gt; | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;short & gt; | Yes |
+| start | int | Yes |
+| del | int | Yes |
+| items | FixedArray & lt;short & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;short&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;short & gt; |
 
 
 ## toSpliced
@@ -282,27 +266,25 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<short>, start?: int, del?: int): FixedArray<short>--><!--Device-unnamed-export function toSpliced(self: FixedArray<short>, start?: int, del?: int): FixedArray<short>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;short&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | No | The zero-based index at which to start changing the array. <br>The value should be an integer. |
-| del | int | No | The number of elements to remove. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;short & gt; | Yes |
+| start | int | No |
+| del | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;short&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;short & gt; |
 
 
 ## toSpliced
@@ -315,26 +297,24 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<int>, start: int): FixedArray<int>--><!--Device-unnamed-export function toSpliced(self: FixedArray<int>, start: int): FixedArray<int>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;int&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | Yes | The zero-based index at which to start changing the array. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;int & gt; | Yes |
+| start | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;int&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;int & gt; |
 
 
 ## toSpliced
@@ -347,28 +327,26 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<int>, start: int, del: int, ...items: FixedArray<int>): FixedArray<int>--><!--Device-unnamed-export function toSpliced(self: FixedArray<int>, start: int, del: int, ...items: FixedArray<int>): FixedArray<int>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;int&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | Yes | The zero-based index at which to start changing the array. <br>The value should be an integer. |
-| del | int | Yes | The number of elements to remove. <br>The value should be an integer. |
-| items | FixedArray&lt;int&gt; | Yes | The elements to add to the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;int & gt; | Yes |
+| start | int | Yes |
+| del | int | Yes |
+| items | FixedArray & lt;int & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;int&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;int & gt; |
 
 
 ## toSpliced
@@ -381,27 +359,25 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<int>, start?: int, del?: int): FixedArray<int>--><!--Device-unnamed-export function toSpliced(self: FixedArray<int>, start?: int, del?: int): FixedArray<int>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;int&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | No | The zero-based index at which to start changing the array. <br>The value should be an integer. |
-| del | int | No | The number of elements to remove. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;int & gt; | Yes |
+| start | int | No |
+| del | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;int&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;int & gt; |
 
 
 ## toSpliced
@@ -414,26 +390,24 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<long>, start: int): FixedArray<long>--><!--Device-unnamed-export function toSpliced(self: FixedArray<long>, start: int): FixedArray<long>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;long&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | Yes | The zero-based index at which to start changing the array. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;long & gt; | Yes |
+| start | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;long&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;long & gt; |
 
 
 ## toSpliced
@@ -447,28 +421,26 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<long>, start: int, del: int, ...items: FixedArray<long>):     FixedArray<long>--><!--Device-unnamed-export function toSpliced(self: FixedArray<long>, start: int, del: int, ...items: FixedArray<long>):     FixedArray<long>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;long&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | Yes | The zero-based index at which to start changing the array. <br>The value should be an integer. |
-| del | int | Yes | The number of elements to remove. <br>The value should be an integer. |
-| items | FixedArray&lt;long&gt; | Yes | The elements to add to the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;long & gt; | Yes |
+| start | int | Yes |
+| del | int | Yes |
+| items | FixedArray & lt;long & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;long&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;long & gt; |
 
 
 ## toSpliced
@@ -481,27 +453,25 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<long>, start?: int, del?: int): FixedArray<long>--><!--Device-unnamed-export function toSpliced(self: FixedArray<long>, start?: int, del?: int): FixedArray<long>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;long&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | No | The zero-based index at which to start changing the array. <br>The value should be an integer. |
-| del | int | No | The number of elements to remove. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;long & gt; | Yes |
+| start | int | No |
+| del | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;long&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;long & gt; |
 
 
 ## toSpliced
@@ -514,26 +484,24 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<float>, start: int): FixedArray<float>--><!--Device-unnamed-export function toSpliced(self: FixedArray<float>, start: int): FixedArray<float>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;float&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | Yes | The zero-based index at which to start changing the array. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;float & gt; | Yes |
+| start | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;float&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;float & gt; |
 
 
 ## toSpliced
@@ -547,28 +515,26 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<float>, start: int, del: int, ...items: FixedArray<float>):     FixedArray<float>--><!--Device-unnamed-export function toSpliced(self: FixedArray<float>, start: int, del: int, ...items: FixedArray<float>):     FixedArray<float>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;float&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | Yes | The zero-based index at which to start changing the array. <br>The value should be an integer. |
-| del | int | Yes | The number of elements to remove. <br>The value should be an integer. |
-| items | FixedArray&lt;float&gt; | Yes | The elements to add to the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;float & gt; | Yes |
+| start | int | Yes |
+| del | int | Yes |
+| items | FixedArray & lt;float & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;float&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;float & gt; |
 
 
 ## toSpliced
@@ -581,27 +547,25 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<float>, start?: int, del?: int): FixedArray<float>--><!--Device-unnamed-export function toSpliced(self: FixedArray<float>, start?: int, del?: int): FixedArray<float>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;float&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | No | The zero-based index at which to start changing the array. <br>The value should be an integer. |
-| del | int | No | The number of elements to remove. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;float & gt; | Yes |
+| start | int | No |
+| del | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;float&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;float & gt; |
 
 
 ## toSpliced
@@ -614,26 +578,24 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<double>, start: int): FixedArray<double>--><!--Device-unnamed-export function toSpliced(self: FixedArray<double>, start: int): FixedArray<double>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;double&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | Yes | The zero-based index at which to start changing the array. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;double & gt; | Yes |
+| start | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;double&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;double & gt; |
 
 
 ## toSpliced
@@ -647,28 +609,26 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<double>, start: int, del: int, ...items: FixedArray<double>):     FixedArray<double>--><!--Device-unnamed-export function toSpliced(self: FixedArray<double>, start: int, del: int, ...items: FixedArray<double>):     FixedArray<double>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;double&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | Yes | The zero-based index at which to start changing the array. <br>The value should be an integer. |
-| del | int | Yes | The number of elements to remove. <br>The value should be an integer. |
-| items | FixedArray&lt;double&gt; | Yes | The elements to add to the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;double & gt; | Yes |
+| start | int | Yes |
+| del | int | Yes |
+| items | FixedArray & lt;double & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;double&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;double & gt; |
 
 
 ## toSpliced
@@ -681,27 +641,25 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<double>, start?: int, del?: int): FixedArray<double>--><!--Device-unnamed-export function toSpliced(self: FixedArray<double>, start?: int, del?: int): FixedArray<double>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;double&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | No | The zero-based index at which to start changing the array. <br>The value should be an integer. |
-| del | int | No | The number of elements to remove. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;double & gt; | Yes |
+| start | int | No |
+| del | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;double&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;double & gt; |
 
 
 ## toSpliced
@@ -714,26 +672,24 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<char>, start: int): FixedArray<char>--><!--Device-unnamed-export function toSpliced(self: FixedArray<char>, start: int): FixedArray<char>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;char&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | Yes | The zero-based index at which to start changing the array. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;char & gt; | Yes |
+| start | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;char&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;char & gt; |
 
 
 ## toSpliced
@@ -747,28 +703,26 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<char>, start: int, del: int, ...items: FixedArray<char>):     FixedArray<char>--><!--Device-unnamed-export function toSpliced(self: FixedArray<char>, start: int, del: int, ...items: FixedArray<char>):     FixedArray<char>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;char&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | Yes | The zero-based index at which to start changing the array. <br>The value should be an integer. |
-| del | int | Yes | The number of elements to remove. <br>The value should be an integer. |
-| items | FixedArray&lt;char&gt; | Yes | The elements to add to the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;char & gt; | Yes |
+| start | int | Yes |
+| del | int | Yes |
+| items | FixedArray & lt;char & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;char&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;char & gt; |
 
 
 ## toSpliced
@@ -781,25 +735,22 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toSpliced(self: FixedArray<char>, start?: int, del?: int): FixedArray<char>--><!--Device-unnamed-export function toSpliced(self: FixedArray<char>, start?: int, del?: int): FixedArray<char>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;char&gt; | Yes | The array to operate `toSpliced` on. |
-| start | int | No | The zero-based index at which to start changing the array. <br>The value should be an integer. |
-| del | int | No | The number of elements to remove. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;char & gt; | Yes |
+| start | int | No |
+| del | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;char&gt; | A new array with the changes applied. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;char & gt; |

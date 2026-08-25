@@ -4,11 +4,11 @@ Enumerates USB port roles.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 9
 
 **Substitutes:** [USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md)
-
-<!--Device-usb-interface USBPortStatus--><!--Device-usb-interface USBPortStatus-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -32,11 +32,11 @@ Current data role.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 9
 
 **Substitutes:** [currentDataRole](arkts-basicservices-usbmanager-usbportstatus-i-sys.md#currentdatarole)
-
-<!--Device-USBPortStatus-currentDataRole: number--><!--Device-USBPortStatus-currentDataRole: number-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -54,11 +54,11 @@ Current USB mode.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 9
 
 **Substitutes:** [currentMode](arkts-basicservices-usbmanager-usbportstatus-i-sys.md#currentmode)
-
-<!--Device-USBPortStatus-currentMode: number--><!--Device-USBPortStatus-currentMode: number-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -76,13 +76,12 @@ Current power role.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 9
 
 **Substitutes:** [currentPowerRole](arkts-basicservices-usbmanager-usbportstatus-i-sys.md#currentpowerrole)
 
-<!--Device-USBPortStatus-currentPowerRole: number--><!--Device-USBPortStatus-currentPowerRole: number-End-->
-
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
-

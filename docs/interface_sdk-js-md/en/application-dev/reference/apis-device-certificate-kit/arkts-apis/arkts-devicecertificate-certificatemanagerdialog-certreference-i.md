@@ -2,9 +2,9 @@
 
 Represents the reference information of the credential.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-certificateManagerDialog-export interface CertReference--><!--Device-certificateManagerDialog-export interface CertReference-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
@@ -24,11 +24,11 @@ Certificate type.
 
 **Type:** [CertificateType](arkts-devicecertificate-certificatemanagerdialog-certificatetype-e.md)
 
-**Since:** 23
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-CertReference-certType: CertificateType--><!--Device-CertReference-certType: CertificateType-End-->
 
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
@@ -42,11 +42,10 @@ Unique identifier of the credential. The value contains up to 256 bytes.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CertReference-keyUri: string--><!--Device-CertReference-keyUri: string-End-->
-
 **System capability:** SystemCapability.Security.CertificateManagerDialog
-

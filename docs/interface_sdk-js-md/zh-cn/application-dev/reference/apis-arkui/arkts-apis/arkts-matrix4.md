@@ -3,16 +3,9 @@
 用于对组件进行图形变换的各种操作，为组件提供矩阵变换能力，支持对图形进行平移、旋转和缩放等。Matrix4的使用场景包括：  
 图形变换中的transform接口通过使用图形变换矩阵Matrix4对象显示二维 变换时的矩阵变换，transform3D接口通过使用图形变换矩阵Matrix4对象设置组件的三维变换矩阵。
 
-> **说明：**&gt;
-> - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
+**起始版本：** 7
 
-**起始版本：** 23
-
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-unnamed-declare namespace matrix4--><!--Device-unnamed-declare namespace matrix4-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,19 +19,25 @@ import { matrix4 } from '@kit.ArkUI';
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [identity](arkts-arkui-matrix4-identity-f.md) | Matrix的初始化函数，可以返回一个单位矩阵对象。 |
-| [init](arkts-arkui-matrix4-init-f.md) | Matrix的构造函数，可以通过传入的参数创建一个四阶矩阵，矩阵为列优先。 |
+| 名称 |
+| --- |
+| [combine](arkts-arkui-matrix4-combine-f.md) |
+| [copy](arkts-arkui-matrix4-copy-f.md) |
+| [identity](arkts-arkui-matrix4-identity-f.md) |
+| [init](arkts-arkui-matrix4-init-f.md) |
+| [invert](arkts-arkui-matrix4-invert-f.md) |
+| [rotate](arkts-arkui-matrix4-rotate-f.md) |
+| [scale](arkts-arkui-matrix4-scale-f.md) |
+| [transformPoint](arkts-arkui-matrix4-transformpoint-f.md) |
+| [translate](arkts-arkui-matrix4-translate-f.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 矩阵对象。 |
-| [Point](arkts-arkui-matrix4-point-i.md) | 坐标点的数据结构。 |
-| [PolyToPolyOptions](arkts-arkui-matrix4-polytopolyoptions-i.md) | 多边形到多边形的映射选项。 |
-| [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | 旋转参数。 |
-| [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md) | 缩放参数。 |
-| [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | 平移参数。 |
-
+| 名称 |
+| --- |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) |
+| [Point](arkts-arkui-matrix4-point-i.md) |
+| [PolyToPolyOptions](arkts-arkui-matrix4-polytopolyoptions-i.md) |
+| [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) |
+| [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md) |
+| [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) |

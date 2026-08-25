@@ -10,23 +10,22 @@ Sets a vsync after which a function will be executed.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-unnamed-export declare function requestAnimationFrame(handler: Function): number--><!--Device-unnamed-export declare function requestAnimationFrame(handler: Function): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| handler | Function | Yes | Indicates the function to be called when the vsync trigger. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| handler | Function | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |

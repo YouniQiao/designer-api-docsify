@@ -4,7 +4,7 @@ Provides APIs for interrupting a copy task.
 
 **Since:** 12
 
-<!--Device-unnamed-export class TaskSignal--><!--Device-unnamed-export class TaskSignal-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -26,17 +26,17 @@ Cancels a copy task.
 
 **Since:** 12
 
-<!--Device-TaskSignal-cancel(): void--><!--Device-TaskSignal-cancel(): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900010 | Try again |
-| 13900012 | Permission denied by the file system |
-| 13900043 | No task can be canceled. |
+| Error Code ID |
+| --- |
+| 13900010 |
+| 13900012 |
+| 13900043 |
 
 **Examples**
 
@@ -93,25 +93,25 @@ Subscribes to the event reported when a copy task is canceled.
 
 **Since:** 12
 
-**Deprecated since:** 24
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-TaskSignal-onCancel(): Promise<string>--><!--Device-TaskSignal-onCancel(): Promise<string>-End-->
+**Deprecated since:** 24
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Promise used to return the path of the last file copied. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900004 |
+| 13900008 |
+| 13900042 |
 
 **Examples**
 
@@ -121,4 +121,3 @@ import { TaskSignal } from '@kit.CoreFileKit';
 let copySignal: fs.TaskSignal = new TaskSignal();
 copySignal.onCancel();
 ```
-

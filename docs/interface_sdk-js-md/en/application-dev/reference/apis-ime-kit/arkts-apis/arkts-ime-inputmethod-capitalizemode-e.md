@@ -2,9 +2,9 @@
 
 Enumerates the modes of capitalizing the first letter of a text. <br> | Name| Value| Description| | -------- | -- | -------- | | NONE | 0 | The first letter is not capitalized.| | SENTENCES | 1 | The first letter of each sentence is capitalized.| | WORDS | 2 | The first letter of each word is capitalized.| | CHARACTERS | 3 | All letters are capitalized.|
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-inputMethod-export enum CapitalizeMode--><!--Device-inputMethod-export enum CapitalizeMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -16,9 +16,9 @@ NONE = 0
 
 Capitalize nothing.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-CapitalizeMode-NONE = 0--><!--Device-CapitalizeMode-NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -30,9 +30,9 @@ SENTENCES
 
 Capitalize the first letter of each sentence.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-CapitalizeMode-SENTENCES--><!--Device-CapitalizeMode-SENTENCES-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -44,9 +44,9 @@ WORDS
 
 Capitalize the first letter of each word.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-CapitalizeMode-WORDS--><!--Device-CapitalizeMode-WORDS-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -58,9 +58,8 @@ CHARACTERS
 
 Capitalize each letter.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-CapitalizeMode-CHARACTERS--><!--Device-CapitalizeMode-CHARACTERS-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

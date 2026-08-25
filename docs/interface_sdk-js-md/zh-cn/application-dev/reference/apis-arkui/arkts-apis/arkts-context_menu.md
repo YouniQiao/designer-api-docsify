@@ -9,7 +9,6 @@
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [ContextMenu](arkts-arkui-contextmenu-c.md) | 在页面范围内关闭通过 bindContextMenu 属性绑定的菜单。 |
-
+| 名称 |
+| --- |
+| [ContextMenu](arkts-arkui-contextmenu-c.md) |

@@ -6,7 +6,7 @@ The [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-g
 
 **Since:** 11
 
-<!--Device-unnamed-declare class SymbolGlyphAttribute--><!--Device-unnamed-declare class SymbolGlyphAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,21 +28,21 @@ Sets the effect strategy of the **SymbolGlyph** component.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-SymbolGlyphAttribute-effectStrategy(value: SymbolEffectStrategy): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-effectStrategy(value: SymbolEffectStrategy): SymbolGlyphAttribute-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md) | Yes | Effect strategy of the **SymbolGlyph** component.<br>Default value: **SymbolEffectStrategy.NONE |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md) | Yes |
 
 ## fontColor
 
@@ -57,21 +57,21 @@ Sets the color of the **SymbolGlyph** component.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-SymbolGlyphAttribute-fontColor(value: Array<ResourceColor>): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-fontColor(value: Array<ResourceColor>): SymbolGlyphAttribute-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Array&lt;ResourceColor&gt; | Yes | Color of the **SymbolGlyph** component.<br> Default value: depending on the rendering strategy |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | Array & lt;ResourceColor & gt; | Yes |
 
 ## fontColor
 
@@ -83,21 +83,21 @@ Called when the SymbolGlyph color is set.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
-<!--Device-SymbolGlyphAttribute-fontColor(value: Array<ResourceColor | ColorMetrics> | undefined): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-fontColor(value: Array<ResourceColor | ColorMetrics> | undefined): SymbolGlyphAttribute-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Array&lt;ResourceColor \| ColorMetrics&gt; \| undefined | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | Array & lt;ResourceColor \ | ColorMetrics & gt; \ | undefined | Yes |
 
 ## fontSize
 
@@ -112,21 +112,21 @@ Sets the size of the **SymbolGlyph** component. When using the string type, nume
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-SymbolGlyphAttribute-fontSize(value: number | string | Resource): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-fontSize(value: number | string | Resource): SymbolGlyphAttribute-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Size of the **SymbolGlyph** component.<br>Default value: **16fp**<br> Unit: fp<br>Percentage strings are not supported. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
 
 ## fontWeight
 
@@ -141,21 +141,21 @@ Sets the font weight of the **SymbolGlyph** component. For the number type, the 
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-SymbolGlyphAttribute-fontWeight(value: number | FontWeight | string): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-fontWeight(value: number | FontWeight | string): SymbolGlyphAttribute-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number \| FontWeight \| string | Yes | Font weight of the **SymbolGlyph** component.<br>Default value: **FontWeight.Normal |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number \| FontWeight \| string | Yes |
 
 ## fontWeight
 
@@ -167,22 +167,22 @@ Used to set the font weight of symbolGlyph.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
-<!--Device-SymbolGlyphAttribute-fontWeight(value: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWeightConfigs): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-fontWeight(value: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWeightConfigs): SymbolGlyphAttribute-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number \| FontWeight \| ResourceStr | Yes | the symbolGlyph font weight. For the number type, the value range is [100, 900]. When enableVariableFontWeight in fontWeightConfigs is **false**, the value must be a multiple of 100; when **true**, any integer within [100, 900] is supported. The default value is **FontWeight.Normal**. |
-| fontWeightConfigs | FontWeightConfigs | No | the configuration of font weight. If not specified, the default values of FontWeightConfigs are used: enableVariableFontWeight defaults to **false**, and enableDeviceFontWeightCategory defaults to **true**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
+| fontWeightConfigs | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | No |
 
 ## maxFontScale
 
@@ -194,19 +194,19 @@ Sets the maximum font scale factor for the **SymbolGlyph** component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SymbolGlyphAttribute-maxFontScale(scale: Optional<number|Resource>): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-maxFontScale(scale: Optional<number|Resource>): SymbolGlyphAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| scale | Optional&lt;number \| Resource&gt; | Yes | Maximum font scale factor for the **SymbolGlyph** component.<br>Value range: [1, +∞)<br>**NOTE：**<br>A value less than 1 is handled as **1**. Abnormal values are ineffective by default. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| scale | Optional & lt;number \ | Resource & gt; | Yes |
 
 ## minFontScale
 
@@ -218,19 +218,19 @@ Sets the minimum font scale factor for the **SymbolGlyph** component.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SymbolGlyphAttribute-minFontScale(scale: Optional<number|Resource>): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-minFontScale(scale: Optional<number|Resource>): SymbolGlyphAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| scale | Optional&lt;number \| Resource&gt; | Yes | Minimum font scale factor for the **SymbolGlyph** component.<br>Value range: [0, 1]<br>The value **0** results in the minimum scaling.<br>**NOTE：**<br>A value less than 0 is handled as 0. A value greater than 1 is handled as 1. Abnormal values are ineffective by default. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| scale | Optional & lt;number \ | Resource & gt; | Yes |
 
 ## renderingStrategy
 
@@ -245,21 +245,21 @@ Sets the rendering strategy of the **SymbolGlyph** component.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-SymbolGlyphAttribute-renderingStrategy(value: SymbolRenderingStrategy): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-renderingStrategy(value: SymbolRenderingStrategy): SymbolGlyphAttribute-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | Yes | Rendering strategy of the **SymbolGlyph** component.<br>Default value: **SymbolRenderingStrategy.SINGLE |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | Yes |
 
 ## shaderStyle
 
@@ -271,19 +271,19 @@ Applies a gradient or solid color shader effect to the **SymbolGlyph** component
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-SymbolGlyphAttribute-shaderStyle(shader: Array<ShaderStyle | undefined> | ShaderStyle): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-shaderStyle(shader: Array<ShaderStyle | undefined> | ShaderStyle): SymbolGlyphAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| shader | Array&lt;ShaderStyle \| undefined&gt; \| ShaderStyle | Yes | Shader effect.<br>Input types and behavior:<br> Single **ShaderStyle** object: applies the specified effect to all layers. Array of **ShaderStyle** objects: applies the specified effect to the corresponding layer. Array of **undefined**: applies the default **SymbolGlyph** color to the corresponding layer. Layers unset retain their default color.<br> Based on the input, the system applies a radial gradient (RadialGradientStyle), linear gradient (LinearGradientStyle), or solid color (ColorShaderStyle) to the **SymbolGlyph** component.<br>**NOTE：**<br>Unit: vp<br>Specify the center point and radius using percentages. If a non-percentage value (e.g., **10px**) is provided, it will be interpreted as 100 0%.<br>You are advised to specify the radius using percentages.<br>Percentages are relative to the icon's size. The recommended value range is [0, 1). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| shader | Array & lt;ShaderStyle \ | undefined & gt; \ | [ShaderStyle](#shaderstyle) | Yes |
 
 ## symbolEffect
 
@@ -295,22 +295,22 @@ Sets the symbol effect and effect state for the **SymbolGlyph** component.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-SymbolGlyphAttribute-symbolEffect(symbolEffect: SymbolEffect, isActive?: boolean): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-symbolEffect(symbolEffect: SymbolEffect, isActive?: boolean): SymbolGlyphAttribute-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| symbolEffect | [SymbolEffect](arkts-arkui-symboleffect-c.md) | Yes | Symbol effect of the **SymbolGlyph** component.<br>Default value: [SymbolEffect](#symboleffect) |
-| isActive | boolean | No | Whether the effect is active.<br>**true**: playing. **false**: not playing.<br> Default value: **false**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [symbolEffect](#symboleffect) | [SymbolEffect](arkts-arkui-symboleffect-c.md) | Yes |
+| isActive | boolean | No |
 
 ## symbolEffect
 
@@ -322,22 +322,22 @@ Sets the symbol effect and effect trigger for the **SymbolGlyph** component.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-SymbolGlyphAttribute-symbolEffect(symbolEffect: SymbolEffect, triggerValue?: number): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-symbolEffect(symbolEffect: SymbolEffect, triggerValue?: number): SymbolGlyphAttribute-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| symbolEffect | [SymbolEffect](arkts-arkui-symboleffect-c.md) | Yes | Symbol effect of the **SymbolGlyph** component.<br>Default value: [SymbolEffect](#symboleffect) |
-| triggerValue | number | No | Value that, when changed, initiates the animation of the **SymbolGlyph** component.<br>To prevent the motion effect from triggering initially, set it to **-1**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [symbolEffect](#symboleffect) | [SymbolEffect](arkts-arkui-symboleffect-c.md) | Yes |
+| triggerValue | number | No |
 
 ## symbolShadow
 
@@ -349,19 +349,18 @@ Sets the shadow effect of the **SymbolGlyph** component.
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
 
-<!--Device-SymbolGlyphAttribute-symbolShadow(shadow: Optional<ShadowOptions>): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-symbolShadow(shadow: Optional<ShadowOptions>): SymbolGlyphAttribute-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| shadow | Optional&lt;ShadowOptions&gt; | Yes | Shadow effect of the **SymbolGlyph** component.<br>Unit: vp<br>Default value: {<br>radius: 0,<br>color: Color.Black<br>offsetX: 0,<br>offsetY: 0<br>} <br>The **fill** and **type** attributes, as well as the enumerated values of **ColoringStrategy** within the **color **attribute, are not supported. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| shadow | Optional & lt;ShadowOptions & gt; | Yes |

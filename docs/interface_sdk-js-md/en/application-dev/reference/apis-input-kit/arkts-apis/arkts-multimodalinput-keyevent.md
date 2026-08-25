@@ -1,4 +1,8 @@
-# @ohos.multimodalInput.keyEvent
+# @ohos.multimodalInput.keyEvent(Key Event)
+
+The **keyEvent** module provides key events reported by a device. It is inherited from
+ [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md).
+
 
 ## Modules to Import
 
@@ -10,14 +14,13 @@ import { Action, Key, KeyEvent } from '@kit.InputKit';
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [Key](arkts-input-multimodalinput-keyevent-key-i.md) | Defines a key.@interface Key [since 9 - 11] |
-| [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | Key event.@interface KeyEvent [since 9 - 11] |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Key(Key Event)](arkts-input-multimodalinput-keyevent-key-i.md) |
+| [KeyEvent(Key Event)](arkts-input-multimodalinput-keyevent-keyevent-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [Action](arkts-input-multimodalinput-keyevent-action-e.md) | Key event type. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Action(Key Event)](arkts-input-multimodalinput-keyevent-action-e.md) |

@@ -2,9 +2,9 @@
 
 Enumerates network types.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-radio-export enum NetworkType--><!--Device-radio-export enum NetworkType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -16,9 +16,9 @@ NETWORK_TYPE_UNKNOWN = 0
 
 Unknown network.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-NetworkType-NETWORK_TYPE_UNKNOWN = 0--><!--Device-NetworkType-NETWORK_TYPE_UNKNOWN = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -30,9 +30,9 @@ NETWORK_TYPE_GSM = 1
 
 GSM network.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-NetworkType-NETWORK_TYPE_GSM = 1--><!--Device-NetworkType-NETWORK_TYPE_GSM = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -44,9 +44,9 @@ NETWORK_TYPE_CDMA = 2
 
 CDMA network.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-NetworkType-NETWORK_TYPE_CDMA = 2--><!--Device-NetworkType-NETWORK_TYPE_CDMA = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -58,9 +58,9 @@ NETWORK_TYPE_WCDMA = 3
 
 WCDMA network.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-NetworkType-NETWORK_TYPE_WCDMA = 3--><!--Device-NetworkType-NETWORK_TYPE_WCDMA = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -72,9 +72,9 @@ NETWORK_TYPE_TDSCDMA = 4
 
 TD-SCDMA network.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-NetworkType-NETWORK_TYPE_TDSCDMA = 4--><!--Device-NetworkType-NETWORK_TYPE_TDSCDMA = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -86,9 +86,9 @@ NETWORK_TYPE_LTE = 5
 
 LTE network.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-NetworkType-NETWORK_TYPE_LTE = 5--><!--Device-NetworkType-NETWORK_TYPE_LTE = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -100,9 +100,8 @@ NETWORK_TYPE_NR = 6
 
 NR network.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-NetworkType-NETWORK_TYPE_NR = 6--><!--Device-NetworkType-NETWORK_TYPE_NR = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
-

@@ -2,9 +2,9 @@
 
 表示[应用多开](../../../quick-start/multiInstance.md)模式。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export interface MultiAppMode--><!--Device-unnamed-export interface MultiAppMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -16,11 +16,11 @@ readonly maxCount: int
 
 应用多开的最大个数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-MultiAppMode-readonly maxCount: int--><!--Device-MultiAppMode-readonly maxCount: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -34,9 +34,8 @@ readonly multiAppModeType: bundleManager.MultiAppModeType
 
 **类型：** bundleManager.MultiAppModeType
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-MultiAppMode-readonly multiAppModeType: bundleManager.MultiAppModeType--><!--Device-MultiAppMode-readonly multiAppModeType: bundleManager.MultiAppModeType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-

@@ -4,7 +4,7 @@ Defines font weight configurations. When the configuration object (including an 
 
 **Since:** 24
 
-<!--Device-unnamed-declare interface FontWeightConfigs--><!--Device-unnamed-declare interface FontWeightConfigs-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,11 @@ Whether to automatically synchronize the font weight with the device's font weig
 
 **Since:** 24
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-FontWeightConfigs-enableDeviceFontWeightCategory?: boolean--><!--Device-FontWeightConfigs-enableDeviceFontWeightCategory?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,11 +49,10 @@ Whether to enable variable font weight adjustment. When **weight** is set to a n
 
 **Since:** 24
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
-<!--Device-FontWeightConfigs-enableVariableFontWeight?: boolean--><!--Device-FontWeightConfigs-enableVariableFontWeight?: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

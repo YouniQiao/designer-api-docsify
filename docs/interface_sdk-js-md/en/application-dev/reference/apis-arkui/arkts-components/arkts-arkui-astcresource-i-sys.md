@@ -4,7 +4,7 @@ Defines the resource which can use ASTC.@interface ASTCResource
 
 **Since:** 12
 
-<!--Device-unnamed-interface ASTCResource--><!--Device-unnamed-interface ASTCResource-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,9 +27,9 @@ Column size, indicating the number of ASTC resources to splice per row.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-ASTCResource-column: number--><!--Device-ASTCResource-column: number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,11 +47,10 @@ Array of ASTC uri resources, indicating the range of ASTC data to be obtained.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-ASTCResource-sources: Array<string>--><!--Device-ASTCResource-sources: Array<string>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

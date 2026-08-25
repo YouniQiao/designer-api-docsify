@@ -8,16 +8,15 @@ Defines the image attachment type, which is used to set images of PixelMap or Re
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
-<!--Device-unnamed-declare type AttachmentType = ImageAttachmentInterface | ResourceImageAttachmentOptions--><!--Device-unnamed-declare type AttachmentType = ImageAttachmentInterface | ResourceImageAttachmentOptions-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| Type | Description |
-| --- | --- |
-| ImageAttachmentInterface | Settings for images of the PixelMap type. |
-| ResourceImageAttachmentOptions | Settings for images of the ResourceStr type. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageAttachmentInterface](arkts-arkui-imageattachmentinterface-i.md) |
+| [ResourceImageAttachmentOptions](arkts-arkui-resourceimageattachmentoptions-i.md) |

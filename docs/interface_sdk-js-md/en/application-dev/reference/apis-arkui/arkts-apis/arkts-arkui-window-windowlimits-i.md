@@ -15,9 +15,9 @@ Describes the parameters for window size limits. Applications can obtain the cur
 > - The lower bound of the effective range is the minimum height/width limited by the system.&gt;
 > - The upper bound of the effective range is the maximum height/width limited by the system.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-window-interface WindowLimits--><!--Device-window-interface WindowLimits-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -35,13 +35,13 @@ maxHeight?: int
 
 Maximum window height.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-WindowLimits-maxHeight?: int--><!--Device-WindowLimits-maxHeight?: int-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -53,13 +53,13 @@ maxWidth?: int
 
 Maximum window width.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-WindowLimits-maxWidth?: int--><!--Device-WindowLimits-maxWidth?: int-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -71,13 +71,13 @@ minHeight?: int
 
 Minimum window height.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-WindowLimits-minHeight?: int--><!--Device-WindowLimits-minHeight?: int-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -89,13 +89,13 @@ minWidth?: int
 
 Minimum window width.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-WindowLimits-minWidth?: int--><!--Device-WindowLimits-minWidth?: int-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -109,9 +109,8 @@ Unit of the window size limits. The default value is **px**. The value can be **
 
 **Type:** [PixelUnit](arkts-arkui-window-pixelunit-e.md)
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-WindowLimits-pixelUnit?: PixelUnit--><!--Device-WindowLimits-pixelUnit?: PixelUnit-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
-

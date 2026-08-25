@@ -1,4 +1,4 @@
-# @ohos.multimedia.avVolumePanel
+# @ohos.multimedia.avVolumePanel(Defines a panel to set the system audio output volume.)
 
 ## Modules to Import
 
@@ -10,13 +10,12 @@ import { AVVolumePanel, AVVolumePanelParameter } from '@kit.AudioKit';
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [AVVolumePanelParameter](arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md) | Declare custom parameters used for volume panel. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AVVolumePanelParameter(Defines a panel to set the system audio output volume.)](arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md) |
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md) | A panel to set the system audio output volume.@struct { AVVolumePanel } |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AVVolumePanel(Defines a panel to set the system audio output volume.)](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md) |

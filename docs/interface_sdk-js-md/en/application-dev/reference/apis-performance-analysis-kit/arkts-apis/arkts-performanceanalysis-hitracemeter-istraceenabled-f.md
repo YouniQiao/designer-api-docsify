@@ -14,19 +14,19 @@ function isTraceEnabled(): boolean
 
 Checks whether application trace capture is enabled.
 
-**Since:** 23
+**Since:** 19
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
-<!--Device-hiTraceMeter-function isTraceEnabled(): boolean--><!--Device-hiTraceMeter-function isTraceEnabled(): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true** is returned when the trace capture is enabled using [hitrace](../../../dfx/hitrace.md). **false** is returned when it is disabled or stopped. In this case, calling the HiTraceMeter API does not take effect. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -37,4 +37,3 @@ if (hiTraceMeter.isTraceEnabled()) {
     // Service flow...
 }
 ```
-

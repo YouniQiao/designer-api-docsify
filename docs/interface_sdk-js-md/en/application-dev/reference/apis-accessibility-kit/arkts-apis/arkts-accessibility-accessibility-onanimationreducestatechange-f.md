@@ -25,17 +25,17 @@ Subscribes to the state changes of animation reduction mode. This API uses an as
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-accessibility-function onAnimationReduceStateChange(callback: Callback<boolean>): void--><!--Device-accessibility-function onAnimationReduceStateChange(callback: Callback<boolean>): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback invoked when the reduced motion mode status changes. The value **true** indicates that the reduced motion mode is enabled, and **false** indicates that the reduced motion mode is disabled. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |
 
 **Examples**
 
@@ -60,4 +60,3 @@ struct Index {
   }
 }
 ```
-

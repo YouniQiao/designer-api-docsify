@@ -4,7 +4,7 @@ MenuItem分组的标题和尾部信息。
 
 **起始版本：** 9
 
-<!--Device-unnamed-declare interface MenuItemGroupOptions--><!--Device-unnamed-declare interface MenuItemGroupOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,9 +25,9 @@ footer?: ResourceStr | CustomBuilder
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-MenuItemGroupOptions-footer?: ResourceStr | CustomBuilder--><!--Device-MenuItemGroupOptions-footer?: ResourceStr | CustomBuilder-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,9 +43,8 @@ header?: ResourceStr | CustomBuilder
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MenuItemGroupOptions-header?: ResourceStr | CustomBuilder--><!--Device-MenuItemGroupOptions-header?: ResourceStr | CustomBuilder-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

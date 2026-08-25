@@ -2,9 +2,9 @@
 
 创建系统定时器的初始化选项。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-systemTimer-interface TimerOptions--><!--Device-systemTimer-interface TimerOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Time
 
@@ -16,6 +16,22 @@
 import { systemTimer } from '@kit.BasicServicesKit';
 ```
 
+## callback
+
+```TypeScript
+callback?: () => void
+```
+
+用户需要执行的回调函数。默认值为空。
+
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.MiscServices.Time
+
+**系统接口：** 此接口为系统接口。
+
 ## autoRestore
 
 ```TypeScript
@@ -26,27 +42,9 @@ autoRestore?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-TimerOptions-autoRestore?: boolean--><!--Device-TimerOptions-autoRestore?: boolean-End-->
-
-**系统能力：** SystemCapability.MiscServices.Time
-
-**系统接口：** 此接口为系统接口。
-
-## callback
-
-```TypeScript
-callback?: () => void
-```
-
-用户需要执行的回调函数。默认值为空。
-
-**类型：** () =&gt; void
-
-**起始版本：** 23
-
-<!--Device-TimerOptions-callback?: () => void--><!--Device-TimerOptions-callback?: () => void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Time
 
@@ -60,11 +58,11 @@ interval?: long
 
 定时器时间间隔，单位：毫秒。如果是循环定时器，interval值最小为1s，最大为365天，建议interval值不小于5000毫秒；单次定时器interval值为0。默认值为0。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-TimerOptions-interval?: long--><!--Device-TimerOptions-interval?: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Time
 
@@ -80,9 +78,9 @@ name?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-TimerOptions-name?: string--><!--Device-TimerOptions-name?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Time
 
@@ -98,9 +96,9 @@ repeat: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-TimerOptions-repeat: boolean--><!--Device-TimerOptions-repeat: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Time
 
@@ -114,11 +112,11 @@ type: int
 
 定时器类型，可以使用 '|' 多选。取值为1，表示为系统启动时间定时器（定时器启动时间不能晚于当前设置的系统时间）；取值为2，表示为唤醒定时器；取值为4，表示为精准定时器（APP被冻结时，定时器也会被冻结，并且定时器受统一心跳管控，因此即使是精准定时器也不能确保在指定时间点触发）；取值为8，表示为IDLE模式定时器（仅支持系统服务配置，不支持应用配置）。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-TimerOptions-type: int--><!--Device-TimerOptions-type: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Time
 
@@ -134,11 +132,10 @@ wantAgent?: WantAgent
 
 **类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-TimerOptions-wantAgent?: WantAgent--><!--Device-TimerOptions-wantAgent?: WantAgent-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Time
 
 **系统接口：** 此接口为系统接口。
-

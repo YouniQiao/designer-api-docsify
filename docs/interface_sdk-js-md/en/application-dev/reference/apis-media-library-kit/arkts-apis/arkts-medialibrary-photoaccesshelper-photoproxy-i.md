@@ -2,9 +2,9 @@
 
 Photo proxy object, which is used by the camera application to write image data.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-photoAccessHelper-interface PhotoProxy--><!--Device-photoAccessHelper-interface PhotoProxy-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -15,4 +15,3 @@ Photo proxy object, which is used by the camera application to write image data.
 ```TypeScript
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
-

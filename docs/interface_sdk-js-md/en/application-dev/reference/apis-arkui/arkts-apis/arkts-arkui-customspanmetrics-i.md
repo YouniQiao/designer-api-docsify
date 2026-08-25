@@ -4,7 +4,7 @@ Defines the CustomSpanMetrics interface.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface CustomSpanMetrics--><!--Device-unnamed-declare interface CustomSpanMetrics-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Height of the custom span.Unit: vp
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CustomSpanMetrics-height?: number--><!--Device-CustomSpanMetrics-height?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,11 +47,10 @@ Width of the custom span.Unit: vp
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-CustomSpanMetrics-width: number--><!--Device-CustomSpanMetrics-width: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 输入法的安全模式，如BASIC或FULL。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-inputMethodEngine-export enum SecurityMode--><!--Device-inputMethodEngine-export enum SecurityMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -16,9 +16,9 @@ BASIC = 0
 
 基础访问模式，基础打字模式，会限制网络访问。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-SecurityMode-BASIC = 0--><!--Device-SecurityMode-BASIC = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -30,9 +30,8 @@ FULL
 
 完全访问模式，不做限制，可以访问网络。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-SecurityMode-FULL--><!--Device-SecurityMode-FULL-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
-

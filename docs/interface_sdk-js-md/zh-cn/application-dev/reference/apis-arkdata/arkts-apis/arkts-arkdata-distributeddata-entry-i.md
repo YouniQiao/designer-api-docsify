@@ -4,11 +4,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** Entry
-
-<!--Device-distributedData-interface Entry--><!--Device-distributedData-interface Entry-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -29,11 +29,11 @@ key: string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** key
-
-<!--Device-Entry-key: string--><!--Device-Entry-key: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -49,11 +49,10 @@ value: Value
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** value
 
-<!--Device-Entry-value: Value--><!--Device-Entry-value: Value-End-->
-
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-

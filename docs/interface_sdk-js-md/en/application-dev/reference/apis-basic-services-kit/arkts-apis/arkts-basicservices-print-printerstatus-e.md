@@ -2,9 +2,9 @@
 
 Enumerates the printer states.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-print-enum PrinterStatus--><!--Device-print-enum PrinterStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -16,9 +16,9 @@ PRINTER_IDLE = 0
 
 The printer is idle.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrinterStatus-PRINTER_IDLE = 0--><!--Device-PrinterStatus-PRINTER_IDLE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -30,9 +30,9 @@ PRINTER_BUSY = 1
 
 The printer is busy.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrinterStatus-PRINTER_BUSY = 1--><!--Device-PrinterStatus-PRINTER_BUSY = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -44,9 +44,8 @@ PRINTER_UNAVAILABLE = 2
 
 The printer is unavailable.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrinterStatus-PRINTER_UNAVAILABLE = 2--><!--Device-PrinterStatus-PRINTER_UNAVAILABLE = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
-

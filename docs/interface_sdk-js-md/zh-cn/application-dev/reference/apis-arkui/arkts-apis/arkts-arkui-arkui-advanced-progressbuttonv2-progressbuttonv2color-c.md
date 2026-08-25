@@ -4,9 +4,7 @@
 
 **起始版本：** 18
 
-**装饰器类型：** @ObservedV2
-
-<!--Device-unnamed-export declare class ProgressButtonV2Color--><!--Device-unnamed-export declare class ProgressButtonV2Color-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,89 +24,96 @@ constructor(options: ProgressButtonV2ColorOptions)
 
 **起始版本：** 18
 
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ProgressButtonV2Color-constructor(options: ProgressButtonV2ColorOptions)--><!--Device-ProgressButtonV2Color-constructor(options: ProgressButtonV2ColorOptions)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [ProgressButtonV2ColorOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-progressbuttonv2-progressbuttonv2coloroptions-i.md) | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [ProgressButtonV2ColorOptions](arkts-arkui-arkui-advanced-progressbuttonv2-progressbuttonv2coloroptions-i.md) | 是 |
 
 ## backgroundColor
 
+```TypeScript
+public backgroundColor?: ColorMetrics
+```
+
 按钮背景颜色。<br/>默认值：\\$r('sys.color.ohos_id_color_foreground_contrary')<br/>装饰器类型：@Trace
 
-**类型：** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
 
-**装饰器类型：** @Trace
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ProgressButtonV2Color-@Trace public backgroundColor?: ColorMetrics--><!--Device-ProgressButtonV2Color-@Trace public backgroundColor?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## borderColor
 
+```TypeScript
+public borderColor?: ColorMetrics
+```
+
 按钮描边颜色。<br/>默认值：#330A59F7<br/>装饰器类型：@Trace
 
-**类型：** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
 
-**装饰器类型：** @Trace
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ProgressButtonV2Color-@Trace public borderColor?: ColorMetrics--><!--Device-ProgressButtonV2Color-@Trace public borderColor?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## progressColor
 
+```TypeScript
+public progressColor?: ColorMetrics
+```
+
 进度条颜色。<br/>默认值：#330A59F7<br/>装饰器类型：@Trace
 
-**类型：** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
 
-**装饰器类型：** @Trace
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ProgressButtonV2Color-@Trace public progressColor?: ColorMetrics--><!--Device-ProgressButtonV2Color-@Trace public progressColor?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## textColor
 
+```TypeScript
+public textColor?: ColorMetrics
+```
+
 按钮文本颜色。<br/>默认值：系统默认值，#CE000000<br/>装饰器类型：@Trace
 
-**类型：** [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
 
-**装饰器类型：** @Trace
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ProgressButtonV2Color-@Trace public textColor?: ColorMetrics--><!--Device-ProgressButtonV2Color-@Trace public textColor?: ColorMetrics-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

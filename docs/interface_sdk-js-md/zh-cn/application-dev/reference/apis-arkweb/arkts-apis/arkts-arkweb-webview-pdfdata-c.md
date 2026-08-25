@@ -7,7 +7,7 @@ PdfData是Web组件用于封装网页生成的PDF数据流的类。当应用需�
 
 **起始版本：** 14
 
-<!--Device-webview-class PdfData--><!--Device-webview-class PdfData-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -27,15 +27,14 @@ pdfArrayBuffer(): Uint8Array
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
-<!--Device-PdfData-pdfArrayBuffer(): Uint8Array--><!--Device-PdfData-pdfArrayBuffer(): Uint8Array-End-->
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Uint8Array | 网页生成的PDF数据流，可结合文件IO接口将数据写入本地PDF文件。 |
-
+| 类型 |
+| --- |
+| Uint8Array |

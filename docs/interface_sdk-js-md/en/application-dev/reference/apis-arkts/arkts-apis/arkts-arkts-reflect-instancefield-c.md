@@ -6,9 +6,7 @@ Represents an instance field of a class or interface.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-reflect-class InstanceField--><!--Device-reflect-class InstanceField-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,25 +25,23 @@ Checks if the current instance field is equal to the given instance field.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-InstanceField-equals(other: InstanceField): boolean--><!--Device-InstanceField-equals(other: InstanceField): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [InstanceField](arkts-arkts-reflect-instancefield-c.md) | Yes | Another StaticField object to compare with the current StaticField instance. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [InstanceField](arkts-arkts-reflect-instancefield-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns true if the two instance fields are equal, otherwise returns false. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## getValue
 
@@ -57,25 +53,23 @@ Reads the value from the instance field.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-InstanceField-getValue(thisObj: Object): Any--><!--Device-InstanceField-getValue(thisObj: Object): Any-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| thisObj | Object | Yes | The target object as the `this` context. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| thisObj | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Any | Returns the value read from the instance field.When thisobj is null, it returns null; when it is undefined, it returns undefined. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Any |
 
 ## setValue
 
@@ -87,18 +81,15 @@ Writes a value to the instance field.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-InstanceField-setValue(thisObj: Object, value: Any): void--><!--Device-InstanceField-setValue(thisObj: Object, value: Any): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| thisObj | Object | Yes | The target object as the `this` context. |
-| value | Any | Yes | The value to write. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| thisObj | Object | Yes |
+| value | Any | Yes |

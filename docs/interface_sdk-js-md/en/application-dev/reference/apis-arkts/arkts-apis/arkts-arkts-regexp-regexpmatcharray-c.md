@@ -6,9 +6,7 @@ Represents the matching result returned by string.prototype.matchAll(), or the n
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class RegExpMatchArray--><!--Device-unnamed-export class RegExpMatchArray-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,22 +25,20 @@ Creates a RegExpMatchArray instance that contains matching results.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RegExpMatchArray-constructor(index: int, input: string, result: Array<string | undefined>, indices: Array<Array<int>>)--><!--Device-RegExpMatchArray-constructor(index: int, input: string, result: Array<string | undefined>, indices: Array<Array<int>>)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | the starting index of the matching result. <br>The value should be an integer. |
-| input | string | Yes | the original string used for matching. |
-| result | Array&lt;string \| undefined&gt; | Yes | the string array that matches. |
-| indices | Array&lt;Array&lt;int&gt;&gt; | Yes | the start and end index arrays of each matching substring. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [index](#index) | int | Yes |
+| [input](#input) | string | Yes |
+| result | Array & lt;string \ | undefined & gt; | Yes |
+| indices | Array & lt;Array & lt;int & gt; & gt; | Yes |
 
 ## constructor
 
@@ -54,19 +50,48 @@ Creates a RegExpMatchArray instance containing matching results.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RegExpMatchArray-constructor(index: int, input: string, result: Array<string | undefined>)--><!--Device-RegExpMatchArray-constructor(index: int, input: string, result: Array<string | undefined>)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | the starting index of the matching result. <br>The value should be an integer. |
-| input | string | Yes | the original string used for matching. |
-| result | Array&lt;string \| undefined&gt; | Yes | the string array that matches. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [index](#index) | int | Yes |
+| [input](#input) | string | Yes |
+| result | Array & lt;string \ | undefined & gt; | Yes |
 
+## index
+
+```TypeScript
+public set index(val: int | undefined)
+```
+
+Sets the starting index of the match result.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## input
+
+```TypeScript
+public set input(val: string | undefined)
+```
+
+Sets the original string used for matching.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang

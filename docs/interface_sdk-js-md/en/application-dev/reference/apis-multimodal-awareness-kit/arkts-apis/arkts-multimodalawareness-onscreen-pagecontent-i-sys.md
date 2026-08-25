@@ -2,9 +2,9 @@
 
 Defines the onscreen content.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-onScreen-export interface PageContent--><!--Device-onScreen-export interface PageContent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -26,9 +26,9 @@ Bundle name of the onscreen content.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-PageContent-bundleName: string--><!--Device-PageContent-bundleName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -44,9 +44,9 @@ Body of the onscreen content. This parameter is available only when **options.co
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-PageContent-content?: string--><!--Device-PageContent-content?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -62,9 +62,9 @@ Page link of the onscreen content. This parameter is available only when **optio
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-PageContent-pageLink?: string--><!--Device-PageContent-pageLink?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -80,9 +80,9 @@ Paragraph information of the onscreen content. This parameter is available only 
 
 **Type:** Paragraph[]
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-PageContent-paragraphs?: Paragraph[]--><!--Device-PageContent-paragraphs?: Paragraph[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -98,9 +98,9 @@ Scenario of the onscreen content. This parameter is available only when **option
 
 **Type:** [Scenario](arkts-multimodalawareness-onscreen-scenario-e-sys.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-PageContent-scenario?: Scenario--><!--Device-PageContent-scenario?: Scenario-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -114,11 +114,11 @@ sessionId: long
 
 Session ID, which identifies the call action.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-PageContent-sessionId: long--><!--Device-PageContent-sessionId: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -134,9 +134,9 @@ Title of the onscreen content. This parameter is available only when **options.c
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-PageContent-title?: string--><!--Device-PageContent-title?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -150,13 +150,12 @@ windowId: int
 
 Window ID of the onscreen content.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-PageContent-windowId: int--><!--Device-PageContent-windowId: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
-

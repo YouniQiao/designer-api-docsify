@@ -4,7 +4,7 @@ Defines the date data.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare class CounterV2DateData--><!--Device-unnamed-declare class CounterV2DateData-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,21 +24,21 @@ Constructor of the DateData.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CounterV2DateData-constructor(year: int, month: int, day: int)--><!--Device-CounterV2DateData-constructor(year: int, month: int, day: int)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| year | int | Yes | set the year of the DateData. |
-| month | int | Yes | set the month of the DateData. |
-| day | int | Yes | set the day of the DateData. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [year](#year) | number | Yes |
+| [month](#month) | number | Yes |
+| [day](#day) | number | Yes |
 
 ## toString
 
@@ -50,19 +50,19 @@ Convert the date data to string.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CounterV2DateData-toString(): string--><!--Device-CounterV2DateData-toString(): string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | date data in string form. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## day
 
@@ -72,15 +72,15 @@ day: int
 
 The day of the DateData.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CounterV2DateData-day: int--><!--Device-CounterV2DateData-day: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,15 +92,15 @@ month: int
 
 The month of the DateData.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CounterV2DateData-month: int--><!--Device-CounterV2DateData-month: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,15 +112,14 @@ year: int
 
 The year of the DateData, ranges from 1 to 5000.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-CounterV2DateData-year: int--><!--Device-CounterV2DateData-year: int-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

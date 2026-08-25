@@ -2,9 +2,9 @@
 
 Enumerates the scan error codes.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-scan-enum ScanErrorCode--><!--Device-scan-enum ScanErrorCode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -16,9 +16,9 @@ SCAN_ERROR_NO_PERMISSION = 201
 
 No permission.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScanErrorCode-SCAN_ERROR_NO_PERMISSION = 201--><!--Device-ScanErrorCode-SCAN_ERROR_NO_PERMISSION = 201-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -30,9 +30,9 @@ SCAN_ERROR_NOT_SYSTEM_APPLICATION = 202
 
 Non-system application.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScanErrorCode-SCAN_ERROR_NOT_SYSTEM_APPLICATION = 202--><!--Device-ScanErrorCode-SCAN_ERROR_NOT_SYSTEM_APPLICATION = 202-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -44,9 +44,9 @@ SCAN_ERROR_INVALID_PARAMETER = 401
 
 Invalid parameter.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScanErrorCode-SCAN_ERROR_INVALID_PARAMETER = 401--><!--Device-ScanErrorCode-SCAN_ERROR_INVALID_PARAMETER = 401-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -58,9 +58,9 @@ SCAN_ERROR_GENERIC_FAILURE = 13100001
 
 Generic failure.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScanErrorCode-SCAN_ERROR_GENERIC_FAILURE = 13100001--><!--Device-ScanErrorCode-SCAN_ERROR_GENERIC_FAILURE = 13100001-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -72,9 +72,9 @@ SCAN_ERROR_RPC_FAILURE = 13100002
 
 RPC failure.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScanErrorCode-SCAN_ERROR_RPC_FAILURE = 13100002--><!--Device-ScanErrorCode-SCAN_ERROR_RPC_FAILURE = 13100002-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -86,9 +86,9 @@ SCAN_ERROR_SERVER_FAILURE = 13100003
 
 Service failure.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScanErrorCode-SCAN_ERROR_SERVER_FAILURE = 13100003--><!--Device-ScanErrorCode-SCAN_ERROR_SERVER_FAILURE = 13100003-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -100,9 +100,9 @@ SCAN_ERROR_UNSUPPORTED = 13100004
 
 Unsupported operation.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScanErrorCode-SCAN_ERROR_UNSUPPORTED = 13100004--><!--Device-ScanErrorCode-SCAN_ERROR_UNSUPPORTED = 13100004-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -114,9 +114,9 @@ SCAN_ERROR_CANCELED = 13100005
 
 Operation canceled.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScanErrorCode-SCAN_ERROR_CANCELED = 13100005--><!--Device-ScanErrorCode-SCAN_ERROR_CANCELED = 13100005-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -128,9 +128,9 @@ SCAN_ERROR_DEVICE_BUSY = 13100006
 
 Device busy.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScanErrorCode-SCAN_ERROR_DEVICE_BUSY = 13100006--><!--Device-ScanErrorCode-SCAN_ERROR_DEVICE_BUSY = 13100006-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -142,9 +142,9 @@ SCAN_ERROR_INVALID = 13100007
 
 Invalid operation.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScanErrorCode-SCAN_ERROR_INVALID = 13100007--><!--Device-ScanErrorCode-SCAN_ERROR_INVALID = 13100007-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -156,9 +156,9 @@ SCAN_ERROR_JAMMED = 13100008
 
 Paper jammed.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScanErrorCode-SCAN_ERROR_JAMMED = 13100008--><!--Device-ScanErrorCode-SCAN_ERROR_JAMMED = 13100008-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -170,9 +170,9 @@ SCAN_ERROR_NO_DOCS = 13100009
 
 Out of paper.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScanErrorCode-SCAN_ERROR_NO_DOCS = 13100009--><!--Device-ScanErrorCode-SCAN_ERROR_NO_DOCS = 13100009-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -184,9 +184,9 @@ SCAN_ERROR_COVER_OPEN = 13100010
 
 Cover open.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScanErrorCode-SCAN_ERROR_COVER_OPEN = 13100010--><!--Device-ScanErrorCode-SCAN_ERROR_COVER_OPEN = 13100010-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -198,9 +198,9 @@ SCAN_ERROR_IO_ERROR = 13100011
 
 I/O error.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScanErrorCode-SCAN_ERROR_IO_ERROR = 13100011--><!--Device-ScanErrorCode-SCAN_ERROR_IO_ERROR = 13100011-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -212,9 +212,8 @@ SCAN_ERROR_NO_MEMORY = 13100012
 
 Insufficient memory.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScanErrorCode-SCAN_ERROR_NO_MEMORY = 13100012--><!--Device-ScanErrorCode-SCAN_ERROR_NO_MEMORY = 13100012-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
-

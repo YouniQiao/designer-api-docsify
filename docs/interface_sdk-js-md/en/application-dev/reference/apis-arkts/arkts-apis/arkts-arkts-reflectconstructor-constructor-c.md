@@ -6,9 +6,7 @@ Represents a class constructor.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-unnamed-class Constructor--><!--Device-unnamed-class Constructor-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,25 +25,23 @@ Creates a new instance of its belonging class using this constructor.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Constructor-public createInstance(args?: FixedArray<Any>): Any--><!--Device-Constructor-public createInstance(args?: FixedArray<Any>): Any-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| args | FixedArray&lt;Any&gt; | No | args The argument list for the constructor. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | FixedArray & lt;Any & gt; | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Any | The newly created class instance. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Any |
 
 ## equals
 
@@ -57,23 +53,20 @@ Compares whether the current constructor object is equal to another constructor 
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Constructor-public equals(other: Constructor): boolean--><!--Device-Constructor-public equals(other: Constructor): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Constructor | Yes | Another constructor object to compare with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Constructor | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns true if the two constructor objects are equal, otherwise returns false. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

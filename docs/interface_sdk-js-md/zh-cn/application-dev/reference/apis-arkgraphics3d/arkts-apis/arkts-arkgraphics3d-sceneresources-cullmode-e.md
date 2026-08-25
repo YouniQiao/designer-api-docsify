@@ -2,9 +2,9 @@
 
 用于设置基于物理渲染（PBR）材质的剔除模式枚举。通过控制剔除物体的正面或背面几何面片，提升渲染性能和视觉效果。@enum { int }
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-unnamed-export enum CullMode--><!--Device-unnamed-export enum CullMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -16,9 +16,9 @@ NONE = 0
 
 禁用剔除。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-CullMode-NONE = 0--><!--Device-CullMode-NONE = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -30,9 +30,9 @@ FRONT = 1
 
 剔除正面几何面片。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-CullMode-FRONT = 1--><!--Device-CullMode-FRONT = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -44,9 +44,8 @@ BACK = 2
 
 剔除背面几何面片。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-CullMode-BACK = 2--><!--Device-CullMode-BACK = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

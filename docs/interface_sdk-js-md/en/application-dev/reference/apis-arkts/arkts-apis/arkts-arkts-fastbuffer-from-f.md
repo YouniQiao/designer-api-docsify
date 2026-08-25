@@ -16,23 +16,23 @@ Allocates a new FastBuffer using an array of bytes in the range 0 – 255. Array
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-fastbuffer-function from(array: number[]): FastBuffer--><!--Device-fastbuffer-function from(array: number[]): FastBuffer-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| array | number[] | Yes | An array of bytes (integers in 0-255 range) |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| array | number[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Return a new allocated FastBuffer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
 
 **Examples**
 
@@ -93,32 +93,32 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-fastbuffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): FastBuffer--><!--Device-fastbuffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): FastBuffer-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arrayBuffer | ArrayBuffer \| SharedArrayBuffer | Yes | The ArrayBuffer or SharedArrayBuffer to create a view from |
-| byteOffset | number | No | byteOffset [byteOffset = 0] Index of first byte to expose |
-| length | number | No | length [length = arrayBuffer.byteLength - byteOffset] Number of bytes to expose |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [arrayBuffer](arkts-arkts-buffer-blob-c.md) | ArrayBuffer \| SharedArrayBuffer | Yes |
+| byteOffset | number | No |
+| length | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Return a view of the ArrayBuffer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
 **Examples**
 
@@ -135,29 +135,29 @@ Copies the passed buffer data onto a new FastBuffer instance.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-fastbuffer-function from(buffer: FastBuffer | Uint8Array): FastBuffer--><!--Device-fastbuffer-function from(buffer: FastBuffer | Uint8Array): FastBuffer-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | The buffer to copy data from |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buffer | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Return a new allocated FastBuffer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| Error Code ID |
+| --- |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
 **Examples**
 
@@ -174,26 +174,25 @@ Creates a new FastBuffer containing string. The encoding parameter identifies th
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-fastbuffer-function from(value: string, encoding?: BufferEncoding): FastBuffer--><!--Device-fastbuffer-function from(value: string, encoding?: BufferEncoding): FastBuffer-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string | Yes | The string to encode into a FastBuffer |
-| encoding | BufferEncoding | No | encoding [encoding='utf8'] The encoding of string |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | string | Yes |
+| encoding | BufferEncoding | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Return a new FastBuffer containing string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
 
 **Examples**
 
 See [from](#from)
-

@@ -4,9 +4,7 @@ Parameters used to open the ImageGeneratorDialog.@interface GeneratorDialogOptio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-imageGeneration-interface GeneratorDialogOptions--><!--Device-imageGeneration-interface GeneratorDialogOptions-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +28,9 @@ Initial text information used for AI-generated image tasks.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeneratorDialogOptions-content?: ResourceStr--><!--Device-GeneratorDialogOptions-content?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,11 +48,9 @@ Custom icons used on the AI generated image results page.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeneratorDialogOptions-customIcons?: Array<GeneratorResultPageIcon>--><!--Device-GeneratorDialogOptions-customIcons?: Array<GeneratorResultPageIcon>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,11 +68,9 @@ The following configuration parameters are used to customize the imported icon.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeneratorDialogOptions-customImportIcon?: CustomImportIcon--><!--Device-GeneratorDialogOptions-customImportIcon?: CustomImportIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,11 +88,9 @@ Model used for AI generate image tasks.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeneratorDialogOptions-imageGenerationModel?: ImageGenerationModel--><!--Device-GeneratorDialogOptions-imageGenerationModel?: ImageGenerationModel-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -118,11 +108,9 @@ Initial image parameters used for AI-generated image tasks.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeneratorDialogOptions-images?: Array<ImageItem>--><!--Device-GeneratorDialogOptions-images?: Array<ImageItem>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -140,11 +128,9 @@ Information for LiveView in AI image generation.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeneratorDialogOptions-liveViewInfo?: LiveViewInfo--><!--Device-GeneratorDialogOptions-liveViewInfo?: LiveViewInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -162,11 +148,9 @@ Indicates whether to enable minimize during image generation.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeneratorDialogOptions-minimizeDuringGeneration?: boolean--><!--Device-GeneratorDialogOptions-minimizeDuringGeneration?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -184,11 +168,9 @@ Callback triggered when the ImageGeneratorDialog changes in size or position.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeneratorDialogOptions-onAreaDidChange?: Callback<common2D.Rect>--><!--Device-GeneratorDialogOptions-onAreaDidChange?: Callback<common2D.Rect>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -204,13 +186,11 @@ Whether to recover from cache for AI image generation. The persistent cache file
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 26.1.0; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeneratorDialogOptions-recoverFromCache?: boolean--><!--Device-GeneratorDialogOptions-recoverFromCache?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -228,13 +208,10 @@ Text polishing model used in AI generate image tasks.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeneratorDialogOptions-textGenerationModel?: TextGenerationModel--><!--Device-GeneratorDialogOptions-textGenerationModel?: TextGenerationModel-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

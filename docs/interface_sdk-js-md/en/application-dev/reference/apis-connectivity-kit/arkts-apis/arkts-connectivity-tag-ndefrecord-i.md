@@ -2,9 +2,9 @@
 
 Defines an NDEF record. For details, see *NFCForum-TS-NDEF_1.0*.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-tag-export interface NdefRecord--><!--Device-tag-export interface NdefRecord-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -22,13 +22,13 @@ id: int[]
 
 NDEF record ID, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**.
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NdefRecord-id: int[]--><!--Device-NdefRecord-id: int[]-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -40,13 +40,13 @@ payload: int[]
 
 NDEF payload, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**.
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NdefRecord-payload: int[]--><!--Device-NdefRecord-payload: int[]-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -58,13 +58,13 @@ rtdType: int[]
 
 Record type definition (RTD) of the NDEF record. It consists of hexadecimal numbers ranging from **0x00** to **0xFF**.
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NdefRecord-rtdType: int[]--><!--Device-NdefRecord-rtdType: int[]-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -76,13 +76,12 @@ tnf: int
 
 Type name field (TNF) of the NDEF record.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-NdefRecord-tnf: int--><!--Device-NdefRecord-tnf: int-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
-

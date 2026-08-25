@@ -4,7 +4,7 @@ Device attest result information.@interface AttestResultInfo
 
 **Since:** 9
 
-<!--Device-deviceAttest-export interface AttestResultInfo--><!--Device-deviceAttest-export interface AttestResultInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.XTS.DeviceAttest
 
@@ -28,7 +28,7 @@ Result of the device hardware information authentication.
 
 **Since:** 9
 
-<!--Device-AttestResultInfo-authResult: number--><!--Device-AttestResultInfo-authResult: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.XTS.DeviceAttest
 
@@ -46,7 +46,7 @@ Result of the device software information authentication.
 
 **Since:** 9
 
-<!--Device-AttestResultInfo-softwareResult: number--><!--Device-AttestResultInfo-softwareResult: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.XTS.DeviceAttest
 
@@ -64,7 +64,7 @@ Software result detail array that includes versionId, patchLevel, rootHash and a
 
 **Since:** 9
 
-<!--Device-AttestResultInfo-softwareResultDetail: Array<number>--><!--Device-AttestResultInfo-softwareResultDetail: Array<number>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.XTS.DeviceAttest
 
@@ -82,9 +82,8 @@ Credential sent from the cloud.
 
 **Since:** 9
 
-<!--Device-AttestResultInfo-ticket: string--><!--Device-AttestResultInfo-ticket: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.XTS.DeviceAttest
 
 **System API:** This is a system API.
-

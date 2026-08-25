@@ -2,9 +2,9 @@
 
 The fun interaction form params.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-formInfo-interface FunInteractionParams--><!--Device-formInfo-interface FunInteractionParams-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -26,9 +26,9 @@ The ability name of the fun interaction form.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-FunInteractionParams-abilityName?: string--><!--Device-FunInteractionParams-abilityName?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -42,11 +42,11 @@ keepStateDuration?: int
 
 duration of the fun interaction form will be paused if not operate. Unit: milliseconds, The value must be an integer within [0,60000]. Default value: 10000.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-FunInteractionParams-keepStateDuration?: int--><!--Device-FunInteractionParams-keepStateDuration?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -62,9 +62,9 @@ The sub bundle name used by game engine.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-FunInteractionParams-subBundleName: string--><!--Device-FunInteractionParams-subBundleName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -80,11 +80,10 @@ The bundle name used by game engine.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-FunInteractionParams-targetBundleName: string--><!--Device-FunInteractionParams-targetBundleName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
-

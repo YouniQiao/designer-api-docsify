@@ -1,10 +1,10 @@
-# @ohos.nfc.controller
+# @ohos.nfc.controller(Standard NFC)
 
 The **nfcController** module provides APIs for opening and closing Near-Field Communication (NFC) and reading the NFC state.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-declare namespace nfcController--><!--Device-unnamed-declare namespace nfcController-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NFC.Core
 
@@ -18,24 +18,23 @@ import { nfcController } from '@kit.ConnectivityKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [closeNfc](arkts-connectivity-nfccontroller-closenfc-f.md) | Closes NFC. |
-| [disableNfc](arkts-connectivity-nfccontroller-disablenfc-f.md) | Disables NFC. This API can be called only by system applications. |
-| [enableNfc](arkts-connectivity-nfccontroller-enablenfc-f.md) | Enables NFC. This API can be called only by system applications. |
-| [getNfcState](arkts-connectivity-nfccontroller-getnfcstate-f.md) | Obtains the NFC state. |
-| [isNfcAvailable](arkts-connectivity-nfccontroller-isnfcavailable-f.md) | Checks whether the device supports NFC. |
-| [isNfcOpen](arkts-connectivity-nfccontroller-isnfcopen-f.md) | Checks whether NFC is open. |
-| [isNfcSupported](arkts-connectivity-nfccontroller-isnfcsupported-f.md) | Checks whether the device supports NFC. |
-| [off_nfcStateChange](arkts-connectivity-nfccontroller-offnfcstatechange-f.md) | Unsubscribes from the NFC state changes. Upon successful unsubscription, the subscriber will not receive NFC state change notifications. This API uses an asynchronous callback to return the result. |
-| [offNfcStateChange](arkts-connectivity-nfccontroller-offnfcstatechange-f.md) | unregister nfc state changed event. |
-| [on_nfcStateChange](arkts-connectivity-nfccontroller-onnfcstatechange-f.md) | Enables listening for NFC state changes. This API uses an asynchronous callback to return the result. |
-| [onNfcStateChange](arkts-connectivity-nfccontroller-onnfcstatechange-f.md) | register nfc state changed event. |
-| [openNfc](arkts-connectivity-nfccontroller-opennfc-f.md) | Opens NFC. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [closeNfc(Standard NFC)](arkts-connectivity-nfccontroller-closenfc-f.md) |
+| [disableNfc(Standard NFC)](arkts-connectivity-nfccontroller-disablenfc-f.md) |
+| [enableNfc(Standard NFC)](arkts-connectivity-nfccontroller-enablenfc-f.md) |
+| [getNfcState(Standard NFC)](arkts-connectivity-nfccontroller-getnfcstate-f.md) |
+| [isNfcAvailable(Standard NFC)](arkts-connectivity-nfccontroller-isnfcavailable-f.md) |
+| [isNfcOpen(Standard NFC)](arkts-connectivity-nfccontroller-isnfcopen-f.md) |
+| [isNfcSupported(Standard NFC)](arkts-connectivity-nfccontroller-isnfcsupported-f.md) |
+| [off(Standard NFC)](arkts-connectivity-nfccontroller-off-f.md#offnfcstatechange) |
+| [offNfcStateChange(Standard NFC)](arkts-connectivity-nfccontroller-offnfcstatechange-f.md) |
+| [on(Standard NFC)](arkts-connectivity-nfccontroller-on-f.md#onnfcstatechange) |
+| [onNfcStateChange(Standard NFC)](arkts-connectivity-nfccontroller-onnfcstatechange-f.md) |
+| [openNfc(Standard NFC)](arkts-connectivity-nfccontroller-opennfc-f.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [NfcState](arkts-connectivity-nfccontroller-nfcstate-e.md) | Enumerates the NFC states. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [NfcState(Standard NFC)](arkts-connectivity-nfccontroller-nfcstate-e.md) |

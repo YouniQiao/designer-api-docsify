@@ -9,13 +9,12 @@
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [String](arkts-arkts-string-c.md) | Unicode字符串。 |
+| 名称 |
+| --- |
+| [String](arkts-arkts-string-c.md) |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-| [string](arkts-arkts-string-t.md) | `string`是类型`String`的别名。 |
-
+| 名称 |
+| --- |
+| [string](arkts-arkts-string-t.md) |

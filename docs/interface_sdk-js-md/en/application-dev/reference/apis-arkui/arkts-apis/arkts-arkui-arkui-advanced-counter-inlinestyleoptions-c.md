@@ -6,7 +6,7 @@ Defines the inline style options.
 
 **Since:** 11
 
-<!--Device-unnamed-declare class InlineStyleOptions--><!--Device-unnamed-declare class InlineStyleOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,6 +15,30 @@ Defines the inline style options.
 ```TypeScript
 import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
 ```
+
+## onChange
+
+```TypeScript
+onChange?: (value: number) => void
+```
+
+Trigger an event when the value of the counter has been changed.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | number | Yes |
 
 ## max
 
@@ -30,11 +54,11 @@ Set maximum value of the counter component
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-InlineStyleOptions-max?: number--><!--Device-InlineStyleOptions-max?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,31 +76,11 @@ Set minimum value of the counter component
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-InlineStyleOptions-min?: number--><!--Device-InlineStyleOptions-min?: number-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onChange
-
-```TypeScript
-onChange?: (value: number) => void
-```
-
-Trigger an event when the value of the counter has been changed.
-
-**Type:** (value: number) =&gt; void
-
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-InlineStyleOptions-onChange?: (value: number) => void--><!--Device-InlineStyleOptions-onChange?: (value: number) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,11 +98,11 @@ Set text width of the counter component, ranges greater than or equal to 0
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-InlineStyleOptions-textWidth?: number--><!--Device-InlineStyleOptions-textWidth?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,11 +120,10 @@ Set initial value of the counter component, ranges from min to max.
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-InlineStyleOptions-value?: number--><!--Device-InlineStyleOptions-value?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

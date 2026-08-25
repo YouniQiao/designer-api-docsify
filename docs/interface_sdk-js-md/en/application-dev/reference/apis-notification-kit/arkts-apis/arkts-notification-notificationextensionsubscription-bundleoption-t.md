@@ -6,11 +6,10 @@ export type BundleOption = _BundleOption
 
 Describes the bundle information of an application.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-notificationExtensionSubscription-export type BundleOption = _BundleOption--><!--Device-notificationExtensionSubscription-export type BundleOption = _BundleOption-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **Property type:** _BundleOption
-

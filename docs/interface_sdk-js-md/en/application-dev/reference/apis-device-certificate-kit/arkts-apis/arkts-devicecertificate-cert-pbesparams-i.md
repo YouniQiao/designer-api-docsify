@@ -2,9 +2,9 @@
 
 Represents PBES algorithm parameters. Currently, only PBES2 is supported.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-cert-interface PbesParams--><!--Device-cert-interface PbesParams-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -26,11 +26,11 @@ PBES algorithm type. The default value is **AES_256_CBC**.
 
 **Default:** PbesEncryptionAlgorithm.AES_256_CBC
 
-**Since:** 23
+**Since:** 21
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
-<!--Device-PbesParams-encryptionAlgorithm?: PbesEncryptionAlgorithm--><!--Device-PbesParams-encryptionAlgorithm?: PbesEncryptionAlgorithm-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -42,15 +42,15 @@ iterations?: int
 
 Number of iterations. The default value is **2048**. The value must be a positive integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Default:** 2048
 
-**Since:** 23
+**Since:** 21
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
-<!--Device-PbesParams-iterations?: int--><!--Device-PbesParams-iterations?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -62,15 +62,14 @@ saltLen?: int
 
 Length of the salt value. The default value is **16**, and the minimum value is **8**. The value must be an integer greater than or equal to 8.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Default:** 16
 
-**Since:** 23
+**Since:** 21
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
-<!--Device-PbesParams-saltLen?: int--><!--Device-PbesParams-saltLen?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.Security.Cert
-

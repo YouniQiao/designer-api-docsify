@@ -2,9 +2,9 @@
 
 拍照帧输出信息。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-camera-interface FrameShutterInfo--><!--Device-camera-interface FrameShutterInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -22,13 +22,13 @@ captureId: int
 
 拍照的ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FrameShutterInfo-captureId: int--><!--Device-FrameShutterInfo-captureId: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -40,13 +40,12 @@ timestamp: long
 
 快门时间戳。单位毫秒。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
-<!--Device-FrameShutterInfo-timestamp: long--><!--Device-FrameShutterInfo-timestamp: long-End-->
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
-

@@ -6,7 +6,7 @@ Defines the configuration options for suffix icons.Inherits from [IconOptions](a
 
 **Since:** 14
 
-<!--Device-unnamed-export interface SuffixImageIconOptions--><!--Device-unnamed-export interface SuffixImageIconOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,6 +15,24 @@ Defines the configuration options for suffix icons.Inherits from [IconOptions](a
 ```TypeScript
 import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
 ```
+
+## action
+
+```TypeScript
+action?: VoidCallback
+```
+
+Action of the suffix icon.If the value is **undefined**, no suffix icon interaction event is triggered.
+
+**Since:** 14
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityDescription
 
@@ -28,11 +46,11 @@ Accessible description of the suffix icon. You can provide comprehensive text ex
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-SuffixImageIconOptions-accessibilityDescription?: ResourceStr--><!--Device-SuffixImageIconOptions-accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +72,11 @@ Accessibility level of the suffix icon. It determines whether the icon can be re
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-SuffixImageIconOptions-accessibilityLevel?: string--><!--Device-SuffixImageIconOptions-accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,11 +92,11 @@ Accessibility text, that is, accessibility label name, of the suffix icon. If an
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-SuffixImageIconOptions-accessibilityText?: ResourceStr--><!--Device-SuffixImageIconOptions-accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,17 +106,14 @@ Accessibility text, that is, accessibility label name, of the suffix icon. If an
 action?: VoidCallback
 ```
 
-Action of the suffix icon.If the value is **undefined**, no suffix icon interaction event is triggered.
+Called when the suffix image icon is clicked.
 
 **Type:** VoidCallback
 
-**Since:** 14
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-SuffixImageIconOptions-action?: VoidCallback--><!--Device-SuffixImageIconOptions-action?: VoidCallback-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

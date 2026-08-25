@@ -4,11 +4,11 @@ Defines the schema of a KV store. You can create a **Schema** object and place i
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** Schema
-
-<!--Device-distributedData-class Schema--><!--Device-distributedData-class Schema-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -27,11 +27,11 @@ A constructor used to create a **Schema** instance.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** constructor
-
-<!--Device-Schema-constructor()--><!--Device-Schema-constructor()-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -47,11 +47,11 @@ String array in JSON format.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [indexes](#indexes)
-
-<!--Device-Schema-indexes: Array<string>--><!--Device-Schema-indexes: Array<string>-End-->
+**Substitutes:** indexes
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -67,11 +67,11 @@ Schema mode.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** mode
-
-<!--Device-Schema-mode: number--><!--Device-Schema-mode: number-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -87,11 +87,11 @@ JSON root object.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [root](#root)
-
-<!--Device-Schema-root: FieldNode--><!--Device-Schema-root: FieldNode-End-->
+**Substitutes:** root
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -107,11 +107,10 @@ Size of a skip of the schema.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [skip](#skip)
-
-<!--Device-Schema-skip: number--><!--Device-Schema-skip: number-End-->
+**Substitutes:** skip
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
-

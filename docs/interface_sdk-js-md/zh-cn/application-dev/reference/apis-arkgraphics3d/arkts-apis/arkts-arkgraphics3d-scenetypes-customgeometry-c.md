@@ -4,9 +4,9 @@
 
 **继承/实现关系：** CustomGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md)
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-unnamed-export declare class CustomGeometry--><!--Device-unnamed-export declare class CustomGeometry-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -22,7 +22,7 @@ colors?: Color[]
 
 **起始版本：** 18
 
-<!--Device-CustomGeometry-colors?: Color[]--><!--Device-CustomGeometry-colors?: Color[]-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -34,13 +34,13 @@ indices?: int[]
 
 顶点索引数组，数组中元素的取值范围大于等于0，默认值为undefined。
 
-**类型：** int[]
+**类型：** number[]
 
 **默认值：** undefined
 
 **起始版本：** 18
 
-<!--Device-CustomGeometry-indices?: int[]--><!--Device-CustomGeometry-indices?: int[]-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -56,7 +56,7 @@ normals?: Vec3[]
 
 **起始版本：** 18
 
-<!--Device-CustomGeometry-normals?: Vec3[]--><!--Device-CustomGeometry-normals?: Vec3[]-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -74,7 +74,7 @@ topology?: PrimitiveTopology
 
 **起始版本：** 18
 
-<!--Device-CustomGeometry-topology?: PrimitiveTopology--><!--Device-CustomGeometry-topology?: PrimitiveTopology-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -90,7 +90,22 @@ uvs?: Vec2[]
 
 **起始版本：** 18
 
-<!--Device-CustomGeometry-uvs?: Vec2[]--><!--Device-CustomGeometry-uvs?: Vec2[]-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
+## vertices
+
+```TypeScript
+set vertices(value: Vec3[])
+```
+
+模型的顶点数组。
+
+**类型：** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[]
+
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.ArkUi.Graphics3D

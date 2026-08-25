@@ -4,45 +4,31 @@ Type of the finger information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare interface FingerInfo--><!--Device-unnamed-export declare interface FingerInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## getCurrentLocalPosition
 
 ```TypeScript
-getCurrentLocalPosition(): Coordinate2D
-```
-
-**Since:** -1
-
-**ArkTS mode:** ArkTS-Sta since version -1.
-
-<!--Device-FingerInfo-getCurrentLocalPosition(): Coordinate2D--><!--Device-FingerInfo-getCurrentLocalPosition(): Coordinate2D-End-->
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-## default
-
-```TypeScript
-default
+default getCurrentLocalPosition(): Coordinate2D
 ```
 
 Gets the coordinates of the top-left corner of the current component based on its real-time position.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FingerInfo-default--><!--Device-FingerInfo-default-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Coordinate2D](arkts-arkui-coordinate2d-i.md) |
 
 ## displayX
 
@@ -56,11 +42,9 @@ X coordinate of the touch point relative to the left edge of the device screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FingerInfo-displayX: double--><!--Device-FingerInfo-displayX: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,11 +60,9 @@ Y coordinate of the touch point relative to the upper edge of the device screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FingerInfo-displayY: double--><!--Device-FingerInfo-displayY: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,11 +78,9 @@ X position of the click point relative to the global display coordinate.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FingerInfo-globalDisplayX?: double--><!--Device-FingerInfo-globalDisplayX?: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,11 +96,9 @@ Y position of the click point relative to the global display coordinate.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FingerInfo-globalDisplayY?: double--><!--Device-FingerInfo-globalDisplayY?: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -136,11 +114,9 @@ X coordinate of the touch point relative to the left edge of the device screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FingerInfo-globalX: double--><!--Device-FingerInfo-globalX: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -156,11 +132,9 @@ The Y coordinate of the touch point relative to the upper edge of the current wi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FingerInfo-globalY: double--><!--Device-FingerInfo-globalY: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -176,11 +150,9 @@ Type of the touch hand.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FingerInfo-hand?: InteractionHand--><!--Device-FingerInfo-hand?: InteractionHand-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -196,11 +168,9 @@ Finger unique identifier.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FingerInfo-id: int--><!--Device-FingerInfo-id: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -216,11 +186,9 @@ X coordinate of the touch point relative to the left edge of the current window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FingerInfo-localX: double--><!--Device-FingerInfo-localX: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -236,11 +204,8 @@ Y coordinate of the touch point relative to the upper edge of the touched elemen
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FingerInfo-localY: double--><!--Device-FingerInfo-localY: double-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,7 +4,7 @@ Defines HTTP request context data. The object instance is passed as a parameter 
 
 **Since:** 22
 
-<!--Device-http-export interface HttpRequestContext--><!--Device-http-export interface HttpRequestContext-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -26,9 +26,9 @@ The header of an HTTP request interceptor. It can be modified in an interceptor.
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-HttpRequestContext-body: Object--><!--Device-HttpRequestContext-body: Object-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -44,9 +44,9 @@ The header of an HTTP request interceptor. It can be modified in an interceptor.
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-HttpRequestContext-header: Object--><!--Device-HttpRequestContext-header: Object-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -62,9 +62,8 @@ The URL of an HTTP request interceptor. It can be modified in an interceptor.
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-HttpRequestContext-url: string--><!--Device-HttpRequestContext-url: string-End-->
-
 **System capability:** SystemCapability.Communication.NetStack
-

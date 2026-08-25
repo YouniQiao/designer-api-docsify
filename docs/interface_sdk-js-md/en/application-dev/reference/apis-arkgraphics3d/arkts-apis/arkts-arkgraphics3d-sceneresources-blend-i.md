@@ -2,9 +2,9 @@
 
 Controls the transparency of materials.@interface Blend
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-unnamed-export interface Blend--><!--Device-unnamed-export interface Blend-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,9 +18,8 @@ Whether the transparency of the material is enabled. true if enabled, false othe
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Blend-enabled: boolean--><!--Device-Blend-enabled: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

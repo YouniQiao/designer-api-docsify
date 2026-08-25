@@ -2,9 +2,9 @@
 
 数据库的PBKDF2算法枚举。请使用枚举名称而非枚举值。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-relationalStore-enum KdfAlgo--><!--Device-relationalStore-enum KdfAlgo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -16,9 +16,9 @@ KDF_SHA1 = 0
 
 PBKDF2_HMAC_SHA1算法。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-KdfAlgo-KDF_SHA1 = 0--><!--Device-KdfAlgo-KDF_SHA1 = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -30,9 +30,9 @@ KDF_SHA256 = 1
 
 PBKDF2_HMAC_SHA256算法。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-KdfAlgo-KDF_SHA256 = 1--><!--Device-KdfAlgo-KDF_SHA256 = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -44,9 +44,8 @@ KDF_SHA512 = 2
 
 PBKDF2_HMAC_SHA512算法。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-KdfAlgo-KDF_SHA512 = 2--><!--Device-KdfAlgo-KDF_SHA512 = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-

@@ -2,9 +2,9 @@
 
 Describes a coordinate point.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-common2D-interface Point--><!--Device-common2D-interface Point-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -22,13 +22,13 @@ x: double
 
 Horizontal coordinate. The value is a floating point number.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-Point-x: double--><!--Device-Point-x: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -40,13 +40,12 @@ y: double
 
 Vertical coordinate. The value is a floating point number.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-Point-y: double--><!--Device-Point-y: double-End-->
-
 **System capability:** SystemCapability.Graphics.Drawing
-

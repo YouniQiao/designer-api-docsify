@@ -10,9 +10,7 @@ The **ArcButton** component offers various button styles, such as emphasized, no
 
 **Since:** 18
 
-**Decorator:** @Component
-
-<!--Device-unnamed-export declare struct ArcButton--><!--Device-unnamed-export declare struct ArcButton-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -22,6 +20,20 @@ The **ArcButton** component offers various button styles, such as emphasized, no
 import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition, ArcButtonStyleMode, ArcButtonStatus } from '@kit.ArkUI';
 ```
 
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Circle
+
 ## options
 
 ```TypeScript
@@ -30,15 +42,12 @@ readonly options: ArcButtonOptions
 
 Text, background color, shadow, and other parameters of the **ArcButton** component.
 
-**Type:** [ArcButtonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
+**Type:** [ArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
 
 **Since:** 18
 
-**Decorator:** @Require
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ArcButton-@Require    readonly options: ArcButtonOptions--><!--Device-ArcButton-@Require    readonly options: ArcButtonOptions-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
-

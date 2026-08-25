@@ -2,9 +2,9 @@
 
 支持媒体密钥管理。在调用MediaKeySession方法之前，必须使用 [createMediaKeySession](arkts-drm-drm-mediakeysystem-i.md#createmediakeysession) 获取一个MediaKeySession实例。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-drm-interface MediaKeySession--><!--Device-drm-interface MediaKeySession-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -22,26 +22,26 @@ checkMediaKeyStatus(): MediaKeyStatus[]
 
 检查当前媒体密钥状态。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MediaKeySession-checkMediaKeyStatus(): MediaKeyStatus[]--><!--Device-MediaKeySession-checkMediaKeyStatus(): MediaKeyStatus[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [MediaKeyStatus](arkts-drm-drm-mediakeystatus-i.md)[] | 当前媒体密钥状态值。 |
+| 类型 |
+| --- |
+| [MediaKeyStatus](arkts-drm-drm-mediakeystatus-i.md)[] |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| 错误码ID |
+| --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
 
 **示例**
 
@@ -61,20 +61,20 @@ clearMediaKeys(): void
 
 清除当前媒体密钥。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MediaKeySession-clearMediaKeys(): void--><!--Device-MediaKeySession-clearMediaKeys(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| 错误码ID |
+| --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
 
 **示例**
 
@@ -99,20 +99,20 @@ destroy(): void
 
 销毁MediaKeySession实例。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MediaKeySession-destroy(): void--><!--Device-MediaKeySession-destroy(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| 错误码ID |
+| --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
 
 **示例**
 
@@ -133,42 +133,48 @@ mediaKeySystem.destroy();
 
 ## generateMediaKeyRequest
 
+ArkTS-Dyn:
+```TypeScript
+generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: number, options?: OptionsData[]): Promise<MediaKeyRequest>
+```
+
+ArkTS-Sta:
 ```TypeScript
 generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: int, options?: OptionsData[]): Promise<MediaKeyRequest>
 ```
 
 生成媒体密钥请求。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MediaKeySession-generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: int, options?: OptionsData[]): Promise<MediaKeyRequest>--><!--Device-MediaKeySession-generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: int, options?: OptionsData[]): Promise<MediaKeyRequest>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mimeType | string | 是 | 媒体类型，DRM解决方案名称，可通过 [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md) 查询。 |
-| initData | Uint8Array | 是 | 初始数据，即加密流中的PSSH box中的实际PSSH数据。可通过监听AVPlayer的'mediaKeySystemInfoUpdate'事件（ on('mediaKeySystemInfoUpdate') ）获取DRM信息，从中提取pssh字段生成initData。具体开发流程可参考 [基于AVPlayer播放DRM节目(ArkTS)](../../../media/drm/drm-avplayer-arkts-integration.md)。 |
-| mediaKeyType | int | 是 | 媒体密钥类型。取值范围为[0, 1]。0表示在线，1表示离线。<br>传入指定范围外的参数会导致参数校验失败，抛出错误码401。 |
-| options | [OptionsData](arkts-drm-drm-optionsdata-i.md)[] | 否 | 可选数据。默认值为空数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mimeType | string | 是 |
+| initData | Uint8Array | 是 |
+| mediaKeyType | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| options | [OptionsData](arkts-drm-drm-optionsdata-i.md)[] | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[MediaKeyRequest](arkts-drm-drm-mediakeyrequest-i.md)&gt; | Promise对象，媒体密钥请求。 |
+| 类型 |
+| --- |
+| Promise&lt;[MediaKeyRequest](arkts-drm-drm-mediakeyrequest-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [401](../../errorcode-universal.md#401-参数检查失败) |  |
+| 错误码ID |
+| --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -192,33 +198,33 @@ generateOfflineReleaseRequest(mediaKeyId: Uint8Array): Promise<Uint8Array>
 
 生成离线媒体密钥释放请求。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MediaKeySession-generateOfflineReleaseRequest(mediaKeyId: Uint8Array): Promise<Uint8Array>--><!--Device-MediaKeySession-generateOfflineReleaseRequest(mediaKeyId: Uint8Array): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mediaKeyId | Uint8Array | 是 | 离线媒体密钥标识。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mediaKeyId | Uint8Array | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，设备上的DRM解决方案支持离线媒体密钥释放处理，则返回离线媒体密钥释放请求。 |
+| 类型 |
+| --- |
+| Promise & lt;Uint8Array & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
 
 **示例**
 
@@ -242,26 +248,26 @@ getContentProtectionLevel(): ContentProtectionLevel
 
 获取当前会话的内容保护级别。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MediaKeySession-getContentProtectionLevel(): ContentProtectionLevel--><!--Device-MediaKeySession-getContentProtectionLevel(): ContentProtectionLevel-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | 返回当前会话内容保护级别。 |
+| 类型 |
+| --- |
+| [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| 错误码ID |
+| --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
 
 **示例**
 
@@ -274,35 +280,35 @@ let contentProtectionLevel: drm.ContentProtectionLevel = mediaKeySession.getCont
 console.info(`contentProtectionLevel: ${contentProtectionLevel}`);
 ```
 
-## off('expirationUpdate')
+## off('keyRequired')
 
 ```TypeScript
-off(type: 'expirationUpdate', callback?: (eventInfo: EventInfo) => void): void
+off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void
 ```
 
-注销过期更新事件监听。使用callback异步回调。
+注销密钥请求事件监听。使用callback异步回调。该接口用于注销已在on('keyRequired')中注册的监听，当播放DRM节目需要获取媒体密钥时触发的事件。
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-MediaKeySession-off(type: 'expirationUpdate', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-off(type: 'expirationUpdate', callback?: (eventInfo: EventInfo) => void): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'expirationUpdate' | 是 | 监听事件类型，固定为'expirationUpdate'。 |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'keyRequired' | 是 |
+| callback | (eventInfo: EventInfo) = & gt; void | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## off('keyExpired')
 
@@ -314,85 +320,25 @@ off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-MediaKeySession-off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'keyExpired' | 是 | 监听事件类型，固定为'keyExpired'。 |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'keyExpired' | 是 |
+| callback | (eventInfo: EventInfo) = & gt; void | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-
-## off('keyRequired')
-
-```TypeScript
-off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void
-```
-
-注销密钥请求事件监听。使用callback异步回调。该接口用于注销已在on('keyRequired')中注册的监听，当播放DRM节目需要获取媒体密钥时触发的事件。
-
-**起始版本：** 11
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MediaKeySession-off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'keyRequired' | 是 | 监听事件类型，固定为'keyRequired'。 |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-
-## off('keysChange')
-
-```TypeScript
-off(type: 'keysChange', callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
-```
-
-注销密钥变化事件监听。使用callback异步回调。
-
-**起始版本：** 11
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MediaKeySession-off(type: 'keysChange', callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void--><!--Device-MediaKeySession-off(type: 'keysChange', callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'keysChange' | 是 | 监听事件类型，固定为'keysChange'。 |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | 否 | 回调函数，返回事件信息，包含密钥标识和密钥状态描述的列表及密钥是否可用。<br>可选参数，不传时注销该事件类型的所有监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## off('vendorDefined')
 
@@ -404,25 +350,85 @@ off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-MediaKeySession-off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'vendorDefined' | 是 | 监听事件，固定为'vendorDefined'。 |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'vendorDefined' | 是 |
+| callback | (eventInfo: EventInfo) = & gt; void | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
+
+## off('expirationUpdate')
+
+```TypeScript
+off(type: 'expirationUpdate', callback?: (eventInfo: EventInfo) => void): void
+```
+
+注销过期更新事件监听。使用callback异步回调。
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'expirationUpdate' | 是 |
+| callback | (eventInfo: EventInfo) = & gt; void | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
+
+## off('keysChange')
+
+```TypeScript
+off(type: 'keysChange', callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
+```
+
+注销密钥变化事件监听。使用callback异步回调。
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'keysChange' | 是 |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) = & gt; void | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## offExpirationUpdate
 
@@ -434,21 +440,21 @@ offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void
 
 **起始版本：** 23
 
-<!--Device-MediaKeySession-offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (eventInfo: EventInfo) = & gt; void | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| 错误码ID |
+| --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## offKeyExpired
 
@@ -460,21 +466,21 @@ offKeyExpired(callback?: (eventInfo: EventInfo) => void): void
 
 **起始版本：** 23
 
-<!--Device-MediaKeySession-offKeyExpired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offKeyExpired(callback?: (eventInfo: EventInfo) => void): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (eventInfo: EventInfo) = & gt; void | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| 错误码ID |
+| --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## offKeyRequired
 
@@ -486,21 +492,21 @@ offKeyRequired(callback?: (eventInfo: EventInfo) => void): void
 
 **起始版本：** 23
 
-<!--Device-MediaKeySession-offKeyRequired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offKeyRequired(callback?: (eventInfo: EventInfo) => void): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (eventInfo: EventInfo) = & gt; void | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| 错误码ID |
+| --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## offKeysChange
 
@@ -512,21 +518,21 @@ offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void
 
 **起始版本：** 23
 
-<!--Device-MediaKeySession-offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void--><!--Device-MediaKeySession-offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | 否 | 回调函数，返回事件信息，包含密钥标识和密钥状态描述的列表及密钥是否可用。可选参数，不传时注销该事件类型的所有监听。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) = & gt; void | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| 错误码ID |
+| --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## offVendorDefined
 
@@ -538,81 +544,21 @@ offVendorDefined(callback?: (eventInfo: EventInfo) => void): void
 
 **起始版本：** 23
 
-<!--Device-MediaKeySession-offVendorDefined(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offVendorDefined(callback?: (eventInfo: EventInfo) => void): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (eventInfo: EventInfo) = & gt; void | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-
-## on('expirationUpdate')
-
-```TypeScript
-on(type: 'expirationUpdate', callback: (eventInfo: EventInfo) => void): void
-```
-
-监听密钥过期更新事件。使用callback异步回调。
-
-**起始版本：** 11
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MediaKeySession-on(type: 'expirationUpdate', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-on(type: 'expirationUpdate', callback: (eventInfo: EventInfo) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'expirationUpdate' | 是 | 监听事件类型，固定为'expirationUpdate'。密钥过期更新时触发。 |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-
-## on('keyExpired')
-
-```TypeScript
-on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void
-```
-
-监听密钥过期事件。使用callback异步回调。
-
-**起始版本：** 11
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MediaKeySession-on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'keyExpired' | 是 | 监听事件类型，固定为'keyExpired'。密钥过期时触发。 |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| 错误码ID |
+| --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## on('keyRequired')
 
@@ -624,55 +570,55 @@ on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-MediaKeySession-on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'keyRequired' | 是 | 事件类型，固定为'keyRequired'，当播放DRM节目需要获取媒体密钥时触发。 |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'keyRequired' | 是 |
+| callback | (eventInfo: EventInfo) = & gt; void | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
-## on('keysChange')
+## on('keyExpired')
 
 ```TypeScript
-on(type: 'keysChange', callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
+on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void
 ```
 
-监听密钥变化事件。使用callback异步回调。
+监听密钥过期事件。使用callback异步回调。
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-MediaKeySession-on(type: 'keysChange', callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void--><!--Device-MediaKeySession-on(type: 'keysChange', callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'keysChange' | 是 | 监听事件类型，固定为'keysChange'。密钥变化时触发。 |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | 是 | 回调函数，返回事件信息，包含密钥标识和密钥状态描述的列表及密钥是否可用。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'keyExpired' | 是 |
+| callback | (eventInfo: EventInfo) = & gt; void | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## on('vendorDefined')
 
@@ -684,25 +630,85 @@ on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-MediaKeySession-on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'vendorDefined' | 是 | 监听事件，固定为'vendorDefined'。自定义事件发生时触发。 |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'vendorDefined' | 是 |
+| callback | (eventInfo: EventInfo) = & gt; void | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
+
+## on('expirationUpdate')
+
+```TypeScript
+on(type: 'expirationUpdate', callback: (eventInfo: EventInfo) => void): void
+```
+
+监听密钥过期更新事件。使用callback异步回调。
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'expirationUpdate' | 是 |
+| callback | (eventInfo: EventInfo) = & gt; void | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
+
+## on('keysChange')
+
+```TypeScript
+on(type: 'keysChange', callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
+```
+
+监听密钥变化事件。使用callback异步回调。
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'keysChange' | 是 |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) = & gt; void | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## onExpirationUpdate
 
@@ -714,21 +720,21 @@ onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void
 
 **起始版本：** 23
 
-<!--Device-MediaKeySession-onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (eventInfo: EventInfo) = & gt; void | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| 错误码ID |
+| --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## onKeyExpired
 
@@ -740,21 +746,21 @@ onKeyExpired(callback: (eventInfo: EventInfo) => void): void
 
 **起始版本：** 23
 
-<!--Device-MediaKeySession-onKeyExpired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onKeyExpired(callback: (eventInfo: EventInfo) => void): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (eventInfo: EventInfo) = & gt; void | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| 错误码ID |
+| --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## onKeyRequired
 
@@ -766,21 +772,21 @@ onKeyRequired(callback: (eventInfo: EventInfo) => void): void
 
 **起始版本：** 23
 
-<!--Device-MediaKeySession-onKeyRequired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onKeyRequired(callback: (eventInfo: EventInfo) => void): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (eventInfo: EventInfo) = & gt; void | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| 错误码ID |
+| --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## onKeysChange
 
@@ -792,21 +798,21 @@ onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void):
 
 **起始版本：** 23
 
-<!--Device-MediaKeySession-onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void--><!--Device-MediaKeySession-onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | 是 | 回调函数，返回事件信息，包含密钥标识和密钥状态描述的列表及密钥是否可用。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) = & gt; void | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| 错误码ID |
+| --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## onVendorDefined
 
@@ -818,21 +824,21 @@ onVendorDefined(callback: (eventInfo: EventInfo) => void): void
 
 **起始版本：** 23
 
-<!--Device-MediaKeySession-onVendorDefined(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onVendorDefined(callback: (eventInfo: EventInfo) => void): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (eventInfo: EventInfo) = & gt; void | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| 错误码ID |
+| --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## processMediaKeyResponse
 
@@ -842,33 +848,33 @@ processMediaKeyResponse(response: Uint8Array): Promise<Uint8Array>
 
 处理媒体密钥响应。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MediaKeySession-processMediaKeyResponse(response: Uint8Array): Promise<Uint8Array>--><!--Device-MediaKeySession-processMediaKeyResponse(response: Uint8Array): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| response | Uint8Array | 是 | 媒体密钥响应。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| response | Uint8Array | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，媒体密钥标识。 |
+| 类型 |
+| --- |
+| Promise & lt;Uint8Array & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
 
 **示例**
 
@@ -892,34 +898,34 @@ processOfflineReleaseResponse(mediaKeyId: Uint8Array, response: Uint8Array): Pro
 
 处理离线媒体密钥释放响应。使用Promise异步回调。如果设备上的DRM解决方案不支持离线媒体密钥释放，将抛出错误码24700101。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MediaKeySession-processOfflineReleaseResponse(mediaKeyId: Uint8Array, response: Uint8Array): Promise<void>--><!--Device-MediaKeySession-processOfflineReleaseResponse(mediaKeyId: Uint8Array, response: Uint8Array): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mediaKeyId | Uint8Array | 是 | 离线媒体密钥标识。 |
-| response | Uint8Array | 是 | 离线媒体密钥释放响应。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mediaKeyId | Uint8Array | 是 |
+| response | Uint8Array | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
 
 **示例**
 
@@ -948,33 +954,33 @@ requireSecureDecoderModule(mimeType: string): boolean
 
 是否需要安全解码。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MediaKeySession-requireSecureDecoderModule(mimeType: string): boolean--><!--Device-MediaKeySession-requireSecureDecoderModule(mimeType: string): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mimeType | string | 是 | 媒体类型，支持的媒体类型取决于DRM解决方案，可通过 [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md) 查询。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mimeType | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 是否需要安全解码，true表示需要安全解码，false表示不需要安全解码。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
 
 **示例**
 
@@ -994,33 +1000,33 @@ restoreOfflineMediaKeys(mediaKeyId: Uint8Array): Promise<void>
 
 恢复离线媒体密钥。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MediaKeySession-restoreOfflineMediaKeys(mediaKeyId: Uint8Array): Promise<void>--><!--Device-MediaKeySession-restoreOfflineMediaKeys(mediaKeyId: Uint8Array): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mediaKeyId | Uint8Array | 是 | 离线媒体密钥标识。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mediaKeyId | Uint8Array | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
 
 **示例**
 
@@ -1035,4 +1041,3 @@ mediaKeySession.restoreOfflineMediaKeys(mediaKeyId).then(() => {
   console.info("restoreOfflineMediaKeys");
 });
 ```
-

@@ -1,12 +1,12 @@
 # DateOptions
 
-DateOptions defines options for the date picker.Inherits from [CommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-datepickercomponent-commonoptions-c.md).
+DateOptions defines options for the date picker.Inherits from [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md).
 
-**Inheritance/Implementation:** DateOptions extends [CommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-datepickercomponent-commonoptions-c.md)
+**Inheritance/Implementation:** DateOptions extends [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export declare class DateOptions--><!--Device-unnamed-export declare class DateOptions-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,11 +33,11 @@ Default value: false
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-DateOptions-lunar?: boolean--><!--Device-DateOptions-lunar?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,17 +49,16 @@ mode?: DateMode
 
 Defines the mode of the date picker.Default value: DateMode.DATE
 
-**Type:** [DateMode](../../apis-default/arkts-apis/arkts-arkui-advanced-datepickercomponent-datemode-e.md)
+**Type:** [DateMode](arkts-arkui-arkui-advanced-datepickercomponent-datemode-e.md)
 
 **Default:** DateMode.DATE
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-DateOptions-mode?: DateMode--><!--Device-DateOptions-mode?: DateMode-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

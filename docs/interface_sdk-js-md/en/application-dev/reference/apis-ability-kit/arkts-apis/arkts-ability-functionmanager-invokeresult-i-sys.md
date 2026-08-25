@@ -4,7 +4,7 @@ Encapsulates the success or failure status of function invocation.
 
 **Since:** 26.0.0
 
-<!--Device-functionManager-interface InvokeResult--><!--Device-functionManager-interface InvokeResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -28,9 +28,9 @@ The returned data on success. The type can be any JSON value. Only present when 
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-InvokeResult-data?: any--><!--Device-InvokeResult-data?: any-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -48,9 +48,9 @@ The error code on failure (numeric). Only present when [success](#success) is fa
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-InvokeResult-errorCode?: number--><!--Device-InvokeResult-errorCode?: number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -68,9 +68,9 @@ The error description on failure. Only present when [success](#success) is false
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-InvokeResult-errorMsg?: string--><!--Device-InvokeResult-errorMsg?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -88,11 +88,10 @@ Indicates whether the invocation was successful (at business logic level). true:
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-InvokeResult-success: boolean--><!--Device-InvokeResult-success: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
-

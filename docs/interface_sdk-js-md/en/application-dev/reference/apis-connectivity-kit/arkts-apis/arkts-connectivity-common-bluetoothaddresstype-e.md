@@ -4,7 +4,7 @@ Enum for the type of Bluetooth address.
 
 **Since:** 21
 
-<!--Device-common-export enum BluetoothAddressType--><!--Device-common-export enum BluetoothAddressType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -18,7 +18,7 @@ virtual address.
 
 **Since:** 21
 
-<!--Device-BluetoothAddressType-VIRTUAL = 1--><!--Device-BluetoothAddressType-VIRTUAL = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -32,7 +32,6 @@ real address.
 
 **Since:** 21
 
-<!--Device-BluetoothAddressType-REAL = 2--><!--Device-BluetoothAddressType-REAL = 2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

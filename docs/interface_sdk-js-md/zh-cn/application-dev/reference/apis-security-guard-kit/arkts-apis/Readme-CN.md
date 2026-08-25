@@ -5,9 +5,9 @@
   <!--Del-->
   - [getModelResult(系统接口)](arkts-securityguard-securityguard-getmodelresult-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [off_securityEventOccur(系统接口)](arkts-securityguard-securityguard-offsecurityeventoccur-f-sys.md)<!--DelEnd-->
+  - [off(系统接口)](arkts-securityguard-securityguard-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on_securityEventOccur(系统接口)](arkts-securityguard-securityguard-onsecurityeventoccur-f-sys.md)<!--DelEnd-->
+  - [on(系统接口)](arkts-securityguard-securityguard-on-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [querySecurityEvent(系统接口)](arkts-securityguard-securityguard-querysecurityevent-f-sys.md)<!--DelEnd-->
   <!--Del-->

@@ -6,11 +6,10 @@ type PhotoAssetParams = Record<string, MemberType>[]
 
 Defines the array of record types that map file property names to their values.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-photoAccessHelper-type PhotoAssetParams = Record<string, MemberType>[]--><!--Device-photoAccessHelper-type PhotoAssetParams = Record<string, MemberType>[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Property type:** Record&lt;string, MemberType&gt;[]
-

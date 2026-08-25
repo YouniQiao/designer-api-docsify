@@ -4,11 +4,11 @@ Defines the options for filtering the played audio streams to be recorded.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 12
 
-**Substitutes:** OH_AVScreenCapture in native interface.
-
-<!--Device-audio-interface CaptureFilterOptions--><!--Device-audio-interface CaptureFilterOptions-End-->
+**Substitutes:** OH_AVScreenCapture
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 
@@ -30,11 +30,10 @@ Filter by stream usages. But not allow to capture voice streams.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 12
 
-**Substitutes:** OH_AVScreenCapture in native interface.
-
-<!--Device-CaptureFilterOptions-usages: Array<StreamUsage>--><!--Device-CaptureFilterOptions-usages: Array<StreamUsage>-End-->
+**Substitutes:** OH_AVScreenCapture
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
-

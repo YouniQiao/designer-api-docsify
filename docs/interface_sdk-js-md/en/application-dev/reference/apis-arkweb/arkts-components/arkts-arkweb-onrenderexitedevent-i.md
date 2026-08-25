@@ -4,7 +4,7 @@ Defines the callback triggered when the rendering process exits. It is suitable 
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface OnRenderExitedEvent--><!--Device-unnamed-declare interface OnRenderExitedEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -25,9 +25,8 @@ Cause for the abnormal exit of the rendering process.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-OnRenderExitedEvent-renderExitReason: RenderExitReason--><!--Device-OnRenderExitedEvent-renderExitReason: RenderExitReason-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

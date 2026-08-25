@@ -2,9 +2,9 @@
 
 应用程序安装、卸载或恢复需指定的参数信息。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-installer-export interface InstallParam--><!--Device-installer-export interface InstallParam-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -26,9 +26,9 @@ additionalInfo?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-InstallParam-additionalInfo?: string--><!--Device-InstallParam-additionalInfo?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -42,11 +42,11 @@ crowdtestDeadline?: long
 
 众测活动的截止日期，默认值为-1，表示无截止日期约束，单位：秒。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-InstallParam-crowdtestDeadline?: long--><!--Device-InstallParam-crowdtestDeadline?: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -62,9 +62,9 @@ hashParams?: Array<HashParam>
 
 **类型：** Array&lt;[HashParam](arkts-ability-installer-hashparam-i-sys.md)&gt;
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-InstallParam-hashParams?: Array<HashParam>--><!--Device-InstallParam-hashParams?: Array<HashParam>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -78,11 +78,11 @@ installFlag?: int
 
 指示安装标志，枚举值：0x00：应用初次安装，0x01：应用覆盖安装，0x10：应用免安装，默认值为应用初次安装。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-InstallParam-installFlag?: int--><!--Device-InstallParam-installFlag?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -98,9 +98,9 @@ isKeepData?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-InstallParam-isKeepData?: boolean--><!--Device-InstallParam-isKeepData?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -116,9 +116,9 @@ parameters?: Array<Parameters>
 
 **类型：** Array&lt;Parameters&gt;
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-InstallParam-parameters?: Array<Parameters>--><!--Device-InstallParam-parameters?: Array<Parameters>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -134,9 +134,9 @@ PGO配置文件参数，默认值为空。
 
 **类型：** Array&lt;[PGOParam](arkts-ability-installer-pgoparam-i-sys.md)&gt;
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-InstallParam-pgoParams?: Array<PGOParam>--><!--Device-InstallParam-pgoParams?: Array<PGOParam>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -152,9 +152,9 @@ sharedBundleDirPaths?: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-InstallParam-sharedBundleDirPaths?: Array<string>--><!--Device-InstallParam-sharedBundleDirPaths?: Array<string>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -170,9 +170,9 @@ specifiedDistributionType?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-InstallParam-specifiedDistributionType?: string--><!--Device-InstallParam-specifiedDistributionType?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -186,11 +186,11 @@ userId?: int
 
 指示用户id，默认值：调用方所在用户，取值范围：大于等于0，可使用 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取当前进程所在用户。当安装、卸载或恢复一个驱动应用时，该参数会被忽略，会在所有用户下执行。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-InstallParam-userId?: int--><!--Device-InstallParam-userId?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -209,11 +209,10 @@ verifyCodeParams?: Array<VerifyCodeParam>
 
 **起始版本：** 10
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-InstallParam-verifyCodeParams?: Array<VerifyCodeParam>--><!--Device-InstallParam-verifyCodeParams?: Array<VerifyCodeParam>-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
-

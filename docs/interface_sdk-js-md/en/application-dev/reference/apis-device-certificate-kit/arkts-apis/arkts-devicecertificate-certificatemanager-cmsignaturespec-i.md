@@ -2,9 +2,9 @@
 
 Represents a set of parameters used for signing or signature verification, including the key usage purpose, padding mode, and digest algorithm.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-certificateManager-export interface CMSignatureSpec--><!--Device-certificateManager-export interface CMSignatureSpec-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -24,9 +24,9 @@ Digest algorithm. Default value: CM_DIGEST_SHA256: indicates that the SHA256 dig
 
 **Type:** [CmKeyDigest](arkts-devicecertificate-certificatemanager-cmkeydigest-e.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CMSignatureSpec-digest?: CmKeyDigest--><!--Device-CMSignatureSpec-digest?: CmKeyDigest-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -40,9 +40,9 @@ Enumeration representing the padding mode. Default value: CM_PADDING_PSS: indica
 
 **Type:** [CmKeyPadding](arkts-devicecertificate-certificatemanager-cmkeypadding-e.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CMSignatureSpec-padding?: CmKeyPadding--><!--Device-CMSignatureSpec-padding?: CmKeyPadding-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -56,9 +56,8 @@ Purpose of using the key.
 
 **Type:** [CmKeyPurpose](arkts-devicecertificate-certificatemanager-cmkeypurpose-e.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CMSignatureSpec-purpose: CmKeyPurpose--><!--Device-CMSignatureSpec-purpose: CmKeyPurpose-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
-

@@ -2,9 +2,9 @@
 
 Enumerates disposition types.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sms-export enum DispositionType--><!--Device-sms-export enum DispositionType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -18,9 +18,9 @@ FROM_DATA = 0
 
 Data source.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DispositionType-FROM_DATA = 0--><!--Device-DispositionType-FROM_DATA = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -34,9 +34,9 @@ ATTACHMENT = 1
 
 Attachment.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DispositionType-ATTACHMENT = 1--><!--Device-DispositionType-ATTACHMENT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -50,11 +50,10 @@ INLINE = 2
 
 Inlining.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DispositionType-INLINE = 2--><!--Device-DispositionType-INLINE = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
-

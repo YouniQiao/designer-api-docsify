@@ -10,21 +10,20 @@ import { Decimal } from '@kit.ArkTS';
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Decimal(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)](arkts-arkts-math-decimal-decimal-c.md) | An arbitrary-precision Decimal type |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Decimal(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)](arkts-arkts-math-decimal-decimal-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [DecimalConfig(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)](arkts-arkts-math-decimal-decimalconfig-i.md) | Provides configuration for decimal. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DecimalConfig(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)](arkts-arkts-math-decimal-decimalconfig-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [Modulo(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)](arkts-arkts-modulo-t.md) | The type used to set modulo |
-| [Rounding(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)](arkts-arkts-rounding-t.md) | The type used to set rounding |
-| [Value(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)](arkts-arkts-value-t.md) | The type used to denote decimal value |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Modulo(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)](arkts-arkts-modulo-t.md) |
+| [Rounding(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)](arkts-arkts-rounding-t.md) |
+| [Value(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)](arkts-arkts-value-t.md) |

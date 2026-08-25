@@ -4,7 +4,7 @@ Represents a gesture touch point, which is the basic unit that constitutes a Ges
 
 **Since:** 9
 
-<!--Device-unnamed-export declare class GesturePoint--><!--Device-unnamed-export declare class GesturePoint-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -24,18 +24,18 @@ Creates a **GesturePoint** instance based on the given X and Y coordinates.
 
 **Since:** 9
 
-**Deprecated since:** 12
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-GesturePoint-constructor(positionX: double, positionY: double)--><!--Device-GesturePoint-constructor(positionX: double, positionY: double)-End-->
+**Deprecated since:** 12
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| positionX | double | Yes | X coordinate of the touch point, in pixels (px). |
-| positionY | double | Yes | Y coordinate of the touch point, in pixels (px). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [positionX](#positionx) | number | Yes |
+| [positionY](#positiony) | number | Yes |
 
 **Examples**
 
@@ -48,32 +48,31 @@ let gesturePoint = new GesturePoint(1, 2);
 ## positionX
 
 ```TypeScript
-positionX: double
+positionX: number
 ```
 
 X coordinate of the touch point, in pixels (px).
 
-**Type:** double
+**Type:** number
 
 **Since:** 9
 
-<!--Device-GesturePoint-positionX: double--><!--Device-GesturePoint-positionX: double-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## positionY
 
 ```TypeScript
-positionY: double
+positionY: number
 ```
 
 Y coordinate of the touch point, in pixels (px).
 
-**Type:** double
+**Type:** number
 
 **Since:** 9
 
-<!--Device-GesturePoint-positionY: double--><!--Device-GesturePoint-positionY: double-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
-

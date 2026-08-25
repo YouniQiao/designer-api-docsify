@@ -2,9 +2,9 @@
 
 枚举，相册子类型，表示具体的相册类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-photoAccessHelper-enum AlbumSubtype--><!--Device-photoAccessHelper-enum AlbumSubtype-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -16,9 +16,9 @@ USER_GENERIC = 1
 
 用户相册。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-AlbumSubtype-USER_GENERIC = 1--><!--Device-AlbumSubtype-USER_GENERIC = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -30,9 +30,9 @@ FAVORITE = 1025
 
 收藏夹。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-AlbumSubtype-FAVORITE = 1025--><!--Device-AlbumSubtype-FAVORITE = 1025-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -44,9 +44,37 @@ VIDEO = 1026
 
 视频相册。
 
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## IMAGE
+
+```TypeScript
+IMAGE = 1031
+```
+
+图片相册。
+
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## SOURCE_GENERIC
+
+```TypeScript
+SOURCE_GENERIC = 2049
+```
+
+来源相册。
+
 **起始版本：** 23
 
-<!--Device-AlbumSubtype-VIDEO = 1026--><!--Device-AlbumSubtype-VIDEO = 1026-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -60,9 +88,9 @@ SOURCE_GENERIC_FROM_FILE_MANAGER = 2050
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AlbumSubtype-SOURCE_GENERIC_FROM_FILE_MANAGER = 2050--><!--Device-AlbumSubtype-SOURCE_GENERIC_FROM_FILE_MANAGER = 2050-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -74,9 +102,8 @@ ANY = 2147483647
 
 任意相册。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-AlbumSubtype-ANY = 2147483647--><!--Device-AlbumSubtype-ANY = 2147483647-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

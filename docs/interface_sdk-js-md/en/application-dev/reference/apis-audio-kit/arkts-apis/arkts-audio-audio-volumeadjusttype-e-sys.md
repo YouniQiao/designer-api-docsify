@@ -2,9 +2,9 @@
 
 Enumerates volume adjustment types.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-audio-enum VolumeAdjustType--><!--Device-audio-enum VolumeAdjustType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -18,9 +18,9 @@ VOLUME_UP = 0
 
 Adjust volume up.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-VolumeAdjustType-VOLUME_UP = 0--><!--Device-VolumeAdjustType-VOLUME_UP = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -34,11 +34,10 @@ VOLUME_DOWN = 1
 
 Adjust volume down.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-VolumeAdjustType-VOLUME_DOWN = 1--><!--Device-VolumeAdjustType-VOLUME_DOWN = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
-

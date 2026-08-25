@@ -2,9 +2,9 @@
 
 枚举，表示云端媒体资产下载任务暂停的类型。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-photoAccessHelper-enum CloudMediaTaskPauseCause--><!--Device-photoAccessHelper-enum CloudMediaTaskPauseCause-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ NO_PAUSE = 0
 
 正常下载，无暂停。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-CloudMediaTaskPauseCause-NO_PAUSE = 0--><!--Device-CloudMediaTaskPauseCause-NO_PAUSE = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,9 @@ TEMPERATURE_LIMIT = 1
 
 正常下载，无暂停。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-CloudMediaTaskPauseCause-TEMPERATURE_LIMIT = 1--><!--Device-CloudMediaTaskPauseCause-TEMPERATURE_LIMIT = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,9 +50,9 @@ ROM_LIMIT = 2
 
 本地磁盘空间不足。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-CloudMediaTaskPauseCause-ROM_LIMIT = 2--><!--Device-CloudMediaTaskPauseCause-ROM_LIMIT = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -66,9 +66,9 @@ NETWORK_FLOW_LIMIT = 3
 
 本地磁盘空间不足。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-CloudMediaTaskPauseCause-NETWORK_FLOW_LIMIT = 3--><!--Device-CloudMediaTaskPauseCause-NETWORK_FLOW_LIMIT = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -82,9 +82,9 @@ WIFI_UNAVAILABLE = 4
 
 网络异常。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-CloudMediaTaskPauseCause-WIFI_UNAVAILABLE = 4--><!--Device-CloudMediaTaskPauseCause-WIFI_UNAVAILABLE = 4-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -98,9 +98,9 @@ POWER_LIMIT = 5
 
 网络异常。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-CloudMediaTaskPauseCause-POWER_LIMIT = 5--><!--Device-CloudMediaTaskPauseCause-POWER_LIMIT = 5-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -114,9 +114,9 @@ BACKGROUND_TASK_UNAVAILABLE = 6
 
 充电息屏未启动。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-CloudMediaTaskPauseCause-BACKGROUND_TASK_UNAVAILABLE = 6--><!--Device-CloudMediaTaskPauseCause-BACKGROUND_TASK_UNAVAILABLE = 6-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -130,9 +130,9 @@ FREQUENT_USER_REQUESTS = 7
 
 用户请求频繁。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-CloudMediaTaskPauseCause-FREQUENT_USER_REQUESTS = 7--><!--Device-CloudMediaTaskPauseCause-FREQUENT_USER_REQUESTS = 7-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -146,9 +146,9 @@ CLOUD_ERROR = 8
 
 端云错误。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-CloudMediaTaskPauseCause-CLOUD_ERROR = 8--><!--Device-CloudMediaTaskPauseCause-CLOUD_ERROR = 8-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -162,11 +162,10 @@ USER_PAUSED = 9
 
 用户暂停。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-CloudMediaTaskPauseCause-USER_PAUSED = 9--><!--Device-CloudMediaTaskPauseCause-USER_PAUSED = 9-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
-

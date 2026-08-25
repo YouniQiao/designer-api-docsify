@@ -4,7 +4,7 @@ Enumerates the status types of an attendee.
 
 **Since:** 18
 
-<!--Device-calendarManager-export enum AttendeeStatus--><!--Device-calendarManager-export enum AttendeeStatus-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -18,9 +18,9 @@ The attendee status is unknown.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-AttendeeStatus-UNKNOWN = 0--><!--Device-AttendeeStatus-UNKNOWN = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -34,9 +34,9 @@ The attendee status is tentative.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-AttendeeStatus-TENTATIVE = 1--><!--Device-AttendeeStatus-TENTATIVE = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -50,9 +50,9 @@ The attendee has accepted the conference invitation.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-AttendeeStatus-ACCEPTED = 2--><!--Device-AttendeeStatus-ACCEPTED = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -66,9 +66,9 @@ The attendee has rejected the conference invitation.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-AttendeeStatus-DECLINED = 3--><!--Device-AttendeeStatus-DECLINED = 3-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -82,9 +82,8 @@ The attendee does not respond.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-AttendeeStatus-UNRESPONSIVE = 4--><!--Device-AttendeeStatus-UNRESPONSIVE = 4-End-->
-
 **System capability:** SystemCapability.Applications.CalendarData
-

@@ -5,8 +5,7 @@
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [RecoverableApplicationInfo](arkts-ability-recoverableapplicationinfo-i-sys.md) | The module defines the information about a preinstalled application that can be restored after being uninstalled. The information can be obtained through [bundleManager.getRecoverableApplicationInfo](arkts-ability-bundlemanager-getrecoverableapplicationinfo-f-sys.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [RecoverableApplicationInfo](arkts-ability-recoverableapplicationinfo-i-sys.md) |
 <!--DelEnd-->
-

@@ -14,11 +14,11 @@ function createStream(sessionId: int, param: StreamParam): Promise<int>
 
 Creating a Stream.
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-abilityConnectionManager-function createStream(sessionId: int, param: StreamParam): Promise<int>--><!--Device-abilityConnectionManager-function createStream(sessionId: int, param: StreamParam): Promise<int>-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -26,26 +26,26 @@ Creating a Stream.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sessionId | int | Yes | Ability connection Session id. |
-| param | [StreamParam](arkts-distributedservice-abilityconnectionmanager-streamparam-i-sys.md) | Yes | Transport Stream Parameters |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sessionId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| param | [StreamParam](arkts-distributedservice-abilityconnectionmanager-streamparam-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;int&gt; | The promise returned by the function, contain the ID of a transport stream. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [32300001](../errorcode-device-manager.md#32300001-transport-stream-repeatedly-created) | Only one stream can be created for the current session. |
-| [32300003](../errorcode-device-manager.md#32300003-bit-rate-not-supported) | Bitrate not supported. |
-| [32300004](../errorcode-device-manager.md#32300004-color-space-not-supported) | Color space not supported. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [32300001](../errorcode-device-manager.md#32300001-transport-stream-repeatedly-created) |
+| [32300003](../errorcode-device-manager.md#32300003-bit-rate-not-supported) |
+| [32300004](../errorcode-device-manager.md#32300004-color-space-not-supported) |
 
 **Examples**
 
@@ -67,4 +67,3 @@ abilityConnectionManager.createStream(sessionId ,{name: 'receive', role: 0}).the
   abilityConnectionManager.startStream(streamId);
 })
 ```
-

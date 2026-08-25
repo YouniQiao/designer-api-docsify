@@ -4,7 +4,7 @@ Provides APIs to decode byte arrays into strings. It supports multiple formats, 
 
 **Since:** 7
 
-<!--Device-util-class TextDecoder--><!--Device-util-class TextDecoder-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -24,9 +24,9 @@ A constructor used to create a **TextDecoder** object.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-TextDecoder-constructor()--><!--Device-TextDecoder-constructor()-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -148,20 +148,20 @@ A constructor used to create a **TextDecoder** object.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-**Substitutes:** [create](../../apis-default/arkts-apis/arkts-util-textdecoder-c.md#create)
-
-<!--Device-TextDecoder-constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean })--><!--Device-TextDecoder-constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean })-End-->
+**Substitutes:** [create](#create)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| encoding | string | No | Encoding format. The default format is **'utf-8'**. |
-| options | { fatal?: boolean; ignoreBOM?: boolean } | No | Decoding-related options, which include **fatal** and **ignoreBOM**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [encoding](#encoding) | string | No |
+| options | { fatal?: boolean; ignoreBOM?: boolean } | No |
 
 **Examples**
 
@@ -177,24 +177,24 @@ Creates a **TextDecoder** object. It provides the same function as the deprecate
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-TextDecoder-static create(encoding?: string, options?: TextDecoderOptions): TextDecoder--><!--Device-TextDecoder-static create(encoding?: string, options?: TextDecoderOptions): TextDecoder-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| encoding | string | No | Encoding format. The default format is **'utf-8'**.<br>**Since:** 11 |
-| options | [TextDecoderOptions](../../apis-default/arkts-apis/arkts-util-textdecoderoptions-i.md) | No | Decoding-related options, which include **fatal** and **ignoreBOM**.<br>**Since:** 11 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [encoding](#encoding) | string | No |
+| options | [TextDecoderOptions](arkts-arkts-util-textdecoderoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [TextDecoder](../../apis-default/arkts-apis/arkts-util-textdecoder-c.md) | TextDecoder** object created. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [TextDecoder](arkts-arkts-util-textdecoder-c.md) |
 
 **Examples**
 
@@ -223,26 +223,26 @@ Decodes the input content into a string.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-**Substitutes:** [decodeToString](../../apis-default/arkts-apis/arkts-util-textdecoder-c.md#decodetostring)
-
-<!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string--><!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string-End-->
+**Substitutes:** [decodeToString](#decodetostring)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| input | Uint8Array | Yes | Uint8Array object to decode. |
-| options | { stream?: false } | No | Decoding-related options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| input | Uint8Array | Yes |
+| options | { stream?: false } | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | String obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -291,24 +291,24 @@ Decodes the input content into a string.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-TextDecoder-decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string--><!--Device-TextDecoder-decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| input | Uint8Array | Yes | Uint8Array object to decode. |
-| options | [DecodeToStringOptions](../../apis-default/arkts-apis/arkts-util-decodetostringoptions-i.md) | No | Decoding-related options. The default value is **undefined**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| input | Uint8Array | Yes |
+| options | [DecodeToStringOptions](arkts-arkts-util-decodetostringoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | String obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -337,28 +337,28 @@ Decodes the input content into a string. If **input** is an empty array, **undef
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 12
 
-**Substitutes:** [decodeToString](../../apis-default/arkts-apis/arkts-util-textdecoder-c.md#decodetostring)
+**Substitutes:** [decodeToString](#decodetostring)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-TextDecoder-decodeWithStream(input: Uint8Array, options?: DecodeWithStreamOptions): string--><!--Device-TextDecoder-decodeWithStream(input: Uint8Array, options?: DecodeWithStreamOptions): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| input | Uint8Array | Yes | Uint8Array object to decode. |
-| options | [DecodeWithStreamOptions](arkts-arkts-util-decodewithstreamoptions-i.md) | No | Decoding-related options.<br>**Since:** 11 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| input | Uint8Array | Yes |
+| options | [DecodeWithStreamOptions](arkts-arkts-util-decodewithstreamoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | String obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -396,9 +396,9 @@ Encoding format.<br>The following formats are supported: utf-8, ibm866, iso-8859
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-<!--Device-TextDecoder-readonly encoding: string--><!--Device-TextDecoder-readonly encoding: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -414,9 +414,9 @@ Whether to display fatal errors. The value **true** means to display fatal error
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-<!--Device-TextDecoder-readonly fatal: boolean--><!--Device-TextDecoder-readonly fatal: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -432,9 +432,8 @@ Whether to ignore the byte order marker (BOM). The default value is **false**, w
 
 **Since:** 7
 
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-TextDecoder-readonly ignoreBOM = false--><!--Device-TextDecoder-readonly ignoreBOM = false-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

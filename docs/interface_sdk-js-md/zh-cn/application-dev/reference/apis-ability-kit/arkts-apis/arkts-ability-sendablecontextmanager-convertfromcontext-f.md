@@ -16,31 +16,31 @@ function convertFromContext(context: common.Context): SendableContext
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-sendableContextManager-function convertFromContext(context: common.Context): SendableContext--><!--Device-sendableContextManager-function convertFromContext(context: common.Context): SendableContext-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | common.Context | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | common.Context | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| SendableContext | [SendableContext]{ |
+| 类型 |
+| --- |
+| [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -78,4 +78,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

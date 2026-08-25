@@ -2,9 +2,9 @@
 
 音频渲染。在使用AudioRenderer的接口之前，需先通过 [audio.createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) 获取AudioRenderer实例。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-audio-interface AudioRenderer--><!--Device-audio-interface AudioRenderer-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -27,9 +27,9 @@ getTarget(): RenderTarget
 > - 若调用此接口前，已经调用过[SetTarget](#settarget)，请确保
 > [SetTarget](#settarget)的Promise对象已成功解析，否则获取到的数值可能不准确。
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-AudioRenderer-getTarget(): RenderTarget--><!--Device-AudioRenderer-getTarget(): RenderTarget-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -37,15 +37,15 @@ getTarget(): RenderTarget
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RenderTarget](arkts-audio-audio-rendertarget-e-sys.md) | 返回音频渲染器的渲染目标。 |
+| 类型 |
+| --- |
+| [RenderTarget](arkts-audio-audio-rendertarget-e-sys.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -90,11 +90,11 @@ setTarget(target: RenderTarget): Promise<void>
 > - 调用[setDefaultOutputDevice](arkts-audio-audio-audiorenderer-i.md#setdefaultoutputdevice)时，将返回错
 > 误码6800301。
 
-**起始版本：** 23
+**起始版本：** 22
+
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INJECT_PLAYBACK_TO_AUDIO_CAPTURE
-
-<!--Device-AudioRenderer-setTarget(target: RenderTarget): Promise<void>--><!--Device-AudioRenderer-setTarget(target: RenderTarget): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -102,26 +102,26 @@ setTarget(target: RenderTarget): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| target | [RenderTarget](arkts-audio-audio-rendertarget-e-sys.md) | 是 | 设置音频渲染目标。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| target | [RenderTarget](arkts-audio-audio-rendertarget-e-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permit at running and release state. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Current renderer is not supported to set target. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 **示例**
 
@@ -134,4 +134,3 @@ audioRenderer.setTarget(audio.RenderTarget.INJECT_TO_VOICE_COMMUNICATION_CAPTURE
   console.error(`Failed to set target. code: ${err.code}, message: ${err.message}`);
 });
 ```
-

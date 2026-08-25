@@ -6,7 +6,7 @@ You need a custom class to implement the **ContentModifier** API.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface TextClockConfiguration--><!--Device-unnamed-declare interface TextClockConfiguration-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,11 +29,11 @@ Whether the text clock is started.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TextClockConfiguration-started: boolean--><!--Device-TextClockConfiguration-started: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,11 +49,11 @@ Time zone offset of the text clock in seconds from UTC.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TextClockConfiguration-timeValue: number--><!--Device-TextClockConfiguration-timeValue: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,11 +69,10 @@ Time zone offset of the text clock.The value range is [-14, 12], indicating UTC+
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-TextClockConfiguration-timeZoneOffset: number--><!--Device-TextClockConfiguration-timeZoneOffset: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

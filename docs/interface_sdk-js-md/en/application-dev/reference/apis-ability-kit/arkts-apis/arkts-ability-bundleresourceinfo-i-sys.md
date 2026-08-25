@@ -5,9 +5,9 @@ The module provides resource information of an application, such as the icon and
 > **NOTE：**&gt;
 > The APIs provided by this module are system APIs.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-unnamed-export interface BundleResourceInfo--><!--Device-unnamed-export interface BundleResourceInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -21,11 +21,11 @@ readonly appIndex: int
 
 Index of an application clone.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-BundleResourceInfo-readonly appIndex: int--><!--Device-BundleResourceInfo-readonly appIndex: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -41,9 +41,9 @@ Bundle name of the application.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-BundleResourceInfo-readonly bundleName: string--><!--Device-BundleResourceInfo-readonly bundleName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -52,16 +52,16 @@ Bundle name of the application.
 ## drawableDescriptor
 
 ```TypeScript
-readonly drawableDescriptor: DrawableDescriptor | null
+readonly drawableDescriptor: DrawableDescriptor
 ```
 
-Indicates the drawable descriptor of this bundle icon
+drawableDescriptor object of the application icon.
 
-**Type:** [DrawableDescriptor](../../apis-default/arkts-apis/arkts-arkui-drawabledescriptor-drawabledescriptor-c.md) \| null
+**Type:** [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-BundleResourceInfo-readonly drawableDescriptor: DrawableDescriptor | null--><!--Device-BundleResourceInfo-readonly drawableDescriptor: DrawableDescriptor | null-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -77,9 +77,9 @@ Application icon, which is encoded using Base64.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-BundleResourceInfo-readonly icon: string--><!--Device-BundleResourceInfo-readonly icon: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -95,11 +95,10 @@ Application label.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-BundleResourceInfo-readonly label: string--><!--Device-BundleResourceInfo-readonly label: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
 **System API:** This is a system API.
-

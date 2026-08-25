@@ -2,9 +2,9 @@
 
 Enumerates the print job states.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-print-enum PrintDocumentAdapterState--><!--Device-print-enum PrintDocumentAdapterState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -16,9 +16,9 @@ PREVIEW_DESTROY = 0
 
 The preview fails.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintDocumentAdapterState-PREVIEW_DESTROY = 0--><!--Device-PrintDocumentAdapterState-PREVIEW_DESTROY = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -30,9 +30,9 @@ PRINT_TASK_SUCCEED = 1
 
 The print job is successful.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintDocumentAdapterState-PRINT_TASK_SUCCEED = 1--><!--Device-PrintDocumentAdapterState-PRINT_TASK_SUCCEED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -44,9 +44,9 @@ PRINT_TASK_FAIL = 2
 
 The print job is failed.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintDocumentAdapterState-PRINT_TASK_FAIL = 2--><!--Device-PrintDocumentAdapterState-PRINT_TASK_FAIL = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -58,9 +58,9 @@ PRINT_TASK_CANCEL = 3
 
 The print job is canceled.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintDocumentAdapterState-PRINT_TASK_CANCEL = 3--><!--Device-PrintDocumentAdapterState-PRINT_TASK_CANCEL = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -72,9 +72,8 @@ PRINT_TASK_BLOCK = 4
 
 The print job is blocked.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintDocumentAdapterState-PRINT_TASK_BLOCK = 4--><!--Device-PrintDocumentAdapterState-PRINT_TASK_BLOCK = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
-

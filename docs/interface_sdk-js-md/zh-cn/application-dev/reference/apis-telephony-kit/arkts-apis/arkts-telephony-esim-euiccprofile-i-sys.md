@@ -2,9 +2,9 @@
 
 配置文件信息。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-eSIM-export interface EuiccProfile--><!--Device-eSIM-export interface EuiccProfile-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -24,11 +24,11 @@ accessRules: Array<AccessRule>
 
 配置文件规则。
 
-**类型：** Array&lt;[AccessRule](arkts-telephony-esim-accessrule-i.md)&gt;
+**类型：** Array&lt;[AccessRule](arkts-telephony-esim-accessrule-i-sys.md)&gt;
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-EuiccProfile-accessRules: Array<AccessRule>--><!--Device-EuiccProfile-accessRules: Array<AccessRule>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -44,9 +44,9 @@ iccid: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-EuiccProfile-iccid: string--><!--Device-EuiccProfile-iccid: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -62,9 +62,9 @@ nickName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-EuiccProfile-nickName: string--><!--Device-EuiccProfile-nickName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -80,9 +80,9 @@ operatorId: OperatorId
 
 **类型：** [OperatorId](arkts-telephony-esim-operatorid-i-sys.md)
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-EuiccProfile-operatorId: OperatorId--><!--Device-EuiccProfile-operatorId: OperatorId-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -98,9 +98,9 @@ policyRules: PolicyRules
 
 **类型：** [PolicyRules](arkts-telephony-esim-policyrules-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-EuiccProfile-policyRules: PolicyRules--><!--Device-EuiccProfile-policyRules: PolicyRules-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -116,9 +116,9 @@ profileClass: ProfileClass
 
 **类型：** [ProfileClass](arkts-telephony-esim-profileclass-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-EuiccProfile-profileClass: ProfileClass--><!--Device-EuiccProfile-profileClass: ProfileClass-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -134,9 +134,9 @@ profileName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-EuiccProfile-profileName: string--><!--Device-EuiccProfile-profileName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -152,9 +152,9 @@ serviceProviderName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-EuiccProfile-serviceProviderName: string--><!--Device-EuiccProfile-serviceProviderName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -170,11 +170,10 @@ state: ProfileState
 
 **类型：** [ProfileState](arkts-telephony-esim-profilestate-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-EuiccProfile-state: ProfileState--><!--Device-EuiccProfile-state: ProfileState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
-

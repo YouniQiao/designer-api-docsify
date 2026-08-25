@@ -4,7 +4,7 @@ CarAwareness Capability.
 
 **Since:** 26.1.0
 
-<!--Device-carAwareness-enum Capability--><!--Device-carAwareness-enum Capability-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -18,9 +18,9 @@ spatial motion specific capability
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
-<!--Device-Capability-SPATIAL_MOTION = 'SpatialMotion'--><!--Device-Capability-SPATIAL_MOTION = 'SpatialMotion'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -34,9 +34,9 @@ realtime weather specific capability
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
-<!--Device-Capability-REALTIME_WEATHER = 'RealTimeWeather'--><!--Device-Capability-REALTIME_WEATHER = 'RealTimeWeather'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -50,9 +50,8 @@ refueling specific capability
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Capability-REFUELING = 'Refueling'--><!--Device-Capability-REFUELING = 'Refueling'-End-->
-
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
-

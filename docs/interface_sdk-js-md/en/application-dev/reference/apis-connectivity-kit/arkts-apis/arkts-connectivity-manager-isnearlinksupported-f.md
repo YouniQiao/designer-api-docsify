@@ -16,15 +16,14 @@ Checks whether the current device supports NearLink.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-manager-function isNearLinkSupported(): boolean--><!--Device-manager-function isNearLinkSupported(): boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the current device supports NearLink. The value **true** indicates that the device supports NearLink, and **false** indicates the opposite. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

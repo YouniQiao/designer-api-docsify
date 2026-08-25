@@ -16,11 +16,11 @@ Sets the status of a CA certificate. Currently, only the status of a user's CA c
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_USER_TRUSTED_CERT
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-certificateManager-function setCertificateStatus(certUri: string, certType: CertType, enabled: boolean) : Promise<void>--><!--Device-certificateManager-function setCertificateStatus(certUri: string, certType: CertType, enabled: boolean) : Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -28,27 +28,27 @@ Sets the status of a CA certificate. Currently, only the status of a user's CA c
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| certUri | string | Yes | Unique identifier of the certificate. Currently, only user CA certificates are supported. |
-| certType | CertType | Yes | Certificate type. Currently, only the status of user CA certificates (**CA_CERT_USER**) can be set. |
-| enabled | boolean | Yes | Whether the certificate is enabled. **true**: enabled; **false**: disabled. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| certUri | string | Yes |
+| certType | [CertType](../../apis-network-kit/arkts-apis/arkts-network-http-certtype-e.md) | Yes |
+| enabled | boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. <br>The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter verification failed. <br>Possible causes: the URI is null or the URI format is wrong, <br> the certType's value is invalid or not supported. |
-| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
-| [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) |
+| [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) |
 
 **Examples**
 
@@ -68,4 +68,3 @@ try {
   console.error(`Failed to set certificate status. Code: ${error.code}, message: ${error.message}`);
 }
 ```
-

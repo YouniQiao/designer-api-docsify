@@ -4,9 +4,7 @@ Describe the options for the ParallelizeUI.@interface ParallelOption
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export interface ParallelOption--><!--Device-unnamed-export interface ParallelOption-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +25,8 @@ Whether ParallelizeUI create is enabled.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ParallelOption-enable?: boolean--><!--Device-ParallelOption-enable?: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

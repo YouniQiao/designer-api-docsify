@@ -6,9 +6,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-unnamed-export class Double--><!--Device-unnamed-export class Double-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,19 +25,17 @@ static $_invoke(): Double
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-static $_invoke(): Double--><!--Device-Double-static $_invoke(): Double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Double | 新的Double实例。 |
+| 类型 |
+| --- |
+| Double |
 
 ## $_invoke
 
@@ -51,25 +47,23 @@ static $_invoke(value: string | Double | BigInt | undefined | null): Double
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-static $_invoke(value: string | Double | BigInt | undefined | null): Double--><!--Device-Double-static $_invoke(value: string | Double | BigInt | undefined | null): Double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | string \| Double \| [BigInt](arkts-arkts-bigint-c.md) \| undefined \| null | 是 | 待转换为number的值。 可以是string、number或BigInt（可选）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | string \| Double \| [BigInt](arkts-arkts-bigint-c.md) \| undefined \| null | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Double | 新的Double实例。 |
+| 类型 |
+| --- |
+| Double |
 
 ## add
 
@@ -81,25 +75,23 @@ public add(other: Double): Double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public add(other: Double): Double--><!--Device-Double-public add(other: Double): Double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Double | 是 | 加法运算的右操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Double | 加法运算的结果。 |
+| 类型 |
+| --- |
+| Double |
 
 ## bitCastFromLong
 
@@ -111,25 +103,23 @@ public static bitCastFromLong(bits: long): double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static bitCastFromLong(bits: long): double--><!--Device-Double-public static bitCastFromLong(bits: long): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bits | long | 是 | 待转换的位表示。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [bits](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-deflatependingoutputinfo-i.md) | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | 转换后的值。 |
+| 类型 |
+| --- |
+| double |
 
 ## bitCastToLong
 
@@ -141,25 +131,23 @@ public static bitCastToLong(val: double): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static bitCastToLong(val: double): long--><!--Device-Double-public static bitCastToLong(val: double): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | double | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 位表示。 |
+| 类型 |
+| --- |
+| long |
 
 ## compare
 
@@ -171,26 +159,24 @@ compare(double, double)检查两个double值的差异是否不超过Double.DELTA
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static compare(lhs: double, rhs: double): boolean--><!--Device-Double-public static compare(lhs: double, rhs: double): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| lhs | double | 是 | 参与比较的左侧double值。 |
-| rhs | double | 是 | 参与比较的右侧double值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| lhs | double | 是 |
+| rhs | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果lhs与rhs在Double.DELTA精度范围内相等则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## compareTo
 
@@ -202,25 +188,23 @@ public compareTo(other: Double): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public compareTo(other: Double): int--><!--Device-Double-public compareTo(other: Double): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Double | 是 | 用于比较的Double对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 当前值大于传入值时返回0，否则返回-1。 |
+| 类型 |
+| --- |
+| int |
 
 ## constructor
 
@@ -232,11 +216,9 @@ constructor()
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-constructor()--><!--Device-Double-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -250,19 +232,17 @@ constructor(value: double)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-constructor(value: double)--><!--Device-Double-constructor(value: double)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | double | 是 | 初始值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | double | 是 |
 
 ## constructor
 
@@ -274,19 +254,17 @@ constructor(value: BigInt)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-constructor(value: BigInt)--><!--Device-Double-constructor(value: BigInt)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [BigInt](arkts-arkts-bigint-c.md) | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 ## constructor
 
@@ -298,19 +276,17 @@ constructor(value: string)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-constructor(value: string)--><!--Device-Double-constructor(value: string)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | string | 是 | 可能包含number值的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | string | 是 |
 
 ## div
 
@@ -322,25 +298,23 @@ public div(other: Double): Double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public div(other: Double): Double--><!--Device-Double-public div(other: Double): Double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Double | 是 | 除法运算的右操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Double | 除法运算的结果。 |
+| 类型 |
+| --- |
+| Double |
 
 ## equals
 
@@ -352,25 +326,23 @@ equals(other: Any): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-equals(other: Any): boolean--><!--Device-Double-equals(other: Any): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Any | 是 | 待比较的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Any | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果传入对象与当前实例的值相同则返回true，否则返回false。 如果传入对象的类型与当前类型不一致，则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isFinite
 
@@ -382,25 +354,23 @@ isFinite(double)检查double值是否为浮点数值（既非NaN也非无穷大�
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-static isFinite(v: double): boolean--><!--Device-Double-static isFinite(v: double): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| v | double | 是 | 待检测的double值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| v | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果参数为浮点数值则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isFinite
 
@@ -412,19 +382,17 @@ isFinite()检查底层的double值是否为浮点数值（既非NaN也非无穷�
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-isFinite(): boolean--><!--Device-Double-isFinite(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果底层的double值为浮点数值则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isGreaterEqualThan
 
@@ -436,25 +404,23 @@ public isGreaterEqualThan(other: Double): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public isGreaterEqualThan(other: Double): boolean--><!--Device-Double-public isGreaterEqualThan(other: Double): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Double | 是 | 比较运算的右操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果当前值大于或等于传入值则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isGreaterThan
 
@@ -466,25 +432,23 @@ public isGreaterThan(other: Double): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public isGreaterThan(other: Double): boolean--><!--Device-Double-public isGreaterThan(other: Double): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Double | 是 | 比较运算的右操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果当前值大于传入值则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isInteger
 
@@ -496,25 +460,23 @@ public static isInteger(v: double): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static isInteger(v: double): boolean--><!--Device-Double-public static isInteger(v: double): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| v | double | 是 | 待检测的double值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| v | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果参数接近整数则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isInteger
 
@@ -526,19 +488,17 @@ public isInteger(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public isInteger(): boolean--><!--Device-Double-public isInteger(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果底层的double值接近整数则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isLessEqualThan
 
@@ -550,25 +510,23 @@ public isLessEqualThan(other: Double): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public isLessEqualThan(other: Double): boolean--><!--Device-Double-public isLessEqualThan(other: Double): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Double | 是 | 比较运算的右操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果当前值小于或等于传入值则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isLessThan
 
@@ -580,25 +538,23 @@ public isLessThan(other: Double): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public isLessThan(other: Double): boolean--><!--Device-Double-public isLessThan(other: Double): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Double | 是 | 比较运算的右操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果当前值小于传入值则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isNaN
 
@@ -610,25 +566,23 @@ isNaN(double)检查double值是否为NaN（非数字）。
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-static isNaN(v: double): boolean--><!--Device-Double-static isNaN(v: double): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| v | double | 是 | 待检测的double值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| v | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果参数为NaN则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isNaN
 
@@ -640,19 +594,17 @@ isNaN()检查底层的double值是否为NaN（非数字）。
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-isNaN(): boolean--><!--Device-Double-isNaN(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果底层的double值为NaN则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isSafeInteger
 
@@ -664,25 +616,23 @@ public static isSafeInteger(v: double): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static isSafeInteger(v: double): boolean--><!--Device-Double-public static isSafeInteger(v: double): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| v | double | 是 | 待检测的double值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| v | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果参数为整数且小于MAX_SAFE_INTEGER则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isSafeInteger
 
@@ -694,19 +644,17 @@ public isSafeInteger(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public isSafeInteger(): boolean--><!--Device-Double-public isSafeInteger(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果底层的double值为安全整数则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## mul
 
@@ -718,25 +666,23 @@ public mul(other: Double): Double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public mul(other: Double): Double--><!--Device-Double-public mul(other: Double): Double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Double | 是 | 乘法运算的右操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Double | 乘法运算的结果。 |
+| 类型 |
+| --- |
+| Double |
 
 ## parseFloat
 
@@ -748,25 +694,23 @@ parseFloat(String)将std.core.String转换为double值。 参数为'+Infinity'�
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-static parseFloat(s: string): double--><!--Device-Double-static parseFloat(s: string): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| s | string | 是 | 待转换的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| s | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | 转换结果。 |
+| 类型 |
+| --- |
+| double |
 
 ## parseInt
 
@@ -778,25 +722,23 @@ parseInt(String)以10为基数从String中解析出整数。
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-static parseInt(s: string): double--><!--Device-Double-static parseInt(s: string): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| s | string | 是 | 待转换的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| s | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | 解析结果。 |
+| 类型 |
+| --- |
+| double |
 
 ## parseInt
 
@@ -808,26 +750,24 @@ parseInt(String, int)按指定基数从String中解析出整数。 参数为('10
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-static parseInt(s: string, r: int): double--><!--Device-Double-static parseInt(s: string, r: int): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| s | string | 是 | 待转换的字符串。 |
-| r | int | 是 | 转换使用的基数，取值范围为[2, 36]，传入0时按10处理。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| s | string | 是 |
+| r | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | 解析结果。 |
+| 类型 |
+| --- |
+| double |
 
 ## parseInt
 
@@ -839,26 +779,24 @@ parseInt(String, double)按指定基数从String中解析出整数。 参数为(
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-static parseInt(s: string, r: double): double--><!--Device-Double-static parseInt(s: string, r: double): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| s | string | 是 | 待转换的字符串。 |
-| r | double | 是 | 转换使用的基数，取值范围为[2, 36]，传入0时按10处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| s | string | 是 |
+| r | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | 解析结果。 |
+| 类型 |
+| --- |
+| double |
 
 ## sub
 
@@ -870,25 +808,23 @@ public sub(other: Double): Double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public sub(other: Double): Double--><!--Device-Double-public sub(other: Double): Double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Double | 是 | 减法运算的右操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Double | 减法运算的结果。 |
+| 类型 |
+| --- |
+| Double |
 
 ## toByte
 
@@ -900,19 +836,17 @@ public toByte(): byte
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public toByte(): byte--><!--Device-Double-public toByte(): byte-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| byte | 当前值转换得到的byte值。 |
+| 类型 |
+| --- |
+| byte |
 
 ## toByte
 
@@ -924,25 +858,23 @@ public static toByte(value: double): byte
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static toByte(value: double): byte--><!--Device-Double-public static toByte(value: double): byte-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | double | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| byte |  |
+| 类型 |
+| --- |
+| byte |
 
 ## toDouble
 
@@ -954,19 +886,17 @@ toDouble(): double
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-toDouble(): double--><!--Device-Double-toDouble(): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | 当前值转换得到的double值。 |
+| 类型 |
+| --- |
+| double |
 
 ## toDouble
 
@@ -978,25 +908,23 @@ static toDouble(value: double): double
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-static toDouble(value: double): double--><!--Device-Double-static toDouble(value: double): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | double | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double |  |
+| 类型 |
+| --- |
+| double |
 
 ## toExponential
 
@@ -1008,19 +936,17 @@ toExponential()以指数表示法返回底层double值对应的std.core.string�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public toExponential(): string--><!--Device-Double-public toExponential(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## toExponential
 
@@ -1032,25 +958,23 @@ toExponential()以指数表示法返回底层double值对应的std.core.String�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public toExponential(d?: double): string--><!--Device-Double-public toExponential(d?: double): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| d | double | 否 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | double | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## toExponentialWithNoDigit
 
@@ -1062,19 +986,17 @@ toExponential(double)以指数表示法返回底层double值对应的std.core.st
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public toExponentialWithNoDigit(): string--><!--Device-Double-public toExponentialWithNoDigit(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## toFixed
 
@@ -1086,19 +1008,17 @@ toFixed(double)以定点表示法返回底层double值对应的std.core.string�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public toFixed(): string--><!--Device-Double-public toFixed(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string |  |
+| 类型 |
+| --- |
+| string |
 
 ## toFixed
 
@@ -1110,25 +1030,23 @@ toFixed(double)以定点表示法返回底层double值对应的std.core.string�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public toFixed(d?: double): string--><!--Device-Double-public toFixed(d?: double): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| d | double | 否 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | double | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string |  |
+| 类型 |
+| --- |
+| string |
 
 ## toFixedImpl
 
@@ -1140,25 +1058,23 @@ toFixed(double)以定点表示法返回底层double值对应的std.core.string�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public toFixedImpl(d: double): string--><!--Device-Double-public toFixedImpl(d: double): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| d | double | 是 | 小数位数（取整数部分），取值范围必须为[0, 100]。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## toFloat
 
@@ -1170,19 +1086,17 @@ public toFloat(): float
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public toFloat(): float--><!--Device-Double-public toFloat(): float-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| float | 当前值转换得到的float值。 |
+| 类型 |
+| --- |
+| float |
 
 ## toFloat
 
@@ -1194,25 +1108,23 @@ public static toFloat(value: double): float
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static toFloat(value: double): float--><!--Device-Double-public static toFloat(value: double): float-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | double | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| float |  |
+| 类型 |
+| --- |
+| float |
 
 ## toInt
 
@@ -1224,19 +1136,17 @@ public toInt(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public toInt(): int--><!--Device-Double-public toInt(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 当前值转换得到的int值。 |
+| 类型 |
+| --- |
+| int |
 
 ## toInt
 
@@ -1248,25 +1158,23 @@ public static toInt(value: double): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static toInt(value: double): int--><!--Device-Double-public static toInt(value: double): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | double | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int |  |
+| 类型 |
+| --- |
+| int |
 
 ## toLocaleString
 
@@ -1278,26 +1186,24 @@ public toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.NumberForma
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.NumberFormatOptions): string--><!--Device-Double-public toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.NumberFormatOptions): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | 否 | 包含BCP 47语言标签的字符串，或由此类 字符串组成的数组。 |
-| options | Intl.NumberFormatOptions | 否 | 包含Intl.NumberFormat选项的部分或 全部属性的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | 否 |
+| options | Intl.NumberFormatOptions | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 按区域设置转换后的结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## toLocaleString
 
@@ -1309,26 +1215,24 @@ public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string--><!--Device-Double-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | 否 | 包含BCP 47语言标签的字符串，或由此类 字符串组成的数组。 |
-| options | object | 否 | 包含Intl.NumberFormat选项的部分或 全部属性的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | 否 |
+| options | object | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 按区域设置转换后的结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## toLong
 
@@ -1340,19 +1244,17 @@ public toLong(): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public toLong(): long--><!--Device-Double-public toLong(): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 当前值转换得到的long值。 |
+| 类型 |
+| --- |
+| long |
 
 ## toLong
 
@@ -1364,25 +1266,23 @@ public static toLong(value: double): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static toLong(value: double): long--><!--Device-Double-public static toLong(value: double): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | double | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long |  |
+| 类型 |
+| --- |
+| long |
 
 ## toPrecision
 
@@ -1394,25 +1294,23 @@ toPrecision(double)按指定精度返回底层double值对应的std.core.string�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public toPrecision(d: double): string--><!--Device-Double-public toPrecision(d: double): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| d | double | 是 | 精度（四舍五入取整），取值范围必须为[1, 100]。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## toPrecision
 
@@ -1424,19 +1322,17 @@ toPrecision()以指数表示法返回底层double值对应的std.core.string。 
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public toPrecision(): string--><!--Device-Double-public toPrecision(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换结果。 |
+| 类型 |
+| --- |
+| string |
 
 ## toShort
 
@@ -1448,19 +1344,17 @@ public toShort(): short
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public toShort(): short--><!--Device-Double-public toShort(): short-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| short | 当前值转换得到的short值。 |
+| 类型 |
+| --- |
+| short |
 
 ## toShort
 
@@ -1472,25 +1366,23 @@ public static toShort(value: double): short
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static toShort(value: double): short--><!--Device-Double-public static toShort(value: double): short-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | double | 是 | 待转换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| short |  |
+| 类型 |
+| --- |
+| short |
 
 ## toString
 
@@ -1502,26 +1394,24 @@ toString(d: double, r: int): string —— 按基数r返回d的字符串表示�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static toString(d: double, r: int): string--><!--Device-Double-public static toString(d: double, r: int): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| d | double | 是 |  |
-| r | int | 是 | <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | double | 是 |
+| r | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 字符串形式的值。 |
+| 类型 |
+| --- |
+| string |
 
 ## toString
 
@@ -1533,25 +1423,23 @@ public static toString(d: double): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static toString(d: double): string--><!--Device-Double-public static toString(d: double): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| d | double | 是 | 字符串形式的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string |  |
+| 类型 |
+| --- |
+| string |
 
 ## toString
 
@@ -1563,25 +1451,23 @@ public toString(r: int): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public toString(r: int): string--><!--Device-Double-public toString(r: int): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| r | int | 是 | <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| r | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 字符串形式的值。 |
+| 类型 |
+| --- |
+| string |
 
 ## toString
 
@@ -1593,19 +1479,17 @@ public toString(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public toString(): string--><!--Device-Double-public toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 字符串形式的值。 |
+| 类型 |
+| --- |
+| string |
 
 ## BIT_SIZE
 
@@ -1619,11 +1503,9 @@ public static readonly BIT_SIZE: byte = 64
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static readonly BIT_SIZE: byte = 64--><!--Device-Double-public static readonly BIT_SIZE: byte = 64-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1639,11 +1521,9 @@ public static readonly BYTE_SIZE: byte = 8
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static readonly BYTE_SIZE: byte = 8--><!--Device-Double-public static readonly BYTE_SIZE: byte = 8-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1659,11 +1539,9 @@ public static readonly DELTA: double = Double.bitCastFromLong(0x3cb0000000000000
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static readonly DELTA: double = Double.bitCastFromLong(0x3cb0000000000000)--><!--Device-Double-public static readonly DELTA: double = Double.bitCastFromLong(0x3cb0000000000000)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1679,11 +1557,9 @@ public static readonly EPSILON: double = Double.DELTA
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static readonly EPSILON: double = Double.DELTA--><!--Device-Double-public static readonly EPSILON: double = Double.DELTA-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1699,11 +1575,9 @@ public static readonly MAX_SAFE_INTEGER: double = 9007199254740991
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static readonly MAX_SAFE_INTEGER: double = 9007199254740991--><!--Device-Double-public static readonly MAX_SAFE_INTEGER: double = 9007199254740991-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1719,11 +1593,9 @@ public static readonly MAX_VALUE: double = 1.7976931348623157e+308
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static readonly MAX_VALUE: double = 1.7976931348623157e+308--><!--Device-Double-public static readonly MAX_VALUE: double = 1.7976931348623157e+308-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1739,11 +1611,9 @@ public static readonly MIN_SAFE_INTEGER: double = -9007199254740991
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static readonly MIN_SAFE_INTEGER: double = -9007199254740991--><!--Device-Double-public static readonly MIN_SAFE_INTEGER: double = -9007199254740991-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1759,11 +1629,9 @@ public static readonly MIN_VALUE: double = 4.9e-300 / 1.e+24
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static readonly MIN_VALUE: double = 4.9e-300 / 1.e+24--><!--Device-Double-public static readonly MIN_VALUE: double = 4.9e-300 / 1.e+24-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1779,11 +1647,9 @@ public static readonly NaN: double = 0.0 / 0.0
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static readonly NaN: double = 0.0 / 0.0--><!--Device-Double-public static readonly NaN: double = 0.0 / 0.0-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1799,11 +1665,9 @@ public static readonly NEGATIVE_INFINITY: double = -1.0 / 0.0
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static readonly NEGATIVE_INFINITY: double = -1.0 / 0.0--><!--Device-Double-public static readonly NEGATIVE_INFINITY: double = -1.0 / 0.0-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1819,11 +1683,9 @@ public static readonly POSITIVE_INFINITY: double = 1.0 / 0.0
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static readonly POSITIVE_INFINITY: double = 1.0 / 0.0--><!--Device-Double-public static readonly POSITIVE_INFINITY: double = 1.0 / 0.0-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1839,11 +1701,8 @@ public static readonly PRECISION: byte = 53
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Double-public static readonly PRECISION: byte = 53--><!--Device-Double-public static readonly PRECISION: byte = 53-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

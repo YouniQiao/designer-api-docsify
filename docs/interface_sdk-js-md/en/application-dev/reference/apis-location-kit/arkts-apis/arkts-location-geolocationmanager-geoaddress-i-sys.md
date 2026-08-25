@@ -2,9 +2,9 @@
 
 Data struct describes geographic locations.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-geoLocationManager-export interface GeoAddress--><!--Device-geoLocationManager-export interface GeoAddress-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -24,11 +24,10 @@ Indicates whether it is an mock GeoAddress
 
 **Type:** Boolean
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GeoAddress-isFromMock?: Boolean--><!--Device-GeoAddress-isFromMock?: Boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 **System API:** This is a system API.
-

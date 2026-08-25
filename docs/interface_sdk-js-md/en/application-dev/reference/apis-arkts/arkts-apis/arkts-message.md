@@ -4,11 +4,9 @@ namespace concurrency
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export namespace concurrency--><!--Device-unnamed-export namespace concurrency-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -21,7 +19,6 @@ namespace concurrency
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Message](arkts-arkts-concurrency-message-c.md) | Represents a message that can be sent to a MessageHandler for processing |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Message](arkts-arkts-concurrency-message-c.md) |

@@ -4,11 +4,11 @@ The AbilityManager module provides APIs for obtaining, adding, and modifying abi
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [abilityManager/abilityManager](arkts-app-ability-abilitymanager.md)
-
-<!--Device-unnamed-declare namespace abilityManager--><!--Device-unnamed-declare namespace abilityManager-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -24,19 +24,18 @@ The AbilityManager module provides APIs for obtaining, adding, and modifying abi
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-depr-f-sys.md#getabilityrunninginfos) | Obtains the ability running information. This API uses a promise to return the result. |
-| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-depr-f-sys.md#getabilityrunninginfos) | Obtains the ability running information. This API uses an asynchronous callback to return the result. |
-| [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-depr-f-sys.md#updateconfiguration) | Updates the configuration. This API uses an asynchronous callback to return the result. |
-| [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-depr-f-sys.md#updateconfiguration) | Updates the configuration. This API uses a promise to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-depr-f-sys.md#getabilityrunninginfos) |
+| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-depr-f-sys.md#getabilityrunninginfos) |
+| [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-depr-f-sys.md#updateconfiguration) |
+| [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-depr-f-sys.md#updateconfiguration) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [AbilityState](arkts-ability-abilitymanager-abilitystate-depr-e-sys.md) | Enumerates the ability states. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AbilityState](arkts-ability-abilitymanager-abilitystate-depr-e-sys.md) |
 <!--DelEnd-->
-

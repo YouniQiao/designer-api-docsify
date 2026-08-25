@@ -2,9 +2,9 @@
 
 控件的边框信息。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-declare interface Rect--><!--Device-unnamed-declare interface Rect-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -24,13 +24,13 @@ bottom: int
 控件边框的右下角的Y坐标，取值大于等于0的整数，单位：px。  
 **说明：** 从API version 20开始，该属性不再为只读属性。从API version 11开始，该接口支持在原子化服务中使用。@readonly [since 9-19]
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Rect-bottom: int--><!--Device-Rect-bottom: int-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -42,13 +42,13 @@ displayId?: int
 
 控件边框所属的屏幕ID，取值大于或等于0的整数。默认值为设备默认屏幕ID。从API version 20开始，该接口支持在原子化服务中使用。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-Rect-displayId?: int--><!--Device-Rect-displayId?: int-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -61,13 +61,13 @@ left: int
 控件边框的左上角的X坐标，取值大于等于0的整数，单位：px。  
 **说明：** 从API version 20开始，该属性不再为只读属性。从API version 11开始，该接口支持在原子化服务中使用。@readonly [since 9-19]
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Rect-left: int--><!--Device-Rect-left: int-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -80,13 +80,13 @@ right: int
 控件边框的右下角的X坐标，取值大于等于0的整数，单位：px。  
 **说明：** 从API version 20开始，该属性不再为只读属性。从API version 11开始，该接口支持在原子化服务中使用。@readonly [since 9-19]
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Rect-right: int--><!--Device-Rect-right: int-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -99,13 +99,12 @@ top: int
 控件边框的左上角的Y坐标，取值大于等于0的整数，单位：px。  
 **说明：** 从API version 20开始，该属性不再为只读属性。从API version 11开始，该接口支持在原子化服务中使用。@readonly [since 9-19]
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-Rect-top: int--><!--Device-Rect-top: int-End-->
-
 **系统能力：** SystemCapability.Test.UiTest
-

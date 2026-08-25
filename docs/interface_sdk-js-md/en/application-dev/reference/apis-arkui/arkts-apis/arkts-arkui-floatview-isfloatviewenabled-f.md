@@ -13,19 +13,18 @@ function isFloatViewEnabled(): boolean
 ```
 
 Checks whether the device supports the float view.  
-| Type| Description| |------------|------------| | boolean | Whether the device supports the float view. **true** to support; **false** otherwise.|
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Description| |------------|------------| | boolean |
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-floatView-function isFloatViewEnabled(): boolean--><!--Device-floatView-function isFloatViewEnabled(): boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the float view is enabled, otherwise false. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

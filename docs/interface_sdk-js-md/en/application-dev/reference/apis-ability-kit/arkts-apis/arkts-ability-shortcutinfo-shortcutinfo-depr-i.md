@@ -7,11 +7,11 @@
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ShortcutInfo](#shortcutinfo)
-
-<!--Device-unnamed-export interface ShortcutInfo--><!--Device-unnamed-export interface ShortcutInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -27,11 +27,11 @@ Name of the bundle that contains the shortcut.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** bundleName
-
-<!--Device-ShortcutInfo-readonly bundleName: string--><!--Device-ShortcutInfo-readonly bundleName: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -47,9 +47,9 @@ Message displayed when the shortcut is disabled.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ShortcutInfo-readonly disableMessage: string--><!--Device-ShortcutInfo-readonly disableMessage: string-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -65,11 +65,11 @@ Local ability information of the shortcut.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** hostAbility
-
-<!--Device-ShortcutInfo-readonly hostAbility: string--><!--Device-ShortcutInfo-readonly hostAbility: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -85,11 +85,11 @@ Icon of the shortcut.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** icon
-
-<!--Device-ShortcutInfo-readonly icon: string--><!--Device-ShortcutInfo-readonly icon: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -105,11 +105,11 @@ Icon ID of the shortcut.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** iconId
-
-<!--Device-ShortcutInfo-readonly iconId: number--><!--Device-ShortcutInfo-readonly iconId: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -125,11 +125,11 @@ ID of the application to which the shortcut belongs.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** id
-
-<!--Device-ShortcutInfo-readonly id: string--><!--Device-ShortcutInfo-readonly id: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -147,11 +147,11 @@ Whether the shortcut is enabled. **true** if enabled, **false** otherwise.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** visible
-
-<!--Device-ShortcutInfo-readonly isEnabled?: boolean--><!--Device-ShortcutInfo-readonly isEnabled?: boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -169,11 +169,11 @@ Whether the shortcut is static. **true** if static, **false** otherwise.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** sourceType
-
-<!--Device-ShortcutInfo-readonly isHomeShortcut?: boolean--><!--Device-ShortcutInfo-readonly isHomeShortcut?: boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -191,11 +191,11 @@ Whether the shortcut is static. **true** if static, **false** otherwise.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** sourceType
-
-<!--Device-ShortcutInfo-readonly isStatic?: boolean--><!--Device-ShortcutInfo-readonly isStatic?: boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -211,11 +211,11 @@ Name of the shortcut.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** label
-
-<!--Device-ShortcutInfo-readonly label: string--><!--Device-ShortcutInfo-readonly label: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -231,11 +231,11 @@ Name ID of the shortcut.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** labelId
-
-<!--Device-ShortcutInfo-readonly labelId: number--><!--Device-ShortcutInfo-readonly labelId: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -251,11 +251,10 @@ Want list for the shortcut.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** wants
 
-<!--Device-ShortcutInfo-readonly wants: Array<ShortcutWant>--><!--Device-ShortcutInfo-readonly wants: Array<ShortcutWant>-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework
-

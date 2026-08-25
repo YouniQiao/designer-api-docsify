@@ -16,15 +16,12 @@ Battery charging state of the current device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-batteryInfo-function chargingStatus(): BatteryChargeState--><!--Device-batteryInfo-function chargingStatus(): BatteryChargeState-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BatteryChargeState](arkts-basicservices-batteryinfo-batterychargestate-e.md) | Returns the battery charging state of the current device. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [BatteryChargeState](arkts-basicservices-batteryinfo-batterychargestate-e.md) |

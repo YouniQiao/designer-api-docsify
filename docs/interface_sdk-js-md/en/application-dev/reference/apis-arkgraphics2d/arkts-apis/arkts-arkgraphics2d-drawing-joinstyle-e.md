@@ -2,9 +2,9 @@
 
 Enumerates the join styles of a pen. The join style defines the shape of the joints of a polyline segment drawn by the pen.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-drawing-enum JoinStyle--><!--Device-drawing-enum JoinStyle-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -16,9 +16,9 @@ MITER_JOIN = 0
 
 Mitered corner. If the angle of a polyline is small, its miter length may be inappropriate. In this case, you need to use the miter limit to limit the miter length.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-JoinStyle-MITER_JOIN = 0--><!--Device-JoinStyle-MITER_JOIN = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -30,9 +30,9 @@ ROUND_JOIN = 1
 
 Round corner.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-JoinStyle-ROUND_JOIN = 1--><!--Device-JoinStyle-ROUND_JOIN = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -44,9 +44,8 @@ BEVEL_JOIN = 2
 
 Beveled corner.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-JoinStyle-BEVEL_JOIN = 2--><!--Device-JoinStyle-BEVEL_JOIN = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
-

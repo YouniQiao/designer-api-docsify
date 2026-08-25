@@ -1,16 +1,15 @@
 # AppCloneIdentity
 
 ```TypeScript
-export type AppCloneIdentity = _AppCloneIdentity
+export type AppCloneIdentity = _BundleInfo.AppCloneIdentity
 ```
 
 Describes the identity information of an application clone.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-bundleManager-export type AppCloneIdentity = _AppCloneIdentity--><!--Device-bundleManager-export type AppCloneIdentity = _AppCloneIdentity-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _AppCloneIdentity
-
+**Property type:** _BundleInfo.AppCloneIdentity

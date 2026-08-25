@@ -4,7 +4,7 @@ Enumerates the display modes available for a composite image.
 
 **Since:** 23
 
-<!--Device-photoAccessHelper-enum CompositeDisplayMode--><!--Device-photoAccessHelper-enum CompositeDisplayMode-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -20,7 +20,7 @@ Displays the original composite image.
 
 **Since:** 23
 
-<!--Device-CompositeDisplayMode-DEFAULT = 0--><!--Device-CompositeDisplayMode-DEFAULT = 0-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -36,9 +36,8 @@ Displays the cloud-enhanced composite image.
 
 **Since:** 23
 
-<!--Device-CompositeDisplayMode-CLOUD_ENHANCEMENT = 1--><!--Device-CompositeDisplayMode-CLOUD_ENHANCEMENT = 1-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

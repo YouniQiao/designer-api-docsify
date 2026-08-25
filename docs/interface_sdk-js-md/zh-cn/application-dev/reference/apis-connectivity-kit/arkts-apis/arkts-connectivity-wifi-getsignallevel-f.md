@@ -16,28 +16,28 @@ function getSignalLevel(rssi: number, band: number): number
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [getSignalLevel](arkts-connectivity-wifimanager-getsignallevel-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
-<!--Device-wifi-function getSignalLevel(rssi: number, band: number): number--><!--Device-wifi-function getSignalLevel(rssi: number, band: number): number-End-->
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rssi | number | 是 | 热点的信号强度(dBm)。 |
-| band | number | 是 | WLAN接入点的频段。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| rssi | number | 是 |
+| band | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 信号强度，取值范围为[0, 4]。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -53,4 +53,3 @@ try {
   console.error("failed:" + JSON.stringify(error));
 }
 ```
-

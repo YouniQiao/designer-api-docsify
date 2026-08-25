@@ -4,7 +4,6 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [LoopObserver](arkts-ability-loopobserver-i.md) | The module defines an observer to listen for event processing timeout. It can be used as an input parameter in [ErrorManager.on](arkts-ability-errormanager-onerror-f.md#onerror) to listen for the event processing timeout of the current application's main thread. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [LoopObserver](arkts-ability-loopobserver-i.md) |

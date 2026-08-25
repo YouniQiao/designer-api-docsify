@@ -2,9 +2,9 @@
 
 表示分布式账号状态枚举。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-distributedAccount-enum DistributedAccountStatus--><!--Device-distributedAccount-enum DistributedAccountStatus-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -16,9 +16,9 @@ NOT_LOGGED_IN = 0
 
 未登录状态。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-DistributedAccountStatus-NOT_LOGGED_IN = 0--><!--Device-DistributedAccountStatus-NOT_LOGGED_IN = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -30,9 +30,8 @@ LOGGED_IN = 1
 
 已登录状态。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-DistributedAccountStatus-LOGGED_IN = 1--><!--Device-DistributedAccountStatus-LOGGED_IN = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
-

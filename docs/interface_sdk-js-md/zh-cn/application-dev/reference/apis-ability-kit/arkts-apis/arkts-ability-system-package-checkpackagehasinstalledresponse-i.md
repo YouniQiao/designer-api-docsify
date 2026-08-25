@@ -7,9 +7,9 @@
 
 **起始版本：** 3
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-unnamed-export interface CheckPackageHasInstalledResponse--><!--Device-unnamed-export interface CheckPackageHasInstalledResponse-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -31,9 +31,8 @@ result: boolean
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 9
 
-<!--Device-CheckPackageHasInstalledResponse-result: boolean--><!--Device-CheckPackageHasInstalledResponse-result: boolean-End-->
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework
-

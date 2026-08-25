@@ -4,11 +4,11 @@
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 13
 
-**替代接口：** NavPathStack and navDestination
-
-<!--Device-unnamed-declare enum NavRouteMode--><!--Device-unnamed-declare enum NavRouteMode-End-->
+**替代接口：** NavPathStack
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,6 +22,8 @@ PUSH_WITH_RECREATE
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 13
 
 **替代接口：** LaunchMode
@@ -29,8 +31,6 @@ PUSH_WITH_RECREATE
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavRouteMode-PUSH_WITH_RECREATE--><!--Device-NavRouteMode-PUSH_WITH_RECREATE-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,6 +42,8 @@ PUSH
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 13
 
 **替代接口：** LaunchMode
@@ -49,8 +51,6 @@ PUSH
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavRouteMode-PUSH--><!--Device-NavRouteMode-PUSH-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,6 +62,8 @@ REPLACE
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 13
 
 **替代接口：** LaunchMode
@@ -70,7 +72,4 @@ REPLACE
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-NavRouteMode-REPLACE--><!--Device-NavRouteMode-REPLACE-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

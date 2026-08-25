@@ -4,7 +4,7 @@
 
 **起始版本：** 24
 
-<!--Device-audio-enum AudioSessionBehaviorFlags--><!--Device-audio-enum AudioSessionBehaviorFlags-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -18,9 +18,9 @@ DEFAULT_BEHAVIOR = 0x00000000
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-AudioSessionBehaviorFlags-DEFAULT_BEHAVIOR = 0x00000000--><!--Device-AudioSessionBehaviorFlags-DEFAULT_BEHAVIOR = 0x00000000-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -35,9 +35,9 @@ MUTE_WHEN_INTERRUPTED = 0x00000002
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-AudioSessionBehaviorFlags-MUTE_WHEN_INTERRUPTED = 0x00000002--><!--Device-AudioSessionBehaviorFlags-MUTE_WHEN_INTERRUPTED = 0x00000002-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -53,9 +53,8 @@ PAUSE_WHEN_INTERRUPTED = 0x00000004
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AudioSessionBehaviorFlags-PAUSE_WHEN_INTERRUPTED = 0x00000004--><!--Device-AudioSessionBehaviorFlags-PAUSE_WHEN_INTERRUPTED = 0x00000004-End-->
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
-

@@ -4,7 +4,7 @@ Enumerates the modes in which the menu avoids the soft keyboard.
 
 **Since:** 23
 
-<!--Device-unnamed-declare enum MenuKeyboardAvoidMode--><!--Device-unnamed-declare enum MenuKeyboardAvoidMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ The menu does not avoid the soft keyboard.
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-MenuKeyboardAvoidMode-NONE = 0--><!--Device-MenuKeyboardAvoidMode-NONE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ The menu avoids the soft keyboard. If the space is insufficient, the menu will b
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-MenuKeyboardAvoidMode-TRANSLATE_AND_RESIZE = 1--><!--Device-MenuKeyboardAvoidMode-TRANSLATE_AND_RESIZE = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

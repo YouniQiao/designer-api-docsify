@@ -2,11 +2,11 @@
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md)
-
-<!--Device-unnamed-export interface UploadResponse--><!--Device-unnamed-export interface UploadResponse-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -28,11 +28,11 @@ HTTP status code returned by the server.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** statusCode
-
-<!--Device-UploadResponse-code: number--><!--Device-UploadResponse-code: number-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -48,11 +48,11 @@ Content returned by the server. The value type is determined by the type in the 
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** extras
-
-<!--Device-UploadResponse-data: string--><!--Device-UploadResponse-data: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -68,11 +68,10 @@ Headers returned by the server.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** headers
 
-<!--Device-UploadResponse-headers: Object--><!--Device-UploadResponse-headers: Object-End-->
-
 **System capability:** SystemCapability.MiscServices.Upload
-

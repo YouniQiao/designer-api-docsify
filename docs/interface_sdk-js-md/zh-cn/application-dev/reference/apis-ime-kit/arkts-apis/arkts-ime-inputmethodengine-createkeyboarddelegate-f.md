@@ -21,23 +21,22 @@ function createKeyboardDelegate(): KeyboardDelegate
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md)()
-
-<!--Device-inputMethodEngine-function createKeyboardDelegate(): KeyboardDelegate--><!--Device-inputMethodEngine-function createKeyboardDelegate(): KeyboardDelegate-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | 客户端编辑事件监听代理。 |
+| 类型 |
+| --- |
+| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) |
 
 **示例**
 
 ```TypeScript
 let keyboardDelegate: inputMethodEngine.KeyboardDelegate = inputMethodEngine.createKeyboardDelegate();
 ```
-

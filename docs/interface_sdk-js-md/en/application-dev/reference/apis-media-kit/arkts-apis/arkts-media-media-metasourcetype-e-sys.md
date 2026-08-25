@@ -2,9 +2,9 @@
 
 Enumerates meta source type for recorder.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-media-enum MetaSourceType--><!--Device-media-enum MetaSourceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -18,11 +18,10 @@ VIDEO_MAKER_INFO = 0
 
 Maker info for video.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MetaSourceType-VIDEO_MAKER_INFO = 0--><!--Device-MetaSourceType-VIDEO_MAKER_INFO = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 **System API:** This is a system API.
-

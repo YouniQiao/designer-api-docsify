@@ -15,7 +15,7 @@ declare function setAppBgColor(value: string): void
 
 **起始版本：** 8
 
-<!--Device-unnamed-declare function setAppBgColor(value: string): void--><!--Device-unnamed-declare function setAppBgColor(value: string): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,7 +23,6 @@ declare function setAppBgColor(value: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | string | 是 |  |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | string | 是 |

@@ -2,9 +2,9 @@
 
 Defines the printer information.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-print-interface PrinterInformation--><!--Device-print-interface PrinterInformation-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -24,9 +24,9 @@ Printer alias.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PrinterInformation-alias?: string--><!--Device-PrinterInformation-alias?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -40,9 +40,9 @@ Printer capabilities.
 
 **Type:** [PrinterCapabilities](arkts-basicservices-print-printercapabilities-i.md)
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrinterInformation-capability?: PrinterCapabilities--><!--Device-PrinterInformation-capability?: PrinterCapabilities-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -56,9 +56,9 @@ Printer description.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrinterInformation-description?: string--><!--Device-PrinterInformation-description?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -72,9 +72,9 @@ Printer details.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrinterInformation-options?: string--><!--Device-PrinterInformation-options?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -88,9 +88,9 @@ Printer preferences.
 
 **Type:** [PrinterPreferences](arkts-basicservices-print-printerpreferences-i.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PrinterInformation-preferences?: PrinterPreferences--><!--Device-PrinterInformation-preferences?: PrinterPreferences-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -104,9 +104,9 @@ Printer ID.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrinterInformation-printerId: string--><!--Device-PrinterInformation-printerId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -120,9 +120,9 @@ Printer model.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrinterInformation-printerMake?: string--><!--Device-PrinterInformation-printerMake?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -136,9 +136,9 @@ Printer name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrinterInformation-printerName: string--><!--Device-PrinterInformation-printerName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -152,9 +152,9 @@ Printer state.
 
 **Type:** [PrinterStatus](arkts-basicservices-print-printerstatus-e.md)
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrinterInformation-printerStatus: PrinterStatus--><!--Device-PrinterInformation-printerStatus: PrinterStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -170,9 +170,9 @@ Information about the selected driver when adding the printer.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-PrinterInformation-selectedDriver?: PpdInfo--><!--Device-PrinterInformation-selectedDriver?: PpdInfo-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -188,9 +188,9 @@ Protocol used when adding the printer.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-PrinterInformation-selectedProtocol?: string--><!--Device-PrinterInformation-selectedProtocol?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -204,9 +204,8 @@ Printer URI.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-PrinterInformation-uri?: string--><!--Device-PrinterInformation-uri?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
-

@@ -6,13 +6,12 @@ type StreamUsageArray = Array<StreamUsage>
 
 Array of StreamUsages.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-audio-type StreamUsageArray = Array<StreamUsage>--><!--Device-audio-type StreamUsageArray = Array<StreamUsage>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
 
 **Property type:** Array&lt;[StreamUsage](arkts-audio-audio-streamusage-e.md)&gt;
-

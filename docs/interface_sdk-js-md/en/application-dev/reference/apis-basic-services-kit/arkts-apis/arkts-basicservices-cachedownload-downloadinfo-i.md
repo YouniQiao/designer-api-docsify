@@ -2,9 +2,9 @@
 
 Describes the pre-downloaded download information.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-cacheDownload-interface DownloadInfo--><!--Device-cacheDownload-interface DownloadInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -24,9 +24,9 @@ Pre-downloaded network information.
 
 **Type:** NetworkInfo
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-DownloadInfo-readonly network: NetworkInfo--><!--Device-DownloadInfo-readonly network: NetworkInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -40,9 +40,9 @@ Pre-downloaded performance information.
 
 **Type:** [PerformanceInfo](arkts-basicservices-cachedownload-performanceinfo-i.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-DownloadInfo-readonly performance: PerformanceInfo--><!--Device-DownloadInfo-readonly performance: PerformanceInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -56,9 +56,8 @@ Pre-downloaded resource information.
 
 **Type:** [ResourceInfo](arkts-basicservices-cachedownload-resourceinfo-i.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-DownloadInfo-readonly resource: ResourceInfo--><!--Device-DownloadInfo-readonly resource: ResourceInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
-

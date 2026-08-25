@@ -2,9 +2,9 @@
 
 Represents the application database schema.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-cloudExtension-export interface AppSchema--><!--Device-cloudExtension-export interface AppSchema-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -26,9 +26,9 @@ Bundle name of the application.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AppSchema-bundleName: string--><!--Device-AppSchema-bundleName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -44,9 +44,9 @@ Database information of the application.
 
 **Type:** Array&lt;[Database](arkts-arkdata-cloudextension-database-i-sys.md)&gt;
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AppSchema-databases: Array<Database>--><!--Device-AppSchema-databases: Array<Database>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -60,13 +60,12 @@ version: int
 
 Version of the database schema.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AppSchema-version: int--><!--Device-AppSchema-version: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
-

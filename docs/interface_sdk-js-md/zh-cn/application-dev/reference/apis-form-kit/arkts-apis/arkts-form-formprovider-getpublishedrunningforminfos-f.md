@@ -14,27 +14,27 @@ function getPublishedRunningFormInfos(): Promise<Array<formInfo.RunningFormInfo>
 
 获取所有已加桌的卡片信息，使用Promise异步回调。适用于卡片管理、批量操作、统计等场景，例如查看应用所有已添加到桌面的卡片信息、批量更新卡片状态等。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-formProvider-function getPublishedRunningFormInfos(): Promise<Array<formInfo.RunningFormInfo>>--><!--Device-formProvider-function getPublishedRunningFormInfos(): Promise<Array<formInfo.RunningFormInfo>>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.Form
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Promise对象。返回符合条件的卡片信息。 |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;formInfo.RunningFormInfo & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
-| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+| 错误码ID |
+| --- |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
+| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) |
 
 **示例**
 
@@ -73,4 +73,3 @@ try {
   console.error(`catch error, code: ${error.code}, message: ${error.message}`);
 }
 ```
-

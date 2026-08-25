@@ -6,18 +6,17 @@ type OnAVPlayerStateChangeHandle = (state: AVPlayerState, reason: StateChangeRea
 
 播放状态机切换事件回调方法。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-media-type OnAVPlayerStateChangeHandle = (state: AVPlayerState, reason: StateChangeReason) => void--><!--Device-media-type OnAVPlayerStateChangeHandle = (state: AVPlayerState, reason: StateChangeReason) => void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| state | [AVPlayerState](arkts-media-media-avplayerstate-t.md) | 是 | 当前播放状态。 |
-| reason | [StateChangeReason](arkts-media-media-statechangereason-e.md) | 是 | 当前播放状态的切换原因。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| state | [AVPlayerState](arkts-media-media-avplayerstate-t.md) | 是 |
+| reason | [StateChangeReason](arkts-media-media-statechangereason-e.md) | 是 |

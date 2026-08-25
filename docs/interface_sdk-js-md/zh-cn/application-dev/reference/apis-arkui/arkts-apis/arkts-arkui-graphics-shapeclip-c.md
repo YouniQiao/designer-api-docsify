@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-export declare class ShapeClip--><!--Device-unnamed-export declare class ShapeClip-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ ShapeClip的构造函数。
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ShapeClip-constructor()--><!--Device-ShapeClip-constructor()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,19 +36,19 @@ setCircleShape(circle: Circle): void
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ShapeClip-setCircleShape(circle: Circle): void--><!--Device-ShapeClip-setCircleShape(circle: Circle): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| circle | [Circle](../../apis-default/arkts-apis/arkts-graphics-circle-i.md) | 是 | 圆形的形状。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| circle | [Circle](arkts-arkui-graphics-circle-i.md) | 是 |
 
 **示例**
 
@@ -157,19 +157,19 @@ setCommandPath(path: CommandPath): void
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ShapeClip-setCommandPath(path: CommandPath): void--><!--Device-ShapeClip-setCommandPath(path: CommandPath): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | [CommandPath](../../apis-default/arkts-apis/arkts-graphics-commandpath-i.md) | 是 | 路径绘制指令。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| path | [CommandPath](arkts-arkui-graphics-commandpath-i.md) | 是 |
 
 **示例**
 
@@ -278,19 +278,19 @@ setOvalShape(oval: Rect): void
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ShapeClip-setOvalShape(oval: Rect): void--><!--Device-ShapeClip-setOvalShape(oval: Rect): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| oval | [Rect](../../apis-default/arkts-apis/arkts-rect-t.md) | 是 | 椭圆形的形状。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| oval | [Rect](arkts-arkui-rect-t.md) | 是 |
 
 **示例**
 
@@ -398,19 +398,19 @@ setRectShape(rect: Rect): void
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ShapeClip-setRectShape(rect: Rect): void--><!--Device-ShapeClip-setRectShape(rect: Rect): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rect | [Rect](../../apis-default/arkts-apis/arkts-rect-t.md) | 是 | 矩形的形状。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| rect | [Rect](arkts-arkui-rect-t.md) | 是 |
 
 **示例**
 
@@ -531,19 +531,19 @@ setRoundRectShape(roundRect: RoundRect): void
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ShapeClip-setRoundRectShape(roundRect: RoundRect): void--><!--Device-ShapeClip-setRoundRectShape(roundRect: RoundRect): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| roundRect | [RoundRect](../../apis-default/arkts-apis/arkts-graphics-roundrect-i.md) | 是 | 圆角矩形的形状。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| roundRect | [RoundRect](arkts-arkui-graphics-roundrect-i.md) | 是 |
 
 **示例**
 
@@ -657,4 +657,3 @@ struct Index {
   }
 }
 ```
-

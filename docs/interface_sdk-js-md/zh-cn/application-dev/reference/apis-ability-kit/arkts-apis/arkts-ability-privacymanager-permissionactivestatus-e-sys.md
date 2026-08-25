@@ -1,10 +1,10 @@
 # PermissionActiveStatus（系统接口）
 
-表示权限使用状态变化类型的枚举。用于描述权限使用[on)](arkts-ability-privacymanager-onactivestatechange-f-sys.md)）的回调中返回，帮助应用感知权限从未使用到前台使用、后台使用的状态切换。
+表示权限使用状态变化类型的枚举。用于描述权限使用[on)](arkts-ability-privacymanager-on-f-sys.md)）的回调中返回，帮助应用感知权限从未使用到前台使用、后台使用的状态切换。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-privacyManager-enum PermissionActiveStatus--><!--Device-privacyManager-enum PermissionActiveStatus-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -18,9 +18,9 @@ PERM_INACTIVE = 0
 
 表示未使用权限。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-PermissionActiveStatus-PERM_INACTIVE = 0--><!--Device-PermissionActiveStatus-PERM_INACTIVE = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -34,9 +34,9 @@ PERM_ACTIVE_IN_FOREGROUND = 1
 
 表示前台使用权限。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_FOREGROUND = 1--><!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_FOREGROUND = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -50,11 +50,10 @@ PERM_ACTIVE_IN_BACKGROUND = 2
 
 表示后台使用权限。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_BACKGROUND = 2--><!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_BACKGROUND = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
-

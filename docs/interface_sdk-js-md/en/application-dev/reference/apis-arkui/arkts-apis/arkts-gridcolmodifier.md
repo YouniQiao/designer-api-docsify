@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [GridColModifier](arkts-arkui-gridcolmodifier-c.md) | Defines GridCol Modifier@implements GridColAttribute, AttributeModifier&lt;GridColAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [GridColModifier](arkts-arkui-gridcolmodifier-c.md) |

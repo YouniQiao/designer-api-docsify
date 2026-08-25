@@ -4,7 +4,7 @@ Enumerates the component animation modes under the UI material effect.@enum { in
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare enum UIMaterialAnimationMode--><!--Device-unnamed-declare enum UIMaterialAnimationMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ When the material is enabled for the component, the animation effect is automati
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-UIMaterialAnimationMode-IMMERSIVE = 0--><!--Device-UIMaterialAnimationMode-IMMERSIVE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ Disable the animation effect.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-UIMaterialAnimationMode-NONE = 1--><!--Device-UIMaterialAnimationMode-NONE = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

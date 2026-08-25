@@ -9,7 +9,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Chrono](arkts-arkts-chrono-c.md) | Utility class for time measurement and clock access. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Chrono](arkts-arkts-chrono-c.md) |

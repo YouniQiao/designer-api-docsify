@@ -6,25 +6,24 @@ type AttributeWithTagCb = (tagName: string, key: string, value: string) => boole
 
 The type of ParseOptions attributeWithTagCallbackFunction.
 
-**Since:** 24
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 24.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
-<!--Device-xml-type AttributeWithTagCb = (tagName: string, key: string, value: string) => boolean--><!--Device-xml-type AttributeWithTagCb = (tagName: string, key: string, value: string) => boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| tagName | string | Yes | The tag in xml parse node |
-| key | string | Yes | The key in xml parse node |
-| value | string | Yes | The value in xml parse node |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| tagName | string | Yes |
+| key | string | Yes |
+| value | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | whether continue to parse xml data |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

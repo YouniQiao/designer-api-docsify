@@ -1,10 +1,10 @@
 # ProcessData
 
-The module defines process data. If a lifecycle change listener is registered by calling [appManager.on('applicationState')](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate), the onProcessCreated callback in ApplicationStateObserver is invoked when the lifecycle of an application or ability changes.
+The module defines process data. If a lifecycle change listener is registered by calling [appManager.on('applicationState')](arkts-ability-appmanager-on-f.md#onapplicationstate), the [onProcessCreated](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronprocesscreated) callback in ApplicationStateObserver is invoked when the lifecycle of an application or ability changes.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-unnamed-declare class ProcessData--><!--Device-unnamed-declare class ProcessData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -18,9 +18,9 @@ Bundle name of the application.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-ProcessData-bundleName: string--><!--Device-ProcessData-bundleName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -34,9 +34,9 @@ Whether the task is a continuous task. **true** if yes, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-ProcessData-isContinuousTask: boolean--><!--Device-ProcessData-isContinuousTask: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -50,9 +50,9 @@ Whether the process is a resident task. **true** if yes, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-ProcessData-isKeepAlive: boolean--><!--Device-ProcessData-isKeepAlive: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -64,11 +64,11 @@ pid: int
 
 Process ID.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-ProcessData-pid: int--><!--Device-ProcessData-pid: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -85,11 +85,11 @@ Application state. The options are as follows:
 **4**: The application is running in the background.  
 **5**: The application process is terminated.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-ProcessData-state: int--><!--Device-ProcessData-state: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -101,11 +101,10 @@ uid: int
 
 UID of the application.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-ProcessData-uid: int--><!--Device-ProcessData-uid: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-

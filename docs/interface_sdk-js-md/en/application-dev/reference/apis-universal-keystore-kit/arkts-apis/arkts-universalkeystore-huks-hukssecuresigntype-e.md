@@ -4,7 +4,7 @@ Enumerates the signature types of the key generated or imported.
 
 **Since:** 9
 
-<!--Device-huks-export enum HuksSecureSignType--><!--Device-huks-export enum HuksSecureSignType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -19,9 +19,8 @@ The signature carries authentication information. This field is specified when a
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-HuksSecureSignType-HUKS_SECURE_SIGN_WITH_AUTHINFO = 1--><!--Device-HuksSecureSignType-HUKS_SECURE_SIGN_WITH_AUTHINFO = 1-End-->
-
 **System capability:** SystemCapability.Security.Huks.Extension
-

@@ -1,12 +1,10 @@
 # DragEventParam
 
-Define the drag event parameters@interface DragEventParam
+Callback used to return the result.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-dragController-interface DragEventParam--><!--Device-dragController-interface DragEventParam-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,17 +20,17 @@ import { dragController } from '@kit.ArkUI';
 event: DragEvent
 ```
 
-The information containing the drag event.
+Drag event information that includes only the drag result.
 
 **Type:** DragEvent
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragEventParam-event: DragEvent--><!--Device-DragEventParam-event: DragEvent-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,17 +40,16 @@ The information containing the drag event.
 extraParams: string
 ```
 
-Additional information about the drag info.
+Additional information about the drag action. Not supported currently.The default value is null.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragEventParam-extraParams: string--><!--Device-DragEventParam-extraParams: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

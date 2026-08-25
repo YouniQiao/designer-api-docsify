@@ -2,9 +2,9 @@
 
 Defines the RDB store configuration.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-relationalStore-interface StoreConfig--><!--Device-relationalStore-interface StoreConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -26,9 +26,9 @@ Whether to automatically delete the RDB store and create an empty table in the c
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-StoreConfig-allowRebuild?: boolean--><!--Device-StoreConfig-allowRebuild?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -42,9 +42,9 @@ Whether to automatically clear the dirty data (data that has been deleted from t
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-StoreConfig-autoCleanDirtyData?: boolean--><!--Device-StoreConfig-autoCleanDirtyData?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -58,9 +58,9 @@ Custom encryption parameters.If this parameter is left empty, the default encryp
 
 **Type:** [CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md)
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-StoreConfig-cryptoParam?: CryptoParam--><!--Device-StoreConfig-cryptoParam?: CryptoParam-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -75,9 +75,9 @@ Custom database path.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-StoreConfig-customDir?: string--><!--Device-StoreConfig-customDir?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -92,11 +92,11 @@ Application group ID. <!--RP1-->Currently, this parameter is not supported.<!--R
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StoreConfig-dataGroupId?: string--><!--Device-StoreConfig-dataGroupId?: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -110,9 +110,9 @@ Whether to enable the semantic index processing feature for the database. The va
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-StoreConfig-enableSemanticIndex?: boolean--><!--Device-StoreConfig-enableSemanticIndex?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -128,9 +128,9 @@ Whether to encrypt the RDB store. After the database is created, this parameter 
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-StoreConfig-encrypt?: boolean--><!--Device-StoreConfig-encrypt?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -146,9 +146,9 @@ Whether the RDB store is read-only.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-StoreConfig-isReadOnly?: boolean--><!--Device-StoreConfig-isReadOnly?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -162,9 +162,9 @@ Database file name, which is the unique identifier of the RDB store. Creating tw
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-StoreConfig-name: string--><!--Device-StoreConfig-name: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -178,9 +178,9 @@ Whether to persist an RDB store. The value **true** means to persist the RDB sto
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-StoreConfig-persist?: boolean--><!--Device-StoreConfig-persist?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -194,9 +194,9 @@ Loads custom dynamic libraries. Multiple dynamic library names can be passed in 
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-StoreConfig-pluginLibs?: Array<string>--><!--Device-StoreConfig-pluginLibs?: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -210,9 +210,9 @@ Root path of the database.This parameter is supported since API version 18. The 
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-StoreConfig-rootDir?: string--><!--Device-StoreConfig-rootDir?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -226,9 +226,9 @@ Security level of the RDB store.SystemCapability.DistributedDataManager.Relation
 
 **Type:** SecurityLevel
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-StoreConfig-securityLevel: SecurityLevel--><!--Device-StoreConfig-securityLevel: SecurityLevel-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -242,9 +242,9 @@ Type of the tokenizer to be used for FTS.If this parameter is left blank, Englis
 
 **Type:** [Tokenizer](arkts-arkdata-relationalstore-tokenizer-e.md)
 
-**Since:** 23
+**Since:** 17
 
-<!--Device-StoreConfig-tokenizer?: Tokenizer--><!--Device-StoreConfig-tokenizer?: Tokenizer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -258,9 +258,8 @@ Whether the RDB store is a vector store. The value **true** means the RDB store 
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-StoreConfig-vector?: boolean--><!--Device-StoreConfig-vector?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-

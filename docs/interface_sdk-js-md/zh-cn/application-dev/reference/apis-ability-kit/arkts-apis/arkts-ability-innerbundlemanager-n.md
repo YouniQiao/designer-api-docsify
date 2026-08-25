@@ -9,11 +9,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [launcherBundleManager](arkts-bundle-launcherbundlemanager.md)
-
-<!--Device-unnamed-declare namespace innerBundleManager--><!--Device-unnamed-declare namespace innerBundleManager-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -30,17 +30,16 @@ import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md) | 根据给定的Bundle名称获取LauncherAbilityInfos，使用callback异步回调。 |
-| [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md) | 根据给定的Bundle名称获取LauncherAbilityInfos，使用Promise异步回调。 |
-| [on_BundleStatusChange](arkts-ability-innerbundlemanager-onbundlestatuschange-f-sys.md#onbundlestatuschange) | 注册Callback。 |
-| [on_BundleStatusChange](arkts-ability-innerbundlemanager-onbundlestatuschange-f-sys.md#onbundlestatuschange) | 注册Callback。 |
-| [off_BundleStatusChange](arkts-ability-innerbundlemanager-offbundlestatuschange-f-sys.md#offbundlestatuschange) | 取消注册Callback。 |
-| [off_BundleStatusChange](arkts-ability-innerbundlemanager-offbundlestatuschange-f-sys.md#offbundlestatuschange) | 取消注册Callback。 |
-| [getAllLauncherAbilityInfos](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md) | 获取所有的LauncherAbilityInfos，使用callback异步回调。 |
-| [getAllLauncherAbilityInfos](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md) | 获取LauncherAbilityInfos，使用Promise异步回调。 |
-| [getShortcutInfos](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md) | 根据给定的Bundle名称获取快捷方式信息，使用callback异步回调。 |
-| [getShortcutInfos](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md) | 根据给定的Bundle名称获取快捷方式信息，使用Promise异步回调。 |
+| 名称 |
+| --- |
+| [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md) |
+| [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md) |
+| [on](arkts-ability-innerbundlemanager-on-f-sys.md#onbundlestatuschange) |
+| [on](arkts-ability-innerbundlemanager-on-f-sys.md#onbundlestatuschange) |
+| [off](arkts-ability-innerbundlemanager-off-f-sys.md#offbundlestatuschange) |
+| [off](arkts-ability-innerbundlemanager-off-f-sys.md#offbundlestatuschange) |
+| [getAllLauncherAbilityInfos](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md) |
+| [getAllLauncherAbilityInfos](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md) |
+| [getShortcutInfos](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md) |
+| [getShortcutInfos](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md) |
 <!--DelEnd-->
-

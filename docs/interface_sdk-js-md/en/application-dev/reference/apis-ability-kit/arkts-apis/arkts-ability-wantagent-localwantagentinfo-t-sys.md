@@ -6,13 +6,12 @@ export type LocalWantAgentInfo = _LocalWantAgentInfo
 
 Provides the information required to create a local WantAgent.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-wantAgent-export type LocalWantAgentInfo = _LocalWantAgentInfo--><!--Device-wantAgent-export type LocalWantAgentInfo = _LocalWantAgentInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
 
 **Property type:** _LocalWantAgentInfo
-

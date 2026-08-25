@@ -4,7 +4,7 @@ Execute result of a tool execution.
 
 **Since:** 26.0.0
 
-<!--Device-cliManager-interface ExecResult--><!--Device-cliManager-interface ExecResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -28,9 +28,9 @@ Indicates the error output of the tool.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ExecResult-errorText?: string--><!--Device-ExecResult-errorText?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -39,18 +39,18 @@ Indicates the error output of the tool.
 ## executionTime
 
 ```TypeScript
-executionTime: long
+executionTime: number
 ```
 
 Indicates the execution duration in milliseconds.
 
-**Type:** long
+**Type:** number
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ExecResult-executionTime: long--><!--Device-ExecResult-executionTime: long-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -59,18 +59,18 @@ Indicates the execution duration in milliseconds.
 ## exitCode
 
 ```TypeScript
-exitCode?: int
+exitCode?: number
 ```
 
 Indicates the exit code, 0 means success.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ExecResult-exitCode?: int--><!--Device-ExecResult-exitCode?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -88,9 +88,9 @@ Indicates the standard output of the tool.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ExecResult-outputText?: string--><!--Device-ExecResult-outputText?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -99,18 +99,18 @@ Indicates the standard output of the tool.
 ## signalNumber
 
 ```TypeScript
-signalNumber?: int
+signalNumber?: number
 ```
 
 Indicates the termination signal (if the tool process was terminated by a signal).
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ExecResult-signalNumber?: int--><!--Device-ExecResult-signalNumber?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -128,11 +128,10 @@ Indicates whether it timed out. true means timeout occurred, false means no time
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ExecResult-timeOut: boolean--><!--Device-ExecResult-timeOut: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
-

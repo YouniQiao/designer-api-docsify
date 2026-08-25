@@ -4,7 +4,7 @@ Enumerates the types of axis actions for axis events.
 
 **Since:** 17
 
-<!--Device-unnamed-declare enum AxisAction--><!--Device-unnamed-declare enum AxisAction-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ No axis event.
 
 **Since:** 17
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
-
-<!--Device-AxisAction-NONE = 0--><!--Device-AxisAction-NONE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ The axis event begins.
 
 **Since:** 17
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
-
-<!--Device-AxisAction-BEGIN = 1--><!--Device-AxisAction-BEGIN = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ The axis event is in progress.
 
 **Since:** 17
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
-
-<!--Device-AxisAction-UPDATE = 2--><!--Device-AxisAction-UPDATE = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,11 @@ The axis event ends.
 
 **Since:** 17
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
-
-<!--Device-AxisAction-END = 3--><!--Device-AxisAction-END = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,11 +90,10 @@ The axis event is canceled.
 
 **Since:** 17
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
 
-<!--Device-AxisAction-CANCEL = 4--><!--Device-AxisAction-CANCEL = 4-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,11 +4,11 @@ Display status of **nextLabel** in the stepper.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Substitutes:** Swiper
-
-<!--Device-unnamed-declare enum ItemState--><!--Device-unnamed-declare enum ItemState-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,13 +23,13 @@ The button on the right is clickable and can navigate users to the next **Steppe
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Substitutes:** index
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ItemState-Normal--><!--Device-ItemState-Normal-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,13 +44,13 @@ The button on the right is disabled.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Substitutes:** indicatorInteractive
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ItemState-Disabled--><!--Device-ItemState-Disabled-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,13 +65,13 @@ The button on the right is not displayed, and a progress bar is displayed instea
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Substitutes:** Swiper
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ItemState-Waiting--><!--Device-ItemState-Waiting-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,13 +86,12 @@ The button on the right reads "Skip" by default. You can define the processing l
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Substitutes:** index
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ItemState-Skip--><!--Device-ItemState-Skip-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

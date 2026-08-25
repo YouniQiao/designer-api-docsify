@@ -6,9 +6,7 @@ JSON相关错误的基础错误类。 在发生一般性JSON解析或操作错�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-jsonx-export class JsonError--><!--Device-jsonx-export class JsonError-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,17 +25,14 @@ public constructor(msg: string)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-JsonError-public constructor(msg: string)--><!--Device-JsonError-public constructor(msg: string)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| msg | string | 是 | 错误信息。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| msg | string | 是 |

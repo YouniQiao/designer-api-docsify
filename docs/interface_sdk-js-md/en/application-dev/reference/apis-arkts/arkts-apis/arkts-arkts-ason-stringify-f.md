@@ -16,21 +16,20 @@ Converts an ArkTS value to a JavaScript Object Notation (JSON) string. Extra sup
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-ASON-function stringify(value: Object | null | undefined): string--><!--Device-ASON-function stringify(value: Object | null | undefined): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Object \| null \| undefined | Yes | The value to stringify.<br>**Since:** 18 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | Object \| null \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | The JSON string representation of the value. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |

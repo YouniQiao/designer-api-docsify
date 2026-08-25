@@ -14,28 +14,28 @@ function hasHceCapability(): boolean
 
 Checks whether the device supports HCE.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-cardEmulation-function hasHceCapability(): boolean--><!--Device-cardEmulation-function hasHceCapability(): boolean-End-->
-
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if HCE is supported; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -58,4 +58,3 @@ if (!hasHceCap) {
     console.error('this device hasHceCapability false, ignore it.');
 }
 ```
-

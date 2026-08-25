@@ -2,9 +2,9 @@
 
 Defines the VoIP call information.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-call-export interface VoipCallAttribute--><!--Device-call-export interface VoipCallAttribute-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -26,9 +26,9 @@ Ability name of the third-party application.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-VoipCallAttribute-abilityName: string--><!--Device-VoipCallAttribute-abilityName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -44,9 +44,9 @@ Process ID of the third-party application.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-VoipCallAttribute-extensionId: string--><!--Device-VoipCallAttribute-extensionId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -62,9 +62,9 @@ Whether the call is a conference call.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-VoipCallAttribute-isConferenceCall?: boolean--><!--Device-VoipCallAttribute-isConferenceCall?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -80,9 +80,9 @@ Whether call answering with voice commands is supported.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-VoipCallAttribute-isVoiceAnswerSupported?: boolean--><!--Device-VoipCallAttribute-isVoiceAnswerSupported?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -98,9 +98,9 @@ Whether to display the incoming call banner.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-VoipCallAttribute-showBannerForIncomingCall?: boolean--><!--Device-VoipCallAttribute-showBannerForIncomingCall?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -116,9 +116,9 @@ User nickname.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-VoipCallAttribute-userName: string--><!--Device-VoipCallAttribute-userName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -134,9 +134,9 @@ User profile picture.
 
 **Type:** image.PixelMap
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-VoipCallAttribute-userProfile: image.PixelMap--><!--Device-VoipCallAttribute-userProfile: image.PixelMap-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -152,9 +152,9 @@ Bundle name of the third-party application.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-VoipCallAttribute-voipBundleName: string--><!--Device-VoipCallAttribute-voipBundleName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -170,11 +170,10 @@ Unique ID of a VoIP call.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-VoipCallAttribute-voipCallId: string--><!--Device-VoipCallAttribute-voipCallId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
-

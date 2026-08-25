@@ -2,9 +2,9 @@
 
 Enumerates the actions that can be taken to clear local cloud data.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-cloudSyncManager-enum Action--><!--Device-cloudSyncManager-enum Action-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -18,9 +18,9 @@ RETAIN_DATA = 0
 
 Clear the cloud identifier but retain the files cached locally.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Action-RETAIN_DATA = 0--><!--Device-Action-RETAIN_DATA = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -34,11 +34,10 @@ CLEAR_DATA = 1
 
 Clear the cloud identifier and the files cached locally.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Action-CLEAR_DATA = 1--><!--Device-Action-CLEAR_DATA = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **System API:** This is a system API.
-

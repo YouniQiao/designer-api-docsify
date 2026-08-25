@@ -1,8 +1,6 @@
 # Map
 
-**Since:** -1
-
-<!--Device-unnamed-interface Map--><!--Device-unnamed-interface Map-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,7 +15,4 @@ readonly [Symbol.toStringTag]: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-Map-readonly [Symbol.toStringTag]: string--><!--Device-Map-readonly [Symbol.toStringTag]: string-End-->
-
+**ArkTS mode:** 

@@ -2,9 +2,9 @@
 
 Enumerates the processes states.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-appManager-export enum ProcessState--><!--Device-appManager-export enum ProcessState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -16,11 +16,11 @@ STATE_CREATE
 
 The process is created.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ProcessState-STATE_CREATE--><!--Device-ProcessState-STATE_CREATE-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -32,11 +32,11 @@ STATE_FOREGROUND
 
 The process is running in the foreground.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ProcessState-STATE_FOREGROUND--><!--Device-ProcessState-STATE_FOREGROUND-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -48,11 +48,11 @@ STATE_ACTIVE
 
 At least one window in the process has focus.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ProcessState-STATE_ACTIVE--><!--Device-ProcessState-STATE_ACTIVE-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -64,11 +64,11 @@ STATE_BACKGROUND
 
 The process is running in the background.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ProcessState-STATE_BACKGROUND--><!--Device-ProcessState-STATE_BACKGROUND-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -80,11 +80,10 @@ STATE_DESTROY
 
 The process is destroyed.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ProcessState-STATE_DESTROY--><!--Device-ProcessState-STATE_DESTROY-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-

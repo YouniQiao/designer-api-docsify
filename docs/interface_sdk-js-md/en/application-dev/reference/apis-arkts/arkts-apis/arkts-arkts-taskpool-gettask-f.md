@@ -23,24 +23,24 @@ Obtains the corresponding task instance by task ID, or by task ID and task name.
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-taskpool-function getTask(taskId: number, taskName?: string): Task | undefined--><!--Device-taskpool-function getTask(taskId: number, taskName?: string): Task | undefined-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| taskId | number | Yes | Task ID. The value should be an integer. |
-| taskName | string | No | Task name. The default value is **undefined**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| taskId | number | Yes |
+| taskName | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Task \| undefined | Task instance. If an exception occurs, **undefined** is returned. For details, see the preceding description. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Task \| undefined |
 
 **Examples**
 
@@ -78,4 +78,3 @@ function dealTask() {
   })
 }
 ```
-

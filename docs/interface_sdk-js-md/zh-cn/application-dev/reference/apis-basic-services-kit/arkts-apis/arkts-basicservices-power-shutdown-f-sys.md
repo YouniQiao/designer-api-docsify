@@ -14,11 +14,11 @@ function shutdown(reason: string): void
 
 系统关机。与reboot方法的区别：shutdown使设备完全关机不再运行，reboot使设备关机后自动重启。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REBOOT
-
-<!--Device-power-function shutdown(reason: string): void--><!--Device-power-function shutdown(reason: string): void-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
@@ -26,18 +26,18 @@ function shutdown(reason: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| reason | string | 是 | 关机原因。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| reason | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; |
-| [4900101](../errorcode-power.md#4900101-连接服务失败) | Failed to connect to the service. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [4900101](../errorcode-power.md#4900101-连接服务失败) |
 
 **示例**
 
@@ -48,4 +48,3 @@ try {
     console.error('shutdown failed, err: ' + err);
 }
 ```
-

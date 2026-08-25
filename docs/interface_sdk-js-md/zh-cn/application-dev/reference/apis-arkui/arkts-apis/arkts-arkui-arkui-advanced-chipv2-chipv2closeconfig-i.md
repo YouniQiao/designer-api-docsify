@@ -6,7 +6,7 @@ ChipV2CloseConfig用于定义ChipV2组件关闭图标的功能属性配置，包
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-export interface ChipV2CloseConfig--><!--Device-unnamed-export interface ChipV2CloseConfig-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +28,10 @@ fontSize?: LengthMetrics
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ChipV2CloseConfig-fontSize?: LengthMetrics--><!--Device-ChipV2CloseConfig-fontSize?: LengthMetrics-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

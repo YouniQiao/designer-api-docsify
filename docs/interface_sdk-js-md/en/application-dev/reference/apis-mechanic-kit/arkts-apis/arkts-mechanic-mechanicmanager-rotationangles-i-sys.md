@@ -2,9 +2,9 @@
 
 The rotion angles, relative to the current position.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-mechanicManager-export interface RotationAngles--><!--Device-mechanicManager-export interface RotationAngles-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -24,11 +24,11 @@ pitch?: double
 
 Pitch angle, ranging from -2*Math.PI to 2*Math.PI, measured in radians.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RotationAngles-pitch?: double--><!--Device-RotationAngles-pitch?: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -42,11 +42,11 @@ roll?: double
 
 Roll angle, ranging from -2*Math.PI to 2*Math.PI, measured in radians.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RotationAngles-roll?: double--><!--Device-RotationAngles-roll?: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -60,13 +60,12 @@ yaw?: double
 
 Yaw angle, ranging from -2*Math.PI to 2*Math.PI, measured in radians.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RotationAngles-yaw?: double--><!--Device-RotationAngles-yaw?: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
-

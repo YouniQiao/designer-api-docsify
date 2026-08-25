@@ -13,25 +13,25 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 export function isAfter(on: On): On
 ```
 
-Requires that the target Component which is after another Component that specified by the given [On](arkts-test-uitest-on-c.md) object,used to locate Component relatively.
+Specifies that the target component is located after the given attribute component.
 
 **Since:** 23
 
-<!--Device-ON-export function isAfter(on: On): On--><!--Device-ON-export function isAfter(on: On): On-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | describes the attribute requirements of Component which the target one is in back of. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | this { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **Examples**
 
@@ -50,4 +50,3 @@ import { By, BY } from '@kit.TestKit';
 // Use the static constructor BY to create a by object and specify that the target component is located after the given attribute component.
 let by: By = BY.type('Text').isAfter(BY.text('123')); // Search for the first Text component located after the component whose text is 123.
 ```
-

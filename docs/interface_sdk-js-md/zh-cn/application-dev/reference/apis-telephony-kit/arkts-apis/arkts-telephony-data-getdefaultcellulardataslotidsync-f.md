@@ -14,17 +14,17 @@ function getDefaultCellularDataSlotIdSync(): int
 
 获取默认移动数据的SIM卡。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-data-function getDefaultCellularDataSlotIdSync(): int--><!--Device-data-function getDefaultCellularDataSlotIdSync(): int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CellularData
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 获取默认移动数据的SIM卡。&lt;br /&gt;- 0：卡槽1。 &lt;br /&gt;- 1：卡槽2。&lt;br /&gt;- 2：esim和天际通场景下，默认移动数据的slotId为2。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -33,4 +33,3 @@ import { data } from '@kit.TelephonyKit';
 
 console.info("Result: "+ data.getDefaultCellularDataSlotIdSync())
 ```
-

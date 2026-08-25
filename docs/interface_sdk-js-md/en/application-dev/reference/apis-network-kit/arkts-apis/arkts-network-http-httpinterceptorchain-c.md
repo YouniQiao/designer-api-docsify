@@ -4,7 +4,7 @@ Defines HTTP interceptor chain.
 
 **Since:** 22
 
-<!--Device-http-export class HttpInterceptorChain--><!--Device-http-export class HttpInterceptorChain-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -28,31 +28,31 @@ Adds an interceptor to the HTTP client.
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-HttpInterceptorChain-public addChain(chain: HttpInterceptor[]): boolean--><!--Device-HttpInterceptorChain-public addChain(chain: HttpInterceptor[]): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| chain | [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] | Yes | Interception chain composed of interceptor instances. A single interceptor or multiple interceptors of different types can be passed in. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| chain | [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the interceptor is added successfully. The value **true** indicates that the interceptor is successfully added, and the value **false** indicates the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 2300801 | Parameter type not supported by the interceptor. |
-| 2300802 | Duplicated interceptor type in the chain. |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
+| Error Code ID |
+| --- |
+| 2300801 |
+| 2300802 |
+| [2300999](../errorcode-net-http.md#2300999-internal-error) |
 
 **Examples**
 
@@ -162,30 +162,30 @@ Adds an interceptor chain to the target HTTP request. Each HTTP request instance
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-HttpInterceptorChain-public apply(httpRequest: HttpRequest): boolean--><!--Device-HttpInterceptorChain-public apply(httpRequest: HttpRequest): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| httpRequest | HttpRequest | Yes | [HttpRequest](arkts-network-http-httprequest-i.md) that initiates an HTTP request. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| httpRequest | [HttpRequest](arkts-network-http-httprequest-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the interceptor is attached successfully. The value **true** indicates that the interceptor is successfully added, and the value **false** indicates the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 2300801 | Parameter type not supported by the interceptor. |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
+| Error Code ID |
+| --- |
+| 2300801 |
+| [2300999](../errorcode-net-http.md#2300999-internal-error) |
 
 **Examples**
 
@@ -325,17 +325,17 @@ Obtains all interceptor instances in the current interceptor chain.
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-HttpInterceptorChain-public getChain(): HttpInterceptor[]--><!--Device-HttpInterceptorChain-public getChain(): HttpInterceptor[]-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] | Returns all interceptor instances added by the [addChain]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] |
 
 **Examples**
 
@@ -420,4 +420,3 @@ import { http } from '@kit.NetworkKit';
 
 let interceptorChain = new http.HttpInterceptorChain();
 ```
-

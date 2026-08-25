@@ -16,28 +16,28 @@ Calculates the Wi-Fi signal level based on the Wi-Fi RSSI and frequency band.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getSignalLevel](arkts-connectivity-wifimanager-getsignallevel-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
-<!--Device-wifi-function getSignalLevel(rssi: number, band: number): number--><!--Device-wifi-function getSignalLevel(rssi: number, band: number): number-End-->
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rssi | number | Yes | Indicates the Wi-Fi RSSI. |
-| band | number | Yes | Indicates the Wi-Fi frequency band. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rssi | number | Yes |
+| band | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Returns Wi-Fi signal level ranging from 0 to 4. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -53,4 +53,3 @@ try {
 	console.error("failed:" + JSON.stringify(error));
 }
 ```
-

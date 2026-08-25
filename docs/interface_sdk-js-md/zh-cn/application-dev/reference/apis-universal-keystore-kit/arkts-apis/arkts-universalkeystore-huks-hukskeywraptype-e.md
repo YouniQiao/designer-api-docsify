@@ -4,7 +4,7 @@
 
 **起始版本：** 20
 
-<!--Device-huks-export enum HuksKeyWrapType--><!--Device-huks-export enum HuksKeyWrapType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -18,9 +18,8 @@ HUKS_KEY_WRAP_TYPE_HUK_BASED = 2
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
-<!--Device-HuksKeyWrapType-HUKS_KEY_WRAP_TYPE_HUK_BASED = 2--><!--Device-HuksKeyWrapType-HUKS_KEY_WRAP_TYPE_HUK_BASED = 2-End-->
-
 **系统能力：** SystemCapability.Security.Huks.Core
-

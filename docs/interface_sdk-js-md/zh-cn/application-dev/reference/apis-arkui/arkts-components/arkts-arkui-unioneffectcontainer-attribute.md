@@ -6,7 +6,7 @@
 
 **起始版本：** 23
 
-<!--Device-unnamed-declare class UnionEffectContainerAttribute--><!--Device-unnamed-declare class UnionEffectContainerAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,4 +16,3 @@
 
 ```TypeScript
 ```
-

@@ -4,7 +4,7 @@ Describes the scope of restoring factory settings.
 
 **Since:** 26.0.0
 
-<!--Device-update-export enum FactoryResetScope--><!--Device-update-export enum FactoryResetScope-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -20,9 +20,9 @@ User data.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-FactoryResetScope-DATA = 1--><!--Device-FactoryResetScope-DATA = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -38,11 +38,10 @@ User data and operating system.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-FactoryResetScope-DATA_AND_OS = 2--><!--Device-FactoryResetScope-DATA_AND_OS = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
-

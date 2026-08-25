@@ -1,11 +1,11 @@
 # FetchResponse
 
 **Table 2** Mapping between responseType and data in success callback  
-| responseType | data | Description| | -------- | -------- | -------- | | N/A| string | When the type in the header returned by the server is **text/\***, **application/json**, **application/javascript**, or **application/xml**, the value is the text content.| | text | string | Text content.| | json | Object | A JSON object.|
+| responseType | [data](#data) | Description| | -------- | -------- | -------- | | N/A| string | When the type in the header returned by the server is **text/\***, **application/json**, **application/javascript**, or **application/xml**, the value is the text content.| | text | string | Text content.| | [json](../../apis-arkts/arkts-apis/arkts-util-json.md) | Object |
 
 **Since:** 3
 
-<!--Device-unnamed-export interface FetchResponse--><!--Device-unnamed-export interface FetchResponse-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -26,7 +26,7 @@ Server status code.
 
 **Since:** 3
 
-<!--Device-FetchResponse-code: number--><!--Device-FetchResponse-code: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -42,7 +42,7 @@ The type of the returned data is determined by **responseType**. For details, se
 
 **Since:** 3
 
-<!--Device-FetchResponse-data: string | object--><!--Device-FetchResponse-data: string | object-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -58,7 +58,7 @@ All headers in the response from the server.
 
 **Since:** 3
 
-<!--Device-FetchResponse-headers: Object--><!--Device-FetchResponse-headers: Object-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -161,4 +161,3 @@ NOTEHTTPS is supported by default. To support HTTP, you need to add "network" to
   // ...
 }
 ```
-

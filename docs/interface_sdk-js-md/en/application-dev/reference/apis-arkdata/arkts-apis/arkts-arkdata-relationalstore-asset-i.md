@@ -2,9 +2,9 @@
 
 Represents the asset (such as a document, image, or video).
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-relationalStore-interface Asset--><!--Device-relationalStore-interface Asset-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -24,9 +24,9 @@ Time when an asset is created.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Asset-createTime: string--><!--Device-Asset-createTime: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -40,9 +40,9 @@ Time when an asset is last modified.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Asset-modifyTime: string--><!--Device-Asset-modifyTime: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -56,9 +56,9 @@ Asset name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Asset-name: string--><!--Device-Asset-name: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -72,9 +72,9 @@ Path of an asset in the application sandbox.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Asset-path: string--><!--Device-Asset-path: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -88,9 +88,9 @@ Asset size. In the device-cloud sync mechanism, this field is one of the key bas
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Asset-size: string--><!--Device-Asset-size: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -104,9 +104,9 @@ Asset status.Default value: **ASSET_NORMAL**.
 
 **Type:** AssetStatus
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Asset-status?: AssetStatus--><!--Device-Asset-status?: AssetStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -120,9 +120,8 @@ Asset URI, which is an absolute path in the system.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Asset-uri: string--><!--Device-Asset-uri: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-connection-export enum FamilyType--><!--Device-connection-export enum FamilyType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -18,7 +18,7 @@ FAMILY_TYPE_ALL = 0
 
 **起始版本：** 23
 
-<!--Device-FamilyType-FAMILY_TYPE_ALL = 0--><!--Device-FamilyType-FAMILY_TYPE_ALL = 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -32,7 +32,7 @@ FAMILY_TYPE_IPV4 = 1
 
 **起始版本：** 23
 
-<!--Device-FamilyType-FAMILY_TYPE_IPV4 = 1--><!--Device-FamilyType-FAMILY_TYPE_IPV4 = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -46,7 +46,6 @@ FAMILY_TYPE_IPV6 = 2
 
 **起始版本：** 23
 
-<!--Device-FamilyType-FAMILY_TYPE_IPV6 = 2--><!--Device-FamilyType-FAMILY_TYPE_IPV6 = 2-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
-

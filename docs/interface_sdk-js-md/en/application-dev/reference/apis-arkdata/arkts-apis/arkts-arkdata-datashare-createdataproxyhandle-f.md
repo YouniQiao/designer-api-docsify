@@ -14,25 +14,25 @@ function createDataProxyHandle(): Promise<DataProxyHandle>
 
 Creates a **DataProxyHandle** instance. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-dataShare-function createDataProxyHandle(): Promise<DataProxyHandle>--><!--Device-dataShare-function createDataProxyHandle(): Promise<DataProxyHandle>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[DataProxyHandle](arkts-arkdata-datashare-dataproxyhandle-i.md)&gt; | Promise used to return the result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[DataProxyHandle](arkts-arkdata-datashare-dataproxyhandle-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| Error Code ID |
+| --- |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) |
 
 **Examples**
 
@@ -50,4 +50,3 @@ export default class EntryAbility extends UIAbility {
   };
 };
 ```
-

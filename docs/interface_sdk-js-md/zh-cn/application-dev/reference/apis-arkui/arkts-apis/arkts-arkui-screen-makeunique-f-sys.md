@@ -14,9 +14,9 @@ function makeUnique(uniqueScreen: Array<long>): Promise<Array<long>>
 
 将屏幕设置为异源模式，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-screen-function makeUnique(uniqueScreen: Array<long>): Promise<Array<long>>--><!--Device-screen-function makeUnique(uniqueScreen: Array<long>): Promise<Array<long>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -24,25 +24,25 @@ function makeUnique(uniqueScreen: Array<long>): Promise<Array<long>>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uniqueScreen | Array&lt;long&gt; | 是 | 异源屏幕ID集合。其中ID应为大于0的整数，否则返回401错误码。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uniqueScreen | ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;long & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;long&gt;&gt; | Promise对象。返回异源屏幕的displayId集合，其中id为大于0的整数。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;Array & lt;number & gt; & gt;<br>ArkTS-Sta：Promise & lt;Array & lt;long & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, non-system application uses system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
 **示例**
 
@@ -74,4 +74,3 @@ screen.makeUnique(uniqueScreenIds).then((data: Array<long>) => {
   console.error(`Failed to make unique screens. Code: ${error.code}, message: ${error.message}`);
 });
 ```
-

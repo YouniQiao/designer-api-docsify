@@ -2,9 +2,9 @@
 
 小区信息。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-radio-export interface CellInformation--><!--Device-radio-export interface CellInformation-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -24,9 +24,9 @@ networkType: NetworkType
 
 **类型：** NetworkType
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-CellInformation-networkType: NetworkType--><!--Device-CellInformation-networkType: NetworkType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -40,9 +40,8 @@ signalInformation: SignalInformation
 
 **类型：** SignalInformation
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-CellInformation-signalInformation: SignalInformation--><!--Device-CellInformation-signalInformation: SignalInformation-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
-

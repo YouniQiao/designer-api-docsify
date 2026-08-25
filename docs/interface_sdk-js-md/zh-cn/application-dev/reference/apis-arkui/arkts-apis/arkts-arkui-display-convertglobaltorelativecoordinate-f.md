@@ -14,33 +14,33 @@ function convertGlobalToRelativeCoordinate(position: Position, displayId?: long)
 
 将主屏左上角为原点的全局坐标转换成displayId指定屏幕左上角为原点的相对坐标。若未传入displayId，默认转换为全局坐标所在屏幕的相对坐标系。若全局坐标不在任何屏幕上，默认转换成主屏的相对坐标。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-<!--Device-display-function convertGlobalToRelativeCoordinate(position: Position, displayId?: long): RelativePosition--><!--Device-display-function convertGlobalToRelativeCoordinate(position: Position, displayId?: long): RelativePosition-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| position | Position | 是 | 需要转化为相对坐标的全局坐标。 |
-| displayId | long | 否 | 相对坐标系原点所在的屏幕ID，传递该参数表示以指定屏幕左上角为原点转换相对坐标。不指定则不传参，默认转换成全局坐标所在屏幕的相对坐标，若全局坐标不在任何屏幕上，则默认转换 成主屏的相对坐标。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| position | [Position](arkts-arkui-display-position-i.md) | 是 |
+| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：long | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RelativePosition](arkts-arkui-display-relativeposition-i.md) | 返回对应屏幕的相对坐标。 |
+| 类型 |
+| --- |
+| [RelativePosition](arkts-arkui-display-relativeposition-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
-| [1400004](../errorcode-display.md#1400004-参数异常) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 错误码ID |
+| --- |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
+| [1400004](../errorcode-display.md#1400004-参数异常) |
 
 **示例**
 
@@ -80,4 +80,3 @@ try {
   console.error(`Failed to convert the global coordinate to the relative coordinate. Code: ${error.code}, message: ${error.message}`);
 }
 ```
-

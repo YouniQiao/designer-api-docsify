@@ -4,7 +4,7 @@ The convertxml module provides APIs for converting XML text into JavaScript obje
 
 **Since:** 8
 
-<!--Device-unnamed-declare namespace xml--><!--Device-unnamed-declare namespace xml-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -18,13 +18,12 @@ import { convertxml } from '@kit.ArkTS';
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [ConvertXML](arkts-arkts-xml-convertxml-c.md) | ConvertXML representation refers to extensible markup language. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ConvertXML](arkts-arkts-xml-convertxml-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | Options for conversion. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) |

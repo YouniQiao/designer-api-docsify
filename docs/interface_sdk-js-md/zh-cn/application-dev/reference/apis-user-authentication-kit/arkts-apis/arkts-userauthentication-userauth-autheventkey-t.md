@@ -8,14 +8,13 @@ type AuthEventKey = 'result' | 'tip'
 
 **起始版本：** 9
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-userAuth-type AuthEventKey = 'result' | 'tip'--><!--Device-userAuth-type AuthEventKey = 'result' | 'tip'-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
-| 类型 | 说明 |
-| --- | --- |
-| 'result' | If the first parameter of [on]{ |
-| 'tip' | If the first parameter of [on]{ |
-
+| 类型 |
+| --- |
+| 'result' |
+| 'tip' |

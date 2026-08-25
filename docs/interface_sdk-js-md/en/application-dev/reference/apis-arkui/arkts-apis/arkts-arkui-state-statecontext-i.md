@@ -4,9 +4,7 @@ Context of a state, keeping track of changes in the given scope.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare interface StateContext--><!--Device-unnamed-export declare interface StateContext-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,24 +18,21 @@ The scope which is used to track the changes of state context.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StateContext-scope<T>(id: int, paramCount: int): IncrementalScope<T>--><!--Device-StateContext-scope<T>(id: int, paramCount: int): IncrementalScope<T>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| id | int | Yes | state context id |
-| paramCount | int | Yes | the count of param |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| id | int | Yes |
+| paramCount | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [IncrementalScope](arkts-arkui-state-incrementalscope-i.md)&lt;T&gt; | return state scope |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [IncrementalScope](arkts-arkui-state-incrementalscope-i.md)&lt;T&gt; |

@@ -1,10 +1,10 @@
 # FontInfo
 
-**Since:** 23
+Information about the system font.
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**Since:** 10
 
-<!--Device-font-interface FontInfo--><!--Device-font-interface FontInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,17 +20,17 @@ import { font } from '@kit.ArkUI';
 family: string
 ```
 
-A set of fonts with a common design.
+Family of the system font.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FontInfo-family: string--><!--Device-FontInfo-family: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,17 +40,17 @@ A set of fonts with a common design.
 fullName: string
 ```
 
-The font name.
+Name of the system font.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FontInfo-fullName: string--><!--Device-FontInfo-fullName: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,17 +60,18 @@ The font name.
 italic: boolean
 ```
 
-Whether it is italic.
+Whether the system font is italic.Default value: **false**  
+**true**: The system font is italic. **false**: The system font is not italic.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FontInfo-italic: boolean--><!--Device-FontInfo-italic: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -80,17 +81,18 @@ Whether it is italic.
 monoSpace: boolean
 ```
 
-Whether it is compact.
+Whether the system font is monospaced.Default value: **false**  
+**true**: The system font is monospaced. **false**: The system font is not monospaced.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FontInfo-monoSpace: boolean--><!--Device-FontInfo-monoSpace: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,17 +102,17 @@ Whether it is compact.
 path: string
 ```
 
-The path of the font file.
+File path of the system font.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FontInfo-path: string--><!--Device-FontInfo-path: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -120,17 +122,17 @@ The path of the font file.
 postScriptName: string
 ```
 
-The name of postscript.
+PostScript name of the system font.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FontInfo-postScriptName: string--><!--Device-FontInfo-postScriptName: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -140,17 +142,17 @@ The name of postscript.
 subfamily: string
 ```
 
-A subset of the font family.
+Subfamily of the system font.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FontInfo-subfamily: string--><!--Device-FontInfo-subfamily: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -160,57 +162,94 @@ A subset of the font family.
 symbolic: boolean
 ```
 
-Whether symbol fonts are supported.
+Whether the system font supports symbols.Default value: **false**  
+**true**: The system font supports symbols. **false**: The system font does not support symbols.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FontInfo-symbolic: boolean--><!--Device-FontInfo-symbolic: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## weight
 
 ```TypeScript
-weight: int
+weight: number
 ```
 
-The weight of the font.
+Weight of the system font.Value range: [100, 900], with intervals of 100, corresponding to the values in the [FontWeight](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontweight-e.md) enum Default value: **100**
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FontInfo-weight: int--><!--Device-FontInfo-weight: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## width
 
 ```TypeScript
-width: int
+width: number
 ```
 
-The width of the font style.
+Width of the system font.Value range: [1, 9], with intervals of 1, corresponding to the values in the [FontWidth](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontwidth-e.md) enum
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FontInfo-width: int--><!--Device-FontInfo-width: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+Directly using font can lead to the issue of ambiguous UI context. To avoid this, obtain the [Font](arkts-apis-uicontext-font.md) object associated with the current UI context by using the [getFont](./arkts-apis-uicontext-uicontext.md#getfont) API in [UIContext](./arkts-apis-uicontext-uicontext.md).
+
+```TypeScript
+// xxx.ets
+import { font } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct FontExample {
+  fontList: Array<string> = new Array<string>();
+  uiFont = this.getUIContext().getFont();
+  fontInfo: font.FontInfo = this.uiFont.getFontByName(''); // You are advised to use the this.getUIContext().getFont().getFontByName() API.
+
+  build() {
+    Column() {
+      Button("getFontByName")
+        .onClick(() => {
+          this.fontInfo =
+            this.uiFont.getFontByName('HarmonyOS Sans Italic');
+          console.info("getFontByName(): path = " + this.fontInfo.path);
+          console.info("getFontByName(): postScriptName = " + this.fontInfo.postScriptName);
+          console.info("getFontByName(): fullName = " + this.fontInfo.fullName);
+          console.info("getFontByName(): family = " + this.fontInfo.family);
+          console.info("getFontByName(): subfamily = " + this.fontInfo.subfamily);
+          console.info("getFontByName(): weight = " + this.fontInfo.weight);
+          console.info("getFontByName(): width = " + this.fontInfo.width);
+          console.info("getFontByName(): italic = " + this.fontInfo.italic);
+          console.info("getFontByName(): monoSpace = " + this.fontInfo.monoSpace);
+          console.info("getFontByName(): symbolic = " + this.fontInfo.symbolic);
+        })
+    }.width('100%')
+  }
+}
+```

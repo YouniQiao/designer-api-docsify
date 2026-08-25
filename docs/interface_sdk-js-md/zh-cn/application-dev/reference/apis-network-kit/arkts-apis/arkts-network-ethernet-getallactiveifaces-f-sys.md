@@ -16,9 +16,9 @@ function getAllActiveIfaces(callback: AsyncCallback<Array<string>>): void
 
 **起始版本：** 9
 
-**需要权限：** ohos.permission.GET_NETWORK_INFO
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-ethernet-function getAllActiveIfaces(callback: AsyncCallback<Array<string>>): void--><!--Device-ethernet-function getAllActiveIfaces(callback: AsyncCallback<Array<string>>): void-End-->
+**需要权限：** ohos.permission.GET_NETWORK_INFO
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -26,18 +26,18 @@ function getAllActiveIfaces(callback: AsyncCallback<Array<string>>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。返回值为对应接口名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Failed to connect to the service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
 
 **示例**
 
@@ -82,9 +82,9 @@ function getAllActiveIfaces(): Promise<Array<string>>
 
 **起始版本：** 9
 
-**需要权限：** ohos.permission.GET_NETWORK_INFO
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-ethernet-function getAllActiveIfaces(): Promise<Array<string>>--><!--Device-ethernet-function getAllActiveIfaces(): Promise<Array<string>>-End-->
+**需要权限：** ohos.permission.GET_NETWORK_INFO
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -92,20 +92,19 @@ function getAllActiveIfaces(): Promise<Array<string>>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | 以Promise形式返回获取结果。返回值为对应接口名。 |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Failed to connect to the service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
 
 **示例**
 
 参见 [getAllActiveIfaces](#getallactiveifaces)
-

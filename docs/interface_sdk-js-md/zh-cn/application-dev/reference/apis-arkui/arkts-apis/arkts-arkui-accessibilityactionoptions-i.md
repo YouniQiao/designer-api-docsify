@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-unnamed-declare interface AccessibilityActionOptions--><!--Device-unnamed-declare interface AccessibilityActionOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,13 +25,12 @@ scrollStep - 无障碍手势触发的无障碍滚动操作中的组件操作步�
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-AccessibilityActionOptions-scrollStep?: number--><!--Device-AccessibilityActionOptions-scrollStep?: number-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

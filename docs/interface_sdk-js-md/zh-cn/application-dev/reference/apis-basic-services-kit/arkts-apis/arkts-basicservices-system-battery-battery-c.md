@@ -4,9 +4,9 @@
 
 **起始版本：** 3
 
-**废弃版本：** 6
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-unnamed-export default class Battery--><!--Device-unnamed-export default class Battery-End-->
+**废弃版本：** 6
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Lite
 
@@ -26,17 +26,17 @@ static getStatus(options?: GetStatusOptions): void
 
 **起始版本：** 3
 
-**废弃版本：** 6
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-Battery-static getStatus(options?: GetStatusOptions): void--><!--Device-Battery-static getStatus(options?: GetStatusOptions): void-End-->
+**废弃版本：** 6
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [GetStatusOptions](arkts-basicservices-system-battery-getstatusoptions-i.md) | 否 | 包含接口调用结果的对象，用于通过回调获取设备充电状态及剩余电量。不传入时无法获取电量信息，不执行任何回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [GetStatusOptions](arkts-basicservices-system-battery-getstatusoptions-i.md) | 否 |
 
 **示例**
 
@@ -108,4 +108,3 @@ export default {
     },
 }
 ```
-

@@ -12,7 +12,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-cryptoFramework-interface AeadParamsSpec--><!--Device-cryptoFramework-interface AeadParamsSpec-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 
@@ -34,11 +34,11 @@ authenticatedData?: Uint8Array
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AeadParamsSpec-authenticatedData?: Uint8Array--><!--Device-AeadParamsSpec-authenticatedData?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 
@@ -60,11 +60,11 @@ nonce: Uint8Array
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AeadParamsSpec-nonce: Uint8Array--><!--Device-AeadParamsSpec-nonce: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 
@@ -82,15 +82,14 @@ tagLen?: int
 > - 对于SM4-GCM，默认值为16。支持的取值为4、8、12、13、14、15和16。
 > - 对于ChaCha20-Poly1305，默认值为16。支持的取值为16。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AeadParamsSpec-tagLen?: int--><!--Device-AeadParamsSpec-tagLen?: int-End-->
-
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
-

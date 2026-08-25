@@ -19,22 +19,21 @@ MenuItemGroup(value?: MenuItemGroupOptions)
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-MenuItemGroupInterface-(value?: MenuItemGroupOptions): MenuItemGroupAttribute--><!--Device-MenuItemGroupInterface-(value?: MenuItemGroupOptions): MenuItemGroupAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [MenuItemGroupOptions](arkts-arkui-menuitemgroupoptions-i.md) | No | Header and footer of the menu item group. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [MenuItemGroupOptions](arkts-arkui-menuitemgroupoptions-i.md) | No |
 
 ## Summary
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |

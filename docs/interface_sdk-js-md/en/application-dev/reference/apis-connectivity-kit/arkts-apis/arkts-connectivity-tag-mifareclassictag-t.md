@@ -6,13 +6,12 @@ export type MifareClassicTag = _MifareClassicTag
 
 Obtains a **MifareClassicTag** object.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-tag-export type MifareClassicTag = _MifareClassicTag--><!--Device-tag-export type MifareClassicTag = _MifareClassicTag-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Property type:** _MifareClassicTag
-

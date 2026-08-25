@@ -14,11 +14,11 @@ function stopOptimizeSpace(): void
 
 Synchronously stops optimizing cloud resource space. This method is used with **startOptimizeSpace**.
 
-**Since:** 23
+**Since:** 17
+
+**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
-
-<!--Device-cloudSync-function stopOptimizeSpace(): void--><!--Device-cloudSync-function stopOptimizeSpace(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -26,12 +26,12 @@ Synchronously stops optimizing cloud resource space. This method is used with **
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13600001 | IPC error. |
-| 22400005 | Inner error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13600001 |
+| 22400005 |
 
 **Examples**
 
@@ -49,4 +49,3 @@ let callback = (data:cloudSync.OptimizeSpaceProgress) => {
 cloudSync.startOptimizeSpace(para, callback);
 cloudSync.stopOptimizeSpace();   // Stop space optimization.
 ```
-

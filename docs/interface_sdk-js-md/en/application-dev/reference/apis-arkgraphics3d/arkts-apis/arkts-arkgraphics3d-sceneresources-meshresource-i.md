@@ -4,9 +4,8 @@ Mesh resource, which inherits from SceneResource.@extends SceneResource @interfa
 
 **Inheritance/Implementation:** MeshResource extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-unnamed-export interface MeshResource--><!--Device-unnamed-export interface MeshResource-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

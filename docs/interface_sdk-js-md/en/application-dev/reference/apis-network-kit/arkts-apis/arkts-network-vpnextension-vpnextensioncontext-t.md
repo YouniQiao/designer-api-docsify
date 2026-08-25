@@ -8,9 +8,8 @@ Defines the VPN extension context. It allows access to serviceExtension-specific
 
 **Since:** 11
 
-<!--Device-vpnExtension-export type VpnExtensionContext = _VpnExtensionContext--><!--Device-vpnExtension-export type VpnExtensionContext = _VpnExtensionContext-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Property type:** _VpnExtensionContext
-

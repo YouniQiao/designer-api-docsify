@@ -1,10 +1,10 @@
-# @ohos.app.ability.errorManager
+# @ohos.app.ability.errorManager(Error Management Module)
 
 The ErrorManager module provides capabilities for registering and unregistering error observers, which are primarily used to listen for errors such as JavaScript crashes and application freezes.
 
-**Since:** 24
+**Since:** 9
 
-<!--Device-unnamed-declare namespace errorManager--><!--Device-unnamed-declare namespace errorManager-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -18,51 +18,50 @@ import { errorManager } from '@kit.AbilityKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [off_error](arkts-ability-errormanager-offerror-f.md#offerror) | Unregisters an error observer. This API uses an asynchronous callback to return the result.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic. |
-| [off_error](arkts-ability-errormanager-offerror-f.md#offerror) | Unregisters an error observer. This API uses a promise to return the result.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic. |
-| [off_freeze](arkts-ability-errormanager-offfreeze-f.md) | Unregisters an observer for the main thread freeze event of the application.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.If the observer passed in does not match the observer registered via the **on** API, error code 16300004 is thrown. Therefore, you are advised to handle this using **try-catch** logic. |
-| [off_globalErrorOccurred](arkts-ability-errormanager-offglobalerroroccurred-f.md#offglobalerroroccurred) | Unregisters a global error observer. Once unregistered, global listening cannot be implemented.If the observer passed in is not in the observer queue registered via the **on** API, error code 16300004 is thrown. Therefore, you are advised to handle this using **try-catch** logic. |
-| [off_globalUnhandledRejectionDetected](arkts-ability-errormanager-offglobalunhandledrejectiondetected-f.md#offglobalunhandledrejectiondetected) | Unregisters a rejected promise observer. After the deregistration, promise exceptions in the process cannot be listened for.If the observer passed in is not in the observer queue registered via the **on** API, error code 16300004 is thrown. Therefore, you are advised to handle this using **try-catch** logic. |
-| [off_loopObserver](arkts-ability-errormanager-offloopobserver-f.md#offloopobserver) | Unregisters an observer for the message processing duration of the main thread.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic. |
-| [off_unhandledRejection](arkts-ability-errormanager-offunhandledrejection-f.md) | Unregisters an observer for the promise rejection.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic. |
-| [offFreeze](arkts-ability-errormanager-offfreeze-f.md) | Unregister the observer for freeze event. This function can only be called from main thread. |
-| [offUnhandledRejection](arkts-ability-errormanager-offunhandledrejection-f.md) | Unregister unhandled rejection observer. |
-| [on_error](arkts-ability-errormanager-onerror-f.md#onerror) | Registers an error observer. Once registered, it can capture JavaScript crashes occurring within the application, which are a type of application crash. When the observer captures such an exception, the application will not exit automatically. You are advised to add a synchronous exit operation after the callback function completes.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic. |
-| [on_freeze](arkts-ability-errormanager-onfreeze-f.md) | Registers an observer for the main thread freeze event of the application. If the observer is registered multiple times, only the last one takes effect.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic. |
-| [on_globalErrorOccurred](arkts-ability-errormanager-onglobalerroroccurred-f.md#onglobalerroroccurred) | Registers a global error observer via the **errorManager.on** API within any thread of a process. Once registered, it can capture exceptions occurring in any thread across the entire process. When the observer captures such an exception, the application will not exit automatically. You are advised to add a synchronous exit operation after the callback function completes. |
-| [on_globalUnhandledRejectionDetected](arkts-ability-errormanager-onglobalunhandledrejectiondetected-f.md#onglobalunhandledrejectiondetected) | Registers a rejected promise observer with any thread in the process. Once registered, it can capture a rejected promise that is not captured in the current thread of the application. |
-| [on_loopObserver](arkts-ability-errormanager-onloopobserver-f.md#onloopobserver) | Registers an observer for the message processing duration of the main thread. After the registration, the execution time of a message processed by the main thread of the application can be captured.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic. |
-| [on_unhandledRejection](arkts-ability-errormanager-onunhandledrejection-f.md) | Registers an observer for the promise rejection. After the registration, a rejected promise that is not captured in the current thread of the application can be captured.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic. |
-| [onFreeze](arkts-ability-errormanager-onfreeze-f.md) | Register an observer for freeze event. This function can only be called from main thread. Please note that each process only supports registering one observer. If you register multiple times, the later one will overwrite the previous one. |
-| [onUnhandledRejection](arkts-ability-errormanager-onunhandledrejection-f.md) | Register unhandled rejection observer. |
-| [setDefaultErrorHandler](arkts-ability-errormanager-setdefaulterrorhandler-f.md) | Returns the previously registered handler when a JavaScript crash exception occurs. It can only be used in the main thread.If an invalid parameter is passed or the API is called from a child thread, an error code is thrown and **undefined** is returned. You are advised to handle it with try-catch logic.If the API parameter is empty, subsequently registered handlers are not able to establish a connection with previously registered handlers, thereby breaking the chain call mechanism. |
-| [setDefaultFreezeObserver](arkts-ability-errormanager-setdefaultfreezeobserver-f.md) | Set the default freeze observer, This function will be executed right after the callback function registered through errorManager.on is executed. You can use it to implement chain calls instead of errorManager.on. If an empty observer is set for a certain module, it will cause the call chain to be interrupted. This API must be called in the main thread. |
-| [setDefaultResourceUsageObserver](arkts-ability-errormanager-setdefaultresourceusageobserver-f.md) | Set the default resource usage observer. You can use it to implement chain calls. If an empty observer is set for a certain module, it will cause the call chain to be interrupted. This API must be called on the main thread. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [off(Error Management Module)](arkts-ability-errormanager-off-f.md#offerror) |
+| [off(Error Management Module)](arkts-ability-errormanager-off-f.md#offerror) |
+| [off(Error Management Module)](arkts-ability-errormanager-off-f.md#offloopobserver) |
+| [off(Error Management Module)](arkts-ability-errormanager-off-f.md#offunhandledrejection) |
+| [off(Error Management Module)](arkts-ability-errormanager-off-f.md#offglobalunhandledrejectiondetected) |
+| [off(Error Management Module)](arkts-ability-errormanager-off-f.md#offfreeze) |
+| [off(Error Management Module)](arkts-ability-errormanager-off-f.md#offglobalerroroccurred) |
+| [offFreeze(Error Management Module)](arkts-ability-errormanager-offfreeze-f.md) |
+| [offUnhandledRejection(Error Management Module)](arkts-ability-errormanager-offunhandledrejection-f.md) |
+| [on(Error Management Module)](arkts-ability-errormanager-on-f.md#onerror) |
+| [on(Error Management Module)](arkts-ability-errormanager-on-f.md#onloopobserver) |
+| [on(Error Management Module)](arkts-ability-errormanager-on-f.md#onunhandledrejection) |
+| [on(Error Management Module)](arkts-ability-errormanager-on-f.md#onglobalunhandledrejectiondetected) |
+| [on(Error Management Module)](arkts-ability-errormanager-on-f.md#onfreeze) |
+| [on(Error Management Module)](arkts-ability-errormanager-on-f.md#onglobalerroroccurred) |
+| [onFreeze(Error Management Module)](arkts-ability-errormanager-onfreeze-f.md) |
+| [onUnhandledRejection(Error Management Module)](arkts-ability-errormanager-onunhandledrejection-f.md) |
+| [setDefaultErrorHandler(Error Management Module)](arkts-ability-errormanager-setdefaulterrorhandler-f.md) |
+| [setDefaultFreezeObserver(Error Management Module)](arkts-ability-errormanager-setdefaultfreezeobserver-f.md) |
+| [setDefaultResourceUsageObserver(Error Management Module)](arkts-ability-errormanager-setdefaultresourceusageobserver-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [GlobalError](arkts-ability-errormanager-globalerror-i.md) | Describes the object related to the exception event name, message, error stack information, exception thread name, and exception thread type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [GlobalError(Error Management Module)](arkts-ability-errormanager-globalerror-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [InstanceType](arkts-ability-errormanager-instancetype-e.md) | Enumerates the VM instance types. |
-| [ResourceType](arkts-ability-errormanager-resourcetype-e.md) | Define the resource types of the application. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [InstanceType(Error Management Module)](arkts-ability-errormanager-instancetype-e.md) |
+| [ResourceType(Error Management Module)](arkts-ability-errormanager-resourcetype-e.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [ErrorHandler](arkts-ability-errormanager-errorhandler-t.md) | The ErrorHandler will be called when the ArkTS runtime throws an exception that is not caught by the user. |
-| [ErrorObserver](arkts-ability-errormanager-errorobserver-t.md) | Defines the ErrorObserver module. |
-| [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | Defines an observer for the main thread freeze event of the application. It is used by the application to customize freeze information. |
-| [GlobalObserver](arkts-ability-errormanager-globalobserver-t.md) | Defines an exception observer that can be used as an input parameter for [errorManager.on('globalErrorOccurred')](arkts-ability-errormanager-onerror-f.md#onerror) and [errorManager.on('globalUnhandledRejectionDetected')](arkts-ability-errormanager-onerror-f.md#onerror) to monitor event processing on the main thread of the current application. |
-| [LoopObserver](arkts-ability-errormanager-loopobserver-t.md) | Defines the LoopObserver module. It can be used as a parameter of **errormanager.on** to listen for and handle main thread timeout events in the current application. |
-| [ResourceUsageObserver](arkts-ability-errormanager-resourceusageobserver-t.md) | The observer will be called by the system when resource usage exceed threshold. |
-| [UnhandledRejectionObserver](arkts-ability-errormanager-unhandledrejectionobserver-t.md) | The observer will be called by system when an unhandled rejection occurs. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ErrorHandler(Error Management Module)](arkts-ability-errormanager-errorhandler-t.md) |
+| [ErrorObserver(Error Management Module)](arkts-ability-errormanager-errorobserver-t.md) |
+| [FreezeObserver(Error Management Module)](arkts-ability-errormanager-freezeobserver-t.md) |
+| [GlobalObserver(Error Management Module)](arkts-ability-errormanager-globalobserver-t.md) |
+| [LoopObserver(Error Management Module)](arkts-ability-errormanager-loopobserver-t.md) |
+| [ResourceUsageObserver(Error Management Module)](arkts-ability-errormanager-resourceusageobserver-t.md) |
+| [UnhandledRejectionObserver(Error Management Module)](arkts-ability-errormanager-unhandledrejectionobserver-t.md) |

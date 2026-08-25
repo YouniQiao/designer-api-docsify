@@ -2,9 +2,9 @@
 
 Represents an upgrade service type.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-update-export interface BusinessType--><!--Device-update-export interface BusinessType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -26,9 +26,9 @@ Upgrade type, which is used to specify the target object to be upgraded.Use scen
 
 **Type:** [BusinessSubType](arkts-basicservices-update-businesssubtype-e-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-BusinessType-subType: BusinessSubType--><!--Device-BusinessType-subType: BusinessSubType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -44,11 +44,10 @@ Vendor type, which is used to identify the vendor of the upgrade package.Use sce
 
 **Type:** [BusinessVendor](arkts-basicservices-update-businessvendor-e-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-BusinessType-vendor: BusinessVendor--><!--Device-BusinessType-vendor: BusinessVendor-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
-

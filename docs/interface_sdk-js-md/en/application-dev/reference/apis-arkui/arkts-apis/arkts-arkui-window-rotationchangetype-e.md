@@ -2,9 +2,9 @@
 
 Enumerates the types of window rotation events.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-window-enum RotationChangeType--><!--Device-window-enum RotationChangeType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -16,11 +16,11 @@ WINDOW_WILL_ROTATE = 0
 
 The window is about to rotate.
 
-**Since:** 23
+**Since:** 19
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
-<!--Device-RotationChangeType-WINDOW_WILL_ROTATE = 0--><!--Device-RotationChangeType-WINDOW_WILL_ROTATE = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -32,11 +32,10 @@ WINDOW_DID_ROTATE = 1
 
 The window has finished rotating.
 
-**Since:** 23
+**Since:** 19
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
-<!--Device-RotationChangeType-WINDOW_DID_ROTATE = 1--><!--Device-RotationChangeType-WINDOW_DID_ROTATE = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Window.SessionManager
-

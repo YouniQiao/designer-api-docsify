@@ -4,7 +4,7 @@ Defines the dynamic configuration of certificate pinning.
 
 **Since:** 12
 
-<!--Device-http-interface CertificatePinning--><!--Device-http-interface CertificatePinning-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -26,7 +26,7 @@ Encryption algorithm. Currently, only SHA-256 is supported.
 
 **Since:** 12
 
-<!--Device-CertificatePinning-hashAlgorithm: 'SHA-256'--><!--Device-CertificatePinning-hashAlgorithm: 'SHA-256'-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -42,7 +42,6 @@ Certificate PIN of the string type.
 
 **Since:** 12
 
-<!--Device-CertificatePinning-publicKeyHash: string--><!--Device-CertificatePinning-publicKeyHash: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetStack
-

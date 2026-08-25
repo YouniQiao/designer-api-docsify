@@ -9,19 +9,18 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [ArrayBuffer](arkts-arkts-arraybuffer-c.md) | JS ArrayBuffer API-compatible class. Used to represent a generic, fixed-length raw binary data buffer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArrayBuffer](arkts-arkts-arraybuffer-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ArrayBufferView](arkts-arkts-arraybuffer-arraybufferview-i.md) | Interface representing a view of an ArrayBuffer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArrayBufferView](arkts-arkts-arraybuffer-arraybufferview-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [ArrayBufferLike](arkts-arkts-arraybufferlike-t.md) | Define the alias ArrayBufferLike on ArrayBuffer. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArrayBufferLike](arkts-arkts-arraybufferlike-t.md) |

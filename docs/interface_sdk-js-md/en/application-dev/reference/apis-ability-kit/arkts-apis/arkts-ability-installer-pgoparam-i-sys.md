@@ -2,9 +2,9 @@
 
 Defines the parameters of the PGO configuration file.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-installer-export interface PGOParam--><!--Device-installer-export interface PGOParam-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -26,9 +26,9 @@ Module name of the bundle.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PGOParam-moduleName: string--><!--Device-PGOParam-moduleName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -44,11 +44,10 @@ Path of the PGO configuration file.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PGOParam-pgoFilePath: string--><!--Device-PGOParam-pgoFilePath: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
-

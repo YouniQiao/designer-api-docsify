@@ -1,8 +1,6 @@
 # Math
 
-**Since:** -1
-
-<!--Device-unnamed-interface Math--><!--Device-unnamed-interface Math-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,7 +15,4 @@ readonly [Symbol.toStringTag]: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-Math-readonly [Symbol.toStringTag]: string--><!--Device-Math-readonly [Symbol.toStringTag]: string-End-->
-
+**ArkTS mode:** 

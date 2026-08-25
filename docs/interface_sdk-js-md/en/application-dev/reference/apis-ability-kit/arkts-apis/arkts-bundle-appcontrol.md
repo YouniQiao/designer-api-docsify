@@ -5,9 +5,9 @@ The module provides APIs for setting, obtaining, and deleting the disposed statu
 > **NOTE：**&gt;
 > The APIs provided by this module are system APIs.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-declare namespace appControl--><!--Device-unnamed-declare namespace appControl-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -24,46 +24,45 @@ import { appControl } from '@kit.AbilityKit';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md) | Deletes the disposed status for an application. This API uses an asynchronous callback to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
-| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md) | Deletes the disposed status for an application. This API uses a promise to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
-| [deleteDisposedStatusSync](arkts-ability-appcontrol-deletedisposedstatussync-f-sys.md) | Deletes the disposed status for an application or an application clone. This API returns the result synchronously. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
-| [deleteUninstallDisposedRule](arkts-ability-appcontrol-deleteuninstalldisposedrule-f-sys.md) | Deletes an uninstallation disposed rule for an application or an application clone. |
-| [getAllDisposedRules](arkts-ability-appcontrol-getalldisposedrules-f-sys.md) | Obtains all the disposed rules set for the current user. |
-| [getDisposedRule](arkts-ability-appcontrol-getdisposedrule-f-sys.md) | Obtains the disposed rule of an application or an application clone. |
-| [getDisposedRulesByBundle](arkts-ability-appcontrol-getdisposedrulesbybundle-f-sys.md) | Query all disposed rules under the current user for the specified bundle name. |
-| [getDisposedStatus](arkts-ability-appcontrol-getdisposedstatus-f-sys.md) | Obtains the disposed status of an application. This API uses an asynchronous callback to return the result. If the operation is successful, the disposed status of the application is returned. If the operation fails, an error message is returned. |
-| [getDisposedStatus](arkts-ability-appcontrol-getdisposedstatus-f-sys.md) | Obtains the disposed status of an application. This API uses a promise to return the result. If the operation is successful, the disposed status of the application is returned. If the operation fails, an error message is returned. |
-| [getDisposedStatusSync](arkts-ability-appcontrol-getdisposedstatussync-f-sys.md) | Obtains the disposed status of an application. This API returns the result synchronously. If the operation is successful, the disposed status of the application is returned. If the operation fails, an error message is returned. |
-| [getUninstallDisposedRule](arkts-ability-appcontrol-getuninstalldisposedrule-f-sys.md) | Obtains the uninstallation disposed rule of an application or an application clone. |
-| [setDisposedRule](arkts-ability-appcontrol-setdisposedrule-f-sys.md) | Sets the disposed rule for an application or an application clone. |
-| [setDisposedRules](arkts-ability-appcontrol-setdisposedrules-f-sys.md) | Sets disposed rules in batches for an application or an application clone. |
-| [setDisposedStatus](arkts-ability-appcontrol-setdisposedstatus-f-sys.md) | Sets the disposed status for an application. This API uses an asynchronous callback to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
-| [setDisposedStatus](arkts-ability-appcontrol-setdisposedstatus-f-sys.md) | Sets the disposed status for an application. This API uses a promise to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
-| [setDisposedStatusSync](arkts-ability-appcontrol-setdisposedstatussync-f-sys.md) | Sets the disposed status for an application. This API returns the result synchronously. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
-| [setUninstallDisposedRule](arkts-ability-appcontrol-setuninstalldisposedrule-f-sys.md) | Sets an uninstallation disposed rule for an application or an application clone. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md) |
+| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md) |
+| [deleteDisposedStatusSync](arkts-ability-appcontrol-deletedisposedstatussync-f-sys.md) |
+| [deleteUninstallDisposedRule](arkts-ability-appcontrol-deleteuninstalldisposedrule-f-sys.md) |
+| [getAllDisposedRules](arkts-ability-appcontrol-getalldisposedrules-f-sys.md) |
+| [getDisposedRule](arkts-ability-appcontrol-getdisposedrule-f-sys.md) |
+| [getDisposedRulesByBundle](arkts-ability-appcontrol-getdisposedrulesbybundle-f-sys.md) |
+| [getDisposedStatus](arkts-ability-appcontrol-getdisposedstatus-f-sys.md) |
+| [getDisposedStatus](arkts-ability-appcontrol-getdisposedstatus-f-sys.md) |
+| [getDisposedStatusSync](arkts-ability-appcontrol-getdisposedstatussync-f-sys.md) |
+| [getUninstallDisposedRule](arkts-ability-appcontrol-getuninstalldisposedrule-f-sys.md) |
+| [setDisposedRule](arkts-ability-appcontrol-setdisposedrule-f-sys.md) |
+| [setDisposedRules](arkts-ability-appcontrol-setdisposedrules-f-sys.md) |
+| [setDisposedStatus](arkts-ability-appcontrol-setdisposedstatus-f-sys.md) |
+| [setDisposedStatus](arkts-ability-appcontrol-setdisposedstatus-f-sys.md) |
+| [setDisposedStatusSync](arkts-ability-appcontrol-setdisposedstatussync-f-sys.md) |
+| [setUninstallDisposedRule](arkts-ability-appcontrol-setuninstalldisposedrule-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [DisposedRule](arkts-ability-appcontrol-disposedrule-i-sys.md) | Defines a disposed rule. |
-| [DisposedRuleConfiguration](arkts-ability-appcontrol-disposedruleconfiguration-i-sys.md) | Describes the configurations for setting disposed rules in batches. |
-| [UninstallDisposedRule](arkts-ability-appcontrol-uninstalldisposedrule-i-sys.md) | Describes an uninstallation disposed rule. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DisposedRule](arkts-ability-appcontrol-disposedrule-i-sys.md) |
+| [DisposedRuleConfiguration](arkts-ability-appcontrol-disposedruleconfiguration-i-sys.md) |
+| [UninstallDisposedRule](arkts-ability-appcontrol-uninstalldisposedrule-i-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [ComponentType](arkts-ability-appcontrol-componenttype-e-sys.md) | Enumerates the types of application components that function as the displayed page. |
-| [ControlType](arkts-ability-appcontrol-controltype-e-sys.md) | Enumerates the control type of application disposal. |
-| [DisposedType](arkts-ability-appcontrol-disposedtype-e-sys.md) | Enumerates the types of application disposals. |
-| [PageJumpMode](arkts-ability-appcontrol-pagejumpmode-e-sys.md) | Enumerates the page jump modes used when an application is blocked. |
-| [UninstallComponentType](arkts-ability-appcontrol-uninstallcomponenttype-e-sys.md) | Enumerates the types of abilities during uninstallation. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ComponentType](arkts-ability-appcontrol-componenttype-e-sys.md) |
+| [ControlType](arkts-ability-appcontrol-controltype-e-sys.md) |
+| [DisposedType](arkts-ability-appcontrol-disposedtype-e-sys.md) |
+| [PageJumpMode](arkts-ability-appcontrol-pagejumpmode-e-sys.md) |
+| [UninstallComponentType](arkts-ability-appcontrol-uninstallcomponenttype-e-sys.md) |
 <!--DelEnd-->
-

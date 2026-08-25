@@ -4,9 +4,9 @@ Defines the session of RootScene.@interface RootSceneSession
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-unnamed-interface RootSceneSession--><!--Device-unnamed-interface RootSceneSession-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,4 +16,3 @@ Defines the session of RootScene.@interface RootSceneSession
 
 ```TypeScript
 ```
-

@@ -16,22 +16,22 @@ Obtains the URL of the system-level PAC script.
 
 **Since:** 15
 
-<!--Device-connection-function getPacUrl(): string--><!--Device-connection-function getPacUrl(): string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | URL of the PAC script. If the PAC script does not exist, error code 2100003 is reported. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| Error Code ID |
+| --- |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
 **Examples**
 
@@ -40,4 +40,3 @@ import { connection } from '@kit.NetworkKit';
 
 let pacUrl = connection.getPacUrl();
 ```
-

@@ -4,7 +4,7 @@ Describe the type of Bluetooth address.
 
 **Since:** 21
 
-<!--Device-common-export interface BluetoothAddress--><!--Device-common-export interface BluetoothAddress-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -26,7 +26,7 @@ The string of the Bluetooth address.
 
 **Since:** 21
 
-<!--Device-BluetoothAddress-address: string--><!--Device-BluetoothAddress-address: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -42,7 +42,7 @@ The type of the Bluetooth address.
 
 **Since:** 21
 
-<!--Device-BluetoothAddress-addressType: BluetoothAddressType--><!--Device-BluetoothAddress-addressType: BluetoothAddressType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -58,7 +58,6 @@ Address type defined by the Bluetooth Core Specification. It is used only when t
 
 **Since:** 23
 
-<!--Device-BluetoothAddress-rawAddressType?: BluetoothRawAddressType--><!--Device-BluetoothAddress-rawAddressType?: BluetoothRawAddressType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

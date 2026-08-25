@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-export interface ReadStreamOptions--><!--Device-unnamed-export interface ReadStreamOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -28,7 +28,7 @@ end?: number
 
 **起始版本：** 12
 
-<!--Device-ReadStreamOptions-end?: number--><!--Device-ReadStreamOptions-end?: number-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -44,7 +44,6 @@ start?: number
 
 **起始版本：** 12
 
-<!--Device-ReadStreamOptions-start?: number--><!--Device-ReadStreamOptions-start?: number-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
-

@@ -2,9 +2,9 @@
 
 Describes the image decoding options.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-image-interface DecodingOptions--><!--Device-image-interface DecodingOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -24,9 +24,9 @@ If **desiredRegion** and **desiredSize** are both specified, the order of croppi
 
 **Type:** [CropAndScaleStrategy](arkts-image-image-cropandscalestrategy-e.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DecodingOptions-cropAndScaleStrategy?: CropAndScaleStrategy--><!--Device-DecodingOptions-cropAndScaleStrategy?: CropAndScaleStrategy-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -40,9 +40,9 @@ Target color space. The default value is **UNKNOWN**.
 
 **Type:** colorSpaceManager.ColorSpaceManager
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DecodingOptions-desiredColorSpace?: colorSpaceManager.ColorSpaceManager--><!--Device-DecodingOptions-desiredColorSpace?: colorSpaceManager.ColorSpaceManager-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -56,9 +56,9 @@ Desired dynamic range. The default value is **SDR**.This property cannot be set 
 
 **Type:** [DecodingDynamicRange](arkts-image-image-decodingdynamicrange-e.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-DecodingOptions-desiredDynamicRange?: DecodingDynamicRange--><!--Device-DecodingOptions-desiredDynamicRange?: DecodingDynamicRange-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -72,13 +72,13 @@ Pixel format for decoding. The default value is **RGBA_8888**. Only RGBA_8888, B
 
 **Type:** PixelMapFormat
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-DecodingOptions-desiredPixelFormat?: PixelMapFormat--><!--Device-DecodingOptions-desiredPixelFormat?: PixelMapFormat-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -92,13 +92,13 @@ Rectangle specified by **Region** in the decoded image. When the original image 
 
 **Type:** Region
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-DecodingOptions-desiredRegion?: Region--><!--Device-DecodingOptions-desiredRegion?: Region-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -112,13 +112,13 @@ Expected output size. The value must be a positive integer and defaults to the o
 
 **Type:** Size
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-DecodingOptions-desiredSize?: Size--><!--Device-DecodingOptions-desiredSize?: Size-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -132,13 +132,13 @@ Whether the image is editable. **true** if editable, **false** otherwise. The de
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-DecodingOptions-editable?: boolean--><!--Device-DecodingOptions-editable?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -150,15 +150,15 @@ fitDensity?: int
 
 Pixel density, in ppi. The default value is **0**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-DecodingOptions-fitDensity?: int--><!--Device-DecodingOptions-fitDensity?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -170,15 +170,15 @@ index?: int
 
 Index of the image to decode. The default value is **0**, indicating the first image. If this parameter is set to N, the (N+1)th image is used. For single-frame images, the value is always **0**. For multi-frame images such as animations, the value ranges from 0 to (Number of frames – 1).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-DecodingOptions-index?: int--><!--Device-DecodingOptions-index?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -190,15 +190,15 @@ rotate?: int
 
 Rotation angle. The default value is **0**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-DecodingOptions-rotate?: int--><!--Device-DecodingOptions-rotate?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -210,15 +210,14 @@ sampleSize?: int
 
 Sampling size of the thumbnail. The default value is **1**. Currently, the value can only be **1**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-DecodingOptions-sampleSize?: int--><!--Device-DecodingOptions-sampleSize?: int-End-->
-
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
-

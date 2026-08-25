@@ -1,11 +1,11 @@
-# @ohos.request.cacheDownload
+# @ohos.request.cacheDownload(Download and Cache)
 
 The **request** module provides applications with the basic capabilities of file upload and download and background transfer proxy.  
 - The child component **cacheDownload** provides the basic capability of caching application resources in advance. - **cacheDownload** uses the HTTP to download data and caches data resources to the application memory or specified files in the application sandbox directory. - The cached data can be used by specific ArkUI components (such as **Image**) to improve resource loading efficiency. Check whether the ArkUI components support this function by referring to the ArkUI component topics.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-unnamed-declare namespace cacheDownload--><!--Device-unnamed-declare namespace cacheDownload-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -19,41 +19,40 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [cancel](arkts-basicservices-cachedownload-cancel-f.md) | Cancels an ongoing download task based on the URL. The saved memory cache and file cache are not affected.  - If there is no download task with the specified URL, this API does not take effect. - When this API is used for synchronous execution, the calling thread is not blocked. |
-| [clearFileCache](arkts-basicservices-cachedownload-clearfilecache-f.md) | Clears this file cache. |
-| [clearMemoryCache](arkts-basicservices-cachedownload-clearmemorycache-f.md) | Clears this memory cache. |
-| [download](arkts-basicservices-cachedownload-download-f.md) | Downloads a task from a specified URL. If the transfer is successful, the data is downloaded to the memory cache and file cache.  - After automatically decompressing during HTTP transmission, the size of the target resource cannot exceed 20971 520 bytes (20 MB). Otherwise, the resource fails to store in the memory cache or file cache. - When caching the downloaded data, if the data already exists in the destination URL, the new data will overwrite the old one. - In addition, the system determines whether to store the target resource in a specified location based on each cache type's size limit in **cacheDownload**. By default, the LRU mode is used to replace the existing cached data. - This API returns the result synchronously, without blocking the calling thread. |
-| [getDownloadInfo](arkts-basicservices-cachedownload-getdownloadinfo-f.md) | Obtains the download information based on the URL. The download information is stored in the download information list in memory and is cleared when the application exits.  - If the specified URL is found in the download information list, the latest [DownloadInfo](arkts-basicservices-cachedownload-downloadinfo-i.md) corresponding to the URL is returned. - If the specified URL cannot be found in the download information list, **undefined** is returned. - If the download information has already cached in the URL, the new cached information will overwrite the old one. - When the target information is stored in the memory, the existing cache data is replaced in the LRU mode. |
-| [offDownloadError](arkts-basicservices-cachedownload-offdownloaderror-f.md) | Unsubscribes from the pre-download error events. This API uses an asynchronous callback to return the result. |
-| [offDownloadSuccess](arkts-basicservices-cachedownload-offdownloadsuccess-f.md) | Unsubscribes from the pre-download completion events. This API uses an asynchronous callback to return the result. |
-| [onDownloadError](arkts-basicservices-cachedownload-ondownloaderror-f.md) | Subscribes to the pre-download error events. This API uses an asynchronous callback to return the result. |
-| [onDownloadSuccess](arkts-basicservices-cachedownload-ondownloadsuccess-f.md) | Subscribes to the pre-download completion events. This API uses an asynchronous callback to return the result. |
-| [setDownloadInfoListSize](arkts-basicservices-cachedownload-setdownloadinfolistsize-f.md) | Sets the size of the download information list.  - The download information list is used to store pre-downloaded information. - Each pre-download generates a piece of download information with a unique URL. Only the latest download information is saved for the same URL. - If the list size is increased using this API, the original information in the list remains unchanged; if the list size is decreased, the LRU mode is used by default to clear excess cached data in the list. |
-| [setFileCacheSize](arkts-basicservices-cachedownload-setfilecachesize-f.md) | Sets the upper limit of the file cache size for the **cacheDownload** component.  - When this API is used to adjust the cache size, the LRU mode is used by default to clear redundant cached data in the file. - If **bytes** is set to **0**, all cached files will be deleted. - This API returns the result synchronously, without blocking the calling thread. |
-| [setGlobalRetryOptions](arkts-basicservices-cachedownload-setglobalretryoptions-f.md) | Sets retry options for all tasks. Used when task-specific retry configuration is not configured. |
-| [setGlobalTimeoutOptions](arkts-basicservices-cachedownload-setglobaltimeoutoptions-f.md) | Sets timeout configuration for all tasks. Used when task-specific timeout configuration is not configured. |
-| [setMemoryCacheSize](arkts-basicservices-cachedownload-setmemorycachesize-f.md) | Sets the upper limit of the memory cache size for the **cacheDownload** component.  - When this API is used to adjust the cache size, the LRU mode is used by default to clear redundant cached data in the memory. - This API returns the result synchronously, without blocking the calling thread. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [cancel(Download and Cache)](arkts-basicservices-cachedownload-cancel-f.md) |
+| [clearFileCache(Download and Cache)](arkts-basicservices-cachedownload-clearfilecache-f.md) |
+| [clearMemoryCache(Download and Cache)](arkts-basicservices-cachedownload-clearmemorycache-f.md) |
+| [download(Download and Cache)](arkts-basicservices-cachedownload-download-f.md) |
+| [getDownloadInfo(Download and Cache)](arkts-basicservices-cachedownload-getdownloadinfo-f.md) |
+| [offDownloadError(Download and Cache)](arkts-basicservices-cachedownload-offdownloaderror-f.md) |
+| [offDownloadSuccess(Download and Cache)](arkts-basicservices-cachedownload-offdownloadsuccess-f.md) |
+| [onDownloadError(Download and Cache)](arkts-basicservices-cachedownload-ondownloaderror-f.md) |
+| [onDownloadSuccess(Download and Cache)](arkts-basicservices-cachedownload-ondownloadsuccess-f.md) |
+| [setDownloadInfoListSize(Download and Cache)](arkts-basicservices-cachedownload-setdownloadinfolistsize-f.md) |
+| [setFileCacheSize(Download and Cache)](arkts-basicservices-cachedownload-setfilecachesize-f.md) |
+| [setGlobalRetryOptions(Download and Cache)](arkts-basicservices-cachedownload-setglobalretryoptions-f.md) |
+| [setGlobalTimeoutOptions(Download and Cache)](arkts-basicservices-cachedownload-setglobaltimeoutoptions-f.md) |
+| [setMemoryCacheSize(Download and Cache)](arkts-basicservices-cachedownload-setmemorycachesize-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [CacheDownloadOptions](arkts-basicservices-cachedownload-cachedownloadoptions-i.md) | Provides configuration options for download and cache, including HTTP options, transmission options, and task options. |
-| [DownloadError](arkts-basicservices-cachedownload-downloaderror-i.md) | Describes the error message returned when a pre-download error occurs. |
-| [DownloadInfo](arkts-basicservices-cachedownload-downloadinfo-i.md) | Describes the pre-downloaded download information. |
-| [NetworkInfo](arkts-basicservices-cachedownload-networkinfo-i.md) | Describes the pre-downloaded network information. |
-| [PerformanceInfo](arkts-basicservices-cachedownload-performanceinfo-i.md) | Describes the pre-downloaded performance information. |
-| [ResourceInfo](arkts-basicservices-cachedownload-resourceinfo-i.md) | Describes the pre-downloaded resource information. |
-| [RetryOptions](arkts-basicservices-cachedownload-retryoptions-i.md) | Task retry configuration. |
-| [TimeoutOptions](arkts-basicservices-cachedownload-timeoutoptions-i.md) | Task timeout configuration. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CacheDownloadOptions(Download and Cache)](arkts-basicservices-cachedownload-cachedownloadoptions-i.md) |
+| [DownloadError(Download and Cache)](arkts-basicservices-cachedownload-downloaderror-i.md) |
+| [DownloadInfo(Download and Cache)](arkts-basicservices-cachedownload-downloadinfo-i.md) |
+| [NetworkInfo(Download and Cache)](arkts-basicservices-cachedownload-networkinfo-i.md) |
+| [PerformanceInfo(Download and Cache)](arkts-basicservices-cachedownload-performanceinfo-i.md) |
+| [ResourceInfo(Download and Cache)](arkts-basicservices-cachedownload-resourceinfo-i.md) |
+| [RetryOptions(Download and Cache)](arkts-basicservices-cachedownload-retryoptions-i.md) |
+| [TimeoutOptions(Download and Cache)](arkts-basicservices-cachedownload-timeoutoptions-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [CacheStrategy](arkts-basicservices-cachedownload-cachestrategy-e.md) | Enumerates cache update strategies. |
-| [ErrorCode](arkts-basicservices-cachedownload-errorcode-e.md) | Enumerates the specific types of returned error code. |
-| [SslType](arkts-basicservices-cachedownload-ssltype-e.md) | Enumerates secure communication protocols. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CacheStrategy(Download and Cache)](arkts-basicservices-cachedownload-cachestrategy-e.md) |
+| [ErrorCode(Download and Cache)](arkts-basicservices-cachedownload-errorcode-e.md) |
+| [SslType(Download and Cache)](arkts-basicservices-cachedownload-ssltype-e.md) |

@@ -4,7 +4,7 @@ Callback provided when enabling an accessibility extension app through the [conf
 
 **Since:** 23
 
-<!--Device-config-export interface ConnectCallback--><!--Device-config-export interface ConnectCallback-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -24,15 +24,12 @@ onDisconnect: OnDisconnectCallback
 
 Callback invoked when the connection to the accessibility extension app is disconnected.
 
-**Type:** [OnDisconnectCallback](arkts-accessibility-config-ondisconnectcallback-t-sys.md)
-
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-ConnectCallback-onDisconnect: OnDisconnectCallback--><!--Device-ConnectCallback-onDisconnect: OnDisconnectCallback-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
-

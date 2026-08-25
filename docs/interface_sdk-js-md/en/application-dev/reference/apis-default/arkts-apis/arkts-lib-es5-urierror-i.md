@@ -1,13 +1,8 @@
 # URIError
 
-**Inheritance/Implementation:** URIError extends [Error](arkts-lib-es5-error-i.md)
-
-**Since:** -1
-
-<!--Device-unnamed-interface URIError--><!--Device-unnamed-interface URIError-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
-

@@ -2,9 +2,9 @@
 
 Target information.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-mechanicManager-export interface TargetInfo--><!--Device-mechanicManager-export interface TargetInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -26,11 +26,10 @@ Target type.
 
 **Type:** [TargetType](arkts-mechanic-mechanicmanager-targettype-e-sys.md)
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-TargetInfo-targetType: TargetType--><!--Device-TargetInfo-targetType: TargetType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
-

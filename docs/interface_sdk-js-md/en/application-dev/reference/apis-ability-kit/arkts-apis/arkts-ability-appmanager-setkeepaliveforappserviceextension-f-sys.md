@@ -18,11 +18,11 @@ Sets or cancels the keep-alive status for an AppServiceExtensionAbility. This AP
 > - This API takes effect only when the application is installed under the user with **userId** of 1 and the
 > **mainElement** field in the **module.json5** file of the entry HAP is set to **AppServiceExtensionAbility**.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_APP_KEEP_ALIVE
-
-<!--Device-appManager-function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean): Promise<void>--><!--Device-appManager-function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -30,29 +30,29 @@ Sets or cancels the keep-alive status for an AppServiceExtensionAbility. This AP
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| enabled | boolean | Yes | Whether to keep the application alive or cancel its keep-alive status. **true** to keep, **false** otherwise. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bundleName | string | Yes |
+| enabled | boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000081](../errorcode-ability.md#16000081-failed-to-obtain-the-target-application-information) | Failed to obtain the target application information. |
-| [16000202](../errorcode-ability.md#16000202-keep-alive-can-be-set-only-for-an-extensionability-of-the-appservice-type) | Invalid main element type. |
-| [16000203](../errorcode-ability.md#16000203-cannot-change-the-keep-alive-status-of-an-appserviceextensionability) | Cannot change the keep-alive status. |
-| [16000204](../errorcode-ability.md#16000204-application-is-not-installed-for-the-user-with-userid-of-1) | The target bundle is not in u1. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000081](../errorcode-ability.md#16000081-failed-to-obtain-the-target-application-information) |
+| [16000202](../errorcode-ability.md#16000202-keep-alive-can-be-set-only-for-an-extensionability-of-the-appservice-type) |
+| [16000203](../errorcode-ability.md#16000203-cannot-change-the-keep-alive-status-of-an-appserviceextensionability) |
+| [16000204](../errorcode-ability.md#16000204-application-is-not-installed-for-the-user-with-userid-of-1) |
 
 **Examples**
 
@@ -73,4 +73,3 @@ try {
   console.error(`[appManager] setKeepAliveForAppServiceExtension error: ${code}, ${message}`);
 }
 ```
-

@@ -2,9 +2,9 @@
 
 编码器信息描述。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-unnamed-interface EncoderInfo--><!--Device-unnamed-interface EncoderInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -24,9 +24,9 @@ bitRate?: Range
 
 **类型：** [Range](arkts-media-multimedia-media-range-i.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-EncoderInfo-bitRate?: Range--><!--Device-EncoderInfo-bitRate?: Range-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -40,9 +40,9 @@ channels?: Range
 
 **类型：** [Range](arkts-media-multimedia-media-range-i.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-EncoderInfo-channels?: Range--><!--Device-EncoderInfo-channels?: Range-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -56,9 +56,9 @@ frameRate?: Range
 
 **类型：** [Range](arkts-media-multimedia-media-range-i.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-EncoderInfo-frameRate?: Range--><!--Device-EncoderInfo-frameRate?: Range-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -72,9 +72,9 @@ height?: Range
 
 **类型：** [Range](arkts-media-multimedia-media-range-i.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-EncoderInfo-height?: Range--><!--Device-EncoderInfo-height?: Range-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -88,9 +88,9 @@ mimeType: CodecMimeType
 
 **类型：** [CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-EncoderInfo-mimeType: CodecMimeType--><!--Device-EncoderInfo-mimeType: CodecMimeType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -102,11 +102,11 @@ sampleRate?: Array<int>
 
 音频采样率，包含所有可用的音频采样率，单位为Hz。仅在音频编码器中可用。
 
-**类型：** Array&lt;int&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-EncoderInfo-sampleRate?: Array<int>--><!--Device-EncoderInfo-sampleRate?: Array<int>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -120,9 +120,9 @@ type: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-EncoderInfo-type: string--><!--Device-EncoderInfo-type: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -136,9 +136,8 @@ width?: Range
 
 **类型：** [Range](arkts-media-multimedia-media-range-i.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-EncoderInfo-width?: Range--><!--Device-EncoderInfo-width?: Range-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
-

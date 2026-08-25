@@ -9,9 +9,9 @@ Encapsulates the parameters for encryption or decryption using a block cipher mo
 
 **Inheritance/Implementation:** IvParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-cryptoFramework-interface IvParamsSpec--><!--Device-cryptoFramework-interface IvParamsSpec-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
@@ -34,13 +34,12 @@ IV parameter for encryption/decryption. Common lengths are listed below:
 
 **Type:** DataBlob
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-IvParamsSpec-iv: DataBlob--><!--Device-IvParamsSpec-iv: DataBlob-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
-

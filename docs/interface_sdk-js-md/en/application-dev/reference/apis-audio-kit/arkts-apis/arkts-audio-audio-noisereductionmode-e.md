@@ -4,7 +4,7 @@ Enumerates the noise reduction modes.
 
 **Since:** 26.0.0
 
-<!--Device-audio-enum NoiseReductionMode--><!--Device-audio-enum NoiseReductionMode-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -18,9 +18,9 @@ Fidelity mode, no noise cancellation.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-NoiseReductionMode-FIDELITY = 0--><!--Device-NoiseReductionMode-FIDELITY = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -34,9 +34,9 @@ Pure vocals mode, enhanced noise reduction.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-NoiseReductionMode-PURE_VOCALS = 1--><!--Device-NoiseReductionMode-PURE_VOCALS = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -50,9 +50,8 @@ Standard mode, weak noise reduction.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NoiseReductionMode-STANDARD = 2--><!--Device-NoiseReductionMode-STANDARD = 2-End-->
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
-

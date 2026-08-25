@@ -2,9 +2,9 @@
 
 Indicates the contact types.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sim-export enum ContactType--><!--Device-sim-export enum ContactType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -18,9 +18,9 @@ GENERAL_CONTACT = 1
 
 Indicates the common contact number.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ContactType-GENERAL_CONTACT = 1--><!--Device-ContactType-GENERAL_CONTACT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -34,9 +34,9 @@ FIXED_DIALING = 2
 
 Indicates the fixed dialing number.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ContactType-FIXED_DIALING = 2--><!--Device-ContactType-FIXED_DIALING = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -52,9 +52,8 @@ Service dialing number.
 
 **Since:** 24
 
-<!--Device-ContactType-SDN_DIALING = 3--><!--Device-ContactType-SDN_DIALING = 3-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
-

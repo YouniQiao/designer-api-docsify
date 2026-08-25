@@ -10,11 +10,11 @@ The distributedBundle module manages distributed bundles.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [distributedBundleManager](arkts-bundle-distributedbundlemanager.md)
-
-<!--Device-unnamed-declare namespace distributedBundle--><!--Device-unnamed-declare namespace distributedBundle-End-->
 
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 
@@ -31,11 +31,10 @@ import { distributedBundle } from '@kit.AbilityKit';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [getRemoteAbilityInfo](arkts-ability-distributedbundle-getremoteabilityinfo-f-sys.md) | Obtains the information about the remote ability that matches the given element name. This API uses an asynchronous callback to return the result. |
-| [getRemoteAbilityInfo](arkts-ability-distributedbundle-getremoteabilityinfo-f-sys.md) | Obtains the information about the remote ability that matches the given element name. This API uses a promise to return the result. |
-| [getRemoteAbilityInfos](arkts-ability-distributedbundle-getremoteabilityinfos-f-sys.md) | Obtains the information about remote abilities that match the given element names. This API uses an asynchronous callback to return the result. |
-| [getRemoteAbilityInfos](arkts-ability-distributedbundle-getremoteabilityinfos-f-sys.md) | Obtains the information about remote abilities that match the given element names. This API uses a promise to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getRemoteAbilityInfo](arkts-ability-distributedbundle-getremoteabilityinfo-f-sys.md) |
+| [getRemoteAbilityInfo](arkts-ability-distributedbundle-getremoteabilityinfo-f-sys.md) |
+| [getRemoteAbilityInfos](arkts-ability-distributedbundle-getremoteabilityinfos-f-sys.md) |
+| [getRemoteAbilityInfos](arkts-ability-distributedbundle-getremoteabilityinfos-f-sys.md) |
 <!--DelEnd-->
-

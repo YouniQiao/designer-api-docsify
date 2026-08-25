@@ -4,7 +4,7 @@ Defines the observer interface.@interface observer
 
 **Since:** 6
 
-<!--Device-unnamed-export interface observer--><!--Device-unnamed-export interface observer-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,17 +18,17 @@ Turn on the listener.
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-observer-observe(callback: string): void--><!--Device-observer-observe(callback: string): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | string | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | string | Yes |
 
 ## unobserve
 
@@ -40,9 +40,8 @@ Turn off the listener.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-observer-unobserve(): void--><!--Device-observer-unobserve(): void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

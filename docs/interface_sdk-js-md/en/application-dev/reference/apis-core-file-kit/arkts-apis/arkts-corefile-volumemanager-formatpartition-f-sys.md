@@ -16,11 +16,11 @@ Formats a partition on a disk. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Required permissions:** ohos.permission.MOUNT_FORMAT_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-volumeManager-function formatPartition(diskId: string, partitionNum: int, params: FormatParams): Promise<void>--><!--Device-volumeManager-function formatPartition(diskId: string, partitionNum: int, params: FormatParams): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -28,28 +28,27 @@ Formats a partition on a disk. This API uses a promise to return the result.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| diskId | string | Yes | Disk ID. |
-| partitionNum | int | Yes | Partition number. |
-| params | [FormatParams](arkts-corefile-volumemanager-formatparams-i-sys.md) | Yes | Format options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| diskId | string | Yes |
+| partitionNum | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| params | [FormatParams](arkts-corefile-volumemanager-formatparams-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| 13600001 | IPC error. |
-| 13600002 | Not supported filesystem. |
-| 13600005 | Incorrect volume state. |
-| 13600008 | No such object. |
-| 13600010 | The input parameter is invalid. |
-| 13600032 | Format partition failed. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13600001 |
+| 13600002 |
+| 13600005 |
+| 13600008 |
+| 13600010 |
+| 13600032 |

@@ -7,7 +7,7 @@ PersistentStorage提供了UI状态的持久化存储能力，将选定的AppStor
 
 **起始版本：** 7
 
-<!--Device-unnamed-declare class PersistentStorage--><!--Device-unnamed-declare class PersistentStorage-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,7 +26,7 @@ constructor(appStorage: AppStorage, storage: Storage)
 
 **起始版本：** 7
 
-<!--Device-PersistentStorage-constructor(appStorage: AppStorage, storage: Storage)--><!--Device-PersistentStorage-constructor(appStorage: AppStorage, storage: Storage)-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,10 +34,10 @@ constructor(appStorage: AppStorage, storage: Storage)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| appStorage | [AppStorage](arkts-arkui-appstorage-c.md) | 是 | 应用级存储对象，PersistentStorage将基于此对象进行持久化管理 |
-| storage | Storage | 是 | 持久化存储对象，用于实际读写持久化数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| appStorage | [AppStorage](arkts-arkui-appstorage-c.md) | 是 |
+| storage | [Storage](../../apis-arkdata/arkts-apis/arkts-arkdata-system-storage-storage-c.md) | 是 |
 
 **示例**
 
@@ -45,4 +45,3 @@ constructor(appStorage: AppStorage, storage: Storage)
 let initialData: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(initialData);
 ```
-

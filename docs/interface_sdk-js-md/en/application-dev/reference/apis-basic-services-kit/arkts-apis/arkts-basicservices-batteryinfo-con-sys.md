@@ -10,7 +10,7 @@ Estimated time for fully charging the current device, in unit of milliseconds. T
 
 **Since:** 9
 
-<!--Device-batteryInfo-const estimatedRemainingChargeTime: number--><!--Device-batteryInfo-const estimatedRemainingChargeTime: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -26,7 +26,7 @@ Remaining battery capacity of the device, in unit of mAh. This is a system API.
 
 **Since:** 9
 
-<!--Device-batteryInfo-const remainingEnergy: number--><!--Device-batteryInfo-const remainingEnergy: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -42,9 +42,8 @@ Total battery capacity of the device, in unit of mAh. This is a system API.
 
 **Since:** 9
 
-<!--Device-batteryInfo-const totalEnergy: number--><!--Device-batteryInfo-const totalEnergy: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 **System API:** This is a system API.
-

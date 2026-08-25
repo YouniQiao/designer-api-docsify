@@ -4,11 +4,11 @@ Scope 接口用于描述字段的有效范围。
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [ScopeHelper](arkts-arkts-util-scopehelper-c.md)
-
-<!--Device-util-class Scope--><!--Device-util-class Scope-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -28,25 +28,25 @@ clamp(value: ScopeType): ScopeType
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [clamp](arkts-arkts-util-scopehelper-c.md#clamp)
-
-<!--Device-Scope-clamp(value: ScopeType): ScopeType--><!--Device-Scope-clamp(value: ScopeType): ScopeType-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 指定的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ScopeType](arkts-arkts-util-scopetype-t.md) | 如果指定值小于下限，则返回 **lowerObj**；如果指定值大于上限，则返回 **upperObj**；如果 在此 **Scope** 范围内，则返回指定值。 |
+| 类型 |
+| --- |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) |
 
 **示例**
 
@@ -150,20 +150,20 @@ constructor(lowerObj: ScopeType, upperObj: ScopeType)
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** constructor
-
-<!--Device-Scope-constructor(lowerObj: ScopeType, upperObj: ScopeType)--><!--Device-Scope-constructor(lowerObj: ScopeType, upperObj: ScopeType)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | Scope** 对象的下限。 |
-| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | Scope** 对象的上限。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 |
 
 **示例**
 
@@ -318,25 +318,25 @@ contains(value: ScopeType): boolean
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [contains](arkts-arkts-util-lrucache-c.md#contains)
-
-<!--Device-Scope-contains(value: ScopeType): boolean--><!--Device-Scope-contains(value: ScopeType): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 指定的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 检查结果。如果值在此 **Scope** 范围内，则返回 **true**；否则返回 **false**。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -564,25 +564,25 @@ contains(range: Scope): boolean
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [contains](arkts-arkts-util-lrucache-c.md#contains)
-
-<!--Device-Scope-contains(range: Scope): boolean--><!--Device-Scope-contains(range: Scope): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| range | [Scope](arkts-arkts-util-scope-c.md) | 是 | 指定的 **Scope**。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| range | [Scope](arkts-arkts-util-scope-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 检查结果。如果范围在此 **Scope** 范围内，则返回 **true**；否则返回 **false**。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -598,26 +598,26 @@ expand(lowerObj: ScopeType, upperObj: ScopeType): Scope
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** expand
-
-<!--Device-Scope-expand(lowerObj: ScopeType, upperObj: ScopeType): Scope--><!--Device-Scope-expand(lowerObj: ScopeType, upperObj: ScopeType): Scope-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 下限。 |
-| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 上限。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Scope](arkts-arkts-util-scope-c.md) | 此 **Scope** 与给定上下限的并集。 |
+| 类型 |
+| --- |
+| [Scope](arkts-arkts-util-scope-c.md) |
 
 **示例**
 
@@ -910,25 +910,25 @@ expand(range: Scope): Scope
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** expand
-
-<!--Device-Scope-expand(range: Scope): Scope--><!--Device-Scope-expand(range: Scope): Scope-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| range | [Scope](arkts-arkts-util-scope-c.md) | 是 | 指定的 **Scope**。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| range | [Scope](arkts-arkts-util-scope-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Scope](arkts-arkts-util-scope-c.md) | 此 **Scope** 与给定 **Scope** 的并集。 |
+| 类型 |
+| --- |
+| [Scope](arkts-arkts-util-scope-c.md) |
 
 **示例**
 
@@ -944,25 +944,25 @@ expand(value: ScopeType): Scope
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** expand
-
-<!--Device-Scope-expand(value: ScopeType): Scope--><!--Device-Scope-expand(value: ScopeType): Scope-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 指定的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Scope](arkts-arkts-util-scope-c.md) | 此 **Scope** 与给定值的并集。 |
+| 类型 |
+| --- |
+| [Scope](arkts-arkts-util-scope-c.md) |
 
 **示例**
 
@@ -978,19 +978,19 @@ getLower(): ScopeType
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getLower](arkts-arkts-util-scopehelper-c.md#getlower)
-
-<!--Device-Scope-getLower(): ScopeType--><!--Device-Scope-getLower(): ScopeType-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ScopeType](arkts-arkts-util-scopetype-t.md) | 此 **Scope** 的下限。 |
+| 类型 |
+| --- |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) |
 
 **示例**
 
@@ -1091,19 +1091,19 @@ getUpper(): ScopeType
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getUpper](arkts-arkts-util-scopehelper-c.md#getupper)
-
-<!--Device-Scope-getUpper(): ScopeType--><!--Device-Scope-getUpper(): ScopeType-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ScopeType](arkts-arkts-util-scopetype-t.md) | 此 **Scope** 的上限。 |
+| 类型 |
+| --- |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) |
 
 **示例**
 
@@ -1204,25 +1204,25 @@ intersect(range: Scope): Scope
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** intersect
-
-<!--Device-Scope-intersect(range: Scope): Scope--><!--Device-Scope-intersect(range: Scope): Scope-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| range | [Scope](arkts-arkts-util-scope-c.md) | 是 | 指定的 **Scope**。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| range | [Scope](arkts-arkts-util-scope-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Scope](arkts-arkts-util-scope-c.md) | 此 **Scope** 与给定 **Scope** 的交集。 |
+| 类型 |
+| --- |
+| [Scope](arkts-arkts-util-scope-c.md) |
 
 **示例**
 
@@ -1425,26 +1425,26 @@ intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** intersect
-
-<!--Device-Scope-intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope--><!--Device-Scope-intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 下限。 |
-| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 上限。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Scope](arkts-arkts-util-scope-c.md) | 此 **Scope** 与给定上下限的交集。 |
+| 类型 |
+| --- |
+| [Scope](arkts-arkts-util-scope-c.md) |
 
 **示例**
 
@@ -1460,19 +1460,19 @@ toString(): string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [toString](arkts-arkts-util-lrucache-c.md#tostring)
-
-<!--Device-Scope-toString(): string--><!--Device-Scope-toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 包含此 **Scope** 的字符串表示形式。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -1612,4 +1612,3 @@ let result = range.toString();
 console.info("result = " + result);
 // 输出结果：result = [30, 40]
 ```
-

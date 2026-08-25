@@ -4,7 +4,7 @@ Enumerates the Picker color modes.
 
 **Since:** 12
 
-<!--Device-unnamed-export declare enum PickerColorMode--><!--Device-unnamed-export declare enum PickerColorMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ Same with the system.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-PickerColorMode-AUTO = 0--><!--Device-PickerColorMode-AUTO = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,9 @@ Light mode.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-PickerColorMode-LIGHT = 1--><!--Device-PickerColorMode-LIGHT = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,9 +50,8 @@ Dark mode.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PickerColorMode-DARK = 2--><!--Device-PickerColorMode-DARK = 2-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

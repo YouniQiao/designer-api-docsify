@@ -4,11 +4,11 @@
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 10
 
 **替代接口：** Measurable/Layoutable
-
-<!--Device-unnamed-declare interface LayoutBorderInfo--><!--Device-unnamed-declare interface LayoutBorderInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,17 +25,17 @@ borderWidth: EdgeWidths
 
 子组件边框宽度信息
 
-**类型：** EdgeWidths
+**类型：** [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md)
 
 **起始版本：** 9
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
 **替代接口：** getBorderWidth
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-LayoutBorderInfo-borderWidth: EdgeWidths--><!--Device-LayoutBorderInfo-borderWidth: EdgeWidths-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,13 +51,13 @@ margin: Margin
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 10
 
 **替代接口：** getMargin
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-LayoutBorderInfo-margin: Margin--><!--Device-LayoutBorderInfo-margin: Margin-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,9 +69,11 @@ padding: Padding
 
 子组件内边距信息
 
-**类型：** Padding
+**类型：** [Padding](../arkts-apis/arkts-arkui-units-padding-i.md)
 
 **起始版本：** 9
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -79,7 +81,4 @@ padding: Padding
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-LayoutBorderInfo-padding: Padding--><!--Device-LayoutBorderInfo-padding: Padding-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

@@ -8,9 +8,8 @@ Defines a TCPSocket object, which can be created using [socket.constructTCPSocke
 
 **Since:** 8
 
-<!--Device-connection-type TCPSocket = socket.TCPSocket--><!--Device-connection-type TCPSocket = socket.TCPSocket-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Property type:** socket.TCPSocket
-

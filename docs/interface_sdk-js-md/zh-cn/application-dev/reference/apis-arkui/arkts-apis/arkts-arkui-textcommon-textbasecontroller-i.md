@@ -4,9 +4,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export declare interface TextBaseController--><!--Device-unnamed-export declare interface TextBaseController-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +18,9 @@ closeSelectionMenu(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-TextBaseController-closeSelectionMenu(): void--><!--Device-TextBaseController-closeSelectionMenu(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,19 +34,17 @@ ArkTS-Sta: getLayoutManager(): LayoutManager | undefined获取布局管理器对
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-TextBaseController-getLayoutManager(): LayoutManager | undefined--><!--Device-TextBaseController-getLayoutManager(): LayoutManager | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [LayoutManager](arkts-arkui-textcommon-layoutmanager-i.md) \| undefined | 布局管理器对象。 |
+| 类型 |
+| --- |
+| [LayoutManager](arkts-arkui-textcommon-layoutmanager-i.md) \| undefined |
 
 ## setSelection
 
@@ -65,19 +59,16 @@ ArkTS-Sta: setSelection(selectionStart: int, selectionEnd: int, options?: Select
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-TextBaseController-setSelection(selectionStart: int, selectionEnd: int, options?: SelectionOptions): void--><!--Device-TextBaseController-setSelection(selectionStart: int, selectionEnd: int, options?: SelectionOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| selectionStart | int | 是 | 选中开始位置。<br/>取值小于0时，按0处理。 |
-| selectionEnd | int | 是 | 选中结束位置。<br/>取值大于文本长度时，按当前文本长度处理。 |
-| options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | 否 | 选择项配置。 默认值继承 SelectionOptions。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| selectionStart | int | 是 |
+| selectionEnd | int | 是 |
+| options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | 否 |

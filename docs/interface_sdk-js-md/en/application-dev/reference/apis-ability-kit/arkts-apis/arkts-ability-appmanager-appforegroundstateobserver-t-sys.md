@@ -1,18 +1,17 @@
 # AppForegroundStateObserver (System API)
 
 ```TypeScript
-export type AppForegroundStateObserver = _AppForegroundStateObserver
+export type AppForegroundStateObserver = _AppForegroundStateObserver.default
 ```
 
 Defines the listener for the state of application launch and exit.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-appManager-export type AppForegroundStateObserver = _AppForegroundStateObserver--><!--Device-appManager-export type AppForegroundStateObserver = _AppForegroundStateObserver-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
 
-**Property type:** _AppForegroundStateObserver
-
+**Property type:** _AppForegroundStateObserver.default

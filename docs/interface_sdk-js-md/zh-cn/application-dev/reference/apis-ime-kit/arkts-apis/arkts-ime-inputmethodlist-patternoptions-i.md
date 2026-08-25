@@ -2,9 +2,9 @@
 
 输入法模式选项配置，用于定义键盘模式的切换选项。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-unnamed-export interface PatternOptions--><!--Device-unnamed-export interface PatternOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -16,19 +16,29 @@ import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
 
 ## action
 
+ArkTS-Dyn:
+```TypeScript
+action: (index: number) => void
+```
+
+ArkTS-Sta:
 ```TypeScript
 action: (index: int) => void
 ```
 
 模式选项改变时的回调函数。 <br> <br>使用场景：当需要在用户切换键盘模式时执行相应逻辑（如更新键盘布局、保存用户偏好等）时，需设置此回调。 <br> <br>使用后效果：当用户在输入法切换列表弹窗中点击某个模式选项时，系统将调用此回调并传入选中模式在patterns数组中的索引值。 <br> <br>说明：回调参数index为选中模式在patterns数组中的索引值，与defaultSelected的取值范围一致。回调中可根据index值更新defaultSelected，以保持下次打开弹窗时选中状态与用户选择一致。
 
-**类型：** (index: int) =&gt; void
+**起始版本：** 11
 
-**起始版本：** 23
-
-<!--Device-PatternOptions-action: (index: int) => void--><!--Device-PatternOptions-action: (index: int) => void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 ## defaultSelected
 
@@ -38,11 +48,11 @@ defaultSelected?: int
 
 默认选择的模式索引，对应patterns数组中的索引值。 <br> <br>使用场景：当默认输入法需要预设一个初始选中的键盘模式时使用此参数。 <br> <br>使用后效果：设置后，输入法列表弹窗打开时会默认选中该索引对应的模式选项。 <br> <br>取值范围：[0, patterns.length - 1]。超出此范围时不生效，弹窗打开时不选中任何模式选项。 <br> <br>默认值：不设置时，弹窗打开时不选中任何模式选项。 <br> <br>说明：该索引值必须在patterns数组的有效范围内，否则设置不生效。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-PatternOptions-defaultSelected?: int--><!--Device-PatternOptions-defaultSelected?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -56,9 +66,8 @@ patterns: Array<Pattern>
 
 **类型：** Array&lt;[Pattern](arkts-ime-inputmethodlist-pattern-i.md)&gt;
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-PatternOptions-patterns: Array<Pattern>--><!--Device-PatternOptions-patterns: Array<Pattern>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
-

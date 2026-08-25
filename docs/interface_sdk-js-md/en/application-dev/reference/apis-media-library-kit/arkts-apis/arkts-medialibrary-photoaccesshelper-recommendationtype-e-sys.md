@@ -2,9 +2,9 @@
 
 Enumerates the types of recommended images.
 
-**Since:** 26.0.0
+**Since:** 11
 
-<!--Device-photoAccessHelper-enum RecommendationType--><!--Device-photoAccessHelper-enum RecommendationType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -16,9 +16,9 @@ COLOR_STYLE_PHOTO = 12
 
 Recommended style.
 
-**Since:** 26.0.0
+**Since:** 18
 
-<!--Device-RecommendationType-COLOR_STYLE_PHOTO = 12--><!--Device-RecommendationType-COLOR_STYLE_PHOTO = 12-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -32,11 +32,11 @@ CAT = 13
 
 Cat images will be recommended.
 
-**Since:** 26.1.0
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RecommendationType-CAT = 13--><!--Device-RecommendationType-CAT = 13-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,11 +50,11 @@ DOG = 14
 
 Dog images will be recommended.
 
-**Since:** 26.1.0
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RecommendationType-DOG = 14--><!--Device-RecommendationType-DOG = 14-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -68,11 +68,11 @@ ARCHITECTURE = 15
 
 Architecture images will be recommended.
 
-**Since:** 26.1.0
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RecommendationType-ARCHITECTURE = 15--><!--Device-RecommendationType-ARCHITECTURE = 15-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -86,11 +86,11 @@ LANDSCAPE = 16
 
 Landscape images will be recommended.
 
-**Since:** 26.1.0
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RecommendationType-LANDSCAPE = 16--><!--Device-RecommendationType-LANDSCAPE = 16-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -104,11 +104,11 @@ GAUSSIAN_SPLAT_3D = 17
 
 Images generated using the 3D Gaussian technology will be recommended.
 
-**Since:** 26.1.0
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RecommendationType-GAUSSIAN_SPLAT_3D = 17--><!--Device-RecommendationType-GAUSSIAN_SPLAT_3D = 17-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -141,4 +141,3 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
-

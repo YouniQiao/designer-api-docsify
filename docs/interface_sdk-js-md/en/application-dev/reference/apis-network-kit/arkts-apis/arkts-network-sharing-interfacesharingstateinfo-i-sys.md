@@ -2,9 +2,9 @@
 
 Wakes up the listener for network sharing state changes of an NIC.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-sharing-export interface InterfaceSharingStateInfo--><!--Device-sharing-export interface InterfaceSharingStateInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
@@ -26,9 +26,9 @@ NIC name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-InterfaceSharingStateInfo-iface: string--><!--Device-InterfaceSharingStateInfo-iface: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
@@ -44,9 +44,9 @@ Network sharing state of the NIC.
 
 **Type:** [SharingIfaceState](arkts-network-sharing-sharingifacestate-e-sys.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-InterfaceSharingStateInfo-state: SharingIfaceState--><!--Device-InterfaceSharingStateInfo-state: SharingIfaceState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
@@ -62,11 +62,10 @@ Enumerates the network sharing types of an NIC.
 
 **Type:** [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-InterfaceSharingStateInfo-type: SharingIfaceType--><!--Device-InterfaceSharingStateInfo-type: SharingIfaceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
-

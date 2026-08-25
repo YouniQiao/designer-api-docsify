@@ -4,7 +4,7 @@ Provides APIs for input Context Map.
 
 **Since:** 23
 
-<!--Device-photoAccessHelper-interface ContextMap--><!--Device-photoAccessHelper-interface ContextMap-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -28,11 +28,10 @@ Field Types
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-ContextMap-topicField: FieldType[]--><!--Device-ContextMap-topicField: FieldType[]-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

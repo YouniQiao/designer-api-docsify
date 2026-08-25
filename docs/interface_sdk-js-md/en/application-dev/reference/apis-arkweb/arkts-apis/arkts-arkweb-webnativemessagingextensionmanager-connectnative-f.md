@@ -16,33 +16,33 @@ Connects the current ability to the specified web native message extension abili
 
 **Since:** 21
 
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+
 **Required permissions:** ohos.permission.WEB_NATIVE_MESSAGING
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-webNativeMessagingExtensionManager-function connectNative(context: UIAbilityContext, want: Want, callback: WebExtensionConnectionCallback): number--><!--Device-webNativeMessagingExtensionManager-function connectNative(context: UIAbilityContext, want: Want, callback: WebExtensionConnectionCallback): number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) | Yes | Context of the calling UIAbility. |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the Ability, whose parameters must include 'ohos.arkweb.messageReadPipe' (read pipe FD), 'ohos.arkweb.messageWritePipe' (write pipe FD), and 'ohos.arkweb.extensionOrigin' (extension URI). |
-| callback | [WebExtensionConnectionCallback](../../apis-default/arkts-apis/arkts-webnativemessagingextensionmanager-webextensionconnectioncallback-i.md) | Yes | Callback object of the WebExtensionConnection status. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) | Yes |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+| callback | [WebExtensionConnectionCallback](arkts-arkweb-webnativemessagingextensionmanager-webextensionconnectioncallback-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | ID of the connection, returned by the [connectNative]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 **Examples**
 
@@ -88,4 +88,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

@@ -14,9 +14,9 @@ function getCfgDirListSync(): Array<string>
 
 获取配置层级目录列表，按优先级从低到高。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-configPolicy-function getCfgDirListSync(): Array<string>--><!--Device-configPolicy-function getCfgDirListSync(): Array<string>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Customization.ConfigPolicy
 
@@ -24,9 +24,9 @@ function getCfgDirListSync(): Array<string>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;string&gt; | 返回配置层级目录列表。 |
+| 类型 |
+| --- |
+| Array & lt;string & gt; |
 
 **示例**
 
@@ -71,4 +71,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

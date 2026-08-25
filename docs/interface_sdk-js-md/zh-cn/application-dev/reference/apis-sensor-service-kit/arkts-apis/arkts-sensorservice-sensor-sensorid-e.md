@@ -2,9 +2,9 @@
 
 表示当前支持订阅或取消订阅的传感器类型。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-sensor-enum SensorId--><!--Device-sensor-enum SensorId-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -16,11 +16,11 @@ ACCELEROMETER = 1
 
 加速度传感器类型，用于测量设备的加速度。从API version 11开始，该接口支持在原子化服务中使用。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SensorId-ACCELEROMETER = 1--><!--Device-SensorId-ACCELEROMETER = 1-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -32,11 +32,11 @@ GYROSCOPE = 2
 
 陀螺仪传感器类型，用于测量设备的旋转角速度。从API version 11开始，该接口支持在原子化服务中使用。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SensorId-GYROSCOPE = 2--><!--Device-SensorId-GYROSCOPE = 2-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -48,9 +48,9 @@ AMBIENT_LIGHT = 5
 
 环境光传感器类型，用于测量环境光照强度。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SensorId-AMBIENT_LIGHT = 5--><!--Device-SensorId-AMBIENT_LIGHT = 5-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -62,9 +62,9 @@ MAGNETIC_FIELD = 6
 
 磁场传感器类型，用于测量设备周围的环境磁场强度。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SensorId-MAGNETIC_FIELD = 6--><!--Device-SensorId-MAGNETIC_FIELD = 6-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -76,9 +76,9 @@ BAROMETER = 8
 
 气压计传感器类型，用于测量大气压力。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SensorId-BAROMETER = 8--><!--Device-SensorId-BAROMETER = 8-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -90,9 +90,9 @@ HALL = 10
 
 霍尔传感器类型，用于检测设备周围是否存在磁力吸引。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SensorId-HALL = 10--><!--Device-SensorId-HALL = 10-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -104,9 +104,9 @@ PROXIMITY = 12
 
 接近光传感器类型，用于检测物体与设备显示器的接近程度。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SensorId-PROXIMITY = 12--><!--Device-SensorId-PROXIMITY = 12-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -118,9 +118,9 @@ HUMIDITY = 13
 
 湿度传感器类型，用于测量环境的相对湿度。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SensorId-HUMIDITY = 13--><!--Device-SensorId-HUMIDITY = 13-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -132,11 +132,11 @@ ORIENTATION = 256
 
 方向传感器类型，用于测量设备的旋转方向角度。从API version 11开始，该接口在支持原子化服务中使用。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SensorId-ORIENTATION = 256--><!--Device-SensorId-ORIENTATION = 256-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -148,9 +148,9 @@ GRAVITY = 257
 
 重力传感器类型，用于测量设备的重力加速度。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SensorId-GRAVITY = 257--><!--Device-SensorId-GRAVITY = 257-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -162,9 +162,9 @@ LINEAR_ACCELEROMETER = 258
 
 线性加速度传感器类型，用于测量设备排除重力后的线性加速度。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SensorId-LINEAR_ACCELEROMETER = 258--><!--Device-SensorId-LINEAR_ACCELEROMETER = 258-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -176,9 +176,9 @@ ROTATION_VECTOR = 259
 
 旋转矢量传感器类型，用于描述设备相对于参考方向的旋转状态。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SensorId-ROTATION_VECTOR = 259--><!--Device-SensorId-ROTATION_VECTOR = 259-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -190,9 +190,9 @@ AMBIENT_TEMPERATURE = 260
 
 环境温度传感器类型，用于测量环境的温度。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SensorId-AMBIENT_TEMPERATURE = 260--><!--Device-SensorId-AMBIENT_TEMPERATURE = 260-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -204,9 +204,9 @@ MAGNETIC_FIELD_UNCALIBRATED = 261
 
 未校准磁场传感器类型，用于测量未校准的环境磁场强度及其偏量。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SensorId-MAGNETIC_FIELD_UNCALIBRATED = 261--><!--Device-SensorId-MAGNETIC_FIELD_UNCALIBRATED = 261-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -218,9 +218,9 @@ GYROSCOPE_UNCALIBRATED = 263
 
 未校准陀螺仪传感器类型，用于测量未校准的设备旋转角速度及其偏量。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SensorId-GYROSCOPE_UNCALIBRATED = 263--><!--Device-SensorId-GYROSCOPE_UNCALIBRATED = 263-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -232,9 +232,9 @@ SIGNIFICANT_MOTION = 264
 
 有效运动传感器类型，用于检测设备是否存在大幅度运动。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SensorId-SIGNIFICANT_MOTION = 264--><!--Device-SensorId-SIGNIFICANT_MOTION = 264-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -246,9 +246,9 @@ PEDOMETER_DETECTION = 265
 
 计步检测传感器类型，用于检测用户的计步动作。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SensorId-PEDOMETER_DETECTION = 265--><!--Device-SensorId-PEDOMETER_DETECTION = 265-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -260,9 +260,9 @@ PEDOMETER = 266
 
 计步传感器类型，用于统计用户的行走步数。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SensorId-PEDOMETER = 266--><!--Device-SensorId-PEDOMETER = 266-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -274,9 +274,9 @@ HEART_RATE = 278
 
 心率传感器类型，用于测量用户的心率数值。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SensorId-HEART_RATE = 278--><!--Device-SensorId-HEART_RATE = 278-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -288,9 +288,9 @@ WEAR_DETECTION = 280
 
 佩戴检测传感器类型，用于检测设备是否被佩戴。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SensorId-WEAR_DETECTION = 280--><!--Device-SensorId-WEAR_DETECTION = 280-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -302,9 +302,9 @@ ACCELEROMETER_UNCALIBRATED = 281
 
 未校准加速度传感器类型，用于测量未校准的设备加速度及其偏量。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SensorId-ACCELEROMETER_UNCALIBRATED = 281--><!--Device-SensorId-ACCELEROMETER_UNCALIBRATED = 281-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -316,9 +316,8 @@ FUSION_PRESSURE = 283
 
 融合压力传感器类型，用于测量融合压力值。仅智能表有该传感器。
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-SensorId-FUSION_PRESSURE = 283--><!--Device-SensorId-FUSION_PRESSURE = 283-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
-

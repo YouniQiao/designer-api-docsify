@@ -21,11 +21,11 @@ Queries usage information about each bundle within a specified period at a speci
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
-
-<!--Device-bundleState-function queryBundleStateInfoByInterval(    byInterval: IntervalType,    begin: number,    end: number,    callback: AsyncCallback<Array<BundleStateInfo>>  ): void--><!--Device-bundleState-function queryBundleStateInfoByInterval(    byInterval: IntervalType,    begin: number,    end: number,    callback: AsyncCallback<Array<BundleStateInfo>>  ): void-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -33,12 +33,12 @@ Queries usage information about each bundle within a specified period at a speci
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byInterval | IntervalType | Yes | Indicates the interval at which the usage statistics are queried. The value can be { |
-| begin | number | Yes | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
-| end | number | Yes | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; | Yes | the callback of usage information about each bundle. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| byInterval | [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | Yes |
+| begin | number | Yes |
+| end | number | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; | Yes |
 
 **Examples**
 
@@ -87,11 +87,11 @@ Queries usage information about each bundle within a specified period at a speci
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
-
-<!--Device-bundleState-function queryBundleStateInfoByInterval(    byInterval: IntervalType,    begin: number,    end: number  ): Promise<Array<BundleStateInfo>>--><!--Device-bundleState-function queryBundleStateInfoByInterval(    byInterval: IntervalType,    begin: number,    end: number  ): Promise<Array<BundleStateInfo>>-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -99,19 +99,18 @@ Queries usage information about each bundle within a specified period at a speci
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byInterval | IntervalType | Yes | Indicates the interval at which the usage statistics are queried. The value can be { |
-| begin | number | Yes | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
-| end | number | Yes | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| byInterval | [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | Yes |
+| begin | number | Yes |
+| end | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; | the usage information about each bundle. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; |
 
 **Examples**
 
 See [queryBundleStateInfoByInterval](#querybundlestateinfobyinterval)
-

@@ -1,8 +1,6 @@
 # lib.es2018.intl
 
-**Since:** -1
-
-<!--Device-unnamed-declare namespace Intl--><!--Device-unnamed-declare namespace Intl-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -13,27 +11,26 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [NumberFormat](arkts-intl-numberformat-i.md) |  |
-| [NumberFormatPart](arkts-intl-numberformatpart-i.md) |  |
-| [PluralRules](arkts-intl-pluralrules-i.md) |  |
-| [PluralRulesOptions](arkts-intl-pluralrulesoptions-i.md) |  |
-| [ResolvedPluralRulesOptions](arkts-intl-resolvedpluralrulesoptions-i.md) |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [NumberFormat](arkts-intl-numberformat-i.md) |
+| [NumberFormatPart](arkts-intl-numberformatpart-i.md) |
+| [PluralRules](arkts-intl-pluralrules-i.md) |
+| [PluralRulesOptions](arkts-intl-pluralrulesoptions-i.md) |
+| [ResolvedPluralRulesOptions](arkts-intl-resolvedpluralrulesoptions-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [ES2018NumberFormatPartType](arkts-intl-es2018numberformatparttype-t.md) |  |
-| [ES2020NumberFormatPartType](arkts-intl-es2020numberformatparttype-t.md) |  |
-| [LDMLPluralRule](arkts-intl-ldmlpluralrule-t.md) |  |
-| [NumberFormatPartTypes](arkts-intl-numberformatparttypes-t.md) |  |
-| [PluralRuleType](arkts-intl-pluralruletype-t.md) |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ES2018NumberFormatPartType](arkts-intl-es2018numberformatparttype-t.md) |
+| [ES2020NumberFormatPartType](arkts-intl-es2020numberformatparttype-t.md) |
+| [LDMLPluralRule](arkts-intl-ldmlpluralrule-t.md) |
+| [NumberFormatPartTypes](arkts-intl-numberformatparttypes-t.md) |
+| [PluralRuleType](arkts-intl-pluralruletype-t.md) |
 
 ### Constants
 
-| Name | Description |
-| --- | --- |
-| PluralRules |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PluralRules](../../apis-localization-kit/arkts-apis/arkts-localization-intl-pluralrules-c.md) |

@@ -4,7 +4,7 @@ Describes the file info for transfer
 
 **Since:** 16
 
-<!--Device-opp-interface FileHolder--><!--Device-opp-interface FileHolder-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -19,18 +19,18 @@ import { opp } from '@kit.ConnectivityKit';
 ## fileFd
 
 ```TypeScript
-fileFd: int
+fileFd: number
 ```
 
 The file fd
 
-**Type:** int
+**Type:** number
 
 **Since:** 16
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
-<!--Device-FileHolder-fileFd: int--><!--Device-FileHolder-fileFd: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -48,9 +48,9 @@ The file path
 
 **Since:** 16
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
-<!--Device-FileHolder-filePath: string--><!--Device-FileHolder-filePath: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -59,20 +59,19 @@ The file path
 ## fileSize
 
 ```TypeScript
-fileSize: long
+fileSize: number
 ```
 
 The file size
 
-**Type:** long
+**Type:** number
 
 **Since:** 16
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
-<!--Device-FileHolder-fileSize: long--><!--Device-FileHolder-fileSize: long-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
-

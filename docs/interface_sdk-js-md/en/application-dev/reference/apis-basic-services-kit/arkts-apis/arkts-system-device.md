@@ -10,14 +10,13 @@ import { Device, DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit'
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Device](arkts-basicservices-system-device-device-c.md) | getInfo interface |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Device](arkts-basicservices-system-device-device-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [DeviceResponse](arkts-basicservices-system-device-deviceresponse-i.md) |  |
-| [GetDeviceOptions](arkts-basicservices-system-device-getdeviceoptions-i.md) |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DeviceResponse](arkts-basicservices-system-device-deviceresponse-i.md) |
+| [GetDeviceOptions](arkts-basicservices-system-device-getdeviceoptions-i.md) |

@@ -2,9 +2,9 @@
 
 设置呼叫转移类型。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-call-export enum CallTransferSettingType--><!--Device-call-export enum CallTransferSettingType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -18,9 +18,9 @@ CALL_TRANSFER_DISABLE = 0
 
 禁用呼叫转移。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-CallTransferSettingType-CALL_TRANSFER_DISABLE = 0--><!--Device-CallTransferSettingType-CALL_TRANSFER_DISABLE = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -34,9 +34,9 @@ CALL_TRANSFER_ENABLE = 1
 
 启用呼叫转移。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-CallTransferSettingType-CALL_TRANSFER_ENABLE = 1--><!--Device-CallTransferSettingType-CALL_TRANSFER_ENABLE = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -50,9 +50,9 @@ CALL_TRANSFER_REGISTRATION = 3
 
 登记呼叫转移。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-CallTransferSettingType-CALL_TRANSFER_REGISTRATION = 3--><!--Device-CallTransferSettingType-CALL_TRANSFER_REGISTRATION = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -66,11 +66,10 @@ CALL_TRANSFER_ERASURE = 4
 
 消除呼叫转移。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-CallTransferSettingType-CALL_TRANSFER_ERASURE = 4--><!--Device-CallTransferSettingType-CALL_TRANSFER_ERASURE = 4-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
-

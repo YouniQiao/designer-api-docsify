@@ -2,9 +2,9 @@
 
 Enumerate the album subtypes.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-photoAccessHelper-enum AlbumSubtype--><!--Device-photoAccessHelper-enum AlbumSubtype-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -16,9 +16,9 @@ USER_GENERIC = 1
 
 User album.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-AlbumSubtype-USER_GENERIC = 1--><!--Device-AlbumSubtype-USER_GENERIC = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -30,9 +30,9 @@ FAVORITE = 1025
 
 Favorites.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-AlbumSubtype-FAVORITE = 1025--><!--Device-AlbumSubtype-FAVORITE = 1025-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -44,9 +44,37 @@ VIDEO
 
 Video album.
 
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## IMAGE
+
+```TypeScript
+IMAGE = 1031
+```
+
+Photo album.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## SOURCE_GENERIC
+
+```TypeScript
+SOURCE_GENERIC = 2049
+```
+
+Source album.
+
 **Since:** 23
 
-<!--Device-AlbumSubtype-VIDEO--><!--Device-AlbumSubtype-VIDEO-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -60,9 +88,9 @@ Source album from FileManager
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AlbumSubtype-SOURCE_GENERIC_FROM_FILE_MANAGER = 2050--><!--Device-AlbumSubtype-SOURCE_GENERIC_FROM_FILE_MANAGER = 2050-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -74,9 +102,8 @@ ANY = 2147483647
 
 Any album.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-AlbumSubtype-ANY = 2147483647--><!--Device-AlbumSubtype-ANY = 2147483647-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

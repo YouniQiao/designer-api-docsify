@@ -16,7 +16,7 @@ Change current directory
 
 **Since:** 7
 
-<!--Device-process-function chdir(dir: string): void--><!--Device-process-function chdir(dir: string): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -24,7 +24,6 @@ Change current directory
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dir | string | Yes | The path you want to change. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dir | string | Yes |

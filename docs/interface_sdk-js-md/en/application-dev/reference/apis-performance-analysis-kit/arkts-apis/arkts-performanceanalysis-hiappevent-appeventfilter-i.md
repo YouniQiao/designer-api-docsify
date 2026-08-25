@@ -6,9 +6,9 @@ Defines parameters of subscription filtering conditions of a [Watcher](arkts-per
 > The subscription specifications of system events vary according to application types. For details, see
 > [HiAppEvent Constraints](../../../dfx/hiappevent-intro.md#constraints).
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-hiAppEvent-interface AppEventFilter--><!--Device-hiAppEvent-interface AppEventFilter-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -28,11 +28,11 @@ Event domain, which can be the system event domain (**hiAppEvent.domain.OS**) or
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-AppEventFilter-domain: string--><!--Device-AppEventFilter-domain: string-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -46,11 +46,11 @@ Event types. If this parameter is not set, events are not filtered by default.
 
 **Type:** EventType[]
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-AppEventFilter-eventTypes?: EventType[]--><!--Device-AppEventFilter-eventTypes?: EventType[]-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -64,11 +64,10 @@ Names of the events to be subscribed. If this parameter is not set, events are n
 
 **Type:** string[]
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-AppEventFilter-names?: string[]--><!--Device-AppEventFilter-names?: string[]-End-->
-
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
-

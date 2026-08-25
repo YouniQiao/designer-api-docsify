@@ -1,6 +1,6 @@
 # LauncherAbilityInfo (System API)
 
-The LauncherAbilityInfo module provides information about the launcher ability, which is obtained through innerBundleManager.getLauncherAbilityInfos.
+The LauncherAbilityInfo module provides information about the launcher ability, which is obtained through [innerBundleManager.getLauncherAbilityInfos](../../../reference/apis-ability-kit/js-apis-Bundle-InnerBundleManager-sys.md#innerbundlemanagergetlauncherabilityinfosdeprecated).
 
 > **NOTE：**&gt;
 > The APIs of this module have been deprecated since API version 9. You are advised to use
@@ -9,11 +9,11 @@ The LauncherAbilityInfo module provides information about the launcher ability, 
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [LauncherAbilityInfo](#launcherabilityinfo-system-api)
-
-<!--Device-unnamed-export interface LauncherAbilityInfo--><!--Device-unnamed-export interface LauncherAbilityInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -31,11 +31,11 @@ Application information of the launcher ability.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** applicationInfo
-
-<!--Device-LauncherAbilityInfo-readonly applicationInfo: ApplicationInfo--><!--Device-LauncherAbilityInfo-readonly applicationInfo: ApplicationInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -53,11 +53,11 @@ Element name of the launcher ability.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** elementName
-
-<!--Device-LauncherAbilityInfo-readonly elementName: ElementName--><!--Device-LauncherAbilityInfo-readonly elementName: ElementName-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -75,11 +75,11 @@ ID of the launcher ability icon.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** iconId
-
-<!--Device-LauncherAbilityInfo-readonly iconId: number--><!--Device-LauncherAbilityInfo-readonly iconId: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -97,11 +97,11 @@ Timestamp when the launcher ability was installed, in milliseconds.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** installTime
-
-<!--Device-LauncherAbilityInfo-readonly installTime: number--><!--Device-LauncherAbilityInfo-readonly installTime: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -119,11 +119,11 @@ ID of the launcher ability label.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** labelId
-
-<!--Device-LauncherAbilityInfo-readonly labelId: number--><!--Device-LauncherAbilityInfo-readonly labelId: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -141,13 +141,12 @@ User ID of the launcher ability.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** userId
 
-<!--Device-LauncherAbilityInfo-readonly userId: number--><!--Device-LauncherAbilityInfo-readonly userId: number-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **System API:** This is a system API.
-

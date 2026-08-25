@@ -2,9 +2,9 @@
 
 Describes memory information of the application process.@interface NativeMemInfo
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-hidebug-interface NativeMemInfo--><!--Device-hidebug-interface NativeMemInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -24,9 +24,9 @@ Size of the private clean memory, in KB. The value of this parameter is obtained
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NativeMemInfo-privateClean: bigint--><!--Device-NativeMemInfo-privateClean: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -40,9 +40,9 @@ Size of the private dirty memory, in KB. The value of this parameter is obtained
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NativeMemInfo-privateDirty: bigint--><!--Device-NativeMemInfo-privateDirty: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -56,9 +56,9 @@ Size of the occupied physical memory (including the proportionally allocated mem
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NativeMemInfo-pss: bigint--><!--Device-NativeMemInfo-pss: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -72,9 +72,9 @@ Size of the occupied physical memory (including the memory occupied by the share
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NativeMemInfo-rss: bigint--><!--Device-NativeMemInfo-rss: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -88,9 +88,9 @@ Size of the shared clean memory, in KB. The value of this parameter is obtained 
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NativeMemInfo-sharedClean: bigint--><!--Device-NativeMemInfo-sharedClean: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -104,9 +104,9 @@ Size of the shared dirty memory, in KB. The value of this parameter is obtained 
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NativeMemInfo-sharedDirty: bigint--><!--Device-NativeMemInfo-sharedDirty: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -120,9 +120,8 @@ Size of the occupied virtual memory (including the memory occupied by the shared
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NativeMemInfo-vss: bigint--><!--Device-NativeMemInfo-vss: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
-

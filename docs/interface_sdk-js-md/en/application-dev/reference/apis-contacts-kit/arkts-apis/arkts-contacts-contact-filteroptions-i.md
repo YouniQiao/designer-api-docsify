@@ -4,7 +4,7 @@ Defines contact filter options.
 
 **Since:** 15
 
-<!--Device-contact-interface FilterOptions--><!--Device-contact-interface FilterOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Applications.Contacts
 
@@ -26,9 +26,9 @@ Filter criteria.
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
-<!--Device-FilterOptions-filterCondition: FilterCondition--><!--Device-FilterOptions-filterCondition: FilterCondition-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Applications.Contacts
 
@@ -44,9 +44,8 @@ Filter value. The default value is **undefined**.
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
-<!--Device-FilterOptions-value?: string | ValueType[]--><!--Device-FilterOptions-value?: string | ValueType[]-End-->
-
 **System capability:** SystemCapability.Applications.Contacts
-

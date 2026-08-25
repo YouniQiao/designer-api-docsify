@@ -2,9 +2,9 @@
 
 枚举，DefaultChangeUri子类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-photoAccessHelper-enum DefaultChangeUri--><!--Device-photoAccessHelper-enum DefaultChangeUri-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -16,9 +16,9 @@ DEFAULT_PHOTO_URI = 'file://media/Photo'
 
 默认PhotoAsset的uri，与forSubUri{true}一起使用，将接收所有PhotoAsset的更改通知。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-DefaultChangeUri-DEFAULT_PHOTO_URI = 'file://media/Photo'--><!--Device-DefaultChangeUri-DEFAULT_PHOTO_URI = 'file://media/Photo'-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -30,9 +30,8 @@ DEFAULT_ALBUM_URI = 'file://media/PhotoAlbum'
 
 默认相册的uri，与forSubUri{true}一起使用，将接收所有相册的更改通知。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-DefaultChangeUri-DEFAULT_ALBUM_URI = 'file://media/PhotoAlbum'--><!--Device-DefaultChangeUri-DEFAULT_ALBUM_URI = 'file://media/PhotoAlbum'-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

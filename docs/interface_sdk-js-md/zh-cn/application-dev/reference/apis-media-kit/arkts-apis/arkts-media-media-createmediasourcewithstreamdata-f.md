@@ -16,23 +16,23 @@ function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSour
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
-<!--Device-media-function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSource--><!--Device-media-function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSource-End-->
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| streams | Array&lt;[MediaStream](arkts-media-multimedia-media-mediastream-i.md)&gt; | 是 | 可设置MediaStream数组，支持的流媒体格式：HTTP-FLV。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| streams | Array&lt;[MediaStream](arkts-media-multimedia-media-mediastream-i.md)&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | 返回MediaSource，用于媒体资源设置。 |
+| 类型 |
+| --- |
+| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) |
 
 **示例**
 
@@ -55,23 +55,22 @@ Creates a multi-bitrate media source for streaming media. Currently, only the HT
 
 **起始版本：** 23
 
-<!--Device-media-function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSource | undefined--><!--Device-media-function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSource | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| streams | Array&lt;[MediaStream](arkts-media-multimedia-media-mediastream-i.md)&gt; | 是 | Array of MediaStream objects. The supported streaming media format is HTTP-FLV. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| streams | Array&lt;[MediaStream](arkts-media-multimedia-media-mediastream-i.md)&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) \| undefined | MediaSource instance if the operation is successful; returns null otherwise. |
+| 类型 |
+| --- |
+| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) \| undefined |
 
 **示例**
 
 参见 [createMediaSourceWithStreamData](#createmediasourcewithstreamdata)
-

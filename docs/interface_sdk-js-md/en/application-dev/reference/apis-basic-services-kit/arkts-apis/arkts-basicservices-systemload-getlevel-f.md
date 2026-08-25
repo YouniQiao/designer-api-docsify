@@ -14,17 +14,17 @@ function getLevel(): Promise<SystemLoadLevel>
 
 Obtains the system load level. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-systemLoad-function getLevel(): Promise<SystemLoadLevel>--><!--Device-systemLoad-function getLevel(): Promise<SystemLoadLevel>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.SystemLoad
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[SystemLoadLevel](arkts-basicservices-systemload-systemloadlevel-e.md)&gt; | Promise used to return the system load level. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[SystemLoadLevel](arkts-basicservices-systemload-systemloadlevel-e.md)&gt; |
 
 **Examples**
 
@@ -38,4 +38,3 @@ systemLoad.getLevel().then((res: systemLoad.SystemLoadLevel) => {
     console.error(`getLevel promise failed. code is ${err.code} message is ${err.message}`);
 })
 ```
-

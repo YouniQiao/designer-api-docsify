@@ -2,9 +2,9 @@
 
 同步模式枚举。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-distributedKVStore-enum SyncMode--><!--Device-distributedKVStore-enum SyncMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -16,11 +16,11 @@ PULL_ONLY
 
 表示只能从远端拉取数据到本端。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SyncMode-PULL_ONLY--><!--Device-SyncMode-PULL_ONLY-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -32,11 +32,11 @@ PUSH_ONLY
 
 表示只能从本端推送数据到远端。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SyncMode-PUSH_ONLY--><!--Device-SyncMode-PUSH_ONLY-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -48,11 +48,10 @@ PUSH_PULL
 
 表示从本端推送数据到远端，然后从远端拉取数据到本端。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-SyncMode-PUSH_PULL--><!--Device-SyncMode-PUSH_PULL-End-->
-
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-

@@ -2,9 +2,9 @@
 
 表示音频池播放参数设置。通过设置播放相关参数，来控制播放的音量，循环次数，播放优先级等参数。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-unnamed-export interface PlayParameters--><!--Device-unnamed-export interface PlayParameters-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -18,11 +18,10 @@ parallelPlayFlag?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-PlayParameters-parallelPlayFlag?: boolean--><!--Device-PlayParameters-parallelPlayFlag?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **系统接口：** 此接口为系统接口。
-

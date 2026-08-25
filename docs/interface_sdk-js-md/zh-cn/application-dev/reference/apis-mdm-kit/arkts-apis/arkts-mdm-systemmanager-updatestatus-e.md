@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-systemManager-enum UpdateStatus--><!--Device-systemManager-enum UpdateStatus-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,9 +18,9 @@ NO_UPDATE_PACKAGE = -4
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-UpdateStatus-NO_UPDATE_PACKAGE = -4--><!--Device-UpdateStatus-NO_UPDATE_PACKAGE = -4-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -34,9 +34,9 @@ UPDATE_WAITING = -3
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-UpdateStatus-UPDATE_WAITING = -3--><!--Device-UpdateStatus-UPDATE_WAITING = -3-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -50,9 +50,9 @@ UPDATING = -2
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-UpdateStatus-UPDATING = -2--><!--Device-UpdateStatus-UPDATING = -2-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -66,9 +66,9 @@ UPDATE_FAILURE = -1
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-UpdateStatus-UPDATE_FAILURE = -1--><!--Device-UpdateStatus-UPDATE_FAILURE = -1-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -82,9 +82,8 @@ UPDATE_SUCCESS = 0
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-UpdateStatus-UPDATE_SUCCESS = 0--><!--Device-UpdateStatus-UPDATE_SUCCESS = 0-End-->
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
-

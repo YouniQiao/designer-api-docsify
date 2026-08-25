@@ -16,23 +16,22 @@ function getNfcVTag(tagInfo: TagInfo): NfcVTag
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [getNfcV](arkts-connectivity-tag-getnfcv-f.md)
-
-<!--Device-tag-function getNfcVTag(tagInfo: TagInfo): NfcVTag--><!--Device-tag-function getNfcVTag(tagInfo: TagInfo): NfcVTag-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| tagInfo | [TagInfo](arkts-connectivity-tag-taginfo-i.md) | 是 | 包含Tag技术类型和相关参数，从[tag.getTagInfo(want: Want)](arkts-connectivity-tag-gettaginfo-f.md)获取。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| tagInfo | [TagInfo](arkts-connectivity-tag-taginfo-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| NfcVTag | NFC V类型Tag对象。 |
-
+| 类型 |
+| --- |
+| [NfcVTag](arkts-connectivity-tag-nfcvtag-t.md) |

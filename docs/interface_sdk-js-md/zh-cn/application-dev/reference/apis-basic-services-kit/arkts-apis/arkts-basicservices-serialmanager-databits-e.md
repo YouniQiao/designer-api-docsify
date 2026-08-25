@@ -2,9 +2,9 @@
 
 表示数据位宽的枚举，单位：比特。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-serialManager-enum DataBits--><!--Device-serialManager-enum DataBits-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -16,9 +16,9 @@ DATABIT_8 = 8
 
 报文的有效数据位宽为8比特。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-DataBits-DATABIT_8 = 8--><!--Device-DataBits-DATABIT_8 = 8-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -30,9 +30,9 @@ DATABIT_7 = 7
 
 报文的有效数据位宽为7比特。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-DataBits-DATABIT_7 = 7--><!--Device-DataBits-DATABIT_7 = 7-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -44,9 +44,9 @@ DATABIT_6 = 6
 
 报文的有效数据位宽为6比特。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-DataBits-DATABIT_6 = 6--><!--Device-DataBits-DATABIT_6 = 6-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -58,9 +58,8 @@ DATABIT_5 = 5
 
 报文的有效数据位宽为5比特。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-DataBits-DATABIT_5 = 5--><!--Device-DataBits-DATABIT_5 = 5-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
-

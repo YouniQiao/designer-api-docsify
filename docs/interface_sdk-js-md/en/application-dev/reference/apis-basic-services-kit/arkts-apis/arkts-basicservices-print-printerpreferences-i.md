@@ -2,9 +2,9 @@
 
 Defines the printer preferences.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-print-interface PrinterPreferences--><!--Device-print-interface PrinterPreferences-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -24,9 +24,9 @@ Whether to print without margins. The value **true** means to print without marg
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PrinterPreferences-borderless?: boolean--><!--Device-PrinterPreferences-borderless?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -42,9 +42,9 @@ Default collate.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-PrinterPreferences-defaultCollate?: boolean--><!--Device-PrinterPreferences-defaultCollate?: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -60,9 +60,9 @@ Default color mode.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-PrinterPreferences-defaultColorMode?: PrintColorMode--><!--Device-PrinterPreferences-defaultColorMode?: PrintColorMode-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -76,9 +76,9 @@ Default duplex mode.
 
 **Type:** [PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PrinterPreferences-defaultDuplexMode?: PrintDuplexMode--><!--Device-PrinterPreferences-defaultDuplexMode?: PrintDuplexMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -92,9 +92,9 @@ Default paper type.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PrinterPreferences-defaultMediaType?: string--><!--Device-PrinterPreferences-defaultMediaType?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -108,9 +108,9 @@ Default print orientation.
 
 **Type:** [PrintOrientationMode](arkts-basicservices-print-printorientationmode-e.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PrinterPreferences-defaultOrientation?: PrintOrientationMode--><!--Device-PrinterPreferences-defaultOrientation?: PrintOrientationMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -124,9 +124,9 @@ ID of the default paper size. The value can be a standard paper size defined by 
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PrinterPreferences-defaultPageSizeId?: string--><!--Device-PrinterPreferences-defaultPageSizeId?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -140,9 +140,9 @@ Default print quality.
 
 **Type:** [PrintQuality](arkts-basicservices-print-printquality-e.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PrinterPreferences-defaultPrintQuality?: PrintQuality--><!--Device-PrinterPreferences-defaultPrintQuality?: PrintQuality-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -158,9 +158,9 @@ Default reverse.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-PrinterPreferences-defaultReverse?: boolean--><!--Device-PrinterPreferences-defaultReverse?: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -174,9 +174,9 @@ Other fields in the printer preferences. The fields are queried from the printer
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PrinterPreferences-options?: string--><!--Device-PrinterPreferences-options?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -192,9 +192,8 @@ Vendor-specific printer preferences in JSON format.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PrinterPreferences-vendorOptions?: string--><!--Device-PrinterPreferences-vendorOptions?: string-End-->
-
 **System capability:** SystemCapability.Print.PrintFramework
-

@@ -4,11 +4,11 @@ Provides APIs to create a **Query** object, which defines different data query c
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** Query
-
-<!--Device-distributedData-class Query--><!--Device-distributedData-class Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -27,19 +27,19 @@ Creates a **Query** object with the AND condition.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** and
-
-<!--Device-Query-and(): Query--><!--Device-Query-and(): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -66,19 +66,19 @@ Creates a **Query** object for a query condition group with a left parenthesis.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** beginGroup
-
-<!--Device-Query-beginGroup(): Query--><!--Device-Query-beginGroup(): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -105,11 +105,11 @@ Defines a constructor used to create a **Query** instance.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** constructor
-
-<!--Device-Query-constructor()--><!--Device-Query-constructor()-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -130,25 +130,25 @@ Creates a **Query** object with the device ID as the key prefix.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** deviceId
-
-<!--Device-Query-deviceId(deviceId: string): Query--><!--Device-Query-deviceId(deviceId: string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| deviceId | string | Yes | Device ID. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [deviceId](#deviceid) | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -172,19 +172,19 @@ Creates a **Query** object for a query condition group with a right parenthesis.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** endGroup
-
-<!--Device-Query-endGroup(): Query--><!--Device-Query-endGroup(): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -211,26 +211,26 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** equalTo
-
-<!--Device-Query-equalTo(field: string, value: number | string | boolean): Query--><!--Device-Query-equalTo(field: string, value: number | string | boolean): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| value | number \| string \| boolean | Yes | Value to match. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | number \| string \| boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -255,19 +255,19 @@ Obtains the query statement of the **Query** object.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** getSqlLike
-
-<!--Device-Query-getSqlLike(): string--><!--Device-Query-getSqlLike(): string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Query statement obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -291,26 +291,26 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** greaterThan
-
-<!--Device-Query-greaterThan(field: string, value: number | string | boolean): Query--><!--Device-Query-greaterThan(field: string, value: number | string | boolean): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| value | number \| string \| boolean | Yes | Value to match. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | number \| string \| boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -335,26 +335,26 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** greaterThanOrEqualTo
-
-<!--Device-Query-greaterThanOrEqualTo(field: string, value: number | string): Query--><!--Device-Query-greaterThanOrEqualTo(field: string, value: number | string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| value | number \| string | Yes | Value to match. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | number \| string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -379,26 +379,26 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** inNumber
-
-<!--Device-Query-inNumber(field: string, valueList: number[]): Query--><!--Device-Query-inNumber(field: string, valueList: number[]): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| valueList | number[] | Yes | List of numbers to match. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| valueList | number[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -423,26 +423,26 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** inString
-
-<!--Device-Query-inString(field: string, valueList: string[]): Query--><!--Device-Query-inString(field: string, valueList: string[]): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| valueList | string[] | Yes | List of strings to match. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| valueList | string[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -467,25 +467,25 @@ Creates a **Query** object to search for the records whose value is not **null**
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** isNotNull
-
-<!--Device-Query-isNotNull(field: string): Query--><!--Device-Query-isNotNull(field: string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -510,25 +510,25 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** isNull
-
-<!--Device-Query-isNull(field: string): Query--><!--Device-Query-isNull(field: string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -553,26 +553,26 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** lessThan
-
-<!--Device-Query-lessThan(field: string, value: number | string): Query--><!--Device-Query-lessThan(field: string, value: number | string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| value | number \| string | Yes | Value to match. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | number \| string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -597,26 +597,26 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** lessThanOrEqualTo
-
-<!--Device-Query-lessThanOrEqualTo(field: string, value: number | string): Query--><!--Device-Query-lessThanOrEqualTo(field: string, value: number | string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| value | number \| string | Yes | Value to match. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | number \| string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -641,26 +641,26 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** like
-
-<!--Device-Query-like(field: string, value: string): Query--><!--Device-Query-like(field: string, value: string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| value | string | Yes | String to match. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -685,26 +685,26 @@ Creates a **Query** object to specify the number of records in the query result 
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** limit
-
-<!--Device-Query-limit(total: number, offset: number): Query--><!--Device-Query-limit(total: number, offset: number): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| total | number | Yes | Number of records in the query result. |
-| offset | number | Yes | Start position. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| total | number | Yes |
+| offset | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -732,26 +732,26 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** notEqualTo
-
-<!--Device-Query-notEqualTo(field: string, value: number | string | boolean): Query--><!--Device-Query-notEqualTo(field: string, value: number | string | boolean): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| value | number \| string \| boolean | Yes | Value to match. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | number \| string \| boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -776,26 +776,26 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** notInNumber
-
-<!--Device-Query-notInNumber(field: string, valueList: number[]): Query--><!--Device-Query-notInNumber(field: string, valueList: number[]): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| valueList | number[] | Yes | List of numbers to match. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| valueList | number[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -820,26 +820,26 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** notInString
-
-<!--Device-Query-notInString(field: string, valueList: string[]): Query--><!--Device-Query-notInString(field: string, valueList: string[]): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| valueList | string[] | Yes | List of strings to match. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| valueList | string[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -864,19 +864,19 @@ Creates a **Query** object with the OR condition.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** or
-
-<!--Device-Query-or(): Query--><!--Device-Query-or(): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -903,25 +903,25 @@ Creates a **Query** object to sort the query results in ascending order.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** orderByAsc
-
-<!--Device-Query-orderByAsc(field: string): Query--><!--Device-Query-orderByAsc(field: string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -947,25 +947,25 @@ Creates a **Query** object to sort the query results in descending order.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** orderByDesc
-
-<!--Device-Query-orderByDesc(field: string): Query--><!--Device-Query-orderByDesc(field: string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -991,25 +991,25 @@ Creates a **Query** object with a specified key prefix.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** prefixKey
-
-<!--Device-Query-prefixKey(prefix: string): Query--><!--Device-Query-prefixKey(prefix: string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| prefix | string | Yes | Key prefix. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| prefix | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -1035,19 +1035,19 @@ Resets the **Query** object.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** reset
-
-<!--Device-Query-reset(): Query--><!--Device-Query-reset(): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object reset. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -1074,25 +1074,25 @@ Creates a **Query** object with an index preferentially used for query.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** setSuggestIndex
-
-<!--Device-Query-setSuggestIndex(index: string): Query--><!--Device-Query-setSuggestIndex(index: string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | string | Yes | Index preferentially used for query. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -1118,26 +1118,26 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** unlike
-
-<!--Device-Query-unlike(field: string, value: string): Query--><!--Device-Query-unlike(field: string, value: string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| value | string | Yes | String to match. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Query | Query** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **Examples**
 
@@ -1151,4 +1151,3 @@ try {
     console.log("duplicated calls should be ok :" + e);
 }
 ```
-

@@ -21,23 +21,23 @@ function createAVPlayer(callback: AsyncCallback<AVPlayer>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-media-function createAVPlayer(callback: AsyncCallback<AVPlayer>): void--><!--Device-media-function createAVPlayer(callback: AsyncCallback<AVPlayer>): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md)&gt; | 是 | 回调函数。异步返回AVPlayer实例，失败时返回null。可用于音视频播放。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
+| 错误码ID |
+| --- |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) |
 
 **示例**
 
@@ -82,21 +82,21 @@ Creates an **AVPlayer** instance. This API uses an asynchronous callback to retu
 
 **起始版本：** 23
 
-<!--Device-media-function createAVPlayer(callback: AsyncCallback<AVPlayer | undefined>): void--><!--Device-media-function createAVPlayer(callback: AsyncCallback<AVPlayer | undefined>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md) \| undefined&gt; | 是 | used to return the result. If the operation is successful, an **AVPlayer** instance is returned; otherwise, **null** is returned. The instance can be used to play audio and video. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md) \| undefined & gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
+| 错误码ID |
+| --- |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) |
 
 **示例**
 
@@ -118,23 +118,23 @@ function createAVPlayer(): Promise<AVPlayer>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-media-function createAVPlayer(): Promise<AVPlayer>--><!--Device-media-function createAVPlayer(): Promise<AVPlayer>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[AVPlayer](arkts-media-media-avplayer-i.md)&gt; | Promise对象。成功时异步返回AVPlayer实例，可用于音视频播放。失败时返回null。 |
+| 类型 |
+| --- |
+| Promise&lt;[AVPlayer](arkts-media-media-avplayer-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| 错误码ID |
+| --- |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) |
 
 **示例**
 
@@ -151,23 +151,22 @@ Creates an **AVPlayer** instance. This API uses a promise to return the result. 
 
 **起始版本：** 23
 
-<!--Device-media-function createAVPlayer(): Promise<AVPlayer | undefined>--><!--Device-media-function createAVPlayer(): Promise<AVPlayer | undefined>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[AVPlayer](arkts-media-media-avplayer-i.md) \| undefined&gt; | A Promise instance used to return the result. If the operation is successful, an **AVPlayer** instance is returned; **null** is returned otherwise. The instance can be used to play audio and video. |
+| 类型 |
+| --- |
+| Promise&lt;[AVPlayer](arkts-media-media-avplayer-i.md) \| undefined & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| 错误码ID |
+| --- |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) |
 
 **示例**
 
 参见 [createAVPlayer](#createavplayer)
-

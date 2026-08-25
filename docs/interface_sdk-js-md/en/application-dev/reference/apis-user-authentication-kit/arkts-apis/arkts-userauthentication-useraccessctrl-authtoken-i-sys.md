@@ -2,9 +2,9 @@
 
 Defines the authentication token data. It indicates the parsed **AuthToken** data returned after the verification is successful, including detailed authentication information such as the challenge value, authentication trust level, authentication type, and user ID.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-userAccessCtrl-interface AuthToken--><!--Device-userAccessCtrl-interface AuthToken-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -26,9 +26,9 @@ Authentication trust level. It indicates the security strength level of the curr
 
 **Type:** userAuth.AuthTrustLevel
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-AuthToken-authTrustLevel: userAuth.AuthTrustLevel--><!--Device-AuthToken-authTrustLevel: userAuth.AuthTrustLevel-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -44,9 +44,9 @@ Credential type for the identity authentication. It indicates the authentication
 
 **Type:** userAuth.UserAuthType
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-AuthToken-authType: userAuth.UserAuthType--><!--Device-AuthToken-authType: userAuth.UserAuthType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -62,9 +62,9 @@ Random challenge value for the authentication. It is used to prevent replay atta
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-AuthToken-challenge: Uint8Array--><!--Device-AuthToken-challenge: Uint8Array-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -80,9 +80,9 @@ Credential ID. It indicates the ID of the credential that is successfully matche
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-AuthToken-credentialId?: bigint--><!--Device-AuthToken-credentialId?: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -98,9 +98,9 @@ Credential enrollment ID. It indicates the original value of **credentialDigest*
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-AuthToken-enrolledId?: bigint--><!--Device-AuthToken-enrolledId?: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -116,9 +116,9 @@ Secure user ID. It indicates the security ID of a user, which is used internally
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-AuthToken-secureUid?: bigint--><!--Device-AuthToken-secureUid?: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -134,9 +134,9 @@ Time elapsed since the **AuthToken** was issued, in milliseconds.
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-AuthToken-timeInterval: bigint--><!--Device-AuthToken-timeInterval: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -152,9 +152,9 @@ Authentication token type. It identifies the source of the token, such as local 
 
 **Type:** [AuthTokenType](arkts-userauthentication-useraccessctrl-authtokentype-e-sys.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-AuthToken-tokenType: AuthTokenType--><!--Device-AuthToken-tokenType: AuthTokenType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -168,13 +168,12 @@ userId: int
 
 User ID. It indicates the ID of the user who has completed authentication. The value is a non-negative integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-AuthToken-userId: int--><!--Device-AuthToken-userId: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **System API:** This is a system API.
-

@@ -16,18 +16,16 @@ function getOwnPropertyDescriptor<T extends object, P extends PropertyKey>(
 
 Gets the own property descriptor of the specified object. An own property descriptor is one that is defined directly on the object and is not inherited from the object's prototype.
 
-**Since:** -1
-
-<!--Device-Reflect-function getOwnPropertyDescriptor<T extends object, P extends PropertyKey>(        target: T,        propertyKey: P,    ): TypedPropertyDescriptor<P extends keyof T ? T[P] : any> | undefined--><!--Device-Reflect-function getOwnPropertyDescriptor<T extends object, P extends PropertyKey>(        target: T,        propertyKey: P,    ): TypedPropertyDescriptor<P extends keyof T ? T[P] : any> | undefined-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | T | Yes |  |
-| propertyKey | P | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | T | Yes |
+| propertyKey | P | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

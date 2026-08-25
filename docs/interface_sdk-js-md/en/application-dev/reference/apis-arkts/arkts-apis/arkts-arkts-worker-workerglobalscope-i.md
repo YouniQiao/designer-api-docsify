@@ -6,11 +6,11 @@ Specifies the worker thread running environment, which is isolated from the host
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [GlobalScope](arkts-arkts-worker-globalscope-i.md)
-
-<!--Device-unnamed-declare interface WorkerGlobalScope--><!--Device-unnamed-declare interface WorkerGlobalScope-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -19,6 +19,30 @@ Specifies the worker thread running environment, which is isolated from the host
 ```TypeScript
 import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
 ```
+
+## onerror
+
+```TypeScript
+onerror?: (ev: ErrorEvent) => void
+```
+
+The onerror attribute of parentPort specifies the event handler to be called when an exception occurs during worker execution. The event handler is executed in the worker thread.
+
+**Since:** 7
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** onerror
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| ev | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | Yes |
 
 ## name
 
@@ -32,31 +56,11 @@ Worker name specified when there is a new worker.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** name
-
-<!--Device-WorkerGlobalScope-readonly name: string--><!--Device-WorkerGlobalScope-readonly name: string-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## onerror
-
-```TypeScript
-onerror?: (ev: ErrorEvent) => void
-```
-
-The onerror attribute of parentPort specifies the event handler to be called when an exception occurs during worker execution. The event handler is executed in the worker thread.
-
-**Type:** (ev: ErrorEvent) =&gt; void
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** onerror
-
-<!--Device-WorkerGlobalScope-onerror?: (ev: ErrorEvent) => void--><!--Device-WorkerGlobalScope-onerror?: (ev: ErrorEvent) => void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -72,11 +76,10 @@ Specify the type attribute for self.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** self
 
-<!--Device-WorkerGlobalScope-readonly self: WorkerGlobalScope & typeof globalThis--><!--Device-WorkerGlobalScope-readonly self: WorkerGlobalScope & typeof globalThis-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

@@ -14,9 +14,9 @@ function setFoldDisplayMode(mode: FoldDisplayMode): void
 
 更改可折叠设备的显示模式。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-display-function setFoldDisplayMode(mode: FoldDisplayMode): void--><!--Device-display-function setFoldDisplayMode(mode: FoldDisplayMode): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -24,17 +24,17 @@ function setFoldDisplayMode(mode: FoldDisplayMode): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mode | [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | 是 | 可折叠设备的显示模式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mode | [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
 **示例**
 
@@ -103,9 +103,9 @@ function setFoldDisplayMode(mode: FoldDisplayMode, reason: string): void
 
 更改可折叠设备的显示模式，并指明更改原因。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-display-function setFoldDisplayMode(mode: FoldDisplayMode, reason: string): void--><!--Device-display-function setFoldDisplayMode(mode: FoldDisplayMode, reason: string): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -113,19 +113,18 @@ function setFoldDisplayMode(mode: FoldDisplayMode, reason: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mode | [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | 是 | 可折叠设备的显示模式。 |
-| reason | string | 是 | 更改显示模式的原因。不设置，则默认为空字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mode | [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | 是 |
+| reason | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
 **示例**
 
 参见 [setFoldDisplayMode](#setfolddisplaymode)
-

@@ -19,19 +19,19 @@ export function getAppPreloadType(): AppPreloadType
 > 加载类型。&gt;
 > - AbilityStage创建完成后，应用的预加载数据将被清除，调用该接口将返回UNSPECIFIED，无法获取到真实的预加载类型。
 
-**起始版本：** 23
+**起始版本：** 22
+
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-application-export function getAppPreloadType(): AppPreloadType--><!--Device-application-export function getAppPreloadType(): AppPreloadType-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AppPreloadType](arkts-ability-application-apppreloadtype-e.md) | 应用当前进程的预加载类型。 |
+| 类型 |
+| --- |
+| [AppPreloadType](arkts-ability-application-apppreloadtype-e.md) |
 
 **示例**
 
@@ -44,4 +44,3 @@ export default class MyAbilityStage extends AbilityStage{
   }
 }
 ```
-

@@ -4,7 +4,7 @@ Describes compose parameters.
 
 **Since:** 23
 
-<!--Device-image-interface HdrComposeOptions--><!--Device-image-interface HdrComposeOptions-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -26,9 +26,8 @@ Pixel format used for composite image, RGBA_1010102\YCBCR_P010\YCRCB_P010 are su
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-HdrComposeOptions-desiredPixelFormat?: PixelMapFormat--><!--Device-HdrComposeOptions-desiredPixelFormat?: PixelMapFormat-End-->
-
 **System capability:** SystemCapability.Multimedia.Image.Core
-

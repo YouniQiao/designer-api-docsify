@@ -4,7 +4,7 @@ Device name change result.
 
 **Since:** 23
 
-<!--Device-distributedDeviceManager-interface DeviceNameChangeResult--><!--Device-distributedDeviceManager-interface DeviceNameChangeResult-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -26,7 +26,6 @@ Device name.
 
 **Since:** 23
 
-<!--Device-DeviceNameChangeResult-deviceName: string--><!--Device-DeviceNameChangeResult-deviceName: string-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
-

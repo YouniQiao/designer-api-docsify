@@ -4,11 +4,11 @@ Ability的状态信息。
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [AbilityState](arkts-ability-abilitymanager-abilitystate-e.md)
-
-<!--Device-abilityManager-export enum AbilityState--><!--Device-abilityManager-export enum AbilityState-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -24,11 +24,11 @@ INITIAL = 0
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [INITIAL](arkts-ability-abilitymanager-abilitystate-e.md#initial)
-
-<!--Device-AbilityState-INITIAL = 0--><!--Device-AbilityState-INITIAL = 0-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -44,11 +44,11 @@ FOREGROUND = 9
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [FOREGROUND](arkts-ability-abilitymanager-abilitystate-e.md#foreground)
-
-<!--Device-AbilityState-FOREGROUND = 9--><!--Device-AbilityState-FOREGROUND = 9-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -64,11 +64,11 @@ BACKGROUND = 10
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [BACKGROUND](arkts-ability-abilitymanager-abilitystate-e.md#background)
-
-<!--Device-AbilityState-BACKGROUND = 10--><!--Device-AbilityState-BACKGROUND = 10-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -84,11 +84,11 @@ FOREGROUNDING = 11
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [FOREGROUNDING](arkts-ability-abilitymanager-abilitystate-e.md#foregrounding)
-
-<!--Device-AbilityState-FOREGROUNDING = 11--><!--Device-AbilityState-FOREGROUNDING = 11-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -104,13 +104,12 @@ BACKGROUNDING = 12
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [BACKGROUNDING](arkts-ability-abilitymanager-abilitystate-e.md#backgrounding)
 
-<!--Device-AbilityState-BACKGROUNDING = 12--><!--Device-AbilityState-BACKGROUNDING = 12-End-->
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
-

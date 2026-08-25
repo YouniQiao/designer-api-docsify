@@ -14,9 +14,9 @@ function makeMirrorWithRegion(mainScreen: long, mirrorScreen: Array<long>, mainS
 
 将屏幕的某一矩形区域设置为镜像模式，使用Promise异步回调。调用该接口后，不建议再进行屏幕的旋转/折叠，否则可能导致镜像内容异常。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-screen-function makeMirrorWithRegion(mainScreen: long, mirrorScreen: Array<long>, mainScreenRegion: Rect): Promise<long>--><!--Device-screen-function makeMirrorWithRegion(mainScreen: long, mirrorScreen: Array<long>, mainScreenRegion: Rect): Promise<long>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -24,24 +24,24 @@ function makeMirrorWithRegion(mainScreen: long, mirrorScreen: Array<long>, mainS
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mainScreen | long | 是 | 主屏幕ID，该参数仅支持正整数输入。 |
-| mirrorScreen | Array&lt;long&gt; | 是 | 镜像屏幕ID集合。其中ID应为正整数。 |
-| mainScreenRegion | Rect | 是 | 主屏创建镜像的矩形区域。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mainScreen | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| mirrorScreen | ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;long & gt; | 是 |
+| mainScreenRegion | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;long&gt; | Promise对象。返回镜像屏幕的群组id，其中id为正整数。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;long & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) |
 
 **示例**
 
@@ -87,4 +87,3 @@ screen.makeMirrorWithRegion(mainScreenId, mirrorScreenIds, mainScreenRegion).the
   console.error(`Failed to set screen area mirroring. Code: ${err?.code}, message: ${err?.message}`);
 });
 ```
-

@@ -4,9 +4,9 @@ getInfo interface
 
 **Since:** 3
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export default class Device--><!--Device-unnamed-export default class Device-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -26,15 +26,14 @@ Obtains the device information.
 
 **Since:** 3
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-Device-static getInfo(options?: GetDeviceOptions): void--><!--Device-Device-static getInfo(options?: GetDeviceOptions): void-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [GetDeviceOptions](arkts-basicservices-system-device-getdeviceoptions-i.md) | No | Options |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [GetDeviceOptions](arkts-basicservices-system-device-getdeviceoptions-i.md) | No |

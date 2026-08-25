@@ -16,9 +16,9 @@ function offMission(listenerId: long, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.MANAGE_MISSIONS
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-missionManager-function offMission(listenerId: long, callback: AsyncCallback<void>): void--><!--Device-missionManager-function offMission(listenerId: long, callback: AsyncCallback<void>): void-End-->
+**需要权限：** ohos.permission.MANAGE_MISSIONS
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -26,18 +26,18 @@ function offMission(listenerId: long, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| listenerId | long | 是 | 系统任务状态监器法的index值，和监听器一一对应，由on方法返回。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 执行结果回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| listenerId | long | 是 |
+| callback | AsyncCallback & lt;void & gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [16300002](../errorcode-ability.md#16300002-指定的任务监听器不存在) | The specified mission listener does not exist. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16300002](../errorcode-ability.md#16300002-指定的任务监听器不存在) |
 
 **示例**
 
@@ -232,9 +232,9 @@ function offMission(listenerId: long): Promise<void>
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.MANAGE_MISSIONS
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-missionManager-function offMission(listenerId: long): Promise<void>--><!--Device-missionManager-function offMission(listenerId: long): Promise<void>-End-->
+**需要权限：** ohos.permission.MANAGE_MISSIONS
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -242,25 +242,24 @@ function offMission(listenerId: long): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| listenerId | long | 是 | 系统任务状态监听器的index值，和监听器一一对应，由on方法返回。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| listenerId | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [16300002](../errorcode-ability.md#16300002-指定的任务监听器不存在) | The specified mission listener does not exist. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16300002](../errorcode-ability.md#16300002-指定的任务监听器不存在) |
 
 **示例**
 
 参见 [offMission](#offmission)
-

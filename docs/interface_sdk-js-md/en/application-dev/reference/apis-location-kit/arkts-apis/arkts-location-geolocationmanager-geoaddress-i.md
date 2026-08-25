@@ -2,9 +2,9 @@
 
 Data struct describes geographic locations.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-geoLocationManager-export interface GeoAddress--><!--Device-geoLocationManager-export interface GeoAddress-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -24,9 +24,9 @@ Indicates website URL.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GeoAddress-addressUrl?: string--><!--Device-GeoAddress-addressUrl?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -40,9 +40,9 @@ Indicates administrative region name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GeoAddress-administrativeArea?: string--><!--Device-GeoAddress-administrativeArea?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -56,9 +56,9 @@ Indicates country code.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GeoAddress-countryCode?: string--><!--Device-GeoAddress-countryCode?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -72,9 +72,9 @@ Indicates country name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GeoAddress-countryName?: string--><!--Device-GeoAddress-countryName?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -88,9 +88,9 @@ Indicates additional information.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GeoAddress-descriptions?: Array<string>--><!--Device-GeoAddress-descriptions?: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -102,11 +102,11 @@ descriptionsSize?: int
 
 Indicates the amount of additional descriptive information.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GeoAddress-descriptionsSize?: int--><!--Device-GeoAddress-descriptionsSize?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -118,11 +118,11 @@ latitude?: double
 
 Indicates latitude information. A positive value indicates north latitude, and a negative value indicates south latitude.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GeoAddress-latitude?: double--><!--Device-GeoAddress-latitude?: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -136,9 +136,9 @@ Indicates language used for the location description. zh indicates Chinese, and 
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GeoAddress-locale?: string--><!--Device-GeoAddress-locale?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -152,9 +152,9 @@ Indicates locality information.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GeoAddress-locality?: string--><!--Device-GeoAddress-locality?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -166,11 +166,11 @@ longitude?: double
 
 Indicates longitude information. A positive value indicates east longitude , and a negative value indicates west longitude.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GeoAddress-longitude?: double--><!--Device-GeoAddress-longitude?: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -184,9 +184,9 @@ Indicates phone number.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GeoAddress-phoneNumber?: string--><!--Device-GeoAddress-phoneNumber?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -200,9 +200,9 @@ Indicates detailed address information.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GeoAddress-placeName?: string--><!--Device-GeoAddress-placeName?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -216,9 +216,9 @@ Indicates postal code.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GeoAddress-postalCode?: string--><!--Device-GeoAddress-postalCode?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -232,9 +232,9 @@ Indicates house information.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GeoAddress-premises?: string--><!--Device-GeoAddress-premises?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -248,9 +248,9 @@ Indicates road name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GeoAddress-roadName?: string--><!--Device-GeoAddress-roadName?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -264,9 +264,9 @@ Indicates sub-administrative region name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GeoAddress-subAdministrativeArea?: string--><!--Device-GeoAddress-subAdministrativeArea?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -280,9 +280,9 @@ Indicates sub-locality information.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GeoAddress-subLocality?: string--><!--Device-GeoAddress-subLocality?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -296,9 +296,8 @@ Indicates auxiliary road information.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-GeoAddress-subRoadName?: string--><!--Device-GeoAddress-subRoadName?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
-

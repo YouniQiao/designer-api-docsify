@@ -2,9 +2,9 @@
 
 Enumerates the focus tracking modes.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-camera-enum FocusTrackingMode--><!--Device-camera-enum FocusTrackingMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -18,11 +18,10 @@ AUTO = 0
 
 Automatic.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-FocusTrackingMode-AUTO = 0--><!--Device-FocusTrackingMode-AUTO = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

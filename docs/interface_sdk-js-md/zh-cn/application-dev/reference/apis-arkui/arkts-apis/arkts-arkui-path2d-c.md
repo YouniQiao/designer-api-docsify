@@ -14,7 +14,7 @@
 
 **起始版本：** 8
 
-<!--Device-unnamed-declare class Path2D--><!--Device-unnamed-declare class Path2D-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,20 +33,20 @@ addPath(path: Path2D, transform?: Matrix2D): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-Path2D-addPath(path: Path2D, transform?: Matrix2D): void--><!--Device-Path2D-addPath(path: Path2D, transform?: Matrix2D): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-path2d-c.md) | 是 | 需要添加到当前路径的路径对象，路径单位：px。 <br>异常值undefined和null按无效值处理。 |
-| transform | Matrix2D | 否 | 新增路径的变换矩阵对象。 <br>异常值undefined和null按无效值处理。 <br>默认值：null。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| path | [Path2D](arkts-arkui-path2d-c.md) | 是 |
+| transform | [Matrix2D](arkts-arkui-matrix2d-c.md) | 否 |
 
 **示例**
 
@@ -87,11 +87,11 @@ constructor()
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-Path2D-constructor()--><!--Device-Path2D-constructor()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -146,21 +146,21 @@ constructor(unit: LengthMetricsUnit)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-Path2D-constructor(unit: LengthMetricsUnit)--><!--Device-Path2D-constructor(unit: LengthMetricsUnit)-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| unit | LengthMetricsUnit | 是 | 用来配置Matrix2D对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](arkts-arkui-canvas-con.md) 。 <br>默认值：DEFAULT <br>异常值NaN和Infinity按默认值处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 |
 
 **示例**
 
@@ -176,19 +176,19 @@ constructor(path: Path2D)
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-Path2D-constructor(path: Path2D)--><!--Device-Path2D-constructor(path: Path2D)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-path2d-c.md) | 是 | 路径对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| path | [Path2D](arkts-arkui-path2d-c.md) | 是 |
 
 **示例**
 
@@ -204,22 +204,22 @@ constructor(path: Path2D, unit: LengthMetricsUnit)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-Path2D-constructor(path: Path2D, unit: LengthMetricsUnit)--><!--Device-Path2D-constructor(path: Path2D, unit: LengthMetricsUnit)-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-path2d-c.md) | 是 | 路径对象。 |
-| unit | LengthMetricsUnit | 是 | 用来配置Path2D对象的单位模式，配置后无法动态更改， 配置方法同 [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。 <br>异常值NaN和Infinity按默认值处理。 <br>默认值：DEFAULT。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| path | [Path2D](arkts-arkui-path2d-c.md) | 是 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 |
 
 **示例**
 
@@ -235,19 +235,19 @@ constructor(d: string)
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-Path2D-constructor(d: string)--><!--Device-Path2D-constructor(d: string)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| d | string | 是 | 符合SVG路径描述规范的路径字符串，格式参考 SVG路径描述规范， 异常值按无效值处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | string | 是 |
 
 **示例**
 
@@ -263,24 +263,23 @@ constructor(description: string, unit: LengthMetricsUnit)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-Path2D-constructor(description: string, unit: LengthMetricsUnit)--><!--Device-Path2D-constructor(description: string, unit: LengthMetricsUnit)-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| description | string | 是 | 符合SVG路径描述规范的路径字符串，格式参考 SVG路径描述规范， 异常值按无效值处理。 |
-| unit | LengthMetricsUnit | 是 | 用来配置Path2D对象的单位模式，配置后无法动态更改， 配置方法同 [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。 <br>异常值NaN和Infinity按默认值处理。 <br>默认值：DEFAULT。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| description | string | 是 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 |
 
 **示例**
 
 参见 [constructor](#constructor)
-

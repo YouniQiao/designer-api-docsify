@@ -1,11 +1,11 @@
 # FetchResponse
 
 **表2** responseType与success中data关系  
-| responseType | data | 说明 | | -------- | -------- | -------- | | 无 | string | 服务器返回的header中的type如果是text/\*或application/json、application/javascript、application/xml，值为文本内容。 | | text | string | 返回文本内容。 | | json | Object | 返回json格式的对象。 |
+| responseType | [data](#data) | 说明 | | -------- | -------- | -------- | | 无 | string | 服务器返回的header中的type如果是text/\*或application/json、application/javascript、application/xml，值为文本内容。 | | text | string | 返回文本内容。 | | [json](../../apis-arkts/arkts-apis/arkts-util-json.md) | Object |
 
 **起始版本：** 3
 
-<!--Device-unnamed-export interface FetchResponse--><!--Device-unnamed-export interface FetchResponse-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -26,7 +26,7 @@ code: number
 
 **起始版本：** 3
 
-<!--Device-FetchResponse-code: number--><!--Device-FetchResponse-code: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -42,7 +42,7 @@ data: string | object
 
 **起始版本：** 3
 
-<!--Device-FetchResponse-data: string | object--><!--Device-FetchResponse-data: string | object-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -58,7 +58,7 @@ headers: Object
 
 **起始版本：** 3
 
-<!--Device-FetchResponse-headers: Object--><!--Device-FetchResponse-headers: Object-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -161,4 +161,3 @@ export default {
   // ...
 }
 ```
-

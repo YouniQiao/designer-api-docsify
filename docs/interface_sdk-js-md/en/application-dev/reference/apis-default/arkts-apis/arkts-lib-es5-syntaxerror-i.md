@@ -1,13 +1,8 @@
 # SyntaxError
 
-**Inheritance/Implementation:** SyntaxError extends [Error](arkts-lib-es5-error-i.md)
-
-**Since:** -1
-
-<!--Device-unnamed-interface SyntaxError--><!--Device-unnamed-interface SyntaxError-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
-

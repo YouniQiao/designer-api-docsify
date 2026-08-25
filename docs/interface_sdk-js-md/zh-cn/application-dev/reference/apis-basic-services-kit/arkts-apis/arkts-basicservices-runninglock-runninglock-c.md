@@ -2,9 +2,9 @@
 
 阻止系统睡眠或使能接近光控制亮灭屏的锁，不同的锁类型具有不同的功能，详见[RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md)。 需结合[create](arkts-basicservices-runninglock-create-f.md)创建锁、[hold](#hold)持锁、[unhold](#unhold)释放锁使用。具体使用方法见示例。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-runningLock-class RunningLock--><!--Device-runningLock-class RunningLock-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
@@ -16,32 +16,38 @@ import { runningLock } from '@kit.BasicServicesKit';
 
 ## hold
 
+ArkTS-Dyn:
+```TypeScript
+hold(timeout: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 hold(timeout: int): void
 ```
 
 锁定和持有RunningLock。适用于应用需要在后台持续运行（如后台下载、长时间定位追踪等）时阻止系统睡眠的场景或通话时需要接近光控制亮灭屏的场景等。调用此方法后， 必须在使用完毕时调用unhold()释放锁，或者在调用时设置超时释放时间由系统自动释放，与unhold()方法配对使用。未释放锁会导致阻止睡眠或者控制亮灭屏功能持续生效。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.RUNNING_LOCK
-
-<!--Device-RunningLock-hold(timeout: int): void--><!--Device-RunningLock-hold(timeout: int): void-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| timeout | int | 是 | 锁定和持有RunningLock的时长，单位：毫秒。<br>**-1**：永久持锁，需要主动释放。<br>**0**：默认3s后超时释放。<br> **&gt;0**：按传入值超时释放。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| timeout | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | If the permission is denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -82,17 +88,17 @@ isHolding(): boolean
 
 查询当前RunningLock是持有状态还是释放状态。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-RunningLock-isHolding(): boolean--><!--Device-RunningLock-isHolding(): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回true表示当前RunningLock是持有状态，返回false表示当前RunningLock是释放状态。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -131,19 +137,19 @@ isUsed(): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [isHolding](#isholding)
-
-<!--Device-RunningLock-isUsed(): boolean--><!--Device-RunningLock-isUsed(): boolean-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回true表示当前RunningLock是持有状态，返回false表示当前RunningLock是释放状态。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -168,21 +174,21 @@ lock(timeout: number): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [hold](#hold)
 
 **需要权限：** ohos.permission.RUNNING_LOCK
 
-<!--Device-RunningLock-lock(timeout: number): void--><!--Device-RunningLock-lock(timeout: number): void-End-->
-
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| timeout | number | 是 | 锁定和持有RunningLock的时长，单位：毫秒。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| timeout | number | 是 |
 
 **示例**
 
@@ -205,19 +211,19 @@ unhold(): void
 
 释放RunningLock锁。此方法与hold()配对使用，在调用hold()锁定后调用此方法释放锁。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.RUNNING_LOCK
-
-<!--Device-RunningLock-unhold(): void--><!--Device-RunningLock-unhold(): void-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | If the permission is denied. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -262,13 +268,13 @@ unlock(): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [unhold](#unhold)
 
 **需要权限：** ohos.permission.RUNNING_LOCK
-
-<!--Device-RunningLock-unlock(): void--><!--Device-RunningLock-unlock(): void-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
@@ -284,4 +290,3 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
     console.error('create running lock failed, err: ' + err);
 });
 ```
-

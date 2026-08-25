@@ -10,39 +10,38 @@ import { ArcSlider, ArcSliderPosition, ArcSliderOptions, ArcSliderOptionsConstru
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [ArcSliderLayoutOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md) | Defines the layout of the arc slider. |
-| [ArcSliderOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md) | Defines the properties of the arc slider. |
-| [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md) | Defines the style of the arc slider. |
-| [ArcSliderValueOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptions-c.md) | Defines the value of the arc slider. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArcSliderLayoutOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md) |
+| [ArcSliderOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md) |
+| [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md) |
+| [ArcSliderValueOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptions-c.md) |
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [ArcSlider](arkts-arkui-arkui-advanced-arcslider-arcslider-s.md) | The **ArcSlider** component is designed for circular screens on wearables to quickly adjust settings, such as the volume and brightness. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArcSlider](arkts-arkui-arkui-advanced-arcslider-arcslider-s.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ArcSliderLayoutOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptionsconstructoroptions-i.md) | Defines the construction information for **ArcSliderLayoutValueOptions**. |
-| [ArcSliderOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptionsconstructoroptions-i.md) | Defines the constructor information for **ArcSliderOptions**. |
-| [ArcSliderStyleOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptionsconstructoroptions-i.md) | Defines the constructor information for **ArcSliderStyleOptions**. |
-| [ArcSliderValueOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptionsconstructoroptions-i.md) | Defines the constructor information for **ArcSliderValueOptions**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArcSliderLayoutOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptionsconstructoroptions-i.md) |
+| [ArcSliderOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptionsconstructoroptions-i.md) |
+| [ArcSliderStyleOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptionsconstructoroptions-i.md) |
+| [ArcSliderValueOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptionsconstructoroptions-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [ArcSliderPosition](arkts-arkui-arkui-advanced-arcslider-arcsliderposition-e.md) | Defines the position of the arc slider on the screen. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArcSliderPosition](arkts-arkui-arkui-advanced-arcslider-arcsliderposition-e.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [ArcSliderChangeHandler](arkts-arkui-arcsliderchangehandler-t.md) | Defines the callback invoked to notify the application when the progress value of the arc slider changes. |
-| [ArcSliderEnlargeHandler](arkts-arkui-arcsliderenlargehandler-t.md) | Defines the callback invoked to notify the application when the arc slider is enlarged or reduced. |
-| [ArcSliderTouchHandler](arkts-arkui-arcslidertouchhandler-t.md) | Defines the callback invoked to notify the application when the arc slider is touched. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArcSliderChangeHandler](arkts-arkui-arcsliderchangehandler-t.md) |
+| [ArcSliderEnlargeHandler](arkts-arkui-arcsliderenlargehandler-t.md) |
+| [ArcSliderTouchHandler](arkts-arkui-arcslidertouchhandler-t.md) |

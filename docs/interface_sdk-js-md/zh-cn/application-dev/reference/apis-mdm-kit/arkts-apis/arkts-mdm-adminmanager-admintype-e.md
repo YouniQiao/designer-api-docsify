@@ -4,7 +4,7 @@
 
 **起始版本：** 15
 
-<!--Device-adminManager-export enum AdminType--><!--Device-adminManager-export enum AdminType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,7 +18,6 @@ BYOD设备管理应用。
 
 **起始版本：** 15
 
-<!--Device-AdminType-ADMIN_TYPE_BYOD = 0x02--><!--Device-AdminType-ADMIN_TYPE_BYOD = 0x02-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
-

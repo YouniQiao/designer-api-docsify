@@ -18,25 +18,25 @@ Matrix的叠加函数，可以将两个矩阵的效果叠加起来生成一个�
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [combine](arkts-arkui-matrix4-matrix4transit-i.md#combine)
-
-<!--Device-matrix4-function combine(options: Matrix4Transit): Matrix4Transit--><!--Device-matrix4-function combine(options: Matrix4Transit): Matrix4Transit-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | Matrix4Transit | 是 | 待叠加的矩阵对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [Matrix4Transit](arkts-arkui-matrix4transit-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Matrix4Transit | 叠加后的矩阵对象。 |
+| 类型 |
+| --- |
+| [Matrix4Transit](arkts-arkui-matrix4transit-t.md) |
 
 **示例**
 
@@ -69,4 +69,3 @@ struct Test {
   }
 }
 ```
-

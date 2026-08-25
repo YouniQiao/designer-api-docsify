@@ -4,7 +4,7 @@ Enumerates the digest algorithms.
 
 **Since:** 8
 
-<!--Device-huks-export enum HuksKeyDigest--><!--Device-huks-export enum HuksKeyDigest-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -20,9 +20,9 @@ No digest algorithm
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HuksKeyDigest-HUKS_DIGEST_NONE = 0--><!--Device-HuksKeyDigest-HUKS_DIGEST_NONE = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -38,9 +38,9 @@ MD5
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HuksKeyDigest-HUKS_DIGEST_MD5 = 1--><!--Device-HuksKeyDigest-HUKS_DIGEST_MD5 = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -56,9 +56,9 @@ SM3
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-HuksKeyDigest-HUKS_DIGEST_SM3 = 2--><!--Device-HuksKeyDigest-HUKS_DIGEST_SM3 = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -74,9 +74,9 @@ SHA-1
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HuksKeyDigest-HUKS_DIGEST_SHA1 = 10--><!--Device-HuksKeyDigest-HUKS_DIGEST_SHA1 = 10-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -92,9 +92,9 @@ SHA-224
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HuksKeyDigest-HUKS_DIGEST_SHA224 = 11--><!--Device-HuksKeyDigest-HUKS_DIGEST_SHA224 = 11-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -110,9 +110,9 @@ SHA-256
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HuksKeyDigest-HUKS_DIGEST_SHA256 = 12--><!--Device-HuksKeyDigest-HUKS_DIGEST_SHA256 = 12-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -128,9 +128,9 @@ SHA-384
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HuksKeyDigest-HUKS_DIGEST_SHA384 = 13--><!--Device-HuksKeyDigest-HUKS_DIGEST_SHA384 = 13-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -146,11 +146,10 @@ SHA-512
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HuksKeyDigest-HUKS_DIGEST_SHA512 = 14--><!--Device-HuksKeyDigest-HUKS_DIGEST_SHA512 = 14-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 8 to 11: SystemCapability.Security.Huks.Extension
-

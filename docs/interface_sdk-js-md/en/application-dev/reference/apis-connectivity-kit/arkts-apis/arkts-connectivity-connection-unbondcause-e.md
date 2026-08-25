@@ -2,9 +2,9 @@
 
 Enum for cause of unbond.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-connection-enum UnbondCause--><!--Device-connection-enum UnbondCause-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -16,11 +16,11 @@ USER_REMOVED = 0
 
 User proactively removed device.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UnbondCause-USER_REMOVED = 0--><!--Device-UnbondCause-USER_REMOVED = 0-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -32,11 +32,11 @@ REMOTE_DEVICE_DOWN = 1
 
 Remote device shut down.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UnbondCause-REMOTE_DEVICE_DOWN = 1--><!--Device-UnbondCause-REMOTE_DEVICE_DOWN = 1-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -48,11 +48,11 @@ AUTH_FAILURE = 2
 
 Wrong PIN code.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UnbondCause-AUTH_FAILURE = 2--><!--Device-UnbondCause-AUTH_FAILURE = 2-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -64,11 +64,11 @@ AUTH_REJECTED = 3
 
 Remote device rejected.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UnbondCause-AUTH_REJECTED = 3--><!--Device-UnbondCause-AUTH_REJECTED = 3-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -80,11 +80,10 @@ INTERNAL_ERROR = 4
 
 Internal error.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UnbondCause-INTERNAL_ERROR = 4--><!--Device-UnbondCause-INTERNAL_ERROR = 4-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

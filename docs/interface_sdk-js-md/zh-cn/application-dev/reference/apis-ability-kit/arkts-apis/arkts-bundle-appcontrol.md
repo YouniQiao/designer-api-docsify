@@ -5,9 +5,9 @@
 > **说明：**&gt;
 > 本模块为系统接口。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-declare namespace appControl--><!--Device-unnamed-declare namespace appControl-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -24,45 +24,44 @@ import { appControl } from '@kit.AbilityKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md) | 删除应用的处置状态。使用callback异步回调，成功返回null，失败返回对应错误信息。 |
-| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md) | 删除应用的处置状态。使用promise异步回调，成功返回null，失败返回对应错误信息。 |
-| [deleteDisposedStatusSync](arkts-ability-appcontrol-deletedisposedstatussync-f-sys.md) | 以同步方法删除指定应用或分身应用的处置状态。成功返回null，失败抛出对应异常。 |
-| [deleteUninstallDisposedRule](arkts-ability-appcontrol-deleteuninstalldisposedrule-f-sys.md) | 删除指定应用或分身应用的卸载处置规则。 |
-| [getAllDisposedRules](arkts-ability-appcontrol-getalldisposedrules-f-sys.md) | 获取当前用户下已设置的所有拦截规则。 |
-| [getDisposedRule](arkts-ability-appcontrol-getdisposedrule-f-sys.md) | 获取指定应用或分身应用已设置的拦截规则。 |
-| [getDisposedRulesByBundle](arkts-ability-appcontrol-getdisposedrulesbybundle-f-sys.md) | 获取指定应用程序包设置的所有拦截规则。 |
-| [getDisposedStatus](arkts-ability-appcontrol-getdisposedstatus-f-sys.md) | 获取指定应用的处置状态。使用callback异步回调，成功返回应用的处置状态，失败返回对应错误信息。 |
-| [getDisposedStatus](arkts-ability-appcontrol-getdisposedstatus-f-sys.md) | 获取指定应用已设置的处置状态。使用Promise异步回调，成功返回应用的处置状态，失败返回对应错误信息。 |
-| [getDisposedStatusSync](arkts-ability-appcontrol-getdisposedstatussync-f-sys.md) | 以同步方法获取指定应用已设置的处置状态。成功返回应用的处置状态，失败抛出对应异常。 |
-| [getUninstallDisposedRule](arkts-ability-appcontrol-getuninstalldisposedrule-f-sys.md) | 获取指定应用或分身应用已设置的优先级最高的卸载处置规则。 |
-| [setDisposedRule](arkts-ability-appcontrol-setdisposedrule-f-sys.md) | 设置指定应用或分身应用的拦截规则。 |
-| [setDisposedRules](arkts-ability-appcontrol-setdisposedrules-f-sys.md) | 批量设置指定应用或分身应用的拦截规则。 |
-| [setDisposedStatus](arkts-ability-appcontrol-setdisposedstatus-f-sys.md) | 设置应用的处置状态。使用callback异步回调。成功返回null，失败返回对应错误信息。 |
-| [setDisposedStatus](arkts-ability-appcontrol-setdisposedstatus-f-sys.md) | 设置应用的处置状态。使用Promise异步回调。成功返回null，失败返回对应错误信息。 |
-| [setDisposedStatusSync](arkts-ability-appcontrol-setdisposedstatussync-f-sys.md) | 以同步方法设置应用的处置状态。成功返回null，失败抛出对应异常。 |
-| [setUninstallDisposedRule](arkts-ability-appcontrol-setuninstalldisposedrule-f-sys.md) | 设置指定应用或分身应用的卸载处置规则。 |
+| 名称 |
+| --- |
+| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md) |
+| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md) |
+| [deleteDisposedStatusSync](arkts-ability-appcontrol-deletedisposedstatussync-f-sys.md) |
+| [deleteUninstallDisposedRule](arkts-ability-appcontrol-deleteuninstalldisposedrule-f-sys.md) |
+| [getAllDisposedRules](arkts-ability-appcontrol-getalldisposedrules-f-sys.md) |
+| [getDisposedRule](arkts-ability-appcontrol-getdisposedrule-f-sys.md) |
+| [getDisposedRulesByBundle](arkts-ability-appcontrol-getdisposedrulesbybundle-f-sys.md) |
+| [getDisposedStatus](arkts-ability-appcontrol-getdisposedstatus-f-sys.md) |
+| [getDisposedStatus](arkts-ability-appcontrol-getdisposedstatus-f-sys.md) |
+| [getDisposedStatusSync](arkts-ability-appcontrol-getdisposedstatussync-f-sys.md) |
+| [getUninstallDisposedRule](arkts-ability-appcontrol-getuninstalldisposedrule-f-sys.md) |
+| [setDisposedRule](arkts-ability-appcontrol-setdisposedrule-f-sys.md) |
+| [setDisposedRules](arkts-ability-appcontrol-setdisposedrules-f-sys.md) |
+| [setDisposedStatus](arkts-ability-appcontrol-setdisposedstatus-f-sys.md) |
+| [setDisposedStatus](arkts-ability-appcontrol-setdisposedstatus-f-sys.md) |
+| [setDisposedStatusSync](arkts-ability-appcontrol-setdisposedstatussync-f-sys.md) |
+| [setUninstallDisposedRule](arkts-ability-appcontrol-setuninstalldisposedrule-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [DisposedRule](arkts-ability-appcontrol-disposedrule-i-sys.md) | 标识拦截规则。 |
-| [DisposedRuleConfiguration](arkts-ability-appcontrol-disposedruleconfiguration-i-sys.md) | 标识批量设置拦截规则的配置。 |
-| [UninstallDisposedRule](arkts-ability-appcontrol-uninstalldisposedrule-i-sys.md) | 标识卸载处置规则。 |
+| 名称 |
+| --- |
+| [DisposedRule](arkts-ability-appcontrol-disposedrule-i-sys.md) |
+| [DisposedRuleConfiguration](arkts-ability-appcontrol-disposedruleconfiguration-i-sys.md) |
+| [UninstallDisposedRule](arkts-ability-appcontrol-uninstalldisposedrule-i-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [ComponentType](arkts-ability-appcontrol-componenttype-e-sys.md) | 标识功能组件类型。 |
-| [ControlType](arkts-ability-appcontrol-controltype-e-sys.md) | 标识拦截指定应用程序的不同策略。 |
-| [DisposedType](arkts-ability-appcontrol-disposedtype-e-sys.md) | 标识拦截应用程序的方式，例如禁用应用的全部能力、禁用应用的指定能力、或者不禁用。 |
-| [UninstallComponentType](arkts-ability-appcontrol-uninstallcomponenttype-e-sys.md) | 标识卸载时功能组件类型。 |
+| 名称 |
+| --- |
+| [ComponentType](arkts-ability-appcontrol-componenttype-e-sys.md) |
+| [ControlType](arkts-ability-appcontrol-controltype-e-sys.md) |
+| [DisposedType](arkts-ability-appcontrol-disposedtype-e-sys.md) |
+| [UninstallComponentType](arkts-ability-appcontrol-uninstallcomponenttype-e-sys.md) |
 <!--DelEnd-->
-

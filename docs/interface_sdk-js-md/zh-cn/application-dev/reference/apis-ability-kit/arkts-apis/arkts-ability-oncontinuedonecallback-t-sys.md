@@ -4,11 +4,11 @@
 type OnContinueDoneCallback = (result: int) => void
 ```
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-unnamed-type OnContinueDoneCallback = (result: int) => void--><!--Device-unnamed-type OnContinueDoneCallback = (result: int) => void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -16,7 +16,6 @@ type OnContinueDoneCallback = (result: int) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| result | int | 是 | The result code of continue mission. |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| result | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |

@@ -4,9 +4,9 @@ Shader material, which inherits from Material.@extends Material @interface Shade
 
 **Inheritance/Implementation:** ShaderMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface ShaderMaterial--><!--Device-unnamed-export interface ShaderMaterial-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -20,9 +20,8 @@ Shader. The default value is undefined.
 
 **Type:** [Shader](arkts-arkgraphics3d-sceneresources-shader-i.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-ShaderMaterial-colorShader?: Shader--><!--Device-ShaderMaterial-colorShader?: Shader-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

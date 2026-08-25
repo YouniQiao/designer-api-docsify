@@ -2,9 +2,9 @@
 
 Defines event query rules.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-hiSysEvent-interface QueryRule--><!--Device-hiSysEvent-interface QueryRule-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -19,16 +19,16 @@ import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 ## condition
 
 ```TypeScript
-condition?: string | null | undefined
+condition?: string
 ```
 
 Additional event conditions. The value of this parameter is in the format of **{"version":"V1","condition":{"and":[{"param":"*Parameter*","op":"*Operator*","value":"*Comparison value*"}]}}**.Parameter: key value of the specified event parameter.Supported operators: **=**, **!=**, **&lt;**, **<=**, **>** and **&gt;=**.Multiple conditions can be configured in the **"and"** array, and the intersection of the query results is used.
 
-**Type:** string \| null \| undefined
+**Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-QueryRule-condition?: string | null | undefined--><!--Device-QueryRule-condition?: string | null | undefined-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -44,9 +44,9 @@ Event domain.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-QueryRule-domain: string--><!--Device-QueryRule-domain: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -62,11 +62,10 @@ Array of event names. A **QueryRule** object contains multiple system event name
 
 **Type:** string[]
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-QueryRule-names: string[]--><!--Device-QueryRule-names: string[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
-

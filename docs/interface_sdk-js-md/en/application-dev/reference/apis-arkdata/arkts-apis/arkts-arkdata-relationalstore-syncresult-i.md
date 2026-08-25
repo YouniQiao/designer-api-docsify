@@ -4,7 +4,7 @@ Indicates synchronization result.
 
 **Since:** 26.0.0
 
-<!--Device-relationalStore-interface SyncResult--><!--Device-relationalStore-interface SyncResult-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -26,9 +26,9 @@ Indicates the synchronization result code.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-SyncResult-readonly code:SyncResultCode--><!--Device-SyncResult-readonly code:SyncResultCode-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -44,9 +44,9 @@ Indicates the synchronization deviceId.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-SyncResult-readonly device:string--><!--Device-SyncResult-readonly device:string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -62,9 +62,8 @@ Indicates detailed information about the synchronization results.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SyncResult-readonly message:string--><!--Device-SyncResult-readonly message:string-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-

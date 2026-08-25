@@ -7,9 +7,9 @@ export type UpgradeTaskCallback = (eventInfo: EventInfo) => void
 事件回调。  
 **版本说明**： 从API version 23开始支持。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-update-export type UpgradeTaskCallback = (eventInfo: EventInfo) => void--><!--Device-update-export type UpgradeTaskCallback = (eventInfo: EventInfo) => void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -17,7 +17,6 @@ export type UpgradeTaskCallback = (eventInfo: EventInfo) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| eventInfo | EventInfo | 是 | Event information. |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| eventInfo | [EventInfo](arkts-basicservices-update-eventinfo-i-sys.md) | 是 |

@@ -13,25 +13,25 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 export function checked(b?: boolean): On
 ```
 
-Specifies the checked status of the target Component.
+Specifies the checked attribute of the target component.
 
 **Since:** 23
 
-<!--Device-ON-export function checked(b?: boolean): On--><!--Device-ON-export function checked(b?: boolean): On-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| b | boolean | No | the checked status. <br>Default value: true |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| b | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | this { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **Examples**
 
@@ -41,4 +41,3 @@ import { On, ON } from '@kit.TestKit';
 
 let on: On = ON.checked(true); // Use the static constructor ON to create an On object and specify the checked attribute of the target component.
 ```
-

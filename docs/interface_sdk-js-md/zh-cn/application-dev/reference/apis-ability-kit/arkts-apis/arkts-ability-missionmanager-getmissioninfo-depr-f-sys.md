@@ -15,13 +15,13 @@ function getMissionInfo(deviceId: string, missionId: number, callback: AsyncCall
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
-
-<!--Device-missionManager-function getMissionInfo(deviceId: string, missionId: number, callback: AsyncCallback<MissionInfo>): void--><!--Device-missionManager-function getMissionInfo(deviceId: string, missionId: number, callback: AsyncCallback<MissionInfo>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -29,11 +29,11 @@ function getMissionInfo(deviceId: string, missionId: number, callback: AsyncCall
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| deviceId | string | 是 | 设备ID，本机默认为空字符串。 |
-| missionId | number | 是 | 任务ID。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt; | 是 | 回调函数，返回任务信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| deviceId | string | 是 |
+| missionId | number | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt; | 是 |
 
 **示例**
 
@@ -86,13 +86,13 @@ function getMissionInfo(deviceId: string, missionId: number): Promise<MissionInf
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
-
-<!--Device-missionManager-function getMissionInfo(deviceId: string, missionId: number): Promise<MissionInfo>--><!--Device-missionManager-function getMissionInfo(deviceId: string, missionId: number): Promise<MissionInfo>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -100,18 +100,17 @@ function getMissionInfo(deviceId: string, missionId: number): Promise<MissionInf
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| deviceId | string | 是 | 设备ID，本机默认为空字符串。 |
-| missionId | number | 是 | 任务ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| deviceId | string | 是 |
+| missionId | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt; | Promise对象，返回任务信息。 |
+| 类型 |
+| --- |
+| Promise&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt; |
 
 **示例**
 
 参见 [getMissionInfo](#getmissioninfo)
-

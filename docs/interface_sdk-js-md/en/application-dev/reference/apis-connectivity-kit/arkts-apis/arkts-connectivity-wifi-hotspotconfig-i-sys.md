@@ -4,11 +4,11 @@ Wi-Fi hotspot configuration information.@interface HotspotConfig
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [HotspotConfig](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md)
-
-<!--Device-wifi-interface HotspotConfig--><!--Device-wifi-interface HotspotConfig-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -32,11 +32,11 @@ The frequency band of the Wi-Fi hotspot
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [band](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#band)
-
-<!--Device-HotspotConfig-band: number--><!--Device-HotspotConfig-band: number-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -54,11 +54,11 @@ The maximum number of connections allowed by the Wi-Fi hotspot
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [maxConn](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#maxconn)
-
-<!--Device-HotspotConfig-maxConn: number--><!--Device-HotspotConfig-maxConn: number-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -76,11 +76,11 @@ The password of the Wi-Fi hotspot
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [preSharedKey](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#presharedkey)
-
-<!--Device-HotspotConfig-preSharedKey: string--><!--Device-HotspotConfig-preSharedKey: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -98,11 +98,11 @@ The encryption mode of the Wi-Fi hotspot
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [securityType](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#securitytype)
-
-<!--Device-HotspotConfig-securityType: WifiSecurityType--><!--Device-HotspotConfig-securityType: WifiSecurityType-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -120,13 +120,12 @@ The SSID of the Wi-Fi hotspot
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ssid](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#ssid)
 
-<!--Device-HotspotConfig-ssid: string--><!--Device-HotspotConfig-ssid: string-End-->
-
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
-

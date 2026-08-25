@@ -4,7 +4,7 @@
 
 **起始版本：** 9
 
-<!--Device-huks-export enum HuksUserAuthType--><!--Device-huks-export enum HuksUserAuthType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -18,9 +18,9 @@ HUKS_USER_AUTH_TYPE_FINGERPRINT = 1 << 0
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-HuksUserAuthType-HUKS_USER_AUTH_TYPE_FINGERPRINT = 1 << 0--><!--Device-HuksUserAuthType-HUKS_USER_AUTH_TYPE_FINGERPRINT = 1 << 0-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -34,9 +34,9 @@ HUKS_USER_AUTH_TYPE_FACE = 1 << 1
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-HuksUserAuthType-HUKS_USER_AUTH_TYPE_FACE = 1 << 1--><!--Device-HuksUserAuthType-HUKS_USER_AUTH_TYPE_FACE = 1 << 1-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -50,9 +50,9 @@ HUKS_USER_AUTH_TYPE_PIN = 1 << 2
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-HuksUserAuthType-HUKS_USER_AUTH_TYPE_PIN = 1 << 2--><!--Device-HuksUserAuthType-HUKS_USER_AUTH_TYPE_PIN = 1 << 2-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -67,9 +67,8 @@ HUKS_USER_AUTH_TYPE_TUI_PIN = 1 << 5
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-HuksUserAuthType-HUKS_USER_AUTH_TYPE_TUI_PIN = 1 << 5--><!--Device-HuksUserAuthType-HUKS_USER_AUTH_TYPE_TUI_PIN = 1 << 5-End-->
-
 **系统能力：** SystemCapability.Security.Huks.Extension
-

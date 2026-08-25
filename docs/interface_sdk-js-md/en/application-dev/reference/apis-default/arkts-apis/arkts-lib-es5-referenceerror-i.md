@@ -1,13 +1,8 @@
 # ReferenceError
 
-**Inheritance/Implementation:** ReferenceError extends [Error](arkts-lib-es5-error-i.md)
-
-**Since:** -1
-
-<!--Device-unnamed-interface ReferenceError--><!--Device-unnamed-interface ReferenceError-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
-

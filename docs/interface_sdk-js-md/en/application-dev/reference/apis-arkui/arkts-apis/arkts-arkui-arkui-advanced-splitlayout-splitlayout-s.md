@@ -4,9 +4,7 @@ Declare SplitLayout.The SplitLayout is used for upper and lower graphic layouts.
 
 **Since:** 22
 
-**Decorator:** @Component
-
-<!--Device-unnamed-export declare struct SplitLayout--><!--Device-unnamed-export declare struct SplitLayout-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,25 +14,45 @@ Declare SplitLayout.The SplitLayout is used for upper and lower graphic layouts.
 import { SplitLayout } from '@kit.ArkUI';
 ```
 
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## container
+
+```TypeScript
+container: () => void
+```
 
 Container in the user-defined splitlayout display area.
 
-**Type:** () =&gt; void
-
 **Since:** 22
 
-**Decorator:** @BuilderParam
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-SplitLayout-@BuilderParam container: () => void--><!--Device-SplitLayout-@BuilderParam container: () => void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## mainImage
+
+```TypeScript
+mainImage: ResourceStr
+```
 
 Image in the layout.
 
@@ -42,17 +60,19 @@ Image in the layout.
 
 **Since:** 22
 
-**Decorator:** @State
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-SplitLayout-@State mainImage: ResourceStr--><!--Device-SplitLayout-@State mainImage: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## primaryText
+
+```TypeScript
+primaryText: ResourceStr
+```
 
 Title text in the layout.
 
@@ -60,17 +80,19 @@ Title text in the layout.
 
 **Since:** 22
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-SplitLayout-@Prop primaryText: ResourceStr--><!--Device-SplitLayout-@Prop primaryText: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryText
+
+```TypeScript
+secondaryText?: ResourceStr
+```
 
 Description text in the layout.
 
@@ -78,17 +100,19 @@ Description text in the layout.
 
 **Since:** 22
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-SplitLayout-@Prop secondaryText?: ResourceStr--><!--Device-SplitLayout-@Prop secondaryText?: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## tertiaryText
+
+```TypeScript
+tertiaryText?: ResourceStr
+```
 
 Auxiliary text in the layout.
 
@@ -96,13 +120,10 @@ Auxiliary text in the layout.
 
 **Since:** 22
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-SplitLayout-@Prop tertiaryText?: ResourceStr--><!--Device-SplitLayout-@Prop tertiaryText?: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

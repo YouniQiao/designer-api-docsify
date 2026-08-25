@@ -2,9 +2,9 @@
 
 Wi-Fi Ipv6 configuration information.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-wifiManager-interface Ipv6Config--><!--Device-wifiManager-interface Ipv6Config-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -26,9 +26,9 @@ DNS servers.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Ipv6Config-dnsServers: Array<string>--><!--Device-Ipv6Config-dnsServers: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -44,9 +44,9 @@ Domains.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Ipv6Config-domains: Array<string>--><!--Device-Ipv6Config-domains: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -62,9 +62,9 @@ Gate way.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Ipv6Config-gateway: string--><!--Device-Ipv6Config-gateway: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -80,9 +80,9 @@ IPv6 address.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Ipv6Config-ipAddress: string--><!--Device-Ipv6Config-ipAddress: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -96,13 +96,12 @@ prefixLength: int
 
 Prefix length.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Ipv6Config-prefixLength: int--><!--Device-Ipv6Config-prefixLength: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
-

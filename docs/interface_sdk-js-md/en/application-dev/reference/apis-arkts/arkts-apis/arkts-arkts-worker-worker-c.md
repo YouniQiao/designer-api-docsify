@@ -6,11 +6,11 @@ The Worker class contains all Worker functions.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ThreadWorker](arkts-arkts-worker-threadworker-c.md)
-
-<!--Device-worker-class Worker--><!--Device-worker-class Worker-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -30,20 +30,20 @@ Creates a worker instance
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** constructor
-
-<!--Device-Worker-constructor(scriptURL: string, options?: WorkerOptions)--><!--Device-Worker-constructor(scriptURL: string, options?: WorkerOptions)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| scriptURL | string | Yes | scriptURL URL of the script to be executed by the worker |
-| options | [WorkerOptions](arkts-arkts-worker-workeroptions-i.md) | No | Options that can be set for the worker |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| scriptURL | string | Yes |
+| options | [WorkerOptions](arkts-arkts-worker-workeroptions-i.md) | No |
 
 **Examples**
 
@@ -67,7 +67,7 @@ import { worker } from '@kit.ArkTS';
 const workerInstance = new worker.Worker('entry/ets/workers/worker.ets', {name: "WorkerThread"});
 ```
 
-## off_string
+## off
 
 ```TypeScript
 off(type: string, listener?: EventListener): void
@@ -77,22 +77,48 @@ Removes an event listener to the worker.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** off
-
-<!--Device-Worker-off(type: string, listener?: EventListener): void--><!--Device-Worker-off(type: string, listener?: EventListener): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | string | Yes | Type of the event for which the event listener is removed. |
-| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | No | listener Callback of the event listener to remove. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | string | Yes |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | No |
 
 **Examples**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+const handler1 = () => console.info("Handler 1");
+const handler2 = () => console.info("Handler 2");
+
+// Register two listeners.
+workerInstance.on("alert", handler1);
+workerInstance.on("alert", handler2);
+
+// First trigger: Both listeners are executed.
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
+
+// Remove the handler1 listener.
+workerInstance.off("alert", handler1);
+
+// Second trigger: Only handler2 is executed.
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
+
+// Remove all listeners of the alert type.
+workerInstance.off("alert");
+```
 
 ```TypeScript
 // Index.ets
@@ -103,7 +129,7 @@ const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
 workerInstance.off("alert");
 ```
 
-## on_string
+## on
 
 ```TypeScript
 on(type: string, listener: EventListener): void
@@ -113,22 +139,37 @@ Adds an event listener to the worker.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** on
-
-<!--Device-Worker-on(type: string, listener: EventListener): void--><!--Device-Worker-on(type: string, listener: EventListener): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | string | Yes | type Adds an event listener to the worker. |
-| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | Yes | listener Callback to invoke when an event of the specified type occurs. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | string | Yes |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | Yes |
 
 **Examples**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.on("alert", () => {
+    console.info("alert listener callback");
+})
+
+// Event listeners added using on can be executed multiple times.
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
+```
 
 ```TypeScript
 // Index.ets
@@ -140,7 +181,7 @@ workerInstance.on("alert", () => {
 })
 ```
 
-## once_string
+## once
 
 ```TypeScript
 once(type: string, listener: EventListener): void
@@ -150,22 +191,38 @@ Adds an event listener to the worker and removes the event listener automaticall
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** once
-
-<!--Device-Worker-once(type: string, listener: EventListener): void--><!--Device-Worker-once(type: string, listener: EventListener): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | string | Yes | Type of the event to listen for |
-| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | Yes | listener Callback to invoke when an event of the specified type occurs |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | string | Yes |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | Yes |
 
 **Examples**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.once("alert", () => {
+  console.info("alert listener callback");
+})
+
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
+
+// Event listeners added using once are automatically removed after being executed once and cannot be executed multiple times.
+// workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
+```
 
 ```TypeScript
 // Index.ets
@@ -177,6 +234,102 @@ workerInstance.once("alert", () => {
 })
 ```
 
+## onerror
+
+```TypeScript
+onerror?: (err: ErrorEvent) => void
+```
+
+The onerror attribute of the worker specifies the event handler to be called when an exception occurs during worker execution. The event handler is executed in the host thread.
+
+**Since:** 7
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** onerror
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| err | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | Yes |
+
+## onexit
+
+```TypeScript
+onexit?: (code: number) => void
+```
+
+Called when the Worker thread exits. The event handler is executed in the host thread. In the callback function, the code value is of the number type, where the value 1 indicates abnormal exit and 0 indicates normal exit.The default value is undefined.
+
+**Since:** 7
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** onexit
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| code | number | Yes |
+
+## onmessage
+
+```TypeScript
+onmessage?: (event: MessageEvent) => void
+```
+
+The onmessage attribute of the worker specifies the event handler to be called then the host thread receives a message created by itself and sent by the worker through the parentPort.postMessage. The event handler is executed in the host thread.
+
+**Since:** 7
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** onmessage
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | [MessageEvent](arkts-arkts-worker-messageevent-i.md) | Yes |
+
+## onmessageerror
+
+```TypeScript
+onmessageerror?: (event: MessageEvent) => void
+```
+
+The onmessage attribute of the worker specifies the event handler when the worker receives a message that cannot be serialized. The event handler is executed in the host thread.
+
+**Since:** 7
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** onmessageerror
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | [MessageEvent](arkts-arkts-worker-messageevent-i.md) | Yes |
+
 ## postMessage
 
 ```TypeScript
@@ -187,20 +340,20 @@ Sends a message to the worker thread. The data is transferred using the structur
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** postMessage
-
-<!--Device-Worker-postMessage(message: Object, transfer: ArrayBuffer[]): void--><!--Device-Worker-postMessage(message: Object, transfer: ArrayBuffer[]): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | Object | Yes | Data to be sent to the worker |
-| transfer | ArrayBuffer[] | Yes | transfer ArrayBuffer instance that can be transferred. The transferList array cannot contain null. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | Object | Yes |
+| transfer | ArrayBuffer[] | Yes |
 
 **Examples**
 
@@ -414,20 +567,20 @@ Sends a message to the worker thread. The data is transferred using the structur
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** postMessage
-
-<!--Device-Worker-postMessage(message: Object, options?: PostMessageOptions): void--><!--Device-Worker-postMessage(message: Object, options?: PostMessageOptions): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| message | Object | Yes | Data to be sent to the worker |
-| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | No | Option can be set for postmessage. The transferList array cannot contain null. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| message | Object | Yes |
+| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | No |
 
 **Examples**
 
@@ -443,11 +596,11 @@ Terminates the worker thread to stop the worker from receiving messages
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** terminate
-
-<!--Device-Worker-terminate(): void--><!--Device-Worker-terminate(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -468,84 +621,3 @@ import { worker } from '@kit.ArkTS';
 const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
 workerInstance.terminate();
 ```
-
-## onerror
-
-```TypeScript
-onerror?: (err: ErrorEvent) => void
-```
-
-The onerror attribute of the worker specifies the event handler to be called when an exception occurs during worker execution. The event handler is executed in the host thread.
-
-**Type:** (err: ErrorEvent) =&gt; void
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** onerror
-
-<!--Device-Worker-onerror?: (err: ErrorEvent) => void--><!--Device-Worker-onerror?: (err: ErrorEvent) => void-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## onexit
-
-```TypeScript
-onexit?: (code: number) => void
-```
-
-Called when the Worker thread exits. The event handler is executed in the host thread. In the callback function, the code value is of the number type, where the value 1 indicates abnormal exit and 0 indicates normal exit.The default value is undefined.
-
-**Type:** (code: number) =&gt; void
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** onexit
-
-<!--Device-Worker-onexit?: (code: number) => void--><!--Device-Worker-onexit?: (code: number) => void-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## onmessage
-
-```TypeScript
-onmessage?: (event: MessageEvent) => void
-```
-
-The onmessage attribute of the worker specifies the event handler to be called then the host thread receives a message created by itself and sent by the worker through the parentPort.postMessage. The event handler is executed in the host thread.
-
-**Type:** (event: MessageEvent) =&gt; void
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** onmessage
-
-<!--Device-Worker-onmessage?: (event: MessageEvent) => void--><!--Device-Worker-onmessage?: (event: MessageEvent) => void-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## onmessageerror
-
-```TypeScript
-onmessageerror?: (event: MessageEvent) => void
-```
-
-The onmessage attribute of the worker specifies the event handler when the worker receives a message that cannot be serialized. The event handler is executed in the host thread.
-
-**Type:** (event: MessageEvent) =&gt; void
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** onmessageerror
-
-<!--Device-Worker-onmessageerror?: (event: MessageEvent) => void--><!--Device-Worker-onmessageerror?: (event: MessageEvent) => void-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-

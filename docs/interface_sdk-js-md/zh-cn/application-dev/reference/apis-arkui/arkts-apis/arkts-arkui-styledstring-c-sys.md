@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare class StyledString--><!--Device-unnamed-declare class StyledString-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,9 +23,9 @@ static marshalling(styledString: StyledString, callback: StyledStringMarshallCal
 
 **起始版本：** 19
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
-<!--Device-StyledString-static marshalling(styledString: StyledString, callback: StyledStringMarshallCallback): ArrayBuffer--><!--Device-StyledString-static marshalling(styledString: StyledString, callback: StyledStringMarshallCallback): ArrayBuffer-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,16 +33,16 @@ static marshalling(styledString: StyledString, callback: StyledStringMarshallCal
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | 是 | 待序列化的属性字符串对象，包含文本内容及样式信息。 |
-| callback | [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | 是 | 用于序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)的回调函数。回调函数签名： (marshallableVal: StyledStringMarshallingValue) =&gt; ArrayBuffer，其中marshallableVal为需要序列化的对象，返回值为序列化后的ArrayBuffer数 据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | 是 |
+| callback | [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ArrayBuffer | 序列化后的buffer信息。 <br>**说明：** <br>目前支持文本和图片。 |
+| 类型 |
+| --- |
+| ArrayBuffer |
 
 ## marshalling
 
@@ -54,9 +54,9 @@ static marshalling(styledString: StyledString): ArrayBuffer
 
 **起始版本：** 13
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
-<!--Device-StyledString-static marshalling(styledString: StyledString): ArrayBuffer--><!--Device-StyledString-static marshalling(styledString: StyledString): ArrayBuffer-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,15 +64,15 @@ static marshalling(styledString: StyledString): ArrayBuffer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | 是 | 要序列化的属性字符串对象，包含文本内容及样式信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ArrayBuffer | 序列化后的buffer信息。 <br>**说明：** <br>目前支持文本和图片。 |
+| 类型 |
+| --- |
+| ArrayBuffer |
 
 ## unmarshalling
 
@@ -84,9 +84,9 @@ static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallba
 
 **起始版本：** 19
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
-<!--Device-StyledString-static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallback): Promise<StyledString>--><!--Device-StyledString-static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallback): Promise<StyledString>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,23 +94,23 @@ static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallba
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 属性字符串序列化后的数据。 |
-| callback | [StyledStringUnmarshallCallback](arkts-arkui-styledstringunmarshallcallback-t-sys.md) | 是 | 用于反序列化ArrayBuffer的回调函数。回调函数签名：(buf: ArrayBuffer) =&gt; StyledStringMarshallingValue，其中 buf为序列化后的数据，返回值为反序列化得到的StyledStringMarshallingValue对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer | 是 |
+| callback | [StyledStringUnmarshallCallback](arkts-arkui-styledstringunmarshallcallback-t-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; | Promise对象，成功时返回属性字符串，失败时返回错误码，详见错误码部分。 <br>**说明：** <br>目前支持文本和图片。 |
+| 类型 |
+| --- |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [170002](../errorcode-styled-string.md#170002-属性字符串解码错误) | Styled string decode error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [170002](../errorcode-styled-string.md#170002-属性字符串解码错误) |
 
 ## unmarshalling
 
@@ -122,9 +122,9 @@ static unmarshalling(buffer: ArrayBuffer): Promise<StyledString>
 
 **起始版本：** 13
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
-<!--Device-StyledString-static unmarshalling(buffer: ArrayBuffer): Promise<StyledString>--><!--Device-StyledString-static unmarshalling(buffer: ArrayBuffer): Promise<StyledString>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -132,20 +132,19 @@ static unmarshalling(buffer: ArrayBuffer): Promise<StyledString>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 属性字符串序列化后的数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; | Promise对象，成功时返回属性字符串，失败时返回错误码，详见错误码部分。 <br>**说明：** <br>目前支持文本和图片。 |
+| 类型 |
+| --- |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [170002](../errorcode-styled-string.md#170002-属性字符串解码错误) | Styled string decode error. |
-
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [170002](../errorcode-styled-string.md#170002-属性字符串解码错误) |

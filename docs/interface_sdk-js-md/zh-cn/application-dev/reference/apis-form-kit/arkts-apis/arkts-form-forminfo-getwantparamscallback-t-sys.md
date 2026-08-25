@@ -8,9 +8,9 @@ type GetWantParamsCallback = (formInfo: Array<formInfo.FormInfo>) => Array<Recor
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-formInfo-type GetWantParamsCallback = (formInfo: Array<formInfo.FormInfo>) => Array<Record<string, Object>>--><!--Device-formInfo-type GetWantParamsCallback = (formInfo: Array<formInfo.FormInfo>) => Array<Record<string, Object>>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -18,15 +18,15 @@ type GetWantParamsCallback = (formInfo: Array<formInfo.FormInfo>) => Array<Recor
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formInfo | Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt; | 是 | 卡片信息列表。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [formInfo](arkts-app-form-forminfo.md) | Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;Record&lt;string, Object&gt;&gt; | 返回卡片参数列表，与输入的卡片信息列表一一对应。 |
+| 类型 |
+| --- |
+| Array & lt;Record & lt;string, Object & gt; & gt; |
 
 **示例**
 
@@ -68,4 +68,3 @@ let getWantParamsCallback: formInfo.GetWantParamsCallback =
     return wantParamsList;
   };
 ```
-

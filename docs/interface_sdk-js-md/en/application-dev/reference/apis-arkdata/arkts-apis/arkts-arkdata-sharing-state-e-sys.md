@@ -2,9 +2,9 @@
 
 Enumerates the device-cloud sharing states.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-sharing-enum State--><!--Device-sharing-enum State-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -18,9 +18,9 @@ STATE_UNKNOWN = 0
 
 Unknown state. Use the enum name rather than the enum value.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-State-STATE_UNKNOWN = 0--><!--Device-State-STATE_UNKNOWN = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -34,9 +34,9 @@ STATE_ACCEPTED = 1
 
 The device-cloud sharing invitation is accepted. Use the enum name rather than the enum value.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-State-STATE_ACCEPTED = 1--><!--Device-State-STATE_ACCEPTED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -50,9 +50,9 @@ STATE_REJECTED = 2
 
 The device-cloud sharing invitation is rejected. Use the enum name rather than the enum value.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-State-STATE_REJECTED = 2--><!--Device-State-STATE_REJECTED = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -66,9 +66,9 @@ STATE_SUSPENDED = 3
 
 The device-cloud sharing is suspended temporarily. Use the enum name rather than the enum value.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-State-STATE_SUSPENDED = 3--><!--Device-State-STATE_SUSPENDED = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -82,11 +82,10 @@ STATE_UNAVAILABLE = 4
 
 The device-cloud sharing is unavailable. Use the enum name rather than the enum value.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-State-STATE_UNAVAILABLE = 4--><!--Device-State-STATE_UNAVAILABLE = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **System API:** This is a system API.
-

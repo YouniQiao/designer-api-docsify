@@ -4,11 +4,9 @@ Core namespace for reflection operations, providing access to metadata such as c
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-namespace reflect--><!--Device-unnamed-namespace reflect-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -21,7 +19,6 @@ Core namespace for reflection operations, providing access to metadata such as c
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [InstanceMethod](arkts-arkts-reflect-instancemethod-c.md) | Represents an instance method of a class or interface. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [InstanceMethod](arkts-arkts-reflect-instancemethod-c.md) |

@@ -8,17 +8,16 @@ type MouseInfoCallback = (event: NativeEmbedMouseInfo) => void
 
 **起始版本：** 20
 
-<!--Device-unnamed-type MouseInfoCallback = (event: NativeEmbedMouseInfo) => void--><!--Device-unnamed-type MouseInfoCallback = (event: NativeEmbedMouseInfo) => void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | [NativeEmbedMouseInfo](arkts-arkweb-nativeembedmouseinfo-i.md) | 是 | 提供鼠标/触摸板在同层标签上单击或长按的详细信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [NativeEmbedMouseInfo](arkts-arkweb-nativeembedmouseinfo-i.md) | 是 |
 
 **示例**
 
 完整示例代码参考[onNativeEmbedMouseEvent](./arkts-basic-components-web-events.md#onnativeembedmouseevent20)。
-

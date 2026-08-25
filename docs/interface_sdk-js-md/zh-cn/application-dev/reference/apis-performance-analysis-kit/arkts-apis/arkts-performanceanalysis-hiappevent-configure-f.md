@@ -14,26 +14,26 @@ function configure(config: ConfigOption): void
 
 应用事件打点配置方法，支持配置打点开关和目录存储配额大小。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-hiAppEvent-function configure(config: ConfigOption): void--><!--Device-hiAppEvent-function configure(config: ConfigOption): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| config | ConfigOption | 是 | 应用事件打点配置项对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| config | [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
-| [11103001](../errorcode-hiappevent.md#11103001-非法的最大存储配额值) | Invalid max storage quota value. Possibly caused by incorrectly formatted. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [11103001](../errorcode-hiappevent.md#11103001-非法的最大存储配额值) |
 
 **示例**
 
@@ -50,4 +50,3 @@ let config2: hiAppEvent.ConfigOption = {
 };
 hiAppEvent.configure(config2);
 ```
-

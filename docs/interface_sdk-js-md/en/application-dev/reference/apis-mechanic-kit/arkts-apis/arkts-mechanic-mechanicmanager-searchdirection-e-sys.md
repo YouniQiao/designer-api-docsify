@@ -2,9 +2,9 @@
 
 Search direction.@enum { int }
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-mechanicManager-export enum SearchDirection--><!--Device-mechanicManager-export enum SearchDirection-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -18,9 +18,9 @@ DEFAULT = 0
 
 System Default Direction.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-SearchDirection-DEFAULT = 0--><!--Device-SearchDirection-DEFAULT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -34,9 +34,9 @@ LEFTWARD = 1
 
 Leftward direction. Also indicates clockwise direction.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-SearchDirection-LEFTWARD = 1--><!--Device-SearchDirection-LEFTWARD = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -50,11 +50,10 @@ RIGHTWARD = 2
 
 Rightward direction. Also indicates the counterclockwise direction.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-SearchDirection-RIGHTWARD = 2--><!--Device-SearchDirection-RIGHTWARD = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
-

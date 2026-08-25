@@ -8,9 +8,9 @@ type DeleteFormsCallback = (formIds: Array<string>) => void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-formInfo-type DeleteFormsCallback = (formIds: Array<string>) => void--><!--Device-formInfo-type DeleteFormsCallback = (formIds: Array<string>) => void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -18,7 +18,6 @@ type DeleteFormsCallback = (formIds: Array<string>) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | 是 | 被删除的卡片标识列表。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formIds | Array & lt;string & gt; | 是 |

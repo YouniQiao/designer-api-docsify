@@ -16,9 +16,9 @@ Notify print service the information.
 
 **Since:** 23
 
-**Required permissions:** ohos.permission.MANAGE_PRINT_JOB
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-print-function notifyPrintServiceSpoolerCloseForStarted(jobId: string, callback: AsyncCallback<void>): void--><!--Device-print-function notifyPrintServiceSpoolerCloseForStarted(jobId: string, callback: AsyncCallback<void>): void-End-->
+**Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -26,18 +26,18 @@ Notify print service the information.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| jobId | string | Yes | Indicates id of the print job. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback function for indicating the result of API execution. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| jobId | string | Yes |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 
 ## notifyPrintServiceSpoolerCloseForStarted
@@ -50,9 +50,9 @@ Notify print service the information.
 
 **Since:** 23
 
-**Required permissions:** ohos.permission.MANAGE_PRINT_JOB
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-print-function notifyPrintServiceSpoolerCloseForStarted(jobId: string): Promise<void>--><!--Device-print-function notifyPrintServiceSpoolerCloseForStarted(jobId: string): Promise<void>-End-->
+**Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -60,21 +60,20 @@ Notify print service the information.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| jobId | string | Yes | Indicates id of the print job. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| jobId | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

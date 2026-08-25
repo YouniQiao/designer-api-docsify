@@ -16,17 +16,16 @@ function isNfcAvailable(): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [canIUse](../../apis-arkui/arkts-apis/arkts-arkui-global-caniuse-f.md)("SystemCapability.Communication.NFC.Core")
-
-<!--Device-nfcController-function isNfcAvailable(): boolean--><!--Device-nfcController-function isNfcAvailable(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true: 设备具备NFC能力， false: 设备不具备NFC能力。 |
-
+| 类型 |
+| --- |
+| boolean |

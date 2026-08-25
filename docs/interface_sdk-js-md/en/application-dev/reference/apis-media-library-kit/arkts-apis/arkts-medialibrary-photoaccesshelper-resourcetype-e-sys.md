@@ -2,9 +2,9 @@
 
 Enumerates the types of the resources to write.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-photoAccessHelper-enum ResourceType--><!--Device-photoAccessHelper-enum ResourceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -16,9 +16,9 @@ PHOTO_PROXY = 3
 
 Photo proxy.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ResourceType-PHOTO_PROXY = 3--><!--Device-ResourceType-PHOTO_PROXY = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -32,9 +32,9 @@ PRIVATE_MOVING_PHOTO_RESOURCE = 4
 
 Private moving photo.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-ResourceType-PRIVATE_MOVING_PHOTO_RESOURCE = 4--><!--Device-ResourceType-PRIVATE_MOVING_PHOTO_RESOURCE = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -48,11 +48,10 @@ PRIVATE_MOVING_PHOTO_METADATA = 5
 
 Metadata resource of the private moving photo.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResourceType-PRIVATE_MOVING_PHOTO_METADATA = 5--><!--Device-ResourceType-PRIVATE_MOVING_PHOTO_METADATA = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

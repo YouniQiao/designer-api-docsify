@@ -2,9 +2,9 @@
 
 Color in RGBA format. It consists of four components: red, green, blue, and alpha.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface Color--><!--Device-unnamed-export interface Color-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -16,11 +16,11 @@ a: double
 
 Alpha component. The value range is [0, 1].
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Color-a: double--><!--Device-Color-a: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -32,11 +32,11 @@ b: double
 
 Blue component. The value range is [0, 1].
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Color-b: double--><!--Device-Color-b: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -48,11 +48,11 @@ g: double
 
 Green component. The value range is [0, 1].
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Color-g: double--><!--Device-Color-g: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -64,11 +64,10 @@ r: double
 
 Red component. The value range is [0, 1].
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Color-r: double--><!--Device-Color-r: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

@@ -4,9 +4,9 @@ Class of the photo editor ExtensionAbility, which provides APIs for you to edit 
 
 **Inheritance/Implementation:** PhotoEditorExtensionAbility extends ExtensionAbility
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-declare class PhotoEditorExtensionAbility--><!--Device-unnamed-declare class PhotoEditorExtensionAbility-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
@@ -24,11 +24,11 @@ onBackground(): void
 
 Called back when the state of an UI extension changes to background.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PhotoEditorExtensionAbility-onBackground(): void--><!--Device-PhotoEditorExtensionAbility-onBackground(): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -54,11 +54,11 @@ onCreate(): void
 
 Called back when an UI extension is started for initialization.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PhotoEditorExtensionAbility-onCreate(): void--><!--Device-PhotoEditorExtensionAbility-onCreate(): void-End-->
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
@@ -86,9 +86,9 @@ Called back before an UI extension is destroyed.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-PhotoEditorExtensionAbility-onDestroy(): void | Promise<void>--><!--Device-PhotoEditorExtensionAbility-onDestroy(): void | Promise<void>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
@@ -134,17 +134,17 @@ Called back before an UI extension is destroyed.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-PhotoEditorExtensionAbility-onDestroy(): Promise<void> | undefined--><!--Device-PhotoEditorExtensionAbility-onDestroy(): Promise<void> | undefined-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; \| undefined | the promise returned by the function. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; \ | undefined |
 
 **Examples**
 
@@ -158,11 +158,11 @@ onForeground(): void
 
 Called back when the state of an UI extension changes to foreground.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PhotoEditorExtensionAbility-onForeground(): void--><!--Device-PhotoEditorExtensionAbility-onForeground(): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -188,21 +188,21 @@ onStartContentEditing(uri: string, want: Want, session: UIExtensionContentSessio
 
 Called back when an UI extension session is created and original image is ready.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PhotoEditorExtensionAbility-onStartContentEditing(uri: string, want: Want, session: UIExtensionContentSession): void--><!--Device-PhotoEditorExtensionAbility-onStartContentEditing(uri: string, want: Want, session: UIExtensionContentSession): void-End-->
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | Indicates the uri info of the original image. |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the want info of the UI extension. |
-| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | Indicates the session of the UI extension page. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes |
 
 **Examples**
 
@@ -228,11 +228,10 @@ Indicates configuration information about an Photo editor extension ability cont
 
 **Type:** [PhotoEditorExtensionContext](arkts-ability-photoeditorextensioncontext-c.md)
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PhotoEditorExtensionAbility-context: PhotoEditorExtensionContext--><!--Device-PhotoEditorExtensionAbility-context: PhotoEditorExtensionContext-End-->
-
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
-

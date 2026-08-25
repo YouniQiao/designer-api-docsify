@@ -4,7 +4,7 @@ Enumerates the IP address types.
 
 **Since:** 12
 
-<!--Device-wifiManager-enum IpType--><!--Device-wifiManager-enum IpType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,9 +18,9 @@ Static IP address, which is used in scenarios where a fixed IP address is requir
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-IpType-STATIC = 0--><!--Device-IpType-STATIC = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -34,9 +34,9 @@ Dynamic Host Configuration Protocol (DHCP), which is a service that automaticall
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-IpType-DHCP = 1--><!--Device-IpType-DHCP = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -50,9 +50,8 @@ Not specified.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-IpType-UNKNOWN = 2--><!--Device-IpType-UNKNOWN = 2-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [TextAreaModifier](arkts-arkui-textareamodifier-c.md) | Defines TextArea Modifier@implements { TextAreaAttribute, AttributeModifier&lt;TextAreaAttribute&gt; } |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [TextAreaModifier](arkts-arkui-textareamodifier-c.md) |

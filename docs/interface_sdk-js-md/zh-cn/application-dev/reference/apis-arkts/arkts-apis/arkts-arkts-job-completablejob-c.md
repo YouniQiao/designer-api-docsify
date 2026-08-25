@@ -6,9 +6,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export class CompletableJob--><!--Device-unnamed-export class CompletableJob-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,19 +25,17 @@ Await(): T
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-CompletableJob-Await(): T--><!--Device-CompletableJob-Await(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 任务的返回值，类型与创建任务时指定的泛型类型一致。 |
+| 类型 |
+| --- |
+| T |
 
 ## constructor
 
@@ -51,11 +47,9 @@ constructor()
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-CompletableJob-constructor()--><!--Device-CompletableJob-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -69,11 +63,9 @@ fail(): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-CompletableJob-fail(): void--><!--Device-CompletableJob-fail(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -87,19 +79,17 @@ fail(error: Error): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-CompletableJob-fail(error: Error): void--><!--Device-CompletableJob-fail(error: Error): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| error | Error | 是 | 任务失败时设置的Error。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| error | Error | 是 |
 
 ## finish
 
@@ -111,11 +101,9 @@ finish(): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-CompletableJob-finish(): void--><!--Device-CompletableJob-finish(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -129,17 +117,14 @@ finish<T>(value: T): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-CompletableJob-finish<T>(value: T): void--><!--Device-CompletableJob-finish<T>(value: T): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | T | 是 | 任务完成时设置的值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | T | 是 |

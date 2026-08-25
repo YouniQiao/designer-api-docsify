@@ -6,9 +6,9 @@ type GetLiveFormStatusCallback = () => Record<string, string>
 
 Get live form status info callback
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-formInfo-type GetLiveFormStatusCallback = () => Record<string, string>--><!--Device-formInfo-type GetLiveFormStatusCallback = () => Record<string, string>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -37,4 +37,3 @@ let GetLiveFormStatusCallback: formInfo.GetLiveFormStatusCallback = (): Record<s
   return { '1256444': 'ACTIVE' };
 };
 ```
-

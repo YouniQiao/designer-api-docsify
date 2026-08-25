@@ -16,21 +16,21 @@ Obtains the country code of this device.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getCountryCode](arkts-connectivity-wifimanager-getcountrycode-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
-<!--Device-wifi-function getCountryCode(): string--><!--Device-wifi-function getCountryCode(): string-End-->
-
 **System capability:** SystemCapability.Communication.WiFi.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Returns the country code of this device. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -44,4 +44,3 @@ try {
 	console.error("failed:" + JSON.stringify(error));
 }
 ```
-

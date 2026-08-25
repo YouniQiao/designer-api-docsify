@@ -2,9 +2,9 @@
 
 Enumerates volume related operations. Flags should be powers of 2!
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-audio-enum VolumeFlag--><!--Device-audio-enum VolumeFlag-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -18,11 +18,10 @@ FLAG_SHOW_SYSTEM_UI = 1
 
 Show system volume bar.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-VolumeFlag-FLAG_SHOW_SYSTEM_UI = 1--><!--Device-VolumeFlag-FLAG_SHOW_SYSTEM_UI = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
-

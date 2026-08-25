@@ -2,9 +2,9 @@
 
 Input parameters of the function for opening a proxy channel, including the link type of the proxy channel, the MAC address of the peer device, and the UUID of the listening service.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-proxyChannelManager-interface ChannelInfo--><!--Device-proxyChannelManager-interface ChannelInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -24,11 +24,11 @@ Link type of the proxy channel. For details about the value range, see [LinkType
 
 **Type:** [LinkType](arkts-distributedservice-proxychannelmanager-linktype-e.md)
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ChannelInfo-linkType: LinkType--><!--Device-ChannelInfo-linkType: LinkType-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -42,11 +42,11 @@ MAC address of the peer device, in the format of XX:XX:XX:XX:XX:XX, where XX is 
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ChannelInfo-peerDevAddr: string--><!--Device-ChannelInfo-peerDevAddr: string-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -60,11 +60,10 @@ UUID of the service listened on by the peer device, in the standard UUID string 
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ChannelInfo-peerUuid: string--><!--Device-ChannelInfo-peerUuid: string-End-->
-
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
-

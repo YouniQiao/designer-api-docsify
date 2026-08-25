@@ -19,14 +19,14 @@
 > opacity属性不生效。
 **原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。  
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full  
-| 名称 | 类型 | 只读 | 可选 | 说明 | | -------- | -------- | -------- | -- | -------- | | scroller | [Scroller](arkts-arkui-scroller-c.md) | 否 | 否 | 可滚动组件的控制器。用于与可滚动组件进行绑定。 | | direction | [ScrollBarDirection](../../../reference/apis-arkui/arkui-ts/ts-basic-components-scrollbar.md#scrollbardirection枚举说明) | 否 | 是 | 滚动条的方向，控制可滚动组件对应方向的滚动。<br/>默认值：ScrollBarDirection.Vertical | | state | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 否 | 是 | 滚动条状态。<br/>默认值：BarState.Auto |
+| 名称 | 类型 | 只读 | 可选 | 说明 | | -------- | -------- | -------- | -- | -------- | | scroller | [Scroller](arkts-arkui-scroller-c.md) | 否 | 否 | 可滚动组件的控制器。用于与可滚动组件进行绑定。 | | direction | [ScrollBarDirection](../../../reference/apis-arkui/arkui-ts/ts-basic-components-scrollbar.md#scrollbardirection枚举说明) | 否 | 是 | 滚动条的方向，控制可滚动组件对应方向的滚动。 & lt;br/ & gt;默认值：ScrollBarDirection.Vertical | | state | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 否 | 是 |
 
 ## ScrollBarDirection枚举说明
 
 滚动条方向枚举。  
 **原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。  
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full  
-| 名称 | 值 | 说明 | | -------- | ---- | -------- | | Vertical | 0 | 纵向滚动条。 | | Horizontal | 1 | 横向滚动条。 |
+| 名称 | 值 | 说明 | | -------- | ---- | -------- | | Vertical | 0 | 纵向滚动条。 | | Horizontal | 1 |
 
 ## 示例1（设置子节点）
 
@@ -70,13 +70,113 @@ struct ScrollBarExample {
  }
  }
  }
-} ```
+}
+```
 
 ## Example 2: Implementing a ScrollBar Component Without Child Components
 
 This example illustrates the style of a **ScrollBar** component without child components. The [scrollBarColor](arkts-arkui-scrollbar-attribute.md#scrollbarcolor) attribute is added since API version 20.  
 ```ts
-import { ColorMetrics } from '
+import { ColorMetrics } from '@kit.ArkUI'
+@Entry
+@Component
+struct ScrollBarExample {
+ private scroller: Scroller = new Scroller();
+ private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+ @State scrollBarColor: ColorMetrics = ColorMetrics.rgba(24, 35, 48, 0.4);
+ build() {
+ Column() {
+ Stack({ alignContent: Alignment.End }) {
+ Scroll(this.scroller) {
+ Flex({ direction: FlexDirection.Column }) {
+ ForEach(this.arr, (item: number) =&gt; {
+ Row() {
+ Text(item.toString())
+ .width('80%')
+ .height(60)
+ .backgroundColor('#3366CC')
+ .borderRadius(15)
+ .fontSize(16)
+ .textAlign(TextAlign.Center)
+ .margin({ top: 5 })
+ }
+ }, (item: number) =&gt; item.toString())
+ }.margin({ right: 15 })
+ }
+ .width('90%')
+ .scrollBar(BarState.Off)
+ .scrollable(ScrollDirection.Vertical)
+ ScrollBar({ scroller: this.scroller, direction: ScrollBarDirection.Vertical, state: BarState.Auto })
+ .scrollBarColor(this.scrollBarColor)
+ }
+ }
+ }
+}
+```
+
+## Example 3: Enabling Nested Scrolling
+
+This example demonstrates how to enable nested scrolling for a **ScrollBar** component using the [enableNestedScroll](arkts-arkui-scrollbar-attribute.md#enablenestedscroll) attribute. This feature is available from API version 20.  
+```ts
+import { ColorMetrics } from '@kit.ArkUI'
+@Entry
+@Component
+struct StickyNestedScroll {
+ listScroller: Scroller = new Scroller();
+ @State array: number[] = [];
+ @State scrollBarColor: ColorMetrics = ColorMetrics.rgba(24, 35, 48, 0.4);
+ @Styles
+ listCard() {
+ .backgroundColor(Color.White)
+ .height(72)
+ .width('100%')
+ .borderRadius(12)
+ }
+ build() {
+ Stack() {
+ Scroll() {
+ Column() {
+ Text('Scroll Area')
+ .width('100%')
+ .height('40%')
+ .backgroundColor('#0080DC')
+ .textAlign(TextAlign.Center)
+ List({ space: 10, scroller: this.listScroller }) {
+ ForEach(this.array, (item: number) =&gt; {
+ ListItem() {
+ Text('item' + item)
+ .fontSize(16)
+ }
+ .listCard()
+ }, (item: number) =&gt; item.toString())
+ }
+ .scrollBar(BarState.Off)
+ .nestedScroll({
+ scrollForward: NestedScrollMode.PARENT_FIRST,
+ scrollBackward: NestedScrollMode.SELF_FIRST
+ })
+ .height('100%')
+ }
+ .width('100%')
+ }
+ .edgeEffect(EdgeEffect.Spring)
+ .backgroundColor('#DCDCDC')
+ .scrollBar(BarState.Off)
+ .width('100%')
+ .height('100%')
+ ScrollBar({ scroller: this.listScroller })
+ .position({ right: 0 })
+ .enableNestedScroll(true)
+ .scrollBarColor(this.scrollBarColor)
+ }
+ }
+ aboutToAppear() {
+ for (let i = 0; i &lt; 15; i++) {
+ this.array.push(i);
+ }
+ }
+}
+```
 
 ## ScrollBar
 
@@ -88,27 +188,26 @@ ScrollBar(value: ScrollBarOptions)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-ScrollBarInterface-(value: ScrollBarOptions): ScrollBarAttribute--><!--Device-ScrollBarInterface-(value: ScrollBarOptions): ScrollBarAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [ScrollBarOptions](arkts-arkui-scrollbaroptions-i.md) | 是 | 滚动条组件参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ScrollBarOptions](arkts-arkui-scrollbaroptions-i.md) | 是 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
+| 名称 |
+| --- |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-
+| 名称 |
+| --- |

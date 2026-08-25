@@ -2,9 +2,9 @@
 
 Stream from which data can be read. A readable stream is used to read data from a source, such as a file or a network socket.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-stream-export class Readable--><!--Device-stream-export class Readable-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -22,11 +22,11 @@ constructor()
 
 A constructor used to create a **Readable** object.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Readable-constructor()--><!--Device-Readable-constructor()-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -63,19 +63,19 @@ constructor(options: ReadableOptions)
 
 A constructor used to create a **Readable** object.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Readable-constructor(options: ReadableOptions)--><!--Device-Readable-constructor(options: ReadableOptions)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [ReadableOptions](arkts-arkts-stream-readableoptions-i.md) | Yes | Options in the **Readable** constructor. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [ReadableOptions](arkts-arkts-stream-readableoptions-i.md) | Yes |
 
 **Examples**
 
@@ -87,21 +87,21 @@ See [constructor](#constructor)
 doInitialize(callback: Function): void
 ```
 
-You need to implement this API. It is called when the readable stream calls [on](arkts-arkts-stream-writable-c.md#on_string) for the first time. This API uses an asynchronous callback to return the result.
+You need to implement this API. It is called when the readable stream calls on for the first time. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Readable-doInitialize(callback: Function): void--><!--Device-Readable-doInitialize(callback: Function): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | Function | Yes | Callback function. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | Function | Yes |
 
 **Examples**
 
@@ -138,25 +138,31 @@ myReadable.on('data', () => {
 
 ## doRead
 
+ArkTS-Dyn:
+```TypeScript
+doRead(size: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 doRead(size: int): void
 ```
 
 A data read API that needs to be implemented in child classes.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Readable-doRead(size: int): void--><!--Device-Readable-doRead(size: int): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | int | Yes | Number of bytes to read. Value range: 0 &lt;= size &lt;= Number.MAX_VALUE |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| size | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Examples**
 
@@ -184,19 +190,19 @@ isPaused(): boolean
 
 Checks whether the readable stream is paused. The stream is paused after [pause()](#pause) is called and resumes from the paused state after [resume()](#resume) is called.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Readable-isPaused(): boolean--><!--Device-Readable-isPaused(): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** is returned if the stream is paused; otherwise, **false** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -216,7 +222,7 @@ readableStream.pause();
 console.info("Readable isPaused", readableStream.isPaused()); // Readable isPaused true
 ```
 
-## off_string
+## off
 
 ```TypeScript
 off(event: string, callback?: Callback<emitter.EventData>): void
@@ -226,20 +232,45 @@ Unregisters an event processing callback used to listen for different events on 
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Readable-off(event: string, callback?: Callback<emitter.EventData>): void--><!--Device-Readable-off(event: string, callback?: Callback<emitter.EventData>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | string | Yes | Type of the event. The following events are supported: |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | No | Callback function. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | string | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | No |
 
 **Examples**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+ }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback();
+  }
+}
+
+let writableStream = new TestWritable();
+let testListenerCalled = false;
+let testListener = () => {
+  testListenerCalled = true;
+};
+writableStream.on('finish', testListener);
+writableStream.off('finish');
+writableStream.write('test');
+writableStream.end();
+setTimeout(() => {
+  console.info("Writable off test", testListenerCalled.toString()); // Writable off test false
+}, 0);
+```
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -264,7 +295,7 @@ readable.push('test');
 // After off is used to unregister the listening of the readable stream events, the read function is not called and "read() called" is not printed.
 ```
 
-## off_string
+## off
 
 ```TypeScript
 off(event: string, callback?: Function): void
@@ -274,20 +305,24 @@ Cancel event message.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-Readable-off(event: string, callback?: Function): void--><!--Device-Readable-off(event: string, callback?: Function): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | string | Yes | Registering Events. |
-| callback | Function | No | Event callback. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | string | Yes |
+| callback | Function | No |
 
-## on_string
+**Examples**
+
+See [off](#off)
+
+## on
 
 ```TypeScript
 on(event: string, callback: Callback<emitter.EventData>): void
@@ -297,20 +332,40 @@ Registers an event processing callback to listen for different events on the rea
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Readable-on(event: string, callback: Callback<emitter.EventData>): void--><!--Device-Readable-on(event: string, callback: Callback<emitter.EventData>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | string | Yes | Type of the event. The following events are supported: |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | Yes | Callback function used to return the event data. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | string | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | Yes |
 
 **Examples**
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback(new Error());
+  }
+}
+
+let callbackCalled = false;
+let writable = new TestWritable();
+writable.on('error', () => {
+  console.info("Writable event test", callbackCalled.toString()); // Writable event test false
+});
+writable.write('hello', 'utf8', () => {
+});
+```
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -330,7 +385,7 @@ readable.on('error', () => {
 });
 ```
 
-## on_string
+## on
 
 ```TypeScript
 on(event: string, callback: Function): void
@@ -340,18 +395,22 @@ Registering Event Messages.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-Readable-on(event: string, callback: Function): void--><!--Device-Readable-on(event: string, callback: Function): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | string | Yes | Registering Events. |
-| callback | Function | Yes | Event callback. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | string | Yes |
+| callback | Function | Yes |
+
+**Examples**
+
+See [on](#on)
 
 ## pause
 
@@ -361,19 +420,19 @@ pause(): Readable
 
 Pauses the readable stream in flowing mode. You can use **isPaused** to check whether the stream is paused.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Readable-pause(): Readable--><!--Device-Readable-pause(): Readable-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Readable](arkts-arkts-stream-readable-c.md) | Current **Readable** object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Readable](arkts-arkts-stream-readable-c.md) |
 
 **Examples**
 
@@ -400,26 +459,26 @@ pipe(destination: Writable, options?: Object): Writable
 
 Attaches a writable stream to the readable stream to implement automatic data transmission.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Readable-pipe(destination: Writable, options?: Object): Writable--><!--Device-Readable-pipe(destination: Writable, options?: Object): Writable-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| destination | [Writable](arkts-arkts-stream-writable-c.md) | Yes | Writable stream that receives data. |
-| options | Object | No | Reserved. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [destination](../../apis-network-kit/arkts-apis/arkts-network-connection-routeinfo-i.md) | [Writable](arkts-arkts-stream-writable-c.md) | Yes |
+| options | Object | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Writable](arkts-arkts-stream-writable-c.md) | Current **Writable** object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Writable](arkts-arkts-stream-writable-c.md) |
 
 **Examples**
 
@@ -459,26 +518,26 @@ push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean
 
 Pushes data into the buffer of the readable stream.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Readable-push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean--><!--Device-Readable-push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| chunk | Uint8Array \| string \| undefined \| null | Yes | Data to read.<br> There has been a compatibility change since API version 22. In API version 21 and earlier versions, the type is `Uint8Array \| string \| null`.<br>**Since:** 23 |
-| encoding | string | No | Encoding format. The default value is **'utf8'**. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| chunk | Uint8Array \| string \| undefined \| null | Yes | Data to read.<br> There has been a compatibility change since API version 22. In API version 21 and earlier versions, the type is `Uint8Array \| string \|
+| encoding | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether there is space in the buffer of the readable stream. The value **true** means that there is still space in the buffer, and **false** means that the buffer is full. If **null** is passed, **false** is always returned, indicating that no data chunk is available for pushing. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -508,29 +567,29 @@ Reads data from the buffer of the readable stream and returns the read data. If 
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Readable-read(size?: number): string | null--><!--Device-Readable-read(size?: number): string | null-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | number | No | Number of bytes to read. The default value is **undefined**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| size | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string \| null | Data read from the readable stream. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string \| null |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200038](../errorcode-utils.md#10200038-doread-is-not-implemented) | The doRead method has not been implemented. |
+| Error Code ID |
+| --- |
+| [10200038](../errorcode-utils.md#10200038-doread-is-not-implemented) |
 
 **Examples**
 
@@ -561,29 +620,29 @@ Reads a buffer of a specified size from the buffer. If the available buffer is s
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-Readable-read(size?: int): buffer.Buffer | string | null--><!--Device-Readable-read(size?: int): buffer.Buffer | string | null-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | int | No | Expected length of the data to be read. The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| size | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| buffer.Buffer \| string \| null | If no data is available to read, null is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| buffer.Buffer \| string \| null |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200038](../errorcode-utils.md#10200038-doread-is-not-implemented) | The doRead method has not been implemented. |
+| Error Code ID |
+| --- |
+| [10200038](../errorcode-utils.md#10200038-doread-is-not-implemented) |
 
 **Examples**
 
@@ -597,19 +656,19 @@ resume(): Readable
 
 Resumes an explicitly paused readable stream. You can use **isPaused** to check whether the stream is paused.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Readable-resume(): Readable--><!--Device-Readable-resume(): Readable-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Readable](arkts-arkts-stream-readable-c.md) | Current **Readable** object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Readable](arkts-arkts-stream-readable-c.md) |
 
 **Examples**
 
@@ -636,25 +695,25 @@ setEncoding(encoding?: string): boolean
 
 Sets an encoding format for the readable stream. If the buffer contains data, setting the encoding format is not allowed, and **false** is returned.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Readable-setEncoding(encoding?: string): boolean--><!--Device-Readable-setEncoding(encoding?: string): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| encoding | string | No | Encoding format. The default value is **'utf8'**. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| encoding | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Operation result. The value **true** is returned if the setting is successful; otherwise, **false** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -681,25 +740,25 @@ unpipe(destination?: Writable): Readable
 
 Detaches a writable stream previously attached to the readable stream.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Readable-unpipe(destination?: Writable): Readable--><!--Device-Readable-unpipe(destination?: Writable): Readable-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| destination | [Writable](arkts-arkts-stream-writable-c.md) | No | Writable stream to detach. The default value is **undefined**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [destination](../../apis-network-kit/arkts-apis/arkts-network-connection-routeinfo-i.md) | [Writable](arkts-arkts-stream-writable-c.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Readable](arkts-arkts-stream-readable-c.md) | Current **Readable** object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Readable](arkts-arkts-stream-readable-c.md) |
 
 **Examples**
 
@@ -735,3 +794,128 @@ readable.on('data', () => {
 // After successful detaching, the data event is not triggered and "Readable test unpipe data event triggered" is not printed.
 ```
 
+## readable
+
+```TypeScript
+get readable(): boolean
+```
+
+Is true if it is safe to call readable.read(), which means the stream has not been destroyed or emitted 'error' or 'end'.
+
+**Type:** boolean
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## readableEncoding
+
+```TypeScript
+get readableEncoding(): string | null
+```
+
+Getter for the property encoding of a given Readable stream. The encoding property can be set using the readable.setEncoding() method.
+
+**Type:** string
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## readableEnded
+
+```TypeScript
+get readableEnded(): boolean
+```
+
+Whether all data has been generated.
+
+**Type:** boolean
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## readableFlowing
+
+```TypeScript
+get readableFlowing(): boolean | null
+```
+
+This property reflects the current state of the readable stream null/true/false.
+
+**Type:** boolean
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## readableHighWatermark
+
+```TypeScript
+get readableHighWatermark(): int
+```
+
+Returns the value of highWatermark passed when creating this Readable.
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## readableLength
+
+```TypeScript
+get readableLength(): int
+```
+
+Size of the data that can be read, in bytes or objects.
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## readableObjectMode
+
+```TypeScript
+get readableObjectMode(): boolean
+```
+
+Returns boolean indicating whether it is in ObjectMode.
+
+**Type:** boolean
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Utils.Lang

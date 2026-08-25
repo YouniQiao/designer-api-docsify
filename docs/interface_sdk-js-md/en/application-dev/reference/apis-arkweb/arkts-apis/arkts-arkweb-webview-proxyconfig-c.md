@@ -1,10 +1,10 @@
 # ProxyConfig
 
-ProxyConfig is a class in the ArkWeb framework used to configure network proxy rules. It works with [ProxyController](../../apis-default/arkts-apis/arkts-webview-proxycontroller-c.md) to implement proxy control over network requests of all Web components in an app. Through ProxyConfig, developers can flexibly define various proxy rules: specifying a particular proxy server for specific URLs, specifying direct server connections for certain URLs, defining rules to bypass the proxy, and more.
+ProxyConfig is a class in the ArkWeb framework used to configure network proxy rules. It works with [ProxyController](arkts-arkweb-webview-proxycontroller-c.md) to implement proxy control over network requests of all Web components in an app. Through ProxyConfig, developers can flexibly define various proxy rules: specifying a particular proxy server for specific URLs, specifying direct server connections for certain URLs, defining rules to bypass the proxy, and more.
 
 **Since:** 15
 
-<!--Device-webview-class ProxyConfig--><!--Device-webview-class ProxyConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -24,9 +24,9 @@ Hostnames without a period character will bypass the proxy and directly connect 
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
-<!--Device-ProxyConfig-bypassHostnamesWithoutPeriod(): void--><!--Device-ProxyConfig-bypassHostnamesWithoutPeriod(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -44,9 +44,9 @@ Overrides the default behavior and forcibly sends the local host address or loca
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
-<!--Device-ProxyConfig-clearImplicitRules(): void--><!--Device-ProxyConfig-clearImplicitRules(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -64,23 +64,23 @@ Reverses the bypass rule.
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
-<!--Device-ProxyConfig-enableReverseBypass(reverse: boolean): void--><!--Device-ProxyConfig-enableReverseBypass(reverse: boolean): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| reverse | boolean | Yes | Whether to reverse the bypass rule. The default value is **false**, indicating the bypass rule set in [insertBypassRule](../../apis-default/arkts-apis/arkts-webview-proxyconfig-c.md#insertbypassrule) is not reversed. The value **true** indicates the opposite. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| reverse | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -96,17 +96,17 @@ Obtains the list of URLs that do not use the proxy.
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
-<!--Device-ProxyConfig-getBypassRules(): Array<string>--><!--Device-ProxyConfig-getBypassRules(): Array<string>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;string&gt; | List of URLs that do not use the proxy. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;string & gt; |
 
 **Examples**
 
@@ -122,17 +122,17 @@ Obtains proxy rules.
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
-<!--Device-ProxyConfig-getProxyRules(): Array<ProxyRule>--><!--Device-ProxyConfig-getProxyRules(): Array<ProxyRule>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;[ProxyRule](../../apis-default/arkts-apis/arkts-webview-proxyrule-c.md)&gt; | Proxy rule. Each ProxyRule object represents a configured proxy rule. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;[ProxyRule](arkts-arkweb-webview-proxyrule-c.md)&gt; |
 
 **Examples**
 
@@ -144,27 +144,27 @@ For details about the sample code, see [removeProxyOverride](./arkts-apis-webvie
 insertBypassRule(bypassRule: string): void
 ```
 
-Inserts a bypass rule, specifying which URLs should bypass the proxy and directly connect to the server. When [enableReverseBypass](../../apis-default/arkts-apis/arkts-webview-proxyconfig-c.md#enablereversebypass) is set to true, URLs matching bypassRule will use the proxy instead of bypassing it.
+Inserts a bypass rule, specifying which URLs should bypass the proxy and directly connect to the server. When [enableReverseBypass](#enablereversebypass) is set to true, URLs matching bypassRule will use the proxy instead of bypassing it.
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
-<!--Device-ProxyConfig-insertBypassRule(bypassRule: string): void--><!--Device-ProxyConfig-insertBypassRule(bypassRule: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bypassRule | string | Yes | Bypass rule string that specifies the URL matching rule for bypassing the proxy. It supports host name or domain name formats (for example, "example.com" matches the domain and its subdomains). URLs matching the bypassRule bypass the proxy. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bypassRule | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -179,8 +179,8 @@ insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 Inserts a direct rule, specifying that URLs matching the schemeFilter condition will directly connect to the server.
 
 > **NOTE：**&gt;
-> - Both [insertBypassRule](../../apis-default/arkts-apis/arkts-webview-proxyconfig-c.md#insertbypassrule) and
-> [bypassHostnamesWithoutPeriod](../../apis-default/arkts-apis/arkts-webview-proxyconfig-c.md#bypasshostnameswithoutperiod) can also implement
+> - Both [insertBypassRule](#insertbypassrule) and
+> [bypassHostnamesWithoutPeriod](#bypasshostnameswithoutperiod) can also implement
 > direct URL connection. The difference lies in the matching dimension: this method matches by protocol type
 > through schemeFilter; insertBypassRule matches by URL pattern through a bypassRule string;
 > bypassHostnamesWithoutPeriod requires no parameters and automatically enables direct connection for hostnames
@@ -188,23 +188,23 @@ Inserts a direct rule, specifying that URLs matching the schemeFilter condition 
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
-<!--Device-ProxyConfig-insertDirectRule(schemeFilter?: ProxySchemeFilter): void--><!--Device-ProxyConfig-insertDirectRule(schemeFilter?: ProxySchemeFilter): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| schemeFilter | [ProxySchemeFilter](../../apis-default/arkts-apis/arkts-webview-proxyschemefilter-e.md) | No | Filter used to specify URLs to be directly connected to the server. <br>Default value: **MATCH_ALL_SCHEMES**. <br>If **undefined** or **null** is passed, error code **401** will be thrown. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -221,24 +221,24 @@ Inserts a proxy rule. URLs matching schemeFilter will use the specified proxy. I
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
-<!--Device-ProxyConfig-insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void--><!--Device-ProxyConfig-insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| proxyRule | string | Yes | The specified proxy. |
-| schemeFilter | [ProxySchemeFilter](../../apis-default/arkts-apis/arkts-webview-proxyschemefilter-e.md) | No | Filter used to specify URLs that use the proxy. <br>Default value: **MATCH_ALL_SCHEMES**. <br>If **undefined** or **null** is passed, error code **401** will be thrown. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| proxyRule | string | Yes |
+| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -250,23 +250,22 @@ For details about the sample code, see [removeProxyOverride](./arkts-apis-webvie
 isReverseBypassEnabled(): boolean
 ```
 
-Obtains the value of [enableReverseBypass](../../apis-default/arkts-apis/arkts-webview-proxyconfig-c.md#enablereversebypass). For details, see [enableReverseBypass](../../apis-default/arkts-apis/arkts-webview-proxyconfig-c.md#enablereversebypass).
+Obtains the value of [enableReverseBypass](#enablereversebypass). For details, see [enableReverseBypass](#enablereversebypass).
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
-<!--Device-ProxyConfig-isReverseBypassEnabled(): boolean--><!--Device-ProxyConfig-isReverseBypassEnabled(): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Value of [enableReverseBypass]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-

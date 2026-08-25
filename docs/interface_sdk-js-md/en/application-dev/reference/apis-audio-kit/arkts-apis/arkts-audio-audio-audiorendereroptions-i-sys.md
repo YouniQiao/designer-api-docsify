@@ -2,9 +2,9 @@
 
 Describes audio renderer configurations.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-audio-interface AudioRendererOptions--><!--Device-audio-interface AudioRendererOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -26,11 +26,10 @@ Indicates the original app ID of the audio stream.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AudioRendererOptions-originalAppIdInfo?: AppIdInfo--><!--Device-AudioRendererOptions-originalAppIdInfo?: AppIdInfo-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
-

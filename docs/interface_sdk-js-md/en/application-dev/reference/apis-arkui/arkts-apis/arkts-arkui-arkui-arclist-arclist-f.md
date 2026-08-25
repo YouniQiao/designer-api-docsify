@@ -9,7 +9,6 @@ import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@k
 ## ArcList
 
 ```TypeScript
-@ComponentBuilder
 export declare function ArcList(
     options?: ArkListOptions,
     content_?: CustomBuilder,
@@ -20,32 +19,27 @@ Defines ArcList Component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-**Decorator:** @ComponentBuilder
-
-<!--Device-unnamed-@ComponentBuilderexport declare function ArcList(    options?: ArkListOptions,    content_?: CustomBuilder,): ArcListAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function ArcList(    options?: ArkListOptions,    content_?: CustomBuilder,): ArcListAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [ArkListOptions](arkts-arkui-arkui-arclist-arklistoptions-i.md) | No |  |
-| content_ | CustomBuilder | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [ArkListOptions](arkts-arkui-arkui-arclist-arklistoptions-i.md) | No |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
 
 
 ## ArcList
 
 ```TypeScript
-@Builder
 export declare function ArcList(
     style_: CustomBuilderT<ArcListAttribute>,
     content_?: CustomBuilder
@@ -56,26 +50,21 @@ Defines ArcList Component.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.1.0.
-
-**Decorator:** @Builder
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-@Builderexport declare function ArcList(    style_: CustomBuilderT<ArcListAttribute>,    content_?: CustomBuilder): ArcListAttribute--><!--Device-unnamed-@Builderexport declare function ArcList(    style_: CustomBuilderT<ArcListAttribute>,    content_?: CustomBuilder): ArcListAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md)&gt; | Yes | The style to create an ArcList. |
-| content_ | CustomBuilder | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| style_ | CustomBuilderT&lt;[ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md)&gt; | Yes |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) | The attribute of the ArcList. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |

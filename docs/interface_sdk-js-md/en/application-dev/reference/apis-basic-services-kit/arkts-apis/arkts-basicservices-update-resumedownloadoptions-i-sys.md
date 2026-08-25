@@ -2,9 +2,9 @@
 
 Defines the resuming download options, which are used to specify the network type for resuming download. The object includes the **allowNetwork** field, which specifies the network type allowed for download.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-update-export interface ResumeDownloadOptions--><!--Device-update-export interface ResumeDownloadOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -26,11 +26,10 @@ Network type allowed for resuming download. This parameter is set only after the
 
 **Type:** [NetType](arkts-basicservices-update-nettype-e-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ResumeDownloadOptions-allowNetwork: NetType--><!--Device-ResumeDownloadOptions-allowNetwork: NetType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
-

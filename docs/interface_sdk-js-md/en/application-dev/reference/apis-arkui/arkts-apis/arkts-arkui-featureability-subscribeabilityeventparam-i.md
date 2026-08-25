@@ -2,9 +2,9 @@
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-unnamed-export interface SubscribeAbilityEventParam--><!--Device-unnamed-export interface SubscribeAbilityEventParam-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -20,9 +20,9 @@ Ability name, which is case sensitive and must be the same as that on the AA sid
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-SubscribeAbilityEventParam-abilityName: string--><!--Device-SubscribeAbilityEventParam-abilityName: string-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -38,9 +38,9 @@ Ability type. Different types of abilities have different implementation on the 
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-SubscribeAbilityEventParam-abilityType: number--><!--Device-SubscribeAbilityEventParam-abilityType: number-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -56,9 +56,9 @@ Name of the bundle where the ability has been located. The name is case sensitiv
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-SubscribeAbilityEventParam-bundleName: string--><!--Device-SubscribeAbilityEventParam-bundleName: string-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -74,9 +74,9 @@ Ability operation code, which defines the service function of an AA and must be 
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-SubscribeAbilityEventParam-messageCode: number--><!--Device-SubscribeAbilityEventParam-messageCode: number-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -92,9 +92,8 @@ Whether the request is synchronous or asynchronous. The synchronous mode is used
 
 **Since:** 5
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
+
 **Deprecated since:** 8
 
-<!--Device-SubscribeAbilityEventParam-syncOption?: number--><!--Device-SubscribeAbilityEventParam-syncOption?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
-

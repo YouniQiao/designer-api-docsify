@@ -2,9 +2,9 @@
 
 Enumerates enroll result. @enum {number}
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-intelligentVoice-enum EnrollResult--><!--Device-intelligentVoice-enum EnrollResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -18,9 +18,9 @@ SUCCESS = 0
 
 Success.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-EnrollResult-SUCCESS = 0--><!--Device-EnrollResult-SUCCESS = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -34,9 +34,9 @@ VPR_TRAIN_FAILED = -1
 
 Vpr train failed.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-EnrollResult-VPR_TRAIN_FAILED = -1--><!--Device-EnrollResult-VPR_TRAIN_FAILED = -1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -50,9 +50,9 @@ WAKEUP_PHRASE_NOT_MATCH = -2
 
 Wakeup phrase not match.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-EnrollResult-WAKEUP_PHRASE_NOT_MATCH = -2--><!--Device-EnrollResult-WAKEUP_PHRASE_NOT_MATCH = -2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -66,9 +66,9 @@ TOO_NOISY = -3
 
 Too noisy.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-EnrollResult-TOO_NOISY = -3--><!--Device-EnrollResult-TOO_NOISY = -3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -82,9 +82,9 @@ TOO_LOUD = -4
 
 Too loud.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-EnrollResult-TOO_LOUD = -4--><!--Device-EnrollResult-TOO_LOUD = -4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -98,9 +98,9 @@ INTERVAL_LARGE = -5
 
 Interval large.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-EnrollResult-INTERVAL_LARGE = -5--><!--Device-EnrollResult-INTERVAL_LARGE = -5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -114,9 +114,9 @@ DIFFERENT_PERSON = -6
 
 Different person.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-EnrollResult-DIFFERENT_PERSON = -6--><!--Device-EnrollResult-DIFFERENT_PERSON = -6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -130,11 +130,10 @@ UNKNOWN_ERROR = -100
 
 Unknown error.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-EnrollResult-UNKNOWN_ERROR = -100--><!--Device-EnrollResult-UNKNOWN_ERROR = -100-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
-

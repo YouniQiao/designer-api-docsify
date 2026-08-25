@@ -6,9 +6,7 @@ Represents a JS API-compatible Array.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-unnamed-export class Array--><!--Device-unnamed-export class Array-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,25 +25,23 @@ Get the element at the specified index.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-$_get(idx: int): T--><!--Device-Array-$_get(idx: int): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| idx | int | Yes | The index of the element to get. <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| idx | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | The element at the specified index. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 ## $_invoke
 
@@ -57,25 +53,23 @@ Creates a new instance of Array with the given elements.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-static $_invoke<T>(...items: T[]): Array<T>--><!--Device-Array-static $_invoke<T>(...items: T[]): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| items | T[] | Yes | The elements to initialize the array with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| items | T[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | A new Array instance with the given elements. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 ## $_iterator
 
@@ -87,19 +81,17 @@ Returns an iterator over all values
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-$_iterator(): IterableIterator<T>--><!--Device-Array-$_iterator(): IterableIterator<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;T&gt; | An iterator over all values. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;T & gt; |
 
 ## $_set
 
@@ -111,20 +103,18 @@ Set the element at the specified index.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-$_set(idx: int, val: T): void--><!--Device-Array-$_set(idx: int, val: T): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| idx | int | Yes | The index of the element to set. <br>The value must be an integer greater than or equal to 0. |
-| val | T | Yes | The value to set at the specified index. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| idx | int | Yes |
+| val | T | Yes |
 
 ## at
 
@@ -136,25 +126,23 @@ Takes an integer value and returns the item at that index, allowing for positive
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public at(index: int): T--><!--Device-Array-public at(index: int): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | Zero-based index of the array element to be returned. <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | The element at the given index. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 ## concat
 
@@ -166,25 +154,23 @@ Creates a new `Array` by merging this `Array` instance with given arrays and/or 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public concat(...items: FixedArray<ConcatArray<T>>): Array<T>--><!--Device-Array-public concat(...items: FixedArray<ConcatArray<T>>): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| items | FixedArray&lt;ConcatArray&lt;T&gt;&gt; | Yes | Arrays and/or values to concatenate into a new array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| items | FixedArray & lt;ConcatArray & lt;T & gt; & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | A new Array instance. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 ## constructor
 
@@ -196,11 +182,9 @@ Creates a new empty instance of Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public constructor()--><!--Device-Array-public constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -214,20 +198,18 @@ Creates a new instance of Array with the given elements.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-constructor(first: T, ...d: T[])--><!--Device-Array-constructor(first: T, ...d: T[])-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| first | T | Yes | The first element of the array. |
-| d | T[] | Yes | The rest of the elements to initialize the array with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| first | T | Yes |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | T[] | Yes |
 
 ## constructor
 
@@ -239,20 +221,18 @@ Creates a new instance of Array with a specific length and initializes each elem
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-constructor(arrayLen: int, initializer: (index: int) => T)--><!--Device-Array-constructor(arrayLen: int, initializer: (index: int) => T)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arrayLen | int | Yes | The amount of elements in the array. <br>The value must be an integer greater than or equal to 0. |
-| initializer | (index: int) =&gt; T | Yes | A function that generates an element for a given index. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arrayLen | int | Yes |
+| initializer | (index: int) = & gt; T | Yes |
 
 ## copyWithin
 
@@ -264,25 +244,23 @@ Makes a shallow copy of the Array part to another location in the same Array and
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public copyWithin(target: int): this--><!--Device-Array-public copyWithin(target: int): this-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | int | Yes | Zero-based index at which to copy the sequence to. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| this | The modified array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| this |
 
 ## copyWithin
 
@@ -294,26 +272,24 @@ Makes a shallow copy of the Array part to another location in the same Array and
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public copyWithin(target: int, start: int): this--><!--Device-Array-public copyWithin(target: int, start: int): this-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | int | Yes | Zero-based index at which to copy the sequence to. <br>The value should be an integer. |
-| start | int | Yes | Zero-based index at which to start copying elements from. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | int | Yes |
+| start | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| this | The modified array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| this |
 
 ## copyWithin
 
@@ -325,27 +301,25 @@ Makes a shallow copy of the Array part to another location in the same Array and
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public copyWithin(target: int, start: int, end?: int): this--><!--Device-Array-public copyWithin(target: int, start: int, end?: int): this-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | int | Yes | Zero-based index at which to copy the sequence to. <br>The value should be an integer. |
-| start | int | Yes | Zero-based index at which to start copying elements from. <br>The value should be an integer. |
-| end | int | No | Zero-based index at which to end copying elements from. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | int | Yes |
+| start | int | Yes |
+| end | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| this | The modified array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| this |
 
 ## create
 
@@ -357,26 +331,24 @@ Creates a new Array of the specified length, filled with the specified initial v
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public static create<T>(arrayLength: int, initialValue: T): Array<T>--><!--Device-Array-public static create<T>(arrayLength: int, initialValue: T): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arrayLength | int | Yes | The amount of elements in the new array. <br>The value must be an integer greater than or equal to 0. |
-| initialValue | T | Yes | The value to fill the array with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arrayLength | int | Yes |
+| initialValue | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | A new Array instance filled with the initial value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 ## entries
 
@@ -388,19 +360,17 @@ Returns a new Array Iterator object that contains the key/value pairs for each i
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public entries(): IterableIterator<[int, T]>--><!--Device-Array-public entries(): IterableIterator<[int, T]>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;[int, T]&gt; | A new Array Iterator object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;[int, T] & gt; |
 
 ## every
 
@@ -412,25 +382,23 @@ Determines whether all the members of an array satisfy the specified test.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public every(predicate: (value: T, index: int, array: Array<T>) => boolean): boolean--><!--Device-Array-public every(predicate: (value: T, index: int, array: Array<T>) => boolean): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: int, array: Array&lt;T&gt;) =&gt; boolean | Yes | A function that accepts up to three arguments. The every method calls the predicate function for each element in the array until the predicate returns a value which is coercible to the Boolean value false, or until the end of the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: int, array: Array & lt;T & gt;) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | True if the predicate returns true for all elements in the array; otherwise, false. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## extendTo
 
@@ -442,20 +410,18 @@ Extends the Array with new elements up to the specified length.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public extendTo(arrayLength: int, initialValue: T): void--><!--Device-Array-public extendTo(arrayLength: int, initialValue: T): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arrayLength | int | Yes | The new length of the array. <br>The value must be an integer greater than or equal to 0. |
-| initialValue | T | Yes | The initial value for the added elements. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arrayLength | int | Yes |
+| initialValue | T | Yes |
 
 ## fill
 
@@ -467,27 +433,25 @@ Changes all elements in the Array to a static value, from a start index to an en
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public fill(value: T, start?: int, end?: int): this--><!--Device-Array-public fill(value: T, start?: int, end?: int): this-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | T | Yes | The value to fill the array with. |
-| start | int | No | The index at which to start filling (optional).If start is greater than or equal to the array length, no elements are filled. If start is negative, it is treated as 0. <br>The value should be an integer. |
-| end | int | No | The index at which to end filling (optional, not included). If end is greater than the array length, the array length is used as the end index. If end is negative, it is treated as 0. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | T | Yes |
+| start | int | No |
+| end | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| this | The modified array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| this |
 
 ## filter
 
@@ -499,25 +463,23 @@ Returns the elements of an array that meet the condition specified in a callback
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public filter(predicate: (value: T, index: int, array: Array<T>) => boolean): Array<T>--><!--Device-Array-public filter(predicate: (value: T, index: int, array: Array<T>) => boolean): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: int, array: Array&lt;T&gt;) =&gt; boolean | Yes | A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: int, array: Array & lt;T & gt;) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | A new array with the elements that pass the test. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 ## find
 
@@ -529,25 +491,23 @@ Iterates the array and returns the value of the first element that satisfies the
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public find(predicate: (value: T, index: int, array: Array<T>) => boolean): T | undefined--><!--Device-Array-public find(predicate: (value: T, index: int, array: Array<T>) => boolean): T | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: int, array: Array&lt;T&gt;) =&gt; boolean | Yes | A function to execute on each value in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: int, array: Array & lt;T & gt;) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T \| undefined |
 
 ## findIndex
 
@@ -559,25 +519,23 @@ Returns the index of the first element in the array where predicate is true, and
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public findIndex(predicate: (value: T, index: int, array: Array<T>) => boolean): int--><!--Device-Array-public findIndex(predicate: (value: T, index: int, array: Array<T>) => boolean): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: int, array: Array&lt;T&gt;) =&gt; boolean | Yes | A function to execute on each value in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: int, array: Array & lt;T & gt;) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | The index of the first element that satisfies the provided testing function; otherwise, -1. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## findLast
 
@@ -589,25 +547,23 @@ Iterates the array in reverse order and returns the value of the first element t
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public findLast(predicate: (elem: T, index: int, array: Array<T>) => boolean): T | undefined--><!--Device-Array-public findLast(predicate: (elem: T, index: int, array: Array<T>) => boolean): T | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (elem: T, index: int, array: Array&lt;T&gt;) =&gt; boolean | Yes | A function to execute on each value in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (elem: T, index: int, array: Array & lt;T & gt;) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T \| undefined | The value of the element if found; otherwise, undefined. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T \| undefined |
 
 ## findLastIndex
 
@@ -619,25 +575,23 @@ Iterates the array in reverse order and returns the index of the first element t
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public findLastIndex(predicate: (element: T, index: int, array: Array<T>) => boolean): int--><!--Device-Array-public findLastIndex(predicate: (element: T, index: int, array: Array<T>) => boolean): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (element: T, index: int, array: Array&lt;T&gt;) =&gt; boolean | Yes | A function to execute on each value in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (element: T, index: int, array: Array & lt;T & gt;) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | The index of the first element that satisfies the provided testing function; otherwise, -1. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## flat
 
@@ -649,25 +603,23 @@ Creates a new Array with all sub-array elements concatenated into it recursively
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public flat<U = T>(depth: int): Array<U>--><!--Device-Array-public flat<U = T>(depth: int): Array<U>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| depth | int | Yes | The depth level specifying how deep a nested array structure should be flattened. <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| depth | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;U&gt; | A new array with the sub-array elements concatenated into it. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;U & gt; |
 
 ## flat
 
@@ -679,19 +631,17 @@ Creates a new Array with all sub-array elements concatenated into it recursively
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public flat<U = T>(): Array<U>--><!--Device-Array-public flat<U = T>(): Array<U>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;U&gt; | A new array with the sub-array elements concatenated into it. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;U & gt; |
 
 ## flatMap
 
@@ -703,25 +653,23 @@ Calls a defined callback function on each element of an array. Then, flattens th
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public flatMap<U=T>(fn: (v: T, k: int, arr: Array<T>) => U | ReadonlyArray<U>): Array<U>--><!--Device-Array-public flatMap<U=T>(fn: (v: T, k: int, arr: Array<T>) => U | ReadonlyArray<U>): Array<U>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fn | (v: T, k: int, arr: Array&lt;T&gt;) =&gt; U \| ReadonlyArray&lt;U&gt; | Yes | A function that produces an element of the new Array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fn | (v: T, k: int, arr: Array & lt;T & gt;) = & gt; U \ | ReadonlyArray & lt;U & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;U&gt; | A new array with each element being the result of the callback function and flattened. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;U & gt; |
 
 ## forEach
 
@@ -733,19 +681,17 @@ Performs the specified action for each element in an array.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-forEach(callbackfn: (value: T, index: int, array: Array<T>) => void): void--><!--Device-Array-forEach(callbackfn: (value: T, index: int, array: Array<T>) => void): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (value: T, index: int, array: Array&lt;T&gt;) =&gt; void | Yes | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (value: T, index: int, array: Array & lt;T & gt;) = & gt; void | Yes |
 
 ## from
 
@@ -757,25 +703,23 @@ Creates a new `Array` instance from a `FixedArray`.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-static from<T>(arr: FixedArray<T>): Array<T>--><!--Device-Array-static from<T>(arr: FixedArray<T>): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | FixedArray&lt;T&gt; | Yes | The source primitive array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | FixedArray & lt;T & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | A new Array instance containing the elements from the source array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 ## from
 
@@ -787,25 +731,23 @@ Creates a new `Array` instance from an `ArrayLike` object.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-static from<T>(arr: ArrayLike<T>): Array<T>--><!--Device-Array-static from<T>(arr: ArrayLike<T>): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | ArrayLike&lt;T&gt; | Yes | An array-like object to convert to an array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | ArrayLike & lt;T & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | A new Array instance containing the elements from the array-like object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 ## from
 
@@ -817,25 +759,23 @@ Creates a new `Array` instance from an iterable or array-like object.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-static from<T>(iterable: ArrayLike<T> | Iterable<T>): Array<T>--><!--Device-Array-static from<T>(iterable: ArrayLike<T> | Iterable<T>): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| iterable | ArrayLike&lt;T&gt; \| Iterable&lt;T&gt; | Yes | An iterable or array-like object to convert to an array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| iterable | ArrayLike & lt;T & gt; \ | Iterable & lt;T & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | A new Array instance containing the elements from the iterable. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 ## from
 
@@ -847,26 +787,24 @@ Creates a new `Array` instance from a `FixedArray` and applies a mapping functio
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-static from<T, U>(values: FixedArray<T>, mapfn: (v: T, k: int) => U): Array<U>--><!--Device-Array-static from<T, U>(values: FixedArray<T>, mapfn: (v: T, k: int) => U): Array<U>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| values | FixedArray&lt;T&gt; | Yes | The source primitive array. |
-| mapfn | (v: T, k: int) =&gt; U | Yes | A mapping function to call on every element of the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [values](#values) | FixedArray & lt;T & gt; | Yes |
+| mapfn | (v: T, k: int) = & gt; U | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;U&gt; | A new Array instance with the mapped values. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;U & gt; |
 
 ## from
 
@@ -878,26 +816,24 @@ Creates a new `Array` instance from an iterable object, applying a mapping funct
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-static from<T, U>(iterable: ArrayLike<T> | Iterable<T>, mapfn: (v: T, k: int) => U): Array<U>--><!--Device-Array-static from<T, U>(iterable: ArrayLike<T> | Iterable<T>, mapfn: (v: T, k: int) => U): Array<U>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| iterable | ArrayLike&lt;T&gt; \| Iterable&lt;T&gt; | Yes | An iterable or array-like object to convert to an array. |
-| mapfn | (v: T, k: int) =&gt; U | Yes | A mapping function to call on every element of the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| iterable | ArrayLike & lt;T & gt; \ | Iterable & lt;T & gt; | Yes |
+| mapfn | (v: T, k: int) = & gt; U | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;U&gt; | A new Array instance with the mapped values. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;U & gt; |
 
 ## includes
 
@@ -909,26 +845,24 @@ Determines whether an array includes a certain value among its entries, returnin
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public includes(val: T, fromIndex?: int): boolean--><!--Device-Array-public includes(val: T, fromIndex?: int): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | T | Yes | The value to search for. |
-| fromIndex | int | No | The position in this array at which to begin searching for value. <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | T | Yes |
+| fromIndex | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | True if the value is found, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## indexOf
 
@@ -940,25 +874,23 @@ Returns the first index at which a given element can be found in the array, or -
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public indexOf(val: T): int--><!--Device-Array-public indexOf(val: T): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | T | Yes | The element to locate in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | The first index of the element in the array; -1 if not found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## indexOf
 
@@ -970,26 +902,24 @@ Returns the first index at which a given element can be found in the array, or -
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public indexOf(val: T, fromIndex?: int): int--><!--Device-Array-public indexOf(val: T, fromIndex?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | T | Yes | The element to locate in the array. |
-| fromIndex | int | No | The index to start the search at. <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | T | Yes |
+| fromIndex | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | The first index of the element in the array; -1 if not found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## isArray
 
@@ -1001,25 +931,23 @@ Checks whether the passed value is an Array.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-static isArray(o: Any): boolean--><!--Device-Array-static isArray(o: Any): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| o | Any | Yes | The value to be checked. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| o | Any | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | True if the value is an Array; otherwise, false. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## join
 
@@ -1031,25 +959,23 @@ Creates and returns a new string by concatenating all of the elements in an `Arr
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public join(sep?: string): string--><!--Device-Array-public join(sep?: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sep | string | No | A string to separate each pair of adjacent elements of the array. If omitted, the array elements are separated with a comma. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sep | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string with all array elements joined. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## keys
 
@@ -1061,19 +987,17 @@ Returns a new Array Iterator object that contains the keys for each index in the
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public keys(): IterableIterator<int>--><!--Device-Array-public keys(): IterableIterator<int>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;int&gt; | A new Array Iterator object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;int & gt; |
 
 ## lastIndexOf
 
@@ -1085,25 +1009,23 @@ Returns the last index at which a given element can be found in the array, or -1
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public lastIndexOf(searchElement: T): int--><!--Device-Array-public lastIndexOf(searchElement: T): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | T | Yes | The element to locate in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | The last index of the element in the array; -1 if not found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## lastIndexOf
 
@@ -1115,26 +1037,24 @@ Returns the last index at which a given element can be found in the array, or -1
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public lastIndexOf(searchElement: T, fromIndex?: int): int--><!--Device-Array-public lastIndexOf(searchElement: T, fromIndex?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | T | Yes | The element to locate in the array. |
-| fromIndex | int | No | The index at which to start searching backwards. <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | T | Yes |
+| fromIndex | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | The last index of the element in the array; -1 if not found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## map
 
@@ -1146,25 +1066,23 @@ Creates a new array populated with the results of calling a provided function on
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public map<U>(callbackfn: (value: T, index: int, array: Array<T>) => U): Array<U>--><!--Device-Array-public map<U>(callbackfn: (value: T, index: int, array: Array<T>) => U): Array<U>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (value: T, index: int, array: Array&lt;T&gt;) =&gt; U | Yes | Function that is called for every element of the array. Each time callbackfn executes, the returned value is added to the new array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (value: T, index: int, array: Array & lt;T & gt;) = & gt; U | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;U&gt; | A new array with each element being the result of the callback function. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;U & gt; |
 
 ## pop
 
@@ -1176,19 +1094,17 @@ Removes the last element from an array and returns that element. This method cha
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public pop(): T | undefined--><!--Device-Array-public pop(): T | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T \| undefined | The removed element from the array; undefined if the array is empty. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T \| undefined |
 
 ## push
 
@@ -1200,25 +1116,23 @@ Adds the specified elements to the end of an array and returns the new length of
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public push(...val: T[]): int--><!--Device-Array-public push(...val: T[]): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | T[] | Yes | The elements to add to the end of the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | T[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | The new length of the array upon which the method was called. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## reduce
 
@@ -1230,25 +1144,23 @@ Calls the specified callback function for all the elements in an array. The retu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public reduce(callbackfn: (previousValue: T, currentValue: T, index: int, array: Array<T>) => T): T--><!--Device-Array-public reduce(callbackfn: (previousValue: T, currentValue: T, index: int, array: Array<T>) => T): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: T, currentValue: T, index: int, array: Array&lt;T&gt;) =&gt; T | Yes | A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (previousValue: T, currentValue: T, index: int, array: Array & lt;T & gt;) = & gt; T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | The accumulated result. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 ## reduce
 
@@ -1261,26 +1173,24 @@ Calls the specified callback function for all the elements in an array. The retu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public reduce<U = T>(callbackfn: (previousValue: U, currentValue: T, index: int, array: Array<T>) => U,                         initialValue: U): U--><!--Device-Array-public reduce<U = T>(callbackfn: (previousValue: U, currentValue: T, index: int, array: Array<T>) => U,                         initialValue: U): U-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: T, index: int, array: Array&lt;T&gt;) =&gt; U | Yes | A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array. |
-| initialValue | U | Yes | The initial value of the accumulator. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (previousValue: U, currentValue: T, index: int, array: Array & lt;T & gt;) = & gt; U | Yes |
+| initialValue | U | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| U | The accumulated result. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| U |
 
 ## reduceRight
 
@@ -1293,26 +1203,24 @@ Calls the specified callback function for all the elements in an array, in desce
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public reduceRight<U>(callbackfn: (previousValue: U, currentValue: T, index: int, array: Array<T>) => U,                          initialValue: U): U--><!--Device-Array-public reduceRight<U>(callbackfn: (previousValue: U, currentValue: T, index: int, array: Array<T>) => U,                          initialValue: U): U-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: T, index: int, array: Array&lt;T&gt;) =&gt; U | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
-| initialValue | U | Yes | The initial value of the accumulator. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (previousValue: U, currentValue: T, index: int, array: Array & lt;T & gt;) = & gt; U | Yes |
+| initialValue | U | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| U | The accumulated result. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| U |
 
 ## reduceRight
 
@@ -1324,25 +1232,23 @@ Calls the specified callback function for all the elements in an array, in desce
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public reduceRight(callbackfn: (previousValue: T, currentValue: T, index: int, array: Array<T>) => T): T--><!--Device-Array-public reduceRight(callbackfn: (previousValue: T, currentValue: T, index: int, array: Array<T>) => T): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: T, currentValue: T, index: int, array: Array&lt;T&gt;) =&gt; T | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (previousValue: T, currentValue: T, index: int, array: Array & lt;T & gt;) = & gt; T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | The accumulated result. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 ## reverse
 
@@ -1354,19 +1260,17 @@ Reverses an array in place. The first array element becomes the last, and the la
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public reverse(): this--><!--Device-Array-public reverse(): this-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| this | The reversed array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| this |
 
 ## shift
 
@@ -1378,19 +1282,17 @@ Removes the first element from an array and returns that removed element. This m
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public shift(): T | undefined--><!--Device-Array-public shift(): T | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T \| undefined | The removed element from the array; undefined if the array is empty. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T \| undefined |
 
 ## shrinkTo
 
@@ -1402,19 +1304,17 @@ Shrinks the Array to the specified length. Elements beyond the new length are re
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public shrinkTo(arrayLength: int): void--><!--Device-Array-public shrinkTo(arrayLength: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arrayLength | int | Yes | The length at which to shrink the array. <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arrayLength | int | Yes |
 
 ## slice
 
@@ -1426,25 +1326,23 @@ Returns a copy of a section of an array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public slice(start: int): Array<T>--><!--Device-Array-public slice(start: int): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | int | Yes | The beginning index of the specified portion of the array. If start is greater than or equal to the array length, an empty array is returned. If start is negative, it is treated as length + start. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | A new Array object containing the extracted elements. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 ## slice
 
@@ -1456,26 +1354,24 @@ Returns a copy of a section of an array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public slice(start?: int, end?: int): Array<T>--><!--Device-Array-public slice(start?: int, end?: int): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | int | No | The beginning index of the specified portion of the array.If start is greater than or equal to the array length, an empty array is returned. If start is negative, it is treated as length + start. <br>The value should be an integer. |
-| end | int | No | The end index of the specified portion of the array. If end is greater than the array length,the array length is used as the end index. If end is negative, it is treated as 0. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | int | No |
+| end | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | A new Array object containing the extracted elements. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 ## some
 
@@ -1487,25 +1383,23 @@ Determines whether the specified callback function returns true for any element 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public some(predicate: (value: T, index: int, array: Array<T>) => boolean): boolean--><!--Device-Array-public some(predicate: (value: T, index: int, array: Array<T>) => boolean): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: T, index: int, array: Array&lt;T&gt;) =&gt; boolean | Yes | A function that accepts up to three arguments. The some method calls the predicate function for each element in the array until the predicate returns a value which is coercible to the Boolean value true, or until the end of the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: int, array: Array & lt;T & gt;) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | True if the predicate returns true for at least one element in the array; otherwise, false. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## sort
 
@@ -1517,25 +1411,23 @@ Sorts the elements of an array in place and returns the reference to the same ar
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public sort(comparator?: (a: T, b: T) => int): this--><!--Device-Array-public sort(comparator?: (a: T, b: T) => int): this-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| comparator | (a: T, b: T) =&gt; int | No | Optional. A function that defines the sort order. If omitted, the array is sorted according to each character's Unicode code point value, according to the string conversion of each element. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| comparator | (a: T, b: T) = & gt; int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| this | The sorted array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| this |
 
 ## splice
 
@@ -1547,27 +1439,25 @@ Changes the contents of an array by removing or replacing existing elements and/
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public splice(start: int, del: int | undefined, ...items: T[]): Array<T>--><!--Device-Array-public splice(start: int, del: int | undefined, ...items: T[]): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | int | Yes | The index at which to start changing the array. <br>The value must be an integer greater than or equal to 0. |
-| del | int \| undefined | Yes | The number of items to remove after the start index, If the input is undefined, it means 0, and no elements are deleted. |
-| items | T[] | Yes | The elements to add to the array, beginning from start. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | int | Yes |
+| del | int \| undefined | Yes |
+| items | T[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 ## splice
 
@@ -1579,25 +1469,23 @@ Changes the contents of an array by removing existing elements in place from the
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public splice(start: int): Array<T>--><!--Device-Array-public splice(start: int): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | int | Yes | The index at which to start changing the array. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | An array containing the deleted elements. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 ## toLocaleString
 
@@ -1609,26 +1497,24 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string--><!--Device-Array-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | No | A string with a BCP 47 language tag, or an array of such strings. |
-| options | object | No | An object with configuration properties. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | No |
+| options | object | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toReversed
 
@@ -1640,19 +1526,17 @@ Returns a new array with the elements in reversed order.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public toReversed(): Array<T>--><!--Device-Array-public toReversed(): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | A new reversed array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 ## toSorted
 
@@ -1664,19 +1548,17 @@ Sort in ascending order， Returns a new array with the elements.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public toSorted(): Array<T>--><!--Device-Array-public toSorted(): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | A new sorted array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 ## toSorted
 
@@ -1688,25 +1570,23 @@ Returns a new array with the elements sorted using the provided comparator funct
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public toSorted(comparator: (a: T, b: T) => int): Array<T>--><!--Device-Array-public toSorted(comparator: (a: T, b: T) => int): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| comparator | (a: T, b: T) =&gt; int | Yes | A function that defines the sort order. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| comparator | (a: T, b: T) = & gt; int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | A new sorted array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 ## toSpliced
 
@@ -1718,25 +1598,23 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public toSpliced(start: int): Array<T>--><!--Device-Array-public toSpliced(start: int): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | int | Yes | The zero-based index at which to start changing the array. <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 ## toSpliced
 
@@ -1748,27 +1626,25 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public toSpliced(start: int, del: int, ...items: FixedArray<T>): Array<T>--><!--Device-Array-public toSpliced(start: int, del: int, ...items: FixedArray<T>): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | int | Yes | The zero-based index at which to start changing the array. <br>The value must be an integer greater than or equal to 0. |
-| del | int | Yes | The number of elements to remove. <br>The value must be an integer greater than or equal to 0. |
-| items | FixedArray&lt;T&gt; | Yes | The elements to add to the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | int | Yes |
+| del | int | Yes |
+| items | FixedArray & lt;T & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 ## toSpliced
 
@@ -1780,26 +1656,24 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public toSpliced(start?: int, del?: int): Array<T>--><!--Device-Array-public toSpliced(start?: int, del?: int): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | int | No | The zero-based index at which to start changing the array. <br>The value must be an integer greater than or equal to 0. |
-| del | int | No | The number of elements to remove. <br>The value must be an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | int | No |
+| del | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | A new array with the changes applied. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
 ## toString
 
@@ -1811,19 +1685,17 @@ Returns a string representing the specified array and its elements.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public toString(): string--><!--Device-Array-public toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## unshift
 
@@ -1835,25 +1707,23 @@ Adds the specified elements to the beginning of an Array and returns the new len
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public unshift(...values: T[]): int--><!--Device-Array-public unshift(...values: T[]): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| values | T[] | Yes | The elements to add to the front of the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [values](#values) | T[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | The new length of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## values
 
@@ -1865,19 +1735,17 @@ Returns a new Array Iterator object that contains the values for each index in t
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public values(): IterableIterator<T>--><!--Device-Array-public values(): IterableIterator<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;T&gt; | A new Array Iterator object. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;T & gt; |
 
 ## with
 
@@ -1889,24 +1757,39 @@ Returns a new Array with the element at the given index replaced with the given 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Array-public with(index: int, value: T): Array<T>--><!--Device-Array-public with(index: int, value: T): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | The zero-based index at which to replace the value. <br>The value should be an integer. |
-| value | T | Yes | The new value to insert at the given index. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| value | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;T&gt; | A new array with the element replaced. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;T & gt; |
 
+## length
+
+```TypeScript
+set length(newLen: int)
+```
+
+Set the length of the array.
+
+**Type:** int
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang

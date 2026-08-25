@@ -1,8 +1,6 @@
 # CollatorOptions
 
-**Since:** -1
-
-<!--Device-Intl-interface CollatorOptions--><!--Device-Intl-interface CollatorOptions-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,9 +15,7 @@ caseFirst?: string | undefined
 
 **Type:** string \| undefined
 
-**Since:** -1
-
-<!--Device-CollatorOptions-caseFirst?: string | undefined--><!--Device-CollatorOptions-caseFirst?: string | undefined-End-->
+**ArkTS mode:** 
 
 ## ignorePunctuation
 
@@ -29,9 +25,7 @@ ignorePunctuation?: boolean | undefined
 
 **Type:** boolean \| undefined
 
-**Since:** -1
-
-<!--Device-CollatorOptions-ignorePunctuation?: boolean | undefined--><!--Device-CollatorOptions-ignorePunctuation?: boolean | undefined-End-->
+**ArkTS mode:** 
 
 ## localeMatcher
 
@@ -41,9 +35,7 @@ localeMatcher?: string | undefined
 
 **Type:** string \| undefined
 
-**Since:** -1
-
-<!--Device-CollatorOptions-localeMatcher?: string | undefined--><!--Device-CollatorOptions-localeMatcher?: string | undefined-End-->
+**ArkTS mode:** 
 
 ## numeric
 
@@ -53,9 +45,7 @@ numeric?: boolean | undefined
 
 **Type:** boolean \| undefined
 
-**Since:** -1
-
-<!--Device-CollatorOptions-numeric?: boolean | undefined--><!--Device-CollatorOptions-numeric?: boolean | undefined-End-->
+**ArkTS mode:** 
 
 ## sensitivity
 
@@ -65,9 +55,7 @@ sensitivity?: string | undefined
 
 **Type:** string \| undefined
 
-**Since:** -1
-
-<!--Device-CollatorOptions-sensitivity?: string | undefined--><!--Device-CollatorOptions-sensitivity?: string | undefined-End-->
+**ArkTS mode:** 
 
 ## usage
 
@@ -77,7 +65,4 @@ usage?: string | undefined
 
 **Type:** string \| undefined
 
-**Since:** -1
-
-<!--Device-CollatorOptions-usage?: string | undefined--><!--Device-CollatorOptions-usage?: string | undefined-End-->
-
+**ArkTS mode:** 

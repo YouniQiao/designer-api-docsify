@@ -2,9 +2,9 @@
 
 Represents the configuration of database encryption parameters. This configuration is valid only when **encrypt** of **StoreConfig** is set to **true** or the key is not empty.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-relationalStore-interface CryptoParam--><!--Device-relationalStore-interface CryptoParam-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -22,11 +22,11 @@ cryptoPageSize?: int
 
 Page size used for database encryption and decryption. The value is an integer. Unit: byte Default value: **1024**.The value must be an integer within the range of 1,024 to 65,536 and must be 2&lt;sup&gt;n&lt;/sup&gt;. If the specified value is not an integer, the value is rounded down.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CryptoParam-cryptoPageSize?: int--><!--Device-CryptoParam-cryptoPageSize?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -40,9 +40,9 @@ Algorithm used for database encryption and decryption.Default value: **AES_256_G
 
 **Type:** [EncryptionAlgo](arkts-arkdata-relationalstore-encryptionalgo-e.md)
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CryptoParam-encryptionAlgo?: EncryptionAlgo--><!--Device-CryptoParam-encryptionAlgo?: EncryptionAlgo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -56,9 +56,9 @@ Key used for database encryption and decryption.If this parameter is not specifi
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CryptoParam-encryptionKey: Uint8Array--><!--Device-CryptoParam-encryptionKey: Uint8Array-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -72,9 +72,9 @@ HMAC algorithm used for database encryption and decryption.Default value: **SHA2
 
 **Type:** [HmacAlgo](arkts-arkdata-relationalstore-hmacalgo-e.md)
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CryptoParam-hmacAlgo?: HmacAlgo--><!--Device-CryptoParam-hmacAlgo?: HmacAlgo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -86,11 +86,11 @@ iterationCount?: int
 
 Number of iterations of the PBKDF2 algorithm used in the RDB store. The value is an integer.Default value: **10000**.The value must be an integer greater than 0. If it is not an integer, the value is rounded down.If this parameter is not specified or is set to **0**, the default value **10000** and the default encryption algorithm **AES_256_GCM** are used.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CryptoParam-iterationCount?: int--><!--Device-CryptoParam-iterationCount?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -104,9 +104,8 @@ PBKDF2 algorithm used for database encryption and decryption.Default value: the 
 
 **Type:** [KdfAlgo](arkts-arkdata-relationalstore-kdfalgo-e.md)
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CryptoParam-kdfAlgo?: KdfAlgo--><!--Device-CryptoParam-kdfAlgo?: KdfAlgo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-

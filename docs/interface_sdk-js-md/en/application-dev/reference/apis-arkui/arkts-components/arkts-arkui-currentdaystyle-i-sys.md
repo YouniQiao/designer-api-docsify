@@ -4,9 +4,9 @@ CurrentDayStyle object.
 
 **Since:** 7
 
-**Deprecated since:** 20
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-unnamed-interface CurrentDayStyle--><!--Device-unnamed-interface CurrentDayStyle-End-->
+**Deprecated since:** 20
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,11 +29,11 @@ Boundary col offset.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-boundaryColOffset?: number--><!--Device-CurrentDayStyle-boundaryColOffset?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,11 +51,11 @@ Boundary row offset.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-boundaryRowOffset?: number--><!--Device-CurrentDayStyle-boundaryRowOffset?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,11 +73,11 @@ Number of columns.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-colSpace?: number--><!--Device-CurrentDayStyle-colSpace?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -95,11 +95,11 @@ Daily five row space.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-dailyFiveRowSpace?: number--><!--Device-CurrentDayStyle-dailyFiveRowSpace?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -117,11 +117,11 @@ Daily six row space.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-dailySixRowSpace?: number--><!--Device-CurrentDayStyle-dailySixRowSpace?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -139,11 +139,11 @@ Text color.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-dayColor?: ResourceColor--><!--Device-CurrentDayStyle-dayColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -161,11 +161,11 @@ Text fontSize.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-dayFontSize?: number--><!--Device-CurrentDayStyle-dayFontSize?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -183,11 +183,11 @@ Single date height.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-dayHeight?: number--><!--Device-CurrentDayStyle-dayHeight?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -205,11 +205,11 @@ Single date width.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-dayWidth?: number--><!--Device-CurrentDayStyle-dayWidth?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -227,11 +227,11 @@ Data y axis Off set.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-dayYAxisOffset?: number--><!--Device-CurrentDayStyle-dayYAxisOffset?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -249,11 +249,11 @@ Gregorian calendar height.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-gregorianCalendarHeight?: number--><!--Device-CurrentDayStyle-gregorianCalendarHeight?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -271,11 +271,11 @@ lunar Text color.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-lunarColor?: ResourceColor--><!--Device-CurrentDayStyle-lunarColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -293,11 +293,11 @@ lunar text fontSize.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-lunarDayFontSize?: number--><!--Device-CurrentDayStyle-lunarDayFontSize?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -315,11 +315,11 @@ Lunar data y axis Off set.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-lunarDayYAxisOffset?: number--><!--Device-CurrentDayStyle-lunarDayYAxisOffset?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -337,11 +337,11 @@ Single lunar height.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-lunarHeight?: number--><!--Device-CurrentDayStyle-lunarHeight?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -359,11 +359,11 @@ lunar Work and rest text color.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-markLunarColor?: ResourceColor--><!--Device-CurrentDayStyle-markLunarColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -381,11 +381,11 @@ Schedule marker radius.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-scheduleMarkerRadius?: number--><!--Device-CurrentDayStyle-scheduleMarkerRadius?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -403,11 +403,11 @@ Schedule marker X axis Off set
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-scheduleMarkerXAxisOffset?: number--><!--Device-CurrentDayStyle-scheduleMarkerXAxisOffset?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -425,11 +425,11 @@ schedule Marker Y Axis Off set
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-scheduleMarkerYAxisOffset?: number--><!--Device-CurrentDayStyle-scheduleMarkerYAxisOffset?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -447,11 +447,11 @@ Under score length.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-underscoreLength?: number--><!--Device-CurrentDayStyle-underscoreLength?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -469,11 +469,11 @@ Under score width.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-underscoreWidth?: number--><!--Device-CurrentDayStyle-underscoreWidth?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -491,11 +491,11 @@ Under score X Axis Off set.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-CurrentDayStyle-underscoreXAxisOffset?: number--><!--Device-CurrentDayStyle-underscoreXAxisOffset?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -513,13 +513,12 @@ Under score Y Axis Off set
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
-<!--Device-CurrentDayStyle-underscoreYAxisOffset?: number--><!--Device-CurrentDayStyle-underscoreYAxisOffset?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

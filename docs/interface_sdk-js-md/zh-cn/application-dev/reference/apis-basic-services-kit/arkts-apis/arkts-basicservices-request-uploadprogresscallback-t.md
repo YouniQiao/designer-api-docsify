@@ -8,14 +8,13 @@ The callback function for the download progress event.
 
 **起始版本：** 23
 
-<!--Device-request-export type UploadProgressCallback = (uploadedSize: long, totalSize: long) => void--><!--Device-request-export type UploadProgressCallback = (uploadedSize: long, totalSize: long) => void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uploadedSize | long | 是 | the length of uploaded data, in bytes |
-| totalSize | long | 是 | the length of data expected to be uploaded, in bytes. |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uploadedSize | long | 是 |
+| totalSize | long | 是 |

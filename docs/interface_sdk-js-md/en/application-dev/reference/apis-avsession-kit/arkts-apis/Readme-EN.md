@@ -5,6 +5,7 @@
   - [MediaControlExtensionAbility](arkts-avsession-app-ability-mediacontrolextensionability-mediacontrolextensionability-c.md)
 - [@ohos.multimedia.avCastPicker](arkts-multimedia-avcastpicker.md)
   - [AVCastPicker](arkts-avsession-multimedia-avcastpicker-avcastpicker-s.md)
+  - [OnPickerStateCallback](arkts-avsession-onpickerstatecallback-t.md)
 - [@ohos.multimedia.avCastPickerParam](arkts-multimedia-avcastpickerparam.md)
   - [AVCastPickerColorMode](arkts-avsession-multimedia-avcastpickerparam-avcastpickercolormode-e.md)
   - [AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)
@@ -115,8 +116,10 @@
   <!--Del-->
   - [castAudioSessionAll(system api)](arkts-avsession-avsession-castaudiosessionall-f-sys.md)<!--DelEnd-->
   - [createAVSession](arkts-avsession-avsession-createavsession-f.md)
+  - [createController](arkts-avsession-avsession-createcontroller-f.md)
   <!--Del-->
   - [createController(system api)](arkts-avsession-avsession-createcontroller-f-sys.md)<!--DelEnd-->
+  - [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f.md)
   <!--Del-->
   - [getAllSessionDescriptors(system api)](arkts-avsession-avsession-getallsessiondescriptors-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -132,23 +135,7 @@
   - [getSessionDescriptors(system api)](arkts-avsession-avsession-getsessiondescriptors-f-sys.md)<!--DelEnd-->
   - [isDesktopLyricSupported](arkts-avsession-avsession-isdesktoplyricsupported-f.md)
   <!--Del-->
-  - [off_deviceAvailable(system api)](arkts-avsession-avsession-offdeviceavailable-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off_deviceLogEvent(system api)](arkts-avsession-avsession-offdevicelogevent-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off_deviceOffline(system api)](arkts-avsession-avsession-offdeviceoffline-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off_deviceStateChanged(system api)](arkts-avsession-avsession-offdevicestatechanged-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off_distributedSessionChange(system api)](arkts-avsession-avsession-offdistributedsessionchange-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off_sessionCreate(system api)](arkts-avsession-avsession-offsessioncreate-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off_sessionDestroy(system api)](arkts-avsession-avsession-offsessiondestroy-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off_sessionServiceDie(system api)](arkts-avsession-avsession-offsessionservicedie-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off_topSessionChange(system api)](arkts-avsession-avsession-offtopsessionchange-f-sys.md)<!--DelEnd-->
+  - [off(system api)](arkts-avsession-avsession-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offActiveSessionChanged(system api)](arkts-avsession-avsession-offactivesessionchanged-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -169,23 +156,7 @@
   - [offSystemCommonEvent(system api)](arkts-avsession-avsession-offsystemcommonevent-f-sys.md)<!--DelEnd-->
   - [offTopSessionChange](arkts-avsession-avsession-offtopsessionchange-f.md)
   <!--Del-->
-  - [on_deviceAvailable(system api)](arkts-avsession-avsession-ondeviceavailable-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on_deviceLogEvent(system api)](arkts-avsession-avsession-ondevicelogevent-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on_deviceOffline(system api)](arkts-avsession-avsession-ondeviceoffline-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on_deviceStateChanged(system api)](arkts-avsession-avsession-ondevicestatechanged-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on_distributedSessionChange(system api)](arkts-avsession-avsession-ondistributedsessionchange-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on_sessionCreate(system api)](arkts-avsession-avsession-onsessioncreate-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on_sessionDestroy(system api)](arkts-avsession-avsession-onsessiondestroy-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on_sessionServiceDie(system api)](arkts-avsession-avsession-onsessionservicedie-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on_topSessionChange(system api)](arkts-avsession-avsession-ontopsessionchange-f-sys.md)<!--DelEnd-->
+  - [on(system api)](arkts-avsession-avsession-on-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onActiveSessionChanged(system api)](arkts-avsession-avsession-onactivesessionchanged-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -244,6 +215,7 @@
   - [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)
   - [AVSession](arkts-avsession-avsession-avsession-i.md)
   - [AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md)
+  - [AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i.md)
   <!--Del-->
   - [AVSessionDescriptor(system api)](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)<!--DelEnd-->
   - [CallMetadata](arkts-avsession-avsession-callmetadata-i.md)

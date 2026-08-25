@@ -2,9 +2,9 @@
 
 Provides the ImageProcessor type, including the processing function.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-videoProcessingEngine-interface ImageProcessor--><!--Device-videoProcessingEngine-interface ImageProcessor-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
@@ -16,42 +16,48 @@ import { videoProcessingEngine } from '@kit.ImageKit';
 
 ## enhanceDetail
 
+ArkTS-Dyn:
+```TypeScript
+enhanceDetail(sourceImage: image.PixelMap, width: number, height: number, level?: QualityLevel): Promise<image.PixelMap>
+```
+
+ArkTS-Sta:
 ```TypeScript
 enhanceDetail(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): Promise<image.PixelMap>
 ```
 
 The function generate the destinationImage from sourceImage with necessary scaling operation <br>according to width and height. Different levels of scaling methods are provided to <br>balance performance and image quality. This method uses a promise to return the result.
 
-**Since:** 23
+**Since:** 18
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): Promise<image.PixelMap>--><!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): Promise<image.PixelMap>-End-->
+**Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceImage | image.PixelMap | Yes | The source pixelmap. |
-| width | int | Yes | The zoom value of width. |
-| height | int | Yes | The zoom value of height. |
-| level | QualityLevel | No | The quality level. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sourceImage | image.PixelMap | Yes |
+| width | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| height | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;image.PixelMap&gt; | A Promise instance used to return the PixelMap object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;image.PixelMap & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function enhanceDetail can not work correctly due to <br>limited device capabilities. |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for <br>all of the following error conditions: <br>1 - Invalid input or output image buffer - The image buffer width(height) <br>is too large or colorspace is incorrect. <br>2 - Invalid parameter - The parameter does not contain valid information, <br>such as detail enhancer level is incorrect. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) |
 
 **Examples**
 
@@ -81,41 +87,47 @@ async function enhanceDetail(sourceImage: image.PixelMap, scale: number) {
 
 ## enhanceDetail
 
+ArkTS-Dyn:
+```TypeScript
+enhanceDetail(sourceImage: image.PixelMap, scale: number, level?: QualityLevel): Promise<image.PixelMap>
+```
+
+ArkTS-Sta:
 ```TypeScript
 enhanceDetail(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): Promise<image.PixelMap>
 ```
 
 The function generate the destinationImage from sourceImage with necessary scaling operation <br>according to the zoom ratio. Different levels of scaling methods are provided to <br>balance performance and image quality. This method uses a promise to return the result.
 
-**Since:** 23
+**Since:** 18
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): Promise<image.PixelMap>--><!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): Promise<image.PixelMap>-End-->
+**Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceImage | image.PixelMap | Yes | The source pixelmap. |
-| scale | double | Yes | The zoom ratio. |
-| level | QualityLevel | No | The quality level. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sourceImage | image.PixelMap | Yes |
+| scale | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;image.PixelMap&gt; | A Promise instance used to return the PixelMap object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;image.PixelMap & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function enhanceDetail can not work correctly due to <br>limited device capabilities. |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for <br>all of the following error conditions: <br>1 - Invalid input or output image buffer - The image buffer width(height) <br>is too large or colorspace is incorrect. <br>2 - Invalid parameter - The parameter does not contain valid information, <br>such as detail enhancer level is incorrect. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) |
 
 **Examples**
 
@@ -123,43 +135,49 @@ See [enhanceDetail](#enhancedetail)
 
 ## enhanceDetailSync
 
+ArkTS-Dyn:
+```TypeScript
+enhanceDetailSync(sourceImage: image.PixelMap, width: number, height: number, level?: QualityLevel): image.PixelMap
+```
+
+ArkTS-Sta:
 ```TypeScript
 enhanceDetailSync(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): image.PixelMap
 ```
 
 The function generate the destinationImage from sourceImage with necessary scaling operation <br>according to width and height. Different levels of scaling methods are provided to <br>balance performance and image quality.
 
-**Since:** 23
+**Since:** 18
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): image.PixelMap--><!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): image.PixelMap-End-->
+**Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceImage | image.PixelMap | Yes | The source pixelmap. |
-| width | int | Yes | The zoom value of width. |
-| height | int | Yes | The zoom value of height. |
-| level | QualityLevel | No | The quality level. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sourceImage | image.PixelMap | Yes |
+| width | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| height | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| image.PixelMap | Returns the destination pixelmap instance . <br>if the operation is successful; Otherwise, return undefined. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| image.PixelMap |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function enhanceDetailSync can not work correctly due <br>to limited device capabilities. |
-| [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) | Failed to process image buffer. For example, the processing times out. |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for <br>all of the following error conditions: <br>1 - Invalid input or output image buffer - The image buffer width(height) <br>is too large or colorspace is incorrect. <br>2 - Invalid parameter - The parameter does not contain valid information, <br>such as detail enhancer level is incorrect. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) |
 
 **Examples**
 
@@ -189,44 +207,49 @@ async function enhanceDetailSync(sourceImage: image.PixelMap, scale: number) {
 
 ## enhanceDetailSync
 
+ArkTS-Dyn:
+```TypeScript
+enhanceDetailSync(sourceImage: image.PixelMap, scale: number, level?: QualityLevel): image.PixelMap
+```
+
+ArkTS-Sta:
 ```TypeScript
 enhanceDetailSync(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): image.PixelMap
 ```
 
 The function generate the destinationImage from sourceImage with necessary scaling operation <br>according to the zoom ratio. Different levels of scaling methods are provided to <br>balance performance and image quality.
 
-**Since:** 23
+**Since:** 18
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): image.PixelMap--><!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): image.PixelMap-End-->
+**Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceImage | image.PixelMap | Yes | The source pixelmap. |
-| scale | double | Yes | The zoom ratio. |
-| level | QualityLevel | No | The quality level. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sourceImage | image.PixelMap | Yes |
+| scale | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| image.PixelMap | Returns the destination pixelmap instance <br>if the operation is successful; Otherwise, return undefined. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| image.PixelMap |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function enhanceDetailSync can not work correctly due <br>to limited device capabilities. |
-| [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) | Failed to process image buffer. For example, the processing times out. |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for <br>all of the following error conditions: <br>1 - Invalid input or output image buffer - The image buffer width(height) <br>is too large or colorspace is incorrect. <br>2 - Invalid parameter - The parameter does not contain valid information, <br>such as detail enhancer level is incorrect. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) |
 
 **Examples**
 
 See [enhanceDetailSync](#enhancedetailsync)
-

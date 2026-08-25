@@ -2,9 +2,9 @@
 
 [UploadConfig](arkts-basicservices-request-uploadconfig-i.md)中的表单数据。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-request-interface RequestData--><!--Device-request-interface RequestData-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -24,9 +24,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-RequestData-name: string--><!--Device-RequestData-name: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -40,9 +40,8 @@ value: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-RequestData-value: string--><!--Device-RequestData-value: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
-

@@ -1,10 +1,10 @@
-# @ohos.systemTimer
+# @ohos.systemTimer(系统定时器)
 
 本模块主要由系统定时器功能组成。开发者可以使用定时功能实现定时服务，如闹钟等。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-unnamed-declare namespace systemTimer--><!--Device-unnamed-declare namespace systemTimer-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Time
 
@@ -21,34 +21,33 @@ import { systemTimer } from '@kit.BasicServicesKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md) | 创建定时器，使用callback异步回调。 |
-| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md) | 创建定时器，使用Promise异步回调返回定时器的ID。 |
-| [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md) | 销毁定时器，使用callback异步回调。 |
-| [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md) | 销毁定时器，使用Promise进行异步回调。 |
-| [startTimer](arkts-basicservices-systemtimer-starttimer-f-sys.md) | 开启定时器，使用callback异步回调。 |
-| [startTimer](arkts-basicservices-systemtimer-starttimer-f-sys.md) | 开启定时器，使用Promise进行异步回调。 |
-| [stopTimer](arkts-basicservices-systemtimer-stoptimer-f-sys.md) | 该方法停止定时器，并使用callback进行异步回调。 |
-| [stopTimer](arkts-basicservices-systemtimer-stoptimer-f-sys.md) | 此方法用于停止定时器，并使用Promise异步回调。 |
+| 名称 |
+| --- |
+| [createTimer(系统定时器)](arkts-basicservices-systemtimer-createtimer-f-sys.md) |
+| [createTimer(系统定时器)](arkts-basicservices-systemtimer-createtimer-f-sys.md) |
+| [destroyTimer(系统定时器)](arkts-basicservices-systemtimer-destroytimer-f-sys.md) |
+| [destroyTimer(系统定时器)](arkts-basicservices-systemtimer-destroytimer-f-sys.md) |
+| [startTimer(系统定时器)](arkts-basicservices-systemtimer-starttimer-f-sys.md) |
+| [startTimer(系统定时器)](arkts-basicservices-systemtimer-starttimer-f-sys.md) |
+| [stopTimer(系统定时器)](arkts-basicservices-systemtimer-stoptimer-f-sys.md) |
+| [stopTimer(系统定时器)](arkts-basicservices-systemtimer-stoptimer-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [TimerOptions](arkts-basicservices-systemtimer-timeroptions-i-sys.md) | 创建系统定时器的初始化选项。 |
+| 名称 |
+| --- |
+| [TimerOptions(系统定时器)](arkts-basicservices-systemtimer-timeroptions-i-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### 常量（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [TIMER_TYPE_EXACT](arkts-basicservices-systemtimer-con-sys.md#timer_type_exact) | 精准定时器（系统时间修改的情况下，可能会出现最多1s的前后偏移误差）。 |
-| [TIMER_TYPE_IDLE](arkts-basicservices-systemtimer-con-sys.md#timer_type_idle) | IDLE模式定时器（仅支持系统服务配置，不支持应用配置）。 |
-| [TIMER_TYPE_REALTIME](arkts-basicservices-systemtimer-con-sys.md#timer_type_realtime) | 系统启动时间定时器（定时器启动时间不能晚于当前设置的系统时间）。 |
-| [TIMER_TYPE_WAKEUP](arkts-basicservices-systemtimer-con-sys.md#timer_type_wakeup) | 唤醒定时器（如果未配置为唤醒定时器，则系统处于休眠状态下不会触发，直到退出休眠状态）。 |
+| 名称 |
+| --- |
+| [TIMER_TYPE_EXACT(系统定时器)](arkts-basicservices-systemtimer-con-sys.md#timer_type_exact) |
+| [TIMER_TYPE_IDLE(系统定时器)](arkts-basicservices-systemtimer-con-sys.md#timer_type_idle) |
+| [TIMER_TYPE_REALTIME(系统定时器)](arkts-basicservices-systemtimer-con-sys.md#timer_type_realtime) |
+| [TIMER_TYPE_WAKEUP(系统定时器)](arkts-basicservices-systemtimer-con-sys.md#timer_type_wakeup) |
 <!--DelEnd-->
-

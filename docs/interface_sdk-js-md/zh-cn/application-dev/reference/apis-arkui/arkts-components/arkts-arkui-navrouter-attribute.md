@@ -6,11 +6,11 @@
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 13
 
-**替代接口：** NavPathStack and navDestination
-
-<!--Device-unnamed-declare class NavRouterAttribute--><!--Device-unnamed-declare class NavRouterAttribute-End-->
+**替代接口：** NavPathStack
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,6 +29,8 @@ mode(mode: NavRouteMode)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 13
 
 **替代接口：** LaunchMode
@@ -37,15 +39,13 @@ mode(mode: NavRouteMode)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-NavRouterAttribute-mode(mode: NavRouteMode): NavRouterAttribute--><!--Device-NavRouterAttribute-mode(mode: NavRouteMode): NavRouterAttribute-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mode | [NavRouteMode](arkts-arkui-navroutemode-e.md) | 是 | 指定点击NavRouter跳转到NavDestination页面时，使用的路由模式。<br/>默认值：NavRouteMode.PUSH_WITH_RECREATE |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [mode](#mode) | [NavRouteMode](arkts-arkui-navroutemode-e.md) | 是 |
 
 ## onStateChange
 
@@ -57,19 +57,18 @@ onStateChange(callback: (isActivated: boolean) => void)
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 13
 
 **替代接口：** onShown
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-NavRouterAttribute-onStateChange(callback: (isActivated: boolean) => void): NavRouterAttribute--><!--Device-NavRouterAttribute-onStateChange(callback: (isActivated: boolean) => void): NavRouterAttribute-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (isActivated: boolean) =&gt; void | 是 | isActivated为true时表示激活，为false时表示未激活。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (isActivated: boolean) = & gt; void | 是 |

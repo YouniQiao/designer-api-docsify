@@ -4,7 +4,7 @@ Enumerates the priorities available for created tasks. The task priority applies
 
 **Since:** 9
 
-<!--Device-taskpool-enum Priority--><!--Device-taskpool-enum Priority-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -18,9 +18,9 @@ The task has a high priority.This API can be used in atomic services since API v
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Priority-HIGH = 0--><!--Device-Priority-HIGH = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -34,9 +34,9 @@ The task has a medium priority.This API can be used in atomic services since API
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Priority-MEDIUM = 1--><!--Device-Priority-MEDIUM = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -50,9 +50,9 @@ The task has a low priority.This API can be used in atomic services since API ve
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-Priority-LOW = 2--><!--Device-Priority-LOW = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -66,9 +66,9 @@ The task is a background task.This API can be used in atomic services since API 
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Priority-IDLE = 3--><!--Device-Priority-IDLE = 3-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -107,4 +107,3 @@ for (let i: number = 0; i < taskArray.length; i+=4) { // 4: Four tasks are execu
   taskpool.execute(taskArray[i + 3], taskpool.Priority.IDLE);
 }
 ```
-

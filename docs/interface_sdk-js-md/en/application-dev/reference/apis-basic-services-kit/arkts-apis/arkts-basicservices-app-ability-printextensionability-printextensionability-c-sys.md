@@ -1,62 +1,17 @@
-# PrintExtensionAbility (System API)
+# PrintExtensionAbility
 
 class of print extension ability.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-unnamed-declare class PrintExtensionAbility--><!--Device-unnamed-declare class PrintExtensionAbility-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
-
-**System API:** This is a system API.
 
 ## Modules to Import
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
-```
-
-## onCancelPrintJob
-
-```TypeScript
-public onCancelPrintJob(jobInfo: print.PrintJob): void
-```
-
-Called once to remove the print job has been started.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PrintExtensionAbility-public onCancelPrintJob(jobInfo: print.PrintJob): void--><!--Device-PrintExtensionAbility-public onCancelPrintJob(jobInfo: print.PrintJob): void-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| jobInfo | print.PrintJob | Yes | Indicates the information of print job. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application<br>**Applicable version:** 10 - 23 |
-
-**Examples**
-
-```TypeScript
-import { print, PrintExtensionAbility } from '@kit.BasicServicesKit';
-
-export default class HWPrintExtension extends PrintExtensionAbility {
-    onCancelPrintJob(jobInfo: print.PrintJob): void {
-        console.info('onCancelPrintJob, jobId is: ' + jobInfo.jobId);
-        // ...
-    }
-}
 ```
 
 ## onRequestPreview
@@ -67,11 +22,11 @@ onRequestPreview(jobInfo: print.PrintJob): string
 
 Called once to request preview and send result to Print SA.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PrintExtensionAbility-onRequestPreview(jobInfo: print.PrintJob): string--><!--Device-PrintExtensionAbility-onRequestPreview(jobInfo: print.PrintJob): string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -79,21 +34,21 @@ Called once to request preview and send result to Print SA.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| jobInfo | print.PrintJob | Yes | Indicates the information of job. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| jobInfo | print.PrintJob | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | preview result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -109,102 +64,3 @@ export default class HWPrintExtension extends PrintExtensionAbility {
     }
 }
 ```
-
-## onRequestPrinterCapability
-
-```TypeScript
-public onRequestPrinterCapability(printerId: int): print.PrinterCapability
-```
-
-Called once to request the printer's capabilities.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PrintExtensionAbility-public onRequestPrinterCapability(printerId: int): print.PrinterCapability--><!--Device-PrintExtensionAbility-public onRequestPrinterCapability(printerId: int): print.PrinterCapability-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| printerId | int | Yes | Indicates the information of printer. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| print.PrinterCapability | printer capability. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application<br>**Applicable version:** 10 - 23 |
-
-**Examples**
-
-```TypeScript
-import { print, PrintExtensionAbility } from '@kit.BasicServicesKit';
-
-export default class HWPrintExtension extends PrintExtensionAbility {
-    onRequestPrinterCapability(printerId: number): print.PrinterCapability {
-        console.info('onRequestPrinterCapability enter');
-        // ...
-        let tmp : print.PrinterCapability = {
-            colorMode : 1,
-            duplexMode : 1,
-            pageSize : []
-        };
-        return tmp;
-    }
-}
-```
-
-## onStartPrintJob
-
-```TypeScript
-public onStartPrintJob(jobInfo: print.PrintJob): void
-```
-
-Called once to start print job.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PrintExtensionAbility-public onStartPrintJob(jobInfo: print.PrintJob): void--><!--Device-PrintExtensionAbility-public onStartPrintJob(jobInfo: print.PrintJob): void-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| jobInfo | print.PrintJob | Yes | Indicates the information of print job. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application<br>**Applicable version:** 10 - 23 |
-
-**Examples**
-
-```TypeScript
-import { print, PrintExtensionAbility } from '@kit.BasicServicesKit';
-
-export default class HWPrintExtension extends PrintExtensionAbility {
-    onStartPrintJob(jobInfo: print.PrintJob): void {
-        console.info('onStartPrintJob, jobId is: ' + jobInfo.jobId);
-        // ...
-    }
-}
-```
-

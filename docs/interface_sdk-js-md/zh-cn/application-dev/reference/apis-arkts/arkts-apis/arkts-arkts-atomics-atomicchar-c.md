@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export class AtomicChar--><!--Device-unnamed-export class AtomicChar-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,26 +23,24 @@ compareAndSwap(expected: char, val: char): char
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicChar-compareAndSwap(expected: char, val: char): char--><!--Device-AtomicChar-compareAndSwap(expected: char, val: char): char-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| expected | char | 是 | 预期的当前值。 |
-| val | char | 是 | 匹配成功时要写入的新值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| expected | char | 是 |
+| val | char | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| char | 修改前的旧值。 |
+| 类型 |
+| --- |
+| char |
 
 ## constructor
 
@@ -56,19 +52,17 @@ constructor(val: char)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicChar-constructor(val: char)--><!--Device-AtomicChar-constructor(val: char)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | char | 是 | 初始值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | char | 是 |
 
 ## exchange
 
@@ -80,25 +74,23 @@ exchange(val: char): char
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicChar-exchange(val: char): char--><!--Device-AtomicChar-exchange(val: char): char-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | char | 是 | 要写入的新值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | char | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| char | 更新前的旧值。 |
+| 类型 |
+| --- |
+| char |
 
 ## isLockFree
 
@@ -110,19 +102,17 @@ static isLockFree(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicChar-static isLockFree(): boolean--><!--Device-AtomicChar-static isLockFree(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true表示无锁实现，false表示内部可能使用阻塞式同步机制。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## load
 
@@ -134,19 +124,17 @@ load(): char
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicChar-load(): char--><!--Device-AtomicChar-load(): char-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| char | 当前保存的值。 |
+| 类型 |
+| --- |
+| char |
 
 ## store
 
@@ -158,17 +146,14 @@ store(val: char): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicChar-store(val: char): void--><!--Device-AtomicChar-store(val: char): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | char | 是 | 要写入的新值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | char | 是 |

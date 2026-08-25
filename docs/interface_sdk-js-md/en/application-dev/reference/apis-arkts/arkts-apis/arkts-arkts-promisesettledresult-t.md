@@ -8,16 +8,13 @@ Represents the settled result of a promise.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export type PromiseSettledResult<T> = PromiseFulfilledResult<T> | PromiseRejectedResult--><!--Device-unnamed-export type PromiseSettledResult<T> = PromiseFulfilledResult<T> | PromiseRejectedResult-End-->
-
 **System capability:** SystemCapability.Utils.Lang
 
-| Type | Description |
-| --- | --- |
-| PromiseFulfilledResult&lt;T&gt; |  |
-| PromiseRejectedResult |  |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [PromiseFulfilledResult](arkts-arkts-promise-promisefulfilledresult-c.md) & lt;T & gt; |
+| [PromiseRejectedResult](arkts-arkts-promise-promiserejectedresult-c.md) |

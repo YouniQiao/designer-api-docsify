@@ -14,11 +14,11 @@ function getBackupVersion(): string
 
 获取备份版本信息。
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.BACKUP
-
-<!--Device-backup-function getBackupVersion(): string--><!--Device-backup-function getBackupVersion(): string-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -26,16 +26,16 @@ function getBackupVersion(): string
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回备份版本信息。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -59,4 +59,3 @@ function getBackupVersion() {
 ```TypeScript
 { "backupVersion" : "16.0" }
 ```
-

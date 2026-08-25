@@ -16,19 +16,19 @@ function exit(code: number): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [exit](arkts-arkts-process-processmanager-c.md#exit)
-
-<!--Device-process-function exit(code: number): void--><!--Device-process-function exit(code: number): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| code | number | 是 | 进程的退出码。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| code | number | 是 |
 
 **示例**
 
@@ -40,4 +40,3 @@ process.exit(0);
 let processManager = new process.ProcessManager();
 processManager.exit(0);
 ```
-

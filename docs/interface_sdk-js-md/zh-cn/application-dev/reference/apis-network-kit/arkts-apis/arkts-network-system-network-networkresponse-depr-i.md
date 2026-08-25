@@ -4,7 +4,7 @@ This module provides the Network Response.
 
 **起始版本：** 3
 
-<!--Device-unnamed-export interface NetworkResponse--><!--Device-unnamed-export interface NetworkResponse-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -25,7 +25,7 @@ metered: boolean
 
 **起始版本：** 3
 
-<!--Device-NetworkResponse-metered: boolean--><!--Device-NetworkResponse-metered: boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -41,7 +41,6 @@ type: string
 
 **起始版本：** 3
 
-<!--Device-NetworkResponse-type: string--><!--Device-NetworkResponse-type: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
-

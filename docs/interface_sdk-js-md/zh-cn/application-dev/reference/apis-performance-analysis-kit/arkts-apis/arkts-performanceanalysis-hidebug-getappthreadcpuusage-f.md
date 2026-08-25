@@ -17,17 +17,17 @@ function getAppThreadCpuUsage(): ThreadCpuUsage[]
 > **注意**&gt;
 > 由于该接口涉及跨进程通信，耗时较长，为了避免引入性能问题，建议不要在主线程中直接调用该接口。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-hidebug-function getAppThreadCpuUsage(): ThreadCpuUsage[]--><!--Device-hidebug-function getAppThreadCpuUsage(): ThreadCpuUsage[]-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ThreadCpuUsage](arkts-performanceanalysis-hidebug-threadcpuusage-i.md)[] | 返回当前应用进程下所有ThreadCpuUsage数组。 |
+| 类型 |
+| --- |
+| [ThreadCpuUsage](arkts-performanceanalysis-hidebug-threadcpuusage-i.md)[] |
 
 **示例**
 
@@ -39,4 +39,3 @@ for (let i = 0; i < appThreadCpuUsage.length; i++) {
   console.info(`threadId=${appThreadCpuUsage[i].threadId}, cpuUsage=${appThreadCpuUsage[i].cpuUsage}`);
 }
 ```
-

@@ -16,35 +16,35 @@ function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Ar
 
 **起始版本：** 21
 
-**需要权限：** ohos.permission.ENTERPRISE_DATA_IDENTIFY_FILE
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
-<!--Device-identifySensitiveContent-function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Array<MatchResult>>--><!--Device-identifySensitiveContent-function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Array<MatchResult>>-End-->
+**需要权限：** ohos.permission.ENTERPRISE_DATA_IDENTIFY_FILE
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| filePath | string | 是 | 识别的文件路径，需使用物理路径，路径指向的文件必须存在且支持访问。 |
-| identifyPolicies | Array&lt;Policy&gt; | 是 | 用于识别敏感内容的策略数组。每个Policy定义识别规则（标签、关键字、正则表达式），系统将根据这些规则扫描文件内容并返回匹配结果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| filePath | string | 是 |
+| identifyPolicies | Array & lt;Policy & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[MatchResult](arkts-dataprotection-identifysensitivecontent-matchresult-i.md)&gt;&gt; | Promise对象，返回敏感内容识别的结果。成功时返回匹配结果数组，异常返回错误码。 |
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;[MatchResult](arkts-dataprotection-identifysensitivecontent-matchresult-i.md)&gt;&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [19110001](../errorcode-dlp.md#19110001-参数错误) | Parameter error. Possible causes: 1. Incorrect policy format. 2. Invalid parameter range. |
-| [19110002](../errorcode-dlp.md#19110002-文件敏感信息识别超时) | Sensitive file content identification timed out. |
-| [19110003](../errorcode-dlp.md#19110003-文件不支持) | The file is not supported. Possible causes: 1. The file path does not exist. 2. The file type is not supported. 3. The file permission is not supported. |
-| [19110004](../errorcode-dlp.md#19110004-系统功能运行异常) | A system error has occurred. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [19110001](../errorcode-dlp.md#19110001-参数错误) |
+| [19110002](../errorcode-dlp.md#19110002-文件敏感信息识别超时) |
+| [19110003](../errorcode-dlp.md#19110003-文件不支持) |
+| [19110004](../errorcode-dlp.md#19110004-系统功能运行异常) |
 
 **示例**
 
@@ -77,4 +77,3 @@ try {
   console.error('error message', err.message);
 }
 ```
-

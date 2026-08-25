@@ -6,7 +6,7 @@
 
 **起始版本：** 9
 
-<!--Device-unnamed-declare class GridColAttribute--><!--Device-unnamed-declare class GridColAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,19 +25,19 @@ gridColOffset(value: number | GridColColumnOption)
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-GridColAttribute-gridColOffset(value: number | GridColColumnOption): GridColAttribute--><!--Device-GridColAttribute-gridColOffset(value: number | GridColColumnOption): GridColAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | 是 | 相对于原本位置偏移的列数。gridColOffset为0表示不偏移。 <br>取值为非负整数，默认值为0。 <br>非法值：按默认值处理。 <br>**说明：** 该属性具有断点继承性，详见 [GridColOptions对象说明](../../../reference/apis-arkui/arkui-ts/ts-container-gridcol.md#gridcoloptions对象说明)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | 是 |
 
 ## order
 
@@ -49,19 +49,19 @@ order(value: number | GridColColumnOption)
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-GridColAttribute-order(value: number | GridColColumnOption): GridColAttribute--><!--Device-GridColAttribute-order(value: number | GridColColumnOption): GridColAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | 是 | 元素序号，根据栅格子组件的序号从小到大排序。 <br>取值为非负整数，默认值为0。 <br>非法值：按默认值处理。 <br>**说明：** 该属性具有断点继承性，详见 [GridColOptions对象说明](../../../reference/apis-arkui/arkui-ts/ts-container-gridcol.md#gridcoloptions对象说明)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | 是 |
 
 ## span
 
@@ -73,17 +73,16 @@ span(value: number | GridColColumnOption)
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-GridColAttribute-span(value: number | GridColColumnOption): GridColAttribute--><!--Device-GridColAttribute-span(value: number | GridColColumnOption): GridColAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | 是 | 占用列数。span为0表示该元素不参与布局计算，即不会被渲染。 <br>取值为非负整数，默认值为1。 <br>非法值：按默认值处理。 <br>**说明：** 该属性具有断点继承性，详见 [GridColOptions对象说明](../../../reference/apis-arkui/arkui-ts/ts-container-gridcol.md#gridcoloptions对象说明)。API version 20之后，默认值继承规则有变化，详见[GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | 是 |

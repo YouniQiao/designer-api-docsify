@@ -6,7 +6,7 @@ You need a custom class to implement the **ContentModifier** API. Inherits from 
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface SliderConfiguration--><!--Device-unnamed-declare interface SliderConfiguration-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -14,6 +14,24 @@ You need a custom class to implement the **ContentModifier** API. Inherits from 
 
 ```TypeScript
 ```
+
+## triggerChange
+
+```TypeScript
+triggerChange: SliderTriggerChangeCallback
+```
+
+Triggers slider changes.
+
+**Since:** 12
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## max
 
@@ -27,11 +45,11 @@ Maximum value.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SliderConfiguration-max: number--><!--Device-SliderConfiguration-max: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,11 +65,11 @@ Minimum value.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SliderConfiguration-min: number--><!--Device-SliderConfiguration-min: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,31 +85,11 @@ Step of the slider.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SliderConfiguration-step: number--><!--Device-SliderConfiguration-step: number-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## triggerChange
-
-```TypeScript
-triggerChange: SliderTriggerChangeCallback
-```
-
-Triggers slider changes.
-
-**Type:** [SliderTriggerChangeCallback](arkts-arkui-slidertriggerchangecallback-t.md)
-
-**Since:** 12
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SliderConfiguration-triggerChange: SliderTriggerChangeCallback--><!--Device-SliderConfiguration-triggerChange: SliderTriggerChangeCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -107,11 +105,10 @@ Current progress.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-SliderConfiguration-value: number--><!--Device-SliderConfiguration-value: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

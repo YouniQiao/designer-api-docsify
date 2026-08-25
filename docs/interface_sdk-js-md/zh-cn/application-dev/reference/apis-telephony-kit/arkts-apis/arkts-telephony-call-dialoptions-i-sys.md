@@ -2,9 +2,9 @@
 
 拨打电话的可选参数。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-call-export interface DialOptions--><!--Device-call-export interface DialOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -24,11 +24,11 @@ accountId?: int
 - 0：卡槽1。 - 1：卡槽2。  
 。此接口为系统接口。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-DialOptions-accountId?: int--><!--Device-DialOptions-accountId?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -44,9 +44,9 @@ dialScene?: DialScene
 
 **类型：** [DialScene](arkts-telephony-call-dialscene-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-DialOptions-dialScene?: DialScene--><!--Device-DialOptions-dialScene?: DialScene-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -62,9 +62,9 @@ dialType?: DialType
 
 **类型：** [DialType](arkts-telephony-call-dialtype-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-DialOptions-dialType?: DialType--><!--Device-DialOptions-dialType?: DialType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -80,11 +80,10 @@ videoState?: VideoStateType
 
 **类型：** [VideoStateType](arkts-telephony-call-videostatetype-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-DialOptions-videoState?: VideoStateType--><!--Device-DialOptions-videoState?: VideoStateType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
-

@@ -2,9 +2,9 @@
 
 会话中服务器身份验证设置所使用的身份验证凭据，包括用户名和密码。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-http-export interface Credential--><!--Device-http-export interface Credential-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -24,11 +24,11 @@ Password of credential. Default is ''.
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-Credential-password: string--><!--Device-Credential-password: string-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -42,11 +42,10 @@ Username of credential. Default is ''.
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-Credential-username: string--><!--Device-Credential-username: string-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
-

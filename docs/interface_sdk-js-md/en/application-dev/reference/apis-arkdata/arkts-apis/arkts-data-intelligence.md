@@ -2,9 +2,9 @@
 
 Provides methods for intelligent data processing.@namespace intelligence
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-unnamed-declare namespace intelligence--><!--Device-unnamed-declare namespace intelligence-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
@@ -18,33 +18,32 @@ import { intelligence } from '@kit.ArkData';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getImageEmbeddingModel](arkts-arkdata-intelligence-getimageembeddingmodel-f.md) | Obtains an image embedding model. |
-| [getSupportedCloudModel](arkts-arkdata-intelligence-getsupportedcloudmodel-f.md) | Obtains the supported cloud embedding models. |
-| [getTextEmbeddingModel](arkts-arkdata-intelligence-gettextembeddingmodel-f.md) | Obtains a text embedding model. |
-| [splitText](arkts-arkdata-intelligence-splittext-f.md) | Splits text. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getImageEmbeddingModel](arkts-arkdata-intelligence-getimageembeddingmodel-f.md) |
+| [getSupportedCloudModel](arkts-arkdata-intelligence-getsupportedcloudmodel-f.md) |
+| [getTextEmbeddingModel](arkts-arkdata-intelligence-gettextembeddingmodel-f.md) |
+| [splitText](arkts-arkdata-intelligence-splittext-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [CloudModelInfo](arkts-arkdata-intelligence-cloudmodelinfo-i.md) | Indicates cloud embedding model information. |
-| [ImageEmbedding](arkts-arkdata-intelligence-imageembedding-i.md) | Describes the image embedding functions of the multi-modal embedding model.@interface ImageEmbedding |
-| [ModelConfig](arkts-arkdata-intelligence-modelconfig-i.md) | Manages configurations of the embedding model.@interface ModelConfig |
-| [SplitConfig](arkts-arkdata-intelligence-splitconfig-i.md) | Manages text chunk process configurations.@interface SplitConfig |
-| [TextEmbedding](arkts-arkdata-intelligence-textembedding-i.md) | Describes the text embedding functions of the multi-modal embedding model. Chinese and English are supported.@interface TextEmbedding |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CloudModelInfo](arkts-arkdata-intelligence-cloudmodelinfo-i.md) |
+| [ImageEmbedding](arkts-arkdata-intelligence-imageembedding-i.md) |
+| [ModelConfig](arkts-arkdata-intelligence-modelconfig-i.md) |
+| [SplitConfig](arkts-arkdata-intelligence-splitconfig-i.md) |
+| [TextEmbedding](arkts-arkdata-intelligence-textembedding-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [ModelVersion](arkts-arkdata-intelligence-modelversion-e.md) | Version of the model.@enum { int } |
-| [NetworkPolicy](arkts-arkdata-intelligence-networkpolicy-e.md) | Indicates network policy. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ModelVersion](arkts-arkdata-intelligence-modelversion-e.md) |
+| [NetworkPolicy](arkts-arkdata-intelligence-networkpolicy-e.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [Image](arkts-arkdata-intelligence-image-t.md) | The type of the image can be its URI. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Image](arkts-arkdata-intelligence-image-t.md) |

@@ -2,9 +2,9 @@
 
 Information required for encryption.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-eSIM-export interface ContractRequestData--><!--Device-eSIM-export interface ContractRequestData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -26,9 +26,9 @@ Random number.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ContractRequestData-nonce: string--><!--Device-ContractRequestData-nonce: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -44,9 +44,9 @@ Selected public key ID.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ContractRequestData-pkid: string--><!--Device-ContractRequestData-pkid: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -62,11 +62,10 @@ Public key.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ContractRequestData-publicKey: string--><!--Device-ContractRequestData-publicKey: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
-

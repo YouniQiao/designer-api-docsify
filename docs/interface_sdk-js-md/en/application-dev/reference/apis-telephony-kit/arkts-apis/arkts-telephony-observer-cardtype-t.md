@@ -6,11 +6,10 @@ type CardType = sim.CardType
 
 Enumerates SIM card types.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-observer-type CardType = sim.CardType--><!--Device-observer-type CardType = sim.CardType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Property type:** sim.CardType
-

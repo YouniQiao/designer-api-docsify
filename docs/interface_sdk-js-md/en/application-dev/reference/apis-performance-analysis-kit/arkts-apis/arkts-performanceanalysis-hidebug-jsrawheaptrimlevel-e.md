@@ -2,9 +2,9 @@
 
 Trimming level of raw heap snapshot.@enum { number }
 
-**Since:** 26.1.0
+**Since:** 20
 
-<!--Device-hidebug-enum JsRawHeapTrimLevel--><!--Device-hidebug-enum JsRawHeapTrimLevel-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -16,9 +16,9 @@ TRIM_LEVEL_1 = 0
 
 Basic heap snapshot trimming(e.g. reducing content of string object).
 
-**Since:** 26.1.0
+**Since:** 20
 
-<!--Device-JsRawHeapTrimLevel-TRIM_LEVEL_1 = 0--><!--Device-JsRawHeapTrimLevel-TRIM_LEVEL_1 = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -30,9 +30,8 @@ TRIM_LEVEL_2 = 1
 
 On top of level 1 trimming, object address size has been additionally trimmed. Please use latest version of rawheap-translator tool for parsing and converting.rawheap into .heapsnapshot file. Conversion process may fail when legacy tool is utilized.A higher trimming level means a longer time needed to generate the .rawheap file. Ensure that this duration falls below the app freeze threshold.
 
-**Since:** 26.1.0
+**Since:** 20
 
-<!--Device-JsRawHeapTrimLevel-TRIM_LEVEL_2 = 1--><!--Device-JsRawHeapTrimLevel-TRIM_LEVEL_2 = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
-

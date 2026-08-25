@@ -4,7 +4,7 @@ Enumerates injection actions.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export enum InjectActionType--><!--Device-unnamed-export enum InjectActionType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -20,9 +20,9 @@ Injects a click action.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InjectActionType-CLICK = 1--><!--Device-InjectActionType-CLICK = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -38,9 +38,9 @@ Injects a double-click action.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InjectActionType-DOUBLE_CLICK = 2--><!--Device-InjectActionType-DOUBLE_CLICK = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -56,11 +56,10 @@ Injects a long-click action.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InjectActionType-LONG_CLICK = 3--><!--Device-InjectActionType-LONG_CLICK = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
-

@@ -2,9 +2,9 @@
 
 Represents a list of files that fail to be downloaded from the Drive Kit and failure causes.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-cloudSync-interface FailedFileInfo--><!--Device-cloudSync-interface FailedFileInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -24,9 +24,9 @@ Error type of the file download failure.
 
 **Type:** [DownloadErrorType](arkts-corefile-cloudsync-downloaderrortype-e.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-FailedFileInfo-error: DownloadErrorType--><!--Device-FailedFileInfo-error: DownloadErrorType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -40,9 +40,8 @@ URI of the file that fails to be downloaded.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-FailedFileInfo-uri: string--><!--Device-FailedFileInfo-uri: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-

@@ -1,15 +1,13 @@
 # WeakRefConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface WeakRefConstructor--><!--Device-unnamed-interface WeakRefConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
+## [[Construct]]
 
 ```TypeScript
 new<T extends object>(target: T): WeakRef<T>
@@ -17,20 +15,18 @@ new<T extends object>(target: T): WeakRef<T>
 
 Creates a WeakRef instance for the given target object.
 
-**Since:** -1
-
-<!--Device-WeakRefConstructor-new<T extends object>(target: T): WeakRef<T>--><!--Device-WeakRefConstructor-new<T extends object>(target: T): WeakRef<T>-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | T | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## prototype
 
 ```TypeScript
@@ -39,7 +35,4 @@ readonly prototype: WeakRef<any>
 
 **Type:** [WeakRef](arkts-lib-es2021-weakref-weakref-i.md)&lt;any&gt;
 
-**Since:** -1
-
-<!--Device-WeakRefConstructor-readonly prototype: WeakRef<any>--><!--Device-WeakRefConstructor-readonly prototype: WeakRef<any>-End-->
-
+**ArkTS mode:** 

@@ -6,9 +6,7 @@ Defines the PinchGestureHandler options.@extends BaseHandlerOptions @interface P
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export interface PinchGestureHandlerOptions--><!--Device-unnamed-export interface PinchGestureHandlerOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,11 +22,9 @@ Indicates minimum pinch move distance. The default value is 5vp.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PinchGestureHandlerOptions-distance?: double--><!--Device-PinchGestureHandlerOptions-distance?: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,11 +40,8 @@ Indicates the hand index that triggers the pinch. If the value is less than 1, t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PinchGestureHandlerOptions-fingers?: int--><!--Device-PinchGestureHandlerOptions-fingers?: int-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

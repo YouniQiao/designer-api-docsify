@@ -4,11 +4,11 @@ Enum for error code
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-geolocation-export enum GeoLocationErrorCode--><!--Device-geolocation-export enum GeoLocationErrorCode-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -22,11 +22,11 @@ Indicates input parameter error.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoLocationErrorCode-INPUT_PARAMS_ERROR--><!--Device-GeoLocationErrorCode-INPUT_PARAMS_ERROR-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -40,11 +40,11 @@ Indicates reverse geocode query failed.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoLocationErrorCode-REVERSE_GEOCODE_ERROR--><!--Device-GeoLocationErrorCode-REVERSE_GEOCODE_ERROR-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -58,11 +58,11 @@ Indicates geocode query failed.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoLocationErrorCode-GEOCODE_ERROR--><!--Device-GeoLocationErrorCode-GEOCODE_ERROR-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -76,11 +76,11 @@ Indicates positioning failed.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoLocationErrorCode-LOCATOR_ERROR--><!--Device-GeoLocationErrorCode-LOCATOR_ERROR-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -94,11 +94,11 @@ Indicates operation failure caused by abnormal location switch.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoLocationErrorCode-LOCATION_SWITCH_ERROR--><!--Device-GeoLocationErrorCode-LOCATION_SWITCH_ERROR-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -112,11 +112,11 @@ Indicates failed to get the last known location.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoLocationErrorCode-LAST_KNOWN_LOCATION_ERROR--><!--Device-GeoLocationErrorCode-LAST_KNOWN_LOCATION_ERROR-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -130,11 +130,10 @@ Indicates location request timeout.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.LOCATION
 
-<!--Device-GeoLocationErrorCode-LOCATION_REQUEST_TIMEOUT_ERROR--><!--Device-GeoLocationErrorCode-LOCATION_REQUEST_TIMEOUT_ERROR-End-->
-
 **System capability:** SystemCapability.Location.Location.Core
-

@@ -2,9 +2,9 @@
 
 Describes the color components of an image.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-image-interface Component--><!--Device-image-interface Component-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -24,9 +24,9 @@ Component buffer.
 
 **Type:** ArrayBuffer
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Component-readonly byteBuffer: ArrayBuffer--><!--Device-Component-readonly byteBuffer: ArrayBuffer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -40,9 +40,9 @@ Color component type.
 
 **Type:** ComponentType
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Component-readonly componentType: ComponentType--><!--Device-Component-readonly componentType: ComponentType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -54,11 +54,11 @@ readonly pixelStride: int
 
 Pixel stride.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Component-readonly pixelStride: int--><!--Device-Component-readonly pixelStride: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -70,11 +70,10 @@ readonly rowStride: int
 
 Row stride. The camera preview stream data needs to be read by stride. For details, see [Solution to Screen Artifacts During Camera Preview](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-deal-stride-solution).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Component-readonly rowStride: int--><!--Device-Component-readonly rowStride: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
-

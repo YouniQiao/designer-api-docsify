@@ -4,7 +4,7 @@ Implements a system sound player that provides functions for loading, unloading,
 
 **Since:** 23
 
-<!--Device-unnamed-export interface SystemSoundPlayer--><!--Device-unnamed-export interface SystemSoundPlayer-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -18,31 +18,31 @@ Loads a system sound.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-SystemSoundPlayer-load(soundType: systemSoundManager.SystemSoundType): Promise<void>--><!--Device-SystemSoundPlayer-load(soundType: systemSoundManager.SystemSoundType): Promise<void>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| soundType | systemSoundManager.SystemSoundType | Yes | type of sound to preload. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| soundType | systemSoundManager.SystemSoundType | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Crash or blocking occurs in system process. |
-| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
+| Error Code ID |
+| --- |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 **Examples**
 
@@ -66,31 +66,31 @@ Plays a system sound.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-SystemSoundPlayer-play(soundType: systemSoundManager.SystemSoundType): Promise<void>--><!--Device-SystemSoundPlayer-play(soundType: systemSoundManager.SystemSoundType): Promise<void>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| soundType | systemSoundManager.SystemSoundType | Yes | type of sound to play. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| soundType | systemSoundManager.SystemSoundType | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Crash or blocking occurs in system process. |
-| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
+| Error Code ID |
+| --- |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 **Examples**
 
@@ -114,23 +114,23 @@ Releases this system sound player instance.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-SystemSoundPlayer-release(): Promise<void>--><!--Device-SystemSoundPlayer-release(): Promise<void>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Crash or blocking occurs in system process. |
+| Error Code ID |
+| --- |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 **Examples**
 
@@ -154,30 +154,30 @@ Unloads a system sound that has been loaded before.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-SystemSoundPlayer-unload(soundType: systemSoundManager.SystemSoundType): Promise<void>--><!--Device-SystemSoundPlayer-unload(soundType: systemSoundManager.SystemSoundType): Promise<void>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| soundType | systemSoundManager.SystemSoundType | Yes | type of sound to unload. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| soundType | systemSoundManager.SystemSoundType | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Crash or blocking occurs in system process. |
-| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
+| Error Code ID |
+| --- |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 **Examples**
 
@@ -190,4 +190,3 @@ systemSoundPlayer?.unload(systemSoundManager.SystemSoundType.PHOTO_SHUTTER).then
   console.error(`Failed to call the unload method. Code: ${err.code}, message: ${err.message}`);
 });
 ```
-

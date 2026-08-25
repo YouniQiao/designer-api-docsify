@@ -1,12 +1,10 @@
 # TranslateOption
 
-Set translation parameters@interface TranslateOption
+Describes the translation parameters.
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-matrix4-export interface TranslateOption--><!--Device-matrix4-export interface TranslateOption-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,60 +17,53 @@ import { matrix4 } from '@kit.ArkUI';
 ## x
 
 ```TypeScript
-x?: double
+x?: number
 ```
 
-Indicates the translation distance of the x-axis, in px.
+Translation distance along the x-axis.Unit: px Default value: **0**Value range: (-∞, +∞)
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TranslateOption-x?: double--><!--Device-TranslateOption-x?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
 
 ```TypeScript
-y?: double
+y?: number
 ```
 
-Indicates the translation distance of the y-axis, in px.
+Translation distance along the y-axis.Unit: px Default value: **0**Value range: (-∞, +∞)
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TranslateOption-y?: double--><!--Device-TranslateOption-y?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## z
 
 ```TypeScript
-z?: double
+z?: number
 ```
 
-Indicates the translation distance of the z-axis, in px.
+Translation distance along the z-axis.Unit: px Default value: **0**Value range: (-∞, +∞)
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TranslateOption-z?: double--><!--Device-TranslateOption-z?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

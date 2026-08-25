@@ -6,9 +6,6 @@ type Uppercase<S extends string> = intrinsic
 
 Convert string literal type to uppercase
 
-**Since:** -1
-
-<!--Device-unnamed-type Uppercase<S extends string> = intrinsic--><!--Device-unnamed-type Uppercase<S extends string> = intrinsic-End-->
+**ArkTS mode:** 
 
 **Property type:** intrinsic
-

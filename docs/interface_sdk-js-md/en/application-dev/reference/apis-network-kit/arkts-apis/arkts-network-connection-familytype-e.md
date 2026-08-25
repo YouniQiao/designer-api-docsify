@@ -4,7 +4,7 @@ Indicates the type of the IP address to be queried.
 
 **Since:** 23
 
-<!--Device-connection-export enum FamilyType--><!--Device-connection-export enum FamilyType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -18,7 +18,7 @@ All IPv4 and IPv6 addresses are queried.
 
 **Since:** 23
 
-<!--Device-FamilyType-FAMILY_TYPE_ALL = 0--><!--Device-FamilyType-FAMILY_TYPE_ALL = 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -32,7 +32,7 @@ Only IPv4 addresses are queried.
 
 **Since:** 23
 
-<!--Device-FamilyType-FAMILY_TYPE_IPV4 = 1--><!--Device-FamilyType-FAMILY_TYPE_IPV4 = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -46,7 +46,6 @@ Only IPv6 addresses are queried.
 
 **Since:** 23
 
-<!--Device-FamilyType-FAMILY_TYPE_IPV6 = 2--><!--Device-FamilyType-FAMILY_TYPE_IPV6 = 2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
-

@@ -21,7 +21,7 @@ The data type used to describe a rectangular area.
 
 **Since:** 8
 
-<!--Device-unnamed-declare interface Rectangle--><!--Device-unnamed-declare interface Rectangle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,11 +42,11 @@ Height of the touch target.Default value: **'100%'**
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-Rectangle-height?: Length--><!--Device-Rectangle-height?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,11 +62,11 @@ Width of the touch target.Default value: **'100%'**
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-Rectangle-width?: Length--><!--Device-Rectangle-width?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,11 +82,11 @@ X coordinate of the touch point relative to the upper left corner of the compone
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-Rectangle-x?: Length--><!--Device-Rectangle-x?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -102,11 +102,10 @@ Y coordinate of the touch point relative to the upper left corner of the compone
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-Rectangle-y?: Length--><!--Device-Rectangle-y?: Length-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -1,8 +1,6 @@
 # AsyncIterable
 
-**Since:** -1
-
-<!--Device-unnamed-interface AsyncIterable--><!--Device-unnamed-interface AsyncIterable-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -15,11 +13,9 @@
 [Symbol.asyncIterator](): AsyncIterator<T>
 ```
 
-**Since:** -1
-
-<!--Device-AsyncIterable-[Symbol.asyncIterator](): AsyncIterator<T>--><!--Device-AsyncIterable-[Symbol.asyncIterator](): AsyncIterator<T>-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

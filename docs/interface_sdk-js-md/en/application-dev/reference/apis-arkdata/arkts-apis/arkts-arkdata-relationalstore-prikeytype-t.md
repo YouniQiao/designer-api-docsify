@@ -6,15 +6,14 @@ type PRIKeyType = long | double | string
 
 The type of the priority key can be number or string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-relationalStore-type PRIKeyType = long | double | string--><!--Device-relationalStore-type PRIKeyType = long | double | string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-| Type | Description |
-| --- | --- |
-| long | The value is a long |
-| double | The value is a double |
-| string | The value is a string |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| long |
+| double |
+| string |

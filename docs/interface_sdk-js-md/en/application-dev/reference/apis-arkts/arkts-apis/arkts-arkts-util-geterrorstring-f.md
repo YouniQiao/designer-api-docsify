@@ -16,25 +16,25 @@ Obtains detailed information about a system error code.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-**Substitutes:** [errnoToString](../../apis-default/arkts-apis/arkts-util-errnotostring-f.md)
-
-<!--Device-util-function getErrorString(errno: number): string--><!--Device-util-function getErrorString(errno: number): string-End-->
+**Substitutes:** [errnoToString](arkts-arkts-util-errnotostring-f.md)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| errno | number | Yes | Error code generated. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [errno](../../apis-universal-keystore-kit/arkts-apis/arkts-universalkeystore-huksexternalcrypto-huksexternalerrorinfo-i.md) | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Detailed information about the error code. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -44,4 +44,3 @@ let result = util.getErrorString(errnum);
 console.info("result = " + result);
 // Output: result = operation not permitted
 ```
-

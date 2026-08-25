@@ -23,29 +23,29 @@ function getDefaultNetSync(): NetHandle
 > - [NetHandle](arkts-network-connection-nethandle-i.md)为网络唯一标识，当无网络可用时，返回0。其可用于
 > [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md)继续查询更多网络信息。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-connection-function getDefaultNetSync(): NetHandle--><!--Device-connection-function getDefaultNetSync(): NetHandle-End-->
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| NetHandle | 以同步方式返回默认网络的网络句柄。 |
+| 类型 |
+| --- |
+| [NetHandle](arkts-network-connection-nethandle-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
 **示例**
 
@@ -54,4 +54,3 @@ import { connection } from '@kit.NetworkKit';
 
 let netHandle = connection.getDefaultNetSync();
 ```
-

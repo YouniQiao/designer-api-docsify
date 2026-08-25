@@ -4,9 +4,9 @@
 
 **起始版本：** 7
 
-**废弃版本：** 22
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-unnamed-declare class ScrollMotion--><!--Device-unnamed-declare class ScrollMotion-End-->
+**废弃版本：** 22
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,9 +27,9 @@ constructor(position: number, velocity: number, min: number, max: number, prop: 
 
 **起始版本：** 7
 
-**废弃版本：** 22
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ScrollMotion-constructor(position: number, velocity: number, min: number, max: number, prop: SpringProp)--><!--Device-ScrollMotion-constructor(position: number, velocity: number, min: number, max: number, prop: SpringProp)-End-->
+**废弃版本：** 22
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -37,11 +37,10 @@ constructor(position: number, velocity: number, min: number, max: number, prop: 
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| position | number | 是 |  |
-| velocity | number | 是 |  |
-| min | number | 是 |  |
-| max | number | 是 |  |
-| prop | [SpringProp](arkts-arkui-springprop-c-sys.md) | 是 |  |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| position | number | 是 |
+| velocity | number | 是 |
+| min | number | 是 |
+| max | number | 是 |
+| prop | [SpringProp](arkts-arkui-springprop-c-sys.md) | 是 |

@@ -4,7 +4,7 @@
 
 **起始版本：** 19
 
-<!--Device-adminManager-export enum RunningMode--><!--Device-adminManager-export enum RunningMode-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -20,7 +20,7 @@ DEFAULT = 0
 
 **起始版本：** 19
 
-<!--Device-RunningMode-DEFAULT = 0--><!--Device-RunningMode-DEFAULT = 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -36,9 +36,8 @@ MULTI_USER = 1
 
 **起始版本：** 19
 
-<!--Device-RunningMode-MULTI_USER = 1--><!--Device-RunningMode-MULTI_USER = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
-

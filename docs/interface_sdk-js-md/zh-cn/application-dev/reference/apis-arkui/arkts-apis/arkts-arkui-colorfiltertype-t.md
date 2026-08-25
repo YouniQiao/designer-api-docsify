@@ -8,16 +8,15 @@ declare type ColorFilterType = ColorFilter | DrawingColorFilter
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
-<!--Device-unnamed-declare type ColorFilterType = ColorFilter | DrawingColorFilter--><!--Device-unnamed-declare type ColorFilterType = ColorFilter | DrawingColorFilter-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 | 说明 |
-| --- | --- |
-| ColorFilter | ColorFilter类型图片颜色滤镜设置项。 |
-| DrawingColorFilter | DrawingColorFilter类型图片颜色滤镜设置项。 |
-
+| 类型 |
+| --- |
+| [ColorFilter](arkts-arkui-colorfilter-c.md) |
+| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) |

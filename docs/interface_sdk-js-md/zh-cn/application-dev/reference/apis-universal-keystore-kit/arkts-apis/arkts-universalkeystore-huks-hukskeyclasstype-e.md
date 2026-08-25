@@ -4,7 +4,7 @@
 
 **起始版本：** 22
 
-<!--Device-huks-export enum HuksKeyClassType--><!--Device-huks-export enum HuksKeyClassType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -18,7 +18,7 @@ HUKS_KEY_CLASS_DEFAULT = 0
 
 **起始版本：** 22
 
-<!--Device-HuksKeyClassType-HUKS_KEY_CLASS_DEFAULT = 0--><!--Device-HuksKeyClassType-HUKS_KEY_CLASS_DEFAULT = 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -32,7 +32,6 @@ HUKS_KEY_CLASS_EXTENSION = 1
 
 **起始版本：** 22
 
-<!--Device-HuksKeyClassType-HUKS_KEY_CLASS_EXTENSION = 1--><!--Device-HuksKeyClassType-HUKS_KEY_CLASS_EXTENSION = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.Extension
-

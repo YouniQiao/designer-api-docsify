@@ -1,6 +1,6 @@
 # LauncherAbilityInfo（系统接口）
 
-LauncherAbilityInfo信息，通过接口 innerBundleManager.getLauncherAbilityInfos 获取。
+LauncherAbilityInfo信息，通过接口 [innerBundleManager.getLauncherAbilityInfos](../../../reference/apis-ability-kit/js-apis-Bundle-InnerBundleManager-sys.md#innerbundlemanagergetlauncherabilityinfosdeprecated) 获取。
 
 > **说明：**&gt;
 > 从API version 9开始，该模块不再维护，建议使用[bundleManager-LauncherAbilityInfo](#launcherabilityinfo系统接口)替代。&gt;
@@ -8,11 +8,11 @@ LauncherAbilityInfo信息，通过接口 innerBundleManager.getLauncherAbilityIn
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [LauncherAbilityInfo](#launcherabilityinfo系统接口)
-
-<!--Device-unnamed-export interface LauncherAbilityInfo--><!--Device-unnamed-export interface LauncherAbilityInfo-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -30,11 +30,11 @@ launcher ability的应用程序的配置信息。
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** applicationInfo
-
-<!--Device-LauncherAbilityInfo-readonly applicationInfo: ApplicationInfo--><!--Device-LauncherAbilityInfo-readonly applicationInfo: ApplicationInfo-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -52,11 +52,11 @@ launcher ability的ElementName信息。
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** elementName
-
-<!--Device-LauncherAbilityInfo-readonly elementName: ElementName--><!--Device-LauncherAbilityInfo-readonly elementName: ElementName-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -74,11 +74,11 @@ launcher ability的图标的资源ID值。
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** iconId
-
-<!--Device-LauncherAbilityInfo-readonly iconId: number--><!--Device-LauncherAbilityInfo-readonly iconId: number-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -96,11 +96,11 @@ launcher ability的安装时间戳，单位毫秒。
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** installTime
-
-<!--Device-LauncherAbilityInfo-readonly installTime: number--><!--Device-LauncherAbilityInfo-readonly installTime: number-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -118,11 +118,11 @@ launcher ability的标签的资源ID值。
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** labelId
-
-<!--Device-LauncherAbilityInfo-readonly labelId: number--><!--Device-LauncherAbilityInfo-readonly labelId: number-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -140,13 +140,12 @@ launcher ability的用户ID。
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** userId
 
-<!--Device-LauncherAbilityInfo-readonly userId: number--><!--Device-LauncherAbilityInfo-readonly userId: number-End-->
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
-

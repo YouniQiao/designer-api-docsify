@@ -16,9 +16,9 @@ function getTemplateFormsInfo(bundleName: string, moduleName?: string): Promise<
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-formHost-function getTemplateFormsInfo(bundleName: string, moduleName?: string): Promise<Array<formInfo.FormInfo>>--><!--Device-formHost-function getTemplateFormsInfo(bundleName: string, moduleName?: string): Promise<Array<formInfo.FormInfo>>-End-->
+**需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -26,24 +26,24 @@ function getTemplateFormsInfo(bundleName: string, moduleName?: string): Promise<
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 要查询的应用Bundle名称。 |
-| moduleName | string | 否 | 要查询的模块名称，缺省默认为空。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| moduleName | string | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Promise对象。返回查询到的卡片信息。 |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;formInfo.FormInfo & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
 
 **示例**
 
@@ -85,4 +85,3 @@ try {
   console.error(`catch error, code: ${error.code}, message: ${error.message}`);
 }
 ```
-

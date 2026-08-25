@@ -4,9 +4,9 @@
 
 **继承/实现关系：** HdrBrightnessBlender extends [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-uiEffect-interface HdrBrightnessBlender--><!--Device-uiEffect-interface HdrBrightnessBlender-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -17,4 +17,3 @@
 ```TypeScript
 import { uiEffect } from '@kit.ArkGraphics2D';
 ```
-

@@ -4,11 +4,11 @@ Manages behavior of cookies in **Web** components. All **Web** components in an 
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 23
 
-**Substitutes:** [WebCookieManager](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md)
-
-<!--Device-unnamed-declare class WebCookie--><!--Device-unnamed-declare class WebCookie-End-->
+**Substitutes:** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md)
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -30,13 +30,13 @@ Constructs a **WebCookie** object.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 23
 
-**Substitutes:** [WebCookieManager](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md)
+**Substitutes:** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WebCookie-constructor()--><!--Device-WebCookie-constructor()-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -50,11 +50,11 @@ Saves the cookies in the memory to the drive. This API returns the result synchr
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [saveCookieAsync](../../apis-default/arkts-apis/arkts-webview-webcookiemanager-c.md#savecookieasync)
-
-<!--Device-WebCookie-saveCookie()--><!--Device-WebCookie-saveCookie()-End-->
+**Substitutes:** [saveCookieAsync](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md#savecookieasync)
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -68,11 +68,10 @@ Sets the cookie. This API returns the result synchronously. **true** is returned
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** setCookie
 
-<!--Device-WebCookie-setCookie()--><!--Device-WebCookie-setCookie()-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

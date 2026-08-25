@@ -7,7 +7,7 @@
 
 **起始版本：** 18
 
-<!--Device-unnamed-interface OnScrollFrameBeginHandlerResult--><!--Device-unnamed-interface OnScrollFrameBeginHandlerResult-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,9 +28,8 @@ offsetRemain: number
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-OnScrollFrameBeginHandlerResult-offsetRemain: number--><!--Device-OnScrollFrameBeginHandlerResult-offsetRemain: number-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

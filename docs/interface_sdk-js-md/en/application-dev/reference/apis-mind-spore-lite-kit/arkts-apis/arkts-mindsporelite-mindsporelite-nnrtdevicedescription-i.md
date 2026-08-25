@@ -2,9 +2,9 @@
 
 Provides the nnrt device description
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-mindSporeLite-interface NNRTDeviceDescription--><!--Device-mindSporeLite-interface NNRTDeviceDescription-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -22,19 +22,19 @@ deviceID() : bigint
 
 Get device id
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NNRTDeviceDescription-deviceID() : bigint--><!--Device-NNRTDeviceDescription-deviceID() : bigint-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint | the number of device id |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| bigint |
 
 **Examples**
 
@@ -60,19 +60,19 @@ deviceName() : string
 
 Get device name.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NNRTDeviceDescription-deviceName() : string--><!--Device-NNRTDeviceDescription-deviceName() : string-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | device name |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -98,19 +98,19 @@ deviceType() : NNRTDeviceType
 
 Get device type.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NNRTDeviceDescription-deviceType() : NNRTDeviceType--><!--Device-NNRTDeviceDescription-deviceType() : NNRTDeviceType-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [NNRTDeviceType](arkts-mindsporelite-mindsporelite-nnrtdevicetype-e.md) | the device type |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [NNRTDeviceType](arkts-mindsporelite-mindsporelite-nnrtdevicetype-e.md) |
 
 **Examples**
 
@@ -127,4 +127,3 @@ if (allDevices == null) {
   }
 }
 ```
-

@@ -16,21 +16,20 @@ function is64Bit(): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-process-function is64Bit(): boolean--><!--Device-process-function is64Bit(): boolean-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回判断结果。如果运行环境是 64 位则返回 true； 否则返回 false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
 ```TypeScript
 let result = process.is64Bit();
 ```
-

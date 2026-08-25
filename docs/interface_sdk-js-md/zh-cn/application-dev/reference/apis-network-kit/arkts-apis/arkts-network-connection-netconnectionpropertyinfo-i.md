@@ -2,9 +2,9 @@
 
 网络连接信息。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-connection-export interface NetConnectionPropertyInfo--><!--Device-connection-export interface NetConnectionPropertyInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -24,9 +24,9 @@ connectionProperties: ConnectionProperties
 
 **类型：** [ConnectionProperties](arkts-network-connection-connectionproperties-i.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-NetConnectionPropertyInfo-connectionProperties: ConnectionProperties--><!--Device-NetConnectionPropertyInfo-connectionProperties: ConnectionProperties-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -40,9 +40,8 @@ netHandle: NetHandle
 
 **类型：** NetHandle
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-NetConnectionPropertyInfo-netHandle: NetHandle--><!--Device-NetConnectionPropertyInfo-netHandle: NetHandle-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
-

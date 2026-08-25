@@ -2,9 +2,9 @@
 
 端云同步信息，包含最近一次端云同步的时间、结果和状态。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-cloudData-interface SyncInfo--><!--Device-cloudData-interface SyncInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -26,9 +26,9 @@ code: relationalStore.ProgressCode
 
 **类型：** relationalStore.ProgressCode
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SyncInfo-code: relationalStore.ProgressCode--><!--Device-SyncInfo-code: relationalStore.ProgressCode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -44,9 +44,9 @@ finishTime: Date
 
 **类型：** Date
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SyncInfo-finishTime: Date--><!--Device-SyncInfo-finishTime: Date-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -62,9 +62,9 @@ startTime: Date
 
 **类型：** Date
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SyncInfo-startTime: Date--><!--Device-SyncInfo-startTime: Date-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -80,11 +80,10 @@ syncStatus?: SyncStatus
 
 **类型：** [SyncStatus](arkts-arkdata-clouddata-syncstatus-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-SyncInfo-syncStatus?: SyncStatus--><!--Device-SyncInfo-syncStatus?: SyncStatus-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
-

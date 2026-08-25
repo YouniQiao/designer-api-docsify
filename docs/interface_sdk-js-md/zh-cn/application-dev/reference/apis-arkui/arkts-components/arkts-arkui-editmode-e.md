@@ -4,9 +4,9 @@ ListItem元素编辑模式枚举。
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-unnamed-declare enum EditMode--><!--Device-unnamed-declare enum EditMode-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,9 +20,9 @@ None
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-EditMode-None--><!--Device-EditMode-None-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,9 +36,9 @@ Deletable.
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-EditMode-Deletable--><!--Device-EditMode-Deletable-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,9 +52,8 @@ Movable.
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-<!--Device-EditMode-Movable--><!--Device-EditMode-Movable-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

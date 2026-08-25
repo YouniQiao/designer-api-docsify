@@ -1,4 +1,4 @@
-# @ohos.advertising.AutoAdComponent
+# @ohos.advertising.AutoAdComponent(轮播广告展示组件)
 
 ## 导入模块
 
@@ -10,7 +10,6 @@ import { AutoAdComponent } from '@kit.AdsKit';
 
 ### 结构体
 
-| 名称 | 说明 |
-| --- | --- |
-| [AutoAdComponent](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | 本模块提供展示轮播广告的能力。 |
-
+| 名称 |
+| --- |
+| [AutoAdComponent(轮播广告展示组件)](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) |

@@ -2,9 +2,9 @@
 
 The **Display** module provides APIs for managing displays, such as obtaining information about the default display, obtaining information about all displays, and listening for the addition and removal of displays.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-declare namespace display--><!--Device-unnamed-declare namespace display-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -18,123 +18,122 @@ import { display } from '@kit.ArkUI';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [convertGlobalToRelativeCoordinate](arkts-arkui-display-convertglobaltorelativecoordinate-f.md) | Converts global coordinates (based on the top-left corner of the primary screen) into relative coordinates (based on the top-left corner of the screen specified by **displayId**). This API supports only coordinate conversion between the primary screen and extended screen. If **displayId** is not passed, the coordinates are converted relative to the screen where the global coordinates are located. If the global coordinates are not on any screen, the coordinates are converted relative to the primary screen by default. |
-| [convertRelativeToGlobalCoordinate](arkts-arkui-display-convertrelativetoglobalcoordinate-f.md) | Converts relative coordinates (based on the top-left corner of the screen) into global coordinates (based on the top-left corner of the primary screen). This API supports only coordinate conversion between the primary screen and extended screen. |
-| [createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md) | Creates a virtual screen. This API uses a promise to return the result. |
-| [destroyVirtualScreen](arkts-arkui-display-destroyvirtualscreen-f.md) | Destroys a virtual screen. This API uses a promise to return the result. |
-| [getAllDisplay](arkts-arkui-display-getalldisplay-f.md) | Obtains all Display objects. This API uses an asynchronous callback to return the result. |
-| [getAllDisplay](arkts-arkui-display-getalldisplay-f.md) | Obtains all Display objects. This API uses a promise to return the result. |
-| [getAllDisplayPhysicalResolution](arkts-arkui-display-getalldisplayphysicalresolution-f.md) | Obtains all the display modes supported by the current device, along with the physical screen resolutions for each mode. This API uses a promise to return the result. |
-| [getAllDisplays](arkts-arkui-display-getalldisplays-f.md) | Obtains all Display objects. This API uses an asynchronous callback to return the result. |
-| [getAllDisplays](arkts-arkui-display-getalldisplays-f.md) | Obtains all Display objects. This API uses a promise to return the result. |
-| [getBrightnessInfo](arkts-arkui-display-getbrightnessinfo-f.md) | Obtains the screen brightness information of a display. If the screen does not support HDR, the **currentHeadroom** and **maxHeadroom** fields in the returned [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value. |
-| [getCurrentFoldCreaseRegion](arkts-arkui-display-getcurrentfoldcreaseregion-f.md) | Obtains the crease region of the foldable device in the current display mode. |
-| [getDefaultDisplay](arkts-arkui-display-getdefaultdisplay-f.md) | Obtains the default Display object. This API uses an asynchronous callback to return the result. |
-| [getDefaultDisplay](arkts-arkui-display-getdefaultdisplay-f.md) | Obtains the default Display object. This API uses a promise to return the result. |
-| [getDefaultDisplaySync](arkts-arkui-display-getdefaultdisplaysync-f.md) | Obtains the **Display** object of the screen where the application is located. If multiple abilities of an application are on different screens, the **Display** object of the main screen is returned. If multiple abilities of an application are on the same screen, the **Display** object of the screen is returned. |
-| [getDisplayByIdSync](arkts-arkui-display-getdisplaybyidsync-f.md) | Obtains a Display object based on the display ID. |
-| [getFoldDisplayMode](arkts-arkui-display-getfolddisplaymode-f.md) | Obtains the display mode of this foldable device. |
-| [getFoldStatus](arkts-arkui-display-getfoldstatus-f.md) | Obtains the fold status of this foldable device. |
-| [getPrimaryDisplaySync](arkts-arkui-display-getprimarydisplaysync-f.md) | Obtains the information about the primary display. For devices other than 2-in-1 devices, the Display object obtained is the built-in screen. For 2-in-1 devices with an external screen, the Display object obtained is the primary screen. For 2-in-1 devices without an external screen, the Display object obtained is the built-in screen. |
-| [isCaptured](arkts-arkui-display-iscaptured-f.md) | Checks whether the device's screen content is being captured. |
-| [isCaptured](arkts-arkui-display-iscaptured-f.md) | Check whether the device is captured, projected, or recorded by any app in the bundle name list. |
-| [isFoldable](arkts-arkui-display-isfoldable-f.md) | Checks whether this device is foldable. |
-| [makeUnique](arkts-arkui-display-makeunique-f.md) | Sets the screen to independent display mode. This API uses a promise to return the result. |
-| off_add | Unsubscribes from display changes. |
-| [off_brightnessInfoChange](arkts-arkui-display-offbrightnessinfochange-f.md) | Unsubscribes from events related to screen brightness information changes. |
-| [off_captureStatusChange](arkts-arkui-display-offcapturestatuschange-f.md) | Unsubscribes from events indicating the status of the device's screen content is being captured. |
-| off_change | Unsubscribes from display changes. |
-| [off_foldAngleChange](arkts-arkui-display-offfoldanglechange-f.md) | Unsubscribes from folding angle change events of the foldable device. |
-| [off_foldDisplayModeChange](arkts-arkui-display-offfolddisplaymodechange-f.md) | Unsubscribes from display mode change events of the foldable device. |
-| [off_foldStatusChange](arkts-arkui-display-offfoldstatuschange-f.md) | Unsubscribes from fold status change events of the foldable device. |
-| off_remove | Unsubscribes from display changes. |
-| [offAdd](arkts-arkui-display-offadd-f.md) | Unregister the callback for display add events. |
-| [offBrightnessInfoChange](arkts-arkui-display-offbrightnessinfochange-f.md) | Unregister the callback for brightness info changes. |
-| [offCaptureStatusChange](arkts-arkui-display-offcapturestatuschange-f.md) | Unregister the callback for the status of the device's screen content is being captured. |
-| [offChange](arkts-arkui-display-offchange-f.md) | Unregister the callback for display changes. |
-| [offFoldAngleChange](arkts-arkui-display-offfoldanglechange-f.md) | Unregister the callback for fold angle changes. |
-| [offFoldDisplayModeChange](arkts-arkui-display-offfolddisplaymodechange-f.md) | Unregister the callback for fold display mode changes. |
-| [offFoldStatusChange](arkts-arkui-display-offfoldstatuschange-f.md) | Unregister the callback for fold status changes. |
-| [offRemove](arkts-arkui-display-offremove-f.md) | Unregister the callback for display remove events. |
-| on_add | Subscribes to display changes. |
-| [on_brightnessInfoChange](arkts-arkui-display-onbrightnessinfochange-f.md) | Subscribes to events related to screen brightness information changes. If the screen does not support HDR, the **currentHeadroom** and **maxHeadroom** fields in the [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value. |
-| [on_captureStatusChange](arkts-arkui-display-oncapturestatuschange-f.md) | Subscribes to events indicating the status of the device's screen content is being captured. |
-| on_change | Subscribes to display changes. |
-| [on_foldAngleChange](arkts-arkui-display-onfoldanglechange-f.md) | Subscribes to folding angle change events of the foldable device. Note that there are two folding angles for dual- fold axis devices. When oriented with the charging port at the bottom, the hinges are identified from right to left as the first and second fold axes, respectively. |
-| [on_foldDisplayModeChange](arkts-arkui-display-onfolddisplaymodechange-f.md) | Subscribes to display mode change events of the foldable device.To subscribe to fold status change events of foldable devices, use display.on('foldStatusChange').The two are different. In terms of timing, the fold status changes first, and the bottom layer matches the display mode status based on the fold status. |
-| [on_foldStatusChange](arkts-arkui-display-onfoldstatuschange-f.md) | Subscribes to fold status change events of the foldable device.To subscribe to display mode change events of foldable devices, use display.on('foldDisplayModeChange').The two are different. In terms of timing, the fold status changes first, and the bottom layer matches the display mode status based on the fold status.To check whether the content is displayed on the inner or outer screen of the foldable device, use display.on('foldDisplayModeChange'). |
-| on_remove | Subscribes to display changes. |
-| [onAdd](arkts-arkui-display-onadd-f.md) | Register the callback for display add events. |
-| [onBrightnessInfoChange](arkts-arkui-display-onbrightnessinfochange-f.md) | Register the callback for brightness info changes. |
-| [onCaptureStatusChange](arkts-arkui-display-oncapturestatuschange-f.md) | Register the callback for the status of the device's screen content is being captured. |
-| [onChange](arkts-arkui-display-onchange-f.md) | Register the callback for display changes. |
-| [onChangeWithAttribute](arkts-arkui-display-onchangewithattribute-f.md) | Subscribes to changes of specified attributes of a display. |
-| [onFoldAngleChange](arkts-arkui-display-onfoldanglechange-f.md) | Register the callback for fold angle changes. |
-| [onFoldDisplayModeChange](arkts-arkui-display-onfolddisplaymodechange-f.md) | Register the callback for fold display mode changes. |
-| [onFoldStatusChange](arkts-arkui-display-onfoldstatuschange-f.md) | Register the callback for fold status changes. |
-| [onRemove](arkts-arkui-display-onremove-f.md) | Register the callback for display remove events. |
-| [setVirtualScreenSurface](arkts-arkui-display-setvirtualscreensurface-f.md) | Sets a surface for a virtual screen. This API uses a promise to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [convertGlobalToRelativeCoordinate](arkts-arkui-display-convertglobaltorelativecoordinate-f.md) |
+| [convertRelativeToGlobalCoordinate](arkts-arkui-display-convertrelativetoglobalcoordinate-f.md) |
+| [createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md) |
+| [destroyVirtualScreen](arkts-arkui-display-destroyvirtualscreen-f.md) |
+| [getAllDisplay](arkts-arkui-display-getalldisplay-f.md) |
+| [getAllDisplay](arkts-arkui-display-getalldisplay-f.md) |
+| [getAllDisplayPhysicalResolution](arkts-arkui-display-getalldisplayphysicalresolution-f.md) |
+| [getAllDisplays](arkts-arkui-display-getalldisplays-f.md) |
+| [getAllDisplays](arkts-arkui-display-getalldisplays-f.md) |
+| [getBrightnessInfo](arkts-arkui-display-getbrightnessinfo-f.md) |
+| [getCurrentFoldCreaseRegion](arkts-arkui-display-getcurrentfoldcreaseregion-f.md) |
+| [getDefaultDisplay](arkts-arkui-display-getdefaultdisplay-f.md) |
+| [getDefaultDisplay](arkts-arkui-display-getdefaultdisplay-f.md) |
+| [getDefaultDisplaySync](arkts-arkui-display-getdefaultdisplaysync-f.md) |
+| [getDisplayByIdSync](arkts-arkui-display-getdisplaybyidsync-f.md) |
+| [getFoldDisplayMode](arkts-arkui-display-getfolddisplaymode-f.md) |
+| [getFoldStatus](arkts-arkui-display-getfoldstatus-f.md) |
+| [getPrimaryDisplaySync](arkts-arkui-display-getprimarydisplaysync-f.md) |
+| [isCaptured](arkts-arkui-display-iscaptured-f.md) |
+| [isCaptured](arkts-arkui-display-iscaptured-f.md) |
+| [isFoldable](arkts-arkui-display-isfoldable-f.md) |
+| [makeUnique](arkts-arkui-display-makeunique-f.md) |
+| [off](arkts-arkui-display-off-f.md#offadd-remove-change) |
+| [off](arkts-arkui-display-off-f.md#offadd-remove-change) |
+| [off](arkts-arkui-display-off-f.md#offadd-remove-change) |
+| [off](arkts-arkui-display-off-f.md#offfoldstatuschange) |
+| [off](arkts-arkui-display-off-f.md#offfoldanglechange) |
+| [off](arkts-arkui-display-off-f.md#offcapturestatuschange) |
+| [off](arkts-arkui-display-off-f.md#offfolddisplaymodechange) |
+| [off](arkts-arkui-display-off-f.md#offbrightnessinfochange) |
+| [offAdd](arkts-arkui-display-offadd-f.md) |
+| [offBrightnessInfoChange](arkts-arkui-display-offbrightnessinfochange-f.md) |
+| [offCaptureStatusChange](arkts-arkui-display-offcapturestatuschange-f.md) |
+| [offChange](arkts-arkui-display-offchange-f.md) |
+| [offFoldAngleChange](arkts-arkui-display-offfoldanglechange-f.md) |
+| [offFoldDisplayModeChange](arkts-arkui-display-offfolddisplaymodechange-f.md) |
+| [offFoldStatusChange](arkts-arkui-display-offfoldstatuschange-f.md) |
+| [offRemove](arkts-arkui-display-offremove-f.md) |
+| [on](arkts-arkui-display-on-f.md#onadd-remove-change) |
+| [on](arkts-arkui-display-on-f.md#onadd-remove-change) |
+| [on](arkts-arkui-display-on-f.md#onadd-remove-change) |
+| [on](arkts-arkui-display-on-f.md#onfoldstatuschange) |
+| [on](arkts-arkui-display-on-f.md#onfoldanglechange) |
+| [on](arkts-arkui-display-on-f.md#oncapturestatuschange) |
+| [on](arkts-arkui-display-on-f.md#onfolddisplaymodechange) |
+| [on](arkts-arkui-display-on-f.md#onbrightnessinfochange) |
+| [onAdd](arkts-arkui-display-onadd-f.md) |
+| [onBrightnessInfoChange](arkts-arkui-display-onbrightnessinfochange-f.md) |
+| [onCaptureStatusChange](arkts-arkui-display-oncapturestatuschange-f.md) |
+| [onChange](arkts-arkui-display-onchange-f.md) |
+| [onChangeWithAttribute](arkts-arkui-display-onchangewithattribute-f.md) |
+| [onFoldAngleChange](arkts-arkui-display-onfoldanglechange-f.md) |
+| [onFoldDisplayModeChange](arkts-arkui-display-onfolddisplaymodechange-f.md) |
+| [onFoldStatusChange](arkts-arkui-display-onfoldstatuschange-f.md) |
+| [onRemove](arkts-arkui-display-onremove-f.md) |
+| [setVirtualScreenSurface](arkts-arkui-display-setvirtualscreensurface-f.md) |
 
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [addVirtualScreenBlocklist](arkts-arkui-display-addvirtualscreenblocklist-f-sys.md) | Adds windows to the list of windows that are not allowed to be displayed during casting. This API takes effect only for the main window of an application or system windows. This API uses a promise to return the result. |
-| [addVirtualScreenSurface](arkts-arkui-display-addvirtualscreensurface-f-sys.md) | Add surface for the virtual screen. |
-| [hasPrivateWindow](arkts-arkui-display-hasprivatewindow-f-sys.md) | Checks whether there is a visible privacy window on a display. The window privacy mode can be set by calling setWindowPrivacyMode(). The content in the privacy window cannot be captured or recorded. |
-| [off_privateModeChange](arkts-arkui-display-offprivatemodechange-f-sys.md) | Unsubscribes from privacy mode changes of this display. |
-| [offPrivateModeChange](arkts-arkui-display-offprivatemodechange-f-sys.md) | Unregister the callback for private mode changes. |
-| [on_privateModeChange](arkts-arkui-display-onprivatemodechange-f-sys.md) | Subscribes to privacy mode changes of this display. When there is a privacy window in the foreground of the display, the display is in privacy mode, and the content in the privacy window cannot be captured or recorded. |
-| [onPrivateModeChange](arkts-arkui-display-onprivatemodechange-f-sys.md) | Register the callback for private mode changes. |
-| [removeVirtualScreenBlocklist](arkts-arkui-display-removevirtualscreenblocklist-f-sys.md) | Removes windows from the list of windows that are not allowed to be displayed during casting. This API takes effect only for the main window of an application or system windows. This API uses a promise to return the result. |
-| [removeVirtualScreenSurface](arkts-arkui-display-removevirtualscreensurface-f-sys.md) | Remove surface for the virtual screen. |
-| [setFoldDisplayMode](arkts-arkui-display-setfolddisplaymode-f-sys.md) | Sets the display mode of the foldable device. |
-| [setFoldDisplayMode](arkts-arkui-display-setfolddisplaymode-f-sys.md) | Sets the display mode of the foldable device, with the reason for the change specified. |
-| [setFoldStatusLocked](arkts-arkui-display-setfoldstatuslocked-f-sys.md) | Sets whether to lock the current fold status of the foldable device. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [addVirtualScreenBlocklist](arkts-arkui-display-addvirtualscreenblocklist-f-sys.md) |
+| [addVirtualScreenSurface](arkts-arkui-display-addvirtualscreensurface-f-sys.md) |
+| [hasPrivateWindow](arkts-arkui-display-hasprivatewindow-f-sys.md) |
+| [off](arkts-arkui-display-off-f-sys.md#offprivatemodechange) |
+| [offPrivateModeChange](arkts-arkui-display-offprivatemodechange-f-sys.md) |
+| [on](arkts-arkui-display-on-f-sys.md#onprivatemodechange) |
+| [onPrivateModeChange](arkts-arkui-display-onprivatemodechange-f-sys.md) |
+| [removeVirtualScreenBlocklist](arkts-arkui-display-removevirtualscreenblocklist-f-sys.md) |
+| [removeVirtualScreenSurface](arkts-arkui-display-removevirtualscreensurface-f-sys.md) |
+| [setFoldDisplayMode](arkts-arkui-display-setfolddisplaymode-f-sys.md) |
+| [setFoldDisplayMode](arkts-arkui-display-setfolddisplaymode-f-sys.md) |
+| [setFoldStatusLocked](arkts-arkui-display-setfoldstatuslocked-f-sys.md) |
 <!--DelEnd-->
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) | Describes the screen brightness information. The information comes from the underlying screen data. |
-| [CutoutInfo](arkts-arkui-display-cutoutinfo-i.md) | Describes the unusable area of a display, including punch hole, notch, and curved area of a waterfall display. |
-| [Display](arkts-arkui-display-display-i.md) | Implements a Display instance, with attributes and APIs defined.Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md) to obtain a Display instance. |
-| [DisplayPhysicalResolution](arkts-arkui-display-displayphysicalresolution-i.md) | Describes the display mode of a device and the corresponding physical screen resolution information. |
-| [FoldCreaseRegion](arkts-arkui-display-foldcreaseregion-i.md) | Describes the crease region of a foldable device. |
-| [Position](arkts-arkui-display-position-i.md) | Describes a coordinate position. In the global coordinate system, the origin is the top-left corner of the primary screen. In the relative coordinate system, the origin is the top-left corner of the specified screen. |
-| [Rect](arkts-arkui-display-rect-i.md) | Describes a rectangle on the display. |
-| [RelativePosition](arkts-arkui-display-relativeposition-i.md) | Describes a coordinate position in the relative coordinate system, with the origin in the top-left corner of the screen specified by **displayId**. |
-| [RoundedCorner](arkts-arkui-display-roundedcorner-i.md) | Describes a single rounded corner on the screen. |
-| [VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md) | Describes the virtual screen parameters. |
-| [WaterfallDisplayAreaRects](arkts-arkui-display-waterfalldisplayarearects-i.md) | Describes the curved area on a waterfall display. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) |
+| [CutoutInfo](arkts-arkui-display-cutoutinfo-i.md) |
+| [Display](arkts-arkui-display-display-i.md) |
+| [DisplayPhysicalResolution](arkts-arkui-display-displayphysicalresolution-i.md) |
+| [FoldCreaseRegion](arkts-arkui-display-foldcreaseregion-i.md) |
+| [Position](arkts-arkui-display-position-i.md) |
+| [Rect](arkts-arkui-display-rect-i.md) |
+| [RelativePosition](arkts-arkui-display-relativeposition-i.md) |
+| [RoundedCorner](arkts-arkui-display-roundedcorner-i.md) |
+| [VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md) |
+| [WaterfallDisplayAreaRects](arkts-arkui-display-waterfalldisplayarearects-i.md) |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [Display](arkts-arkui-display-display-i-sys.md) | Implements a Display instance, with attributes and APIs defined.Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md) to obtain a Display instance. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Display](arkts-arkui-display-display-i-sys.md) |
 <!--DelEnd-->
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [CornerType](arkts-arkui-display-cornertype-e.md) | Enumerates the types of corners on the screen. |
-| [DisplaySourceMode](arkts-arkui-display-displaysourcemode-e.md) | Enumerates the display modes for screen content. |
-| [DisplayState](arkts-arkui-display-displaystate-e.md) | Enumerates the states of a display. |
-| [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | Enumerates the display modes of a foldable device. |
-| [FoldStatus](arkts-arkui-display-foldstatus-e.md) | Enumerates the fold statuses of a foldable device. For dual-fold axis devices, when oriented with the charging port at the bottom, the hinges are identified from right to left as the first and second fold axes, respectively. |
-| [Orientation](arkts-arkui-display-orientation-e.md) | Enumerates the orientations of a display. |
-| [ScreenShape](arkts-arkui-display-screenshape-e.md) | Enumerates the screen shapes of a display. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CornerType](arkts-arkui-display-cornertype-e.md) |
+| [DisplaySourceMode](arkts-arkui-display-displaysourcemode-e.md) |
+| [DisplayState](arkts-arkui-display-displaystate-e.md) |
+| [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) |
+| [FoldStatus](arkts-arkui-display-foldstatus-e.md) |
+| [Orientation](arkts-arkui-display-orientation-e.md) |
+| [ScreenShape](arkts-arkui-display-screenshape-e.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [BrightnessCallback](arkts-arkui-display-brightnesscallback-t.md) | Defines the callback function used to listen for screen brightness information. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BrightnessCallback](arkts-arkui-display-brightnesscallback-t.md) |

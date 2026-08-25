@@ -4,7 +4,7 @@ Defines a unique network ID.
 
 **Since:** 11
 
-<!--Device-policy-export interface NetUidRuleInfo--><!--Device-policy-export interface NetUidRuleInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -28,7 +28,7 @@ Rule that specifies whether the application specified by a given UID is allowed 
 
 **Since:** 11
 
-<!--Device-NetUidRuleInfo-rule: NetUidRule--><!--Device-NetUidRuleInfo-rule: NetUidRule-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -37,18 +37,17 @@ Rule that specifies whether the application specified by a given UID is allowed 
 ## uid
 
 ```TypeScript
-uid: int
+uid: number
 ```
 
 Traffic alarm threshold. The default value is **DATA_USAGE_UNKNOWN**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 11
 
-<!--Device-NetUidRuleInfo-uid: int--><!--Device-NetUidRuleInfo-uid: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
-

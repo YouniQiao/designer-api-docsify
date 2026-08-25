@@ -4,7 +4,7 @@ Configures the web layout mode, which controls the page layout of web content an
 
 **Since:** 11
 
-<!--Device-unnamed-declare enum WebLayoutMode--><!--Device-unnamed-declare enum WebLayoutMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,9 +18,9 @@ Web layout follows the system. This is suitable for traditional web page layout 
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-WebLayoutMode-NONE = 0--><!--Device-WebLayoutMode-NONE = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -34,9 +34,8 @@ Web adaptive layout based on page size. This is suitable for scenarios where the
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-WebLayoutMode-FIT_CONTENT = 1--><!--Device-WebLayoutMode-FIT_CONTENT = 1-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

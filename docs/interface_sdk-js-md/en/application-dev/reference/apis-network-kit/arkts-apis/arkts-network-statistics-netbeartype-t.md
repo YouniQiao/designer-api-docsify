@@ -6,11 +6,10 @@ type NetBearType = connection.NetBearType
 
 Defines the network type.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-statistics-type NetBearType = connection.NetBearType--><!--Device-statistics-type NetBearType = connection.NetBearType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Property type:** connection.NetBearType
-

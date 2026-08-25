@@ -8,22 +8,28 @@ import { DynamicLayout, DynamicLayoutAttribute } from '@kit.ArkUI';
 
 ## 汇总
 
+### 函数
+
+| 名称 |
+| --- |
+| [DynamicLayout](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayout-f.md) |
+
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-c.md) | 支持通用属性。支持通用事件。 |
+| 名称 |
+| --- |
+| [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-c.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [DynamicLayoutInterface](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutinterface-i.md) | 动态布局容器组件，支持在运行时动态切换不同的布局算法，不改变子组件的状态。 |
+| 名称 |
+| --- |
+| [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-i.md) |
+| [DynamicLayoutInterface](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutinterface-i.md) |
 
 ### 常量
 
-| 名称 | 说明 |
-| --- | --- |
-| [DynamicLayout](arkts-arkui-arkui-components-arkdynamiclayout-con.md#dynamiclayout) | 动态布局容器组件，支持在运行时动态切换不同的布局算法，不改变子组件的状态。 |
-| [DynamicLayoutInstance](arkts-arkui-arkui-components-arkdynamiclayout-con.md#dynamiclayoutinstance) | Defines DynamicLayout Component instance. |
-
+| 名称 |
+| --- |
+| [DynamicLayout](arkts-arkui-arkui-components-arkdynamiclayout-con.md#dynamiclayout) |
+| [DynamicLayoutInstance](arkts-arkui-arkui-components-arkdynamiclayout-con.md#dynamiclayoutinstance) |

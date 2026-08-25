@@ -4,9 +4,9 @@ class of window extension ability.
 
 **Since:** 9
 
-**Deprecated since:** 21
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-unnamed-declare class WindowExtensionAbility--><!--Device-unnamed-declare class WindowExtensionAbility-End-->
+**Deprecated since:** 21
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -28,11 +28,11 @@ Called back when a window extension is first connected to an ability.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WindowExtensionAbility-onConnect(want: Want): void--><!--Device-WindowExtensionAbility-onConnect(want: Want): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -40,9 +40,9 @@ Called back when a window extension is first connected to an ability.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Indicates connection information about the Window ability. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
 
 **Examples**
 
@@ -67,11 +67,11 @@ Called back when all abilities connected to a window extension are disconnected.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WindowExtensionAbility-onDisconnect(want: Want): void--><!--Device-WindowExtensionAbility-onDisconnect(want: Want): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -79,9 +79,9 @@ Called back when all abilities connected to a window extension are disconnected.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Indicates disconnection information about the window extension. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
 
 **Examples**
 
@@ -106,11 +106,11 @@ Called back when window is created.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WindowExtensionAbility-onWindowReady(window: window.Window): void--><!--Device-WindowExtensionAbility-onWindowReady(window: window.Window): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -118,9 +118,9 @@ Called back when window is created.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| window | window.Window | Yes | Current Window instance. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [window](arkts-arkui-window-n.md) | window.Window | Yes |
 
 **Examples**
 
@@ -151,13 +151,12 @@ Indicates window extension ability context.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WindowExtensionAbility-context: WindowExtensionContext--><!--Device-WindowExtensionAbility-context: WindowExtensionContext-End-->
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
-

@@ -2,9 +2,9 @@
 
 Defines the parameters for expanding a screen.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-screen-interface ExpandOption--><!--Device-screen-interface ExpandOption-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -24,11 +24,11 @@ screenId: long
 
 Screen ID. The value must be an integer.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ExpandOption-screenId: long--><!--Device-ExpandOption-screenId: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -42,11 +42,11 @@ startX: long
 
 Start X coordinate of the screen. in px. The value must be an integer.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ExpandOption-startX: long--><!--Device-ExpandOption-startX: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -60,13 +60,12 @@ startY: long
 
 Start Y coordinate of the screen. in px. The value must be an integer.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ExpandOption-startY: long--><!--Device-ExpandOption-startY: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
-

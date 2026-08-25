@@ -1,14 +1,12 @@
-# ManualExposureQuery (System API)
+# ManualExposureQuery
 
 Provides APIs to obtain the manual exposure range supported.
 
-**Since:** 23
+**Since:** 24
 
-<!--Device-camera-interface ManualExposureQuery--><!--Device-camera-interface ManualExposureQuery-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -18,6 +16,12 @@ import { camera } from '@kit.CameraKit';
 
 ## getExposureBiasStep
 
+ArkTS-Dyn:
+```TypeScript
+getExposureBiasStep(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getExposureBiasStep(): double
 ```
@@ -26,29 +30,35 @@ Get exposure bias step.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-ManualExposureQuery-getExposureBiasStep(): double--><!--Device-ManualExposureQuery-getExposureBiasStep(): double-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | exposure bias step. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, session or inputdevice maybe abnormal. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| Error Code ID |
+| --- |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 ## getSupportedExposureDurationRange
 
+ArkTS-Dyn:
+```TypeScript
+getSupportedExposureDurationRange(): Array<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getSupportedExposureDurationRange(): Array<int>
 ```
@@ -57,22 +67,21 @@ Gets the supported manual exposure duration range, units: microseconds.
 
 **Since:** 24
 
-**Atomic service API:** This API can be used in atomic services since API version 24.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-ManualExposureQuery-getSupportedExposureDurationRange(): Array<int>--><!--Device-ManualExposureQuery-getSupportedExposureDurationRange(): Array<int>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;int&gt; | The array of manual exposure range. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;int & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, session or inputdevice maybe abnormal. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
-
+| Error Code ID |
+| --- |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |

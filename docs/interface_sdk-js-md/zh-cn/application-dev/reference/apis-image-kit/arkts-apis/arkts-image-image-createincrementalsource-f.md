@@ -16,21 +16,21 @@ Creates an ImageSource instance based on the buffer in incremental.
 
 **起始版本：** 23
 
-<!--Device-image-function createIncrementalSource(buf: ArrayBuffer): ImageSource | undefined--><!--Device-image-function createIncrementalSource(buf: ArrayBuffer): ImageSource | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buf | ArrayBuffer | 是 | The buffer of the image. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buf | ArrayBuffer | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| 类型 |
+| --- |
+| ImageSource \| undefined |
 
 
 ## createIncrementalSource
@@ -44,20 +44,19 @@ Creates an ImageSource instance based on the buffer in incremental.
 
 **起始版本：** 23
 
-<!--Device-image-function createIncrementalSource(buf: ArrayBuffer,       options?: SourceOptions): ImageSource | undefined--><!--Device-image-function createIncrementalSource(buf: ArrayBuffer,       options?: SourceOptions): ImageSource | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buf | ArrayBuffer | 是 | The buffer of the image. |
-| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | 否 | The config of source. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buf | ArrayBuffer | 是 |
+| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
-
+| 类型 |
+| --- |
+| ImageSource \| undefined |

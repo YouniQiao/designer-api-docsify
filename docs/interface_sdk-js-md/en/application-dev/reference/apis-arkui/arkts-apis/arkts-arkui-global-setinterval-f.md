@@ -14,23 +14,22 @@ Sets the interval for repeatedly calling a function.
 
 **Since:** 5
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-unnamed-export declare function setInterval(  handler: Function,  delay: number,  ...arguments: any[]): number--><!--Device-unnamed-export declare function setInterval(  handler: Function,  delay: number,  ...arguments: any[]): number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| handler | Function | Yes | Indicates the function to be called repeatedly at the interval. |
-| delay | number | Yes | Indicates the interval between each two calls, in milliseconds. The function will be called after this delay. |
-| arguments | any[] | Yes | Indicates additional arguments to pass to "handler" when the timer goes off. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| handler | Function | Yes |
+| delay | number | Yes |
+| arguments | any[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Returns the timer ID. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |

@@ -16,23 +16,22 @@ function getInputMethodController(): InputMethodController
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [getController](arkts-ime-inputmethod-getcontroller-f.md)
-
-<!--Device-inputMethod-function getInputMethodController(): InputMethodController--><!--Device-inputMethod-function getInputMethodController(): InputMethodController-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) | 回调返回当前客户端实例。 |
+| 类型 |
+| --- |
+| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) |
 
 **示例**
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getInputMethodController();
 ```
-

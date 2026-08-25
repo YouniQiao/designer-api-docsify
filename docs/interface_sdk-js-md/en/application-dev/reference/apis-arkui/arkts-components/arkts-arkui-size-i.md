@@ -4,7 +4,7 @@ Provides size information of the **DrawingRenderingContext** object.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface Size--><!--Device-unnamed-declare interface Size-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Height of the **DrawingRenderingContext** object, which corresponds to the heigh
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Size-height: number--><!--Device-Size-height: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ Width of the **DrawingRenderingContext** object, which corresponds to the width 
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-Size-width: number--><!--Device-Size-width: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

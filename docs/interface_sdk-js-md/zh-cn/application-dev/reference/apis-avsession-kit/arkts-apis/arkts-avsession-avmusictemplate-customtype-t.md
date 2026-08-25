@@ -8,16 +8,15 @@ type CustomType = 'USER_INFO' | 'TAB' | 'COMPILATION' | 'SETTINGS'
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-avMusicTemplate-type CustomType = 'USER_INFO' | 'TAB' | 'COMPILATION' | 'SETTINGS'--><!--Device-avMusicTemplate-type CustomType = 'USER_INFO' | 'TAB' | 'COMPILATION' | 'SETTINGS'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-| 类型 | 说明 |
-| --- | --- |
-| 'USER_INFO' |  |
-| 'TAB' |  |
-| 'COMPILATION' |  |
-| 'SETTINGS' |  |
-
+| 类型 |
+| --- |
+| 'USER_INFO' |
+| 'TAB' |
+| 'COMPILATION' |
+| 'SETTINGS' |

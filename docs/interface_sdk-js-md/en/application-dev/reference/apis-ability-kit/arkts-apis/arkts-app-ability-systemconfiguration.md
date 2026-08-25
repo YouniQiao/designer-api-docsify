@@ -4,9 +4,9 @@ The class of a system configuration.@namespace systemConfiguration
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-unnamed-declare namespace systemConfiguration--><!--Device-unnamed-declare namespace systemConfiguration-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -20,21 +20,20 @@ import { systemConfiguration } from '@kit.AbilityKit';
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) | System configuration updated callback. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [OnColorModeUpdatedFn](arkts-ability-systemconfiguration-oncolormodeupdatedfn-t.md) | Defines an OnColorModeUpdatedFn function. |
-| [OnFontIdUpdatedFn](arkts-ability-systemconfiguration-onfontidupdatedfn-t.md) | Defines an OnFontIdUpdatedFn function. |
-| [OnFontSizeScaleUpdatedFn](arkts-ability-systemconfiguration-onfontsizescaleupdatedfn-t.md) | Defines an OnFontSizeScaleUpdatedFn function. |
-| [OnFontWeightScaleUpdatedFn](arkts-ability-systemconfiguration-onfontweightscaleupdatedfn-t.md) | Defines an OnFontWeightScaleUpdatedFn function. |
-| [OnHasPointerDeviceUpdatedFn](arkts-ability-systemconfiguration-onhaspointerdeviceupdatedfn-t.md) | Defines an OnHasPointerDeviceUpdatedFn function. |
-| [OnLanguageUpdatedFn](arkts-ability-systemconfiguration-onlanguageupdatedfn-t.md) | Defines an OnLanguageUpdatedFn function. |
-| [OnLocaleUpdatedFn](arkts-ability-systemconfiguration-onlocaleupdatedfn-t.md) | Defines an OnLocaleUpdatedFn function. |
-| [OnMCCUpdatedFn](arkts-ability-systemconfiguration-onmccupdatedfn-t.md) | Defines an OnMCCUpdatedFn function. |
-| [OnMNCUpdatedFn](arkts-ability-systemconfiguration-onmncupdatedfn-t.md) | Defines an OnMNCUpdatedFn function. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [OnColorModeUpdatedFn](arkts-ability-systemconfiguration-oncolormodeupdatedfn-t.md) |
+| [OnFontIdUpdatedFn](arkts-ability-systemconfiguration-onfontidupdatedfn-t.md) |
+| [OnFontSizeScaleUpdatedFn](arkts-ability-systemconfiguration-onfontsizescaleupdatedfn-t.md) |
+| [OnFontWeightScaleUpdatedFn](arkts-ability-systemconfiguration-onfontweightscaleupdatedfn-t.md) |
+| [OnHasPointerDeviceUpdatedFn](arkts-ability-systemconfiguration-onhaspointerdeviceupdatedfn-t.md) |
+| [OnLanguageUpdatedFn](arkts-ability-systemconfiguration-onlanguageupdatedfn-t.md) |
+| [OnLocaleUpdatedFn](arkts-ability-systemconfiguration-onlocaleupdatedfn-t.md) |
+| [OnMCCUpdatedFn](arkts-ability-systemconfiguration-onmccupdatedfn-t.md) |
+| [OnMNCUpdatedFn](arkts-ability-systemconfiguration-onmncupdatedfn-t.md) |

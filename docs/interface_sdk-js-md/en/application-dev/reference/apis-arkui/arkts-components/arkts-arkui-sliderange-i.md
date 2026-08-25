@@ -17,7 +17,7 @@ Defines the callback type used in **SlideRange**.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface SlideRange--><!--Device-unnamed-declare interface SlideRange-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +38,11 @@ Start of the slide range.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SlideRange-from?: number--><!--Device-SlideRange-from?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,11 +58,10 @@ End of the slide range.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-SlideRange-to?: number--><!--Device-SlideRange-to?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

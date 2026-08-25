@@ -2,9 +2,9 @@
 
 端云共享结果的返回值。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-sharing-interface Result--><!--Device-sharing-interface Result-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -24,11 +24,11 @@ code: int
 
 错误码。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-Result-code: int--><!--Device-Result-code: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -44,9 +44,9 @@ description?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-Result-description?: string--><!--Device-Result-description?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -62,11 +62,10 @@ value?: T
 
 **类型：** T
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-Result-value?: T--><!--Device-Result-value?: T-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
-

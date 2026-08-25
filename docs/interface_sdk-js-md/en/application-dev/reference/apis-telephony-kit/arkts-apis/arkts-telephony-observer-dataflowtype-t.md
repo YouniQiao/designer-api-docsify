@@ -6,11 +6,10 @@ type DataFlowType = data.DataFlowType
 
 Defines the cellular data flow type.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-observer-type DataFlowType = data.DataFlowType--><!--Device-observer-type DataFlowType = data.DataFlowType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Property type:** data.DataFlowType
-

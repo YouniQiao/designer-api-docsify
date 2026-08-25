@@ -4,11 +4,11 @@ Describes the callback invoked for audio interruption or focus gain events.When 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [InterruptEvent](arkts-audio-audio-interruptevent-i.md)
-
-<!--Device-audio-interface InterruptAction--><!--Device-audio-interface InterruptAction-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -30,11 +30,11 @@ Event type. The value TYPE_ACTIVATED means the focus gain event, and TYPE_INTERR
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** eventType
-
-<!--Device-InterruptAction-actionType: InterruptActionType--><!--Device-InterruptAction-actionType: InterruptActionType-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -50,11 +50,11 @@ Whether the focus is gained or released. **true** if the focus is gained or rele
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [hintType](arkts-audio-audio-interruptevent-i.md#hinttype)
-
-<!--Device-InterruptAction-activated?: boolean--><!--Device-InterruptAction-activated?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -70,11 +70,11 @@ Hint provided along with the audio interruption event.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [hintType](arkts-audio-audio-interruptevent-i.md#hinttype)
-
-<!--Device-InterruptAction-hint?: InterruptHint--><!--Device-InterruptAction-hint?: InterruptHint-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -90,11 +90,10 @@ Type of the audio interruption event.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** eventType
 
-<!--Device-InterruptAction-type?: InterruptType--><!--Device-InterruptAction-type?: InterruptType-End-->
-
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
-

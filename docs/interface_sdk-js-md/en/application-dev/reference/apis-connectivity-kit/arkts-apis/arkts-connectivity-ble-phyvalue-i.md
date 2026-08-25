@@ -4,7 +4,7 @@ Describes the parameters of the Ble phy.
 
 **Since:** 23
 
-<!--Device-ble-interface PhyValue--><!--Device-ble-interface PhyValue-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -26,9 +26,9 @@ Preferred coded phy mode.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-PhyValue-phyMode?: CodedPhyMode--><!--Device-PhyValue-phyMode?: CodedPhyMode-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -44,9 +44,9 @@ Receiver phy.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-PhyValue-rxPhy: BlePhy--><!--Device-PhyValue-rxPhy: BlePhy-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -62,9 +62,8 @@ Transmitter phy.
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PhyValue-txPhy: BlePhy--><!--Device-PhyValue-txPhy: BlePhy-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

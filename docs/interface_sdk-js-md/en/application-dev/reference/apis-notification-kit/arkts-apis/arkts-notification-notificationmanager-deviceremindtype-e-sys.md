@@ -2,9 +2,9 @@
 
 Defines the notification reminder type.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-notificationManager-export enum DeviceRemindType--><!--Device-notificationManager-export enum DeviceRemindType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -18,9 +18,9 @@ IDLE_DONOT_REMIND = 0
 
 The device is not in use. No notification is required.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DeviceRemindType-IDLE_DONOT_REMIND = 0--><!--Device-DeviceRemindType-IDLE_DONOT_REMIND = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -34,9 +34,9 @@ IDLE_REMIND = 1
 
 The device is not in use.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DeviceRemindType-IDLE_REMIND = 1--><!--Device-DeviceRemindType-IDLE_REMIND = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -50,9 +50,9 @@ ACTIVE_DONOT_REMIND = 2
 
 The device is in use. No notification is required.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DeviceRemindType-ACTIVE_DONOT_REMIND = 2--><!--Device-DeviceRemindType-ACTIVE_DONOT_REMIND = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -66,11 +66,10 @@ ACTIVE_REMIND = 3
 
 The device is in use.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DeviceRemindType-ACTIVE_REMIND = 3--><!--Device-DeviceRemindType-ACTIVE_REMIND = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

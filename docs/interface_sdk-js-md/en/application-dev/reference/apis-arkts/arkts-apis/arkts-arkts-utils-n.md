@@ -1,8 +1,8 @@
-# utils
+# utils(Defines the utils for ArkTS)
 
 **Since:** 12
 
-<!--Device-unnamed-declare namespace utils--><!--Device-unnamed-declare namespace utils-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -16,20 +16,19 @@ import { ArkTSUtils } from '@kit.ArkTS';
 
 ### Namespaces
 
-| Name | Description |
-| --- | --- |
-| [locks](arkts-arkts-utils-locks-n.md) | Asynchronous lock. |
-| [ASON](arkts-arkts-utils-ason-n.md) | ArkTS JSON utils. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [locks(Defines the utils for ArkTS)](arkts-arkts-utils-locks-n.md) |
+| [ASON(Defines the utils for ArkTS)](arkts-arkts-utils-ason-n.md) |
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [isSendable](arkts-arkts-utils-issendable-f.md) | Checks whether an ArkTS value is sendable. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [isSendable(Defines the utils for ArkTS)](arkts-arkts-utils-issendable-f.md) |
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [SendableLruCache](arkts-arkts-utils-sendablelrucache-c.md) | Object used for store least recently used sendable Object. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SendableLruCache(Defines the utils for ArkTS)](arkts-arkts-utils-sendablelrucache-c.md) |

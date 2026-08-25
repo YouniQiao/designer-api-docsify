@@ -16,11 +16,11 @@ function onTemplateFormDetailInfoChange(callback: formInfo.TemplateFormDetailInf
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-formHost-function onTemplateFormDetailInfoChange(callback: formInfo.TemplateFormDetailInfoCallback): void--><!--Device-formHost-function onTemplateFormDetailInfoChange(callback: formInfo.TemplateFormDetailInfoCallback): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -28,17 +28,17 @@ function onTemplateFormDetailInfoChange(callback: formInfo.TemplateFormDetailInf
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | formInfo.TemplateFormDetailInfoCallback | 是 | 回调函数，监控模板卡片静态配置信息变化。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | formInfo.TemplateFormDetailInfoCallback | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
 
 **示例**
 
@@ -80,4 +80,3 @@ try {
   console.error(`catch error, code: ${error.code}, message: ${error.message}`);
 }
 ```
-

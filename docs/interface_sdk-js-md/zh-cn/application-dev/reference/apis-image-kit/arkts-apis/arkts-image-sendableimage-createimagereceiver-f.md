@@ -16,29 +16,29 @@ function createImageReceiver(size: image.Size, format: image.ImageFormat, capaci
 
 **起始版本：** 12
 
-<!--Device-sendableImage-function createImageReceiver(size: image.Size, format: image.ImageFormat, capacity: number): ImageReceiver--><!--Device-sendableImage-function createImageReceiver(size: image.Size, format: image.ImageFormat, capacity: number): ImageReceiver-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| size | image.Size | 是 | 图像的默认大小。 |
-| format | image.ImageFormat | 是 | 图像格式，取值为image.ImageFormat常量，目前仅支持 ImageFormat:JPEG。 |
-| capacity | number | 是 | 同时访问的最大图像数。该参数仅作为期望值，实际capacity由设备硬件决定。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| size | image.Size | 是 |
+| format | image.ImageFormat | 是 |
+| capacity | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ImageReceiver | 如果操作成功，则返回ImageReceiver实例。 |
+| 类型 |
+| --- |
+| [ImageReceiver](arkts-image-image-imagereceiver-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -54,4 +54,3 @@ async function CreateImageReceiver() {
     let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
 }
 ```
-

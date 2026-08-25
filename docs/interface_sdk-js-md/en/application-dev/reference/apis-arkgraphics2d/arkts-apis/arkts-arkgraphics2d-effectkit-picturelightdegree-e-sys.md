@@ -4,7 +4,7 @@ Enum for the brightness of image colors.
 
 **Since:** 26.0.0
 
-<!--Device-effectKit-enum PictureLightDegree--><!--Device-effectKit-enum PictureLightDegree-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -20,11 +20,11 @@ Image with unknown brightness.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
-
-<!--Device-PictureLightDegree-UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE = 0--><!--Device-PictureLightDegree-UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -40,11 +40,11 @@ Extremely bright image.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
-
-<!--Device-PictureLightDegree-EXTREMELY_LIGHT_COLOR_PICTURE = 1--><!--Device-PictureLightDegree-EXTREMELY_LIGHT_COLOR_PICTURE = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -60,11 +60,11 @@ Bright image.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
-
-<!--Device-PictureLightDegree-LIGHT_COLOR_PICTURE = 2--><!--Device-PictureLightDegree-LIGHT_COLOR_PICTURE = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -80,11 +80,11 @@ Dark image.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
-
-<!--Device-PictureLightDegree-DARK_COLOR_PICTURE = 3--><!--Device-PictureLightDegree-DARK_COLOR_PICTURE = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -100,11 +100,11 @@ Extremely dark image.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
-
-<!--Device-PictureLightDegree-EXTREMELY_DARK_COLOR_PICTURE = 4--><!--Device-PictureLightDegree-EXTREMELY_DARK_COLOR_PICTURE = 4-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -120,11 +120,11 @@ Colorful image.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
-
-<!--Device-PictureLightDegree-FLOWERY_PICTURE = 5--><!--Device-PictureLightDegree-FLOWERY_PICTURE = 5-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -140,13 +140,12 @@ Extremely colorful image.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
-<!--Device-PictureLightDegree-EXTREMELY_FLOWERY_PICTURE = 6--><!--Device-PictureLightDegree-EXTREMELY_FLOWERY_PICTURE = 6-End-->
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **System API:** This is a system API.
-

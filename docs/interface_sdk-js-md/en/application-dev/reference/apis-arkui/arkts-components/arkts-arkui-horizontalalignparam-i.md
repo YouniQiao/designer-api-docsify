@@ -4,7 +4,7 @@ Defines the horizontal align rule of relative container.@interface HorizontalAli
 
 **Since:** 23
 
-<!--Device-unnamed-declare interface HorizontalAlignParam--><!--Device-unnamed-declare interface HorizontalAlignParam-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Sets the horizontal alignment relative to the anchor component.Anonymous Object 
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
-
-<!--Device-HorizontalAlignParam-align: HorizontalAlign--><!--Device-HorizontalAlignParam-align: HorizontalAlign-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ Specifies the anchor component Anonymous Object Rectification
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
-<!--Device-HorizontalAlignParam-anchor: string--><!--Device-HorizontalAlignParam-anchor: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

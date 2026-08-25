@@ -23,24 +23,24 @@ Connects this ability to a ServiceAbility.
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-featureAbility-function connectAbility(request: Want, options: ConnectOptions): number--><!--Device-featureAbility-function connectAbility(request: Want, options: ConnectOptions): number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| request | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | ServiceAbility to connect. |
-| options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes | Connection options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| request | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
+| options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | ID of the connected ServiceAbility. The ID starts from 0 and is incremented by 1 each time a connection is set up. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -67,4 +67,3 @@ let connectId = featureAbility.connectAbility(
   },
 );
 ```
-

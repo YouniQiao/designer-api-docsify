@@ -4,7 +4,7 @@ Defines the moving photo view options.@interface MovingPhotoViewOptions
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface MovingPhotoViewOptions--><!--Device-unnamed-declare interface MovingPhotoViewOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,9 +26,9 @@ controller of MovingPhotoView.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-MovingPhotoViewOptions-controller?: MovingPhotoViewController--><!--Device-MovingPhotoViewOptions-controller?: MovingPhotoViewController-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -44,9 +44,9 @@ image ai options of MovingPhotoView.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-MovingPhotoViewOptions-imageAIOptions?: ImageAIOptions--><!--Device-MovingPhotoViewOptions-imageAIOptions?: ImageAIOptions-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -62,9 +62,8 @@ moving photo data.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-MovingPhotoViewOptions-movingPhoto: photoAccessHelper.MovingPhoto--><!--Device-MovingPhotoViewOptions-movingPhoto: photoAccessHelper.MovingPhoto-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

@@ -2,9 +2,9 @@
 
 表示设备类型的枚举。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-audio-enum DeviceType--><!--Device-audio-enum DeviceType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -16,9 +16,9 @@ ACCESSORY = 26
 
 辅助设备（例如遥控器上的麦克风等）。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-DeviceType-ACCESSORY = 26--><!--Device-DeviceType-ACCESSORY = 26-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -32,9 +32,9 @@ BLUETOOTH_SPP = 33
 
 蓝牙设备SPP（Serial Port Profile）连接。
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-DeviceType-BLUETOOTH_SPP = 33--><!--Device-DeviceType-BLUETOOTH_SPP = 33-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -48,11 +48,10 @@ NEARLINK_PORT = 34
 
 星闪设备PORT连接。
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-DeviceType-NEARLINK_PORT = 34--><!--Device-DeviceType-NEARLINK_PORT = 34-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
-

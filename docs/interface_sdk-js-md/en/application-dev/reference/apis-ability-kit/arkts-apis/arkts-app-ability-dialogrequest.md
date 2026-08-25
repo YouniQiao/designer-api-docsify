@@ -7,9 +7,9 @@ The dialogRequest module provides APIs related to modal dialog box processing, i
 > implements modal dialog boxes, you can use the APIs to obtain the request information and request callback and
 > return the request result.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-declare namespace dialogRequest--><!--Device-unnamed-declare namespace dialogRequest-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -23,23 +23,22 @@ import { dialogRequest } from '@kit.AbilityKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getRequestCallback](arkts-ability-dialogrequest-getrequestcallback-f.md) | Obtains the request callback from Want. |
-| [getRequestInfo](arkts-ability-dialogrequest-getrequestinfo-f.md) | > **NOTE：**&gt; > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, > the request information can be obtained from Want. If this API is used in other scenarios, no return value is > obtained. Obtains the request information from Want. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getRequestCallback](arkts-ability-dialogrequest-getrequestcallback-f.md) |
+| [getRequestInfo](arkts-ability-dialogrequest-getrequestinfo-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [RequestCallback](arkts-ability-dialogrequest-requestcallback-i.md) | Provides a callback for setting the modal dialog box request result. |
-| [RequestInfo](arkts-ability-dialogrequest-requestinfo-i.md) | Defines the request information, which is used as an input parameter for binding the modal dialog box. |
-| [RequestResult](arkts-ability-dialogrequest-requestresult-i.md) | Defines the result of the request for the modal dialog box. It contains **ResultCode** and **ResultWant**. |
-| [WindowRect](arkts-ability-dialogrequest-windowrect-i.md) | Defines the location attributes of a modal dialog box. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [RequestCallback](arkts-ability-dialogrequest-requestcallback-i.md) |
+| [RequestInfo](arkts-ability-dialogrequest-requestinfo-i.md) |
+| [RequestResult](arkts-ability-dialogrequest-requestresult-i.md) |
+| [WindowRect](arkts-ability-dialogrequest-windowrect-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [ResultCode](arkts-ability-dialogrequest-resultcode-e.md) | Enumerates the result codes of the request for the modal dialog box. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ResultCode](arkts-ability-dialogrequest-resultcode-e.md) |

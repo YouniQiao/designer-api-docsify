@@ -14,36 +14,36 @@ function addWatcher(watcher: Watcher): AppEventPackageHolder
 
 Adds an event watcher. You can use the callback of the event watcher to subscribe to events.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-hiAppEvent-function addWatcher(watcher: Watcher): AppEventPackageHolder--><!--Device-hiAppEvent-function addWatcher(watcher: Watcher): AppEventPackageHolder-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| watcher | Watcher | Yes | Event watcher. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-watcher-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [AppEventPackageHolder](arkts-performanceanalysis-hiappevent-appeventpackageholder-c.md) | Subscription data holder. If the subscription fails, **null** is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [AppEventPackageHolder](arkts-performanceanalysis-hiappevent-appeventpackageholder-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
-| [11102001](../errorcode-hiappevent.md#11102001-invalid-watcher-name) | Invalid watcher name. Possible causes: 1. Contain invalid characters; <br>2. Length is invalid. |
-| [11102002](../errorcode-hiappevent.md#11102002-invalid-filtering-event-domain-name) | Invalid filtering event domain. Possible causes: 1. Contain invalid characters; <br>2. Length is invalid. |
-| [11102003](../errorcode-hiappevent.md#11102003-invalid-event-number) | Invalid row value. Possibly caused by the row value is less than zero. |
-| [11102004](../errorcode-hiappevent.md#11102004-invalid-event-size) | Invalid size value. Possibly caused by the size value is less than zero. |
-| [11102005](../errorcode-hiappevent.md#11102005-invalid-timeout-value) | Invalid timeout value. Possibly caused by the timeout value is less than zero. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11102001](../errorcode-hiappevent.md#11102001-invalid-watcher-name) |
+| [11102002](../errorcode-hiappevent.md#11102002-invalid-filtering-event-domain-name) |
+| [11102003](../errorcode-hiappevent.md#11102003-invalid-event-number) |
+| [11102004](../errorcode-hiappevent.md#11102004-invalid-event-size) |
+| [11102005](../errorcode-hiappevent.md#11102005-invalid-timeout-value) |
 
 **Examples**
 
@@ -142,4 +142,3 @@ hiAppEvent.addWatcher({
   }
 });
 ```
-

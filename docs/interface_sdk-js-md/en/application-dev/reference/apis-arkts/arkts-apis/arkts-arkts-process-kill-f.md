@@ -16,26 +16,26 @@ Sends a signal to a specified process to terminate it.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [kill](arkts-arkts-process-processmanager-c.md#kill)
-
-<!--Device-process-function kill(signal: number, pid: number): boolean--><!--Device-process-function kill(signal: number, pid: number): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| signal | number | Yes | Signal to send. |
-| pid | number | Yes | PID of the process, to which the signal will be sent. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [signal](arkts-arkts-locks-asynclockoptions-c.md) | number | Yes |
+| pid | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | If the signal is sent successfully, **true** is returned. Other, **false** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -49,4 +49,3 @@ let pro = new process.ProcessManager();
 let pres = process.pid;
 let result = pro.kill(28, pres);
 ```
-

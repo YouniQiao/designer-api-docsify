@@ -1,4 +1,4 @@
-# @ohos.application.DistributedExtensionContext
+# @ohos.application.DistributedExtensionContext(Distributed Extension Context)
 
 ## Modules to Import
 
@@ -10,7 +10,6 @@ import { DistributedExtensionContext } from '@kit.DistributedServiceKit';
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [DistributedExtensionContext](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md) | Class inherited for the distributed extension function. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DistributedExtensionContext(Distributed Extension Context)](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md) |

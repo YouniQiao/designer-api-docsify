@@ -4,11 +4,11 @@
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [Stat](arkts-corefile-file-fs-stat-i.md)
-
-<!--Device-unnamed-declare interface Stat--><!--Device-unnamed-declare interface Stat-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -27,19 +27,19 @@ isBlockDevice(): boolean
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [isBlockDevice](arkts-corefile-file-fs-stat-i.md#isblockdevice)
-
-<!--Device-Stat-isBlockDevice(): boolean--><!--Device-Stat-isBlockDevice(): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 表示文件是否是块特殊设备。true为是，false为不是。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -63,19 +63,19 @@ isCharacterDevice(): boolean
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [isCharacterDevice](arkts-corefile-file-fs-stat-i.md#ischaracterdevice)
-
-<!--Device-Stat-isCharacterDevice(): boolean--><!--Device-Stat-isCharacterDevice(): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 表示文件是否是字符特殊设备。true为是，false为不是。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -99,19 +99,19 @@ isDirectory(): boolean
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [isDirectory](arkts-corefile-file-fs-stat-i.md#isdirectory)
-
-<!--Device-Stat-isDirectory(): boolean--><!--Device-Stat-isDirectory(): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 表示文件是否是目录。true为是，false为不是。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -135,19 +135,19 @@ isFIFO(): boolean
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [isFIFO](arkts-corefile-file-fs-stat-i.md#isfifo)
-
-<!--Device-Stat-isFIFO(): boolean--><!--Device-Stat-isFIFO(): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 表示文件是否是FIFO。true为是，false为不是。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -171,19 +171,19 @@ isFile(): boolean
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [isFile](arkts-corefile-file-fs-stat-i.md#isfile)
-
-<!--Device-Stat-isFile(): boolean--><!--Device-Stat-isFile(): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 表示文件是否是普通文件。true为是，false为不是。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -207,19 +207,19 @@ isSocket(): boolean
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [isSocket](arkts-corefile-file-fs-stat-i.md#issocket)
-
-<!--Device-Stat-isSocket(): boolean--><!--Device-Stat-isSocket(): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 表示文件是否是套接字。true为是，false为不是。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -243,19 +243,19 @@ isSymbolicLink(): boolean
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [isSymbolicLink](arkts-corefile-file-fs-stat-i.md#issymboliclink)
-
-<!--Device-Stat-isSymbolicLink(): boolean--><!--Device-Stat-isSymbolicLink(): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 表示文件是否是符号链接。true为是，false为不是。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -281,11 +281,11 @@ readonly atime: number
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [atime](arkts-corefile-file-fs-stat-i.md#atime)
-
-<!--Device-Stat-readonly atime: number--><!--Device-Stat-readonly atime: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -301,9 +301,9 @@ readonly blocks: number
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Stat-readonly blocks: number--><!--Device-Stat-readonly blocks: number-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -319,11 +319,11 @@ readonly ctime: number
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [ctime](arkts-corefile-file-fs-stat-i.md#ctime)
-
-<!--Device-Stat-readonly ctime: number--><!--Device-Stat-readonly ctime: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -339,9 +339,9 @@ readonly dev: number
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Stat-readonly dev: number--><!--Device-Stat-readonly dev: number-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -357,11 +357,11 @@ readonly gid: number
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [gid](arkts-corefile-file-fs-stat-i.md#gid)
-
-<!--Device-Stat-readonly gid: number--><!--Device-Stat-readonly gid: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -377,11 +377,11 @@ readonly ino: number
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** ino
-
-<!--Device-Stat-readonly ino: number--><!--Device-Stat-readonly ino: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -397,11 +397,11 @@ readonly mode: number
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [mode](arkts-corefile-file-fs-stat-i.md#mode)
-
-<!--Device-Stat-readonly mode: number--><!--Device-Stat-readonly mode: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -417,11 +417,11 @@ readonly mtime: number
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [mtime](arkts-corefile-file-fs-stat-i.md#mtime)
-
-<!--Device-Stat-readonly mtime: number--><!--Device-Stat-readonly mtime: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -437,9 +437,9 @@ readonly nlink: number
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Stat-readonly nlink: number--><!--Device-Stat-readonly nlink: number-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -455,9 +455,9 @@ readonly rdev: number
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Stat-readonly rdev: number--><!--Device-Stat-readonly rdev: number-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -473,11 +473,11 @@ readonly size: number
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [size](arkts-corefile-file-fs-stat-i.md#size)
-
-<!--Device-Stat-readonly size: number--><!--Device-Stat-readonly size: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -493,11 +493,10 @@ readonly uid: number
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [uid](arkts-corefile-file-fs-stat-i.md#uid)
 
-<!--Device-Stat-readonly uid: number--><!--Device-Stat-readonly uid: number-End-->
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
-

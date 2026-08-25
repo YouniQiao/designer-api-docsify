@@ -8,17 +8,16 @@ type ImageErrorCallback = (error: ImageError) => void
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-unnamed-type ImageErrorCallback = (error: ImageError) => void--><!--Device-unnamed-type ImageErrorCallback = (error: ImageError) => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| error | [ImageError](arkts-arkui-imageerror-i.md) | 是 | 图片加载异常时触发回调的返回对象。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| error | [ImageError](arkts-arkui-imageerror-i.md) | 是 |

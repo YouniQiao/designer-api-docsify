@@ -2,9 +2,9 @@
 
 Describes the error information.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-unnamed-export interface ErrorInfo--><!--Device-unnamed-export interface ErrorInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -14,13 +14,13 @@ Describes the error information.
 errorCode: T
 ```
 
-Error code. The type of **errorCode** is BusinessError.
+Error code. The type of **errorCode** is [BusinessError](../../../reference/apis-basic-services-kit/js-apis-base.md).
 
 **Type:** T
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ErrorInfo-errorCode: T--><!--Device-ErrorInfo-errorCode: T-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -34,9 +34,9 @@ Stage at which the error occurred.
 
 **Type:** [ErrorType](arkts-media-soundpool-errortype-e.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ErrorInfo-errorType?: ErrorType--><!--Device-ErrorInfo-errorType?: ErrorType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -48,11 +48,11 @@ soundId?: int
 
 ID of the resource where the error occurred. It can be obtained by calling **load**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ErrorInfo-soundId?: int--><!--Device-ErrorInfo-soundId?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -64,11 +64,10 @@ streamId?: int
 
 ID of the audio stream where the error occurred. It can be obtained by calling **play**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ErrorInfo-streamId?: int--><!--Device-ErrorInfo-streamId?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
-

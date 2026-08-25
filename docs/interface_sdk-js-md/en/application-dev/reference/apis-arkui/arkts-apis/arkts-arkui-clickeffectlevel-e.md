@@ -4,7 +4,7 @@ Enum of click effect level.
 
 **Since:** 10
 
-<!--Device-unnamed-declare enum ClickEffectLevel--><!--Device-unnamed-declare enum ClickEffectLevel-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Small area (light)
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ClickEffectLevel-LIGHT = 0--><!--Device-ClickEffectLevel-LIGHT = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Medium area (stable)
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ClickEffectLevel-MIDDLE = 1--><!--Device-ClickEffectLevel-MIDDLE = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ Large area (heavy)
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ClickEffectLevel-HEAVY = 2--><!--Device-ClickEffectLevel-HEAVY = 2-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

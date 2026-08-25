@@ -16,23 +16,23 @@ function isConcurrent(func: Function): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-taskpool-function isConcurrent(func: Function): boolean--><!--Device-taskpool-function isConcurrent(func: Function): boolean-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| func | Function | 是 | 需要检查的函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| func | Function | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 检查结果。如果被检查函数标注了 [ |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -43,4 +43,3 @@ function emptyFunc(): void {}
 let result: boolean = taskpool.isConcurrent(emptyFunc);
 console.info("result is: " + result);
 ```
-

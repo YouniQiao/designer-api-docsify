@@ -4,7 +4,7 @@
 
 **起始版本：** 9
 
-<!--Device-unnamed-export declare interface AccessibilityEvent--><!--Device-unnamed-export declare interface AccessibilityEvent-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -18,16 +18,16 @@ import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExten
 ## elementId
 
 ```TypeScript
-elementId?: long
+elementId?: number
 ```
 
 主动聚焦的元素ID。主动聚焦指应用通过无障碍服务主动将焦点聚焦到指定元素上，与用户手动导航聚焦不同。默认值为0。
 
-**类型：** long
+**类型：** number
 
 **起始版本：** 12
 
-<!--Device-AccessibilityEvent-elementId?: long--><!--Device-AccessibilityEvent-elementId?: long-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -44,7 +44,7 @@ eventType: accessibility.EventType | accessibility.WindowUpdateType |
 
 **起始版本：** 9
 
-<!--Device-AccessibilityEvent-eventType: accessibility.EventType | accessibility.WindowUpdateType |        TouchGuideType | GestureType | PageUpdateType--><!--Device-AccessibilityEvent-eventType: accessibility.EventType | accessibility.WindowUpdateType |        TouchGuideType | GestureType | PageUpdateType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -60,7 +60,7 @@ extraInfo?: string
 
 **起始版本：** 20
 
-<!--Device-AccessibilityEvent-extraInfo?: string--><!--Device-AccessibilityEvent-extraInfo?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -76,7 +76,7 @@ target?: AccessibilityElement
 
 **起始版本：** 9
 
-<!--Device-AccessibilityEvent-target?: AccessibilityElement--><!--Device-AccessibilityEvent-target?: AccessibilityElement-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -92,23 +92,22 @@ textAnnouncedForAccessibility?: string
 
 **起始版本：** 12
 
-<!--Device-AccessibilityEvent-textAnnouncedForAccessibility?: string--><!--Device-AccessibilityEvent-textAnnouncedForAccessibility?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## timeStamp
 
 ```TypeScript
-timeStamp?: long
+timeStamp?: number
 ```
 
 事件时间戳，取值范围为非负整数，单位为毫秒，默认值为0。
 
-**类型：** long
+**类型：** number
 
 **起始版本：** 9
 
-<!--Device-AccessibilityEvent-timeStamp?: long--><!--Device-AccessibilityEvent-timeStamp?: long-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
-

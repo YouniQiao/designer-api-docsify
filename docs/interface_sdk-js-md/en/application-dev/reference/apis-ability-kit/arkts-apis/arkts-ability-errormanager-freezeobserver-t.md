@@ -6,11 +6,10 @@ export type FreezeObserver = () => void
 
 Defines an observer for the main thread freeze event of the application. It is used by the application to customize freeze information.
 
-**Since:** 24
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 24.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 24.
 
-<!--Device-errorManager-export type FreezeObserver = () => void--><!--Device-errorManager-export type FreezeObserver = () => void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-

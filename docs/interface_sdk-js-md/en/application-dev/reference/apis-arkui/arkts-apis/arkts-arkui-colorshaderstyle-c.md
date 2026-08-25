@@ -6,7 +6,7 @@ Displays a solid color. **ColorShaderStyle** inherits from [ShaderStyle](arkts-a
 
 **Since:** 20
 
-<!--Device-unnamed-declare class ColorShaderStyle--><!--Device-unnamed-declare class ColorShaderStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,19 +25,19 @@ A constructor used to create a **ResourceColor** object.
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-ColorShaderStyle-constructor(color: ResourceColor)--><!--Device-ColorShaderStyle-constructor(color: ResourceColor)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| color | ResourceColor | Yes | Options for displaying a solid color. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [color](#color) | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes |
 
 ## color
 
@@ -51,11 +51,10 @@ Options for displaying a solid color.
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-ColorShaderStyle-color: ResourceColor--><!--Device-ColorShaderStyle-color: ResourceColor-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -6,7 +6,7 @@ The definition of Album.@extends MediaEntity @interface Album
 
 **Since:** 23
 
-<!--Device-avMusicTemplate-interface Album--><!--Device-avMusicTemplate-interface Album-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -28,9 +28,9 @@ Total number of episodes in the program
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-Album-episodeCounts?: string--><!--Device-Album-episodeCounts?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -46,9 +46,9 @@ Favorite/Subscribe information.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-Album-favSubscribeData: FavoriteData--><!--Device-Album-favSubscribeData: FavoriteData-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -64,9 +64,9 @@ Play counts.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-Album-playCounts: string--><!--Device-Album-playCounts: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -82,9 +82,8 @@ Singer name.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Album-singer: string--><!--Device-Album-singer: string-End-->
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-

@@ -6,7 +6,7 @@
 
 **起始版本：** 12
 
-<!--Device-sendableColorSpaceManager-interface ColorSpaceManager--><!--Device-sendableColorSpaceManager-interface ColorSpaceManager-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -26,21 +26,21 @@ getColorSpaceName(): colorSpaceManager.ColorSpace
 
 **起始版本：** 12
 
-<!--Device-ColorSpaceManager-getColorSpaceName(): colorSpaceManager.ColorSpace--><!--Device-ColorSpaceManager-getColorSpaceName(): colorSpaceManager.ColorSpace-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| colorSpaceManager.ColorSpace | 返回色域类型枚举值。 |
+| 类型 |
+| --- |
+| colorSpaceManager.ColorSpace |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 12 - 22 |
+| 错误码ID |
+| --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
 
 **示例**
 
@@ -59,21 +59,21 @@ getGamma(): number
 
 **起始版本：** 12
 
-<!--Device-ColorSpaceManager-getGamma(): number--><!--Device-ColorSpaceManager-getGamma(): number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回色域gamma值。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 12 - 22 |
+| 错误码ID |
+| --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
 
 **示例**
 
@@ -92,21 +92,21 @@ getWhitePoint(): collections.Array<number>
 
 **起始版本：** 12
 
-<!--Device-ColorSpaceManager-getWhitePoint(): collections.Array<number>--><!--Device-ColorSpaceManager-getWhitePoint(): collections.Array<number>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| collections.Array&lt;number&gt; | 返回色域白点值[x, y]。 |
+| 类型 |
+| --- |
+| collections.Array & lt;number & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 12 - 22 |
+| 错误码ID |
+| --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
 
 **示例**
 
@@ -115,4 +115,3 @@ import { collections } from '@kit.ArkTS';
 // 获取色域白点值[x, y]
 let point: collections.Array<number> = colorSpace.getWhitePoint();
 ```
-

@@ -10,36 +10,35 @@
 <!--Del-->
 ### Classes(System API)
 
-| Name | Description |
-| --- | --- |
-| [IsolatedComponentAttribute(System API)](arkts-arkui-isolatedcomponentattribute-c-sys.md) | Only the width, height, and backgroundColor universal attributes are supported.The universal events are not supported.Events are asynchronously passed to the restricted Worker thread after coordinate conversion.The following events are supported: |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [IsolatedComponentAttribute(System API)](arkts-arkui-isolatedcomponentattribute-c-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [IsolatedOptions(System API)](arkts-arkui-isolatedoptions-i-sys.md) | Describes the optional construction parameters during **IsolatedComponent** construction. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [IsolatedOptions(System API)](arkts-arkui-isolatedoptions-i-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Types(System API)
 
-| Name | Description |
-| --- | --- |
-| [ErrorCallback(System API)](arkts-arkui-errorcallback-t-sys.md) | Indicates error callback. |
-| [IsolatedComponentInterface(System API)](arkts-arkui-isolatedcomponentinterface-t-sys.md) | Provide an interface for the IsolatedComponent, which is used to render UI of other ABC |
-| [RestrictedWorker(System API)](arkts-arkui-restrictedworker-t-sys.md) | Indicates restricted worker for run abc. |
-| [Want(System API)](arkts-arkui-want-t-sys.md) | Indicates want. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ErrorCallback(System API)](arkts-arkui-errorcallback-t-sys.md) |
+| [IsolatedComponentInterface(System API)](arkts-arkui-isolatedcomponentinterface-t-sys.md) |
+| [RestrictedWorker(System API)](arkts-arkui-restrictedworker-t-sys.md) |
+| [Want(System API)](arkts-arkui-want-t-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Constants(System API)
 
-| Name | Description |
-| --- | --- |
-| [IsolatedComponent(System API)](arkts-arkui-isolatedcomponent-con-sys.md#isolatedcomponent) | Defines IsolatedComponent Component. |
-| [IsolatedComponentInstance(System API)](arkts-arkui-isolatedcomponent-con-sys.md#isolatedcomponentinstance) | Defines IsolatedComponent Component instance. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [IsolatedComponent(System API)](arkts-arkui-isolatedcomponent-con-sys.md#isolatedcomponent) |
+| [IsolatedComponentInstance(System API)](arkts-arkui-isolatedcomponent-con-sys.md#isolatedcomponentinstance) |
 <!--DelEnd-->
-

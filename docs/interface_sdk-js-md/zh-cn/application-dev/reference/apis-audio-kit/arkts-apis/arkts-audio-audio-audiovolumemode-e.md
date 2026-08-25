@@ -2,9 +2,9 @@
 
 表示音量模式的枚举。@enum { int }
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-audio-enum AudioVolumeMode--><!--Device-audio-enum AudioVolumeMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -16,9 +16,9 @@ SYSTEM_GLOBAL = 0
 
 系统级音量（默认模式）。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-AudioVolumeMode-SYSTEM_GLOBAL = 0--><!--Device-AudioVolumeMode-SYSTEM_GLOBAL = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -30,9 +30,8 @@ APP_INDIVIDUAL = 1
 
 应用级音量。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-AudioVolumeMode-APP_INDIVIDUAL = 1--><!--Device-AudioVolumeMode-APP_INDIVIDUAL = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
-

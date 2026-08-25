@@ -4,7 +4,7 @@ Defines the application freeze event configuration policy.
 
 **Since:** 24
 
-<!--Device-hiAppEvent-interface AppFreezePolicy--><!--Device-hiAppEvent-interface AppFreezePolicy-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -28,9 +28,8 @@ Whether to enable the page switching log for APP_FREEZE event.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
-<!--Device-AppFreezePolicy-pageSwitchLogEnable?: boolean--><!--Device-AppFreezePolicy-pageSwitchLogEnable?: boolean-End-->
-
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
-

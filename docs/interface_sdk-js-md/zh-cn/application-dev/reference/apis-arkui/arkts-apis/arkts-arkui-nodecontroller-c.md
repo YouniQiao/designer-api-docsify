@@ -7,7 +7,7 @@ NodeController用于管理自定义节点的创建、显示、更新等操作，
 
 **起始版本：** 11
 
-<!--Device-unnamed-export abstract class NodeController--><!--Device-unnamed-export abstract class NodeController-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,11 +24,11 @@ aboutToAppear?(): void
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NodeController-aboutToAppear?(): void--><!--Device-NodeController-aboutToAppear?(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ aboutToDisappear?(): void
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NodeController-aboutToDisappear?(): void--><!--Device-NodeController-aboutToDisappear?(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -63,19 +63,19 @@ aboutToResize?(size: Size): void
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NodeController-aboutToResize?(size: Size): void--><!--Device-NodeController-aboutToResize?(size: Size): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| size | Size | 是 | 组件布局大小的宽和高，单位为vp。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| size | Size | 是 |
 
 ## makeNode
 
@@ -88,31 +88,31 @@ abstract makeNode(uiContext: UIContext): FrameNode | null
 > **说明：**&gt;
 > NodeContainer不支持跨实例复用。如果出现跨实例复用
 > NodeContainer，传入
-> NodeContainer的[NodeController](../../apis-default/arkts-apis/arkts-nodecontroller-c.md)触发
-> [makeNode](../../apis-default/arkts-apis/arkts-nodecontroller-c.md#makenode)回调方法时，入参中的[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)对象可能为undefined，此时需要开发者
+> NodeContainer的[NodeController](#nodecontroller)触发
+> [makeNode](#makenode)回调方法时，入参中的[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)对象可能为undefined，此时需要开发者
 > 判断该对象是否为undefined，防止后续使用此入参时出现[UIContext无效的JS异常](../../../ui/arkts-wrong-uicontext-debug.md#定位uicontext错误问题)。
 
 **起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-NodeController-abstract makeNode(uiContext: UIContext): FrameNode | null--><!--Device-NodeController-abstract makeNode(uiContext: UIContext): FrameNode | null-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 回调该方法时，绑定NodeContainer的UI上下文。跨实 例复用NodeContainer时，该参数可能为undefined，需要开发者自行判断。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | 一个FrameNode对象，返回的节点将被挂载至 [NodeContainer]{ |
+| 类型 |
+| --- |
+| [FrameNode](arkts-arkui-framenode-c.md) \| null |
 
 ## onAttach
 
@@ -120,18 +120,18 @@ abstract makeNode(uiContext: UIContext): FrameNode | null
 onAttach?(): void
 ```
 
-当NodeController绑定的NodeContainer挂载至主节点树时触发此回调。与 [aboutToAppear](../../apis-default/arkts-apis/arkts-nodecontroller-c.md#abouttoappear)不同，aboutToAppear在NodeContainer挂载显示后触发，onAttach在NodeContainer挂载至主 节点树时触发，两者触发时机可能不同。
+当NodeController绑定的NodeContainer挂载至主节点树时触发此回调。与 [aboutToAppear](#abouttoappear)不同，aboutToAppear在NodeContainer挂载显示后触发，onAttach在NodeContainer挂载至主 节点树时触发，两者触发时机可能不同。
 
 > **说明：**&gt;
 > 回调时机参考onAttach。
 
 **起始版本：** 18
 
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NodeController-onAttach?(): void--><!--Device-NodeController-onAttach?(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -141,23 +141,23 @@ onAttach?(): void
 onBind?(containerId: number): void
 ```
 
-当NodeController与NodeContainer绑定后触发此回调。该回调后于 [onWillBind](../../apis-default/arkts-apis/arkts-nodecontroller-c.md#onwillbind)触发，两者均为可选回调，可根据需要在绑定前或绑定后执行相应逻辑。
+当NodeController与NodeContainer绑定后触发此回调。该回调后于 [onWillBind](#onwillbind)触发，两者均为可选回调，可根据需要在绑定前或绑定后执行相应逻辑。
 
 **起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-NodeController-onBind?(containerId: number): void--><!--Device-NodeController-onBind?(containerId: number): void-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| containerId | number | 是 | 回调该方法时，已完成与NodeController绑定的 NodeContainer的标识。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| containerId | number | 是 |
 
 ## onDetach
 
@@ -165,18 +165,18 @@ onBind?(containerId: number): void
 onDetach?(): void
 ```
 
-当NodeController绑定的NodeContainer从主节点树卸载时触发此回调。与 [aboutToDisappear](../../apis-default/arkts-apis/arkts-nodecontroller-c.md#abouttodisappear)不同，aboutToDisappear在NodeContainer销毁时触发，onDetach在 NodeContainer从主节点树卸载时触发，两者触发时机可能不同。
+当NodeController绑定的NodeContainer从主节点树卸载时触发此回调。与 [aboutToDisappear](#abouttodisappear)不同，aboutToDisappear在NodeContainer销毁时触发，onDetach在 NodeContainer从主节点树卸载时触发，两者触发时机可能不同。
 
 > **说明：**&gt;
 > 回调时机参考onDetach。
 
 **起始版本：** 18
 
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NodeController-onDetach?(): void--><!--Device-NodeController-onDetach?(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -190,19 +190,19 @@ onTouchEvent?(event: TouchEvent): void
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NodeController-onTouchEvent?(event: TouchEvent): void--><!--Device-NodeController-onTouchEvent?(event: TouchEvent): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | TouchEvent | 是 | 触摸事件，包含触摸点的坐标、触摸动作类型等信息，具体结构详见TouchEvent。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) | 是 |
 
 ## onUnbind
 
@@ -210,23 +210,23 @@ onTouchEvent?(event: TouchEvent): void
 onUnbind?(containerId: number): void
 ```
 
-当NodeController与NodeContainer解绑后触发此回调。该回调后于 [onWillUnbind](../../apis-default/arkts-apis/arkts-nodecontroller-c.md#onwillunbind)触发，两者均为可选回调，可根据需要在解绑前或解绑后执行相应逻辑。
+当NodeController与NodeContainer解绑后触发此回调。该回调后于 [onWillUnbind](#onwillunbind)触发，两者均为可选回调，可根据需要在解绑前或解绑后执行相应逻辑。
 
 **起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-NodeController-onUnbind?(containerId: number): void--><!--Device-NodeController-onUnbind?(containerId: number): void-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| containerId | number | 是 | 回调该方法时，已完成与NodeController解绑的 NodeContainer的标识。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| containerId | number | 是 |
 
 ## onWillBind
 
@@ -234,23 +234,23 @@ onUnbind?(containerId: number): void
 onWillBind?(containerId: number): void
 ```
 
-当NodeController与NodeContainer即将绑定前触发此回调。该回调先于 [onBind](../../apis-default/arkts-apis/arkts-nodecontroller-c.md#onbind)触发，两者均为可选回调，可根据需要在绑定前或绑定后执行相应逻辑。
+当NodeController与NodeContainer即将绑定前触发此回调。该回调先于 [onBind](#onbind)触发，两者均为可选回调，可根据需要在绑定前或绑定后执行相应逻辑。
 
 **起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-NodeController-onWillBind?(containerId: number): void--><!--Device-NodeController-onWillBind?(containerId: number): void-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| containerId | number | 是 | 回调该方法时，即将与NodeController绑定的 NodeContainer的标识。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| containerId | number | 是 |
 
 ## onWillUnbind
 
@@ -258,23 +258,23 @@ onWillBind?(containerId: number): void
 onWillUnbind?(containerId: number): void
 ```
 
-当NodeController与NodeContainer即将解绑前触发此回调。该回调先于 [onUnbind](../../apis-default/arkts-apis/arkts-nodecontroller-c.md#onunbind)触发，两者均为可选回调，可根据需要在解绑前或解绑后执行相应逻辑。
+当NodeController与NodeContainer即将解绑前触发此回调。该回调先于 [onUnbind](#onunbind)触发，两者均为可选回调，可根据需要在解绑前或解绑后执行相应逻辑。
 
 **起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-NodeController-onWillUnbind?(containerId: number): void--><!--Device-NodeController-onWillUnbind?(containerId: number): void-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| containerId | number | 是 | 回调该方法时，即将与NodeController解绑的 NodeContainer的标识。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| containerId | number | 是 |
 
 ## rebuild
 
@@ -282,7 +282,7 @@ onWillUnbind?(containerId: number): void
 rebuild(): void
 ```
 
-调用此接口通知NodeContainer组件重新回调 [makeNode](../../apis-default/arkts-apis/arkts-nodecontroller-c.md#makenode)方法，更改子节点。例如，当NodeContainer展示的内容数据发生变化、需要更新显示的子节点时，可调用此方法触发重新构建。
+调用此接口通知NodeContainer组件重新回调 [makeNode](#makenode)方法，更改子节点。例如，当NodeContainer展示的内容数据发生变化、需要更新显示的子节点时，可调用此方法触发重新构建。
 
 > **说明：**&gt;
 > 由于rebuild方法为应用主动调用的方法，且该操作与UI相关，需要开发者自行保证调用该接口时UI上下文有效，即与绑定的NodeContainer保持UI上下文一致。&gt;
@@ -291,11 +291,10 @@ rebuild(): void
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-NodeController-rebuild(): void--><!--Device-NodeController-rebuild(): void-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

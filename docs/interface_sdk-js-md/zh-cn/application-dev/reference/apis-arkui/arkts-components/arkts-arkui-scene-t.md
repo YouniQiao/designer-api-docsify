@@ -8,11 +8,10 @@ declare type Scene = import('../api/@ohos.graphics.scene').Scene
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-unnamed-declare type Scene = import('../api/@ohos.graphics.scene').Scene--><!--Device-unnamed-declare type Scene = import('../api/@ohos.graphics.scene').Scene-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **属性类型：** import('../api/@ohos.graphics.scene').Scene
-

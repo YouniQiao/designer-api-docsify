@@ -4,7 +4,7 @@ Format options for partition formatting.
 
 **Since:** 26.0.0
 
-<!--Device-volumeManager-export interface FormatParams--><!--Device-volumeManager-export interface FormatParams-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -28,9 +28,9 @@ File system type, Common file systems are **ext4**, **vfat**, and **exfat**.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-FormatParams-fsType: string--><!--Device-FormatParams-fsType: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -48,9 +48,9 @@ Whether to perform quick format, default value is true.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-FormatParams-quickFormat?: boolean--><!--Device-FormatParams-quickFormat?: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -68,11 +68,10 @@ Volume name after formatting.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-FormatParams-volumeName?: string--><!--Device-FormatParams-volumeName?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
-

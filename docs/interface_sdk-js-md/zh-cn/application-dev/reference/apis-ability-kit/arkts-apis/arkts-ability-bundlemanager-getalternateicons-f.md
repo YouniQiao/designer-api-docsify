@@ -16,23 +16,23 @@ function getAlternateIcons(): Promise<Array<AlternateIconInfo>>
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-bundleManager-function getAlternateIcons(): Promise<Array<AlternateIconInfo>>--><!--Device-bundleManager-function getAlternateIcons(): Promise<Array<AlternateIconInfo>>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;AlternateIconInfo&gt;&gt; | Promise对象，返回当前应用的备用图标信息。 |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;AlternateIconInfo & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17700311](../errorcode-bundle.md#17700311-查询备用图标失败) | Failed to obtain the alternate icon. |
+| 错误码ID |
+| --- |
+| [17700311](../errorcode-bundle.md#17700311-查询备用图标失败) |
 
 **示例**
 
@@ -52,4 +52,3 @@ try {
   hilog.error(0x0000, 'testTag', 'getAlternateIcons failed. Cause: %{public}s', message);
 }
 ```
-

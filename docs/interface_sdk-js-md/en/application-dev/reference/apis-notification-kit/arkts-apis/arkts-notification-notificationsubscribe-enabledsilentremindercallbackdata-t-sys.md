@@ -8,13 +8,12 @@ Describes the switch state for silent reminder notification.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-notificationSubscribe-export type EnabledSilentReminderCallbackData = _EnabledSilentReminderCallbackData--><!--Device-notificationSubscribe-export type EnabledSilentReminderCallbackData = _EnabledSilentReminderCallbackData-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
 
 **Property type:** _EnabledSilentReminderCallbackData
-

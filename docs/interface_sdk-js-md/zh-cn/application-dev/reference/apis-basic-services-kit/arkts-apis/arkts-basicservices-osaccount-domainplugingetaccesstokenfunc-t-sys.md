@@ -9,7 +9,7 @@ type DomainPluginGetAccessTokenFunc = (options: GetDomainAccessTokenOptions,
 
 **起始版本：** 23
 
-<!--Device-osAccount-type DomainPluginGetAccessTokenFunc = (options: GetDomainAccessTokenOptions,    callback: AsyncCallback<Uint8Array>) => void--><!--Device-osAccount-type DomainPluginGetAccessTokenFunc = (options: GetDomainAccessTokenOptions,    callback: AsyncCallback<Uint8Array>) => void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -17,10 +17,10 @@ type DomainPluginGetAccessTokenFunc = (options: GetDomainAccessTokenOptions,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [GetDomainAccessTokenOptions](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | 是 | 表示获取域访问令牌的选项。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | 是 | 表示结果回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [GetDomainAccessTokenOptions](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | 是 |
 
 **示例**
 
@@ -70,4 +70,3 @@ try {
   console.error(`registerPlugin code is ${err.code}, message is ${err.message}`);
 }
 ```
-

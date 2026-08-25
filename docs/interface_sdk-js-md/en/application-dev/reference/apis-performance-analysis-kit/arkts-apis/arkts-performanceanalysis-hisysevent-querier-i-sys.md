@@ -2,9 +2,9 @@
 
 Defines an event query instance.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-hiSysEvent-interface Querier--><!--Device-hiSysEvent-interface Querier-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -18,21 +18,32 @@ import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 
 ## onComplete
 
+ArkTS-Dyn:
+```TypeScript
+onComplete: (reason: number, total: number) => void
+```
+
+ArkTS-Sta:
 ```TypeScript
 onComplete: (reason: int, total: int) => void
 ```
 
 Callback used to return the query result statistics: (reason: int, total: int) =&gt; void
 
-**Type:** (reason: int, total: int) =&gt; void
+**Since:** 9
 
-**Since:** 23
-
-<!--Device-Querier-onComplete: (reason: int, total: int) => void--><!--Device-Querier-onComplete: (reason: int, total: int) => void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| reason | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| total | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 ## onQuery
 
@@ -42,13 +53,16 @@ onQuery: (infos: SysEventInfo[]) => void
 
 Callback used to return the queried system events: (infos: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)[]) =&gt; void.
 
-**Type:** (infos: SysEventInfo[]) =&gt; void
+**Since:** 9
 
-**Since:** 23
-
-<!--Device-Querier-onQuery: (infos: SysEventInfo[]) => void--><!--Device-Querier-onQuery: (infos: SysEventInfo[]) => void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
 
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| infos | [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)[] | Yes |

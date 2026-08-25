@@ -4,7 +4,7 @@ ProxyRule是ArkWeb框架中代理规则只读信息的类，通过[getProxyRules
 
 **起始版本：** 15
 
-<!--Device-webview-class ProxyRule--><!--Device-webview-class ProxyRule-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -24,17 +24,17 @@ getSchemeFilter(): ProxySchemeFilter
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
-<!--Device-ProxyRule-getSchemeFilter(): ProxySchemeFilter--><!--Device-ProxyRule-getSchemeFilter(): ProxySchemeFilter-End-->
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 代理规则中的ProxySchemeFilter信息。 |
+| 类型 |
+| --- |
+| [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) |
 
 **示例**
 
@@ -50,17 +50,17 @@ getUrl(): string
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
-<!--Device-ProxyRule-getUrl(): string--><!--Device-ProxyRule-getUrl(): string-End-->
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 代理规则中代理的URL信息。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -229,4 +229,3 @@ struct WebComponent {
   }
 }
 ```
-

@@ -2,9 +2,9 @@
 
 Enumerates VoNR switch states.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-call-export enum VoNRState--><!--Device-call-export enum VoNRState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -18,9 +18,9 @@ VONR_STATE_OFF = 0
 
 Disabled.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-VoNRState-VONR_STATE_OFF = 0--><!--Device-VoNRState-VONR_STATE_OFF = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -34,11 +34,10 @@ VONR_STATE_ON = 1
 
 Enabled.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-VoNRState-VONR_STATE_ON = 1--><!--Device-VoNRState-VONR_STATE_ON = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
-

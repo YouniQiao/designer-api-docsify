@@ -6,7 +6,7 @@
 
 **起始版本：** 8
 
-<!--Device-unnamed-declare interface DatePickerDialogOptions--><!--Device-unnamed-declare interface DatePickerDialogOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,7 +27,7 @@ distortionMode?: DistortionMode
 
 > **系统接口：** 此接口为系统接口。
 
-> **说明：** 当取值为 DISTORTION_AUTO 时，需设置[ImmersiveMaterial](../../apis-default/arkts-apis/arkts-uimaterial-immersivematerial-c.md) 类型材质方可生效，
+> **说明：** 当取值为 DISTORTION_AUTO 时，需设置[ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md) 类型材质方可生效，
 > 并依据设备算力档位自动生效非线性效果（高中档算力设备生效，低档算力设备不生效）。非线性动画会增加渲染开销，建议在低端设备上谨慎使用。
 > 各枚举取值含义请参见DistortionMode。
 
@@ -37,9 +37,9 @@ distortionMode?: DistortionMode
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-DatePickerDialogOptions-distortionMode?: DistortionMode--><!--Device-DatePickerDialogOptions-distortionMode?: DistortionMode-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -57,7 +57,7 @@ edgeLightMode?: EdgeLightMode
 
 > **系统接口：** 此接口为系统接口。
 
-> **说明：** 当取值为 EDGELIGHT_AUTO 时，需设置[ImmersiveMaterial](../../apis-default/arkts-apis/arkts-uimaterial-immersivematerial-c.md) 类型材质方可生效，
+> **说明：** 当取值为 EDGELIGHT_AUTO 时，需设置[ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md) 类型材质方可生效，
 > 并依据设备算力档位自动生效流光效果（高档算力设备生效，中低档算力设备不生效）。流光动画会增加渲染开销，建议在低端设备上谨慎使用。
 > 各枚举取值含义请参见EdgeLightMode。
 
@@ -67,11 +67,10 @@ edgeLightMode?: EdgeLightMode
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-DatePickerDialogOptions-edgeLightMode?: EdgeLightMode--><!--Device-DatePickerDialogOptions-edgeLightMode?: EdgeLightMode-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
-

@@ -2,9 +2,9 @@
 
 当前色域对象实例。下列API示例中都需先使用[create()](arkts-arkgraphics2d-colorspacemanager-create-f.md)获取到ColorSpaceManager实例，再通过此实例调用对应方法。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-colorSpaceManager-interface ColorSpaceManager--><!--Device-colorSpaceManager-interface ColorSpaceManager-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -22,23 +22,23 @@ getColorSpaceName(): ColorSpace
 
 获取色域类型。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ColorSpaceManager-getColorSpaceName(): ColorSpace--><!--Device-ColorSpaceManager-getColorSpaceName(): ColorSpace-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ColorSpace | 返回色域类型枚举值。 |
+| 类型 |
+| --- |
+| [ColorSpace](../../apis-arkui/arkts-apis/arkts-arkui-window-colorspace-e.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 9 - 22 |
+| 错误码ID |
+| --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
 
 **示例**
 
@@ -54,29 +54,35 @@ try {
 
 ## getGamma
 
+ArkTS-Dyn:
+```TypeScript
+getGamma(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getGamma(): double
 ```
 
 获取色域gamma值。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ColorSpaceManager-getGamma(): double--><!--Device-ColorSpaceManager-getGamma(): double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | 返回色域gamma值。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 9 - 22 |
+| 错误码ID |
+| --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
 
 **示例**
 
@@ -92,29 +98,35 @@ try {
 
 ## getWhitePoint
 
+ArkTS-Dyn:
+```TypeScript
+getWhitePoint(): Array<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getWhitePoint(): Array<double>
 ```
 
 获取色域白点值。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ColorSpaceManager-getWhitePoint(): Array<double>--><!--Device-ColorSpaceManager-getWhitePoint(): Array<double>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;double&gt; | 返回色域白点值[x, y]。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;double & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 9 - 22 |
+| 错误码ID |
+| --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
 
 **示例**
 
@@ -127,4 +139,3 @@ try {
   console.error(`Failed to get white point. Code: ${err.code}, message: ${err.message}`);
 }
 ```
-

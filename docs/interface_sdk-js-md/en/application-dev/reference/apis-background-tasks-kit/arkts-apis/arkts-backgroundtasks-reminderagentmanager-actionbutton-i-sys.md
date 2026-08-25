@@ -2,9 +2,9 @@
 
 Describes the button displayed for a reminder.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-reminderAgentManager-interface ActionButton--><!--Device-reminderAgentManager-interface ActionButton-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -24,9 +24,9 @@ The application database will be updated after a click on the button.
 
 **Type:** [DataShareUpdate](arkts-backgroundtasks-reminderagentmanager-datashareupdate-i-sys.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ActionButton-dataShareUpdate?: DataShareUpdate--><!--Device-ActionButton-dataShareUpdate?: DataShareUpdate-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -42,11 +42,10 @@ Information about the ability that is displayed after the button is clicked.
 
 **Type:** WantAgent
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ActionButton-wantAgent?: WantAgent--><!--Device-ActionButton-wantAgent?: WantAgent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 **System API:** This is a system API.
-

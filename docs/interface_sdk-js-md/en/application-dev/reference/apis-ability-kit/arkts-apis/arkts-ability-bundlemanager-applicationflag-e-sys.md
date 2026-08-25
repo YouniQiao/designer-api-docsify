@@ -2,9 +2,9 @@
 
 Enumerates the application flags, which indicate the type of application information to obtain.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-bundleManager-enum ApplicationFlag--><!--Device-bundleManager-enum ApplicationFlag-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -18,9 +18,9 @@ GET_APPLICATION_INFO_DEFAULT = 0x00000000
 
 Used to obtain the default application information. The obtained information does not contain the permission information or metadata.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ApplicationFlag-GET_APPLICATION_INFO_DEFAULT = 0x00000000--><!--Device-ApplicationFlag-GET_APPLICATION_INFO_DEFAULT = 0x00000000-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -34,9 +34,9 @@ GET_APPLICATION_INFO_WITH_PERMISSION = 0x00000001
 
 Used to obtain the application information with permission information.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ApplicationFlag-GET_APPLICATION_INFO_WITH_PERMISSION = 0x00000001--><!--Device-ApplicationFlag-GET_APPLICATION_INFO_WITH_PERMISSION = 0x00000001-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -50,9 +50,9 @@ GET_APPLICATION_INFO_WITH_METADATA = 0x00000002
 
 Used to obtain the application information with metadata.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ApplicationFlag-GET_APPLICATION_INFO_WITH_METADATA = 0x00000002--><!--Device-ApplicationFlag-GET_APPLICATION_INFO_WITH_METADATA = 0x00000002-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -66,11 +66,10 @@ GET_APPLICATION_INFO_WITH_DISABLE = 0x00000004
 
 Used to obtain the application information of disabled bundles.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ApplicationFlag-GET_APPLICATION_INFO_WITH_DISABLE = 0x00000004--><!--Device-ApplicationFlag-GET_APPLICATION_INFO_WITH_DISABLE = 0x00000004-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
-

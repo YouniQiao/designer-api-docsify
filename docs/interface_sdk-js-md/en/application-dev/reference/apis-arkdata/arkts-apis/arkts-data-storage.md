@@ -9,11 +9,11 @@ Lightweight storage provides applications with data processing capability and al
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** preferences
-
-<!--Device-unnamed-declare namespace storage--><!--Device-unnamed-declare namespace storage-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -26,35 +26,34 @@ Lightweight storage provides applications with data processing capability and al
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [deleteStorage](arkts-arkdata-storage-deletestorage-f.md) | Deletes the singleton **Storage** instance of a file from the memory, and deletes the specified file, its backup file, and damaged files. After the specified files are deleted, the **Storage** instance cannot be used for data operations. Otherwise, data inconsistency will occur. This API uses an asynchronous callback to return the result. |
-| [deleteStorage](arkts-arkdata-storage-deletestorage-f.md) | Deletes the singleton **Storage** instance of a file from the memory, and deletes the specified file, its backup file, and damaged files. After the specified files are deleted, the **Storage** instance cannot be used for data operations. Otherwise, data inconsistency will occur. This API uses a promise to return the result. |
-| [deleteStorageSync](arkts-arkdata-storage-deletestoragesync-f.md) | Deletes the singleton **Storage** instance of a file from the memory, and deletes the specified file, its backup file, and damaged files. After the specified files are deleted, the **Storage** instance cannot be used for data operations. Otherwise, data inconsistency will occur. |
-| [getStorage](arkts-arkdata-storage-getstorage-f.md) | Reads the specified file and loads its data to the **Storage** instance for data operations. This API uses an asynchronous callback to return the result. |
-| [getStorage](arkts-arkdata-storage-getstorage-f.md) | Reads the specified file and loads its data to the **Storage** instance for data operations. This API uses a promise to return the result. |
-| [getStorageSync](arkts-arkdata-storage-getstoragesync-f.md) | Reads the specified file and loads its data to the **Storage** instance for data operations. |
-| [removeStorageFromCache](arkts-arkdata-storage-removestoragefromcache-f.md) | Removes the singleton **Storage** instance of a file from the cache. The removed instance cannot be used for data operations. Otherwise, data inconsistency will occur. This API uses an asynchronous callback to return the result. |
-| [removeStorageFromCache](arkts-arkdata-storage-removestoragefromcache-f.md) | Removes the singleton **Storage** instance of a file from the cache. The removed instance cannot be used for data operations. Otherwise, data inconsistency will occur. This API uses a promise to return the result. |
-| [removeStorageFromCacheSync](arkts-arkdata-storage-removestoragefromcachesync-f.md) | Removes the singleton **Storage** instance of a file from the cache. The removed instance cannot be used for data operations. Otherwise, data inconsistency will occur. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [deleteStorage](arkts-arkdata-storage-deletestorage-f.md) |
+| [deleteStorage](arkts-arkdata-storage-deletestorage-f.md) |
+| [deleteStorageSync](arkts-arkdata-storage-deletestoragesync-f.md) |
+| [getStorage](arkts-arkdata-storage-getstorage-f.md) |
+| [getStorage](arkts-arkdata-storage-getstorage-f.md) |
+| [getStorageSync](arkts-arkdata-storage-getstoragesync-f.md) |
+| [removeStorageFromCache](arkts-arkdata-storage-removestoragefromcache-f.md) |
+| [removeStorageFromCache](arkts-arkdata-storage-removestoragefromcache-f.md) |
+| [removeStorageFromCacheSync](arkts-arkdata-storage-removestoragefromcachesync-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [Storage](arkts-arkdata-storage-storage-i.md) | Provides APIs for obtaining and modifying storage data.Before calling the following APIs, use [data_storage.getStorage](arkts-arkdata-storage-getstoragesync-f.md) or [data_storage.getStorageSync](arkts-arkdata-storage-getstoragesync-f.md) to obtain the **Storage** instance. |
-| [StorageObserver](arkts-arkdata-storage-storageobserver-i.md) | Define the change data information object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Storage](arkts-arkdata-storage-storage-i.md) |
+| [StorageObserver](arkts-arkdata-storage-storageobserver-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [ValueType](arkts-arkdata-storage-valuetype-t.md) | Enumerates the value types. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ValueType](arkts-arkdata-storage-valuetype-t.md) |
 
 ### Constants
 
-| Name | Description |
-| --- | --- |
-| [MAX_KEY_LENGTH](arkts-arkdata-storage-con.md#max_key_length) | Indicates the maximum length of a key (80 characters). |
-| [MAX_VALUE_LENGTH](arkts-arkdata-storage-con.md#max_value_length) | Indicates the maximum length of a string (8192 characters). |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [MAX_KEY_LENGTH](arkts-arkdata-storage-con.md#max_key_length) |
+| [MAX_VALUE_LENGTH](arkts-arkdata-storage-con.md#max_value_length) |

@@ -6,13 +6,12 @@ export type SubscribeCallbackData = _SubscribeCallbackData
 
 Provides methods that will be called back when the subscriber receives a new notification or a notification is canceled.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-notificationSubscribe-export type SubscribeCallbackData = _SubscribeCallbackData--><!--Device-notificationSubscribe-export type SubscribeCallbackData = _SubscribeCallbackData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
 
 **Property type:** _SubscribeCallbackData
-

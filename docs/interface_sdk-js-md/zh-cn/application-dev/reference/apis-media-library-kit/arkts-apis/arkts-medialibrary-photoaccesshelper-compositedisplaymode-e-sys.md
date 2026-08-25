@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-photoAccessHelper-enum CompositeDisplayMode--><!--Device-photoAccessHelper-enum CompositeDisplayMode-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -20,7 +20,7 @@ DEFAULT = 0
 
 **起始版本：** 23
 
-<!--Device-CompositeDisplayMode-DEFAULT = 0--><!--Device-CompositeDisplayMode-DEFAULT = 0-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -36,9 +36,8 @@ CLOUD_ENHANCEMENT = 1
 
 **起始版本：** 23
 
-<!--Device-CompositeDisplayMode-CLOUD_ENHANCEMENT = 1--><!--Device-CompositeDisplayMode-CLOUD_ENHANCEMENT = 1-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
-

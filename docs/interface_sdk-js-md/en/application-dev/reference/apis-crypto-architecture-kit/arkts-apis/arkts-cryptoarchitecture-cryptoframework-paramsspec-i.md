@@ -15,9 +15,9 @@ Encapsulates the parameters used for encryption or decryption. You need to const
 > object, you must set **algName** for its parent class **ParamsSpec** to specify the child class object to be
 > passed to **init()**.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-cryptoFramework-interface ParamsSpec--><!--Device-cryptoFramework-interface ParamsSpec-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
@@ -40,13 +40,12 @@ Algorithm for symmetric encryption or decryption. The value can be:
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ParamsSpec-algName: string--><!--Device-ParamsSpec-algName: string-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
-

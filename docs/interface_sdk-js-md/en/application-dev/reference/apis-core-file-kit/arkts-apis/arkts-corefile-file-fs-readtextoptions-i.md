@@ -6,7 +6,7 @@ Defines the options used in **readText()**. It inherits from [ReadOptions](arkts
 
 **Since:** 11
 
-<!--Device-unnamed-export interface ReadTextOptions--><!--Device-unnamed-export interface ReadTextOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -30,9 +30,8 @@ Format of the data to be encoded. This parameter is valid only when the data typ
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ReadTextOptions-encoding?: string--><!--Device-ReadTextOptions-encoding?: string-End-->
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
-

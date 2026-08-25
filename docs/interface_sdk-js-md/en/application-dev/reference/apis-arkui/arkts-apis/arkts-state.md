@@ -4,17 +4,16 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [IncrementalScope](arkts-arkui-state-incrementalscope-i.md) | Define the IncrementalScope interface to manage state management. |
-| [ReadableState](arkts-arkui-state-readablestate-i.md) | Define the ReadableState interface to observed data changes. |
-| [StateContext](arkts-arkui-state-statecontext-i.md) | Context of a state, keeping track of changes in the given scope. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [IncrementalScope](arkts-arkui-state-incrementalscope-i.md) |
+| [ReadableState](arkts-arkui-state-readablestate-i.md) |
+| [StateContext](arkts-arkui-state-statecontext-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [__memo_context_type](arkts-arkui-memocontexttype-t.md) | Define StateContext alias. |
-| [__memo_id_type](arkts-arkui-memoidtype-t.md) | Define int alias. |
-| [Equivalent](arkts-arkui-equivalent-t.md) | Determine whether two values are equal. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [__memo_context_type](arkts-arkui-memocontexttype-t.md) |
+| [__memo_id_type](arkts-arkui-memoidtype-t.md) |
+| [Equivalent](arkts-arkui-equivalent-t.md) |

@@ -2,9 +2,9 @@
 
 Indicates the lock types.
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-sim-export enum LockType--><!--Device-sim-export enum LockType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -18,9 +18,9 @@ PIN_LOCK = 1
 
 Indicates the SIM card password lock.
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-LockType-PIN_LOCK = 1--><!--Device-LockType-PIN_LOCK = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -34,11 +34,10 @@ FDN_LOCK = 2
 
 Indicates the fixed dialing lock.
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-LockType-FDN_LOCK = 2--><!--Device-LockType-FDN_LOCK = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
-

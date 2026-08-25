@@ -2,9 +2,9 @@
 
 An option to make different picker usage
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-avSession-interface AVCastPickerOptions--><!--Device-avSession-interface AVCastPickerOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -24,9 +24,9 @@ Set the popup menu position if pickerstyple is set to STYLE_MENU.
 
 **Type:** [MenuPosition](arkts-avsession-avsession-menuposition-i.md)
 
-**Since:** 24
+**Since:** 22
 
-<!--Device-AVCastPickerOptions-menuPosition?: MenuPosition--><!--Device-AVCastPickerOptions-menuPosition?: MenuPosition-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -40,9 +40,9 @@ Set the picker style.
 
 **Type:** [AVCastPickerStyle](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstyle-e.md)
 
-**Since:** 24
+**Since:** 22
 
-<!--Device-AVCastPickerOptions-pickerStyle?: AVCastPickerStyle--><!--Device-AVCastPickerOptions-pickerStyle?: AVCastPickerStyle-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -56,11 +56,10 @@ Indicates current session type to show different picker ui. If not set, default 
 
 **Type:** [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)
 
-**Since:** 23
+**Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
-<!--Device-AVCastPickerOptions-sessionType?: AVSessionType--><!--Device-AVCastPickerOptions-sessionType?: AVSessionType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
-

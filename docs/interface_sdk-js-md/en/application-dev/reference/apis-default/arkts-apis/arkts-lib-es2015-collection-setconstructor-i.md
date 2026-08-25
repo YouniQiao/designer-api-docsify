@@ -1,34 +1,30 @@
 # SetConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface SetConstructor--><!--Device-unnamed-interface SetConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
+## [[Construct]]
 
 ```TypeScript
 new <T = any>(values?: readonly T[] | null): Set<T>
 ```
 
-**Since:** -1
-
-<!--Device-SetConstructor-new <T = any>(values?: readonly T[] | null): Set<T>--><!--Device-SetConstructor-new <T = any>(values?: readonly T[] | null): Set<T>-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| values | readonly T[] \| null | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| values | readonly T[] \| null | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## prototype
 
 ```TypeScript
@@ -37,7 +33,4 @@ readonly prototype: Set<any>
 
 **Type:** Set&lt;any&gt;
 
-**Since:** -1
-
-<!--Device-SetConstructor-readonly prototype: Set<any>--><!--Device-SetConstructor-readonly prototype: Set<any>-End-->
-
+**ArkTS mode:** 

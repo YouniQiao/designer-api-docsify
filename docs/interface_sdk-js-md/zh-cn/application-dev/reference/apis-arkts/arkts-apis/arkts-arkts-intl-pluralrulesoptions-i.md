@@ -4,9 +4,7 @@ PluralRules选项。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-Intl-export interface PluralRulesOptions--><!--Device-Intl-export interface PluralRulesOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,11 +25,9 @@ localeMatcher?: 'lookup' | 'best fit' | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PluralRulesOptions-localeMatcher?: 'lookup' | 'best fit' | undefined--><!--Device-PluralRulesOptions-localeMatcher?: 'lookup' | 'best fit' | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -47,11 +43,9 @@ maximumFractionDigits?: double | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PluralRulesOptions-maximumFractionDigits?: double | undefined--><!--Device-PluralRulesOptions-maximumFractionDigits?: double | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -67,11 +61,9 @@ maximumSignificantDigits?: double | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PluralRulesOptions-maximumSignificantDigits?: double | undefined--><!--Device-PluralRulesOptions-maximumSignificantDigits?: double | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -87,11 +79,9 @@ minimumFractionDigits?: double | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PluralRulesOptions-minimumFractionDigits?: double | undefined--><!--Device-PluralRulesOptions-minimumFractionDigits?: double | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -107,11 +97,9 @@ minimumIntegerDigits?: double | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PluralRulesOptions-minimumIntegerDigits?: double | undefined--><!--Device-PluralRulesOptions-minimumIntegerDigits?: double | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -127,11 +115,9 @@ minimumSignificantDigits?: double | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PluralRulesOptions-minimumSignificantDigits?: double | undefined--><!--Device-PluralRulesOptions-minimumSignificantDigits?: double | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -147,11 +133,8 @@ type?: PluralRuleType | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-PluralRulesOptions-type?: PluralRuleType | undefined--><!--Device-PluralRulesOptions-type?: PluralRuleType | undefined-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

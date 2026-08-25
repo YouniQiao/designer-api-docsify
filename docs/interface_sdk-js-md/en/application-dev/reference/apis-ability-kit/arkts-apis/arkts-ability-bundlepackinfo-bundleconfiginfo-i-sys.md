@@ -2,9 +2,9 @@
 
 BundleConfigInfo: the bundle summary class.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export interface BundleConfigInfo--><!--Device-unnamed-export interface BundleConfigInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -20,9 +20,9 @@ Bundle name. It uniquely identifies an application.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-BundleConfigInfo-readonly bundleName: string--><!--Device-BundleConfigInfo-readonly bundleName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -38,11 +38,10 @@ Bundle version.
 
 **Type:** [Version](arkts-ability-bundlepackinfo-version-i-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-BundleConfigInfo-readonly version: Version--><!--Device-BundleConfigInfo-readonly version: Version-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
-

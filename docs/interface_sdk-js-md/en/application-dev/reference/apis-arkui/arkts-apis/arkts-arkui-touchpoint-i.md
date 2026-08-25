@@ -4,7 +4,7 @@ Defines the coordinates of the touch point. If it is not set, the touch point is
 
 **Since:** 11
 
-<!--Device-unnamed-declare interface TouchPoint--><!--Device-unnamed-declare interface TouchPoint-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ X coordinate of the touch point.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TouchPoint-x: Dimension--><!--Device-TouchPoint-x: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ Y coordinate of the touch point.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-TouchPoint-y: Dimension--><!--Device-TouchPoint-y: Dimension-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

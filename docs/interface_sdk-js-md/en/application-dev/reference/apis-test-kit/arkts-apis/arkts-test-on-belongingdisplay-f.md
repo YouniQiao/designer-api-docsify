@@ -13,31 +13,31 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 export function belongingDisplay(displayId: int): On
 ```
 
-Specifies the displayId to which the target Component belongs.
+Specifies the display to which the target component belongs.
 
 **Since:** 23
 
-<!--Device-ON-export function belongingDisplay(displayId: int): On--><!--Device-ON-export function belongingDisplay(displayId: int): On-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| displayId | int | Yes | the Id of the specified display. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| displayId | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | this { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 **Examples**
 
@@ -47,4 +47,3 @@ import { On, ON } from '@kit.TestKit';
 
 let on: On = ON.belongingDisplay(0); // Use the static constructor ON to create an On object and specify the ID of the display to which the target component belongs.
 ```
-

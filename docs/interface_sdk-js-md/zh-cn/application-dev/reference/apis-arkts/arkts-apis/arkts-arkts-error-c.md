@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export class Error--><!--Device-unnamed-export class Error-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,26 +23,24 @@ static $_invoke(message?: string, options?: ErrorOptions): Error
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Error-static $_invoke(message?: string, options?: ErrorOptions): Error--><!--Device-Error-static $_invoke(message?: string, options?: ErrorOptions): Error-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| message | string | 否 | 错误文本。 |
-| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | 否 | 错误选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [message](#message) | string | 否 |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Error | 新的Error实例。 |
+| 类型 |
+| --- |
+| Error |
 
 ## constructor
 
@@ -56,21 +52,19 @@ constructor(code: int, message?: string, options?: ErrorOptions)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Error-constructor(code: int, message?: string, options?: ErrorOptions)--><!--Device-Error-constructor(code: int, message?: string, options?: ErrorOptions)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| code | int | 是 | 错误码。 <br>取值约束：应为整数。 |
-| message | string | 否 | 错误文本。 |
-| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | 否 | 错误选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [code](#code) | int | 是 |
+| [message](#message) | string | 否 |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | 否 |
 
 ## constructor
 
@@ -82,20 +76,18 @@ constructor(message?: string, options?: ErrorOptions)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Error-constructor(message?: string, options?: ErrorOptions)--><!--Device-Error-constructor(message?: string, options?: ErrorOptions)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| message | string | 否 | 错误文本。 |
-| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | 否 | 错误选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [message](#message) | string | 否 |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | 否 |
 
 ## constructor
 
@@ -107,22 +99,20 @@ constructor(name: string, code: int, message?: string, options?: ErrorOptions)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Error-constructor(name: string, code: int, message?: string, options?: ErrorOptions)--><!--Device-Error-constructor(name: string, code: int, message?: string, options?: ErrorOptions)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 错误名称。 |
-| code | int | 是 | 错误码。 <br>取值约束：应为整数。 |
-| message | string | 否 | 错误文本。 |
-| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | 否 | 错误选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [name](#name) | string | 是 |
+| [code](#code) | int | 是 |
+| [message](#message) | string | 否 |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | 否 |
 
 ## constructor
 
@@ -134,21 +124,19 @@ constructor(name: string, message: string | undefined, options?: ErrorOptions)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Error-constructor(name: string, message: string | undefined, options?: ErrorOptions)--><!--Device-Error-constructor(name: string, message: string | undefined, options?: ErrorOptions)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 错误名称。 |
-| message | string \| undefined | 是 | 错误文本。 |
-| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | 否 | 错误选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [name](#name) | string | 是 |
+| [message](#message) | string \| undefined | 是 |
+| options | [ErrorOptions](arkts-arkts-error-erroroptions-i.md) | 否 |
 
 ## toString
 
@@ -160,17 +148,104 @@ toString(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Error-toString(): string--><!--Device-Error-toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 字符串表示。 |
+| 类型 |
+| --- |
+| string |
 
+## cause
+
+```TypeScript
+set cause(val: Object | undefined)
+```
+
+设置该错误的原因。
+
+**类型：** Object
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## code
+
+```TypeScript
+set code(val: int)
+```
+
+设置该错误的错误码。
+
+**类型：** int
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## message
+
+```TypeScript
+set message(val: string)
+```
+
+设置该错误的错误信息。
+
+**类型：** string
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## name
+
+```TypeScript
+set name(val: string)
+```
+
+设置该错误的名称。
+
+**类型：** string
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## stack
+
+```TypeScript
+set stack(newStack: string | undefined)
+```
+
+设置该错误的堆栈信息。
+
+**类型：** string
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang

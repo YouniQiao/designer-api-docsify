@@ -4,7 +4,7 @@ RelateType enumeration description@enum { number }
 
 **起始版本：** 11
 
-<!--Device-unnamed-declare enum RelateType--><!--Device-unnamed-declare enum RelateType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ Scales the current component to fill the parent component.
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-RelateType-FILL--><!--Device-RelateType-FILL-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,8 @@ Scales the current component to fit the parent component.
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-RelateType-FIT--><!--Device-RelateType-FIT-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

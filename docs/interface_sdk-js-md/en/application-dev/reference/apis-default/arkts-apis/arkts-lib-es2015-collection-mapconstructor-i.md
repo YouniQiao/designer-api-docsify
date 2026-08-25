@@ -1,48 +1,42 @@
 # MapConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface MapConstructor--><!--Device-unnamed-interface MapConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
+## [[Construct]]
 
 ```TypeScript
 new(): Map<any, any>
 ```
 
-**Since:** -1
-
-<!--Device-MapConstructor-new(): Map<any, any>--><!--Device-MapConstructor-new(): Map<any, any>-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-## constructor
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+## [[Construct]]
 
 ```TypeScript
 new <K, V>(entries?: readonly (readonly [K, V])[] | null): Map<K, V>
 ```
 
-**Since:** -1
-
-<!--Device-MapConstructor-new <K, V>(entries?: readonly (readonly [K, V])[] | null): Map<K, V>--><!--Device-MapConstructor-new <K, V>(entries?: readonly (readonly [K, V])[] | null): Map<K, V>-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| entries | readonly (readonly [K, V])[] \| null | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| entries | readonly (readonly [K, V])[] \| null | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## prototype
 
 ```TypeScript
@@ -51,7 +45,4 @@ readonly prototype: Map<any, any>
 
 **Type:** Map&lt;any, any&gt;
 
-**Since:** -1
-
-<!--Device-MapConstructor-readonly prototype: Map<any, any>--><!--Device-MapConstructor-readonly prototype: Map<any, any>-End-->
-
+**ArkTS mode:** 

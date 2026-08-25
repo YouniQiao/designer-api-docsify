@@ -1,7 +1,6 @@
 # ContentBuilder
 
 ```TypeScript
-@Builder
 type ContentBuilder = () => void
 ```
 
@@ -9,11 +8,6 @@ type ContentBuilder = () => void
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**装饰器类型：** @Builder
-
-<!--Device-unnamed-@Buildertype ContentBuilder = () => void--><!--Device-unnamed-@Buildertype ContentBuilder = () => void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

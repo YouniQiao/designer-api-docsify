@@ -9,28 +9,28 @@ import { socket } from '@kit.ConnectivityKit';
 ## getL2capPsm
 
 ```TypeScript
-function getL2capPsm(serverSocket: int): int
+function getL2capPsm(serverSocket: number): number
 ```
 
 Get l2cap socket psm.
 
 **Since:** 20
 
-<!--Device-socket-function getL2capPsm(serverSocket: int): int--><!--Device-socket-function getL2capPsm(serverSocket: int): int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| serverSocket | int | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-socket-spplisten-f.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| serverSocket | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Returns the l2cap socket psm |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -45,4 +45,3 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
-

@@ -2,9 +2,9 @@
 
 Enumerates the immersive modes of the input method.<br> <br> | Name | Value| Description | | ------------ | -- | ------------------ | | NONE_IMMERSIVE | 0 | The immersive mode is not used.| | IMMERSIVE | 1 | The immersive mode is used. Its style is determined by the input method application.| | LIGHT_IMMERSIVE | 2 | Immersive style in light mode.| | DARK_IMMERSIVE | 3 | Immersive style in dark mode.|
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-inputMethodEngine-export enum ImmersiveMode--><!--Device-inputMethodEngine-export enum ImmersiveMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -16,9 +16,9 @@ NONE_IMMERSIVE = 0
 
 Default immersive mode, the panel is not in immersive mode.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-ImmersiveMode-NONE_IMMERSIVE = 0--><!--Device-ImmersiveMode-NONE_IMMERSIVE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -30,9 +30,9 @@ IMMERSIVE
 
 Immersive mode of the input method.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-ImmersiveMode-IMMERSIVE--><!--Device-ImmersiveMode-IMMERSIVE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -44,9 +44,9 @@ LIGHT_IMMERSIVE
 
 Light immersive mode.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-ImmersiveMode-LIGHT_IMMERSIVE--><!--Device-ImmersiveMode-LIGHT_IMMERSIVE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -58,9 +58,8 @@ DARK_IMMERSIVE
 
 Dark immersive mode.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-ImmersiveMode-DARK_IMMERSIVE--><!--Device-ImmersiveMode-DARK_IMMERSIVE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

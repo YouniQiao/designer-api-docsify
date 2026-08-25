@@ -1,12 +1,10 @@
 # SpringLoadingContext
 
-Context information for the current spring loading trigger. This object is passed to the application in the spring loading callback, allowing it to obtain the current state, dynamically refresh UI effects, and access drag data to determine whether to handle the drag operation.
+Defines callback context information passed to applications during hover detection. It enables access to drag states, dynamic UI effect updates, and drag data for operation handling decisions.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-dragController-export class SpringLoadingContext--><!--Device-dragController-export class SpringLoadingContext-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,15 +20,15 @@ import { dragController } from '@kit.ArkUI';
 abort(): void
 ```
 
-Aborts subsequent spring loading triggers. Note: Aborting does not trigger a CANCEL notification, the application must handle state cleanup when aborting.
+Terminates subsequent hover detection. This API does not trigger CANCEL state notifications, and the application needs to perform state cleanup when executing this API.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SpringLoadingContext-abort(): void--><!--Device-SpringLoadingContext-abort(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,23 +38,23 @@ Aborts subsequent spring loading triggers. Note: Aborting does not trigger a CAN
 updateConfiguration(config: DragSpringLoadingConfiguration): void
 ```
 
-Updates the spring loading configuration for the current trigger. Only effective during the BEGIN state. This method does not modify the original configuration set during onDragSpringLoading binding. It provides an opportunity for dynamic configuration updates during the current trigger. Typically, applications should use default configurations or set them once during binding. Use this method sparingly, e.g., for different drag data types requiring varied UX timing.
+Updates the hover detection configuration. This API is effective only when the hover detection state is BEGIN. Applications typically set the hover detection configuration when binding onDragSpringLoading or use the default configuration. This API does not modify the original configuration set during binding, but updates dynamic configuration information for subsequent hover detection. Use this API with caution, as different drag data types may require different UX timing.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SpringLoadingContext-updateConfiguration(config: DragSpringLoadingConfiguration): void--><!--Device-SpringLoadingContext-updateConfiguration(config: DragSpringLoadingConfiguration): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| config | DragSpringLoadingConfiguration | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| config | [DragSpringLoadingConfiguration](../arkts-components/arkts-arkui-dragspringloadingconfiguration-t.md) | Yes |
 
 ## currentConfig
 
@@ -64,37 +62,37 @@ Updates the spring loading configuration for the current trigger. Only effective
 currentConfig?: DragSpringLoadingConfiguration
 ```
 
-Current spring loading configuration. Absent when the state is CANCEL.
+Configuration information in the current callback. Omitted in CANCEL state; uses the [DragSpringLoadingConfiguration](arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md) default value when **undefined**.
 
 **Type:** DragSpringLoadingConfiguration
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SpringLoadingContext-currentConfig?: DragSpringLoadingConfiguration--><!--Device-SpringLoadingContext-currentConfig?: DragSpringLoadingConfiguration-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## currentNotifySequence
 
 ```TypeScript
-currentNotifySequence: int
+currentNotifySequence: number
 ```
 
-Sequence number of the current spring loading state notification. Begins at 0 for BEGIN and increments with each callback.
+Callback notification sequence number in the current hover detection cycle. The value is zero-based.
 
-**Type:** int
+**Type:** number
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SpringLoadingContext-currentNotifySequence: int--><!--Device-SpringLoadingContext-currentNotifySequence: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,17 +102,17 @@ Sequence number of the current spring loading state notification. Begins at 0 fo
 dragInfos?: SpringLoadingDragInfos
 ```
 
-Drag-related information. Absent when the state is CANCEL.
+Drag information. Omitted in CANCEL state; uses the [SpringLoadingDragInfos](arkts-arkui-dragcontroller-springloadingdraginfos-i.md) default value when **undefined**.
 
 **Type:** [SpringLoadingDragInfos](arkts-arkui-dragcontroller-springloadingdraginfos-i.md)
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SpringLoadingContext-dragInfos?: SpringLoadingDragInfos--><!--Device-SpringLoadingContext-dragInfos?: SpringLoadingDragInfos-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -124,17 +122,16 @@ Drag-related information. Absent when the state is CANCEL.
 state: DragSpringLoadingState
 ```
 
-Current spring loading state. Refer to the DragSpringLoadingState enum for details.
+Current state of hover detection.
 
 **Type:** [DragSpringLoadingState](arkts-arkui-dragcontroller-dragspringloadingstate-e.md)
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SpringLoadingContext-state: DragSpringLoadingState--><!--Device-SpringLoadingContext-state: DragSpringLoadingState-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

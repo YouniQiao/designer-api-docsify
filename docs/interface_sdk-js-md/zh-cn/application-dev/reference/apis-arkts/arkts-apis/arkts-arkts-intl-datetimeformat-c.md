@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-Intl-export class DateTimeFormat--><!--Device-Intl-export class DateTimeFormat-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,20 +23,18 @@ public constructor(locales?: string | string[], options?: DateTimeFormatOptions)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DateTimeFormat-public constructor(locales?: string | string[], options?: DateTimeFormatOptions)--><!--Device-DateTimeFormat-public constructor(locales?: string | string[], options?: DateTimeFormatOptions)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locales | string \| string[] | 否 | 区域设置。 |
-| options | [DateTimeFormatOptions](arkts-arkts-intl-datetimeformatoptions-i.md) | 否 | 选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locales | string \| string[] | 否 |
+| options | [DateTimeFormatOptions](arkts-arkts-intl-datetimeformatoptions-i.md) | 否 |
 
 ## format
 
@@ -50,25 +46,23 @@ public format(date?: Date | double): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DateTimeFormat-public format(date?: Date | double): string--><!--Device-DateTimeFormat-public format(date?: Date | double): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| date | Date \| double | 否 | 待格式化的日期。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| date | Date \| double | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 格式化后的日期字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## formatRange
 
@@ -80,26 +74,24 @@ public formatRange(startDate: Date | double, endDate: Date | double): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DateTimeFormat-public formatRange(startDate: Date | double, endDate: Date | double): string--><!--Device-DateTimeFormat-public formatRange(startDate: Date | double, endDate: Date | double): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| startDate | Date \| double | 是 | 起始日期。 |
-| endDate | Date \| double | 是 | 结束日期。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| startDate | Date \| double | 是 |
+| endDate | Date \| double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 格式化后的区间字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## formatRangeToParts
 
@@ -111,26 +103,24 @@ public formatRangeToParts(startDate: Date | double, endDate: Date | double): Dat
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DateTimeFormat-public formatRangeToParts(startDate: Date | double, endDate: Date | double): DateTimeRangeFormatPart[]--><!--Device-DateTimeFormat-public formatRangeToParts(startDate: Date | double, endDate: Date | double): DateTimeRangeFormatPart[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| startDate | Date \| double | 是 | 起始日期。 |
-| endDate | Date \| double | 是 | 结束日期。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| startDate | Date \| double | 是 |
+| endDate | Date \| double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DateTimeRangeFormatPart](arkts-arkts-intl-datetimerangeformatpart-i.md)[] | 格式化后的区间各片段。 |
+| 类型 |
+| --- |
+| [DateTimeRangeFormatPart](arkts-arkts-intl-datetimerangeformatpart-i.md)[] |
 
 ## formatToParts
 
@@ -142,25 +132,23 @@ public formatToParts(date?: Date | double): DateTimeFormatPart[]
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DateTimeFormat-public formatToParts(date?: Date | double): DateTimeFormatPart[]--><!--Device-DateTimeFormat-public formatToParts(date?: Date | double): DateTimeFormatPart[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| date | Date \| double | 否 | 待格式化的日期。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| date | Date \| double | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DateTimeFormatPart](arkts-arkts-intl-datetimeformatpart-i.md)[] | 格式化后的各个片段。 |
+| 类型 |
+| --- |
+| [DateTimeFormatPart](arkts-arkts-intl-datetimeformatpart-i.md)[] |
 
 ## resolvedOptions
 
@@ -172,19 +160,17 @@ public resolvedOptions(): ResolvedDateTimeFormatOptions
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DateTimeFormat-public resolvedOptions(): ResolvedDateTimeFormatOptions--><!--Device-DateTimeFormat-public resolvedOptions(): ResolvedDateTimeFormatOptions-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ResolvedDateTimeFormatOptions](arkts-arkts-intl-resolveddatetimeformatoptions-i.md) | 解析后的选项。 |
+| 类型 |
+| --- |
+| [ResolvedDateTimeFormatOptions](arkts-arkts-intl-resolveddatetimeformatoptions-i.md) |
 
 ## supportedLocalesOf
 
@@ -197,24 +183,21 @@ public static supportedLocalesOf(locales: string | Locale | ReadonlyArray<string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DateTimeFormat-public static supportedLocalesOf(locales: string | Locale | ReadonlyArray<string | Locale>,             options?: DateTimeFormatOptions): string[]--><!--Device-DateTimeFormat-public static supportedLocalesOf(locales: string | Locale | ReadonlyArray<string | Locale>,             options?: DateTimeFormatOptions): string[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locales | string \| Locale \| ReadonlyArray&lt;string \| Locale&gt; | 是 | 区域设置。 |
-| options | [DateTimeFormatOptions](arkts-arkts-intl-datetimeformatoptions-i.md) | 否 | 选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locales | string \| Locale \| ReadonlyArray & lt;string \ | Locale & gt; | 是 |
+| options | [DateTimeFormatOptions](arkts-arkts-intl-datetimeformatoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string[] | 支持的区域设置。 |
-
+| 类型 |
+| --- |
+| string[] |

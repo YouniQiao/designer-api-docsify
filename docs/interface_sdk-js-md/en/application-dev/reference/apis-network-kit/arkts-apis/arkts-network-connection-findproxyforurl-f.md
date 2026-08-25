@@ -29,21 +29,21 @@ Parses the specified URL proxy address based on the configured PAC script and re
 
 **Since:** 20
 
-<!--Device-connection-function findProxyForUrl(url: string): string--><!--Device-connection-function findProxyForUrl(url: string): string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string | Yes | URL used to search for the proxy information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| url | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Proxy information. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -53,4 +53,3 @@ import { connection } from '@kit.NetworkKit';
 let proxyInfo = connection.findProxyForUrl("http://example.com");
 console.info(proxyInfo);
 ```
-

@@ -6,13 +6,12 @@ export type NotificationLiveViewContent = _NotificationLiveViewContent
 
 Describes the common live view.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-notificationManager-export type NotificationLiveViewContent = _NotificationLiveViewContent--><!--Device-notificationManager-export type NotificationLiveViewContent = _NotificationLiveViewContent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
 
 **Property type:** _NotificationLiveViewContent
-

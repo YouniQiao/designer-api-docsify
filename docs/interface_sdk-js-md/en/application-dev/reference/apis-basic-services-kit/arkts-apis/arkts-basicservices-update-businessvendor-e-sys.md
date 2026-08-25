@@ -2,9 +2,9 @@
 
 Represents a device vendor.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-update-export enum BusinessVendor--><!--Device-update-export enum BusinessVendor-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -18,11 +18,10 @@ PUBLIC = 'public'
 
 Open source. This parameter indicates that the vendor is an open-source vendor, which is applicable to open- source version upgrade.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-BusinessVendor-PUBLIC = 'public'--><!--Device-BusinessVendor-PUBLIC = 'public'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
-

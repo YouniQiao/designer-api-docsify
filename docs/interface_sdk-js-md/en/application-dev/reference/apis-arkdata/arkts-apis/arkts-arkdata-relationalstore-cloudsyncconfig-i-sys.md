@@ -4,7 +4,7 @@ Cloud sync configuration.
 
 **Since:** 26.0.0
 
-<!--Device-relationalStore-interface CloudSyncConfig--><!--Device-relationalStore-interface CloudSyncConfig-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -26,11 +26,10 @@ Indicates whether the sync operation should be download‑only.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-CloudSyncConfig-downloadOnly?: boolean--><!--Device-CloudSyncConfig-downloadOnly?: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **System API:** This is a system API.
-

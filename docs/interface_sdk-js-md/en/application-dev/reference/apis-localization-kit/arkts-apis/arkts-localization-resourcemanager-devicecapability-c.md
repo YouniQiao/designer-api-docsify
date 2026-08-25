@@ -2,9 +2,9 @@
 
 Defines the device capability.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-resourceManager-export class DeviceCapability--><!--Device-resourceManager-export class DeviceCapability-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -24,11 +24,11 @@ Device type.
 
 **Type:** DeviceType
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-DeviceCapability-deviceType: DeviceType--><!--Device-DeviceCapability-deviceType: DeviceType-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -42,11 +42,10 @@ Screen density of the device.
 
 **Type:** ScreenDensity
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-DeviceCapability-screenDensity: ScreenDensity--><!--Device-DeviceCapability-screenDensity: ScreenDensity-End-->
-
 **System capability:** SystemCapability.Global.ResourceManager
-

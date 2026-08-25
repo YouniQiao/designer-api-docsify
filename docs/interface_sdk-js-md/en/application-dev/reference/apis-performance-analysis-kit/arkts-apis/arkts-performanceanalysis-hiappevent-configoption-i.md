@@ -2,9 +2,9 @@
 
 Provides configuration options for application event logging.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-hiAppEvent-interface ConfigOption--><!--Device-hiAppEvent-interface ConfigOption-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -24,11 +24,11 @@ Whether to enable the event logging function. The default value is **false**. If
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ConfigOption-disable?: boolean--><!--Device-ConfigOption-disable?: boolean-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -43,11 +43,10 @@ Quota for the directory that stores event logging files. The default value is **
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ConfigOption-maxStorage?: string--><!--Device-ConfigOption-maxStorage?: string-End-->
-
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
-

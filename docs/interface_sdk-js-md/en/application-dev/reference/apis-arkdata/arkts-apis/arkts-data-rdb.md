@@ -5,11 +5,11 @@ The relational database (RDB) manages data based on relational models. With the 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [relationalStore](arkts-data-relationalstore.md)
-
-<!--Device-unnamed-declare namespace rdb--><!--Device-unnamed-declare namespace rdb-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -22,38 +22,37 @@ The relational database (RDB) manages data based on relational models. With the 
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [deleteRdbStore](arkts-arkdata-rdb-deleterdbstore-f.md) | Deletes an RDB store. This API uses an asynchronous callback to return the result. |
-| [deleteRdbStore](arkts-arkdata-rdb-deleterdbstore-f.md) | Deletes an RDB store. This API uses a promise to return the result. |
-| [getRdbStore](arkts-arkdata-rdb-getrdbstore-f.md) | Obtains an RDB store. This API uses an asynchronous callback to return the result. You can set parameters for the RDB store based on service requirements and call APIs to perform data operations. |
-| [getRdbStore](arkts-arkdata-rdb-getrdbstore-f.md) | Obtains an RDB store. This API uses a promise to return the result. You can set parameters for the RDB store based on service requirements and call APIs to perform data operations. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [deleteRdbStore](arkts-arkdata-rdb-deleterdbstore-f.md) |
+| [deleteRdbStore](arkts-arkdata-rdb-deleterdbstore-f.md) |
+| [getRdbStore](arkts-arkdata-rdb-getrdbstore-f.md) |
+| [getRdbStore](arkts-arkdata-rdb-getrdbstore-f.md) |
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Defines predicates for an RDB store. This class determines whether the conditional expression for the RDB store is true or false. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [RdbStore](arkts-arkdata-rdb-rdbstore-i.md) | Provides APIs for managing data in an RDB store.Before using the APIs of this class, use [executeSql](arkts-arkdata-rdb-rdbstore-i.md#executesql) to initialize the database table structure and related data. |
-| [StoreConfig](arkts-arkdata-rdb-storeconfig-i.md) | Defines the RDB store configuration. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [RdbStore](arkts-arkdata-rdb-rdbstore-i.md) |
+| [StoreConfig](arkts-arkdata-rdb-storeconfig-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Defines the subscription type. |
-| [SyncMode](arkts-arkdata-rdb-syncmode-e.md) | Defines the database sync mode. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) |
+| [SyncMode](arkts-arkdata-rdb-syncmode-e.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [ResultSet](arkts-arkdata-rdb-resultset-t.md) | Configure RdbPredicates to match the specified field whose data type is ValueType array and values are out of a given range. |
-| [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Defines the types of the key and value in a KV pair. |
-| [ValueType](arkts-arkdata-rdb-valuetype-t.md) | Defines the data types allowed. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ResultSet](arkts-arkdata-rdb-resultset-t.md) |
+| [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) |
+| [ValueType](arkts-arkdata-rdb-valuetype-t.md) |

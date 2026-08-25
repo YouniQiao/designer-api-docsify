@@ -2,9 +2,9 @@
 
 Enumerates the function types represented by the Enter key of the input method.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-inputMethod-export enum EnterKeyType--><!--Device-inputMethod-export enum EnterKeyType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -16,9 +16,9 @@ UNSPECIFIED = 0
 
 Not specified.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-EnterKeyType-UNSPECIFIED = 0--><!--Device-EnterKeyType-UNSPECIFIED = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -30,9 +30,9 @@ NONE
 
 None.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-EnterKeyType-NONE--><!--Device-EnterKeyType-NONE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -44,9 +44,9 @@ GO
 
 Go.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-EnterKeyType-GO--><!--Device-EnterKeyType-GO-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -58,9 +58,9 @@ SEARCH
 
 Search.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-EnterKeyType-SEARCH--><!--Device-EnterKeyType-SEARCH-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -72,9 +72,9 @@ SEND
 
 Send.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-EnterKeyType-SEND--><!--Device-EnterKeyType-SEND-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -86,9 +86,9 @@ NEXT
 
 Next.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-EnterKeyType-NEXT--><!--Device-EnterKeyType-NEXT-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -100,9 +100,9 @@ DONE
 
 Done.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-EnterKeyType-DONE--><!--Device-EnterKeyType-DONE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -114,9 +114,9 @@ PREVIOUS
 
 Previous.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-EnterKeyType-PREVIOUS--><!--Device-EnterKeyType-PREVIOUS-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -128,9 +128,8 @@ NEWLINE
 
 Line break.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EnterKeyType-NEWLINE--><!--Device-EnterKeyType-NEWLINE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

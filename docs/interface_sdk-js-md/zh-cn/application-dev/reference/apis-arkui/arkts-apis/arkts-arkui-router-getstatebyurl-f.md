@@ -25,6 +25,8 @@ function getStateByUrl(url: string): Array<RouterState>
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **废弃版本：** 18
 
 **替代接口：** [getStateByUrl](arkts-arkui-arkui-uicontext-router-c.md#getstatebyurl)
@@ -33,21 +35,19 @@ function getStateByUrl(url: string): Array<RouterState>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-router-function getStateByUrl(url: string): Array<RouterState>--><!--Device-router-function getStateByUrl(url: string): Array<RouterState>-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| url | string | 是 | 表示要获取对应页面信息的url。url格式为页面绝对路径，由配置文件中pages列表提供，例如：pages/index/index。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| url | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;RouterState&gt; | 匹配指定url的页面状态信息数组，每个元素包含页面索引、名称、路径和参数。 |
+| 类型 |
+| --- |
+| Array & lt;RouterState & gt; |
 
 **示例**
 
@@ -62,4 +62,3 @@ for (let i: number = 0; i < options.length; i++) {
   console.info('params = ' + options[i].params);
 }
 ```
-

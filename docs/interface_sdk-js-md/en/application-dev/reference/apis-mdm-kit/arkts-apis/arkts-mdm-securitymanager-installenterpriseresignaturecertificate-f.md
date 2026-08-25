@@ -9,7 +9,7 @@ import { securityManager } from '@kit.MDMKit';
 ## installEnterpriseReSignatureCertificate
 
 ```TypeScript
-function installEnterpriseReSignatureCertificate(admin: Want, certificateAlias: string, fd: int, accountId: int): void
+function installEnterpriseReSignatureCertificate(admin: Want, certificateAlias: string, fd: number, accountId: number): void
 ```
 
 Installs the enterprise application re-signing certificate. After the installation is successful, the enterprise can use the certificate to re-sign applications.A maximum of 10 distinct certificates can be deployed per user. The certificate alias serves as a unique identifier for each certificate and cannot be duplicated during deployment. To update a certificate with an existing alias, you must first uninstall the old certificate by calling [uninstallEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-uninstallenterpriseresignaturecertificate-f.md).The installed certificates are retained on the device and will not be removed when the MDM app is uninstalled or the admin privilege is deactivated.In the enterprise app distribution scenario, you can use the re-signing certificate to re- sign enterprise apps. After re-signing, the app package is provided to enterprise administrators, who can then install the re-signed app on enterprise devices where the corresponding re-signing certificate has been deployed.Process of using the enterprise application re-signing certificate:
@@ -27,33 +27,33 @@ designated internal software and tools are installed and run on employees' mobil
 
 **Since:** 24
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
+
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-securityManager-function installEnterpriseReSignatureCertificate(admin: Want, certificateAlias: string, fd: int, accountId: int): void--><!--Device-securityManager-function installEnterpriseReSignatureCertificate(admin: Want, certificateAlias: string, fd: int, accountId: int): void-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| certificateAlias | string | Yes | Certificate alias, which must end with **.cer**. |
-| fd | int | Yes | Descriptor of an existing re-signing certificate file. The certificate file must be stored in the [app sandbox directory](../../../file-management/app-sandbox-directory.md). |
-| accountId | int | Yes | User ID, which must be greater than or equal to 0. You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of **@ohos.account.osAccount** to obtain the user ID. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+| certificateAlias | string | Yes |
+| fd | int | Yes |
+| accountId | int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [9201006](../errorcode-enterpriseDeviceManager.md#9201006-installed-enterprise-re-signing-certificate-exceeding-the-limit) | The number of certificates has reached the limit. |
-| [9201007](../errorcode-enterpriseDeviceManager.md#9201007-invalid-enterprise-re-signing-certificate) | The certificate is invalid. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| Error Code ID |
+| --- |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
+| [9201006](../errorcode-enterpriseDeviceManager.md#9201006-installed-enterprise-re-signing-certificate-exceeding-the-limit) |
+| [9201007](../errorcode-enterpriseDeviceManager.md#9201007-invalid-enterprise-re-signing-certificate) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 **Examples**
 
@@ -84,4 +84,3 @@ try {
     Code: ${err.code}, message: ${err.message}`);
 };
 ```
-

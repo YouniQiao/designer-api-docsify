@@ -16,13 +16,13 @@ function setAbilityEnabled(info: AbilityInfo, isEnable: boolean, callback: Async
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** null
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
-
-<!--Device-bundle-function setAbilityEnabled(info: AbilityInfo, isEnable: boolean, callback: AsyncCallback<void>): void--><!--Device-bundle-function setAbilityEnabled(info: AbilityInfo, isEnable: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -30,11 +30,11 @@ function setAbilityEnabled(info: AbilityInfo, isEnable: boolean, callback: Async
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | 是 | Ability信息，指示需要设置启用状态的Ability。 |
-| isEnable | boolean | 是 | 指定是否启用应用程序。true表示启用，false禁用。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 为返回操作结果而调用的回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | 是 |
+| isEnable | boolean | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **示例**
 
@@ -69,13 +69,13 @@ function setAbilityEnabled(info: AbilityInfo, isEnable: boolean): Promise<void>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** null
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
-
-<!--Device-bundle-function setAbilityEnabled(info: AbilityInfo, isEnable: boolean): Promise<void>--><!--Device-bundle-function setAbilityEnabled(info: AbilityInfo, isEnable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -83,18 +83,17 @@ function setAbilityEnabled(info: AbilityInfo, isEnable: boolean): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | 是 | Ability信息，指示需要设置启用状态的Ability。 |
-| isEnable | boolean | 是 | 指定是否启用应用程序。true表示启用，false禁用。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | 是 |
+| isEnable | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
 参见 [setAbilityEnabled](#setabilityenabled)
-

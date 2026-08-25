@@ -14,9 +14,9 @@ function getMaxRotationSpeed(mechId: int): RotationSpeed
 
 Obtains the maximum rotation speed of a mechanical device.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-mechanicManager-function getMaxRotationSpeed(mechId: int): RotationSpeed--><!--Device-mechanicManager-function getMaxRotationSpeed(mechId: int): RotationSpeed-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -24,23 +24,23 @@ Obtains the maximum rotation speed of a mechanical device.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mechId | int | Yes | ID of the mechanical device. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mechId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [RotationSpeed](arkts-mechanic-mechanicmanager-rotationspeed-i-sys.md) | Maximum speed. Only the absolute value of the speed is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [RotationSpeed](arkts-mechanic-mechanicmanager-rotationspeed-i-sys.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) |
 
 **Examples**
 
@@ -49,4 +49,3 @@ console.info('Query rotation speed');
 let speedLimit: mechanicManager.RotationSpeed = mechanicManager.getMaxRotationSpeed(0);
 console.info(`'Query rotation speed successful, speed limit information:' ${speedLimit}`);
 ```
-

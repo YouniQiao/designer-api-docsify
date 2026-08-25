@@ -2,9 +2,9 @@
 
 Defines HTTP server identity verification information.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-http-export interface ServerAuthentication--><!--Device-http-export interface ServerAuthentication-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -24,11 +24,11 @@ Server identity verification type. If the type is not set, negotiation with the 
 
 **Type:** [AuthenticationType](arkts-network-http-authenticationtype-t.md)
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-ServerAuthentication-authenticationType?: AuthenticationType--><!--Device-ServerAuthentication-authenticationType?: AuthenticationType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -42,11 +42,10 @@ Server credential. The default value is **undefined**.
 
 **Type:** Credential
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-ServerAuthentication-credential: Credential--><!--Device-ServerAuthentication-credential: Credential-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Communication.NetStack
-

@@ -9,7 +9,6 @@
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [ConcatArray](arkts-arkts-concatarray-i.md) | 这是concatArray接口。 |
-
+| 名称 |
+| --- |
+| [ConcatArray](arkts-arkts-concatarray-i.md) |

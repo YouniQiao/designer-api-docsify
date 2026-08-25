@@ -6,9 +6,7 @@ Defines event info for tap gesture.@extends BaseGestureEvent @interface TapGestu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export interface TapGestureEvent--><!--Device-unnamed-export interface TapGestureEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,11 +22,8 @@ The tap location info used in tap gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TapGestureEvent-tapLocation?: EventLocationInfo--><!--Device-TapGestureEvent-tapLocation?: EventLocationInfo-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -16,21 +16,21 @@ function isControlSupported(mechDeviceType?: MechDeviceType): boolean
 
 **起始版本：** 26.0.0
 
-<!--Device-mechanicManager-function isControlSupported(mechDeviceType?: MechDeviceType): boolean--><!--Device-mechanicManager-function isControlSupported(mechDeviceType?: MechDeviceType): boolean-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mechDeviceType | [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e.md) | 否 | 关联的设备类型 <br>默认值:如果未提供该参数，则代表所有类型设备，只要支持其中一种以上则返回支持 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [mechDeviceType](arkts-mechanic-mechanicmanager-mechinfo-i.md) | [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | Returns whether control is supported. |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -40,4 +40,3 @@ console.info('Check whether control is supported');
 let isSupported = mechanicManager.isControlSupported(mechanicManager.MechDeviceType.GIMBAL_DEVICE);
 console.info(`isSupported: ${isSupported}`);
 ```
-

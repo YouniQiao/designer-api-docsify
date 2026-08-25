@@ -2,9 +2,9 @@
 
 Describes the data of a common event. The **CommonEventData** module is used to carry the common event data received by subscribers in common event subscription scenarios. The data includes the event name, publisher bundle name, code, data, and additional parameters. This module is applicable to scenarios where apps subscribe to and process common events and parse the data carried in the events.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-export interface CommonEventData--><!--Device-unnamed-export interface CommonEventData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -18,11 +18,11 @@ Bundle name of the common event publisher. The default value is an empty string.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-CommonEventData-bundleName?: string--><!--Device-CommonEventData-bundleName?: string-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -34,15 +34,15 @@ code?: int
 
 Common event data received by the subscriber. The value of this field is the same as that of the **code** field in CommonEventPublishData when the publisher uses [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md) to publish a common event. The value ranges from –2147483648 to 2147483647. The default value is **0**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Default:** 0
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-CommonEventData-code?: int--><!--Device-CommonEventData-code?: int-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -56,11 +56,11 @@ Common event data received by the subscriber. The data size cannot exceed 64 KB.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-CommonEventData-data?: string--><!--Device-CommonEventData-data?: string-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -74,27 +74,28 @@ Name of the common event that is being received.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-CommonEventData-event: string--><!--Device-CommonEventData-event: string-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
 ## parameters
 
 ```TypeScript
-parameters?: Record<string, RecordData>
+parameters?: { [key: string]: any }
 ```
 
-Additional information about the common event received by the subscriber. The value of this field is the same as that of the **parameters** field in [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) when the publisher uses [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md) to publish a common event.
+Additional information about the common event received by the subscriber. The value of this field is the same as that of the **parameters** field in CommonEventPublishData when the publisher uses [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md) to publish a common event.
 
-**Type:** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
+**Type:** { [key: string]: any }
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-CommonEventData-parameters?: Record<string, RecordData>--><!--Device-CommonEventData-parameters?: Record<string, RecordData>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Notification.CommonEvent
-

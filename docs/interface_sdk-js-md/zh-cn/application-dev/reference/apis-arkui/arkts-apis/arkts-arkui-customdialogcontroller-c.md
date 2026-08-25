@@ -5,7 +5,8 @@
 ## 导入对象
 
 ```ts
-dialogController : CustomDialogController | null = new CustomDialogController(CustomDialogControllerOptions) ```
+dialogController : CustomDialogController | null = new CustomDialogController(CustomDialogControllerOptions)
+```
 
 > **说明：**&gt;
 > - CustomDialogController仅在作为@CustomDialog和@Component struct成员变量，且在@Component struct内部定义时赋值才有效，具体用法可参考下方示例。&gt;
@@ -14,7 +15,7 @@ dialogController : CustomDialogController | null = new CustomDialogController(Cu
 
 **起始版本：** 7
 
-<!--Device-unnamed-declare class CustomDialogController--><!--Device-unnamed-declare class CustomDialogController-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,9 +32,9 @@ close()
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-CustomDialogController-close()--><!--Device-CustomDialogController-close()-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -55,17 +56,17 @@ constructor(value: CustomDialogControllerOptions)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-CustomDialogController-constructor(value: CustomDialogControllerOptions)--><!--Device-CustomDialogController-constructor(value: CustomDialogControllerOptions)-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [CustomDialogControllerOptions](arkts-arkui-customdialogcontrolleroptions-i.md) | 是 | 配置自定义弹窗的参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [CustomDialogControllerOptions](arkts-arkui-customdialogcontrolleroptions-i.md) | 是 |
 
 ## getState
 
@@ -77,19 +78,19 @@ getState(): PromptActionCommonState
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CustomDialogController-getState(): PromptActionCommonState--><!--Device-CustomDialogController-getState(): PromptActionCommonState-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [PromptActionCommonState](arkts-arkui-promptactioncommonstate-t.md) | 返回对应的弹窗状态。 |
+| 类型 |
+| --- |
+| [PromptActionCommonState](arkts-arkui-promptactioncommonstate-t.md) |
 
 ## open
 
@@ -106,9 +107,8 @@ open()
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-CustomDialogController-open()--><!--Device-CustomDialogController-open()-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

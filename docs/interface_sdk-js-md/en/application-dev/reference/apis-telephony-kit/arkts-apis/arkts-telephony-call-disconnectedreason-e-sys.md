@@ -2,9 +2,9 @@
 
 Enumerates call disconnection causes.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-call-export enum DisconnectedReason--><!--Device-call-export enum DisconnectedReason-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -18,9 +18,9 @@ UNASSIGNED_NUMBER = 1
 
 Unallocated (unassigned) number.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DisconnectedReason-UNASSIGNED_NUMBER = 1--><!--Device-DisconnectedReason-UNASSIGNED_NUMBER = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -34,9 +34,9 @@ NO_ROUTE_TO_DESTINATION = 3
 
 No route to destination.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DisconnectedReason-NO_ROUTE_TO_DESTINATION = 3--><!--Device-DisconnectedReason-NO_ROUTE_TO_DESTINATION = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -50,9 +50,9 @@ CHANNEL_UNACCEPTABLE = 6
 
 Channel unacceptable.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DisconnectedReason-CHANNEL_UNACCEPTABLE = 6--><!--Device-DisconnectedReason-CHANNEL_UNACCEPTABLE = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -66,9 +66,9 @@ OPERATOR_DETERMINED_BARRING = 8
 
 Operator determined barring (ODB).
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DisconnectedReason-OPERATOR_DETERMINED_BARRING = 8--><!--Device-DisconnectedReason-OPERATOR_DETERMINED_BARRING = 8-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -82,9 +82,9 @@ CALL_COMPLETED_ELSEWHERE = 13
 
 Call completed elsewhere.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-CALL_COMPLETED_ELSEWHERE = 13--><!--Device-DisconnectedReason-CALL_COMPLETED_ELSEWHERE = 13-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -98,9 +98,9 @@ NORMAL_CALL_CLEARING = 16
 
 Normal call clearing.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DisconnectedReason-NORMAL_CALL_CLEARING = 16--><!--Device-DisconnectedReason-NORMAL_CALL_CLEARING = 16-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -114,9 +114,9 @@ USER_BUSY = 17
 
 User busy.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DisconnectedReason-USER_BUSY = 17--><!--Device-DisconnectedReason-USER_BUSY = 17-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -130,9 +130,9 @@ NO_USER_RESPONDING = 18
 
 No user responding.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DisconnectedReason-NO_USER_RESPONDING = 18--><!--Device-DisconnectedReason-NO_USER_RESPONDING = 18-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -146,9 +146,9 @@ USER_ALERTING_NO_ANSWER = 19
 
 User alerting, no answer.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DisconnectedReason-USER_ALERTING_NO_ANSWER = 19--><!--Device-DisconnectedReason-USER_ALERTING_NO_ANSWER = 19-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -162,9 +162,9 @@ CALL_REJECTED = 21
 
 Call rejected.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DisconnectedReason-CALL_REJECTED = 21--><!--Device-DisconnectedReason-CALL_REJECTED = 21-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -178,9 +178,9 @@ NUMBER_CHANGED = 22
 
 Number changed.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DisconnectedReason-NUMBER_CHANGED = 22--><!--Device-DisconnectedReason-NUMBER_CHANGED = 22-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -194,9 +194,9 @@ CALL_REJECTED_DUE_TO_FEATURE_AT_THE_DESTINATION = 24
 
 Call rejected due to reasons of the destination, for example, activation of Anonymous Call Rejection.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-CALL_REJECTED_DUE_TO_FEATURE_AT_THE_DESTINATION = 24--><!--Device-DisconnectedReason-CALL_REJECTED_DUE_TO_FEATURE_AT_THE_DESTINATION = 24-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -210,9 +210,9 @@ FAILED_PRE_EMPTION = 25
 
 Failed preemption.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-FAILED_PRE_EMPTION = 25--><!--Device-DisconnectedReason-FAILED_PRE_EMPTION = 25-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -226,9 +226,9 @@ NON_SELECTED_USER_CLEARING = 26
 
 Non-selected user clearing.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-NON_SELECTED_USER_CLEARING = 26--><!--Device-DisconnectedReason-NON_SELECTED_USER_CLEARING = 26-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -242,9 +242,9 @@ DESTINATION_OUT_OF_ORDER = 27
 
 Destination out of order.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DisconnectedReason-DESTINATION_OUT_OF_ORDER = 27--><!--Device-DisconnectedReason-DESTINATION_OUT_OF_ORDER = 27-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -258,9 +258,9 @@ INVALID_NUMBER_FORMAT = 28
 
 Invalid number format (incomplete number).
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DisconnectedReason-INVALID_NUMBER_FORMAT = 28--><!--Device-DisconnectedReason-INVALID_NUMBER_FORMAT = 28-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -274,9 +274,9 @@ FACILITY_REJECTED = 29
 
 Facility rejected.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-FACILITY_REJECTED = 29--><!--Device-DisconnectedReason-FACILITY_REJECTED = 29-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -290,9 +290,9 @@ RESPONSE_TO_STATUS_ENQUIRY = 30
 
 Response to status enquiry.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-RESPONSE_TO_STATUS_ENQUIRY = 30--><!--Device-DisconnectedReason-RESPONSE_TO_STATUS_ENQUIRY = 30-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -306,9 +306,9 @@ NORMAL_UNSPECIFIED = 31
 
 Normal, unspecified.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-NORMAL_UNSPECIFIED = 31--><!--Device-DisconnectedReason-NORMAL_UNSPECIFIED = 31-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -322,9 +322,9 @@ NO_CIRCUIT_CHANNEL_AVAILABLE = 34
 
 No circuit/channel available.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-NO_CIRCUIT_CHANNEL_AVAILABLE = 34--><!--Device-DisconnectedReason-NO_CIRCUIT_CHANNEL_AVAILABLE = 34-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -338,9 +338,9 @@ NETWORK_OUT_OF_ORDER = 38
 
 Network fault.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DisconnectedReason-NETWORK_OUT_OF_ORDER = 38--><!--Device-DisconnectedReason-NETWORK_OUT_OF_ORDER = 38-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -354,9 +354,9 @@ TEMPORARY_FAILURE = 41
 
 Temporary failure.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DisconnectedReason-TEMPORARY_FAILURE = 41--><!--Device-DisconnectedReason-TEMPORARY_FAILURE = 41-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -370,9 +370,9 @@ SWITCHING_EQUIPMENT_CONGESTION = 42
 
 Switching equipment congestion.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-SWITCHING_EQUIPMENT_CONGESTION = 42--><!--Device-DisconnectedReason-SWITCHING_EQUIPMENT_CONGESTION = 42-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -386,9 +386,9 @@ ACCESS_INFORMATION_DISCARDED = 43
 
 Access information discarded.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-ACCESS_INFORMATION_DISCARDED = 43--><!--Device-DisconnectedReason-ACCESS_INFORMATION_DISCARDED = 43-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -402,9 +402,9 @@ REQUEST_CIRCUIT_CHANNEL_NOT_AVAILABLE = 44
 
 Requested circuit/channel unavailable.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-REQUEST_CIRCUIT_CHANNEL_NOT_AVAILABLE = 44--><!--Device-DisconnectedReason-REQUEST_CIRCUIT_CHANNEL_NOT_AVAILABLE = 44-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -418,9 +418,9 @@ RESOURCES_UNAVAILABLE_UNSPECIFIED = 47
 
 Resources unavailable, unspecified.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-RESOURCES_UNAVAILABLE_UNSPECIFIED = 47--><!--Device-DisconnectedReason-RESOURCES_UNAVAILABLE_UNSPECIFIED = 47-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -434,9 +434,9 @@ QUALITY_OF_SERVICE_UNAVAILABLE = 49
 
 QoS unavailable.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-QUALITY_OF_SERVICE_UNAVAILABLE = 49--><!--Device-DisconnectedReason-QUALITY_OF_SERVICE_UNAVAILABLE = 49-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -450,9 +450,9 @@ REQUESTED_FACILITY_NOT_SUBSCRIBED = 50
 
 Requested facility not subscribed.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-REQUESTED_FACILITY_NOT_SUBSCRIBED = 50--><!--Device-DisconnectedReason-REQUESTED_FACILITY_NOT_SUBSCRIBED = 50-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -466,9 +466,9 @@ INCOMING_CALLS_BARRED_WITHIN_THE_CUG = 55
 
 Incoming calls barred within the CUG.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-INCOMING_CALLS_BARRED_WITHIN_THE_CUG = 55--><!--Device-DisconnectedReason-INCOMING_CALLS_BARRED_WITHIN_THE_CUG = 55-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -482,9 +482,9 @@ BEARER_CAPABILITY_NOT_AUTHORIZED = 57
 
 Bearer capability not authorized.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-BEARER_CAPABILITY_NOT_AUTHORIZED = 57--><!--Device-DisconnectedReason-BEARER_CAPABILITY_NOT_AUTHORIZED = 57-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -498,9 +498,9 @@ BEARER_CAPABILITY_NOT_PRESENTLY_AVAILABLE = 58
 
 Bearer capability presently available.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-BEARER_CAPABILITY_NOT_PRESENTLY_AVAILABLE = 58--><!--Device-DisconnectedReason-BEARER_CAPABILITY_NOT_PRESENTLY_AVAILABLE = 58-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -514,9 +514,9 @@ SERVICE_OR_OPTION_NOT_AVAILABLE_UNSPECIFIED = 63
 
 Service or option not available, unspecified.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-SERVICE_OR_OPTION_NOT_AVAILABLE_UNSPECIFIED = 63--><!--Device-DisconnectedReason-SERVICE_OR_OPTION_NOT_AVAILABLE_UNSPECIFIED = 63-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -530,9 +530,9 @@ BEARER_SERVICE_NOT_IMPLEMENTED = 65
 
 Bearer service not implemented.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-BEARER_SERVICE_NOT_IMPLEMENTED = 65--><!--Device-DisconnectedReason-BEARER_SERVICE_NOT_IMPLEMENTED = 65-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -546,9 +546,9 @@ ACM_EQUALTO_OR_GREATER_THAN_THE_MAXIMUM_VALUE = 68
 
 ACM greater than or equal to the maximum value.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-ACM_EQUALTO_OR_GREATER_THAN_THE_MAXIMUM_VALUE = 68--><!--Device-DisconnectedReason-ACM_EQUALTO_OR_GREATER_THAN_THE_MAXIMUM_VALUE = 68-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -562,9 +562,9 @@ REQUESTED_FACILITY_NOT_IMPLEMENTED = 69
 
 Requested facility not implemented.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-REQUESTED_FACILITY_NOT_IMPLEMENTED = 69--><!--Device-DisconnectedReason-REQUESTED_FACILITY_NOT_IMPLEMENTED = 69-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -578,9 +578,9 @@ ONLY_RESTRICTED_DIGITAL_INFO_BEARER_CAPABILITY_IS_AVAILABLE = 70
 
 Only restricted digital information bearer capability available.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-ONLY_RESTRICTED_DIGITAL_INFO_BEARER_CAPABILITY_IS_AVAILABLE = 70--><!--Device-DisconnectedReason-ONLY_RESTRICTED_DIGITAL_INFO_BEARER_CAPABILITY_IS_AVAILABLE = 70-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -594,9 +594,9 @@ SERVICE_OR_OPTION_NOT_IMPLEMENTED_UNSPECIFIED = 79
 
 Service or option not implemented, unspecified.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-SERVICE_OR_OPTION_NOT_IMPLEMENTED_UNSPECIFIED = 79--><!--Device-DisconnectedReason-SERVICE_OR_OPTION_NOT_IMPLEMENTED_UNSPECIFIED = 79-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -610,9 +610,9 @@ INVALID_TRANSACTION_IDENTIFIER_VALUE = 81
 
 Invalid transaction identifier value.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-INVALID_TRANSACTION_IDENTIFIER_VALUE = 81--><!--Device-DisconnectedReason-INVALID_TRANSACTION_IDENTIFIER_VALUE = 81-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -626,9 +626,9 @@ USER_NOT_MEMBER_OF_CUG = 87
 
 User not member of CUG.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-USER_NOT_MEMBER_OF_CUG = 87--><!--Device-DisconnectedReason-USER_NOT_MEMBER_OF_CUG = 87-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -642,9 +642,9 @@ INCOMPATIBLE_DESTINATION = 88
 
 Incompatible destination.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-INCOMPATIBLE_DESTINATION = 88--><!--Device-DisconnectedReason-INCOMPATIBLE_DESTINATION = 88-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -658,9 +658,9 @@ INVALID_TRANSIT_NETWORK_SELECTION = 91
 
 Invalid transit network selection.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-INVALID_TRANSIT_NETWORK_SELECTION = 91--><!--Device-DisconnectedReason-INVALID_TRANSIT_NETWORK_SELECTION = 91-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -674,9 +674,9 @@ SEMANTICALLY_INCORRECT_MESSAGE = 95
 
 Semantically incorrect message.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-SEMANTICALLY_INCORRECT_MESSAGE = 95--><!--Device-DisconnectedReason-SEMANTICALLY_INCORRECT_MESSAGE = 95-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -690,9 +690,9 @@ INVALID_MANDATORY_INFORMATION = 96
 
 Invalid mandatory information.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-INVALID_MANDATORY_INFORMATION = 96--><!--Device-DisconnectedReason-INVALID_MANDATORY_INFORMATION = 96-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -706,9 +706,9 @@ MESSAGE_TYPE_NON_EXISTENT_OR_NOT_IMPLEMENTED = 97
 
 Message type non-existent or not implemented.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-MESSAGE_TYPE_NON_EXISTENT_OR_NOT_IMPLEMENTED = 97--><!--Device-DisconnectedReason-MESSAGE_TYPE_NON_EXISTENT_OR_NOT_IMPLEMENTED = 97-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -722,9 +722,9 @@ MESSAGE_TYPE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE = 98
 
 Message type not compatible with protocol state.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-MESSAGE_TYPE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE = 98--><!--Device-DisconnectedReason-MESSAGE_TYPE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE = 98-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -738,9 +738,9 @@ INFORMATION_ELEMENT_NON_EXISTENT_OR_NOT_IMPLEMENTED = 99
 
 IE non-existent or not implemented.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-INFORMATION_ELEMENT_NON_EXISTENT_OR_NOT_IMPLEMENTED = 99--><!--Device-DisconnectedReason-INFORMATION_ELEMENT_NON_EXISTENT_OR_NOT_IMPLEMENTED = 99-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -754,9 +754,9 @@ CONDITIONAL_IE_ERROR = 100
 
 Conditional IE error.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-CONDITIONAL_IE_ERROR = 100--><!--Device-DisconnectedReason-CONDITIONAL_IE_ERROR = 100-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -770,9 +770,9 @@ MESSAGE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE = 101
 
 Message not compatible with protocol state.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-MESSAGE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE = 101--><!--Device-DisconnectedReason-MESSAGE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE = 101-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -786,9 +786,9 @@ RECOVERY_ON_TIMER_EXPIRED = 102
 
 Recovery on timer expiry.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-RECOVERY_ON_TIMER_EXPIRED = 102--><!--Device-DisconnectedReason-RECOVERY_ON_TIMER_EXPIRED = 102-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -802,9 +802,9 @@ PROTOCOL_ERROR_UNSPECIFIED = 111
 
 Protocol error, unspecified.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-PROTOCOL_ERROR_UNSPECIFIED = 111--><!--Device-DisconnectedReason-PROTOCOL_ERROR_UNSPECIFIED = 111-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -818,9 +818,9 @@ INTERWORKING_UNSPECIFIED = 127
 
 Interworking, unspecified.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-INTERWORKING_UNSPECIFIED = 127--><!--Device-DisconnectedReason-INTERWORKING_UNSPECIFIED = 127-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -834,9 +834,9 @@ CALL_BARRED = 240
 
 Call barred.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-CALL_BARRED = 240--><!--Device-DisconnectedReason-CALL_BARRED = 240-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -850,9 +850,9 @@ FDN_BLOCKED = 241
 
 FDN blocked.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-FDN_BLOCKED = 241--><!--Device-DisconnectedReason-FDN_BLOCKED = 241-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -866,9 +866,9 @@ IMSI_UNKNOWN_IN_VLR = 242
 
 IMSI unknown in VLR.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-IMSI_UNKNOWN_IN_VLR = 242--><!--Device-DisconnectedReason-IMSI_UNKNOWN_IN_VLR = 242-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -882,9 +882,9 @@ IMEI_NOT_ACCEPTED = 243
 
 IMEI not accepted.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-IMEI_NOT_ACCEPTED = 243--><!--Device-DisconnectedReason-IMEI_NOT_ACCEPTED = 243-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -898,9 +898,9 @@ DIAL_MODIFIED_TO_USSD = 244
 
 Dial request modified to USSD request.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-DIAL_MODIFIED_TO_USSD = 244--><!--Device-DisconnectedReason-DIAL_MODIFIED_TO_USSD = 244-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -914,9 +914,9 @@ DIAL_MODIFIED_TO_SS = 245
 
 Dial request modified to SS request.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-DIAL_MODIFIED_TO_SS = 245--><!--Device-DisconnectedReason-DIAL_MODIFIED_TO_SS = 245-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -930,9 +930,9 @@ DIAL_MODIFIED_TO_DIAL = 246
 
 Dial request modified to dial with different number.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-DIAL_MODIFIED_TO_DIAL = 246--><!--Device-DisconnectedReason-DIAL_MODIFIED_TO_DIAL = 246-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -946,9 +946,9 @@ RADIO_OFF = 247
 
 Radio off.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-RADIO_OFF = 247--><!--Device-DisconnectedReason-RADIO_OFF = 247-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -962,9 +962,9 @@ OUT_OF_SERVICE = 248
 
 Stops the service.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-OUT_OF_SERVICE = 248--><!--Device-DisconnectedReason-OUT_OF_SERVICE = 248-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -978,9 +978,9 @@ NO_VALID_SIM = 249
 
 No valid SIM.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-NO_VALID_SIM = 249--><!--Device-DisconnectedReason-NO_VALID_SIM = 249-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -994,9 +994,9 @@ RADIO_INTERNAL_ERROR = 250
 
 Radio internal error.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-RADIO_INTERNAL_ERROR = 250--><!--Device-DisconnectedReason-RADIO_INTERNAL_ERROR = 250-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1010,9 +1010,9 @@ NETWORK_RESP_TIMEOUT = 251
 
 Network response timeout.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-NETWORK_RESP_TIMEOUT = 251--><!--Device-DisconnectedReason-NETWORK_RESP_TIMEOUT = 251-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1026,9 +1026,9 @@ NETWORK_REJECT = 252
 
 Request rejected by network.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-NETWORK_REJECT = 252--><!--Device-DisconnectedReason-NETWORK_REJECT = 252-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1042,9 +1042,9 @@ RADIO_ACCESS_FAILURE = 253
 
 Radio access failure.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-RADIO_ACCESS_FAILURE = 253--><!--Device-DisconnectedReason-RADIO_ACCESS_FAILURE = 253-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1058,9 +1058,9 @@ RADIO_LINK_FAILURE = 254
 
 Radio link failure.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-RADIO_LINK_FAILURE = 254--><!--Device-DisconnectedReason-RADIO_LINK_FAILURE = 254-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1074,9 +1074,9 @@ RADIO_LINK_LOST = 255
 
 Radio link lost.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-RADIO_LINK_LOST = 255--><!--Device-DisconnectedReason-RADIO_LINK_LOST = 255-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1090,9 +1090,9 @@ RADIO_UPLINK_FAILURE = 256
 
 Radio uplink failure.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-RADIO_UPLINK_FAILURE = 256--><!--Device-DisconnectedReason-RADIO_UPLINK_FAILURE = 256-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1106,9 +1106,9 @@ RADIO_SETUP_FAILURE = 257
 
 Radio setup failure.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-RADIO_SETUP_FAILURE = 257--><!--Device-DisconnectedReason-RADIO_SETUP_FAILURE = 257-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1122,9 +1122,9 @@ RADIO_RELEASE_NORMAL = 258
 
 Radio release normal.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-RADIO_RELEASE_NORMAL = 258--><!--Device-DisconnectedReason-RADIO_RELEASE_NORMAL = 258-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1138,9 +1138,9 @@ RADIO_RELEASE_ABNORMAL = 259
 
 Radio release abnormal.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-RADIO_RELEASE_ABNORMAL = 259--><!--Device-DisconnectedReason-RADIO_RELEASE_ABNORMAL = 259-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1154,9 +1154,9 @@ ACCESS_CLASS_BLOCKED = 260
 
 Access class blocked.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-ACCESS_CLASS_BLOCKED = 260--><!--Device-DisconnectedReason-ACCESS_CLASS_BLOCKED = 260-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1170,9 +1170,9 @@ NETWORK_DETACH = 261
 
 Network detached.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedReason-NETWORK_DETACH = 261--><!--Device-DisconnectedReason-NETWORK_DETACH = 261-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1186,9 +1186,9 @@ INVALID_PARAMETER = 1025
 
 Invalid parameter.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DisconnectedReason-INVALID_PARAMETER = 1025--><!--Device-DisconnectedReason-INVALID_PARAMETER = 1025-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1202,9 +1202,9 @@ SIM_NOT_EXIT = 1026
 
 SIM not exit.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DisconnectedReason-SIM_NOT_EXIT = 1026--><!--Device-DisconnectedReason-SIM_NOT_EXIT = 1026-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1218,9 +1218,9 @@ SIM_PIN_NEED = 1027
 
 SIM PIN needed.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DisconnectedReason-SIM_PIN_NEED = 1027--><!--Device-DisconnectedReason-SIM_PIN_NEED = 1027-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1234,9 +1234,9 @@ CALL_NOT_ALLOW = 1029
 
 Call not allowed.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DisconnectedReason-CALL_NOT_ALLOW = 1029--><!--Device-DisconnectedReason-CALL_NOT_ALLOW = 1029-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1250,9 +1250,9 @@ SIM_INVALID = 1045
 
 No valid SIM.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DisconnectedReason-SIM_INVALID = 1045--><!--Device-DisconnectedReason-SIM_INVALID = 1045-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1266,11 +1266,10 @@ UNKNOWN = 1279
 
 Unknown reason.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-DisconnectedReason-UNKNOWN = 1279--><!--Device-DisconnectedReason-UNKNOWN = 1279-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
-

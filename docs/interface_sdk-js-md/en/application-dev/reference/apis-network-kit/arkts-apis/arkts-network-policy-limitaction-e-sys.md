@@ -4,7 +4,7 @@ Enumerates the actions that can be taken when the data volume quota is reached.
 
 **Since:** 10
 
-<!--Device-policy-export enum LimitAction--><!--Device-policy-export enum LimitAction-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -20,7 +20,7 @@ No action is taken. This is the default value.
 
 **Since:** 10
 
-<!--Device-LimitAction-LIMIT_ACTION_NONE = -1--><!--Device-LimitAction-LIMIT_ACTION_NONE = -1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -36,7 +36,7 @@ Internet access is disabled.
 
 **Since:** 10
 
-<!--Device-LimitAction-LIMIT_ACTION_ACCESS_DISABLED = 0--><!--Device-LimitAction-LIMIT_ACTION_ACCESS_DISABLED = 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -52,9 +52,8 @@ An alarm is generated when the quota limit is reached.
 
 **Since:** 10
 
-<!--Device-LimitAction-LIMIT_ACTION_ALERT_ONLY = 1--><!--Device-LimitAction-LIMIT_ACTION_ALERT_ONLY = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
-

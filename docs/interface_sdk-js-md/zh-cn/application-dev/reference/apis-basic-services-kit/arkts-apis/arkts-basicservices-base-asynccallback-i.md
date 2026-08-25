@@ -4,7 +4,7 @@
 
 **起始版本：** 6
 
-<!--Device-unnamed-export interface AsyncCallback--><!--Device-unnamed-export interface AsyncCallback-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Base
 
@@ -15,7 +15,7 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.Basi
 import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } from '@kit.BasicServicesKit';
 ```
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (err: BusinessError<E>, data: T): void
@@ -23,32 +23,17 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } fro
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-AsyncCallback-(err: BusinessError<E>, data: T): void--><!--Device-AsyncCallback-(err: BusinessError<E>, data: T): void-End-->
 
 **系统能力：** SystemCapability.Base
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| err | [BusinessError](arkts-basicservices-base-businesserror-i.md)&lt;E&gt; | 是 | 接口调用失败的公共错误信息，包含错误码和可选附加信息。 当不指定E类型参数时，默认为void，此时BusinessError不包含附加信息，只包含错误码。接口调用成功时，此参数返回null。 |
-| data | T | 是 | 接口调用成功时的异步返回数据，类型由开发者自定义。接口调用失败时，此参数不可用。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-interface ErrorDataType {
-    url: string;
-}
-
-const businessError = new BusinessError<ErrorDataType>(201, 'no permission', {
-    url: 'http://'
-});
-```
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| err | [BusinessError](arkts-basicservices-base-businesserror-i.md)&lt;E&gt; | 是 |
+| data | T | 是 |

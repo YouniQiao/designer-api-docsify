@@ -9,22 +9,21 @@ Defines the types of persistent collection data supported by **globalConnect** u
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-unnamed-export declare type CollectionType<S> = Array<S> | Map<string | number, S> |  Set<S> | collections.Array<S> | collections.Map<string | number, S> | collections.Set<S>--><!--Device-unnamed-export declare type CollectionType<S> = Array<S> | Map<string | number, S> |  Set<S> | collections.Array<S> | collections.Map<string | number, S> | collections.Set<S>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| Type | Description |
-| --- | --- |
-| Array&lt;S&gt; | The value is of the array type. |
-| Map&lt;string |  |
-| number, S&gt; |  |
-| Set&lt;S&gt; | The value is of the Set type. |
-| collections.Array&lt;S&gt; | The value is of the collections.Array type. |
-| collections.Map&lt;string |  |
-| number, S&gt; |  |
-| collections.Set&lt;S&gt; | The value is of the collections.Set type. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;S & gt; |
+| Map & lt;string |
+| number, S & gt; |
+| Set & lt;S & gt; |
+| collections.Array & lt;S & gt; |
+| collections.Map & lt;string |
+| number, S & gt; |
+| collections.Set & lt;S & gt; |

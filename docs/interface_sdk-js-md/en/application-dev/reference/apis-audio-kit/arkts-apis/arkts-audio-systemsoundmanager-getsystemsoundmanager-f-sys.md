@@ -14,9 +14,9 @@ function getSystemSoundManager(): SystemSoundManager
 
 Gets system sound manager for all type sound.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-systemSoundManager-function getSystemSoundManager(): SystemSoundManager--><!--Device-systemSoundManager-function getSystemSoundManager(): SystemSoundManager-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -24,13 +24,12 @@ Gets system sound manager for all type sound.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SystemSoundManager](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md) | SystemSoundManager instance. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SystemSoundManager](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md) |
 
 **Examples**
 
 ```TypeScript
 let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
 ```
-

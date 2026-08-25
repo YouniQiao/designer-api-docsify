@@ -4,7 +4,7 @@ Enumerates SVG resource limit levels.Higher level allows using less resources du
 
 **Since:** 26.1.0
 
-<!--Device-image-enum SVGResourceLimitLevel--><!--Device-image-enum SVGResourceLimitLevel-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -20,9 +20,9 @@ Uses the system-defined default SVG resource limits.This level does not disable 
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-SVGResourceLimitLevel-NONE = 0--><!--Device-SVGResourceLimitLevel-NONE = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -38,9 +38,9 @@ Uses low-level restrictions which means allowing using more SVG resource budget.
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-SVGResourceLimitLevel-LOW = 1--><!--Device-SVGResourceLimitLevel-LOW = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -56,9 +56,9 @@ Uses medium-level restrictions which means allowing using moderate SVG resource 
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-SVGResourceLimitLevel-MEDIUM = 2--><!--Device-SVGResourceLimitLevel-MEDIUM = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -74,11 +74,10 @@ Uses high-level restrictions which means allowing using less SVG resource budget
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-SVGResourceLimitLevel-HIGH = 3--><!--Device-SVGResourceLimitLevel-HIGH = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **System API:** This is a system API.
-

@@ -1,11 +1,11 @@
 # SkipIntervals
 
 表示session支持的快进快退时间间隔的枚举。  
-| 名称 | 值 | 说明 | | ---------------------- | -- | ----------------------- | | SECONDS_10 | 10 | 时间为10秒。 | | SECONDS_15 | 15 | 时间为15秒。 | | SECONDS_30 | 30 | 时间为30秒。 |
+| 名称 | 值 | 说明 | | ---------------------- | -- | ----------------------- | | [SECONDS_10](arkts-avsession-avsession-skipintervals-e.md) | 10 | 时间为10秒。 | | [SECONDS_15](arkts-avsession-avsession-skipintervals-e.md) | 15 | 时间为15秒。 | | [SECONDS_30](arkts-avsession-avsession-skipintervals-e.md) | 30 |
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-avSession-enum SkipIntervals--><!--Device-avSession-enum SkipIntervals-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -15,9 +15,9 @@
 SECONDS_10 = 10
 ```
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-SkipIntervals-SECONDS_10 = 10--><!--Device-SkipIntervals-SECONDS_10 = 10-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -27,9 +27,9 @@ SECONDS_10 = 10
 SECONDS_15 = 15
 ```
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-SkipIntervals-SECONDS_15 = 15--><!--Device-SkipIntervals-SECONDS_15 = 15-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -39,9 +39,8 @@ SECONDS_15 = 15
 SECONDS_30 = 30
 ```
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-SkipIntervals-SECONDS_30 = 30--><!--Device-SkipIntervals-SECONDS_30 = 30-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
-

@@ -8,9 +8,9 @@ Enumerates the preset vibration effect IDs. This parameter is needed when you ca
 &gt; to check whether the
 > device supports the preset effect before use.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-vibrator-enum EffectId--><!--Device-vibrator-enum EffectId-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -22,9 +22,8 @@ EFFECT_CLOCK_TIMER = 'haptic.clock.timer'
 
 Vibration effect when a user adjusts the timer.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-EffectId-EFFECT_CLOCK_TIMER = 'haptic.clock.timer'--><!--Device-EffectId-EFFECT_CLOCK_TIMER = 'haptic.clock.timer'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
-

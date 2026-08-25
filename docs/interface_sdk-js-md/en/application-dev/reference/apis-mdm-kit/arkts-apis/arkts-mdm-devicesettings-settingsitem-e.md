@@ -4,7 +4,7 @@ Policy type.
 
 **Since:** 24
 
-<!--Device-deviceSettings-enum SettingsItem--><!--Device-deviceSettings-enum SettingsItem-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,9 +18,9 @@ Device name.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-SettingsItem-DEVICE_NAME = 0--><!--Device-SettingsItem-DEVICE_NAME = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -34,9 +34,8 @@ Three-key navigation.
 
 **Since:** 24
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SettingsItem-FLOATING_NAVIGATION = 1--><!--Device-SettingsItem-FLOATING_NAVIGATION = 1-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

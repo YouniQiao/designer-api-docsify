@@ -17,9 +17,9 @@ Obtains a **LocalUpdater** object, which is used to upgrade the system from a lo
 **Constraints**  
 - The upgrade package must be downloaded from the official website of the vendor or from an official channel to ensure that the source is trusted. - Before the installation, you must verify the upgrade package by calling **verifyUpgradePackage**. An unverified package may damage the system. - During the upgrade, the device automatically restarts. The app status needs to be saved. - The **ohos.permission.UPDATE_SYSTEM** permission is required for calling **getLocalUpdater** APIs. - The upgrade package file path contains a maximum of 255 characters. If the value contains more than 255 characters, an exception is thrown.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-update-function getLocalUpdater(): LocalUpdater--><!--Device-update-function getLocalUpdater(): LocalUpdater-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -27,15 +27,15 @@ Obtains a **LocalUpdater** object, which is used to upgrade the system from a lo
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [LocalUpdater](arkts-basicservices-update-localupdater-i-sys.md) | Utility object used to perform local update operations. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [LocalUpdater](arkts-basicservices-update-localupdater-i-sys.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -46,4 +46,3 @@ try {
   console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
-

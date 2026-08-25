@@ -8,7 +8,7 @@
 
 **起始版本：** 18
 
-<!--Device-unnamed-declare interface ButtonIconOptions--><!--Device-unnamed-declare interface ButtonIconOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,9 +29,9 @@ Defines whether an icon is hidden.
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-ButtonIconOptions-hidden: string | PixelMap | Resource--><!--Device-ButtonIconOptions-hidden: string | PixelMap | Resource-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,9 +47,9 @@ Defines whether an icon is shown.
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-ButtonIconOptions-shown: string | PixelMap | Resource--><!--Device-ButtonIconOptions-shown: string | PixelMap | Resource-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,9 +65,8 @@ Defines whether an icon is switching.
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ButtonIconOptions-switching?: string | PixelMap | Resource--><!--Device-ButtonIconOptions-switching?: string | PixelMap | Resource-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

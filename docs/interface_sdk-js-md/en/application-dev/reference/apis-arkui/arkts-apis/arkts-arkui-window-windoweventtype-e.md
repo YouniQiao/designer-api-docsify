@@ -2,9 +2,9 @@
 
 Enumerates the window lifecycle states.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-window-enum WindowEventType--><!--Device-window-enum WindowEventType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -16,11 +16,11 @@ WINDOW_SHOWN = 1
 
 The window is running in the foreground.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WindowEventType-WINDOW_SHOWN = 1--><!--Device-WindowEventType-WINDOW_SHOWN = 1-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -32,11 +32,11 @@ WINDOW_ACTIVE = 2
 
 The window gains focus.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WindowEventType-WINDOW_ACTIVE = 2--><!--Device-WindowEventType-WINDOW_ACTIVE = 2-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -48,11 +48,11 @@ WINDOW_INACTIVE = 3
 
 The window loses focus.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WindowEventType-WINDOW_INACTIVE = 3--><!--Device-WindowEventType-WINDOW_INACTIVE = 3-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -64,11 +64,11 @@ WINDOW_HIDDEN = 4
 
 The window is running in the background.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WindowEventType-WINDOW_HIDDEN = 4--><!--Device-WindowEventType-WINDOW_HIDDEN = 4-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -80,11 +80,10 @@ WINDOW_DESTROYED = 7
 
 The window is destroyed.
 
-**Since:** 23
+**Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
-<!--Device-WindowEventType-WINDOW_DESTROYED = 7--><!--Device-WindowEventType-WINDOW_DESTROYED = 7-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Window.SessionManager
-

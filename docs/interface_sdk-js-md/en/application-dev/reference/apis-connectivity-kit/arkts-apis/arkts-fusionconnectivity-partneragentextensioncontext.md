@@ -10,7 +10,6 @@ import { PartnerAgentExtensionContext } from '@kit.ConnectivityKit';
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [PartnerAgentExtensionContext](arkts-connectivity-fusionconnectivity-partneragentextensioncontext-partneragentextensioncontext-c.md) | Class for the context of the PartnerAgentExtensionAbility.@extends ExtensionContext |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PartnerAgentExtensionContext](arkts-connectivity-fusionconnectivity-partneragentextensioncontext-partneragentextensioncontext-c.md) |

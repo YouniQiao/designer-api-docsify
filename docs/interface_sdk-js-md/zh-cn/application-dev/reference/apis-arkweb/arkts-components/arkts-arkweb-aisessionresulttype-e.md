@@ -4,7 +4,7 @@ AI会话操作的结果状态。
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-declare enum AISessionResultType--><!--Device-unnamed-declare enum AISessionResultType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -18,9 +18,9 @@ SUCCESS = 0
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-AISessionResultType-SUCCESS = 0--><!--Device-AISessionResultType-SUCCESS = 0-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -34,9 +34,9 @@ FAILURE = 1
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-AISessionResultType-FAILURE = 1--><!--Device-AISessionResultType-FAILURE = 1-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -50,9 +50,8 @@ RUNNING = 2
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AISessionResultType-RUNNING = 2--><!--Device-AISessionResultType-RUNNING = 2-End-->
-
 **系统能力：** SystemCapability.Web.Webview.Core
-

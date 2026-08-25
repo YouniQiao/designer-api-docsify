@@ -9,7 +9,6 @@
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [ReadonlyArray](arkts-arkts-readonlyarray-i.md) | 只读数组，提供读取元素的方法。 |
-
+| 名称 |
+| --- |
+| [ReadonlyArray](arkts-arkts-readonlyarray-i.md) |

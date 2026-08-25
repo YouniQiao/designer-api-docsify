@@ -4,7 +4,7 @@ Describes application resource information, including the bundle name, module na
 
 **Since:** 20
 
-<!--Device-bundleManager-interface Resource--><!--Device-bundleManager-interface Resource-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -26,9 +26,9 @@ Bundle name of the application.
 
 **Since:** 20
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-Resource-bundleName: string--><!--Device-Resource-bundleName: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -44,9 +44,9 @@ Resource ID.
 
 **Since:** 20
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-Resource-id: number--><!--Device-Resource-id: number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -62,9 +62,8 @@ Module name of the application.
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Resource-moduleName: string--><!--Device-Resource-moduleName: string-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

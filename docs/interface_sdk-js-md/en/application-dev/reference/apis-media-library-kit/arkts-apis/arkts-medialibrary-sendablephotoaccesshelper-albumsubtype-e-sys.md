@@ -4,7 +4,7 @@ Enumerate the album subtypes.
 
 **Since:** 12
 
-<!--Device-sendablePhotoAccessHelper-const enum AlbumSubtype--><!--Device-sendablePhotoAccessHelper-const enum AlbumSubtype-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,7 +18,7 @@ Hidden album.
 
 **Since:** 12
 
-<!--Device-AlbumSubtype-HIDDEN--><!--Device-AlbumSubtype-HIDDEN-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,7 +34,7 @@ Trash.
 
 **Since:** 12
 
-<!--Device-AlbumSubtype-TRASH--><!--Device-AlbumSubtype-TRASH-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,7 +50,7 @@ Album for screenshots and screen recording files.
 
 **Since:** 12
 
-<!--Device-AlbumSubtype-SCREENSHOT--><!--Device-AlbumSubtype-SCREENSHOT-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -66,7 +66,7 @@ Album for photos and videos taken by the camera.
 
 **Since:** 12
 
-<!--Device-AlbumSubtype-CAMERA--><!--Device-AlbumSubtype-CAMERA-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -82,7 +82,7 @@ Source album.
 
 **Since:** 12
 
-<!--Device-AlbumSubtype-SOURCE_GENERIC = 2049--><!--Device-AlbumSubtype-SOURCE_GENERIC = 2049-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -98,7 +98,7 @@ Classified album.
 
 **Since:** 12
 
-<!--Device-AlbumSubtype-CLASSIFY = 4097--><!--Device-AlbumSubtype-CLASSIFY = 4097-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -114,7 +114,7 @@ Geographic location album.
 
 **Since:** 12
 
-<!--Device-AlbumSubtype-GEOGRAPHY_LOCATION = 4099--><!--Device-AlbumSubtype-GEOGRAPHY_LOCATION = 4099-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -130,7 +130,7 @@ City album.
 
 **Since:** 12
 
-<!--Device-AlbumSubtype-GEOGRAPHY_CITY--><!--Device-AlbumSubtype-GEOGRAPHY_CITY-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -146,7 +146,7 @@ Shooting mode album.
 
 **Since:** 12
 
-<!--Device-AlbumSubtype-SHOOTING_MODE--><!--Device-AlbumSubtype-SHOOTING_MODE-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -162,7 +162,7 @@ Portrait album.
 
 **Since:** 12
 
-<!--Device-AlbumSubtype-PORTRAIT--><!--Device-AlbumSubtype-PORTRAIT-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -178,7 +178,7 @@ Group photo album.
 
 **Since:** 12
 
-<!--Device-AlbumSubtype-GROUP_PHOTO--><!--Device-AlbumSubtype-GROUP_PHOTO-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -194,7 +194,7 @@ Highlights album.
 
 **Since:** 12
 
-<!--Device-AlbumSubtype-HIGHLIGHT = 4104--><!--Device-AlbumSubtype-HIGHLIGHT = 4104-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -210,9 +210,8 @@ Highlights suggestion album.
 
 **Since:** 12
 
-<!--Device-AlbumSubtype-HIGHLIGHT_SUGGESTIONS--><!--Device-AlbumSubtype-HIGHLIGHT_SUGGESTIONS-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

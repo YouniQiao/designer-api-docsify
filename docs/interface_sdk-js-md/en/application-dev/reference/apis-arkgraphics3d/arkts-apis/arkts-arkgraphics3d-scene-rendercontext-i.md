@@ -2,9 +2,9 @@
 
 Defines the context of all rendering resources. Multiple scenes created within the same render context can share rendering resources.@interface RenderContext
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-unnamed-export interface RenderContext--><!--Device-unnamed-export interface RenderContext-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -16,17 +16,17 @@ getRenderResourceFactory() : RenderResourceFactory
 
 Obtains the rendering resource factory, which provides APIs for creating different rendering resources.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RenderContext-getRenderResourceFactory() : RenderResourceFactory--><!--Device-RenderContext-getRenderResourceFactory() : RenderResourceFactory-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md) | RenderResourceFactory instance for creating rendering resources. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md) |
 
 **Examples**
 
@@ -52,23 +52,23 @@ loadPlugin(name: string): Promise<boolean>
 
 Loads a plugin by name. The API locates and loads the corresponding plugin resource using the provided plugin name. It uses a promise to return the result.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RenderContext-loadPlugin(name: string): Promise<boolean>--><!--Device-RenderContext-loadPlugin(name: string): Promise<boolean>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the plugin to load, which must be a system predefined or registered and available plugin name, and follow the naming conventions. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return a Boolean value, indicating whether the plugin is loaded. The value true means that the plugin is loaded, and false means the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **Examples**
 
@@ -93,24 +93,24 @@ registerResourcePath(protocol: string, uri: string): boolean
 
 Registers the directory path and retrieval name for asset files, such as shaders. It allows the system to find and replace the path descriptions of related files within the shaders using the retrieval name. This ensures that the correct paths for assets and their associated files are located and loaded properly.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RenderContext-registerResourcePath(protocol: string, uri: string): boolean--><!--Device-RenderContext-registerResourcePath(protocol: string, uri: string): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| protocol | string | Yes | Path retrieval name to be registered, used as the prefix identifier for file paths associated internally in the shader. Must be a non-empty retrieval name that is not predefined or registered by the system. |
-| uri | string | Yes | Directory path of the assets to be registered, which corresponds to the retrieval name. When the shader is loaded, the retrieval name prefix in the path is replaced with this directory. It must be the path to the folder containing the asset files. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| protocol | string | Yes |
+| uri | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Result indicating whether the registration is successful. true if successful, and false otherwise. The possible cause of a registration failure is that the retrieval name has been registered or an input parameter is invalid. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -137,4 +137,3 @@ function registerResourcePath(): void {
     });
 }
 ```
-

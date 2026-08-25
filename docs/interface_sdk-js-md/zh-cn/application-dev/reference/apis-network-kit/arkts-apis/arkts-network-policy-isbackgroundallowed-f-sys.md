@@ -16,9 +16,9 @@ function isBackgroundAllowed(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 10
 
-**需要权限：** ohos.permission.MANAGE_NET_STRATEGY
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-policy-function isBackgroundAllowed(callback: AsyncCallback<boolean>): void--><!--Device-policy-function isBackgroundAllowed(callback: AsyncCallback<boolean>): void-End-->
+**需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -26,20 +26,20 @@ function isBackgroundAllowed(callback: AsyncCallback<boolean>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回 true 代表后台策略为允许，失败返回错误码错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
 **示例**
 
@@ -76,9 +76,9 @@ function isBackgroundAllowed(): Promise<boolean>
 
 **起始版本：** 10
 
-**需要权限：** ohos.permission.MANAGE_NET_STRATEGY
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-policy-function isBackgroundAllowed(): Promise<boolean>--><!--Device-policy-function isBackgroundAllowed(): Promise<boolean>-End-->
+**需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -86,22 +86,21 @@ function isBackgroundAllowed(): Promise<boolean>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise 对象。 返回 true 表示后台策略为允许，返回false表示后台策略不允许。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
 **示例**
 
 参见 [isBackgroundAllowed](#isbackgroundallowed)
-

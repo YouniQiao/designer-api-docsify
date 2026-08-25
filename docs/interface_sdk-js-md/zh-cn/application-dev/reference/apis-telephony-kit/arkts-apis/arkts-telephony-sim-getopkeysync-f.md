@@ -14,23 +14,23 @@ function getOpKeySync(slotId: int): string
 
 获取指定卡槽中SIM卡的opkey。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-sim-function getOpKeySync(slotId: int): string--><!--Device-sim-function getOpKeySync(slotId: int): string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回指定卡槽中SIM卡的opkey。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -40,4 +40,3 @@ import { sim } from '@kit.TelephonyKit';
 let data: string = sim.getOpKeySync(0);
 console.info(`getOpKey success, promise: data->${JSON.stringify(data)}`);
 ```
-

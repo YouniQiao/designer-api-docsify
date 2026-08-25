@@ -4,9 +4,24 @@ A cube geometry type that inherits from GeometryDefinition.@extends GeometryDefi
 
 **Inheritance/Implementation:** CubeGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-unnamed-export declare class CubeGeometry--><!--Device-unnamed-export declare class CubeGeometry-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
+## size
+
+```TypeScript
+set size(value: Vec3)
+```
+
+Width, height, and depth of the cube, indicating the size of the cube. The unit is the scene unit of the world coordinate system (such as cm, m, km, etc.).
+
+**Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+**System capability:** SystemCapability.ArkUi.Graphics3D

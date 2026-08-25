@@ -6,20 +6,19 @@ type VideoRecordState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' |
 
 The maintenance of this interface has been stopped since version api 9. Please use AVRecorderState. Describes video recorder states.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-media-type VideoRecordState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | 'error'--><!--Device-media-type VideoRecordState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | 'error'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
 
-| Type | Description |
-| --- | --- |
-| 'idle' | Idle state. The video recorder is created but not initialized. |
-| 'prepared' | Prepared state. The video recorder is ready to record. |
-| 'playing' | Playing state. The video recorder is recording. |
-| 'paused' | Paused state. The video recorder is paused. |
-| 'stopped' | Stopped state. The video recorder is stopped. |
-| 'error' | Error state. An error occurred. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'idle' |
+| 'prepared' |
+| 'playing' |
+| 'paused' |
+| 'stopped' |
+| 'error' |

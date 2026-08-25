@@ -2,9 +2,9 @@
 
 Enumerates the desired dynamic range of an image during decoding.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-image-enum DecodingDynamicRange--><!--Device-image-enum DecodingDynamicRange-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -16,9 +16,9 @@ AUTO = 0
 
 The image is decoded based on the format. If the image is in HDR format, it is decoded based on the HDR content; otherwise, it is decoded based on the SDR content. The image source created by calling [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md) is decoded into SDR content.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-DecodingDynamicRange-AUTO = 0--><!--Device-DecodingDynamicRange-AUTO = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -30,9 +30,9 @@ SDR = 1
 
 The image is decoded according to the standard dynamic range.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-DecodingDynamicRange-SDR = 1--><!--Device-DecodingDynamicRange-SDR = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -44,9 +44,8 @@ HDR = 2
 
 The image is decoded according to the high dynamic range. The image source created by calling [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md) is decoded into SDR content.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-DecodingDynamicRange-HDR = 2--><!--Device-DecodingDynamicRange-HDR = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
-

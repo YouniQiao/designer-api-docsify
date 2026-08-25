@@ -4,7 +4,7 @@ Optional configuration for startMovingWithOptions.
 
 **Since:** 26.0.0
 
-<!--Device-window-interface StartMovingOptions--><!--Device-window-interface StartMovingOptions-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -28,9 +28,9 @@ The avoidance rect of window during drag-moving. If unspecified, the system defa
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-StartMovingOptions-avoidRect?: Rect--><!--Device-StartMovingOptions-avoidRect?: Rect-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -50,11 +50,10 @@ Indicates whether the window needs to be focused when moving starts.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-StartMovingOptions-needFocused?: boolean--><!--Device-StartMovingOptions-needFocused?: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
-

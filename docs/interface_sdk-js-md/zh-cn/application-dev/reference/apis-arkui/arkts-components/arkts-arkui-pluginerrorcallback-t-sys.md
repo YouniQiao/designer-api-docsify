@@ -8,9 +8,9 @@ declare type PluginErrorCallback = (info: PluginErrorData) => void
 
 **起始版本：** 18
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
-<!--Device-unnamed-declare type PluginErrorCallback = (info: PluginErrorData) => void--><!--Device-unnamed-declare type PluginErrorCallback = (info: PluginErrorData) => void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,7 +18,6 @@ declare type PluginErrorCallback = (info: PluginErrorData) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| info | [PluginErrorData](arkts-arkui-pluginerrordata-i-sys.md) | 是 | 插件错误数据 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| info | [PluginErrorData](arkts-arkui-pluginerrordata-i-sys.md) | 是 |

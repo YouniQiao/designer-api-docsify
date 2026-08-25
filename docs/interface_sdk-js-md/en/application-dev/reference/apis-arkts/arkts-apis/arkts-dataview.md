@@ -9,7 +9,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [DataView](arkts-arkts-dataview-c.md) | class DataView |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DataView](arkts-arkts-dataview-c.md) |

@@ -16,22 +16,22 @@ Create PixelMap by data buffer.
 
 **起始版本：** 12
 
-<!--Device-sendableImage-function createPixelMap(colors: ArrayBuffer, options: image.InitializationOptions): Promise<PixelMap>--><!--Device-sendableImage-function createPixelMap(colors: ArrayBuffer, options: image.InitializationOptions): Promise<PixelMap>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| colors | ArrayBuffer | 是 | The image color buffer. |
-| options | image.InitializationOptions | 是 | Initialization options for PixelMap. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| colors | ArrayBuffer | 是 |
+| options | image.InitializationOptions | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;PixelMap&gt; | A Promise instance used to return the PixelMap object. |
+| 类型 |
+| --- |
+| Promise & lt;PixelMap & gt; |
 
 **示例**
 
@@ -69,4 +69,3 @@ async function CreatePixelMap(context : Context) {
   })
 }
 ```
-

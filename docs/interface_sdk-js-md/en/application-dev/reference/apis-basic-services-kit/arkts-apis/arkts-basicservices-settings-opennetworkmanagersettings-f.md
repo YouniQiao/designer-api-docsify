@@ -14,30 +14,30 @@ function openNetworkManagerSettings(context: Context): Promise<boolean>
 
 Open the network manager settings page.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-settings-function openNetworkManagerSettings(context: Context): Promise<boolean>--><!--Device-settings-function openNetworkManagerSettings(context: Context): Promise<boolean>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. Only UIAbilityContext and UIExtensionContext are supported. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [14800000](../errorcode-settings.md#14800000-parameter-check-failed) | Parameter error. |
-| [14800010](../errorcode-settings.md#14800010-uiability-required) | Original service error. @atomicservice |
+| Error Code ID |
+| --- |
+| [14800000](../errorcode-settings.md#14800000-parameter-check-failed) |
+| [14800010](../errorcode-settings.md#14800010-uiability-required) |
 
 **Examples**
 
@@ -52,4 +52,3 @@ settings.openNetworkManagerSettings(context).then((status) => {
   console.info(`callback:return whether settings is open.`);
 });
 ```
-

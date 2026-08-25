@@ -4,7 +4,7 @@ Provides parameter configuration required for switching the float view template 
 
 **Since:** 26.0.0
 
-<!--Device-floatView-interface TemplateProperty--><!--Device-floatView-interface TemplateProperty-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -26,9 +26,9 @@ Window size required for updating the template type.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-TemplateProperty-size: window.Size--><!--Device-TemplateProperty-size: window.Size-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -44,9 +44,8 @@ Template type of the float view.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TemplateProperty-templateType: FloatViewTemplateType--><!--Device-TemplateProperty-templateType: FloatViewTemplateType-End-->
-
 **System capability:** SystemCapability.Window.SessionManager
-

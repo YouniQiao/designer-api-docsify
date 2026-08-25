@@ -16,7 +16,7 @@ Unregister the callback for screen connection events.
 
 **起始版本：** 23
 
-<!--Device-screen-function offConnect(callback?: Callback<long>): void--><!--Device-screen-function offConnect(callback?: Callback<long>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -24,15 +24,15 @@ Unregister the callback for screen connection events.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 否 | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -43,4 +43,3 @@ let callback: Callback<long> = (data: long) => {
 screen.offConnect(callback);
 screen.offConnect();
 ```
-

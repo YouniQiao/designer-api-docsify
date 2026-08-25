@@ -24,7 +24,7 @@ Defines the style of the custom dialog box.
 
 **Since:** 7
 
-<!--Device-unnamed-declare interface CustomDialogControllerOptions--><!--Device-unnamed-declare interface CustomDialogControllerOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,9 +47,9 @@ Sets the distortion animation Mode of the dialog.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-CustomDialogControllerOptions-distortionMode?: DistortionMode--><!--Device-CustomDialogControllerOptions-distortionMode?: DistortionMode-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,11 +69,10 @@ Sets the edgeLight animation Mode of the dialog.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-CustomDialogControllerOptions-edgeLightMode?: EdgeLightMode--><!--Device-CustomDialogControllerOptions-edgeLightMode?: EdgeLightMode-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

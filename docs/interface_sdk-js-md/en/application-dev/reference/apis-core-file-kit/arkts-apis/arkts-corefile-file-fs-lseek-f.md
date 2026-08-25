@@ -18,33 +18,33 @@ Adjusts the position of the file offset pointer.
 
 **Since:** 11
 
-<!--Device-unnamed-declare function lseek(fd: number, offset: number, whence?: WhenceType): number--><!--Device-unnamed-declare function lseek(fd: number, offset: number, whence?: WhenceType): number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fd | number | Yes | File descriptor. |
-| offset | number | Yes | Relative offset, in bytes. |
-| whence | [WhenceType](arkts-corefile-file-fs-whencetype-e.md) | No | Where to start the offset. If this parameter is not specified, the file start position is used by default. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fd | number | Yes |
+| offset | number | Yes |
+| whence | [WhenceType](arkts-corefile-file-fs-whencetype-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Position of the current offset as measured from the beginning of the file, in bytes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900008 | Bad file descriptor |
-| 13900020 | Invalid argument |
-| 13900026 | Illegal seek |
-| 13900038 | Value too large for defined data type |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900008 |
+| 13900020 |
+| 13900026 |
+| 13900038 |
+| 13900042 |
 
 **Examples**
 
@@ -54,4 +54,3 @@ let file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
 console.info('The current offset is at ' + fs.lseek(file.fd, 5, fs.WhenceType.SEEK_SET));
 fs.closeSync(file);
 ```
-

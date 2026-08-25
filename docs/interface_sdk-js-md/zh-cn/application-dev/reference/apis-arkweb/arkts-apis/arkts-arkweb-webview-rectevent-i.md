@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-webview-interface RectEvent--><!--Device-webview-interface RectEvent-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -26,7 +26,7 @@ height: number
 
 **起始版本：** 12
 
-<!--Device-RectEvent-height: number--><!--Device-RectEvent-height: number-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -42,7 +42,7 @@ width: number
 
 **起始版本：** 12
 
-<!--Device-RectEvent-width: number--><!--Device-RectEvent-width: number-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -58,7 +58,7 @@ x: number
 
 **起始版本：** 12
 
-<!--Device-RectEvent-x: number--><!--Device-RectEvent-x: number-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -74,7 +74,6 @@ y: number
 
 **起始版本：** 12
 
-<!--Device-RectEvent-y: number--><!--Device-RectEvent-y: number-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-

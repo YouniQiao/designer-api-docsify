@@ -12,14 +12,13 @@ import { TreeMapComparator } from '@kit.ArkTS';
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [TreeMap](arkts-arkts-util-treemap-treemap-c.md) | TreeMap stores key-value (KV) pairs. Each key must be unique and have only one value. TreeMap is implemented using a red-black tree, which is a binary search tree where keys are stored in sorted order for efficient insertion and removal. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [TreeMap](arkts-arkts-util-treemap-treemap-c.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [TreeMapComparator](arkts-arkts-treemapcomparator-t.md) | The type of TreeMap comparator. |
-| [TreeMapForEachCb](arkts-arkts-treemapforeachcb-t.md) | The type of TreeMap callback function. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [TreeMapComparator](arkts-arkts-treemapcomparator-t.md) |
+| [TreeMapForEachCb](arkts-arkts-treemapforeachcb-t.md) |

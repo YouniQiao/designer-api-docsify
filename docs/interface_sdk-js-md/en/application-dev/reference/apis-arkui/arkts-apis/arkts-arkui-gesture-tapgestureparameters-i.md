@@ -6,9 +6,7 @@ Defines TapGesture parameters.@extends BaseHandlerOptions @interface TapGestureP
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare interface TapGestureParameters--><!--Device-unnamed-export declare interface TapGestureParameters-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,11 +22,9 @@ Number of consecutive clicks recognized. If the value is less than 1, the defaul
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TapGestureParameters-count?: int--><!--Device-TapGestureParameters-count?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,11 +40,9 @@ The limited move distance of click. If the value is less than 0, the default val
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TapGestureParameters-distanceThreshold?: double--><!--Device-TapGestureParameters-distanceThreshold?: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,11 +58,8 @@ The hand index that triggers the click. If the value is less than 1, the default
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TapGestureParameters-fingers?: int--><!--Device-TapGestureParameters-fingers?: int-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

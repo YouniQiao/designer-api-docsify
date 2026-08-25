@@ -16,25 +16,25 @@ function deleteWebAdInterface(controller: web_webview.WebviewController, needRef
 
 **起始版本：** 16
 
-**原子化服务API：** 从API版本16开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为16。
 
-<!--Device-advertising-function deleteWebAdInterface(controller: web_webview.WebviewController, needRefresh: boolean): void--><!--Device-advertising-function deleteWebAdInterface(controller: web_webview.WebviewController, needRefresh: boolean): void-End-->
+**原子化服务API：** 从API版本16开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| controller | web_webview.WebviewController | 是 | Web组件控制器。 |
-| needRefresh | boolean | 是 | 是否需要刷新页面（true: 需要；false: 不需要）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| controller | web_webview.WebviewController | 是 |
+| needRefresh | boolean | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
-| [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [21800001](../errorcode-ads.md#21800001-系统内部错误) |
 
 **示例**
 
@@ -61,4 +61,3 @@ struct Index {
   }
 }
 ```
-

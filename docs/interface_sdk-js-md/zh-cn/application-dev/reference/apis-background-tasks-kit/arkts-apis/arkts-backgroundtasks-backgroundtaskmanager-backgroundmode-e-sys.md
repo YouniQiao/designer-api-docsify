@@ -2,9 +2,9 @@
 
 长时任务类型。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-backgroundTaskManager-export enum BackgroundMode--><!--Device-backgroundTaskManager-export enum BackgroundMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -17,11 +17,10 @@ WIFI_INTERACTION = 7
 WLAN相关。  
 **系统API**: 此接口为系统接口。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-BackgroundMode-WIFI_INTERACTION = 7--><!--Device-BackgroundMode-WIFI_INTERACTION = 7-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **系统接口：** 此接口为系统接口。
-

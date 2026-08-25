@@ -4,21 +4,20 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [LazyCustomLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-lazycustomlayoutalgorithm-c.md) | Defines the lazy custom layout algorithm. |
-| [LazyLayoutHelper](arkts-arkui-lazylayoutalgorithm-lazylayouthelper-c.md) | Helper class for lazy layout algorithm. Provides layout direction and view position information for lazy layout. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [LazyCustomLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-lazycustomlayoutalgorithm-c.md) |
+| [LazyLayoutHelper](arkts-arkui-lazylayoutalgorithm-lazylayouthelper-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [LazyCustomLayoutAlgorithmOptions](arkts-arkui-lazylayoutalgorithm-lazycustomlayoutalgorithmoptions-i.md) | LazyCustomLayoutAlgorithm constructor options. |
-| [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md) | Defines lazy layout algorithm. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [LazyCustomLayoutAlgorithmOptions](arkts-arkui-lazylayoutalgorithm-lazycustomlayoutalgorithmoptions-i.md) |
+| [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [LazyLayoutDirection](arkts-arkui-lazylayoutalgorithm-lazylayoutdirection-e.md) | Defines the direction of lazy layout. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [LazyLayoutDirection](arkts-arkui-lazylayoutalgorithm-lazylayoutdirection-e.md) |

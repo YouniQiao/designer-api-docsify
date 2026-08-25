@@ -4,7 +4,7 @@ Define the background style of span.
 
 **Since:** 11
 
-<!--Device-unnamed-declare interface TextBackgroundStyle--><!--Device-unnamed-declare interface TextBackgroundStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Text background color.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TextBackgroundStyle-color?: ResourceColor--><!--Device-TextBackgroundStyle-color?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ Rounded corner radius of the text background.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-TextBackgroundStyle-radius?: Dimension | BorderRadiuses--><!--Device-TextBackgroundStyle-radius?: Dimension | BorderRadiuses-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -8,11 +8,11 @@
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 12
 
-**替代接口：** OH_AVScreenCapture in native interface.
-
-<!--Device-audio-interface CaptureFilterOptions--><!--Device-audio-interface CaptureFilterOptions-End-->
+**替代接口：** OH_AVScreenCapture
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
@@ -34,11 +34,10 @@ Filter by stream usages. But not allow to capture voice streams.
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **废弃版本：** 12
 
-**替代接口：** OH_AVScreenCapture in native interface.
-
-<!--Device-CaptureFilterOptions-usages: Array<StreamUsage>--><!--Device-CaptureFilterOptions-usages: Array<StreamUsage>-End-->
+**替代接口：** OH_AVScreenCapture
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
-

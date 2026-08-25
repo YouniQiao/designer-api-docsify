@@ -6,11 +6,10 @@ export type AbilityRunningInfo = _AbilityRunningInfo
 
 Defines the level-2 module AbilityRunningInfo.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-abilityManager-export type AbilityRunningInfo = _AbilityRunningInfo--><!--Device-abilityManager-export type AbilityRunningInfo = _AbilityRunningInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Property type:** _AbilityRunningInfo
-

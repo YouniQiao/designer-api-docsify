@@ -10,11 +10,11 @@ AgentUIExtensionAbility继承自[UIExtensionAbility](arkts-ability-app-ability-u
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-unnamed-declare class AgentUIExtensionAbility--><!--Device-unnamed-declare class AgentUIExtensionAbility-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -23,4 +23,3 @@ AgentUIExtensionAbility继承自[UIExtensionAbility](arkts-ability-app-ability-u
 ```TypeScript
 import { AgentUIExtensionAbility } from '@kit.AbilityKit';
 ```
-

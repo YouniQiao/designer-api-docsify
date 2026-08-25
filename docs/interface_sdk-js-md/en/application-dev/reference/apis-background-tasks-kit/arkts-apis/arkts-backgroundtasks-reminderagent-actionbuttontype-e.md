@@ -4,11 +4,11 @@ Enumerates the button types.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md)
-
-<!--Device-reminderAgent-export enum ActionButtonType--><!--Device-reminderAgent-export enum ActionButtonType-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -22,11 +22,11 @@ Button for closing the reminder.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** ACTION_BUTTON_TYPE_CLOSE
-
-<!--Device-ActionButtonType-ACTION_BUTTON_TYPE_CLOSE = 0--><!--Device-ActionButtonType-ACTION_BUTTON_TYPE_CLOSE = 0-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -40,11 +40,10 @@ Button for snoozing the reminder.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** ACTION_BUTTON_TYPE_SNOOZE
 
-<!--Device-ActionButtonType-ACTION_BUTTON_TYPE_SNOOZE = 1--><!--Device-ActionButtonType-ACTION_BUTTON_TYPE_SNOOZE = 1-End-->
-
 **System capability:** SystemCapability.Notification.ReminderAgent
-

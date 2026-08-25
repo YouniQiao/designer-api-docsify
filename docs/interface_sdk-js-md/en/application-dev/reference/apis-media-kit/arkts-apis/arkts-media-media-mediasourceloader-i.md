@@ -2,9 +2,9 @@
 
 Defines a media data loader, which needs to be implemented by applications.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-media-interface MediaSourceLoader--><!--Device-media-interface MediaSourceLoader-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -22,13 +22,11 @@ close: SourceCloseCallback
 
 Callback function is implemented by application, which is used to handle resource close request.
 
-**Type:** [SourceCloseCallback](arkts-media-media-sourceclosecallback-t.md)
+**Since:** 18
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-MediaSourceLoader-close: SourceCloseCallback--><!--Device-MediaSourceLoader-close: SourceCloseCallback-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -40,13 +38,11 @@ open: SourceOpenCallback
 
 Callback function is implemented by application, which is used to handle resource opening requests.
 
-**Type:** [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md)
+**Since:** 18
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-MediaSourceLoader-open: SourceOpenCallback--><!--Device-MediaSourceLoader-open: SourceOpenCallback-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -58,13 +54,11 @@ read: SourceReadCallback
 
 Callback function is implemented by application, which is used to handle resource read requests.
 
-**Type:** [SourceReadCallback](arkts-media-media-sourcereadcallback-t.md)
+**Since:** 18
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-MediaSourceLoader-read: SourceReadCallback--><!--Device-MediaSourceLoader-read: SourceReadCallback-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -107,4 +101,3 @@ async function setupPlayer() {
   player.setMediaSource(mediaSource, playStrategy);
 }
 ```
-

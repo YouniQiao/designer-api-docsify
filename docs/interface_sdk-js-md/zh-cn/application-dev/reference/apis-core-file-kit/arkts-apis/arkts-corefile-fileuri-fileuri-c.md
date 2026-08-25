@@ -4,9 +4,9 @@ FileUri表示文件的URI，继承自uri.URI。@extends uri.URI
 
 **继承/实现关系：** FileUri extends uri.URI
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-fileUri-class FileUri--><!--Device-fileUri-class FileUri-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService
 
@@ -24,28 +24,28 @@ constructor(uriOrPath: string)
 
 FileUri的构造函数，用于创建FileUri实例。
 
-**起始版本：** 23
+**起始版本：** 15
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
-<!--Device-FileUri-constructor(uriOrPath: string)--><!--Device-FileUri-constructor(uriOrPath: string)-End-->
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uriOrPath | string | 是 | URI或路径。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uriOrPath | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900005 | I/O error |
-| 13900020 | Invalid argument |
-| 13900042 | Unknown error |
-| 14300002 | Invalid uri |
+| 错误码ID |
+| --- |
+| 13900005 |
+| 13900020 |
+| 13900042 |
+| 14300002 |
 
 **示例**
 
@@ -65,27 +65,27 @@ getFullDirectoryUri(): string
 
 获取当前文件URI所在路径的完整目录URI。URI指向目录时直接返回原URI。
 
-**起始版本：** 23
+**起始版本：** 15
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
-<!--Device-FileUri-getFullDirectoryUri(): string--><!--Device-FileUri-getFullDirectoryUri(): string-End-->
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回文件所在路径的目录URI；URI指向目录时返回当前URI。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900002 |
+| 13900012 |
+| 13900042 |
 
 **示例**
 
@@ -110,25 +110,25 @@ isRemoteUri(): boolean
 
 判断当前URI是否为包含远端标识networkid的远端URI。
 
-**起始版本：** 23
+**起始版本：** 15
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
-<!--Device-FileUri-isRemoteUri(): boolean--><!--Device-FileUri-isRemoteUri(): boolean-End-->
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回true表示远端URI，返回false表示本地URI。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900042 |
 
 **示例**
 
@@ -153,15 +153,32 @@ toString(): string
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-FileUri-toString(): string--><!--Device-FileUri-toString(): string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回字符串类型的URI。 |
+| 类型 |
+| --- |
+| string |
 
+## name
+
+```TypeScript
+get name(): string
+```
+
+通过传入的URI获取文件名称。如果文件名中存在百分号编码字符，将解码后拼接在原处。
+
+**类型：** string
+
+**起始版本：** 15
+
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.FileManagement.AppFileService

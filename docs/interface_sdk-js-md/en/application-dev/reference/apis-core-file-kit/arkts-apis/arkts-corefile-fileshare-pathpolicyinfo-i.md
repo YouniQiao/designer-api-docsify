@@ -2,9 +2,9 @@
 
 Policy information to manager permissions on a path.@interface PathPolicyInfo
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-fileShare-export interface PathPolicyInfo--><!--Device-fileShare-export interface PathPolicyInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -24,9 +24,9 @@ Indicates the mode of operation for the path.
 
 **Type:** [OperationMode](arkts-corefile-fileshare-operationmode-e.md)
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-PathPolicyInfo-operationMode: OperationMode--><!--Device-PathPolicyInfo-operationMode: OperationMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -40,9 +40,8 @@ Indicates the path of the policy information.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-PathPolicyInfo-path: string--><!--Device-PathPolicyInfo-path: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
-

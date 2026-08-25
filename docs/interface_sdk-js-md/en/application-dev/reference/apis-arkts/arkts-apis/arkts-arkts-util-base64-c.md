@@ -4,11 +4,11 @@ Decodes a string or Uint8Array containing Base64 data into a newly allocated Uin
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [Base64Helper](../../apis-default/arkts-apis/arkts-util-base64helper-c.md)
-
-<!--Device-util-class Base64--><!--Device-util-class Base64-End-->
+**Substitutes:** [Base64Helper](arkts-arkts-util-base64helper-c.md)
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -28,11 +28,11 @@ A constructor used to create a **Base64** object.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [constructor](../../apis-default/arkts-apis/arkts-util-base64helper-c.md#constructor)
-
-<!--Device-Base64-constructor()--><!--Device-Base64-constructor()-End-->
+**Substitutes:** [constructor](arkts-arkts-util-base64helper-c.md#constructor)
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -154,25 +154,25 @@ Decodes the input content into a Uint8Array object. This API uses a promise to r
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [decode](../../apis-default/arkts-apis/arkts-util-base64helper-c.md#decode)
-
-<!--Device-Base64-decode(src: Uint8Array | string): Promise<Uint8Array>--><!--Device-Base64-decode(src: Uint8Array | string): Promise<Uint8Array>-End-->
+**Substitutes:** [decode](arkts-arkts-util-base64helper-c.md#decode)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | Uint8Array \| string | Yes | Uint8Array object or string to decode. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | Uint8Array \| string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the Uint8Array object obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Uint8Array & gt; |
 
 **Examples**
 
@@ -221,25 +221,25 @@ Decodes the input content into a Uint8Array object.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [decodeSync](../../apis-default/arkts-apis/arkts-util-base64helper-c.md#decodesync)
-
-<!--Device-Base64-decodeSync(src: Uint8Array | string): Uint8Array--><!--Device-Base64-decodeSync(src: Uint8Array | string): Uint8Array-End-->
+**Substitutes:** [decodeSync](arkts-arkts-util-base64helper-c.md#decodesync)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | Uint8Array \| string | Yes | Uint8Array object or string to decode. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | Uint8Array \| string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint8Array | Uint8Array object obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint8Array |
 
 **Examples**
 
@@ -271,25 +271,25 @@ Encodes the input content into a Uint8Array object. This API uses a promise to r
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [encode](../../apis-default/arkts-apis/arkts-util-base64helper-c.md#encode)
-
-<!--Device-Base64-encode(src: Uint8Array): Promise<Uint8Array>--><!--Device-Base64-encode(src: Uint8Array): Promise<Uint8Array>-End-->
+**Substitutes:** [encode](arkts-arkts-util-base64helper-c.md#encode)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | Uint8Array | Yes | Uint8Array object to encode. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | Uint8Array | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the Uint8Array object obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Uint8Array & gt; |
 
 **Examples**
 
@@ -328,25 +328,25 @@ Performs Base64 encoding on the input Uint8Array byte array and returns the enco
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [encodeSync](../../apis-default/arkts-apis/arkts-util-base64helper-c.md#encodesync)
-
-<!--Device-Base64-encodeSync(src: Uint8Array): Uint8Array--><!--Device-Base64-encodeSync(src: Uint8Array): Uint8Array-End-->
+**Substitutes:** [encodeSync](arkts-arkts-util-base64helper-c.md#encodesync)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | Uint8Array | Yes | Uint8Array object to encode. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | Uint8Array | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint8Array | Uint8Array object obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint8Array |
 
 **Examples**
 
@@ -376,25 +376,25 @@ Encodes the input content into a string. This API uses a promise to return the r
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [encodeToString](../../apis-default/arkts-apis/arkts-util-base64helper-c.md#encodetostring)
-
-<!--Device-Base64-encodeToString(src: Uint8Array): Promise<string>--><!--Device-Base64-encodeToString(src: Uint8Array): Promise<string>-End-->
+**Substitutes:** [encodeToString](arkts-arkts-util-base64helper-c.md#encodetostring)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | Uint8Array | Yes | Uint8Array object to encode. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | Uint8Array | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Promise used to return the string obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Examples**
 
@@ -431,25 +431,25 @@ Performs Base64 encoding on the input Uint8Array byte array and returns the enco
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [encodeToStringSync](../../apis-default/arkts-apis/arkts-util-base64helper-c.md#encodetostringsync)
-
-<!--Device-Base64-encodeToStringSync(src: Uint8Array): string--><!--Device-Base64-encodeToStringSync(src: Uint8Array): string-End-->
+**Substitutes:** [encodeToStringSync](arkts-arkts-util-base64helper-c.md#encodetostringsync)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | Uint8Array | Yes | Uint8Array object to encode. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | Uint8Array | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | String obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -529,4 +529,3 @@ let result = base64.encodeToStringSync(array);
 console.info("result = " + result);
 // Output: result = czEz
 ```
-

@@ -2,9 +2,9 @@
 
 Represents an encoded binary data block.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-cert-interface EncodingBlob--><!--Device-cert-interface EncodingBlob-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -24,11 +24,11 @@ Encoded data.
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-EncodingBlob-data: Uint8Array--><!--Device-EncodingBlob-data: Uint8Array-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -42,11 +42,10 @@ Encoding format.
 
 **Type:** [EncodingFormat](arkts-devicecertificate-cert-encodingformat-e.md)
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-EncodingBlob-encodingFormat: EncodingFormat--><!--Device-EncodingBlob-encodingFormat: EncodingFormat-End-->
-
 **System capability:** SystemCapability.Security.Cert
-

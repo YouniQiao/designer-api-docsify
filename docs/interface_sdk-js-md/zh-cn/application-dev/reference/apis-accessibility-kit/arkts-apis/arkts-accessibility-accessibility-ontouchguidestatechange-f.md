@@ -17,19 +17,19 @@ function onTouchGuideStateChange(callback: Callback<boolean>): void
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-accessibility-function onTouchGuideStateChange(callback: Callback<boolean>): void--><!--Device-accessibility-function onTouchGuideStateChange(callback: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Vision
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数，在触摸浏览启用状态变化时将状态通过此函数进行通知。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 |
 
 **示例**
 
@@ -54,4 +54,3 @@ struct Index {
   }
 }
 ```
-

@@ -14,9 +14,9 @@ function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObjec
 
 Creates a RemoteObject instance based on a CloudService instance. The system uses this object to call the APIs of the CloudService instance. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-cloudExtension-function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObject>--><!--Device-cloudExtension-function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObject>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -24,15 +24,15 @@ Creates a RemoteObject instance based on a CloudService instance. The system use
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| instance | [CloudService](arkts-arkdata-cloudextension-cloudservice-i-sys.md) | Yes | Instance of the CloudService class. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| instance | [CloudService](arkts-arkdata-cloudextension-cloudservice-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of CloudService. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;rpc.RemoteObject & gt; |
 
 **Examples**
 
@@ -66,4 +66,3 @@ export default class MyServiceExtension extends ServiceExtensionAbility {
   }
 }
 ```
-

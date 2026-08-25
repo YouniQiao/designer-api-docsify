@@ -6,13 +6,12 @@ export type PluginModuleInfo = _PluginModuleInfo
 
 Defines the module information of a plugin.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-bundleManager-export type PluginModuleInfo = _PluginModuleInfo--><!--Device-bundleManager-export type PluginModuleInfo = _PluginModuleInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
 
 **Property type:** _PluginModuleInfo
-

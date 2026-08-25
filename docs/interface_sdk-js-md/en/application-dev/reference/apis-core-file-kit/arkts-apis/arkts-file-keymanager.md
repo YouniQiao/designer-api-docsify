@@ -5,9 +5,9 @@ This module provides common features related to user key management, including u
 > **NOTE：**&gt;
 > - This topic describes only the system APIs provided by the module.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-unnamed-declare namespace keyManager--><!--Device-unnamed-declare namespace keyManager-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Encryption
 
@@ -22,8 +22,7 @@ import { keyManager } from '@kit.CoreFileKit';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [deactivateUserKey](arkts-corefile-keymanager-deactivateuserkey-f-sys.md) | When the screen is locked, the specified user key is uninstalled synchronously. **(Currently, this API is available only to lock screen applications.)** |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [deactivateUserKey](arkts-corefile-keymanager-deactivateuserkey-f-sys.md) |
 <!--DelEnd-->
-

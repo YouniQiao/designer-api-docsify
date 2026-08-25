@@ -5,9 +5,9 @@
 > **说明：**&gt;
 > - 本Interface首批接口从API version 9开始支持。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-media-interface AVPlayer--><!--Device-media-interface AVPlayer-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -27,9 +27,9 @@ Specifies whether to forcibly load the video. This API can be called only when t
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVPlayer-forceLoadVideo(force: boolean): Promise<void>--><!--Device-AVPlayer-forceLoadVideo(force: boolean): Promise<void>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -37,21 +37,21 @@ Specifies whether to forcibly load the video. This API can be called only when t
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| force | boolean | 是 | specified whether to forcibly load the video. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| force | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return when forceLoadVideo completed. |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called from Non-System applications. Return by promise. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -65,6 +65,12 @@ async function test(){
 
 ## getCurrentTrack
 
+ArkTS-Dyn:
+```TypeScript
+getCurrentTrack(trackType: MediaType): Promise<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getCurrentTrack(trackType: MediaType): Promise<int>
 ```
@@ -73,9 +79,9 @@ Obtains the selected track by the specified media type. This API can be called o
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVPlayer-getCurrentTrack(trackType: MediaType): Promise<int>--><!--Device-AVPlayer-getCurrentTrack(trackType: MediaType): Promise<int>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -83,25 +89,25 @@ Obtains the selected track by the specified media type. This API can be called o
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| trackType | [MediaType](arkts-media-multimedia-media-mediatype-e.md) | 是 | specified media Type, see MediaType. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| trackType | [MediaType](arkts-media-multimedia-media-mediatype-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | A Promise instance used to return selected track index. |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called from Non-System applications. Return by promise. |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../errorcode-media.md#5400103-出现io错误) |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
 
 **示例**
 
@@ -121,4 +127,3 @@ async function test(){
   });
 }
 ```
-

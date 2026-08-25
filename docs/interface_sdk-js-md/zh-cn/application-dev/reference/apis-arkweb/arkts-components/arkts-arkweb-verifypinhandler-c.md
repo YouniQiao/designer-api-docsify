@@ -4,7 +4,7 @@ VerifyPinHandler是Web组件中处理PIN码验证请求的类，用于在Web页�
 
 **起始版本：** 22
 
-<!--Device-unnamed-declare class VerifyPinHandler--><!--Device-unnamed-declare class VerifyPinHandler-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -23,15 +23,15 @@ confirm(result: PinVerifyResult): void
 
 **起始版本：** 22
 
-<!--Device-VerifyPinHandler-confirm(result: PinVerifyResult): void--><!--Device-VerifyPinHandler-confirm(result: PinVerifyResult): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| result | [PinVerifyResult](arkts-arkweb-pinverifyresult-e.md) | 是 | PIN码认证结果。成功表示Web组件将允许后续页面操作；失败则可能导致页面导航或内容加载被拦截。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| result | [PinVerifyResult](arkts-arkweb-pinverifyresult-e.md) | 是 |
 
 ## constructor
 
@@ -43,7 +43,6 @@ VerifyPinHandler的构造函数。
 
 **起始版本：** 22
 
-<!--Device-VerifyPinHandler-constructor()--><!--Device-VerifyPinHandler-constructor()-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-

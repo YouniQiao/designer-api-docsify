@@ -2,9 +2,9 @@
 
 Represents the extension information of an input method.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-unnamed-export interface InputMethodExtraConfig--><!--Device-unnamed-export interface InputMethodExtraConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -24,9 +24,8 @@ Input method extension information, which is used to store custom key-value pair
 
 **Type:** Record&lt;string, [CustomValueType](arkts-ime-customvaluetype-t.md)&gt;
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-InputMethodExtraConfig-customSettings: Record<string, CustomValueType>--><!--Device-InputMethodExtraConfig-customSettings: Record<string, CustomValueType>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

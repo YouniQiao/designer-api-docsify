@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-image-interface ImageMetadata--><!--Device-image-interface ImageMetadata-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -26,9 +26,9 @@ AVIS图像元数据。
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-ImageMetadata-avisMetadata?: AvisMetadata--><!--Device-ImageMetadata-avisMetadata?: AvisMetadata-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -44,9 +44,9 @@ DNG图像元数据。
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-ImageMetadata-dngMetadata?: DngMetadata--><!--Device-ImageMetadata-dngMetadata?: DngMetadata-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -62,9 +62,9 @@ Exif元数据。
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-ImageMetadata-exifMetadata?: ExifMetadata--><!--Device-ImageMetadata-exifMetadata?: ExifMetadata-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -80,9 +80,9 @@ GIF图像元数据。
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-ImageMetadata-gifMetadata?: GifMetadata--><!--Device-ImageMetadata-gifMetadata?: GifMetadata-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -98,9 +98,9 @@ HEIF序列图像元数据类，用于存储图像的元数据。
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-ImageMetadata-heifsMetadata?: HeifsMetadata--><!--Device-ImageMetadata-heifsMetadata?: HeifsMetadata-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -116,9 +116,9 @@ JFIF图像元数据。
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-ImageMetadata-jfifMetadata?: JfifMetadata--><!--Device-ImageMetadata-jfifMetadata?: JfifMetadata-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -134,9 +134,9 @@ makerNoteHuaweiMetadata?: MakerNoteHuaweiMetadata
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-ImageMetadata-makerNoteHuaweiMetadata?: MakerNoteHuaweiMetadata--><!--Device-ImageMetadata-makerNoteHuaweiMetadata?: MakerNoteHuaweiMetadata-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -152,9 +152,9 @@ PNG图像元数据。
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-ImageMetadata-pngMetadata?: PngMetadata--><!--Device-ImageMetadata-pngMetadata?: PngMetadata-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -170,9 +170,9 @@ TIFF图像元数据。
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-ImageMetadata-tiffMetadata?: TiffMetadata--><!--Device-ImageMetadata-tiffMetadata?: TiffMetadata-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -188,9 +188,9 @@ WebP图像元数据类，用于存储图像的元数据。
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-ImageMetadata-webPMetadata?: WebPMetadata--><!--Device-ImageMetadata-webPMetadata?: WebPMetadata-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -206,9 +206,8 @@ XMP元数据。
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ImageMetadata-xmpMetadata?: XMPMetadata--><!--Device-ImageMetadata-xmpMetadata?: XMPMetadata-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
-

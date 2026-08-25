@@ -4,7 +4,7 @@ Defines the ParticleOptions Interface.@interface ParticleOptions
 
 **Since:** 10
 
-<!--Device-unnamed-interface ParticleOptions--><!--Device-unnamed-interface ParticleOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,11 +29,11 @@ Particle acceleration.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ParticleOptions-acceleration?: AccelerationOptions<ACC_SPEED_UPDATER, ACC_ANGLE_UPDATER>--><!--Device-ParticleOptions-acceleration?: AccelerationOptions<ACC_SPEED_UPDATER, ACC_ANGLE_UPDATER>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,11 +52,11 @@ Particle color.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ParticleOptions-color?: ParticleColorPropertyOptions<COLOR_UPDATER>--><!--Device-ParticleOptions-color?: ParticleColorPropertyOptions<COLOR_UPDATER>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,11 @@ Particle emitter.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ParticleOptions-emitter: EmitterOptions<PARTICLE>--><!--Device-ParticleOptions-emitter: EmitterOptions<PARTICLE>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,11 +94,11 @@ Particle opacity.Default value: **{ range:[1.0,1.0] }**
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ParticleOptions-opacity?: ParticlePropertyOptions<number, OPACITY_UPDATER>--><!--Device-ParticleOptions-opacity?: ParticlePropertyOptions<number, OPACITY_UPDATER>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,11 +116,11 @@ Particle scale.Default value: **{ range:[1.0,1.0] }**
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ParticleOptions-scale?: ParticlePropertyOptions<number, SCALE_UPDATER>--><!--Device-ParticleOptions-scale?: ParticlePropertyOptions<number, SCALE_UPDATER>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,11 +138,11 @@ Particle spin angle.Default value: **{range:[0.0,0.0]}**Direction: A positive nu
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ParticleOptions-spin?: ParticlePropertyOptions<number, SPIN_UPDATER>--><!--Device-ParticleOptions-spin?: ParticlePropertyOptions<number, SPIN_UPDATER>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -162,11 +162,10 @@ Particle velocity.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ParticleOptions-velocity?: VelocityOptions--><!--Device-ParticleOptions-velocity?: VelocityOptions-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

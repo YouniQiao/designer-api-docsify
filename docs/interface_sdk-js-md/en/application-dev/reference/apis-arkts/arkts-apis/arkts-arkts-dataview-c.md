@@ -4,9 +4,7 @@ class DataView
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class DataView--><!--Device-unnamed-export class DataView-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,21 +23,19 @@ Creates a new DataView object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public constructor(buffer: ArrayBuffer, byteOffset?: int, byteLength?: int)--><!--Device-DataView-public constructor(buffer: ArrayBuffer, byteOffset?: int, byteLength?: int)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | The underlying ArrayBuffer for this DataView. |
-| byteOffset | int | No | The byte offset within the ArrayBuffer. <br>The value should be an integer. |
-| byteLength | int | No | The byte length of the DataView. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [buffer](#buffer) | ArrayBuffer | Yes |
+| [byteOffset](#byteoffset) | int | No |
+| [byteLength](#bytelength) | int | No |
 
 ## getBigInt64
 
@@ -51,26 +47,24 @@ Read bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public getBigInt64(byteOffset: int, littleEndian?: boolean): bigint--><!--Device-DataView-public getBigInt64(byteOffset: int, littleEndian?: boolean): bigint-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read <br>The value should be an integer. |
-| littleEndian | boolean | No | read as little or big endian |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| littleEndian | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint | byteOffset's BigInt64 value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| bigint |
 
 ## getBigInt64
 
@@ -82,25 +76,23 @@ Read bytes as bigint64 value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public getBigInt64(byteOffset: int): bigint--><!--Device-DataView-public getBigInt64(byteOffset: int): bigint-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint | read value (big endian). |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| bigint |
 
 ## getBigUint64
 
@@ -112,26 +104,24 @@ Read bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public getBigUint64(byteOffset: int, littleEndian?: boolean): bigint--><!--Device-DataView-public getBigUint64(byteOffset: int, littleEndian?: boolean): bigint-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read <br>The value should be an integer. |
-| littleEndian | boolean | No | read as little or big endian |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| littleEndian | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint | byteOffset's BigUint64 value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| bigint |
 
 ## getBigUint64
 
@@ -143,25 +133,23 @@ Read bytes as biguint64 value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public getBigUint64(byteOffset: int): bigint--><!--Device-DataView-public getBigUint64(byteOffset: int): bigint-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| bigint | read value (big endian). |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| bigint |
 
 ## getFloat32
 
@@ -173,25 +161,23 @@ Read bytes as float32 value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public getFloat32(byteOffset: int): double--><!--Device-DataView-public getFloat32(byteOffset: int): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | read value (big endian). |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## getFloat32
 
@@ -203,26 +189,24 @@ Read bytes as float32 value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public getFloat32(byteOffset: int, littleEndian?: boolean): double--><!--Device-DataView-public getFloat32(byteOffset: int, littleEndian?: boolean): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read. |
-| littleEndian | boolean | No | true for little endian, false for big endian. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| littleEndian | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | read value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## getFloat64
 
@@ -234,25 +218,23 @@ Read bytes as float64 value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public getFloat64(byteOffset: int): double--><!--Device-DataView-public getFloat64(byteOffset: int): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | read value (big endian). |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## getFloat64
 
@@ -264,26 +246,24 @@ Read bytes as float64 value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public getFloat64(byteOffset: int, littleEndian?: boolean): double--><!--Device-DataView-public getFloat64(byteOffset: int, littleEndian?: boolean): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read. |
-| littleEndian | boolean | No | true for little endian, false for big endian. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| littleEndian | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | read value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## getInt16
 
@@ -295,25 +275,23 @@ Read bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public getInt16(byteOffset: int): int--><!--Device-DataView-public getInt16(byteOffset: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | return byteOffset's Int16 value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## getInt16
 
@@ -325,26 +303,24 @@ Read bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public getInt16(byteOffset: int, littleEndian?: boolean): int--><!--Device-DataView-public getInt16(byteOffset: int, littleEndian?: boolean): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read <br>The value should be an integer. |
-| littleEndian | boolean | No | read as little or big endian |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| littleEndian | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | byteOffset's Int16 value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## getInt32
 
@@ -356,25 +332,23 @@ Read bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public getInt32(byteOffset: int): int--><!--Device-DataView-public getInt32(byteOffset: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | return byteOffset's Int32 value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## getInt32
 
@@ -386,26 +360,24 @@ Read bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public getInt32(byteOffset: int, littleEndian?: boolean): int--><!--Device-DataView-public getInt32(byteOffset: int, littleEndian?: boolean): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read <br>The value should be an integer. |
-| littleEndian | boolean | No | read as little or big endian |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| littleEndian | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | return byteOffset's Int32 value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## getInt8
 
@@ -417,25 +389,23 @@ Read bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public getInt8(byteOffset: int): int--><!--Device-DataView-public getInt8(byteOffset: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | return byteOffset's Int8 value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## getUint16
 
@@ -447,25 +417,23 @@ Read bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public getUint16(byteOffset: int): int--><!--Device-DataView-public getUint16(byteOffset: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | return byteOffset's Uint16 value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## getUint16
 
@@ -477,26 +445,24 @@ Read bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public getUint16(byteOffset: int, littleEndian?: boolean): int--><!--Device-DataView-public getUint16(byteOffset: int, littleEndian?: boolean): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read. <br>The value should be an integer. |
-| littleEndian | boolean | No | read as little or big endian |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| littleEndian | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | byteOffset's Uint16 value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## getUint32
 
@@ -508,25 +474,23 @@ Read bytes as uint32 value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public getUint32(byteOffset: int): double--><!--Device-DataView-public getUint32(byteOffset: int): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | read value (big endian). |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## getUint32
 
@@ -538,26 +502,24 @@ Read bytes as uint32 value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public getUint32(byteOffset: int, littleEndian?: boolean): double--><!--Device-DataView-public getUint32(byteOffset: int, littleEndian?: boolean): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read. |
-| littleEndian | boolean | No | true for little endian, false for big endian. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| littleEndian | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | read value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## getUint8
 
@@ -569,25 +531,23 @@ Read bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public getUint8(byteOffset: int): int--><!--Device-DataView-public getUint8(byteOffset: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | return byteOffset's Uint8 value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## setBigInt64
 
@@ -599,21 +559,19 @@ Sets bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setBigInt64(byteOffset: int, value: bigint, littleEndian?: boolean): void--><!--Device-DataView-public setBigInt64(byteOffset: int, value: bigint, littleEndian?: boolean): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
-| value | bigint | Yes | the bigint value to write. |
-| littleEndian | boolean | No | read as little or big endian |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | bigint | Yes |
+| littleEndian | boolean | No |
 
 ## setBigInt64
 
@@ -625,20 +583,18 @@ Sets bytes as bigint64 value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setBigInt64(byteOffset: int, value: long): void--><!--Device-DataView-public setBigInt64(byteOffset: int, value: long): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write. <br>The value should be an integer. |
-| value | long | Yes | the long value to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | long | Yes |
 
 ## setBigInt64
 
@@ -650,21 +606,19 @@ Sets bytes as bigint64 value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setBigInt64(byteOffset: int, value: long, littleEndian: boolean): void--><!--Device-DataView-public setBigInt64(byteOffset: int, value: long, littleEndian: boolean): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write. <br>The value should be an integer. |
-| value | long | Yes | the long value to write. |
-| littleEndian | boolean | Yes | true for little endian, false for big endian. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | long | Yes |
+| littleEndian | boolean | Yes |
 
 ## setBigUint64
 
@@ -676,20 +630,18 @@ Sets bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setBigUint64(byteOffset: int, value: long): void--><!--Device-DataView-public setBigUint64(byteOffset: int, value: long): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
-| value | long | Yes | the long value to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | long | Yes |
 
 ## setBigUint64
 
@@ -701,21 +653,19 @@ Sets bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setBigUint64(byteOffset: int, value: long, littleEndian: boolean): void--><!--Device-DataView-public setBigUint64(byteOffset: int, value: long, littleEndian: boolean): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
-| value | long | Yes | the long value to write. |
-| littleEndian | boolean | Yes | read as little or big endian |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | long | Yes |
+| littleEndian | boolean | Yes |
 
 ## setBigUint64
 
@@ -727,21 +677,19 @@ Sets bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setBigUint64(byteOffset: int, value: bigint, littleEndian?: boolean): void--><!--Device-DataView-public setBigUint64(byteOffset: int, value: bigint, littleEndian?: boolean): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
-| value | bigint | Yes |  |
-| littleEndian | boolean | No | read as little or big endian |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | bigint | Yes |
+| littleEndian | boolean | No |
 
 ## setFloat32
 
@@ -753,20 +701,18 @@ Sets bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setFloat32(byteOffset: int, value: float): void--><!--Device-DataView-public setFloat32(byteOffset: int, value: float): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
-| value | float | Yes | the float value to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | float | Yes |
 
 ## setFloat32
 
@@ -778,21 +724,19 @@ Sets bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setFloat32(byteOffset: int, value: float, littleEndian: boolean): void--><!--Device-DataView-public setFloat32(byteOffset: int, value: float, littleEndian: boolean): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
-| value | float | Yes | the float value to write. |
-| littleEndian | boolean | Yes | read as little or big endian |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | float | Yes |
+| littleEndian | boolean | Yes |
 
 ## setFloat32
 
@@ -804,21 +748,19 @@ Sets bytes as float32 value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setFloat32(byteOffset: int, value: double, littleEndian?: boolean): void--><!--Device-DataView-public setFloat32(byteOffset: int, value: double, littleEndian?: boolean): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write. |
-| value | double | Yes | the double value to write. |
-| littleEndian | boolean | No | true for little endian, false for big endian. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | double | Yes |
+| littleEndian | boolean | No |
 
 ## setFloat64
 
@@ -830,20 +772,18 @@ Sets bytes as float64 value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setFloat64(byteOffset: int, value: double): void--><!--Device-DataView-public setFloat64(byteOffset: int, value: double): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write. |
-| value | double | Yes | the double value to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | double | Yes |
 
 ## setFloat64
 
@@ -855,21 +795,19 @@ Sets bytes as float64 value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setFloat64(byteOffset: int, value: double, littleEndian?: boolean): void--><!--Device-DataView-public setFloat64(byteOffset: int, value: double, littleEndian?: boolean): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write. |
-| value | double | Yes | the double value to write. |
-| littleEndian | boolean | No | true for little endian, false for big endian. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | double | Yes |
+| littleEndian | boolean | No |
 
 ## setInt16
 
@@ -881,20 +819,18 @@ Sets bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setInt16(byteOffset: int, value: int): void--><!--Device-DataView-public setInt16(byteOffset: int, value: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
-| value | int | Yes | <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | int | Yes |
 
 ## setInt16
 
@@ -906,21 +842,19 @@ Sets bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setInt16(byteOffset: int, value: int, littleEndian: boolean): void--><!--Device-DataView-public setInt16(byteOffset: int, value: int, littleEndian: boolean): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
-| value | int | Yes | <br>The value should be an integer. |
-| littleEndian | boolean | Yes | read as little or big endian |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | int | Yes |
+| littleEndian | boolean | Yes |
 
 ## setInt16
 
@@ -932,21 +866,19 @@ Sets bytes as int16 value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setInt16(byteOffset: int, value: double, littleEndian?: boolean): void--><!--Device-DataView-public setInt16(byteOffset: int, value: double, littleEndian?: boolean): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write. |
-| value | double | Yes | value to write. |
-| littleEndian | boolean | No | true for little endian, false for big endian. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | double | Yes |
+| littleEndian | boolean | No |
 
 ## setInt32
 
@@ -958,20 +890,18 @@ Sets bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setInt32(byteOffset: int, value: int): void--><!--Device-DataView-public setInt32(byteOffset: int, value: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
-| value | int | Yes | <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | int | Yes |
 
 ## setInt32
 
@@ -983,21 +913,19 @@ Sets bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setInt32(byteOffset: int, value: int, littleEndian: boolean): void--><!--Device-DataView-public setInt32(byteOffset: int, value: int, littleEndian: boolean): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
-| value | int | Yes | <br>The value should be an integer. |
-| littleEndian | boolean | Yes | read as little or big endian |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | int | Yes |
+| littleEndian | boolean | Yes |
 
 ## setInt32
 
@@ -1009,21 +937,19 @@ Sets bytes as int32 value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setInt32(byteOffset: int, value: double, littleEndian?: boolean): void--><!--Device-DataView-public setInt32(byteOffset: int, value: double, littleEndian?: boolean): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write. |
-| value | double | Yes | value to write. |
-| littleEndian | boolean | No | true for little endian, false for big endian. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | double | Yes |
+| littleEndian | boolean | No |
 
 ## setInt8
 
@@ -1035,20 +961,18 @@ Sets bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setInt8(byteOffset: int, value: int): void--><!--Device-DataView-public setInt8(byteOffset: int, value: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
-| value | int | Yes | <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | int | Yes |
 
 ## setInt8
 
@@ -1060,20 +984,18 @@ Sets bytes as int8 value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setInt8(byteOffset: int, value: double): void--><!--Device-DataView-public setInt8(byteOffset: int, value: double): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write. |
-| value | double | Yes | value to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | double | Yes |
 
 ## setUint16
 
@@ -1085,20 +1007,18 @@ Sets bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setUint16(byteOffset: int, value: int): void--><!--Device-DataView-public setUint16(byteOffset: int, value: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
-| value | int | Yes | <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | int | Yes |
 
 ## setUint16
 
@@ -1110,21 +1030,19 @@ Sets bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setUint16(byteOffset: int, value: int, littleEndian: boolean): void--><!--Device-DataView-public setUint16(byteOffset: int, value: int, littleEndian: boolean): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
-| value | int | Yes | <br>The value should be an integer. |
-| littleEndian | boolean | Yes | read as little or big endian |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | int | Yes |
+| littleEndian | boolean | Yes |
 
 ## setUint16
 
@@ -1136,21 +1054,19 @@ Sets bytes as uint16 value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setUint16(byteOffset: int, value: double, littleEndian?: boolean): void--><!--Device-DataView-public setUint16(byteOffset: int, value: double, littleEndian?: boolean): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write. |
-| value | double | Yes | the double value to write. |
-| littleEndian | boolean | No | true for little endian, false for big endian. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | double | Yes |
+| littleEndian | boolean | No |
 
 ## setUint32
 
@@ -1162,20 +1078,18 @@ Sets bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setUint32(byteOffset: int, value: long): void--><!--Device-DataView-public setUint32(byteOffset: int, value: long): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write. <br>The value should be an integer. |
-| value | long | Yes | the long value to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | long | Yes |
 
 ## setUint32
 
@@ -1187,21 +1101,19 @@ Sets bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setUint32(byteOffset: int, value: long, littleEndian: boolean): void--><!--Device-DataView-public setUint32(byteOffset: int, value: long, littleEndian: boolean): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
-| value | long | Yes | the long value to write. |
-| littleEndian | boolean | Yes | read as little or big endian |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | long | Yes |
+| littleEndian | boolean | Yes |
 
 ## setUint32
 
@@ -1213,21 +1125,19 @@ Sets bytes as uint32 value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setUint32(byteOffset: int, value: double, littleEndian?: boolean): void--><!--Device-DataView-public setUint32(byteOffset: int, value: double, littleEndian?: boolean): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write. |
-| value | double | Yes | value to write. |
-| littleEndian | boolean | No | true for little endian, false for big endian. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | double | Yes |
+| littleEndian | boolean | No |
 
 ## setUint8
 
@@ -1239,20 +1149,18 @@ Sets bytes as they represent given type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setUint8(byteOffset: int, value: int): void--><!--Device-DataView-public setUint8(byteOffset: int, value: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
-| value | int | Yes | <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | int | Yes |
 
 ## setUint8
 
@@ -1264,18 +1172,63 @@ Sets bytes as uint8 value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataView-public setUint8(byteOffset: int, value: double): void--><!--Device-DataView-public setUint8(byteOffset: int, value: double): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write. |
-| value | double | Yes | value to write. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | int | Yes |
+| value | double | Yes |
 
+## buffer
+
+```TypeScript
+public get buffer(): ArrayBuffer
+```
+
+Underlying buffer.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## byteLength
+
+```TypeScript
+public get byteLength(): int
+```
+
+Read-only property for the byte length of the DataView.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## byteOffset
+
+```TypeScript
+public get byteOffset(): int
+```
+
+Read-only property for the byte offset of the DataView.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang

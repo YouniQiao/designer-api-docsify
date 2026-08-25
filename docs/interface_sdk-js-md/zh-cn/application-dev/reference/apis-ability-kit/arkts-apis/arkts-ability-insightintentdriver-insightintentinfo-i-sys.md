@@ -2,9 +2,9 @@
 
 意图信息，表示设备中意图的具体参数配置。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-insightIntentDriver-interface InsightIntentInfo--><!--Device-insightIntentDriver-interface InsightIntentInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -26,11 +26,11 @@ readonly bundleName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InsightIntentInfo-readonly bundleName: string--><!--Device-InsightIntentInfo-readonly bundleName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -48,9 +48,9 @@ readonly developType?: DevelopType
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-InsightIntentInfo-readonly developType?: DevelopType--><!--Device-InsightIntentInfo-readonly developType?: DevelopType-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -66,11 +66,11 @@ readonly displayDescription: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InsightIntentInfo-readonly displayDescription: string--><!--Device-InsightIntentInfo-readonly displayDescription: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -86,11 +86,11 @@ readonly displayName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InsightIntentInfo-readonly displayName: string--><!--Device-InsightIntentInfo-readonly displayName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -106,11 +106,11 @@ readonly domain: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InsightIntentInfo-readonly domain: string--><!--Device-InsightIntentInfo-readonly domain: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -126,11 +126,11 @@ readonly entities: Array<EntityInfo>
 
 **类型：** Array&lt;EntityInfo&gt;
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InsightIntentInfo-readonly entities: Array<EntityInfo>--><!--Device-InsightIntentInfo-readonly entities: Array<EntityInfo>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -146,11 +146,11 @@ readonly icon: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InsightIntentInfo-readonly icon: string--><!--Device-InsightIntentInfo-readonly icon: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -166,11 +166,11 @@ readonly intentName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InsightIntentInfo-readonly intentName: string--><!--Device-InsightIntentInfo-readonly intentName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -187,11 +187,11 @@ readonly intentType: InsightIntentType
 
 **类型：** [InsightIntentType](arkts-ability-insightintentdriver-insightintenttype-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InsightIntentInfo-readonly intentType: InsightIntentType--><!--Device-InsightIntentInfo-readonly intentType: InsightIntentType-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -207,11 +207,11 @@ readonly intentVersion: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InsightIntentInfo-readonly intentVersion: string--><!--Device-InsightIntentInfo-readonly intentVersion: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -227,11 +227,11 @@ readonly keywords: string[]
 
 **类型：** string[]
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InsightIntentInfo-readonly keywords: string[]--><!--Device-InsightIntentInfo-readonly keywords: string[]-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -247,11 +247,11 @@ readonly llmDescription: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InsightIntentInfo-readonly llmDescription: string--><!--Device-InsightIntentInfo-readonly llmDescription: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -267,11 +267,11 @@ readonly moduleName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InsightIntentInfo-readonly moduleName: string--><!--Device-InsightIntentInfo-readonly moduleName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -280,18 +280,18 @@ readonly moduleName: string
 ## parameters
 
 ```TypeScript
-readonly parameters: Record<string, RecordData>
+readonly parameters: Record<string, Object>
 ```
 
-The insight intent parameters.
+表示意图参数的数据格式声明，用于意图调用时定义入参的数据格式。
 
-**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, Object&gt;
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InsightIntentInfo-readonly parameters: Record<string, RecordData>--><!--Device-InsightIntentInfo-readonly parameters: Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -300,18 +300,18 @@ The insight intent parameters.
 ## result
 
 ```TypeScript
-readonly result: Record<string, RecordData>
+readonly result: Record<string, Object>
 ```
 
-The type definition of the result returned by intent call.
+表示意图调用返回的结果。
 
-**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, Object&gt;
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InsightIntentInfo-readonly result: Record<string, RecordData>--><!--Device-InsightIntentInfo-readonly result: Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -327,11 +327,11 @@ readonly schema: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InsightIntentInfo-readonly schema: string--><!--Device-InsightIntentInfo-readonly schema: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -348,11 +348,11 @@ readonly subIntentInfo: LinkIntentInfo | PageIntentInfo | FunctionIntentInfo | F
 
 **类型：** [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) \| [PageIntentInfo](arkts-ability-insightintentdriver-pageintentinfo-i-sys.md) \| [FunctionIntentInfo](arkts-ability-insightintentdriver-functionintentinfo-i.md) \| [FormIntentInfo](arkts-ability-insightintentdriver-formintentinfo-i-sys.md) \| [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md)
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InsightIntentInfo-readonly subIntentInfo: LinkIntentInfo | PageIntentInfo | FunctionIntentInfo | FormIntentInfo | EntryIntentInfo--><!--Device-InsightIntentInfo-readonly subIntentInfo: LinkIntentInfo | PageIntentInfo | FunctionIntentInfo | FormIntentInfo | EntryIntentInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -370,11 +370,10 @@ readonly subIntentInfoForConfiguration?: SubIntentInfoForConfiguration
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-InsightIntentInfo-readonly subIntentInfoForConfiguration?: SubIntentInfoForConfiguration--><!--Device-InsightIntentInfo-readonly subIntentInfoForConfiguration?: SubIntentInfoForConfiguration-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
-

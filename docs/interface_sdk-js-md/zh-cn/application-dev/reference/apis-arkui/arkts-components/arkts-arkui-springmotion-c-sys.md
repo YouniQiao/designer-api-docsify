@@ -4,9 +4,9 @@
 
 **起始版本：** 7
 
-**废弃版本：** 22
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-unnamed-declare class SpringMotion--><!--Device-unnamed-declare class SpringMotion-End-->
+**废弃版本：** 22
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,9 +27,9 @@ constructor(start: number, end: number, velocity: number, prop: SpringProp)
 
 **起始版本：** 7
 
-**废弃版本：** 22
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-SpringMotion-constructor(start: number, end: number, velocity: number, prop: SpringProp)--><!--Device-SpringMotion-constructor(start: number, end: number, velocity: number, prop: SpringProp)-End-->
+**废弃版本：** 22
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -37,10 +37,9 @@ constructor(start: number, end: number, velocity: number, prop: SpringProp)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| start | number | 是 |  |
-| end | number | 是 |  |
-| velocity | number | 是 |  |
-| prop | [SpringProp](arkts-arkui-springprop-c-sys.md) | 是 |  |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| start | number | 是 |
+| end | number | 是 |
+| velocity | number | 是 |
+| prop | [SpringProp](arkts-arkui-springprop-c-sys.md) | 是 |

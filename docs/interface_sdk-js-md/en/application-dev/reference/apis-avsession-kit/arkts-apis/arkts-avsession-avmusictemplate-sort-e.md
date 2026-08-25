@@ -4,7 +4,7 @@ Enumeration of Sort type.@enum { int }
 
 **Since:** 23
 
-<!--Device-avMusicTemplate-enum Sort--><!--Device-avMusicTemplate-enum Sort-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -18,9 +18,9 @@ NONE.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-Sort-NONE = 0--><!--Device-Sort-NONE = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -34,9 +34,9 @@ ORDER.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-Sort-ORDER = 1--><!--Device-Sort-ORDER = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -50,9 +50,8 @@ REVERSE_ORDER.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Sort-REVERSE_ORDER = 2--><!--Device-Sort-REVERSE_ORDER = 2-End-->
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-

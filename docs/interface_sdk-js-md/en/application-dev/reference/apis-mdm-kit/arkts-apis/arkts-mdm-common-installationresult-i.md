@@ -4,7 +4,7 @@ An object that holds the application installation result.This object is used as 
 
 **Since:** 22
 
-<!--Device-common-export interface InstallationResult--><!--Device-common-export interface InstallationResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -26,9 +26,9 @@ Application installation result message.
 
 **Since:** 22
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-InstallationResult-message: string--><!--Device-InstallationResult-message: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -44,9 +44,8 @@ Application installation result. **SUCCESS** indicates that the application is s
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-InstallationResult-result: Result--><!--Device-InstallationResult-result: Result-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

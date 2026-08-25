@@ -1,14 +1,17 @@
-# @ohos.font
+# @ohos.font(Custom Font Registration)
 
-@namespace font
+The **font** module provides APIs for registering custom fonts.
 
-**Since:** 23
+> **NOTE：**&gt;
+> - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used
+> where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see
+> [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md).&gt;
+> - You are advised to use the [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync) API of the
+> font engine to register custom fonts.
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**Since:** 9
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-declare namespace font--><!--Device-unnamed-declare namespace font-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,20 +25,22 @@ import { font } from '@kit.ArkUI';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getUIFontConfig](arkts-arkui-font-getuifontconfig-f.md) | Get font details according to the font name. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getFontByName(Custom Font Registration)](arkts-arkui-font-getfontbyname-f.md) |
+| [getSystemFontList(Custom Font Registration)](arkts-arkui-font-getsystemfontlist-f.md) |
+| [getUIFontConfig(Custom Font Registration)](arkts-arkui-font-getuifontconfig-f.md) |
+| [registerFont(Custom Font Registration)](arkts-arkui-font-registerfont-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [FontInfo](arkts-arkui-font-fontinfo-i.md) |  |
-| [FontOptions](arkts-arkui-font-fontoptions-i.md) |  |
-| [UIFontAdjustInfo](arkts-arkui-font-uifontadjustinfo-i.md) |  |
-| [UIFontAliasInfo](arkts-arkui-font-uifontaliasinfo-i.md) |  |
-| [UIFontConfig](arkts-arkui-font-uifontconfig-i.md) |  |
-| [UIFontFallbackGroupInfo](arkts-arkui-font-uifontfallbackgroupinfo-i.md) |  |
-| [UIFontFallbackInfo](arkts-arkui-font-uifontfallbackinfo-i.md) |  |
-| [UIFontGenericInfo](arkts-arkui-font-uifontgenericinfo-i.md) |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FontInfo(Custom Font Registration)](arkts-arkui-font-fontinfo-i.md) |
+| [FontOptions(Custom Font Registration)](arkts-arkui-font-fontoptions-i.md) |
+| [UIFontAdjustInfo(Custom Font Registration)](arkts-arkui-font-uifontadjustinfo-i.md) |
+| [UIFontAliasInfo(Custom Font Registration)](arkts-arkui-font-uifontaliasinfo-i.md) |
+| [UIFontConfig(Custom Font Registration)](arkts-arkui-font-uifontconfig-i.md) |
+| [UIFontFallbackGroupInfo(Custom Font Registration)](arkts-arkui-font-uifontfallbackgroupinfo-i.md) |
+| [UIFontFallbackInfo(Custom Font Registration)](arkts-arkui-font-uifontfallbackinfo-i.md) |
+| [UIFontGenericInfo(Custom Font Registration)](arkts-arkui-font-uifontgenericinfo-i.md) |

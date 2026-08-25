@@ -2,9 +2,9 @@
 
 Enumerates the network types allowed for download. The value **CELLULAR** indicates that only download over the cellular network is allowed; **WiFi** that only download using Wi-Fi is allowed; **CELLULAR_AND_WIFI** indicates that download over both the cellular network and Wi-Fi is allowed.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-update-export enum NetType--><!--Device-update-export enum NetType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -18,9 +18,9 @@ CELLULAR = 1
 
 Data network.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-NetType-CELLULAR = 1--><!--Device-NetType-CELLULAR = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -34,9 +34,9 @@ METERED_WIFI = 2
 
 Wi-Fi hotspot.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-NetType-METERED_WIFI = 2--><!--Device-NetType-METERED_WIFI = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -50,9 +50,9 @@ NOT_METERED_WIFI = 4
 
 Non Wi-Fi hotspot.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-NetType-NOT_METERED_WIFI = 4--><!--Device-NetType-NOT_METERED_WIFI = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -66,9 +66,9 @@ WIFI = 6
 
 Wi-Fi.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-NetType-WIFI = 6--><!--Device-NetType-WIFI = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -82,11 +82,10 @@ CELLULAR_AND_WIFI = 7
 
 Data network and Wi-Fi.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-NetType-CELLULAR_AND_WIFI = 7--><!--Device-NetType-CELLULAR_AND_WIFI = 7-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
-

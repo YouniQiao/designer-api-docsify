@@ -8,13 +8,12 @@ Describes the notification switch state changes callback data.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-notificationSubscribe-export type NotificationSwitchChangedCallbackData = _NotificationSwitchChangedCallbackData--><!--Device-notificationSubscribe-export type NotificationSwitchChangedCallbackData = _NotificationSwitchChangedCallbackData-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
 
 **Property type:** _NotificationSwitchChangedCallbackData
-

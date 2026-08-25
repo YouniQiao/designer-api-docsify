@@ -16,23 +16,23 @@ Uses a secure random number generator to generate a random universally unique id
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-util-function generateRandomBinaryUUID(entropyCache?: boolean): Uint8Array--><!--Device-util-function generateRandomBinaryUUID(entropyCache?: boolean): Uint8Array-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| entropyCache | boolean | No | Whether to use a cached UUID. The value **true** means to use a cached UUID, and **false** means the opposite. The default value is **true**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| entropyCache | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint8Array | A Uint8Array value representing the UUID generated. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint8Array |
 
 **Examples**
 
@@ -41,4 +41,3 @@ let uuid = util.generateRandomBinaryUUID(true);
 console.info(JSON.stringify(uuid));
 // Output a random UUID.
 ```
-

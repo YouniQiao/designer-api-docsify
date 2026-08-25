@@ -8,13 +8,12 @@ Enumerates the connection intervals.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-remoteDevice-type ConnectionInterval = nearlinkConstant.ConnectionInterval--><!--Device-remoteDevice-type ConnectionInterval = nearlinkConstant.ConnectionInterval-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
 
 **Property type:** nearlinkConstant.ConnectionInterval
-

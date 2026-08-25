@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [PolygonModifier](arkts-arkui-polygonmodifier-c.md) | Defines Polygon Modifier@implements PolygonAttribute, AttributeModifier&lt;PolygonAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PolygonModifier](arkts-arkui-polygonmodifier-c.md) |

@@ -14,24 +14,24 @@ function getGeofenceSupportedCoordTypes(): Array<CoordinateSystemType>
 
 Obtains the coordinate system types supported by geofence.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-geoLocationManager-function getGeofenceSupportedCoordTypes(): Array<CoordinateSystemType>--><!--Device-geoLocationManager-function getGeofenceSupportedCoordTypes(): Array<CoordinateSystemType>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;CoordinateSystemType&gt; | Return the coordinate system types supported by geofence. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;CoordinateSystemType & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call \\${geoLocationManager.getGeofenceSupportedCoordTypes} due to limited device capabilities. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
 
 **Examples**
 
@@ -45,4 +45,3 @@ try {
   console.error("getGeofenceSupportedCoordTypes: error=" + JSON.stringify(error));
 }
 ```
-

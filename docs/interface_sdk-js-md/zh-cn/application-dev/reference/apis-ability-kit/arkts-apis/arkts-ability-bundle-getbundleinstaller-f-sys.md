@@ -16,13 +16,13 @@ function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** null
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
-
-<!--Device-bundle-function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void--><!--Device-bundle-function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -30,9 +30,9 @@ function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInstaller](arkts-ability-bundleinstaller-bundleinstaller-depr-i-sys.md)&gt; | 是 | 回调函数，返回安装接口对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInstaller](arkts-ability-bundleinstaller-bundleinstaller-depr-i-sys.md)&gt; | 是 |
 
 **示例**
 
@@ -70,13 +70,13 @@ function getBundleInstaller(): Promise<BundleInstaller>
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** null
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
-
-<!--Device-bundle-function getBundleInstaller(): Promise<BundleInstaller>--><!--Device-bundle-function getBundleInstaller(): Promise<BundleInstaller>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -84,11 +84,10 @@ function getBundleInstaller(): Promise<BundleInstaller>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[BundleInstaller](arkts-ability-bundleinstaller-bundleinstaller-depr-i-sys.md)&gt; | Promise对象，返回安装接口对象。 |
+| 类型 |
+| --- |
+| Promise&lt;[BundleInstaller](arkts-ability-bundleinstaller-bundleinstaller-depr-i-sys.md)&gt; |
 
 **示例**
 
 参见 [getBundleInstaller](#getbundleinstaller)
-

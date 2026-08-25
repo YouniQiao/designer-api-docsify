@@ -10,7 +10,7 @@ Defines the common attributes shared by all chips.
 
 **Since:** 12
 
-<!--Device-unnamed-export interface ChipItemStyle--><!--Device-unnamed-export interface ChipItemStyle-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,11 +32,11 @@ Chip background color.Default value: **\$r('sys.color.ohos_id_color_button_norma
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipItemStyle-backgroundColor?: ResourceColor--><!--Device-ChipItemStyle-backgroundColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,11 +52,11 @@ Chip text color.Default value: **\$r('sys.color.ohos_id_color_text_primary')**If
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipItemStyle-fontColor?: ResourceColor--><!--Device-ChipItemStyle-fontColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,11 @@ Background color of the chip when it is activated.Default value: **\$r('sys.colo
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipItemStyle-selectedBackgroundColor?: ResourceColor--><!--Device-ChipItemStyle-selectedBackgroundColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,11 +92,11 @@ Text color of the chip when it is activated.Default value: **\$r('sys.color.ohos
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipItemStyle-selectedFontColor?: ResourceColor--><!--Device-ChipItemStyle-selectedFontColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,15 +108,14 @@ size?: ChipSize | SizeOptions
 
 Chip size. The ChipSize type needs to be imported from the Chip component.Default value: **ChipSize.NORMAL** or **{ height: 0, width: 0 }**If the value is **undefined**, the default value is used.
 
-**Type:** [ChipSize](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-chipsize-e.md) \| SizeOptions
+**Type:** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) \| SizeOptions
 
 **Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ChipItemStyle-size?: ChipSize | SizeOptions--><!--Device-ChipItemStyle-size?: ChipSize | SizeOptions-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

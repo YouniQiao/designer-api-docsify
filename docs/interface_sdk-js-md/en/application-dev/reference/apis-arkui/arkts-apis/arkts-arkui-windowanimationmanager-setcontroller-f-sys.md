@@ -14,9 +14,9 @@ function setController(controller: WindowAnimationController): void
 
 Set the window animation controller.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-windowAnimationManager-function setController(controller: WindowAnimationController): void--><!--Device-windowAnimationManager-function setController(controller: WindowAnimationController): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -24,9 +24,9 @@ Set the window animation controller.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| controller | [WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md) | Yes | Window animation controller. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| controller | [WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md) | Yes |
 
 **Examples**
 
@@ -69,4 +69,3 @@ let controller: windowAnimationManager.WindowAnimationController = {
 
 windowAnimationManager.setController(controller);
 ```
-

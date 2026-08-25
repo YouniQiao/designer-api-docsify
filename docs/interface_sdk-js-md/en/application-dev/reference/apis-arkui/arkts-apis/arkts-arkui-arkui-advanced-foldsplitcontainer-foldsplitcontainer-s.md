@@ -12,9 +12,7 @@
 
 **Since:** 12
 
-**Decorator:** @Component
-
-<!--Device-unnamed-export declare struct FoldSplitContainer--><!--Device-unnamed-export declare struct FoldSplitContainer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,6 +22,88 @@
 import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio, FoldSplitContainer, HoverModeStatus, OnHoverStatusChangeHandler, } from '@kit.ArkUI';
 ```
 
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## extra
+
+```TypeScript
+extra?: RegionBuilder
+```
+
+The builder function which will be rendered in the extra region of container.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onHoverStatusChange
+
+```TypeScript
+onHoverStatusChange?: OnHoverStatusChangeHandler
+```
+
+Callback function triggered when the foldable device enters or exits the semi-folded state.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## primary
+
+```TypeScript
+primary: RegionBuilder
+```
+
+The builder function which will be rendered in the major region of container.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## secondary
+
+```TypeScript
+secondary: RegionBuilder
+```
+
+The builder function which will be rendered in the minor region of container.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## animationOptions
 
 ```TypeScript
@@ -32,17 +112,15 @@ animationOptions?: AnimateParam | null
 
 Animation settings. The value **null** indicates that the animation is disabled.
 
-**Type:** [AnimateParam](../../apis-default/arkts-apis/arkts-common-animateparam-i.md) \| null
+**Type:** [AnimateParam](arkts-arkui-common-animateparam-i.md) \| null
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FoldSplitContainer-@Prop    animationOptions?: AnimateParam | null--><!--Device-FoldSplitContainer-@Prop    animationOptions?: AnimateParam | null-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,13 +136,11 @@ Layout information for the expanded state.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FoldSplitContainer-@Prop    expandedLayoutOptions: ExpandedRegionLayoutOptions--><!--Device-FoldSplitContainer-@Prop    expandedLayoutOptions: ExpandedRegionLayoutOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -80,13 +156,11 @@ Callback function for the extra region. If this parameter is not provided, there
 
 **Since:** 12
 
-**Decorator:** @BuilderParam
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FoldSplitContainer-@BuilderParam    extra?: Callback<void>--><!--Device-FoldSplitContainer-@BuilderParam    extra?: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -102,13 +176,11 @@ Layout information for the folded state.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FoldSplitContainer-@Prop    foldedLayoutOptions: FoldedRegionLayoutOptions--><!--Device-FoldSplitContainer-@Prop    foldedLayoutOptions: FoldedRegionLayoutOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -124,33 +196,11 @@ Layout information for the semi-folded state.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FoldSplitContainer-@Prop    hoverModeLayoutOptions: HoverModeRegionLayoutOptions--><!--Device-FoldSplitContainer-@Prop    hoverModeLayoutOptions: HoverModeRegionLayoutOptions-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onHoverStatusChange
-
-```TypeScript
-onHoverStatusChange?: OnHoverStatusChangeHandler
-```
-
-Callback function triggered when the foldable device enters or exits the semi-folded state.
-
-**Type:** [OnHoverStatusChangeHandler](arkts-arkui-onhoverstatuschangehandler-t.md)
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FoldSplitContainer-onHoverStatusChange?: OnHoverStatusChangeHandler--><!--Device-FoldSplitContainer-onHoverStatusChange?: OnHoverStatusChangeHandler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -166,13 +216,11 @@ Callback function for the primary region.
 
 **Since:** 12
 
-**Decorator:** @BuilderParam
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FoldSplitContainer-@BuilderParam    primary: Callback<void>--><!--Device-FoldSplitContainer-@BuilderParam    primary: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -188,13 +236,10 @@ Callback function for the extra region.
 
 **Since:** 12
 
-**Decorator:** @BuilderParam
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-FoldSplitContainer-@BuilderParam    secondary: Callback<void>--><!--Device-FoldSplitContainer-@BuilderParam    secondary: Callback<void>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

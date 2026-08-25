@@ -8,9 +8,8 @@ type PlaybackMetrics = Record<PlaybackMetricsKey, Object>
 
 **起始版本：** 23
 
-<!--Device-unnamed-type PlaybackMetrics = Record<PlaybackMetricsKey, Object>--><!--Device-unnamed-type PlaybackMetrics = Record<PlaybackMetricsKey, Object>-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **属性类型：** Record&lt;[PlaybackMetricsKey](arkts-media-multimedia-media-playbackmetricskey-e.md), Object&gt;
-

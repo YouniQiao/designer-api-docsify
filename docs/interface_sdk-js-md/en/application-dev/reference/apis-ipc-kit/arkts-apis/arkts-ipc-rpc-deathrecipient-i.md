@@ -2,9 +2,9 @@
 
 Subscribes to death notifications of a remote object. When the remote object is dead, the local end will receive a notification and **[onRemoteDied](#onremotedied)** will be called. A remote object is dead when the process holding the object is terminated or the device of the remote object is shut down or restarted. If the local and remote objects belong to different devices, the remote object is dead when the device holding the remote object is detached from the network.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-rpc-interface DeathRecipient--><!--Device-rpc-interface DeathRecipient-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -24,7 +24,7 @@ Called to perform subsequent operations when a death notification of the remote 
 
 **Since:** 7
 
-<!--Device-DeathRecipient-onRemoteDied(): void--><!--Device-DeathRecipient-onRemoteDied(): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -49,11 +49,12 @@ onRemoteDied: OnRemoteDiedFunc
 
 Called to perform subsequent operations when a death notification of the remote object is received.
 
-**Type:** [OnRemoteDiedFunc](arkts-ipc-rpc-onremotediedfunc-t.md)
-
 **Since:** 23
 
-<!--Device-DeathRecipient-onRemoteDied: OnRemoteDiedFunc--><!--Device-DeathRecipient-onRemoteDied: OnRemoteDiedFunc-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
+**Examples**
+
+See [onRemoteDied](#onremotedied)

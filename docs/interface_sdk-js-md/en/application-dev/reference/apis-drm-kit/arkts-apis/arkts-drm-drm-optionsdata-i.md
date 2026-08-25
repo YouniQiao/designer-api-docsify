@@ -2,9 +2,9 @@
 
 Defines optional parameters for a device certificate request.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-drm-interface OptionsData--><!--Device-drm-interface OptionsData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -24,11 +24,11 @@ Name of the optional parameter.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-OptionsData-name: string--><!--Device-OptionsData-name: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -42,11 +42,10 @@ Value of the optional parameter.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-OptionsData-value: string--><!--Device-OptionsData-value: string-End-->
-
 **System capability:** SystemCapability.Multimedia.Drm.Core
-

@@ -2,9 +2,9 @@
 
 Defines the status information of a media key.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-drm-interface KeysInfo--><!--Device-drm-interface KeysInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -24,11 +24,11 @@ Media key ID.
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeysInfo-keyId: Uint8Array--><!--Device-KeysInfo-keyId: Uint8Array-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -42,11 +42,10 @@ Media key status.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-KeysInfo-value: string--><!--Device-KeysInfo-value: string-End-->
-
 **System capability:** SystemCapability.Multimedia.Drm.Core
-

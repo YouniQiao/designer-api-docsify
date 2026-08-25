@@ -14,17 +14,17 @@ function hasCallSync(): boolean
 
 Checks whether a call is in progress.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-call-function hasCallSync(): boolean--><!--Device-call-function hasCallSync(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Promise used to return the result. The value **true** indicates that a call is in progress, and the value **false** indicates the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -32,4 +32,3 @@ Checks whether a call is in progress.
 let hasCall: boolean = call.hasCallSync();
 console.info(`hasCallSync success, has call is ` + hasCall);
 ```
-

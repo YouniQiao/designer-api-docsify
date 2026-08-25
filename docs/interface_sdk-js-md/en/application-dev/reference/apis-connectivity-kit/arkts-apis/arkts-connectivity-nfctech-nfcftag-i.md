@@ -5,33 +5,39 @@ Provides APIs to access NFC-F (JIS 6319-4) properties and perform I/O operations
 
 **Inheritance/Implementation:** NfcFTag extends TagSession
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-export interface NfcFTag--><!--Device-unnamed-export interface NfcFTag-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## getPmm
 
+ArkTS-Dyn:
+```TypeScript
+getPmm(): number[]
+```
+
+ArkTS-Sta:
 ```TypeScript
 getPmm(): int[]
 ```
 
 Obtains the PMm (consisting of the IC code and manufacturer parameters) information from this NFC-F tag.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NfcFTag-getPmm(): int[]--><!--Device-NfcFTag-getPmm(): int[]-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int[] | PMm information obtained, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
 
 **Examples**
 
@@ -45,25 +51,31 @@ console.info("nfcF pmm: " + pmm);
 
 ## getSystemCode
 
+ArkTS-Dyn:
+```TypeScript
+getSystemCode(): number[]
+```
+
+ArkTS-Sta:
 ```TypeScript
 getSystemCode(): int[]
 ```
 
 Obtains the system code from this NFC-F tag.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NfcFTag-getSystemCode(): int[]--><!--Device-NfcFTag-getSystemCode(): int[]-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int[] | System code obtained, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
 
 **Examples**
 
@@ -74,4 +86,3 @@ import { tag } from '@kit.ConnectivityKit';
 let systemCode : number[] = nfcF.getSystemCode();
 console.info("nfcF systemCode: " + systemCode);
 ```
-

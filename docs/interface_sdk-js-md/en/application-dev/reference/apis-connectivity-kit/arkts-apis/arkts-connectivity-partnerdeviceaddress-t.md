@@ -8,11 +8,10 @@ Partner device address.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-unnamed-type PartnerDeviceAddress = partnerAgent.PartnerDeviceAddress--><!--Device-unnamed-type PartnerDeviceAddress = partnerAgent.PartnerDeviceAddress-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 **Property type:** partnerAgent.PartnerDeviceAddress
-

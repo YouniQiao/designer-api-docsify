@@ -6,7 +6,7 @@ The &lt;textarea&gt; component provides an interactive interface to receive user
 
 **Since:** 4
 
-<!--Device-unnamed-export interface TextAreaElement--><!--Device-unnamed-export interface TextAreaElement-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,15 +20,14 @@ Obtains or loses the focus of a component, which can display or collapse the inp
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-TextAreaElement-focus(param: { focus: boolean }): void--><!--Device-TextAreaElement-focus(param: { focus: boolean }): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| param | { focus: boolean } | Yes | If focus is not passed, the default value true is used. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| param | { focus: boolean } | Yes |

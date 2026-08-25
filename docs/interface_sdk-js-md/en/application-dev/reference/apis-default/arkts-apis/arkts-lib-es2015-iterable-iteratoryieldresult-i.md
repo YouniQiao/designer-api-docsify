@@ -1,8 +1,6 @@
 # IteratorYieldResult
 
-**Since:** -1
-
-<!--Device-unnamed-interface IteratorYieldResult--><!--Device-unnamed-interface IteratorYieldResult-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,9 +15,7 @@ done?: false
 
 **Type:** false
 
-**Since:** -1
-
-<!--Device-IteratorYieldResult-done?: false--><!--Device-IteratorYieldResult-done?: false-End-->
+**ArkTS mode:** 
 
 ## value
 
@@ -29,7 +25,4 @@ value: TYield
 
 **Type:** TYield
 
-**Since:** -1
-
-<!--Device-IteratorYieldResult-value: TYield--><!--Device-IteratorYieldResult-value: TYield-End-->
-
+**ArkTS mode:** 

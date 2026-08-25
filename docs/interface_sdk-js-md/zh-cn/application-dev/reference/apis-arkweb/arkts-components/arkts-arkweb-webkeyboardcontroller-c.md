@@ -4,7 +4,7 @@ WebKeyboardController是ArkWeb提供的用于控制Web组件自定义键盘行�
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare class WebKeyboardController--><!--Device-unnamed-declare class WebKeyboardController-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -23,7 +23,7 @@ close(): void
 
 **起始版本：** 12
 
-<!--Device-WebKeyboardController-close(): void--><!--Device-WebKeyboardController-close(): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -37,9 +37,9 @@ WebKeyboardController的构造函数。
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-WebKeyboardController-constructor()--><!--Device-WebKeyboardController-constructor()-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -53,15 +53,15 @@ deleteBackward(length: number): void
 
 **起始版本：** 12
 
-<!--Device-WebKeyboardController-deleteBackward(length: number): void--><!--Device-WebKeyboardController-deleteBackward(length: number): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| length | number | 是 | 删除光标后面的指定长度字符。 <br>取值范围：[-2147483648 , 2147483647]，当参数值大于字符长度时，默认删除光标后面所有字符；参数值为负数时，不执行删除操作。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| length | number | 是 |
 
 ## deleteForward
 
@@ -73,15 +73,15 @@ deleteForward(length: number): void
 
 **起始版本：** 12
 
-<!--Device-WebKeyboardController-deleteForward(length: number): void--><!--Device-WebKeyboardController-deleteForward(length: number): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| length | number | 是 | 删除光标前面的指定长度字符。 <br>取值范围：[-2147483648 , 2147483647]，当参数值大于字符长度时，默认删除光标前面所有字符；参数值为负数时，不执行删除操作。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| length | number | 是 |
 
 ## insertText
 
@@ -93,15 +93,15 @@ Web输入框中插入字符。
 
 **起始版本：** 12
 
-<!--Device-WebKeyboardController-insertText(text: string): void--><!--Device-WebKeyboardController-insertText(text: string): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| text | string | 是 | 在当前光标位置插入Web输入框的文本。若存在选中文本则替换为该文本；触发输入事件；光标移动到插入文本末尾。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| text | string | 是 |
 
 ## sendFunctionKey
 
@@ -113,13 +113,12 @@ sendFunctionKey(key: number): void
 
 **起始版本：** 12
 
-<!--Device-WebKeyboardController-sendFunctionKey(key: number): void--><!--Device-WebKeyboardController-sendFunctionKey(key: number): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | number | 是 | 功能键类型，仅支持Enter键。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | number | 是 |

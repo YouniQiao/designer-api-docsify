@@ -4,7 +4,7 @@ Describes the codec information.
 
 **Since:** 19
 
-<!--Device-a2dp-interface CodecInfoList--><!--Device-a2dp-interface CodecInfoList-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -26,7 +26,7 @@ codec bit rate list.
 
 **Since:** 19
 
-<!--Device-CodecInfoList-codecBitRateArray: CodecBitRate[]--><!--Device-CodecInfoList-codecBitRateArray: CodecBitRate[]-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -42,7 +42,7 @@ codec bits per sample list.
 
 **Since:** 19
 
-<!--Device-CodecInfoList-codecBitsPerSampleArray: CodecBitsPerSample[]--><!--Device-CodecInfoList-codecBitsPerSampleArray: CodecBitsPerSample[]-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -58,7 +58,7 @@ codec channel mode list.
 
 **Since:** 19
 
-<!--Device-CodecInfoList-codecChannelModeArray: CodecChannelMode[]--><!--Device-CodecInfoList-codecChannelModeArray: CodecChannelMode[]-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -74,7 +74,7 @@ codec frame length list.
 
 **Since:** 19
 
-<!--Device-CodecInfoList-codecFrameLengthArray: CodecFrameLength[]--><!--Device-CodecInfoList-codecFrameLengthArray: CodecFrameLength[]-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -90,7 +90,7 @@ codec sample rate list.
 
 **Since:** 19
 
-<!--Device-CodecInfoList-codecSampleRateArray: CodecSampleRate[]--><!--Device-CodecInfoList-codecSampleRateArray: CodecSampleRate[]-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -106,7 +106,6 @@ codec type
 
 **Since:** 19
 
-<!--Device-CodecInfoList-codecType: CodecType--><!--Device-CodecInfoList-codecType: CodecType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

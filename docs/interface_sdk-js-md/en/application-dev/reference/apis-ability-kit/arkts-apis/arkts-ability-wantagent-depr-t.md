@@ -8,15 +8,14 @@ Defines the WantAgent object.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 23
 
 **Substitutes:** WantAgent
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-unnamed-export type WantAgent = object--><!--Device-unnamed-export type WantAgent = object-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Property type:** object
-

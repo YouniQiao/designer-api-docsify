@@ -4,7 +4,7 @@ Enumerates image orientation.
 
 **Since:** 23
 
-<!--Device-image-enum Orientation--><!--Device-image-enum Orientation-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -18,9 +18,9 @@ The image is not rotated.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-Orientation-TOP_LEFT = 1--><!--Device-Orientation-TOP_LEFT = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -34,9 +34,9 @@ The image is mirrored horizontally.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-Orientation-TOP_RIGHT = 2--><!--Device-Orientation-TOP_RIGHT = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -50,9 +50,9 @@ The image is rotated 180 degrees.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-Orientation-BOTTOM_RIGHT = 3--><!--Device-Orientation-BOTTOM_RIGHT = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -66,9 +66,9 @@ The image is mirrored vertically.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-Orientation-BOTTOM_LEFT = 4--><!--Device-Orientation-BOTTOM_LEFT = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -82,9 +82,9 @@ The image is mirrored horizontally, then rotated 270 degrees clockwise.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-Orientation-LEFT_TOP = 5--><!--Device-Orientation-LEFT_TOP = 5-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -98,9 +98,9 @@ The image is rotated 90 degrees clockwise.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-Orientation-RIGHT_TOP = 6--><!--Device-Orientation-RIGHT_TOP = 6-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -114,9 +114,9 @@ The image is mirrored horizontally, then rotated 90 degrees clockwise.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-Orientation-RIGHT_BOTTOM = 7--><!--Device-Orientation-RIGHT_BOTTOM = 7-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -130,9 +130,8 @@ The image is rotated 270 degrees clockwise.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Orientation-LEFT_BOTTOM = 8--><!--Device-Orientation-LEFT_BOTTOM = 8-End-->
-
 **System capability:** SystemCapability.Multimedia.Image.Core
-

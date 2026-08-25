@@ -2,9 +2,9 @@
 
 Describes the position of the window or component.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-window-export interface Position--><!--Device-window-export interface Position-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -22,11 +22,11 @@ x: int
 
 X coordinate, in px. The value must be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Position-x: int--><!--Device-Position-x: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -38,11 +38,10 @@ y: int
 
 Y coordinate, in px. The value must be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Position-y: int--><!--Device-Position-y: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
-

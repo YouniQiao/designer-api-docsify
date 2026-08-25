@@ -17,18 +17,17 @@ function setLogLevel(level: LogLevel, prefer: PreferStrategy): void
 > **注意：**&gt;
 > debug版本应用下，此函数不生效。
 
-**起始版本：** 23
+**起始版本：** 21
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
-<!--Device-hilog-function setLogLevel(level: LogLevel, prefer: PreferStrategy): void--><!--Device-hilog-function setLogLevel(level: LogLevel, prefer: PreferStrategy): void-End-->
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiLog
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| level | [LogLevel](arkts-performanceanalysis-hilog-loglevel-e.md) | 是 | 日志级别。 |
-| prefer | [PreferStrategy](arkts-performanceanalysis-hilog-preferstrategy-e.md) | 是 | 偏好策略。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| level | [LogLevel](arkts-performanceanalysis-hilog-loglevel-e.md) | 是 |
+| prefer | [PreferStrategy](arkts-performanceanalysis-hilog-preferstrategy-e.md) | 是 |

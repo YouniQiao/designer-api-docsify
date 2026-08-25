@@ -2,9 +2,9 @@
 
 Defines the scanner.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-scan-interface ScannerDevice--><!--Device-scan-interface ScannerDevice-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -24,9 +24,9 @@ Name of the scanner.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScannerDevice-deviceName: string--><!--Device-ScannerDevice-deviceName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -40,9 +40,9 @@ Discovery mode of the scanner.
 
 **Type:** [ScannerDiscoveryMode](arkts-basicservices-scan-scannerdiscoverymode-e.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScannerDevice-discoveryMode: ScannerDiscoveryMode--><!--Device-ScannerDevice-discoveryMode: ScannerDiscoveryMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -56,9 +56,9 @@ Manufacturer of the scanner.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScannerDevice-manufacturer: string--><!--Device-ScannerDevice-manufacturer: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -72,9 +72,9 @@ Model of the scanner.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScannerDevice-model: string--><!--Device-ScannerDevice-model: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -88,9 +88,9 @@ Unique identifier of the scanner.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScannerDevice-scannerId: string--><!--Device-ScannerDevice-scannerId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -104,9 +104,8 @@ Unique ID of the scanner.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScannerDevice-uniqueId: string--><!--Device-ScannerDevice-uniqueId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
-

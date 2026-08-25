@@ -6,7 +6,7 @@ Describes the object related to the exception event name, message, error stack i
 
 **Since:** 18
 
-<!--Device-errorManager-export interface GlobalError--><!--Device-errorManager-export interface GlobalError-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -30,9 +30,9 @@ Name of a VM instance.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-GlobalError-instanceName: string--><!--Device-GlobalError-instanceName: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -48,9 +48,8 @@ Type of the VM instance.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-GlobalError-instanceType: InstanceType--><!--Device-GlobalError-instanceType: InstanceType-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-

@@ -4,11 +4,11 @@ Defines the **value** object in a KV store.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** Value
-
-<!--Device-distributedData-interface Value--><!--Device-distributedData-interface Value-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -29,11 +29,11 @@ Type of the value.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** type
-
-<!--Device-Value-type: ValueType--><!--Device-Value-type: ValueType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -49,11 +49,10 @@ Value of the KV pair stored in the KV store.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** value
 
-<!--Device-Value-value: Uint8Array | string | number | boolean--><!--Device-Value-value: Uint8Array | string | number | boolean-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
-

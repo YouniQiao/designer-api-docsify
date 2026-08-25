@@ -9,13 +9,12 @@
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [Object](arkts-arkts-object-c.md) | 所有其他类的公共祖先。 |
+| 名称 |
+| --- |
+| [Object](arkts-arkts-object-c.md) |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-| [object](arkts-arkts-object-t.md) | `object`是类型`Object`的别名。 |
-
+| 名称 |
+| --- |
+| [object](arkts-arkts-object-t.md) |

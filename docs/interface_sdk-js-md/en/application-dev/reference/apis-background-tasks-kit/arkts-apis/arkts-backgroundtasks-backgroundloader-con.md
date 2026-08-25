@@ -10,9 +10,9 @@ Start task method.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-backgroundLoader-const ON_START: string--><!--Device-backgroundLoader-const ON_START: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -26,9 +26,8 @@ Stop task method.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-backgroundLoader-const ON_STOP: string--><!--Device-backgroundLoader-const ON_STOP: string-End-->
-
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
-

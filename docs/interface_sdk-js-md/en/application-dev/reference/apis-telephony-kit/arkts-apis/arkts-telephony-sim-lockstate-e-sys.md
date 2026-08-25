@@ -2,9 +2,9 @@
 
 Indicates the lock states.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sim-export enum LockState--><!--Device-sim-export enum LockState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -18,9 +18,9 @@ LOCK_OFF = 0
 
 Indicates that the lock state card is in the &lt;b&gt;off&lt;/b&gt; state.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-LockState-LOCK_OFF = 0--><!--Device-LockState-LOCK_OFF = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -34,11 +34,10 @@ LOCK_ON = 1
 
 Indicates that the lock state card is in the &lt;b&gt;on&lt;/b&gt; state.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-LockState-LOCK_ON = 1--><!--Device-LockState-LOCK_ON = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
-

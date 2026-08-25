@@ -23,47 +23,47 @@ declare function mmapSync(file: number | File, mode: MappingMode, offset: number
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-unnamed-declare function mmapSync(file: number | File, mode: MappingMode, offset: number, size: number): FileMapping--><!--Device-unnamed-declare function mmapSync(file: number | File, mode: MappingMode, offset: number, size: number): FileMapping-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| file | number \| [File](arkts-corefile-file-fs-file-i.md) | 是 | 已打开的File对象或已打开的文件描述符fd。 |
-| mode | [MappingMode](arkts-corefile-file-fs-mappingmode-e.md) | 是 | 创建文件内存映射对象的选项，必须指定如下选项中的一个： <br>MappingMode.READ_ONLY(0)：只读映射模式。文件映射区不可写，修改会抛出异常。 <br>MappingMode.READ_WRITE(1)：读写映射模式。修改会写入文件映射区，后续由操作系统同步到文件（非实时）。 <br>MappingMode.PRIVATE(2)：私有映射模式。是一种写时复制的映射机制，对映射区的修改仅对当前进程可见，不会影响原始文件。 |
-| offset | number | 是 | 文件映射区的起始位置，单位为Byte。 |
-| size | number | 是 | 文件映射区的大小，取值范围(0, INT32_MAX]，单位为Byte。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | number \| [File](arkts-corefile-file-fs-file-i.md) | 是 |
+| mode | [MappingMode](arkts-corefile-file-fs-mappingmode-e.md) | 是 |
+| offset | number | 是 |
+| size | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [FileMapping](arkts-corefile-file-fs-filemapping-i.md) | 创建的文件映射对象。返回的对象初始状态：position为0，limit和capacity均等于size。 |
+| 类型 |
+| --- |
+| [FileMapping](arkts-corefile-file-fs-filemapping-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900015 | File exists |
-| 13900017 | No such device |
-| 13900020 | Invalid argument |
-| 13900021 | File table overflow |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900038 | Value too large for defined data type |
-| 13900050 | Internal resource error |
-| 13900056 | Mmap does not support mapping this file |
+| 错误码ID |
+| --- |
+| 13900001 |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900011 |
+| 13900012 |
+| 13900015 |
+| 13900017 |
+| 13900020 |
+| 13900021 |
+| 13900023 |
+| 13900024 |
+| 13900038 |
+| 13900050 |
+| 13900056 |
 
 **示例**
 
@@ -75,4 +75,3 @@ console.info("Succeeded in mmapSync.");
 mapping.unmapSync();
 fileIo.closeSync(file);
 ```
-

@@ -2,9 +2,9 @@
 
 Describes the settings for color fringing. It is unavailable when RenderingPipelineType is set to FORWARD_LIGHTWEIGHT.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-unnamed-export interface ColorFringeSettings--><!--Device-unnamed-export interface ColorFringeSettings-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -16,13 +16,12 @@ intensity?: double
 
 Strength of the effect. The value ranges from 0 to 1. The default value is 0.2.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Default:** 0.2
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-ColorFringeSettings-intensity?: double--><!--Device-ColorFringeSettings-intensity?: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

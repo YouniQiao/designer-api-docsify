@@ -2,9 +2,9 @@
 
 Wi-Fi link type. @enum { int }
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-wifiManager-enum WifiLinkType--><!--Device-wifiManager-enum WifiLinkType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -16,9 +16,9 @@ DEFAULT_LINK = 0
 
 Default link.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-WifiLinkType-DEFAULT_LINK = 0--><!--Device-WifiLinkType-DEFAULT_LINK = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -30,9 +30,9 @@ WIFI7_SINGLE_LINK = 1
 
 Wi-Fi7 single link.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-WifiLinkType-WIFI7_SINGLE_LINK = 1--><!--Device-WifiLinkType-WIFI7_SINGLE_LINK = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -44,9 +44,9 @@ WIFI7_MLSR = 2
 
 Wi-Fi7 MLSR.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-WifiLinkType-WIFI7_MLSR = 2--><!--Device-WifiLinkType-WIFI7_MLSR = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -58,9 +58,9 @@ WIFI7_EMLSR = 3
 
 Wi-Fi7 EMLSR.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-WifiLinkType-WIFI7_EMLSR = 3--><!--Device-WifiLinkType-WIFI7_EMLSR = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -72,9 +72,8 @@ WIFI7_STR = 4
 
 Wi-Fi7 STR.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-WifiLinkType-WIFI7_STR = 4--><!--Device-WifiLinkType-WIFI7_STR = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 11
 
-<!--Device-unnamed-export class Matrix2D--><!--Device-unnamed-export class Matrix2D-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +18,13 @@ constructor()
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-Matrix2D-constructor()--><!--Device-Matrix2D-constructor()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,21 +38,21 @@ identity(): Matrix2D
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-Matrix2D-identity(): Matrix2D--><!--Device-Matrix2D-identity(): Matrix2D-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
+| 类型 |
+| --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
 
 ## invert
 
@@ -64,21 +64,21 @@ invert(): Matrix2D
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-Matrix2D-invert(): Matrix2D--><!--Device-Matrix2D-invert(): Matrix2D-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
+| 类型 |
+| --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
 
 ## multiply
 
@@ -90,27 +90,27 @@ multiply(other?: Matrix2D): Matrix2D
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-Matrix2D-multiply(other?: Matrix2D): Matrix2D--><!--Device-Matrix2D-multiply(other?: Matrix2D): Matrix2D-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | 否 | 目标矩阵。<br/>异常值undefined和null按无效值处理。<br/>默认值：null |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
+| 类型 |
+| --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
 
 ## rotate
 
@@ -122,28 +122,28 @@ rotate(rx?: number, ry?: number): Matrix2D
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-Matrix2D-rotate(rx?: number, ry?: number): Matrix2D--><!--Device-Matrix2D-rotate(rx?: number, ry?: number): Matrix2D-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rx | number | 否 | 旋转点的水平方向坐标，取值范围无限制。<br/>异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。<br/>默认单位：vp |
-| ry | number | 否 | 旋转点的垂直方向坐标，取值范围无限制。<br/>异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。<br/>默认单位：vp |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| rx | number | 否 |
+| ry | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
+| 类型 |
+| --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
 
 ## scale
 
@@ -155,28 +155,28 @@ scale(sx?: number, sy?: number): Matrix2D
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-Matrix2D-scale(sx?: number, sy?: number): Matrix2D--><!--Device-Matrix2D-scale(sx?: number, sy?: number): Matrix2D-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sx | number | 否 | 水平缩放比例系数，取值范围无限制。<br/>异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。<br/>默认值：1.0 |
-| sy | number | 否 | 垂直缩放比例系数，取值范围无限制。<br/>异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。<br/>默认值：1.0 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sx | number | 否 |
+| sy | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
+| 类型 |
+| --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
 
 ## translate
 
@@ -188,28 +188,28 @@ translate(tx?: number, ty?: number): Matrix2D
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-Matrix2D-translate(tx?: number, ty?: number): Matrix2D--><!--Device-Matrix2D-translate(tx?: number, ty?: number): Matrix2D-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| tx | number | 否 | 水平方向平移距离，取值范围无限制。<br/>异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。<br/>默认单位：vp<br/>默认值：0 |
-| ty | number | 否 | 垂直方向平移距离，取值范围无限制。<br/>异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。<br/>默认单位：vp<br/>默认值：0 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| tx | number | 否 |
+| ty | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
+| 类型 |
+| --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
 
 ## rotateX
 
@@ -223,13 +223,13 @@ rotateX?: number
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-Matrix2D-rotateX?: number--><!--Device-Matrix2D-rotateX?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -245,13 +245,13 @@ rotateY?: number
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-Matrix2D-rotateY?: number--><!--Device-Matrix2D-rotateY?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -267,13 +267,13 @@ scaleX?: number
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-Matrix2D-scaleX?: number--><!--Device-Matrix2D-scaleX?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -289,13 +289,13 @@ scaleY?: number
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-Matrix2D-scaleY?: number--><!--Device-Matrix2D-scaleY?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -311,13 +311,13 @@ translateX?: number
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-Matrix2D-translateX?: number--><!--Device-Matrix2D-translateX?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -333,13 +333,12 @@ translateY?: number
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-Matrix2D-translateY?: number--><!--Device-Matrix2D-translateY?: number-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

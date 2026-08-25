@@ -8,14 +8,13 @@ type MessageType = 'message' | 'messageerror'
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-unnamed-type MessageType = 'message' | 'messageerror'--><!--Device-unnamed-type MessageType = 'message' | 'messageerror'-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
-| 类型 | 说明 |
-| --- | --- |
-| 'message' |  |
-| 'messageerror' |  |
-
+| 类型 |
+| --- |
+| 'message' |
+| 'messageerror' |

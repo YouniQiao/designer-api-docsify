@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [TextModifier](arkts-arkui-textmodifier-c.md) | Defines Text Modifier |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [TextModifier](arkts-arkui-textmodifier-c.md) |

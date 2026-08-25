@@ -4,9 +4,9 @@
 
 **起始版本：** 7
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-deviceManager-interface AuthInfo--><!--Device-deviceManager-interface AuthInfo-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -30,9 +30,9 @@ authType: number
 
 **起始版本：** 7
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-AuthInfo-authType: number--><!--Device-AuthInfo-authType: number-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -50,9 +50,9 @@ extraInfo: { [key: string]: any }
 
 **起始版本：** 7
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-AuthInfo-extraInfo: { [key: string]: any }--><!--Device-AuthInfo-extraInfo: { [key: string]: any }-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -70,11 +70,10 @@ token: number
 
 **起始版本：** 7
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-AuthInfo-token: number--><!--Device-AuthInfo-token: number-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
-

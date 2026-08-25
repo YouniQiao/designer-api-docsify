@@ -4,9 +4,7 @@ A base class for creating proxy objects that delegate method calls and property 
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-reflect-class Proxy--><!--Device-reflect-class Proxy-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,27 +23,25 @@ Creates a new proxy instance that implements the specified interfaces and uses t
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Proxy-static create(linker: RuntimeLinker, interfaces: FixedArray<Class>, handler: InvocationHandler): Proxy--><!--Device-Proxy-static create(linker: RuntimeLinker, interfaces: FixedArray<Class>, handler: InvocationHandler): Proxy-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| linker | RuntimeLinker | Yes | The `RuntimeLinker` used to generate the proxy class at runtime. |
-| interfaces | FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; | Yes | An array of `Class` objects representing the interfaces to implement. |
-| handler | [InvocationHandler](arkts-arkts-reflect-invocationhandler-i.md) | Yes | The `InvocationHandler` to handle method and property operations. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| linker | RuntimeLinker | Yes |
+| interfaces | FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; | Yes |
+| handler | [InvocationHandler](arkts-arkts-reflect-invocationhandler-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Proxy](arkts-arkts-reflect-proxy-c.md) | A new proxy instance as an `Proxy`. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Proxy](arkts-arkts-reflect-proxy-c.md) |
 
 ## getHandler
 
@@ -57,17 +53,14 @@ Retrieves the invocation handler associated with this proxy.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Proxy-getHandler(): InvocationHandler--><!--Device-Proxy-getHandler(): InvocationHandler-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [InvocationHandler](arkts-arkts-reflect-invocationhandler-i.md) | The `InvocationHandler` used by this proxy. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [InvocationHandler](arkts-arkts-reflect-invocationhandler-i.md) |

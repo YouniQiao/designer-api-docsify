@@ -10,7 +10,7 @@ const estimatedRemainingChargeTime: number
 
 **起始版本：** 9
 
-<!--Device-batteryInfo-const estimatedRemainingChargeTime: number--><!--Device-batteryInfo-const estimatedRemainingChargeTime: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -26,7 +26,7 @@ const remainingEnergy: number
 
 **起始版本：** 9
 
-<!--Device-batteryInfo-const remainingEnergy: number--><!--Device-batteryInfo-const remainingEnergy: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -42,9 +42,8 @@ const totalEnergy: number
 
 **起始版本：** 9
 
-<!--Device-batteryInfo-const totalEnergy: number--><!--Device-batteryInfo-const totalEnergy: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 **系统接口：** 此接口为系统接口。
-

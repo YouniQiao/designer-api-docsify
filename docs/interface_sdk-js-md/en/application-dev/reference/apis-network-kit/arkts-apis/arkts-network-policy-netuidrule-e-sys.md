@@ -4,7 +4,7 @@ Enumerates the metered network rules.
 
 **Since:** 10
 
-<!--Device-policy-export enum NetUidRule--><!--Device-policy-export enum NetUidRule-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -20,7 +20,7 @@ Default rule.
 
 **Since:** 10
 
-<!--Device-NetUidRule-NET_RULE_NONE = 0--><!--Device-NetUidRule-NET_RULE_NONE = 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -36,7 +36,7 @@ Applications running in the foreground are allowed to access a metered network.
 
 **Since:** 10
 
-<!--Device-NetUidRule-NET_RULE_ALLOW_METERED_FOREGROUND = 1 << 0--><!--Device-NetUidRule-NET_RULE_ALLOW_METERED_FOREGROUND = 1 << 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -52,7 +52,7 @@ Applications are allowed to access a metered network.
 
 **Since:** 10
 
-<!--Device-NetUidRule-NET_RULE_ALLOW_METERED = 1 << 1--><!--Device-NetUidRule-NET_RULE_ALLOW_METERED = 1 << 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -68,7 +68,7 @@ Applications are not allowed to access a metered network.
 
 **Since:** 10
 
-<!--Device-NetUidRule-NET_RULE_REJECT_METERED = 1 << 2--><!--Device-NetUidRule-NET_RULE_REJECT_METERED = 1 << 2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -84,7 +84,7 @@ Applications are allowed to access all networks (metered or non-metered).
 
 **Since:** 10
 
-<!--Device-NetUidRule-NET_RULE_ALLOW_ALL = 1 << 5--><!--Device-NetUidRule-NET_RULE_ALLOW_ALL = 1 << 5-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -100,9 +100,8 @@ Applications are not allowed to access any networks (metered or non-metered).
 
 **Since:** 10
 
-<!--Device-NetUidRule-NET_RULE_REJECT_ALL = 1 << 6--><!--Device-NetUidRule-NET_RULE_REJECT_ALL = 1 << 6-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
-

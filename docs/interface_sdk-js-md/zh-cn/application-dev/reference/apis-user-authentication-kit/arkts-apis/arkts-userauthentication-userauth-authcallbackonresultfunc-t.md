@@ -8,13 +8,12 @@ type AuthCallbackOnResultFunc = (result: UserAuthResult) => void
 
 **起始版本：** 23
 
-<!--Device-userAuth-type AuthCallbackOnResultFunc = (result: UserAuthResult) => void--><!--Device-userAuth-type AuthCallbackOnResultFunc = (result: UserAuthResult) => void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| result | UserAuthResult | 是 | Authentication result information. |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| result | [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md) | 是 |

@@ -2,9 +2,9 @@
 
 暂停下载选项，用于控制暂停行为。对象包含isAllowAutoResume字段，true表示允许自动恢复，false表示需手动恢复。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-update-export interface PauseDownloadOptions--><!--Device-update-export interface PauseDownloadOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -26,11 +26,10 @@ isAllowAutoResume: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-PauseDownloadOptions-isAllowAutoResume: boolean--><!--Device-PauseDownloadOptions-isAllowAutoResume: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
-

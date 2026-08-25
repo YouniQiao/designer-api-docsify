@@ -1,10 +1,10 @@
 # HitTestValue
 
-Provides the element information of the area being clicked. For the sample code, see [getLastHitTest](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getlasthittest).
+Provides the element information of the area being clicked. For the sample code, see [getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getlasthittest).
 
 **Since:** 9
 
-<!--Device-webview-interface HitTestValue--><!--Device-webview-interface HitTestValue-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -26,9 +26,9 @@ Extra information of the area being clicked. If the area being clicked is an ima
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-HitTestValue-extra: string--><!--Device-HitTestValue-extra: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -40,13 +40,12 @@ type: WebHitTestType
 
 Element type of the area being clicked.
 
-**Type:** [WebHitTestType](../../apis-default/arkts-apis/arkts-webview-webhittesttype-e.md)
+**Type:** [WebHitTestType](arkts-arkweb-webview-webhittesttype-e.md)
 
 **Since:** 9
 
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-HitTestValue-type: WebHitTestType--><!--Device-HitTestValue-type: WebHitTestType-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

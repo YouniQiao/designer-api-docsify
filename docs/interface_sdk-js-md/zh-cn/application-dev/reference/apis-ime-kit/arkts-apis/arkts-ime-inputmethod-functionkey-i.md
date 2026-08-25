@@ -2,9 +2,9 @@
 
 输入法功能键类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-inputMethod-export interface FunctionKey--><!--Device-inputMethod-export interface FunctionKey-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -24,9 +24,8 @@ enterKeyType: EnterKeyType
 
 **类型：** EnterKeyType
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-FunctionKey-enterKeyType: EnterKeyType--><!--Device-FunctionKey-enterKeyType: EnterKeyType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
-

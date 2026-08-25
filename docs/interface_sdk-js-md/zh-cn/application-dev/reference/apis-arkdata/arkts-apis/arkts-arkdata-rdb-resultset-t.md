@@ -8,11 +8,10 @@ export type ResultSet = _ResultSet
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-rdb-export type ResultSet = _ResultSet--><!--Device-rdb-export type ResultSet = _ResultSet-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **属性类型：** _ResultSet
-

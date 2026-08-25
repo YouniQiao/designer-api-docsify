@@ -4,7 +4,7 @@
 
 **起始版本：** 22
 
-<!--Device-huksExternalCrypto-export interface HuksExternalCryptoParam--><!--Device-huksExternalCrypto-export interface HuksExternalCryptoParam-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -26,14 +26,14 @@ tag: HuksExternalCryptoTag
 
 **起始版本：** 22
 
-<!--Device-HuksExternalCryptoParam-tag: HuksExternalCryptoTag--><!--Device-HuksExternalCryptoParam-tag: HuksExternalCryptoTag-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## value
 
 ```TypeScript
-value: boolean | int | bigint | Uint8Array
+value: boolean | number | bigint | Uint8Array
 ```
 
 标签对应值。
@@ -42,7 +42,6 @@ value: boolean | int | bigint | Uint8Array
 
 **起始版本：** 22
 
-<!--Device-HuksExternalCryptoParam-value: boolean | int | bigint | Uint8Array--><!--Device-HuksExternalCryptoParam-value: boolean | int | bigint | Uint8Array-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
-

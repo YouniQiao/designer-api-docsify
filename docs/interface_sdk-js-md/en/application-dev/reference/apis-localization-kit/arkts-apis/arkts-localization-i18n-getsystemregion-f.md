@@ -16,19 +16,19 @@ Obtains the system region.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getSystemRegion](arkts-localization-i18n-system-c.md#getsystemregion)
-
-<!--Device-i18n-export function getSystemRegion(): string--><!--Device-i18n-export function getSystemRegion(): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | System region ID. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -43,4 +43,3 @@ import { i18n } from '@kit.LocalizationKit';
 
 let region: string = i18n.getSystemRegion();
 ```
-

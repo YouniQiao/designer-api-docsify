@@ -5,9 +5,9 @@ AuxiliaryPicture类，用于读取或写入图像的辅助图数据以及获取�
 > **说明：**&gt;
 > - 本Interface首批接口从API version 13开始支持。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-image-interface AuxiliaryPicture--><!--Device-image-interface AuxiliaryPicture-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -27,15 +27,15 @@ getAuxiliaryPictureInfo(): AuxiliaryPictureInfo
 
 **起始版本：** 13
 
-<!--Device-AuxiliaryPicture-getAuxiliaryPictureInfo(): AuxiliaryPictureInfo--><!--Device-AuxiliaryPicture-getAuxiliaryPictureInfo(): AuxiliaryPictureInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AuxiliaryPictureInfo](arkts-image-image-auxiliarypictureinfo-i.md) | 返回辅助图图像信息。 |
+| 类型 |
+| --- |
+| [AuxiliaryPictureInfo](arkts-image-image-auxiliarypictureinfo-i.md) |
 
 **示例**
 
@@ -81,15 +81,15 @@ Obtains the information about this auxiliary picture.
 
 **起始版本：** 23
 
-<!--Device-AuxiliaryPicture-getAuxiliaryPictureInfo(): AuxiliaryPictureInfo | undefined--><!--Device-AuxiliaryPicture-getAuxiliaryPictureInfo(): AuxiliaryPictureInfo | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AuxiliaryPictureInfo](arkts-image-image-auxiliarypictureinfo-i.md) \| undefined | Returns the auxiliary picture information. If the operation fails, an error message is returned. |
+| 类型 |
+| --- |
+| [AuxiliaryPictureInfo](arkts-image-image-auxiliarypictureinfo-i.md) \| undefined |
 
 **示例**
 
@@ -105,28 +105,28 @@ getMetadata(metadataType: MetadataType): Promise<Metadata>
 
 **起始版本：** 13
 
-<!--Device-AuxiliaryPicture-getMetadata(metadataType: MetadataType): Promise<Metadata>--><!--Device-AuxiliaryPicture-getMetadata(metadataType: MetadataType): Promise<Metadata>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| metadataType | [MetadataType](arkts-image-image-metadatatype-e.md) | 是 | 元数据类型，用于获取对应类型的元数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| metadataType | [MetadataType](arkts-image-image-metadatatype-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Metadata&gt; | Promise对象，返回元数据的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;Metadata & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
 
 **示例**
 
@@ -289,27 +289,27 @@ Obtains the metadata of auxiliary picture.
 
 **起始版本：** 23
 
-<!--Device-AuxiliaryPicture-getMetadata(metadataType: MetadataType): Promise<Metadata | undefined>--><!--Device-AuxiliaryPicture-getMetadata(metadataType: MetadataType): Promise<Metadata | undefined>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| metadataType | [MetadataType](arkts-image-image-metadatatype-e.md) | 是 | The type of metadata. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| metadataType | [MetadataType](arkts-image-image-metadatatype-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Metadata \| undefined&gt; | Return the metadata of auxiliary picture. |
+| 类型 |
+| --- |
+| Promise & lt;Metadata \ | undefined & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
+| 错误码ID |
+| --- |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
 
 **示例**
 
@@ -325,15 +325,15 @@ getType(): AuxiliaryPictureType
 
 **起始版本：** 13
 
-<!--Device-AuxiliaryPicture-getType(): AuxiliaryPictureType--><!--Device-AuxiliaryPicture-getType(): AuxiliaryPictureType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) | 操作成功，返回辅助图的类型。 |
+| 类型 |
+| --- |
+| [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) |
 
 **示例**
 
@@ -373,15 +373,15 @@ Obtains the type of auxiliary picture.
 
 **起始版本：** 23
 
-<!--Device-AuxiliaryPicture-getType(): AuxiliaryPictureType | undefined--><!--Device-AuxiliaryPicture-getType(): AuxiliaryPictureType | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) \| undefined | Returns the type of auxiliary picture. |
+| 类型 |
+| --- |
+| [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) \| undefined |
 
 **示例**
 
@@ -397,15 +397,15 @@ readPixelsToBuffer(): Promise<ArrayBuffer>
 
 **起始版本：** 13
 
-<!--Device-AuxiliaryPicture-readPixelsToBuffer(): Promise<ArrayBuffer>--><!--Device-AuxiliaryPicture-readPixelsToBuffer(): Promise<ArrayBuffer>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise对象。返回辅助图像素数据。 |
+| 类型 |
+| --- |
+| Promise & lt;ArrayBuffer & gt; |
 
 **示例**
 
@@ -502,15 +502,15 @@ Reads image pixel map data and writes the data to an ArrayBuffer. This method us
 
 **起始版本：** 23
 
-<!--Device-AuxiliaryPicture-readPixelsToBuffer(): Promise<ArrayBuffer | undefined>--><!--Device-AuxiliaryPicture-readPixelsToBuffer(): Promise<ArrayBuffer | undefined>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;ArrayBuffer \| undefined&gt; | A Promise instance used to return the pixel map data. |
+| 类型 |
+| --- |
+| Promise & lt;ArrayBuffer \ | undefined & gt; |
 
 **示例**
 
@@ -524,9 +524,9 @@ release():void
 
 释放辅助图对象，无返回值。由于图片占用内存较大，所以当AuxiliaryPicture对象使用完成后，应主动调用该方法，及时释放内存。释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-AuxiliaryPicture-release():void--><!--Device-AuxiliaryPicture-release():void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -965,23 +965,23 @@ setAuxiliaryPictureInfo(info: AuxiliaryPictureInfo): void
 
 设置辅助图的图像信息。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-AuxiliaryPicture-setAuxiliaryPictureInfo(info: AuxiliaryPictureInfo): void--><!--Device-AuxiliaryPicture-setAuxiliaryPictureInfo(info: AuxiliaryPictureInfo): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| info | [AuxiliaryPictureInfo](arkts-image-image-auxiliarypictureinfo-i.md) | 是 | 辅助图的图像信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| info | [AuxiliaryPictureInfo](arkts-image-image-auxiliarypictureinfo-i.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1036,31 +1036,31 @@ setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>
 
 设置辅助图元数据。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-AuxiliaryPicture-setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>--><!--Device-AuxiliaryPicture-setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| metadataType | [MetadataType](arkts-image-image-metadatatype-e.md) | 是 | 元数据的类型，用于设置对应的元数据。 |
-| metadata | Metadata | 是 | 元数据对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| metadataType | [MetadataType](arkts-image-image-metadatatype-e.md) | 是 |
+| metadata | [Metadata](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-metadata-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
 
 **示例**
 
@@ -1226,29 +1226,29 @@ writePixelsFromBuffer(data: ArrayBuffer): Promise<void>
 
 读取ArrayBuffer中的辅助图片数据，并将数据写入AuxiliaryPicture对象。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-AuxiliaryPicture-writePixelsFromBuffer(data: ArrayBuffer): Promise<void>--><!--Device-AuxiliaryPicture-writePixelsFromBuffer(data: ArrayBuffer): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | ArrayBuffer | 是 | 辅助图像素数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | ArrayBuffer | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -1288,4 +1288,3 @@ function WritePixelsFromBufferFunc(auxPicture: image.AuxiliaryPicture): void {
   }
 }
 ```
-

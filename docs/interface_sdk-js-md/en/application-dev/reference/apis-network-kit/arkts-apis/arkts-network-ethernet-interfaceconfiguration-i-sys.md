@@ -4,7 +4,7 @@ Defines the network configuration for the Ethernet connection.
 
 **Since:** 9
 
-<!--Device-ethernet-export interface InterfaceConfiguration--><!--Device-ethernet-export interface InterfaceConfiguration-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -28,7 +28,7 @@ DNS server addresses of the Ethernet connection. The value must be an IPv4 addre
 
 **Since:** 9
 
-<!--Device-InterfaceConfiguration-dnsServers: string--><!--Device-InterfaceConfiguration-dnsServers: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -46,7 +46,7 @@ Gateway of the Ethernet connection. The value must be an IPv4 address, which is 
 
 **Since:** 9
 
-<!--Device-InterfaceConfiguration-gateway: string--><!--Device-InterfaceConfiguration-gateway: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -64,7 +64,7 @@ HTTP proxy of the Ethernet connection. By default, no proxy is configured.
 
 **Since:** 10
 
-<!--Device-InterfaceConfiguration-httpProxy?: HttpProxy--><!--Device-InterfaceConfiguration-httpProxy?: HttpProxy-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -82,7 +82,7 @@ Static IP address of the Ethernet connection. The value must be an IPv4 address,
 
 **Since:** 9
 
-<!--Device-InterfaceConfiguration-ipAddr: string--><!--Device-InterfaceConfiguration-ipAddr: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -100,7 +100,7 @@ Configuration mode of the Ethernet connection.
 
 **Since:** 9
 
-<!--Device-InterfaceConfiguration-mode: IPSetMode--><!--Device-InterfaceConfiguration-mode: IPSetMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -118,7 +118,7 @@ Subnet mask of the Ethernet connection. The value must be an IPv4 address, which
 
 **Since:** 9
 
-<!--Device-InterfaceConfiguration-netMask: string--><!--Device-InterfaceConfiguration-netMask: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -136,9 +136,8 @@ Route of the Ethernet connection. The value must be an IPv4 address, which is a 
 
 **Since:** 9
 
-<!--Device-InterfaceConfiguration-route: string--><!--Device-InterfaceConfiguration-route: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
-

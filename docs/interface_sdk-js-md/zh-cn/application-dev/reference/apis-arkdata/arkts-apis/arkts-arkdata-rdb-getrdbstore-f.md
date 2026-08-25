@@ -15,22 +15,22 @@ function getRdbStore(context: Context, config: StoreConfig, version: number, cal
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md)
-
-<!--Device-rdb-function getRdbStore(context: Context, config: StoreConfig, version: number, callback: AsyncCallback<RdbStore>): void--><!--Device-rdb-function getRdbStore(context: Context, config: StoreConfig, version: number, callback: AsyncCallback<RdbStore>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | Context | 是 | 应用的上下文。 <br>FA模型的应用Context定义见Context。 <br>Stage模型的应用Context定义见Context。 |
-| config | StoreConfig | 是 | 与此RDB存储相关的数据库配置。 |
-| version | number | 是 | 数据库版本。 <br>目前暂不支持通过version自动识别数据库升级降级操作，只能由开发者自行维护。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RdbStore&gt; | 是 | 回调函数。当操作成功，err为undefined，data为RdbStore对象；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
+| config | [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) | 是 |
+| version | number | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RdbStore&gt; | 是 |
 
 **示例**
 
@@ -121,27 +121,26 @@ function getRdbStore(context: Context, config: StoreConfig, version: number): Pr
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-rdb-function getRdbStore(context: Context, config: StoreConfig, version: number): Promise<RdbStore>--><!--Device-rdb-function getRdbStore(context: Context, config: StoreConfig, version: number): Promise<RdbStore>-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | Context | 是 | 应用的上下文。 <br>FA模型的应用Context定义见Context。 <br>Stage模型的应用Context定义见Context。 |
-| config | StoreConfig | 是 | 与此RDB存储相关的数据库配置。 |
-| version | number | 是 | 数据库版本。 <br>目前暂不支持通过version自动识别数据库升级降级操作，只能由开发者自行维护。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
+| config | [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) | 是 |
+| version | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;RdbStore&gt; | Promise对象。返回RdbStore对象。 |
+| 类型 |
+| --- |
+| Promise & lt;RdbStore & gt; |
 
 **示例**
 
 参见 [getRdbStore](#getrdbstore)
-

@@ -2,9 +2,9 @@
 
 客户端证书类型。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-http-export interface ClientCert--><!--Device-http-export interface ClientCert-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -24,9 +24,9 @@ certPath: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ClientCert-certPath: string--><!--Device-ClientCert-certPath: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -40,9 +40,9 @@ certType?: CertType
 
 **类型：** CertType
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ClientCert-certType?: CertType--><!--Device-ClientCert-certType?: CertType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -56,9 +56,9 @@ keyPassword?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ClientCert-keyPassword?: string--><!--Device-ClientCert-keyPassword?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -72,9 +72,8 @@ keyPath: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ClientCert-keyPath: string--><!--Device-ClientCert-keyPath: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
-

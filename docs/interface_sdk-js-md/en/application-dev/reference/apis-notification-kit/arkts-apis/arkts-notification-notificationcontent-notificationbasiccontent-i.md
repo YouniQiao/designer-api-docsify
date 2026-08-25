@@ -2,9 +2,9 @@
 
 Describes the basic text notification, which is used to display the title and body content. It serves as the basic content structure for other notification types. Other notification types (such as long text, multi-line text, picture, and live view) inherit this API and extend their own specific fields on this basis.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-export interface NotificationBasicContent--><!--Device-unnamed-export interface NotificationBasicContent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -18,9 +18,9 @@ Additional notification content, which supplements the notification content and 
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationBasicContent-additionalText?: string--><!--Device-NotificationBasicContent-additionalText?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -34,9 +34,9 @@ Picture displayed on the lock screen. This parameter is left empty by default. C
 
 **Type:** image.PixelMap
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NotificationBasicContent-lockscreenPicture?: image.PixelMap--><!--Device-NotificationBasicContent-lockscreenPicture?: image.PixelMap-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -50,9 +50,9 @@ Notification body content, displayed below the title. It cannot be an empty stri
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationBasicContent-text: string--><!--Device-NotificationBasicContent-text: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -66,9 +66,8 @@ Notification title, displayed at the top of the notification. It cannot be an em
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationBasicContent-title: string--><!--Device-NotificationBasicContent-title: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
-

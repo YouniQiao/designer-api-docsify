@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-unnamed-export enum CoordinateSystemType--><!--Device-unnamed-export enum CoordinateSystemType-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -20,7 +20,7 @@ WGS84坐标系。
 
 **起始版本：** 23
 
-<!--Device-CoordinateSystemType-COORDINATE_TYPE_WGS84 = 1--><!--Device-CoordinateSystemType-COORDINATE_TYPE_WGS84 = 1-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -36,9 +36,8 @@ GCJ02坐标系。
 
 **起始版本：** 23
 
-<!--Device-CoordinateSystemType-COORDINATE_TYPE_GCJ02 = 2--><!--Device-CoordinateSystemType-COORDINATE_TYPE_GCJ02 = 2-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
-

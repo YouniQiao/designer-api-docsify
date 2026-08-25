@@ -2,9 +2,9 @@
 
 Defines a **RunningLock** object.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-runningLock-class RunningLock--><!--Device-runningLock-class RunningLock-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
@@ -16,32 +16,38 @@ import { runningLock } from '@kit.BasicServicesKit';
 
 ## hold
 
+ArkTS-Dyn:
+```TypeScript
+hold(timeout: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 hold(timeout: int): void
 ```
 
 Holds a running lock.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
-
-<!--Device-RunningLock-hold(timeout: int): void--><!--Device-RunningLock-hold(timeout: int): void-End-->
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| timeout | int | Yes | Duration for locking and holding the **RunningLock** object, in ms.<br>The value must be a number:<br>**-1**: The lock is permanently held and needs to be released automatically.<br>**0**: The lock is released 3 seconds after the timer expires by default.<br>   > 0: The lock is released based on the input value after the timer expires. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| timeout | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | If the permission is denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -82,17 +88,17 @@ isHolding(): boolean
 
 Checks whether this running lock is being held.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-RunningLock-isHolding(): boolean--><!--Device-RunningLock-isHolding(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | The value **true** indicates that the **RunningLock** object is held; and the value **false** indicates that the **RunningLock** object is released. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -131,19 +137,19 @@ Checks whether this running lock is used.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [isHolding](#isholding)
-
-<!--Device-RunningLock-isUsed(): boolean--><!--Device-RunningLock-isUsed(): boolean-End-->
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns true if the lock is held or in use; returns false if the lock has been released. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -168,21 +174,21 @@ Locks and holds a **RunningLock** object.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [hold](#hold)
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
-<!--Device-RunningLock-lock(timeout: number): void--><!--Device-RunningLock-lock(timeout: number): void-End-->
-
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| timeout | number | Yes | Duration for locking and holding the **RunningLock** object, in ms. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| timeout | number | Yes |
 
 **Examples**
 
@@ -205,19 +211,19 @@ unhold(): void
 
 Releases this running lock.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
-
-<!--Device-RunningLock-unhold(): void--><!--Device-RunningLock-unhold(): void-End-->
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | If the permission is denied. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 **Examples**
 
@@ -260,13 +266,13 @@ Releases this running lock.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [unhold](#unhold)
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
-
-<!--Device-RunningLock-unlock(): void--><!--Device-RunningLock-unlock(): void-End-->
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
@@ -282,4 +288,3 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
     console.error('create running lock failed, err: ' + err);
 });
 ```
-

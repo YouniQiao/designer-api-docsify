@@ -4,7 +4,7 @@ Prediction information about the first screen loading of the page, mainly includ
 
 **Since:** 20
 
-<!--Device-webview-interface BlanklessInfo--><!--Device-webview-interface BlanklessInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -20,13 +20,13 @@ import { webview } from '@kit.ArkWeb';
 errCode: WebBlanklessErrorCode
 ```
 
-Error code of blankless loading. For details, see [WebBlanklessErrorCode](../../apis-default/arkts-apis/arkts-webview-webblanklesserrorcode-e.md).
+Error code of blankless loading. For details, see [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md).
 
-**Type:** [WebBlanklessErrorCode](../../apis-default/arkts-apis/arkts-webview-webblanklesserrorcode-e.md)
+**Type:** [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md)
 
 **Since:** 20
 
-<!--Device-BlanklessInfo-errCode: WebBlanklessErrorCode--><!--Device-BlanklessInfo-errCode: WebBlanklessErrorCode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -42,7 +42,7 @@ Predicts the loading time of the current load based on the first screen loading 
 
 **Since:** 20
 
-<!--Device-BlanklessInfo-loadingTime: number--><!--Device-BlanklessInfo-loadingTime: number-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -58,7 +58,6 @@ Similarity of the first screen. The similarity is calculated based on the first 
 
 **Since:** 20
 
-<!--Device-BlanklessInfo-similarity: number--><!--Device-BlanklessInfo-similarity: number-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

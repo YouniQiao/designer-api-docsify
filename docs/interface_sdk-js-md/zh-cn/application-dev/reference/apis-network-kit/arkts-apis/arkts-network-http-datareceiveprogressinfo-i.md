@@ -4,7 +4,7 @@
 
 **起始版本：** 11
 
-<!--Device-http-export interface DataReceiveProgressInfo--><!--Device-http-export interface DataReceiveProgressInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -17,36 +17,35 @@ import { http } from '@kit.NetworkKit';
 ## receiveSize
 
 ```TypeScript
-receiveSize: int
+receiveSize: number
 ```
 
 已接收的数据量（单位：Byte）。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-DataReceiveProgressInfo-receiveSize: int--><!--Device-DataReceiveProgressInfo-receiveSize: int-End-->
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## totalSize
 
 ```TypeScript
-totalSize: int
+totalSize: number
 ```
 
 总共要接收的数据量（单位：Byte）。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
-<!--Device-DataReceiveProgressInfo-totalSize: int--><!--Device-DataReceiveProgressInfo-totalSize: int-End-->
-
 **系统能力：** SystemCapability.Communication.NetStack
-

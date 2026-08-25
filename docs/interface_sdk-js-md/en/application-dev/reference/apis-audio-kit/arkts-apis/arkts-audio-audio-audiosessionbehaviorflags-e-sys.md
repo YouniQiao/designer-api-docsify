@@ -4,7 +4,7 @@ Enumerates audio session behavior flags.
 
 **Since:** 24
 
-<!--Device-audio-enum AudioSessionBehaviorFlags--><!--Device-audio-enum AudioSessionBehaviorFlags-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -18,11 +18,10 @@ Allows the VoIP capture stream of the current application to run concurrently wi
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AudioSessionBehaviorFlags-VOIP_CAPTURE_MIX_WITH_OTHERS = 0x20000000--><!--Device-AudioSessionBehaviorFlags-VOIP_CAPTURE_MIX_WITH_OTHERS = 0x20000000-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
-

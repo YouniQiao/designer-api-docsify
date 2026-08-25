@@ -2,9 +2,9 @@
 
 拨打电话的可选参数。
 
-**起始版本：** 26.0.0
+**起始版本：** 24
 
-<!--Device-call-export interface MakeCallOptions--><!--Device-call-export interface MakeCallOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -27,9 +27,9 @@ isCustomAccessibility?: boolean
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-MakeCallOptions-isCustomAccessibility?: boolean--><!--Device-MakeCallOptions-isCustomAccessibility?: boolean-End-->
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -43,11 +43,10 @@ isHideDialScreen?: boolean
 
 **类型：** boolean
 
-**起始版本：** 26.0.0
+**起始版本：** 24
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.0.0。
 
-<!--Device-MakeCallOptions-isHideDialScreen?: boolean--><!--Device-MakeCallOptions-isHideDialScreen?: boolean-End-->
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.Contacts
-

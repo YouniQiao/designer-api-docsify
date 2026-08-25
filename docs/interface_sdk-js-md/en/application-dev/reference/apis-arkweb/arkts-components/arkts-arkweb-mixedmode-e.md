@@ -4,7 +4,7 @@ Enumerates the mixed content modes.
 
 **Since:** 8
 
-<!--Device-unnamed-declare enum MixedMode--><!--Device-unnamed-declare enum MixedMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,9 +18,9 @@ Loose mode: HTTP and HTTPS hybrid content can be loaded. This means that all ins
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-MixedMode-All = 0--><!--Device-MixedMode-All = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -34,9 +34,9 @@ Compatible mode. Allows some HTTP content to be loaded on an HTTPS page.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-MixedMode-Compatible = 1--><!--Device-MixedMode-Compatible = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -50,9 +50,8 @@ Strict mode: HTTP and HTTPS hybrid content cannot be loaded.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-MixedMode-None = 2--><!--Device-MixedMode-None = 2-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

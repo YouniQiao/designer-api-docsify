@@ -8,15 +8,14 @@ WebGL 1.0
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-unnamed-type WebGLPowerPreference = "default" | "low-power" | "high-performance"--><!--Device-unnamed-type WebGLPowerPreference = "default" | "low-power" | "high-performance"-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
-| Type | Description |
-| --- | --- |
-| "default" |  |
-| "low-power" |  |
-| "high-performance" |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| "default" |
+| "low-power" |
+| "high-performance" |

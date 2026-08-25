@@ -2,9 +2,9 @@
 
 Enumerates the encoding formats for certificate-related data.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-cert-enum EncodingBaseFormat--><!--Device-cert-enum EncodingBaseFormat-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -16,11 +16,11 @@ PEM = 0
 
 Privacy-Enhanced Mail (PEM) format.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-EncodingBaseFormat-PEM = 0--><!--Device-EncodingBaseFormat-PEM = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -32,11 +32,10 @@ DER = 1
 
 Distinguished Encoding Rules (DER) format.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-EncodingBaseFormat-DER = 1--><!--Device-EncodingBaseFormat-DER = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.Cert
-

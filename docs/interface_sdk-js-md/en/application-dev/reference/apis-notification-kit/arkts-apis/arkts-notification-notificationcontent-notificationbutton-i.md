@@ -5,9 +5,9 @@ Describes the notification button, which is used to display an interactive butto
 > **NOTE：**&gt;
 > The actual display effect depends on the device capabilities and the notification center UI style.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-unnamed-export interface NotificationButton--><!--Device-unnamed-export interface NotificationButton-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -21,9 +21,9 @@ List of button icons, corresponding one-to-one with **names**, with each icon di
 
 **Type:** Array&lt;image.PixelMap&gt;
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationButton-icons?: Array<image.PixelMap>--><!--Device-NotificationButton-icons?: Array<image.PixelMap>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -37,9 +37,9 @@ List of button icon resources, corresponding one-to-one with **names** via Resou
 
 **Type:** Array&lt;[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)&gt;
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NotificationButton-iconsResource?: Array<Resource>--><!--Device-NotificationButton-iconsResource?: Array<Resource>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -53,9 +53,8 @@ List of button names. Each name corresponds to the text displayed on a notificat
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationButton-names?: Array<string>--><!--Device-NotificationButton-names?: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
-

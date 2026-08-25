@@ -2,9 +2,9 @@
 
 Describes the **BundleOption** information, that is, the bundle information of an application.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export interface BundleOption--><!--Device-unnamed-export interface BundleOption-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -18,9 +18,9 @@ Bundle name of the application.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-BundleOption-bundle: string--><!--Device-BundleOption-bundle: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -32,11 +32,10 @@ uid?: int
 
 UID of the application, which is obtained from ApplicationInfo. The default value is **0**. This parameter is mandatory in application clone scenarios.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-BundleOption-uid?: int--><!--Device-BundleOption-uid?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
-

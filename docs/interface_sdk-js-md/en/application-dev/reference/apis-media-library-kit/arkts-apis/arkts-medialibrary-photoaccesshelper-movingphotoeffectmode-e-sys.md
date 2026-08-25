@@ -2,9 +2,9 @@
 
 Enumerates the effects of a moving photo.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-photoAccessHelper-enum MovingPhotoEffectMode--><!--Device-photoAccessHelper-enum MovingPhotoEffectMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ DEFAULT = 0
 
 Default effect.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MovingPhotoEffectMode-DEFAULT = 0--><!--Device-MovingPhotoEffectMode-DEFAULT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,9 @@ BOUNCE_PLAY = 1
 
 Back-and-forth motion.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MovingPhotoEffectMode-BOUNCE_PLAY = 1--><!--Device-MovingPhotoEffectMode-BOUNCE_PLAY = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,9 +50,9 @@ LOOP_PLAY = 2
 
 Continuously repeated animation.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MovingPhotoEffectMode-LOOP_PLAY = 2--><!--Device-MovingPhotoEffectMode-LOOP_PLAY = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -66,9 +66,9 @@ LONG_EXPOSURE = 3
 
 Long exposure.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MovingPhotoEffectMode-LONG_EXPOSURE = 3--><!--Device-MovingPhotoEffectMode-LONG_EXPOSURE = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -82,9 +82,9 @@ MULTI_EXPOSURE = 4
 
 Multiple exposures.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MovingPhotoEffectMode-MULTI_EXPOSURE = 4--><!--Device-MovingPhotoEffectMode-MULTI_EXPOSURE = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -98,9 +98,9 @@ CINEMA_GRAPH = 5
 
 Cinemagraph.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-MovingPhotoEffectMode-CINEMA_GRAPH = 5--><!--Device-MovingPhotoEffectMode-CINEMA_GRAPH = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -114,11 +114,10 @@ IMAGE_ONLY = 10
 
 Image only.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-MovingPhotoEffectMode-IMAGE_ONLY = 10--><!--Device-MovingPhotoEffectMode-IMAGE_ONLY = 10-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

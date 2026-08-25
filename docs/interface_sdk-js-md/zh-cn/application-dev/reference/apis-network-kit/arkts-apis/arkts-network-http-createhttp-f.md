@@ -17,19 +17,19 @@ function createHttp(): HttpRequest
 > **说明：**&gt;
 > 当该请求使用完毕时，需调用destroy方法释放资源，否则会出现内存泄露问题。
 
-**起始版本：** 23
+**起始版本：** 6
+
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-http-function createHttp(): HttpRequest--><!--Device-http-function createHttp(): HttpRequest-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| HttpRequest | 返回一个HttpRequest对象，里面包括request、requestInStream、requestSync、enableAutoCookie、destroy、on和off方 法。 |
+| 类型 |
+| --- |
+| [HttpRequest](arkts-network-http-httprequest-i.md) |
 
 **示例**
 
@@ -38,4 +38,3 @@ import { http } from '@kit.NetworkKit';
 
 let httpRequest = http.createHttp();
 ```
-

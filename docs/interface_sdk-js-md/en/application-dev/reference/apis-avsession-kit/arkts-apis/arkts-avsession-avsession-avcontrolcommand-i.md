@@ -2,9 +2,9 @@
 
 The definition of command to be sent to the session@interface AVControlCommand [since 10 - 11]
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-avSession-interface AVControlCommand--><!--Device-avSession-interface AVControlCommand-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -24,11 +24,11 @@ The command value [AVControlCommandType](arkts-avsession-avsession-avcontrolcomm
 
 **Type:** [AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVControlCommand-command: AVControlCommandType--><!--Device-AVControlCommand-command: AVControlCommandType-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -42,9 +42,9 @@ The command value [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)
 
 **Type:** [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-AVControlCommand-commandInfo?: CommandInfo--><!--Device-AVControlCommand-commandInfo?: CommandInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -56,13 +56,12 @@ parameter?: LoopMode | string | double
 
 parameter of the command. Whether this command requires parameters, see AVSessionCommand seek command requires a number parameter setSpeed command requires a number parameter setLoopMode command requires a [LoopMode](arkts-avsession-avsession-loopmode-e.md) parameter. toggleFavorite command requires assetId [assetId](arkts-avsession-avsession-avmetadata-i.md#assetid) parameter other commands need no parameter
 
-**Type:** [LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| double
+**Type:** ArkTS-Dyn: [LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| number  <br>ArkTS-Sta：[LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| double
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AVControlCommand-parameter?: LoopMode | string | double--><!--Device-AVControlCommand-parameter?: LoopMode | string | double-End-->
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
-

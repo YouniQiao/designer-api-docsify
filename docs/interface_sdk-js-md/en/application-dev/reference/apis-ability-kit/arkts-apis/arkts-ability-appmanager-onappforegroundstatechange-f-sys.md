@@ -16,9 +16,9 @@ Register app foreground or background state observer.
 
 **Since:** 23
 
-**Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-appManager-function onAppForegroundStateChange(observer: AppForegroundStateObserver): void--><!--Device-appManager-function onAppForegroundStateChange(observer: AppForegroundStateObserver): void-End-->
+**Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -26,15 +26,14 @@ Register app foreground or background state observer.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| observer | AppForegroundStateObserver | Yes | The app foreground state observer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |

@@ -20,19 +20,18 @@ Initializes the active tag chip.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [initialize](arkts-connectivity-connectedtag-initialize-f.md)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-<!--Device-connectedTag-function init(): boolean--><!--Device-connectedTag-function init(): boolean-End-->
-
 **System capability:** SystemCapability.Communication.ConnectedTag
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true**: The initialization is successful. <br>**false**: The initialization fails. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

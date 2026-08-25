@@ -2,9 +2,9 @@
 
 Obtains the option mode of NR.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-radio-export enum NROptionMode--><!--Device-radio-export enum NROptionMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -18,9 +18,9 @@ NR_OPTION_UNKNOWN = 0
 
 Indicates unknown NR networking mode.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-NROptionMode-NR_OPTION_UNKNOWN = 0--><!--Device-NROptionMode-NR_OPTION_UNKNOWN = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -34,9 +34,9 @@ NR_OPTION_NSA_ONLY = 1
 
 Indicates that the NR networking mode is NSA only.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-NROptionMode-NR_OPTION_NSA_ONLY = 1--><!--Device-NROptionMode-NR_OPTION_NSA_ONLY = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -50,9 +50,9 @@ NR_OPTION_SA_ONLY = 2
 
 Indicates that the NR networking mode is SA only.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-NROptionMode-NR_OPTION_SA_ONLY = 2--><!--Device-NROptionMode-NR_OPTION_SA_ONLY = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -66,11 +66,10 @@ NR_OPTION_NSA_AND_SA = 3
 
 Indicates that the NR networking mode is NSA and SA.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-NROptionMode-NR_OPTION_NSA_AND_SA = 3--><!--Device-NROptionMode-NR_OPTION_NSA_AND_SA = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
-

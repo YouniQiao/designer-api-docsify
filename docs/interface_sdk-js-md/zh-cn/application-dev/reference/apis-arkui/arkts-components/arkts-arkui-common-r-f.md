@@ -15,26 +15,26 @@ global \$r function
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-unnamed-declare function $r(value: string, ...params: any[]): Resource--><!--Device-unnamed-declare function $r(value: string, ...params: any[]): Resource-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | string | 是 | The value format is 'belonging.type.name'. belonging: group to which the resource belongs, which can be 'sys' or 'app'. type: resource type, which can be 'boolean', 'color', 'float', 'intarray', 'integer', 'pattern', 'plural','strarray', 'string', or 'media'. name: resource name, which is determined during resource definition. |
-| params | any[] | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | string | 是 |
+| params | any[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Resource |  |
+| 类型 |
+| --- |
+| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |
 
 **示例**
 
@@ -69,4 +69,3 @@ struct Page {
   }
 }
 ```
-

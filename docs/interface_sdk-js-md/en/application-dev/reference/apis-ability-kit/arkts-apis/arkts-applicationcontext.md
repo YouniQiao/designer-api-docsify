@@ -4,15 +4,14 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [ApplicationContext](arkts-ability-applicationcontext-c.md) | ApplicationContext inherits from Context and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ApplicationContext](arkts-ability-applicationcontext-c.md) |
 
 <!--Del-->
 ### Classes(System API)
 
-| Name | Description |
-| --- | --- |
-| [ApplicationContext](arkts-ability-applicationcontext-c-sys.md) | ApplicationContext inherits from Context and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ApplicationContext](arkts-ability-applicationcontext-c-sys.md) |
 <!--DelEnd-->
-

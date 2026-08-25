@@ -2,9 +2,9 @@
 
 Enumerates the audio channel blending modes.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-audio-enum ChannelBlendMode--><!--Device-audio-enum ChannelBlendMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -16,9 +16,9 @@ MODE_DEFAULT = 0
 
 No channel process.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ChannelBlendMode-MODE_DEFAULT = 0--><!--Device-ChannelBlendMode-MODE_DEFAULT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -30,9 +30,9 @@ MODE_BLEND_LR = 1
 
 Blends the left and right channels together.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ChannelBlendMode-MODE_BLEND_LR = 1--><!--Device-ChannelBlendMode-MODE_BLEND_LR = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -44,9 +44,9 @@ MODE_ALL_LEFT = 2
 
 Copies the left channel and applies it to both the left and right channels.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ChannelBlendMode-MODE_ALL_LEFT = 2--><!--Device-ChannelBlendMode-MODE_ALL_LEFT = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -58,9 +58,8 @@ MODE_ALL_RIGHT = 3
 
 Copies the right channel and applies it to both the left and right channels.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ChannelBlendMode-MODE_ALL_RIGHT = 3--><!--Device-ChannelBlendMode-MODE_ALL_RIGHT = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
-

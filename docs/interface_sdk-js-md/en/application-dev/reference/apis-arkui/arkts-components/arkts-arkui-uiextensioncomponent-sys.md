@@ -24,9 +24,9 @@ Construct the UIExtensionComponent.<br/> Called when the UIExtensionComponent is
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-UIExtensionComponentInterface-(    want: import('../api/@ohos.app.ability.Want').default,    options?: UIExtensionOptions  ): UIExtensionComponentAttribute--><!--Device-UIExtensionComponentInterface-(    want: import('../api/@ohos.app.ability.Want').default,    options?: UIExtensionOptions  ): UIExtensionComponentAttribute-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,26 +34,26 @@ Construct the UIExtensionComponent.<br/> Called when the UIExtensionComponent is
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| want | import('../api/@ohos.app.ability.Want').default | Yes | Ability to start. |
-| options | [UIExtensionOptions](arkts-arkui-uiextensionoptions-i-sys.md) | No | Construction parameters. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| want | import('../api/@ohos.app.ability.Want').default | Yes |
+| options | [UIExtensionOptions](arkts-arkui-uiextensionoptions-i-sys.md) | No |
 
 ## Summary
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [TerminationInfo](arkts-arkui-terminationinfo-i-sys.md) | Indicates the information when the provider of the embedded UI is terminated. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [TerminationInfo](arkts-arkui-terminationinfo-i-sys.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ReceiveCallback](arkts-arkui-receivecallback-t-sys.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |

@@ -6,9 +6,7 @@ Defines event info for pan gesture.@extends BaseGestureEvent @interface PanGestu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export interface PanGestureEvent--><!--Device-unnamed-export interface PanGestureEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,11 +22,9 @@ Gesture event offset X. The unit is vp.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PanGestureEvent-offsetX: double--><!--Device-PanGestureEvent-offsetX: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,11 +40,9 @@ Gesture event offset Y. The unit is vp.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PanGestureEvent-offsetY: double--><!--Device-PanGestureEvent-offsetY: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,11 +58,9 @@ velocity of the gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PanGestureEvent-velocity: double--><!--Device-PanGestureEvent-velocity: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,11 +76,9 @@ X-axis velocity of the gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PanGestureEvent-velocityX: double--><!--Device-PanGestureEvent-velocityX: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,11 +94,8 @@ Y-axis velocity of the gesture.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PanGestureEvent-velocityY: double--><!--Device-PanGestureEvent-velocityY: double-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

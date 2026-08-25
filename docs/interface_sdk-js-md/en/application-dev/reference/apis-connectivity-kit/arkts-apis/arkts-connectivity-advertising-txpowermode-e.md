@@ -4,7 +4,7 @@ Enumerates the advertising transmission power modes.
 
 **Since:** 26.0.0
 
-<!--Device-advertising-enum TxPowerMode--><!--Device-advertising-enum TxPowerMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -18,9 +18,9 @@ Low power consumption mode.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-TxPowerMode-ADV_TX_POWER_LOW = 1--><!--Device-TxPowerMode-ADV_TX_POWER_LOW = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -34,9 +34,9 @@ Medium power consumption mode.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-TxPowerMode-ADV_TX_POWER_MEDIUM = 2--><!--Device-TxPowerMode-ADV_TX_POWER_MEDIUM = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -50,9 +50,8 @@ High power consumption mode.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TxPowerMode-ADV_TX_POWER_HIGH = 3--><!--Device-TxPowerMode-ADV_TX_POWER_HIGH = 3-End-->
-
 **System capability:** SystemCapability.Communication.NearLink.Base
-

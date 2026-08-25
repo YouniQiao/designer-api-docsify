@@ -2,9 +2,9 @@
 
 Enumerates the anti-aliasing levels.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-image-enum AntiAliasingLevel--><!--Device-image-enum AntiAliasingLevel-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -16,11 +16,11 @@ NONE = 0
 
 Nearest neighbor interpolation.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-AntiAliasingLevel-NONE = 0--><!--Device-AntiAliasingLevel-NONE = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -32,11 +32,11 @@ LOW = 1
 
 Bilinear interpolation.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-AntiAliasingLevel-LOW = 1--><!--Device-AntiAliasingLevel-LOW = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -48,11 +48,11 @@ MEDIUM = 2
 
 Bilinear interpolation with mipmap enabled. You are advised to use this value when zooming out an image.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-AntiAliasingLevel-MEDIUM = 2--><!--Device-AntiAliasingLevel-MEDIUM = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -64,11 +64,10 @@ HIGH = 3
 
 Cubic interpolation.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-AntiAliasingLevel-HIGH = 3--><!--Device-AntiAliasingLevel-HIGH = 3-End-->
-
 **System capability:** SystemCapability.Multimedia.Image.Core
-

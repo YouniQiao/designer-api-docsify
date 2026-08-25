@@ -4,9 +4,9 @@
 
 **继承/实现关系：** Transform extends [Duplex](arkts-arkts-stream-duplex-c.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-stream-class Transform--><!--Device-stream-class Transform-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -24,11 +24,11 @@ constructor()
 
 创建**Transform**对象的构造函数。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-Transform-constructor()--><!--Device-Transform-constructor()-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -65,19 +65,19 @@ doFlush(callback: Function): void
 
 在流结束时调用，用于处理剩余数据。使用异步回调返回结果。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-Transform-doFlush(callback: Function): void--><!--Device-Transform-doFlush(callback: Function): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Function | 是 | 回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Function | 是 |
 
 **示例**
 
@@ -137,21 +137,21 @@ doTransform(chunk: string, encoding: string, callback: Function): void
 
 转换或处理输入的数据块，并通过回调通知处理完成。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-Transform-doTransform(chunk: string, encoding: string, callback: Function): void--><!--Device-Transform-doTransform(chunk: string, encoding: string, callback: Function): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| chunk | string | 是 | 需要写入的数据。 |
-| encoding | string | 是 | 字符编码类型。当前版本支持'utf8'、'gb18030'、'gbk'以及'gb2312'。 |
-| callback | Function | 是 | 回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| chunk | string | 是 |
+| encoding | string | 是 |
+| callback | Function | 是 |
 
 **示例**
 
@@ -194,4 +194,3 @@ class TestTransform extends stream.Transform {
 let transformStream = new TestTransform();
 transformStream.write("hello");
 ```
-

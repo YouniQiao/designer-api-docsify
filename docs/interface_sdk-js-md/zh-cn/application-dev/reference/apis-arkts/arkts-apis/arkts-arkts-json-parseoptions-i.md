@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-json-interface ParseOptions--><!--Device-json-interface ParseOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -26,9 +26,8 @@ bigIntMode: BigIntMode
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ParseOptions-bigIntMode: BigIntMode--><!--Device-ParseOptions-bigIntMode: BigIntMode-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

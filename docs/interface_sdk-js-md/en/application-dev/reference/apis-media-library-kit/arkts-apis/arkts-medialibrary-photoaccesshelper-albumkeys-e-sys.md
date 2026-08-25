@@ -2,28 +2,11 @@
 
 Enumerates the album keys.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-photoAccessHelper-enum AlbumKeys--><!--Device-photoAccessHelper-enum AlbumKeys-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-## ALBUM_LPATH
-
-```TypeScript
-ALBUM_LPATH = 'lpath'
-```
-
-Virtual path of the album.Albums and their virtual path values:  
-- Camera application album: '/DCIM/Camera'- Screenshot application album: '/Pictures/Screenshots'- Screen recording application album: '/Pictures/Screenrecords'- User-created album: '/Pictures/Users/{Custom album name}'
-
-**Since:** 23
-
-<!--Device-AlbumKeys-ALBUM_LPATH = 'lpath'--><!--Device-AlbumKeys-ALBUM_LPATH = 'lpath'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
 
 ## BUNDLE_NAME
 
@@ -33,9 +16,9 @@ BUNDLE_NAME = 'bundle_name'
 
 Bundle name of the album.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-AlbumKeys-BUNDLE_NAME = 'bundle_name'--><!--Device-AlbumKeys-BUNDLE_NAME = 'bundle_name'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -49,9 +32,9 @@ DATE_MODIFIED = 'date_modified'
 
 Timestamp when the album was modified, in milliseconds.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-AlbumKeys-DATE_MODIFIED = 'date_modified'--><!--Device-AlbumKeys-DATE_MODIFIED = 'date_modified'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -65,9 +48,9 @@ COVER_URI_SOURCE = 'cover_uri_source'
 
 Source URI of the album cover.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-AlbumKeys-COVER_URI_SOURCE = 'cover_uri_source'--><!--Device-AlbumKeys-COVER_URI_SOURCE = 'cover_uri_source'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -81,9 +64,9 @@ UPLOAD_STATUS = 'upload_status'
 
 Synchronization status of the album.
 
-**Since:** 26.0.0
+**Since:** 22
 
-<!--Device-AlbumKeys-UPLOAD_STATUS = 'upload_status'--><!--Device-AlbumKeys-UPLOAD_STATUS = 'upload_status'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -99,9 +82,9 @@ Hidden status.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-AlbumKeys-HIDDEN = 'hidden'--><!--Device-AlbumKeys-HIDDEN = 'hidden'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -117,11 +100,10 @@ directory hidden state of filemanager
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AlbumKeys-FILE_HIDDEN = 'file_hidden'--><!--Device-AlbumKeys-FILE_HIDDEN = 'file_hidden'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

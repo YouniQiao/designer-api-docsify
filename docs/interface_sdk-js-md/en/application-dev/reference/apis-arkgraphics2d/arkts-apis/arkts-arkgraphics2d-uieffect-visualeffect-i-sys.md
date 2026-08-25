@@ -2,9 +2,9 @@
 
 VisualEffect class, used to apply background color blending, border lighting, color gradient, and other effects to a component. Before calling VisualEffect methods, you need to first create a VisualEffect instance through createEffect.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-uiEffect-interface VisualEffect--><!--Device-uiEffect-interface VisualEffect-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -22,11 +22,11 @@ backgroundColorBlender(blender: BrightnessBlender): VisualEffect
 
 A blender for changing the background color of the component. Currently, only the brightness blender is supported.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
-
-<!--Device-VisualEffect-backgroundColorBlender(blender: BrightnessBlender): VisualEffect--><!--Device-VisualEffect-backgroundColorBlender(blender: BrightnessBlender): VisualEffect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -34,15 +34,15 @@ A blender for changing the background color of the component. Currently, only th
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| blender | [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md) | Yes | The blender for blending the background color. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| blender | [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| VisualEffect | Returns the VisualEffect with the background color change effect attached. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) |
 
 **Examples**
 
@@ -55,6 +55,13 @@ visualEffect.backgroundColorBlender(blender)
 
 ## borderLight
 
+ArkTS-Dyn:
+```TypeScript
+borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: number,
+      borderWidth: number): VisualEffect
+```
+
+ArkTS-Sta:
 ```TypeScript
 borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,
       borderWidth: double): VisualEffect
@@ -62,9 +69,9 @@ borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIn
 
 Adds a 3D lighting effect to the border of a rounded rectangle component.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-VisualEffect-borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,      borderWidth: double): VisualEffect--><!--Device-VisualEffect-borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,      borderWidth: double): VisualEffect-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -72,24 +79,24 @@ Adds a 3D lighting effect to the border of a rounded rectangle component.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| lightPosition | common2D.Point3d | Yes | The 3D position of the light source in the component space. [-1, -1, 0] is the top-left corner of the component, [1, 1, 0] is the bottom-right corner of the component. The larger the z-axis component, the farther the light source is from the component plane, and the larger the illuminated area. The x component range is [-10, 10], the y component range is [-10, 10], and the z component range is [0, 10]. Values outside the range will be automatically clamped. |
-| lightColor | common2D.Color | Yes | The color of the light source. Each component range is [0, 1]. Values outside the range will be automatically clamped. |
-| lightIntensity | double | Yes | The intensity of the light source. The value range is [0, 1]. A larger value indicates a brighter light source. Values outside the range will be automatically clamped. |
-| borderWidth | double | Yes | The illuminated width of the component border. The value range is [0.0, 30.0]. Values outside the range will be automatically clamped. Setting it to 0.0 results in no lighting effect on the component border; a larger value results in a wider illuminated area. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| lightPosition | common2D.Point3d | Yes |
+| [lightColor](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-notificationslot-i.md) | common2D.Color | Yes |
+| [lightIntensity](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-sensor-colorresponse-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| borderWidth | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| VisualEffect | Returns the VisualEffect with the border lighting effect attached. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -135,6 +142,13 @@ struct Index {
 
 ## colorGradient
 
+ArkTS-Dyn:
+```TypeScript
+colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<number>,
+      alphaMask?: Mask): VisualEffect
+```
+
+ArkTS-Sta:
 ```TypeScript
 colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,
       alphaMask?: Mask): VisualEffect
@@ -142,9 +156,9 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 
 Adds a color gradient effect to the component.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-VisualEffect-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,      alphaMask?: Mask): VisualEffect--><!--Device-VisualEffect-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,      alphaMask?: Mask): VisualEffect-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -152,24 +166,24 @@ Adds a color gradient effect to the component.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| colors | Array&lt;Color&gt; | Yes | The color array for multi-color gradient. The array length range is [0, 12], and each color value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, there will be no color gradient effect. |
-| positions | Array&lt;common2D.Point&gt; | Yes | The position array, corresponding to the positions of colors. The array length range is [0, 12]. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, there will be no color gradient effect. |
-| strengths | Array&lt;double&gt; | Yes | The strength array, corresponding to the intensity of colors. The array length range is [0, 12], and each strength value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, there will be no color gradient effect. |
-| alphaMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No | The alpha mask corresponding to the colors. A Mask instance can be created through Mask creation methods (such as createRippleMask, createRadialGradientMask, etc.). Pass this parameter when you need to control the transparency distribution of the color gradient effect (such as local transparency or dynamic transparency effects). If not set, the transparency of the color gradient effect is entirely determined by the colors parameter. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| colors | Array & lt;Color & gt; | Yes |
+| positions | Array & lt;common2D.Point & gt; | Yes |
+| strengths | ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;double & gt; | Yes |
+| alphaMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| VisualEffect | Returns the VisualEffect with the color gradient effect attached. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -257,9 +271,9 @@ capture, such as systemMaterial, backgroundEffect, brightness, and blur, will no
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-VisualEffect-distortionCollapse(distortionParam: DistortionParam): VisualEffect--><!--Device-VisualEffect-distortionCollapse(distortionParam: DistortionParam): VisualEffect-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -267,15 +281,15 @@ capture, such as systemMaterial, backgroundEffect, brightness, and blur, will no
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| distortionParam | DistortionParam | Yes | The parameters of the nonlinear deformation effect. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| distortionParam | [DistortionParam](../../apis-arkui/arkts-apis/arkts-arkui-distortioncomponent-distortionparam-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| VisualEffect | Returns the VisualEffect with the nonlinear deformation effect attached. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) |
 
 ## liquidMaterial
 
@@ -286,9 +300,9 @@ liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMa
 
 Adds a material effect to the component. The material effect simulates the optical properties (refraction, reflection) and dynamic perturbation effects of physical materials to achieve visual representations of glass, metal, and other materials. It can be used for scenarios such as glass-textured UI, fluid material animation, frosted glass effects, etc.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-VisualEffect-liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMask?: Mask,      brightnessParam?: BrightnessParam): VisualEffect--><!--Device-VisualEffect-liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMask?: Mask,      brightnessParam?: BrightnessParam): VisualEffect-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -296,24 +310,24 @@ Adds a material effect to the component. The material effect simulates the optic
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| param | [LiquidMaterialEffectParam](arkts-arkgraphics2d-uieffect-liquidmaterialeffectparam-i-sys.md) | Yes | The material-related variables used to control the material display, including the material switch, refraction coefficient, reflection coefficient, and perturbation coefficient. |
-| useEffectMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Yes | Declares whether to use blur caching. A Mask instance created with createUseEffectMask(true) uses blur caching, suitable for scenarios that need to reuse blur results to improve performance; a Mask instance created with createUseEffectMask(false) does not use blur caching, suitable for scenarios where blur effects change frequently. |
-| distortMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No | The perturbation texture required for the material perturbation effect. The image texture of the Mask instance created from a pixelMap determines the pattern and direction of the perturbation effect. A Mask instance can be created through the createPixelMapMask method. When the material's perturbation coefficient (distortFactor) is not 0, this parameter must be set; otherwise, there will be no perturbation effect. When the perturbation coefficient is 0 or this parameter is not set, there is no perturbation effect. The default is not set. |
-| brightnessParam | [BrightnessParam](arkts-arkgraphics2d-uieffect-brightnessparam-i-sys.md) | No | Adds a brightening effect to the material. Pass this parameter when you need to enhance the visual brightness of the material (such as highlight display, glow effects). If not set, no brightening effect is added by default, and the material maintains its original brightness. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| param | [LiquidMaterialEffectParam](arkts-arkgraphics2d-uieffect-liquidmaterialeffectparam-i-sys.md) | Yes |
+| useEffectMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Yes |
+| distortMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No |
+| brightnessParam | [BrightnessParam](arkts-arkgraphics2d-uieffect-brightnessparam-i-sys.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| VisualEffect | Returns the VisualEffect with the material effect attached. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -372,4 +386,3 @@ struct Index {
   }
 }
 ```
-

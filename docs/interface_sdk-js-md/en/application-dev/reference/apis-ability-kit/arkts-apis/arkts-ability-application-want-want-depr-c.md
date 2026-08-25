@@ -4,11 +4,11 @@ Want is a carrier for information transfer between objects (application componen
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [Want/Want](arkts-ability-app-ability-want-want-c.md)
-
-<!--Device-unnamed-export default class Want--><!--Device-unnamed-export default class Want-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -29,11 +29,11 @@ Name of the ability. If both **bundleName** and **abilityName** are specified in
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [abilityName](arkts-ability-app-ability-want-want-c.md#abilityname)
-
-<!--Device-Want-abilityName?: string--><!--Device-Want-abilityName?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -49,11 +49,11 @@ Action to take, such as viewing and sharing application details. In implicit Wan
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [action](arkts-ability-app-ability-want-want-c.md#action)
-
-<!--Device-Want-action?: string--><!--Device-Want-action?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -69,11 +69,11 @@ Bundle name.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [bundleName](arkts-ability-app-ability-want-want-c.md#bundlename)
-
-<!--Device-Want-bundleName?: string--><!--Device-Want-bundleName?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -89,11 +89,11 @@ ID of the device running the ability. If this field is unspecified, the local de
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [deviceId](arkts-ability-app-ability-want-want-c.md#deviceid)
-
-<!--Device-Want-deviceId?: string--><!--Device-Want-deviceId?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -109,11 +109,11 @@ Additional category information (such as browser and video player) of the abilit
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [entities](arkts-ability-app-ability-want-want-c.md#entities)
-
-<!--Device-Want-entities?: Array<string>--><!--Device-Want-entities?: Array<string>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -129,11 +129,11 @@ How the Want object will be handled. By default, numbers are passed in. For deta
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [flags](arkts-ability-app-ability-want-want-c.md#flags)
-
-<!--Device-Want-flags?: number--><!--Device-Want-flags?: number-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -153,11 +153,11 @@ Want parameters in the form of custom key-value (KV) pairs. By default, the foll
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [parameters](arkts-ability-app-ability-want-want-c.md#parameters)
-
-<!--Device-Want-parameters?: { [key: string]: any }--><!--Device-Want-parameters?: { [key: string]: any }-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -173,11 +173,11 @@ MIME type, that is, the type of the file to open, for example, **'text/xml'** an
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [type](arkts-ability-app-ability-want-want-c.md#type)
-
-<!--Device-Want-type?: string--><!--Device-Want-type?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -193,11 +193,11 @@ URI information to match. If **Uri** is specified in a Want object, the Want obj
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [uri](arkts-ability-app-ability-want-want-c.md#uri)
-
-<!--Device-Want-uri?: string--><!--Device-Want-uri?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -339,4 +339,3 @@ onCreate(want: Want, launchParam: AbilityConstant.LaunchParam){
 }
 }
 ```
-

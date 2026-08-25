@@ -2,9 +2,9 @@
 
 选网模式。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-radio-export enum NetworkSelectionMode--><!--Device-radio-export enum NetworkSelectionMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -16,9 +16,9 @@ NETWORK_SELECTION_UNKNOWN = 0
 
 未知选网模式。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkSelectionMode-NETWORK_SELECTION_UNKNOWN = 0--><!--Device-NetworkSelectionMode-NETWORK_SELECTION_UNKNOWN = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -30,9 +30,9 @@ NETWORK_SELECTION_AUTOMATIC = 1
 
 自动选网模式。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkSelectionMode-NETWORK_SELECTION_AUTOMATIC = 1--><!--Device-NetworkSelectionMode-NETWORK_SELECTION_AUTOMATIC = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -44,9 +44,8 @@ NETWORK_SELECTION_MANUAL = 2
 
 手动选网模式。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-NetworkSelectionMode-NETWORK_SELECTION_MANUAL = 2--><!--Device-NetworkSelectionMode-NETWORK_SELECTION_MANUAL = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
-

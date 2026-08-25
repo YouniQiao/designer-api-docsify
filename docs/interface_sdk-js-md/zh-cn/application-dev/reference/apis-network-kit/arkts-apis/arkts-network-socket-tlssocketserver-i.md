@@ -4,7 +4,7 @@ TLSSocketServer连接。在调用TLSSocketServer的方法前，需要先通过 [
 
 **起始版本：** 10
 
-<!--Device-socket-export interface TLSSocketServer--><!--Device-socket-export interface TLSSocketServer-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -28,24 +28,24 @@ TLSSocketServer停止监听并释放通过[listen](arkts-network-socket-tcpsocke
 
 **起始版本：** 20
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-TLSSocketServer-close(): Promise<void>--><!--Device-TLSSocketServer-close(): Promise<void>-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) |
 
 **示例**
 
@@ -363,24 +363,24 @@ getCertificate(callback: AsyncCallback<X509CertRawData>): void
 
 **起始版本：** 10
 
-<!--Device-TLSSocketServer-getCertificate(callback: AsyncCallback<X509CertRawData>): void--><!--Device-TLSSocketServer-getCertificate(callback: AsyncCallback<X509CertRawData>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | 是 | 回调函数，成功返回本地的证书，失败返回错误码、错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
-| [2303504](../errorcode-net-socket.md#2303504-查找x509时出错) | An error occurred when verifying the X.509 certificate. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2303501](../errorcode-net-socket.md#2303501-ssl为空) |
+| [2303504](../errorcode-net-socket.md#2303504-查找x509时出错) |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) |
 
 **示例**
 
@@ -506,23 +506,23 @@ getCertificate(): Promise<X509CertRawData>
 
 **起始版本：** 10
 
-<!--Device-TLSSocketServer-getCertificate(): Promise<X509CertRawData>--><!--Device-TLSSocketServer-getCertificate(): Promise<X509CertRawData>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | 以Promise形式返回本地的数字证书的结果。失败返回错误码，错误信息。 |
+| 类型 |
+| --- |
+| Promise&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
-| [2303504](../errorcode-net-socket.md#2303504-查找x509时出错) | An error occurred when verifying the X.509 certificate. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [2303501](../errorcode-net-socket.md#2303501-ssl为空) |
+| [2303504](../errorcode-net-socket.md#2303504-查找x509时出错) |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) |
 
 **示例**
 
@@ -541,23 +541,23 @@ getLocalAddress(): Promise<NetAddress>
 
 **起始版本：** 12
 
-<!--Device-TLSSocketServer-getLocalAddress(): Promise<NetAddress>--><!--Device-TLSSocketServer-getLocalAddress(): Promise<NetAddress>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;NetAddress&gt; | 以Promise形式返回获取本地socket地址的结果。 |
+| 类型 |
+| --- |
+| Promise & lt;NetAddress & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
-| [2301009](../errorcode-net-socket.md#2301009-错误文件描述符) | Bad file descriptor. |
-| [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) | Socket operation on non-socket. |
+| 错误码ID |
+| --- |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) |
+| [2301009](../errorcode-net-socket.md#2301009-错误文件描述符) |
+| [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) |
 
 **示例**
 
@@ -820,24 +820,24 @@ getProtocol(callback: AsyncCallback<string>): void
 
 **起始版本：** 10
 
-<!--Device-TLSSocketServer-getProtocol(callback: AsyncCallback<string>): void--><!--Device-TLSSocketServer-getProtocol(callback: AsyncCallback<string>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回通信的协议。失败返回错误码、错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
-| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2303501](../errorcode-net-socket.md#2303501-ssl为空) |
+| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) |
 
 **示例**
 
@@ -954,23 +954,23 @@ getProtocol(): Promise<string>
 
 **起始版本：** 10
 
-<!--Device-TLSSocketServer-getProtocol(): Promise<string>--><!--Device-TLSSocketServer-getProtocol(): Promise<string>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | 以Promise形式返回通信的协议。失败返回错误码，错误信息。 |
+| 类型 |
+| --- |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
-| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [2303501](../errorcode-net-socket.md#2303501-ssl为空) |
+| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) |
 
 **示例**
 
@@ -991,23 +991,23 @@ getSocketFd(): Promise<int>
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
-<!--Device-TLSSocketServer-getSocketFd(): Promise<int>--><!--Device-TLSSocketServer-getSocketFd(): Promise<int>-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise对象，返回Socket的文件描述符。 |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -1335,23 +1335,23 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 
 **起始版本：** 10
 
-<!--Device-TLSSocketServer-getState(callback: AsyncCallback<SocketStateBase>): void--><!--Device-TLSSocketServer-getState(callback: AsyncCallback<SocketStateBase>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | 是 | 回调函数。成功返回TLSSocketServer状态，失败返回错误码、错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) | Socket operation on non-socket. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) |
 
 **示例**
 
@@ -1691,22 +1691,22 @@ getState(): Promise<SocketStateBase>
 
 **起始版本：** 10
 
-<!--Device-TLSSocketServer-getState(): Promise<SocketStateBase>--><!--Device-TLSSocketServer-getState(): Promise<SocketStateBase>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | 以Promise形式返回获取TLSSocketServer状态的结果。失败返回错误码，错误信息。 |
+| 类型 |
+| --- |
+| Promise&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) | Socket operation on non-socket. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) |
 
 **示例**
 
@@ -1725,35 +1725,35 @@ listen(options: TLSConnectOptions, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-TLSSocketServer-listen(options: TLSConnectOptions, callback: AsyncCallback<void>): void--><!--Device-TLSSocketServer-listen(options: TLSConnectOptions, callback: AsyncCallback<void>): void-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [TLSConnectOptions](arkts-network-socket-tlsconnectoptions-i.md) | 是 | TLSSocketServer连接所需要的参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，成功返回空，失败返回错误码、错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [TLSConnectOptions](arkts-network-socket-tlsconnectoptions-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
-| [2303109](../errorcode-net-socket.md#2303109-错误文件编号) | Bad file number. |
-| [2303111](../errorcode-net-socket.md#2303111-资源暂时不可用请重试) | Resource temporarily unavailable. Try again. |
-| [2303198](../errorcode-net-socket.md#2303198-网络地址已被使用) | Address already in use. |
-| [2303199](../errorcode-net-socket.md#2303199-不能分配请求的地址) | Cannot assign requested address. |
-| [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
-| [2303502](../errorcode-net-socket.md#2303502-tls读取错误) | An error occurred when reading data on the TLS socket. |
-| [2303503](../errorcode-net-socket.md#2303503-tls写入错误) | An error occurred when writing data on the TLS socket. |
-| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
-| [2303506](../errorcode-net-socket.md#2303506-关闭tls连接失败) | Failed to close the TLS connection. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) |
+| [2303109](../errorcode-net-socket.md#2303109-错误文件编号) |
+| [2303111](../errorcode-net-socket.md#2303111-资源暂时不可用请重试) |
+| [2303198](../errorcode-net-socket.md#2303198-网络地址已被使用) |
+| [2303199](../errorcode-net-socket.md#2303199-不能分配请求的地址) |
+| [2303501](../errorcode-net-socket.md#2303501-ssl为空) |
+| [2303502](../errorcode-net-socket.md#2303502-tls读取错误) |
+| [2303503](../errorcode-net-socket.md#2303503-tls写入错误) |
+| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) |
+| [2303506](../errorcode-net-socket.md#2303506-关闭tls连接失败) |
 
 **示例**
 
@@ -1884,40 +1884,40 @@ listen(options: TLSConnectOptions): Promise<void>
 
 **起始版本：** 10
 
-**需要权限：** ohos.permission.INTERNET
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-TLSSocketServer-listen(options: TLSConnectOptions): Promise<void>--><!--Device-TLSSocketServer-listen(options: TLSConnectOptions): Promise<void>-End-->
+**需要权限：** ohos.permission.INTERNET
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [TLSConnectOptions](arkts-network-socket-tlsconnectoptions-i.md) | 是 | 连接所需要的参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [TLSConnectOptions](arkts-network-socket-tlsconnectoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 以Promise形式返回，成功返回空，失败返回错误码，错误信息。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
-| [2303109](../errorcode-net-socket.md#2303109-错误文件编号) | Bad file number. |
-| [2303111](../errorcode-net-socket.md#2303111-资源暂时不可用请重试) | Resource temporarily unavailable. Try again. |
-| [2303198](../errorcode-net-socket.md#2303198-网络地址已被使用) | Address already in use. |
-| [2303199](../errorcode-net-socket.md#2303199-不能分配请求的地址) | Cannot assign requested address. |
-| [2303501](../errorcode-net-socket.md#2303501-ssl为空) | SSL is null. |
-| [2303502](../errorcode-net-socket.md#2303502-tls读取错误) | An error occurred when reading data on the TLS socket. |
-| [2303503](../errorcode-net-socket.md#2303503-tls写入错误) | An error occurred when writing data on the TLS socket. |
-| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) | An error occurred in the TLS system call. |
-| [2303506](../errorcode-net-socket.md#2303506-关闭tls连接失败) | Failed to close the TLS connection. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) |
+| [2303109](../errorcode-net-socket.md#2303109-错误文件编号) |
+| [2303111](../errorcode-net-socket.md#2303111-资源暂时不可用请重试) |
+| [2303198](../errorcode-net-socket.md#2303198-网络地址已被使用) |
+| [2303199](../errorcode-net-socket.md#2303199-不能分配请求的地址) |
+| [2303501](../errorcode-net-socket.md#2303501-ssl为空) |
+| [2303502](../errorcode-net-socket.md#2303502-tls读取错误) |
+| [2303503](../errorcode-net-socket.md#2303503-tls写入错误) |
+| [2303505](../errorcode-net-socket.md#2303505-tls系统调用错误) |
+| [2303506](../errorcode-net-socket.md#2303506-关闭tls连接失败) |
 
 **示例**
 
@@ -1937,22 +1937,22 @@ off(type: 'connect', callback?: Callback<TLSSocketConnection>): void
 
 **起始版本：** 10
 
-<!--Device-TLSSocketServer-off(type: 'connect', callback?: Callback<TLSSocketConnection>): void--><!--Device-TLSSocketServer-off(type: 'connect', callback?: Callback<TLSSocketConnection>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'connect' | 是 | 订阅的事件类型。'connect'：连接事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)&gt; | 否 | 回调函数。失败时返回错误码、错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'connect' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -2009,22 +2009,22 @@ off(type: 'error', callback?: ErrorCallback): void
 
 **起始版本：** 10
 
-<!--Device-TLSSocketServer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-TLSSocketServer-off(type: 'error', callback?: ErrorCallback): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'error' | 是 | 订阅的事件类型。'error'：error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。失败时返回错误码、错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'error' | 是 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -2080,22 +2080,22 @@ on(type: 'connect', callback: Callback<TLSSocketConnection>): void
 
 **起始版本：** 10
 
-<!--Device-TLSSocketServer-on(type: 'connect', callback: Callback<TLSSocketConnection>): void--><!--Device-TLSSocketServer-on(type: 'connect', callback: Callback<TLSSocketConnection>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'connect' | 是 | 订阅的事件类型。'connect'：连接事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'connect' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -2146,22 +2146,22 @@ on(type: 'error', callback: ErrorCallback): void
 
 **起始版本：** 10
 
-<!--Device-TLSSocketServer-on(type: 'error', callback: ErrorCallback): void--><!--Device-TLSSocketServer-on(type: 'error', callback: ErrorCallback): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'error' | 是 | 订阅的事件类型。'error'：error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数。失败时返回错误码、错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'error' | 是 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -2212,24 +2212,24 @@ setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-<!--Device-TLSSocketServer-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void--><!--Device-TLSSocketServer-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | 是 | TLSSocketServer连接的其他属性。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。成功返回空，失败返回错误码、错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) | Socket operation on non-socket. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) |
 
 **示例**
 
@@ -2726,31 +2726,30 @@ setExtraOptions(options: TCPExtraOptions): Promise<void>
 
 **起始版本：** 10
 
-<!--Device-TLSSocketServer-setExtraOptions(options: TCPExtraOptions): Promise<void>--><!--Device-TLSSocketServer-setExtraOptions(options: TCPExtraOptions): Promise<void>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | 是 | TLSSocketServer连接的其他属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 以Promise形式返回，成功返回空，失败返回错误码，错误信息。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) | Socket operation on non-socket. |
-| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) |
+| [2300002](../errorcode-net-socket.md#2300002-系统内部错误) |
 
 **示例**
 
 参见 [setExtraOptions](#setextraoptions)
-

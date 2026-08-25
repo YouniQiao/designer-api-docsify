@@ -6,9 +6,9 @@ Enumerates the operations for combining two regions.
 > The schematic diagram shows the result obtained by combining a red region with a blue region at different
 > operation mode. The green region is the region obtained.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-drawing-enum RegionOp--><!--Device-drawing-enum RegionOp-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -20,9 +20,9 @@ DIFFERENCE = 0
 
 Difference operation.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-RegionOp-DIFFERENCE = 0--><!--Device-RegionOp-DIFFERENCE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -34,9 +34,9 @@ INTERSECT = 1
 
 Intersect operation.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-RegionOp-INTERSECT = 1--><!--Device-RegionOp-INTERSECT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -48,9 +48,9 @@ UNION = 2
 
 Union operation.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-RegionOp-UNION = 2--><!--Device-RegionOp-UNION = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -62,9 +62,9 @@ XOR = 3
 
 XOR operation.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-RegionOp-XOR = 3--><!--Device-RegionOp-XOR = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -76,9 +76,9 @@ REVERSE_DIFFERENCE = 4
 
 Reverse difference operation.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-RegionOp-REVERSE_DIFFERENCE = 4--><!--Device-RegionOp-REVERSE_DIFFERENCE = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -90,9 +90,8 @@ REPLACE = 5
 
 Replace operation.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-RegionOp-REPLACE = 5--><!--Device-RegionOp-REPLACE = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
-

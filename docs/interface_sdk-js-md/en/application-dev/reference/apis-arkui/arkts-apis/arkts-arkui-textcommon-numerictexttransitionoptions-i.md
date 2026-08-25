@@ -4,9 +4,7 @@ The options of numeric text transition.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-unnamed-export declare interface NumericTextTransitionOptions--><!--Device-unnamed-export declare interface NumericTextTransitionOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +20,9 @@ Define whether enable blur effect.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NumericTextTransitionOptions-enableBlur?: boolean--><!--Device-NumericTextTransitionOptions-enableBlur?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,11 +38,8 @@ Define the flip direction of numeric text transition.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NumericTextTransitionOptions-flipDirection?: FlipDirection--><!--Device-NumericTextTransitionOptions-flipDirection?: FlipDirection-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

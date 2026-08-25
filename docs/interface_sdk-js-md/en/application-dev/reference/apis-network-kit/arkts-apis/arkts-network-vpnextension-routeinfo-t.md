@@ -8,9 +8,8 @@ Defines the network route information.
 
 **Since:** 11
 
-<!--Device-vpnExtension-export type RouteInfo = connection.RouteInfo--><!--Device-vpnExtension-export type RouteInfo = connection.RouteInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Property type:** connection.RouteInfo
-

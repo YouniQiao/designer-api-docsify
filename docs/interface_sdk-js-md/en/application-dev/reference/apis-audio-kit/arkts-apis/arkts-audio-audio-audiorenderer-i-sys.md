@@ -5,9 +5,9 @@ This interface provides APIs for audio rendering.Before calling any API in Audio
 > **NOTE：**&gt;
 > - The initial APIs of this interface are supported since API version 8.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-audio-interface AudioRenderer--><!--Device-audio-interface AudioRenderer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -25,9 +25,9 @@ getTarget(): RenderTarget
 
 Gets the currently render target of this audio renderer. If the render target has not been changed, the default value [PLAYBACK](arkts-audio-audio-rendertarget-e-sys.md#playback) will be returned. If the [setTarget](#settarget) has been called before calling this interface, ensure its promise object has been resolved successfully, otherwise, the obtained value may be inaccurate.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-AudioRenderer-getTarget(): RenderTarget--><!--Device-AudioRenderer-getTarget(): RenderTarget-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -35,15 +35,15 @@ Gets the currently render target of this audio renderer. If the render target ha
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [RenderTarget](arkts-audio-audio-rendertarget-e-sys.md) | Render target of this audio renderer. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [RenderTarget](arkts-audio-audio-rendertarget-e-sys.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 **Examples**
 
@@ -74,11 +74,11 @@ return error code 6800301.
 5. Calling getAudioTimestampInfo or getAudioTimestampInfoSync will return error code 6800301.
 6. Calling setDefaultOutputDevice will return error code 6800301.
 
-**Since:** 23
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INJECT_PLAYBACK_TO_AUDIO_CAPTURE
-
-<!--Device-AudioRenderer-setTarget(target: RenderTarget): Promise<void>--><!--Device-AudioRenderer-setTarget(target: RenderTarget): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -86,26 +86,26 @@ return error code 6800301.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [RenderTarget](arkts-audio-audio-rendertarget-e-sys.md) | Yes | Render target. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [RenderTarget](arkts-audio-audio-rendertarget-e-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at running and release state. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Current renderer is not supported to set target. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
+| [6800301](../errorcode-audio.md#6800301-system-error) |
 
 **Examples**
 
@@ -138,11 +138,11 @@ This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Required permissions:** ohos.permission.INJECT_PLAYBACK_TO_AUDIO_CAPTURE
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AudioRenderer-setTarget(target: RenderTarget, targetParams?: AudioRendererTargetParams): Promise<void>--><!--Device-AudioRenderer-setTarget(target: RenderTarget, targetParams?: AudioRendererTargetParams): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -150,29 +150,28 @@ This API uses a promise to return the result.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [RenderTarget](arkts-audio-audio-rendertarget-e-sys.md) | Yes | Render target. |
-| targetParams | [AudioRendererTargetParams](arkts-audio-audio-audiorenderertargetparams-i-sys.md) | No | Parameter used to specify the target capturer stream into which the renderer stream is injected. If this parameter is not specified when target is not [PLAYBACK](arkts-audio-audio-rendertarget-e-sys.md#playback), the renderer stream is automatically injected into all voice communication capture streams by default. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [RenderTarget](arkts-audio-audio-rendertarget-e-sys.md) | Yes |
+| targetParams | [AudioRendererTargetParams](arkts-audio-audio-audiorenderertargetparams-i-sys.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at running and release state. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Current renderer is not supported to set target. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio server process died. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
+| [6800301](../errorcode-audio.md#6800301-system-error) |
 
 **Examples**
 
 See [setTarget](#settarget)
-

@@ -16,11 +16,11 @@ Obtains partition table information based on the disk ID. This API uses a promis
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Required permissions:** ohos.permission.MOUNT_FORMAT_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-volumeManager-function getPartitionTable(diskId: string): Promise<PartitionTableInfo>--><!--Device-volumeManager-function getPartitionTable(diskId: string): Promise<PartitionTableInfo>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -28,24 +28,23 @@ Obtains partition table information based on the disk ID. This API uses a promis
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| diskId | string | Yes | Disk ID. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| diskId | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[PartitionTableInfo](arkts-corefile-volumemanager-partitiontableinfo-i-sys.md)&gt; | Promise used to return the partition table information of the current disk ID. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[PartitionTableInfo](arkts-corefile-volumemanager-partitiontableinfo-i-sys.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| 13600001 | IPC error. |
-| 13600008 | No such object. |
-| 13600010 | The input parameter is invalid. |
-| 13600021 | Get partition table failed. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13600001 |
+| 13600008 |
+| 13600010 |
+| 13600021 |

@@ -4,11 +4,11 @@ WLAN连接信息。@interface WifiLinkedInfo
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md)
-
-<!--Device-wifi-interface WifiLinkedInfo--><!--Device-wifi-interface WifiLinkedInfo-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -30,11 +30,11 @@ chload: number
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [chload](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md#chload)
-
-<!--Device-WifiLinkedInfo-chload: number--><!--Device-WifiLinkedInfo-chload: number-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -52,11 +52,11 @@ WLAN连接的ID(唯一标识)。
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [networkId](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md#networkid)
-
-<!--Device-WifiLinkedInfo-networkId: number--><!--Device-WifiLinkedInfo-networkId: number-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -74,11 +74,11 @@ snr: number
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [snr](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md#snr)
-
-<!--Device-WifiLinkedInfo-snr: number--><!--Device-WifiLinkedInfo-snr: number-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -96,13 +96,12 @@ suppState: SuppState
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [suppState](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md#suppstate)
 
-<!--Device-WifiLinkedInfo-suppState: SuppState--><!--Device-WifiLinkedInfo-suppState: SuppState-End-->
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
-

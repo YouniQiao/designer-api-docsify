@@ -2,9 +2,9 @@
 
 Enumerates widget parameters.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-formInfo-enum FormParam--><!--Device-formInfo-enum FormParam-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -16,9 +16,9 @@ THEME_KEY = 'ohos.extra.param.key.form_is_theme'
 
 Theme ID.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-FormParam-THEME_KEY = 'ohos.extra.param.key.form_is_theme'--><!--Device-FormParam-THEME_KEY = 'ohos.extra.param.key.form_is_theme'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -32,9 +32,9 @@ DEVICE_ID_KEY = "ohos.extra.param.key.device_id"
 
 Device ID.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-FormParam-DEVICE_ID_KEY = "ohos.extra.param.key.device_id"--><!--Device-FormParam-DEVICE_ID_KEY = "ohos.extra.param.key.device_id"-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -51,7 +51,7 @@ Whether to display only a specified widget on the widget management page.
 
 **Since:** 23
 
-<!--Device-FormParam-FORM_MANAGER_SHOW_SINGLE_FORM = 'ohos.extra.param.key.form_manager_show_single_form'--><!--Device-FormParam-FORM_MANAGER_SHOW_SINGLE_FORM = 'ohos.extra.param.key.form_manager_show_single_form'-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -67,7 +67,7 @@ Template widget ID.
 
 **Since:** 23
 
-<!--Device-FormParam-TEMPLATE_FORM_DETAIL_ID = 'ohos.extra.param.key.template_form_detail_id'--><!--Device-FormParam-TEMPLATE_FORM_DETAIL_ID = 'ohos.extra.param.key.template_form_detail_id'-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -83,7 +83,7 @@ Template widget data.
 
 **Since:** 23
 
-<!--Device-FormParam-TEMPLATE_FORM_DATA = 'ohos.extra.param.key.template_form_data'--><!--Device-FormParam-TEMPLATE_FORM_DATA = 'ohos.extra.param.key.template_form_data'-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -99,7 +99,7 @@ Display name of a template widget.
 
 **Since:** 23
 
-<!--Device-FormParam-TEMPLATE_FORM_DISPLAY_NAME = 'ohos.extra.param.key.template_form_display_name'--><!--Device-FormParam-TEMPLATE_FORM_DISPLAY_NAME = 'ohos.extra.param.key.template_form_display_name'-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -115,7 +115,7 @@ Template widget description.
 
 **Since:** 23
 
-<!--Device-FormParam-TEMPLATE_FORM_DESCRIPTION = 'ohos.extra.param.key.template_form_description'--><!--Device-FormParam-TEMPLATE_FORM_DESCRIPTION = 'ohos.extra.param.key.template_form_description'-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -131,9 +131,9 @@ Indicates the key specifying font size scale of the form. which is represented a
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-FormParam-FORM_FONT_SIZE_SCALE_KEY = 'ohos.extra.param.key.form_font_size_scale'--><!--Device-FormParam-FORM_FONT_SIZE_SCALE_KEY = 'ohos.extra.param.key.form_font_size_scale'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -149,11 +149,10 @@ Indicates the key specifying font weight scale of the form. which is represented
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-FormParam-FORM_FONT_WEIGHT_SCALE_KEY = 'ohos.extra.param.key.form_font_weight_scale'--><!--Device-FormParam-FORM_FONT_WEIGHT_SCALE_KEY = 'ohos.extra.param.key.form_font_weight_scale'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
-

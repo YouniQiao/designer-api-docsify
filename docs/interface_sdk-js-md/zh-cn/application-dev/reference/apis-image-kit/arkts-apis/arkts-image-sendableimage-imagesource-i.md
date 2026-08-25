@@ -4,7 +4,7 @@ ImageSource类，用于获取图片相关信息。在调用ImageSource的方法�
 
 **起始版本：** 12
 
-<!--Device-sendableImage-interface ImageSource--><!--Device-sendableImage-interface ImageSource-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -24,25 +24,25 @@ createPixelMap(options?: image.DecodingOptions): Promise<PixelMap>
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ImageSource-createPixelMap(options?: image.DecodingOptions): Promise<PixelMap>--><!--Device-ImageSource-createPixelMap(options?: image.DecodingOptions): Promise<PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | image.DecodingOptions | 否 | 解码参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | image.DecodingOptions | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;PixelMap&gt; | Promise实例，用于异步返回创建结果。 |
+| 类型 |
+| --- |
+| Promise & lt;PixelMap & gt; |
 
 **示例**
 
@@ -91,15 +91,15 @@ release(): Promise<void>
 
 **起始版本：** 12
 
-<!--Device-ImageSource-release(): Promise<void>--><!--Device-ImageSource-release(): Promise<void>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise实例，异步返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
@@ -168,4 +168,3 @@ async function Release() {
   })
 }
 ```
-

@@ -1,4 +1,15 @@
-# @ohos.base
+# @ohos.base(Public Callback Information)
+
+The **Base** module defines the public callback types of ArkTS APIs, including the common and error callbacks. These
+ callbacks provide a unified asynchronous processing mechanism for processing asynchronous operation results and error
+ messages. They can help developers simplify the asynchronous programming model and improve code readability and
+ maintainability.
+ > **NOTE**
+ >
+ > - The initial APIs of this module are supported since API version 6. Newly added APIs will be marked with a
+ >   superscript to indicate their earliest API version.
+ > - Since API version 12, the APIs of this module are supported in ArkTS widgets.
+
 
 ## Modules to Import
 
@@ -11,16 +22,24 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } fro
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [BusinessError](arkts-basicservices-base-businesserror-c.md) | Defines the error parameter. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BusinessError(Public Callback Information)](arkts-basicservices-base-businesserror-c.md) |
+
+### Interfaces
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AsyncCallback(Public Callback Information)](arkts-basicservices-base-asynccallback-i.md) |
+| [BusinessError(Public Callback Information)](arkts-basicservices-base-businesserror-i.md) |
+| [Callback(Public Callback Information)](arkts-basicservices-base-callback-i.md) |
+| [ErrorCallback(Public Callback Information)](arkts-basicservices-base-errorcallback-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [AsyncCallback](arkts-basicservices-asynccallback-t.md) | Defines a common callback that carries an error parameter and asynchronous return value.The error parameter is of the [BusinessError](arkts-basicservices-base-businesserror-i.md) type. The type of the asynchronous return value is defined by the developer. |
-| [Callback](arkts-basicservices-callback-t.md) | Defines a common callback. You can set **data** to customize the data type of the information returned by the callback. |
-| [ErrorCallback](arkts-basicservices-errorcallback-t.md) | Defines a common callback that carries an error parameter. The information returned by the callback is of the [BusinessError](arkts-basicservices-base-businesserror-i.md) type. |
-| [RecordData](arkts-basicservices-recorddata-t.md) | RecordData is a union type used for object structures with uncertain levels and quantities at each level. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AsyncCallback(Public Callback Information)](arkts-basicservices-asynccallback-t.md) |
+| [Callback(Public Callback Information)](arkts-basicservices-callback-t.md) |
+| [ErrorCallback(Public Callback Information)](arkts-basicservices-errorcallback-t.md) |
+| [RecordData(Public Callback Information)](arkts-basicservices-recorddata-t.md) |

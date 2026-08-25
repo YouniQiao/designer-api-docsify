@@ -4,7 +4,7 @@ TIFF metadata.
 
 **起始版本：** 26.0.0
 
-<!--Device-image-class TiffMetadata--><!--Device-image-class TiffMetadata-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -26,9 +26,9 @@ Name of the image creator or artist.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffMetadata-readonly artist?: string--><!--Device-TiffMetadata-readonly artist?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -40,13 +40,13 @@ readonly compression?: int
 
 Compression scheme used for image data (e.g., None, LZW, JPEG, Deflate). The value should be an integer.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffMetadata-readonly compression?: int--><!--Device-TiffMetadata-readonly compression?: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -62,9 +62,9 @@ Copyright notice for the image.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffMetadata-readonly copyright?: string--><!--Device-TiffMetadata-readonly copyright?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -80,9 +80,9 @@ Date and time associated with the image (typically last modification).
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffMetadata-readonly dateTime?: string--><!--Device-TiffMetadata-readonly dateTime?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -98,9 +98,9 @@ Name of the document or image.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffMetadata-readonly documentName?: string--><!--Device-TiffMetadata-readonly documentName?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -116,9 +116,9 @@ Host computer/system used for image processing.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffMetadata-readonly hostComputer?: string--><!--Device-TiffMetadata-readonly hostComputer?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -134,9 +134,9 @@ Description of the image content.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffMetadata-readonly imageDescription?: string--><!--Device-TiffMetadata-readonly imageDescription?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -152,9 +152,9 @@ Manufacturer of the capture device.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffMetadata-readonly make?: string--><!--Device-TiffMetadata-readonly make?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -170,9 +170,9 @@ Model name/number of the capture device.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffMetadata-readonly model?: string--><!--Device-TiffMetadata-readonly model?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -188,9 +188,9 @@ Indicates image orientation for correct display rotation/flip.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffMetadata-readonly orientation?: Orientation--><!--Device-TiffMetadata-readonly orientation?: Orientation-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -202,13 +202,13 @@ readonly photometricInterpretation?: int
 
 Defines how pixel colors are interpreted (e.g., RGB, grayscale). The value should be an integer.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffMetadata-readonly photometricInterpretation?: int--><!--Device-TiffMetadata-readonly photometricInterpretation?: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -220,13 +220,13 @@ readonly primaryChromaticities?: double[]
 
 Chromaticity coordinates of the RGB primaries.
 
-**类型：** double[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffMetadata-readonly primaryChromaticities?: double[]--><!--Device-TiffMetadata-readonly primaryChromaticities?: double[]-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -238,13 +238,13 @@ readonly resolutionUnit?: int
 
 Unit for X/Y resolution. The value should be an integer.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffMetadata-readonly resolutionUnit?: int--><!--Device-TiffMetadata-readonly resolutionUnit?: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -260,9 +260,9 @@ Software used to create or process the image.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffMetadata-readonly software?: string--><!--Device-TiffMetadata-readonly software?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -274,13 +274,13 @@ readonly tileLength?: int
 
 Height of each image tile in pixels. The value should be an integer.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffMetadata-readonly tileLength?: int--><!--Device-TiffMetadata-readonly tileLength?: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -292,13 +292,13 @@ readonly tileWidth?: int
 
 Width of each image tile in pixels. The value should be an integer.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffMetadata-readonly tileWidth?: int--><!--Device-TiffMetadata-readonly tileWidth?: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -314,9 +314,9 @@ Tone transfer curve mapping pixel values to output intensity.
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffMetadata-readonly transferFunction?: string--><!--Device-TiffMetadata-readonly transferFunction?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -328,13 +328,13 @@ readonly whitePoint?: double[]
 
 Chromaticity coordinates of the reference white point.
 
-**类型：** double[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffMetadata-readonly whitePoint?: double[]--><!--Device-TiffMetadata-readonly whitePoint?: double[]-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -346,13 +346,13 @@ readonly xResolution?: double
 
 Horizontal resolution (pixels per resolution unit).
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TiffMetadata-readonly xResolution?: double--><!--Device-TiffMetadata-readonly xResolution?: double-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -364,13 +364,12 @@ readonly yResolution?: double
 
 Vertical resolution (pixels per resolution unit).
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-TiffMetadata-readonly yResolution?: double--><!--Device-TiffMetadata-readonly yResolution?: double-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
-

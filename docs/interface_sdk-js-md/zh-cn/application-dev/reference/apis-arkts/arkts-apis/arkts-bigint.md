@@ -9,19 +9,18 @@
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 与JS BigInt API兼容的类。 |
+| 名称 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [BigIntToLocaleStringOptions](arkts-arkts-bigint-biginttolocalestringoptions-i.md) | BigInt.toLocaleString方法的选项。 |
+| 名称 |
+| --- |
+| [BigIntToLocaleStringOptions](arkts-arkts-bigint-biginttolocalestringoptions-i.md) |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-| [bigint](arkts-arkts-bigint-t.md) | `bigint`是类型`BigInt`的别名。 |
-
+| 名称 |
+| --- |
+| [bigint](arkts-arkts-bigint-t.md) |

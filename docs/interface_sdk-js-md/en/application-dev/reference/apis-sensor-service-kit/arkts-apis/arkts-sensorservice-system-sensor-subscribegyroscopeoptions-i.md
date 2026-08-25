@@ -4,13 +4,13 @@ Defines the type of data to return for a subscription to data changes of the gyr
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [GYROSCOPE](arkts-sensorservice-sensor-sensorid-e.md#gyroscope)
 
 **Required permissions:** ohos.permission.GYROSCOPE
-
-<!--Device-unnamed-export interface SubscribeGyroscopeOptions--><!--Device-unnamed-export interface SubscribeGyroscopeOptions-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -28,21 +28,54 @@ fail?: (data: string, code: number) => void
 
 Callback invoked when an API call fails.
 
-**Type:** (data: string, code: number) =&gt; void
-
 **Since:** 6
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+**Substitutes:** [on](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-SubscribeGyroscopeOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeGyroscopeOptions-fail?: (data: string, code: number) => void-End-->
+**System capability:** SystemCapability.Sensors.Sensor.Lite
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | string | Yes |
+| code | number | Yes |
+
+## success
+
+```TypeScript
+success: (data: GyroscopeResponse) => void
+```
+
+Callback invoked when the gyroscope sensor data changes.
+
+**Since:** 6
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
+**Deprecated since:** 8
+
+**Substitutes:** [on](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange)
+
+**Required permissions:** ohos.permission.GYROSCOPE
+
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | [GyroscopeResponse](arkts-sensorservice-system-sensor-gyroscoperesponse-i.md) | Yes |
 
 ## interval
 
@@ -57,6 +90,8 @@ Interval at which the callback is invoked to return the gyroscope sensor data.Th
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [interval](arkts-sensorservice-sensor-options-i.md#interval)
@@ -65,31 +100,4 @@ Interval at which the callback is invoked to return the gyroscope sensor data.Th
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-SubscribeGyroscopeOptions-interval: string--><!--Device-SubscribeGyroscopeOptions-interval: string-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
-
-## success
-
-```TypeScript
-success: (data: GyroscopeResponse) => void
-```
-
-Callback invoked when the gyroscope sensor data changes.
-
-**Type:** (data: GyroscopeResponse) =&gt; void
-
-**Since:** 6
-
-**Deprecated since:** 8
-
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
-
-**Required permissions:** ohos.permission.GYROSCOPE
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-SubscribeGyroscopeOptions-success: (data: GyroscopeResponse) => void--><!--Device-SubscribeGyroscopeOptions-success: (data: GyroscopeResponse) => void-End-->
-
-**System capability:** SystemCapability.Sensors.Sensor.Lite
-

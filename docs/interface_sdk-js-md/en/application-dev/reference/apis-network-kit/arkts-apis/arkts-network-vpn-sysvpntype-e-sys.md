@@ -4,7 +4,7 @@ Defines the type for the VPN network.
 
 **Since:** 12
 
-<!--Device-vpn-export enum SysVpnType--><!--Device-vpn-export enum SysVpnType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -20,7 +20,7 @@ The type for the IKEv2/IPsec MSCHAPv2 VPN network.
 
 **Since:** 12
 
-<!--Device-SysVpnType-IKEV2_IPSEC_MSCHAPV2 = 1--><!--Device-SysVpnType-IKEV2_IPSEC_MSCHAPV2 = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -36,7 +36,7 @@ The type for the IKEv2/IPsec PSK VPN network.
 
 **Since:** 12
 
-<!--Device-SysVpnType-IKEV2_IPSEC_PSK = 2--><!--Device-SysVpnType-IKEV2_IPSEC_PSK = 2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -52,7 +52,7 @@ The type for the IKEv2/IPsec RSA VPN network.
 
 **Since:** 12
 
-<!--Device-SysVpnType-IKEV2_IPSEC_RSA = 3--><!--Device-SysVpnType-IKEV2_IPSEC_RSA = 3-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -68,7 +68,7 @@ The type for the L2TP/IPsec PSK VPN network.
 
 **Since:** 12
 
-<!--Device-SysVpnType-L2TP_IPSEC_PSK = 4--><!--Device-SysVpnType-L2TP_IPSEC_PSK = 4-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -84,7 +84,7 @@ The type for the L2TP/IPsec RSA VPN network.
 
 **Since:** 12
 
-<!--Device-SysVpnType-L2TP_IPSEC_RSA = 5--><!--Device-SysVpnType-L2TP_IPSEC_RSA = 5-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -100,7 +100,7 @@ The type for the IPsec XAUTH PSK VPN network.
 
 **Since:** 12
 
-<!--Device-SysVpnType-IPSEC_XAUTH_PSK = 6--><!--Device-SysVpnType-IPSEC_XAUTH_PSK = 6-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -116,7 +116,7 @@ The type for the IPsec XAUTH RSA VPN network.
 
 **Since:** 12
 
-<!--Device-SysVpnType-IPSEC_XAUTH_RSA = 7--><!--Device-SysVpnType-IPSEC_XAUTH_RSA = 7-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -132,7 +132,7 @@ The type for the IPsec HYBRID RSA VPN network.
 
 **Since:** 12
 
-<!--Device-SysVpnType-IPSEC_HYBRID_RSA = 8--><!--Device-SysVpnType-IPSEC_HYBRID_RSA = 8-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -148,9 +148,8 @@ The type for the OpenVpn network.
 
 **Since:** 12
 
-<!--Device-SysVpnType-OPENVPN = 9--><!--Device-SysVpnType-OPENVPN = 9-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
-

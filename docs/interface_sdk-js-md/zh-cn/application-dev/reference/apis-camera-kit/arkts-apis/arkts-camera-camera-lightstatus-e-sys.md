@@ -1,10 +1,10 @@
 # LightStatus（系统接口）
 
-Enumerates the camera light statuses, which are obtained by calling VideoSessionForSys. [on('lightStatusChange')](arkts-camera-camera-videosession-i.md#onerror).
+Enumerates the camera light statuses, which are obtained by calling VideoSessionForSys. on('lightStatusChange').
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-camera-enum LightStatus--><!--Device-camera-enum LightStatus-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -18,9 +18,9 @@ NORMAL = 0
 
 Normal lighting conditions.
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-LightStatus-NORMAL = 0--><!--Device-LightStatus-NORMAL = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -34,11 +34,10 @@ INSUFFICIENT = 1
 
 Insufficient lighting (too dark).
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-LightStatus-INSUFFICIENT = 1--><!--Device-LightStatus-INSUFFICIENT = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
-

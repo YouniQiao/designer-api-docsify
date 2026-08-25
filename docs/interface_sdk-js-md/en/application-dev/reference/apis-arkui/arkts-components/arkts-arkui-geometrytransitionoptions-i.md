@@ -4,7 +4,7 @@ Defines the options of geometry transition.
 
 **Since:** 11
 
-<!--Device-unnamed-declare interface GeometryTransitionOptions--><!--Device-unnamed-declare interface GeometryTransitionOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,10 @@ Whether to apply the animation to components that are always in the component tr
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-GeometryTransitionOptions-follow?: boolean--><!--Device-GeometryTransitionOptions-follow?: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

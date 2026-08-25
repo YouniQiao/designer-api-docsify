@@ -2,9 +2,9 @@
 
 Enumerates the download file types from the Drive Kit.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-cloudSync-enum DownloadFileType--><!--Device-cloudSync-enum DownloadFileType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -16,9 +16,9 @@ CONTENT = 0
 
 Content file.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-DownloadFileType-CONTENT = 0--><!--Device-DownloadFileType-CONTENT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -30,9 +30,9 @@ THUMBNAIL = 1
 
 Thumbnail file.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-DownloadFileType-THUMBNAIL = 1--><!--Device-DownloadFileType-THUMBNAIL = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -44,9 +44,8 @@ LCD = 2
 
 LCD file.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-DownloadFileType-LCD = 2--><!--Device-DownloadFileType-LCD = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-

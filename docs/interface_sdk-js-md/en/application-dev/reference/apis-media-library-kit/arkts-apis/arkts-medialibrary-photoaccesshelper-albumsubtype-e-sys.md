@@ -2,9 +2,9 @@
 
 Enumerate the album subtypes.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-photoAccessHelper-enum AlbumSubtype--><!--Device-photoAccessHelper-enum AlbumSubtype-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -16,9 +16,9 @@ HIDDEN
 
 Hidden album.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-AlbumSubtype-HIDDEN--><!--Device-AlbumSubtype-HIDDEN-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -32,9 +32,9 @@ TRASH
 
 Trash.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-AlbumSubtype-TRASH--><!--Device-AlbumSubtype-TRASH-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -48,9 +48,9 @@ SCREENSHOT
 
 Album for screenshots and screen recording files.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-AlbumSubtype-SCREENSHOT--><!--Device-AlbumSubtype-SCREENSHOT-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -64,25 +64,9 @@ CAMERA
 
 Album for images and videos taken by the camera.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-AlbumSubtype-CAMERA--><!--Device-AlbumSubtype-CAMERA-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-## IMAGE
-
-```TypeScript
-IMAGE = 1031
-```
-
-Photo album.
-
-**Since:** 23
-
-<!--Device-AlbumSubtype-IMAGE = 1031--><!--Device-AlbumSubtype-IMAGE = 1031-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -96,9 +80,9 @@ CLOUD_ENHANCEMENT = 1032
 
 AI-powered cloud enhanced album.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-AlbumSubtype-CLOUD_ENHANCEMENT = 1032--><!--Device-AlbumSubtype-CLOUD_ENHANCEMENT = 1032-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -114,23 +98,7 @@ LIVEPHOTO_4D = 1033
 
 **Since:** 26.0.0
 
-<!--Device-AlbumSubtype-LIVEPHOTO_4D = 1033--><!--Device-AlbumSubtype-LIVEPHOTO_4D = 1033-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-## SOURCE_GENERIC
-
-```TypeScript
-SOURCE_GENERIC = 2049
-```
-
-Source album.
-
-**Since:** 23
-
-<!--Device-AlbumSubtype-SOURCE_GENERIC = 2049--><!--Device-AlbumSubtype-SOURCE_GENERIC = 2049-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -144,9 +112,9 @@ CLASSIFY = 4097
 
 Classified album.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AlbumSubtype-CLASSIFY = 4097--><!--Device-AlbumSubtype-CLASSIFY = 4097-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -160,9 +128,9 @@ GEOGRAPHY_LOCATION = 4099
 
 Geographic location album.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AlbumSubtype-GEOGRAPHY_LOCATION = 4099--><!--Device-AlbumSubtype-GEOGRAPHY_LOCATION = 4099-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -176,9 +144,9 @@ GEOGRAPHY_CITY
 
 City album.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AlbumSubtype-GEOGRAPHY_CITY--><!--Device-AlbumSubtype-GEOGRAPHY_CITY-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -192,9 +160,9 @@ SHOOTING_MODE
 
 Shooting mode album.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AlbumSubtype-SHOOTING_MODE--><!--Device-AlbumSubtype-SHOOTING_MODE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -208,9 +176,9 @@ PORTRAIT
 
 Portrait album.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AlbumSubtype-PORTRAIT--><!--Device-AlbumSubtype-PORTRAIT-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -224,9 +192,9 @@ GROUP_PHOTO
 
 Group photo album.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-AlbumSubtype-GROUP_PHOTO--><!--Device-AlbumSubtype-GROUP_PHOTO-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -240,9 +208,9 @@ HIGHLIGHT = 4104
 
 Highlights album.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AlbumSubtype-HIGHLIGHT = 4104--><!--Device-AlbumSubtype-HIGHLIGHT = 4104-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -256,11 +224,10 @@ HIGHLIGHT_SUGGESTIONS
 
 Highlights suggestion album.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AlbumSubtype-HIGHLIGHT_SUGGESTIONS--><!--Device-AlbumSubtype-HIGHLIGHT_SUGGESTIONS-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

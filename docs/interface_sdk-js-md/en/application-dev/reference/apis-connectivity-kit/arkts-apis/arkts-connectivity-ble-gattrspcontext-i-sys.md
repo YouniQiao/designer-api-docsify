@@ -4,7 +4,7 @@ Describe the context of GATT responses.
 
 **Since:** 23
 
-<!--Device-ble-interface GattRspContext--><!--Device-ble-interface GattRspContext-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -19,20 +19,19 @@ import { ble } from '@kit.ConnectivityKit';
 ## timestamp
 
 ```TypeScript
-timestamp: long
+timestamp: number
 ```
 
 Timestamp of when Bluetooth received the response command.
 
-**Type:** long
+**Type:** number
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-GattRspContext-timestamp: long--><!--Device-GattRspContext-timestamp: long-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
-

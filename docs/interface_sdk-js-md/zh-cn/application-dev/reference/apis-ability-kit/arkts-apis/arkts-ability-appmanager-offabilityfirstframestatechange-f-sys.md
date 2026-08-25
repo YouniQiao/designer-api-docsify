@@ -16,9 +16,9 @@ function offAbilityFirstFrameStateChange(observer?: AbilityFirstFrameStateObserv
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-appManager-function offAbilityFirstFrameStateChange(observer?: AbilityFirstFrameStateObserver): void--><!--Device-appManager-function offAbilityFirstFrameStateChange(observer?: AbilityFirstFrameStateObserver): void-End-->
+**需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -26,17 +26,17 @@ function offAbilityFirstFrameStateChange(observer?: AbilityFirstFrameStateObserv
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| observer | AbilityFirstFrameStateObserver | 否 | 表示待取消的Ability首帧绘制完成事件观察者对象，不填表示取消所有监听对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [AbilityFirstFrameStateObserver](arkts-ability-appmanager-abilityfirstframestateobserver-t-sys.md) | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 **示例**
 
@@ -70,4 +70,3 @@ try {
   console.error(`[appManager] error: ${code}, ${message}`);
 }
 ```
-

@@ -1,96 +1,86 @@
 # RegExpConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface RegExpConstructor--><!--Device-unnamed-interface RegExpConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
-
-```TypeScript
-new(pattern: RegExp | string): RegExp
-```
-
-**Since:** -1
-
-<!--Device-RegExpConstructor-new(pattern: RegExp | string): RegExp--><!--Device-RegExpConstructor-new(pattern: RegExp | string): RegExp-End-->
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pattern | RegExp \| string | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-## constructor
-
-```TypeScript
-new(pattern: string, flags?: string): RegExp
-```
-
-**Since:** -1
-
-<!--Device-RegExpConstructor-new(pattern: string, flags?: string): RegExp--><!--Device-RegExpConstructor-new(pattern: string, flags?: string): RegExp-End-->
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pattern | string | Yes |  |
-| flags | string | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-## constructor
+## [[Call]]
 
 ```TypeScript
 (pattern: RegExp | string): RegExp
 ```
 
-**Since:** -1
-
-<!--Device-RegExpConstructor-(pattern: RegExp | string): RegExp--><!--Device-RegExpConstructor-(pattern: RegExp | string): RegExp-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pattern | RegExp \| string | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | RegExp \| string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-## constructor
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+## [[Call]]
 
 ```TypeScript
 (pattern: string, flags?: string): RegExp
 ```
 
-**Since:** -1
-
-<!--Device-RegExpConstructor-(pattern: string, flags?: string): RegExp--><!--Device-RegExpConstructor-(pattern: string, flags?: string): RegExp-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pattern | string | Yes |  |
-| flags | string | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | string | Yes |
+| flags | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+## [[Construct]]
+
+```TypeScript
+new(pattern: RegExp | string): RegExp
+```
+
+**ArkTS mode:** 
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | RegExp \| string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+## [[Construct]]
+
+```TypeScript
+new(pattern: string, flags?: string): RegExp
+```
+
+**ArkTS mode:** 
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | string | Yes |
+| flags | string | No |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## "$&"
 
 ```TypeScript
@@ -99,11 +89,9 @@ new(pattern: string, flags?: string): RegExp
 
 **Type:** string
 
-**Since:** -1
+**ArkTS mode:** 
 
-**Deprecated since:** legacy feature for browser compatibility
-
-<!--Device-RegExpConstructor-"$&": string--><!--Device-RegExpConstructor-"$&": string-End-->
+**Deprecated since:** legacy feature for browser compatibility 
 
 ## "$'"
 
@@ -113,11 +101,9 @@ new(pattern: string, flags?: string): RegExp
 
 **Type:** string
 
-**Since:** -1
+**ArkTS mode:** 
 
-**Deprecated since:** legacy feature for browser compatibility
-
-<!--Device-RegExpConstructor-"$'": string--><!--Device-RegExpConstructor-"$'": string-End-->
+**Deprecated since:** legacy feature for browser compatibility 
 
 ## "$+"
 
@@ -127,11 +113,9 @@ new(pattern: string, flags?: string): RegExp
 
 **Type:** string
 
-**Since:** -1
+**ArkTS mode:** 
 
-**Deprecated since:** legacy feature for browser compatibility
-
-<!--Device-RegExpConstructor-"$+": string--><!--Device-RegExpConstructor-"$+": string-End-->
+**Deprecated since:** legacy feature for browser compatibility 
 
 ## "$`"
 
@@ -141,11 +125,9 @@ new(pattern: string, flags?: string): RegExp
 
 **Type:** string
 
-**Since:** -1
+**ArkTS mode:** 
 
-**Deprecated since:** legacy feature for browser compatibility
-
-<!--Device-RegExpConstructor-"$`": string--><!--Device-RegExpConstructor-"$`": string-End-->
+**Deprecated since:** legacy feature for browser compatibility 
 
 ## $1
 
@@ -155,11 +137,9 @@ $1: string
 
 **Type:** string
 
-**Since:** -1
+**ArkTS mode:** 
 
-**Deprecated since:** legacy feature for browser compatibility
-
-<!--Device-RegExpConstructor-$1: string--><!--Device-RegExpConstructor-$1: string-End-->
+**Deprecated since:** legacy feature for browser compatibility 
 
 ## $2
 
@@ -169,11 +149,9 @@ $2: string
 
 **Type:** string
 
-**Since:** -1
+**ArkTS mode:** 
 
-**Deprecated since:** legacy feature for browser compatibility
-
-<!--Device-RegExpConstructor-$2: string--><!--Device-RegExpConstructor-$2: string-End-->
+**Deprecated since:** legacy feature for browser compatibility 
 
 ## $3
 
@@ -183,11 +161,9 @@ $3: string
 
 **Type:** string
 
-**Since:** -1
+**ArkTS mode:** 
 
-**Deprecated since:** legacy feature for browser compatibility
-
-<!--Device-RegExpConstructor-$3: string--><!--Device-RegExpConstructor-$3: string-End-->
+**Deprecated since:** legacy feature for browser compatibility 
 
 ## $4
 
@@ -197,11 +173,9 @@ $4: string
 
 **Type:** string
 
-**Since:** -1
+**ArkTS mode:** 
 
-**Deprecated since:** legacy feature for browser compatibility
-
-<!--Device-RegExpConstructor-$4: string--><!--Device-RegExpConstructor-$4: string-End-->
+**Deprecated since:** legacy feature for browser compatibility 
 
 ## $5
 
@@ -211,11 +185,9 @@ $5: string
 
 **Type:** string
 
-**Since:** -1
+**ArkTS mode:** 
 
-**Deprecated since:** legacy feature for browser compatibility
-
-<!--Device-RegExpConstructor-$5: string--><!--Device-RegExpConstructor-$5: string-End-->
+**Deprecated since:** legacy feature for browser compatibility 
 
 ## $6
 
@@ -225,11 +197,9 @@ $6: string
 
 **Type:** string
 
-**Since:** -1
+**ArkTS mode:** 
 
-**Deprecated since:** legacy feature for browser compatibility
-
-<!--Device-RegExpConstructor-$6: string--><!--Device-RegExpConstructor-$6: string-End-->
+**Deprecated since:** legacy feature for browser compatibility 
 
 ## $7
 
@@ -239,11 +209,9 @@ $7: string
 
 **Type:** string
 
-**Since:** -1
+**ArkTS mode:** 
 
-**Deprecated since:** legacy feature for browser compatibility
-
-<!--Device-RegExpConstructor-$7: string--><!--Device-RegExpConstructor-$7: string-End-->
+**Deprecated since:** legacy feature for browser compatibility 
 
 ## $8
 
@@ -253,11 +221,9 @@ $8: string
 
 **Type:** string
 
-**Since:** -1
+**ArkTS mode:** 
 
-**Deprecated since:** legacy feature for browser compatibility
-
-<!--Device-RegExpConstructor-$8: string--><!--Device-RegExpConstructor-$8: string-End-->
+**Deprecated since:** legacy feature for browser compatibility 
 
 ## $9
 
@@ -267,11 +233,9 @@ $9: string
 
 **Type:** string
 
-**Since:** -1
+**ArkTS mode:** 
 
-**Deprecated since:** legacy feature for browser compatibility
-
-<!--Device-RegExpConstructor-$9: string--><!--Device-RegExpConstructor-$9: string-End-->
+**Deprecated since:** legacy feature for browser compatibility 
 
 ## $_
 
@@ -281,11 +245,9 @@ $_: string
 
 **Type:** string
 
-**Since:** -1
+**ArkTS mode:** 
 
-**Deprecated since:** legacy feature for browser compatibility
-
-<!--Device-RegExpConstructor-$_: string--><!--Device-RegExpConstructor-$_: string-End-->
+**Deprecated since:** legacy feature for browser compatibility 
 
 ## input
 
@@ -295,11 +257,9 @@ input: string
 
 **Type:** string
 
-**Since:** -1
+**ArkTS mode:** 
 
-**Deprecated since:** legacy feature for browser compatibility
-
-<!--Device-RegExpConstructor-input: string--><!--Device-RegExpConstructor-input: string-End-->
+**Deprecated since:** legacy feature for browser compatibility 
 
 ## lastMatch
 
@@ -309,11 +269,9 @@ lastMatch: string
 
 **Type:** string
 
-**Since:** -1
+**ArkTS mode:** 
 
-**Deprecated since:** legacy feature for browser compatibility
-
-<!--Device-RegExpConstructor-lastMatch: string--><!--Device-RegExpConstructor-lastMatch: string-End-->
+**Deprecated since:** legacy feature for browser compatibility 
 
 ## lastParen
 
@@ -323,11 +281,9 @@ lastParen: string
 
 **Type:** string
 
-**Since:** -1
+**ArkTS mode:** 
 
-**Deprecated since:** legacy feature for browser compatibility
-
-<!--Device-RegExpConstructor-lastParen: string--><!--Device-RegExpConstructor-lastParen: string-End-->
+**Deprecated since:** legacy feature for browser compatibility 
 
 ## leftContext
 
@@ -337,11 +293,9 @@ leftContext: string
 
 **Type:** string
 
-**Since:** -1
+**ArkTS mode:** 
 
-**Deprecated since:** legacy feature for browser compatibility
-
-<!--Device-RegExpConstructor-leftContext: string--><!--Device-RegExpConstructor-leftContext: string-End-->
+**Deprecated since:** legacy feature for browser compatibility 
 
 ## prototype
 
@@ -351,9 +305,7 @@ readonly prototype: RegExp
 
 **Type:** RegExp
 
-**Since:** -1
-
-<!--Device-RegExpConstructor-readonly prototype: RegExp--><!--Device-RegExpConstructor-readonly prototype: RegExp-End-->
+**ArkTS mode:** 
 
 ## rightContext
 
@@ -363,9 +315,6 @@ rightContext: string
 
 **Type:** string
 
-**Since:** -1
+**ArkTS mode:** 
 
-**Deprecated since:** legacy feature for browser compatibility
-
-<!--Device-RegExpConstructor-rightContext: string--><!--Device-RegExpConstructor-rightContext: string-End-->
-
+**Deprecated since:** legacy feature for browser compatibility 

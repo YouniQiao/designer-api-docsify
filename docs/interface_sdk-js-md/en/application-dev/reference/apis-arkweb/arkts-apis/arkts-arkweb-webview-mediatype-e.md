@@ -4,7 +4,7 @@ Enumerates the media types.
 
 **Since:** 12
 
-<!--Device-webview-enum MediaType--><!--Device-webview-enum MediaType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,9 +18,9 @@ Video.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-MediaType-VIDEO = 0--><!--Device-MediaType-VIDEO = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -34,9 +34,8 @@ Audio.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-MediaType-AUDIO = 1--><!--Device-MediaType-AUDIO = 1-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

@@ -2,9 +2,9 @@
 
 系统实况窗订阅者。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-notificationManager-export interface SystemLiveViewSubscriber--><!--Device-notificationManager-export interface SystemLiveViewSubscriber-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -18,19 +18,29 @@ import { notificationManager } from '@kit.NotificationKit';
 
 ## onResponse
 
+ArkTS-Dyn:
+```TypeScript
+onResponse?: (notificationId: number, buttonOptions: ButtonOptions) => void
+```
+
+ArkTS-Sta:
 ```TypeScript
 onResponse?: (notificationId: int, buttonOptions: ButtonOptions) => void
 ```
 
 点击按钮的回调。
 
-**类型：** (notificationId: int, buttonOptions: ButtonOptions) =&gt; void
+**起始版本：** 11
 
-**起始版本：** 23
-
-<!--Device-SystemLiveViewSubscriber-onResponse?: (notificationId: int, buttonOptions: ButtonOptions) => void--><!--Device-SystemLiveViewSubscriber-onResponse?: (notificationId: int, buttonOptions: ButtonOptions) => void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
 
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| notificationId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| buttonOptions | [ButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-button-buttonoptions-i.md) | 是 |

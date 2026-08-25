@@ -4,9 +4,9 @@
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-distributedData-enum UserType--><!--Device-distributedData-enum UserType-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -20,9 +20,8 @@ SAME_USER_ID = 0
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-<!--Device-UserType-SAME_USER_ID = 0--><!--Device-UserType-SAME_USER_ID = 0-End-->
-
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-

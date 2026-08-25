@@ -1,12 +1,10 @@
 # BatteryPluggedType
 
-表示连接的充电器类型的枚举。@enum { int }
+表示连接的充电器类型的枚举。
 
-**起始版本：** 23
+**起始版本：** 6
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-batteryInfo-export enum BatteryPluggedType--><!--Device-batteryInfo-export enum BatteryPluggedType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -18,11 +16,9 @@ NONE
 
 表示未连接充电器。
 
-**起始版本：** 23
+**起始版本：** 6
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-BatteryPluggedType-NONE--><!--Device-BatteryPluggedType-NONE-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -34,11 +30,9 @@ AC
 
 表示连接的充电器类型为交流充电器。
 
-**起始版本：** 23
+**起始版本：** 6
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-BatteryPluggedType-AC--><!--Device-BatteryPluggedType-AC-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -50,11 +44,9 @@ USB
 
 表示连接的充电器类型为USB。
 
-**起始版本：** 23
+**起始版本：** 6
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-BatteryPluggedType-USB--><!--Device-BatteryPluggedType-USB-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -66,11 +58,8 @@ WIRELESS
 
 表示连接的充电器类型为无线充电器。
 
-**起始版本：** 23
+**起始版本：** 6
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-BatteryPluggedType-WIRELESS--><!--Device-BatteryPluggedType-WIRELESS-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
-

@@ -8,23 +8,22 @@ type Transformer = (this: Object, key: string, value: Object) => Object | undefi
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-json-type Transformer = (this: Object, key: string, value: Object) => Object | undefined | null--><!--Device-json-type Transformer = (this: Object, key: string, value: Object) => Object | undefined | null-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| this | Object | 是 | 正在解析或序列化的键值对所属的对象。 |
-| key | string | 是 | 当前正在处理的对象成员的属性名，用于在转换函数中识别所解析或序列化的键。 |
-| value | Object | 是 | 正在解析或序列化的键值对的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| this | Object | 是 |
+| key | string | 是 |
+| value | Object | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Object \| undefined \| null | 返回转换处理后的属性值；返回undefined时，该属性在结果中被移除；返回null时，该属性值设为null。 |
-
+| 类型 |
+| --- |
+| Object \| undefined \| null |

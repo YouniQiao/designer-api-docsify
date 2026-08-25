@@ -10,7 +10,6 @@ import { StartupConfigEntry } from '@kit.AbilityKit';
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [StartupConfigEntry](arkts-ability-app-appstartup-startupconfigentry-startupconfigentry-c.md) | The module provides the capability to configure [AppStartup](../../../application-models/app-startup.md). |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [StartupConfigEntry](arkts-ability-app-appstartup-startupconfigentry-startupconfigentry-c.md) |

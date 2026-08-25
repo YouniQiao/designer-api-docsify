@@ -2,9 +2,9 @@
 
 Indicates the panel config@interface PanelConfig
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-verticalPanelManager-interface PanelConfig--><!--Device-verticalPanelManager-interface PanelConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AppExtension.VerticalPanel
 
@@ -26,11 +26,11 @@ Indicates the info about source app<p>**NOTE：**<br>1. The values of the follow
 
 **Type:** Record&lt;string, string&gt;
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PanelConfig-sourceAppInfo: Record<string, string>--><!--Device-PanelConfig-sourceAppInfo: Record<string, string>-End-->
 
 **System capability:** SystemCapability.Ability.AppExtension.VerticalPanel
 
@@ -46,13 +46,12 @@ The type of vertical domain
 
 **Type:** [VerticalType](arkts-ability-verticalpanelmanager-verticaltype-e-sys.md)
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PanelConfig-type: VerticalType--><!--Device-PanelConfig-type: VerticalType-End-->
 
 **System capability:** SystemCapability.Ability.AppExtension.VerticalPanel
 
 **System API:** This is a system API.
-

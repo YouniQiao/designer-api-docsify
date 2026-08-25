@@ -14,9 +14,9 @@ function getHardwareUnitPowerValue(type: ConsumptionType): double
 
 Obtains the power consumption of a hardware unit according to the consumption type, in unit of mAh.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-batteryStats-function getHardwareUnitPowerValue(type: ConsumptionType): double--><!--Device-batteryStats-function getHardwareUnitPowerValue(type: ConsumptionType): double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
 
@@ -24,23 +24,23 @@ Obtains the power consumption of a hardware unit according to the consumption ty
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | [ConsumptionType](arkts-basicservices-batterystats-consumptiontype-e-sys.md) | Yes | Power consumption type. The value must be an enum. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | [ConsumptionType](arkts-basicservices-batterystats-consumptiontype-e-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | Power consumption of the hardware unit corresponding to the power consumption type, in unit of mAh. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Parameter verification failed. |
-| [4600101](../errorcode-batteryStatistics.md#4600101-service-connection-failure) | Failed to connect to the service. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [4600101](../errorcode-batteryStatistics.md#4600101-service-connection-failure) |
 
 **Examples**
 
@@ -52,4 +52,3 @@ try {
     console.error('get battery statistics percent of hardware failed, err: ' + err);
 }
 ```
-

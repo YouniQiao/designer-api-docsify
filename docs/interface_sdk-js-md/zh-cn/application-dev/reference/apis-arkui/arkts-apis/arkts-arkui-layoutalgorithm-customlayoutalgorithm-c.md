@@ -10,9 +10,7 @@
 
 **起始版本：** 24
 
-**装饰器类型：** @ObservedV2
-
-<!--Device-unnamed-export class CustomLayoutAlgorithm--><!--Device-unnamed-export class CustomLayoutAlgorithm-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,22 +30,22 @@ onLayout(self: FrameNode, position: Position): void
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-CustomLayoutAlgorithm-onLayout(self: FrameNode, position: Position): void--><!--Device-CustomLayoutAlgorithm-onLayout(self: FrameNode, position: Position): void-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| self | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 动态布局组件在组件树上的实体节点。 |
-| position | [Position](arkts-arkui-position-t.md) | 是 | 动态布局组件进行布局时使用的位置信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| self | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| position | [Position](arkts-arkui-position-t.md) | 是 |
 
 ## onMeasure
 
@@ -66,20 +64,19 @@ onMeasure(self: FrameNode, constraint: LayoutConstraint): void
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-CustomLayoutAlgorithm-onMeasure(self: FrameNode, constraint: LayoutConstraint): void--><!--Device-CustomLayoutAlgorithm-onMeasure(self: FrameNode, constraint: LayoutConstraint): void-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| self | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 动态布局组件在组件树上的实体节点。 |
-| constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | 是 | 动态布局组件进行测量时使用的布局约束。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| self | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | 是 |

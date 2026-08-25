@@ -2,9 +2,9 @@
 
 Enumerates the result codes that may be used for the operation of adding a widget to the home screen.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-formInfo-enum PublishFormErrorCode--><!--Device-formInfo-enum PublishFormErrorCode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -18,11 +18,11 @@ SUCCESS = 0
 
 The widget is added to the home screen.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PublishFormErrorCode-SUCCESS = 0--><!--Device-PublishFormErrorCode-SUCCESS = 0-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -36,11 +36,11 @@ NO_SPACE = 1
 
 There is no space for adding widgets.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PublishFormErrorCode-NO_SPACE = 1--><!--Device-PublishFormErrorCode-NO_SPACE = 1-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -54,11 +54,11 @@ PARAM_ERROR = 2
 
 Parameter check fails.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PublishFormErrorCode-PARAM_ERROR = 2--><!--Device-PublishFormErrorCode-PARAM_ERROR = 2-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -72,11 +72,11 @@ INTERNAL_ERROR = 3
 
 An internal error occurs during widget processing.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PublishFormErrorCode-INTERNAL_ERROR = 3--><!--Device-PublishFormErrorCode-INTERNAL_ERROR = 3-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -92,11 +92,10 @@ Indicates that the host does not support the form.
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-PublishFormErrorCode-NOT_SUPPORT = 4--><!--Device-PublishFormErrorCode-NOT_SUPPORT = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
-

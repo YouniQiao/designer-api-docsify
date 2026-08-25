@@ -4,7 +4,7 @@
 
 **起始版本：** 15
 
-<!--Device-netFirewall-interface RequestParam--><!--Device-netFirewall-interface RequestParam-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -26,7 +26,7 @@ orderField: NetFirewallOrderField
 
 **起始版本：** 15
 
-<!--Device-RequestParam-orderField: NetFirewallOrderField--><!--Device-RequestParam-orderField: NetFirewallOrderField-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -42,39 +42,38 @@ orderType: NetFirewallOrderType
 
 **起始版本：** 15
 
-<!--Device-RequestParam-orderType: NetFirewallOrderType--><!--Device-RequestParam-orderType: NetFirewallOrderType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## page
 
 ```TypeScript
-page: int
+page: number
 ```
 
 页码，值范围：[1, 1000]。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 15
 
-<!--Device-RequestParam-page: int--><!--Device-RequestParam-page: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## pageSize
 
 ```TypeScript
-pageSize: int
+pageSize: number
 ```
 
 页面大小，值范围：[1, 50]。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 15
 
-<!--Device-RequestParam-pageSize: int--><!--Device-RequestParam-pageSize: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
-

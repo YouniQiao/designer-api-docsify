@@ -4,9 +4,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export declare class UrlStyle--><!--Device-unnamed-export declare class UrlStyle-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,19 +18,17 @@ constructor(url: string)
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-UrlStyle-constructor(url: string)--><!--Device-UrlStyle-constructor(url: string)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| url | string | 是 | 超链接设置项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [url](#url) | string | 是 |
 
 ## url
 
@@ -46,11 +42,8 @@ readonly url: string
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-UrlStyle-readonly url: string--><!--Device-UrlStyle-readonly url: string-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

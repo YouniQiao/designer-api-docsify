@@ -2,9 +2,9 @@
 
 Defines the format parameters of the video thumbnail to be obtained.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-media-interface PixelMapParams--><!--Device-media-interface PixelMapParams-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
@@ -25,9 +25,9 @@ Auto flip the thumbnail when video has mirror attribute (Vertical Flip or Horizo
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-PixelMapParams-autoFlip?: boolean--><!--Device-PixelMapParams-autoFlip?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
@@ -44,11 +44,10 @@ Color format of the thumbnail.
 
 **Type:** [PixelFormat](arkts-media-media-pixelformat-e-sys.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PixelMapParams-colorFormat?: PixelFormat--><!--Device-PixelMapParams-colorFormat?: PixelFormat-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
 **System API:** This is a system API.
-

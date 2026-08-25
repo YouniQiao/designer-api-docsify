@@ -2,9 +2,9 @@
 
 Implements management of color space objects.Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-colorspacemanager-create-f.md) to create a color space manager.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-colorSpaceManager-interface ColorSpaceManager--><!--Device-colorSpaceManager-interface ColorSpaceManager-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -22,23 +22,23 @@ getColorSpaceName(): ColorSpace
 
 Obtains the color space type.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ColorSpaceManager-getColorSpaceName(): ColorSpace--><!--Device-ColorSpaceManager-getColorSpaceName(): ColorSpace-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ColorSpace | Color space type. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ColorSpace](../../apis-arkui/arkts-apis/arkts-arkui-window-colorspace-e.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 9 - 22 |
+| Error Code ID |
+| --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
 
 **Examples**
 
@@ -52,29 +52,35 @@ try {
 
 ## getGamma
 
+ArkTS-Dyn:
+```TypeScript
+getGamma(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getGamma(): double
 ```
 
 Obtains the gamma of the color space.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ColorSpaceManager-getGamma(): double--><!--Device-ColorSpaceManager-getGamma(): double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | Gamma of the color space. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 9 - 22 |
+| Error Code ID |
+| --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
 
 **Examples**
 
@@ -88,29 +94,35 @@ try {
 
 ## getWhitePoint
 
+ArkTS-Dyn:
+```TypeScript
+getWhitePoint(): Array<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getWhitePoint(): Array<double>
 ```
 
 Obtains the coordinates of the white point in the color space.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ColorSpaceManager-getWhitePoint(): Array<double>--><!--Device-ColorSpaceManager-getWhitePoint(): Array<double>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;double&gt; | Coordinates [x, y] of the white point. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;double & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 9 - 22 |
+| Error Code ID |
+| --- |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
 
 **Examples**
 
@@ -121,4 +133,3 @@ try {
     console.error(`Failed to get white point. Cause: ` + JSON.stringify(err));
 }
 ```
-

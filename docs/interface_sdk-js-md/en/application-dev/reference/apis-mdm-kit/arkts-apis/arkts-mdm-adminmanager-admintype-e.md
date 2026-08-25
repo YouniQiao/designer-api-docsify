@@ -4,7 +4,7 @@ Enumerates the types of device administrator applications.
 
 **Since:** 15
 
-<!--Device-adminManager-export enum AdminType--><!--Device-adminManager-export enum AdminType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,7 +18,6 @@ BYOD device administrator application.
 
 **Since:** 15
 
-<!--Device-AdminType-ADMIN_TYPE_BYOD = 0x02--><!--Device-AdminType-ADMIN_TYPE_BYOD = 0x02-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

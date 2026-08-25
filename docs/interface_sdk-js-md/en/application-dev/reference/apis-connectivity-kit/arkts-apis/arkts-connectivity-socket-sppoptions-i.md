@@ -4,7 +4,7 @@ Describes the spp parameters.
 
 **Since:** 10
 
-<!--Device-socket-interface SppOptions--><!--Device-socket-interface SppOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -17,16 +17,16 @@ import { socket } from '@kit.ConnectivityKit';
 ## psm
 
 ```TypeScript
-psm?: int
+psm?: number
 ```
 
 l2cap protocol service multiplexer
 
-**Type:** int
+**Type:** number
 
 **Since:** 20
 
-<!--Device-SppOptions-psm?: int--><!--Device-SppOptions-psm?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -42,7 +42,7 @@ Indicates secure channel or not
 
 **Since:** 10
 
-<!--Device-SppOptions-secure: boolean--><!--Device-SppOptions-secure: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -58,7 +58,7 @@ Spp link type
 
 **Since:** 10
 
-<!--Device-SppOptions-type: SppType--><!--Device-SppOptions-type: SppType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -74,7 +74,6 @@ Indicates the UUID in the SDP record.
 
 **Since:** 10
 
-<!--Device-SppOptions-uuid: string--><!--Device-SppOptions-uuid: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

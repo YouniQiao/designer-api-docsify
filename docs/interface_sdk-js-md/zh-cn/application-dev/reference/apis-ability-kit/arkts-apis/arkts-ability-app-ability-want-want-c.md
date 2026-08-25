@@ -2,9 +2,9 @@
 
 Want是对象间信息传递的载体，可以用于应用组件间的信息传递。 其典型应用场景之一是，当UIAbilityA启动UIAbilityB、并需要传入一些数据时，可使用Want作为载体。例如在startAbility接口的入参want中，可以通过abilityName指定启动的目标Ability，也可以 通过parameters等字段携带其他数据。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-export default class Want--><!--Device-unnamed-export default class Want-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -24,11 +24,11 @@ abilityName?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Want-abilityName?: string--><!--Device-Want-abilityName?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -42,11 +42,11 @@ action?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Want-action?: string--><!--Device-Want-action?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -60,11 +60,11 @@ bundleName?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Want-bundleName?: string--><!--Device-Want-bundleName?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -78,11 +78,11 @@ deviceId?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Want-deviceId?: string--><!--Device-Want-deviceId?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -96,11 +96,11 @@ entities?: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Want-entities?: Array<string>--><!--Device-Want-entities?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -112,13 +112,13 @@ readonly fds?: Record<string, int>
 
 表示文件描述符的集合。在应用启动场景中，拉起方通过 startAbility传递Want时， 需在parameters中以固定键值对形式传入文件描述符，被拉起方可通过该字段获取文件描述符，具体使用方式见“文件描述符（FD）”示例。从API version 15开始，该接口支持在原子化服务中使用。
 
-**类型：** Record&lt;string, int&gt;
+**类型：** ArkTS-Dyn: Record&lt;string, number&gt;  <br>ArkTS-Sta：Record&lt;string, int&gt;
 
-**起始版本：** 23
+**起始版本：** 15
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
-<!--Device-Want-readonly fds?: Record<string, int>--><!--Device-Want-readonly fds?: Record<string, int>-End-->
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -130,13 +130,13 @@ flags?: int
 
 表示处理Want的方式。值为枚举类型[Flags](arkts-ability-wantconstant-flags-e.md)，默认传数字。例如取值为0x00000001（即wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION）表示临时授予接收方读取该URI指向的数据的权限。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Want-flags?: int--><!--Device-Want-flags?: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -151,18 +151,18 @@ moduleName?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Want-moduleName?: string--><!--Device-Want-moduleName?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## parameters
 
 ```TypeScript
-parameters?: Record<string, RecordData>
+parameters?: Record<string, Object>
 ```
 
 表示WantParams描述。一、以下Key均由系统赋值，开发者手动修改也不会生效，系统在数据传递时会自动修改为实际值。  
@@ -170,11 +170,13 @@ parameters?: Record<string, RecordData>
 **说明：**在跨端场景中，以下三个字段不生效，不可用于身份或权限校验：ohos.aafwk.param.callerPid、ohos.aafwk.param.callerToken、ohos.aafwk.param.callerUid。二、提供了一些由系统定义、开发者按需赋值的Key。具体的key值与对应说明详见 wantConstant.Params。三、除了上述情况，应用间还可以相互约定传入的键值对。
 **说明：**want的Params操作的常量的具体信息请参考[wantConstant](arkts-app-ability-wantconstant.md)。需注意，WantParams支持传输的最大数据量遵循Want约束限制。当数据量超过该限制时，请使用 WriteRawDataBuffer或[uri](../../apis-arkts/arkts-apis/arkts-uri.md)的方式进行数 据传输。parameters的Value值仅支持基本数据类型：String、Number、Boolean、Object、undefined和null，不支持传递Object内部的function。
 
-**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, Object&gt;
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Want-parameters?: Record<string, RecordData>--><!--Device-Want-parameters?: Record<string, RecordData>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -188,11 +190,11 @@ type?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Want-type?: string--><!--Device-Want-type?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -206,11 +208,11 @@ uri?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Want-uri?: string--><!--Device-Want-uri?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -783,4 +785,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

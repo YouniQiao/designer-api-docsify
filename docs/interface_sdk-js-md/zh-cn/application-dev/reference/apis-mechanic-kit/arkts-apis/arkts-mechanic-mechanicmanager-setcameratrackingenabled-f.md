@@ -14,25 +14,25 @@ function setCameraTrackingEnabled(isEnabled: boolean): void
 
 启用或禁用摄像机跟踪
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-mechanicManager-function setCameraTrackingEnabled(isEnabled: boolean): void--><!--Device-mechanicManager-function setCameraTrackingEnabled(isEnabled: boolean): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isEnabled | boolean | 是 | 是否启用摄像机跟踪 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| isEnabled | boolean | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
-| [33300003](../errorcode-mechanic.md#33300003-功能不支持) | Feature not supported. |
+| 错误码ID |
+| --- |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) |
+| [33300002](../errorcode-mechanic.md#33300002-设备未连接) |
+| [33300003](../errorcode-mechanic.md#33300003-功能不支持) |
 
 **示例**
 
@@ -42,4 +42,3 @@ console.info('Enable tracing');
 mechanicManager.setCameraTrackingEnabled(true);
 console.info('Succeeded in enabling tracking.');
 ```
-

@@ -2,9 +2,9 @@
 
 Enumerates the camera positions.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-camera-enum CameraPosition--><!--Device-camera-enum CameraPosition-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -16,11 +16,11 @@ CAMERA_POSITION_UNSPECIFIED = 0
 
 A camera that does not have a fixed orientation relative to the device screen.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CameraPosition-CAMERA_POSITION_UNSPECIFIED = 0--><!--Device-CameraPosition-CAMERA_POSITION_UNSPECIFIED = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -32,11 +32,11 @@ CAMERA_POSITION_BACK = 1
 
 Rear camera.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CameraPosition-CAMERA_POSITION_BACK = 1--><!--Device-CameraPosition-CAMERA_POSITION_BACK = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -48,11 +48,11 @@ CAMERA_POSITION_FRONT = 2
 
 Front camera.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CameraPosition-CAMERA_POSITION_FRONT = 2--><!--Device-CameraPosition-CAMERA_POSITION_FRONT = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -66,13 +66,12 @@ Folded camera.This API is supported since API version 11 and deprecated since AP
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 12
 
 **Substitutes:** null
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-CameraPosition-CAMERA_POSITION_FOLD_INNER = 3--><!--Device-CameraPosition-CAMERA_POSITION_FOLD_INNER = 3-End-->
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
-

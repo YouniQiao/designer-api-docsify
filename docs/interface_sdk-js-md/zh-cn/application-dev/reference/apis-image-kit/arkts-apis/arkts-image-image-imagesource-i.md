@@ -2,9 +2,9 @@
 
 ImageSource类，用于获取图片相关信息。在调用ImageSource的方法前，需要先通过[image.createImageSource](arkts-image-image-createimagesource-f.md)构建一个ImageSource实例。ImageSource的所有方法均不支持并发调用。由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](#release)方法及时 释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-image-interface ImageSource--><!--Device-image-interface ImageSource-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -24,24 +24,24 @@ createImageRawData(): Promise<ImageRawData>
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-ImageSource-createImageRawData(): Promise<ImageRawData>--><!--Device-ImageSource-createImageRawData(): Promise<ImageRawData>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[ImageRawData](arkts-image-image-imagerawdata-i.md)&gt; | Promise对象，返回ImageRawData对象，其中含有数据缓冲区和像素位数。 |
+| 类型 |
+| --- |
+| Promise&lt;[ImageRawData](arkts-image-image-imagerawdata-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| 错误码ID |
+| --- |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
 
 **示例**
 
@@ -76,29 +76,29 @@ createPicture(options?: DecodingOptionsForPicture): Promise<Picture>
 
 **起始版本：** 13
 
-<!--Device-ImageSource-createPicture(options?: DecodingOptionsForPicture): Promise<Picture>--><!--Device-ImageSource-createPicture(options?: DecodingOptionsForPicture): Promise<Picture>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [DecodingOptionsForPicture](arkts-image-image-decodingoptionsforpicture-i.md) | 否 | 解码参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [DecodingOptionsForPicture](arkts-image-image-decodingoptionsforpicture-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; | Promise对象，返回Picture。 |
+| 类型 |
+| --- |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Decode failed. |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options. For example, unsupported desiredPixelFormat causes a failure in converting an image into the desired pixel format.<br>**适用版本：** 24+ |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [7700301](../errorcode-image.md#7700301-解码失败) |
+| [7700203](../errorcode-image.md#7700203-不支持的选项) |
 
 **示例**
 
@@ -185,27 +185,27 @@ Creates a Picture object based on image decoding parameters. This method uses a 
 
 **起始版本：** 23
 
-<!--Device-ImageSource-createPicture(options?: DecodingOptionsForPicture): Promise<Picture | undefined>--><!--Device-ImageSource-createPicture(options?: DecodingOptionsForPicture): Promise<Picture | undefined>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [DecodingOptionsForPicture](arkts-image-image-decodingoptionsforpicture-i.md) | 否 | Image decoding parameters. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [DecodingOptionsForPicture](arkts-image-image-decodingoptionsforpicture-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined&gt; | A Promise instance used to return the Picture object. |
+| 类型 |
+| --- |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Failed to decode image. |
+| 错误码ID |
+| --- |
+| [7700301](../errorcode-image.md#7700301-解码失败) |
 
 **示例**
 
@@ -226,31 +226,31 @@ createPictureAtIndex(index: int): Promise<Picture>
 
 **起始版本：** 20
 
-<!--Device-ImageSource-createPictureAtIndex(index: int): Promise<Picture>--><!--Device-ImageSource-createPictureAtIndex(index: int): Promise<Picture>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 解码图片序号。图片序号有效的取值范围为：[0, (帧数-1)]。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; | Promise对象，返回Picture。 |
+| 类型 |
+| --- |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options. For example, index is invalid. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Decoding failed. |
+| 错误码ID |
+| --- |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
+| [7700103](../errorcode-image.md#7700103-图片太大) |
+| [7700203](../errorcode-image.md#7700203-不支持的选项) |
+| [7700301](../errorcode-image.md#7700301-解码失败) |
 
 **示例**
 
@@ -298,31 +298,31 @@ Decodes an image at the specified index into a Picture object.
 
 **起始版本：** 23
 
-<!--Device-ImageSource-createPictureAtIndex(index : int): Promise<Picture | undefined>--><!--Device-ImageSource-createPictureAtIndex(index : int): Promise<Picture | undefined>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | Image index. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined&gt; | Promise that returns the Picture object. |
+| 类型 |
+| --- |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options. For example, index is invalid. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Decoding failed. |
+| 错误码ID |
+| --- |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
+| [7700103](../errorcode-image.md#7700103-图片太大) |
+| [7700203](../errorcode-image.md#7700203-不支持的选项) |
+| [7700301](../errorcode-image.md#7700301-解码失败) |
 
 **示例**
 
@@ -343,25 +343,25 @@ createPixelMap(options?: DecodingOptions): Promise<PixelMap>
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ImageSource-createPixelMap(options?: DecodingOptions): Promise<PixelMap>--><!--Device-ImageSource-createPixelMap(options?: DecodingOptions): Promise<PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 | 解码参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;PixelMap&gt; | Promise对象，返回PixelMap。 |
+| 类型 |
+| --- |
+| Promise & lt;PixelMap & gt; |
 
 **示例**
 
@@ -583,21 +583,21 @@ Creates a PixelMap object based on image decoding parameters. This method uses a
 
 **起始版本：** 23
 
-<!--Device-ImageSource-createPixelMap(options?: DecodingOptions): Promise<PixelMap | undefined>--><!--Device-ImageSource-createPixelMap(options?: DecodingOptions): Promise<PixelMap | undefined>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 | Image decoding parameters. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;PixelMap \| undefined&gt; | A Promise instance used to return the PixelMap object. |
+| 类型 |
+| --- |
+| Promise & lt;PixelMap \ | undefined & gt; |
 
 **示例**
 
@@ -618,19 +618,19 @@ createPixelMap(callback: AsyncCallback<PixelMap>): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ImageSource-createPixelMap(callback: AsyncCallback<PixelMap>): void--><!--Device-ImageSource-createPixelMap(callback: AsyncCallback<PixelMap>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | 是 | 回调函数，当创建PixelMap对象成功，err为undefined，data为获取到的PixelMap对象；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | 是 |
 
 **示例**
 
@@ -646,15 +646,15 @@ Creates a PixelMap object. This method uses a callback to return the object.
 
 **起始版本：** 23
 
-<!--Device-ImageSource-createPixelMap(callback: AsyncCallback<PixelMap | undefined>): void--><!--Device-ImageSource-createPixelMap(callback: AsyncCallback<PixelMap | undefined>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap \| undefined&gt; | 是 | Callback used to return the PixelMap object. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap \| undefined & gt; | 是 |
 
 **示例**
 
@@ -675,20 +675,20 @@ createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): voi
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ImageSource-createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): void--><!--Device-ImageSource-createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 是 | 解码参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | 是 | 回调函数，当创建PixelMap对象成功，err为undefined，data为获取到的PixelMap对象；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | 是 |
 
 **示例**
 
@@ -704,16 +704,16 @@ Creates a PixelMap object based on image decoding parameters. This method uses a
 
 **起始版本：** 23
 
-<!--Device-ImageSource-createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap | undefined>): void--><!--Device-ImageSource-createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap | undefined>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 是 | Image decoding parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap \| undefined&gt; | 是 | Callback used to return the PixelMap object. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap \| undefined & gt; | 是 |
 
 **示例**
 
@@ -734,41 +734,41 @@ createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>
 > - 此接口会一次性解码全部帧，当帧数过多或单帧图像过大时（如2000×3000像素的100帧GIF动图），会占用较大内存，造成系统内存紧张，此种情况推荐使用Image组件显示动图，Image组件采用逐帧解码，占用内存比此接
 > 口少。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-ImageSource-createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>--><!--Device-ImageSource-createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 | 解码参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;PixelMap&gt;&gt; | 异步返回PixelMap数组。 |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;PixelMap & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980099](../errorcode-image.md#62980099-共享内存数据异常) | The shared memory data is abnormal. |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980109](../errorcode-image.md#62980109-裁剪错误) | Failed to crop the image. |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
-| [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
-| [62980173](../errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
-| [62980174](../errorcode-image.md#62980174-dma内存数据异常) | The DMA memory data is abnormal. |
+| 错误码ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-操作失败) |
+| [62980099](../errorcode-image.md#62980099-共享内存数据异常) |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) |
+| [62980109](../errorcode-image.md#62980109-裁剪错误) |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980116](../errorcode-image.md#62980116-解码失败) |
+| [62980118](../errorcode-image.md#62980118-创建插件失败) |
+| [62980137](../errorcode-image.md#62980137-图片操作无效) |
+| [62980173](../errorcode-image.md#62980173-dma内存空间错误) |
+| [62980174](../errorcode-image.md#62980174-dma内存数据异常) |
 
 **示例**
 
@@ -917,35 +917,35 @@ createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void
 > - 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。&gt;
 > - 此接口会一次性解码全部帧，当帧数过多或单帧图像过大时，会占用较大内存，造成系统内存紧张，此种情况推荐使用Image组件显示动图，Image组件采用逐帧解码，占用内存比此接口少。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-ImageSource-createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void--><!--Device-ImageSource-createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PixelMap&gt;&gt; | 是 | 回调函数，当创建PixelMap对象数组成功，err为undefined，data为获取到的PixelMap对象数组；否 则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PixelMap&gt;&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980099](../errorcode-image.md#62980099-共享内存数据异常) | The shared memory data is abnormal. |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980109](../errorcode-image.md#62980109-裁剪错误) | Failed to crop the image. |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
-| [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
-| [62980173](../errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
-| [62980174](../errorcode-image.md#62980174-dma内存数据异常) | The DMA memory data is abnormal. |
+| 错误码ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-操作失败) |
+| [62980099](../errorcode-image.md#62980099-共享内存数据异常) |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) |
+| [62980109](../errorcode-image.md#62980109-裁剪错误) |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980116](../errorcode-image.md#62980116-解码失败) |
+| [62980118](../errorcode-image.md#62980118-创建插件失败) |
+| [62980137](../errorcode-image.md#62980137-图片操作无效) |
+| [62980173](../errorcode-image.md#62980173-dma内存空间错误) |
+| [62980174](../errorcode-image.md#62980174-dma内存数据异常) |
 
 **示例**
 
@@ -965,36 +965,36 @@ createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<Pixel
 > - 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。&gt;
 > - 此接口会一次性解码全部帧，当帧数过多或单帧图像过大时，会占用较大内存，造成系统内存紧张，此种情况推荐使用Image组件显示动图，Image组件采用逐帧解码，占用内存比此接口少。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-ImageSource-createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<PixelMap>>): void--><!--Device-ImageSource-createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<PixelMap>>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 是 | 解码参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PixelMap&gt;&gt; | 是 | 回调函数，当创建PixelMap对象数组成功，err为undefined，data为获取到的PixelMap对象数组；否 则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PixelMap&gt;&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980099](../errorcode-image.md#62980099-共享内存数据异常) | The shared memory data is abnormal. |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980109](../errorcode-image.md#62980109-裁剪错误) | Failed to crop the image. |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
-| [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
-| [62980173](../errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
-| [62980174](../errorcode-image.md#62980174-dma内存数据异常) | The DMA memory data is abnormal. |
+| 错误码ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-操作失败) |
+| [62980099](../errorcode-image.md#62980099-共享内存数据异常) |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) |
+| [62980109](../errorcode-image.md#62980109-裁剪错误) |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980116](../errorcode-image.md#62980116-解码失败) |
+| [62980118](../errorcode-image.md#62980118-创建插件失败) |
+| [62980137](../errorcode-image.md#62980137-图片操作无效) |
+| [62980173](../errorcode-image.md#62980173-dma内存空间错误) |
+| [62980174](../errorcode-image.md#62980174-dma内存数据异常) |
 
 **示例**
 
@@ -1014,21 +1014,21 @@ createPixelMapSync(options?: DecodingOptions): PixelMap
 
 **起始版本：** 12
 
-<!--Device-ImageSource-createPixelMapSync(options?: DecodingOptions): PixelMap--><!--Device-ImageSource-createPixelMapSync(options?: DecodingOptions): PixelMap-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 | 解码参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| PixelMap | 用于同步返回创建结果。 |
+| 类型 |
+| --- |
+| [PixelMap](arkts-image-image-pixelmap-i.md) |
 
 **示例**
 
@@ -1164,21 +1164,21 @@ Create a PixelMap object based on image decoding parameters synchronously.
 
 **起始版本：** 23
 
-<!--Device-ImageSource-createPixelMapSync(options?: DecodingOptions): PixelMap | undefined--><!--Device-ImageSource-createPixelMapSync(options?: DecodingOptions): PixelMap | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 | Image decoding parameters. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| PixelMap \| undefined | Return the PixelMap. If decoding fails, return undefined. |
+| 类型 |
+| --- |
+| PixelMap \| undefined |
 
 **示例**
 
@@ -1199,35 +1199,35 @@ createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: Allocato
 
 **起始版本：** 15
 
-<!--Device-ImageSource-createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType): Promise<PixelMap>--><!--Device-ImageSource-createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType): Promise<PixelMap>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 | 解码参数。 |
-| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | 否 | 用于图像解码的内存类型。默认值为AllocatorType.AUTO。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 |
+| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;PixelMap&gt; | Promise对象，返回PixelMap。 |
+| 类型 |
+| --- |
+| Promise & lt;PixelMap & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
-| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
-| [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options, e.g, cannot convert image into desired pixel format. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Failed to decode image. |
-| [7700302](../errorcode-image.md#7700302-内存分配失败) | Failed to allocate memory. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
+| [7700103](../errorcode-image.md#7700103-图片太大) |
+| [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) |
+| [7700203](../errorcode-image.md#7700203-不支持的选项) |
+| [7700301](../errorcode-image.md#7700301-解码失败) |
+| [7700302](../errorcode-image.md#7700302-内存分配失败) |
 
 **示例**
 
@@ -1329,34 +1329,34 @@ Creates a PixelMap based on decoding parameters, the memory type used by the Pix
 
 **起始版本：** 23
 
-<!--Device-ImageSource-createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType)      : Promise<PixelMap | undefined>--><!--Device-ImageSource-createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType)      : Promise<PixelMap | undefined>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 | Image decoding parameters. |
-| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | 否 | Indicate which memory type will be used by the returned PixelMap. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 |
+| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;PixelMap \| undefined&gt; | A Promise instance used to return the PixelMap object. |
+| 类型 |
+| --- |
+| Promise & lt;PixelMap \ | undefined & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
-| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
-| [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options, For example, unsupported desiredPixelFormat causes a failure in converting an imagge into the desired pixel format. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Failed to decode image. |
-| [7700302](../errorcode-image.md#7700302-内存分配失败) | Failed to allocate memory. |
+| 错误码ID |
+| --- |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
+| [7700103](../errorcode-image.md#7700103-图片太大) |
+| [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) |
+| [7700203](../errorcode-image.md#7700203-不支持的选项) |
+| [7700301](../errorcode-image.md#7700301-解码失败) |
+| [7700302](../errorcode-image.md#7700302-内存分配失败) |
 
 **示例**
 
@@ -1376,35 +1376,35 @@ createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: Allo
 
 **起始版本：** 15
 
-<!--Device-ImageSource-createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap--><!--Device-ImageSource-createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 | 解码参数。 |
-| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | 否 | 用于图像解码的内存类型。默认值为AllocatorType.AUTO。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 |
+| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| PixelMap | 用于同步返回创建结果。 |
+| 类型 |
+| --- |
+| [PixelMap](arkts-image-image-pixelmap-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
-| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
-| [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options, e.g, cannot convert image into desired pixel format. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Failed to decode image. |
-| [7700302](../errorcode-image.md#7700302-内存分配失败) | Failed to allocate memory. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
+| [7700103](../errorcode-image.md#7700103-图片太大) |
+| [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) |
+| [7700203](../errorcode-image.md#7700203-不支持的选项) |
+| [7700301](../errorcode-image.md#7700301-解码失败) |
+| [7700302](../errorcode-image.md#7700302-内存分配失败) |
 
 **示例**
 
@@ -1547,34 +1547,34 @@ Creates a PixelMap based on decoding parameters synchronously, the memory type u
 
 **起始版本：** 23
 
-<!--Device-ImageSource-createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap | undefined--><!--Device-ImageSource-createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 | Image decoding parameters. |
-| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | 否 | Indicate which memory type will be used by the returned PixelMap. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 |
+| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| PixelMap \| undefined | Return the PixelMap. If decoding fails, return undefined. |
+| 类型 |
+| --- |
+| PixelMap \| undefined |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
-| [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options, For example, unsupported desiredPixelFormat cause a failure in converting an image into the desired pixel format. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Failed to decode image. |
-| [7700302](../errorcode-image.md#7700302-内存分配失败) | Failed to allocate memory. |
+| 错误码ID |
+| --- |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
+| [7700103](../errorcode-image.md#7700103-图片太大) |
+| [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) |
+| [7700203](../errorcode-image.md#7700203-不支持的选项) |
+| [7700301](../errorcode-image.md#7700301-解码失败) |
+| [7700302](../errorcode-image.md#7700302-内存分配失败) |
 
 **示例**
 
@@ -1595,34 +1595,34 @@ createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undef
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-ImageSource-createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undefined>--><!--Device-ImageSource-createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undefined>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | 否 | 解码参数，控制是否生成缩略图以及生成缩略图的目标尺寸。 <br>默认表现： <br>- 当图像有缩略图时，解码原始缩略图，返回的PixelMap对象的宽和高与原缩略图保持一致。 <br>- 当原图文件无缩略图时，对原图进行解码后，根据解码参数options下采样生成缩略图，生成后的缩略图PixelMap对象宽和高都限制在512像素以内。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;PixelMap \| undefined&gt; | Promise对象，返回PixelMap。 |
+| 类型 |
+| --- |
+| Promise & lt;PixelMap \ | undefined & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
-| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
-| [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter, e.g, invalid generate size. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Decode failed. |
-| [7700303](../errorcode-image.md#7700303-图片不包含缩略图数据) | Image does not carry thumbnail data. |
-| [7700305](../errorcode-image.md#7700305-缩略图生成失败) | Thumbnail generation failed. |
+| 错误码ID |
+| --- |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
+| [7700103](../errorcode-image.md#7700103-图片太大) |
+| [7700204](../errorcode-image.md#7700204-无效参数) |
+| [7700301](../errorcode-image.md#7700301-解码失败) |
+| [7700303](../errorcode-image.md#7700303-图片不包含缩略图数据) |
+| [7700305](../errorcode-image.md#7700305-缩略图生成失败) |
 
 **示例**
 
@@ -1714,34 +1714,34 @@ createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-ImageSource-createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined--><!--Device-ImageSource-createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | 否 | 解码参数，控制是否生成缩略图以及生成缩略图的目标尺寸。 <br>默认表现： <br>- 当图像有缩略图时，解码原始缩略图，返回的PixelMap对象的宽和高与原缩略图保持一致。 <br>- 当原图文件无缩略图时，对原图进行解码后，根据解码参数options下采样生成缩略图，生成后的缩略图PixelMap对象宽和高都限制在512像素以内。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| PixelMap \| undefined | 用于同步返回创建结果。 |
+| 类型 |
+| --- |
+| PixelMap \| undefined |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
-| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
-| [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter, e.g, invalid generate size. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Decode failed. |
-| [7700303](../errorcode-image.md#7700303-图片不包含缩略图数据) | Image does not carry thumbnail data. |
-| [7700305](../errorcode-image.md#7700305-缩略图生成失败) | Thumbnail generation failed. |
+| 错误码ID |
+| --- |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
+| [7700103](../errorcode-image.md#7700103-图片太大) |
+| [7700204](../errorcode-image.md#7700204-无效参数) |
+| [7700301](../errorcode-image.md#7700301-解码失败) |
+| [7700303](../errorcode-image.md#7700303-图片不包含缩略图数据) |
+| [7700305](../errorcode-image.md#7700305-缩略图生成失败) |
 
 **示例**
 
@@ -1820,36 +1820,42 @@ async function CreateThumbnailSyncFunc(imageSource: image.ImageSource): Promise<
 
 ## getDelayTimeList
 
+ArkTS-Dyn:
+```TypeScript
+getDelayTimeList(): Promise<Array<number>>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getDelayTimeList(): Promise<Array<int>>
 ```
 
 获取图像延迟时间数组。使用Promise异步回调。此接口仅用于gif图片和webp图片。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-ImageSource-getDelayTimeList(): Promise<Array<int>>--><!--Device-ImageSource-getDelayTimeList(): Promise<Array<int>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;int&gt;&gt; | Promise对象，返回延迟时间数组。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;Array & lt;number & gt; & gt;<br>ArkTS-Sta：Promise & lt;Array & lt;int & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980110](../errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
-| [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
-| [62980149](../errorcode-image.md#62980149-图片参数无效) | Invalid MIME type for the image source. |
+| 错误码ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-操作失败) |
+| [62980110](../errorcode-image.md#62980110-图片源数据错误) |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980116](../errorcode-image.md#62980116-解码失败) |
+| [62980118](../errorcode-image.md#62980118-创建插件失败) |
+| [62980122](../errorcode-image.md#62980122-解码图片头异常) |
+| [62980149](../errorcode-image.md#62980149-图片参数无效) |
 
 **示例**
 
@@ -1918,36 +1924,42 @@ async function GetDelayTimeListFunc(imageSource: image.ImageSource): Promise<voi
 
 ## getDelayTimeList
 
+ArkTS-Dyn:
+```TypeScript
+getDelayTimeList(callback: AsyncCallback<Array<number>>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 getDelayTimeList(callback: AsyncCallback<Array<int>>): void
 ```
 
 获取图像延迟时间数组。使用callback异步回调。此接口仅用于gif图片和webp图片。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-ImageSource-getDelayTimeList(callback: AsyncCallback<Array<int>>): void--><!--Device-ImageSource-getDelayTimeList(callback: AsyncCallback<Array<int>>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;int&gt;&gt; | 是 | 回调函数，当获取图像延迟时间数组成功，err为undefined，data为获取到的图像延时时间数组；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;int&gt;&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980110](../errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
-| [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
-| [62980149](../errorcode-image.md#62980149-图片参数无效) | Invalid MIME type for the image source. |
+| 错误码ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-操作失败) |
+| [62980110](../errorcode-image.md#62980110-图片源数据错误) |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980116](../errorcode-image.md#62980116-解码失败) |
+| [62980118](../errorcode-image.md#62980118-创建插件失败) |
+| [62980122](../errorcode-image.md#62980122-解码图片头异常) |
+| [62980149](../errorcode-image.md#62980149-图片参数无效) |
 
 **示例**
 
@@ -1955,32 +1967,38 @@ getDelayTimeList(callback: AsyncCallback<Array<int>>): void
 
 ## getDisposalTypeList
 
+ArkTS-Dyn:
+```TypeScript
+getDisposalTypeList(): Promise<Array<number>>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getDisposalTypeList(): Promise<Array<int>>
 ```
 
 获取图像帧过渡模式数组。使用Promise异步回调。此接口仅用于gif图片。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ImageSource-getDisposalTypeList(): Promise<Array<int>>--><!--Device-ImageSource-getDisposalTypeList(): Promise<Array<int>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;int&gt;&gt; | Promise对象，返回帧过渡模式数组。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;Array & lt;number & gt; & gt;<br>ArkTS-Sta：Promise & lt;Array & lt;int & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
-| [62980149](../errorcode-image.md#62980149-图片参数无效) | Invalid MIME type for the image source. |
+| 错误码ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-操作失败) |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) |
+| [62980137](../errorcode-image.md#62980137-图片操作无效) |
+| [62980149](../errorcode-image.md#62980149-图片参数无效) |
 
 **示例**
 
@@ -2013,37 +2031,43 @@ async function GetDisposalTypeListFunc(imageSource: image.ImageSource): Promise<
 
 ## getFrameCount
 
+ArkTS-Dyn:
+```TypeScript
+getFrameCount(): Promise<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getFrameCount(): Promise<int>
 ```
 
 获取图像帧数。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-ImageSource-getFrameCount(): Promise<int>--><!--Device-ImageSource-getFrameCount(): Promise<int>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise对象，返回图像帧数。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
-| [62980112](../errorcode-image.md#62980112-图片格式不匹配) | The image format does not match. |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
-| [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
-| [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
+| 错误码ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-操作失败) |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) |
+| [62980112](../errorcode-image.md#62980112-图片格式不匹配) |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980116](../errorcode-image.md#62980116-解码失败) |
+| [62980118](../errorcode-image.md#62980118-创建插件失败) |
+| [62980122](../errorcode-image.md#62980122-解码图片头异常) |
+| [62980137](../errorcode-image.md#62980137-图片操作无效) |
 
 **示例**
 
@@ -2112,37 +2136,43 @@ async function GetFrameCountFunc(imageSource: image.ImageSource): Promise<void> 
 
 ## getFrameCount
 
+ArkTS-Dyn:
+```TypeScript
+getFrameCount(callback: AsyncCallback<number>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 getFrameCount(callback: AsyncCallback<int>): void
 ```
 
 获取图像帧数。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-ImageSource-getFrameCount(callback: AsyncCallback<int>): void--><!--Device-ImageSource-getFrameCount(callback: AsyncCallback<int>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数，当获取图像帧数成功，err为undefined，data为获取到的图像帧数；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
-| [62980112](../errorcode-image.md#62980112-图片格式不匹配) | The image format does not match. |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
-| [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
-| [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
+| 错误码ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-操作失败) |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) |
+| [62980112](../errorcode-image.md#62980112-图片格式不匹配) |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980116](../errorcode-image.md#62980116-解码失败) |
+| [62980118](../errorcode-image.md#62980118-创建插件失败) |
+| [62980122](../errorcode-image.md#62980122-解码图片头异常) |
+| [62980137](../errorcode-image.md#62980137-图片操作无效) |
 
 **示例**
 
@@ -2158,20 +2188,20 @@ getImageInfo(index: int, callback: AsyncCallback<ImageInfo>): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ImageSource-getImageInfo(index: int, callback: AsyncCallback<ImageInfo>): void--><!--Device-ImageSource-getImageInfo(index: int, callback: AsyncCallback<ImageInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 创建ImageSource时的序号。默认值为0，表示第一张图片。当取值为N时，表示第N+1张图片。单帧图片场景中index取值只能为0，动图等多帧图片场景中index的取值范围为： [0, (帧数-1)]。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | 是 | 回调函数。当获取图片信息成功，err为undefined，data为获取到的图片信息；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | 是 |
 
 **示例**
 
@@ -2324,16 +2354,16 @@ Obtains information about an image with the specified sequence number and uses a
 
 **起始版本：** 23
 
-<!--Device-ImageSource-getImageInfo(index: int, callback: AsyncCallback<ImageInfo | undefined>): void--><!--Device-ImageSource-getImageInfo(index: int, callback: AsyncCallback<ImageInfo | undefined>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | Sequence number of an image. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined&gt; | 是 | Callback used to return the image information. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined & gt; | 是 |
 
 **示例**
 
@@ -2349,19 +2379,19 @@ getImageInfo(callback: AsyncCallback<ImageInfo>): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ImageSource-getImageInfo(callback: AsyncCallback<ImageInfo>): void--><!--Device-ImageSource-getImageInfo(callback: AsyncCallback<ImageInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | 是 | 回调函数。当获取图片信息成功，err为undefined，data为获取到的图片信息；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | 是 |
 
 **示例**
 
@@ -2377,15 +2407,15 @@ Obtains information about this image and uses a callback to return the result.
 
 **起始版本：** 23
 
-<!--Device-ImageSource-getImageInfo(callback: AsyncCallback<ImageInfo | undefined>): void--><!--Device-ImageSource-getImageInfo(callback: AsyncCallback<ImageInfo | undefined>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined&gt; | 是 | Callback used to return the image information. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined & gt; | 是 |
 
 **示例**
 
@@ -2401,25 +2431,25 @@ getImageInfo(index?: int): Promise<ImageInfo>
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ImageSource-getImageInfo(index?: int): Promise<ImageInfo>--><!--Device-ImageSource-getImageInfo(index?: int): Promise<ImageInfo>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 否 | 创建ImageSource时的序号。默认值为0，表示第一张图片。当取值为N时，表示第N+1张图片。单帧图片场景中index取值只能为0，动图等多帧图片场景中index的取值范围为： [0, (帧数-1)]。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Promise对象，返回获取到的图片信息。 |
+| 类型 |
+| --- |
+| Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; |
 
 **示例**
 
@@ -2435,21 +2465,21 @@ Get image information from image source.
 
 **起始版本：** 23
 
-<!--Device-ImageSource-getImageInfo(index?: int): Promise<ImageInfo | undefined>--><!--Device-ImageSource-getImageInfo(index?: int): Promise<ImageInfo | undefined>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 否 | Sequence number of an image. If this parameter is not specified, the default value 0 is used. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined&gt; | A Promise instance used to return the image information. |
+| 类型 |
+| --- |
+| Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined & gt; |
 
 **示例**
 
@@ -2469,21 +2499,21 @@ getImageInfoSync(index?: int): ImageInfo
 
 **起始版本：** 12
 
-<!--Device-ImageSource-getImageInfoSync(index?: int): ImageInfo--><!--Device-ImageSource-getImageInfoSync(index?: int): ImageInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 否 | 创建ImageSource时的序号。默认值为0，表示第一张图片。当取值为N时，表示第N+1张图片。单帧图片场景中index取值只能为0，动图等多帧图片场景中index的取值范围为： [0, (帧数-1)]。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageInfo](arkts-image-image-imageinfo-i.md) | 同步返回获取到的图片信息。 |
+| 类型 |
+| --- |
+| [ImageInfo](arkts-image-image-imageinfo-i.md) |
 
 **示例**
 
@@ -2554,21 +2584,21 @@ Get image information from image source synchronously.
 
 **起始版本：** 23
 
-<!--Device-ImageSource-getImageInfoSync(index?: int): ImageInfo | undefined--><!--Device-ImageSource-getImageInfoSync(index?: int): ImageInfo | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 否 | Index of sequence image. If this parameter is specified, default value is 0 <br>The value range is all integers. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined | The image information. |
+| 类型 |
+| --- |
+| [ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined |
 
 **示例**
 
@@ -2584,31 +2614,31 @@ getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|
 
 **起始版本：** 12
 
-<!--Device-ImageSource-getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|null>>--><!--Device-ImageSource-getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|null>>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | Array&lt;[PropertyKey](arkts-image-image-propertykey-e.md)&gt; | 是 | 图片属性名的数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | Array&lt;[PropertyKey](arkts-image-image-propertykey-e.md)&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Record&lt;[PropertyKey](arkts-image-image-propertykey-e.md), string \| null&gt;&gt; | Promise对象，返回图片属性值，如获取失败则返回null。 |
+| 类型 |
+| --- |
+| Promise&lt;Record&lt;[PropertyKey](arkts-image-image-propertykey-e.md), string \| null & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed; |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980110](../errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [62980096](../errorcode-image.md#62980096-操作失败) |
+| [62980110](../errorcode-image.md#62980110-图片源数据错误) |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) |
+| [62980116](../errorcode-image.md#62980116-解码失败) |
 
 **示例**
 
@@ -2657,30 +2687,30 @@ Obtains the value of properties in an image. This method uses a promise to retur
 
 **起始版本：** 23
 
-<!--Device-ImageSource-getImageProperties(key: Array<PropertyKey>): Promise<Record<string, string|null>>--><!--Device-ImageSource-getImageProperties(key: Array<PropertyKey>): Promise<Record<string, string|null>>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | Array&lt;[PropertyKey](arkts-image-image-propertykey-e.md)&gt; | 是 | Name of the properties whose value is to be obtained. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | Array&lt;[PropertyKey](arkts-image-image-propertykey-e.md)&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Array of Records instance used to return the property values. If the operation fails, the null is returned. |
+| 类型 |
+| --- |
+| Promise & lt;Record & lt;string, string \ | null & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980110](../errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
+| 错误码ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-操作失败) |
+| [62980110](../errorcode-image.md#62980110-图片源数据错误) |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) |
+| [62980116](../errorcode-image.md#62980116-解码失败) |
 
 **示例**
 
@@ -2694,41 +2724,41 @@ getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<stri
 
 获取图片中给定索引处图像的指定属性键的值。使用Promise异步回调。该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;、WEBP&lt;sup&gt;23+&lt;/sup&gt;和DNG&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ImageSource-getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<string>--><!--Device-ImageSource-getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<string>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | [PropertyKey](arkts-image-image-propertykey-e.md) | 是 | 图片属性名。 |
-| options | [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md) | 否 | 图片属性，包括图片序号与默认属性值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | [PropertyKey](arkts-image-image-propertykey-e.md) | 是 |
+| options | [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回图片属性值，如获取失败则返回属性默认值。 |
+| 类型 |
+| --- |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types;3.Parameter verification failed; |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
-| [62980110](../errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
-| [62980112](../errorcode-image.md#62980112-图片格式不匹配) | The image format does not match. |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
-| [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
-| [62980123](../errorcode-image.md#62980123-图片不支持exif解码) | The image does not support EXIF decoding. |
-| [62980135](../errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [62980096](../errorcode-image.md#62980096-操作失败) |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) |
+| [62980110](../errorcode-image.md#62980110-图片源数据错误) |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) |
+| [62980112](../errorcode-image.md#62980112-图片格式不匹配) |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980118](../errorcode-image.md#62980118-创建插件失败) |
+| [62980122](../errorcode-image.md#62980122-解码图片头异常) |
+| [62980123](../errorcode-image.md#62980123-图片不支持exif解码) |
+| [62980135](../errorcode-image.md#62980135-图片属性值无效) |
 
 **示例**
 
@@ -2819,26 +2849,26 @@ getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 11
 
 **替代接口：** [getImageProperty](#getimageproperty)(key: PropertyKey, options?: ImagePropertyOptions)
-
-<!--Device-ImageSource-getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>--><!--Device-ImageSource-getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | string | 是 | 图片属性名。 |
-| options | [GetImagePropertyOptions](arkts-image-image-getimagepropertyoptions-i.md) | 否 | 图片属性，包括图片序号与默认属性值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | string | 是 |
+| options | [GetImagePropertyOptions](arkts-image-image-getimagepropertyoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回图片属性值，如获取失败则返回属性默认值。 |
+| 类型 |
+| --- |
+| Promise & lt;string & gt; |
 
 **示例**
 
@@ -2859,20 +2889,20 @@ getImageProperty(key: string, callback: AsyncCallback<string>): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 11
 
 **替代接口：** [getImageProperty](#getimageproperty)(key: PropertyKey, options?: ImagePropertyOptions)
-
-<!--Device-ImageSource-getImageProperty(key: string, callback: AsyncCallback<string>): void--><!--Device-ImageSource-getImageProperty(key: string, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | string | 是 | 图片属性名。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，当获取图片属性值成功，err为undefined，data为获取到的图片属性值；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | string | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
 
 **示例**
 
@@ -2893,21 +2923,21 @@ getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncC
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 11
 
 **替代接口：** [getImageProperty](#getimageproperty)(key: PropertyKey, options?: ImagePropertyOptions)
-
-<!--Device-ImageSource-getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void--><!--Device-ImageSource-getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | string | 是 | 图片属性名。 |
-| options | [GetImagePropertyOptions](arkts-image-image-getimagepropertyoptions-i.md) | 是 | 图片属性，包括图片序号与默认属性值。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，当获取图片属性值成功，err为undefined，data为获取到的图片属性值；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | string | 是 |
+| options | [GetImagePropertyOptions](arkts-image-image-getimagepropertyoptions-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
 
 **示例**
 
@@ -2929,29 +2959,29 @@ getImagePropertySync(key: PropertyKey): string
 
 **起始版本：** 20
 
-<!--Device-ImageSource-getImagePropertySync(key: PropertyKey): string--><!--Device-ImageSource-getImagePropertySync(key: PropertyKey): string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | [PropertyKey](arkts-image-image-propertykey-e.md) | 是 | 图片属性名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | [PropertyKey](arkts-image-image-propertykey-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回图片Exif中指定属性键的值（如获取失败则返回属性默认值），各个数据值作用请参考[PropertyKey]{ |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. For example, key is not supported. |
+| 错误码ID |
+| --- |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
+| [7700202](../errorcode-image.md#7700202-不支持的元数据) |
 
 **示例**
 
@@ -2993,29 +3023,29 @@ Obtains the value of a property in the image.
 
 **起始版本：** 23
 
-<!--Device-ImageSource-getImagePropertySync(key: PropertyKey): string | undefined--><!--Device-ImageSource-getImagePropertySync(key: PropertyKey): string | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | [PropertyKey](arkts-image-image-propertykey-e.md) | 是 | Property name. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | [PropertyKey](arkts-image-image-propertykey-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string \| undefined | Value of the property. |
+| 类型 |
+| --- |
+| string \| undefined |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. For example, key is not supported. |
+| 错误码ID |
+| --- |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
+| [7700202](../errorcode-image.md#7700202-不支持的元数据) |
 
 **示例**
 
@@ -3036,30 +3066,30 @@ modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 
 **起始版本：** 12
 
-<!--Device-ImageSource-modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>--><!--Device-ImageSource-modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| records | Record&lt;[PropertyKey](arkts-image-image-propertykey-e.md), string \| null&gt; | 是 | 包含图片属性名和属性值的数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| records | Record&lt;[PropertyKey](arkts-image-image-propertykey-e.md), string \| null & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed; |
-| [62980123](../errorcode-image.md#62980123-图片不支持exif解码) | The image does not support EXIF decoding. |
-| [62980135](../errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
-| [62980146](../errorcode-image.md#62980146-图片属性值写入文件失败) | The EXIF data failed to be written to the file. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [62980123](../errorcode-image.md#62980123-图片不支持exif解码) |
+| [62980135](../errorcode-image.md#62980135-图片属性值无效) |
+| [62980146](../errorcode-image.md#62980146-图片属性值写入文件失败) |
 
 **示例**
 
@@ -3112,29 +3142,29 @@ Modify the value of properties in an image with the specified keys.
 
 **起始版本：** 23
 
-<!--Device-ImageSource-modifyImageProperties(records: Record<string, string|null>): Promise<void>--><!--Device-ImageSource-modifyImageProperties(records: Record<string, string|null>): Promise<void>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | 是 | Array of the property Records whose values are to be modified. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| records | Record & lt;string, string \ | null & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [62980123](../errorcode-image.md#62980123-图片不支持exif解码) | The image does not support EXIF decoding. |
-| [62980135](../errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
-| [62980146](../errorcode-image.md#62980146-图片属性值写入文件失败) | The EXIF data failed to be written to the file. |
+| 错误码ID |
+| --- |
+| [62980123](../errorcode-image.md#62980123-图片不支持exif解码) |
+| [62980135](../errorcode-image.md#62980135-图片属性值无效) |
+| [62980146](../errorcode-image.md#62980146-图片属性值写入文件失败) |
 
 **示例**
 
@@ -3157,31 +3187,31 @@ modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<v
 > - 支持修改JPEG、PNG、HEIF和WEBP文件类型的图片属性，图片需要包含Exif信息。&gt;
 > - 调用modifyImagePropertiesEnhanced接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-ImageSource-modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<void>--><!--Device-ImageSource-modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | 是 | 包含图片属性名和属性值的键值对集合。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| records | Record & lt;string, string \ | null & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
-| [7700304](../errorcode-image.md#7700304-图片信息写入文件失败) | Failed to write image properties to the file. |
+| 错误码ID |
+| --- |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
+| [7700202](../errorcode-image.md#7700202-不支持的元数据) |
+| [7700304](../errorcode-image.md#7700304-图片信息写入文件失败) |
 
 **示例**
 
@@ -3241,34 +3271,34 @@ modifyImageProperty(key: PropertyKey, value: string): Promise<void>
 > ImageSource不支持调用此接口，请改用fd或path创建的ImageSource。&gt;
 > - 调用modifyImageProperty接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ImageSource-modifyImageProperty(key: PropertyKey, value: string): Promise<void>--><!--Device-ImageSource-modifyImageProperty(key: PropertyKey, value: string): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | [PropertyKey](arkts-image-image-propertykey-e.md) | 是 | 图片属性名。 |
-| value | string | 是 | 属性值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | [PropertyKey](arkts-image-image-propertykey-e.md) | 是 |
+| value | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; |
-| [62980123](../errorcode-image.md#62980123-图片不支持exif解码) | The image does not support EXIF decoding. |
-| [62980133](../errorcode-image.md#62980133-图片属性赋值超出范围) | The EXIF data is out of range. |
-| [62980135](../errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
-| [62980146](../errorcode-image.md#62980146-图片属性值写入文件失败) | The EXIF data failed to be written to the file. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [62980123](../errorcode-image.md#62980123-图片不支持exif解码) |
+| [62980133](../errorcode-image.md#62980133-图片属性赋值超出范围) |
+| [62980135](../errorcode-image.md#62980135-图片属性值无效) |
+| [62980146](../errorcode-image.md#62980146-图片属性值写入文件失败) |
 
 **示例**
 
@@ -3353,26 +3383,26 @@ modifyImageProperty(key: string, value: string): Promise<void>
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 11
 
 **替代接口：** [modifyImageProperty](#modifyimageproperty)(key: PropertyKey, value: string)
-
-<!--Device-ImageSource-modifyImageProperty(key: string, value: string): Promise<void>--><!--Device-ImageSource-modifyImageProperty(key: string, value: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | string | 是 | 图片属性名。 |
-| value | string | 是 | 属性值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | string | 是 |
+| value | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
@@ -3395,21 +3425,21 @@ modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): 
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 11
 
 **替代接口：** [modifyImageProperty](#modifyimageproperty)(key: PropertyKey, value: string)
-
-<!--Device-ImageSource-modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-ImageSource-modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | string | 是 | 图片属性名。 |
-| value | string | 是 | 属性值。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当修改图片属性值成功，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | string | 是 |
+| value | string | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **示例**
 
@@ -3417,6 +3447,12 @@ modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): 
 
 ## readImageMetadata
 
+ArkTS-Dyn:
+```TypeScript
+readImageMetadata(propertyKeys?: string[], index?: number): Promise<ImageMetadata>
+```
+
+ArkTS-Sta:
 ```TypeScript
 readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>
 ```
@@ -3446,32 +3482,32 @@ readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-ImageSource-readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>--><!--Device-ImageSource-readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| propertyKeys | string[] | 否 | 图片属性名的数组。若未指定propertyKeys，则返回所有支持的元数据。 |
-| index | int | 否 | 感兴趣的索引，默认值为0。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| propertyKeys | string[] | 否 |
+| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[ImageMetadata](arkts-image-image-imagemetadata-i.md)&gt; | Promise对象，返回ImageMetadata对象，其中含有图片属性名对应的metadata对象，通过ImageMetadata中的metadata对 象可以获取图片属性值。 |
+| 类型 |
+| --- |
+| Promise&lt;[ImageMetadata](arkts-image-image-imagemetadata-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. |
-| [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter. Possible causes: 1. The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
+| 错误码ID |
+| --- |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
+| [7700202](../errorcode-image.md#7700202-不支持的元数据) |
+| [7700204](../errorcode-image.md#7700204-无效参数) |
 
 **示例**
 
@@ -3529,6 +3565,12 @@ async function exifMetadataGetProperties(context: common.UIAbilityContext) {
 
 ## readImageMetadataByType
 
+ArkTS-Dyn:
+```TypeScript
+readImageMetadataByType(metadataTypes?: MetadataType[], index?: number): Promise<ImageMetadata>
+```
+
+ArkTS-Sta:
 ```TypeScript
 readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<ImageMetadata>
 ```
@@ -3551,32 +3593,32 @@ readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<Im
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-ImageSource-readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<ImageMetadata>--><!--Device-ImageSource-readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<ImageMetadata>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| metadataTypes | [MetadataType](arkts-image-image-metadatatype-e.md)[] | 否 | 元数据类型的数组。当该参数缺省时，获取全部支持的元数据。 |
-| index | int | 否 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| metadataTypes | [MetadataType](arkts-image-image-metadatatype-e.md)[] | 否 |
+| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[ImageMetadata](arkts-image-image-imagemetadata-i.md)&gt; | Promise对象。返回的ImageMetadata对象中含有对应的metadata对象，通过ImageMetadata中的metadata对象可以获取图 片属性值。 |
+| 类型 |
+| --- |
+| Promise&lt;[ImageMetadata](arkts-image-image-imagemetadata-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. |
-| [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter. Possible causes: 1.The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
+| 错误码ID |
+| --- |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
+| [7700202](../errorcode-image.md#7700202-不支持的元数据) |
+| [7700204](../errorcode-image.md#7700204-无效参数) |
 
 **示例**
 
@@ -3624,17 +3666,17 @@ release(callback: AsyncCallback<void>): void
 
 释放ImageSource实例。使用callback异步回调。由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用该方法，及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-ImageSource-release(callback: AsyncCallback<void>): void--><!--Device-ImageSource-release(callback: AsyncCallback<void>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当资源释放成功，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **示例**
 
@@ -4071,17 +4113,17 @@ release(): Promise<void>
 
 释放ImageSource实例。使用Promise异步回调。由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用该方法，及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-ImageSource-release(): Promise<void>--><!--Device-ImageSource-release(): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
@@ -4089,32 +4131,38 @@ release(): Promise<void>
 
 ## updateData
 
+ArkTS-Dyn:
+```TypeScript
+updateData(buf: ArrayBuffer, isFinished: boolean, offset: number, length: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 updateData(buf: ArrayBuffer, isFinished: boolean, offset: int, length: int): Promise<void>
 ```
 
 更新增量数据。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ImageSource-updateData(buf: ArrayBuffer, isFinished: boolean, offset: int, length: int): Promise<void>--><!--Device-ImageSource-updateData(buf: ArrayBuffer, isFinished: boolean, offset: int, length: int): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buf | ArrayBuffer | 是 | 存放增量数据的buffer。 |
-| isFinished | boolean | 是 | true表示数据更新完成，当前buffer内存放最后一段数据；false表示数据还未更新完成，需要继续更新。 |
-| offset | int | 是 | 即当前buffer中的数据首地址，相对于整个图片文件首地址的偏移量。单位：字节（Byte）。<br>**起始版本：** 11 |
-| length | int | 是 | 当前buffer的长度。单位：字节（Byte）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buf | ArrayBuffer | 是 |
+| isFinished | boolean | 是 |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| length | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
@@ -4184,6 +4232,18 @@ function UpdateDataFunc(imageSource: image.ImageSource): void {
 
 ## updateData
 
+ArkTS-Dyn:
+```TypeScript
+updateData(
+      buf: ArrayBuffer,
+      isFinished: boolean,
+      offset: number,
+      length: number,
+      callback: AsyncCallback<void>
+    ): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 updateData(
       buf: ArrayBuffer,
@@ -4196,21 +4256,21 @@ updateData(
 
 更新增量数据。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ImageSource-updateData(      buf: ArrayBuffer,      isFinished: boolean,      offset: int,      length: int,      callback: AsyncCallback<void>    ): void--><!--Device-ImageSource-updateData(      buf: ArrayBuffer,      isFinished: boolean,      offset: int,      length: int,      callback: AsyncCallback<void>    ): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buf | ArrayBuffer | 是 | 存放增量数据的buffer。 |
-| isFinished | boolean | 是 | true表示数据更新完成，当前buffer内存放最后一段数据；false表示数据还未更新完成，需要继续更新。 |
-| offset | int | 是 | 即当前buffer中的数据首地址，相对于整个图片文件首地址的偏移量。单位：字节（Byte）。<br>**起始版本：** 11 |
-| length | int | 是 | 当前buffer的长度。单位：字节（Byte）。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当更新增量数据成功，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buf | ArrayBuffer | 是 |
+| isFinished | boolean | 是 |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| length | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **示例**
 
@@ -4237,31 +4297,31 @@ writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-ImageSource-writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>--><!--Device-ImageSource-writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| imageMetadata | [ImageMetadata](arkts-image-image-imagemetadata-i.md) | 是 | 图像的元数据集。若imageMetadata中的属性值都为空，则清空所有Exif元数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| imageMetadata | [ImageMetadata](arkts-image-image-imagemetadata-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. |
-| [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter. Possible causes: The imageSource object is released. |
+| 错误码ID |
+| --- |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
+| [7700202](../errorcode-image.md#7700202-不支持的元数据) |
+| [7700204](../errorcode-image.md#7700204-无效参数) |
 
 **示例**
 
@@ -4328,9 +4388,8 @@ readonly supportedFormats: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-ImageSource-readonly supportedFormats: Array<string>--><!--Device-ImageSource-readonly supportedFormats: Array<string>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
-

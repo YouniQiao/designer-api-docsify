@@ -25,19 +25,18 @@ function registerFont(options: FontOptions): void
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 18
 
 **替代接口：** registerFont
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-font-function registerFont(options: FontOptions): void--><!--Device-font-function registerFont(options: FontOptions): void-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [FontOptions](arkts-arkui-font-fontoptions-i.md) | 是 | 注册的自定义字体信息。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [FontOptions](arkts-arkui-font-fontoptions-i.md) | 是 |

@@ -8,13 +8,12 @@ Declaration of the image item.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-unnamed-export type EditableTitleBarItem = EditableTitleBarMenuItem--><!--Device-unnamed-export type EditableTitleBarItem = EditableTitleBarMenuItem-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [EditableTitleBarMenuItem](../../apis-default/arkts-apis/arkts-arkui-advanced-editabletitlebar-editabletitlebarmenuitem-c.md)
-
+**Property type:** [EditableTitleBarMenuItem](arkts-arkui-arkui-advanced-editabletitlebar-editabletitlebarmenuitem-c.md)

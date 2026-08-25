@@ -16,17 +16,17 @@ Terminates a continuous task in the task pool. It is called after the continuous
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-taskpool-function terminateTask(longTask: LongTask): void--><!--Device-taskpool-function terminateTask(longTask: LongTask): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| longTask | [LongTask](arkts-arkts-taskpool-longtask-c.md) | Yes | Continuous task to terminate. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| longTask | [LongTask](arkts-arkts-taskpool-longtask-c.md) | Yes |
 
 **Examples**
 
@@ -51,4 +51,3 @@ function concurrentFunc() {
 
 concurrentFunc();
 ```
-

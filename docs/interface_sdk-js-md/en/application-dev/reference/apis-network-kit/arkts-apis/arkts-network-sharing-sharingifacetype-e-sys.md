@@ -2,9 +2,9 @@
 
 Enumerates the network sharing types of an NIC.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-sharing-export enum SharingIfaceType--><!--Device-sharing-export enum SharingIfaceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
@@ -18,9 +18,9 @@ SHARING_WIFI = 0
 
 Wi-Fi hotspot sharing.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SharingIfaceType-SHARING_WIFI = 0--><!--Device-SharingIfaceType-SHARING_WIFI = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
@@ -34,9 +34,9 @@ SHARING_USB = 1
 
 USB sharing.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SharingIfaceType-SHARING_USB = 1--><!--Device-SharingIfaceType-SHARING_USB = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
@@ -50,11 +50,10 @@ SHARING_BLUETOOTH = 2
 
 Bluetooth sharing.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SharingIfaceType-SHARING_BLUETOOTH = 2--><!--Device-SharingIfaceType-SHARING_BLUETOOTH = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
-

@@ -8,18 +8,17 @@ declare type VisibleAreaChangeCallback = (isExpanding: boolean, currentRatio: nu
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-unnamed-declare type VisibleAreaChangeCallback = (isExpanding: boolean, currentRatio: number) => void--><!--Device-unnamed-declare type VisibleAreaChangeCallback = (isExpanding: boolean, currentRatio: number) => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isExpanding | boolean | 是 | 视组件的可见面积与自身面积的比值与上一次回调相比的情况而定，比值变大为true，比值变小为false。 |
-| currentRatio | number | 是 | 触发回调时，组件可见面积与自身面积的比值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| isExpanding | boolean | 是 |
+| currentRatio | number | 是 |

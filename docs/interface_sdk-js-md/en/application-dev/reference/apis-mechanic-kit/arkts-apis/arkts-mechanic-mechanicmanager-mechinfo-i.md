@@ -2,9 +2,9 @@
 
 Mechanical device information.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-mechanicManager-export interface MechInfo--><!--Device-mechanicManager-export interface MechInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -24,9 +24,9 @@ Type of the mechanical device.
 
 **Type:** [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-MechInfo-mechDeviceType: MechDeviceType--><!--Device-MechInfo-mechDeviceType: MechDeviceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -38,11 +38,11 @@ mechId: int
 
 ID of the mechanical device.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-MechInfo-mechId: int--><!--Device-MechInfo-mechId: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -56,9 +56,8 @@ Name of the mechanical device.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-MechInfo-mechName: string--><!--Device-MechInfo-mechName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
-

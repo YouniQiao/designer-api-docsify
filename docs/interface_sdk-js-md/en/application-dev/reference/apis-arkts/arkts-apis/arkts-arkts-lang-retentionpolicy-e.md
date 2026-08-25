@@ -4,7 +4,7 @@ Enum for Retention annotation field type.
 
 **Since:** 24
 
-<!--Device-unnamed-export const enum RetentionPolicy--><!--Device-unnamed-export const enum RetentionPolicy-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -18,9 +18,9 @@ Enumerated value, which is used to identify source annotations.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-RetentionPolicy-SOURCE = 'source'--><!--Device-RetentionPolicy-SOURCE = 'source'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -34,9 +34,8 @@ Enumerated value, which is used to identify bytecode annotations.
 
 **Since:** 24
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RetentionPolicy-BYTECODE = 'bytecode'--><!--Device-RetentionPolicy-BYTECODE = 'bytecode'-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

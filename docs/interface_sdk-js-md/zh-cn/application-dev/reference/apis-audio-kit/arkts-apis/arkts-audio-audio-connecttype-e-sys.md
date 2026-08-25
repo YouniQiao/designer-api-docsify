@@ -2,9 +2,9 @@
 
 枚举，设备连接类型。@enum { int }
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-audio-enum ConnectType--><!--Device-audio-enum ConnectType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -18,9 +18,9 @@ CONNECT_TYPE_LOCAL = 1
 
 本地设备。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ConnectType-CONNECT_TYPE_LOCAL = 1--><!--Device-ConnectType-CONNECT_TYPE_LOCAL = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -34,11 +34,10 @@ CONNECT_TYPE_DISTRIBUTED = 2
 
 分布式设备。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ConnectType-CONNECT_TYPE_DISTRIBUTED = 2--><!--Device-ConnectType-CONNECT_TYPE_DISTRIBUTED = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
-

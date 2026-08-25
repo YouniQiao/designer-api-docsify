@@ -4,7 +4,7 @@ Enumerates the types of data sent from **PickerController** to the **PhotoPicker
 
 **Since:** 12
 
-<!--Device-unnamed-export declare enum DataType--><!--Device-unnamed-export declare enum DataType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ Sends a list of selected items to instruct the **PhotoPickerComponent** to refre
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-DataType-SET_SELECTED_URIS = 1--><!--Device-DataType-SET_SELECTED_URIS = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,9 @@ Sends the selected album to instruct the **PhotoPickerComponent** to refresh the
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-DataType-SET_ALBUM_URI = 2--><!--Device-DataType-SET_ALBUM_URI = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,9 +50,9 @@ Sends the URI of the selected file and the index of the selected **PhotoPickerCo
 
 **Since:** 21
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.1.0.
 
-<!--Device-DataType-SET_SELECTED_INFO = 3--><!--Device-DataType-SET_SELECTED_INFO = 3-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -62,13 +62,13 @@ Sends the URI of the selected file and the index of the selected **PhotoPickerCo
 SET_BADGE_CONFIGS = 4
 ```
 
-Sends the badge configurations, which are of the [badgeConfig](../../apis-default/arkts-apis/arkts-file-photopickercomponent-badgeconfig-c.md) type and include a list of data with badge types and corresponding file URIs. Once configured, the badge of the configured type is displayed in the specified file.
+Sends the badge configurations, which are of the [badgeConfig](arkts-medialibrary-file-photopickercomponent-badgeconfig-c.md) type and include a list of data with badge types and corresponding file URIs. Once configured, the badge of the configured type is displayed in the specified file.
 
 **Since:** 21
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.1.0.
 
-<!--Device-DataType-SET_BADGE_CONFIGS = 4--><!--Device-DataType-SET_BADGE_CONFIGS = 4-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -78,15 +78,14 @@ Sends the badge configurations, which are of the [badgeConfig](../../apis-defaul
 SET_ITEM_CLICK_RESULT = 5
 ```
 
-Result of the click, which is of the [ClickResult](../../apis-default/arkts-apis/arkts-file-photopickercomponent-clickresult-c.md) type.
+Result of the click, which is of the [ClickResult](arkts-medialibrary-file-photopickercomponent-clickresult-c.md) type.
 
 **Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-DataType-SET_ITEM_CLICK_RESULT = 5--><!--Device-DataType-SET_ITEM_CLICK_RESULT = 5-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

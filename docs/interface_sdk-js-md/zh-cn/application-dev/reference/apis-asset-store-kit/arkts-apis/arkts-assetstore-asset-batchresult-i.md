@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-asset-interface BatchResult--><!--Device-asset-interface BatchResult-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -26,7 +26,7 @@ failedCount: number
 
 **起始版本：** 26.0.0
 
-<!--Device-BatchResult-failedCount: number--><!--Device-BatchResult-failedCount: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -42,7 +42,6 @@ failedErrorInfos: Array<BatchErrInfo>
 
 **起始版本：** 26.0.0
 
-<!--Device-BatchResult-failedErrorInfos: Array<BatchErrInfo>--><!--Device-BatchResult-failedErrorInfos: Array<BatchErrInfo>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Asset
-

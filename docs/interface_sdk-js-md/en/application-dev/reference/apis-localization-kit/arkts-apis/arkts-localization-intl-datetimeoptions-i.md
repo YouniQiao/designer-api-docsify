@@ -1,12 +1,14 @@
 # DateTimeOptions
 
-Defines the options for a DateTimeOptions object. Since API version 9, the DateTimeOptions attribute is changed from mandatory to optional.
+Defines the options for a **DateTimeOptions** object. Since API version 9, the **DateTimeOptions** attribute is changed from mandatory to optional.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-intl-export interface DateTimeOptions--><!--Device-intl-export interface DateTimeOptions-End-->
+**Deprecated since:** 20
+
+**Substitutes:** [Intl.DateTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options)
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -22,15 +24,21 @@ import { intl } from '@kit.LocalizationKit';
 dateStyle?: string
 ```
 
-Date display format. The value can be: "long", "short", "medium", "full", or "auto".
+Date display format. The value can be:"long", "short", "medium", "full", or  "auto".For details about their display effects, see [Table 1](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-DateTimeOptions-dateStyle?: string--><!--Device-DateTimeOptions-dateStyle?: string-End-->
+**Deprecated since:** 20
+
+**Substitutes:** [Intl.DateTimeFormatOptions.dateStyle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#datestyle)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -40,15 +48,21 @@ Date display format. The value can be: "long", "short", "medium", "full", or "au
 day?: string
 ```
 
-Day display format. The value can be: "numeric" or "2-digit".
+Day display format. The value can be:"numeric" or  "2-digit".
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-DateTimeOptions-day?: string--><!--Device-DateTimeOptions-day?: string-End-->
+**Deprecated since:** 20
+
+**Substitutes:** [Intl.DateTimeFormatOptions.day](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#day)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -58,15 +72,21 @@ Day display format. The value can be: "numeric" or "2-digit".
 dayPeriod?: string
 ```
 
-Time period display format. The value can be: "long", "short", "narrow", or "auto".
+Time period display format. The value can be:"long", "short", "narrow", or  "auto".For details about their display effects, see [Table 10](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-DateTimeOptions-dayPeriod?: string--><!--Device-DateTimeOptions-dayPeriod?: string-End-->
+**Deprecated since:** 20
+
+**Substitutes:** [Intl.DateTimeFormatOptions.dayPeriod](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#dayperiod)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -76,15 +96,21 @@ Time period display format. The value can be: "long", "short", "narrow", or "aut
 era?: string
 ```
 
-Epoch display format. The value can be: "long", "short", "narrow", or "auto".
+Epoch display format. The value can be:"long", "short", "narrow", or  "auto".For details about their display effects, see [Table 9](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-DateTimeOptions-era?: string--><!--Device-DateTimeOptions-era?: string-End-->
+**Deprecated since:** 20
+
+**Substitutes:** [Intl.DateTimeFormatOptions.era](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#era)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -94,15 +120,22 @@ Epoch display format. The value can be: "long", "short", "narrow", or "auto".
 formatMatcher?: string
 ```
 
-Format matching algorithm. The value can be:"basic": exact match."best fit": best match.
+Format matching algorithm. The value can be:  
+- "basic": exact match. - "best fit": best match.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-DateTimeOptions-formatMatcher?: string--><!--Device-DateTimeOptions-formatMatcher?: string-End-->
+**Deprecated since:** 20
+
+**Substitutes:** [Intl.DateTimeFormatOptions.formatMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#formatmatcher)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -112,15 +145,21 @@ Format matching algorithm. The value can be:"basic": exact match."best fit": bes
 hour?: string
 ```
 
-Hour display format. The value can be: "numeric" or "2-digit".
+Hour display format. The value can be:"numeric" or  "2-digit".
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-DateTimeOptions-hour?: string--><!--Device-DateTimeOptions-hour?: string-End-->
+**Deprecated since:** 20
+
+**Substitutes:** [Intl.DateTimeFormatOptions.hour](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#hour)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -130,15 +169,21 @@ Hour display format. The value can be: "numeric" or "2-digit".
 hour12?: boolean
 ```
 
-Whether to use the 12-hour clock. The value true means to use the 12-hour clock, and the value false means the opposite. If both hour12 and hourCycle are set, hourCycle does not take effect. If hour12 and hourCycle are not set and the 24-hour clock is turned on, the default value of hour12 is false.
+Whether to use the 12-hour clock. The value **true** means to use the 12-hour clock, and the value **false** means the opposite.If both **hour12** and **hourCycle** are set, **hourCycle** does not take effect.If **hour12** and **hourCycle** are not set and the 24-hour clock is turned on, the default value of **hour12** is **false**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-DateTimeOptions-hour12?: boolean--><!--Device-DateTimeOptions-hour12?: boolean-End-->
+**Deprecated since:** 20
+
+**Substitutes:** [Intl.DateTimeFormatOptions.hour12](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#hour12)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -148,15 +193,21 @@ Whether to use the 12-hour clock. The value true means to use the 12-hour clock,
 hourCycle?: string
 ```
 
-Hour cycle. The value can be: "h11", "h12", "h23", or "h24".
+Hour cycle. The value can be:"h11", "h12", "h23", or  "h24".For the display effects when **dateStyle** or **timeStyle** is not set, see [Table 5](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).For the display effects when **dateStyle** or **timeStyle** is not set, see [Table 6](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-DateTimeOptions-hourCycle?: string--><!--Device-DateTimeOptions-hourCycle?: string-End-->
+**Deprecated since:** 20
+
+**Substitutes:** [Intl.DateTimeFormatOptions.hourCycle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#hourcycle)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -166,15 +217,19 @@ Hour cycle. The value can be: "h11", "h12", "h23", or "h24".
 locale?: string
 ```
 
-Valid locale ID, for example, "zh-Hans-CN". The default value is the current system locale.
+Valid locale ID, for example, **zh-Hans-CN**.The default value is the current system locale.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-DateTimeOptions-locale?: string--><!--Device-DateTimeOptions-locale?: string-End-->
+**Deprecated since:** 20
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -184,15 +239,22 @@ Valid locale ID, for example, "zh-Hans-CN". The default value is the current sys
 localeMatcher?: string
 ```
 
-Locale matching algorithm. The value can be:"lookup": exact match."best fit": best match.
+Locale matching algorithm. The value can be:  
+- "lookup": exact match. - "best fit": best match.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-DateTimeOptions-localeMatcher?: string--><!--Device-DateTimeOptions-localeMatcher?: string-End-->
+**Deprecated since:** 20
+
+**Substitutes:** [Intl.DateTimeFormatOptions.localeMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#localematcher)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -202,15 +264,21 @@ Locale matching algorithm. The value can be:"lookup": exact match."best fit": be
 minute?: string
 ```
 
-Minute display format. The value can be: "numeric" or "2-digit".
+Minute display format. The value can be:"numeric" or  "2-digit".
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-DateTimeOptions-minute?: string--><!--Device-DateTimeOptions-minute?: string-End-->
+**Deprecated since:** 20
+
+**Substitutes:** [Intl.DateTimeFormatOptions.minute](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#minute)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -220,15 +288,21 @@ Minute display format. The value can be: "numeric" or "2-digit".
 month?: string
 ```
 
-Month display format. The value can be: "numeric", "2-digit", "long", "short", "narrow", or "auto".
+Month display format. The value can be:"numeric", "2-digit", "long", "short", "narrow", or  "auto".For details about their display effects, see [Table 7](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-DateTimeOptions-month?: string--><!--Device-DateTimeOptions-month?: string-End-->
+**Deprecated since:** 20
+
+**Substitutes:** [Intl.DateTimeFormatOptions.month](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#month)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -238,15 +312,22 @@ Month display format. The value can be: "numeric", "2-digit", "long", "short", "
 numberingSystem?: string
 ```
 
-Numbering system. The value can be: "adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks","brah", "cakm", "cham", "deva", "diak", "fullwide", "gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp","java", "kali", "khmr", "knda", "lana", "lanatham", "laoo", "latn", "lepc", "limb", "mathbold", "mathdbl","mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong", "mroo", "mtei", "mymr", "mymrshan", "mymrtlng","newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment", "shrd", "sind", "sinh", "sora", "sund","takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii", "wara", or "wcho".
+Numbering system. The value can be:  
+**adlm**, **ahom**, **arab**, **arabext**, **bali**, **beng**, **bhks**, **brah**, **cakm**, **cham**, **deva**, **diak**, **fullwide**, **gong**, **gonm**, **gujr**, **guru**, **hanidec**, **hmng**, **hmnp**, **java**, **kali**, **khmr**, **knda**, **lana**, **lanatham**, **laoo**, **latn**, **lepc**, **limb**, **mathbold**, **mathdbl**, **mathmono**, **mathsanb**, **mathsans**, **mlym**, **modi**, **mong**, **mroo**, **mtei**, **mymr**, **mymrshan**, **mymrtlng**, **newa**, **nkoo**, **olck**, **orya**, **osma**, **rohg**, **saur**, **segment**, **shrd**, **sind**, **sinh**, **sora**, **sund**, **takr**, **talu**, **tamldec**, **telu**, **thai**, **tibt**, **tirh**, **vaii**, **wara**, or **wcho**.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-DateTimeOptions-numberingSystem?: string--><!--Device-DateTimeOptions-numberingSystem?: string-End-->
+**Deprecated since:** 20
+
+**Substitutes:** [Intl.DateTimeFormatOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#numberingsystem)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -256,15 +337,21 @@ Numbering system. The value can be: "adlm", "ahom", "arab", "arabext", "bali", "
 second?: string
 ```
 
-Second display format. The value can be: "numeric" or "2-digit".
+Second display format. The value can be:"numeric" or  "2-digit".
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-DateTimeOptions-second?: string--><!--Device-DateTimeOptions-second?: string-End-->
+**Deprecated since:** 20
+
+**Substitutes:** [Intl.DateTimeFormatOptions.second](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#second)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -274,15 +361,21 @@ Second display format. The value can be: "numeric" or "2-digit".
 timeStyle?: string
 ```
 
-Time display format. The value can be: "long", "short", "medium", "full", or "auto".
+Time display format. The value can be:"long", "short", "medium", "full", or  "auto".For details about their display effects, see [Table 2](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-DateTimeOptions-timeStyle?: string--><!--Device-DateTimeOptions-timeStyle?: string-End-->
+**Deprecated since:** 20
+
+**Substitutes:** [Intl.DateTimeFormatOptions.timeStyle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#timestyle)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -296,11 +389,17 @@ Time zone in use. The value is a valid IANA time zone ID.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-DateTimeOptions-timeZone?: string--><!--Device-DateTimeOptions-timeZone?: string-End-->
+**Deprecated since:** 20
+
+**Substitutes:** [Intl.DateTimeFormatOptions.timeZone](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#timezone)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -310,15 +409,21 @@ Time zone in use. The value is a valid IANA time zone ID.
 timeZoneName?: string
 ```
 
-Localized representation of a time zone name. The value can be: "long", "short", or "auto".
+Localized representation of a time zone name. The value can be:"long", "short", or  "auto".For details about their display effects, see [Table 8](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-DateTimeOptions-timeZoneName?: string--><!--Device-DateTimeOptions-timeZoneName?: string-End-->
+**Deprecated since:** 20
+
+**Substitutes:** [Intl.DateTimeFormatOptions.timeZoneName](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#timezonename)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -328,15 +433,21 @@ Localized representation of a time zone name. The value can be: "long", "short",
 weekday?: string
 ```
 
-Week display format. The value can be: "long", "short", "narrow", or "auto".
+Week display format. The value can be:"long", "short", "narrow", or  "auto".For details about their display effects, see [Table 4](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-DateTimeOptions-weekday?: string--><!--Device-DateTimeOptions-weekday?: string-End-->
+**Deprecated since:** 20
+
+**Substitutes:** [Intl.DateTimeFormatOptions.weekday](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#weekday)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -346,15 +457,20 @@ Week display format. The value can be: "long", "short", "narrow", or "auto".
 year?: string
 ```
 
-Year display format. The value can be: "numeric" or "2-digit".
+Year display format. The value can be:"numeric" or  "2-digit".For details about their display effects, see [Table 3](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-DateTimeOptions-year?: string--><!--Device-DateTimeOptions-year?: string-End-->
+**Deprecated since:** 20
+
+**Substitutes:** [Intl.DateTimeFormatOptions.year](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#year)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.Global.I18n
-

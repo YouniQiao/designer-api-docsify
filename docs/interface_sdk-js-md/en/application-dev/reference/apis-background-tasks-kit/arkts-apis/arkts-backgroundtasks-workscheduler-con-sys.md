@@ -10,9 +10,9 @@ Whether the requested task is executed immediately.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-workScheduler-const EXECUTE_IMMEDIATE: string--><!--Device-workScheduler-const EXECUTE_IMMEDIATE: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -28,11 +28,10 @@ The last condition met when the current task is triggered.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-workScheduler-const WORK_SCHEDULER_CONDITION: string--><!--Device-workScheduler-const WORK_SCHEDULER_CONDITION: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 **System API:** This is a system API.
-

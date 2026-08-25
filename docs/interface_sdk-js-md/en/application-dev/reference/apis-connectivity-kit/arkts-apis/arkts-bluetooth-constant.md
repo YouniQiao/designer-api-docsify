@@ -2,9 +2,9 @@
 
 The definition of constant.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-unnamed-declare namespace constant--><!--Device-unnamed-declare namespace constant-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -18,19 +18,18 @@ import { constant } from '@kit.ConnectivityKit';
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [MajorClass](arkts-connectivity-constant-majorclass-e.md) | The enum of major class of a bluetooth device. |
-| [MajorMinorClass](arkts-connectivity-constant-majorminorclass-e.md) | The enum of major minor class of a bluetooth device. |
-| [ProfileConnectionState](arkts-connectivity-constant-profileconnectionstate-e.md) | The enum of profile connection state. |
-| [ProfileId](arkts-connectivity-constant-profileid-e.md) | The enum of profile id. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [MajorClass](arkts-connectivity-constant-majorclass-e.md) |
+| [MajorMinorClass](arkts-connectivity-constant-majorminorclass-e.md) |
+| [ProfileConnectionState](arkts-connectivity-constant-profileconnectionstate-e.md) |
+| [ProfileId](arkts-connectivity-constant-profileid-e.md) |
+| [ProfileUuids](arkts-connectivity-constant-profileuuids-e.md) |
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [AccessAuthorization](arkts-connectivity-constant-accessauthorization-e-sys.md) | Enum for the PBAP or MAP access authorization. |
-| [ProfileUuids](arkts-connectivity-constant-profileuuids-e-sys.md) | Enum for the profile's uuid |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AccessAuthorization](arkts-connectivity-constant-accessauthorization-e-sys.md) |
 <!--DelEnd-->
-

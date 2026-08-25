@@ -2,9 +2,9 @@
 
 Enumerates text normalization modes.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-i18n-export enum NormalizerMode--><!--Device-i18n-export enum NormalizerMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -16,11 +16,11 @@ NFC = 1
 
 Normalization form C, characters are decomposed and then re-composed by canonical equivalence
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NormalizerMode-NFC = 1--><!--Device-NormalizerMode-NFC = 1-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -32,11 +32,11 @@ NFD = 2
 
 Normalization form D, characters are decomposed by canonical equivalence
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NormalizerMode-NFD = 2--><!--Device-NormalizerMode-NFD = 2-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -48,11 +48,11 @@ NFKC = 3
 
 Normalization form KC, characters are decomposed by compatibility, then re-composed by canonical equivalence
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NormalizerMode-NFKC = 3--><!--Device-NormalizerMode-NFKC = 3-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -64,11 +64,10 @@ NFKD = 4
 
 Normalization form KD, characters are decomposed by compatibility
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-NormalizerMode-NFKD = 4--><!--Device-NormalizerMode-NFKD = 4-End-->
-
 **System capability:** SystemCapability.Global.I18n
-

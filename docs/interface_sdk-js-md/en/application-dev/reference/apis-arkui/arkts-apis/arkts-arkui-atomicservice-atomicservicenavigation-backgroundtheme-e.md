@@ -4,7 +4,7 @@ Enumerates the navigation bar background themes.
 
 **Since:** 18
 
-<!--Device-unnamed-export declare enum BackgroundTheme--><!--Device-unnamed-export declare enum BackgroundTheme-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ Dark theme.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-BackgroundTheme-DARK = 1--><!--Device-BackgroundTheme-DARK = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,9 @@ Light theme.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-BackgroundTheme-LIGHT = 2--><!--Device-BackgroundTheme-LIGHT = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,9 +50,8 @@ Light gray theme, with the color value of #F1F3F5.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-BackgroundTheme-DEFAULT = 3--><!--Device-BackgroundTheme-DEFAULT = 3-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

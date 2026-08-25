@@ -2,9 +2,9 @@
 
 Provides methods for setting the answering mode of incoming and outgoing calls.@namespace phone
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-settings-namespace phone--><!--Device-settings-namespace phone-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -18,7 +18,6 @@ import { settings } from '@kit.BasicServicesKit';
 
 ### Constants
 
-| Name | Description |
-| --- | --- |
-| [RTT_CALLING_STATUS](arkts-basicservices-phone-con.md#rtt_calling_status) | Specifies whether real-time text (RTT) calling is enabled. If enabled, incoming and outgoing calls are answered as RTT calls when supported by the device and carrier. If the value is {@code 1}, RTT calling is enabled. If the value is {@code 0}, RTT calling is disabled. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [RTT_CALLING_STATUS](arkts-basicservices-phone-con.md#rtt_calling_status) |

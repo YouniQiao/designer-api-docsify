@@ -16,23 +16,23 @@ Allocates a new FastBuffer for a fixed size bytes. The FastBuffer will not be in
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-fastbuffer-function allocUninitializedFromPool(size: number): FastBuffer--><!--Device-fastbuffer-function allocUninitializedFromPool(size: number): FastBuffer-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | number | Yes | The desired size (in bytes) of the new FastBuffer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| size | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Return a new allocated FastBuffer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
 
 **Examples**
 
@@ -43,4 +43,3 @@ let buf = fastbuffer.allocUninitializedFromPool(10);
 buf.fill(0);
 // "buf":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ```
-

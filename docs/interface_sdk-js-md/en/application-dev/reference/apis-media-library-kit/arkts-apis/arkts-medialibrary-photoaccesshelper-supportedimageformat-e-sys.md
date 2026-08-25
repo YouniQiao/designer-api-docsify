@@ -2,9 +2,9 @@
 
 Enumerates the supported image formats.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-photoAccessHelper-enum SupportedImageFormat--><!--Device-photoAccessHelper-enum SupportedImageFormat-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,11 +18,10 @@ AVFILE_FORMAT_JPG = 'jpg'
 
 jpg format
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-SupportedImageFormat-AVFILE_FORMAT_JPG = 'jpg'--><!--Device-SupportedImageFormat-AVFILE_FORMAT_JPG = 'jpg'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

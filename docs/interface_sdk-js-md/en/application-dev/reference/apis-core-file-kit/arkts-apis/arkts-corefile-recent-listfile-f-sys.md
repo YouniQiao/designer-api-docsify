@@ -16,13 +16,13 @@ Lists the files that are accessed recently.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-recent-function listFile(): Array<FileInfo>--><!--Device-recent-function listFile(): Array<FileInfo>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -30,17 +30,17 @@ Lists the files that are accessed recently.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;FileInfo&gt; | Returns the next level FileInfo Object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;FileInfo & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900002 | No such file or directory |
-| 13900020 | Invalid argument |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900002 |
+| 13900020 |
+| 13900042 |
 
 **Examples**
 
@@ -56,4 +56,3 @@ for(let i = 0; i < fileinfos.length; i++){
   console.info('ctime: ' + fileinfos[i].ctime);
 }
 ```
-

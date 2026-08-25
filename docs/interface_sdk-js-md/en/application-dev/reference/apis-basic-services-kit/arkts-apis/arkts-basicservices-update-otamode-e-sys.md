@@ -2,9 +2,9 @@
 
 Enumerates the update modes.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-update-export enum OtaMode--><!--Device-update-export enum OtaMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -18,9 +18,9 @@ REGULAR_OTA = 0
 
 Regular OTA. In this mode, download the complete upgrade package to the local device and then install the package. This mode applies to most regular upgrade scenarios.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-OtaMode-REGULAR_OTA = 0--><!--Device-OtaMode-REGULAR_OTA = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -34,9 +34,9 @@ STREAM_OTA = 1
 
 Streaming OTA. In this mode, the upgrade is performed while the package is being downloaded. This mode applies to scenarios where the storage space is limited or a quick upgrade is required. For details, see Upgrading Service Terms
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-OtaMode-STREAM_OTA = 1--><!--Device-OtaMode-STREAM_OTA = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -50,9 +50,9 @@ AB_REGULAR_OTA = 2
 
 Regular A/B OTA. This mode applies to devices with A/B partitions. For details, see Upgrading Service Terms
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-OtaMode-AB_REGULAR_OTA = 2--><!--Device-OtaMode-AB_REGULAR_OTA = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -66,11 +66,10 @@ AB_STREAM_OTA = 3
 
 Streaming A/B OTA. This mode applies to devices with A/B partitions. For details, see Upgrading Service Terms
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-OtaMode-AB_STREAM_OTA = 3--><!--Device-OtaMode-AB_STREAM_OTA = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
-

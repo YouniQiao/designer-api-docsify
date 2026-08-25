@@ -16,27 +16,27 @@ function isFeatureSupported(featureId: number): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [isFeatureSupported](arkts-connectivity-wifimanager-isfeaturesupported-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
-<!--Device-wifi-function isFeatureSupported(featureId: number): boolean--><!--Device-wifi-function isFeatureSupported(featureId: number): boolean-End-->
-
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| featureId | number | 是 | 特性ID值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| featureId | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true:支持，false:不支持。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -51,4 +51,3 @@ try {
   console.error("failed:" + JSON.stringify(error));
 }
 ```
-

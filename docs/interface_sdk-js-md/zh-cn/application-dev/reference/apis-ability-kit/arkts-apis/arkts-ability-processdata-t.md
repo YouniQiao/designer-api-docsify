@@ -8,7 +8,7 @@ export type ProcessData = _ProcessData.default
 
 **起始版本：** 14
 
-<!--Device-unnamed-export type ProcessData = _ProcessData.default--><!--Device-unnamed-export type ProcessData = _ProcessData.default-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -86,4 +86,3 @@ class ApplicationStateObserverCustom implements appManager.ApplicationStateObser
 let applicationStateObserver = new ApplicationStateObserverCustom();
 let observerCode = appManager.onApplicationStateChange(applicationStateObserver);
 ```
-

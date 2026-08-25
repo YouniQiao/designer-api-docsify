@@ -9,18 +9,18 @@ import { statistics } from '@kit.NetworkKit';
 ## getMonthTrafficStats
 
 ```TypeScript
-function getMonthTrafficStats(simId: int): Promise<long>
+function getMonthTrafficStats(simId: number): Promise<number>
 ```
 
 获取蜂窝实时下行流量，使用 callback 异步回调。
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **需要权限：** ohos.permission.GET_NETWORK_STATS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-statistics-function getMonthTrafficStats(simId: int): Promise<long>--><!--Device-statistics-function getMonthTrafficStats(simId: int): Promise<long>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -28,22 +28,21 @@ function getMonthTrafficStats(simId: int): Promise<long>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| simId | int | 是 | The id of the specified sim card. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| simId | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;long&gt; | The statistics of the simId in this month. |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Nonsystem applications use system APIs. |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |

@@ -1,10 +1,6 @@
 # NewableFunction
 
-**Inheritance/Implementation:** NewableFunction extends [Function](arkts-lib-es5-function-i.md)
-
-**Since:** -1
-
-<!--Device-unnamed-interface NewableFunction--><!--Device-unnamed-interface NewableFunction-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -19,16 +15,14 @@ apply<T>(this: new () => T, thisArg: T): void
 
 Calls the function with the specified object as the this value and the elements of specified array as the arguments.
 
-**Since:** -1
-
-<!--Device-NewableFunction-apply<T>(this: new () => T, thisArg: T): void--><!--Device-NewableFunction-apply<T>(this: new () => T, thisArg: T): void-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| this | new () =&gt; T | Yes |  |
-| thisArg | T | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| this | new () = & gt; T | Yes |
+| thisArg | T | Yes |
 
 ## apply
 
@@ -36,17 +30,15 @@ Calls the function with the specified object as the this value and the elements 
 apply<T, A extends any[]>(this: new (...args: A) => T, thisArg: T, args: A): void
 ```
 
-**Since:** -1
-
-<!--Device-NewableFunction-apply<T, A extends any[]>(this: new (...args: A) => T, thisArg: T, args: A): void--><!--Device-NewableFunction-apply<T, A extends any[]>(this: new (...args: A) => T, thisArg: T, args: A): void-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| this | new (...args: A) =&gt; T | Yes |  |
-| thisArg | T | Yes |  |
-| args | A | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| this | new (...args: A) = & gt; T | Yes |
+| thisArg | T | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | A | Yes |
 
 ## bind
 
@@ -56,137 +48,125 @@ bind<T>(this: T, thisArg: any): T
 
 For a given function, creates a bound function that has the same body as the original function. The this object of the bound function is associated with the specified object, and has the specified initial parameters.
 
-**Since:** -1
-
-<!--Device-NewableFunction-bind<T>(this: T, thisArg: any): T--><!--Device-NewableFunction-bind<T>(this: T, thisArg: any): T-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| this | T | Yes |  |
-| thisArg | any | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| this | T | Yes |
+| thisArg | any | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## bind
 
 ```TypeScript
 bind<A0, A extends any[], R>(this: new (arg0: A0, ...args: A) => R, thisArg: any, arg0: A0): new (...args: A) => R
 ```
 
-**Since:** -1
-
-<!--Device-NewableFunction-bind<A0, A extends any[], R>(this: new (arg0: A0, ...args: A) => R, thisArg: any, arg0: A0): new (...args: A) => R--><!--Device-NewableFunction-bind<A0, A extends any[], R>(this: new (arg0: A0, ...args: A) => R, thisArg: any, arg0: A0): new (...args: A) => R-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| this | new (arg0: A0, ...args: A) =&gt; R | Yes |  |
-| thisArg | any | Yes |  |
-| arg0 | A0 | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| this | new (arg0: A0, ...args: A) = & gt; R | Yes |
+| thisArg | any | Yes |
+| arg0 | A0 | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## bind
 
 ```TypeScript
 bind<A0, A1, A extends any[], R>(this: new (arg0: A0, arg1: A1, ...args: A) => R, thisArg: any, arg0: A0, arg1: A1): new (...args: A) => R
 ```
 
-**Since:** -1
-
-<!--Device-NewableFunction-bind<A0, A1, A extends any[], R>(this: new (arg0: A0, arg1: A1, ...args: A) => R, thisArg: any, arg0: A0, arg1: A1): new (...args: A) => R--><!--Device-NewableFunction-bind<A0, A1, A extends any[], R>(this: new (arg0: A0, arg1: A1, ...args: A) => R, thisArg: any, arg0: A0, arg1: A1): new (...args: A) => R-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| this | new (arg0: A0, arg1: A1, ...args: A) =&gt; R | Yes |  |
-| thisArg | any | Yes |  |
-| arg0 | A0 | Yes |  |
-| arg1 | A1 | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| this | new (arg0: A0, arg1: A1, ...args: A) = & gt; R | Yes |
+| thisArg | any | Yes |
+| arg0 | A0 | Yes |
+| arg1 | A1 | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## bind
 
 ```TypeScript
 bind<A0, A1, A2, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2, ...args: A) => R, thisArg: any, arg0: A0, arg1: A1, arg2: A2): new (...args: A) => R
 ```
 
-**Since:** -1
-
-<!--Device-NewableFunction-bind<A0, A1, A2, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2, ...args: A) => R, thisArg: any, arg0: A0, arg1: A1, arg2: A2): new (...args: A) => R--><!--Device-NewableFunction-bind<A0, A1, A2, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2, ...args: A) => R, thisArg: any, arg0: A0, arg1: A1, arg2: A2): new (...args: A) => R-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| this | new (arg0: A0, arg1: A1, arg2: A2, ...args: A) =&gt; R | Yes |  |
-| thisArg | any | Yes |  |
-| arg0 | A0 | Yes |  |
-| arg1 | A1 | Yes |  |
-| arg2 | A2 | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| this | new (arg0: A0, arg1: A1, arg2: A2, ...args: A) = & gt; R | Yes |
+| thisArg | any | Yes |
+| arg0 | A0 | Yes |
+| arg1 | A1 | Yes |
+| arg2 | A2 | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## bind
 
 ```TypeScript
 bind<A0, A1, A2, A3, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) => R, thisArg: any, arg0: A0, arg1: A1, arg2: A2, arg3: A3): new (...args: A) => R
 ```
 
-**Since:** -1
-
-<!--Device-NewableFunction-bind<A0, A1, A2, A3, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) => R, thisArg: any, arg0: A0, arg1: A1, arg2: A2, arg3: A3): new (...args: A) => R--><!--Device-NewableFunction-bind<A0, A1, A2, A3, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) => R, thisArg: any, arg0: A0, arg1: A1, arg2: A2, arg3: A3): new (...args: A) => R-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| this | new (arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) =&gt; R | Yes |  |
-| thisArg | any | Yes |  |
-| arg0 | A0 | Yes |  |
-| arg1 | A1 | Yes |  |
-| arg2 | A2 | Yes |  |
-| arg3 | A3 | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| this | new (arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) = & gt; R | Yes |
+| thisArg | any | Yes |
+| arg0 | A0 | Yes |
+| arg1 | A1 | Yes |
+| arg2 | A2 | Yes |
+| arg3 | A3 | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## bind
 
 ```TypeScript
 bind<AX, R>(this: new (...args: AX[]) => R, thisArg: any, ...args: AX[]): new (...args: AX[]) => R
 ```
 
-**Since:** -1
-
-<!--Device-NewableFunction-bind<AX, R>(this: new (...args: AX[]) => R, thisArg: any, ...args: AX[]): new (...args: AX[]) => R--><!--Device-NewableFunction-bind<AX, R>(this: new (...args: AX[]) => R, thisArg: any, ...args: AX[]): new (...args: AX[]) => R-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| this | new (...args: AX[]) =&gt; R | Yes |  |
-| thisArg | any | Yes |  |
-| args | AX[] | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| this | new (...args: AX[]) = & gt; R | Yes |
+| thisArg | any | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | AX[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## call
 
 ```TypeScript
@@ -195,15 +175,12 @@ call<T, A extends any[]>(this: new (...args: A) => T, thisArg: T, ...args: A): v
 
 Calls the function with the specified object as the this value and the specified rest arguments as the arguments.
 
-**Since:** -1
-
-<!--Device-NewableFunction-call<T, A extends any[]>(this: new (...args: A) => T, thisArg: T, ...args: A): void--><!--Device-NewableFunction-call<T, A extends any[]>(this: new (...args: A) => T, thisArg: T, ...args: A): void-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| this | new (...args: A) =&gt; T | Yes |  |
-| thisArg | T | Yes |  |
-| args | A | Yes |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| this | new (...args: A) = & gt; T | Yes |
+| thisArg | T | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | A | Yes |

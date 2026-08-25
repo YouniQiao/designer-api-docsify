@@ -6,9 +6,8 @@ type UpdateCallback = () => void
 
 Callback to be invoked when the pasteboard content changes.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-pasteboard-type UpdateCallback = () => void--><!--Device-pasteboard-type UpdateCallback = () => void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
-

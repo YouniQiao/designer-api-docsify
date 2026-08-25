@@ -15,13 +15,13 @@ function registerMissionListener(listener: MissionListener): number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-**替代接口：** [on](arkts-ability-missionmanager-onmission-f-sys.md)
+**替代接口：** [on](arkts-ability-missionmanager-on-f-sys.md)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
-
-<!--Device-missionManager-function registerMissionListener(listener: MissionListener): number--><!--Device-missionManager-function registerMissionListener(listener: MissionListener): number-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -29,15 +29,15 @@ function registerMissionListener(listener: MissionListener): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| listener | [MissionListener](arkts-ability-missionlistener-i-sys.md) | 是 | 系统任务监听器。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| listener | [MissionListener](arkts-ability-missionlistener-i-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 监听器的index值，由系统创建，在注册系统任务状态监听器时分配，和监听器一一对应 。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -70,4 +70,3 @@ let listenerId = missionManager.registerMissionListener({
   }
 });
 ```
-

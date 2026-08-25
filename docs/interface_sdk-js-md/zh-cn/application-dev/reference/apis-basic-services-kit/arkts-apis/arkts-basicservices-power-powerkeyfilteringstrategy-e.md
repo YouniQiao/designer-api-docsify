@@ -2,9 +2,9 @@
 
 表示电源键过滤策略。
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-power-export enum PowerKeyFilteringStrategy--><!--Device-power-export enum PowerKeyFilteringStrategy-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
@@ -16,9 +16,9 @@ DISABLE_LONG_PRESS_FILTERING = 0
 
 表示禁用电源键长按事件的过滤策略，默认值。
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-PowerKeyFilteringStrategy-DISABLE_LONG_PRESS_FILTERING = 0--><!--Device-PowerKeyFilteringStrategy-DISABLE_LONG_PRESS_FILTERING = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
@@ -30,9 +30,8 @@ LONG_PRESS_FILTERING_ONCE = 1
 
 表示仅过滤当前电源键长按事件，下一次不过滤。
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-PowerKeyFilteringStrategy-LONG_PRESS_FILTERING_ONCE = 1--><!--Device-PowerKeyFilteringStrategy-LONG_PRESS_FILTERING_ONCE = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
-

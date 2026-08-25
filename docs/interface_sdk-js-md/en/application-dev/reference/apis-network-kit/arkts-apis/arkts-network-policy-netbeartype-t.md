@@ -8,9 +8,8 @@ Defines the network type.
 
 **Since:** 10
 
-<!--Device-policy-type NetBearType = connection.NetBearType--><!--Device-policy-type NetBearType = connection.NetBearType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Property type:** connection.NetBearType
-

@@ -16,11 +16,11 @@ Sets a value for the specified key.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** setSync
-
-<!--Device-systemParameter-function setSync(key: string, value: string): void--><!--Device-systemParameter-function setSync(key: string, value: string): void-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -28,10 +28,10 @@ Sets a value for the specified key.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Target key. |
-| value | string | Yes | Value to set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| value | string | Yes |
 
 **Examples**
 
@@ -42,4 +42,3 @@ try {
     console.error("set unexpected error: " + e);
 }
 ```
-

@@ -2,9 +2,9 @@
 
 Information about a running form.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-formInfo-interface FormProviderFilter--><!--Device-formInfo-interface FormProviderFilter-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -26,11 +26,11 @@ Obtains the ability name of the provider application module.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FormProviderFilter-abilityName ?: string--><!--Device-FormProviderFilter-abilityName ?: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -46,11 +46,11 @@ Obtains the bundle name of the provider application.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FormProviderFilter-bundleName: string--><!--Device-FormProviderFilter-bundleName: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -66,11 +66,11 @@ Obtains the form name of the provider application form.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FormProviderFilter-formName ?: string--><!--Device-FormProviderFilter-formName ?: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -88,11 +88,11 @@ Indicates whether to include unused form.
 
 **Default:** false
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FormProviderFilter-isUnusedIncluded?: boolean--><!--Device-FormProviderFilter-isUnusedIncluded?: boolean-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -108,13 +108,12 @@ Obtains the module name of the provider application module.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FormProviderFilter-moduleName ?: string--><!--Device-FormProviderFilter-moduleName ?: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
-

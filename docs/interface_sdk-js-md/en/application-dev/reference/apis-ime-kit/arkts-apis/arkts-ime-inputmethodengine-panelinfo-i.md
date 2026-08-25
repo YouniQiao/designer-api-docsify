@@ -2,9 +2,9 @@
 
 Describes the attributes of the input method panel.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-inputMethodEngine-export interface PanelInfo--><!--Device-inputMethodEngine-export interface PanelInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -26,9 +26,9 @@ State type of the panel.
 
 **Default:** FLG_FIXED
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-PanelInfo-flag?: PanelFlag--><!--Device-PanelInfo-flag?: PanelFlag-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -42,9 +42,8 @@ Type of the panel.
 
 **Type:** PanelType
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-PanelInfo-type: PanelType--><!--Device-PanelInfo-type: PanelType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

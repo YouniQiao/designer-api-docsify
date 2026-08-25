@@ -9,33 +9,37 @@ import { curves } from '@kit.ArkUI';
 ## cubicBezierCurve
 
 ```TypeScript
-export function cubicBezierCurve(x1: double, y1: double, x2: double, y2: double): ICurve
+function cubicBezierCurve(x1: number, y1: number, x2: number, y2: number): ICurve
 ```
 
-Creates a cubic Bezier curve. The curve values must be between 0 and 1.
+Creates a cubic Bezier curve, with x-coordinates automatically normalized between 0 and 1.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-curves-export function cubicBezierCurve(x1: double, y1: double, x2: double, y2: double): ICurve--><!--Device-curves-export function cubicBezierCurve(x1: double, y1: double, x2: double, y2: double): ICurve-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x1 | double | Yes | X coordinate of the first point on the Bezier curve.<br>Value range: [0, 1]. <p>**NOTE：**: <br>A value less than 0 is handed as **0**. A value greater than 1 is handed as **1**. </p> |
-| y1 | double | Yes | Y coordinate of the first point on the Bezier curve.<br>Value range: (-∞, +∞). |
-| x2 | double | Yes | X coordinate of the second point on the Bezier curve.<br>Value range: [0, 1]. <p>**NOTE：**: <br>A value less than 0 is handed as **0**. A value greater than 1 is handed as **1**. </p> |
-| y2 | double | Yes | Y coordinate of the second point on the Bezier curve.<br>Value range: (-∞, +∞). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x1 | number | Yes |
+| y1 | number | Yes |
+| x2 | number | Yes |
+| y2 | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ICurve | Interpolation curve. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ICurve](arkts-arkui-curves-icurve-i.md) |
 
+**Examples**
+
+```TypeScript
+import { curves } from '@kit.ArkUI';
+curves.cubicBezierCurve(0.1, 0.0, 0.1, 1.0) // Create a cubic Bézier curve.
+```

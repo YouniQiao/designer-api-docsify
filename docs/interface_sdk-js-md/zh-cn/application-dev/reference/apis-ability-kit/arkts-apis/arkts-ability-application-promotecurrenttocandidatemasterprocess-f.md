@@ -22,32 +22,32 @@ export function promoteCurrentToCandidateMasterProcess(insertToHead: boolean): P
 > 置isolationProcess字段为true。
 <!--DelEnd-->
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-application-export function promoteCurrentToCandidateMasterProcess(insertToHead: boolean): Promise<void>--><!--Device-application-export function promoteCurrentToCandidateMasterProcess(insertToHead: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| insertToHead | boolean | 是 | 表示是否将当前进程放入备选主控进程链表的表头。true表示放入表头，false表示放入表尾。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| insertToHead | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [16000115](../errorcode-ability.md#16000115-当前进程不支持设置为备选主控进程) | The current process cannot be set as a candidate master process. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [16000115](../errorcode-ability.md#16000115-当前进程不支持设置为备选主控进程) |
 
 **示例**
 
@@ -74,4 +74,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

@@ -1,84 +1,81 @@
 # DragSpringLoadingState
 
-Defines the drag spring loading state. Under default system configuration, if no CANCEL occurs, the state reporting is as follows: Hover still--500ms--&gt;BEGIN--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;END@enum { number }
+Enumerates hover detection states during drag operations. Under default system configuration, if no CANCEL occurs, the state reporting is as follows: Hover still--&gt;500ms--&gt;BEGIN--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;END
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-dragController-export const enum DragSpringLoadingState--><!--Device-dragController-export const enum DragSpringLoadingState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BEGIN
 
 ```TypeScript
-BEGIN = 0
+BEGIN
 ```
 
-The user has remained stationary for a period, initiating the spring loading process. This state allows for some preparatory operations during spring loading.
+Initial state when a dragged item enters the component boundary and remains stationary for the specified duration. This state enables preparation operations.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragSpringLoadingState-BEGIN = 0--><!--Device-DragSpringLoadingState-BEGIN = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## UPDATE
 
 ```TypeScript
-UPDATE = 1
+UPDATE
 ```
 
-Already in the spring loading state. The system periodically checks the user's hover status. If the user remains stationary, it triggers an UPDATE state notification at regular intervals. This state allows for UI effect refreshes to emphasize the hover state.
+Periodic notification state during sustained hover detection. In this state, periodic updates refresh UI effects to highlight the hover state.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragSpringLoadingState-UPDATE = 1--><!--Device-DragSpringLoadingState-UPDATE = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## END
 
 ```TypeScript
-END = 2
+END
 ```
 
-The entire spring loading state ends. The application can perform cleanup operations and execute navigation or view switching actions when this state occurs.
+Final state indicating completion of the hover detection cycle, which is triggered when the dragged item remains stationary after the last update notification. Hover detection will only restart after the dragged item exits and re-enters the component boundary or enters a child component. In this state, the application can perform cleanup, navigation, or view switching operations.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragSpringLoadingState-END = 2--><!--Device-DragSpringLoadingState-END = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CANCEL
 
 ```TypeScript
-CANCEL = 3
+CANCEL
 ```
 
-After entering the BEGIN state, if the user moves out of the component range, exceeds the displacement threshold, lifts the finger, or switches windows (pull out), the CANCEL state is triggered. The application should restore the UI style and cancel any pending navigation or view switching actions.
+Interruption state of hover detection triggered by termination events, which include the following: finger or mouse release, window switching, screen off, exiting the component boundary, entering child components, or exceeding the movement threshold within the component. The application will restore the UI style and cancel pending navigation and view switching operations.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragSpringLoadingState-CANCEL = 3--><!--Device-DragSpringLoadingState-CANCEL = 3-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

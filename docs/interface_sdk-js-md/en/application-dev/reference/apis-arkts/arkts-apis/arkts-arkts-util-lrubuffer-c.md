@@ -4,11 +4,11 @@ The LruBuffer algorithm replaces the least used data with new data when the buff
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [LRUCache](../../apis-default/arkts-apis/arkts-util-lrucache-c.md)
-
-<!--Device-util-class LruBuffer--><!--Device-util-class LruBuffer-End-->
+**Substitutes:** [LRUCache](arkts-arkts-util-lrucache-c.md)
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -28,19 +28,19 @@ Specifies the default iterator for an object.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** iterator]
-
-<!--Device-LruBuffer-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-LruBuffer-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;[K, V]&gt; | Returns a two - dimensional array in the form of key - value pairs. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;[K, V] & gt; |
 
 **Examples**
 
@@ -73,22 +73,22 @@ Performs subsequent operations after a value is removed.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [afterRemoval](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#afterremoval)
-
-<!--Device-LruBuffer-afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void--><!--Device-LruBuffer-afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void-End-->
+**Substitutes:** [afterRemoval](arkts-arkts-util-lrucache-c.md#afterremoval)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isEvict | boolean | Yes | Whether the capacity is insufficient. If the value is **true**, this API is called due to insufficient capacity. |
-| key | K | Yes | Key removed. |
-| value | V | Yes | Value removed. |
-| newValue | V | Yes | New value for the key if the **put()** method is called and the key to be added already exists. In other cases, this parameter is left blank. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| isEvict | boolean | Yes |
+| key | K | Yes |
+| value | V | Yes |
+| newValue | V | Yes |
 
 **Examples**
 
@@ -125,11 +125,11 @@ Clears key-value pairs from this cache. The **afterRemoval()** API will be calle
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [clear](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#clear)
-
-<!--Device-LruBuffer-clear(): void--><!--Device-LruBuffer-clear(): void-End-->
+**Substitutes:** [clear](arkts-arkts-util-lrucache-c.md#clear)
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -164,19 +164,19 @@ A constructor used to create a **LruBuffer** instance. The default capacity of t
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** constructor
-
-<!--Device-LruBuffer-constructor(capacity?: number)--><!--Device-LruBuffer-constructor(capacity?: number)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| capacity | number | No | Capacity of the cache to create. The default value is **64**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| capacity | number | No |
 
 **Examples**
 
@@ -296,25 +296,25 @@ Checks whether this cache contains the specified key.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [contains](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#contains)
-
-<!--Device-LruBuffer-contains(key: K): boolean--><!--Device-LruBuffer-contains(key: K): boolean-End-->
+**Substitutes:** [contains](arkts-arkts-util-lrucache-c.md#contains)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | K | Yes | Key to check. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** is returned if the cache contains the specified key; otherwise, **false** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -468,25 +468,25 @@ Creates a value if the value of the specified key is not available.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [createDefault](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#createdefault)
-
-<!--Device-LruBuffer-createDefault(key: K): V--><!--Device-LruBuffer-createDefault(key: K): V-End-->
+**Substitutes:** [createDefault](arkts-arkts-util-lrucache-c.md#createdefault)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | K | Yes | Key of which the value is missing. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| V | Value of the key. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| V |
 
 **Examples**
 
@@ -512,19 +512,19 @@ Obtains a new iterator object that contains all key-value pairs in this object.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [entries](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#entries)
-
-<!--Device-LruBuffer-entries(): IterableIterator<[K, V]>--><!--Device-LruBuffer-entries(): IterableIterator<[K, V]>-End-->
+**Substitutes:** [entries](arkts-arkts-util-lrucache-c.md#entries)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;[K, V]&gt; | Iterable array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;[K, V] & gt; |
 
 **Examples**
 
@@ -557,25 +557,25 @@ Obtains the value of the specified key.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [get](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#get)
-
-<!--Device-LruBuffer-get(key: K): V | undefined--><!--Device-LruBuffer-get(key: K): V | undefined-End-->
+**Substitutes:** [get](arkts-arkts-util-lrucache-c.md#get)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | K | Yes | Key based on which the value is queried. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| V \| undefined | Value of the key. If no match is found, **undefined** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| V \| undefined |
 
 **Examples**
 
@@ -605,19 +605,19 @@ Obtains the capacity of this cache.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [getCapacity](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#getcapacity)
-
-<!--Device-LruBuffer-getCapacity(): number--><!--Device-LruBuffer-getCapacity(): number-End-->
+**Substitutes:** [getCapacity](arkts-arkts-util-lrucache-c.md#getcapacity)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Capacity of the cache. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -645,19 +645,19 @@ Obtains the number of return values for **createDefault()**.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [getCreateCount](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#getcreatecount)
-
-<!--Device-LruBuffer-getCreateCount(): number--><!--Device-LruBuffer-getCreateCount(): number-End-->
+**Substitutes:** [getCreateCount](arkts-arkts-util-lrucache-c.md#getcreatecount)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Number of return values for **createDefault()**. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -699,19 +699,19 @@ Obtains the number of times that the queried values are matched.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [getMatchCount](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#getmatchcount)
-
-<!--Device-LruBuffer-getMatchCount(): number--><!--Device-LruBuffer-getMatchCount(): number-End-->
+**Substitutes:** [getMatchCount](arkts-arkts-util-lrucache-c.md#getmatchcount)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Number of times that the queried values are matched. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -743,19 +743,19 @@ Obtains the number of times that the queried values are mismatched.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [getMissCount](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#getmisscount)
-
-<!--Device-LruBuffer-getMissCount(): number--><!--Device-LruBuffer-getMissCount(): number-End-->
+**Substitutes:** [getMissCount](arkts-arkts-util-lrucache-c.md#getmisscount)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Number of times that the queried values are mismatched. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -787,19 +787,19 @@ Obtains the number of additions to this cache.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [getPutCount](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#getputcount)
-
-<!--Device-LruBuffer-getPutCount(): number--><!--Device-LruBuffer-getPutCount(): number-End-->
+**Substitutes:** [getPutCount](arkts-arkts-util-lrucache-c.md#getputcount)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Number of additions to the cache. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -829,19 +829,19 @@ Obtains the number of removals from this cache.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [getRemovalCount](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#getremovalcount)
-
-<!--Device-LruBuffer-getRemovalCount(): number--><!--Device-LruBuffer-getRemovalCount(): number-End-->
+**Substitutes:** [getRemovalCount](arkts-arkts-util-lrucache-c.md#getremovalcount)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Number of removals from the cache. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -875,19 +875,19 @@ Checks whether this cache is empty.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [isEmpty](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#isempty)
-
-<!--Device-LruBuffer-isEmpty(): boolean--><!--Device-LruBuffer-isEmpty(): boolean-End-->
+**Substitutes:** [isEmpty](arkts-arkts-util-lrucache-c.md#isempty)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the cache does not contain any value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -917,19 +917,19 @@ Obtains all keys in this cache, listed from the most to the least recently acces
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [keys](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#keys)
-
-<!--Device-LruBuffer-keys(): K[]--><!--Device-LruBuffer-keys(): K[]-End-->
+**Substitutes:** [keys](arkts-arkts-util-lrucache-c.md#keys)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| K[] | All keys in the cache, listed from the most to the least recently accessed. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| K[] |
 
 **Examples**
 
@@ -969,26 +969,26 @@ Adds a key-value pair to this cache.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [put](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#put)
-
-<!--Device-LruBuffer-put(key: K, value: V): V--><!--Device-LruBuffer-put(key: K, value: V): V-End-->
+**Substitutes:** [put](arkts-arkts-util-lrucache-c.md#put)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | K | Yes | Key of the key-value pair to add. |
-| value | V | Yes | Value of the key-value pair to add. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
+| value | V | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| V | Value added. If the key already exists, the existing value is returned; if **null** is passed in for **key** or **value**, an error is thrown. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| V |
 
 **Examples**
 
@@ -1016,25 +1016,25 @@ Removes the specified key and its value from this cache.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [remove](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#remove)
-
-<!--Device-LruBuffer-remove(key: K): V | undefined--><!--Device-LruBuffer-remove(key: K): V | undefined-End-->
+**Substitutes:** [remove](arkts-arkts-util-lrucache-c.md#remove)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | K | Yes | Key to remove. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| V \| undefined | Optional** object containing the removed key-value pair. If the key does not exist, an empty **Optional** object is returned; if **null** is passed in for **key**, an error is thrown. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| V \| undefined |
 
 **Examples**
 
@@ -1064,19 +1064,19 @@ Obtains the string representation of this cache.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [toString](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#tostring)
-
-<!--Device-LruBuffer-toString(): string--><!--Device-LruBuffer-toString(): string-End-->
+**Substitutes:** [toString](arkts-arkts-util-lrucache-c.md#tostring)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | String representation of this cache. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -1184,19 +1184,19 @@ Changes the cache capacity. If the new capacity is less than or equal to **0**, 
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [updateCapacity](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#updatecapacity)
-
-<!--Device-LruBuffer-updateCapacity(newCapacity: number): void--><!--Device-LruBuffer-updateCapacity(newCapacity: number): void-End-->
+**Substitutes:** [updateCapacity](arkts-arkts-util-lrucache-c.md#updatecapacity)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| newCapacity | number | Yes | New capacity of the cache. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| newCapacity | number | Yes |
 
 **Examples**
 
@@ -1220,19 +1220,19 @@ Obtains all values in this cache, listed from the most to the least recently acc
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [values](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#values)
-
-<!--Device-LruBuffer-values(): V[]--><!--Device-LruBuffer-values(): V[]-End-->
+**Substitutes:** [values](arkts-arkts-util-lrucache-c.md#values)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| V[] | All values in the cache, listed from the most to the least recently accessed. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| V[] |
 
 **Examples**
 
@@ -1276,11 +1276,10 @@ Total number of values in this cache.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** length
 
-<!--Device-LruBuffer-length: number--><!--Device-LruBuffer-length: number-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

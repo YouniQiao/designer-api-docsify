@@ -4,7 +4,7 @@ Provides detailed information about intelligent tracking prevention, including t
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface IntelligentTrackingPreventionDetails--><!--Device-unnamed-declare interface IntelligentTrackingPreventionDetails-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -25,9 +25,9 @@ Host name.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-IntelligentTrackingPreventionDetails-host: string--><!--Device-IntelligentTrackingPreventionDetails-host: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -43,9 +43,8 @@ Host name of the tracker.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-IntelligentTrackingPreventionDetails-trackerHost: string--><!--Device-IntelligentTrackingPreventionDetails-trackerHost: string-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

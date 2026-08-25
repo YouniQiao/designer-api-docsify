@@ -2,9 +2,9 @@
 
 Defines the return value of the listener callback.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-photoAccessHelper-interface ChangeData--><!--Device-photoAccessHelper-interface ChangeData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -24,9 +24,9 @@ URIs of the changed files in the album. The value may be undefined. Check whethe
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ChangeData-extraUris: Array<string>--><!--Device-ChangeData-extraUris: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -40,9 +40,9 @@ Notification type.
 
 **Type:** NotifyType
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ChangeData-type: NotifyType--><!--Device-ChangeData-type: NotifyType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -56,9 +56,8 @@ All URIs with the same [NotifyType](arkts-medialibrary-photoaccesshelper-notifyt
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ChangeData-uris: Array<string>--><!--Device-ChangeData-uris: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

@@ -6,9 +6,9 @@ Typeface类用于表示和管理字体对象。支持的字体操作包括：获
 > - 本模块使用屏幕物理像素单位px。&gt;
 > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-drawing-class Typeface--><!--Device-drawing-class Typeface-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -28,15 +28,15 @@ getFamilyName(): string
 
 **起始版本：** 11
 
-<!--Device-Typeface-getFamilyName(): string--><!--Device-Typeface-getFamilyName(): string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回字体的族名，表示当前Typeface对象对应的字体设计名称。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -72,15 +72,15 @@ getFamilyName(): string | undefined
 
 **起始版本：** 23
 
-<!--Device-Typeface-getFamilyName(): string | undefined--><!--Device-Typeface-getFamilyName(): string | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string \| undefined | 返回字体的族名，表示当前Typeface对象对应的字体设计名称。创建失败时返回undefined。 |
+| 类型 |
+| --- |
+| string \| undefined |
 
 **示例**
 
@@ -96,15 +96,15 @@ isBold(): boolean
 
 **起始版本：** 23
 
-<!--Device-Typeface-isBold(): boolean--><!--Device-Typeface-isBold(): boolean-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回当前字体是否加粗。true表示字体加粗，false表示字体未加粗。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -126,15 +126,15 @@ isItalic(): boolean
 
 **起始版本：** 23
 
-<!--Device-Typeface-isItalic(): boolean--><!--Device-Typeface-isItalic(): boolean-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回当前字体是否为斜体。true表示字体为斜体，false表示字体非斜体。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -156,21 +156,21 @@ makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface
 
 **起始版本：** 20
 
-<!--Device-Typeface-makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface--><!--Device-Typeface-makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | 是 | 字体属性参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回基于当前字体结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
+| 类型 |
+| --- |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) |
 
 **示例**
 
@@ -236,21 +236,21 @@ makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface | undefined
 
 **起始版本：** 24
 
-<!--Device-Typeface-makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface | undefined--><!--Device-Typeface-makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | 是 | 字体属性参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | 返回基于当前字体结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
+| 类型 |
+| --- |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined |
 
 **示例**
 
@@ -266,29 +266,29 @@ static makeFromFile(filePath: string): Typeface
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Typeface-static makeFromFile(filePath: string): Typeface--><!--Device-Typeface-static makeFromFile(filePath: string): Typeface-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| filePath | string | 是 | 表示字体资源存放的路径。应用沙箱路径和真实物理路径的对应关系请参考 [应用沙箱路径和真实物理路径的对应关系](../../../file-management/app-sandbox-directory.md#应用沙箱路径和真实物理路径的对应关系)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| filePath | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回从指定字体文件加载的字体对象。 |
+| 类型 |
+| --- |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -346,27 +346,27 @@ static makeFromFile(filePath: string): Typeface | undefined
 
 **起始版本：** 23
 
-<!--Device-Typeface-static makeFromFile(filePath: string): Typeface | undefined--><!--Device-Typeface-static makeFromFile(filePath: string): Typeface | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| filePath | string | 是 | 表示字体资源存放的路径。应用沙箱路径和真实物理路径的对应关系请参考 [应用沙箱路径和真实物理路径的对应关系](../../../file-management/app-sandbox-directory.md#应用沙箱路径和真实物理路径的对应关系)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| filePath | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | 返回从指定字体文件加载的字体对象。创建失败时返回undefined。 |
+| 类型 |
+| --- |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -382,24 +382,24 @@ static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceAr
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-Typeface-static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceArguments): Typeface--><!--Device-Typeface-static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceArguments): Typeface-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| filePath | string | 是 | 表示字体资源存放的路径。应用沙箱路径和真实物理路径的对应关系请参考 [应用沙箱路径和真实物理路径的对应关系](../../../file-management/app-sandbox-directory.md#应用沙箱路径和真实物理路径的对应关系)。 |
-| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | 是 | 字体属性参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| filePath | string | 是 |
+| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回从指定字体文件加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
+| 类型 |
+| --- |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) |
 
 **示例**
 
@@ -459,22 +459,22 @@ static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceAr
 
 **起始版本：** 24
 
-<!--Device-Typeface-static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceArguments): Typeface | undefined--><!--Device-Typeface-static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceArguments): Typeface | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| filePath | string | 是 | 表示字体资源存放的路径。应用沙箱路径和真实物理路径的对应关系请参考 [应用沙箱路径和真实物理路径的对应关系](../../../file-management/app-sandbox-directory.md#应用沙箱路径和真实物理路径的对应关系)。 |
-| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | 是 | 字体属性参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| filePath | string | 是 |
+| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | 返回从指定字体文件加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
+| 类型 |
+| --- |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined |
 
 **示例**
 
@@ -490,23 +490,23 @@ static makeFromRawFile(rawfile: Resource): Typeface
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
-<!--Device-Typeface-static makeFromRawFile(rawfile: Resource): Typeface--><!--Device-Typeface-static makeFromRawFile(rawfile: Resource): Typeface-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rawfile | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 指定字体文件对应的资源对象。当前只支持``\\$rawfile``格式引用的资源对象，对应格式写为``\\$rawfile('filePath')``，其中filePath为 指定字体文件相对于工程中resources/rawfile目录的相对路径。如将字体文件直接存放在resources/rawfile目录下，则引用格式应写为：``\\$rawfile('HarmonyOS_Sans_Bold.ttf')``；也可以创建子目录，将字体文件存放在resources/rawfile/ttf下，则引用格式应写为：``\\$rawfile('ttf/ HarmonyOS_Sans_Bold.ttf')``。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| rawfile | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回从rawfile资源加载的字体对象（异常情况下会返回空指针）。 |
+| 类型 |
+| --- |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) |
 
 **示例**
 
@@ -562,21 +562,21 @@ static makeFromRawFile(rawfile: Resource): Typeface | undefined
 
 **起始版本：** 23
 
-<!--Device-Typeface-static makeFromRawFile(rawfile: Resource): Typeface | undefined--><!--Device-Typeface-static makeFromRawFile(rawfile: Resource): Typeface | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rawfile | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 指定字体文件对应的资源对象。当前只支持``\\$rawfile``格式引用的资源对象，对应格式写为``\\$rawfile('filePath')``，其中filePath为 指定字体文件相对于工程中resources/rawfile目录的相对路径。如将字体文件直接存放在resources/rawfile目录下，则引用格式应写为：``\\$rawfile('HarmonyOS_Sans_Bold.ttf')``；也可以创建子目录，将字体文件存放在resources/rawfile/ttf下，则引用格式应写为：``\\$rawfile('ttf/ HarmonyOS_Sans_Bold.ttf')``。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| rawfile | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | 返回从rawfile资源加载的字体对象（异常情况下会返回空指针）。 |
+| 类型 |
+| --- |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined |
 
 **示例**
 
@@ -592,24 +592,24 @@ static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: Typefa
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-Typeface-static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: TypefaceArguments): Typeface--><!--Device-Typeface-static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: TypefaceArguments): Typeface-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rawfile | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 指定字体文件对应的资源对象。当前只支持``\\$rawfile``格式引用的资源对象，传入非``\\$rawfile``格式的资源对象时返回空指针。对应格式写为``\\$ rawfile('filePath')``，其中filePath为指定字体文件相对于工程中resources/rawfile目录的相对路径。 |
-| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | 是 | 字体属性参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| rawfile | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
+| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回从rawfile资源加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
+| 类型 |
+| --- |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) |
 
 **示例**
 
@@ -669,24 +669,23 @@ static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: Typefa
 
 **起始版本：** 24
 
-<!--Device-Typeface-static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: TypefaceArguments): Typeface | undefined--><!--Device-Typeface-static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: TypefaceArguments): Typeface | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rawfile | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 指定字体文件对应的资源对象。当前只支持``\\$rawfile``格式引用的资源对象，传入非``\\$rawfile``格式的资源对象时返回空指针。对应格式写为``\\$ rawfile('filePath')``，其中filePath为指定字体文件相对于工程中resources/rawfile目录的相对路径。 |
-| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | 是 | 字体属性参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| rawfile | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
+| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | 返回从rawfile资源加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
+| 类型 |
+| --- |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined |
 
 **示例**
 
 参见 [makeFromRawFileWithArguments](#makefromrawfilewitharguments)
-

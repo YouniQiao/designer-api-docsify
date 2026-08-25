@@ -4,7 +4,7 @@ Enumerates the background network policies.
 
 **Since:** 10
 
-<!--Device-policy-export enum NetBackgroundPolicy--><!--Device-policy-export enum NetBackgroundPolicy-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -20,7 +20,7 @@ No background network policy is specified. This is the default value.
 
 **Since:** 10
 
-<!--Device-NetBackgroundPolicy-NET_BACKGROUND_POLICY_NONE = 0--><!--Device-NetBackgroundPolicy-NET_BACKGROUND_POLICY_NONE = 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -36,7 +36,7 @@ Background applications are allowed to access a metered network.
 
 **Since:** 10
 
-<!--Device-NetBackgroundPolicy-NET_BACKGROUND_POLICY_ENABLE = 1--><!--Device-NetBackgroundPolicy-NET_BACKGROUND_POLICY_ENABLE = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -52,7 +52,7 @@ Applications running in the background are not allowed to access a metered netwo
 
 **Since:** 10
 
-<!--Device-NetBackgroundPolicy-NET_BACKGROUND_POLICY_DISABLE = 2--><!--Device-NetBackgroundPolicy-NET_BACKGROUND_POLICY_DISABLE = 2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -68,9 +68,8 @@ Only applications on the allowlist are allowed to access metered networks when t
 
 **Since:** 10
 
-<!--Device-NetBackgroundPolicy-NET_BACKGROUND_POLICY_TRUSTLIST = 3--><!--Device-NetBackgroundPolicy-NET_BACKGROUND_POLICY_TRUSTLIST = 3-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
-

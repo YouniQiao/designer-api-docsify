@@ -2,9 +2,9 @@
 
 Defines a number mark.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-call-export interface NumberMarkInfo--><!--Device-call-export interface NumberMarkInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -27,9 +27,9 @@ Whether the number mark is from the cloud. The default value is **false**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NumberMarkInfo-isCloud?: boolean--><!--Device-NumberMarkInfo-isCloud?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -45,9 +45,9 @@ Mark content. When **markType** is set to **MARK_TYPE_ENTERPRISE**, the returned
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NumberMarkInfo-markContent?: string--><!--Device-NumberMarkInfo-markContent?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -61,11 +61,11 @@ markCount?: int
 
 Mark count.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NumberMarkInfo-markCount?: int--><!--Device-NumberMarkInfo-markCount?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -81,9 +81,9 @@ Mark details. When **markType** is set to **MARK_TYPE_ENTERPRISE**, the value of
 
 **Type:** string
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-NumberMarkInfo-markDetails?: string--><!--Device-NumberMarkInfo-markDetails?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -99,9 +99,9 @@ Mark source.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NumberMarkInfo-markSource?: string--><!--Device-NumberMarkInfo-markSource?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -117,11 +117,10 @@ Mark type.
 
 **Type:** [MarkType](arkts-telephony-call-marktype-e-sys.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NumberMarkInfo-markType: MarkType--><!--Device-NumberMarkInfo-markType: MarkType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
-

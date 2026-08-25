@@ -2,9 +2,9 @@
 
 窗口可见性状态枚举。
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-window-enum OcclusionState--><!--Device-window-enum OcclusionState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -16,9 +16,9 @@ NO_OCCLUSION = 0
 
 窗口完全可见（没有任何部分被其他非透明窗口遮挡）。
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-OcclusionState-NO_OCCLUSION = 0--><!--Device-OcclusionState-NO_OCCLUSION = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -30,9 +30,9 @@ PARTIAL_OCCLUSION = 1
 
 窗口部分可见（部分被其他非透明窗口遮挡）。
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-OcclusionState-PARTIAL_OCCLUSION = 1--><!--Device-OcclusionState-PARTIAL_OCCLUSION = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -44,9 +44,8 @@ FULL_OCCLUSION = 2
 
 窗口完全不可见（完全被其他非透明窗口遮挡，或窗口最小化，或窗口隐藏）。
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-OcclusionState-FULL_OCCLUSION = 2--><!--Device-OcclusionState-FULL_OCCLUSION = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
-

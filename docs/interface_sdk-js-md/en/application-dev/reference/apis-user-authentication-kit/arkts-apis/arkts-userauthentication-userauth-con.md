@@ -3,32 +3,31 @@
 ## MAX_ALLOWABLE_REUSE_DURATION
 
 ```TypeScript
-const MAX_ALLOWABLE_REUSE_DURATION: int
+const MAX_ALLOWABLE_REUSE_DURATION: 300000
 ```
 
-Maximum reuse duration of the authentication result, in milliseconds. The value is 300000. The value range is all integers.
+Maximum reuse duration of the authentication result, in milliseconds. The value is **300000** (5 minutes). This constant is used to limit the maximum duration for reusing an authentication result, preventing security risks caused by reusing expired authentication results for a long time. It can be used as the maximum value of the **reuseDuration** parameter in [ReuseUnlockResult](arkts-userauthentication-userauth-reuseunlockresult-i.md).
 
-**Since:** 23
+**Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-userAuth-const MAX_ALLOWABLE_REUSE_DURATION: int--><!--Device-userAuth-const MAX_ALLOWABLE_REUSE_DURATION: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## PERMANENT_LOCKOUT_DURATION
 
 ```TypeScript
-const PERMANENT_LOCKOUT_DURATION: int
+const PERMANENT_LOCKOUT_DURATION: int = 0x7fffffff
 ```
 
-Permanent lockout duration, in milliseconds. The value is 0x7fffffff. The value range is all integers.
+Permanent lockout duration, in milliseconds. The value is **0x7fffffff**. When the number of failed authentication attempts reaches the upper limit, the authenticator enters the permanent lockout status. In this case, PIN authentication is required for unlocking. This value is used to identify the permanent lockout status of the authenticator, which can be returned by the **lockoutDuration** field in [AuthLockState](arkts-userauthentication-userauth-authlockstate-i.md).
 
-**Since:** 23
+**Since:** 22
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
-<!--Device-userAuth-const PERMANENT_LOCKOUT_DURATION: int--><!--Device-userAuth-const PERMANENT_LOCKOUT_DURATION: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
-

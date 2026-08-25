@@ -10,25 +10,25 @@ Generates a **borderRadiuses** object with the specified radius for all border c
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-unnamed-export function borderRadiuses(all: number): BorderRadiuses--><!--Device-unnamed-export function borderRadiuses(all: number): BorderRadiuses-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| all | number | Yes | Radius of border corners. <br>Unit: vp. <br>Value range: [0, +∞). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| all | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) | borderRadiuses** object whose border corners all have the specified radius. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) |
 
 **Examples**
 
@@ -73,4 +73,3 @@ struct Index {
   }
 }
 ```
-

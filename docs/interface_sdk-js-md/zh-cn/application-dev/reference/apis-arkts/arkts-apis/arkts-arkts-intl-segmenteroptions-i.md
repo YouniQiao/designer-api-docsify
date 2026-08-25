@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-Intl-export interface SegmenterOptions--><!--Device-Intl-export interface SegmenterOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,11 +25,9 @@ granularity?: SegmenterGranularity
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SegmenterOptions-granularity?: SegmenterGranularity--><!--Device-SegmenterOptions-granularity?: SegmenterGranularity-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -47,11 +43,8 @@ localeMatcher?: 'best fit' | 'lookup'
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-SegmenterOptions-localeMatcher?: 'best fit' | 'lookup'--><!--Device-SegmenterOptions-localeMatcher?: 'best fit' | 'lookup'-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

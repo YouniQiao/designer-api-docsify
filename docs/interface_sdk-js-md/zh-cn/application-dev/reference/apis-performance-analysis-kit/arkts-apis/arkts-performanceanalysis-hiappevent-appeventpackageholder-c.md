@@ -2,9 +2,9 @@
 
 订阅数据持有者类，用于对事件信息进行处理。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-hiAppEvent-class AppEventPackageHolder--><!--Device-hiAppEvent-class AppEventPackageHolder-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -22,19 +22,19 @@ constructor(watcherName: string)
 
 类构造函数，用于创建订阅数据持有者实例。先通过[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md)添加事件观察者，再通过观察者名称关联到应用内已添加的观察者对象。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AppEventPackageHolder-constructor(watcherName: string)--><!--Device-AppEventPackageHolder-constructor(watcherName: string)-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| watcherName | string | 是 | 已通过[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md)添加的事件观察者名称。若未通过addWatcher添加，则默认无数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| watcherName | string | 是 |
 
 **示例**
 
@@ -55,32 +55,38 @@ let holder1: hiAppEvent.AppEventPackageHolder = new hiAppEvent.AppEventPackageHo
 
 ## setRow
 
+ArkTS-Dyn:
+```TypeScript
+setRow(size: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setRow(size: int): void
 ```
 
 设置每次取出的事件包的数据条数，优先级高于setSize，和setSize同时调用时仅setRow生效。
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AppEventPackageHolder-setRow(size: int): void--><!--Device-AppEventPackageHolder-setRow(size: int): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| size | int | 是 | 事件条数，单位为条。取值范围(0, 2^31-1]，超出范围会抛异常。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| size | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [11104001](../errorcode-hiappevent.md#11104001-非法的事件包大小值) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [11104001](../errorcode-hiappevent.md#11104001-非法的事件包大小值) |
 
 **示例**
 
@@ -93,32 +99,38 @@ holder3.setRow(1000);
 
 ## setSize
 
+ArkTS-Dyn:
+```TypeScript
+setSize(size: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setSize(size: int): void
 ```
 
 设置每次取出的事件包的数据大小阈值。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AppEventPackageHolder-setSize(size: int): void--><!--Device-AppEventPackageHolder-setSize(size: int): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| size | int | 是 | 数据大小阈值，单位为byte。取值范围[0, 2^31-1]，超出范围会抛异常。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| size | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [11104001](../errorcode-hiappevent.md#11104001-非法的事件包大小值) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [11104001](../errorcode-hiappevent.md#11104001-非法的事件包大小值) |
 
 **示例**
 
@@ -139,17 +151,17 @@ takeNext(): AppEventPackage
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-AppEventPackageHolder-takeNext(): AppEventPackage--><!--Device-AppEventPackageHolder-takeNext(): AppEventPackage-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) | 取出的事件包对象，订阅事件数据被全部取出后会返回null。 |
+| 类型 |
+| --- |
+| [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) |
 
 **示例**
 
@@ -170,19 +182,18 @@ takeNext(): AppEventPackage | null
 
 **起始版本：** 23
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-AppEventPackageHolder-takeNext(): AppEventPackage | null--><!--Device-AppEventPackageHolder-takeNext(): AppEventPackage | null-End-->
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) \| null | 取出的事件包对象，订阅事件数据被全部取出后 会返回null。 |
+| 类型 |
+| --- |
+| [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) \| null |
 
 **示例**
 
 参见 [takeNext](#takenext)
-

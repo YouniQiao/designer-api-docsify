@@ -4,9 +4,9 @@
 
 **起始版本：** 3
 
-**废弃版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-unnamed-export interface FileCopyOption--><!--Device-unnamed-export interface FileCopyOption-End-->
+**废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -23,15 +23,58 @@ complete?: () => void
 
 接口调用结束的回调函数。
 
-**类型：** () =&gt; void
-
 **起始版本：** 3
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 10
 
-<!--Device-FileCopyOption-complete?: () => void--><!--Device-FileCopyOption-complete?: () => void-End-->
+**系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
+
+## fail
+
+```TypeScript
+fail?: (data: string, code: number) => void
+```
+
+接口调用失败的回调函数。
+
+**起始版本：** 3
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
+**废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | string | 是 |
+| code | number | 是 |
+
+## success
+
+```TypeScript
+success?: (uri: string) => void
+```
+
+接口调用成功的回调函数，返回文件要移动到的位置的URI。
+
+**起始版本：** 3
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
+**废弃版本：** 10
+
+**系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uri | string | 是 |
 
 ## dstUri
 
@@ -47,27 +90,9 @@ dstUri: string
 
 **起始版本：** 3
 
-**废弃版本：** 10
-
-<!--Device-FileCopyOption-dstUri: string--><!--Device-FileCopyOption-dstUri: string-End-->
-
-**系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
-
-## fail
-
-```TypeScript
-fail?: (data: string, code: number) => void
-```
-
-接口调用失败的回调函数。
-
-**类型：** (data: string, code: number) =&gt; void
-
-**起始版本：** 3
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 10
-
-<!--Device-FileCopyOption-fail?: (data: string, code: number) => void--><!--Device-FileCopyOption-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -85,27 +110,8 @@ srcUri: string
 
 **起始版本：** 3
 
-**废弃版本：** 10
-
-<!--Device-FileCopyOption-srcUri: string--><!--Device-FileCopyOption-srcUri: string-End-->
-
-**系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
-
-## success
-
-```TypeScript
-success?: (uri: string) => void
-```
-
-接口调用成功的回调函数，返回文件要移动到的位置的URI。
-
-**类型：** (uri: string) =&gt; void
-
-**起始版本：** 3
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 10
 
-<!--Device-FileCopyOption-success?: (uri: string) => void--><!--Device-FileCopyOption-success?: (uri: string) => void-End-->
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
-

@@ -8,7 +8,7 @@ Provides the container definition for media description key-value pairs.The medi
 
 **起始版本：** 23
 
-<!--Device-unnamed-type MediaDescription = Record<string, Object>--><!--Device-unnamed-type MediaDescription = Record<string, Object>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -45,4 +45,3 @@ media.createAVPlayer((err: BusinessError, player: media.AVPlayer) => {
   }
 });
 ```
-

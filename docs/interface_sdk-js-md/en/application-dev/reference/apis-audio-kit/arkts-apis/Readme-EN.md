@@ -253,9 +253,6 @@
 - [@ohos.multimedia.avVolumePanel](arkts-multimedia-avvolumepanel.md)
   - [AVVolumePanelParameter](arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md)
   - [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
-- [@ohos.multimedia.avVolumePanel](arkts-multimedia-avvolumepanel.md)
-  - [AVVolumePanelParameter](arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md)
-  - [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
 - [@ohos.multimedia.systemSoundManager](arkts-multimedia-systemsoundmanager.md)
   <!--Del-->
   - [createCustomizedToneAttrs(system api)](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f-sys.md)<!--DelEnd-->

@@ -4,9 +4,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-reflect-class Proxy--><!--Device-reflect-class Proxy-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,27 +23,25 @@ static create(linker: RuntimeLinker, interfaces: FixedArray<Class>, handler: Inv
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Proxy-static create(linker: RuntimeLinker, interfaces: FixedArray<Class>, handler: InvocationHandler): Proxy--><!--Device-Proxy-static create(linker: RuntimeLinker, interfaces: FixedArray<Class>, handler: InvocationHandler): Proxy-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| linker | RuntimeLinker | 是 | 用于在运行时生成代理类的`RuntimeLinker`。 |
-| interfaces | FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; | 是 | 表示待实现接口的`Class`对象数组。 |
-| handler | [InvocationHandler](arkts-arkts-reflect-invocationhandler-i.md) | 是 | 用于处理方法和属性操作的`InvocationHandler`。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| linker | RuntimeLinker | 是 |
+| interfaces | FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; | 是 |
+| handler | [InvocationHandler](arkts-arkts-reflect-invocationhandler-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Proxy](arkts-arkts-reflect-proxy-c.md) | 作为`Proxy`的新代理实例。 |
+| 类型 |
+| --- |
+| [Proxy](arkts-arkts-reflect-proxy-c.md) |
 
 ## getHandler
 
@@ -57,17 +53,14 @@ getHandler(): InvocationHandler
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Proxy-getHandler(): InvocationHandler--><!--Device-Proxy-getHandler(): InvocationHandler-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [InvocationHandler](arkts-arkts-reflect-invocationhandler-i.md) | 该代理使用的`InvocationHandler`。 |
-
+| 类型 |
+| --- |
+| [InvocationHandler](arkts-arkts-reflect-invocationhandler-i.md) |

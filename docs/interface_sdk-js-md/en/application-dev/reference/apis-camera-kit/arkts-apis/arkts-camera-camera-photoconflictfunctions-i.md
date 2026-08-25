@@ -2,11 +2,11 @@
 
 Photo Conflict Functions object.
 
-**Inheritance/Implementation:** PhotoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md), [MacroQuery](arkts-camera-camera-macroquery-i-sys.md)
+**Inheritance/Implementation:** PhotoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md), [MacroQuery](arkts-camera-camera-macroquery-i.md)
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-camera-interface PhotoConflictFunctions--><!--Device-camera-interface PhotoConflictFunctions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -17,4 +17,3 @@ Photo Conflict Functions object.
 ```TypeScript
 import { camera } from '@kit.CameraKit';
 ```
-

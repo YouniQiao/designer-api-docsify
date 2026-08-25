@@ -4,7 +4,7 @@ Enumerates the 4d livephoto status.
 
 **Since:** 24
 
-<!--Device-photoAccessHelper-enum LivePhoto4dStatus--><!--Device-photoAccessHelper-enum LivePhoto4dStatus-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -20,9 +20,9 @@ The livephoto has not been identified.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-LivePhoto4dStatus-UNIDENTIFIED = 0--><!--Device-LivePhoto4dStatus-UNIDENTIFIED = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -38,9 +38,9 @@ The livephoto does not support 4d livephoto.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-LivePhoto4dStatus-UNSUPPORTED = 1--><!--Device-LivePhoto4dStatus-UNSUPPORTED = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -56,9 +56,9 @@ The livephoto supports 4d livephoto.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-LivePhoto4dStatus-SUPPORTED = 2--><!--Device-LivePhoto4dStatus-SUPPORTED = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -74,9 +74,9 @@ The livephoto has generated 4d livephoto.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-LivePhoto4dStatus-USED = 3--><!--Device-LivePhoto4dStatus-USED = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -92,11 +92,10 @@ The livephoto is 4d livephoto.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-LivePhoto4dStatus-LIVEPHOTO_4D = 4--><!--Device-LivePhoto4dStatus-LIVEPHOTO_4D = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

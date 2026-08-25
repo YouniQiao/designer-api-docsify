@@ -2,9 +2,9 @@
 
 Defines the deformation of 3D models by adjusting the weights of different deformation targets to create dynamic effects.@interface Morpher
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-unnamed-export interface Morpher--><!--Device-unnamed-export interface Morpher-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -16,11 +16,10 @@ readonly targets: Record<string, double>
 
 Used to store the names and weights of deformation targets. The weight value is usually within the range of [0.0, 1.0].
 
-**Type:** Record&lt;string, double&gt;
+**Type:** ArkTS-Dyn: Record&lt;string, number&gt;  <br>ArkTS-Sta：Record&lt;string, double&gt;
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Morpher-readonly targets: Record<string, double>--><!--Device-Morpher-readonly targets: Record<string, double>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

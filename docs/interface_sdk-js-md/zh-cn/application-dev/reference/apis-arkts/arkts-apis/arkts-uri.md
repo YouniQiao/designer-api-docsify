@@ -5,9 +5,9 @@
 > **说明：**&gt;
 > - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-unnamed-declare namespace uri--><!--Device-unnamed-declare namespace uri-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -21,7 +21,6 @@ import { uri } from '@kit.ArkTS';
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [URI(URI字符串解析)](arkts-arkts-uri-uri-c.md) | 构造一个URI对象，并提供URI比较、路径规范化、查询参数操作、路径段追加和URI类型判断等方法。 |
-
+| 名称 |
+| --- |
+| [URI(URI字符串解析)](arkts-arkts-uri-uri-c.md) |

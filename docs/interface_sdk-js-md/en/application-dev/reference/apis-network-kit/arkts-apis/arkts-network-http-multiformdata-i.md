@@ -2,9 +2,9 @@
 
 Defines the type of multi-form data.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-http-export interface MultiFormData--><!--Device-http-export interface MultiFormData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -24,9 +24,9 @@ Data type, for example, **text/plain**, **image/png**, **image/jpeg**, **audio/m
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-MultiFormData-contentType: string--><!--Device-MultiFormData-contentType: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -40,9 +40,9 @@ Form data content.
 
 **Type:** string \| Object \| ArrayBuffer
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-MultiFormData-data?: string | Object | ArrayBuffer--><!--Device-MultiFormData-data?: string | Object | ArrayBuffer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -57,9 +57,9 @@ File path of the form data. If **data** is not specified, **filePath** must be s
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-MultiFormData-filePath?: string--><!--Device-MultiFormData-filePath?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -73,9 +73,9 @@ Data name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-MultiFormData-name: string--><!--Device-MultiFormData-name: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -90,9 +90,8 @@ Name of the file uploaded to the server.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-MultiFormData-remoteFileName?: string--><!--Device-MultiFormData-remoteFileName?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
-

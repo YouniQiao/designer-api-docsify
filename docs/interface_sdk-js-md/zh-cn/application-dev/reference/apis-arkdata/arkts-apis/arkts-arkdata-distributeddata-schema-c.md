@@ -4,11 +4,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** Schema
-
-<!--Device-distributedData-class Schema--><!--Device-distributedData-class Schema-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -27,11 +27,11 @@ constructor()
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** constructor
-
-<!--Device-Schema-constructor()--><!--Device-Schema-constructor()-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -47,11 +47,11 @@ indexes: Array<string>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-**替代接口：** [indexes](#indexes)
-
-<!--Device-Schema-indexes: Array<string>--><!--Device-Schema-indexes: Array<string>-End-->
+**替代接口：** indexes
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -67,11 +67,11 @@ mode: number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** mode
-
-<!--Device-Schema-mode: number--><!--Device-Schema-mode: number-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -87,11 +87,11 @@ root: FieldNode
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-**替代接口：** [root](#root)
-
-<!--Device-Schema-root: FieldNode--><!--Device-Schema-root: FieldNode-End-->
+**替代接口：** root
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -107,11 +107,10 @@ Schema的跳跃大小。
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-**替代接口：** [skip](#skip)
-
-<!--Device-Schema-skip: number--><!--Device-Schema-skip: number-End-->
+**替代接口：** skip
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
-

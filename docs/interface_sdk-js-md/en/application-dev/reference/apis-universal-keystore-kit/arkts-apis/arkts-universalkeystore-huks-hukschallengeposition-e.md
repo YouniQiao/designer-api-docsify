@@ -4,7 +4,7 @@ Enumerates the positions of the 8-byte valid value in a custom challenge generat
 
 **Since:** 9
 
-<!--Device-huks-export enum HuksChallengePosition--><!--Device-huks-export enum HuksChallengePosition-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -18,9 +18,9 @@ Bytes 0 to 7.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-HuksChallengePosition-HUKS_CHALLENGE_POS_0 = 0--><!--Device-HuksChallengePosition-HUKS_CHALLENGE_POS_0 = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -34,9 +34,9 @@ Bytes 8 to 15.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-HuksChallengePosition-HUKS_CHALLENGE_POS_1 = 1--><!--Device-HuksChallengePosition-HUKS_CHALLENGE_POS_1 = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -50,9 +50,9 @@ Bytes 16 to 23.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-HuksChallengePosition-HUKS_CHALLENGE_POS_2 = 2--><!--Device-HuksChallengePosition-HUKS_CHALLENGE_POS_2 = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -66,9 +66,8 @@ Bytes 24 to 31.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-HuksChallengePosition-HUKS_CHALLENGE_POS_3 = 3--><!--Device-HuksChallengePosition-HUKS_CHALLENGE_POS_3 = 3-End-->
-
 **System capability:** SystemCapability.Security.Huks.Extension
-

@@ -2,9 +2,9 @@
 
 Enumerates mouse axis types.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export declare enum Axis--><!--Device-unnamed-export declare enum Axis-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -16,9 +16,9 @@ SCROLL_VERTICAL = 0
 
 Vertical scroll axis of the mouse.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Axis-SCROLL_VERTICAL = 0--><!--Device-Axis-SCROLL_VERTICAL = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -30,9 +30,9 @@ SCROLL_HORIZONTAL = 1
 
 Horizontal scroll axis of the mouse.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Axis-SCROLL_HORIZONTAL = 1--><!--Device-Axis-SCROLL_HORIZONTAL = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -44,9 +44,8 @@ PINCH = 2
 
 Pinch axis of the mouse.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Axis-PINCH = 2--><!--Device-Axis-PINCH = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
-

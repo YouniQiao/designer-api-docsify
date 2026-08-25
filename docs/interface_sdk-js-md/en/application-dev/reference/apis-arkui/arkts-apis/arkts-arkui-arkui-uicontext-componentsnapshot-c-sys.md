@@ -4,7 +4,7 @@ Provides APIs for obtaining component snapshots, including snapshots of componen
 
 > **NOTE：**&gt;
 > - The initial APIs of this class are supported since API version 12.&gt;
-> - In the following API examples, you must first use [getComponentSnapshot()](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)
+> - In the following API examples, you must first use [getComponentSnapshot()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)
 > in **UIContext** to obtain a **ComponentSnapshot** instance, and then call the APIs using the obtained instance.&gt;
 > - Transformation properties such as scaling, translation, and rotation only apply to the child components of the
 > target component. Applying these transformation properties directly to the target component itself has no effect;
@@ -12,7 +12,7 @@ Provides APIs for obtaining component snapshots, including snapshots of componen
 
 **Since:** 12
 
-<!--Device-unnamed-export class ComponentSnapshot--><!--Device-unnamed-export class ComponentSnapshot-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,9 +40,9 @@ Captures a snapshot of the area between two specified components. This API uses 
 
 **Since:** 20
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
-<!--Device-ComponentSnapshot-getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,    options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>--><!--Device-ComponentSnapshot-getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,    options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,26 +50,26 @@ Captures a snapshot of the area between two specified components. This API uses 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | [NodeIdentity](../../apis-default/arkts-apis/arkts-nodeidentity-t.md) | Yes | ID of the component marking the start of the capture range. |
-| end | [NodeIdentity](../../apis-default/arkts-apis/arkts-nodeidentity-t.md) | Yes | ID of the component marking the end of the capture range. |
-| isStartRect | boolean | Yes | Whether to use the bounding rectangle of the **start** component to determine the capture range.<br>**true**: Use the bounding rectangle of the **start** component. **false**: Use the bounding rectangle of the **end** component.<br>Default value: **true**. |
-| options | componentSnapshot.SnapshotOptions | No | Custom snapshot configuration options. The **region** parameter is not supported. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | Yes |
+| end | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | Yes |
+| isStartRect | boolean | Yes |
+| options | componentSnapshot.SnapshotOptions | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;image.PixelMap&gt; | Result of the snapshot. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;image.PixelMap & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID detected. |
-| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
 
 **Examples**
 
@@ -118,4 +118,3 @@ struct SnapshotExample {
   }
 }
 ```
-

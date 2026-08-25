@@ -8,12 +8,11 @@ export type FocusType = 'accessibility' | 'normal'
 
 **起始版本：** 9
 
-<!--Device-unnamed-export type FocusType = 'accessibility' | 'normal'--><!--Device-unnamed-export type FocusType = 'accessibility' | 'normal'-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-| 类型 | 说明 |
-| --- | --- |
-| 'accessibility' | 表示无障碍的焦点类型。 |
-| 'normal' | 表示普通的焦点类型。 |
-
+| 类型 |
+| --- |
+| 'accessibility' |
+| 'normal' |

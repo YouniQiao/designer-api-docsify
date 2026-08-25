@@ -2,9 +2,9 @@
 
 Provides parameter values for specific settings when an accessibility node element performs a specific action. Different action types require different parameter fields. For details about the mapping between action types and parameter fields, see [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) (actions that can be performed by an accessibility node element).
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-unnamed-export declare class Parameter--><!--Device-unnamed-export declare class Parameter-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -22,9 +22,9 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-Parameter-accessibilityFocusScene?: AccessibilityFocusScene--><!--Device-Parameter-accessibilityFocusScene?: AccessibilityFocusScene-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -42,9 +42,9 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-Parameter-customAction?: string--><!--Device-Parameter-customAction?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -62,9 +62,9 @@ Sets the injected action type. Configured when executing [AccessibilityAction](a
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-Parameter-injectActionType?: InjectActionType--><!--Device-Parameter-injectActionType?: InjectActionType-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -80,9 +80,9 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Parameter-offset?: string--><!--Device-Parameter-offset?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -98,9 +98,9 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Parameter-scrollType?: string--><!--Device-Parameter-scrollType?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -116,9 +116,9 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Parameter-selectTextBegin?: string--><!--Device-Parameter-selectTextBegin?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -134,9 +134,9 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Parameter-selectTextEnd?: string--><!--Device-Parameter-selectTextEnd?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -152,9 +152,9 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Parameter-selectTextInForWard?: boolean--><!--Device-Parameter-selectTextInForWard?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -170,9 +170,9 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Parameter-setText?: string--><!--Device-Parameter-setText?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -188,11 +188,10 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Parameter-spanId?: string--><!--Device-Parameter-spanId?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
-

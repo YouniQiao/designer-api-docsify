@@ -2,9 +2,9 @@
 
 Defines an HTTP request task. Before invoking APIs provided by **HttpRequest**, you must call [createHttp()](arkts-network-http-createhttp-f.md) to create an **HttpRequestTask** object.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-http-export interface HttpRequest--><!--Device-http-export interface HttpRequest-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -22,11 +22,11 @@ destroy(): void
 
 Stops an HTTP request task and releases system resources.
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-HttpRequest-destroy(): void--><!--Device-HttpRequest-destroy(): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -65,40 +65,42 @@ Sets whether to automatically carry and share cookies. That is, whether to autom
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-HttpRequest-enableAutoCookie(enable: boolean): void--><!--Device-HttpRequest-enableAutoCookie(enable: boolean): void-End-->
-
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to automatically carry cookies. **true**: yes; **false**: no. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enable | boolean | Yes |
 
-## off("dataEnd")
+## off("headerReceive")
 
 ```TypeScript
-off(type: "dataEnd", callback?: Callback<void>): void
+off(type: "headerReceive", callback?: AsyncCallback<Object>): void
 ```
 
-Unregisters the observer for events indicating completion of receiving HTTP streaming responses.
+Unregisters the observer for HTTP Response Header events.
 
-**Since:** 10
+**Since:** 6
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-HttpRequest-off(type: "dataEnd", callback?: Callback<void>): void--><!--Device-HttpRequest-off(type: "dataEnd", callback?: Callback<void>): void-End-->
+**Deprecated since:** 8
+
+**Substitutes:** [off_headersReceive](#offheadersreceive)
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | "dataEnd" | Yes | Event type. The value is **dataEnd**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | "headerReceive" | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | No |
 
 **Examples**
 
@@ -106,20 +108,59 @@ Unregisters the observer for events indicating completion of receiving HTTP stre
 import { http } from '@kit.NetworkKit';
 
 let httpRequest = http.createHttp();
-httpRequest.on("dataEnd", () => {
-  console.info("Receive dataEnd !");
-});
-httpRequest.off("dataEnd");
+httpRequest.off("headerReceive");
 ```
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
 
 let httpRequest = http.createHttp();
-httpRequest.on("dataEnd", () => {
-  console.info("Receive dataEnd !");
+httpRequest.off("headerReceive");
+```
+
+## off("headersReceive")
+
+```TypeScript
+off(type: "headersReceive", callback?: Callback<Object>): void
+```
+
+Unregisters the observer for HTTP Response Header events.
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | "headersReceive" | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | No |
+
+**Examples**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("headersReceive", (header: Object) => {
+  console.info("header: " + JSON.stringify(header));
 });
-httpRequest.off("dataEnd");
+httpRequest.off("headersReceive");
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("headersReceive", (header: Object) => {
+  console.info("header: " + JSON.stringify(header));
+});
+httpRequest.off("headersReceive");
 ```
 
 ## off("dataReceive")
@@ -132,18 +173,18 @@ Unregisters the observer for events indicating receiving of HTTP streaming respo
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-HttpRequest-off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | "dataReceive" | Yes | Event type. The value is **dataReceive**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | "dataReceive" | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No |
 
 **Examples**
 
@@ -167,6 +208,51 @@ httpRequest.on("dataReceive", (data: ArrayBuffer) => {
 httpRequest.off("dataReceive");
 ```
 
+## off("dataEnd")
+
+```TypeScript
+off(type: "dataEnd", callback?: Callback<void>): void
+```
+
+Unregisters the observer for events indicating completion of receiving HTTP streaming responses.
+
+**Since:** 10
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | "dataEnd" | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+
+**Examples**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataEnd", () => {
+  console.info("Receive dataEnd !");
+});
+httpRequest.off("dataEnd");
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataEnd", () => {
+  console.info("Receive dataEnd !");
+});
+httpRequest.off("dataEnd");
+```
+
 ## off('dataReceiveProgress')
 
 ```TypeScript
@@ -177,18 +263,18 @@ Unregisters the observer for events indicating progress of receiving HTTP stream
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-HttpRequest-off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'dataReceiveProgress' | Yes | Event type. The value is **dataReceiveProgress**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'dataReceiveProgress' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | No |
 
 **Examples**
 
@@ -222,284 +308,18 @@ Unregisters the observer for events indicating progress of sending HTTP requests
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-HttpRequest-off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'dataSendProgress' | Yes | Event type. The value is **dataSendProgress**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
-
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
-  console.info("dataSendProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataSendProgress");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
-  console.info("dataSendProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataSendProgress");
-```
-
-## off("headerReceive")
-
-```TypeScript
-off(type: "headerReceive", callback?: AsyncCallback<Object>): void
-```
-
-Unregisters the observer for HTTP Response Header events.
-
-**Since:** 6
-
-**Deprecated since:** 8
-
-**Substitutes:** [off_headersReceive](#offheadersreceive)
-
-<!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void--><!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | "headerReceive" | Yes | Event type. The value is **headerReceive**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
-
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.off("headerReceive");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.off("headerReceive");
-```
-
-## off("headersReceive")
-
-```TypeScript
-off(type: "headersReceive", callback?: Callback<Object>): void
-```
-
-Unregisters the observer for HTTP Response Header events.
-
-**Since:** 8
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-HttpRequest-off(type: "headersReceive", callback?: Callback<Object>): void--><!--Device-HttpRequest-off(type: "headersReceive", callback?: Callback<Object>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | "headersReceive" | Yes | Event type. The value is **headersReceive**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
-
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("headersReceive", (header: Object) => {
-  console.info("header: " + JSON.stringify(header));
-});
-httpRequest.off("headersReceive");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("headersReceive", (header: Object) => {
-  console.info("header: " + JSON.stringify(header));
-});
-httpRequest.off("headersReceive");
-```
-
-## on("dataEnd")
-
-```TypeScript
-on(type: "dataEnd", callback: Callback<void>): void
-```
-
-Registers an observer for events indicating completion of receiving HTTP streaming responses.
-
-**Since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
-<!--Device-HttpRequest-on(type: "dataEnd", callback: Callback<void>): void--><!--Device-HttpRequest-on(type: "dataEnd", callback: Callback<void>): void-End-->
-
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | "dataEnd" | Yes | Event type. The value is **dataEnd**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an **Error** object. |
-
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataEnd", () => {
-  console.info("Receive dataEnd !");
-});
-httpRequest.off("dataEnd");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataEnd", () => {
-  console.info("Receive dataEnd !");
-});
-httpRequest.off("dataEnd");
-```
-
-## on("dataReceive")
-
-```TypeScript
-on(type: "dataReceive", callback: Callback<ArrayBuffer>): void
-```
-
-Registers an observer for events indicating receiving of HTTP streaming responses.
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-HttpRequest-on(type: "dataReceive", callback: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-on(type: "dataReceive", callback: Callback<ArrayBuffer>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | "dataReceive" | Yes | Event type. The value is **dataReceive**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined**, and **data** is the received HTTP streaming data of the ArrayBuffer type. Otherwise, **error** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceive", (data: ArrayBuffer) => {
-  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
-});
-httpRequest.off("dataReceive");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceive", (data: ArrayBuffer) => {
-  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
-});
-httpRequest.off("dataReceive");
-```
-
-## on('dataReceiveProgress')
-
-```TypeScript
-on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void
-```
-
-Registers an observer for events indicating progress of receiving HTTP streaming responses.
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-HttpRequest-on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'dataReceiveProgress' | Yes | Event type. The value is **dataReceiveProgress**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is a [DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md) object; otherwise, the callback content is **undefined**.<br>**Since:** 11 |
-
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
-  console.info("dataReceiveProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataReceiveProgress");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
-  console.info("dataReceiveProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataReceiveProgress");
-```
-
-## on('dataSendProgress')
-
-```TypeScript
-on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void
-```
-
-Registers an observer for events indicating progress of sending HTTP requests.
-
-**Since:** 11
-
-**Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-HttpRequest-on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'dataSendProgress' | Yes | Event type. The value is **dataSendProgress**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is a [DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md) object; otherwise, the callback content is **undefined**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'dataSendProgress' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | No |
 
 **Examples**
 
@@ -533,20 +353,20 @@ Registers an observer for HTTP Response Header events.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [on_headersReceive](#onheadersreceive)
-
-<!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void--><!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | "headerReceive" | Yes | Event type. The value is **headerReceive**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined**, and **data** is the received HTTP response header. Otherwise, **error** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | "headerReceive" | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes |
 
 **Examples**
 
@@ -580,18 +400,18 @@ Registers an observer for HTTP Response Header events.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HttpRequest-on(type: "headersReceive", callback: Callback<Object>): void--><!--Device-HttpRequest-on(type: "headersReceive", callback: Callback<Object>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | "headersReceive" | Yes | Event type. The value is **headersReceive**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | Yes | Callback used to return the HTTP response header. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | "headersReceive" | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | Yes |
 
 **Examples**
 
@@ -615,7 +435,187 @@ httpRequest.on("headersReceive", (header: Object) => {
 httpRequest.off("headersReceive");
 ```
 
-## once_headersReceive("headersReceive")
+## on("dataReceive")
+
+```TypeScript
+on(type: "dataReceive", callback: Callback<ArrayBuffer>): void
+```
+
+Registers an observer for events indicating receiving of HTTP streaming responses.
+
+**Since:** 10
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | "dataReceive" | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes |
+
+**Examples**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataReceive", (data: ArrayBuffer) => {
+  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
+});
+httpRequest.off("dataReceive");
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataReceive", (data: ArrayBuffer) => {
+  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
+});
+httpRequest.off("dataReceive");
+```
+
+## on("dataEnd")
+
+```TypeScript
+on(type: "dataEnd", callback: Callback<void>): void
+```
+
+Registers an observer for events indicating completion of receiving HTTP streaming responses.
+
+**Since:** 10
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | "dataEnd" | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+
+**Examples**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataEnd", () => {
+  console.info("Receive dataEnd !");
+});
+httpRequest.off("dataEnd");
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataEnd", () => {
+  console.info("Receive dataEnd !");
+});
+httpRequest.off("dataEnd");
+```
+
+## on('dataReceiveProgress')
+
+```TypeScript
+on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void
+```
+
+Registers an observer for events indicating progress of receiving HTTP streaming responses.
+
+**Since:** 10
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'dataReceiveProgress' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | Yes |
+
+**Examples**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
+  console.info("dataReceiveProgress:" + JSON.stringify(data));
+});
+httpRequest.off("dataReceiveProgress");
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
+  console.info("dataReceiveProgress:" + JSON.stringify(data));
+});
+httpRequest.off("dataReceiveProgress");
+```
+
+## on('dataSendProgress')
+
+```TypeScript
+on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void
+```
+
+Registers an observer for events indicating progress of sending HTTP requests.
+
+**Since:** 11
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'dataSendProgress' | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | Yes |
+
+**Examples**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
+  console.info("dataSendProgress:" + JSON.stringify(data));
+});
+httpRequest.off("dataSendProgress");
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
+  console.info("dataSendProgress:" + JSON.stringify(data));
+});
+httpRequest.off("dataSendProgress");
+```
+
+## once("headersReceive")
 
 ```TypeScript
 once(type: "headersReceive", callback: Callback<Object>): void
@@ -625,18 +625,18 @@ Registers a one-time observer for HTTP Response Header events. Once triggered, t
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HttpRequest-once(type: "headersReceive", callback: Callback<Object>): void--><!--Device-HttpRequest-once(type: "headersReceive", callback: Callback<Object>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | "headersReceive" | Yes | Event type. The value is **headersReceive**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | Yes | Callback used to return the HTTP response header. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | "headersReceive" | Yes |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | Yes |
 
 **Examples**
 
@@ -679,61 +679,61 @@ Initiates an HTTP request to a given URL. This API uses an asynchronous callback
 > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an
 > HTTP request.
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-HttpRequest-request(url: string, callback: AsyncCallback<HttpResponse>): void--><!--Device-HttpRequest-request(url: string, callback: AsyncCallback<HttpResponse>): void-End-->
-
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string | Yes | URL for initiating an HTTP request. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpResponse&gt; | Yes | Callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| url | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpResponse&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
-| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
-| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
-| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
-| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
-| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
-| 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 and later |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
+| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
+| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
+| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
+| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) |
+| [2300028](../errorcode-net-http.md#2300028-operation-timeout) |
+| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) |
+| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) |
+| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
+| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) |
+| [2300999](../errorcode-net-http.md#2300999-internal-error) |
+| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) |
+| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
+| 2300996 |
 
 **Examples**
 
@@ -934,62 +934,62 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an
 > HTTP request.
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-HttpRequest-request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void--><!--Device-HttpRequest-request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void-End-->
-
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string | Yes | URL for initiating an HTTP request. |
-| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | Yes | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpResponse&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is an [HttpResponse](arkts-network-http-httpresponse-i.md) object; otherwise, the callback content is undefined. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| url | string | Yes |
+| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpResponse&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
-| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
-| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
-| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
-| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
-| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
-| 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 and later |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
+| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
+| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
+| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
+| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) |
+| [2300028](../errorcode-net-http.md#2300028-operation-timeout) |
+| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) |
+| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) |
+| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
+| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) |
+| [2300999](../errorcode-net-http.md#2300999-internal-error) |
+| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) |
+| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
+| 2300996 |
 
 **Examples**
 
@@ -1016,67 +1016,67 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an
 > HTTP request.
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-HttpRequest-request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>--><!--Device-HttpRequest-request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>-End-->
-
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string | Yes | URL for initiating an HTTP request. |
-| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | No | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| url | string | Yes |
+| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;HttpResponse&gt; | Promise used to return the result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;HttpResponse & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
-| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
-| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
-| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
-| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
-| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
-| 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 and later |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
+| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
+| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
+| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
+| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) |
+| [2300028](../errorcode-net-http.md#2300028-operation-timeout) |
+| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) |
+| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) |
+| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
+| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) |
+| [2300999](../errorcode-net-http.md#2300999-internal-error) |
+| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) |
+| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
+| 2300996 |
 
 **Examples**
 
@@ -1092,59 +1092,59 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-HttpRequest-requestInStream(url: string, callback: AsyncCallback<int>): void--><!--Device-HttpRequest-requestInStream(url: string, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string | Yes | URL for initiating an HTTP request. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the request is successful, **err** is **undefined**, and the HTTP result code is returned. Otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| url | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
-| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
-| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
-| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
-| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
-| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
-| 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 and later |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
+| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
+| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
+| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
+| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) |
+| [2300028](../errorcode-net-http.md#2300028-operation-timeout) |
+| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) |
+| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) |
+| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
+| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) |
+| [2300999](../errorcode-net-http.md#2300999-internal-error) |
+| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) |
+| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
+| 2300996 |
 
 **Examples**
 
@@ -1308,60 +1308,60 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-HttpRequest-requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<int>): void--><!--Device-HttpRequest-requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string | Yes | URL for initiating an HTTP request. |
-| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | Yes | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the request is successful, **err** is **undefined**, and the [HTTP result code](arkts-network-http-responsecode-e.md) is returned. Otherwise, **err** is an error object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| url | string | Yes |
+| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
-| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
-| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
-| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
-| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
-| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
-| 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 and later |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
+| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
+| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
+| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
+| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) |
+| [2300028](../errorcode-net-http.md#2300028-operation-timeout) |
+| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) |
+| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) |
+| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
+| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) |
+| [2300999](../errorcode-net-http.md#2300999-internal-error) |
+| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) |
+| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
+| 2300996 |
 
 **Examples**
 
@@ -1377,65 +1377,65 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-HttpRequest-requestInStream(url: string, options?: HttpRequestOptions): Promise<int>--><!--Device-HttpRequest-requestInStream(url: string, options?: HttpRequestOptions): Promise<int>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string | Yes | URL for initiating an HTTP request. |
-| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | No | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| url | string | Yes |
+| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;int&gt; | Promise used to return the [result]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
-| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
-| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
-| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
-| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
-| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
-| 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 and later |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
+| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
+| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
+| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
+| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) |
+| [2300028](../errorcode-net-http.md#2300028-operation-timeout) |
+| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) |
+| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) |
+| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
+| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) |
+| [2300999](../errorcode-net-http.md#2300999-internal-error) |
+| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) |
+| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
+| 2300996 |
 
 **Examples**
 
@@ -1463,62 +1463,61 @@ Initiates an HTTP network request based on the URL and related configuration opt
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Required permissions:** ohos.permission.INTERNET
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-HttpRequest-requestSync(url: string, options?: HttpRequestOptions): HttpResponse--><!--Device-HttpRequest-requestSync(url: string, options?: HttpRequestOptions): HttpResponse-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string | Yes | URL for initiating an HTTP request. |
-| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | No | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| url | string | Yes |
+| options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| HttpResponse | HTTP request response result that is returned synchronously. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [HttpResponse](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-httpresponse-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) | Unsupported protocol. |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) | Invalid URL format or missing URL. |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) | Failed to resolve the proxy name. |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) | Failed to resolve the host name. |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Failed to connect to the server. |
-| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) | Invalid server response. |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) | Access to the remote resource denied. |
-| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) | Error in the HTTP2 framing layer. |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) | Transferred a partial file. |
-| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) | Failed to write the received data to the disk or application. |
-| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) | Upload failed. |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) | Failed to open or read local data from the file or application. |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) | Out of memory. |
-| [2300028](../errorcode-net-http.md#2300028-operation-timeout) | Operation timeout. |
-| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) | The number of redirections reaches the maximum allowed. |
-| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) | The server returned nothing (no header or data). |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) | Failed to send data to the peer. |
-| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) | Failed to receive data from the peer. |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) | Local SSL certificate error. |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) | The specified SSL cipher cannot be used. |
-| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) | Invalid SSL peer certificate or SSH remote key. |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) | Invalid HTTP encoding format. |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) | Maximum file size exceeded. |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) | Remote disk full. |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) | Remote file already exists. |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) | The SSL CA certificate does not exist or is inaccessible. |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) | Remote file not found. |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) | Authentication error. |
-| 2300996 | The request was intercepted by the HTTP global interceptor. |
-| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted. |
-| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain. |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) |
+| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) |
+| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
+| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
+| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
+| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
+| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
+| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) |
+| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
+| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
+| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) |
+| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
+| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) |
+| [2300028](../errorcode-net-http.md#2300028-operation-timeout) |
+| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) |
+| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
+| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) |
+| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) |
+| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) |
+| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
+| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
+| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
+| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
+| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) |
+| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) |
+| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
+| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) |
+| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) |
+| 2300996 |
+| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
+| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) |
+| [2300999](../errorcode-net-http.md#2300999-internal-error) |

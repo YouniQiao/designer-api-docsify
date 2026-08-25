@@ -4,9 +4,9 @@ Describes the orientation sensor data. It extends from [Response](arkts-sensorse
 
 **Inheritance/Implementation:** OrientationResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sensor-interface OrientationResponse--><!--Device-sensor-interface OrientationResponse-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -24,13 +24,13 @@ alpha: double
 
 Rotation angle of the device around the z-axis, in degrees. The value ranges from 0 to 360.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-OrientationResponse-alpha: double--><!--Device-OrientationResponse-alpha: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -42,13 +42,13 @@ beta: double
 
 Rotation angle of the device around the x-axis, in degrees. The value ranges from 0 to ±180.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-OrientationResponse-beta: double--><!--Device-OrientationResponse-beta: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -60,13 +60,12 @@ gamma: double
 
 Rotation angle of the device around the y-axis, in degrees. The value ranges from 0 to ±90.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-OrientationResponse-gamma: double--><!--Device-OrientationResponse-gamma: double-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor
-

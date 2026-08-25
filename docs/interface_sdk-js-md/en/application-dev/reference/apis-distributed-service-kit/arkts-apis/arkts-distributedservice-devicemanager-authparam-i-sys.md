@@ -4,9 +4,9 @@ Defines the authentication parameters.
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-deviceManager-interface AuthParam--><!--Device-deviceManager-interface AuthParam-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -30,9 +30,9 @@ Authentication type.
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-AuthParam-authType: number--><!--Device-AuthParam-authType: number-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -50,11 +50,10 @@ Extended field. Optional. The default value is **undefined**.
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-AuthParam-extraInfo: { [key: string]: any }--><!--Device-AuthParam-extraInfo: { [key: string]: any }-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
-

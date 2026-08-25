@@ -16,22 +16,22 @@ Creates an **RdbPredicates** object with a table name and **DataAbilityPredicate
 
 **Since:** 7
 
-<!--Device-dataAbility-function createRdbPredicates(name: string, dataAbilityPredicates: DataAbilityPredicates): rdb.RdbPredicates--><!--Device-dataAbility-function createRdbPredicates(name: string, dataAbilityPredicates: DataAbilityPredicates): rdb.RdbPredicates-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of a database table. |
-| dataAbilityPredicates | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | Yes | DataAbilityPredicates** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| dataAbilityPredicates | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| rdb.RdbPredicates | RdbPredicates** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| rdb.RdbPredicates |
 
 **Examples**
 
@@ -41,4 +41,3 @@ dataAbilityPredicates.equalTo("NAME", "Rose")
 // EMPLOYEE is a table created in an RDB store.
 let predicates = dataAbility.createRdbPredicates("EMPLOYEE", dataAbilityPredicates)
 ```
-

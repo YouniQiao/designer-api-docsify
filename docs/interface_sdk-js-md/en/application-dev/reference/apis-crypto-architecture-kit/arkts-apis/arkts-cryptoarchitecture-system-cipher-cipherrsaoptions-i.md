@@ -4,11 +4,11 @@ Defines the input parameters of **cipher.rsa()**.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
-
-<!--Device-unnamed-export interface CipherRsaOptions--><!--Device-unnamed-export interface CipherRsaOptions-End-->
 
 **System capability:** SystemCapability.Security.Cipher
 
@@ -17,6 +17,73 @@ Defines the input parameters of **cipher.rsa()**.
 ```TypeScript
 import { Cipher, CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
 ```
+
+## complete
+
+```TypeScript
+complete: () => void
+```
+
+Called when the execution is complete.
+
+**Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
+**Deprecated since:** 11
+
+**Substitutes:** Cipher
+
+**System capability:** SystemCapability.Security.Cipher
+
+## fail
+
+```TypeScript
+fail: (data: string, code: number) => void
+```
+
+Called when data fails to be encrypted or decrypted.
+
+**Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
+**Deprecated since:** 11
+
+**Substitutes:** Cipher
+
+**System capability:** SystemCapability.Security.Cipher
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | string | Yes |
+| code | number | Yes |
+
+## success
+
+```TypeScript
+success: (data: CipherResponse) => void
+```
+
+Called when data is encrypted or decrypted successfully.
+
+**Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
+**Deprecated since:** 11
+
+**Substitutes:** Cipher
+
+**System capability:** SystemCapability.Security.Cipher
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | [CipherResponse](arkts-cryptoarchitecture-system-cipher-cipherresponse-i.md) | Yes |
 
 ## action
 
@@ -32,51 +99,11 @@ Action to perform. The options are as follows:
 
 **Since:** 3
 
-**Deprecated since:** 11
-
-**Substitutes:** Cipher
-
-<!--Device-CipherRsaOptions-action: string--><!--Device-CipherRsaOptions-action: string-End-->
-
-**System capability:** SystemCapability.Security.Cipher
-
-## complete
-
-```TypeScript
-complete: () => void
-```
-
-Called when the execution is complete.
-
-**Type:** () =&gt; void
-
-**Since:** 3
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
-
-<!--Device-CipherRsaOptions-complete: () => void--><!--Device-CipherRsaOptions-complete: () => void-End-->
-
-**System capability:** SystemCapability.Security.Cipher
-
-## fail
-
-```TypeScript
-fail: (data: string, code: number) => void
-```
-
-Called when data fails to be encrypted or decrypted.
-
-**Type:** (data: string, code: number) =&gt; void
-
-**Since:** 3
-
-**Deprecated since:** 11
-
-**Substitutes:** Cipher
-
-<!--Device-CipherRsaOptions-fail: (data: string, code: number) => void--><!--Device-CipherRsaOptions-fail: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.Security.Cipher
 
@@ -92,31 +119,11 @@ RSA key. It is a public key in encryption and a private key in decryption.
 
 **Since:** 3
 
-**Deprecated since:** 11
-
-**Substitutes:** Cipher
-
-<!--Device-CipherRsaOptions-key: string--><!--Device-CipherRsaOptions-key: string-End-->
-
-**System capability:** SystemCapability.Security.Cipher
-
-## success
-
-```TypeScript
-success: (data: CipherResponse) => void
-```
-
-Called when data is encrypted or decrypted successfully.
-
-**Type:** (data: CipherResponse) =&gt; void
-
-**Since:** 3
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
-
-<!--Device-CipherRsaOptions-success: (data: CipherResponse) => void--><!--Device-CipherRsaOptions-success: (data: CipherResponse) => void-End-->
 
 **System capability:** SystemCapability.Security.Cipher
 
@@ -132,11 +139,11 @@ Text to be encrypted or decrypted.The text to be encrypted must be a common text
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
-
-<!--Device-CipherRsaOptions-text: string--><!--Device-CipherRsaOptions-text: string-End-->
 
 **System capability:** SystemCapability.Security.Cipher
 
@@ -152,11 +159,10 @@ RSA padding. The default value is **RSA/None/OAEPWithSHA256AndMGF1Padding**.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
 
-<!--Device-CipherRsaOptions-transformation?: string--><!--Device-CipherRsaOptions-transformation?: string-End-->
-
 **System capability:** SystemCapability.Security.Cipher
-

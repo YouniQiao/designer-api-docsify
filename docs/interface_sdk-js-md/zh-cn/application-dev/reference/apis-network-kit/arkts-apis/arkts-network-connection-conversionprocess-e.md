@@ -4,7 +4,7 @@ ASCII/Unicode转码转换流程参数的枚举。
 
 **起始版本：** 23
 
-<!--Device-connection-export enum ConversionProcess--><!--Device-connection-export enum ConversionProcess-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -18,7 +18,7 @@ NO_CONFIGURATION = 0
 
 **起始版本：** 23
 
-<!--Device-ConversionProcess-NO_CONFIGURATION = 0--><!--Device-ConversionProcess-NO_CONFIGURATION = 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -32,7 +32,7 @@ ALLOW_UNASSIGNED = 1
 
 **起始版本：** 23
 
-<!--Device-ConversionProcess-ALLOW_UNASSIGNED = 1--><!--Device-ConversionProcess-ALLOW_UNASSIGNED = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -46,7 +46,6 @@ USE_STD3_ASCII_RULES = 2
 
 **起始版本：** 23
 
-<!--Device-ConversionProcess-USE_STD3_ASCII_RULES = 2--><!--Device-ConversionProcess-USE_STD3_ASCII_RULES = 2-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
-

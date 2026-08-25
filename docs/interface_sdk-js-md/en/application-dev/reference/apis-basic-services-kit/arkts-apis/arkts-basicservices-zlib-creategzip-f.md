@@ -14,19 +14,19 @@ function createGZip(): Promise<GZip>
 
 Creates this **GZip** object. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-zlib-function createGZip(): Promise<GZip>--><!--Device-zlib-function createGZip(): Promise<GZip>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[GZip](arkts-basicservices-zlib-gzip-i.md)&gt; | Promise used to return the **GZip** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[GZip](arkts-basicservices-zlib-gzip-i.md)&gt; |
 
 **Examples**
 
@@ -37,4 +37,3 @@ zlib.createGZip().then((data) => {
   console.info('createGZip success');
 })
 ```
-

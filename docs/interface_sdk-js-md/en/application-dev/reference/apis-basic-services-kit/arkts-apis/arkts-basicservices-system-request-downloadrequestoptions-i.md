@@ -7,11 +7,11 @@
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md)
-
-<!--Device-unnamed-export interface DownloadRequestOptions--><!--Device-unnamed-export interface DownloadRequestOptions-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -29,17 +29,64 @@ complete?: () => void
 
 Called when API call is complete.
 
-**Type:** () =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
 **Substitutes:** on
 
-<!--Device-DownloadRequestOptions-complete?: () => void--><!--Device-DownloadRequestOptions-complete?: () => void-End-->
+**System capability:** SystemCapability.MiscServices.Download
+
+## fail
+
+```TypeScript
+fail?: (data: any, code: number) => void
+```
+
+Called when downloading fails.
+
+**Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
+**Deprecated since:** 9
+
+**Substitutes:** on
 
 **System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | any | Yes |
+| code | number | Yes |
+
+## success
+
+```TypeScript
+success?: (data: DownloadResponse) => void
+```
+
+Called when the files are successfully downloaded.
+
+**Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
+**Deprecated since:** 9
+
+**Substitutes:** on
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | [DownloadResponse](arkts-basicservices-system-request-downloadresponse-i.md) | Yes |
 
 ## description
 
@@ -53,31 +100,11 @@ Download description. The default value is the file name.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** description
-
-<!--Device-DownloadRequestOptions-description?: string--><!--Device-DownloadRequestOptions-description?: string-End-->
-
-**System capability:** SystemCapability.MiscServices.Download
-
-## fail
-
-```TypeScript
-fail?: (data: any, code: number) => void
-```
-
-Called when downloading fails.
-
-**Type:** (data: any, code: number) =&gt; void
-
-**Since:** 3
-
-**Deprecated since:** 9
-
-**Substitutes:** on
-
-<!--Device-DownloadRequestOptions-fail?: (data: any, code: number) => void--><!--Device-DownloadRequestOptions-fail?: (data: any, code: number) => void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -93,11 +120,11 @@ Name of the file to downloaded. The value is obtained from the current request o
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** saveas
-
-<!--Device-DownloadRequestOptions-filename?: string--><!--Device-DownloadRequestOptions-filename?: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -113,31 +140,11 @@ Request header.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** headers
-
-<!--Device-DownloadRequestOptions-header?: string--><!--Device-DownloadRequestOptions-header?: string-End-->
-
-**System capability:** SystemCapability.MiscServices.Download
-
-## success
-
-```TypeScript
-success?: (data: DownloadResponse) => void
-```
-
-Called when the files are successfully downloaded.
-
-**Type:** (data: DownloadResponse) =&gt; void
-
-**Since:** 3
-
-**Deprecated since:** 9
-
-**Substitutes:** on
-
-<!--Device-DownloadRequestOptions-success?: (data: DownloadResponse) => void--><!--Device-DownloadRequestOptions-success?: (data: DownloadResponse) => void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -153,11 +160,10 @@ Resource URL.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** url
 
-<!--Device-DownloadRequestOptions-url: string--><!--Device-DownloadRequestOptions-url: string-End-->
-
 **System capability:** SystemCapability.MiscServices.Download
-

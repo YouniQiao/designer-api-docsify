@@ -5,11 +5,11 @@
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** [ProximityResponse](arkts-sensorservice-sensor-proximityresponse-i.md)
-
-<!--Device-unnamed-export interface ProximityResponse--><!--Device-unnamed-export interface ProximityResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -31,13 +31,12 @@ distance: number
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** [distance](arkts-sensorservice-sensor-proximityresponse-i.md#distance)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-ProximityResponse-distance: number--><!--Device-ProximityResponse-distance: number-End-->
-
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
-

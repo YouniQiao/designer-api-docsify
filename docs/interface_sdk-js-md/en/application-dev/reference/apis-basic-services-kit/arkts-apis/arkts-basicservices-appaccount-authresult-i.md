@@ -2,9 +2,9 @@
 
 Defines the authentication result.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-appAccount-interface AuthResult--><!--Device-appAccount-interface AuthResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -24,9 +24,9 @@ Information about the account to which the token belongs. By default, no value i
 
 **Type:** [AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-AuthResult-account?: AppAccountInfo--><!--Device-AuthResult-account?: AppAccountInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -40,9 +40,8 @@ Token information. By default, no value is passed in.
 
 **Type:** [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-AuthResult-tokenInfo?: AuthTokenInfo--><!--Device-AuthResult-tokenInfo?: AuthTokenInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
-

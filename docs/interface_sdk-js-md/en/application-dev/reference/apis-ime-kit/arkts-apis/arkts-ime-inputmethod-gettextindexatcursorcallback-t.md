@@ -8,7 +8,6 @@ The callback of 'getTextIndexAtCursor' event.
 
 **Since:** 23
 
-<!--Device-inputMethod-export type GetTextIndexAtCursorCallback = () => int--><!--Device-inputMethod-export type GetTextIndexAtCursorCallback = () => int-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

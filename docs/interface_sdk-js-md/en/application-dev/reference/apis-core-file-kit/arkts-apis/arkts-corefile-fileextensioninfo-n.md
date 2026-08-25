@@ -4,9 +4,9 @@ The **fileExtensionInfo** module defines attributes in **RootInfo** and **FileIn
 
 **Since:** 9
 
-**Deprecated since:** 23
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-unnamed-declare namespace fileExtensionInfo--><!--Device-unnamed-declare namespace fileExtensionInfo-End-->
+**Deprecated since:** 23
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -22,16 +22,15 @@ import { fileExtensionInfo } from '@kit.CoreFileKit';
 
 ### Namespaces
 
-| Name | Description |
-| --- | --- |
-| [DeviceFlag](arkts-corefile-fileextensioninfo-deviceflag-n.md) | Defines the values of **deviceFlags** used in **RootInfo**. **deviceFlags** is used to determine whether a capability is available through the AND operation. |
-| [DocumentFlag](arkts-corefile-fileextensioninfo-documentflag-n.md) | Defines the values of **mode** used in **FileInfo**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DeviceFlag](arkts-corefile-fileextensioninfo-deviceflag-n.md) |
+| [DocumentFlag](arkts-corefile-fileextensioninfo-documentflag-n.md) |
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [DeviceType](arkts-corefile-fileextensioninfo-devicetype-e-sys.md) | Defines the values of **deviceType** used in **RootInfo**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DeviceType](arkts-corefile-fileextensioninfo-devicetype-e-sys.md) |
 <!--DelEnd-->
-

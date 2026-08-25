@@ -4,7 +4,7 @@ Describes the data origin sources.
 
 **Since:** 24
 
-<!--Device-relationalStore-enum DistributedOrigin--><!--Device-relationalStore-enum DistributedOrigin-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -20,9 +20,9 @@ Indicates the data source is local.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-DistributedOrigin-ORI_LOCAL = 0--><!--Device-DistributedOrigin-ORI_LOCAL = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -38,9 +38,9 @@ Indicates the data source is cloud.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-DistributedOrigin-ORI_CLOUD = 1--><!--Device-DistributedOrigin-ORI_CLOUD = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -56,11 +56,10 @@ Indicates the data source is remote.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-DistributedOrigin-ORI_REMOTE = 2--><!--Device-DistributedOrigin-ORI_REMOTE = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **System API:** This is a system API.
-

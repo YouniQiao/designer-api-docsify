@@ -2,9 +2,9 @@
 
 当前版本信息。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-update-export interface CurrentVersionInfo--><!--Device-update-export interface CurrentVersionInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -26,9 +26,9 @@ deviceName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-CurrentVersionInfo-deviceName: string--><!--Device-CurrentVersionInfo-deviceName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -44,9 +44,9 @@ osVersion: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-CurrentVersionInfo-osVersion: string--><!--Device-CurrentVersionInfo-osVersion: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -62,11 +62,10 @@ versionComponents: Array<VersionComponent>
 
 **类型：** Array&lt;[VersionComponent](arkts-basicservices-update-versioncomponent-i-sys.md)&gt;
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-CurrentVersionInfo-versionComponents: Array<VersionComponent>--><!--Device-CurrentVersionInfo-versionComponents: Array<VersionComponent>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
-

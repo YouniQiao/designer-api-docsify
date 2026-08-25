@@ -6,9 +6,7 @@ Defines event info for rotation gesture.@extends BaseGestureEvent @interface Rot
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export interface RotationGestureEvent--><!--Device-unnamed-export interface RotationGestureEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,11 +22,8 @@ Gesture event direction angle. The unit is deg.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RotationGestureEvent-angle: double--><!--Device-RotationGestureEvent-angle: double-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

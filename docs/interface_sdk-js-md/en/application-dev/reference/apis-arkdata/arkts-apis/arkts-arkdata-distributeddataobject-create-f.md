@@ -14,30 +14,30 @@ function create(context: Context, source: object): DataObject
 
 Creates a distributed data object. The object properties support basic types (number, Boolean, and string) and complex types (array and nested basic types).
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-distributedDataObject-function create(context: Context, source: object): DataObject--><!--Device-distributedDataObject-function create(context: Context, source: object): DataObject-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | Context | Yes | Application context. For details about the application context of the FA model, see Context.For details about the application context of the stage model, see Context. |
-| source | object | Yes | Properties of the distributed data object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
+| source | object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [DataObject](arkts-arkdata-distributeddataobject-dataobject-i.md) | Distributed data object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataObject](arkts-arkdata-distributeddataobject-dataobject-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -93,4 +93,3 @@ class EntryAbility extends UIAbility {
     }
 }
 ```
-

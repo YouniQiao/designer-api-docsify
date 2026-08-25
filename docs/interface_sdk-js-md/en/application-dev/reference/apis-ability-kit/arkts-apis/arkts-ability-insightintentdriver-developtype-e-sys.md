@@ -4,7 +4,7 @@ Enumerates the modes that define how an intent is developed.
 
 **Since:** 23
 
-<!--Device-insightIntentDriver-enum DevelopType--><!--Device-insightIntentDriver-enum DevelopType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -20,9 +20,9 @@ The intent is developed using a configuration file.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-DevelopType-CONFIGURATION = 'configuration'--><!--Device-DevelopType-CONFIGURATION = 'configuration'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -38,11 +38,10 @@ The intent is developed using a decorator.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-DevelopType-DECORATOR = 'decorator'--><!--Device-DevelopType-DECORATOR = 'decorator'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
-

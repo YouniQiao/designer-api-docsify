@@ -27,23 +27,23 @@ Calls back an asynchronous function. In the callback, the first parameter indica
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-<!--Device-util-function callbackWrapper(original: Function): (err: Object, value: Object) => void--><!--Device-util-function callbackWrapper(original: Function): (err: Object, value: Object) => void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| original | Function | Yes | Asynchronous function. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| original | Function | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [function](arkts-arkts-taskpool-task-c.md) | Callback function, in which the first parameter **err** indicates the cause of the rejection (the value is **null** if the promise has been resolved) and the second parameter **value** indicates the resolved value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [function](arkts-arkts-taskpool-task-c.md) |
 
 **Examples**
 
@@ -58,4 +58,3 @@ cb('hello world', (err : Object, ret : string) => {
 });
 // Output: hello world
 ```
-

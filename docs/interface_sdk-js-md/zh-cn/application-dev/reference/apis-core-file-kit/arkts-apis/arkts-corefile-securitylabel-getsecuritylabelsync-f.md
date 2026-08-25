@@ -14,36 +14,36 @@ function getSecurityLabelSync(path: string): string
 
 以同步方法获取文件或目录的数据安全等级。若未设置过数据安全等级则默认返回“s3”。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-securityLabel-function getSecurityLabelSync(path: string): string--><!--Device-securityLabel-function getSecurityLabelSync(path: string): string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 文件或目录的应用沙箱路径。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| path | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回数据安全等级。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900007 | Arg list too long |
-| 13900015 | File exists |
-| 13900020 | Invalid argument |
-| 13900025 | No space left on device |
-| 13900037 | No data available |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900001 |
+| 13900007 |
+| 13900015 |
+| 13900020 |
+| 13900025 |
+| 13900037 |
+| 13900041 |
+| 13900042 |
 
 **示例**
 
@@ -52,4 +52,3 @@ let filePath = pathDir + '/test.txt';
 let type = securityLabel.getSecurityLabelSync(filePath);
 console.info("Succeeded in getting security label, Label: " + type);
 ```
-

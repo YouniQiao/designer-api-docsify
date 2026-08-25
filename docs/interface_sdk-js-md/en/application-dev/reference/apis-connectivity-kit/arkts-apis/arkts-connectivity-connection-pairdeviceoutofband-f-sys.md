@@ -17,11 +17,11 @@ Starts pairing with a remote Bluetooth device using the Out Of Band mechanism. T
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-connection-function pairDeviceOutOfBand(transport: BluetoothTransport, p192Data: OobData | null,    p256Data: OobData | null): Promise<void>--><!--Device-connection-function pairDeviceOutOfBand(transport: BluetoothTransport, p192Data: OobData | null,    p256Data: OobData | null): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -29,27 +29,27 @@ Starts pairing with a remote Bluetooth device using the Out Of Band mechanism. T
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| transport | BluetoothTransport | Yes | Indicates the transport of a remote Bluetooth device. |
-| p192Data | [OobData](arkts-connectivity-connection-oobdata-i-sys.md) \| null | Yes | The out-of-band data (P192), or null if not available. |
-| p256Data | [OobData](arkts-connectivity-connection-oobdata-i-sys.md) \| null | Yes | The out-of-band data (P256), or null if not available. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [transport](arkts-connectivity-ble-gattsetting-i.md) | [BluetoothTransport](arkts-connectivity-ble-bluetoothtransport-t.md) | Yes |
+| p192Data | [OobData](arkts-connectivity-connection-oobdata-i-sys.md) \| null | Yes |
+| p256Data | [OobData](arkts-connectivity-connection-oobdata-i-sys.md) \| null | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2900003 | Bluetooth disabled. |
-| 2900099 | Operation failed. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| 2900003 |
+| 2900099 |
 
 **Examples**
 
@@ -81,4 +81,3 @@ try {
     console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
 }
 ```
-

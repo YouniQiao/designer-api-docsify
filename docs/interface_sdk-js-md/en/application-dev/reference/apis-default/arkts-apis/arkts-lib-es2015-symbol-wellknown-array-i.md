@@ -1,8 +1,6 @@
 # Array
 
-**Since:** -1
-
-<!--Device-unnamed-interface Array--><!--Device-unnamed-interface Array-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -25,11 +23,9 @@
 
 Returns an object whose properties have the value 'true'when they will be absent when used in a 'with' statement.
 
-**Since:** -1
-
-<!--Device-Array-[Symbol.unscopables](): {        copyWithin: boolean;        entries: boolean;        fill: boolean;        find: boolean;        findIndex: boolean;        keys: boolean;        values: boolean;    }--><!--Device-Array-[Symbol.unscopables](): {        copyWithin: boolean;        entries: boolean;        fill: boolean;        find: boolean;        findIndex: boolean;        keys: boolean;        values: boolean;    }-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

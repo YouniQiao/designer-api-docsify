@@ -2,9 +2,9 @@
 
 Enumerates secure communication protocols.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-cacheDownload-enum SslType--><!--Device-cacheDownload-enum SslType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -16,9 +16,9 @@ TLS = 'TLS'
 
 TLS.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-SslType-TLS = 'TLS'--><!--Device-SslType-TLS = 'TLS'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -30,9 +30,8 @@ TLCP = 'TLCP'
 
 TLCP.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-SslType-TLCP = 'TLCP'--><!--Device-SslType-TLCP = 'TLCP'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
-

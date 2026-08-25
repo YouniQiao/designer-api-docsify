@@ -16,21 +16,21 @@ function getIpInfo(): IpInfo
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [getIpInfo](arkts-connectivity-wifimanager-getipinfo-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
-<!--Device-wifi-function getIpInfo(): IpInfo--><!--Device-wifi-function getIpInfo(): IpInfo-End-->
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| IpInfo | IP信息。 |
+| 类型 |
+| --- |
+| [IpInfo](arkts-connectivity-wifi-ipinfo-i.md) |
 
 **示例**
 
@@ -44,4 +44,3 @@ try {
   console.error("failed:" + JSON.stringify(error));
 }
 ```
-

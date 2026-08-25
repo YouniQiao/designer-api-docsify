@@ -4,7 +4,7 @@ Provides the span position information.
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface RichEditorSpanPosition--><!--Device-unnamed-declare interface RichEditorSpanPosition-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Span index.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RichEditorSpanPosition-spanIndex: number--><!--Device-RichEditorSpanPosition-spanIndex: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ Start and end positions of the span content in the **RichEditor** component.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-RichEditorSpanPosition-spanRange: [number, number]--><!--Device-RichEditorSpanPosition-spanRange: [number, number]-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

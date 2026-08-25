@@ -2,9 +2,9 @@
 
 Rotation execution results.@enum { int }
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-mechanicManager-export enum Result--><!--Device-mechanicManager-export enum Result-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -18,9 +18,9 @@ COMPLETED = 0
 
 Rotation completed.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Result-COMPLETED = 0--><!--Device-Result-COMPLETED = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -34,9 +34,9 @@ INTERRUPTED = 1
 
 Rotation was interrupted.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Result-INTERRUPTED = 1--><!--Device-Result-INTERRUPTED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -50,9 +50,9 @@ LIMITED = 2
 
 Device reached limitation.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Result-LIMITED = 2--><!--Device-Result-LIMITED = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -66,9 +66,9 @@ TIMEOUT = 3
 
 Rotation time out.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Result-TIMEOUT = 3--><!--Device-Result-TIMEOUT = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -84,7 +84,7 @@ Termination caused by an obstacle.
 
 **Since:** 26.0.0
 
-<!--Device-Result-TERMINATE_OBSTACLE  = 4--><!--Device-Result-TERMINATE_OBSTACLE  = 4-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -100,7 +100,7 @@ Termination caused by a cliff.
 
 **Since:** 26.0.0
 
-<!--Device-Result-TERMINATE_CLIFF = 5--><!--Device-Result-TERMINATE_CLIFF = 5-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -114,11 +114,10 @@ SYSTEM_ERROR = 100
 
 Rotation failed due to system error.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Result-SYSTEM_ERROR = 100--><!--Device-Result-SYSTEM_ERROR = 100-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
-

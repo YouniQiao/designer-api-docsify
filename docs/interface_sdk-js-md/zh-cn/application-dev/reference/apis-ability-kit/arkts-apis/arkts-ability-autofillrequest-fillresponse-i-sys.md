@@ -2,9 +2,9 @@
 
 自动填充响应。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-unnamed-export interface FillResponse--><!--Device-unnamed-export interface FillResponse-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -18,15 +18,14 @@ viewData: ViewData
 
 查看数据。填充请求的页面基本信息。
 
-**类型：** [ViewData](arkts-ability-viewdata-i-sys.md)
+**类型：** [ViewData](arkts-ability-viewdata-i.md)
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-FillResponse-viewData: ViewData--><!--Device-FillResponse-viewData: ViewData-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
-

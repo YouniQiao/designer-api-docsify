@@ -16,13 +16,13 @@ Obtains the features supported by this device.<p>To check whether this device su
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getSupportedFeatures](arkts-connectivity-wifimanager-getsupportedfeatures-f-sys.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
-
-<!--Device-wifi-function getSupportedFeatures(): number--><!--Device-wifi-function getSupportedFeatures(): number-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.Core
 
@@ -30,7 +30,6 @@ Obtains the features supported by this device.<p>To check whether this device su
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Returns the features supported by this device. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |

@@ -2,9 +2,9 @@
 
 The enum of bluetooth state.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-access-export enum BluetoothState--><!--Device-access-export enum BluetoothState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -16,11 +16,11 @@ STATE_OFF = 0
 
 Indicates the local Bluetooth is off
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-BluetoothState-STATE_OFF = 0--><!--Device-BluetoothState-STATE_OFF = 0-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -32,11 +32,11 @@ STATE_TURNING_ON = 1
 
 Indicates the local Bluetooth is turning on
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-BluetoothState-STATE_TURNING_ON = 1--><!--Device-BluetoothState-STATE_TURNING_ON = 1-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -48,11 +48,11 @@ STATE_ON = 2
 
 Indicates the local Bluetooth is on, and ready for use
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-BluetoothState-STATE_ON = 2--><!--Device-BluetoothState-STATE_ON = 2-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -64,11 +64,11 @@ STATE_TURNING_OFF = 3
 
 Indicates the local Bluetooth is turning off
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-BluetoothState-STATE_TURNING_OFF = 3--><!--Device-BluetoothState-STATE_TURNING_OFF = 3-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -80,11 +80,11 @@ STATE_BLE_TURNING_ON = 4
 
 Indicates the local Bluetooth is turning LE mode on
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-BluetoothState-STATE_BLE_TURNING_ON = 4--><!--Device-BluetoothState-STATE_BLE_TURNING_ON = 4-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -96,11 +96,11 @@ STATE_BLE_ON = 5
 
 Indicates the local Bluetooth is in LE only mode
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-BluetoothState-STATE_BLE_ON = 5--><!--Device-BluetoothState-STATE_BLE_ON = 5-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -112,11 +112,10 @@ STATE_BLE_TURNING_OFF = 6
 
 Indicates the local Bluetooth is turning off LE only mode
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-BluetoothState-STATE_BLE_TURNING_OFF = 6--><!--Device-BluetoothState-STATE_BLE_TURNING_OFF = 6-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

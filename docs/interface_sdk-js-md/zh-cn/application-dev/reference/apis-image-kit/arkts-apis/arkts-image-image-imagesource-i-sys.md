@@ -2,9 +2,9 @@
 
 ImageSource类，用于获取图片相关信息。在调用ImageSource的方法前，需要先通过[image.createImageSource](arkts-image-image-createimagesource-f.md)构建一个ImageSource实例。ImageSource的所有方法均不支持并发调用。由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release)方法及时 释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-image-interface ImageSource--><!--Device-image-interface ImageSource-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -30,7 +30,7 @@ createWideGamutSdrPixelMap(): Promise<PixelMap>
 
 **起始版本：** 20
 
-<!--Device-ImageSource-createWideGamutSdrPixelMap(): Promise<PixelMap>--><!--Device-ImageSource-createWideGamutSdrPixelMap(): Promise<PixelMap>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -38,18 +38,18 @@ createWideGamutSdrPixelMap(): Promise<PixelMap>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;PixelMap&gt; | Promise对象，返回PixelMap。 |
+| 类型 |
+| --- |
+| Promise & lt;PixelMap & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Decoding failed. |
+| 错误码ID |
+| --- |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
+| [7700103](../errorcode-image.md#7700103-图片太大) |
+| [7700301](../errorcode-image.md#7700301-解码失败) |
 
 **示例**
 
@@ -96,7 +96,7 @@ Decodes to a SDR PixelMap, using a as wide gamut as possible. For a SDR ImageSou
 
 **起始版本：** 23
 
-<!--Device-ImageSource-createWideGamutSdrPixelMap(): Promise<PixelMap | undefined>--><!--Device-ImageSource-createWideGamutSdrPixelMap(): Promise<PixelMap | undefined>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -104,18 +104,18 @@ Decodes to a SDR PixelMap, using a as wide gamut as possible. For a SDR ImageSou
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;PixelMap \| undefined&gt; | Decoded PixelMap. |
+| 类型 |
+| --- |
+| Promise & lt;PixelMap \ | undefined & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Decoding failed. |
+| 错误码ID |
+| --- |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
+| [7700103](../errorcode-image.md#7700103-图片太大) |
+| [7700301](../errorcode-image.md#7700301-解码失败) |
 
 **示例**
 
@@ -129,11 +129,11 @@ isJpegProgressive(): Promise<boolean>
 
 判断Jpeg图片是否是渐进式图片。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 22
+
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ImageSource-isJpegProgressive(): Promise<boolean>--><!--Device-ImageSource-isJpegProgressive(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -141,16 +141,16 @@ isJpegProgressive(): Promise<boolean>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示Jpeg图片是渐进式；返回false表示Jpeg图片不是渐进式。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| 错误码ID |
+| --- |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
 
 **示例**
 
@@ -182,9 +182,9 @@ modifyImageAllProperties(records: Record<string, string|null>): Promise<void>
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-ImageSource-modifyImageAllProperties(records: Record<string, string|null>): Promise<void>--><!--Device-ImageSource-modifyImageAllProperties(records: Record<string, string|null>): Promise<void>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -192,24 +192,24 @@ modifyImageAllProperties(records: Record<string, string|null>): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | 是 | 包含图片属性名和属性值的键值对集合。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| records | Record & lt;string, string \ | null & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
-| [7700304](../errorcode-image.md#7700304-图片信息写入文件失败) | Failed to write image properties to the file. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
+| [7700202](../errorcode-image.md#7700202-不支持的元数据) |
+| [7700304](../errorcode-image.md#7700304-图片信息写入文件失败) |
 
 **示例**
 
@@ -225,4 +225,3 @@ async function ModifyImageAllProperties(imageSource: image.ImageSource) {
   }
 }
 ```
-

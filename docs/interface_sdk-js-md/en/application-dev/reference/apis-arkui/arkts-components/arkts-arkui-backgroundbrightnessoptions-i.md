@@ -17,7 +17,7 @@ Provides background brightness options.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface BackgroundBrightnessOptions--><!--Device-unnamed-declare interface BackgroundBrightnessOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +38,11 @@ Light up degree. A greater degree indicates a greater increase in brightness.Def
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-BackgroundBrightnessOptions-lightUpDegree: number--><!--Device-BackgroundBrightnessOptions-lightUpDegree: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,11 +58,10 @@ Brightness change rate. A higher rate means that brightness decreases more quick
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-BackgroundBrightnessOptions-rate: number--><!--Device-BackgroundBrightnessOptions-rate: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

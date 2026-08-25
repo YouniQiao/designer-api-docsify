@@ -19,11 +19,11 @@ function setExtBundleStats(userId: int, stats: ExtBundleStats): Promise<void>
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-storageStatistics-function setExtBundleStats(userId: int, stats: ExtBundleStats): Promise<void>--><!--Device-storageStatistics-function setExtBundleStats(userId: int, stats: ExtBundleStats): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -31,26 +31,26 @@ function setExtBundleStats(userId: int, stats: ExtBundleStats): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| userId | int | 是 | 用户id。 |
-| stats | [ExtBundleStats](arkts-corefile-storagestatistics-extbundlestats-i-sys.md) | 是 | 系统应用或系统服务的空间占用详情。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| stats | [ExtBundleStats](arkts-corefile-storagestatistics-extbundlestats-i-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| 13600001 | IPC error. |
-| 13600010 | The input parameter is invalid. |
-| 13600011 | Failed to report the specified business space usage. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 13600001 |
+| 13600010 |
+| 13600011 |
 
 **示例**
 
@@ -89,4 +89,3 @@ storageStatistics.setExtBundleStats(userId, extBundleStats).then(() => {
   console.error(`setExtBundleStats failed with err, code is: ${err.code}, message is: ${err.message}`);
 });
 ```
-

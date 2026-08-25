@@ -4,9 +4,9 @@ The **FormEditExtensionAbility** module, inherited from [UIExtensionAbility](../
 
 **Inheritance/Implementation:** FormEditExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-unnamed-declare class FormEditExtensionAbility--><!--Device-unnamed-declare class FormEditExtensionAbility-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -28,9 +28,9 @@ Indicates configuration information about a form edit extension ability context.
 
 **Since:** 18
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-FormEditExtensionAbility-context: FormEditExtensionContext--><!--Device-FormEditExtensionAbility-context: FormEditExtensionContext-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -46,9 +46,8 @@ Indicates configuration information about a form edit extension ability context.
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FormEditExtensionAbility-formEditContext: FormEditExtensionContext--><!--Device-FormEditExtensionAbility-formEditContext: FormEditExtensionContext-End-->
-
 **System capability:** SystemCapability.Ability.Form
-

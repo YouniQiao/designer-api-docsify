@@ -2,9 +2,9 @@
 
 Defines the privilege (permissions) on the shared data.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-sharing-interface Privilege--><!--Device-sharing-interface Privilege-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -26,9 +26,9 @@ Whether the participant can create data to share. The value true means the parti
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Privilege-creatable?: boolean--><!--Device-Privilege-creatable?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -44,9 +44,9 @@ Whether the participant can delete the shared data. The value true means the par
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Privilege-deletable?: boolean--><!--Device-Privilege-deletable?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -62,9 +62,9 @@ Whether the participant can read the shared data. The value true means the parti
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Privilege-readable?: boolean--><!--Device-Privilege-readable?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -80,9 +80,9 @@ Whether the participant can share the data to others. The value true means the p
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Privilege-shareable?: boolean--><!--Device-Privilege-shareable?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -98,11 +98,10 @@ Whether the participant can modify the shared data. The value true means the par
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Privilege-writable?: boolean--><!--Device-Privilege-writable?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **System API:** This is a system API.
-

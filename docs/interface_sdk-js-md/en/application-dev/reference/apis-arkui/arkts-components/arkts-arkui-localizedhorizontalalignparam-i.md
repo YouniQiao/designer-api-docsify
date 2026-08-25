@@ -4,7 +4,7 @@ Defines the localized horizontal align param of relative container.@interface Lo
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface LocalizedHorizontalAlignParam--><!--Device-unnamed-declare interface LocalizedHorizontalAlignParam-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Horizontal alignment mode relative to the anchor component.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-LocalizedHorizontalAlignParam-align: HorizontalAlign--><!--Device-LocalizedHorizontalAlignParam-align: HorizontalAlign-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ ID of the component that serves as the anchor.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-LocalizedHorizontalAlignParam-anchor: string--><!--Device-LocalizedHorizontalAlignParam-anchor: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

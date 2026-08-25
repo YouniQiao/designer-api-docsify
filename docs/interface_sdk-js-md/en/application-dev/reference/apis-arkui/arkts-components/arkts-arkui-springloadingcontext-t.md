@@ -8,13 +8,12 @@ Defines callback context information, which is passed to the application in the 
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-unnamed-declare type SpringLoadingContext = import('../api/@ohos.arkui.dragController').default.SpringLoadingContext--><!--Device-unnamed-declare type SpringLoadingContext = import('../api/@ohos.arkui.dragController').default.SpringLoadingContext-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** import('../api/@ohos.arkui.dragController').default.SpringLoadingContext
-

@@ -2,9 +2,9 @@
 
 Defines the connection result.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-abilityConnectionManager-interface ConnectResult--><!--Device-abilityConnectionManager-interface ConnectResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -24,11 +24,11 @@ Connection error code.
 
 **Type:** [ConnectErrorCode](arkts-distributedservice-abilityconnectionmanager-connecterrorcode-e.md)
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ConnectResult-errorCode?: ConnectErrorCode--><!--Device-ConnectResult-errorCode?: ConnectErrorCode-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -42,11 +42,11 @@ Whether the connection is successful. The value **true** indicates that the conn
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ConnectResult-isConnected: boolean--><!--Device-ConnectResult-isConnected: boolean-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -60,11 +60,10 @@ Connection rejection reason.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ConnectResult-reason?: string--><!--Device-ConnectResult-reason?: string-End-->
-
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
-

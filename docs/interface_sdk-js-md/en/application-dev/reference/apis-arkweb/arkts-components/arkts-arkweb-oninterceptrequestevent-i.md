@@ -4,7 +4,7 @@ Defines the callback information triggered before the **Web** component loads a 
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface OnInterceptRequestEvent--><!--Device-unnamed-declare interface OnInterceptRequestEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -25,9 +25,8 @@ Information about the URL request.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-OnInterceptRequestEvent-request: WebResourceRequest--><!--Device-OnInterceptRequestEvent-request: WebResourceRequest-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

@@ -10,7 +10,6 @@ import { SplitLayout } from '@kit.ArkUI';
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [SplitLayout](arkts-arkui-arkui-advanced-splitlayout-splitlayout-s.md) | Declare SplitLayout.The SplitLayout is used for upper and lower graphic layouts. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SplitLayout](arkts-arkui-arkui-advanced-splitlayout-splitlayout-s.md) |

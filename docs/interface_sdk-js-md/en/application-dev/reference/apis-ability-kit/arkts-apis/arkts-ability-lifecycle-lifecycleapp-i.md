@@ -4,7 +4,7 @@ interface of app lifecycle.@interface LifecycleApp
 
 **Since:** 7
 
-<!--Device-unnamed-export declare interface LifecycleApp--><!--Device-unnamed-export declare interface LifecycleApp-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -23,9 +23,9 @@ Called back when an ability enters the &lt;b&gt;ACTIVE&lt;/b&gt; state.
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleApp-onActive?(): void--><!--Device-LifecycleApp-onActive?(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -39,17 +39,17 @@ Called back when a local ability migration is complete. <p>You can define the pr
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleApp-onCompleteContinuation?(result: number): void--><!--Device-LifecycleApp-onCompleteContinuation?(result: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| result | number | Yes | Indicates the migration result code. The value {@code 0} indicates that the migration is successful, and {@code -1} indicates that the migration fails. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| result | number | Yes |
 
 ## onCreate
 
@@ -61,9 +61,9 @@ Called back when an ability is started for initialization.
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleApp-onCreate?(): void--><!--Device-LifecycleApp-onCreate?(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -77,9 +77,9 @@ Called back before an ability is destroyed.
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleApp-onDestroy?(): void--><!--Device-LifecycleApp-onDestroy?(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -93,9 +93,9 @@ Called back when an ability enters the &lt;b&gt;BACKGROUND&lt;/b&gt; state.
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleApp-onHide?(): void--><!--Device-LifecycleApp-onHide?(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -109,9 +109,9 @@ Called back when an ability enters the &lt;b&gt;INACTIVE&lt;/b&gt; state (an abi
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleApp-onInactive?(): void--><!--Device-LifecycleApp-onInactive?(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -125,17 +125,17 @@ Called when the system has determined to trim the memory, for example, when the 
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleApp-onMemoryLevel?(level: number): void--><!--Device-LifecycleApp-onMemoryLevel?(level: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| level | number | Yes | Indicates the memory trim level, which shows the current memory usage status. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| level | number | Yes |
 
 ## onNewWant
 
@@ -147,17 +147,17 @@ Called when the launch mode of an ability is set to singleton.
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleApp-onNewWant?(want: Want): void--><!--Device-LifecycleApp-onNewWant?(want: Want): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the new {@code want} containing information about the ability. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
 
 ## onRemoteTerminated
 
@@ -169,9 +169,9 @@ Called to notify the local device when a running ability on the remote device is
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleApp-onRemoteTerminated?(): void--><!--Device-LifecycleApp-onRemoteTerminated?(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -185,17 +185,17 @@ This method is called if an ability was destroyed at a certain time due to resou
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleApp-onRestoreAbilityState?(inState: PacMap): void--><!--Device-LifecycleApp-onRestoreAbilityState?(inState: PacMap): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| inState | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | Yes | Indicates the {@code PacMap} object used for storing data and states. This parameter can not be null. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| inState | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | Yes |
 
 ## onRestoreData
 
@@ -207,17 +207,17 @@ Restores the user data saved during the migration for an ability on the remote d
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleApp-onRestoreData?(data: Object): void--><!--Device-LifecycleApp-onRestoreData?(data: Object): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | Object | Yes | Indicates the user data to restore. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | Object | Yes |
 
 ## onSaveAbilityState
 
@@ -229,17 +229,17 @@ This method is called when the system determines that the ability may be destroy
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleApp-onSaveAbilityState?(outState: PacMap): void--><!--Device-LifecycleApp-onSaveAbilityState?(outState: PacMap): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| outState | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | Yes | Indicates the {@code PacMap} object used for storing user data and states. This parameter cannot be null. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| outState | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | Yes |
 
 ## onSaveData
 
@@ -251,23 +251,23 @@ Saves the user data of a local ability generated during runtime. After the migra
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleApp-onSaveData?(data: Object): boolean--><!--Device-LifecycleApp-onSaveData?(data: Object): boolean-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | Object | Yes | Indicates the user data to save. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## onShow
 
@@ -279,9 +279,9 @@ Called back when the state of an ability changes from &lt;b&gt;BACKGROUND&lt;/b&
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleApp-onShow?(): void--><!--Device-LifecycleApp-onShow?(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -295,15 +295,14 @@ Asks a user whether to start the migration.
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleApp-onStartContinuation?(): boolean--><!--Device-LifecycleApp-onStartContinuation?(): boolean-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns { |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

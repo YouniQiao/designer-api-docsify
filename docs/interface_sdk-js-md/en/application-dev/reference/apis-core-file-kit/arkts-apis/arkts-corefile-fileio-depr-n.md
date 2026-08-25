@@ -4,7 +4,7 @@ fileio
 
 **Since:** 6
 
-<!--Device-unnamed-declare namespace fileIO--><!--Device-unnamed-declare namespace fileIO-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -12,4 +12,3 @@ fileio
 
 ```TypeScript
 ```
-

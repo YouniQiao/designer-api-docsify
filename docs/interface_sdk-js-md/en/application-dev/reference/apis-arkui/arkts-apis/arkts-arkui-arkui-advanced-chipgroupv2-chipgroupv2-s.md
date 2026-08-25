@@ -4,9 +4,7 @@ Defines chipGroupV2.
 
 **Since:** 26.0.0
 
-**Decorator:** @ComponentV2
-
-<!--Device-unnamed-export declare struct ChipGroupV2--><!--Device-unnamed-export declare struct ChipGroupV2-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +24,27 @@ Build function for ChipGroupV2
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2-build(): void--><!--Device-ChipGroupV2-build(): void-End-->
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## suffix
+
+```TypeScript
+suffix?: ChipGroupV2SuffixBuilder
+```
+
+The builder function which will be rendered in the suffix of ChipGroupV2.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,13 +60,11 @@ Two-way binding callback method for ChipV2 item.
 
 **Since:** 26.0.0
 
-**Decorator:** @Event
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipGroupV2-@Event    $items?: Callback<ChipGroupV2Items>--><!--Device-ChipGroupV2-@Event    $items?: Callback<ChipGroupV2Items>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,13 +80,11 @@ Two-way binding callback method for selected ChipV2 item indexes.
 
 **Since:** 26.0.0
 
-**Decorator:** @Event
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipGroupV2-@Event    $selectedIndexes?: Callback<Array<number>>--><!--Device-ChipGroupV2-@Event    $selectedIndexes?: Callback<Array<number>>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,13 +100,11 @@ ChipGroupV2 padding (only support top and bottom).
 
 **Since:** 26.0.0
 
-**Decorator:** @Param
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipGroupV2-@Param     chipGroupPadding?: ChipGroupV2Padding--><!--Device-ChipGroupV2-@Param     chipGroupPadding?: ChipGroupV2Padding-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,13 +120,11 @@ Left and right inner margins and spacing between ChipV2.
 
 **Since:** 26.0.0
 
-**Decorator:** @Param
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipGroupV2-@Param    chipGroupSpace?: ChipGroupV2Space--><!--Device-ChipGroupV2-@Param    chipGroupSpace?: ChipGroupV2Space-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -134,13 +140,11 @@ ChipV2 item.
 
 **Since:** 26.0.0
 
-**Decorator:** @Require, @Param
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipGroupV2-@Require    @Param    items: ChipGroupV2Items--><!--Device-ChipGroupV2-@Require    @Param    items: ChipGroupV2Items-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -156,13 +160,11 @@ ChipV2 item style.
 
 **Since:** 26.0.0
 
-**Decorator:** @Param
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipGroupV2-@Param    itemStyle?: ChipGroupV2ItemStyle--><!--Device-ChipGroupV2-@Param    itemStyle?: ChipGroupV2ItemStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -178,13 +180,11 @@ Support multiple ChipV2 item selection.
 
 **Since:** 26.0.0
 
-**Decorator:** @Param
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipGroupV2-@Param    multiple?: boolean--><!--Device-ChipGroupV2-@Param    multiple?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -200,13 +200,11 @@ Callback method when the chipV2 status changes
 
 **Since:** 26.0.0
 
-**Decorator:** @Event
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipGroupV2-@Event    onChange?: Callback<Array<number>>--><!--Device-ChipGroupV2-@Event    onChange?: Callback<Array<number>>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -222,13 +220,11 @@ Selected ChipV2 item indexes.
 
 **Since:** 26.0.0
 
-**Decorator:** @Param
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipGroupV2-@Param    selectedIndexes?: Array<number>--><!--Device-ChipGroupV2-@Param    selectedIndexes?: Array<number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -244,13 +240,10 @@ The builder function which will be rendered in the suffix of ChipGroupV2.
 
 **Since:** 26.0.0
 
-**Decorator:** @BuilderParam
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2-@BuilderParam    suffix?: Callback<void>--><!--Device-ChipGroupV2-@BuilderParam    suffix?: Callback<void>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

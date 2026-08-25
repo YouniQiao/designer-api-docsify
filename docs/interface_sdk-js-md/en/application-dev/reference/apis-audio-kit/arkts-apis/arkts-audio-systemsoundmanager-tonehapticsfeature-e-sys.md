@@ -2,9 +2,9 @@
 
 Definition of haptics feature in tone scenario.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-systemSoundManager-enum ToneHapticsFeature--><!--Device-systemSoundManager-enum ToneHapticsFeature-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -18,9 +18,9 @@ STANDARD = 0
 
 Standard haptics feature.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-ToneHapticsFeature-STANDARD = 0--><!--Device-ToneHapticsFeature-STANDARD = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -34,11 +34,10 @@ GENTLE = 1
 
 Gentle haptics feature.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-ToneHapticsFeature-GENTLE = 1--><!--Device-ToneHapticsFeature-GENTLE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
-

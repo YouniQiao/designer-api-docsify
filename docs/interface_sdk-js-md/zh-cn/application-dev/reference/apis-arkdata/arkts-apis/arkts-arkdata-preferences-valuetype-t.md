@@ -1,30 +1,27 @@
 # ValueType
 
 ```TypeScript
-type ValueType = long | double | string | boolean | Array<long> | Array<double> | Array<string> | Array<boolean>
-    | Uint8Array | RecordData | bigint
+type ValueType = number | string | boolean | Array<number> | Array<string> | Array<boolean> | Uint8Array | object | bigint
 ```
 
-Indicates possible value types@FaAndStageModel
+表示支持的值类型。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-preferences-type ValueType = long | double | string | boolean | Array<long> | Array<double> | Array<string> | Array<boolean>    | Uint8Array | RecordData | bigint--><!--Device-preferences-type ValueType = long | double | string | boolean | Array<long> | Array<double> | Array<string> | Array<boolean>    | Uint8Array | RecordData | bigint-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
-**系统能力：** 
-- API版本23+：SystemCapability.DistributedDataManager.Preferences.Core
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 表示值类型为long类型数字。 |
-| double | 表示值类型为double类型数字。 |
-| string | 表示值类型为字符串。 |
-| boolean | 表示值类型为布尔值。 |
-| Array&lt;long&gt; | 表示值类型为数字类型的数组。 |
-| Array&lt;double&gt; | 表示值类型为数字类型的数组。 |
-| Array&lt;string&gt; | 表示值类型为字符串类型的数组。 |
-| Array&lt;boolean&gt; | 表示值类型为布尔类型的数组。 |
-| Uint8Array | 表示值类型为8位无符号整型的数组。 |
-| RecordData | 表示值类型为RecordData。 |
-| bigint | 表示值类型为任意精度格式的整数。 |
+**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
+| 类型 |
+| --- |
+| number |
+| string |
+| boolean |
+| Array & lt;number & gt; |
+| Array & lt;string & gt; |
+| Array & lt;boolean & gt; |
+| Uint8Array |
+| object |
+| bigint |

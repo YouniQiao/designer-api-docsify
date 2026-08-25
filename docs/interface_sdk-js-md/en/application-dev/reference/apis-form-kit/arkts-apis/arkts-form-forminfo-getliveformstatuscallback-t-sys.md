@@ -6,11 +6,10 @@ type GetLiveFormStatusCallback = () => Record<string, string>
 
 Get live form status info callback
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-formInfo-type GetLiveFormStatusCallback = () => Record<string, string>--><!--Device-formInfo-type GetLiveFormStatusCallback = () => Record<string, string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
-

@@ -9,7 +9,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Math](arkts-arkts-math-c.md) | The Math class contains static properties and methods for mathematical constants and functions. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Math](arkts-arkts-math-c.md) |

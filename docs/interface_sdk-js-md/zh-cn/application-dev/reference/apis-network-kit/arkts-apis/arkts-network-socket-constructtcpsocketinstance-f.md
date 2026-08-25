@@ -16,15 +16,15 @@ function constructTCPSocketInstance(): TCPSocket
 
 **起始版本：** 7
 
-<!--Device-socket-function constructTCPSocketInstance(): TCPSocket--><!--Device-socket-function constructTCPSocketInstance(): TCPSocket-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| TCPSocket | 返回一个TCPSocket对象。 |
+| 类型 |
+| --- |
+| [TCPSocket](arkts-network-socket-tcpsocket-i.md) |
 
 **示例**
 
@@ -32,4 +32,3 @@ function constructTCPSocketInstance(): TCPSocket
 import { socket } from '@kit.NetworkKit';
 let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
 ```
-

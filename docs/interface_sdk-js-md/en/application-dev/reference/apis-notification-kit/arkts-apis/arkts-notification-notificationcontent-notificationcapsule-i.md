@@ -5,9 +5,9 @@ Describes the notification capsule, which is used to display the capsule form in
 > **NOTE：**&gt;
 > The actual display effect depends on the device capabilities and the notification center UI style.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-unnamed-export interface NotificationCapsule--><!--Device-unnamed-export interface NotificationCapsule-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -21,9 +21,9 @@ Capsule background color. Colors in rgb, rgba, or argb format are supported. Exa
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationCapsule-backgroundColor?: string--><!--Device-NotificationCapsule-backgroundColor?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -37,9 +37,9 @@ Capsule icon. The total bytes of the icon pixel does not exceed 192 KB (the tota
 
 **Type:** image.PixelMap
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationCapsule-icon?: image.PixelMap--><!--Device-NotificationCapsule-icon?: image.PixelMap-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -53,9 +53,8 @@ Capsule title. The size does not exceed 202 bytes, and the excess part will be t
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationCapsule-title?: string--><!--Device-NotificationCapsule-title?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
-

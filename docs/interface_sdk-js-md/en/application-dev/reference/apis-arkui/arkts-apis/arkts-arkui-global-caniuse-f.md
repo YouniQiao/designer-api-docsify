@@ -10,21 +10,20 @@ Defining syscap function.
 
 **Since:** 8
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-unnamed-export declare function canIUse(syscap: string): boolean--><!--Device-unnamed-export declare function canIUse(syscap: string): boolean-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| syscap | string | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| syscap | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

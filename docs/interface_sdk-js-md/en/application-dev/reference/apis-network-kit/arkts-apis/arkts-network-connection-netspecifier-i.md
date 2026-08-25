@@ -2,9 +2,9 @@
 
 Provides an instance that bears data network capabilities.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-connection-export interface NetSpecifier--><!--Device-connection-export interface NetSpecifier-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -26,11 +26,11 @@ activated.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-NetSpecifier-bearerPrivateIdentifier?: string--><!--Device-NetSpecifier-bearerPrivateIdentifier?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -44,11 +44,11 @@ Network transmission capabilities and bearer types of the data network.
 
 **Type:** [NetCapabilities](arkts-network-connection-netcapabilities-i.md)
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-NetSpecifier-netCapabilities: NetCapabilities--><!--Device-NetSpecifier-netCapabilities: NetCapabilities-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -77,4 +77,3 @@ wifiManager.addCandidateConfig(config,(error,networkId) => {
  });
 });
 ```
-

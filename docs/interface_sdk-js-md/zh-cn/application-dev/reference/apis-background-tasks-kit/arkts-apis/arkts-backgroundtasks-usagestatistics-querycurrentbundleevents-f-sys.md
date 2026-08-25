@@ -14,9 +14,9 @@ function queryCurrentBundleEvents(begin: long, end: long, callback: AsyncCallbac
 
 通过指定起始和结束时间，查询当前应用的事件集合，使用Callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long, callback: AsyncCallback<Array<BundleEvents>>): void--><!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long, callback: AsyncCallback<Array<BundleEvents>>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -24,25 +24,25 @@ function queryCurrentBundleEvents(begin: long, end: long, callback: AsyncCallbac
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| begin | long | 是 | 起始时间，单位：ms。 |
-| end | long | 是 | 结束时间，单位：ms。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md)&gt;&gt; | 是 | 回调方法。 当查询成功，err为undefined，data为指定起始和结束时间段内，当前应用的事件集合；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| begin | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| end | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md)&gt;&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameters types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [10000001](../errorcode-DeviceUsageStatistics.md#10000001-内存操作失败) | Memory operation failed. |
-| [10000002](../errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failed) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; <br> 2. Failed to apply for memory. |
-| [10000003](../errorcode-DeviceUsageStatistics.md#10000003-系统服务操作失败) | Failed to get system ability manager. |
-| [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) | Failed to access the device usage service. |
-| [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) | Failed to get the application information. |
-| [10000007](../errorcode-DeviceUsageStatistics.md#10000007-时间操作失败) | Failed to get the system time. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [10000001](../errorcode-DeviceUsageStatistics.md#10000001-内存操作失败) |
+| [10000002](../errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failed) |
+| [10000003](../errorcode-DeviceUsageStatistics.md#10000003-系统服务操作失败) |
+| [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) |
+| [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) |
+| [10000007](../errorcode-DeviceUsageStatistics.md#10000007-时间操作失败) |
 
 **示例**
 
@@ -102,9 +102,9 @@ function queryCurrentBundleEvents(begin: long, end: long): Promise<Array<BundleE
 
 通过指定起始和结束时间段内，查询当前应用的事件集合，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long): Promise<Array<BundleEvents>>--><!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long): Promise<Array<BundleEvents>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -112,30 +112,30 @@ function queryCurrentBundleEvents(begin: long, end: long): Promise<Array<BundleE
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| begin | long | 是 | 起始时间，单位：ms。 |
-| end | long | 是 | 结束时间，单位：ms。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| begin | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| end | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md)&gt;&gt; | Promise对象。返回指定起始和结束时间段内，当前应用的事件集合。 |
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;[BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md)&gt;&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameters types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [10000001](../errorcode-DeviceUsageStatistics.md#10000001-内存操作失败) | Memory operation failed. |
-| [10000002](../errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failed) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; <br> 2. Failed to apply for memory. |
-| [10000003](../errorcode-DeviceUsageStatistics.md#10000003-系统服务操作失败) | Failed to get system ability manager. |
-| [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) | Failed to access the device usage service. |
-| [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) | Failed to get the application information. |
-| [10000007](../errorcode-DeviceUsageStatistics.md#10000007-时间操作失败) | Failed to get the system time. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [10000001](../errorcode-DeviceUsageStatistics.md#10000001-内存操作失败) |
+| [10000002](../errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failed) |
+| [10000003](../errorcode-DeviceUsageStatistics.md#10000003-系统服务操作失败) |
+| [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) |
+| [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) |
+| [10000007](../errorcode-DeviceUsageStatistics.md#10000007-时间操作失败) |
 
 **示例**
 
@@ -152,9 +152,9 @@ function queryCurrentBundleEvents(begin: long, end: long, maxNum: int): Promise<
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long, maxNum: int): Promise<Array<BundleEvents>>--><!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long, maxNum: int): Promise<Array<BundleEvents>>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -162,32 +162,31 @@ function queryCurrentBundleEvents(begin: long, end: long, maxNum: int): Promise<
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| begin | long | 是 | 起始时间。<br/>单位：ms |
-| end | long | 是 | 结束时间。<br/>单位：ms |
-| maxNum | int | 是 | 返回的事件的条数。<br/>取值范围：[1, 1000] |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| begin | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| end | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| maxNum | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md)&gt;&gt; | Promise对象，返回指定起始和结束时间段内，当前应用的事件集合。 |
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;[BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md)&gt;&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [10000001](../errorcode-DeviceUsageStatistics.md#10000001-内存操作失败) | Memory operation failed. |
-| [10000002](../errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failed) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; <br> 2. Failed to apply for memory. |
-| [10000003](../errorcode-DeviceUsageStatistics.md#10000003-系统服务操作失败) | Failed to get system ability manager. |
-| [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) | Failed to access the device usage service. |
-| [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) | Failed to get the application information. |
-| [10000007](../errorcode-DeviceUsageStatistics.md#10000007-时间操作失败) | Failed to get the system time. |
-| [10000008](../errorcode-DeviceUsageStatistics.md#10000008-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameters types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [10000001](../errorcode-DeviceUsageStatistics.md#10000001-内存操作失败) |
+| [10000002](../errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failed) |
+| [10000003](../errorcode-DeviceUsageStatistics.md#10000003-系统服务操作失败) |
+| [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) |
+| [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) |
+| [10000007](../errorcode-DeviceUsageStatistics.md#10000007-时间操作失败) |
+| [10000008](../errorcode-DeviceUsageStatistics.md#10000008-参数检查失败) |
 
 **示例**
 
 参见 [queryCurrentBundleEvents](#querycurrentbundleevents)
-

@@ -12,7 +12,6 @@ import { bluetooth } from '@kit.ConnectivityKit';
 
 ### Namespaces
 
-| Name | Description |
-| --- | --- |
-| [bluetooth](arkts-connectivity-bluetooth-n.md) | Provides methods to operate or manage Bluetooth. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [bluetooth](arkts-connectivity-bluetooth-n.md) |

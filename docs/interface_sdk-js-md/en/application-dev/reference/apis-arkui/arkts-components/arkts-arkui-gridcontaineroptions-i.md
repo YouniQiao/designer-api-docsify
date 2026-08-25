@@ -4,11 +4,11 @@ Defines the options of GridContainer.@interface GridContainerOptions
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-**Substitutes:** grid_col/GridColOptions and grid_row/GridRowOptions
-
-<!--Device-unnamed-declare interface GridContainerOptions--><!--Device-unnamed-declare interface GridContainerOptions-End-->
+**Substitutes:** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,11 +29,11 @@ Sets the total number of columns in the current layout.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-**Substitutes:** grid_col/GridColOptions and grid_row/GridRowOptions
-
-<!--Device-GridContainerOptions-columns?: number | "auto"--><!--Device-GridContainerOptions-columns?: number | "auto"-End-->
+**Substitutes:** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,11 +49,11 @@ Grid layout column spacing.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-**Substitutes:** grid_col/GridColOptions and grid_row/GridRowOptions
-
-<!--Device-GridContainerOptions-gutter?: number | string--><!--Device-GridContainerOptions-gutter?: number | string-End-->
+**Substitutes:** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,11 +69,11 @@ Spacing on both sides of the grid layout.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-**Substitutes:** grid_col/GridColOptions and grid_row/GridRowOptions
-
-<!--Device-GridContainerOptions-margin?: number | string--><!--Device-GridContainerOptions-margin?: number | string-End-->
+**Substitutes:** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -89,11 +89,10 @@ Select the device width type.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-**Substitutes:** grid_col/GridColOptions and grid_row/GridRowOptions
-
-<!--Device-GridContainerOptions-sizeType?: SizeType--><!--Device-GridContainerOptions-sizeType?: SizeType-End-->
+**Substitutes:** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

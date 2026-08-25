@@ -14,9 +14,9 @@ function getOneCfgFileSync(relPath: string, followMode?: FollowXMode, extra?: st
 
 Obtains the path of the configuration file with the highest priority based on the provided follow mode.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-configPolicy-function getOneCfgFileSync(relPath: string, followMode?: FollowXMode, extra?: string): string--><!--Device-configPolicy-function getOneCfgFileSync(relPath: string, followMode?: FollowXMode, extra?: string): string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Customization.ConfigPolicy
 
@@ -24,23 +24,23 @@ Obtains the path of the configuration file with the highest priority based on th
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| relPath | string | Yes | Name of the configuration file. |
-| followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | No | Follow mode. The default value is [DEFAULT](arkts-basicservices-configpolicy-followxmode-e-sys.md#default) if this parameter is not set. |
-| extra | string | No | Custom follow rule. This parameter is valid only when **followMode** is set to [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#user_defined). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| relPath | string | Yes |
+| followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | No |
+| extra | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | The path of the configuration file with the highest priority obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3.Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -58,4 +58,3 @@ try {
   console.error('error:' + code + ', ' + message);
 }
 ```
-

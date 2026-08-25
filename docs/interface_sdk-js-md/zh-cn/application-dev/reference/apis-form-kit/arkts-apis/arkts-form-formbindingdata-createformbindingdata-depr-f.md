@@ -15,25 +15,25 @@ function createFormBindingData(obj?: Object | string): FormBindingData
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md)
-
-<!--Device-formBindingData-function createFormBindingData(obj?: Object | string): FormBindingData--><!--Device-formBindingData-function createFormBindingData(obj?: Object | string): FormBindingData-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| obj | Object \| string | 否 | JS卡片要展示的数据。可以是包含若干键值对的Object或者 json 格式的字符串。其中图片数据以'formImages'作为标识，内容为图片标识与图片文件描 述符的键值对{'formImages': {'key1': fd1, 'key2': fd2}}。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| obj | Object \| string | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| FormBindingData | 根据传入数据创建的FormBindingData对象。 |
+| 类型 |
+| --- |
+| [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md) |
 
 **示例**
 
@@ -79,4 +79,3 @@ struct Index {
   }
 }
 ```
-

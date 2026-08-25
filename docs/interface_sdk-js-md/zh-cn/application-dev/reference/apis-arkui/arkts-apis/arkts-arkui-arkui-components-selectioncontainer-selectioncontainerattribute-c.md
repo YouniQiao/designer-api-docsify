@@ -11,7 +11,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-export declare class SelectionContainerAttribute--><!--Device-unnamed-export declare class SelectionContainerAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,6 +20,35 @@
 ```TypeScript
 import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerInstance, SelectionContainerMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerOptions, SelectionContainerController } from '@kit.ArkUI';
 ```
+
+## attributeModifier
+
+```TypeScript
+default attributeModifier(modifier: AttributeModifier<SelectionContainerAttribute> | AttributeModifier<CommonMethod>
+    | undefined): this
+```
+
+设置组件的动态属性。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| modifier | AttributeModifier&lt;[SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md)&gt; \| AttributeModifier & lt;CommonMethod & gt; \ | undefined | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |
 
 ## bindSelectionMenu
 
@@ -32,28 +61,28 @@ bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuil
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectionContainerAttribute-bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuilder>,    responseType: Optional<TextResponseType>, options?: Optional<SelectionContainerMenuOptions>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuilder>,    responseType: Optional<TextResponseType>, options?: Optional<SelectionContainerMenuOptions>): SelectionContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| spanType | Optional&lt;TextSpanType&gt; | 是 | 选择菜单的类型。默认值为 TextSpanType.TEXT |
-| content | Optional&lt;CustomBuilder&gt; | 是 | 指示选择菜单的内容 |
-| responseType | Optional&lt;TextResponseType&gt; | 是 | 选择菜单响应类型。默认值为 TextResponseType.LONG_press |
-| options | Optional&lt;[SelectionContainerMenuOptions](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md)&gt; | 否 | 指示选择菜单的选项 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| spanType | Optional & lt;TextSpanType & gt; | 是 |
+| content | Optional & lt;CustomBuilder & gt; | 是 |
+| responseType | Optional & lt;TextResponseType & gt; | 是 |
+| options | Optional&lt;[SelectionContainerMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md)&gt; | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SelectionContainerAttribute](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | 返回SelectionContainerAttribute的实例。 |
+| 类型 |
+| --- |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |
 
 ## caretColor
 
@@ -69,25 +98,25 @@ caretColor(color: Optional<ResourceColor>): SelectionContainerAttribute
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectionContainerAttribute-caretColor(color: Optional<ResourceColor>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-caretColor(color: Optional<ResourceColor>): SelectionContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| color | Optional&lt;ResourceColor&gt; | 是 | 手柄颜色。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| color | Optional & lt;ResourceColor & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SelectionContainerAttribute](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
+| 类型 |
+| --- |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |
 
 ## copyOption
 
@@ -102,25 +131,25 @@ copyOption(value: Optional<CopyOptions>): SelectionContainerAttribute
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectionContainerAttribute-copyOption(value: Optional<CopyOptions>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-copyOption(value: Optional<CopyOptions>): SelectionContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Optional&lt;CopyOptions&gt; | 是 | 复制粘贴配置项，用于设置文本的可复制范围。具体说明请参考CopyOptions枚举。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | Optional & lt;CopyOptions & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SelectionContainerAttribute](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
+| 类型 |
+| --- |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |
 
 ## editMenuOptions
 
@@ -131,31 +160,31 @@ editMenuOptions(editMenu: Optional<SelectionContainerEditMenuOptions>): Selectio
 设置选中文本后的编辑菜单选项，包括菜单文本、图标和回调等。
 
 > **说明：**&gt;
-> 当同时为当前场景设置了[bindSelectionMenu](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#bindselectionmenu)和editMenuOptions时，优先使用
+> 当同时为当前场景设置了[bindSelectionMenu](#bindselectionmenu)和editMenuOptions时，优先使用
 > bindSelectionMenu，editMenuOptions不生效。bindSelectionMenu用于完全自定义菜单风格和触发条件，由开发者定义所有菜单项；editMenuOptions用于在系统默认菜单基础上添加扩
 > 展项，触发条件不变。建议根据自定义程度需求选择。
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectionContainerAttribute-editMenuOptions(editMenu: Optional<SelectionContainerEditMenuOptions>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-editMenuOptions(editMenu: Optional<SelectionContainerEditMenuOptions>): SelectionContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| editMenu | Optional&lt;[SelectionContainerEditMenuOptions](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md)&gt; | 是 | 自定义编辑菜单配置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| editMenu | Optional&lt;[SelectionContainerEditMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md)&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SelectionContainerAttribute](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
+| 类型 |
+| --- |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |
 
 ## enableHapticFeedback
 
@@ -167,25 +196,25 @@ enableHapticFeedback(isEnabled: Optional<boolean>): SelectionContainerAttribute
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectionContainerAttribute-enableHapticFeedback(isEnabled: Optional<boolean>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-enableHapticFeedback(isEnabled: Optional<boolean>): SelectionContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isEnabled | Optional&lt;boolean&gt; | 是 | 是否开启触控反馈。 <br>true表示开启触控反馈，false表示不开启触控反馈。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| isEnabled | Optional & lt;boolean & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SelectionContainerAttribute](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
+| 类型 |
+| --- |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |
 
 ## onCopy
 
@@ -196,30 +225,30 @@ onCopy(callback: Optional<Callback<string>>): SelectionContainerAttribute
 长按文本内部区域弹出选择菜单后，点击选择菜单的复制按钮，触发该回调。仅支持复制文本。使用callback异步回调。
 
 > **说明：**&gt;
-> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#textjoinstyle)配置决定。&gt;
-> - 仅当容器级[onWillCopy](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#onwillcopy)返回true时，该回调才会触发。
+> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](#textjoinstyle)配置决定。&gt;
+> - 仅当容器级[onWillCopy](#onwillcopy)返回true时，该回调才会触发。
 
 **起始版本：** 26.0.0
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SelectionContainerAttribute-onCopy(callback: Optional<Callback<string>>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-onCopy(callback: Optional<Callback<string>>): SelectionContainerAttribute-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Optional&lt;Callback&lt;string&gt;&gt; | 是 | 复制回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Optional & lt;Callback & lt;string & gt; & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SelectionContainerAttribute](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
+| 类型 |
+| --- |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |
 
 ## onTextSelectionChange
 
@@ -236,25 +265,25 @@ SelectionContainer中选中文本发生变化时触发该回调。使用callback
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectionContainerAttribute-onTextSelectionChange(callback: Optional<Callback<Array<string>>>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-onTextSelectionChange(callback: Optional<Callback<Array<string>>>): SelectionContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Optional&lt;Callback&lt;Array&lt;string&gt;&gt;&gt; | 是 | 选中文本变化回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Optional & lt;Callback & lt;Array & lt;string & gt; & gt; & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SelectionContainerAttribute](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
+| 类型 |
+| --- |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |
 
 ## onWillCopy
 
@@ -265,30 +294,30 @@ onWillCopy(callback: Optional<Callback<string, boolean>>): SelectionContainerAtt
 在进行复制操作前，触发该回调。使用callback异步回调。
 
 > **说明：**&gt;
-> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#textjoinstyle)配置决定。&gt;
-> - 返回false时，会阻止本次跨节点复制及容器级[onCopy](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#oncopy)回调触发，但不会影响各Text子组件已独立处理完成的复制事件逻辑。
+> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](#textjoinstyle)配置决定。&gt;
+> - 返回false时，会阻止本次跨节点复制及容器级[onCopy](#oncopy)回调触发，但不会影响各Text子组件已独立处理完成的复制事件逻辑。
 
 **起始版本：** 26.0.0
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SelectionContainerAttribute-onWillCopy(callback: Optional<Callback<string, boolean>>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-onWillCopy(callback: Optional<Callback<string, boolean>>): SelectionContainerAttribute-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Optional&lt;Callback&lt;string, boolean&gt;&gt; | 是 | 复制前检查回调，返回true表示允许复制，返回false表示不允许复制。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Optional & lt;Callback & lt;string, boolean & gt; & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SelectionContainerAttribute](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
+| 类型 |
+| --- |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |
 
 ## selectedBackgroundColor
 
@@ -305,25 +334,47 @@ selectedBackgroundColor(color: Optional<ResourceColor>): SelectionContainerAttri
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectionContainerAttribute-selectedBackgroundColor(color: Optional<ResourceColor>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-selectedBackgroundColor(color: Optional<ResourceColor>): SelectionContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| color | Optional&lt;ResourceColor&gt; | 是 | 选中文本底板颜色。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| color | Optional & lt;ResourceColor & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SelectionContainerAttribute](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
+| 类型 |
+| --- |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |
+
+## setSelectionContainerOptions
+
+```TypeScript
+default setSelectionContainerOptions(): this
+```
+
+设置SelectionContainer选项。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |
 
 ## textJoinStyle
 
@@ -334,31 +385,30 @@ textJoinStyle(style: Optional<SelectionContainerTextJoinStyle>): SelectionContai
 设置SelectionContainer内聚合文本的拼接方式。未通过该接口设置时，默认为SelectionContainerTextJoinStyle.NEWLINE，表示不同文本节点之间使用换行符\n拼接。
 
 > **说明：**&gt;
-> - 该配置会影响[onWillCopy](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#onwillcopy)、
-> [onCopy](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#oncopy)、
-> [bindSelectionMenu](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#bindselectionmenu)相关回调中返回的文本内容。&gt;
+> - 该配置会影响[onWillCopy](#onwillcopy)、
+> [onCopy](#oncopy)、
+> [bindSelectionMenu](#bindselectionmenu)相关回调中返回的文本内容。&gt;
 > - 该配置也会影响系统内置菜单项中依赖文本拼接结果的逻辑。例如，选择两个Text节点中的文本时，若配置为SelectionContainerTextJoinStyle.NEWLINE，执行复制后两段文本之间会插入换行符；若配置
 > 为SelectionContainerTextJoinStyle.DIRECT，执行复制后两段文本会直接拼接。
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectionContainerAttribute-textJoinStyle(style: Optional<SelectionContainerTextJoinStyle>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-textJoinStyle(style: Optional<SelectionContainerTextJoinStyle>): SelectionContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| style | Optional&lt;[SelectionContainerTextJoinStyle](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md)&gt; | 是 | 聚合文本拼接方式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| style | Optional&lt;[SelectionContainerTextJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md)&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SelectionContainerAttribute](../../apis-default/arkts-apis/arkts-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
-
+| 类型 |
+| --- |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |

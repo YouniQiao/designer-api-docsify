@@ -4,7 +4,7 @@ Defines the window property corresponding to this ability. The **abilityStartSet
 
 **Since:** 7
 
-<!--Device-featureAbility-export enum AbilityStartSetting--><!--Device-featureAbility-export enum AbilityStartSetting-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -18,9 +18,9 @@ Ability window size.
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-AbilityStartSetting-BOUNDS_KEY = 'abilityBounds'--><!--Device-AbilityStartSetting-BOUNDS_KEY = 'abilityBounds'-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -34,9 +34,9 @@ Ability window display mode.
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-AbilityStartSetting-WINDOW_MODE_KEY = 'windowMode'--><!--Device-AbilityStartSetting-WINDOW_MODE_KEY = 'windowMode'-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -50,9 +50,9 @@ Display device ID.
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-AbilityStartSetting-DISPLAY_ID_KEY = 'displayId'--><!--Device-AbilityStartSetting-DISPLAY_ID_KEY = 'displayId'-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -63,4 +63,3 @@ import { featureAbility } from '@kit.AbilityKit';
 
 featureAbility.AbilityStartSetting.BOUNDS_KEY
 ```
-

@@ -2,9 +2,9 @@
 
 Describes the button displayed for a reminder.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-reminderAgentManager-interface ActionButton--><!--Device-reminderAgentManager-interface ActionButton-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -24,9 +24,9 @@ Text on the button.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ActionButton-title: string--><!--Device-ActionButton-title: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -40,9 +40,9 @@ Resource ID of the title. This parameter is used to read the title information a
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ActionButton-titleResource?: string--><!--Device-ActionButton-titleResource?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -56,9 +56,8 @@ Button type.
 
 **Type:** ActionButtonType
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ActionButton-type: ActionButtonType--><!--Device-ActionButton-type: ActionButtonType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
-

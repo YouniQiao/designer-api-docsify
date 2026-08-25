@@ -2,9 +2,9 @@
 
 节假日名称在不同语言下的翻译。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-i18n-export interface HolidayLocalName--><!--Device-i18n-export interface HolidayLocalName-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -24,11 +24,11 @@ language: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HolidayLocalName-language: string--><!--Device-HolidayLocalName-language: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -42,11 +42,10 @@ name: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-HolidayLocalName-name: string--><!--Device-HolidayLocalName-name: string-End-->
-
 **系统能力：** SystemCapability.Global.I18n
-

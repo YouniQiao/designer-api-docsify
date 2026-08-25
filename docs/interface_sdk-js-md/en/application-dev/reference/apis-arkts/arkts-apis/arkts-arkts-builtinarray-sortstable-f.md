@@ -16,20 +16,17 @@ Sorts elements of `arr` using stable sort algorithm.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function sort_stable<T>(arr: FixedArray<T>, startIndex: int, endIndex: int, comp: (lhs: T, rhs: T) => int):     void--><!--Device-unnamed-export function sort_stable<T>(arr: FixedArray<T>, startIndex: int, endIndex: int, comp: (lhs: T, rhs: T) => int):     void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | FixedArray&lt;T&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The start index of sorting range. <br>The value should be an integer. |
-| endIndex | int | Yes | The end index of sorting range. <br>The value should be an integer. |
-| comp | (lhs: T, rhs: T) =&gt; int | Yes | Comparator function. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | FixedArray & lt;T & gt; | Yes |
+| startIndex | int | Yes |
+| endIndex | int | Yes |
+| comp | (lhs: T, rhs: T) = & gt; int | Yes |

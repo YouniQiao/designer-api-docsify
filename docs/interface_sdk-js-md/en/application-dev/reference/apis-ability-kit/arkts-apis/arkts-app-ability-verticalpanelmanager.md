@@ -12,16 +12,15 @@ import { verticalPanelManager } from '@kit.AbilityKit';
 
 ### Namespaces
 
-| Name | Description |
-| --- | --- |
-| [verticalPanelManager](arkts-ability-verticalpanelmanager-n.md) | Defines a vertical domain panel manager.@namespace verticalPanelManager |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [verticalPanelManager](arkts-ability-verticalpanelmanager-n.md) |
 
 <!--Del-->
 ### Types(System API)
 
-| Name | Description |
-| --- | --- |
-| [OnErrorFn](arkts-ability-onerrorfn-t-sys.md) | Defines a OnError function. |
-| [OnResultFn](arkts-ability-onresultfn-t-sys.md) | Defines a onResult function. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [OnErrorFn](arkts-ability-onerrorfn-t-sys.md) |
+| [OnResultFn](arkts-ability-onresultfn-t-sys.md) |
 <!--DelEnd-->
-

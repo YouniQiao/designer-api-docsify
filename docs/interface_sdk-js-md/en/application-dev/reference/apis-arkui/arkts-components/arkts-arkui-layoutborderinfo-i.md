@@ -4,11 +4,11 @@ Provides the border information of the child component.@interface LayoutBorderIn
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** Measurable/Layoutable
-
-<!--Device-unnamed-declare interface LayoutBorderInfo--><!--Device-unnamed-declare interface LayoutBorderInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,17 +25,17 @@ borderWidth: EdgeWidths
 
 Edge widths in different directions of the component.
 
-**Type:** EdgeWidths
+**Type:** [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md)
 
 **Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
 **Substitutes:** getBorderWidth
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-LayoutBorderInfo-borderWidth: EdgeWidths--><!--Device-LayoutBorderInfo-borderWidth: EdgeWidths-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,13 +51,13 @@ Margin values in different directions of the component.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** getMargin
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-LayoutBorderInfo-margin: Margin--><!--Device-LayoutBorderInfo-margin: Margin-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,9 +69,11 @@ padding: Padding
 
 Padding values in different directions of the component.
 
-**Type:** Padding
+**Type:** [Padding](../arkts-apis/arkts-arkui-units-padding-i.md)
 
 **Since:** 9
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -79,7 +81,4 @@ Padding values in different directions of the component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-LayoutBorderInfo-padding: Padding--><!--Device-LayoutBorderInfo-padding: Padding-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

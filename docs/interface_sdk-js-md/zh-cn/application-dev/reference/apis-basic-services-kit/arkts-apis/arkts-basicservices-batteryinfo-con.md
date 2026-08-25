@@ -10,7 +10,7 @@ const batteryCapacityLevel: BatteryCapacityLevel
 
 **起始版本：** 9
 
-<!--Device-batteryInfo-const batteryCapacityLevel: BatteryCapacityLevel--><!--Device-batteryInfo-const batteryCapacityLevel: BatteryCapacityLevel-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -24,9 +24,9 @@ const batterySOC: number
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-batteryInfo-const batterySOC: number--><!--Device-batteryInfo-const batterySOC: number-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -40,7 +40,7 @@ const batteryTemperature: number
 
 **起始版本：** 6
 
-<!--Device-batteryInfo-const batteryTemperature: number--><!--Device-batteryInfo-const batteryTemperature: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -54,9 +54,9 @@ const chargingStatus: BatteryChargeState
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-batteryInfo-const chargingStatus: BatteryChargeState--><!--Device-batteryInfo-const chargingStatus: BatteryChargeState-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -70,7 +70,7 @@ const healthStatus: BatteryHealthState
 
 **起始版本：** 6
 
-<!--Device-batteryInfo-const healthStatus: BatteryHealthState--><!--Device-batteryInfo-const healthStatus: BatteryHealthState-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -84,7 +84,7 @@ const isBatteryPresent: boolean
 
 **起始版本：** 7
 
-<!--Device-batteryInfo-const isBatteryPresent: boolean--><!--Device-batteryInfo-const isBatteryPresent: boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -98,7 +98,7 @@ const nowCurrent: number
 
 **起始版本：** 12
 
-<!--Device-batteryInfo-const nowCurrent: number--><!--Device-batteryInfo-const nowCurrent: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -112,7 +112,7 @@ const pluggedType: BatteryPluggedType
 
 **起始版本：** 6
 
-<!--Device-batteryInfo-const pluggedType: BatteryPluggedType--><!--Device-batteryInfo-const pluggedType: BatteryPluggedType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -126,7 +126,7 @@ const technology: string
 
 **起始版本：** 6
 
-<!--Device-batteryInfo-const technology: string--><!--Device-batteryInfo-const technology: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -140,7 +140,6 @@ const voltage: number
 
 **起始版本：** 6
 
-<!--Device-batteryInfo-const voltage: number--><!--Device-batteryInfo-const voltage: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
-

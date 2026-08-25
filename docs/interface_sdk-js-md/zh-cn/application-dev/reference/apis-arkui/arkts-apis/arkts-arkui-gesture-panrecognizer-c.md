@@ -6,9 +6,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export declare class PanRecognizer--><!--Device-unnamed-export declare class PanRecognizer-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,19 +20,17 @@ getDirection(): PanDirection
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PanRecognizer-getDirection(): PanDirection--><!--Device-PanRecognizer-getDirection(): PanDirection-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [PanDirection](arkts-arkui-gesture-pandirection-e.md) | 当前滑动手势识别器的识别方向。 |
+| 类型 |
+| --- |
+| [PanDirection](arkts-arkui-gesture-pandirection-e.md) |
 
 ## getDistance
 
@@ -46,19 +42,17 @@ getDistance(): double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PanRecognizer-getDistance(): double--><!--Device-PanRecognizer-getDistance(): double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | 当前滑动手势识别器触发的最小滑动距离。单位：vp |
+| 类型 |
+| --- |
+| double |
 
 ## getDistanceMap
 
@@ -74,19 +68,17 @@ getDistanceMap(): Map<SourceTool, double>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PanRecognizer-getDistanceMap(): Map<SourceTool, double>--><!--Device-PanRecognizer-getDistanceMap(): Map<SourceTool, double>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Map&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md), double&gt; | 不同输入源的滑动手势识别器触发的最小滑动距离。滑动距离的单位：vp |
+| 类型 |
+| --- |
+| Map&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md), double&gt; |
 
 ## getPanGestureOptions
 
@@ -98,17 +90,14 @@ getPanGestureOptions(): PanGestureOptions
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PanRecognizer-getPanGestureOptions(): PanGestureOptions--><!--Device-PanRecognizer-getPanGestureOptions(): PanGestureOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [PanGestureOptions](arkts-arkui-gesture-pangestureoptions-c.md) | 当前滑动手势识别器的属性。 |
-
+| 类型 |
+| --- |
+| [PanGestureOptions](arkts-arkui-gesture-pangestureoptions-c.md) |

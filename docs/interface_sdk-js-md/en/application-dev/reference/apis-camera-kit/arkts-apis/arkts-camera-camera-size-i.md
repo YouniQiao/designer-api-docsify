@@ -2,9 +2,9 @@
 
 Describes the image dimensions.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-camera-interface Size--><!--Device-camera-interface Size-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -22,13 +22,13 @@ height: int
 
 Image height, in pixels.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-Size-height: int--><!--Device-Size-height: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -40,13 +40,12 @@ width: int
 
 Image width, in pixels.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-Size-width: int--><!--Device-Size-width: int-End-->
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
-

@@ -2,9 +2,9 @@
 
 Enumerates the preferred device categories available for recording with Bluetooth or NearLink.
 
-**Since:** 24
+**Since:** 21
 
-<!--Device-audio-enum BluetoothAndNearlinkPreferredRecordCategory--><!--Device-audio-enum BluetoothAndNearlinkPreferredRecordCategory-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -16,9 +16,9 @@ PREFERRED_NONE = 0
 
 No specific device preference.
 
-**Since:** 24
+**Since:** 21
 
-<!--Device-BluetoothAndNearlinkPreferredRecordCategory-PREFERRED_NONE = 0--><!--Device-BluetoothAndNearlinkPreferredRecordCategory-PREFERRED_NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -30,9 +30,9 @@ PREFERRED_DEFAULT = 1
 
 Prefers using Bluetooth or NearLink devices for recording; whether to use low-latency or high-quality recording depends on the system.
 
-**Since:** 24
+**Since:** 21
 
-<!--Device-BluetoothAndNearlinkPreferredRecordCategory-PREFERRED_DEFAULT = 1--><!--Device-BluetoothAndNearlinkPreferredRecordCategory-PREFERRED_DEFAULT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -44,9 +44,9 @@ PREFERRED_LOW_LATENCY = 2
 
 Prefers using Bluetooth or NearLink devices in low-latency mode for recording.
 
-**Since:** 24
+**Since:** 21
 
-<!--Device-BluetoothAndNearlinkPreferredRecordCategory-PREFERRED_LOW_LATENCY = 2--><!--Device-BluetoothAndNearlinkPreferredRecordCategory-PREFERRED_LOW_LATENCY = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -58,9 +58,8 @@ PREFERRED_HIGH_QUALITY = 3
 
 Prefers using Bluetooth or NearLink devices in high-quality mode for recording.
 
-**Since:** 24
+**Since:** 21
 
-<!--Device-BluetoothAndNearlinkPreferredRecordCategory-PREFERRED_HIGH_QUALITY = 3--><!--Device-BluetoothAndNearlinkPreferredRecordCategory-PREFERRED_HIGH_QUALITY = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
-

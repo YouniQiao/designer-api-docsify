@@ -4,7 +4,7 @@ The basic data structure of the hover hand detection area.
 
 **Since:** 26.0.0
 
-<!--Device-motion-export interface HoverHandDetectionArea--><!--Device-motion-export interface HoverHandDetectionArea-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -24,13 +24,13 @@ height: int
 
 Height of the rectangle. Unit: px. The value must be an integer within [1,2147483647].
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-HoverHandDetectionArea-height: int--><!--Device-HoverHandDetectionArea-height: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -44,13 +44,13 @@ left: int
 
 Left boundary of the rectangle. Unit: px. The value must be an integer within [-2147483648,2147483647].
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-HoverHandDetectionArea-left: int--><!--Device-HoverHandDetectionArea-left: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -64,13 +64,13 @@ top: int
 
 Top boundary of the rectangle. Unit: px. The value must be an integer within [-2147483648,2147483647].
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-HoverHandDetectionArea-top: int--><!--Device-HoverHandDetectionArea-top: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -84,15 +84,14 @@ width: int
 
 Width of the rectangle. Unit: px. The value must be an integer within [1,2147483647].
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-HoverHandDetectionArea-width: int--><!--Device-HoverHandDetectionArea-width: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **System API:** This is a system API.
-

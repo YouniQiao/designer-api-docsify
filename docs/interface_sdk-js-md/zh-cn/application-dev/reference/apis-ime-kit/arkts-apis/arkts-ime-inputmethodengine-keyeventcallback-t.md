@@ -8,19 +8,18 @@ export type KeyEventCallback = (event: KeyEvent) => boolean
 
 **起始版本：** 23
 
-<!--Device-inputMethodEngine-export type KeyEventCallback = (event: KeyEvent) => boolean--><!--Device-inputMethodEngine-export type KeyEventCallback = (event: KeyEvent) => boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | KeyEvent | 是 | 按键事件对象，包含按键码、按键类型、事件时间等按键相关信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [KeyEvent](arkts-ime-inputmethodengine-keyevent-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 是否消费该按键事件：返回true表示消费，系统不再向下传递该事件；返回false表示不消费，系统继续处理该事件。 |
-
+| 类型 |
+| --- |
+| boolean |

@@ -2,9 +2,9 @@
 
 证书数据。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-networkSecurity-export interface CertBlob--><!--Device-networkSecurity-export interface CertBlob-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -24,9 +24,9 @@ data: string | ArrayBuffer
 
 **类型：** string \| ArrayBuffer
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CertBlob-data: string | ArrayBuffer--><!--Device-CertBlob-data: string | ArrayBuffer-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -40,9 +40,8 @@ type: CertType
 
 **类型：** CertType
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CertBlob-type: CertType--><!--Device-CertBlob-type: CertType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
-

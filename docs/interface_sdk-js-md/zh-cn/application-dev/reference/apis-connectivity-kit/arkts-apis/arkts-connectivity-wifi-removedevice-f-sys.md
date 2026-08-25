@@ -16,13 +16,13 @@ function removeDevice(id: number): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** removeDeviceConfig
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
-
-<!--Device-wifi-function removeDevice(id: number): boolean--><!--Device-wifi-function removeDevice(id: number): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -30,15 +30,15 @@ function removeDevice(id: number): boolean
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| id | number | 是 | WLAN网络的ID， 可通过{ |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| id | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 操作成功时返回{ |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -52,4 +52,3 @@ try {
     console.error("failed:" + JSON.stringify(error));
 }
 ```
-

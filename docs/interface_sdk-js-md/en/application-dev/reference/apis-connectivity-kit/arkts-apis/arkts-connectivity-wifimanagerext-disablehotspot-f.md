@@ -16,21 +16,21 @@ Disable Wi-Fi hotspot function. If Wi-Fi is enabled after the Wi-Fi hotspot is d
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT_EXT
-
-<!--Device-wifiManagerExt-function disableHotspot(): void--><!--Device-wifiManagerExt-function disableHotspot(): void-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) | Operation failed. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) |
 
 **Examples**
 
@@ -43,4 +43,3 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
       console.error("failed: " + JSON.stringify(error));
   }
 ```
-

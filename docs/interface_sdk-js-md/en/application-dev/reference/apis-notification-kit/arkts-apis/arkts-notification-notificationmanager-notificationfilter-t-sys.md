@@ -6,13 +6,12 @@ export type NotificationFilter = _NotificationFilter
 
 Describes the filter criteria for querying the live view.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-notificationManager-export type NotificationFilter = _NotificationFilter--><!--Device-notificationManager-export type NotificationFilter = _NotificationFilter-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
 
 **Property type:** _NotificationFilter
-

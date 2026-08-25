@@ -2,9 +2,9 @@
 
 Enumerates the duplex modes.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-print-enum PrintDuplexMode--><!--Device-print-enum PrintDuplexMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -16,9 +16,9 @@ DUPLEX_MODE_NONE = 0
 
 Simplex (single-sided).
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintDuplexMode-DUPLEX_MODE_NONE = 0--><!--Device-PrintDuplexMode-DUPLEX_MODE_NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -30,9 +30,9 @@ DUPLEX_MODE_LONG_EDGE = 1
 
 Duplex (double-sided) with flipping on long edge.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintDuplexMode-DUPLEX_MODE_LONG_EDGE = 1--><!--Device-PrintDuplexMode-DUPLEX_MODE_LONG_EDGE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -44,9 +44,8 @@ DUPLEX_MODE_SHORT_EDGE = 2
 
 Duplex (double-sided) with flipping on short edge.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintDuplexMode-DUPLEX_MODE_SHORT_EDGE = 2--><!--Device-PrintDuplexMode-DUPLEX_MODE_SHORT_EDGE = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
-

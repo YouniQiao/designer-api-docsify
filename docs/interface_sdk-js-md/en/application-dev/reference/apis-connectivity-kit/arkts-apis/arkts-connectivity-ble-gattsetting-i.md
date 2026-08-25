@@ -4,7 +4,7 @@ Describes the setting for Gatt Connection.
 
 **Since:** 26.0.0
 
-<!--Device-ble-interface GattSetting--><!--Device-ble-interface GattSetting-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -26,11 +26,11 @@ Indicates whether to automatically connect to the remote device, default is {@co
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-GattSetting-autoConnect?: boolean--><!--Device-GattSetting-autoConnect?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -46,11 +46,10 @@ Transport of the connection, default is {@code TRANSPORT_LE}
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-GattSetting-transport?: BluetoothTransport--><!--Device-GattSetting-transport?: BluetoothTransport-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

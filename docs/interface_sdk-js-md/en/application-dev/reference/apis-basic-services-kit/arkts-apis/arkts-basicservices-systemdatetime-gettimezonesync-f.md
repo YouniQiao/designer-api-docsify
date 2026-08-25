@@ -14,17 +14,17 @@ function getTimezoneSync(): string
 
 Obtains the system time zone in synchronous mode.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-systemDateTime-function getTimezoneSync(): string--><!--Device-systemDateTime-function getTimezoneSync(): string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | System time zone. For details, see Supported System Time Zones. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -38,4 +38,3 @@ try {
   console.error(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
 }
 ```
-

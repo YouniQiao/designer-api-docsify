@@ -2,9 +2,9 @@
 
 Rectangular area of the text, indicating the rectangular space occupied by the text during layout.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-text-interface TextBox--><!--Device-text-interface TextBox-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -24,11 +24,11 @@ Text direction.
 
 **Type:** TextDirection
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-TextBox-direction: TextDirection--><!--Device-TextBox-direction: TextDirection-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -42,11 +42,10 @@ Rectangular area information, in physical pixels (px).
 
 **Type:** common2D.Rect
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-TextBox-rect: common2D.Rect--><!--Device-TextBox-rect: common2D.Rect-End-->
-
 **System capability:** SystemCapability.Graphics.Drawing
-

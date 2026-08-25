@@ -1,8 +1,6 @@
 # DateTimeFormatPartTypesRegistry
 
-**Since:** -1
-
-<!--Device-Intl-interface DateTimeFormatPartTypesRegistry--><!--Device-Intl-interface DateTimeFormatPartTypesRegistry-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,7 +15,4 @@ fractionalSecond: any
 
 **Type:** any
 
-**Since:** -1
-
-<!--Device-DateTimeFormatPartTypesRegistry-fractionalSecond: any--><!--Device-DateTimeFormatPartTypesRegistry-fractionalSecond: any-End-->
-
+**ArkTS mode:** 

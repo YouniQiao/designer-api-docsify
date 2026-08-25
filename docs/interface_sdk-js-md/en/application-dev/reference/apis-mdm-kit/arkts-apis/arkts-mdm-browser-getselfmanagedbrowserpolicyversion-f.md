@@ -16,17 +16,17 @@ Obtains the browser policy version of the current device.
 
 **Since:** 15
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
-<!--Device-browser-function getSelfManagedBrowserPolicyVersion(): string--><!--Device-browser-function getSelfManagedBrowserPolicyVersion(): string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Browser policy version. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -40,4 +40,3 @@ try {
   console.error(`Failed to get self managed browser policy version. Code is ${err.code}, message is ${err.message}`);
 }
 ```
-

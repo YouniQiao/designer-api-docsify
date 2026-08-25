@@ -2,9 +2,9 @@
 
 Defines the description options, which specifies the format and language of the description file. The object contains the **format** and **language** fields. **format** indicates the description file format, which can be **STANDARD** or **SIMPLIFIED**. **language** indicates the language code, which can be **zh-cn**.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-update-export interface DescriptionOptions--><!--Device-update-export interface DescriptionOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -26,9 +26,9 @@ Format of the description file. The value **STANDARD** is applicable to the scen
 
 **Type:** [DescriptionFormat](arkts-basicservices-update-descriptionformat-e-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DescriptionOptions-format: DescriptionFormat--><!--Device-DescriptionOptions-format: DescriptionFormat-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -44,11 +44,10 @@ Language of the description file. The value is a string of 2 to 10 characters, f
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DescriptionOptions-language: string--><!--Device-DescriptionOptions-language: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
-

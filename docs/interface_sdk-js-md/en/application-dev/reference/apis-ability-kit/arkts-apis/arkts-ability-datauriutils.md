@@ -9,11 +9,11 @@ The DataUriUtils module provides APIs to process URI objects. You can use the AP
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [dataUriUtils](arkts-app-ability-datauriutils.md)
-
-<!--Device-unnamed-declare namespace dataUriUtils--><!--Device-unnamed-declare namespace dataUriUtils-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -26,10 +26,9 @@ The DataUriUtils module provides APIs to process URI objects. You can use the AP
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [attachId](arkts-ability-datauriutils-attachid-depr-f.md#attachid) | Attaches an ID to the end of a given URI. |
-| [deleteId](arkts-ability-datauriutils-deleteid-depr-f.md#deleteid) | Deletes the ID from the end of a given URI. |
-| [getId](arkts-ability-datauriutils-getid-depr-f.md#getid) | Obtains the ID attached to the end of a given URI. |
-| [updateId](arkts-ability-datauriutils-updateid-depr-f.md#updateid) | Updates the ID in a given URI. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [attachId](arkts-ability-datauriutils-attachid-depr-f.md#attachid) |
+| [deleteId](arkts-ability-datauriutils-deleteid-depr-f.md#deleteid) |
+| [getId](arkts-ability-datauriutils-getid-depr-f.md#getid) |
+| [updateId](arkts-ability-datauriutils-updateid-depr-f.md#updateid) |

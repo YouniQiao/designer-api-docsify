@@ -4,11 +4,11 @@ Represents the configuration of a **KVManager** instance, including the bundle n
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** KVManagerConfig
-
-<!--Device-distributedData-interface KVManagerConfig--><!--Device-distributedData-interface KVManagerConfig-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -29,11 +29,11 @@ Bundle name of the caller.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** bundleName
-
-<!--Device-KVManagerConfig-bundleName: string--><!--Device-KVManagerConfig-bundleName: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -49,9 +49,8 @@ User information.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-<!--Device-KVManagerConfig-userInfo: UserInfo--><!--Device-KVManagerConfig-userInfo: UserInfo-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
-

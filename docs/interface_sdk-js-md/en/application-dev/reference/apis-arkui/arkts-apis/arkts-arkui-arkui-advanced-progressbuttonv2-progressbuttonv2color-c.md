@@ -4,9 +4,7 @@ Declare ProgressButtonV2 Color.
 
 **Since:** 18
 
-**Decorator:** @ObservedV2
-
-<!--Device-unnamed-export declare class ProgressButtonV2Color--><!--Device-unnamed-export declare class ProgressButtonV2Color-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,21 +24,25 @@ The constructor of ProgressButtonV2
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ProgressButtonV2Color-constructor(options: ProgressButtonV2ColorOptions)--><!--Device-ProgressButtonV2Color-constructor(options: ProgressButtonV2ColorOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [ProgressButtonV2ColorOptions](arkts-arkui-arkui-advanced-progressbuttonv2-progressbuttonv2coloroptions-i.md) | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [ProgressButtonV2ColorOptions](arkts-arkui-arkui-advanced-progressbuttonv2-progressbuttonv2coloroptions-i.md) | Yes |
 
 ## backgroundColor
+
+```TypeScript
+backgroundColor?: ColorMetrics
+```
 
 Set background color of the ProgressButtonV2.
 
@@ -48,17 +50,19 @@ Set background color of the ProgressButtonV2.
 
 **Since:** 18
 
-**Decorator:** @Trace
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ProgressButtonV2Color-@Trace backgroundColor?: ColorMetrics--><!--Device-ProgressButtonV2Color-@Trace backgroundColor?: ColorMetrics-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## borderColor
+
+```TypeScript
+borderColor?: ColorMetrics
+```
 
 Set border color of the ProgressButtonV2.
 
@@ -66,17 +70,19 @@ Set border color of the ProgressButtonV2.
 
 **Since:** 18
 
-**Decorator:** @Trace
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ProgressButtonV2Color-@Trace borderColor?: ColorMetrics--><!--Device-ProgressButtonV2Color-@Trace borderColor?: ColorMetrics-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## progressColor
+
+```TypeScript
+progressColor?: ColorMetrics
+```
 
 Set progress color of the ProgressButtonV2.
 
@@ -84,17 +90,19 @@ Set progress color of the ProgressButtonV2.
 
 **Since:** 18
 
-**Decorator:** @Trace
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ProgressButtonV2Color-@Trace progressColor?: ColorMetrics--><!--Device-ProgressButtonV2Color-@Trace progressColor?: ColorMetrics-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textColor
+
+```TypeScript
+textColor?: ColorMetrics
+```
 
 Set text color of the ProgressButtonV2.
 
@@ -102,13 +110,10 @@ Set text color of the ProgressButtonV2.
 
 **Since:** 18
 
-**Decorator:** @Trace
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ProgressButtonV2Color-@Trace textColor?: ColorMetrics--><!--Device-ProgressButtonV2Color-@Trace textColor?: ColorMetrics-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 Enumerates the types of recommended images.
 
-**Since:** 26.0.0
+**Since:** 11
 
-<!--Device-photoAccessHelper-enum RecommendationType--><!--Device-photoAccessHelper-enum RecommendationType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -16,11 +16,11 @@ QR_OR_BAR_CODE = 1
 
 QR code or barcode.
 
-**Since:** 26.0.0
+**Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
-<!--Device-RecommendationType-QR_OR_BAR_CODE = 1--><!--Device-RecommendationType-QR_OR_BAR_CODE = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -32,11 +32,11 @@ QR_CODE = 2
 
 QR code.
 
-**Since:** 26.0.0
+**Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
-<!--Device-RecommendationType-QR_CODE = 2--><!--Device-RecommendationType-QR_CODE = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -48,11 +48,11 @@ BAR_CODE = 3
 
 Barcode.
 
-**Since:** 26.0.0
+**Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
-<!--Device-RecommendationType-BAR_CODE = 3--><!--Device-RecommendationType-BAR_CODE = 3-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -64,11 +64,11 @@ ID_CARD = 4
 
 ID card.
 
-**Since:** 26.0.0
+**Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
-<!--Device-RecommendationType-ID_CARD = 4--><!--Device-RecommendationType-ID_CARD = 4-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -80,11 +80,11 @@ PROFILE_PICTURE = 5
 
 Profile.
 
-**Since:** 26.0.0
+**Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
-<!--Device-RecommendationType-PROFILE_PICTURE = 5--><!--Device-RecommendationType-PROFILE_PICTURE = 5-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -96,11 +96,11 @@ PASSPORT = 6
 
 Passport.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-RecommendationType-PASSPORT = 6--><!--Device-RecommendationType-PASSPORT = 6-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -112,11 +112,11 @@ BANK_CARD = 7
 
 Bank card.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-RecommendationType-BANK_CARD = 7--><!--Device-RecommendationType-BANK_CARD = 7-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -128,11 +128,11 @@ DRIVER_LICENSE = 8
 
 Driver license.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-RecommendationType-DRIVER_LICENSE = 8--><!--Device-RecommendationType-DRIVER_LICENSE = 8-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -144,11 +144,11 @@ DRIVING_LICENSE = 9
 
 Vehicle license.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-RecommendationType-DRIVING_LICENSE = 9--><!--Device-RecommendationType-DRIVING_LICENSE = 9-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -160,11 +160,11 @@ FEATURED_SINGLE_PORTRAIT = 10
 
 Recommended portrait.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-RecommendationType-FEATURED_SINGLE_PORTRAIT = 10--><!--Device-RecommendationType-FEATURED_SINGLE_PORTRAIT = 10-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -195,4 +195,3 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
-

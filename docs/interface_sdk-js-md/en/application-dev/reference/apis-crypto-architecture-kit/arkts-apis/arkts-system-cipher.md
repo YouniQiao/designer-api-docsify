@@ -10,15 +10,14 @@ import { Cipher, CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Cipher](arkts-cryptoarchitecture-system-cipher-cipher-c.md) | Defines the cipher functions. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Cipher](arkts-cryptoarchitecture-system-cipher-cipher-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [CipherAesOptions](arkts-cryptoarchitecture-system-cipher-cipheraesoptions-i.md) | Defines the input parameters of **cipher.aes()**. |
-| [CipherResponse](arkts-cryptoarchitecture-system-cipher-cipherresponse-i.md) | Defines the response to the cipher interface called. |
-| [CipherRsaOptions](arkts-cryptoarchitecture-system-cipher-cipherrsaoptions-i.md) | Defines the input parameters of **cipher.rsa()**. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CipherAesOptions](arkts-cryptoarchitecture-system-cipher-cipheraesoptions-i.md) |
+| [CipherResponse](arkts-cryptoarchitecture-system-cipher-cipherresponse-i.md) |
+| [CipherRsaOptions](arkts-cryptoarchitecture-system-cipher-cipherrsaoptions-i.md) |

@@ -16,19 +16,19 @@ function saveAppState(): boolean
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-appRecovery-function saveAppState(): boolean--><!--Device-appRecovery-function saveAppState(): boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 保存成功与否。true：保存成功，false：保存失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -77,29 +77,28 @@ function saveAppState(context?: UIAbilityContext): boolean
 
 主动保存Ability的状态，这个状态将在下次恢复启动时使用。可以配合[errorManager](arkts-app-ability-errormanager.md)相关接口使用。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-appRecovery-function saveAppState(context?: UIAbilityContext): boolean--><!--Device-appRecovery-function saveAppState(context?: UIAbilityContext): boolean-End-->
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) | 否 | 需要保存状态的UIAbility所对应的context。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 保存成功与否。true：保存成功，false：保存失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
 参见 [saveAppState](#saveappstate)
-

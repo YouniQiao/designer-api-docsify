@@ -2,9 +2,9 @@
 
 网络中packet service (PS) 和 circuit service (CS) 无线接入技术。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-radio-export interface NetworkRadioTech--><!--Device-radio-export interface NetworkRadioTech-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -24,9 +24,9 @@ CS无线接入技术。
 
 **类型：** [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-NetworkRadioTech-csRadioTech: RadioTechnology--><!--Device-NetworkRadioTech-csRadioTech: RadioTechnology-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -40,9 +40,8 @@ PS无线接入技术。
 
 **类型：** [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-NetworkRadioTech-psRadioTech: RadioTechnology--><!--Device-NetworkRadioTech-psRadioTech: RadioTechnology-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
-

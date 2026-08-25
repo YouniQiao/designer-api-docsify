@@ -2,9 +2,9 @@
 
 Enumerates the camera statuses.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-camera-enum CameraStatus--><!--Device-camera-enum CameraStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -16,11 +16,11 @@ CAMERA_STATUS_APPEAR = 0
 
 A camera appears.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-CameraStatus-CAMERA_STATUS_APPEAR = 0--><!--Device-CameraStatus-CAMERA_STATUS_APPEAR = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -32,11 +32,11 @@ CAMERA_STATUS_DISAPPEAR = 1
 
 The camera disappears.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-CameraStatus-CAMERA_STATUS_DISAPPEAR = 1--><!--Device-CameraStatus-CAMERA_STATUS_DISAPPEAR = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -48,11 +48,11 @@ CAMERA_STATUS_AVAILABLE = 2
 
 The camera is available.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-CameraStatus-CAMERA_STATUS_AVAILABLE = 2--><!--Device-CameraStatus-CAMERA_STATUS_AVAILABLE = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -64,11 +64,10 @@ CAMERA_STATUS_UNAVAILABLE = 3
 
 The camera is unavailable.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-CameraStatus-CAMERA_STATUS_UNAVAILABLE = 3--><!--Device-CameraStatus-CAMERA_STATUS_UNAVAILABLE = 3-End-->
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
-

@@ -4,7 +4,7 @@ Enumerates the app rotation.@enum { number }
 
 **Since:** 12
 
-<!--Device-unnamed-declare enum AppRotation--><!--Device-unnamed-declare enum AppRotation-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ App does not rotate to display vertically.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AppRotation-ROTATION_0 = 0--><!--Device-AppRotation-ROTATION_0 = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ App rotates 90 degrees clockwise to display horizontally.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AppRotation-ROTATION_90 = 1--><!--Device-AppRotation-ROTATION_90 = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ App rotates 180 degrees clockwise to display vertically in reverse.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AppRotation-ROTATION_180 = 2--><!--Device-AppRotation-ROTATION_180 = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,10 @@ App rotates 270 degrees clockwise to display horizontally in reverse.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AppRotation-ROTATION_270 = 3--><!--Device-AppRotation-ROTATION_270 = 3-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

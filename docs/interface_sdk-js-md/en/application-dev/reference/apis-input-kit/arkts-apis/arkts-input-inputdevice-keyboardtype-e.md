@@ -2,9 +2,9 @@
 
 Enumerates keyboard types.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-inputDevice-enum KeyboardType--><!--Device-inputDevice-enum KeyboardType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -16,9 +16,9 @@ NONE = 0
 
 Keyboard without keys.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyboardType-NONE = 0--><!--Device-KeyboardType-NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -30,9 +30,9 @@ UNKNOWN = 1
 
 Keyboard with unknown keys.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyboardType-UNKNOWN = 1--><!--Device-KeyboardType-UNKNOWN = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -44,9 +44,9 @@ ALPHABETIC_KEYBOARD = 2
 
 Full keyboard.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyboardType-ALPHABETIC_KEYBOARD = 2--><!--Device-KeyboardType-ALPHABETIC_KEYBOARD = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -58,9 +58,9 @@ DIGITAL_KEYBOARD = 3
 
 Keypad.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyboardType-DIGITAL_KEYBOARD = 3--><!--Device-KeyboardType-DIGITAL_KEYBOARD = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -72,9 +72,9 @@ HANDWRITING_PEN = 4
 
 Stylus.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyboardType-HANDWRITING_PEN = 4--><!--Device-KeyboardType-HANDWRITING_PEN = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -86,9 +86,8 @@ REMOTE_CONTROL = 5
 
 Remote control.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyboardType-REMOTE_CONTROL = 5--><!--Device-KeyboardType-REMOTE_CONTROL = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
-

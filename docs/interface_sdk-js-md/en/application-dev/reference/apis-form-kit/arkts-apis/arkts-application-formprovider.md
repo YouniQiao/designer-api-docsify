@@ -4,11 +4,11 @@ The **FormProvider** module provides APIs related to the widget provider. You ca
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [formProvider](arkts-app-form-formprovider.md)
-
-<!--Device-unnamed-declare namespace formProvider--><!--Device-unnamed-declare namespace formProvider-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -21,10 +21,9 @@ The **FormProvider** module provides APIs related to the widget provider. You ca
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-depr-f.md#setformnextrefreshtime) | Sets the next refresh time for a widget. This API uses an asynchronous callback to return the result. |
-| [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-depr-f.md#setformnextrefreshtime) | Sets the next refresh time for a widget. This API uses a promise to return the result. |
-| [updateForm](arkts-form-formprovider-updateform-depr-f.md#updateform) | Updates a widget. This API uses an asynchronous callback to return the result. |
-| [updateForm](arkts-form-formprovider-updateform-depr-f.md#updateform) | Updates a widget. This API uses a promise to return the result. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-depr-f.md#setformnextrefreshtime) |
+| [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-depr-f.md#setformnextrefreshtime) |
+| [updateForm](arkts-form-formprovider-updateform-depr-f.md#updateform) |
+| [updateForm](arkts-form-formprovider-updateform-depr-f.md#updateform) |

@@ -17,15 +17,14 @@ function isDoubleClickAppForSelf(): Promise<boolean>
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-settings-function isDoubleClickAppForSelf(): Promise<boolean>--><!--Device-settings-function isDoubleClickAppForSelf(): Promise<boolean>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Check result. { |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;boolean & gt; |

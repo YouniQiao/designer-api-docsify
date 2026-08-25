@@ -9,19 +9,18 @@ The type of media center control command, which can be used to determine the but
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-avSession-type AVMediaCenterControlType = 'playNext' | 'playPrevious' | 'fastForward' | 'rewind' | 'setSpeed' | 'setLoopMode' |    'toggleFavorite'--><!--Device-avSession-type AVMediaCenterControlType = 'playNext' | 'playPrevious' | 'fastForward' | 'rewind' | 'setSpeed' | 'setLoopMode' |    'toggleFavorite'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
-| Type | Description |
-| --- | --- |
-| 'playNext' |  |
-| 'playPrevious' |  |
-| 'fastForward' |  |
-| 'rewind' |  |
-| 'setSpeed' |  |
-| 'setLoopMode' |  |
-| 'toggleFavorite' |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'playNext' |
+| 'playPrevious' |
+| 'fastForward' |
+| 'rewind' |
+| 'setSpeed' |
+| 'setLoopMode' |
+| 'toggleFavorite' |

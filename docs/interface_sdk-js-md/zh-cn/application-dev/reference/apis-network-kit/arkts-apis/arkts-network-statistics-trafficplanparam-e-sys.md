@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-statistics-export enum TrafficPlanParam--><!--Device-statistics-export enum TrafficPlanParam-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -20,9 +20,9 @@ DISPLAY_TRAFFIC_SWITCH = 1
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-TrafficPlanParam-DISPLAY_TRAFFIC_SWITCH = 1--><!--Device-TrafficPlanParam-DISPLAY_TRAFFIC_SWITCH = 1-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -38,9 +38,9 @@ UNLIMIT_TRAFFIC_SWITCH = 2
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-TrafficPlanParam-UNLIMIT_TRAFFIC_SWITCH = 2--><!--Device-TrafficPlanParam-UNLIMIT_TRAFFIC_SWITCH = 2-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -56,9 +56,9 @@ TRAFFIC_LIMIT = 3
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-TrafficPlanParam-TRAFFIC_LIMIT = 3--><!--Device-TrafficPlanParam-TRAFFIC_LIMIT = 3-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -74,9 +74,9 @@ START_DATE = 4
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-TrafficPlanParam-START_DATE = 4--><!--Device-TrafficPlanParam-START_DATE = 4-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -92,9 +92,9 @@ OVER_LIMIT_BEHAVIOR = 5
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-TrafficPlanParam-OVER_LIMIT_BEHAVIOR = 5--><!--Device-TrafficPlanParam-OVER_LIMIT_BEHAVIOR = 5-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -110,9 +110,9 @@ MONTHLY_LIMIT_PERCENTAGE = 6
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-TrafficPlanParam-MONTHLY_LIMIT_PERCENTAGE = 6--><!--Device-TrafficPlanParam-MONTHLY_LIMIT_PERCENTAGE = 6-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -128,11 +128,10 @@ DAILY_LIMIT_PERCENTAGE = 7
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-TrafficPlanParam-DAILY_LIMIT_PERCENTAGE = 7--><!--Device-TrafficPlanParam-DAILY_LIMIT_PERCENTAGE = 7-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
-

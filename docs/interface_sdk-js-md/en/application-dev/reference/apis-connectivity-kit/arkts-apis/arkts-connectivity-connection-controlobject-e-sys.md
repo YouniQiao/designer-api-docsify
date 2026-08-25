@@ -2,9 +2,9 @@
 
 Describes the control object.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-connection-enum ControlObject--><!--Device-connection-enum ControlObject-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -18,11 +18,11 @@ LEFT_EAR = 0
 
 Control object of left ear.
 
-**Since:** 23
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ControlObject-LEFT_EAR = 0--><!--Device-ControlObject-LEFT_EAR = 0-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -36,11 +36,11 @@ RIGHT_EAR = 1
 
 Control object of right ear.
 
-**Since:** 23
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ControlObject-RIGHT_EAR = 1--><!--Device-ControlObject-RIGHT_EAR = 1-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -54,13 +54,12 @@ LEFT_RIGHT_EAR = 2
 
 Control object of left and right ear.
 
-**Since:** 23
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ControlObject-LEFT_RIGHT_EAR = 2--><!--Device-ControlObject-LEFT_RIGHT_EAR = 2-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
-

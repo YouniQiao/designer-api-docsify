@@ -4,13 +4,13 @@ The continuationManager module provides the continuation/collaboration managemen
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Substitutes:** [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md)
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-declare namespace continuationManager--><!--Device-unnamed-declare namespace continuationManager-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
@@ -24,48 +24,47 @@ import { continuationManager } from '@kit.AbilityKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [off_deviceConnect](arkts-ability-continuationmanager-offdeviceconnect-f.md#offdeviceconnect) | Unsubscribes from device connection events. This API uses an asynchronous callback to return the result. |
-| [off_deviceDisconnect](arkts-ability-continuationmanager-offdevicedisconnect-f.md#offdevicedisconnect) | Unsubscribes from device disconnection events. This API uses an asynchronous callback to return the result. |
-| [off_deviceSelected](arkts-ability-continuationmanager-offdeviceselected-f.md#offdeviceselected) | Unsubscribes from device connection events. |
-| [off_deviceUnselected](arkts-ability-continuationmanager-offdeviceunselected-f.md#offdeviceunselected) | Unsubscribes from device disconnection events. |
-| [on_deviceConnect](arkts-ability-continuationmanager-ondeviceconnect-f.md#ondeviceconnect) | Subscribes to device connection events. This API uses an asynchronous callback to return the result. |
-| [on_deviceDisconnect](arkts-ability-continuationmanager-ondevicedisconnect-f.md#ondevicedisconnect) | Subscribes to device disconnection events. This API uses an asynchronous callback to return the result. |
-| [on_deviceSelected](arkts-ability-continuationmanager-ondeviceselected-f.md#ondeviceselected) | Subscribes to device connection events. This API uses an asynchronous callback to return the result. |
-| [on_deviceUnselected](arkts-ability-continuationmanager-ondeviceunselected-f.md#ondeviceunselected) | Subscribes to device disconnection events. This API uses an asynchronous callback to return the result. |
-| [register](arkts-ability-continuationmanager-register-f.md) | Registers the continuation management service and obtains a token. This API does not involve any filter parameters and uses an asynchronous callback to return the result. |
-| [register](arkts-ability-continuationmanager-register-f.md) | Registers the continuation management service and obtains a token. This API uses an asynchronous callback to return the result. |
-| [register](arkts-ability-continuationmanager-register-f.md) | Registers the continuation management service and obtains a token. This API uses a promise to return the result. |
-| [registerContinuation](arkts-ability-continuationmanager-registercontinuation-f.md) | Registers the continuation management service and obtains a token. This API does not involve any filter parameters and uses an asynchronous callback to return the result. |
-| [registerContinuation](arkts-ability-continuationmanager-registercontinuation-f.md) | Registers the continuation management service and obtains a token. This API uses an asynchronous callback to return the result. |
-| [registerContinuation](arkts-ability-continuationmanager-registercontinuation-f.md) | Registers the continuation management service and obtains a token. This API uses a promise to return the result. |
-| [startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md) | Starts the device selection module to show the list of available devices on the network. This API does not involve any filter parameters and uses an asynchronous callback to return the result. |
-| [startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md) | Starts the device selection module to show the list of available devices on the network. This API uses an asynchronous callback to return the result. |
-| [startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md) | Starts the device selection module to show the list of available devices on the network. This API uses a promise to return the result. |
-| [startDeviceManager](arkts-ability-continuationmanager-startdevicemanager-f.md) | Starts the device selection module to show the list of available devices on the network. This API does not involve any filter parameters and uses an asynchronous callback to return the result. |
-| [startDeviceManager](arkts-ability-continuationmanager-startdevicemanager-f.md) | Starts the device selection module to show the list of available devices on the network. This API uses an asynchronous callback to return the result. |
-| [startDeviceManager](arkts-ability-continuationmanager-startdevicemanager-f.md) | Starts the device selection module to show the list of available devices on the network. This API uses a promise to return the result. |
-| [unregister](arkts-ability-continuationmanager-unregister-f.md) | Unregisters the continuation management service. This API uses an asynchronous callback to return the result. |
-| [unregister](arkts-ability-continuationmanager-unregister-f.md) | Unregisters the continuation management service. This API uses a promise to return the result. |
-| [unregisterContinuation](arkts-ability-continuationmanager-unregistercontinuation-f.md) | Unregisters the continuation management service. This API uses an asynchronous callback to return the result. |
-| [unregisterContinuation](arkts-ability-continuationmanager-unregistercontinuation-f.md) | Unregisters the continuation management service. This API uses a promise to return the result. |
-| [updateConnectStatus](arkts-ability-continuationmanager-updateconnectstatus-f.md) | Instructs the device selection module to update the device connection state. This API uses an asynchronous callback to return the result. |
-| [updateConnectStatus](arkts-ability-continuationmanager-updateconnectstatus-f.md) | Instructs the device selection module to update the device connection state. This API uses a promise to return the result. |
-| [updateContinuationState](arkts-ability-continuationmanager-updatecontinuationstate-f.md) | Instructs the device selection module to update the device connection state. This API uses an asynchronous callback to return the result. |
-| [updateContinuationState](arkts-ability-continuationmanager-updatecontinuationstate-f.md) | Instructs the device selection module to update the device connection state. This API uses a promise to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [off](arkts-ability-continuationmanager-off-f.md#offdeviceselected) |
+| [off](arkts-ability-continuationmanager-off-f.md#offdeviceunselected) |
+| [off](arkts-ability-continuationmanager-off-f.md#offdeviceconnect) |
+| [off](arkts-ability-continuationmanager-off-f.md#offdevicedisconnect) |
+| [on](arkts-ability-continuationmanager-on-f.md#ondeviceselected) |
+| [on](arkts-ability-continuationmanager-on-f.md#ondeviceunselected) |
+| [on](arkts-ability-continuationmanager-on-f.md#ondeviceconnect) |
+| [on](arkts-ability-continuationmanager-on-f.md#ondevicedisconnect) |
+| [register](arkts-ability-continuationmanager-register-f.md) |
+| [register](arkts-ability-continuationmanager-register-f.md) |
+| [register](arkts-ability-continuationmanager-register-f.md) |
+| [registerContinuation](arkts-ability-continuationmanager-registercontinuation-f.md) |
+| [registerContinuation](arkts-ability-continuationmanager-registercontinuation-f.md) |
+| [registerContinuation](arkts-ability-continuationmanager-registercontinuation-f.md) |
+| [startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md) |
+| [startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md) |
+| [startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md) |
+| [startDeviceManager](arkts-ability-continuationmanager-startdevicemanager-f.md) |
+| [startDeviceManager](arkts-ability-continuationmanager-startdevicemanager-f.md) |
+| [startDeviceManager](arkts-ability-continuationmanager-startdevicemanager-f.md) |
+| [unregister](arkts-ability-continuationmanager-unregister-f.md) |
+| [unregister](arkts-ability-continuationmanager-unregister-f.md) |
+| [unregisterContinuation](arkts-ability-continuationmanager-unregistercontinuation-f.md) |
+| [unregisterContinuation](arkts-ability-continuationmanager-unregistercontinuation-f.md) |
+| [updateConnectStatus](arkts-ability-continuationmanager-updateconnectstatus-f.md) |
+| [updateConnectStatus](arkts-ability-continuationmanager-updateconnectstatus-f.md) |
+| [updateContinuationState](arkts-ability-continuationmanager-updatecontinuationstate-f.md) |
+| [updateContinuationState](arkts-ability-continuationmanager-updatecontinuationstate-f.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [ContinuationMode](arkts-ability-continuationmanager-continuationmode-e.md) | Enumerates the continuation modes provided by the device selection module. |
-| [DeviceConnectState](arkts-ability-continuationmanager-deviceconnectstate-e.md) | Device connection state. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ContinuationMode](arkts-ability-continuationmanager-continuationmode-e.md) |
+| [DeviceConnectState](arkts-ability-continuationmanager-deviceconnectstate-e.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | Defines the extra parameters required by the device selection module in the continuation management entry. |
-| [ContinuationResult](arkts-ability-continuationmanager-continuationresult-t.md) | Defines the device information returned by the continuation management entry. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) |
+| [ContinuationResult](arkts-ability-continuationmanager-continuationresult-t.md) |

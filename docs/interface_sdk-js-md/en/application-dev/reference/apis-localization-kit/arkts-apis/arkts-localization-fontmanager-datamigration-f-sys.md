@@ -16,9 +16,9 @@ Data migration API used during device upgrades to start a migration task, provid
 
 **Since:** 23
 
-**Required permissions:** ohos.permission.UPDATE_FONT
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-fontManager-function dataMigration(callback: DataMigrationCallback): int--><!--Device-fontManager-function dataMigration(callback: DataMigrationCallback): int-End-->
+**Required permissions:** ohos.permission.UPDATE_FONT
 
 **System capability:** SystemCapability.Global.FontManager
 
@@ -26,24 +26,24 @@ Data migration API used during device upgrades to start a migration task, provid
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [DataMigrationCallback](arkts-localization-fontmanager-datamigrationcallback-i-sys.md) | Yes | Callback function for data migration. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [DataMigrationCallback](arkts-localization-fontmanager-datamigrationcallback-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Result of the migration task startup. <br>- **0**: The migration task is started successfully. The migration task will be executed in the background and the progress and result will be notified through the callback. <br>- Other values: The migration task failed to start. Troubleshoot based on the error code. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [31100110](../errorcode-font-manager.md#31100110-failed-to-call-the-api-due-to-system-errors) | Call failed due to system error. |
-| [31100111](../errorcode-font-manager.md#31100111-migration-task-being-executed) | Data migration is in progress. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [31100110](../errorcode-font-manager.md#31100110-failed-to-call-the-api-due-to-system-errors) |
+| [31100111](../errorcode-font-manager.md#31100111-migration-task-being-executed) |
 
 **Examples**
 
@@ -71,4 +71,3 @@ dataMigration() {
   return;
 }
 ```
-

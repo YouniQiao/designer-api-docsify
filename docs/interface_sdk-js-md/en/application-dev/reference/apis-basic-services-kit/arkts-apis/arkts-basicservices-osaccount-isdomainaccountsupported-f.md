@@ -16,23 +16,23 @@ Checks whether this domain account is supported. This API uses a promise to retu
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-osAccount-function isDomainAccountSupported(): Promise<boolean>--><!--Device-osAccount-function isDomainAccountSupported(): Promise<boolean>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means this domain account is supported; the value **false** means the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| Error Code ID |
+| --- |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
 
 **Examples**
 
@@ -50,4 +50,3 @@ try {
   console.error(`isDomainAccountSupported exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
-

@@ -4,7 +4,7 @@ Defines information about entries in the IP neighbor table.
 
 **Since:** 22
 
-<!--Device-connection-export interface NetIpMacInfo--><!--Device-connection-export interface NetIpMacInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -26,7 +26,7 @@ NIC name.
 
 **Since:** 22
 
-<!--Device-NetIpMacInfo-iface: string--><!--Device-NetIpMacInfo-iface: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -42,7 +42,7 @@ IP address information.
 
 **Since:** 22
 
-<!--Device-NetIpMacInfo-ipAddress: NetAddress--><!--Device-NetIpMacInfo-ipAddress: NetAddress-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -58,7 +58,6 @@ MAC address.
 
 **Since:** 22
 
-<!--Device-NetIpMacInfo-macAddress: string--><!--Device-NetIpMacInfo-macAddress: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
-

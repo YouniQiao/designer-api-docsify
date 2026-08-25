@@ -5,11 +5,11 @@
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
 **替代接口：** [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)
-
-<!--Device-unnamed-export interface DeviceOrientationResponse--><!--Device-unnamed-export interface DeviceOrientationResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -31,13 +31,13 @@ alpha: number
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
 **替代接口：** [alpha](arkts-sensorservice-sensor-orientationresponse-i.md#alpha)
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-DeviceOrientationResponse-alpha: number--><!--Device-DeviceOrientationResponse-alpha: number-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -53,13 +53,13 @@ beta: number
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
 **替代接口：** [beta](arkts-sensorservice-sensor-orientationresponse-i.md#beta)
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-DeviceOrientationResponse-beta: number--><!--Device-DeviceOrientationResponse-beta: number-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -75,13 +75,12 @@ gamma: number
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
 **替代接口：** [gamma](arkts-sensorservice-sensor-orientationresponse-i.md#gamma)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-DeviceOrientationResponse-gamma: number--><!--Device-DeviceOrientationResponse-gamma: number-End-->
-
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
-

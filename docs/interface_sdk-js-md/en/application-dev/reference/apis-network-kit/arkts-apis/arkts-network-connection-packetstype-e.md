@@ -4,7 +4,7 @@ Defines the type of network probe data packets.
 
 **Since:** 26.0.0
 
-<!--Device-connection-export enum PacketsType--><!--Device-connection-export enum PacketsType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -18,9 +18,9 @@ ICMP packet type.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-PacketsType-NETCONN_PACKETS_ICMP = 0--><!--Device-PacketsType-NETCONN_PACKETS_ICMP = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -34,9 +34,8 @@ UDP packet type.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PacketsType-NETCONN_PACKETS_UDP = 1--><!--Device-PacketsType-NETCONN_PACKETS_UDP = 1-End-->
-
 **System capability:** SystemCapability.Communication.NetManager.Core
-

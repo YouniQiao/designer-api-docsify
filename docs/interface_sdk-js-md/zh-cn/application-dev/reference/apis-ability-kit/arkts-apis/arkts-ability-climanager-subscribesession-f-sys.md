@@ -19,11 +19,11 @@ function subscribeSession(sessionId: string, callback: ToolEventCallback): Promi
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **需要权限：** ohos.permission.EXEC_CLI_TOOL
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-cliManager-function subscribeSession(sessionId: string, callback: ToolEventCallback): Promise<void>--><!--Device-cliManager-function subscribeSession(sessionId: string, callback: ToolEventCallback): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -31,23 +31,22 @@ function subscribeSession(sessionId: string, callback: ToolEventCallback): Promi
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sessionId | string | 是 | 目标CLI工具进程的会话ID。 |
-| callback | [ToolEventCallback](arkts-ability-tooleventcallback-i-sys.md) | 是 | CLI工具会话事件的回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sessionId | string | 是 |
+| callback | [ToolEventCallback](arkts-ability-tooleventcallback-i-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied, interface caller does not have permission"ohos.permission.EXEC_CLI_TOOL". |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. Interface caller is not a system app. |
-| [35600032](../errorcode-ability.md#35600032-指定的session不存在) | The session does not exist. |
-| [35600050](../errorcode-ability.md#35600050-偶发性报错) | System Error. 1. Connect to system service failed; 2.System service failed to communicate with dependency module. |
-
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [35600032](../errorcode-ability.md#35600032-指定的session不存在) |
+| [35600050](../errorcode-ability.md#35600050-偶发性报错) |

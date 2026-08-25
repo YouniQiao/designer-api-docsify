@@ -4,7 +4,7 @@ Enumerates masking modes of child component gestures.
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum GestureMask--><!--Device-unnamed-declare enum GestureMask-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ The gestures of child components are enabled and recognized based on the default
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-GestureMask-Normal--><!--Device-GestureMask-Normal-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,8 @@ The gestures of child components are disabled, including the built-in gestures, 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-GestureMask-IgnoreInternal--><!--Device-GestureMask-IgnoreInternal-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

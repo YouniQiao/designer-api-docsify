@@ -2,11 +2,9 @@
 
 The **batteryInfo** module provides APIs for querying the charger type, battery health status, and battery charging status.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-declare namespace batteryInfo--><!--Device-unnamed-declare namespace batteryInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -20,39 +18,63 @@ import { batteryInfo } from '@kit.BasicServicesKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [batteryCapacityLevel](arkts-basicservices-batteryinfo-batterycapacitylevel-f.md) | Battery level of the device. |
-| [batterySOC](arkts-basicservices-batteryinfo-batterysoc-f.md) | Battery state of charge (SoC) of the device, in unit of percentage, which ranges from 0 to 100. |
-| [batteryTemperature](arkts-basicservices-batteryinfo-batterytemperature-f.md) | Battery temperature of the device, in unit of 0.1°C. |
-| [chargingStatus](arkts-basicservices-batteryinfo-chargingstatus-f.md) | Battery charging state of the current device. |
-| [healthStatus](arkts-basicservices-batteryinfo-healthstatus-f.md) | Battery health status of the device. |
-| [isBatteryPresent](arkts-basicservices-batteryinfo-isbatterypresent-f.md) | Whether the battery is supported or present. The value **true** means that the battery is supported or present; **false** means the opposite.Default value: **false**. |
-| [nowCurrent](arkts-basicservices-batteryinfo-nowcurrent-f.md) | Battery current of the device, in unit of mA. |
-| [pluggedType](arkts-basicservices-batteryinfo-pluggedtype-f.md) | Charger type of the device. |
-| [technology](arkts-basicservices-batteryinfo-technology-f.md) | Battery technology of the device. |
-| [voltage](arkts-basicservices-batteryinfo-voltage-f.md) | Battery voltage of the device, in unit of microvolt. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [batteryCapacityLevel](arkts-basicservices-batteryinfo-batterycapacitylevel-f.md) |
+| [batterySOC](arkts-basicservices-batteryinfo-batterysoc-f.md) |
+| [batteryTemperature](arkts-basicservices-batteryinfo-batterytemperature-f.md) |
+| [chargingStatus](arkts-basicservices-batteryinfo-chargingstatus-f.md) |
+| [healthStatus](arkts-basicservices-batteryinfo-healthstatus-f.md) |
+| [isBatteryPresent](arkts-basicservices-batteryinfo-isbatterypresent-f.md) |
+| [nowCurrent](arkts-basicservices-batteryinfo-nowcurrent-f.md) |
+| [pluggedType](arkts-basicservices-batteryinfo-pluggedtype-f.md) |
+| [technology](arkts-basicservices-batteryinfo-technology-f.md) |
+| [voltage](arkts-basicservices-batteryinfo-voltage-f.md) |
 
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [estimatedRemainingChargeTime](arkts-basicservices-batteryinfo-estimatedremainingchargetime-f-sys.md) | Estimated time for fully charging the current device, in unit of milliseconds. This is a system API. |
-| [getBatteryConfig](arkts-basicservices-batteryinfo-getbatteryconfig-f-sys.md) | Obtains the battery configuration based on the specified scenario. |
-| [isBatteryConfigSupported](arkts-basicservices-batteryinfo-isbatteryconfigsupported-f-sys.md) | Checks whether the battery configuration is enabled based on the specified scenario. |
-| [remainingEnergy](arkts-basicservices-batteryinfo-remainingenergy-f-sys.md) | Remaining battery capacity of the device, in unit of mAh. This is a system API. |
-| [setBatteryConfig](arkts-basicservices-batteryinfo-setbatteryconfig-f-sys.md) | Sets the battery configuration based on the specified scenario. |
-| [totalEnergy](arkts-basicservices-batteryinfo-totalenergy-f-sys.md) | Total battery capacity of the device, in unit of mAh. This is a system API. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [estimatedRemainingChargeTime](arkts-basicservices-batteryinfo-estimatedremainingchargetime-f-sys.md) |
+| [getBatteryConfig](arkts-basicservices-batteryinfo-getbatteryconfig-f-sys.md) |
+| [isBatteryConfigSupported](arkts-basicservices-batteryinfo-isbatteryconfigsupported-f-sys.md) |
+| [remainingEnergy](arkts-basicservices-batteryinfo-remainingenergy-f-sys.md) |
+| [setBatteryConfig](arkts-basicservices-batteryinfo-setbatteryconfig-f-sys.md) |
+| [totalEnergy](arkts-basicservices-batteryinfo-totalenergy-f-sys.md) |
 <!--DelEnd-->
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [BatteryCapacityLevel](arkts-basicservices-batteryinfo-batterycapacitylevel-e.md) | Enumerates battery levels.@enum { int } |
-| [BatteryChargeState](arkts-basicservices-batteryinfo-batterychargestate-e.md) | Enumerates charging states.@enum { int } |
-| [BatteryHealthState](arkts-basicservices-batteryinfo-batteryhealthstate-e.md) | Enumerates battery health states.@enum { int } |
-| [BatteryPluggedType](arkts-basicservices-batteryinfo-batterypluggedtype-e.md) | Enumerates charger types.@enum { int } |
-| [CommonEventBatteryChangedKey](arkts-basicservices-batteryinfo-commoneventbatterychangedkey-e.md) | Enumerates keys for querying the additional information about the **COMMON_EVENT_BATTERY_CHANGED** event.@enum { string } |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BatteryCapacityLevel](arkts-basicservices-batteryinfo-batterycapacitylevel-e.md) |
+| [BatteryChargeState](arkts-basicservices-batteryinfo-batterychargestate-e.md) |
+| [BatteryHealthState](arkts-basicservices-batteryinfo-batteryhealthstate-e.md) |
+| [BatteryPluggedType](arkts-basicservices-batteryinfo-batterypluggedtype-e.md) |
+| [CommonEventBatteryChangedKey](arkts-basicservices-batteryinfo-commoneventbatterychangedkey-e.md) |
 
+### Constants
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [batteryCapacityLevel](arkts-basicservices-batteryinfo-con.md#batterycapacitylevel) |
+| [batterySOC](arkts-basicservices-batteryinfo-con.md#batterysoc) |
+| [batteryTemperature](arkts-basicservices-batteryinfo-con.md#batterytemperature) |
+| [chargingStatus](arkts-basicservices-batteryinfo-con.md#chargingstatus) |
+| [healthStatus](arkts-basicservices-batteryinfo-con.md#healthstatus) |
+| [isBatteryPresent](arkts-basicservices-batteryinfo-con.md#isbatterypresent) |
+| [nowCurrent](arkts-basicservices-batteryinfo-con.md#nowcurrent) |
+| [pluggedType](arkts-basicservices-batteryinfo-con.md#pluggedtype) |
+| [technology](arkts-basicservices-batteryinfo-con.md#technology) |
+| [voltage](arkts-basicservices-batteryinfo-con.md#voltage) |
+
+<!--Del-->
+### Constants(System API)
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [estimatedRemainingChargeTime](arkts-basicservices-batteryinfo-con-sys.md#estimatedremainingchargetime) |
+| [remainingEnergy](arkts-basicservices-batteryinfo-con-sys.md#remainingenergy) |
+| [totalEnergy](arkts-basicservices-batteryinfo-con-sys.md#totalenergy) |
+<!--DelEnd-->

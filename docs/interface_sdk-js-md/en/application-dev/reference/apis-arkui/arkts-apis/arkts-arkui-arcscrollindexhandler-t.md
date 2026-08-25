@@ -1,24 +1,23 @@
 # ArcScrollIndexHandler
 
 ```TypeScript
-export type ArcScrollIndexHandler = (start: int, end: int, center: int) => void
+declare type ArcScrollIndexHandler = (start: number, end: number, center: number) => void
 ```
 
-Called when the start, end and center positions of the display change.
+Represents the callback triggered when a child component enters or leaves the visible area of the **ArcList** component.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-unnamed-export type ArcScrollIndexHandler = (start: int, end: int, center: int) => void--><!--Device-unnamed-export type ArcScrollIndexHandler = (start: int, end: int, center: int) => void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | int | Yes | the start index of the display area. <br>The value should be an integer. |
-| end | int | Yes | the end index of the display area. <br>The value should be an integer. |
-| center | int | Yes | the center index of the display area. <br>The value should be an integer. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | number | Yes |
+| end | number | Yes |
+| center | number | Yes |

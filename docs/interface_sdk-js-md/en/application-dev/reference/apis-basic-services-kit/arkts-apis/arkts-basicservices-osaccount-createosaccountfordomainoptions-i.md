@@ -4,9 +4,9 @@ Represents a set of optional parameters for creating an OS account bound to the 
 
 **Inheritance/Implementation:** CreateOsAccountForDomainOptions extends [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-osAccount-interface CreateOsAccountForDomainOptions--><!--Device-osAccount-interface CreateOsAccountForDomainOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -17,4 +17,3 @@ Represents a set of optional parameters for creating an OS account bound to the 
 ```TypeScript
 import { osAccount } from '@kit.BasicServicesKit';
 ```
-

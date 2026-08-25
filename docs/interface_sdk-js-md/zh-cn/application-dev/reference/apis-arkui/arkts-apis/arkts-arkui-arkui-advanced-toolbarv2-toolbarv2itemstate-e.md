@@ -4,7 +4,7 @@ Declare enum ToolBarV2ItemState
 
 **起始版本：** 18
 
-<!--Device-unnamed-export declare enum ToolBarV2ItemState--><!--Device-unnamed-export declare enum ToolBarV2ItemState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Enable type.
 
 **起始版本：** 18
 
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ToolBarV2ItemState-ENABLE = 1--><!--Device-ToolBarV2ItemState-ENABLE = 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Disable type.
 
 **起始版本：** 18
 
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ToolBarV2ItemState-DISABLE = 2--><!--Device-ToolBarV2ItemState-DISABLE = 2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ Activate type.
 
 **起始版本：** 18
 
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ToolBarV2ItemState-ACTIVATE = 3--><!--Device-ToolBarV2ItemState-ACTIVATE = 3-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

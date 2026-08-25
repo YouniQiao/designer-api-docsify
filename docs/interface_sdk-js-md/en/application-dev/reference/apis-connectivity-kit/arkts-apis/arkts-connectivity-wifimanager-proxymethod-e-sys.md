@@ -2,9 +2,9 @@
 
 Wi-Fi Proxy method. @enum { int }
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-wifiManager-enum ProxyMethod--><!--Device-wifiManager-enum ProxyMethod-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -18,9 +18,9 @@ METHOD_NONE = 0
 
 No proxy is to be used.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ProxyMethod-METHOD_NONE = 0--><!--Device-ProxyMethod-METHOD_NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -34,9 +34,9 @@ METHOD_AUTO = 1
 
 Use auto configured proxy.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ProxyMethod-METHOD_AUTO = 1--><!--Device-ProxyMethod-METHOD_AUTO = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -50,11 +50,10 @@ METHOD_MANUAL = 2
 
 Use manual configured proxy.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ProxyMethod-METHOD_MANUAL = 2--><!--Device-ProxyMethod-METHOD_MANUAL = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
-

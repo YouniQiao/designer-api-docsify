@@ -4,11 +4,11 @@ Enumerates the authentication results.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md)
-
-<!--Device-userAuth-export enum AuthenticationResult--><!--Device-userAuth-export enum AuthenticationResult-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -22,11 +22,11 @@ The device does not support the current authentication mode.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [TYPE_NOT_SUPPORT](arkts-userauthentication-userauth-resultcode-e.md#type_not_support)
-
-<!--Device-AuthenticationResult-NO_SUPPORT = -1--><!--Device-AuthenticationResult-NO_SUPPORT = -1-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -40,11 +40,11 @@ The authentication is successful.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [SUCCESS](arkts-userauthentication-userauth-resultcode-e.md#success)
-
-<!--Device-AuthenticationResult-SUCCESS = 0--><!--Device-AuthenticationResult-SUCCESS = 0-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -58,11 +58,11 @@ The feature comparison failed.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [FAIL](arkts-userauthentication-userauth-resultcode-e.md#fail)
-
-<!--Device-AuthenticationResult-COMPARE_FAILURE = 1--><!--Device-AuthenticationResult-COMPARE_FAILURE = 1-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -76,11 +76,11 @@ The authentication was canceled by the user.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [CANCELED](arkts-userauthentication-userauth-resultcode-e.md#canceled)
-
-<!--Device-AuthenticationResult-CANCELED = 2--><!--Device-AuthenticationResult-CANCELED = 2-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -94,11 +94,11 @@ The authentication has timed out.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [TIMEOUT](arkts-userauthentication-userauth-resultcode-e.md#timeout)
-
-<!--Device-AuthenticationResult-TIMEOUT = 3--><!--Device-AuthenticationResult-TIMEOUT = 3-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -112,9 +112,9 @@ The camera failed to start.
 
 **Since:** 6
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-AuthenticationResult-CAMERA_FAIL = 4--><!--Device-AuthenticationResult-CAMERA_FAIL = 4-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -128,11 +128,11 @@ The authentication service is not available. Try again later.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [BUSY](arkts-userauthentication-userauth-resultcode-e.md#busy)
-
-<!--Device-AuthenticationResult-BUSY = 5--><!--Device-AuthenticationResult-BUSY = 5-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -146,11 +146,11 @@ The authentication parameters are invalid.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [INVALID_PARAMETERS](arkts-userauthentication-userauth-resultcode-e.md#invalid_parameters)
-
-<!--Device-AuthenticationResult-INVALID_PARAMETERS = 6--><!--Device-AuthenticationResult-INVALID_PARAMETERS = 6-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -164,11 +164,11 @@ The user account is locked because the number of authentication failures has rea
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [LOCKED](arkts-userauthentication-userauth-resultcode-e.md#locked)
-
-<!--Device-AuthenticationResult-LOCKED = 7--><!--Device-AuthenticationResult-LOCKED = 7-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -182,11 +182,11 @@ No authentication credential is registered.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [NOT_ENROLLED](arkts-userauthentication-userauth-resultcode-e.md#not_enrolled)
-
-<!--Device-AuthenticationResult-NOT_ENROLLED = 8--><!--Device-AuthenticationResult-NOT_ENROLLED = 8-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -200,11 +200,10 @@ Other errors.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [GENERAL_ERROR](arkts-userauthentication-userauth-resultcode-e.md#general_error)
 
-<!--Device-AuthenticationResult-GENERAL_ERROR = 100--><!--Device-AuthenticationResult-GENERAL_ERROR = 100-End-->
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
-

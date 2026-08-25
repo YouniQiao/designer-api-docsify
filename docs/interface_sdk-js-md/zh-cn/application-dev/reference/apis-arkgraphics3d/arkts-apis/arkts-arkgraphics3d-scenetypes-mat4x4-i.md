@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-unnamed-export interface Mat4x4--><!--Device-unnamed-export interface Mat4x4-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -20,7 +20,7 @@ w: Vec4
 
 **起始版本：** 23
 
-<!--Device-Mat4x4-w: Vec4--><!--Device-Mat4x4-w: Vec4-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -36,7 +36,7 @@ x: Vec4
 
 **起始版本：** 23
 
-<!--Device-Mat4x4-x: Vec4--><!--Device-Mat4x4-x: Vec4-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -52,7 +52,7 @@ y: Vec4
 
 **起始版本：** 23
 
-<!--Device-Mat4x4-y: Vec4--><!--Device-Mat4x4-y: Vec4-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -68,7 +68,6 @@ z: Vec4
 
 **起始版本：** 23
 
-<!--Device-Mat4x4-z: Vec4--><!--Device-Mat4x4-z: Vec4-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

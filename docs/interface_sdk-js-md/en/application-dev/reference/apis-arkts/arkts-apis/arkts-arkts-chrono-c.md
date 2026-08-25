@@ -4,9 +4,7 @@ Utility class for time measurement and clock access.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class Chrono--><!--Device-unnamed-export class Chrono-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,19 +23,17 @@ Gets the current process CPU time in nanoseconds.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Chrono-public static getCpuTime(): long--><!--Device-Chrono-public static getCpuTime(): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | the CPU time in nanoseconds consumed by the current process. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## milliNow
 
@@ -49,19 +45,17 @@ Gets the current timestamp in milliseconds.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Chrono-public static milliNow(): double--><!--Device-Chrono-public static milliNow(): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | the number of milliseconds elapsed since system start. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## nanoNow
 
@@ -73,19 +67,17 @@ Gets the current timestamp in nanoseconds.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Chrono-public static nanoNow(): long--><!--Device-Chrono-public static nanoNow(): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | the number of nanoseconds elapsed since system start. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## NS_PER_MS
 
@@ -99,11 +91,8 @@ The number of nanoseconds in one millisecond.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Chrono-public static readonly NS_PER_MS: long = 1000000--><!--Device-Chrono-public static readonly NS_PER_MS: long = 1000000-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

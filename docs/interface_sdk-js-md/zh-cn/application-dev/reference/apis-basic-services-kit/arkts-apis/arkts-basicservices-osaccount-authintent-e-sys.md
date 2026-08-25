@@ -2,9 +2,9 @@
 
 表示认证意图的枚举。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-osAccount-enum AuthIntent--><!--Device-osAccount-enum AuthIntent-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -18,9 +18,9 @@ UNLOCK = 1
 
 解锁意图。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AuthIntent-UNLOCK = 1--><!--Device-AuthIntent-UNLOCK = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -34,9 +34,9 @@ SILENT_AUTH = 2
 
 静默认证意图。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-AuthIntent-SILENT_AUTH = 2--><!--Device-AuthIntent-SILENT_AUTH = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -50,9 +50,9 @@ QUESTION_AUTH = 3
 
 密保问题认证意图。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-AuthIntent-QUESTION_AUTH = 3--><!--Device-AuthIntent-QUESTION_AUTH = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -66,11 +66,10 @@ ABANDONED_PIN_AUTH = 4
 
 废弃PIN码认证意图。用户修改锁屏密码后，旧的PIN码被废弃。废弃PIN存在期间，用户如果忘记密码可以通过废弃PIN认证通过后重置锁屏密码。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-AuthIntent-ABANDONED_PIN_AUTH = 4--><!--Device-AuthIntent-ABANDONED_PIN_AUTH = 4-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
-

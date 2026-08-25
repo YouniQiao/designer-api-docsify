@@ -4,7 +4,7 @@
 
 **起始版本：** 11
 
-<!--Device-vpnExtension-export interface VpnConfig--><!--Device-vpnExtension-export interface VpnConfig-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -26,7 +26,7 @@ VPN虚拟网卡的IP地址。API version 23之前，最多支持64个IP地址；
 
 **起始版本：** 11
 
-<!--Device-VpnConfig-addresses: Array<LinkAddress>--><!--Device-VpnConfig-addresses: Array<LinkAddress>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -43,7 +43,7 @@ blockedApplications?: Array<string>
 
 **起始版本：** 11
 
-<!--Device-VpnConfig-blockedApplications?: Array<string>--><!--Device-VpnConfig-blockedApplications?: Array<string>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -59,7 +59,7 @@ DNS服务器地址信息。当配置DNS服务器地址后，VPN启动状态下�
 
 **起始版本：** 11
 
-<!--Device-VpnConfig-dnsAddresses?: Array<string>--><!--Device-VpnConfig-dnsAddresses?: Array<string>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -75,7 +75,7 @@ isBlocking?: boolean
 
 **起始版本：** 11
 
-<!--Device-VpnConfig-isBlocking?: boolean--><!--Device-VpnConfig-isBlocking?: boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -91,7 +91,7 @@ isInternal?: boolean
 
 **起始版本：** 11
 
-<!--Device-VpnConfig-isInternal?: boolean--><!--Device-VpnConfig-isInternal?: boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -108,7 +108,7 @@ isIPv4Accepted?: boolean
 
 **起始版本：** 11
 
-<!--Device-VpnConfig-isIPv4Accepted?: boolean--><!--Device-VpnConfig-isIPv4Accepted?: boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -125,23 +125,23 @@ isIPv6Accepted?: boolean
 
 **起始版本：** 11
 
-<!--Device-VpnConfig-isIPv6Accepted?: boolean--><!--Device-VpnConfig-isIPv6Accepted?: boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## mtu
 
 ```TypeScript
-mtu?: int
+mtu?: number
 ```
 
 最大传输单元MTU值（单位：字节）。取值范围：[576，1500]。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 11
 
-<!--Device-VpnConfig-mtu?: int--><!--Device-VpnConfig-mtu?: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -157,7 +157,7 @@ VPN虚拟网卡的路由信息（API version 23前最多可配置1024条路由�
 
 **起始版本：** 11
 
-<!--Device-VpnConfig-routes?: Array<RouteInfo>--><!--Device-VpnConfig-routes?: Array<RouteInfo>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -173,7 +173,7 @@ DNS的搜索域列表。
 
 **起始版本：** 11
 
-<!--Device-VpnConfig-searchDomains?: Array<string>--><!--Device-VpnConfig-searchDomains?: Array<string>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -190,7 +190,7 @@ trustedApplications?: Array<string>
 
 **起始版本：** 11
 
-<!--Device-VpnConfig-trustedApplications?: Array<string>--><!--Device-VpnConfig-trustedApplications?: Array<string>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -206,7 +206,7 @@ VPN唯一标识。
 
 **起始版本：** 20
 
-<!--Device-VpnConfig-vpnId?: string--><!--Device-VpnConfig-vpnId?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -254,4 +254,3 @@ function vpnCreate(){
   })
 }
 ```
-

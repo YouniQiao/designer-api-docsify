@@ -9,41 +9,41 @@ import { contact } from '@kit.ContactsKit';
 ## addContacts
 
 ```TypeScript
-function addContacts(context: Context, contacts: Array<Contact>): Promise<Array<int>>
+function addContacts(context: Context, contacts: Array<Contact>): Promise<Array<number>>
 ```
 
 Adds contacts in batches. This API uses a promise to return the result.
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-contact-function addContacts(context: Context, contacts: Array<Contact>): Promise<Array<int>>--><!--Device-contact-function addContacts(context: Context, contacts: Array<Contact>): Promise<Array<int>>-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| contacts | Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the contact information. array. |
+| [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
+| contacts | Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the result, which is the ID array of the contacts added in batches. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Array & lt;int & gt; & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
-| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16700001](../errorcode-contacts.md#16700001-system-internal-error) |
+| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) |
 
 **Examples**
 
@@ -68,4 +68,3 @@ contact.addContacts(context, [contactInfo1, contactInfo2]).then((data) => {
   console.error(`Failed to addContacts. Code: ${err.code}, message: ${err.message}`);
 });
 ```
-

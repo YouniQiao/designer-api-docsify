@@ -8,11 +8,10 @@ Obtains the network address.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-mdns-type NetAddress = connection.NetAddress--><!--Device-mdns-type NetAddress = connection.NetAddress-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Property type:** connection.NetAddress
-

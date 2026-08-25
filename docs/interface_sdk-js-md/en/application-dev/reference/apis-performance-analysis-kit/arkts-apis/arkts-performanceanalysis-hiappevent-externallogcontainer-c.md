@@ -4,7 +4,7 @@ An external log container including all external log files.
 
 **Since:** 26.1.0
 
-<!--Device-hiAppEvent-class ExternalLogContainer--><!--Device-hiAppEvent-class ExternalLogContainer-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -24,17 +24,17 @@ Get the set of all external log file paths
 
 **Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-ExternalLogContainer-getAllLogFiles(): Set<string>--><!--Device-ExternalLogContainer-getAllLogFiles(): Set<string>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Set&lt;string&gt; | The set of all external log file paths |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Set & lt;string & gt; |
 
 ## getAllLogs
 
@@ -46,20 +46,26 @@ Get the set of all ExternalLogWrappers
 
 **Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-ExternalLogContainer-getAllLogs(): Set<ExternalLogWrapper>--><!--Device-ExternalLogContainer-getAllLogs(): Set<ExternalLogWrapper>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Set&lt;[ExternalLogWrapper](arkts-performanceanalysis-hiappevent-externallogwrapper-c.md)&gt; | The set of all ExternalLogWrappers |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Set&lt;[ExternalLogWrapper](arkts-performanceanalysis-hiappevent-externallogwrapper-c.md)&gt; |
 
 ## getFirstGeneratedLogFiles
 
+ArkTS-Dyn:
+```TypeScript
+getFirstGeneratedLogFiles(num: number): Set<string>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getFirstGeneratedLogFiles(num: int): Set<string>
 ```
@@ -68,26 +74,32 @@ Get the first generated external log file paths of a given number
 
 **Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-ExternalLogContainer-getFirstGeneratedLogFiles(num: int): Set<string>--><!--Device-ExternalLogContainer-getFirstGeneratedLogFiles(num: int): Set<string>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| num | int | Yes | given number of queried files |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| num | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Set&lt;string&gt; | The set of qualified external log file paths |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Set & lt;string & gt; |
 
 ## getLogFilesGeneratedAfter
 
+ArkTS-Dyn:
+```TypeScript
+getLogFilesGeneratedAfter(timePoint: number): Set<string>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getLogFilesGeneratedAfter(timePoint: long): Set<string>
 ```
@@ -96,26 +108,32 @@ Get the set of all external log file paths which are after a given time
 
 **Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-ExternalLogContainer-getLogFilesGeneratedAfter(timePoint: long): Set<string>--><!--Device-ExternalLogContainer-getLogFilesGeneratedAfter(timePoint: long): Set<string>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| timePoint | long | Yes | given generated time point (ms) of file size |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| timePoint | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Set&lt;string&gt; | The set of all external log file paths which are after a given time |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Set & lt;string & gt; |
 
 ## getLogFilesGeneratedBefore
 
+ArkTS-Dyn:
+```TypeScript
+getLogFilesGeneratedBefore(timePoint: number): Set<string>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getLogFilesGeneratedBefore(timePoint: long): Set<string>
 ```
@@ -124,26 +142,32 @@ Get the set of all external log file paths which are before a given time
 
 **Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-ExternalLogContainer-getLogFilesGeneratedBefore(timePoint: long): Set<string>--><!--Device-ExternalLogContainer-getLogFilesGeneratedBefore(timePoint: long): Set<string>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| timePoint | long | Yes | given generated time point (ms) of file size |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| timePoint | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Set&lt;string&gt; | The set of all external log file paths which are before a given time |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Set & lt;string & gt; |
 
 ## getLogFilesLargerThan
 
+ArkTS-Dyn:
+```TypeScript
+getLogFilesLargerThan(sizeKb: number): Set<string>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getLogFilesLargerThan(sizeKb: long): Set<string>
 ```
@@ -152,23 +176,23 @@ Get the set of all external log file paths whose size are larger than a given am
 
 **Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-ExternalLogContainer-getLogFilesLargerThan(sizeKb: long): Set<string>--><!--Device-ExternalLogContainer-getLogFilesLargerThan(sizeKb: long): Set<string>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sizeKb | long | Yes | given amount of file size |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sizeKb | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Set&lt;string&gt; | The set of all external log file paths whose size are larger than a given amount |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Set & lt;string & gt; |
 
 ## getLogFilesOfSysEvent
 
@@ -180,26 +204,32 @@ Get the set of all external log file paths of a given system event
 
 **Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-ExternalLogContainer-getLogFilesOfSysEvent(event: string): Set<string>--><!--Device-ExternalLogContainer-getLogFilesOfSysEvent(event: string): Set<string>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | string | Yes | string of given system event |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Set&lt;string&gt; | The set of all external log file paths of a given system event |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Set & lt;string & gt; |
 
 ## getLogFilesSmallerThan
 
+ArkTS-Dyn:
+```TypeScript
+getLogFilesSmallerThan(sizeKb: number): Set<string>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getLogFilesSmallerThan(sizeKb: long): Set<string>
 ```
@@ -208,26 +238,32 @@ Get the set of all external log file paths whose size are smaller than a given a
 
 **Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-ExternalLogContainer-getLogFilesSmallerThan(sizeKb: long): Set<string>--><!--Device-ExternalLogContainer-getLogFilesSmallerThan(sizeKb: long): Set<string>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sizeKb | long | Yes | given amount of file size |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sizeKb | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Set&lt;string&gt; | The set of all external log file paths whose size are smaller than a given amount |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Set & lt;string & gt; |
 
 ## getLogNumber
 
+ArkTS-Dyn:
+```TypeScript
+getLogNumber(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getLogNumber(): int
 ```
@@ -236,15 +272,14 @@ Get the number of all external log files
 
 **Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-ExternalLogContainer-getLogNumber(): int--><!--Device-ExternalLogContainer-getLogNumber(): int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | The number of all external log files |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |

@@ -4,7 +4,7 @@ interface of form lifecycle.@interface LifecycleForm
 
 **Since:** 7
 
-<!--Device-unnamed-export declare interface LifecycleForm--><!--Device-unnamed-export declare interface LifecycleForm-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -23,23 +23,23 @@ Called to return a FormState object. <p>You must override this callback if you w
 
 **Since:** 8
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-LifecycleForm-onAcquireFormState?(want: Want): formInfo.FormState--><!--Device-LifecycleForm-onAcquireFormState?(want: Want): formInfo.FormState-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the description of the form for which the FormState is obtained. The description covers the bundle name, ability name, module name, form name, form dimensions. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| formInfo.FormState | Returns the { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| formInfo.FormState |
 
 ## onCastToNormal
 
@@ -51,17 +51,17 @@ Called when the form provider is notified that a temporary form is successfully 
 
 **Since:** 8
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-LifecycleForm-onCastToNormal?(formId: string): void--><!--Device-LifecycleForm-onCastToNormal?(formId: string): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| formId | string | Yes | Indicates the ID of the form. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| formId | string | Yes |
 
 ## onCreate
 
@@ -73,23 +73,23 @@ Called to return a FormBindingData object.
 
 **Since:** 8
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-LifecycleForm-onCreate?(want: Want): formBindingData.FormBindingData--><!--Device-LifecycleForm-onCreate?(want: Want): formBindingData.FormBindingData-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the detailed information for creating a FormBindingData. The {@code Want} object must include the form ID, form name, and grid style of the form, which can be obtained from IDENTITY_KEY, NAME_KEY, and DIMENSION_KEY, respectively. Such form information must be managed as persistent data for further form acquisition, update, and deletion. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| formBindingData.FormBindingData | Returns the created { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| formBindingData.FormBindingData |
 
 ## onDestroy
 
@@ -101,17 +101,17 @@ Called to notify the form provider that a specified form has been deleted. Overr
 
 **Since:** 8
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-LifecycleForm-onDestroy?(formId: string): void--><!--Device-LifecycleForm-onDestroy?(formId: string): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| formId | string | Yes | Indicates the ID of the deleted form. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| formId | string | Yes |
 
 ## onEvent
 
@@ -123,18 +123,18 @@ Called when a specified message event defined by the form provider is triggered.
 
 **Since:** 8
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-LifecycleForm-onEvent?(formId: string, message: string): void--><!--Device-LifecycleForm-onEvent?(formId: string, message: string): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| formId | string | Yes | Indicates the ID of the form on which the message event is triggered, which is provided by the client to the form provider. |
-| message | string | Yes | Indicates the value of the {@code params} field of the message event. This parameter is used to identify the specific component on which the event is triggered. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| formId | string | Yes |
+| message | string | Yes |
 
 ## onUpdate
 
@@ -146,17 +146,17 @@ Called to notify the form provider to update a specified form.
 
 **Since:** 8
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-LifecycleForm-onUpdate?(formId: string): void--><!--Device-LifecycleForm-onUpdate?(formId: string): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| formId | string | Yes | Indicates the ID of the form to update. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| formId | string | Yes |
 
 ## onVisibilityChange
 
@@ -168,15 +168,14 @@ Called when the form provider receives form events from the system.
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-LifecycleForm-onVisibilityChange?(newStatus: Record<string, number>): void--><!--Device-LifecycleForm-onVisibilityChange?(newStatus: Record<string, number>): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| newStatus | Record&lt;string, number&gt; | Yes | Indicates the form events occurred. The key in the {@code Map} object indicates form ID,and the value indicates the event type, which can be either [FORM_VISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#form_visible) or [FORM_INVISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#form_invisible). [FORM_VISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#form_visible) means that the form becomes visible, and [FORM_INVISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#form_invisible) means that the form becomes invisible. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [newStatus](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-updatesimmessageoptions-i-sys.md) | Record & lt;string, number & gt; | Yes |

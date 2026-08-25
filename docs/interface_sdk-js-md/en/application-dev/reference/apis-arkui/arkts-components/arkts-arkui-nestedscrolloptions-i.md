@@ -4,7 +4,7 @@ Define nested scroll options@interface NestedScrollOptions
 
 **Since:** 23
 
-<!--Device-unnamed-declare interface NestedScrollOptions--><!--Device-unnamed-declare interface NestedScrollOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Set NestedScrollMode when the scrollable component scrolls backward
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-NestedScrollOptions-scrollBackward: NestedScrollMode--><!--Device-NestedScrollOptions-scrollBackward: NestedScrollMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ Set NestedScrollMode when the scrollable component scrolls forward
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-NestedScrollOptions-scrollForward: NestedScrollMode--><!--Device-NestedScrollOptions-scrollForward: NestedScrollMode-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

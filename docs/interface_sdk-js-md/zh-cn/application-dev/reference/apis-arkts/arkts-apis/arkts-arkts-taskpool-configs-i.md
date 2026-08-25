@@ -4,7 +4,7 @@
 
 **起始版本：** 24
 
-<!--Device-taskpool-interface Configs--><!--Device-taskpool-interface Configs-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -26,9 +26,9 @@ priority?: Priority
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
-<!--Device-Configs-priority?: Priority--><!--Device-Configs-priority?: Priority-End-->
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -47,9 +47,8 @@ timeout?: number
 
 **起始版本：** 24
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
+
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
-<!--Device-Configs-timeout?: number--><!--Device-Configs-timeout?: number-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

@@ -2,9 +2,9 @@
 
 Describes the main window information.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-window-interface MainWindowInfo--><!--Device-window-interface MainWindowInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -22,11 +22,11 @@ displayId: long
 
 ID of the display to which the main window belongs.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-MainWindowInfo-displayId: long--><!--Device-MainWindowInfo-displayId: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -40,9 +40,9 @@ Task name of the main window.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-MainWindowInfo-label: string--><!--Device-MainWindowInfo-label: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -56,9 +56,9 @@ Foreground/Background status of the main window. **true** if the main window is 
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-MainWindowInfo-showing: boolean--><!--Device-MainWindowInfo-showing: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -70,11 +70,10 @@ windowId: int
 
 ID of the main window.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-MainWindowInfo-windowId: int--><!--Device-MainWindowInfo-windowId: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
-

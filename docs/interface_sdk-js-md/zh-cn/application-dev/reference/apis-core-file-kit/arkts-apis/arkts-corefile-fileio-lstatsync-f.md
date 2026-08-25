@@ -15,25 +15,25 @@ declare function lstatSync(path: string): Stat
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [lstatSync](arkts-corefile-file-fs-lstatsync-f.md)
-
-<!--Device-unnamed-declare function lstatSync(path: string): Stat--><!--Device-unnamed-declare function lstatSync(path: string): Stat-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 目标文件的应用沙箱路径。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| path | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Stat](arkts-corefile-fileio-stat-depr-i.md) | 表示文件的具体信息。 |
+| 类型 |
+| --- |
+| [Stat](arkts-corefile-fileio-stat-depr-i.md) |
 
 **示例**
 
@@ -41,4 +41,3 @@ declare function lstatSync(path: string): Stat
 let filePath = pathDir + "/test.txt";
 let stat = fileio.lstatSync(filePath);
 ```
-

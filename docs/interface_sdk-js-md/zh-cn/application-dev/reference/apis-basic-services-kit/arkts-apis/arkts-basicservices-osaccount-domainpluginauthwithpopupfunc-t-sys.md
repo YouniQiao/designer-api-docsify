@@ -9,7 +9,7 @@ type DomainPluginAuthWithPopupFunc = (domainAccountInfo: DomainAccountInfo,
 
 **起始版本：** 23
 
-<!--Device-osAccount-type DomainPluginAuthWithPopupFunc = (domainAccountInfo: DomainAccountInfo,    callback: IUserAuthCallback) => void--><!--Device-osAccount-type DomainPluginAuthWithPopupFunc = (domainAccountInfo: DomainAccountInfo,    callback: IUserAuthCallback) => void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -17,10 +17,10 @@ type DomainPluginAuthWithPopupFunc = (domainAccountInfo: DomainAccountInfo,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 表示域账号信息。 |
-| callback | IUserAuthCallback | 是 | 表示认证结果回调。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [domainAccountInfo](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | 是 |
 
 **示例**
 
@@ -68,4 +68,3 @@ try {
   console.error(`registerPlugin code is ${err.code}, message is ${err.message}`);
 }
 ```
-

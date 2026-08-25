@@ -4,7 +4,7 @@ Menu divider mode.@enum { number }
 
 **Since:** 19
 
-<!--Device-unnamed-declare enum DividerMode--><!--Device-unnamed-declare enum DividerMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Menu divider mode floating above menu.
 
 **Since:** 19
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-DividerMode-FLOATING_ABOVE_MENU = 0--><!--Device-DividerMode-FLOATING_ABOVE_MENU = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ Menu divider mode embedded in menu.
 
 **Since:** 19
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-DividerMode-EMBEDDED_IN_MENU = 1--><!--Device-DividerMode-EMBEDDED_IN_MENU = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

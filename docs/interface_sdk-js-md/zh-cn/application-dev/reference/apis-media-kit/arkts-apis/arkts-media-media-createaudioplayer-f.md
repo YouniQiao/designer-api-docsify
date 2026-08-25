@@ -21,23 +21,22 @@ function createAudioPlayer(): AudioPlayer
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [createAVPlayer](arkts-media-media-createavplayer-f.md)(callback: AsyncCallback&lt;AVPlayer&gt;)
-
-<!--Device-media-function createAudioPlayer(): AudioPlayer--><!--Device-media-function createAudioPlayer(): AudioPlayer-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AudioPlayer](arkts-media-multimedia-media-audioplayer-i.md) | 返回AudioPlayer类实例，失败时返回null。可用于音频播放、暂停、停止等操作。 |
+| 类型 |
+| --- |
+| [AudioPlayer](arkts-media-multimedia-media-audioplayer-i.md) |
 
 **示例**
 
 ```TypeScript
 let audioPlayer: media.AudioPlayer = media.createAudioPlayer();
 ```
-

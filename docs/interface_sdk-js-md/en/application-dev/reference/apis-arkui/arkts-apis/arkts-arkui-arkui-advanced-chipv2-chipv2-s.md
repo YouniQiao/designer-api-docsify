@@ -4,9 +4,7 @@ Defines chip component with V2 state management.
 
 **Since:** 26.0.0
 
-**Decorator:** @ComponentV2
-
-<!--Device-unnamed-export declare struct ChipV2--><!--Device-unnamed-export declare struct ChipV2-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +24,11 @@ Sets the build function of the ChipV2.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2-build(): void--><!--Device-ChipV2-build(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,13 +44,10 @@ Chip options.
 
 **Since:** 26.0.0
 
-**Decorator:** @Require, @Param
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2-@Require  @Param  readonly chipV2Options: ChipV2Options--><!--Device-ChipV2-@Require  @Param  readonly chipV2Options: ChipV2Options-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

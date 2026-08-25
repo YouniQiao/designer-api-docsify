@@ -16,15 +16,15 @@ Creates a **MulticastSocket** object.
 
 **Since:** 11
 
-<!--Device-socket-function constructMulticastSocketInstance(): MulticastSocket--><!--Device-socket-function constructMulticastSocketInstance(): MulticastSocket-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [MulticastSocket](arkts-network-socket-multicastsocket-i.md) | MulticastSocket** object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [MulticastSocket](arkts-network-socket-multicastsocket-i.md) |
 
 **Examples**
 
@@ -32,4 +32,3 @@ Creates a **MulticastSocket** object.
 import { socket } from '@kit.NetworkKit';
 let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
 ```
-

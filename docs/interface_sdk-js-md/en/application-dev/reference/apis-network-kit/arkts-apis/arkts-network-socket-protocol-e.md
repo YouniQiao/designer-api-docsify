@@ -4,7 +4,7 @@ Enumerates TLS protocol versions.
 
 **Since:** 9
 
-<!--Device-socket-export enum Protocol--><!--Device-socket-export enum Protocol-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -18,7 +18,7 @@ TLSv1.2.
 
 **Since:** 9
 
-<!--Device-Protocol-TLSv12 = "TLSv1.2"--><!--Device-Protocol-TLSv12 = "TLSv1.2"-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -32,7 +32,6 @@ TLSv1.3.
 
 **Since:** 9
 
-<!--Device-Protocol-TLSv13 = "TLSv1.3"--><!--Device-Protocol-TLSv13 = "TLSv1.3"-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetStack
-

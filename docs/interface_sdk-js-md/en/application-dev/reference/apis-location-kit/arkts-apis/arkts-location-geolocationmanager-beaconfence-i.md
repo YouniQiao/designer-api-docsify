@@ -2,9 +2,9 @@
 
 Beacon fence details.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-geoLocationManager-export interface BeaconFence--><!--Device-geoLocationManager-export interface BeaconFence-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -24,11 +24,11 @@ Beacon fence information type.
 
 **Type:** [BeaconFenceInfoType](arkts-location-geolocationmanager-beaconfenceinfotype-e.md)
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-BeaconFence-beaconFenceInfoType: BeaconFenceInfoType--><!--Device-BeaconFence-beaconFenceInfoType: BeaconFenceInfoType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -42,11 +42,11 @@ Identifier of the beacon fence.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-BeaconFence-identifier: string--><!--Device-BeaconFence-identifier: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -60,11 +60,10 @@ Beacon equipment manufacture data.
 
 **Type:** [BeaconManufactureData](arkts-location-geolocationmanager-beaconmanufacturedata-i.md)
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-BeaconFence-manufactureData?: BeaconManufactureData--><!--Device-BeaconFence-manufactureData?: BeaconManufactureData-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Location.Location.Geofence
-

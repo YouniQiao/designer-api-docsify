@@ -4,7 +4,7 @@ ItemDragInfo object description@interface ItemDragInfo
 
 **Since:** 11
 
-<!--Device-unnamed-declare interface ItemDragInfo--><!--Device-unnamed-declare interface ItemDragInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,9 +25,9 @@ Obtains the X coordinate of the drag window, in vp.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-ItemDragInfo-x: number--><!--Device-ItemDragInfo-x: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,9 +43,8 @@ Obtains the Y coordinate of the drag window, in vp.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ItemDragInfo-y: number--><!--Device-ItemDragInfo-y: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

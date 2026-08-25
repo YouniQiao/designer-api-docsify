@@ -2,9 +2,9 @@
 
 Defines authorization token information.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-appAccount-interface AuthTokenInfo--><!--Device-appAccount-interface AuthTokenInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -24,9 +24,9 @@ Information about the account to which the token belongs. By default, no value i
 
 **Type:** [AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-AuthTokenInfo-account?: AppAccountInfo--><!--Device-AuthTokenInfo-account?: AppAccountInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -40,9 +40,9 @@ Authentication type.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-AuthTokenInfo-authType: string--><!--Device-AuthTokenInfo-authType: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -56,9 +56,8 @@ Value of the authorization token.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-AuthTokenInfo-token: string--><!--Device-AuthTokenInfo-token: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
-

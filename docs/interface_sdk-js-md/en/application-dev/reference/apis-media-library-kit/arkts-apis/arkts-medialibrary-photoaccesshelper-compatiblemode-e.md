@@ -2,9 +2,9 @@
 
 Enumerates the compatible modes.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-photoAccessHelper-enum CompatibleMode--><!--Device-photoAccessHelper-enum CompatibleMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -16,9 +16,9 @@ ORIGINAL_FORMAT_MODE = 0
 
 Maintains the original video format.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-CompatibleMode-ORIGINAL_FORMAT_MODE = 0--><!--Device-CompatibleMode-ORIGINAL_FORMAT_MODE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -30,9 +30,8 @@ COMPATIBLE_FORMAT_MODE = 1
 
 Converts the HDR content to SDR format.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-CompatibleMode-COMPATIBLE_FORMAT_MODE = 1--><!--Device-CompatibleMode-COMPATIBLE_FORMAT_MODE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

@@ -2,9 +2,9 @@
 
 清除本地下载的云端数据的行为枚举。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-cloudData-enum ClearAction--><!--Device-cloudData-enum ClearAction-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -18,9 +18,9 @@ CLEAR_CLOUD_INFO = 0
 
 清除从云端下载的数据的云标识（即数据来源于云端的标记信息），相关数据作为本地数据保存。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-ClearAction-CLEAR_CLOUD_INFO = 0--><!--Device-ClearAction-CLEAR_CLOUD_INFO = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -34,9 +34,9 @@ CLEAR_CLOUD_DATA_AND_INFO = 1
 
 清除从云端下载的数据，不包括本地已修改的云端数据。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-ClearAction-CLEAR_CLOUD_DATA_AND_INFO = 1--><!--Device-ClearAction-CLEAR_CLOUD_DATA_AND_INFO = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -52,9 +52,8 @@ CLEAR_CLOUD_NONE = 2
 
 **起始版本：** 23
 
-<!--Device-ClearAction-CLEAR_CLOUD_NONE = 2--><!--Device-ClearAction-CLEAR_CLOUD_NONE = 2-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
-

@@ -4,7 +4,7 @@ ControllerHandler是ArkWeb提供的处理新建Web组件控制器分配的帮助
 
 **起始版本：** 9
 
-<!--Device-unnamed-declare class ControllerHandler--><!--Device-unnamed-declare class ControllerHandler-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -23,9 +23,9 @@ ControllerHandler的构造函数。
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-ControllerHandler-constructor()--><!--Device-ControllerHandler-constructor()-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -39,15 +39,14 @@ setWebController(controller: WebviewController): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-ControllerHandler-setWebController(controller: WebviewController): void--><!--Device-ControllerHandler-setWebController(controller: WebviewController): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| controller | [WebviewController](arkts-arkweb-webviewcontroller-t.md) | 是 | 新建Web组件的WebviewController对象，如果不需要打开新窗口请设置为null。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| controller | [WebviewController](arkts-arkweb-webviewcontroller-t.md) | 是 |

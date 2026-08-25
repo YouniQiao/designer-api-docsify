@@ -4,7 +4,7 @@ Enumerates the status change types of the **param** element embedded in the same
 
 **Since:** 21
 
-<!--Device-unnamed-declare enum NativeEmbedParamStatus--><!--Device-unnamed-declare enum NativeEmbedParamStatus-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,7 +18,7 @@ Triggered when a **param** element is added.
 
 **Since:** 21
 
-<!--Device-NativeEmbedParamStatus-ADD = 0--><!--Device-NativeEmbedParamStatus-ADD = 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,7 +32,7 @@ Triggered when a **param** element is modified.
 
 **Since:** 21
 
-<!--Device-NativeEmbedParamStatus-UPDATE = 1--><!--Device-NativeEmbedParamStatus-UPDATE = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -46,7 +46,6 @@ Triggered when a **param** element is deleted.
 
 **Since:** 21
 
-<!--Device-NativeEmbedParamStatus-DELETE = 2--><!--Device-NativeEmbedParamStatus-DELETE = 2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

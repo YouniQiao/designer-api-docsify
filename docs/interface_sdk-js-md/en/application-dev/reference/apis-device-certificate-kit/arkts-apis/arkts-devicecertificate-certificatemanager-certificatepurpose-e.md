@@ -2,9 +2,9 @@
 
 Enumerates the usage of a credential.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-certificateManager-export enum CertificatePurpose--><!--Device-certificateManager-export enum CertificatePurpose-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -16,9 +16,9 @@ PURPOSE_DEFAULT = 0
 
 Default usage, which is used for credential signing.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-CertificatePurpose-PURPOSE_DEFAULT = 0--><!--Device-CertificatePurpose-PURPOSE_DEFAULT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -30,9 +30,9 @@ PURPOSE_ALL = 1
 
 Query of all credentials.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-CertificatePurpose-PURPOSE_ALL = 1--><!--Device-CertificatePurpose-PURPOSE_ALL = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -44,9 +44,9 @@ PURPOSE_SIGN = 2
 
 Credential signing.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-CertificatePurpose-PURPOSE_SIGN = 2--><!--Device-CertificatePurpose-PURPOSE_SIGN = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -58,9 +58,8 @@ PURPOSE_ENCRYPT = 3
 
 Credential encryption.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-CertificatePurpose-PURPOSE_ENCRYPT = 3--><!--Device-CertificatePurpose-PURPOSE_ENCRYPT = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
-

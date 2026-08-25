@@ -14,11 +14,11 @@ function getTrafficStatsByUidNetwork(uid: int, networkInfo: NetworkInfo): Promis
 
 获取指定时间段内，应用在指定网络中的流量使用详情，使用 Promise 异步回调。
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_NETWORK_STATS
-
-<!--Device-statistics-function getTrafficStatsByUidNetwork(uid: int, networkInfo: NetworkInfo): Promise<NetStatsInfoSequence>--><!--Device-statistics-function getTrafficStatsByUidNetwork(uid: int, networkInfo: NetworkInfo): Promise<NetStatsInfoSequence>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -26,28 +26,28 @@ function getTrafficStatsByUidNetwork(uid: int, networkInfo: NetworkInfo): Promis
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uid | int | 是 | 指定查询的应用 UID。 |
-| networkInfo | NetworkInfo | 是 | 指定查询的网络信息，参见[NetworkInfo](arkts-network-statistics-networkinfo-i-sys.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uid | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| networkInfo | [NetworkInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-cachedownload-networkinfo-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[NetStatsInfoSequence](arkts-network-statistics-netstatsinfosequence-t-sys.md)&gt; | 以 Promise 形式返回获取结果。返回应用历史流量统计信息。 |
+| 类型 |
+| --- |
+| Promise&lt;[NetStatsInfoSequence](arkts-network-statistics-netstatsinfosequence-t-sys.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-| [2103017](../errorcode-net-statistics.md#2103017-读取数据库失败) | Failed to read the database. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
+| [2103017](../errorcode-net-statistics.md#2103017-读取数据库失败) |
 
 **示例**
 
@@ -68,4 +68,3 @@ statistics.getTrafficStatsByUidNetwork(uid, networkInfo).then((statsInfoSequence
   }
 })
 ```
-

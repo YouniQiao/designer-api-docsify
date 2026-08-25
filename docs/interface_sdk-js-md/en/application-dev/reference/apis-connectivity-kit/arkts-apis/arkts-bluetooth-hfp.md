@@ -2,9 +2,9 @@
 
 Provides methods to accessing bluetooth call-related capabilities.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-unnamed-declare namespace hfp--><!--Device-unnamed-declare namespace hfp-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -18,23 +18,22 @@ import { hfp } from '@kit.ConnectivityKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [createHfpAgProfile](arkts-connectivity-hfp-createhfpagprofile-f.md) | create the instance of hfp profile. |
-| [createHfpHfProfile](arkts-connectivity-hfp-createhfphfprofile-f.md) | create the instance of HF(Hands-Free Unit) for HFP(Hands-Free Profile). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [createHfpAgProfile](arkts-connectivity-hfp-createhfpagprofile-f.md) |
+| [createHfpHfProfile](arkts-connectivity-hfp-createhfphfprofile-f.md) |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [HandsFreeAudioGatewayProfile](arkts-connectivity-hfp-handsfreeaudiogatewayprofile-i-sys.md) | Manager hfp source profile. |
-| [HandsFreeHfProfile](arkts-connectivity-hfp-handsfreehfprofile-i-sys.md) | Manage hfp sink profile. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [HandsFreeAudioGatewayProfile](arkts-connectivity-hfp-handsfreeaudiogatewayprofile-i-sys.md) |
+| [HandsFreeHfProfile](arkts-connectivity-hfp-handsfreehfprofile-i-sys.md) |
 <!--DelEnd-->
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [BaseProfile](arkts-connectivity-hfp-baseprofile-t.md) | Base interface of profile. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BaseProfile](arkts-connectivity-hfp-baseprofile-t.md) |

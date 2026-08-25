@@ -14,17 +14,17 @@ function getImagePackerSupportedFormats(): string[]
 
 Obtains the supported encoding formats, represented by MIME types.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-image-function getImagePackerSupportedFormats(): string[]--><!--Device-image-function getImagePackerSupportedFormats(): string[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string[] | List of supported encoding formats (MIME types). |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string[] |
 
 **Examples**
 
@@ -34,4 +34,3 @@ async function GetImagePackerSupportedFormats() {
     console.info('formats:', formats);
 }
 ```
-

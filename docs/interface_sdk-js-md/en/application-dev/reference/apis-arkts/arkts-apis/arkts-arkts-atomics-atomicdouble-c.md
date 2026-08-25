@@ -4,9 +4,7 @@ Provides an atomic wrapper for safe concurrent access to a double value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class AtomicDouble--><!--Device-unnamed-export class AtomicDouble-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,26 +23,24 @@ Atomically compares the current value with the expected value and replaces it if
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicDouble-compareAndSwap(expected: double, val: double): double--><!--Device-AtomicDouble-compareAndSwap(expected: double, val: double): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| expected | double | Yes | the expected current value. |
-| val | double | Yes | the new value to store if the comparison succeeds. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| expected | double | Yes |
+| val | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | the previous value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## constructor
 
@@ -56,19 +52,17 @@ Constructs a new AtomicDouble with the provided initial value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicDouble-constructor(val: double)--><!--Device-AtomicDouble-constructor(val: double)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | double | Yes | the initial value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | double | Yes |
 
 ## exchange
 
@@ -80,25 +74,23 @@ Atomically exchanges the current value with a new value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicDouble-exchange(val: double): double--><!--Device-AtomicDouble-exchange(val: double): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | double | Yes | the new value to exchange with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | the previous value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## fetchAdd
 
@@ -110,25 +102,23 @@ Atomically adds a value to the current value and returns the previous value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicDouble-fetchAdd(val: double): double--><!--Device-AtomicDouble-fetchAdd(val: double): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | double | Yes | the value to add. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | the previous value before the addition |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## fetchSub
 
@@ -140,25 +130,23 @@ Atomically subtracts a value from the current value and returns the previous val
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicDouble-fetchSub(val: double): double--><!--Device-AtomicDouble-fetchSub(val: double): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | double | Yes | the value to subtract. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | the previous value before the subtraction |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## isLockFree
 
@@ -170,19 +158,17 @@ Checks whether atomic operations on this type are lock-free
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicDouble-static isLockFree(): boolean--><!--Device-AtomicDouble-static isLockFree(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if atomic operations are lock-free, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## load
 
@@ -194,19 +180,17 @@ Atomically loads the current value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicDouble-load(): double--><!--Device-AtomicDouble-load(): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | the current value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## store
 
@@ -218,17 +202,14 @@ Atomically stores a new value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicDouble-store(val: double): void--><!--Device-AtomicDouble-store(val: double): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | double | Yes | the new value to store. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | double | Yes |

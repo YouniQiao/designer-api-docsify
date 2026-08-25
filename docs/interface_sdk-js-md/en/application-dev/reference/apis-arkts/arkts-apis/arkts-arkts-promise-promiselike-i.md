@@ -4,9 +4,7 @@ Represents a thenable object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export interface PromiseLike--><!--Device-unnamed-export interface PromiseLike-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,24 +24,21 @@ Attaches callbacks for the resolution and/or rejection of the Promise.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PromiseLike-then<U = T, E = never>(onFulfilled: (value: T) => PromiseLike<U> | U,        onRejected?: (error: Error) => PromiseLike<E> | E): PromiseLike<Awaited<U | E>>--><!--Device-PromiseLike-then<U = T, E = never>(onFulfilled: (value: T) => PromiseLike<U> | U,        onRejected?: (error: Error) => PromiseLike<E> | E): PromiseLike<Awaited<U | E>>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| onFulfilled | (value: T) =&gt; PromiseLike&lt;U&gt; \| U | Yes | The callback to execute when the Promise is resolved. |
-| onRejected | (error: Error) =&gt; PromiseLike&lt;E&gt; \| E | No | The callback to execute when the Promise is rejected. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| onFulfilled | (value: T) = & gt; PromiseLike & lt;U & gt; \ | U | Yes |
+| onRejected | (error: Error) = & gt; PromiseLike & lt;E & gt; \ | E | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| PromiseLike&lt;Awaited&lt;U \| E&gt;&gt; | A PromiseLike for the result of the callbacks. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| PromiseLike & lt;Awaited & lt;U \ | E & gt; & gt; |

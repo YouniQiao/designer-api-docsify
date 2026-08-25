@@ -2,9 +2,9 @@
 
 Enumerates the intent types defined by the intent decorator. You can obtain the intent type from [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) returned by calling APIs such as [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getallinsightintentinfo-f-sys.md).
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-insightIntentDriver-enum InsightIntentType--><!--Device-insightIntentDriver-enum InsightIntentType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -16,13 +16,13 @@ Enumerates the intent types defined by the intent decorator. You can obtain the 
 LINK = '@InsightIntentLink'
 ```
 
-A decorator of the @InsightIntentLink type.
+A decorator of the [@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink) type.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-InsightIntentType-LINK = '@InsightIntentLink'--><!--Device-InsightIntentType-LINK = '@InsightIntentLink'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -34,13 +34,13 @@ A decorator of the @InsightIntentLink type.
 PAGE = '@InsightIntentPage'
 ```
 
-A decorator of the @InsightIntentPage type.
+A decorator of the [@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage) type.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-InsightIntentType-PAGE = '@InsightIntentPage'--><!--Device-InsightIntentType-PAGE = '@InsightIntentPage'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -52,13 +52,13 @@ A decorator of the @InsightIntentPage type.
 ENTRY = '@InsightIntentEntry'
 ```
 
-A decorator of the @InsightIntentEntry type.
+A decorator of the [@InsightIntentEntry](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententry) type.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-InsightIntentType-ENTRY = '@InsightIntentEntry'--><!--Device-InsightIntentType-ENTRY = '@InsightIntentEntry'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -70,13 +70,13 @@ A decorator of the @InsightIntentEntry type.
 FUNCTION = '@InsightIntentFunctionMethod'
 ```
 
-A decorator of the @InsightIntentFunctionMethod type.
+A decorator of the [@InsightIntentFunctionMethod](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctionmethod) type.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-InsightIntentType-FUNCTION = '@InsightIntentFunctionMethod'--><!--Device-InsightIntentType-FUNCTION = '@InsightIntentFunctionMethod'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -88,15 +88,14 @@ A decorator of the @InsightIntentFunctionMethod type.
 FORM = '@InsightIntentForm'
 ```
 
-A decorator of the @InsightIntentForm type.
+A decorator of the [@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform) type.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-InsightIntentType-FORM = '@InsightIntentForm'--><!--Device-InsightIntentType-FORM = '@InsightIntentForm'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
-

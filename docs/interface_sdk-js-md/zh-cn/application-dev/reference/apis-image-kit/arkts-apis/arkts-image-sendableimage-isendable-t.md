@@ -8,9 +8,8 @@ ISendable是所有Sendable类型（除null和undefined）的父类型。自身�
 
 **起始版本：** 12
 
-<!--Device-sendableImage-type ISendable = lang.ISendable--><!--Device-sendableImage-type ISendable = lang.ISendable-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **属性类型：** lang.ISendable
-

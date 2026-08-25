@@ -4,7 +4,7 @@ Enum for session status.
 
 **Since:** 26.0.0
 
-<!--Device-cliManager-enum SessionStatus--><!--Device-cliManager-enum SessionStatus-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -20,9 +20,9 @@ Indicates that the status is running.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-SessionStatus-RUNNING = 'running'--><!--Device-SessionStatus-RUNNING = 'running'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -38,9 +38,9 @@ Indicates that the status is completed.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-SessionStatus-COMPLETED = 'completed'--><!--Device-SessionStatus-COMPLETED = 'completed'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -56,11 +56,10 @@ Indicates that the status is failed.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-SessionStatus-FAILED = 'failed'--><!--Device-SessionStatus-FAILED = 'failed'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
-

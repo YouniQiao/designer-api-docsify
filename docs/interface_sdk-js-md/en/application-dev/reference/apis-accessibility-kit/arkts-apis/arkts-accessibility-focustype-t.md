@@ -8,12 +8,11 @@ Enumerates the focus types.
 
 **Since:** 9
 
-<!--Device-unnamed-export type FocusType = 'accessibility' | 'normal'--><!--Device-unnamed-export type FocusType = 'accessibility' | 'normal'-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-| Type | Description |
-| --- | --- |
-| 'accessibility' | Accessibility focus. |
-| 'normal' | Normal focus. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'accessibility' |
+| 'normal' |

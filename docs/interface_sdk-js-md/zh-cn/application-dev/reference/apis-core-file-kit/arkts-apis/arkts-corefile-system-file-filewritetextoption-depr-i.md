@@ -4,9 +4,9 @@
 
 **起始版本：** 3
 
-**废弃版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-unnamed-export interface FileWriteTextOption--><!--Device-unnamed-export interface FileWriteTextOption-End-->
+**废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -14,6 +14,61 @@
 
 ```TypeScript
 ```
+
+## complete
+
+```TypeScript
+complete?: () => void
+```
+
+接口调用结束的回调函数。
+
+**起始版本：** 3
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
+**废弃版本：** 10
+
+**系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
+
+## fail
+
+```TypeScript
+fail?: (data: string, code: number) => void
+```
+
+接口调用失败的回调函数。
+
+**起始版本：** 3
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
+**废弃版本：** 10
+
+**系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | string | 是 |
+| code | number | 是 |
+
+## success
+
+```TypeScript
+success?: () => void
+```
+
+接口调用成功的回调函数。
+
+**起始版本：** 3
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
+**废弃版本：** 10
+
+**系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## append
 
@@ -27,27 +82,9 @@ append?: boolean
 
 **起始版本：** 3
 
-**废弃版本：** 10
-
-<!--Device-FileWriteTextOption-append?: boolean--><!--Device-FileWriteTextOption-append?: boolean-End-->
-
-**系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
-
-## complete
-
-```TypeScript
-complete?: () => void
-```
-
-接口调用结束的回调函数。
-
-**类型：** () =&gt; void
-
-**起始版本：** 3
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 10
-
-<!--Device-FileWriteTextOption-complete?: () => void--><!--Device-FileWriteTextOption-complete?: () => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -63,45 +100,9 @@ encoding?: string
 
 **起始版本：** 3
 
-**废弃版本：** 10
-
-<!--Device-FileWriteTextOption-encoding?: string--><!--Device-FileWriteTextOption-encoding?: string-End-->
-
-**系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
-
-## fail
-
-```TypeScript
-fail?: (data: string, code: number) => void
-```
-
-接口调用失败的回调函数。
-
-**类型：** (data: string, code: number) =&gt; void
-
-**起始版本：** 3
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 10
-
-<!--Device-FileWriteTextOption-fail?: (data: string, code: number) => void--><!--Device-FileWriteTextOption-fail?: (data: string, code: number) => void-End-->
-
-**系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
-
-## success
-
-```TypeScript
-success?: () => void
-```
-
-接口调用成功的回调函数。
-
-**类型：** () =&gt; void
-
-**起始版本：** 3
-
-**废弃版本：** 10
-
-<!--Device-FileWriteTextOption-success?: () => void--><!--Device-FileWriteTextOption-success?: () => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -117,9 +118,9 @@ text: string
 
 **起始版本：** 3
 
-**废弃版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-FileWriteTextOption-text: string--><!--Device-FileWriteTextOption-text: string-End-->
+**废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -137,9 +138,8 @@ uri: string
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 10
 
-<!--Device-FileWriteTextOption-uri: string--><!--Device-FileWriteTextOption-uri: string-End-->
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
-

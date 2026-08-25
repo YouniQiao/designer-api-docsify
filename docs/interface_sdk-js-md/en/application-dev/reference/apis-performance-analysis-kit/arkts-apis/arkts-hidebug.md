@@ -12,7 +12,6 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 ### Namespaces
 
-| Name | Description |
-| --- | --- |
-| [hidebug](arkts-performanceanalysis-hidebug-n.md) | Provide interfaces related to debugger access and obtaining CPU, memory and other virtual machine information during runtime for JS programs@namespace hidebug |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [hidebug](arkts-performanceanalysis-hidebug-n.md) |

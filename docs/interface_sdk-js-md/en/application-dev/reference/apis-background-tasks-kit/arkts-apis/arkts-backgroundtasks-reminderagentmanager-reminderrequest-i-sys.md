@@ -2,9 +2,9 @@
 
 Defines the request for publishing a reminder.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-reminderAgentManager-interface ReminderRequest--><!--Device-reminderAgentManager-interface ReminderRequest-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -28,7 +28,7 @@ Whether notifications are forcibly displayed in all scenarios across devices. Th
 
 **Since:** 23
 
-<!--Device-ReminderRequest-forceDistributed?: boolean--><!--Device-ReminderRequest-forceDistributed?: boolean-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -48,9 +48,8 @@ Whether notifications are not displayed in all scenarios across devices. The def
 
 **Since:** 23
 
-<!--Device-ReminderRequest-notDistributed?: boolean--><!--Device-ReminderRequest-notDistributed?: boolean-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 **System API:** This is a system API.
-

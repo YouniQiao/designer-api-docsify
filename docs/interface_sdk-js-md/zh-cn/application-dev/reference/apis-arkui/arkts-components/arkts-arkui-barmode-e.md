@@ -4,7 +4,7 @@ TabBar布局模式枚举。
 
 **起始版本：** 7
 
-<!--Device-unnamed-declare enum BarMode--><!--Device-unnamed-declare enum BarMode-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ Scrollable = 0
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-BarMode-Scrollable = 0--><!--Device-BarMode-Scrollable = 0-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,8 @@ Fixed = 1
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-BarMode-Fixed = 1--><!--Device-BarMode-Fixed = 1-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

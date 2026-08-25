@@ -4,7 +4,7 @@ Defines the properties for controlling the automatic playback behavior.
 
 **Since:** 18
 
-<!--Device-unnamed-declare interface AutoPlayOptions--><!--Device-unnamed-declare interface AutoPlayOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,13 +27,12 @@ Whether the automatic playback stops immediately when the component is touched.T
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
-<!--Device-AutoPlayOptions-stopWhenTouched: boolean--><!--Device-AutoPlayOptions-stopWhenTouched: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

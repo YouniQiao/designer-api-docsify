@@ -2,9 +2,9 @@
 
 枚举，相册子类型，表示具体的相册类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-photoAccessHelper-enum AlbumSubtype--><!--Device-photoAccessHelper-enum AlbumSubtype-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -16,9 +16,9 @@ HIDDEN = 1027
 
 隐藏相册。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-AlbumSubtype-HIDDEN = 1027--><!--Device-AlbumSubtype-HIDDEN = 1027-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -32,9 +32,9 @@ TRASH = 1028
 
 回收站。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-AlbumSubtype-TRASH = 1028--><!--Device-AlbumSubtype-TRASH = 1028-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -48,9 +48,9 @@ SCREENSHOT = 1029
 
 截屏和录屏相册。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-AlbumSubtype-SCREENSHOT = 1029--><!--Device-AlbumSubtype-SCREENSHOT = 1029-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -64,25 +64,9 @@ CAMERA = 1030
 
 相机拍摄的照片和视频相册。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-AlbumSubtype-CAMERA = 1030--><!--Device-AlbumSubtype-CAMERA = 1030-End-->
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**系统接口：** 此接口为系统接口。
-
-## IMAGE
-
-```TypeScript
-IMAGE = 1031
-```
-
-图片相册。
-
-**起始版本：** 23
-
-<!--Device-AlbumSubtype-IMAGE = 1031--><!--Device-AlbumSubtype-IMAGE = 1031-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -96,9 +80,9 @@ CLOUD_ENHANCEMENT = 1032
 
 AI云增强相册。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-AlbumSubtype-CLOUD_ENHANCEMENT = 1032--><!--Device-AlbumSubtype-CLOUD_ENHANCEMENT = 1032-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -114,23 +98,7 @@ LIVEPHOTO_4D = 1033
 
 **起始版本：** 26.0.0
 
-<!--Device-AlbumSubtype-LIVEPHOTO_4D = 1033--><!--Device-AlbumSubtype-LIVEPHOTO_4D = 1033-End-->
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**系统接口：** 此接口为系统接口。
-
-## SOURCE_GENERIC
-
-```TypeScript
-SOURCE_GENERIC = 2049
-```
-
-来源相册。
-
-**起始版本：** 23
-
-<!--Device-AlbumSubtype-SOURCE_GENERIC = 2049--><!--Device-AlbumSubtype-SOURCE_GENERIC = 2049-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -144,9 +112,9 @@ CLASSIFY = 4097
 
 分类相册。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-AlbumSubtype-CLASSIFY = 4097--><!--Device-AlbumSubtype-CLASSIFY = 4097-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -160,9 +128,9 @@ GEOGRAPHY_LOCATION = 4099
 
 地图相册。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-AlbumSubtype-GEOGRAPHY_LOCATION = 4099--><!--Device-AlbumSubtype-GEOGRAPHY_LOCATION = 4099-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -176,9 +144,9 @@ GEOGRAPHY_CITY = 4100
 
 城市相册。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-AlbumSubtype-GEOGRAPHY_CITY = 4100--><!--Device-AlbumSubtype-GEOGRAPHY_CITY = 4100-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -192,9 +160,9 @@ SHOOTING_MODE = 4101
 
 拍摄模式相册。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-AlbumSubtype-SHOOTING_MODE = 4101--><!--Device-AlbumSubtype-SHOOTING_MODE = 4101-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -208,9 +176,9 @@ PORTRAIT = 4102
 
 人像相册。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-AlbumSubtype-PORTRAIT = 4102--><!--Device-AlbumSubtype-PORTRAIT = 4102-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -224,9 +192,9 @@ GROUP_PHOTO = 4103
 
 合影相册。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-AlbumSubtype-GROUP_PHOTO = 4103--><!--Device-AlbumSubtype-GROUP_PHOTO = 4103-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -240,9 +208,9 @@ HIGHLIGHT = 4104
 
 时刻相册。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AlbumSubtype-HIGHLIGHT = 4104--><!--Device-AlbumSubtype-HIGHLIGHT = 4104-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -256,11 +224,10 @@ HIGHLIGHT_SUGGESTIONS = 4105
 
 时刻建议相册。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AlbumSubtype-HIGHLIGHT_SUGGESTIONS = 4105--><!--Device-AlbumSubtype-HIGHLIGHT_SUGGESTIONS = 4105-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
-

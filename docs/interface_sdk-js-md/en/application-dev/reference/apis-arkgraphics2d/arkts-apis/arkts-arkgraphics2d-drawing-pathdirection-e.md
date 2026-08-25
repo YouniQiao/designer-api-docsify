@@ -2,9 +2,9 @@
 
 Enumerates the directions of a closed contour.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-drawing-enum PathDirection--><!--Device-drawing-enum PathDirection-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -16,9 +16,9 @@ CLOCKWISE = 0
 
 Adds a closed contour clockwise.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-PathDirection-CLOCKWISE = 0--><!--Device-PathDirection-CLOCKWISE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -30,9 +30,8 @@ COUNTER_CLOCKWISE = 1
 
 Adds a closed contour counterclockwise.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-PathDirection-COUNTER_CLOCKWISE = 1--><!--Device-PathDirection-COUNTER_CLOCKWISE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
-

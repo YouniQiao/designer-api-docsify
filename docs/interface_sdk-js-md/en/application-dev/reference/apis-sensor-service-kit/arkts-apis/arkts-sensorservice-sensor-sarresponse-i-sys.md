@@ -4,9 +4,9 @@ Describes the SAR sensor data. It extends from [Response](arkts-sensorservice-se
 
 **Inheritance/Implementation:** SarResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-sensor-interface SarResponse--><!--Device-sensor-interface SarResponse-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -26,13 +26,12 @@ absorptionRatio: double
 
 Absorption ratio, in W/kg.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-SarResponse-absorptionRatio: double--><!--Device-SarResponse-absorptionRatio: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 **System API:** This is a system API.
-

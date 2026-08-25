@@ -4,7 +4,7 @@ Represents the background load task information, which is used to register task.
 
 **Since:** 26.0.0
 
-<!--Device-backgroundLoader-export interface TaskInfo--><!--Device-backgroundLoader-export interface TaskInfo-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -26,9 +26,9 @@ Ability name in the bundle.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-TaskInfo-abilityName: string--><!--Device-TaskInfo-abilityName: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -40,13 +40,12 @@ taskId: int
 
 Id of the background load task.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TaskInfo-taskId: int--><!--Device-TaskInfo-taskId: int-End-->
-
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
-

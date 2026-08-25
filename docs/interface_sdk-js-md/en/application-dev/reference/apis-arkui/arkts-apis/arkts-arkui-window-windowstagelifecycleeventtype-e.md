@@ -2,9 +2,9 @@
 
 Enumerates the lifecycle state types of a WindowStage.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-window-enum WindowStageLifecycleEventType--><!--Device-window-enum WindowStageLifecycleEventType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -16,11 +16,11 @@ SHOWN = 1
 
 The WindowStage is shown in the foreground, for example, when launching from the application icon, triggered whether it is the first launch or resuming from the background.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WindowStageLifecycleEventType-SHOWN = 1--><!--Device-WindowStageLifecycleEventType-SHOWN = 1-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -32,11 +32,11 @@ RESUMED = 2
 
 The WindowStage is in the foreground and interactive, for example, when the application is open and can interact with the user.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WindowStageLifecycleEventType-RESUMED = 2--><!--Device-WindowStageLifecycleEventType-RESUMED = 2-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -48,11 +48,11 @@ PAUSED = 3
 
 The WindowStage is in the foreground but not interactive, for example, when the application is in the foreground and is entering the multitasking screen.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WindowStageLifecycleEventType-PAUSED = 3--><!--Device-WindowStageLifecycleEventType-PAUSED = 3-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -64,11 +64,10 @@ HIDDEN = 4
 
 The WindowStage is running in the background, for example, when the application exists after swiping up or the application window is closed.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WindowStageLifecycleEventType-HIDDEN = 4--><!--Device-WindowStageLifecycleEventType-HIDDEN = 4-End-->
-
 **System capability:** SystemCapability.Window.SessionManager
-

@@ -2,9 +2,9 @@
 
 Session token. Used to judge the legitimacy of the session.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-avSession-interface SessionToken--><!--Device-avSession-interface SessionToken-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
@@ -24,13 +24,13 @@ pid?: long
 
 Process id of session
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
-
-<!--Device-SessionToken-pid?: long--><!--Device-SessionToken-pid?: long-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
@@ -46,11 +46,11 @@ The unique session id of the avsession object
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
-
-<!--Device-SessionToken-sessionId: string--><!--Device-SessionToken-sessionId: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
@@ -64,15 +64,14 @@ uid?: long
 
 User id
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
-
-<!--Device-SessionToken-uid?: long--><!--Device-SessionToken-uid?: long-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
-

@@ -5,9 +5,9 @@
   <!--Del-->
   - [getModelResult(system api)](arkts-securityguard-securityguard-getmodelresult-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [off_securityEventOccur(system api)](arkts-securityguard-securityguard-offsecurityeventoccur-f-sys.md)<!--DelEnd-->
+  - [off(system api)](arkts-securityguard-securityguard-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on_securityEventOccur(system api)](arkts-securityguard-securityguard-onsecurityeventoccur-f-sys.md)<!--DelEnd-->
+  - [on(system api)](arkts-securityguard-securityguard-on-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [querySecurityEvent(system api)](arkts-securityguard-securityguard-querysecurityevent-f-sys.md)<!--DelEnd-->
   <!--Del-->

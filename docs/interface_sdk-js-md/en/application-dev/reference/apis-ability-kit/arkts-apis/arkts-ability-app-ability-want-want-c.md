@@ -2,9 +2,9 @@
 
 Want is a carrier for information transfer between objects (application components). A typical scenario is when a UIAbility (for example, UIAbility A) needs to launch another UIAbility (for example, UIAbility B) and pass some data along. In this case, a Want can be used as the medium. For example, in the **want** parameter of the **startAbility** API, you can specify the target ability using the **abilityName** field or include additional data via the **parameters** field.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export default class Want--><!--Device-unnamed-export default class Want-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -24,11 +24,11 @@ Ability name of the application. It represents the ability name of the target ap
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Want-abilityName?: string--><!--Device-Want-abilityName?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -42,11 +42,11 @@ Action to take, such as viewing and sharing application details. In implicit Wan
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Want-action?: string--><!--Device-Want-action?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -60,11 +60,11 @@ Bundle name of the application. It represents the bundle name of the target appl
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Want-bundleName?: string--><!--Device-Want-bundleName?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -78,11 +78,11 @@ Device ID. It indicates the device ID of the target application in the applicati
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Want-deviceId?: string--><!--Device-Want-deviceId?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -96,11 +96,11 @@ Additional category information (such as browser and video player) of the abilit
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Want-entities?: Array<string>--><!--Device-Want-entities?: Array<string>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -112,13 +112,13 @@ readonly fds?: Record<string, int>
 
 File descriptor (FD). The FD written by the launcher in the application launch scenario is set to this parameter.This API can be used in atomic services since API version 15.
 
-**Type:** Record&lt;string, int&gt;
+**Type:** ArkTS-Dyn: Record&lt;string, number&gt;  <br>ArkTS-Sta：Record&lt;string, int&gt;
 
-**Since:** 23
+**Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
-<!--Device-Want-readonly fds?: Record<string, int>--><!--Device-Want-readonly fds?: Record<string, int>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -130,13 +130,13 @@ flags?: int
 
 How the Want object will be handled. The value is of the enumeration type [Flags](arkts-ability-wantconstant-flags-e.md). A numeric value should be passed by default.For example, if the value is 0x00000001 (**wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION**), the receiver is temporarily granted the permission to read the data pointed to by the URI.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Want-flags?: int--><!--Device-Want-flags?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -151,18 +151,18 @@ Module name of the application. It represents the module name of the target appl
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Want-moduleName?: string--><!--Device-Want-moduleName?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## parameters
 
 ```TypeScript
-parameters?: Record<string, RecordData>
+parameters?: Record<string, Object>
 ```
 
 List of parameters in the Want object.
@@ -175,11 +175,13 @@ keys and their values, see wantConstant.Params.
 3. In addition to the foregoing cases, applications may further agree on the key-value pairs to transfer.  
 **NOTE：**For details about the constants of **Params** in **want**, see [wantConstant](arkts-app-ability-wantconstant.md).Note that a maximum of 100 KB data that can be transferred by using **WantParams**. If the data volume exceeds 100 KB, transfer data in WriteRawDataBuffer or [uri](../../apis-arkts/arkts-apis/arkts-uri.md) mode.The values of **parameters** must be of the following basic data types: String, Number, Boolean, Object, undefined, and null. Functions in an object cannot be transferred.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, Object&gt;
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Want-parameters?: Record<string, RecordData>--><!--Device-Want-parameters?: Record<string, RecordData>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -193,11 +195,11 @@ MIME type, that is, the type of the file to open, for example, **'text/xml'** an
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Want-type?: string--><!--Device-Want-type?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -211,11 +213,11 @@ URI, which is used with **type** to specify the data type to be processed in the
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Want-uri?: string--><!--Device-Want-uri?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -487,4 +489,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

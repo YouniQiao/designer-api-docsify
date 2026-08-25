@@ -4,7 +4,7 @@ Defines the options used in **readLines()**.
 
 **Since:** 11
 
-<!--Device-unnamed-export interface Options--><!--Device-unnamed-export interface Options-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -28,7 +28,6 @@ File encoding format. It is optional.
 
 **Since:** 11
 
-<!--Device-Options-encoding?: string--><!--Device-Options-encoding?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
-

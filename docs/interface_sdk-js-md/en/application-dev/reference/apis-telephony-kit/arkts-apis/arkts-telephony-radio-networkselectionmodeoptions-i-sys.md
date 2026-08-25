@@ -2,9 +2,9 @@
 
 Obtains the network selection mode option.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-radio-export interface NetworkSelectionModeOptions--><!--Device-radio-export interface NetworkSelectionModeOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -26,9 +26,9 @@ Indicates the network information.
 
 **Type:** [NetworkInformation](arkts-telephony-radio-networkinformation-i-sys.md)
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-NetworkSelectionModeOptions-networkInformation: NetworkInformation--><!--Device-NetworkSelectionModeOptions-networkInformation: NetworkInformation-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -44,9 +44,9 @@ Indicates whether to continue selecting the network selection mode.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-NetworkSelectionModeOptions-resumeSelection: boolean--><!--Device-NetworkSelectionModeOptions-resumeSelection: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -62,9 +62,9 @@ Indicates the network search mode of the SIM card.
 
 **Type:** [NetworkSelectionMode](arkts-telephony-radio-networkselectionmode-e.md)
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-NetworkSelectionModeOptions-selectMode: NetworkSelectionMode--><!--Device-NetworkSelectionModeOptions-selectMode: NetworkSelectionMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -78,13 +78,12 @@ slotId: int
 
 Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-NetworkSelectionModeOptions-slotId: int--><!--Device-NetworkSelectionModeOptions-slotId: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
-

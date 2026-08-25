@@ -2,9 +2,9 @@
 
 Enumerates the CMS message formats.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-cert-enum CmsContentDataFormat--><!--Device-cert-enum CmsContentDataFormat-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -16,11 +16,11 @@ BINARY = 0
 
 Binary.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-CmsContentDataFormat-BINARY = 0--><!--Device-CmsContentDataFormat-BINARY = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -32,11 +32,10 @@ TEXT = 1
 
 Text.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-CmsContentDataFormat-TEXT = 1--><!--Device-CmsContentDataFormat-TEXT = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.Cert
-

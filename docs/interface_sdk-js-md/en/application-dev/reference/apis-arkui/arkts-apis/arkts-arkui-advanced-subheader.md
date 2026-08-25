@@ -10,21 +10,20 @@ import { OperationOption, OperationType, SelectOptions, SubHeader, SymbolOptions
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [OperationOption](arkts-arkui-arkui-advanced-subheader-operationoption-c.md) | Declare type OperationOption |
-| [SelectOptions](arkts-arkui-arkui-advanced-subheader-selectoptions-c.md) | Declare type SelectOption |
-| [SymbolOptions](arkts-arkui-arkui-advanced-subheader-symboloptions-c.md) | Declare type SymbolOptions |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [OperationOption](arkts-arkui-arkui-advanced-subheader-operationoption-c.md) |
+| [SelectOptions](arkts-arkui-arkui-advanced-subheader-selectoptions-c.md) |
+| [SymbolOptions](arkts-arkui-arkui-advanced-subheader-symboloptions-c.md) |
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [SubHeader](arkts-arkui-arkui-advanced-subheader-subheader-s.md) | The **SubHeader** component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SubHeader](arkts-arkui-arkui-advanced-subheader-subheader-s.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [OperationType](arkts-arkui-arkui-advanced-subheader-operationtype-e.md) | Defines the style of elements in the subheader operation area. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [OperationType](arkts-arkui-arkui-advanced-subheader-operationtype-e.md) |

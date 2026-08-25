@@ -9,7 +9,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Float](arkts-arkts-float-c.md) | Represents boxed float value and related operations. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Float](arkts-arkts-float-c.md) |

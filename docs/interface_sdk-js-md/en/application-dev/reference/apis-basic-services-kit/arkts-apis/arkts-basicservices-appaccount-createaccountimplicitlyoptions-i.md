@@ -2,9 +2,9 @@
 
 Defines the options for implicitly creating an application account.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-appAccount-interface CreateAccountImplicitlyOptions--><!--Device-appAccount-interface CreateAccountImplicitlyOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -24,25 +24,25 @@ Authentication type.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-CreateAccountImplicitlyOptions-authType?: string--><!--Device-CreateAccountImplicitlyOptions-authType?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
 ## parameters
 
 ```TypeScript
-parameters?: Record<string, RecordData>
+parameters?: Record<string, Object>
 ```
 
 Custom parameter object. By default, no value is passed in.
 
-**Type:** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, Object&gt;
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-CreateAccountImplicitlyOptions-parameters?: Record<string, RecordData>--><!--Device-CreateAccountImplicitlyOptions-parameters?: Record<string, RecordData>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -56,9 +56,8 @@ Required labels. By default, no value is passed in.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-CreateAccountImplicitlyOptions-requiredLabels?: Array<string>--><!--Device-CreateAccountImplicitlyOptions-requiredLabels?: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
-

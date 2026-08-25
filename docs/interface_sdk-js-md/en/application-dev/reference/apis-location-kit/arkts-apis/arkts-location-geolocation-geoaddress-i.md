@@ -4,13 +4,13 @@ Data struct describes geographic locations.@interface GeoAddress
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [GeoAddress](arkts-location-geolocationmanager-geoaddress-i.md)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-geolocation-export interface GeoAddress--><!--Device-geolocation-export interface GeoAddress-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -32,13 +32,13 @@ Indicates website URL.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [addressUrl](arkts-location-geolocationmanager-geoaddress-i.md#addressurl)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoAddress-addressUrl?: string--><!--Device-GeoAddress-addressUrl?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -54,13 +54,13 @@ Indicates administrative region name.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [administrativeArea](arkts-location-geolocationmanager-geoaddress-i.md#administrativearea)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoAddress-administrativeArea?: string--><!--Device-GeoAddress-administrativeArea?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -76,13 +76,13 @@ Indicates country code.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [countryCode](arkts-location-geolocationmanager-geoaddress-i.md#countrycode)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoAddress-countryCode?: string--><!--Device-GeoAddress-countryCode?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -98,13 +98,13 @@ Indicates country name.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [countryName](arkts-location-geolocationmanager-geoaddress-i.md#countryname)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoAddress-countryName?: string--><!--Device-GeoAddress-countryName?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -120,13 +120,13 @@ Indicates additional information.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [descriptions](arkts-location-geolocationmanager-geoaddress-i.md#descriptions)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoAddress-descriptions?: Array<string>--><!--Device-GeoAddress-descriptions?: Array<string>-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -142,13 +142,13 @@ Indicates the amount of additional descriptive information.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [descriptionsSize](arkts-location-geolocationmanager-geoaddress-i.md#descriptionssize)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoAddress-descriptionsSize?: number--><!--Device-GeoAddress-descriptionsSize?: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -164,13 +164,13 @@ Indicates latitude information. A positive value indicates north latitude, and a
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [latitude](arkts-location-geolocationmanager-geoaddress-i.md#latitude)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoAddress-latitude?: number--><!--Device-GeoAddress-latitude?: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -186,13 +186,13 @@ Indicates language used for the location description. zh indicates Chinese, and 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [locale](arkts-location-geolocationmanager-geoaddress-i.md#locale)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoAddress-locale?: string--><!--Device-GeoAddress-locale?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -208,13 +208,13 @@ Indicates locality information.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [locality](arkts-location-geolocationmanager-geoaddress-i.md#locality)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoAddress-locality?: string--><!--Device-GeoAddress-locality?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -230,13 +230,13 @@ Indicates longitude information. A positive value indicates east longitude , and
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [longitude](arkts-location-geolocationmanager-geoaddress-i.md#longitude)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoAddress-longitude?: number--><!--Device-GeoAddress-longitude?: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -252,13 +252,13 @@ Indicates phone number.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [phoneNumber](arkts-location-geolocationmanager-geoaddress-i.md#phonenumber)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoAddress-phoneNumber?: string--><!--Device-GeoAddress-phoneNumber?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -274,13 +274,13 @@ Indicates landmark of the location.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [placeName](arkts-location-geolocationmanager-geoaddress-i.md#placename)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoAddress-placeName?: string--><!--Device-GeoAddress-placeName?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -296,13 +296,13 @@ Indicates postal code.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [postalCode](arkts-location-geolocationmanager-geoaddress-i.md#postalcode)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoAddress-postalCode?: string--><!--Device-GeoAddress-postalCode?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -318,13 +318,13 @@ Indicates house information.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [premises](arkts-location-geolocationmanager-geoaddress-i.md#premises)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoAddress-premises?: string--><!--Device-GeoAddress-premises?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -340,13 +340,13 @@ Indicates road name.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [roadName](arkts-location-geolocationmanager-geoaddress-i.md#roadname)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoAddress-roadName?: string--><!--Device-GeoAddress-roadName?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -362,13 +362,13 @@ Indicates sub-administrative region name.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [subAdministrativeArea](arkts-location-geolocationmanager-geoaddress-i.md#subadministrativearea)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoAddress-subAdministrativeArea?: string--><!--Device-GeoAddress-subAdministrativeArea?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -384,13 +384,13 @@ Indicates sub-locality information.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [subLocality](arkts-location-geolocationmanager-geoaddress-i.md#sublocality)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-GeoAddress-subLocality?: string--><!--Device-GeoAddress-subLocality?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -406,13 +406,12 @@ Indicates auxiliary road information.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [subRoadName](arkts-location-geolocationmanager-geoaddress-i.md#subroadname)
 
 **Required permissions:** ohos.permission.LOCATION
 
-<!--Device-GeoAddress-subRoadName?: string--><!--Device-GeoAddress-subRoadName?: string-End-->
-
 **System capability:** SystemCapability.Location.Location.Geocoder
-

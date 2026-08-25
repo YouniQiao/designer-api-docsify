@@ -1,4 +1,4 @@
-# @ohos.arkui.advanced.FormMenu
+# @ohos.arkui.advanced.FormMenu(Defines the form menu)
 
 ## Modules to Import
 
@@ -10,14 +10,13 @@ import { AddFormMenuItem, FormMenuItemStyle, AddFormOptions } from '@kit.ArkUI';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [AddFormMenuItem](arkts-arkui-arkui-advanced-formmenu-addformmenuitem-f.md) | Build function of AddFormMenuItem. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AddFormMenuItem(Defines the form menu)](arkts-arkui-arkui-advanced-formmenu-addformmenuitem-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [AddFormOptions](arkts-arkui-arkui-advanced-formmenu-addformoptions-i.md) | Defines the add form options. |
-| [FormMenuItemStyle](arkts-arkui-arkui-advanced-formmenu-formmenuitemstyle-i.md) | Defines the form menu item style. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AddFormOptions(Defines the form menu)](arkts-arkui-arkui-advanced-formmenu-addformoptions-i.md) |
+| [FormMenuItemStyle(Defines the form menu)](arkts-arkui-arkui-advanced-formmenu-formmenuitemstyle-i.md) |

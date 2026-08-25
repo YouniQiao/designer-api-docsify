@@ -4,11 +4,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
-
-<!--Device-rpc-class MessageParcel--><!--Device-rpc-class MessageParcel-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -28,19 +28,19 @@ static closeFileDescriptor(fd: number): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [closeFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#closefiledescriptor)(fd: int)
-
-<!--Device-MessageParcel-static closeFileDescriptor(fd: number): void--><!--Device-MessageParcel-static closeFileDescriptor(fd: number): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| fd | number | 是 | 要关闭的文件描述符。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| fd | number | 是 |
 
 **示例**
 
@@ -85,19 +85,19 @@ containFileDescriptors(): boolean
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [containFileDescriptors](arkts-ipc-rpc-messagesequence-c.md#containfiledescriptors)()
-
-<!--Device-MessageParcel-containFileDescriptors(): boolean--><!--Device-MessageParcel-containFileDescriptors(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：包含文件描述符，false：未包含文件描述符。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -148,19 +148,19 @@ static create(): MessageParcel
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [create](arkts-ipc-rpc-messagesequence-c.md#create)()
-
-<!--Device-MessageParcel-static create(): MessageParcel--><!--Device-MessageParcel-static create(): MessageParcel-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 返回创建的MessageParcel对象，用于在IPC过程中封装请求和响应数据。 |
+| 类型 |
+| --- |
+| [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) |
 
 **示例**
 
@@ -241,25 +241,25 @@ static dupFileDescriptor(fd: number): number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [dupFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#dupfiledescriptor)(fd: int)
-
-<!--Device-MessageParcel-static dupFileDescriptor(fd: number): number--><!--Device-MessageParcel-static dupFileDescriptor(fd: number): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| fd | number | 是 | 表示已存在的文件描述符。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| fd | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回新的文件描述符。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -304,19 +304,19 @@ getCapacity(): number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [getCapacity](arkts-ipc-rpc-messagesequence-c.md#getcapacity)()
-
-<!--Device-MessageParcel-getCapacity(): number--><!--Device-MessageParcel-getCapacity(): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 获取的MessageParcel的容量大小。以字节为单位。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -359,19 +359,19 @@ getRawDataCapacity(): number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getRawDataCapacity](arkts-ipc-rpc-messagesequence-c.md#getrawdatacapacity)()
-
-<!--Device-MessageParcel-getRawDataCapacity(): number--><!--Device-MessageParcel-getRawDataCapacity(): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回MessageParcel可以容纳的最大原始数据量，即128MB。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -414,19 +414,19 @@ getReadableBytes(): number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [getReadableBytes](arkts-ipc-rpc-messagesequence-c.md#getreadablebytes)()
-
-<!--Device-MessageParcel-getReadableBytes(): number--><!--Device-MessageParcel-getReadableBytes(): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 获取到的MessageParcel的可读字节空间。以字节为单位。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -471,19 +471,19 @@ getReadPosition(): number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [getReadPosition](arkts-ipc-rpc-messagesequence-c.md#getreadposition)()
-
-<!--Device-MessageParcel-getReadPosition(): number--><!--Device-MessageParcel-getReadPosition(): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回MessageParcel实例中的当前读取位置。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -527,19 +527,19 @@ getSize(): number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [getSize](arkts-ipc-rpc-messagesequence-c.md#getsize)()
-
-<!--Device-MessageParcel-getSize(): number--><!--Device-MessageParcel-getSize(): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 获取的MessageParcel的数据大小。以字节为单位。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -583,19 +583,19 @@ getWritableBytes(): number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [getWritableBytes](arkts-ipc-rpc-messagesequence-c.md#getwritablebytes)()
-
-<!--Device-MessageParcel-getWritableBytes(): number--><!--Device-MessageParcel-getWritableBytes(): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 获取到的MessageParcel的可写字节空间。以字节为单位。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -640,19 +640,19 @@ getWritePosition(): number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [getWritePosition](arkts-ipc-rpc-messagesequence-c.md#getwriteposition)()
-
-<!--Device-MessageParcel-getWritePosition(): number--><!--Device-MessageParcel-getWritePosition(): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回MessageParcel实例中的当前写入位置。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -697,19 +697,19 @@ readAshmem(): Ashmem
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [readAshmem](arkts-ipc-rpc-messagesequence-c.md#readashmem)()
-
-<!--Device-MessageParcel-readAshmem(): Ashmem--><!--Device-MessageParcel-readAshmem(): Ashmem-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 返回匿名共享对象。 |
+| 类型 |
+| --- |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) |
 
 **示例**
 
@@ -796,19 +796,19 @@ readBoolean(): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readBoolean](arkts-ipc-rpc-messagesequence-c.md#readboolean)()
-
-<!--Device-MessageParcel-readBoolean(): boolean--><!--Device-MessageParcel-readBoolean(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回读取到的布尔值。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -854,19 +854,19 @@ readBooleanArray(dataIn: boolean[]): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readBooleanArray](arkts-ipc-rpc-messagesequence-c.md#readbooleanarray)(dataIn: boolean[])
-
-<!--Device-MessageParcel-readBooleanArray(dataIn: boolean[]): void--><!--Device-MessageParcel-readBooleanArray(dataIn: boolean[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dataIn | boolean[] | 是 | 要读取的布尔数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dataIn | boolean[] | 是 |
 
 **示例**
 
@@ -946,19 +946,19 @@ readBooleanArray(): boolean[]
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readBooleanArray](arkts-ipc-rpc-messagesequence-c.md#readbooleanarray)()
-
-<!--Device-MessageParcel-readBooleanArray(): boolean[]--><!--Device-MessageParcel-readBooleanArray(): boolean[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean[] | 返回布尔数组。 |
+| 类型 |
+| --- |
+| boolean[] |
 
 **示例**
 
@@ -974,19 +974,19 @@ readByte(): number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readByte](arkts-ipc-rpc-messagesequence-c.md#readbyte)()
-
-<!--Device-MessageParcel-readByte(): number--><!--Device-MessageParcel-readByte(): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回字节值。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -1032,19 +1032,19 @@ readByteArray(dataIn: number[]): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readByteArray](arkts-ipc-rpc-messagesequence-c.md#readbytearray)(dataIn: int[])
-
-<!--Device-MessageParcel-readByteArray(dataIn: number[]): void--><!--Device-MessageParcel-readByteArray(dataIn: number[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dataIn | number[] | 是 | 要读取的字节数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dataIn | number[] | 是 |
 
 **示例**
 
@@ -1150,19 +1150,19 @@ readByteArray(): number[]
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readByteArray](arkts-ipc-rpc-messagesequence-c.md#readbytearray)()
-
-<!--Device-MessageParcel-readByteArray(): number[]--><!--Device-MessageParcel-readByteArray(): number[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number[] | 返回字节数组。 |
+| 类型 |
+| --- |
+| number[] |
 
 **示例**
 
@@ -1178,19 +1178,19 @@ readChar(): number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readChar](arkts-ipc-rpc-messagesequence-c.md#readchar)()
-
-<!--Device-MessageParcel-readChar(): number--><!--Device-MessageParcel-readChar(): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回单个字符值。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -1236,19 +1236,19 @@ readCharArray(dataIn: number[]): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readCharArray](arkts-ipc-rpc-messagesequence-c.md#readchararray)(dataIn: int[])
-
-<!--Device-MessageParcel-readCharArray(dataIn: number[]): void--><!--Device-MessageParcel-readCharArray(dataIn: number[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dataIn | number[] | 是 | 要读取的单个字符数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dataIn | number[] | 是 |
 
 **示例**
 
@@ -1350,19 +1350,19 @@ readCharArray(): number[]
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readCharArray](arkts-ipc-rpc-messagesequence-c.md#readchararray)()
-
-<!--Device-MessageParcel-readCharArray(): number[]--><!--Device-MessageParcel-readCharArray(): number[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number[] | 返回单个字符数组。 |
+| 类型 |
+| --- |
+| number[] |
 
 **示例**
 
@@ -1378,19 +1378,19 @@ readDouble(): number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readDouble](arkts-ipc-rpc-messagesequence-c.md#readdouble)()
-
-<!--Device-MessageParcel-readDouble(): number--><!--Device-MessageParcel-readDouble(): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回双精度浮点值。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -1436,19 +1436,19 @@ readDoubleArray(dataIn: number[]): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readDoubleArray](arkts-ipc-rpc-messagesequence-c.md#readdoublearray)(dataIn: double[])
-
-<!--Device-MessageParcel-readDoubleArray(dataIn: number[]): void--><!--Device-MessageParcel-readDoubleArray(dataIn: number[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dataIn | number[] | 是 | 要读取的双精度浮点数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dataIn | number[] | 是 |
 
 **示例**
 
@@ -1550,19 +1550,19 @@ readDoubleArray(): number[]
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readDoubleArray](arkts-ipc-rpc-messagesequence-c.md#readdoublearray)()
-
-<!--Device-MessageParcel-readDoubleArray(): number[]--><!--Device-MessageParcel-readDoubleArray(): number[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number[] | 返回双精度浮点数组。 |
+| 类型 |
+| --- |
+| number[] |
 
 **示例**
 
@@ -1578,11 +1578,11 @@ readException(): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [readException](arkts-ipc-rpc-messagesequence-c.md#readexception)()
-
-<!--Device-MessageParcel-readException(): void--><!--Device-MessageParcel-readException(): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1748,19 +1748,19 @@ readFileDescriptor(): number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [readFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#readfiledescriptor)()
-
-<!--Device-MessageParcel-readFileDescriptor(): number--><!--Device-MessageParcel-readFileDescriptor(): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回文件描述符。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -1811,19 +1811,19 @@ readFloat(): number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readFloat](arkts-ipc-rpc-messagesequence-c.md#readfloat)()
-
-<!--Device-MessageParcel-readFloat(): number--><!--Device-MessageParcel-readFloat(): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回双精度浮点值。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -1869,19 +1869,19 @@ readFloatArray(dataIn: number[]): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readFloatArray](arkts-ipc-rpc-messagesequence-c.md#readfloatarray)(dataIn: double[])
-
-<!--Device-MessageParcel-readFloatArray(dataIn: number[]): void--><!--Device-MessageParcel-readFloatArray(dataIn: number[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dataIn | number[] | 是 | 要读取的双精度浮点数组。由于系统内部对float类型的数据是按照double处理的，使用时对于数组所占的总字节数应按照double类型来计算。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dataIn | number[] | 是 |
 
 **示例**
 
@@ -1983,19 +1983,19 @@ readFloatArray(): number[]
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readFloatArray](arkts-ipc-rpc-messagesequence-c.md#readfloatarray)()
-
-<!--Device-MessageParcel-readFloatArray(): number[]--><!--Device-MessageParcel-readFloatArray(): number[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number[] | 返回双精度浮点数组。 |
+| 类型 |
+| --- |
+| number[] |
 
 **示例**
 
@@ -2011,19 +2011,19 @@ readInt(): number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readInt](arkts-ipc-rpc-messagesequence-c.md#readint)()
-
-<!--Device-MessageParcel-readInt(): number--><!--Device-MessageParcel-readInt(): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回整数值。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -2070,19 +2070,19 @@ readIntArray(dataIn: number[]): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readIntArray](arkts-ipc-rpc-messagesequence-c.md#readintarray)(dataIn: int[])
-
-<!--Device-MessageParcel-readIntArray(dataIn: number[]): void--><!--Device-MessageParcel-readIntArray(dataIn: number[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dataIn | number[] | 是 | 要读取的整数数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dataIn | number[] | 是 |
 
 **示例**
 
@@ -2184,19 +2184,19 @@ readIntArray(): number[]
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readIntArray](arkts-ipc-rpc-messagesequence-c.md#readintarray)()
-
-<!--Device-MessageParcel-readIntArray(): number[]--><!--Device-MessageParcel-readIntArray(): number[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number[] | 返回整数数组。 |
+| 类型 |
+| --- |
+| number[] |
 
 **示例**
 
@@ -2212,19 +2212,19 @@ readInterfaceToken(): string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readInterfaceToken](arkts-ipc-rpc-messagesequence-c.md#readinterfacetoken)()
-
-<!--Device-MessageParcel-readInterfaceToken(): string--><!--Device-MessageParcel-readInterfaceToken(): string-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回读取到的接口描述符。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -2269,19 +2269,19 @@ readLong(): number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readLong](arkts-ipc-rpc-messagesequence-c.md#readlong)()
-
-<!--Device-MessageParcel-readLong(): number--><!--Device-MessageParcel-readLong(): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回长整数值。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -2327,19 +2327,19 @@ readLongArray(dataIn: number[]): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readLongArray](arkts-ipc-rpc-messagesequence-c.md#readlongarray)(dataIn: long[])
-
-<!--Device-MessageParcel-readLongArray(dataIn: number[]): void--><!--Device-MessageParcel-readLongArray(dataIn: number[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dataIn | number[] | 是 | 要读取的长整数数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dataIn | number[] | 是 |
 
 **示例**
 
@@ -2441,19 +2441,19 @@ readLongArray(): number[]
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readLongArray](arkts-ipc-rpc-messagesequence-c.md#readlongarray)()
-
-<!--Device-MessageParcel-readLongArray(): number[]--><!--Device-MessageParcel-readLongArray(): number[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number[] | 返回长整数数组。 |
+| 类型 |
+| --- |
+| number[] |
 
 **示例**
 
@@ -2469,25 +2469,25 @@ readRawData(size: number): number[]
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [readRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#readrawdatabuffer)(size: int)
-
-<!--Device-MessageParcel-readRawData(size: number): number[]--><!--Device-MessageParcel-readRawData(size: number): number[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| size | number | 是 | 要读取的原始数据的大小，以字节为单位。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| size | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number[] | 返回原始数据（以字节为单位）。 |
+| 类型 |
+| --- |
+| number[] |
 
 **示例**
 
@@ -2536,19 +2536,19 @@ readRemoteObject(): IRemoteObject
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readRemoteObject](arkts-ipc-rpc-messagesequence-c.md#readremoteobject)()
-
-<!--Device-MessageParcel-readRemoteObject(): IRemoteObject--><!--Device-MessageParcel-readRemoteObject(): IRemoteObject-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 读取到的远程对象，用于IPC/RPC通信。 |
+| 类型 |
+| --- |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) |
 
 **示例**
 
@@ -2617,19 +2617,19 @@ readRemoteObjectArray(objects: IRemoteObject[]): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [readRemoteObjectArray](arkts-ipc-rpc-messagesequence-c.md#readremoteobjectarray)(objects: IRemoteObject[])
-
-<!--Device-MessageParcel-readRemoteObjectArray(objects: IRemoteObject[]): void--><!--Device-MessageParcel-readRemoteObjectArray(objects: IRemoteObject[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| objects | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | 是 | 从MessageParcel读取的IRemoteObject对象数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| objects | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | 是 |
 
 **示例**
 
@@ -2757,19 +2757,19 @@ readRemoteObjectArray(): IRemoteObject[]
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [readRemoteObjectArray](arkts-ipc-rpc-messagesequence-c.md#readremoteobjectarray)(objects: IRemoteObject[])
-
-<!--Device-MessageParcel-readRemoteObjectArray(): IRemoteObject[]--><!--Device-MessageParcel-readRemoteObjectArray(): IRemoteObject[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | 返回IRemoteObject对象数组。 |
+| 类型 |
+| --- |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] |
 
 **示例**
 
@@ -2785,25 +2785,25 @@ readSequenceable(dataIn: Sequenceable): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readParcelable](arkts-ipc-rpc-messagesequence-c.md#readparcelable)(dataIn: Parcelable)
-
-<!--Device-MessageParcel-readSequenceable(dataIn: Sequenceable): boolean--><!--Device-MessageParcel-readSequenceable(dataIn: Sequenceable): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dataIn | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md) | 是 | 需要从MessageParcel读取成员变量的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dataIn | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：反序列化成功，false：反序列化失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -2853,19 +2853,19 @@ readSequenceableArray(sequenceableArray: Sequenceable[]): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [readParcelableArray](arkts-ipc-rpc-messagesequence-c.md#readparcelablearray)(parcelableArray: Parcelable[])
-
-<!--Device-MessageParcel-readSequenceableArray(sequenceableArray: Sequenceable[]): void--><!--Device-MessageParcel-readSequenceableArray(sequenceableArray: Sequenceable[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sequenceableArray | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md)[] | 是 | 要读取的可序列化对象数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sequenceableArray | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md)[] | 是 |
 
 **示例**
 
@@ -2917,19 +2917,19 @@ readShort(): number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readShort](arkts-ipc-rpc-messagesequence-c.md#readshort)()
-
-<!--Device-MessageParcel-readShort(): number--><!--Device-MessageParcel-readShort(): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回短整数值。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -2975,19 +2975,19 @@ readShortArray(dataIn: number[]): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readShortArray](arkts-ipc-rpc-messagesequence-c.md#readshortarray)(dataIn: int[])
-
-<!--Device-MessageParcel-readShortArray(dataIn: number[]): void--><!--Device-MessageParcel-readShortArray(dataIn: number[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dataIn | number[] | 是 | 要读取的短整数数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dataIn | number[] | 是 |
 
 **示例**
 
@@ -3089,19 +3089,19 @@ readShortArray(): number[]
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readShortArray](arkts-ipc-rpc-messagesequence-c.md#readshortarray)()
-
-<!--Device-MessageParcel-readShortArray(): number[]--><!--Device-MessageParcel-readShortArray(): number[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number[] | 返回短整数数组。 |
+| 类型 |
+| --- |
+| number[] |
 
 **示例**
 
@@ -3117,19 +3117,19 @@ readString(): string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readString](arkts-ipc-rpc-messagesequence-c.md#readstring)()
-
-<!--Device-MessageParcel-readString(): string--><!--Device-MessageParcel-readString(): string-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回字符串值。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -3176,19 +3176,19 @@ readStringArray(dataIn: string[]): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readStringArray](arkts-ipc-rpc-messagesequence-c.md#readstringarray)(dataIn: string[])
-
-<!--Device-MessageParcel-readStringArray(dataIn: string[]): void--><!--Device-MessageParcel-readStringArray(dataIn: string[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dataIn | string[] | 是 | 要读取的字符串数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dataIn | string[] | 是 |
 
 **示例**
 
@@ -3268,19 +3268,19 @@ readStringArray(): string[]
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [readStringArray](arkts-ipc-rpc-messagesequence-c.md#readstringarray)()
-
-<!--Device-MessageParcel-readStringArray(): string[]--><!--Device-MessageParcel-readStringArray(): string[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string[] | 返回字符串数组。 |
+| 类型 |
+| --- |
+| string[] |
 
 **示例**
 
@@ -3296,11 +3296,11 @@ reclaim(): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [reclaim](arkts-ipc-rpc-messagesequence-c.md#reclaim)()
-
-<!--Device-MessageParcel-reclaim(): void--><!--Device-MessageParcel-reclaim(): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -3343,25 +3343,25 @@ rewindRead(pos: number): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [rewindRead](arkts-ipc-rpc-messagesequence-c.md#rewindread)(pos: int)
-
-<!--Device-MessageParcel-rewindRead(pos: number): boolean--><!--Device-MessageParcel-rewindRead(pos: number): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pos | number | 是 | 开始读取数据的目标位置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pos | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：读取位置发生更改，false：读取位置未发生更改。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -3414,25 +3414,25 @@ rewindWrite(pos: number): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [rewindWrite](arkts-ipc-rpc-messagesequence-c.md#rewindwrite)(pos: int)
-
-<!--Device-MessageParcel-rewindWrite(pos: number): boolean--><!--Device-MessageParcel-rewindWrite(pos: number): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pos | number | 是 | 开始写入数据的目标位置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pos | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入位置发生更改，false：写入位置未发生更改。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -3481,25 +3481,25 @@ setCapacity(size: number): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [setCapacity](arkts-ipc-rpc-messagesequence-c.md#setcapacity)(size: int)
-
-<!--Device-MessageParcel-setCapacity(size: number): boolean--><!--Device-MessageParcel-setCapacity(size: number): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| size | number | 是 | MessageParcel实例的存储容量。以字节为单位。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| size | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：设置成功，false：设置失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -3541,25 +3541,25 @@ setSize(size: number): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [setSize](arkts-ipc-rpc-messagesequence-c.md#setsize)(size: int)
-
-<!--Device-MessageParcel-setSize(size: number): boolean--><!--Device-MessageParcel-setSize(size: number): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| size | number | 是 | MessageParcel实例的数据大小。以字节为单位。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| size | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：设置成功，false：设置失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -3602,25 +3602,25 @@ writeAshmem(ashmem: Ashmem): boolean
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [writeAshmem](arkts-ipc-rpc-messagesequence-c.md#writeashmem)(ashmem: Ashmem)
-
-<!--Device-MessageParcel-writeAshmem(ashmem: Ashmem): boolean--><!--Device-MessageParcel-writeAshmem(ashmem: Ashmem): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 是 | 要写入MessageParcel的匿名共享对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -3693,25 +3693,25 @@ writeBoolean(val: boolean): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeBoolean](arkts-ipc-rpc-messagesequence-c.md#writeboolean)(val: boolean)
-
-<!--Device-MessageParcel-writeBoolean(val: boolean): boolean--><!--Device-MessageParcel-writeBoolean(val: boolean): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | boolean | 是 | 要写入的布尔值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -3753,25 +3753,25 @@ writeBooleanArray(booleanArray: boolean[]): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeBooleanArray](arkts-ipc-rpc-messagesequence-c.md#writebooleanarray)(booleanArray: boolean[])
-
-<!--Device-MessageParcel-writeBooleanArray(booleanArray: boolean[]): boolean--><!--Device-MessageParcel-writeBooleanArray(booleanArray: boolean[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| booleanArray | boolean[] | 是 | 要写入的布尔数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| booleanArray | boolean[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -3813,25 +3813,25 @@ writeByte(val: number): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeByte](arkts-ipc-rpc-messagesequence-c.md#writebyte)(val: int)
-
-<!--Device-MessageParcel-writeByte(val: number): boolean--><!--Device-MessageParcel-writeByte(val: number): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | number | 是 | 要写入的字节值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -3873,25 +3873,25 @@ writeByteArray(byteArray: number[]): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeByteArray](arkts-ipc-rpc-messagesequence-c.md#writebytearray)(byteArray: int[])
-
-<!--Device-MessageParcel-writeByteArray(byteArray: number[]): boolean--><!--Device-MessageParcel-writeByteArray(byteArray: number[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| byteArray | number[] | 是 | 要写入的字节数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| byteArray | number[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -3935,25 +3935,25 @@ writeChar(val: number): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeChar](arkts-ipc-rpc-messagesequence-c.md#writechar)(val: int)
-
-<!--Device-MessageParcel-writeChar(val: number): boolean--><!--Device-MessageParcel-writeChar(val: number): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | number | 是 | 要写入的单个字符值。取值范围：[0, 65535]，对应Unicode字符编码范围。超出此范围可能导致字符编码异常。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -3995,25 +3995,25 @@ writeCharArray(charArray: number[]): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeCharArray](arkts-ipc-rpc-messagesequence-c.md#writechararray)(charArray: int[])
-
-<!--Device-MessageParcel-writeCharArray(charArray: number[]): boolean--><!--Device-MessageParcel-writeCharArray(charArray: number[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| charArray | number[] | 是 | 要写入的单个字符数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| charArray | number[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -4055,25 +4055,25 @@ writeDouble(val: number): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeDouble](arkts-ipc-rpc-messagesequence-c.md#writedouble)(val: double)
-
-<!--Device-MessageParcel-writeDouble(val: number): boolean--><!--Device-MessageParcel-writeDouble(val: number): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | number | 是 | 要写入的双精度浮点值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -4115,25 +4115,25 @@ writeDoubleArray(doubleArray: number[]): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeDoubleArray](arkts-ipc-rpc-messagesequence-c.md#writedoublearray)(doubleArray: double[])
-
-<!--Device-MessageParcel-writeDoubleArray(doubleArray: number[]): boolean--><!--Device-MessageParcel-writeDoubleArray(doubleArray: number[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| doubleArray | number[] | 是 | 要写入的双精度浮点数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| doubleArray | number[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -4175,25 +4175,25 @@ writeFileDescriptor(fd: number): boolean
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [writeFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#writefiledescriptor)(fd: int)
-
-<!--Device-MessageParcel-writeFileDescriptor(fd: number): boolean--><!--Device-MessageParcel-writeFileDescriptor(fd: number): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| fd | number | 是 | 文件描述符。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| fd | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：操作成功，false：操作失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -4241,25 +4241,25 @@ writeFloat(val: number): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeFloat](arkts-ipc-rpc-messagesequence-c.md#writefloat)(val: double)
-
-<!--Device-MessageParcel-writeFloat(val: number): boolean--><!--Device-MessageParcel-writeFloat(val: number): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | number | 是 | 要写入的双精度浮点值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -4301,25 +4301,25 @@ writeFloatArray(floatArray: number[]): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeFloatArray](arkts-ipc-rpc-messagesequence-c.md#writefloatarray)(floatArray: double[])
-
-<!--Device-MessageParcel-writeFloatArray(floatArray: number[]): boolean--><!--Device-MessageParcel-writeFloatArray(floatArray: number[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| floatArray | number[] | 是 | 要写入的双精度浮点数组。由于系统内部对float类型的数据是按照double处理的，使用时对于数组所占的总字节数应按照double类型来计算。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| floatArray | number[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -4361,25 +4361,25 @@ writeInt(val: number): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeInt](arkts-ipc-rpc-messagesequence-c.md#writeint)(val: int)
-
-<!--Device-MessageParcel-writeInt(val: number): boolean--><!--Device-MessageParcel-writeInt(val: number): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | number | 是 | 要写入的整数值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -4422,25 +4422,25 @@ writeIntArray(intArray: number[]): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeIntArray](arkts-ipc-rpc-messagesequence-c.md#writeintarray)(intArray: int[])
-
-<!--Device-MessageParcel-writeIntArray(intArray: number[]): boolean--><!--Device-MessageParcel-writeIntArray(intArray: number[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| intArray | number[] | 是 | 要写入的整数数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| intArray | number[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -4482,25 +4482,25 @@ writeInterfaceToken(token: string): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeInterfaceToken](arkts-ipc-rpc-messagesequence-c.md#writeinterfacetoken)(token: string)
-
-<!--Device-MessageParcel-writeInterfaceToken(token: string): boolean--><!--Device-MessageParcel-writeInterfaceToken(token: string): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| token | string | 是 | 字符串类型描述符，其长度应小于40960。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| token | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：操作成功，false：操作失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -4542,25 +4542,25 @@ writeLong(val: number): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeLong](arkts-ipc-rpc-messagesequence-c.md#writelong)(val: long)
-
-<!--Device-MessageParcel-writeLong(val: number): boolean--><!--Device-MessageParcel-writeLong(val: number): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | number | 是 | 要写入的长整数值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -4602,25 +4602,25 @@ writeLongArray(longArray: number[]): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeLongArray](arkts-ipc-rpc-messagesequence-c.md#writelongarray)(longArray: long[])
-
-<!--Device-MessageParcel-writeLongArray(longArray: number[]): boolean--><!--Device-MessageParcel-writeLongArray(longArray: number[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| longArray | number[] | 是 | 要写入的长整数数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| longArray | number[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -4662,11 +4662,11 @@ writeNoException(): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [writeNoException](arkts-ipc-rpc-messagesequence-c.md#writenoexception)()
-
-<!--Device-MessageParcel-writeNoException(): void--><!--Device-MessageParcel-writeNoException(): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -4738,26 +4738,26 @@ writeRawData(rawData: number[], size: number): boolean
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [writeRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#writerawdatabuffer)(rawData: ArrayBuffer, size: int)
-
-<!--Device-MessageParcel-writeRawData(rawData: number[], size: number): boolean--><!--Device-MessageParcel-writeRawData(rawData: number[], size: number): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rawData | number[] | 是 | 要写入的原始数据，大小不能超过128MB。 |
-| size | number | 是 | 发送的原始数据大小，以字节为单位。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| rawData | number[] | 是 |
+| size | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -4801,25 +4801,25 @@ writeRemoteObject(object: IRemoteObject): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeRemoteObject](arkts-ipc-rpc-messagesequence-c.md#writeremoteobject)(obj: IRemoteObject)
-
-<!--Device-MessageParcel-writeRemoteObject(object: IRemoteObject): boolean--><!--Device-MessageParcel-writeRemoteObject(object: IRemoteObject): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 是 | 要序列化并写入MessageParcel的远程对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：操作成功，false：操作失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -4883,25 +4883,25 @@ writeRemoteObjectArray(objectArray: IRemoteObject[]): boolean
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [writeRemoteObjectArray](arkts-ipc-rpc-messagesequence-c.md#writeremoteobjectarray)(objectArray: IRemoteObject[])
-
-<!--Device-MessageParcel-writeRemoteObjectArray(objectArray: IRemoteObject[]): boolean--><!--Device-MessageParcel-writeRemoteObjectArray(objectArray: IRemoteObject[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| objectArray | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | 是 | 要写入MessageParcel的IRemoteObject对象数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| objectArray | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -4967,25 +4967,25 @@ writeSequenceable(val: Sequenceable): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeParcelable](arkts-ipc-rpc-messagesequence-c.md#writeparcelable)(val: Parcelable)
-
-<!--Device-MessageParcel-writeSequenceable(val: Sequenceable): boolean--><!--Device-MessageParcel-writeSequenceable(val: Sequenceable): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md) | 是 | 要写入的可序列对象。建议实现marshalling和unmarshalling方法时确保数据完整性，序列化与反序列化的数据结构应保持一致。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -5032,25 +5032,25 @@ writeSequenceableArray(sequenceableArray: Sequenceable[]): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeParcelableArray](arkts-ipc-rpc-messagesequence-c.md#writeparcelablearray)(parcelableArray: Parcelable[])
-
-<!--Device-MessageParcel-writeSequenceableArray(sequenceableArray: Sequenceable[]): boolean--><!--Device-MessageParcel-writeSequenceableArray(sequenceableArray: Sequenceable[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sequenceableArray | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md)[] | 是 | 要写入的可序列化对象数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sequenceableArray | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md)[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -5100,25 +5100,25 @@ writeShort(val: number): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeShort](arkts-ipc-rpc-messagesequence-c.md#writeshort)(val: int)
-
-<!--Device-MessageParcel-writeShort(val: number): boolean--><!--Device-MessageParcel-writeShort(val: number): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | number | 是 | 要写入的短整数值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -5160,25 +5160,25 @@ writeShortArray(shortArray: number[]): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeShortArray](arkts-ipc-rpc-messagesequence-c.md#writeshortarray)(shortArray: int[])
-
-<!--Device-MessageParcel-writeShortArray(shortArray: number[]): boolean--><!--Device-MessageParcel-writeShortArray(shortArray: number[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| shortArray | number[] | 是 | 要写入的短整数数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| shortArray | number[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -5220,25 +5220,25 @@ writeString(val: string): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeString](arkts-ipc-rpc-messagesequence-c.md#writestring)(val: string)
-
-<!--Device-MessageParcel-writeString(val: string): boolean--><!--Device-MessageParcel-writeString(val: string): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | string | 是 | 要写入的字符串值，其长度应小于40960。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -5281,25 +5281,25 @@ writeStringArray(stringArray: string[]): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [writeStringArray](arkts-ipc-rpc-messagesequence-c.md#writestringarray)(stringArray: string[])
-
-<!--Device-MessageParcel-writeStringArray(stringArray: string[]): boolean--><!--Device-MessageParcel-writeStringArray(stringArray: string[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| stringArray | string[] | 是 | 要写入的字符串数组，数组单个元素的长度应小于40960。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| stringArray | string[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -5330,4 +5330,3 @@ try {
   hilog.error(0x0000, 'testTag', 'error ' + error);
 }
 ```
-

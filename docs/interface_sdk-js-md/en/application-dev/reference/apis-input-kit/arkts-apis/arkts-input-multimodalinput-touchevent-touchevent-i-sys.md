@@ -4,9 +4,9 @@ Defines a touch event.
 
 **Inheritance/Implementation:** TouchEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export declare interface TouchEvent--><!--Device-unnamed-export declare interface TouchEvent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -26,9 +26,9 @@ Coordinate correction mode.
 
 **Type:** [FixedMode](arkts-input-multimodalinput-touchevent-fixedmode-e-sys.md)
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-TouchEvent-fixedMode?: FixedMode--><!--Device-TouchEvent-fixedMode?: FixedMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -44,11 +44,10 @@ Whether the touch event is an injection event. For details about injection event
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-TouchEvent-isInject?: boolean--><!--Device-TouchEvent-isInject?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 **System API:** This is a system API.
-

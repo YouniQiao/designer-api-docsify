@@ -14,29 +14,29 @@ function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<Co
 
 订阅公共事件。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-commonEventManager-function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<CommonEventData>): void--><!--Device-commonEventManager-function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<CommonEventData>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| subscriber | CommonEventSubscriber | 是 | 表示订阅者对象。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;CommonEventData&gt; | 是 | 回调函数。当公共事件订阅成功后，事件触发时通过data返回公共 事件数据；订阅失败时，err为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md) | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;CommonEventData&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [1500007](../errorcode-CommonEventService.md#1500007-ipc请求发送失败) | Failed to send the message to the common event service. |
-| [1500008](../errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) | Failed to initialize the common event service. |
-| [1500010](../errorcode-CommonEventService.md#1500010-订阅者数量超限) | The count of subscriber exceeds system specification.<br>**适用版本：** 20+ |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1500007](../errorcode-CommonEventService.md#1500007-ipc请求发送失败) |
+| [1500008](../errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) |
+| [1500010](../errorcode-CommonEventService.md#1500010-订阅者数量超限) |
 
 **示例**
 
@@ -125,4 +125,3 @@ try {
   console.error(`Failed to create subscriber. Code is ${err.code}, message is ${err.message}`);
 }
 ```
-

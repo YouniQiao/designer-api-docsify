@@ -2,9 +2,9 @@
 
 Enumerates the MIFARE Ultralight tag types.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-tag-enum MifareUltralightType--><!--Device-tag-enum MifareUltralightType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -16,11 +16,11 @@ TYPE_UNKNOWN = 0
 
 Unknown type.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-MifareUltralightType-TYPE_UNKNOWN = 0--><!--Device-MifareUltralightType-TYPE_UNKNOWN = 0-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -32,11 +32,11 @@ TYPE_ULTRALIGHT = 1
 
 MIFARE Ultralight.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-MifareUltralightType-TYPE_ULTRALIGHT = 1--><!--Device-MifareUltralightType-TYPE_ULTRALIGHT = 1-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -48,11 +48,10 @@ TYPE_ULTRALIGHT_C = 2
 
 MIFARE Ultralight C.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-MifareUltralightType-TYPE_ULTRALIGHT_C = 2--><!--Device-MifareUltralightType-TYPE_ULTRALIGHT_C = 2-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
-

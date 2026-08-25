@@ -16,9 +16,9 @@ function updateTemplateFormDetailInfo(templateFormInfo: Array<formInfo.TemplateF
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-formProvider-function updateTemplateFormDetailInfo(templateFormInfo: Array<formInfo.TemplateFormDetailInfo>): Promise<void>--><!--Device-formProvider-function updateTemplateFormDetailInfo(templateFormInfo: Array<formInfo.TemplateFormDetailInfo>): Promise<void>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -26,23 +26,23 @@ function updateTemplateFormDetailInfo(templateFormInfo: Array<formInfo.TemplateF
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| templateFormInfo | Array&lt;formInfo.TemplateFormDetailInfo&gt; | 是 | 指定的模板卡片静态配置信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| templateFormInfo | Array & lt;formInfo.TemplateFormDetailInfo & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
-| [16501013](../errorcode-form.md#16501013-系统不支持当前操作) | The system does not support the current operation. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
+| [16501013](../errorcode-form.md#16501013-系统不支持当前操作) |
 
 **示例**
 
@@ -100,4 +100,3 @@ try {
   console.error(`catch error, code: ${error.code}, message: ${error.message}`);
 }
 ```
-

@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export class Chrono--><!--Device-unnamed-export class Chrono-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,19 +23,17 @@ public static getCpuTime(): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Chrono-public static getCpuTime(): long--><!--Device-Chrono-public static getCpuTime(): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 当前进程消耗的CPU时间，单位为纳秒。 |
+| 类型 |
+| --- |
+| long |
 
 ## milliNow
 
@@ -49,19 +45,17 @@ public static milliNow(): double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Chrono-public static milliNow(): double--><!--Device-Chrono-public static milliNow(): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | 自系统启动以来经过的毫秒数。 |
+| 类型 |
+| --- |
+| double |
 
 ## nanoNow
 
@@ -73,19 +67,17 @@ public static nanoNow(): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Chrono-public static nanoNow(): long--><!--Device-Chrono-public static nanoNow(): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 自系统启动以来经过的纳秒数。 |
+| 类型 |
+| --- |
+| long |
 
 ## NS_PER_MS
 
@@ -99,11 +91,8 @@ public static readonly NS_PER_MS: long = 1000000
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Chrono-public static readonly NS_PER_MS: long = 1000000--><!--Device-Chrono-public static readonly NS_PER_MS: long = 1000000-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

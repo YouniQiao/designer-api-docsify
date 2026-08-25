@@ -2,9 +2,9 @@
 
 Enumerates the modes for querying the permission usage records.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-privacyManager-enum PermissionUsageFlag--><!--Device-privacyManager-enum PermissionUsageFlag-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -18,9 +18,9 @@ FLAG_PERMISSION_USAGE_SUMMARY = 0
 
 Query the permission usage summary.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-PermissionUsageFlag-FLAG_PERMISSION_USAGE_SUMMARY = 0--><!--Device-PermissionUsageFlag-FLAG_PERMISSION_USAGE_SUMMARY = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -34,11 +34,10 @@ FLAG_PERMISSION_USAGE_DETAIL = 1
 
 Query detailed permission usage records.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-PermissionUsageFlag-FLAG_PERMISSION_USAGE_DETAIL = 1--><!--Device-PermissionUsageFlag-FLAG_PERMISSION_USAGE_DETAIL = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
-

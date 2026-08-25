@@ -4,7 +4,7 @@ Enumerates the proxy modes. This API uses a promise to return the result.
 
 **Since:** 20
 
-<!--Device-connection-export enum ProxyMode--><!--Device-connection-export enum ProxyMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -20,7 +20,7 @@ Proxy disabled.
 
 **Since:** 20
 
-<!--Device-ProxyMode-PROXY_MODE_OFF = 0--><!--Device-ProxyMode-PROXY_MODE_OFF = 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -36,9 +36,8 @@ Auto mode.
 
 **Since:** 20
 
-<!--Device-ProxyMode-PROXY_MODE_AUTO = 1--><!--Device-ProxyMode-PROXY_MODE_AUTO = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
-

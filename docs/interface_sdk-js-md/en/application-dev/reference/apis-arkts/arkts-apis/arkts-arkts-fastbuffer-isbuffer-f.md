@@ -16,23 +16,23 @@ Returns true if obj is a FastBuffer, false otherwise
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-fastbuffer-function isBuffer(obj: Object): boolean--><!--Device-fastbuffer-function isBuffer(obj: Object): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| obj | Object | Yes | The object to check if it's a FastBuffer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true or false |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -55,4 +55,3 @@ let result4 = fastbuffer.isBuffer(new Uint8Array(1024));
 console.info("result4 = " + result4);
 // Output: result4 = false
 ```
-

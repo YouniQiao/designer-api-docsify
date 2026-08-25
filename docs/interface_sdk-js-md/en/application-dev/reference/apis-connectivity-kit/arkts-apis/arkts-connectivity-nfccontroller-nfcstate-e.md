@@ -2,9 +2,9 @@
 
 Enumerates the NFC states.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-nfcController-enum NfcState--><!--Device-nfcController-enum NfcState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NFC.Core
 
@@ -16,11 +16,11 @@ STATE_OFF = 1
 
 NFC is closed (OFF).
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NfcState-STATE_OFF = 1--><!--Device-NfcState-STATE_OFF = 1-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Core
 
@@ -32,11 +32,11 @@ STATE_TURNING_ON = 2
 
 NFC is turning on.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NfcState-STATE_TURNING_ON = 2--><!--Device-NfcState-STATE_TURNING_ON = 2-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Core
 
@@ -48,11 +48,11 @@ STATE_ON = 3
 
 NFC is open (ON).
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NfcState-STATE_ON = 3--><!--Device-NfcState-STATE_ON = 3-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Core
 
@@ -64,11 +64,10 @@ STATE_TURNING_OFF = 4
 
 NFC is turning off.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-NfcState-STATE_TURNING_OFF = 4--><!--Device-NfcState-STATE_TURNING_OFF = 4-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Core
-

@@ -1,8 +1,6 @@
 # ResolvedPluralRulesOptions
 
-**Since:** -1
-
-<!--Device-Intl-interface ResolvedPluralRulesOptions--><!--Device-Intl-interface ResolvedPluralRulesOptions-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,9 +15,7 @@ locale: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ResolvedPluralRulesOptions-locale: string--><!--Device-ResolvedPluralRulesOptions-locale: string-End-->
+**ArkTS mode:** 
 
 ## maximumFractionDigits
 
@@ -29,9 +25,7 @@ maximumFractionDigits: number
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-ResolvedPluralRulesOptions-maximumFractionDigits: number--><!--Device-ResolvedPluralRulesOptions-maximumFractionDigits: number-End-->
+**ArkTS mode:** 
 
 ## maximumSignificantDigits
 
@@ -41,9 +35,7 @@ maximumSignificantDigits?: number
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-ResolvedPluralRulesOptions-maximumSignificantDigits?: number--><!--Device-ResolvedPluralRulesOptions-maximumSignificantDigits?: number-End-->
+**ArkTS mode:** 
 
 ## minimumFractionDigits
 
@@ -53,9 +45,7 @@ minimumFractionDigits: number
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-ResolvedPluralRulesOptions-minimumFractionDigits: number--><!--Device-ResolvedPluralRulesOptions-minimumFractionDigits: number-End-->
+**ArkTS mode:** 
 
 ## minimumIntegerDigits
 
@@ -65,9 +55,7 @@ minimumIntegerDigits: number
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-ResolvedPluralRulesOptions-minimumIntegerDigits: number--><!--Device-ResolvedPluralRulesOptions-minimumIntegerDigits: number-End-->
+**ArkTS mode:** 
 
 ## minimumSignificantDigits
 
@@ -77,9 +65,7 @@ minimumSignificantDigits?: number
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-ResolvedPluralRulesOptions-minimumSignificantDigits?: number--><!--Device-ResolvedPluralRulesOptions-minimumSignificantDigits?: number-End-->
+**ArkTS mode:** 
 
 ## pluralCategories
 
@@ -89,9 +75,7 @@ pluralCategories: LDMLPluralRule[]
 
 **Type:** LDMLPluralRule[]
 
-**Since:** -1
-
-<!--Device-ResolvedPluralRulesOptions-pluralCategories: LDMLPluralRule[]--><!--Device-ResolvedPluralRulesOptions-pluralCategories: LDMLPluralRule[]-End-->
+**ArkTS mode:** 
 
 ## type
 
@@ -101,7 +85,4 @@ type: PluralRuleType
 
 **Type:** PluralRuleType
 
-**Since:** -1
-
-<!--Device-ResolvedPluralRulesOptions-type: PluralRuleType--><!--Device-ResolvedPluralRulesOptions-type: PluralRuleType-End-->
-
+**ArkTS mode:** 

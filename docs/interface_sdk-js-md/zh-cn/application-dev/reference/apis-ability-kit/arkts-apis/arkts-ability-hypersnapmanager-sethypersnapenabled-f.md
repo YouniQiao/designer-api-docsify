@@ -20,21 +20,20 @@ function setHyperSnapEnabled(enableFlag: boolean): void
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-hyperSnapManager-function setHyperSnapEnabled(enableFlag: boolean): void--><!--Device-hyperSnapManager-function setHyperSnapEnabled(enableFlag: boolean): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enableFlag | boolean | 是 | 表示快启功能开关标志。 <br>- `true`：表示启用快启功能（系统将最终决策是否创建快启）。 <br>- `false`：禁用应用快启功能。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [enableFlag](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hitracechain-enableflag-f.md) | boolean | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [16000150](../errorcode-ability.md#16000150-发送请求失败) | Failed to send request to system service. |
-
+| 错误码ID |
+| --- |
+| [16000150](../errorcode-ability.md#16000150-发送请求失败) |

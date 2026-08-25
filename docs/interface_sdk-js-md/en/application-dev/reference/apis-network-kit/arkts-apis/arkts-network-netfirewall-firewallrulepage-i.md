@@ -4,7 +4,7 @@ Defines the pagination structure for firewall rules.
 
 **Since:** 15
 
-<!--Device-netFirewall-interface FirewallRulePage--><!--Device-netFirewall-interface FirewallRulePage-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -26,55 +26,54 @@ Page data.
 
 **Since:** 15
 
-<!--Device-FirewallRulePage-data: Array<NetFirewallRule>--><!--Device-FirewallRulePage-data: Array<NetFirewallRule>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## page
 
 ```TypeScript
-page: int
+page: number
 ```
 
 Current page number. The value range is [1,1000].
 
-**Type:** int
+**Type:** number
 
 **Since:** 15
 
-<!--Device-FirewallRulePage-page: int--><!--Device-FirewallRulePage-page: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## pageSize
 
 ```TypeScript
-pageSize: int
+pageSize: number
 ```
 
 Page size. The value range is [1,50].
 
-**Type:** int
+**Type:** number
 
 **Since:** 15
 
-<!--Device-FirewallRulePage-pageSize: int--><!--Device-FirewallRulePage-pageSize: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## totalPage
 
 ```TypeScript
-totalPage: int
+totalPage: number
 ```
 
 Total number of pages. The value range is [1,1000].
 
-**Type:** int
+**Type:** number
 
 **Since:** 15
 
-<!--Device-FirewallRulePage-totalPage: int--><!--Device-FirewallRulePage-totalPage: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
-

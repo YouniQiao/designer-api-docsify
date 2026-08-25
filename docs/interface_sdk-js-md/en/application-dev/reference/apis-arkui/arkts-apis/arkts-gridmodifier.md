@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [GridModifier](arkts-arkui-gridmodifier-c.md) | Defines Grid Modifier@extends GridAttribute @implements AttributeModifier&lt;GridAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [GridModifier](arkts-arkui-gridmodifier-c.md) |

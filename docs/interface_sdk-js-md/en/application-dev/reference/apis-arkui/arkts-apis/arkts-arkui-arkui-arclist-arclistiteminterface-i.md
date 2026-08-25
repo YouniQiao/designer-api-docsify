@@ -17,7 +17,7 @@ The **ArcListItem** component is used to display individual child components in 
 
 **Since:** 18
 
-<!--Device-unnamed-export interface ArcListItemInterface--><!--Device-unnamed-export interface ArcListItemInterface-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -27,7 +27,7 @@ The **ArcListItem** component is used to display individual child components in 
 import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@kit.ArkUI';
 ```
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (): ArcListItemAttribute
@@ -37,15 +37,14 @@ Creates an item for the **ArcList** component.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-ArcListItemInterface-(): ArcListItemAttribute--><!--Device-ArcListItemInterface-(): ArcListItemAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |

@@ -16,27 +16,27 @@ Converts the array data that cannot be passed across threads into the data that 
 
 **Since:** 20
 
-<!--Device-sendableRelationalStore-function toSendableValues(values: NonSendableValues): collections.Array<ValueType>--><!--Device-sendableRelationalStore-function toSendableValues(values: NonSendableValues): collections.Array<ValueType>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| values | [NonSendableValues](arkts-arkdata-sendablerelationalstore-nonsendablevalues-t.md) | Yes | Array data that cannot be passed across threads. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| values | [NonSendableValues](arkts-arkdata-sendablerelationalstore-nonsendablevalues-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| collections.Array&lt;ValueType&gt; | Array data that can be passed across threads. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| collections.Array & lt;ValueType & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [14800000](../errorcode-data-rdb.md#14800000-internal-error) | Inner error. |
+| Error Code ID |
+| --- |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
 
 **Examples**
 
@@ -48,4 +48,3 @@ array.push(2);
 array.push("aaaaaa")
 const values = sendableRelationalStore.toSendableValues(array);
 ```
-

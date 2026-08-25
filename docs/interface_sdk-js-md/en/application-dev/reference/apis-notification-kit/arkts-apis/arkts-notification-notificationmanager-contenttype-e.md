@@ -2,9 +2,9 @@
 
 Enumerates the notification content types.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-notificationManager-export enum ContentType--><!--Device-notificationManager-export enum ContentType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -16,11 +16,11 @@ NOTIFICATION_CONTENT_BASIC_TEXT
 
 Normal text notification.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-NOTIFICATION_CONTENT_BASIC_TEXT--><!--Device-ContentType-NOTIFICATION_CONTENT_BASIC_TEXT-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -32,11 +32,11 @@ NOTIFICATION_CONTENT_LONG_TEXT
 
 Long text notification.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-NOTIFICATION_CONTENT_LONG_TEXT--><!--Device-ContentType-NOTIFICATION_CONTENT_LONG_TEXT-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -48,11 +48,11 @@ NOTIFICATION_CONTENT_PICTURE
 
 Picture-attached notification.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-NOTIFICATION_CONTENT_PICTURE--><!--Device-ContentType-NOTIFICATION_CONTENT_PICTURE-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -64,11 +64,11 @@ NOTIFICATION_CONTENT_CONVERSATION
 
 Conversation notification.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-NOTIFICATION_CONTENT_CONVERSATION--><!--Device-ContentType-NOTIFICATION_CONTENT_CONVERSATION-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -80,11 +80,11 @@ NOTIFICATION_CONTENT_MULTILINE
 
 Multi-line text notification.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-NOTIFICATION_CONTENT_MULTILINE--><!--Device-ContentType-NOTIFICATION_CONTENT_MULTILINE-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -96,11 +96,11 @@ NOTIFICATION_CONTENT_SYSTEM_LIVE_VIEW
 
 System live view notification. A third-party application cannot directly create a notification of this type. After the system proxy creates a system live view, the third-party application publishes a notification with the same ID to update the specified content.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ContentType-NOTIFICATION_CONTENT_SYSTEM_LIVE_VIEW--><!--Device-ContentType-NOTIFICATION_CONTENT_SYSTEM_LIVE_VIEW-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -112,11 +112,10 @@ NOTIFICATION_CONTENT_LIVE_VIEW
 
 Common live view notification. Available only to system applications.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ContentType-NOTIFICATION_CONTENT_LIVE_VIEW--><!--Device-ContentType-NOTIFICATION_CONTENT_LIVE_VIEW-End-->
-
 **System capability:** SystemCapability.Notification.Notification
-

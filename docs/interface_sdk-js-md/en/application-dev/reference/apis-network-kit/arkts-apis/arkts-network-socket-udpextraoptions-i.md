@@ -6,7 +6,7 @@ Defines other properties of the **UDPSocket** object. This object is inherited f
 
 **Since:** 7
 
-<!--Device-socket-export interface UDPExtraOptions--><!--Device-socket-export interface UDPExtraOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -28,7 +28,6 @@ Whether to send broadcast messages. The value **true** indicates that broadcast 
 
 **Since:** 7
 
-<!--Device-UDPExtraOptions-broadcast?: boolean--><!--Device-UDPExtraOptions-broadcast?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
-

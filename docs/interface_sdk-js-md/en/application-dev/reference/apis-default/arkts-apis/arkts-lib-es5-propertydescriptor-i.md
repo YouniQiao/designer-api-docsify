@@ -1,8 +1,6 @@
 # PropertyDescriptor
 
-**Since:** -1
-
-<!--Device-unnamed-interface PropertyDescriptor--><!--Device-unnamed-interface PropertyDescriptor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -15,29 +13,25 @@
 get?(): any
 ```
 
-**Since:** -1
-
-<!--Device-PropertyDescriptor-get?(): any--><!--Device-PropertyDescriptor-get?(): any-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## set
 
 ```TypeScript
 set?(v: any): void
 ```
 
-**Since:** -1
-
-<!--Device-PropertyDescriptor-set?(v: any): void--><!--Device-PropertyDescriptor-set?(v: any): void-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| v | any | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| v | any | Yes |
 
 ## configurable
 
@@ -47,9 +41,7 @@ configurable?: boolean
 
 **Type:** boolean
 
-**Since:** -1
-
-<!--Device-PropertyDescriptor-configurable?: boolean--><!--Device-PropertyDescriptor-configurable?: boolean-End-->
+**ArkTS mode:** 
 
 ## enumerable
 
@@ -59,9 +51,7 @@ enumerable?: boolean
 
 **Type:** boolean
 
-**Since:** -1
-
-<!--Device-PropertyDescriptor-enumerable?: boolean--><!--Device-PropertyDescriptor-enumerable?: boolean-End-->
+**ArkTS mode:** 
 
 ## value
 
@@ -71,9 +61,7 @@ value?: any
 
 **Type:** any
 
-**Since:** -1
-
-<!--Device-PropertyDescriptor-value?: any--><!--Device-PropertyDescriptor-value?: any-End-->
+**ArkTS mode:** 
 
 ## writable
 
@@ -83,7 +71,4 @@ writable?: boolean
 
 **Type:** boolean
 
-**Since:** -1
-
-<!--Device-PropertyDescriptor-writable?: boolean--><!--Device-PropertyDescriptor-writable?: boolean-End-->
-
+**ArkTS mode:** 

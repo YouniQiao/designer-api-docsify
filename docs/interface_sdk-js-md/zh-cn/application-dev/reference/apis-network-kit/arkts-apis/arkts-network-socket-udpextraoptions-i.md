@@ -6,7 +6,7 @@ UDPSocket连接的其他属性。继承自[ExtraOptionsBase](arkts-network-socke
 
 **起始版本：** 7
 
-<!--Device-socket-export interface UDPExtraOptions--><!--Device-socket-export interface UDPExtraOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -28,7 +28,6 @@ broadcast?: boolean
 
 **起始版本：** 7
 
-<!--Device-UDPExtraOptions-broadcast?: boolean--><!--Device-UDPExtraOptions-broadcast?: boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
-

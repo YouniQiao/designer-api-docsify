@@ -4,7 +4,7 @@ Definition of connect parameter.
 
 **Since:** 26.0.0
 
-<!--Device-mechanicManager-export interface ConnectParam--><!--Device-mechanicManager-export interface ConnectParam-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -28,9 +28,9 @@ Data carried during device discovery Data must be in the following format:|type|
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ConnectParam-custdata: string--><!--Device-ConnectParam-custdata: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -48,9 +48,9 @@ Name of the mechanical device.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ConnectParam-deviceName?: string--><!--Device-ConnectParam-deviceName?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -64,15 +64,14 @@ identifier?: int
 
 Identifer of current device. The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ConnectParam-identifier?: int--><!--Device-ConnectParam-identifier?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
-

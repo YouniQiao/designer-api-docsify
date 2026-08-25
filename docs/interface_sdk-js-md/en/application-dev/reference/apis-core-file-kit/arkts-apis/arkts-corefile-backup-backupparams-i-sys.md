@@ -2,9 +2,9 @@
 
 Provides configuration parameters for backup and restore.@interface BackupParams
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-backup-interface BackupParams--><!--Device-backup-interface BackupParams-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -26,11 +26,10 @@ The optional parameters a json strings in the form of key value in backup or res
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-BackupParams-parameters?: string--><!--Device-BackupParams-parameters?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
-

@@ -5,8 +5,7 @@
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [BusinessAbilityInfo](arkts-ability-businessabilityinfo-i-sys.md) | Contains basic business ability information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BusinessAbilityInfo](arkts-ability-businessabilityinfo-i-sys.md) |
 <!--DelEnd-->
-

@@ -2,9 +2,9 @@
 
 Enumerates call waiting states.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-call-export enum CallWaitingStatus--><!--Device-call-export enum CallWaitingStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -18,9 +18,9 @@ CALL_WAITING_DISABLE = 0
 
 Call waiting disabled.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-CallWaitingStatus-CALL_WAITING_DISABLE = 0--><!--Device-CallWaitingStatus-CALL_WAITING_DISABLE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -34,11 +34,10 @@ CALL_WAITING_ENABLE = 1
 
 Call waiting enabled.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-CallWaitingStatus-CALL_WAITING_ENABLE = 1--><!--Device-CallWaitingStatus-CALL_WAITING_ENABLE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
-

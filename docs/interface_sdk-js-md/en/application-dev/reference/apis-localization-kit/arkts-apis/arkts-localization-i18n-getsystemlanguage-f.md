@@ -16,19 +16,19 @@ Obtains the system language.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getSystemLanguage](arkts-localization-i18n-system-c.md#getsystemlanguage)
-
-<!--Device-i18n-export function getSystemLanguage(): string--><!--Device-i18n-export function getSystemLanguage(): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | System language ID. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -43,4 +43,3 @@ import { i18n } from '@kit.LocalizationKit';
 
 let systemLanguage: string = i18n.getSystemLanguage();
 ```
-

@@ -16,9 +16,9 @@ function getNotificationStatisticsByBundle(bundles: BundleOption[]): Promise<Bun
 
 **起始版本：** 26.0.0
 
-**需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-notificationManager-function getNotificationStatisticsByBundle(bundles: BundleOption[]): Promise<BundleNotificationStatistics[]>--><!--Device-notificationManager-function getNotificationStatisticsByBundle(bundles: BundleOption[]): Promise<BundleNotificationStatistics[]>-End-->
+**需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -26,25 +26,25 @@ function getNotificationStatisticsByBundle(bundles: BundleOption[]): Promise<Bun
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundles | BundleOption[] | 是 | 应用的包信息列表。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundles | [BundleOption[]](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[BundleNotificationStatistics](arkts-notification-notificationmanager-bundlenotificationstatistics-i-sys.md)[]&gt; | Promise对象。返回指定应用列表的通知统计信息。 |
+| 类型 |
+| --- |
+| Promise&lt;[BundleNotificationStatistics](arkts-notification-notificationmanager-bundlenotificationstatistics-i-sys.md)[]&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1600001](../errorcode-notification.md#1600001-内部错误) |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
 **示例**
 
@@ -79,4 +79,3 @@ notificationManager.getNotificationStatisticsByBundle(bundles).then(
   console.error(`getNotificationStatisticsByBundle err: ${JSON.stringify(err)}`)
 });
 ```
-

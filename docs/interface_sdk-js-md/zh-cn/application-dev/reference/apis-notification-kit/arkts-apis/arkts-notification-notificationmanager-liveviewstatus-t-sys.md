@@ -6,13 +6,12 @@ export type LiveViewStatus = _LiveViewStatus
 
 描述普通实况通知的状态。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-notificationManager-export type LiveViewStatus = _LiveViewStatus--><!--Device-notificationManager-export type LiveViewStatus = _LiveViewStatus-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
 
 **属性类型：** _LiveViewStatus
-

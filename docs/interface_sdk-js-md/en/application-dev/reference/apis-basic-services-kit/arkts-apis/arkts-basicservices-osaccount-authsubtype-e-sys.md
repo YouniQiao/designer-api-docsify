@@ -2,9 +2,9 @@
 
 Enumerates the authentication credential subtypes.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-osAccount-enum AuthSubType--><!--Device-osAccount-enum AuthSubType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -18,9 +18,9 @@ PIN_SIX = 10000
 
 Six-digit PIN.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-AuthSubType-PIN_SIX = 10000--><!--Device-AuthSubType-PIN_SIX = 10000-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -34,9 +34,9 @@ PIN_NUMBER = 10001
 
 Custom PIN.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-AuthSubType-PIN_NUMBER = 10001--><!--Device-AuthSubType-PIN_NUMBER = 10001-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -50,9 +50,9 @@ PIN_MIXED = 10002
 
 Custom mixed credentials.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-AuthSubType-PIN_MIXED = 10002--><!--Device-AuthSubType-PIN_MIXED = 10002-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -66,9 +66,9 @@ PIN_FOUR = 10003
 
 4-digit credential.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AuthSubType-PIN_FOUR = 10003--><!--Device-AuthSubType-PIN_FOUR = 10003-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -82,9 +82,9 @@ PIN_PATTERN = 10004
 
 Pattern credential.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AuthSubType-PIN_PATTERN = 10004--><!--Device-AuthSubType-PIN_PATTERN = 10004-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -98,9 +98,9 @@ PIN_QUESTION = 10005
 
 Security question credential.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-AuthSubType-PIN_QUESTION = 10005--><!--Device-AuthSubType-PIN_QUESTION = 10005-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -114,9 +114,9 @@ FACE_2D = 20000
 
 2D face credential.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-AuthSubType-FACE_2D = 20000--><!--Device-AuthSubType-FACE_2D = 20000-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -130,9 +130,9 @@ FACE_3D = 20001
 
 3D face credential.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-AuthSubType-FACE_3D = 20001--><!--Device-AuthSubType-FACE_3D = 20001-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -146,9 +146,9 @@ FINGERPRINT_CAPACITIVE = 30000
 
 Capacitive fingerprint.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-AuthSubType-FINGERPRINT_CAPACITIVE = 30000--><!--Device-AuthSubType-FINGERPRINT_CAPACITIVE = 30000-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -162,9 +162,9 @@ FINGERPRINT_OPTICAL = 30001
 
 Optical fingerprint.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-AuthSubType-FINGERPRINT_OPTICAL = 30001--><!--Device-AuthSubType-FINGERPRINT_OPTICAL = 30001-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -178,9 +178,9 @@ FINGERPRINT_ULTRASONIC = 30002
 
 Ultrasonic fingerprint.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-AuthSubType-FINGERPRINT_ULTRASONIC = 30002--><!--Device-AuthSubType-FINGERPRINT_ULTRASONIC = 30002-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -194,11 +194,10 @@ DOMAIN_MIXED = 10240001
 
 Mixed domain authentication credentials.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-AuthSubType-DOMAIN_MIXED = 10240001--><!--Device-AuthSubType-DOMAIN_MIXED = 10240001-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-

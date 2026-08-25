@@ -4,7 +4,7 @@ Provides the widget size information.
 
 **Since:** 18
 
-<!--Device-unnamed-interface FormSize--><!--Device-unnamed-interface FormSize-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,7 +27,7 @@ Height of the widget, in vp.
 
 **Since:** 18
 
-<!--Device-FormSize-height: number--><!--Device-FormSize-height: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,9 +45,8 @@ Width of the widget, in vp.
 
 **Since:** 18
 
-<!--Device-FormSize-width: number--><!--Device-FormSize-width: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

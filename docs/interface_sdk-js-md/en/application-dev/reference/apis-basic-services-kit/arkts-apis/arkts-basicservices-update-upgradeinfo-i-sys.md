@@ -2,9 +2,9 @@
 
 Represents update information.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-update-export interface UpgradeInfo--><!--Device-update-export interface UpgradeInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -26,9 +26,9 @@ Upgrade service type.
 
 **Type:** BusinessType
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-UpgradeInfo-businessType: BusinessType--><!--Device-UpgradeInfo-businessType: BusinessType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -44,11 +44,10 @@ Caller package name, which is used to identify the app that calls the upgrade AP
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-UpgradeInfo-upgradeApp: string--><!--Device-UpgradeInfo-upgradeApp: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-distributedDeviceManager-interface ReplyResult--><!--Device-distributedDeviceManager-interface ReplyResult-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -28,9 +28,8 @@ param: string
 
 **起始版本：** 23
 
-<!--Device-ReplyResult-param: string--><!--Device-ReplyResult-param: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
-

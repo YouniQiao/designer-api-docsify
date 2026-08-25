@@ -4,7 +4,7 @@
 
 **起始版本：** 20
 
-<!--Device-eap-interface EthEapProfile--><!--Device-eap-interface EthEapProfile-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -26,7 +26,7 @@ altSubjectMatch: string
 
 **起始版本：** 20
 
-<!--Device-EthEapProfile-altSubjectMatch: string--><!--Device-EthEapProfile-altSubjectMatch: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -42,7 +42,7 @@ anonymousIdentity: string
 
 **起始版本：** 20
 
-<!--Device-EthEapProfile-anonymousIdentity: string--><!--Device-EthEapProfile-anonymousIdentity: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -58,7 +58,7 @@ CA证书别名。
 
 **起始版本：** 20
 
-<!--Device-EthEapProfile-caCertAliases: string--><!--Device-EthEapProfile-caCertAliases: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -74,7 +74,7 @@ CA证书路径。
 
 **起始版本：** 20
 
-<!--Device-EthEapProfile-caPath: string--><!--Device-EthEapProfile-caPath: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -90,7 +90,7 @@ CA证书内容。
 
 **起始版本：** 20
 
-<!--Device-EthEapProfile-certEntry: Uint8Array--><!--Device-EthEapProfile-certEntry: Uint8Array-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -106,7 +106,7 @@ CA证书密码。
 
 **起始版本：** 20
 
-<!--Device-EthEapProfile-certPassword: string--><!--Device-EthEapProfile-certPassword: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -122,7 +122,7 @@ clientCertAliases: string
 
 **起始版本：** 20
 
-<!--Device-EthEapProfile-clientCertAliases: string--><!--Device-EthEapProfile-clientCertAliases: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -138,7 +138,7 @@ domainSuffixMatch: string
 
 **起始版本：** 20
 
-<!--Device-EthEapProfile-domainSuffixMatch: string--><!--Device-EthEapProfile-domainSuffixMatch: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -154,23 +154,23 @@ AP认证方式。
 
 **起始版本：** 20
 
-<!--Device-EthEapProfile-eapMethod: EapMethod--><!--Device-EthEapProfile-eapMethod: EapMethod-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## eapSubId
 
 ```TypeScript
-eapSubId: int
+eapSubId: number
 ```
 
 SIM卡的子ID。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 20
 
-<!--Device-EthEapProfile-eapSubId: int--><!--Device-EthEapProfile-eapSubId: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -186,7 +186,7 @@ identity: string
 
 **起始版本：** 20
 
-<!--Device-EthEapProfile-identity: string--><!--Device-EthEapProfile-identity: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -202,7 +202,7 @@ Password
 
 **起始版本：** 20
 
-<!--Device-EthEapProfile-password: string--><!--Device-EthEapProfile-password: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -218,7 +218,7 @@ phase2Method: Phase2Method
 
 **起始版本：** 20
 
-<!--Device-EthEapProfile-phase2Method: Phase2Method--><!--Device-EthEapProfile-phase2Method: Phase2Method-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -234,7 +234,7 @@ plmn: string
 
 **起始版本：** 20
 
-<!--Device-EthEapProfile-plmn: string--><!--Device-EthEapProfile-plmn: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -250,7 +250,6 @@ realm: string
 
 **起始版本：** 20
 
-<!--Device-EthEapProfile-realm: string--><!--Device-EthEapProfile-realm: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
-

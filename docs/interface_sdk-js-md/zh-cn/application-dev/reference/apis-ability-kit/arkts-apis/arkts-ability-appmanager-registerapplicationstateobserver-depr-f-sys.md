@@ -15,13 +15,13 @@ function registerApplicationStateObserver(observer: ApplicationStateObserver): n
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-**替代接口：** [on](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate)
+**替代接口：** [on](arkts-ability-appmanager-on-f.md#onapplicationstate)
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
-
-<!--Device-appManager-function registerApplicationStateObserver(observer: ApplicationStateObserver): number--><!--Device-appManager-function registerApplicationStateObserver(observer: ApplicationStateObserver): number-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,15 +29,15 @@ function registerApplicationStateObserver(observer: ApplicationStateObserver): n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | 是 | 表示程序状态观测器，用于观测应用的生命周期变化。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 已注册观测器的数字代码。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -69,4 +69,3 @@ const observerCode = appManager.registerApplicationStateObserver({
 });
 console.info(`observerCode: ${observerCode}.`);
 ```
-

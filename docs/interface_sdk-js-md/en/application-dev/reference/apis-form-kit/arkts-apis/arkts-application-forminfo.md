@@ -9,11 +9,11 @@ The **formInfo** module provides types and enums related to the widget informati
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [formInfo/formInfo](arkts-app-form-forminfo.md)
-
-<!--Device-unnamed-declare namespace formInfo--><!--Device-unnamed-declare namespace formInfo-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -26,25 +26,24 @@ The **formInfo** module provides types and enums related to the widget informati
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [FormInfo](arkts-form-forminfo-forminfo-depr-i.md) | Widget information. |
-| [FormStateInfo](arkts-form-forminfo-formstateinfo-depr-i.md) | Describes the widget state information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FormInfo](arkts-form-forminfo-forminfo-depr-i.md) |
+| [FormStateInfo](arkts-form-forminfo-formstateinfo-depr-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [ColorMode](arkts-form-forminfo-colormode-depr-e.md) | Enumerates the color modes supported by the widget. |
-| [FormParam](arkts-form-forminfo-formparam-depr-e.md) | Enumerates the widget parameters. |
-| [FormState](arkts-form-forminfo-formstate-depr-e.md) | Enumerates the widget states. |
-| [FormType](arkts-form-forminfo-formtype-depr-e.md) | Enumerates the widget types. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ColorMode](arkts-form-forminfo-colormode-depr-e.md) |
+| [FormParam](arkts-form-forminfo-formparam-depr-e.md) |
+| [FormState](arkts-form-forminfo-formstate-depr-e.md) |
+| [FormType](arkts-form-forminfo-formtype-depr-e.md) |
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [FormParam](arkts-form-forminfo-formparam-depr-e-sys.md) | Enumerates the widget parameters. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FormParam](arkts-form-forminfo-formparam-depr-e-sys.md) |
 <!--DelEnd-->
-

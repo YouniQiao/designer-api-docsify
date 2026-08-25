@@ -2,9 +2,9 @@
 
 Reason for canceling the session.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-eSIM-export enum CancelReason--><!--Device-eSIM-export enum CancelReason-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -18,9 +18,9 @@ CANCEL_REASON_END_USER_REJECTION = 0
 
 The user has rejected the download.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-CancelReason-CANCEL_REASON_END_USER_REJECTION = 0--><!--Device-CancelReason-CANCEL_REASON_END_USER_REJECTION = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -34,9 +34,9 @@ CANCEL_REASON_POSTPONED = 1
 
 The download has been delayed. You can restart it later.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-CancelReason-CANCEL_REASON_POSTPONED = 1--><!--Device-CancelReason-CANCEL_REASON_POSTPONED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -50,9 +50,9 @@ CANCEL_REASON_TIMEOUT = 2
 
 The download has timed out. You can restart it later.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-CancelReason-CANCEL_REASON_TIMEOUT = 2--><!--Device-CancelReason-CANCEL_REASON_TIMEOUT = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -66,11 +66,10 @@ CANCEL_REASON_PPR_NOT_ALLOWED = 3
 
 The installation cannot be performed because the authorization table or other installed profile on the eUICC does not allow its policy rules.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-CancelReason-CANCEL_REASON_PPR_NOT_ALLOWED = 3--><!--Device-CancelReason-CANCEL_REASON_PPR_NOT_ALLOWED = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
-

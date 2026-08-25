@@ -2,9 +2,9 @@
 
 Defines the DRM event information.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-drm-interface EventInfo--><!--Device-drm-interface EventInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -24,11 +24,11 @@ Additional event context.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-EventInfo-extraInfo: string--><!--Device-EventInfo-extraInfo: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -42,11 +42,10 @@ Event payload data.
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-EventInfo-info: Uint8Array--><!--Device-EventInfo-info: Uint8Array-End-->
-
 **System capability:** SystemCapability.Multimedia.Drm.Core
-

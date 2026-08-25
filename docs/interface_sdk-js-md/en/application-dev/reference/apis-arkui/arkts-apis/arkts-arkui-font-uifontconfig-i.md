@@ -1,10 +1,10 @@
 # UIFontConfig
 
-**Since:** 23
+UI font configuration of the system.
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**Since:** 11
 
-<!--Device-font-interface UIFontConfig--><!--Device-font-interface UIFontConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,17 +20,17 @@ import { font } from '@kit.ArkUI';
 fallbackGroups: Array<UIFontFallbackGroupInfo>
 ```
 
-The fallback font info.
+List of fallback generic font families.
 
 **Type:** Array&lt;[UIFontFallbackGroupInfo](arkts-arkui-font-uifontfallbackgroupinfo-i.md)&gt;
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIFontConfig-fallbackGroups: Array<UIFontFallbackGroupInfo>--><!--Device-UIFontConfig-fallbackGroups: Array<UIFontFallbackGroupInfo>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,17 +40,17 @@ The fallback font info.
 fontDir: Array<string>
 ```
 
-The paths of system font files.
+Path to the system font file.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIFontConfig-fontDir: Array<string>--><!--Device-UIFontConfig-fontDir: Array<string>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,17 +60,16 @@ The paths of system font files.
 generic: Array<UIFontGenericInfo>
 ```
 
-The generic font info.
+List of supported generic font families.
 
 **Type:** Array&lt;[UIFontGenericInfo](arkts-arkui-font-uifontgenericinfo-i.md)&gt;
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIFontConfig-generic: Array<UIFontGenericInfo>--><!--Device-UIFontConfig-generic: Array<UIFontGenericInfo>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

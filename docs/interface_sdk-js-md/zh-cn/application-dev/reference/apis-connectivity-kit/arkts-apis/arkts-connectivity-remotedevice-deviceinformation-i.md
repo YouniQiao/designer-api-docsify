@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-remoteDevice-interface DeviceInformation--><!--Device-remoteDevice-interface DeviceInformation-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -26,9 +26,9 @@ manufacturerData: string
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-DeviceInformation-manufacturerData: string--><!--Device-DeviceInformation-manufacturerData: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -44,9 +44,8 @@ modelData: string
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DeviceInformation-modelData: string--><!--Device-DeviceInformation-modelData: string-End-->
-
 **系统能力：** SystemCapability.Communication.NearLink.Base
-

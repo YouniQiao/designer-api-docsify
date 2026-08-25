@@ -4,7 +4,7 @@ Response type of the menu.
 
 **Since:** 11
 
-<!--Device-unnamed-declare enum RichEditorResponseType--><!--Device-unnamed-declare enum RichEditorResponseType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ The menu is displayed when the component is right-clicked.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorResponseType-RIGHT_CLICK = 0--><!--Device-RichEditorResponseType-RIGHT_CLICK = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ The menu is displayed when the component is long-pressed.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorResponseType-LONG_PRESS = 1--><!--Device-RichEditorResponseType-LONG_PRESS = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ The menu is displayed when the component is selected.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorResponseType-SELECT = 2--><!--Device-RichEditorResponseType-SELECT = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,10 @@ If this menu is registered, but **RIGHT_CLICK**, **LONG_PRESS**, and **SELECT** 
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
-<!--Device-RichEditorResponseType-DEFAULT = 3--><!--Device-RichEditorResponseType-DEFAULT = 3-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

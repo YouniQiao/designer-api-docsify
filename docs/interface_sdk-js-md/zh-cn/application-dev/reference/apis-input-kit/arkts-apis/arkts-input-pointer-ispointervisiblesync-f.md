@@ -14,17 +14,17 @@ function isPointerVisibleSync(): boolean
 
 获取当前窗口鼠标光标的显示状态，使用同步方式。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-pointer-function isPointerVisibleSync(): boolean--><!--Device-pointer-function isPointerVisibleSync(): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回鼠标光标显示或隐藏状态。true代表显示状态，false代表隐藏状态。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -78,4 +78,3 @@ struct Index {
   }
 }
 ```
-

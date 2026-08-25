@@ -14,30 +14,30 @@ function create(colorSpaceName: ColorSpace): ColorSpaceManager
 
 创建标准色域对象。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-colorSpaceManager-function create(colorSpaceName: ColorSpace): ColorSpaceManager--><!--Device-colorSpaceManager-function create(colorSpaceName: ColorSpace): ColorSpaceManager-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| colorSpaceName | ColorSpace | 是 | 标准色域类型枚举值。 <br>UNKNOWN与CUSTOM不可用于直接创建色域对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| colorSpaceName | [ColorSpace](../../apis-arkui/arkts-apis/arkts-arkui-window-colorspace-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ColorSpaceManager | 返回当前创建的色域对象实例。 |
+| 类型 |
+| --- |
+| [ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
 
 **示例**
 
@@ -81,33 +81,32 @@ function create(primaries: ColorSpacePrimaries, gamma: double): ColorSpaceManage
 
 创建用户自定义色域对象。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-colorSpaceManager-function create(primaries: ColorSpacePrimaries, gamma: double): ColorSpaceManager--><!--Device-colorSpaceManager-function create(primaries: ColorSpacePrimaries, gamma: double): ColorSpaceManager-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| primaries | [ColorSpacePrimaries](arkts-arkgraphics2d-colorspacemanager-colorspaceprimaries-i.md) | 是 | 色域标准三原色。 |
-| gamma | double | 是 | 色域gamma值，取值为大于0的浮点数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| primaries | [ColorSpacePrimaries](arkts-arkgraphics2d-colorspacemanager-colorspaceprimaries-i.md) | 是 |
+| gamma | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ColorSpaceManager | 返回当前创建的色域对象实例。 <br>色域类型定义为[ColorSpace]{ |
+| 类型 |
+| --- |
+| [ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
 
 **示例**
 
 参见 [create](#create)
-

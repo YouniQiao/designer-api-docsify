@@ -4,7 +4,7 @@ SharedTransitionEffectType enumeration description
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum SharedTransitionEffectType--><!--Device-unnamed-declare enum SharedTransitionEffectType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ The target page element remains in a fixed position, with configurable opacity a
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SharedTransitionEffectType-Static--><!--Device-SharedTransitionEffectType-Static-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,8 @@ The source page element moves to the position of the target page element and sca
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-SharedTransitionEffectType-Exchange--><!--Device-SharedTransitionEffectType-Exchange-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

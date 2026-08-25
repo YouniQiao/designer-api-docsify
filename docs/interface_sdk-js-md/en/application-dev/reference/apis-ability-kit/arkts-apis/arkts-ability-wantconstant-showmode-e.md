@@ -2,9 +2,9 @@
 
 Enumerates the display modes of an [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md) when it is launched.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-wantConstant-export enum ShowMode--><!--Device-wantConstant-export enum ShowMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -16,11 +16,11 @@ WINDOW = 0
 
 An independent window is used to show the ability startup.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-ShowMode-WINDOW = 0--><!--Device-ShowMode-WINDOW = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -32,11 +32,11 @@ EMBEDDED_FULL = 1
 
 An embedded full-screen is used to show the ability startup.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-ShowMode-EMBEDDED_FULL = 1--><!--Device-ShowMode-EMBEDDED_FULL = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -50,11 +50,10 @@ An embedded half-screen is used to show the ability startup.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-ShowMode-EMBEDDED_HALF = 2--><!--Device-ShowMode-EMBEDDED_HALF = 2-End-->
-
 **System capability:** SystemCapability.Ability.AbilityBase
-

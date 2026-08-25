@@ -2,9 +2,9 @@
 
 Defines the information about the callback that is triggered for mission continuation state changes.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-distributedMissionManager-interface ContinueCallbackInfo--><!--Device-distributedMissionManager-interface ContinueCallbackInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -26,11 +26,11 @@ Continuation information of the mission.
 
 **Type:** ContinuableInfo
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ContinueCallbackInfo-info: ContinuableInfo--><!--Device-ContinueCallbackInfo-info: ContinuableInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -46,13 +46,12 @@ Continuation state of the mission.
 
 **Type:** ContinueState
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ContinueCallbackInfo-state: ContinueState--><!--Device-ContinueCallbackInfo-state: ContinueState-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
-

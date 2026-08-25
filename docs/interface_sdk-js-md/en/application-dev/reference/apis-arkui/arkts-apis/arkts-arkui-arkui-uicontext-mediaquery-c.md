@@ -4,7 +4,7 @@ class MediaQuery
 
 **Since:** 10
 
-<!--Device-unnamed-export class MediaQuery--><!--Device-unnamed-export class MediaQuery-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,27 +27,26 @@ Sets the media query criteria and returns the corresponding listening handle
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-MediaQuery-matchMediaSync(condition: string): mediaQuery.MediaQueryListener--><!--Device-MediaQuery-matchMediaSync(condition: string): mediaQuery.MediaQueryListener-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| condition | string | Yes | media conditions |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| condition | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| mediaQuery.MediaQueryListener | the corresponding listening handle |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| mediaQuery.MediaQueryListener |
 
 **Examples**
 
 See the example for mediaquery.
-

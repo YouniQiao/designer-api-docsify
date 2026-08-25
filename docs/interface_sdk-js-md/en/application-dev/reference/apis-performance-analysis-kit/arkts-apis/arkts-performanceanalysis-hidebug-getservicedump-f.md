@@ -14,28 +14,28 @@ function getServiceDump(serviceid : int, fd : int, args : Array<string>) : void
 
 Obtains system service information. It need dump permission. This API can be called only by system application.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.DUMP
-
-<!--Device-hidebug-function getServiceDump(serviceid : int, fd : int, args : Array<string>) : void--><!--Device-hidebug-function getServiceDump(serviceid : int, fd : int, args : Array<string>) : void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| serviceid | int | Yes | Service ID used to obtain system service information. |
-| fd | int | Yes | File descriptor to which data is written by the API. |
-| args | Array&lt;string&gt; | Yes | Parameter list of the **Dump** API of the system service. The maximum length of a string is 254 characters. The excess part will be truncated. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| serviceid | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Array & lt;string & gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed, Possible causes: 1.The parameter type error. 2.The args parameter is not string array. |
-| [11400101](../errorcode-hiviewdfx-hidebug.md#11400101-failed-to-obtain-the-system-service) | ServiceId invalid. The system ability does not exist. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11400101](../errorcode-hiviewdfx-hidebug.md#11400101-failed-to-obtain-the-system-service) |
 
 **Examples**
 
@@ -61,4 +61,3 @@ if (fileFd >= 0) {
   fileIo.closeSync(fileFd);
 }
 ```
-

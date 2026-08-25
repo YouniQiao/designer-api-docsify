@@ -2,9 +2,9 @@
 
 Enumerates function key types.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-inputDevice-enum FunctionKey--><!--Device-inputDevice-enum FunctionKey-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -16,9 +16,8 @@ CAPS_LOCK = 1
 
 CapsLock key. This key can be enabled or disabled only for the input keyboard extension.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-FunctionKey-CAPS_LOCK = 1--><!--Device-FunctionKey-CAPS_LOCK = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
-

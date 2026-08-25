@@ -1,9 +1,5 @@
 # ArkTS API<!--arkts-performanceanalysiskit-->
 
-- [@ohos.bytrace](arkts-bytrace.md)
-  - [finishTrace](arkts-performanceanalysis-bytrace-finishtrace-f.md)
-  - [startTrace](arkts-performanceanalysis-bytrace-starttrace-f.md)
-  - [traceByValue](arkts-performanceanalysis-bytrace-tracebyvalue-f.md)
 - [@ohos.faultLogger](arkts-faultlogger.md)
   - [query](arkts-performanceanalysis-faultlogger-query-f.md)
   - [querySelfFaultLog](arkts-performanceanalysis-faultlogger-queryselffaultlog-f.md)

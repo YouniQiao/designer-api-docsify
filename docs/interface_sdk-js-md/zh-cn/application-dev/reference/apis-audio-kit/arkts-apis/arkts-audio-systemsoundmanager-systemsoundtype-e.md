@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-systemSoundManager-enum SystemSoundType--><!--Device-systemSoundManager-enum SystemSoundType-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -18,9 +18,9 @@ PHOTO_SHUTTER = 0
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-SystemSoundType-PHOTO_SHUTTER = 0--><!--Device-SystemSoundType-PHOTO_SHUTTER = 0-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -34,9 +34,9 @@ VIDEO_RECORDING_BEGIN = 1
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-SystemSoundType-VIDEO_RECORDING_BEGIN = 1--><!--Device-SystemSoundType-VIDEO_RECORDING_BEGIN = 1-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -50,9 +50,8 @@ VIDEO_RECORDING_END = 2
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-SystemSoundType-VIDEO_RECORDING_END = 2--><!--Device-SystemSoundType-VIDEO_RECORDING_END = 2-End-->
-
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
-

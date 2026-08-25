@@ -2,9 +2,9 @@
 
 Describes the direction in which the cursor moves when the text is selected.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-inputMethod-export interface Movement--><!--Device-inputMethod-export interface Movement-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -24,9 +24,8 @@ Direction in which the cursor moves when the text is selected.
 
 **Type:** Direction
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Movement-direction: Direction--><!--Device-Movement-direction: Direction-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

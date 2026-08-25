@@ -8,11 +8,11 @@ const ANIMATOR_DURATION_SCALE: string
 
 Indicates the scaling factor for the animation duration.<p>This affects the start delay and duration of all such animations. If the value is {@code 0}, the animation ends immediately. The default value is {@code 1}.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
-
-<!--Device-display-const ANIMATOR_DURATION_SCALE: string--><!--Device-display-const ANIMATOR_DURATION_SCALE: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -24,9 +24,9 @@ const AUTO_SCREEN_BRIGHTNESS: string
 
 Specifies whether automatic screen brightness adjustment is enabled.<p>If the value is {@code 1}, automatic adjustment is enabled. If the value is {@code 0}, automatic adjustment is disabled.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-display-const AUTO_SCREEN_BRIGHTNESS: string--><!--Device-display-const AUTO_SCREEN_BRIGHTNESS: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -38,9 +38,9 @@ const AUTO_SCREEN_BRIGHTNESS_MODE: int
 
 Indicates the value of {@code AUTO_SCREEN_BRIGHTNESS} when automatic screen brightness adjustment is used.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-display-const AUTO_SCREEN_BRIGHTNESS_MODE: int--><!--Device-display-const AUTO_SCREEN_BRIGHTNESS_MODE: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -52,11 +52,11 @@ const DEFAULT_SCREEN_ROTATION: string
 
 Indicates the screen rotation when no other policy is available.<p>This constant is invalid when auto-rotation is enabled. When auto-rotation is disabled, the following values are available:&lt;ul&gt; &lt;li&gt;{@code 0} - The screen rotates 0 degrees. &lt;li&gt;{@code 1} - The screen rotates 90 degrees. &lt;li&gt;{@code 2} - The screen rotates 180 degrees. &lt;li&gt;{@code 3} - The screen rotates 270 degrees. &lt;/ul&gt;
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
-
-<!--Device-display-const DEFAULT_SCREEN_ROTATION: string--><!--Device-display-const DEFAULT_SCREEN_ROTATION: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -68,11 +68,11 @@ const DISPLAY_INVERSION_STATUS: string
 
 Specifies whether display color inversion is enabled.<p>If the value is {@code 1}, display color inversion is enabled. If the value is {@code 0}, display color inversion is disabled.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
-
-<!--Device-display-const DISPLAY_INVERSION_STATUS: string--><!--Device-display-const DISPLAY_INVERSION_STATUS: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -84,9 +84,9 @@ const FONT_SCALE: string
 
 Indicates the scaling factor of fonts, which is a float number.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-display-const FONT_SCALE: string--><!--Device-display-const FONT_SCALE: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -98,9 +98,9 @@ const MANUAL_SCREEN_BRIGHTNESS_MODE: int
 
 Indicates the value of {@code AUTO_SCREEN_BRIGHTNESS} when manual screen brightness adjustment is used.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-display-const MANUAL_SCREEN_BRIGHTNESS_MODE: int--><!--Device-display-const MANUAL_SCREEN_BRIGHTNESS_MODE: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -112,9 +112,9 @@ const SCREEN_BRIGHTNESS_STATUS: string
 
 Indicates the screen brightness. The value ranges from 0 to 255.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-display-const SCREEN_BRIGHTNESS_STATUS: string--><!--Device-display-const SCREEN_BRIGHTNESS_STATUS: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -126,9 +126,9 @@ const SCREEN_OFF_TIMEOUT: string
 
 Indicates the duration that the device waits before going to sleep after a period of inactivity, in milliseconds.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-display-const SCREEN_OFF_TIMEOUT: string--><!--Device-display-const SCREEN_OFF_TIMEOUT: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -140,11 +140,11 @@ const TRANSITION_ANIMATION_SCALE: string
 
 Indicates the scaling factor for transition animations. If the value is {@code 0}, transition animations are disabled.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
-
-<!--Device-display-const TRANSITION_ANIMATION_SCALE: string--><!--Device-display-const TRANSITION_ANIMATION_SCALE: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -156,11 +156,10 @@ const WINDOW_ANIMATION_SCALE: string
 
 Indicates the scaling factor for normal window animations. If the value is {@code 0}, window animations are disabled.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
 
-<!--Device-display-const WINDOW_ANIMATION_SCALE: string--><!--Device-display-const WINDOW_ANIMATION_SCALE: string-End-->
-
 **System capability:** SystemCapability.Applications.Settings.Core
-

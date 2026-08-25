@@ -8,9 +8,9 @@ type UpdateFormsConfigCallback = (configInfo: Array<FormCustomConfig>) => void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-formInfo-type UpdateFormsConfigCallback = (configInfo: Array<FormCustomConfig>) => void--><!--Device-formInfo-type UpdateFormsConfigCallback = (configInfo: Array<FormCustomConfig>) => void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -18,7 +18,6 @@ type UpdateFormsConfigCallback = (configInfo: Array<FormCustomConfig>) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| configInfo | Array&lt;[FormCustomConfig](arkts-form-forminfo-formcustomconfig-i-sys.md)&gt; | 是 | 卡片配置信息列表。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| configInfo | Array&lt;[FormCustomConfig](arkts-form-forminfo-formcustomconfig-i-sys.md)&gt; | 是 |

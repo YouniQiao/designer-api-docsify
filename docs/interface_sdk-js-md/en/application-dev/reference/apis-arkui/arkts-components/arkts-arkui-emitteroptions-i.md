@@ -4,7 +4,7 @@ Particle emitter configuration.@interface EmitterOptions
 
 **Since:** 10
 
-<!--Device-unnamed-interface EmitterOptions--><!--Device-unnamed-interface EmitterOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,11 @@ Annulus emitter parameters. This parameter takes effect only when the emitter sh
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-EmitterOptions-annulusRegion?: ParticleAnnulusRegion--><!--Device-EmitterOptions-annulusRegion?: ParticleAnnulusRegion-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,11 +49,11 @@ Emit rate (that is, the number of particles emitted per second).Default value: *
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EmitterOptions-emitRate?: number--><!--Device-EmitterOptions-emitRate?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,11 +74,11 @@ Note: If you do not want the animation to keep playing, you are advised not to s
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EmitterOptions-particle: EmitterParticleOptions<PARTICLE>--><!--Device-EmitterOptions-particle: EmitterParticleOptions<PARTICLE>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,11 +96,11 @@ Emitter position (distance from the upper left corner of the component). The fir
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EmitterOptions-position?: ParticleTuple<Dimension, Dimension>--><!--Device-EmitterOptions-position?: ParticleTuple<Dimension, Dimension>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -118,11 +118,11 @@ Shape of emitter.Default value: ParticleEmitterShape.RECTANGLE
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EmitterOptions-shape?: ParticleEmitterShape--><!--Device-EmitterOptions-shape?: ParticleEmitterShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -140,11 +140,10 @@ Size of the emit window. The first parameter indicates the emitter width, and th
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-EmitterOptions-size?: ParticleTuple<Dimension, Dimension>--><!--Device-EmitterOptions-size?: ParticleTuple<Dimension, Dimension>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

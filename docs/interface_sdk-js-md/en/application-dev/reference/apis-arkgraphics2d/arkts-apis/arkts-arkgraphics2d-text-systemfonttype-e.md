@@ -2,9 +2,9 @@
 
 Enumerates the font types, which can be combined through bitwise OR operations.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-text-enum SystemFontType--><!--Device-text-enum SystemFontType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -16,11 +16,11 @@ ALL = 1 << 0
 
 All font types, including the system font type, style font type, and user-installed font type.
 
-**Since:** 23
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-SystemFontType-ALL = 1 << 0--><!--Device-SystemFontType-ALL = 1 << 0-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,11 +32,11 @@ GENERIC = 1 << 1
 
 System font type.
 
-**Since:** 23
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-SystemFontType-GENERIC = 1 << 1--><!--Device-SystemFontType-GENERIC = 1 << 1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -48,11 +48,11 @@ STYLISH = 1 << 2
 
 Style font type. The style font type is designed for 2-in-1 devices.
 
-**Since:** 23
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-SystemFontType-STYLISH = 1 << 2--><!--Device-SystemFontType-STYLISH = 1 << 2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -64,11 +64,11 @@ INSTALLED = 1 << 3
 
 Font type that has been installed.
 
-**Since:** 23
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-SystemFontType-INSTALLED = 1 << 3--><!--Device-SystemFontType-INSTALLED = 1 << 3-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -80,11 +80,10 @@ CUSTOMIZED = 1 << 4
 
 Custom font type.
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-SystemFontType-CUSTOMIZED = 1 << 4--><!--Device-SystemFontType-CUSTOMIZED = 1 << 4-End-->
-
 **System capability:** SystemCapability.Graphics.Drawing
-

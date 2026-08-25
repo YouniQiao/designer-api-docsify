@@ -4,7 +4,7 @@ WebGL 1.0
 
 **Since:** 7
 
-<!--Device-unnamed-interface WebGLRenderingContextBase--><!--Device-unnamed-interface WebGLRenderingContextBase-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -18,17 +18,17 @@ Selects active texture unit
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-activeTexture(texture: GLenum): void--><!--Device-WebGLRenderingContextBase-activeTexture(texture: GLenum): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| texture | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture unit to activate |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [texture](#texture) | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 ## attachShader
 
@@ -40,18 +40,18 @@ Attaches a shader to a program
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-attachShader(program: WebGLProgram, shader: WebGLShader): void--><!--Device-WebGLRenderingContextBase-attachShader(program: WebGLProgram, shader: WebGLShader): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program to attach the shader to |
-| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes | The shader to attach |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
+| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes |
 
 ## bindAttribLocation
 
@@ -63,19 +63,19 @@ Binds a generic vertex index to a named attribute variable
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-bindAttribLocation(program: WebGLProgram, index: GLuint, name: string): void--><!--Device-WebGLRenderingContextBase-bindAttribLocation(program: WebGLProgram, index: GLuint, name: string): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program to bind the attribute location |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | The index of the generic vertex attribute |
-| name | string | Yes | The name of the attribute variable |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
+| name | string | Yes |
 
 ## bindBuffer
 
@@ -87,18 +87,18 @@ Binds a buffer to a target
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-bindBuffer(target: GLenum, buffer: WebGLBuffer | null): void--><!--Device-WebGLRenderingContextBase-bindBuffer(target: GLenum, buffer: WebGLBuffer | null): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The target to bind the buffer to |
-| buffer | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes | The buffer to bind |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| buffer | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes |
 
 ## bindFramebuffer
 
@@ -110,18 +110,18 @@ Binds a framebuffer to a target
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-bindFramebuffer(target: GLenum, framebuffer: WebGLFramebuffer | null): void--><!--Device-WebGLRenderingContextBase-bindFramebuffer(target: GLenum, framebuffer: WebGLFramebuffer | null): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The target to bind the framebuffer to |
-| framebuffer | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | Yes | The framebuffer to bind |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| [framebuffer](#framebuffer) | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | Yes |
 
 ## bindRenderbuffer
 
@@ -133,18 +133,18 @@ Binds a renderbuffer to a target
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-bindRenderbuffer(target: GLenum, renderbuffer: WebGLRenderbuffer | null): void--><!--Device-WebGLRenderingContextBase-bindRenderbuffer(target: GLenum, renderbuffer: WebGLRenderbuffer | null): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The target to bind the renderbuffer to |
-| renderbuffer | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes | The renderbuffer to bind |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| [renderbuffer](#renderbuffer) | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes |
 
 ## bindTexture
 
@@ -156,18 +156,18 @@ Binds a texture to a target
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-bindTexture(target: GLenum, texture: WebGLTexture | null): void--><!--Device-WebGLRenderingContextBase-bindTexture(target: GLenum, texture: WebGLTexture | null): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The target to bind the texture to |
-| texture | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes | The texture to bind |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| [texture](#texture) | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes |
 
 ## blendColor
 
@@ -179,20 +179,20 @@ Sets the blend color
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-blendColor(red: GLclampf, green: GLclampf, blue: GLclampf, alpha: GLclampf): void--><!--Device-WebGLRenderingContextBase-blendColor(red: GLclampf, green: GLclampf, blue: GLclampf, alpha: GLclampf): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| red | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Red component |
-| green | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Green component |
-| blue | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Blue component |
-| alpha | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Alpha component |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| red | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
+| green | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
+| blue | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
+| [alpha](#alpha) | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
 
 ## blendFunc
 
@@ -204,18 +204,18 @@ Sets the blend function
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-blendFunc(sfactor: GLenum, dfactor: GLenum): void--><!--Device-WebGLRenderingContextBase-blendFunc(sfactor: GLenum, dfactor: GLenum): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sfactor | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Source blend factor |
-| dfactor | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Destination blend factor |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sfactor | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| dfactor | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 ## blendFuncSeparate
 
@@ -227,20 +227,20 @@ Sets the blend function for RGB and alpha separately
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-blendFuncSeparate(srcRGB: GLenum, dstRGB: GLenum, srcAlpha: GLenum, dstAlpha: GLenum): void--><!--Device-WebGLRenderingContextBase-blendFuncSeparate(srcRGB: GLenum, dstRGB: GLenum, srcAlpha: GLenum, dstAlpha: GLenum): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| srcRGB | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Source RGB blend factor |
-| dstRGB | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Destination RGB blend factor |
-| srcAlpha | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Source alpha blend factor |
-| dstAlpha | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Destination alpha blend factor |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| srcRGB | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| dstRGB | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| srcAlpha | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| dstAlpha | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 ## checkFramebufferStatus
 
@@ -252,23 +252,23 @@ Returns the framebuffer status
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-checkFramebufferStatus(target: GLenum): GLenum--><!--Device-WebGLRenderingContextBase-checkFramebufferStatus(target: GLenum): GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The target framebuffer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [GLenum](arkts-arkgraphics2d-glenum-t.md) | The framebuffer status |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [GLenum](arkts-arkgraphics2d-glenum-t.md) |
 
 ## clear
 
@@ -280,17 +280,17 @@ Clears buffers
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-clear(mask: GLbitfield): void--><!--Device-WebGLRenderingContextBase-clear(mask: GLbitfield): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mask | [GLbitfield](arkts-arkgraphics2d-glbitfield-t.md) | Yes | Which buffers to clear |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mask | [GLbitfield](arkts-arkgraphics2d-glbitfield-t.md) | Yes |
 
 ## clearColor
 
@@ -302,20 +302,20 @@ Sets the clear color
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-clearColor(red: GLclampf, green: GLclampf, blue: GLclampf, alpha: GLclampf): void--><!--Device-WebGLRenderingContextBase-clearColor(red: GLclampf, green: GLclampf, blue: GLclampf, alpha: GLclampf): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| red | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Red component |
-| green | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Green component |
-| blue | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Blue component |
-| alpha | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Alpha component |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| red | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
+| green | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
+| blue | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
+| [alpha](#alpha) | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
 
 ## clearDepth
 
@@ -327,17 +327,17 @@ Sets the clear depth
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-clearDepth(depth: GLclampf): void--><!--Device-WebGLRenderingContextBase-clearDepth(depth: GLclampf): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| depth | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Depth clear value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| depth | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
 
 ## clearStencil
 
@@ -349,17 +349,17 @@ Sets the clear stencil
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-clearStencil(s: GLint): void--><!--Device-WebGLRenderingContextBase-clearStencil(s: GLint): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| s | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Stencil clear value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| s | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
 
 ## colorMask
 
@@ -371,20 +371,20 @@ Sets the color mask
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-colorMask(red: GLboolean, green: GLboolean, blue: GLboolean, alpha: GLboolean): void--><!--Device-WebGLRenderingContextBase-colorMask(red: GLboolean, green: GLboolean, blue: GLboolean, alpha: GLboolean): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| red | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to write red |
-| green | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to write green |
-| blue | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to write blue |
-| alpha | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to write alpha |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| red | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
+| green | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
+| blue | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
+| [alpha](#alpha) | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
 
 ## compileShader
 
@@ -396,17 +396,17 @@ Compiles a shader
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-compileShader(shader: WebGLShader): void--><!--Device-WebGLRenderingContextBase-compileShader(shader: WebGLShader): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes | The shader to compile |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes |
 
 ## copyTexImage2D
 
@@ -427,24 +427,24 @@ Copies pixels from the framebuffer into a 2D texture image
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-copyTexImage2D(      target: GLenum,      level: GLint,      internalformat: GLenum,      x: GLint,      y: GLint,      width: GLsizei,      height: GLsizei,      border: GLint,    ): void--><!--Device-WebGLRenderingContextBase-copyTexImage2D(      target: GLenum,      level: GLint,      internalformat: GLenum,      x: GLint,      y: GLint,      width: GLsizei,      height: GLsizei,      border: GLint,    ): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
-| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
-| internalformat | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Internal format |
-| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X coordinate |
-| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y coordinate |
-| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
-| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
-| border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border width |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| internalformat | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
 
 ## copyTexSubImage2D
 
@@ -465,24 +465,24 @@ Copies a portion of a texture image
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-copyTexSubImage2D(      target: GLenum,      level: GLint,      xoffset: GLint,      yoffset: GLint,      x: GLint,      y: GLint,      width: GLsizei,      height: GLsizei,    ): void--><!--Device-WebGLRenderingContextBase-copyTexSubImage2D(      target: GLenum,      level: GLint,      xoffset: GLint,      yoffset: GLint,      x: GLint,      y: GLint,      width: GLsizei,      height: GLsizei,    ): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
-| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
-| xoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
-| yoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
-| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X coordinate |
-| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y coordinate |
-| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
-| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| xoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| yoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 
 ## createBuffer
 
@@ -494,17 +494,17 @@ Creates a buffer
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-createBuffer(): WebGLBuffer | null--><!--Device-WebGLRenderingContextBase-createBuffer(): WebGLBuffer | null-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | The created buffer |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null |
 
 ## createFramebuffer
 
@@ -516,17 +516,17 @@ Creates a framebuffer
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-createFramebuffer(): WebGLFramebuffer | null--><!--Device-WebGLRenderingContextBase-createFramebuffer(): WebGLFramebuffer | null-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | The created framebuffer |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null |
 
 ## createProgram
 
@@ -538,17 +538,17 @@ Creates a program
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-createProgram(): WebGLProgram | null--><!--Device-WebGLRenderingContextBase-createProgram(): WebGLProgram | null-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | The created program |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null |
 
 ## createRenderbuffer
 
@@ -560,17 +560,17 @@ Creates a renderbuffer
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-createRenderbuffer(): WebGLRenderbuffer | null--><!--Device-WebGLRenderingContextBase-createRenderbuffer(): WebGLRenderbuffer | null-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | The created renderbuffer |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null |
 
 ## createShader
 
@@ -582,23 +582,23 @@ Creates a shader
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-createShader(type: GLenum): WebGLShader | null--><!--Device-WebGLRenderingContextBase-createShader(type: GLenum): WebGLShader | null-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Shader type |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) \| null | The created shader |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) \| null |
 
 ## createTexture
 
@@ -610,17 +610,17 @@ Creates a texture
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-createTexture(): WebGLTexture | null--><!--Device-WebGLRenderingContextBase-createTexture(): WebGLTexture | null-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | The created texture |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null |
 
 ## cullFace
 
@@ -632,17 +632,17 @@ Sets the cull face mode
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-cullFace(mode: GLenum): void--><!--Device-WebGLRenderingContextBase-cullFace(mode: GLenum): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Cull face mode |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 ## deleteBuffer
 
@@ -654,17 +654,17 @@ Deletes a buffer
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-deleteBuffer(buffer: WebGLBuffer | null): void--><!--Device-WebGLRenderingContextBase-deleteBuffer(buffer: WebGLBuffer | null): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes | The buffer to delete |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buffer | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes |
 
 ## deleteFramebuffer
 
@@ -676,17 +676,17 @@ Deletes a framebuffer
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-deleteFramebuffer(framebuffer: WebGLFramebuffer | null): void--><!--Device-WebGLRenderingContextBase-deleteFramebuffer(framebuffer: WebGLFramebuffer | null): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| framebuffer | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | Yes | The framebuffer to delete |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [framebuffer](#framebuffer) | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | Yes |
 
 ## deleteProgram
 
@@ -698,17 +698,17 @@ Deletes a program
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-deleteProgram(program: WebGLProgram | null): void--><!--Device-WebGLRenderingContextBase-deleteProgram(program: WebGLProgram | null): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | Yes | The program to delete |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | Yes |
 
 ## deleteRenderbuffer
 
@@ -720,17 +720,17 @@ Deletes a renderbuffer
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-deleteRenderbuffer(renderbuffer: WebGLRenderbuffer | null): void--><!--Device-WebGLRenderingContextBase-deleteRenderbuffer(renderbuffer: WebGLRenderbuffer | null): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| renderbuffer | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes | The renderbuffer to delete |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [renderbuffer](#renderbuffer) | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes |
 
 ## deleteShader
 
@@ -742,17 +742,17 @@ Deletes a shader
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-deleteShader(shader: WebGLShader | null): void--><!--Device-WebGLRenderingContextBase-deleteShader(shader: WebGLShader | null): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) \| null | Yes | The shader to delete |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) \| null | Yes |
 
 ## deleteTexture
 
@@ -764,17 +764,17 @@ Deletes a texture
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-deleteTexture(texture: WebGLTexture | null): void--><!--Device-WebGLRenderingContextBase-deleteTexture(texture: WebGLTexture | null): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| texture | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes | The texture to delete |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [texture](#texture) | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes |
 
 ## depthFunc
 
@@ -786,17 +786,17 @@ Sets the depth function
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-depthFunc(func: GLenum): void--><!--Device-WebGLRenderingContextBase-depthFunc(func: GLenum): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| func | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Depth function |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| func | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 ## depthMask
 
@@ -808,17 +808,17 @@ Sets the depth mask
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-depthMask(flag: GLboolean): void--><!--Device-WebGLRenderingContextBase-depthMask(flag: GLboolean): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| flag | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to write to depth buffer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| flag | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
 
 ## depthRange
 
@@ -830,18 +830,18 @@ Sets the depth range
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-depthRange(zNear: GLclampf, zFar: GLclampf): void--><!--Device-WebGLRenderingContextBase-depthRange(zNear: GLclampf, zFar: GLclampf): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| zNear | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Near depth |
-| zFar | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Far depth |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| zNear | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
+| zFar | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
 
 ## detachShader
 
@@ -853,18 +853,18 @@ Detaches a shader from a program
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-detachShader(program: WebGLProgram, shader: WebGLShader): void--><!--Device-WebGLRenderingContextBase-detachShader(program: WebGLProgram, shader: WebGLShader): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program |
-| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes | The shader to detach |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
+| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes |
 
 ## disable
 
@@ -876,17 +876,17 @@ Disables a capability
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-disable(cap: GLenum): void--><!--Device-WebGLRenderingContextBase-disable(cap: GLenum): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| cap | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The capability to disable |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| cap | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 ## disableVertexAttribArray
 
@@ -898,17 +898,17 @@ Disables a vertex attribute array
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-disableVertexAttribArray(index: GLuint): void--><!--Device-WebGLRenderingContextBase-disableVertexAttribArray(index: GLuint): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | The index of the vertex attribute |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
 
 ## drawArrays
 
@@ -920,19 +920,19 @@ Draws arrays
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-drawArrays(mode: GLenum, first: GLint, count: GLsizei): void--><!--Device-WebGLRenderingContextBase-drawArrays(mode: GLenum, first: GLint, count: GLsizei): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Drawing mode |
-| first | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Starting index |
-| count | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Number of indices |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| first | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| count | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 
 ## drawElements
 
@@ -944,20 +944,20 @@ Draws elements
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-drawElements(mode: GLenum, count: GLsizei, type: GLenum, offset: GLintptr): void--><!--Device-WebGLRenderingContextBase-drawElements(mode: GLenum, count: GLsizei, type: GLenum, offset: GLintptr): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Drawing mode |
-| count | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Number of indices |
-| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Type of indices |
-| offset | [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Offset in the buffer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| count | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| offset | [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes |
 
 ## enable
 
@@ -969,17 +969,17 @@ Enables a capability
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-enable(cap: GLenum): void--><!--Device-WebGLRenderingContextBase-enable(cap: GLenum): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| cap | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The capability to enable |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| cap | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 ## enableVertexAttribArray
 
@@ -991,17 +991,17 @@ Enables a vertex attribute array
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-enableVertexAttribArray(index: GLuint): void--><!--Device-WebGLRenderingContextBase-enableVertexAttribArray(index: GLuint): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | The index of the vertex attribute |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
 
 ## finish
 
@@ -1013,9 +1013,9 @@ Signals the completion of GL rendering
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-finish(): void--><!--Device-WebGLRenderingContextBase-finish(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -1029,9 +1029,9 @@ Forces all pending GL commands to be executed
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-flush(): void--><!--Device-WebGLRenderingContextBase-flush(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -1050,20 +1050,20 @@ Attaches a renderbuffer to a framebuffer
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-framebufferRenderbuffer(      target: GLenum,      attachment: GLenum,      renderbuffertarget: GLenum,      renderbuffer: WebGLRenderbuffer | null,    ): void--><!--Device-WebGLRenderingContextBase-framebufferRenderbuffer(      target: GLenum,      attachment: GLenum,      renderbuffertarget: GLenum,      renderbuffer: WebGLRenderbuffer | null,    ): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Framebuffer target |
-| attachment | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Attachment point |
-| renderbuffertarget | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Renderbuffer target |
-| renderbuffer | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes | The renderbuffer to attach |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| [attachment](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-mmsinformation-i-sys.md) | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| renderbuffertarget | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| [renderbuffer](#renderbuffer) | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes |
 
 ## framebufferTexture2D
 
@@ -1081,21 +1081,21 @@ Attaches a texture to a framebuffer
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-framebufferTexture2D(      target: GLenum,      attachment: GLenum,      textarget: GLenum,      texture: WebGLTexture | null,      level: GLint,    ): void--><!--Device-WebGLRenderingContextBase-framebufferTexture2D(      target: GLenum,      attachment: GLenum,      textarget: GLenum,      texture: WebGLTexture | null,      level: GLint,    ): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Framebuffer target |
-| attachment | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Attachment point |
-| textarget | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
-| texture | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes | The texture to attach |
-| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| [attachment](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-mmsinformation-i-sys.md) | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| textarget | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| [texture](#texture) | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
 
 ## frontFace
 
@@ -1107,17 +1107,17 @@ Sets the front face direction
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-frontFace(mode: GLenum): void--><!--Device-WebGLRenderingContextBase-frontFace(mode: GLenum): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Front face mode |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 ## generateMipmap
 
@@ -1129,17 +1129,17 @@ Generates mipmaps for a texture
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-generateMipmap(target: GLenum): void--><!--Device-WebGLRenderingContextBase-generateMipmap(target: GLenum): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 ## getActiveAttrib
 
@@ -1151,24 +1151,24 @@ Returns information about an active attribute
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getActiveAttrib(program: WebGLProgram, index: GLuint): WebGLActiveInfo | null--><!--Device-WebGLRenderingContextBase-getActiveAttrib(program: WebGLProgram, index: GLuint): WebGLActiveInfo | null-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | The index of the attribute |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) \| null | Information about the active attribute |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) \| null |
 
 ## getActiveUniform
 
@@ -1180,24 +1180,24 @@ Returns information about an active uniform
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getActiveUniform(program: WebGLProgram, index: GLuint): WebGLActiveInfo | null--><!--Device-WebGLRenderingContextBase-getActiveUniform(program: WebGLProgram, index: GLuint): WebGLActiveInfo | null-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | The index of the uniform |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) \| null | Information about the active uniform |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) \| null |
 
 ## getAttachedShaders
 
@@ -1209,23 +1209,23 @@ Returns the shaders attached to a program
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getAttachedShaders(program: WebGLProgram): WebGLShader[] | null--><!--Device-WebGLRenderingContextBase-getAttachedShaders(program: WebGLProgram): WebGLShader[] | null-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md)[] \| null | Array of attached shaders |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md)[] \| null |
 
 ## getAttribLocation
 
@@ -1237,24 +1237,24 @@ Returns the location of an attribute variable
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getAttribLocation(program: WebGLProgram, name: string): GLint--><!--Device-WebGLRenderingContextBase-getAttribLocation(program: WebGLProgram, name: string): GLint-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program |
-| name | string | Yes | The name of the attribute |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
+| name | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [GLint](arkts-arkgraphics2d-glint-t.md) | The location of the attribute |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [GLint](arkts-arkgraphics2d-glint-t.md) |
 
 ## getBufferParameter
 
@@ -1266,24 +1266,24 @@ Returns a buffer parameter
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getBufferParameter(target: GLenum, pname: GLenum): any--><!--Device-WebGLRenderingContextBase-getBufferParameter(target: GLenum, pname: GLenum): any-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer target |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| any | The buffer parameter value |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| any |
 
 ## getContextAttributes
 
@@ -1295,17 +1295,17 @@ Returns the WebGLContextAttributes for the current context
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getContextAttributes(): WebGLContextAttributes | null--><!--Device-WebGLRenderingContextBase-getContextAttributes(): WebGLContextAttributes | null-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WebGLContextAttributes](arkts-arkgraphics2d-webgl-webglcontextattributes-i.md) \| null | The WebGLContextAttributes object |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WebGLContextAttributes](arkts-arkgraphics2d-webgl-webglcontextattributes-i.md) \| null |
 
 ## getError
 
@@ -1317,17 +1317,17 @@ Returns the error code
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getError(): GLenum--><!--Device-WebGLRenderingContextBase-getError(): GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [GLenum](arkts-arkgraphics2d-glenum-t.md) | The error code |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [GLenum](arkts-arkgraphics2d-glenum-t.md) |
 
 ## getExtension
 
@@ -1339,23 +1339,23 @@ Enables a WebGL extension
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getExtension(name: string): any--><!--Device-WebGLRenderingContextBase-getExtension(name: string): any-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | The name of the extension |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| any | The extension object if available |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| any |
 
 ## getFramebufferAttachmentParameter
 
@@ -1367,25 +1367,25 @@ Returns a framebuffer attachment parameter
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getFramebufferAttachmentParameter(target: GLenum, attachment: GLenum, pname: GLenum): any--><!--Device-WebGLRenderingContextBase-getFramebufferAttachmentParameter(target: GLenum, attachment: GLenum, pname: GLenum): any-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Framebuffer target |
-| attachment | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Attachment point |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| [attachment](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-mmsinformation-i-sys.md) | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| any | The attachment parameter value |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| any |
 
 ## getParameter
 
@@ -1397,23 +1397,23 @@ Returns a parameter value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getParameter(pname: GLenum): any--><!--Device-WebGLRenderingContextBase-getParameter(pname: GLenum): any-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| any | The parameter value |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| any |
 
 ## getProgramInfoLog
 
@@ -1425,23 +1425,23 @@ Returns the program info log
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getProgramInfoLog(program: WebGLProgram): string | null--><!--Device-WebGLRenderingContextBase-getProgramInfoLog(program: WebGLProgram): string | null-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string \| null | The program info log |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string \| null |
 
 ## getProgramParameter
 
@@ -1453,24 +1453,24 @@ Returns a program parameter
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getProgramParameter(program: WebGLProgram, pname: GLenum): any--><!--Device-WebGLRenderingContextBase-getProgramParameter(program: WebGLProgram, pname: GLenum): any-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| any | The program parameter value |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| any |
 
 ## getRenderbufferParameter
 
@@ -1482,24 +1482,24 @@ Returns a renderbuffer parameter
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getRenderbufferParameter(target: GLenum, pname: GLenum): any--><!--Device-WebGLRenderingContextBase-getRenderbufferParameter(target: GLenum, pname: GLenum): any-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Renderbuffer target |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| any | The renderbuffer parameter value |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| any |
 
 ## getShaderInfoLog
 
@@ -1511,23 +1511,23 @@ Returns the shader info log
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getShaderInfoLog(shader: WebGLShader): string | null--><!--Device-WebGLRenderingContextBase-getShaderInfoLog(shader: WebGLShader): string | null-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes | The shader |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string \| null | The shader info log |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string \| null |
 
 ## getShaderParameter
 
@@ -1539,24 +1539,24 @@ Returns a shader parameter
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getShaderParameter(shader: WebGLShader, pname: GLenum): any--><!--Device-WebGLRenderingContextBase-getShaderParameter(shader: WebGLShader, pname: GLenum): any-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes | The shader |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| any | The shader parameter value |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| any |
 
 ## getShaderPrecisionFormat
 
@@ -1568,24 +1568,24 @@ Returns the shader precision format
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getShaderPrecisionFormat(shadertype: GLenum, precisiontype: GLenum): WebGLShaderPrecisionFormat | null--><!--Device-WebGLRenderingContextBase-getShaderPrecisionFormat(shadertype: GLenum, precisiontype: GLenum): WebGLShaderPrecisionFormat | null-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| shadertype | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Shader type |
-| precisiontype | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Precision type |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| shadertype | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| precisiontype | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WebGLShaderPrecisionFormat](arkts-arkgraphics2d-webgl-webglshaderprecisionformat-i.md) \| null | The precision format |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WebGLShaderPrecisionFormat](arkts-arkgraphics2d-webgl-webglshaderprecisionformat-i.md) \| null |
 
 ## getShaderSource
 
@@ -1597,23 +1597,23 @@ Returns the shader source
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getShaderSource(shader: WebGLShader): string | null--><!--Device-WebGLRenderingContextBase-getShaderSource(shader: WebGLShader): string | null-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes | The shader |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string \| null | The shader source |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string \| null |
 
 ## getSupportedExtensions
 
@@ -1625,17 +1625,17 @@ Returns a list of supported extensions
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getSupportedExtensions(): string[] | null--><!--Device-WebGLRenderingContextBase-getSupportedExtensions(): string[] | null-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string[] \| null | List of supported extensions |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string[] \| null |
 
 ## getTexParameter
 
@@ -1647,24 +1647,24 @@ Returns a texture parameter
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getTexParameter(target: GLenum, pname: GLenum): any--><!--Device-WebGLRenderingContextBase-getTexParameter(target: GLenum, pname: GLenum): any-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| any | The texture parameter value |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| any |
 
 ## getUniform
 
@@ -1676,24 +1676,24 @@ Returns the value of a uniform
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getUniform(program: WebGLProgram, location: WebGLUniformLocation): any--><!--Device-WebGLRenderingContextBase-getUniform(program: WebGLProgram, location: WebGLUniformLocation): any-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) | Yes | The uniform location |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| any | The uniform value |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| any |
 
 ## getUniformLocation
 
@@ -1705,24 +1705,24 @@ Returns the location of a uniform variable
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getUniformLocation(program: WebGLProgram, name: string): WebGLUniformLocation | null--><!--Device-WebGLRenderingContextBase-getUniformLocation(program: WebGLProgram, name: string): WebGLUniformLocation | null-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program |
-| name | string | Yes | The name of the uniform |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
+| name | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | The uniform location |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null |
 
 ## getVertexAttrib
 
@@ -1734,24 +1734,24 @@ Returns a vertex attribute parameter
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getVertexAttrib(index: GLuint, pname: GLenum): any--><!--Device-WebGLRenderingContextBase-getVertexAttrib(index: GLuint, pname: GLenum): any-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | The index of the vertex attribute |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| any | The vertex attribute parameter value |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| any |
 
 ## getVertexAttribOffset
 
@@ -1763,24 +1763,24 @@ Returns the offset of a vertex attribute
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-getVertexAttribOffset(index: GLuint, pname: GLenum): GLintptr--><!--Device-WebGLRenderingContextBase-getVertexAttribOffset(index: GLuint, pname: GLenum): GLintptr-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | The index of the vertex attribute |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | The vertex attribute offset |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [GLintptr](arkts-arkgraphics2d-glintptr-t.md) |
 
 ## hint
 
@@ -1792,18 +1792,18 @@ Sets a hint
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-hint(target: GLenum, mode: GLenum): void--><!--Device-WebGLRenderingContextBase-hint(target: GLenum, mode: GLenum): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Hint target |
-| mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Hint mode |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 ## isBuffer
 
@@ -1815,23 +1815,23 @@ Returns whether a buffer is valid
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-isBuffer(buffer: WebGLBuffer | null): GLboolean--><!--Device-WebGLRenderingContextBase-isBuffer(buffer: WebGLBuffer | null): GLboolean-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes | The buffer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buffer | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the buffer is valid |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) |
 
 ## isContextLost
 
@@ -1843,17 +1843,17 @@ Returns whether the context is lost
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-isContextLost(): boolean--><!--Device-WebGLRenderingContextBase-isContextLost(): boolean-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the context is lost |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isEnabled
 
@@ -1865,23 +1865,23 @@ Returns whether a capability is enabled
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-isEnabled(cap: GLenum): GLboolean--><!--Device-WebGLRenderingContextBase-isEnabled(cap: GLenum): GLboolean-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| cap | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The capability |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| cap | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the capability is enabled |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) |
 
 ## isFramebuffer
 
@@ -1893,23 +1893,23 @@ Returns whether a framebuffer is valid
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-isFramebuffer(framebuffer: WebGLFramebuffer | null): GLboolean--><!--Device-WebGLRenderingContextBase-isFramebuffer(framebuffer: WebGLFramebuffer | null): GLboolean-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| framebuffer | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | Yes | The framebuffer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [framebuffer](#framebuffer) | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the framebuffer is valid |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) |
 
 ## isProgram
 
@@ -1921,23 +1921,23 @@ Returns whether a program is valid
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-isProgram(program: WebGLProgram | null): GLboolean--><!--Device-WebGLRenderingContextBase-isProgram(program: WebGLProgram | null): GLboolean-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | Yes | The program |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the program is valid |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) |
 
 ## isRenderbuffer
 
@@ -1949,23 +1949,23 @@ Returns whether a renderbuffer is valid
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-isRenderbuffer(renderbuffer: WebGLRenderbuffer | null): GLboolean--><!--Device-WebGLRenderingContextBase-isRenderbuffer(renderbuffer: WebGLRenderbuffer | null): GLboolean-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| renderbuffer | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes | The renderbuffer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [renderbuffer](#renderbuffer) | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the renderbuffer is valid |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) |
 
 ## isShader
 
@@ -1977,23 +1977,23 @@ Returns whether a shader is valid
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-isShader(shader: WebGLShader | null): GLboolean--><!--Device-WebGLRenderingContextBase-isShader(shader: WebGLShader | null): GLboolean-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) \| null | Yes | The shader |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) \| null | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the shader is valid |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) |
 
 ## isTexture
 
@@ -2005,23 +2005,23 @@ Returns whether a texture is valid
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-isTexture(texture: WebGLTexture | null): GLboolean--><!--Device-WebGLRenderingContextBase-isTexture(texture: WebGLTexture | null): GLboolean-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| texture | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes | The texture |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [texture](#texture) | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the texture is valid |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) |
 
 ## lineWidth
 
@@ -2033,17 +2033,17 @@ Sets the line width
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-lineWidth(width: GLfloat): void--><!--Device-WebGLRenderingContextBase-lineWidth(width: GLfloat): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| width | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Line width |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| width | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
 
 ## linkProgram
 
@@ -2055,17 +2055,17 @@ Links a program
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-linkProgram(program: WebGLProgram): void--><!--Device-WebGLRenderingContextBase-linkProgram(program: WebGLProgram): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program to link |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
 
 ## pixelStorei
 
@@ -2077,18 +2077,18 @@ Sets pixel storage parameters
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-pixelStorei(pname: GLenum, param: GLint | GLboolean): void--><!--Device-WebGLRenderingContextBase-pixelStorei(pname: GLenum, param: GLint | GLboolean): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
-| param | [GLint](arkts-arkgraphics2d-glint-t.md) \| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Parameter value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| param | [GLint](arkts-arkgraphics2d-glint-t.md) \| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
 
 ## polygonOffset
 
@@ -2100,18 +2100,18 @@ Sets the polygon offset
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-polygonOffset(factor: GLfloat, units: GLfloat): void--><!--Device-WebGLRenderingContextBase-polygonOffset(factor: GLfloat, units: GLfloat): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| factor | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Scale factor |
-| units | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Units |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [factor](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| units | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
 
 ## renderbufferStorage
 
@@ -2123,20 +2123,20 @@ Sets the renderbuffer storage
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-renderbufferStorage(target: GLenum, internalformat: GLenum, width: GLsizei, height: GLsizei): void--><!--Device-WebGLRenderingContextBase-renderbufferStorage(target: GLenum, internalformat: GLenum, width: GLsizei, height: GLsizei): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Renderbuffer target |
-| internalformat | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Internal format |
-| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
-| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| internalformat | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 
 ## sampleCoverage
 
@@ -2148,18 +2148,18 @@ Sets the sample coverage
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-sampleCoverage(value: GLclampf, invert: GLboolean): void--><!--Device-WebGLRenderingContextBase-sampleCoverage(value: GLclampf, invert: GLboolean): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Coverage value |
-| invert | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Invert coverage |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes |
+| [invert](#invert) | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
 
 ## scissor
 
@@ -2171,20 +2171,20 @@ Sets the scissor box
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-scissor(x: GLint, y: GLint, width: GLsizei, height: GLsizei): void--><!--Device-WebGLRenderingContextBase-scissor(x: GLint, y: GLint, width: GLsizei, height: GLsizei): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X coordinate |
-| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y coordinate |
-| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
-| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 
 ## shaderSource
 
@@ -2196,18 +2196,18 @@ Sets the shader source
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-shaderSource(shader: WebGLShader, source: string): void--><!--Device-WebGLRenderingContextBase-shaderSource(shader: WebGLShader, source: string): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes | The shader |
-| source | string | Yes | The source code |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes |
+| source | string | Yes |
 
 ## stencilFunc
 
@@ -2219,19 +2219,19 @@ Sets the stencil function
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-stencilFunc(func: GLenum, ref: GLint, mask: GLuint): void--><!--Device-WebGLRenderingContextBase-stencilFunc(func: GLenum, ref: GLint, mask: GLuint): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| func | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Stencil function |
-| ref | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Reference value |
-| mask | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Mask |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| func | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| ref | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| mask | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
 
 ## stencilFuncSeparate
 
@@ -2243,20 +2243,20 @@ Sets the stencil function separately for front and back faces
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-stencilFuncSeparate(face: GLenum, func: GLenum, ref: GLint, mask: GLuint): void--><!--Device-WebGLRenderingContextBase-stencilFuncSeparate(face: GLenum, func: GLenum, ref: GLint, mask: GLuint): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| face | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Face mode |
-| func | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Stencil function |
-| ref | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Reference value |
-| mask | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Mask |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| face | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| func | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| ref | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| mask | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
 
 ## stencilMask
 
@@ -2268,17 +2268,17 @@ Sets the stencil mask
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-stencilMask(mask: GLuint): void--><!--Device-WebGLRenderingContextBase-stencilMask(mask: GLuint): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mask | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Stencil mask |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mask | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
 
 ## stencilMaskSeparate
 
@@ -2290,18 +2290,18 @@ Sets the stencil mask separately for front and back faces
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-stencilMaskSeparate(face: GLenum, mask: GLuint): void--><!--Device-WebGLRenderingContextBase-stencilMaskSeparate(face: GLenum, mask: GLuint): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| face | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Face mode |
-| mask | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Stencil mask |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| face | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| mask | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
 
 ## stencilOp
 
@@ -2313,19 +2313,19 @@ Sets the stencil operation
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-stencilOp(fail: GLenum, zfail: GLenum, zpass: GLenum): void--><!--Device-WebGLRenderingContextBase-stencilOp(fail: GLenum, zfail: GLenum, zpass: GLenum): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fail | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Operation when stencil test fails |
-| zfail | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Operation when depth test fails |
-| zpass | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Operation when depth test passes |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fail | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| zfail | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| zpass | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 ## stencilOpSeparate
 
@@ -2337,20 +2337,20 @@ Sets the stencil operation separately for front and back faces
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-stencilOpSeparate(face: GLenum, fail: GLenum, zfail: GLenum, zpass: GLenum): void--><!--Device-WebGLRenderingContextBase-stencilOpSeparate(face: GLenum, fail: GLenum, zfail: GLenum, zpass: GLenum): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| face | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Face mode |
-| fail | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Operation when stencil test fails |
-| zfail | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Operation when depth test fails |
-| zpass | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Operation when depth test passes |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| face | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| fail | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| zfail | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| zpass | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 ## texParameterf
 
@@ -2362,19 +2362,19 @@ Sets a texture parameter (float)
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-texParameterf(target: GLenum, pname: GLenum, param: GLfloat): void--><!--Device-WebGLRenderingContextBase-texParameterf(target: GLenum, pname: GLenum, param: GLfloat): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
-| param | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Parameter value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| param | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
 
 ## texParameteri
 
@@ -2386,19 +2386,19 @@ Sets a texture parameter (int)
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-texParameteri(target: GLenum, pname: GLenum, param: GLint): void--><!--Device-WebGLRenderingContextBase-texParameteri(target: GLenum, pname: GLenum, param: GLint): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
-| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
-| param | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Parameter value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| param | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
 
 ## uniform1f
 
@@ -2410,18 +2410,18 @@ Sets a uniform1f value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-uniform1f(location: WebGLUniformLocation | null, x: GLfloat): void--><!--Device-WebGLRenderingContextBase-uniform1f(location: WebGLUniformLocation | null, x: GLfloat): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
-| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
+| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
 
 ## uniform1i
 
@@ -2433,18 +2433,18 @@ Sets a uniform1i value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-uniform1i(location: WebGLUniformLocation | null, x: GLint): void--><!--Device-WebGLRenderingContextBase-uniform1i(location: WebGLUniformLocation | null, x: GLint): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
-| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
+| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
 
 ## uniform2f
 
@@ -2456,19 +2456,19 @@ Sets a uniform2f value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-uniform2f(location: WebGLUniformLocation | null, x: GLfloat, y: GLfloat): void--><!--Device-WebGLRenderingContextBase-uniform2f(location: WebGLUniformLocation | null, x: GLfloat, y: GLfloat): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
-| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
-| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Y value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
+| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
 
 ## uniform2i
 
@@ -2480,19 +2480,19 @@ Sets a uniform2i value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-uniform2i(location: WebGLUniformLocation | null, x: GLint, y: GLint): void--><!--Device-WebGLRenderingContextBase-uniform2i(location: WebGLUniformLocation | null, x: GLint, y: GLint): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
-| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X value |
-| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
+| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
 
 ## uniform3f
 
@@ -2504,20 +2504,20 @@ Sets a uniform3f value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-uniform3f(location: WebGLUniformLocation | null, x: GLfloat, y: GLfloat, z: GLfloat): void--><!--Device-WebGLRenderingContextBase-uniform3f(location: WebGLUniformLocation | null, x: GLfloat, y: GLfloat, z: GLfloat): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
-| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
-| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Y value |
-| z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Z value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
+| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
 
 ## uniform3i
 
@@ -2529,20 +2529,20 @@ Sets a uniform3i value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-uniform3i(location: WebGLUniformLocation | null, x: GLint, y: GLint, z: GLint): void--><!--Device-WebGLRenderingContextBase-uniform3i(location: WebGLUniformLocation | null, x: GLint, y: GLint, z: GLint): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
-| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X value |
-| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y value |
-| z | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Z value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
+| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| z | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
 
 ## uniform4f
 
@@ -2554,21 +2554,21 @@ Sets a uniform4f value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-uniform4f(location: WebGLUniformLocation | null, x: GLfloat, y: GLfloat, z: GLfloat, w: GLfloat): void--><!--Device-WebGLRenderingContextBase-uniform4f(location: WebGLUniformLocation | null, x: GLfloat, y: GLfloat, z: GLfloat, w: GLfloat): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
-| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
-| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Y value |
-| z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Z value |
-| w | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | W value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
+| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| w | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
 
 ## uniform4i
 
@@ -2580,21 +2580,21 @@ Sets a uniform4i value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-uniform4i(location: WebGLUniformLocation | null, x: GLint, y: GLint, z: GLint, w: GLint): void--><!--Device-WebGLRenderingContextBase-uniform4i(location: WebGLUniformLocation | null, x: GLint, y: GLint, z: GLint, w: GLint): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
-| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X value |
-| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y value |
-| z | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Z value |
-| w | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | W value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes |
+| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| z | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| w | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
 
 ## useProgram
 
@@ -2606,17 +2606,17 @@ Uses a program
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-useProgram(program: WebGLProgram | null): void--><!--Device-WebGLRenderingContextBase-useProgram(program: WebGLProgram | null): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | Yes | The program to use |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | Yes |
 
 ## validateProgram
 
@@ -2628,17 +2628,17 @@ Validates a program
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-validateProgram(program: WebGLProgram): void--><!--Device-WebGLRenderingContextBase-validateProgram(program: WebGLProgram): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program to validate |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes |
 
 ## vertexAttrib1f
 
@@ -2650,18 +2650,18 @@ Sets a vertex attrib1f value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-vertexAttrib1f(index: GLuint, x: GLfloat): void--><!--Device-WebGLRenderingContextBase-vertexAttrib1f(index: GLuint, x: GLfloat): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
-| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
+| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
 
 ## vertexAttrib1fv
 
@@ -2673,18 +2673,18 @@ Sets a vertex attrib1fv value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-vertexAttrib1fv(index: GLuint, values: Float32List): void--><!--Device-WebGLRenderingContextBase-vertexAttrib1fv(index: GLuint, values: Float32List): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
-| values | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Values |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
+| values | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
 
 ## vertexAttrib2f
 
@@ -2696,19 +2696,19 @@ Sets a vertex attrib2f value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-vertexAttrib2f(index: GLuint, x: GLfloat, y: GLfloat): void--><!--Device-WebGLRenderingContextBase-vertexAttrib2f(index: GLuint, x: GLfloat, y: GLfloat): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
-| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
-| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Y value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
+| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
 
 ## vertexAttrib2fv
 
@@ -2720,18 +2720,18 @@ Sets a vertex attrib2fv value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-vertexAttrib2fv(index: GLuint, values: Float32List): void--><!--Device-WebGLRenderingContextBase-vertexAttrib2fv(index: GLuint, values: Float32List): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
-| values | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Values |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
+| values | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
 
 ## vertexAttrib3f
 
@@ -2743,20 +2743,20 @@ Sets a vertex attrib3f value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-vertexAttrib3f(index: GLuint, x: GLfloat, y: GLfloat, z: GLfloat): void--><!--Device-WebGLRenderingContextBase-vertexAttrib3f(index: GLuint, x: GLfloat, y: GLfloat, z: GLfloat): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
-| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
-| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Y value |
-| z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Z value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
+| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
 
 ## vertexAttrib3fv
 
@@ -2768,18 +2768,18 @@ Sets a vertex attrib3fv value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-vertexAttrib3fv(index: GLuint, values: Float32List): void--><!--Device-WebGLRenderingContextBase-vertexAttrib3fv(index: GLuint, values: Float32List): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
-| values | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Values |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
+| values | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
 
 ## vertexAttrib4f
 
@@ -2791,21 +2791,21 @@ Sets a vertex attrib4f value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-vertexAttrib4f(index: GLuint, x: GLfloat, y: GLfloat, z: GLfloat, w: GLfloat): void--><!--Device-WebGLRenderingContextBase-vertexAttrib4f(index: GLuint, x: GLfloat, y: GLfloat, z: GLfloat, w: GLfloat): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
-| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
-| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Y value |
-| z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Z value |
-| w | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | W value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
+| x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| w | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
 
 ## vertexAttrib4fv
 
@@ -2817,18 +2817,18 @@ Sets a vertex attrib4fv value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-vertexAttrib4fv(index: GLuint, values: Float32List): void--><!--Device-WebGLRenderingContextBase-vertexAttrib4fv(index: GLuint, values: Float32List): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
-| values | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Values |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
+| values | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes |
 
 ## vertexAttribPointer
 
@@ -2847,22 +2847,22 @@ Sets vertex attrib pointer
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-vertexAttribPointer(      index: GLuint,      size: GLint,      type: GLenum,      normalized: GLboolean,      stride: GLsizei,      offset: GLintptr,    ): void--><!--Device-WebGLRenderingContextBase-vertexAttribPointer(      index: GLuint,      size: GLint,      type: GLenum,      normalized: GLboolean,      stride: GLsizei,      offset: GLintptr,    ): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
-| size | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Number of components |
-| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Data type |
-| normalized | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to normalize |
-| stride | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Stride |
-| offset | [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Offset |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes |
+| size | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| normalized | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes |
+| stride | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| offset | [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes |
 
 ## viewport
 
@@ -2874,20 +2874,20 @@ Sets the viewport
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-viewport(x: GLint, y: GLint, width: GLsizei, height: GLsizei): void--><!--Device-WebGLRenderingContextBase-viewport(x: GLint, y: GLint, width: GLsizei, height: GLsizei): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X coordinate |
-| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y coordinate |
-| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
-| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 
 ## ACTIVE_ATTRIBUTES
 
@@ -2901,9 +2901,9 @@ Active Attributes
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly ACTIVE_ATTRIBUTES: GLenum--><!--Device-WebGLRenderingContextBase-readonly ACTIVE_ATTRIBUTES: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -2919,9 +2919,9 @@ Active texture
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly ACTIVE_TEXTURE: GLenum--><!--Device-WebGLRenderingContextBase-readonly ACTIVE_TEXTURE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -2937,9 +2937,9 @@ Active Uniforms
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly ACTIVE_UNIFORMS: GLenum--><!--Device-WebGLRenderingContextBase-readonly ACTIVE_UNIFORMS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -2955,9 +2955,9 @@ Aliased line width range
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly ALIASED_LINE_WIDTH_RANGE: GLenum--><!--Device-WebGLRenderingContextBase-readonly ALIASED_LINE_WIDTH_RANGE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -2973,9 +2973,9 @@ Aliased point size range
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly ALIASED_POINT_SIZE_RANGE: GLenum--><!--Device-WebGLRenderingContextBase-readonly ALIASED_POINT_SIZE_RANGE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -2991,9 +2991,9 @@ Pixel format: alpha
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly ALPHA: GLenum--><!--Device-WebGLRenderingContextBase-readonly ALPHA: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3009,9 +3009,9 @@ Alpha bits
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly ALPHA_BITS: GLenum--><!--Device-WebGLRenderingContextBase-readonly ALPHA_BITS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3027,9 +3027,9 @@ Comparison function: always
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly ALWAYS: GLenum--><!--Device-WebGLRenderingContextBase-readonly ALWAYS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3045,9 +3045,9 @@ Buffer target: array buffer
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly ARRAY_BUFFER: GLenum--><!--Device-WebGLRenderingContextBase-readonly ARRAY_BUFFER: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3063,9 +3063,9 @@ Array buffer binding point
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly ARRAY_BUFFER_BINDING: GLenum--><!--Device-WebGLRenderingContextBase-readonly ARRAY_BUFFER_BINDING: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3081,9 +3081,9 @@ Attached Shaders
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly ATTACHED_SHADERS: GLenum--><!--Device-WebGLRenderingContextBase-readonly ATTACHED_SHADERS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3099,9 +3099,9 @@ Face mode: back
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly BACK: GLenum--><!--Device-WebGLRenderingContextBase-readonly BACK: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3117,9 +3117,9 @@ Enable cap: blend
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly BLEND: GLenum--><!--Device-WebGLRenderingContextBase-readonly BLEND: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3135,9 +3135,9 @@ Blend color
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly BLEND_COLOR: GLenum--><!--Device-WebGLRenderingContextBase-readonly BLEND_COLOR: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3153,9 +3153,9 @@ Destination alpha blend factor
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly BLEND_DST_ALPHA: GLenum--><!--Device-WebGLRenderingContextBase-readonly BLEND_DST_ALPHA: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3171,9 +3171,9 @@ Destination RGB blend factor
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly BLEND_DST_RGB: GLenum--><!--Device-WebGLRenderingContextBase-readonly BLEND_DST_RGB: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3189,9 +3189,9 @@ Blend equation
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly BLEND_EQUATION: GLenum--><!--Device-WebGLRenderingContextBase-readonly BLEND_EQUATION: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3207,9 +3207,9 @@ Blend equation for alpha
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly BLEND_EQUATION_ALPHA: GLenum--><!--Device-WebGLRenderingContextBase-readonly BLEND_EQUATION_ALPHA: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3225,9 +3225,9 @@ Blend equation for RGB
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly BLEND_EQUATION_RGB: GLenum--><!--Device-WebGLRenderingContextBase-readonly BLEND_EQUATION_RGB: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3243,9 +3243,9 @@ Source alpha blend factor
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly BLEND_SRC_ALPHA: GLenum--><!--Device-WebGLRenderingContextBase-readonly BLEND_SRC_ALPHA: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3261,9 +3261,9 @@ Source RGB blend factor
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly BLEND_SRC_RGB: GLenum--><!--Device-WebGLRenderingContextBase-readonly BLEND_SRC_RGB: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3279,9 +3279,9 @@ Blue bits
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly BLUE_BITS: GLenum--><!--Device-WebGLRenderingContextBase-readonly BLUE_BITS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3297,9 +3297,9 @@ Uniform type: bool
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly BOOL: GLenum--><!--Device-WebGLRenderingContextBase-readonly BOOL: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3315,9 +3315,9 @@ Uniform type: bool vec2
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly BOOL_VEC2: GLenum--><!--Device-WebGLRenderingContextBase-readonly BOOL_VEC2: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3333,9 +3333,9 @@ Uniform type: bool vec3
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly BOOL_VEC3: GLenum--><!--Device-WebGLRenderingContextBase-readonly BOOL_VEC3: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3351,9 +3351,9 @@ Uniform type: bool vec4
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly BOOL_VEC4: GLenum--><!--Device-WebGLRenderingContextBase-readonly BOOL_VEC4: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3369,9 +3369,9 @@ Browser default WebGL
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly BROWSER_DEFAULT_WEBGL: GLenum--><!--Device-WebGLRenderingContextBase-readonly BROWSER_DEFAULT_WEBGL: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3387,9 +3387,9 @@ Buffer parameter: buffer size
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly BUFFER_SIZE: GLenum--><!--Device-WebGLRenderingContextBase-readonly BUFFER_SIZE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3405,9 +3405,9 @@ Buffer parameter: buffer usage
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly BUFFER_USAGE: GLenum--><!--Device-WebGLRenderingContextBase-readonly BUFFER_USAGE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3423,9 +3423,9 @@ Data type: byte
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly BYTE: GLenum--><!--Device-WebGLRenderingContextBase-readonly BYTE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3441,9 +3441,9 @@ The canvas element
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly canvas: HTMLCanvasElement | OffscreenCanvas--><!--Device-WebGLRenderingContextBase-readonly canvas: HTMLCanvasElement | OffscreenCanvas-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3459,9 +3459,9 @@ Front face: counter-clockwise
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly CCW: GLenum--><!--Device-WebGLRenderingContextBase-readonly CCW: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3477,9 +3477,9 @@ Texture wrap: clamp to edge
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly CLAMP_TO_EDGE: GLenum--><!--Device-WebGLRenderingContextBase-readonly CLAMP_TO_EDGE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3495,9 +3495,9 @@ Color Attachment0
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly COLOR_ATTACHMENT0: GLenum--><!--Device-WebGLRenderingContextBase-readonly COLOR_ATTACHMENT0: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3513,9 +3513,9 @@ Color buffer clear value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly COLOR_BUFFER_BIT: GLenum--><!--Device-WebGLRenderingContextBase-readonly COLOR_BUFFER_BIT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3531,9 +3531,9 @@ Color clear value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly COLOR_CLEAR_VALUE: GLenum--><!--Device-WebGLRenderingContextBase-readonly COLOR_CLEAR_VALUE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3549,9 +3549,9 @@ Color write mask
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly COLOR_WRITEMASK: GLenum--><!--Device-WebGLRenderingContextBase-readonly COLOR_WRITEMASK: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3567,9 +3567,9 @@ Compile status
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly COMPILE_STATUS: GLenum--><!--Device-WebGLRenderingContextBase-readonly COMPILE_STATUS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3585,9 +3585,9 @@ Compressed texture formats
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly COMPRESSED_TEXTURE_FORMATS: GLenum--><!--Device-WebGLRenderingContextBase-readonly COMPRESSED_TEXTURE_FORMATS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3603,9 +3603,9 @@ Constant alpha blend factor
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly CONSTANT_ALPHA: GLenum--><!--Device-WebGLRenderingContextBase-readonly CONSTANT_ALPHA: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3621,9 +3621,9 @@ Constant color blend factor
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly CONSTANT_COLOR: GLenum--><!--Device-WebGLRenderingContextBase-readonly CONSTANT_COLOR: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3639,9 +3639,9 @@ Context lost WebGL
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly CONTEXT_LOST_WEBGL: GLenum--><!--Device-WebGLRenderingContextBase-readonly CONTEXT_LOST_WEBGL: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3657,9 +3657,9 @@ Enable cap: cull face
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly CULL_FACE: GLenum--><!--Device-WebGLRenderingContextBase-readonly CULL_FACE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3675,9 +3675,9 @@ Cull face mode
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly CULL_FACE_MODE: GLenum--><!--Device-WebGLRenderingContextBase-readonly CULL_FACE_MODE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3693,9 +3693,9 @@ Current Program
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly CURRENT_PROGRAM: GLenum--><!--Device-WebGLRenderingContextBase-readonly CURRENT_PROGRAM: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3711,9 +3711,9 @@ Current vertex attribute
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly CURRENT_VERTEX_ATTRIB: GLenum--><!--Device-WebGLRenderingContextBase-readonly CURRENT_VERTEX_ATTRIB: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3729,9 +3729,9 @@ Front face: clockwise
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly CW: GLenum--><!--Device-WebGLRenderingContextBase-readonly CW: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3747,9 +3747,9 @@ Stencil operation: decrement
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly DECR: GLenum--><!--Device-WebGLRenderingContextBase-readonly DECR: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3765,9 +3765,9 @@ Stencil operation: decrement wrap
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly DECR_WRAP: GLenum--><!--Device-WebGLRenderingContextBase-readonly DECR_WRAP: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3783,9 +3783,9 @@ Delete Status
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly DELETE_STATUS: GLenum--><!--Device-WebGLRenderingContextBase-readonly DELETE_STATUS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3801,9 +3801,9 @@ Depth Attachment
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly DEPTH_ATTACHMENT: GLenum--><!--Device-WebGLRenderingContextBase-readonly DEPTH_ATTACHMENT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3819,9 +3819,9 @@ Depth bits
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly DEPTH_BITS: GLenum--><!--Device-WebGLRenderingContextBase-readonly DEPTH_BITS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3837,9 +3837,9 @@ Depth buffer clear value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly DEPTH_BUFFER_BIT: GLenum--><!--Device-WebGLRenderingContextBase-readonly DEPTH_BUFFER_BIT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3855,9 +3855,9 @@ Depth clear value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly DEPTH_CLEAR_VALUE: GLenum--><!--Device-WebGLRenderingContextBase-readonly DEPTH_CLEAR_VALUE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3873,9 +3873,9 @@ Pixel format: depth component
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly DEPTH_COMPONENT: GLenum--><!--Device-WebGLRenderingContextBase-readonly DEPTH_COMPONENT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3891,9 +3891,9 @@ Renderbuffer internal format: depth component16
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly DEPTH_COMPONENT16: GLenum--><!--Device-WebGLRenderingContextBase-readonly DEPTH_COMPONENT16: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3909,9 +3909,9 @@ Depth function
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly DEPTH_FUNC: GLenum--><!--Device-WebGLRenderingContextBase-readonly DEPTH_FUNC: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3927,9 +3927,9 @@ Depth range
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly DEPTH_RANGE: GLenum--><!--Device-WebGLRenderingContextBase-readonly DEPTH_RANGE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3945,9 +3945,9 @@ Renderbuffer internal format: depth stencil
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly DEPTH_STENCIL: GLenum--><!--Device-WebGLRenderingContextBase-readonly DEPTH_STENCIL: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3963,9 +3963,9 @@ Depth Stencil Attachment
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly DEPTH_STENCIL_ATTACHMENT: GLenum--><!--Device-WebGLRenderingContextBase-readonly DEPTH_STENCIL_ATTACHMENT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3981,9 +3981,9 @@ Enable cap: depth test
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly DEPTH_TEST: GLenum--><!--Device-WebGLRenderingContextBase-readonly DEPTH_TEST: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3999,9 +3999,9 @@ Depth write mask
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly DEPTH_WRITEMASK: GLenum--><!--Device-WebGLRenderingContextBase-readonly DEPTH_WRITEMASK: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4017,9 +4017,9 @@ Enable cap: dither
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly DITHER: GLenum--><!--Device-WebGLRenderingContextBase-readonly DITHER: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4035,9 +4035,9 @@ Hint: don't care
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly DONT_CARE: GLenum--><!--Device-WebGLRenderingContextBase-readonly DONT_CARE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4053,9 +4053,9 @@ Drawing buffer height
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly drawingBufferHeight: GLsizei--><!--Device-WebGLRenderingContextBase-readonly drawingBufferHeight: GLsizei-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4071,9 +4071,9 @@ Drawing buffer width
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly drawingBufferWidth: GLsizei--><!--Device-WebGLRenderingContextBase-readonly drawingBufferWidth: GLsizei-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4089,9 +4089,9 @@ Destination alpha blend factor
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly DST_ALPHA: GLenum--><!--Device-WebGLRenderingContextBase-readonly DST_ALPHA: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4107,9 +4107,9 @@ Destination color blend factor
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly DST_COLOR: GLenum--><!--Device-WebGLRenderingContextBase-readonly DST_COLOR: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4125,9 +4125,9 @@ Buffer usage: dynamic draw
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly DYNAMIC_DRAW: GLenum--><!--Device-WebGLRenderingContextBase-readonly DYNAMIC_DRAW: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4143,9 +4143,9 @@ Buffer target: element array buffer
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly ELEMENT_ARRAY_BUFFER: GLenum--><!--Device-WebGLRenderingContextBase-readonly ELEMENT_ARRAY_BUFFER: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4161,9 +4161,9 @@ Element array buffer binding point
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly ELEMENT_ARRAY_BUFFER_BINDING: GLenum--><!--Device-WebGLRenderingContextBase-readonly ELEMENT_ARRAY_BUFFER_BINDING: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4179,9 +4179,9 @@ Comparison function: equal
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly EQUAL: GLenum--><!--Device-WebGLRenderingContextBase-readonly EQUAL: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4197,9 +4197,9 @@ Hint: fastest
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FASTEST: GLenum--><!--Device-WebGLRenderingContextBase-readonly FASTEST: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4215,9 +4215,9 @@ Data type: float
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FLOAT: GLenum--><!--Device-WebGLRenderingContextBase-readonly FLOAT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4233,9 +4233,9 @@ Uniform type: float mat2
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FLOAT_MAT2: GLenum--><!--Device-WebGLRenderingContextBase-readonly FLOAT_MAT2: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4251,9 +4251,9 @@ Uniform type: float mat3
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FLOAT_MAT3: GLenum--><!--Device-WebGLRenderingContextBase-readonly FLOAT_MAT3: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4269,9 +4269,9 @@ Uniform type: float mat4
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FLOAT_MAT4: GLenum--><!--Device-WebGLRenderingContextBase-readonly FLOAT_MAT4: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4287,9 +4287,9 @@ Uniform type: float vec2
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FLOAT_VEC2: GLenum--><!--Device-WebGLRenderingContextBase-readonly FLOAT_VEC2: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4305,9 +4305,9 @@ Uniform type: float vec3
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FLOAT_VEC3: GLenum--><!--Device-WebGLRenderingContextBase-readonly FLOAT_VEC3: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4323,9 +4323,9 @@ Uniform type: float vec4
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FLOAT_VEC4: GLenum--><!--Device-WebGLRenderingContextBase-readonly FLOAT_VEC4: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4341,9 +4341,9 @@ Shader type: fragment shader
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FRAGMENT_SHADER: GLenum--><!--Device-WebGLRenderingContextBase-readonly FRAGMENT_SHADER: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4359,9 +4359,9 @@ Framebuffer target
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER: GLenum--><!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4377,9 +4377,9 @@ Framebuffer attachment parameter: object name
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_OBJECT_NAME: GLenum--><!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_OBJECT_NAME: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4395,9 +4395,9 @@ Framebuffer attachment parameter: object type
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE: GLenum--><!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4413,9 +4413,9 @@ Framebuffer Attachment Texture Cube Map Face
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE: GLenum--><!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4431,9 +4431,9 @@ Framebuffer Attachment Texture Level
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL: GLenum--><!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4449,9 +4449,9 @@ Framebuffer binding
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER_BINDING: GLenum--><!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER_BINDING: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4467,9 +4467,9 @@ Framebuffer Complete
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER_COMPLETE: GLenum--><!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER_COMPLETE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4485,9 +4485,9 @@ Framebuffer status: incomplete attachment
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER_INCOMPLETE_ATTACHMENT: GLenum--><!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER_INCOMPLETE_ATTACHMENT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4503,9 +4503,9 @@ Framebuffer status: incomplete dimensions
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER_INCOMPLETE_DIMENSIONS: GLenum--><!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER_INCOMPLETE_DIMENSIONS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4521,9 +4521,9 @@ Framebuffer status: incomplete missing attachment
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT: GLenum--><!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4539,9 +4539,9 @@ Framebuffer status: unsupported
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER_UNSUPPORTED: GLenum--><!--Device-WebGLRenderingContextBase-readonly FRAMEBUFFER_UNSUPPORTED: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4557,9 +4557,9 @@ Face mode: front
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FRONT: GLenum--><!--Device-WebGLRenderingContextBase-readonly FRONT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4575,9 +4575,9 @@ Face mode: front and back
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FRONT_AND_BACK: GLenum--><!--Device-WebGLRenderingContextBase-readonly FRONT_AND_BACK: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4593,9 +4593,9 @@ Front face mode
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FRONT_FACE: GLenum--><!--Device-WebGLRenderingContextBase-readonly FRONT_FACE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4611,9 +4611,9 @@ Blend equation: add
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FUNC_ADD: GLenum--><!--Device-WebGLRenderingContextBase-readonly FUNC_ADD: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4629,9 +4629,9 @@ Blend equation: reverse subtract
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FUNC_REVERSE_SUBTRACT: GLenum--><!--Device-WebGLRenderingContextBase-readonly FUNC_REVERSE_SUBTRACT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4647,9 +4647,9 @@ Blend equation: subtract
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly FUNC_SUBTRACT: GLenum--><!--Device-WebGLRenderingContextBase-readonly FUNC_SUBTRACT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4665,9 +4665,9 @@ Generate mipmap hint
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly GENERATE_MIPMAP_HINT: GLenum--><!--Device-WebGLRenderingContextBase-readonly GENERATE_MIPMAP_HINT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4683,9 +4683,9 @@ Comparison function: greater or equal
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly GEQUAL: GLenum--><!--Device-WebGLRenderingContextBase-readonly GEQUAL: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4701,9 +4701,9 @@ Comparison function: greater
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly GREATER: GLenum--><!--Device-WebGLRenderingContextBase-readonly GREATER: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4719,9 +4719,9 @@ Green bits
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly GREEN_BITS: GLenum--><!--Device-WebGLRenderingContextBase-readonly GREEN_BITS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4737,9 +4737,9 @@ Precision: high float
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly HIGH_FLOAT: GLenum--><!--Device-WebGLRenderingContextBase-readonly HIGH_FLOAT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4755,9 +4755,9 @@ Precision: high int
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly HIGH_INT: GLenum--><!--Device-WebGLRenderingContextBase-readonly HIGH_INT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4773,9 +4773,9 @@ Implementation color read format
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly IMPLEMENTATION_COLOR_READ_FORMAT: GLenum--><!--Device-WebGLRenderingContextBase-readonly IMPLEMENTATION_COLOR_READ_FORMAT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4791,9 +4791,9 @@ Implementation color read type
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly IMPLEMENTATION_COLOR_READ_TYPE: GLenum--><!--Device-WebGLRenderingContextBase-readonly IMPLEMENTATION_COLOR_READ_TYPE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4809,9 +4809,9 @@ Stencil operation: increment
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly INCR: GLenum--><!--Device-WebGLRenderingContextBase-readonly INCR: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4827,9 +4827,9 @@ Stencil operation: increment wrap
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly INCR_WRAP: GLenum--><!--Device-WebGLRenderingContextBase-readonly INCR_WRAP: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4845,9 +4845,9 @@ Data type: int
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly INT: GLenum--><!--Device-WebGLRenderingContextBase-readonly INT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4863,9 +4863,9 @@ Uniform type: int vec2
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly INT_VEC2: GLenum--><!--Device-WebGLRenderingContextBase-readonly INT_VEC2: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4881,9 +4881,9 @@ Uniform type: int vec3
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly INT_VEC3: GLenum--><!--Device-WebGLRenderingContextBase-readonly INT_VEC3: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4899,9 +4899,9 @@ Uniform type: int vec4
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly INT_VEC4: GLenum--><!--Device-WebGLRenderingContextBase-readonly INT_VEC4: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4917,9 +4917,9 @@ Error code: invalid enum
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly INVALID_ENUM: GLenum--><!--Device-WebGLRenderingContextBase-readonly INVALID_ENUM: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4935,9 +4935,9 @@ Error code: invalid framebuffer operation
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly INVALID_FRAMEBUFFER_OPERATION: GLenum--><!--Device-WebGLRenderingContextBase-readonly INVALID_FRAMEBUFFER_OPERATION: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4953,9 +4953,9 @@ Error code: invalid operation
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly INVALID_OPERATION: GLenum--><!--Device-WebGLRenderingContextBase-readonly INVALID_OPERATION: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4971,9 +4971,9 @@ Error code: invalid value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly INVALID_VALUE: GLenum--><!--Device-WebGLRenderingContextBase-readonly INVALID_VALUE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4989,9 +4989,9 @@ Stencil operation: invert
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly INVERT: GLenum--><!--Device-WebGLRenderingContextBase-readonly INVERT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5007,9 +5007,9 @@ Stencil operation: keep
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly KEEP: GLenum--><!--Device-WebGLRenderingContextBase-readonly KEEP: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5025,9 +5025,9 @@ Comparison function: less or equal
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly LEQUAL: GLenum--><!--Device-WebGLRenderingContextBase-readonly LEQUAL: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5043,9 +5043,9 @@ Comparison function: less
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly LESS: GLenum--><!--Device-WebGLRenderingContextBase-readonly LESS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5061,9 +5061,9 @@ Primitive type: line strip
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly LINE_LOOP: GLenum--><!--Device-WebGLRenderingContextBase-readonly LINE_LOOP: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5079,9 +5079,9 @@ Primitive type: line strip
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly LINE_STRIP: GLenum--><!--Device-WebGLRenderingContextBase-readonly LINE_STRIP: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5097,9 +5097,9 @@ Line width
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly LINE_WIDTH: GLenum--><!--Device-WebGLRenderingContextBase-readonly LINE_WIDTH: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5115,9 +5115,9 @@ Filter: linear
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly LINEAR: GLenum--><!--Device-WebGLRenderingContextBase-readonly LINEAR: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5133,9 +5133,9 @@ Mipmap filter: linear mipmap linear
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly LINEAR_MIPMAP_LINEAR: GLenum--><!--Device-WebGLRenderingContextBase-readonly LINEAR_MIPMAP_LINEAR: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5151,9 +5151,9 @@ Mipmap filter: linear mipmap nearest
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly LINEAR_MIPMAP_NEAREST: GLenum--><!--Device-WebGLRenderingContextBase-readonly LINEAR_MIPMAP_NEAREST: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5169,9 +5169,9 @@ Primitive type: lines
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly LINES: GLenum--><!--Device-WebGLRenderingContextBase-readonly LINES: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5187,9 +5187,9 @@ Link Status
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly LINK_STATUS: GLenum--><!--Device-WebGLRenderingContextBase-readonly LINK_STATUS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5205,9 +5205,9 @@ Precision: low float
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly LOW_FLOAT: GLenum--><!--Device-WebGLRenderingContextBase-readonly LOW_FLOAT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5223,9 +5223,9 @@ Precision: low int
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly LOW_INT: GLenum--><!--Device-WebGLRenderingContextBase-readonly LOW_INT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5241,9 +5241,9 @@ Pixel format: luminance
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly LUMINANCE: GLenum--><!--Device-WebGLRenderingContextBase-readonly LUMINANCE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5259,9 +5259,9 @@ Pixel format: luminance alpha
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly LUMINANCE_ALPHA: GLenum--><!--Device-WebGLRenderingContextBase-readonly LUMINANCE_ALPHA: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5277,9 +5277,9 @@ Max combined texture image units
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly MAX_COMBINED_TEXTURE_IMAGE_UNITS: GLenum--><!--Device-WebGLRenderingContextBase-readonly MAX_COMBINED_TEXTURE_IMAGE_UNITS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5295,9 +5295,9 @@ Max cube map texture size
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly MAX_CUBE_MAP_TEXTURE_SIZE: GLenum--><!--Device-WebGLRenderingContextBase-readonly MAX_CUBE_MAP_TEXTURE_SIZE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5313,9 +5313,9 @@ Max Fragment Uniform Vectors
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly MAX_FRAGMENT_UNIFORM_VECTORS: GLenum--><!--Device-WebGLRenderingContextBase-readonly MAX_FRAGMENT_UNIFORM_VECTORS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5331,9 +5331,9 @@ Max renderbuffer size
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly MAX_RENDERBUFFER_SIZE: GLenum--><!--Device-WebGLRenderingContextBase-readonly MAX_RENDERBUFFER_SIZE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5349,9 +5349,9 @@ Max Texture Image Units
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly MAX_TEXTURE_IMAGE_UNITS: GLenum--><!--Device-WebGLRenderingContextBase-readonly MAX_TEXTURE_IMAGE_UNITS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5367,9 +5367,9 @@ Max texture size
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly MAX_TEXTURE_SIZE: GLenum--><!--Device-WebGLRenderingContextBase-readonly MAX_TEXTURE_SIZE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5385,9 +5385,9 @@ Max varying vectors
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly MAX_VARYING_VECTORS: GLenum--><!--Device-WebGLRenderingContextBase-readonly MAX_VARYING_VECTORS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5403,9 +5403,9 @@ Max vertex attribs
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly MAX_VERTEX_ATTRIBS: GLenum--><!--Device-WebGLRenderingContextBase-readonly MAX_VERTEX_ATTRIBS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5421,9 +5421,9 @@ Max Vertex Texture Image Units
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly MAX_VERTEX_TEXTURE_IMAGE_UNITS: GLenum--><!--Device-WebGLRenderingContextBase-readonly MAX_VERTEX_TEXTURE_IMAGE_UNITS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5439,9 +5439,9 @@ Max vertex uniform vectors
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly MAX_VERTEX_UNIFORM_VECTORS: GLenum--><!--Device-WebGLRenderingContextBase-readonly MAX_VERTEX_UNIFORM_VECTORS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5457,9 +5457,9 @@ Max viewport dims
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly MAX_VIEWPORT_DIMS: GLenum--><!--Device-WebGLRenderingContextBase-readonly MAX_VIEWPORT_DIMS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5475,9 +5475,9 @@ Precision: medium float
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly MEDIUM_FLOAT: GLenum--><!--Device-WebGLRenderingContextBase-readonly MEDIUM_FLOAT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5493,9 +5493,9 @@ Precision: medium int
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly MEDIUM_INT: GLenum--><!--Device-WebGLRenderingContextBase-readonly MEDIUM_INT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5511,9 +5511,9 @@ Texture wrap: mirrored repeat
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly MIRRORED_REPEAT: GLenum--><!--Device-WebGLRenderingContextBase-readonly MIRRORED_REPEAT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5529,9 +5529,9 @@ Filter: nearest
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly NEAREST: GLenum--><!--Device-WebGLRenderingContextBase-readonly NEAREST: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5547,9 +5547,9 @@ Mipmap filter: nearest mipmap linear
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly NEAREST_MIPMAP_LINEAR: GLenum--><!--Device-WebGLRenderingContextBase-readonly NEAREST_MIPMAP_LINEAR: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5565,9 +5565,9 @@ Mipmap filter: nearest mipmap nearest
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly NEAREST_MIPMAP_NEAREST: GLenum--><!--Device-WebGLRenderingContextBase-readonly NEAREST_MIPMAP_NEAREST: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5583,9 +5583,9 @@ Never
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly NEVER: GLenum--><!--Device-WebGLRenderingContextBase-readonly NEVER: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5601,9 +5601,9 @@ Hint: nicest
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly NICEST: GLenum--><!--Device-WebGLRenderingContextBase-readonly NICEST: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5619,9 +5619,9 @@ Error code: no error
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly NO_ERROR: GLenum--><!--Device-WebGLRenderingContextBase-readonly NO_ERROR: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5637,9 +5637,9 @@ None
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly NONE: GLenum--><!--Device-WebGLRenderingContextBase-readonly NONE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5655,9 +5655,9 @@ Comparison function: not equal
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly NOTEQUAL: GLenum--><!--Device-WebGLRenderingContextBase-readonly NOTEQUAL: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5673,9 +5673,9 @@ One value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly ONE: GLenum--><!--Device-WebGLRenderingContextBase-readonly ONE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5691,9 +5691,9 @@ One minus constant alpha blend factor
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly ONE_MINUS_CONSTANT_ALPHA: GLenum--><!--Device-WebGLRenderingContextBase-readonly ONE_MINUS_CONSTANT_ALPHA: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5709,9 +5709,9 @@ One minus constant color blend factor
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly ONE_MINUS_CONSTANT_COLOR: GLenum--><!--Device-WebGLRenderingContextBase-readonly ONE_MINUS_CONSTANT_COLOR: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5727,9 +5727,9 @@ One minus destination alpha blend factor
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly ONE_MINUS_DST_ALPHA: GLenum--><!--Device-WebGLRenderingContextBase-readonly ONE_MINUS_DST_ALPHA: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5745,9 +5745,9 @@ One minus destination color blend factor
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly ONE_MINUS_DST_COLOR: GLenum--><!--Device-WebGLRenderingContextBase-readonly ONE_MINUS_DST_COLOR: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5763,9 +5763,9 @@ One minus source alpha blend factor
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly ONE_MINUS_SRC_ALPHA: GLenum--><!--Device-WebGLRenderingContextBase-readonly ONE_MINUS_SRC_ALPHA: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5781,9 +5781,9 @@ One minus source color blend factor
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly ONE_MINUS_SRC_COLOR: GLenum--><!--Device-WebGLRenderingContextBase-readonly ONE_MINUS_SRC_COLOR: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5799,9 +5799,9 @@ Error code: out of memory
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly OUT_OF_MEMORY: GLenum--><!--Device-WebGLRenderingContextBase-readonly OUT_OF_MEMORY: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5817,9 +5817,9 @@ Pack alignment
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly PACK_ALIGNMENT: GLenum--><!--Device-WebGLRenderingContextBase-readonly PACK_ALIGNMENT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5835,9 +5835,9 @@ Primitive type: points
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly POINTS: GLenum--><!--Device-WebGLRenderingContextBase-readonly POINTS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5853,9 +5853,9 @@ Polygon offset factor
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly POLYGON_OFFSET_FACTOR: GLenum--><!--Device-WebGLRenderingContextBase-readonly POLYGON_OFFSET_FACTOR: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5871,9 +5871,9 @@ Enable cap: polygon offset fill
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly POLYGON_OFFSET_FILL: GLenum--><!--Device-WebGLRenderingContextBase-readonly POLYGON_OFFSET_FILL: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5889,9 +5889,9 @@ Polygon offset units
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly POLYGON_OFFSET_UNITS: GLenum--><!--Device-WebGLRenderingContextBase-readonly POLYGON_OFFSET_UNITS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5907,9 +5907,9 @@ Red bits
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly RED_BITS: GLenum--><!--Device-WebGLRenderingContextBase-readonly RED_BITS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5925,9 +5925,9 @@ Renderbuffer target
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER: GLenum--><!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5943,9 +5943,9 @@ Renderbuffer parameter: alpha size
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER_ALPHA_SIZE: GLenum--><!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER_ALPHA_SIZE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5961,9 +5961,9 @@ Renderbuffer binding
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER_BINDING: GLenum--><!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER_BINDING: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5979,9 +5979,9 @@ Renderbuffer parameter: blue size
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER_BLUE_SIZE: GLenum--><!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER_BLUE_SIZE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5997,9 +5997,9 @@ Renderbuffer parameter: depth size
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER_DEPTH_SIZE: GLenum--><!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER_DEPTH_SIZE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6015,9 +6015,9 @@ Renderbuffer parameter: green size
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER_GREEN_SIZE: GLenum--><!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER_GREEN_SIZE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6033,9 +6033,9 @@ Renderbuffer parameter: height
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER_HEIGHT: GLenum--><!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER_HEIGHT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6051,9 +6051,9 @@ Renderbuffer parameter: internal format
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER_INTERNAL_FORMAT: GLenum--><!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER_INTERNAL_FORMAT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6069,9 +6069,9 @@ Renderbuffer parameter: red size
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER_RED_SIZE: GLenum--><!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER_RED_SIZE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6087,9 +6087,9 @@ Renderbuffer parameter: stencil size
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER_STENCIL_SIZE: GLenum--><!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER_STENCIL_SIZE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6105,9 +6105,9 @@ Renderbuffer parameter: width
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER_WIDTH: GLenum--><!--Device-WebGLRenderingContextBase-readonly RENDERBUFFER_WIDTH: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6123,9 +6123,9 @@ Renderer name
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly RENDERER: GLenum--><!--Device-WebGLRenderingContextBase-readonly RENDERER: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6141,9 +6141,9 @@ Texture wrap: repeat
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly REPEAT: GLenum--><!--Device-WebGLRenderingContextBase-readonly REPEAT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6159,9 +6159,9 @@ Stencil operation: replace
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly REPLACE: GLenum--><!--Device-WebGLRenderingContextBase-readonly REPLACE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6177,9 +6177,9 @@ Pixel format: RGB
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly RGB: GLenum--><!--Device-WebGLRenderingContextBase-readonly RGB: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6195,9 +6195,9 @@ Renderbuffer internal format: RGB565
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly RGB565: GLenum--><!--Device-WebGLRenderingContextBase-readonly RGB565: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6213,9 +6213,9 @@ Renderbuffer internal format: RGB5_A1
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly RGB5_A1: GLenum--><!--Device-WebGLRenderingContextBase-readonly RGB5_A1: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6231,9 +6231,9 @@ Pixel format: RGBA
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly RGBA: GLenum--><!--Device-WebGLRenderingContextBase-readonly RGBA: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6249,9 +6249,9 @@ Renderbuffer internal format: RGBA4
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly RGBA4: GLenum--><!--Device-WebGLRenderingContextBase-readonly RGBA4: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6267,9 +6267,9 @@ Enable cap: sample alpha to coverage
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly SAMPLE_ALPHA_TO_COVERAGE: GLenum--><!--Device-WebGLRenderingContextBase-readonly SAMPLE_ALPHA_TO_COVERAGE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6285,9 +6285,9 @@ Sample buffers
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly SAMPLE_BUFFERS: GLenum--><!--Device-WebGLRenderingContextBase-readonly SAMPLE_BUFFERS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6303,9 +6303,9 @@ Enable cap: sample coverage
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly SAMPLE_COVERAGE: GLenum--><!--Device-WebGLRenderingContextBase-readonly SAMPLE_COVERAGE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6321,9 +6321,9 @@ Sample coverage invert
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly SAMPLE_COVERAGE_INVERT: GLenum--><!--Device-WebGLRenderingContextBase-readonly SAMPLE_COVERAGE_INVERT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6339,9 +6339,9 @@ Sample coverage value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly SAMPLE_COVERAGE_VALUE: GLenum--><!--Device-WebGLRenderingContextBase-readonly SAMPLE_COVERAGE_VALUE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6357,9 +6357,9 @@ Sampler type: 2D
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly SAMPLER_2D: GLenum--><!--Device-WebGLRenderingContextBase-readonly SAMPLER_2D: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6375,9 +6375,9 @@ Sampler type: cube
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly SAMPLER_CUBE: GLenum--><!--Device-WebGLRenderingContextBase-readonly SAMPLER_CUBE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6393,9 +6393,9 @@ Samples
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly SAMPLES: GLenum--><!--Device-WebGLRenderingContextBase-readonly SAMPLES: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6411,9 +6411,9 @@ Scissor box
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly SCISSOR_BOX: GLenum--><!--Device-WebGLRenderingContextBase-readonly SCISSOR_BOX: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6429,9 +6429,9 @@ Enable cap: scissor test
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly SCISSOR_TEST: GLenum--><!--Device-WebGLRenderingContextBase-readonly SCISSOR_TEST: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6447,9 +6447,9 @@ Shader Type
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly SHADER_TYPE: GLenum--><!--Device-WebGLRenderingContextBase-readonly SHADER_TYPE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6465,9 +6465,9 @@ Shading Language Version
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly SHADING_LANGUAGE_VERSION: GLenum--><!--Device-WebGLRenderingContextBase-readonly SHADING_LANGUAGE_VERSION: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6483,9 +6483,9 @@ Data type: short
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly SHORT: GLenum--><!--Device-WebGLRenderingContextBase-readonly SHORT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6501,9 +6501,9 @@ Source alpha blend factor
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly SRC_ALPHA: GLenum--><!--Device-WebGLRenderingContextBase-readonly SRC_ALPHA: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6519,9 +6519,9 @@ Source alpha saturate blend factor
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly SRC_ALPHA_SATURATE: GLenum--><!--Device-WebGLRenderingContextBase-readonly SRC_ALPHA_SATURATE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6537,9 +6537,9 @@ Source color blend factor
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly SRC_COLOR: GLenum--><!--Device-WebGLRenderingContextBase-readonly SRC_COLOR: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6555,9 +6555,9 @@ Buffer usage: static draw
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STATIC_DRAW: GLenum--><!--Device-WebGLRenderingContextBase-readonly STATIC_DRAW: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6573,9 +6573,9 @@ Stencil Attachment
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STENCIL_ATTACHMENT: GLenum--><!--Device-WebGLRenderingContextBase-readonly STENCIL_ATTACHMENT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6591,9 +6591,9 @@ Stencil back fail operation
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STENCIL_BACK_FAIL: GLenum--><!--Device-WebGLRenderingContextBase-readonly STENCIL_BACK_FAIL: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6609,9 +6609,9 @@ Stencil back function
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STENCIL_BACK_FUNC: GLenum--><!--Device-WebGLRenderingContextBase-readonly STENCIL_BACK_FUNC: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6627,9 +6627,9 @@ Stencil back pass depth fail operation
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STENCIL_BACK_PASS_DEPTH_FAIL: GLenum--><!--Device-WebGLRenderingContextBase-readonly STENCIL_BACK_PASS_DEPTH_FAIL: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6645,9 +6645,9 @@ Stencil back pass depth pass operation
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STENCIL_BACK_PASS_DEPTH_PASS: GLenum--><!--Device-WebGLRenderingContextBase-readonly STENCIL_BACK_PASS_DEPTH_PASS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6663,9 +6663,9 @@ Stencil back reference value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STENCIL_BACK_REF: GLenum--><!--Device-WebGLRenderingContextBase-readonly STENCIL_BACK_REF: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6681,9 +6681,9 @@ Stencil back value mask
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STENCIL_BACK_VALUE_MASK: GLenum--><!--Device-WebGLRenderingContextBase-readonly STENCIL_BACK_VALUE_MASK: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6699,9 +6699,9 @@ Stencil back write mask
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STENCIL_BACK_WRITEMASK: GLenum--><!--Device-WebGLRenderingContextBase-readonly STENCIL_BACK_WRITEMASK: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6717,9 +6717,9 @@ Stencil bits
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STENCIL_BITS: GLenum--><!--Device-WebGLRenderingContextBase-readonly STENCIL_BITS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6735,9 +6735,9 @@ Stencil buffer clear value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STENCIL_BUFFER_BIT: GLenum--><!--Device-WebGLRenderingContextBase-readonly STENCIL_BUFFER_BIT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6753,9 +6753,9 @@ Stencil clear value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STENCIL_CLEAR_VALUE: GLenum--><!--Device-WebGLRenderingContextBase-readonly STENCIL_CLEAR_VALUE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6771,9 +6771,9 @@ Stencil fail operation
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STENCIL_FAIL: GLenum--><!--Device-WebGLRenderingContextBase-readonly STENCIL_FAIL: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6789,9 +6789,9 @@ Stencil function
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STENCIL_FUNC: GLenum--><!--Device-WebGLRenderingContextBase-readonly STENCIL_FUNC: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6807,9 +6807,9 @@ Renderbuffer internal format: stencil index8
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STENCIL_INDEX8: GLenum--><!--Device-WebGLRenderingContextBase-readonly STENCIL_INDEX8: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6825,9 +6825,9 @@ Stencil pass depth fail operation
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STENCIL_PASS_DEPTH_FAIL: GLenum--><!--Device-WebGLRenderingContextBase-readonly STENCIL_PASS_DEPTH_FAIL: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6843,9 +6843,9 @@ Stencil pass depth pass operation
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STENCIL_PASS_DEPTH_PASS: GLenum--><!--Device-WebGLRenderingContextBase-readonly STENCIL_PASS_DEPTH_PASS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6861,9 +6861,9 @@ Stencil reference value
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STENCIL_REF: GLenum--><!--Device-WebGLRenderingContextBase-readonly STENCIL_REF: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6879,9 +6879,9 @@ Enable cap: stencil test
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STENCIL_TEST: GLenum--><!--Device-WebGLRenderingContextBase-readonly STENCIL_TEST: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6897,9 +6897,9 @@ Stencil value mask
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STENCIL_VALUE_MASK: GLenum--><!--Device-WebGLRenderingContextBase-readonly STENCIL_VALUE_MASK: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6915,9 +6915,9 @@ Stencil write mask
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STENCIL_WRITEMASK: GLenum--><!--Device-WebGLRenderingContextBase-readonly STENCIL_WRITEMASK: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6933,9 +6933,9 @@ Buffer usage: stream draw
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly STREAM_DRAW: GLenum--><!--Device-WebGLRenderingContextBase-readonly STREAM_DRAW: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6951,9 +6951,9 @@ Subpixel bits
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly SUBPIXEL_BITS: GLenum--><!--Device-WebGLRenderingContextBase-readonly SUBPIXEL_BITS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6969,9 +6969,9 @@ Texture target: texture
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6987,9 +6987,9 @@ Texture unit 0
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE0: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE0: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7005,9 +7005,9 @@ Texture unit 1
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE1: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE1: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7023,9 +7023,9 @@ Texture unit 10
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE10: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE10: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7041,9 +7041,9 @@ Texture unit 11
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE11: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE11: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7059,9 +7059,9 @@ Texture unit 12
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE12: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE12: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7077,9 +7077,9 @@ Texture unit 13
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE13: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE13: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7095,9 +7095,9 @@ Texture unit 14
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE14: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE14: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7113,9 +7113,9 @@ Texture unit 15
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE15: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE15: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7131,9 +7131,9 @@ Texture unit 16
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE16: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE16: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7149,9 +7149,9 @@ Texture unit 17
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE17: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE17: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7167,9 +7167,9 @@ Texture unit 18
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE18: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE18: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7185,9 +7185,9 @@ Texture unit 19
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE19: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE19: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7203,9 +7203,9 @@ Texture unit 2
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE2: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE2: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7221,9 +7221,9 @@ Texture unit 20
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE20: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE20: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7239,9 +7239,9 @@ Texture unit 21
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE21: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE21: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7257,9 +7257,9 @@ Texture unit 22
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE22: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE22: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7275,9 +7275,9 @@ Texture unit 23
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE23: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE23: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7293,9 +7293,9 @@ Texture unit 24
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE24: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE24: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7311,9 +7311,9 @@ Texture unit 25
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE25: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE25: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7329,9 +7329,9 @@ Texture unit 26
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE26: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE26: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7347,9 +7347,9 @@ Texture unit 27
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE27: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE27: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7365,9 +7365,9 @@ Texture unit 28
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE28: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE28: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7383,9 +7383,9 @@ Texture unit 29
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE29: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE29: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7401,9 +7401,9 @@ Texture unit 3
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE3: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE3: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7419,9 +7419,9 @@ Texture unit 30
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE30: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE30: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7437,9 +7437,9 @@ Texture unit 31
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE31: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE31: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7455,9 +7455,9 @@ Texture unit 4
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE4: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE4: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7473,9 +7473,9 @@ Texture unit 5
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE5: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE5: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7491,9 +7491,9 @@ Texture unit 6
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE6: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE6: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7509,9 +7509,9 @@ Texture unit 7
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE7: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE7: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7527,9 +7527,9 @@ Texture unit 8
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE8: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE8: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7545,9 +7545,9 @@ Texture unit 9
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE9: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE9: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7563,9 +7563,9 @@ Texture target: 2D
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE_2D: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE_2D: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7581,9 +7581,9 @@ Texture binding 2D
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE_BINDING_2D: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE_BINDING_2D: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7599,9 +7599,9 @@ Texture binding cube map
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE_BINDING_CUBE_MAP: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE_BINDING_CUBE_MAP: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7617,9 +7617,9 @@ Texture target: cube map
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE_CUBE_MAP: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE_CUBE_MAP: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7635,9 +7635,9 @@ Texture cube map negative X
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE_CUBE_MAP_NEGATIVE_X: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE_CUBE_MAP_NEGATIVE_X: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7653,9 +7653,9 @@ Texture cube map negative Y
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE_CUBE_MAP_NEGATIVE_Y: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE_CUBE_MAP_NEGATIVE_Y: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7671,9 +7671,9 @@ Texture cube map negative Z
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE_CUBE_MAP_NEGATIVE_Z: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE_CUBE_MAP_NEGATIVE_Z: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7689,9 +7689,9 @@ Texture cube map positive X
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE_CUBE_MAP_POSITIVE_X: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE_CUBE_MAP_POSITIVE_X: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7707,9 +7707,9 @@ Texture cube map positive Y
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE_CUBE_MAP_POSITIVE_Y: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE_CUBE_MAP_POSITIVE_Y: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7725,9 +7725,9 @@ Texture cube map positive Z
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE_CUBE_MAP_POSITIVE_Z: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE_CUBE_MAP_POSITIVE_Z: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7743,9 +7743,9 @@ Texture parameter: mag filter
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE_MAG_FILTER: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE_MAG_FILTER: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7761,9 +7761,9 @@ Texture parameter: min filter
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE_MIN_FILTER: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE_MIN_FILTER: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7779,9 +7779,9 @@ Texture parameter: wrap s
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE_WRAP_S: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE_WRAP_S: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7797,9 +7797,9 @@ Texture parameter: wrap t
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TEXTURE_WRAP_T: GLenum--><!--Device-WebGLRenderingContextBase-readonly TEXTURE_WRAP_T: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7815,9 +7815,9 @@ Primitive type: triangle fan
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TRIANGLE_FAN: GLenum--><!--Device-WebGLRenderingContextBase-readonly TRIANGLE_FAN: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7833,9 +7833,9 @@ Primitive type: triangle strip
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TRIANGLE_STRIP: GLenum--><!--Device-WebGLRenderingContextBase-readonly TRIANGLE_STRIP: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7851,9 +7851,9 @@ Primitive type: triangles
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly TRIANGLES: GLenum--><!--Device-WebGLRenderingContextBase-readonly TRIANGLES: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7869,9 +7869,9 @@ Unpack alignment
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly UNPACK_ALIGNMENT: GLenum--><!--Device-WebGLRenderingContextBase-readonly UNPACK_ALIGNMENT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7887,9 +7887,9 @@ Unpack option: colorspace conversion WebGL
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly UNPACK_COLORSPACE_CONVERSION_WEBGL: GLenum--><!--Device-WebGLRenderingContextBase-readonly UNPACK_COLORSPACE_CONVERSION_WEBGL: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7905,9 +7905,9 @@ Unpack option: flip Y WebGL
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly UNPACK_FLIP_Y_WEBGL: GLenum--><!--Device-WebGLRenderingContextBase-readonly UNPACK_FLIP_Y_WEBGL: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7923,9 +7923,9 @@ Unpack option: premultiply alpha WebGL
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly UNPACK_PREMULTIPLY_ALPHA_WEBGL: GLenum--><!--Device-WebGLRenderingContextBase-readonly UNPACK_PREMULTIPLY_ALPHA_WEBGL: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7941,9 +7941,9 @@ Data type: unsigned byte
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly UNSIGNED_BYTE: GLenum--><!--Device-WebGLRenderingContextBase-readonly UNSIGNED_BYTE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7959,9 +7959,9 @@ Data type: unsigned int
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly UNSIGNED_INT: GLenum--><!--Device-WebGLRenderingContextBase-readonly UNSIGNED_INT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7977,9 +7977,9 @@ Data type: unsigned short
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly UNSIGNED_SHORT: GLenum--><!--Device-WebGLRenderingContextBase-readonly UNSIGNED_SHORT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7995,9 +7995,9 @@ Unsigned short 5_5_5_1
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly UNSIGNED_SHORT_4_4_4_4: GLenum--><!--Device-WebGLRenderingContextBase-readonly UNSIGNED_SHORT_4_4_4_4: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -8013,9 +8013,9 @@ Unsigned short 5_5_5_1
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly UNSIGNED_SHORT_5_5_5_1: GLenum--><!--Device-WebGLRenderingContextBase-readonly UNSIGNED_SHORT_5_5_5_1: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -8031,9 +8031,9 @@ Unsigned short 5_6_5
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly UNSIGNED_SHORT_5_6_5: GLenum--><!--Device-WebGLRenderingContextBase-readonly UNSIGNED_SHORT_5_6_5: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -8049,9 +8049,9 @@ Validate Status
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly VALIDATE_STATUS: GLenum--><!--Device-WebGLRenderingContextBase-readonly VALIDATE_STATUS: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -8067,9 +8067,9 @@ Renderer vendor
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly VENDOR: GLenum--><!--Device-WebGLRenderingContextBase-readonly VENDOR: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -8085,9 +8085,9 @@ WebGL version
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly VERSION: GLenum--><!--Device-WebGLRenderingContextBase-readonly VERSION: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -8103,9 +8103,9 @@ Vertex attrib array: buffer binding
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_BUFFER_BINDING: GLenum--><!--Device-WebGLRenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_BUFFER_BINDING: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -8121,9 +8121,9 @@ Vertex attrib array: enabled
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_ENABLED: GLenum--><!--Device-WebGLRenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_ENABLED: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -8139,9 +8139,9 @@ Vertex attrib array: normalized
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_NORMALIZED: GLenum--><!--Device-WebGLRenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_NORMALIZED: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -8157,9 +8157,9 @@ Vertex attrib array: pointer
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_POINTER: GLenum--><!--Device-WebGLRenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_POINTER: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -8175,9 +8175,9 @@ Vertex attrib array: size
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_SIZE: GLenum--><!--Device-WebGLRenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_SIZE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -8193,9 +8193,9 @@ Vertex attrib array: stride
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_STRIDE: GLenum--><!--Device-WebGLRenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_STRIDE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -8211,9 +8211,9 @@ Vertex attrib array: type
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_TYPE: GLenum--><!--Device-WebGLRenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_TYPE: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -8229,9 +8229,9 @@ Shader type: vertex shader
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly VERTEX_SHADER: GLenum--><!--Device-WebGLRenderingContextBase-readonly VERTEX_SHADER: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -8247,9 +8247,9 @@ Viewport
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-WebGLRenderingContextBase-readonly VIEWPORT: GLenum--><!--Device-WebGLRenderingContextBase-readonly VIEWPORT: GLenum-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -8265,9 +8265,8 @@ Zero value
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGLRenderingContextBase-readonly ZERO: GLenum--><!--Device-WebGLRenderingContextBase-readonly ZERO: GLenum-End-->
-
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
-

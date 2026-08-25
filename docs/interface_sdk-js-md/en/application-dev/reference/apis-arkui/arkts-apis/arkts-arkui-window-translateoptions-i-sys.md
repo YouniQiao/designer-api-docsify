@@ -2,9 +2,9 @@
 
 Describes the translation parameters.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-window-interface TranslateOptions--><!--Device-window-interface TranslateOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -24,11 +24,11 @@ x?: double
 
 Distance to translate along the x-axis. The value is a floating-point number, the default value is 0.0, and the unit is px.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-TranslateOptions-x?: double--><!--Device-TranslateOptions-x?: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -42,11 +42,11 @@ y?: double
 
 Distance to translate along the y-axis. The value is a floating-point number, the default value is 0.0, and the unit is px.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-TranslateOptions-y?: double--><!--Device-TranslateOptions-y?: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -60,13 +60,12 @@ z?: double
 
 Distance to translate along the z-axis. The value is a floating-point number, the default value is 0.0, and the unit is px.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-TranslateOptions-z?: double--><!--Device-TranslateOptions-z?: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
-

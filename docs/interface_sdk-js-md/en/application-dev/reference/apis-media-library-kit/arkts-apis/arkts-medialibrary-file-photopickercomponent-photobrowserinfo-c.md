@@ -4,7 +4,7 @@ Represents information about the photo browser page.
 
 **Since:** 12
 
-<!--Device-unnamed-export declare class PhotoBrowserInfo--><!--Device-unnamed-export declare class PhotoBrowserInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -22,13 +22,12 @@ animatorParams?: AnimatorParams
 
 Animation for entering or exiting the photo browser page.
 
-**Type:** [AnimatorParams](../../apis-default/arkts-apis/arkts-file-photopickercomponent-animatorparams-c.md)
+**Type:** [AnimatorParams](arkts-medialibrary-file-photopickercomponent-animatorparams-c.md)
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PhotoBrowserInfo-animatorParams?: AnimatorParams--><!--Device-PhotoBrowserInfo-animatorParams?: AnimatorParams-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

@@ -4,7 +4,7 @@ Defines the details for triggering a geofence.
 
 **Since:** 23
 
-<!--Device-unnamed-export interface Trigger--><!--Device-unnamed-export interface Trigger-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -22,7 +22,7 @@ Details about a geofence.
 
 **Since:** 23
 
-<!--Device-Trigger-condition:Geofence--><!--Device-Trigger-condition:Geofence-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -36,11 +36,11 @@ displayTime?:int
 
 Display time of a live view, in seconds. The value ranges from 15 to 1800. The default value is **900**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
-<!--Device-Trigger-displayTime?:int--><!--Device-Trigger-displayTime?:int-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -58,9 +58,8 @@ Trigger type.
 
 **Since:** 23
 
-<!--Device-Trigger-type:TriggerType--><!--Device-Trigger-type:TriggerType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

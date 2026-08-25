@@ -2,11 +2,9 @@
 
 表示设备能力定级的枚举。
 
-**起始版本：** 24
+**起始版本：** 19
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-deviceInfo-enum PerformanceClassLevel--><!--Device-deviceInfo-enum PerformanceClassLevel-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -16,15 +14,11 @@
 CLASS_LEVEL_HIGH
 ```
 
-表示设备能力定级为高。
+值为0,表示设备能力定级为高。
 
-**起始版本：** 24
+**起始版本：** 19
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PerformanceClassLevel-CLASS_LEVEL_HIGH--><!--Device-PerformanceClassLevel-CLASS_LEVEL_HIGH-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -34,15 +28,11 @@ CLASS_LEVEL_HIGH
 CLASS_LEVEL_MEDIUM
 ```
 
-表示设备能力定级为中。
+值为1,表示设备能力定级为中。
 
-**起始版本：** 24
+**起始版本：** 19
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PerformanceClassLevel-CLASS_LEVEL_MEDIUM--><!--Device-PerformanceClassLevel-CLASS_LEVEL_MEDIUM-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -52,15 +42,10 @@ CLASS_LEVEL_MEDIUM
 CLASS_LEVEL_LOW
 ```
 
-表示设备能力定级为低。
+值为2,表示设备能力定级为低。
 
-**起始版本：** 24
+**起始版本：** 19
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PerformanceClassLevel-CLASS_LEVEL_LOW--><!--Device-PerformanceClassLevel-CLASS_LEVEL_LOW-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
-

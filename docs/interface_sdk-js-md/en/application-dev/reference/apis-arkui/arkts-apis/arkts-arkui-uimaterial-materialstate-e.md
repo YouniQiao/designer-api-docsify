@@ -4,7 +4,7 @@ Enumerates the material enabling states, indicating the states of the applicatio
 
 **Since:** 26.0.0
 
-<!--Device-uiMaterial-enum MaterialState--><!--Device-uiMaterial-enum MaterialState-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Default state. The immersive system material is enabled by default for the [Dial
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-MaterialState-DEFAULT = 0--><!--Device-MaterialState-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,15 +32,15 @@ Default state. The immersive system material is enabled by default for the [Dial
 ENABLE = 1
 ```
 
-Enabled state. The immersive system material is enabled by default for the [Dialog](../../../ui/arkts-base-dialog-overview.md), [Toast](../../../ui/arkts-create-toast.md), AlphabetIndexer, [ChipGroup](arkts-arkui-arkui-advanced-chipgroup-chipgroup-s.md), Chip, Select, Menu Control, Toggle, [SegmentButton](../../apis-default/arkts-apis/arkts-arkui-advanced-segmentbutton-segmentbutton-s.md), SegmentButtonV2, Slider, bindSheet, and SelectionMenu. After copyOption is set for the Text component, the immersive system material is enabled by default for the text menu triggered by long-pressing or double-clicking. In this state, the immersive system material style takes precedence over the background color, blur, shadow, and border style set for the components. You need to set whether to enable the immersive system material for other components.
+Enabled state. The immersive system material is enabled by default for the [Dialog](../../../ui/arkts-base-dialog-overview.md), [Toast](../../../ui/arkts-create-toast.md), AlphabetIndexer, [ChipGroup](arkts-arkui-arkui-advanced-chipgroup-chipgroup-s.md), Chip, Select, Menu Control, Toggle, [SegmentButton](arkts-arkui-arkui-advanced-segmentbutton-segmentbutton-s.md), SegmentButtonV2, Slider, bindSheet, and SelectionMenu. After copyOption is set for the Text component, the immersive system material is enabled by default for the text menu triggered by long-pressing or double-clicking. In this state, the immersive system material style takes precedence over the background color, blur, shadow, and border style set for the components. You need to set whether to enable the immersive system material for other components.
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-MaterialState-ENABLE = 1--><!--Device-MaterialState-ENABLE = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ Disabled state. The immersive system material cannot be enabled for any componen
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-MaterialState-DISABLE = 2--><!--Device-MaterialState-DISABLE = 2-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

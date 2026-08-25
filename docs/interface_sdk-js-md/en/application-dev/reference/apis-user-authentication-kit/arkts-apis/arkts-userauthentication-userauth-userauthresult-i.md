@@ -2,9 +2,9 @@
 
 Represents the user authentication result. If the authentication is successful, the authentication type and token information are returned. If the authentication fails, the corresponding error code is returned. This API is used to describe the result information after the authentication is complete. The application can obtain the result through the **onResult** callback of [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md).
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-userAuth-interface UserAuthResult--><!--Device-userAuth-interface UserAuthResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -24,11 +24,11 @@ Authentication type that is actually used when the authentication is successful.
 
 **Type:** [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-UserAuthResult-authType?: UserAuthType--><!--Device-UserAuthResult-authType?: UserAuthType-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -42,11 +42,11 @@ Enrolled credential status returned when the authentication is successful. It co
 
 **Type:** [EnrolledState](arkts-userauthentication-userauth-enrolledstate-i.md)
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-UserAuthResult-enrolledState?: EnrolledState--><!--Device-UserAuthResult-enrolledState?: EnrolledState-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -60,13 +60,13 @@ User authentication result. If the operation is successful, **SUCCESS(12500000)*
 - **FAIL(12500001)**: The authentication fails. - **CANCELED(12500003)**: The authentication is canceled. - **TIMEOUT(12500004)**: The authentication times out. - **LOCKED(12500009)**: The authenticator is locked. - **NOT_ENROLLED(12500010)**: The credential is not registered. - **PIN_EXPIRED(12500013)**: The screen lock PIN has expired.  
 For details about the complete error code list, see [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-UserAuthResult-result: int--><!--Device-UserAuthResult-result: int-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -80,11 +80,10 @@ Token information returned when the authentication is successful. The token cont
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-UserAuthResult-token?: Uint8Array--><!--Device-UserAuthResult-token?: Uint8Array-End-->
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
-

@@ -2,9 +2,9 @@
 
 唤醒在网络共享模式下的变化时的监听器。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-sharing-export interface InterfaceSharingStateInfo--><!--Device-sharing-export interface InterfaceSharingStateInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 
@@ -26,9 +26,9 @@ iface: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-InterfaceSharingStateInfo-iface: string--><!--Device-InterfaceSharingStateInfo-iface: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 
@@ -44,9 +44,9 @@ state: SharingIfaceState
 
 **类型：** [SharingIfaceState](arkts-network-sharing-sharingifacestate-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-InterfaceSharingStateInfo-state: SharingIfaceState--><!--Device-InterfaceSharingStateInfo-state: SharingIfaceState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 
@@ -62,11 +62,10 @@ type: SharingIfaceType
 
 **类型：** [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-InterfaceSharingStateInfo-type: SharingIfaceType--><!--Device-InterfaceSharingStateInfo-type: SharingIfaceType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 
 **系统接口：** 此接口为系统接口。
-

@@ -4,9 +4,7 @@ Interface for handling method invocations on a proxy object. Defines methods to 
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-reflect-interface InvocationHandler--><!--Device-reflect-interface InvocationHandler-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,26 +23,24 @@ Intercepts the getter operation for the each property on the proxy object.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-InvocationHandler-get(proxy: Proxy, method: InstanceMethod): Any--><!--Device-InvocationHandler-get(proxy: Proxy, method: InstanceMethod): Any-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| proxy | [Proxy](arkts-arkts-reflect-proxy-c.md) | Yes | The proxy object being accessed. |
-| method | [InstanceMethod](arkts-arkts-reflect-instancemethod-c.md) | Yes | Intercepted method. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| proxy | [Proxy](arkts-arkts-reflect-proxy-c.md) | Yes |
+| method | [InstanceMethod](arkts-arkts-reflect-instancemethod-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Any | The value of the attribute. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Any |
 
 ## invoke
 
@@ -56,27 +52,25 @@ Intercepts invocation of a method on the proxy object with the provided argument
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-InvocationHandler-invoke(proxy: Proxy, method: InstanceMethod, args: FixedArray<Any>): Any--><!--Device-InvocationHandler-invoke(proxy: Proxy, method: InstanceMethod, args: FixedArray<Any>): Any-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| proxy | [Proxy](arkts-arkts-reflect-proxy-c.md) | Yes | The proxy object on which the method is invoked. |
-| method | [InstanceMethod](arkts-arkts-reflect-instancemethod-c.md) | Yes | Intercepted method. |
-| args | FixedArray&lt;Any&gt; | Yes | An array of arguments that has been passed to the method. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| proxy | [Proxy](arkts-arkts-reflect-proxy-c.md) | Yes |
+| method | [InstanceMethod](arkts-arkts-reflect-instancemethod-c.md) | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | FixedArray & lt;Any & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Any | The result of the method call. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Any |
 
 ## set
 
@@ -88,19 +82,16 @@ Intercepts the setter operation of a method on the proxy object.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-InvocationHandler-set(proxy: Proxy, method: InstanceMethod, value: Any): void--><!--Device-InvocationHandler-set(proxy: Proxy, method: InstanceMethod, value: Any): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| proxy | [Proxy](arkts-arkts-reflect-proxy-c.md) | Yes | The proxy object being modified. |
-| method | [InstanceMethod](arkts-arkts-reflect-instancemethod-c.md) | Yes | Intercepted method. |
-| value | Any | Yes | The value that has been passed to assign through the setter. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| proxy | [Proxy](arkts-arkts-reflect-proxy-c.md) | Yes |
+| method | [InstanceMethod](arkts-arkts-reflect-instancemethod-c.md) | Yes |
+| value | Any | Yes |

@@ -6,7 +6,7 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-export declare class AttributeUpdater--><!--Device-unnamed-export declare class AttributeUpdater-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,19 +20,19 @@ applyNormalAttribute?(instance: T): void
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AttributeUpdater-applyNormalAttribute?(instance: T): void--><!--Device-AttributeUpdater-applyNormalAttribute?(instance: T): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| instance | T | 是 | 组件的属性类实例，开发者通过调用该实例的属性方法来设置或更新组件的正常态属性，比如Button组件的ButtonAttribute，Text组件的TextAttribute等。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| instance | T | 是 |
 
 ## initializeModifier
 
@@ -44,19 +44,19 @@ AttributeUpdater首次设置给组件时提供的样式。不建议在同一组�
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AttributeUpdater-initializeModifier(instance: T): void--><!--Device-AttributeUpdater-initializeModifier(instance: T): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| instance | T | 是 | 组件的属性类实例，开发者通过调用该实例的属性方法来初始化设置组件的样式属性，比如Button组件的ButtonAttribute，Text组件的TextAttribute等。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| instance | T | 是 |
 
 **示例**
 
@@ -121,19 +121,19 @@ onComponentChanged(component: T): void
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AttributeUpdater-onComponentChanged(component: T): void--><!--Device-AttributeUpdater-onComponentChanged(component: T): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| component | T | 是 | 组件的属性类实例，开发者通过调用该实例的属性方法来设置切换后组件的属性，比如Button组件的ButtonAttribute，Text组件的TextAttribute等。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [component](arkts-arkui-interop-compatiblecomponentinfo-i.md) | T | 是 |
 
 **示例**
 
@@ -184,6 +184,26 @@ struct UpdaterDemo4 {
 }
 ```
 
+## attribute
+
+```TypeScript
+get attribute(): T | undefined
+```
+
+获取AttributeUpdater中组件对应的属性类实例，通过该实例实现属性直通更新。需先通过组件的attributeModifier属性方法建立组件与AttributeUpdater的绑定关系，绑定后方可获取到属性类实例。不建 议在同一组件上同时用属性直通更新和属性方法设置相同属性；当与属性方法同时设置时，属性生效的原则为后设置的生效。
+
+**类型：** T
+
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## updateConstructorParams
 
 ```TypeScript
@@ -196,11 +216,10 @@ C代表组件的构造函数类型，比如Text组件的TextInterface，Image组
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AttributeUpdater-updateConstructorParams: C--><!--Device-AttributeUpdater-updateConstructorParams: C-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

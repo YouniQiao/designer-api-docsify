@@ -9,9 +9,7 @@ TabTitleBar是页签型标题栏组件，支持页签列表与关联内容的联
 
 **起始版本：** 10
 
-**装饰器类型：** @Component
-
-<!--Device-unnamed-export declare struct TabTitleBar--><!--Device-unnamed-export declare struct TabTitleBar-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,23 +19,19 @@ TabTitleBar是页签型标题栏组件，支持页签列表与关联内容的联
 import { TabTitleBar, TabTitleBarMenuItem, TabTitleBarTabItem } from '@kit.ArkUI';
 ```
 
-## menuItems
+## build
 
 ```TypeScript
-menuItems?: Array<TabTitleBarMenuItem>
+build(): void
 ```
 
-右侧菜单项目列表。若不传，则不显示右侧菜单项。
+The method to build component.
 
-**类型：** Array&lt;[TabTitleBarMenuItem](../../apis-default/arkts-apis/arkts-arkui-advanced-tabtitlebar-tabtitlebarmenuitem-c.md)&gt;
+**起始版本：** 23
 
-**起始版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TabTitleBar-menuItems?: Array<TabTitleBarMenuItem>--><!--Device-TabTitleBar-menuItems?: Array<TabTitleBarMenuItem>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,17 +43,33 @@ swiperContent: () => void
 
 页签列表关联的页面内容构造器。
 
-**类型：** () =&gt; void
-
 **起始版本：** 10
 
-**装饰器类型：** @BuilderParam
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-TabTitleBar-@BuilderParam  swiperContent: () => void--><!--Device-TabTitleBar-@BuilderParam  swiperContent: () => void-End-->
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## menuItems
+
+```TypeScript
+menuItems?: Array<TabTitleBarMenuItem>
+```
+
+右侧菜单项目列表。若不传，则不显示右侧菜单项。
+
+**类型：** Array&lt;[TabTitleBarMenuItem](arkts-arkui-arkui-advanced-tabtitlebar-tabtitlebarmenuitem-c.md)&gt;
+
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -71,15 +81,14 @@ tabItems: Array<TabTitleBarTabItem>
 
 左侧页签项目列表。
 
-**类型：** Array&lt;[TabTitleBarTabItem](../../apis-default/arkts-apis/arkts-arkui-advanced-tabtitlebar-tabtitlebartabitem-c.md)&gt;
+**类型：** Array&lt;[TabTitleBarTabItem](arkts-arkui-arkui-advanced-tabtitlebar-tabtitlebartabitem-c.md)&gt;
 
 **起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-TabTitleBar-tabItems: Array<TabTitleBarTabItem>--><!--Device-TabTitleBar-tabItems: Array<TabTitleBarTabItem>-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

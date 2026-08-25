@@ -20,26 +20,25 @@ function replyCustomEapData(result: CustomResult, data: EapData): void
 
 **起始版本：** 20
 
-**需要权限：** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-eap-function replyCustomEapData(result: CustomResult, data: EapData): void--><!--Device-eap-function replyCustomEapData(result: CustomResult, data: EapData): void-End-->
+**需要权限：** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| result | [CustomResult](arkts-network-eap-customresult-e.md) | 是 | 定制化判定结果。 |
-| data | [EapData](arkts-network-eap-eapdata-i.md) | 是 | 经过定制化的EAP数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| result | [CustomResult](arkts-network-eap-customresult-e.md) | 是 |
+| data | [EapData](arkts-network-eap-eapdata-i.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [33200004](../errorcode-net-eap.md#33200004-无效的eap结果值) | Invalid result |
-| [33200005](../errorcode-net-eap.md#33200005-无效的eap数据长度) | Invalid size of eap data |
-| [33200009](../errorcode-net-eap.md#33200009-netmanager进程不存在) | netmanager stop |
-| [33200099](../errorcode-net-eap.md#33200099-程序内部错误) | internal error |
-
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [33200004](../errorcode-net-eap.md#33200004-无效的eap结果值) |
+| [33200005](../errorcode-net-eap.md#33200005-无效的eap数据长度) |
+| [33200009](../errorcode-net-eap.md#33200009-netmanager进程不存在) |
+| [33200099](../errorcode-net-eap.md#33200099-程序内部错误) |

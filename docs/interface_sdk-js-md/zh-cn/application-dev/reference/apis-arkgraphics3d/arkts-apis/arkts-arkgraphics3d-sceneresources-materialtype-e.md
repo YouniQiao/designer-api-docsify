@@ -2,9 +2,9 @@
 
 场景中物体材质类型枚举，定义材质的渲染方式。@enum { int }
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export enum MaterialType--><!--Device-unnamed-export enum MaterialType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -16,9 +16,9 @@ SHADER = 1
 
 材质由着色器定义。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-MaterialType-SHADER = 1--><!--Device-MaterialType-SHADER = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -30,9 +30,9 @@ METALLIC_ROUGHNESS = 2
 
 采用基于物理渲染（PBR）的金属-粗糙度模型，通过金属度与粗糙度参数，模拟更真实的材质光照效果。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-MaterialType-METALLIC_ROUGHNESS = 2--><!--Device-MaterialType-METALLIC_ROUGHNESS = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -46,7 +46,7 @@ UNLIT = 3
 
 **起始版本：** 23
 
-<!--Device-MaterialType-UNLIT = 3--><!--Device-MaterialType-UNLIT = 3-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -60,7 +60,6 @@ OCCLUSION = 4
 
 **起始版本：** 23
 
-<!--Device-MaterialType-OCCLUSION = 4--><!--Device-MaterialType-OCCLUSION = 4-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

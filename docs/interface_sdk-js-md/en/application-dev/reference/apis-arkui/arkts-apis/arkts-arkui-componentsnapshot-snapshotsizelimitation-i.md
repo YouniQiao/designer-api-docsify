@@ -1,12 +1,10 @@
 # SnapshotSizeLimitation
 
-Defines the size limitation for component snapshot taking.
+Defines the size limit of a component screenshot.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-componentSnapshot-export interface SnapshotSizeLimitation--><!--Device-componentSnapshot-export interface SnapshotSizeLimitation-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,17 +20,17 @@ import { componentSnapshot } from '@kit.ArkUI';
 maxHeight: int
 ```
 
-Maximum height limitation for component snapshot, in PX.
+Maximum height of a component screenshot.Value range: (-∞, +∞)Unit: px.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SnapshotSizeLimitation-maxHeight: int--><!--Device-SnapshotSizeLimitation-maxHeight: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,17 +40,16 @@ Maximum height limitation for component snapshot, in PX.
 maxWidth: int
 ```
 
-Maximum width limitation for component snapshot, in PX.
+Maximum width of a component screenshot.Value range: (-∞, +∞)Unit: px.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SnapshotSizeLimitation-maxWidth: int--><!--Device-SnapshotSizeLimitation-maxWidth: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

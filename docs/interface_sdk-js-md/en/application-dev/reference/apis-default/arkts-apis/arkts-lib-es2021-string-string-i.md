@@ -1,8 +1,6 @@
 # String
 
-**Since:** -1
-
-<!--Device-unnamed-interface String--><!--Device-unnamed-interface String-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,21 +15,19 @@ replaceAll(searchValue: string | RegExp, replaceValue: string): string
 
 Replace all instances of a substring in a string, using a regular expression or search string.
 
-**Since:** -1
-
-<!--Device-String-replaceAll(searchValue: string | RegExp, replaceValue: string): string--><!--Device-String-replaceAll(searchValue: string | RegExp, replaceValue: string): string-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchValue | string \| RegExp | Yes |  |
-| replaceValue | string | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchValue | string \| RegExp | Yes |
+| replaceValue | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## replaceAll
 
 ```TypeScript
@@ -40,18 +36,16 @@ replaceAll(searchValue: string | RegExp, replacer: (substring: string, ...args: 
 
 Replace all instances of a substring in a string, using a regular expression or search string.
 
-**Since:** -1
-
-<!--Device-String-replaceAll(searchValue: string | RegExp, replacer: (substring: string, ...args: any[]) => string): string--><!--Device-String-replaceAll(searchValue: string | RegExp, replacer: (substring: string, ...args: any[]) => string): string-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchValue | string \| RegExp | Yes |  |
-| replacer | (substring: string, ...args: any[]) =&gt; string | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchValue | string \| RegExp | Yes |
+| replacer | (substring: string, ...args: any[]) = & gt; string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

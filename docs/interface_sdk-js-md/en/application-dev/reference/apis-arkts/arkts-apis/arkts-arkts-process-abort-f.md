@@ -16,9 +16,9 @@ Aborts a process and generates a core file. This method will cause a process to 
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-process-function abort(): void--><!--Device-process-function abort(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,4 +27,3 @@ Aborts a process and generates a core file. This method will cause a process to 
 ```TypeScript
 process.abort();
 ```
-

@@ -4,9 +4,9 @@
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-unnamed-declare interface ReadOut--><!--Device-unnamed-declare interface ReadOut-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -27,9 +27,9 @@ buffer: ArrayBuffer
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-ReadOut-buffer: ArrayBuffer--><!--Device-ReadOut-buffer: ArrayBuffer-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -45,9 +45,9 @@ bytesRead: number
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-ReadOut-bytesRead: number--><!--Device-ReadOut-bytesRead: number-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -63,9 +63,8 @@ offset: number
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
-<!--Device-ReadOut-offset: number--><!--Device-ReadOut-offset: number-End-->
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
-

@@ -1,26 +1,25 @@
 # AudioRendererWriteDataCallback
 
 ```TypeScript
-type AudioRendererWriteDataCallback = (data: ArrayBuffer) => AudioDataCallbackResult
+type AudioRendererWriteDataCallback = (data: ArrayBuffer) => AudioDataCallbackResult | void
 ```
 
-音频渲染器写入数据的回调函数类型定义。
+回调函数类型，用于音频渲染器的数据写入，回调函数结束后，音频服务会把data指向的数据放入队列里等待播放，因此请勿在回调外再次更改data指向的数据, 且务必保证往data填满待播放数据, 否则会导致音频服务播放杂音。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-audio-type AudioRendererWriteDataCallback = (data: ArrayBuffer) => AudioDataCallbackResult--><!--Device-audio-type AudioRendererWriteDataCallback = (data: ArrayBuffer) => AudioDataCallbackResult-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | ArrayBuffer | 是 | 音频数据数组缓冲区。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | ArrayBuffer | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md) | 回调结果。如果返回 AudioDataCallbackResult.VALID， 表示数据有效并将被播放。如果返回 AudioDataCallbackResult.INVALID， 表示数据将不会被播放。 |
-
+| 类型 |
+| --- |
+| [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md) \| void |

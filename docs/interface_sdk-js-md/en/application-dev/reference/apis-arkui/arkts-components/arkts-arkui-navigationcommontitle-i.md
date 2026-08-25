@@ -4,7 +4,7 @@ Defines a general title for the **Navigation** component.
 
 **Since:** 9
 
-<!--Device-unnamed-declare interface NavigationCommonTitle--><!--Device-unnamed-declare interface NavigationCommonTitle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,9 +25,9 @@ Main title.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-NavigationCommonTitle-main: string | Resource--><!--Device-NavigationCommonTitle-main: string | Resource-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,9 +43,8 @@ Subtitle.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-NavigationCommonTitle-sub: string | Resource--><!--Device-NavigationCommonTitle-sub: string | Resource-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

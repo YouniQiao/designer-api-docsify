@@ -2,9 +2,9 @@
 
 Represents brief information about a certificate.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-certificateManager-export interface CertAbstract--><!--Device-certificateManager-export interface CertAbstract-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -24,9 +24,9 @@ Alias of a certificate. The value contains up to 128 bytes.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CertAbstract-certAlias: string--><!--Device-CertAbstract-certAlias: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -40,9 +40,9 @@ Certificate state. The value **true** indicates that the certificate is enabled,
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CertAbstract-state: boolean--><!--Device-CertAbstract-state: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -56,9 +56,9 @@ Name of the certificate subject. The value contains up to 1024 bytes.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CertAbstract-subjectName: string--><!--Device-CertAbstract-subjectName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -72,9 +72,8 @@ Unique identifier of a certificate. The value contains up to 256 bytes.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CertAbstract-uri: string--><!--Device-CertAbstract-uri: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
-

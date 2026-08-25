@@ -16,7 +16,7 @@ function createVpnConnection(context: AbilityContext): VpnConnection
 
 **起始版本：** 10
 
-<!--Device-vpn-function createVpnConnection(context: AbilityContext): VpnConnection--><!--Device-vpn-function createVpnConnection(context: AbilityContext): VpnConnection-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -24,22 +24,22 @@ function createVpnConnection(context: AbilityContext): VpnConnection
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [AbilityContext](arkts-network-vpn-abilitycontext-t.md) | 是 | 指定 context。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [AbilityContext](arkts-network-vpn-abilitycontext-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| VpnConnection | 返回一个 VPN 连接对象。 |
+| 类型 |
+| --- |
+| [VpnConnection](arkts-network-vpnextension-vpnconnection-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -61,4 +61,3 @@ struct Index {
   build() {  }
 }
 ```
-

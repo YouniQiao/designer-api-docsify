@@ -21,31 +21,30 @@ Creates the context for a module. The [resourceManager.Configuration](../../apis
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-application-export function createModuleContextSync(context: Context, moduleName: string): Context--><!--Device-application-export function createModuleContextSync(context: Context, moduleName: string): Context-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | Yes | Application context. |
-| moduleName | string | Yes | Module name. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [Context](arkts-ability-context-c.md) | Yes |
+| moduleName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Context](arkts-ability-context-c.md) | Return the context created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Context](arkts-ability-context-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
-| 16000021 | The module does not exist. |
-
+| Error Code ID |
+| --- |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| 16000021 |

@@ -18,38 +18,38 @@ Sets an extended attribute of a file or directory. This API uses a promise to re
 
 **Since:** 12
 
-<!--Device-unnamed-declare function setxattr(path: string, key: string, value: string): Promise<void>--><!--Device-unnamed-declare function setxattr(path: string, key: string, value: string): Promise<void>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the file or directory. |
-| key | string | Yes | Key of the extended attribute to obtain. The value is a string of less than 256 bytes and can contain only the **user.** prefix. |
-| value | string | Yes | Value of the extended attribute to set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| path | string | Yes |
+| key | string | Yes |
+| value | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
-| 13900002 | No such file or directory |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900020 | Invalid argument |
-| 13900025 | No space left on device |
-| 13900031 | Function not implemented |
-| 13900038 | Value too large for defined data type |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| 13900002 |
+| 13900011 |
+| 13900012 |
+| 13900020 |
+| 13900025 |
+| 13900031 |
+| 13900038 |
+| 13900041 |
+| 13900042 |
 
 **Examples**
 
@@ -66,4 +66,3 @@ fs.setxattr(filePath, attrKey, attrValue).then(() => {
   console.error("Failed to set extended attribute with error message: " + err.message + ", error code: " + err.code);
 });
 ```
-

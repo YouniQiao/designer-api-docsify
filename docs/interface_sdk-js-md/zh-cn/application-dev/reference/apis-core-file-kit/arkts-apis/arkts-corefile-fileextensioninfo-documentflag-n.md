@@ -4,11 +4,11 @@
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-fileExtensionInfo-namespace DocumentFlag--><!--Device-fileExtensionInfo-namespace DocumentFlag-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -25,11 +25,10 @@ import { fileExtensionInfo } from '@kit.CoreFileKit';
 <!--Del-->
 ### 常量（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [REPRESENTS_FILE](arkts-corefile-documentflag-con-sys.md#represents_file) | 代表文件。 |
-| [REPRESENTS_DIR](arkts-corefile-documentflag-con-sys.md#represents_dir) | 代表目录。 |
-| [SUPPORTS_READ](arkts-corefile-documentflag-con-sys.md#supports_read) | 此设备支持读。 |
-| [SUPPORTS_WRITE](arkts-corefile-documentflag-con-sys.md#supports_write) | 此设备支持写。 |
+| 名称 |
+| --- |
+| [REPRESENTS_FILE](arkts-corefile-documentflag-con-sys.md#represents_file) |
+| [REPRESENTS_DIR](arkts-corefile-documentflag-con-sys.md#represents_dir) |
+| [SUPPORTS_READ](arkts-corefile-documentflag-con-sys.md#supports_read) |
+| [SUPPORTS_WRITE](arkts-corefile-documentflag-con-sys.md#supports_write) |
 <!--DelEnd-->
-

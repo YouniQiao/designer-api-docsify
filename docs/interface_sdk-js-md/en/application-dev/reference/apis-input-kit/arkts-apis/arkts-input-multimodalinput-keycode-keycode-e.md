@@ -2,9 +2,9 @@
 
 The **keyCode** module provides key codes of key devices, including keyboards, CDs, and gamepads.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export declare enum KeyCode--><!--Device-unnamed-export declare enum KeyCode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -16,9 +16,9 @@ KEYCODE_FN = 0
 
 Function (Fn) key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_FN = 0--><!--Device-KeyCode-KEYCODE_FN = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -30,9 +30,9 @@ KEYCODE_UNKNOWN = -1
 
 Unknown key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_UNKNOWN = -1--><!--Device-KeyCode-KEYCODE_UNKNOWN = -1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -44,9 +44,9 @@ KEYCODE_HOME = 1
 
 Function (Home) key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_HOME = 1--><!--Device-KeyCode-KEYCODE_HOME = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -58,9 +58,9 @@ KEYCODE_BACK = 2
 
 Back key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BACK = 2--><!--Device-KeyCode-KEYCODE_BACK = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -72,9 +72,9 @@ KEYCODE_SEARCH = 9
 
 Search key
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-KeyCode-KEYCODE_SEARCH = 9--><!--Device-KeyCode-KEYCODE_SEARCH = 9-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -87,11 +87,11 @@ KEYCODE_MEDIA_PLAY_PAUSE = 10
 Play/Pause key Difference between this key and **KEYCODE_PLAYPAUSE**:  
 **KEYCODE_PLAYPAUSE** is an earlier definition, while **KEYCODE_MEDIA_PLAY_PAUSE** is designed for modern media key devices.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyCode-KEYCODE_MEDIA_PLAY_PAUSE = 10--><!--Device-KeyCode-KEYCODE_MEDIA_PLAY_PAUSE = 10-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -103,11 +103,11 @@ KEYCODE_MEDIA_STOP = 11
 
 Media: Stop Key
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyCode-KEYCODE_MEDIA_STOP = 11--><!--Device-KeyCode-KEYCODE_MEDIA_STOP = 11-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -119,11 +119,11 @@ KEYCODE_MEDIA_NEXT = 12
 
 Next key
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyCode-KEYCODE_MEDIA_NEXT = 12--><!--Device-KeyCode-KEYCODE_MEDIA_NEXT = 12-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -135,11 +135,11 @@ KEYCODE_MEDIA_PREVIOUS = 13
 
 Previous key
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyCode-KEYCODE_MEDIA_PREVIOUS = 13--><!--Device-KeyCode-KEYCODE_MEDIA_PREVIOUS = 13-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -151,11 +151,11 @@ KEYCODE_MEDIA_REWIND = 14
 
 Rewind key
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyCode-KEYCODE_MEDIA_REWIND = 14--><!--Device-KeyCode-KEYCODE_MEDIA_REWIND = 14-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -167,11 +167,11 @@ KEYCODE_MEDIA_FAST_FORWARD = 15
 
 Fast forward key
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyCode-KEYCODE_MEDIA_FAST_FORWARD = 15--><!--Device-KeyCode-KEYCODE_MEDIA_FAST_FORWARD = 15-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -183,9 +183,9 @@ KEYCODE_VOLUME_UP = 16
 
 Volume Up key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_VOLUME_UP = 16--><!--Device-KeyCode-KEYCODE_VOLUME_UP = 16-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -197,9 +197,9 @@ KEYCODE_VOLUME_DOWN = 17
 
 Volume Down key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_VOLUME_DOWN = 17--><!--Device-KeyCode-KEYCODE_VOLUME_DOWN = 17-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -211,9 +211,9 @@ KEYCODE_POWER = 18
 
 Power key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_POWER = 18--><!--Device-KeyCode-KEYCODE_POWER = 18-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -225,9 +225,9 @@ KEYCODE_CAMERA = 19
 
 Camera key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_CAMERA = 19--><!--Device-KeyCode-KEYCODE_CAMERA = 19-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -239,9 +239,9 @@ KEYCODE_VOLUME_MUTE = 22
 
 Speaker Mute key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_VOLUME_MUTE = 22--><!--Device-KeyCode-KEYCODE_VOLUME_MUTE = 22-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -253,9 +253,9 @@ KEYCODE_MUTE = 23
 
 Mute key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_MUTE = 23--><!--Device-KeyCode-KEYCODE_MUTE = 23-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -267,9 +267,9 @@ KEYCODE_BRIGHTNESS_UP = 40
 
 Brightness Up key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BRIGHTNESS_UP = 40--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_UP = 40-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -281,9 +281,9 @@ KEYCODE_BRIGHTNESS_DOWN = 41
 
 Brightness Down key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BRIGHTNESS_DOWN = 41--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_DOWN = 41-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -295,9 +295,9 @@ KEYCODE_0 = 2000
 
 Key 0
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_0 = 2000--><!--Device-KeyCode-KEYCODE_0 = 2000-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -309,9 +309,9 @@ KEYCODE_1 = 2001
 
 Key 1
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_1 = 2001--><!--Device-KeyCode-KEYCODE_1 = 2001-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -323,9 +323,9 @@ KEYCODE_2 = 2002
 
 Key 2
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_2 = 2002--><!--Device-KeyCode-KEYCODE_2 = 2002-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -337,9 +337,9 @@ KEYCODE_3 = 2003
 
 Key 3
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_3 = 2003--><!--Device-KeyCode-KEYCODE_3 = 2003-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -351,9 +351,9 @@ KEYCODE_4 = 2004
 
 Key 4
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_4 = 2004--><!--Device-KeyCode-KEYCODE_4 = 2004-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -365,9 +365,9 @@ KEYCODE_5 = 2005
 
 Key 5
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_5 = 2005--><!--Device-KeyCode-KEYCODE_5 = 2005-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -379,9 +379,9 @@ KEYCODE_6 = 2006
 
 Key 6
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_6 = 2006--><!--Device-KeyCode-KEYCODE_6 = 2006-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -393,9 +393,9 @@ KEYCODE_7 = 2007
 
 Key 7
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_7 = 2007--><!--Device-KeyCode-KEYCODE_7 = 2007-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -407,9 +407,9 @@ KEYCODE_8 = 2008
 
 Key 8
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_8 = 2008--><!--Device-KeyCode-KEYCODE_8 = 2008-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -421,9 +421,9 @@ KEYCODE_9 = 2009
 
 Key 9
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_9 = 2009--><!--Device-KeyCode-KEYCODE_9 = 2009-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -435,9 +435,9 @@ KEYCODE_STAR = 2010
 
 Key /
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_STAR = 2010--><!--Device-KeyCode-KEYCODE_STAR = 2010-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -449,9 +449,9 @@ KEYCODE_POUND = 2011
 
 Key /
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_POUND = 2011--><!--Device-KeyCode-KEYCODE_POUND = 2011-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -463,9 +463,9 @@ KEYCODE_DPAD_UP = 2012
 
 Up key on D-pad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_DPAD_UP = 2012--><!--Device-KeyCode-KEYCODE_DPAD_UP = 2012-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -477,9 +477,9 @@ KEYCODE_DPAD_DOWN = 2013
 
 Down key on D-pad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_DPAD_DOWN = 2013--><!--Device-KeyCode-KEYCODE_DPAD_DOWN = 2013-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -491,9 +491,9 @@ KEYCODE_DPAD_LEFT = 2014
 
 Left key on D-pad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_DPAD_LEFT = 2014--><!--Device-KeyCode-KEYCODE_DPAD_LEFT = 2014-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -505,9 +505,9 @@ KEYCODE_DPAD_RIGHT = 2015
 
 Right key on D-pad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_DPAD_RIGHT = 2015--><!--Device-KeyCode-KEYCODE_DPAD_RIGHT = 2015-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -519,9 +519,9 @@ KEYCODE_DPAD_CENTER = 2016
 
 Center key on D-pad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_DPAD_CENTER = 2016--><!--Device-KeyCode-KEYCODE_DPAD_CENTER = 2016-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -533,9 +533,9 @@ KEYCODE_A = 2017
 
 Key A
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_A = 2017--><!--Device-KeyCode-KEYCODE_A = 2017-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -547,9 +547,9 @@ KEYCODE_B = 2018
 
 Key B
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_B = 2018--><!--Device-KeyCode-KEYCODE_B = 2018-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -561,9 +561,9 @@ KEYCODE_C = 2019
 
 Key C
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_C = 2019--><!--Device-KeyCode-KEYCODE_C = 2019-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -575,9 +575,9 @@ KEYCODE_D = 2020
 
 Key D
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_D = 2020--><!--Device-KeyCode-KEYCODE_D = 2020-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -589,9 +589,9 @@ KEYCODE_E = 2021
 
 Key E
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_E = 2021--><!--Device-KeyCode-KEYCODE_E = 2021-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -603,9 +603,9 @@ KEYCODE_F = 2022
 
 Key F
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F = 2022--><!--Device-KeyCode-KEYCODE_F = 2022-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -617,9 +617,9 @@ KEYCODE_G = 2023
 
 Key G
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_G = 2023--><!--Device-KeyCode-KEYCODE_G = 2023-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -631,9 +631,9 @@ KEYCODE_H = 2024
 
 Key H
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_H = 2024--><!--Device-KeyCode-KEYCODE_H = 2024-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -645,9 +645,9 @@ KEYCODE_I = 2025
 
 Key I
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_I = 2025--><!--Device-KeyCode-KEYCODE_I = 2025-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -659,9 +659,9 @@ KEYCODE_J = 2026
 
 Key J
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_J = 2026--><!--Device-KeyCode-KEYCODE_J = 2026-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -673,9 +673,9 @@ KEYCODE_K = 2027
 
 Key K
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_K = 2027--><!--Device-KeyCode-KEYCODE_K = 2027-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -687,9 +687,9 @@ KEYCODE_L = 2028
 
 Key L
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_L = 2028--><!--Device-KeyCode-KEYCODE_L = 2028-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -701,9 +701,9 @@ KEYCODE_M = 2029
 
 Key M
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_M = 2029--><!--Device-KeyCode-KEYCODE_M = 2029-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -715,9 +715,9 @@ KEYCODE_N = 2030
 
 Key N
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_N = 2030--><!--Device-KeyCode-KEYCODE_N = 2030-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -729,9 +729,9 @@ KEYCODE_O = 2031
 
 Key O
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_O = 2031--><!--Device-KeyCode-KEYCODE_O = 2031-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -743,9 +743,9 @@ KEYCODE_P = 2032
 
 Key P
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_P = 2032--><!--Device-KeyCode-KEYCODE_P = 2032-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -757,9 +757,9 @@ KEYCODE_Q = 2033
 
 Key Q
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_Q = 2033--><!--Device-KeyCode-KEYCODE_Q = 2033-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -771,9 +771,9 @@ KEYCODE_R = 2034
 
 Key R
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_R = 2034--><!--Device-KeyCode-KEYCODE_R = 2034-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -785,9 +785,9 @@ KEYCODE_S = 2035
 
 Key S
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_S = 2035--><!--Device-KeyCode-KEYCODE_S = 2035-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -799,9 +799,9 @@ KEYCODE_T = 2036
 
 Key T
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_T = 2036--><!--Device-KeyCode-KEYCODE_T = 2036-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -813,9 +813,9 @@ KEYCODE_U = 2037
 
 Key U
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_U = 2037--><!--Device-KeyCode-KEYCODE_U = 2037-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -827,9 +827,9 @@ KEYCODE_V = 2038
 
 Key V
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_V = 2038--><!--Device-KeyCode-KEYCODE_V = 2038-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -841,9 +841,9 @@ KEYCODE_W = 2039
 
 Key W
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_W = 2039--><!--Device-KeyCode-KEYCODE_W = 2039-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -855,9 +855,9 @@ KEYCODE_X = 2040
 
 Key X
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_X = 2040--><!--Device-KeyCode-KEYCODE_X = 2040-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -869,9 +869,9 @@ KEYCODE_Y = 2041
 
 Key Y
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_Y = 2041--><!--Device-KeyCode-KEYCODE_Y = 2041-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -883,9 +883,9 @@ KEYCODE_Z = 2042
 
 Key Z
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_Z = 2042--><!--Device-KeyCode-KEYCODE_Z = 2042-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -897,9 +897,9 @@ KEYCODE_COMMA = 2043
 
 Key ,
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_COMMA = 2043--><!--Device-KeyCode-KEYCODE_COMMA = 2043-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -911,9 +911,9 @@ KEYCODE_PERIOD = 2044
 
 Key .
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_PERIOD = 2044--><!--Device-KeyCode-KEYCODE_PERIOD = 2044-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -925,9 +925,9 @@ KEYCODE_ALT_LEFT = 2045
 
 Left Alt key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_ALT_LEFT = 2045--><!--Device-KeyCode-KEYCODE_ALT_LEFT = 2045-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -939,9 +939,9 @@ KEYCODE_ALT_RIGHT = 2046
 
 Right Alt key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_ALT_RIGHT = 2046--><!--Device-KeyCode-KEYCODE_ALT_RIGHT = 2046-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -953,9 +953,9 @@ KEYCODE_SHIFT_LEFT = 2047
 
 Left Shift key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SHIFT_LEFT = 2047--><!--Device-KeyCode-KEYCODE_SHIFT_LEFT = 2047-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -967,9 +967,9 @@ KEYCODE_SHIFT_RIGHT = 2048
 
 Right Shift key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SHIFT_RIGHT = 2048--><!--Device-KeyCode-KEYCODE_SHIFT_RIGHT = 2048-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -981,9 +981,9 @@ KEYCODE_TAB = 2049
 
 Tab key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_TAB = 2049--><!--Device-KeyCode-KEYCODE_TAB = 2049-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -995,9 +995,9 @@ KEYCODE_SPACE = 2050
 
 Space key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SPACE = 2050--><!--Device-KeyCode-KEYCODE_SPACE = 2050-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1009,9 +1009,9 @@ KEYCODE_SYM = 2051
 
 Symbol key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SYM = 2051--><!--Device-KeyCode-KEYCODE_SYM = 2051-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1023,9 +1023,9 @@ KEYCODE_EXPLORER = 2052
 
 Explorer key, which is used to start the explorer application
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_EXPLORER = 2052--><!--Device-KeyCode-KEYCODE_EXPLORER = 2052-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1037,9 +1037,9 @@ KEYCODE_ENVELOPE = 2053
 
 Email key, which is used to start the email application
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_ENVELOPE = 2053--><!--Device-KeyCode-KEYCODE_ENVELOPE = 2053-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1051,9 +1051,9 @@ KEYCODE_ENTER = 2054
 
 Enter key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_ENTER = 2054--><!--Device-KeyCode-KEYCODE_ENTER = 2054-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1065,9 +1065,9 @@ KEYCODE_DEL = 2055
 
 Delete key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_DEL = 2055--><!--Device-KeyCode-KEYCODE_DEL = 2055-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1079,9 +1079,9 @@ KEYCODE_GRAVE = 2056
 
 Key /
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_GRAVE = 2056--><!--Device-KeyCode-KEYCODE_GRAVE = 2056-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1093,9 +1093,9 @@ KEYCODE_MINUS = 2057
 
 Key -
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_MINUS = 2057--><!--Device-KeyCode-KEYCODE_MINUS = 2057-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1107,9 +1107,9 @@ KEYCODE_EQUALS = 2058
 
 Key =
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_EQUALS = 2058--><!--Device-KeyCode-KEYCODE_EQUALS = 2058-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1121,9 +1121,9 @@ KEYCODE_LEFT_BRACKET = 2059
 
 Key [
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_LEFT_BRACKET = 2059--><!--Device-KeyCode-KEYCODE_LEFT_BRACKET = 2059-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1135,9 +1135,9 @@ KEYCODE_RIGHT_BRACKET = 2060
 
 Key ]
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_RIGHT_BRACKET = 2060--><!--Device-KeyCode-KEYCODE_RIGHT_BRACKET = 2060-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1149,9 +1149,9 @@ KEYCODE_BACKSLASH = 2061
 
 Key \
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BACKSLASH = 2061--><!--Device-KeyCode-KEYCODE_BACKSLASH = 2061-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1163,9 +1163,9 @@ KEYCODE_SEMICOLON = 2062
 
 Key ;
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SEMICOLON = 2062--><!--Device-KeyCode-KEYCODE_SEMICOLON = 2062-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1177,9 +1177,9 @@ KEYCODE_APOSTROPHE = 2063
 
 Key '
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_APOSTROPHE = 2063--><!--Device-KeyCode-KEYCODE_APOSTROPHE = 2063-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1191,9 +1191,9 @@ KEYCODE_SLASH = 2064
 
 Key /
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SLASH = 2064--><!--Device-KeyCode-KEYCODE_SLASH = 2064-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1205,9 +1205,9 @@ KEYCODE_AT = 2065
 
 Key /
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_AT = 2065--><!--Device-KeyCode-KEYCODE_AT = 2065-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1219,9 +1219,9 @@ KEYCODE_PLUS = 2066
 
 Key +
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_PLUS = 2066--><!--Device-KeyCode-KEYCODE_PLUS = 2066-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1233,9 +1233,9 @@ KEYCODE_MENU = 2067
 
 Menu key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_MENU = 2067--><!--Device-KeyCode-KEYCODE_MENU = 2067-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1247,9 +1247,9 @@ KEYCODE_PAGE_UP = 2068
 
 Page Up key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_PAGE_UP = 2068--><!--Device-KeyCode-KEYCODE_PAGE_UP = 2068-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1261,9 +1261,9 @@ KEYCODE_PAGE_DOWN = 2069
 
 Page Down key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_PAGE_DOWN = 2069--><!--Device-KeyCode-KEYCODE_PAGE_DOWN = 2069-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1275,9 +1275,9 @@ KEYCODE_ESCAPE = 2070
 
 Esc key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_ESCAPE = 2070--><!--Device-KeyCode-KEYCODE_ESCAPE = 2070-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1289,9 +1289,9 @@ KEYCODE_FORWARD_DEL = 2071
 
 Forward Delete key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_FORWARD_DEL = 2071--><!--Device-KeyCode-KEYCODE_FORWARD_DEL = 2071-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1303,9 +1303,9 @@ KEYCODE_CTRL_LEFT = 2072
 
 Left Ctrl key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_CTRL_LEFT = 2072--><!--Device-KeyCode-KEYCODE_CTRL_LEFT = 2072-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1317,9 +1317,9 @@ KEYCODE_CTRL_RIGHT = 2073
 
 Right Ctrl key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_CTRL_RIGHT = 2073--><!--Device-KeyCode-KEYCODE_CTRL_RIGHT = 2073-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1331,9 +1331,9 @@ KEYCODE_CAPS_LOCK = 2074
 
 Caps Lock key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_CAPS_LOCK = 2074--><!--Device-KeyCode-KEYCODE_CAPS_LOCK = 2074-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1345,9 +1345,9 @@ KEYCODE_SCROLL_LOCK = 2075
 
 Scroll Lock key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SCROLL_LOCK = 2075--><!--Device-KeyCode-KEYCODE_SCROLL_LOCK = 2075-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1359,9 +1359,9 @@ KEYCODE_META_LEFT = 2076
 
 Left Meta key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_META_LEFT = 2076--><!--Device-KeyCode-KEYCODE_META_LEFT = 2076-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1373,9 +1373,9 @@ KEYCODE_META_RIGHT = 2077
 
 Right Meta key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_META_RIGHT = 2077--><!--Device-KeyCode-KEYCODE_META_RIGHT = 2077-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1387,9 +1387,9 @@ KEYCODE_FUNCTION = 2078
 
 Function key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_FUNCTION = 2078--><!--Device-KeyCode-KEYCODE_FUNCTION = 2078-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1401,9 +1401,9 @@ KEYCODE_SYSRQ = 2079
 
 System Request/Print Screen key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SYSRQ = 2079--><!--Device-KeyCode-KEYCODE_SYSRQ = 2079-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1415,9 +1415,9 @@ KEYCODE_BREAK = 2080
 
 Break/Pause key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BREAK = 2080--><!--Device-KeyCode-KEYCODE_BREAK = 2080-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1429,9 +1429,9 @@ KEYCODE_MOVE_HOME = 2081
 
 Move to Home key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_MOVE_HOME = 2081--><!--Device-KeyCode-KEYCODE_MOVE_HOME = 2081-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1443,9 +1443,9 @@ KEYCODE_MOVE_END = 2082
 
 Move to End key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_MOVE_END = 2082--><!--Device-KeyCode-KEYCODE_MOVE_END = 2082-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1457,9 +1457,9 @@ KEYCODE_INSERT = 2083
 
 Insert key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_INSERT = 2083--><!--Device-KeyCode-KEYCODE_INSERT = 2083-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1471,9 +1471,9 @@ KEYCODE_FORWARD = 2084
 
 Forward key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_FORWARD = 2084--><!--Device-KeyCode-KEYCODE_FORWARD = 2084-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1485,11 +1485,11 @@ KEYCODE_MEDIA_PLAY = 2085
 
 Play key
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyCode-KEYCODE_MEDIA_PLAY = 2085--><!--Device-KeyCode-KEYCODE_MEDIA_PLAY = 2085-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1501,11 +1501,11 @@ KEYCODE_MEDIA_PAUSE = 2086
 
 Media: Pause Key
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyCode-KEYCODE_MEDIA_PAUSE = 2086--><!--Device-KeyCode-KEYCODE_MEDIA_PAUSE = 2086-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1517,9 +1517,9 @@ KEYCODE_MEDIA_CLOSE = 2087
 
 Media: Close Key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_MEDIA_CLOSE = 2087--><!--Device-KeyCode-KEYCODE_MEDIA_CLOSE = 2087-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1531,9 +1531,9 @@ KEYCODE_MEDIA_EJECT = 2088
 
 Media: Eject Key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_MEDIA_EJECT = 2088--><!--Device-KeyCode-KEYCODE_MEDIA_EJECT = 2088-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1545,9 +1545,9 @@ KEYCODE_MEDIA_RECORD = 2089
 
 Record key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_MEDIA_RECORD = 2089--><!--Device-KeyCode-KEYCODE_MEDIA_RECORD = 2089-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1559,9 +1559,9 @@ KEYCODE_F1 = 2090
 
 F1 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F1 = 2090--><!--Device-KeyCode-KEYCODE_F1 = 2090-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1573,9 +1573,9 @@ KEYCODE_F2 = 2091
 
 F2 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F2 = 2091--><!--Device-KeyCode-KEYCODE_F2 = 2091-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1587,9 +1587,9 @@ KEYCODE_F3 = 2092
 
 F3 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F3 = 2092--><!--Device-KeyCode-KEYCODE_F3 = 2092-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1601,9 +1601,9 @@ KEYCODE_F4 = 2093
 
 F4 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F4 = 2093--><!--Device-KeyCode-KEYCODE_F4 = 2093-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1615,9 +1615,9 @@ KEYCODE_F5 = 2094
 
 F5 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F5 = 2094--><!--Device-KeyCode-KEYCODE_F5 = 2094-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1629,9 +1629,9 @@ KEYCODE_F6 = 2095
 
 F6 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F6 = 2095--><!--Device-KeyCode-KEYCODE_F6 = 2095-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1643,9 +1643,9 @@ KEYCODE_F7 = 2096
 
 F7 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F7 = 2096--><!--Device-KeyCode-KEYCODE_F7 = 2096-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1657,9 +1657,9 @@ KEYCODE_F8 = 2097
 
 F8 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F8 = 2097--><!--Device-KeyCode-KEYCODE_F8 = 2097-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1671,9 +1671,9 @@ KEYCODE_F9 = 2098
 
 F9 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F9 = 2098--><!--Device-KeyCode-KEYCODE_F9 = 2098-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1685,9 +1685,9 @@ KEYCODE_F10 = 2099
 
 F10 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F10 = 2099--><!--Device-KeyCode-KEYCODE_F10 = 2099-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1699,9 +1699,9 @@ KEYCODE_F11 = 2100
 
 F11 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F11 = 2100--><!--Device-KeyCode-KEYCODE_F11 = 2100-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1713,9 +1713,9 @@ KEYCODE_F12 = 2101
 
 F12 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F12 = 2101--><!--Device-KeyCode-KEYCODE_F12 = 2101-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1727,9 +1727,9 @@ KEYCODE_NUM_LOCK = 2102
 
 Number Lock key on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUM_LOCK = 2102--><!--Device-KeyCode-KEYCODE_NUM_LOCK = 2102-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1741,9 +1741,9 @@ KEYCODE_NUMPAD_0 = 2103
 
 Key 0 on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_0 = 2103--><!--Device-KeyCode-KEYCODE_NUMPAD_0 = 2103-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1755,9 +1755,9 @@ KEYCODE_NUMPAD_1 = 2104
 
 Key 1 on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_1 = 2104--><!--Device-KeyCode-KEYCODE_NUMPAD_1 = 2104-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1769,9 +1769,9 @@ KEYCODE_NUMPAD_2 = 2105
 
 Key 2 on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_2 = 2105--><!--Device-KeyCode-KEYCODE_NUMPAD_2 = 2105-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1783,9 +1783,9 @@ KEYCODE_NUMPAD_3 = 2106
 
 Key 3 on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_3 = 2106--><!--Device-KeyCode-KEYCODE_NUMPAD_3 = 2106-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1797,9 +1797,9 @@ KEYCODE_NUMPAD_4 = 2107
 
 Key 4 on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_4 = 2107--><!--Device-KeyCode-KEYCODE_NUMPAD_4 = 2107-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1811,9 +1811,9 @@ KEYCODE_NUMPAD_5 = 2108
 
 Key 5 on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_5 = 2108--><!--Device-KeyCode-KEYCODE_NUMPAD_5 = 2108-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1825,9 +1825,9 @@ KEYCODE_NUMPAD_6 = 2109
 
 Key 6 on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_6 = 2109--><!--Device-KeyCode-KEYCODE_NUMPAD_6 = 2109-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1839,9 +1839,9 @@ KEYCODE_NUMPAD_7 = 2110
 
 Key 7 on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_7 = 2110--><!--Device-KeyCode-KEYCODE_NUMPAD_7 = 2110-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1853,9 +1853,9 @@ KEYCODE_NUMPAD_8 = 2111
 
 Key 8 on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_8 = 2111--><!--Device-KeyCode-KEYCODE_NUMPAD_8 = 2111-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1867,9 +1867,9 @@ KEYCODE_NUMPAD_9 = 2112
 
 Key 9 on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_9 = 2112--><!--Device-KeyCode-KEYCODE_NUMPAD_9 = 2112-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1881,9 +1881,9 @@ KEYCODE_NUMPAD_DIVIDE = 2113
 
 Key / on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_DIVIDE = 2113--><!--Device-KeyCode-KEYCODE_NUMPAD_DIVIDE = 2113-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1895,9 +1895,9 @@ KEYCODE_NUMPAD_MULTIPLY = 2114
 
 Key * on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_MULTIPLY = 2114--><!--Device-KeyCode-KEYCODE_NUMPAD_MULTIPLY = 2114-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1909,9 +1909,9 @@ KEYCODE_NUMPAD_SUBTRACT = 2115
 
 Key - on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_SUBTRACT = 2115--><!--Device-KeyCode-KEYCODE_NUMPAD_SUBTRACT = 2115-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1923,9 +1923,9 @@ KEYCODE_NUMPAD_ADD = 2116
 
 Key + on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_ADD = 2116--><!--Device-KeyCode-KEYCODE_NUMPAD_ADD = 2116-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1937,9 +1937,9 @@ KEYCODE_NUMPAD_DOT = 2117
 
 Key . on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_DOT = 2117--><!--Device-KeyCode-KEYCODE_NUMPAD_DOT = 2117-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1951,9 +1951,9 @@ KEYCODE_NUMPAD_COMMA = 2118
 
 Key , on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_COMMA = 2118--><!--Device-KeyCode-KEYCODE_NUMPAD_COMMA = 2118-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1965,9 +1965,9 @@ KEYCODE_NUMPAD_ENTER = 2119
 
 Enter key on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_ENTER = 2119--><!--Device-KeyCode-KEYCODE_NUMPAD_ENTER = 2119-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1979,9 +1979,9 @@ KEYCODE_NUMPAD_EQUALS = 2120
 
 Key = on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_EQUALS = 2120--><!--Device-KeyCode-KEYCODE_NUMPAD_EQUALS = 2120-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -1993,9 +1993,9 @@ KEYCODE_NUMPAD_LEFT_PAREN = 2121
 
 Key ( on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_LEFT_PAREN = 2121--><!--Device-KeyCode-KEYCODE_NUMPAD_LEFT_PAREN = 2121-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2007,9 +2007,9 @@ KEYCODE_NUMPAD_RIGHT_PAREN = 2122
 
 Key ) on numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_RIGHT_PAREN = 2122--><!--Device-KeyCode-KEYCODE_NUMPAD_RIGHT_PAREN = 2122-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2021,9 +2021,9 @@ KEYCODE_VIRTUAL_MULTITASK = 2210
 
 Multi-task key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_VIRTUAL_MULTITASK = 2210--><!--Device-KeyCode-KEYCODE_VIRTUAL_MULTITASK = 2210-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2035,9 +2035,9 @@ KEYCODE_BUTTON_A = 2301
 
 Joystick key A
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-KeyCode-KEYCODE_BUTTON_A = 2301--><!--Device-KeyCode-KEYCODE_BUTTON_A = 2301-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2049,9 +2049,9 @@ KEYCODE_BUTTON_B = 2302
 
 Joystick key B
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-KeyCode-KEYCODE_BUTTON_B = 2302--><!--Device-KeyCode-KEYCODE_BUTTON_B = 2302-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2063,9 +2063,9 @@ KEYCODE_BUTTON_X = 2304
 
 Joystick key X
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-KeyCode-KEYCODE_BUTTON_X = 2304--><!--Device-KeyCode-KEYCODE_BUTTON_X = 2304-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2077,9 +2077,9 @@ KEYCODE_BUTTON_Y = 2305
 
 Joystick key Y
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-KeyCode-KEYCODE_BUTTON_Y = 2305--><!--Device-KeyCode-KEYCODE_BUTTON_Y = 2305-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2091,9 +2091,9 @@ KEYCODE_BUTTON_L1 = 2307
 
 Joystick key L1
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-KeyCode-KEYCODE_BUTTON_L1 = 2307--><!--Device-KeyCode-KEYCODE_BUTTON_L1 = 2307-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2105,9 +2105,9 @@ KEYCODE_BUTTON_R1 = 2308
 
 Joystick key R1
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-KeyCode-KEYCODE_BUTTON_R1 = 2308--><!--Device-KeyCode-KEYCODE_BUTTON_R1 = 2308-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2119,9 +2119,9 @@ KEYCODE_BUTTON_L2 = 2309
 
 Joystick key L2
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-KeyCode-KEYCODE_BUTTON_L2 = 2309--><!--Device-KeyCode-KEYCODE_BUTTON_L2 = 2309-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2133,9 +2133,9 @@ KEYCODE_BUTTON_R2 = 2310
 
 Joystick key R2
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-KeyCode-KEYCODE_BUTTON_R2 = 2310--><!--Device-KeyCode-KEYCODE_BUTTON_R2 = 2310-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2147,9 +2147,9 @@ KEYCODE_BUTTON_SELECT = 2311
 
 Joystick key Select
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-KeyCode-KEYCODE_BUTTON_SELECT = 2311--><!--Device-KeyCode-KEYCODE_BUTTON_SELECT = 2311-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2161,9 +2161,9 @@ KEYCODE_BUTTON_START = 2312
 
 Joystick key Start
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-KeyCode-KEYCODE_BUTTON_START = 2312--><!--Device-KeyCode-KEYCODE_BUTTON_START = 2312-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2175,9 +2175,9 @@ KEYCODE_BUTTON_MODE = 2313
 
 Joystick key Mode
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-KeyCode-KEYCODE_BUTTON_MODE = 2313--><!--Device-KeyCode-KEYCODE_BUTTON_MODE = 2313-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2189,9 +2189,9 @@ KEYCODE_BUTTON_THUMBL = 2314
 
 Joystick key THUMBL
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-KeyCode-KEYCODE_BUTTON_THUMBL = 2314--><!--Device-KeyCode-KEYCODE_BUTTON_THUMBL = 2314-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2203,9 +2203,9 @@ KEYCODE_BUTTON_THUMBR = 2315
 
 Joystick key THUMBR
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-KeyCode-KEYCODE_BUTTON_THUMBR = 2315--><!--Device-KeyCode-KEYCODE_BUTTON_THUMBR = 2315-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2217,9 +2217,9 @@ KEYCODE_SLEEP = 2600
 
 Sleep key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SLEEP = 2600--><!--Device-KeyCode-KEYCODE_SLEEP = 2600-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2231,9 +2231,9 @@ KEYCODE_ZENKAKU_HANKAKU = 2601
 
 Zenkaku/Hankaku key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_ZENKAKU_HANKAKU = 2601--><!--Device-KeyCode-KEYCODE_ZENKAKU_HANKAKU = 2601-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2245,9 +2245,9 @@ KEYCODE_102ND = 2602
 
 International Keyboard Extension key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_102ND = 2602--><!--Device-KeyCode-KEYCODE_102ND = 2602-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2259,9 +2259,9 @@ KEYCODE_RO = 2603
 
 Ro key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_RO = 2603--><!--Device-KeyCode-KEYCODE_RO = 2603-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2273,9 +2273,9 @@ KEYCODE_KATAKANA = 2604
 
 Katakana key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_KATAKANA = 2604--><!--Device-KeyCode-KEYCODE_KATAKANA = 2604-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2287,9 +2287,9 @@ KEYCODE_HIRAGANA = 2605
 
 Hiragana key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_HIRAGANA = 2605--><!--Device-KeyCode-KEYCODE_HIRAGANA = 2605-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2301,9 +2301,9 @@ KEYCODE_HENKAN = 2606
 
 Henkan key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_HENKAN = 2606--><!--Device-KeyCode-KEYCODE_HENKAN = 2606-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2315,9 +2315,9 @@ KEYCODE_KATAKANA_HIRAGANA = 2607
 
 Katakana/Hiragana key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_KATAKANA_HIRAGANA = 2607--><!--Device-KeyCode-KEYCODE_KATAKANA_HIRAGANA = 2607-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2329,9 +2329,9 @@ KEYCODE_MUHENKAN = 2608
 
 Muhenkan key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_MUHENKAN = 2608--><!--Device-KeyCode-KEYCODE_MUHENKAN = 2608-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2343,9 +2343,9 @@ KEYCODE_LINEFEED = 2609
 
 Linefeed key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_LINEFEED = 2609--><!--Device-KeyCode-KEYCODE_LINEFEED = 2609-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2357,9 +2357,9 @@ KEYCODE_MACRO = 2610
 
 Macro key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_MACRO = 2610--><!--Device-KeyCode-KEYCODE_MACRO = 2610-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2371,9 +2371,9 @@ KEYCODE_NUMPAD_PLUSMINUS = 2611
 
 Plus/Minus key on the numeric keypad
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NUMPAD_PLUSMINUS = 2611--><!--Device-KeyCode-KEYCODE_NUMPAD_PLUSMINUS = 2611-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2385,9 +2385,9 @@ KEYCODE_SCALE = 2612
 
 Scale key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SCALE = 2612--><!--Device-KeyCode-KEYCODE_SCALE = 2612-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2399,9 +2399,9 @@ KEYCODE_HANGUEL = 2613
 
 Hanguel key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_HANGUEL = 2613--><!--Device-KeyCode-KEYCODE_HANGUEL = 2613-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2413,9 +2413,9 @@ KEYCODE_HANJA = 2614
 
 Hanja key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_HANJA = 2614--><!--Device-KeyCode-KEYCODE_HANJA = 2614-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2427,9 +2427,9 @@ KEYCODE_YEN = 2615
 
 Yen key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_YEN = 2615--><!--Device-KeyCode-KEYCODE_YEN = 2615-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2441,9 +2441,9 @@ KEYCODE_STOP = 2616
 
 Stop key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_STOP = 2616--><!--Device-KeyCode-KEYCODE_STOP = 2616-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2455,9 +2455,9 @@ KEYCODE_AGAIN = 2617
 
 Again key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_AGAIN = 2617--><!--Device-KeyCode-KEYCODE_AGAIN = 2617-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2469,9 +2469,9 @@ KEYCODE_PROPS = 2618
 
 Props key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_PROPS = 2618--><!--Device-KeyCode-KEYCODE_PROPS = 2618-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2483,9 +2483,9 @@ KEYCODE_UNDO = 2619
 
 Undo key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_UNDO = 2619--><!--Device-KeyCode-KEYCODE_UNDO = 2619-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2497,9 +2497,9 @@ KEYCODE_COPY = 2620
 
 Copy key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_COPY = 2620--><!--Device-KeyCode-KEYCODE_COPY = 2620-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2511,9 +2511,9 @@ KEYCODE_OPEN = 2621
 
 Open key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_OPEN = 2621--><!--Device-KeyCode-KEYCODE_OPEN = 2621-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2525,9 +2525,9 @@ KEYCODE_PASTE = 2622
 
 Paste key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_PASTE = 2622--><!--Device-KeyCode-KEYCODE_PASTE = 2622-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2539,9 +2539,9 @@ KEYCODE_FIND = 2623
 
 Find key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_FIND = 2623--><!--Device-KeyCode-KEYCODE_FIND = 2623-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2553,9 +2553,9 @@ KEYCODE_CUT = 2624
 
 Cut key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_CUT = 2624--><!--Device-KeyCode-KEYCODE_CUT = 2624-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2567,9 +2567,9 @@ KEYCODE_HELP = 2625
 
 Help key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_HELP = 2625--><!--Device-KeyCode-KEYCODE_HELP = 2625-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2581,9 +2581,9 @@ KEYCODE_CALC = 2626
 
 Calc key, which is used to start the calculator application
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_CALC = 2626--><!--Device-KeyCode-KEYCODE_CALC = 2626-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2595,9 +2595,9 @@ KEYCODE_FILE = 2627
 
 File key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_FILE = 2627--><!--Device-KeyCode-KEYCODE_FILE = 2627-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2609,9 +2609,9 @@ KEYCODE_BOOKMARKS = 2628
 
 Bookmarks key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BOOKMARKS = 2628--><!--Device-KeyCode-KEYCODE_BOOKMARKS = 2628-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2623,9 +2623,9 @@ KEYCODE_NEXT = 2629
 
 Page Down key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NEXT = 2629--><!--Device-KeyCode-KEYCODE_NEXT = 2629-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2638,9 +2638,9 @@ KEYCODE_PLAYPAUSE = 2630
 Play/Pause key Difference between this key and **KEYCODE_MEDIA_PLAY_PAUSE**:  
 **KEYCODE_PLAYPAUSE** is an earlier definition, while **KEYCODE_MEDIA_PLAY_PAUSE** is designed for modern media key devices.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_PLAYPAUSE = 2630--><!--Device-KeyCode-KEYCODE_PLAYPAUSE = 2630-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2652,9 +2652,9 @@ KEYCODE_PREVIOUS = 2631
 
 Page Up key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_PREVIOUS = 2631--><!--Device-KeyCode-KEYCODE_PREVIOUS = 2631-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2666,9 +2666,9 @@ KEYCODE_STOPCD = 2632
 
 Stop CD key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_STOPCD = 2632--><!--Device-KeyCode-KEYCODE_STOPCD = 2632-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2680,9 +2680,9 @@ KEYCODE_CONFIG = 2634
 
 Config key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_CONFIG = 2634--><!--Device-KeyCode-KEYCODE_CONFIG = 2634-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2694,9 +2694,9 @@ KEYCODE_REFRESH = 2635
 
 Refresh key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_REFRESH = 2635--><!--Device-KeyCode-KEYCODE_REFRESH = 2635-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2708,9 +2708,9 @@ KEYCODE_EXIT = 2636
 
 Exit key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_EXIT = 2636--><!--Device-KeyCode-KEYCODE_EXIT = 2636-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2722,9 +2722,9 @@ KEYCODE_EDIT = 2637
 
 Edit key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_EDIT = 2637--><!--Device-KeyCode-KEYCODE_EDIT = 2637-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2736,9 +2736,9 @@ KEYCODE_SCROLLUP = 2638
 
 Scroll Up key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SCROLLUP = 2638--><!--Device-KeyCode-KEYCODE_SCROLLUP = 2638-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2750,9 +2750,9 @@ KEYCODE_SCROLLDOWN = 2639
 
 Scroll Down key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SCROLLDOWN = 2639--><!--Device-KeyCode-KEYCODE_SCROLLDOWN = 2639-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2764,9 +2764,9 @@ KEYCODE_NEW = 2640
 
 New key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NEW = 2640--><!--Device-KeyCode-KEYCODE_NEW = 2640-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2778,9 +2778,9 @@ KEYCODE_REDO = 2641
 
 Redo key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_REDO = 2641--><!--Device-KeyCode-KEYCODE_REDO = 2641-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2792,9 +2792,9 @@ KEYCODE_CLOSE = 2642
 
 Close key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_CLOSE = 2642--><!--Device-KeyCode-KEYCODE_CLOSE = 2642-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2806,9 +2806,9 @@ KEYCODE_PLAY = 2643
 
 Play key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_PLAY = 2643--><!--Device-KeyCode-KEYCODE_PLAY = 2643-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2820,9 +2820,9 @@ KEYCODE_BASSBOOST = 2644
 
 Bass Boost key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BASSBOOST = 2644--><!--Device-KeyCode-KEYCODE_BASSBOOST = 2644-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2834,9 +2834,9 @@ KEYCODE_PRINT = 2645
 
 Print key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_PRINT = 2645--><!--Device-KeyCode-KEYCODE_PRINT = 2645-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2848,9 +2848,9 @@ KEYCODE_CHAT = 2646
 
 Chat key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_CHAT = 2646--><!--Device-KeyCode-KEYCODE_CHAT = 2646-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2862,9 +2862,9 @@ KEYCODE_FINANCE = 2647
 
 Finance key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_FINANCE = 2647--><!--Device-KeyCode-KEYCODE_FINANCE = 2647-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2876,9 +2876,9 @@ KEYCODE_CANCEL = 2648
 
 Cancel key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_CANCEL = 2648--><!--Device-KeyCode-KEYCODE_CANCEL = 2648-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2890,9 +2890,9 @@ KEYCODE_KBDILLUM_TOGGLE = 2649
 
 Keyboard Illumination Toggle key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_KBDILLUM_TOGGLE = 2649--><!--Device-KeyCode-KEYCODE_KBDILLUM_TOGGLE = 2649-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2904,9 +2904,9 @@ KEYCODE_KBDILLUM_DOWN = 2650
 
 Keyboard Illumination Down key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_KBDILLUM_DOWN = 2650--><!--Device-KeyCode-KEYCODE_KBDILLUM_DOWN = 2650-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2918,9 +2918,9 @@ KEYCODE_KBDILLUM_UP = 2651
 
 Keyboard Illumination Up key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_KBDILLUM_UP = 2651--><!--Device-KeyCode-KEYCODE_KBDILLUM_UP = 2651-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2932,9 +2932,9 @@ KEYCODE_SEND = 2652
 
 Send key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SEND = 2652--><!--Device-KeyCode-KEYCODE_SEND = 2652-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2946,9 +2946,9 @@ KEYCODE_REPLY = 2653
 
 Reply key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_REPLY = 2653--><!--Device-KeyCode-KEYCODE_REPLY = 2653-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2960,9 +2960,9 @@ KEYCODE_FORWARDMAIL = 2654
 
 Forward Mail key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_FORWARDMAIL = 2654--><!--Device-KeyCode-KEYCODE_FORWARDMAIL = 2654-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2974,9 +2974,9 @@ KEYCODE_SAVE = 2655
 
 Save key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SAVE = 2655--><!--Device-KeyCode-KEYCODE_SAVE = 2655-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -2988,9 +2988,9 @@ KEYCODE_DOCUMENTS = 2656
 
 Documents key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_DOCUMENTS = 2656--><!--Device-KeyCode-KEYCODE_DOCUMENTS = 2656-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3002,9 +3002,9 @@ KEYCODE_VIDEO_NEXT = 2657
 
 Next Video key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_VIDEO_NEXT = 2657--><!--Device-KeyCode-KEYCODE_VIDEO_NEXT = 2657-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3016,9 +3016,9 @@ KEYCODE_VIDEO_PREV = 2658
 
 Previous Video key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_VIDEO_PREV = 2658--><!--Device-KeyCode-KEYCODE_VIDEO_PREV = 2658-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3030,9 +3030,9 @@ KEYCODE_BRIGHTNESS_CYCLE = 2659
 
 Brightness Cycle key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BRIGHTNESS_CYCLE = 2659--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_CYCLE = 2659-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3044,9 +3044,9 @@ KEYCODE_BRIGHTNESS_ZERO = 2660
 
 Brightness Zero key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BRIGHTNESS_ZERO = 2660--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_ZERO = 2660-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3058,9 +3058,9 @@ KEYCODE_DISPLAY_OFF = 2661
 
 Display Off key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_DISPLAY_OFF = 2661--><!--Device-KeyCode-KEYCODE_DISPLAY_OFF = 2661-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3072,9 +3072,9 @@ KEYCODE_BTN_MISC = 2662
 
 Misc Button key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BTN_MISC = 2662--><!--Device-KeyCode-KEYCODE_BTN_MISC = 2662-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3086,9 +3086,9 @@ KEYCODE_GOTO = 2663
 
 Goto key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_GOTO = 2663--><!--Device-KeyCode-KEYCODE_GOTO = 2663-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3100,9 +3100,9 @@ KEYCODE_INFO = 2664
 
 Info key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_INFO = 2664--><!--Device-KeyCode-KEYCODE_INFO = 2664-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3114,9 +3114,9 @@ KEYCODE_PROGRAM = 2665
 
 Program key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_PROGRAM = 2665--><!--Device-KeyCode-KEYCODE_PROGRAM = 2665-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3128,9 +3128,9 @@ KEYCODE_PVR = 2666
 
 PVR key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_PVR = 2666--><!--Device-KeyCode-KEYCODE_PVR = 2666-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3142,9 +3142,9 @@ KEYCODE_SUBTITLE = 2667
 
 Subtitle key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SUBTITLE = 2667--><!--Device-KeyCode-KEYCODE_SUBTITLE = 2667-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3156,9 +3156,9 @@ KEYCODE_FULL_SCREEN = 2668
 
 Full Screen key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_FULL_SCREEN = 2668--><!--Device-KeyCode-KEYCODE_FULL_SCREEN = 2668-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3170,9 +3170,9 @@ KEYCODE_KEYBOARD = 2669
 
 Keyboard.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_KEYBOARD = 2669--><!--Device-KeyCode-KEYCODE_KEYBOARD = 2669-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3184,9 +3184,9 @@ KEYCODE_ASPECT_RATIO = 2670
 
 Aspect Ratio key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_ASPECT_RATIO = 2670--><!--Device-KeyCode-KEYCODE_ASPECT_RATIO = 2670-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3198,9 +3198,9 @@ KEYCODE_PC = 2671
 
 Port Control key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_PC = 2671--><!--Device-KeyCode-KEYCODE_PC = 2671-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3212,9 +3212,9 @@ KEYCODE_TV = 2672
 
 TV key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_TV = 2672--><!--Device-KeyCode-KEYCODE_TV = 2672-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3226,9 +3226,9 @@ KEYCODE_TV2 = 2673
 
 TV key 2
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_TV2 = 2673--><!--Device-KeyCode-KEYCODE_TV2 = 2673-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3240,9 +3240,9 @@ KEYCODE_VCR = 2674
 
 VCR key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_VCR = 2674--><!--Device-KeyCode-KEYCODE_VCR = 2674-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3254,9 +3254,9 @@ KEYCODE_VCR2 = 2675
 
 VCR key 2
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_VCR2 = 2675--><!--Device-KeyCode-KEYCODE_VCR2 = 2675-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3268,9 +3268,9 @@ KEYCODE_SAT = 2676
 
 SAT key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SAT = 2676--><!--Device-KeyCode-KEYCODE_SAT = 2676-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3282,9 +3282,9 @@ KEYCODE_CD = 2677
 
 CD key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_CD = 2677--><!--Device-KeyCode-KEYCODE_CD = 2677-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3296,9 +3296,9 @@ KEYCODE_TAPE = 2678
 
 Tape key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_TAPE = 2678--><!--Device-KeyCode-KEYCODE_TAPE = 2678-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3310,9 +3310,9 @@ KEYCODE_TUNER = 2679
 
 Tuner key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_TUNER = 2679--><!--Device-KeyCode-KEYCODE_TUNER = 2679-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3324,9 +3324,9 @@ KEYCODE_PLAYER = 2680
 
 Player key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_PLAYER = 2680--><!--Device-KeyCode-KEYCODE_PLAYER = 2680-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3338,9 +3338,9 @@ KEYCODE_DVD = 2681
 
 DVD key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_DVD = 2681--><!--Device-KeyCode-KEYCODE_DVD = 2681-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3352,9 +3352,9 @@ KEYCODE_AUDIO = 2682
 
 Audio key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_AUDIO = 2682--><!--Device-KeyCode-KEYCODE_AUDIO = 2682-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3366,9 +3366,9 @@ KEYCODE_VIDEO = 2683
 
 Video key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_VIDEO = 2683--><!--Device-KeyCode-KEYCODE_VIDEO = 2683-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3380,9 +3380,9 @@ KEYCODE_MEMO = 2684
 
 Memo key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_MEMO = 2684--><!--Device-KeyCode-KEYCODE_MEMO = 2684-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3394,9 +3394,9 @@ KEYCODE_CALENDAR = 2685
 
 Calendar key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_CALENDAR = 2685--><!--Device-KeyCode-KEYCODE_CALENDAR = 2685-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3408,9 +3408,9 @@ KEYCODE_RED = 2686
 
 Red indicator.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_RED = 2686--><!--Device-KeyCode-KEYCODE_RED = 2686-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3422,9 +3422,9 @@ KEYCODE_GREEN = 2687
 
 Green indicator.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_GREEN = 2687--><!--Device-KeyCode-KEYCODE_GREEN = 2687-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3436,9 +3436,9 @@ KEYCODE_YELLOW = 2688
 
 Yellow indicator.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_YELLOW = 2688--><!--Device-KeyCode-KEYCODE_YELLOW = 2688-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3450,9 +3450,9 @@ KEYCODE_BLUE = 2689
 
 Blue indicator.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BLUE = 2689--><!--Device-KeyCode-KEYCODE_BLUE = 2689-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3464,9 +3464,9 @@ KEYCODE_CHANNELUP = 2690
 
 Channel Up key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_CHANNELUP = 2690--><!--Device-KeyCode-KEYCODE_CHANNELUP = 2690-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3478,9 +3478,9 @@ KEYCODE_CHANNELDOWN = 2691
 
 Channel Down key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_CHANNELDOWN = 2691--><!--Device-KeyCode-KEYCODE_CHANNELDOWN = 2691-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3492,9 +3492,9 @@ KEYCODE_LAST = 2692
 
 Last key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_LAST = 2692--><!--Device-KeyCode-KEYCODE_LAST = 2692-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3506,9 +3506,9 @@ KEYCODE_RESTART = 2693
 
 Restart key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_RESTART = 2693--><!--Device-KeyCode-KEYCODE_RESTART = 2693-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3520,9 +3520,9 @@ KEYCODE_SLOW = 2694
 
 Slow key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SLOW = 2694--><!--Device-KeyCode-KEYCODE_SLOW = 2694-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3534,9 +3534,9 @@ KEYCODE_SHUFFLE = 2695
 
 Shuffle key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SHUFFLE = 2695--><!--Device-KeyCode-KEYCODE_SHUFFLE = 2695-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3548,9 +3548,9 @@ KEYCODE_VIDEOPHONE = 2696
 
 Videophone key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_VIDEOPHONE = 2696--><!--Device-KeyCode-KEYCODE_VIDEOPHONE = 2696-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3562,9 +3562,9 @@ KEYCODE_GAMES = 2697
 
 Games key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_GAMES = 2697--><!--Device-KeyCode-KEYCODE_GAMES = 2697-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3576,9 +3576,9 @@ KEYCODE_ZOOMIN = 2698
 
 Zoom in
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_ZOOMIN = 2698--><!--Device-KeyCode-KEYCODE_ZOOMIN = 2698-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3590,9 +3590,9 @@ KEYCODE_ZOOMOUT = 2699
 
 Zoom out
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_ZOOMOUT = 2699--><!--Device-KeyCode-KEYCODE_ZOOMOUT = 2699-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3604,9 +3604,9 @@ KEYCODE_ZOOMRESET = 2700
 
 Zoom Reset key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_ZOOMRESET = 2700--><!--Device-KeyCode-KEYCODE_ZOOMRESET = 2700-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3618,9 +3618,9 @@ KEYCODE_WORDPROCESSOR = 2701
 
 Word Processor key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_WORDPROCESSOR = 2701--><!--Device-KeyCode-KEYCODE_WORDPROCESSOR = 2701-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3632,9 +3632,9 @@ KEYCODE_EDITOR = 2702
 
 Editor key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_EDITOR = 2702--><!--Device-KeyCode-KEYCODE_EDITOR = 2702-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3646,9 +3646,9 @@ KEYCODE_SPREADSHEET = 2703
 
 Spreadsheet key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SPREADSHEET = 2703--><!--Device-KeyCode-KEYCODE_SPREADSHEET = 2703-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3660,9 +3660,9 @@ KEYCODE_GRAPHICSEDITOR = 2704
 
 Graphics Editor key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_GRAPHICSEDITOR = 2704--><!--Device-KeyCode-KEYCODE_GRAPHICSEDITOR = 2704-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3674,9 +3674,9 @@ KEYCODE_PRESENTATION = 2705
 
 Presentation key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_PRESENTATION = 2705--><!--Device-KeyCode-KEYCODE_PRESENTATION = 2705-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3688,9 +3688,9 @@ KEYCODE_DATABASE = 2706
 
 Database key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_DATABASE = 2706--><!--Device-KeyCode-KEYCODE_DATABASE = 2706-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3702,9 +3702,9 @@ KEYCODE_NEWS = 2707
 
 News key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_NEWS = 2707--><!--Device-KeyCode-KEYCODE_NEWS = 2707-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3716,9 +3716,9 @@ KEYCODE_VOICEMAIL = 2708
 
 Voicemail key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_VOICEMAIL = 2708--><!--Device-KeyCode-KEYCODE_VOICEMAIL = 2708-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3730,9 +3730,9 @@ KEYCODE_ADDRESSBOOK = 2709
 
 Address book key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_ADDRESSBOOK = 2709--><!--Device-KeyCode-KEYCODE_ADDRESSBOOK = 2709-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3744,9 +3744,9 @@ KEYCODE_MESSENGER = 2710
 
 Messenger key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_MESSENGER = 2710--><!--Device-KeyCode-KEYCODE_MESSENGER = 2710-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3758,9 +3758,9 @@ KEYCODE_BRIGHTNESS_TOGGLE = 2711
 
 Brightness Toggle key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BRIGHTNESS_TOGGLE = 2711--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_TOGGLE = 2711-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3772,9 +3772,9 @@ KEYCODE_SPELLCHECK = 2712
 
 Spell Check key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SPELLCHECK = 2712--><!--Device-KeyCode-KEYCODE_SPELLCHECK = 2712-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3786,9 +3786,9 @@ KEYCODE_COFFEE = 2713
 
 Coffee key, which is used to launch screen lock or screen saver
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_COFFEE = 2713--><!--Device-KeyCode-KEYCODE_COFFEE = 2713-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3800,9 +3800,9 @@ KEYCODE_MEDIA_REPEAT = 2714
 
 Media Repeat key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_MEDIA_REPEAT = 2714--><!--Device-KeyCode-KEYCODE_MEDIA_REPEAT = 2714-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3814,9 +3814,9 @@ KEYCODE_IMAGES = 2715
 
 Images key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_IMAGES = 2715--><!--Device-KeyCode-KEYCODE_IMAGES = 2715-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3828,9 +3828,9 @@ KEYCODE_BUTTONCONFIG = 2716
 
 Button Configuration key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BUTTONCONFIG = 2716--><!--Device-KeyCode-KEYCODE_BUTTONCONFIG = 2716-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3842,9 +3842,9 @@ KEYCODE_TASKMANAGER = 2717
 
 Task Manager key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_TASKMANAGER = 2717--><!--Device-KeyCode-KEYCODE_TASKMANAGER = 2717-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3856,9 +3856,9 @@ KEYCODE_JOURNAL = 2718
 
 Log key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_JOURNAL = 2718--><!--Device-KeyCode-KEYCODE_JOURNAL = 2718-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3870,9 +3870,9 @@ KEYCODE_CONTROLPANEL = 2719
 
 Control Panel key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_CONTROLPANEL = 2719--><!--Device-KeyCode-KEYCODE_CONTROLPANEL = 2719-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3884,9 +3884,9 @@ KEYCODE_APPSELECT = 2720
 
 App Select key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_APPSELECT = 2720--><!--Device-KeyCode-KEYCODE_APPSELECT = 2720-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3898,9 +3898,9 @@ KEYCODE_SCREENSAVER = 2721
 
 Screen Saver key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SCREENSAVER = 2721--><!--Device-KeyCode-KEYCODE_SCREENSAVER = 2721-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3912,9 +3912,9 @@ KEYCODE_ASSISTANT = 2722
 
 Smart key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_ASSISTANT = 2722--><!--Device-KeyCode-KEYCODE_ASSISTANT = 2722-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3926,9 +3926,9 @@ KEYCODE_KBD_LAYOUT_NEXT = 2723
 
 Next Keyboard Layout key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_KBD_LAYOUT_NEXT = 2723--><!--Device-KeyCode-KEYCODE_KBD_LAYOUT_NEXT = 2723-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3940,9 +3940,9 @@ KEYCODE_BRIGHTNESS_MIN = 2724
 
 Min Brightness key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BRIGHTNESS_MIN = 2724--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_MIN = 2724-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3954,9 +3954,9 @@ KEYCODE_BRIGHTNESS_MAX = 2725
 
 Max Brightness key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BRIGHTNESS_MAX = 2725--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_MAX = 2725-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3968,9 +3968,9 @@ KEYCODE_KBDINPUTASSIST_PREV = 2726
 
 Assist_Previous key, used to view historical inputs
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_PREV = 2726--><!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_PREV = 2726-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3982,9 +3982,9 @@ KEYCODE_KBDINPUTASSIST_NEXT = 2727
 
 Assist_Next key, used to view predictive inputs
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_NEXT = 2727--><!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_NEXT = 2727-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -3996,9 +3996,9 @@ KEYCODE_KBDINPUTASSIST_PREVGROUP = 2728
 
 Assist_Previous_Group key, used to switch to the previous input method in the input group
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_PREVGROUP = 2728--><!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_PREVGROUP = 2728-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4010,9 +4010,9 @@ KEYCODE_KBDINPUTASSIST_NEXTGROUP = 2729
 
 Assist_Next_Group key, used to switch to the next input method in the input group
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_NEXTGROUP = 2729--><!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_NEXTGROUP = 2729-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4024,9 +4024,9 @@ KEYCODE_KBDINPUTASSIST_ACCEPT = 2730
 
 Keyboard Input-assisted Accept key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_ACCEPT = 2730--><!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_ACCEPT = 2730-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4038,9 +4038,9 @@ KEYCODE_KBDINPUTASSIST_CANCEL = 2731
 
 Keyboard Input-assisted Cancel key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_CANCEL = 2731--><!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_CANCEL = 2731-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4056,9 +4056,9 @@ Mouse AI assistant key.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-KeyCode-KEYCODE_MOUSE_ASSISTANT = 2732--><!--Device-KeyCode-KEYCODE_MOUSE_ASSISTANT = 2732-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4074,9 +4074,9 @@ Mouse smart selection key.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-KeyCode-KEYCODE_MOUSE_INTELLIGENCE_SELECTION = 2733--><!--Device-KeyCode-KEYCODE_MOUSE_INTELLIGENCE_SELECTION = 2733-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4092,9 +4092,9 @@ Phone touchscreen single-click event, used in Always-On Display (AOD) mode.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-KeyCode-KEYCODE_AOD_SINGLE_CLICK = 2740--><!--Device-KeyCode-KEYCODE_AOD_SINGLE_CLICK = 2740-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4106,9 +4106,9 @@ KEYCODE_FRONT = 2800
 
 Front key, which is used to launch the windshield defogger
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_FRONT = 2800--><!--Device-KeyCode-KEYCODE_FRONT = 2800-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4120,9 +4120,9 @@ KEYCODE_SETUP = 2801
 
 Setup key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SETUP = 2801--><!--Device-KeyCode-KEYCODE_SETUP = 2801-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4134,9 +4134,9 @@ KEYCODE_WAKEUP = 2802
 
 Wakeup key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_WAKEUP = 2802--><!--Device-KeyCode-KEYCODE_WAKEUP = 2802-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4148,9 +4148,9 @@ KEYCODE_SENDFILE = 2803
 
 Send File key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SENDFILE = 2803--><!--Device-KeyCode-KEYCODE_SENDFILE = 2803-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4162,9 +4162,9 @@ KEYCODE_DELETEFILE = 2804
 
 Delete File key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_DELETEFILE = 2804--><!--Device-KeyCode-KEYCODE_DELETEFILE = 2804-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4176,9 +4176,9 @@ KEYCODE_XFER = 2805
 
 XFER key, which is used to start file transfer
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_XFER = 2805--><!--Device-KeyCode-KEYCODE_XFER = 2805-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4190,9 +4190,9 @@ KEYCODE_PROG1 = 2806
 
 Program key 1
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_PROG1 = 2806--><!--Device-KeyCode-KEYCODE_PROG1 = 2806-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4204,9 +4204,9 @@ KEYCODE_PROG2 = 2807
 
 Program key 2
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_PROG2 = 2807--><!--Device-KeyCode-KEYCODE_PROG2 = 2807-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4218,9 +4218,9 @@ KEYCODE_MSDOS = 2808
 
 DOS key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_MSDOS = 2808--><!--Device-KeyCode-KEYCODE_MSDOS = 2808-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4232,9 +4232,9 @@ KEYCODE_SCREENLOCK = 2809
 
 Screen Lock key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SCREENLOCK = 2809--><!--Device-KeyCode-KEYCODE_SCREENLOCK = 2809-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4246,9 +4246,9 @@ KEYCODE_DIRECTION_ROTATE_DISPLAY = 2810
 
 Directional Rotation Display key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_DIRECTION_ROTATE_DISPLAY = 2810--><!--Device-KeyCode-KEYCODE_DIRECTION_ROTATE_DISPLAY = 2810-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4260,9 +4260,9 @@ KEYCODE_CYCLEWINDOWS = 2811
 
 Window Cycle key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_CYCLEWINDOWS = 2811--><!--Device-KeyCode-KEYCODE_CYCLEWINDOWS = 2811-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4274,9 +4274,9 @@ KEYCODE_COMPUTER = 2812
 
 Key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_COMPUTER = 2812--><!--Device-KeyCode-KEYCODE_COMPUTER = 2812-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4288,9 +4288,9 @@ KEYCODE_EJECTCLOSECD = 2813
 
 Eject CD key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_EJECTCLOSECD = 2813--><!--Device-KeyCode-KEYCODE_EJECTCLOSECD = 2813-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4302,9 +4302,9 @@ KEYCODE_ISO = 2814
 
 ISO key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_ISO = 2814--><!--Device-KeyCode-KEYCODE_ISO = 2814-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4316,9 +4316,9 @@ KEYCODE_MOVE = 2815
 
 Move key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_MOVE = 2815--><!--Device-KeyCode-KEYCODE_MOVE = 2815-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4330,9 +4330,9 @@ KEYCODE_F13 = 2816
 
 F13 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F13 = 2816--><!--Device-KeyCode-KEYCODE_F13 = 2816-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4344,9 +4344,9 @@ KEYCODE_F14 = 2817
 
 F14 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F14 = 2817--><!--Device-KeyCode-KEYCODE_F14 = 2817-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4358,9 +4358,9 @@ KEYCODE_F15 = 2818
 
 F15 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F15 = 2818--><!--Device-KeyCode-KEYCODE_F15 = 2818-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4372,9 +4372,9 @@ KEYCODE_F16 = 2819
 
 F16 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F16 = 2819--><!--Device-KeyCode-KEYCODE_F16 = 2819-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4386,9 +4386,9 @@ KEYCODE_F17 = 2820
 
 F17 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F17 = 2820--><!--Device-KeyCode-KEYCODE_F17 = 2820-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4400,9 +4400,9 @@ KEYCODE_F18 = 2821
 
 F18 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F18 = 2821--><!--Device-KeyCode-KEYCODE_F18 = 2821-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4414,9 +4414,9 @@ KEYCODE_F19 = 2822
 
 F19 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F19 = 2822--><!--Device-KeyCode-KEYCODE_F19 = 2822-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4428,9 +4428,9 @@ KEYCODE_F20 = 2823
 
 F20 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F20 = 2823--><!--Device-KeyCode-KEYCODE_F20 = 2823-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4442,9 +4442,9 @@ KEYCODE_F21 = 2824
 
 F21 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F21 = 2824--><!--Device-KeyCode-KEYCODE_F21 = 2824-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4456,9 +4456,9 @@ KEYCODE_F22 = 2825
 
 F22 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F22 = 2825--><!--Device-KeyCode-KEYCODE_F22 = 2825-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4470,9 +4470,9 @@ KEYCODE_F23 = 2826
 
 F23 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F23 = 2826--><!--Device-KeyCode-KEYCODE_F23 = 2826-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4484,9 +4484,9 @@ KEYCODE_F24 = 2827
 
 F24 key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_F24 = 2827--><!--Device-KeyCode-KEYCODE_F24 = 2827-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4498,9 +4498,9 @@ KEYCODE_PROG3 = 2828
 
 Program key 3
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_PROG3 = 2828--><!--Device-KeyCode-KEYCODE_PROG3 = 2828-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4512,9 +4512,9 @@ KEYCODE_PROG4 = 2829
 
 Program key 4
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_PROG4 = 2829--><!--Device-KeyCode-KEYCODE_PROG4 = 2829-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4526,9 +4526,9 @@ KEYCODE_DASHBOARD = 2830
 
 Dashboard key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_DASHBOARD = 2830--><!--Device-KeyCode-KEYCODE_DASHBOARD = 2830-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4540,9 +4540,9 @@ KEYCODE_SUSPEND = 2831
 
 Suspend key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SUSPEND = 2831--><!--Device-KeyCode-KEYCODE_SUSPEND = 2831-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4554,9 +4554,9 @@ KEYCODE_HP = 2832
 
 HP key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_HP = 2832--><!--Device-KeyCode-KEYCODE_HP = 2832-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4568,9 +4568,9 @@ KEYCODE_SOUND = 2833
 
 Sound key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SOUND = 2833--><!--Device-KeyCode-KEYCODE_SOUND = 2833-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4582,9 +4582,9 @@ KEYCODE_QUESTION = 2834
 
 Question key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_QUESTION = 2834--><!--Device-KeyCode-KEYCODE_QUESTION = 2834-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4596,9 +4596,9 @@ KEYCODE_CONNECT = 2836
 
 Connect key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_CONNECT = 2836--><!--Device-KeyCode-KEYCODE_CONNECT = 2836-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4610,9 +4610,9 @@ KEYCODE_SPORT = 2837
 
 Sport key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SPORT = 2837--><!--Device-KeyCode-KEYCODE_SPORT = 2837-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4624,9 +4624,9 @@ KEYCODE_SHOP = 2838
 
 Shop key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SHOP = 2838--><!--Device-KeyCode-KEYCODE_SHOP = 2838-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4638,9 +4638,9 @@ KEYCODE_ALTERASE = 2839
 
 Alternate key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_ALTERASE = 2839--><!--Device-KeyCode-KEYCODE_ALTERASE = 2839-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4652,9 +4652,9 @@ KEYCODE_SWITCHVIDEOMODE = 2841
 
 Switch Video Mode key (monitor, LCD, and TV, etc.)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_SWITCHVIDEOMODE = 2841--><!--Device-KeyCode-KEYCODE_SWITCHVIDEOMODE = 2841-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4666,9 +4666,9 @@ KEYCODE_BATTERY = 2842
 
 Battery key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BATTERY = 2842--><!--Device-KeyCode-KEYCODE_BATTERY = 2842-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4680,9 +4680,9 @@ KEYCODE_BLUETOOTH = 2843
 
 Bluetooth key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BLUETOOTH = 2843--><!--Device-KeyCode-KEYCODE_BLUETOOTH = 2843-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4694,9 +4694,9 @@ KEYCODE_WLAN = 2844
 
 WLAN key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_WLAN = 2844--><!--Device-KeyCode-KEYCODE_WLAN = 2844-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4708,9 +4708,9 @@ KEYCODE_UWB = 2845
 
 Ultra-wideband key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_UWB = 2845--><!--Device-KeyCode-KEYCODE_UWB = 2845-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4722,9 +4722,9 @@ KEYCODE_WWAN_WIMAX = 2846
 
 Mobile Network Control key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_WWAN_WIMAX = 2846--><!--Device-KeyCode-KEYCODE_WWAN_WIMAX = 2846-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4736,9 +4736,9 @@ KEYCODE_RFKILL = 2847
 
 RF Kill key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_RFKILL = 2847--><!--Device-KeyCode-KEYCODE_RFKILL = 2847-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4750,9 +4750,9 @@ KEYCODE_CHANNEL = 3001
 
 Channel key
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_CHANNEL = 3001--><!--Device-KeyCode-KEYCODE_CHANNEL = 3001-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4764,9 +4764,9 @@ KEYCODE_BTN_0 = 3100
 
 Button 0
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BTN_0 = 3100--><!--Device-KeyCode-KEYCODE_BTN_0 = 3100-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4778,9 +4778,9 @@ KEYCODE_BTN_1 = 3101
 
 Button 1
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BTN_1 = 3101--><!--Device-KeyCode-KEYCODE_BTN_1 = 3101-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4792,9 +4792,9 @@ KEYCODE_BTN_2 = 3102
 
 Button 2
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BTN_2 = 3102--><!--Device-KeyCode-KEYCODE_BTN_2 = 3102-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4806,9 +4806,9 @@ KEYCODE_BTN_3 = 3103
 
 Button 3
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BTN_3 = 3103--><!--Device-KeyCode-KEYCODE_BTN_3 = 3103-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4820,9 +4820,9 @@ KEYCODE_BTN_4 = 3104
 
 Button 4
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BTN_4 = 3104--><!--Device-KeyCode-KEYCODE_BTN_4 = 3104-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4834,9 +4834,9 @@ KEYCODE_BTN_5 = 3105
 
 Button 5
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BTN_5 = 3105--><!--Device-KeyCode-KEYCODE_BTN_5 = 3105-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4848,9 +4848,9 @@ KEYCODE_BTN_6 = 3106
 
 Button 6
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BTN_6 = 3106--><!--Device-KeyCode-KEYCODE_BTN_6 = 3106-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4862,9 +4862,9 @@ KEYCODE_BTN_7 = 3107
 
 Button 7
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BTN_7 = 3107--><!--Device-KeyCode-KEYCODE_BTN_7 = 3107-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4876,9 +4876,9 @@ KEYCODE_BTN_8 = 3108
 
 Button 8
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BTN_8 = 3108--><!--Device-KeyCode-KEYCODE_BTN_8 = 3108-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4890,9 +4890,9 @@ KEYCODE_BTN_9 = 3109
 
 Button 9
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-KeyCode-KEYCODE_BTN_9 = 3109--><!--Device-KeyCode-KEYCODE_BTN_9 = 3109-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4904,9 +4904,9 @@ KEYCODE_DAGGER_CLICK = 3211
 
 Single tapping the smart watch's X-TAP sensor
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-KeyCode-KEYCODE_DAGGER_CLICK = 3211--><!--Device-KeyCode-KEYCODE_DAGGER_CLICK = 3211-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4918,9 +4918,9 @@ KEYCODE_DAGGER_DOUBLE_CLICK = 3212
 
 Double tapping the smart watch's X-TAP sensor
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-KeyCode-KEYCODE_DAGGER_DOUBLE_CLICK = 3212--><!--Device-KeyCode-KEYCODE_DAGGER_DOUBLE_CLICK = 3212-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4932,9 +4932,9 @@ KEYCODE_DAGGER_LONG_PRESS = 3213
 
 Long-pressing the smart watch's X-TAP sensor
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-KeyCode-KEYCODE_DAGGER_LONG_PRESS = 3213--><!--Device-KeyCode-KEYCODE_DAGGER_LONG_PRESS = 3213-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4946,9 +4946,9 @@ KEYCODE_DIV = 3220
 
 Left button of the smart watch
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-KeyCode-KEYCODE_DIV = 3220--><!--Device-KeyCode-KEYCODE_DIV = 3220-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4964,9 +4964,9 @@ Custom hotkey
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-KeyCode-KEYCODE_XKEY = 3232--><!--Device-KeyCode-KEYCODE_XKEY = 3232-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -4982,9 +4982,9 @@ Smart control key slide-up
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-KeyCode-KEYCODE_FINGERPRINT_SLIDE_UP = 3233--><!--Device-KeyCode-KEYCODE_FINGERPRINT_SLIDE_UP = 3233-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -5000,9 +5000,8 @@ Smart control key slide-down
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-KeyCode-KEYCODE_FINGERPRINT_SLIDE_DOWN = 3234--><!--Device-KeyCode-KEYCODE_FINGERPRINT_SLIDE_DOWN = 3234-End-->
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
-

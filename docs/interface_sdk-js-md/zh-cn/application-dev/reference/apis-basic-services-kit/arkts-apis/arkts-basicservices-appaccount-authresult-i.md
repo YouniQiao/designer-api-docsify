@@ -2,9 +2,9 @@
 
 表示认证结果信息。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-appAccount-interface AuthResult--><!--Device-appAccount-interface AuthResult-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -24,9 +24,9 @@ account?: AppAccountInfo
 
 **类型：** [AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-AuthResult-account?: AppAccountInfo--><!--Device-AuthResult-account?: AppAccountInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -40,9 +40,8 @@ tokenInfo?: AuthTokenInfo
 
 **类型：** [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-AuthResult-tokenInfo?: AuthTokenInfo--><!--Device-AuthResult-tokenInfo?: AuthTokenInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
-

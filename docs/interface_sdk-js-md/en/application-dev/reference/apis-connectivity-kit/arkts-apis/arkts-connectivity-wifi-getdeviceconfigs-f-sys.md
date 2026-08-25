@@ -16,13 +16,13 @@ Obtains the list of all existing Wi-Fi configurations.<p>You can obtain only the
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getDeviceConfigs](arkts-connectivity-wifimanager-getdeviceconfigs-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.GET_WIFI_CONFIG
-
-<!--Device-wifi-function getDeviceConfigs(): Array<WifiDeviceConfig>--><!--Device-wifi-function getDeviceConfigs(): Array<WifiDeviceConfig>-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -30,9 +30,9 @@ Obtains the list of all existing Wi-Fi configurations.<p>You can obtain only the
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;WifiDeviceConfig&gt; | sReturns the list of all existing Wi-Fi configurations you created on your application. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;WifiDeviceConfig & gt; |
 
 **Examples**
 
@@ -46,4 +46,3 @@ try {
     console.error("failed:" + JSON.stringify(error));
 }
 ```
-

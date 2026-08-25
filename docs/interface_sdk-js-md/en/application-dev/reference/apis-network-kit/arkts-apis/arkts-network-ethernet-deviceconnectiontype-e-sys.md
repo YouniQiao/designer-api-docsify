@@ -4,7 +4,7 @@ Enumerates Ethernet device connection modes.
 
 **Since:** 20
 
-<!--Device-ethernet-export enum DeviceConnectionType--><!--Device-ethernet-export enum DeviceConnectionType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -20,7 +20,7 @@ Internal connection mode.
 
 **Since:** 20
 
-<!--Device-DeviceConnectionType-BUILT_IN = 0--><!--Device-DeviceConnectionType-BUILT_IN = 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -36,9 +36,8 @@ External connection mode. For example, the Ethernet device is connected through 
 
 **Since:** 20
 
-<!--Device-DeviceConnectionType-EXTERNAL = 1--><!--Device-DeviceConnectionType-EXTERNAL = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
-

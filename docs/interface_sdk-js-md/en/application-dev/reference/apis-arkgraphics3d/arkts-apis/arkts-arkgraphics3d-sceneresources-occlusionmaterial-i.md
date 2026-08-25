@@ -6,7 +6,6 @@ Occlusion material: occludes other objects in the scene but does not occlude the
 
 **Since:** 23
 
-<!--Device-unnamed-export interface OcclusionMaterial--><!--Device-unnamed-export interface OcclusionMaterial-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

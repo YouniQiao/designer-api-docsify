@@ -4,7 +4,7 @@ Selects the purpose of the companion device.
 
 **Since:** 23
 
-<!--Device-companionDeviceAuth-enum SelectPurpose--><!--Device-companionDeviceAuth-enum SelectPurpose-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -20,9 +20,9 @@ Selects a companion device to which the template is to be added. Specifically, t
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-SelectPurpose-SELECT_ADD_DEVICE = 1--><!--Device-SelectPurpose-SELECT_ADD_DEVICE = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -38,9 +38,9 @@ Selects the companion device that provides the authentication capability. Specif
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-SelectPurpose-SELECT_AUTH_DEVICE = 2--><!--Device-SelectPurpose-SELECT_AUTH_DEVICE = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -56,11 +56,10 @@ Start value of the vendor-defined selection purpose. The vendor can extend the s
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-SelectPurpose-VENDOR_BEGIN = 10000--><!--Device-SelectPurpose-VENDOR_BEGIN = 10000-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **System API:** This is a system API.
-

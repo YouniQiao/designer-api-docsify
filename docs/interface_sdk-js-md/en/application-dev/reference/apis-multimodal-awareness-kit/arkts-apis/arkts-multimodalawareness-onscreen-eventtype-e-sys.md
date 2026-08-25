@@ -2,9 +2,9 @@
 
 Enumerates the control event types.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-onScreen-export enum EventType--><!--Device-onScreen-export enum EventType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -16,11 +16,10 @@ SCROLL_TO_HOOK = 1
 
 Scrolling to the hook.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-EventType-SCROLL_TO_HOOK = 1--><!--Device-EventType-SCROLL_TO_HOOK = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
-

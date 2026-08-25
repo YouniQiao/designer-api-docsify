@@ -7,11 +7,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** null
-
-<!--Device-bundle-export enum ColorMode--><!--Device-bundle-export enum ColorMode-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -25,11 +25,11 @@ AUTO_MODE = -1
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [COLOR_MODE_NOT_SET](arkts-ability-configurationconstant-colormode-e.md#color_mode_not_set)
-
-<!--Device-ColorMode-AUTO_MODE = -1--><!--Device-ColorMode-AUTO_MODE = -1-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -43,11 +43,11 @@ DARK_MODE = 0
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [COLOR_MODE_DARK](arkts-ability-configurationconstant-colormode-e.md#color_mode_dark)
-
-<!--Device-ColorMode-DARK_MODE = 0--><!--Device-ColorMode-DARK_MODE = 0-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -61,11 +61,10 @@ LIGHT_MODE = 1
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [COLOR_MODE_LIGHT](arkts-ability-configurationconstant-colormode-e.md#color_mode_light)
 
-<!--Device-ColorMode-LIGHT_MODE = 1--><!--Device-ColorMode-LIGHT_MODE = 1-End-->
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework
-

@@ -4,11 +4,11 @@ Describes the spp parameters.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md)
-
-<!--Device-bluetooth-interface SppOption--><!--Device-bluetooth-interface SppOption-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -30,11 +30,11 @@ Indicates secure channel or not
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [secure](arkts-connectivity-bluetoothmanager-sppoption-i.md#secure)
-
-<!--Device-SppOption-secure: boolean--><!--Device-SppOption-secure: boolean-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -50,11 +50,11 @@ Spp link type [SppType](arkts-connectivity-bluetooth-spptype-e.md)
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [type](arkts-connectivity-bluetoothmanager-sppoption-i.md#type)
-
-<!--Device-SppOption-type: SppType--><!--Device-SppOption-type: SppType-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -70,11 +70,10 @@ Indicates the UUID in the SDP record.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [uuid](arkts-connectivity-bluetoothmanager-sppoption-i.md#uuid)
 
-<!--Device-SppOption-uuid: string--><!--Device-SppOption-uuid: string-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

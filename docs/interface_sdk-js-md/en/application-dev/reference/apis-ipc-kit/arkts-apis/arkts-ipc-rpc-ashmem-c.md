@@ -2,9 +2,9 @@
 
 Provides methods related to anonymous shared memory objects, including creating, closing, mapping, and unmapping an **Ashmem** object, reading data from and writing data to an **Ashmem** object, obtaining the **Ashmem** size, and setting **Ashmem** protection. The shared memory applies only to cross-process communication within the local device.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-rpc-class Ashmem--><!--Device-rpc-class Ashmem-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -25,9 +25,9 @@ Closes this **Ashmem** object.
 > **NOTE：**&gt;
 > Before closing the **Ashmem** object, you need to remove the address mapping.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-Ashmem-closeAshmem(): void--><!--Device-Ashmem-closeAshmem(): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -47,36 +47,42 @@ try {
 
 ## create
 
+ArkTS-Dyn:
+```TypeScript
+static create(name: string, size: number): Ashmem
+```
+
+ArkTS-Sta:
 ```TypeScript
 static create(name: string, size: int): Ashmem
 ```
 
 Creates an **Ashmem** object with the specified name and size. This API is a static method.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Ashmem-static create(name: string, size: int): Ashmem--><!--Device-Ashmem-static create(name: string, size: int): Ashmem-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the **Ashmem** object to create. The length of the Ashmem name cannot be 0. |
-| size | int | Yes | Size of the **Ashmem** object, in bytes. The value must be greater than 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| size | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Returns the **Ashmem** object if it is created successfully; returns null otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The Ashmem name passed is empty; 4.The Ashmem size passed is less than or equal to 0. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -155,29 +161,29 @@ static create(ashmem: Ashmem): Ashmem
 
 Creates an **Ashmem** object by copying the file descriptor of an existing **Ashmem** object. The two **Ashmem** objects point to the same shared memory region.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Ashmem-static create(ashmem: Ashmem): Ashmem--><!--Device-Ashmem-static create(ashmem: Ashmem): Ashmem-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Yes | Existing **Ashmem** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Ashmem** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The passed parameter is not an Ashmem object; 3.The ashmem instance for obtaining packaging is empty. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -193,26 +199,26 @@ Creates an **Ashmem** object with the specified name and size. This API is a sta
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** create()
-
-<!--Device-Ashmem-static createAshmem(name: string, size: number): Ashmem--><!--Device-Ashmem-static createAshmem(name: string, size: number): Ashmem-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the **Ashmem** object to create. |
-| size | number | Yes | Size (in bytes) of the **Ashmem** object to create. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| size | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Returns the **Ashmem** object if it is created successfully; returns null otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) |
 
 **Examples**
 
@@ -240,25 +246,25 @@ Creates an **Ashmem** object by copying the file descriptor of an existing **Ash
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** create()
-
-<!--Device-Ashmem-static createAshmemFromExisting(ashmem: Ashmem): Ashmem--><!--Device-Ashmem-static createAshmemFromExisting(ashmem: Ashmem): Ashmem-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Yes | Existing **Ashmem** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Ashmem** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) |
 
 **Examples**
 
@@ -278,23 +284,29 @@ try {
 
 ## getAshmemSize
 
+ArkTS-Dyn:
+```TypeScript
+getAshmemSize(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getAshmemSize(): int
 ```
 
 Obtains the memory size of this **Ashmem** object.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-Ashmem-getAshmemSize(): int--><!--Device-Ashmem-getAshmemSize(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Ashmem** size obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -321,25 +333,25 @@ Creates the shared file mapping on the virtual address space of this process. Th
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [mapTypedAshmem](#maptypedashmem)(mapType: int)
-
-<!--Device-Ashmem-mapAshmem(mapType: number): boolean--><!--Device-Ashmem-mapAshmem(mapType: number): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mapType | number | Yes | Protection level of the memory region to which the shared file is mapped. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mapType | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the mapping is created; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -366,19 +378,19 @@ Maps the shared file to the readable and writable virtual address space of the p
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [mapReadWriteAshmem](#mapreadwriteashmem)()
-
-<!--Device-Ashmem-mapReadAndWriteAshmem(): boolean--><!--Device-Ashmem-mapReadAndWriteAshmem(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the mapping is created; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -405,19 +417,19 @@ Maps the shared file to the read-only virtual address space of the process.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [mapReadonlyAshmem](#mapreadonlyashmem)()
-
-<!--Device-Ashmem-mapReadOnlyAshmem(): boolean--><!--Device-Ashmem-mapReadOnlyAshmem(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the mapping is created; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -442,17 +454,17 @@ mapReadonlyAshmem(): void
 
 Maps the shared file to the read-only virtual address space of the process.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Ashmem-mapReadonlyAshmem(): void--><!--Device-Ashmem-mapReadonlyAshmem(): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) | Failed to call mmap. |
+| Error Code ID |
+| --- |
+| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) |
 
 **Examples**
 
@@ -479,17 +491,17 @@ mapReadWriteAshmem(): void
 
 Maps the shared file to the readable and writable virtual address space of the process.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Ashmem-mapReadWriteAshmem(): void--><!--Device-Ashmem-mapReadWriteAshmem(): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) | Failed to call mmap. |
+| Error Code ID |
+| --- |
+| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) |
 
 **Examples**
 
@@ -510,30 +522,36 @@ try {
 
 ## mapTypedAshmem
 
+ArkTS-Dyn:
+```TypeScript
+mapTypedAshmem(mapType: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 mapTypedAshmem(mapType: int): void
 ```
 
 Creates the shared file mapping on the virtual address space of this process. The size of the mapping region is specified by this **Ashmem** object.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Ashmem-mapTypedAshmem(mapType: int): void--><!--Device-Ashmem-mapTypedAshmem(mapType: int): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mapType | int | Yes | Protection level of the memory region to which the shared file is mapped. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mapType | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The passed mapType exceeds the maximum protection level. |
-| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) | Failed to call mmap. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) |
 
 **Examples**
 
@@ -566,33 +584,33 @@ Reads data from the shared file associated with this **Ashmem** object.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 11
 
 **Substitutes:** [readDataFromAshmem](#readdatafromashmem)(size: int, offset: int)
-
-<!--Device-Ashmem-readAshmem(size: number, offset: number): number[]--><!--Device-Ashmem-readAshmem(size: number, offset: number): number[]-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | number | Yes | Size of the data to read. |
-| offset | number | Yes | Start position of the data to read in the memory region associated with this **Ashmem** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| size | number | Yes |
+| offset | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number[] | Data read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number[] |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900004](../errorcode-rpc.md#1900004-failed-to-read-data-from-the-shared-memory) | Failed to read data from the shared memory. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900004](../errorcode-rpc.md#1900004-failed-to-read-data-from-the-shared-memory) |
 
 **Examples**
 
@@ -671,6 +689,12 @@ try {
 
 ## readDataFromAshmem
 
+ArkTS-Dyn:
+```TypeScript
+readDataFromAshmem(size: number, offset: number): ArrayBuffer
+```
+
+ArkTS-Sta:
 ```TypeScript
 readDataFromAshmem(size: int, offset: int): ArrayBuffer
 ```
@@ -681,31 +705,31 @@ Reads data from the shared file associated with this **Ashmem** object.
 > Before writing an **Ashmem** object, you need to call
 > [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Ashmem-readDataFromAshmem(size: int, offset: int): ArrayBuffer--><!--Device-Ashmem-readDataFromAshmem(size: int, offset: int): ArrayBuffer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | int | Yes | Size of the data to read. |
-| offset | int | Yes | Start position of the data to read in the memory region associated with this **Ashmem** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| size | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ArrayBuffer | Data read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArrayBuffer |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900004](../errorcode-rpc.md#1900004-failed-to-read-data-from-the-shared-memory) | Failed to read data from the shared memory. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900004](../errorcode-rpc.md#1900004-failed-to-read-data-from-the-shared-memory) |
 
 **Examples**
 
@@ -748,26 +772,26 @@ Reads data from the shared file associated with this **Ashmem** object.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [readDataFromAshmem](#readdatafromashmem)(size: int, offset: int)
-
-<!--Device-Ashmem-readFromAshmem(size: number, offset: number): number[]--><!--Device-Ashmem-readFromAshmem(size: number, offset: number): number[]-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | number | Yes | Size of the data to read. |
-| offset | number | Yes | Start position of the data to read in the memory region associated with this **Ashmem** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| size | number | Yes |
+| offset | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number[] | Data read. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number[] |
 
 **Examples**
 
@@ -799,25 +823,25 @@ Sets the protection level of the memory region to which the shared file is mappe
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [setProtectionType](#setprotectiontype)(protectionType: int)
-
-<!--Device-Ashmem-setProtection(protectionType: number): boolean--><!--Device-Ashmem-setProtection(protectionType: number): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| protectionType | number | Yes | Protection type to set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| protectionType | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -837,30 +861,36 @@ try {
 
 ## setProtectionType
 
+ArkTS-Dyn:
+```TypeScript
+setProtectionType(protectionType: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setProtectionType(protectionType: int): void
 ```
 
 Sets the protection level of the memory region to which the shared file is mapped.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Ashmem-setProtectionType(protectionType: int): void--><!--Device-Ashmem-setProtectionType(protectionType: int): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| protectionType | int | Yes | Protection type to set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| protectionType | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900002](../errorcode-rpc.md#1900002-failed-to-call-ioctl) | Failed to call ioctl. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900002](../errorcode-rpc.md#1900002-failed-to-call-ioctl) |
 
 **Examples**
 
@@ -887,9 +917,9 @@ unmapAshmem(): void
 
 Deletes the mappings for the specified address range of this **Ashmem** object.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-Ashmem-unmapAshmem(): void--><!--Device-Ashmem-unmapAshmem(): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -921,28 +951,28 @@ Writes data to the shared file associated with this **Ashmem** object.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 11
 
 **Substitutes:** [writeDataToAshmem](#writedatatoashmem)(buf: ArrayBuffer, size: int, offset: int)
-
-<!--Device-Ashmem-writeAshmem(buf: number[], size: number, offset: number): void--><!--Device-Ashmem-writeAshmem(buf: number[], size: number, offset: number): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | number[] | Yes | Data to write. |
-| size | number | Yes | Size of the data to write. |
-| offset | number | Yes | Start position of the data to write in the memory region associated with this **Ashmem** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | number[] | Yes |
+| size | number | Yes |
+| offset | number | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The element does not exist in the array. |
-| [1900003](../errorcode-rpc.md#1900003-failed-to-write-data-to-the-shared-memory) | Failed to write data to the shared memory. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900003](../errorcode-rpc.md#1900003-failed-to-write-data-to-the-shared-memory) |
 
 **Examples**
 
@@ -1007,6 +1037,12 @@ try {
 
 ## writeDataToAshmem
 
+ArkTS-Dyn:
+```TypeScript
+writeDataToAshmem(buf: ArrayBuffer, size: number, offset: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void
 ```
@@ -1017,26 +1053,26 @@ Writes data to the shared file associated with this **Ashmem** object.
 > Before writing an **Ashmem** object, you need to call
 > [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Ashmem-writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void--><!--Device-Ashmem-writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Data to write. |
-| size | int | Yes | Size of the data to write. |
-| offset | int | Yes | Start position of the data to write in the memory region associated with this **Ashmem** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | ArrayBuffer | Yes |
+| size | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain arrayBuffer information. |
-| [1900003](../errorcode-rpc.md#1900003-failed-to-write-data-to-the-shared-memory) | Failed to write data to the shared memory. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900003](../errorcode-rpc.md#1900003-failed-to-write-data-to-the-shared-memory) |
 
 **Examples**
 
@@ -1076,27 +1112,27 @@ Writes data to the shared file associated with this **Ashmem** object.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [writeDataToAshmem](#writedatatoashmem)(buf: ArrayBuffer, size: int, offset: int)
-
-<!--Device-Ashmem-writeToAshmem(buf: number[], size: number, offset: number): boolean--><!--Device-Ashmem-writeToAshmem(buf: number[], size: number, offset: number): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | number[] | Yes | Data to write. |
-| size | number | Yes | Size of the data to write. |
-| offset | number | Yes | Start position of the data to write in the memory region associated with this **Ashmem** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | number[] | Yes |
+| size | number | Yes |
+| offset | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -1130,7 +1166,7 @@ Mapped memory protection type, indicating that the mapped memory is executable.
 
 **Since:** 8
 
-<!--Device-Ashmem-static readonly PROT_EXEC: number--><!--Device-Ashmem-static readonly PROT_EXEC: number-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1148,7 +1184,7 @@ Mapped memory protection type, indicating that the mapped memory cannot be acces
 
 **Since:** 8
 
-<!--Device-Ashmem-static readonly PROT_NONE: number--><!--Device-Ashmem-static readonly PROT_NONE: number-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1166,7 +1202,7 @@ Mapped memory protection type, indicating that the mapped memory is readable.
 
 **Since:** 8
 
-<!--Device-Ashmem-static readonly PROT_READ: number--><!--Device-Ashmem-static readonly PROT_READ: number-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1184,7 +1220,6 @@ Mapped memory protection type, indicating that the mapped memory is readable.
 
 **Since:** 8
 
-<!--Device-Ashmem-static readonly PROT_WRITE: number--><!--Device-Ashmem-static readonly PROT_WRITE: number-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
-

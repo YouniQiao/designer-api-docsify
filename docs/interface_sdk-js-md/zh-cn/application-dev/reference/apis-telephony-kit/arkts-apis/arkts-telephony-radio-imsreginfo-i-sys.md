@@ -2,9 +2,9 @@
 
 Indicates IMS registration information.
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-radio-export interface ImsRegInfo--><!--Device-radio-export interface ImsRegInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -26,9 +26,9 @@ Indicates the registration status of the ims service.
 
 **类型：** [ImsRegState](arkts-telephony-radio-imsregstate-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ImsRegInfo-imsRegState: ImsRegState--><!--Device-ImsRegInfo-imsRegState: ImsRegState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -44,11 +44,10 @@ Indicates the mode of ims radio technology.
 
 **类型：** [ImsRegTech](arkts-telephony-radio-imsregtech-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ImsRegInfo-imsRegTech: ImsRegTech--><!--Device-ImsRegInfo-imsRegTech: ImsRegTech-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
-

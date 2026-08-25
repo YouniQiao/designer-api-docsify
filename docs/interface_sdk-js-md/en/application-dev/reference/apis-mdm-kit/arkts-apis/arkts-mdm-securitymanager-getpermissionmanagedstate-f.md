@@ -20,36 +20,36 @@ Obtains the management policy for the [user_grant permission](../../apis-ability
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_USER_GRANT_PERMISSION
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-securityManager-function getPermissionManagedState(    admin: Want,    applicationInstance: ApplicationInstance,    permission: string  ): PermissionManagedState--><!--Device-securityManager-function getPermissionManagedState(    admin: Want,    applicationInstance: ApplicationInstance,    permission: string  ): PermissionManagedState-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| applicationInstance | ApplicationInstance | Yes | Application instance. |
-| permission | string | Yes | Name of the permission required for obtaining the management policy. Only the **user_grant** permission is supported. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+| applicationInstance | [ApplicationInstance](arkts-mdm-securitymanager-applicationinstance-i.md) | Yes |
+| permission | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [PermissionManagedState](arkts-mdm-securitymanager-permissionmanagedstate-e.md) | Management policy for application permissions. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PermissionManagedState](arkts-mdm-securitymanager-permissionmanagedstate-e.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| Error Code ID |
+| --- |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 **Examples**
 
@@ -76,4 +76,3 @@ try {
     console.error(`Failed to get permission managed state. Code: ${err.code}, message: ${err.message}`);
 }
 ```
-

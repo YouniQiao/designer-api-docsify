@@ -4,7 +4,7 @@ IP邻居表条目信息。
 
 **起始版本：** 22
 
-<!--Device-connection-export interface NetIpMacInfo--><!--Device-connection-export interface NetIpMacInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -26,7 +26,7 @@ iface: string
 
 **起始版本：** 22
 
-<!--Device-NetIpMacInfo-iface: string--><!--Device-NetIpMacInfo-iface: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -42,7 +42,7 @@ IP地址相关信息。
 
 **起始版本：** 22
 
-<!--Device-NetIpMacInfo-ipAddress: NetAddress--><!--Device-NetIpMacInfo-ipAddress: NetAddress-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -58,7 +58,6 @@ MAC地址。
 
 **起始版本：** 22
 
-<!--Device-NetIpMacInfo-macAddress: string--><!--Device-NetIpMacInfo-macAddress: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
-

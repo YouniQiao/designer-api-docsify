@@ -1,12 +1,12 @@
 # Asset
 
-记录资产附件（文件、图片、视频等类型文件）的相关信息。用于支持资产数据跨线程传递，继承自 lang.ISendable。资产类型的相关接口暂不支持Datashare。使用 [sendableRelationalStore.toSendableAsset](arkts-arkdata-sendablerelationalstore-tosendableasset-f.md)方法创建。
+记录资产附件（文件、图片、视频等类型文件）的相关信息。用于支持资产数据跨线程传递，继承自 [lang.ISendable](../../../reference/apis-arkts/js-apis-arkts-lang.md#langisendable)。资产类型的相关接口暂不支持Datashare。使用 [sendableRelationalStore.toSendableAsset](arkts-arkdata-sendablerelationalstore-tosendableasset-f.md)方法创建。
 
 **继承/实现关系：** Asset extends lang.ISendable
 
 **起始版本：** 12
 
-<!--Device-sendableRelationalStore-interface Asset--><!--Device-sendableRelationalStore-interface Asset-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -28,7 +28,7 @@ createTime: string
 
 **起始版本：** 12
 
-<!--Device-Asset-createTime: string--><!--Device-Asset-createTime: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -44,7 +44,7 @@ modifyTime: string
 
 **起始版本：** 12
 
-<!--Device-Asset-modifyTime: string--><!--Device-Asset-modifyTime: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -60,7 +60,7 @@ name: string
 
 **起始版本：** 12
 
-<!--Device-Asset-name: string--><!--Device-Asset-name: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -76,7 +76,7 @@ path: string
 
 **起始版本：** 12
 
-<!--Device-Asset-path: string--><!--Device-Asset-path: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -92,7 +92,7 @@ size: string
 
 **起始版本：** 12
 
-<!--Device-Asset-size: string--><!--Device-Asset-size: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -108,7 +108,7 @@ status?: number
 
 **起始版本：** 12
 
-<!--Device-Asset-status?: number--><!--Device-Asset-status?: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -124,7 +124,6 @@ uri: string
 
 **起始版本：** 12
 
-<!--Device-Asset-uri: string--><!--Device-Asset-uri: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-

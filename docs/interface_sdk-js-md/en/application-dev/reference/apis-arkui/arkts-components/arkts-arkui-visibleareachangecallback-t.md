@@ -8,18 +8,17 @@ Represents a callback for visible area changes of the component.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-unnamed-declare type VisibleAreaChangeCallback = (isExpanding: boolean, currentRatio: number) => void--><!--Device-unnamed-declare type VisibleAreaChangeCallback = (isExpanding: boolean, currentRatio: number) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isExpanding | boolean | Yes | Whether the component's visible area has increased or decreased relative to its total area since the last callback. The value **true** indicates that the visible area has increased, and **false** indicates that the visible area has decreased. |
-| currentRatio | number | Yes | Ratio of the component's visible area to its own area at the moment the callback is triggered. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| isExpanding | boolean | Yes |
+| currentRatio | number | Yes |

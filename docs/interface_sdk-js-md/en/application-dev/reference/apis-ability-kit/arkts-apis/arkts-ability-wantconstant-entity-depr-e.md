@@ -4,9 +4,9 @@ Enumerates the entity constants of the Want object. **entity** specifies additio
 
 **Since:** 6
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-wantConstant-export enum Entity--><!--Device-wantConstant-export enum Entity-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -20,9 +20,9 @@ Default entity. The default entity is used if no entity is specified.
 
 **Since:** 6
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-Entity-ENTITY_DEFAULT = 'entity.system.default'--><!--Device-Entity-ENTITY_DEFAULT = 'entity.system.default'-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -36,9 +36,9 @@ Home screen entity.
 
 **Since:** 6
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-Entity-ENTITY_HOME = 'entity.system.home'--><!--Device-Entity-ENTITY_HOME = 'entity.system.home'-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -52,9 +52,9 @@ Voice interaction entity.
 
 **Since:** 6
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-Entity-ENTITY_VOICE = 'entity.system.voice'--><!--Device-Entity-ENTITY_VOICE = 'entity.system.voice'-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -68,9 +68,9 @@ Browser type entity.
 
 **Since:** 6
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-Entity-ENTITY_BROWSABLE = 'entity.system.browsable'--><!--Device-Entity-ENTITY_BROWSABLE = 'entity.system.browsable'-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -84,9 +84,8 @@ Video type entity.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
-<!--Device-Entity-ENTITY_VIDEO = 'entity.system.video'--><!--Device-Entity-ENTITY_VIDEO = 'entity.system.video'-End-->
-
 **System capability:** SystemCapability.Ability.AbilityBase
-

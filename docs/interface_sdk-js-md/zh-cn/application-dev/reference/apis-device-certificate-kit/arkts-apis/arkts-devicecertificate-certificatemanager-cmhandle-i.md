@@ -2,9 +2,9 @@
 
 表示签名、验签的初始化操作句柄。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-certificateManager-export interface CMHandle--><!--Device-certificateManager-export interface CMHandle-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -24,9 +24,8 @@ handle: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CMHandle-handle: Uint8Array--><!--Device-CMHandle-handle: Uint8Array-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
-

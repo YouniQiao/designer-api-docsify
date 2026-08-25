@@ -4,7 +4,7 @@ The wrapper of external log, providing various information.
 
 **Since:** 26.1.0
 
-<!--Device-hiAppEvent-class ExternalLogWrapper--><!--Device-hiAppEvent-class ExternalLogWrapper-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -24,20 +24,26 @@ Get the file path
 
 **Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-ExternalLogWrapper-getFilePath(): string--><!--Device-ExternalLogWrapper-getFilePath(): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | The file path |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## getGenerationTime
 
+ArkTS-Dyn:
+```TypeScript
+getGenerationTime(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getGenerationTime(): long
 ```
@@ -46,20 +52,26 @@ Get the generation time point (ms) of the file
 
 **Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-ExternalLogWrapper-getGenerationTime(): long--><!--Device-ExternalLogWrapper-getGenerationTime(): long-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The generation time |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 ## getSizeInKb
 
+ArkTS-Dyn:
+```TypeScript
+getSizeInKb(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getSizeInKb(): long
 ```
@@ -68,17 +80,17 @@ Get the file size in kb
 
 **Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-ExternalLogWrapper-getSizeInKb(): long--><!--Device-ExternalLogWrapper-getSizeInKb(): long-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The file size in kb |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 ## getSysEvent
 
@@ -90,15 +102,14 @@ Get the system event of the file
 
 **Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-ExternalLogWrapper-getSysEvent(): string--><!--Device-ExternalLogWrapper-getSysEvent(): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | The string form of system event |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |

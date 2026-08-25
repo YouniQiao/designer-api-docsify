@@ -8,9 +8,9 @@ template form detail info callback.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-formInfo-type TemplateFormDetailInfoCallback = (info: Array<TemplateFormDetailInfo>) => void--><!--Device-formInfo-type TemplateFormDetailInfoCallback = (info: Array<TemplateFormDetailInfo>) => void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -18,9 +18,9 @@ template form detail info callback.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| info | Array&lt;[TemplateFormDetailInfo](arkts-form-forminfo-templateformdetailinfo-i-sys.md)&gt; | Yes | Template form detail info. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| info | Array&lt;[TemplateFormDetailInfo](arkts-form-forminfo-templateformdetailinfo-i-sys.md)&gt; | Yes |
 
 **Examples**
 
@@ -32,4 +32,3 @@ let templateFormDetailInfoCallback: formInfo.TemplateFormDetailInfoCallback =
     console.info('template form detail info callback success.');
   };
 ```
-

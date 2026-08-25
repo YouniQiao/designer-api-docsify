@@ -19,19 +19,19 @@ function addRule(rule: bigint): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md)
-
-<!--Device-hichecker-function addRule(rule: bigint): void--><!--Device-hichecker-function addRule(rule: bigint): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rule | bigint | 是 | 需要添加的规则。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| rule | bigint | 是 |
 
 **示例**
 
@@ -43,4 +43,3 @@ hichecker.addRule(hichecker.RULE_CAUTION_PRINT_LOG);
 hichecker.addRule(
           hichecker.RULE_CAUTION_PRINT_LOG | hichecker.RULE_CAUTION_TRIGGER_CRASH);
 ```
-

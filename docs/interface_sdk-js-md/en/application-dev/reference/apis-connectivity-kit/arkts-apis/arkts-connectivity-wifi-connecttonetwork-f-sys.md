@@ -16,13 +16,13 @@ Connects to Wi-Fi network.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [connectToNetwork](arkts-connectivity-wifimanager-connecttonetwork-f.md)
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_CONNECTION
-
-<!--Device-wifi-function connectToNetwork(networkId: number): boolean--><!--Device-wifi-function connectToNetwork(networkId: number): boolean-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -30,15 +30,15 @@ Connects to Wi-Fi network.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| networkId | number | Yes | ID of the connected network. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| networkId | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -52,4 +52,3 @@ try {
     console.error("failed:" + JSON.stringify(error));
 }
 ```
-

@@ -14,21 +14,20 @@ function genSessionId(): string
 
 随机创建一个sessionId。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-distributedDataObject-function genSessionId(): string--><!--Device-distributedDataObject-function genSessionId(): string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 随机创建的sessionId。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
 ```TypeScript
 let sessionId: string = distributedDataObject.genSessionId();
 ```
-

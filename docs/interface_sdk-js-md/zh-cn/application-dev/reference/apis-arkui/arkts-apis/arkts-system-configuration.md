@@ -1,5 +1,8 @@
 # @system.configuration
 
+应用配置
+
+
 ## 导入模块
 
 ```TypeScript
@@ -10,13 +13,12 @@ import { Configuration, LocaleResponse } from '@kit.ArkUI';
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [Configuration](arkts-arkui-system-configuration-configuration-c.md) |  |
+| 名称 |
+| --- |
+| [Configuration](arkts-arkui-system-configuration-configuration-c.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [LocaleResponse](arkts-arkui-system-configuration-localeresponse-i.md) | @interface LocaleResponse |
-
+| 名称 |
+| --- |
+| [LocaleResponse](arkts-arkui-system-configuration-localeresponse-i.md) |

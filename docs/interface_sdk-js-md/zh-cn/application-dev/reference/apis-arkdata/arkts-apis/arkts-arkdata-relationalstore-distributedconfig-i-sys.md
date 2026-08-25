@@ -2,9 +2,9 @@
 
 记录表的分布式配置信息。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-relationalStore-interface DistributedConfig--><!--Device-relationalStore-interface DistributedConfig-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -25,11 +25,10 @@ references?: Array<Reference>
 
 **类型：** Array&lt;[Reference](arkts-arkdata-relationalstore-reference-i-sys.md)&gt;
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-DistributedConfig-references?: Array<Reference>--><!--Device-DistributedConfig-references?: Array<Reference>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **系统接口：** 此接口为系统接口。
-

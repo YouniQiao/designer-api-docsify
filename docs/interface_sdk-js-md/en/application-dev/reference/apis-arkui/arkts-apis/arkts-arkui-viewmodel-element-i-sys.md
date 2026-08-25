@@ -4,7 +4,7 @@ Element@interface Element
 
 **Since:** 4
 
-<!--Device-unnamed-export interface Element--><!--Device-unnamed-export interface Element-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ Obtains attributes of the element.
 
 **Since:** 8
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-Element-getInspector(): string--><!--Device-Element-getInspector(): string-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,7 +28,6 @@ Obtains attributes of the element.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | attributes of the element in json string. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |

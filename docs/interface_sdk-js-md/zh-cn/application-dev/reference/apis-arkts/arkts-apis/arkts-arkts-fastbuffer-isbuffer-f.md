@@ -16,23 +16,23 @@ function isBuffer(obj: Object): boolean
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-fastbuffer-function isBuffer(obj: Object): boolean--><!--Device-fastbuffer-function isBuffer(obj: Object): boolean-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| obj | Object | 是 | 待判断是否为FastBuffer的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| obj | Object | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果obj是FastBuffer，则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -55,4 +55,3 @@ let uint8ArrayResult = fastbuffer.isBuffer(new Uint8Array(1024));
 console.info('uint8ArrayResult = ' + uint8ArrayResult);
 // 输出结果：uint8ArrayResult = false
 ```
-

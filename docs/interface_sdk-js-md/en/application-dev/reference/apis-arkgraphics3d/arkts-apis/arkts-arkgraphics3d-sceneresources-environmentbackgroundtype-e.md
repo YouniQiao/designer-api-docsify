@@ -2,9 +2,9 @@
 
 Enumerates the environment background types, which are used to define how the background of a scene is presented. @enum { int }
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export enum EnvironmentBackgroundType--><!--Device-unnamed-export enum EnvironmentBackgroundType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -16,9 +16,9 @@ BACKGROUND_NONE = 0
 
 No background.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EnvironmentBackgroundType-BACKGROUND_NONE = 0--><!--Device-EnvironmentBackgroundType-BACKGROUND_NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -30,9 +30,9 @@ BACKGROUND_IMAGE = 1
 
 Image background.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EnvironmentBackgroundType-BACKGROUND_IMAGE = 1--><!--Device-EnvironmentBackgroundType-BACKGROUND_IMAGE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -44,9 +44,9 @@ BACKGROUND_CUBEMAP = 2
 
 Cubemap background.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EnvironmentBackgroundType-BACKGROUND_CUBEMAP = 2--><!--Device-EnvironmentBackgroundType-BACKGROUND_CUBEMAP = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -58,9 +58,8 @@ BACKGROUND_EQUIRECTANGULAR = 3
 
 Equirectangular projection background.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-EnvironmentBackgroundType-BACKGROUND_EQUIRECTANGULAR = 3--><!--Device-EnvironmentBackgroundType-BACKGROUND_EQUIRECTANGULAR = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

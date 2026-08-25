@@ -8,9 +8,9 @@ type OnEventFn = (event: CliToolEvent) => void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-unnamed-type OnEventFn = (event: CliToolEvent) => void--><!--Device-unnamed-type OnEventFn = (event: CliToolEvent) => void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -18,7 +18,6 @@ type OnEventFn = (event: CliToolEvent) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | [CliToolEvent](arkts-ability-clitoolevent-i-sys.md) | 是 | CLI工具发送的事件。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | [CliToolEvent](arkts-ability-clitoolevent-i-sys.md) | 是 |

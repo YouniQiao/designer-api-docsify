@@ -4,9 +4,7 @@ ChipGroup组件提供操作块群组能力，支持单选或多选模式，可�
 
 **起始版本：** 12
 
-**装饰器类型：** @Component
-
-<!--Device-unnamed-export declare struct ChipGroup--><!--Device-unnamed-export declare struct ChipGroup-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,6 +13,38 @@ ChipGroup组件提供操作块群组能力，支持单选或多选模式，可�
 ```TypeScript
 import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
 ```
+
+## build
+
+```TypeScript
+build(): void
+```
+
+build函数用于构造ChipGroup高级组件。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## suffix
+
+```TypeScript
+suffix?: ChipGroupSuffixBuilder
+```
+
+支持开发者自定义builder，如需在组件最右侧显示自定义内容可配置suffix属性，使用属性suffix需引用[IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroup-icongroupsuffix-s.md)接口。默认不传入时，没有suffix。值为undefined时，没有suffix。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundSystemMaterial
 
@@ -28,13 +58,11 @@ backgroundSystemMaterial?: uiMaterial.Material
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Prop
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroup-@Prop  backgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroup-@Prop  backgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,13 +78,11 @@ chipGroupPadding?: ChipGroupPaddingOptions
 
 **起始版本：** 12
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroup-@Prop  chipGroupPadding?: ChipGroupPaddingOptions--><!--Device-ChipGroup-@Prop  chipGroupPadding?: ChipGroupPaddingOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,13 +98,11 @@ chipGroupSpace?: ChipGroupSpaceOptions
 
 **起始版本：** 12
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroup-@Prop  chipGroupSpace?: ChipGroupSpaceOptions--><!--Device-ChipGroup-@Prop  chipGroupSpace?: ChipGroupSpaceOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,13 +118,11 @@ items: ChipGroupItemOptions[]
 
 **起始版本：** 12
 
-**装饰器类型：** @Require、@Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroup-@Require  @Prop  items: ChipGroupItemOptions[]--><!--Device-ChipGroup-@Require  @Prop  items: ChipGroupItemOptions[]-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,13 +138,11 @@ itemStyle?: ChipItemStyle
 
 **起始版本：** 12
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroup-@Prop  itemStyle?: ChipItemStyle--><!--Device-ChipGroup-@Prop  itemStyle?: ChipItemStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,13 +158,11 @@ multiple?: boolean
 
 **起始版本：** 12
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroup-@Prop  multiple?: boolean--><!--Device-ChipGroup-@Prop  multiple?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -160,11 +178,11 @@ Chip状态改变时的回调方法，用于监听Chip选中状态的变更。该
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroup-onChange?: Callback<Array<number>>--><!--Device-ChipGroup-onChange?: Callback<Array<number>>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -180,13 +198,11 @@ selectedBackgroundSystemMaterial?: uiMaterial.Material
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Prop
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroup-@Prop  selectedBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroup-@Prop  selectedBackgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -202,13 +218,11 @@ selectedIndexes?: Array<number>
 
 **起始版本：** 12
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroup-@Prop  selectedIndexes?: Array<number>--><!--Device-ChipGroup-@Prop  selectedIndexes?: Array<number>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -224,13 +238,10 @@ suffix?: Callback<void>
 
 **起始版本：** 12
 
-**装饰器类型：** @BuilderParam
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ChipGroup-@BuilderParam  suffix?: Callback<void>--><!--Device-ChipGroup-@BuilderParam  suffix?: Callback<void>-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

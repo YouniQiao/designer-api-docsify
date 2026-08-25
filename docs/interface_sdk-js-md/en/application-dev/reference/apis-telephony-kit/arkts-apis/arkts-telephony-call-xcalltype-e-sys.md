@@ -4,7 +4,7 @@ Enumerates X-Call types.
 
 **Since:** 26.0.0
 
-<!--Device-call-export enum XCallType--><!--Device-call-export enum XCallType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -20,7 +20,7 @@ E-Call.
 
 **Since:** 26.0.0
 
-<!--Device-XCallType-XCALL_ECALL_TYPE = 0--><!--Device-XCallType-XCALL_ECALL_TYPE = 0-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -36,7 +36,7 @@ B-Call.
 
 **Since:** 26.0.0
 
-<!--Device-XCallType-XCALL_BCALL_TYPE = 1--><!--Device-XCallType-XCALL_BCALL_TYPE = 1-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -52,9 +52,8 @@ I-Call.
 
 **Since:** 26.0.0
 
-<!--Device-XCallType-XCALL_ICALL_TYPE = 2--><!--Device-XCallType-XCALL_ICALL_TYPE = 2-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
-

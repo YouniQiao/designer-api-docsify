@@ -16,18 +16,18 @@ Removes a key from an ArkTS object. This API can be used for related operations 
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-json-function remove(obj: object, property: string): void--><!--Device-json-function remove(obj: object, property: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| obj | object | Yes | ArkTS object. |
-| property | string | Yes | Key to remove. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | object | Yes |
+| property | string | Yes |
 
 **Examples**
 
@@ -41,4 +41,3 @@ let result = JSON.has(inputObj, "name");
 console.info("result = " + result);
 // Output: result = false
 ```
-

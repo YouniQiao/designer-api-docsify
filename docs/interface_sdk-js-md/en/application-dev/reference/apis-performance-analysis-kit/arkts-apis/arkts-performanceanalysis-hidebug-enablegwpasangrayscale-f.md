@@ -14,24 +14,24 @@ function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void
 
 Enable the GWP-ASAN grayscale of your application.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-hidebug-function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void--><!--Device-hidebug-function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md) | No | The options of GWP-ASAN grayscale. |
-| duration | int | No | The duration days of GWP-ASAN grayscale. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md) | No |
+| duration | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [11400114](../errorcode-hiviewdfx-hidebug.md#11400114-failed-to-enable-gwp-asan) | The number of GWP-ASAN applications of this device overflowed after last boot. |
+| Error Code ID |
+| --- |
+| [11400114](../errorcode-hiviewdfx-hidebug.md#11400114-failed-to-enable-gwp-asan) |
 
 **Examples**
 
@@ -54,4 +54,3 @@ try {
   console.error(`Failed to enable GWP-ASan. Code: ${err.code}, message: ${err.message}`);
 }
 ```
-

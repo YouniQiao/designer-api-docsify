@@ -21,7 +21,7 @@ Defines the type and style parameters of the chip.
 
 **Since:** 11
 
-<!--Device-unnamed-export interface ChipOptions--><!--Device-unnamed-export interface ChipOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,6 +30,24 @@ Defines the type and style parameters of the chip.
 ```TypeScript
 import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from '@kit.ArkUI';
 ```
+
+## onClose
+
+```TypeScript
+onClose?: () => void
+```
+
+Event triggered when the close icon is clicked.If the value is **undefined**, clicking the close icon will not trigger any event.
+
+**Since:** 11
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityDescription
 
@@ -43,11 +61,11 @@ Accessible description of the chip. You can provide comprehensive text explanati
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-ChipOptions-accessibilityDescription?: ResourceStr--><!--Device-ChipOptions-accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,11 +87,11 @@ Accessibility level of the chip. It determines whether the component can be reco
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-ChipOptions-accessibilityLevel?: string--><!--Device-ChipOptions-accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,15 +103,15 @@ accessibilitySelectedType?: AccessibilitySelectedType
 
 Type of selected state for the chip.Default value:If the **activated** property is set but **accessibilitySelectedType** is not specified, the default type is **CHECKED**. If the **activated** property is not set, the default type is **CLICKED**.If the value is **undefined**, the default value is used.
 
-**Type:** [AccessibilitySelectedType](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-accessibilityselectedtype-e.md)
+**Type:** [AccessibilitySelectedType](arkts-arkui-arkui-advanced-chip-accessibilityselectedtype-e.md)
 
 **Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-ChipOptions-accessibilitySelectedType?: AccessibilitySelectedType--><!--Device-ChipOptions-accessibilitySelectedType?: AccessibilitySelectedType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -111,11 +129,11 @@ Whether the chip is activated.Default value: **false**
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipOptions-activated?: boolean--><!--Device-ChipOptions-activated?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -131,11 +149,11 @@ Background color of the chip when it is activated.Default value: **\$r('sys.colo
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipOptions-activatedBackgroundColor?: ResourceColor--><!--Device-ChipOptions-activatedBackgroundColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -151,11 +169,11 @@ Set system-styled materials for the component which is activated. Different mate
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipOptions-activatedBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipOptions-activatedBackgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -171,11 +189,11 @@ Whether to display the close icon.Default value: **true**The value **true** mean
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipOptions-allowClose?: boolean--><!--Device-ChipOptions-allowClose?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -191,11 +209,11 @@ Chip background color.Default value: **\$r('sys.color.ohos_id_color_button_norma
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipOptions-backgroundColor?: ResourceColor--><!--Device-ChipOptions-backgroundColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -211,11 +229,11 @@ Set system-styled materials for the component. Different materials have differen
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipOptions-backgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipOptions-backgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -231,11 +249,11 @@ Radius of the rounded corner of the chip background. Percentage is not supported
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipOptions-borderRadius?: Dimension--><!--Device-ChipOptions-borderRadius?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -247,15 +265,15 @@ closeOptions?: CloseOptions
 
 Accessibility settings of the default close icon.If the value is **undefined**, the default value is used.
 
-**Type:** [CloseOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-closeoptions-i.md)
+**Type:** [CloseOptions](arkts-arkui-arkui-advanced-chip-closeoptions-i.md)
 
 **Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-ChipOptions-closeOptions?: CloseOptions--><!--Device-ChipOptions-closeOptions?: CloseOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -271,11 +289,11 @@ Layout direction.Default value: **Direction.Auto**If the value is **undefined**,
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipOptions-direction?: Direction--><!--Device-ChipOptions-direction?: Direction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -293,11 +311,11 @@ Whether the chip can be selected.Default value: **true**
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipOptions-enabled?: boolean--><!--Device-ChipOptions-enabled?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -315,11 +333,11 @@ If the value is **undefined**, the default value is used.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-ChipOptions-fontSize?: Dimension--><!--Device-ChipOptions-fontSize?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -331,15 +349,15 @@ label: LabelOptions
 
 Text of the chip.
 
-**Type:** [LabelOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-labeloptions-i.md)
+**Type:** [LabelOptions](arkts-arkui-arkui-advanced-chip-labeloptions-i.md)
 
 **Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipOptions-label: LabelOptions--><!--Device-ChipOptions-label: LabelOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -355,11 +373,11 @@ Maximum font scale factor for the text and icon of the chip. Value range: [1, +â
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-ChipOptions-maxFontScale?: number | Resource--><!--Device-ChipOptions-maxFontScale?: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -375,11 +393,11 @@ Minimum font scale factor for the text and icon of the chip. Value range: [0, 1]
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-ChipOptions-minFontScale?: number | Resource--><!--Device-ChipOptions-minFontScale?: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -395,31 +413,29 @@ Chip click event.If the value is **undefined**, the chip cannot be clicked.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipOptions-onClicked?: Callback<void>--><!--Device-ChipOptions-onClicked?: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onClose
 
 ```TypeScript
-onClose?: () => void
+onClose?: VoidCallback
 ```
 
-Event triggered when the close icon is clicked.If the value is **undefined**, clicking the close icon will not trigger any event.
+On close action.
 
-**Type:** () =&gt; void
+**Type:** VoidCallback
 
-**Since:** 11
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipOptions-onClose?: () => void--><!--Device-ChipOptions-onClose?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -437,11 +453,11 @@ If the value is **undefined**, the default value is used.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-ChipOptions-padding?: LocalizedPadding--><!--Device-ChipOptions-padding?: LocalizedPadding-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -453,15 +469,15 @@ prefixIcon?: PrefixIconOptions
 
 Prefix icon of the chip.Default value: The prefix icon is not displayed.If the value is **undefined**, the default value is used.If both **prefixIcon** and **prefixSymbol** are set, the effect specified by **prefixSymbol** will be displayed, and **prefixIcon** will be ignored.
 
-**Type:** [PrefixIconOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-prefixiconoptions-i.md)
+**Type:** [PrefixIconOptions](arkts-arkui-arkui-advanced-chip-prefixiconoptions-i.md)
 
 **Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipOptions-prefixIcon?: PrefixIconOptions--><!--Device-ChipOptions-prefixIcon?: PrefixIconOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -473,15 +489,15 @@ prefixSymbol?: ChipSymbolGlyphOptions
 
 Symbol-type prefix icon of the chip.Default value: The prefix icon is not displayed.If the value is **undefined**, the default value is used.If both **prefixIcon** and **prefixSymbol** are set, the effect specified by **prefixSymbol** will be displayed, and **prefixIcon** will be ignored.
 
-**Type:** [ChipSymbolGlyphOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-chipsymbolglyphoptions-i.md)
+**Type:** [ChipSymbolGlyphOptions](arkts-arkui-arkui-advanced-chip-chipsymbolglyphoptions-i.md)
 
 **Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipOptions-prefixSymbol?: ChipSymbolGlyphOptions--><!--Device-ChipOptions-prefixSymbol?: ChipSymbolGlyphOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -493,15 +509,15 @@ size?: ChipSize | SizeOptions
 
 Chip size.Default value: **ChipSize.NORMAL**The SizeOptions type parameter does not support percentage values. If an invalid value is provided, the system will use the default value instead.Note: [Aging-friendly design implementation](../../../ui/arkui-support-for-aging-adaptation.md) does not take effect when size specifies specific width and height, except when size is set to { height: 0, width: 0 }.
 
-**Type:** [ChipSize](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-chipsize-e.md) \| SizeOptions
+**Type:** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) \| SizeOptions
 
 **Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipOptions-size?: ChipSize | SizeOptions--><!--Device-ChipOptions-size?: ChipSize | SizeOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -513,15 +529,15 @@ suffixIcon?: SuffixIconOptions
 
 Suffix icon of the chip.Default value: The suffix icon is not displayed.If the value is **undefined**, the default value is used.If both **suffixIcon** and **suffixSymbol** are set, the effect specified by **suffixSymbol** will be displayed, and **suffixIcon** will be ignored.
 
-**Type:** [SuffixIconOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-suffixiconoptions-i.md)
+**Type:** [SuffixIconOptions](arkts-arkui-arkui-advanced-chip-suffixiconoptions-i.md)
 
 **Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipOptions-suffixIcon?: SuffixIconOptions--><!--Device-ChipOptions-suffixIcon?: SuffixIconOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -533,15 +549,15 @@ suffixSymbol?: ChipSymbolGlyphOptions
 
 Symbol-type suffix icon of the chip.Default value: The suffix icon is not displayed.If the value is **undefined**, the default value is used.If both **suffixIcon** and **suffixSymbol** are set, the effect specified by **suffixSymbol** will be displayed, and **suffixIcon** will be ignored.
 
-**Type:** [ChipSymbolGlyphOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-chipsymbolglyphoptions-i.md)
+**Type:** [ChipSymbolGlyphOptions](arkts-arkui-arkui-advanced-chip-chipsymbolglyphoptions-i.md)
 
 **Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChipOptions-suffixSymbol?: ChipSymbolGlyphOptions--><!--Device-ChipOptions-suffixSymbol?: ChipSymbolGlyphOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -553,15 +569,14 @@ suffixSymbolOptions?: ChipSuffixSymbolGlyphOptions
 
 Accessibility settings of the symbol-type suffix icon.Default value: The suffix icon is not displayed.If the value is **undefined**, the default value is used.
 
-**Type:** [ChipSuffixSymbolGlyphOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-chipsuffixsymbolglyphoptions-i.md)
+**Type:** [ChipSuffixSymbolGlyphOptions](arkts-arkui-arkui-advanced-chip-chipsuffixsymbolglyphoptions-i.md)
 
 **Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-ChipOptions-suffixSymbolOptions?: ChipSuffixSymbolGlyphOptions--><!--Device-ChipOptions-suffixSymbolOptions?: ChipSuffixSymbolGlyphOptions-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

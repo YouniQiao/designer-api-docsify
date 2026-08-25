@@ -2,9 +2,9 @@
 
 Describes the pre-downloaded network information.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-cacheDownload-interface NetworkInfo--><!--Device-cacheDownload-interface NetworkInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -24,9 +24,9 @@ DNS servers used for downloading resources.
 
 **Type:** string[]
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-NetworkInfo-readonly dnsServers: string[]--><!--Device-NetworkInfo-readonly dnsServers: string[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -42,7 +42,6 @@ IP address of the URL used for downloading resources. When the DNS resolution fa
 
 **Since:** 23
 
-<!--Device-NetworkInfo-readonly ip?: string--><!--Device-NetworkInfo-readonly ip?: string-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
-

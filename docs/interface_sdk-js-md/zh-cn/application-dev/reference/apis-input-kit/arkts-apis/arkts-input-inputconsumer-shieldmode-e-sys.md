@@ -2,9 +2,9 @@
 
 系统快捷键屏蔽类型。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-inputConsumer-enum ShieldMode--><!--Device-inputConsumer-enum ShieldMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -18,11 +18,10 @@ FACTORY_MODE = 0
 
 值为0，表示屏蔽所有系统快捷键。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ShieldMode-FACTORY_MODE = 0--><!--Device-ShieldMode-FACTORY_MODE = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **系统接口：** 此接口为系统接口。
-

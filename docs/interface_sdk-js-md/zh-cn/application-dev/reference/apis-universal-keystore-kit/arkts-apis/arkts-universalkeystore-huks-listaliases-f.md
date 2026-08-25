@@ -16,34 +16,34 @@ function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-huks-function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>--><!--Device-huks-function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | listAliases操作的参数集合。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[HuksListAliasesReturnResult](arkts-universalkeystore-huks-hukslistaliasesreturnresult-i.md)&gt; | Promise对象，返回调用接口的结果。当调用成功时，HuksListAliasesReturnResult的成员 keyAliases为获取的密钥别名集。 |
+| 类型 |
+| --- |
+| Promise&lt;[HuksListAliasesReturnResult](arkts-universalkeystore-huks-hukslistaliasesreturnresult-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [12000004](../errorcode-huks.md#12000004-文件错误) | operating file failed |
-| [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed |
-| [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
-| [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12000004](../errorcode-huks.md#12000004-文件错误) |
+| [12000005](../errorcode-huks.md#12000005-进程通信错误) |
+| [12000012](../errorcode-huks.md#12000012-外部错误) |
+| [12000014](../errorcode-huks.md#12000014-内存不足) |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) |
 
 **示例**
 
@@ -72,4 +72,3 @@ async function testListAliases() {
   }
 }
 ```
-

@@ -4,7 +4,6 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md) | AbilityRunningInfo is a struct that records the running information and state of an ability. It is obtained through [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md). |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md) |

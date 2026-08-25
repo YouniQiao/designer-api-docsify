@@ -1,24 +1,31 @@
-# @ohos.pluginComponent
-
-Implements a plugin component manager.
-
-## Modules to Import
-
-```TypeScript
-import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
-```
+# pluginComponent
 
 ## Summary
 
-### Namespaces
+<!--Del-->
+### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [pluginComponentManager](arkts-arkui-plugincomponentmanager-n.md) | Implements a plugin component manager. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PluginComponent](arkts-arkui-plugincomponent-plugincomponent-f-sys.md) |
+| [PluginComponent](arkts-arkui-plugincomponent-plugincomponent-f-sys.md) |
+<!--DelEnd-->
 
-### Interfaces
+<!--Del-->
+### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i.md) | Describes the **PluginComponent** template parameters. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PluginComponentAttribute](arkts-arkui-plugincomponent-plugincomponentattribute-i-sys.md) |
+| [PluginComponentOptions](arkts-arkui-plugincomponent-plugincomponentoptions-i-sys.md) |
+| [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i-sys.md) |
+| [PluginErrorData](arkts-arkui-plugincomponent-pluginerrordata-i-sys.md) |
+<!--DelEnd-->
 
+<!--Del-->
+### Types(System API)
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PluginErrorCallback](arkts-arkui-pluginerrorcallback-t-sys.md) |
+<!--DelEnd-->

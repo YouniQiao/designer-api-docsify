@@ -12,9 +12,9 @@ Animator(value: string)
 
 **起始版本：** 7
 
-**废弃版本：** 22
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-AnimatorInterface-(value: string): AnimatorAttribute--><!--Device-AnimatorInterface-(value: string): AnimatorAttribute-End-->
+**废弃版本：** 22
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,9 +22,8 @@ Animator(value: string)
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | string | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | string | 是 |
 
 ## 汇总
-

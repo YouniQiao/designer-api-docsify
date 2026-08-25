@@ -8,11 +8,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 11
 
 **替代接口：** [AVErrorCode](arkts-media-media-averrorcode-e.md)
-
-<!--Device-unnamed-enum MediaErrorCode--><!--Device-unnamed-enum MediaErrorCode-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -26,11 +26,11 @@ MSERR_OK = 0
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 11
 
 **替代接口：** [AVERR_OK](arkts-media-media-averrorcode-e.md#averr_ok)
-
-<!--Device-MediaErrorCode-MSERR_OK = 0--><!--Device-MediaErrorCode-MSERR_OK = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -44,11 +44,11 @@ MSERR_NO_MEMORY = 1
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 11
 
 **替代接口：** [AVERR_NO_MEMORY](arkts-media-media-averrorcode-e.md#averr_no_memory)
-
-<!--Device-MediaErrorCode-MSERR_NO_MEMORY = 1--><!--Device-MediaErrorCode-MSERR_NO_MEMORY = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -62,11 +62,11 @@ MSERR_OPERATION_NOT_PERMIT = 2
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 11
 
 **替代接口：** [AVERR_OPERATE_NOT_PERMIT](arkts-media-media-averrorcode-e.md#averr_operate_not_permit)
-
-<!--Device-MediaErrorCode-MSERR_OPERATION_NOT_PERMIT = 2--><!--Device-MediaErrorCode-MSERR_OPERATION_NOT_PERMIT = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -80,11 +80,11 @@ MSERR_INVALID_VAL = 3
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 11
 
 **替代接口：** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#averr_invalid_parameter)
-
-<!--Device-MediaErrorCode-MSERR_INVALID_VAL = 3--><!--Device-MediaErrorCode-MSERR_INVALID_VAL = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -98,11 +98,11 @@ MSERR_IO = 4
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 11
 
 **替代接口：** [AVERR_IO](arkts-media-media-averrorcode-e.md#averr_io)
-
-<!--Device-MediaErrorCode-MSERR_IO = 4--><!--Device-MediaErrorCode-MSERR_IO = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -116,11 +116,11 @@ MSERR_TIMEOUT = 5
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 11
 
 **替代接口：** [AVERR_TIMEOUT](arkts-media-media-averrorcode-e.md#averr_timeout)
-
-<!--Device-MediaErrorCode-MSERR_TIMEOUT = 5--><!--Device-MediaErrorCode-MSERR_TIMEOUT = 5-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -134,11 +134,11 @@ MSERR_UNKNOWN = 6
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 11
 
 **替代接口：** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#averr_invalid_parameter)
-
-<!--Device-MediaErrorCode-MSERR_UNKNOWN = 6--><!--Device-MediaErrorCode-MSERR_UNKNOWN = 6-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -152,11 +152,11 @@ MSERR_SERVICE_DIED = 7
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 11
 
 **替代接口：** [AVERR_SERVICE_DIED](arkts-media-media-averrorcode-e.md#averr_service_died)
-
-<!--Device-MediaErrorCode-MSERR_SERVICE_DIED = 7--><!--Device-MediaErrorCode-MSERR_SERVICE_DIED = 7-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -170,11 +170,11 @@ MSERR_INVALID_STATE = 8
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 11
 
 **替代接口：** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#averr_invalid_parameter)
-
-<!--Device-MediaErrorCode-MSERR_INVALID_STATE = 8--><!--Device-MediaErrorCode-MSERR_INVALID_STATE = 8-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -188,11 +188,10 @@ MSERR_UNSUPPORTED = 9
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 11
 
 **替代接口：** [AVERR_UNSUPPORT_CAPABILITY](arkts-media-media-averrorcode-e.md#averr_unsupport_capability)
 
-<!--Device-MediaErrorCode-MSERR_UNSUPPORTED = 9--><!--Device-MediaErrorCode-MSERR_UNSUPPORTED = 9-End-->
-
 **系统能力：** SystemCapability.Multimedia.Media.Core
-

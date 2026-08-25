@@ -4,9 +4,7 @@
 
 **Since:** 18
 
-**Decorator:** @Component
-
-<!--Device-unnamed-export declare struct AtomicServiceSearch--><!--Device-unnamed-export declare struct AtomicServiceSearch-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,9 +26,9 @@ Set the Search component controller.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-AtomicServiceSearch-controller?: SearchController--><!--Device-AtomicServiceSearch-controller?: SearchController-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,9 +44,9 @@ Function settings in the selection area (right).
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-AtomicServiceSearch-operation?: OperationParams--><!--Device-AtomicServiceSearch-operation?: OperationParams-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,11 +62,9 @@ Indicates default prompt text displayed in the search box. The default value is 
 
 **Since:** 18
 
-**Decorator:** @Prop
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-AtomicServiceSearch-@Prop  placeholder?: ResourceStr--><!--Device-AtomicServiceSearch-@Prop  placeholder?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,11 +80,9 @@ Events and styles supported by the search area.
 
 **Since:** 18
 
-**Decorator:** @Prop
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-AtomicServiceSearch-@Prop  search?: SearchParams--><!--Device-AtomicServiceSearch-@Prop  search?: SearchParams-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,11 +98,9 @@ Contents, events, and styles of the select area.
 
 **Since:** 18
 
-**Decorator:** @Prop
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-AtomicServiceSearch-@Prop  select?: SelectParams--><!--Device-AtomicServiceSearch-@Prop  select?: SelectParams-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -124,11 +116,8 @@ Sets the search text content that is currently displayed.
 
 **Since:** 18
 
-**Decorator:** @Prop
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-AtomicServiceSearch-@Prop  value?: ResourceStr--><!--Device-AtomicServiceSearch-@Prop  value?: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

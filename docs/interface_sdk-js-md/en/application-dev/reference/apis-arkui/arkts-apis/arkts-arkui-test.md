@@ -9,9 +9,8 @@
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [sendKeyEvent](arkts-arkui-arkui-test-sendkeyevent-f.md) | Send a mock key event to the current application. This interface is only suitable for simple interaction testing within your own application and should not be used in real environment. |
-| [sendMouseEvent](arkts-arkui-arkui-test-sendmouseevent-f.md) | Send a mock mouse event to the current application. This interface is only suitable for simple interaction testing within your own application and should not be used in real environment. |
-| [sendTouchEvent](arkts-arkui-arkui-test-sendtouchevent-f.md) | Send a mock touch event to the current application. This interface is only suitable for simple interaction testing within your own application and should not be used in real environment. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [sendKeyEvent](arkts-arkui-arkui-test-sendkeyevent-f.md) |
+| [sendMouseEvent](arkts-arkui-arkui-test-sendmouseevent-f.md) |
+| [sendTouchEvent](arkts-arkui-arkui-test-sendtouchevent-f.md) |

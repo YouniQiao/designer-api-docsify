@@ -14,17 +14,17 @@ function getCallStateSync(): CallState
 
 获取当前通话状态。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-call-function getCallStateSync(): CallState--><!--Device-call-function getCallStateSync(): CallState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| CallState | 返回获取到的通话状态。 |
+| 类型 |
+| --- |
+| [CallState](arkts-telephony-call-callstate-e.md) |
 
 **示例**
 
@@ -32,4 +32,3 @@ function getCallStateSync(): CallState
 let callState: call.CallState = call.getCallStateSync();
 console.info(`the call state is:` + callState);
 ```
-

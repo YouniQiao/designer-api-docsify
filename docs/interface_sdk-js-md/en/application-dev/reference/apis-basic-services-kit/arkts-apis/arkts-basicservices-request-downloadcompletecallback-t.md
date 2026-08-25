@@ -8,7 +8,6 @@ The callback function for the download complete event.
 
 **Since:** 23
 
-<!--Device-request-export type DownloadCompleteCallback = () => void--><!--Device-request-export type DownloadCompleteCallback = () => void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
-

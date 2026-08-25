@@ -2,9 +2,9 @@
 
 Describes image information.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-image-interface ImageInfo--><!--Device-image-interface ImageInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -24,13 +24,13 @@ Alpha type.
 
 **Type:** [AlphaType](arkts-image-image-alphatype-e.md)
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ImageInfo-alphaType: AlphaType--><!--Device-ImageInfo-alphaType: AlphaType-End-->
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -42,15 +42,15 @@ density: int
 
 Pixel density, in ppi.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-ImageInfo-density: int--><!--Device-ImageInfo-density: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -64,9 +64,9 @@ Whether the image is an HDR image. The value **true** means an HDR image, and **
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-ImageInfo-isHdr: boolean--><!--Device-ImageInfo-isHdr: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -80,9 +80,9 @@ Actual image format (MIME type).The supported formats for image decoding and ima
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-ImageInfo-mimeType: string--><!--Device-ImageInfo-mimeType: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -96,13 +96,13 @@ Pixel format.
 
 **Type:** PixelMapFormat
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ImageInfo-pixelFormat: PixelMapFormat--><!--Device-ImageInfo-pixelFormat: PixelMapFormat-End-->
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -116,13 +116,13 @@ Image size.
 
 **Type:** Size
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-ImageInfo-size: Size--><!--Device-ImageInfo-size: Size-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -134,15 +134,14 @@ stride: int
 
 Number of bytes from one row of pixels in memory to the next row of pixels in memory.stride &gt;= region.size.width* 4
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-ImageInfo-stride: int--><!--Device-ImageInfo-stride: int-End-->
-
 **System capability:** SystemCapability.Multimedia.Image.Core
-

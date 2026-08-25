@@ -6,9 +6,7 @@ Represents boxed char value and related operations
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-unnamed-class Char--><!--Device-unnamed-class Char-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,26 +25,24 @@ charsToCodePoint(char, char) combines two chars to code point.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static charsToCodePoint(highValue: char, lowValue: char): int--><!--Device-Char-public static charsToCodePoint(highValue: char, lowValue: char): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| highValue | char | Yes | the high surrogate value. |
-| lowValue | char | Yes | the low surrogate value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| highValue | char | Yes |
+| lowValue | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | the combined UTF-16 code point. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## codeUnitsToEncode
 
@@ -58,25 +54,23 @@ codeUnitsToEncode(int) counts a number of code units to encode the UTF-16 code p
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static codeUnitsToEncode(value: int): int--><!--Device-Char-public static codeUnitsToEncode(value: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | int | Yes | UTF-16 code point to be examined.. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | the number of UTF-16 code units required to encode the code point. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## compare
 
@@ -88,26 +82,24 @@ compare(Char, Char) compares two Chars by their underlying chars.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public compare(lhs: Char, rhs: Char): boolean--><!--Device-Char-public compare(lhs: Char, rhs: Char): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| lhs | Char | Yes | the first Char to compare. |
-| rhs | Char | Yes | the second Char to compare. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| lhs | Char | Yes |
+| rhs | Char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the two Chars are equal, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## compareTo
 
@@ -119,25 +111,23 @@ Compares this instance to other Char object. The result is less than 0 if this i
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public compareTo(other: Char): int--><!--Device-Char-public compareTo(other: Char): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Char | Yes | Char object to compare with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | a negative number if this instance is less than other, zero if equal, positive if greater. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## constructor
 
@@ -149,11 +139,9 @@ constructor() creates a default Char object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public constructor()--><!--Device-Char-public constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -167,19 +155,17 @@ constructor(char) creates a Char object from a specified primitive char.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public constructor(value: char)--><!--Device-Char-public constructor(value: char)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | a primitive char to create Char from. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 ## equals
 
@@ -191,25 +177,23 @@ equals(Object) compares two Chars by their underlying primitive chars. Returns f
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public equals(other: Any): boolean--><!--Device-Char-public equals(other: Any): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Any | Yes | a reference to object to be compared with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Any | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the two Chars are equal, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## getHighSurrogate
 
@@ -221,25 +205,23 @@ getHighSurrogate(int) splits code point as a two code units and returns the firs
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static getHighSurrogate(value: int): char--><!--Device-Char-public static getHighSurrogate(value: int): char-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | int | Yes | an encoded code point. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| char | the high surrogate code unit. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| char |
 
 ## getLowSurrogate
 
@@ -251,25 +233,23 @@ getLowSurrogate(int) splits code point as a two code units and returns the secon
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static getLowSurrogate(value: int): char--><!--Device-Char-public static getLowSurrogate(value: int): char-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | int | Yes | an encoded code point. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| char | the low surrogate code unit. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| char |
 
 ## isBinDigit
 
@@ -281,25 +261,23 @@ isBinDigit(char) checks whether the char represents a binary digit.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static isBinDigit(value: char): boolean--><!--Device-Char-public static isBinDigit(value: char): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | a char to check. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the char is a binary digit, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isBinDigit
 
@@ -311,19 +289,17 @@ isBinDigit() checks whether the underlying char represents a binary digit.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public isBinDigit(): boolean--><!--Device-Char-public isBinDigit(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the underlying char is a binary digit, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isDecDigit
 
@@ -335,25 +311,23 @@ isDecDigit() checks whether the char represents a decimal digit.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-static isDecDigit(value: char): boolean--><!--Device-Char-static isDecDigit(value: char): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | a char to check. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the char is a decimal digit, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isDecDigit
 
@@ -365,19 +339,17 @@ isDecDigit() checks whether the underlying char represents a decimal digit.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-isDecDigit(): boolean--><!--Device-Char-isDecDigit(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the underlying char is a decimal digit, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isHexDigit
 
@@ -389,25 +361,23 @@ isHexDigit(char) checks whether the char represents a hexadecimal digit.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static isHexDigit(value: char): boolean--><!--Device-Char-public static isHexDigit(value: char): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | a char to check. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the char is a hexadecimal digit, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isHexDigit
 
@@ -419,19 +389,17 @@ isHexDigit() checks whether the underlying char represents a hexadecimal digit.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public isHexDigit(): boolean--><!--Device-Char-public isHexDigit(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the underlying char is a hexadecimal digit, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isHighSurrogate
 
@@ -443,25 +411,23 @@ isHighSurrogate(char) checks if the char is a high surrogate.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static isHighSurrogate(value: char): boolean--><!--Device-Char-public static isHighSurrogate(value: char): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | the char to be checked. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the char is a high surrogate, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isInBasicMultilingualPlane
 
@@ -473,25 +439,23 @@ isInBasicMultilingualPlane(char) checks if the char is in Basic Multilingual Pla
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static isInBasicMultilingualPlane(value: char): boolean--><!--Device-Char-public static isInBasicMultilingualPlane(value: char): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | the char to be checked. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the char is in Basic Multilingual Plane, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isInBasicMultilingualPlane
 
@@ -503,25 +467,23 @@ isInBasicMultilingualPlane(int) checks if the code point is in Basic Multilingua
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static isInBasicMultilingualPlane(value: int): boolean--><!--Device-Char-public static isInBasicMultilingualPlane(value: int): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | int | Yes | the code point to be checked. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the code point is in Basic Multilingual Plane, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isInBasicMultilingualPlane
 
@@ -533,19 +495,17 @@ isInBasicMultilingualPlane() checks if the underlying char is in Basic Multiling
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public isInBasicMultilingualPlane(): boolean--><!--Device-Char-public isInBasicMultilingualPlane(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the underlying char is in Basic Multilingual Plane, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isLetter
 
@@ -557,25 +517,23 @@ isLetter(char) checks whether the char is a letter.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static isLetter(value: char): boolean--><!--Device-Char-public static isLetter(value: char): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | a char to be tested. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the char is a letter, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isLetter
 
@@ -587,19 +545,17 @@ isLetter() checks whether the underlying char is a letter.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public isLetter(): boolean--><!--Device-Char-public isLetter(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the underlying char is a letter, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isLowerCase
 
@@ -611,25 +567,23 @@ isLowerCase(char) checks whether the char is a lower case letter.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static isLowerCase(value: char): boolean--><!--Device-Char-public static isLowerCase(value: char): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | a char to be tested. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the char is a lower case letter, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isLowerCase
 
@@ -641,19 +595,17 @@ isLowerCase() checks whether the underlying char is a lower case letter.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public isLowerCase(): boolean--><!--Device-Char-public isLowerCase(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the underlying char is a lower case letter, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isLowSurrogate
 
@@ -665,25 +617,23 @@ isLowSurrogate(char) checks if the char is a low surrogate.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static isLowSurrogate(value: char): boolean--><!--Device-Char-public static isLowSurrogate(value: char): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | the char to be checked. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the char is a low surrogate, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isPartOfSurrogatePair
 
@@ -695,25 +645,23 @@ isPartOfSurrogatePair(char) checks whether the char is low or high surrogate.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static isPartOfSurrogatePair(value: char): boolean--><!--Device-Char-public static isPartOfSurrogatePair(value: char): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | the char to be tested. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the char is part of a surrogate pair, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isPartOfSurrogatePair
 
@@ -725,19 +673,17 @@ isPartOfSurrogatePair() checks whether the underlying char is low or high surrog
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public isPartOfSurrogatePair(): boolean--><!--Device-Char-public isPartOfSurrogatePair(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the underlying char is part of a surrogate pair, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isUpperCase
 
@@ -749,25 +695,23 @@ isUpperCase(char) checks whether the char is an upper case letter.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static isUpperCase(value: char): boolean--><!--Device-Char-public static isUpperCase(value: char): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | a char to be tested. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the char is an upper case letter, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isUpperCase
 
@@ -779,19 +723,17 @@ isUpperCase() checks whether the underlying char is an upper case letter.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public isUpperCase(): boolean--><!--Device-Char-public isUpperCase(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the underlying char is an upper case letter, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isValidCodePoint
 
@@ -803,25 +745,23 @@ isValidCodePoint() checks if the code point is correctly encoded. See UTF-16 for
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static isValidCodePoint(codePoint: int): boolean--><!--Device-Char-public static isValidCodePoint(codePoint: int): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| codePoint | int | Yes | the code point to be checked. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| codePoint | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the code point is correctly encoded, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isWhiteSpace
 
@@ -833,25 +773,23 @@ isWhiteSpace(char) checks whether the char is a whitespace char.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-static isWhiteSpace(value: char): boolean--><!--Device-Char-static isWhiteSpace(value: char): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | a char to be tested. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the char is a whitespace, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isWhiteSpace
 
@@ -863,19 +801,17 @@ isWhiteSpace() checks whether the underlying char is a whitespace char.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-isWhiteSpace(): boolean--><!--Device-Char-isWhiteSpace(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the underlying char is a whitespace, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## toByte
 
@@ -887,19 +823,17 @@ Returns value of this instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public toByte(): byte--><!--Device-Char-public toByte(): byte-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| byte | the byte value of this Char instance. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| byte |
 
 ## toByte
 
@@ -911,25 +845,23 @@ Returns the primitive as byte value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static toByte(value: char): byte--><!--Device-Char-public static toByte(value: char): byte-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| byte | the byte value of the char. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| byte |
 
 ## toChar
 
@@ -941,19 +873,17 @@ Returns value of this instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public toChar(): char--><!--Device-Char-public toChar(): char-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| char | the char value of this Char instance. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| char |
 
 ## toChar
 
@@ -965,25 +895,23 @@ Returns the primitive as char value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static toChar(value: char): char--><!--Device-Char-public static toChar(value: char): char-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| char | the char value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| char |
 
 ## toDouble
 
@@ -995,19 +923,17 @@ Returns value of this instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public toDouble(): double--><!--Device-Char-public toDouble(): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | the double value of this Char instance. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## toDouble
 
@@ -1019,25 +945,23 @@ Returns the primitive as double value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static toDouble(value: char): double--><!--Device-Char-public static toDouble(value: char): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | the double value of the char. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## toFloat
 
@@ -1049,19 +973,17 @@ Returns value of this instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public toFloat(): float--><!--Device-Char-public toFloat(): float-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| float | the float value of this Char instance. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| float |
 
 ## toFloat
 
@@ -1073,25 +995,23 @@ Returns the primitive as float value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static toFloat(value: char): float--><!--Device-Char-public static toFloat(value: char): float-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| float | the float value of the char. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| float |
 
 ## toInt
 
@@ -1103,19 +1023,17 @@ Returns value of this instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public toInt(): int--><!--Device-Char-public toInt(): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | the int value of this Char instance. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## toInt
 
@@ -1127,25 +1045,23 @@ Returns the primitive as int value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static toInt(value: char): int--><!--Device-Char-public static toInt(value: char): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | the int value of the char. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## toLong
 
@@ -1157,19 +1073,17 @@ Returns value of this instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public toLong(): long--><!--Device-Char-public toLong(): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | the long value of this Char instance. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## toLong
 
@@ -1181,25 +1095,23 @@ Returns the primitive as long value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static toLong(value: char): long--><!--Device-Char-public static toLong(value: char): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | the long value of the char. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## toLowerCase
 
@@ -1211,25 +1123,23 @@ toLowerCase(char) converts the char to lower case if it is in upper case, otherw
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static toLowerCase(value: char): char--><!--Device-Char-public static toLowerCase(value: char): char-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | a char to transform to lower case. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| char | the lower case char converted from the input char. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| char |
 
 ## toLowerCase
 
@@ -1241,19 +1151,17 @@ toLowerCase() converts the underlying char to lower case if it is in upper case,
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public toLowerCase(): Char--><!--Device-Char-public toLowerCase(): Char-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Char | the lower case char converted from the underlying char. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Char |
 
 ## toShort
 
@@ -1265,19 +1173,17 @@ Returns value of this instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public toShort(): short--><!--Device-Char-public toShort(): short-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| short | the short value of this Char instance. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| short |
 
 ## toShort
 
@@ -1289,25 +1195,23 @@ Returns the primitive as short value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static toShort(value: char): short--><!--Device-Char-public static toShort(value: char): short-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| short | the short value of the char. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| short |
 
 ## toString
 
@@ -1319,19 +1223,17 @@ toString() converts Char to String object that contains a single element with th
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-toString(): string--><!--Device-Char-toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the string representation of the Char. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -1343,25 +1245,23 @@ Returns the primitive as string value
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-static toString(value: char): string--><!--Device-Char-static toString(value: char): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | value to cast |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the string representation of the char value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -1373,25 +1273,23 @@ Converts this object to a string with specified radix.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public toString(radix: int): string--><!--Device-Char-public toString(radix: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| radix | int | Yes | the radix of conversion. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| radix | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the conversion. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toUpperCase
 
@@ -1403,25 +1301,23 @@ toUpperCase(char) converts the char to upper case if it is in lower case, otherw
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static toUpperCase(value: char): char--><!--Device-Char-public static toUpperCase(value: char): char-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | a char to transform to upper case. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | char | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| char | the upper case char converted from the input char. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| char |
 
 ## toUpperCase
 
@@ -1433,19 +1329,17 @@ toUpperCase() converts the underlying char to upper case if it is in lower case,
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public toUpperCase(): Char--><!--Device-Char-public toUpperCase(): Char-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Char | the upper case char converted from the underlying char. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Char |
 
 ## '\u0000'
 
@@ -1453,11 +1347,7 @@ toUpperCase() converts the underlying char to upper case if it is in lower case,
 '\u0000'
 ```
 
-**Since:** -1
-
-**ArkTS mode:** ArkTS-Sta since version -1.
-
-<!--Device-Char-'\u0000'--><!--Device-Char-'\u0000'-End-->
+**ArkTS mode:** 
 
 ## '\uD800'
 
@@ -1465,11 +1355,7 @@ toUpperCase() converts the underlying char to upper case if it is in lower case,
 '\uD800'
 ```
 
-**Since:** -1
-
-**ArkTS mode:** ArkTS-Sta since version -1.
-
-<!--Device-Char-'\uD800'--><!--Device-Char-'\uD800'-End-->
+**ArkTS mode:** 
 
 ## '\uDBFF'
 
@@ -1477,11 +1363,7 @@ toUpperCase() converts the underlying char to upper case if it is in lower case,
 '\uDBFF'
 ```
 
-**Since:** -1
-
-**ArkTS mode:** ArkTS-Sta since version -1.
-
-<!--Device-Char-'\uDBFF'--><!--Device-Char-'\uDBFF'-End-->
+**ArkTS mode:** 
 
 ## '\uDC00'
 
@@ -1489,11 +1371,7 @@ toUpperCase() converts the underlying char to upper case if it is in lower case,
 '\uDC00'
 ```
 
-**Since:** -1
-
-**ArkTS mode:** ArkTS-Sta since version -1.
-
-<!--Device-Char-'\uDC00'--><!--Device-Char-'\uDC00'-End-->
+**ArkTS mode:** 
 
 ## '\uDFFF'
 
@@ -1501,11 +1379,7 @@ toUpperCase() converts the underlying char to upper case if it is in lower case,
 '\uDFFF'
 ```
 
-**Since:** -1
-
-**ArkTS mode:** ArkTS-Sta since version -1.
-
-<!--Device-Char-'\uDFFF'--><!--Device-Char-'\uDFFF'-End-->
+**ArkTS mode:** 
 
 ## '\uFFFF'
 
@@ -1513,11 +1387,7 @@ toUpperCase() converts the underlying char to upper case if it is in lower case,
 '\uFFFF'
 ```
 
-**Since:** -1
-
-**ArkTS mode:** ArkTS-Sta since version -1.
-
-<!--Device-Char-'\uFFFF'--><!--Device-Char-'\uFFFF'-End-->
+**ArkTS mode:** 
 
 ## CHAR_BIT_SIZE
 
@@ -1531,11 +1401,9 @@ Size of the char type in bits.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public readonly CHAR_BIT_SIZE: int = 16--><!--Device-Char-public readonly CHAR_BIT_SIZE: int = 16-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1551,11 +1419,9 @@ Maximal high surrogate value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static readonly HIGH_SURROGATE_MAX: char = c--><!--Device-Char-public static readonly HIGH_SURROGATE_MAX: char = c-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1571,11 +1437,9 @@ Minimal high surrogate value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static readonly HIGH_SURROGATE_MIN: char = c--><!--Device-Char-public static readonly HIGH_SURROGATE_MIN: char = c-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1591,11 +1455,9 @@ Maximal low surrogate value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static readonly LOW_SURROGATE_MAX: char = c--><!--Device-Char-public static readonly LOW_SURROGATE_MAX: char = c-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1611,11 +1473,9 @@ Minimal low surrogate value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static readonly LOW_SURROGATE_MIN: char = c--><!--Device-Char-public static readonly LOW_SURROGATE_MIN: char = c-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1631,11 +1491,9 @@ Maximal code point value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public readonly MAX_CODE_POINT: int = 0x10FFFF--><!--Device-Char-public readonly MAX_CODE_POINT: int = 0x10FFFF-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1651,11 +1509,9 @@ MAX_VALUE is a largest value of type char.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static readonly MAX_VALUE: char = c--><!--Device-Char-public static readonly MAX_VALUE: char = c-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1671,11 +1527,8 @@ MIN_VALUE is a smallest value of type char.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Char-public static readonly MIN_VALUE: char = c--><!--Device-Char-public static readonly MIN_VALUE: char = c-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

@@ -4,9 +4,9 @@ This module is used to manage plugins for applications.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-unnamed-declare namespace pluginBundleManager--><!--Device-unnamed-declare namespace pluginBundleManager-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -20,16 +20,15 @@ import { pluginBundleManager } from '@kit.AbilityKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getAllLocalPluginInfoForSelf](arkts-ability-pluginbundlemanager-getalllocalplugininfoforself-f.md) | Obtains information about all local plugins installed on the current application. |
-| [installLocalPlugin](arkts-ability-pluginbundlemanager-installlocalplugin-f.md) | Install the plugin for self application. |
-| [uninstallLocalPlugin](arkts-ability-pluginbundlemanager-uninstalllocalplugin-f.md) | Uninstall the plugin for self application. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getAllLocalPluginInfoForSelf](arkts-ability-pluginbundlemanager-getalllocalplugininfoforself-f.md) |
+| [installLocalPlugin](arkts-ability-pluginbundlemanager-installlocalplugin-f.md) |
+| [uninstallLocalPlugin](arkts-ability-pluginbundlemanager-uninstalllocalplugin-f.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [PluginBundleInfo](arkts-ability-pluginbundlemanager-pluginbundleinfo-t.md) | Indicates the information about a plugin. |
-| [PluginModuleInfo](arkts-ability-pluginbundlemanager-pluginmoduleinfo-t.md) | Indicates the plugin module info. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PluginBundleInfo](arkts-ability-pluginbundlemanager-pluginbundleinfo-t.md) |
+| [PluginModuleInfo](arkts-ability-pluginbundlemanager-pluginmoduleinfo-t.md) |

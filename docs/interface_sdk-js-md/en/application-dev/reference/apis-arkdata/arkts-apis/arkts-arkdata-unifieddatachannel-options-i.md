@@ -2,9 +2,9 @@
 
 Defines the data operation performed by the UDMF. It includes three optional parameters: **intention**, **key**, and **visibility**. The three parameters can be left unspecified. For details, see the parameter description of the specific API.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-unifiedDataChannel-interface Options--><!--Device-unifiedDataChannel-interface Options-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -24,13 +24,13 @@ Type of the data channel related to the data operation.
 
 **Type:** [Intention](arkts-arkdata-unifieddatachannel-intention-e.md)
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Options-intention?: Intention--><!--Device-Options-intention?: Intention-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -45,13 +45,13 @@ Unique identifier of the data object in the UDMF, which can be obtained from the
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Options-key?: string--><!--Device-Options-key?: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -65,13 +65,12 @@ Data visibility level. This parameter is effective only when specified during da
 
 **Type:** Visibility
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-Options-visibility?: Visibility--><!--Device-Options-visibility?: Visibility-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-

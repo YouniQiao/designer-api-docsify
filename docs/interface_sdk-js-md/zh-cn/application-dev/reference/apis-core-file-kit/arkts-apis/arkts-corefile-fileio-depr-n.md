@@ -1,4 +1,4 @@
-# fileIO
+# fileIO(@ohos.fileio (文件管理))
 
 该模块提供文件存储管理能力，包括文件基本管理、文件目录管理、文件信息统计、文件流式读写等常用功能。
 
@@ -7,7 +7,7 @@
 
 **起始版本：** 6
 
-<!--Device-unnamed-declare namespace fileIO--><!--Device-unnamed-declare namespace fileIO-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -15,4 +15,3 @@
 
 ```TypeScript
 ```
-

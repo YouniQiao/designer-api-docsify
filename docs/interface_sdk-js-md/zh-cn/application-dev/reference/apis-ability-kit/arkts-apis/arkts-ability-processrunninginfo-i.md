@@ -7,15 +7,16 @@
 > - 从API version 8开始支持，从API version 9开始废弃。建议使用ProcessInformation替代。
 ## 导入模块  
 ```ts
-import appManager from '@ohos.application.appManager'; ```
+import appManager from '@ohos.application.appManager';
+```
 
 **起始版本：** 8
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
 **替代接口：** [ProcessInformation/ProcessInformation](arkts-ability-processinformation-i.md)
-
-<!--Device-unnamed-export interface ProcessRunningInfo--><!--Device-unnamed-export interface ProcessRunningInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -31,11 +32,11 @@ bundleNames: Array<string>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [bundleNames](arkts-ability-processinformation-i.md#bundlenames)
-
-<!--Device-ProcessRunningInfo-bundleNames: Array<string>--><!--Device-ProcessRunningInfo-bundleNames: Array<string>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -51,11 +52,11 @@ pid: number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [pid](arkts-ability-processinformation-i.md#pid)
-
-<!--Device-ProcessRunningInfo-pid: number--><!--Device-ProcessRunningInfo-pid: number-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -71,11 +72,11 @@ processName: string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [processName](arkts-ability-processinformation-i.md#processname)
-
-<!--Device-ProcessRunningInfo-processName: string--><!--Device-ProcessRunningInfo-processName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -91,11 +92,10 @@ uid: number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [uid](arkts-ability-processinformation-i.md#uid)
 
-<!--Device-ProcessRunningInfo-uid: number--><!--Device-ProcessRunningInfo-uid: number-End-->
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
-

@@ -4,7 +4,7 @@ Describes the event service.
 
 **Since:** 10
 
-<!--Device-calendarManager-export interface EventService--><!--Device-calendarManager-export interface EventService-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -26,9 +26,9 @@ Description of the service, with a maximum of 5,000 characters. If this paramete
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-EventService-description?: string--><!--Device-EventService-description?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -44,9 +44,9 @@ Service type.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-EventService-type: ServiceType--><!--Device-EventService-type: ServiceType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -62,9 +62,8 @@ Service URI, in the DeepLink format. The URI can then redirect the user to the c
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-EventService-uri: string--><!--Device-EventService-uri: string-End-->
-
 **System capability:** SystemCapability.Applications.CalendarData
-

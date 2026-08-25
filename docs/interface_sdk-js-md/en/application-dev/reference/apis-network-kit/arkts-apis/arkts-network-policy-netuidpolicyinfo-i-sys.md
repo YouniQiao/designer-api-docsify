@@ -4,7 +4,7 @@ Defines the network policy information for an application.
 
 **Since:** 11
 
-<!--Device-policy-export interface NetUidPolicyInfo--><!--Device-policy-export interface NetUidPolicyInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -28,7 +28,7 @@ Policy that specifies whether the application specified by a given UID is allowe
 
 **Since:** 11
 
-<!--Device-NetUidPolicyInfo-policy: NetUidPolicy--><!--Device-NetUidPolicyInfo-policy: NetUidPolicy-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -37,18 +37,17 @@ Policy that specifies whether the application specified by a given UID is allowe
 ## uid
 
 ```TypeScript
-uid: int
+uid: number
 ```
 
 Traffic alarm threshold. The default value is **DATA_USAGE_UNKNOWN**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 11
 
-<!--Device-NetUidPolicyInfo-uid: int--><!--Device-NetUidPolicyInfo-uid: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
-

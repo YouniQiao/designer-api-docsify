@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-contextConstant-export enum ContextType--><!--Device-contextConstant-export enum ContextType-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -18,11 +18,11 @@ APPLICATION_CONTEXT = 0
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ContextType-APPLICATION_CONTEXT = 0--><!--Device-ContextType-APPLICATION_CONTEXT = 0-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -36,11 +36,11 @@ ABILITY_STAGE_CONTEXT = 1
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ContextType-ABILITY_STAGE_CONTEXT = 1--><!--Device-ContextType-ABILITY_STAGE_CONTEXT = 1-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -54,11 +54,11 @@ UI能力上下文类型。
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ContextType-UIABILITY_CONTEXT = 2--><!--Device-ContextType-UIABILITY_CONTEXT = 2-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -72,11 +72,11 @@ FORM_EXTENSION_CONTEXT = 3
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ContextType-FORM_EXTENSION_CONTEXT = 3--><!--Device-ContextType-FORM_EXTENSION_CONTEXT = 3-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -90,11 +90,11 @@ App业务扩展上下文类型。
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ContextType-APP_SERVICE_EXTENSION_CONTEXT = 4--><!--Device-ContextType-APP_SERVICE_EXTENSION_CONTEXT = 4-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -113,4 +113,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

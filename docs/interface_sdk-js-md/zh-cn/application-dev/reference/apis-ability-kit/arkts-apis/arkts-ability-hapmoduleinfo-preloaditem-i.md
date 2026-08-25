@@ -2,9 +2,9 @@
 
 描述原子化服务中模块的预加载模块信息。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-export interface PreloadItem--><!--Device-unnamed-export interface PreloadItem-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -18,11 +18,10 @@ readonly moduleName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-PreloadItem-readonly moduleName: string--><!--Device-PreloadItem-readonly moduleName: string-End-->
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-

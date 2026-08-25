@@ -2,9 +2,9 @@
 
 Class to be override for backup extension ability.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-unnamed-declare class BackupExtensionAbility--><!--Device-unnamed-declare class BackupExtensionAbility-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -24,11 +24,11 @@ getBackupCompatibilityInfo(extInfo: string) : Promise<string>
 
 Callback to be called when getting application backup compatibilityInfo. Developer could override this method to provide the backup compatibilityInfo.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BackupExtensionAbility-getBackupCompatibilityInfo(extInfo: string) : Promise<string>--><!--Device-BackupExtensionAbility-getBackupCompatibilityInfo(extInfo: string) : Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -36,15 +36,15 @@ Callback to be called when getting application backup compatibilityInfo. Develop
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| extInfo | string | Yes | Information about the capabilities of the peer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| extInfo | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Return backup compatibilityInfo, support promise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Examples**
 
@@ -80,11 +80,11 @@ getBackupInfo(): string
 
 Callback to be called when getting application backupInfo. Developer could override this method to provide the backupInfo.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BackupExtensionAbility-getBackupInfo(): string--><!--Device-BackupExtensionAbility-getBackupInfo(): string-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -92,9 +92,9 @@ Callback to be called when getting application backupInfo. Developer could overr
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Return the backup application's info. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -116,11 +116,11 @@ getRestoreCompatibilityInfo(extInfo: string) : Promise<string>
 
 Callback to be called when getting application restore compatibilityInfo. Developer could override this method to provide the restore compatibilityInfo.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BackupExtensionAbility-getRestoreCompatibilityInfo(extInfo: string) : Promise<string>--><!--Device-BackupExtensionAbility-getRestoreCompatibilityInfo(extInfo: string) : Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -128,15 +128,15 @@ Callback to be called when getting application restore compatibilityInfo. Develo
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| extInfo | string | Yes | Information about the capabilities of the peer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| extInfo | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Return restore compatibilityInfo, support promise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Examples**
 
@@ -163,4 +163,3 @@ class BackupExt extends BackupExtensionAbility {
   }
 }
 ```
-

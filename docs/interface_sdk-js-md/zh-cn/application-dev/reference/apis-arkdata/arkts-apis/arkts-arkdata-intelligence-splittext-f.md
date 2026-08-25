@@ -14,32 +14,32 @@ function splitText(text: string, config: SplitConfig): Promise<Array<string>>
 
 获取文本的分块。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-intelligence-function splitText(text: string, config: SplitConfig): Promise<Array<string>>--><!--Device-intelligence-function splitText(text: string, config: SplitConfig): Promise<Array<string>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| text | string | 是 | 待分块的文本。单个文本长度上限为100000个字符。超出长度时抛出异常。 |
-| config | [SplitConfig](arkts-arkdata-intelligence-splitconfig-i.md) | 是 | 文本分块的配置信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| text | string | 是 |
+| config | [SplitConfig](arkts-arkdata-intelligence-splitconfig-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回分块结果的数组。 |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [31300000](../errorcode-intelligence.md#31300000-服务内部异常) | Inner error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [31300000](../errorcode-intelligence.md#31300000-服务内部异常) |
 
 **示例**
 
@@ -80,4 +80,3 @@ intelligence.splitText(textToSplit, splitConfig)
     console.error(`Failed to split Text. Code: ${err.code}, message: ${err.message}`);
   })
 ```
-

@@ -2,9 +2,9 @@
 
 MMS configuration file.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-sms-export interface MmsConfig--><!--Device-sms-export interface MmsConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -26,9 +26,9 @@ User agent.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-MmsConfig-userAgent: string--><!--Device-MmsConfig-userAgent: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -44,11 +44,10 @@ User agent profile.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-MmsConfig-userAgentProfile: string--><!--Device-MmsConfig-userAgentProfile: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
-

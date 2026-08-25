@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-motion-interface SmartRotateEvent--><!--Device-motion-interface SmartRotateEvent-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
@@ -28,9 +28,9 @@ logicalOrientation?: LogicalOrientation
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-SmartRotateEvent-logicalOrientation?: LogicalOrientation--><!--Device-SmartRotateEvent-logicalOrientation?: LogicalOrientation-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
@@ -48,11 +48,10 @@ physicalOrientation: PhysicalOrientation
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-SmartRotateEvent-physicalOrientation: PhysicalOrientation--><!--Device-SmartRotateEvent-physicalOrientation: PhysicalOrientation-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 **系统接口：** 此接口为系统接口。
-

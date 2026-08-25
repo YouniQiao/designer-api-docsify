@@ -2,9 +2,9 @@
 
 Defines the carrier configuration.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sim-export interface OperatorConfig--><!--Device-sim-export interface OperatorConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -26,9 +26,9 @@ Indicates the field.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-OperatorConfig-field: string--><!--Device-OperatorConfig-field: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -44,11 +44,10 @@ Indicates the value.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-OperatorConfig-value: string--><!--Device-OperatorConfig-value: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
-

@@ -2,9 +2,9 @@
 
 Represents the holder of a remote proxy object. It is used to obtain a proxy object.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-rpc-interface IRemoteBroker--><!--Device-rpc-interface IRemoteBroker-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -22,17 +22,17 @@ asObject(): IRemoteObject
 
 Obtains a proxy or remote object. This API must be implemented by its derived classes.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-IRemoteBroker-asObject(): IRemoteObject--><!--Device-IRemoteBroker-asObject(): IRemoteObject-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Returns the **RemoteObject** if it is the caller; returns the [IRemoteObject]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) |
 
 **Examples**
 
@@ -102,4 +102,3 @@ if (proxy != undefined) {
   let iRemoteObject = new TestProxy(proxy).asObject();
 }
 ```
-

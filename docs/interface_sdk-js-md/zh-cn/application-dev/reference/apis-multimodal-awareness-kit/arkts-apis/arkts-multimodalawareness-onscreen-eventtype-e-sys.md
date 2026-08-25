@@ -2,9 +2,9 @@
 
 定义控制事件的类型。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-onScreen-export enum EventType--><!--Device-onScreen-export enum EventType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -16,11 +16,10 @@ SCROLL_TO_HOOK = 1
 
 表示滚动到hook点事件。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-EventType-SCROLL_TO_HOOK = 1--><!--Device-EventType-SCROLL_TO_HOOK = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
-

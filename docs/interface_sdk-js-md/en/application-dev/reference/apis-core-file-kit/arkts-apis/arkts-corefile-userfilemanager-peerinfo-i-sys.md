@@ -4,9 +4,9 @@ Defines information about a registered device.
 
 **Since:** 9
 
-**Deprecated since:** 26.0.0
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-userFileManager-interface PeerInfo--><!--Device-userFileManager-interface PeerInfo-End-->
+**Deprecated since:** 26.0.0
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.DistributedCore
 
@@ -30,9 +30,9 @@ Name of the registered device.
 
 **Since:** 9
 
-**Deprecated since:** 26.0.0
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-PeerInfo-readonly deviceName: string--><!--Device-PeerInfo-readonly deviceName: string-End-->
+**Deprecated since:** 26.0.0
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.DistributedCore
 
@@ -50,9 +50,9 @@ Whether the registered device is online. The value **true** means the registered
 
 **Since:** 9
 
-**Deprecated since:** 26.0.0
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-PeerInfo-readonly isOnline: boolean--><!--Device-PeerInfo-readonly isOnline: boolean-End-->
+**Deprecated since:** 26.0.0
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.DistributedCore
 
@@ -70,11 +70,10 @@ Network ID of the registered device.
 
 **Since:** 9
 
-**Deprecated since:** 26.0.0
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-PeerInfo-readonly networkId: string--><!--Device-PeerInfo-readonly networkId: string-End-->
+**Deprecated since:** 26.0.0
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.DistributedCore
 
 **System API:** This is a system API.
-

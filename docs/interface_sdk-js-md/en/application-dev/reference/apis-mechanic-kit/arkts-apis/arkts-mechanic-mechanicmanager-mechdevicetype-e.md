@@ -2,9 +2,9 @@
 
 Enumerates the mechanical device types. @enum { int }
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-mechanicManager-export enum MechDeviceType--><!--Device-mechanicManager-export enum MechDeviceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -16,9 +16,8 @@ GIMBAL_DEVICE = 0
 
 Gimbal device.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-MechDeviceType-GIMBAL_DEVICE = 0--><!--Device-MechDeviceType-GIMBAL_DEVICE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
-

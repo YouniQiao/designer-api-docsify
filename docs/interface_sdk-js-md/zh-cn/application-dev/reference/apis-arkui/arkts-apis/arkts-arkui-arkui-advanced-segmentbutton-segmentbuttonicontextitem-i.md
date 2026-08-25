@@ -7,7 +7,7 @@
 
 **起始版本：** 11
 
-<!--Device-unnamed-interface SegmentButtonIconTextItem--><!--Device-unnamed-interface SegmentButtonIconTextItem-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,11 +31,11 @@ accessibilityDescription?: ResourceStr
 
 **起始版本：** 13
 
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SegmentButtonIconTextItem-accessibilityDescription?: ResourceStr--><!--Device-SegmentButtonIconTextItem-accessibilityDescription?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -53,11 +53,11 @@ accessibilityLevel?: string
 
 **起始版本：** 13
 
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SegmentButtonIconTextItem-accessibilityLevel?: string--><!--Device-SegmentButtonIconTextItem-accessibilityLevel?: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,11 +74,11 @@ icon: ResourceStr
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SegmentButtonIconTextItem-icon: ResourceStr--><!--Device-SegmentButtonIconTextItem-icon: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,11 +96,11 @@ iconAccessibilityText?: ResourceStr
 
 **起始版本：** 13
 
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SegmentButtonIconTextItem-iconAccessibilityText?: ResourceStr--><!--Device-SegmentButtonIconTextItem-iconAccessibilityText?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -117,11 +117,11 @@ selectedIcon: ResourceStr
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SegmentButtonIconTextItem-selectedIcon: ResourceStr--><!--Device-SegmentButtonIconTextItem-selectedIcon: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -139,11 +139,11 @@ selectedIconAccessibilityText?: ResourceStr
 
 **起始版本：** 13
 
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SegmentButtonIconTextItem-selectedIconAccessibilityText?: ResourceStr--><!--Device-SegmentButtonIconTextItem-selectedIconAccessibilityText?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -159,11 +159,10 @@ text: ResourceStr
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SegmentButtonIconTextItem-text: ResourceStr--><!--Device-SegmentButtonIconTextItem-text: ResourceStr-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

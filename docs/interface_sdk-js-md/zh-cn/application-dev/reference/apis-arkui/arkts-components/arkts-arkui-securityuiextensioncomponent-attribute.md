@@ -6,7 +6,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-declare class SecurityUIExtensionComponentAttribute--><!--Device-unnamed-declare class SecurityUIExtensionComponentAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,4 +16,3 @@
 
 ```TypeScript
 ```
-

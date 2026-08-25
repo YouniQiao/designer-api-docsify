@@ -4,7 +4,7 @@ Enumerates TCP states.
 
 **Since:** 24
 
-<!--Device-connection-export enum TcpState--><!--Device-connection-export enum TcpState-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -18,9 +18,9 @@ The connection is established, and data can be sent and received properly.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-TcpState-TCP_ESTABLISHED = 1--><!--Device-TcpState-TCP_ESTABLISHED = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -34,9 +34,9 @@ The client sends SYN and waits for ACK+SYN from the server (the first step of th
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-TcpState-TCP_SYN_SENT = 2--><!--Device-TcpState-TCP_SYN_SENT = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -50,9 +50,9 @@ The server receives SYN and sends ACK+SYN, and waits for ACK from the client (th
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-TcpState-TCP_SYN_RECV = 3--><!--Device-TcpState-TCP_SYN_RECV = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -66,9 +66,9 @@ The active end sends FIN and waits for ACK from the peer end.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-TcpState-TCP_FIN_WAIT1 = 4--><!--Device-TcpState-TCP_FIN_WAIT1 = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -82,9 +82,9 @@ The active end receives ACK of FIN and waits for ACK from the peer end.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-TcpState-TCP_FIN_WAIT2 = 5--><!--Device-TcpState-TCP_FIN_WAIT2 = 5-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -98,9 +98,9 @@ The active end receives FIN from the peer end and replies with ACK. After two ti
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-TcpState-TCP_TIME_WAIT = 6--><!--Device-TcpState-TCP_TIME_WAIT = 6-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -114,9 +114,9 @@ Initial/closed state, with no connection.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-TcpState-TCP_CLOSE = 7--><!--Device-TcpState-TCP_CLOSE = 7-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -130,9 +130,9 @@ The passive end receives FIN and sends ACK, and waits for FIN from the peer end.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-TcpState-TCP_CLOSE_WAIT = 8--><!--Device-TcpState-TCP_CLOSE_WAIT = 8-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -146,9 +146,9 @@ The passive end sends FIN and waits for ACK from the peer end.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-TcpState-TCP_LAST_ACK = 9--><!--Device-TcpState-TCP_LAST_ACK = 9-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -162,9 +162,9 @@ The server listens and waits for the client to connect.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-TcpState-TCP_LISTEN = 10--><!--Device-TcpState-TCP_LISTEN = 10-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -178,9 +178,8 @@ Both ends send FIN and wait for ACK from each other.
 
 **Since:** 24
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TcpState-TCP_CLOSING = 11--><!--Device-TcpState-TCP_CLOSING = 11-End-->
-
 **System capability:** SystemCapability.Communication.NetManager.Core
-

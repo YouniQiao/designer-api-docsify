@@ -16,15 +16,14 @@ function requestRebuildHyperSnap(): void
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-hyperSnapManager-function requestRebuildHyperSnap(): void--><!--Device-hyperSnapManager-function requestRebuildHyperSnap(): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [16000150](../errorcode-ability.md#16000150-发送请求失败) | Failed to send request to system service. |
-
+| 错误码ID |
+| --- |
+| [16000150](../errorcode-ability.md#16000150-发送请求失败) |

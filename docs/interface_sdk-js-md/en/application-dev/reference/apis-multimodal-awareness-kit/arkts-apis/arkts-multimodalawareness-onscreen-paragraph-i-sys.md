@@ -2,9 +2,9 @@
 
 Defines the paragraph information.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-onScreen-export interface Paragraph--><!--Device-onScreen-export interface Paragraph-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -24,11 +24,11 @@ chapterId?: int
 
 Chapter ID of the paragraph, which is the identifier of each subchapter.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Paragraph-chapterId?: int--><!--Device-Paragraph-chapterId?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -42,11 +42,11 @@ hookId?: long
 
 Hook ID of the paragraph, which is the identifier of each main paragraph.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Paragraph-hookId?: long--><!--Device-Paragraph-hookId?: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -62,9 +62,9 @@ Content of the paragraph.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Paragraph-text?: string--><!--Device-Paragraph-text?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -80,11 +80,10 @@ Title of the paragraph.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Paragraph-title?: string--><!--Device-Paragraph-title?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
-

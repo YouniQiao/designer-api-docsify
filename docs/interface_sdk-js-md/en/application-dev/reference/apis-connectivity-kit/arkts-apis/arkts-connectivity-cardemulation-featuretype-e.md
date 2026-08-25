@@ -8,11 +8,11 @@ Enumerates the NFC card emulation types.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md)
-
-<!--Device-cardEmulation-enum FeatureType--><!--Device-cardEmulation-enum FeatureType-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
@@ -26,13 +26,13 @@ HCE.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md)
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FeatureType-HCE = 0--><!--Device-FeatureType-HCE = 0-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
@@ -46,13 +46,13 @@ Subscriber identity module (SIM) card emulation.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md)
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FeatureType-UICC = 1--><!--Device-FeatureType-UICC = 1-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
@@ -66,13 +66,12 @@ Embedded Secure Element (eSE) emulation.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md)
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FeatureType-ESE = 2--><!--Device-FeatureType-ESE = 2-End-->
-
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
-

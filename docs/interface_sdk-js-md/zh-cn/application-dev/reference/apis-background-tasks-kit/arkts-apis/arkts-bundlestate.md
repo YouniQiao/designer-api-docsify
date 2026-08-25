@@ -1,12 +1,12 @@
-# @ohos.bundleState
+# @ohos.bundleState(设备使用信息统计)
 
 本模块提供设备使用信息统计能力。
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-unnamed-declare namespace bundleState--><!--Device-unnamed-declare namespace bundleState-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -20,39 +20,38 @@ import { bundleState } from '@kit.BackgroundTasksKit';
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [isIdleState](arkts-backgroundtasks-bundlestate-isidlestate-f.md) | 判断指定bundleName的应用当前是否是空闲状态，三方应用只能查询自身的空闲状态。系统应用支持查询其他应用的空闲状态，查询前需要申请权限ohos.permission.BUNDLE_ACTIVE_INFO。使用Callback 异步回调。 |
-| [isIdleState](arkts-backgroundtasks-bundlestate-isidlestate-f.md) | 判断指定bundleName的应用当前是否是空闲状态，三方应用只能查询自身的空闲状态。系统应用支持查询其他应用的空闲状态，查询前需要申请权限ohos.permission.BUNDLE_ACTIVE_INFO，使用Promise异 步回调。 |
-| [queryAppUsagePriorityGroup](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md) | Queries the usage priority group of the calling application.The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks. |
-| [queryAppUsagePriorityGroup](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md) | Queries the usage priority group of the calling application.The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks. |
-| [queryCurrentBundleActiveStates](arkts-backgroundtasks-bundlestate-querycurrentbundleactivestates-f.md) | Queries state data of the current bundle within a specified period. |
-| [queryCurrentBundleActiveStates](arkts-backgroundtasks-bundlestate-querycurrentbundleactivestates-f.md) | Queries state data of the current bundle within a specified period. |
+| 名称 |
+| --- |
+| [isIdleState(设备使用信息统计)](arkts-backgroundtasks-bundlestate-isidlestate-f.md) |
+| [isIdleState(设备使用信息统计)](arkts-backgroundtasks-bundlestate-isidlestate-f.md) |
+| [queryAppUsagePriorityGroup(设备使用信息统计)](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md) |
+| [queryAppUsagePriorityGroup(设备使用信息统计)](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md) |
+| [queryCurrentBundleActiveStates(设备使用信息统计)](arkts-backgroundtasks-bundlestate-querycurrentbundleactivestates-f.md) |
+| [queryCurrentBundleActiveStates(设备使用信息统计)](arkts-backgroundtasks-bundlestate-querycurrentbundleactivestates-f.md) |
 
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [queryBundleActiveStates](arkts-backgroundtasks-bundlestate-querybundleactivestates-f-sys.md) | Queries state data of all bundles within a specified period identified by the start and end time. |
-| [queryBundleActiveStates](arkts-backgroundtasks-bundlestate-querybundleactivestates-f-sys.md) | Queries state data of all bundles within a specified period identified by the start and end time. |
-| [queryBundleStateInfoByInterval](arkts-backgroundtasks-bundlestate-querybundlestateinfobyinterval-f-sys.md) | Queries usage information about each bundle within a specified period at a specified interval. |
-| [queryBundleStateInfoByInterval](arkts-backgroundtasks-bundlestate-querybundlestateinfobyinterval-f-sys.md) | Queries usage information about each bundle within a specified period at a specified interval. |
-| [queryBundleStateInfos](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md) | Queries usage information about each bundle within a specified period.This method queries usage information at the BY_OPTIMIZED interval by default. |
-| [queryBundleStateInfos](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md) | Queries usage information about each bundle within a specified period.This method queries usage information at the BY_OPTIMIZED interval by default. |
+| 名称 |
+| --- |
+| [queryBundleActiveStates(设备使用信息统计)](arkts-backgroundtasks-bundlestate-querybundleactivestates-f-sys.md) |
+| [queryBundleActiveStates(设备使用信息统计)](arkts-backgroundtasks-bundlestate-querybundleactivestates-f-sys.md) |
+| [queryBundleStateInfoByInterval(设备使用信息统计)](arkts-backgroundtasks-bundlestate-querybundlestateinfobyinterval-f-sys.md) |
+| [queryBundleStateInfoByInterval(设备使用信息统计)](arkts-backgroundtasks-bundlestate-querybundlestateinfobyinterval-f-sys.md) |
+| [queryBundleStateInfos(设备使用信息统计)](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md) |
+| [queryBundleStateInfos(设备使用信息统计)](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md) |
 <!--DelEnd-->
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md) |  |
-| [BundleActiveState](arkts-backgroundtasks-bundlestate-bundleactivestate-i.md) |  |
-| [BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md) |  |
+| 名称 |
+| --- |
+| [BundleActiveInfoResponse(设备使用信息统计)](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md) |
+| [BundleActiveState(设备使用信息统计)](arkts-backgroundtasks-bundlestate-bundleactivestate-i.md) |
+| [BundleStateInfo(设备使用信息统计)](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md) |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-| [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | Declares interval type. |
-
+| 名称 |
+| --- |
+| [IntervalType(设备使用信息统计)](arkts-backgroundtasks-bundlestate-intervaltype-e.md) |

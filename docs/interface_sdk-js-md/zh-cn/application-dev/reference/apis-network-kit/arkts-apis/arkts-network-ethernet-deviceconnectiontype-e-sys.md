@@ -4,7 +4,7 @@
 
 **起始版本：** 20
 
-<!--Device-ethernet-export enum DeviceConnectionType--><!--Device-ethernet-export enum DeviceConnectionType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -20,7 +20,7 @@ BUILT_IN = 0
 
 **起始版本：** 20
 
-<!--Device-DeviceConnectionType-BUILT_IN = 0--><!--Device-DeviceConnectionType-BUILT_IN = 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -36,9 +36,8 @@ EXTERNAL = 1
 
 **起始版本：** 20
 
-<!--Device-DeviceConnectionType-EXTERNAL = 1--><!--Device-DeviceConnectionType-EXTERNAL = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。
-

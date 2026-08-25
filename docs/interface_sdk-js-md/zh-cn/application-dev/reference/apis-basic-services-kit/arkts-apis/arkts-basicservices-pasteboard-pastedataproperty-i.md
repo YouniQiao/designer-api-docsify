@@ -2,9 +2,9 @@
 
 定义剪贴板中所有内容条目的属性，包含时间戳、数据类型、粘贴范围以及一些附加数据等， 该属性必须通过[setProperty](arkts-basicservices-pasteboard-pastedata-i.md#setproperty)方法，才能设置到剪贴板中。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-pasteboard-interface PasteDataProperty--><!--Device-pasteboard-interface PasteDataProperty-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -17,16 +17,18 @@ import { pasteboard } from '@kit.BasicServicesKit';
 ## additions
 
 ```TypeScript
-additions: Record<string, RecordData>
+additions: Record<string, object>
 ```
 
-设置其他附加属性数据。格式为键值对。
+设置其他附加属性数据。不支持动态追加属性，只能通过重新赋值的方式修改附加值，具体见相关示例setProperty， 默认为空。
 
-**类型：** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, object&gt;
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-PasteDataProperty-additions: Record<string, RecordData>--><!--Device-PasteDataProperty-additions: Record<string, RecordData>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -40,11 +42,11 @@ localOnly: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PasteDataProperty-localOnly: boolean--><!--Device-PasteDataProperty-localOnly: boolean-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -58,11 +60,11 @@ readonly mimeTypes: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PasteDataProperty-readonly mimeTypes: Array<string>--><!--Device-PasteDataProperty-readonly mimeTypes: Array<string>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -76,11 +78,11 @@ shareOption: ShareOption
 
 **类型：** [ShareOption](arkts-basicservices-pasteboard-shareoption-e.md)
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PasteDataProperty-shareOption: ShareOption--><!--Device-PasteDataProperty-shareOption: ShareOption-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -94,11 +96,11 @@ tag: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PasteDataProperty-tag: string--><!--Device-PasteDataProperty-tag: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -110,13 +112,12 @@ readonly timestamp: long
 
 剪贴板数据的写入时间戳（单位：已开机时间的ns数）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-PasteDataProperty-readonly timestamp: long--><!--Device-PasteDataProperty-readonly timestamp: long-End-->
-
 **系统能力：** SystemCapability.MiscServices.Pasteboard
-

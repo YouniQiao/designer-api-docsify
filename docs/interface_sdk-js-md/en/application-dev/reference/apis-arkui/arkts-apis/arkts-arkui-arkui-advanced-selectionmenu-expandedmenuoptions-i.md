@@ -6,7 +6,7 @@ Describes the expanded drop-down menu options.Inherits from MenuItemOptions.
 
 **Since:** 11
 
-<!--Device-unnamed-export interface ExpandedMenuOptions--><!--Device-unnamed-export interface ExpandedMenuOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,15 +24,30 @@ action?: () => void
 
 Action triggered when the menu option is clicked.
 
-**Type:** () =&gt; void
-
 **Since:** 11
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ExpandedMenuOptions-action?: () => void--><!--Device-ExpandedMenuOptions-action?: () => void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## action
+
+```TypeScript
+action?: VoidCallback
+```
+
+Callback function when click the option.
+
+**Type:** VoidCallback
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -2,7 +2,7 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-export default class Configuration--><!--Device-unnamed-export default class Configuration-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -22,15 +22,15 @@ static getLocale(): LocaleResponse
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Configuration-static getLocale(): LocaleResponse--><!--Device-Configuration-static getLocale(): LocaleResponse-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [LocaleResponse](arkts-arkui-system-configuration-localeresponse-i.md) | 应用当前Locale相关信息。 |
+| 类型 |
+| --- |
+| [LocaleResponse](arkts-arkui-system-configuration-localeresponse-i.md) |
 
 **示例**
 
@@ -195,4 +195,3 @@ export default {
     }
 }
 ```
-

@@ -1,14 +1,17 @@
 # @ohos.arkui.performanceMonitor
 
-Provides interfaces to monitor a scene for performance measurement.<p>These interfaces are used to monitor the begin, end, and value changes of finger processes that last for at least 3 ms.<p>Example: import "@ohos.arkui.performanceMonitor.d.ts"To start scene monitoring that is expected to complete within 5 ms: &lt;pre&gt;{@code performanceMonitor.begin(string, ActionType, string); //scene finished performanceMonitor.end(string);}&lt;/pre&gt;<p>Each {@code begin} matches one {@code end}, and they must have the same scene id.@namespace performanceMonitor
+The **performanceMonitor** module provides APIs for monitoring performance metrics related to user scenes. By calling the **begin** and **end** APIs at the start and end of a scene respectively, you can obtain relevant performance metrics such as response latency, completion latency, and frame drops.
 
-**Since:** 23
+> **NOTE：**&gt;
+> The APIs of this module are supported since API version 10. Updates will be marked with a superscript to indicate
+> their&gt;
+> The APIs provided by this module are system APIs.
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-declare namespace performanceMonitor--><!--Device-unnamed-declare namespace performanceMonitor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,19 +28,18 @@ import { performanceMonitor } from '@kit.ArkUI';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [begin](arkts-arkui-performancemonitor-begin-f-sys.md) | Begin monitoring an application scene. |
-| [end](arkts-arkui-performancemonitor-end-f-sys.md) | End monitoring an application scene. |
-| [recordInputEventTime](arkts-arkui-performancemonitor-recordinputeventtime-f-sys.md) | recordInputEventTime monitoring an application scene. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [begin](arkts-arkui-performancemonitor-begin-f-sys.md) |
+| [end](arkts-arkui-performancemonitor-end-f-sys.md) |
+| [recordInputEventTime](arkts-arkui-performancemonitor-recordinputeventtime-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [ActionType](arkts-arkui-performancemonitor-actiontype-e-sys.md) | Enumerates the input event type.@enum { number } |
-| [SourceType](arkts-arkui-performancemonitor-sourcetype-e-sys.md) | Enumerates the input source type.@enum { number } |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ActionType](arkts-arkui-performancemonitor-actiontype-e-sys.md) |
+| [SourceType](arkts-arkui-performancemonitor-sourcetype-e-sys.md) |
 <!--DelEnd-->
-

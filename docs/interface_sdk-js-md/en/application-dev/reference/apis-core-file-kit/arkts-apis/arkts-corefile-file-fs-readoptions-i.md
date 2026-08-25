@@ -4,7 +4,7 @@ Defines the options used in **read()**.
 
 **Since:** 11
 
-<!--Device-unnamed-export interface ReadOptions--><!--Device-unnamed-export interface ReadOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -28,9 +28,9 @@ Length of the data to read, in bytes. This parameter is optional. The default va
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
-<!--Device-ReadOptions-length?: number--><!--Device-ReadOptions-length?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -46,9 +46,8 @@ Start position of the file to read, in bytes. This parameter is optional. By def
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ReadOptions-offset?: number--><!--Device-ReadOptions-offset?: number-End-->
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
-

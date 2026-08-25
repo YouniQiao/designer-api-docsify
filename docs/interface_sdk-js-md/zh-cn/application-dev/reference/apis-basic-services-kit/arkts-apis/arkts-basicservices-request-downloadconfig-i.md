@@ -2,9 +2,9 @@
 
 下载任务的配置信息。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-request-interface DownloadConfig--><!--Device-request-interface DownloadConfig-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -24,9 +24,9 @@ background?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-DownloadConfig-background?: boolean--><!--Device-DownloadConfig-background?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -40,9 +40,9 @@ description?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-DownloadConfig-description?: string--><!--Device-DownloadConfig-description?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -59,9 +59,9 @@ enableMetered?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-DownloadConfig-enableMetered?: boolean--><!--Device-DownloadConfig-enableMetered?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -75,9 +75,9 @@ enableRoaming?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-DownloadConfig-enableRoaming?: boolean--><!--Device-DownloadConfig-enableRoaming?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -88,30 +88,30 @@ filePath?: string
 ```
 
 设置下载路径。默认为调用方（即传入的context）对应的缓存路径。默认文件名从url的最后一个"/"后截取。  
-- FA模型下使用 Context.getCacheDir方法获取应用 存储路径。  
+- FA模型下使用 [Context.getCacheDir](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetcachedir)方法获取应用 存储路径。  
 - Stage模型下使用[Context (Stage模型的上下文基类)](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)中AbilityContext的类获取文件路径。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-DownloadConfig-filePath?: string--><!--Device-DownloadConfig-filePath?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## header
 
 ```TypeScript
-header?: Record<string, string>
+header?: Object
 ```
 
-Adds an HTTP or HTTPS header to be included with the download request.
+添加要包含在下载请求中的HTTPS标志头。默认值为空。
 
-**类型：** Record&lt;string, string&gt;
+**类型：** Object
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-DownloadConfig-header?: Record<string, string>--><!--Device-DownloadConfig-header?: Record<string, string>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -121,15 +121,15 @@ Adds an HTTP or HTTPS header to be included with the download request.
 networkType?: int
 ```
 
-设置允许下载的网络类型，通过 网络类型常量的位运算方式决定允许 的网络类型，支持如下几种设置方式:  
+设置允许下载的网络类型，通过 [网络类型常量](../../../reference/apis-basic-services-kit/js-apis-request.md#constants)的位运算方式决定允许 的网络类型，支持如下几种设置方式:  
 - 仅支持蜂窝网络下载，参数为NETWORK_MOBILE或0x00000001 - 仅支持WLAN网络下载，参数为NETWORK_WIFI或0x00010000 - 参数默认值，支持蜂窝/WLAN网络下载，参数为NETWORK_MOBILE | NETWORK_WIFI或0x00010001。  
 当参数为NETWORK_MOBILE | NETWORK_WIFI时，enableMetered和enableRoaming参数不生效。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-DownloadConfig-networkType?: int--><!--Device-DownloadConfig-networkType?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -143,9 +143,9 @@ title?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-DownloadConfig-title?: string--><!--Device-DownloadConfig-title?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -159,9 +159,8 @@ url: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-DownloadConfig-url: string--><!--Device-DownloadConfig-url: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
-

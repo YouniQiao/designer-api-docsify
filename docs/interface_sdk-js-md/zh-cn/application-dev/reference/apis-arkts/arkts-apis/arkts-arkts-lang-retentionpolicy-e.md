@@ -4,7 +4,7 @@
 
 **起始版本：** 24
 
-<!--Device-unnamed-export const enum RetentionPolicy--><!--Device-unnamed-export const enum RetentionPolicy-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -18,9 +18,9 @@ SOURCE = 'source'
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
-<!--Device-RetentionPolicy-SOURCE = 'source'--><!--Device-RetentionPolicy-SOURCE = 'source'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -34,9 +34,8 @@ BYTECODE = 'bytecode'
 
 **起始版本：** 24
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-RetentionPolicy-BYTECODE = 'bytecode'--><!--Device-RetentionPolicy-BYTECODE = 'bytecode'-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

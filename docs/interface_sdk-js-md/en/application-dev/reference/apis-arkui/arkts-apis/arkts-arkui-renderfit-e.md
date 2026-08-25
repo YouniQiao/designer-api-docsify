@@ -4,7 +4,7 @@ Enumerates the modes in which the final state of the component's content is rend
 
 **Since:** 10
 
-<!--Device-unnamed-declare enum RenderFit--><!--Device-unnamed-declare enum RenderFit-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +18,13 @@ The component's content stays at the final size and always aligned with the cent
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-RenderFit-CENTER = 0--><!--Device-RenderFit-CENTER = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,13 +38,13 @@ The component's content stays at the final size and always aligned with the top 
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-RenderFit-TOP = 1--><!--Device-RenderFit-TOP = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,13 +58,13 @@ The component's content stays at the final size and always aligned with the bott
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-RenderFit-BOTTOM = 2--><!--Device-RenderFit-BOTTOM = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,13 +78,13 @@ The component's content stays at the final size and always aligned with the left
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-RenderFit-LEFT = 3--><!--Device-RenderFit-LEFT = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,13 +98,13 @@ The component's content stays at the final size and always aligned with the righ
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-RenderFit-RIGHT = 4--><!--Device-RenderFit-RIGHT = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -118,13 +118,13 @@ The component's content stays at the final size and always aligned with the uppe
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-RenderFit-TOP_LEFT = 5--><!--Device-RenderFit-TOP_LEFT = 5-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,13 +138,13 @@ The component's content stays at the final size and always aligned with the uppe
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-RenderFit-TOP_RIGHT = 6--><!--Device-RenderFit-TOP_RIGHT = 6-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -158,13 +158,13 @@ The component's content stays at the final size and always aligned with the lowe
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-RenderFit-BOTTOM_LEFT = 7--><!--Device-RenderFit-BOTTOM_LEFT = 7-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -178,13 +178,13 @@ The component's content stays at the final size and always aligned with the lowe
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-RenderFit-BOTTOM_RIGHT = 8--><!--Device-RenderFit-BOTTOM_RIGHT = 8-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -198,13 +198,13 @@ The component's content is always resized to fill the component's content box, w
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-RenderFit-RESIZE_FILL = 9--><!--Device-RenderFit-RESIZE_FILL = 9-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -218,13 +218,13 @@ While maintaining its aspect ratio in the final state, the component's content i
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-RenderFit-RESIZE_CONTAIN = 10--><!--Device-RenderFit-RESIZE_CONTAIN = 10-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -238,13 +238,13 @@ While maintaining its aspect ratio in the final state, the component's content i
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-RenderFit-RESIZE_CONTAIN_TOP_LEFT = 11--><!--Device-RenderFit-RESIZE_CONTAIN_TOP_LEFT = 11-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -258,13 +258,13 @@ While maintaining its aspect ratio in the final state, the component's content i
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-RenderFit-RESIZE_CONTAIN_BOTTOM_RIGHT = 12--><!--Device-RenderFit-RESIZE_CONTAIN_BOTTOM_RIGHT = 12-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -278,13 +278,13 @@ While maintaining its aspect ratio in the final state, the component's content i
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-RenderFit-RESIZE_COVER = 13--><!--Device-RenderFit-RESIZE_COVER = 13-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -298,13 +298,13 @@ While maintaining its aspect ratio in the final state, the component's content i
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-RenderFit-RESIZE_COVER_TOP_LEFT = 14--><!--Device-RenderFit-RESIZE_COVER_TOP_LEFT = 14-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -318,13 +318,12 @@ While maintaining its aspect ratio in the final state, the component's content i
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
-<!--Device-RenderFit-RESIZE_COVER_BOTTOM_RIGHT = 15--><!--Device-RenderFit-RESIZE_COVER_BOTTOM_RIGHT = 15-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 The metadata of the current call.@interface CallMetadata [since 11 - 11]
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-avSession-interface CallMetadata--><!--Device-avSession-interface CallMetadata-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -24,11 +24,11 @@ The displayed picture that represents a particular user.
 
 **Type:** image.PixelMap
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CallMetadata-avatar?: image.PixelMap--><!--Device-CallMetadata-avatar?: image.PixelMap-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -42,11 +42,11 @@ The displayed user name of current call.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CallMetadata-name?: string--><!--Device-CallMetadata-name?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -60,11 +60,10 @@ The phone number of current call.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-CallMetadata-phoneNumber?: string--><!--Device-CallMetadata-phoneNumber?: string-End-->
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
-

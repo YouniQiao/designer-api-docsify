@@ -4,7 +4,7 @@ Enumeration of play state.@enum { int }
 
 **Since:** 23
 
-<!--Device-avMusicTemplate-enum PlaybackState--><!--Device-avMusicTemplate-enum PlaybackState-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -18,9 +18,9 @@ Preparing state. Indicates that the media file is not ready to play, the media i
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PlaybackState-PLAYBACK_STATE_PREPARE = 0--><!--Device-PlaybackState-PLAYBACK_STATE_PREPARE = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -34,9 +34,9 @@ Playing state.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PlaybackState-PLAYBACK_STATE_PLAY = 1--><!--Device-PlaybackState-PLAYBACK_STATE_PLAY = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -50,9 +50,9 @@ Paused state.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PlaybackState-PLAYBACK_STATE_PAUSE = 2--><!--Device-PlaybackState-PLAYBACK_STATE_PAUSE = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -66,9 +66,9 @@ Stopped state. The server will clear the media playback position and other infor
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PlaybackState-PLAYBACK_STATE_STOP = 3--><!--Device-PlaybackState-PLAYBACK_STATE_STOP = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -82,9 +82,9 @@ Completed state.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PlaybackState-PLAYBACK_STATE_COMPLETED = 4--><!--Device-PlaybackState-PLAYBACK_STATE_COMPLETED = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -98,9 +98,9 @@ error state.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PlaybackState-PLAYBACK_STATE_ERROR = 5--><!--Device-PlaybackState-PLAYBACK_STATE_ERROR = 5-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -114,9 +114,8 @@ Buffering state.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PlaybackState-PLAYBACK_STATE_BUFFERING = 6--><!--Device-PlaybackState-PLAYBACK_STATE_BUFFERING = 6-End-->
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-

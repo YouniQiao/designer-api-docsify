@@ -4,7 +4,7 @@ Enumerates the DistributedField.
 
 **Since:** 24
 
-<!--Device-relationalStore-enum DistributedField--><!--Device-relationalStore-enum DistributedField-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -20,9 +20,9 @@ Origin field. For details, see [DistributedOrigin](arkts-arkdata-relationalstore
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-DistributedField-ORIGIN = '#_origin'--><!--Device-DistributedField-ORIGIN = '#_origin'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -38,9 +38,9 @@ Origin device field. Indicates the data origin sources device ID.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-DistributedField-ORIGIN_ORIDEVICE = '#_ori_device'--><!--Device-DistributedField-ORIGIN_ORIDEVICE = '#_ori_device'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -56,9 +56,9 @@ Cursor field.This parameter can be used as the input parameter of the predicate 
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-DistributedField-CURSOR_FIELD = '#_cursor'--><!--Device-DistributedField-CURSOR_FIELD = '#_cursor'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -74,11 +74,10 @@ Indicates whether data has been deleted.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-DistributedField-DELETED_FLAG_FIELD = '#_deleted_flag'--><!--Device-DistributedField-DELETED_FLAG_FIELD = '#_deleted_flag'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **System API:** This is a system API.
-

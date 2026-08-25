@@ -4,7 +4,7 @@ Enumerates the input field types.
 
 **Since:** 9
 
-<!--Device-unnamed-declare enum ContextMenuInputFieldType--><!--Device-unnamed-declare enum ContextMenuInputFieldType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,9 +18,9 @@ Non-input field, referring to non-editable web elements such as buttons, divs, s
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ContextMenuInputFieldType-None = 0--><!--Device-ContextMenuInputFieldType-None = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -34,9 +34,9 @@ Plain text field, such as the text, search, or email field.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ContextMenuInputFieldType-PlainText = 1--><!--Device-ContextMenuInputFieldType-PlainText = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -50,9 +50,9 @@ Password field.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ContextMenuInputFieldType-Password = 2--><!--Device-ContextMenuInputFieldType-Password = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -66,9 +66,9 @@ Number field.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ContextMenuInputFieldType-Number = 3--><!--Device-ContextMenuInputFieldType-Number = 3-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -82,9 +82,9 @@ Phone number field.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ContextMenuInputFieldType-Telephone = 4--><!--Device-ContextMenuInputFieldType-Telephone = 4-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -98,9 +98,8 @@ Field of any other type.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ContextMenuInputFieldType-Other = 5--><!--Device-ContextMenuInputFieldType-Other = 5-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

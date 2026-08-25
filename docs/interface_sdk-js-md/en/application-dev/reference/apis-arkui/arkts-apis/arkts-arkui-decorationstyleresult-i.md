@@ -4,7 +4,7 @@ Provides the text decoration information returned by the backend.
 
 **Since:** 12
 
-<!--Device-unnamed-interface DecorationStyleResult--><!--Device-unnamed-interface DecorationStyleResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Color of the text decoration.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DecorationStyleResult-color: ResourceColor--><!--Device-DecorationStyleResult-color: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ Style of the text decoration.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DecorationStyleResult-style?: TextDecorationStyle--><!--Device-DecorationStyleResult-style?: TextDecorationStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,11 +65,11 @@ Scale factor of the text decoration thickness.Default value: **1.0**Value range:
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-DecorationStyleResult-thicknessScale?: number--><!--Device-DecorationStyleResult-thicknessScale?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,11 +85,10 @@ Type of the text decoration.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-DecorationStyleResult-type: TextDecorationType--><!--Device-DecorationStyleResult-type: TextDecorationType-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

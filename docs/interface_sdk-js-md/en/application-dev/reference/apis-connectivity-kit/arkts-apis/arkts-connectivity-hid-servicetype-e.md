@@ -4,7 +4,7 @@ Describe the l2cap service type.
 
 **Since:** 23
 
-<!--Device-hid-enum ServiceType--><!--Device-hid-enum ServiceType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -18,9 +18,9 @@ Service type no traffic.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-ServiceType-SERVICE_NO_TRAFFIC = 0--><!--Device-ServiceType-SERVICE_NO_TRAFFIC = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -34,9 +34,9 @@ Service type best effort.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-ServiceType-SERVICE_BEST_EFFORT = 1--><!--Device-ServiceType-SERVICE_BEST_EFFORT = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -50,9 +50,8 @@ Service type guaranteed.
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ServiceType-SERVICE_GUARANTEED = 2--><!--Device-ServiceType-SERVICE_GUARANTEED = 2-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

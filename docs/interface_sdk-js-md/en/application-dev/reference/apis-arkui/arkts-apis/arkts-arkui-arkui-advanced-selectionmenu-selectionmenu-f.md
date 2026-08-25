@@ -9,7 +9,6 @@ import { EditorEventInfo, EditorMenuOptions, ExpandedMenuOptions, SelectionMenu,
 ## SelectionMenu
 
 ```TypeScript
-@Builder
 export declare function SelectionMenu(options: SelectionMenuOptions): void
 ```
 
@@ -17,19 +16,16 @@ Defines a **SelectionMenu** component. When the input parameter is empty, both t
 
 **Since:** 11
 
-**Decorator:** @Builder
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-unnamed-@Builderexport declare function SelectionMenu(options: SelectionMenuOptions): void--><!--Device-unnamed-@Builderexport declare function SelectionMenu(options: SelectionMenuOptions): void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [SelectionMenuOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | Yes | Configuration options of the **SelectionMenu** component. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [SelectionMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | Yes |

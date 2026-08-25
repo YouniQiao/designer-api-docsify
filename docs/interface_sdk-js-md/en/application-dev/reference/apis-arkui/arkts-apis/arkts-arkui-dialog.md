@@ -12,28 +12,27 @@ import { dialog, DialogBaseAlignment, DialogButtonOrientation, DialogState, Dial
 
 ### Namespaces
 
-| Name | Description |
-| --- | --- |
-| [dialog](arkts-arkui-dialog-n.md) | Provides unified dialog APIs. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [dialog](arkts-arkui-dialog-n.md) |
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [DialogBaseController](arkts-arkui-arkui-dialog-dialogbasecontroller-c.md) | The class used to control dialog. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DialogBaseController](arkts-arkui-arkui-dialog-dialogbasecontroller-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [DialogDismissal](arkts-arkui-arkui-dialog-dialogdismissal-i.md) | Provides information about the action to dismiss the dialog box. |
-| [DialogResult](arkts-arkui-arkui-dialog-dialogresult-i.md) | Response result for dialog. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DialogDismissal](arkts-arkui-arkui-dialog-dialogdismissal-i.md) |
+| [DialogResult](arkts-arkui-arkui-dialog-dialogresult-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [DialogBaseAlignment](arkts-arkui-arkui-dialog-dialogbasealignment-e.md) | The alignment of dialog. |
-| [DialogButtonOrientation](arkts-arkui-arkui-dialog-dialogbuttonorientation-e.md) | The arrangement of buttons in dialog. |
-| [DialogState](arkts-arkui-arkui-dialog-dialogstate-e.md) | Enum for dialog state. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DialogBaseAlignment](arkts-arkui-arkui-dialog-dialogbasealignment-e.md) |
+| [DialogButtonOrientation](arkts-arkui-arkui-dialog-dialogbuttonorientation-e.md) |
+| [DialogState](arkts-arkui-arkui-dialog-dialogstate-e.md) |

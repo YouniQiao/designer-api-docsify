@@ -8,11 +8,10 @@ export type EnabledPriorityNotificationCallbackData = _EnabledPriorityNotificati
 
 **起始版本：** 23
 
-<!--Device-notificationSubscribe-export type EnabledPriorityNotificationCallbackData = _EnabledPriorityNotificationCallbackData--><!--Device-notificationSubscribe-export type EnabledPriorityNotificationCallbackData = _EnabledPriorityNotificationCallbackData-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
 
 **属性类型：** _EnabledPriorityNotificationCallbackData
-

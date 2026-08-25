@@ -8,11 +8,10 @@ export type Advertisement = _Advertisement
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-advertising-export type Advertisement = _Advertisement--><!--Device-advertising-export type Advertisement = _Advertisement-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
 **属性类型：** _Advertisement
-

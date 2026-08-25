@@ -4,7 +4,7 @@ Enumerates the playback metric keys.
 
 **Since:** 23
 
-<!--Device-media-enum PlaybackMetricsKey--><!--Device-media-enum PlaybackMetricsKey-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -18,7 +18,7 @@ Preparation duration, in milliseconds.
 
 **Since:** 23
 
-<!--Device-PlaybackMetricsKey-PREPARE_DURATION = 'prepare_duration'--><!--Device-PlaybackMetricsKey-PREPARE_DURATION = 'prepare_duration'-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -32,7 +32,7 @@ Duration for establishing a resource connection, in milliseconds.
 
 **Since:** 23
 
-<!--Device-PlaybackMetricsKey-RESOURCE_CONNECTION_DURATION = 'resource_connection_duration'--><!--Device-PlaybackMetricsKey-RESOURCE_CONNECTION_DURATION = 'resource_connection_duration'-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -46,7 +46,7 @@ Duration for decapsulating the first frame, in milliseconds.
 
 **Since:** 23
 
-<!--Device-PlaybackMetricsKey-FIRST_FRAME_DECAPSULATION_DURATION = 'first_frame_decapsulation_duration'--><!--Device-PlaybackMetricsKey-FIRST_FRAME_DECAPSULATION_DURATION = 'first_frame_decapsulation_duration'-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -60,7 +60,7 @@ Total playback duration, in milliseconds.
 
 **Since:** 23
 
-<!--Device-PlaybackMetricsKey-TOTAL_PLAYING_TIME = 'total_playback_time'--><!--Device-PlaybackMetricsKey-TOTAL_PLAYING_TIME = 'total_playback_time'-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -74,9 +74,9 @@ Total number of requests.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PlaybackMetricsKey-DOWNLOAD_REQUESTS_COUNT  = 'loading_requests_count'--><!--Device-PlaybackMetricsKey-DOWNLOAD_REQUESTS_COUNT  = 'loading_requests_count'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -90,7 +90,7 @@ Total loading duration, in milliseconds.
 
 **Since:** 23
 
-<!--Device-PlaybackMetricsKey-TOTAL_DOWNLOAD_TIME  = 'total_loading_time'--><!--Device-PlaybackMetricsKey-TOTAL_DOWNLOAD_TIME  = 'total_loading_time'-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -104,9 +104,9 @@ Total loading size, in bytes.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-PlaybackMetricsKey-TOTAL_DOWNLOAD_SIZE  = 'total_loading_bytes'--><!--Device-PlaybackMetricsKey-TOTAL_DOWNLOAD_SIZE  = 'total_loading_bytes'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -120,7 +120,7 @@ Total number of stalling times.
 
 **Since:** 23
 
-<!--Device-PlaybackMetricsKey-STALLING_COUNT  = 'stalling_count'--><!--Device-PlaybackMetricsKey-STALLING_COUNT  = 'stalling_count'-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -134,7 +134,7 @@ Total stalling duration, in milliseconds.
 
 **Since:** 23
 
-<!--Device-PlaybackMetricsKey-TOTAL_STALLING_TIME  = 'total_stalling_time'--><!--Device-PlaybackMetricsKey-TOTAL_STALLING_TIME  = 'total_stalling_time'-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -148,9 +148,9 @@ Cumulative lip async count.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-PlaybackMetricsKey-LIP_ASYNC_COUNT  = 'lip_async_count'--><!--Device-PlaybackMetricsKey-LIP_ASYNC_COUNT  = 'lip_async_count'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -164,9 +164,8 @@ Total lip async duration during the playback, in milliseconds.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PlaybackMetricsKey-TOTAL_LIP_ASYNC_TIME  = 'total_lip_async_time'--><!--Device-PlaybackMetricsKey-TOTAL_LIP_ASYNC_TIME  = 'total_lip_async_time'-End-->
-
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
-

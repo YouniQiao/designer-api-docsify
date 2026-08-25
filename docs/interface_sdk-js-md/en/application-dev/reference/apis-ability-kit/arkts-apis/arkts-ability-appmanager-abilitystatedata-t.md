@@ -1,16 +1,15 @@
 # AbilityStateData
 
 ```TypeScript
-export type AbilityStateData = _AbilityStateData
+export type AbilityStateData = _AbilityStateData.default
 ```
 
 Defines the ability state data.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-appManager-export type AbilityStateData = _AbilityStateData--><!--Device-appManager-export type AbilityStateData = _AbilityStateData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _AbilityStateData
-
+**Property type:** _AbilityStateData.default

@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-config-export interface ConnectCallback--><!--Device-config-export interface ConnectCallback-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -24,15 +24,12 @@ onDisconnect: OnDisconnectCallback
 
 辅助扩展应用的连接断开时调用的回调函数。
 
-**类型：** [OnDisconnectCallback](arkts-accessibility-config-ondisconnectcallback-t-sys.md)
-
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-ConnectCallback-onDisconnect: OnDisconnectCallback--><!--Device-ConnectCallback-onDisconnect: OnDisconnectCallback-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
-

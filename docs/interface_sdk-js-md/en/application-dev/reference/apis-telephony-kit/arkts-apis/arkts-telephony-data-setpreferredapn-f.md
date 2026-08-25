@@ -17,31 +17,31 @@ Sets the APN corresponding to the specified **apnId** as the preferred APN. This
 > **NOTE：**&gt;
 > If the input APN ID is invalid, the default preferred APN configured by the carrier is used.
 
-**Since:** 23
+**Since:** 16
+
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_APN_SETTING
-
-<!--Device-data-function setPreferredApn(apnId: int): Promise<boolean>--><!--Device-data-function setPreferredApn(apnId: int): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| apnId | int | Yes | APN ID, which can be obtained by calling [queryApnIds](arkts-telephony-data-queryapnids-f.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| apnId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. If no SIM card is installed, the value **false** is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 **Examples**
 
@@ -56,4 +56,3 @@ data.setPreferredApn(apnId).then((result: boolean) => {
     console.error(`setPreferredApn failed. code: ${err.code}, message: ${err.message}`);
 });
 ```
-

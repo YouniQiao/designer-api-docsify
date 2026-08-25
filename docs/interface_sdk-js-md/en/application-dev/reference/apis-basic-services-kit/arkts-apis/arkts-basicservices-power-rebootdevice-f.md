@@ -16,25 +16,24 @@ Restarts the system.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [reboot](arkts-basicservices-power-reboot-f-sys.md)
 
 **Required permissions:** ohos.permission.REBOOT
 
-<!--Device-power-function rebootDevice(reason: string): void--><!--Device-power-function rebootDevice(reason: string): void-End-->
-
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| reason | string | Yes | Indicates the restart reason. For example, "updater" indicates entering the updater mode after the restart. If the parameter is not specified, the system enters the normal mode after the restart. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| reason | string | Yes |
 
 **Examples**
 
 ```TypeScript
 power.rebootDevice('reboot_test');
 ```
-

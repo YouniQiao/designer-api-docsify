@@ -2,9 +2,9 @@
 
 环境背景类型枚举，用于定义场景的背景呈现方式。 @enum { int }
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export enum EnvironmentBackgroundType--><!--Device-unnamed-export enum EnvironmentBackgroundType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -16,9 +16,9 @@ BACKGROUND_NONE = 0
 
 无背景。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-EnvironmentBackgroundType-BACKGROUND_NONE = 0--><!--Device-EnvironmentBackgroundType-BACKGROUND_NONE = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -30,9 +30,9 @@ BACKGROUND_IMAGE = 1
 
 图片背景。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-EnvironmentBackgroundType-BACKGROUND_IMAGE = 1--><!--Device-EnvironmentBackgroundType-BACKGROUND_IMAGE = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -44,9 +44,9 @@ BACKGROUND_CUBEMAP = 2
 
 立方体贴图背景。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-EnvironmentBackgroundType-BACKGROUND_CUBEMAP = 2--><!--Device-EnvironmentBackgroundType-BACKGROUND_CUBEMAP = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -58,9 +58,8 @@ BACKGROUND_EQUIRECTANGULAR = 3
 
 等距柱状投影背景。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-EnvironmentBackgroundType-BACKGROUND_EQUIRECTANGULAR = 3--><!--Device-EnvironmentBackgroundType-BACKGROUND_EQUIRECTANGULAR = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

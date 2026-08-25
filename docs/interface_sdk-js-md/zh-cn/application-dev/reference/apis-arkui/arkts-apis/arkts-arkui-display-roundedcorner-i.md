@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-display-interface RoundedCorner--><!--Device-display-interface RoundedCorner-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -26,11 +26,11 @@ readonly position: Position
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RoundedCorner-readonly position: Position--><!--Device-RoundedCorner-readonly position: Position-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -42,15 +42,15 @@ readonly radius: int
 
 圆角半径，单位为px。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RoundedCorner-readonly radius: int--><!--Device-RoundedCorner-readonly radius: int-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -66,11 +66,10 @@ readonly type: CornerType
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
-<!--Device-RoundedCorner-readonly type: CornerType--><!--Device-RoundedCorner-readonly type: CornerType-End-->
-
 **系统能力：** SystemCapability.Window.SessionManager
-

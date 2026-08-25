@@ -2,9 +2,9 @@
 
 Provides calendar management capabilities, such as calendar name retrieval and date calculation.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-i18n-export class Calendar--><!--Device-i18n-export class Calendar-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -16,33 +16,39 @@ import { i18n } from '@kit.LocalizationKit';
 
 ## add
 
+ArkTS-Dyn:
+```TypeScript
+add(field: string, amount: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 add(field: string, amount: int): void
 ```
 
 Performs addition or subtraction on the calendar attributes of this **Calendar** object.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Calendar-add(field: string, amount: int): void--><!--Device-Calendar-add(field: string, amount: int): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| field | string | Yes | Calendar attribute. The value can be any of the following: **year**, **month**, **week_of_year**, **week_of_month**, **date**, **day_of_year**, **day_of_week**, **day_of_week_in_month**, **hour**, **hour_of_day**, **minute**, **second**, **millisecond**. For details about the values, see [get](#get). |
-| amount | int | Yes | Addition or subtraction amount. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| amount | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [890001](../errorcode-i18n.md#890001-parameter-error) |
 
 **Examples**
 
@@ -63,37 +69,43 @@ try {
 
 ## compareDays
 
+ArkTS-Dyn:
+```TypeScript
+compareDays(date: Date): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 compareDays(date: Date): int
 ```
 
 Compares the current date of this **Calendar** object with the specified date for the difference in the number of days.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Calendar-compareDays(date: Date): int--><!--Device-Calendar-compareDays(date: Date): int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| date | Date | Yes | Date and time. Note: The month starts from **0**. For example, **0** indicates January. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| date | Date | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Difference in the number of days. A positive number indicates that the calendar date is earlier, and a negative number indicates the opposite. The value is accurate to milliseconds. If the value is less than one day, it is considered as one day. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -114,31 +126,37 @@ try {
 
 ## get
 
+ArkTS-Dyn:
+```TypeScript
+get(field: string): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 get(field: string): int
 ```
 
 Obtains the values of the calendar attributes in this **Calendar** object.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Calendar-get(field: string): int--><!--Device-Calendar-get(field: string): int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| field | string | Yes | Calendar attributes. The following table lists the supported attribute values. The value can be"era": Era, for example, AD or BC."year": Year."month": Month. Note: The month starts from **0**. For example, **0** indicates January."date": Date."hour": Wall-clock hour."hour_of_day": Hour of day."minute": Minute."second": Second."millisecond": Millisecond."week_of_year": Week of year. Note that the algorithm for calculating the first week of a year varies according to regions. For example, the first seven days in a year are the first week."year_woy": Year used with the week of year field."week_of_month": Week of month."day_of_week_in_month": Day of week in month."day_of_year": Day of year."day_of_week": Day of week."milliseconds_in_day": Milliseconds in day."zone_offset": Fixed time zone offset in milliseconds (excluding DST)."dst_offset": DST offset in milliseconds."dow_local": Localized day of week."extended_year": Extended year, which can be a negative number."julian_day": Julian day."is_leap_month": Whether a month is a leap month. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Value of the calendar attribute. For example, if the year of the internal date of the current **Calendar** object is 1990, **get('year')** returns **1990**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -158,25 +176,25 @@ getDisplayName(locale: string): string
 
 Obtains calendar display name in the specified language.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Calendar-getDisplayName(locale: string): string--><!--Device-Calendar-getDisplayName(locale: string): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locale | string | Yes | [System locale](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locale | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Calendar display name in the specified language. For example, **buddhist** is displayed as **Buddhist Calendar** if the locale is **en-US**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -196,25 +214,31 @@ let timezoneName: string = timezone.getDisplayName('zh-CN', false); // timezoneN
 
 ## getFirstDayOfWeek
 
+ArkTS-Dyn:
+```TypeScript
+getFirstDayOfWeek(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getFirstDayOfWeek(): int
 ```
 
 Obtains the first day of a week for this **Calendar** object.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Calendar-getFirstDayOfWeek(): int--><!--Device-Calendar-getFirstDayOfWeek(): int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | First day of a week. The value **1** indicates Sunday, and the value **7** indicates Saturday. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -233,25 +257,31 @@ let firstDayOfWeek: number = calendar.getFirstDayOfWeek(); // firstDayOfWeek = 1
 
 ## getMinimalDaysInFirstWeek
 
+ArkTS-Dyn:
+```TypeScript
+getMinimalDaysInFirstWeek(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getMinimalDaysInFirstWeek(): int
 ```
 
 Obtains the minimum number of days in the first week for this **Calendar** object.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Calendar-getMinimalDaysInFirstWeek(): int--><!--Device-Calendar-getMinimalDaysInFirstWeek(): int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Minimum number of days in the first week of a year. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -264,25 +294,31 @@ let minimalDaysInFirstWeek: number = calendar.getMinimalDaysInFirstWeek(); // mi
 
 ## getTimeInMillis
 
+ArkTS-Dyn:
+```TypeScript
+getTimeInMillis(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getTimeInMillis(): long
 ```
 
 Obtains the timestamp of this **Calendar** object.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Calendar-getTimeInMillis(): long--><!--Device-Calendar-getTimeInMillis(): long-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Unix timestamp, which indicates the number of milliseconds that have elapsed since the Unix epoch. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Examples**
 
@@ -302,19 +338,19 @@ getTimeZone(): string
 
 Obtains the time zone ID of this **Calendar** object.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Calendar-getTimeZone(): string--><!--Device-Calendar-getTimeZone(): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Time zone ID. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -340,25 +376,25 @@ isWeekend(date?: Date): boolean
 
 Checks whether a given date is a weekend in this **Calendar** object.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Calendar-isWeekend(date?: Date): boolean--><!--Device-Calendar-isWeekend(date?: Date): boolean-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| date | Date | No | Date and time. Note: The month starts from **0**. For example, **0** indicates January. The default value is current date of the **Calendar** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| date | Date | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | The value **true** indicates that the specified date is a weekend, and the value **false** indicates the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -374,30 +410,36 @@ isWeekend = calendar.isWeekend(date); // isWeekend = false
 
 ## set
 
+ArkTS-Dyn:
+```TypeScript
+set(year: number, month: number, date:number, hour?: number, minute?: number, second?: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 set(year: int, month: int, date:int, hour?: int, minute?: int, second?: int): void
 ```
 
 Sets the year, month, day, hour, minute, and second for this **Calendar** object.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Calendar-set(year: int, month: int, date:int, hour?: int, minute?: int, second?: int): void--><!--Device-Calendar-set(year: int, month: int, date:int, hour?: int, minute?: int, second?: int): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| year | int | Yes | Year to set. |
-| month | int | Yes | Month to set. Note: The month starts from **0**. For example, **0** indicates January. |
-| date | int | Yes | Day to set. |
-| hour | int | No | Hour to set. The default value is the current system time. |
-| minute | int | No | Minute to set. The default value is the current system time. |
-| second | int | No | Second to set. The default value is the current system time. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| year | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| month | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| date | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| hour | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| minute | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| second | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Examples**
 
@@ -410,25 +452,31 @@ calendar.set(2021, 10, 1, 8, 0, 0); // Set the date and time to 2021.11.1 08:00:
 
 ## setFirstDayOfWeek
 
+ArkTS-Dyn:
+```TypeScript
+setFirstDayOfWeek(value: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setFirstDayOfWeek(value: int): void
 ```
 
 Sets the first day of a week for this **Calendar** object.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Calendar-setFirstDayOfWeek(value: int): void--><!--Device-Calendar-setFirstDayOfWeek(value: int): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | int | Yes | Start day of a week. The value **1** indicates Sunday, and the value **7** indicates Saturday. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Examples**
 
@@ -454,25 +502,31 @@ try {
 
 ## setMinimalDaysInFirstWeek
 
+ArkTS-Dyn:
+```TypeScript
+setMinimalDaysInFirstWeek(value: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setMinimalDaysInFirstWeek(value: int): void
 ```
 
 Sets the minimum number of days in the first week for this **Calendar** object.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Calendar-setMinimalDaysInFirstWeek(value: int): void--><!--Device-Calendar-setMinimalDaysInFirstWeek(value: int): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | int | Yes | Minimum number of days in the first week of a year. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Examples**
 
@@ -492,19 +546,19 @@ setTime(date: Date): void
 
 Sets the date and time for a **Calendar** object based on the input **Date** object.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Calendar-setTime(date: Date): void--><!--Device-Calendar-setTime(date: Date): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| date | Date | Yes | Date and time. Note: The month starts from **0**. For example, **0** indicates January. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| date | Date | Yes |
 
 **Examples**
 
@@ -525,25 +579,31 @@ calendar.setTime(10540800000);
 
 ## setTime
 
+ArkTS-Dyn:
+```TypeScript
+setTime(time: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setTime(time: double): void
 ```
 
 Sets the date and time for a **Calendar** object based on the input timestamp.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Calendar-setTime(time: double): void--><!--Device-Calendar-setTime(time: double): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| time | double | Yes | Unix timestamp, which indicates the number of milliseconds that have elapsed since the Unix epoch. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| time | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Examples**
 
@@ -557,19 +617,19 @@ setTimeZone(timezone: string): void
 
 Sets the time zone of this **Calendar** object.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Calendar-setTimeZone(timezone: string): void--><!--Device-Calendar-setTimeZone(timezone: string): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| timezone | string | Yes | Valid time zone ID, for example, Asia/Shanghai. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| timezone | string | Yes |
 
 **Examples**
 
@@ -579,4 +639,3 @@ import { i18n } from '@kit.LocalizationKit';
 let calendar: i18n.Calendar = i18n.getCalendar('zh-Hans');
 calendar.setTimeZone('Asia/Shanghai');
 ```
-

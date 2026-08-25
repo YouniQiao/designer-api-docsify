@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-cloudData-interface AutoSyncTriggerInfo--><!--Device-cloudData-interface AutoSyncTriggerInfo-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -26,9 +26,8 @@ mode: AutoSyncTriggerMode
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AutoSyncTriggerInfo-mode: AutoSyncTriggerMode--><!--Device-AutoSyncTriggerInfo-mode: AutoSyncTriggerMode-End-->
-
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
-

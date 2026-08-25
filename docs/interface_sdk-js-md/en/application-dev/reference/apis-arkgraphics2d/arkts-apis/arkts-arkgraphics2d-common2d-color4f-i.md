@@ -2,9 +2,9 @@
 
 Describes a color in ARGB format.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-common2D-interface Color4f--><!--Device-common2D-interface Color4f-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -22,11 +22,11 @@ alpha: double
 
 Alpha component of the color. The value is a floating point number ranging from 0.0 to 1.0.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Color4f-alpha: double--><!--Device-Color4f-alpha: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -38,11 +38,11 @@ blue: double
 
 Blue component of the color. The value is a floating point number ranging from 0.0 to 1.0.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Color4f-blue: double--><!--Device-Color4f-blue: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -54,11 +54,11 @@ green: double
 
 Green component of the color. The value is a floating point number ranging from 0.0 to 1.0.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Color4f-green: double--><!--Device-Color4f-green: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -70,11 +70,10 @@ red: double
 
 Red component of the color. The value is a floating point number ranging from 0.0 to 1.0.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Color4f-red: double--><!--Device-Color4f-red: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
-

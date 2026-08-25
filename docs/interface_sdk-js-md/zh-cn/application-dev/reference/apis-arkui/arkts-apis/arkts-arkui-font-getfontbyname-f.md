@@ -25,6 +25,8 @@ function getFontByName(fontName: string): FontInfo
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 18
 
 **替代接口：** getFontByName
@@ -33,19 +35,16 @@ function getFontByName(fontName: string): FontInfo
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-font-function getFontByName(fontName: string): FontInfo--><!--Device-font-function getFontByName(fontName: string): FontInfo-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| fontName | string | 是 | 系统的字体名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| fontName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [FontInfo](arkts-arkui-font-fontinfo-i.md) | 字体的详细信息。 |
-
+| 类型 |
+| --- |
+| [FontInfo](arkts-arkui-font-fontinfo-i.md) |

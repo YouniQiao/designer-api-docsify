@@ -25,33 +25,38 @@ Tabs(options?: TabsOptions)
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-TabsInterface-(options?: TabsOptions): TabsAttribute--><!--Device-TabsInterface-(options?: TabsOptions): TabsAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [TabsOptions](arkts-arkui-tabsoptions-i.md) | 否 | Tabs组件参数。 默认值：undefined，不设置参数时使用默认配置。 |
+| 参数名 | [类型](#类型) | 必填 |
+| --- | --- | --- |
+| options | [TabsOptions](arkts-arkui-tabsoptions-i.md) | 否 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [DividerStyle](arkts-arkui-dividerstyle-i.md) | 分割线样式对象。 |
+| 名称 |
+| --- |
+| [DividerStyle](arkts-arkui-dividerstyle-i.md) |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
+| 名称 |
+| --- |
+| [OnTabsAnimationEndCallback](arkts-arkui-ontabsanimationendcallback-t.md) |
+| [OnTabsAnimationStartCallback](arkts-arkui-ontabsanimationstartcallback-t.md) |
+| [OnTabsContentDidScrollCallback](arkts-arkui-ontabscontentdidscrollcallback-t.md) |
+| [OnTabsContentWillChangeCallback](arkts-arkui-ontabscontentwillchangecallback-t.md) |
+| [OnTabsGestureSwipeCallback](arkts-arkui-ontabsgestureswipecallback-t.md) |
+| [TabsCustomContentTransitionCallback](arkts-arkui-tabscustomcontenttransitioncallback-t.md) |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-
+| 名称 |
+| --- |

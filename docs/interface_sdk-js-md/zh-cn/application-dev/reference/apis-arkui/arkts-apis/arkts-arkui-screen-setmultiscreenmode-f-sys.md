@@ -15,9 +15,9 @@ function setMultiScreenMode(primaryScreenId: long, secondaryScreenId: long,
 
 设置扩展屏幕的显示模式（镜像/扩展），使用Promise异步回调。primaryScreenId和secondaryScreenId均为0时，仅在扩展屏显示。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-screen-function setMultiScreenMode(primaryScreenId: long, secondaryScreenId: long,    secondaryScreenMode: MultiScreenMode): Promise<void>--><!--Device-screen-function setMultiScreenMode(primaryScreenId: long, secondaryScreenId: long,    secondaryScreenMode: MultiScreenMode): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -25,25 +25,25 @@ function setMultiScreenMode(primaryScreenId: long, secondaryScreenId: long,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| primaryScreenId | long | 是 | 主屏的id，该参数应为非负整数。如果输入的数字包含小数部分，向下取整。 |
-| secondaryScreenId | long | 是 | 扩展屏幕的id，该参数应为非负整数。如果输入的数字包含小数部分，向下取整。 |
-| secondaryScreenMode | [MultiScreenMode](arkts-arkui-screen-multiscreenmode-e-sys.md) | 是 | 扩展屏幕的显示模式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| primaryScreenId | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| secondaryScreenId | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| secondaryScreenMode | [MultiScreenMode](arkts-arkui-screen-multiscreenmode-e-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, non-system application uses system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
 **示例**
 
@@ -78,4 +78,3 @@ screen.setMultiScreenMode(primaryScreenId, secondaryScreenId, screenMode).then((
   console.error(`Failed to set multi screen mode. Code: ${err?.code}, message: ${err?.message}`);
 });
 ```
-

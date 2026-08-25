@@ -1,8 +1,6 @@
 # ArrayBufferView
 
-**Since:** -1
-
-<!--Device-unnamed-interface ArrayBufferView--><!--Device-unnamed-interface ArrayBufferView-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -19,9 +17,7 @@ The ArrayBuffer instance referenced by the array.
 
 **Type:** [ArrayBufferLike](arkts-arraybufferlike-t.md)
 
-**Since:** -1
-
-<!--Device-ArrayBufferView-buffer: ArrayBufferLike--><!--Device-ArrayBufferView-buffer: ArrayBufferLike-End-->
+**ArkTS mode:** 
 
 ## byteLength
 
@@ -33,9 +29,7 @@ The length in bytes of the array.
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-ArrayBufferView-byteLength: number--><!--Device-ArrayBufferView-byteLength: number-End-->
+**ArkTS mode:** 
 
 ## byteOffset
 
@@ -47,7 +41,4 @@ The offset in bytes of the array.
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-ArrayBufferView-byteOffset: number--><!--Device-ArrayBufferView-byteOffset: number-End-->
-
+**ArkTS mode:** 

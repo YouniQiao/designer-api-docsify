@@ -10,9 +10,7 @@
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @ComponentV2
-
-<!--Device-unnamed-export declare struct EditableTitleBarV2--><!--Device-unnamed-export declare struct EditableTitleBarV2-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,6 +19,22 @@
 ```TypeScript
 import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, EditableLeftIconV2Options, EditableTitleV2, EditableTitleV2Options, EditableTitleBarItemV2, EditableTitleBarItemV2Options, EditableTitleBarMenuItemV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2, EditableSaveButtonV2Options, EditableTitleBarStyleV2, EditableTitleBarStyleV2Options } from '@kit.ArkUI';
 ```
+
+## build
+
+```TypeScript
+build(): void
+```
+
+构建组件的方法。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## imageItem
 
@@ -35,13 +49,11 @@ imageItem?: EditableTitleBarItemV2
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Param
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-EditableTitleBarV2-@Param  imageItem?: EditableTitleBarItemV2--><!--Device-EditableTitleBarV2-@Param  imageItem?: EditableTitleBarItemV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -57,13 +69,11 @@ leftIcon?: EditableLeftIconV2
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Param
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-EditableTitleBarV2-@Param  leftIcon?: EditableLeftIconV2--><!--Device-EditableTitleBarV2-@Param  leftIcon?: EditableLeftIconV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -80,13 +90,11 @@ menuItems?: Array<EditableTitleBarMenuItemV2>
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Param
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-EditableTitleBarV2-@Param  menuItems?: Array<EditableTitleBarMenuItemV2>--><!--Device-EditableTitleBarV2-@Param  menuItems?: Array<EditableTitleBarMenuItemV2>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -102,13 +110,11 @@ options: EditableTitleBarStyleV2
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Param
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-EditableTitleBarV2-@Param  options: EditableTitleBarStyleV2--><!--Device-EditableTitleBarV2-@Param  options: EditableTitleBarStyleV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -124,13 +130,11 @@ saveButton?: EditableSaveButtonV2
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Param
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-EditableTitleBarV2-@Param  saveButton?: EditableSaveButtonV2--><!--Device-EditableTitleBarV2-@Param  saveButton?: EditableSaveButtonV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -146,13 +150,10 @@ title: ResourceStr | EditableTitleV2
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Param
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-EditableTitleBarV2-@Param  title: ResourceStr | EditableTitleV2--><!--Device-EditableTitleBarV2-@Param  title: ResourceStr | EditableTitleV2-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

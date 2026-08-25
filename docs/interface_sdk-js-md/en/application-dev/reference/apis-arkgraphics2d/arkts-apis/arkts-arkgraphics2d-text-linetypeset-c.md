@@ -2,9 +2,9 @@
 
 Implements a carrier that stores the text content and style. It can be used to compute layout details for individual lines of text.Before calling any of the following APIs, you must use [buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildlinetypeset) in the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md) class to create a **LineTypeset** object.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-text-class LineTypeset--><!--Device-text-class LineTypeset-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -16,38 +16,44 @@ import { text } from '@kit.ArkGraphics2D';
 
 ## createLine
 
+ArkTS-Dyn:
+```TypeScript
+createLine(startIndex: number, count: number): TextLine
+```
+
+ArkTS-Sta:
 ```TypeScript
 createLine(startIndex: int, count: int): TextLine
 ```
 
 Generates a text line object based on the specified layout range.
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-LineTypeset-createLine(startIndex: int, count: int): TextLine--><!--Device-LineTypeset-createLine(startIndex: int, count: int): TextLine-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| startIndex | int | Yes | Start position for layout calculation. The value is an integer in the range [0, total number of text characters). |
-| count | int | Yes | Number of characters from the specified start position. The value is an integer in the range [0, total number of text characters). The sum of **startIndex** and **count** cannot be greater than the total number of text characters. If **count** is **0**, the layout range is [startIndex, position of the last character in the text]. You can use [getLineBreak](#getlinebreak) to obtain the number of characters that can fit in the layout. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| startIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| count | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [TextLine](arkts-arkgraphics2d-text-textline-c.md) | TextLine** object generated based on the characters in the text range. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [TextLine](arkts-arkgraphics2d-text-textline-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -60,38 +66,44 @@ let line : text.TextLine = lineTypeset.createLine(startIndex, count);
 
 ## getLineBreak
 
+ArkTS-Dyn:
+```TypeScript
+getLineBreak(startIndex: number, width: number): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getLineBreak(startIndex: int, width: double): int
 ```
 
 Obtains the number of characters that can fit in the layout from the specified position within a limited width.
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-LineTypeset-getLineBreak(startIndex: int, width: double): int--><!--Device-LineTypeset-getLineBreak(startIndex: int, width: double): int-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| startIndex | int | Yes | Start position (inclusive) for calculation. The value is an integer in the range [0, total number of text characters). If the parameter is out of range, an exception is thrown. |
-| width | double | Yes | Layout width. The value is a floating point number greater than 0, in px. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| startIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| width | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Number of characters. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -100,4 +112,3 @@ let startIndex = 0;
 let width = 100.0;
 let count = lineTypeset.getLineBreak(startIndex, width);
 ```
-

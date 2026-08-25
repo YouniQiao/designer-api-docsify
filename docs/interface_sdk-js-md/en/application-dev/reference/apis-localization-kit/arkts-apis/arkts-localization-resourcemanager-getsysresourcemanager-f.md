@@ -14,25 +14,25 @@ export function getSysResourceManager(): ResourceManager
 
 Obtains a system resource management object for accessing preset system resources.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-resourceManager-export function getSysResourceManager(): ResourceManager--><!--Device-resourceManager-export function getSysResourceManager(): ResourceManager-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md) | The system **ResourceManager** object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [9001009](../errorcode-resource-manager.md#9001009-failed-to-obtain-the-system-resource-management-object) | Failed to access the system resource. which is not mapped to application sandbox, This error code will be thrown. |
+| Error Code ID |
+| --- |
+| [9001009](../errorcode-resource-manager.md#9001009-failed-to-obtain-the-system-resource-management-object) |
 
 **Examples**
 
@@ -54,4 +54,3 @@ try {
   console.error(`getSysResourceManager failed, error code: ${code}, message: ${message}.`);
 }
 ```
-

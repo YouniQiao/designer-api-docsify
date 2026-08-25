@@ -2,9 +2,9 @@
 
 Describes the bond key param.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-connection-interface PinRequiredParam--><!--Device-connection-interface PinRequiredParam-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -24,13 +24,12 @@ Indicates the pairing type to a peer device.
 
 **Type:** [PinType](arkts-connectivity-connection-pintype-e-sys.md)
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PinRequiredParam-pinType: PinType--><!--Device-PinRequiredParam-pinType: PinType-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
-

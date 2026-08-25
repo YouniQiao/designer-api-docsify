@@ -2,9 +2,9 @@
 
 下载任务分组配置选项。
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-agent-interface GroupConfig--><!--Device-agent-interface GroupConfig-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -26,9 +26,9 @@ gauge?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-GroupConfig-gauge?: boolean--><!--Device-GroupConfig-gauge?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -42,9 +42,8 @@ notification: Notification
 
 **类型：** Notification
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-GroupConfig-notification: Notification--><!--Device-GroupConfig-notification: Notification-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
-

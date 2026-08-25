@@ -17,34 +17,34 @@ export function createModuleContext(context: Context, moduleName: string): Promi
 > **说明：**&gt;
 > 由于创建模块上下文的过程涉及资源查询与初始化，耗时相对较长，在对应用流畅性要求较高的场景下，不建议频繁或多次调用createModuleContext接口创建多个Context实例，以免影响用户体验。
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-application-export function createModuleContext(context: Context, moduleName: string): Promise<Context>--><!--Device-application-export function createModuleContext(context: Context, moduleName: string): Promise<Context>-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | 是 | 表示应用上下文。 |
-| moduleName | string | 是 | 表示应用模块名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [Context](arkts-ability-context-c.md) | 是 |
+| moduleName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Context](arkts-ability-context-c.md)&gt; | Promise对象。返回创建的Context。 |
+| 类型 |
+| --- |
+| Promise&lt;[Context](arkts-ability-context-c.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -94,4 +94,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

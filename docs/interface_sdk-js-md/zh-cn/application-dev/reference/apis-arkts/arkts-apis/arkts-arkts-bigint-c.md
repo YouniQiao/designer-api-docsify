@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export class BigInt--><!--Device-unnamed-export class BigInt-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,25 +23,23 @@ static $_invoke(value: BigInt): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-static $_invoke(value: BigInt): BigInt--><!--Device-BigInt-static $_invoke(value: BigInt): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [BigInt](arkts-arkts-bigint-c.md) | 是 | BigInt值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 根据现有的BigInt数值创建的新BigInt实例。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## $_invoke
 
@@ -55,25 +51,23 @@ static $_invoke(value: long): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-static $_invoke(value: long): BigInt--><!--Device-BigInt-static $_invoke(value: long): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | long | 是 | BigInt值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 根据现有的Long数值创建的新BigInt实例。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## $_invoke
 
@@ -85,25 +79,23 @@ static $_invoke(value: double): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-static $_invoke(value: double): BigInt--><!--Device-BigInt-static $_invoke(value: double): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | double | 是 | number值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 根据number实例创建的新BigInt实例。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## $_invoke
 
@@ -115,25 +107,23 @@ static $_invoke(value: string): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-static $_invoke(value: string): BigInt--><!--Device-BigInt-static $_invoke(value: string): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | string | 是 | 字符串值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 根据字符串创建的新BigInt实例。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## $_invoke
 
@@ -145,25 +135,23 @@ static $_invoke(value: boolean): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-static $_invoke(value: boolean): BigInt--><!--Device-BigInt-static $_invoke(value: boolean): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean | 是 | boolean值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 根据boolean值创建的新BigInt实例。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## $_invoke
 
@@ -175,25 +163,23 @@ static $_invoke(value: bigint | double | string | boolean): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-static $_invoke(value: bigint | double | string | boolean): BigInt--><!--Device-BigInt-static $_invoke(value: bigint | double | string | boolean): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | bigint \| double \| string \| boolean | 是 | 源值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | bigint \| double \| string \| boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 根据bigint/double/string/boolean联合类型创建的新BigInt实例。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## asIntN
 
@@ -205,26 +191,24 @@ public static asIntN(bits: long, num: BigInt): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public static asIntN(bits: long, num: BigInt): BigInt--><!--Device-BigInt-public static asIntN(bits: long, num: BigInt): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bits | long | 是 | 有符号整数表示所使用的位数。 |
-| num | [BigInt](arkts-arkts-bigint-c.md) | 是 | 待截断的BigInt值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [bits](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-deflatependingoutputinfo-i.md) | long | 是 |
+| num | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 按指定位数截断为有符号整数后的BigInt值。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## asUintN
 
@@ -236,26 +220,24 @@ public static asUintN(bits: long, num: BigInt): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public static asUintN(bits: long, num: BigInt): BigInt--><!--Device-BigInt-public static asUintN(bits: long, num: BigInt): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bits | long | 是 | 无符号整数表示所使用的位数。 |
-| num | [BigInt](arkts-arkts-bigint-c.md) | 是 | 待截断的BigInt值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [bits](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-deflatependingoutputinfo-i.md) | long | 是 |
+| num | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 按指定位数截断为无符号整数后的BigInt值。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## constructor
 
@@ -267,11 +249,9 @@ constructor()
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-constructor()--><!--Device-BigInt-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -285,19 +265,17 @@ constructor(d: byte)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-constructor(d: byte)--><!--Device-BigInt-constructor(d: byte)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| d | byte | 是 | 待转换的byte值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | byte | 是 |
 
 ## constructor
 
@@ -309,19 +287,17 @@ constructor(d: short)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-constructor(d: short)--><!--Device-BigInt-constructor(d: short)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| d | short | 是 | 待转换的short值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | short | 是 |
 
 ## constructor
 
@@ -333,19 +309,17 @@ constructor(d: int)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-constructor(d: int)--><!--Device-BigInt-constructor(d: int)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| d | int | 是 | 待转换的int值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | int | 是 |
 
 ## constructor
 
@@ -357,19 +331,17 @@ constructor(d: long)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-constructor(d: long)--><!--Device-BigInt-constructor(d: long)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| d | long | 是 | 待转换的long值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | long | 是 |
 
 ## constructor
 
@@ -381,19 +353,17 @@ constructor(d: double)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-constructor(d: double)--><!--Device-BigInt-constructor(d: double)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| d | double | 是 | 待转换为BigInt的double值，必须为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | double | 是 |
 
 ## constructor
 
@@ -405,19 +375,17 @@ constructor(d: string)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-constructor(d: string)--><!--Device-BigInt-constructor(d: string)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| d | string | 是 | 待转换为BigInt的字符串值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | string | 是 |
 
 ## constructor
 
@@ -429,19 +397,17 @@ constructor(d: boolean)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-constructor(d: boolean)--><!--Device-BigInt-constructor(d: boolean)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| d | boolean | 是 | boolean值，true对应1，false对应0。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | boolean | 是 |
 
 ## constructor
 
@@ -453,19 +419,17 @@ constructor(d: BigInt)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-constructor(d: BigInt)--><!--Device-BigInt-constructor(d: BigInt)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| d | [BigInt](arkts-arkts-bigint-c.md) | 是 | 待复制的BigInt对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 ## constructor
 
@@ -477,20 +441,18 @@ constructor(v: FixedArray<int>, sign: int)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-constructor(v: FixedArray<int>, sign: int)--><!--Device-BigInt-constructor(v: FixedArray<int>, sign: int)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| v | FixedArray&lt;int&gt; | 是 | 数字位数组。 |
-| sign | int | 是 | 数值的符号。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| v | FixedArray & lt;int & gt; | 是 |
+| sign | int | 是 |
 
 ## doubleValue
 
@@ -502,19 +464,17 @@ public doubleValue(): double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public doubleValue(): double--><!--Device-BigInt-public doubleValue(): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | double值。 |
+| 类型 |
+| --- |
+| double |
 
 ## equals
 
@@ -526,25 +486,23 @@ public equals(to: BigInt): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public equals(to: BigInt): boolean--><!--Device-BigInt-public equals(to: BigInt): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| to | [BigInt](arkts-arkts-bigint-c.md) | 是 | 用于比较的BigInt。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| to | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果相等则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## equals
 
@@ -556,25 +514,23 @@ equals(other: Any): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-equals(other: Any): boolean--><!--Device-BigInt-equals(other: Any): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | Any | 是 | 用于比较的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | Any | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果该值是BigInt且与当前BigInt相等则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## fromULong
 
@@ -586,25 +542,23 @@ public static fromULong(val: long): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public static fromULong(val: long): BigInt--><!--Device-BigInt-public static fromULong(val: long): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | long | 是 | 无符号的long值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 新的BigInt实例。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## getLong
 
@@ -616,19 +570,17 @@ public getLong(): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public getLong(): long--><!--Device-BigInt-public getLong(): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | long值。 |
+| 类型 |
+| --- |
+| long |
 
 ## getULong
 
@@ -640,19 +592,17 @@ public getULong(): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public getULong(): long--><!--Device-BigInt-public getULong(): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 无符号的long值。 |
+| 类型 |
+| --- |
+| long |
 
 ## negate
 
@@ -664,19 +614,17 @@ public negate(): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public negate(): BigInt--><!--Device-BigInt-public negate(): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 取负后的值。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## negative
 
@@ -688,19 +636,17 @@ public negative(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public negative(): boolean--><!--Device-BigInt-public negative(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果为负数则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## operatorAdd
 
@@ -712,25 +658,23 @@ public operatorAdd(other: BigInt): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public operatorAdd(other: BigInt): BigInt--><!--Device-BigInt-public operatorAdd(other: BigInt): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | 是 | 相加的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 加法运算的结果。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorBitwiseAnd
 
@@ -742,25 +686,23 @@ public operatorBitwiseAnd(other: BigInt): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public operatorBitwiseAnd(other: BigInt): BigInt--><!--Device-BigInt-public operatorBitwiseAnd(other: BigInt): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | 是 | 另一个BigInt。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 按位与运算的结果。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorBitwiseNot
 
@@ -772,19 +714,17 @@ public operatorBitwiseNot(): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public operatorBitwiseNot(): BigInt--><!--Device-BigInt-public operatorBitwiseNot(): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 按位取反运算的结果。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorBitwiseOr
 
@@ -796,25 +736,23 @@ public operatorBitwiseOr(other: BigInt): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public operatorBitwiseOr(other: BigInt): BigInt--><!--Device-BigInt-public operatorBitwiseOr(other: BigInt): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | 是 | 另一个BigInt。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 按位或运算的结果。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorBitwiseXor
 
@@ -826,25 +764,23 @@ public operatorBitwiseXor(other: BigInt): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public operatorBitwiseXor(other: BigInt): BigInt--><!--Device-BigInt-public operatorBitwiseXor(other: BigInt): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | 是 | 另一个BigInt。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 按位异或运算的结果。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorDecrement
 
@@ -856,19 +792,17 @@ public operatorDecrement(): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public operatorDecrement(): BigInt--><!--Device-BigInt-public operatorDecrement(): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 自减后的值。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorDivide
 
@@ -880,25 +814,23 @@ public operatorDivide(other: BigInt): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public operatorDivide(other: BigInt): BigInt--><!--Device-BigInt-public operatorDivide(other: BigInt): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | 是 | 除数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 除法运算的商。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorGreaterThan
 
@@ -910,25 +842,23 @@ public operatorGreaterThan(other: BigInt): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public operatorGreaterThan(other: BigInt): boolean--><!--Device-BigInt-public operatorGreaterThan(other: BigInt): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | 是 | 用于比较的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果当前值大于传入值则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## operatorGreaterThanEqual
 
@@ -940,25 +870,23 @@ public operatorGreaterThanEqual(other: BigInt): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public operatorGreaterThanEqual(other: BigInt): boolean--><!--Device-BigInt-public operatorGreaterThanEqual(other: BigInt): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | 是 | 用于比较的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果当前值大于或等于传入值则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## operatorIncrement
 
@@ -970,19 +898,17 @@ public operatorIncrement(): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public operatorIncrement(): BigInt--><!--Device-BigInt-public operatorIncrement(): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 自增后的值。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorLeftShift
 
@@ -994,25 +920,23 @@ public operatorLeftShift(other: BigInt): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public operatorLeftShift(other: BigInt): BigInt--><!--Device-BigInt-public operatorLeftShift(other: BigInt): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | 是 | 移位的位数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 移位后的BigInt。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorLessThan
 
@@ -1024,25 +948,23 @@ public operatorLessThan(other: BigInt): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public operatorLessThan(other: BigInt): boolean--><!--Device-BigInt-public operatorLessThan(other: BigInt): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | 是 | 用于比较的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果当前值小于传入值则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## operatorLessThanEqual
 
@@ -1054,25 +976,23 @@ public operatorLessThanEqual(other: BigInt): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public operatorLessThanEqual(other: BigInt): boolean--><!--Device-BigInt-public operatorLessThanEqual(other: BigInt): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | 是 | 用于比较的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果当前值小于或等于传入值则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## operatorModule
 
@@ -1084,25 +1004,23 @@ public operatorModule(other: BigInt): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public operatorModule(other: BigInt): BigInt--><!--Device-BigInt-public operatorModule(other: BigInt): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | 是 | 除数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 余数。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorMultiply
 
@@ -1114,25 +1032,23 @@ public operatorMultiply(other: BigInt): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public operatorMultiply(other: BigInt): BigInt--><!--Device-BigInt-public operatorMultiply(other: BigInt): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | 是 | 乘数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 乘法运算的结果。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorRightShift
 
@@ -1144,25 +1060,23 @@ public operatorRightShift(other: BigInt): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public operatorRightShift(other: BigInt): BigInt--><!--Device-BigInt-public operatorRightShift(other: BigInt): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | 是 | 移位的位数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 移位后的BigInt。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorSubtract
 
@@ -1174,25 +1088,23 @@ public operatorSubtract(other: BigInt): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public operatorSubtract(other: BigInt): BigInt--><!--Device-BigInt-public operatorSubtract(other: BigInt): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | 是 | 相减的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | 减法运算的结果。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## positive
 
@@ -1204,19 +1116,17 @@ public positive(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public positive(): boolean--><!--Device-BigInt-public positive(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果为正数（含0）则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## pow
 
@@ -1228,25 +1138,23 @@ public pow(exponent: BigInt): BigInt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public pow(exponent: BigInt): BigInt--><!--Device-BigInt-public pow(exponent: BigInt): BigInt-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| exponent | [BigInt](arkts-arkts-bigint-c.md) | 是 | 指数值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| exponent | [BigInt](arkts-arkts-bigint-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | base的exponent次幂的结果。 |
+| 类型 |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## toLocaleString
 
@@ -1258,26 +1166,24 @@ public toLocaleString(locales?: Intl.LocalesArgument, options?: BigIntToLocaleSt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public toLocaleString(locales?: Intl.LocalesArgument, options?: BigIntToLocaleStringOptions): string--><!--Device-BigInt-public toLocaleString(locales?: Intl.LocalesArgument, options?: BigIntToLocaleStringOptions): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | 否 | 包含BCP 47语言标签的字符串，或由此类 字符串组成的数组。 |
-| options | [BigIntToLocaleStringOptions](arkts-arkts-bigint-biginttolocalestringoptions-i.md) | 否 | 包含Intl.NumberFormat选项的部分或 全部属性的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | 否 |
+| options | [BigIntToLocaleStringOptions](arkts-arkts-bigint-biginttolocalestringoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 按区域设置和选项格式化后表示该BigInt的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toLocaleString
 
@@ -1289,26 +1195,24 @@ public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string--><!--Device-BigInt-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | 否 | 包含BCP 47语言标签的字符串，或由此类 字符串组成的数组。 |
-| options | object | 否 | 包含配置属性的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | 否 |
+| options | object | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 表示数组元素的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toString
 
@@ -1320,19 +1224,17 @@ public toString(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public toString(): string--><!--Device-BigInt-public toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 以10为基数的BigInt字符串表示。 |
+| 类型 |
+| --- |
+| string |
 
 ## toString
 
@@ -1344,23 +1246,20 @@ public toString(radix: int): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-BigInt-public toString(radix: int): string--><!--Device-BigInt-public toString(radix: int): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| radix | int | 是 | 用于表示数值的基数，取值为2到36之间的 整数。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| radix | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 表示指定BigInt对象的字符串。 |
-
+| 类型 |
+| --- |
+| string |

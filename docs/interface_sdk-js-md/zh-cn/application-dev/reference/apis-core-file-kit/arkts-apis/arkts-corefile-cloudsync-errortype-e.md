@@ -3,9 +3,9 @@
 端云同步失败类型，为枚举类型。  
 - 当前阶段，同步过程中，当开启无限量使用移动数据网络，移动数据网络和WIFI均不可用时，才会返回NETWORK_UNAVAILABLE；开启无限量使用移动数据网络，若有一种类型网络可用，则能正常同步。 - 同步过程中，非充电场景下，电量低于10%，完成当前批上行同步后停止同步，返回低电量； - 触发同步时，非充电场景下，若电量低于10%，则不允许同步 - 上行时，若云端空间不足，则文件上行失败，云端无该文件记录。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-cloudSync-enum ErrorType--><!--Device-cloudSync-enum ErrorType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -17,9 +17,9 @@ NO_ERROR = 0
 
 没有错误。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ErrorType-NO_ERROR = 0--><!--Device-ErrorType-NO_ERROR = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -31,9 +31,9 @@ NETWORK_UNAVAILABLE = 1
 
 所有网络不可用。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ErrorType-NETWORK_UNAVAILABLE = 1--><!--Device-ErrorType-NETWORK_UNAVAILABLE = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -45,9 +45,9 @@ WIFI_UNAVAILABLE = 2
 
 WIFI不可用。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ErrorType-WIFI_UNAVAILABLE = 2--><!--Device-ErrorType-WIFI_UNAVAILABLE = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -59,9 +59,9 @@ BATTERY_LEVEL_LOW = 3
 
 低电量（低于10%）。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ErrorType-BATTERY_LEVEL_LOW = 3--><!--Device-ErrorType-BATTERY_LEVEL_LOW = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -73,9 +73,9 @@ BATTERY_LEVEL_WARNING = 4
 
 告警电量（低于15%）。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ErrorType-BATTERY_LEVEL_WARNING = 4--><!--Device-ErrorType-BATTERY_LEVEL_WARNING = 4-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -87,9 +87,9 @@ CLOUD_STORAGE_FULL = 5
 
 云端空间不足。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ErrorType-CLOUD_STORAGE_FULL = 5--><!--Device-ErrorType-CLOUD_STORAGE_FULL = 5-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -101,9 +101,9 @@ LOCAL_STORAGE_FULL = 6
 
 本地空间不足。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ErrorType-LOCAL_STORAGE_FULL = 6--><!--Device-ErrorType-LOCAL_STORAGE_FULL = 6-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -115,9 +115,9 @@ DEVICE_TEMPERATURE_TOO_HIGH = 7
 
 设备温度过高。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-ErrorType-DEVICE_TEMPERATURE_TOO_HIGH = 7--><!--Device-ErrorType-DEVICE_TEMPERATURE_TOO_HIGH = 7-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -129,9 +129,8 @@ REMOTE_SERVER_ABNORMAL = 8
 
 远端服务不可用。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-ErrorType-REMOTE_SERVER_ABNORMAL = 8--><!--Device-ErrorType-REMOTE_SERVER_ABNORMAL = 8-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-

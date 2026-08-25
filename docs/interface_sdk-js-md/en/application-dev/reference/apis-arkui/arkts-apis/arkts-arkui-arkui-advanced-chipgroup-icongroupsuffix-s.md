@@ -8,9 +8,7 @@ The **ChipGroup** component provides a set of chips for organizing and categoriz
 
 **Since:** 12
 
-**Decorator:** @Component
-
-<!--Device-unnamed-export declare struct IconGroupSuffix--><!--Device-unnamed-export declare struct IconGroupSuffix-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +17,22 @@ The **ChipGroup** component provides a set of chips for organizing and categoriz
 ```TypeScript
 import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
 ```
+
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## iconBackgroundSystemMaterial
 
@@ -32,13 +46,11 @@ Set system-styled materials for the component. Different materials have differen
 
 **Since:** 26.0.0
 
-**Decorator:** @Prop
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-IconGroupSuffix-@Prop  iconBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-IconGroupSuffix-@Prop  iconBackgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,13 +66,10 @@ Custom builder items.
 
 **Since:** 12
 
-**Decorator:** @Require, @Prop
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-IconGroupSuffix-@Require  @Prop  items: Array<IconItemOptions | SymbolGlyphModifier | SymbolItemOptions>--><!--Device-IconGroupSuffix-@Require  @Prop  items: Array<IconItemOptions | SymbolGlyphModifier | SymbolItemOptions>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

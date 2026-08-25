@@ -4,7 +4,7 @@ Defines the callback for listening for the copy progress.
 
 **Since:** 11
 
-<!--Device-unnamed-interface CopyOptions--><!--Device-unnamed-interface CopyOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -15,6 +15,20 @@ import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResul
 import { fileIo } from '@kit.CoreFileKit'
 import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
+
+## progressListener
+
+```TypeScript
+progressListener?: ProgressListener
+```
+
+Listener used to observe the copy progress.
+
+**Since:** 11
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## copySignal
 
@@ -28,23 +42,6 @@ Signal used to cancel a copy task.
 
 **Since:** 12
 
-<!--Device-CopyOptions-copySignal?: TaskSignal--><!--Device-CopyOptions-copySignal?: TaskSignal-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
-
-## progressListener
-
-```TypeScript
-progressListener?: ProgressListener
-```
-
-Listener used to observe the copy progress.
-
-**Type:** [ProgressListener](arkts-corefile-progresslistener-t.md)
-
-**Since:** 11
-
-<!--Device-CopyOptions-progressListener?: ProgressListener--><!--Device-CopyOptions-progressListener?: ProgressListener-End-->
-
-**System capability:** SystemCapability.FileManagement.File.FileIO
-

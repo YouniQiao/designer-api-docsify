@@ -4,9 +4,9 @@ A custom geometry type that inherits from GeometryDefinition.@extends GeometryDe
 
 **Inheritance/Implementation:** CustomGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-unnamed-export declare class CustomGeometry--><!--Device-unnamed-export declare class CustomGeometry-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -22,7 +22,7 @@ Array of colors for the vertices. The default value is undefined.
 
 **Since:** 18
 
-<!--Device-CustomGeometry-colors?: Color[]--><!--Device-CustomGeometry-colors?: Color[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -34,13 +34,13 @@ indices?: int[]
 
 Array of indices for the vertices, with values starting at 0. The default value is undefined.
 
-**Type:** int[]
+**Type:** number[]
 
 **Default:** undefined
 
 **Since:** 18
 
-<!--Device-CustomGeometry-indices?: int[]--><!--Device-CustomGeometry-indices?: int[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -56,7 +56,7 @@ Array of normals corresponding to the vertices. The default value is undefined.
 
 **Since:** 18
 
-<!--Device-CustomGeometry-normals?: Vec3[]--><!--Device-CustomGeometry-normals?: Vec3[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -74,7 +74,7 @@ Parsing mode of triangle primitives. The default value is TRIANGLE_LIST.
 
 **Since:** 18
 
-<!--Device-CustomGeometry-topology?: PrimitiveTopology--><!--Device-CustomGeometry-topology?: PrimitiveTopology-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -90,7 +90,22 @@ Array of UV coordinates for the vertices. The default value is undefined.
 
 **Since:** 18
 
-<!--Device-CustomGeometry-uvs?: Vec2[]--><!--Device-CustomGeometry-uvs?: Vec2[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
+## vertices
+
+```TypeScript
+set vertices(value: Vec3[])
+```
+
+Array of vertices that make up the model.
+
+**Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[]
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+**System capability:** SystemCapability.ArkUi.Graphics3D

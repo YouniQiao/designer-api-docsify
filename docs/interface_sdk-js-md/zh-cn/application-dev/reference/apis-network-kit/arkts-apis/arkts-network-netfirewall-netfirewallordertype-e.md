@@ -4,7 +4,7 @@
 
 **起始版本：** 15
 
-<!--Device-netFirewall-enum NetFirewallOrderType--><!--Device-netFirewall-enum NetFirewallOrderType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -18,7 +18,7 @@ ORDER_ASC = 1
 
 **起始版本：** 15
 
-<!--Device-NetFirewallOrderType-ORDER_ASC = 1--><!--Device-NetFirewallOrderType-ORDER_ASC = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -32,7 +32,6 @@ ORDER_DESC = 100
 
 **起始版本：** 15
 
-<!--Device-NetFirewallOrderType-ORDER_DESC = 100--><!--Device-NetFirewallOrderType-ORDER_DESC = 100-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
-

@@ -4,7 +4,7 @@ Describes the breakpoint of the gradient color.
 
 **Since:** 23
 
-<!--Device-unnamed-declare interface ColorMetricsStop--><!--Device-unnamed-declare interface ColorMetricsStop-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Color value of the linear gradient color breakpoint.
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-ColorMetricsStop-color: ColorMetrics--><!--Device-ColorMetricsStop-color: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,11 +46,10 @@ Value of the linear gradient color stop. The value is a proportion ranging from 
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-ColorMetricsStop-offset: Length--><!--Device-ColorMetricsStop-offset: Length-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

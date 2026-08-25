@@ -4,9 +4,7 @@ Represents an iterator result object containing whether iteration is done and th
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class IteratorResult--><!--Device-unnamed-export class IteratorResult-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,11 +23,9 @@ Creates an IteratorResult object representing completed iteration
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-IteratorResult-constructor()--><!--Device-IteratorResult-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -43,20 +39,18 @@ Creates an IteratorResult object with the specified done status and value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-IteratorResult-constructor(done: boolean, value: T | undefined)--><!--Device-IteratorResult-constructor(done: boolean, value: T | undefined)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| done | boolean | Yes | Indicates whether iteration is completed |
-| value | T \| undefined | Yes | The element value returned by the iterator |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [done](#done) | boolean | Yes |
+| [value](#value) | T \| undefined | Yes |
 
 ## constructor
 
@@ -68,19 +62,17 @@ Creates an IteratorResult object representing incomplete iteration with the spec
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-IteratorResult-constructor(value: T)--><!--Device-IteratorResult-constructor(value: T)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | T | Yes | The element value returned by the iterator |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | T | Yes |
 
 ## done
 
@@ -94,11 +86,9 @@ Indicates whether the iteration has completed. When true, the iterator has finis
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-IteratorResult-done: boolean--><!--Device-IteratorResult-done: boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -114,11 +104,8 @@ The current element value returned by the iterator. When done is true, value is 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-IteratorResult-readonly value: T | undefined--><!--Device-IteratorResult-readonly value: T | undefined-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

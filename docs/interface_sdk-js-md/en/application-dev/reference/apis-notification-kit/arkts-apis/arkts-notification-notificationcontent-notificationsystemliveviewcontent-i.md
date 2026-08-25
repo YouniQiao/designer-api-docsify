@@ -7,9 +7,9 @@ Describes the system live view notification content, which is used to display re
 
 **Inheritance/Implementation:** NotificationSystemLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-unnamed-export interface NotificationSystemLiveViewContent--><!--Device-unnamed-export interface NotificationSystemLiveViewContent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -23,9 +23,9 @@ Button of the notification. This parameter is left empty by default.
 
 **Type:** [NotificationButton](arkts-notification-notificationcontent-notificationbutton-i.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationSystemLiveViewContent-button?: NotificationButton--><!--Device-NotificationSystemLiveViewContent-button?: NotificationButton-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -39,9 +39,9 @@ Capsule of the notification. This parameter is left empty by default.
 
 **Type:** [NotificationCapsule](arkts-notification-notificationcontent-notificationcapsule-i.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationSystemLiveViewContent-capsule?: NotificationCapsule--><!--Device-NotificationSystemLiveViewContent-capsule?: NotificationCapsule-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -55,9 +55,9 @@ Progress of the notification. This parameter is left empty by default.
 
 **Type:** [NotificationProgress](arkts-notification-notificationcontent-notificationprogress-i.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationSystemLiveViewContent-progress?: NotificationProgress--><!--Device-NotificationSystemLiveViewContent-progress?: NotificationProgress-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -71,9 +71,9 @@ Time of the notification. This parameter is left empty by default.
 
 **Type:** [NotificationTime](arkts-notification-notificationcontent-notificationtime-i.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationSystemLiveViewContent-time?: NotificationTime--><!--Device-NotificationSystemLiveViewContent-time?: NotificationTime-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -85,11 +85,10 @@ typeCode: int
 
 Type identifier for marking the caller's service type, which is used to distinguish different live view service scenarios.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NotificationSystemLiveViewContent-typeCode: int--><!--Device-NotificationSystemLiveViewContent-typeCode: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
-

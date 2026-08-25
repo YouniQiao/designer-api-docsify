@@ -2,9 +2,9 @@
 
 Enumerates intelligent voice engine type. @enum {number}
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-intelligentVoice-enum IntelligentVoiceEngineType--><!--Device-intelligentVoice-enum IntelligentVoiceEngineType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -18,9 +18,9 @@ ENROLL_ENGINE_TYPE = 0
 
 Enroll engine.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-IntelligentVoiceEngineType-ENROLL_ENGINE_TYPE = 0--><!--Device-IntelligentVoiceEngineType-ENROLL_ENGINE_TYPE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -34,9 +34,9 @@ WAKEUP_ENGINE_TYPE = 1
 
 Wakeup engine.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-IntelligentVoiceEngineType-WAKEUP_ENGINE_TYPE = 1--><!--Device-IntelligentVoiceEngineType-WAKEUP_ENGINE_TYPE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -50,11 +50,10 @@ UPDATE_ENGINE_TYPE = 2
 
 Update engine.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-IntelligentVoiceEngineType-UPDATE_ENGINE_TYPE = 2--><!--Device-IntelligentVoiceEngineType-UPDATE_ENGINE_TYPE = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
-

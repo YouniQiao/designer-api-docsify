@@ -6,9 +6,7 @@ Regular expression
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-unnamed-export class RegExp--><!--Device-unnamed-export class RegExp-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,26 +25,24 @@ RegExp constructor call signature, used to create new RegExp instances.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RegExp-public static $_invoke(pattern: string, flags?: string): RegExp--><!--Device-RegExp-public static $_invoke(pattern: string, flags?: string): RegExp-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pattern | string | Yes | regular expression pattern. |
-| flags | string | No | regular expression flags. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | string | Yes |
+| [flags](#flags) | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| RegExp | newly created RegExp instance. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| RegExp |
 
 ## $_invoke
 
@@ -58,26 +54,24 @@ RegExp constructor call signature, used to create new RegExp instances.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RegExp-public static $_invoke(pattern: RegExp | string, flags?: string): RegExp--><!--Device-RegExp-public static $_invoke(pattern: RegExp | string, flags?: string): RegExp-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pattern | RegExp \| string | Yes | regular expression pattern or another RegExp instance. |
-| flags | string | No | regular expression flags. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | RegExp \| string | Yes |
+| [flags](#flags) | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| RegExp | newly created RegExp instance. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| RegExp |
 
 ## $_invoke
 
@@ -89,25 +83,23 @@ RegExp constructor call signature, used to create new RegExp instances.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RegExp-public static $_invoke(pattern: RegExp | string): RegExp--><!--Device-RegExp-public static $_invoke(pattern: RegExp | string): RegExp-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pattern | RegExp \| string | Yes | regular expression pattern or another RegExp instance. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | RegExp \| string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| RegExp | newly created RegExp instance. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| RegExp |
 
 ## advanceStringIndex
 
@@ -119,27 +111,25 @@ Advances the string index according to the Unicode flag.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RegExp-public static advanceStringIndex(s: string, index: int, unicode: boolean): int--><!--Device-RegExp-public static advanceStringIndex(s: string, index: int, unicode: boolean): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| s | string | Yes | original string. |
-| index | int | Yes | current index. <br>The value should be an integer. |
-| unicode | boolean | Yes | whether to enable Unicode mode. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| s | string | Yes |
+| index | int | Yes |
+| [unicode](#unicode) | boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | next index. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## constructor
 
@@ -151,20 +141,18 @@ Constructs a new RegExp using pattern and flags
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RegExp-constructor(pattern: string, flags?: string)--><!--Device-RegExp-constructor(pattern: string, flags?: string)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pattern | string | Yes | description of a pattern |
-| flags | string | No | description of flags to be used |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | string | Yes |
+| [flags](#flags) | string | No |
 
 ## constructor
 
@@ -176,20 +164,18 @@ Constructs a new RegExp by other RegExp. It uses other RegExp's flags if flags a
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RegExp-constructor(regexp: RegExp, flags?: string)--><!--Device-RegExp-constructor(regexp: RegExp, flags?: string)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| regexp | RegExp | Yes | other regexp |
-| flags | string | No | description of flags to be used |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| regexp | RegExp | Yes |
+| [flags](#flags) | string | No |
 
 ## constructor
 
@@ -201,20 +187,18 @@ Constructs a new RegExp by RegExp or string
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RegExp-constructor(regexp: RegExp | string, flags?: string)--><!--Device-RegExp-constructor(regexp: RegExp | string, flags?: string)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| regexp | RegExp \| string | Yes | The pattern of the regular expression or another RegExp instance. |
-| flags | string | No | description of flags to be used. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| regexp | RegExp \| string | Yes |
+| [flags](#flags) | string | No |
 
 ## exec
 
@@ -226,26 +210,24 @@ Executes a match search on the string starting from the specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RegExp-public exec(str: string, index: int): RegExpExecArray | null--><!--Device-RegExp-public exec(str: string, index: int): RegExpExecArray | null-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| str | string | Yes | the string to match. |
-| index | int | Yes | the index to start matching from. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| str | string | Yes |
+| index | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [RegExpExecArray](arkts-arkts-regexp-regexpexecarray-c.md) \| null | if match succeeds, returns an array containing match results, otherwise returns null. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [RegExpExecArray](arkts-arkts-regexp-regexpexecarray-c.md) \| null |
 
 ## exec
 
@@ -257,25 +239,23 @@ Executes a search for a match in a specified string and returns a result array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RegExp-public exec(str: string): RegExpExecArray | null--><!--Device-RegExp-public exec(str: string): RegExpExecArray | null-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| str | string | Yes | the string to match. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| str | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [RegExpExecArray](arkts-arkts-regexp-regexpexecarray-c.md) \| null | if match succeeds, returns an array containing match results, otherwise returns null. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [RegExpExecArray](arkts-arkts-regexp-regexpexecarray-c.md) \| null |
 
 ## match
 
@@ -287,25 +267,23 @@ Searches the string for matches and returns all matches as an array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RegExp-public match(str: string): RegExpMatchArray | null--><!--Device-RegExp-public match(str: string): RegExpMatchArray | null-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| str | string | Yes | the string to match. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| str | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md) \| null | if matches are found, returns an array containing all matches, otherwise returns null. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md) \| null |
 
 ## matchAll
 
@@ -317,25 +295,23 @@ Returns an iterator that iterates over all matches in the string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RegExp-public matchAll(str: string): IterableIterator<RegExpMatchArray>--><!--Device-RegExp-public matchAll(str: string): IterableIterator<RegExpMatchArray>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| str | string | Yes | the string to match. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| str | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;[RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md)&gt; | an iterator that iterates over all match results. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator&lt;[RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md)&gt; |
 
 ## replace
 
@@ -347,26 +323,24 @@ Replaces matched substrings in the string using a replacement string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RegExp-public replace(str: string, replaceValue: string): string--><!--Device-RegExp-public replace(str: string, replaceValue: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| str | string | Yes | the original string. |
-| replaceValue | string | Yes | the string used for replacement. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| str | string | Yes |
+| replaceValue | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the new string after replacement. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## replace
 
@@ -378,26 +352,24 @@ Replaces matched substrings in the string using a function.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RegExp-public replace(str: string, replacer: (substr: string, args: (Object | undefined)[]) => string): string--><!--Device-RegExp-public replace(str: string, replacer: (substr: string, args: (Object | undefined)[]) => string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| str | string | Yes | the original string. |
-| replacer | (substr: string, args: (Object \| undefined)[]) =&gt; string | Yes | a function used to generate new substrings. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| str | string | Yes |
+| replacer | (substr: string, args: (Object \| undefined)[]) = & gt; string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the new string after replacement. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## search
 
@@ -409,25 +381,23 @@ Searches for matches in the string and returns the starting index of the match.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RegExp-public search(str: string): int--><!--Device-RegExp-public search(str: string): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| str | string | Yes | the string to search. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| str | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | if a match is found, returns its starting index; otherwise returns -1. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## split
 
@@ -439,26 +409,24 @@ Splits the string into an array of substrings using the regular expression.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RegExp-public split(str: string, limit: Int | undefined): string[]--><!--Device-RegExp-public split(str: string, limit: Int | undefined): string[]-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| str | string | Yes | the string to split. |
-| limit | Int \| undefined | Yes | limits the maximum length of the returned array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| str | string | Yes |
+| limit | Int \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string[] | the array of substrings after splitting. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string[] |
 
 ## test
 
@@ -470,25 +438,23 @@ Executes a search for a match between a regular expression and specified string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RegExp-public test(str: string): boolean--><!--Device-RegExp-public test(str: string): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| str | string | Yes | the string against which to match the regular expression. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| str | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | if the string has matches, returns true; otherwise returns false. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## toString
 
@@ -500,17 +466,194 @@ Returns a string representing the regular expression.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RegExp-public toString(): string--><!--Device-RegExp-public toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the string representation of the regular expression. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
+## dotAll
+
+```TypeScript
+get dotAll(): boolean
+```
+
+Gets the dotAll flag, indicating whether '.' matches newline characters.
+
+**Type:** boolean
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## flags
+
+```TypeScript
+get flags(): string
+```
+
+Gets the flags of the regular expression.
+
+**Type:** string
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## global
+
+```TypeScript
+get global(): boolean
+```
+
+Gets the global flag, indicating whether to perform global matching.
+
+**Type:** boolean
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## hasIndices
+
+```TypeScript
+get hasIndices(): boolean
+```
+
+Gets the hasIndices flag, indicating whether to include indices of matching substrings.
+
+**Type:** boolean
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## ignoreCase
+
+```TypeScript
+get ignoreCase(): boolean
+```
+
+Gets the ignoreCase flag, indicating whether to ignore case.
+
+**Type:** boolean
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## multiline
+
+```TypeScript
+get multiline(): boolean
+```
+
+Gets the multiline flag, indicating whether to perform multiline matching.
+
+**Type:** boolean
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## source
+
+```TypeScript
+get source(): string
+```
+
+Returns a string containing the source text of this regular expression
+
+**Type:** string
+
+**Since:** 24
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## sticky
+
+```TypeScript
+get sticky(): boolean
+```
+
+Gets the sticky flag, indicating whether to perform sticky matching.
+
+**Type:** boolean
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## unicode
+
+```TypeScript
+get unicode(): boolean
+```
+
+Gets the unicode flag, indicating whether to enable Unicode mode.
+
+**Type:** boolean
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## unicodeSets
+
+```TypeScript
+get unicodeSets(): boolean
+```
+
+Gets the unicodeSets flag, indicating whether Unicode set mode is enabled.
+
+**Type:** boolean
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang

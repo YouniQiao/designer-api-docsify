@@ -4,7 +4,7 @@
 
 **起始版本：** 18
 
-<!--Device-unnamed-declare enum PixelRoundMode--><!--Device-unnamed-declare enum PixelRoundMode-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +18,13 @@ PIXEL_ROUND_ON_LAYOUT_FINISH = 0
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-PixelRoundMode-PIXEL_ROUND_ON_LAYOUT_FINISH = 0--><!--Device-PixelRoundMode-PIXEL_ROUND_ON_LAYOUT_FINISH = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,13 +38,12 @@ PIXEL_ROUND_AFTER_MEASURE = 1
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-PixelRoundMode-PIXEL_ROUND_AFTER_MEASURE = 1--><!--Device-PixelRoundMode-PIXEL_ROUND_AFTER_MEASURE = 1-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

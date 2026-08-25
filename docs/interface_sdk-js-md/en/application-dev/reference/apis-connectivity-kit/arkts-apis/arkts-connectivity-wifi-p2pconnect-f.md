@@ -16,27 +16,27 @@ Initiates a P2P connection to a device with the specified configuration.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [p2pConnect](arkts-connectivity-wifimanager-p2pconnect-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
 
-<!--Device-wifi-function p2pConnect(config: WifiP2PConfig): boolean--><!--Device-wifi-function p2pConnect(config: WifiP2PConfig): boolean-End-->
-
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| config | WifiP2PConfig | Yes | Indicates the configuration for connecting to a specific group. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| config | [WifiP2PConfig](arkts-connectivity-wifimanager-wifip2pconfig-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -105,4 +105,3 @@ setTimeout(() => {wifi.off("p2pPeerDeviceChange", recvP2pPeerDeviceChangeFunc);}
 setTimeout(() => {wifi.off("p2pPersistentGroupChange", recvP2pPersistentGroupChangeFunc);}, 125 * 1000);
 console.info("start discover devices -> " + wifi.startDiscoverDevices());
 ```
-

@@ -4,9 +4,9 @@ Camera node, which inherits from Node.@extends Node @interface Camera
 
 **Inheritance/Implementation:** Camera extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface Camera--><!--Device-unnamed-export interface Camera-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -20,15 +20,15 @@ Obtains the projection matrix of the camera.
 
 **Since:** 23
 
-<!--Device-Camera-getProjectionMatrix(): Mat4x4--><!--Device-Camera-getProjectionMatrix(): Mat4x4-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) | Projection matrix of the camera. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) |
 
 **Examples**
 
@@ -65,15 +65,15 @@ Obtains the view matrix of the camera.
 
 **Since:** 23
 
-<!--Device-Camera-getViewMatrix(): Mat4x4--><!--Device-Camera-getViewMatrix(): Mat4x4-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) | View matrix of the camera. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) |
 
 **Examples**
 
@@ -108,24 +108,24 @@ raycast(viewPosition: Vec2, params: RaycastParameters): Promise<RaycastResult[]>
 
 Casts a ray from a specific position on the screen to detect and retrieve information about all hit 3D objects. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Camera-raycast(viewPosition: Vec2, params: RaycastParameters): Promise<RaycastResult[]>--><!--Device-Camera-raycast(viewPosition: Vec2, params: RaycastParameters): Promise<RaycastResult[]>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| viewPosition | [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) | Yes | Normalized screen coordinates. The value range is [0, 1], where (0,0) corresponds to the top-left corner of the Component3D component, and (1,1) corresponds to the bottom-right corner. |
-| params | [RaycastParameters](arkts-arkgraphics3d-scene-raycastparameters-i.md) | Yes | Configuration parameters for raycasting, such as detection range and filtered nodes. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| viewPosition | [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) | Yes |
+| params | [RaycastParameters](arkts-arkgraphics3d-scene-raycastparameters-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[RaycastResult](arkts-arkgraphics3d-scene-raycastresult-i.md)[]&gt; | An array of hit objects sorted by distance (from nearest to farthest). If no objects are hit, an empty array is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[RaycastResult](arkts-arkgraphics3d-scene-raycastresult-i.md)[]&gt; |
 
 **Examples**
 
@@ -245,9 +245,9 @@ Color after the render target is cleared.
 
 **Type:** [Color](arkts-arkgraphics3d-scenetypes-color-i.md) \| null
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Camera-clearColor: Color | null--><!--Device-Camera-clearColor: Color | null-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -261,9 +261,9 @@ Post-processing effects applied to the camera output.
 
 **Type:** [Container](arkts-arkgraphics3d-scenenodes-container-i.md)&lt;[Effect](arkts-arkgraphics3d-sceneresources-effect-i.md)&gt;
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-Camera-readonly effects: Container<Effect>--><!--Device-Camera-readonly effects: Container<Effect>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -277,9 +277,9 @@ Whether the camera is enabled. true if enabled, false otherwise.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Camera-enabled: boolean--><!--Device-Camera-enabled: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -291,11 +291,11 @@ farPlane: double
 
 Far plane. The unit is the scene unit (such as cm, m, and km) in the world coordinate system. The value is greater than that of nearPlane.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Camera-farPlane: double--><!--Device-Camera-farPlane: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -307,11 +307,11 @@ fov: double
 
 Field of view. The unit is radian (rad). The value ranges from 0 to π radians.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Camera-fov: double--><!--Device-Camera-fov: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -327,9 +327,9 @@ Whether Multisample Anti-Aliasing (MSAA) is enabled. true if enabled, false othe
 
 **Default:** false
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-Camera-msaa?: boolean--><!--Device-Camera-msaa?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -341,11 +341,11 @@ nearPlane: double
 
 Near plane. The unit is the scene unit (such as cm, m, and km) in the world coordinate system. The value is greater than 0.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Camera-nearPlane: double--><!--Device-Camera-nearPlane: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -359,9 +359,9 @@ Post-processing settings.
 
 **Type:** [PostProcessSettings](arkts-arkgraphics3d-scenepostprocesssettings-postprocesssettings-i.md) \| null
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Camera-postProcess: PostProcessSettings | null--><!--Device-Camera-postProcess: PostProcessSettings | null-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -377,9 +377,8 @@ Rendering pipeline type. If this parameter is not set, the lightweight forward r
 
 **Default:** RenderingPipelineType.FORWARD_LIGHTWEIGHT
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-Camera-renderingPipeline?: RenderingPipelineType--><!--Device-Camera-renderingPipeline?: RenderingPipelineType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

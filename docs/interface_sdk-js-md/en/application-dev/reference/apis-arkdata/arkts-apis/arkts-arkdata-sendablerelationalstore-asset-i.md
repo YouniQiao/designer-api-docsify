@@ -6,7 +6,7 @@ Represent the asset (such as a document, image, or video). **Asset** inherits fr
 
 **Since:** 12
 
-<!--Device-sendableRelationalStore-interface Asset--><!--Device-sendableRelationalStore-interface Asset-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -28,7 +28,7 @@ Time when the asset was created.
 
 **Since:** 12
 
-<!--Device-Asset-createTime: string--><!--Device-Asset-createTime: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -44,7 +44,7 @@ Time when the asset was last modified.
 
 **Since:** 12
 
-<!--Device-Asset-modifyTime: string--><!--Device-Asset-modifyTime: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -60,7 +60,7 @@ Asset name.
 
 **Since:** 12
 
-<!--Device-Asset-name: string--><!--Device-Asset-name: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -76,7 +76,7 @@ Application sandbox path of the asset.
 
 **Since:** 12
 
-<!--Device-Asset-path: string--><!--Device-Asset-path: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -92,7 +92,7 @@ Size of the asset.
 
 **Since:** 12
 
-<!--Device-Asset-size: string--><!--Device-Asset-size: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -108,7 +108,7 @@ Asset status. For details, see [relationalStore.AssetStatus](arkts-arkdata-relat
 
 **Since:** 12
 
-<!--Device-Asset-status?: number--><!--Device-Asset-status?: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -124,7 +124,6 @@ Asset URI, which is an absolute path in the system.
 
 **Since:** 12
 
-<!--Device-Asset-uri: string--><!--Device-Asset-uri: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-

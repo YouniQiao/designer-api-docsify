@@ -4,7 +4,7 @@ Defines the ad status change callback.
 
 **Since:** 11
 
-<!--Device-advertising-export interface AdInteractionListener--><!--Device-advertising-export interface AdInteractionListener-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -24,19 +24,19 @@ Called when the ad display status changes.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-AdInteractionListener-onStatusChanged(status: string, ad: Advertisement, data: string)--><!--Device-AdInteractionListener-onStatusChanged(status: string, ad: Advertisement, data: string)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| status | string | Yes | Ad show status. - onAdLoad: Ad loaded successfully. - onAdFail: Ad failed to load. - onAdOpen: Ad opened. - onAdClick: Ad clicked. - onAdClose: Ad closed. - onMediaProgress: Ad playback progress. - onMediaStart: Ad playback started. - onMediaPause: Ad playback paused. - onMediaStop: Ad playback stopped. - onMediaComplete: Ad playback completed. - onMediaCountDown: Ad countdown. - onMediaError: Ad playback failed. - onLandscape: Full-screen button clicked in portrait mode. - onPortrait: Back button clicked in full-screen mode. - onBackClicked: Back button clicked. - onAdSubWindow: Sheet opened. |
-| ad | Advertisement | Yes | Content of the ad. |
-| data | string | Yes | Extended information. When **status** is **onAdClose**, the data value is the close reason, described as follows: - adShowEnded: Ad show ended. - adCloseBtnClicked: Close button clicked. - adSkipBtnClicked: Skip button clicked. - adFeedbackClosed: The ad is closed due to negative feedback. - adBackgroundClosed: The splash ad is closed when the app switches to the background. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| status | string | Yes |
+| ad | [Advertisement](arkts-ads-advertisement-advertisement-i.md) | Yes |
+| data | string | Yes |
 
 **Examples**
 
@@ -102,4 +102,3 @@ const adInteractionListener: advertising.AdInteractionListener = {
   }
 }
 ```
-

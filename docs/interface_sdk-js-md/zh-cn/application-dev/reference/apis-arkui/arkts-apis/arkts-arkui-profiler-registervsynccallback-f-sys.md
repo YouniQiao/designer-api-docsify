@@ -15,7 +15,7 @@ function registerVsyncCallback(callback: (info: string) => void): void
 
 **起始版本：** 8
 
-<!--Device-Profiler-function registerVsyncCallback(callback: (info: string) => void): void--><!--Device-Profiler-function registerVsyncCallback(callback: (info: string) => void): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,7 +23,6 @@ function registerVsyncCallback(callback: (info: string) => void): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (info: string) =&gt; void | 是 | 回调信息为带有ui更新信息的json字符串。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (info: string) = & gt; void | 是 |

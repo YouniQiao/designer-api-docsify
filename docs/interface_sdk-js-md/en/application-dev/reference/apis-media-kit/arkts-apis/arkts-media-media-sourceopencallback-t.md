@@ -9,25 +9,25 @@ This callback function is implemented by applications to handle resource open re
 > **NOTE：**&gt;
 > The client must return the handle immediately after processing the request.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-media-type SourceOpenCallback = (request: MediaSourceLoadingRequest) => long--><!--Device-media-type SourceOpenCallback = (request: MediaSourceLoadingRequest) => long-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| request | [MediaSourceLoadingRequest](arkts-media-media-mediasourceloadingrequest-i.md) | Yes | Parameters for the resource open request, including detailed information about the requested resource and the data push method. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| request | [MediaSourceLoadingRequest](arkts-media-media-mediasourceloadingrequest-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Handle for the current resource open request. A value greater than 0 means the request is successful, whereas a value less than or equal to 0 means it fails. <br> - The handle for the request object is unique. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Examples**
 
@@ -46,4 +46,3 @@ let sourceOpenCallback: media.SourceOpenCallback = (request: media.MediaSourceLo
   return uuid;
 };
 ```
-

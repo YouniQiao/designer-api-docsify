@@ -2,9 +2,9 @@
 
 Before a card with tags is read or written, **[TagInfo](arkts-connectivity-tag-taginfo-i.md)** must be obtained to determine the tag technologies supported by the card. In this way, the application can invoke the correct API to communicate with the card.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-tag-export interface TagInfo--><!--Device-tag-export interface TagInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -24,11 +24,11 @@ Extended attribute value of the tag technology.
 
 **Type:** [PacMap](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-pacmap-i.md)[]
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
-
-<!--Device-TagInfo-extrasData: PacMap[]--><!--Device-TagInfo-extrasData: PacMap[]-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -44,11 +44,11 @@ Remote object of the NFC service process used for interface communication betwee
 
 **Type:** rpc.RemoteObject
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
-
-<!--Device-TagInfo-remoteTagService: rpc.RemoteObject--><!--Device-TagInfo-remoteTagService: rpc.RemoteObject-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -62,15 +62,14 @@ tagRfDiscId: int
 
 ID allocated when the tag is discovered.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
-
-<!--Device-TagInfo-tagRfDiscId: int--><!--Device-TagInfo-tagRfDiscId: int-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **System API:** This is a system API.
-

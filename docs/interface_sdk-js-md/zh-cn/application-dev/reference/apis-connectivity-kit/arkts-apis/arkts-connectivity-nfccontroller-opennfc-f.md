@@ -16,19 +16,18 @@ function openNfc(): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [enableNfc](arkts-connectivity-nfccontroller-enablenfc-f.md)
 
 **需要权限：** ohos.permission.MANAGE_SECURE_SETTINGS
 
-<!--Device-nfcController-function openNfc(): boolean--><!--Device-nfcController-function openNfc(): boolean-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true: 打开NFC成功， false: 打开NFC失败。 |
-
+| 类型 |
+| --- |
+| boolean |

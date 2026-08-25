@@ -6,7 +6,7 @@
 
 **起始版本：** 12
 
-<!--Device-vpn-export interface OpenVpnConfig--><!--Device-vpn-export interface OpenVpnConfig-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -28,7 +28,7 @@ askpass?: string
 
 **起始版本：** 12
 
-<!--Device-OpenVpnConfig-askpass?: string--><!--Device-OpenVpnConfig-askpass?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -37,16 +37,16 @@ askpass?: string
 ## ovpnAuthType
 
 ```TypeScript
-ovpnAuthType?: int
+ovpnAuthType?: number
 ```
 
 The auth type for the openvpn VPN network.
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 12
 
-<!--Device-OpenVpnConfig-ovpnAuthType?: int--><!--Device-OpenVpnConfig-ovpnAuthType?: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -62,7 +62,7 @@ ovpnCaCertFilePath?: string
 
 **起始版本：** 12
 
-<!--Device-OpenVpnConfig-ovpnCaCertFilePath?: string--><!--Device-OpenVpnConfig-ovpnCaCertFilePath?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -78,7 +78,7 @@ ovpnConfig?: string
 
 **起始版本：** 12
 
-<!--Device-OpenVpnConfig-ovpnConfig?: string--><!--Device-OpenVpnConfig-ovpnConfig?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -94,7 +94,7 @@ ovpnConfigFilePath?: string
 
 **起始版本：** 12
 
-<!--Device-OpenVpnConfig-ovpnConfigFilePath?: string--><!--Device-OpenVpnConfig-ovpnConfigFilePath?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -110,7 +110,7 @@ ovpnPort?: string
 
 **起始版本：** 12
 
-<!--Device-OpenVpnConfig-ovpnPort?: string--><!--Device-OpenVpnConfig-ovpnPort?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -126,7 +126,7 @@ ovpnPrivateKeyFilePath?: string
 
 **起始版本：** 12
 
-<!--Device-OpenVpnConfig-ovpnPrivateKeyFilePath?: string--><!--Device-OpenVpnConfig-ovpnPrivateKeyFilePath?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -135,16 +135,16 @@ ovpnPrivateKeyFilePath?: string
 ## ovpnProtocol
 
 ```TypeScript
-ovpnProtocol?: int
+ovpnProtocol?: number
 ```
 
 The protocol for the openvpn VPN network.
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 12
 
-<!--Device-OpenVpnConfig-ovpnProtocol?: int--><!--Device-OpenVpnConfig-ovpnProtocol?: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -160,9 +160,8 @@ ovpnUserCertFilePath?: string
 
 **起始版本：** 12
 
-<!--Device-OpenVpnConfig-ovpnUserCertFilePath?: string--><!--Device-OpenVpnConfig-ovpnUserCertFilePath?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
-

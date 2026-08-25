@@ -4,7 +4,7 @@ Represents the scan options.
 
 **Since:** 26.0.0
 
-<!--Device-scan-interface ScanOptions--><!--Device-scan-interface ScanOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -17,18 +17,18 @@ import { scan } from '@kit.ConnectivityKit';
 ## duration
 
 ```TypeScript
-duration?: int
+duration?: number
 ```
 
 Scan duration, in seconds. The value range is The value should be an integer.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ScanOptions-duration?: int--><!--Device-ScanOptions-duration?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -44,9 +44,8 @@ Scan mode. The default value is **'SCAN_MODE_LOW_POWER'**.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ScanOptions-scanMode?: ScanMode--><!--Device-ScanOptions-scanMode?: ScanMode-End-->
-
 **System capability:** SystemCapability.Communication.NearLink.Base
-

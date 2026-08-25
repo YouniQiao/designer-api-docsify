@@ -1,14 +1,24 @@
 # @ohos.arkui.componentSnapshot
 
-This module allows developers to export snapshot image from a component or a custom builder.@namespace componentSnapshot
+The **componentSnapshot** module provides APIs for obtaining component snapshots, including snapshots of components that have been loaded and snapshots of components that have not been loaded yet. Snapshots are strictly limited to the component's layout bounds. Content drawn outside the area of the owning component or the parent component is not visible in the snapshots. In addition, sibling components stacked in the component's area are not displayed in the snapshot.Transformation attributes such as scaling, translation, and rotation only apply to the child components of the target component. Applying these transformation attributes directly to the target component itself has no effect; the snapshot will still display the component as it appears before any transformations are applied.For typical use cases (for example, long screenshots) and best practices of component snapshots, see [Using Component Snapshot (ComponentSnapshot)](../../../ui/arkts-uicontext-component-snapshot.md).
 
-**Since:** 23
+> **NOTE：**&gt;
+> - In scenarios where XComponent is used to, for example, display video or camera streams,
+> obtain images through
+> [createPixelMapFromSurface](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmapfromsurface-f.md),
+> instead of through an API in this module.&gt;
+> - If the content of a component does not fill the entire area allocated for it, any remaining space in the snapshot
+> will be rendered as transparent pixels. In addition, if the component uses image effects or other
+> effect-related attributes, the resulting snapshot may not be as expected. To address these potential issues, check
+> whether the component's transparent content area needs to be filled, or use the window screenshot API
+> [snapshot](arkts-arkui-window-window-i.md#snapshot) instead.&gt;
+> - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-declare namespace componentSnapshot--><!--Device-unnamed-declare namespace componentSnapshot-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,24 +32,27 @@ import { componentSnapshot } from '@kit.ArkUI';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getSync](arkts-arkui-componentsnapshot-getsync-f.md) | Take a screenshot of the specified component in synchronous mode, this mode will block the main thread, please use it with caution, the maximum waiting time of the interface is 3s, if it does not return after 3s, an exception will be thrown. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [createFromBuilder](arkts-arkui-componentsnapshot-createfrombuilder-f.md) |
+| [createFromBuilder](arkts-arkui-componentsnapshot-createfrombuilder-f.md) |
+| [get](arkts-arkui-componentsnapshot-get-f.md) |
+| [get](arkts-arkui-componentsnapshot-get-f.md) |
+| [getSync](arkts-arkui-componentsnapshot-getsync-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ColorModeOptions](arkts-arkui-componentsnapshot-colormodeoptions-i.md) | Defines the color mode used for current snapshot taking. By default, the system draws snapshot in sRGB mode. Therefore, snapshot for components with wide color display mode enabled will lose some effect. If you know the color space used in the component to be taken snapshot, you can specify the colorSpace parameter and set isAuto to false, for achieving the expected screenshot effect. But it is difficult to know which color space is used by the component to be taken. Therefore, in general, you can just set isAuto to true for letting the system to determine the color space to use based on the actual situation automaticly. When isAuto is set to true, value set by the colorSpace field will be ignored. |
-| [DynamicRangeModeOptions](arkts-arkui-componentsnapshot-dynamicrangemodeoptions-i.md) | Defines the dynamic range mode used for current snapshot taking. By default, the system draws snapshot in STANDARD mode. You can set the dynamicRangeMode parameter and set isAuto to false, for using one specific dynamic range mode. Also you can just set isAuto to true for letting the system to determine the dynamic range mode automaticly. When isAuto is set to true, value set by the dynamicRangeMode field will be ignored. |
-| [LocalizedSnapshotRegion](arkts-arkui-componentsnapshot-localizedsnapshotregion-i.md) | Defines the extra options for snapshot taking, if this is used, the start and end will be assigned to left and right value according to the layout direction of node automatically. |
-| [SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | Defines the extra options for snapshot taking. |
-| [SnapshotRegion](arkts-arkui-componentsnapshot-snapshotregion-i.md) | Defines the target region information for snapshot taking. |
-| [SnapshotSizeLimitation](arkts-arkui-componentsnapshot-snapshotsizelimitation-i.md) | Defines the size limitation for component snapshot taking. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ColorModeOptions](arkts-arkui-componentsnapshot-colormodeoptions-i.md) |
+| [DynamicRangeModeOptions](arkts-arkui-componentsnapshot-dynamicrangemodeoptions-i.md) |
+| [LocalizedSnapshotRegion](arkts-arkui-componentsnapshot-localizedsnapshotregion-i.md) |
+| [SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) |
+| [SnapshotRegion](arkts-arkui-componentsnapshot-snapshotregion-i.md) |
+| [SnapshotSizeLimitation](arkts-arkui-componentsnapshot-snapshotsizelimitation-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [SnapshotRegionType](arkts-arkui-componentsnapshot-snapshotregiontype-t.md) | Defines the snapshot region rect type. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SnapshotRegionType](arkts-arkui-componentsnapshot-snapshotregiontype-t.md) |

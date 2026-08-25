@@ -4,9 +4,9 @@
 
 **继承/实现关系：** Material extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export interface Material--><!--Device-unnamed-export interface Material-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -18,11 +18,11 @@ alphaCutoff?: double
 
 透明通道阈值，如果像素的alpha值等于或高于此阈值，则渲染该像素；如果低于此阈值，则不会渲染该像素。 设置值小于1时，则开启该模式，取值范围为[0, 1]，默认值为1。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Material-alphaCutoff?: double--><!--Device-Material-alphaCutoff?: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -38,9 +38,9 @@ blend?: Blend
 
 **默认值：** undefined
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Material-blend?: Blend--><!--Device-Material-blend?: Blend-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -54,9 +54,9 @@ cullMode?: CullMode
 
 **类型：** [CullMode](arkts-arkgraphics3d-sceneresources-cullmode-e.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Material-cullMode?: CullMode--><!--Device-Material-cullMode?: CullMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -70,9 +70,9 @@ readonly materialType: MaterialType
 
 **类型：** [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Material-readonly materialType: MaterialType--><!--Device-Material-readonly materialType: MaterialType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -90,7 +90,7 @@ polygonMode?: PolygonMode
 
 **起始版本：** 23
 
-<!--Device-Material-polygonMode?: PolygonMode--><!--Device-Material-polygonMode?: PolygonMode-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -104,9 +104,9 @@ renderSort?: RenderSort
 
 **类型：** [RenderSort](arkts-arkgraphics3d-sceneresources-rendersort-i.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Material-renderSort?: RenderSort--><!--Device-Material-renderSort?: RenderSort-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -120,9 +120,8 @@ shadowReceiver?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Material-shadowReceiver?: boolean--><!--Device-Material-shadowReceiver?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

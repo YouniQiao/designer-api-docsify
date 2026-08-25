@@ -4,9 +4,9 @@ Enumerates gesture competition results.
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-unnamed-declare namespace GestureControl--><!--Device-unnamed-declare namespace GestureControl-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,7 +19,6 @@ Enumerates gesture competition results.
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md) | Enumerates gesture recognizer types. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md) |

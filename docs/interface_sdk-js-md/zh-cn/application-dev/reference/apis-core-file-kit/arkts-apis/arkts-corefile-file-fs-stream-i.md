@@ -1,10 +1,10 @@
 # Stream
 
-文件流，提供流式读写文件数据的能力，使用完毕后需调用close关闭。在调用Stream的方法前，需要先通过 fileIo.createStream方法或者 fileIo.fdopenStream（同步或异步）来构建一个Stream 实例。
+文件流，提供流式读写文件数据的能力，使用完毕后需调用close关闭。在调用Stream的方法前，需要先通过 [fileIo.createStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatestream)方法或者 [fileIo.fdopenStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiofdopenstream)（同步或异步）来构建一个Stream 实例。
 
 **起始版本：** 9
 
-<!--Device-unnamed-declare interface Stream--><!--Device-unnamed-declare interface Stream-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -26,28 +26,28 @@ close(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Stream-close(): Promise<void>--><!--Device-Stream-close(): Promise<void>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回值。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900025 | No space left on device |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900025 |
+| 13900041 |
+| 13900042 |
 
 **示例**
 
@@ -201,28 +201,28 @@ close(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Stream-close(callback: AsyncCallback<void>): void--><!--Device-Stream-close(callback: AsyncCallback<void>): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当关闭文件流成功，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900025 | No space left on device |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900025 |
+| 13900041 |
+| 13900042 |
 
 **示例**
 
@@ -238,22 +238,22 @@ closeSync(): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Stream-closeSync(): void--><!--Device-Stream-closeSync(): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900025 | No space left on device |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900025 |
+| 13900041 |
+| 13900042 |
 
 **示例**
 
@@ -279,34 +279,34 @@ flush(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Stream-flush(): Promise<void>--><!--Device-Stream-flush(): Promise<void>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。返回表示异步刷新文件流的结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900020 | Invalid argument |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900034 | Operation would block |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900001 |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900020 |
+| 13900024 |
+| 13900025 |
+| 13900034 |
+| 13900041 |
+| 13900042 |
 
 **示例**
 
@@ -385,34 +385,34 @@ flush(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Stream-flush(callback: AsyncCallback<void>): void--><!--Device-Stream-flush(callback: AsyncCallback<void>): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步刷新文件流后的回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900020 | Invalid argument |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900034 | Operation would block |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900001 |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900020 |
+| 13900024 |
+| 13900025 |
+| 13900034 |
+| 13900041 |
+| 13900042 |
 
 **示例**
 
@@ -428,28 +428,28 @@ flushSync(): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Stream-flushSync(): void--><!--Device-Stream-flushSync(): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900020 | Invalid argument |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900034 | Operation would block |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900001 |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900020 |
+| 13900024 |
+| 13900025 |
+| 13900034 |
+| 13900041 |
+| 13900042 |
 
 **示例**
 
@@ -473,39 +473,39 @@ read(
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Stream-read(      buffer: ArrayBuffer,      options?: ReadOptions  ): Promise<number>--><!--Device-Stream-read(      buffer: ArrayBuffer,      options?: ReadOptions  ): Promise<number>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 否 | 支持如下选项：<br/>- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset， number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer | 是 |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回读取的结果，单位为Byte。 |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
-| 13900042 | Unknown error |
-| 13900044 | Network is unreachable<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900019 |
+| 13900020 |
+| 13900034 |
+| 13900042 |
+| 13900044 |
 
 **示例**
 
@@ -972,32 +972,32 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void--><!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回读取的结果，单位为Byte。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900019 |
+| 13900020 |
+| 13900034 |
+| 13900042 |
 
 **示例**
 
@@ -1017,33 +1017,33 @@ read(
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Stream-read(      buffer: ArrayBuffer,      options: ReadOptions,      callback: AsyncCallback<number>  ): void--><!--Device-Stream-read(      buffer: ArrayBuffer,      options: ReadOptions,      callback: AsyncCallback<number>  ): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 是 | 支持如下选项：<br/>- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset， number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读取。<br>**起始版本：** 11 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回读取的结果，单位为Byte。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer | 是 |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900019 |
+| 13900020 |
+| 13900034 |
+| 13900042 |
 
 **示例**
 
@@ -1062,39 +1062,39 @@ readSync(
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Stream-readSync(      buffer: ArrayBuffer,      options?: ReadOptions  ): number--><!--Device-Stream-readSync(      buffer: ArrayBuffer,      options?: ReadOptions  ): number-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 否 | 支持如下选项：<br/>- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset， number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。<br/><br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer | 是 |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 实际读取的长度，单位为Byte。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900034 | Operation would block |
-| 13900042 | Unknown error |
-| 13900044 | Network is unreachable<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900019 |
+| 13900020 |
+| 13900034 |
+| 13900042 |
+| 13900044 |
 
 **示例**
 
@@ -1159,41 +1159,41 @@ write(
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Stream-write(      buffer: ArrayBuffer | string,      options?: WriteOptions  ): Promise<number>--><!--Device-Stream-write(      buffer: ArrayBuffer | string,      options?: WriteOptions  ): Promise<number>-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 否 | 支持如下选项：<br/>- length，number类型，表示期望写入数据的长度，单位为Byte。默认缓冲区长度。<br/>- offset，number类 型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。<br/>- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持'utf-8'。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer \| string | 是 |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回实际写入的长度，单位为Byte。 |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900020 | Invalid argument |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900034 | Operation would block |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900001 |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900020 |
+| 13900024 |
+| 13900025 |
+| 13900034 |
+| 13900041 |
+| 13900042 |
 
 **示例**
 
@@ -1642,35 +1642,35 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回实际写入的数据长度，单位为Byte。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer \| string | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900020 | Invalid argument |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900034 | Operation would block |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900001 |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900020 |
+| 13900024 |
+| 13900025 |
+| 13900034 |
+| 13900041 |
+| 13900042 |
 
 **示例**
 
@@ -1690,36 +1690,36 @@ write(
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Stream-write(      buffer: ArrayBuffer | string,      options: WriteOptions,      callback: AsyncCallback<number>  ): void--><!--Device-Stream-write(      buffer: ArrayBuffer | string,      options: WriteOptions,      callback: AsyncCallback<number>  ): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 是 | 支持如下选项：<br/>- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。<br/> - offset，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。<br/> - encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持'utf-8'。<br>**起始版本：** 11 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回实际写入的数据长度，单位为Byte。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer \| string | 是 |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900020 | Invalid argument |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900034 | Operation would block |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900001 |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900020 |
+| 13900024 |
+| 13900025 |
+| 13900034 |
+| 13900041 |
+| 13900042 |
 
 **示例**
 
@@ -1738,41 +1738,41 @@ writeSync(
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-Stream-writeSync(      buffer: ArrayBuffer | string,      options?: WriteOptions  ): number--><!--Device-Stream-writeSync(      buffer: ArrayBuffer | string,      options?: WriteOptions  ): number-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 否 | 支持如下选项：<br/>- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。<br/> - offset，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。<br/> - encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持'utf-8'。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer \| string | 是 |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 实际写入的长度，单位为Byte。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900010 | Try again |
-| 13900013 | Bad address |
-| 13900020 | Invalid argument |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900034 | Operation would block |
-| 13900041 | Quota exceeded |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900001 |
+| 13900004 |
+| 13900005 |
+| 13900008 |
+| 13900010 |
+| 13900013 |
+| 13900020 |
+| 13900024 |
+| 13900025 |
+| 13900034 |
+| 13900041 |
+| 13900042 |
 
 **示例**
 
@@ -1812,4 +1812,3 @@ let writeOption: WriteOptions = {
 let bytesWritten = randomAccessFile.writeSync("hello, world", writeOption);
 randomAccessFile.close();
 ```
-

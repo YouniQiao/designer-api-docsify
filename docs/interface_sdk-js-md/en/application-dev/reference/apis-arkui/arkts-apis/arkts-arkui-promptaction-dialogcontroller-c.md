@@ -1,16 +1,16 @@
 # DialogController
 
-Implements a custom dialog controller that inherits from [CommonController](arkts-arkui-promptaction-commoncontroller-c.md).It can be used as a member variable of **UIContext** to display custom dialog boxes. For specific usage, see the examples for [openCustomDialogWithController](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#opencustomdialogwithcontroller) and [presentCustomDialog](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#presentcustomdialog).
+Implements a custom dialog controller that inherits from [CommonController](arkts-arkui-promptaction-commoncontroller-c.md).It can be used as a member variable of **UIContext** to display custom dialog boxes. For specific usage, see the examples for [openCustomDialogWithController](arkts-arkui-arkui-uicontext-promptaction-c.md#opencustomdialogwithcontroller) and [presentCustomDialog](arkts-arkui-arkui-uicontext-promptaction-c.md#presentcustomdialog).
 
 **Inheritance/Implementation:** DialogController extends [CommonController](arkts-arkui-promptaction-commoncontroller-c.md)
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-promptAction-class DialogController--><!--Device-promptAction-class DialogController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,4 +19,3 @@ Implements a custom dialog controller that inherits from [CommonController](arkt
 ```TypeScript
 import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
-

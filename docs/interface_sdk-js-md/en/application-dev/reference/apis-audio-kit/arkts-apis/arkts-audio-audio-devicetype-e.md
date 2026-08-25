@@ -2,9 +2,9 @@
 
 Enumerates the device types.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-audio-enum DeviceType--><!--Device-audio-enum DeviceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -16,11 +16,11 @@ INVALID = 0
 
 Invalid device.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DeviceType-INVALID = 0--><!--Device-DeviceType-INVALID = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -32,11 +32,11 @@ EARPIECE = 1
 
 Built-in earpiece.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DeviceType-EARPIECE = 1--><!--Device-DeviceType-EARPIECE = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -48,11 +48,11 @@ SPEAKER = 2
 
 Built-in speaker.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DeviceType-SPEAKER = 2--><!--Device-DeviceType-SPEAKER = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -64,11 +64,11 @@ WIRED_HEADSET = 3
 
 Wired headset with a microphone.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DeviceType-WIRED_HEADSET = 3--><!--Device-DeviceType-WIRED_HEADSET = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -80,11 +80,11 @@ WIRED_HEADPHONES = 4
 
 Wired headset without a microphone.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DeviceType-WIRED_HEADPHONES = 4--><!--Device-DeviceType-WIRED_HEADPHONES = 4-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -96,11 +96,11 @@ BLUETOOTH_SCO = 7
 
 Bluetooth device using Synchronous Connection Oriented (SCO) links.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DeviceType-BLUETOOTH_SCO = 7--><!--Device-DeviceType-BLUETOOTH_SCO = 7-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -112,11 +112,11 @@ BLUETOOTH_A2DP = 8
 
 Bluetooth device using Advanced Audio Distribution Profile (A2DP) links.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DeviceType-BLUETOOTH_A2DP = 8--><!--Device-DeviceType-BLUETOOTH_A2DP = 8-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -128,11 +128,11 @@ MIC = 15
 
 Built-in microphone.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DeviceType-MIC = 15--><!--Device-DeviceType-MIC = 15-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -144,11 +144,11 @@ USB_HEADSET = 22
 
 USB Type-C headset.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DeviceType-USB_HEADSET = 22--><!--Device-DeviceType-USB_HEADSET = 22-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -160,11 +160,11 @@ DISPLAY_PORT = 23
 
 Display port (DP), which is used to connect to external devices.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-DeviceType-DISPLAY_PORT = 23--><!--Device-DeviceType-DISPLAY_PORT = 23-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -176,11 +176,11 @@ REMOTE_CAST = 24
 
 Remote cast device.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-DeviceType-REMOTE_CAST = 24--><!--Device-DeviceType-REMOTE_CAST = 24-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -192,9 +192,9 @@ USB_DEVICE = 25
 
 USB device (excluding USB headsets).
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DeviceType-USB_DEVICE = 25--><!--Device-DeviceType-USB_DEVICE = 25-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -206,9 +206,9 @@ HDMI = 27
 
 HDMI device (such as HDMI, ARC, and eARC).
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-DeviceType-HDMI = 27--><!--Device-DeviceType-HDMI = 27-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -220,9 +220,9 @@ LINE_DIGITAL = 28
 
 Wired digital device (such as S/PDIF)
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-DeviceType-LINE_DIGITAL = 28--><!--Device-DeviceType-LINE_DIGITAL = 28-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -234,11 +234,11 @@ REMOTE_DAUDIO = 29
 
 Distributed device.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-DeviceType-REMOTE_DAUDIO = 29--><!--Device-DeviceType-REMOTE_DAUDIO = 29-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -252,7 +252,7 @@ Hearing aid audio device. Note: This original device type can be obtained after 
 
 **Since:** 26.0.0
 
-<!--Device-DeviceType-HEARING_AID = 30--><!--Device-DeviceType-HEARING_AID = 30-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -266,7 +266,7 @@ Nearlink device. Note: This original device type can be obtained after it is dec
 
 **Since:** 26.0.0
 
-<!--Device-DeviceType-NEARLINK = 31--><!--Device-DeviceType-NEARLINK = 31-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -278,9 +278,9 @@ SYSTEM_PRIVATE = 200
 
 System private device. (This device is a private device within the system, and applications can ignore it.)
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-DeviceType-SYSTEM_PRIVATE = 200--><!--Device-DeviceType-SYSTEM_PRIVATE = 200-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -292,11 +292,10 @@ DEFAULT = 1000
 
 Default device type.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-DeviceType-DEFAULT = 1000--><!--Device-DeviceType-DEFAULT = 1000-End-->
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
-

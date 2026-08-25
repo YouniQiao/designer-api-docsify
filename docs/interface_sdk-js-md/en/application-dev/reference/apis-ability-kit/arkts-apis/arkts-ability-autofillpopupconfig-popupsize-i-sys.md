@@ -2,9 +2,9 @@
 
 Describes the width and height of the auto-fill pop-up.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface PopupSize--><!--Device-unnamed-export interface PopupSize-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -18,13 +18,13 @@ height: double
 
 Height of the auto-fill pop-up.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PopupSize-height: double--><!--Device-PopupSize-height: double-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -38,15 +38,14 @@ width: double
 
 Width of the auto-fill pop-up.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PopupSize-width: double--><!--Device-PopupSize-width: double-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
-

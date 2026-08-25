@@ -4,9 +4,9 @@ Defines the values of **deviceType** used in **RootInfo**.
 
 **Since:** 9
 
-**Deprecated since:** 23
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-fileExtensionInfo-enum DeviceType--><!--Device-fileExtensionInfo-enum DeviceType-End-->
+**Deprecated since:** 23
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -22,11 +22,11 @@ Local disk.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceType-DEVICE_LOCAL_DISK = 1--><!--Device-DeviceType-DEVICE_LOCAL_DISK = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -42,11 +42,11 @@ Shared disk.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceType-DEVICE_SHARED_DISK = 2--><!--Device-DeviceType-DEVICE_SHARED_DISK = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -62,11 +62,11 @@ Distributed network device.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceType-DEVICE_SHARED_TERMINAL = 3--><!--Device-DeviceType-DEVICE_SHARED_TERMINAL = 3-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -82,11 +82,11 @@ Network neighbor device.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceType-DEVICE_NETWORK_NEIGHBORHOODS = 4--><!--Device-DeviceType-DEVICE_NETWORK_NEIGHBORHOODS = 4-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -102,11 +102,11 @@ MTP device.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceType-DEVICE_EXTERNAL_MTP = 5--><!--Device-DeviceType-DEVICE_EXTERNAL_MTP = 5-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -122,11 +122,11 @@ USB device.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceType-DEVICE_EXTERNAL_USB = 6--><!--Device-DeviceType-DEVICE_EXTERNAL_USB = 6-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -142,13 +142,12 @@ Cloud disk.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DeviceType-DEVICE_EXTERNAL_CLOUD = 7--><!--Device-DeviceType-DEVICE_EXTERNAL_CLOUD = 7-End-->
-
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
-

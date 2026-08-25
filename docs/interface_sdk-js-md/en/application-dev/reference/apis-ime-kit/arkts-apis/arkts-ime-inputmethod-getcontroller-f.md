@@ -14,27 +14,26 @@ function getController(): InputMethodController
 
 Obtains an [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) instance.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-inputMethod-function getController(): InputMethodController--><!--Device-inputMethod-function getController(): InputMethodController-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) | InputMethodController** instance. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) | input method controller error. Possible cause: create InputMethodController object failed. |
+| Error Code ID |
+| --- |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 **Examples**
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
 ```
-

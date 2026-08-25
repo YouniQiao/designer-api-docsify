@@ -4,9 +4,7 @@ Class to execute an asynchronous operation under lock.
 
 **Since:** 12
 
-**Decorator:** @Sendable
-
-<!--Device-locks-class AsyncLock--><!--Device-locks-class AsyncLock-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,9 +24,9 @@ Default constructor.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-AsyncLock-constructor()--><!--Device-AsyncLock-constructor()-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -42,29 +40,29 @@ Perform an operation with the acquired lock exclusively. The method acquires the
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-AsyncLock-lockAsync<T>(callback: AsyncLockCallback<T>): Promise<T>--><!--Device-AsyncLock-lockAsync<T>(callback: AsyncLockCallback<T>): Promise<T>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | Yes | function to call when the lock gets acquired. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;T&gt; | Promise that will be resolved after the callback gets executed. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;T & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) | The lock does not exist. |
+| Error Code ID |
+| --- |
+| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) |
 
 ## lockAsync
 
@@ -76,30 +74,30 @@ Perform an operation with the acquired lock. The method acquires the lock first,
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-AsyncLock-lockAsync<T>(callback: AsyncLockCallback<T>, mode: AsyncLockMode): Promise<T>--><!--Device-AsyncLock-lockAsync<T>(callback: AsyncLockCallback<T>, mode: AsyncLockMode): Promise<T>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | Yes | function to call when the lock gets acquired. |
-| mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | Yes | mode of the lock operation. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | Yes |
+| mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;T&gt; | Promise that will be resolved after the callback gets executed or rejected. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;T & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) | The lock does not exist. |
+| Error Code ID |
+| --- |
+| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) |
 
 ## lockAsync
 
@@ -112,32 +110,32 @@ Perform an operation with the acquired lock. The method acquires the lock first,
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-AsyncLock-lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,        options: AsyncLockOptions<U>): Promise<T | U>--><!--Device-AsyncLock-lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,        options: AsyncLockOptions<U>): Promise<T | U>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | Yes | function to call when the lock gets acquired. |
-| mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | Yes | mode of the lock operation. |
-| options | [AsyncLockOptions](arkts-arkts-locks-asynclockoptions-c.md)&lt;U&gt; | Yes | lock operation options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | Yes |
+| mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | Yes |
+| options | [AsyncLockOptions](arkts-arkts-locks-asynclockoptions-c.md)&lt;U&gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;T \| U&gt; | Promise that will be resolved after the callback gets executed or rejected in case timeout exceeded. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;T \ | U & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) | The lock does not exist. |
-| [10200031](../errorcode-utils.md#10200031-calling-lockasync-timed-out) | Timeout exceeded. |
+| Error Code ID |
+| --- |
+| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) |
+| [10200031](../errorcode-utils.md#10200031-calling-lockasync-timed-out) |
 
 ## query
 
@@ -149,29 +147,29 @@ Query information about the specified lock.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-AsyncLock-static query(name: string): AsyncLockState--><!--Device-AsyncLock-static query(name: string): AsyncLockState-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | name of the lock. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [name](#name) | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md) | Returns an instance of AsyncLockState. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) | The lock does not exist. |
+| Error Code ID |
+| --- |
+| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) |
 
 ## queryAll
 
@@ -183,17 +181,17 @@ Query information about all locks.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-AsyncLock-static queryAll(): AsyncLockState[]--><!--Device-AsyncLock-static queryAll(): AsyncLockState[]-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md)[] | Returns an array of AsyncLockState. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md)[] |
 
 ## request
 
@@ -205,23 +203,23 @@ Find or create an instance of AsyncLock using the specified name.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-AsyncLock-static request(name: string): AsyncLock--><!--Device-AsyncLock-static request(name: string): AsyncLock-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | name of the lock to find or create. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [name](#name) | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [AsyncLock](arkts-arkts-locks-asynclock-c.md) | Returns an instance of AsyncLock. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [AsyncLock](arkts-arkts-locks-asynclock-c.md) |
 
 ## name
 
@@ -235,9 +233,8 @@ Name of the lock.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AsyncLock-readonly name: string--><!--Device-AsyncLock-readonly name: string-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

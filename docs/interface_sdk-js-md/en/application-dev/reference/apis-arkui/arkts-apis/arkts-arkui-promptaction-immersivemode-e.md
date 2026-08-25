@@ -4,7 +4,7 @@ Enumerates the display area modes of the dialog box overlay within a page.
 
 **Since:** 15
 
-<!--Device-unnamed-export enum ImmersiveMode--><!--Device-unnamed-export enum ImmersiveMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ The dialog box overlay follows the layout constraints of its parent node.
 
 **Since:** 15
 
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-ImmersiveMode-DEFAULT = 0--><!--Device-ImmersiveMode-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ The dialog box overlay can extend to cover the status bar and navigation bar for
 
 **Since:** 15
 
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
-<!--Device-ImmersiveMode-EXTEND = 1--><!--Device-ImmersiveMode-EXTEND = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

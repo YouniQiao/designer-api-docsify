@@ -2,9 +2,9 @@
 
 Enumerates the types of properties to obtain.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-osAccount-enum GetPropertyType--><!--Device-osAccount-enum GetPropertyType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -18,9 +18,9 @@ AUTH_SUB_TYPE = 1
 
 Authentication credential subtype.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-GetPropertyType-AUTH_SUB_TYPE = 1--><!--Device-GetPropertyType-AUTH_SUB_TYPE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -34,9 +34,9 @@ REMAIN_TIMES = 2
 
 Number of remaining times.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-GetPropertyType-REMAIN_TIMES = 2--><!--Device-GetPropertyType-REMAIN_TIMES = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -50,9 +50,9 @@ FREEZING_TIME = 3
 
 Freezing time.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-GetPropertyType-FREEZING_TIME = 3--><!--Device-GetPropertyType-FREEZING_TIME = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -66,9 +66,9 @@ ENROLLMENT_PROGRESS = 4
 
 Enrollment progress, which is left blank by default.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-GetPropertyType-ENROLLMENT_PROGRESS = 4--><!--Device-GetPropertyType-ENROLLMENT_PROGRESS = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -82,9 +82,9 @@ SENSOR_INFO = 5
 
 Sensor information, which is left blank by default.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-GetPropertyType-SENSOR_INFO = 5--><!--Device-GetPropertyType-SENSOR_INFO = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -98,9 +98,9 @@ NEXT_PHASE_FREEZING_TIME = 6
 
 Next freezing time.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-GetPropertyType-NEXT_PHASE_FREEZING_TIME = 6--><!--Device-GetPropertyType-NEXT_PHASE_FREEZING_TIME = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -114,11 +114,10 @@ CREDENTIAL_LENGTH = 7
 
 Credential length.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-GetPropertyType-CREDENTIAL_LENGTH = 7--><!--Device-GetPropertyType-CREDENTIAL_LENGTH = 7-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-

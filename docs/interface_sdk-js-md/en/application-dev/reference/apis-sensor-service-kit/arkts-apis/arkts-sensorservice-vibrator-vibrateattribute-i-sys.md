@@ -2,9 +2,9 @@
 
 Describes the vibration attribute.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-vibrator-interface VibrateAttribute--><!--Device-vibrator-interface VibrateAttribute-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -24,11 +24,10 @@ Indicates whether to bypass system management switches.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-VibrateAttribute-systemUsage?: boolean--><!--Device-VibrateAttribute-systemUsage?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **System API:** This is a system API.
-

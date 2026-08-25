@@ -2,9 +2,9 @@
 
 Defines the notification source type.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-notificationManager-export enum SourceType--><!--Device-notificationManager-export enum SourceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -18,9 +18,9 @@ TYPE_NORMAL = 0
 
 Normal notification.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SourceType-TYPE_NORMAL = 0--><!--Device-SourceType-TYPE_NORMAL = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -34,9 +34,9 @@ TYPE_CONTINUOUS = 1
 
 Continuous notification.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SourceType-TYPE_CONTINUOUS = 1--><!--Device-SourceType-TYPE_CONTINUOUS = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -50,11 +50,10 @@ TYPE_TIMER = 2
 
 Timed notification.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SourceType-TYPE_TIMER = 2--><!--Device-SourceType-TYPE_TIMER = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

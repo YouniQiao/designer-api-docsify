@@ -16,21 +16,21 @@ Obtains the URL of the current PAC script.
 
 **Since:** 20
 
-<!--Device-connection-function getPacFileUrl(): string--><!--Device-connection-function getPacFileUrl(): string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | URL of the current PAC script. If no PAC script is available, an empty string is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| Error Code ID |
+| --- |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 
 **Examples**
 
@@ -40,4 +40,3 @@ import { connection } from '@kit.NetworkKit';
 let pacFileUrl = connection.getPacFileUrl();
 console.info(pacFileUrl);
 ```
-

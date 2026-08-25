@@ -1,10 +1,10 @@
 # ScrollType
 
-Enumerates the scroll types for [setScrollable](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setscrollable).
+Enumerates the scroll types for [setScrollable](arkts-arkweb-webview-webviewcontroller-c.md#setscrollable).
 
 **Since:** 12
 
-<!--Device-webview-enum ScrollType--><!--Device-webview-enum ScrollType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,7 +18,6 @@ Scroll event, which represents web page scrolling generated through the touchscr
 
 **Since:** 12
 
-<!--Device-ScrollType-EVENT = 0--><!--Device-ScrollType-EVENT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

@@ -8,38 +8,45 @@ import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainer
 
 ## 汇总
 
+### 函数
+
+| 名称 |
+| --- |
+| [SelectionContainer](arkts-arkui-arkui-components-selectioncontainer-selectioncontainer-f.md) |
+| [SelectionContainer](arkts-arkui-arkui-components-selectioncontainer-selectioncontainer-f.md) |
+
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | 支持通用属性。支持通用事件。 |
-| [SelectionContainerController](arkts-arkui-arkui-components-selectioncontainer-selectioncontainercontroller-c.md) | SelectionContainer组件的控制器。 |
+| 名称 |
+| --- |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |
+| [SelectionContainerController](arkts-arkui-arkui-components-selectioncontainer-selectioncontainercontroller-c.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [SelectionContainerEditMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md) | SelectionContainer自定义编辑菜单选项。 |
-| [SelectionContainerInterface](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerinterface-i.md) | 创建一个SelectionContainer组件。 |
-| [SelectionContainerMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) | 配置选择菜单中的选项。 |
-| [SelectionContainerOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontaineroptions-i.md) | 组件初始化配置项。 |
+| 名称 |
+| --- |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) |
+| [SelectionContainerEditMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md) |
+| [SelectionContainerInterface](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerinterface-i.md) |
+| [SelectionContainerMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) |
+| [SelectionContainerOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontaineroptions-i.md) |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-| [SelectionContainerTextJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md) | 文本聚合拼接方式。 |
+| 名称 |
+| --- |
+| [SelectionContainerTextJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md) |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-| [OnMenuItemClickWithTextCallback](arkts-arkui-onmenuitemclickwithtextcallback-t.md) | 点击菜单项时触发，可拦截系统默认菜单项（如复制、粘贴菜单项）的执行行为。 |
+| 名称 |
+| --- |
+| [OnMenuItemClickWithTextCallback](arkts-arkui-onmenuitemclickwithtextcallback-t.md) |
 
 ### 常量
 
-| 名称 | 说明 |
-| --- | --- |
-| [SelectionContainer](arkts-arkui-arkui-components-selectioncontainer-con.md#selectioncontainer) | SelectionContainer组件用于为多个文本节点提供跨节点文本选中、复制及菜单扩展能力，支持统一配置选中文本的手柄颜色和底板颜色，支持灵活的文本拼接策略，支持自定义选择菜单和扩展菜单选项。适用于需要跨多个Text组件实现文本 连续选中、统一复制、样式自定义及菜单扩展的场景，解决了多Text组件场景下文本选择体验割裂的问题，提升了用户在复杂文本布局中的交互体验。 |
-| [SelectionContainerInstance](arkts-arkui-arkui-components-selectioncontainer-con.md#selectioncontainerinstance) | 定义SelectionContainer组件实例。 |
-
+| 名称 |
+| --- |
+| [SelectionContainer](arkts-arkui-arkui-components-selectioncontainer-con.md#selectioncontainer) |
+| [SelectionContainerInstance](arkts-arkui-arkui-components-selectioncontainer-con.md#selectioncontainerinstance) |

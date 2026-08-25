@@ -1,8 +1,6 @@
 # Error
 
-**Since:** -1
-
-<!--Device-unnamed-interface Error--><!--Device-unnamed-interface Error-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,9 +15,7 @@ message: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-Error-message: string--><!--Device-Error-message: string-End-->
+**ArkTS mode:** 
 
 ## name
 
@@ -29,9 +25,7 @@ name: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-Error-name: string--><!--Device-Error-name: string-End-->
+**ArkTS mode:** 
 
 ## stack
 
@@ -41,7 +35,4 @@ stack?: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-Error-stack?: string--><!--Device-Error-stack?: string-End-->
-
+**ArkTS mode:** 

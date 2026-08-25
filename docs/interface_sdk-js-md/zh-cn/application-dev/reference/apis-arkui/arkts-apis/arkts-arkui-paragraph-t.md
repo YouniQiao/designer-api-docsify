@@ -8,11 +8,10 @@ declare type Paragraph = import('../api/@ohos.graphics.text').default.Paragraph
 
 **起始版本：** 20
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-unnamed-declare type Paragraph = import('../api/@ohos.graphics.text').default.Paragraph--><!--Device-unnamed-declare type Paragraph = import('../api/@ohos.graphics.text').default.Paragraph-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **属性类型：** import('../api/@ohos.graphics.text').default.Paragraph
-

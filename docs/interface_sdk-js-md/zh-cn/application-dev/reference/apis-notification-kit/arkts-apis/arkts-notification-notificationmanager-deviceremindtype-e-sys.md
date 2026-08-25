@@ -2,9 +2,9 @@
 
 通知提醒方式。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-notificationManager-export enum DeviceRemindType--><!--Device-notificationManager-export enum DeviceRemindType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -18,9 +18,9 @@ IDLE_DONOT_REMIND = 0
 
 设备未被使用，无需提醒。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-DeviceRemindType-IDLE_DONOT_REMIND = 0--><!--Device-DeviceRemindType-IDLE_DONOT_REMIND = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -34,9 +34,9 @@ IDLE_REMIND = 1
 
 提醒设备未被使用。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-DeviceRemindType-IDLE_REMIND = 1--><!--Device-DeviceRemindType-IDLE_REMIND = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -50,9 +50,9 @@ ACTIVE_DONOT_REMIND = 2
 
 设备正在使用，无需提醒。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-DeviceRemindType-ACTIVE_DONOT_REMIND = 2--><!--Device-DeviceRemindType-ACTIVE_DONOT_REMIND = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -66,11 +66,10 @@ ACTIVE_REMIND = 3
 
 提醒设备正在使用。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-DeviceRemindType-ACTIVE_REMIND = 3--><!--Device-DeviceRemindType-ACTIVE_REMIND = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
-

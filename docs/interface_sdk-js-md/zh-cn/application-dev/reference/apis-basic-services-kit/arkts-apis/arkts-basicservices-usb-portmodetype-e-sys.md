@@ -4,11 +4,11 @@ USB端口模式类型。
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 9
 
 **替代接口：** [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md)
-
-<!--Device-usb-export enum PortModeType--><!--Device-usb-export enum PortModeType-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -24,11 +24,11 @@ NONE = 0
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 9
 
 **替代接口：** [NONE](arkts-basicservices-usbmanager-portmodetype-e-sys.md#none)
-
-<!--Device-PortModeType-NONE = 0--><!--Device-PortModeType-NONE = 0-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -44,11 +44,11 @@ UFP = 1
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 9
 
 **替代接口：** [UFP](arkts-basicservices-usbmanager-portmodetype-e-sys.md#ufp)
-
-<!--Device-PortModeType-UFP = 1--><!--Device-PortModeType-UFP = 1-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -64,11 +64,11 @@ DFP = 2
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 9
 
 **替代接口：** [DFP](arkts-basicservices-usbmanager-portmodetype-e-sys.md#dfp)
-
-<!--Device-PortModeType-DFP = 2--><!--Device-PortModeType-DFP = 2-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -84,11 +84,11 @@ DRP = 3
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 9
 
 **替代接口：** [DRP](arkts-basicservices-usbmanager-portmodetype-e-sys.md#drp)
-
-<!--Device-PortModeType-DRP = 3--><!--Device-PortModeType-DRP = 3-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -104,13 +104,12 @@ NUM_MODES = 4
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 9
 
 **替代接口：** [NUM_MODES](arkts-basicservices-usbmanager-portmodetype-e-sys.md#num_modes)
 
-<!--Device-PortModeType-NUM_MODES = 4--><!--Device-PortModeType-NUM_MODES = 4-End-->
-
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。
-

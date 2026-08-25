@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-floatView-interface TemplateProperty--><!--Device-floatView-interface TemplateProperty-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -26,9 +26,9 @@ size: window.Size
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-TemplateProperty-size: window.Size--><!--Device-TemplateProperty-size: window.Size-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -44,9 +44,8 @@ templateType: FloatViewTemplateType
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-TemplateProperty-templateType: FloatViewTemplateType--><!--Device-TemplateProperty-templateType: FloatViewTemplateType-End-->
-
 **系统能力：** SystemCapability.Window.SessionManager
-

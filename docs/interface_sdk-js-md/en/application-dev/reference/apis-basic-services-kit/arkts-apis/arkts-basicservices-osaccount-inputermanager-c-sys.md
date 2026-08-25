@@ -2,9 +2,9 @@
 
 Provides APIs for managing credential inputers.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-osAccount-class InputerManager--><!--Device-osAccount-class InputerManager-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -24,11 +24,11 @@ static registerInputer(authType: AuthType, inputer: IInputer): void
 
 Registers a credential inputer.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL or ohos.permission.MANAGE_USER_IDM
-
-<!--Device-InputerManager-static registerInputer(authType: AuthType, inputer: IInputer): void--><!--Device-InputerManager-static registerInputer(authType: AuthType, inputer: IInputer): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -36,22 +36,22 @@ Registers a credential inputer.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| authType | AuthType | Yes | Authentication credential type. |
-| inputer | [IInputer](arkts-basicservices-osaccount-iinputer-i-sys.md) | Yes | Credential inputer to register. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes |
+| inputer | [IInputer](arkts-basicservices-osaccount-iinputer-i-sys.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid authType or inputer. |
-| [12300103](../errorcode-account.md#12300103-credential-inputer-already-exists) | The credential inputer already exists. |
-| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
+| [12300103](../errorcode-account.md#12300103-credential-inputer-already-exists) |
+| [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) |
 
 **Examples**
 
@@ -99,11 +99,11 @@ static unregisterInputer(authType: AuthType): void
 
 Unregisters a credential inputer.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL or ohos.permission.MANAGE_USER_IDM
-
-<!--Device-InputerManager-static unregisterInputer(authType: AuthType): void--><!--Device-InputerManager-static unregisterInputer(authType: AuthType): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -111,18 +111,18 @@ Unregisters a credential inputer.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| authType | AuthType | Yes | Authentication credential type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) |
 
 **Examples**
 
@@ -143,4 +143,3 @@ try {
   console.error(`unregisterInputer code is ${err.code}, message is ${err.message}`);
 }
 ```
-

@@ -6,9 +6,9 @@
 > 导入tag模块编辑器报错，在某个具体设备型号上能力可能超出工程默认设备定义的能力集范围，如需要使用此部分能力需额外配置自定义syscap，参考
 > [syscap开发指南](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/syscap)。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-unnamed-export interface TagSession--><!--Device-unnamed-export interface TagSession-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -20,23 +20,23 @@ connect(): void
 
 和标签建立连接。在从标签读取数据或将数据写入标签之前，必须调用此方法。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-TagSession-connect(): void--><!--Device-TagSession-connect(): void-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 
 **示例**
 
@@ -64,21 +64,21 @@ connectTag(): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** connect
 
 **需要权限：** ohos.permission.NFC_TAG
 
-<!--Device-TagSession-connectTag(): boolean--><!--Device-TagSession-connectTag(): boolean-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 连接建立成功返回true，失败返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -102,21 +102,21 @@ getMaxSendLength(): number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [getMaxTransmitSize](#getmaxtransmitsize)
 
 **需要权限：** ohos.permission.NFC_TAG
 
-<!--Device-TagSession-getMaxSendLength(): number--><!--Device-TagSession-getMaxSendLength(): number-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 可以发送到标签的最大数据长度，非负数。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -132,35 +132,41 @@ console.info("tag maxSendLen: " + maxSendLen);
 
 ## getMaxTransmitSize
 
+ArkTS-Dyn:
+```TypeScript
+getMaxTransmitSize(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getMaxTransmitSize(): int
 ```
 
 查询可以发送到标签的最大数据长度。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-TagSession-getMaxTransmitSize(): int--><!--Device-TagSession-getMaxTransmitSize(): int-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 可以发送到标签的最大数据长度，非负数。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 
 **示例**
 
@@ -188,21 +194,21 @@ getSendDataTimeout(): number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [getTimeout](#gettimeout)
 
 **需要权限：** ohos.permission.NFC_TAG
 
-<!--Device-TagSession-getSendDataTimeout(): number--><!--Device-TagSession-getSendDataTimeout(): number-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 发送数据到Tag的等待超时时间，单位是毫秒，非负数。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -226,21 +232,21 @@ getTagInfo(): tag.TagInfo
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [getTagInfo](arkts-connectivity-tag-gettaginfo-f.md)
 
 **需要权限：** ohos.permission.NFC_TAG
 
-<!--Device-TagSession-getTagInfo(): tag.TagInfo--><!--Device-TagSession-getTagInfo(): tag.TagInfo-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| tag.TagInfo | NFC服务所提供的Tag数据对象。 |
+| 类型 |
+| --- |
+| tag.TagInfo |
 
 **示例**
 
@@ -256,35 +262,41 @@ console.info("tag tagInfo: " + tagInfo);
 
 ## getTimeout
 
+ArkTS-Dyn:
+```TypeScript
+getTimeout(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getTimeout(): int
 ```
 
 查询发送数据到Tag的等待超时时间，单位是毫秒。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-TagSession-getTimeout(): int--><!--Device-TagSession-getTimeout(): int-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 发送数据到Tag的等待超时时间，单位是毫秒，非负数。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 
 **示例**
 
@@ -310,25 +322,25 @@ isConnected(): boolean
 
 检查是否已与标签建立连接。如果返回未连接，则需要先调用[tagSession.connect](#connect)建立连接。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TagSession-isConnected(): boolean--><!--Device-TagSession-isConnected(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 已建立连接返回 true，未建立连接返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 **示例**
 
@@ -356,19 +368,19 @@ isTagConnected(): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** isConnected
-
-<!--Device-TagSession-isTagConnected(): boolean--><!--Device-TagSession-isTagConnected(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 已建立连接返回 true，未建立连接返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -392,13 +404,13 @@ reset(): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [resetConnection](#resetconnection)
 
 **需要权限：** ohos.permission.NFC_TAG
-
-<!--Device-TagSession-reset(): void--><!--Device-TagSession-reset(): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -421,23 +433,23 @@ resetConnection(): void
 
 重置与标签的连接。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-TagSession-resetConnection(): void--><!--Device-TagSession-resetConnection(): void-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 
 **示例**
 
@@ -465,27 +477,27 @@ sendData(data: number[]): Promise<number[]>
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** transmit
 
 **需要权限：** ohos.permission.NFC_TAG
 
-<!--Device-TagSession-sendData(data: number[]): Promise<number[]>--><!--Device-TagSession-sendData(data: number[]): Promise<number[]>-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | number[] | 是 | 要发送的指令。每个number十六进制表示，范围是0x00~0xFF。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | number[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;number[]&gt; | Promise对象，返回对端Tag对指令的响应数据，每个number十六进制表示，范围是0x00~0xFF。 |
+| 类型 |
+| --- |
+| Promise & lt;number[] & gt; |
 
 **示例**
 
@@ -550,22 +562,22 @@ sendData(data: number[], callback: AsyncCallback<number[]>): void
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** transmit
 
 **需要权限：** ohos.permission.NFC_TAG
 
-<!--Device-TagSession-sendData(data: number[], callback: AsyncCallback<number[]>): void--><!--Device-TagSession-sendData(data: number[], callback: AsyncCallback<number[]>): void-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | number[] | 是 | 要发送的指令。每个number十六进制表示，范围是0x00~0xFF。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | 是 | 回调函数，返回响应数据。每个number十六进制表示，范围是0x00~0xFF。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | number[] | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | 是 |
 
 **示例**
 
@@ -581,27 +593,27 @@ setSendDataTimeout(timeout: number): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** setTimeout
 
 **需要权限：** ohos.permission.NFC_TAG
 
-<!--Device-TagSession-setSendDataTimeout(timeout: number): boolean--><!--Device-TagSession-setSendDataTimeout(timeout: number): boolean-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| timeout | number | 是 | 超时时间，单位毫秒，非负值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| timeout | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 设置超时时间成功返回true，设置失败返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -618,36 +630,42 @@ console.info("tag setSendDataTimeout setStatus: " + setStatus);
 
 ## setTimeout
 
+ArkTS-Dyn:
+```TypeScript
+setTimeout(timeout: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setTimeout(timeout: int): void
 ```
 
 设置发送数据到Tag的等待超时时间，单位是毫秒。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-TagSession-setTimeout(timeout: int): void--><!--Device-TagSession-setTimeout(timeout: int): void-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| timeout | int | 是 | 超时时间，单位毫秒，非负值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| timeout | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 
 **示例**
 
@@ -668,43 +686,49 @@ try {
 
 ## transmit
 
+ArkTS-Dyn:
+```TypeScript
+transmit(data: number[]): Promise<number[]>
+```
+
+ArkTS-Sta:
 ```TypeScript
 transmit(data: int[]): Promise<int[]>
 ```
 
 发送指令到Tag上。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-TagSession-transmit(data: int[]): Promise<int[]>--><!--Device-TagSession-transmit(data: int[]): Promise<int[]>-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | int[] | 是 | 要发送的指令。每个number十六进制表示，范围是0x00~0xFF。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int[]&gt; | Promise对象，返回对端Tag对指令的响应数据，每个number十六进制表示，范围是0x00~0xFF。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;number[] & gt;<br>ArkTS-Sta：Promise & lt;int[] & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
@@ -775,40 +799,45 @@ function tagSessionDemo() {
 
 ## transmit
 
+ArkTS-Dyn:
+```TypeScript
+transmit(data: number[], callback: AsyncCallback<number[]>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 transmit(data: int[], callback: AsyncCallback<int[]>): void
 ```
 
 发送指令到Tag上。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-TagSession-transmit(data: int[], callback: AsyncCallback<int[]>): void--><!--Device-TagSession-transmit(data: int[], callback: AsyncCallback<int[]>): void-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | int[] | 是 | 要发送的指令。每个number十六进制表示，范围是0x00~0xFF。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | 是 | 回调函数，返回响应数据。每个number十六进制表示，范围是0x00~0xFF。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | 是 |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
 参见 [transmit](#transmit)
-

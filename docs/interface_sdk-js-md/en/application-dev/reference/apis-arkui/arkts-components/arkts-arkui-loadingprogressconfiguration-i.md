@@ -6,7 +6,7 @@ You need a custom class to implement the **ContentModifier** API. Inherits from 
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface LoadingProgressConfiguration--><!--Device-unnamed-declare interface LoadingProgressConfiguration-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,10 @@ Whether to show the loading animation.Default value: **true**. **true**: Show th
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-LoadingProgressConfiguration-enableLoading: boolean--><!--Device-LoadingProgressConfiguration-enableLoading: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

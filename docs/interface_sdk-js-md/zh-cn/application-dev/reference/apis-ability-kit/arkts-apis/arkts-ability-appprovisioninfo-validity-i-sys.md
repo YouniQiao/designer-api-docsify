@@ -2,9 +2,9 @@
 
 配置文件中的有效期。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-unnamed-export interface Validity--><!--Device-unnamed-export interface Validity-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -18,11 +18,11 @@ readonly notAfter: long
 
 表示配置文件有效期的结束时间，单位：秒。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Validity-readonly notAfter: long--><!--Device-Validity-readonly notAfter: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -36,13 +36,12 @@ readonly notBefore: long
 
 表示配置文件有效期的开始时间，单位：秒。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Validity-readonly notBefore: long--><!--Device-Validity-readonly notBefore: long-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
-

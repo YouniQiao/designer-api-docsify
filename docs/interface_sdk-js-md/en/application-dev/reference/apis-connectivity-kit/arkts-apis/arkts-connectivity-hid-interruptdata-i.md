@@ -4,7 +4,7 @@ Describe the interrupt data is received from remote host.
 
 **Since:** 23
 
-<!--Device-hid-interface InterruptData--><!--Device-hid-interface InterruptData-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -26,27 +26,26 @@ data of interrupt data.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-InterruptData-data: Uint8Array--><!--Device-InterruptData-data: Uint8Array-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## id
 
 ```TypeScript
-id: int
+id: number
 ```
 
 id of interrupt data.
 
-**Type:** int
+**Type:** number
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-InterruptData-id: int--><!--Device-InterruptData-id: int-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

@@ -16,25 +16,25 @@ function closeFormEditAbility(isMainPage?: boolean): void
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-formProvider-function closeFormEditAbility(isMainPage?: boolean): void--><!--Device-formProvider-function closeFormEditAbility(isMainPage?: boolean): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isMainPage | boolean | 否 | 是否关闭主编辑页。 <br>- true：关闭主编辑页，适合在主编辑页完成配置后关闭的场景。 <br>- false：关闭非主编辑页，适合在多级编辑页场景下关闭当前非主编辑页的场景。 <br>默认值：true（通常关闭当前编辑页时使用默认值即可）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| isMainPage | boolean | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported due to limited device capabilities. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
-| [16501015](../errorcode-form.md#16501015-不能关闭其他应用的半模态卡片编辑页) | Cannot close the widget editing page opened by other apps. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
+| [16501015](../errorcode-form.md#16501015-不能关闭其他应用的半模态卡片编辑页) |
 
 **示例**
 
@@ -122,4 +122,3 @@ struct Child {
   }
 }
 ```
-

@@ -6,7 +6,7 @@ The &lt;menu&gt; component provides menus as temporary pop-up windows to display
 
 **Since:** 4
 
-<!--Device-unnamed-export interface MenuElement--><!--Device-unnamed-export interface MenuElement-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,15 +20,14 @@ Displays the menu. x and y specify the position of the displayed menu. x indicat
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-MenuElement-show(position: { x: number; y: number }): void--><!--Device-MenuElement-show(position: { x: number; y: number }): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| position | { x: number; y: number } | Yes |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| position | { x: number; y: number } | Yes |

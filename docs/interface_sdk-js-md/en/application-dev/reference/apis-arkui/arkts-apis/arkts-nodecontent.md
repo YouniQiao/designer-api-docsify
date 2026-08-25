@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [NodeContent](arkts-arkui-nodecontent-c.md) | **NodeContent** is the ArkUI-provided manager for ContentSlot. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [NodeContent](arkts-arkui-nodecontent-c.md) |

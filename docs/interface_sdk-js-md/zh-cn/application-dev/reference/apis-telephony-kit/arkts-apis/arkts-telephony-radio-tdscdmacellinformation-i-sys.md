@@ -2,9 +2,9 @@
 
 Obtains TDSCDMA cell information.
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-radio-export interface TdscdmaCellInformation--><!--Device-radio-export interface TdscdmaCellInformation-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -24,11 +24,11 @@ cellId: int
 
 Indicates the cell ID.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-TdscdmaCellInformation-cellId: int--><!--Device-TdscdmaCellInformation-cellId: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -42,11 +42,11 @@ cpid: int
 
 Indicates the cell parameter ID.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-TdscdmaCellInformation-cpid: int--><!--Device-TdscdmaCellInformation-cpid: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -60,11 +60,11 @@ lac: int
 
 Indicates the location area code.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-TdscdmaCellInformation-lac: int--><!--Device-TdscdmaCellInformation-lac: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -80,9 +80,9 @@ Indicates the mobile country code.
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-TdscdmaCellInformation-mcc: string--><!--Device-TdscdmaCellInformation-mcc: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -98,9 +98,9 @@ Indicates the mobile network code.
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-TdscdmaCellInformation-mnc: string--><!--Device-TdscdmaCellInformation-mnc: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -114,13 +114,12 @@ uarfcn: int
 
 Indicates the absolute radio frequency number.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-TdscdmaCellInformation-uarfcn: int--><!--Device-TdscdmaCellInformation-uarfcn: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
-

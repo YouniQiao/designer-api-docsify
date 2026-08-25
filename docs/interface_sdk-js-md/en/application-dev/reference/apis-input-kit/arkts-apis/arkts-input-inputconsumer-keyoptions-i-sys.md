@@ -2,9 +2,9 @@
 
 Represents combination key options.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputConsumer-interface KeyOptions--><!--Device-inputConsumer-interface KeyOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -24,11 +24,11 @@ finalKey: int
 
 Final key. This parameter is mandatory. A callback is triggered by the final key.For example, in the combination keys **Ctrl+Alt+A**, **A** is called the final key.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-KeyOptions-finalKey: int--><!--Device-KeyOptions-finalKey: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -42,11 +42,11 @@ finalKeyDownDuration: int
 
 Duration for holding down the key, in μs.If the value of this field is **0**, a callback is triggered immediately.If the value of this field is greater than **0** and **isFinalKeyDown** is **true**, a callback is triggered when the key keeps being pressed after the specified duration expires. If **isFinalKeyDown** is **false**, a callback is triggered when the key is released before the specified duration expires.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-KeyOptions-finalKeyDownDuration: int--><!--Device-KeyOptions-finalKeyDownDuration: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -62,9 +62,9 @@ Whether the final key is pressed.The value **true** indicates that the key is pr
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-KeyOptions-isFinalKeyDown: boolean--><!--Device-KeyOptions-isFinalKeyDown: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -80,9 +80,9 @@ Whether to report repeated key events. The value **true** means to report repeat
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-KeyOptions-isRepeat?: boolean--><!--Device-KeyOptions-isRepeat?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -96,11 +96,11 @@ preKeys: Array<int>
 
 Preceding key set. The number of preceding keys ranges from 0 to 4. There is no requirement on the sequence of the keys.For example, in the combination keys **Ctrl+Alt+A**, **Ctrl+Alt** are called preceding keys.
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-KeyOptions-preKeys: Array<int>--><!--Device-KeyOptions-preKeys: Array<int>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -118,11 +118,10 @@ Trigger type, which indicates that the conditions for triggering the callback ex
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-KeyOptions-triggerType?: KeyCommandTriggerType--><!--Device-KeyOptions-triggerType?: KeyCommandTriggerType-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **System API:** This is a system API.
-

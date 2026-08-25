@@ -16,17 +16,17 @@ function terminateTask(longTask: LongTask): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-taskpool-function terminateTask(longTask: LongTask): void--><!--Device-taskpool-function terminateTask(longTask: LongTask): void-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| longTask | [LongTask](arkts-arkts-taskpool-longtask-c.md) | 是 | 需要终止的长时任务。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| longTask | [LongTask](arkts-arkts-taskpool-longtask-c.md) | 是 |
 
 **示例**
 
@@ -51,4 +51,3 @@ function concurrentFunc() {
 
 concurrentFunc();
 ```
-

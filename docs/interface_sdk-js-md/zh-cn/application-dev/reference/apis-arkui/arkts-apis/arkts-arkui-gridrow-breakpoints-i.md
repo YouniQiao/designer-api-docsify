@@ -1,0 +1,45 @@
+# BreakPoints
+
+设置栅格容器组件的断点。@interface BreakPoints
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## reference
+
+```TypeScript
+reference?: BreakpointsReference
+```
+
+断点切换参照物。
+
+**类型：** [BreakpointsReference](arkts-arkui-gridrow-breakpointsreference-e.md)
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## value
+
+```TypeScript
+value?: Array<string>
+```
+
+设置断点位置的单调递增数组。
+
+**类型：** Array&lt;string&gt;
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full

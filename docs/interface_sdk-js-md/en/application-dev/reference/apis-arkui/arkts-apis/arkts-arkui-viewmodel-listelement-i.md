@@ -4,7 +4,7 @@ List element @interface ListElement
 
 **Since:** 4
 
-<!--Device-unnamed-export interface ListElement--><!--Device-unnamed-export interface ListElement-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -18,17 +18,17 @@ Requests or cancels the crown rotation focus for a component. If focus is set to
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-ListElement-rotation(obj?: FocusParamObj): void--><!--Device-ListElement-rotation(obj?: FocusParamObj): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| obj | [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) | No | { focus: true \| false } |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) | No | { focus: true \|
 
 ## scrollTo
 
@@ -40,15 +40,14 @@ Scrolls the list to the position of the item at the specified index.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-ListElement-scrollTo(position: ListScrollToOptions): void--><!--Device-ListElement-scrollTo(position: ListScrollToOptions): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| position | [ListScrollToOptions](arkts-arkui-viewmodel-listscrolltooptions-i.md) | Yes |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| position | [ListScrollToOptions](arkts-arkui-viewmodel-listscrolltooptions-i.md) | Yes |

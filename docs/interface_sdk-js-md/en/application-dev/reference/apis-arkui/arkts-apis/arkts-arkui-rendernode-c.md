@@ -11,7 +11,7 @@ The **RenderNode** module provides APIs for creating a RenderNode in custom draw
 
 **Since:** 11
 
-<!--Device-unnamed-export class RenderNode--><!--Device-unnamed-export class RenderNode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,25 +25,25 @@ Appends a child node to this RenderNode.
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RenderNode-appendChild(node: RenderNode): void--><!--Device-RenderNode-appendChild(node: RenderNode): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| node | [RenderNode](arkts-arkui-rendernode-c.md) | Yes | Child node to append. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| node | [RenderNode](arkts-arkui-rendernode-c.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'node' is invalid: its corresponding FrameNode cannot be adopted."<br>**Applicable version:** 22 and later |
+| Error Code ID |
+| --- |
+| [100025](../errorcode-node.md#100025-invalid-parameter-value) |
 
 **Examples**
 
@@ -108,11 +108,11 @@ Clears all child nodes of this RenderNode.
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RenderNode-clearChildren(): void--><!--Device-RenderNode-clearChildren(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -177,11 +177,11 @@ Constructor used to create a RenderNode.
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RenderNode-constructor()--><!--Device-RenderNode-constructor()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -238,11 +238,11 @@ Releases this RenderNode immediately.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RenderNode-dispose(): void--><!--Device-RenderNode-dispose(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -315,19 +315,19 @@ Performs drawing. You need to implement this API. It is called when the RenderNo
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RenderNode-draw(context: DrawContext): void--><!--Device-RenderNode-draw(context: DrawContext): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Yes | Graphics drawing context. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Yes |
 
 **Examples**
 
@@ -482,25 +482,25 @@ Obtains the child node in the specified position of this RenderNode.
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RenderNode-getChild(index: number): RenderNode | null--><!--Device-RenderNode-getChild(index: number): RenderNode | null-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | number | Yes | Index of the child node to obtain. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) \| null | Child node obtained. If the RenderNode does not contain the specified child node, null is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [RenderNode](arkts-arkui-rendernode-c.md) \| null |
 
 **Examples**
 
@@ -573,19 +573,19 @@ Obtains the first child node of this RenderNode.
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RenderNode-getFirstChild(): RenderNode | null--><!--Device-RenderNode-getFirstChild(): RenderNode | null-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) \| null | First child node. If the RenderNode does not contain any child node, null is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [RenderNode](arkts-arkui-rendernode-c.md) \| null |
 
 **Examples**
 
@@ -663,19 +663,19 @@ Obtains the next sibling node of this RenderNode.
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RenderNode-getNextSibling(): RenderNode | null--><!--Device-RenderNode-getNextSibling(): RenderNode | null-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) \| null | Next sibling node of the current RenderNode. If the RenderNode does not have the next sibling node, null is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [RenderNode](arkts-arkui-rendernode-c.md) \| null |
 
 **Examples**
 
@@ -754,19 +754,19 @@ Obtains the previous sibling node of this RenderNode.
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RenderNode-getPreviousSibling(): RenderNode | null--><!--Device-RenderNode-getPreviousSibling(): RenderNode | null-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) \| null | Previous sibling node of the current RenderNode. If the RenderNode does not have the previous sibling node, null is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [RenderNode](arkts-arkui-rendernode-c.md) \| null |
 
 **Examples**
 
@@ -845,26 +845,26 @@ Inserts a child node after the specified child node of this RenderNode.
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RenderNode-insertChildAfter(child: RenderNode, sibling: RenderNode | null): void--><!--Device-RenderNode-insertChildAfter(child: RenderNode, sibling: RenderNode | null): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| child | [RenderNode](arkts-arkui-rendernode-c.md) | Yes | Child node to add. |
-| sibling | [RenderNode](arkts-arkui-rendernode-c.md) \| null | Yes | Node after which the new child node will be inserted. If this parameter is left empty, the new node is inserted before the first subnode. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| child | [RenderNode](arkts-arkui-rendernode-c.md) | Yes |
+| sibling | [RenderNode](arkts-arkui-rendernode-c.md) \| null | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: its corresponding FrameNode cannot be adopted."<br>**Applicable version:** 22 and later |
+| Error Code ID |
+| --- |
+| [100025](../errorcode-node.md#100025-invalid-parameter-value) |
 
 **Examples**
 
@@ -942,11 +942,11 @@ Triggers the re-rendering of this RenderNode.
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RenderNode-invalidate(): void--><!--Device-RenderNode-invalidate(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1023,19 +1023,19 @@ Checks whether this RenderNode object has released its reference to its backend 
 
 **Since:** 20
 
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-RenderNode-isDisposed(): boolean--><!--Device-RenderNode-isDisposed(): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the reference to the backend node is released. The value **true** means that the reference to backend node is released, and **false** means the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -1126,19 +1126,19 @@ Deletes the specified child node from this RenderNode.
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RenderNode-removeChild(node: RenderNode): void--><!--Device-RenderNode-removeChild(node: RenderNode): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| node | [RenderNode](arkts-arkui-rendernode-c.md) | Yes | Child node to delete. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| node | [RenderNode](arkts-arkui-rendernode-c.md) | Yes |
 
 **Examples**
 
@@ -1198,3 +1198,604 @@ struct Index {
 }
 ```
 
+## backgroundBlur
+
+```TypeScript
+get backgroundBlur(): BackgroundBlur
+```
+
+Get the background blur effect.
+
+**Type:** [BackgroundBlur](arkts-arkui-graphics-backgroundblur-i.md)
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## backgroundColor
+
+```TypeScript
+get backgroundColor(): number
+```
+
+Get the background color of the RenderNode.
+
+**Type:** number
+
+**Default:** 0X00000000 [since 11 - 11]
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## borderColor
+
+```TypeScript
+get borderColor(): Edges<number>
+```
+
+Get border color of the RenderNode.
+
+**Type:** [Edges](arkts-arkui-graphics-edges-i.md)&lt;number&gt;
+
+**Default:** 0XFF000000
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## borderRadius
+
+```TypeScript
+get borderRadius(): BorderRadiuses
+```
+
+Get border radius of the RenderNode.
+
+**Type:** [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
+
+**Default:** 0
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## borderStyle
+
+```TypeScript
+get borderStyle(): Edges<BorderStyle>
+```
+
+Get border style of the RenderNode.
+
+**Type:** [Edges](arkts-arkui-graphics-edges-i.md)&lt;BorderStyle&gt;
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## borderWidth
+
+```TypeScript
+get borderWidth(): Edges<number>
+```
+
+Get border width of the RenderNode.
+
+**Type:** [Edges](arkts-arkui-graphics-edges-i.md)&lt;number&gt;
+
+**Default:** 0
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## clipToFrame
+
+```TypeScript
+get clipToFrame(): boolean
+```
+
+Get whether the RenderNode clip to frame.
+
+**Type:** boolean
+
+**Default:** true [since 11 - 11]
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## contentBlur
+
+```TypeScript
+get contentBlur(): ContentBlur
+```
+
+Get the content blur effect.
+
+**Type:** [ContentBlur](arkts-arkui-graphics-contentblur-i.md)
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## foregroundBlur
+
+```TypeScript
+get foregroundBlur(): ForegroundBlur
+```
+
+Get the foreground blur effect.
+
+**Type:** [ForegroundBlur](arkts-arkui-graphics-foregroundblur-i.md)
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## frame
+
+```TypeScript
+get frame(): Frame
+```
+
+Get frame info of the RenderNode.
+
+**Type:** [Frame](arkts-arkui-graphics-frame-i.md)
+
+**Default:** Frame { x: 0, y: 0, width: 0, height: 0 } [since 11 - 11]
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## label
+
+```TypeScript
+get label(): string
+```
+
+Get label of the RenderNode.
+
+**Type:** string
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## lengthMetricsUnit
+
+```TypeScript
+get lengthMetricsUnit(): LengthMetricsUnit
+```
+
+Get the length metrics unit of RenderNode.
+
+**Type:** [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md)
+
+**Default:** LengthMetricsUnit.DEFAULT
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## markNodeGroup
+
+```TypeScript
+get markNodeGroup(): boolean
+```
+
+Get whether to preferentially draw the node and its children.
+
+**Type:** boolean
+
+**Default:** false
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## opacity
+
+```TypeScript
+get opacity(): number
+```
+
+Get opacity of the RenderNode.
+
+**Type:** number
+
+**Default:** 1 [since 11 - 11]
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## pivot
+
+```TypeScript
+get pivot(): Pivot
+```
+
+Get pivot vector of the RenderNode.
+
+**Type:** [Pivot](arkts-arkui-pivot-t.md)
+
+**Default:** Pivot { x: 0.5, y: 0.5 } [since 11 - 11]
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## position
+
+```TypeScript
+get position(): Position
+```
+
+Get frame position of the RenderNode.
+
+**Type:** [Position](arkts-arkui-position-t.md)
+
+**Default:** Position { x: 0, y: 0 } [since 11 - 11]
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## rotation
+
+```TypeScript
+get rotation(): Rotation
+```
+
+Get rotation vector of the RenderNode.
+
+**Type:** [Rotation](arkts-arkui-rotation-t.md)
+
+**Default:** Rotation { x: 0, y: 0, z: 0 } [since 11 - 11]
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## scale
+
+```TypeScript
+get scale(): Scale
+```
+
+Get scale vector of the RenderNode.
+
+**Type:** [Scale](arkts-arkui-scale-t.md)
+
+**Default:** Scale { x: 1, y: 1 } [since 11 - 11]
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## shadowAlpha
+
+```TypeScript
+get shadowAlpha(): number
+```
+
+Get shadow alpha of the RenderNode.
+
+**Type:** number
+
+**Default:** 0 [since 11 - 11]
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## shadowColor
+
+```TypeScript
+get shadowColor(): number
+```
+
+Get shadow color of the RenderNode.
+
+**Type:** number
+
+**Default:** 0X00000000 [since 11 - 11]
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## shadowElevation
+
+```TypeScript
+get shadowElevation(): number
+```
+
+Get shadow elevation of the RenderNode.
+
+**Type:** number
+
+**Default:** 0 [since 11 - 11]
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## shadowOffset
+
+```TypeScript
+get shadowOffset(): Offset
+```
+
+Get shadow offset of the RenderNode.
+
+**Type:** [Offset](arkts-arkui-offset-t.md)
+
+**Default:** Offset { x: 0, y: 0 } [since 11 - 11]
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## shadowRadius
+
+```TypeScript
+get shadowRadius(): number
+```
+
+Get shadow radius of the RenderNode.
+
+**Type:** number
+
+**Default:** 0 [since 11 - 11]
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## shapeClip
+
+```TypeScript
+get shapeClip(): ShapeClip
+```
+
+Get shape clip of the RenderNode.
+
+**Type:** [ShapeClip](arkts-arkui-graphics-shapeclip-c.md)
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## shapeMask
+
+```TypeScript
+get shapeMask(): ShapeMask
+```
+
+Get shape mask of the RenderNode.
+
+**Type:** [ShapeMask](arkts-arkui-graphics-shapemask-c.md)
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## size
+
+```TypeScript
+get size(): Size
+```
+
+Get frame size of the RenderNode.
+
+**Type:** Size
+
+**Default:** Size { width: 0, height: 0 } [since 11 - 11]
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## transform
+
+```TypeScript
+get transform(): Matrix4
+```
+
+Get transform info of the RenderNode.
+
+**Type:** [Matrix4](arkts-arkui-matrix4-t.md)
+
+**Default:** Matrix4 [ 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 ] [since 11 - 11]
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## translation
+
+```TypeScript
+get translation(): Translation
+```
+
+Get translation vector of the RenderNode.
+
+**Type:** [Translation](arkts-arkui-translation-t.md)
+
+**Default:** Translation { x: 0, y: 0 } [since 11 - 11]
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

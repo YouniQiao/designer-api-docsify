@@ -4,9 +4,9 @@ Defines the mouse event.
 
 **Inheritance/Implementation:** MouseEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export declare interface MouseEvent--><!--Device-unnamed-export declare interface MouseEvent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -26,9 +26,9 @@ Enumerates mouse event types.
 
 **Type:** [Action](arkts-input-multimodalinput-mouseevent-action-e.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MouseEvent-action: Action--><!--Device-MouseEvent-action: Action-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -42,9 +42,9 @@ Whether altKey is being pressed.The value **true** indicates that the key is pre
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MouseEvent-altKey: boolean--><!--Device-MouseEvent-altKey: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -58,9 +58,9 @@ Defines the mouse axis type and axis value.
 
 **Type:** [AxisValue](arkts-input-multimodalinput-mouseevent-axisvalue-i.md)[]
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MouseEvent-axes: AxisValue[]--><!--Device-MouseEvent-axes: AxisValue[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -74,9 +74,9 @@ Enumerates mouse buttons.
 
 **Type:** [Button](arkts-input-multimodalinput-mouseevent-button-e.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MouseEvent-button: Button--><!--Device-MouseEvent-button: Button-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -90,9 +90,9 @@ Whether capsLock is enabled.The value **true** indicates that capsLock is enable
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MouseEvent-capsLock: boolean--><!--Device-MouseEvent-capsLock: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -106,9 +106,9 @@ Whether ctrlKey is being pressed.The value **true** indicates that the key is pr
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MouseEvent-ctrlKey: boolean--><!--Device-MouseEvent-ctrlKey: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -122,9 +122,9 @@ Whether fnKey is being pressed.The value **true** indicates that the key is pres
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MouseEvent-fnKey: boolean--><!--Device-MouseEvent-fnKey: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -136,11 +136,11 @@ globalX?: int
 
 X coordinate of the mouse event in the global coordinate system with the upper left corner of the primary screen as the origin, in px. When this parameter is used as an input parameter, it is mandatory and supports only integers if [MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i-sys.md) is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and the X coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the system.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-MouseEvent-globalX?: int--><!--Device-MouseEvent-globalX?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -152,11 +152,11 @@ globalY?: int
 
 Y coordinate of the mouse event in the global coordinate system with the upper left corner of the primary screen as the origin, in px. When this parameter is used as an input parameter, it is mandatory and supports only integers if [MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i-sys.md) is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and the Y coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the system.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-MouseEvent-globalY?: int--><!--Device-MouseEvent-globalY?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -170,9 +170,9 @@ Whether logoKey is being pressed.The value **true** indicates that the key is pr
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MouseEvent-logoKey: boolean--><!--Device-MouseEvent-logoKey: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -186,9 +186,9 @@ Whether numLock is enabled.The value **true** indicates that numLock is enabled,
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MouseEvent-numLock: boolean--><!--Device-MouseEvent-numLock: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -202,9 +202,9 @@ Button being pressed.
 
 **Type:** [Button](arkts-input-multimodalinput-mouseevent-button-e.md)[]
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MouseEvent-pressedButtons: Button[]--><!--Device-MouseEvent-pressedButtons: Button[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -218,9 +218,9 @@ List of pressed keys.
 
 **Type:** [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md)[]
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MouseEvent-pressedKeys: KeyCode[]--><!--Device-MouseEvent-pressedKeys: KeyCode[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -232,11 +232,11 @@ rawDeltaX: int
 
 X coordinate offset of the current mouse event relative to the previous event, in px. Currently, the value can only be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MouseEvent-rawDeltaX: int--><!--Device-MouseEvent-rawDeltaX: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -248,11 +248,11 @@ rawDeltaY: int
 
 Y coordinate offset of the current mouse event relative to the previous event, in px. Currently, the value can only be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MouseEvent-rawDeltaY: int--><!--Device-MouseEvent-rawDeltaY: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -264,11 +264,11 @@ screenX: int
 
 X coordinate of the mouse event in the relative coordinate system with the upper left corner of the specified screen as the origin, in px. Currently, the value can only be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MouseEvent-screenX: int--><!--Device-MouseEvent-screenX: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -280,11 +280,11 @@ screenY: int
 
 Y coordinate of the mouse event in the relative coordinate system with the upper left corner of the specified screen as the origin, in px. Currently, the value can only be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MouseEvent-screenY: int--><!--Device-MouseEvent-screenY: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -298,9 +298,9 @@ Whether scrollLock is enabled.The value **true** indicates that scrollLock is en
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MouseEvent-scrollLock: boolean--><!--Device-MouseEvent-scrollLock: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -314,9 +314,9 @@ Whether shiftKey is being pressed.The value **true** indicates that the key is p
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MouseEvent-shiftKey: boolean--><!--Device-MouseEvent-shiftKey: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -330,9 +330,9 @@ Tool type.
 
 **Type:** [ToolType](arkts-input-multimodalinput-mouseevent-tooltype-e.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-MouseEvent-toolType: ToolType--><!--Device-MouseEvent-toolType: ToolType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -344,11 +344,11 @@ windowX: int
 
 X coordinate in the relative coordinate system with the upper left corner of the window where the mouse is located as the origin, in px. Currently, the value can only be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MouseEvent-windowX: int--><!--Device-MouseEvent-windowX: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -360,11 +360,10 @@ windowY: int
 
 Y coordinate in the relative coordinate system with the upper left corner of the window where the mouse is located as the origin, in px. Currently, the value can only be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MouseEvent-windowY: int--><!--Device-MouseEvent-windowY: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
-

@@ -4,7 +4,7 @@ Web组件返回的请求/响应头对象。@interface WebHeader [since 9 - 11]
 
 **起始版本：** 9
 
-<!--Device-webview-interface WebHeader--><!--Device-webview-interface WebHeader-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -26,9 +26,9 @@ headerKey: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
-<!--Device-WebHeader-headerKey: string--><!--Device-WebHeader-headerKey: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -44,9 +44,8 @@ headerValue: string
 
 **起始版本：** 9
 
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-WebHeader-headerValue: string--><!--Device-WebHeader-headerValue: string-End-->
-
 **系统能力：** SystemCapability.Web.Webview.Core
-

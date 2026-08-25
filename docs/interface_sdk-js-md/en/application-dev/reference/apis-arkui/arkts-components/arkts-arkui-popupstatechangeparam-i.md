@@ -4,7 +4,7 @@ Display state of the popup.
 
 **Since:** 18
 
-<!--Device-unnamed-declare interface PopupStateChangeParam--><!--Device-unnamed-declare interface PopupStateChangeParam-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,10 @@ Display state of the popup. It returns **true** when the popup transitions from 
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-PopupStateChangeParam-isVisible: boolean--><!--Device-PopupStateChangeParam-isVisible: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

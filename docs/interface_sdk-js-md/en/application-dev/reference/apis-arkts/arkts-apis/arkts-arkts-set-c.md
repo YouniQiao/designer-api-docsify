@@ -6,9 +6,7 @@ Set implementation.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-unnamed-export class Set--><!--Device-unnamed-export class Set-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,19 +25,17 @@ Returns the default iterator of the Set, which is the values() iterator.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Set-$_iterator(): IterableIterator<K>--><!--Device-Set-$_iterator(): IterableIterator<K>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;K&gt; | The default iterator of the Set. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;K & gt; |
 
 ## add
 
@@ -51,25 +47,23 @@ Puts a value into the Set.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Set-add(val: K): this--><!--Device-Set-add(val: K): this-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | K | Yes | the value to put into the Set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | K | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| this | Add value Set. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| this |
 
 ## clear
 
@@ -81,11 +75,9 @@ Deletes all elements from the Set.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Set-clear(): void--><!--Device-Set-clear(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -99,19 +91,17 @@ Creates a new Set instance with the specified number of buckets.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Set-constructor(bucketsCount: int)--><!--Device-Set-constructor(bucketsCount: int)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bucketsCount | int | Yes | The number of buckets for the internal map. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bucketsCount | int | Yes |
 
 ## constructor
 
@@ -123,19 +113,17 @@ Creates a new Set instance from another Set.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Set-constructor(set: Set<K>)--><!--Device-Set-constructor(set: Set<K>)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| set | Set&lt;K&gt; | Yes | Another Set instance used for initialization. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| set | Set & lt;K & gt; | Yes |
 
 ## constructor
 
@@ -147,19 +135,17 @@ Creates a new Set instance from an array.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Set-constructor(values: K[])--><!--Device-Set-constructor(values: K[])-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| values | K[] | Yes | The array used for initialization. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [values](#values) | K[] | Yes |
 
 ## constructor
 
@@ -171,19 +157,17 @@ Creates a new Set instance from an iterable object or FixedArray.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Set-constructor(elements?: Iterable<K> | FixedArray<K> | null)--><!--Device-Set-constructor(elements?: Iterable<K> | FixedArray<K> | null)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| elements | Iterable&lt;K&gt; \| FixedArray&lt;K&gt; \| null | No | The iterable object, FixedArray, or null used for initialization. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [elements](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-pagemediaentity-i.md) | Iterable & lt;K & gt; \ | FixedArray & lt;K & gt; \ | null | No |
 
 ## delete
 
@@ -195,25 +179,23 @@ Removes a value from the Set.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Set-delete(val: K): boolean--><!--Device-Set-delete(val: K): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | K | Yes | the value to remove. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | K | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the value was removed. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## entries
 
@@ -225,19 +207,17 @@ Returns an iterable of [v, v] pairs for every value in the Set.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Set-entries(): IterableIterator<[K, K]>--><!--Device-Set-entries(): IterableIterator<[K, K]>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;[K, K]&gt; | an iterable of [v, v] pairs. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;[K, K] & gt; |
 
 ## forEach
 
@@ -249,19 +229,17 @@ Executes a provided function once per each value in the Set object, in insertion
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Set-forEach(callbackfn: (k: K, v: K, set: Set<K>) => void): void--><!--Device-Set-forEach(callbackfn: (k: K, v: K, set: Set<K>) => void): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (k: K, v: K, set: Set&lt;K&gt;) =&gt; void | Yes | the function to apply. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (k: K, v: K, set: Set & lt;K & gt;) = & gt; void | Yes |
 
 ## has
 
@@ -273,25 +251,23 @@ Checks if a value is in the Set.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Set-has(val: K): boolean--><!--Device-Set-has(val: K): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | K | Yes | the value to find in the Set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | K | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the value is in the Set. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## keys
 
@@ -303,19 +279,17 @@ Despite name, returns elements from the Set.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Set-keys(): IterableIterator<K>--><!--Device-Set-keys(): IterableIterator<K>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;K&gt; | an iterable of the values in the Set. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;K & gt; |
 
 ## toString
 
@@ -327,19 +301,17 @@ Converts this Set to a String.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Set-toString(): string--><!--Device-Set-toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the Set. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## values
 
@@ -351,17 +323,32 @@ Returns elements from the Set.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Set-values(): IterableIterator<K>--><!--Device-Set-values(): IterableIterator<K>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;K&gt; | an iterable of the values in the Set. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;K & gt; |
 
+## size
+
+```TypeScript
+get size(): int
+```
+
+Gets the number of unique elements in the Set.
+
+**Type:** int
+
+**Since:** 24
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang

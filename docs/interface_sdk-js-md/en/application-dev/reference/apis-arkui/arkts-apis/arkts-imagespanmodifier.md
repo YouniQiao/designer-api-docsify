@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [ImageSpanModifier](arkts-arkui-imagespanmodifier-c.md) | Defines TextInput Modifier |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ImageSpanModifier](arkts-arkui-imagespanmodifier-c.md) |

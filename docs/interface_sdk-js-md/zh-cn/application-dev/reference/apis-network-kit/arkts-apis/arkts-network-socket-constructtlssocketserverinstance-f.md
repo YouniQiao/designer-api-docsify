@@ -16,15 +16,15 @@ function constructTLSSocketServerInstance(): TLSSocketServer
 
 **起始版本：** 10
 
-<!--Device-socket-function constructTLSSocketServerInstance(): TLSSocketServer--><!--Device-socket-function constructTLSSocketServerInstance(): TLSSocketServer-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [TLSSocketServer](arkts-network-socket-tlssocketserver-i.md) | 返回一个TLSSocketServer对象。 |
+| 类型 |
+| --- |
+| [TLSSocketServer](arkts-network-socket-tlssocketserver-i.md) |
 
 **示例**
 
@@ -34,4 +34,3 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
 ```
-

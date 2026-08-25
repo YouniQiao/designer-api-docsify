@@ -4,7 +4,7 @@
 
 **起始版本：** 14
 
-<!--Device-netFirewall-interface InterceptedRecordPage--><!--Device-netFirewall-interface InterceptedRecordPage-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -26,7 +26,7 @@ data: Array<InterceptedRecord>
 
 **起始版本：** 14
 
-<!--Device-InterceptedRecordPage-data: Array<InterceptedRecord>--><!--Device-InterceptedRecordPage-data: Array<InterceptedRecord>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -35,16 +35,16 @@ data: Array<InterceptedRecord>
 ## page
 
 ```TypeScript
-page: int
+page: number
 ```
 
 Current page number: indicates the page number of this query.
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 14
 
-<!--Device-InterceptedRecordPage-page: int--><!--Device-InterceptedRecordPage-page: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -53,16 +53,16 @@ Current page number: indicates the page number of this query.
 ## pageSize
 
 ```TypeScript
-pageSize: int
+pageSize: number
 ```
 
 Page size: maximum number of records on a page for this query.
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 14
 
-<!--Device-InterceptedRecordPage-pageSize: int--><!--Device-InterceptedRecordPage-pageSize: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -71,18 +71,17 @@ Page size: maximum number of records on a page for this query.
 ## totalPage
 
 ```TypeScript
-totalPage: int
+totalPage: number
 ```
 
 Total pages: total number of pages.
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 14
 
-<!--Device-InterceptedRecordPage-totalPage: int--><!--Device-InterceptedRecordPage-totalPage: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **系统接口：** 此接口为系统接口。
-

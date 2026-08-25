@@ -2,9 +2,9 @@
 
 Implements wakeup management.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-intelligentVoice-interface WakeupManager--><!--Device-intelligentVoice-interface WakeupManager-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -24,11 +24,11 @@ clearUserData(): Promise<void>
 
 Clears user data.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
-
-<!--Device-WakeupManager-clearUserData(): Promise<void>--><!--Device-WakeupManager-clearUserData(): Promise<void>-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -36,17 +36,17 @@ Clears user data.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | the promise used to return the result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) | System error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) |
 
 **Examples**
 
@@ -70,11 +70,11 @@ enrollWithWakeupFilesForResult(wakeupFiles: Array<WakeupSourceFile>, wakeupInfo:
 
 Enrolls with wakeup files for result. This method uses a promise to return the enroll result.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
-
-<!--Device-WakeupManager-enrollWithWakeupFilesForResult(wakeupFiles: Array<WakeupSourceFile>, wakeupInfo: string): Promise<EnrollResult>--><!--Device-WakeupManager-enrollWithWakeupFilesForResult(wakeupFiles: Array<WakeupSourceFile>, wakeupInfo: string): Promise<EnrollResult>-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -82,27 +82,27 @@ Enrolls with wakeup files for result. This method uses a promise to return the e
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| wakeupFiles | Array&lt;[WakeupSourceFile](arkts-basicservices-intelligentvoice-wakeupsourcefile-i-sys.md)&gt; | Yes | the wakeup source files needed. |
-| wakeupInfo | string | Yes | wakeup information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| wakeupFiles | Array&lt;[WakeupSourceFile](arkts-basicservices-intelligentvoice-wakeupsourcefile-i-sys.md)&gt; | Yes |
+| wakeupInfo | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[EnrollResult](arkts-basicservices-intelligentvoice-enrollresult-e-sys.md)&gt; | the promise used to return the enroll result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[EnrollResult](arkts-basicservices-intelligentvoice-enrollresult-e-sys.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) | No memory. |
-| [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
-| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) | System error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) |
+| [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) |
+| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) |
 
 **Examples**
 
@@ -133,11 +133,11 @@ getParameter(key: string): Promise<string>
 
 Obtains the value of an intelligent voice parameter. This method uses a promise to return the query result.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
-
-<!--Device-WakeupManager-getParameter(key: string): Promise<string>--><!--Device-WakeupManager-getParameter(key: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -145,25 +145,25 @@ Obtains the value of an intelligent voice parameter. This method uses a promise 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | the key of the intelligent voice parameter whose value is to be obtained. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | the promise used to return the value of the intelligent voice parameter. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
-| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) | System error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) |
+| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) |
 
 **Examples**
 
@@ -238,17 +238,23 @@ if (wakeupIntelligentVoiceEngine != null) {
 
 ## getUploadFiles
 
+ArkTS-Dyn:
+```TypeScript
+getUploadFiles (maxCount: number): Promise<Array<UploadFile>>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getUploadFiles (maxCount: int): Promise<Array<UploadFile>>
 ```
 
 Obtains files needed to upload. This method uses a promise to return the files needed to upload.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
-
-<!--Device-WakeupManager-getUploadFiles (maxCount: int): Promise<Array<UploadFile>>--><!--Device-WakeupManager-getUploadFiles (maxCount: int): Promise<Array<UploadFile>>-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -256,26 +262,26 @@ Obtains files needed to upload. This method uses a promise to return the files n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| maxCount | int | Yes | the maximum count of upload files. The maxCount should be greater than 0 and smaller than 101 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| maxCount | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;[UploadFile](arkts-basicservices-intelligentvoice-uploadfile-i-sys.md)&gt;&gt; | the promise used to return the upload files. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;Array&lt;[UploadFile](arkts-basicservices-intelligentvoice-uploadfile-i-sys.md)&gt;&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
-| [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) | No memory. |
-| [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
-| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) | System error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) |
+| [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) |
+| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) |
 
 **Examples**
 
@@ -300,11 +306,11 @@ getWakeupSourceFiles(): Promise<Array<WakeupSourceFile>>
 
 Obtains wakeup source files. This method uses a promise to return the wakeup source files.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
-
-<!--Device-WakeupManager-getWakeupSourceFiles(): Promise<Array<WakeupSourceFile>>--><!--Device-WakeupManager-getWakeupSourceFiles(): Promise<Array<WakeupSourceFile>>-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -312,18 +318,18 @@ Obtains wakeup source files. This method uses a promise to return the wakeup sou
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;[WakeupSourceFile](arkts-basicservices-intelligentvoice-wakeupsourcefile-i-sys.md)&gt;&gt; | the promise used to return the wakeup source files. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;Array&lt;[WakeupSourceFile](arkts-basicservices-intelligentvoice-wakeupsourcefile-i-sys.md)&gt;&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) | No memory. |
-| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) | System error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) |
+| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) |
 
 **Examples**
 
@@ -349,11 +355,11 @@ setParameter(key: string, value: string): Promise<void>
 
 Sets an intelligent voice parameter. This method uses a promise to return the result.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
-
-<!--Device-WakeupManager-setParameter(key: string, value: string): Promise<void>--><!--Device-WakeupManager-setParameter(key: string, value: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -361,26 +367,26 @@ Sets an intelligent voice parameter. This method uses a promise to return the re
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | the key of the intelligent voice parameter to set. |
-| value | string | Yes | the value of the intelligent voice parameter to set. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| value | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | the promise used to return the result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
-| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) | System error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) |
+| [22700107](../errorcode-intelligentVoice.md#22700107-system-error) |
 
 **Examples**
 
@@ -447,4 +453,3 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
-

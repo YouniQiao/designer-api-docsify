@@ -2,9 +2,9 @@
 
 认证器基类。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-appAccount-class Authenticator--><!--Device-appAccount-class Authenticator-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -32,22 +32,22 @@ addAccountImplicitly(
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [createAccountImplicitly](#createaccountimplicitly)(options: CreateAccountImplicitlyOptions, callback: AuthCallback)
-
-<!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| authType | string | 是 | 应用账号的鉴权类型。自定义数据，最大长度为1024个字符。 |
-| callerBundleName | string | 是 | 鉴权请求方的包名。 |
-| options | { [key: string]: any } | 是 | 鉴权所需要的可选项。 |
-| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| authType | string | 是 |
+| callerBundleName | string | 是 |
+| options | { [key: string]: any } | 是 |
+| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | 是 |
 
 **示例**
 
@@ -100,18 +100,18 @@ auth(name: string, authType: string, options: Record<string, Object>, callback: 
 
 **起始版本：** 9
 
-<!--Device-Authenticator-auth(name: string, authType: string, options: Record<string, Object>, callback: AuthCallback): void--><!--Device-Authenticator-auth(name: string, authType: string, options: Record<string, Object>, callback: AuthCallback): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | 是 | 应用账号的鉴权类型。自定义数据，最大长度为1024个字符。 |
-| options | Record&lt;string, Object&gt; | 是 | 鉴权所需要的可选项。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| authType | string | 是 |
+| options | Record & lt;string, Object & gt; | 是 |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 |
 
 **示例**
 
@@ -322,18 +322,18 @@ auth(name: string, authType: string, options: Record<string, RecordData>, callba
 
 **起始版本：** 23
 
-<!--Device-Authenticator-auth(name: string, authType: string, options: Record<string, RecordData>, callback: AuthCallback): void--><!--Device-Authenticator-auth(name: string, authType: string, options: Record<string, RecordData>, callback: AuthCallback): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | 是 | 应用账号的鉴权类型。自定义数据，最大长度为1024个字符。 |
-| options | Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt; | 是 | 鉴权所需要的可选项。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| authType | string | 是 |
+| options | Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt; | 是 |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 |
 
 **示例**
 
@@ -358,23 +358,23 @@ authenticate(
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [auth](#auth)(name: string, authType: string, options: Record&lt;string, Object&gt;, callback: AuthCallback)
-
-<!--Device-Authenticator-authenticate(      name: string,      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-Authenticator-authenticate(      name: string,      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | 是 | 应用账号的鉴权类型。自定义数据，最大长度为1024个字符。 |
-| callerBundleName | string | 是 | 鉴权请求方的包名。 |
-| options | { [key: string]: any } | 是 | 鉴权所需要的可选项。 |
-| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| authType | string | 是 |
+| callerBundleName | string | 是 |
+| options | { [key: string]: any } | 是 |
+| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | 是 |
 
 **示例**
 
@@ -425,19 +425,19 @@ checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback):
 
 检查账号标签。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Authenticator-checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback): void--><!--Device-Authenticator-checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| labels | Array&lt;string&gt; | 是 | 标签数组。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| labels | Array & lt;string & gt; | 是 |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 |
 
 **示例**
 
@@ -540,18 +540,18 @@ checkAccountRemovable(name: string, callback: AuthCallback): void
 
 判断账号是否可以删除。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Authenticator-checkAccountRemovable(name: string, callback: AuthCallback): void--><!--Device-Authenticator-checkAccountRemovable(name: string, callback: AuthCallback): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 |
 
 **示例**
 
@@ -565,18 +565,18 @@ createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthC
 
 根据指定的账号所有者隐式地创建应用账号。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Authenticator-createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthCallback): void--><!--Device-Authenticator-createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthCallback): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) | 是 | 隐式创建账号的选项。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调对象，用于返回创建结果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) | 是 |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 |
 
 **示例**
 
@@ -785,17 +785,17 @@ getRemoteObject(): rpc.RemoteObject
 
 获取认证器的远程对象，不可以重载实现。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Authenticator-getRemoteObject(): rpc.RemoteObject--><!--Device-Authenticator-getRemoteObject(): rpc.RemoteObject-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| rpc.RemoteObject | 认证器Authenticator的远程对象。用于跨进程通信。 |
+| 类型 |
+| --- |
+| rpc.RemoteObject |
 
 **示例**
 
@@ -968,18 +968,18 @@ setProperties(options: SetPropertiesOptions, callback: AuthCallback): void
 
 设置认证器属性。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Authenticator-setProperties(options: SetPropertiesOptions, callback: AuthCallback): void--><!--Device-Authenticator-setProperties(options: SetPropertiesOptions, callback: AuthCallback): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [SetPropertiesOptions](arkts-basicservices-appaccount-setpropertiesoptions-i.md) | 是 | 设置属性的可选项。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [SetPropertiesOptions](arkts-basicservices-appaccount-setpropertiesoptions-i.md) | 是 |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 |
 
 **示例**
 
@@ -993,19 +993,19 @@ verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthC
 
 验证应用账号的凭据。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Authenticator-verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthCallback): void--><!--Device-Authenticator-verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthCallback): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| options | [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md) | 是 | 验证凭据的可选项。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| options | [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md) | 是 |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 |
 
 **示例**
 
@@ -1115,4 +1115,3 @@ try {
 ```
 
 接口需组合使用，请查看[getRemoteObject](#getremoteobject)中的示例。
-

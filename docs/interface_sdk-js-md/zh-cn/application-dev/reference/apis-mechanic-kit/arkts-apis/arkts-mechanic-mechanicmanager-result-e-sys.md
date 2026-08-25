@@ -2,9 +2,9 @@
 
 Rotation execution results.@enum { int }
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-mechanicManager-export enum Result--><!--Device-mechanicManager-export enum Result-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -18,9 +18,9 @@ COMPLETED = 0
 
 Rotation completed.
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Result-COMPLETED = 0--><!--Device-Result-COMPLETED = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -34,9 +34,9 @@ INTERRUPTED = 1
 
 Rotation was interrupted.
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Result-INTERRUPTED = 1--><!--Device-Result-INTERRUPTED = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -50,9 +50,9 @@ LIMITED = 2
 
 Device reached limitation.
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Result-LIMITED = 2--><!--Device-Result-LIMITED = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -66,9 +66,9 @@ TIMEOUT = 3
 
 Rotation time out.
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Result-TIMEOUT = 3--><!--Device-Result-TIMEOUT = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -84,7 +84,7 @@ TERMINATE_OBSTACLE  = 4
 
 **起始版本：** 26.0.0
 
-<!--Device-Result-TERMINATE_OBSTACLE  = 4--><!--Device-Result-TERMINATE_OBSTACLE  = 4-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -100,7 +100,7 @@ TERMINATE_CLIFF = 5
 
 **起始版本：** 26.0.0
 
-<!--Device-Result-TERMINATE_CLIFF = 5--><!--Device-Result-TERMINATE_CLIFF = 5-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -114,11 +114,10 @@ SYSTEM_ERROR = 100
 
 Rotation failed due to system error.
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Result-SYSTEM_ERROR = 100--><!--Device-Result-SYSTEM_ERROR = 100-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
-

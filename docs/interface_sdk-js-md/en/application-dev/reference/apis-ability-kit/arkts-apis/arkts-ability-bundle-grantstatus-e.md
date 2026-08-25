@@ -9,11 +9,11 @@ Enumerates the permission grant states.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md)
-
-<!--Device-bundle-export enum GrantStatus--><!--Device-bundle-export enum GrantStatus-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -27,11 +27,11 @@ Permission denied.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [PERMISSION_DENIED](arkts-ability-bundlemanager-permissiongrantstate-e.md#permission_denied)
-
-<!--Device-GrantStatus-PERMISSION_DENIED = -1--><!--Device-GrantStatus-PERMISSION_DENIED = -1-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -45,11 +45,10 @@ Permission granted.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [PERMISSION_GRANTED](arkts-ability-bundlemanager-permissiongrantstate-e.md#permission_granted)
 
-<!--Device-GrantStatus-PERMISSION_GRANTED = 0--><!--Device-GrantStatus-PERMISSION_GRANTED = 0-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework
-

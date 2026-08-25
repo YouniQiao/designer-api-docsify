@@ -4,7 +4,7 @@ Enumerates the firewall rule types, including IP, Domain, and DNS.
 
 **Since:** 15
 
-<!--Device-netFirewall-enum NetFirewallRuleType--><!--Device-netFirewall-enum NetFirewallRuleType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -18,7 +18,7 @@ IP address-based firewall rule.
 
 **Since:** 15
 
-<!--Device-NetFirewallRuleType-RULE_IP = 1--><!--Device-NetFirewallRuleType-RULE_IP = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -32,7 +32,7 @@ Domain name-based rule.
 
 **Since:** 15
 
-<!--Device-NetFirewallRuleType-RULE_DOMAIN = 2--><!--Device-NetFirewallRuleType-RULE_DOMAIN = 2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -46,7 +46,6 @@ DNS-based firewall rule.
 
 **Since:** 15
 
-<!--Device-NetFirewallRuleType-RULE_DNS = 3--><!--Device-NetFirewallRuleType-RULE_DNS = 3-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
-

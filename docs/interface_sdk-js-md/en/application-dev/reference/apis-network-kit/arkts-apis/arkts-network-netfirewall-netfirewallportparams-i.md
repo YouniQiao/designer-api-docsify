@@ -4,7 +4,7 @@ Defines the port parameters of a firewall rule.
 
 **Since:** 15
 
-<!--Device-netFirewall-interface NetFirewallPortParams--><!--Device-netFirewall-interface NetFirewallPortParams-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -17,32 +17,31 @@ import { netFirewall } from '@kit.NetworkKit';
 ## endPort
 
 ```TypeScript
-endPort: int
+endPort: number
 ```
 
 End port number.
 
-**Type:** int
+**Type:** number
 
 **Since:** 15
 
-<!--Device-NetFirewallPortParams-endPort: int--><!--Device-NetFirewallPortParams-endPort: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## startPort
 
 ```TypeScript
-startPort: int
+startPort: number
 ```
 
 Start port number.
 
-**Type:** int
+**Type:** number
 
 **Since:** 15
 
-<!--Device-NetFirewallPortParams-startPort: int--><!--Device-NetFirewallPortParams-startPort: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
-

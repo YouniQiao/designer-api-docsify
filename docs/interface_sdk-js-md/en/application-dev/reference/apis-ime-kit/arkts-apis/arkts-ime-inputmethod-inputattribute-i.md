@@ -2,9 +2,9 @@
 
 Describes the attributes of the edit box, including the text input type and Enter key function type.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-inputMethod-export interface InputAttribute--><!--Device-inputMethod-export interface InputAttribute-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -24,9 +24,9 @@ Ability name set for the edit box. <br> <br>- If the ability name is set for the
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-InputAttribute-abilityName?: string--><!--Device-InputAttribute-abilityName?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -44,9 +44,9 @@ Whether the editor supports consuming key events.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-InputAttribute-consumeKeyEvents?: boolean--><!--Device-InputAttribute-consumeKeyEvents?: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -60,9 +60,9 @@ Function type represented by the Enter key.
 
 **Type:** EnterKeyType
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-InputAttribute-enterKeyType: EnterKeyType--><!--Device-InputAttribute-enterKeyType: EnterKeyType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -76,9 +76,9 @@ Placeholder information set for the edit box. <br> <br>- When placeholder inform
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-InputAttribute-placeholder?: string--><!--Device-InputAttribute-placeholder?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -92,9 +92,8 @@ Enumerates the text input types.
 
 **Type:** [TextInputType](arkts-ime-inputmethod-textinputtype-e.md)
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-InputAttribute-textInputType: TextInputType--><!--Device-InputAttribute-textInputType: TextInputType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

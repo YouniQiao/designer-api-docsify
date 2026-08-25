@@ -1,0 +1,122 @@
+# off（系统接口）
+
+## 导入模块
+
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+```
+
+## off('scanDeviceAdd')
+
+```TypeScript
+function off(type: 'scanDeviceAdd', callback?: Callback<ScannerDevice>): void
+```
+
+取消注册扫描仪设备添加事件回调（系统API）。使用callback异步回调。
+
+**起始版本：** 20
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
+**需要权限：** ohos.permission.MANAGE_PRINT_JOB
+
+**系统能力：** SystemCapability.Print.PrintFramework
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'scanDeviceAdd' | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ScannerDevice](arkts-basicservices-scan-scannerdevice-i.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+**示例**
+
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+
+let callback = (device: scan.ScannerDevice) => {
+    console.info('scan device found: ' + JSON.stringify(device));
+};
+scan.on('scanDeviceFound', callback);
+// 取消注册
+scan.off('scanDeviceFound', callback);
+```
+
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+
+let callback = (device: scan.ScannerSyncDevice) => {
+    console.info('scan device sync: ' + JSON.stringify(device));
+};
+scan.on('scanDeviceSync', callback);
+// 取消注册
+scan.off('scanDeviceSync', callback);
+```
+
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+
+let callback = (device: scan.ScannerDevice) => {
+    console.info('scan device add: ' + JSON.stringify(device));
+};
+scan.on('scanDeviceAdd', callback);
+// 取消注册
+scan.off('scanDeviceAdd', callback);
+```
+
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+
+let callback = (device: scan.ScannerDevice) => {
+    console.info('scan device delete: ' + JSON.stringify(device));
+};
+scan.on('scanDeviceDel', callback);
+// 取消注册
+scan.off('scanDeviceDel', callback);
+```
+
+
+## off('scanDeviceDel')
+
+```TypeScript
+function off(type: 'scanDeviceDel', callback?: Callback<ScannerDevice>): void
+```
+
+取消注册扫描仪设备删除事件回调（系统API）。使用callback异步回调。
+
+**起始版本：** 20
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
+**需要权限：** ohos.permission.MANAGE_PRINT_JOB
+
+**系统能力：** SystemCapability.Print.PrintFramework
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'scanDeviceDel' | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ScannerDevice](arkts-basicservices-scan-scannerdevice-i.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+**示例**
+
+参见 off

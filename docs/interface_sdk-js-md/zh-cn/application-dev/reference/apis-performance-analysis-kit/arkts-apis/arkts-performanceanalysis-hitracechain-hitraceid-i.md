@@ -2,9 +2,9 @@
 
 此接口为HiTraceId对象接口。用于标识分布式跟踪链中的唯一节点，在需要跨线程、跨进程、跨设备跟踪业务流程的场景中使用，例如电商下单流程、支付流 程、分布式服务调用链等。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-hiTraceChain-interface HiTraceId--><!--Device-hiTraceChain-interface HiTraceId-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
@@ -24,9 +24,9 @@ chainId: bigint
 
 **类型：** bigint
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-HiTraceId-chainId: bigint--><!--Device-HiTraceId-chainId: bigint-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
@@ -38,11 +38,11 @@ flags?: int
 
 跟踪标志位，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-HiTraceId-flags?: int--><!--Device-HiTraceId-flags?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
@@ -54,11 +54,11 @@ parentSpanId?: int
 
 父分支标识，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-HiTraceId-parentSpanId?: int--><!--Device-HiTraceId-parentSpanId?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
@@ -70,11 +70,10 @@ spanId?: int
 
 分支标识，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-HiTraceId-spanId?: int--><!--Device-HiTraceId-spanId?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
-

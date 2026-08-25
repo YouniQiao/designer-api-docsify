@@ -4,7 +4,7 @@ VPN 连接对象。在调用 VpnConnection 的方法前，需要先通过[vpn.cr
 
 **起始版本：** 10
 
-<!--Device-vpn-export interface VpnConnection--><!--Device-vpn-export interface VpnConnection-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -26,9 +26,9 @@ destroy(callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**需要权限：** ohos.permission.MANAGE_VPN
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-VpnConnection-destroy(callback: AsyncCallback<void>): void--><!--Device-VpnConnection-destroy(callback: AsyncCallback<void>): void-End-->
+**需要权限：** ohos.permission.MANAGE_VPN
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -36,19 +36,19 @@ destroy(callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，成功时，error 为 undefined，失败返回错误码错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
 
 **示例**
 
@@ -106,9 +106,9 @@ destroy(): Promise<void>
 
 **起始版本：** 10
 
-**需要权限：** ohos.permission.MANAGE_VPN
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-VpnConnection-destroy(): Promise<void>--><!--Device-VpnConnection-destroy(): Promise<void>-End-->
+**需要权限：** ohos.permission.MANAGE_VPN
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -116,19 +116,19 @@ destroy(): Promise<void>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 以 Promise 形式返回设定结果，失败返回错误码错误信息。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
 
 **示例**
 
@@ -144,9 +144,9 @@ protect(socketFd: int, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**需要权限：** ohos.permission.MANAGE_VPN
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-VpnConnection-protect(socketFd: int, callback: AsyncCallback<void>): void--><!--Device-VpnConnection-protect(socketFd: int, callback: AsyncCallback<void>): void-End-->
+**需要权限：** ohos.permission.MANAGE_VPN
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -154,22 +154,22 @@ protect(socketFd: int, callback: AsyncCallback<void>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| socketFd | int | 是 | 指定保护的 socketfd, 该文件描述符通过 [getSocketFd](arkts-network-socket-tcpsocket-i.md#getsocketfd)获取。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，成功时，error 为 undefined，失败返回错误码错误信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| socketFd | number | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) | Invalid parameter value. |
-| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
-| [2203004](../errorcode-net-vpn.md#2203004-无效描述符) | Invalid socket file descriptor. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
+| [2203004](../errorcode-net-vpn.md#2203004-无效描述符) |
 
 **示例**
 
@@ -263,9 +263,9 @@ protect(socketFd: int): Promise<void>
 
 **起始版本：** 10
 
-**需要权限：** ohos.permission.MANAGE_VPN
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-VpnConnection-protect(socketFd: int): Promise<void>--><!--Device-VpnConnection-protect(socketFd: int): Promise<void>-End-->
+**需要权限：** ohos.permission.MANAGE_VPN
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -273,27 +273,27 @@ protect(socketFd: int): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| socketFd | int | 是 | 指定保护的 socketfd, 该文件描述符通过 [getSocketFd](arkts-network-socket-tcpsocket-i.md#getsocketfd)获取。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| socketFd | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 以 Promise 形式返回设定结果，失败返回错误码错误信息。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) | Invalid parameter value. |
-| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
-| [2203004](../errorcode-net-vpn.md#2203004-无效描述符) | Invalid socket file descriptor. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
+| [2203004](../errorcode-net-vpn.md#2203004-无效描述符) |
 
 **示例**
 
@@ -309,9 +309,9 @@ setUp(config: VpnConfig, callback: AsyncCallback<int>): void
 
 **起始版本：** 10
 
-**需要权限：** ohos.permission.MANAGE_VPN
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-VpnConnection-setUp(config: VpnConfig, callback: AsyncCallback<int>): void--><!--Device-VpnConnection-setUp(config: VpnConfig, callback: AsyncCallback<int>): void-End-->
+**需要权限：** ohos.permission.MANAGE_VPN
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -319,23 +319,23 @@ setUp(config: VpnConfig, callback: AsyncCallback<int>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| config | VpnConfig | 是 | 指定 VPN 网络的配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数，当成功启动 VPN 网络时，返回虚拟网卡的文件描述符 fd, error 为 undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| config | [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) | Invalid parameter value. |
-| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
-| [2203001](../errorcode-net-vpn.md#2203001-vpn创建失败) | VPN creation denied. Check the user type. |
-| [2203002](../errorcode-net-vpn.md#2203002-vpn已存在) | VPN already exists. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
+| [2203001](../errorcode-net-vpn.md#2203001-vpn创建失败) |
+| [2203002](../errorcode-net-vpn.md#2203002-vpn已存在) |
 
 **示例**
 
@@ -416,9 +416,9 @@ setUp(config: VpnConfig): Promise<int>
 
 **起始版本：** 10
 
-**需要权限：** ohos.permission.MANAGE_VPN
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-VpnConnection-setUp(config: VpnConfig): Promise<int>--><!--Device-VpnConnection-setUp(config: VpnConfig): Promise<int>-End-->
+**需要权限：** ohos.permission.MANAGE_VPN
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -426,30 +426,29 @@ setUp(config: VpnConfig): Promise<int>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| config | VpnConfig | 是 | 指定 VPN 网络的配置信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| config | [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | 以 Promise 形式返回获取结果，返回指定虚拟网卡的文件描述符 fd。 |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) | Invalid parameter value. |
-| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
-| [2203001](../errorcode-net-vpn.md#2203001-vpn创建失败) | VPN creation denied. Check the user type. |
-| [2203002](../errorcode-net-vpn.md#2203002-vpn已存在) | VPN already exists. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
+| [2203001](../errorcode-net-vpn.md#2203001-vpn创建失败) |
+| [2203002](../errorcode-net-vpn.md#2203002-vpn已存在) |
 
 **示例**
 
 参见 [setUp](#setup)
-

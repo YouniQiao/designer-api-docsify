@@ -16,29 +16,29 @@ function getStartupTaskResult(startupTask: string): Object
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-startupManager-function getStartupTaskResult(startupTask: string): Object--><!--Device-startupManager-function getStartupTaskResult(startupTask: string): Object-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AppStartup
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| startupTask | string | 是 | 启动任务[StartupTask](../../apis-default/arkts-apis/arkts-app-appstartup-startuptask-startuptask-c.md)的名称或预加载so名称。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| startupTask | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Object | 输入为启动任务名时，返回指定的启动任务 [init]{ |
+| 类型 |
+| --- |
+| Object |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -90,25 +90,24 @@ function getStartupTaskResult(startupTask: string): Any
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-startupManager-function getStartupTaskResult(startupTask: string): Any--><!--Device-startupManager-function getStartupTaskResult(startupTask: string): Any-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AppStartup
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| startupTask | string | 是 | 启动任务[StartupTask](../../apis-default/arkts-apis/arkts-app-appstartup-startuptask-startuptask-c.md)的名称或预加载so名称。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| startupTask | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Any | The result of specific startup task. |
+| 类型 |
+| --- |
+| Any |
 
 **示例**
 
 参见 [getStartupTaskResult](#getstartuptaskresult)
-

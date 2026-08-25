@@ -4,7 +4,7 @@ DateData定义了日期通用属性和方法，包括年、月、日。
 
 **起始版本：** 11
 
-<!--Device-unnamed-declare class DateData--><!--Device-unnamed-declare class DateData-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,21 +24,21 @@ DateData的构造函数用于初始化日期对象。
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DateData-constructor(year: number, month: number, day: number)--><!--Device-DateData-constructor(year: number, month: number, day: number)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| year | number | 是 | 日期内联型的年份。取值范围：[1, 5000]。 |
-| month | number | 是 | 日期内联型的月份。取值范围：[1, 12]。 |
-| day | number | 是 | 日期内联型的日。取值范围：[1, 31]，具体取值由月份的实际天数决定。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [year](#year) | number | 是 |
+| [month](#month) | number | 是 |
+| [day](#day) | number | 是 |
 
 ## toString
 
@@ -50,19 +50,19 @@ toString(): string
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DateData-toString(): string--><!--Device-DateData-toString(): string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 当前日期值。 |
+| 类型 |
+| --- |
+| string |
 
 ## day
 
@@ -76,11 +76,11 @@ day: number
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DateData-day: number--><!--Device-DateData-day: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,11 +96,11 @@ month: number
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DateData-month: number--><!--Device-DateData-month: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,11 +116,10 @@ year: number
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-DateData-year: number--><!--Device-DateData-year: number-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

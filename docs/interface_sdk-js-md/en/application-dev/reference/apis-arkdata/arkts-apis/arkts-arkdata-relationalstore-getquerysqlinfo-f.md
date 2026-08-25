@@ -14,30 +14,30 @@ function getQuerySqlInfo(predicates: RdbPredicates, columns?: Array<string>):Sql
 
 Obtains the SQL statement used to query data. This API returns the result synchronously.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-relationalStore-function getQuerySqlInfo(predicates: RdbPredicates, columns?: Array<string>):SqlInfo--><!--Device-relationalStore-function getQuerySqlInfo(predicates: RdbPredicates, columns?: Array<string>):SqlInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | RdbPredicates** object that matches the specified field. |
-| columns | Array&lt;string&gt; | No | Columns to be queried. If this parameter is not specified, all columns are queried. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes |
+| columns | Array & lt;string & gt; | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [SqlInfo](arkts-arkdata-relationalstore-sqlinfo-i.md) | SqlInfo** object. **sql** indicates the returned SQL statement, and **args** indicates the parameters in the executed SQL statement. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [SqlInfo](arkts-arkdata-relationalstore-sqlinfo-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| Error Code ID |
+| --- |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
 
 **Examples**
 
@@ -47,4 +47,3 @@ predicates.notEqualTo("age", 18);
 predicates.equalTo("name", "zhangsan");
 const sqlInfo: relationalStore.SqlInfo = relationalStore.getQuerySqlInfo(predicates);
 ```
-

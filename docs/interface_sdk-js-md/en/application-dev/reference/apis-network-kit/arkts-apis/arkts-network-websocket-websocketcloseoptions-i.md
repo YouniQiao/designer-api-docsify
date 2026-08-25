@@ -2,9 +2,9 @@
 
 Defines the optional parameters carried in the request for closing a WebSocket connection.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-webSocket-export interface WebSocketCloseOptions--><!--Device-webSocket-export interface WebSocketCloseOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -22,13 +22,13 @@ code?: int
 
 Error code. Set this parameter based on the actual situation. The value must be a positive integer ranging from 1 000 to 1015. If no error code is specified or the input value is not within the preceding range, the code will be set to the default value **1000**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WebSocketCloseOptions-code?: int--><!--Device-WebSocketCloseOptions-code?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -42,11 +42,10 @@ Error cause. Set this parameter based on the actual situation. If no reason valu
 
 **Type:** string
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-WebSocketCloseOptions-reason?: string--><!--Device-WebSocketCloseOptions-reason?: string-End-->
-
 **System capability:** SystemCapability.Communication.NetStack
-

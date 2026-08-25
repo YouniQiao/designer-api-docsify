@@ -4,9 +4,9 @@ Enumerates the device authentication types.
 
 **Since:** 10
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-deviceManager-enum AuthForm--><!--Device-deviceManager-enum AuthForm-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -22,9 +22,9 @@ No authentication.
 
 **Since:** 10
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-AuthForm-INVALID_TYPE = -1--><!--Device-AuthForm-INVALID_TYPE = -1-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -40,9 +40,9 @@ Point-to-point authentication for devices without accounts.
 
 **Since:** 10
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-AuthForm-PEER_TO_PEER = 0--><!--Device-AuthForm-PEER_TO_PEER = 0-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -58,9 +58,9 @@ Authentication for devices using the same account.
 
 **Since:** 10
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-AuthForm-IDENTICAL_ACCOUNT = 1--><!--Device-AuthForm-IDENTICAL_ACCOUNT = 1-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -76,11 +76,10 @@ Authentication for devices using different accounts.
 
 **Since:** 10
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-AuthForm-ACROSS_ACCOUNT = 2--><!--Device-AuthForm-ACROSS_ACCOUNT = 2-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
-

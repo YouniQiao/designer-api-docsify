@@ -8,9 +8,9 @@ Defines the level-2 module StartAbilityParameter.
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ability-export type StartAbilityParameter = _StartAbilityParameter--><!--Device-ability-export type StartAbilityParameter = _StartAbilityParameter-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -29,4 +29,3 @@ let abilityResult: ability.AbilityResult;
 let connectOptions: ability.ConnectOptions;  
 let startAbilityParameter: ability.StartAbilityParameter;
 ```
-

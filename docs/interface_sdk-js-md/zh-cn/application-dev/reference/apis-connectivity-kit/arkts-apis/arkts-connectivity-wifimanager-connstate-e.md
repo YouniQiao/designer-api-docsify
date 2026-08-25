@@ -2,9 +2,9 @@
 
 WLAN连接状态枚举。@enum { int }
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-wifiManager-export enum ConnState--><!--Device-wifiManager-export enum ConnState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -16,9 +16,9 @@ SCANNING
 
 设备正在搜索可用的AP。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ConnState-SCANNING--><!--Device-ConnState-SCANNING-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -30,9 +30,9 @@ CONNECTING
 
 正在建立WLAN连接。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ConnState-CONNECTING--><!--Device-ConnState-CONNECTING-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -44,9 +44,9 @@ AUTHENTICATING
 
 WLAN连接正在认证中。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ConnState-AUTHENTICATING--><!--Device-ConnState-AUTHENTICATING-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -58,9 +58,9 @@ OBTAINING_IPADDR
 
 正在获取WLAN连接的IP地址。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ConnState-OBTAINING_IPADDR--><!--Device-ConnState-OBTAINING_IPADDR-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -72,9 +72,9 @@ CONNECTED
 
 WLAN连接已建立。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ConnState-CONNECTED--><!--Device-ConnState-CONNECTED-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -86,9 +86,9 @@ DISCONNECTING
 
 WLAN连接正在断开。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ConnState-DISCONNECTING--><!--Device-ConnState-DISCONNECTING-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -100,9 +100,9 @@ DISCONNECTED
 
 WLAN连接已断开。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ConnState-DISCONNECTED--><!--Device-ConnState-DISCONNECTED-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -114,9 +114,8 @@ UNKNOWN
 
 WLAN连接建立失败。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ConnState-UNKNOWN--><!--Device-ConnState-UNKNOWN-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
-

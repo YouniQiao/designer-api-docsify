@@ -8,7 +8,7 @@
 
 **起始版本：** 21
 
-<!--Device-dlpPermission-export interface DlpConnPlugin--><!--Device-dlpPermission-export interface DlpConnPlugin-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -31,28 +31,28 @@ connectServer(requestId: string, requestData: string, callback: Callback<string>
 
 **起始版本：** 21
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
+
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
 - API版本21 - 24：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
-
-<!--Device-DlpConnPlugin-connectServer(requestId: string, requestData: string, callback: Callback<string>): void--><!--Device-DlpConnPlugin-connectServer(requestId: string, requestData: string, callback: Callback<string>): void-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| requestId | string | 是 | SA（System Ability）侧传递的本次请求的标识。无范围限制。 |
-| requestData | string | 是 | SA（System Ability）侧传递的数据。无范围限制。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | SA（System Ability）侧传递的接口，用于回调。无范围限制。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| requestId | string | 是 |
+| requestData | string | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 
 **示例**
 
@@ -74,4 +74,3 @@ export default class DataCapsulePlugin implements dlpPermission.DlpConnPlugin {
 
 let plugin: dlpPermission.DlpConnPlugin = new DataCapsulePlugin();
 ```
-

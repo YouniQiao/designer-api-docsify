@@ -15,20 +15,20 @@ Creates a symbolic link based on the file path. This API returns the result sync
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [symlinkSync](arkts-corefile-file-fs-symlinksync-f.md)
-
-<!--Device-unnamed-declare function symlinkSync(target: string, srcPath: string): void--><!--Device-unnamed-declare function symlinkSync(target: string, srcPath: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | string | Yes | Application sandbox path of the target file. |
-| srcPath | string | Yes | Application sandbox path of the symbolic link. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | string | Yes |
+| srcPath | string | Yes |
 
 **Examples**
 
@@ -37,4 +37,3 @@ let srcFile = pathDir + "/test.txt";
 let dstFile = pathDir + '/test';
 fileio.symlinkSync(srcFile, dstFile);
 ```
-

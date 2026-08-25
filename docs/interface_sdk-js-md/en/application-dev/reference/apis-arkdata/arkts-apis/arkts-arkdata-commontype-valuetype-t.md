@@ -6,20 +6,19 @@ type ValueType = null | long | double | string | boolean | Uint8Array | Asset | 
 
 Enumerates the value types, which vary with the parameter function.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-commonType-type ValueType = null | long | double | string | boolean | Uint8Array | Asset | Assets--><!--Device-commonType-type ValueType = null | long | double | string | boolean | Uint8Array | Asset | Assets-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
-| Type | Description |
-| --- | --- |
-| null | The value is null. |
-| long | The value is a 64-bit integer (int64_t). |
-| double | The value is a floating-point number (float). |
-| string | The value is a string. |
-| boolean | The value is true or false. |
-| Uint8Array | The value is an array of 8-bit unsigned integers. |
-| Asset | The value is an instance of the Asset type. |
-| Assets | The value is an instance of the Assets type. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| null |
+| long |
+| double |
+| string |
+| boolean |
+| Uint8Array |
+| [Asset](arkts-arkdata-commontype-asset-i.md) |
+| [Assets](arkts-arkdata-sendablerelationalstore-assets-t.md) |

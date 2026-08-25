@@ -16,11 +16,11 @@ Bind input devices to a display. Only external USB and Bluetooth mice, touchpads
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+
 **Required permissions:** ohos.permission.INPUT_DEVICE_CONTROLLER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-inputDevice-function bindToDisplay(inputDeviceId: int, displayId: int): Promise<void>--><!--Device-inputDevice-function bindToDisplay(inputDeviceId: int, displayId: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -28,25 +28,24 @@ Bind input devices to a display. Only external USB and Bluetooth mice, touchpads
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| inputDeviceId | int | Yes | ID of the specified input device. If the input service restarts or the input device is reconnects, its ID may change. |
-| displayId | int | Yes | ID of the target display. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| inputDeviceId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. The application does not have the required permission. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [3900001](../errorcode-inputdevice.md#3900001-device-not-exist) | The specified input device does not exist. |
-| 3900004 | The specified display does not exist. |
-| 3900005 | Unsupported input device. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
+| [3900001](../errorcode-inputdevice.md#3900001-device-not-exist) |
+| 3900004 |
+| 3900005 |

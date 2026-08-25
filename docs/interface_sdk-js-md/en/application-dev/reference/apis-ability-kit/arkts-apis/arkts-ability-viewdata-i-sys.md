@@ -1,14 +1,12 @@
-# ViewData (System API)
+# ViewData
 
 The module defines the view data used for auto-fill.
 
-**Since:** 23
+**Since:** 26.0.0
 
-<!--Device-unnamed-export default interface ViewData--><!--Device-unnamed-export default interface ViewData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**System API:** This is a system API.
 
 ## abilityName
 
@@ -20,33 +18,11 @@ Ability name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ViewData-abilityName: string--><!--Device-ViewData-abilityName: string-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**System API:** This is a system API.
-
-## bundleName
-
-```TypeScript
-bundleName: string
-```
-
-Bundle name.The value cannot exceed 512 characters.
-
-**Type:** string
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-ViewData-bundleName: string--><!--Device-ViewData-bundleName: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -62,11 +38,11 @@ Whether to display other account information saved in the password box for the u
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ViewData-isOtherAccount: boolean--><!--Device-ViewData-isOtherAccount: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -82,11 +58,11 @@ Whether the content to be filled is selected by the user. **true** if the conten
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ViewData-isUserSelected: boolean--><!--Device-ViewData-isUserSelected: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -102,79 +78,12 @@ Module name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ViewData-moduleName: string--><!--Device-ViewData-moduleName: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
-
-## pageNodeInfos
-
-```TypeScript
-pageNodeInfos: Array<PageNodeInfo>
-```
-
-Page node information.
-
-**Type:** Array&lt;[PageNodeInfo](arkts-ability-pagenodeinfo-i-sys.md)&gt;
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-ViewData-pageNodeInfos: Array<PageNodeInfo>--><!--Device-ViewData-pageNodeInfos: Array<PageNodeInfo>-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**System API:** This is a system API.
-
-## pageRect
-
-```TypeScript
-pageRect: AutoFillRect
-```
-
-Coordinates, width, and height of the page.
-
-**Type:** [AutoFillRect](arkts-ability-autofillrect-i-sys.md)
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-ViewData-pageRect: AutoFillRect--><!--Device-ViewData-pageRect: AutoFillRect-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**System API:** This is a system API.
-
-## pageUrl
-
-```TypeScript
-pageUrl: string
-```
-
-URL of the page.
-
-**Type:** string
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-ViewData-pageUrl: string--><!--Device-ViewData-pageUrl: string-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**System API:** This is a system API.
-

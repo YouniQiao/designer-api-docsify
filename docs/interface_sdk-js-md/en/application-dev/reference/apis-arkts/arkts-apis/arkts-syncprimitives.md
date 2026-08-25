@@ -9,16 +9,15 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Mutex](arkts-arkts-syncprimitives-mutex-c.md) | A mutual exclusion lock that provides exclusive access to a shared resource |
-| [ReadLock](arkts-arkts-syncprimitives-readlock-c.md) | A read lock that allows concurrent read access to a shared resource |
-| [RWLock](arkts-arkts-syncprimitives-rwlock-c.md) | A read-write lock that allows concurrent read access but exclusive write access |
-| [WriteLock](arkts-arkts-syncprimitives-writelock-c.md) | A write lock that provides exclusive write access to a shared resource |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Mutex](arkts-arkts-syncprimitives-mutex-c.md) |
+| [ReadLock](arkts-arkts-syncprimitives-readlock-c.md) |
+| [RWLock](arkts-arkts-syncprimitives-rwlock-c.md) |
+| [WriteLock](arkts-arkts-syncprimitives-writelock-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [Lock](arkts-arkts-syncprimitives-lock-i.md) | Represents a lock that can be acquired and released |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Lock](arkts-arkts-syncprimitives-lock-i.md) |

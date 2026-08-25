@@ -10,15 +10,14 @@ import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [PrintExtensionAbility](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md) | class of print extension ability. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PrintExtensionAbility](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md) |
 
 <!--Del-->
 ### Classes(System API)
 
-| Name | Description |
-| --- | --- |
-| [PrintExtensionAbility](arkts-basicservices-app-ability-printextensionability-printextensionability-c-sys.md) | class of print extension ability. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PrintExtensionAbility](arkts-basicservices-app-ability-printextensionability-printextensionability-c-sys.md) |
 <!--DelEnd-->
-

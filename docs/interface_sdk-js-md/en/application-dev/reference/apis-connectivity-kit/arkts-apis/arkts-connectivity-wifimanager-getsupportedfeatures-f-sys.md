@@ -14,11 +14,11 @@ function getSupportedFeatures(): long
 
 Obtain the features supported by the device. To check whether this device supports a specified feature.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
-
-<!--Device-wifiManager-function getSupportedFeatures(): long--><!--Device-wifiManager-function getSupportedFeatures(): long-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.Core
 
@@ -26,18 +26,18 @@ Obtain the features supported by the device. To check whether this device suppor
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Returns the features supported by this device. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [2401000](../errorcode-wifi.md#2401000-sta-internal-error) | Operation failed. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [2401000](../errorcode-wifi.md#2401000-sta-internal-error) |
 
 **Examples**
 
@@ -51,4 +51,3 @@ try {
     console.error("failed:" + JSON.stringify(error));
 }
 ```
-

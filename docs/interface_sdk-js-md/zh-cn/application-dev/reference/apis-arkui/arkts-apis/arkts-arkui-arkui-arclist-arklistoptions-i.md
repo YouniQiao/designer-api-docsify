@@ -2,11 +2,9 @@
 
 包含创建ArcList组件的基础参数。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export declare interface ArkListOptions--><!--Device-unnamed-export declare interface ArkListOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -19,36 +17,37 @@ import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@k
 ## header
 
 ```TypeScript
-header?: ComponentContentBase
+header?: ComponentContent
 ```
 
-支持标题设置。
+ArcList的头部组件，用于在列表顶部显示标题或自定义内容。不设置时不显示头部组件。
 
-**类型：** [ComponentContentBase](../../apis-default/arkts-apis/arkts-componentcontent-componentcontentbase-c.md)
+**类型：** ComponentContent
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-ArkListOptions-header?: ComponentContentBase--><!--Device-ArkListOptions-header?: ComponentContentBase-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 ## initialIndex
 
 ```TypeScript
-initialIndex?: int
+initialIndex?: number
 ```
 
-设置当前ArcList初次加载时视窗起始位置显示的item的索引值。<br/>。 取值限定为整数。默认值：0<br/>设置为负数或超过了当前ArcList最后一个item的索引值时视为无效取值，无效取值按默认值显示。
+设置当前ArcList初次加载时视窗起始位置显示的item的索引值。默认值：0  
+**说明：**设置为负数或超过了当前ArcList最后一个item的索引值时视为无效取值，无效取值按默认值显示。
 
-**类型：** int
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-ArkListOptions-initialIndex?: int--><!--Device-ArkListOptions-initialIndex?: int-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -58,15 +57,15 @@ initialIndex?: int
 scroller?: Scroller
 ```
 
-可滚动组件的控制器。与ArcList绑定后，可以通过它控制ArcList的滚动。<br/>不允许和其他滚动类组件绑定同一个滚动控制对象。
+可滚动组件的控制器。与ArcList绑定后，可以通过它控制ArcList的滚动。不设置时不绑定滚动控制器。  
+**说明：**不允许和其他滚动类组件，如：List、Grid、 Scroll和WaterFlow绑定同一个滚动控制对 象。
 
 **类型：** Scroller
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-ArkListOptions-scroller?: Scroller--><!--Device-ArkListOptions-scroller?: Scroller-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
-

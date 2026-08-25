@@ -2,9 +2,9 @@
 
 Enumerates the statuses of sensitive data keys under the lock screen.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-screenLockFileManager-export enum KeyStatus--><!--Device-screenLockFileManager-export enum KeyStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.ScreenLockFileManager
 
@@ -16,9 +16,9 @@ KEY_NOT_EXIST = -2
 
 The key does not exist. This status indicates that the app has not enabled the sensitive data protection function under lock screen, or the protection function is unavailable on the current device.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-KeyStatus-KEY_NOT_EXIST = -2--><!--Device-KeyStatus-KEY_NOT_EXIST = -2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.ScreenLockFileManager
 
@@ -30,9 +30,9 @@ KEY_RELEASED = -1
 
 The key has been released. This status indicates that sensitive data under lock screen cannot be operated.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-KeyStatus-KEY_RELEASED = -1--><!--Device-KeyStatus-KEY_RELEASED = -1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.ScreenLockFileManager
 
@@ -44,9 +44,8 @@ KEY_EXIST = 0
 
 The key exists. This status indicates that sensitive data under lock screen can be operated normally.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-KeyStatus-KEY_EXIST = 0--><!--Device-KeyStatus-KEY_EXIST = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.ScreenLockFileManager
-

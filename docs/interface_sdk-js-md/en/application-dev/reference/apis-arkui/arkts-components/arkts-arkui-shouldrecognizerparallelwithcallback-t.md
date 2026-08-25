@@ -8,24 +8,23 @@ Represents the callback used to set the parallel relationship between gestures o
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-unnamed-declare type ShouldRecognizerParallelWithCallback = (current: GestureRecognizer, others: Array<GestureRecognizer>) => GestureRecognizer--><!--Device-unnamed-declare type ShouldRecognizerParallelWithCallback = (current: GestureRecognizer, others: Array<GestureRecognizer>) => GestureRecognizer-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| current | GestureRecognizer | Yes | Gesture recognizer of the current component. Currently only a gesture recognizer of the GestureType.PAN_GESTURE type is supported. |
-| others | Array&lt;GestureRecognizer&gt; | Yes | Gesture recognizers of the same GestureType from other components with higher priority in the response chain. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| current | [GestureRecognizer](../arkts-apis/arkts-arkui-gesture-gesturerecognizer-c.md) | Yes |
+| others | Array & lt;GestureRecognizer & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| GestureRecognizer | Gesture recognizer that is bound in parallel with the current recognizer. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [GestureRecognizer](../arkts-apis/arkts-arkui-gesture-gesturerecognizer-c.md) |

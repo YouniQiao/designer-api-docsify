@@ -4,7 +4,7 @@ Enumerates the sorting order of firewall rules, which can be ascending or descen
 
 **Since:** 15
 
-<!--Device-netFirewall-enum NetFirewallOrderType--><!--Device-netFirewall-enum NetFirewallOrderType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -18,7 +18,7 @@ Sorting in ascending order.
 
 **Since:** 15
 
-<!--Device-NetFirewallOrderType-ORDER_ASC = 1--><!--Device-NetFirewallOrderType-ORDER_ASC = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -32,7 +32,6 @@ Sorting in descending order.
 
 **Since:** 15
 
-<!--Device-NetFirewallOrderType-ORDER_DESC = 100--><!--Device-NetFirewallOrderType-ORDER_DESC = 100-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
-

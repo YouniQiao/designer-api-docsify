@@ -16,11 +16,11 @@ Query whether the specified volume is currently in use. This API uses a promise 
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-volumeManager-function isVolumeInUse(volumePath: string): Promise<boolean>--><!--Device-volumeManager-function isVolumeInUse(volumePath: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -28,23 +28,22 @@ Query whether the specified volume is currently in use. This API uses a promise 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| volumePath | string | Yes | Volume Path. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| volumePath | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return whether the specified volume is currently in use. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| 13600001 | IPC error. |
-| 13600010 | The input parameter is invalid. |
-| 13600033 | Failed to query whether the specified volume is currently in use. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13600001 |
+| 13600010 |
+| 13600033 |

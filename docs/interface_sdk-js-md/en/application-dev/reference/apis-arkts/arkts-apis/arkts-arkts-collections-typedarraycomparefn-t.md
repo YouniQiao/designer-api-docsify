@@ -8,22 +8,21 @@ Describes the sort function of the ArkTS typed array.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-collections-type TypedArrayCompareFn<ElementType> = (first: ElementType, second: ElementType) => number--><!--Device-collections-type TypedArrayCompareFn<ElementType> = (first: ElementType, second: ElementType) => number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| first | ElementType | Yes | First element to be compared. |
-| second | ElementType | Yes | Second element to be compared. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| first | ElementType | Yes |
+| second | ElementType | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | The result of the comparison. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |

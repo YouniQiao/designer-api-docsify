@@ -4,7 +4,7 @@ Enumerates system layout directions.
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum LayoutDirection--><!--Device-unnamed-declare enum LayoutDirection-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ Left-to-right layout.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LayoutDirection-LTR--><!--Device-LayoutDirection-LTR-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,9 @@ Right-to-left layout.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LayoutDirection-RTL--><!--Device-LayoutDirection-RTL-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,9 +50,8 @@ Automatic layout direction based on the system.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-LayoutDirection-Auto--><!--Device-LayoutDirection-Auto-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -10,29 +10,28 @@ import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeLis
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [TreeControllerV2](arkts-arkui-arkui-advanced-treeviewv2-treecontrollerv2-c.md) | Declare TreeControllerV2 |
-| [TreeListenerManagerV2](arkts-arkui-arkui-advanced-treeviewv2-treelistenermanagerv2-c.md) | Declare class TreeListenerManagerV2 |
-| [TreeListenerV2](arkts-arkui-arkui-advanced-treeviewv2-treelistenerv2-c.md) | Declare class TreeListenerV2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [TreeControllerV2](arkts-arkui-arkui-advanced-treeviewv2-treecontrollerv2-c.md) |
+| [TreeListenerManagerV2](arkts-arkui-arkui-advanced-treeviewv2-treelistenermanagerv2-c.md) |
+| [TreeListenerV2](arkts-arkui-arkui-advanced-treeviewv2-treelistenerv2-c.md) |
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [TreeViewV2](arkts-arkui-arkui-advanced-treeviewv2-treeviewv2-s.md) | Declare TreeViewV2 Component |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [TreeViewV2](arkts-arkui-arkui-advanced-treeviewv2-treeviewv2-s.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [CallbackParamV2](arkts-arkui-arkui-advanced-treeviewv2-callbackparamv2-i.md) | Declare CallbackParamV2 |
-| [NodeParamV2](arkts-arkui-arkui-advanced-treeviewv2-nodeparamv2-i.md) | Declare NodeParamV2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CallbackParamV2](arkts-arkui-arkui-advanced-treeviewv2-callbackparamv2-i.md) |
+| [NodeParamV2](arkts-arkui-arkui-advanced-treeviewv2-nodeparamv2-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Callback method of event registration and processing. |
-| [OnContainerCallback](arkts-arkui-oncontainercallback-t.md) | Set subcomponent binded on tree item. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) |
+| [OnContainerCallback](arkts-arkui-oncontainercallback-t.md) |

@@ -2,9 +2,9 @@
 
 Enumerates the PiP template types.
 
-**Since:** 26.0.0
+**Since:** 11
 
-<!--Device-PiPWindow-enum PiPTemplateType--><!--Device-PiPWindow-enum PiPTemplateType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -18,9 +18,9 @@ VIDEO_DRIVE = 4
 
 **Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-PiPTemplateType-VIDEO_DRIVE = 4--><!--Device-PiPTemplateType-VIDEO_DRIVE = 4-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -36,11 +36,10 @@ In-vehicle navigation template, which is loaded when a PiP window is started on 
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-PiPTemplateType-VIDEO_NAVIGATION = 5--><!--Device-PiPTemplateType-VIDEO_NAVIGATION = 5-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
-

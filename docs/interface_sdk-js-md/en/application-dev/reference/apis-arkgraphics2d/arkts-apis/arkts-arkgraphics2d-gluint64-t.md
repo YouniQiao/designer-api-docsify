@@ -8,11 +8,10 @@ WebGL 2.0
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-unnamed-type GLuint64 = number--><!--Device-unnamed-type GLuint64 = number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Property type:** number
-

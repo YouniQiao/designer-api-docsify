@@ -2,9 +2,9 @@
 
 Enumerates of the number of stop bits.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-serialManager-enum StopBits--><!--Device-serialManager-enum StopBits-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -16,9 +16,9 @@ STOPBIT_1 = 0
 
 The number of stop bits is 1.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-StopBits-STOPBIT_1 = 0--><!--Device-StopBits-STOPBIT_1 = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -30,9 +30,8 @@ STOPBIT_2 = 1
 
 The number of stop bits is 2.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-StopBits-STOPBIT_2 = 1--><!--Device-StopBits-STOPBIT_2 = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
-

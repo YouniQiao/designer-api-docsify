@@ -6,7 +6,7 @@ Implements a rotation gesture recognizer. Inherits from [GestureRecognizer](arkt
 
 **Since:** 18
 
-<!--Device-unnamed-declare class RotationRecognizer--><!--Device-unnamed-declare class RotationRecognizer-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,17 +25,16 @@ Obtains the minimum angle change required for the rotation gesture to be recogni
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-RotationRecognizer-getAngle(): number--><!--Device-RotationRecognizer-getAngle(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Minimum angle change required for the rotation gesture to be recognized, in degrees (deg). <br>Value range: [0, +∞) <br>**NOTE：**<br>If the provided angle is less than or equal to 0 or greater than 360, it is converted to the default value **1**. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |

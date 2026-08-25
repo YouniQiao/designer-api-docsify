@@ -4,7 +4,7 @@ Enumerates display modes for toasts. By default, the toast is displayed within t
 
 **Since:** 11
 
-<!--Device-promptAction-export enum ToastShowMode--><!--Device-promptAction-export enum ToastShowMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,10 @@ Toast shows in SYSTEM_TOAST window.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-ToastShowMode-SYSTEM_TOP_MOST = 2--><!--Device-ToastShowMode-SYSTEM_TOP_MOST = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

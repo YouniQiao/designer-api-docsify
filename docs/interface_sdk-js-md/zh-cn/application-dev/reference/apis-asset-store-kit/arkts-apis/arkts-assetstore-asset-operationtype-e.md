@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-asset-enum OperationType--><!--Device-asset-enum OperationType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -18,7 +18,7 @@ NEED_SYNC = 0
 
 **起始版本：** 12
 
-<!--Device-OperationType-NEED_SYNC = 0--><!--Device-OperationType-NEED_SYNC = 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -32,7 +32,6 @@ NEED_LOGOUT = 1
 
 **起始版本：** 12
 
-<!--Device-OperationType-NEED_LOGOUT = 1--><!--Device-OperationType-NEED_LOGOUT = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Security.Asset
-

@@ -4,7 +4,7 @@ Defines the VPN configuration.
 
 **Since:** 11
 
-<!--Device-vpnExtension-export interface VpnConfig--><!--Device-vpnExtension-export interface VpnConfig-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -26,7 +26,7 @@ IP addresses of vNICs. Before API version 23, a maximum of 64 IP addresses are s
 
 **Since:** 11
 
-<!--Device-VpnConfig-addresses: Array<LinkAddress>--><!--Device-VpnConfig-addresses: Array<LinkAddress>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -43,7 +43,7 @@ List of blocked applications, which are represented by bundle names of the strin
 
 **Since:** 11
 
-<!--Device-VpnConfig-blockedApplications?: Array<string>--><!--Device-VpnConfig-blockedApplications?: Array<string>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -59,7 +59,7 @@ IP address of the DNS server. After the IP address is configured, when the VPN i
 
 **Since:** 11
 
-<!--Device-VpnConfig-dnsAddresses?: Array<string>--><!--Device-VpnConfig-dnsAddresses?: Array<string>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -75,7 +75,7 @@ Whether the blocking mode is used. The value **true** indicates that the blockin
 
 **Since:** 11
 
-<!--Device-VpnConfig-isBlocking?: boolean--><!--Device-VpnConfig-isBlocking?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -91,7 +91,7 @@ Whether the built-in VPN is supported. The value **true** indicates that the bui
 
 **Since:** 11
 
-<!--Device-VpnConfig-isInternal?: boolean--><!--Device-VpnConfig-isInternal?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -107,7 +107,7 @@ Whether IPv4 is supported. The value **true** indicates that the IPv4 is support
 
 **Since:** 11
 
-<!--Device-VpnConfig-isIPv4Accepted?: boolean--><!--Device-VpnConfig-isIPv4Accepted?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -123,23 +123,23 @@ Whether IPv6 is supported. The value **true** indicates that the IPV6 is support
 
 **Since:** 11
 
-<!--Device-VpnConfig-isIPv6Accepted?: boolean--><!--Device-VpnConfig-isIPv6Accepted?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 ## mtu
 
 ```TypeScript
-mtu?: int
+mtu?: number
 ```
 
 Maximum transmission unit (MTU), in bytes. The value range is [576,1500].
 
-**Type:** int
+**Type:** number
 
 **Since:** 11
 
-<!--Device-VpnConfig-mtu?: int--><!--Device-VpnConfig-mtu?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -155,7 +155,7 @@ Route information of the vNIC. Before API version 23, a maximum of 1024 routes c
 
 **Since:** 11
 
-<!--Device-VpnConfig-routes?: Array<RouteInfo>--><!--Device-VpnConfig-routes?: Array<RouteInfo>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -171,7 +171,7 @@ List of DNS search domains.
 
 **Since:** 11
 
-<!--Device-VpnConfig-searchDomains?: Array<string>--><!--Device-VpnConfig-searchDomains?: Array<string>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -188,7 +188,7 @@ List of trusted applications, which are represented by bundle names of the strin
 
 **Since:** 11
 
-<!--Device-VpnConfig-trustedApplications?: Array<string>--><!--Device-VpnConfig-trustedApplications?: Array<string>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -204,7 +204,7 @@ Unique VPN ID.
 
 **Since:** 20
 
-<!--Device-VpnConfig-vpnId?: string--><!--Device-VpnConfig-vpnId?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -248,4 +248,3 @@ function vpnCreate(){
   })
 }
 ```
-

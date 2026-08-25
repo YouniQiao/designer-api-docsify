@@ -2,9 +2,9 @@
 
 Widget extension class. It provides APIs to notify the widget provider that a widget is being created or the widget visibility status is being changed.
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-declare class FormExtensionAbility--><!--Device-unnamed-declare class FormExtensionAbility-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -24,9 +24,9 @@ Called when the system acquire the form data.
 
 **起始版本：** 10
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-FormExtensionAbility-onAcquireFormData?(formId: string): Record<string, Object>--><!--Device-FormExtensionAbility-onAcquireFormData?(formId: string): Record<string, Object>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -34,16 +34,16 @@ Called when the system acquire the form data.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formId | string | 是 | Indicates the ID of the form. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formId | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| object | Returns the wantParams object.<br>**适用版本：** 10 |
-| Record&lt;string, Object&gt; | Returns the wantParams object.<br>**适用版本：** 11+ |
+| 类型 |
+| --- |
+| object |
+| Record & lt;string, Object & gt; |
 
 **示例**
 
@@ -62,6 +62,28 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 }
 ```
 
+## onAcquireFormData
+
+```TypeScript
+onAcquireFormData?: OnAcquireFormDataFn
+```
+
+Called when the system acquire the form data.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Ability.Form
+
+**系统接口：** 此接口为系统接口。
+
+**示例**
+
+参见 [onAcquireFormData](#onacquireformdata)
+
 ## onShareForm
 
 ```TypeScript
@@ -72,9 +94,9 @@ Called when the system shares the form.
 
 **起始版本：** 9
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-FormExtensionAbility-onShareForm?(formId: string): Record<string, Object>--><!--Device-FormExtensionAbility-onShareForm?(formId: string): Record<string, Object>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -82,16 +104,16 @@ Called when the system shares the form.
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formId | string | 是 | Indicates the ID of the form. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formId | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| object | Returns the wantParams object.<br>**适用版本：** 9 - 10 |
-| Record&lt;string, Object&gt; | Returns the wantParams object.<br>**适用版本：** 11+ |
+| 类型 |
+| --- |
+| object |
+| Record & lt;string, Object & gt; |
 
 **示例**
 
@@ -110,26 +132,6 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 }
 ```
 
-## onAcquireFormData
-
-```TypeScript
-onAcquireFormData?: OnAcquireFormDataFn
-```
-
-Called when the system acquire the form data.
-
-**类型：** [OnAcquireFormDataFn](arkts-form-onacquireformdatafn-t-sys.md)
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-FormExtensionAbility-onAcquireFormData?: OnAcquireFormDataFn--><!--Device-FormExtensionAbility-onAcquireFormData?: OnAcquireFormDataFn-End-->
-
-**系统能力：** SystemCapability.Ability.Form
-
-**系统接口：** 此接口为系统接口。
-
 ## onShareForm
 
 ```TypeScript
@@ -138,15 +140,16 @@ onShareForm?: OnShareFormFn
 
 Called when the system shares the form.
 
-**类型：** [OnShareFormFn](arkts-form-onshareformfn-t-sys.md)
-
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-FormExtensionAbility-onShareForm?: OnShareFormFn--><!--Device-FormExtensionAbility-onShareForm?: OnShareFormFn-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
 
+**示例**
+
+参见 [onShareForm](#onshareform)

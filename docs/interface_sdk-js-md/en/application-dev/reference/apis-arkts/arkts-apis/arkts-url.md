@@ -2,9 +2,9 @@
 
 The url module provides APIs for parsing URL strings and constructing URL instances to process URL strings.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-declare namespace url--><!--Device-unnamed-declare namespace url-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -18,15 +18,14 @@ import { url } from '@kit.ArkTS';
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [URL](arkts-arkts-url-url-c.md) | The interface of URL is used to parse, construct, normalize, and encode URLs. |
-| [URLParams](arkts-arkts-url-urlparams-c.md) | The URLParams interface defines some practical methods to process URL query strings. |
-| [URLSearchParams](arkts-arkts-url-urlsearchparams-c.md) | The URLSearchParams interface defines some practical methods to process URL query strings. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [URL](arkts-arkts-url-url-c.md) |
+| [URLParams](arkts-arkts-url-urlparams-c.md) |
+| [URLSearchParams](arkts-arkts-url-urlsearchparams-c.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [UrlCbFn](arkts-arkts-url-urlcbfn-t.md) | The type of URL callback function. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [UrlCbFn](arkts-arkts-url-urlcbfn-t.md) |

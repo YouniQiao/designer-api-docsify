@@ -4,7 +4,7 @@ Enumerates gesture competition results.
 
 **Since:** 11
 
-<!--Device-unnamed-declare enum GestureJudgeResult--><!--Device-unnamed-declare enum GestureJudgeResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ The system gesture recognition process continues.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-GestureJudgeResult-CONTINUE = 0--><!--Device-GestureJudgeResult-CONTINUE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ Gesture recognition fails.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-GestureJudgeResult-REJECT = 1--><!--Device-GestureJudgeResult-REJECT = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

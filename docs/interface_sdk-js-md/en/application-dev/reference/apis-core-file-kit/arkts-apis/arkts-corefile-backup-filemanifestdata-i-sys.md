@@ -2,9 +2,9 @@
 
 Manifest file information in incremental data. FileManifestData is useful when doing IPC with the backup service.@interface FileManifestData
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-backup-interface FileManifestData--><!--Device-backup-interface FileManifestData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -24,13 +24,12 @@ manifestFd: int
 
 A file descriptor for the manifest file that holds the data
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-FileManifestData-manifestFd: int--><!--Device-FileManifestData-manifestFd: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
-

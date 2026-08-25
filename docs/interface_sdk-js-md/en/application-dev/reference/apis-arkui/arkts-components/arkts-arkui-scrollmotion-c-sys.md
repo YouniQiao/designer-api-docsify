@@ -4,9 +4,9 @@ Rolling animation model: You can build rolling animation based on the initial po
 
 **Since:** 7
 
-**Deprecated since:** 22
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-unnamed-declare class ScrollMotion--><!--Device-unnamed-declare class ScrollMotion-End-->
+**Deprecated since:** 22
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,9 +27,9 @@ Constructor parameters
 
 **Since:** 7
 
-**Deprecated since:** 22
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ScrollMotion-constructor(position: number, velocity: number, min: number, max: number, prop: SpringProp)--><!--Device-ScrollMotion-constructor(position: number, velocity: number, min: number, max: number, prop: SpringProp)-End-->
+**Deprecated since:** 22
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -37,11 +37,10 @@ Constructor parameters
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| position | number | Yes |  |
-| velocity | number | Yes |  |
-| min | number | Yes |  |
-| max | number | Yes |  |
-| prop | [SpringProp](arkts-arkui-springprop-c-sys.md) | Yes |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| position | number | Yes |
+| velocity | number | Yes |
+| min | number | Yes |
+| max | number | Yes |
+| prop | [SpringProp](arkts-arkui-springprop-c-sys.md) | Yes |

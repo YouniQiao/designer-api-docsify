@@ -2,9 +2,9 @@
 
 Enumerates the event priorities.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-emitter-export enum EventPriority--><!--Device-emitter-export enum EventPriority-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Emitter
 
@@ -16,11 +16,11 @@ IMMEDIATE = 0
 
 The event will be emitted before high-priority events.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EventPriority-IMMEDIATE = 0--><!--Device-EventPriority-IMMEDIATE = 0-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
 
@@ -32,11 +32,11 @@ HIGH
 
 The event will be emitted before low-priority events.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EventPriority-HIGH--><!--Device-EventPriority-HIGH-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
 
@@ -48,11 +48,11 @@ LOW
 
 The event will be emitted before idle-priority events. By default, an event is in LOW priority.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EventPriority-LOW--><!--Device-EventPriority-LOW-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
 
@@ -64,11 +64,10 @@ IDLE
 
 The event will be emitted after all the other events.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-EventPriority-IDLE--><!--Device-EventPriority-IDLE-End-->
-
 **System capability:** SystemCapability.Notification.Emitter
-

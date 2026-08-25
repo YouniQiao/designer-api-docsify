@@ -14,29 +14,29 @@ function getRecentOperatingHandStatus(): OperatingHandStatus
 
 Obtains the latest operating hand status.
 
-**Since:** 23
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 20+: ohos.permission.ACTIVITY_MOTION or ohos.permission.DETECT_GESTURE
 - API version 15 - 19: ohos.permission.ACTIVITY_MOTION
 
-<!--Device-motion-function getRecentOperatingHandStatus(): OperatingHandStatus--><!--Device-motion-function getRecentOperatingHandStatus(): OperatingHandStatus-End-->
-
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [OperatingHandStatus](arkts-multimodalawareness-motion-operatinghandstatus-e.md) | Status of the operating hand. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [OperatingHandStatus](arkts-multimodalawareness-motion-operatinghandstatus-e.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. An attempt was made to get the recent operating hand <br> status forbidden by permission: ohos.permission.ACTIVITY_MOTION or ohos.permission.DETECT_GESTURE. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function can not work correctly due to limited <br> device capabilities. |
-| [31500001](../errorcode-motion.md#31500001-service-exception) | Service exception. Possible causes: 1. A system error, such as null pointer, container-related exception; <br> 2. N-API invocation exception, invalid N-API status. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [31500001](../errorcode-motion.md#31500001-service-exception) |
 
 **Examples**
 
@@ -51,4 +51,3 @@ try {
     console.error("Failed get and err code is " + error.code);
 }
 ```
-

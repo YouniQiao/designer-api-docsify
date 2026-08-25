@@ -17,11 +17,10 @@ Creates a child component in the **WaterFlow** layout.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-FlowItemInterface-(): FlowItemAttribute--><!--Device-FlowItemInterface-(): FlowItemAttribute-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Summary
-

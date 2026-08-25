@@ -3,180 +3,160 @@
 ## ISO_DEP
 
 ```TypeScript
-const ISO_DEP: int
+const ISO_DEP = 3
 ```
 
-ISO_DEP标签。 取值限定为整数。
+ISO-DEP (ISO 14443-4)技术。
 
-**起始版本：** 23
+**起始版本：** 7
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-tag-const ISO_DEP: int--><!--Device-tag-const ISO_DEP: int-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## MIFARE_CLASSIC
 
 ```TypeScript
-const MIFARE_CLASSIC: int
+const MIFARE_CLASSIC = 8
 ```
 
-MIFARE经典标签。 取值限定为整数。
+MIFARE Classic技术。
 
-**起始版本：** 23
+**起始版本：** 7
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-tag-const MIFARE_CLASSIC: int--><!--Device-tag-const MIFARE_CLASSIC: int-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## MIFARE_ULTRALIGHT
 
 ```TypeScript
-const MIFARE_ULTRALIGHT: int
+const MIFARE_ULTRALIGHT = 9
 ```
 
-MIFARE ULTRALIGHT标签。 取值限定为整数。
+MIFARE Ultralight技术。
 
-**起始版本：** 23
+**起始版本：** 7
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-tag-const MIFARE_ULTRALIGHT: int--><!--Device-tag-const MIFARE_ULTRALIGHT: int-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## NDEF
 
 ```TypeScript
-const NDEF: int
+const NDEF = 6
 ```
 
-NDEF标签。 取值限定为整数。
+NDEF技术。
 
-**起始版本：** 23
+**起始版本：** 7
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-tag-const NDEF: int--><!--Device-tag-const NDEF: int-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## NDEF_FORMATABLE
 
 ```TypeScript
-const NDEF_FORMATABLE: int
+const NDEF_FORMATABLE = 7
 ```
 
-NDEF Formatable标记。 取值限定为整数。
+可以格式化的NDEF技术。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-tag-const NDEF_FORMATABLE: int--><!--Device-tag-const NDEF_FORMATABLE: int-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## NFC_A
 
 ```TypeScript
-const NFC_A: int
+const NFC_A = 1
 ```
 
-NFC-A标签。 取值限定为整数。
+NFC-A (ISO 14443-3A)技术。
 
-**起始版本：** 23
+**起始版本：** 7
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-tag-const NFC_A: int--><!--Device-tag-const NFC_A: int-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## NFC_B
 
 ```TypeScript
-const NFC_B: int
+const NFC_B = 2
 ```
 
-NFC-B标签。 取值限定为整数。
+NFC-B (ISO 14443-3B)技术。
 
-**起始版本：** 23
+**起始版本：** 7
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-tag-const NFC_B: int--><!--Device-tag-const NFC_B: int-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## NFC_BARCODE
 
 ```TypeScript
-const NFC_BARCODE: int
+const NFC_BARCODE = 10
 ```
 
-NfcBarcode标签。 取值限定为整数。
+BARCODE技术。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-tag-const NFC_BARCODE: int--><!--Device-tag-const NFC_BARCODE: int-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## NFC_F
 
 ```TypeScript
-const NFC_F: int
+const NFC_F = 4
 ```
 
-NFC-F标签。 取值限定为整数。
+NFC-F (JIS 6319-4)技术。
 
-**起始版本：** 23
+**起始版本：** 7
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-tag-const NFC_F: int--><!--Device-tag-const NFC_F: int-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## NFC_V
 
 ```TypeScript
-const NFC_V: int
+const NFC_V = 5
 ```
 
-NFC-V标签。 取值限定为整数。
+NFC-V (ISO 15693)技术。
 
-**起始版本：** 23
+**起始版本：** 7
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-tag-const NFC_V: int--><!--Device-tag-const NFC_V: int-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -188,11 +168,11 @@ const RTD_TEXT: int[]
 
 文本类型的NDEF Record，参考NDEF标签技术规范《NFCForum-TS-NDEF_1.0》的定义细节。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-tag-const RTD_TEXT: int[]--><!--Device-tag-const RTD_TEXT: int[]-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -204,29 +184,28 @@ const RTD_URI: int[]
 
 URI类型的NDEF Record，参考NDEF标签技术规范《NFCForum-TS-NDEF_1.0》的定义细节。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-tag-const RTD_URI: int[]--><!--Device-tag-const RTD_URI: int[]-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## SKIP_NDEF
 
 ```TypeScript
-const SKIP_NDEF: int
+const SKIP_NDEF = 11
 ```
 
-当应用在前台读卡时，跳过NDEF。 取值范围为全体整数。
+跳过NDEF检查的技术。
 
 **起始版本：** 26.0.0
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-tag-const SKIP_NDEF: int--><!--Device-tag-const SKIP_NDEF: int-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
-

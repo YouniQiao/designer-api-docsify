@@ -1,0 +1,59 @@
+# IWatchSubscriberRegister
+
+Define IWatchSubscriberRegister interface.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## addWatchSubscriber
+
+```TypeScript
+addWatchSubscriber(watchId: WatchIdType): void
+```
+
+Registers the watch function callback.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| watchId | [WatchIdType](arkts-arkui-watchidtype-t.md) | Yes |
+
+## removeWatchSubscriber
+
+```TypeScript
+removeWatchSubscriber(watchId: WatchIdType): boolean
+```
+
+UnRegister the watch function callback.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| watchId | [WatchIdType](arkts-arkui-watchidtype-t.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

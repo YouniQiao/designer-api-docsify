@@ -9,7 +9,6 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [Tuple](arkts-arkts-tuple-i.md) | Marker interface for tuple types. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Tuple](arkts-arkts-tuple-i.md) |

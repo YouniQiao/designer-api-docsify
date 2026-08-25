@@ -1,23 +1,22 @@
 # SnapshotRegionType
 
 ```TypeScript
-export type SnapshotRegionType = SnapshotRegion | LocalizedSnapshotRegion
+type SnapshotRegionType = SnapshotRegion | LocalizedSnapshotRegion
 ```
 
 表示组件截图区域。
 
-**起始版本：** 23
+**起始版本：** 15
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-componentSnapshot-export type SnapshotRegionType = SnapshotRegion | LocalizedSnapshotRegion--><!--Device-componentSnapshot-export type SnapshotRegionType = SnapshotRegion | LocalizedSnapshotRegion-End-->
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 | 说明 |
-| --- | --- |
-| SnapshotRegion |  |
-| LocalizedSnapshotRegion |  |
-
+| 类型 |
+| --- |
+| [SnapshotRegion](arkts-arkui-componentsnapshot-snapshotregion-i.md) |
+| [LocalizedSnapshotRegion](arkts-arkui-componentsnapshot-localizedsnapshotregion-i.md) |

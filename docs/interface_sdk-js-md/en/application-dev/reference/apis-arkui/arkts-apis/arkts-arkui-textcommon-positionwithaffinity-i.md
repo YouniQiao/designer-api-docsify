@@ -4,9 +4,7 @@ Position and affinity.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export interface PositionWithAffinity--><!--Device-unnamed-export interface PositionWithAffinity-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +20,9 @@ Affinity of the position.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PositionWithAffinity-affinity: Affinity--><!--Device-PositionWithAffinity-affinity: Affinity-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,11 +38,8 @@ Position of text. The value should be an integer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PositionWithAffinity-position: int--><!--Device-PositionWithAffinity-position: int-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

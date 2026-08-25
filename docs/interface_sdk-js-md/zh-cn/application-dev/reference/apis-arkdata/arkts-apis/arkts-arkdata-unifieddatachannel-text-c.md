@@ -4,9 +4,9 @@
 
 **继承/实现关系：** Text extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-unifiedDataChannel-class Text--><!--Device-unifiedDataChannel-class Text-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -28,11 +28,11 @@ details?: Record<string, string>
 
 **起始版本：** 10
 
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Text-details?: Record<string, string>--><!--Device-Text-details?: Record<string, string>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -61,4 +61,3 @@ text.details = textDetails;
 console.info(`textDetails: ${JSON.stringify(text.details)}`);
 let unifiedData = new unifiedDataChannel.UnifiedData(text);
 ```
-

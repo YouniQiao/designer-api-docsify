@@ -4,7 +4,7 @@ Describe the HID device capability fields of this endpoint being queried.
 
 **Since:** 23
 
-<!--Device-hid-interface HidDeviceSdp--><!--Device-hid-interface HidDeviceSdp-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -26,9 +26,9 @@ description for this Bluetooth hid device. Maximum length is 50 bytes.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-HidDeviceSdp-description: string--><!--Device-HidDeviceSdp-description: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -44,9 +44,9 @@ descriptors identifies the descriptors associated with the bluetooth hid device.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-HidDeviceSdp-descriptors: Uint8Array--><!--Device-HidDeviceSdp-descriptors: Uint8Array-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -62,9 +62,9 @@ name of this Bluetooth hid device. Maximum length is 50 bytes.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-HidDeviceSdp-name: string--><!--Device-HidDeviceSdp-name: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -80,9 +80,9 @@ provider of this Bluetooth hid device. Maximum length is 50 bytes.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-HidDeviceSdp-provider: string--><!--Device-HidDeviceSdp-provider: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -98,9 +98,8 @@ Subclass of this Bluetooth HID device. Subclass represents the specific HID devi
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-HidDeviceSdp-subclass: Subclass--><!--Device-HidDeviceSdp-subclass: Subclass-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

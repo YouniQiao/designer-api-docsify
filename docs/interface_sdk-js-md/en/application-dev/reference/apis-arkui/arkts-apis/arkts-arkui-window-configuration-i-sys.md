@@ -2,9 +2,9 @@
 
 Defines the parameters for creating a child window or system window.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-window-interface Configuration--><!--Device-window-interface Configuration-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -24,9 +24,9 @@ Whether the window should use the default density of the system. If the default 
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Configuration-defaultDensityEnabled?: boolean--><!--Device-Configuration-defaultDensityEnabled?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -40,13 +40,12 @@ zIndex?: int
 
 Z-level of the system window. This parameter is valid only when [WindowType](arkts-arkui-window-windowtype-e.md) is set to **TYPE_DYNAMIC**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Configuration-zIndex?: int--><!--Device-Configuration-zIndex?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
-

@@ -4,9 +4,7 @@ Image information for AI-generated images.@interface ImageItem
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-imageGeneration-interface ImageItem--><!--Device-imageGeneration-interface ImageItem-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +28,9 @@ Image decoding information for preview in the page of ImageGeneratorDialog.<p>**
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ImageItem-image?: image.PixelMap--><!--Device-ImageItem-image?: image.PixelMap-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,11 +48,9 @@ whether the image type is a hand-drawn line art.<p>**NOTE：**: it is recommende
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ImageItem-isHandwrite?: boolean--><!--Device-ImageItem-isHandwrite?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,11 +68,9 @@ The size and position of the container used to display images in the preview can
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ImageItem-rect?: common2D.Rect--><!--Device-ImageItem-rect?: common2D.Rect-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,11 +88,9 @@ The rotation of the container used to display images in the preview canvas.<p>**
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ImageItem-rotation?: componentUtils.Rotation2D--><!--Device-ImageItem-rotation?: componentUtils.Rotation2D-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -118,11 +108,9 @@ Original image path information for image generation;<p>**NOTE：**: for high-re
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ImageItem-url?: ResourceStr--><!--Device-ImageItem-url?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -136,17 +124,14 @@ zIndex?: int
 
 In scenarios with multiple images, information about image rendering hierarchy.<p>**NOTE：**: it is recommended to be provided in multi-image fusion scenarios to achieve better results. </p>
 
-**Type:** int
+**Type:** number
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ImageItem-zIndex?: int--><!--Device-ImageItem-zIndex?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

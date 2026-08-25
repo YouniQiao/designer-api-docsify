@@ -6,7 +6,7 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 9
 
-<!--Device-unnamed-declare class GridColAttribute--><!--Device-unnamed-declare class GridColAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,19 +25,19 @@ Sets the number of offset columns relative to the original position of the compo
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-GridColAttribute-gridColOffset(value: number | GridColColumnOption): GridColAttribute--><!--Device-GridColAttribute-gridColOffset(value: number | GridColColumnOption): GridColAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | Yes | Number of offset columns relative to the previous child component of the grid<br>The value must be a non-negative integer. Default value: **0**.<br>Invalid values are treated as the default value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | Yes |
 
 ## order
 
@@ -49,19 +49,19 @@ Sets the display order of the grid child component. Grid child components are so
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-GridColAttribute-order(value: number | GridColColumnOption): GridColAttribute--><!--Device-GridColAttribute-order(value: number | GridColColumnOption): GridColAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | Yes | Sequence number of the component. Child components of the grid are sorted in ascending order based on their sequence numbers.<br>The value must be a non-negative integer. Default value: **0**.<br>Invalid values are treated as the default value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | Yes |
 
 ## span
 
@@ -73,17 +73,16 @@ Sets the number of columns occupied by the component. If it is set to **0**, the
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-GridColAttribute-span(value: number | GridColColumnOption): GridColAttribute--><!--Device-GridColAttribute-span(value: number | GridColColumnOption): GridColAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | Yes | Number of occupied columns.<br>The value must be a non-negative integer. Default value: **1**.<br>Invalid values are treated as the default value. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | Yes |

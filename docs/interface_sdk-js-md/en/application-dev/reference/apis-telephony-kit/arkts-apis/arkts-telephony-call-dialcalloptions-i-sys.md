@@ -2,9 +2,9 @@
 
 Provides an option for determining whether a call is a video call.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-call-export interface DialCallOptions--><!--Device-call-export interface DialCallOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -25,11 +25,11 @@ accountId?: int
 Account ID.  
 - **0**: card slot 1. - **1**: card slot 2.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DialCallOptions-accountId?: int--><!--Device-DialCallOptions-accountId?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -45,9 +45,9 @@ Dialup scenario.
 
 **Type:** [DialScene](arkts-telephony-call-dialscene-e-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DialCallOptions-dialScene?: DialScene--><!--Device-DialCallOptions-dialScene?: DialScene-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -63,9 +63,9 @@ Dialup type.
 
 **Type:** [DialType](arkts-telephony-call-dialtype-e-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DialCallOptions-dialType?: DialType--><!--Device-DialCallOptions-dialType?: DialType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -81,9 +81,9 @@ Indicates the extra call parameters.
 
 **Type:** Record&lt;string, Object&gt;
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-DialCallOptions-extraParams?: Record<string, Object>--><!--Device-DialCallOptions-extraParams?: Record<string, Object>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -99,9 +99,9 @@ Video state type.
 
 **Type:** [VideoStateType](arkts-telephony-call-videostatetype-e-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DialCallOptions-videoState?: VideoStateType--><!--Device-DialCallOptions-videoState?: VideoStateType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -119,9 +119,8 @@ XCALL type.
 
 **Since:** 26.0.0
 
-<!--Device-DialCallOptions-xCallType?: XCallType--><!--Device-DialCallOptions-xCallType?: XCallType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
-

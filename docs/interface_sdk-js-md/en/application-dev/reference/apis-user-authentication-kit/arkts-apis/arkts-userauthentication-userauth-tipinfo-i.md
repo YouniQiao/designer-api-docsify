@@ -4,11 +4,11 @@ Represents the tip information displayed during the authentication, which is use
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 11
 
 **Substitutes:** [AuthTipInfo](arkts-userauthentication-userauth-authtipinfo-i.md)
-
-<!--Device-userAuth-interface TipInfo--><!--Device-userAuth-interface TipInfo-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -30,11 +30,11 @@ ID of the module that sends the tip information.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 11
 
 **Substitutes:** [tipType](arkts-userauthentication-userauth-authtipinfo-i.md#tiptype)
-
-<!--Device-TipInfo-module: number--><!--Device-TipInfo-module: number-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -50,11 +50,10 @@ Tip to be given during the authentication process.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 11
 
 **Substitutes:** [tipCode](arkts-userauthentication-userauth-authtipinfo-i.md#tipcode)
 
-<!--Device-TipInfo-tip: number--><!--Device-TipInfo-tip: number-End-->
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
-

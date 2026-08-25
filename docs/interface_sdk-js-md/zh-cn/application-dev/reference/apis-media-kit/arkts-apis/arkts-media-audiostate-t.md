@@ -12,19 +12,18 @@ type AudioState = 'idle' | 'playing' | 'paused' | 'stopped' | 'error'
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [AVPlayerState](arkts-media-media-avplayerstate-t.md)
 
-<!--Device-unnamed-type AudioState = 'idle' | 'playing' | 'paused' | 'stopped' | 'error'--><!--Device-unnamed-type AudioState = 'idle' | 'playing' | 'paused' | 'stopped' | 'error'-End-->
-
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
-| 类型 | 说明 |
-| --- | --- |
-| 'idle' | 音频播放空闲，dataload/reset成功后处于此状态。 |
-| 'playing' | 音频正在播放，play成功后处于此状态。 |
-| 'paused' | 音频暂停播放，pause成功后处于此状态。 |
-| 'stopped' | 音频播放停止，stop/播放结束后处于此状态。 |
-| 'error' | 错误状态。 |
-
+| 类型 |
+| --- |
+| 'idle' |
+| 'playing' |
+| 'paused' |
+| 'stopped' |
+| 'error' |

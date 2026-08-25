@@ -2,9 +2,9 @@
 
 Enumerates the screen orientations.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-screen-enum Orientation--><!--Device-screen-enum Orientation-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -18,9 +18,9 @@ UNSPECIFIED = 0
 
 Unspecified. The screen orientation is determined by the system.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Orientation-UNSPECIFIED = 0--><!--Device-Orientation-UNSPECIFIED = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -34,9 +34,9 @@ VERTICAL = 1
 
 Vertical.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Orientation-VERTICAL = 1--><!--Device-Orientation-VERTICAL = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -50,9 +50,9 @@ HORIZONTAL = 2
 
 Horizontal.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Orientation-HORIZONTAL = 2--><!--Device-Orientation-HORIZONTAL = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -66,9 +66,9 @@ REVERSE_VERTICAL = 3
 
 Reverse vertical.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Orientation-REVERSE_VERTICAL = 3--><!--Device-Orientation-REVERSE_VERTICAL = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -82,11 +82,10 @@ REVERSE_HORIZONTAL = 4
 
 Reverse horizontal.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Orientation-REVERSE_HORIZONTAL = 4--><!--Device-Orientation-REVERSE_HORIZONTAL = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
-

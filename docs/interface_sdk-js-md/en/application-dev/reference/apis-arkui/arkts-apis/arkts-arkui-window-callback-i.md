@@ -4,7 +4,7 @@ Defines the window callback.
 
 **Since:** 15
 
-<!--Device-unnamed-declare interface Callback--><!--Device-unnamed-declare interface Callback-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -14,7 +14,7 @@ Defines the window callback.
 import { window } from '@kit.ArkUI';
 ```
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (data: T): V
@@ -24,21 +24,20 @@ Defines the callback info.
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
-<!--Device-Callback-(data: T): V--><!--Device-Callback-(data: T): V-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | T | Yes | the data will be used in the callback. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| V | Returns result of the callback. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| V |

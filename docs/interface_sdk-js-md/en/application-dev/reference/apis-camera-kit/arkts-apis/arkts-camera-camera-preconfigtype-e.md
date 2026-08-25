@@ -2,9 +2,9 @@
 
 Enumerates the preconfigured resolution types.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-camera-enum PreconfigType--><!--Device-camera-enum PreconfigType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -16,11 +16,11 @@ PRECONFIG_720P = 0
 
 720p resolution.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-PreconfigType-PRECONFIG_720P = 0--><!--Device-PreconfigType-PRECONFIG_720P = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -32,11 +32,11 @@ PRECONFIG_1080P = 1
 
 1080p resolution.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-PreconfigType-PRECONFIG_1080P = 1--><!--Device-PreconfigType-PRECONFIG_1080P = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -48,11 +48,11 @@ PRECONFIG_4K = 2
 
 4K resolution.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-PreconfigType-PRECONFIG_4K = 2--><!--Device-PreconfigType-PRECONFIG_4K = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -64,11 +64,11 @@ PRECONFIG_HIGH_QUALITY = 3
 
 High-quality resolution.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-PreconfigType-PRECONFIG_HIGH_QUALITY = 3--><!--Device-PreconfigType-PRECONFIG_HIGH_QUALITY = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -82,11 +82,10 @@ Resolution that supports HDR preview and GIF photography.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-PreconfigType-PRECONFIG_HIGH_QUALITY_PHOTOSESSION_BT2020 = 4--><!--Device-PreconfigType-PRECONFIG_HIGH_QUALITY_PHOTOSESSION_BT2020 = 4-End-->
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
-

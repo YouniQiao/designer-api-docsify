@@ -4,11 +4,11 @@ Describes the scanned Wi-Fi information.@interface WifiScanInfo
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i.md)
-
-<!--Device-wifi-interface WifiScanInfo--><!--Device-wifi-interface WifiScanInfo-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -30,11 +30,11 @@ Frequency band, 1: 2.4G, 2: 5G
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [band](arkts-connectivity-wifimanager-wifiscaninfo-i.md#band)
-
-<!--Device-WifiScanInfo-band: number--><!--Device-WifiScanInfo-band: number-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -50,11 +50,11 @@ Wi-Fi bssid(MAC): the length is 6
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [bssid](arkts-connectivity-wifimanager-wifiscaninfo-i.md#bssid)
-
-<!--Device-WifiScanInfo-bssid: string--><!--Device-WifiScanInfo-bssid: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -70,11 +70,11 @@ Hotspot capability
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [capabilities](arkts-connectivity-wifimanager-wifiscaninfo-i.md#capabilities)
-
-<!--Device-WifiScanInfo-capabilities: string--><!--Device-WifiScanInfo-capabilities: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -90,11 +90,11 @@ Channel width
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [channelWidth](arkts-connectivity-wifimanager-wifiscaninfo-i.md#channelwidth)
-
-<!--Device-WifiScanInfo-channelWidth: number--><!--Device-WifiScanInfo-channelWidth: number-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -110,11 +110,11 @@ Frequency
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [frequency](arkts-connectivity-wifimanager-wifiscaninfo-i.md#frequency)
-
-<!--Device-WifiScanInfo-frequency: number--><!--Device-WifiScanInfo-frequency: number-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -130,11 +130,11 @@ Received signal strength indicator (RSSI)
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [rssi](arkts-connectivity-wifimanager-wifiscaninfo-i.md#rssi)
-
-<!--Device-WifiScanInfo-rssi: number--><!--Device-WifiScanInfo-rssi: number-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -150,11 +150,11 @@ Security type: reference definition of WifiSecurityType
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [securityType](arkts-connectivity-wifimanager-wifiscaninfo-i.md#securitytype)
-
-<!--Device-WifiScanInfo-securityType: WifiSecurityType--><!--Device-WifiScanInfo-securityType: WifiSecurityType-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -170,11 +170,11 @@ Wi-Fi SSID: the maximum length is 32
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ssid](arkts-connectivity-wifimanager-wifiscaninfo-i.md#ssid)
-
-<!--Device-WifiScanInfo-ssid: string--><!--Device-WifiScanInfo-ssid: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -190,11 +190,10 @@ Time stamp
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [timestamp](arkts-connectivity-wifimanager-wifiscaninfo-i.md#timestamp)
 
-<!--Device-WifiScanInfo-timestamp: number--><!--Device-WifiScanInfo-timestamp: number-End-->
-
 **System capability:** SystemCapability.Communication.WiFi.STA
-

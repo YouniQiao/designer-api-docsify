@@ -4,11 +4,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md)
-
-<!--Device-reminderAgent-interface LocalDateTime--><!--Device-reminderAgent-interface LocalDateTime-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -30,11 +30,11 @@ day: number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** day
-
-<!--Device-LocalDateTime-day: number--><!--Device-LocalDateTime-day: number-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -50,11 +50,11 @@ hour: number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** hour
-
-<!--Device-LocalDateTime-hour: number--><!--Device-LocalDateTime-hour: number-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -70,11 +70,11 @@ minute: number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** minute
-
-<!--Device-LocalDateTime-minute: number--><!--Device-LocalDateTime-minute: number-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -90,11 +90,11 @@ month: number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** month
-
-<!--Device-LocalDateTime-month: number--><!--Device-LocalDateTime-month: number-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -110,11 +110,11 @@ second?: number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** second
-
-<!--Device-LocalDateTime-second?: number--><!--Device-LocalDateTime-second?: number-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -130,11 +130,10 @@ year: number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** year
 
-<!--Device-LocalDateTime-year: number--><!--Device-LocalDateTime-year: number-End-->
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
-

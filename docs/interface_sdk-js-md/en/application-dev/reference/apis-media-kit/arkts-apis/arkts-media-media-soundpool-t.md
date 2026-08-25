@@ -6,11 +6,10 @@ type SoundPool = _SoundPool
 
 SoundPool, which provides APIs for loading, unloading, playing, and stopping playing system sounds, setting the volume, and setting the number of loops.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-media-type SoundPool = _SoundPool--><!--Device-media-type SoundPool = _SoundPool-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Property type:** _SoundPool
-

@@ -16,17 +16,17 @@ function createVpnObserver(): VpnObserver
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-vpnExtension-function createVpnObserver(): VpnObserver--><!--Device-vpnExtension-function createVpnObserver(): VpnObserver-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [VpnObserver](arkts-network-vpnextension-vpnobserver-i.md) | 返回一个VPN观察者对象。 |
+| 类型 |
+| --- |
+| [VpnObserver](arkts-network-vpnextension-vpnobserver-i.md) |
 
 **示例**
 
@@ -35,4 +35,3 @@ import { vpnExtension } from '@kit.NetworkKit';
 
 let vpnObserver: vpnExtension.VpnObserver = vpnExtension.createVpnObserver();
 ```
-

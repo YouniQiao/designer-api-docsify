@@ -20,19 +20,19 @@ Obtains the preloading type of the current application process.
 > - Once the AbilityStage creation finishes, the preloaded data of the application is cleared. Any subsequent calls
 > will return **UNSPECIFIED** instead of the original preloading type.
 
-**Since:** 23
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-application-export function getAppPreloadType(): AppPreloadType--><!--Device-application-export function getAppPreloadType(): AppPreloadType-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [AppPreloadType](arkts-ability-application-apppreloadtype-e.md) | Obtains the preloading type of the current application process. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [AppPreloadType](arkts-ability-application-apppreloadtype-e.md) |
 
 **Examples**
 
@@ -45,4 +45,3 @@ export default class MyAbilityStage extends AbilityStage{
   }
 }
 ```
-

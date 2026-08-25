@@ -4,7 +4,7 @@ Provides an interface for deleting value from text.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface DeleteValue--><!--Device-unnamed-declare interface DeleteValue-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Position of the deleted text.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DeleteValue-deleteOffset: number--><!--Device-DeleteValue-deleteOffset: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ Content of the deleted text.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DeleteValue-deleteValue: string--><!--Device-DeleteValue-deleteValue: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,11 +65,10 @@ Direction for deleting the text.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-DeleteValue-direction: TextDeleteDirection--><!--Device-DeleteValue-direction: TextDeleteDirection-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

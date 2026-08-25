@@ -16,28 +16,28 @@ function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback>
 
 **起始版本：** 26.0.0
 
-<!--Device-audio-function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback>--><!--Device-audio-function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mode | [AudioLoopbackMode](arkts-audio-audio-audioloopbackmode-e.md) | 是 | 音频返听模式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mode | [AudioLoopbackMode](arkts-audio-audio-audioloopbackmode-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[AudioLoopback](arkts-audio-audio-audioloopback-i.md)&gt; | Promise对象，成功将返回音频返听器对象，异常将返回error对象。 |
+| 类型 |
+| --- |
+| Promise&lt;[AudioLoopback](arkts-audio-audio-audioloopback-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Loopback mode is unsupported. |
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
 
 **示例**
 
@@ -82,30 +82,29 @@ function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback | n
 
 **起始版本：** 26.0.0
 
-<!--Device-audio-function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback | null>--><!--Device-audio-function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback | null>-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mode | [AudioLoopbackMode](arkts-audio-audio-audioloopbackmode-e.md) | 是 | 音频返听模式。<br>**起始版本：** 23 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mode | [AudioLoopbackMode](arkts-audio-audio-audioloopbackmode-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[AudioLoopback](arkts-audio-audio-audioloopback-i.md) \| null&gt; | Promise 过去用于返回 &lt;b&gt;AudioLoopback&lt;/b&gt; 实例，或在发生错误时返回 null。<br>**适用版本：** 23+ |
+| 类型 |
+| --- |
+| Promise&lt;[AudioLoopback](arkts-audio-audio-audioloopback-i.md) \| null & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Loopback mode is unsupported. |
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
 
 **示例**
 
 参见 [createAudioLoopback](#createaudioloopback)
-

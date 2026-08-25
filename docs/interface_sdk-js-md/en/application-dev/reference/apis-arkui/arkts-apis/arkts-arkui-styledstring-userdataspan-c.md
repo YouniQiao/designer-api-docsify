@@ -4,11 +4,8 @@ Defines UserDataSpan. Used to store and obtain user data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare abstract class UserDataSpan--><!--Device-unnamed-export declare abstract class UserDataSpan-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -14,28 +14,28 @@ function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: A
 
 Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha format.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: AsyncCallback<void>): void--><!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: AsyncCallback<void>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| src | PixelMap | 是 | The source pixelmap. |
-| dst | PixelMap | 是 | The destination pixelmap. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the operation result. If the operation fails, an error message is returned. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| src | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980246](../errorcode-image.md#62980246-读取pixelmap失败) | Failed to read the pixelMap. |
-| [62980248](../errorcode-image.md#62980248-pixelmap不允许修改) | Pixelmap not allow modify. |
+| 错误码ID |
+| --- |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [62980246](../errorcode-image.md#62980246-读取pixelmap失败) |
+| [62980248](../errorcode-image.md#62980248-pixelmap不允许修改) |
 
 **示例**
 
@@ -124,35 +124,34 @@ function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<vo
 
 Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha format.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>--><!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| src | PixelMap | 是 | The source pixelmap. |
-| dst | PixelMap | 是 | The destination pixelmap. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| src | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980246](../errorcode-image.md#62980246-读取pixelmap失败) | Failed to read the pixelMap. |
-| [62980248](../errorcode-image.md#62980248-pixelmap不允许修改) | Pixelmap not allow modify. |
+| 错误码ID |
+| --- |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [62980246](../errorcode-image.md#62980246-读取pixelmap失败) |
+| [62980248](../errorcode-image.md#62980248-pixelmap不允许修改) |
 
 **示例**
 
 参见 [createUnpremultipliedPixelMap](#createunpremultipliedpixelmap)
-

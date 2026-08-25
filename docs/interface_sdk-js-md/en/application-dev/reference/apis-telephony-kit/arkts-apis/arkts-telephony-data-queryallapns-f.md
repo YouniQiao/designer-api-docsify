@@ -14,25 +14,25 @@ function queryAllApns(): Promise<Array<ApnInfo>>
 
 Obtains the access point name (APN) of the default SIM card used for mobile data. This API returns the result asynchronously.
 
-**Since:** 23
+**Since:** 16
+
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_APN_SETTING
-
-<!--Device-data-function queryAllApns(): Promise<Array<ApnInfo>>--><!--Device-data-function queryAllApns(): Promise<Array<ApnInfo>>-End-->
 
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;[ApnInfo](arkts-telephony-data-apninfo-i.md)&gt;&gt; | Promise used to return the result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;Array&lt;[ApnInfo](arkts-telephony-data-apninfo-i.md)&gt;&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 **Examples**
 
@@ -46,4 +46,3 @@ data.queryAllApns().then((apnInfos: Array<data.ApnInfo>) => {
     console.error(`queryAllApns failed. code: ${err.code}, message: ${err.message}`);
 });
 ```
-

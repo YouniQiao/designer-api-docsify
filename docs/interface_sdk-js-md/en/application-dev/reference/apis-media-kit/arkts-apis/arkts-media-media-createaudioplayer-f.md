@@ -16,23 +16,22 @@ Creates an AudioPlayer instance in synchronous mode.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [createAVPlayer](arkts-media-media-createavplayer-f.md)(callback: AsyncCallback&lt;AVPlayer&gt;)
-
-<!--Device-media-function createAudioPlayer(): AudioPlayer--><!--Device-media-function createAudioPlayer(): AudioPlayer-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AudioPlayer
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [AudioPlayer](arkts-media-media-audioplayer-i.md) | If the operation is successful, an AudioPlayer instance is returned; otherwise, **null** is returned. After the instance is created, you can start, pause, or stop audio playback. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [AudioPlayer](arkts-media-media-audioplayer-i.md) |
 
 **Examples**
 
 ```TypeScript
 let audioPlayer: media.AudioPlayer = media.createAudioPlayer();
 ```
-

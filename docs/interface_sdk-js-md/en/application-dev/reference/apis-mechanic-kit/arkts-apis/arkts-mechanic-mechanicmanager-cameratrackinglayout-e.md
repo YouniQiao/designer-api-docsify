@@ -2,9 +2,9 @@
 
 Enumerates the camera tracking layouts. @enum { int }
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-mechanicManager-export enum CameraTrackingLayout--><!--Device-mechanicManager-export enum CameraTrackingLayout-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -16,9 +16,9 @@ DEFAULT = 0
 
 Default layout.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-CameraTrackingLayout-DEFAULT = 0--><!--Device-CameraTrackingLayout-DEFAULT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -30,9 +30,9 @@ LEFT = 1
 
 Left-side layout.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-CameraTrackingLayout-LEFT = 1--><!--Device-CameraTrackingLayout-LEFT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -44,9 +44,9 @@ MIDDLE = 2
 
 Middle layout.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-CameraTrackingLayout-MIDDLE = 2--><!--Device-CameraTrackingLayout-MIDDLE = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -58,9 +58,8 @@ RIGHT = 3
 
 Right-side layout.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-CameraTrackingLayout-RIGHT = 3--><!--Device-CameraTrackingLayout-RIGHT = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
-

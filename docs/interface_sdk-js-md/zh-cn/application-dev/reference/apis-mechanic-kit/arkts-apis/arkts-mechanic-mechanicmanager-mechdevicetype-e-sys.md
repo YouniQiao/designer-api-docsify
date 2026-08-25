@@ -2,9 +2,9 @@
 
 Enumerates the mechanical device types. @enum { int }
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-mechanicManager-export enum MechDeviceType--><!--Device-mechanicManager-export enum MechDeviceType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -18,7 +18,7 @@ DESKTOP_GIMBAL_DEVICE = 1
 
 **起始版本：** 26.0.0
 
-<!--Device-MechDeviceType-DESKTOP_GIMBAL_DEVICE = 1--><!--Device-MechDeviceType-DESKTOP_GIMBAL_DEVICE = 1-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -34,9 +34,8 @@ WHEELED_BASE_DEVICE = 2
 
 **起始版本：** 26.0.0
 
-<!--Device-MechDeviceType-WHEELED_BASE_DEVICE = 2--><!--Device-MechDeviceType-WHEELED_BASE_DEVICE = 2-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
-

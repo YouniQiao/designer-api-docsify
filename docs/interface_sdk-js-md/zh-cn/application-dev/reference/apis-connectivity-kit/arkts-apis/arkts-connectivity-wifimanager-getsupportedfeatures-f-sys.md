@@ -14,11 +14,11 @@ function getSupportedFeatures(): long
 
 查询设备支持的特性。 检查此设备是否支持指定特性。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
-
-<!--Device-wifiManager-function getSupportedFeatures(): long--><!--Device-wifiManager-function getSupportedFeatures(): long-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
@@ -26,18 +26,18 @@ function getSupportedFeatures(): long
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 返回此设备支持的特性。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | System API is not allowed called by Non-system application. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [2401000](../errorcode-wifi.md#2401000-sta内部异常) | Operation failed. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [2401000](../errorcode-wifi.md#2401000-sta内部异常) |
 
 **示例**
 
@@ -51,4 +51,3 @@ try {
     console.error("failed:" + JSON.stringify(error));
 }
 ```
-

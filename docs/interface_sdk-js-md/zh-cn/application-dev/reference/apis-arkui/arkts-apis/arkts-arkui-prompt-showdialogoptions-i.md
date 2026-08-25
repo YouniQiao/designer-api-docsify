@@ -4,11 +4,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-**替代接口：** [ShowDialogOptions](../../apis-default/arkts-apis/arkts-promptaction-showdialogoptions-i.md)
-
-<!--Device-prompt-interface ShowDialogOptions--><!--Device-prompt-interface ShowDialogOptions-End-->
+**替代接口：** [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,11 @@ buttons?: [Button, Button?, Button?]
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-**替代接口：** [buttons](../../apis-default/arkts-apis/arkts-promptaction-showdialogoptions-i.md#buttons)
-
-<!--Device-ShowDialogOptions-buttons?: [Button, Button?, Button?]--><!--Device-ShowDialogOptions-buttons?: [Button, Button?, Button?]-End-->
+**替代接口：** [buttons](arkts-arkui-promptaction-showdialogoptions-i.md#buttons)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,11 +50,11 @@ message?: string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-**替代接口：** [message](../../apis-default/arkts-apis/arkts-promptaction-showdialogoptions-i.md#message)
-
-<!--Device-ShowDialogOptions-message?: string--><!--Device-ShowDialogOptions-message?: string-End-->
+**替代接口：** [message](arkts-arkui-promptaction-showdialogoptions-i.md#message)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,11 +70,10 @@ title?: string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-**替代接口：** [title](../../apis-default/arkts-apis/arkts-promptaction-showdialogoptions-i.md#title)
-
-<!--Device-ShowDialogOptions-title?: string--><!--Device-ShowDialogOptions-title?: string-End-->
+**替代接口：** [title](arkts-arkui-promptaction-showdialogoptions-i.md#title)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

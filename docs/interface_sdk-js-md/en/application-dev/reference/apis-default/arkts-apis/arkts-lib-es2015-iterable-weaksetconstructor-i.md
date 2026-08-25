@@ -1,31 +1,27 @@
 # WeakSetConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface WeakSetConstructor--><!--Device-unnamed-interface WeakSetConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
+## [[Construct]]
 
 ```TypeScript
 new <T extends object = object>(iterable: Iterable<T>): WeakSet<T>
 ```
 
-**Since:** -1
-
-<!--Device-WeakSetConstructor-new <T extends object = object>(iterable: Iterable<T>): WeakSet<T>--><!--Device-WeakSetConstructor-new <T extends object = object>(iterable: Iterable<T>): WeakSet<T>-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| iterable | Iterable&lt;T&gt; | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| iterable | Iterable & lt;T & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

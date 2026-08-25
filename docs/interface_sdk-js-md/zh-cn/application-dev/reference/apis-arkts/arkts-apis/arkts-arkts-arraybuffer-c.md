@@ -4,9 +4,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-unnamed-export class ArrayBuffer--><!--Device-unnamed-export class ArrayBuffer-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,25 +23,23 @@ public at(pos: int): byte
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public at(pos: int): byte--><!--Device-ArrayBuffer-public at(pos: int): byte-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pos | int | 是 | 在缓冲区中的位置。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pos | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| byte | 字节值。 |
+| 类型 |
+| --- |
+| byte |
 
 ## atomicAddI16
 
@@ -55,27 +51,25 @@ public atomicAddI16(index: int, byteOffset: int, value: short): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicAddI16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicAddI16(index: int, byteOffset: int, value: short): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | short | 是 | 要相加的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicAddI32
 
@@ -87,27 +81,25 @@ public atomicAddI32(index: int, byteOffset: int, value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicAddI32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicAddI32(index: int, byteOffset: int, value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | int | 是 | 要相加的值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicAddI64
 
@@ -119,27 +111,25 @@ public atomicAddI64(index: int, byteOffset: int, value: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicAddI64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicAddI64(index: int, byteOffset: int, value: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | long | 是 | 要相加的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicAddI8
 
@@ -151,27 +141,25 @@ public atomicAddI8(index: int, byteOffset: int, value: byte): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicAddI8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicAddI8(index: int, byteOffset: int, value: byte): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | byte | 是 | 要相加的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicAddU16
 
@@ -183,27 +171,25 @@ public atomicAddU16(index: int, byteOffset: int, value: short): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicAddU16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicAddU16(index: int, byteOffset: int, value: short): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | short | 是 | 要相加的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicAddU32
 
@@ -215,27 +201,25 @@ public atomicAddU32(index: int, byteOffset: int, value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicAddU32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicAddU32(index: int, byteOffset: int, value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | int | 是 | 要相加的值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicAddU64
 
@@ -247,27 +231,25 @@ public atomicAddU64(index: int, byteOffset: int, value: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicAddU64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicAddU64(index: int, byteOffset: int, value: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | long | 是 | 要相加的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicAddU8
 
@@ -279,27 +261,25 @@ public atomicAddU8(index: int, byteOffset: int, value: byte): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicAddU8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicAddU8(index: int, byteOffset: int, value: byte): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | byte | 是 | 要相加的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicAndI16
 
@@ -311,27 +291,25 @@ public atomicAndI16(index: int, byteOffset: int, value: short): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicAndI16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicAndI16(index: int, byteOffset: int, value: short): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | short | 是 | 参与按位与运算的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicAndI32
 
@@ -343,27 +321,25 @@ public atomicAndI32(index: int, byteOffset: int, value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicAndI32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicAndI32(index: int, byteOffset: int, value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | int | 是 | 参与按位与运算的值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicAndI64
 
@@ -375,27 +351,25 @@ public atomicAndI64(index: int, byteOffset: int, value: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicAndI64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicAndI64(index: int, byteOffset: int, value: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | long | 是 | 参与按位与运算的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicAndI8
 
@@ -407,27 +381,25 @@ public atomicAndI8(index: int, byteOffset: int, value: byte): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicAndI8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicAndI8(index: int, byteOffset: int, value: byte): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | byte | 是 | 参与按位与运算的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicAndU16
 
@@ -439,27 +411,25 @@ public atomicAndU16(index: int, byteOffset: int, value: short): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicAndU16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicAndU16(index: int, byteOffset: int, value: short): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | short | 是 | 参与按位与运算的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicAndU32
 
@@ -471,27 +441,25 @@ public atomicAndU32(index: int, byteOffset: int, value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicAndU32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicAndU32(index: int, byteOffset: int, value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | int | 是 | 参与按位与运算的值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicAndU64
 
@@ -503,27 +471,25 @@ public atomicAndU64(index: int, byteOffset: int, value: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicAndU64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicAndU64(index: int, byteOffset: int, value: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | long | 是 | 参与按位与运算的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicAndU8
 
@@ -535,27 +501,25 @@ public atomicAndU8(index: int, byteOffset: int, value: byte): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicAndU8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicAndU8(index: int, byteOffset: int, value: byte): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | byte | 是 | 参与按位与运算的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicCompareExchangeI16
 
@@ -567,28 +531,26 @@ public atomicCompareExchangeI16(index: int, byteOffset: int, expectedValue: shor
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicCompareExchangeI16(index: int, byteOffset: int, expectedValue: short, replacementValue: short): long--><!--Device-ArrayBuffer-public atomicCompareExchangeI16(index: int, byteOffset: int, expectedValue: short, replacementValue: short): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| expectedValue | short | 是 | 期望值。 |
-| replacementValue | short | 是 | 替换值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| expectedValue | short | 是 |
+| replacementValue | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicCompareExchangeI32
 
@@ -600,28 +562,26 @@ public atomicCompareExchangeI32(index: int, byteOffset: int, expectedValue: int,
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicCompareExchangeI32(index: int, byteOffset: int, expectedValue: int, replacementValue: int): long--><!--Device-ArrayBuffer-public atomicCompareExchangeI32(index: int, byteOffset: int, expectedValue: int, replacementValue: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| expectedValue | int | 是 | 期望值。 <br>取值约束：应为整数。 |
-| replacementValue | int | 是 | 替换值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| expectedValue | int | 是 |
+| replacementValue | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicCompareExchangeI64
 
@@ -633,28 +593,26 @@ public atomicCompareExchangeI64(index: int, byteOffset: int, expectedValue: long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicCompareExchangeI64(index: int, byteOffset: int, expectedValue: long, replacementValue: long): long--><!--Device-ArrayBuffer-public atomicCompareExchangeI64(index: int, byteOffset: int, expectedValue: long, replacementValue: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| expectedValue | long | 是 | 期望值。 |
-| replacementValue | long | 是 | 替换值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| expectedValue | long | 是 |
+| replacementValue | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicCompareExchangeI8
 
@@ -666,28 +624,26 @@ public atomicCompareExchangeI8(index: int, byteOffset: int, expectedValue: byte,
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicCompareExchangeI8(index: int, byteOffset: int, expectedValue: byte, replacementValue: byte): long--><!--Device-ArrayBuffer-public atomicCompareExchangeI8(index: int, byteOffset: int, expectedValue: byte, replacementValue: byte): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| expectedValue | byte | 是 | 期望值。 |
-| replacementValue | byte | 是 | 替换值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| expectedValue | byte | 是 |
+| replacementValue | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicCompareExchangeU16
 
@@ -699,28 +655,26 @@ public atomicCompareExchangeU16(index: int, byteOffset: int, expectedValue: shor
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicCompareExchangeU16(index: int, byteOffset: int, expectedValue: short, replacementValue: short): long--><!--Device-ArrayBuffer-public atomicCompareExchangeU16(index: int, byteOffset: int, expectedValue: short, replacementValue: short): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| expectedValue | short | 是 | 期望值。 |
-| replacementValue | short | 是 | 替换值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| expectedValue | short | 是 |
+| replacementValue | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicCompareExchangeU32
 
@@ -732,28 +686,26 @@ public atomicCompareExchangeU32(index: int, byteOffset: int, expectedValue: int,
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicCompareExchangeU32(index: int, byteOffset: int, expectedValue: int, replacementValue: int): long--><!--Device-ArrayBuffer-public atomicCompareExchangeU32(index: int, byteOffset: int, expectedValue: int, replacementValue: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| expectedValue | int | 是 | 期望值。 <br>取值约束：应为整数。 |
-| replacementValue | int | 是 | 替换值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| expectedValue | int | 是 |
+| replacementValue | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicCompareExchangeU64
 
@@ -765,28 +717,26 @@ public atomicCompareExchangeU64(index: int, byteOffset: int, expectedValue: long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicCompareExchangeU64(index: int, byteOffset: int, expectedValue: long, replacementValue: long): long--><!--Device-ArrayBuffer-public atomicCompareExchangeU64(index: int, byteOffset: int, expectedValue: long, replacementValue: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| expectedValue | long | 是 | 期望值。 |
-| replacementValue | long | 是 | 替换值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| expectedValue | long | 是 |
+| replacementValue | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicCompareExchangeU8
 
@@ -798,28 +748,26 @@ public atomicCompareExchangeU8(index: int, byteOffset: int, expectedValue: byte,
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicCompareExchangeU8(index: int, byteOffset: int, expectedValue: byte, replacementValue: byte): long--><!--Device-ArrayBuffer-public atomicCompareExchangeU8(index: int, byteOffset: int, expectedValue: byte, replacementValue: byte): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| expectedValue | byte | 是 | 期望值。 |
-| replacementValue | byte | 是 | 替换值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| expectedValue | byte | 是 |
+| replacementValue | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicExchangeI16
 
@@ -831,27 +779,25 @@ public atomicExchangeI16(index: int, byteOffset: int, value: short): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicExchangeI16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicExchangeI16(index: int, byteOffset: int, value: short): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | short | 是 | 要交换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicExchangeI32
 
@@ -863,27 +809,25 @@ public atomicExchangeI32(index: int, byteOffset: int, value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicExchangeI32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicExchangeI32(index: int, byteOffset: int, value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | int | 是 | 要交换的值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicExchangeI64
 
@@ -895,27 +839,25 @@ public atomicExchangeI64(index: int, byteOffset: int, value: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicExchangeI64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicExchangeI64(index: int, byteOffset: int, value: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | long | 是 | 要交换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicExchangeI8
 
@@ -927,27 +869,25 @@ public atomicExchangeI8(index: int, byteOffset: int, value: byte): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicExchangeI8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicExchangeI8(index: int, byteOffset: int, value: byte): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | byte | 是 | 要交换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicExchangeU16
 
@@ -959,27 +899,25 @@ public atomicExchangeU16(index: int, byteOffset: int, value: short): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicExchangeU16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicExchangeU16(index: int, byteOffset: int, value: short): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | short | 是 | 要交换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicExchangeU32
 
@@ -991,27 +929,25 @@ public atomicExchangeU32(index: int, byteOffset: int, value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicExchangeU32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicExchangeU32(index: int, byteOffset: int, value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | int | 是 | 要交换的值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicExchangeU64
 
@@ -1023,27 +959,25 @@ public atomicExchangeU64(index: int, byteOffset: int, value: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicExchangeU64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicExchangeU64(index: int, byteOffset: int, value: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | long | 是 | 要交换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicExchangeU8
 
@@ -1055,27 +989,25 @@ public atomicExchangeU8(index: int, byteOffset: int, value: byte): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicExchangeU8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicExchangeU8(index: int, byteOffset: int, value: byte): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | byte | 是 | 要交换的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicLoadI16
 
@@ -1087,26 +1019,24 @@ public atomicLoadI16(index: int, byteOffset: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicLoadI16(index: int, byteOffset: int): long--><!--Device-ArrayBuffer-public atomicLoadI16(index: int, byteOffset: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicLoadI32
 
@@ -1118,26 +1048,24 @@ public atomicLoadI32(index: int, byteOffset: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicLoadI32(index: int, byteOffset: int): long--><!--Device-ArrayBuffer-public atomicLoadI32(index: int, byteOffset: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicLoadI64
 
@@ -1149,26 +1077,24 @@ public atomicLoadI64(index: int, byteOffset: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicLoadI64(index: int, byteOffset: int): long--><!--Device-ArrayBuffer-public atomicLoadI64(index: int, byteOffset: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicLoadI8
 
@@ -1180,26 +1106,24 @@ public atomicLoadI8(index: int, byteOffset: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicLoadI8(index: int, byteOffset: int): long--><!--Device-ArrayBuffer-public atomicLoadI8(index: int, byteOffset: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicLoadU16
 
@@ -1211,26 +1135,24 @@ public atomicLoadU16(index: int, byteOffset: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicLoadU16(index: int, byteOffset: int): long--><!--Device-ArrayBuffer-public atomicLoadU16(index: int, byteOffset: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicLoadU32
 
@@ -1242,26 +1164,24 @@ public atomicLoadU32(index: int, byteOffset: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicLoadU32(index: int, byteOffset: int): long--><!--Device-ArrayBuffer-public atomicLoadU32(index: int, byteOffset: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicLoadU64
 
@@ -1273,26 +1193,24 @@ public atomicLoadU64(index: int, byteOffset: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicLoadU64(index: int, byteOffset: int): long--><!--Device-ArrayBuffer-public atomicLoadU64(index: int, byteOffset: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicLoadU8
 
@@ -1304,26 +1222,24 @@ public atomicLoadU8(index: int, byteOffset: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicLoadU8(index: int, byteOffset: int): long--><!--Device-ArrayBuffer-public atomicLoadU8(index: int, byteOffset: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicOrI16
 
@@ -1335,27 +1251,25 @@ public atomicOrI16(index: int, byteOffset: int, value: short): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicOrI16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicOrI16(index: int, byteOffset: int, value: short): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | short | 是 | 参与按位或运算的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicOrI32
 
@@ -1367,27 +1281,25 @@ public atomicOrI32(index: int, byteOffset: int, value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicOrI32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicOrI32(index: int, byteOffset: int, value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | int | 是 | 参与按位或运算的值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicOrI64
 
@@ -1399,27 +1311,25 @@ public atomicOrI64(index: int, byteOffset: int, value: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicOrI64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicOrI64(index: int, byteOffset: int, value: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | long | 是 | 参与按位或运算的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicOrI8
 
@@ -1431,27 +1341,25 @@ public atomicOrI8(index: int, byteOffset: int, value: byte): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicOrI8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicOrI8(index: int, byteOffset: int, value: byte): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | byte | 是 | 参与按位或运算的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicOrU16
 
@@ -1463,27 +1371,25 @@ public atomicOrU16(index: int, byteOffset: int, value: short): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicOrU16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicOrU16(index: int, byteOffset: int, value: short): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | short | 是 | 参与按位或运算的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicOrU32
 
@@ -1495,27 +1401,25 @@ public atomicOrU32(index: int, byteOffset: int, value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicOrU32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicOrU32(index: int, byteOffset: int, value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | int | 是 | 参与按位或运算的值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicOrU64
 
@@ -1527,27 +1431,25 @@ public atomicOrU64(index: int, byteOffset: int, value: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicOrU64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicOrU64(index: int, byteOffset: int, value: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | long | 是 | 参与按位或运算的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicOrU8
 
@@ -1559,27 +1461,25 @@ public atomicOrU8(index: int, byteOffset: int, value: byte): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicOrU8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicOrU8(index: int, byteOffset: int, value: byte): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | byte | 是 | 参与按位或运算的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicStoreI16
 
@@ -1591,27 +1491,25 @@ public atomicStoreI16(index: int, byteOffset: int, value: short): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicStoreI16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicStoreI16(index: int, byteOffset: int, value: short): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | short | 是 | 要存储的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 已存储的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicStoreI32
 
@@ -1623,27 +1521,25 @@ public atomicStoreI32(index: int, byteOffset: int, value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicStoreI32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicStoreI32(index: int, byteOffset: int, value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | int | 是 | 要存储的值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 已存储的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicStoreI64
 
@@ -1655,27 +1551,25 @@ public atomicStoreI64(index: int, byteOffset: int, value: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicStoreI64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicStoreI64(index: int, byteOffset: int, value: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | long | 是 | 要存储的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 已存储的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicStoreI8
 
@@ -1687,27 +1581,25 @@ public atomicStoreI8(index: int, byteOffset: int, value: byte): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicStoreI8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicStoreI8(index: int, byteOffset: int, value: byte): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | byte | 是 | 要存储的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 已存储的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicStoreU16
 
@@ -1719,27 +1611,25 @@ public atomicStoreU16(index: int, byteOffset: int, value: short): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicStoreU16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicStoreU16(index: int, byteOffset: int, value: short): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | short | 是 | 要存储的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 已存储的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicStoreU32
 
@@ -1751,27 +1641,25 @@ public atomicStoreU32(index: int, byteOffset: int, value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicStoreU32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicStoreU32(index: int, byteOffset: int, value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | int | 是 | 要存储的值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 已存储的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicStoreU64
 
@@ -1783,27 +1671,25 @@ public atomicStoreU64(index: int, byteOffset: int, value: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicStoreU64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicStoreU64(index: int, byteOffset: int, value: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | long | 是 | 要存储的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 已存储的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicStoreU8
 
@@ -1815,27 +1701,25 @@ public atomicStoreU8(index: int, byteOffset: int, value: byte): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicStoreU8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicStoreU8(index: int, byteOffset: int, value: byte): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | byte | 是 | 要存储的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 已存储的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicSubI16
 
@@ -1847,27 +1731,25 @@ public atomicSubI16(index: int, byteOffset: int, value: short): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicSubI16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicSubI16(index: int, byteOffset: int, value: short): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | short | 是 | 要相减的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicSubI32
 
@@ -1879,27 +1761,25 @@ public atomicSubI32(index: int, byteOffset: int, value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicSubI32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicSubI32(index: int, byteOffset: int, value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | int | 是 | 要相减的值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicSubI64
 
@@ -1911,27 +1791,25 @@ public atomicSubI64(index: int, byteOffset: int, value: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicSubI64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicSubI64(index: int, byteOffset: int, value: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | long | 是 | 要相减的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicSubI8
 
@@ -1943,27 +1821,25 @@ public atomicSubI8(index: int, byteOffset: int, value: byte): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicSubI8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicSubI8(index: int, byteOffset: int, value: byte): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | byte | 是 | 要相减的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicSubU16
 
@@ -1975,27 +1851,25 @@ public atomicSubU16(index: int, byteOffset: int, value: short): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicSubU16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicSubU16(index: int, byteOffset: int, value: short): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | short | 是 | 要相减的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicSubU32
 
@@ -2007,27 +1881,25 @@ public atomicSubU32(index: int, byteOffset: int, value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicSubU32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicSubU32(index: int, byteOffset: int, value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | int | 是 | 要相减的值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicSubU64
 
@@ -2039,27 +1911,25 @@ public atomicSubU64(index: int, byteOffset: int, value: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicSubU64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicSubU64(index: int, byteOffset: int, value: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | long | 是 | 要相减的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicSubU8
 
@@ -2071,27 +1941,25 @@ public atomicSubU8(index: int, byteOffset: int, value: byte): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicSubU8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicSubU8(index: int, byteOffset: int, value: byte): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | byte | 是 | 要相减的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicXorI16
 
@@ -2103,27 +1971,25 @@ public atomicXorI16(index: int, byteOffset: int, value: short): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicXorI16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicXorI16(index: int, byteOffset: int, value: short): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | short | 是 | 参与按位异或运算的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicXorI32
 
@@ -2135,27 +2001,25 @@ public atomicXorI32(index: int, byteOffset: int, value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicXorI32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicXorI32(index: int, byteOffset: int, value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | int | 是 | 参与按位异或运算的值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicXorI64
 
@@ -2167,27 +2031,25 @@ public atomicXorI64(index: int, byteOffset: int, value: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicXorI64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicXorI64(index: int, byteOffset: int, value: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | long | 是 | 参与按位异或运算的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicXorI8
 
@@ -2199,27 +2061,25 @@ public atomicXorI8(index: int, byteOffset: int, value: byte): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicXorI8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicXorI8(index: int, byteOffset: int, value: byte): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | byte | 是 | 参与按位异或运算的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicXorU16
 
@@ -2231,27 +2091,25 @@ public atomicXorU16(index: int, byteOffset: int, value: short): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicXorU16(index: int, byteOffset: int, value: short): long--><!--Device-ArrayBuffer-public atomicXorU16(index: int, byteOffset: int, value: short): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | short | 是 | 参与按位异或运算的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicXorU32
 
@@ -2263,27 +2121,25 @@ public atomicXorU32(index: int, byteOffset: int, value: int): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicXorU32(index: int, byteOffset: int, value: int): long--><!--Device-ArrayBuffer-public atomicXorU32(index: int, byteOffset: int, value: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | int | 是 | 参与按位异或运算的值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicXorU64
 
@@ -2295,27 +2151,25 @@ public atomicXorU64(index: int, byteOffset: int, value: long): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicXorU64(index: int, byteOffset: int, value: long): long--><!--Device-ArrayBuffer-public atomicXorU64(index: int, byteOffset: int, value: long): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | long | 是 | 参与按位异或运算的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## atomicXorU8
 
@@ -2327,27 +2181,25 @@ public atomicXorU8(index: int, byteOffset: int, value: byte): long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public atomicXorU8(index: int, byteOffset: int, value: byte): long--><!--Device-ArrayBuffer-public atomicXorU8(index: int, byteOffset: int, value: byte): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待访问的索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| byteOffset | int | 是 | 在ArrayBuffer中的字节偏移量，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| value | byte | 是 | 参与按位异或运算的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| byteOffset | int | 是 |
+| value | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| long | 操作后的值。 |
+| 类型 |
+| --- |
+| long |
 
 ## bytesLength
 
@@ -2359,26 +2211,24 @@ public static bytesLength(text: string, encoding: string): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public static bytesLength(text: string, encoding: string): int--><!--Device-ArrayBuffer-public static bytesLength(text: string, encoding: string): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| text | string | 是 | 源字符串。 |
-| encoding | string | 是 | 编码类型。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| text | string | 是 |
+| encoding | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 计算得到的字节长度。 |
+| 类型 |
+| --- |
+| int |
 
 ## constructor
 
@@ -2390,20 +2240,18 @@ constructor(length: int, maxByteLength?: int)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-constructor(length: int, maxByteLength?: int)--><!--Device-ArrayBuffer-constructor(length: int, maxByteLength?: int)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| length | int | 是 | ArrayBuffer的大小，单位为字节。 <br>取值约束：必须为大于或等于0的整数。 |
-| maxByteLength | int | 否 | 可选参数，ArrayBuffer可调整到的最大大小。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| length | int | 是 |
+| maxByteLength | int | 否 |
 
 ## constructor
 
@@ -2415,20 +2263,18 @@ public constructor(length: double, maxByteLength?: double)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public constructor(length: double, maxByteLength?: double)--><!--Device-ArrayBuffer-public constructor(length: double, maxByteLength?: double)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| length | double | 是 | ArrayBuffer的大小，单位为字节。 <br>取值约束：必须大于或等于0。 |
-| maxByteLength | double | 否 | 可选参数，ArrayBuffer可调整到的最大大小。 <br>取值约束：必须大于或等于0。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| length | double | 是 |
+| maxByteLength | double | 否 |
 
 ## from
 
@@ -2440,25 +2286,23 @@ public static from(arr: FixedArray<byte>): ArrayBuffer
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public static from(arr: FixedArray<byte>): ArrayBuffer--><!--Device-ArrayBuffer-public static from(arr: FixedArray<byte>): ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| arr | FixedArray&lt;byte&gt; | 是 | 源字节数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| arr | FixedArray & lt;byte & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ArrayBuffer | 新的ArrayBuffer。 |
+| 类型 |
+| --- |
+| ArrayBuffer |
 
 ## from
 
@@ -2470,25 +2314,23 @@ public static from(u8arr: Uint8Array): ArrayBuffer
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public static from(u8arr: Uint8Array): ArrayBuffer--><!--Device-ArrayBuffer-public static from(u8arr: Uint8Array): ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| u8arr | Uint8Array | 是 | 源类型化数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| u8arr | Uint8Array | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ArrayBuffer | 新的ArrayBuffer。 |
+| 类型 |
+| --- |
+| ArrayBuffer |
 
 ## from
 
@@ -2500,25 +2342,23 @@ public static from(array: double[]): ArrayBuffer
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public static from(array: double[]): ArrayBuffer--><!--Device-ArrayBuffer-public static from(array: double[]): ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| array | double[] | 是 | 源数字数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| array | double[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ArrayBuffer | 新的ArrayBuffer。 |
+| 类型 |
+| --- |
+| ArrayBuffer |
 
 ## from
 
@@ -2530,26 +2370,24 @@ public static from(str: string, encoding: string): ArrayBuffer
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public static from(str: string, encoding: string): ArrayBuffer--><!--Device-ArrayBuffer-public static from(str: string, encoding: string): ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| str | string | 是 | 源字符串。 |
-| encoding | string | 是 | 字符串编码，例如"utf8"。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| str | string | 是 |
+| encoding | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ArrayBuffer | 新的ArrayBuffer。 |
+| 类型 |
+| --- |
+| ArrayBuffer |
 
 ## from
 
@@ -2561,27 +2399,25 @@ public static from(buff: ArrayBuffer, byteOffset: int, length: int): ArrayBuffer
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public static from(buff: ArrayBuffer, byteOffset: int, length: int): ArrayBuffer--><!--Device-ArrayBuffer-public static from(buff: ArrayBuffer, byteOffset: int, length: int): ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buff | ArrayBuffer | 是 | 源缓冲区。 |
-| byteOffset | int | 是 | 源中的起始偏移量。 <br>取值约束：应为整数。 |
-| length | int | 是 | 要拷贝的字节数。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buff | ArrayBuffer | 是 |
+| byteOffset | int | 是 |
+| length | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ArrayBuffer | 新的ArrayBuffer。 |
+| 类型 |
+| --- |
+| ArrayBuffer |
 
 ## from
 
@@ -2593,27 +2429,25 @@ public static from(buffer: ArrayBuffer, byteOffset?: double, length?: double): A
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public static from(buffer: ArrayBuffer, byteOffset?: double, length?: double): ArrayBuffer--><!--Device-ArrayBuffer-public static from(buffer: ArrayBuffer, byteOffset?: double, length?: double): ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 源缓冲区。 |
-| byteOffset | double | 否 | 起始偏移量。 |
-| length | double | 否 | 字节长度。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer | 是 |
+| byteOffset | double | 否 |
+| length | double | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ArrayBuffer | 新的ArrayBuffer。 |
+| 类型 |
+| --- |
+| ArrayBuffer |
 
 ## fromObject
 
@@ -2625,27 +2459,25 @@ public static fromObject(obj: Object, byteOffsetOrEncoding: int | string, length
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public static fromObject(obj: Object, byteOffsetOrEncoding: int | string, length: int): ArrayBuffer--><!--Device-ArrayBuffer-public static fromObject(obj: Object, byteOffsetOrEncoding: int | string, length: int): ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| obj | Object | 是 | 源对象，为字符串或ArrayBuffer。 |
-| byteOffsetOrEncoding | int \| string | 是 | 字节偏移量或编码字符串。 |
-| length | int | 是 | 要拷贝的长度。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| obj | Object | 是 |
+| byteOffsetOrEncoding | int \| string | 是 |
+| length | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ArrayBuffer | 新的ArrayBuffer。 |
+| 类型 |
+| --- |
+| ArrayBuffer |
 
 ## getByteLength
 
@@ -2657,19 +2489,17 @@ public getByteLength(): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public getByteLength(): int--><!--Device-ArrayBuffer-public getByteLength(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 字节长度。 |
+| 类型 |
+| --- |
+| int |
 
 ## isView
 
@@ -2681,25 +2511,23 @@ public static isView(obj: Object): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public static isView(obj: Object): boolean--><!--Device-ArrayBuffer-public static isView(obj: Object): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| obj | Object | 是 | 待检查的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| obj | Object | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果该对象为视图则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## resize
 
@@ -2711,19 +2539,17 @@ public resize(newLen : int): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public resize(newLen : int): void--><!--Device-ArrayBuffer-public resize(newLen : int): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| newLen | int | 是 | 新的字节长度。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| newLen | int | 是 |
 
 ## set
 
@@ -2735,20 +2561,18 @@ public set(pos: int, val: byte): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public set(pos: int, val: byte): void--><!--Device-ArrayBuffer-public set(pos: int, val: byte): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pos | int | 是 | 在缓冲区中的位置。 <br>取值约束：应为整数。 |
-| val | byte | 是 | 要设置的字节值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pos | int | 是 |
+| val | byte | 是 |
 
 ## slice
 
@@ -2760,26 +2584,24 @@ public slice(begin: int, end?: int): ArrayBuffer
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public slice(begin: int, end?: int): ArrayBuffer--><!--Device-ArrayBuffer-public slice(begin: int, end?: int): ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| begin | int | 是 | 开始拷贝的起始索引（包含）。 <br>取值约束：应为整数。 |
-| end | int | 否 | 停止拷贝的结束索引（不包含）。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| begin | int | 是 |
+| end | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ArrayBuffer | 新的ArrayBuffer。 |
+| 类型 |
+| --- |
+| ArrayBuffer |
 
 ## slice
 
@@ -2791,26 +2613,24 @@ public slice(begin: double, end?: double): ArrayBuffer
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public slice(begin: double, end?: double): ArrayBuffer--><!--Device-ArrayBuffer-public slice(begin: double, end?: double): ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| begin | double | 是 | 开始拷贝的起始索引（包含）。 |
-| end | double | 否 | 停止拷贝的结束索引（不包含）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| begin | double | 是 |
+| end | double | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ArrayBuffer | 新的ArrayBuffer。 |
+| 类型 |
+| --- |
+| ArrayBuffer |
 
 ## stringify
 
@@ -2822,28 +2642,26 @@ public static stringify(buffer: ArrayBuffer, encoding: string, start: int, end: 
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public static stringify(buffer: ArrayBuffer, encoding: string, start: int, end: int): string--><!--Device-ArrayBuffer-public static stringify(buffer: ArrayBuffer, encoding: string, start: int, end: int): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 源缓冲区。 |
-| encoding | string | 是 | 使用的编码。 |
-| start | int | 是 | 起始索引。 <br>取值约束：应为整数。 |
-| end | int | 是 | 结束索引。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer | 是 |
+| encoding | string | 是 |
+| start | int | 是 |
+| end | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 解码后的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toString
 
@@ -2855,17 +2673,68 @@ public toString(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ArrayBuffer-public toString(): string--><!--Device-ArrayBuffer-public toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 该ArrayBuffer的字符串表示。 |
+| 类型 |
+| --- |
+| string |
 
+## byteLength
+
+```TypeScript
+get byteLength(): int
+```
+
+该ArrayBuffer字节长度的只读属性。
+
+**类型：** int
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## detached
+
+```TypeScript
+get detached(): boolean
+```
+
+如果该ArrayBuffer已分离，则返回true。
+
+**类型：** boolean
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## resizable
+
+```TypeScript
+get resizable(): boolean
+```
+
+如果该ArrayBuffer可调整大小，则返回true。
+
+**类型：** boolean
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang

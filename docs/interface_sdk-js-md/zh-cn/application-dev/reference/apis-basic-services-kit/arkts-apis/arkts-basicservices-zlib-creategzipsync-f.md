@@ -14,19 +14,19 @@ function createGZipSync(): GZip
 
 创建GZip对象。成功时返回GZip对象实例。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-zlib-function createGZipSync(): GZip--><!--Device-zlib-function createGZipSync(): GZip-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [GZip](arkts-basicservices-zlib-gzip-i.md) | GZip对象实例。 |
+| 类型 |
+| --- |
+| [GZip](arkts-basicservices-zlib-gzip-i.md) |
 
 **示例**
 
@@ -35,4 +35,3 @@ import { zlib } from '@kit.BasicServicesKit';
 
 let gzip = zlib.createGZipSync();
 ```
-

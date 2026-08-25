@@ -4,7 +4,7 @@ Describes the properties and behavior of the arc dot navigation indicator.
 
 **Since:** 18
 
-<!--Device-unnamed-export class ArcDotIndicator--><!--Device-unnamed-export class ArcDotIndicator-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -24,23 +24,23 @@ Sets the direction of the arc navigation indicator.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
 
-<!--Device-ArcDotIndicator-arcDirection(direction: Optional<ArcDirection>): ArcDotIndicator--><!--Device-ArcDotIndicator-arcDirection(direction: Optional<ArcDirection>): ArcDotIndicator-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| direction | Optional&lt;[ArcDirection](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcdirection-e.md)&gt; | Yes | Direction of the arc navigation indicator.<br>Default value: **ArcDirection.SIX_CLOCK_DIRECTION** (6 o'clock direction) |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| direction | Optional&lt;[ArcDirection](arkts-arkui-arkui-arcswiper-arcdirection-e.md)&gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ArcDotIndicator](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcdotindicator-c.md) | Properties and functionality of the arc navigation indicator. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) |
 
 ## backgroundColor
 
@@ -52,23 +52,23 @@ Sets the color of the arc navigation indicator when it is long-pressed.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
 
-<!--Device-ArcDotIndicator-backgroundColor(color: Optional<ResourceColor>): ArcDotIndicator--><!--Device-ArcDotIndicator-backgroundColor(color: Optional<ResourceColor>): ArcDotIndicator-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| color | Optional&lt;ResourceColor&gt; | Yes | Color of the arc navigation indicator when it is long-pressed.<br> Default value: **'#FF404040' |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| color | Optional & lt;ResourceColor & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ArcDotIndicator](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcdotindicator-c.md) | Properties and functionality of the arc navigation indicator. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) |
 
 ## constructor
 
@@ -80,9 +80,9 @@ A constructor used to create an **ArcDotIndicator** instance.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
 
-<!--Device-ArcDotIndicator-constructor()--><!--Device-ArcDotIndicator-constructor()-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -96,23 +96,23 @@ Sets the color of the unselected navigation points in the arc navigation indicat
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
 
-<!--Device-ArcDotIndicator-itemColor(color: Optional<ResourceColor>): ArcDotIndicator--><!--Device-ArcDotIndicator-itemColor(color: Optional<ResourceColor>): ArcDotIndicator-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| color | Optional&lt;ResourceColor&gt; | Yes | Color of the unselected navigation points in the arc navigation indicator.<br>Default value: **'#A9FFFFFF' |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| color | Optional & lt;ResourceColor & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ArcDotIndicator](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcdotindicator-c.md) | Properties and functionality of the arc navigation indicator. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) |
 
 ## maskColor
 
@@ -124,23 +124,23 @@ Sets the mask gradient color of the arc navigation indicator.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
 
-<!--Device-ArcDotIndicator-maskColor(color: Optional<LinearGradient>): ArcDotIndicator--><!--Device-ArcDotIndicator-maskColor(color: Optional<LinearGradient>): ArcDotIndicator-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| color | Optional&lt;LinearGradient&gt; | Yes | Mask gradient color of the arc navigation indicator.<br>Default start color: **'#00000000'**<br>Default end color: **'#FF000000' |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| color | Optional & lt;LinearGradient & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ArcDotIndicator](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcdotindicator-c.md) | Properties and functionality of the arc navigation indicator. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) |
 
 ## selectedItemColor
 
@@ -152,21 +152,20 @@ Sets the color of the selected navigation point in the arc navigation indicator.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
 
-<!--Device-ArcDotIndicator-selectedItemColor(color: Optional<ResourceColor>): ArcDotIndicator--><!--Device-ArcDotIndicator-selectedItemColor(color: Optional<ResourceColor>): ArcDotIndicator-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| color | Optional&lt;ResourceColor&gt; | Yes | Color of the selected navigation point in the arc navigation indicator.<br>Default value: **#FF5EA1FF |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| color | Optional & lt;ResourceColor & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ArcDotIndicator](../../apis-default/arkts-apis/arkts-arkui-arcswiper-arcdotindicator-c.md) | Properties and functionality of the arc navigation indicator. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) |

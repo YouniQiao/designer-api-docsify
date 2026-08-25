@@ -9,12 +9,14 @@ import { contact } from '@kit.ContactsKit';
 ## syncContacts
 
 ```TypeScript
-function syncContacts(context: Context, mode: ContactSyncMode, progress: ContactSyncProgress, contacts: Array<Contact>): Promise<Array<int>>
+function syncContacts(context: Context, mode: ContactSyncMode, progress: ContactSyncProgress, contacts: Array<Contact>): Promise<Array<number>>
 ```
 
 批量同步多个联系人至联系人数据库。每次最多可批量同步400个联系人。调用方必须处于前台。
 
 **起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
@@ -22,35 +24,33 @@ function syncContacts(context: Context, mode: ContactSyncMode, progress: Contact
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-contact-function syncContacts(context: Context, mode: ContactSyncMode, progress: ContactSyncProgress, contacts: Array<Contact>): Promise<Array<int>>--><!--Device-contact-function syncContacts(context: Context, mode: ContactSyncMode, progress: ContactSyncProgress, contacts: Array<Contact>): Promise<Array<int>>-End-->
-
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文Context。 |
-| mode | [ContactSyncMode](arkts-contacts-contact-contactsyncmode-e.md) | 是 | 表示联系人同步模式的类型。 |
-| progress | [ContactSyncProgress](arkts-contacts-contact-contactsyncprogress-i.md) | 是 | 表示联系人同步进度的相关信息。 |
-| contacts | Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 | 表示需要同步至数据库的联系人信息数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
+| mode | [ContactSyncMode](arkts-contacts-contact-contactsyncmode-e.md) | 是 |
+| progress | [ContactSyncProgress](arkts-contacts-contact-contactsyncprogress-i.md) | 是 |
+| contacts | Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;int&gt;&gt; | 返回联系人创建结果的数组。有效的联系人ID (可为通过 { |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;int & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [16700001](../errorcode-contacts.md#16700001-系统内部错误) | General error. |
-| [16700002](../errorcode-contacts.md#16700002-参数检查失败) | Invalid parameter value. |
-| [16700003](../errorcode-contacts.md#16700003-禁止后台调用) | Background usage is prohibited. |
-| [16700004](../errorcode-contacts.md#16700004-联系人数量超过限制) | The number of contacts exceeds the limit. |
-| [16700103](../errorcode-contacts.md#16700103-用户取消) | User cancel. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [16700001](../errorcode-contacts.md#16700001-系统内部错误) |
+| [16700002](../errorcode-contacts.md#16700002-参数检查失败) |
+| [16700003](../errorcode-contacts.md#16700003-禁止后台调用) |
+| [16700004](../errorcode-contacts.md#16700004-联系人数量超过限制) |
+| [16700103](../errorcode-contacts.md#16700103-用户取消) |
 
 **示例**
 
@@ -103,4 +103,3 @@ for (let batch: number = 1; batch <= totalBatches; batch++) {
   }
 }
 ```
-

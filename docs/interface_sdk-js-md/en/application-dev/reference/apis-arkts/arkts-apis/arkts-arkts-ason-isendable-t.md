@@ -8,11 +8,10 @@ Redefines ISendable for convenience.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-ASON-type ISendable = lang.ISendable--><!--Device-ASON-type ISendable = lang.ISendable-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Property type:** lang.ISendable
-

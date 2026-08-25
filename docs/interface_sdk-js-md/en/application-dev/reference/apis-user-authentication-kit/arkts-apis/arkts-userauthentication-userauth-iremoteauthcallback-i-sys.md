@@ -4,7 +4,7 @@ Defines the callback of remote authentication. This API is used in remote authen
 
 **Since:** 26.0.0
 
-<!--Device-userAuth-interface IRemoteAuthCallback--><!--Device-userAuth-interface IRemoteAuthCallback-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -24,13 +24,11 @@ onGetRemoteAuthWidgetParam: WidgetParamCallback
 
 Callback triggered to obtain remote authentication page parameters. When a remote device initiates an authentication request, the system calls this callback to obtain the configuration parameters on the authentication page.
 
-**Type:** [WidgetParamCallback](arkts-userauthentication-userauth-widgetparamcallback-t-sys.md)
-
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-IRemoteAuthCallback-onGetRemoteAuthWidgetParam: WidgetParamCallback--><!--Device-IRemoteAuthCallback-onGetRemoteAuthWidgetParam: WidgetParamCallback-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -44,15 +42,12 @@ onRemoteAuthResult: ResultCallback
 
 Callback triggered to return the remote authentication result. After remote authentication is complete, the system calls this callback to return the authentication result to the initiator.
 
-**Type:** [ResultCallback](arkts-userauthentication-userauth-resultcallback-t-sys.md)
-
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-IRemoteAuthCallback-onRemoteAuthResult: ResultCallback--><!--Device-IRemoteAuthCallback-onRemoteAuthResult: ResultCallback-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **System API:** This is a system API.
-

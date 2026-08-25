@@ -10,20 +10,19 @@ import { GridObjectSortComponentType, GridObjectSortComponentItem, GridObjectSor
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [GridObjectSortComponent](arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponent-s.md) | **GridObjectSortComponent** is a grid object organizer that you can use to edit, drag to sort, add, and delete grid objects. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [GridObjectSortComponent](arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponent-s.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [GridObjectSortComponentItem](arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponentitem-i.md) | Provides data item configuration for the **GridObjectSortComponent** component. |
-| [GridObjectSortComponentOptions](arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponentoptions-i.md) | Provides configuration options for the **GridObjectSortComponent** component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [GridObjectSortComponentItem](arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponentitem-i.md) |
+| [GridObjectSortComponentOptions](arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponentoptions-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [GridObjectSortComponentType](arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponenttype-e.md) | Enumerates display types for nodes in the **GridObjectSortComponent** component. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [GridObjectSortComponentType](arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponenttype-e.md) |

@@ -16,25 +16,25 @@ function getMacAddress(): Promise<Array<MacAddressInfo>>
 
 **起始版本：** 14
 
-**需要权限：** ohos.permission.GET_ETHERNET_LOCAL_MAC
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
-<!--Device-ethernet-function getMacAddress(): Promise<Array<MacAddressInfo>>--><!--Device-ethernet-function getMacAddress(): Promise<Array<MacAddressInfo>>-End-->
+**需要权限：** ohos.permission.GET_ETHERNET_LOCAL_MAC
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[MacAddressInfo](arkts-network-ethernet-macaddressinfo-i.md)&gt;&gt; | 以Promise形式返回接口信息。 |
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;[MacAddressInfo](arkts-network-ethernet-macaddressinfo-i.md)&gt;&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
-| [2201005](../errorcode-net-ethernet.md#2201005-设备信息不存在) | Device information does not exist. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
+| [2201005](../errorcode-net-ethernet.md#2201005-设备信息不存在) |
 
 **示例**
 
@@ -48,4 +48,3 @@ ethernet.getMacAddress().then((data: Array<ethernet.MacAddressInfo>) => {
   console.error("getMacAddress promise error = " + JSON.stringify(error));
 });
 ```
-

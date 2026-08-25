@@ -2,9 +2,9 @@
 
 该模块提供环境目录能力，获取内存存储根目录、公共文件根目录的ArkTS接口。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-unnamed-declare namespace Environment--><!--Device-unnamed-declare namespace Environment-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.File.Environment
 
@@ -18,22 +18,21 @@ import { Environment } from '@kit.CoreFileKit';
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [getUserDesktopDir](arkts-corefile-environment-getuserdesktopdir-f.md) | 获取当前用户预授权桌面目录的沙箱路径。 |
-| [getUserDocumentDir](arkts-corefile-environment-getuserdocumentdir-f.md) | 获取当前用户预授权文档目录的沙箱路径。 |
-| [getUserDownloadDir](arkts-corefile-environment-getuserdownloaddir-f.md) | 获取当前用户预授权下载目录的沙箱路径。 |
+| 名称 |
+| --- |
+| [getUserDesktopDir](arkts-corefile-environment-getuserdesktopdir-f.md) |
+| [getUserDocumentDir](arkts-corefile-environment-getuserdocumentdir-f.md) |
+| [getUserDownloadDir](arkts-corefile-environment-getuserdownloaddir-f.md) |
 
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [getExternalStorageDir](arkts-corefile-environment-getexternalstoragedir-f-sys.md) | 获取外卡根目录的沙箱路径，该接口仅对具有该系统能力的设备开放。 |
-| [getStorageDataDir](arkts-corefile-environment-getstoragedatadir-f-sys.md) | 异步方法获取内存存储根目录，使用promise异步回调。 |
-| [getStorageDataDir](arkts-corefile-environment-getstoragedatadir-f-sys.md) | 异步方法获取内存存储根目录，使用callback异步回调。 |
-| [getUserDataDir](arkts-corefile-environment-getuserdatadir-f-sys.md) | 异步方法获取公共文件根目录，使用promise异步回调。 |
-| [getUserDataDir](arkts-corefile-environment-getuserdatadir-f-sys.md) | 异步方法获取公共文件根目录，使用callback异步回调。 |
-| [getUserHomeDir](arkts-corefile-environment-getuserhomedir-f-sys.md) | 获取当前用户下应用沙箱路径的内卡目录，该接口仅对具有该系统能力的设备开放。 |
+| 名称 |
+| --- |
+| [getExternalStorageDir](arkts-corefile-environment-getexternalstoragedir-f-sys.md) |
+| [getStorageDataDir](arkts-corefile-environment-getstoragedatadir-f-sys.md) |
+| [getStorageDataDir](arkts-corefile-environment-getstoragedatadir-f-sys.md) |
+| [getUserDataDir](arkts-corefile-environment-getuserdatadir-f-sys.md) |
+| [getUserDataDir](arkts-corefile-environment-getuserdatadir-f-sys.md) |
+| [getUserHomeDir](arkts-corefile-environment-getuserhomedir-f-sys.md) |
 <!--DelEnd-->
-

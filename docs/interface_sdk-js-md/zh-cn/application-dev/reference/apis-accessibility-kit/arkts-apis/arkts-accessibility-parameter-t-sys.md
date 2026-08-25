@@ -6,13 +6,12 @@ export type Parameter = _Parameter
 
 无障碍节点元素执行特定操作时，为操作提供具体设置的参数值，请参考[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md)。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-unnamed-export type Parameter = _Parameter--><!--Device-unnamed-export type Parameter = _Parameter-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
 
 **属性类型：** _Parameter
-

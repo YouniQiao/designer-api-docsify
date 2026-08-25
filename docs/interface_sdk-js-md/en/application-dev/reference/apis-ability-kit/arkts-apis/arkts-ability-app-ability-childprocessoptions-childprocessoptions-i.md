@@ -2,9 +2,9 @@
 
 The module describes the startup configuration of a child process. When starting a child process through [childProcessManager](arkts-app-ability-childprocessmanager.md), you can configure the startup configuration of the child process through **ChildProcessOptions**.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface ChildProcessOptions--><!--Device-unnamed-export interface ChildProcessOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -24,11 +24,11 @@ Controls the sandbox isolation level and network access permissions of the child
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ChildProcessOptions-isolationMode?: boolean--><!--Device-ChildProcessOptions-isolationMode?: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -42,11 +42,11 @@ Whether the child process uses an independent UID. **true** if the child process
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ChildProcessOptions-isolationUid?: boolean--><!--Device-ChildProcessOptions-isolationUid?: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -114,4 +114,3 @@ struct Index {
   }
 }
 ```
-

@@ -4,7 +4,7 @@ Describes the information of the ServiceExtensionAbility bound to the [intent de
 
 **Since:** 23
 
-<!--Device-insightIntentDriver-interface ServiceExtensionIntentInfo--><!--Device-insightIntentDriver-interface ServiceExtensionIntentInfo-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -28,11 +28,10 @@ Name of the UIAbility bound to the intent.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-ServiceExtensionIntentInfo-readonly abilityName: string--><!--Device-ServiceExtensionIntentInfo-readonly abilityName: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
-

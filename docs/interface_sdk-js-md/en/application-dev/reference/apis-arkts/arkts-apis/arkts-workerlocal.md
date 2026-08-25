@@ -9,7 +9,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [WorkerLocal](arkts-arkts-workerlocal-c.md) | A thread-local storage container that maintains a separate value per worker |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [WorkerLocal](arkts-arkts-workerlocal-c.md) |

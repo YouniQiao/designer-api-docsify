@@ -16,28 +16,28 @@ Creates an ImageReceiver instance by specifying the image width, height, format,
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 11
 
 **Substitutes:** [createImageReceiver](#createimagereceiver)(size: Size, format: ImageFormat, capacity: int)
-
-<!--Device-image-function createImageReceiver(width: number, height: number, format: number, capacity: number): ImageReceiver--><!--Device-image-function createImageReceiver(width: number, height: number, format: number, capacity: number): ImageReceiver-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| width | number | Yes | Default image width, in px. This parameter does not affect the width of the received image. The actual width is determined by the producer, for example, the camera. |
-| height | number | Yes | Default image height, in px. This parameter does not affect the height of the received image. The actual height is determined by the producer, for example, the camera. |
-| format | number | Yes | Image format, which is a constant of [ImageFormat](arkts-image-image-imageformat-e.md). (Currently, only **ImageFormat:JPEG** is supported. The format actually returned is determined by the producer, for example, camera.) |
-| capacity | number | Yes | Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| width | number | Yes |
+| height | number | Yes |
+| format | number | Yes |
+| capacity | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageReceiver | ImageReceiver instance. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageReceiver](arkts-image-image-imagereceiver-i.md) |
 
 **Examples**
 
@@ -57,36 +57,36 @@ let receiver: image.ImageReceiver = image.createImageReceiver(8192, 8192, image.
 ## createImageReceiver
 
 ```TypeScript
-function createImageReceiver(size: Size, format: ImageFormat, capacity: int): ImageReceiver
+function createImageReceiver(size: Size, format: ImageFormat, capacity: number): ImageReceiver
 ```
 
 Creates an ImageReceiver instance by specifying the image size, format, and capacity. The ImageReceiver acts as the receiver and consumer of images. Its parameter properties do not actually affect the received images. The configuration of image properties should be done on the sending side (the producer), such as when creating a camera preview stream with [createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createpreviewoutput). Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call [release](arkts-image-image-imagereceiver-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 11
 
-<!--Device-image-function createImageReceiver(size: Size, format: ImageFormat, capacity: int): ImageReceiver--><!--Device-image-function createImageReceiver(size: Size, format: ImageFormat, capacity: int): ImageReceiver-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | Size | Yes | Default size of the image. This parameter does not affect the size of the received image. The actual returned size is determined by the producer, for example, the camera. |
-| format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes | Image format, which is a constant of [ImageFormat](arkts-image-image-imageformat-e.md). (Currently, only **ImageFormat:JPEG** is supported. The format actually returned is determined by the producer, for example, camera.) |
-| capacity | int | Yes | Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| size | Size | Yes |
+| format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes |
+| capacity | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageReceiver | ImageReceiver instance. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageReceiver](arkts-image-image-imagereceiver-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -103,23 +103,23 @@ Creates an ImageReceiver instance.
 
 **Since:** 23
 
-<!--Device-image-function createImageReceiver(size: Size, format: ImageFormat, capacity: int): ImageReceiver | undefined--><!--Device-image-function createImageReceiver(size: Size, format: ImageFormat, capacity: int): ImageReceiver | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | Size | Yes | The default [Size](arkts-image-image-size-i.md) in pixels of the Images that this receiver will produce. |
-| format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes | The format of the Image that this receiver will produce. This must be one of the [ImageFormat](arkts-image-image-imageformat-e.md) constants. |
-| capacity | int | Yes | The maximum number of images the user will want to access simultaneously. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| size | Size | Yes |
+| format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes |
+| capacity | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageReceiver \| undefined | Returns the ImageReceiver instance if the operation is successful; returns undefined otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ImageReceiver \| undefined |
 
 **Examples**
 
@@ -136,31 +136,30 @@ Creates an ImageReceiver instance.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-image-function createImageReceiver(options?: ImageReceiverOptions): ImageReceiver | undefined--><!--Device-image-function createImageReceiver(options?: ImageReceiverOptions): ImageReceiver | undefined-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [ImageReceiverOptions](arkts-image-image-imagereceiveroptions-i.md) | No | Initialization options for the ImageReceiver. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [ImageReceiverOptions](arkts-image-image-imagereceiveroptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ImageReceiver \| undefined | ImageReceiver instance created. If the operation fails, undefined is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ImageReceiver \| undefined |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [7900201](../errorcode-image.md#7900201-invalid-parameter) | Invalid parameter. |
+| Error Code ID |
+| --- |
+| [7900201](../errorcode-image.md#7900201-invalid-parameter) |
 
 **Examples**
 
 See [createImageReceiver](#createimagereceiver)
-

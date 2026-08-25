@@ -4,7 +4,7 @@ The enum of reasons for destroying partner agent extension ability.@enum { int }
 
 **Since:** 23
 
-<!--Device-partnerAgent-export enum PartnerAgentExtensionAbilityDestroyReason--><!--Device-partnerAgent-export enum PartnerAgentExtensionAbilityDestroyReason-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -18,9 +18,9 @@ Unknown reason.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-PartnerAgentExtensionAbilityDestroyReason-UNKNOWN_REASON = 0--><!--Device-PartnerAgentExtensionAbilityDestroyReason-UNKNOWN_REASON = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -34,9 +34,9 @@ The user actively disables this ability feature.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-PartnerAgentExtensionAbilityDestroyReason-USER_CLOSED_ABILITY = 1--><!--Device-PartnerAgentExtensionAbilityDestroyReason-USER_CLOSED_ABILITY = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -50,9 +50,9 @@ The device is unpaired.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-PartnerAgentExtensionAbilityDestroyReason-DEVICE_UNPAIRED = 2--><!--Device-PartnerAgentExtensionAbilityDestroyReason-DEVICE_UNPAIRED = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -66,9 +66,9 @@ The device is lost.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-PartnerAgentExtensionAbilityDestroyReason-DEVICE_LOST = 3--><!--Device-PartnerAgentExtensionAbilityDestroyReason-DEVICE_LOST = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -82,9 +82,8 @@ Bluetooth is disabled.
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PartnerAgentExtensionAbilityDestroyReason-BLUETOOTH_DISABLED = 4--><!--Device-PartnerAgentExtensionAbilityDestroyReason-BLUETOOTH_DISABLED = 4-End-->
-
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
-

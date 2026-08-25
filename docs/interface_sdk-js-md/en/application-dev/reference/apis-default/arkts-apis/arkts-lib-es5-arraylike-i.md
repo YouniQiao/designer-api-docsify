@@ -1,13 +1,21 @@
 # ArrayLike
 
-**Since:** -1
-
-<!--Device-unnamed-interface ArrayLike--><!--Device-unnamed-interface ArrayLike-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
+
+## [n: number]
+
+```TypeScript
+readonly [n: number]: T
+```
+
+**Type:** T
+
+**ArkTS mode:** 
 
 ## length
 
@@ -17,7 +25,4 @@ readonly length: number
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-ArrayLike-readonly length: number--><!--Device-ArrayLike-readonly length: number-End-->
-
+**ArkTS mode:** 

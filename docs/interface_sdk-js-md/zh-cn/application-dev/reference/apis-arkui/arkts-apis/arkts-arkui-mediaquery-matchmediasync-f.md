@@ -24,6 +24,8 @@ function matchMediaSync(condition: string): MediaQueryListener
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 18
 
 **替代接口：** matchMediaSync
@@ -32,21 +34,19 @@ function matchMediaSync(condition: string): MediaQueryListener
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-mediaquery-function matchMediaSync(condition: string): MediaQueryListener--><!--Device-mediaquery-function matchMediaSync(condition: string): MediaQueryListener-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| condition | string | 是 | 媒体事件的匹配条件，具体可参考[媒体查询语法规则](../../../ui/arkts-layout-development-media-query.md#语法规则)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| condition | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [MediaQueryListener](../../apis-default/arkts-apis/arkts-mediaquery-mediaquerylistener-i.md) | 媒体事件监听句柄，用于注册和注销监听回调。 |
+| 类型 |
+| --- |
+| [MediaQueryListener](arkts-arkui-mediaquery-mediaquerylistener-i.md) |
 
 **示例**
 
@@ -65,4 +65,3 @@ import mediaquery from '@ohos.mediaquery';
 
 let listener: mediaquery.MediaQueryListener = mediaquery.matchMediaSync('(orientation: landscape)'); // 监听横屏事件
 ```
-

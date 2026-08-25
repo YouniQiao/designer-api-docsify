@@ -4,7 +4,7 @@ Animator options.
 
 **Since:** 6
 
-<!--Device-unnamed-export interface AnimatorOptions--><!--Device-unnamed-export interface AnimatorOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,15 +20,15 @@ import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from
 begin: number
 ```
 
-Start point of the animation interpolation.Note: This setting affects the input parameter value of the onFrame callback.Default value: **0**
+Start point of the animation interpolation.Note: This setting affects the input parameter value of the [onFrame](../../../reference/apis-arkui/js-apis-animator.md#properties) callback.Default value: **0**
 
 **Type:** number
 
 **Since:** 6
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-AnimatorOptions-begin: number--><!--Device-AnimatorOptions-begin: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,9 +44,9 @@ Animation delay duration, in milliseconds. Value **0** means that there is no de
 
 **Since:** 6
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-AnimatorOptions-delay: number--><!--Device-AnimatorOptions-delay: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,9 +66,9 @@ Animation playback mode.
 
 **Since:** 6
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-AnimatorOptions-direction: "normal" | "reverse" | "alternate" | "alternate-reverse"--><!--Device-AnimatorOptions-direction: "normal" | "reverse" | "alternate" | "alternate-reverse"-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,15 +78,15 @@ Animation playback mode.
 duration: number
 ```
 
-Duration for playing the animation, in milliseconds.Value range: 0, +∞).Default value: **0**
+Duration for playing the animation, in milliseconds.Value range: [0, +∞).Default value: **0**
 
 **Type:** number
 
 **Since:** 6
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-AnimatorOptions-duration: number--><!--Device-AnimatorOptions-duration: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -102,9 +102,9 @@ Animation interpolation curve.If the provided string is invalid, **"ease"** is u
 
 **Since:** 6
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-AnimatorOptions-easing: string--><!--Device-AnimatorOptions-easing: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -114,15 +114,15 @@ Animation interpolation curve.If the provided string is invalid, **"ease"** is u
 end: number
 ```
 
-End point of animation interpolation.Note: This setting affects the input parameter value of the [onFrame callback.Default value: **1**
+End point of animation interpolation.Note: This setting affects the input parameter value of the [onFrame](../../../reference/apis-arkui/js-apis-animator.md#properties) callback.Default value: **1**
 
 **Type:** number
 
 **Since:** 6
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-AnimatorOptions-end: number--><!--Device-AnimatorOptions-end: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -135,16 +135,16 @@ fill: "none" | "forwards" | "backwards" | "both"
 State of the animated target after the animation is executed.  
 **'none'**: No style is applied to the target before or after the animation is executed.  
 **'forwards'**: The target keeps the state at the end of the animation (defined in the last key frame) after the animation is executed.  
-**'backwards'**: During the delay period specified in [AnimatorOptions](../../apis-default/arkts-apis/arkts-animator-animatoroptions-i.md), the animation uses the value defined in the first keyframe. When **direction** in [AnimatorOptions](../../apis-default/arkts-apis/arkts-animator-animatoroptions-i.md) is **'normal'** or **'alternate'**, the animation uses the **from** keyframe value. When **direction** in [AnimatorOptions](../../apis-default/arkts-apis/arkts-animator-animatoroptions-i.md) is **'reverse'** or **'alternate-reverse'**, the animation uses the **to** keyframe value.  
+**'backwards'**: During the delay period specified in [AnimatorOptions](#animatoroptions), the animation uses the value defined in the first keyframe. When **direction** in [AnimatorOptions](#animatoroptions) is **'normal'** or **'alternate'**, the animation uses the **from** keyframe value. When **direction** in [AnimatorOptions](#animatoroptions) is **'reverse'** or **'alternate-reverse'**, the animation uses the **to** keyframe value.  
 **'both'**: The animation follows the **'forwards'** and **'backwards'** rules.
 
 **Type:** "none" \| "forwards" \| "backwards" \| "both"
 
 **Since:** 6
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-AnimatorOptions-fill: "none" | "forwards" | "backwards" | "both"--><!--Device-AnimatorOptions-fill: "none" | "forwards" | "backwards" | "both"-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -160,9 +160,8 @@ Number of times that the animation is played. The value **0** means the animatio
 
 **Since:** 6
 
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-AnimatorOptions-iterations: number--><!--Device-AnimatorOptions-iterations: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

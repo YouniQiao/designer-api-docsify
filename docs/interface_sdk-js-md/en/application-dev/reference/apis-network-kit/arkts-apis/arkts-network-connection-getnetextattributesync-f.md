@@ -17,32 +17,32 @@ Obtains the extended attributes of the network specified by **netHandle** to det
 
 **Since:** 20
 
-**Required permissions:** ohos.permission.GET_NETWORK_INFO
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-connection-function getNetExtAttributeSync(netHandle: NetHandle): string--><!--Device-connection-function getNetExtAttributeSync(netHandle: NetHandle): string-End-->
+**Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Network handle. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Extended network attributes. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
 **Examples**
 
@@ -56,4 +56,3 @@ if (netHandle.netId != 0) {
   console.info("getNetExtAttribute: " + netExtAttribute);
 }
 ```
-

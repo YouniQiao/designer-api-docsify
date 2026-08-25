@@ -4,7 +4,7 @@ Type of action sequence.
 
 **Since:** 26.0.0
 
-<!--Device-mechanicManager-export enum ActionType--><!--Device-mechanicManager-export enum ActionType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -20,7 +20,7 @@ Landscape-to-Portrait switching.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-LANDSCAPE_PORTRAIT_SWITCH = 0--><!--Device-ActionType-LANDSCAPE_PORTRAIT_SWITCH = 0-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -36,7 +36,7 @@ Action of patrol on the ground.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-PATROL_MODE = 1--><!--Device-ActionType-PATROL_MODE = 1-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -52,7 +52,7 @@ Action of greeting the owner.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-GREET_MODE = 2--><!--Device-ActionType-GREET_MODE = 2-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -68,7 +68,7 @@ Action of tilting head up.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-HEAD_UP = 3--><!--Device-ActionType-HEAD_UP = 3-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -84,7 +84,7 @@ Action of tilting head up slightly.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-HEAD_UP_SLIGHTLY = 4--><!--Device-ActionType-HEAD_UP_SLIGHTLY = 4-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -100,7 +100,7 @@ Action of looking straight ahead.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-EYE_LEVEL = 5--><!--Device-ActionType-EYE_LEVEL = 5-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -116,7 +116,7 @@ Action of tilting head down slightly.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-HEAD_DOWN_SLIGHTLY = 6--><!--Device-ActionType-HEAD_DOWN_SLIGHTLY = 6-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -132,7 +132,7 @@ Action of tilting head down completely.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-HEAD_DOWN = 7--><!--Device-ActionType-HEAD_DOWN = 7-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -148,7 +148,7 @@ Action of wiggling head.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-HEAD_WIGGLE = 8--><!--Device-ActionType-HEAD_WIGGLE = 8-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -164,7 +164,7 @@ Action of nodding.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-NOD = 9--><!--Device-ActionType-NOD = 9-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -180,7 +180,7 @@ Action of shaking head.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-HEAD_SHAKE = 10--><!--Device-ActionType-HEAD_SHAKE = 10-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -196,7 +196,7 @@ Action of happy.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-HAPPY = 1000--><!--Device-ActionType-HAPPY = 1000-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -212,7 +212,7 @@ Action of angry.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-ANGRY = 1001--><!--Device-ActionType-ANGRY = 1001-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -228,7 +228,7 @@ Action of sad.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-SAD = 1002--><!--Device-ActionType-SAD = 1002-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -244,7 +244,7 @@ Action of scared.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-SCARED = 1003--><!--Device-ActionType-SCARED = 1003-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -260,7 +260,7 @@ Action of dance.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-DANCE = 2000--><!--Device-ActionType-DANCE = 2000-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -276,7 +276,7 @@ Action of acting cute.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-ACTING_CUTE = 2001--><!--Device-ActionType-ACTING_CUTE = 2001-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -292,7 +292,7 @@ Action of celebrate.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-CELEBRATE = 2002--><!--Device-ActionType-CELEBRATE = 2002-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -308,7 +308,7 @@ Action of wakeup.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-WAKEUP = 2003--><!--Device-ActionType-WAKEUP = 2003-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -324,7 +324,7 @@ Action of sleep.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-SLEEP = 2004--><!--Device-ActionType-SLEEP = 2004-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -340,7 +340,7 @@ Action of low power.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-LOW_POWER = 2005--><!--Device-ActionType-LOW_POWER = 2005-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -356,9 +356,8 @@ Action of thinking.
 
 **Since:** 26.0.0
 
-<!--Device-ActionType-THINKING = 2006--><!--Device-ActionType-THINKING = 2006-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
-

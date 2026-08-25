@@ -4,7 +4,7 @@ Enumerates the card styles of the List component.
 
 **Since:** 10
 
-<!--Device-unnamed-declare enum ListItemStyle--><!--Device-unnamed-declare enum ListItemStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ No style.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ListItemStyle-NONE = 0--><!--Device-ListItemStyle-NONE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ Show default style.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ListItemStyle-CARD = 1--><!--Device-ListItemStyle-CARD = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

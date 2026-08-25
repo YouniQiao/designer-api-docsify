@@ -6,11 +6,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColAttribute and grid_row/GridRowAttribute
-
-<!--Device-unnamed-declare class GridContainerAttribute--><!--Device-unnamed-declare class GridContainerAttribute-End-->
+**替代接口：** [grid_col/GridColAttribute](arkts-arkui-gridcol-attribute.md#gridcolattribute)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,4 +18,3 @@
 
 ```TypeScript
 ```
-

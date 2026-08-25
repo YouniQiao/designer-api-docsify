@@ -25,38 +25,38 @@ function addDockApp(admin: Want, bundleName: string, abilityName: string, index?
 
 **起始版本：** 24
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
+
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-applicationManager-function addDockApp(admin: Want, bundleName: string, abilityName: string, index?: number): void--><!--Device-applicationManager-function addDockApp(admin: Want, bundleName: string, abilityName: string, index?: number): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| bundleName | string | 是 | 应用的包名。 |
-| abilityName | string | 是 | 应用的Ability名称，仅支持应用程序入口Ability。 |
-| index | number | 否 | 应用在快捷栏中的位置索引，默认值为99。 <br>取值范围：[0,100)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
+| bundleName | string | 是 |
+| abilityName | string | 是 |
+| index | number | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | Parameter verification failed. |
-| [9200015](../errorcode-enterpriseDeviceManager.md#9200015-组件不存在) | The ability does not exist. |
-| [9201013](../errorcode-enterpriseDeviceManager.md#9201013-快捷栏中的应用数量已到最大值) | The number of applications in the Dock has reached the maximum. |
-| [9201014](../errorcode-enterpriseDeviceManager.md#9201014-指定应用已经在快捷栏中) | The application is already in the Dock. |
-| [9201015](../errorcode-enterpriseDeviceManager.md#9201015-指定应用未安装) | The application is not installed. |
-| [9201018](../errorcode-enterpriseDeviceManager.md#9201018-指定应用不支持操作) | The application is inoperable. |
-| [9201019](../errorcode-enterpriseDeviceManager.md#9201019-指定位置不支持操作) | The location is inoperable. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 错误码ID |
+| --- |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
+| [9200015](../errorcode-enterpriseDeviceManager.md#9200015-组件不存在) |
+| [9201013](../errorcode-enterpriseDeviceManager.md#9201013-快捷栏中的应用数量已到最大值) |
+| [9201014](../errorcode-enterpriseDeviceManager.md#9201014-指定应用已经在快捷栏中) |
+| [9201015](../errorcode-enterpriseDeviceManager.md#9201015-指定应用未安装) |
+| [9201018](../errorcode-enterpriseDeviceManager.md#9201018-指定应用不支持操作) |
+| [9201019](../errorcode-enterpriseDeviceManager.md#9201019-指定位置不支持操作) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 **示例**
 
@@ -80,4 +80,3 @@ try {
   console.error(`Failed to add dock app. Code: ${err.code}, message: ${err.message}`);
 }
 ```
-

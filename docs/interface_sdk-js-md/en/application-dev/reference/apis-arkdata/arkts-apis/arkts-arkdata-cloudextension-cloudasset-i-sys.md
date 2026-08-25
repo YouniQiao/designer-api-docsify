@@ -4,9 +4,9 @@ Represents the cloud asset information.
 
 **Inheritance/Implementation:** CloudAsset extends relationalStore.Asset
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-cloudExtension-export interface CloudAsset--><!--Device-cloudExtension-export interface CloudAsset-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -28,9 +28,9 @@ Asset ID.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CloudAsset-assetId: string--><!--Device-CloudAsset-assetId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -46,11 +46,10 @@ Hashed value of the asset modification time and size.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CloudAsset-hash: string--><!--Device-CloudAsset-hash: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
-

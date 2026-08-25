@@ -20,11 +20,11 @@ function setKeepAliveForBundle(bundleName: string, userId: int, enable: boolean)
 > - 在2in1设备上，被保活的应用需要在启动后5秒内添加至状态栏。否则，系统将取消该应用的保活设置，并杀死保活重启的进程。&gt;
 > - 当被保活的应用进程退出时，系统将尝试重启该进程，连续3次重启失败后将不再继续重启。
 
-**起始版本：** 23
+**起始版本：** 14
+
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_APP_KEEP_ALIVE
-
-<!--Device-appManager-function setKeepAliveForBundle(bundleName: string, userId: int, enable: boolean): Promise<void>--><!--Device-appManager-function setKeepAliveForBundle(bundleName: string, userId: int, enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -32,31 +32,31 @@ function setKeepAliveForBundle(bundleName: string, userId: int, enable: boolean)
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 表示要设置保活的应用包名。 |
-| userId | int | 是 | 表示要设置保活应用所属的用户ID。 |
-| enable | boolean | 是 | 表示对应用保活或者取消保活。true表示对应用保活，false表示对应用取消保活。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| enable | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16300005](../errorcode-ability.md#16300005-指定的包信息不存在) | The target bundle does not exist. |
-| [16300008](../errorcode-ability.md#16300008-指定的包不存在主uiability) | The target bundle has no MainAbility. |
-| [16300009](../errorcode-ability.md#16300009-指定的包不存在状态栏) | The target bundle has no status-bar ability. |
-| [16300010](../errorcode-ability.md#16300010-指定的应用在运行中但没有绑定状态栏) | The target application is not attached to the status bar. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [16300005](../errorcode-ability.md#16300005-指定的包信息不存在) |
+| [16300008](../errorcode-ability.md#16300008-指定的包不存在主uiability) |
+| [16300009](../errorcode-ability.md#16300009-指定的包不存在状态栏) |
+| [16300010](../errorcode-ability.md#16300010-指定的应用在运行中但没有绑定状态栏) |
 
 **示例**
 
@@ -79,4 +79,3 @@ try {
   console.error(`[appManager] setKeepAliveForBundle error: ${code}, ${message}`);
 }
 ```
-

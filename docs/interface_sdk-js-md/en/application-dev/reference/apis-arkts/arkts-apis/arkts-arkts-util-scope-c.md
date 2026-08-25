@@ -4,11 +4,11 @@ The Scope interface is used to describe the valid range of a field.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [ScopeHelper](../../apis-default/arkts-apis/arkts-util-scopehelper-c.md)
-
-<!--Device-util-class Scope--><!--Device-util-class Scope-End-->
+**Substitutes:** [ScopeHelper](arkts-arkts-util-scopehelper-c.md)
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -28,25 +28,25 @@ Limits a value to this **Scope**.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [clamp](../../apis-default/arkts-apis/arkts-util-scopehelper-c.md#clamp)
-
-<!--Device-Scope-clamp(value: ScopeType): ScopeType--><!--Device-Scope-clamp(value: ScopeType): ScopeType-End-->
+**Substitutes:** [clamp](arkts-arkts-util-scopehelper-c.md#clamp)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Yes | Value specified. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Returns **lowerObj** if the specified value is less than the lower limit; returns **upperObj** if the specified value is greater than the upper limit; returns the specified value if it is within this **Scope**. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) |
 
 **Examples**
 
@@ -120,20 +120,20 @@ A constructor used to create a **Scope** object with the specified upper and low
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** constructor
-
-<!--Device-Scope-constructor(lowerObj: ScopeType, upperObj: ScopeType)--><!--Device-Scope-constructor(lowerObj: ScopeType, upperObj: ScopeType)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| lowerObj | [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Yes | Lower limit of the **Scope** object. |
-| upperObj | [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Yes | Upper limit of the **Scope** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes |
 
 **Examples**
 
@@ -253,25 +253,25 @@ Checks whether a value is within this **Scope**.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [contains](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#contains)
-
-<!--Device-Scope-contains(value: ScopeType): boolean--><!--Device-Scope-contains(value: ScopeType): boolean-End-->
+**Substitutes:** [contains](arkts-arkts-util-lrucache-c.md#contains)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Yes | Value specified. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** is returned if the value is within this **Scope**; otherwise, **false** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -425,25 +425,25 @@ Checks whether a range is within this **Scope**.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [contains](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#contains)
-
-<!--Device-Scope-contains(range: Scope): boolean--><!--Device-Scope-contains(range: Scope): boolean-End-->
+**Substitutes:** [contains](arkts-arkts-util-lrucache-c.md#contains)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| range | [Scope](arkts-arkts-util-scope-c.md) | Yes | Scope** specified. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| range | [Scope](arkts-arkts-util-scope-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** is returned if the range is within this **Scope**; otherwise, **false** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -459,26 +459,26 @@ Obtains the union set of this **Scope** and the given lower and upper limits.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** expand
-
-<!--Device-Scope-expand(lowerObj: ScopeType, upperObj: ScopeType): Scope--><!--Device-Scope-expand(lowerObj: ScopeType, upperObj: ScopeType): Scope-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| lowerObj | [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Yes | Lower limit. |
-| upperObj | [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Yes | Upper limit. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Scope](arkts-arkts-util-scope-c.md) | Union set of this **Scope** and the given lower and upper limits. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Scope](arkts-arkts-util-scope-c.md) |
 
 **Examples**
 
@@ -678,25 +678,25 @@ Obtains the union set of this **Scope** and the given **Scope**.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** expand
-
-<!--Device-Scope-expand(range: Scope): Scope--><!--Device-Scope-expand(range: Scope): Scope-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| range | [Scope](arkts-arkts-util-scope-c.md) | Yes | Scope** specified. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| range | [Scope](arkts-arkts-util-scope-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Scope](arkts-arkts-util-scope-c.md) | Union set of this **Scope** and the given **Scope**. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Scope](arkts-arkts-util-scope-c.md) |
 
 **Examples**
 
@@ -712,25 +712,25 @@ Obtains the union set of this **Scope** and the given value.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** expand
-
-<!--Device-Scope-expand(value: ScopeType): Scope--><!--Device-Scope-expand(value: ScopeType): Scope-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Yes | Value specified. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Scope](arkts-arkts-util-scope-c.md) | Union set of this **Scope** and the given value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Scope](arkts-arkts-util-scope-c.md) |
 
 **Examples**
 
@@ -746,19 +746,19 @@ Obtains the lower limit of this **Scope**.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [getLower](../../apis-default/arkts-apis/arkts-util-scopehelper-c.md#getlower)
-
-<!--Device-Scope-getLower(): ScopeType--><!--Device-Scope-getLower(): ScopeType-End-->
+**Substitutes:** [getLower](arkts-arkts-util-scopehelper-c.md#getlower)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Lower limit of this **Scope**. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) |
 
 **Examples**
 
@@ -830,19 +830,19 @@ Obtains the upper limit of this **Scope**.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [getUpper](../../apis-default/arkts-apis/arkts-util-scopehelper-c.md#getupper)
-
-<!--Device-Scope-getUpper(): ScopeType--><!--Device-Scope-getUpper(): ScopeType-End-->
+**Substitutes:** [getUpper](arkts-arkts-util-scopehelper-c.md#getupper)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Upper limit of this **Scope**. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) |
 
 **Examples**
 
@@ -914,25 +914,25 @@ Obtains the intersection of this **Scope** and the given **Scope**.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** intersect
-
-<!--Device-Scope-intersect(range: Scope): Scope--><!--Device-Scope-intersect(range: Scope): Scope-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| range | [Scope](arkts-arkts-util-scope-c.md) | Yes | Scope** specified. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| range | [Scope](arkts-arkts-util-scope-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Scope](arkts-arkts-util-scope-c.md) | Intersection of this **Scope** and the given **Scope**. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Scope](arkts-arkts-util-scope-c.md) |
 
 **Examples**
 
@@ -1072,26 +1072,26 @@ Obtains the intersection of this **Scope** and the given lower and upper limits.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** intersect
-
-<!--Device-Scope-intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope--><!--Device-Scope-intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| lowerObj | [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Yes | Lower limit. |
-| upperObj | [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Yes | Upper limit. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Scope](arkts-arkts-util-scope-c.md) | Intersection of this **Scope** and the given lower and upper limits. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Scope](arkts-arkts-util-scope-c.md) |
 
 **Examples**
 
@@ -1107,19 +1107,19 @@ Obtains a string representation that contains this **Scope**.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [toString](../../apis-default/arkts-apis/arkts-util-lrucache-c.md#tostring)
-
-<!--Device-Scope-toString(): string--><!--Device-Scope-toString(): string-End-->
+**Substitutes:** [toString](arkts-arkts-util-lrucache-c.md#tostring)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | String representation containing the **Scope**. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -1216,4 +1216,3 @@ let result = range.toString();
 console.info("result = " + result);
 // Output: result = [30, 40]
 ```
-

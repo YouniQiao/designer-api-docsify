@@ -2,9 +2,9 @@
 
 Defines an HTTP request method.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-http-export enum RequestMethod--><!--Device-http-export enum RequestMethod-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -16,11 +16,11 @@ OPTIONS = "OPTIONS"
 
 Describes the communication options of the target resource.
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RequestMethod-OPTIONS = "OPTIONS"--><!--Device-RequestMethod-OPTIONS = "OPTIONS"-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -32,11 +32,11 @@ GET = "GET"
 
 Requests the representation of the specified resource. The GET request should only retrieve data and should not contain the request content.
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RequestMethod-GET = "GET"--><!--Device-RequestMethod-GET = "GET"-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -48,11 +48,11 @@ HEAD = "HEAD"
 
 Requests the same response (but does not have a response body) as the GET request.
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RequestMethod-HEAD = "HEAD"--><!--Device-RequestMethod-HEAD = "HEAD"-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -64,11 +64,11 @@ POST = "POST"
 
 Submits an entity to a specified resource, which usually causes a status change on the server.
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RequestMethod-POST = "POST"--><!--Device-RequestMethod-POST = "POST"-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -80,11 +80,11 @@ PUT = "PUT"
 
 Replaces all current representations of the target resource with the requested content.
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RequestMethod-PUT = "PUT"--><!--Device-RequestMethod-PUT = "PUT"-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -96,11 +96,11 @@ DELETE = "DELETE"
 
 Deletes the specified resource.
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RequestMethod-DELETE = "DELETE"--><!--Device-RequestMethod-DELETE = "DELETE"-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -112,11 +112,11 @@ TRACE = "TRACE"
 
 Performs a message loopback test along the path to the target resource.
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RequestMethod-TRACE = "TRACE"--><!--Device-RequestMethod-TRACE = "TRACE"-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -128,11 +128,11 @@ CONNECT = "CONNECT"
 
 Establishes a tunnel to the server identified by the target resource.
 
-**Since:** 23
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RequestMethod-CONNECT = "CONNECT"--><!--Device-RequestMethod-CONNECT = "CONNECT"-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -147,9 +147,8 @@ Modifies a resource partially.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RequestMethod-PATCH = "PATCH"--><!--Device-RequestMethod-PATCH = "PATCH"-End-->
-
 **System capability:** SystemCapability.Communication.NetStack
-

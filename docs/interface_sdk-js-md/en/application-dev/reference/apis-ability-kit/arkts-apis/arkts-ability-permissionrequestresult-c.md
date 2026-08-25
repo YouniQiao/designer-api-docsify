@@ -2,9 +2,9 @@
 
 PermissionRequestResult is the result object of a permission request. Developers need to first create an atManager instance, and then call the requestPermissionsFromUser method to request permissions. This method returns a PermissionRequestResult object, through which developers can determine the permission request result based on its properties. For details about the overall permission request process and atManager, see [@ohos.abilityAccessCtrl (Application Access Control)](arkts-ability-abilityaccessctrl-n.md).
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-declare class PermissionRequestResult--><!--Device-unnamed-declare class PermissionRequestResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -17,15 +17,15 @@ authResults: Array<int>
 Authorization result corresponding to each requested permission.  
 - -1: Not authorized. Starting from API version 12, you can combine this with dialogShownResults to further determine the reason: if dialogShownResults is true, it means the user explicitly denied the request this time; if false, it means the current state does not require a dialog to be shown, and the user usually needs to go to system settings to make changes. - 0: Authorized, the application can continue to access protected resources associated with this permission. - 2: Invalid request, usually indicating that the permission is not declared, the permission name is invalid, or the special request conditions for this permission are not met. Developers should check the permission name, the permission declaration in module.json, and the request conditions for the corresponding permission.
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PermissionRequestResult-authResults: Array<int>--><!--Device-PermissionRequestResult-authResults: Array<int>-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -41,13 +41,13 @@ When authResults is -1, combining it with this field can further distinguish bet
 
 **Type:** Array&lt;boolean&gt;
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-PermissionRequestResult-dialogShownResults?: Array<boolean>--><!--Device-PermissionRequestResult-dialogShownResults?: Array<boolean>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -60,15 +60,15 @@ errorReasons?: Array<int>
 Reason code corresponding to each permission request. Mainly used to explain the specific reasons for authorization failure, invalid request, or inability to show a dialog. If this field is not returned, it means this result does not include reason codes.  
 - 0: This request is valid. - 1: Invalid permission name, please check the permission name format and value. - 2: Permission not declared, please declare this permission in module.json. - 3: The request conditions for the corresponding permission are not met, for example, some location permissions require additional prerequisites. Currently only applies to location permissions, including [ohos.permission.LOCATION](../../../security/AccessToken/permissions-for-all-user.md#ohospermissionlocation) and [ohos.permission.APPROXIMATELY_LOCATION](../../../security/AccessToken/permissions-for-all-user.md#ohospermissionapproximately_location). - 4: The user has not agreed to the privacy statement, please guide the user to agree to the privacy statement before requesting permissions. - 5: This permission does not support requesting via permission dialog; the request method may be restricted or controlled by system policy. Please use the authorization method supported by this permission. - 6: This permission is of the [manual_settings](../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings-manual-authorization) type and can only be authorized through the settings page. This reason code is supported starting from API version 21. - 12: Service exception, please try again later.
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-PermissionRequestResult-errorReasons?: Array<int>--><!--Device-PermissionRequestResult-errorReasons?: Array<int>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -82,13 +82,12 @@ Array of permissions to be requested this time. **Atomic service API:** Starting
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-PermissionRequestResult-permissions: Array<string>--><!--Device-PermissionRequestResult-permissions: Array<string>-End-->
-
 **System capability:** SystemCapability.Security.AccessToken
-

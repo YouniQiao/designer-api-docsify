@@ -16,33 +16,33 @@ function execute(func: Function, ...args: Object[]): Promise<Object>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-taskpool-function execute(func: Function, ...args: Object[]): Promise<Object>--><!--Device-taskpool-function execute(func: Function, ...args: Object[]): Promise<Object>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| func | Function | 是 | 待执行的函数，必须使用 [@Concurrent装饰器](../../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰。支持的函数返回值类型请参考 序列化支持类型。 |
-| args | Object[] | 是 | 任务执行函数的入参，支持的参数类型请参考 序列化支持类型。默认值为**undefined**。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| func | Function | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Object[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;unknown&gt; | <br>**适用版本：** 9 - 11 |
-| Promise&lt;Object&gt; | Promise对象，返回任务函数的执行结果。<br>**适用版本：** 11+ |
+| 类型 |
+| --- |
+| Promise & lt;unknown & gt; |
+| Promise & lt;Object & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200003](../errorcode-utils.md#10200003-worker初始化失败) | Worker initialization failed.<br>**适用版本：** 9 - 11 |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
+| 错误码ID |
+| --- |
+| [10200003](../errorcode-utils.md#10200003-worker初始化失败) |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
 
 **示例**
 
@@ -312,31 +312,31 @@ function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R
 
 **起始版本：** 13
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
-<!--Device-taskpool-function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R>, ...args: A): Promise<R>--><!--Device-taskpool-function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R>, ...args: A): Promise<R>-End-->
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | 是 | 待执行的函数，必须使用 [@Concurrent装饰器](../../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰，支持的函数返回值类型请参考 序列化支持类型。 |
-| args | A | 是 | 任务执行函数的入参，支持的参数类型请参考 序列化支持类型。默认值为**undefined**。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| func | (...args: A) = & gt; R \ | Promise & lt;R & gt; | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | A | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;R&gt; | Promise对象，返回任务函数的执行结果。 |
+| 类型 |
+| --- |
+| Promise & lt;R & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
+| 错误码ID |
+| --- |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
 
 **示例**
 
@@ -357,35 +357,35 @@ function execute(task: Task, priority?: Priority): Promise<Object>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-taskpool-function execute(task: Task, priority?: Priority): Promise<Object>--><!--Device-taskpool-function execute(task: Task, priority?: Priority): Promise<Object>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| task | Task | 是 | 需要在任务池中执行的任务。 |
-| priority | Priority | 否 | 等待执行的任务的优先级，默认值为 **taskpool.Priority.MEDIUM**。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | 是 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;unknown&gt; | <br>**适用版本：** 9 - 17 |
-| Promise&lt;Object&gt; | Promise对象，返回任务函数的执行结果。<br>**适用版本：** 11+ |
+| 类型 |
+| --- |
+| Promise & lt;unknown & gt; |
+| Promise & lt;Object & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200003](../errorcode-utils.md#10200003-worker初始化失败) | Worker initialization failed.<br>**适用版本：** 9 - 17 |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again.<br>**适用版本：** 12+ |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
+| 错误码ID |
+| --- |
+| [10200003](../errorcode-utils.md#10200003-worker初始化失败) |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
+| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) |
+| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
 
 **示例**
 
@@ -402,33 +402,33 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?
 
 **起始版本：** 13
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
-<!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?: Priority): Promise<R>--><!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?: Priority): Promise<R>-End-->
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | 是 | 需要在任务池中执行的泛型任务。 |
-| priority | Priority | 否 | 等待执行的任务的优先级，默认值为 **taskpool.Priority.MEDIUM**。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | 是 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;R&gt; | Promise对象，返回任务函数的执行结果。 |
+| 类型 |
+| --- |
+| Promise & lt;R & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
+| 错误码ID |
+| --- |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
+| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) |
+| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
 
 **示例**
 
@@ -445,31 +445,31 @@ function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-taskpool-function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>--><!--Device-taskpool-function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | 是 | 需要在任务池中执行的任务组。 |
-| priority | Priority | 否 | 等待执行的任务组的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | 是 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Object[]&gt; | Promise对象数组，返回任务函数的执行结果。 |
+| 类型 |
+| --- |
+| Promise & lt;Object[] & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200059](../errorcode-utils.md#10200059-任务组不能重复执行) | TaskGroup cannot be re-executed.<br>**适用版本：** 24+ |
+| 错误码ID |
+| --- |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200059](../errorcode-utils.md#10200059-任务组不能重复执行) |
 
 **示例**
 
@@ -499,34 +499,34 @@ function execute(task: Task, configs: Configs): Promise<Object>
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
-<!--Device-taskpool-function execute(task: Task, configs: Configs): Promise<Object>--><!--Device-taskpool-function execute(task: Task, configs: Configs): Promise<Object>-End-->
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| task | Task | 是 | 需要在任务池中执行的任务。 |
-| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | 是 | 该参数可以设置超时时间和任务优先级。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | 是 |
+| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Object&gt; | Promise对象，返回任务函数的执行结果。 |
+| 类型 |
+| --- |
+| Promise & lt;Object & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs. |
-| [10200058](../errorcode-utils.md#10200058-任务执行超时) | Task timed out. |
+| 错误码ID |
+| --- |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
+| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) |
+| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
+| [10200058](../errorcode-utils.md#10200058-任务执行超时) |
 
 **示例**
 
@@ -556,34 +556,34 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: 
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
-<!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: Configs): Promise<R>--><!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: Configs): Promise<R>-End-->
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | 是 | 需要在任务池中执行的泛型任务。 |
-| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | 是 | 该参数可以设置超时时间和任务优先级。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | 是 |
+| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;R&gt; | Promise对象，返回任务函数的执行结果。 |
+| 类型 |
+| --- |
+| Promise & lt;R & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs. |
-| [10200058](../errorcode-utils.md#10200058-任务执行超时) | Task timed out. |
+| 错误码ID |
+| --- |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
+| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) |
+| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
+| [10200058](../errorcode-utils.md#10200058-任务执行超时) |
 
 **示例**
 
@@ -604,34 +604,33 @@ function execute(group: TaskGroup, configs: Configs): Promise<Object[]>
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
-<!--Device-taskpool-function execute(group: TaskGroup, configs: Configs): Promise<Object[]>--><!--Device-taskpool-function execute(group: TaskGroup, configs: Configs): Promise<Object[]>-End-->
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | 是 | 需要在任务池中执行的任务组。 |
-| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | 是 | 该参数可以设置超时时间和任务优先级。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | 是 |
+| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Object[]&gt; | Promise对象数组，返回任务函数的执行结果。 |
+| 类型 |
+| --- |
+| Promise & lt;Object[] & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200059](../errorcode-utils.md#10200059-任务组不能重复执行) | TaskGroup cannot be re-executed. |
-| [10200070](../errorcode-utils.md#10200070-任务组执行超时) | TaskGroup timed out. |
+| 错误码ID |
+| --- |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200059](../errorcode-utils.md#10200059-任务组不能重复执行) |
+| [10200070](../errorcode-utils.md#10200070-任务组执行超时) |
 
 **示例**
 
 参见 [execute](#execute)
-

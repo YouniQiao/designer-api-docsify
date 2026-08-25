@@ -8,17 +8,16 @@ Implements an interception callback invoked when the display mode of the **Navig
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-unnamed-declare type InterceptionModeCallback = (mode: NavigationMode) => void--><!--Device-unnamed-declare type InterceptionModeCallback = (mode: NavigationMode) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | [NavigationMode](arkts-arkui-navigationmode-e.md) | Yes | Display mode of the navigation page. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mode | [NavigationMode](arkts-arkui-navigationmode-e.md) | Yes |

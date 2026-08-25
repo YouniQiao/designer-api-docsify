@@ -4,11 +4,11 @@ Enumerates data role types.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 9
 
 **Substitutes:** [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md)
-
-<!--Device-usb-export enum DataRoleType--><!--Device-usb-export enum DataRoleType-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -24,11 +24,11 @@ None
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 9
 
 **Substitutes:** [NONE](arkts-basicservices-usbmanager-dataroletype-e-sys.md#none)
-
-<!--Device-DataRoleType-NONE = 0--><!--Device-DataRoleType-NONE = 0-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -44,11 +44,11 @@ USB host.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 9
 
 **Substitutes:** [HOST](arkts-basicservices-usbmanager-dataroletype-e-sys.md#host)
-
-<!--Device-DataRoleType-HOST = 1--><!--Device-DataRoleType-HOST = 1-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -64,13 +64,12 @@ USB device.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 9
 
 **Substitutes:** [DEVICE](arkts-basicservices-usbmanager-dataroletype-e-sys.md#device)
 
-<!--Device-DataRoleType-DEVICE = 2--><!--Device-DataRoleType-DEVICE = 2-End-->
-
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
-

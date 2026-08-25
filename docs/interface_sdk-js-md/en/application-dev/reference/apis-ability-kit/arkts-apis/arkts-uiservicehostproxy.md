@@ -5,8 +5,7 @@
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | UIServiceHostProxy functions as a proxy to send data from the [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) server to the client. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) |
 <!--DelEnd-->
-

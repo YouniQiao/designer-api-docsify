@@ -2,9 +2,9 @@
 
 Enumerates the album types,
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-photoAccessHelper-enum AlbumType--><!--Device-photoAccessHelper-enum AlbumType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -16,9 +16,9 @@ USER = 0
 
 User album.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-AlbumType-USER = 0--><!--Device-AlbumType-USER = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -30,9 +30,22 @@ SYSTEM = 1024
 
 System album.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-AlbumType-SYSTEM = 1024--><!--Device-AlbumType-SYSTEM = 1024-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## SOURCE
+
+```TypeScript
+SOURCE = 2048
+```
+
+Album created by an application.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

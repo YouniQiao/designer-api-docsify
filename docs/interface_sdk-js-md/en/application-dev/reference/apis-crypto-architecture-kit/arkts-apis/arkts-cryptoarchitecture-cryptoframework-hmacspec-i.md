@@ -7,9 +7,9 @@ Represents the child class of [MacSpec](arkts-cryptoarchitecture-cryptoframework
 
 **Inheritance/Implementation:** HmacSpec extends [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-cryptoFramework-interface HmacSpec--><!--Device-cryptoFramework-interface HmacSpec-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Mac
 
@@ -29,11 +29,10 @@ Message digest algorithm.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-HmacSpec-mdName: string--><!--Device-HmacSpec-mdName: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Mac
-

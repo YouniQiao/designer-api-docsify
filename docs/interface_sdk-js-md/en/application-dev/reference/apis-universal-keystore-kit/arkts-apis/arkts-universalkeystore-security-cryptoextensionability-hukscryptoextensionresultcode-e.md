@@ -4,7 +4,7 @@ Enum for crypto extension ability result code, used by HuksCryptoExtensionResult
 
 **Since:** 22
 
-<!--Device-unnamed-export const enum HuksCryptoExtensionResultCode--><!--Device-unnamed-export const enum HuksCryptoExtensionResultCode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -20,9 +20,9 @@ An error occurred in the crypto extension. Possible causes:
 
 **Since:** 22
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_EXTENSION_FAIL = 34800000--><!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_EXTENSION_FAIL = 34800000-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -38,9 +38,9 @@ The UKey does not exist. Possible causes:
 
 **Since:** 22
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_UKEY_NOT_EXIST = 34800001--><!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_UKEY_NOT_EXIST = 34800001-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -54,9 +54,9 @@ The UKey driver error. This means an unknown error has occurred in the UKey driv
 
 **Since:** 22
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_UKEY_DRIVER_FAIL = 34800002--><!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_UKEY_DRIVER_FAIL = 34800002-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -70,9 +70,9 @@ The UKey PIN is not authenticated. Please verify the UKey PIN first.
 
 **Since:** 22
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_PIN_NO_AUTH = 34800003--><!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_PIN_NO_AUTH = 34800003-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -89,9 +89,9 @@ the handle held by huks service was not released.
 
 **Since:** 22
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_HANDLE_NOT_EXIST = 34800004--><!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_HANDLE_NOT_EXIST = 34800004-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -105,9 +105,9 @@ The handle is unavailable, possibly due to an inconsistent state between the cry
 
 **Since:** 22
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_HANDLE_UNAVAILABLE = 34800005--><!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_HANDLE_UNAVAILABLE = 34800005-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -121,9 +121,9 @@ The UKey PIN is not correct. Please check the PIN you entered.
 
 **Since:** 22
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_PIN_INCORRECT = 34800006--><!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_PIN_INCORRECT = 34800006-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -137,9 +137,8 @@ The UKey PIN is locked because the maximum allowed number of attempts has been e
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_PIN_LOCKED = 34800007--><!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_PIN_LOCKED = 34800007-End-->
-
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
-

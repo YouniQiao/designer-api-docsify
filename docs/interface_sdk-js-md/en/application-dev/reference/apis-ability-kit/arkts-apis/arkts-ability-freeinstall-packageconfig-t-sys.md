@@ -1,18 +1,17 @@
 # PackageConfig (System API)
 
 ```TypeScript
-export type PackageConfig = _PackageConfig
+export type PackageConfig = _PackInfo.PackageConfig
 ```
 
 Defines the package configuration information in the **pack.info** file.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-freeInstall-export type PackageConfig = _PackageConfig--><!--Device-freeInstall-export type PackageConfig = _PackageConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
 
-**Property type:** _PackageConfig
-
+**Property type:** _PackInfo.PackageConfig

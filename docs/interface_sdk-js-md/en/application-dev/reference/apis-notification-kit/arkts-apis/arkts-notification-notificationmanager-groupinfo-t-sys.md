@@ -8,13 +8,12 @@ Defines the custom group notification information.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-notificationManager-export type GroupInfo = _GroupInfo--><!--Device-notificationManager-export type GroupInfo = _GroupInfo-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
 
 **Property type:** _GroupInfo
-

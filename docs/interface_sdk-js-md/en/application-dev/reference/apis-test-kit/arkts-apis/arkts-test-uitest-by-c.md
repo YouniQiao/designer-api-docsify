@@ -9,11 +9,11 @@ APIs such as [By.isBefore&lt;sup&gt;(deprecated)&lt;/sup&gt;](#isbefore) and [By
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [On](arkts-test-uitest-on-c.md)
-
-<!--Device-unnamed-declare class By--><!--Device-unnamed-declare class By-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -34,25 +34,25 @@ Specifies the clickable attribute of the target component.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [clickable](arkts-test-uitest-on-c.md#clickable)
-
-<!--Device-By-clickable(b?: boolean): By--><!--Device-By-clickable(b?: boolean): By-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| b | boolean | No | Clickable status of the component. The value **true** indicates that the component is clickable, and **false** indicates the opposite. Default value: **true |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| b | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object that matches the clickable attribute of the target component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **Examples**
 
@@ -80,25 +80,25 @@ Specifies the enabled attribute of the target component.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [enabled](arkts-test-uitest-on-c.md#enabled)
-
-<!--Device-By-enabled(b?: boolean): By--><!--Device-By-enabled(b?: boolean): By-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| b | boolean | No | Enabled status of the component. The value **true** indicates that the component is enabled, and **false** indicates the opposite. Default value: **true |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| b | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object that matches the enabled attribute of the target component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **Examples**
 
@@ -126,25 +126,25 @@ Specifies the focused attribute of the target component.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [focused](arkts-test-uitest-on-c.md#focused)
-
-<!--Device-By-focused(b?: boolean): By--><!--Device-By-focused(b?: boolean): By-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| b | boolean | No | Focused status of the component. The value **true** indicates that the component is focused, and **false** indicates the opposite. Default value: **true |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| b | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object that matches the focused attribute of the target component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **Examples**
 
@@ -172,25 +172,25 @@ Specifies the ID attribute of the target component.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [id](arkts-test-uitest-on-c.md#id)(id: string)
-
-<!--Device-By-id(id: number): By--><!--Device-By-id(id: number): By-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| id | number | Yes | Component ID. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [id](#id) | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object that matches the ID attribute of the target component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **Examples**
 
@@ -225,25 +225,25 @@ Specifies that the target component is located after the given attribute compone
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [isAfter](arkts-test-uitest-on-c.md#isafter)(on: On)
-
-<!--Device-By-isAfter(by: By): By--><!--Device-By-isAfter(by: By): By-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| by | [By](arkts-test-uitest-by-c.md) | Yes | Information about the attribute component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| by | [By](arkts-test-uitest-by-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **Examples**
 
@@ -273,25 +273,25 @@ Specifies that the target component is located before the given attribute compon
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [isBefore](arkts-test-uitest-on-c.md#isbefore)(on: On)
-
-<!--Device-By-isBefore(by: By): By--><!--Device-By-isBefore(by: By): By-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| by | [By](arkts-test-uitest-by-c.md) | Yes | Information about the attribute component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| by | [By](arkts-test-uitest-by-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **Examples**
 
@@ -321,25 +321,25 @@ Specifies the key attribute of the target component.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [id](arkts-test-uitest-on-c.md#id)(id: string)
-
-<!--Device-By-key(key: string): By--><!--Device-By-key(key: string): By-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Component key. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [key](#key) | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object that matches the key attribute of the target component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **Examples**
 
@@ -360,25 +360,25 @@ Specifies the scrollable attribute of the target component.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [scrollable](arkts-test-uitest-on-c.md#scrollable)
-
-<!--Device-By-scrollable(b?: boolean): By--><!--Device-By-scrollable(b?: boolean): By-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| b | boolean | No | Scrollable status of the component. The value **true** indicates that the component is scrollable, and **false** indicates the opposite. Default value: **true |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| b | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object that matches the scrollable attribute of the target component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **Examples**
 
@@ -406,25 +406,25 @@ Specifies the selected status of the target component.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [selected](arkts-test-uitest-on-c.md#selected)
-
-<!--Device-By-selected(b?: boolean): By--><!--Device-By-selected(b?: boolean): By-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| b | boolean | No | Selected status of the component. The value **true** indicates that the component is selected, and **false** indicates the opposite. Default value: **true |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| b | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object that matches the selected attribute of the target component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **Examples**
 
@@ -452,26 +452,26 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [text](arkts-test-uitest-on-c.md#text)
-
-<!--Device-By-text(txt: string, pattern?: MatchPattern): By--><!--Device-By-text(txt: string, pattern?: MatchPattern): By-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| txt | string | Yes | Component text, used to match the target component. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md). <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| txt | string | Yes |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object that matches the text attribute of the target component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **Examples**
 
@@ -499,25 +499,25 @@ Specifies the type attribute of the target component.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [type](arkts-test-uitest-on-c.md#type)(tp: string)
-
-<!--Device-By-type(tp: string): By--><!--Device-By-type(tp: string): By-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| tp | string | Yes | Component type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| tp | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object that matches the type attribute of the target component. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **Examples**
 
@@ -541,4 +541,3 @@ import { By, BY } from '@kit.TestKit';
 
 let by: By = BY.type('Button'); // Use the static constructor BY to create a By object and specify the type attribute of the target component.
 ```
-

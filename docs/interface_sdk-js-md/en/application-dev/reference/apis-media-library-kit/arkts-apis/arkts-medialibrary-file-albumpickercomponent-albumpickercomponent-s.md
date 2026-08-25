@@ -4,9 +4,7 @@ AlbumPickerComponent( {albumPickerOptions?: AlbumPickerOptions, onAlbumClick?: (
 
 **Since:** 12
 
-**Decorator:** @Component
-
-<!--Device-unnamed-export declare struct AlbumPickerComponent--><!--Device-unnamed-export declare struct AlbumPickerComponent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -16,39 +14,19 @@ AlbumPickerComponent( {albumPickerOptions?: AlbumPickerOptions, onAlbumClick?: (
 import { AlbumPickerComponent, AlbumPickerOptions, AlbumInfo, EmptyAreaClickCallback, AlbumPickerController } from '@kit.MediaLibraryKit';
 ```
 
-## albumPickerController
+## build
 
 ```TypeScript
-albumPickerController?: AlbumPickerController
+build(): void
 ```
 
-AlbumPickerController
+Build function of AlbumPickerComponent
 
-**Type:** [AlbumPickerController](../../apis-default/arkts-apis/arkts-file-albumpickercomponent-albumpickercontroller-c.md)
+**Since:** 26.0.0
 
-**Since:** 20
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-AlbumPickerComponent-albumPickerController?: AlbumPickerController--><!--Device-AlbumPickerComponent-albumPickerController?: AlbumPickerController-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-## albumPickerOptions
-
-```TypeScript
-albumPickerOptions?: AlbumPickerOptions
-```
-
-AlbumPickerOptions
-
-**Type:** [AlbumPickerOptions](../../apis-default/arkts-apis/arkts-file-albumpickercomponent-albumpickeroptions-c.md)
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AlbumPickerComponent-albumPickerOptions?: AlbumPickerOptions--><!--Device-AlbumPickerComponent-albumPickerOptions?: AlbumPickerOptions-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -60,15 +38,19 @@ onAlbumClick?: (albumInfo: AlbumInfo) => boolean
 
 Callback when select an album, will return album uri
 
-**Type:** (albumInfo: AlbumInfo) =&gt; boolean
-
 **Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AlbumPickerComponent-onAlbumClick?: (albumInfo: AlbumInfo) => boolean--><!--Device-AlbumPickerComponent-onAlbumClick?: (albumInfo: AlbumInfo) => boolean-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| albumInfo | [AlbumInfo](arkts-medialibrary-file-albumpickercomponent-albuminfo-c.md) | Yes |
 
 ## onEmptyAreaClick
 
@@ -78,13 +60,46 @@ onEmptyAreaClick?: EmptyAreaClickCallback
 
 Callback when click the empty area of the album component
 
-**Type:** [EmptyAreaClickCallback](../../apis-default/arkts-apis/arkts-emptyareaclickcallback-t.md)
-
 **Since:** 13
+
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
-<!--Device-AlbumPickerComponent-onEmptyAreaClick?: EmptyAreaClickCallback--><!--Device-AlbumPickerComponent-onEmptyAreaClick?: EmptyAreaClickCallback-End-->
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## albumPickerController
+
+```TypeScript
+albumPickerController?: AlbumPickerController
+```
+
+AlbumPickerController
+
+**Type:** [AlbumPickerController](arkts-medialibrary-file-albumpickercomponent-albumpickercontroller-c.md)
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## albumPickerOptions
+
+```TypeScript
+albumPickerOptions?: AlbumPickerOptions
+```
+
+AlbumPickerOptions
+
+**Type:** [AlbumPickerOptions](arkts-medialibrary-file-albumpickercomponent-albumpickeroptions-c.md)
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

@@ -1,4 +1,4 @@
-# @ohos.advertising.AdComponent
+# @ohos.advertising.AdComponent(Ad Component)
 
 ## Modules to Import
 
@@ -10,7 +10,6 @@ import { AdComponent } from '@kit.AdsKit';
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [AdComponent](arkts-ads-advertising-adcomponent-adcomponent-s.md) | This module provides the capability of displaying ads, covering native, roll, splash, and other ad styles. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AdComponent(Ad Component)](arkts-ads-advertising-adcomponent-adcomponent-s.md) |

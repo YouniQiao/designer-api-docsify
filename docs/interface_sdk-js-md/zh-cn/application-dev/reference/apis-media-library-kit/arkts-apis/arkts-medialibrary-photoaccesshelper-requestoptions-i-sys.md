@@ -2,9 +2,9 @@
 
 请求策略。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-photoAccessHelper-interface RequestOptions--><!--Device-photoAccessHelper-interface RequestOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -24,11 +24,10 @@ sourceMode?: SourceMode
 
 **类型：** [SourceMode](arkts-medialibrary-photoaccesshelper-sourcemode-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-RequestOptions-sourceMode?: SourceMode--><!--Device-RequestOptions-sourceMode?: SourceMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
-

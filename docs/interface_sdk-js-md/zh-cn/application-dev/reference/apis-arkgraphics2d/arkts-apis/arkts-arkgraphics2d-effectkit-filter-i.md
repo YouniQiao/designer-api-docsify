@@ -2,9 +2,9 @@
 
 图像效果类，用于通过链式调用将指定效果添加到效果链表中，适用于图片滤镜处理、视觉效果增强、图像美化等场景。 在调用Filter的方法前，需要先通过[createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md)创建一个Filter实例。 在添加效果后，需调用[getEffectPixelMap](#geteffectpixelmap)获取处理后的图像。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-effectKit-interface Filter--><!--Device-effectKit-interface Filter-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -16,6 +16,12 @@ import { effectKit } from '@kit.ArkGraphics2D';
 
 ## blur
 
+ArkTS-Dyn:
+```TypeScript
+blur(radius: number): Filter
+```
+
+ArkTS-Sta:
 ```TypeScript
 blur(radius: double): Filter
 ```
@@ -25,27 +31,27 @@ blur(radius: double): Filter
 > **说明：**&gt;
 > 该接口为静态模糊接口，为静态图像提供模糊化效果，如果要对组件进行实时渲染的模糊，可以使用[动态模糊](../../../ui/arkts-blur-effect.md)。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-Filter-blur(radius: double): Filter--><!--Device-Filter-blur(radius: double): Filter-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| radius | double | 是 | 模糊半径，单位为px，取值范围为[0, +∞)。模糊半径值越大，模糊效果越明显。传入负数时无效果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| radius | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Filter | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
+| 类型 |
+| --- |
+| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **示例**
 
@@ -173,6 +179,12 @@ struct Index {
 
 ## blur
 
+ArkTS-Dyn:
+```TypeScript
+blur(radius: number, tileMode: TileMode): Filter
+```
+
+ArkTS-Sta:
 ```TypeScript
 blur(radius: double, tileMode: TileMode): Filter
 ```
@@ -182,24 +194,24 @@ blur(radius: double, tileMode: TileMode): Filter
 > **说明：**&gt;
 > 该接口为静态模糊接口，为静态图像提供模糊化效果，如果要对组件进行实时渲染的模糊，可以使用[动态模糊](../../../ui/arkts-blur-effect.md)。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-Filter-blur(radius: double, tileMode: TileMode): Filter--><!--Device-Filter-blur(radius: double, tileMode: TileMode): Filter-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| radius | double | 是 | 模糊半径，单位为px，取值范围为[0, +∞)。模糊半径值越大，模糊效果越明显。传入负数时无效果。 |
-| tileMode | TileMode | 是 | 着色器效果平铺模式。影响图像边缘的模糊效果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| radius | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| tileMode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Filter | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
+| 类型 |
+| --- |
+| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **示例**
 
@@ -207,33 +219,39 @@ blur(radius: double, tileMode: TileMode): Filter
 
 ## brightness
 
+ArkTS-Dyn:
+```TypeScript
+brightness(bright: number): Filter
+```
+
+ArkTS-Sta:
 ```TypeScript
 brightness(bright: double): Filter
 ```
 
 将高亮效果添加到效果链表中，返回链表的实例。该方法通过调整图像亮度实现高亮效果， 常用于暗图增亮处理、图片预览亮度增强、夜间模式图片适配等场景。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-Filter-brightness(bright: double): Filter--><!--Device-Filter-brightness(bright: double): Filter-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bright | double | 是 | 高亮程度，取值范围为[0, 1]，取值为0时图像保持不变，取值为1时图像亮度提升到最大值。超出范围时自动修正为0。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bright | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Filter | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
+| 类型 |
+| --- |
+| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **示例**
 
@@ -309,21 +327,21 @@ getEffectPixelMap(): Promise<image.PixelMap>
 > **说明：**&gt;
 > 该方法默认使用CPU渲染，着色器平铺模式仅支持DECAL，其他模式（CLAMP、REPEAT、MIRROR）暂不支持。 如需使用GPU渲染或了解渲染模式对TileMode的影响，请参见[TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md)和 [getEffectPixelMap](#geteffectpixelmap)。
 
-**起始版本：** 23
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-Filter-getEffectPixelMap(): Promise<image.PixelMap>--><!--Device-Filter-getEffectPixelMap(): Promise<image.PixelMap>-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象。返回已添加链表效果的源图像的image.PixelMap。 |
+| 类型 |
+| --- |
+| Promise & lt;image.PixelMap & gt; |
 
 **示例**
 
@@ -375,27 +393,27 @@ getEffectPixelMap(useCpuRender : boolean): Promise<image.PixelMap>
 
 获取已添加链表效果的源图像的image.PixelMap，支持指定渲染模式（CPU渲染或者GPU渲染），使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
-**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
-<!--Device-Filter-getEffectPixelMap(useCpuRender : boolean): Promise<image.PixelMap>--><!--Device-Filter-getEffectPixelMap(useCpuRender : boolean): Promise<image.PixelMap>-End-->
+**卡片能力：** 从API版本20开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| useCpuRender | boolean | 是 | 指定渲染模式。true表示使用CPU渲染，false表示使用GPU渲染。 使用GPU渲染时，着色器效果平铺模式[TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md)的支持范围与CPU渲染不同，详见TileMode说明。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| useCpuRender | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象。返回已添加链表效果的源图像的image.PixelMap。 |
+| 类型 |
+| --- |
+| Promise & lt;image.PixelMap & gt; |
 
 **示例**
 
@@ -414,19 +432,19 @@ getPixelMap(): image.PixelMap
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 11
 
 **替代接口：** [getEffectPixelMap](#geteffectpixelmap)
-
-<!--Device-Filter-getPixelMap(): image.PixelMap--><!--Device-Filter-getPixelMap(): image.PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| image.PixelMap | 已添加效果的源图像的image.PixelMap。 |
+| 类型 |
+| --- |
+| image.PixelMap |
 
 **示例**
 
@@ -457,21 +475,21 @@ grayscale(): Filter
 
 将灰度效果添加到效果链表中，返回链表的实例。该方法将彩色图像转换为灰度图像，通过加权计算RGB值得到灰度值。 常用于黑白风格照片生成、图片预处理去色、灰度图标制作等场景。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-Filter-grayscale(): Filter--><!--Device-Filter-grayscale(): Filter-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Filter | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
+| 类型 |
+| --- |
+| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **示例**
 
@@ -543,17 +561,17 @@ invert(): Filter
 
 将反转效果添加到效果链表中，返回链表的实例。该方法将图像的RGB颜色值进行反转， 常用于实现底片效果、图片艺术处理、夜间模式适配等场景。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Filter-invert(): Filter--><!--Device-Filter-invert(): Filter-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Filter | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
+| 类型 |
+| --- |
+| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **示例**
 
@@ -619,35 +637,41 @@ struct Index {
 
 ## setColorMatrix
 
+ArkTS-Dyn:
+```TypeScript
+setColorMatrix(colorMatrix: Array<number>): Filter
+```
+
+ArkTS-Sta:
 ```TypeScript
 setColorMatrix(colorMatrix: Array<double>): Filter
 ```
 
 通过自定义颜色矩阵对图像进行颜色变换处理，将效果添加到效果链表中，返回链表的实例。 常用于实现预设滤镜不支持的自定义颜色效果，如复古色调、冷暖色调调整等场景。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Filter-setColorMatrix(colorMatrix: Array<double>): Filter--><!--Device-Filter-setColorMatrix(colorMatrix: Array<double>): Filter-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| colorMatrix | Array&lt;double&gt; | 是 | 自定义颜色矩阵。用于创建效果滤镜的4x5大小的矩阵，数组长度必须为20， 前4列对应R、G、B、A通道的变换系数，第5列为常量偏移值。建议元素取值为[-1, 1]，超出此范围可能导致颜色值溢出或产生非预期效果。数组长度不为20时返回null。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| colorMatrix | ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;double & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Filter | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
+| 类型 |
+| --- |
+| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | 输入参数错误。 |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -716,4 +740,3 @@ struct Index {
   }
 }
 ```
-

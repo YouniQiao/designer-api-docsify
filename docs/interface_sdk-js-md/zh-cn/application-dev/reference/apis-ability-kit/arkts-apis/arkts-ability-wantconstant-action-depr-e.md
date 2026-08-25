@@ -4,9 +4,9 @@ want操作的常数。用于表示要执行的通用操作。
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-wantConstant-export enum Action--><!--Device-wantConstant-export enum Action-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -20,9 +20,9 @@ ACTION_HOME = 'ohos.want.action.home'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-ACTION_HOME = 'ohos.want.action.home'--><!--Device-Action-ACTION_HOME = 'ohos.want.action.home'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -36,9 +36,9 @@ ACTION_DIAL = 'ohos.want.action.dial'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-ACTION_DIAL = 'ohos.want.action.dial'--><!--Device-Action-ACTION_DIAL = 'ohos.want.action.dial'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -52,9 +52,9 @@ ACTION_SEARCH = 'ohos.want.action.search'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-ACTION_SEARCH = 'ohos.want.action.search'--><!--Device-Action-ACTION_SEARCH = 'ohos.want.action.search'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -68,9 +68,9 @@ ACTION_WIRELESS_SETTINGS = 'ohos.settings.wireless'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-ACTION_WIRELESS_SETTINGS = 'ohos.settings.wireless'--><!--Device-Action-ACTION_WIRELESS_SETTINGS = 'ohos.settings.wireless'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -84,9 +84,9 @@ ACTION_MANAGE_APPLICATIONS_SETTINGS = 'ohos.settings.manage.applications'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-ACTION_MANAGE_APPLICATIONS_SETTINGS = 'ohos.settings.manage.applications'--><!--Device-Action-ACTION_MANAGE_APPLICATIONS_SETTINGS = 'ohos.settings.manage.applications'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -100,9 +100,9 @@ ACTION_APPLICATION_DETAILS_SETTINGS = 'ohos.settings.application.details'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-ACTION_APPLICATION_DETAILS_SETTINGS = 'ohos.settings.application.details'--><!--Device-Action-ACTION_APPLICATION_DETAILS_SETTINGS = 'ohos.settings.application.details'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -116,9 +116,9 @@ ACTION_SET_ALARM = 'ohos.want.action.setAlarm'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-ACTION_SET_ALARM = 'ohos.want.action.setAlarm'--><!--Device-Action-ACTION_SET_ALARM = 'ohos.want.action.setAlarm'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -132,9 +132,9 @@ ACTION_SHOW_ALARMS = 'ohos.want.action.showAlarms'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-ACTION_SHOW_ALARMS = 'ohos.want.action.showAlarms'--><!--Device-Action-ACTION_SHOW_ALARMS = 'ohos.want.action.showAlarms'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -148,9 +148,9 @@ ACTION_SNOOZE_ALARM = 'ohos.want.action.snoozeAlarm'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-ACTION_SNOOZE_ALARM = 'ohos.want.action.snoozeAlarm'--><!--Device-Action-ACTION_SNOOZE_ALARM = 'ohos.want.action.snoozeAlarm'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -164,9 +164,9 @@ ACTION_DISMISS_ALARM = 'ohos.want.action.dismissAlarm'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-ACTION_DISMISS_ALARM = 'ohos.want.action.dismissAlarm'--><!--Device-Action-ACTION_DISMISS_ALARM = 'ohos.want.action.dismissAlarm'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -180,9 +180,9 @@ ACTION_DISMISS_TIMER = 'ohos.want.action.dismissTimer'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-ACTION_DISMISS_TIMER = 'ohos.want.action.dismissTimer'--><!--Device-Action-ACTION_DISMISS_TIMER = 'ohos.want.action.dismissTimer'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -196,9 +196,9 @@ ACTION_SEND_SMS = 'ohos.want.action.sendSms'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-ACTION_SEND_SMS = 'ohos.want.action.sendSms'--><!--Device-Action-ACTION_SEND_SMS = 'ohos.want.action.sendSms'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -212,9 +212,9 @@ ACTION_CHOOSE = 'ohos.want.action.choose'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-ACTION_CHOOSE = 'ohos.want.action.choose'--><!--Device-Action-ACTION_CHOOSE = 'ohos.want.action.choose'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -228,9 +228,9 @@ ACTION_IMAGE_CAPTURE = 'ohos.want.action.imageCapture'
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Action-ACTION_IMAGE_CAPTURE = 'ohos.want.action.imageCapture'--><!--Device-Action-ACTION_IMAGE_CAPTURE = 'ohos.want.action.imageCapture'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -244,9 +244,9 @@ ACTION_VIDEO_CAPTURE = 'ohos.want.action.videoCapture'
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-Action-ACTION_VIDEO_CAPTURE = 'ohos.want.action.videoCapture'--><!--Device-Action-ACTION_VIDEO_CAPTURE = 'ohos.want.action.videoCapture'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -260,9 +260,9 @@ ACTION_SELECT = 'ohos.want.action.select'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-ACTION_SELECT = 'ohos.want.action.select'--><!--Device-Action-ACTION_SELECT = 'ohos.want.action.select'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -276,9 +276,9 @@ ACTION_SEND_DATA = 'ohos.want.action.sendData'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-ACTION_SEND_DATA = 'ohos.want.action.sendData'--><!--Device-Action-ACTION_SEND_DATA = 'ohos.want.action.sendData'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -292,9 +292,9 @@ ACTION_SEND_MULTIPLE_DATA = 'ohos.want.action.sendMultipleData'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-ACTION_SEND_MULTIPLE_DATA = 'ohos.want.action.sendMultipleData'--><!--Device-Action-ACTION_SEND_MULTIPLE_DATA = 'ohos.want.action.sendMultipleData'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -308,9 +308,9 @@ ACTION_SCAN_MEDIA_FILE = 'ohos.want.action.scanMediaFile'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-ACTION_SCAN_MEDIA_FILE = 'ohos.want.action.scanMediaFile'--><!--Device-Action-ACTION_SCAN_MEDIA_FILE = 'ohos.want.action.scanMediaFile'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -324,9 +324,9 @@ ACTION_VIEW_DATA = 'ohos.want.action.viewData'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-ACTION_VIEW_DATA = 'ohos.want.action.viewData'--><!--Device-Action-ACTION_VIEW_DATA = 'ohos.want.action.viewData'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -340,9 +340,9 @@ ACTION_EDIT_DATA = 'ohos.want.action.editData'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-ACTION_EDIT_DATA = 'ohos.want.action.editData'--><!--Device-Action-ACTION_EDIT_DATA = 'ohos.want.action.editData'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -356,9 +356,9 @@ INTENT_PARAMS_INTENT = 'ability.want.params.INTENT'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-INTENT_PARAMS_INTENT = 'ability.want.params.INTENT'--><!--Device-Action-INTENT_PARAMS_INTENT = 'ability.want.params.INTENT'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -372,9 +372,9 @@ INTENT_PARAMS_TITLE = 'ability.want.params.TITLE'
 
 **起始版本：** 6
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Action-INTENT_PARAMS_TITLE = 'ability.want.params.TITLE'--><!--Device-Action-INTENT_PARAMS_TITLE = 'ability.want.params.TITLE'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -388,9 +388,9 @@ ACTION_FILE_SELECT = 'ohos.action.fileSelect'
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-Action-ACTION_FILE_SELECT = 'ohos.action.fileSelect'--><!--Device-Action-ACTION_FILE_SELECT = 'ohos.action.fileSelect'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -404,9 +404,9 @@ PARAMS_STREAM = 'ability.params.stream'
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-Action-PARAMS_STREAM = 'ability.params.stream'--><!--Device-Action-PARAMS_STREAM = 'ability.params.stream'-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -420,9 +420,8 @@ ACTION_APP_ACCOUNT_OAUTH = 'ohos.account.appAccount.action.oauth'
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-<!--Device-Action-ACTION_APP_ACCOUNT_OAUTH = 'ohos.account.appAccount.action.oauth'--><!--Device-Action-ACTION_APP_ACCOUNT_OAUTH = 'ohos.account.appAccount.action.oauth'-End-->
-
 **系统能力：** SystemCapability.Ability.AbilityBase
-

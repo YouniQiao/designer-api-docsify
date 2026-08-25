@@ -9,7 +9,7 @@ Defines the sweep gradient parameters.
 
 **Since:** 18
 
-<!--Device-unnamed-declare interface SweepGradientOptions--><!--Device-unnamed-declare interface SweepGradientOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,11 @@ Center of the sweep gradient, that is, the coordinates relative to the upper lef
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-SweepGradientOptions-center: [Length, Length]--><!--Device-SweepGradientOptions-center: [Length, Length]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,11 +50,11 @@ Array of color stops, each of which consists of a color and its stop position. I
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-SweepGradientOptions-colors: Array<[ResourceColor, number]>--><!--Device-SweepGradientOptions-colors: Array<[ResourceColor, number]>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,11 @@ End point of the sweep gradient.Default value: **0**.When specified as a string,
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-SweepGradientOptions-end?: number | string--><!--Device-SweepGradientOptions-end?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,11 +92,11 @@ Array of color stops, each of which consists of a color and its stop position. I
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-SweepGradientOptions-metricsColors?: Array<[ColorMetrics, number]>--><!--Device-SweepGradientOptions-metricsColors?: Array<[ColorMetrics, number]>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,11 +116,11 @@ Whether the colors are repeated.Default value: **false**.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-SweepGradientOptions-repeating?: boolean--><!--Device-SweepGradientOptions-repeating?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,11 +138,11 @@ Rotation angle of the sweep gradient. Default value: **0**.When specified as a s
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-SweepGradientOptions-rotation?: number | string--><!--Device-SweepGradientOptions-rotation?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -160,11 +160,10 @@ Start point of the sweep gradient.Default value: **0**.When specified as a strin
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-SweepGradientOptions-start?: number | string--><!--Device-SweepGradientOptions-start?: number | string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

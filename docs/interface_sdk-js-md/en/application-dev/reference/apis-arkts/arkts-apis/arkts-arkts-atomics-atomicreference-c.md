@@ -4,9 +4,7 @@ Provides an atomic reference wrapper for safe concurrent access to a reference v
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class AtomicReference--><!--Device-unnamed-export class AtomicReference-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,26 +23,24 @@ Atomically compares the current value with the expected value and replaces it if
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicReference-compareAndSwap(expected: T, ref: T): T--><!--Device-AtomicReference-compareAndSwap(expected: T, ref: T): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| expected | T | Yes | the expected current value. |
-| ref | T | Yes | the new reference value to store if the comparison succeeds. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| expected | T | Yes |
+| ref | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | the previous reference value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 ## constructor
 
@@ -56,19 +52,17 @@ Constructs a new AtomicReference with the provided initial value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicReference-constructor(ref: T)--><!--Device-AtomicReference-constructor(ref: T)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| ref | T | Yes | the initial reference value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| ref | T | Yes |
 
 ## exchange
 
@@ -80,25 +74,23 @@ Atomically exchanges the current reference value with a new value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicReference-exchange(ref: T): T--><!--Device-AtomicReference-exchange(ref: T): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| ref | T | Yes | the new reference value to exchange with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| ref | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | the previous reference value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 ## isLockFree
 
@@ -110,19 +102,17 @@ Checks whether atomic operations on this type are lock-free
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicReference-static isLockFree(): boolean--><!--Device-AtomicReference-static isLockFree(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if atomic operations are lock-free, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## load
 
@@ -134,19 +124,17 @@ Atomically loads the current reference value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicReference-load(): T--><!--Device-AtomicReference-load(): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T | the current reference value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
 
 ## store
 
@@ -158,17 +146,14 @@ Atomically stores a new reference value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicReference-store(ref: T): void--><!--Device-AtomicReference-store(ref: T): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| ref | T | Yes | the new reference value to store. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| ref | T | Yes |

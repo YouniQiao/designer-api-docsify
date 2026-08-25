@@ -6,9 +6,7 @@ Represents boxed double value and related operations
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-unnamed-export class Double--><!--Device-unnamed-export class Double-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,19 +25,17 @@ Creates a new instance of a Double
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-static $_invoke(): Double--><!--Device-Double-static $_invoke(): Double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Double | A new Double instance |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Double |
 
 ## $_invoke
 
@@ -51,25 +47,23 @@ Creates a new instance of a Double
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-static $_invoke(value: string | Double | BigInt | undefined | null): Double--><!--Device-Double-static $_invoke(value: string | Double | BigInt | undefined | null): Double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string \| Double \| BigInt \| undefined \| null | Yes | The value to be converted to a number. Can be a string, number, or BigInt (optional). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | string \| Double \| BigInt \| undefined \| null | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Double | A new Double instance |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Double |
 
 ## add
 
@@ -81,25 +75,23 @@ Performs floating point addition of this instance with provided one, returns the
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public add(other: Double): Double--><!--Device-Double-public add(other: Double): Double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Double | Yes | Right hand side of the addition. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Double | Result of the addition |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Double |
 
 ## bitCastFromLong
 
@@ -111,25 +103,23 @@ Converts bit representation to corresponding IEEE-754 floating point representat
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static bitCastFromLong(bits: long): double--><!--Device-Double-public static bitCastFromLong(bits: long): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bits | long | Yes | bits to convert. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [bits](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-deflatependingoutputinfo-i.md) | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | converted value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## bitCastToLong
 
@@ -141,25 +131,23 @@ Converts IEEE-754 floating point representation to corresponding bit representat
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static bitCastToLong(val: double): long--><!--Device-Double-public static bitCastToLong(val: double): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | double | Yes | value to convert. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | bit representation |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## compare
 
@@ -171,26 +159,24 @@ compare(double, double) checks if two doubles are differs no more than by Double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static compare(lhs: double, rhs: double): boolean--><!--Device-Double-public static compare(lhs: double, rhs: double): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| lhs | double | Yes | left-hand side double for comparison. |
-| rhs | double | Yes | right-hand side double for comparison. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| lhs | double | Yes |
+| rhs | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if lhs and rhs are equal with respect to Double.DELTA |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## compareTo
 
@@ -202,25 +188,23 @@ Compares this instance to other Double object The result is less than 0 if this 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public compareTo(other: Double): int--><!--Device-Double-public compareTo(other: Double): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Double | Yes | Double object to compare with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | if the cur value &gt; the other reutrn 0,otherwise return -1 |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## constructor
 
@@ -232,11 +216,9 @@ Constructs a new Double instance with initial value zero
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-constructor()--><!--Device-Double-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -250,19 +232,17 @@ Constructs a new Double instance with provided initial value
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-constructor(value: double)--><!--Device-Double-constructor(value: double)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | the initial value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | double | Yes |
 
 ## constructor
 
@@ -274,19 +254,17 @@ Constructs a new Double instance from BigInt
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-constructor(value: BigInt)--><!--Device-Double-constructor(value: BigInt)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | BigInt | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 ## constructor
 
@@ -298,19 +276,17 @@ Constructs a new Double instance from string
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-constructor(value: string)--><!--Device-Double-constructor(value: string)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string | Yes | string that may contain a number |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | string | Yes |
 
 ## div
 
@@ -322,25 +298,23 @@ Performs floating point division of this instance with provided one, returns the
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public div(other: Double): Double--><!--Device-Double-public div(other: Double): Double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Double | Yes | Right hand side of the division. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Double | Result of the division |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Double |
 
 ## equals
 
@@ -352,25 +326,23 @@ Checks for equality this instance with provided object, treated as a Double Retu
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-equals(other: Any): boolean--><!--Device-Double-equals(other: Any): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Any | Yes | object to be checked against |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Any | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if provided object and this instance have same value, false otherwise Returns false if type of provided object is not the same as this type |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isFinite
 
@@ -382,25 +354,23 @@ isFinite(double) checks if double is a floating point value (not a NaN or infini
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-static isFinite(v: double): boolean--><!--Device-Double-static isFinite(v: double): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| v | double | Yes | the double to test |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| v | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the argument is a floating point value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isFinite
 
@@ -412,19 +382,17 @@ isFinite() checks if the underlying double is a floating point value (not a NaN 
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-isFinite(): boolean--><!--Device-Double-isFinite(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the underlying double is a floating point value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isGreaterEqualThan
 
@@ -436,25 +404,23 @@ Checks if this instance value is greater than or equal to value of provided inst
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public isGreaterEqualThan(other: Double): boolean--><!--Device-Double-public isGreaterEqualThan(other: Double): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Double | Yes | Right hand side of the comparison. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if this value is greater than or equal to provided, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isGreaterThan
 
@@ -466,25 +432,23 @@ Checks if this instance value is greater than value of provided instance
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public isGreaterThan(other: Double): boolean--><!--Device-Double-public isGreaterThan(other: Double): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Double | Yes | Right hand side of the comparison. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if this value is greater than provided, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isInteger
 
@@ -496,25 +460,23 @@ Checks if double is similar to an integer value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static isInteger(v: double): boolean--><!--Device-Double-public static isInteger(v: double): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| v | double | Yes | the double to test. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| v | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the argument is similar to an integer value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isInteger
 
@@ -526,19 +488,17 @@ Checks if the underlying double is similar to an integer value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public isInteger(): boolean--><!--Device-Double-public isInteger(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the underlying double is similar to an integer value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isLessEqualThan
 
@@ -550,25 +510,23 @@ Checks if this instance value is less than or equal to value of provided instanc
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public isLessEqualThan(other: Double): boolean--><!--Device-Double-public isLessEqualThan(other: Double): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Double | Yes | Right hand side of the comparison. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if this value is less than or equal to provided, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isLessThan
 
@@ -580,25 +538,23 @@ Checks if this instance value is less than value of provided instance
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public isLessThan(other: Double): boolean--><!--Device-Double-public isLessThan(other: Double): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Double | Yes | Right hand side of the comparison. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if this value is less than provided, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isNaN
 
@@ -610,25 +566,23 @@ isNaN(double) checks if double is NaN (not a number)
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-static isNaN(v: double): boolean--><!--Device-Double-static isNaN(v: double): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| v | double | Yes | the double to test |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| v | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the argument is NaN |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isNaN
 
@@ -640,19 +594,17 @@ isNaN() checks if the underlying double is NaN (not a number)
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-isNaN(): boolean--><!--Device-Double-isNaN(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the underlying double is NaN |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isSafeInteger
 
@@ -664,25 +616,23 @@ Checks if double is a safe integer value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static isSafeInteger(v: double): boolean--><!--Device-Double-public static isSafeInteger(v: double): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| v | double | Yes | the double to test. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| v | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the argument is integer ans less than MAX_SAFE_INTEGER |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## isSafeInteger
 
@@ -694,19 +644,17 @@ Checks if double is a safe integer value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public isSafeInteger(): boolean--><!--Device-Double-public isSafeInteger(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the underlying double is a safe integer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## mul
 
@@ -718,25 +666,23 @@ Performs floating point multiplication of this instance with provided one, retur
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public mul(other: Double): Double--><!--Device-Double-public mul(other: Double): Double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Double | Yes | Right hand side of the multiplication. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Double | Result of the multiplication |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Double |
 
 ## parseFloat
 
@@ -748,25 +694,23 @@ parseFloat(String) converts std.core.String to double If arg is '+Infinity', 'In
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-static parseFloat(s: string): double--><!--Device-Double-static parseFloat(s: string): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| s | string | Yes | the string to convert |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| s | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | the result of conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## parseInt
 
@@ -778,25 +722,23 @@ parseInt(String) parses from String an integer of radix 10
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-static parseInt(s: string): double--><!--Device-Double-static parseInt(s: string): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| s | string | Yes | the string to convert |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| s | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | the result of parsing |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## parseInt
 
@@ -808,26 +750,24 @@ parseInt(String, int) parses from String an integer of specified radix If args (
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-static parseInt(s: string, r: int): double--><!--Device-Double-static parseInt(s: string, r: int): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| s | string | Yes | the string to convert |
-| r | int | Yes | the radix of conversion; should be [2, 36]; 0 assumed to be 10 <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| s | string | Yes |
+| r | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | the result of parsing |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## parseInt
 
@@ -839,26 +779,24 @@ parseInt(String, double) parses from String an integer of specified radix If arg
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-static parseInt(s: string, r: double): double--><!--Device-Double-static parseInt(s: string, r: double): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| s | string | Yes | the string to convert |
-| r | double | Yes | the radix of conversion; should be [2, 36]; 0 assumed to be 10 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| s | string | Yes |
+| r | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | the result of parsing |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## sub
 
@@ -870,25 +808,23 @@ Performs floating point subtraction of this instance with provided one, returns 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public sub(other: Double): Double--><!--Device-Double-public sub(other: Double): Double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Double | Yes | Right hand side of the subtraction. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Double | Result of the subtraction |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Double |
 
 ## toByte
 
@@ -900,19 +836,17 @@ Returns value of this instance
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public toByte(): byte--><!--Device-Double-public toByte(): byte-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| byte | return the current value convert byte value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| byte |
 
 ## toByte
 
@@ -924,25 +858,23 @@ Returns the primitive as byte value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static toByte(value: double): byte--><!--Device-Double-public static toByte(value: double): byte-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| byte |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| byte |
 
 ## toDouble
 
@@ -954,19 +886,17 @@ Returns value of this instance
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-toDouble(): double--><!--Device-Double-toDouble(): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | return the current value convert double value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## toDouble
 
@@ -978,25 +908,23 @@ Returns the primitive as double value
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-static toDouble(value: double): double--><!--Device-Double-static toDouble(value: double): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | value to cast |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## toExponential
 
@@ -1008,19 +936,17 @@ toExponential() returns std.core.string representing the underlying double in ex
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public toExponential(): string--><!--Device-Double-public toExponential(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the result of conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toExponential
 
@@ -1032,25 +958,23 @@ toExponential() returns std.core.String representing the underlying double in ex
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public toExponential(d?: double): string--><!--Device-Double-public toExponential(d?: double): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | double | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | double | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the result of conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toExponentialWithNoDigit
 
@@ -1062,19 +986,17 @@ toExponential(double) returns std.core.string representing the underlying double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public toExponentialWithNoDigit(): string--><!--Device-Double-public toExponentialWithNoDigit(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the result of conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toFixed
 
@@ -1086,19 +1008,17 @@ toFixed(double) returns std.core.string representing the underlying double using
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public toFixed(): string--><!--Device-Double-public toFixed(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toFixed
 
@@ -1110,25 +1030,23 @@ toFixed(double) returns std.core.string representing the underlying double using
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public toFixed(d?: double): string--><!--Device-Double-public toFixed(d?: double): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | double | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | double | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toFixedImpl
 
@@ -1140,25 +1058,23 @@ toFixed(double) returns std.core.string representing the underlying double using
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public toFixedImpl(d: double): string--><!--Device-Double-public toFixedImpl(d: double): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | double | Yes | fixed size (integer part); must be in [0, 100]. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the result of conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toFloat
 
@@ -1170,19 +1086,17 @@ Returns value of this instance
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public toFloat(): float--><!--Device-Double-public toFloat(): float-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| float | return the current value convert float value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| float |
 
 ## toFloat
 
@@ -1194,25 +1108,23 @@ Returns the primitive as float value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static toFloat(value: double): float--><!--Device-Double-public static toFloat(value: double): float-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| float |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| float |
 
 ## toInt
 
@@ -1224,19 +1136,17 @@ Returns value of this instance
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public toInt(): int--><!--Device-Double-public toInt(): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | return the current value convert int value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## toInt
 
@@ -1248,25 +1158,23 @@ Returns the primitive as int value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static toInt(value: double): int--><!--Device-Double-public static toInt(value: double): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## toLocaleString
 
@@ -1278,26 +1186,24 @@ Converts this object to a locale-specific string representation
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.NumberFormatOptions): string--><!--Device-Double-public toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.NumberFormatOptions): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | No | A string with a BCP 47 language tag, or an array of such strings. |
-| options | Intl.NumberFormatOptions | No | An object with some or all of the properties of the Intl.NumberFormat options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | No |
+| options | Intl.NumberFormatOptions | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the locale-specific conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toLocaleString
 
@@ -1309,26 +1215,24 @@ Converts this object to a locale-specific string representation
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string--><!--Device-Double-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | No | A string with a BCP 47 language tag, or an array of such strings. |
-| options | object | No | An object with some or all of the properties of the Intl.NumberFormat options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | No |
+| options | object | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the locale-specific conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toLong
 
@@ -1340,19 +1244,17 @@ Returns value of this instance
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public toLong(): long--><!--Device-Double-public toLong(): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | return the current value convert long value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## toLong
 
@@ -1364,25 +1266,23 @@ Returns the primitive as long value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static toLong(value: double): long--><!--Device-Double-public static toLong(value: double): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## toPrecision
 
@@ -1394,25 +1294,23 @@ toPrecision(double) returns std.core.string representing the underlying double o
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public toPrecision(d: double): string--><!--Device-Double-public toPrecision(d: double): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | double | Yes | precision (rounded to nearest integer); must be in [1, 100]. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the result of conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toPrecision
 
@@ -1424,19 +1322,17 @@ toPrecision() returns std.core.string representing the underlying double in expo
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public toPrecision(): string--><!--Device-Double-public toPrecision(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | the result of conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toShort
 
@@ -1448,19 +1344,17 @@ Returns value of this instance
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public toShort(): short--><!--Device-Double-public toShort(): short-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| short | return the current value convert short value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| short |
 
 ## toShort
 
@@ -1472,25 +1366,23 @@ Returns the primitive as short value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static toShort(value: double): short--><!--Device-Double-public static toShort(value: double): short-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | value to cast. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| short |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| short |
 
 ## toString
 
@@ -1502,26 +1394,24 @@ toString(d: double, r: int): string -- returns a string representation of d by r
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static toString(d: double, r: int): string--><!--Device-Double-public static toString(d: double, r: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | double | Yes |  |
-| r | int | Yes | <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | double | Yes |
+| r | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | return the string value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -1533,25 +1423,23 @@ Converts the specified double-precision floating-point value to its string repre
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static toString(d: double): string--><!--Device-Double-public static toString(d: double): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | double | Yes | return the string value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string |  |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -1563,25 +1451,23 @@ Converts the specified double-precision floating-point value to its string repre
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public toString(r: int): string--><!--Device-Double-public toString(r: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| r | int | Yes | <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| r | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | return the string value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -1593,19 +1479,17 @@ Converts this object to a string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public toString(): string--><!--Device-Double-public toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | return the string value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## BIT_SIZE
 
@@ -1619,11 +1503,9 @@ Size of this type in bits.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static readonly BIT_SIZE: byte = 64--><!--Device-Double-public static readonly BIT_SIZE: byte = 64-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1639,11 +1521,9 @@ Size of this type in bytes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static readonly BYTE_SIZE: byte = 8--><!--Device-Double-public static readonly BYTE_SIZE: byte = 8-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1659,11 +1539,9 @@ Minimal possible difference between two double values. For double (IEEE-754 bina
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static readonly DELTA: double = Double.bitCastFromLong(0x3cb0000000000000)--><!--Device-Double-public static readonly DELTA: double = Double.bitCastFromLong(0x3cb0000000000000)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1679,11 +1557,9 @@ Minimal possible difference between two double values.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static readonly EPSILON: double = Double.DELTA--><!--Device-Double-public static readonly EPSILON: double = Double.DELTA-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1699,11 +1575,9 @@ Maximal integer value that can be used as a double without loss of precision.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static readonly MAX_SAFE_INTEGER: double = 9007199254740991--><!--Device-Double-public static readonly MAX_SAFE_INTEGER: double = 9007199254740991-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1719,11 +1593,9 @@ Maximal value that this type can have as a double.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static readonly MAX_VALUE: double = 1.7976931348623157e+308--><!--Device-Double-public static readonly MAX_VALUE: double = 1.7976931348623157e+308-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1739,11 +1611,9 @@ Minimal integer value that can be used as a double without loss of precision.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static readonly MIN_SAFE_INTEGER: double = -9007199254740991--><!--Device-Double-public static readonly MIN_SAFE_INTEGER: double = -9007199254740991-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1759,11 +1629,9 @@ Minimal value that this type can have as a double the workarond for libc's doubl
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static readonly MIN_VALUE: double = 4.9e-300 / 1.e+24--><!--Device-Double-public static readonly MIN_VALUE: double = 4.9e-300 / 1.e+24-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1779,11 +1647,9 @@ Represents the NaN value according to IEEE-754 specification.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static readonly NaN: double = 0.0 / 0.0--><!--Device-Double-public static readonly NaN: double = 0.0 / 0.0-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1799,11 +1665,9 @@ Represents the -Infinity value according to IEEE-754 specification.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static readonly NEGATIVE_INFINITY: double = -1.0 / 0.0--><!--Device-Double-public static readonly NEGATIVE_INFINITY: double = -1.0 / 0.0-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1819,11 +1683,9 @@ Represents the +Infinity value according to IEEE-754 specification.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static readonly POSITIVE_INFINITY: double = 1.0 / 0.0--><!--Device-Double-public static readonly POSITIVE_INFINITY: double = 1.0 / 0.0-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1839,11 +1701,8 @@ Number of significant precision bits in this floating type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Double-public static readonly PRECISION: byte = 53--><!--Device-Double-public static readonly PRECISION: byte = 53-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

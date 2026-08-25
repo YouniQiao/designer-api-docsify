@@ -4,9 +4,7 @@ Provides an atomic wrapper for safe concurrent access to a long value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class AtomicLong--><!--Device-unnamed-export class AtomicLong-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,26 +23,24 @@ Atomically compares the current value with the expected value and replaces it if
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicLong-compareAndSwap(expected: long, val: long): long--><!--Device-AtomicLong-compareAndSwap(expected: long, val: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| expected | long | Yes | the expected current value. |
-| val | long | Yes | the new value to store if the comparison succeeds. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| expected | long | Yes |
+| val | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | the previous value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## constructor
 
@@ -56,19 +52,17 @@ Constructs a new AtomicLong with the provided initial value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicLong-constructor(val: long)--><!--Device-AtomicLong-constructor(val: long)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | long | Yes | the initial value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | long | Yes |
 
 ## exchange
 
@@ -80,25 +74,23 @@ Atomically exchanges the current value with a new value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicLong-exchange(val: long): long--><!--Device-AtomicLong-exchange(val: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | long | Yes | the new value to exchange with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | the previous value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## fetchAdd
 
@@ -110,25 +102,23 @@ Atomically adds a value to the current value and returns the previous value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicLong-fetchAdd(val: long): long--><!--Device-AtomicLong-fetchAdd(val: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | long | Yes | the value to add. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | the previous value before the addition |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## fetchAnd
 
@@ -140,25 +130,23 @@ Atomically performs a bitwise AND operation and returns the previous value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicLong-fetchAnd(val: long): long--><!--Device-AtomicLong-fetchAnd(val: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | long | Yes | the value to AND with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | the previous value before the operation |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## fetchOr
 
@@ -170,25 +158,23 @@ Atomically performs a bitwise OR operation and returns the previous value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicLong-fetchOr(val: long): long--><!--Device-AtomicLong-fetchOr(val: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | long | Yes | the value to OR with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | the previous value before the operation |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## fetchSub
 
@@ -200,25 +186,23 @@ Atomically subtracts a value from the current value and returns the previous val
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicLong-fetchSub(val: long): long--><!--Device-AtomicLong-fetchSub(val: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | long | Yes | the value to subtract. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | the previous value before the subtraction |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## fetchXor
 
@@ -230,25 +214,23 @@ Atomically performs a bitwise XOR operation and returns the previous value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicLong-fetchXor(val: long): long--><!--Device-AtomicLong-fetchXor(val: long): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | long | Yes | the value to XOR with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | the previous value before the operation |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## isLockFree
 
@@ -260,19 +242,17 @@ Checks whether atomic operations on this type are lock-free
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicLong-static isLockFree(): boolean--><!--Device-AtomicLong-static isLockFree(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if atomic operations are lock-free, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## load
 
@@ -284,19 +264,17 @@ Atomically loads the current value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicLong-load(): long--><!--Device-AtomicLong-load(): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | the current value |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## store
 
@@ -308,17 +286,14 @@ Atomically stores a new value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AtomicLong-store(val: long): void--><!--Device-AtomicLong-store(val: long): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | long | Yes | the new value to store. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | long | Yes |

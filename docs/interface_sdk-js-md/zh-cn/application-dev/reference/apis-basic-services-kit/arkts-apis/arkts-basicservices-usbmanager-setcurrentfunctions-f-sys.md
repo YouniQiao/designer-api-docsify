@@ -16,11 +16,11 @@ function setCurrentFunctions(funcs: FunctionType): Promise<void>
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 12
 
 **替代接口：** [setDeviceFunctions](arkts-basicservices-usbmanager-setdevicefunctions-f-sys.md)(funcs: FunctionType)
-
-<!--Device-usbManager-function setCurrentFunctions(funcs: FunctionType): Promise<void>--><!--Device-usbManager-function setCurrentFunctions(funcs: FunctionType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -28,22 +28,22 @@ function setCurrentFunctions(funcs: FunctionType): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| funcs | FunctionType | 是 | 功能列表对应的数字掩码，可通过位运算组合多个功能。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| funcs | [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。调用成功时无返回值，调用失败时抛出异常。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified.<br>2.Incorrect parameter types. |
-| [14400002](../errorcode-usb.md#14400002-hdc功能被禁用) | Permission denied. The HDC is disabled by the system. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [14400002](../errorcode-usb.md#14400002-hdc功能被禁用) |
 
 **示例**
 
@@ -58,4 +58,3 @@ usbManager.setCurrentFunctions(funcs).then(() => {
   console.error(`usb setCurrentFunctions failed. Code: ${err.code}, message: ${err.message}`);
 });
 ```
-

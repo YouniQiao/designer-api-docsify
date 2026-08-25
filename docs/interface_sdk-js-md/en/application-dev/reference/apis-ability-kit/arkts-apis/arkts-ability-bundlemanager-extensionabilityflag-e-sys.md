@@ -2,9 +2,9 @@
 
 Enumerates the ExtensionAbility flags, which indicate the type of ExtensionAbility information to obtain.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-bundleManager-enum ExtensionAbilityFlag--><!--Device-bundleManager-enum ExtensionAbilityFlag-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -18,9 +18,9 @@ GET_EXTENSION_ABILITY_INFO_DEFAULT = 0x00000000
 
 Used to obtain the default ExtensionAbility information. The obtained information does not contain the permission, metadata, or disabled ExtensionAbility information.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ExtensionAbilityFlag-GET_EXTENSION_ABILITY_INFO_DEFAULT = 0x00000000--><!--Device-ExtensionAbilityFlag-GET_EXTENSION_ABILITY_INFO_DEFAULT = 0x00000000-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -34,9 +34,9 @@ GET_EXTENSION_ABILITY_INFO_WITH_PERMISSION = 0x00000001
 
 Used to obtain the ExtensionAbility information with permission information.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ExtensionAbilityFlag-GET_EXTENSION_ABILITY_INFO_WITH_PERMISSION = 0x00000001--><!--Device-ExtensionAbilityFlag-GET_EXTENSION_ABILITY_INFO_WITH_PERMISSION = 0x00000001-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -50,9 +50,9 @@ GET_EXTENSION_ABILITY_INFO_WITH_APPLICATION = 0x00000002
 
 Used to obtain the ExtensionAbility information with application information.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ExtensionAbilityFlag-GET_EXTENSION_ABILITY_INFO_WITH_APPLICATION = 0x00000002--><!--Device-ExtensionAbilityFlag-GET_EXTENSION_ABILITY_INFO_WITH_APPLICATION = 0x00000002-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -66,9 +66,9 @@ GET_EXTENSION_ABILITY_INFO_WITH_METADATA = 0x00000004
 
 Used to obtain the ExtensionAbility information with metadata.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ExtensionAbilityFlag-GET_EXTENSION_ABILITY_INFO_WITH_METADATA = 0x00000004--><!--Device-ExtensionAbilityFlag-GET_EXTENSION_ABILITY_INFO_WITH_METADATA = 0x00000004-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -82,11 +82,10 @@ GET_EXTENSION_ABILITY_INFO_WITH_SKILL = 0x00000010
 
 Used to obtain the ExtensionAbility information with skills.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-ExtensionAbilityFlag-GET_EXTENSION_ABILITY_INFO_WITH_SKILL = 0x00000010--><!--Device-ExtensionAbilityFlag-GET_EXTENSION_ABILITY_INFO_WITH_SKILL = 0x00000010-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
-

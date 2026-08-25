@@ -7,7 +7,7 @@
 
 **起始版本：** 21
 
-<!--Device-dlpPermission-export class DlpConnManager--><!--Device-dlpPermission-export class DlpConnManager-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -27,19 +27,19 @@ constructor()
 
 **起始版本：** 21
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
+
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
 - API版本21 - 24：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
-
-<!--Device-DlpConnManager-constructor()--><!--Device-DlpConnManager-constructor()-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -62,35 +62,35 @@ static registerPlugin(plugin: DlpConnPlugin): number
 
 **起始版本：** 21
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
+
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
 - API版本21 - 24：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
-
-<!--Device-DlpConnManager-static registerPlugin(plugin: DlpConnPlugin): number--><!--Device-DlpConnManager-static registerPlugin(plugin: DlpConnPlugin): number-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| plugin | [DlpConnPlugin](arkts-dataprotection-dlppermission-dlpconnplugin-i.md) | 是 | 回调插件对象，用于注册回调能力到SA（System Ability）侧。需要继承DlpConnPlugin接口并实现connectServer方法，以 便SA侧调用时能够通过回调返回处理结果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| plugin | [DlpConnPlugin](arkts-dataprotection-dlppermission-dlpconnplugin-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 注册结果，返回该回调的唯一标识ID。取值范围为[0, 2&lt;sup&gt;53&lt;/sup&gt;-1]。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
-| [19100002](../errorcode-dlp.md#19100002-加解密出错) | Credential service busy due to too many tasks or duplicate tasks. |
-| [19100003](../errorcode-dlp.md#19100003-加解密超时) | Credential task time out. |
-| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) | Credential service error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100002](../errorcode-dlp.md#19100002-加解密出错) |
+| [19100003](../errorcode-dlp.md#19100003-加解密超时) |
+| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) |
 
 **示例**
 
@@ -130,23 +130,23 @@ static unregisterPlugin(): void
 
 **起始版本：** 21
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
+
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
 - API版本21 - 24：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
-
-<!--Device-DlpConnManager-static unregisterPlugin(): void--><!--Device-DlpConnManager-static unregisterPlugin(): void-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
-| [19100002](../errorcode-dlp.md#19100002-加解密出错) | Credential service busy due to too many tasks or duplicate tasks. |
-| [19100003](../errorcode-dlp.md#19100003-加解密超时) | Credential task time out. |
-| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) | Credential service error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100002](../errorcode-dlp.md#19100002-加解密出错) |
+| [19100003](../errorcode-dlp.md#19100003-加解密超时) |
+| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) |
 
 **示例**
 
@@ -155,4 +155,3 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 
 dlpPermission.DlpConnManager.unregisterPlugin();
 ```
-

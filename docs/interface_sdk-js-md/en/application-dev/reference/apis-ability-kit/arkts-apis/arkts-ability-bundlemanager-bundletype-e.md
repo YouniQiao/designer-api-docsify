@@ -2,9 +2,9 @@
 
 Enumerates the bundle types.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-bundleManager-export enum BundleType--><!--Device-bundleManager-export enum BundleType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -16,11 +16,11 @@ APP = 0
 
 The bundle is an application.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-BundleType-APP = 0--><!--Device-BundleType-APP = 0-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -32,11 +32,10 @@ ATOMIC_SERVICE = 1
 
 The bundle is an atomic service.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-BundleType-ATOMIC_SERVICE = 1--><!--Device-BundleType-ATOMIC_SERVICE = 1-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
-

@@ -16,11 +16,11 @@ Obtains the list of all physical USB ports. When the developer mode is disabled,
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 12
 
 **Substitutes:** [getPortList](arkts-basicservices-usbmanager-getportlist-f-sys.md)()
-
-<!--Device-usbManager-function getPorts(): Array<USBPort>--><!--Device-usbManager-function getPorts(): Array<USBPort>-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -28,13 +28,12 @@ Obtains the list of all physical USB ports. When the developer mode is disabled,
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;USBPort&gt; | List of physical USB ports. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;USBPort & gt; |
 
 **Examples**
 
 ```TypeScript
 let ret: Array<usbManager.USBPort> = usbManager.getPorts();
 ```
-

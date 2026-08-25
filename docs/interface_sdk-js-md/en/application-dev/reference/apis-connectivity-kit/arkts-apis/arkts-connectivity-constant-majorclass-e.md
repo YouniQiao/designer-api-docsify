@@ -2,9 +2,9 @@
 
 The enum of major class of a bluetooth device.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-constant-export enum MajorClass--><!--Device-constant-export enum MajorClass-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -16,9 +16,9 @@ MAJOR_MISC = 0x0000
 
 Miscellaneous device.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-MajorClass-MAJOR_MISC = 0x0000--><!--Device-MajorClass-MAJOR_MISC = 0x0000-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -30,9 +30,9 @@ MAJOR_COMPUTER = 0x0100
 
 Computer.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-MajorClass-MAJOR_COMPUTER = 0x0100--><!--Device-MajorClass-MAJOR_COMPUTER = 0x0100-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -44,9 +44,9 @@ MAJOR_PHONE = 0x0200
 
 Mobile phone.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-MajorClass-MAJOR_PHONE = 0x0200--><!--Device-MajorClass-MAJOR_PHONE = 0x0200-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -58,9 +58,9 @@ MAJOR_NETWORKING = 0x0300
 
 Network device.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-MajorClass-MAJOR_NETWORKING = 0x0300--><!--Device-MajorClass-MAJOR_NETWORKING = 0x0300-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -72,9 +72,9 @@ MAJOR_AUDIO_VIDEO = 0x0400
 
 Audio or video device.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-MajorClass-MAJOR_AUDIO_VIDEO = 0x0400--><!--Device-MajorClass-MAJOR_AUDIO_VIDEO = 0x0400-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -86,9 +86,9 @@ MAJOR_PERIPHERAL = 0x0500
 
 Peripheral device.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-MajorClass-MAJOR_PERIPHERAL = 0x0500--><!--Device-MajorClass-MAJOR_PERIPHERAL = 0x0500-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -100,9 +100,9 @@ MAJOR_IMAGING = 0x0600
 
 Imaging device.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-MajorClass-MAJOR_IMAGING = 0x0600--><!--Device-MajorClass-MAJOR_IMAGING = 0x0600-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -114,9 +114,9 @@ MAJOR_WEARABLE = 0x0700
 
 Wearable device.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-MajorClass-MAJOR_WEARABLE = 0x0700--><!--Device-MajorClass-MAJOR_WEARABLE = 0x0700-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -128,9 +128,9 @@ MAJOR_TOY = 0x0800
 
 Toy.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-MajorClass-MAJOR_TOY = 0x0800--><!--Device-MajorClass-MAJOR_TOY = 0x0800-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -142,9 +142,9 @@ MAJOR_HEALTH = 0x0900
 
 Health device.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-MajorClass-MAJOR_HEALTH = 0x0900--><!--Device-MajorClass-MAJOR_HEALTH = 0x0900-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -156,9 +156,8 @@ MAJOR_UNCATEGORIZED = 0x1F00
 
 Unclassified device.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-MajorClass-MAJOR_UNCATEGORIZED = 0x1F00--><!--Device-MajorClass-MAJOR_UNCATEGORIZED = 0x1F00-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

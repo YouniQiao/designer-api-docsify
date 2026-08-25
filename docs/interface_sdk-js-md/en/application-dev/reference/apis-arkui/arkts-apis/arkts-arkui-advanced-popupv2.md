@@ -10,14 +10,13 @@ import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [PopupV2](arkts-arkui-arkui-advanced-popupv2-popupv2-f.md) | Build function of PopupV2. This component is implemented based on state management V2 Compared with Popup, PopupV2 offers a higher level of observation and management over data objects. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PopupV2](arkts-arkui-arkui-advanced-popupv2-popupv2-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [PopupV2Button](arkts-arkui-arkui-advanced-popupv2-popupv2button-i.md) | Defines the popup button |
-| [PopupV2InitInfo](arkts-arkui-arkui-advanced-popupv2-popupv2initinfo-i.md) | Defines the popup init info. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PopupV2Button](arkts-arkui-arkui-advanced-popupv2-popupv2button-i.md) |
+| [PopupV2InitInfo](arkts-arkui-arkui-advanced-popupv2-popupv2initinfo-i.md) |

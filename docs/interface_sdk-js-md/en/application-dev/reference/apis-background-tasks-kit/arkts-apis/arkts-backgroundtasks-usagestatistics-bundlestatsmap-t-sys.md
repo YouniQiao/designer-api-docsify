@@ -4,13 +4,12 @@
 type BundleStatsMap = Record<string, BundleStatsInfo>
 ```
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-usageStatistics-type BundleStatsMap = Record<string, BundleStatsInfo>--><!--Device-usageStatistics-type BundleStatsMap = Record<string, BundleStatsInfo>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
 
 **Property type:** Record&lt;string, BundleStatsInfo&gt;
-

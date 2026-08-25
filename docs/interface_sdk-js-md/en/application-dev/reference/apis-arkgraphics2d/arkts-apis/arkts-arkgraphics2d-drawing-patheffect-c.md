@@ -8,9 +8,9 @@ Implements a path effect.
 > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-drawing-class PathEffect--><!--Device-drawing-class PathEffect-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -30,22 +30,22 @@ Creates a path effect by sequentially applying the inner effect and then the out
 
 **Since:** 18
 
-<!--Device-PathEffect-static createComposePathEffect(outer: PathEffect, inner: PathEffect): PathEffect--><!--Device-PathEffect-static createComposePathEffect(outer: PathEffect, inner: PathEffect): PathEffect-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| outer | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes | Path effect that is applied second, overlaying the first effect. |
-| inner | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes | Inner path effect that is applied first. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| outer | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes |
+| inner | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) |
 
 **Examples**
 
@@ -73,22 +73,22 @@ Creates a path effect by sequentially applying the inner effect and then the out
 
 **Since:** 23
 
-<!--Device-PathEffect-static createComposePathEffect(outer: PathEffect, inner: PathEffect): PathEffect | undefined--><!--Device-PathEffect-static createComposePathEffect(outer: PathEffect, inner: PathEffect): PathEffect | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| outer | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes | Path effect that is applied second, overlaying the first effect. |
-| inner | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes | Inner path effect that is applied first. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| outer | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes |
+| inner | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| undefined | PathEffect object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| undefined |
 
 **Examples**
 
@@ -104,27 +104,27 @@ Creates a path effect that transforms the sharp angle between line segments into
 
 **Since:** 12
 
-<!--Device-PathEffect-static createCornerPathEffect(radius: number): PathEffect--><!--Device-PathEffect-static createCornerPathEffect(radius: number): PathEffect-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| radius | number | Yes | Radius of the rounded corner. The value must be greater than 0. The value is a floating point number. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| radius | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -150,27 +150,27 @@ Creates a path effect that transforms the sharp angle between line segments into
 
 **Since:** 23
 
-<!--Device-PathEffect-static createCornerPathEffect(radius: double): PathEffect | undefined--><!--Device-PathEffect-static createCornerPathEffect(radius: double): PathEffect | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| radius | double | Yes | Radius of the rounded corner. The value must be greater than 0. The value is a floating point number. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| radius | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| undefined | PathEffect object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| undefined |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -186,28 +186,28 @@ Creates a **PathEffect** object that converts a path into a dotted line.
 
 **Since:** 12
 
-<!--Device-PathEffect-static createDashPathEffect(intervals: Array<number>, phase: number): PathEffect--><!--Device-PathEffect-static createDashPathEffect(intervals: Array<number>, phase: number): PathEffect-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| intervals | Array&lt;number&gt; | Yes | Array of the lengths of the ON (solid line) and OFF (blank) parts of the dashed path. The number of elements in the array must be an even number and greater than or equal to 2. The value of this parameter is a positive integer. |
-| phase | number | Yes | Offset used during drawing. The value is a floating point number. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| intervals | Array & lt;number & gt; | Yes |
+| phase | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -234,28 +234,28 @@ Creates a PathEffect object that converts a path into a dotted line.
 
 **Since:** 23
 
-<!--Device-PathEffect-static createDashPathEffect(intervals: Array<double>, phase: double): PathEffect | undefined--><!--Device-PathEffect-static createDashPathEffect(intervals: Array<double>, phase: double): PathEffect | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| intervals | Array&lt;double&gt; | Yes | Array of ON and OFF lengths of dotted lines. The number of arrays must be an even number and be greater than or equal to 2. |
-| phase | double | Yes | Offset used during drawing. The value is a floating point number. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| intervals | Array & lt;double & gt; | Yes |
+| phase | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| undefined | PathEffect object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| undefined |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -271,23 +271,23 @@ Creates an effect that segments the path and scatters the segments in an irregul
 
 **Since:** 18
 
-<!--Device-PathEffect-static createDiscretePathEffect(segLength: number, dev: number, seedAssist?: number): PathEffect--><!--Device-PathEffect-static createDiscretePathEffect(segLength: number, dev: number, seedAssist?: number): PathEffect-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| segLength | number | Yes | Distance along the path at which each segment is fragmented. The value is a floating point number. If a negative number or the value **0** is passed in, no effect is created. |
-| dev | number | Yes | Maximum amount by which the end points of the segments can be randomly displaced during rendering. The value is a floating-point number. |
-| seedAssist | number | No | Optional parameter to assist in generating a pseudo-random seed for the effect. The default value is **0**, and the value is a 32-bit unsigned integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| segLength | number | Yes |
+| [dev](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileio-stat-depr-i.md) | number | Yes |
+| seedAssist | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) |
 
 **Examples**
 
@@ -313,23 +313,23 @@ Creates an effect that segments the path and scatters the segments in an irregul
 
 **Since:** 23
 
-<!--Device-PathEffect-static createDiscretePathEffect(segLength: double, dev: double, seedAssist?: int): PathEffect | undefined--><!--Device-PathEffect-static createDiscretePathEffect(segLength: double, dev: double, seedAssist?: int): PathEffect | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| segLength | double | Yes | Distance along the path at which each segment is fragmented. The value is a floating point number. If a negative number or the value 0 is passed in, no effect is created. |
-| dev | double | Yes | Maximum amount by which the end points of the segments can be randomly displaced during rendering. The value is a floating-point number. |
-| seedAssist | int | No | Optional parameter to assist in generating a pseudo-random seed for the effect. The default value is 0, and the value is a 32-bit unsigned integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| segLength | double | Yes |
+| [dev](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileio-stat-depr-i.md) | double | Yes |
+| seedAssist | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| undefined | PathEffect object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| undefined |
 
 **Examples**
 
@@ -345,30 +345,30 @@ Creates a dashed path effect based on the shape described by a path.
 
 **Since:** 18
 
-<!--Device-PathEffect-static createPathDashEffect(path: Path, advance: number, phase: number, style: PathDashStyle): PathEffect--><!--Device-PathEffect-static createPathDashEffect(path: Path, advance: number, phase: number, style: PathDashStyle): PathEffect-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| path | Path | Yes | Path that defines the shape to be used for filling each dash in the pattern. |
-| advance | number | Yes | Distance between two consecutive dashes. The value is a floating point number greater than 0. Otherwise, an error code is thrown. |
-| phase | number | Yes | Starting offset of the dash pattern. The value is a floating point number. The actual offset used is the absolute value of this value modulo the value of **advance**. |
-| style | [PathDashStyle](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | Yes | Style of the dashed path effect. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes |
+| advance | number | Yes |
+| phase | number | Yes |
+| style | [PathDashStyle](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -418,30 +418,30 @@ Creates a dashed path effect based on the shape described by a path.
 
 **Since:** 23
 
-<!--Device-PathEffect-static createPathDashEffect(path: Path, advance: double, phase: double, style: PathDashStyle): PathEffect | undefined--><!--Device-PathEffect-static createPathDashEffect(path: Path, advance: double, phase: double, style: PathDashStyle): PathEffect | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| path | Path | Yes | Path that defines the shape to be used for filling each dash in the pattern. |
-| advance | double | Yes | Distance between two consecutive dashes. The value is a floating point number greater than 0. Otherwise, an error code is thrown. |
-| phase | double | Yes | Starting offset of the dash pattern. The value is a floating point number. The actual offset used is the absolute value of this value modulo the value of advance. |
-| style | [PathDashStyle](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | Yes | Style of the dashed path effect. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes |
+| advance | double | Yes |
+| phase | double | Yes |
+| style | [PathDashStyle](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| undefined | PathEffect object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| undefined |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -457,22 +457,22 @@ Creates an overlay path effect based on two distinct path effects. Different fro
 
 **Since:** 18
 
-<!--Device-PathEffect-static createSumPathEffect(firstPathEffect: PathEffect, secondPathEffect: PathEffect): PathEffect--><!--Device-PathEffect-static createSumPathEffect(firstPathEffect: PathEffect, secondPathEffect: PathEffect): PathEffect-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| firstPathEffect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes | First path effect. |
-| secondPathEffect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes | Second path effect. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| firstPathEffect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes |
+| secondPathEffect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect** object created. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) |
 
 **Examples**
 
@@ -501,24 +501,23 @@ Creates an overlay path effect based on two distinct path effects. Different fro
 
 **Since:** 23
 
-<!--Device-PathEffect-static createSumPathEffect(firstPathEffect: PathEffect, secondPathEffect: PathEffect): PathEffect | undefined--><!--Device-PathEffect-static createSumPathEffect(firstPathEffect: PathEffect, secondPathEffect: PathEffect): PathEffect | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| firstPathEffect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes | First path effect. |
-| secondPathEffect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes | Second path effect. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| firstPathEffect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes |
+| secondPathEffect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| undefined | PathEffect object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| undefined |
 
 **Examples**
 
 See [createSumPathEffect](#createsumpatheffect)
-

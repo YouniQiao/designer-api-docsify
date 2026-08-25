@@ -4,7 +4,7 @@ Defines an application that creates the contact.
 
 **Since:** 7
 
-<!--Device-contact-class Holder--><!--Device-contact-class Holder-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -26,7 +26,7 @@ Bundle name. The default value is **com.ohos.contacts**.
 
 **Since:** 7
 
-<!--Device-Holder-readonly bundleName: string--><!--Device-Holder-readonly bundleName: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -42,7 +42,7 @@ Application name.
 
 **Since:** 7
 
-<!--Device-Holder-readonly displayName?: string--><!--Device-Holder-readonly displayName?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -58,7 +58,7 @@ Application ID.
 
 **Since:** 7
 
-<!--Device-Holder-holderId?: number--><!--Device-Holder-holderId?: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -73,4 +73,3 @@ let holder: contact.Holder = {
   holderId: 1
 };
 ```
-

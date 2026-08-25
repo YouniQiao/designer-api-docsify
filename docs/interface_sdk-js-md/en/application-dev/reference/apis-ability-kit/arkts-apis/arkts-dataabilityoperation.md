@@ -4,7 +4,6 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [DataAbilityOperation](arkts-ability-dataabilityoperation-dataabilityoperation-i.md) | The module defines the operation on DataAbilities. It can be used as an input parameter of executeBatch to specify the database operation information. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DataAbilityOperation](arkts-ability-dataabilityoperation-dataabilityoperation-i.md) |

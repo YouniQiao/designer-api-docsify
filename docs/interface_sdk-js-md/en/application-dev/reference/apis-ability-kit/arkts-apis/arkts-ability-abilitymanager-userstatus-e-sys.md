@@ -2,9 +2,9 @@
 
 Enumerates the assertion result for different user operations.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-abilityManager-export enum UserStatus--><!--Device-abilityManager-export enum UserStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -18,11 +18,11 @@ ASSERT_TERMINATE = 0
 
 Assertion result of the terminate operation.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UserStatus-ASSERT_TERMINATE = 0--><!--Device-UserStatus-ASSERT_TERMINATE = 0-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -36,11 +36,11 @@ ASSERT_CONTINUE = 1
 
 Assertion result of the continue operation.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UserStatus-ASSERT_CONTINUE = 1--><!--Device-UserStatus-ASSERT_CONTINUE = 1-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -54,13 +54,12 @@ ASSERT_RETRY = 2
 
 Assertion result of the retry operation.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UserStatus-ASSERT_RETRY = 2--><!--Device-UserStatus-ASSERT_RETRY = 2-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
-

@@ -4,7 +4,7 @@ Provides constants of the distributed KV store.
 
 **Since:** 9
 
-<!--Device-distributedKVStore-interface Constants--><!--Device-distributedKVStore-interface Constants-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -26,7 +26,7 @@ Maximum number of batch operations allowed, which is 128.
 
 **Since:** 9
 
-<!--Device-Constants-readonly MAX_BATCH_SIZE: number--><!--Device-Constants-readonly MAX_BATCH_SIZE: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -42,7 +42,7 @@ Maximum length of a key in the database, which is 1024 bytes.
 
 **Since:** 9
 
-<!--Device-Constants-readonly MAX_KEY_LENGTH: number--><!--Device-Constants-readonly MAX_KEY_LENGTH: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -58,7 +58,7 @@ Maximum length of a key in a device KV store, which is 896 bytes.
 
 **Since:** 9
 
-<!--Device-Constants-readonly MAX_KEY_LENGTH_DEVICE: number--><!--Device-Constants-readonly MAX_KEY_LENGTH_DEVICE: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -74,7 +74,7 @@ Maximum query length, which is 512000 bytes.
 
 **Since:** 9
 
-<!--Device-Constants-readonly MAX_QUERY_LENGTH: number--><!--Device-Constants-readonly MAX_QUERY_LENGTH: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -90,7 +90,7 @@ Maximum length of a KV store ID, which is 128 bytes.
 
 **Since:** 9
 
-<!--Device-Constants-readonly MAX_STORE_ID_LENGTH: number--><!--Device-Constants-readonly MAX_STORE_ID_LENGTH: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -106,7 +106,7 @@ Maximum length of a value in the database, which is 4194303 bytes.
 
 **Since:** 9
 
-<!--Device-Constants-readonly MAX_VALUE_LENGTH: number--><!--Device-Constants-readonly MAX_VALUE_LENGTH: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -120,9 +120,9 @@ Max batch operation size is 128.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-Constants-MAX_BATCH_SIZE = 128--><!--Device-Constants-MAX_BATCH_SIZE = 128-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -136,9 +136,9 @@ Max key length is 1024 bytes.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-Constants-MAX_KEY_LENGTH = 1024--><!--Device-Constants-MAX_KEY_LENGTH = 1024-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -152,9 +152,9 @@ Max device coordinate key length is 896 bytes.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-Constants-MAX_KEY_LENGTH_DEVICE = 896--><!--Device-Constants-MAX_KEY_LENGTH_DEVICE = 896-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -168,9 +168,9 @@ Max query length is 512000 bytes.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-Constants-MAX_QUERY_LENGTH = 512000--><!--Device-Constants-MAX_QUERY_LENGTH = 512000-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -184,9 +184,9 @@ Max store id length is 128 bytes.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-Constants-MAX_STORE_ID_LENGTH = 128--><!--Device-Constants-MAX_STORE_ID_LENGTH = 128-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -200,9 +200,8 @@ Max value length is 4194303 bytes.
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Constants-MAX_VALUE_LENGTH = 4194303--><!--Device-Constants-MAX_VALUE_LENGTH = 4194303-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
-

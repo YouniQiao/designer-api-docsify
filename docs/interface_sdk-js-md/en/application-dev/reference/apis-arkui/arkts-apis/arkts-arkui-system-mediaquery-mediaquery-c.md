@@ -1,12 +1,10 @@
 # MediaQuery
 
-Defines the mediaquery interface.
+Defines the MediaQuery API.
 
-**Since:** 23
+**Since:** 3
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-declare class MediaQuery--><!--Device-unnamed-declare class MediaQuery-End-->
+**ArkTS mode:** ArkTS-Dyn since version 3; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,27 +20,30 @@ import { SystemMediaQuery, MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 static matchMedia(condition: string): MediaQueryList
 ```
 
-Queries a media item and returns a MediaQueryList object.
+Creates a **MediaQueryList** object based on the query condition.
 
-**Since:** 23
+**Since:** 3
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 3; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MediaQuery-static matchMedia(condition: string): MediaQueryList--><!--Device-MediaQuery-static matchMedia(condition: string): MediaQueryList-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| condition | string | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| condition | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [MediaQueryList](arkts-arkui-system-mediaquery-mediaquerylist-i.md) |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [MediaQueryList](arkts-arkui-system-mediaquery-mediaquerylist-i.md) |
 
+**Examples**
+
+```TypeScript
+let mMediaQueryList = mediaquery.matchMedia('(max-width: 466)');
+```

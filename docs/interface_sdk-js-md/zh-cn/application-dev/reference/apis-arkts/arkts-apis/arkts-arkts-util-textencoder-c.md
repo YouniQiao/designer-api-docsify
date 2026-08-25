@@ -4,7 +4,7 @@
 
 **起始版本：** 7
 
-<!--Device-util-class TextEncoder--><!--Device-util-class TextEncoder-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -24,9 +24,9 @@ constructor()
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
-<!--Device-TextEncoder-constructor()--><!--Device-TextEncoder-constructor()-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -183,17 +183,17 @@ constructor(encoding?: string)
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-TextEncoder-constructor(encoding?: string)--><!--Device-TextEncoder-constructor(encoding?: string)-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| encoding | string | 否 | 编码格式。默认格式为 **'utf-8'**。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [encoding](#encoding) | string | 否 |
 
 **示例**
 
@@ -209,23 +209,23 @@ static create(encoding?: string): TextEncoder
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-TextEncoder-static create(encoding?: string): TextEncoder--><!--Device-TextEncoder-static create(encoding?: string): TextEncoder-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| encoding | string | 否 | 编码格式。默认格式为 **'utf-8'**。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [encoding](#encoding) | string | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [TextEncoder](arkts-arkts-util-textencoder-c.md) | TextEncoder** 对象。 |
+| 类型 |
+| --- |
+| [TextEncoder](arkts-arkts-util-textencoder-c.md) |
 
 **示例**
 
@@ -254,25 +254,25 @@ encode(input?: string): Uint8Array
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [encodeInto](#encodeinto)
-
-<!--Device-TextEncoder-encode(input?: string): Uint8Array--><!--Device-TextEncoder-encode(input?: string): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| input | string | 否 | 要编码的字符串。默认值为空字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| input | string | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Uint8Array | 获取到的 Uint8Array 对象。 |
+| 类型 |
+| --- |
+| Uint8Array |
 
 **示例**
 
@@ -311,23 +311,23 @@ encodeInto(input?: string): Uint8Array
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
-<!--Device-TextEncoder-encodeInto(input?: string): Uint8Array--><!--Device-TextEncoder-encodeInto(input?: string): Uint8Array-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| input | string | 否 | 要编码的字符串。默认值为空字符串。如果输入参数为空字符串，则返回值为 undefined。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| input | string | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Uint8Array | 获取到的 Uint8Array 对象。 |
+| 类型 |
+| --- |
+| Uint8Array |
 
 **示例**
 
@@ -357,26 +357,26 @@ encodeInto(input: string, dest: Uint8Array): { read: number; written: number }
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [encodeIntoUint8Array](#encodeintouint8array)
-
-<!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }--><!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| input | string | 是 | 要编码的字符串。 |
-| dest | Uint8Array | 是 | 用于存储 UTF-8 编码文本的 Uint8Array 对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| input | string | 是 |
+| dest | Uint8Array | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| object | 获取到的对象。**read** 表示已编码的字符数，**written** 表示已编码字符所占用的字节数。 |
+| 类型 |
+| --- |
+| object |
 
 **示例**
 
@@ -392,25 +392,25 @@ encodeIntoUint8Array(input: string, dest: Uint8Array): EncodeIntoUint8ArrayInfo
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
-<!--Device-TextEncoder-encodeIntoUint8Array(input: string, dest: Uint8Array): EncodeIntoUint8ArrayInfo--><!--Device-TextEncoder-encodeIntoUint8Array(input: string, dest: Uint8Array): EncodeIntoUint8ArrayInfo-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| input | string | 是 | 要编码的字符串。 |
-| dest | Uint8Array | 是 | 用于存储 UTF-8 编码文本的 Uint8Array 对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| input | string | 是 |
+| dest | Uint8Array | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| object | 返回该对象，其中 read 表示已编码的字符数，written 表示已编码字符所占用的字节数。<br>**适用版本：** 9 - 10 |
-| [EncodeIntoUint8ArrayInfo](arkts-arkts-util-encodeintouint8arrayinfo-i.md) | 获取到的对象。**read** 表示已编码的字符数，**written** 表示已编码字符所占用的 字节数。<br>**适用版本：** 11+ |
+| 类型 |
+| --- |
+| object |
+| [EncodeIntoUint8ArrayInfo](arkts-arkts-util-encodeintouint8arrayinfo-i.md) |
 
 **示例**
 
@@ -439,9 +439,8 @@ readonly encoding = 'utf-8'
 
 **起始版本：** 7
 
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-TextEncoder-readonly encoding = 'utf-8'--><!--Device-TextEncoder-readonly encoding = 'utf-8'-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

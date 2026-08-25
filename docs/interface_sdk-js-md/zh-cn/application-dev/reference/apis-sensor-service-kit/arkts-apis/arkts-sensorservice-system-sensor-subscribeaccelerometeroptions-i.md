@@ -4,13 +4,13 @@
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** [ACCELEROMETER](arkts-sensorservice-sensor-sensorid-e.md#accelerometer)
 
 **需要权限：** ohos.permission.ACCELEROMETER
-
-<!--Device-unnamed-export interface subscribeAccelerometerOptions--><!--Device-unnamed-export interface subscribeAccelerometerOptions-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -28,21 +28,54 @@ fail?: (data: string, code: number) => void
 
 接口调用失败的回调函数。回调参数为(data: string, code: number)，其中data为错误信息，code为错误码。不填写时，接口调用失败无回调通知。
 
-**类型：** (data: string, code: number) =&gt; void
-
 **起始版本：** 3
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 8
 
-**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+**替代接口：** [on](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-subscribeAccelerometerOptions-fail?: (data: string, code: number) => void--><!--Device-subscribeAccelerometerOptions-fail?: (data: string, code: number) => void-End-->
+**系统能力：** SystemCapability.Sensors.Sensor.Lite
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | string | 是 |
+| code | number | 是 |
+
+## success
+
+```TypeScript
+success: (data: AccelerometerResponse) => void
+```
+
+当加速度传感器数据发生变化时的回调函数，回调参数为AccelerometerResponse对象。
+
+**起始版本：** 3
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
+**废弃版本：** 8
+
+**替代接口：** [on](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange)
+
+**需要权限：** ohos.permission.ACCELEROMETER
+
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | [AccelerometerResponse](arkts-sensorservice-system-sensor-accelerometerresponse-i.md) | 是 |
 
 ## interval
 
@@ -56,6 +89,8 @@ interval: string
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** [interval](arkts-sensorservice-sensor-options-i.md#interval)
@@ -64,31 +99,4 @@ interval: string
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-subscribeAccelerometerOptions-interval: string--><!--Device-subscribeAccelerometerOptions-interval: string-End-->
-
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
-
-## success
-
-```TypeScript
-success: (data: AccelerometerResponse) => void
-```
-
-当加速度传感器数据发生变化时的回调函数，回调参数为AccelerometerResponse对象。
-
-**类型：** (data: AccelerometerResponse) =&gt; void
-
-**起始版本：** 3
-
-**废弃版本：** 8
-
-**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
-
-**需要权限：** ohos.permission.ACCELEROMETER
-
-**模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-subscribeAccelerometerOptions-success: (data: AccelerometerResponse) => void--><!--Device-subscribeAccelerometerOptions-success: (data: AccelerometerResponse) => void-End-->
-
-**系统能力：** SystemCapability.Sensors.Sensor.Lite
-

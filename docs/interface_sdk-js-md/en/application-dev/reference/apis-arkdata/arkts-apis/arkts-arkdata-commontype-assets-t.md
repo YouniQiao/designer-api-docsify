@@ -6,11 +6,10 @@ type Assets = Array<Asset>
 
 Represents an array of Assets.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-commonType-type Assets = Array<Asset>--><!--Device-commonType-type Assets = Array<Asset>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
 **Property type:** Array&lt;Asset&gt;
-

@@ -1,4 +1,4 @@
-# @ohos.application.StaticSubscriberExtensionContext
+# @ohos.application.StaticSubscriberExtensionContext(StaticSubscriberExtensionContext)
 
 ## 导入模块
 
@@ -11,8 +11,7 @@ import { StaticSubscriberExtensionContext } from '@kit.BasicServicesKit';
 <!--Del-->
 ### 类（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [StaticSubscriberExtensionContext](arkts-basicservices-application-staticsubscriberextensioncontext-staticsubscriberextensioncontext-c-sys.md) | StaticSubscriberExtensionContext模块是StaticSubscriberExtensionAbility的上下文环境，继承自ExtensionContext。StaticSubscriberExtensionContext模块提供StaticSubscriberExtensionAbility具有的接口和能力。 |
+| 名称 |
+| --- |
+| [StaticSubscriberExtensionContext(StaticSubscriberExtensionContext)](arkts-basicservices-application-staticsubscriberextensioncontext-staticsubscriberextensioncontext-c-sys.md) |
 <!--DelEnd-->
-

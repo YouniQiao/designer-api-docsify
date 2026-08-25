@@ -2,9 +2,9 @@
 
 Represents the result returned.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-certificateManager-export interface CMResult--><!--Device-certificateManager-export interface CMResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -24,9 +24,9 @@ List of authorized applications.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CMResult-appUidList?: Array<string>--><!--Device-CMResult-appUidList?: Array<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -40,9 +40,9 @@ Detailed certificate information.
 
 **Type:** [CertInfo](arkts-devicecertificate-certificatemanager-certinfo-i.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CMResult-certInfo?: CertInfo--><!--Device-CMResult-certInfo?: CertInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -56,9 +56,9 @@ Brief certificate information.
 
 **Type:** Array&lt;[CertAbstract](arkts-devicecertificate-certificatemanager-certabstract-i.md)&gt;
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CMResult-certList?: Array<CertAbstract>--><!--Device-CMResult-certList?: Array<CertAbstract>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -72,9 +72,9 @@ Detailed credential information.
 
 **Type:** Credential
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CMResult-credential?: Credential--><!--Device-CMResult-credential?: Credential-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -88,9 +88,9 @@ Represents detailed information about a credential.
 
 **Type:** Array&lt;Credential&gt;
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-CMResult-credentialDetailList?: Array<Credential>--><!--Device-CMResult-credentialDetailList?: Array<Credential>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -104,9 +104,9 @@ Brief credential information.
 
 **Type:** Array&lt;[CredentialAbstract](arkts-devicecertificate-certificatemanager-credentialabstract-i.md)&gt;
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CMResult-credentialList?: Array<CredentialAbstract>--><!--Device-CMResult-credentialList?: Array<CredentialAbstract>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -120,9 +120,9 @@ Signature generated.
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CMResult-outData?: Uint8Array--><!--Device-CMResult-outData?: Uint8Array-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -136,9 +136,9 @@ Unique identifier of a certificate or credential. The value contains up to 256 b
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CMResult-uri?: string--><!--Device-CMResult-uri?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -154,9 +154,8 @@ Certificate URI list. **Since**: 26.0.0
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CMResult-uriList?: Array<string>--><!--Device-CMResult-uriList?: Array<string>-End-->
-
 **System capability:** SystemCapability.Security.CertificateManager
-

@@ -10,17 +10,16 @@ import { Geolocation, GeolocationResponse, GetLocationOption, GetLocationTypeOpt
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Geolocation](arkts-location-system-geolocation-geolocation-c.md) |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Geolocation](arkts-location-system-geolocation-geolocation-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [GeolocationResponse](arkts-location-system-geolocation-geolocationresponse-i.md) |  |
-| [GetLocationOption](arkts-location-system-geolocation-getlocationoption-i.md) |  |
-| [GetLocationTypeOption](arkts-location-system-geolocation-getlocationtypeoption-i.md) |  |
-| [GetLocationTypeResponse](arkts-location-system-geolocation-getlocationtyperesponse-i.md) |  |
-| [SubscribeLocationOption](arkts-location-system-geolocation-subscribelocationoption-i.md) |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [GeolocationResponse](arkts-location-system-geolocation-geolocationresponse-i.md) |
+| [GetLocationOption](arkts-location-system-geolocation-getlocationoption-i.md) |
+| [GetLocationTypeOption](arkts-location-system-geolocation-getlocationtypeoption-i.md) |
+| [GetLocationTypeResponse](arkts-location-system-geolocation-getlocationtyperesponse-i.md) |
+| [SubscribeLocationOption](arkts-location-system-geolocation-subscribelocationoption-i.md) |

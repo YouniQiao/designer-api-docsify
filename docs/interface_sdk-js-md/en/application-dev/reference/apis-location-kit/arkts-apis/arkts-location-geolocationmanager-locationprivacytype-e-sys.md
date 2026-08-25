@@ -2,9 +2,9 @@
 
 Enum for location privacy type.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-geoLocationManager-export enum LocationPrivacyType--><!--Device-geoLocationManager-export enum LocationPrivacyType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -18,9 +18,9 @@ OTHERS = 0
 
 Other scenarios.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-LocationPrivacyType-OTHERS = 0--><!--Device-LocationPrivacyType-OTHERS = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -34,9 +34,9 @@ STARTUP = 1
 
 Privacy agreement for the startup wizard scenario.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-LocationPrivacyType-STARTUP = 1--><!--Device-LocationPrivacyType-STARTUP = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -50,11 +50,10 @@ CORE_LOCATION = 2
 
 Privacy agreement pop-up when network location is enabled.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-LocationPrivacyType-CORE_LOCATION = 2--><!--Device-LocationPrivacyType-CORE_LOCATION = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
-

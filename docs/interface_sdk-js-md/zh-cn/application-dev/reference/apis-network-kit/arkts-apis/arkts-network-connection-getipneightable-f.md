@@ -20,25 +20,25 @@ function getIpNeighTable(): Promise<Array<NetIpMacInfo>>
 
 **起始版本：** 22
 
-**需要权限：** ohos.permission.GET_NETWORK_INFO and ohos.permission.GET_IP_MAC_INFO
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
-<!--Device-connection-function getIpNeighTable(): Promise<Array<NetIpMacInfo>>--><!--Device-connection-function getIpNeighTable(): Promise<Array<NetIpMacInfo>>-End-->
+**需要权限：** ohos.permission.GET_NETWORK_INFO and ohos.permission.GET_IP_MAC_INFO
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[NetIpMacInfo](arkts-network-connection-netipmacinfo-i.md)&gt;&gt; | Promise对象，返回ip邻居表条目信息。 |
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;[NetIpMacInfo](arkts-network-connection-netipmacinfo-i.md)&gt;&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
 **示例**
 
@@ -56,4 +56,3 @@ connection.getIpNeighTable().then((data: connection.NetIpMacInfo[]) => {
   console.error(`Failed to get ip neigh table. Code:${error.code}, message:${error.message}`);
 });
 ```
-

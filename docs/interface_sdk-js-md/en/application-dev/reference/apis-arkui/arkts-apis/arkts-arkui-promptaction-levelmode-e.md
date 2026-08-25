@@ -4,7 +4,7 @@ Enumerates the display level modes of the dialog box.
 
 **Since:** 15
 
-<!--Device-unnamed-export enum LevelMode--><!--Device-unnamed-export enum LevelMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ The dialog box is displayed at the root node level of the application window and
 
 **Since:** 15
 
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-LevelMode-OVERLAY = 0--><!--Device-LevelMode-OVERLAY = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ The dialog box is a child of the page's route/navigation and is hidden when the 
 
 **Since:** 15
 
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
-<!--Device-LevelMode-EMBEDDED = 1--><!--Device-LevelMode-EMBEDDED = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

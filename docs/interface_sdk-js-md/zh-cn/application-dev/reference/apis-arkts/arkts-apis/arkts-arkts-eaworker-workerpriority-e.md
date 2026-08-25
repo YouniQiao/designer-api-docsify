@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export enum WorkerPriority--><!--Device-unnamed-export enum WorkerPriority-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -20,11 +18,9 @@ PRIORITY_IDLE = 0
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-WorkerPriority-PRIORITY_IDLE = 0--><!--Device-WorkerPriority-PRIORITY_IDLE = 0-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -38,11 +34,9 @@ PRIORITY_LOW = 1
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-WorkerPriority-PRIORITY_LOW = 1--><!--Device-WorkerPriority-PRIORITY_LOW = 1-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -56,11 +50,9 @@ PRIORITY_DEFAULT = 2
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-WorkerPriority-PRIORITY_DEFAULT = 2--><!--Device-WorkerPriority-PRIORITY_DEFAULT = 2-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -74,11 +66,9 @@ PRIORITY_HIGH = 3
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-WorkerPriority-PRIORITY_HIGH = 3--><!--Device-WorkerPriority-PRIORITY_HIGH = 3-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -92,11 +82,9 @@ PRIORITY_DEADLINE_REQUEST = 4
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-WorkerPriority-PRIORITY_DEADLINE_REQUEST = 4--><!--Device-WorkerPriority-PRIORITY_DEADLINE_REQUEST = 4-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -110,11 +98,8 @@ PRIORITY_USER_INTERACTION = 5
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-WorkerPriority-PRIORITY_USER_INTERACTION = 5--><!--Device-WorkerPriority-PRIORITY_USER_INTERACTION = 5-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

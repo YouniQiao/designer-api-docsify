@@ -17,15 +17,14 @@ function isDoubleClickAppForSelf(callback: ClickCallback): void
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-settingsLite-function isDoubleClickAppForSelf(callback: ClickCallback): void--><!--Device-settingsLite-function isDoubleClickAppForSelf(callback: ClickCallback): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Applications.Settings.Core.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | ClickCallback | Yes | Callback used to return the execution result. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [ClickCallback](arkts-basicservices-settingslite-clickcallback-i.md) | Yes |

@@ -2,9 +2,9 @@
 
 Indicates the info of the rtt event.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-call-export interface RttEventInfo--><!--Device-call-export interface RttEventInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -24,11 +24,11 @@ callId: int
 
 Indicates the id of rtt.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-RttEventInfo-callId: int--><!--Device-RttEventInfo-callId: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -42,11 +42,11 @@ eventType: int
 
 Indicates the type of rtt event.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-RttEventInfo-eventType: int--><!--Device-RttEventInfo-eventType: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -60,13 +60,12 @@ reason: int
 
 Indicates the reason of rtt event.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-RttEventInfo-reason: int--><!--Device-RttEventInfo-reason: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
-

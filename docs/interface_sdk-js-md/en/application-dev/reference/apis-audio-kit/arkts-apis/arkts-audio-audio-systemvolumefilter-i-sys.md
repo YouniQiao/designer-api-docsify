@@ -4,7 +4,7 @@ Describes the system volume filter.
 
 **Since:** 26.0.0
 
-<!--Device-audio-interface SystemVolumeFilter--><!--Device-audio-interface SystemVolumeFilter-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -24,15 +24,14 @@ uid: int
 
 Application UID.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-SystemVolumeFilter-uid: int--><!--Device-SystemVolumeFilter-uid: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
-

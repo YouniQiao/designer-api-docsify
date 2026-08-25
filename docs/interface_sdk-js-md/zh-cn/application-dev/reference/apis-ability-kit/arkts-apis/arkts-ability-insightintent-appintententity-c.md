@@ -6,7 +6,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-insightIntent-abstract class AppIntentEntity--><!--Device-insightIntent-abstract class AppIntentEntity-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -26,25 +26,25 @@ abstract onQueryEntity(params: QueryEntityParam): Promise<Array<T>>
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AppIntentEntity-abstract onQueryEntity(params: QueryEntityParam): Promise<Array<T>>--><!--Device-AppIntentEntity-abstract onQueryEntity(params: QueryEntityParam): Promise<Array<T>>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| params | [QueryEntityParam](arkts-ability-insightintent-queryentityparam-i.md) | 是 | 查询实体的参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| params | [QueryEntityParam](arkts-ability-insightintent-queryentityparam-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;T&gt;&gt; | Returns an array of subclasses of the AppIntentEntity class, support promise. |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;T & gt; & gt; |
 
 **示例**
 
@@ -271,11 +271,10 @@ displayName: string
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AppIntentEntity-displayName: string--><!--Device-AppIntentEntity-displayName: string-End-->
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-

@@ -4,9 +4,9 @@ Sets the type of sliding panel.
 
 **Since:** 7
 
-**Deprecated since:** 12
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-unnamed-declare enum PanelType--><!--Device-unnamed-declare enum PanelType-End-->
+**Deprecated since:** 12
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +20,11 @@ The switch between the minibar and full-screen display is provided.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PanelType-Minibar = 0--><!--Device-PanelType-Minibar = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +38,11 @@ Permanent content display class. The switchover effect is provided in three size
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PanelType-Foldable = 1--><!--Device-PanelType-Foldable = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,11 +56,11 @@ Temporary content display area. The switchover effect is provided in three sizes
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PanelType-Temporary = 2--><!--Device-PanelType-Temporary = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,11 +74,10 @@ Custom content display area. The switchover effect is provided in three sizes: l
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-PanelType-CUSTOM = 3--><!--Device-PanelType-CUSTOM = 3-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

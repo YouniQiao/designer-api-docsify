@@ -4,9 +4,7 @@ TextArea组件在文本超长时显示效果。默认值为CLIP，按最大行�
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export declare enum MaxLinesMode--><!--Device-unnamed-export declare enum MaxLinesMode-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +18,9 @@ CLIP = 0
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-MaxLinesMode-CLIP = 0--><!--Device-MaxLinesMode-CLIP = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +34,8 @@ SCROLL = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-MaxLinesMode-SCROLL = 1--><!--Device-MaxLinesMode-SCROLL = 1-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

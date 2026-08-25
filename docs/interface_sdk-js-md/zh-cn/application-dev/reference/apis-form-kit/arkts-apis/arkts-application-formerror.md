@@ -4,9 +4,9 @@
  无
 
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-unnamed-declare namespace formError--><!--Device-unnamed-declare namespace formError-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -20,15 +20,14 @@ import { formError } from '@kit.FormKit';
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-| [FormError(formError)](arkts-form-formerror-formerror-e.md) | 枚举，卡片错误码。 |
+| 名称 |
+| --- |
+| [FormError(formError)](arkts-form-formerror-formerror-e.md) |
 
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [FormError(formError)](arkts-form-formerror-formerror-e-sys.md) | 枚举，卡片错误码。 |
+| 名称 |
+| --- |
+| [FormError(formError)](arkts-form-formerror-formerror-e-sys.md) |
 <!--DelEnd-->
-

@@ -1,8 +1,6 @@
 # WeakMap
 
-**Since:** -1
-
-<!--Device-unnamed-interface WeakMap--><!--Device-unnamed-interface WeakMap-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,7 +15,4 @@ readonly [Symbol.toStringTag]: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-WeakMap-readonly [Symbol.toStringTag]: string--><!--Device-WeakMap-readonly [Symbol.toStringTag]: string-End-->
-
+**ArkTS mode:** 

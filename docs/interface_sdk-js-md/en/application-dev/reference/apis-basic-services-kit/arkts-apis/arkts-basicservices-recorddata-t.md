@@ -8,17 +8,14 @@ RecordData is a union type used for object structures with uncertain levels and 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export type RecordData = undefined | null | Object | Record<string, RecordData> | Array<RecordData>--><!--Device-unnamed-export type RecordData = undefined | null | Object | Record<string, RecordData> | Array<RecordData>-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Base
 
-| Type | Description |
-| --- | --- |
-| undefined | Undefined type. |
-| null | Null type. |
-| Object | Object type. |
-| Record&lt;string, RecordData&gt; | Record type with string keys and RecordData values. |
-| Array&lt;RecordData&gt; | Array type containing RecordData elements. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| undefined |
+| null |
+| Object |
+| Record & lt;string, RecordData & gt; |
+| Array & lt;RecordData & gt; |

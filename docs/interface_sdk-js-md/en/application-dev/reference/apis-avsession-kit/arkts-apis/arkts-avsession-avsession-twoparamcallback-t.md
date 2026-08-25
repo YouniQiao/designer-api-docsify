@@ -6,16 +6,15 @@ type TwoParamCallback<T, G> = (data1: T, data2: G) => void
 
 Defines the callback type including two parameters.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-avSession-type TwoParamCallback<T, G> = (data1: T, data2: G) => void--><!--Device-avSession-type TwoParamCallback<T, G> = (data1: T, data2: G) => void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data1 | T | Yes |  |
-| data2 | G | Yes |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data1 | T | Yes |
+| data2 | G | Yes |

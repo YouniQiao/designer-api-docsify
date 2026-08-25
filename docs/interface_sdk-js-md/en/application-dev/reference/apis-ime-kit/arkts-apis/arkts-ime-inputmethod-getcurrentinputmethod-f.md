@@ -14,21 +14,20 @@ function getCurrentInputMethod(): InputMethodProperty
 
 Obtains the current input method. This API returns the result synchronously.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-inputMethod-function getCurrentInputMethod(): InputMethodProperty--><!--Device-inputMethod-function getCurrentInputMethod(): InputMethodProperty-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | InputmethodProperty** instance of the current input method. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) |
 
 **Examples**
 
 ```TypeScript
 let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
 ```
-

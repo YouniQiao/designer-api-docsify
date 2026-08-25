@@ -16,21 +16,21 @@ Creates a SystemSoundPlayer instance. This function uses a promise to return the
 
 **Since:** 23
 
-<!--Device-systemSoundManager-function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>--><!--Device-systemSoundManager-function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;SystemSoundPlayer \| null&gt; | Promise used to return the result. If the operation is successful, a SystemSoundPlayer instance is returned. Otherwise, null is returned. The instance is used for loading and playback. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;SystemSoundPlayer \ | null & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| Error Code ID |
+| --- |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
 
 **Examples**
 
@@ -46,4 +46,3 @@ systemSoundManager.createSystemSoundPlayer().then((systemSoundPlayerInstance) =>
   console.error(`Failed to create the system sound player. Code: ${err.code}, message: ${err.message}`);
 });
 ```
-

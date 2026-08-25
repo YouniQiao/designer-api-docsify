@@ -2,9 +2,9 @@
 
 Enumerates the attributes of a highlights album.
 
-**Since:** 26.0.0
+**Since:** 21
 
-<!--Device-photoAccessHelper-enum HighlightAlbumChangeAttribute--><!--Device-photoAccessHelper-enum HighlightAlbumChangeAttribute-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ IS_VIEWED = 0
 
 Whether the highlights album has been viewed.
 
-**Since:** 26.0.0
+**Since:** 21
 
-<!--Device-HighlightAlbumChangeAttribute-IS_VIEWED = 0--><!--Device-HighlightAlbumChangeAttribute-IS_VIEWED = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,9 @@ NOTIFICATION_TIME = 1
 
 Time when the application sends a highlight notification.
 
-**Since:** 26.0.0
+**Since:** 21
 
-<!--Device-HighlightAlbumChangeAttribute-NOTIFICATION_TIME = 1--><!--Device-HighlightAlbumChangeAttribute-NOTIFICATION_TIME = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,11 +50,10 @@ IS_FAVORITE = 2
 
 Whether the highlights album is marked as a favorite.
 
-**Since:** 26.0.0
+**Since:** 21
 
-<!--Device-HighlightAlbumChangeAttribute-IS_FAVORITE = 2--><!--Device-HighlightAlbumChangeAttribute-IS_FAVORITE = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

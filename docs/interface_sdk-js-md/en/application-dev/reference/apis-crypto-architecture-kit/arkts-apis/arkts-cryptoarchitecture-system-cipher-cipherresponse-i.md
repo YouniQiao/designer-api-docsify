@@ -4,11 +4,11 @@ Defines the response to the cipher interface called.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
-
-<!--Device-unnamed-export interface CipherResponse--><!--Device-unnamed-export interface CipherResponse-End-->
 
 **System capability:** SystemCapability.Security.Cipher
 
@@ -30,11 +30,10 @@ Response content.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
 
-<!--Device-CipherResponse-text: string--><!--Device-CipherResponse-text: string-End-->
-
 **System capability:** SystemCapability.Security.Cipher
-

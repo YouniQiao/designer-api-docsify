@@ -4,16 +4,13 @@
 type ES2020NumberFormatPartType = "compact" | "exponentInteger" | "exponentMinusSign" | "exponentSeparator" | "unit" | "unknown"
 ```
 
-**Since:** -1
+**ArkTS mode:** 
 
-<!--Device-Intl-type ES2020NumberFormatPartType = "compact" | "exponentInteger" | "exponentMinusSign" | "exponentSeparator" | "unit" | "unknown"--><!--Device-Intl-type ES2020NumberFormatPartType = "compact" | "exponentInteger" | "exponentMinusSign" | "exponentSeparator" | "unit" | "unknown"-End-->
-
-| Type | Description |
-| --- | --- |
-| "compact" |  |
-| "exponentInteger" |  |
-| "exponentMinusSign" |  |
-| "exponentSeparator" |  |
-| "unit" |  |
-| "unknown" |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| "compact" |
+| "exponentInteger" |
+| "exponentMinusSign" |
+| "exponentSeparator" |
+| "unit" |
+| "unknown" |

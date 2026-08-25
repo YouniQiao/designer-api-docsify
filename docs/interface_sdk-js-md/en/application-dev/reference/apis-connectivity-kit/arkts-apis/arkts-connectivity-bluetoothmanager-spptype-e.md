@@ -4,11 +4,11 @@ The enum of SPP type.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** [SppType](arkts-connectivity-socket-spptype-e.md)
-
-<!--Device-bluetoothManager-enum SppType--><!--Device-bluetoothManager-enum SppType-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -22,11 +22,10 @@ RFCOMM
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** [SPP_RFCOMM](arkts-connectivity-socket-spptype-e.md#spp_rfcomm)
 
-<!--Device-SppType-SPP_RFCOMM = 0--><!--Device-SppType-SPP_RFCOMM = 0-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

@@ -1,8 +1,6 @@
 # RegExp
 
-**Since:** -1
-
-<!--Device-unnamed-interface RegExp--><!--Device-unnamed-interface RegExp-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -21,9 +19,7 @@ If no flags are set, the value is the empty string.
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-RegExp-readonly flags: string--><!--Device-RegExp-readonly flags: string-End-->
+**ArkTS mode:** 
 
 ## sticky
 
@@ -35,9 +31,7 @@ Returns a Boolean value indicating the state of the sticky flag (y) used with a 
 
 **Type:** boolean
 
-**Since:** -1
-
-<!--Device-RegExp-readonly sticky: boolean--><!--Device-RegExp-readonly sticky: boolean-End-->
+**ArkTS mode:** 
 
 ## unicode
 
@@ -49,7 +43,4 @@ Returns a Boolean value indicating the state of the Unicode flag (u) used with a
 
 **Type:** boolean
 
-**Since:** -1
-
-<!--Device-RegExp-readonly unicode: boolean--><!--Device-RegExp-readonly unicode: boolean-End-->
-
+**ArkTS mode:** 

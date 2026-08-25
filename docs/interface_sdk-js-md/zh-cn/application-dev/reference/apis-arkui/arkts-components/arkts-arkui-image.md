@@ -32,19 +32,19 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor): ImageAttribute--><!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor): ImageAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| src | PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 | 图片的数据源，支持本地图片和网络图片，引用方式请参考 [加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。 <br>1. PixelMap格式为像素图，常用于图片编辑的场景。 <br>2. ResourceStr包含Resource和string格式。 <br>string格式可用于加载网络图片和本地图片。当 使用相对路径显示图片时，不支持跨包/跨模块调用该 Image组件，建议使用Resource格式来管理需全局使用的图片资源。 <br>从DevEco Studio 6.0.0 Beta2版本开始，新建工程或模块时，默认创建的模块不会对非resource目录下的资源进行打包，需使能相关开关：模块的build-profile.json5中 buildOption > resOptions > copyCodeResource > enable 设置为true。 <br>- 支持`Base64`字符串。 <br>- 传入的字符串为https网络图片地址时，建议参考 示例2（下载与显示静态网络图片）。 <br>- 支持file://路径前缀的字符串，应用沙箱URI：file://<bundleName>/<sandboxPath>。应用沙箱路径URI构造可参考 [constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor)。沙箱路径需要使用 [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md)方法将路径转换为应用沙箱URI，然后传入显示。同时需要保证目录包 路径下的文件有可读权限。 <br>Resource格式可以跨包/跨模块访问资源文件，是访问本地图片的推荐方式，具体示例参考 [访问跨HAP/HSP包资源](../../../quick-start/resource-categories-and-access.md#访问跨haphsp包资源)。<br/>3. 当传入资源id或name为普通图片 时，生成DrawableDescriptor对象。传入 [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)类型可播放PixelMap数组动画。 <br>**说明：**<br/>- ArkTS卡片上支持gif图片格式动效，但仅在显示时播放一次。<br/>- ArkTS卡片上不支持http://等网络相关路径前缀和file://路径前缀的字符串。 |
+| 参数名 | [类型](#类型) | 必填 |
+| --- | --- | --- |
+| src | PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 |
 
 ## Image
 
@@ -56,21 +56,21 @@ src新增[ImageContent](arkts-arkui-imagecontent-e.md)类型，可指定对应�
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent): ImageAttribute--><!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent): ImageAttribute-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| src | PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) \| [ImageContent](arkts-arkui-imagecontent-e.md) | 是 | 图片的数据源，支持本地图片和网络图片，引用方式请参考 [加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。 <br>PixelMap、ResourceStr和DrawableDescriptor的使用请参考 Image的src参数说明。 <br> 传入[ImageContent](arkts-arkui-imagecontent-e.md)类型，指定图像内容。 <br>**说明：**<br/>- ArkTS卡片上支持gif图片格式动效，但仅在显示时播放一次。<br/>- ArkTS卡片上不支持http://等网络相关路径前缀和file://路径前缀的字符串。 |
+| 参数名 | [类型](#类型) | 必填 |
+| --- | --- | --- |
+| src | PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) \| [ImageContent](arkts-arkui-imagecontent-e.md) | 是 |
 
 ## Image
 
@@ -82,22 +82,22 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent, reloadKey
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent, reloadKey?: string): ImageAttribute--><!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent, reloadKey?: string): ImageAttribute-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| src | PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) \| [ImageContent](arkts-arkui-imagecontent-e.md) | 是 |  |
-| reloadKey | string | 否 |  |
+| 参数名 | [类型](#类型) | 必填 |
+| --- | --- | --- |
+| src | PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) \| [ImageContent](arkts-arkui-imagecontent-e.md) | 是 |
+| reloadKey | string | 否 |
 
 ## Image
 
@@ -109,20 +109,20 @@ Image新增ImageAIOptions参数，为组件设置AI分析选项。
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor, imageAIOptions: ImageAIOptions): ImageAttribute--><!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor, imageAIOptions: ImageAIOptions): ImageAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| src | PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 | 图片的数据源，支持本地图片和网络图片，引用方式请参考 [加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。 <br>PixelMap、ResourceStr和DrawableDescriptor的使用请参考 Image的src参数说明。 <br>**说明：**<br/>- ArkTS卡片上支持gif图片格式动效，但仅在显示时播放一次。<br/>- ArkTS卡片上不支持http://等网络相关路径前缀和file://路径前缀的字符串。 |
-| imageAIOptions | ImageAIOptions | 是 | 给组件设置一个AI分析选项，通过此项可配置分析类型或绑定一个分析控制器。 |
+| 参数名 | [类型](#类型) | 必填 |
+| --- | --- | --- |
+| src | PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 |
+| imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imagecommon-imageaioptions-i.md) | 是 |
 
 ## Image
 
@@ -135,36 +135,41 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor,
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor,      imageAIOptions?: ImageAIOptions, reloadKey?: string): ImageAttribute--><!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor,      imageAIOptions?: ImageAIOptions, reloadKey?: string): ImageAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| src | PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 |  |
-| imageAIOptions | ImageAIOptions | 否 |  |
-| reloadKey | string | 否 |  |
+| 参数名 | [类型](#类型) | 必填 |
+| --- | --- | --- |
+| src | PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 |
+| imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imagecommon-imageaioptions-i.md) | 否 |
+| reloadKey | string | 否 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
+| 名称 |
+| --- |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
+| 名称 |
+| --- |
+| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) |
+| [DrawingLattice](arkts-arkui-drawinglattice-t.md) |
+| [ImageErrorCallback](arkts-arkui-imageerrorcallback-t.md) |
+| [ImageMatrix](arkts-arkui-imagematrix-t.md) |
+| [RequestDownloadInfo](arkts-arkui-requestdownloadinfo-t.md) |
+| [ResolutionQuality](arkts-arkui-resolutionquality-t-sys.md) |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-
+| 名称 |
+| --- |

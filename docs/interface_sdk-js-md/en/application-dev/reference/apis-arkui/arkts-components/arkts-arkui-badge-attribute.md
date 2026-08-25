@@ -6,11 +6,11 @@ The [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-g
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-unnamed-declare class BadgeAttribute--><!--Device-unnamed-declare class BadgeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,4 +18,3 @@ The [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-g
 
 ```TypeScript
 ```
-

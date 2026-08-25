@@ -9,33 +9,37 @@ import { curves } from '@kit.ArkUI';
 ## cubicBezierCurve
 
 ```TypeScript
-export function cubicBezierCurve(x1: double, y1: double, x2: double, y2: double): ICurve
+function cubicBezierCurve(x1: number, y1: number, x2: number, y2: number): ICurve
 ```
 
 构造三阶贝塞尔曲线对象，确保曲线的值在0到1之间。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-curves-export function cubicBezierCurve(x1: double, y1: double, x2: double, y2: double): ICurve--><!--Device-curves-export function cubicBezierCurve(x1: double, y1: double, x2: double, y2: double): ICurve-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| x1 | double | 是 | 确定贝塞尔曲线第一点横坐标。<br/>取值范围：[0, 1]<br/>**说明：** <br/>设置的值小于0时，按0处理；设置的值大于1时，按1处理。 |
-| y1 | double | 是 | 确定贝塞尔曲线第一点纵坐标。<br/>取值范围：(-∞, +∞) |
-| x2 | double | 是 | 确定贝塞尔曲线第二点横坐标。<br/>取值范围：[0, 1]<br/>**说明：** <br/>设置的值小于0时，按0处理；设置的值大于1时，按1处理。 |
-| y2 | double | 是 | 确定贝塞尔曲线第二点纵坐标。<br/>取值范围：(-∞, +∞) |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| x1 | number | 是 |
+| y1 | number | 是 |
+| x2 | number | 是 |
+| y2 | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ICurve | 曲线的插值对象。 |
+| 类型 |
+| --- |
+| [ICurve](arkts-arkui-curves-icurve-i.md) |
 
+**示例**
+
+```TypeScript
+import { curves } from '@kit.ArkUI';
+curves.cubicBezierCurve(0.1, 0.0, 0.1, 1.0) // 创建一个三阶贝塞尔曲线
+```

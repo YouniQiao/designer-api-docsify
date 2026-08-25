@@ -7,9 +7,9 @@ Checks whether a bundle has been installed.
 
 **Since:** 3
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface CheckPackageHasInstalledResponse--><!--Device-unnamed-export interface CheckPackageHasInstalledResponse-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -31,9 +31,8 @@ Check result for whether the bundle has been installed. **true** if installed, *
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
-<!--Device-CheckPackageHasInstalledResponse-result: boolean--><!--Device-CheckPackageHasInstalledResponse-result: boolean-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework
-

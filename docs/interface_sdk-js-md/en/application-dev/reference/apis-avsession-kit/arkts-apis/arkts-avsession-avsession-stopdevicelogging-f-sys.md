@@ -14,9 +14,9 @@ function stopDeviceLogging(): Promise<void>
 
 Stop the current device written even the discovery is ongoing.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-avSession-function stopDeviceLogging(): Promise<void>--><!--Device-avSession-function stopDeviceLogging(): Promise<void>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -24,17 +24,17 @@ Stop the current device written even the discovery is ongoing.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise for the result |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
 
 **Examples**
 
@@ -47,4 +47,3 @@ avSession.stopDeviceLogging().then(() => {
   console.error(`stopCasting BusinessError: code: ${err.code}, message: ${err.message}`);
 });
 ```
-

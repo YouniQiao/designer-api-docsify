@@ -4,11 +4,11 @@ Defines a **CompassResponse** object.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)
-
-<!--Device-unnamed-export interface CompassResponse--><!--Device-unnamed-export interface CompassResponse-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -30,13 +30,12 @@ Direction of the device, in degrees.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [alpha](arkts-sensorservice-sensor-orientationresponse-i.md#alpha)
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-CompassResponse-direction: number--><!--Device-CompassResponse-direction: number-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
-

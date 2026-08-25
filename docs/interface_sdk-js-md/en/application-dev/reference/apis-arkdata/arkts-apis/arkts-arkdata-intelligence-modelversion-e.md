@@ -2,9 +2,9 @@
 
 Version of the model.@enum { int }
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-intelligence-enum ModelVersion--><!--Device-intelligence-enum ModelVersion-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
@@ -16,9 +16,8 @@ BASIC_MODEL = 0
 
 The basic embedding model.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-ModelVersion-BASIC_MODEL = 0--><!--Device-ModelVersion-BASIC_MODEL = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
-

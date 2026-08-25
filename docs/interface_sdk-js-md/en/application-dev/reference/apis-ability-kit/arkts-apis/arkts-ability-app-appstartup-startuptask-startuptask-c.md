@@ -4,9 +4,7 @@ The module provides capabilities related to startup tasks in [AppStartup](../../
 
 **Since:** 12
 
-**Decorator:** @Sendable
-
-<!--Device-unnamed-declare class StartupTask--><!--Device-unnamed-declare class StartupTask-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AppStartup
 
@@ -26,23 +24,23 @@ Called when all the dependent startup tasks are complete. You can initialize the
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-StartupTask-init(context: AbilityStageContext): Promise<Object | void>--><!--Device-StartupTask-init(context: AbilityStageContext): Promise<Object | void>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AppStartup
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) | Yes | Context environment of the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Object \| void&gt; | Promise used to return the execution result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Object \ | void & gt; |
 
 **Examples**
 
@@ -78,18 +76,18 @@ Called when the dependent startup task is complete.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-StartupTask-onDependencyCompleted?(dependency: string, result: Object): void--><!--Device-StartupTask-onDependencyCompleted?(dependency: string, result: Object): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AppStartup
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dependency | string | Yes | Name of the dependent startup task. |
-| result | Object | Yes | Execution result of [init](../../apis-default/arkts-apis/arkts-app-appstartup-startuptask-startuptask-c.md#init) of the dependent startup task. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| dependency | string | Yes |
+| result | Object | Yes |
 
 **Examples**
 
@@ -114,4 +112,3 @@ export default class StartupTask_001 extends StartupTask {
   }
 }
 ```
-

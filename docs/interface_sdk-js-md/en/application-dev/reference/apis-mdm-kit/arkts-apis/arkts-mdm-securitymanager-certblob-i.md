@@ -4,7 +4,7 @@ Represents the certificate information.
 
 **Since:** 12
 
-<!--Device-securityManager-export interface CertBlob--><!--Device-securityManager-export interface CertBlob-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -26,9 +26,9 @@ Certificate alias. The value length must be less than 40 characters.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-CertBlob-alias: string--><!--Device-CertBlob-alias: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -44,9 +44,8 @@ Binary content of the certificate.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CertBlob-inData: Uint8Array--><!--Device-CertBlob-inData: Uint8Array-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

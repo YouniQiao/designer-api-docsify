@@ -14,30 +14,30 @@ function startWork(work: WorkInfo): void
 
 Requests a deferred task. Upon successful request, the deferred task is added to the execution queue and will be executed by the system once the trigger conditions are met.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-workScheduler-function startWork(work: WorkInfo): void--><!--Device-workScheduler-function startWork(work: WorkInfo): void-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| work | [WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md) | Yes | The info of work. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| work | [WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
-| [9700001](../errorcode-workScheduler.md#9700001-memory-operation-failure) | Memory operation failed. |
-| [9700002](../errorcode-workScheduler.md#9700002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
-| [9700003](../errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
-| [9700004](../errorcode-workScheduler.md#9700004-workinfo-verification-failure) | Check on workInfo failed. |
-| [9700005](../errorcode-workScheduler.md#9700005-startwork-call-failure) | Calling startWork failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [9700001](../errorcode-workScheduler.md#9700001-memory-operation-failure) |
+| [9700002](../errorcode-workScheduler.md#9700002-parcel-operation-failure) |
+| [9700003](../errorcode-workScheduler.md#9700003-system-service-failure) |
+| [9700004](../errorcode-workScheduler.md#9700004-workinfo-verification-failure) |
+| [9700005](../errorcode-workScheduler.md#9700005-startwork-call-failure) |
 
 **Examples**
 
@@ -66,4 +66,3 @@ import { BusinessError } from '@kit.BasicServicesKit';
     console.error(`workschedulerLog startwork failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
   }
 ```
-

@@ -4,9 +4,7 @@ The module provides capabilities related to startup tasks in [AppStartup](../../
 
 **起始版本：** 12
 
-**装饰器类型：** @Sendable
-
-<!--Device-unnamed-declare class StartupTask--><!--Device-unnamed-declare class StartupTask-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AppStartup
 
@@ -26,23 +24,23 @@ init(context: AbilityStageContext): Promise<Object | void>
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-StartupTask-init(context: AbilityStageContext): Promise<Object | void>--><!--Device-StartupTask-init(context: AbilityStageContext): Promise<Object | void>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AppStartup
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) | 是 | [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)的上下文环境 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Object \| void&gt; | Promise used to return the execution result. |
+| 类型 |
+| --- |
+| Promise & lt;Object \ | void & gt; |
 
 **示例**
 
@@ -102,18 +100,18 @@ onDependencyCompleted?(dependency: string, result: Object): void
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-StartupTask-onDependencyCompleted?(dependency: string, result: Object): void--><!--Device-StartupTask-onDependencyCompleted?(dependency: string, result: Object): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AppStartup
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dependency | string | 是 | 依赖的启动任务名称。 |
-| result | Object | 是 | 依赖的启动任务[init](../../apis-default/arkts-apis/arkts-app-appstartup-startuptask-startuptask-c.md#init)返回的执行结果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dependency | string | 是 |
+| result | Object | 是 |
 
 **示例**
 
@@ -162,4 +160,3 @@ export default class StartupTask_001 extends StartupTask {
   }
 }
 ```
-

@@ -16,23 +16,22 @@ Checks whether an ArkTS value is sendable.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-utils-function isSendable(value: Object | null | undefined): boolean--><!--Device-utils-function isSendable(value: Object | null | undefined): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Object \| null \| undefined | Yes | The value to check. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | Object \| null \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | True if the value is sendable, false otherwise. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

@@ -4,11 +4,11 @@ ListItem吸顶效果枚举。
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [list/StickyStyle](arkts-arkui-stickystyle-e.md)
-
-<!--Device-unnamed-declare enum Sticky--><!--Device-unnamed-declare enum Sticky-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,9 +22,9 @@ None
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-Sticky-None--><!--Device-Sticky-None-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,9 +38,9 @@ Normal mode
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-Sticky-Normal--><!--Device-Sticky-Normal-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,9 +54,8 @@ Set opacity.
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-<!--Device-Sticky-Opacity--><!--Device-Sticky-Opacity-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

@@ -1,12 +1,10 @@
 # MediaQueryResult
 
-Defines the Result of mediaquery.@interface MediaQueryResult
+Provides the media query result.
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-mediaquery-export interface MediaQueryResult--><!--Device-mediaquery-export interface MediaQueryResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,17 +20,17 @@ import { mediaquery } from '@kit.ArkUI';
 readonly matches: boolean
 ```
 
-Whether the match condition is met. This parameter is read-only.
+Whether the media query condition is met. The value **true** means that the query conditions are met, and **false** means the opposite. This parameter is read-only.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-MediaQueryResult-readonly matches: boolean--><!--Device-MediaQueryResult-readonly matches: boolean-End-->
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,13 +44,12 @@ Matching condition of a media event. This parameter is read-only.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-MediaQueryResult-readonly media: string--><!--Device-MediaQueryResult-readonly media: string-End-->
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

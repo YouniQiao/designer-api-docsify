@@ -16,11 +16,11 @@ Obtains the numeric mask combination for the USB function list in Device mode. W
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 12
 
 **Substitutes:** [getDeviceFunctions](arkts-basicservices-usbmanager-getdevicefunctions-f-sys.md)()
-
-<!--Device-usbManager-function getCurrentFunctions(): FunctionType--><!--Device-usbManager-function getCurrentFunctions(): FunctionType-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -28,13 +28,12 @@ Obtains the numeric mask combination for the USB function list in Device mode. W
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FunctionType | Numeric mask combination for the USB function list. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) |
 
 **Examples**
 
 ```TypeScript
 let ret: number = usbManager.getCurrentFunctions();
 ```
-

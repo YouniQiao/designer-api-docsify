@@ -2,7 +2,7 @@
 
 **Since:** 12
 
-<!--Device-unnamed-export default class Configuration--><!--Device-unnamed-export default class Configuration-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -22,17 +22,17 @@ Obtains the current locale of the application, which is the same as the system l
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Configuration-static getLocale(): LocaleResponse--><!--Device-Configuration-static getLocale(): LocaleResponse-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [LocaleResponse](arkts-arkui-system-configuration-localeresponse-i.md) |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [LocaleResponse](arkts-arkui-system-configuration-localeresponse-i.md) |
 
 **Examples**
 
@@ -197,4 +197,3 @@ export default {
     }
 }
 ```
-

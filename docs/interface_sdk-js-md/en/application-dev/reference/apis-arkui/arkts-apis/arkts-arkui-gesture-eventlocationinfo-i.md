@@ -4,45 +4,31 @@ The location info used in gesture event.@interface EventLocationInfo
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare interface EventLocationInfo--><!--Device-unnamed-export declare interface EventLocationInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## getCurrentLocalPosition
 
 ```TypeScript
-getCurrentLocalPosition(): Coordinate2D
-```
-
-**Since:** -1
-
-**ArkTS mode:** ArkTS-Sta since version -1.
-
-<!--Device-EventLocationInfo-getCurrentLocalPosition(): Coordinate2D--><!--Device-EventLocationInfo-getCurrentLocalPosition(): Coordinate2D-End-->
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-## default
-
-```TypeScript
-default
+default getCurrentLocalPosition(): Coordinate2D
 ```
 
 Gets the coordinates of the top-left corner of the current component based on its real-time position.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EventLocationInfo-default--><!--Device-EventLocationInfo-default-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Coordinate2D](arkts-arkui-coordinate2d-i.md) |
 
 ## displayX
 
@@ -56,11 +42,9 @@ X-axis coordinates relative to the upper left corner of the screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EventLocationInfo-displayX: double--><!--Device-EventLocationInfo-displayX: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,11 +60,9 @@ Y-axis coordinates relative to the upper left corner of the screen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EventLocationInfo-displayY: double--><!--Device-EventLocationInfo-displayY: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,11 +78,9 @@ X position of the point relative to the global display coordinate.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EventLocationInfo-globalDisplayX?: double--><!--Device-EventLocationInfo-globalDisplayX?: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,11 +96,9 @@ Y position of the point relative to the global display coordinate.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EventLocationInfo-globalDisplayY?: double--><!--Device-EventLocationInfo-globalDisplayY?: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -136,11 +114,9 @@ X-axis coordinates relative to the upper left corner of the window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EventLocationInfo-windowX: double--><!--Device-EventLocationInfo-windowX: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -156,11 +132,9 @@ Y-axis coordinates relative to the upper left corner of the window.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EventLocationInfo-windowY: double--><!--Device-EventLocationInfo-windowY: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -176,11 +150,9 @@ X-axis coordinates relative to the upper left corner of the component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EventLocationInfo-x: double--><!--Device-EventLocationInfo-x: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -196,11 +168,8 @@ Y-axis coordinates relative to the upper left corner of the component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EventLocationInfo-y: double--><!--Device-EventLocationInfo-y: double-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

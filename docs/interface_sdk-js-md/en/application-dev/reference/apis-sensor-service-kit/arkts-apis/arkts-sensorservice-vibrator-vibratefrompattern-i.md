@@ -2,9 +2,9 @@
 
 Defines the custom vibration effect.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-vibrator-interface VibrateFromPattern--><!--Device-vibrator-interface VibrateFromPattern-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -24,9 +24,9 @@ Vibration event array, which is the **VibratorPattern** object returned by **bui
 
 **Type:** [VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-VibrateFromPattern-pattern: VibratorPattern--><!--Device-VibrateFromPattern-pattern: VibratorPattern-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -40,9 +40,8 @@ If the value is **pattern**, the vibrator vibrates based on the specified patter
 
 **Type:** 'pattern'
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-VibrateFromPattern-type: 'pattern'--><!--Device-VibrateFromPattern-type: 'pattern'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
-

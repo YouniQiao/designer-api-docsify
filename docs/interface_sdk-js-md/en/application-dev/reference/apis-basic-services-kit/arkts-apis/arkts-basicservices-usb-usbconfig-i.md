@@ -4,11 +4,11 @@ Represents the USB configuration. One [USBDevice](arkts-basicservices-usb-usbdev
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md)
-
-<!--Device-usb-interface USBConfig--><!--Device-usb-interface USBConfig-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -30,11 +30,11 @@ Configuration attributes.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [attributes](arkts-basicservices-usbmanager-usbconfiguration-i.md#attributes)
-
-<!--Device-USBConfig-attributes: number--><!--Device-USBConfig-attributes: number-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -50,11 +50,11 @@ Unique ID of the USB configuration.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [id](arkts-basicservices-usbmanager-usbconfiguration-i.md#id)
-
-<!--Device-USBConfig-id: number--><!--Device-USBConfig-id: number-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -70,11 +70,11 @@ Supported interface attributes.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [interfaces](arkts-basicservices-usbmanager-usbconfiguration-i.md#interfaces)
-
-<!--Device-USBConfig-interfaces: Array<USBInterface>--><!--Device-USBConfig-interfaces: Array<USBInterface>-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -90,11 +90,11 @@ Support for remote wakeup.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [isRemoteWakeup](arkts-basicservices-usbmanager-usbconfiguration-i.md#isremotewakeup)
-
-<!--Device-USBConfig-isRemoteWakeup: boolean--><!--Device-USBConfig-isRemoteWakeup: boolean-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -110,11 +110,11 @@ Support for independent power supplies.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [isSelfPowered](arkts-basicservices-usbmanager-usbconfiguration-i.md#isselfpowered)
-
-<!--Device-USBConfig-isSelfPowered: boolean--><!--Device-USBConfig-isSelfPowered: boolean-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -130,11 +130,11 @@ Maximum power consumption, in mA.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [maxPower](arkts-basicservices-usbmanager-usbconfiguration-i.md#maxpower)
-
-<!--Device-USBConfig-maxPower: number--><!--Device-USBConfig-maxPower: number-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -150,11 +150,10 @@ Configuration name, which can be left empty.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [name](arkts-basicservices-usbmanager-usbconfiguration-i.md#name)
 
-<!--Device-USBConfig-name: string--><!--Device-USBConfig-name: string-End-->
-
 **System capability:** SystemCapability.USB.USBManager
-

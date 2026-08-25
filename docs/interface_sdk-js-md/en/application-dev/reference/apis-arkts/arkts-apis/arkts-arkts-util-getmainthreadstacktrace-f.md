@@ -16,17 +16,17 @@ Obtains the stack trace information of the main thread. A maximum of 64 call fra
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
-<!--Device-util-function getMainThreadStackTrace(): string--><!--Device-util-function getMainThreadStackTrace(): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Stack trace information of the main thread. If the main thread is not executing JavaScript code, an empty string is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -35,4 +35,3 @@ let stack = util.getMainThreadStackTrace();
 console.info(stack);
 // Obtain the stack trace information of the main thread.
 ```
-

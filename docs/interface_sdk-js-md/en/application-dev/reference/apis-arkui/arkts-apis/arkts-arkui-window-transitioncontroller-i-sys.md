@@ -2,9 +2,9 @@
 
 Implements the transition animation controller. Before calling any API, you must create a system window. For details, see the sample code.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-window-interface TransitionController--><!--Device-window-interface TransitionController-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -26,7 +26,7 @@ Customizes the animation for the scenario when the window is hidden.
 
 **Since:** 9
 
-<!--Device-TransitionController-animationForHidden(context: TransitionContext): void--><!--Device-TransitionController-animationForHidden(context: TransitionContext): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -34,16 +34,16 @@ Customizes the animation for the scenario when the window is hidden.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [TransitionContext](arkts-arkui-window-transitioncontext-i-sys.md) | Yes | Context of the transition animation. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [TransitionContext](arkts-arkui-window-transitioncontext-i-sys.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -103,6 +103,26 @@ try {
 }
 ```
 
+## animationForHidden
+
+```TypeScript
+animationForHidden?: TransitionControllerCallback
+```
+
+Animation configuration when hiding window
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**System API:** This is a system API.
+
+**Examples**
+
+See [animationForHidden](#animationforhidden)
+
 ## animationForShown
 
 ```TypeScript
@@ -113,7 +133,7 @@ Customizes the animation for the scenario when the window is shown.
 
 **Since:** 9
 
-<!--Device-TransitionController-animationForShown(context: TransitionContext): void--><!--Device-TransitionController-animationForShown(context: TransitionContext): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -121,16 +141,16 @@ Customizes the animation for the scenario when the window is shown.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [TransitionContext](arkts-arkui-window-transitioncontext-i-sys.md) | Yes | Context of the transition animation. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [TransitionContext](arkts-arkui-window-transitioncontext-i-sys.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -190,26 +210,6 @@ try {
 }
 ```
 
-## animationForHidden
-
-```TypeScript
-animationForHidden?: TransitionControllerCallback
-```
-
-Animation configuration when hiding window
-
-**Type:** [TransitionControllerCallback](arkts-arkui-transitioncontrollercallback-t-sys.md)
-
-**Default:** undefined
-
-**Since:** 23
-
-<!--Device-TransitionController-animationForHidden?: TransitionControllerCallback--><!--Device-TransitionController-animationForHidden?: TransitionControllerCallback-End-->
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**System API:** This is a system API.
-
 ## animationForShown
 
 ```TypeScript
@@ -218,17 +218,17 @@ animationForShown?: TransitionControllerCallback
 
 Animation configuration when showing window
 
-**Type:** [TransitionControllerCallback](arkts-arkui-transitioncontrollercallback-t-sys.md)
-
-**Default:** undefined
-
 **Since:** 23
 
-<!--Device-TransitionController-animationForShown?: TransitionControllerCallback--><!--Device-TransitionController-animationForShown?: TransitionControllerCallback-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
+
+**Examples**
+
+See [animationForShown](#animationforshown)
 
 **Examples**
 
@@ -249,4 +249,3 @@ promise.then((data) => {
   console.error(`Failed to create the Window. Cause code: ${err.code}, message: ${err.message}`);
 });
 ```
-

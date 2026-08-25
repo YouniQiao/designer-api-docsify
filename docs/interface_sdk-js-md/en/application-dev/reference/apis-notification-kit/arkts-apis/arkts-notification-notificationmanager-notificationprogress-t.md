@@ -6,11 +6,10 @@ export type NotificationProgress = _NotificationProgress
 
 Describes the notification progress.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-notificationManager-export type NotificationProgress = _NotificationProgress--><!--Device-notificationManager-export type NotificationProgress = _NotificationProgress-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **Property type:** _NotificationProgress
-

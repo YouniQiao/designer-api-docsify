@@ -9,22 +9,21 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Promise](arkts-arkts-promise-c.md) | Represents the eventual completion or failure of an asynchronous operation. |
-| [PromiseFulfilledResult](arkts-arkts-promise-promisefulfilledresult-c.md) | Represents the result of a fulfilled promise. |
-| [PromiseRejectedResult](arkts-arkts-promise-promiserejectedresult-c.md) | Represents the result of a rejected promise. |
-| [PromiseStatus](arkts-arkts-promise-promisestatus-c.md) | Represents the status of a promise. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Promise](arkts-arkts-promise-c.md) |
+| [PromiseFulfilledResult](arkts-arkts-promise-promisefulfilledresult-c.md) |
+| [PromiseRejectedResult](arkts-arkts-promise-promiserejectedresult-c.md) |
+| [PromiseStatus](arkts-arkts-promise-promisestatus-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [PromiseLike](arkts-arkts-promise-promiselike-i.md) | Represents a thenable object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PromiseLike](arkts-arkts-promise-promiselike-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [PromiseSettledResult](arkts-arkts-promisesettledresult-t.md) | Represents the settled result of a promise. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PromiseSettledResult](arkts-arkts-promisesettledresult-t.md) |

@@ -2,9 +2,9 @@
 
 ImagePacker类，用于图片压缩和编码。在调用ImagePacker的方法前，需要先通过[image.createImagePacker](arkts-image-image-createimagepacker-f.md)构建一个ImagePacker实例。编码期间，请避免修改或释放作为输入的ImageSource/PixelMap/Picture对象，以免出现crash或其他未定义行为。由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用[release](#release)方法及时 释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。当前支持的格式有：JPEG、WebP、PNG、HEIC&lt;sup&gt;12+&lt;/sup&gt;、GIF&lt;sup&gt;18+&lt;/sup&gt;、从API版本26.0.0开始支持TIFF格式（不同硬件设备支持情况不同，可通过ImagePacker的 supportedFormats属性查看）。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-image-interface ImagePacker--><!--Device-image-interface ImagePacker-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -24,31 +24,31 @@ packBinaryImageToTiffData(bufferInfo: BinaryBufferInfo, options?: PackingOptions
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-ImagePacker-packBinaryImageToTiffData(bufferInfo: BinaryBufferInfo, options?: PackingOptionsForTiff): Promise<ArrayBuffer>--><!--Device-ImagePacker-packBinaryImageToTiffData(bufferInfo: BinaryBufferInfo, options?: PackingOptionsForTiff): Promise<ArrayBuffer>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bufferInfo | [BinaryBufferInfo](arkts-image-image-binarybufferinfo-i.md) | 是 | 图像缓冲区信息。 |
-| options | [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md) | 否 | TIFF图像编码选项。 <br>未传入options时，默认的compression为4（CCITT G4）。 <br>未传入options时，默认的orientation为1（TOP_LEFT），表示图像未旋转。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bufferInfo | [BinaryBufferInfo](arkts-image-image-binarybufferinfo-i.md) | 是 |
+| options | [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise对象，返回编码后的数据。 |
+| 类型 |
+| --- |
+| Promise & lt;ArrayBuffer & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7800202](../errorcode-image.md#7800202-imagepacker无效参数) | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
-| [7800301](../errorcode-image.md#7800301-编码失败) | Encode failed. |
+| 错误码ID |
+| --- |
+| [7800202](../errorcode-image.md#7800202-imagepacker无效参数) |
+| [7800301](../errorcode-image.md#7800301-编码失败) |
 
 **示例**
 
@@ -89,6 +89,12 @@ async function PackBinaryImageToTiffData() {
 
 ## packBinaryImageToTiffFile
 
+ArkTS-Dyn:
+```TypeScript
+packBinaryImageToTiffFile(bufferInfo: BinaryBufferInfo, fd: number, options?: PackingOptionsForTiff): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 packBinaryImageToTiffFile(bufferInfo: BinaryBufferInfo, fd: int, options?: PackingOptionsForTiff): Promise<void>
 ```
@@ -97,32 +103,32 @@ packBinaryImageToTiffFile(bufferInfo: BinaryBufferInfo, fd: int, options?: Packi
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-ImagePacker-packBinaryImageToTiffFile(bufferInfo: BinaryBufferInfo, fd: int, options?: PackingOptionsForTiff): Promise<void>--><!--Device-ImagePacker-packBinaryImageToTiffFile(bufferInfo: BinaryBufferInfo, fd: int, options?: PackingOptionsForTiff): Promise<void>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bufferInfo | [BinaryBufferInfo](arkts-image-image-binarybufferinfo-i.md) | 是 | 图像缓冲区信息。 |
-| fd | int | 是 | 文件描述符ID。该值必须为正整数。 |
-| options | [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md) | 否 | TIFF图像编码选项。 <br>未传入options时，默认的compression为4（CCITT G4）。 <br>未传入options时，默认的orientation为1（TOP_LEFT），表示图像未旋转。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bufferInfo | [BinaryBufferInfo](arkts-image-image-binarybufferinfo-i.md) | 是 |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| options | [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7800202](../errorcode-image.md#7800202-imagepacker无效参数) | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
-| [7800301](../errorcode-image.md#7800301-编码失败) | Encode failed. |
+| 错误码ID |
+| --- |
+| [7800202](../errorcode-image.md#7800202-imagepacker无效参数) |
+| [7800301](../errorcode-image.md#7800301-编码失败) |
 
 **示例**
 
@@ -179,23 +185,23 @@ packing(source: ImageSource, option: PackingOption, callback: AsyncCallback<Arra
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 13
 
 **替代接口：** [packToData](#packtodata)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ImagePacker-packing(source: ImageSource, option: PackingOption, callback: AsyncCallback<ArrayBuffer>): void--><!--Device-ImagePacker-packing(source: ImageSource, option: PackingOption, callback: AsyncCallback<ArrayBuffer>): void-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| source | ImageSource | 是 | 编码的ImageSource。 |
-| option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | 是 | 回调函数，当图片编码成功，err为undefined，data为获取到的压缩或编码数据；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 是 |
+| option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | 是 |
 
 **示例**
 
@@ -346,28 +352,28 @@ packing(source: ImageSource, option: PackingOption): Promise<ArrayBuffer>
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 13
 
 **替代接口：** [packToData](#packtodata)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ImagePacker-packing(source: ImageSource, option: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packing(source: ImageSource, option: PackingOption): Promise<ArrayBuffer>-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| source | ImageSource | 是 | 编码的ImageSource。 |
-| option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 是 |
+| option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise对象，返回压缩或编码后的数据。 |
+| 类型 |
+| --- |
+| Promise & lt;ArrayBuffer & gt; |
 
 **示例**
 
@@ -389,23 +395,23 @@ packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBu
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 13
 
 **替代接口：** [packToData](#packtodata)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ImagePacker-packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBuffer>): void--><!--Device-ImagePacker-packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBuffer>): void-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| source | PixelMap | 是 | 编码的PixelMap资源。 |
-| option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | 是 | 回调函数，当图片编码成功，err为undefined，data为获取到的压缩或编码数据；否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| source | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
+| option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | 是 |
 
 **示例**
 
@@ -427,28 +433,28 @@ packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 13
 
 **替代接口：** [packToData](#packtodata)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ImagePacker-packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>-End-->
-
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| source | PixelMap | 是 | 编码的PixelMap源。 |
-| option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| source | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
+| option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise对象，返回压缩或编码后的数据。 |
+| 类型 |
+| --- |
+| Promise & lt;ArrayBuffer & gt; |
 
 **示例**
 
@@ -462,31 +468,31 @@ packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>
 
 将图像压缩或重新编码。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-ImagePacker-packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| picture | [Picture](arkts-image-image-picture-i.md) | 是 | 编码的Picture对象。 |
-| options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| picture | [Picture](arkts-image-image-picture-i.md) | 是 |
+| options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise对象，返回压缩或编码后的数据。 |
+| 类型 |
+| --- |
+| Promise & lt;ArrayBuffer & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7800301](../errorcode-image.md#7800301-编码失败) | Encode failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [7800301](../errorcode-image.md#7800301-编码失败) |
 
 **示例**
 
@@ -500,40 +506,40 @@ packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>
 
 图片压缩或重新编码。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 13
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
-<!--Device-ImagePacker-packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>-End-->
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| source | ImageSource | 是 | 编码的ImageSource。 |
-| options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 是 |
+| options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise对象，返回压缩或编码后的数据。 |
+| 类型 |
+| --- |
+| Promise & lt;ArrayBuffer & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | If the parameter is invalid. |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980119](../errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
-| [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [62980096](../errorcode-image.md#62980096-操作失败) |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) |
+| [62980119](../errorcode-image.md#62980119-图片编码失败) |
+| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) |
+| [62980172](../errorcode-image.md#62980172-编码icc失败) |
+| [62980252](../errorcode-image.md#62980252-创建surface失败) |
 
 **示例**
 
@@ -633,40 +639,40 @@ packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>
 > **注意：**&gt;
 > 接口如果返回401错误码，表明参数异常，可能是PixelMap对象被提前释放了。需要调用方排查，在该方法调用结束后再释放PixelMap对象。
 
-**起始版本：** 23
+**起始版本：** 13
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
-<!--Device-ImagePacker-packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>-End-->
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| source | PixelMap | 是 | 编码的PixelMap源。 |
-| options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| source | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
+| options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise对象，返回压缩或编码后的数据。 |
+| 类型 |
+| --- |
+| Promise & lt;ArrayBuffer & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | If the parameter is invalid. |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980119](../errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
-| [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [62980096](../errorcode-image.md#62980096-操作失败) |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) |
+| [62980119](../errorcode-image.md#62980119-图片编码失败) |
+| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) |
+| [62980172](../errorcode-image.md#62980172-编码icc失败) |
+| [62980252](../errorcode-image.md#62980252-创建surface失败) |
 
 **示例**
 
@@ -680,31 +686,31 @@ packToDataFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, options: Packi
 
 将多个PixelMap编码成GIF数据。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-ImagePacker-packToDataFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, options: PackingOptionsForSequence): Promise<ArrayBuffer>--><!--Device-ImagePacker-packToDataFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, options: PackingOptionsForSequence): Promise<ArrayBuffer>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pixelmapSequence | Array&lt;PixelMap&gt; | 是 | 待编码的PixelMap序列。 |
-| options | [PackingOptionsForSequence](arkts-image-image-packingoptionsforsequence-i.md) | 是 | 动图编码参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pixelmapSequence | Array & lt;PixelMap & gt; | 是 |
+| options | [PackingOptionsForSequence](arkts-image-image-packingoptionsforsequence-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise对象，返回编码后的数据。 |
+| 类型 |
+| --- |
+| Promise & lt;ArrayBuffer & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7800301](../errorcode-image.md#7800301-编码失败) | Failed to encode image. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [7800301](../errorcode-image.md#7800301-编码失败) |
 
 **示例**
 
@@ -766,40 +772,46 @@ let pixelMapList = await imageSource.createPixelMapList(); // 从GIF文件解码
 
 ## packToFile
 
+ArkTS-Dyn:
+```TypeScript
+packToFile(source: ImageSource, fd: number, options: PackingOption, callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 packToFile(source: ImageSource, fd: int, options: PackingOption, callback: AsyncCallback<void>): void
 ```
 
 指定编码参数，将ImageSource直接编码进文件。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ImagePacker-packToFile(source: ImageSource, fd: int, options: PackingOption, callback: AsyncCallback<void>): void--><!--Device-ImagePacker-packToFile(source: ImageSource, fd: int, options: PackingOption, callback: AsyncCallback<void>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| source | ImageSource | 是 | 编码的ImageSource。 |
-| fd | int | 是 | 文件描述符。取值范围为[0，65535]。 |
-| options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当编码进文件成功，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 是 |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid input parameter. |
-| [62980119](../errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
-| [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
+| 错误码ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-操作失败) |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980119](../errorcode-image.md#62980119-图片编码失败) |
+| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) |
+| [62980172](../errorcode-image.md#62980172-编码icc失败) |
+| [62980252](../errorcode-image.md#62980252-创建surface失败) |
 
 **示例**
 
@@ -1077,45 +1089,51 @@ async function PackToFileFunc(context: common.UIAbilityContext): Promise<void> {
 
 ## packToFile
 
+ArkTS-Dyn:
+```TypeScript
+packToFile(source: ImageSource, fd: number, options: PackingOption): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 packToFile(source: ImageSource, fd: int, options: PackingOption): Promise<void>
 ```
 
 指定编码参数，将ImageSource直接编码进文件。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ImagePacker-packToFile(source: ImageSource, fd: int, options: PackingOption): Promise<void>--><!--Device-ImagePacker-packToFile(source: ImageSource, fd: int, options: PackingOption): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| source | ImageSource | 是 | 编码的ImageSource。 |
-| fd | int | 是 | 文件描述符。取值范围为[0，65535]。 |
-| options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 是 |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid input parameter. |
-| [62980119](../errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
-| [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
+| 错误码ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-操作失败) |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980119](../errorcode-image.md#62980119-图片编码失败) |
+| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) |
+| [62980172](../errorcode-image.md#62980172-编码icc失败) |
+| [62980252](../errorcode-image.md#62980252-创建surface失败) |
 
 **示例**
 
@@ -1123,6 +1141,12 @@ packToFile(source: ImageSource, fd: int, options: PackingOption): Promise<void>
 
 ## packToFile
 
+ArkTS-Dyn:
+```TypeScript
+packToFile(source: PixelMap, fd: number, options: PackingOption, callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCallback<void>): void
 ```
@@ -1132,34 +1156,34 @@ packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCal
 > **注意：**&gt;
 > 接口如果返回62980115错误码，表明参数异常，可能是PixelMap对象被提前释放了。需要调用方排查，在该方法调用结束后再释放PixelMap对象。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ImagePacker-packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCallback<void>): void--><!--Device-ImagePacker-packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCallback<void>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| source | PixelMap | 是 | 编码的PixelMap资源。 |
-| fd | int | 是 | 文件描述符。取值范围为[0，65535]。 |
-| options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当编码图片进文件成功，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| source | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid input parameter. |
-| [62980119](../errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
-| [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
+| 错误码ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-操作失败) |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980119](../errorcode-image.md#62980119-图片编码失败) |
+| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) |
+| [62980172](../errorcode-image.md#62980172-编码icc失败) |
+| [62980252](../errorcode-image.md#62980252-创建surface失败) |
 
 **示例**
 
@@ -1167,6 +1191,12 @@ packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCal
 
 ## packToFile
 
+ArkTS-Dyn:
+```TypeScript
+packToFile(source: PixelMap, fd: number, options: PackingOption): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>
 ```
@@ -1176,39 +1206,39 @@ packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>
 > **注意：**&gt;
 > 接口如果返回62980115错误码，表明参数异常，可能是PixelMap对象被提前释放了。需要调用方排查，在该方法调用结束后再释放PixelMap对象。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ImagePacker-packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>--><!--Device-ImagePacker-packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| source | PixelMap | 是 | 编码的PixelMap资源。 |
-| fd | int | 是 | 文件描述符。取值范围为[0，65535]。 |
-| options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| source | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid input parameter. |
-| [62980119](../errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
-| [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
+| 错误码ID |
+| --- |
+| [62980096](../errorcode-image.md#62980096-操作失败) |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980119](../errorcode-image.md#62980119-图片编码失败) |
+| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) |
+| [62980172](../errorcode-image.md#62980172-编码icc失败) |
+| [62980252](../errorcode-image.md#62980252-创建surface失败) |
 
 **示例**
 
@@ -1216,38 +1246,44 @@ packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>
 
 ## packToFile
 
+ArkTS-Dyn:
+```TypeScript
+packToFile(picture: Picture, fd: number, options: PackingOption): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 packToFile(picture: Picture, fd: int, options: PackingOption): Promise<void>
 ```
 
 指定编码参数，将Picture直接编码进文件。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-ImagePacker-packToFile(picture: Picture, fd: int, options: PackingOption): Promise<void>--><!--Device-ImagePacker-packToFile(picture: Picture, fd: int, options: PackingOption): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| picture | [Picture](arkts-image-image-picture-i.md) | 是 | 编码的Picture资源。 |
-| fd | int | 是 | 文件描述符。取值范围为[0，65535]。 |
-| options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| picture | [Picture](arkts-image-image-picture-i.md) | 是 |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7800301](../errorcode-image.md#7800301-编码失败) | Encode failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [7800301](../errorcode-image.md#7800301-编码失败) |
 
 **示例**
 
@@ -1255,38 +1291,44 @@ packToFile(picture: Picture, fd: int, options: PackingOption): Promise<void>
 
 ## packToFileFromPixelmapSequence
 
+ArkTS-Dyn:
+```TypeScript
+packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: number, options: PackingOptionsForSequence): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: int, options: PackingOptionsForSequence): Promise<void>
 ```
 
 指定编码参数，将多个PixelMap编码成GIF文件。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-ImagePacker-packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: int, options: PackingOptionsForSequence): Promise<void>--><!--Device-ImagePacker-packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: int, options: PackingOptionsForSequence): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pixelmapSequence | Array&lt;PixelMap&gt; | 是 | 待编码的PixelMap序列。 |
-| fd | int | 是 | 文件描述符。取值范围为[0，65535]。 |
-| options | [PackingOptionsForSequence](arkts-image-image-packingoptionsforsequence-i.md) | 是 | 动图编码参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pixelmapSequence | Array & lt;PixelMap & gt; | 是 |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| options | [PackingOptionsForSequence](arkts-image-image-packingoptionsforsequence-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types;3.Parameter verification failed. |
-| [7800301](../errorcode-image.md#7800301-编码失败) | Failed to encode image. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [7800301](../errorcode-image.md#7800301-编码失败) |
 
 **示例**
 
@@ -1361,17 +1403,17 @@ release(callback: AsyncCallback<void>): void
 
 释放图片编码实例。使用callback异步回调。由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用该方法，及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-ImagePacker-release(callback: AsyncCallback<void>): void--><!--Device-ImagePacker-release(callback: AsyncCallback<void>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当释放图片编码实例成功，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **示例**
 
@@ -1808,17 +1850,17 @@ release(): Promise<void>
 
 释放图片编码实例。使用Promise异步回调。由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用该方法，及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-ImagePacker-release(): Promise<void>--><!--Device-ImagePacker-release(): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
@@ -1834,9 +1876,8 @@ readonly supportedFormats: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-ImagePacker-readonly supportedFormats: Array<string>--><!--Device-ImagePacker-readonly supportedFormats: Array<string>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
-

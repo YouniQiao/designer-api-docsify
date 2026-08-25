@@ -14,17 +14,16 @@ function isNfcOpen(): boolean
 
 Checks whether NFC is open.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-nfcController-function isNfcOpen(): boolean--><!--Device-nfcController-function isNfcOpen(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if NFC is open; returns **false** otherwise. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

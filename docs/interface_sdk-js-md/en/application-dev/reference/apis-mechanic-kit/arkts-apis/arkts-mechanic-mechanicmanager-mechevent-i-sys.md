@@ -4,7 +4,7 @@ Definition of Mechanic device event.
 
 **Since:** 26.0.0
 
-<!--Device-mechanicManager-export interface MechEvent--><!--Device-mechanicManager-export interface MechEvent-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -28,7 +28,7 @@ Event type of this event.
 
 **Since:** 26.0.0
 
-<!--Device-MechEvent-event: MechEventType--><!--Device-MechEvent-event: MechEventType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -42,13 +42,12 @@ mechId: int
 
 ID of the mechanical device. The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
-<!--Device-MechEvent-mechId: int--><!--Device-MechEvent-mechId: int-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
-

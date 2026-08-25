@@ -10,15 +10,14 @@ Cancels the timer set by " setTimeout()".
 
 **Since:** 5
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-unnamed-export declare function clearTimeout(timeoutID?: number): void--><!--Device-unnamed-export declare function clearTimeout(timeoutID?: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| timeoutID | number | No | Indicates the timer ID returned by "setTimeout()". |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| timeoutID | number | No |

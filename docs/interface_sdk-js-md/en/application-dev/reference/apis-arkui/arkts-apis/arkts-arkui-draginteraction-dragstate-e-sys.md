@@ -2,9 +2,9 @@
 
 Enumerates dragging states.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-dragInteraction-enum DragState--><!--Device-dragInteraction-enum DragState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 
@@ -18,9 +18,9 @@ MSG_DRAG_STATE_START = 1
 
 Dragging is started.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-DragState-MSG_DRAG_STATE_START = 1--><!--Device-DragState-MSG_DRAG_STATE_START = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 
@@ -34,9 +34,9 @@ MSG_DRAG_STATE_STOP = 2
 
 Dragging is ended.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-DragState-MSG_DRAG_STATE_STOP = 2--><!--Device-DragState-MSG_DRAG_STATE_STOP = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 
@@ -50,11 +50,10 @@ MSG_DRAG_STATE_CANCEL = 3
 
 Dragging is canceled.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-DragState-MSG_DRAG_STATE_CANCEL = 3--><!--Device-DragState-MSG_DRAG_STATE_CANCEL = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 
 **System API:** This is a system API.
-

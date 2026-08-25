@@ -15,13 +15,13 @@ function notifyFormsVisible(formIds: Array<string>, isVisible: boolean, callback
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md)
 
 **需要权限：** ohos.permission.REQUIRE_FORM
-
-<!--Device-formHost-function notifyFormsVisible(formIds: Array<string>, isVisible: boolean, callback: AsyncCallback<void>): void--><!--Device-formHost-function notifyFormsVisible(formIds: Array<string>, isVisible: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -29,11 +29,11 @@ function notifyFormsVisible(formIds: Array<string>, isVisible: boolean, callback
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | 是 | 卡片标识列表。 |
-| isVisible | boolean | 是 | 是否可见。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当通知卡片是否可见成功，error为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formIds | Array & lt;string & gt; | 是 |
+| isVisible | boolean | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **示例**
 
@@ -70,13 +70,13 @@ function notifyFormsVisible(formIds: Array<string>, isVisible: boolean): Promise
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md)
 
 **需要权限：** ohos.permission.REQUIRE_FORM
-
-<!--Device-formHost-function notifyFormsVisible(formIds: Array<string>, isVisible: boolean): Promise<void>--><!--Device-formHost-function notifyFormsVisible(formIds: Array<string>, isVisible: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -84,18 +84,17 @@ function notifyFormsVisible(formIds: Array<string>, isVisible: boolean): Promise
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | 是 | 卡片标识列表。 |
-| isVisible | boolean | 是 | 是否可见。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formIds | Array & lt;string & gt; | 是 |
+| isVisible | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
 参见 [notifyFormsVisible](#notifyformsvisible)
-

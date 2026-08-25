@@ -2,9 +2,9 @@
 
 相机创建参数配置，用于定义相机创建的额外选项。@interface CameraParameters
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-unnamed-export interface CameraParameters--><!--Device-unnamed-export interface CameraParameters-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -20,9 +20,9 @@ msaa?: boolean
 
 **默认值：** false
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-CameraParameters-msaa?: boolean--><!--Device-CameraParameters-msaa?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -38,9 +38,8 @@ renderingPipeline?: RenderingPipelineType
 
 **默认值：** RenderingPipelineType.FORWARD_LIGHTWEIGHT
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-CameraParameters-renderingPipeline?: RenderingPipelineType--><!--Device-CameraParameters-renderingPipeline?: RenderingPipelineType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

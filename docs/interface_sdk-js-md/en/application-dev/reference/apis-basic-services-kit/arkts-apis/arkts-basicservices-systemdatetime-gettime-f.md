@@ -14,23 +14,23 @@ function getTime(isNanoseconds?: boolean): long
 
 Obtains the time elapsed since the Unix epoch. This API returns the result synchronously.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-systemDateTime-function getTime(isNanoseconds?: boolean): long--><!--Device-systemDateTime-function getTime(isNanoseconds?: boolean): long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isNanoseconds | boolean | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| isNanoseconds | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | Time elapsed since the Unix epoch. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：long |
 
 **Examples**
 
@@ -44,4 +44,3 @@ try {
   console.error(`Failed to get time. message: ${error.message}, code: ${error.code}`);
 }
 ```
-

@@ -10,26 +10,26 @@ function createNode(context: UIContext, nodeType: 'Text'): Text
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Text'): Text--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Text'): Text-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Text' | 是 | 创建Text类型的FrameNode节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Text' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Text | Text类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Text](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-text-c.md) |
 
 
 ## createNode
@@ -42,26 +42,26 @@ function createNode(context: UIContext, nodeType: 'Column'): Column
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Column'): Column--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Column'): Column-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Column' | 是 | 创建Column类型的FrameNode节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Column' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Column | Column类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Column](arkts-arkui-typenode-column-t.md) |
 
 
 ## createNode
@@ -74,26 +74,26 @@ function createNode(context: UIContext, nodeType: 'Row'): Row
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Row'): Row--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Row'): Row-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Row' | 是 | 创建Row类型的FrameNode节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Row' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Row | Row类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Row](arkts-arkui-typenode-row-t.md) |
 
 
 ## createNode
@@ -106,26 +106,26 @@ function createNode(context: UIContext, nodeType: 'Stack'): Stack
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Stack'): Stack--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Stack'): Stack-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Stack' | 是 | 创建Stack类型的FrameNode节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Stack' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Stack | Stack类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Stack](../../apis-arkts/arkts-apis/arkts-arkts-util-stack-stack-c.md) |
 
 
 ## createNode
@@ -138,26 +138,26 @@ function createNode(context: UIContext, nodeType: 'GridRow'): GridRow
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'GridRow'): GridRow--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'GridRow'): GridRow-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'GridRow' | 是 | 创建GridRow类型的FrameNode节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'GridRow' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| GridRow | GridRow类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [GridRow](arkts-arkui-typenode-gridrow-t.md) |
 
 
 ## createNode
@@ -170,26 +170,26 @@ function createNode(context: UIContext, nodeType: 'GridCol'): GridCol
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'GridCol'): GridCol--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'GridCol'): GridCol-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'GridCol' | 是 | 创建GridCol类型的FrameNode节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'GridCol' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| GridCol | GridCol类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [GridCol](arkts-arkui-typenode-gridcol-t.md) |
 
 
 ## createNode
@@ -202,26 +202,26 @@ function createNode(context: UIContext, nodeType: 'Flex'): Flex
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Flex'): Flex--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Flex'): Flex-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Flex' | 是 | 创建Flex类型的FrameNode节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Flex' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Flex | Flex类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Flex](arkts-arkui-typenode-flex-t.md) |
 
 
 ## createNode
@@ -234,26 +234,26 @@ function createNode(context: UIContext, nodeType: 'Swiper'): Swiper
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Swiper'): Swiper--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Swiper'): Swiper-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Swiper' | 是 | 创建Swiper类型的FrameNode节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Swiper' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Swiper | Swiper类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Swiper](arkts-arkui-typenode-swiper-t.md) |
 
 
 ## createNode
@@ -266,26 +266,26 @@ function createNode(context: UIContext, nodeType: 'Progress'): Progress
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Progress'): Progress--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Progress'): Progress-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Progress' | 是 | 创建Progress类型的FrameNode节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Progress' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Progress | Progress类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Progress](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-progress-i.md) |
 
 
 ## createNode
@@ -298,26 +298,26 @@ function createNode(context: UIContext, nodeType: 'Scroll'): Scroll
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Scroll'): Scroll--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Scroll'): Scroll-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Scroll' | 是 | 创建Scroll类型的FrameNode节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Scroll' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Scroll | Scroll类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Scroll](arkts-arkui-typenode-scroll-t.md) |
 
 
 ## createNode
@@ -330,26 +330,26 @@ function createNode(context: UIContext, nodeType: 'RelativeContainer'): Relative
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'RelativeContainer'): RelativeContainer--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'RelativeContainer'): RelativeContainer-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'RelativeContainer' | 是 | 创建RelativeContainer类型的FrameNode节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'RelativeContainer' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RelativeContainer | RelativeContainer类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [RelativeContainer](arkts-arkui-typenode-relativecontainer-t.md) |
 
 
 ## createNode
@@ -362,26 +362,26 @@ function createNode(context: UIContext, nodeType: 'Divider'): Divider
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Divider'): Divider--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Divider'): Divider-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Divider' | 是 | 创建Divider类型的FrameNode节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Divider' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Divider | Divider类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Divider](arkts-arkui-typenode-divider-t.md) |
 
 
 ## createNode
@@ -394,26 +394,26 @@ function createNode(context: UIContext, nodeType: 'LoadingProgress'): LoadingPro
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'LoadingProgress'): LoadingProgress--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'LoadingProgress'): LoadingProgress-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'LoadingProgress' | 是 | 创建LoadingProgress类型的FrameNode节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'LoadingProgress' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| LoadingProgress | LoadingProgress类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [LoadingProgress](arkts-arkui-typenode-loadingprogress-t.md) |
 
 
 ## createNode
@@ -426,26 +426,26 @@ function createNode(context: UIContext, nodeType: 'Search'): Search
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Search'): Search--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Search'): Search-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Search' | 是 | 创建Search类型的FrameNode节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Search' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Search | Search类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Search](arkts-arkui-typenode-search-t.md) |
 
 
 ## createNode
@@ -458,26 +458,26 @@ function createNode(context: UIContext, nodeType: 'Blank'): Blank
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Blank'): Blank--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Blank'): Blank-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Blank' | 是 | 创建Blank类型的FrameNode节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Blank' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Blank | Blank类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Blank](arkts-arkui-typenode-blank-t.md) |
 
 
 ## createNode
@@ -490,26 +490,26 @@ function createNode(context: UIContext, nodeType: 'Image'): Image
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Image'): Image--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Image'): Image-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Image' | 是 | 创建Image类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Image' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Image | Image类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) |
 
 
 ## createNode
@@ -522,26 +522,26 @@ function createNode(context: UIContext, nodeType: 'List'): List
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'List'): List--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'List'): List-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'List' | 是 | 创建List类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'List' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| List | List类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md) |
 
 
 ## createNode
@@ -554,26 +554,26 @@ function createNode(context: UIContext, nodeType: 'ListItem'): ListItem
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'ListItem'): ListItem--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'ListItem'): ListItem-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'ListItem' | 是 | 创建ListItem类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'ListItem' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ListItem | ListItem类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [ListItem](arkts-arkui-typenode-listitem-t.md) |
 
 
 ## createNode
@@ -586,26 +586,26 @@ function createNode(context: UIContext, nodeType: 'TextInput'): TextInput
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextInput'): TextInput--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextInput'): TextInput-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'TextInput' | 是 | 创建TextInput类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'TextInput' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| TextInput | TextInput类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [TextInput](arkts-arkui-typenode-textinput-t.md) |
 
 
 ## createNode
@@ -618,26 +618,26 @@ function createNode(context: UIContext, nodeType: 'Button'): Button
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Button'): Button--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Button'): Button-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Button' | 是 | 创建Button类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Button' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Button | Button类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Button](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-button-e.md) |
 
 
 ## createNode
@@ -650,26 +650,26 @@ function createNode(context: UIContext, nodeType: 'ListItemGroup'): ListItemGrou
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'ListItemGroup'): ListItemGroup--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'ListItemGroup'): ListItemGroup-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'ListItemGroup' | 是 | 创建ListItemGroup类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'ListItemGroup' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ListItemGroup | ListItemGroup类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [ListItemGroup](arkts-arkui-typenode-listitemgroup-t.md) |
 
 
 ## createNode
@@ -682,26 +682,26 @@ function createNode(context: UIContext, nodeType: 'WaterFlow'): WaterFlow
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'WaterFlow'): WaterFlow--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'WaterFlow'): WaterFlow-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'WaterFlow' | 是 | 创建WaterFlow类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'WaterFlow' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| WaterFlow | WaterFlow类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [WaterFlow](arkts-arkui-typenode-waterflow-t.md) |
 
 
 ## createNode
@@ -714,26 +714,26 @@ function createNode(context: UIContext, nodeType: 'FlowItem'): FlowItem
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'FlowItem'): FlowItem--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'FlowItem'): FlowItem-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'FlowItem' | 是 | 创建FlowItem类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'FlowItem' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| FlowItem | FlowItem类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [FlowItem](arkts-arkui-typenode-flowitem-t.md) |
 
 
 ## createNode
@@ -746,26 +746,26 @@ function createNode(context: UIContext, nodeType: 'XComponent'): XComponent
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'XComponent'): XComponent--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'XComponent'): XComponent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'XComponent' | 是 | 创建XComponent类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'XComponent' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| XComponent | XComponent类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [XComponent](arkts-arkui-typenode-xcomponent-t.md) |
 
 
 ## createNode
@@ -778,27 +778,27 @@ function createNode(context: UIContext, nodeType: 'XComponent', options: XCompon
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'XComponent', options: XComponentOptions): XComponent--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'XComponent', options: XComponentOptions): XComponent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'XComponent' | 是 | 创建XComponent类型的节点。 |
-| options | XComponentOptions | 是 | 定义XComponent的具体配置参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'XComponent' | 是 |
+| options | [XComponentOptions](../arkts-components/arkts-arkui-xcomponentoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| XComponent | XComponent类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [XComponent](arkts-arkui-typenode-xcomponent-t.md) |
 
 
 ## createNode
@@ -811,27 +811,27 @@ function createNode(context: UIContext, nodeType: 'XComponent', parameters: Nati
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'XComponent', parameters: NativeXComponentParameters): XComponent--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'XComponent', parameters: NativeXComponentParameters): XComponent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'XComponent' | 是 | 创建XComponent类型的节点。 |
-| parameters | NativeXComponentParameters | 是 | 定义XComponent的具体配置参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'XComponent' | 是 |
+| parameters | [NativeXComponentParameters](arkts-arkui-xcomponent-nativexcomponentparameters-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| XComponent | XComponent类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [XComponent](arkts-arkui-typenode-xcomponent-t.md) |
 
 
 ## createNode
@@ -844,26 +844,26 @@ function createNode(context: UIContext, nodeType: 'Checkbox'): Checkbox
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Checkbox'): Checkbox--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Checkbox'): Checkbox-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Checkbox' | 是 | 创建Checkbox类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Checkbox' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Checkbox | Checkbox类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Checkbox](arkts-arkui-typenode-checkbox-t.md) |
 
 
 ## createNode
@@ -876,26 +876,26 @@ function createNode(context: UIContext, nodeType: 'CheckboxGroup'): CheckboxGrou
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'CheckboxGroup'): CheckboxGroup--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'CheckboxGroup'): CheckboxGroup-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'CheckboxGroup' | 是 | 创建CheckboxGroup类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'CheckboxGroup' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| CheckboxGroup | CheckboxGroup类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [CheckboxGroup](arkts-arkui-typenode-checkboxgroup-t.md) |
 
 
 ## createNode
@@ -908,26 +908,26 @@ function createNode(context: UIContext, nodeType: 'Radio'): Radio
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Radio'): Radio--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Radio'): Radio-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Radio' | 是 | 创建Radio类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Radio' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Radio | Radio类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Radio](arkts-arkui-typenode-radio-t.md) |
 
 
 ## createNode
@@ -940,26 +940,26 @@ function createNode(context: UIContext, nodeType: 'Rating'): Rating
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Rating'): Rating--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Rating'): Rating-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Rating' | 是 | 创建Rating类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Rating' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Rating | Rating类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Rating](arkts-arkui-typenode-rating-t.md) |
 
 
 ## createNode
@@ -972,26 +972,26 @@ function createNode(context: UIContext, nodeType: 'Select'): Select
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Select'): Select--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Select'): Select-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Select' | 是 | 创建Select类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Select' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Select | Select类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Select](arkts-arkui-typenode-select-t.md) |
 
 
 ## createNode
@@ -1004,26 +1004,26 @@ function createNode(context: UIContext, nodeType: 'Slider'): Slider
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Slider'): Slider--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Slider'): Slider-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Slider' | 是 | 创建Slider类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Slider' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Slider | Slider类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Slider](arkts-arkui-typenode-slider-t.md) |
 
 
 ## createNode
@@ -1036,27 +1036,27 @@ function createNode(context: UIContext, nodeType: 'Toggle', options?: ToggleOpti
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Toggle', options?: ToggleOptions): Toggle--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Toggle', options?: ToggleOptions): Toggle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Toggle' | 是 | 创建Toggle类型的节点。 |
-| options | ToggleOptions | 否 | 创建Toggle节点的接口参数，仅可通过ToggleOptions中的type属性设置开关样式。不传入该参数时，需通过initialize接口设置 Toggle的type属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Toggle' | 是 |
+| options | [ToggleOptions](arkts-arkui-toggle-toggleoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Toggle | Toggle类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Toggle](arkts-arkui-typenode-toggle-t.md) |
 
 
 ## createNode
@@ -1069,26 +1069,26 @@ function createNode(context: UIContext, nodeType: 'Marquee'): Marquee
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Marquee'): Marquee--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Marquee'): Marquee-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Marquee' | 是 | 创建Marquee类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Marquee' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Marquee | Marquee类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Marquee](arkts-arkui-typenode-marquee-t.md) |
 
 
 ## createNode
@@ -1101,26 +1101,26 @@ function createNode(context: UIContext, nodeType: 'TextArea'): TextArea
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextArea'): TextArea--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextArea'): TextArea-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'TextArea' | 是 | 创建TextArea类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'TextArea' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| TextArea | TextArea类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [TextArea](arkts-arkui-typenode-textarea-t.md) |
 
 
 ## createNode
@@ -1133,26 +1133,26 @@ function createNode(context: UIContext, nodeType: 'SymbolGlyph'): SymbolGlyph
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'SymbolGlyph'): SymbolGlyph--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'SymbolGlyph'): SymbolGlyph-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'SymbolGlyph' | 是 | 创建SymbolGlyph类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'SymbolGlyph' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| SymbolGlyph | SymbolGlyph类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [SymbolGlyph](arkts-arkui-typenode-symbolglyph-t.md) |
 
 
 ## createNode
@@ -1165,26 +1165,26 @@ function createNode(context: UIContext, nodeType: 'QRCode'): QRCode
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'QRCode'): QRCode--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'QRCode'): QRCode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'QRCode' | 是 | 创建QRCode类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'QRCode' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| QRCode | QRCode类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [QRCode](arkts-arkui-typenode-qrcode-t.md) |
 
 
 ## createNode
@@ -1197,26 +1197,26 @@ function createNode(context: UIContext, nodeType: 'Badge'): Badge
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Badge'): Badge--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Badge'): Badge-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Badge' | 是 | 创建Badge类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Badge' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Badge | Badge类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Badge](arkts-arkui-typenode-badge-t.md) |
 
 
 ## createNode
@@ -1229,26 +1229,26 @@ function createNode(context: UIContext, nodeType: 'TextClock'): TextClock
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextClock'): TextClock--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextClock'): TextClock-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'TextClock' | 是 | 创建TextClock类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'TextClock' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| TextClock | TextClock类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [TextClock](arkts-arkui-typenode-textclock-t.md) |
 
 
 ## createNode
@@ -1261,26 +1261,26 @@ function createNode(context: UIContext, nodeType: 'TextTimer'): TextTimer
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextTimer'): TextTimer--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextTimer'): TextTimer-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'TextTimer' | 是 | 创建TextTimer类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'TextTimer' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| TextTimer | TextTimer类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [TextTimer](arkts-arkui-typenode-texttimer-t.md) |
 
 
 ## createNode
@@ -1293,26 +1293,26 @@ function createNode(context: UIContext, nodeType: 'Grid'): Grid
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Grid'): Grid--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Grid'): Grid-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'Grid' | 是 | 创建Grid类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Grid' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Grid | Grid类型的FrameNode节点。 |
+| 类型 |
+| --- |
+| [Grid](arkts-arkui-typenode-grid-t.md) |
 
 
 ## createNode
@@ -1325,24 +1325,23 @@ function createNode(context: UIContext, nodeType: 'GridItem'): GridItem
 
 **起始版本：** 14
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'GridItem'): GridItem--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'GridItem'): GridItem-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| nodeType | 'GridItem' | 是 | 创建GridItem类型的节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'GridItem' | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| GridItem | GridItem类型的FrameNode节点。 |
-
+| 类型 |
+| --- |
+| [GridItem](arkts-arkui-typenode-griditem-t.md) |

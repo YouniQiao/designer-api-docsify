@@ -2,9 +2,9 @@
 
 Enumerates USB device function types.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-usbManager-export enum FunctionType--><!--Device-usbManager-export enum FunctionType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -18,9 +18,9 @@ NONE = 0
 
 No function.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-FunctionType-NONE = 0--><!--Device-FunctionType-NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -34,9 +34,9 @@ ACM = 1
 
 ACM function.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-FunctionType-ACM = 1--><!--Device-FunctionType-ACM = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -50,9 +50,9 @@ ECM = 2
 
 ECM function.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-FunctionType-ECM = 2--><!--Device-FunctionType-ECM = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -66,9 +66,9 @@ HDC = 4
 
 HDC function.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-FunctionType-HDC = 4--><!--Device-FunctionType-HDC = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -82,9 +82,9 @@ MTP = 8
 
 Media transmission.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-FunctionType-MTP = 8--><!--Device-FunctionType-MTP = 8-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -98,9 +98,9 @@ PTP = 16
 
 Image transmission.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-FunctionType-PTP = 16--><!--Device-FunctionType-PTP = 16-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -114,9 +114,9 @@ RNDIS = 32
 
 Network sharing.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-FunctionType-RNDIS = 32--><!--Device-FunctionType-RNDIS = 32-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -130,9 +130,9 @@ MIDI = 64
 
 MIDI function.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-FunctionType-MIDI = 64--><!--Device-FunctionType-MIDI = 64-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -146,9 +146,9 @@ AUDIO_SOURCE = 128
 
 Audio function.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-FunctionType-AUDIO_SOURCE = 128--><!--Device-FunctionType-AUDIO_SOURCE = 128-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -162,11 +162,10 @@ NCM = 256
 
 NCM transmission.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-FunctionType-NCM = 256--><!--Device-FunctionType-NCM = 256-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
-

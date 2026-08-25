@@ -1,20 +1,29 @@
-# nfctech
+# nfctech(Standard NFC Technologies)
+
+The **nfctech** module provides APIs for reading and writing tags that use different Near-Field Communication (NFC)
+ technologies.
+ > **NOTE**
+ >
+ > If an error is reported while importing the tag module editor, the capabilities of a specific device model may
+ > exceed the capability set defined for the default device. To use these capabilities, configure a custom SysCap by
+ > following instructions in
+ > [SystemCapability](https://developer.huawei.com/consumer/en/doc/harmonyos-references/syscap).
+
 
 ## Summary
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [BarcodeTag](arkts-connectivity-nfctech-barcodetag-i.md) | Provides the capability of reading barcode label attributes and accessing I/O operations. It is inherited from **TagSession**.  **TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).For details about how to obtain a **BarcodeTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).The following describes the unique APIs of **BarcodeTag**. |
-| [IsoDepTag](arkts-connectivity-nfctech-isodeptag-i.md) | Provides APIs to access ISO-DEP (ISO 14443-4) properties and I/O operations on a tag. This class inherits from **TagSession**.  **TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).For details about how to obtain an **IsoDepTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).The following describes the unique APIs of **IsoDepTag**. |
-| [MifareClassicTag](arkts-connectivity-nfctech-mifareclassictag-i.md) | Provides APIs to access MIFARE Classic properties and perform I/O operations on a tag. This class inherits from [TagSession](arkts-connectivity-tagsession-tagsession-i.md).  **TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).For details about how to obtain a **MifareClassicTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).The following describes the unique APIs of **MifareClassicTag**. |
-| [MifareUltralightTag](arkts-connectivity-nfctech-mifareultralighttag-i.md) | Provides APIs to access MIFARE Ultralight properties and perform I/O operations on a tag. This class inherits from **TagSession**.  **TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).For details about how to obtain a **MifareUltralightTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).The following describes the unique APIs of **MifareUltralightTag**. |
-| [NdefFormatableTag](arkts-connectivity-nfctech-ndefformatabletag-i.md) | Provides APIs for formatting NDEF formattable tags. This class inherits from **TagSession**.  **TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).For details about how to obtain an **NdefFormatableTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).The following describes the unique APIs of **NdefFormatableTag**. |
-| [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | Provides methods for Message of NDEF. |
-| [NdefTag](arkts-connectivity-nfctech-ndeftag-i.md) | Provides APIs to access the tags in the NFC Data Exchange Format (NDEF). This class inherits from **TagSession**.  **TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).For details about how to obtain an **NdefTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).The following describes the unique APIs of **NdefTag**. |
-| [NfcATag](arkts-connectivity-nfctech-nfcatag-i.md) | Provides APIs to access NFC-A (ISO 14443-3A) properties and perform I/O operations on a tag. This class inherits from **[TagSession](arkts-connectivity-tagsession-tagsession-i.md)**.  **TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).For details about how to obtain an **NfcATag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).The following describes the unique APIs of **NfcATag**. |
-| [NfcBTag](arkts-connectivity-nfctech-nfcbtag-i.md) | Provides APIs to access NFC-B (ISO 14443-3B) properties and perform I/O operations on a tag. This class inherits from **TagSession**.  **TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).For details about how to obtain an **NfcBTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).The following describes the unique APIs of **NfcBTag**. |
-| [NfcFTag](arkts-connectivity-nfctech-nfcftag-i.md) | Provides APIs to access NFC-F (JIS 6319-4) properties and perform I/O operations on a tag. This class inherits from **TagSession**.  **TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).For details about how to obtain an **NfcFTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).The following describes the unique APIs of **NfcFTag**. |
-| [NfcVTag](arkts-connectivity-nfctech-nfcvtag-i.md) | Provides APIs to access NFC-V (ISO 15693) properties and perform I/O operations on a tag. This class inherits from **TagSession**.  **TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).For details about how to obtain an **NfcVTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).The following describes the unique APIs of **NfcVTag**. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BarcodeTag(Standard NFC Technologies)](arkts-connectivity-nfctech-barcodetag-i.md) |
+| [IsoDepTag(Standard NFC Technologies)](arkts-connectivity-nfctech-isodeptag-i.md) |
+| [MifareClassicTag(Standard NFC Technologies)](arkts-connectivity-nfctech-mifareclassictag-i.md) |
+| [MifareUltralightTag(Standard NFC Technologies)](arkts-connectivity-nfctech-mifareultralighttag-i.md) |
+| [NdefFormatableTag(Standard NFC Technologies)](arkts-connectivity-nfctech-ndefformatabletag-i.md) |
+| [NdefMessage(Standard NFC Technologies)](arkts-connectivity-nfctech-ndefmessage-i.md) |
+| [NdefTag(Standard NFC Technologies)](arkts-connectivity-nfctech-ndeftag-i.md) |
+| [NfcATag(Standard NFC Technologies)](arkts-connectivity-nfctech-nfcatag-i.md) |
+| [NfcBTag(Standard NFC Technologies)](arkts-connectivity-nfctech-nfcbtag-i.md) |
+| [NfcFTag(Standard NFC Technologies)](arkts-connectivity-nfctech-nfcftag-i.md) |
+| [NfcVTag(Standard NFC Technologies)](arkts-connectivity-nfctech-nfcvtag-i.md) |

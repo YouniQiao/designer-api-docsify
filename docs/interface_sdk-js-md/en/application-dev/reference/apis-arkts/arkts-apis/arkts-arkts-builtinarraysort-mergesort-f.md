@@ -16,28 +16,26 @@ Sorts the array in-place.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function mergeSort(array: FixedArray<byte>, cmp: (lhs: byte, rhs: byte) => int,    begin: int = 0, end: int = 0): FixedArray<byte>--><!--Device-unnamed-export function mergeSort(array: FixedArray<byte>, cmp: (lhs: byte, rhs: byte) => int,    begin: int = 0, end: int = 0): FixedArray<byte>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| array | FixedArray&lt;byte&gt; | Yes | The array to sort. |
-| cmp | (lhs: byte, rhs: byte) =&gt; int | Yes | The comparator function. |
-| begin | int | Yes | The index to start sorting from. <br>The value should be an integer. |
-| end | int | Yes | The index to end sorting at. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| array | FixedArray & lt;byte & gt; | Yes |
+| cmp | (lhs: byte, rhs: byte) = & gt; int | Yes |
+| begin | int | Yes |
+| end | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;byte&gt; | The sorted array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;byte & gt; |
 
 
 ## mergeSort
@@ -51,28 +49,26 @@ Sorts the array in-place.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function mergeSort(array: FixedArray<short>, cmp: (lhs: short, rhs: short) => int,    begin: int = 0, end: int = 0): FixedArray<short>--><!--Device-unnamed-export function mergeSort(array: FixedArray<short>, cmp: (lhs: short, rhs: short) => int,    begin: int = 0, end: int = 0): FixedArray<short>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| array | FixedArray&lt;short&gt; | Yes | The array to sort. |
-| cmp | (lhs: short, rhs: short) =&gt; int | Yes | The comparator function. |
-| begin | int | Yes | The index to start sorting from. |
-| end | int | Yes | The index to end sorting at. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| array | FixedArray & lt;short & gt; | Yes |
+| cmp | (lhs: short, rhs: short) = & gt; int | Yes |
+| begin | int | Yes |
+| end | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;short&gt; | The sorted array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;short & gt; |
 
 
 ## mergeSort
@@ -86,28 +82,26 @@ Sorts the array in-place.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function mergeSort(array: FixedArray<int>, cmp: (lhs: int, rhs: int) => int,    begin: int = 0, end: int = 0): FixedArray<int>--><!--Device-unnamed-export function mergeSort(array: FixedArray<int>, cmp: (lhs: int, rhs: int) => int,    begin: int = 0, end: int = 0): FixedArray<int>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| array | FixedArray&lt;int&gt; | Yes | The array to sort. |
-| cmp | (lhs: int, rhs: int) =&gt; int | Yes | The comparator function. |
-| begin | int | Yes | The index to start sorting from. |
-| end | int | Yes | The index to end sorting at. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| array | FixedArray & lt;int & gt; | Yes |
+| cmp | (lhs: int, rhs: int) = & gt; int | Yes |
+| begin | int | Yes |
+| end | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;int&gt; | The sorted array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;int & gt; |
 
 
 ## mergeSort
@@ -121,28 +115,26 @@ Sorts the array in-place.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function mergeSort(array: FixedArray<long>, cmp: (lhs: long, rhs: long) => int,    begin: int = 0, end: int = 0): FixedArray<long>--><!--Device-unnamed-export function mergeSort(array: FixedArray<long>, cmp: (lhs: long, rhs: long) => int,    begin: int = 0, end: int = 0): FixedArray<long>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| array | FixedArray&lt;long&gt; | Yes | The array to sort. |
-| cmp | (lhs: long, rhs: long) =&gt; int | Yes | The comparator function. |
-| begin | int | Yes | The index to start sorting from. |
-| end | int | Yes | The index to end sorting at. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| array | FixedArray & lt;long & gt; | Yes |
+| cmp | (lhs: long, rhs: long) = & gt; int | Yes |
+| begin | int | Yes |
+| end | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;long&gt; | The sorted array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;long & gt; |
 
 
 ## mergeSort
@@ -156,28 +148,26 @@ Sorts the array in-place.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function mergeSort(array: FixedArray<float>, cmp: (lhs: float, rhs: float) => int,    begin: int = 0, end: int = 0): FixedArray<float>--><!--Device-unnamed-export function mergeSort(array: FixedArray<float>, cmp: (lhs: float, rhs: float) => int,    begin: int = 0, end: int = 0): FixedArray<float>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| array | FixedArray&lt;float&gt; | Yes | The array to sort. |
-| cmp | (lhs: float, rhs: float) =&gt; int | Yes | The comparator function. |
-| begin | int | Yes | The index to start sorting from. |
-| end | int | Yes | The index to end sorting at. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| array | FixedArray & lt;float & gt; | Yes |
+| cmp | (lhs: float, rhs: float) = & gt; int | Yes |
+| begin | int | Yes |
+| end | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;float&gt; | The sorted array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;float & gt; |
 
 
 ## mergeSort
@@ -191,26 +181,23 @@ Sorts the array in-place.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function mergeSort(array: FixedArray<double>, cmp: (lhs: double, rhs: double) => int,    begin: int = 0, end: int = 0): FixedArray<double>--><!--Device-unnamed-export function mergeSort(array: FixedArray<double>, cmp: (lhs: double, rhs: double) => int,    begin: int = 0, end: int = 0): FixedArray<double>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| array | FixedArray&lt;double&gt; | Yes | The array to sort. |
-| cmp | (lhs: double, rhs: double) =&gt; int | Yes | The comparator function. |
-| begin | int | Yes | The index to start sorting from. |
-| end | int | Yes | The index to end sorting at. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| array | FixedArray & lt;double & gt; | Yes |
+| cmp | (lhs: double, rhs: double) = & gt; int | Yes |
+| begin | int | Yes |
+| end | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;double&gt; | The sorted array. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;double & gt; |

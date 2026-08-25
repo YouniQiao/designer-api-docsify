@@ -4,7 +4,7 @@ Provides the aspect ratio range of the float view. The aspect ratio is obtained 
 
 **Since:** 26.0.0
 
-<!--Device-floatView-interface RatioLimit--><!--Device-floatView-interface RatioLimit-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -22,13 +22,13 @@ maxRatio: double
 
 Maximum aspect ratio of the float view.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-RatioLimit-maxRatio: double--><!--Device-RatioLimit-maxRatio: double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -40,13 +40,12 @@ minRatio: double
 
 Minimum aspect ratio of the float view.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RatioLimit-minRatio: double--><!--Device-RatioLimit-minRatio: double-End-->
-
 **System capability:** SystemCapability.Window.SessionManager
-

@@ -4,9 +4,39 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-unnamed-export declare interface PersistPropsOptions--><!--Device-unnamed-export declare interface PersistPropsOptions-End-->
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## fromJson
+
+```TypeScript
+fromJson?: FromJSONType<T>
+```
+
+默认值为undefined。见[FromJsonType](arkts-arkui-fromjsontype-t.md)，用于反序列化。对于复杂类型（除boolean、int、double、long、string外），开发者必须实现该方法才能成功反序列 化。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## toJson
+
+```TypeScript
+toJson?: ToJSONType<T>
+```
+
+默认值为undefined。见[ToJsonType](arkts-arkui-tojsontype-t.md)，用于序列化。对于复杂类型（除boolean、int、double、long、string外），开发者必须实现该方法才能成功序列化。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,31 +52,9 @@ defaultValue: T
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PersistPropsOptions-defaultValue: T--><!--Device-PersistPropsOptions-defaultValue: T-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## fromJson
-
-```TypeScript
-fromJson?: FromJSONType<T>
-```
-
-默认值为undefined。见[FromJsonType](arkts-arkui-fromjsontype-t.md)，用于反序列化。对于复杂类型（除boolean、int、double、long、string外），开发者必须实现该方法才能成功反序列 化。
-
-**类型：** [FromJSONType](arkts-arkui-fromjsontype-t.md)&lt;T&gt;
-
-**起始版本：** 23
-
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PersistPropsOptions-fromJson?: FromJSONType<T>--><!--Device-PersistPropsOptions-fromJson?: FromJSONType<T>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,31 +70,8 @@ key: string
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-PersistPropsOptions-key: string--><!--Device-PersistPropsOptions-key: string-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## toJson
-
-```TypeScript
-toJson?: ToJSONType<T>
-```
-
-默认值为undefined。见[ToJsonType](arkts-arkui-tojsontype-t.md)，用于序列化。对于复杂类型（除boolean、int、double、long、string外），开发者必须实现该方法才能成功序列化。
-
-**类型：** [ToJSONType](arkts-arkui-tojsontype-t.md)&lt;T&gt;
-
-**起始版本：** 23
-
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PersistPropsOptions-toJson?: ToJSONType<T>--><!--Device-PersistPropsOptions-toJson?: ToJSONType<T>-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

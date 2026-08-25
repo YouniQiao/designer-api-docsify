@@ -15,19 +15,19 @@ declare function chownSync(path: string, uid: number, gid: number): void
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-unnamed-declare function chownSync(path: string, uid: number, gid: number): void--><!--Device-unnamed-declare function chownSync(path: string, uid: number, gid: number): void-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 待改变文件的应用沙箱路径。 |
-| uid | number | 是 | 新的UID。 |
-| gid | number | 是 | 新的GID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| path | string | 是 |
+| uid | number | 是 |
+| gid | number | 是 |
 
 **示例**
 
@@ -36,4 +36,3 @@ let filePath = pathDir + "/test.txt";
 let stat = fileio.statSync(filePath)
 fileio.chownSync(filePath, stat.uid, stat.gid);
 ```
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 10
 
-<!--Device-policy-export enum RemindType--><!--Device-policy-export enum RemindType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -20,7 +20,7 @@ REMIND_TYPE_WARNING = 1
 
 **起始版本：** 10
 
-<!--Device-RemindType-REMIND_TYPE_WARNING = 1--><!--Device-RemindType-REMIND_TYPE_WARNING = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -36,9 +36,8 @@ REMIND_TYPE_LIMIT = 2
 
 **起始版本：** 10
 
-<!--Device-RemindType-REMIND_TYPE_LIMIT = 2--><!--Device-RemindType-REMIND_TYPE_LIMIT = 2-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
-

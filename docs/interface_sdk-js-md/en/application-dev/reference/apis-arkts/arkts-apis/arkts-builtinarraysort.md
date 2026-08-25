@@ -9,62 +9,61 @@
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [arr_sort_stable](arkts-arkts-builtinarraysort-arrsortstable-f.md#arr_sort_stable) | Sorts the array in-place, stable sorting algorithm. |
-| [arr_sort_stable](arkts-arkts-builtinarraysort-arrsortstable-f.md#arr_sort_stable) | Sorts the array in-place, stable sorting algorithm. |
-| [arr_sort_stable](arkts-arkts-builtinarraysort-arrsortstable-f.md#arr_sort_stable) | Sorts the array in-place, stable sorting algorithm. |
-| [arr_sort_stable](arkts-arkts-builtinarraysort-arrsortstable-f.md#arr_sort_stable) | Sorts the array in-place, stable sorting algorithm. |
-| [arr_sort_stable](arkts-arkts-builtinarraysort-arrsortstable-f.md#arr_sort_stable) | Sorts the array in-place, stable sorting algorithm. |
-| [arr_sort_stable](arkts-arkts-builtinarraysort-arrsortstable-f.md#arr_sort_stable) | Sorts the array in-place, stable sorting algorithm. |
-| [mergeSort](arkts-arkts-builtinarraysort-mergesort-f.md) | Sorts the array in-place. |
-| [mergeSort](arkts-arkts-builtinarraysort-mergesort-f.md) | Sorts the array in-place. |
-| [mergeSort](arkts-arkts-builtinarraysort-mergesort-f.md) | Sorts the array in-place. |
-| [mergeSort](arkts-arkts-builtinarraysort-mergesort-f.md) | Sorts the array in-place. |
-| [mergeSort](arkts-arkts-builtinarraysort-mergesort-f.md) | Sorts the array in-place. |
-| [mergeSort](arkts-arkts-builtinarraysort-mergesort-f.md) | Sorts the array in-place. |
-| [sort](arkts-arkts-builtinarraysort-sort-f.md) | Sorts the array in-place. |
-| [sort](arkts-arkts-builtinarraysort-sort-f.md) | Sorts the array in-place. |
-| [sort](arkts-arkts-builtinarraysort-sort-f.md) | Sorts the array in-place. |
-| [sort](arkts-arkts-builtinarraysort-sort-f.md) | Sorts the array in-place. |
-| [sort](arkts-arkts-builtinarraysort-sort-f.md) | Sorts the array in-place. |
-| [sort](arkts-arkts-builtinarraysort-sort-f.md) | Sorts the array in-place. |
-| [sort](arkts-arkts-builtinarraysort-sort-f.md) | Sorts the array in-place. |
-| [sort](arkts-arkts-builtinarraysort-sort-f.md) | Sorts the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the subarray of the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the subarray of the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the subarray of the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the subarray of the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the subarray of the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the subarray of the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the subarray of the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the subarray of the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the subarray of the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the subarray of the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the subarray of the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the subarray of the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the subarray of the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the subarray of the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the subarray of the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the subarray of the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the subarray of the array in-place. |
-| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) | Sorts the subarray of the array in-place. |
-| [swap](arkts-arkts-builtinarraysort-swap-f.md) | Swaps two elements in the array. |
-| [swap](arkts-arkts-builtinarraysort-swap-f.md) | Swaps two elements in the array. |
-| [swap](arkts-arkts-builtinarraysort-swap-f.md) | Swaps two elements in the array. |
-| [swap](arkts-arkts-builtinarraysort-swap-f.md) | Swaps two elements in the array. |
-| [swap](arkts-arkts-builtinarraysort-swap-f.md) | Swaps two elements in the array. |
-| [swap](arkts-arkts-builtinarraysort-swap-f.md) | Swaps two elements in the array. |
-| [swap](arkts-arkts-builtinarraysort-swap-f.md) | Swaps two elements in the array. |
-| [swap](arkts-arkts-builtinarraysort-swap-f.md) | Swaps two elements in the array. |
-| [swap](arkts-arkts-builtinarraysort-swap-f.md) | Swaps two elements in the array. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [arr_sort_stable](arkts-arkts-builtinarraysort-arrsortstable-f.md#arr_sort_stable) |
+| [arr_sort_stable](arkts-arkts-builtinarraysort-arrsortstable-f.md#arr_sort_stable) |
+| [arr_sort_stable](arkts-arkts-builtinarraysort-arrsortstable-f.md#arr_sort_stable) |
+| [arr_sort_stable](arkts-arkts-builtinarraysort-arrsortstable-f.md#arr_sort_stable) |
+| [arr_sort_stable](arkts-arkts-builtinarraysort-arrsortstable-f.md#arr_sort_stable) |
+| [arr_sort_stable](arkts-arkts-builtinarraysort-arrsortstable-f.md#arr_sort_stable) |
+| [mergeSort](arkts-arkts-builtinarraysort-mergesort-f.md) |
+| [mergeSort](arkts-arkts-builtinarraysort-mergesort-f.md) |
+| [mergeSort](arkts-arkts-builtinarraysort-mergesort-f.md) |
+| [mergeSort](arkts-arkts-builtinarraysort-mergesort-f.md) |
+| [mergeSort](arkts-arkts-builtinarraysort-mergesort-f.md) |
+| [mergeSort](arkts-arkts-builtinarraysort-mergesort-f.md) |
+| [sort](arkts-arkts-builtinarraysort-sort-f.md) |
+| [sort](arkts-arkts-builtinarraysort-sort-f.md) |
+| [sort](arkts-arkts-builtinarraysort-sort-f.md) |
+| [sort](arkts-arkts-builtinarraysort-sort-f.md) |
+| [sort](arkts-arkts-builtinarraysort-sort-f.md) |
+| [sort](arkts-arkts-builtinarraysort-sort-f.md) |
+| [sort](arkts-arkts-builtinarraysort-sort-f.md) |
+| [sort](arkts-arkts-builtinarraysort-sort-f.md) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [sort_subarray](arkts-arkts-builtinarraysort-sortsubarray-f.md#sort_subarray) |
+| [swap](arkts-arkts-builtinarraysort-swap-f.md) |
+| [swap](arkts-arkts-builtinarraysort-swap-f.md) |
+| [swap](arkts-arkts-builtinarraysort-swap-f.md) |
+| [swap](arkts-arkts-builtinarraysort-swap-f.md) |
+| [swap](arkts-arkts-builtinarraysort-swap-f.md) |
+| [swap](arkts-arkts-builtinarraysort-swap-f.md) |
+| [swap](arkts-arkts-builtinarraysort-swap-f.md) |
+| [swap](arkts-arkts-builtinarraysort-swap-f.md) |
+| [swap](arkts-arkts-builtinarraysort-swap-f.md) |

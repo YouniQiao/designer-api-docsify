@@ -4,7 +4,7 @@ Defines the status of the socket connection.
 
 **Since:** 7
 
-<!--Device-socket-export interface SocketStateBase--><!--Device-socket-export interface SocketStateBase-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -26,7 +26,7 @@ Whether the connection is in the bound state. The value **true** indicates that 
 
 **Since:** 7
 
-<!--Device-SocketStateBase-isBound: boolean--><!--Device-SocketStateBase-isBound: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -42,7 +42,7 @@ Whether the connection is in the closed state. The value **true** indicates that
 
 **Since:** 7
 
-<!--Device-SocketStateBase-isClose: boolean--><!--Device-SocketStateBase-isClose: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -58,7 +58,6 @@ Whether the connection is in the connected state. The value **true** indicates t
 
 **Since:** 7
 
-<!--Device-SocketStateBase-isConnected: boolean--><!--Device-SocketStateBase-isConnected: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
-

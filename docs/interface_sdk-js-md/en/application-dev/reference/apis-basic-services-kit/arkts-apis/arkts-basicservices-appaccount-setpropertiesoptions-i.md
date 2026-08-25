@@ -2,9 +2,9 @@
 
 Represents the options for setting authenticator properties.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-appAccount-interface SetPropertiesOptions--><!--Device-appAccount-interface SetPropertiesOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -17,32 +17,31 @@ import { appAccount } from '@kit.BasicServicesKit';
 ## parameters
 
 ```TypeScript
-parameters?: Record<string, RecordData>
+parameters?: Record<string, Object>
 ```
 
 Custom parameter object. By default, no value is passed in.
 
-**Type:** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, Object&gt;
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SetPropertiesOptions-parameters?: Record<string, RecordData>--><!--Device-SetPropertiesOptions-parameters?: Record<string, RecordData>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
 ## properties
 
 ```TypeScript
-properties?: Record<string, RecordData>
+properties?: Record<string, Object>
 ```
 
 Property object. By default, no value is passed in.
 
-**Type:** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, Object&gt;
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SetPropertiesOptions-properties?: Record<string, RecordData>--><!--Device-SetPropertiesOptions-properties?: Record<string, RecordData>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
-

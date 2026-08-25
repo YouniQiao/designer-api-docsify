@@ -2,9 +2,9 @@
 
 Enumerates trace point types.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-hiTraceChain-enum HiTraceTracepointType--><!--Device-hiTraceChain-enum HiTraceTracepointType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
@@ -16,9 +16,9 @@ CS = 0
 
 CS trace point.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-HiTraceTracepointType-CS = 0--><!--Device-HiTraceTracepointType-CS = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
@@ -30,9 +30,9 @@ CR = 1
 
 CR trace point.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-HiTraceTracepointType-CR = 1--><!--Device-HiTraceTracepointType-CR = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
@@ -44,9 +44,9 @@ SS = 2
 
 SS trace point.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-HiTraceTracepointType-SS = 2--><!--Device-HiTraceTracepointType-SS = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
@@ -58,9 +58,9 @@ SR = 3
 
 SR trace point.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-HiTraceTracepointType-SR = 3--><!--Device-HiTraceTracepointType-SR = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
@@ -72,9 +72,8 @@ GENERAL = 4
 
 General type, which identifies the trace points except the CS, CR, SS, and SR trace points.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-HiTraceTracepointType-GENERAL = 4--><!--Device-HiTraceTracepointType-GENERAL = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
-

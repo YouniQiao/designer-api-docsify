@@ -4,7 +4,7 @@ Enumerates the placement options for toolbar items in the title bar.
 
 **Since:** 20
 
-<!--Device-unnamed-declare enum ToolBarItemPlacement--><!--Device-unnamed-declare enum ToolBarItemPlacement-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ Places the item at the start of the top bar.
 
 **Since:** 20
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-ToolBarItemPlacement-TOP_BAR_LEADING = 0--><!--Device-ToolBarItemPlacement-TOP_BAR_LEADING = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,8 @@ Places the item at the end of the top bar.
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ToolBarItemPlacement-TOP_BAR_TRAILING = 1--><!--Device-ToolBarItemPlacement-TOP_BAR_TRAILING = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 Defines the eUICC information.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-eSIM-export interface EuiccInfo--><!--Device-eSIM-export interface EuiccInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -26,11 +26,10 @@ OS version.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-EuiccInfo-osVersion: string--><!--Device-EuiccInfo-osVersion: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
-

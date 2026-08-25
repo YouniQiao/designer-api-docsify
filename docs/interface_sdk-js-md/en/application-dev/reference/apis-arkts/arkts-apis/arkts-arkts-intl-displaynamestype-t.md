@@ -8,20 +8,17 @@ Type of display names.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Intl-export type DisplayNamesType = 'language' | 'region' | 'script' | 'calendar' | 'dateTimeField' | 'currency'--><!--Device-Intl-export type DisplayNamesType = 'language' | 'region' | 'script' | 'calendar' | 'dateTimeField' | 'currency'-End-->
-
 **System capability:** SystemCapability.Utils.Lang
 
-| Type | Description |
-| --- | --- |
-| 'language' |  |
-| 'region' |  |
-| 'script' |  |
-| 'calendar' |  |
-| 'dateTimeField' |  |
-| 'currency' |  |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| 'language' |
+| 'region' |
+| 'script' |
+| 'calendar' |
+| 'dateTimeField' |
+| 'currency' |

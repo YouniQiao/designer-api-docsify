@@ -4,7 +4,7 @@ The maximum length of [value](arkts-arkdata-datashare-proxydata-i.md#value), [va
 
 **Since:** 26.0.0
 
-<!--Device-dataShare-enum DataProxyMaxValueLength--><!--Device-dataShare-enum DataProxyMaxValueLength-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -18,9 +18,9 @@ The maximum length of value is 4096 bytes.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-DataProxyMaxValueLength-MAX_LENGTH_4K = 4096--><!--Device-DataProxyMaxValueLength-MAX_LENGTH_4K = 4096-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -34,9 +34,8 @@ The maximum length of value is 102400 bytes.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataProxyMaxValueLength-MAX_LENGTH_100K = 102400--><!--Device-DataProxyMaxValueLength-MAX_LENGTH_100K = 102400-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
-

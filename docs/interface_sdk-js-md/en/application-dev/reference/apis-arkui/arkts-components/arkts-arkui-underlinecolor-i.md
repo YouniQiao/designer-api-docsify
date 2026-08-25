@@ -4,7 +4,7 @@ Defines the underline color width property.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface UnderlineColor--><!--Device-unnamed-declare interface UnderlineColor-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Underline color in the disabled state. If no value is specified or if the value 
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-UnderlineColor-disable?: ResourceColor | undefined--><!--Device-UnderlineColor-disable?: ResourceColor | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ Underline color when an error occurs. If no value is specified or if the value s
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-UnderlineColor-error?: ResourceColor | undefined--><!--Device-UnderlineColor-error?: ResourceColor | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,11 +65,11 @@ Underline color in the normal state. If no value is specified or if the value sp
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-UnderlineColor-normal?: ResourceColor | undefined--><!--Device-UnderlineColor-normal?: ResourceColor | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,11 +85,10 @@ Underline color in the typing state. If no value is specified or if the value sp
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-UnderlineColor-typing?: ResourceColor | undefined--><!--Device-UnderlineColor-typing?: ResourceColor | undefined-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

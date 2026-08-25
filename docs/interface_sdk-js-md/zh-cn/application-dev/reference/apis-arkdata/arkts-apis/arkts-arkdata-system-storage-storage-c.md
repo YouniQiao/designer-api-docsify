@@ -2,9 +2,9 @@
 
 **起始版本：** 3
 
-**废弃版本：** 6
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-unnamed-export default class Storage--><!--Device-unnamed-export default class Storage-End-->
+**废弃版本：** 6
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
@@ -23,21 +23,21 @@ static clear(options?: ClearStorageOptions): void
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 6
 
 **替代接口：** clear
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-Storage-static clear(options?: ClearStorageOptions): void--><!--Device-Storage-static clear(options?: ClearStorageOptions): void-End-->
-
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [ClearStorageOptions](arkts-arkdata-system-storage-clearstorageoptions-i.md) | 否 | Indicates the target options. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [ClearStorageOptions](arkts-arkdata-system-storage-clearstorageoptions-i.md) | 否 |
 
 **示例**
 
@@ -127,21 +127,21 @@ static delete(options: DeleteStorageOptions): void
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 6
 
 **替代接口：** delete
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-Storage-static delete(options: DeleteStorageOptions): void--><!--Device-Storage-static delete(options: DeleteStorageOptions): void-End-->
-
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [DeleteStorageOptions](arkts-arkdata-system-storage-deletestorageoptions-i.md) | 是 | Indicates the target options. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [DeleteStorageOptions](arkts-arkdata-system-storage-deletestorageoptions-i.md) | 是 |
 
 **示例**
 
@@ -233,21 +233,21 @@ static get(options: GetStorageOptions): void
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 6
 
 **替代接口：** get
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-Storage-static get(options: GetStorageOptions): void--><!--Device-Storage-static get(options: GetStorageOptions): void-End-->
-
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [GetStorageOptions](arkts-arkdata-system-storage-getstorageoptions-i.md) | 是 | Indicates the target options. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [GetStorageOptions](arkts-arkdata-system-storage-getstorageoptions-i.md) | 是 |
 
 **示例**
 
@@ -342,19 +342,19 @@ static set(options: SetStorageOptions): void
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 6
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-Storage-static set(options: SetStorageOptions): void--><!--Device-Storage-static set(options: SetStorageOptions): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [SetStorageOptions](arkts-arkdata-system-storage-setstorageoptions-i.md) | 是 | Indicates the target options. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [SetStorageOptions](arkts-arkdata-system-storage-setstorageoptions-i.md) | 是 |
 
 **示例**
 
@@ -437,4 +437,3 @@ export default {
     }
 }
 ```
-

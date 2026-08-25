@@ -16,11 +16,11 @@ function getAllBundleInstallInfo(): Promise<Array<Record<string, Object>>>
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-bundleManager-function getAllBundleInstallInfo(): Promise<Array<Record<string, Object>>>--><!--Device-bundleManager-function getAllBundleInstallInfo(): Promise<Array<Record<string, Object>>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -28,16 +28,16 @@ function getAllBundleInstallInfo(): Promise<Array<Record<string, Object>>>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;Record&lt;string, Object&gt;&gt;&gt; | The install information. |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;Record & lt;string, Object & gt; & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -92,11 +92,11 @@ function getAllBundleInstallInfo(): Promise<Array<Record<string, RecordData>>>
 
 **起始版本：** 24
 
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
+
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-bundleManager-function getAllBundleInstallInfo(): Promise<Array<Record<string, RecordData>>>--><!--Device-bundleManager-function getAllBundleInstallInfo(): Promise<Array<Record<string, RecordData>>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -104,18 +104,17 @@ function getAllBundleInstallInfo(): Promise<Array<Record<string, RecordData>>>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;&gt; | The install information. |
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
 参见 [getAllBundleInstallInfo](#getallbundleinstallinfo)
-

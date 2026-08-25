@@ -16,9 +16,7 @@ function totalEnergy(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-batteryInfo-function totalEnergy(): int--><!--Device-batteryInfo-function totalEnergy(): int-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -26,9 +24,9 @@ function totalEnergy(): int
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 返回当前设备电池的总容量，单位毫安时。 |
+| 类型 |
+| --- |
+| int |
 
 **示例**
 
@@ -37,4 +35,3 @@ function totalEnergy(): int
 let result = batteryInfo.totalEnergy();
 console.info("The result is: " + result);
 ```
-

@@ -2,9 +2,9 @@
 
 Enumerates the types of the file to read.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-photoAccessHelper-enum SourceMode--><!--Device-photoAccessHelper-enum SourceMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ ORIGINAL_MODE = 0
 
 Original file.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-SourceMode-ORIGINAL_MODE = 0--><!--Device-SourceMode-ORIGINAL_MODE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,11 +34,10 @@ EDITED_MODE = 1
 
 Edited file.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-SourceMode-EDITED_MODE = 1--><!--Device-SourceMode-EDITED_MODE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

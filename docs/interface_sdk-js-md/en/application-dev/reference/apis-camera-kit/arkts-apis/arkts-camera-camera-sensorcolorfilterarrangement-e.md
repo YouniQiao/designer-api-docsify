@@ -4,7 +4,7 @@ Enumerates the arrangement modes of the sensor color filter.
 
 **Since:** 24
 
-<!--Device-camera-enum SensorColorFilterArrangement--><!--Device-camera-enum SensorColorFilterArrangement-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -18,11 +18,11 @@ Blue-green-green-red filter arrangement.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-SensorColorFilterArrangement-BGGR = 0--><!--Device-SensorColorFilterArrangement-BGGR = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -36,11 +36,11 @@ Green-blue-red-green filter arrangement.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-SensorColorFilterArrangement-GBRG = 1--><!--Device-SensorColorFilterArrangement-GBRG = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -54,11 +54,11 @@ Green-red-blue-green arrangement mode.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-SensorColorFilterArrangement-GRBG = 2--><!--Device-SensorColorFilterArrangement-GRBG = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -72,11 +72,10 @@ Red-green-green-blue arrangement mode.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
-<!--Device-SensorColorFilterArrangement-RGGB = 3--><!--Device-SensorColorFilterArrangement-RGGB = 3-End-->
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
-

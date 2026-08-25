@@ -1,18 +1,19 @@
 # FormEditExtensionContext
 
 ```TypeScript
-export type FormEditExtensionContext = _FormEditExtensionContext
+export type FormEditExtensionContext = _FormEditExtensionContext.default
 ```
 
 The context of form edit extension. It allows access to formEditExtension-specific resources.
 
-**Since:** 23
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-common-export type FormEditExtensionContext = _FormEditExtensionContext--><!--Device-common-export type FormEditExtensionContext = _FormEditExtensionContext-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Ability.Form
 
-**Property type:** _FormEditExtensionContext
-
+**Property type:** _FormEditExtensionContext.default

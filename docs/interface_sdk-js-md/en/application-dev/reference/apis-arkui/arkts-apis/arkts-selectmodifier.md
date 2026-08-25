@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [SelectModifier](arkts-arkui-selectmodifier-c.md) | Defines Select Modifier@extends SelectAttribute @implements AttributeModifier&lt;SelectAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SelectModifier](arkts-arkui-selectmodifier-c.md) |

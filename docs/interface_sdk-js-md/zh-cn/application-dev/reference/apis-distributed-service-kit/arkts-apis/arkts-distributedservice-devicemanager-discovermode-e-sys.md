@@ -4,9 +4,9 @@
 
 **起始版本：** 7
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-deviceManager-enum DiscoverMode--><!--Device-deviceManager-enum DiscoverMode-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -22,9 +22,9 @@ DISCOVER_MODE_PASSIVE = 0x55
 
 **起始版本：** 7
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-DiscoverMode-DISCOVER_MODE_PASSIVE = 0x55--><!--Device-DiscoverMode-DISCOVER_MODE_PASSIVE = 0x55-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -40,11 +40,10 @@ DISCOVER_MODE_ACTIVE = 0xAA
 
 **起始版本：** 7
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-DiscoverMode-DISCOVER_MODE_ACTIVE = 0xAA--><!--Device-DiscoverMode-DISCOVER_MODE_ACTIVE = 0xAA-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
-

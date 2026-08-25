@@ -16,21 +16,20 @@ Unregister event callback for scanner device found.
 
 **Since:** 23
 
-**Required permissions:** ohos.permission.PRINT
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-scan-function offScanDeviceFound(callback?: Callback<ScannerDevice>): void--><!--Device-scan-function offScanDeviceFound(callback?: Callback<ScannerDevice>): void-End-->
+**Required permissions:** ohos.permission.PRINT
 
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ScannerDevice](arkts-basicservices-scan-scannerdevice-i.md)&gt; | No | Optional callback to unregister. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ScannerDevice](arkts-basicservices-scan-scannerdevice-i.md)&gt; | No |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |

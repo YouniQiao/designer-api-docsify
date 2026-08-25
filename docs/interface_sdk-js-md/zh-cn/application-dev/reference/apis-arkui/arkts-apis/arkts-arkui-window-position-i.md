@@ -2,9 +2,9 @@
 
 窗口或组件的位置。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-window-export interface Position--><!--Device-window-export interface Position-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -22,11 +22,11 @@ x: int
 
 x坐标，单位为px，该参数应为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Position-x: int--><!--Device-Position-x: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -38,11 +38,10 @@ y: int
 
 y坐标，单位为px，该参数应为整数。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Position-y: int--><!--Device-Position-y: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
-

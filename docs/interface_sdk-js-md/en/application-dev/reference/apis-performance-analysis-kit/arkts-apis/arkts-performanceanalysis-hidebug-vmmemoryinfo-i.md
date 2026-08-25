@@ -2,9 +2,9 @@
 
 Describes the VM memory information.@interface VMMemoryInfo
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-hidebug-interface VMMemoryInfo--><!--Device-hidebug-interface VMMemoryInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -24,9 +24,9 @@ Size of all array objects of the current VM, in KB.
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-VMMemoryInfo-allArraySize: bigint--><!--Device-VMMemoryInfo-allArraySize: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -40,9 +40,9 @@ Heap size used by the current VM, in KB.
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-VMMemoryInfo-heapUsed: bigint--><!--Device-VMMemoryInfo-heapUsed: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -56,9 +56,8 @@ Total heap size of the current VM, in KB.
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-VMMemoryInfo-totalHeap: bigint--><!--Device-VMMemoryInfo-totalHeap: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
-

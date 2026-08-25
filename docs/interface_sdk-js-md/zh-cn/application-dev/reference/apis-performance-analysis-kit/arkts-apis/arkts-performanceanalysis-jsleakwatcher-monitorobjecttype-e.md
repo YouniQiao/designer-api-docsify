@@ -2,9 +2,9 @@
 
 需要监控的组件对象类型枚举。
 
-**起始版本：** 26.1.0
+**起始版本：** 24
 
-<!--Device-jsLeakWatcher-export enum MonitorObjectType--><!--Device-jsLeakWatcher-export enum MonitorObjectType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
@@ -16,9 +16,9 @@ ALL = -1
 
 监测所有组件类型。
 
-**起始版本：** 26.1.0
+**起始版本：** 24
 
-<!--Device-MonitorObjectType-ALL = -1--><!--Device-MonitorObjectType-ALL = -1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
@@ -30,9 +30,9 @@ CUSTOM_COMPONENT = 1 << 0
 
 监测自定义组件类型。
 
-**起始版本：** 26.1.0
+**起始版本：** 24
 
-<!--Device-MonitorObjectType-CUSTOM_COMPONENT = 1 << 0--><!--Device-MonitorObjectType-CUSTOM_COMPONENT = 1 << 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
@@ -44,9 +44,9 @@ WINDOW = 1 << 1
 
 监测Window组件类型。
 
-**起始版本：** 26.1.0
+**起始版本：** 24
 
-<!--Device-MonitorObjectType-WINDOW = 1 << 1--><!--Device-MonitorObjectType-WINDOW = 1 << 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
@@ -58,9 +58,9 @@ NODE_CONTAINER = 1 << 2
 
 监测NodeContainer组件类型。
 
-**起始版本：** 26.1.0
+**起始版本：** 24
 
-<!--Device-MonitorObjectType-NODE_CONTAINER = 1 << 2--><!--Device-MonitorObjectType-NODE_CONTAINER = 1 << 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
@@ -72,9 +72,9 @@ X_COMPONENT = 1 << 3
 
 监测XComponent组件类型。
 
-**起始版本：** 26.1.0
+**起始版本：** 24
 
-<!--Device-MonitorObjectType-X_COMPONENT = 1 << 3--><!--Device-MonitorObjectType-X_COMPONENT = 1 << 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
@@ -86,9 +86,8 @@ ABILITY = 1 << 4
 
 监测Ability组件类型。
 
-**起始版本：** 26.1.0
+**起始版本：** 24
 
-<!--Device-MonitorObjectType-ABILITY = 1 << 4--><!--Device-MonitorObjectType-ABILITY = 1 << 4-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
-

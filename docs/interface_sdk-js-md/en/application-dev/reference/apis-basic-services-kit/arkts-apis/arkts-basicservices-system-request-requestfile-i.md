@@ -2,11 +2,11 @@
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** [File](arkts-basicservices-request-file-i.md)
-
-<!--Device-unnamed-export interface RequestFile--><!--Device-unnamed-export interface RequestFile-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -28,11 +28,11 @@ File name in the header when **multipart** is used.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** filename
-
-<!--Device-RequestFile-filename?: string--><!--Device-RequestFile-filename?: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -48,11 +48,11 @@ Name of a form item when **multipart** is used. The default value is **file**.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** name
-
-<!--Device-RequestFile-name?: string--><!--Device-RequestFile-name?: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -68,11 +68,11 @@ Type of the file content. By default, the type is obtained based on the extensio
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** contentType
-
-<!--Device-RequestFile-type?: string--><!--Device-RequestFile-type?: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -88,11 +88,10 @@ Local path for storing files.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** path
 
-<!--Device-RequestFile-uri: string--><!--Device-RequestFile-uri: string-End-->
-
 **System capability:** SystemCapability.MiscServices.Upload
-

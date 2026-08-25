@@ -8,9 +8,9 @@ Indicates the type of the result of batch operation.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-photoAccessHelper-type ResultListener = (result: ResultInfo) => void--><!--Device-photoAccessHelper-type ResultListener = (result: ResultInfo) => void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,7 +18,6 @@ Indicates the type of the result of batch operation.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| result | [ResultInfo](arkts-medialibrary-photoaccesshelper-resultinfo-i-sys.md) | Yes | result info. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| result | [ResultInfo](arkts-medialibrary-photoaccesshelper-resultinfo-i-sys.md) | Yes |

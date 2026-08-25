@@ -16,9 +16,9 @@ function offTouch(receiver?: TouchEventReceiver): void
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.INPUT_MONITORING
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-inputMonitor-function offTouch(receiver?: TouchEventReceiver): void--><!--Device-inputMonitor-function offTouch(receiver?: TouchEventReceiver): void-End-->
+**需要权限：** ohos.permission.INPUT_MONITORING
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
@@ -26,17 +26,17 @@ function offTouch(receiver?: TouchEventReceiver): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| receiver | [TouchEventReceiver](arkts-input-inputmonitor-toucheventreceiver-t-sys.md) | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| receiver | [TouchEventReceiver](arkts-input-inputmonitor-toucheventreceiver-t-sys.md) | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -75,4 +75,3 @@ struct Index {
   }
 }
 ```
-

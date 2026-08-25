@@ -4,7 +4,7 @@ Reader的实例表示该设备支持的SE，如果支持eSE、SIM和SIM2，则�
 
 **起始版本：** 10
 
-<!--Device-omapi-export interface Reader--><!--Device-omapi-export interface Reader-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -24,16 +24,16 @@ closeSessions(): void
 
 **起始版本：** 10
 
-<!--Device-Reader-closeSessions(): void--><!--Device-Reader-closeSessions(): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-se服务状态异常) | IllegalStateError, service state exception. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3300101](../errorcode-se.md#3300101-se服务状态异常) |
 
 **示例**
 
@@ -77,21 +77,21 @@ getName(): string
 
 **起始版本：** 10
 
-<!--Device-Reader-getName(): string--><!--Device-Reader-getName(): string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | [Reader]{ |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 **示例**
 
@@ -122,22 +122,22 @@ isSecureElementPresent(): boolean
 
 **起始版本：** 10
 
-<!--Device-Reader-isSecureElementPresent(): boolean--><!--Device-Reader-isSecureElementPresent(): boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true: 安全单元可用， false: 安全单元不可用。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-se服务状态异常) | IllegalStateError, service state exception. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3300101](../errorcode-se.md#3300101-se服务状态异常) |
 
 **示例**
 
@@ -168,23 +168,23 @@ openSession(): Session
 
 **起始版本：** 10
 
-<!--Device-Reader-openSession(): Session--><!--Device-Reader-openSession(): Session-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Session | 连接会话Session实例。 |
+| 类型 |
+| --- |
+| [Session](../../apis-camera-kit/arkts-apis/arkts-camera-camera-session-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-se服务状态异常) | IllegalStateError, service state exception. |
-| [3300104](../errorcode-se.md#3300104-se芯片io异常) | IOError, there is a communication problem to the reader or the SE. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3300101](../errorcode-se.md#3300101-se服务状态异常) |
+| [3300104](../errorcode-se.md#3300104-se芯片io异常) |
 
 **示例**
 
@@ -209,4 +209,3 @@ function secureElementDemo() {
     }
 }
 ```
-

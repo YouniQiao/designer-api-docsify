@@ -2,9 +2,9 @@
 
 The **motion** module provides the user motion awareness capabilities, including user gestures and actions.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-unnamed-declare namespace motion--><!--Device-unnamed-declare namespace motion-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -18,59 +18,58 @@ import { motion } from '@kit.MultimodalAwarenessKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getRecentOperatingHandStatus](arkts-multimodalawareness-motion-getrecentoperatinghandstatus-f.md) | Obtains the latest operating hand status. |
-| [off_holdingHandChanged](arkts-multimodalawareness-motion-offholdinghandchanged-f.md) | Disables listening for holding hand status changes. |
-| [off_operatingHandChanged](arkts-multimodalawareness-motion-offoperatinghandchanged-f.md) | Unsubscribes from operating hand change events. |
-| [offHoldingHandChanged](arkts-multimodalawareness-motion-offholdinghandchanged-f.md) | Unsubscribe from the holding hand changed event. |
-| [offOperatingHandChanged](arkts-multimodalawareness-motion-offoperatinghandchanged-f.md) | Unsubscribe from the operating hand changed event. |
-| [on_holdingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md) | Enables listening for holding hand status changes. |
-| [on_operatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md) | Subscribes to operating hand change events.If the device does not support this function, error code 801 is returned. |
-| [onHoldingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md) | Subscribe to detect the holding hand changed event. |
-| [onOperatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md) | Subscribe to detect the operating hand changed event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getRecentOperatingHandStatus](arkts-multimodalawareness-motion-getrecentoperatinghandstatus-f.md) |
+| [off](arkts-multimodalawareness-motion-off-f.md#offoperatinghandchanged) |
+| [off](arkts-multimodalawareness-motion-off-f.md#offholdinghandchanged) |
+| [offHoldingHandChanged](arkts-multimodalawareness-motion-offholdinghandchanged-f.md) |
+| [offOperatingHandChanged](arkts-multimodalawareness-motion-offoperatinghandchanged-f.md) |
+| [on](arkts-multimodalawareness-motion-on-f.md#onoperatinghandchanged) |
+| [on](arkts-multimodalawareness-motion-on-f.md#onholdinghandchanged) |
+| [onHoldingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md) |
+| [onOperatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md) |
 
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [offHoverHandChange](arkts-multimodalawareness-motion-offhoverhandchange-f-sys.md) | Unsubscribe to hover hand event. |
-| [offPickupChange](arkts-multimodalawareness-motion-offpickupchange-f-sys.md) | Unsubscribe to pick up sensor event. |
-| [offRotateChange](arkts-multimodalawareness-motion-offrotatechange-f-sys.md) | Unsubscribe to rotate sensor event. |
-| [offSmartRotateChange](arkts-multimodalawareness-motion-offsmartrotatechange-f-sys.md) | Unsubscribe to smart rotate sensor event. |
-| [onHoverHandChange](arkts-multimodalawareness-motion-onhoverhandchange-f-sys.md) | Subscribes to hover hand events and immediately starts detection for five seconds. |
-| [onHoverHandChange](arkts-multimodalawareness-motion-onhoverhandchange-f-sys.md) | Subscribes to hover hand events and immediately starts detection. |
-| [onPickupChange](arkts-multimodalawareness-motion-onpickupchange-f-sys.md) | Subscribe to pick up sensor event. |
-| [onRotateChange](arkts-multimodalawareness-motion-onrotatechange-f-sys.md) | Subscribe to rotate sensor event. |
-| [onSmartRotateChange](arkts-multimodalawareness-motion-onsmartrotatechange-f-sys.md) | Subscribe to smart rotate sensor event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [offHoverHandChange](arkts-multimodalawareness-motion-offhoverhandchange-f-sys.md) |
+| [offPickupChange](arkts-multimodalawareness-motion-offpickupchange-f-sys.md) |
+| [offRotateChange](arkts-multimodalawareness-motion-offrotatechange-f-sys.md) |
+| [offSmartRotateChange](arkts-multimodalawareness-motion-offsmartrotatechange-f-sys.md) |
+| [onHoverHandChange](arkts-multimodalawareness-motion-onhoverhandchange-f-sys.md) |
+| [onHoverHandChange](arkts-multimodalawareness-motion-onhoverhandchange-f-sys.md) |
+| [onPickupChange](arkts-multimodalawareness-motion-onpickupchange-f-sys.md) |
+| [onRotateChange](arkts-multimodalawareness-motion-onrotatechange-f-sys.md) |
+| [onSmartRotateChange](arkts-multimodalawareness-motion-onsmartrotatechange-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [HoverHandDetectionArea](arkts-multimodalawareness-motion-hoverhanddetectionarea-i-sys.md) | The basic data structure of the hover hand detection area. |
-| [SmartRotateEvent](arkts-multimodalawareness-motion-smartrotateevent-i-sys.md) | The basic data structure of the smart rotate sensor event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [HoverHandDetectionArea](arkts-multimodalawareness-motion-hoverhanddetectionarea-i-sys.md) |
+| [SmartRotateEvent](arkts-multimodalawareness-motion-smartrotateevent-i-sys.md) |
 <!--DelEnd-->
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [HoldingHandStatus](arkts-multimodalawareness-motion-holdinghandstatus-e.md) | Represents the holding hand status. The holding hand status is returned if listening for holding hand status changes is enabled. |
-| [OperatingHandStatus](arkts-multimodalawareness-motion-operatinghandstatus-e.md) | Defines the status of the operating hand. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [HoldingHandStatus](arkts-multimodalawareness-motion-holdinghandstatus-e.md) |
+| [OperatingHandStatus](arkts-multimodalawareness-motion-operatinghandstatus-e.md) |
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [HoverHandAction](arkts-multimodalawareness-motion-hoverhandaction-e-sys.md) | Enum for hover hand actions. |
-| [LogicalOrientation](arkts-multimodalawareness-motion-logicalorientation-e-sys.md) | Enum for logical orientation calculated by smart algorithms. |
-| [PhysicalOrientation](arkts-multimodalawareness-motion-physicalorientation-e-sys.md) | Enum for physical orientation detected by the sensor. |
-| [PickupEvent](arkts-multimodalawareness-motion-pickupevent-e-sys.md) | Enum for pickup event. |
-| [RotateEvent](arkts-multimodalawareness-motion-rotateevent-e-sys.md) | Enum for rotate event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [HoverHandAction](arkts-multimodalawareness-motion-hoverhandaction-e-sys.md) |
+| [LogicalOrientation](arkts-multimodalawareness-motion-logicalorientation-e-sys.md) |
+| [PhysicalOrientation](arkts-multimodalawareness-motion-physicalorientation-e-sys.md) |
+| [PickupEvent](arkts-multimodalawareness-motion-pickupevent-e-sys.md) |
+| [RotateEvent](arkts-multimodalawareness-motion-rotateevent-e-sys.md) |
 <!--DelEnd-->
-

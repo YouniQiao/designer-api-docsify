@@ -8,19 +8,18 @@ Enumerates the states of the download task.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-media-type AVDownloadTaskState = 'init' | 'queued' | 'running' | 'completed' | 'paused' | 'removing' | 'error'--><!--Device-media-type AVDownloadTaskState = 'init' | 'queued' | 'running' | 'completed' | 'paused' | 'removing' | 'error'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
-| Type | Description |
-| --- | --- |
-| 'init' |  |
-| 'queued' |  |
-| 'running' |  |
-| 'completed' |  |
-| 'paused' |  |
-| 'removing' |  |
-| 'error' |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'init' |
+| 'queued' |
+| 'running' |
+| 'completed' |
+| 'paused' |
+| 'removing' |
+| 'error' |

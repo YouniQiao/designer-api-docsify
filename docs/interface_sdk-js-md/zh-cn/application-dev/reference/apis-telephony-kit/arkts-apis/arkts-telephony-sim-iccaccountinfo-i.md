@@ -2,9 +2,9 @@
 
 Icc账户信息。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-sim-export interface IccAccountInfo--><!--Device-sim-export interface IccAccountInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -24,9 +24,9 @@ ICCID号码。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-IccAccountInfo-iccId: string--><!--Device-IccAccountInfo-iccId: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -41,9 +41,9 @@ isActive: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-IccAccountInfo-isActive: boolean--><!--Device-IccAccountInfo-isActive: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -58,9 +58,9 @@ isEsim: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-IccAccountInfo-isEsim: boolean--><!--Device-IccAccountInfo-isEsim: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -74,9 +74,9 @@ SIM卡显示名称。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-IccAccountInfo-showName: string--><!--Device-IccAccountInfo-showName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -90,9 +90,9 @@ SIM卡显示号码。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-IccAccountInfo-showNumber: string--><!--Device-IccAccountInfo-showNumber: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -104,11 +104,11 @@ simId: int
 
 SIM卡ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-IccAccountInfo-simId: int--><!--Device-IccAccountInfo-simId: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -120,11 +120,10 @@ slotIndex: int
 
 卡槽ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-IccAccountInfo-slotIndex: int--><!--Device-IccAccountInfo-slotIndex: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
-

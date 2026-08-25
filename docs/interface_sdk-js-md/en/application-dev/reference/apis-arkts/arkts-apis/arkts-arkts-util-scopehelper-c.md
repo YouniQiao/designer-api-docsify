@@ -4,7 +4,7 @@ Provides APIs to define the valid range of a field. The constructor of this clas
 
 **Since:** 9
 
-<!--Device-util-class ScopeHelper--><!--Device-util-class ScopeHelper-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -24,23 +24,23 @@ Limits a value to this **Scope**.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-ScopeHelper-clamp(value: ScopeType): ScopeType--><!--Device-ScopeHelper-clamp(value: ScopeType): ScopeType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Yes | Value specified. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Returns **lowerObj** if the specified value is less than the lower limit; returns **upperObj** if the specified value is greater than the upper limit; returns the specified value if it is within this **Scope**. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) |
 
 **Examples**
 
@@ -114,18 +114,18 @@ A constructor used to create a **ScopeHelper** object with the specified upper a
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-ScopeHelper-constructor(lowerObj: ScopeType, upperObj: ScopeType)--><!--Device-ScopeHelper-constructor(lowerObj: ScopeType, upperObj: ScopeType)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| lowerObj | [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Yes | Lower limit of the **Scope** object. |
-| upperObj | [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Yes | Upper limit of the **Scope** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes |
 
 **Examples**
 
@@ -245,23 +245,23 @@ Checks whether a range is within this **Scope**.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-ScopeHelper-contains(value: ScopeType): boolean--><!--Device-ScopeHelper-contains(value: ScopeType): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Yes | Value specified. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** is returned if the value is within this **Scope**; otherwise, **false** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -415,23 +415,23 @@ Checks whether a range is within this **Scope**.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-ScopeHelper-contains(range: ScopeHelper): boolean--><!--Device-ScopeHelper-contains(range: ScopeHelper): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| range | [ScopeHelper](../../apis-default/arkts-apis/arkts-util-scopehelper-c.md) | Yes | Scope** specified. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| range | [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** is returned if the range is within this **Scope**; otherwise, **false** is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -447,24 +447,24 @@ Obtains the union set of this **Scope** and the given lower and upper limits.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-ScopeHelper-expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper--><!--Device-ScopeHelper-expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| lowerObj | [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Yes | Lower limit. |
-| upperObj | [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Yes | Upper limit. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ScopeHelper](../../apis-default/arkts-apis/arkts-util-scopehelper-c.md) | Union set of this **Scope** and the given lower and upper limits. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [ScopeHelper](arkts-arkts-util-scopehelper-c.md) |
 
 **Examples**
 
@@ -664,23 +664,23 @@ Obtains the union set of this **Scope** and the given **Scope**.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-ScopeHelper-expand(range: ScopeHelper): ScopeHelper--><!--Device-ScopeHelper-expand(range: ScopeHelper): ScopeHelper-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| range | [ScopeHelper](../../apis-default/arkts-apis/arkts-util-scopehelper-c.md) | Yes | Scope** specified. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| range | [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ScopeHelper](../../apis-default/arkts-apis/arkts-util-scopehelper-c.md) | Union set of this **Scope** and the given **Scope**. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [ScopeHelper](arkts-arkts-util-scopehelper-c.md) |
 
 **Examples**
 
@@ -696,23 +696,23 @@ Obtains the union set of this **Scope** and the given value.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-ScopeHelper-expand(value: ScopeType): ScopeHelper--><!--Device-ScopeHelper-expand(value: ScopeType): ScopeHelper-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Yes | Value specified. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ScopeHelper](../../apis-default/arkts-apis/arkts-util-scopehelper-c.md) | Union set of this **Scope** and the given value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [ScopeHelper](arkts-arkts-util-scopehelper-c.md) |
 
 **Examples**
 
@@ -728,17 +728,17 @@ Obtains the lower limit of this **Scope**.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-ScopeHelper-getLower(): ScopeType--><!--Device-ScopeHelper-getLower(): ScopeType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Lower limit of this **Scope**. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) |
 
 **Examples**
 
@@ -810,17 +810,17 @@ Obtains the upper limit of this **Scope**.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-ScopeHelper-getUpper(): ScopeType--><!--Device-ScopeHelper-getUpper(): ScopeType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Upper limit of this **Scope**. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) |
 
 **Examples**
 
@@ -892,23 +892,23 @@ Obtains the intersection of this **Scope** and the given **Scope**. If the inter
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-ScopeHelper-intersect(range: ScopeHelper): ScopeHelper--><!--Device-ScopeHelper-intersect(range: ScopeHelper): ScopeHelper-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| range | [ScopeHelper](../../apis-default/arkts-apis/arkts-util-scopehelper-c.md) | Yes | Scope** specified. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| range | [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ScopeHelper](../../apis-default/arkts-apis/arkts-util-scopehelper-c.md) | Intersection of this **Scope** and the given **Scope**. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [ScopeHelper](arkts-arkts-util-scopehelper-c.md) |
 
 **Examples**
 
@@ -1048,24 +1048,24 @@ Obtains the intersection of this **Scope** and the given lower and upper limits.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-ScopeHelper-intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper--><!--Device-ScopeHelper-intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| lowerObj | [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Yes | Lower limit. |
-| upperObj | [ScopeType](../../apis-default/arkts-apis/arkts-util-scopetype-t.md) | Yes | Upper limit. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ScopeHelper](../../apis-default/arkts-apis/arkts-util-scopehelper-c.md) | Intersection of this **Scope** and the given lower and upper limits. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [ScopeHelper](arkts-arkts-util-scopehelper-c.md) |
 
 **Examples**
 
@@ -1081,17 +1081,17 @@ Obtains a string representation that contains this **Scope**.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-ScopeHelper-toString(): string--><!--Device-ScopeHelper-toString(): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | String representation containing the **Scope**. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -1188,4 +1188,3 @@ let result = range.toString();
 console.info("result = " + result);
 // Output: result = [30, 40]
 ```
-

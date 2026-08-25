@@ -6,11 +6,11 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 13
 
-**Substitutes:** NavPathStack and navDestination
-
-<!--Device-unnamed-declare class NavRouterAttribute--><!--Device-unnamed-declare class NavRouterAttribute-End-->
+**Substitutes:** NavPathStack
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,6 +31,8 @@ Sets the route mode used for redirecting the user from the **NavRouter** compone
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 13
 
 **Substitutes:** LaunchMode
@@ -39,15 +41,13 @@ Sets the route mode used for redirecting the user from the **NavRouter** compone
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-NavRouterAttribute-mode(mode: NavRouteMode): NavRouterAttribute--><!--Device-NavRouterAttribute-mode(mode: NavRouteMode): NavRouterAttribute-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | [NavRouteMode](arkts-arkui-navroutemode-e.md) | Yes | Route mode used for redirection.<br>Default value: **NavRouteMode.PUSH_WITH_RECREATE |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [mode](#mode) | [NavRouteMode](arkts-arkui-navroutemode-e.md) | Yes |
 
 ## onStateChange
 
@@ -61,19 +61,18 @@ Called when the component activation status changes. **onStateChange(true)** is 
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 13
 
 **Substitutes:** onShown
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-NavRouterAttribute-onStateChange(callback: (isActivated: boolean) => void): NavRouterAttribute--><!--Device-NavRouterAttribute-onStateChange(callback: (isActivated: boolean) => void): NavRouterAttribute-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (isActivated: boolean) =&gt; void | Yes | Component activation status. The value **true** means that component is activated, and **false** means the opposite. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | (isActivated: boolean) = & gt; void | Yes |

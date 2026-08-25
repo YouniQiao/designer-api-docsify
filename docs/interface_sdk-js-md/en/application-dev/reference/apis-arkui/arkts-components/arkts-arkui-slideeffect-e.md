@@ -4,7 +4,7 @@ Slide-in and slide-out effects for page transitions.@enum { number }
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum SlideEffect--><!--Device-unnamed-declare enum SlideEffect-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ When set to Enter, slides in from the left. When set to Exit, slides out to the 
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SlideEffect-Left--><!--Device-SlideEffect-Left-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,9 @@ When set to Enter, slides in from the right. When set to Exit, slides out to the
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SlideEffect-Right--><!--Device-SlideEffect-Right-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,9 +50,9 @@ When set to Enter, slides in from the top. When set to Exit, slides out to the t
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SlideEffect-Top--><!--Device-SlideEffect-Top-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,9 +66,9 @@ When set to Enter, slides in from the bottom. When set to Exit, slides out to th
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SlideEffect-Bottom--><!--Device-SlideEffect-Bottom-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,11 +82,11 @@ Left-to-right scripts: When set to Enter, slides in from the left; when set to E
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SlideEffect-START = 5--><!--Device-SlideEffect-START = 5-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,11 +100,10 @@ Left-to-right scripts: When set to Enter, slides in from the right; when set to 
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-SlideEffect-END = 6--><!--Device-SlideEffect-END = 6-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

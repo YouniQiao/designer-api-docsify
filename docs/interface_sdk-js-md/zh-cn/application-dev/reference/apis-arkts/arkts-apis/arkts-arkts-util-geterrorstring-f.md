@@ -16,25 +16,25 @@ function getErrorString(errno: number): string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [errnoToString](arkts-arkts-util-errnotostring-f.md)
-
-<!--Device-util-function getErrorString(errno: number): string--><!--Device-util-function getErrorString(errno: number): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| errno | number | 是 | 生成的错误码。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [errno](../../apis-universal-keystore-kit/arkts-apis/arkts-universalkeystore-huksexternalcrypto-huksexternalerrorinfo-i.md) | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 错误码的详细信息。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -44,4 +44,3 @@ let result = util.getErrorString(errnum);
 console.info("result = " + result);
 // 输出结果：result = operation not permitted
 ```
-

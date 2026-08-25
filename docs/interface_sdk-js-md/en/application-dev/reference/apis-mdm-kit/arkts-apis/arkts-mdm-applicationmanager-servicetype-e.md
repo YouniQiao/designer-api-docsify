@@ -4,7 +4,7 @@ Distributed service type.
 
 **Since:** 26.0.0
 
-<!--Device-applicationManager-enum ServiceType--><!--Device-applicationManager-enum ServiceType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,9 +18,8 @@ Collaboration service. Applications allowed to use the collaboration service can
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ServiceType-COLLABORATION_SERVICE  = 0--><!--Device-ServiceType-COLLABORATION_SERVICE  = 0-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

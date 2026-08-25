@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-util-class StringDecoder--><!--Device-util-class StringDecoder-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -24,17 +24,17 @@ constructor(encoding?: string)
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-StringDecoder-constructor(encoding?: string)--><!--Device-StringDecoder-constructor(encoding?: string)-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| encoding | string | 否 | 输入数据的编码类型。默认值为 **utf-8**。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| encoding | string | 否 |
 
 **示例**
 
@@ -189,23 +189,23 @@ end(chunk?: string | Uint8Array): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-StringDecoder-end(chunk?: string | Uint8Array): string--><!--Device-StringDecoder-end(chunk?: string | Uint8Array): string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| chunk | string \| Uint8Array | 否 | 要解码的字符串。默认值为 **undefined**。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| chunk | string \| Uint8Array | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 解码后的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -230,23 +230,23 @@ write(chunk: string | Uint8Array): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-StringDecoder-write(chunk: string | Uint8Array): string--><!--Device-StringDecoder-write(chunk: string | Uint8Array): string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| chunk | string \| Uint8Array | 是 | 要解码的字符串。基于输入的编码类型进行解码。如果输入为 Uint8Array 类型， 则正常解码。如果输入为字符串类型，则直接返回该参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| chunk | string \| Uint8Array | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 解码后的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -257,4 +257,3 @@ const decoded = decoder.write(input);
 console.info("decoded:", decoded);
 // 输出结果：decoded: 你好
 ```
-

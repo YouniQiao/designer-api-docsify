@@ -6,7 +6,7 @@
 
 **起始版本：** 9
 
-<!--Device-unnamed-declare class ListItemGroupAttribute--><!--Device-unnamed-declare class ListItemGroupAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,19 +29,19 @@ childrenMainSize(value: ChildrenMainSize)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ListItemGroupAttribute-childrenMainSize(value: ChildrenMainSize): ListItemGroupAttribute--><!--Device-ListItemGroupAttribute-childrenMainSize(value: ChildrenMainSize): ListItemGroupAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ChildrenMainSize | 是 | 该对象用来维护子组件在主轴方向的大小信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ChildrenMainSize](#childrenmainsize) | 是 |
 
 ## divider
 
@@ -55,15 +55,14 @@ divider(
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-ListItemGroupAttribute-divider(    value: ListDividerOptions | null,  ): ListItemGroupAttribute--><!--Device-ListItemGroupAttribute-divider(    value: ListDividerOptions | null,  ): ListItemGroupAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ListDividerOptions \| null | 是 | ListItem分割线样式。<br/> 默认值：null [since 18] |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | ListDividerOptions \| null | 是 |

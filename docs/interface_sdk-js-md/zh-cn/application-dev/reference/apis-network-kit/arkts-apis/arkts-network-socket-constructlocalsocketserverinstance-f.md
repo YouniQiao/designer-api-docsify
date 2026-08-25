@@ -16,15 +16,15 @@ function constructLocalSocketServerInstance(): LocalSocketServer
 
 **起始版本：** 11
 
-<!--Device-socket-function constructLocalSocketServerInstance(): LocalSocketServer--><!--Device-socket-function constructLocalSocketServerInstance(): LocalSocketServer-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [LocalSocketServer](arkts-network-socket-localsocketserver-i.md) | 返回一个LocalSocketServer对象。 |
+| 类型 |
+| --- |
+| [LocalSocketServer](arkts-network-socket-localsocketserver-i.md) |
 
 **示例**
 
@@ -32,4 +32,3 @@ function constructLocalSocketServerInstance(): LocalSocketServer
 import { socket } from '@kit.NetworkKit';
 let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
 ```
-

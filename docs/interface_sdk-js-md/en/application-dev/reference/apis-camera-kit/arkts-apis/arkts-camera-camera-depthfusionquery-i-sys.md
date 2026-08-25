@@ -2,9 +2,9 @@
 
 A class for querying depth fusion capabilities.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-camera-interface DepthFusionQuery--><!--Device-camera-interface DepthFusionQuery-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -18,15 +18,21 @@ import { camera } from '@kit.CameraKit';
 
 ## getDepthFusionThreshold
 
+ArkTS-Dyn:
+```TypeScript
+getDepthFusionThreshold(): Array<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getDepthFusionThreshold(): Array<double>
 ```
 
 Obtains the depth fusion threshold.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-DepthFusionQuery-getDepthFusionThreshold(): Array<double>--><!--Device-DepthFusionQuery-getDepthFusionThreshold(): Array<double>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -34,16 +40,16 @@ Obtains the depth fusion threshold.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;double&gt; | Depth fusion threshold. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;double & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 **Examples**
 
@@ -69,9 +75,9 @@ isDepthFusionSupported(): boolean
 
 Checks whether depth fusion is supported.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-DepthFusionQuery-isDepthFusionSupported(): boolean--><!--Device-DepthFusionQuery-isDepthFusionSupported(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -79,16 +85,16 @@ Checks whether depth fusion is supported.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Check result for the support of depth fusion. **true** if supported, **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 **Examples**
 
@@ -105,4 +111,3 @@ function isDepthFusionSupported(DepthFusionQuery: camera.DepthFusionQuery): void
   }
 }
 ```
-

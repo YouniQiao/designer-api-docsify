@@ -4,7 +4,7 @@ Represents the EAP profile information.
 
 **Since:** 20
 
-<!--Device-eap-interface EthEapProfile--><!--Device-eap-interface EthEapProfile-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -26,7 +26,7 @@ A string to match the alternate subject.
 
 **Since:** 20
 
-<!--Device-EthEapProfile-altSubjectMatch: string--><!--Device-EthEapProfile-altSubjectMatch: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -42,7 +42,7 @@ Anonymous identity.
 
 **Since:** 20
 
-<!--Device-EthEapProfile-anonymousIdentity: string--><!--Device-EthEapProfile-anonymousIdentity: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -58,7 +58,7 @@ CA certificate alias.
 
 **Since:** 20
 
-<!--Device-EthEapProfile-caCertAliases: string--><!--Device-EthEapProfile-caCertAliases: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -74,7 +74,7 @@ CA certificate path.
 
 **Since:** 20
 
-<!--Device-EthEapProfile-caPath: string--><!--Device-EthEapProfile-caPath: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -90,7 +90,7 @@ CA certificate content.
 
 **Since:** 20
 
-<!--Device-EthEapProfile-certEntry: Uint8Array--><!--Device-EthEapProfile-certEntry: Uint8Array-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -106,7 +106,7 @@ CA certificate password.
 
 **Since:** 20
 
-<!--Device-EthEapProfile-certPassword: string--><!--Device-EthEapProfile-certPassword: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -122,7 +122,7 @@ Client certificate alias.
 
 **Since:** 20
 
-<!--Device-EthEapProfile-clientCertAliases: string--><!--Device-EthEapProfile-clientCertAliases: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -138,7 +138,7 @@ A string to match the domain suffix.
 
 **Since:** 20
 
-<!--Device-EthEapProfile-domainSuffixMatch: string--><!--Device-EthEapProfile-domainSuffixMatch: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -154,23 +154,23 @@ EAP authentication method.
 
 **Since:** 20
 
-<!--Device-EthEapProfile-eapMethod: EapMethod--><!--Device-EthEapProfile-eapMethod: EapMethod-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## eapSubId
 
 ```TypeScript
-eapSubId: int
+eapSubId: number
 ```
 
 Sub-ID of the SIM card.
 
-**Type:** int
+**Type:** number
 
 **Since:** 20
 
-<!--Device-EthEapProfile-eapSubId: int--><!--Device-EthEapProfile-eapSubId: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -186,7 +186,7 @@ Identity information.
 
 **Since:** 20
 
-<!--Device-EthEapProfile-identity: string--><!--Device-EthEapProfile-identity: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -202,7 +202,7 @@ Password.
 
 **Since:** 20
 
-<!--Device-EthEapProfile-password: string--><!--Device-EthEapProfile-password: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -218,7 +218,7 @@ Phase 2 authentication method.
 
 **Since:** 20
 
-<!--Device-EthEapProfile-phase2Method: Phase2Method--><!--Device-EthEapProfile-phase2Method: Phase2Method-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -234,7 +234,7 @@ Public land mobile network (PLMN) of the passpoint credential provider.
 
 **Since:** 20
 
-<!--Device-EthEapProfile-plmn: string--><!--Device-EthEapProfile-plmn: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -250,7 +250,6 @@ Realm for the passpoint credential.
 
 **Since:** 20
 
-<!--Device-EthEapProfile-realm: string--><!--Device-EthEapProfile-realm: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
-

@@ -2,9 +2,9 @@
 
 The event types represented by XML elements.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-xml-enum EventType--><!--Device-xml-enum EventType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -16,11 +16,11 @@ START_DOCUMENT
 
 Start a document.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EventType-START_DOCUMENT--><!--Device-EventType-START_DOCUMENT-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -32,11 +32,11 @@ END_DOCUMENT
 
 End a document.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EventType-END_DOCUMENT--><!--Device-EventType-END_DOCUMENT-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -48,11 +48,11 @@ START_TAG
 
 Start a tag.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EventType-START_TAG--><!--Device-EventType-START_TAG-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -64,11 +64,11 @@ END_TAG
 
 End a tag.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EventType-END_TAG--><!--Device-EventType-END_TAG-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -80,11 +80,11 @@ TEXT
 
 Character data.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EventType-TEXT--><!--Device-EventType-TEXT-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -96,11 +96,11 @@ CDSECT
 
 A CDATA sections.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EventType-CDSECT--><!--Device-EventType-CDSECT-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -112,11 +112,11 @@ COMMENT
 
 An XML comment.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EventType-COMMENT--><!--Device-EventType-COMMENT-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -128,11 +128,11 @@ DOCDECL
 
 An XML document type declaration.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EventType-DOCDECL--><!--Device-EventType-DOCDECL-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -144,11 +144,11 @@ INSTRUCTION
 
 An XML processing instruction declaration.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EventType-INSTRUCTION--><!--Device-EventType-INSTRUCTION-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -160,11 +160,11 @@ ENTITY_REFERENCE
 
 An entity reference.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EventType-ENTITY_REFERENCE--><!--Device-EventType-ENTITY_REFERENCE-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -176,11 +176,10 @@ WHITESPACE
 
 A whitespace.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-EventType-WHITESPACE--><!--Device-EventType-WHITESPACE-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

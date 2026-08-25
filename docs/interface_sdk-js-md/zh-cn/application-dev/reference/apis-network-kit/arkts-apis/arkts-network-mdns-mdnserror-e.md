@@ -4,7 +4,7 @@ MDNS错误信息。
 
 **起始版本：** 10
 
-<!--Device-mdns-export enum MdnsError--><!--Device-mdns-export enum MdnsError-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
@@ -18,9 +18,9 @@ INTERNAL_ERROR = 0
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-MdnsError-INTERNAL_ERROR = 0--><!--Device-MdnsError-INTERNAL_ERROR = 0-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
@@ -34,9 +34,9 @@ ALREADY_ACTIVE = 1
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-MdnsError-ALREADY_ACTIVE = 1--><!--Device-MdnsError-ALREADY_ACTIVE = 1-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
@@ -50,9 +50,8 @@ MAX_LIMIT = 2
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MdnsError-MAX_LIMIT = 2--><!--Device-MdnsError-MAX_LIMIT = 2-End-->
-
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
-

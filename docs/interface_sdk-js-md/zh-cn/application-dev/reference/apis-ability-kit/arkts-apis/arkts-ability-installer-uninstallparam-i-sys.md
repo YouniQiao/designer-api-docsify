@@ -2,9 +2,9 @@
 
 共享包卸载需指定的参数信息。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-installer-export interface UninstallParam--><!--Device-installer-export interface UninstallParam-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -26,9 +26,9 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-UninstallParam-bundleName: string--><!--Device-UninstallParam-bundleName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -42,13 +42,12 @@ versionCode?: int
 
 指示共享包的版本号。默认值：如果不填写versionCode，则卸载该包名的所有共享包。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-UninstallParam-versionCode?: int--><!--Device-UninstallParam-versionCode?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
-

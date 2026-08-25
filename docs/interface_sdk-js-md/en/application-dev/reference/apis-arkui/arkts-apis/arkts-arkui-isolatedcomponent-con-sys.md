@@ -10,9 +10,9 @@ Defines IsolatedComponent Component.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-unnamed-declare const IsolatedComponent: IsolatedComponentInterface--><!--Device-unnamed-declare const IsolatedComponent: IsolatedComponentInterface-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +28,10 @@ Defines IsolatedComponent Component instance.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-unnamed-declare const IsolatedComponentInstance: IsolatedComponentAttribute--><!--Device-unnamed-declare const IsolatedComponentInstance: IsolatedComponentAttribute-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

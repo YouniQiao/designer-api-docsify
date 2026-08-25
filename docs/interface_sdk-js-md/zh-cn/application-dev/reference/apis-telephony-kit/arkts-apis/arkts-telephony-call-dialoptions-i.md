@@ -2,9 +2,9 @@
 
 拨打电话的可选参数。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-call-export interface DialOptions--><!--Device-call-export interface DialOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -25,9 +25,8 @@ extras?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-DialOptions-extras?: boolean--><!--Device-DialOptions-extras?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
-

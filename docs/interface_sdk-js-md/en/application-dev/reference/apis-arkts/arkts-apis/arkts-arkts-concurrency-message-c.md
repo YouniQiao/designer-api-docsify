@@ -4,9 +4,7 @@ Represents a message that can be sent to a MessageHandler for processing
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-concurrency-export class Message--><!--Device-concurrency-export class Message-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,19 +23,17 @@ Constructs a new Message with a handler
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Message-constructor(handler: concurrency.MessageHandler)--><!--Device-Message-constructor(handler: concurrency.MessageHandler)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| handler | concurrency.MessageHandler | Yes | the handler to process this message. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| handler | concurrency.MessageHandler | Yes |
 
 ## constructor
 
@@ -49,20 +45,18 @@ Constructs a new Message with a what code and handler
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Message-constructor(what: int, handler: concurrency.MessageHandler)--><!--Device-Message-constructor(what: int, handler: concurrency.MessageHandler)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| what | int | Yes | the message code. <br>The value should be an integer. |
-| handler | concurrency.MessageHandler | Yes | the handler to process this message. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| what | int | Yes |
+| handler | concurrency.MessageHandler | Yes |
 
 ## constructor
 
@@ -74,21 +68,19 @@ Constructs a new Message with a what code, object, and handler
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Message-constructor(what: int, obj: Any, handler: concurrency.MessageHandler)--><!--Device-Message-constructor(what: int, obj: Any, handler: concurrency.MessageHandler)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| what | int | Yes | the message code. <br>The value should be an integer. |
-| obj | Any | Yes | the object attached to this message. |
-| handler | concurrency.MessageHandler | Yes | the handler to process this message. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| what | int | Yes |
+| obj | Any | Yes |
+| handler | concurrency.MessageHandler | Yes |
 
 ## constructor
 
@@ -100,20 +92,18 @@ Constructs a new Message with a callback and handler
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Message-constructor(callback: () => void, handler: concurrency.MessageHandler)--><!--Device-Message-constructor(callback: () => void, handler: concurrency.MessageHandler)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | () =&gt; void | Yes | the callback to execute when this message is processed. |
-| handler | concurrency.MessageHandler | Yes | the handler to process this message. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | () = & gt; void | Yes |
+| handler | concurrency.MessageHandler | Yes |
 
 ## equals
 
@@ -125,25 +115,23 @@ Compares this message with another for equality
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Message-equals(other: concurrency.Message): boolean--><!--Device-Message-equals(other: concurrency.Message): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [concurrency.Message](arkts-arkts-concurrency-message-c.md) | Yes | the other message to compare with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [concurrency.Message](arkts-arkts-concurrency-message-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the messages are equal, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## getCallback
 
@@ -155,19 +143,17 @@ Returns the callback of this message
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Message-getCallback(): (() => void) | undefined--><!--Device-Message-getCallback(): (() => void) | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [function](arkts-arkts-taskpool-task-c.md) \| undefined | the callback, or undefined if not set |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [function](arkts-arkts-taskpool-task-c.md) \| undefined |
 
 ## getObject
 
@@ -179,19 +165,17 @@ Returns the object attached to this message
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Message-getObject(): Any--><!--Device-Message-getObject(): Any-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Any | the object |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Any |
 
 ## getTarget
 
@@ -203,19 +187,17 @@ Returns the target handler of this message
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Message-getTarget(): concurrency.MessageHandler--><!--Device-Message-getTarget(): concurrency.MessageHandler-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| concurrency.MessageHandler | the target handler |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| concurrency.MessageHandler |
 
 ## getWhat
 
@@ -227,19 +209,17 @@ Returns the what code of this message
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Message-getWhat(): int--><!--Device-Message-getWhat(): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | the what code |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## sendToTarget
 
@@ -251,11 +231,8 @@ Sends this message to its target handler
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Message-sendToTarget(): void--><!--Device-Message-sendToTarget(): void-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

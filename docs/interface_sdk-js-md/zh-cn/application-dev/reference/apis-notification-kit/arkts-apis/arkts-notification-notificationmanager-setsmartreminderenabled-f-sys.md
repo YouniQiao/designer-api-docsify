@@ -14,11 +14,11 @@ function setSmartReminderEnabled(deviceType: string, enable: boolean): Promise<v
 
 设置设备是否与其他设备协同智能提醒。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
-
-<!--Device-notificationManager-function setSmartReminderEnabled(deviceType: string, enable: boolean): Promise<void>--><!--Device-notificationManager-function setSmartReminderEnabled(deviceType: string, enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -26,31 +26,31 @@ function setSmartReminderEnabled(deviceType: string, enable: boolean): Promise<v
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| deviceType | string | 是 | 设备类型。 |
-| enable | boolean | 是 | 指定应用是否支持设备是否与其他设备协同智能提醒（true：支持，false：不支持）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| deviceType | string | 是 |
+| enable | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600010](../errorcode-notification.md#1600010-分布式操作失败) | Distributed operation failed. |
-| [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1600001](../errorcode-notification.md#1600001-内部错误) |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
+| [1600010](../errorcode-notification.md#1600010-分布式操作失败) |
+| [1600012](../errorcode-notification.md#1600012-内存空间不足) |
+| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 **示例**
 
@@ -82,4 +82,3 @@ notificationManager.setSmartReminderEnabled(deviceType, enable).then(() => {
     console.error(`setSmartReminderEnabled failed, code is ${error.code}, message is ${error.message}`);
 });
 ```
-

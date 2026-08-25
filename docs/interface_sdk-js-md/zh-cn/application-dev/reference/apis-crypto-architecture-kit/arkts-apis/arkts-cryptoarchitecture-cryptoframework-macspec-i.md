@@ -5,9 +5,9 @@
 > **说明：**&gt;
 > algName是必选参数，表示消息认证码算法。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-cryptoFramework-interface MacSpec--><!--Device-cryptoFramework-interface MacSpec-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Mac
 
@@ -27,11 +27,10 @@ algName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-MacSpec-algName: string--><!--Device-MacSpec-algName: string-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Mac
-

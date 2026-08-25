@@ -4,7 +4,7 @@ Enumerates DLP statuses.
 
 **Since:** 26.0.0
 
-<!--Device-dlpSetDlpFeature-export enum DlpFeatureStatus--><!--Device-dlpSetDlpFeature-export enum DlpFeatureStatus-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -20,9 +20,9 @@ DLP disabled.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-DlpFeatureStatus-NOT_ENABLED_FEATURE = 0--><!--Device-DlpFeatureStatus-NOT_ENABLED_FEATURE = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -38,11 +38,10 @@ DLP enabled.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-DlpFeatureStatus-ENABLED_FEATURE = 1--><!--Device-DlpFeatureStatus-ENABLED_FEATURE = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **System API:** This is a system API.
-

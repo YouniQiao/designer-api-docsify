@@ -2,9 +2,9 @@
 
 The **NotificationSorting** module provides APIs for defining the sorting information of active notifications.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-export interface NotificationSorting--><!--Device-unnamed-export interface NotificationSorting-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -20,9 +20,9 @@ Unique ID of the notification.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationSorting-readonly hashCode: string--><!--Device-NotificationSorting-readonly hashCode: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -36,11 +36,11 @@ readonly ranking: long
 
 Notification level. If this parameter is not set, the default value is used based on the notification slot type.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationSorting-readonly ranking: long--><!--Device-NotificationSorting-readonly ranking: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -56,11 +56,10 @@ Notification slot type.
 
 **Type:** [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationSorting-readonly slot: NotificationSlot--><!--Device-NotificationSorting-readonly slot: NotificationSlot-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

@@ -9,9 +9,7 @@
 
 **起始版本：** 10
 
-**装饰器类型：** @Component
-
-<!--Device-unnamed-export declare struct Filter--><!--Device-unnamed-export declare struct Filter-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,75 +19,37 @@
 import { Filter, FilterParams, FilterResult, FilterType } from '@kit.ArkUI';
 ```
 
-## additionFilters
+## build
 
-附加快捷筛选项。如果不设置，则不显示附加快捷筛选项。
+```TypeScript
+build(): void
+```
 
-**类型：** [FilterParams](arkts-arkui-arkui-advanced-filter-filterparams-c.md)
+The method to build component.
 
-**起始版本：** 10
+**起始版本：** 23
 
-**装饰器类型：** @Prop
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Filter-@Prop additionFilters?: FilterParams--><!--Device-Filter-@Prop additionFilters?: FilterParams-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## container
 
+```TypeScript
+container: () => void
+```
+
 筛选结果展示区域自定义内容，通过尾随闭包形式传入。
 
-**类型：** () =&gt; void
-
 **起始版本：** 10
 
-**装饰器类型：** @BuilderParam
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Filter-@BuilderParam container: () => void--><!--Device-Filter-@BuilderParam container: () => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## filterType
-
-筛选器的样式类型。默认值：FilterType.LIST_FILTER
-
-**类型：** [FilterType](arkts-arkui-arkui-advanced-filter-filtertype-e.md)
-
-**起始版本：** 10
-
-**装饰器类型：** @Prop
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Filter-@Prop filterType?: FilterType--><!--Device-Filter-@Prop filterType?: FilterType-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## multiFilters
-
-多条件筛选列表。
-
-**类型：** Array&lt;[FilterParams](arkts-arkui-arkui-advanced-filter-filterparams-c.md)&gt;
-
-**起始版本：** 10
-
-**装饰器类型：** @Prop
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Filter-@Prop multiFilters: Array<FilterParams>--><!--Device-Filter-@Prop multiFilters: Array<FilterParams>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -101,15 +61,78 @@ onFilterChanged: (filterResults: Array<FilterResult>) => void
 
 用户点击后的回调事件。回调函数的参数为选中的筛选项结果列表。
 
-**类型：** (filterResults: Array&lt;[FilterResult](arkts-arkui-arkui-advanced-filter-filterresult-c.md)&gt;) =&gt; void
-
 **起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-Filter-onFilterChanged: (filterResults: Array<FilterResult>) => void--><!--Device-Filter-onFilterChanged: (filterResults: Array<FilterResult>) => void-End-->
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| filterResults | Array&lt;[FilterResult](arkts-arkui-arkui-advanced-filter-filterresult-c.md)&gt; | 是 |
+
+## additionFilters
+
+```TypeScript
+additionFilters?: FilterParams
+```
+
+附加快捷筛选项。如果不设置，则不显示附加快捷筛选项。
+
+**类型：** [FilterParams](arkts-arkui-arkui-advanced-filter-filterparams-c.md)
+
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## filterType
+
+```TypeScript
+filterType?: FilterType
+```
+
+筛选器的样式类型。默认值：FilterType.LIST_FILTER
+
+**类型：** [FilterType](arkts-arkui-arkui-advanced-filter-filtertype-e.md)
+
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## multiFilters
+
+```TypeScript
+multiFilters: Array<FilterParams>
+```
+
+多条件筛选列表。
+
+**类型：** Array&lt;[FilterParams](arkts-arkui-arkui-advanced-filter-filterparams-c.md)&gt;
+
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full

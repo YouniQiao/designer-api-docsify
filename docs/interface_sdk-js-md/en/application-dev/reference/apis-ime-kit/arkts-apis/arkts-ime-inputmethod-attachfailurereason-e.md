@@ -2,9 +2,9 @@
 
 Enumerates the reasons for attachment failure.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-inputMethod-export enum AttachFailureReason--><!--Device-inputMethod-export enum AttachFailureReason-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -16,9 +16,9 @@ CALLER_NOT_FOCUSED = 0
 
 The caller does not belong to the application of the focused window.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-AttachFailureReason-CALLER_NOT_FOCUSED = 0--><!--Device-AttachFailureReason-CALLER_NOT_FOCUSED = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -30,9 +30,9 @@ IME_ABNORMAL
 
 The input method application is abnormal.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-AttachFailureReason-IME_ABNORMAL--><!--Device-AttachFailureReason-IME_ABNORMAL-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -44,9 +44,8 @@ SERVICE_ABNORMAL
 
 The input method framework service is abnormal.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-AttachFailureReason-SERVICE_ABNORMAL--><!--Device-AttachFailureReason-SERVICE_ABNORMAL-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

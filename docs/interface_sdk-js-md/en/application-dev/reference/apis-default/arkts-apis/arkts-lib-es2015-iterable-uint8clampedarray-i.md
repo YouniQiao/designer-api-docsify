@@ -1,8 +1,6 @@
 # Uint8ClampedArray
 
-**Since:** -1
-
-<!--Device-unnamed-interface Uint8ClampedArray--><!--Device-unnamed-interface Uint8ClampedArray-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -15,14 +13,12 @@
 [Symbol.iterator](): IterableIterator<number>
 ```
 
-**Since:** -1
-
-<!--Device-Uint8ClampedArray-[Symbol.iterator](): IterableIterator<number>--><!--Device-Uint8ClampedArray-[Symbol.iterator](): IterableIterator<number>-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## entries
 
 ```TypeScript
@@ -31,14 +27,12 @@ entries(): IterableIterator<[number, number]>
 
 Returns an array of key, value pairs for every entry in the array
 
-**Since:** -1
-
-<!--Device-Uint8ClampedArray-entries(): IterableIterator<[number, number]>--><!--Device-Uint8ClampedArray-entries(): IterableIterator<[number, number]>-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## keys
 
 ```TypeScript
@@ -47,14 +41,12 @@ keys(): IterableIterator<number>
 
 Returns an list of keys in the array
 
-**Since:** -1
-
-<!--Device-Uint8ClampedArray-keys(): IterableIterator<number>--><!--Device-Uint8ClampedArray-keys(): IterableIterator<number>-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## values
 
 ```TypeScript
@@ -63,11 +55,9 @@ values(): IterableIterator<number>
 
 Returns an list of values in the array
 
-**Since:** -1
-
-<!--Device-Uint8ClampedArray-values(): IterableIterator<number>--><!--Device-Uint8ClampedArray-values(): IterableIterator<number>-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

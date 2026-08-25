@@ -4,7 +4,7 @@ Enumerates the encrypted import/export types supported by the asset.
 
 **Since:** 18
 
-<!--Device-asset-enum WrapType--><!--Device-asset-enum WrapType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -18,7 +18,7 @@ Encrypted import/export is not allowed for the asset.
 
 **Since:** 18
 
-<!--Device-WrapType-NEVER = 0--><!--Device-WrapType-NEVER = 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -32,7 +32,6 @@ Encrypted import/export is allowed for the asset only on devices where a trusted
 
 **Since:** 18
 
-<!--Device-WrapType-TRUSTED_ACCOUNT = 1--><!--Device-WrapType-TRUSTED_ACCOUNT = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Security.Asset
-

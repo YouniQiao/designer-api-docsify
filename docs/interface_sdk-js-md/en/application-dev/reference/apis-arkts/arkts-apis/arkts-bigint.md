@@ -9,19 +9,18 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | JS BigInt API-compatible class. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [BigIntToLocaleStringOptions](arkts-arkts-bigint-biginttolocalestringoptions-i.md) | Options for BigInt.toLocaleString method. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BigIntToLocaleStringOptions](arkts-arkts-bigint-biginttolocalestringoptions-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [bigint](arkts-arkts-bigint-t.md) | `bigint` is an alias for type `BigInt` |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [bigint](arkts-arkts-bigint-t.md) |

@@ -16,19 +16,19 @@ function getAuthenticator(): Authenticator
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
 **替代接口：** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md)
-
-<!--Device-userAuth-function getAuthenticator(): Authenticator--><!--Device-userAuth-function getAuthenticator(): Authenticator-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Authenticator | 认证器对象。 |
+| 类型 |
+| --- |
+| [Authenticator](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-appaccount-authenticator-c.md) |
 
 **示例**
 
@@ -37,4 +37,3 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 
 let authenticator = userAuth.getAuthenticator();
 ```
-

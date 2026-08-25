@@ -14,21 +14,20 @@ function getAccountManager(): AccountManager
 
 Obtains an **AccountManager** instance.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-osAccount-function getAccountManager(): AccountManager--><!--Device-osAccount-function getAccountManager(): AccountManager-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [AccountManager](arkts-basicservices-osaccount-accountmanager-i.md) | AccountManager** instance obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [AccountManager](arkts-basicservices-osaccount-accountmanager-i.md) |
 
 **Examples**
 
 ```TypeScript
 let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
 ```
-

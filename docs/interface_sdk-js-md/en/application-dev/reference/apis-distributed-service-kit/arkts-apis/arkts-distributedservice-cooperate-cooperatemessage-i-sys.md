@@ -2,9 +2,9 @@
 
 Defines a screen hopping status change event.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-cooperate-interface CooperateMessage--><!--Device-cooperate-interface CooperateMessage-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -26,9 +26,9 @@ Descriptor of the target device for screen hopping.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CooperateMessage-networkId: string--><!--Device-CooperateMessage-networkId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -44,11 +44,10 @@ Screen hopping status.
 
 **Type:** [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CooperateMessage-state: CooperateState--><!--Device-CooperateMessage-state: CooperateState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **System API:** This is a system API.
-

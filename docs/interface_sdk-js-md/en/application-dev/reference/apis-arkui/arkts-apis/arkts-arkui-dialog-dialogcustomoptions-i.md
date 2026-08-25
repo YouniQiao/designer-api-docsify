@@ -6,7 +6,7 @@ Options for the custom-style dialog. The dialog content is provided as the first
 
 **Since:** 26.1.0
 
-<!--Device-dialog-declare interface DialogCustomOptions--><!--Device-dialog-declare interface DialogCustomOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,10 @@ Whether to enable the custom style.
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
-<!--Device-DialogCustomOptions-customStyle?: boolean--><!--Device-DialogCustomOptions-customStyle?: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

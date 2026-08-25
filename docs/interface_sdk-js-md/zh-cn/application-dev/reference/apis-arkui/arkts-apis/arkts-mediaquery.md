@@ -1,4 +1,4 @@
-# @ohos.mediaquery
+# @ohos.mediaquery(媒体查询)
 
 提供根据不同媒体类型定义不同的样式。
 
@@ -9,7 +9,7 @@
 
 **起始版本：** 7
 
-<!--Device-unnamed-declare namespace mediaquery--><!--Device-unnamed-declare namespace mediaquery-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,14 +23,13 @@ import { mediaquery } from '@kit.ArkUI';
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [matchMediaSync](arkts-arkui-mediaquery-matchmediasync-f.md) | 设置媒体查询的查询条件，并返回对应的监听句柄。 |
+| 名称 |
+| --- |
+| [matchMediaSync(媒体查询)](arkts-arkui-mediaquery-matchmediasync-f.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [MediaQueryListener](arkts-arkui-mediaquery-mediaquerylistener-i.md) | 媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句，比如'(width &lt;= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。继承自[MediaQueryResult](../../apis-default/arkts-apis/arkts-mediaquery-mediaqueryresult-i.md)。 |
-| [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md) | 用于执行媒体查询操作。 |
-
+| 名称 |
+| --- |
+| [MediaQueryListener(媒体查询)](arkts-arkui-mediaquery-mediaquerylistener-i.md) |
+| [MediaQueryResult(媒体查询)](arkts-arkui-mediaquery-mediaqueryresult-i.md) |

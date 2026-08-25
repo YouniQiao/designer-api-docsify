@@ -2,9 +2,9 @@
 
 键盘输入设备的类型。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-inputDevice-enum KeyboardType--><!--Device-inputDevice-enum KeyboardType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -16,9 +16,9 @@ NONE = 0
 
 表示无按键设备。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-KeyboardType-NONE = 0--><!--Device-KeyboardType-NONE = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -30,9 +30,9 @@ UNKNOWN = 1
 
 表示未知按键设备。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-KeyboardType-UNKNOWN = 1--><!--Device-KeyboardType-UNKNOWN = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -44,9 +44,9 @@ ALPHABETIC_KEYBOARD = 2
 
 表示全键盘设备。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-KeyboardType-ALPHABETIC_KEYBOARD = 2--><!--Device-KeyboardType-ALPHABETIC_KEYBOARD = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -58,9 +58,9 @@ DIGITAL_KEYBOARD = 3
 
 表示小键盘设备。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-KeyboardType-DIGITAL_KEYBOARD = 3--><!--Device-KeyboardType-DIGITAL_KEYBOARD = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -72,9 +72,9 @@ HANDWRITING_PEN = 4
 
 表示手写笔设备。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-KeyboardType-HANDWRITING_PEN = 4--><!--Device-KeyboardType-HANDWRITING_PEN = 4-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -86,9 +86,8 @@ REMOTE_CONTROL = 5
 
 表示遥控器设备。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-KeyboardType-REMOTE_CONTROL = 5--><!--Device-KeyboardType-REMOTE_CONTROL = 5-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
-

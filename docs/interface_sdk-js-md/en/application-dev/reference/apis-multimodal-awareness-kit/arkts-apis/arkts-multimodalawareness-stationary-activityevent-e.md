@@ -4,7 +4,7 @@ Enumerates the device status events.
 
 **Since:** 9
 
-<!--Device-stationary-enum ActivityEvent--><!--Device-stationary-enum ActivityEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 
@@ -18,7 +18,7 @@ Enter event.
 
 **Since:** 9
 
-<!--Device-ActivityEvent-ENTER = 1--><!--Device-ActivityEvent-ENTER = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 
@@ -32,7 +32,7 @@ Exit event.
 
 **Since:** 9
 
-<!--Device-ActivityEvent-EXIT = 2--><!--Device-ActivityEvent-EXIT = 2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 
@@ -46,7 +46,6 @@ Enter and exit events.
 
 **Since:** 9
 
-<!--Device-ActivityEvent-ENTER_EXIT = 3--><!--Device-ActivityEvent-ENTER_EXIT = 3-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
-

@@ -2,9 +2,9 @@
 
 Defines the certificate data.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-networkSecurity-export interface CertBlob--><!--Device-networkSecurity-export interface CertBlob-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -24,9 +24,9 @@ Certificate data.
 
 **Type:** string \| ArrayBuffer
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CertBlob-data: string | ArrayBuffer--><!--Device-CertBlob-data: string | ArrayBuffer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -40,9 +40,8 @@ Certificate type.
 
 **Type:** CertType
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-CertBlob-type: CertType--><!--Device-CertBlob-type: CertType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
-

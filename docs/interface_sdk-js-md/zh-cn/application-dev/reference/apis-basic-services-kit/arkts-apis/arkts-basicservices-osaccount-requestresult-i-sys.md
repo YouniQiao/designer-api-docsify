@@ -2,9 +2,9 @@
 
 表示请求结果的信息。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-osAccount-interface RequestResult--><!--Device-osAccount-interface RequestResult-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -26,11 +26,10 @@ credentialId?: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-RequestResult-credentialId?: Uint8Array--><!--Device-RequestResult-credentialId?: Uint8Array-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
-

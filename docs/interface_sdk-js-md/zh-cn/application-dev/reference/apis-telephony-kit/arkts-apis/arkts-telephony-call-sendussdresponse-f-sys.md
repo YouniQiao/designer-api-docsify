@@ -16,9 +16,9 @@ function sendUssdResponse(slotId: int, content: string): void
 
 **起始版本：** 26.0.0
 
-**需要权限：** ohos.permission.SET_TELEPHONY_STATE
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-call-function sendUssdResponse(slotId: int, content: string): void--><!--Device-call-function sendUssdResponse(slotId: int, content: string): void-End-->
+**需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -26,20 +26,20 @@ function sendUssdResponse(slotId: int, content: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| slotId | int | 是 | 表示发送响应的卡槽ID。 |
-| content | string | 是 | 表示响应内容。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| content | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| 8400001 | Invalid parameter value. |
-| 8400002 | Operation failed. Cannot connect to service. |
-| 8400003 | System internal error, system database write fail. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 8400001 |
+| 8400002 |
+| 8400003 |
 
 **示例**
 
@@ -60,4 +60,3 @@ function testSendUssdResponse() {
     }
 }
 ```
-

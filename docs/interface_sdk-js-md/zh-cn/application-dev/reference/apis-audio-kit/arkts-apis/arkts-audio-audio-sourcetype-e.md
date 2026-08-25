@@ -2,9 +2,9 @@
 
 枚举，音源类型。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-audio-enum SourceType--><!--Device-audio-enum SourceType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -16,9 +16,9 @@ SOURCE_TYPE_INVALID = -1
 
 无效的音频源。SystemCapability.Multimedia.Audio.Core
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-SourceType-SOURCE_TYPE_INVALID = -1--><!--Device-SourceType-SOURCE_TYPE_INVALID = -1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -30,9 +30,9 @@ SOURCE_TYPE_MIC = 0
 
 Mic音频源。SystemCapability.Multimedia.Audio.Core
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-SourceType-SOURCE_TYPE_MIC = 0--><!--Device-SourceType-SOURCE_TYPE_MIC = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -44,9 +44,9 @@ SOURCE_TYPE_VOICE_RECOGNITION = 1
 
 语音识别源。SystemCapability.Multimedia.Audio.Core
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SourceType-SOURCE_TYPE_VOICE_RECOGNITION = 1--><!--Device-SourceType-SOURCE_TYPE_VOICE_RECOGNITION = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -60,11 +60,11 @@ SOURCE_TYPE_PLAYBACK_CAPTURE = 2
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **废弃版本：** 12
 
-**替代接口：** OH_AVScreenCapture in native interface.
-
-<!--Device-SourceType-SOURCE_TYPE_PLAYBACK_CAPTURE = 2--><!--Device-SourceType-SOURCE_TYPE_PLAYBACK_CAPTURE = 2-End-->
+**替代接口：** OH_AVScreenCapture
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
@@ -76,9 +76,9 @@ SOURCE_TYPE_VOICE_COMMUNICATION = 7
 
 语音通话场景的音频源（单独启动录制不会开启3A算法，需同时使用[STREAM_USAGE_VOICE_COMMUNICATION](arkts-audio-audio-streamusage-e.md)或 [STREAM_USAGE_VIDEO_COMMUNICATION](arkts-audio-audio-streamusage-e.md)类型的AudioRender起播才会触发开启3A算法）。SystemCapability.Multimedia.Audio.Core
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-SourceType-SOURCE_TYPE_VOICE_COMMUNICATION = 7--><!--Device-SourceType-SOURCE_TYPE_VOICE_COMMUNICATION = 7-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -90,9 +90,9 @@ SOURCE_TYPE_VOICE_MESSAGE = 10
 
 短语音消息的音频源。SystemCapability.Multimedia.Audio.Core
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SourceType-SOURCE_TYPE_VOICE_MESSAGE = 10--><!--Device-SourceType-SOURCE_TYPE_VOICE_MESSAGE = 10-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -104,9 +104,9 @@ SOURCE_TYPE_CAMCORDER = 13
 
 录像的音频源。SystemCapability.Multimedia.Audio.Core
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-SourceType-SOURCE_TYPE_CAMCORDER = 13--><!--Device-SourceType-SOURCE_TYPE_CAMCORDER = 13-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -118,9 +118,9 @@ SOURCE_TYPE_UNPROCESSED = 14
 
 麦克风纯净录音的音频源（系统不做任何算法处理）。SystemCapability.Multimedia.Audio.Core
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-SourceType-SOURCE_TYPE_UNPROCESSED = 14--><!--Device-SourceType-SOURCE_TYPE_UNPROCESSED = 14-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -132,9 +132,8 @@ SOURCE_TYPE_LIVE = 17
 
 直播场景的音频源，在支持的设备上会提供系统回声消除能力。SystemCapability.Multimedia.Audio.Core
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-SourceType-SOURCE_TYPE_LIVE = 17--><!--Device-SourceType-SOURCE_TYPE_LIVE = 17-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
-

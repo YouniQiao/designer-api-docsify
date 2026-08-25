@@ -2,9 +2,9 @@
 
 Enumerates the reasons for requesting keyboard input.<br> <br> | Name | Value| Description | | ------------ | -- | ------------------ | | NONE | 0 | The keyboard request is triggered for no reason.| | MOUSE | 1 | The keyboard request is triggered by a mouse operation.| | TOUCH | 2 | The keyboard request is triggered by a touch operation.| | OTHER | 20 | The keyboard request is triggered by other reasons.|
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-inputMethodEngine-export enum RequestKeyboardReason--><!--Device-inputMethodEngine-export enum RequestKeyboardReason-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -16,9 +16,9 @@ NONE = 0
 
 The request keyboard reason is NONE.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-RequestKeyboardReason-NONE = 0--><!--Device-RequestKeyboardReason-NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -30,9 +30,9 @@ MOUSE = 1
 
 The request keyboard reason is MOUSE.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-RequestKeyboardReason-MOUSE = 1--><!--Device-RequestKeyboardReason-MOUSE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -44,9 +44,9 @@ TOUCH = 2
 
 The request keyboard reason is TOUCH.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-RequestKeyboardReason-TOUCH = 2--><!--Device-RequestKeyboardReason-TOUCH = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -58,9 +58,8 @@ OTHER = 20
 
 The request keyboard reason is OTHER.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-RequestKeyboardReason-OTHER = 20--><!--Device-RequestKeyboardReason-OTHER = 20-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

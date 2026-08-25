@@ -4,9 +4,9 @@ ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sy
 
 **继承/实现关系：** ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-camera-interface ColorEffect--><!--Device-camera-interface ColorEffect-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -26,9 +26,9 @@ getColorEffect(): ColorEffectType
 
 Obtains the color effect in use.
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ColorEffect-getColorEffect(): ColorEffectType--><!--Device-ColorEffect-getColorEffect(): ColorEffectType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -36,16 +36,16 @@ Obtains the color effect in use.
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ColorEffectType](arkts-camera-camera-coloreffecttype-e-sys.md) | Color effect. |
+| 类型 |
+| --- |
+| [ColorEffectType](arkts-camera-camera-coloreffecttype-e-sys.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 **示例**
 
@@ -64,9 +64,9 @@ setColorEffect(type: ColorEffectType): void
 
 Sets a color effect. Before the setting, call [getSupportedColorEffects](arkts-camera-camera-coloreffectquery-i-sys.md#getsupportedcoloreffects) to obtain the supported color effects.
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-ColorEffect-setColorEffect(type: ColorEffectType): void--><!--Device-ColorEffect-setColorEffect(type: ColorEffectType): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -74,16 +74,16 @@ Sets a color effect. Before the setting, call [getSupportedColorEffects](arkts-c
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [ColorEffectType](arkts-camera-camera-coloreffecttype-e-sys.md) | 是 | The type of color effect. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [ColorEffectType](arkts-camera-camera-coloreffecttype-e-sys.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 **示例**
 
@@ -92,4 +92,3 @@ function setColorEffect(session: camera.PhotoSessionForSys, colorEffect: camera.
   session.setColorEffect(colorEffect);
 }
 ```
-

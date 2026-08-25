@@ -2,9 +2,9 @@
 
 键鼠穿越状态的枚举。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-cooperate-enum CooperateState--><!--Device-cooperate-enum CooperateState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -18,9 +18,9 @@ COOPERATE_PREPARE = 0
 
 表示准备键鼠穿越。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CooperateState-COOPERATE_PREPARE = 0--><!--Device-CooperateState-COOPERATE_PREPARE = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -34,9 +34,9 @@ COOPERATE_UNPREPARE = 1
 
 表示取消键鼠穿越准备。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CooperateState-COOPERATE_UNPREPARE = 1--><!--Device-CooperateState-COOPERATE_UNPREPARE = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -50,9 +50,9 @@ COOPERATE_ACTIVATE = 2
 
 表示启动键鼠穿越。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CooperateState-COOPERATE_ACTIVATE = 2--><!--Device-CooperateState-COOPERATE_ACTIVATE = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -66,9 +66,9 @@ COOPERATE_ACTIVATE_SUCCESS = 3
 
 表示键鼠穿越启动成功。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CooperateState-COOPERATE_ACTIVATE_SUCCESS = 3--><!--Device-CooperateState-COOPERATE_ACTIVATE_SUCCESS = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -82,9 +82,9 @@ COOPERATE_ACTIVATE_FAILURE = 4
 
 表示键鼠穿越无法启动。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CooperateState-COOPERATE_ACTIVATE_FAILURE = 4--><!--Device-CooperateState-COOPERATE_ACTIVATE_FAILURE = 4-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -98,9 +98,9 @@ COOPERATE_DEACTIVATE_SUCCESS = 5
 
 表示键鼠穿越停止成功。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CooperateState-COOPERATE_DEACTIVATE_SUCCESS = 5--><!--Device-CooperateState-COOPERATE_DEACTIVATE_SUCCESS = 5-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -114,9 +114,9 @@ COOPERATE_DEACTIVATE_FAILURE = 6
 
 表示键鼠穿越无法停止。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CooperateState-COOPERATE_DEACTIVATE_FAILURE = 6--><!--Device-CooperateState-COOPERATE_DEACTIVATE_FAILURE = 6-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -130,11 +130,10 @@ COOPERATE_SESSION_DISCONNECTED = 7
 
 表示键鼠穿越会话断开。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CooperateState-COOPERATE_SESSION_DISCONNECTED = 7--><!--Device-CooperateState-COOPERATE_SESSION_DISCONNECTED = 7-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
-

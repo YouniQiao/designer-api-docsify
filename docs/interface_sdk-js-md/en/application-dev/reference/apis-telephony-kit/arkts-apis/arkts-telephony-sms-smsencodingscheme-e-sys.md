@@ -2,9 +2,9 @@
 
 Enumerates SMS encoding schemes.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sms-export enum SmsEncodingScheme--><!--Device-sms-export enum SmsEncodingScheme-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -18,9 +18,9 @@ SMS_ENCODING_UNKNOWN = 0
 
 Unknown code.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-SmsEncodingScheme-SMS_ENCODING_UNKNOWN = 0--><!--Device-SmsEncodingScheme-SMS_ENCODING_UNKNOWN = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -34,9 +34,9 @@ SMS_ENCODING_7BIT = 1
 
 7-digit code.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-SmsEncodingScheme-SMS_ENCODING_7BIT = 1--><!--Device-SmsEncodingScheme-SMS_ENCODING_7BIT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -50,9 +50,9 @@ SMS_ENCODING_8BIT = 2
 
 8-digit code.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-SmsEncodingScheme-SMS_ENCODING_8BIT = 2--><!--Device-SmsEncodingScheme-SMS_ENCODING_8BIT = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -66,11 +66,10 @@ SMS_ENCODING_16BIT = 3
 
 16-digit code.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-SmsEncodingScheme-SMS_ENCODING_16BIT = 3--><!--Device-SmsEncodingScheme-SMS_ENCODING_16BIT = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
-

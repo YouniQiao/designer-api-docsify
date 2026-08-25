@@ -2,9 +2,9 @@
 
 Enumerates the display modes of secondary screens.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-screen-enum MultiScreenMode--><!--Device-screen-enum MultiScreenMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -18,9 +18,9 @@ SCREEN_MIRROR = 0
 
 Mirror mode.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-MultiScreenMode-SCREEN_MIRROR = 0--><!--Device-MultiScreenMode-SCREEN_MIRROR = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -34,11 +34,10 @@ SCREEN_EXTEND = 1
 
 Extend mode.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-MultiScreenMode-SCREEN_EXTEND = 1--><!--Device-MultiScreenMode-SCREEN_EXTEND = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
-

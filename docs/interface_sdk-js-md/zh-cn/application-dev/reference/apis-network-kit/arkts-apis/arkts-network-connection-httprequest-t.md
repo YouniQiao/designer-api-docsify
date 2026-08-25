@@ -8,11 +8,10 @@ type HttpRequest = http.HttpRequest
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-connection-type HttpRequest = http.HttpRequest--><!--Device-connection-type HttpRequest = http.HttpRequest-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **属性类型：** http.HttpRequest
-

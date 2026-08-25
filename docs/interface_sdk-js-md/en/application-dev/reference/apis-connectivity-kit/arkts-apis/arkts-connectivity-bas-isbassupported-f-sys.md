@@ -16,9 +16,9 @@ Determine whether the local device can obtain the battery level of the remote de
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-bas-function isBasSupported(): boolean--><!--Device-bas-function isBasSupported(): boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -26,14 +26,13 @@ Determine whether the local device can obtain the battery level of the remote de
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns true if the battery service is enabled; returns false otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| 2900099 | Operation failed. |
-
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 2900099 |

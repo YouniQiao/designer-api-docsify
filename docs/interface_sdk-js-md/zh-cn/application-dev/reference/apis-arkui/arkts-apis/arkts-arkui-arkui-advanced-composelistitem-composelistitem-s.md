@@ -10,9 +10,7 @@
 
 **起始版本：** 10
 
-**装饰器类型：** @Component
-
-<!--Device-unnamed-export declare struct ComposeListItem--><!--Device-unnamed-export declare struct ComposeListItem-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,6 +20,22 @@
 import { ComposeListItem, ContentItem, IconType, OperateButton, OperateCheck, OperateIcon, OperateItem } from '@kit.ArkUI';
 ```
 
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## contentItem
 
 ```TypeScript
@@ -30,17 +44,15 @@ contentItem?: ContentItem
 
 定义左侧以及中间元素。默认不设置或设置为undefined时，左侧和中间元素不显示。
 
-**类型：** [ContentItem](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-contentitem-c.md)
+**类型：** [ContentItem](arkts-arkui-arkui-advanced-composelistitem-contentitem-c.md)
 
 **起始版本：** 10
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ComposeListItem-@Prop  contentItem?: ContentItem--><!--Device-ComposeListItem-@Prop  contentItem?: ContentItem-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,17 +64,14 @@ operateItem?: OperateItem
 
 定义右侧元素。默认不设置或设置为undefined时，右侧元素不显示。
 
-**类型：** [OperateItem](../../apis-default/arkts-apis/arkts-arkui-advanced-composelistitem-operateitem-c.md)
+**类型：** [OperateItem](arkts-arkui-arkui-advanced-composelistitem-operateitem-c.md)
 
 **起始版本：** 10
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ComposeListItem-@Prop  operateItem?: OperateItem--><!--Device-ComposeListItem-@Prop  operateItem?: OperateItem-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

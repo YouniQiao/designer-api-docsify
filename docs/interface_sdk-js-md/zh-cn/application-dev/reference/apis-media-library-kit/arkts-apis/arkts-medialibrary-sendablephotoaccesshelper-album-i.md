@@ -6,7 +6,7 @@
 
 **起始版本：** 12
 
-<!--Device-sendablePhotoAccessHelper-interface Album--><!--Device-sendablePhotoAccessHelper-interface Album-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,24 +26,24 @@ commitModify(): Promise<void>
 
 **起始版本：** 12
 
-**需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-Album-commitModify(): Promise<void>--><!--Device-Album-commitModify(): Promise<void>-End-->
+**需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| 14000011 | Internal system error |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| 14000011 |
 
 **示例**
 
@@ -111,22 +111,22 @@ convertToPhotoAlbum(): photoAccessHelper.Album
 
 **起始版本：** 12
 
-<!--Device-Album-convertToPhotoAlbum(): photoAccessHelper.Album--><!--Device-Album-convertToPhotoAlbum(): photoAccessHelper.Album-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| photoAccessHelper.Album | 返回非Sendable类型的Album。 |
+| 类型 |
+| --- |
+| photoAccessHelper.Album |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| 14000011 | Internal system error |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| 14000011 |
 
 **示例**
 
@@ -171,7 +171,7 @@ readonly imageCount?: number
 
 **起始版本：** 12
 
-<!--Device-Album-readonly imageCount?: number--><!--Device-Album-readonly imageCount?: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -187,7 +187,6 @@ readonly videoCount?: number
 
 **起始版本：** 12
 
-<!--Device-Album-readonly videoCount?: number--><!--Device-Album-readonly videoCount?: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

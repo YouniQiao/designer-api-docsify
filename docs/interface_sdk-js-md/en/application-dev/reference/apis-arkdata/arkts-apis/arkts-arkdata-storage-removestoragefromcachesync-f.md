@@ -15,17 +15,17 @@ Removes the singleton **Storage** instance of a file from the cache. The removed
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** removePreferencesFromCache
 
-<!--Device-storage-function removeStorageFromCacheSync(path: string): void--><!--Device-storage-function removeStorageFromCacheSync(path: string): void-End-->
-
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| path | string | Yes | Indicates the path of storage file. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| path | string | Yes |
 
 **Examples**
 
@@ -41,4 +41,3 @@ context.getFilesDir().then((filePath) => {
     data_storage.removeStorageFromCacheSync(path + '/mystore');
 });
 ```
-

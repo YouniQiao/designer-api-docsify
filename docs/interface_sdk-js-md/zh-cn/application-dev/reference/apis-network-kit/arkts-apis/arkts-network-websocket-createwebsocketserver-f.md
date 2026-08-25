@@ -17,21 +17,20 @@ function createWebSocketServer(): WebSocketServer
 > **说明：**&gt;
 > 从API version 23开始支持全设备使用，之前仅支持TV设备使用。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-webSocket-function createWebSocketServer(): WebSocketServer--><!--Device-webSocket-function createWebSocketServer(): WebSocketServer-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [WebSocketServer](arkts-network-websocket-websocketserver-i.md) | 返回一个WebSocketServer对象，里面包括start、listAllConnections、send、close、stop、on和off方法。 |
+| 类型 |
+| --- |
+| [WebSocketServer](arkts-network-websocket-websocketserver-i.md) |
 
 **示例**
 
 ```TypeScript
 let ws: webSocket.WebSocketServer = webSocket.createWebSocketServer();
 ```
-

@@ -4,7 +4,7 @@ Enumerates the directions of barriers with mirror mode support.
 
 **Since:** 12
 
-<!--Device-unnamed-declare enum LocalizedBarrierDirection--><!--Device-unnamed-declare enum LocalizedBarrierDirection-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ The barrier is on the left (for left-to-right scripts) or right (for right-to-le
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-LocalizedBarrierDirection-START = 0--><!--Device-LocalizedBarrierDirection-START = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ The barrier is on the right (for left-to-right scripts) or left (for right-to-le
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-LocalizedBarrierDirection-END = 1--><!--Device-LocalizedBarrierDirection-END = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ The barrier is at the top of all the referenced components specified by [referen
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-LocalizedBarrierDirection-TOP = 2--><!--Device-LocalizedBarrierDirection-TOP = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,10 @@ The barrier is at the bottom of all the referenced components specified by [refe
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-LocalizedBarrierDirection-BOTTOM = 3--><!--Device-LocalizedBarrierDirection-BOTTOM = 3-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

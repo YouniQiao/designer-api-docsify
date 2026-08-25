@@ -11,18 +11,17 @@ declare type OnScrollVisibleContentChangeCallback = (start: VisibleListContentIn
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-unnamed-declare type OnScrollVisibleContentChangeCallback = (start: VisibleListContentInfo, end: VisibleListContentInfo) => void--><!--Device-unnamed-declare type OnScrollVisibleContentChangeCallback = (start: VisibleListContentInfo, end: VisibleListContentInfo) => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| start | [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) | 是 | 1. 通过该参数获取List显示区域第一个子组件在List中的索引值。<br/>2. 如果当前List显示区域第一个子组件是ListItemGroup，可 以获取当前List显示区域第一个组件属于该ListItemGroup的哪一区域。<br/>3. 如果当前List显示区域第一个组件是ListItemGroup内的ListItem，可以获取该ListItem在 ListItemGroup内的索引值。 |
-| end | [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) | 是 | 1. 通过该参数获取List显示区域最后一个子组件在List中的索引值。<br/>2. 如果当前List显示区域最后一个子组件是ListItemGroup，可 以获取当前List显示区域最后一个组件属于该ListItemGroup的哪一区域。<br/>3. 如果当前List显示区域最后一个组件是ListItemGroup内的ListItem，可以获取该ListItem在 ListItemGroup内的索引值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| start | [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) | 是 |
+| end | [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) | 是 |

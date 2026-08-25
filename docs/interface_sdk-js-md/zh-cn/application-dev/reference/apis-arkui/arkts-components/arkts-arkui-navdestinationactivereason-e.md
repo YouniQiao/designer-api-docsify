@@ -4,7 +4,7 @@ NavDestination激活态或者非激活态变化的原因。
 
 **起始版本：** 17
 
-<!--Device-unnamed-declare enum NavDestinationActiveReason--><!--Device-unnamed-declare enum NavDestinationActiveReason-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ TRANSITION = 0
 
 **起始版本：** 17
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationActiveReason-TRANSITION = 0--><!--Device-NavDestinationActiveReason-TRANSITION = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ CONTENT_COVER = 1
 
 **起始版本：** 17
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationActiveReason-CONTENT_COVER = 1--><!--Device-NavDestinationActiveReason-CONTENT_COVER = 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ SHEET = 2
 
 **起始版本：** 17
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationActiveReason-SHEET = 2--><!--Device-NavDestinationActiveReason-SHEET = 2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,11 @@ DIALOG = 3
 
 **起始版本：** 17
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationActiveReason-DIALOG = 3--><!--Device-NavDestinationActiveReason-DIALOG = 3-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,11 +90,11 @@ OVERLAY = 4
 
 **起始版本：** 17
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavDestinationActiveReason-OVERLAY = 4--><!--Device-NavDestinationActiveReason-OVERLAY = 4-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,11 +108,10 @@ APP_STATE = 5
 
 **起始版本：** 17
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
 
-<!--Device-NavDestinationActiveReason-APP_STATE = 5--><!--Device-NavDestinationActiveReason-APP_STATE = 5-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

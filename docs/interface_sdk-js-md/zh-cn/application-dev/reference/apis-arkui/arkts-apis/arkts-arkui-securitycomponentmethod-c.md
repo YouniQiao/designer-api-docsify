@@ -10,7 +10,7 @@
 
 **起始版本：** 10
 
-<!--Device-unnamed-declare class SecurityComponentMethod--><!--Device-unnamed-declare class SecurityComponentMethod-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,25 +29,25 @@ accessibilityDefaultFocus(focus: boolean): T
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-accessibilityDefaultFocus(focus: boolean): T--><!--Device-SecurityComponentMethod-accessibilityDefaultFocus(focus: boolean): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| focus | boolean | 是 | 为页面设置屏幕朗读初始焦点。值为true则表示该组件为当前页默认首焦点，值为false或其他值无效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [focus](../../apis-test-kit/arkts-apis/arkts-test-uitest-uiwindow-c.md) | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 当前对象。 |
+| 类型 |
+| --- |
+| T |
 
 ## accessibilityDescription
 
@@ -59,25 +59,25 @@ accessibilityDescription(description: string | Resource): T
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-accessibilityDescription(description: string | Resource): T--><!--Device-SecurityComponentMethod-accessibilityDescription(description: string | Resource): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| description | string \| Resource | 是 | 控件的无障碍说明。用于补充组件的详细操作解释，帮助用户理解当前操作的具体内容及其潜在后果。控件被选中时， 若组件同时包含文本属性和无障碍说明，优先播报文本内容，再播报无障碍说明。 <br>该参数的默认值为空字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| description | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 当前对象。 |
+| 类型 |
+| --- |
+| T |
 
 ## accessibilityNextFocusId
 
@@ -89,25 +89,25 @@ accessibilityNextFocusId(nextId: string): T
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-accessibilityNextFocusId(nextId: string): T--><!--Device-SecurityComponentMethod-accessibilityNextFocusId(nextId: string): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| nextId | string | 是 | 下一个被指定聚焦组件的 [唯一标识 ID](#id)。若唯一标识id无对应组件，则设置无效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| nextId | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 当前对象。 |
+| 类型 |
+| --- |
+| T |
 
 ## accessibilityRole
 
@@ -119,25 +119,25 @@ accessibilityRole(role: SecurityComponentRoleType): T
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-accessibilityRole(role: SecurityComponentRoleType): T--><!--Device-SecurityComponentMethod-accessibilityRole(role: SecurityComponentRoleType): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| role | [SecurityComponentRoleType](arkts-arkui-securitycomponentroletype-e.md) | 是 | 屏幕朗读播报的组件类型，如按钮、图表。具体类型可由开发者自定义。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| role | [SecurityComponentRoleType](arkts-arkui-securitycomponentroletype-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 当前对象。 |
+| 类型 |
+| --- |
+| T |
 
 ## align
 
@@ -149,25 +149,25 @@ align(alignType: Alignment): T
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-align(alignType: Alignment): T--><!--Device-SecurityComponentMethod-align(alignType: Alignment): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| alignType | Alignment | 是 | 安全控件图标文本的对齐方式。图标文本作为整体在控件背景范围内进行对齐，显示效果受 [padding](#padding)影响，在padding生效的基础上按照alignType参数指定的对齐方式进行对齐。 <br>默认值：Alignment.Center。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [alignType](arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | [Alignment](arkts-arkui-alignment-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## alignRules
 
@@ -179,25 +179,25 @@ alignRules(alignRule: AlignRuleOption): T
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-alignRules(alignRule: AlignRuleOption): T--><!--Device-SecurityComponentMethod-alignRules(alignRule: AlignRuleOption): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| alignRule | AlignRuleOption | 是 | 对齐规则配置对象，包含top、bottom、left、right、center等锚点对齐配置， 用于指定安全控件在RelativeContainer中的对齐位置和方式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| alignRule | [AlignRuleOption](arkts-arkui-common-alignruleoption-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## alignRules
 
@@ -209,25 +209,25 @@ alignRules(alignRule: LocalizedAlignRuleOptions): T
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-alignRules(alignRule: LocalizedAlignRuleOptions): T--><!--Device-SecurityComponentMethod-alignRules(alignRule: LocalizedAlignRuleOptions): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| alignRule | LocalizedAlignRuleOptions | 是 | 对齐规则配置对象，使用start和end替代left和right以支持RTL布局镜像。包含top、bottom、start、end、center等 锚点对齐配置，用于指定安全控件在RelativeContainer中的对齐位置和方式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| alignRule | [LocalizedAlignRuleOptions](../arkts-components/arkts-arkui-localizedalignruleoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## backgroundColor
 
@@ -239,25 +239,25 @@ backgroundColor(value: ResourceColor): T
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-backgroundColor(value: ResourceColor): T--><!--Device-SecurityComponentMethod-backgroundColor(value: ResourceColor): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceColor | 是 | 安全控件的背景颜色。 <br>默认值：\\$r('sys.color.icon_emphasize')。 <br>安全控件按钮背景色高八位的α值低于**0x1a**（例如**0x1800ff00**）时，会被系统强制调整为**0xff**。以确保安全控件具有足够的可见性， 防止因控件过度透明导致用户在不知情的情况下触发授权。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## borderColor
 
@@ -269,25 +269,25 @@ borderColor(value: ResourceColor): T
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-borderColor(value: ResourceColor): T--><!--Device-SecurityComponentMethod-borderColor(value: ResourceColor): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceColor | 是 | 安全控件的边框颜色。<br>默认不设置边框颜色。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## borderRadius
 
@@ -299,25 +299,25 @@ borderRadius(value: Dimension): T
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-borderRadius(value: Dimension): T--><!--Device-SecurityComponentMethod-borderRadius(value: Dimension): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Dimension | 是 | 安全控件的边框圆角半径。 <br>默认值：**0vp**。 <br>未显式指定单位时，单位为vp。<br/>不支持设置百分比字符串。圆角半径受组件尺寸限制，最小值为0，最大值为宽高中较小值的一半。设置异常值时该属性不生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [Dimension](arkts-arkui-dimension-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## borderRadius
 
@@ -329,25 +329,25 @@ borderRadius(radius: Dimension | BorderRadiuses): T
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-borderRadius(radius: Dimension | BorderRadiuses): T--><!--Device-SecurityComponentMethod-borderRadius(radius: Dimension | BorderRadiuses): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| radius | Dimension \| BorderRadiuses | 是 | 安全控件的边框圆角半径。 <br>默认值：**0vp**。 <br>未显式指定单位时，单位为vp。<br>Dimension类型不支持设置百分比字符串。圆角半径受组件尺寸限制，最小值为0，最大值为宽高中较小值的一半。设置异常值时该属性不生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| radius | Dimension \| [BorderRadiuses](arkts-arkui-units-borderradiuses-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## borderStyle
 
@@ -359,25 +359,25 @@ borderStyle(value: BorderStyle): T
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-borderStyle(value: BorderStyle): T--><!--Device-SecurityComponentMethod-borderStyle(value: BorderStyle): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | BorderStyle | 是 | 安全控件边框的样式。 <br>默认不设置边框样式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [BorderStyle](#borderstyle) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全组件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## borderWidth
 
@@ -389,25 +389,25 @@ borderWidth(value: Dimension): T
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-borderWidth(value: Dimension): T--><!--Device-SecurityComponentMethod-borderWidth(value: Dimension): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Dimension | 是 | 安全控件的边框宽度。 <br>默认值：**0vp**。 <br>未显式指定单位时，单位为vp。<br/>不支持设置百分比字符串。设置异常值时该属性不生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [Dimension](arkts-arkui-dimension-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## chainMode
 
@@ -419,26 +419,26 @@ chainMode(direction: Axis, style: ChainStyle): T
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-chainMode(direction: Axis, style: ChainStyle): T--><!--Device-SecurityComponentMethod-chainMode(direction: Axis, style: ChainStyle): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| direction | Axis | 是 | 链式布局的方向，用于指定以该组件为链头的链在RelativeContainer中的排列方向。 |
-| style | ChainStyle | 是 | 链式布局的样式，用于控制链内子组件的分布方式，如均匀分布、两端对齐或紧凑排列等，具体取值及效果请参考ChainStyle。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| direction | [Axis](arkts-arkui-enums-axis-e.md) | 是 |
+| style | [ChainStyle](../arkts-components/arkts-arkui-chainstyle-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## constraintSize
 
@@ -450,25 +450,25 @@ constraintSize(value: ConstraintSizeOptions): T
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-constraintSize(value: ConstraintSizeOptions): T--><!--Device-SecurityComponentMethod-constraintSize(value: ConstraintSizeOptions): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ConstraintSizeOptions | 是 | 约束尺寸，组件布局时进行尺寸范围限制。 <br>未显式指定单位时，单位为vp。<br>constraintSize的优先级高于width和height。 <br>使用自适应字号相关属性时，安全控件文本未完全显示将导致点击不授权。constraintSize的设置会影响文本 是否能完整显示。<br>取值结果参考[constraintSize取值对width/height影响](#constraintsize)。 <br>默认值：<br>{<br>minWidth: 0,<br>maxWidth: Infinity,<br>minHeight: 0,<br>maxHeight: Infinity<br>}。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ConstraintSizeOptions](arkts-arkui-constraintsizeoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## enabled
 
@@ -480,25 +480,25 @@ enabled(respond: boolean): T
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-enabled(respond: boolean): T--><!--Device-SecurityComponentMethod-enabled(respond: boolean): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| respond | boolean | 是 | 安全控件是否可交互的值。 <br>默认值：true。 <br>值为true表示组件可交互，响应点击等操作。<br>值为false表示组件不可交互，不响应点击等操作。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| respond | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | Attribute of the security component. |
+| 类型 |
+| --- |
+| T |
 
 ## fallbackLineSpacing
 
@@ -510,25 +510,25 @@ fallbackLineSpacing(enabled: boolean): T
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-fallbackLineSpacing(enabled: boolean): T--><!--Device-SecurityComponentMethod-fallbackLineSpacing(enabled: boolean): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enabled | boolean | 是 | 行高是否基于文字实际高度自适应。<br/>true表示行高基于文字实际高度自适应；false表示行高不基于文字实际高度自适应。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [enabled](#enabled) | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## focusBox
 
@@ -540,25 +540,25 @@ focusBox(style: FocusBoxStyle): T
 
 **起始版本：** 22
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-focusBox(style: FocusBoxStyle): T--><!--Device-SecurityComponentMethod-focusBox(style: FocusBoxStyle): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| style | FocusBoxStyle | 是 | 焦点框样式配置对象，包含margin（焦点框与控件的间距）和strokeColor（焦点框边框颜色）等属性，用于自定义系统焦点框的外观样式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| style | [FocusBoxStyle](arkts-arkui-focusboxstyle-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全组件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## fontColor
 
@@ -570,25 +570,25 @@ fontColor(value: ResourceColor): T
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-fontColor(value: ResourceColor): T--><!--Device-SecurityComponentMethod-fontColor(value: ResourceColor): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceColor | 是 | 安全控件上文字的颜色。 <br>默认值：\\$r('sys.color.font_on_primary')。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## fontFamily
 
@@ -600,25 +600,25 @@ fontFamily(value: string | Resource): T
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-fontFamily(value: string | Resource): T--><!--Device-SecurityComponentMethod-fontFamily(value: string | Resource): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | string \| Resource | 是 | 安全控件上文字的字体。 <br>默认字体：'HarmonyOS Sans'。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## fontSize
 
@@ -630,25 +630,25 @@ fontSize(value: Dimension): T
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-fontSize(value: Dimension): T--><!--Device-SecurityComponentMethod-fontSize(value: Dimension): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Dimension | 是 | 安全控件上文字的尺寸。 <br>未显式指定单位时，单位为fp。<br>默认值：\\$r('sys.float.ohos_id_text_size_button1')。<br>该参数不支持百分比字符串。 <br>设置异常值时该属性不生效。<br>**说明：** 安全控件文本未完全显示时，点击不授权。fontSize的设置会影响文本是否能完整显示，进而影响安全控件的授权行为。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [Dimension](arkts-arkui-dimension-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## fontStyle
 
@@ -660,25 +660,25 @@ fontStyle(value: FontStyle): T
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-fontStyle(value: FontStyle): T--><!--Device-SecurityComponentMethod-fontStyle(value: FontStyle): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | FontStyle | 是 | 安全控件上文字的样式。 <br>默认值：FontStyle.Normal。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [FontStyle](#fontstyle) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## fontWeight
 
@@ -690,25 +690,25 @@ fontWeight(value: number | FontWeight | string | Resource): T
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-fontWeight(value: number | FontWeight | string | Resource): T--><!--Device-SecurityComponentMethod-fontWeight(value: number | FontWeight | string | Resource): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number \| FontWeight \| string \| Resource | 是 | 安全控件上文字粗细。 <br>number类型取值[100, 900]，取值间隔为100，取值越大，字体越粗。<br>string类型支持使用数字字符串（如'400'），以及FontWeight中的枚举值对应的字符串 （如'bold'、'bolder'、'lighter'、'regular'、'medium'）。<br>从API version 20开始，支持Resource类型。Resource类型仅支持'integer'和'string'。 类型为'integer'时，取值参考前述number类型；类型为'string'时，取值参考前述string类型。<br>如果控件未设置fontWeight，文字粗细将默认设置为FontWeight.Medium。 value入参为undefined、null，或number类型不在[100, 900]范围内，或string类型不符合FontWeight枚举值对应的字符串格式时，文字粗细将被设置为FontWeight.Normal。<br>**起始版本：** 20 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number \| FontWeight \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## height
 
@@ -720,25 +720,25 @@ height(value: Length): T
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-height(value: Length): T--><!--Device-SecurityComponentMethod-height(value: Length): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Length | 是 | 安全控件自身的高度，缺省时将根据元素内容自适配高度。 <br>未显式指定单位时，单位为vp。 <br>配合[minFontSize](#minfontsize)、[maxFontSize](#maxfontsize)、 [maxLines](#maxlines)以及[heightAdaptivePolicy](#heightadaptivepolicy) 使用实现自适应字号时，安全控件文本未完全显示将导致点击不授权。设置异常值时该属性不生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [Length](arkts-arkui-length-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## heightAdaptivePolicy
 
@@ -750,25 +750,25 @@ heightAdaptivePolicy(policy: TextHeightAdaptivePolicy): T
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-heightAdaptivePolicy(policy: TextHeightAdaptivePolicy): T--><!--Device-SecurityComponentMethod-heightAdaptivePolicy(policy: TextHeightAdaptivePolicy): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| policy | TextHeightAdaptivePolicy | 是 | 文本自适应高度的方式。 <br>默认值：TextHeightAdaptivePolicy.MAX_LINES_FIRST。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| policy | [TextHeightAdaptivePolicy](arkts-arkui-enums-textheightadaptivepolicy-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## iconColor
 
@@ -780,25 +780,25 @@ iconColor(value: ResourceColor): T
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-iconColor(value: ResourceColor): T--><!--Device-SecurityComponentMethod-iconColor(value: ResourceColor): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceColor | 是 | 安全控件上图标的颜色。 <br>默认值：\\$r('sys.color.icon_on_primary')。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## iconSize
 
@@ -810,25 +810,25 @@ iconSize(value: Dimension): T
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-iconSize(value: Dimension): T--><!--Device-SecurityComponentMethod-iconSize(value: Dimension): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Dimension | 是 | 安全控件上图标的尺寸。未显式指定单位时，单位为vp。 <br>默认值：**16vp**。 <br>该参数不支持百分比字符串。<br/>若传入异常值或无效单位，属性不生效，控件按照默认值显示。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [Dimension](arkts-arkui-dimension-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## id
 
@@ -840,25 +840,25 @@ id(id: string): T
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-id(id: string): T--><!--Device-SecurityComponentMethod-id(id: string): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| id | string | 是 | 组件的唯一标识，唯一性由使用者保证。 <br>默认值：''。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [id](#id) | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## layoutDirection
 
@@ -870,25 +870,25 @@ layoutDirection(value: SecurityComponentLayoutDirection): T
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-layoutDirection(value: SecurityComponentLayoutDirection): T--><!--Device-SecurityComponentMethod-layoutDirection(value: SecurityComponentLayoutDirection): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md) | 是 | 安全控件上图标和文字分布的方向。 <br>默认值：SecurityComponentLayoutDirection.HORIZONTAL。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## markAnchor
 
@@ -900,25 +900,25 @@ markAnchor(value: Position): T
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-markAnchor(value: Position): T--><!--Device-SecurityComponentMethod-markAnchor(value: Position): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Position | 是 | 安全控件在位置定位时的锚点，以控件左上角作为基准点进行偏移。通常与position()、offset()配合使用，用于更精细地设置控件展示位置。 <br>未显式指定单位时，单位为vp。<br/>无默认值。<br/>传入异常值时该属性不生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [Position](#position) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## maxFontScale
 
@@ -930,25 +930,25 @@ maxFontScale(scale: number | Resource): T
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-maxFontScale(scale: number | Resource): T--><!--Device-SecurityComponentMethod-maxFontScale(scale: number | Resource): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| scale | number \| Resource | 是 | 文本最大的字体放大倍数。 <br>取值应≥1。 <br>**说明：** <br>设置的值小于1时，按值为1处理；设置的值为undefined或null等非法值时，属性不生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| scale | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## maxFontSize
 
@@ -961,25 +961,25 @@ maxFontSize(maxSize: number | string | Resource): T
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-maxFontSize(maxSize: number | string | Resource): T--><!--Device-SecurityComponentMethod-maxFontSize(maxSize: number | string | Resource): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| maxSize | number \| string \| Resource | 是 | 文本最大显示字号。 <br>取值应&gt;0。 <br>未显式指定单位时，单位为fp。 <br>**说明：**<br>设置的值小于或等于0时，自适应字号不生效；设置异常值时该属性不生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| maxSize | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## maxLines
 
@@ -991,25 +991,25 @@ maxLines(line: number | Resource): T
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-maxLines(line: number | Resource): T--><!--Device-SecurityComponentMethod-maxLines(line: number | Resource): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| line | number \| Resource | 是 | 文本的最大行数。 <br>number类型入参的取值范围： [1, +∞)。从API version 20开始，支持Resource类型。Resource类型仅支持'integer'，取值范围为[1, +∞)。 **说明：** <br>设置的值小于1时，按默认值1000000处理。<br>**起始版本：** 18 - 19 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| line | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## minFontScale
 
@@ -1021,25 +1021,25 @@ minFontScale(scale: number | Resource): T
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-minFontScale(scale: number | Resource): T--><!--Device-SecurityComponentMethod-minFontScale(scale: number | Resource): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| scale | number \| Resource | 是 | 文本最小的字体缩小倍数。 <br>取值范围：[0,1]。 <br>**说明：** <br>设置的值小于0时，按值为0处理，即允许缩小到任意倍数；设置的值大于1时，按值为1处理，即不允许缩小字体；设置的值为undefined或null等非法值时，属性不生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| scale | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## minFontSize
 
@@ -1052,25 +1052,25 @@ minFontSize(minSize: number | string | Resource): T
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-minFontSize(minSize: number | string | Resource): T--><!--Device-SecurityComponentMethod-minFontSize(minSize: number | string | Resource): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| minSize | number \| string \| Resource | 是 | 文本最小显示字号。 <br>取值应&gt;0。 <br>未显式指定单位时，单位为fp。<br> minFontSize应小于maxFontSize，若设置值大于maxFontSize，将按maxFontSize处理；小于或等于0时，自适应字号不生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| minSize | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## offset
 
@@ -1082,25 +1082,25 @@ offset(value: Position | Edges | LocalizedEdges): T
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-offset(value: Position | Edges | LocalizedEdges): T--><!--Device-SecurityComponentMethod-offset(value: Position | Edges | LocalizedEdges): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Position \| Edges \| LocalizedEdges | 是 | 安全控件相对于自身布局位置的坐标偏移。设置后不会影响父容器布局，仅在绘制阶段调整控件显示位置。 <br>未显式指定单位时，单位为vp。<br/>无默认值。<br>当入参异常时，该属性不生效。<br>**起始版本：** 12 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | Position \| Edges \| [LocalizedEdges](arkts-arkui-localizededges-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## padding
 
@@ -1112,25 +1112,25 @@ padding(value: Padding | Dimension): T
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-padding(value: Padding | Dimension): T--><!--Device-SecurityComponentMethod-padding(value: Padding | Dimension): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Padding \| Dimension | 是 | 安全控件的内边距。 <br>默认值：上下8vp，左右16vp。 <br>未显式指定单位时，单位为vp。<br/>**说明：** 本参数不支持设置百分比字符串数据类型。若设置百分比字符串，则对应内边距显示为0。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [Padding](arkts-arkui-units-padding-i.md) \| [Dimension](arkts-arkui-dimension-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## position
 
@@ -1142,25 +1142,25 @@ position(value: Position): T
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-position(value: Position): T--><!--Device-SecurityComponentMethod-position(value: Position): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Position | 是 | 安全控件左上角相对于父容器左上角的偏移位置。适用于通过绝对定位将安全控件放置到页面固定区域的场景。 <br>未显式指定单位时，单位为vp。<br/>x和y建议均传入数值型坐标。<br/>若参数为undefined、null，或x、y为非数字类型时，该属性不生效，异常坐标会按0处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [Position](#position) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## size
 
@@ -1172,25 +1172,25 @@ size(value: SizeOptions): T
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-size(value: SizeOptions): T--><!--Device-SecurityComponentMethod-size(value: SizeOptions): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | SizeOptions | 是 | 宽度和高度，缺省时将根据元素内容自适配宽高尺寸。 <br>未显式指定单位时，单位为vp。<br>配合 [minFontSize](#minfontsize)、 [maxFontSize](#maxfontsize)、[maxLines](#maxlines)以及 [heightAdaptivePolicy](#heightadaptivepolicy)使用实现自适应字号时，安全控件文本未完全显示将导致点击不授权。 size的设置会影响文本是否能完整显示。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [SizeOptions](arkts-arkui-units-sizeoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## textIconSpace
 
@@ -1202,25 +1202,25 @@ textIconSpace(value: Dimension): T
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-textIconSpace(value: Dimension): T--><!--Device-SecurityComponentMethod-textIconSpace(value: Dimension): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Dimension | 是 | 安全控件中图标和文字的间距。 <br>默认值：**4vp**。<br/> <br>未显式指定单位时，单位为vp。<br/>**说明：** 本参数不支持设置百分比字符串数据类型，若设置百分比字符串，则图标和文字的间距显示为0； 从API version 14开始，若设置值为负值，则使用默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [Dimension](arkts-arkui-dimension-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
+| 类型 |
+| --- |
+| T |
 
 ## width
 
@@ -1232,23 +1232,22 @@ width(value: Length): T
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SecurityComponentMethod-width(value: Length): T--><!--Device-SecurityComponentMethod-width(value: Length): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Length | 是 | 安全控件自身的宽度，缺省时将根据元素内容自适配宽度。 <br>未显式指定单位时，单位为vp。<br>配合 [minFontSize](#minfontsize)、 [maxFontSize](#maxfontsize)、[maxLines](#maxlines)以及 [heightAdaptivePolicy](#heightadaptivepolicy)使用实现自适应字号时，安全控件文本未完全显示将导致点击不授权。 设置异常值时该属性不生效。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [Length](arkts-arkui-length-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 安全控件的属性。 |
-
+| 类型 |
+| --- |
+| T |

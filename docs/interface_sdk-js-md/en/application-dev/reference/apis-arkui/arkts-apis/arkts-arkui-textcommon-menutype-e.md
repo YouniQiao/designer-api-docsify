@@ -4,9 +4,7 @@ Defines menu type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare enum MenuType--><!--Device-unnamed-export declare enum MenuType-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +18,9 @@ Selection menu.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MenuType-SELECTION_MENU = 0--><!--Device-MenuType-SELECTION_MENU = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +34,8 @@ Preview menu, only for image.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MenuType-PREVIEW_MENU = 1--><!--Device-MenuType-PREVIEW_MENU = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

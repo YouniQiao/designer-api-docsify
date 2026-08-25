@@ -16,23 +16,22 @@ Receives a function that uses the error-first callback mode, that is, uses `(err
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-**Substitutes:** [promisify](../../apis-default/arkts-apis/arkts-util-promisify-f.md)
-
-<!--Device-util-function promiseWrapper(original: (err: Object, value: Object) => void): Object--><!--Device-util-function promiseWrapper(original: (err: Object, value: Object) => void): Object-End-->
+**Substitutes:** [promisify](arkts-arkts-util-promisify-f.md)
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| original | (err: Object, value: Object) =&gt; void | Yes | Asynchronous function. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| original | (err: Object, value: Object) = & gt; void | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Object | Promise in the error-first style (that is, (err, value) =&gt; ... is called as the last parameter). |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Object |

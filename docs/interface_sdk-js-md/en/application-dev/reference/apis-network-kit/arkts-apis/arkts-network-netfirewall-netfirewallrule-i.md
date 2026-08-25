@@ -4,7 +4,7 @@ Defines a firewall rule.
 
 **Since:** 15
 
-<!--Device-netFirewall-interface NetFirewallRule--><!--Device-netFirewall-interface NetFirewallRule-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -26,23 +26,23 @@ Action, which can be allowing or denying.
 
 **Since:** 15
 
-<!--Device-NetFirewallRule-action: FirewallRuleAction--><!--Device-NetFirewallRule-action: FirewallRuleAction-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## appUid
 
 ```TypeScript
-appUid?: int
+appUid?: number
 ```
 
 Application or service UID.
 
-**Type:** int
+**Type:** number
 
 **Since:** 15
 
-<!--Device-NetFirewallRule-appUid?: int--><!--Device-NetFirewallRule-appUid?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -58,7 +58,7 @@ Firewall rule description. This parameter is optional and can contain a maximum 
 
 **Since:** 15
 
-<!--Device-NetFirewallRule-description?: string--><!--Device-NetFirewallRule-description?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -74,7 +74,7 @@ Rule direction, which can be inbound or outbound.
 
 **Since:** 15
 
-<!--Device-NetFirewallRule-direction: NetFirewallRuleDirection--><!--Device-NetFirewallRule-direction: NetFirewallRuleDirection-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -90,7 +90,7 @@ List of DNS server names. This parameter is valid only when **type** is set to *
 
 **Since:** 15
 
-<!--Device-NetFirewallRule-dns?: NetFirewallDnsParams--><!--Device-NetFirewallRule-dns?: NetFirewallDnsParams-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -106,23 +106,23 @@ List of domain names. This parameter is valid only when **type** is set to **RUL
 
 **Since:** 15
 
-<!--Device-NetFirewallRule-domains?: Array<NetFirewallDomainParams>--><!--Device-NetFirewallRule-domains?: Array<NetFirewallDomainParams>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## id
 
 ```TypeScript
-id?: int
+id?: number
 ```
 
 ID of the firewall rule.
 
-**Type:** int
+**Type:** number
 
 **Since:** 15
 
-<!--Device-NetFirewallRule-id?: int--><!--Device-NetFirewallRule-id?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -138,9 +138,9 @@ Interface name: valid when type = RULE_IP, otherwise it will be ignored.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-NetFirewallRule-interface?: string--><!--Device-NetFirewallRule-interface?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -156,7 +156,7 @@ Whether to enable the rule. The value **true** means to enable the rule, and the
 
 **Since:** 15
 
-<!--Device-NetFirewallRule-isEnabled: boolean--><!--Device-NetFirewallRule-isEnabled: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -172,7 +172,7 @@ Local IP addresses. This parameter is valid only when **type** is set to **RULE_
 
 **Since:** 15
 
-<!--Device-NetFirewallRule-localIps?: Array<NetFirewallIpParams>--><!--Device-NetFirewallRule-localIps?: Array<NetFirewallIpParams>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -188,7 +188,7 @@ Local ports. This parameter is valid only when **type** is set to **RULE_IP**. O
 
 **Since:** 15
 
-<!--Device-NetFirewallRule-localPorts?: Array<NetFirewallPortParams>--><!--Device-NetFirewallRule-localPorts?: Array<NetFirewallPortParams>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -204,23 +204,23 @@ Rule name. This parameter is mandatory and can contain a maximum of 128 characte
 
 **Since:** 15
 
-<!--Device-NetFirewallRule-name: string--><!--Device-NetFirewallRule-name: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## protocol
 
 ```TypeScript
-protocol?: int
+protocol?: number
 ```
 
 Protocol, which can be TCP (value **6**) or UDP (value **17**). This parameter is valid only when **type** is set to **RULE_IP**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 15
 
-<!--Device-NetFirewallRule-protocol?: int--><!--Device-NetFirewallRule-protocol?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -236,7 +236,7 @@ Remote IP addresses. This parameter is valid only when **type** is set to **RULE
 
 **Since:** 15
 
-<!--Device-NetFirewallRule-remoteIps?: Array<NetFirewallIpParams>--><!--Device-NetFirewallRule-remoteIps?: Array<NetFirewallIpParams>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -252,7 +252,7 @@ Remote ports. This parameter is valid only when **type** is set to **RULE_IP**. 
 
 **Since:** 15
 
-<!--Device-NetFirewallRule-remotePorts?: Array<NetFirewallPortParams>--><!--Device-NetFirewallRule-remotePorts?: Array<NetFirewallPortParams>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -268,23 +268,22 @@ Rule type, which can be IP, Domain, or DNS.
 
 **Since:** 15
 
-<!--Device-NetFirewallRule-type: NetFirewallRuleType--><!--Device-NetFirewallRule-type: NetFirewallRuleType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## userId
 
 ```TypeScript
-userId: int
+userId: number
 ```
 
 System user ID, which must exist.
 
-**Type:** int
+**Type:** number
 
 **Since:** 15
 
-<!--Device-NetFirewallRule-userId: int--><!--Device-NetFirewallRule-userId: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
-

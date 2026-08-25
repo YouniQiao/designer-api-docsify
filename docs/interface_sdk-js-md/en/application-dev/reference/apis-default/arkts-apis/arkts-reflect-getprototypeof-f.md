@@ -13,17 +13,15 @@ function getPrototypeOf(target: object): object | null
 
 Returns the prototype of an object.
 
-**Since:** -1
-
-<!--Device-Reflect-function getPrototypeOf(target: object): object | null--><!--Device-Reflect-function getPrototypeOf(target: object): object | null-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | object | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

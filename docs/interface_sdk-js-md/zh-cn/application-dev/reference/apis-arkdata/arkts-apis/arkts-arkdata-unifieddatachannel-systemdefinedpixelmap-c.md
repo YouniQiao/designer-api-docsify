@@ -4,13 +4,9 @@
 
 **继承/实现关系：** SystemDefinedPixelMap extends [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-unifiedDataChannel-class SystemDefinedPixelMap--><!--Device-unifiedDataChannel-class SystemDefinedPixelMap-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -19,6 +15,26 @@
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
+
+## rawData
+
+```TypeScript
+set rawData(value: Uint8Array)
+```
+
+PixelMap对象的二进制数据。
+
+**类型：** Uint8Array
+
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 **示例**
 
@@ -61,4 +77,3 @@ image.createPixelMap(color, opts, (error, pixelMap) => {
   }
 })
 ```
-

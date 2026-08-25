@@ -3,8 +3,8 @@
 - [@ohos.connectedTag](arkts-connectedtag.md)
   - [init](arkts-connectivity-connectedtag-init-f.md)
   - [initialize](arkts-connectivity-connectedtag-initialize-f.md)
-  - [off_notify](arkts-connectivity-connectedtag-offnotify-f.md)
-  - [on_notify](arkts-connectivity-connectedtag-onnotify-f.md)
+  - [off](arkts-connectivity-connectedtag-off-f.md)
+  - [on](arkts-connectivity-connectedtag-on-f.md)
   - [read](arkts-connectivity-connectedtag-read-f.md)
   - [readNdefTag](arkts-connectivity-connectedtag-readndeftag-f.md)
   - [uninit](arkts-connectivity-connectedtag-uninit-f.md)
@@ -158,9 +158,9 @@
   - [isNfcAvailable](arkts-connectivity-nfccontroller-isnfcavailable-f.md)
   - [isNfcOpen](arkts-connectivity-nfccontroller-isnfcopen-f.md)
   - [isNfcSupported](arkts-connectivity-nfccontroller-isnfcsupported-f.md)
-  - [off_nfcStateChange](arkts-connectivity-nfccontroller-offnfcstatechange-f.md)
+  - [off](arkts-connectivity-nfccontroller-off-f.md)
   - [offNfcStateChange](arkts-connectivity-nfccontroller-offnfcstatechange-f.md)
-  - [on_nfcStateChange](arkts-connectivity-nfccontroller-onnfcstatechange-f.md)
+  - [on](arkts-connectivity-nfccontroller-on-f.md)
   - [onNfcStateChange](arkts-connectivity-nfccontroller-onnfcstatechange-f.md)
   - [openNfc](arkts-connectivity-nfccontroller-opennfc-f.md)
   - [NfcState](arkts-connectivity-nfccontroller-nfcstate-e.md)
@@ -191,12 +191,10 @@
     - [getNfcV](arkts-connectivity-tag-getnfcv-f.md)
     - [getNfcVTag](arkts-connectivity-tag-getnfcvtag-f.md)
     - [getTagInfo](arkts-connectivity-tag-gettaginfo-f.md)
-    - [off_readerMode](arkts-connectivity-tag-offreadermode-f.md)
-    - [off_readerModeWithInterval](arkts-connectivity-tag-offreadermodewithinterval-f.md)
+    - [off](arkts-connectivity-tag-off-f.md)
     - [offReaderMode](arkts-connectivity-tag-offreadermode-f.md)
     - [offReaderModeWithInterval](arkts-connectivity-tag-offreadermodewithinterval-f.md)
-    - [on_readerMode](arkts-connectivity-tag-onreadermode-f.md)
-    - [on_readerModeWithInterval](arkts-connectivity-tag-onreadermodewithinterval-f.md)
+    - [on](arkts-connectivity-tag-on-f.md)
     - [onReaderMode](arkts-connectivity-tag-onreadermode-f.md)
     - [onReaderModeWithInterval](arkts-connectivity-tag-onreadermodewithinterval-f.md)
     - [registerForegroundDispatch](arkts-connectivity-tag-registerforegrounddispatch-f.md)
@@ -226,8 +224,8 @@
 - [@ohos.secureElement](arkts-secureelement.md)
   - [createService](arkts-connectivity-omapi-createservice-f.md)
   - [newSEService](arkts-connectivity-omapi-newseservice-f.md)
-  - [off_stateChanged](arkts-connectivity-omapi-offstatechanged-f.md)
-  - [on_stateChanged](arkts-connectivity-omapi-onstatechanged-f.md)
+  - [off](arkts-connectivity-omapi-off-f.md)
+  - [on](arkts-connectivity-omapi-on-f.md)
   - [Channel](arkts-connectivity-omapi-channel-i.md)
   - [Reader](arkts-connectivity-omapi-reader-i.md)
   - [SEService](arkts-connectivity-omapi-seservice-i.md)
@@ -281,40 +279,12 @@
   <!--Del-->
   - [isHotspotDualBandSupported(系统接口)](arkts-connectivity-wifi-ishotspotdualbandsupported-f-sys.md)<!--DelEnd-->
   - [isWifiActive](arkts-connectivity-wifi-iswifiactive-f.md)
+  - [off](arkts-connectivity-wifi-off-f.md)
   <!--Del-->
-  - [off_hotspotStaJoin(系统接口)](arkts-connectivity-wifi-offhotspotstajoin-f-sys.md)<!--DelEnd-->
+  - [off(系统接口)](arkts-connectivity-wifi-off-f-sys.md)<!--DelEnd-->
+  - [on](arkts-connectivity-wifi-on-f.md)
   <!--Del-->
-  - [off_hotspotStaLeave(系统接口)](arkts-connectivity-wifi-offhotspotstaleave-f-sys.md)<!--DelEnd-->
-  - [off_hotspotStateChange](arkts-connectivity-wifi-offhotspotstatechange-f.md)
-  - [off_p2pConnectionChange](arkts-connectivity-wifi-offp2pconnectionchange-f.md)
-  - [off_p2pDeviceChange](arkts-connectivity-wifi-offp2pdevicechange-f.md)
-  - [off_p2pDiscoveryChange](arkts-connectivity-wifi-offp2pdiscoverychange-f.md)
-  - [off_p2pPeerDeviceChange](arkts-connectivity-wifi-offp2ppeerdevicechange-f.md)
-  - [off_p2pPersistentGroupChange](arkts-connectivity-wifi-offp2ppersistentgroupchange-f.md)
-  - [off_p2pStateChange](arkts-connectivity-wifi-offp2pstatechange-f.md)
-  <!--Del-->
-  - [off_streamChange(系统接口)](arkts-connectivity-wifi-offstreamchange-f-sys.md)<!--DelEnd-->
-  - [off_wifiConnectionChange](arkts-connectivity-wifi-offwificonnectionchange-f.md)
-  - [off_wifiRssiChange](arkts-connectivity-wifi-offwifirssichange-f.md)
-  - [off_wifiScanStateChange](arkts-connectivity-wifi-offwifiscanstatechange-f.md)
-  - [off_wifiStateChange](arkts-connectivity-wifi-offwifistatechange-f.md)
-  <!--Del-->
-  - [on_hotspotStaJoin(系统接口)](arkts-connectivity-wifi-onhotspotstajoin-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on_hotspotStaLeave(系统接口)](arkts-connectivity-wifi-onhotspotstaleave-f-sys.md)<!--DelEnd-->
-  - [on_hotspotStateChange](arkts-connectivity-wifi-onhotspotstatechange-f.md)
-  - [on_p2pConnectionChange](arkts-connectivity-wifi-onp2pconnectionchange-f.md)
-  - [on_p2pDeviceChange](arkts-connectivity-wifi-onp2pdevicechange-f.md)
-  - [on_p2pDiscoveryChange](arkts-connectivity-wifi-onp2pdiscoverychange-f.md)
-  - [on_p2pPeerDeviceChange](arkts-connectivity-wifi-onp2ppeerdevicechange-f.md)
-  - [on_p2pPersistentGroupChange](arkts-connectivity-wifi-onp2ppersistentgroupchange-f.md)
-  - [on_p2pStateChange](arkts-connectivity-wifi-onp2pstatechange-f.md)
-  <!--Del-->
-  - [on_streamChange(系统接口)](arkts-connectivity-wifi-onstreamchange-f-sys.md)<!--DelEnd-->
-  - [on_wifiConnectionChange](arkts-connectivity-wifi-onwificonnectionchange-f.md)
-  - [on_wifiRssiChange](arkts-connectivity-wifi-onwifirssichange-f.md)
-  - [on_wifiScanStateChange](arkts-connectivity-wifi-onwifiscanstatechange-f.md)
-  - [on_wifiStateChange](arkts-connectivity-wifi-onwifistatechange-f.md)
+  - [on(系统接口)](arkts-connectivity-wifi-on-f-sys.md)<!--DelEnd-->
   - [p2pCancelConnect](arkts-connectivity-wifi-p2pcancelconnect-f.md)
   - [p2pConnect](arkts-connectivity-wifi-p2pconnect-f.md)
   <!--Del-->
@@ -444,7 +414,8 @@
   - [isBandTypeSupported](arkts-connectivity-wifimanager-isbandtypesupported-f.md)
   - [isConnected](arkts-connectivity-wifimanager-isconnected-f.md)
   - [isFeatureSupported](arkts-connectivity-wifimanager-isfeaturesupported-f.md)
-  - [isHotspotActive](arkts-connectivity-wifimanager-ishotspotactive-f.md)
+  <!--Del-->
+  - [isHotspotActive(系统接口)](arkts-connectivity-wifimanager-ishotspotactive-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [isHotspotDualBandSupported(系统接口)](arkts-connectivity-wifimanager-ishotspotdualbandsupported-f-sys.md)<!--DelEnd-->
   - [isMeteredHotspot](arkts-connectivity-wifimanager-ismeteredhotspot-f.md)
@@ -454,25 +425,9 @@
   - [isRandomMacDisabled(系统接口)](arkts-connectivity-wifimanager-israndommacdisabled-f-sys.md)<!--DelEnd-->
   - [isWifiActive](arkts-connectivity-wifimanager-iswifiactive-f.md)
   - [isWlanSupported](arkts-connectivity-wifimanager-iswlansupported-f.md)
+  - [off](arkts-connectivity-wifimanager-off-f.md)
   <!--Del-->
-  - [off_deviceConfigChange(系统接口)](arkts-connectivity-wifimanager-offdeviceconfigchange-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off_hotspotStaJoin(系统接口)](arkts-connectivity-wifimanager-offhotspotstajoin-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off_hotspotStaLeave(系统接口)](arkts-connectivity-wifimanager-offhotspotstaleave-f-sys.md)<!--DelEnd-->
-  - [off_hotspotStateChange](arkts-connectivity-wifimanager-offhotspotstatechange-f.md)
-  - [off_p2pConnectionChange](arkts-connectivity-wifimanager-offp2pconnectionchange-f.md)
-  - [off_p2pDeviceChange](arkts-connectivity-wifimanager-offp2pdevicechange-f.md)
-  - [off_p2pDiscoveryChange](arkts-connectivity-wifimanager-offp2pdiscoverychange-f.md)
-  - [off_p2pPeerDeviceChange](arkts-connectivity-wifimanager-offp2ppeerdevicechange-f.md)
-  - [off_p2pPersistentGroupChange](arkts-connectivity-wifimanager-offp2ppersistentgroupchange-f.md)
-  - [off_p2pStateChange](arkts-connectivity-wifimanager-offp2pstatechange-f.md)
-  <!--Del-->
-  - [off_streamChange(系统接口)](arkts-connectivity-wifimanager-offstreamchange-f-sys.md)<!--DelEnd-->
-  - [off_wifiConnectionChange](arkts-connectivity-wifimanager-offwificonnectionchange-f.md)
-  - [off_wifiRssiChange](arkts-connectivity-wifimanager-offwifirssichange-f.md)
-  - [off_wifiScanStateChange](arkts-connectivity-wifimanager-offwifiscanstatechange-f.md)
-  - [off_wifiStateChange](arkts-connectivity-wifimanager-offwifistatechange-f.md)
+  - [off(系统接口)](arkts-connectivity-wifimanager-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offDeviceConfigChange(系统接口)](arkts-connectivity-wifimanager-offdeviceconfigchange-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -492,25 +447,9 @@
   - [offWifiRssiChange](arkts-connectivity-wifimanager-offwifirssichange-f.md)
   - [offWifiScanStateChange](arkts-connectivity-wifimanager-offwifiscanstatechange-f.md)
   - [offWifiStateChange](arkts-connectivity-wifimanager-offwifistatechange-f.md)
+  - [on](arkts-connectivity-wifimanager-on-f.md)
   <!--Del-->
-  - [on_deviceConfigChange(系统接口)](arkts-connectivity-wifimanager-ondeviceconfigchange-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on_hotspotStaJoin(系统接口)](arkts-connectivity-wifimanager-onhotspotstajoin-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on_hotspotStaLeave(系统接口)](arkts-connectivity-wifimanager-onhotspotstaleave-f-sys.md)<!--DelEnd-->
-  - [on_hotspotStateChange](arkts-connectivity-wifimanager-onhotspotstatechange-f.md)
-  - [on_p2pConnectionChange](arkts-connectivity-wifimanager-onp2pconnectionchange-f.md)
-  - [on_p2pDeviceChange](arkts-connectivity-wifimanager-onp2pdevicechange-f.md)
-  - [on_p2pDiscoveryChange](arkts-connectivity-wifimanager-onp2pdiscoverychange-f.md)
-  - [on_p2pPeerDeviceChange](arkts-connectivity-wifimanager-onp2ppeerdevicechange-f.md)
-  - [on_p2pPersistentGroupChange](arkts-connectivity-wifimanager-onp2ppersistentgroupchange-f.md)
-  - [on_p2pStateChange](arkts-connectivity-wifimanager-onp2pstatechange-f.md)
-  <!--Del-->
-  - [on_streamChange(系统接口)](arkts-connectivity-wifimanager-onstreamchange-f-sys.md)<!--DelEnd-->
-  - [on_wifiConnectionChange](arkts-connectivity-wifimanager-onwificonnectionchange-f.md)
-  - [on_wifiRssiChange](arkts-connectivity-wifimanager-onwifirssichange-f.md)
-  - [on_wifiScanStateChange](arkts-connectivity-wifimanager-onwifiscanstatechange-f.md)
-  - [on_wifiStateChange](arkts-connectivity-wifimanager-onwifistatechange-f.md)
+  - [on(系统接口)](arkts-connectivity-wifimanager-on-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onDeviceConfigChange(系统接口)](arkts-connectivity-wifimanager-ondeviceconfigchange-f-sys.md)<!--DelEnd-->
   <!--Del-->

@@ -16,9 +16,9 @@ function getSysVpnConfigList(): Promise<Array<SysVpnConfig>>
 
 **起始版本：** 12
 
-**需要权限：** ohos.permission.MANAGE_VPN
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-vpn-function getSysVpnConfigList(): Promise<Array<SysVpnConfig>>--><!--Device-vpn-function getSysVpnConfigList(): Promise<Array<SysVpnConfig>>-End-->
+**需要权限：** ohos.permission.MANAGE_VPN
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -26,16 +26,15 @@ function getSysVpnConfigList(): Promise<Array<SysVpnConfig>>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md)&gt;&gt; | The promise returned by the all VPN network configuration. |
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;[SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md)&gt;&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
-
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |

@@ -4,7 +4,7 @@ Describes the UDP port state information.
 
 **Since:** 24
 
-<!--Device-connection-export interface UdpNetPortStatesInfo--><!--Device-connection-export interface UdpNetPortStatesInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -26,63 +26,62 @@ Local IP address of the UDP network.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-UdpNetPortStatesInfo-udpLocalIp: string--><!--Device-UdpNetPortStatesInfo-udpLocalIp: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## udpLocalPort
 
 ```TypeScript
-udpLocalPort: int
+udpLocalPort: number
 ```
 
 Local port of the UDP network. The value range is [0, 65535].
 
-**Type:** int
+**Type:** number
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-UdpNetPortStatesInfo-udpLocalPort: int--><!--Device-UdpNetPortStatesInfo-udpLocalPort: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## udpPid
 
 ```TypeScript
-udpPid: int
+udpPid: number
 ```
 
 PID of the process that listens for the UDP port.
 
-**Type:** int
+**Type:** number
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-UdpNetPortStatesInfo-udpPid: int--><!--Device-UdpNetPortStatesInfo-udpPid: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## udpUid
 
 ```TypeScript
-udpUid: int
+udpUid: number
 ```
 
 UID of the user who listens for the UDP port.
 
-**Type:** int
+**Type:** number
 
 **Since:** 24
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UdpNetPortStatesInfo-udpUid: int--><!--Device-UdpNetPortStatesInfo-udpUid: int-End-->
-
 **System capability:** SystemCapability.Communication.NetManager.Core
-

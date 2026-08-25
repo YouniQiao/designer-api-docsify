@@ -1,12 +1,10 @@
 # DragSpringLoadingConfiguration
 
-Defines parameters affecting spring loading detection. Typically, default system configurations suffice. Customization can be done by specifying the config when binding onDragSpringLoading or dynamically modifying it using the updateConfiguration method during the BEGIN state.
+Defines the configuration parameters for drag hover detection. The default settings typically suffice. These settings can be customized through onDragSpringLoading binding or dynamically updated during BEGIN state using [updateConfiguration](arkts-arkui-dragcontroller-springloadingcontext-c.md#updateconfiguration).
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-dragController-export interface DragSpringLoadingConfiguration--><!--Device-dragController-export interface DragSpringLoadingConfiguration-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,80 +17,79 @@ import { dragController } from '@kit.ArkUI';
 ## stillTimeLimit
 
 ```TypeScript
-stillTimeLimit?: int
+stillTimeLimit?: number
 ```
 
-Time interval to maintain a stationary state before entering spring loading. Default: 500 ms.
+Time (in ms) required to remain stationary to enter the BEGIN state of hover detection. Value range: integer in the [0, 2&lt;sup&gt;31&lt;/sup&gt;-1] range. Floating-point number inputs will be truncated to integers. Invalid values (negative numbers, **null**, **undefined**, **NaN**) are treated as the default value **500**.
 
-**Type:** int
+**Type:** number
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragSpringLoadingConfiguration-stillTimeLimit?: int--><!--Device-DragSpringLoadingConfiguration-stillTimeLimit?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## updateInterval
 
 ```TypeScript
-updateInterval?: int
+updateInterval?: number
 ```
 
-Interval between update notifications after entering the spring loading state. Default: 100ms.
+Time interval (in ms) at which update notifications are sent after hover detection enters the UPDATE state. Value range: integer in the [0, 2&lt;sup&gt;31&lt;/sup&gt;-1] range. Floating-point number inputs will be truncated to integers. Invalid values (negative numbers, **null**, **undefined**, **NaN**) are treated as the default value **100**.
 
-**Type:** int
+**Type:** number
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragSpringLoadingConfiguration-updateInterval?: int--><!--Device-DragSpringLoadingConfiguration-updateInterval?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## updateNotifyCount
 
 ```TypeScript
-updateNotifyCount?: int
+updateNotifyCount?: number
 ```
 
-Maximum number of update notifications to report while in the spring loading state. Default: 3.
+Maximum number of update notifications after hover detection enters the UPDATE state. Value range: integer in the [0, 2&lt;sup&gt;31&lt;/sup&gt;-1] range. Floating-point number inputs will be truncated to integers. Invalid values (negative numbers, **null**, **undefined**, **NaN**) are treated as the default value **3**.
 
-**Type:** int
+**Type:** number
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragSpringLoadingConfiguration-updateNotifyCount?: int--><!--Device-DragSpringLoadingConfiguration-updateNotifyCount?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## updateToFinishInterval
 
 ```TypeScript
-updateToFinishInterval?: int
+updateToFinishInterval?: number
 ```
 
-Maximum wait time from the last UPDATE state to the end of spring loading. Default: 100ms.
+Maximum waiting time (in ms) from the UPDATE state to the END state. Value range: integer in the [0, 2&lt;sup&gt;31&lt;/sup&gt;-1] range. Floating-point number inputs will be truncated to integers. Invalid values (negative numbers, **null**, **undefined**, **NaN**) are treated as the default value **100**.
 
-**Type:** int
+**Type:** number
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragSpringLoadingConfiguration-updateToFinishInterval?: int--><!--Device-DragSpringLoadingConfiguration-updateToFinishInterval?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

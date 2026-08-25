@@ -4,7 +4,25 @@ This module provides the requested ad content.
 
 **Since:** 11
 
-<!--Device-unnamed-export interface Advertisement--><!--Device-unnamed-export interface Advertisement-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
+**System capability:** SystemCapability.Advertising.Ads
+
+## [key:string]
+
+```TypeScript
+[key:string]: Object
+```
+
+Custom parameters.<!--RP1--><!--RP1End-->
+
+**Type:** Object
+
+**Since:** 11
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -22,9 +40,9 @@ If not filled, the default is native ad type.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-Advertisement-adType: number--><!--Device-Advertisement-adType: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -41,9 +59,9 @@ Whether the ad is clicked.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-Advertisement-clicked: boolean--><!--Device-Advertisement-clicked: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -60,9 +78,9 @@ Whether users get rewarded for watching or clicking the ad.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-Advertisement-rewarded: boolean--><!--Device-Advertisement-rewarded: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -78,9 +96,9 @@ Server verification parameters.{customData: "test",userId: "12345"}
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-Advertisement-rewardVerifyConfig: Map<string, string>--><!--Device-Advertisement-rewardVerifyConfig: Map<string, string>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -97,9 +115,9 @@ Whether the ad is shown.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-Advertisement-shown: boolean--><!--Device-Advertisement-shown: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -115,9 +133,8 @@ Unique ID of the ad.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-Advertisement-uniqueId: string--><!--Device-Advertisement-uniqueId: string-End-->
-
 **System capability:** SystemCapability.Advertising.Ads
-

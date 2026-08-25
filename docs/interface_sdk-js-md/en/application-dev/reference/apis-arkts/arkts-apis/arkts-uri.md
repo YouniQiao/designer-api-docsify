@@ -2,9 +2,9 @@
 
 The uri module provides APIs for parsing URI strings that comply with the RFC3986 standard. This standard defines how to encode and parse the identifiers used to locate network resources. The module does not support parsing of URIs in non-standard scenarios.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-unnamed-declare namespace uri--><!--Device-unnamed-declare namespace uri-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -18,7 +18,6 @@ import { uri } from '@kit.ArkTS';
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | URI Represents a Uniform Resource Identifier (URI) reference. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [URI](arkts-arkts-uri-uri-c.md) |

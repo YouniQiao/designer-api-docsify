@@ -10,7 +10,6 @@ import { ErrorCode } from '@kit.AbilityKit';
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [ErrorCode](arkts-ability-ability-errorcode-errorcode-e.md) | Enumerates the error codes that may be returned when an ability is started. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ErrorCode](arkts-ability-ability-errorcode-errorcode-e.md) |

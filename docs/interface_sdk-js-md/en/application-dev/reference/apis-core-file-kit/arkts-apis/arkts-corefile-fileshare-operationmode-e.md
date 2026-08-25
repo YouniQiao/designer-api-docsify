@@ -2,9 +2,9 @@
 
 Enumerates the uri operate mode types.@enum { int } OperationMode
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-fileShare-export enum OperationMode--><!--Device-fileShare-export enum OperationMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -16,9 +16,9 @@ READ_MODE = 0b1
 
 Indicates read permissions.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-OperationMode-READ_MODE = 0b1--><!--Device-OperationMode-READ_MODE = 0b1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -30,9 +30,9 @@ WRITE_MODE = 0b10
 
 Indicates write permissions.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-OperationMode-WRITE_MODE = 0b10--><!--Device-OperationMode-WRITE_MODE = 0b10-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -44,9 +44,9 @@ CREATE_MODE = 0b100
 
 Indicates creating permissions.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-OperationMode-CREATE_MODE = 0b100--><!--Device-OperationMode-CREATE_MODE = 0b100-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -58,9 +58,9 @@ DELETE_MODE = 0b1000
 
 Indicates deleting permissions.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-OperationMode-DELETE_MODE = 0b1000--><!--Device-OperationMode-DELETE_MODE = 0b1000-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -72,9 +72,8 @@ RENAME_MODE = 0b10000
 
 Indicates renaming permissions.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-OperationMode-RENAME_MODE = 0b10000--><!--Device-OperationMode-RENAME_MODE = 0b10000-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
-

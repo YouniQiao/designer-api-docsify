@@ -2,9 +2,9 @@
 
 Defines a struct for statistics of device-cloud upload and download tasks of a database table.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-relationalStore-interface TableDetails--><!--Device-relationalStore-interface TableDetails-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -24,9 +24,9 @@ Describes the {@code Statistic} details of the download process.
 
 **Type:** [Statistic](arkts-arkdata-relationalstore-statistic-i.md)
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-TableDetails-download: Statistic--><!--Device-TableDetails-download: Statistic-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -40,9 +40,8 @@ Describes the {@code Statistic} details of the upload process.
 
 **Type:** [Statistic](arkts-arkdata-relationalstore-statistic-i.md)
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-TableDetails-upload: Statistic--><!--Device-TableDetails-upload: Statistic-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-

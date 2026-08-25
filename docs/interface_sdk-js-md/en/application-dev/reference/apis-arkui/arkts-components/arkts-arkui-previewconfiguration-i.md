@@ -4,7 +4,7 @@ Configures the style of the preview image during custom drag operations.
 
 **Since:** 15
 
-<!--Device-unnamed-declare interface PreviewConfiguration--><!--Device-unnamed-declare interface PreviewConfiguration-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,11 @@ Whether the preview builder is loaded at the time of setting.The default value i
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-PreviewConfiguration-delayCreating?: boolean--><!--Device-PreviewConfiguration-delayCreating?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,11 +50,10 @@ Whether the custom preview image is used only for lifting.
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
-<!--Device-PreviewConfiguration-onlyForLifting?: boolean--><!--Device-PreviewConfiguration-onlyForLifting?: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

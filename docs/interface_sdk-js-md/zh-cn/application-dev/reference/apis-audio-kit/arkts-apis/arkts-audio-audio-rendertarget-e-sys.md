@@ -2,9 +2,9 @@
 
 枚举，音频渲染器的渲染目标。@enum { int }
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-audio-enum RenderTarget--><!--Device-audio-enum RenderTarget-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -18,9 +18,9 @@ PLAYBACK = 0
 
 播放模式（音频渲染器的默认模式）。在此模式下，音频将通过音频渲染器正常播放。
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-RenderTarget-PLAYBACK = 0--><!--Device-RenderTarget-PLAYBACK = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -34,11 +34,10 @@ INJECT_TO_VOICE_COMMUNICATION_CAPTURE = 1
 
 注入模式。在此模式下，当录音流的source type为[SOURCE_TYPE_VOICE_COMMUNICATION](arkts-apis-audio-e.md#sourcetype8)，audio scene为 [AUDIO_SCENE_VOICE_CHAT](arkts-apis-audio-e.md#audioscene)时，音频渲染器的输出将被注入到VoIP录音流上。
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-RenderTarget-INJECT_TO_VOICE_COMMUNICATION_CAPTURE = 1--><!--Device-RenderTarget-INJECT_TO_VOICE_COMMUNICATION_CAPTURE = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
-

@@ -2,15 +2,37 @@
 
 Defines SymbolGlyph Modifier
 
-**继承/实现关系：** SymbolGlyphModifier implements SymbolGlyphAttribute, AttributeModifier<SymbolGlyphAttribute>
+**继承/实现关系：** SymbolGlyphModifier extends SymbolGlyphAttribute implements AttributeModifier<SymbolGlyphAttribute>
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-unnamed-export declare class SymbolGlyphModifier--><!--Device-unnamed-export declare class SymbolGlyphModifier-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## applyNormalAttribute
+
+```TypeScript
+applyNormalAttribute?(instance: SymbolGlyphAttribute): void
+```
+
+组件在普通状态（即未被按下、未获得焦点等默认交互状态）下的样式设置。该方法为回调方法，在组件处于普通状态时由框架自动调用，开发者可在方法体内通过修改instance对象的属性来动态设置SymbolGlyph组件的样式。
+
+**起始版本：** 12
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| instance | [SymbolGlyphAttribute](arkts-arkui-symbolglyph-symbolglyphattribute-i.md) | 是 |
 
 ## constructor
 
@@ -18,21 +40,20 @@ Defines SymbolGlyph Modifier
 constructor(src?: Resource)
 ```
 
-constructor
+SymbolGlyphModifier的构造函数。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-SymbolGlyphModifier-constructor(src?: Resource)--><!--Device-SymbolGlyphModifier-constructor(src?: Resource)-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| src | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 否 |  |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| src | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 否 |

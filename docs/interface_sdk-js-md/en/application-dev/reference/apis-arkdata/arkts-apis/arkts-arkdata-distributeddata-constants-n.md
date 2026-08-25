@@ -4,11 +4,11 @@ Defines the KV store constants.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** Constants
-
-<!--Device-distributedData-namespace Constants--><!--Device-distributedData-namespace Constants-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -21,12 +21,11 @@ Defines the KV store constants.
 
 ### Constants
 
-| Name | Description |
-| --- | --- |
-| [MAX_KEY_LENGTH](arkts-arkdata-constants-con.md#max_key_length) | max key length. Maximum length of a key in the KV store, in bytes. |
-| [MAX_VALUE_LENGTH](arkts-arkdata-constants-con.md#max_value_length) | max value length. Maximum length of a value in the KV store, in bytes. |
-| [MAX_KEY_LENGTH_DEVICE](arkts-arkdata-constants-con.md#max_key_length_device) | max device coordinate key length. Maximum length of a device key, in bytes. |
-| [MAX_STORE_ID_LENGTH](arkts-arkdata-constants-con.md#max_store_id_length) | max store id length. Maximum length of a KV store ID, in bytes. |
-| [MAX_QUERY_LENGTH](arkts-arkdata-constants-con.md#max_query_length) | max query length. Maximum query length, in bytes. |
-| [MAX_BATCH_SIZE](arkts-arkdata-constants-con.md#max_batch_size) | max batch operation size. Maximum number of batch operations. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [MAX_KEY_LENGTH](arkts-arkdata-constants-con.md#max_key_length) |
+| [MAX_VALUE_LENGTH](arkts-arkdata-constants-con.md#max_value_length) |
+| [MAX_KEY_LENGTH_DEVICE](arkts-arkdata-constants-con.md#max_key_length_device) |
+| [MAX_STORE_ID_LENGTH](arkts-arkdata-constants-con.md#max_store_id_length) |
+| [MAX_QUERY_LENGTH](arkts-arkdata-constants-con.md#max_query_length) |
+| [MAX_BATCH_SIZE](arkts-arkdata-constants-con.md#max_batch_size) |

@@ -4,12 +4,9 @@
 type PluralRuleType = "cardinal" | "ordinal"
 ```
 
-**Since:** -1
+**ArkTS mode:** 
 
-<!--Device-Intl-type PluralRuleType = "cardinal" | "ordinal"--><!--Device-Intl-type PluralRuleType = "cardinal" | "ordinal"-End-->
-
-| Type | Description |
-| --- | --- |
-| "cardinal" |  |
-| "ordinal" |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| "cardinal" |
+| "ordinal" |

@@ -2,9 +2,9 @@
 
 Provides an option for number formatting.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-call-export interface NumberFormatOptions--><!--Device-call-export interface NumberFormatOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -24,9 +24,8 @@ Country code, for example, **CN** (China). All country codes are supported. The 
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NumberFormatOptions-countryCode?: string--><!--Device-NumberFormatOptions-countryCode?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
-

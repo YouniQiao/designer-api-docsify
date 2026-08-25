@@ -1,17 +1,19 @@
 # ResponseHeaders
 
 ```TypeScript
-export type ResponseHeaders = Record<string, string | string[] | undefined>
+export type ResponseHeaders = {
+    [k: string]: string | string[] | undefined;
+  }
 ```
 
-HTTP response headers.
+Enumerates the response headers sent by the server.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-webSocket-export type ResponseHeaders = Record<string, string | string[] | undefined>--><!--Device-webSocket-export type ResponseHeaders = Record<string, string | string[] | undefined>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-**System capability:** 
-- API version 23 and later: SystemCapability.Communication.NetStack
+**System capability:** SystemCapability.Communication.NetStack
 
-**Property type:** Record&lt;string, string | string[] | undefined&gt;
-
+**Property type:** {
+    [k: string]: string | string[] | undefined;
+  }

@@ -4,7 +4,7 @@ Describes the internal information about a worker thread.
 
 **Since:** 10
 
-<!--Device-taskpool-class ThreadInfo--><!--Device-taskpool-class ThreadInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,9 +26,9 @@ Priority of the calling thread. If the return value is empty, no task is running
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-ThreadInfo-priority?: Priority--><!--Device-ThreadInfo-priority?: Priority-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -44,9 +44,9 @@ IDs of tasks running on the calling thread. If the return value is empty, no tas
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-ThreadInfo-taskIds?: number[]--><!--Device-ThreadInfo-taskIds?: number[]-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -64,9 +64,8 @@ ID of the worker thread. If the return value is empty, no task is running. You a
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ThreadInfo-tid: number--><!--Device-ThreadInfo-tid: number-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

@@ -4,7 +4,7 @@ Result of arkTS script execution.
 
 **Since:** 26.0.0
 
-<!--Device-scriptManager-interface ExecuteResult--><!--Device-scriptManager-interface ExecuteResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -26,11 +26,11 @@ Indicates result code. The value range is all integers.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ExecuteResult-code: number--><!--Device-ExecuteResult-code: number-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -46,11 +46,11 @@ Indicates the URIs read and write permissions which consistent with flags, flags
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ExecuteResult-flags?: number--><!--Device-ExecuteResult-flags?: number-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -66,11 +66,11 @@ Indicates execute result.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ExecuteResult-result?: Record<string, Object>--><!--Device-ExecuteResult-result?: Record<string, Object>-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -86,11 +86,10 @@ Indicates the URIs will be authorized to the caller.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ExecuteResult-uris?: Array<string>--><!--Device-ExecuteResult-uris?: Array<string>-End-->
-
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-

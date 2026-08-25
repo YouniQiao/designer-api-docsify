@@ -4,7 +4,6 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | The proxy object of the connected party for the AgentExtensionAbility, used to send messages to the connected party, etc.@interface AgentHostProxy |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AgentHostProxy](arkts-ability-agenthostproxy-i.md) |

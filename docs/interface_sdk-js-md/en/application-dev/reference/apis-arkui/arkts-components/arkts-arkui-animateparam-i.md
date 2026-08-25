@@ -4,7 +4,7 @@ Defines parameters related to animation effects.
 
 **Since:** 7
 
-<!--Device-unnamed-declare interface AnimateParam--><!--Device-unnamed-declare interface AnimateParam-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -12,6 +12,24 @@ Defines parameters related to animation effects.
 
 ```TypeScript
 ```
+
+## onFinish
+
+```TypeScript
+onFinish?: () => void
+```
+
+Callback invoked when the animation playback is complete. If the UIAbility moves from the foreground to the background, any finite loop animation that is still in progress will be immediately terminated, triggering the completion callback.If the transition animation is disabled in the developer options and **tempo** is set to **+∞**, the callback is executed immediately when the animation playback is complete.
+
+**Since:** 7
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## curve
 
@@ -46,11 +64,11 @@ Animation curve.You are advised to specify the curve using the **Curve** or **IC
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-AnimateParam-curve?: Curve | string | ICurve--><!--Device-AnimateParam-curve?: Curve | string | ICurve-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,9 +87,9 @@ Delay of animation playback, in ms. By default, the playback is not delayed.Defa
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-AnimateParam-delay?: number--><!--Device-AnimateParam-delay?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -93,11 +111,11 @@ Animation duration, in ms.Default value: **1000**Note: 1. Before API 26.0.0, the
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-AnimateParam-duration?: number--><!--Device-AnimateParam-duration?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -113,11 +131,11 @@ Expected frame rate range of the animation.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AnimateParam-expectedFrameRateRange?: ExpectedFrameRateRange--><!--Device-AnimateParam-expectedFrameRateRange?: ExpectedFrameRateRange-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -133,13 +151,13 @@ Type of the **onFinish** callback.Default value: **FinishCallbackType.REMOVED**
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-AnimateParam-finishCallbackType?: FinishCallbackType--><!--Device-AnimateParam-finishCallbackType?: FinishCallbackType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -157,29 +175,9 @@ Number of times that the animation is played. By default, the animation is playe
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-AnimateParam-iterations?: number--><!--Device-AnimateParam-iterations?: number-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onFinish
-
-```TypeScript
-onFinish?: () => void
-```
-
-Callback invoked when the animation playback is complete. If the UIAbility moves from the foreground to the background, any finite loop animation that is still in progress will be immediately terminated, triggering the completion callback.If the transition animation is disabled in the developer options and **tempo** is set to **+∞**, the callback is executed immediately when the animation playback is complete.
-
-**Type:** () =&gt; void
-
-**Since:** 7
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-AnimateParam-onFinish?: () => void--><!--Device-AnimateParam-onFinish?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -208,11 +206,11 @@ Playback mode. By default, the animation is played from the beginning after the 
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-AnimateParam-playMode?: PlayMode--><!--Device-AnimateParam-playMode?: PlayMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -230,9 +228,8 @@ Animation playback speed. A larger value indicates faster animation playback, an
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-AnimateParam-tempo?: number--><!--Device-AnimateParam-tempo?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

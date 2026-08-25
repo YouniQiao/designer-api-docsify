@@ -4,7 +4,7 @@ Rotation parameter option of the rotation angle on each axis.
 
 **Since:** 20
 
-<!--Device-unnamed-declare interface RotateAngleOptions--><!--Device-unnamed-declare interface RotateAngleOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,13 +27,13 @@ Rotation angle along the x-axis. A positive value indicates clockwise rotation r
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
-
-<!--Device-RotateAngleOptions-angleX?: number | string--><!--Device-RotateAngleOptions-angleX?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,13 +51,13 @@ Rotation angle along the y-axis. A positive value indicates clockwise rotation r
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
-
-<!--Device-RotateAngleOptions-angleY?: number | string--><!--Device-RotateAngleOptions-angleY?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -75,13 +75,13 @@ Rotation angle along the z-axis. A positive value indicates clockwise rotation r
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
-
-<!--Device-RotateAngleOptions-angleZ?: number | string--><!--Device-RotateAngleOptions-angleZ?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -99,13 +99,13 @@ X coordinate of the transformation center point (anchor).Unit: vp Default value:
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
-
-<!--Device-RotateAngleOptions-centerX?: number | string--><!--Device-RotateAngleOptions-centerX?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -123,13 +123,13 @@ Y coordinate of the transformation center point (anchor).Unit: vp Default value:
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
-
-<!--Device-RotateAngleOptions-centerY?: number | string--><!--Device-RotateAngleOptions-centerY?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -147,13 +147,13 @@ Z-axis anchor, that is, the z-component of the 3D rotation center point.Default 
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
-
-<!--Device-RotateAngleOptions-centerZ?: number--><!--Device-RotateAngleOptions-centerZ?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -171,13 +171,12 @@ Z-axis coordinate of the camera. The value indicates the viewing distance, that 
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
 
-<!--Device-RotateAngleOptions-perspective?: number--><!--Device-RotateAngleOptions-perspective?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

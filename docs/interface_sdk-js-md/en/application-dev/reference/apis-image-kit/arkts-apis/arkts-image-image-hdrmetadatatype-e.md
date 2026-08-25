@@ -2,9 +2,9 @@
 
 Enumerates the values available for **HDR_METADATA_TYPE** in [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md).
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-image-enum HdrMetadataType--><!--Device-image-enum HdrMetadataType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -16,9 +16,9 @@ NONE = 0
 
 No metadata.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HdrMetadataType-NONE = 0--><!--Device-HdrMetadataType-NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -30,9 +30,9 @@ BASE = 1
 
 Metadata used for base graphics.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HdrMetadataType-BASE = 1--><!--Device-HdrMetadataType-BASE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -44,9 +44,9 @@ GAINMAP = 2
 
 Metadata used for gain maps.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HdrMetadataType-GAINMAP = 2--><!--Device-HdrMetadataType-GAINMAP = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -58,9 +58,8 @@ ALTERNATE = 3
 
 Metadata used for synthesized HDR graphics.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-HdrMetadataType-ALTERNATE = 3--><!--Device-HdrMetadataType-ALTERNATE = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
-

@@ -4,11 +4,11 @@
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** [router](arkts-router.md)
-
-<!--Device-unnamed-export default class Router--><!--Device-unnamed-export default class Router-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -28,19 +28,19 @@ static back(options?: BackRouterOptions): void
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** back
-
-<!--Device-Router-static back(options?: BackRouterOptions): void--><!--Device-Router-static back(options?: BackRouterOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [BackRouterOptions](arkts-arkui-system-router-backrouteroptions-i.md) | 否 | 详细请参考BackRouterOptions。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [BackRouterOptions](arkts-arkui-system-router-backrouteroptions-i.md) | 否 |
 
 **示例**
 
@@ -113,11 +113,11 @@ static clear(): void
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** clear
-
-<!--Device-Router-static clear(): void--><!--Device-Router-static clear(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -143,19 +143,19 @@ static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): 
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
 **替代接口：** hideAlertBeforeBackPage
-
-<!--Device-Router-static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): void--><!--Device-Router-static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [DisableAlertBeforeBackPageOptions](arkts-arkui-system-router-disablealertbeforebackpageoptions-i.md) | 否 | 详细请参见DisableAlertBeforeBackPageOptions。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [DisableAlertBeforeBackPageOptions](arkts-arkui-system-router-disablealertbeforebackpageoptions-i.md) | 否 |
 
 **示例**
 
@@ -186,19 +186,19 @@ static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): voi
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
 **替代接口：** showAlertBeforeBackPage
-
-<!--Device-Router-static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): void--><!--Device-Router-static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [EnableAlertBeforeBackPageOptions](arkts-arkui-system-router-enablealertbeforebackpageoptions-i.md) | 是 | 详细请参见EnableAlertBeforeBackPageOptions。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [EnableAlertBeforeBackPageOptions](arkts-arkui-system-router-enablealertbeforebackpageoptions-i.md) | 是 |
 
 **示例**
 
@@ -230,19 +230,19 @@ static getLength(): string
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** getLength
-
-<!--Device-Router-static getLength(): string--><!--Device-Router-static getLength(): string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 页面数量，页面栈支持最大数值是32。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -267,19 +267,19 @@ static getParams(): ParamsInterface
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 8
 
 **替代接口：** getParams
-
-<!--Device-Router-static getParams(): ParamsInterface--><!--Device-Router-static getParams(): ParamsInterface-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ParamsInterface](arkts-arkui-paramsinterface-t.md) | 详细请参见ParamsInterface。 |
+| 类型 |
+| --- |
+| [ParamsInterface](arkts-arkui-paramsinterface-t.md) |
 
 ## getState
 
@@ -291,19 +291,19 @@ static getState(): RouterState
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** getState
-
-<!--Device-Router-static getState(): RouterState--><!--Device-Router-static getState(): RouterState-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RouterState](arkts-arkui-system-router-routerstate-i.md) | 详细请参见RouterState。 |
+| 类型 |
+| --- |
+| [RouterState](arkts-arkui-system-router-routerstate-i.md) |
 
 **示例**
 
@@ -333,19 +333,19 @@ static push(options: RouterOptions): void
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** push
-
-<!--Device-Router-static push(options: RouterOptions): void--><!--Device-Router-static push(options: RouterOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | 是 | 页面路由参数，详细请参考RouterOptions。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | 是 |
 
 **示例**
 
@@ -391,19 +391,19 @@ static replace(options: RouterOptions): void
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** replace
-
-<!--Device-Router-static replace(options: RouterOptions): void--><!--Device-Router-static replace(options: RouterOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | 是 | 页面路由参数，详细请参考RouterOptions。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | 是 |
 
 **示例**
 
@@ -433,4 +433,3 @@ class Area {
 }
 export default new Area()
 ```
-

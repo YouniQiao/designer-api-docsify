@@ -5,12 +5,12 @@ This module implements the delayed fault notification feature.When the crash and
 > **NOTE：**&gt;
 > - The APIs of this module can be used only in the stage model.&gt;
 > - Exceptions may occur if some APIs are called by this module. For details, see
-> Appendix
+> [Appendix](../../../reference/apis-performance-analysis-kit/js-apis-hiviewdfx-FaultLogExtensionAbility.md#appendix)
 > .
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-unnamed-declare class FaultLogExtensionAbility--><!--Device-unnamed-declare class FaultLogExtensionAbility-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -28,11 +28,11 @@ onConnect(): void
 
 Called to perform the initialization operation when the system service completes the connection. This API can be overridden selectively.
 
-**Since:** 23
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FaultLogExtensionAbility-onConnect(): void--><!--Device-FaultLogExtensionAbility-onConnect(): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -54,11 +54,11 @@ onDisconnect(): void
 
 Called to release resources and clear the running status when the system service completes the disconnection. This API can be overridden selectively.
 
-**Since:** 23
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FaultLogExtensionAbility-onDisconnect(): void--><!--Device-FaultLogExtensionAbility-onDisconnect(): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -80,11 +80,11 @@ onFaultReportReady(): void
 
 Called to subscribe to and process fault events when the system service notifies the FaultLogExtensionAbility to process faults.
 
-**Since:** 23
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FaultLogExtensionAbility-onFaultReportReady(): void--><!--Device-FaultLogExtensionAbility-onFaultReportReady(): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -121,11 +121,10 @@ Context of the FaultLogExtensionAbility. This context is inherited from [Extensi
 
 **Type:** [FaultLogExtensionContext](arkts-performanceanalysis-hiviewdfx-faultlogextensioncontext-faultlogextensioncontext-c.md)
 
-**Since:** 23
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FaultLogExtensionAbility-context: FaultLogExtensionContext--><!--Device-FaultLogExtensionAbility-context: FaultLogExtensionContext-End-->
-
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
-

@@ -21,21 +21,21 @@ function getAltitude(seaPressure: number, currentPressure: number, callback: Asy
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md)(seaPressure: double, currentPressure: double, callback: AsyncCallback&lt;double&gt;)
-
-<!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number, callback: AsyncCallback<number>): void--><!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| seaPressure | number | 是 | 表示海平面气压值，单位：hPa（百帕）。 |
-| currentPressure | number | 是 | 表示设备所在高度的气压值，单位：hPa（百帕）。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 异步返回设备所在的海拔高度，单位：m（米）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| seaPressure | number | 是 |
+| currentPressure | number | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **示例**
 
@@ -79,28 +79,27 @@ function getAltitude(seaPressure: number, currentPressure: number): Promise<numb
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md)(seaPressure: double, currentPressure: double)
-
-<!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number): Promise<number>--><!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| seaPressure | number | 是 | 表示海平面气压值，单位：hPa（百帕）。 |
-| currentPressure | number | 是 | 表示设备所在高度的气压值，单位：hPa（百帕）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| seaPressure | number | 是 |
+| currentPressure | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;number&gt; | 使用异步方式返回设备所在的海拔高度，单位：m（米）。 |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **示例**
 
 参见 [getAltitude](#getaltitude)
-

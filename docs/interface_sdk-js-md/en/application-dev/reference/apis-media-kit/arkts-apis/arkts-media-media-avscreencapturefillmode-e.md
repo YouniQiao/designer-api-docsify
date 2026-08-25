@@ -2,9 +2,9 @@
 
 Enumerates the video fill modes during screen capture.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-media-enum AVScreenCaptureFillMode--><!--Device-media-enum AVScreenCaptureFillMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -16,9 +16,9 @@ PRESERVE_ASPECT_RATIO = 0
 
 Keeps the original aspect ratio, matching the aspect ratio of the physical screen.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-AVScreenCaptureFillMode-PRESERVE_ASPECT_RATIO = 0--><!--Device-AVScreenCaptureFillMode-PRESERVE_ASPECT_RATIO = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -30,9 +30,8 @@ SCALE_TO_FILL = 1
 
 Stretches the image to fit the specified dimensions.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-AVScreenCaptureFillMode-SCALE_TO_FILL = 1--><!--Device-AVScreenCaptureFillMode-SCALE_TO_FILL = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
-

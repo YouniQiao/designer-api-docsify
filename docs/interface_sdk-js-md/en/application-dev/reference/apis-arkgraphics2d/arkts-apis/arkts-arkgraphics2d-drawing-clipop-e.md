@@ -6,9 +6,9 @@ Enumerates the canvas clipping modes.
 > The diagrams show the result of cropping a circle based on different enumerated values after a rectangle is
 > cropped in INTERSECT mode. The green area is the final area obtained.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-drawing-enum ClipOp--><!--Device-drawing-enum ClipOp-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -20,9 +20,9 @@ DIFFERENCE = 0
 
 Clips a specified area. That is, the difference set is obtained.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-ClipOp-DIFFERENCE = 0--><!--Device-ClipOp-DIFFERENCE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -34,9 +34,8 @@ INTERSECT = 1
 
 Retains a specified area. That is, the intersection is obtained.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-ClipOp-INTERSECT = 1--><!--Device-ClipOp-INTERSECT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
-

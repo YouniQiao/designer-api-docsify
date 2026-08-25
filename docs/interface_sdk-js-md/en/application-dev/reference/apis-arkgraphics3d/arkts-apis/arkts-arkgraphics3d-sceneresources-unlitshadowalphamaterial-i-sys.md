@@ -6,7 +6,7 @@ This material inherits from Material and draws only the surface shadows. When th
 
 **Since:** 23
 
-<!--Device-unnamed-export interface UnlitShadowAlphaMaterial--><!--Device-unnamed-export interface UnlitShadowAlphaMaterial-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -24,11 +24,10 @@ Color information of the shadow on the surface of a transparent material.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-UnlitShadowAlphaMaterial-baseColor: MaterialProperty--><!--Device-UnlitShadowAlphaMaterial-baseColor: MaterialProperty-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
-

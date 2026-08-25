@@ -6,13 +6,12 @@ type HttpProxy = connection.HttpProxy
 
 Defines the network proxy configuration.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-http-type HttpProxy = connection.HttpProxy--><!--Device-http-type HttpProxy = connection.HttpProxy-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Property type:** connection.HttpProxy
-

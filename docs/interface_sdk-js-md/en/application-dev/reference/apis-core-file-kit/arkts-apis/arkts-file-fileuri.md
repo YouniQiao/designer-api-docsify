@@ -2,9 +2,9 @@
 
 Provides fileUri APIS@namespace fileUri
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-unnamed-declare namespace fileUri--><!--Device-unnamed-declare namespace fileUri-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService
 
@@ -18,13 +18,12 @@ import { fileUri } from '@kit.CoreFileKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md) | Get the uri from the path of file in app sandbox |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md) |
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [FileUri](arkts-corefile-fileuri-fileuri-c.md) | FileUri represents the uri of the file.@extends uri.URI |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FileUri](arkts-corefile-fileuri-fileuri-c.md) |

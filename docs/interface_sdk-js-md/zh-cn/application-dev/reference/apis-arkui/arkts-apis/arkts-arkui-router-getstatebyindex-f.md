@@ -26,6 +26,8 @@ function getStateByIndex(index: number): RouterState | undefined
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **废弃版本：** 18
 
 **替代接口：** [getStateByIndex](arkts-arkui-arkui-uicontext-router-c.md#getstatebyindex)
@@ -34,21 +36,19 @@ function getStateByIndex(index: number): RouterState | undefined
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-router-function getStateByIndex(index: number): RouterState | undefined--><!--Device-router-function getStateByIndex(index: number): RouterState | undefined-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | number | 是 | 表示要获取的页面索引，取值范围[1, 页面栈大小]，页面栈最大数量为32。从栈底到栈顶，index从1开始递增。索引不存在时返回undefined。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RouterState \| undefined | 返回对应索引页面的状态信息，包含页面索引、名称、路径和参数。索引不存在时返回undefined。 |
+| 类型 |
+| --- |
+| RouterState \| undefined |
 
 **示例**
 
@@ -63,4 +63,3 @@ if (options != undefined) {
   console.info(`params = ${JSON.stringify(options.params)}`);
 }
 ```
-

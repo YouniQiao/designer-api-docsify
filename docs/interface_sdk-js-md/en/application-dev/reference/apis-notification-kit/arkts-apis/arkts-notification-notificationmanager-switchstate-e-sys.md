@@ -2,9 +2,9 @@
 
 Describes the switch state of notifications.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-notificationManager-export enum SwitchState--><!--Device-notificationManager-export enum SwitchState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -18,9 +18,9 @@ USER_MODIFIED_OFF = 0
 
 Disabled state set by the user.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-SwitchState-USER_MODIFIED_OFF = 0--><!--Device-SwitchState-USER_MODIFIED_OFF = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -34,9 +34,9 @@ USER_MODIFIED_ON = 1
 
 Enabled state set by the user.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-SwitchState-USER_MODIFIED_ON = 1--><!--Device-SwitchState-USER_MODIFIED_ON = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -50,9 +50,9 @@ SYSTEM_DEFAULT_OFF = 2
 
 Initial disabled state before user settings.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-SwitchState-SYSTEM_DEFAULT_OFF = 2--><!--Device-SwitchState-SYSTEM_DEFAULT_OFF = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -66,11 +66,10 @@ SYSTEM_DEFAULT_ON = 3
 
 Initial enabled state before user settings.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-SwitchState-SYSTEM_DEFAULT_ON = 3--><!--Device-SwitchState-SYSTEM_DEFAULT_ON = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

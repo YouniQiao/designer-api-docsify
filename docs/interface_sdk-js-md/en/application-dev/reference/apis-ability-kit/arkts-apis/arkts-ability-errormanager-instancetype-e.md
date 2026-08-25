@@ -4,7 +4,7 @@ Enumerates the VM instance types.
 
 **Since:** 18
 
-<!--Device-errorManager-export enum InstanceType--><!--Device-errorManager-export enum InstanceType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -18,9 +18,9 @@ TaskPool VM instance.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-InstanceType-TASKPOOL = 2--><!--Device-InstanceType-TASKPOOL = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -34,9 +34,9 @@ Worker VM instance.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-InstanceType-WORKER = 1--><!--Device-InstanceType-WORKER = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -50,9 +50,9 @@ Main VM instance.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-InstanceType-MAIN = 0--><!--Device-InstanceType-MAIN = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -66,9 +66,8 @@ VM instance created from the local code using [napi_create_ark_runtime](../../..
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-InstanceType-CUSTOM = 3--><!--Device-InstanceType-CUSTOM = 3-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-

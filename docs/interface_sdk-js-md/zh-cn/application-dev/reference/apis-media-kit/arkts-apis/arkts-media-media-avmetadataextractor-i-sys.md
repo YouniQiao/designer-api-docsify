@@ -5,9 +5,9 @@
 > **说明：**&gt;
 > - 本Interface首批接口从API version 11开始支持。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-media-interface AVMetadataExtractor--><!--Device-media-interface AVMetadataExtractor-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -19,15 +19,21 @@ import { media } from '@kit.MediaKit';
 
 ## getFrameIndexByTime
 
+ArkTS-Dyn:
+```TypeScript
+getFrameIndexByTime(timeUs: number): Promise<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getFrameIndexByTime(timeUs: long): Promise<int>
 ```
 
 Obtains the video frame number corresponding to a video timestamp. Only MP4 video files are supported.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AVMetadataExtractor-getFrameIndexByTime(timeUs: long): Promise<int>--><!--Device-AVMetadataExtractor-getFrameIndexByTime(timeUs: long): Promise<int>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -35,23 +41,23 @@ Obtains the video frame number corresponding to a video timestamp. Only MP4 vide
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| timeUs | long | 是 | Video timestamp, in microseconds. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| timeUs | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise used to return the video frame number. |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Return by promise. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) |
 
 **示例**
 
@@ -68,15 +74,21 @@ avMetadataExtractor.getFrameIndexByTime(0).then((index: number) => {
 
 ## getTimeByFrameIndex
 
+ArkTS-Dyn:
+```TypeScript
+getTimeByFrameIndex(index: number): Promise<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 getTimeByFrameIndex(index: int): Promise<long>
 ```
 
 Obtains the video timestamp corresponding to a video frame number. Only MP4 video files are supported.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AVMetadataExtractor-getTimeByFrameIndex(index: int): Promise<long>--><!--Device-AVMetadataExtractor-getTimeByFrameIndex(index: int): Promise<long>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -84,23 +96,23 @@ Obtains the video timestamp corresponding to a video frame number. Only MP4 vide
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | Video frame number. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;long&gt; | Promise used to return the timestamp, in microseconds. |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;long & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Return by promise. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) |
 
 **示例**
 
@@ -114,4 +126,3 @@ avMetadataExtractor.getTimeByFrameIndex(0).then((timeUs: number) => {
   console.error(`Failed to getTimeByFrameIndex ${err.message}`);
 })
 ```
-

@@ -14,23 +14,23 @@ function getSensorListByDeviceSync(deviceId?: int): Array<Sensor>
 
 Obtains the information about all sensors on the device.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-sensor-function getSensorListByDeviceSync(deviceId?: int): Array<Sensor>--><!--Device-sensor-function getSensorListByDeviceSync(deviceId?: int): Array<Sensor>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| deviceId | int | No | Device ID. The default value is **-1**, indicating the local device. You can use [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md) or [sensorStatusChange](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor) to obtain the device ID. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| deviceId | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;Sensor&gt; | Sensor attribute list. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;Sensor & gt; |
 
 **Examples**
 
@@ -49,4 +49,3 @@ try {
   console.error(`Failed to get sensorList. Code: ${e.code}, message: ${e.message}`);
 }
 ```
-

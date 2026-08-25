@@ -1,4 +1,8 @@
-# @ohos.multimodalInput.mouseEvent
+# @ohos.multimodalInput.mouseEvent(Mouse Event)
+
+The **mouseEvent** module provides mouse events reported by a device. It is inherited from
+ [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md).
+
 
 ## Modules to Import
 
@@ -10,17 +14,16 @@ import { Action as MouseAction, Axis, AxisValue, Button, MouseEvent, ToolType as
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [AxisValue](arkts-input-multimodalinput-mouseevent-axisvalue-i.md) | Defines the mouse axis type and axis value. |
-| [MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md) | Defines the mouse event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AxisValue(Mouse Event)](arkts-input-multimodalinput-mouseevent-axisvalue-i.md) |
+| [MouseEvent(Mouse Event)](arkts-input-multimodalinput-mouseevent-mouseevent-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [Action](arkts-input-multimodalinput-mouseevent-action-e.md) | Enumerates mouse event types. |
-| [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | Enumerates mouse axis types. |
-| [Button](arkts-input-multimodalinput-mouseevent-button-e.md) | Enumerates mouse buttons. |
-| [ToolType](arkts-input-multimodalinput-mouseevent-tooltype-e.md) | Enumerates tool types. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Action(Mouse Event)](arkts-input-multimodalinput-mouseevent-action-e.md) |
+| [Axis(Mouse Event)](arkts-input-multimodalinput-mouseevent-axis-e.md) |
+| [Button(Mouse Event)](arkts-input-multimodalinput-mouseevent-button-e.md) |
+| [ToolType(Mouse Event)](arkts-input-multimodalinput-mouseevent-tooltype-e.md) |

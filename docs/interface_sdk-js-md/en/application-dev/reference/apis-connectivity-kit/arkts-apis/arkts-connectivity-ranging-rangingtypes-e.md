@@ -4,7 +4,7 @@ The enumeration of ranging capability types.
 
 **Since:** 26.0.0
 
-<!--Device-ranging-enum RangingTypes--><!--Device-ranging-enum RangingTypes-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -18,9 +18,8 @@ Nearlink HADM ranging type. This process will trigger automatic link establishme
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RangingTypes-NEARLINK_HADM = 1--><!--Device-RangingTypes-NEARLINK_HADM = 1-End-->
-
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
-

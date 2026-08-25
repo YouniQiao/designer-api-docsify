@@ -14,23 +14,23 @@ function getAttachedMechDevices(): MechInfo[]
 
 Obtain the list of connected mechanical devices.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-mechanicManager-function getAttachedMechDevices(): MechInfo[]--><!--Device-mechanicManager-function getAttachedMechDevices(): MechInfo[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [MechInfo](arkts-mechanic-mechanicmanager-mechinfo-i.md)[] | List of connected mechanical devices. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [MechInfo](arkts-mechanic-mechanicmanager-mechinfo-i.md)[] |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| Error Code ID |
+| --- |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) |
 
 **Examples**
 
@@ -39,4 +39,3 @@ console.info('Query device list');
 let mechanicInfos = mechanicManager.getAttachedMechDevices();
 console.info(`'device list:' ${mechanicInfos}`);
 ```
-

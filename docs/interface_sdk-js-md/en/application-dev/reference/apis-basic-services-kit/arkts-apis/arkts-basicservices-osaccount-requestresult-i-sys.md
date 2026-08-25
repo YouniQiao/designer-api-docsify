@@ -2,9 +2,9 @@
 
 Defines the request result information.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-osAccount-interface RequestResult--><!--Device-osAccount-interface RequestResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -26,11 +26,10 @@ Credential ID, which is left blank by default.
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-RequestResult-credentialId?: Uint8Array--><!--Device-RequestResult-credentialId?: Uint8Array-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-

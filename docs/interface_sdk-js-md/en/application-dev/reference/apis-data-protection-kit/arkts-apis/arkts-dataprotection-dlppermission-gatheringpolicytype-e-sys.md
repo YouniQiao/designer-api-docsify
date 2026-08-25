@@ -4,7 +4,7 @@ Enumerates the DLP sandbox gathering policy types. **GATHERING** allows the DLP 
 
 **Since:** 10
 
-<!--Device-dlpPermission-export enum GatheringPolicyType--><!--Device-dlpPermission-export enum GatheringPolicyType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -20,7 +20,7 @@ Allows the DLP files of the same permission type to be opened in a sandbox. For 
 
 **Since:** 10
 
-<!--Device-GatheringPolicyType-GATHERING = 1--><!--Device-GatheringPolicyType-GATHERING = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -36,9 +36,8 @@ Allows the DLP files of different permission types to be opened in different san
 
 **Since:** 10
 
-<!--Device-GatheringPolicyType-NON_GATHERING = 2--><!--Device-GatheringPolicyType-NON_GATHERING = 2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **System API:** This is a system API.
-

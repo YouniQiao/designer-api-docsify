@@ -1,18 +1,17 @@
 # DynamicIconInfo (System API)
 
 ```TypeScript
-export type DynamicIconInfo = _DynamicIconInfo
+export type DynamicIconInfo = _BundleInfo.DynamicIconInfo
 ```
 
 Describes the information about the dynamic icon of an application.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-bundleManager-export type DynamicIconInfo = _DynamicIconInfo--><!--Device-bundleManager-export type DynamicIconInfo = _DynamicIconInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
 
-**Property type:** _DynamicIconInfo
-
+**Property type:** _BundleInfo.DynamicIconInfo

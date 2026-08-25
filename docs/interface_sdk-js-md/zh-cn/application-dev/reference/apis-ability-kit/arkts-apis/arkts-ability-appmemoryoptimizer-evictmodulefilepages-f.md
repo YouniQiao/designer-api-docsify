@@ -16,28 +16,27 @@ function evictModuleFilePages(moduleNames: Array<string>): Promise<void>
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-appMemoryOptimizer-function evictModuleFilePages(moduleNames: Array<string>): Promise<void>--><!--Device-appMemoryOptimizer-function evictModuleFilePages(moduleNames: Array<string>): Promise<void>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| moduleNames | Array&lt;string&gt; | 是 | 需要释放文件页缓存的模块名数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| moduleNames | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [16000163](../errorcode-ability.md#16000163-文件类型错误) | 文件类型错误。配置文件中evictFilePages数组中的文件名未以.so、.hap或.hsp 结尾。 |
-| [16000164](../errorcode-ability.md#16000164-解析配置文件失败) | 解析配置文件失败。 |
-
+| 错误码ID |
+| --- |
+| [16000163](../errorcode-ability.md#16000163-文件类型错误) |
+| [16000164](../errorcode-ability.md#16000164-解析配置文件失败) |

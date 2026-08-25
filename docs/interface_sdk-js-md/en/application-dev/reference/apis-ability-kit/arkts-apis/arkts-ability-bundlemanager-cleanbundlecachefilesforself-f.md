@@ -14,19 +14,19 @@ function cleanBundleCacheFilesForSelf(): Promise<void>
 
 Clears the application cache. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 21
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
-<!--Device-bundleManager-function cleanBundleCacheFilesForSelf(): Promise<void>--><!--Device-bundleManager-function cleanBundleCacheFilesForSelf(): Promise<void>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Examples**
 
@@ -37,4 +37,3 @@ bundleManager.cleanBundleCacheFilesForSelf().then(() => {
   console.info('cleanBundleCacheFilesForSelf complete.');
 });
 ```
-

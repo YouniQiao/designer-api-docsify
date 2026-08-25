@@ -14,17 +14,17 @@ function getDefaultVoiceSlotId(callback: AsyncCallback<int>): void
 
 获取默认语音业务的卡槽ID。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-sim-function getDefaultVoiceSlotId(callback: AsyncCallback<int>): void--><!--Device-sim-function getDefaultVoiceSlotId(callback: AsyncCallback<int>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。&lt;br /&gt;- 0：卡槽1。&lt;br /&gt;- 1：卡槽2。&lt;br /&gt;- -1：未设置或服务不可用。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 |
 
 **示例**
 
@@ -57,19 +57,18 @@ function getDefaultVoiceSlotId(): Promise<int>
 
 获取默认语音业务的卡槽ID。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-sim-function getDefaultVoiceSlotId(): Promise<int>--><!--Device-sim-function getDefaultVoiceSlotId(): Promise<int>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | 以Promise形式返回默认语音业务的卡槽ID。&lt;br /&gt;- 0：卡槽1。&lt;br /&gt;- 1：卡槽2。&lt;br /&gt;- -1：未设置或服务不可用。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
 
 **示例**
 
 参见 [getDefaultVoiceSlotId](#getdefaultvoiceslotid)
-

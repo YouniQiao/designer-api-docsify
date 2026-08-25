@@ -2,9 +2,9 @@
 
 Represents information about an OS account.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-osAccount-interface OsAccountInfo--><!--Device-osAccount-interface OsAccountInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -24,9 +24,9 @@ Whether the OS account is logged in. The value **true** means that the OS accoun
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-OsAccountInfo-isLoggedIn?: boolean--><!--Device-OsAccountInfo-isLoggedIn?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -42,11 +42,10 @@ Short name of the OS account.This is a system API and is left blank by default.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-OsAccountInfo-shortName?: string--><!--Device-OsAccountInfo-shortName?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-

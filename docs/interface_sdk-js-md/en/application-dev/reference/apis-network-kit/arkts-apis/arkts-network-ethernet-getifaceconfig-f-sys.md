@@ -16,9 +16,9 @@ Obtains the information about a specified network interface. This API uses an as
 
 **Since:** 9
 
-**Required permissions:** ohos.permission.GET_NETWORK_INFO
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ethernet-function getIfaceConfig(iface: string, callback: AsyncCallback<InterfaceConfiguration>): void--><!--Device-ethernet-function getIfaceConfig(iface: string, callback: AsyncCallback<InterfaceConfiguration>): void-End-->
+**Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -26,22 +26,22 @@ Obtains the information about a specified network interface. This API uses an as
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| iface | string | Yes | Network interface. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md)&gt; | Yes | Callback used to return the result. Returns information about the specified network interface. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| iface | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md)&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2200001](../errorcode-net-ethernet.md#2200001-invalid-parameter-value) | Invalid parameter value. |
-| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
-| [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2200001](../errorcode-net-ethernet.md#2200001-invalid-parameter-value) |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) |
+| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
+| [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) |
 
 **Examples**
 
@@ -90,9 +90,9 @@ Obtains the information about a specified network interface. This API uses a pro
 
 **Since:** 9
 
-**Required permissions:** ohos.permission.GET_NETWORK_INFO
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ethernet-function getIfaceConfig(iface: string): Promise<InterfaceConfiguration>--><!--Device-ethernet-function getIfaceConfig(iface: string): Promise<InterfaceConfiguration>-End-->
+**Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -100,29 +100,28 @@ Obtains the information about a specified network interface. This API uses a pro
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| iface | string | Yes | Network interface. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| iface | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md)&gt; | Promise used to return the result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2200001](../errorcode-net-ethernet.md#2200001-invalid-parameter-value) | Invalid parameter value. |
-| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
-| [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2200001](../errorcode-net-ethernet.md#2200001-invalid-parameter-value) |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) |
+| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
+| [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) |
 
 **Examples**
 
 See [getIfaceConfig](#getifaceconfig)
-

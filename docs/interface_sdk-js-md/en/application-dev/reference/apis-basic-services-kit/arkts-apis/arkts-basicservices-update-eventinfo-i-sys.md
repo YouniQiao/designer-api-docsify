@@ -2,9 +2,9 @@
 
 Defines an **EventInfo** object, which is used to receive the event details transferred by upgrade event notification. The object contains the **eventId** and **taskBody** fields. **eventId** indicates the event ID, which identifies the event type; **taskBody** indicates the task data, which contains the task status and progress.Use scenarios: After an event listener is registered by calling **on**, the callback function receives an **EventInfo** object when an event occurs. The real-time status and progress of the upgrade task can be obtained by parsing **eventId** and **taskBody**, which can be used to monitor the upgrade process in real time.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-update-export interface EventInfo--><!--Device-update-export interface EventInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -26,9 +26,9 @@ Event ID, which identifies the upgrade event type. You can determine the specifi
 
 **Type:** [EventId](arkts-basicservices-update-eventid-e-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-EventInfo-eventId: EventId--><!--Device-EventInfo-eventId: EventId-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -44,11 +44,10 @@ Represents task data.
 
 **Type:** [TaskBody](arkts-basicservices-update-taskbody-i-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-EventInfo-taskBody: TaskBody--><!--Device-EventInfo-taskBody: TaskBody-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
-

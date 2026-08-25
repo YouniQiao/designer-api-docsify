@@ -6,7 +6,7 @@ Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md). This object
 
 **Since:** 11
 
-<!--Device-unnamed-interface RotationGestureEvent--><!--Device-unnamed-interface RotationGestureEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +28,10 @@ Rotation angle, in deg.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-RotationGestureEvent-angle: number--><!--Device-RotationGestureEvent-angle: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

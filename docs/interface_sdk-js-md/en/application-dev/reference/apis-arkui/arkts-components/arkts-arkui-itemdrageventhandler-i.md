@@ -4,7 +4,7 @@ Define item drag event handler.
 
 **Since:** 20
 
-<!--Device-unnamed-declare interface ItemDragEventHandler--><!--Device-unnamed-declare interface ItemDragEventHandler-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -12,6 +12,24 @@ Define item drag event handler.
 
 ```TypeScript
 ```
+
+## onMoveThrough
+
+```TypeScript
+onMoveThrough?: OnMoveHandler
+```
+
+This callback is triggered when an item is moved through other items.
+
+**Since:** 20
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onDragStart
 
@@ -25,11 +43,11 @@ This callback is triggered when the item is dragged.
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-ItemDragEventHandler-onDragStart?: Callback<number>--><!--Device-ItemDragEventHandler-onDragStart?: Callback<number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +63,11 @@ This callback is triggered when the item is dropped.
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-ItemDragEventHandler-onDrop?: Callback<number>--><!--Device-ItemDragEventHandler-onDrop?: Callback<number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,31 +83,10 @@ This callback is triggered when the item is long pressed.
 
 **Since:** 20
 
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-ItemDragEventHandler-onLongPress?: Callback<number>--><!--Device-ItemDragEventHandler-onLongPress?: Callback<number>-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onMoveThrough
-
-```TypeScript
-onMoveThrough?: OnMoveHandler
-```
-
-This callback is triggered when an item is moved through other items.
-
-**Type:** [OnMoveHandler](arkts-arkui-onmovehandler-t.md)
-
-**Since:** 20
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-ItemDragEventHandler-onMoveThrough?: OnMoveHandler--><!--Device-ItemDragEventHandler-onMoveThrough?: OnMoveHandler-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

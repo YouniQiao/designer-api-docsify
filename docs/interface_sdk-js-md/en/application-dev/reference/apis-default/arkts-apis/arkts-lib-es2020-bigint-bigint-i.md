@@ -1,8 +1,6 @@
 # BigInt
 
-**Since:** -1
-
-<!--Device-unnamed-interface BigInt--><!--Device-unnamed-interface BigInt-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,21 +15,19 @@ toLocaleString(locales?: Intl.LocalesArgument, options?: BigIntToLocaleStringOpt
 
 Returns a string representation appropriate to the host environment's current locale.
 
-**Since:** -1
-
-<!--Device-BigInt-toLocaleString(locales?: Intl.LocalesArgument, options?: BigIntToLocaleStringOptions): string--><!--Device-BigInt-toLocaleString(locales?: Intl.LocalesArgument, options?: BigIntToLocaleStringOptions): string-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | No |  |
-| options | [BigIntToLocaleStringOptions](arkts-lib-es2020-bigint-biginttolocalestringoptions-i.md) | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | No |
+| options | [BigIntToLocaleStringOptions](arkts-lib-es2020-bigint-biginttolocalestringoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## toString
 
 ```TypeScript
@@ -40,20 +36,18 @@ toString(radix?: number): string
 
 Returns a string representation of an object.
 
-**Since:** -1
-
-<!--Device-BigInt-toString(radix?: number): string--><!--Device-BigInt-toString(radix?: number): string-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| radix | number | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| radix | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## valueOf
 
 ```TypeScript
@@ -62,14 +56,12 @@ valueOf(): bigint
 
 Returns the primitive value of the specified object.
 
-**Since:** -1
-
-<!--Device-BigInt-valueOf(): bigint--><!--Device-BigInt-valueOf(): bigint-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## [Symbol.toStringTag]
 
 ```TypeScript
@@ -78,7 +70,4 @@ readonly [Symbol.toStringTag]: "BigInt"
 
 **Type:** "BigInt"
 
-**Since:** -1
-
-<!--Device-BigInt-readonly [Symbol.toStringTag]: "BigInt"--><!--Device-BigInt-readonly [Symbol.toStringTag]: "BigInt"-End-->
-
+**ArkTS mode:** 

@@ -16,15 +16,15 @@ Creates a **TLSSocket** object.
 
 **Since:** 9
 
-<!--Device-socket-function constructTLSSocketInstance(): TLSSocket--><!--Device-socket-function constructTLSSocketInstance(): TLSSocket-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [TLSSocket](arkts-network-socket-tlssocket-i.md) | TLSSocket** object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [TLSSocket](arkts-network-socket-tlssocket-i.md) |
 
 **Examples**
 
@@ -76,32 +76,31 @@ Upgrades a **TCPSocket** connection to a **TLSSocket** connection.
 
 **Since:** 12
 
-<!--Device-socket-function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket--><!--Device-socket-function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| tcpSocket | TCPSocket | Yes | TCPSocket** connection to be upgraded. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| tcpSocket | [TCPSocket](arkts-network-socket-tcpsocket-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [TLSSocket](arkts-network-socket-tlssocket-i.md) | TLSSocket** object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [TLSSocket](arkts-network-socket-tlssocket-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| 2303601 | Invalid socket FD. |
-| 2303602 | Socket is not connected. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) |
+| 2303601 |
+| 2303602 |
 
 **Examples**
 
 See [constructTLSSocketInstance](#constructtlssocketinstance)
-

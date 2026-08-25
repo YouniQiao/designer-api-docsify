@@ -2,9 +2,9 @@
 
 Enumerates the stages in the device-cloud sync progress. Use the enum name rather than the enum value.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-relationalStore-enum Progress--><!--Device-relationalStore-enum Progress-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -16,9 +16,9 @@ SYNC_BEGIN = 0
 
 SYNC_BEGIN: means the sync process begin.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Progress-SYNC_BEGIN = 0--><!--Device-Progress-SYNC_BEGIN = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -30,9 +30,9 @@ SYNC_IN_PROGRESS = 1
 
 SYNC_BEGIN: means the sync process is in progress
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Progress-SYNC_IN_PROGRESS = 1--><!--Device-Progress-SYNC_IN_PROGRESS = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -44,9 +44,8 @@ SYNC_FINISH = 2
 
 SYNC_BEGIN: means the sync process is finished
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-Progress-SYNC_FINISH = 2--><!--Device-Progress-SYNC_FINISH = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-

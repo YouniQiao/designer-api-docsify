@@ -4,7 +4,7 @@ Defines the grid layout options. In this API, **irregularIndexes** and **onGetIr
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface GridLayoutOptions--><!--Device-unnamed-declare interface GridLayoutOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -12,6 +12,54 @@ Defines the grid layout options. In this API, **irregularIndexes** and **onGetIr
 
 ```TypeScript
 ```
+
+## onGetIrregularSizeByIndex
+
+```TypeScript
+onGetIrregularSizeByIndex?: (index: number) => [number, number]
+```
+
+Called to return the size of the irregular grid items with the specified index in [rows, columns].
+
+**Since:** 10
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | number | Yes |
+
+## onGetRectByIndex
+
+```TypeScript
+onGetRectByIndex?: (index: number) => [number, number, number, number]
+```
+
+Called to return the size of the grid items with the specified index in [rowStart, columnStart, rowSpan, columnSpan].
+
+**Since:** 11
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | number | Yes |
 
 ## irregularIndexes
 
@@ -27,51 +75,11 @@ The indexes of grid items with irregular size. When **onGetIrregularSizeByIndex*
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-GridLayoutOptions-irregularIndexes?: number[]--><!--Device-GridLayoutOptions-irregularIndexes?: number[]-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onGetIrregularSizeByIndex
-
-```TypeScript
-onGetIrregularSizeByIndex?: (index: number) => [number, number]
-```
-
-Called to return the size of the irregular grid items with the specified index in [rows, columns].
-
-**Type:** (index: number) =&gt; [number, number]
-
-**Since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-GridLayoutOptions-onGetIrregularSizeByIndex?: (index: number) => [number, number]--><!--Device-GridLayoutOptions-onGetIrregularSizeByIndex?: (index: number) => [number, number]-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onGetRectByIndex
-
-```TypeScript
-onGetRectByIndex?: (index: number) => [number, number, number, number]
-```
-
-Called to return the size of the grid items with the specified index in [rowStart, columnStart, rowSpan, columnSpan].
-
-**Type:** (index: number) =&gt; [number, number, number, number]
-
-**Since:** 11
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-GridLayoutOptions-onGetRectByIndex?: (index: number) => [number, number, number, number]--><!--Device-GridLayoutOptions-onGetRectByIndex?: (index: number) => [number, number, number, number]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -87,11 +95,10 @@ The size of most grid items, in [rows, columns], generally [1, 1]. The only supp
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-GridLayoutOptions-regularSize: [number, number]--><!--Device-GridLayoutOptions-regularSize: [number, number]-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

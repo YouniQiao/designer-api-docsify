@@ -1,4 +1,4 @@
-# @ohos.multimedia.movingphotoview
+# @ohos.multimedia.movingphotoview(A component which support applications to show moving photo data)
 
 ## Modules to Import
 
@@ -10,60 +10,59 @@ import { MovingPhotoView, MovingPhotoViewController, MovingPhotoViewAttribute, P
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) | Defines the moving photo view attribute functions.@extends CommonMethod&lt;MovingPhotoViewAttribute&gt; |
-| [MovingPhotoViewController](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewcontroller-c.md) | Defines the MovingPhotoView controller. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [MovingPhotoViewAttribute(A component which support applications to show moving photo data)](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |
+| [MovingPhotoViewController(A component which support applications to show moving photo data)](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewcontroller-c.md) |
 
 <!--Del-->
 ### Classes(System API)
 
-| Name | Description |
-| --- | --- |
-| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c-sys.md) | Defines the moving photo view attribute functions.@extends CommonMethod&lt;MovingPhotoViewAttribute&gt; |
-| [MovingPhotoViewController](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewcontroller-c-sys.md) | Defines the MovingPhotoView controller. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [MovingPhotoViewAttribute(A component which support applications to show moving photo data)](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c-sys.md) |
+| [MovingPhotoViewController(A component which support applications to show moving photo data)](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewcontroller-c-sys.md) |
 <!--DelEnd-->
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [MovingPhotoViewInterface](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewinterface-i.md) | Defines the moving photo view interface.@interface MovingPhotoViewInterface |
-| [MovingPhotoViewOptions](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewoptions-i.md) | Defines the moving photo view options.@interface MovingPhotoViewOptions |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [MovingPhotoViewInterface(A component which support applications to show moving photo data)](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewinterface-i.md) |
+| [MovingPhotoViewOptions(A component which support applications to show moving photo data)](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewoptions-i.md) |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [MovingPhotoViewOptions](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewoptions-i-sys.md) | Defines the moving photo view options.@interface MovingPhotoViewOptions |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [MovingPhotoViewOptions(A component which support applications to show moving photo data)](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewoptions-i-sys.md) |
 <!--DelEnd-->
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [PixelMapFormat](arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md) | Enumerates pixel map formats.@enum { int } |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PixelMapFormat(A component which support applications to show moving photo data)](arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md) |
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [DynamicRangeMode](arkts-medialibrary-multimedia-movingphotoview-dynamicrangemode-e-sys.md) | Dynamic range mode of moving photo.@enum { int } |
-| [PixelMapFormat](arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e-sys.md) | Enumerates pixel map formats.@enum { int } |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DynamicRangeMode(A component which support applications to show moving photo data)](arkts-medialibrary-multimedia-movingphotoview-dynamicrangemode-e-sys.md) |
+| [PixelMapFormat(A component which support applications to show moving photo data)](arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e-sys.md) |
 <!--DelEnd-->
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [MovingPhotoViewEventCallback](arkts-medialibrary-movingphotovieweventcallback-t.md) | function that moving photo view media events callback. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [MovingPhotoViewEventCallback(A component which support applications to show moving photo data)](arkts-medialibrary-movingphotovieweventcallback-t.md) |
 
 ### Constants
 
-| Name | Description |
-| --- | --- |
-| [MovingPhotoView](arkts-medialibrary-multimedia-movingphotoview-con.md#movingphotoview) | Defines MovingPhotoView Component. |
-| [MovingPhotoViewInstance](arkts-medialibrary-multimedia-movingphotoview-con.md#movingphotoviewinstance) | Defines MovingPhotoView Component instance. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [MovingPhotoView(A component which support applications to show moving photo data)](arkts-medialibrary-multimedia-movingphotoview-con.md#movingphotoview) |
+| [MovingPhotoViewInstance(A component which support applications to show moving photo data)](arkts-medialibrary-multimedia-movingphotoview-con.md#movingphotoviewinstance) |

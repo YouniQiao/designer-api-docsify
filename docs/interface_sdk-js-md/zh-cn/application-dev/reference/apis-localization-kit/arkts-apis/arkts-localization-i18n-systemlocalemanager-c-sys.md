@@ -2,9 +2,9 @@
 
 提供语言、地区和时区信息排序的能力。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-i18n-export class SystemLocaleManager--><!--Device-i18n-export class SystemLocaleManager-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -24,9 +24,9 @@ constructor()
 
 创建SystemLocaleManager对象。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-SystemLocaleManager-constructor()--><!--Device-SystemLocaleManager-constructor()-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -34,9 +34,9 @@ constructor()
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 26.0.0+ |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -227,9 +227,9 @@ getLanguageInfoArray(languages: Array<string>, options?: SortOptions): Array<Loc
 
 获取排序后的语言信息列表。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-SystemLocaleManager-getLanguageInfoArray(languages: Array<string>, options?: SortOptions): Array<LocaleItem>--><!--Device-SystemLocaleManager-getLanguageInfoArray(languages: Array<string>, options?: SortOptions): Array<LocaleItem>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -237,24 +237,24 @@ getLanguageInfoArray(languages: Array<string>, options?: SortOptions): Array<Loc
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| languages | Array&lt;string&gt; | 是 | 待排序的语言列表，要求是合法的语言ID。 |
-| options | [SortOptions](../../apis-default/arkts-apis/arkts-i18n-sortoptions-i-sys.md) | 否 | 语言排序选项。默认值：所有属性都取默认值时的配置项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [languages](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontdescriptor-i.md) | Array & lt;string & gt; | 是 |
+| options | [SortOptions](arkts-localization-i18n-sortoptions-i-sys.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[LocaleItem](../../apis-default/arkts-apis/arkts-i18n-localeitem-i-sys.md)&gt; | 排序后的语言信息列表。 |
+| 类型 |
+| --- |
+| Array&lt;[LocaleItem](arkts-localization-i18n-localeitem-i-sys.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -283,9 +283,9 @@ getRegionInfoArray(regions: Array<string>, options?: SortOptions): Array<LocaleI
 
 获取排序后的国家或地区信息列表。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-SystemLocaleManager-getRegionInfoArray(regions: Array<string>, options?: SortOptions): Array<LocaleItem>--><!--Device-SystemLocaleManager-getRegionInfoArray(regions: Array<string>, options?: SortOptions): Array<LocaleItem>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -293,24 +293,24 @@ getRegionInfoArray(regions: Array<string>, options?: SortOptions): Array<LocaleI
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| regions | Array&lt;string&gt; | 是 | 待排序的国家或地区列表，要求是合法的国家或地区ID。 |
-| options | [SortOptions](../../apis-default/arkts-apis/arkts-i18n-sortoptions-i-sys.md) | 否 | 国家或地区排序选项。 区域ID的默认值为系统当前区域ID，isUseLocalName的默认值为false，isSuggestedFirst的默认值为true。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| regions | Array & lt;string & gt; | 是 |
+| options | [SortOptions](arkts-localization-i18n-sortoptions-i-sys.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[LocaleItem](../../apis-default/arkts-apis/arkts-i18n-localeitem-i-sys.md)&gt; | 排序后的国家或地区信息列表。 |
+| 类型 |
+| --- |
+| Array&lt;[LocaleItem](arkts-localization-i18n-localeitem-i-sys.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -339,9 +339,9 @@ static getTimeZoneCityItemArray(): Array<TimeZoneCityItem>
 
 获取排序后的时区城市组合信息列表。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-SystemLocaleManager-static getTimeZoneCityItemArray(): Array<TimeZoneCityItem>--><!--Device-SystemLocaleManager-static getTimeZoneCityItemArray(): Array<TimeZoneCityItem>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -349,15 +349,15 @@ static getTimeZoneCityItemArray(): Array<TimeZoneCityItem>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[TimeZoneCityItem](../../apis-default/arkts-apis/arkts-i18n-timezonecityitem-i-sys.md)&gt; | 排序后的时区城市组合信息列表。 |
+| 类型 |
+| --- |
+| Array&lt;[TimeZoneCityItem](arkts-localization-i18n-timezonecityitem-i-sys.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -376,4 +376,3 @@ try {
   console.error(`call SystemLocaleManager.getTimeZoneCityItemArray failed, error code: ${err.code}, message: ${err.message}.`);
 }
 ```
-

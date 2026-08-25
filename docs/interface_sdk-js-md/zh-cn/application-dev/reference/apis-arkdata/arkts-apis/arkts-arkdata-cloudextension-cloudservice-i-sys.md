@@ -2,9 +2,9 @@
 
 提供对接同步云服务的类。开发者需要继承此类并实现类的接口，系统内部通过该类的接口连接并使用同步云服务。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-cloudExtension-export interface CloudService--><!--Device-cloudExtension-export interface CloudService-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -24,9 +24,9 @@ connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteOb
 
 系统内部通过该接口获取AssetLoader的RemoteObject对象，可以通过createAssetLoaderStub接口进行创建，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CloudService-connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteObject>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -34,16 +34,16 @@ connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteOb
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 应用包名。 |
-| database | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | 是 | 需要连接的数据库。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| database | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回AssetLoader的RemoteObject对象。 |
+| 类型 |
+| --- |
+| Promise & lt;rpc.RemoteObject & gt; |
 
 **示例**
 
@@ -125,9 +125,9 @@ connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 
 系统内部通过该接口获取CloudDB的RemoteObject对象，可以通过createCloudDBStub接口进行创建，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CloudService-connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -135,16 +135,16 @@ connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 应用包名。 |
-| database | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | 是 | 需要连接的数据库。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| database | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回CloudDB的RemoteObject对象。 |
+| 类型 |
+| --- |
+| Promise & lt;rpc.RemoteObject & gt; |
 
 **示例**
 
@@ -234,15 +234,21 @@ export default class MyCloudService implements cloudExtension.CloudService {
 
 ## connectShareCenter
 
+ArkTS-Dyn:
+```TypeScript
+connectShareCenter(userId: number, bundleName: string): Promise<rpc.RemoteObject>
+```
+
+ArkTS-Sta:
 ```TypeScript
 connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject>
 ```
 
 系统内部通过该接口获取ShareCenter的RemoteObject对象，可以通过createShareServiceStub接口进行创建，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CloudService-connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -250,16 +256,16 @@ connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| userId | int | 是 | 表示用户账号ID。 |
-| bundleName | string | 是 | 应用包名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| bundleName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回ShareCenter的RemoteObject对象。 |
+| 类型 |
+| --- |
+| Promise & lt;rpc.RemoteObject & gt; |
 
 **示例**
 
@@ -363,9 +369,9 @@ getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>
 
 获取简要应用信息。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CloudService-getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>--><!--Device-CloudService-getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -373,9 +379,9 @@ getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Record&lt;string, [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)&gt;&gt; | Promise对象，返回以bundleName为键、AppBriefInfo为值的键值对。 in KV pairs. |
+| 类型 |
+| --- |
+| Promise&lt;Record&lt;string, [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)&gt;&gt; |
 
 **示例**
 
@@ -459,9 +465,9 @@ getAppSchema(bundleName: string): Promise<Result<AppSchema>>
 
 获取应用Schema（数据库模式）信息。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CloudService-getAppSchema(bundleName: string): Promise<Result<AppSchema>>--><!--Device-CloudService-getAppSchema(bundleName: string): Promise<Result<AppSchema>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -469,15 +475,15 @@ getAppSchema(bundleName: string): Promise<Result<AppSchema>>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 应用包名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Result&lt;[AppSchema](arkts-arkdata-cloudextension-appschema-i-sys.md)&gt;&gt; | Promise对象，返回数据库的schema信息。 |
+| 类型 |
+| --- |
+| Promise&lt;Result&lt;[AppSchema](arkts-arkdata-cloudextension-appschema-i-sys.md)&gt;&gt; |
 
 **示例**
 
@@ -563,9 +569,9 @@ getServiceInfo(): Promise<ServiceInfo>
 
 获取服务器上的信息。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CloudService-getServiceInfo(): Promise<ServiceInfo>--><!--Device-CloudService-getServiceInfo(): Promise<ServiceInfo>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -573,9 +579,9 @@ getServiceInfo(): Promise<ServiceInfo>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[ServiceInfo](arkts-arkdata-cloudextension-serviceinfo-i-sys.md)&gt; | Promise对象，返回获取的服务器信息。 |
+| 类型 |
+| --- |
+| Promise&lt;[ServiceInfo](arkts-arkdata-cloudextension-serviceinfo-i-sys.md)&gt; |
 
 **示例**
 
@@ -656,6 +662,15 @@ export default class MyCloudService implements cloudExtension.CloudService {
 
 ## subscribe
 
+ArkTS-Dyn:
+```TypeScript
+subscribe(
+      subInfo: Record<string, Array<Database>>,
+      expirationTime: number
+    ): Promise<Result<SubscribeInfo>>
+```
+
+ArkTS-Sta:
 ```TypeScript
 subscribe(
       subInfo: Record<string, Array<Database>>,
@@ -665,9 +680,9 @@ subscribe(
 
 订阅云数据库的变化通知。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CloudService-subscribe(      subInfo: Record<string, Array<Database>>,      expirationTime: long    ): Promise<Result<SubscribeInfo>>--><!--Device-CloudService-subscribe(      subInfo: Record<string, Array<Database>>,      expirationTime: long    ): Promise<Result<SubscribeInfo>>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -675,16 +690,16 @@ subscribe(
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| subInfo | Record&lt;string, Array&lt;[Database](arkts-arkdata-cloudextension-database-i-sys.md)&gt;&gt; | 是 | 需要订阅的数据，由应用包名称和数据库信息组成的键值对。 |
-| expirationTime | long | 是 | 表示订阅到期时间（ms）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| subInfo | Record&lt;string, Array&lt;[Database](arkts-arkdata-cloudextension-database-i-sys.md)&gt;&gt; | 是 |
+| expirationTime | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Result&lt;SubscribeInfo&gt;&gt; | Promise对象，返回订阅的结果，包含订阅的过期时间和订阅信息。 |
+| 类型 |
+| --- |
+| Promise & lt;Result & lt;SubscribeInfo & gt; & gt; |
 
 **示例**
 
@@ -766,15 +781,21 @@ export default class MyCloudService implements cloudExtension.CloudService {
 
 ## unsubscribe
 
+ArkTS-Dyn:
+```TypeScript
+unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<number>
+```
+
+ArkTS-Sta:
 ```TypeScript
 unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>
 ```
 
 取消已订阅的云数据变化通知。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-CloudService-unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>--><!--Device-CloudService-unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -782,15 +803,15 @@ unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| unsubscribeInfo | Record&lt;string, Array&lt;string&gt;&gt; | 是 | 需要取消订阅的数据信息，由应用包名和数据库名组成的键值对。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| unsubscribeInfo | Record & lt;string, Array & lt;string & gt; & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise对象，返回取消订阅结果的错误码。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
 
 **示例**
 
@@ -851,4 +872,3 @@ export default class MyCloudService implements cloudExtension.CloudService {
   }
 }
 ```
-

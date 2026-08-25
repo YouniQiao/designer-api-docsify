@@ -2,9 +2,9 @@
 
 定义材质物体的渲染顺序，控制不同物体在渲染管线中的绘制先后。@interface RenderSort
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-unnamed-export interface RenderSort--><!--Device-unnamed-export interface RenderSort-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -16,13 +16,13 @@ renderSortLayer?: int
 
 渲染图层id，数值越小，渲染顺序越靠前。取值范围[0, 63]，默认图层id为32。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **默认值：** 32
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-RenderSort-renderSortLayer?: int--><!--Device-RenderSort-renderSortLayer?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -34,13 +34,12 @@ renderSortLayerOrder?: int
 
 同一渲染图层内，不同物体的渲染顺序，数值越小，越先渲染。取值范围[0, 255]，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **默认值：** 0
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-RenderSort-renderSortLayerOrder?: int--><!--Device-RenderSort-renderSortLayerOrder?: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

@@ -4,7 +4,7 @@ List/Grid组件编辑模式选项属性参数对象。@interface EditModeOptions
 
 **起始版本：** 23
 
-<!--Device-unnamed-declare interface EditModeOptions--><!--Device-unnamed-declare interface EditModeOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -12,6 +12,24 @@ List/Grid组件编辑模式选项属性参数对象。@interface EditModeOptions
 
 ```TypeScript
 ```
+
+## onGetPreviewBadge
+
+```TypeScript
+onGetPreviewBadge?: OnGetPreviewBadgeCallback
+```
+
+调用以返回是否显示数字脚本或在上下文菜单预览的角标上显示的数字。如果未设置，将使用显示范围内的选定项的数量作为角标。 返回false表示不显示角标。 返回true表示使用显示范围内的选定项的数量。 返回一个数字以包括显示范围之外的选定项。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableGatherSelectedItemsAnimation
 
@@ -27,11 +45,11 @@ enableGatherSelectedItemsAnimation?: boolean
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-EditModeOptions-enableGatherSelectedItemsAnimation?: boolean--><!--Device-EditModeOptions-enableGatherSelectedItemsAnimation?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,31 +67,11 @@ enableTwoFingerMultiSelect?: boolean
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-EditModeOptions-enableTwoFingerMultiSelect?: boolean--><!--Device-EditModeOptions-enableTwoFingerMultiSelect?: boolean-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onGetPreviewBadge
-
-```TypeScript
-onGetPreviewBadge?: OnGetPreviewBadgeCallback
-```
-
-调用以返回是否显示数字脚本或在上下文菜单预览的角标上显示的数字。如果未设置，将使用显示范围内的选定项的数量作为角标。 返回false表示不显示角标。 返回true表示使用显示范围内的选定项的数量。 返回一个数字以包括显示范围之外的选定项。
-
-**类型：** [OnGetPreviewBadgeCallback](arkts-arkui-ongetpreviewbadgecallback-t.md)
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-EditModeOptions-onGetPreviewBadge?: OnGetPreviewBadgeCallback--><!--Device-EditModeOptions-onGetPreviewBadge?: OnGetPreviewBadgeCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -91,11 +89,10 @@ useDefaultMultiSelectStyle?: boolean
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-EditModeOptions-useDefaultMultiSelectStyle?: boolean--><!--Device-EditModeOptions-useDefaultMultiSelectStyle?: boolean-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

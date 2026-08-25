@@ -15,11 +15,11 @@ function startGettingPrintFile(jobId: string, printAttributes: PrintAttributes, 
 
 Starts to obtain the print file. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
-
-<!--Device-print-function startGettingPrintFile(jobId: string, printAttributes: PrintAttributes, fd: int,    onFileStateChanged: Callback<PrintFileCreationState>): void--><!--Device-print-function startGettingPrintFile(jobId: string, printAttributes: PrintAttributes, fd: int,    onFileStateChanged: Callback<PrintFileCreationState>): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -27,20 +27,20 @@ Starts to obtain the print file. This API uses an asynchronous callback to retur
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| jobId | string | Yes | ID of the print job. |
-| printAttributes | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Yes | Print attributes. |
-| fd | int | Yes | File descriptor. |
-| onFileStateChanged | [Callback](arkts-basicservices-base-callback-i.md)&lt;[PrintFileCreationState](arkts-basicservices-print-printfilecreationstate-e.md)&gt; | Yes | Callback for updating the file state. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| jobId | string | Yes |
+| printAttributes | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Yes |
+| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| onFileStateChanged | [Callback](arkts-basicservices-base-callback-i.md)&lt;[PrintFileCreationState](arkts-basicservices-print-printfilecreationstate-e.md)&gt; | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -84,4 +84,3 @@ print.startGettingPrintFile(jobId, printAttributes, fd, (state: print.PrintFileC
     console.info('onFileStateChanged success, data : ' + JSON.stringify(state));
 })
 ```
-

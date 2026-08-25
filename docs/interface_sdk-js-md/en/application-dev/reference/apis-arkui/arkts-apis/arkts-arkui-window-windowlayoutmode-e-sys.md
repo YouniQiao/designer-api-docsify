@@ -2,11 +2,11 @@
 
 Enumerates the window layout modes.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
-
-<!--Device-window-enum WindowLayoutMode--><!--Device-window-enum WindowLayoutMode-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -20,11 +20,11 @@ WINDOW_LAYOUT_MODE_CASCADE = 0
 
 Cascade mode. In this mode, freeform windows are stacked with Z-order arrangement.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
-
-<!--Device-WindowLayoutMode-WINDOW_LAYOUT_MODE_CASCADE = 0--><!--Device-WindowLayoutMode-WINDOW_LAYOUT_MODE_CASCADE = 0-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -38,13 +38,12 @@ WINDOW_LAYOUT_MODE_TILE = 1
 
 Tile mode. In this mode, newly opened application windows appear on the rightmost.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
-
-<!--Device-WindowLayoutMode-WINDOW_LAYOUT_MODE_TILE = 1--><!--Device-WindowLayoutMode-WINDOW_LAYOUT_MODE_TILE = 1-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
-

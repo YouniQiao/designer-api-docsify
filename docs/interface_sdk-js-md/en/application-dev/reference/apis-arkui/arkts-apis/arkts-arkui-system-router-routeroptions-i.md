@@ -4,11 +4,11 @@ Defines the page routing parameters.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** RouterOptions
-
-<!--Device-unnamed-export interface RouterOptions--><!--Device-unnamed-export interface RouterOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -30,11 +30,11 @@ Data that needs to be passed to the target page during redirection. The target p
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** params
-
-<!--Device-RouterOptions-params?: Object--><!--Device-RouterOptions-params?: Object-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -53,11 +53,10 @@ URI of the target page, in either of the following formats:
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** url
 
-<!--Device-RouterOptions-uri: string--><!--Device-RouterOptions-uri: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
-

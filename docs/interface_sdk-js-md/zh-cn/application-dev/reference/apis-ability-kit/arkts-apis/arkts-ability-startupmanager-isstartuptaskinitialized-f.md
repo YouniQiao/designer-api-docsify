@@ -14,31 +14,31 @@ function isStartupTaskInitialized(startupTask: string): boolean
 
 获取指定启动任务或so预加载任务是否已初始化。
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-startupManager-function isStartupTaskInitialized(startupTask: string): boolean--><!--Device-startupManager-function isStartupTaskInitialized(startupTask: string): boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AppStartup
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| startupTask | string | 是 | 启动任务[StartupTask](../../apis-default/arkts-apis/arkts-app-appstartup-startuptask-startuptask-c.md)的名称或预加载so名称。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| startupTask | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回布尔值，true表示该启动任务或so预加载任务已执行完成，false表示该启动任务或so预加载任务尚未执行完成。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -89,4 +89,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

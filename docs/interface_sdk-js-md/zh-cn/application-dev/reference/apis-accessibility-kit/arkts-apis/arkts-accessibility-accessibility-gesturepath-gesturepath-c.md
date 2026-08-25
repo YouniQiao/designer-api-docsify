@@ -4,7 +4,7 @@
 
 **起始版本：** 9
 
-<!--Device-unnamed-export declare class GesturePath--><!--Device-unnamed-export declare class GesturePath-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -24,17 +24,17 @@ constructor(durationTime: long)
 
 **起始版本：** 9
 
-**废弃版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-GesturePath-constructor(durationTime: long)--><!--Device-GesturePath-constructor(durationTime: long)-End-->
+**废弃版本：** 12
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| durationTime | long | 是 | 手势总耗时，单位：ms。取值需大于0。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [durationTime](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | number | 是 |
 
 **示例**
 
@@ -50,16 +50,16 @@ gesturePath.points = [startPoint, endPoint];
 ## durationTime
 
 ```TypeScript
-durationTime: long
+durationTime: number
 ```
 
 手势总耗时，单位：ms。取值需大于0。
 
-**类型：** long
+**类型：** number
 
 **起始版本：** 9
 
-<!--Device-GesturePath-durationTime: long--><!--Device-GesturePath-durationTime: long-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -75,7 +75,6 @@ points: Array<GesturePoint>
 
 **起始版本：** 9
 
-<!--Device-GesturePath-points: Array<GesturePoint>--><!--Device-GesturePath-points: Array<GesturePoint>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
-

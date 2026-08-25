@@ -14,9 +14,9 @@ function updateNtpTime(): Promise<void>
 
 使用异步方式从NTP服务器更新NTP时间。该方法一小时内只会从NTP服务器更新一次NTP时间。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-systemDateTime-function updateNtpTime(): Promise<void>--><!--Device-systemDateTime-function updateNtpTime(): Promise<void>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Time
 
@@ -24,16 +24,16 @@ function updateNtpTime(): Promise<void>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [13000001](../errorcode-time.md#13000001-网络或操作系统异常) | Network connection error or OS error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [13000001](../errorcode-time.md#13000001-网络或操作系统异常) |
 
 **示例**
 
@@ -69,4 +69,3 @@ try {
   console.error(`Failed to update ntp time. message: ${error.message}, code: ${error.code}`);
 }
 ```
-

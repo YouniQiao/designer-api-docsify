@@ -4,7 +4,7 @@ Enumerates the skill types.@enum { int }
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export enum SkillType--><!--Device-unnamed-export enum SkillType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -18,11 +18,11 @@ Indicates an app skill.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-SkillType-APP_SKILL = 0--><!--Device-SkillType-APP_SKILL = 0-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -36,11 +36,10 @@ Indicates an independent skill.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-SkillType-INDEPENDENT_SKILL = 1--><!--Device-SkillType-INDEPENDENT_SKILL = 1-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
-

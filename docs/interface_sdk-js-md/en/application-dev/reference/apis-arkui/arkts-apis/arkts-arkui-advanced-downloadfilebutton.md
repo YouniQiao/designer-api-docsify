@@ -10,22 +10,21 @@ import { DownloadFileButton, DownloadLayoutDirection, DownloadIconStyle, Downloa
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [DownloadFileButton](arkts-arkui-arkui-advanced-downloadfilebutton-downloadfilebutton-s.md) | Declare Component DownloadFileButton |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DownloadFileButton](arkts-arkui-arkui-advanced-downloadfilebutton-downloadfilebutton-s.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [DownloadContentOptions](arkts-arkui-arkui-advanced-downloadfilebutton-downloadcontentoptions-i.md) | Defines the download content options.@interface DownloadContentOptions |
-| [DownloadStyleOptions](arkts-arkui-arkui-advanced-downloadfilebutton-downloadstyleoptions-i.md) | Defines the DownloadFileButton style option.@interface DownloadStyleOptions |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DownloadContentOptions](arkts-arkui-arkui-advanced-downloadfilebutton-downloadcontentoptions-i.md) |
+| [DownloadStyleOptions](arkts-arkui-arkui-advanced-downloadfilebutton-downloadstyleoptions-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [DownloadDescription](arkts-arkui-arkui-advanced-downloadfilebutton-downloaddescription-e.md) | Enum for DownloadDescription@enum { number } |
-| [DownloadIconStyle](arkts-arkui-arkui-advanced-downloadfilebutton-downloadiconstyle-e.md) | Enum for DownloadIconStyle@enum { number } |
-| [DownloadLayoutDirection](arkts-arkui-arkui-advanced-downloadfilebutton-downloadlayoutdirection-e.md) | Enum for DownloadDescription@enum { number } |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DownloadDescription](arkts-arkui-arkui-advanced-downloadfilebutton-downloaddescription-e.md) |
+| [DownloadIconStyle](arkts-arkui-arkui-advanced-downloadfilebutton-downloadiconstyle-e.md) |
+| [DownloadLayoutDirection](arkts-arkui-arkui-advanced-downloadfilebutton-downloadlayoutdirection-e.md) |

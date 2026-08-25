@@ -6,13 +6,12 @@ type SystemToneOptions = _SystemToneOptions
 
 System tone options.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-systemSoundManager-type SystemToneOptions = _SystemToneOptions--><!--Device-systemSoundManager-type SystemToneOptions = _SystemToneOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
 
 **Property type:** _SystemToneOptions
-

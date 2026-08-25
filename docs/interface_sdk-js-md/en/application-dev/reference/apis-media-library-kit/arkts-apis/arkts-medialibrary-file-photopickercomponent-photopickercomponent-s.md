@@ -11,9 +11,7 @@ PhotoPickerComponent({ pickerOptions?: PickerOptions, onSelect?: (uri: string) =
 
 **Since:** 12
 
-**Decorator:** @Component
-
-<!--Device-unnamed-export declare struct PhotoPickerComponent--><!--Device-unnamed-export declare struct PhotoPickerComponent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -33,11 +31,9 @@ Build function of PhotoPickerComponent
 
 **Since:** 12
 
-**Decorator:** @Builder
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PhotoPickerComponent-@Builder  build(): void--><!--Device-PhotoPickerComponent-@Builder  build(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -49,13 +45,11 @@ onCurrentAlbumDeleted?: CurrentAlbumDeletedCallback
 
 Callback when the current album is deleted
 
-**Type:** [CurrentAlbumDeletedCallback](../../apis-default/arkts-apis/arkts-currentalbumdeletedcallback-t.md)
-
 **Since:** 13
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 26.0.0.
 
-<!--Device-PhotoPickerComponent-onCurrentAlbumDeleted?: CurrentAlbumDeletedCallback--><!--Device-PhotoPickerComponent-onCurrentAlbumDeleted?: CurrentAlbumDeletedCallback-End-->
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -67,15 +61,19 @@ onDeselect?: (uri: string) => void
 
 Callback when Deselect photos or videos
 
-**Type:** (uri: string) =&gt; void
-
 **Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PhotoPickerComponent-onDeselect?: (uri: string) => void--><!--Device-PhotoPickerComponent-onDeselect?: (uri: string) => void-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
 
 ## onEnterPhotoBrowser
 
@@ -85,15 +83,19 @@ onEnterPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean
 
 Callback when enter photo browser, will return photoBrowserInfo
 
-**Type:** (photoBrowserInfo: PhotoBrowserInfo) =&gt; boolean
-
 **Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PhotoPickerComponent-onEnterPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean--><!--Device-PhotoPickerComponent-onEnterPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| photoBrowserInfo | [PhotoBrowserInfo](arkts-medialibrary-file-photopickercomponent-photobrowserinfo-c.md) | Yes |
 
 ## onError
 
@@ -103,15 +105,13 @@ onError?: ErrorCallback
 
 Callback when an error occurs in the PhotoPickerComponent.
 
-**Type:** [ErrorCallback](../../apis-default/arkts-apis/arkts-errorcallback-t.md)
-
 **Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-PhotoPickerComponent-onError?: ErrorCallback--><!--Device-PhotoPickerComponent-onError?: ErrorCallback-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -123,13 +123,11 @@ onExceedMaxSelected?: ExceedMaxSelectedCallback
 
 Callback when exceed max selected
 
-**Type:** [ExceedMaxSelectedCallback](../../apis-default/arkts-apis/arkts-exceedmaxselectedcallback-t.md)
-
 **Since:** 13
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 26.0.0.
 
-<!--Device-PhotoPickerComponent-onExceedMaxSelected?: ExceedMaxSelectedCallback--><!--Device-PhotoPickerComponent-onExceedMaxSelected?: ExceedMaxSelectedCallback-End-->
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -141,15 +139,19 @@ onExitPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean
 
 Callback when exit photo browser, will return photoBrowserInfo
 
-**Type:** (photoBrowserInfo: PhotoBrowserInfo) =&gt; boolean
-
 **Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PhotoPickerComponent-onExitPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean--><!--Device-PhotoPickerComponent-onExitPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| photoBrowserInfo | [PhotoBrowserInfo](arkts-medialibrary-file-photopickercomponent-photobrowserinfo-c.md) | Yes |
 
 ## onItemClicked
 
@@ -159,15 +161,20 @@ onItemClicked?: (itemInfo: ItemInfo, clickType: ClickType) => boolean
 
 Callback when click item. include click camera item and thumbnail item, will return itemInfo
 
-**Type:** (itemInfo: ItemInfo, clickType: ClickType) =&gt; boolean
-
 **Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PhotoPickerComponent-onItemClicked?: (itemInfo: ItemInfo, clickType: ClickType) => boolean--><!--Device-PhotoPickerComponent-onItemClicked?: (itemInfo: ItemInfo, clickType: ClickType) => boolean-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [itemInfo](../../apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-onscreen-awarenessitem-i-sys.md) | [ItemInfo](arkts-medialibrary-file-photopickercomponent-iteminfo-c.md) | Yes |
+| clickType | [ClickType](arkts-medialibrary-file-photopickercomponent-clicktype-e.md) | Yes |
 
 ## onItemClickedNotify
 
@@ -177,15 +184,13 @@ onItemClickedNotify?: ItemClickedNotifyCallback
 
 Callback when click item. Includes camera items and thumbnail items. Returns itemInfo in the callback. Must be used in conjunction with the addData method.
 
-**Type:** [ItemClickedNotifyCallback](../../apis-default/arkts-apis/arkts-itemclickednotifycallback-t.md)
-
 **Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-PhotoPickerComponent-onItemClickedNotify?: ItemClickedNotifyCallback--><!--Device-PhotoPickerComponent-onItemClickedNotify?: ItemClickedNotifyCallback-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -197,13 +202,11 @@ onMovingPhotoBadgeStateChanged?: MovingPhotoBadgeStateChangedCallback
 
 Callback when moving photo badge state changed
 
-**Type:** [MovingPhotoBadgeStateChangedCallback](../../apis-default/arkts-apis/arkts-movingphotobadgestatechangedcallback-t.md)
-
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
-<!--Device-PhotoPickerComponent-onMovingPhotoBadgeStateChanged?: MovingPhotoBadgeStateChangedCallback--><!--Device-PhotoPickerComponent-onMovingPhotoBadgeStateChanged?: MovingPhotoBadgeStateChangedCallback-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -215,15 +218,19 @@ onPhotoBrowserChanged?: (browserItemInfo: BaseItemInfo) => boolean
 
 Callback when photo browser change, will return browserItemInfo
 
-**Type:** (browserItemInfo: BaseItemInfo) =&gt; boolean
-
 **Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PhotoPickerComponent-onPhotoBrowserChanged?: (browserItemInfo: BaseItemInfo) => boolean--><!--Device-PhotoPickerComponent-onPhotoBrowserChanged?: (browserItemInfo: BaseItemInfo) => boolean-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| browserItemInfo | [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md) | Yes |
 
 ## onPhotoBrowserChangeStart
 
@@ -233,15 +240,13 @@ onPhotoBrowserChangeStart?: PhotoBrowserChangeStartCallback
 
 Callback when photo browser change start (upon user swipe release), will return targetPhotoInfo
 
-**Type:** [PhotoBrowserChangeStartCallback](../../apis-default/arkts-apis/arkts-photobrowserchangestartcallback-t.md)
-
 **Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-PhotoPickerComponent-onPhotoBrowserChangeStart?: PhotoBrowserChangeStartCallback--><!--Device-PhotoPickerComponent-onPhotoBrowserChangeStart?: PhotoBrowserChangeStartCallback-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -253,15 +258,13 @@ onPhotoBrowserZoom?: PhotoBrowserZoomCallback
 
 Callback when the zoom scale changes during large image browsing.
 
-**Type:** [PhotoBrowserZoomCallback](../../apis-default/arkts-apis/arkts-photobrowserzoomcallback-t.md)
-
 **Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-PhotoPickerComponent-onPhotoBrowserZoom?: PhotoBrowserZoomCallback--><!--Device-PhotoPickerComponent-onPhotoBrowserZoom?: PhotoBrowserZoomCallback-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -273,13 +276,11 @@ onPickerControllerReady?: () => void
 
 Callback when pickerController is ready. Set data to picker component by pickerController is supported after pickerController is ready
 
-**Type:** () =&gt; void
-
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-PhotoPickerComponent-onPickerControllerReady?: () => void--><!--Device-PhotoPickerComponent-onPickerControllerReady?: () => void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -291,15 +292,13 @@ onPickerRecovery?: PickerRecoveryCallback
 
 Callback when the photo picker restores the previously grid state.
 
-**Type:** [PickerRecoveryCallback](arkts-medialibrary-pickerrecoverycallback-t.md)
-
 **Since:** 26.1.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-PhotoPickerComponent-onPickerRecovery?: PickerRecoveryCallback--><!--Device-PhotoPickerComponent-onPickerRecovery?: PickerRecoveryCallback-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -311,15 +310,13 @@ onPinchGridSwitched?: PinchGridSwitchedCallback
 
 Callback when the grid's level is switched via pinch gesture.
 
-**Type:** [PinchGridSwitchedCallback](../../apis-default/arkts-apis/arkts-pinchgridswitchedcallback-t.md)
-
 **Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-PhotoPickerComponent-onPinchGridSwitched?: PinchGridSwitchedCallback--><!--Device-PhotoPickerComponent-onPinchGridSwitched?: PinchGridSwitchedCallback-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -331,15 +328,13 @@ onScrollStopAtEnd?: ScrollStopAtEndCallback
 
 Callback when the grid stops scrolling at the ending position.
 
-**Type:** [ScrollStopAtEndCallback](../../apis-default/arkts-apis/arkts-scrollstopatendcallback-t.md)
-
 **Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-PhotoPickerComponent-onScrollStopAtEnd?: ScrollStopAtEndCallback--><!--Device-PhotoPickerComponent-onScrollStopAtEnd?: ScrollStopAtEndCallback-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -351,15 +346,13 @@ onScrollStopAtStart?: ScrollStopAtStartCallback
 
 Callback when the grid stops scrolling at the starting position.
 
-**Type:** [ScrollStopAtStartCallback](../../apis-default/arkts-apis/arkts-scrollstopatstartcallback-t.md)
-
 **Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-PhotoPickerComponent-onScrollStopAtStart?: ScrollStopAtStartCallback--><!--Device-PhotoPickerComponent-onScrollStopAtStart?: ScrollStopAtStartCallback-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -371,15 +364,19 @@ onSelect?: (uri: string) => void
 
 Callback when select photos or videos
 
-**Type:** (uri: string) =&gt; void
-
 **Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PhotoPickerComponent-onSelect?: (uri: string) => void--><!--Device-PhotoPickerComponent-onSelect?: (uri: string) => void-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
 
 ## onSelectedItemsDeleted
 
@@ -389,13 +386,11 @@ onSelectedItemsDeleted?: ItemsDeletedCallback
 
 Callback when selected items are deleted
 
-**Type:** [ItemsDeletedCallback](../../apis-default/arkts-apis/arkts-itemsdeletedcallback-t.md)
-
 **Since:** 13
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 26.0.0.
 
-<!--Device-PhotoPickerComponent-onSelectedItemsDeleted?: ItemsDeletedCallback--><!--Device-PhotoPickerComponent-onSelectedItemsDeleted?: ItemsDeletedCallback-End-->
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -407,15 +402,13 @@ onUnselectableItemClicked?: UnselectableItemClickedCallback
 
 Callback when an unselectable item is clicked.
 
-**Type:** [UnselectableItemClickedCallback](arkts-medialibrary-unselectableitemclickedcallback-t.md)
-
 **Since:** 26.1.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-PhotoPickerComponent-onUnselectableItemClicked?: UnselectableItemClickedCallback--><!--Device-PhotoPickerComponent-onUnselectableItemClicked?: UnselectableItemClickedCallback-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -427,13 +420,11 @@ onVideoPlayStateChanged?: videoPlayStateChangedCallback
 
 Callback when the video play state changed
 
-**Type:** [videoPlayStateChangedCallback](arkts-medialibrary-videoplaystatechangedcallback-t.md)
-
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.0.0.
 
-<!--Device-PhotoPickerComponent-onVideoPlayStateChanged?: videoPlayStateChangedCallback--><!--Device-PhotoPickerComponent-onVideoPlayStateChanged?: videoPlayStateChangedCallback-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -445,15 +436,13 @@ pickerController: PickerController
 
 PickerController
 
-**Type:** [PickerController](../../apis-default/arkts-apis/arkts-file-photopickercomponent-pickercontroller-c.md)
+**Type:** [PickerController](arkts-medialibrary-file-photopickercomponent-pickercontroller-c.md)
 
 **Since:** 12
 
-**Decorator:** @ObjectLink
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PhotoPickerComponent-@ObjectLink  pickerController: PickerController--><!--Device-PhotoPickerComponent-@ObjectLink  pickerController: PickerController-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -465,13 +454,12 @@ pickerOptions?: PickerOptions
 
 PickerOptions
 
-**Type:** [PickerOptions](../../apis-default/arkts-apis/arkts-file-photopickercomponent-pickeroptions-c.md)
+**Type:** [PickerOptions](arkts-medialibrary-file-photopickercomponent-pickeroptions-c.md)
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PhotoPickerComponent-pickerOptions?: PickerOptions--><!--Device-PhotoPickerComponent-pickerOptions?: PickerOptions-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

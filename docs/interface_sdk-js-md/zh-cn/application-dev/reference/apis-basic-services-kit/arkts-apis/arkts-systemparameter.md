@@ -11,11 +11,11 @@
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [systemParameterEnhance](arkts-systemparameterenhance.md)
-
-<!--Device-unnamed-declare namespace systemParameter--><!--Device-unnamed-declare namespace systemParameter-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -32,14 +32,13 @@ import { systemParameter } from '@kit.BasicServicesKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [get](arkts-basicservices-systemparameter-get-f-sys.md) | 获取系统参数key对应的值，使用callback异步回调。 |
-| [get](arkts-basicservices-systemparameter-get-f-sys.md) | 获取系统参数key对应的值，使用callback异步回调。 |
-| [get](arkts-basicservices-systemparameter-get-f-sys.md) | 获取系统参数key对应的值，使用Promise异步回调。 |
-| [getSync](arkts-basicservices-systemparameter-getsync-f-sys.md) | 获取系统参数key对应的值。 |
-| [set](arkts-basicservices-systemparameter-set-f-sys.md) | 设置系统参数key对应的值，使用callback异步回调。 |
-| [set](arkts-basicservices-systemparameter-set-f-sys.md) | 设置系统参数key对应的值，使用Promise异步回调。 |
-| [setSync](arkts-basicservices-systemparameter-setsync-f-sys.md) | 设置系统参数key对应的值。 |
+| 名称 |
+| --- |
+| [get](arkts-basicservices-systemparameter-get-f-sys.md) |
+| [get](arkts-basicservices-systemparameter-get-f-sys.md) |
+| [get](arkts-basicservices-systemparameter-get-f-sys.md) |
+| [getSync](arkts-basicservices-systemparameter-getsync-f-sys.md) |
+| [set](arkts-basicservices-systemparameter-set-f-sys.md) |
+| [set](arkts-basicservices-systemparameter-set-f-sys.md) |
+| [setSync](arkts-basicservices-systemparameter-setsync-f-sys.md) |
 <!--DelEnd-->
-

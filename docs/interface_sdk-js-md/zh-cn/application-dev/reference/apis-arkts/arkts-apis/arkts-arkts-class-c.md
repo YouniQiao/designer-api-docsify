@@ -4,9 +4,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-unnamed-export class Class--><!--Device-unnamed-export class Class-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,19 +23,17 @@ createInstance(): Object
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-createInstance(): Object--><!--Device-Class-createInstance(): Object-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Object | 该类的新实例。 |
+| 类型 |
+| --- |
+| Object |
 
 ## current
 
@@ -49,19 +45,17 @@ static current(): Class
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-static current(): Class--><!--Device-Class-static current(): Class-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Class](arkts-arkts-class-c.md) | 当前类。 |
+| 类型 |
+| --- |
+| [Class](arkts-arkts-class-c.md) |
 
 ## from
 
@@ -73,19 +67,17 @@ static from<T>(): Class
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-static from<T>(): Class--><!--Device-Class-static from<T>(): Class-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Class](arkts-arkts-class-c.md) | 该对象的类。 |
+| 类型 |
+| --- |
+| [Class](arkts-arkts-class-c.md) |
 
 ## getConstructors
 
@@ -97,19 +89,17 @@ getConstructors(): FixedArray<reflect.Constructor>
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-getConstructors(): FixedArray<reflect.Constructor>--><!--Device-Class-getConstructors(): FixedArray<reflect.Constructor>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| FixedArray&lt;reflect.Constructor&gt; | 由构造函数组成的定长数组。 |
+| 类型 |
+| --- |
+| FixedArray & lt;reflect.Constructor & gt; |
 
 ## getDescriptor
 
@@ -121,19 +111,17 @@ getDescriptor(): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-getDescriptor(): string--><!--Device-Class-getDescriptor(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 描述信息。 |
+| 类型 |
+| --- |
+| string |
 
 ## getFixedArrayComponentType
 
@@ -145,19 +133,17 @@ getFixedArrayComponentType(): Class | undefined
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-getFixedArrayComponentType(): Class | undefined--><!--Device-Class-getFixedArrayComponentType(): Class | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Class](arkts-arkts-class-c.md) \| undefined | 定长数组的元素类型；如果当前类不是 定长数组，则返回undefined。 |
+| 类型 |
+| --- |
+| [Class](arkts-arkts-class-c.md) \| undefined |
 
 ## getInstanceField
 
@@ -169,25 +155,23 @@ getInstanceField(name: string): reflect.InstanceField | undefined
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-getInstanceField(name: string): reflect.InstanceField | undefined--><!--Device-Class-getInstanceField(name: string): reflect.InstanceField | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 待查找的字段名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| reflect.InstanceField \| undefined | 查找到的实例字段，未找到时返回undefined。 |
+| 类型 |
+| --- |
+| reflect.InstanceField \| undefined |
 
 ## getInstanceFields
 
@@ -199,19 +183,17 @@ getInstanceFields(): FixedArray<reflect.InstanceField>
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-getInstanceFields(): FixedArray<reflect.InstanceField>--><!--Device-Class-getInstanceFields(): FixedArray<reflect.InstanceField>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| FixedArray&lt;reflect.InstanceField&gt; | 由实例字段组成的定长数组。 |
+| 类型 |
+| --- |
+| FixedArray & lt;reflect.InstanceField & gt; |
 
 ## getInstanceMethod
 
@@ -223,26 +205,24 @@ getInstanceMethod(name: string, signature?: FixedArray<Class>): reflect.Instance
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-getInstanceMethod(name: string, signature?: FixedArray<Class>): reflect.InstanceMethod | undefined--><!--Device-Class-getInstanceMethod(name: string, signature?: FixedArray<Class>): reflect.InstanceMethod | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 待查找的方法名。 |
-| signature | FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; | 否 | 用于确定方法签名的参数类型数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| signature | FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| reflect.InstanceMethod \| undefined | 查找到的实例方法，未找到时返回undefined。 |
+| 类型 |
+| --- |
+| reflect.InstanceMethod \| undefined |
 
 ## getInstanceMethods
 
@@ -254,19 +234,17 @@ getInstanceMethods(): FixedArray<reflect.InstanceMethod>
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-getInstanceMethods(): FixedArray<reflect.InstanceMethod>--><!--Device-Class-getInstanceMethods(): FixedArray<reflect.InstanceMethod>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| FixedArray&lt;reflect.InstanceMethod&gt; | 由实例方法组成的定长数组。 |
+| 类型 |
+| --- |
+| FixedArray & lt;reflect.InstanceMethod & gt; |
 
 ## getInterfaces
 
@@ -278,19 +256,17 @@ getInterfaces(): FixedArray<Class>
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-getInterfaces(): FixedArray<Class>--><!--Device-Class-getInterfaces(): FixedArray<Class>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; | 该类所实现接口组成的定长数组。 |
+| 类型 |
+| --- |
+| FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; |
 
 ## getLinker
 
@@ -302,19 +278,17 @@ getLinker(): RuntimeLinker
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-getLinker(): RuntimeLinker--><!--Device-Class-getLinker(): RuntimeLinker-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RuntimeLinker | 该类对应的运行时链接器。 |
+| 类型 |
+| --- |
+| RuntimeLinker |
 
 ## getName
 
@@ -326,19 +300,17 @@ getName(): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-getName(): string--><!--Device-Class-getName(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 类名。 |
+| 类型 |
+| --- |
+| string |
 
 ## getStaticField
 
@@ -350,25 +322,23 @@ getStaticField(name: string): reflect.StaticField | undefined
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-getStaticField(name: string): reflect.StaticField | undefined--><!--Device-Class-getStaticField(name: string): reflect.StaticField | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 待查找的字段名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| reflect.StaticField \| undefined | 查找到的静态字段，未找到时返回undefined。 |
+| 类型 |
+| --- |
+| reflect.StaticField \| undefined |
 
 ## getStaticFields
 
@@ -380,19 +350,17 @@ getStaticFields(): FixedArray<reflect.StaticField>
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-getStaticFields(): FixedArray<reflect.StaticField>--><!--Device-Class-getStaticFields(): FixedArray<reflect.StaticField>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| FixedArray&lt;reflect.StaticField&gt; | 由静态字段组成的定长数组。 |
+| 类型 |
+| --- |
+| FixedArray & lt;reflect.StaticField & gt; |
 
 ## getStaticMethod
 
@@ -404,26 +372,24 @@ getStaticMethod(name: string, signature?: FixedArray<Class>): reflect.StaticMeth
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-getStaticMethod(name: string, signature?: FixedArray<Class>): reflect.StaticMethod | undefined--><!--Device-Class-getStaticMethod(name: string, signature?: FixedArray<Class>): reflect.StaticMethod | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 待查找的方法名。 |
-| signature | FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; | 否 | 用于确定方法签名的参数类型数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| signature | FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| reflect.StaticMethod \| undefined | 查找到的静态方法，未找到时返回undefined。 |
+| 类型 |
+| --- |
+| reflect.StaticMethod \| undefined |
 
 ## getStaticMethods
 
@@ -435,19 +401,17 @@ getStaticMethods(): FixedArray<reflect.StaticMethod>
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-getStaticMethods(): FixedArray<reflect.StaticMethod>--><!--Device-Class-getStaticMethods(): FixedArray<reflect.StaticMethod>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| FixedArray&lt;reflect.StaticMethod&gt; | 由静态方法组成的定长数组。 |
+| 类型 |
+| --- |
+| FixedArray & lt;reflect.StaticMethod & gt; |
 
 ## getSuper
 
@@ -459,19 +423,17 @@ getSuper(): Class | undefined
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-getSuper(): Class | undefined--><!--Device-Class-getSuper(): Class | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Class](arkts-arkts-class-c.md) \| undefined | 父类。 |
+| 类型 |
+| --- |
+| [Class](arkts-arkts-class-c.md) \| undefined |
 
 ## getUnionConstituentTypes
 
@@ -483,19 +445,17 @@ getUnionConstituentTypes(): FixedArray<Class> | undefined
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-getUnionConstituentTypes(): FixedArray<Class> | undefined--><!--Device-Class-getUnionConstituentTypes(): FixedArray<Class> | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; \| undefined | 由各组成类型构成的定长数组； 如果当前类不是联合类型类，则返回undefined。 |
+| 类型 |
+| --- |
+| FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; \| undefined |
 
 ## initialize
 
@@ -507,11 +467,9 @@ initialize(): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-initialize(): void--><!--Device-Class-initialize(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -525,19 +483,17 @@ isAbstract(): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-isAbstract(): boolean--><!--Device-Class-isAbstract(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果该类是抽象类则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isEnum
 
@@ -549,19 +505,17 @@ isEnum(): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-isEnum(): boolean--><!--Device-Class-isEnum(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果当前类是枚举则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isFinal
 
@@ -573,19 +527,17 @@ isFinal(): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-isFinal(): boolean--><!--Device-Class-isFinal(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果该类是final类则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isFixedArray
 
@@ -597,19 +549,17 @@ isFixedArray(): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-isFixedArray(): boolean--><!--Device-Class-isFixedArray(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果当前类是定长数组则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isInterface
 
@@ -621,19 +571,17 @@ isInterface(): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-isInterface(): boolean--><!--Device-Class-isInterface(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果当前类是接口则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isNamespace
 
@@ -645,19 +593,17 @@ public isNamespace(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-public isNamespace(): boolean--><!--Device-Class-public isNamespace(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果当前类是命名空间则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isPrimitive
 
@@ -669,19 +615,17 @@ isPrimitive(): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-isPrimitive(): boolean--><!--Device-Class-isPrimitive(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果该类对应基本类型则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isSubtypeOf
 
@@ -693,25 +637,23 @@ isSubtypeOf(other: Class): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-isSubtypeOf(other: Class): boolean--><!--Device-Class-isSubtypeOf(other: Class): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [Class](arkts-arkts-class-c.md) | 是 | 用于比较的类。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [Class](arkts-arkts-class-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果当前类是另一个类的子类型则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isUnion
 
@@ -723,19 +665,17 @@ isUnion(): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-isUnion(): boolean--><!--Device-Class-isUnion(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果当前类是联合类型则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## of
 
@@ -747,25 +687,23 @@ static of(obj: Object | null): Class
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-static of(obj: Object | null): Class--><!--Device-Class-static of(obj: Object | null): Class-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| obj | Object \| null | 是 | 待获取类信息的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| obj | Object \| null | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Class](arkts-arkts-class-c.md) | 该对象的类。 |
+| 类型 |
+| --- |
+| [Class](arkts-arkts-class-c.md) |
 
 ## ofAny
 
@@ -777,25 +715,23 @@ static ofAny(obj: Any): Class | undefined
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-static ofAny(obj: Any): Class | undefined--><!--Device-Class-static ofAny(obj: Any): Class | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| obj | Any | 是 | 待获取类信息的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| obj | Any | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Class](arkts-arkts-class-c.md) \| undefined | 该对象的类；如果该对象不是类实例，则返回undefined。 |
+| 类型 |
+| --- |
+| [Class](arkts-arkts-class-c.md) \| undefined |
 
 ## ofCaller
 
@@ -807,19 +743,17 @@ static ofCaller(): Class | undefined
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-static ofCaller(): Class | undefined--><!--Device-Class-static ofCaller(): Class | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Class](arkts-arkts-class-c.md) \| undefined | 调用者的类；如果不存在调用者的托管栈帧，则返回undefined。 |
+| 类型 |
+| --- |
+| [Class](arkts-arkts-class-c.md) \| undefined |
 
 ## PRIMITIVE_BOOLEAN
 
@@ -833,11 +767,9 @@ public static readonly PRIMITIVE_BOOLEAN: Class
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-public static readonly PRIMITIVE_BOOLEAN: Class--><!--Device-Class-public static readonly PRIMITIVE_BOOLEAN: Class-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -853,11 +785,9 @@ public static readonly PRIMITIVE_BYTE: Class
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-public static readonly PRIMITIVE_BYTE: Class--><!--Device-Class-public static readonly PRIMITIVE_BYTE: Class-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -873,11 +803,9 @@ public static readonly PRIMITIVE_CHAR: Class
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-public static readonly PRIMITIVE_CHAR: Class--><!--Device-Class-public static readonly PRIMITIVE_CHAR: Class-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -893,11 +821,9 @@ public static readonly PRIMITIVE_DOUBLE: Class
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-public static readonly PRIMITIVE_DOUBLE: Class--><!--Device-Class-public static readonly PRIMITIVE_DOUBLE: Class-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -913,11 +839,9 @@ public static readonly PRIMITIVE_FLOAT: Class
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-public static readonly PRIMITIVE_FLOAT: Class--><!--Device-Class-public static readonly PRIMITIVE_FLOAT: Class-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -933,11 +857,9 @@ public static readonly PRIMITIVE_INT: Class
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-public static readonly PRIMITIVE_INT: Class--><!--Device-Class-public static readonly PRIMITIVE_INT: Class-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -953,11 +875,9 @@ public static readonly PRIMITIVE_LONG: Class
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-public static readonly PRIMITIVE_LONG: Class--><!--Device-Class-public static readonly PRIMITIVE_LONG: Class-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -973,11 +893,9 @@ public static readonly PRIMITIVE_NUMBER: Class
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-public static readonly PRIMITIVE_NUMBER: Class--><!--Device-Class-public static readonly PRIMITIVE_NUMBER: Class-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -993,11 +911,9 @@ public static readonly PRIMITIVE_SHORT: Class
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Class-public static readonly PRIMITIVE_SHORT: Class--><!--Device-Class-public static readonly PRIMITIVE_SHORT: Class-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1013,11 +929,8 @@ public static readonly PRIMITIVE_VOID: Class
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Class-public static readonly PRIMITIVE_VOID: Class--><!--Device-Class-public static readonly PRIMITIVE_VOID: Class-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

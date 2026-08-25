@@ -2,9 +2,9 @@
 
 Represents a component description file.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-update-export interface ComponentDescription--><!--Device-update-export interface ComponentDescription-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -26,9 +26,9 @@ Component ID, which uniquely identifies a component in the upgrade package.Use s
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ComponentDescription-componentId: string--><!--Device-ComponentDescription-componentId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -44,11 +44,10 @@ Information about the description file.
 
 **Type:** [DescriptionInfo](arkts-basicservices-update-descriptioninfo-i-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ComponentDescription-descriptionInfo: DescriptionInfo--><!--Device-ComponentDescription-descriptionInfo: DescriptionInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
-

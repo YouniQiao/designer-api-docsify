@@ -2,9 +2,9 @@
 
 枚举，自动语音识别（ASR）的静音模式。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-audio-enum AsrVoiceMuteMode--><!--Device-audio-enum AsrVoiceMuteMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -18,9 +18,9 @@ OUTPUT_MUTE = 0
 
 本地输出静音。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AsrVoiceMuteMode-OUTPUT_MUTE = 0--><!--Device-AsrVoiceMuteMode-OUTPUT_MUTE = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -34,9 +34,9 @@ INPUT_MUTE = 1
 
 本地的MIC输入静音。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AsrVoiceMuteMode-INPUT_MUTE = 1--><!--Device-AsrVoiceMuteMode-INPUT_MUTE = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -50,9 +50,9 @@ TTS_MUTE  = 2
 
 应用下发的媒体音频本地静音。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AsrVoiceMuteMode-TTS_MUTE  = 2--><!--Device-AsrVoiceMuteMode-TTS_MUTE  = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -66,9 +66,9 @@ CALL_MUTE = 3
 
 通话语音流静音。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AsrVoiceMuteMode-CALL_MUTE = 3--><!--Device-AsrVoiceMuteMode-CALL_MUTE = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -82,11 +82,10 @@ OUTPUT_MUTE_EX = 4
 
 本地输出静音，媒体音频流送给通话录音。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AsrVoiceMuteMode-OUTPUT_MUTE_EX = 4--><!--Device-AsrVoiceMuteMode-OUTPUT_MUTE_EX = 4-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
-

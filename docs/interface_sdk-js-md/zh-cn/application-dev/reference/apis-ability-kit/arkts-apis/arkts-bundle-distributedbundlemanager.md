@@ -5,9 +5,9 @@
 > **说明：**&gt;
 > 本模块为系统接口。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-declare namespace distributedBundleManager--><!--Device-unnamed-declare namespace distributedBundleManager-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 
@@ -24,24 +24,23 @@ import { distributedBundleManager } from '@kit.AbilityKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) | 获取由elementName指定的远程设备上的应用的AbilityInfo信息。使用callback异步回调。 |
-| [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) | 获取由elementName指定的远程设备上的应用的AbilityInfo信息。使用Promise异步回调。 |
-| [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) | 获取由elementName指定的远程设备上的应用的AbilityInfo数组信息。使用callback异步回调。 |
-| [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) | 获取由elementName指定的远程设备上的应用的AbilityInfo数组信息。使用Promise异步回调。 |
-| [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) | 获取由elementName和locale指定的远程设备上的应用的AbilityInfo信息。使用callback异步回调。 |
-| [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) | 获取由elementName和locale指定的远程设备上的应用的AbilityInfo信息。使用Promise异步回调。 |
-| [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) | 获取由elementName和locale指定的远程设备上的应用的AbilityInfo数组信息。使用callback异步回调。 |
-| [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) | 获取由elementName和locale指定的远程设备上的应用的AbilityInfo数组信息。使用Promise异步回调。 |
-| [getRemoteBundleVersionCode](arkts-ability-distributedbundlemanager-getremotebundleversioncode-f-sys.md) | 获取指定远程设备上指定包名的应用版本信息。使用Promise异步回调。 |
+| 名称 |
+| --- |
+| [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) |
+| [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) |
+| [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) |
+| [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) |
+| [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) |
+| [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) |
+| [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) |
+| [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) |
+| [getRemoteBundleVersionCode](arkts-ability-distributedbundlemanager-getremotebundleversioncode-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### 类型（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md) | 包含远程的ability信息。 |
+| 名称 |
+| --- |
+| [RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md) |
 <!--DelEnd-->
-

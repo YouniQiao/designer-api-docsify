@@ -2,9 +2,9 @@
 
 Enumerates the types of the cloud-device sync strategy.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-cloudData-enum StrategyType--><!--Device-cloudData-enum StrategyType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -16,9 +16,8 @@ NETWORK
 
 Sync over the network.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-StrategyType-NETWORK--><!--Device-StrategyType-NETWORK-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
-

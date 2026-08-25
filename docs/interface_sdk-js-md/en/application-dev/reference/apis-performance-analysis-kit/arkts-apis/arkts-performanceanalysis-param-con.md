@@ -8,11 +8,11 @@ const DISTRIBUTED_SERVICE_INSTANCE_ID: string
 
 Distributed service instance ID.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-param-const DISTRIBUTED_SERVICE_INSTANCE_ID: string--><!--Device-param-const DISTRIBUTED_SERVICE_INSTANCE_ID: string-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -24,11 +24,11 @@ const DISTRIBUTED_SERVICE_NAME: string
 
 Distributed service name.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-param-const DISTRIBUTED_SERVICE_NAME: string--><!--Device-param-const DISTRIBUTED_SERVICE_NAME: string-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -40,11 +40,10 @@ const USER_ID: string
 
 Custom user ID.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-param-const USER_ID: string--><!--Device-param-const USER_ID: string-End-->
-
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
-

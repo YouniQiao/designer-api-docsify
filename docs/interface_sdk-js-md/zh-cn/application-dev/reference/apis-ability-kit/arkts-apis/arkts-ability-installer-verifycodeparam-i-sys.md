@@ -4,9 +4,9 @@
 
 **起始版本：** 10
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-installer-export interface VerifyCodeParam--><!--Device-installer-export interface VerifyCodeParam-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -30,9 +30,9 @@ moduleName: string
 
 **起始版本：** 10
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-VerifyCodeParam-moduleName: string--><!--Device-VerifyCodeParam-moduleName: string-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -50,11 +50,10 @@ signatureFilePath: string
 
 **起始版本：** 10
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-VerifyCodeParam-signatureFilePath: string--><!--Device-VerifyCodeParam-signatureFilePath: string-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
-

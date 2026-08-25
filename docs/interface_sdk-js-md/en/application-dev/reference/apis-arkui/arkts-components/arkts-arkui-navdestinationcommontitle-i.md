@@ -4,7 +4,7 @@ Defines a general title for the **NavDestination** component.
 
 **Since:** 9
 
-<!--Device-unnamed-declare interface NavDestinationCommonTitle--><!--Device-unnamed-declare interface NavDestinationCommonTitle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,9 +25,9 @@ Main title.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-NavDestinationCommonTitle-main: string | Resource--><!--Device-NavDestinationCommonTitle-main: string | Resource-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,9 +43,8 @@ Subtitle.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-NavDestinationCommonTitle-sub: string | Resource--><!--Device-NavDestinationCommonTitle-sub: string | Resource-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

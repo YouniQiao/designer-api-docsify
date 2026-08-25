@@ -4,7 +4,7 @@ AgentCard相当于Agent(智能体)的"名片"，用于描述Agent的能力和技
 
 **起始版本：** 24
 
-<!--Device-unnamed-export interface AgentCard--><!--Device-unnamed-export interface AgentCard-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -20,11 +20,11 @@ Agent的唯一标识符，在同一个应用中，agentId不可重复。
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AgentCard-agentId: string--><!--Device-AgentCard-agentId: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -40,11 +40,11 @@ Agent所在的应用信息。包含Agent所属的应用包名、模块名和能�
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AgentCard-appInfo: AgentAppInfo--><!--Device-AgentCard-appInfo: AgentAppInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -60,11 +60,11 @@ Agent支持的可选能力集合。定义Agent支持的其他可选能力，如�
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AgentCard-capabilities?: AgentCapabilities--><!--Device-AgentCard-capabilities?: AgentCapabilities-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -80,11 +80,11 @@ Agent的类别。用于对Agent进行分类管理，常见的类别包括："pro
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AgentCard-category: string--><!--Device-AgentCard-category: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -100,11 +100,11 @@ Agent在所有[AgentSkill](arkts-ability-agentcard-agentskill-i.md)上支持的�
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AgentCard-defaultInputModes: Array<string>--><!--Device-AgentCard-defaultInputModes: Array<string>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -120,11 +120,11 @@ Agent在所有[AgentSkill](arkts-ability-agentcard-agentskill-i.md)上支持的�
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AgentCard-defaultOutputModes: Array<string>--><!--Device-AgentCard-defaultOutputModes: Array<string>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -140,11 +140,11 @@ description: string
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AgentCard-description: string--><!--Device-AgentCard-description: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -160,11 +160,11 @@ Agent文档的URL。提供详细的Agent使用文档、API说明、示例和最�
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AgentCard-documentationUrl?: string--><!--Device-AgentCard-documentationUrl?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -180,11 +180,11 @@ Agent的扩展配置项。用于存储自定义的扩展配置信息，如Agent�
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AgentCard-extension?: string--><!--Device-AgentCard-extension?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -201,11 +201,11 @@ Agent图标的URL。提供Agent的可视化标识图标，用于在UI界面中�
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AgentCard-iconUrl: string--><!--Device-AgentCard-iconUrl: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -221,11 +221,11 @@ Agent的名称。一般用于在UI界面中展示给用户，例如"Recipe Assis
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AgentCard-name: string--><!--Device-AgentCard-name: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -241,11 +241,11 @@ Agent的服务提供商信息，包含提供商的组织名称和官方网站URL
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AgentCard-provider?: AgentProvider--><!--Device-AgentCard-provider?: AgentProvider-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -261,11 +261,11 @@ Agent提供的功能集合。描述Agent可以执行的特定功能或技能，�
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AgentCard-skills: Array<AgentSkill>--><!--Device-AgentCard-skills: Array<AgentSkill>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -283,11 +283,11 @@ AgentCard的类型。<!--Del-->当 [agentConstant.AgentCardType](arkts-ability-a
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AgentCard-type?: agentConstant.AgentCardType--><!--Device-AgentCard-type?: agentConstant.AgentCardType-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -303,11 +303,10 @@ Agent的版本号。遵循语义化版本规范（如"1.0.0"），格式由提�
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AgentCard-version: string--><!--Device-AgentCard-version: string-End-->
-
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-

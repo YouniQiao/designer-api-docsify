@@ -1,8 +1,6 @@
 # PromiseRejectedResult
 
-**Since:** -1
-
-<!--Device-unnamed-interface PromiseRejectedResult--><!--Device-unnamed-interface PromiseRejectedResult-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,9 +15,7 @@ reason: any
 
 **Type:** any
 
-**Since:** -1
-
-<!--Device-PromiseRejectedResult-reason: any--><!--Device-PromiseRejectedResult-reason: any-End-->
+**ArkTS mode:** 
 
 ## status
 
@@ -29,7 +25,4 @@ status: "rejected"
 
 **Type:** "rejected"
 
-**Since:** -1
-
-<!--Device-PromiseRejectedResult-status: "rejected"--><!--Device-PromiseRejectedResult-status: "rejected"-End-->
-
+**ArkTS mode:** 

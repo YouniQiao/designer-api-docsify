@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [ListItemModifier](arkts-arkui-listitemmodifier-c.md) | Defines ListItem Modifier@extends ListItemAttribute @implements AttributeModifier&lt;ListItemAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ListItemModifier](arkts-arkui-listitemmodifier-c.md) |

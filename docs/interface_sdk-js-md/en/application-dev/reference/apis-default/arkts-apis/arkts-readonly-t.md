@@ -8,11 +8,8 @@ type Readonly<T> = {
 
 Make all properties in T readonly
 
-**Since:** -1
-
-<!--Device-unnamed-type Readonly<T> = {    readonly [P in keyof T]: T[P];}--><!--Device-unnamed-type Readonly<T> = {    readonly [P in keyof T]: T[P];}-End-->
+**ArkTS mode:** 
 
 **Property type:** {
     readonly [P in keyof T]: T[P];
 }
-

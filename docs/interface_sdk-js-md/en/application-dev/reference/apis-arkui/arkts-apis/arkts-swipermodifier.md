@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [SwiperModifier](arkts-arkui-swipermodifier-c.md) | Defines Swiper Modifier@extends SwiperAttribute @implements AttributeModifier&lt;SwiperAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SwiperModifier](arkts-arkui-swipermodifier-c.md) |

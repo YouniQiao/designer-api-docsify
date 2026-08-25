@@ -2,9 +2,9 @@
 
 Describes the system memory information, including the total memory, free memory, and available memory.@interface SystemMemInfo
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-hidebug-interface SystemMemInfo--><!--Device-hidebug-interface SystemMemInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -24,9 +24,9 @@ Available memory of the system, in KB. The value of this parameter is obtained b
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SystemMemInfo-availableMem: bigint--><!--Device-SystemMemInfo-availableMem: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -40,9 +40,9 @@ Free memory of the system, in KB. The value of this parameter is obtained by rea
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SystemMemInfo-freeMem: bigint--><!--Device-SystemMemInfo-freeMem: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -56,9 +56,8 @@ Total memory of the system, in KB. The value of this parameter is obtained by re
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SystemMemInfo-totalMem: bigint--><!--Device-SystemMemInfo-totalMem: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
-

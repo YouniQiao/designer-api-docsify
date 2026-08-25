@@ -16,25 +16,25 @@ function requestRight(deviceName: string): Promise<boolean>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [requestRight](arkts-basicservices-usbmanager-requestright-f.md)
-
-<!--Device-usb-function requestRight(deviceName: string): Promise<boolean>--><!--Device-usb-function requestRight(deviceName: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| deviceName | string | 是 | 设备名称。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| deviceName | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回临时权限的申请结果。返回true表示临时权限申请成功；返回false则表示临时权限申请失败。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **示例**
 
@@ -44,4 +44,3 @@ usb.requestRight(devicesName).then((ret) => {
   console.info(`requestRight = ${ret}`);
 });
 ```
-

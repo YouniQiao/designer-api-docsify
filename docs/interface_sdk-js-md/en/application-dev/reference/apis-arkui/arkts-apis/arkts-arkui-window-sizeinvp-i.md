@@ -4,7 +4,7 @@ Describes the window size, in vp.
 
 **Since:** 23
 
-<!--Device-window-interface SizeInVP--><!--Device-window-interface SizeInVP-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -22,13 +22,13 @@ height: double
 
 Window height, in vp. The value is a floating-point number.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-SizeInVP-height: double--><!--Device-SizeInVP-height: double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -40,13 +40,12 @@ width: double
 
 Window width, in vp. The value is a floating-point number.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SizeInVP-width: double--><!--Device-SizeInVP-width: double-End-->
-
 **System capability:** SystemCapability.Window.SessionManager
-

@@ -4,7 +4,7 @@ Navigation分割线颜色及上下边距。
 
 **起始版本：** 23
 
-<!--Device-unnamed-declare interface NavigationDividerStyle--><!--Device-unnamed-declare interface NavigationDividerStyle-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ color?: ResourceColor
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavigationDividerStyle-color?: ResourceColor--><!--Device-NavigationDividerStyle-color?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ endMargin?: Length
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NavigationDividerStyle-endMargin?: Length--><!--Device-NavigationDividerStyle-endMargin?: Length-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,11 +65,10 @@ startMargin?: Length
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
-<!--Device-NavigationDividerStyle-startMargin?: Length--><!--Device-NavigationDividerStyle-startMargin?: Length-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

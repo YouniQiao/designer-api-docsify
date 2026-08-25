@@ -2,9 +2,9 @@
 
 鼠标注入描述信息。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-inputEventClient-interface MouseEventData--><!--Device-inputEventClient-interface MouseEventData-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -26,9 +26,9 @@ mouseEvent: MouseEvent
 
 **类型：** [MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-MouseEventData-mouseEvent: MouseEvent--><!--Device-MouseEventData-mouseEvent: MouseEvent-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -44,11 +44,10 @@ useGlobalCoordinate? : boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-MouseEventData-useGlobalCoordinate? : boolean--><!--Device-MouseEventData-useGlobalCoordinate? : boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **系统接口：** 此接口为系统接口。
-

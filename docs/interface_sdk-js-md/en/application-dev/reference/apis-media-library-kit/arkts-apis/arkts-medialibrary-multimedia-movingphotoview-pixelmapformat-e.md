@@ -4,7 +4,7 @@ Enumerates pixel map formats.@enum { int }
 
 **Since:** 14
 
-<!--Device-unnamed-export declare enum PixelMapFormat--><!--Device-unnamed-export declare enum PixelMapFormat-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -20,7 +20,7 @@ Indicates that the storage order is to store Y first and then U V alternately ea
 
 **Since:** 14
 
-<!--Device-PixelMapFormat-YCBCR_P010 = 4--><!--Device-PixelMapFormat-YCBCR_P010 = 4-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,7 +34,7 @@ Indicates that each pixel is stored on 32 bits. Each pixel contains 4 components
 
 **Since:** 14
 
-<!--Device-PixelMapFormat-RGBA_1010102 = 3--><!--Device-PixelMapFormat-RGBA_1010102 = 3-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -48,7 +48,6 @@ Indicates that the storage order is to store Y first and then V U alternately ea
 
 **Since:** 14
 
-<!--Device-PixelMapFormat-YCRCB_P010 = 5--><!--Device-PixelMapFormat-YCRCB_P010 = 5-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

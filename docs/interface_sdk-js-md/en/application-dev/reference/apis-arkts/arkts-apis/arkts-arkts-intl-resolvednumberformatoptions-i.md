@@ -4,9 +4,7 @@ Resolved number format options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-Intl-export interface ResolvedNumberFormatOptions--><!--Device-Intl-export interface ResolvedNumberFormatOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,11 +25,9 @@ Compact display option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedNumberFormatOptions-compactDisplay?: 'short' | 'long'--><!--Device-ResolvedNumberFormatOptions-compactDisplay?: 'short' | 'long'-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -47,11 +43,9 @@ Currency option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedNumberFormatOptions-currency?: string--><!--Device-ResolvedNumberFormatOptions-currency?: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -67,11 +61,9 @@ Currency display option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedNumberFormatOptions-currencyDisplay?: 'code' | 'symbol' | 'narrowSymbol' | 'name'--><!--Device-ResolvedNumberFormatOptions-currencyDisplay?: 'code' | 'symbol' | 'narrowSymbol' | 'name'-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -87,11 +79,9 @@ Currency sign option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedNumberFormatOptions-currencySign?: 'standard' | 'accounting'--><!--Device-ResolvedNumberFormatOptions-currencySign?: 'standard' | 'accounting'-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -107,11 +97,9 @@ Locale identifier.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedNumberFormatOptions-locale: Intl.BCP47LanguageTag--><!--Device-ResolvedNumberFormatOptions-locale: Intl.BCP47LanguageTag-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -127,11 +115,9 @@ Maximum fraction digits option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedNumberFormatOptions-maximumFractionDigits: double--><!--Device-ResolvedNumberFormatOptions-maximumFractionDigits: double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -147,11 +133,9 @@ Maximum significant digits option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedNumberFormatOptions-maximumSignificantDigits?: double--><!--Device-ResolvedNumberFormatOptions-maximumSignificantDigits?: double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -167,11 +151,9 @@ Minimum fraction digits option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedNumberFormatOptions-minimumFractionDigits: double--><!--Device-ResolvedNumberFormatOptions-minimumFractionDigits: double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -187,11 +169,9 @@ Minimum integer digits option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedNumberFormatOptions-minimumIntegerDigits: double--><!--Device-ResolvedNumberFormatOptions-minimumIntegerDigits: double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -207,11 +187,9 @@ Minimum significant digits option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedNumberFormatOptions-minimumSignificantDigits?: double--><!--Device-ResolvedNumberFormatOptions-minimumSignificantDigits?: double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -227,11 +205,9 @@ Notation option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedNumberFormatOptions-notation?: 'standard' | 'scientific' | 'engineering' | 'compact'--><!--Device-ResolvedNumberFormatOptions-notation?: 'standard' | 'scientific' | 'engineering' | 'compact'-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -247,11 +223,9 @@ Numbering system option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedNumberFormatOptions-numberingSystem: string--><!--Device-ResolvedNumberFormatOptions-numberingSystem: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -267,11 +241,9 @@ Sign display option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedNumberFormatOptions-signDisplay?: 'auto' | 'never' | 'always' | 'exceptZero'--><!--Device-ResolvedNumberFormatOptions-signDisplay?: 'auto' | 'never' | 'always' | 'exceptZero'-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -287,11 +259,9 @@ Style option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedNumberFormatOptions-style: 'decimal' | 'percent' | 'currency' | 'unit'--><!--Device-ResolvedNumberFormatOptions-style: 'decimal' | 'percent' | 'currency' | 'unit'-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -307,11 +277,9 @@ Unit option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedNumberFormatOptions-unit?: string--><!--Device-ResolvedNumberFormatOptions-unit?: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -327,11 +295,9 @@ Unit display option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedNumberFormatOptions-unitDisplay?: 'short' | 'long' | 'narrow'--><!--Device-ResolvedNumberFormatOptions-unitDisplay?: 'short' | 'long' | 'narrow'-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -347,11 +313,8 @@ Use grouping option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ResolvedNumberFormatOptions-useGrouping: boolean--><!--Device-ResolvedNumberFormatOptions-useGrouping: boolean-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

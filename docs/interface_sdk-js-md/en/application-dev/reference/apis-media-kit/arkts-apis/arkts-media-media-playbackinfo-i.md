@@ -4,7 +4,7 @@ Provides player statistic info.
 
 **Since:** 12
 
-<!--Device-media-interface PlaybackInfo--><!--Device-media-interface PlaybackInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -14,3 +14,18 @@ Provides player statistic info.
 import { media } from '@kit.MediaKit';
 ```
 
+## [key:string]
+
+```TypeScript
+[key:string]: Object
+```
+
+key:value pair, key see @PlaybackInfoKey.
+
+**Type:** Object
+
+**Since:** 12
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
+**System capability:** SystemCapability.Multimedia.Media.Core

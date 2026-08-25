@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-call-export enum CCallState--><!--Device-call-export enum CCallState-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -18,7 +18,7 @@ CCALL_STATE_UNKNOWN = -1
 
 **起始版本：** 23
 
-<!--Device-CCallState-CCALL_STATE_UNKNOWN = -1--><!--Device-CCallState-CCALL_STATE_UNKNOWN = -1-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -32,7 +32,7 @@ CCALL_STATE_ACTIVE = 0
 
 **起始版本：** 23
 
-<!--Device-CCallState-CCALL_STATE_ACTIVE = 0--><!--Device-CCallState-CCALL_STATE_ACTIVE = 0-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -46,7 +46,7 @@ CCALL_STATE_HOLDING = 1
 
 **起始版本：** 23
 
-<!--Device-CCallState-CCALL_STATE_HOLDING = 1--><!--Device-CCallState-CCALL_STATE_HOLDING = 1-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -60,7 +60,7 @@ CCALL_STATE_DIALING = 2
 
 **起始版本：** 23
 
-<!--Device-CCallState-CCALL_STATE_DIALING = 2--><!--Device-CCallState-CCALL_STATE_DIALING = 2-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -74,7 +74,7 @@ CCALL_STATE_ALERTING = 3
 
 **起始版本：** 23
 
-<!--Device-CCallState-CCALL_STATE_ALERTING = 3--><!--Device-CCallState-CCALL_STATE_ALERTING = 3-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -88,7 +88,7 @@ CCALL_STATE_INCOMING = 4
 
 **起始版本：** 23
 
-<!--Device-CCallState-CCALL_STATE_INCOMING = 4--><!--Device-CCallState-CCALL_STATE_INCOMING = 4-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -102,7 +102,7 @@ CCALL_STATE_WAITING = 5
 
 **起始版本：** 23
 
-<!--Device-CCallState-CCALL_STATE_WAITING = 5--><!--Device-CCallState-CCALL_STATE_WAITING = 5-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -116,7 +116,7 @@ CCALL_STATE_DISCONNECTED = 6
 
 **起始版本：** 23
 
-<!--Device-CCallState-CCALL_STATE_DISCONNECTED = 6--><!--Device-CCallState-CCALL_STATE_DISCONNECTED = 6-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -130,7 +130,7 @@ CCALL_STATE_DISCONNECTING = 7
 
 **起始版本：** 23
 
-<!--Device-CCallState-CCALL_STATE_DISCONNECTING = 7--><!--Device-CCallState-CCALL_STATE_DISCONNECTING = 7-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -144,7 +144,7 @@ CCALL_STATE_IDLE = 8
 
 **起始版本：** 23
 
-<!--Device-CCallState-CCALL_STATE_IDLE = 8--><!--Device-CCallState-CCALL_STATE_IDLE = 8-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -158,7 +158,6 @@ CCALL_STATE_ANSWERED = 9
 
 **起始版本：** 23
 
-<!--Device-CCallState-CCALL_STATE_ANSWERED = 9--><!--Device-CCallState-CCALL_STATE_ANSWERED = 9-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
-

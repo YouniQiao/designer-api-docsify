@@ -6,7 +6,7 @@
 
 **起始版本：** 6
 
-<!--Device-unnamed-export interface BusinessError--><!--Device-unnamed-export interface BusinessError-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Base
 
@@ -16,6 +16,85 @@
 import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.BasicServicesKit';
 import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } from '@kit.BasicServicesKit';
 ```
+
+## constructor
+
+```TypeScript
+constructor()
+```
+
+BusinessError的构造函数。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.Base
+
+## constructor
+
+```TypeScript
+constructor(code: int, error: Error)
+```
+
+BusinessError的构造函数。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.Base
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [code](#code) | int | 是 |
+| error | Error | 是 |
+
+## constructor
+
+```TypeScript
+constructor(code: int, data: T, error: Error)
+```
+
+BusinessError的构造函数。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.Base
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [code](#code) | int | 是 |
+| [data](#data) | T | 是 |
+| error | Error | 是 |
+
+## constructor
+
+```TypeScript
+constructor(code: int, message: string, data?: T)
+```
+
+BusinessError的构造函数。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.Base
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [code](#code) | int | 是 |
+| message | string | 是 |
+| [data](#data) | T | 否 |
 
 ## code
 
@@ -29,11 +108,11 @@ code: number
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-BusinessError-code: number--><!--Device-BusinessError-code: number-End-->
 
 **系统能力：** SystemCapability.Base
 
@@ -49,11 +128,10 @@ data?: T
 
 **起始版本：** 9
 
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-BusinessError-data?: T--><!--Device-BusinessError-data?: T-End-->
-
 **系统能力：** SystemCapability.Base
-

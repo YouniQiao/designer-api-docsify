@@ -4,7 +4,7 @@ LocalSocket客户端与服务端通信时接收的数据。
 
 **起始版本：** 11
 
-<!--Device-socket-export interface LocalSocketMessageInfo--><!--Device-socket-export interface LocalSocketMessageInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -26,7 +26,7 @@ address: string
 
 **起始版本：** 11
 
-<!--Device-LocalSocketMessageInfo-address: string--><!--Device-LocalSocketMessageInfo-address: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -42,23 +42,22 @@ message: ArrayBuffer
 
 **起始版本：** 11
 
-<!--Device-LocalSocketMessageInfo-message: ArrayBuffer--><!--Device-LocalSocketMessageInfo-message: ArrayBuffer-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## size
 
 ```TypeScript
-size: int
+size: number
 ```
 
 数据长度。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 11
 
-<!--Device-LocalSocketMessageInfo-size: int--><!--Device-LocalSocketMessageInfo-size: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
-

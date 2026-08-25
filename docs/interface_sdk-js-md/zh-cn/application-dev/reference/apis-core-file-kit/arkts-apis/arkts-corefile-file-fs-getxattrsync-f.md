@@ -18,35 +18,35 @@ declare function getxattrSync(path: string, key: string): string
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare function getxattrSync(path: string, key: string): string--><!--Device-unnamed-declare function getxattrSync(path: string, key: string): string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 文件或目录的应用沙箱路径。 |
-| key | string | 是 | 扩展属性的key。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| path | string | 是 |
+| key | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回扩展属性的value。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
-| 13900002 | No such file or directory |
-| 13900007 | Arg list too long |
-| 13900012 | Permission denied |
-| 13900031 | Function not implemented |
-| 13900037 | No data available |
-| 13900038 | Value too large for defined data type |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 13900002 |
+| 13900007 |
+| 13900012 |
+| 13900031 |
+| 13900037 |
+| 13900038 |
+| 13900042 |
 
 **示例**
 
@@ -82,4 +82,3 @@ try {
   console.error(`Failed to get extended attribute. Code: ${err.code}, message: ${err.message}`);
 }
 ```
-

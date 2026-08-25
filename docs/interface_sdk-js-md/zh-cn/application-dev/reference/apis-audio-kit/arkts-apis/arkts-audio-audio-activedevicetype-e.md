@@ -8,11 +8,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md)
-
-<!--Device-audio-enum ActiveDeviceType--><!--Device-audio-enum ActiveDeviceType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -26,11 +26,11 @@ SPEAKER = 2
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** SPEAKER
-
-<!--Device-ActiveDeviceType-SPEAKER = 2--><!--Device-ActiveDeviceType-SPEAKER = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -44,11 +44,10 @@ BLUETOOTH_SCO = 7
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** BLUETOOTH_SCO
 
-<!--Device-ActiveDeviceType-BLUETOOTH_SCO = 7--><!--Device-ActiveDeviceType-BLUETOOTH_SCO = 7-End-->
-
 **系统能力：** SystemCapability.Multimedia.Audio.Device
-

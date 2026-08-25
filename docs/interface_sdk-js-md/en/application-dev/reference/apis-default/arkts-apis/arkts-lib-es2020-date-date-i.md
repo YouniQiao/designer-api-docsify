@@ -1,8 +1,6 @@
 # Date
 
-**Since:** -1
-
-<!--Device-unnamed-interface Date--><!--Device-unnamed-interface Date-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,21 +15,19 @@ toLocaleDateString(locales?: Intl.LocalesArgument, options?: Intl.DateTimeFormat
 
 Converts a date to a string by using the current or specified locale.
 
-**Since:** -1
-
-<!--Device-Date-toLocaleDateString(locales?: Intl.LocalesArgument, options?: Intl.DateTimeFormatOptions): string--><!--Device-Date-toLocaleDateString(locales?: Intl.LocalesArgument, options?: Intl.DateTimeFormatOptions): string-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | No |  |
-| options | Intl.DateTimeFormatOptions | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | No |
+| options | Intl.DateTimeFormatOptions | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## toLocaleString
 
 ```TypeScript
@@ -40,21 +36,19 @@ toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.DateTimeFormatOpti
 
 Converts a date and time to a string by using the current or specified locale.
 
-**Since:** -1
-
-<!--Device-Date-toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.DateTimeFormatOptions): string--><!--Device-Date-toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.DateTimeFormatOptions): string-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | No |  |
-| options | Intl.DateTimeFormatOptions | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | No |
+| options | Intl.DateTimeFormatOptions | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## toLocaleTimeString
 
 ```TypeScript
@@ -63,18 +57,16 @@ toLocaleTimeString(locales?: Intl.LocalesArgument, options?: Intl.DateTimeFormat
 
 Converts a time to a string by using the current or specified locale.
 
-**Since:** -1
-
-<!--Device-Date-toLocaleTimeString(locales?: Intl.LocalesArgument, options?: Intl.DateTimeFormatOptions): string--><!--Device-Date-toLocaleTimeString(locales?: Intl.LocalesArgument, options?: Intl.DateTimeFormatOptions): string-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | No |  |
-| options | Intl.DateTimeFormatOptions | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | No |
+| options | Intl.DateTimeFormatOptions | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

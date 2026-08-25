@@ -6,7 +6,7 @@ CommonShapeMethod@extends CommonMethod&lt;T&gt;
 
 **起始版本：** 11
 
-<!--Device-unnamed-declare class CommonShapeMethod--><!--Device-unnamed-declare class CommonShapeMethod-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,9 +25,9 @@ constructor.
 
 **起始版本：** 9
 
-**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-CommonShapeMethod-constructor()--><!--Device-CommonShapeMethod-constructor()-End-->
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,4 +45,3 @@ function myBuilder(value: string, size: number) {
 // 使用WrappedBuilder封装myBuilder
 let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(myBuilder);
 ```
-

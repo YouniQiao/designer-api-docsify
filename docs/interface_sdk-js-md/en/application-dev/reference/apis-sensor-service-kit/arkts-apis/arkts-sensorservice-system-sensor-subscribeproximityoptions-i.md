@@ -4,11 +4,11 @@ Defines the type of data to return for a subscription to data changes of the pro
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [PROXIMITY](arkts-sensorservice-sensor-sensorid-e.md#proximity)
-
-<!--Device-unnamed-export interface SubscribeProximityOptions--><!--Device-unnamed-export interface SubscribeProximityOptions-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -26,19 +26,24 @@ fail?: (data: string, code: number) => void
 
 Callback invoked when an API call fails.
 
-**Type:** (data: string, code: number) =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+**Substitutes:** [on](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange)
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-SubscribeProximityOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeProximityOptions-fail?: (data: string, code: number) => void-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | string | Yes |
+| code | number | Yes |
 
 ## success
 
@@ -48,17 +53,20 @@ success: (data: ProximityResponse) => void
 
 Defines a **ProximityResponse** object.
 
-**Type:** (data: ProximityResponse) =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+**Substitutes:** [on](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange)
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-SubscribeProximityOptions-success: (data: ProximityResponse) => void--><!--Device-SubscribeProximityOptions-success: (data: ProximityResponse) => void-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | [ProximityResponse](arkts-sensorservice-system-sensor-proximityresponse-i.md) | Yes |

@@ -16,16 +16,16 @@ function onEventData(eventId: string, callback: Callback<EventData>): void
 
 **起始版本：** 23
 
-<!--Device-emitter-function onEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-emitter-function onEventData(eventId: string, callback: Callback<EventData>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Emitter
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| eventId | string | 是 | 持续订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| eventId | string | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 |
 
 **示例**
 
@@ -51,4 +51,3 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 
 emitter1.onEventData(`eventId`, callback);
 ```
-

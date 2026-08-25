@@ -18,19 +18,19 @@ Matrix的拷贝函数，可以拷贝一份当前的矩阵对象。
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [copy](arkts-arkui-matrix4-matrix4transit-i.md#copy)
-
-<!--Device-matrix4-function copy(): Matrix4Transit--><!--Device-matrix4-function copy(): Matrix4Transit-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Matrix4Transit | 当前矩阵的拷贝对象。 |
+| 类型 |
+| --- |
+| [Matrix4Transit](arkts-arkui-matrix4transit-t.md) |
 
 **示例**
 
@@ -96,4 +96,3 @@ struct Test {
   }
 }
 ```
-

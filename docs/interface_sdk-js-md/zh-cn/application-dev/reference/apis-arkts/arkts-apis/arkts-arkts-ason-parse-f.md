@@ -16,23 +16,22 @@ function parse(text: string, reviver?: Transformer, options?: ParseOptions): ISe
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-ASON-function parse(text: string, reviver?: Transformer, options?: ParseOptions): ISendable | null--><!--Device-ASON-function parse(text: string, reviver?: Transformer, options?: ParseOptions): ISendable | null-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| text | string | 是 | 有效的JSON字符串。 |
-| reviver | Transformer | 否 | 转换函数，传入该参数，可以用来修改解析生成的原始值。默认值是undefined。该参数目前仅支持传入undefined值，其他值会被忽略或视为无效。 |
-| options | ParseOptions | 否 | 解析的配置，传入该参数，可以用来控制解析生成的结果类型。默认值是undefined。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| text | string | 是 |
+| reviver | [Transformer](arkts-arkts-ason-transformer-t.md) | 否 |
+| options | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ISendable \| null | 返回ISendable数据或null。入参为null时，返回null。 |
-
+| 类型 |
+| --- |
+| ISendable \| null |

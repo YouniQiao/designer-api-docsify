@@ -2,9 +2,9 @@
 
 Describes the illumination information.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-camera-interface LuminationInfo--><!--Device-camera-interface LuminationInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -24,13 +24,12 @@ readonly lumination?: double
 
 Illumination. The value range is [0, 1].
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-LuminationInfo-readonly lumination?: double--><!--Device-LuminationInfo-readonly lumination?: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

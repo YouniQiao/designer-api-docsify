@@ -9,7 +9,6 @@
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [DataView](arkts-arkts-dataview-c.md) | DataView类。 |
-
+| 名称 |
+| --- |
+| [DataView](arkts-arkts-dataview-c.md) |

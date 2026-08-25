@@ -1,16 +1,14 @@
-# Aperture (System API)
+# Aperture
 
-Provides the APIs for aperture settings. It inherits from [ApertureQuery](arkts-camera-camera-aperturequery-i-sys.md).
+Provides the APIs for aperture settings. It inherits from [ApertureQuery](arkts-camera-camera-aperturequery-i.md).
 
-**Inheritance/Implementation:** Aperture extends [ApertureQuery](arkts-camera-camera-aperturequery-i-sys.md)
+**Inheritance/Implementation:** Aperture extends [ApertureQuery](arkts-camera-camera-aperturequery-i.md)
 
-**Since:** 23
+**Since:** 24
 
-<!--Device-camera-interface Aperture--><!--Device-camera-interface Aperture-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -18,58 +16,23 @@ Provides the APIs for aperture settings. It inherits from [ApertureQuery](arkts-
 import { camera } from '@kit.CameraKit';
 ```
 
-## getPhysicalAperture
-
-```TypeScript
-getPhysicalAperture(): double
-```
-
-Gets current physical aperture value.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-Aperture-getPhysicalAperture(): double--><!--Device-Aperture-getPhysicalAperture(): double-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| double | The current physical aperture value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 11 - 23 |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal.<br>**Applicable version:** 24 and later |
-
-**Examples**
-
-```TypeScript
-function getPhysicalAperture(session: camera.PortraitPhotoSession): number {
-  let physicalAperture: number = session.getPhysicalAperture();
-  return physicalAperture;
-}
-```
-
 ## getVirtualAperture
 
+ArkTS-Dyn:
+```TypeScript
+getVirtualAperture(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getVirtualAperture(): double
 ```
 
 Obtains the virtual aperture in use.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Aperture-getVirtualAperture(): double--><!--Device-Aperture-getVirtualAperture(): double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -77,16 +40,16 @@ Obtains the virtual aperture in use.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | Virtual aperture. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 **Examples**
 
@@ -97,57 +60,23 @@ function getVirtualAperture(session: camera.PortraitPhotoSession): number {
 }
 ```
 
-## setPhysicalAperture
-
-```TypeScript
-setPhysicalAperture(aperture: double): void
-```
-
-Sets physical aperture value.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-Aperture-setPhysicalAperture(aperture: double): void--><!--Device-Aperture-setPhysicalAperture(aperture: double): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| aperture | double | Yes | physical aperture value. The supported physical aperture range can be obtained by calling [getSupportedPhysicalApertures](arkts-camera-camera-aperturequery-i-sys.md#getsupportedphysicalapertures) |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 11 - 23 |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal.<br>**Applicable version:** 24 and later |
-
-**Examples**
-
-```TypeScript
-function setPhysicalAperture(session: camera.PortraitPhotoSession, physicalAperture: number): void {
-  session.setPhysicalAperture(physicalAperture);
-}
-```
-
 ## setVirtualAperture
 
+ArkTS-Dyn:
+```TypeScript
+setVirtualAperture(aperture: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setVirtualAperture(aperture: double): void
 ```
 
 Sets a virtual aperture. Before the setting, call [getSupportedVirtualApertures](arkts-camera-camera-aperturequery-i-sys.md#getsupportedvirtualapertures) to obtain the supported virtual apertures.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Aperture-setVirtualAperture(aperture: double): void--><!--Device-Aperture-setVirtualAperture(aperture: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -155,16 +84,16 @@ Sets a virtual aperture. Before the setting, call [getSupportedVirtualApertures]
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| aperture | double | Yes | virtual aperture value |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [aperture](arkts-camera-camera-apertureinfo-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 **Examples**
 
@@ -173,4 +102,3 @@ function setVirtualAperture(session: camera.PortraitPhotoSession, virtualApertur
   session.setVirtualAperture(virtualAperture);
 }
 ```
-

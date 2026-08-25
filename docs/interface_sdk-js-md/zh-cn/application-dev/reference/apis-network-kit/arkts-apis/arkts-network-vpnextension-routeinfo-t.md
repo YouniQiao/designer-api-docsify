@@ -8,9 +8,8 @@ export type RouteInfo = connection.RouteInfo
 
 **起始版本：** 11
 
-<!--Device-vpnExtension-export type RouteInfo = connection.RouteInfo--><!--Device-vpnExtension-export type RouteInfo = connection.RouteInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **属性类型：** connection.RouteInfo
-

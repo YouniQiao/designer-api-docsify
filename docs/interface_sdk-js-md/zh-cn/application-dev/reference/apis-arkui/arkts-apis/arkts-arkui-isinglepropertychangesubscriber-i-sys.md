@@ -6,7 +6,7 @@
 
 **起始版本：** 7
 
-<!--Device-unnamed-interface ISinglePropertyChangeSubscriber--><!--Device-unnamed-interface ISinglePropertyChangeSubscriber-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,7 +27,7 @@ hasChanged(newValue: T): void
 
 **起始版本：** 7
 
-<!--Device-ISinglePropertyChangeSubscriber-hasChanged(newValue: T): void--><!--Device-ISinglePropertyChangeSubscriber-hasChanged(newValue: T): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,7 +35,6 @@ hasChanged(newValue: T): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| newValue | T | 是 | 更改后的新值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| newValue | T | 是 |

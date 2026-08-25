@@ -4,7 +4,7 @@ Enumerates the types of user authentication supported by an asset.
 
 **Since:** 11
 
-<!--Device-asset-enum AuthType--><!--Device-asset-enum AuthType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -18,9 +18,9 @@ No user authentication is required before the asset is accessed.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-AuthType-NONE = 0x00--><!--Device-AuthType-NONE = 0x00-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -34,9 +34,8 @@ The asset can be accessed if any user authentication (such as PIN, facial, or fi
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-AuthType-ANY = 0xFF--><!--Device-AuthType-ANY = 0xFF-End-->
-
 **System capability:** SystemCapability.Security.Asset
-

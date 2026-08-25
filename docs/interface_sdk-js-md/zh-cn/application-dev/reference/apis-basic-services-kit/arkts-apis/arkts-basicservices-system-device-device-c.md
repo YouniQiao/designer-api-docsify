@@ -4,9 +4,9 @@ getInfo interface
 
 **起始版本：** 3
 
-**废弃版本：** 6
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-unnamed-export default class Device--><!--Device-unnamed-export default class Device-End-->
+**废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -29,21 +29,21 @@ static getInfo(options?: GetDeviceOptions): void
 > 在首页的onShow生命周期之前不建议调用Device.getInfo接口。
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite  
 **返回值：**  
-| 类型 | 说明 | | -------- | -------- | | void | 无返回值，设备信息通过回调函数返回。 |
+| 类型 | 说明 | | -------- | -------- | | void |
 
 **起始版本：** 3
 
-**废弃版本：** 6
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-Device-static getInfo(options?: GetDeviceOptions): void--><!--Device-Device-static getInfo(options?: GetDeviceOptions): void-End-->
+**废弃版本：** 6
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [GetDeviceOptions](arkts-basicservices-system-device-getdeviceoptions-i.md) | 否 | 定义设备信息获取的参数选项。省略时使用默认配置获取设备基本信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [GetDeviceOptions](arkts-basicservices-system-device-getdeviceoptions-i.md) | 否 |
 
 **示例**
 
@@ -149,4 +149,3 @@ export default {
   }
 }
 ```
-

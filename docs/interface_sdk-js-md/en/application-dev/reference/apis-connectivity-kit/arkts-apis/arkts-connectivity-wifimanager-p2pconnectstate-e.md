@@ -2,9 +2,9 @@
 
 P2P connection status.@enum { int }
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-wifiManager-enum P2pConnectState--><!--Device-wifiManager-enum P2pConnectState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -16,9 +16,9 @@ DISCONNECTED = 0
 
 p2p is disconnected
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-P2pConnectState-DISCONNECTED = 0--><!--Device-P2pConnectState-DISCONNECTED = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -30,9 +30,8 @@ CONNECTED = 1
 
 p2p is connected
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-P2pConnectState-CONNECTED = 1--><!--Device-P2pConnectState-CONNECTED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
-

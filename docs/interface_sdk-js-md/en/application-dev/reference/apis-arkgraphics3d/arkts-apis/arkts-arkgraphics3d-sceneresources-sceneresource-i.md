@@ -2,9 +2,9 @@
 
 Describes a resource in a scene.@interface SceneResource
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface SceneResource--><!--Device-unnamed-export interface SceneResource-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -16,9 +16,9 @@ destroy(): void
 
 Destroys the scene resource and releases all associated resources or references. Once released, the resource can no longer be used or accessed.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SceneResource-destroy(): void--><!--Device-SceneResource-destroy(): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -56,9 +56,9 @@ Name. There is no special format requirement.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SceneResource-name: string--><!--Device-SceneResource-name: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -72,9 +72,9 @@ Scene resource type. The default value is undefined.
 
 **Type:** [SceneResourceType](arkts-arkgraphics3d-sceneresources-sceneresourcetype-e.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SceneResource-readonly resourceType: SceneResourceType--><!--Device-SceneResource-readonly resourceType: SceneResourceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -88,9 +88,8 @@ Resource to load. The default value is undefined.
 
 **Type:** ResourceStr
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SceneResource-readonly uri?: ResourceStr--><!--Device-SceneResource-readonly uri?: ResourceStr-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

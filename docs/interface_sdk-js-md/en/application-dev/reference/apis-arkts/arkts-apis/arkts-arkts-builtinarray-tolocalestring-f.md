@@ -15,27 +15,25 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<boolean>, locales: Object, options: Object): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<boolean>, locales: Object, options: Object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;boolean&gt; | Yes | The array to operate `toLocaleString` on. |
-| locales | Object | Yes | A string with a BCP 47 language tag, or an array of such strings. |
-| options | Object | Yes | An object with configuration properties. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;boolean & gt; | Yes |
+| locales | Object | Yes |
+| options | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -48,26 +46,24 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<boolean>, locales: Object): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<boolean>, locales: Object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;boolean&gt; | Yes | The array to operate `toLocaleString` on. |
-| locales | Object | Yes | A string with a BCP 47 language tag, or an array of such strings. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;boolean & gt; | Yes |
+| locales | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -80,25 +76,23 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<boolean>): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<boolean>): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;boolean&gt; | Yes | The array to operate `toLocaleString` on. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;boolean & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -111,27 +105,25 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<byte>, locales: Object, options: Object): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<byte>, locales: Object, options: Object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;byte&gt; | Yes | The array to operate `toLocaleString` on. |
-| locales | Object | Yes | A string with a BCP 47 language tag, or an array of such strings. |
-| options | Object | Yes | An object with configuration properties. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;byte & gt; | Yes |
+| locales | Object | Yes |
+| options | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -144,26 +136,24 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<byte>, locales: Object): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<byte>, locales: Object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;byte&gt; | Yes | The array to operate `toLocaleString` on. |
-| locales | Object | Yes | A string with a BCP 47 language tag, or an array of such strings. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;byte & gt; | Yes |
+| locales | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -176,25 +166,23 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<byte>): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<byte>): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;byte&gt; | Yes | The array to operate `toLocaleString` on. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;byte & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -207,27 +195,25 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<short>, locales: Object, options: Object): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<short>, locales: Object, options: Object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;short&gt; | Yes | The array to operate `toLocaleString` on. |
-| locales | Object | Yes | A string with a BCP 47 language tag, or an array of such strings. |
-| options | Object | Yes | An object with configuration properties. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;short & gt; | Yes |
+| locales | Object | Yes |
+| options | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -240,26 +226,24 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<short>, locales: Object): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<short>, locales: Object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;short&gt; | Yes | The array to operate `toLocaleString` on. |
-| locales | Object | Yes | A string with a BCP 47 language tag, or an array of such strings. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;short & gt; | Yes |
+| locales | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -272,25 +256,23 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<short>): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<short>): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;short&gt; | Yes | The array to operate `toLocaleString` on. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;short & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -303,27 +285,25 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<int>, locales: Object, options: Object): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<int>, locales: Object, options: Object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;int&gt; | Yes | The array to operate `toLocaleString` on. |
-| locales | Object | Yes | A string with a BCP 47 language tag, or an array of such strings. |
-| options | Object | Yes | An object with configuration properties. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;int & gt; | Yes |
+| locales | Object | Yes |
+| options | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -336,26 +316,24 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<int>, locales: Object): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<int>, locales: Object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;int&gt; | Yes | The array to operate `toLocaleString` on. |
-| locales | Object | Yes | A string with a BCP 47 language tag, or an array of such strings. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;int & gt; | Yes |
+| locales | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -368,25 +346,23 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<int>): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<int>): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;int&gt; | Yes | The array to operate `toLocaleString` on. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;int & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -399,27 +375,25 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<long>, locales: Object, options: Object): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<long>, locales: Object, options: Object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;long&gt; | Yes | The array to operate `toLocaleString` on. |
-| locales | Object | Yes | A string with a BCP 47 language tag, or an array of such strings. |
-| options | Object | Yes | An object with configuration properties. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;long & gt; | Yes |
+| locales | Object | Yes |
+| options | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -432,26 +406,24 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<long>, locales: Object): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<long>, locales: Object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;long&gt; | Yes | The array to operate `toLocaleString` on. |
-| locales | Object | Yes | A string with a BCP 47 language tag, or an array of such strings. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;long & gt; | Yes |
+| locales | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -464,25 +436,23 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<long>): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<long>): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;long&gt; | Yes | The array to operate `toLocaleString` on. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;long & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -495,27 +465,25 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<float>, locales: Object, options: Object): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<float>, locales: Object, options: Object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;float&gt; | Yes | The array to operate `toLocaleString` on. |
-| locales | Object | Yes | A string with a BCP 47 language tag, or an array of such strings. |
-| options | Object | Yes | An object with configuration properties. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;float & gt; | Yes |
+| locales | Object | Yes |
+| options | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -528,26 +496,24 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<float>, locales: Object): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<float>, locales: Object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;float&gt; | Yes | The array to operate `toLocaleString` on. |
-| locales | Object | Yes | A string with a BCP 47 language tag, or an array of such strings. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;float & gt; | Yes |
+| locales | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -560,25 +526,23 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<float>): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<float>): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;float&gt; | Yes | The array to operate `toLocaleString` on. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;float & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -591,27 +555,25 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<double>, locales: Object, options: Object): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<double>, locales: Object, options: Object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;double&gt; | Yes | The array to operate `toLocaleString` on. |
-| locales | Object | Yes | A string with a BCP 47 language tag, or an array of such strings. |
-| options | Object | Yes | An object with configuration properties. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;double & gt; | Yes |
+| locales | Object | Yes |
+| options | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -624,26 +586,24 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<double>, locales: Object): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<double>, locales: Object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;double&gt; | Yes | The array to operate `toLocaleString` on. |
-| locales | Object | Yes | A string with a BCP 47 language tag, or an array of such strings. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;double & gt; | Yes |
+| locales | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -656,25 +616,23 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<double>): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<double>): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;double&gt; | Yes | The array to operate `toLocaleString` on. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;double & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -687,27 +645,25 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<char>, locales: Object, options: Object): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<char>, locales: Object, options: Object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;char&gt; | Yes | The array to operate `toLocaleString` on. |
-| locales | Object | Yes | A string with a BCP 47 language tag, or an array of such strings. |
-| options | Object | Yes | An object with configuration properties. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;char & gt; | Yes |
+| locales | Object | Yes |
+| options | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -720,26 +676,24 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<char>, locales: Object): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<char>, locales: Object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;char&gt; | Yes | The array to operate `toLocaleString` on. |
-| locales | Object | Yes | A string with a BCP 47 language tag, or an array of such strings. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;char & gt; | Yes |
+| locales | Object | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 
 ## toLocaleString
@@ -752,23 +706,20 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function toLocaleString(self: FixedArray<char>): string--><!--Device-unnamed-export function toLocaleString(self: FixedArray<char>): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;char&gt; | Yes | The array to operate `toLocaleString` on. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;char & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |

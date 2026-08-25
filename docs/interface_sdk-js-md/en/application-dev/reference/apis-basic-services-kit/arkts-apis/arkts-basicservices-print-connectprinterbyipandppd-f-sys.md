@@ -16,11 +16,11 @@ Connect a printer by the printer IP and ppd.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-print-function connectPrinterByIpAndPpd(printerIp: string, protocol: string, ppdName: string): Promise<void>--><!--Device-print-function connectPrinterByIpAndPpd(printerIp: string, protocol: string, ppdName: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -28,23 +28,22 @@ Connect a printer by the printer IP and ppd.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| printerIp | string | Yes | Indicates the printer IP. <br>IP of the printer to be connected. |
-| protocol | string | Yes | Indicates the protocol. <br>Protocol of the printer to be connected. |
-| ppdName | string | Yes | Indicates the ppd name. <br>Ppd name of the printer to be connected. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| printerIp | string | Yes |
+| protocol | string | Yes |
+| [ppdName](arkts-basicservices-print-ppdinfo-i.md) | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [13100005](../errorcode-print.md#13100005-invalid-printer) | Invalid printer IP. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [13100005](../errorcode-print.md#13100005-invalid-printer) |

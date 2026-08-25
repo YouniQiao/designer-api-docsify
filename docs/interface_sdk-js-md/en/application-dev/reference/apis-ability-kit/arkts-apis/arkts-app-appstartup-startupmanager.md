@@ -5,11 +5,11 @@ The module provides the capability to manage startup tasks in [AppStartup](../..
 > **NOTE：**&gt;
 > This module supports .so file preloading since API version 18.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-declare namespace startupManager--><!--Device-unnamed-declare namespace startupManager-End-->
 
 **System capability:** SystemCapability.Ability.AppStartup
 
@@ -23,13 +23,12 @@ import { startupManager } from '@kit.AbilityKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getStartupTaskResult](arkts-ability-startupmanager-getstartuptaskresult-f.md) | Obtains the execution result of a startup task or .so file preloading task. |
-| [getStartupTaskResult](arkts-ability-startupmanager-getstartuptaskresult-f.md) | Obtains specific startup task result. |
-| [isStartupTaskInitialized](arkts-ability-startupmanager-isstartuptaskinitialized-f.md) | Checks whether a startup task or .so file preloading task is initialized. |
-| [removeAllStartupTaskResults](arkts-ability-startupmanager-removeallstartuptaskresults-f.md) | Removes all startup task results. If there are preloading tasks for .so files, the corresponding .so files is set to the unloaded state. However, .so files that have already been loaded in the cache will not be removed. |
-| [removeStartupTaskResult](arkts-ability-startupmanager-removestartuptaskresult-f.md) | Removes the initialization result of a startup task or .so file preloading task.  - If a startup task name is passed, the initialization result of that startup task is removed. - If a .so file is passed, the .so file is set to the unloaded state, but the loaded .so file in the cache is not removed. |
-| [run](arkts-ability-startupmanager-run-f.md) | Runs startup tasks or loads .so files. |
-| [run](arkts-ability-startupmanager-run-f.md) | Runs startup tasks or loads .so files. You can specify [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) for loading startup tasks. This API uses a promise to return the result. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getStartupTaskResult](arkts-ability-startupmanager-getstartuptaskresult-f.md) |
+| [getStartupTaskResult](arkts-ability-startupmanager-getstartuptaskresult-f.md) |
+| [isStartupTaskInitialized](arkts-ability-startupmanager-isstartuptaskinitialized-f.md) |
+| [removeAllStartupTaskResults](arkts-ability-startupmanager-removeallstartuptaskresults-f.md) |
+| [removeStartupTaskResult](arkts-ability-startupmanager-removestartuptaskresult-f.md) |
+| [run](arkts-ability-startupmanager-run-f.md) |
+| [run](arkts-ability-startupmanager-run-f.md) |

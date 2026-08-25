@@ -4,7 +4,7 @@ Describes an audio device pair including both input and output devices.
 
 **Since:** 26.0.0
 
-<!--Device-audio-interface AudioDevicePair--><!--Device-audio-interface AudioDevicePair-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -26,9 +26,9 @@ Input audio device descriptor.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AudioDevicePair-inputDevice: AudioDeviceDescriptor--><!--Device-AudioDevicePair-inputDevice: AudioDeviceDescriptor-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -44,9 +44,8 @@ Output audio device descriptor.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AudioDevicePair-outputDevice: AudioDeviceDescriptor--><!--Device-AudioDevicePair-outputDevice: AudioDeviceDescriptor-End-->
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
-

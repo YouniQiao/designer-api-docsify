@@ -1,10 +1,10 @@
 # PrefetchOptions
 
-PrefetchOptions is a configuration class in the ArkWeb framework for customizing web page prefetch behavior. It is set through the prefetch-related API of [prefetchPage](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#prefetchpage), and the customizable settings include whether to ignore Cache-Control: no-store in the response header and the minimum time interval between two prefetches.
+PrefetchOptions is a configuration class in the ArkWeb framework for customizing web page prefetch behavior. It is set through the prefetch-related API of [prefetchPage](arkts-arkweb-webview-webviewcontroller-c.md#prefetchpage), and the customizable settings include whether to ignore Cache-Control: no-store in the response header and the minimum time interval between two prefetches.
 
 **Since:** 21
 
-<!--Device-webview-class PrefetchOptions--><!--Device-webview-class PrefetchOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -24,7 +24,7 @@ A constructor used to create a **PrefetchOptions** instance.
 
 **Since:** 21
 
-<!--Device-PrefetchOptions-constructor()--><!--Device-PrefetchOptions-constructor()-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -162,7 +162,7 @@ Sets whether to ignore Cache-Control: no-store in the response header.If set to 
 
 **Since:** 21
 
-<!--Device-PrefetchOptions-ignoreCacheControlNoStore: boolean--><!--Device-PrefetchOptions-ignoreCacheControlNoStore: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -178,7 +178,6 @@ Sets the minimum time interval between two web page prefetches.During each prefe
 
 **Since:** 21
 
-<!--Device-PrefetchOptions-minTimeBetweenPrefetchesMs: number--><!--Device-PrefetchOptions-minTimeBetweenPrefetchesMs: number-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

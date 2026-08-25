@@ -2,9 +2,9 @@
 
 interface of formError.@namespace formError
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-unnamed-declare namespace formError--><!--Device-unnamed-declare namespace formError-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -18,15 +18,14 @@ import { formError } from '@kit.FormKit';
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [FormError](arkts-form-formerror-formerror-e.md) | Error of form.@enum { int } |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FormError](arkts-form-formerror-formerror-e.md) |
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [FormError](arkts-form-formerror-formerror-e-sys.md) | Error of form.@enum { int } |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FormError](arkts-form-formerror-formerror-e-sys.md) |
 <!--DelEnd-->
-

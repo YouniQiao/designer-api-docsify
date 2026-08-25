@@ -4,7 +4,7 @@ Defines the address sanitizer event configuration policy.
 
 **Since:** 24
 
-<!--Device-hiAppEvent-interface AddressSanitizerPolicy--><!--Device-hiAppEvent-interface AddressSanitizerPolicy-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -28,9 +28,8 @@ Whether to enable the page switching log for ADDRESS_SANITIZER event.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
-<!--Device-AddressSanitizerPolicy-pageSwitchLogEnable?: boolean--><!--Device-AddressSanitizerPolicy-pageSwitchLogEnable?: boolean-End-->
-
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
-

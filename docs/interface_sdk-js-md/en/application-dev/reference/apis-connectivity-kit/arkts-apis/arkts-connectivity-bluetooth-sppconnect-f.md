@@ -16,23 +16,23 @@ Connects to a remote device over the socket.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [sppConnect](arkts-connectivity-bluetoothmanager-sppconnect-f.md)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
-<!--Device-bluetooth-function sppConnect(device: string, option: SppOption, callback: AsyncCallback<number>): void--><!--Device-bluetooth-function sppConnect(device: string, option: SppOption, callback: AsyncCallback<number>): void-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| device | string | Yes | The address of the remote device to connect. |
-| option | SppOption | Yes | Indicates the connect parameters [SppOption](arkts-connectivity-bluetooth-sppoption-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return a client socket ID. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| device | string | Yes |
+| option | [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Examples**
 
@@ -50,4 +50,3 @@ function clientSocket(code : BusinessError, number : number) {
 let sppOption : bluetooth.SppOption = {uuid: '00001810-0000-1000-8000-00805F9B34FB', secure: false, type: 0};
 bluetooth.sppConnect('XX:XX:XX:XX:XX:XX', sppOption, clientSocket);
 ```
-

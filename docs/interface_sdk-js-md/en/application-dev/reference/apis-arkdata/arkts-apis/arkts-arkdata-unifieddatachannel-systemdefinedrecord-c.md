@@ -4,9 +4,9 @@ Represents specific data types defined by OpenHarmony. It is a child class of [U
 
 **Inheritance/Implementation:** SystemDefinedRecord extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-unifiedDataChannel-class SystemDefinedRecord--><!--Device-unifiedDataChannel-class SystemDefinedRecord-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -24,15 +24,15 @@ details?: Record<string, int | long | double | string | Uint8Array>
 
 A dictionary type object, where the key is of the string type, and the value can be a number, a string, or a Uint 8Array. The default value is an empty dictionary object.
 
-**Type:** Record&lt;string, int \| long \| double \| string \| Uint8Array&gt;
+**Type:** Record&lt;string, number \| number \| number \| string \| Uint8Array&gt;
 
 **Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SystemDefinedRecord-details?: Record<string, int | long | double | string | Uint8Array>--><!--Device-SystemDefinedRecord-details?: Record<string, int | long | double | string | Uint8Array>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -48,4 +48,3 @@ sdr.details = {
 };
 let unifiedData = new unifiedDataChannel.UnifiedData(sdr);
 ```
-

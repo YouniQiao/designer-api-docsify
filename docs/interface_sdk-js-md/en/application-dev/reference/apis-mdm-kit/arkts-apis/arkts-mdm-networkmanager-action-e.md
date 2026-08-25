@@ -4,7 +4,7 @@ Enumerates the actions that can be taken for data packets.
 
 **Since:** 12
 
-<!--Device-networkManager-enum Action--><!--Device-networkManager-enum Action-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,9 +18,9 @@ Receive data packets.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Action-ALLOW = 0--><!--Device-Action-ALLOW = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -34,9 +34,9 @@ Discard data packets.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Action-DENY = 1--><!--Device-Action-DENY = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -50,9 +50,8 @@ Reject data packets.
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Action-REJECT = 2--><!--Device-Action-REJECT = 2-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

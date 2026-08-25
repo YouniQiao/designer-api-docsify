@@ -1,32 +1,12 @@
-# PhotoSubtype (System API)
+# PhotoSubtype
 
 Enumerates the [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) types.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-photoAccessHelper-export enum PhotoSubtype--><!--Device-photoAccessHelper-export enum PhotoSubtype-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-## DEFAULT
-
-```TypeScript
-DEFAULT = 0
-```
-
-Photo, which is the default type.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PhotoSubtype-DEFAULT = 0--><!--Device-PhotoSubtype-DEFAULT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
 
 ## SCREENSHOT
 
@@ -36,9 +16,9 @@ SCREENSHOT = 1
 
 Screenshot and screen recording file.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-PhotoSubtype-SCREENSHOT = 1--><!--Device-PhotoSubtype-SCREENSHOT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -52,9 +32,9 @@ SLOW_MOTION_VIDEO = 6
 
 Slow-motion video file.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-PhotoSubtype-SLOW_MOTION_VIDEO = 6--><!--Device-PhotoSubtype-SLOW_MOTION_VIDEO = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -68,11 +48,10 @@ SPATIAL_3DGS = 7
 
 Video file using the 3D Gaussian Splatting (3DGS) rendering format.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-PhotoSubtype-SPATIAL_3DGS = 7--><!--Device-PhotoSubtype-SPATIAL_3DGS = 7-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

@@ -1,18 +1,17 @@
 # BundlePackInfo (System API)
 
 ```TypeScript
-export type BundlePackInfo = _BundlePackInfo
+export type BundlePackInfo = _PackInfo.BundlePackInfo
 ```
 
 Defines the bundle information.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-freeInstall-export type BundlePackInfo = _BundlePackInfo--><!--Device-freeInstall-export type BundlePackInfo = _BundlePackInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
 
-**Property type:** _BundlePackInfo
-
+**Property type:** _PackInfo.BundlePackInfo

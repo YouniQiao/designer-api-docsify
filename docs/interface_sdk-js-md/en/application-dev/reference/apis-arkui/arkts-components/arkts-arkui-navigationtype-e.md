@@ -4,11 +4,11 @@ Navigation type.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 13
 
 **Substitutes:** Navigation
-
-<!--Device-unnamed-declare enum NavigationType--><!--Device-unnamed-declare enum NavigationType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,13 +23,13 @@ Navigates to the specified page in the application.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 13
 
 **Substitutes:** pushPath
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-NavigationType-Push--><!--Device-NavigationType-Push-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,13 +44,13 @@ Returns to the specified page. If the specified page does not exist in the stack
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 13
 
 **Substitutes:** pop
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-NavigationType-Back--><!--Device-NavigationType-Back-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,13 +65,12 @@ Replaces the current page with another one in the application and destroys the c
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 13
 
 **Substitutes:** replacePath
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-NavigationType-Replace--><!--Device-NavigationType-Replace-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -7,9 +7,9 @@
 > - 本模块使用屏幕物理像素单位px。&gt;
 > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-drawing-class MaskFilter--><!--Device-drawing-class MaskFilter-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -29,28 +29,28 @@ static createBlurMaskFilter(blurType: BlurType, sigma: number): MaskFilter
 
 **起始版本：** 12
 
-<!--Device-MaskFilter-static createBlurMaskFilter(blurType: BlurType, sigma: number): MaskFilter--><!--Device-MaskFilter-static createBlurMaskFilter(blurType: BlurType, sigma: number): MaskFilter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blurType | [BlurType](arkts-arkgraphics2d-drawing-blurtype-e.md) | 是 | 模糊类型，用于指定蒙版滤镜的模糊操作方式。 |
-| sigma | number | 是 | 高斯模糊的标准偏差，必须为大于0的浮点数。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| blurType | [BlurType](arkts-arkgraphics2d-drawing-blurtype-e.md) | 是 |
+| sigma | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) | 返回创建的蒙版滤镜对象。 |
+| 类型 |
+| --- |
+| [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -92,30 +92,29 @@ static createBlurMaskFilter(blurType: BlurType, sigma: double): MaskFilter | und
 
 **起始版本：** 23
 
-<!--Device-MaskFilter-static createBlurMaskFilter(blurType: BlurType, sigma: double): MaskFilter | undefined--><!--Device-MaskFilter-static createBlurMaskFilter(blurType: BlurType, sigma: double): MaskFilter | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blurType | [BlurType](arkts-arkgraphics2d-drawing-blurtype-e.md) | 是 | 模糊类型，用于指定蒙版滤镜的模糊操作方式。 |
-| sigma | double | 是 | 高斯模糊的标准偏差，必须为大于0的浮点数。单位为物理像素px。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| blurType | [BlurType](arkts-arkgraphics2d-drawing-blurtype-e.md) | 是 |
+| sigma | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) \| undefined | 返回创建的蒙版滤镜对象。创建失败时返回undefined。 |
+| 类型 |
+| --- |
+| [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) \| undefined |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
 参见 [createBlurMaskFilter](#createblurmaskfilter)
-

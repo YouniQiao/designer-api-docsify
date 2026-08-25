@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [NavigationModifier](arkts-arkui-navigationmodifier-c.md) | Defines Navigation Modifier@extends NavigationAttribute @implements AttributeModifier&lt;NavigationAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [NavigationModifier](arkts-arkui-navigationmodifier-c.md) |

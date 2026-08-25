@@ -6,7 +6,7 @@ Defines the symbol span style options.Inherits [RichEditorSpanStyleOptions](arkt
 
 **Since:** 11
 
-<!--Device-unnamed-declare interface RichEditorUpdateSymbolSpanStyleOptions--><!--Device-unnamed-declare interface RichEditorUpdateSymbolSpanStyleOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,10 @@ Style of the symbol span.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-RichEditorUpdateSymbolSpanStyleOptions-symbolStyle: RichEditorSymbolSpanStyle--><!--Device-RichEditorUpdateSymbolSpanStyleOptions-symbolStyle: RichEditorSymbolSpanStyle-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

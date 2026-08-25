@@ -4,11 +4,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md)
-
-<!--Device-notification-export enum SlotLevel--><!--Device-notification-export enum SlotLevel-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -22,11 +22,11 @@ LEVEL_NONE = 0
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [LEVEL_NONE](arkts-notification-notificationmanager-slotlevel-e.md#level_none)
-
-<!--Device-SlotLevel-LEVEL_NONE = 0--><!--Device-SlotLevel-LEVEL_NONE = 0-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -40,11 +40,11 @@ LEVEL_MIN = 1
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [LEVEL_MIN](arkts-notification-notificationmanager-slotlevel-e.md#level_min)
-
-<!--Device-SlotLevel-LEVEL_MIN = 1--><!--Device-SlotLevel-LEVEL_MIN = 1-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -58,11 +58,11 @@ LEVEL_LOW = 2
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [LEVEL_LOW](arkts-notification-notificationmanager-slotlevel-e.md#level_low)
-
-<!--Device-SlotLevel-LEVEL_LOW = 2--><!--Device-SlotLevel-LEVEL_LOW = 2-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -76,11 +76,11 @@ LEVEL_DEFAULT = 3
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [LEVEL_DEFAULT](arkts-notification-notificationmanager-slotlevel-e.md#level_default)
-
-<!--Device-SlotLevel-LEVEL_DEFAULT = 3--><!--Device-SlotLevel-LEVEL_DEFAULT = 3-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -94,11 +94,10 @@ LEVEL_HIGH = 4
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [LEVEL_HIGH](arkts-notification-notificationmanager-slotlevel-e.md#level_high)
 
-<!--Device-SlotLevel-LEVEL_HIGH = 4--><!--Device-SlotLevel-LEVEL_HIGH = 4-End-->
-
 **系统能力：** SystemCapability.Notification.Notification
-

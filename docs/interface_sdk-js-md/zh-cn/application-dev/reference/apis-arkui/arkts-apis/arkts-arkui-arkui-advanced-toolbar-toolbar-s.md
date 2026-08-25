@@ -7,13 +7,9 @@
 > - 如果ToolBar设置通用属性和通用事件，编译工具链会额外
 > 生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到ToolBar本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议ToolBar设置通用属性和通用事件。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**装饰器类型：** @Component
-
-<!--Device-unnamed-export declare struct ToolBar--><!--Device-unnamed-export declare struct ToolBar-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,35 +29,29 @@ The method to build component.
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**装饰器类型：** @Builder
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ToolBar-@Builder  build(): void--><!--Device-ToolBar-@Builder  build(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## activateIndex
 
 ```TypeScript
-activateIndex?: int
+activateIndex?: number
 ```
 
 激活态的子项索引。默认值：-1，表示没有激活态的子项。设置小于-1的值时按没有激活项处理。
 
-**类型：** int
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**装饰器类型：** @PropRef
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ToolBar-@PropRef  activateIndex?: int--><!--Device-ToolBar-@PropRef  activateIndex?: int-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,15 +64,15 @@ controller: TabsController
 工具栏控制器，用于关联Tabs组件页面切换，不支持控制工具栏子项。  
 **说明：**根据自定义组件成员属性访问限定符[使用限制](../../../ui/state-management/arkts-custom-components-access-restrictions.md#使用限制)，该接口属于常规成员 变量，可以传参进行初始化；也可以不传。不传时，使用组件内预设值进行初始化，组件内预设值为：new TabsController()。
 
-**类型：** [TabsController](../../apis-default/arkts-components/arkts-tabs-tabscontroller-c.md)
+**类型：** [TabsController](arkts-arkui-tabs-tabscontroller-c.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ToolBar-controller: TabsController--><!--Device-ToolBar-controller: TabsController-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,15 +86,13 @@ dividerModifier?: DividerModifier
 
 **类型：** DividerModifier
 
-**起始版本：** 23
+**起始版本：** 13
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**装饰器类型：** @PropRef
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ToolBar-@PropRef  dividerModifier?: DividerModifier--><!--Device-ToolBar-@PropRef  dividerModifier?: DividerModifier-End-->
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -118,15 +106,13 @@ toolBarList: ToolBarOptions
 
 **类型：** [ToolBarOptions](arkts-arkui-arkui-advanced-toolbar-toolbaroptions-c.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**装饰器类型：** @ObjectLink
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ToolBar-@ObjectLink  toolBarList: ToolBarOptions--><!--Device-ToolBar-@ObjectLink  toolBarList: ToolBarOptions-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -140,15 +126,12 @@ toolBarModifier?: ToolBarModifier
 
 **类型：** [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md)
 
-**起始版本：** 23
+**起始版本：** 13
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**装饰器类型：** @PropRef
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ToolBar-@PropRef  toolBarModifier?: ToolBarModifier--><!--Device-ToolBar-@PropRef  toolBarModifier?: ToolBarModifier-End-->
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

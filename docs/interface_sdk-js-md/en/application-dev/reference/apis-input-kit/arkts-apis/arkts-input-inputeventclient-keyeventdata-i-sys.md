@@ -2,9 +2,9 @@
 
 Defines the key event to inject.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-inputEventClient-interface KeyEventData--><!--Device-inputEventClient-interface KeyEventData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -26,11 +26,10 @@ Key event to inject.
 
 **Type:** KeyEvent
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-KeyEventData-keyEvent: KeyEvent--><!--Device-KeyEventData-keyEvent: KeyEvent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **System API:** This is a system API.
-

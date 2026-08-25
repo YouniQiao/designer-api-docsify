@@ -2,9 +2,9 @@
 
 Provides preferred playback settings for player.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-interface PlaybackStrategy--><!--Device-unnamed-interface PlaybackStrategy-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -24,11 +24,10 @@ Indicates whether to enable camera post-processing during video playback, which 
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-PlaybackStrategy-enableCameraPostprocessing?: boolean--><!--Device-PlaybackStrategy-enableCameraPostprocessing?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **系统接口：** 此接口为系统接口。
-

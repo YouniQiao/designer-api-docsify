@@ -9,7 +9,7 @@ import { netFirewall } from '@kit.NetworkKit';
 ## getNetFirewallPolicy
 
 ```TypeScript
-function getNetFirewallPolicy(userId: int): Promise<NetFirewallPolicy>
+function getNetFirewallPolicy(userId: number): Promise<NetFirewallPolicy>
 ```
 
 Queries the firewall policy for a system user ID, including the firewall switch status and default inbound or outbound behavior (allow or deny). This API uses a promise to return the result.  
@@ -17,34 +17,34 @@ Queries the firewall policy for a system user ID, including the firewall switch 
 
 **Since:** 15
 
-**Required permissions:** ohos.permission.GET_NET_FIREWALL
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
-<!--Device-netFirewall-function getNetFirewallPolicy(userId: int): Promise<NetFirewallPolicy>--><!--Device-netFirewall-function getNetFirewallPolicy(userId: int): Promise<NetFirewallPolicy>-End-->
+**Required permissions:** ohos.permission.GET_NET_FIREWALL
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| userId | int | Yes | System user ID, which must exist. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| userId | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[NetFirewallPolicy](arkts-network-netfirewall-netfirewallpolicy-i.md)&gt; | Promise used to return the result, which is a firewall policy. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[NetFirewallPolicy](arkts-network-netfirewall-netfirewallpolicy-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Operation failed. Cannot connect to service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [29400000](../errorcode-net-netfirewall.md#29400000-specified-user-does-not-exist) | The specified user does not exist. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [29400000](../errorcode-net-netfirewall.md#29400000-specified-user-does-not-exist) |
 
 **Examples**
 
@@ -58,4 +58,3 @@ netFirewall.getNetFirewallPolicy(100).then((result: netFirewall.NetFirewallPolic
   console.error('get firewall policy failed: ', JSON.stringify(reason));
 });
 ```
-

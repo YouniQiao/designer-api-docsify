@@ -2,9 +2,9 @@
 
 Defines a control event.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-onScreen-export interface ControlEvent--><!--Device-onScreen-export interface ControlEvent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -26,9 +26,9 @@ Control event type.
 
 **Type:** EventType
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ControlEvent-eventType: EventType--><!--Device-ControlEvent-eventType: EventType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -42,11 +42,11 @@ hookId?: long
 
 Hook ID corresponding to the control event. The hook ID and the session ID can be obtained from [PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md) of a session.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ControlEvent-hookId?: long--><!--Device-ControlEvent-hookId?: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -60,11 +60,11 @@ sessionId: long
 
 ID of the session to be operated. The hook ID and the session ID can be obtained from [PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md) of a session.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ControlEvent-sessionId: long--><!--Device-ControlEvent-sessionId: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -78,13 +78,12 @@ windowId: int
 
 ID of the window to be operated.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ControlEvent-windowId: int--><!--Device-ControlEvent-windowId: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
-

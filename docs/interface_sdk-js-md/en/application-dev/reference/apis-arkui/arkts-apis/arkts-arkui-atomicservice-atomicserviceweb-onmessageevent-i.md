@@ -4,7 +4,7 @@ Represents the callback invoked when the page is navigated back or destroyed.
 
 **Since:** 12
 
-<!--Device-unnamed-export declare interface OnMessageEvent--><!--Device-unnamed-export declare interface OnMessageEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,9 +26,8 @@ The message data list.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-OnMessageEvent-data: object[]--><!--Device-OnMessageEvent-data: object[]-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

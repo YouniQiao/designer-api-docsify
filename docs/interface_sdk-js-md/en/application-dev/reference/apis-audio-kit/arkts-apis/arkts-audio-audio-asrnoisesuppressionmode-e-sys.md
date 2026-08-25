@@ -2,9 +2,9 @@
 
 ASR noise suppression mode.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-audio-enum AsrNoiseSuppressionMode--><!--Device-audio-enum AsrNoiseSuppressionMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -18,9 +18,9 @@ BYPASS = 0
 
 Bypass noise suppression.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AsrNoiseSuppressionMode-BYPASS = 0--><!--Device-AsrNoiseSuppressionMode-BYPASS = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -34,9 +34,9 @@ STANDARD = 1
 
 Standard noise suppression.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AsrNoiseSuppressionMode-STANDARD = 1--><!--Device-AsrNoiseSuppressionMode-STANDARD = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -50,9 +50,9 @@ NEAR_FIELD = 2
 
 Near field noise suppression.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AsrNoiseSuppressionMode-NEAR_FIELD = 2--><!--Device-AsrNoiseSuppressionMode-NEAR_FIELD = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -66,11 +66,10 @@ FAR_FIELD = 3
 
 Far field noise suppression.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AsrNoiseSuppressionMode-FAR_FIELD = 3--><!--Device-AsrNoiseSuppressionMode-FAR_FIELD = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
-

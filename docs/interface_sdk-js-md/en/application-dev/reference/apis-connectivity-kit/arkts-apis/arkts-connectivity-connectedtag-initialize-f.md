@@ -16,17 +16,16 @@ Initializes the active tag chip.
 
 **Since:** 9
 
-**Required permissions:** ohos.permission.NFC_TAG
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-connectedTag-function initialize(): void--><!--Device-connectedTag-function initialize(): void-End-->
+**Required permissions:** ohos.permission.NFC_TAG
 
 **System capability:** SystemCapability.Communication.ConnectedTag
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [3200101](../errorcode-nfc.md#3200101-abnormal-active-nfc-tag-status) | Connected NFC tag running state is abnormal in service. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3200101](../errorcode-nfc.md#3200101-abnormal-active-nfc-tag-status) |

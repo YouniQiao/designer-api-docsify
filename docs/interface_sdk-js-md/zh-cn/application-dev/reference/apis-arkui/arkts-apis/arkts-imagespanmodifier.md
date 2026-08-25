@@ -4,7 +4,6 @@
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [ImageSpanModifier](arkts-arkui-imagespanmodifier-c.md) | Defines TextInput Modifier |
-
+| 名称 |
+| --- |
+| [ImageSpanModifier](arkts-arkui-imagespanmodifier-c.md) |

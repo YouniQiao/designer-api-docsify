@@ -4,7 +4,6 @@
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [MarqueeModifier](arkts-arkui-marqueemodifier-c.md) | Defines Marquee Modifier |
-
+| 名称 |
+| --- |
+| [MarqueeModifier](arkts-arkui-marqueemodifier-c.md) |

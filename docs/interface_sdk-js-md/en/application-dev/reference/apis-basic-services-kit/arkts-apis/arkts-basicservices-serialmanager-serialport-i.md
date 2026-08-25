@@ -2,9 +2,9 @@
 
 Represents the parameters of a serial port.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-serialManager-interface SerialPort--><!--Device-serialManager-interface SerialPort-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -24,9 +24,9 @@ Serial port device name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-SerialPort-deviceName: string--><!--Device-SerialPort-deviceName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -38,11 +38,10 @@ portId: int
 
 Port number.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-SerialPort-portId: int--><!--Device-SerialPort-portId: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
-

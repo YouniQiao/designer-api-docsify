@@ -4,11 +4,11 @@ Enumerates the audio output formats.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [ContainerFormatType](arkts-media-media-containerformattype-e.md)
-
-<!--Device-media-enum AudioOutputFormat--><!--Device-media-enum AudioOutputFormat-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -22,9 +22,9 @@ Default output format.This API is defined but not implemented yet.Note: It is su
 
 **Since:** 6
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-AudioOutputFormat-DEFAULT = 0--><!--Device-AudioOutputFormat-DEFAULT = 0-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -38,11 +38,11 @@ MPEG-4.Note: It is supported since API version 6 and deprecated since API versio
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [CFT_MPEG_4](arkts-media-media-containerformattype-e.md#cft_mpeg_4)
-
-<!--Device-AudioOutputFormat-MPEG_4 = 2--><!--Device-AudioOutputFormat-MPEG_4 = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -56,11 +56,11 @@ AMR_NB.This API is defined but not implemented yet.Note: It is supported since A
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [CFT_AMR](arkts-media-media-containerformattype-e.md#cft_amr)
-
-<!--Device-AudioOutputFormat-AMR_NB = 3--><!--Device-AudioOutputFormat-AMR_NB = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -74,11 +74,11 @@ AMR_WB.This API is defined but not implemented yet.Note: It is supported since A
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [CFT_AMR](arkts-media-media-containerformattype-e.md#cft_amr)
-
-<!--Device-AudioOutputFormat-AMR_WB = 4--><!--Device-AudioOutputFormat-AMR_WB = 4-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -92,11 +92,10 @@ Audio Data Transport Stream (ADTS), which is a transport stream format of AAC-ba
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 8
 
 **Substitutes:** [CFT_AAC](arkts-media-media-containerformattype-e.md#cft_aac)
 
-<!--Device-AudioOutputFormat-AAC_ADTS = 6--><!--Device-AudioOutputFormat-AAC_ADTS = 6-End-->
-
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
-

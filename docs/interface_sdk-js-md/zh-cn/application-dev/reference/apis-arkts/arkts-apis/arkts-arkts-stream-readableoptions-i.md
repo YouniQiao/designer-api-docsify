@@ -2,9 +2,9 @@
 
 描述**Readable**构造函数中使用的选项。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-stream-interface ReadableOptions--><!--Device-stream-interface ReadableOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -24,11 +24,10 @@ encoding?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-ReadableOptions-encoding?: string--><!--Device-ReadableOptions-encoding?: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
-

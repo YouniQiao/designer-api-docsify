@@ -2,9 +2,9 @@
 
 Defines network options.If the network does not meet the preset conditions, the tasks that have not been executed will await for execution, and the tasks that are being executed will fail or pause.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-agent-enum Network--><!--Device-agent-enum Network-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -16,11 +16,11 @@ ANY
 
 Network of any type.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Network-ANY--><!--Device-Network-ANY-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -32,11 +32,11 @@ WIFI
 
 Wi-Fi network.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Network-WIFI--><!--Device-Network-WIFI-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -48,11 +48,10 @@ CELLULAR
 
 Cellular data network.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-Network-CELLULAR--><!--Device-Network-CELLULAR-End-->
-
 **System capability:** SystemCapability.Request.FileTransferAgent
-

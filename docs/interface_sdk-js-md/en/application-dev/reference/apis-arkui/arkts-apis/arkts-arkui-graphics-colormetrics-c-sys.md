@@ -4,7 +4,7 @@ Used to mix colors.
 
 **Since:** 12
 
-<!--Device-unnamed-declare class ColorMetrics--><!--Device-unnamed-declare class ColorMetrics-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ Create ColorMetrics class using HDR color with default exposure. Create an HDR c
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ColorMetrics-static createHDRColor(colorSpace: ColorSpace, red: double, green: double, blue: double, alpha?: double): ColorMetrics--><!--Device-ColorMetrics-static createHDRColor(colorSpace: ColorSpace, red: double, green: double, blue: double, alpha?: double): ColorMetrics-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,19 +28,19 @@ Create ColorMetrics class using HDR color with default exposure. Create an HDR c
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| colorSpace | ColorSpace | Yes | Color space of color. Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
-| red | double | Yes | Red component value. Valid range: [0, +∞). Values greater than 1.0 enable HDR brightness. |
-| green | double | Yes | Green component value. Valid range: [0, +∞). Values greater than 1.0 enable HDR brightness. |
-| blue | double | Yes | Blue component value. Valid range: [0, +∞). Values greater than 1.0 enable HDR brightness. |
-| alpha | double | No | Alpha (opacity) component value. Valid range: [0, 1]. The default value is 1.0 (fully opaque). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes |
+| red | number | Yes |
+| green | number | Yes |
+| blue | number | Yes |
+| alpha | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class instance with HDR color. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) |
 
 ## createHDRColorWithLinearExposure
 
@@ -53,9 +53,9 @@ Create ColorMetrics class using HDR color with linear exposure. Create an HDR co
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ColorMetrics-static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: ColorSpace,    red: double, green: double, blue: double, alpha?: double): ColorMetrics--><!--Device-ColorMetrics-static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: ColorSpace,    red: double, green: double, blue: double, alpha?: double): ColorMetrics-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -63,20 +63,20 @@ Create ColorMetrics class using HDR color with linear exposure. Create an HDR co
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| linearExposure | double | Yes | Linear exposure value in exposure value. Valid range: [1, +∞). A value of 1.0 represents standard exposure. Values greater than 1.0 increase brightness linearly. |
-| colorSpace | ColorSpace | Yes | Color space of color. Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
-| red | double | Yes | Red component value. Valid range: [0, 1]. |
-| green | double | Yes | Green component value. Valid range: [0, 1]. |
-| blue | double | Yes | Blue component value. Valid range: [0, 1]. |
-| alpha | double | No | Alpha (opacity) component value. Valid range: [0, 1]. The default value is 1.0 (fully opaque). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| linearExposure | number | Yes |
+| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes |
+| red | number | Yes |
+| green | number | Yes |
+| blue | number | Yes |
+| alpha | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class instance with HDR color. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) |
 
 ## createHDRColorWithLogExposure
 
@@ -89,9 +89,9 @@ Create ColorMetrics class using HDR color with linear exposure. Create an HDR co
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ColorMetrics-static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,    red: double, green: double, blue: double, alpha?: double): ColorMetrics--><!--Device-ColorMetrics-static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,    red: double, green: double, blue: double, alpha?: double): ColorMetrics-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -99,20 +99,20 @@ Create ColorMetrics class using HDR color with linear exposure. Create an HDR co
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| exposure | double | Yes | Logarithmic exposure value in stops. Valid range: [0, +∞). A value of 0.0 represents standard exposure. Each increment of 1.0 doubles the brightness (one stop). |
-| colorSpace | ColorSpace | Yes | Color space of color. Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
-| red | double | Yes | Red component value. Valid range: [0, 1]. |
-| green | double | Yes | Green component value. Valid range: [0, 1]. |
-| blue | double | Yes | Blue component value. Valid range: [0, 1]. |
-| alpha | double | No | Alpha (opacity) component value. Valid range: [0, 1]. The default value is 1.0 (fully opaque). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [exposure](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenepostprocesssettings-tonemappingsettings-i.md) | number | Yes |
+| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes |
+| red | number | Yes |
+| green | number | Yes |
+| blue | number | Yes |
+| alpha | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class instance with HDR color. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) |
 
 ## getBlueValue
 
@@ -124,9 +124,9 @@ Get blue value. Returns blue channel value as a floating-point number. For SDR c
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ColorMetrics-getBlueValue(): double--><!--Device-ColorMetrics-getBlueValue(): double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -134,9 +134,9 @@ Get blue value. Returns blue channel value as a floating-point number. For SDR c
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | The blue value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values &gt; 1.0 indicate HDR brightness. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 ## getColorSpace
 
@@ -148,9 +148,9 @@ Get color space of the ColorMetrics. Returns the color space used when creating 
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ColorMetrics-getColorSpace(): ColorSpace--><!--Device-ColorMetrics-getColorSpace(): ColorSpace-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -158,9 +158,9 @@ Get color space of the ColorMetrics. Returns the color space used when creating 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ColorSpace | The color space of the ColorMetrics. Possible value: ColorSpace.SRGB, ColorSpace.DISPLAY_P3, ColorSpace.BT2020. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ColorSpace](arkts-arkui-window-colorspace-e.md) |
 
 ## getGreenValue
 
@@ -172,9 +172,9 @@ Get green value. Returns green channel value as a floating-point number. For SDR
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ColorMetrics-getGreenValue(): double--><!--Device-ColorMetrics-getGreenValue(): double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -182,9 +182,9 @@ Get green value. Returns green channel value as a floating-point number. For SDR
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | The green value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values &gt; 1.0 indicate HDR brightness. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 ## getRedValue
 
@@ -196,9 +196,9 @@ Get red value. Returns red channel value as a floating-point number. For SDR col
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ColorMetrics-getRedValue(): double--><!--Device-ColorMetrics-getRedValue(): double-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -206,9 +206,9 @@ Get red value. Returns red channel value as a floating-point number. For SDR col
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | The red value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values &gt; 1.0 indicate HDR brightness. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 ## isHDR
 
@@ -220,9 +220,9 @@ Check if ColorMetrics represents an HDR color. Returns true if color was created
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ColorMetrics-isHDR(): boolean--><!--Device-ColorMetrics-isHDR(): boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -230,7 +230,6 @@ Check if ColorMetrics represents an HDR color. Returns true if color was created
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether ColorMetrics is an HDR color. Returns true if: - The color was created using createHDRColorWithXx() method. - Any RGB channel value is greater than 1.0. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

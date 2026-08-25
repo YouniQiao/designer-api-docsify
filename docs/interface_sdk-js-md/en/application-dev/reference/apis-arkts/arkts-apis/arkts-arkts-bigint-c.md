@@ -4,9 +4,7 @@ JS BigInt API-compatible class.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class BigInt--><!--Device-unnamed-export class BigInt-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,25 +23,23 @@ Creates a new instance of BigInt from existing BigInt number
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-static $_invoke(value: BigInt): BigInt--><!--Device-BigInt-static $_invoke(value: BigInt): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [BigInt](arkts-arkts-bigint-c.md) | Yes | BigInt value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | A new BigInt instance from existing BigInt number |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## $_invoke
 
@@ -55,25 +51,23 @@ Creates a new instance of BigInt from existing Long number
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-static $_invoke(value: long): BigInt--><!--Device-BigInt-static $_invoke(value: long): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | long | Yes | BigInt value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | A new BigInt instance from existing Long number |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## $_invoke
 
@@ -85,25 +79,23 @@ Creates a new instance of BigInt from number instance
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-static $_invoke(value: double): BigInt--><!--Device-BigInt-static $_invoke(value: double): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | number value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | A new BigInt instance from number instance |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## $_invoke
 
@@ -115,25 +107,23 @@ Creates a new instance of BigInt from string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-static $_invoke(value: string): BigInt--><!--Device-BigInt-static $_invoke(value: string): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string | Yes | string value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | A new BigInt instance from string |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## $_invoke
 
@@ -145,25 +135,23 @@ Creates a new instance of BigInt from boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-static $_invoke(value: boolean): BigInt--><!--Device-BigInt-static $_invoke(value: boolean): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | boolean | Yes | boolean value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | A new BigInt instance from boolean |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## $_invoke
 
@@ -175,25 +163,23 @@ Creates a new instance of BigInt from union of bigint/double/string/boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-static $_invoke(value: bigint | double | string | boolean): BigInt--><!--Device-BigInt-static $_invoke(value: bigint | double | string | boolean): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | bigint \| double \| string \| boolean | Yes | source value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | bigint \| double \| string \| boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | A new BigInt instance from union of bigint/double/string/boolean |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## asIntN
 
@@ -205,26 +191,24 @@ Clamps a BigInt to a signed integer with the specified number of bits.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public static asIntN(bits: long, num: BigInt): BigInt--><!--Device-BigInt-public static asIntN(bits: long, num: BigInt): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bits | long | Yes | The number of bits for the signed integer representation. |
-| num | [BigInt](arkts-arkts-bigint-c.md) | Yes | The BigInt value to clamp. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [bits](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-deflatependingoutputinfo-i.md) | long | Yes |
+| num | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | A BigInt value clamped to the specified number of bits as a signed integer. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## asUintN
 
@@ -236,26 +220,24 @@ Clamps a BigInt to an unsigned integer with the specified number of bits.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public static asUintN(bits: long, num: BigInt): BigInt--><!--Device-BigInt-public static asUintN(bits: long, num: BigInt): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bits | long | Yes | The number of bits for the unsigned integer representation. |
-| num | [BigInt](arkts-arkts-bigint-c.md) | Yes | The BigInt value to clamp. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [bits](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-deflatependingoutputinfo-i.md) | long | Yes |
+| num | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | A BigInt value clamped to the specified number of bits as an unsigned integer. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## constructor
 
@@ -267,11 +249,9 @@ Creates a new `BigInt` instance with value 0.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-constructor()--><!--Device-BigInt-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -285,19 +265,17 @@ Creates a new `BigInt` instance from a byte value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-constructor(d: byte)--><!--Device-BigInt-constructor(d: byte)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | byte | Yes | The byte value to convert. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | byte | Yes |
 
 ## constructor
 
@@ -309,19 +287,17 @@ Creates a new `BigInt` instance from a short value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-constructor(d: short)--><!--Device-BigInt-constructor(d: short)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | short | Yes | The short value to convert. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | short | Yes |
 
 ## constructor
 
@@ -333,19 +309,17 @@ Creates a new `BigInt` instance from an int value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-constructor(d: int)--><!--Device-BigInt-constructor(d: int)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | int | Yes | The int value to convert. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | int | Yes |
 
 ## constructor
 
@@ -357,19 +331,17 @@ Creates a new `BigInt` instance from a long value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-constructor(d: long)--><!--Device-BigInt-constructor(d: long)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | long | Yes | The long value to convert. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | long | Yes |
 
 ## constructor
 
@@ -381,19 +353,17 @@ Creates a new `BigInt` instance from a double value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-constructor(d: double)--><!--Device-BigInt-constructor(d: double)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | double | Yes | The double value to convert to BigInt. Must be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | double | Yes |
 
 ## constructor
 
@@ -405,19 +375,17 @@ Creates a new `BigInt` instance from a string value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-constructor(d: string)--><!--Device-BigInt-constructor(d: string)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | string | Yes | The string value to convert to BigInt. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | string | Yes |
 
 ## constructor
 
@@ -429,19 +397,17 @@ Creates a new `BigInt` instance from a boolean value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-constructor(d: boolean)--><!--Device-BigInt-constructor(d: boolean)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | boolean | Yes | The boolean value (true=1, false=0). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | boolean | Yes |
 
 ## constructor
 
@@ -453,19 +419,17 @@ Creates a new `BigInt` instance by copying another BigInt.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-constructor(d: BigInt)--><!--Device-BigInt-constructor(d: BigInt)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | [BigInt](arkts-arkts-bigint-c.md) | Yes | The BigInt object to copy. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [d](arkts-arkts-math-decimal-decimal-c.md) | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 ## constructor
 
@@ -477,20 +441,18 @@ Creates a new `BigInt` instance from internal components.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-constructor(v: FixedArray<int>, sign: int)--><!--Device-BigInt-constructor(v: FixedArray<int>, sign: int)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| v | FixedArray&lt;int&gt; | Yes | The array of digits. |
-| sign | int | Yes | The sign of the number. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| v | FixedArray & lt;int & gt; | Yes |
+| sign | int | Yes |
 
 ## doubleValue
 
@@ -502,19 +464,17 @@ Returns the value of an object as a double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public doubleValue(): double--><!--Device-BigInt-public doubleValue(): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | The double value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## equals
 
@@ -526,25 +486,23 @@ Checks if this BigInt is equal to another BigInt.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public equals(to: BigInt): boolean--><!--Device-BigInt-public equals(to: BigInt): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| to | [BigInt](arkts-arkts-bigint-c.md) | Yes | The BigInt to compare with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| to | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | True if equal, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## equals
 
@@ -556,25 +514,23 @@ Checks if this BigInt is equal to another value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-equals(other: Any): boolean--><!--Device-BigInt-equals(other: Any): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Any | Yes | The value to compare with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Any | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if the value is a BigInt and equal to this BigInt, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## fromULong
 
@@ -586,25 +542,23 @@ Creates a BigInt from an unsigned long value.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public static fromULong(val: long): BigInt--><!--Device-BigInt-public static fromULong(val: long): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| val | long | Yes | The unsigned long value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| val | long | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | The new BigInt instance. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## getLong
 
@@ -616,19 +570,17 @@ Returns the value of an object as a long
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public getLong(): long--><!--Device-BigInt-public getLong(): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The long value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## getULong
 
@@ -640,19 +592,17 @@ Return current value clipped to unsigned long
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public getULong(): long--><!--Device-BigInt-public getULong(): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| long | The unsigned long value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| long |
 
 ## negate
 
@@ -664,19 +614,17 @@ Returns the negation of the BigInt.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public negate(): BigInt--><!--Device-BigInt-public negate(): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | The negated value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## negative
 
@@ -688,19 +636,17 @@ Returns whether the BigInt is negative.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public negative(): boolean--><!--Device-BigInt-public negative(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | True if negative, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## operatorAdd
 
@@ -712,25 +658,23 @@ Adds another BigInt to this one.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public operatorAdd(other: BigInt): BigInt--><!--Device-BigInt-public operatorAdd(other: BigInt): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | Yes | The value to add. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | The result of the addition. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorBitwiseAnd
 
@@ -742,25 +686,23 @@ Performs bitwise AND operation with another BigInt.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public operatorBitwiseAnd(other: BigInt): BigInt--><!--Device-BigInt-public operatorBitwiseAnd(other: BigInt): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | Yes | The other BigInt. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | The result of the bitwise AND. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorBitwiseNot
 
@@ -772,19 +714,17 @@ Performs bitwise NOT operation on the BigInt.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public operatorBitwiseNot(): BigInt--><!--Device-BigInt-public operatorBitwiseNot(): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | The result of the bitwise NOT. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorBitwiseOr
 
@@ -796,25 +736,23 @@ Performs bitwise OR operation with another BigInt.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public operatorBitwiseOr(other: BigInt): BigInt--><!--Device-BigInt-public operatorBitwiseOr(other: BigInt): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | Yes | The other BigInt. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | The result of the bitwise OR. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorBitwiseXor
 
@@ -826,25 +764,23 @@ Performs bitwise XOR operation with another BigInt.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public operatorBitwiseXor(other: BigInt): BigInt--><!--Device-BigInt-public operatorBitwiseXor(other: BigInt): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | Yes | The other BigInt. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | The result of the bitwise XOR. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorDecrement
 
@@ -856,19 +792,17 @@ Decrements the BigInt value by 1.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public operatorDecrement(): BigInt--><!--Device-BigInt-public operatorDecrement(): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | The decremented value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorDivide
 
@@ -880,25 +814,23 @@ Divides this BigInt by another.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public operatorDivide(other: BigInt): BigInt--><!--Device-BigInt-public operatorDivide(other: BigInt): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | Yes | The divisor. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | The quotient of the division. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorGreaterThan
 
@@ -910,25 +842,23 @@ Checks if this BigInt is greater than another.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public operatorGreaterThan(other: BigInt): boolean--><!--Device-BigInt-public operatorGreaterThan(other: BigInt): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | Yes | The value to compare with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | True if this is greater than other, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## operatorGreaterThanEqual
 
@@ -940,25 +870,23 @@ Checks if this BigInt is greater than or equal to another.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public operatorGreaterThanEqual(other: BigInt): boolean--><!--Device-BigInt-public operatorGreaterThanEqual(other: BigInt): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | Yes | The value to compare with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | True if this is greater than or equal to other, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## operatorIncrement
 
@@ -970,19 +898,17 @@ Increments the BigInt value by 1.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public operatorIncrement(): BigInt--><!--Device-BigInt-public operatorIncrement(): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | The incremented value. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorLeftShift
 
@@ -994,25 +920,23 @@ Shifts the BigInt to the left by a specified number of bits.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public operatorLeftShift(other: BigInt): BigInt--><!--Device-BigInt-public operatorLeftShift(other: BigInt): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | Yes | The number of bits to shift. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | The shifted BigInt. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorLessThan
 
@@ -1024,25 +948,23 @@ Checks if this BigInt is less than another.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public operatorLessThan(other: BigInt): boolean--><!--Device-BigInt-public operatorLessThan(other: BigInt): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | Yes | The value to compare with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | True if this is less than other, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## operatorLessThanEqual
 
@@ -1054,25 +976,23 @@ Checks if this BigInt is less than or equal to another.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public operatorLessThanEqual(other: BigInt): boolean--><!--Device-BigInt-public operatorLessThanEqual(other: BigInt): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | Yes | The value to compare with. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | True if this is less than or equal to other, false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## operatorModule
 
@@ -1084,25 +1004,23 @@ Calculates the remainder of division of this BigInt by another.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public operatorModule(other: BigInt): BigInt--><!--Device-BigInt-public operatorModule(other: BigInt): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | Yes | The divisor. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | The remainder. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorMultiply
 
@@ -1114,25 +1032,23 @@ Multiplies this BigInt by another.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public operatorMultiply(other: BigInt): BigInt--><!--Device-BigInt-public operatorMultiply(other: BigInt): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | Yes | The multiplier. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | The result of the multiplication. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorRightShift
 
@@ -1144,25 +1060,23 @@ Shifts the BigInt to the right by a specified number of bits.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public operatorRightShift(other: BigInt): BigInt--><!--Device-BigInt-public operatorRightShift(other: BigInt): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | Yes | The number of bits to shift. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | The shifted BigInt. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## operatorSubtract
 
@@ -1174,25 +1088,23 @@ Subtracts another BigInt from this one.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public operatorSubtract(other: BigInt): BigInt--><!--Device-BigInt-public operatorSubtract(other: BigInt): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [BigInt](arkts-arkts-bigint-c.md) | Yes | The value to subtract. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | The result of the subtraction. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## positive
 
@@ -1204,19 +1116,17 @@ Returns whether the BigInt is positive.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public positive(): boolean--><!--Device-BigInt-public positive(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | True if positive (including zero), false otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## pow
 
@@ -1228,25 +1138,23 @@ Returns the base to the exponent power.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public pow(exponent: BigInt): BigInt--><!--Device-BigInt-public pow(exponent: BigInt): BigInt-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| exponent | [BigInt](arkts-arkts-bigint-c.md) | Yes | The exponent value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| exponent | [BigInt](arkts-arkts-bigint-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | The result of base^exponent. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [BigInt](arkts-arkts-bigint-c.md) |
 
 ## toLocaleString
 
@@ -1258,26 +1166,24 @@ Converts a number to a string by using the current or specified locale.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public toLocaleString(locales?: Intl.LocalesArgument, options?: BigIntToLocaleStringOptions): string--><!--Device-BigInt-public toLocaleString(locales?: Intl.LocalesArgument, options?: BigIntToLocaleStringOptions): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | No | A string with a BCP 47 language tag, or an array of such strings. |
-| options | [BigIntToLocaleStringOptions](arkts-arkts-bigint-biginttolocalestringoptions-i.md) | No | An object with some or all of the properties of the Intl.NumberFormat options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | No |
+| options | [BigIntToLocaleStringOptions](arkts-arkts-bigint-biginttolocalestringoptions-i.md) | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the BigInt formatted according to the locale and options. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toLocaleString
 
@@ -1289,26 +1195,24 @@ Returns a string representing the elements of the array. The elements are conver
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string--><!--Device-BigInt-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | No | A string with a BCP 47 language tag, or an array of such strings. |
-| options | object | No | An object with configuration properties. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | No |
+| options | object | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the elements of the array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -1320,19 +1224,17 @@ Converts the BigInt to a string in base 10.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public toString(): string--><!--Device-BigInt-public toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representation of the BigInt in base 10. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toString
 
@@ -1344,23 +1246,20 @@ Returns a string representation of the BigInt object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigInt-public toString(radix: int): string--><!--Device-BigInt-public toString(radix: int): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| radix | int | Yes | An integer in the range 2 through 36 specifying the base to use for representing numeric values. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| radix | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | A string representing the specified BigInt object. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |

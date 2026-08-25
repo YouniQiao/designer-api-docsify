@@ -2,9 +2,9 @@
 
 定义要发送到会话的命令信息。
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-avSession-interface CommandInfo--><!--Device-avSession-interface CommandInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -24,9 +24,9 @@ callerBundleName?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-CommandInfo-callerBundleName?: string--><!--Device-CommandInfo-callerBundleName?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -40,9 +40,9 @@ callerDeviceId?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-CommandInfo-callerDeviceId?: string--><!--Device-CommandInfo-callerDeviceId?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -56,9 +56,9 @@ callerModuleName?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-CommandInfo-callerModuleName?: string--><!--Device-CommandInfo-callerModuleName?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -72,9 +72,8 @@ callerType?: CallerType
 
 **类型：** [CallerType](arkts-avsession-avsession-callertype-e.md)
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-CommandInfo-callerType?: CallerType--><!--Device-CommandInfo-callerType?: CallerType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
-

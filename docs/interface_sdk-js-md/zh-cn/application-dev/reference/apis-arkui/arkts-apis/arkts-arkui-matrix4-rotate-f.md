@@ -18,25 +18,25 @@ Matrix的旋转函数，可以为当前矩阵增加x轴/y轴/z轴旋转效果。
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [rotate](arkts-arkui-matrix4-matrix4transit-i.md#rotate)
-
-<!--Device-matrix4-function rotate(options: RotateOption): Matrix4Transit--><!--Device-matrix4-function rotate(options: RotateOption): Matrix4Transit-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | 是 | 设置旋转参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Matrix4Transit | 旋转后的矩阵对象。 |
+| 类型 |
+| --- |
+| [Matrix4Transit](arkts-arkui-matrix4transit-t.md) |
 
 **示例**
 
@@ -65,4 +65,3 @@ struct Test {
   }
 }
 ```
-

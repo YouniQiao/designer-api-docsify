@@ -6,9 +6,7 @@ Defines the LongPressGestureHandler options.@extends BaseHandlerOptions @interfa
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export interface LongPressGestureHandlerOptions--><!--Device-unnamed-export interface LongPressGestureHandlerOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,11 +22,9 @@ Indicates maximum moving distance, in px. The default value is 15px.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-LongPressGestureHandlerOptions-allowableMovement?: double--><!--Device-LongPressGestureHandlerOptions-allowableMovement?: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,11 +40,9 @@ Indicates minimum press and hold time, in milliseconds. The default value is 500
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-LongPressGestureHandlerOptions-duration?: int--><!--Device-LongPressGestureHandlerOptions-duration?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,11 +58,9 @@ Indicates the hand index that triggers the long press. If the value is less than
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-LongPressGestureHandlerOptions-fingers?: int--><!--Device-LongPressGestureHandlerOptions-fingers?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,11 +76,8 @@ Indicates whether an event is triggered repeatedly. The default value is false.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-LongPressGestureHandlerOptions-repeat?: boolean--><!--Device-LongPressGestureHandlerOptions-repeat?: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

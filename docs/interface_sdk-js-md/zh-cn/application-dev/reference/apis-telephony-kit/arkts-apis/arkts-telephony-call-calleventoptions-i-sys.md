@@ -2,9 +2,9 @@
 
 呼叫事件的可选参数。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-call-export interface CallEventOptions--><!--Device-call-export interface CallEventOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -26,11 +26,10 @@ eventId: CallAbilityEventId
 
 **类型：** [CallAbilityEventId](arkts-telephony-call-callabilityeventid-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-CallEventOptions-eventId: CallAbilityEventId--><!--Device-CallEventOptions-eventId: CallAbilityEventId-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
-

@@ -16,23 +16,23 @@ function offOperationSubmitMetadata(bundleName: string, callback?: Callback<int>
 
 **起始版本：** 23
 
-<!--Device-metadataBinding-function offOperationSubmitMetadata(bundleName: string, callback?: Callback<int>): void--><!--Device-metadataBinding-function offOperationSubmitMetadata(bundleName: string, callback?: Callback<int>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.MetadataBinding
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | 第三方应用的包名，需与订阅时传入的包名一致。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 回调函数，返回截图事件。需要取消监听的回调函数，需与订阅时传入的回调函数一致。若不填，则取消当前监听该事件的所有回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [32100001](../errorcode-metadataBinding.md#32100001-文件创建失败) | Internal handling failed. |
-| [32100005](../errorcode-metadataBinding.md#32100005-取消订阅失败) | Unsubscribe Failed. Possible causes: <br>1. Abnormal system capability. <br>2. IPC communication abnormality. |
+| 错误码ID |
+| --- |
+| [32100001](../errorcode-metadataBinding.md#32100001-文件创建失败) |
+| [32100005](../errorcode-metadataBinding.md#32100005-取消订阅失败) |
 
 **示例**
 
@@ -47,4 +47,3 @@ try {
   console.error("Unsubscribe screenshot event" + error);
 }
 ```
-

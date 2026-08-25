@@ -4,7 +4,7 @@ Enumerates comfort reminder levels required for triggering specific alert ringto
 
 **Since:** 26.0.0
 
-<!--Device-userStatus-export enum ReminderLevel--><!--Device-userStatus-export enum ReminderLevel-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -20,9 +20,9 @@ Weak reminder level.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ReminderLevel-WEAK_REMINDER = 0--><!--Device-ReminderLevel-WEAK_REMINDER = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -38,11 +38,10 @@ Normal reminder level.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ReminderLevel-NORMAL_REMINDER = 1--><!--Device-ReminderLevel-NORMAL_REMINDER = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
-

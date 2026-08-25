@@ -1,12 +1,10 @@
 # MeasureOptions
 
-Defines the options of MeasureText.@interface MeasureOptions
+Provides attributes of the measured text.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export interface MeasureOptions--><!--Device-unnamed-export interface MeasureOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,40 +17,41 @@ import { MeasureText, MeasureOptions } from '@kit.ArkUI';
 ## baselineOffset
 
 ```TypeScript
-baselineOffset?: double | string
+baselineOffset?: number | string
 ```
 
-Baseline offset.
+Baseline offset of the measured text.Default value: **0**
 
-**Type:** double \| string
+**Type:** number \| string
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MeasureOptions-baselineOffset?: double | string--><!--Device-MeasureOptions-baselineOffset?: double | string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constraintWidth
 
 ```TypeScript
-constraintWidth?: double | string | Resource
+constraintWidth?: number | string | Resource
 ```
 
-Text display area of width.
+Layout width of the measured text.  
+**NOTE：**The default unit is vp. The value cannot be a percentage. If this parameter is not set, the value of **SizeOptions** is the maximum width allowed for the single-line text.
 
-**Type:** double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**Type:** number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MeasureOptions-constraintWidth?: double | string | Resource--><!--Device-MeasureOptions-constraintWidth?: double | string | Resource-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,197 +61,188 @@ Text display area of width.
 fontFamily?: string | Resource
 ```
 
-Font list of text.
+Font family of the measured text. Default value: **'HarmonyOS Sans'**Only the default font is supported.
 
 **Type:** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MeasureOptions-fontFamily?: string | Resource--><!--Device-MeasureOptions-fontFamily?: string | Resource-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontSize
 
 ```TypeScript
-fontSize?: double | string | Resource
+fontSize?: number | string | Resource
 ```
 
-Font Size.
+Font size of the text to be measured. When **fontSize** is of the number type, the unit is vp.Default value: **16**  
+**NOTE：**The value cannot be a percentage.Since API version 12, the fp unit is used when **fontSize** is of the number type.
 
-**Type:** double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**Type:** number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MeasureOptions-fontSize?: double | string | Resource--><!--Device-MeasureOptions-fontSize?: double | string | Resource-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontStyle
 
 ```TypeScript
-fontStyle?: int | FontStyle
+fontStyle?: number | FontStyle
 ```
 
-Font style.
+Font style of the measured text.Default value: **FontStyle.Normal**Value range for the number type: [0, 1], with intervals of 1, corresponding to the values in the **FontStyle** enum
 
-**Type:** int \| FontStyle
+**Type:** number \| FontStyle
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MeasureOptions-fontStyle?: int | FontStyle--><!--Device-MeasureOptions-fontStyle?: int | FontStyle-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontWeight
 
 ```TypeScript
-fontWeight?: int | string | FontWeight
+fontWeight?: number | string | FontWeight
 ```
 
-Font weight.
+Font width of the measured text. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings of the number type are supported, for example, **400**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**.Default value: **FontWeight.Normal**
 
-**Type:** int \| string \| FontWeight
+**Type:** number \| string \| FontWeight
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MeasureOptions-fontWeight?: int | string | FontWeight--><!--Device-MeasureOptions-fontWeight?: int | string | FontWeight-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## letterSpacing
 
 ```TypeScript
-letterSpacing?: double | string
+letterSpacing?: number | string
 ```
 
-Distance between text fonts.
+Letter spacing of the measured text.Default value: **0**
 
-**Type:** double \| string
+**Type:** number \| string
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MeasureOptions-letterSpacing?: double | string--><!--Device-MeasureOptions-letterSpacing?: double | string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## lineHeight
 
 ```TypeScript
-lineHeight?: double | string | Resource
+lineHeight?: number | string | Resource
 ```
 
-Vertical center mode of the font.
+Line height of the measured text.
 
-**Type:** double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**Type:** number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MeasureOptions-lineHeight?: double | string | Resource--><!--Device-MeasureOptions-lineHeight?: double | string | Resource-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## maxLines
 
 ```TypeScript
-maxLines?: int
+maxLines?: number
 ```
 
-Maximum int of lines of text.
+Maximum number of lines in the measured text.Value range: [0, *INT32_MAX*]
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MeasureOptions-maxLines?: int--><!--Device-MeasureOptions-maxLines?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## overflow
 
 ```TypeScript
-overflow?: int | TextOverflow
+overflow?: number | TextOverflow
 ```
 
-Overflow mode of the font.
+Display mode when the measured text is too long.Default value: **1**Value range for the number type: [0, 3], with intervals of 1, corresponding to the values in the **TextOverflow** enum
 
-**Type:** int \| TextOverflow
+**Type:** number \| TextOverflow
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MeasureOptions-overflow?: int | TextOverflow--><!--Device-MeasureOptions-overflow?: int | TextOverflow-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textAlign
 
 ```TypeScript
-textAlign?: int | TextAlign
+textAlign?: number | TextAlign
 ```
 
-Alignment of text.
+Horizontal alignment mode of the measured text.Default value: **TextAlign.Start**Value range for the number type: [0, 3], with intervals of 1, corresponding to the values in the **TextAlign** enum
 
-**Type:** int \| TextAlign
+**Type:** number \| TextAlign
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MeasureOptions-textAlign?: int | TextAlign--><!--Device-MeasureOptions-textAlign?: int | TextAlign-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textCase
 
 ```TypeScript
-textCase?: int | TextCase
+textCase?: number | TextCase
 ```
 
-Type of letter in the text font
+Case of the measured text.Default value: **TextCase.Normal**Value range for the number type: [0, 2], with intervals of 1, corresponding to the values in the **TextCase** enum
 
-**Type:** int \| TextCase
+**Type:** number \| TextCase
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MeasureOptions-textCase?: int | TextCase--><!--Device-MeasureOptions-textCase?: int | TextCase-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -262,37 +252,35 @@ Type of letter in the text font
 textContent: string | Resource
 ```
 
-Text to display.
+Content of the measured text.
 
 **Type:** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MeasureOptions-textContent: string | Resource--><!--Device-MeasureOptions-textContent: string | Resource-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textIndent
 
 ```TypeScript
-textIndent?: double | string
+textIndent?: number | string
 ```
 
-Specify the indentation of the first line in a text-block.
+Indentation of the first line. Default value: **0**.
 
-**Type:** double \| string
+**Type:** number \| string
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MeasureOptions-textIndent?: double | string--><!--Device-MeasureOptions-textIndent?: double | string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -302,17 +290,17 @@ Specify the indentation of the first line in a text-block.
 wordBreak?: WordBreak
 ```
 
-Set the word break type.
+Line break rule.Default value: **WordBreak.BREAK_WORD**  
+**NOTE：**When used with **{overflow: TextOverflow.Ellipsis}** and **maxLines**, **WordBreak.BREAK_ALL** can insert line breaks between letters when overflow occurs and display excess content with an ellipsis (...).
 
 **Type:** WordBreak
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MeasureOptions-wordBreak?: WordBreak--><!--Device-MeasureOptions-wordBreak?: WordBreak-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

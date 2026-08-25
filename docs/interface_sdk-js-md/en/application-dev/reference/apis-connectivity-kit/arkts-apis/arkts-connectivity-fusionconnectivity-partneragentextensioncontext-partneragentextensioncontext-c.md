@@ -6,9 +6,9 @@ Class for the context of the PartnerAgentExtensionAbility.@extends ExtensionCont
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-unnamed-export default class PartnerAgentExtensionContext--><!--Device-unnamed-export default class PartnerAgentExtensionContext-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -17,4 +17,3 @@ Class for the context of the PartnerAgentExtensionAbility.@extends ExtensionCont
 ```TypeScript
 import { PartnerAgentExtensionContext } from '@kit.ConnectivityKit';
 ```
-

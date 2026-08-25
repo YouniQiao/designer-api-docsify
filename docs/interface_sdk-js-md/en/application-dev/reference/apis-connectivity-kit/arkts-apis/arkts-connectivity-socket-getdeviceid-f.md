@@ -9,34 +9,34 @@ import { socket } from '@kit.ConnectivityKit';
 ## getDeviceId
 
 ```TypeScript
-function getDeviceId(clientSocket: int): string
+function getDeviceId(clientSocket: number): string
 ```
 
 Obtain the device id in the client socket.
 
 **Since:** 17
 
-<!--Device-socket-function getDeviceId(clientSocket: int): string--><!--Device-socket-function getDeviceId(clientSocket: int): string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| clientSocket | int | Yes | Indicates client socket. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| clientSocket | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Returns the connected device id |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -59,4 +59,3 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
-

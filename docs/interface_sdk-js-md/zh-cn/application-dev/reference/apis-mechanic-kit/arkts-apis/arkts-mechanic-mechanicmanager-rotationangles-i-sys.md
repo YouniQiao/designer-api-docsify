@@ -2,9 +2,9 @@
 
 The rotion angles, relative to the current position.
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-mechanicManager-export interface RotationAngles--><!--Device-mechanicManager-export interface RotationAngles-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -24,11 +24,11 @@ pitch?: double
 
 俯仰角，范围从-2π到2*π，以弧度为单位。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-RotationAngles-pitch?: double--><!--Device-RotationAngles-pitch?: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -42,11 +42,11 @@ roll?: double
 
 滚动角度，范围从-2π到2*π，以弧度为单位。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-RotationAngles-roll?: double--><!--Device-RotationAngles-roll?: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -60,13 +60,12 @@ yaw?: double
 
 偏航角，范围从-2π到2*π，以弧度为单位。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-RotationAngles-yaw?: double--><!--Device-RotationAngles-yaw?: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
-

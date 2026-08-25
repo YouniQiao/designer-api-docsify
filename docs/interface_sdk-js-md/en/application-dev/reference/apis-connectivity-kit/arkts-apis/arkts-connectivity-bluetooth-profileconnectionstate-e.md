@@ -4,11 +4,11 @@ The enum of profile connection state.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ProfileConnectionState](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md)
-
-<!--Device-bluetooth-enum ProfileConnectionState--><!--Device-bluetooth-enum ProfileConnectionState-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -22,11 +22,11 @@ the current profile is disconnected
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [STATE_DISCONNECTED](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#state_disconnected)
-
-<!--Device-ProfileConnectionState-STATE_DISCONNECTED = 0--><!--Device-ProfileConnectionState-STATE_DISCONNECTED = 0-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -40,11 +40,11 @@ the current profile is being connected
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [STATE_CONNECTING](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#state_connecting)
-
-<!--Device-ProfileConnectionState-STATE_CONNECTING = 1--><!--Device-ProfileConnectionState-STATE_CONNECTING = 1-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -58,11 +58,11 @@ the current profile is connected
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [STATE_CONNECTED](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#state_connected)
-
-<!--Device-ProfileConnectionState-STATE_CONNECTED = 2--><!--Device-ProfileConnectionState-STATE_CONNECTED = 2-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -76,11 +76,10 @@ the current profile is being disconnected
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [STATE_DISCONNECTING](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#state_disconnecting)
 
-<!--Device-ProfileConnectionState-STATE_DISCONNECTING = 3--><!--Device-ProfileConnectionState-STATE_DISCONNECTING = 3-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

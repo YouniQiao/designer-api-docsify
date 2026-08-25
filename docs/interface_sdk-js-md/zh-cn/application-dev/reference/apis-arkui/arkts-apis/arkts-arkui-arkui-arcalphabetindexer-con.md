@@ -18,9 +18,9 @@ declare const ArcAlphabetIndexer: ArcAlphabetIndexerInterface
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
-<!--Device-unnamed-declare const ArcAlphabetIndexer: ArcAlphabetIndexerInterface--><!--Device-unnamed-declare const ArcAlphabetIndexer: ArcAlphabetIndexerInterface-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -34,9 +34,8 @@ Defines ArcAlphabetIndexer Component instance.
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-unnamed-declare const ArcAlphabetIndexerInstance: ArcAlphabetIndexerAttribute--><!--Device-unnamed-declare const ArcAlphabetIndexerInstance: ArcAlphabetIndexerAttribute-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
-

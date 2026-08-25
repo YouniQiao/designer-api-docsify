@@ -14,9 +14,9 @@ function getRotationLimits(mechId: int): RotationLimits
 
 Obtains the maximum rotation angles relative to the reference point for the specified mechanical device.
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-mechanicManager-function getRotationLimits(mechId: int): RotationLimits--><!--Device-mechanicManager-function getRotationLimits(mechId: int): RotationLimits-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -24,23 +24,23 @@ Obtains the maximum rotation angles relative to the reference point for the spec
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mechId | int | 是 | 机械设备ID |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mechId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RotationLimits](arkts-mechanic-mechanicmanager-rotationlimits-i-sys.md) | 最大旋转角度 |
+| 类型 |
+| --- |
+| [RotationLimits](arkts-mechanic-mechanicmanager-rotationlimits-i-sys.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) |
+| [33300002](../errorcode-mechanic.md#33300002-设备未连接) |
 
 **示例**
 
@@ -49,4 +49,3 @@ console.info('Query rotation limit information');
 let degreeLimit: mechanicManager.RotationLimits = mechanicManager.getRotationLimits(0);
 console.info(`'Query the rotation limit information successfully, limit information:' ${degreeLimit}`);
 ```
-

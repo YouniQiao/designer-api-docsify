@@ -6,9 +6,9 @@ The **Preferences** module provides APIs for processing data in the form of key-
 > Preferences are not thread-safe and may cause file damage and data loss when used in multi-process scenarios. Do
 > not use preferences in multi-process scenarios.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-declare namespace preferences--><!--Device-unnamed-declare namespace preferences-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -22,49 +22,48 @@ import { preferences } from '@kit.ArkData';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md) | Deletes a specified **Preferences** instance from the cache. If the **Preferences** instance has a corresponding persistent file, the persistent file is also deleted. This API uses an asynchronous callback to return the result. Avoid using a removed **Preferences** instance to perform data operations, which may cause data inconsistency. Instead, set the removed **Preferences** instance to null. The system will reclaim them in a unified manner. This API cannot be called concurrently with other **preferences** APIs. |
-| [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md) | Deletes a specified **Preferences** instance from the cache. If the **Preferences** instance has a corresponding persistent file, the persistent file is also deleted. This API uses an asynchronous callback to return the result. Avoid using a removed **Preferences** instance to perform data operations, which may cause data inconsistency. Instead, set the removed **Preferences** instance to null. The system will reclaim them in a unified manner. This API cannot be called concurrently with other **preferences** APIs. |
-| [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md) | Deletes a specified **Preferences** instance from the cache. If the **Preferences** instance has a corresponding persistent file, the persistent file is also deleted. This API uses a promise to return the result. Avoid using a removed **Preferences** instance to perform data operations, which may cause data inconsistency. Instead, set the removed **Preferences** instance to null. The system will reclaim them in a unified manner. This API cannot be called concurrently with other **preferences** APIs. |
-| [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md) | Deletes a specified **Preferences** instance from the cache. If the **Preferences** instance has a corresponding persistent file, the persistent file is also deleted. This API uses a promise to return the result. Avoid using a removed **Preferences** instance to perform data operations, which may cause data inconsistency. Instead, set the removed **Preferences** instance to null. The system will reclaim them in a unified manner. This API cannot be called concurrently with other **preferences** APIs. |
-| [getPreferences](arkts-arkdata-preferences-getpreferences-f.md) | Obtains a **Preferences** instance. This API uses an asynchronous callback to return the result. |
-| [getPreferences](arkts-arkdata-preferences-getpreferences-f.md) | Obtains a **Preferences** instance. This API uses an asynchronous callback to return the result. |
-| [getPreferences](arkts-arkdata-preferences-getpreferences-f.md) | Obtains a **Preferences** instance. This API uses a promise to return the result. |
-| [getPreferences](arkts-arkdata-preferences-getpreferences-f.md) | Obtains a **Preferences** instance. This API uses a promise to return the result. |
-| [getPreferencesSync](arkts-arkdata-preferences-getpreferencessync-f.md) | Obtains a **Preferences** instance. This API returns the result synchronously. |
-| [isStorageTypeSupported](arkts-arkdata-preferences-isstoragetypesupported-f.md) | Checks whether the specified storage type is supported. This API returns the result synchronously. If the storage type is supported, **true** is returned. Otherwise, **false** is returned. |
-| [removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md) | Removes a **Preferences** instance from the cache. This API uses an asynchronous callback to return the result. After an application calls [getPreferences](arkts-arkdata-preferences-getpreferences-f.md) for the first time to obtain a **Preferences** instance, the obtained **Preferences** instance is cached. When the application calls [getPreferences](arkts-arkdata-preferences-getpreferences-f.md) again, the **Preferences** instance will be read from the cache instead of from the persistent file. After this API is called to remove the instance from the cache, calling **getPreferences** again will read data from the persistent file and create a **Preferences** instance. Avoid using a removed **Preferences** instance to perform data operations, which may cause data inconsistency. Instead, set the removed **Preferences** instance to null. The system will reclaim them in a unified manner. If [GSKV](../../../database/data-persistence-by-preferences.md#gskv) is used, you are advised to manually call this API once when the process exits. This operation writes the data cache page to the disk, which can reduce the time required for calling the **getPreferences** API next time. Otherwise, data restoration is required at the bottom layer when the **getPreferences** API is called. The time required for data restoration depends on the number of data cache pages that are not written to the disk. |
-| [removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md) | Removes a **Preferences** instance from the cache. This API uses an asynchronous callback to return the result. After an application calls [getPreferences](arkts-arkdata-preferences-getpreferences-f.md) for the first time to obtain a **Preferences** instance, the obtained **Preferences** instance is cached. When the application calls [getPreferences](arkts-arkdata-preferences-getpreferences-f.md) again, the **Preferences** instance will be read from the cache instead of from the persistent file. After this API is called to remove the instance from the cache, calling **getPreferences** again will read data from the persistent file and create a **Preferences** instance. Avoid using a removed **Preferences** instance to perform data operations, which may cause data inconsistency. Instead, set the removed **Preferences** instance to null. The system will reclaim them in a unified manner. If [GSKV](../../../database/data-persistence-by-preferences.md#gskv) is used, you are advised to manually call this API once when the process exits. This operation writes the data cache page to the disk, which can reduce the time required for calling the **getPreferences** API next time. Otherwise, data restoration is required at the bottom layer when the **getPreferences** API is called. The time required for data restoration depends on the number of data cache pages that are not written to the disk. |
-| [removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md) | Removes a **Preferences** instance from the cache. This API uses a promise to return the result. After an application calls [getPreferences](arkts-arkdata-preferences-getpreferences-f.md) for the first time to obtain a **Preferences** instance, the obtained **Preferences** instance is cached. When the application calls [getPreferences](arkts-arkdata-preferences-getpreferences-f.md) again, the **Preferences** instance will be read from the cache instead of from the persistent file. After this API is called to remove the instance from the cache, calling **getPreferences** again will read data from the persistent file and create a **Preferences** instance. Avoid using a removed **Preferences** instance to perform data operations, which may cause data inconsistency. Instead, set the removed **Preferences** instance to null. The system will reclaim them in a unified manner. If [GSKV](../../../database/data-persistence-by-preferences.md#gskv) is used, you are advised to manually call this API once when the process exits. This operation writes the data cache page to the disk, which can reduce the time required for calling the **getPreferences** API next time. Otherwise, data restoration is required at the bottom layer when the **getPreferences** API is called. The time required for data restoration depends on the number of data cache pages that are not written to the disk. |
-| [removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md) | Removes a **Preferences** instance from the cache. This API uses a promise to return the result. After an application calls [getPreferences](arkts-arkdata-preferences-getpreferences-f.md) for the first time to obtain a **Preferences** instance, the obtained **Preferences** instance is cached. When the application calls [getPreferences](arkts-arkdata-preferences-getpreferences-f.md) again, the **Preferences** instance will be read from the cache instead of from the persistent file. After this API is called to remove the instance from the cache, calling **getPreferences** again will read data from the persistent file and create a **Preferences** instance. Avoid using a removed **Preferences** instance to perform data operations, which may cause data inconsistency. Instead, set the removed **Preferences** instance to null. The system will reclaim them in a unified manner. If [GSKV](../../../database/data-persistence-by-preferences.md#gskv) is used, you are advised to manually call this API once when the process exits. This operation writes the data cache page to the disk, which can reduce the time required for calling the **getPreferences** API next time. Otherwise, data restoration is required at the bottom layer when the **getPreferences** API is called. The time required for data restoration depends on the number of data cache pages that are not written to the disk. |
-| [removePreferencesFromCacheSync](arkts-arkdata-preferences-removepreferencesfromcachesync-f.md) | Removes a **Preferences** instance from the cache. This API returns the result synchronously. After an application calls [getPreferences](arkts-arkdata-preferences-getpreferences-f.md) for the first time to obtain a **Preferences** instance, the obtained **Preferences** instance is cached. When the application calls [getPreferences](arkts-arkdata-preferences-getpreferences-f.md) again, the **Preferences** instance will be read from the cache instead of from the persistent file. After this API is called to remove the instance from the cache, calling **getPreferences** again will read data from the persistent file and create a **Preferences** instance. Avoid using a removed **Preferences** instance to perform data operations, which may cause data inconsistency. Instead, set the removed **Preferences** instance to null. The system will reclaim them in a unified manner. If [GSKV](../../../database/data-persistence-by-preferences.md#gskv) is used, you are advised to manually call this API once when the process exits. This operation writes the data cache page to the disk, which can reduce the time required for calling the **getPreferences** API next time. Otherwise, data restoration is required at the bottom layer when the **getPreferences** API is called. The time required for data restoration depends on the number of data cache pages that are not written to the disk. |
-| [removePreferencesFromCacheSync](arkts-arkdata-preferences-removepreferencesfromcachesync-f.md) | Removes a **Preferences** instance from the cache. This API returns the result synchronously. After an application calls [getPreferences](arkts-arkdata-preferences-getpreferences-f.md) for the first time to obtain a **Preferences** instance, the obtained **Preferences** instance is cached. When the application calls [getPreferences](arkts-arkdata-preferences-getpreferences-f.md) again, the **Preferences** instance will be read from the cache instead of from the persistent file. After this API is called to remove the instance from the cache, calling **getPreferences** again will read data from the persistent file and create a **Preferences** instance. Avoid using a removed **Preferences** instance to perform data operations, which may cause data inconsistency. Instead, set the removed **Preferences** instance to null. The system will reclaim them in a unified manner. If [GSKV](../../../database/data-persistence-by-preferences.md#gskv) is used, you are advised to manually call this API once when the process exits. This operation writes the data cache page to the disk, which can reduce the time required for calling the **getPreferences** API next time. Otherwise, data restoration is required at the bottom layer when the **getPreferences** API is called. The time required for data restoration depends on the number of data cache pages that are not written to the disk. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md) |
+| [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md) |
+| [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md) |
+| [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md) |
+| [getPreferences](arkts-arkdata-preferences-getpreferences-f.md) |
+| [getPreferences](arkts-arkdata-preferences-getpreferences-f.md) |
+| [getPreferences](arkts-arkdata-preferences-getpreferences-f.md) |
+| [getPreferences](arkts-arkdata-preferences-getpreferences-f.md) |
+| [getPreferencesSync](arkts-arkdata-preferences-getpreferencessync-f.md) |
+| [isStorageTypeSupported](arkts-arkdata-preferences-isstoragetypesupported-f.md) |
+| [removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md) |
+| [removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md) |
+| [removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md) |
+| [removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md) |
+| [removePreferencesFromCacheSync](arkts-arkdata-preferences-removepreferencesfromcachesync-f.md) |
+| [removePreferencesFromCacheSync](arkts-arkdata-preferences-removepreferencesfromcachesync-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [Options](arkts-arkdata-preferences-options-i.md) | Represents the configuration of a **Preferences** instance. |
-| [Preferences](arkts-arkdata-preferences-preferences-i.md) | Provides APIs for obtaining and modifying the stored data. Before calling any API of **Preferences**, you must obtain a **Preferences** instance by using [preferences.getPreferences](arkts-arkdata-preferences-getpreferences-f.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Options](arkts-arkdata-preferences-options-i.md) |
+| [Preferences](arkts-arkdata-preferences-preferences-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [StorageType](arkts-arkdata-preferences-storagetype-e.md) | Enumerates the storage types of preferences. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [StorageType](arkts-arkdata-preferences-storagetype-e.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [RecordData](arkts-arkdata-preferences-recorddata-t.md) | RecordData is used for input parameter obj of the equal function@FaAndStageModel |
-| [ValueType](arkts-arkdata-preferences-valuetype-t.md) | Indicates possible value types@FaAndStageModel |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [RecordData](arkts-arkdata-preferences-recorddata-t.md) |
+| [ValueType](arkts-arkdata-preferences-valuetype-t.md) |
 
 ### Constants
 
-| Name | Description |
-| --- | --- |
-| [MAX_KEY_LENGTH](arkts-arkdata-preferences-con.md#max_key_length) | Maximum key length, which is 1,024 bytes. |
-| [MAX_VALUE_LENGTH](arkts-arkdata-preferences-con.md#max_value_length) | Maximum value length, which is 16 MB. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [MAX_KEY_LENGTH](arkts-arkdata-preferences-con.md#max_key_length) |
+| [MAX_VALUE_LENGTH](arkts-arkdata-preferences-con.md#max_value_length) |

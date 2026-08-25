@@ -2,9 +2,9 @@
 
 Describes a coordinate position. In the global coordinate system, the origin is the top-left corner of the primary screen. In the relative coordinate system, the origin is the top-left corner of the specified screen.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-display-interface Position--><!--Device-display-interface Position-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -22,11 +22,11 @@ x: long
 
 X coordinate relative to the origin, measured in px. The value must be a 32-bit signed integer, and floating- point numbers are rounded down.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Position-x: long--><!--Device-Position-x: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -38,11 +38,10 @@ y: long
 
 Y coordinate relative to the origin, measured in px. The value must be a 32-bit signed integer, and floating- point numbers are rounded down.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Position-y: long--><!--Device-Position-y: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
-

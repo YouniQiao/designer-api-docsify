@@ -2,9 +2,9 @@
 
 Enumerates the HMAC algorithms for the database. Use the enum name rather than the enum value.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-relationalStore-enum HmacAlgo--><!--Device-relationalStore-enum HmacAlgo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -16,9 +16,9 @@ SHA1 = 0
 
 SHA1: HMAC_SHA1 algorithm.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-HmacAlgo-SHA1 = 0--><!--Device-HmacAlgo-SHA1 = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -30,9 +30,9 @@ SHA256 = 1
 
 SHA256: HMAC_SHA256 algorithm.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-HmacAlgo-SHA256 = 1--><!--Device-HmacAlgo-SHA256 = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -44,9 +44,8 @@ SHA512 = 2
 
 SHA512: HMAC_SHA512 algorithm.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-HmacAlgo-SHA512 = 2--><!--Device-HmacAlgo-SHA512 = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-

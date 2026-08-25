@@ -10,7 +10,7 @@ Describes the icons of the sidebar control button.
 
 **Since:** 18
 
-<!--Device-unnamed-declare interface ButtonIconOptions--><!--Device-unnamed-declare interface ButtonIconOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,9 +31,9 @@ Icon of the control button when the sidebar is hidden.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ButtonIconOptions-hidden: string | PixelMap | Resource--><!--Device-ButtonIconOptions-hidden: string | PixelMap | Resource-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,9 +49,9 @@ Icon of the control button when the sidebar is displayed.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-ButtonIconOptions-shown: string | PixelMap | Resource--><!--Device-ButtonIconOptions-shown: string | PixelMap | Resource-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,9 +67,8 @@ Icon of the control button when the sidebar is switching between the shown and h
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ButtonIconOptions-switching?: string | PixelMap | Resource--><!--Device-ButtonIconOptions-switching?: string | PixelMap | Resource-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

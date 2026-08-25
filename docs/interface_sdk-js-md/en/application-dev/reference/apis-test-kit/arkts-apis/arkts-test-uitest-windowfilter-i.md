@@ -2,9 +2,9 @@
 
 Provides the flag attributes of this window.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-declare interface WindowFilter--><!--Device-unnamed-declare interface WindowFilter-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -25,11 +25,11 @@ Whether the window is interacting with the user. The value **true** indicates th
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
-<!--Device-WindowFilter-active?: boolean--><!--Device-WindowFilter-active?: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -45,11 +45,11 @@ Whether the window is interacting with the user. The value **true** indicates th
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 11
 
 **Substitutes:** active
-
-<!--Device-WindowFilter-actived?: boolean--><!--Device-WindowFilter-actived?: boolean-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -63,11 +63,11 @@ Bundle name of the application to which the window belongs, which is used to fil
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WindowFilter-bundleName?: string--><!--Device-WindowFilter-bundleName?: string-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -77,15 +77,15 @@ Bundle name of the application to which the window belongs, which is used to fil
 displayId?: int
 ```
 
-ID of the display to which the window belongs. The value is an integer greater than or equal to 0. The default value is the default screen ID of the device.
+ID of the display to which the window belongs. The default value is the default screen ID of the device.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-WindowFilter-displayId?: int--><!--Device-WindowFilter-displayId?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -99,11 +99,11 @@ Whether the window is focused. The value **true** indicates that the window is f
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-WindowFilter-focused?: boolean--><!--Device-WindowFilter-focused?: boolean-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -117,11 +117,10 @@ Window title, which is used to filter the target window in multi-window scenario
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-WindowFilter-title?: string--><!--Device-WindowFilter-title?: string-End-->
-
 **System capability:** SystemCapability.Test.UiTest
-

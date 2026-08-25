@@ -1,17 +1,20 @@
 # dataAbilityHelper
 
+A DataAbilityHelper object is obtained through
+ [acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md).
+
+
 ## Summary
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [DataAbilityHelper](arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | A DataAbilityHelper object is obtained through [acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md). |
-| [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | Defines the PacMap type used for data storage. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DataAbilityHelper](arkts-ability-dataabilityhelper-dataabilityhelper-i.md) |
+| [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [PacMap](arkts-ability-pacmap-t.md) | Defines the PacMap type used for data storage. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PacMap](arkts-ability-pacmap-t.md) |

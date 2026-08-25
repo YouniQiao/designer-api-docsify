@@ -9,7 +9,6 @@
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [Double](arkts-arkts-double-c.md) | 表示装箱后的double值及其相关操作。 |
-
+| 名称 |
+| --- |
+| [Double](arkts-arkts-double-c.md) |

@@ -14,23 +14,23 @@ function getAutoTimeStatus(): boolean
 
 Obtains the switch status of the automatic time setting. This API returns the result synchronously.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-systemDateTime-function getAutoTimeStatus(): boolean--><!--Device-systemDateTime-function getAutoTimeStatus(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Switch status of the automatic time setting. <br>- **true**: The automatic time setting is on. <br>- **false**: The automatic time setting is off. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [13000001](../errorcode-time.md#13000001-network-or-os-error) | Network connection error or OS error. Possible causes: 1.System memory is insufficient; 2.Calls the underlying system interface failed. |
+| Error Code ID |
+| --- |
+| [13000001](../errorcode-time.md#13000001-network-or-os-error) |
 
 **Examples**
 
@@ -44,4 +44,3 @@ try {
   console.error(`Failed to get autotime status. message: ${error.message}, code: ${error.code}`);
 }
 ```
-

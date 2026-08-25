@@ -4,7 +4,7 @@ Defines the name and MAC address of an Ethernet NIC.
 
 **Since:** 14
 
-<!--Device-ethernet-export interface MacAddressInfo--><!--Device-ethernet-export interface MacAddressInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -26,7 +26,7 @@ Name of the Ethernet NIC.
 
 **Since:** 14
 
-<!--Device-MacAddressInfo-iface: string--><!--Device-MacAddressInfo-iface: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -42,7 +42,6 @@ MAC address of the Ethernet NIC.
 
 **Since:** 14
 
-<!--Device-MacAddressInfo-macAddress: string--><!--Device-MacAddressInfo-macAddress: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
-

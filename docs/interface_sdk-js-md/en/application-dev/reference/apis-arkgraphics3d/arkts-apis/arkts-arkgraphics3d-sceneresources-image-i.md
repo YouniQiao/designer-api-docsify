@@ -4,9 +4,9 @@ Image resource, which inherits from SceneResource.@extends SceneResource @interf
 
 **Inheritance/Implementation:** Image extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface Image--><!--Device-unnamed-export interface Image-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,11 +18,11 @@ readonly height: int
 
 Image height, in px. The value must be greater than 0.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Image-readonly height: int--><!--Device-Image-readonly height: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -34,11 +34,10 @@ readonly width: int
 
 Image width, in px. The value must be greater than 0.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Image-readonly width: int--><!--Device-Image-readonly width: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

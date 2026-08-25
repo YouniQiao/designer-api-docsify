@@ -4,7 +4,7 @@ Provides the text span information.
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface RichEditorTextSpan--><!--Device-unnamed-declare interface RichEditorTextSpan-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Span position.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RichEditorTextSpan-spanPosition: RichEditorSpanPosition--><!--Device-RichEditorTextSpan-spanPosition: RichEditorSpanPosition-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ Text span style.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RichEditorTextSpan-textStyle?: RichEditorTextStyle--><!--Device-RichEditorTextSpan-textStyle?: RichEditorTextStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,11 +65,10 @@ Text span content.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-RichEditorTextSpan-value: string--><!--Device-RichEditorTextSpan-value: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

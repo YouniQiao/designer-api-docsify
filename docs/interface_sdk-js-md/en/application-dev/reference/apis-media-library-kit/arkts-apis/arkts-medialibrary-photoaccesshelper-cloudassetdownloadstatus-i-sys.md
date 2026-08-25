@@ -2,9 +2,9 @@
 
 Describes the status information about a batch download.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-photoAccessHelper-interface CloudAssetDownloadStatus--><!--Device-photoAccessHelper-interface CloudAssetDownloadStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,11 +26,10 @@ Array of strings containing the information of each individual download item wit
 
 **Type:** string[]
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-CloudAssetDownloadStatus-readonly taskInfos: string[]--><!--Device-CloudAssetDownloadStatus-readonly taskInfos: string[]-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

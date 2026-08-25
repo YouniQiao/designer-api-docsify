@@ -6,7 +6,7 @@ Provides the parameters of the rotation gesture handler. Inherits from [BaseHand
 
 **Since:** 12
 
-<!--Device-unnamed-interface RotationGestureHandlerOptions--><!--Device-unnamed-interface RotationGestureHandlerOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +28,11 @@ Minimum angle change required to trigger the rotation gesture, in degrees (deg).
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RotationGestureHandlerOptions-angle?: number--><!--Device-RotationGestureHandlerOptions-angle?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,11 +48,10 @@ Minimum number of fingers required to trigger the rotation gesture. The value ra
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-RotationGestureHandlerOptions-fingers?: number--><!--Device-RotationGestureHandlerOptions-fingers?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

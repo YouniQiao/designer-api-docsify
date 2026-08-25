@@ -12,9 +12,9 @@ Represents information about the authentication result reuse. This API is used t
 > of **credentialCount** and **credentialDigest** in the returned **EnrolledState** are both **0**.&gt;
 > - If the screen lock password is deleted, the reuse will fail.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-userAuth-interface ReuseUnlockResult--><!--Device-userAuth-interface ReuseUnlockResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -33,13 +33,13 @@ reuseDuration: int
 Reuse duration of the authentication result, in milliseconds. The value must be greater than 0 and the maximum value is [MAX_ALLOWABLE_REUSE_DURATION](arkts-userauthentication-userauth-con.md#max_allowable_reuse_duration) (300,000 milliseconds, that is, 5 minutes). You are advised to set a proper duration based on the service scenario:  
 - Advanced security scenarios (such as payment): A short duration (for example, 30 seconds to 1 minute) is recommended. - Medium security scenarios (such as application login): A medium duration (for example, 2 to 3 minutes) is recommended. - Low security scenarios (such as data query): The maximum duration can be used.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-ReuseUnlockResult-reuseDuration: int--><!--Device-ReuseUnlockResult-reuseDuration: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -54,11 +54,10 @@ Authentication result reuse mode. Select a proper reuse mode based on the securi
 
 **Type:** [ReuseMode](arkts-userauthentication-userauth-reusemode-e.md)
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-ReuseUnlockResult-reuseMode: ReuseMode--><!--Device-ReuseUnlockResult-reuseMode: ReuseMode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
-

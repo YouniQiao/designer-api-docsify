@@ -16,11 +16,11 @@ function getAgentCardByAgentId(bundleName: string, agentId: string): Promise<Age
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **需要权限：** ohos.permission.GET_AGENT_CARD
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-agentManager-function getAgentCardByAgentId(bundleName: string, agentId: string): Promise<AgentCard>--><!--Device-agentManager-function getAgentCardByAgentId(bundleName: string, agentId: string): Promise<AgentCard>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -28,24 +28,23 @@ function getAgentCardByAgentId(bundleName: string, agentId: string): Promise<Age
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| bundleName | string | 是 | AgentCard所属的bundle名称。 |
-| agentId | string | 是 | AgentCard所属的agentId。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| [agentId](arkts-ability-agentcard-i.md) | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[AgentCard](arkts-ability-agentcard-i.md)&gt; | Promise对象，返回指定的AgentCard。 |
+| 类型 |
+| --- |
+| Promise&lt;[AgentCard](arkts-ability-agentcard-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1.Connect to system service failed. 2.System service failed to communicate with dependency module. |
-| [18500001](../errorcode-ability.md#18500001-指定的包名无效) | The bundle does not exist or no patch has been applied. |
-| [35600001](../errorcode-ability.md#35600001-指定的agentid不存在) | The specified agentId does not exist. |
-
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [18500001](../errorcode-ability.md#18500001-指定的包名无效) |
+| [35600001](../errorcode-ability.md#35600001-指定的agentid不存在) |

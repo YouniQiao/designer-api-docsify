@@ -8,18 +8,17 @@ Defines the callback invoked when a drop-down menu option is selected.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-unnamed-declare type OnSelectCallback = (index: number, selectStr: string) => void--><!--Device-unnamed-declare type OnSelectCallback = (index: number, selectStr: string) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | number | Yes | Index of the selected option. The index is zero-based. |
-| selectStr | string | Yes | Value of the selected option. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | number | Yes |
+| selectStr | string | Yes |

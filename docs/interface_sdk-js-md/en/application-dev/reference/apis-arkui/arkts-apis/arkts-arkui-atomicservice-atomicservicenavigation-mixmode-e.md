@@ -4,7 +4,7 @@ Provides options for background color blending modes.
 
 **Since:** 18
 
-<!--Device-unnamed-export declare enum MixMode--><!--Device-unnamed-export declare enum MixMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ Both colors are evenly mixed.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-MixMode-AVERAGE = 1--><!--Device-MixMode-AVERAGE = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,9 @@ One color passes through the other.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-MixMode-CROSS = 2--><!--Device-MixMode-CROSS = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,9 +50,8 @@ One color gradually blends into the other.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-MixMode-TOWARDS = 3--><!--Device-MixMode-TOWARDS = 3-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

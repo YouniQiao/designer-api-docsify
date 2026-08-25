@@ -20,19 +20,18 @@ Closes NFC.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [disableNfc](arkts-connectivity-nfccontroller-disablenfc-f.md)
 
 **Required permissions:** ohos.permission.MANAGE_SECURE_SETTINGS
 
-<!--Device-nfcController-function closeNfc(): boolean--><!--Device-nfcController-function closeNfc(): boolean-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

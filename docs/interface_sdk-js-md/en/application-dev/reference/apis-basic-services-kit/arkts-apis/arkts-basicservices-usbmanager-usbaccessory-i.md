@@ -2,9 +2,9 @@
 
 Describes the USB accessory information.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-usbManager-interface USBAccessory--><!--Device-usbManager-interface USBAccessory-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -24,9 +24,9 @@ Description of an accessory.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-USBAccessory-description: string--><!--Device-USBAccessory-description: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -40,9 +40,9 @@ Manufacturer of an accessory.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-USBAccessory-manufacturer: string--><!--Device-USBAccessory-manufacturer: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -56,9 +56,9 @@ Product type of an accessory.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-USBAccessory-product: string--><!--Device-USBAccessory-product: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -72,9 +72,9 @@ SN of an accessory.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-USBAccessory-serialNumber: string--><!--Device-USBAccessory-serialNumber: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -88,9 +88,8 @@ Version of an accessory.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-USBAccessory-version: string--><!--Device-USBAccessory-version: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
-

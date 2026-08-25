@@ -1,5 +1,18 @@
 # @ohos.app.form.FormExtensionAbility
 
+The **FormExtensionAbility** module provides lifecycle callbacks invoked when a widget is created, destroyed, or
+ updated.
+ > **NOTE**
+ > - The formExtensionAbility is cleared after 10 seconds of inactivity.
+ > - The following modules cannot be referenced in the FormExtensionAbility, as doing so may cause the program to exit
+ >  abnormally:
+ >   - @ohos.ability.particleAbility (ParticleAbility)
+ >   - @ohos.multimedia.audio (Audio Management)
+ >   - @ohos.multimedia.camera (Camera Management)
+ >   - @ohos.multimedia.media (Media)
+ >   - @ohos.resourceschedule.backgroundTaskManager (Background Task Management)
+
+
 ## Modules to Import
 
 ```TypeScript
@@ -10,31 +23,30 @@ import { FormExtensionAbility } from '@kit.FormKit';
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md) | Widget extension class. It provides APIs to notify the widget provider that a widget is being created or the widget visibility status is being changed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md) |
 
 <!--Del-->
 ### Classes(System API)
 
-| Name | Description |
-| --- | --- |
-| [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c-sys.md) | Widget extension class. It provides APIs to notify the widget provider that a widget is being created or the widget visibility status is being changed. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c-sys.md) |
 <!--DelEnd-->
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [OnAcquireFormStateFn](arkts-form-onacquireformstatefn-t.md) | Called to return a FormState object. <p>You must override this callback if you want this ability to return the actual form state. Otherwise, this method returns DEFAULT by default.</p> |
-| [OnStopFn](arkts-form-onstopfn-t.md) | Called when this ability breaks the last link, notifying the provider that the provider process is about to stop. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [OnAcquireFormStateFn](arkts-form-onacquireformstatefn-t.md) |
+| [OnStopFn](arkts-form-onstopfn-t.md) |
 
 <!--Del-->
 ### Types(System API)
 
-| Name | Description |
-| --- | --- |
-| [OnAcquireFormDataFn](arkts-form-onacquireformdatafn-t-sys.md) | Called when the system acquire the form data. |
-| [OnShareFormFn](arkts-form-onshareformfn-t-sys.md) | Called when the system shares the form. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [OnAcquireFormDataFn](arkts-form-onacquireformdatafn-t-sys.md) |
+| [OnShareFormFn](arkts-form-onshareformfn-t-sys.md) |
 <!--DelEnd-->
-

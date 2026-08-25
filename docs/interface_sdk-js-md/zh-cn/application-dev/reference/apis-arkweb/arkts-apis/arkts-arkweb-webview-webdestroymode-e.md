@@ -4,7 +4,7 @@ Web组件的销毁模式，当Web组件销毁时，销毁模式会影响Web内�
 
 **起始版本：** 20
 
-<!--Device-webview-enum WebDestroyMode--><!--Device-webview-enum WebDestroyMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -18,7 +18,7 @@ NORMAL_MODE = 0
 
 **起始版本：** 20
 
-<!--Device-WebDestroyMode-NORMAL_MODE = 0--><!--Device-WebDestroyMode-NORMAL_MODE = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -32,7 +32,6 @@ FAST_MODE = 1
 
 **起始版本：** 20
 
-<!--Device-WebDestroyMode-FAST_MODE = 1--><!--Device-WebDestroyMode-FAST_MODE = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-

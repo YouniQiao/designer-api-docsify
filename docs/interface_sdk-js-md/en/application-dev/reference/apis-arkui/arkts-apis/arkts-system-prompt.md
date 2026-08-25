@@ -10,17 +10,16 @@ import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuc
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Prompt](arkts-arkui-system-prompt-prompt-c.md) | Defines the prompt interface. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Prompt](arkts-arkui-system-prompt-prompt-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [Button](arkts-arkui-system-prompt-button-i.md) | Defines the prompt info of button.@interface Button |
-| [ShowActionMenuOptions](arkts-arkui-system-prompt-showactionmenuoptions-i.md) | Defines the option of ShowActionMenu.@interface ShowActionMenuOptions |
-| [ShowDialogOptions](arkts-arkui-system-prompt-showdialogoptions-i.md) | Defines the option of show dialog.@interface ShowDialogOptions |
-| [ShowDialogSuccessResponse](arkts-arkui-system-prompt-showdialogsuccessresponse-i.md) | Defines the response of ShowDialog.@interface ShowDialogSuccessResponse |
-| [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | Defines the options of ShowToast.@interface ShowToastOptions |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Button](arkts-arkui-system-prompt-button-i.md) |
+| [ShowActionMenuOptions](arkts-arkui-system-prompt-showactionmenuoptions-i.md) |
+| [ShowDialogOptions](arkts-arkui-system-prompt-showdialogoptions-i.md) |
+| [ShowDialogSuccessResponse](arkts-arkui-system-prompt-showdialogsuccessresponse-i.md) |
+| [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) |

@@ -4,9 +4,9 @@ Describes the uncalibrated magnetic field sensor data. It extends from [Response
 
 **Inheritance/Implementation:** MagneticFieldUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sensor-interface MagneticFieldUncalibratedResponse--><!--Device-sensor-interface MagneticFieldUncalibratedResponse-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -24,11 +24,11 @@ biasX: double
 
 Bias of the uncalibrated magnetic field strength on the x-axis, in μT.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MagneticFieldUncalibratedResponse-biasX: double--><!--Device-MagneticFieldUncalibratedResponse-biasX: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -40,11 +40,11 @@ biasY: double
 
 Bias of the uncalibrated magnetic field strength on the y-axis, in μT.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MagneticFieldUncalibratedResponse-biasY: double--><!--Device-MagneticFieldUncalibratedResponse-biasY: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -56,11 +56,11 @@ biasZ: double
 
 Bias of the uncalibrated magnetic field strength on the z-axis, in μT.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MagneticFieldUncalibratedResponse-biasZ: double--><!--Device-MagneticFieldUncalibratedResponse-biasZ: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -72,11 +72,11 @@ x: double
 
 Uncalibrated magnetic field strength on the x-axis, in μT.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MagneticFieldUncalibratedResponse-x: double--><!--Device-MagneticFieldUncalibratedResponse-x: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -88,11 +88,11 @@ y: double
 
 Uncalibrated magnetic field strength on the y-axis, in μT.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MagneticFieldUncalibratedResponse-y: double--><!--Device-MagneticFieldUncalibratedResponse-y: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -104,11 +104,10 @@ z: double
 
 Uncalibrated magnetic field strength on the z-axis, in μT.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MagneticFieldUncalibratedResponse-z: double--><!--Device-MagneticFieldUncalibratedResponse-z: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
-

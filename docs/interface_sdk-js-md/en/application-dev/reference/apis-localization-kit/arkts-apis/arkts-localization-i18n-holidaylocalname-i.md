@@ -2,9 +2,9 @@
 
 Represents the name of a holiday in different languages.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-i18n-export interface HolidayLocalName--><!--Device-i18n-export interface HolidayLocalName-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -24,11 +24,11 @@ Language, for example, **ar**, **en**, or **tr**.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-HolidayLocalName-language: string--><!--Device-HolidayLocalName-language: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -42,11 +42,10 @@ Local name of a holiday. For example, the Turkish name of Sacrifice Feast is Kur
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-HolidayLocalName-name: string--><!--Device-HolidayLocalName-name: string-End-->
-
 **System capability:** SystemCapability.Global.I18n
-

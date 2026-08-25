@@ -2,9 +2,9 @@
 
 Enumerates thumbnail types.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-photoAccessHelper-enum ThumbnailType--><!--Device-photoAccessHelper-enum ThumbnailType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ LCD = 1
 
 LCD thumbnail.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-ThumbnailType-LCD = 1--><!--Device-ThumbnailType-LCD = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,11 +34,10 @@ THM = 2
 
 THM thumbnail.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-ThumbnailType-THM = 2--><!--Device-ThumbnailType-THM = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

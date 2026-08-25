@@ -1,8 +1,6 @@
 # ReadonlySet
 
-**Since:** -1
-
-<!--Device-unnamed-interface ReadonlySet--><!--Device-unnamed-interface ReadonlySet-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,14 +15,12 @@
 
 Iterates over values in the set.
 
-**Since:** -1
-
-<!--Device-ReadonlySet-[Symbol.iterator](): IterableIterator<T>--><!--Device-ReadonlySet-[Symbol.iterator](): IterableIterator<T>-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## entries
 
 ```TypeScript
@@ -33,14 +29,12 @@ entries(): IterableIterator<[T, T]>
 
 Returns an iterable of [v,v] pairs for every value `v` in the set.
 
-**Since:** -1
-
-<!--Device-ReadonlySet-entries(): IterableIterator<[T, T]>--><!--Device-ReadonlySet-entries(): IterableIterator<[T, T]>-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## keys
 
 ```TypeScript
@@ -49,14 +43,12 @@ keys(): IterableIterator<T>
 
 Despite its name, returns an iterable of the values in the set.
 
-**Since:** -1
-
-<!--Device-ReadonlySet-keys(): IterableIterator<T>--><!--Device-ReadonlySet-keys(): IterableIterator<T>-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## values
 
 ```TypeScript
@@ -65,11 +57,9 @@ values(): IterableIterator<T>
 
 Returns an iterable of values in the set.
 
-**Since:** -1
-
-<!--Device-ReadonlySet-values(): IterableIterator<T>--><!--Device-ReadonlySet-values(): IterableIterator<T>-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

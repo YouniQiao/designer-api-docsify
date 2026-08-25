@@ -1,12 +1,10 @@
 # BatteryChargeState
 
-Enumerates charging states.@enum { int }
+Enumerates charging states.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-batteryInfo-export enum BatteryChargeState--><!--Device-batteryInfo-export enum BatteryChargeState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -18,11 +16,11 @@ NONE
 
 Unknown state.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-BatteryChargeState-NONE--><!--Device-BatteryChargeState-NONE-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -34,11 +32,11 @@ ENABLE
 
 The battery is being charged.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-BatteryChargeState-ENABLE--><!--Device-BatteryChargeState-ENABLE-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -50,11 +48,11 @@ DISABLE
 
 The battery is not being charged.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-BatteryChargeState-DISABLE--><!--Device-BatteryChargeState-DISABLE-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -66,11 +64,10 @@ FULL
 
 The battery is fully charged.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-BatteryChargeState-FULL--><!--Device-BatteryChargeState-FULL-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
-

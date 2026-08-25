@@ -16,9 +16,9 @@ function setIfaceConfig(iface: string, ic: InterfaceConfiguration, callback: Asy
 
 **起始版本：** 9
 
-**需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-ethernet-function setIfaceConfig(iface: string, ic: InterfaceConfiguration, callback: AsyncCallback<void>): void--><!--Device-ethernet-function setIfaceConfig(iface: string, ic: InterfaceConfiguration, callback: AsyncCallback<void>): void-End-->
+**需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -26,26 +26,26 @@ function setIfaceConfig(iface: string, ic: InterfaceConfiguration, callback: Asy
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| iface | string | 是 | 网络接口名。 |
-| ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | 是 | 要设置的网络接口配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。成功无返回，失败返回对应错误码。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| iface | string | 是 |
+| ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Failed to connect to the service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
-| 2201004 | Invalid Ethernet profile. |
-| [2201005](../errorcode-net-ethernet.md#2201005-设备信息不存在) | Device information does not exist. |
-| [2201006](../errorcode-net-ethernet.md#2201006-设备未连接) | Ethernet device not connected. |
-| [2201007](../errorcode-net-ethernet.md#2201007-用户配置写入失败) | Ethernet failed to write user configuration information. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
+| 2201004 |
+| [2201005](../errorcode-net-ethernet.md#2201005-设备信息不存在) |
+| [2201006](../errorcode-net-ethernet.md#2201006-设备未连接) |
+| [2201007](../errorcode-net-ethernet.md#2201007-用户配置写入失败) |
 
 **示例**
 
@@ -104,9 +104,9 @@ function setIfaceConfig(iface: string, ic: InterfaceConfiguration): Promise<void
 
 **起始版本：** 9
 
-**需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-ethernet-function setIfaceConfig(iface: string, ic: InterfaceConfiguration): Promise<void>--><!--Device-ethernet-function setIfaceConfig(iface: string, ic: InterfaceConfiguration): Promise<void>-End-->
+**需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -114,33 +114,32 @@ function setIfaceConfig(iface: string, ic: InterfaceConfiguration): Promise<void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| iface | string | 是 | 接口名。 |
-| ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | 是 | 要设置的网络接口配置信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| iface | string | 是 |
+| ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 以Promise形式返回执行结果。成功无返回，失败返回对应错误码。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Failed to connect to the service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
-| 2201004 | Invalid Ethernet profile. |
-| [2201005](../errorcode-net-ethernet.md#2201005-设备信息不存在) | Device information does not exist. |
-| [2201006](../errorcode-net-ethernet.md#2201006-设备未连接) | Ethernet device not connected. |
-| [2201007](../errorcode-net-ethernet.md#2201007-用户配置写入失败) | Ethernet failed to write user configuration information. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
+| 2201004 |
+| [2201005](../errorcode-net-ethernet.md#2201005-设备信息不存在) |
+| [2201006](../errorcode-net-ethernet.md#2201006-设备未连接) |
+| [2201007](../errorcode-net-ethernet.md#2201007-用户配置写入失败) |
 
 **示例**
 
 参见 [setIfaceConfig](#setifaceconfig)
-

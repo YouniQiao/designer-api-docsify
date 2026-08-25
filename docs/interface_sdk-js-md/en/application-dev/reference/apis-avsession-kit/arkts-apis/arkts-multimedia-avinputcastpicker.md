@@ -10,13 +10,12 @@ import { AVInputCastPicker } from '@kit.AVSessionKit';
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [AVInputCastPicker](arkts-avsession-multimedia-avinputcastpicker-avinputcastpicker-s.md) | Picker used to show available input devices. @struct { AVInputCastPicker } |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AVInputCastPicker](arkts-avsession-multimedia-avinputcastpicker-avinputcastpicker-s.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [OnPickerStateCallback](arkts-avsession-onpickerstatecallback-t.md) | Callback for picker state |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [OnPickerStateCallback](arkts-avsession-onpickerstatecallback-t.md) |

@@ -4,7 +4,7 @@ AgentExtensionAbility的代理对象，用于向AgentExtensionAbility等发送�
 
 **起始版本：** 24
 
-<!--Device-unnamed-export interface AgentProxy--><!--Device-unnamed-export interface AgentProxy-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -20,9 +20,9 @@ authorize(handshakeData: string): void
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-AgentProxy-authorize(handshakeData: string): void--><!--Device-AgentProxy-authorize(handshakeData: string): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -30,15 +30,15 @@ authorize(handshakeData: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| handshakeData | string | 是 | 要发送的握手数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| handshakeData | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [35600002](../errorcode-ability.md#35600002-ipc消息发送失败) | Failed to send the IPC message. |
+| 错误码ID |
+| --- |
+| [35600002](../errorcode-ability.md#35600002-ipc消息发送失败) |
 
 ## sendData
 
@@ -50,9 +50,9 @@ sendData(data: string): void
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-AgentProxy-sendData(data: string): void--><!--Device-AgentProxy-sendData(data: string): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -60,13 +60,12 @@ sendData(data: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | string | 是 | 要发送的数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [35600002](../errorcode-ability.md#35600002-ipc消息发送失败) | Failed to send the IPC message. |
-
+| 错误码ID |
+| --- |
+| [35600002](../errorcode-ability.md#35600002-ipc消息发送失败) |

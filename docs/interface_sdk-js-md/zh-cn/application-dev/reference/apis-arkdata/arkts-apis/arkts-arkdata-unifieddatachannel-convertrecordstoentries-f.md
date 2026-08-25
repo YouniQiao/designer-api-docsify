@@ -17,27 +17,27 @@ function convertRecordsToEntries(data: UnifiedData): void
 2. data中的properties中的tag值为"records_to_entries_data_format"。
 否则不会产生任何行为。
 
-**起始版本：** 23
+**起始版本：** 17
+
+**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-unifiedDataChannel-function convertRecordsToEntries(data: UnifiedData): void--><!--Device-unifiedDataChannel-function convertRecordsToEntries(data: UnifiedData): void-End-->
+**原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | UnifiedData | 是 | 需要转换为多样式数据结构的统一数据对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | [UnifiedData](../../apis-arkui/arkts-components/arkts-arkui-unifieddata-t.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -134,4 +134,3 @@ try {
   console.error(`Convert data throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```
-

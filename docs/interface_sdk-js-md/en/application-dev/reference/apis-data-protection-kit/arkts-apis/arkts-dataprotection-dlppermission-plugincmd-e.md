@@ -4,7 +4,7 @@ Enumerates command codes for the plugin of an enterprise security application.
 
 **Since:** 26.1.0
 
-<!--Device-dlpPermission-export enum PluginCmd--><!--Device-dlpPermission-export enum PluginCmd-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -18,9 +18,9 @@ Command for delivering the plugin file name.
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
-<!--Device-PluginCmd-CMD_BASE_INSTALL_PLUGIN = 0x1001--><!--Device-PluginCmd-CMD_BASE_INSTALL_PLUGIN = 0x1001-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -34,9 +34,9 @@ Command for delivering the plugin configuration file name.
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
-<!--Device-PluginCmd-CMD_BASE_INSTALL_CONFIG_FILE = 0x1002--><!--Device-PluginCmd-CMD_BASE_INSTALL_CONFIG_FILE = 0x1002-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -50,9 +50,9 @@ Command for delivering the suffix filter file name.
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
-<!--Device-PluginCmd-CMD_BASE_INSTALL_SUFFIX_FILTER_FILE = 0x1003--><!--Device-PluginCmd-CMD_BASE_INSTALL_SUFFIX_FILTER_FILE = 0x1003-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -66,9 +66,9 @@ Command for uninstalling the plugin and removing all related files.
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
-<!--Device-PluginCmd-CMD_BASE_UNINSTALL_PLUGIN = 0x1004--><!--Device-PluginCmd-CMD_BASE_UNINSTALL_PLUGIN = 0x1004-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -82,9 +82,9 @@ Command for querying whether transparent encryption and decryption is enabled.
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
-<!--Device-PluginCmd-CMD_BASE_QUERY_TRANSPARENT_CRYPTO_STATUS = 0x1005--><!--Device-PluginCmd-CMD_BASE_QUERY_TRANSPARENT_CRYPTO_STATUS = 0x1005-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -98,9 +98,8 @@ Command for delivering generic event data to the plugin.
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PluginCmd-CMD_EVENT_REPORT_COMMON = 0x2001--><!--Device-PluginCmd-CMD_EVENT_REPORT_COMMON = 0x2001-End-->
-
 **System capability:** SystemCapability.Security.DataLossPrevention
-

@@ -17,19 +17,17 @@ function get<T extends object, P extends PropertyKey>(
 
 Gets the property of target, equivalent to `target[propertyKey]` when `receiver === target`.
 
-**Since:** -1
-
-<!--Device-Reflect-function get<T extends object, P extends PropertyKey>(        target: T,        propertyKey: P,        receiver?: unknown,    ): P extends keyof T ? T[P] : any--><!--Device-Reflect-function get<T extends object, P extends PropertyKey>(        target: T,        propertyKey: P,        receiver?: unknown,    ): P extends keyof T ? T[P] : any-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | T | Yes |  |
-| propertyKey | P | Yes |  |
-| receiver | unknown | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | T | Yes |
+| propertyKey | P | Yes |
+| receiver | unknown | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

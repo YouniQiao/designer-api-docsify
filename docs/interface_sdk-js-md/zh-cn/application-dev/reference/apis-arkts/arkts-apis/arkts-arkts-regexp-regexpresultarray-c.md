@@ -6,9 +6,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-unnamed-export class RegExpResultArray--><!--Device-unnamed-export class RegExpResultArray-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,25 +25,23 @@ $_get(index: string): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExpResultArray-$_get(index: string): string--><!--Device-RegExpResultArray-$_get(index: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | string | 是 | 字符串索引。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 以字符串形式返回的首个匹配结果，若不存在则返回null。 |
+| 类型 |
+| --- |
+| string |
 
 ## $_get
 
@@ -57,25 +53,23 @@ $_get(index: int): string | undefined
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExpResultArray-$_get(index: int): string | undefined--><!--Device-RegExpResultArray-$_get(index: int): string | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 整数索引。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string \| undefined | 结果字符串。 |
+| 类型 |
+| --- |
+| string \| undefined |
 
 ## $_set
 
@@ -87,20 +81,18 @@ public $_set(index: int, val: string | undefined): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExpResultArray-public $_set(index: int, val: string | undefined): void--><!--Device-RegExpResultArray-public $_set(index: int, val: string | undefined): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待设置的索引。 <br>取值约束：应为整数。 |
-| val | string \| undefined | 是 | 待设置的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| val | string \| undefined | 是 |
 
 ## constructor
 
@@ -112,22 +104,20 @@ constructor(index: int, input: string, result: Array<string | undefined>, indice
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExpResultArray-constructor(index: int, input: string, result: Array<string | undefined>, indices: Array<Array<int>>)--><!--Device-RegExpResultArray-constructor(index: int, input: string, result: Array<string | undefined>, indices: Array<Array<int>>)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 匹配结果的起始索引。 <br>取值约束：应为整数。 |
-| input | string | 是 | 参与匹配的原始字符串。 |
-| result | Array&lt;string \| undefined&gt; | 是 | 匹配到的字符串数组。 |
-| indices | Array&lt;Array&lt;int&gt;&gt; | 是 | 每个匹配子串的起始与结束索引数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
+| input | string | 是 |
+| [result](#result) | Array & lt;string \ | undefined & gt; | 是 |
+| [indices](#indices) | Array & lt;Array & lt;int & gt; & gt; | 是 |
 
 ## postExecProcessing
 
@@ -139,22 +129,20 @@ public postExecProcessing(res: RegExpResultArray, input: string, index: int, has
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExpResultArray-public postExecProcessing(res: RegExpResultArray, input: string, index: int, hasIndices: boolean): void--><!--Device-RegExpResultArray-public postExecProcessing(res: RegExpResultArray, input: string, index: int, hasIndices: boolean): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| res | [RegExpResultArray](arkts-arkts-regexp-regexpresultarray-c.md) | 是 | 结果数组。 |
-| input | string | 是 | 输入字符串。 |
-| index | int | 是 | 索引。 <br>取值约束：应为整数。 |
-| hasIndices | boolean | 是 | 是否包含索引信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| res | [RegExpResultArray](arkts-arkts-regexp-regexpresultarray-c.md) | 是 |
+| input | string | 是 |
+| index | int | 是 |
+| [hasIndices](arkts-arkts-regexp-c.md) | boolean | 是 |
 
 ## toString
 
@@ -166,17 +154,46 @@ public toString(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExpResultArray-public toString(): string--><!--Device-RegExpResultArray-public toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 表示匹配结果的字符串。 |
+| 类型 |
+| --- |
+| string |
 
+## indices
+
+```TypeScript
+public get indices(): Array<Array<int>>
+```
+
+获取包含每个匹配子串起始与结束索引的数组。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## result
+
+```TypeScript
+public get result(): Array<string | undefined>
+```
+
+获取匹配结果数组本身。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang

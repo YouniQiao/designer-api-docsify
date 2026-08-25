@@ -8,11 +8,10 @@ Indicates the result of network search.
 
 **Since:** 23
 
-<!--Device-observer-type NetworkSearchRealTimeResult = radio.NetworkSearchRealTimeResult--><!--Device-observer-type NetworkSearchRealTimeResult = radio.NetworkSearchRealTimeResult-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **System API:** This is a system API.
 
 **Property type:** radio.NetworkSearchRealTimeResult
-

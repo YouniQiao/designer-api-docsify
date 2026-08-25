@@ -2,9 +2,9 @@
 
 触控操作手状态信息。
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-motion-export enum OperatingHandStatus--><!--Device-motion-export enum OperatingHandStatus-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
@@ -16,9 +16,9 @@ UNKNOWN_STATUS = 0
 
 表示未识别。
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-OperatingHandStatus-UNKNOWN_STATUS = 0--><!--Device-OperatingHandStatus-UNKNOWN_STATUS = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
@@ -30,9 +30,9 @@ LEFT_HAND_OPERATED = 1
 
 表示触控操作手是左手。
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-OperatingHandStatus-LEFT_HAND_OPERATED = 1--><!--Device-OperatingHandStatus-LEFT_HAND_OPERATED = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
@@ -44,9 +44,8 @@ RIGHT_HAND_OPERATED = 2
 
 表示触控操作手是右手。
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-OperatingHandStatus-RIGHT_HAND_OPERATED = 2--><!--Device-OperatingHandStatus-RIGHT_HAND_OPERATED = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
-

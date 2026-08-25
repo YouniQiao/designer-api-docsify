@@ -4,9 +4,9 @@
 
 **继承/实现关系：** Mesh extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export interface Mesh--><!--Device-unnamed-export interface Mesh-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -20,9 +20,9 @@ readonly aabb: Aabb
 
 **类型：** [Aabb](arkts-arkgraphics3d-scenetypes-aabb-i.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Mesh-readonly aabb: Aabb--><!--Device-Mesh-readonly aabb: Aabb-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -36,9 +36,9 @@ materialOverride?: Material
 
 **类型：** [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Mesh-materialOverride?: Material--><!--Device-Mesh-materialOverride?: Material-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -52,9 +52,8 @@ readonly subMeshes: SubMesh[]
 
 **类型：** [SubMesh](arkts-arkgraphics3d-sceneresources-submesh-i.md)[]
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Mesh-readonly subMeshes: SubMesh[]--><!--Device-Mesh-readonly subMeshes: SubMesh[]-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

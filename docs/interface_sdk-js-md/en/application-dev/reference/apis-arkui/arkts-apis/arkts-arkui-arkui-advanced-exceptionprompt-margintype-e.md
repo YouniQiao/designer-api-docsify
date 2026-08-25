@@ -4,7 +4,7 @@ Control margin status of ExceptionPrompt. @enum { number }
 
 **Since:** 12
 
-<!--Device-unnamed-export declare enum MarginType--><!--Device-unnamed-export declare enum MarginType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Default margin of MarginType，Margin 1: references ohos_id_card_margin_start, m
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-MarginType-DEFAULT_MARGIN = 0--><!--Device-MarginType-DEFAULT_MARGIN = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ Margins can be adapted of MarginType，Margin 1: references ohos_id_max_padding_
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-MarginType-FIT_MARGIN = 1--><!--Device-MarginType-FIT_MARGIN = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

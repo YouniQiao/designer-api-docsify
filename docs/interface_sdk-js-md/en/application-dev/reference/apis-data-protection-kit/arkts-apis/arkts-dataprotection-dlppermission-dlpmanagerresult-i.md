@@ -4,7 +4,7 @@ Represents information about the trigger of the DLP manager application.
 
 **Since:** 11
 
-<!--Device-dlpPermission-export interface DLPManagerResult--><!--Device-dlpPermission-export interface DLPManagerResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -26,9 +26,9 @@ Result code returned after the DLP manager application is started and exits. The
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-DLPManagerResult-resultCode: number--><!--Device-DLPManagerResult-resultCode: number-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -44,9 +44,8 @@ Data returned after the DLP manager application is started and exits.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DLPManagerResult-want: Want--><!--Device-DLPManagerResult-want: Want-End-->
-
 **System capability:** SystemCapability.Security.DataLossPrevention
-

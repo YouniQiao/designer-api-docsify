@@ -2,9 +2,9 @@
 
 组件描述文件。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-update-export interface ComponentDescription--><!--Device-update-export interface ComponentDescription-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -26,9 +26,9 @@ componentId: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ComponentDescription-componentId: string--><!--Device-ComponentDescription-componentId: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -44,11 +44,10 @@ descriptionInfo: DescriptionInfo
 
 **类型：** [DescriptionInfo](arkts-basicservices-update-descriptioninfo-i-sys.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ComponentDescription-descriptionInfo: DescriptionInfo--><!--Device-ComponentDescription-descriptionInfo: DescriptionInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
-

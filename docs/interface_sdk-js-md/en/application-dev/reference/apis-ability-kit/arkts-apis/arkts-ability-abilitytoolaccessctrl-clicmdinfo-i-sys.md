@@ -4,7 +4,7 @@ CLI command information.
 
 **Since:** 26.0.0
 
-<!--Device-abilityToolAccessCtrl-interface CliCmdInfo--><!--Device-abilityToolAccessCtrl-interface CliCmdInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -27,7 +27,7 @@ CLI main command name.
 
 **Since:** 26.0.0
 
-<!--Device-CliCmdInfo-cliCmdName: string--><!--Device-CliCmdInfo-cliCmdName: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -45,9 +45,8 @@ CLI subcommand name.
 
 **Since:** 26.0.0
 
-<!--Device-CliCmdInfo-subCliCmdName: string--><!--Device-CliCmdInfo-subCliCmdName: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
-

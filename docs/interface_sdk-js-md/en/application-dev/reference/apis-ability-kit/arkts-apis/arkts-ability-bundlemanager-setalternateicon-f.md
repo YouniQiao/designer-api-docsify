@@ -16,29 +16,28 @@ Sets the alternate icon of the caller based on the given alternate icon name. Th
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-bundleManager-function setAlternateIcon(alternateIconName: string): Promise<void>--><!--Device-bundleManager-function setAlternateIcon(alternateIconName: string): Promise<void>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| alternateIconName | string | Yes | Name of the alternate icon to be set. The alternate icon name must be in the name field of alternateIcons in app.json5. If alternateIconName is left empty, the alternate icon is canceled. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| alternateIconName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 17700308 | The alternateIconName must match the name field under alternateIcons in the app.json5 file. |
-| 17700309 | No alternate icon is enabled. |
-| 17700310 | Failed to set the alternate icon. |
-
+| Error Code ID |
+| --- |
+| 17700308 |
+| 17700309 |
+| 17700310 |

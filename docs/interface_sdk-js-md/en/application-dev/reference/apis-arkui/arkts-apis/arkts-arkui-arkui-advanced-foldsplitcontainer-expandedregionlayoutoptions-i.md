@@ -4,7 +4,7 @@ Layout information for the expanded state.
 
 **Since:** 12
 
-<!--Device-unnamed-export interface ExpandedRegionLayoutOptions--><!--Device-unnamed-export interface ExpandedRegionLayoutOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,11 @@ Position information of the extra region. This setting takes effect only when **
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ExpandedRegionLayoutOptions-extraRegionPosition?: ExtraRegionPosition--><!--Device-ExpandedRegionLayoutOptions-extraRegionPosition?: ExtraRegionPosition-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,11 +46,11 @@ Width ratio between the primary and extra regions. This setting takes effect onl
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ExpandedRegionLayoutOptions-horizontalSplitRatio?: number--><!--Device-ExpandedRegionLayoutOptions-horizontalSplitRatio?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,11 +66,11 @@ Whether the extra region extends perpendicularly through the entire component fr
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ExpandedRegionLayoutOptions-isExtraRegionPerpendicular?: boolean--><!--Device-ExpandedRegionLayoutOptions-isExtraRegionPerpendicular?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,11 +86,10 @@ Height ratio between the primary and extra regions. The value range is all integ
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ExpandedRegionLayoutOptions-verticalSplitRatio?: number--><!--Device-ExpandedRegionLayoutOptions-verticalSplitRatio?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

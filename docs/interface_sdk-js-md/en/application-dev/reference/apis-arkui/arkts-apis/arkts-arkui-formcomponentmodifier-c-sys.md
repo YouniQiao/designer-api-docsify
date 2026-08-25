@@ -6,7 +6,7 @@ Defines FormComponent Modifier@extends FormComponentAttribute @implements Attrib
 
 **Since:** 12
 
-<!--Device-unnamed-export declare class FormComponentModifier--><!--Device-unnamed-export declare class FormComponentModifier-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,9 +22,9 @@ Defines the normal update attribute function.
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-FormComponentModifier-applyNormalAttribute?(instance: FormComponentAttribute): void--><!--Device-FormComponentModifier-applyNormalAttribute?(instance: FormComponentAttribute): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,7 +32,6 @@ Defines the normal update attribute function.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| instance | [FormComponentAttribute](../../apis-default/arkts-components/arkts-formcomponent-attribute.md) | Yes |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| instance | [FormComponentAttribute](arkts-arkui-formcomponent-formcomponentattribute-i-sys.md) | Yes |

@@ -8,7 +8,7 @@ ImageData对象可以存储canvas渲染的像素数据。
 
 **起始版本：** 8
 
-<!--Device-unnamed-declare class ImageData--><!--Device-unnamed-declare class ImageData-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,21 +27,21 @@ constructor(width: number, height: number, data?: Uint8ClampedArray)
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ImageData-constructor(width: number, height: number, data?: Uint8ClampedArray)--><!--Device-ImageData-constructor(width: number, height: number, data?: Uint8ClampedArray)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| width | number | 是 | 矩形区域宽度，默认单位为vp。 <br>异常值NaN和Infinity按0处理。 |
-| height | number | 是 | 矩形区域高度，默认单位为vp。 <br>异常值NaN和Infinity按0处理。 |
-| data | Uint8ClampedArray | 否 | 一维数组，保存了相应的颜色数据，数据值范围为0到255。 <br>传入异常值undefined时，data为undefined。 <br/>默认值：值全为0的一维数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [width](#width) | number | 是 |
+| [height](#height) | number | 是 |
+| [data](#data) | [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) | 否 |
 
 **示例**
 
@@ -94,24 +94,24 @@ constructor(width: number, height: number, data?: Uint8ClampedArray, unit?: Leng
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-ImageData-constructor(width: number, height: number, data?: Uint8ClampedArray, unit?: LengthMetricsUnit)--><!--Device-ImageData-constructor(width: number, height: number, data?: Uint8ClampedArray, unit?: LengthMetricsUnit)-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| width | number | 是 | 矩形区域宽度，默认单位为vp。 <br>异常值NaN和Infinity按0处理。 |
-| height | number | 是 | 矩形区域高度，默认单位为vp。 <br>异常值NaN和Infinity按0处理。 |
-| data | Uint8ClampedArray | 否 | 一维数组，保存了相应的颜色数据，数据值范围为0到255。 <br>传入异常值undefined时，data为undefined。 <br/>默认值：值全为0的一维数组。 |
-| unit | LengthMetricsUnit | 否 | 用来配置ImageData对象的单位模式，配置后无法动态更改， 配置方法同 [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。 <br>异常值undefined、NaN和Infinity按默认值处理。 <br>默认值：DEFAULT。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [width](#width) | number | 是 |
+| [height](#height) | number | 是 |
+| [data](#data) | [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) | 否 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 |
 
 **示例**
 
@@ -129,11 +129,11 @@ readonly data: Uint8ClampedArray
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ImageData-readonly data: Uint8ClampedArray--><!--Device-ImageData-readonly data: Uint8ClampedArray-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -149,11 +149,11 @@ readonly height: number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-ImageData-readonly height: number--><!--Device-ImageData-readonly height: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -173,11 +173,10 @@ readonly width: number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-ImageData-readonly width: number--><!--Device-ImageData-readonly width: number-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

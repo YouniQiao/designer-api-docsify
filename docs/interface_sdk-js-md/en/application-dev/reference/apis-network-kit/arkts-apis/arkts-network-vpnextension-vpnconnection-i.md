@@ -4,7 +4,7 @@ Defines a VPN connection object. Before calling **VpnConnection** APIs, you need
 
 **Since:** 11
 
-<!--Device-vpnExtension-export interface VpnConnection--><!--Device-vpnExtension-export interface VpnConnection-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -29,32 +29,32 @@ Creates a VPN based on the specified configuration. This API uses a promise to r
 
 **Since:** 11
 
-<!--Device-VpnConnection-create(config: VpnConfig): Promise<int>--><!--Device-VpnConnection-create(config: VpnConfig): Promise<int>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| config | VpnConfig | Yes | VPN configuration. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| config | [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;int&gt; | Promise used to return the result, which is the file descriptor of the virtual network interface card (vNIC). |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2200001](../errorcode-net-ethernet.md#2200001-invalid-parameter-value) | Invalid parameter value. |
-| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
-| [2203001](../errorcode-net-vpn.md#2203001-failed-to-create-a-vpn) | VPN creation denied, please check the user type. |
-| [2203002](../errorcode-net-vpn.md#2203002-vpn-already-exists) | VPN exist already, please execute destroy first. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2200001](../errorcode-net-ethernet.md#2200001-invalid-parameter-value) |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) |
+| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
+| [2203001](../errorcode-net-vpn.md#2203001-failed-to-create-a-vpn) |
+| [2203002](../errorcode-net-vpn.md#2203002-vpn-already-exists) |
 
 **Examples**
 
@@ -145,23 +145,23 @@ Destroys a VPN. This API uses a promise to return the result.
 
 **Since:** 11
 
-<!--Device-VpnConnection-destroy(): Promise<void>--><!--Device-VpnConnection-destroy(): Promise<void>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) |
+| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
 
 **Examples**
 
@@ -213,28 +213,28 @@ Destroys a VPN based on the specified VPN ID. This API uses a promise to return 
 
 **Since:** 20
 
-<!--Device-VpnConnection-destroy(vpnId: string): Promise<void>--><!--Device-VpnConnection-destroy(vpnId: string): Promise<void>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| vpnId | string | Yes | Unique VPN ID. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| vpnId | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [19900001](../errorcode-net-vpn.md#19900001-invalid-parameter) | Invalid parameter value. |
-| [19900002](../errorcode-net-vpn.md#19900002-system-internal-error) | System internal error. |
+| Error Code ID |
+| --- |
+| [19900001](../errorcode-net-vpn.md#19900001-invalid-parameter) |
+| [19900002](../errorcode-net-vpn.md#19900002-system-internal-error) |
 
 **Examples**
 
@@ -253,22 +253,22 @@ Generates a unique VPN ID. This API uses a promise to return the result.To use t
 
 **Since:** 20
 
-<!--Device-VpnConnection-generateVpnId(): Promise<string>--><!--Device-VpnConnection-generateVpnId(): Promise<string>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Promise used to return the result. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [19900001](../errorcode-net-vpn.md#19900001-invalid-parameter) | Invalid parameter value. |
-| [19900002](../errorcode-net-vpn.md#19900002-system-internal-error) | System internal error. |
+| Error Code ID |
+| --- |
+| [19900001](../errorcode-net-vpn.md#19900001-invalid-parameter) |
+| [19900002](../errorcode-net-vpn.md#19900002-system-internal-error) |
 
 **Examples**
 
@@ -300,31 +300,31 @@ Protects sockets against a VPN connection. The data sent through sockets is dire
 
 **Since:** 11
 
-<!--Device-VpnConnection-protect(socketFd: int): Promise<void>--><!--Device-VpnConnection-protect(socketFd: int): Promise<void>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| socketFd | int | Yes | Socket file descriptor. It can be obtained through [getSocketFd](arkts-network-socket-tcpsocket-i.md#getsocketfd). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| socketFd | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2200001](../errorcode-net-ethernet.md#2200001-invalid-parameter-value) | Invalid parameter value. |
-| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
-| [2203004](../errorcode-net-vpn.md#2203004-invalid-descriptor) | Invalid socket file descriptor. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2200001](../errorcode-net-ethernet.md#2200001-invalid-parameter-value) |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) |
+| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
+| [2203004](../errorcode-net-vpn.md#2203004-invalid-descriptor) |
 
 **Examples**
 
@@ -368,15 +368,15 @@ Protects application processes against a VPN connection. The data sent through t
 
 **Since:** 22
 
-<!--Device-VpnConnection-protectProcessNet(): Promise<void>--><!--Device-VpnConnection-protectProcessNet(): Promise<void>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Examples**
 
@@ -406,4 +406,3 @@ export default class MyVpnExtAbility  extends VpnExtensionAbility {
   }
 }
 ```
-

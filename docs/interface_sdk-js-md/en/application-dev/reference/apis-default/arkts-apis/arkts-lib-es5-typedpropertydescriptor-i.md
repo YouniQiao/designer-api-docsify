@@ -1,13 +1,33 @@
 # TypedPropertyDescriptor
 
-**Since:** -1
-
-<!--Device-unnamed-interface TypedPropertyDescriptor--><!--Device-unnamed-interface TypedPropertyDescriptor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
+
+## get
+
+```TypeScript
+get?: () => T
+```
+
+**ArkTS mode:** 
+
+## set
+
+```TypeScript
+set?: (value: T) => void
+```
+
+**ArkTS mode:** 
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [value](#value) | T | Yes |
 
 ## configurable
 
@@ -17,9 +37,7 @@ configurable?: boolean
 
 **Type:** boolean
 
-**Since:** -1
-
-<!--Device-TypedPropertyDescriptor-configurable?: boolean--><!--Device-TypedPropertyDescriptor-configurable?: boolean-End-->
+**ArkTS mode:** 
 
 ## enumerable
 
@@ -29,33 +47,7 @@ enumerable?: boolean
 
 **Type:** boolean
 
-**Since:** -1
-
-<!--Device-TypedPropertyDescriptor-enumerable?: boolean--><!--Device-TypedPropertyDescriptor-enumerable?: boolean-End-->
-
-## get
-
-```TypeScript
-get?: () => T
-```
-
-**Type:** () =&gt; T
-
-**Since:** -1
-
-<!--Device-TypedPropertyDescriptor-get?: () => T--><!--Device-TypedPropertyDescriptor-get?: () => T-End-->
-
-## set
-
-```TypeScript
-set?: (value: T) => void
-```
-
-**Type:** (value: T) =&gt; void
-
-**Since:** -1
-
-<!--Device-TypedPropertyDescriptor-set?: (value: T) => void--><!--Device-TypedPropertyDescriptor-set?: (value: T) => void-End-->
+**ArkTS mode:** 
 
 ## value
 
@@ -65,9 +57,7 @@ value?: T
 
 **Type:** T
 
-**Since:** -1
-
-<!--Device-TypedPropertyDescriptor-value?: T--><!--Device-TypedPropertyDescriptor-value?: T-End-->
+**ArkTS mode:** 
 
 ## writable
 
@@ -77,7 +67,4 @@ writable?: boolean
 
 **Type:** boolean
 
-**Since:** -1
-
-<!--Device-TypedPropertyDescriptor-writable?: boolean--><!--Device-TypedPropertyDescriptor-writable?: boolean-End-->
-
+**ArkTS mode:** 

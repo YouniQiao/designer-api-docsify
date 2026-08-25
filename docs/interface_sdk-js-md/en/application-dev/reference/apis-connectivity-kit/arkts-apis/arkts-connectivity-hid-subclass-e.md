@@ -4,7 +4,7 @@ Describe the subclass.
 
 **Since:** 23
 
-<!--Device-hid-enum Subclass--><!--Device-hid-enum Subclass-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -18,9 +18,9 @@ Uncategorized subclass.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-Subclass-SUBCLASS_UNCATEGORIZED = 0--><!--Device-Subclass-SUBCLASS_UNCATEGORIZED = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -34,9 +34,9 @@ Joystick subclass.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-Subclass-SUBCLASS_JOYSTICK = 1--><!--Device-Subclass-SUBCLASS_JOYSTICK = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -50,9 +50,9 @@ Gamepad subclass.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-Subclass-SUBCLASS_GAMEPAD = 2--><!--Device-Subclass-SUBCLASS_GAMEPAD = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -66,9 +66,9 @@ Remote control subclass.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-Subclass-SUBCLASS_REMOTE_CONTROL = 3--><!--Device-Subclass-SUBCLASS_REMOTE_CONTROL = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -82,9 +82,9 @@ Sensing device subclass.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-Subclass-SUBCLASS_SENSING_DEVICE = 4--><!--Device-Subclass-SUBCLASS_SENSING_DEVICE = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -98,9 +98,9 @@ digitizer tablet subclass.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-Subclass-SUBCLASS_DIGITIZER_TABLET = 5--><!--Device-Subclass-SUBCLASS_DIGITIZER_TABLET = 5-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -114,9 +114,9 @@ Card reader subclass.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-Subclass-SUBCLASS_CARD_READER = 6--><!--Device-Subclass-SUBCLASS_CARD_READER = 6-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -130,9 +130,9 @@ Keyboard subclass.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-Subclass-SUBCLASS_KEYBOARD = 64--><!--Device-Subclass-SUBCLASS_KEYBOARD = 64-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -146,9 +146,9 @@ Mouse subclass.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-Subclass-SUBCLASS_MOUSE = 128--><!--Device-Subclass-SUBCLASS_MOUSE = 128-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -162,9 +162,8 @@ Combo subclass.
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Subclass-SUBCLASS_COMBO = 192--><!--Device-Subclass-SUBCLASS_COMBO = 192-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

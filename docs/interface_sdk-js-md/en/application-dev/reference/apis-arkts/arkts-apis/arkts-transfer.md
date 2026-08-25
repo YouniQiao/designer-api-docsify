@@ -4,7 +4,7 @@ The transfer module provides transfer ability for subsystem class or interface.@
 
 **Since:** 23
 
-<!--Device-unnamed-declare namespace transfer--><!--Device-unnamed-declare namespace transfer-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -18,8 +18,7 @@ import { transfer } from '@kit.ArkTS';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [transferDynamic](arkts-arkts-transfer-transferdynamic-f.md) | Converting the 1.2 object to a 1.0 object. |
-| [transferStatic](arkts-arkts-transfer-transferstatic-f.md) | Converting the 1.0 object to a 1.2 object. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [transferDynamic](arkts-arkts-transfer-transferdynamic-f.md) |
+| [transferStatic](arkts-arkts-transfer-transferstatic-f.md) |

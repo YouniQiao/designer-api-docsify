@@ -4,7 +4,7 @@ Provides methods to accessing bluetooth PBAP(Phone Book Access Profile)-related 
 
 **Since:** 11
 
-<!--Device-unnamed-declare namespace pbap--><!--Device-unnamed-declare namespace pbap-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -18,37 +18,36 @@ import { pbap } from '@kit.ConnectivityKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [createPbapServerProfile](arkts-connectivity-pbap-createpbapserverprofile-f.md) | create the instance of PBAP server profile. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [createPbapServerProfile](arkts-connectivity-pbap-createpbapserverprofile-f.md) |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [PbapServerProfile](arkts-connectivity-pbap-pbapserverprofile-i-sys.md) | Manager PBAP server profile. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PbapServerProfile](arkts-connectivity-pbap-pbapserverprofile-i-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [ShareType](arkts-connectivity-pbap-sharetype-e-sys.md) | Enum for the share type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ShareType](arkts-connectivity-pbap-sharetype-e-sys.md) |
 <!--DelEnd-->
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [BaseProfile](arkts-connectivity-pbap-baseprofile-t.md) | Base interface of profile. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BaseProfile](arkts-connectivity-pbap-baseprofile-t.md) |
 
 <!--Del-->
 ### Types(System API)
 
-| Name | Description |
-| --- | --- |
-| [AccessAuthorization](arkts-connectivity-pbap-accessauthorization-t-sys.md) | Indicate the phone book access authorization. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AccessAuthorization](arkts-connectivity-pbap-accessauthorization-t-sys.md) |
 <!--DelEnd-->
-

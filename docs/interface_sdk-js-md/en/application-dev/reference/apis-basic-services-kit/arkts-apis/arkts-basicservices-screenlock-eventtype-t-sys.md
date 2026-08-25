@@ -25,29 +25,28 @@ Indicates the system event type related to the screen lock management service. A
 
 **Since:** 26.0.0
 
-<!--Device-screenLock-type EventType =    'beginWakeUp'    | 'endWakeUp'    | 'beginScreenOn'    | 'endScreenOn'    | 'beginScreenOff'    | 'endScreenOff'    | 'unlockScreen'    | 'lockScreen'    | 'beginExitAnimation'    | 'beginSleep'    | 'endSleep'    | 'changeUser'    | 'screenlockEnabled'    | 'serviceRestart'    | 'strongAuthChanged'    | 'screenLockDisabledChanged'    | 'unlockPolicyChanged'--><!--Device-screenLock-type EventType =    'beginWakeUp'    | 'endWakeUp'    | 'beginScreenOn'    | 'endScreenOn'    | 'beginScreenOff'    | 'endScreenOff'    | 'unlockScreen'    | 'lockScreen'    | 'beginExitAnimation'    | 'beginSleep'    | 'endSleep'    | 'changeUser'    | 'screenlockEnabled'    | 'serviceRestart'    | 'strongAuthChanged'    | 'screenLockDisabledChanged'    | 'unlockPolicyChanged'-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **System API:** This is a system API.
 
-| Type | Description |
-| --- | --- |
-| 'beginWakeUp' |  |
-| 'endWakeUp' |  |
-| 'beginScreenOn' |  |
-| 'endScreenOn' |  |
-| 'beginScreenOff' |  |
-| 'endScreenOff' |  |
-| 'unlockScreen' |  |
-| 'lockScreen' |  |
-| 'beginExitAnimation' |  |
-| 'beginSleep' |  |
-| 'endSleep' |  |
-| 'changeUser' |  |
-| 'screenlockEnabled' |  |
-| 'serviceRestart' |  |
-| 'strongAuthChanged' |  |
-| 'screenLockDisabledChanged' |  |
-| 'unlockPolicyChanged' |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'beginWakeUp' |
+| 'endWakeUp' |
+| 'beginScreenOn' |
+| 'endScreenOn' |
+| 'beginScreenOff' |
+| 'endScreenOff' |
+| 'unlockScreen' |
+| 'lockScreen' |
+| 'beginExitAnimation' |
+| 'beginSleep' |
+| 'endSleep' |
+| 'changeUser' |
+| 'screenlockEnabled' |
+| 'serviceRestart' |
+| 'strongAuthChanged' |
+| 'screenLockDisabledChanged' |
+| 'unlockPolicyChanged' |

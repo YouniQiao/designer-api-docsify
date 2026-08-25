@@ -4,9 +4,7 @@ Defines the superscript style.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-<!--Device-unnamed-export declare enum SuperscriptStyle--><!--Device-unnamed-export declare enum SuperscriptStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +18,9 @@ normal font style.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SuperscriptStyle-NORMAL = 0--><!--Device-SuperscriptStyle-NORMAL = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +34,9 @@ Superscript font style.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SuperscriptStyle-SUPERSCRIPT = 1--><!--Device-SuperscriptStyle-SUPERSCRIPT = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,11 +50,8 @@ Subscript font style.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SuperscriptStyle-SUBSCRIPT = 2--><!--Device-SuperscriptStyle-SUBSCRIPT = 2-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

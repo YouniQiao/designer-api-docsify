@@ -8,11 +8,10 @@ Defines the child process information.
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-childProcessManager-export type ChildProcessInformation = _ChildProcessInformation--><!--Device-childProcessManager-export type ChildProcessInformation = _ChildProcessInformation-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Property type:** _ChildProcessInformation
-

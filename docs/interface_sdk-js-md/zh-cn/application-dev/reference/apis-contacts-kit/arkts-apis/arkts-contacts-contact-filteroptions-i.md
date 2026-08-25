@@ -4,7 +4,7 @@
 
 **起始版本：** 15
 
-<!--Device-contact-interface FilterOptions--><!--Device-contact-interface FilterOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -26,9 +26,9 @@ filterCondition: FilterCondition
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
-<!--Device-FilterOptions-filterCondition: FilterCondition--><!--Device-FilterOptions-filterCondition: FilterCondition-End-->
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -44,9 +44,8 @@ value?: string | ValueType[]
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
-<!--Device-FilterOptions-value?: string | ValueType[]--><!--Device-FilterOptions-value?: string | ValueType[]-End-->
-
 **系统能力：** SystemCapability.Applications.Contacts
-

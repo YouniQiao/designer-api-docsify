@@ -4,7 +4,7 @@ Defines the options of the preview menu.
 
 **Since:** 18
 
-<!--Device-unnamed-declare interface PreviewMenuOptions--><!--Device-unnamed-declare interface PreviewMenuOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,10 @@ Vibration effect when the menu is displayed. This parameter takes effect when Im
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-PreviewMenuOptions-hapticFeedbackMode? : HapticFeedbackMode--><!--Device-PreviewMenuOptions-hapticFeedbackMode? : HapticFeedbackMode-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

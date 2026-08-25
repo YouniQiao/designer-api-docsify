@@ -2,9 +2,9 @@
 
 FormBindingData对象的属性定义。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-formBindingData-interface FormBindingData--><!--Device-formBindingData-interface FormBindingData-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -17,16 +17,18 @@ import { formBindingData } from '@kit.FormKit';
 ## data
 
 ```TypeScript
-data: RecordData
+data: Object
 ```
 
-Data for updating.
+卡片要展示的数据。可以是包含若干键值对的Object或者JSON格式的字符串。
 
-**类型：** [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)
+**类型：** Object
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-FormBindingData-data: RecordData--><!--Device-FormBindingData-data: RecordData-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -40,13 +42,12 @@ proxies?: Array<ProxyData>
 
 **类型：** Array&lt;ProxyData&gt;
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-FormBindingData-proxies?: Array<ProxyData>--><!--Device-FormBindingData-proxies?: Array<ProxyData>-End-->
-
 **系统能力：** SystemCapability.Ability.Form
-

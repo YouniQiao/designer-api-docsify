@@ -2,9 +2,9 @@
 
 Enumerates the text displayed on the complete button.
 
-**Since:** 26.0.0
+**Since:** 14
 
-<!--Device-photoAccessHelper-enum CompleteButtonText--><!--Device-photoAccessHelper-enum CompleteButtonText-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -16,11 +16,11 @@ TEXT_DONE = 0
 
 The text "Done" is displayed.
 
-**Since:** 26.0.0
+**Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.0.0.
 
-<!--Device-CompleteButtonText-TEXT_DONE = 0--><!--Device-CompleteButtonText-TEXT_DONE = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -32,11 +32,11 @@ TEXT_SEND = 1
 
 The text "Send" is displayed.
 
-**Since:** 26.0.0
+**Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.0.0.
 
-<!--Device-CompleteButtonText-TEXT_SEND = 1--><!--Device-CompleteButtonText-TEXT_SEND = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -48,11 +48,10 @@ TEXT_ADD = 2
 
 The text "Add" is displayed.
 
-**Since:** 26.0.0
+**Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.0.0.
 
-<!--Device-CompleteButtonText-TEXT_ADD = 2--><!--Device-CompleteButtonText-TEXT_ADD = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

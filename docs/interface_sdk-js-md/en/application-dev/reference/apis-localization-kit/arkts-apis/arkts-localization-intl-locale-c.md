@@ -4,11 +4,11 @@ Provides APIs for obtaining locale information.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.Locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
-
-<!--Device-intl-export class Locale--><!--Device-intl-export class Locale-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -28,6 +28,8 @@ Creates a **Locale** object.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.Locale.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale)
@@ -35,8 +37,6 @@ Creates a **Locale** object.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-Locale-constructor()--><!--Device-Locale-constructor()-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -146,6 +146,8 @@ Creates a **Locale** object.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.Locale.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale)
@@ -154,16 +156,14 @@ Creates a **Locale** object.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
-<!--Device-Locale-constructor(locale: string, options?: LocaleOptions)--><!--Device-Locale-constructor(locale: string, options?: LocaleOptions)-End-->
-
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locale | string | Yes | Locale information, which consists of the language, script, and country/region. |
-| options | LocaleOptions | No | Options for creating the **Locale** object.<br>**Since:** 12 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locale | string | Yes |
+| options | [LocaleOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-localeoptions-i.md) | No |
 
 **Examples**
 
@@ -179,6 +179,8 @@ Maximizes locale information by supplementing the missing script and country/reg
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.Locale.maximize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize)
@@ -187,15 +189,13 @@ Maximizes locale information by supplementing the missing script and country/reg
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
-<!--Device-Locale-maximize(): Locale--><!--Device-Locale-maximize(): Locale-End-->
-
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Locale | Locale** object with the script and country/region information. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Locale](arkts-localization-intl-locale-c.md) |
 
 **Examples**
 
@@ -225,6 +225,8 @@ Minimizes locale information by removing the script and country/region informati
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.Locale.minimize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize)
@@ -233,15 +235,13 @@ Minimizes locale information by removing the script and country/region informati
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
-<!--Device-Locale-minimize(): Locale--><!--Device-Locale-minimize(): Locale-End-->
-
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Locale | Locale** object without the script and country/region information. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Locale](arkts-localization-intl-locale-c.md) |
 
 **Examples**
 
@@ -271,6 +271,8 @@ Obtains the string that represents a **Locale** object.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.Locale.toString](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString)
@@ -279,15 +281,13 @@ Obtains the string that represents a **Locale** object.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
-<!--Device-Locale-toString(): string--><!--Device-Locale-toString(): string-End-->
-
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | String that represents the **Locale** object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -311,6 +311,8 @@ Locale information, which consists of the language, script, and country/region, 
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.baseName](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName)
@@ -318,8 +320,6 @@ Locale information, which consists of the language, script, and country/region, 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-Locale-baseName: string--><!--Device-Locale-baseName: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -335,6 +335,8 @@ Calendar for the locale. The value can be: The value can be any of the following
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.calendar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar)
@@ -342,8 +344,6 @@ Calendar for the locale. The value can be: The value can be any of the following
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-Locale-calendar: string--><!--Device-Locale-calendar: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -359,6 +359,8 @@ Whether case is taken into account for the locale's collation rules. The value c
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.caseFirst](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst)
@@ -366,8 +368,6 @@ Whether case is taken into account for the locale's collation rules. The value c
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-Locale-caseFirst: string--><!--Device-Locale-caseFirst: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -383,6 +383,8 @@ Collation rules for the locale. The value can be: **big5han**: Pinyin sorting fo
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.collation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation)
@@ -390,8 +392,6 @@ Collation rules for the locale. The value can be: **big5han**: Pinyin sorting fo
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-Locale-collation: string--><!--Device-Locale-collation: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -401,11 +401,13 @@ Collation rules for the locale. The value can be: **big5han**: Pinyin sorting fo
 hourCycle: string
 ```
 
-Time system for the locale. The value can be:"h11", "h12", "h23", or "h24". For details about their display effects, see Table 5.
+Time system for the locale. The value can be:"h11", "h12", "h23", or "h24". For details about their display effects, see [Table 5](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
 **Since:** 6
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 20
 
@@ -414,8 +416,6 @@ Time system for the locale. The value can be:"h11", "h12", "h23", or "h24". For 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-Locale-hourCycle: string--><!--Device-Locale-hourCycle: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -431,6 +431,8 @@ Language associated with the locale, for example, **zh**. The value complies wit
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.language](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/language)
@@ -438,8 +440,6 @@ Language associated with the locale, for example, **zh**. The value complies wit
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-Locale-language: string--><!--Device-Locale-language: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -455,6 +455,8 @@ Numbering system for the locale. The value can be: **adlm**, **ahom**, **arab**,
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem)
@@ -462,8 +464,6 @@ Numbering system for the locale. The value can be: **adlm**, **ahom**, **arab**,
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-Locale-numberingSystem: string--><!--Device-Locale-numberingSystem: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -479,6 +479,8 @@ Whether to use special sorting rules for digits. The value **true** means to use
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric)
@@ -486,8 +488,6 @@ Whether to use special sorting rules for digits. The value **true** means to use
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-Locale-numeric: boolean--><!--Device-Locale-numeric: boolean-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -503,6 +503,8 @@ Country/region associated with the locale, for example, **CN**. The value compli
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.region](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/region)
@@ -510,8 +512,6 @@ Country/region associated with the locale, for example, **CN**. The value compli
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-Locale-region: string--><!--Device-Locale-region: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -527,6 +527,8 @@ Script type of the language, for example, **Hans**. The value complies with the 
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.script](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/script)
@@ -535,7 +537,4 @@ Script type of the language, for example, **Hans**. The value complies with the 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
-<!--Device-Locale-script: string--><!--Device-Locale-script: string-End-->
-
 **System capability:** SystemCapability.Global.I18n
-

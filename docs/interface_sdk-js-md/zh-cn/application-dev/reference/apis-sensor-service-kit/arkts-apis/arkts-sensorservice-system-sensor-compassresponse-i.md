@@ -4,11 +4,11 @@
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)
-
-<!--Device-unnamed-export interface CompassResponse--><!--Device-unnamed-export interface CompassResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -30,13 +30,12 @@ direction: number
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** [alpha](arkts-sensorservice-sensor-orientationresponse-i.md#alpha)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-CompassResponse-direction: number--><!--Device-CompassResponse-direction: number-End-->
-
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
-

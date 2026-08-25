@@ -5,13 +5,14 @@
 ## 导入对象
 
 ```ts
-controller: RichEditorStyledStringController = new RichEditorStyledStringController(); ```
+controller: RichEditorStyledStringController = new RichEditorStyledStringController();
+```
 
 **继承/实现关系：** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md) implements StyledStringController
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare class RichEditorStyledStringController--><!--Device-unnamed-declare class RichEditorStyledStringController-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,19 +31,19 @@ getSelection(): RichEditorRange
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RichEditorStyledStringController-getSelection(): RichEditorRange--><!--Device-RichEditorStyledStringController-getSelection(): RichEditorRange-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RichEditorRange](arkts-arkui-richeditorrange-i.md) | 选中区域范围。 <br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| 类型 |
+| --- |
+| [RichEditorRange](arkts-arkui-richeditorrange-i.md) |
 
 ## getStyledString
 
@@ -54,19 +55,19 @@ getStyledString(): MutableStyledString
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RichEditorStyledStringController-getStyledString(): MutableStyledString--><!--Device-RichEditorStyledStringController-getStyledString(): MutableStyledString-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| MutableStyledString | 富文本组件显示的属性字符串。 <br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| 类型 |
+| --- |
+| [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) |
 
 ## onContentChanged
 
@@ -78,19 +79,19 @@ onContentChanged(listener: StyledStringChangedListener): void
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RichEditorStyledStringController-onContentChanged(listener: StyledStringChangedListener): void--><!--Device-RichEditorStyledStringController-onContentChanged(listener: StyledStringChangedListener): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| listener | StyledStringChangedListener | 是 | 文本内容变化回调监听器。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| listener | [StyledStringChangedListener](../arkts-apis/arkts-arkui-textcommon-styledstringchangedlistener-i.md) | 是 |
 
 ## setStyledString
 
@@ -106,17 +107,16 @@ setStyledString(styledString: StyledString): void
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RichEditorStyledStringController-setStyledString(styledString: StyledString): void--><!--Device-RichEditorStyledStringController-setStyledString(styledString: StyledString): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| styledString | StyledString | 是 | 属性字符串。<br/>**说明：** <br/>StyledString的子类 MutableStyledString也可以作为入参值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 |

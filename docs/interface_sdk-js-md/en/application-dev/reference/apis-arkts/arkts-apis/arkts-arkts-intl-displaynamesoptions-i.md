@@ -4,9 +4,7 @@ Options for creating a DisplayNames object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-Intl-export interface DisplayNamesOptions--><!--Device-Intl-export interface DisplayNamesOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,11 +25,9 @@ Fallback option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DisplayNamesOptions-fallback?: DisplayNamesFallback--><!--Device-DisplayNamesOptions-fallback?: DisplayNamesFallback-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -47,11 +43,9 @@ Language display option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DisplayNamesOptions-languageDisplay?: DisplayNamesLanguageDisplay--><!--Device-DisplayNamesOptions-languageDisplay?: DisplayNamesLanguageDisplay-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -67,11 +61,9 @@ Locale matcher option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DisplayNamesOptions-localeMatcher?: RelativeTimeFormatLocaleMatcher--><!--Device-DisplayNamesOptions-localeMatcher?: RelativeTimeFormatLocaleMatcher-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -87,11 +79,9 @@ Style option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DisplayNamesOptions-style?: RelativeTimeFormatStyle--><!--Device-DisplayNamesOptions-style?: RelativeTimeFormatStyle-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -107,11 +97,8 @@ Type option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DisplayNamesOptions-type: DisplayNamesType--><!--Device-DisplayNamesOptions-type: DisplayNamesType-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

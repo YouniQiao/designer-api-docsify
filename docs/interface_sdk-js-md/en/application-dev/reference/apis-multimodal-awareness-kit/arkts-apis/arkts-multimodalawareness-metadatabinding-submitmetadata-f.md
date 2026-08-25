@@ -14,25 +14,25 @@ function submitMetadata(metadata: string): void
 
 Transfers the metadata to be encoded to the MSDP. The MSDP determines whether to transfer the metadata to the system application or service that calls the encoding API.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-metadataBinding-function submitMetadata(metadata: string): void--><!--Device-metadataBinding-function submitMetadata(metadata: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.MultimodalAwareness.MetadataBinding
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| metadata | string | Yes | Metadata to be encoded. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| metadata | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [32100001](../errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
+| Error Code ID |
+| --- |
+| [32100001](../errorcode-metadataBinding.md#32100001-file-creation-failed) |
 
 **Examples**
 
@@ -47,4 +47,3 @@ try {
   console.error("submit metadata error" + error);
 }
 ```
-

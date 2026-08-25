@@ -4,7 +4,7 @@
 
 **起始版本：** 15
 
-<!--Device-adminManager-export enum AdminType--><!--Device-adminManager-export enum AdminType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,7 +18,7 @@ ADMIN_TYPE_NORMAL = 0x00
 
 **起始版本：** 9
 
-<!--Device-AdminType-ADMIN_TYPE_NORMAL = 0x00--><!--Device-AdminType-ADMIN_TYPE_NORMAL = 0x00-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -34,9 +34,8 @@ ADMIN_TYPE_SUPER = 0x01
 
 **起始版本：** 9
 
-<!--Device-AdminType-ADMIN_TYPE_SUPER = 0x01--><!--Device-AdminType-ADMIN_TYPE_SUPER = 0x01-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
-

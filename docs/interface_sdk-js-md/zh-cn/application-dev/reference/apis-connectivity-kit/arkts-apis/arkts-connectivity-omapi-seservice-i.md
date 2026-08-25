@@ -4,7 +4,7 @@ SEService表示可用于连接到系统中所有可用SE的连接（服务），
 
 **起始版本：** 10
 
-<!--Device-omapi-export interface SEService--><!--Device-omapi-export interface SEService-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -24,21 +24,21 @@ getReaders(): Reader[]
 
 **起始版本：** 10
 
-<!--Device-SEService-getReaders(): Reader[]--><!--Device-SEService-getReaders(): Reader[]-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Reader](arkts-connectivity-omapi-reader-i.md)[] | 返回可用Reader对象数组。 |
+| 类型 |
+| --- |
+| [Reader](arkts-connectivity-omapi-reader-i.md)[] |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 **示例**
 
@@ -76,21 +76,21 @@ getVersion(): string
 
 **起始版本：** 10
 
-<!--Device-SEService-getVersion(): string--><!--Device-SEService-getVersion(): string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | OMA版本号（例如，“3.3”表示Open Mobile API规范版本3.3） |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 **示例**
 
@@ -121,21 +121,21 @@ isConnected(): boolean
 
 **起始版本：** 10
 
-<!--Device-SEService-isConnected(): boolean--><!--Device-SEService-isConnected(): boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true: SE服务状态已连接，false: SE服务状态已断开。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 **示例**
 
@@ -170,15 +170,15 @@ shutdown(): void
 
 **起始版本：** 10
 
-<!--Device-SEService-shutdown(): void--><!--Device-SEService-shutdown(): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 **示例**
 
@@ -197,4 +197,3 @@ try {
     hilog.error(0x0000, 'testTag', 'shutdown error %{public}s', JSON.stringify(error));
 }
 ```
-

@@ -4,7 +4,7 @@ Defines the drag preview style for selected text.
 
 **Since:** 23
 
-<!--Device-unnamed-declare interface SelectedDragPreviewStyle--><!--Device-unnamed-declare interface SelectedDragPreviewStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,10 @@ Drag preview color for selected text The default value follows the theme. When t
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-SelectedDragPreviewStyle-color?: ResourceColor--><!--Device-SelectedDragPreviewStyle-color?: ResourceColor-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 Enumerates the strong association types of photos.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-photoAccessHelper-enum StrongAssociationType--><!--Device-photoAccessHelper-enum StrongAssociationType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ NORMAL = 0
 
 Common photo.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-StrongAssociationType-NORMAL = 0--><!--Device-StrongAssociationType-NORMAL = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,11 +34,10 @@ CLOUD_ENHANCEMENT = 1
 
 Cloud-enhanced photo.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-StrongAssociationType-CLOUD_ENHANCEMENT = 1--><!--Device-StrongAssociationType-CLOUD_ENHANCEMENT = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

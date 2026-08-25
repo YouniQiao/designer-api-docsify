@@ -2,9 +2,9 @@
 
 Enumerates call restriction states.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-call-export enum RestrictionStatus--><!--Device-call-export enum RestrictionStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -18,9 +18,9 @@ RESTRICTION_DISABLE = 0
 
 Call restriction disabled.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-RestrictionStatus-RESTRICTION_DISABLE = 0--><!--Device-RestrictionStatus-RESTRICTION_DISABLE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -34,11 +34,10 @@ RESTRICTION_ENABLE = 1
 
 Call restriction enabled.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-RestrictionStatus-RESTRICTION_ENABLE = 1--><!--Device-RestrictionStatus-RESTRICTION_ENABLE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
-

@@ -6,13 +6,12 @@ type CloudAssets = Array<CloudAsset>
 
 Represents an array of CloudAsset.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-cloudExtension-type CloudAssets = Array<CloudAsset>--><!--Device-cloudExtension-type CloudAssets = Array<CloudAsset>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
 
 **Property type:** Array&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;
-

@@ -4,7 +4,7 @@ EAP信息。​**系统能力**​：SystemCapability.Communication.NetManager.E
 
 **起始版本：** 20
 
-<!--Device-eap-interface EapData--><!--Device-eap-interface EapData-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -17,16 +17,16 @@ import { eap } from '@kit.NetworkKit';
 ## bufferLen
 
 ```TypeScript
-bufferLen: int
+bufferLen: number
 ```
 
 数据长度。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 20
 
-<!--Device-EapData-bufferLen: int--><!--Device-EapData-bufferLen: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -42,23 +42,22 @@ eapBuffer: Uint8Array
 
 **起始版本：** 20
 
-<!--Device-EapData-eapBuffer: Uint8Array--><!--Device-EapData-eapBuffer: Uint8Array-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## msgId
 
 ```TypeScript
-msgId: int
+msgId: number
 ```
 
 伪随机数，用于关联处理前后的EAP数据。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 20
 
-<!--Device-EapData-msgId: int--><!--Device-EapData-msgId: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
-

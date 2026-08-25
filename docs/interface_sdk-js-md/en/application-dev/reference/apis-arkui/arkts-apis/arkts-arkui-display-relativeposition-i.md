@@ -2,9 +2,9 @@
 
 Describes a coordinate position in the relative coordinate system, with the origin in the top-left corner of the screen specified by **displayId**.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-display-interface RelativePosition--><!--Device-display-interface RelativePosition-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -22,11 +22,11 @@ displayId: long
 
 Display ID for the relative coordinates. Only integers are supported, and the value must be greater than or equal to 0.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RelativePosition-displayId: long--><!--Device-RelativePosition-displayId: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -40,9 +40,8 @@ Coordinates with the top-left corner of the screen specified by **displayId** as
 
 **Type:** Position
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RelativePosition-position: Position--><!--Device-RelativePosition-position: Position-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
-

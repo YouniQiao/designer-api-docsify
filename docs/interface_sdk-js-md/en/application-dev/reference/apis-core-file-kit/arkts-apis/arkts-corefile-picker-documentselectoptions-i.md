@@ -4,9 +4,9 @@ Defines the options for selecting documents.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-picker-interface DocumentSelectOptions--><!--Device-picker-interface DocumentSelectOptions-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -15,4 +15,3 @@ Defines the options for selecting documents.
 ```TypeScript
 import { picker } from '@kit.CoreFileKit';
 ```
-

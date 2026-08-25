@@ -2,9 +2,9 @@
 
 euicc信息。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-eSIM-export interface EuiccInfo--><!--Device-eSIM-export interface EuiccInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -26,11 +26,10 @@ osVersion: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-EuiccInfo-osVersion: string--><!--Device-EuiccInfo-osVersion: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
-

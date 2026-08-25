@@ -16,13 +16,13 @@ Obtains the Wi-Fi hotspot configuration.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getHotspotConfig](arkts-connectivity-wifimanager-gethotspotconfig-f-sys.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
-
-<!--Device-wifi-function getHotspotConfig(): HotspotConfig--><!--Device-wifi-function getHotspotConfig(): HotspotConfig-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -30,9 +30,9 @@ Obtains the Wi-Fi hotspot configuration.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| HotspotConfig | Returns the configuration of an existing or enabled Wi-Fi hotspot. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [HotspotConfig](arkts-connectivity-wifi-hotspotconfig-i-sys.md) |
 
 **Examples**
 
@@ -46,4 +46,3 @@ try {
     console.error("failed:" + JSON.stringify(error));
 }
 ```
-

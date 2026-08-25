@@ -8,11 +8,11 @@ Enumerates the ability launch modes.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [LaunchType](arkts-ability-bundlemanager-launchtype-e.md)
-
-<!--Device-bundle-export enum LaunchMode--><!--Device-bundle-export enum LaunchMode-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -26,11 +26,11 @@ The ability has only one instance.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [SINGLETON](arkts-ability-bundlemanager-launchtype-e.md#singleton)
-
-<!--Device-LaunchMode-SINGLETON = 0--><!--Device-LaunchMode-SINGLETON = 0-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -44,11 +44,10 @@ The ability can have multiple instances.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [MULTITON](arkts-ability-bundlemanager-launchtype-e.md#multiton)
 
-<!--Device-LaunchMode-STANDARD = 1--><!--Device-LaunchMode-STANDARD = 1-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework
-

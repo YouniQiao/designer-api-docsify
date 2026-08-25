@@ -12,9 +12,9 @@
 > !
 > [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-text-interface TypographicBounds--><!--Device-text-interface TypographicBounds-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -32,13 +32,13 @@ ascent: double
 
 文本行的上升高度，浮点数，单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TypographicBounds-ascent: double--><!--Device-TypographicBounds-ascent: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -50,13 +50,13 @@ descent: double
 
 文本行的下降高度，浮点数，单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TypographicBounds-descent: double--><!--Device-TypographicBounds-descent: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -68,13 +68,13 @@ leading: double
 
 文本行的行间距，浮点数，单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TypographicBounds-leading: double--><!--Device-TypographicBounds-leading: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -86,13 +86,12 @@ width: double
 
 排版边界的总宽度，浮点数，单位为物理像素px。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
-<!--Device-TypographicBounds-width: double--><!--Device-TypographicBounds-width: double-End-->
-
 **系统能力：** SystemCapability.Graphics.Drawing
-

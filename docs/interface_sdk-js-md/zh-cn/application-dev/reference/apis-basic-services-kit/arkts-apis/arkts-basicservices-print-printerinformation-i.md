@@ -2,9 +2,9 @@
 
 定义打印机信息的接口。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-print-interface PrinterInformation--><!--Device-print-interface PrinterInformation-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -24,9 +24,9 @@ alias?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-PrinterInformation-alias?: string--><!--Device-PrinterInformation-alias?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -40,9 +40,9 @@ capability?: PrinterCapabilities
 
 **类型：** [PrinterCapabilities](arkts-basicservices-print-printercapabilities-i.md)
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-PrinterInformation-capability?: PrinterCapabilities--><!--Device-PrinterInformation-capability?: PrinterCapabilities-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -56,9 +56,9 @@ description?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-PrinterInformation-description?: string--><!--Device-PrinterInformation-description?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -72,9 +72,9 @@ options?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-PrinterInformation-options?: string--><!--Device-PrinterInformation-options?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -88,9 +88,9 @@ preferences?: PrinterPreferences
 
 **类型：** [PrinterPreferences](arkts-basicservices-print-printerpreferences-i.md)
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-PrinterInformation-preferences?: PrinterPreferences--><!--Device-PrinterInformation-preferences?: PrinterPreferences-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -104,9 +104,9 @@ printerId: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-PrinterInformation-printerId: string--><!--Device-PrinterInformation-printerId: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -120,9 +120,9 @@ printerMake?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-PrinterInformation-printerMake?: string--><!--Device-PrinterInformation-printerMake?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -136,9 +136,9 @@ printerName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-PrinterInformation-printerName: string--><!--Device-PrinterInformation-printerName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -152,9 +152,9 @@ printerStatus: PrinterStatus
 
 **类型：** [PrinterStatus](arkts-basicservices-print-printerstatus-e.md)
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-PrinterInformation-printerStatus: PrinterStatus--><!--Device-PrinterInformation-printerStatus: PrinterStatus-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -171,9 +171,9 @@ selectedDriver?: PpdInfo
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-PrinterInformation-selectedDriver?: PpdInfo--><!--Device-PrinterInformation-selectedDriver?: PpdInfo-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -190,9 +190,9 @@ selectedProtocol?: string
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-PrinterInformation-selectedProtocol?: string--><!--Device-PrinterInformation-selectedProtocol?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -206,9 +206,8 @@ uri?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-PrinterInformation-uri?: string--><!--Device-PrinterInformation-uri?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
-

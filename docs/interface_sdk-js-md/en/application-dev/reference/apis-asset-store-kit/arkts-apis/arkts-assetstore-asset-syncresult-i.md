@@ -4,7 +4,7 @@ Represents the sync result of an asset.
 
 **Since:** 20
 
-<!--Device-asset-interface SyncResult--><!--Device-asset-interface SyncResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -26,7 +26,7 @@ Number of assets that fail to be synced.
 
 **Since:** 20
 
-<!--Device-SyncResult-readonly failedCount?: number--><!--Device-SyncResult-readonly failedCount?: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -42,7 +42,7 @@ Sync result code of an asset. If the sync is successful, the result code is **0*
 
 **Since:** 20
 
-<!--Device-SyncResult-readonly resultCode: number--><!--Device-SyncResult-readonly resultCode: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -58,7 +58,6 @@ Total number of assets to be synced.
 
 **Since:** 20
 
-<!--Device-SyncResult-readonly totalCount?: number--><!--Device-SyncResult-readonly totalCount?: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Security.Asset
-

@@ -8,11 +8,10 @@ Defines an HTTP request, which can be created using [http.createHttp](arkts-netw
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-connection-type HttpRequest = http.HttpRequest--><!--Device-connection-type HttpRequest = http.HttpRequest-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Property type:** http.HttpRequest
-

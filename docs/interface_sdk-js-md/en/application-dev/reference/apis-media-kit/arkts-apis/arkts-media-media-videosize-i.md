@@ -4,7 +4,7 @@ Describes the video Dimensions.
 
 **Since:** 26.0.0
 
-<!--Device-media-interface VideoSize--><!--Device-media-interface VideoSize-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -22,13 +22,13 @@ height?: int
 
 height of the video resolution. The value should be an integer.Value constraint:The value must be a positive integer. <br>Unit:Pixel.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-VideoSize-height?: int--><!--Device-VideoSize-height?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -40,13 +40,12 @@ width?: int
 
 width of the video resolution. The value should be an integer.Value constraint:The value must be a positive integer. <br>Unit:Pixel.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-VideoSize-width?: int--><!--Device-VideoSize-width?: int-End-->
-
 **System capability:** SystemCapability.Multimedia.Media.Core
-

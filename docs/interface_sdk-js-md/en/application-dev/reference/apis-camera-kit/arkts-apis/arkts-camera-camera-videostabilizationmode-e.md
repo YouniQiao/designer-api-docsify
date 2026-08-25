@@ -2,9 +2,9 @@
 
 Enumerates the video stabilization modes.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-camera-enum VideoStabilizationMode--><!--Device-camera-enum VideoStabilizationMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -16,11 +16,11 @@ OFF = 0
 
 Video stabilization is disabled.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-VideoStabilizationMode-OFF = 0--><!--Device-VideoStabilizationMode-OFF = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -32,11 +32,11 @@ LOW = 1
 
 The basic video stabilization algorithm is used.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-VideoStabilizationMode-LOW = 1--><!--Device-VideoStabilizationMode-LOW = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -48,11 +48,11 @@ MIDDLE = 2
 
 A video stabilization algorithm with a stabilization effect better than that of the **LOW** type is used.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-VideoStabilizationMode-MIDDLE = 2--><!--Device-VideoStabilizationMode-MIDDLE = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -64,11 +64,11 @@ HIGH = 3
 
 A video stabilization algorithm with a stabilization effect better than that of the **MIDDLE** type is used.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-VideoStabilizationMode-HIGH = 3--><!--Device-VideoStabilizationMode-HIGH = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -80,11 +80,10 @@ AUTO = 4
 
 The system automatically selects a video stabilization algorithm.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-VideoStabilizationMode-AUTO = 4--><!--Device-VideoStabilizationMode-AUTO = 4-End-->
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
-

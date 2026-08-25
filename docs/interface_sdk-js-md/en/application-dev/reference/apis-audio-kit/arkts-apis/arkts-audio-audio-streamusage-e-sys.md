@@ -2,9 +2,9 @@
 
 Enumerates the types of audio streams played.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-audio-enum StreamUsage--><!--Device-audio-enum StreamUsage-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -16,9 +16,9 @@ STREAM_USAGE_SYSTEM = 9
 
 System usage, such as screen lock or key click.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-StreamUsage-STREAM_USAGE_SYSTEM = 9--><!--Device-StreamUsage-STREAM_USAGE_SYSTEM = 9-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -32,9 +32,9 @@ STREAM_USAGE_DTMF = 14
 
 DTMF dial tone usage.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-StreamUsage-STREAM_USAGE_DTMF = 14--><!--Device-StreamUsage-STREAM_USAGE_DTMF = 14-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -48,9 +48,9 @@ STREAM_USAGE_ENFORCED_TONE = 15
 
 Enforced tone usage, such as camera shutter.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-StreamUsage-STREAM_USAGE_ENFORCED_TONE = 15--><!--Device-StreamUsage-STREAM_USAGE_ENFORCED_TONE = 15-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -64,9 +64,9 @@ STREAM_USAGE_ULTRASONIC = 16
 
 Ultrasonic playing usage. This type is only used for msdp condition.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-StreamUsage-STREAM_USAGE_ULTRASONIC = 16--><!--Device-StreamUsage-STREAM_USAGE_ULTRASONIC = 16-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -80,9 +80,9 @@ STREAM_USAGE_VOICE_CALL_ASSISTANT = 21
 
 Voice call assistant type. This type is only used for call assistant functionalities.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-StreamUsage-STREAM_USAGE_VOICE_CALL_ASSISTANT = 21--><!--Device-StreamUsage-STREAM_USAGE_VOICE_CALL_ASSISTANT = 21-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -98,9 +98,9 @@ Announcement usage.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-StreamUsage-STREAM_USAGE_ANNOUNCEMENT = 22--><!--Device-StreamUsage-STREAM_USAGE_ANNOUNCEMENT = 22-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -116,9 +116,9 @@ Emergency usage.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-StreamUsage-STREAM_USAGE_EMERGENCY = 23--><!--Device-StreamUsage-STREAM_USAGE_EMERGENCY = 23-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -134,13 +134,12 @@ Voice assistant broadcast usage for system app.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-StreamUsage-STREAM_USAGE_VOICE_ASSISTANT_SYSTEM = 27--><!--Device-StreamUsage-STREAM_USAGE_VOICE_ASSISTANT_SYSTEM = 27-End-->
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
-

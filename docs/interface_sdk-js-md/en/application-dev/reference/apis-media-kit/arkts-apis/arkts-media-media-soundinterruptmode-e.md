@@ -4,7 +4,7 @@ Enumerates the interruption modes of the audio files with the same ID in SoundPo
 
 **Since:** 23
 
-<!--Device-media-enum SoundInterruptMode--><!--Device-media-enum SoundInterruptMode-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -18,9 +18,9 @@ If the former audio file is not completely played, the latter audio file with th
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-SoundInterruptMode-NO_INTERRUPT = 0--><!--Device-SoundInterruptMode-NO_INTERRUPT = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -34,9 +34,8 @@ If the former audio file is not completely played, the latter audio file with th
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SoundInterruptMode-SAME_SOUND_INTERRUPT = 1--><!--Device-SoundInterruptMode-SAME_SOUND_INTERRUPT = 1-End-->
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
-

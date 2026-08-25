@@ -2,9 +2,9 @@
 
 The **UserStatus** module, designed for user state awareness, empowers the system to perceive specific conditions of users, such as determining their age group or recognizing environmental sounds, among other functions.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-unnamed-declare namespace userStatus--><!--Device-unnamed-declare namespace userStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -18,59 +18,58 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [off_userAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md) | Disables the age group detection function. |
-| [offUserAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md) | Unsubscribe to age group detection feature. |
-| [on_userAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md) | Enables the age group detection function.When the function is enabled, the application can recommend content based on the age group detection result. |
-| [onUserAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md) | Subscribe to age group detection feature. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [off](arkts-multimodalawareness-userstatus-off-f.md#offuseragegroupdetected) |
+| [offUserAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md) |
+| [on](arkts-multimodalawareness-userstatus-on-f.md#onuseragegroupdetected) |
+| [onUserAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md) |
 
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [configure](arkts-multimodalawareness-userstatus-configure-f-sys.md) | Configures feature parameters. |
-| [queryCapabilities](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md) | Queries device-supported atomic capabilities. |
-| [subscribe](arkts-multimodalawareness-userstatus-subscribe-f-sys.md) | Subscribes to user status monitoring. |
-| [unsubscribe](arkts-multimodalawareness-userstatus-unsubscribe-f-sys.md) | Unsubscribes from user status monitoring. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [configure](arkts-multimodalawareness-userstatus-configure-f-sys.md) |
+| [queryCapabilities](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md) |
+| [subscribe](arkts-multimodalawareness-userstatus-subscribe-f-sys.md) |
+| [unsubscribe](arkts-multimodalawareness-userstatus-unsubscribe-f-sys.md) |
 <!--DelEnd-->
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [UserClassification](arkts-multimodalawareness-userstatus-userclassification-i.md) | Defines the user age group detection result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [UserClassification](arkts-multimodalawareness-userstatus-userclassification-i.md) |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [ComfortReminderData](arkts-multimodalawareness-userstatus-comfortreminderdata-i-sys.md) | Defines comfort reminder data. |
-| [DeviceInfo](arkts-multimodalawareness-userstatus-deviceinfo-i-sys.md) | Defines device information. |
-| [UserBlowData](arkts-multimodalawareness-userstatus-userblowdata-i-sys.md) | Defines user blow data. |
-| [UserEmotionData](arkts-multimodalawareness-userstatus-useremotiondata-i-sys.md) | Defines user emotion data. |
-| [UserFaceAngleData](arkts-multimodalawareness-userstatus-userfaceangledata-i-sys.md) | Defines user face angle data. |
-| [UserFacesData](arkts-multimodalawareness-userstatus-userfacesdata-i-sys.md) | Defines user face data. |
-| [UserGesturesData](arkts-multimodalawareness-userstatus-usergesturesdata-i-sys.md) | Defines user gesture data. |
-| [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md) | Defines user status data. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ComfortReminderData](arkts-multimodalawareness-userstatus-comfortreminderdata-i-sys.md) |
+| [DeviceInfo](arkts-multimodalawareness-userstatus-deviceinfo-i-sys.md) |
+| [UserBlowData](arkts-multimodalawareness-userstatus-userblowdata-i-sys.md) |
+| [UserEmotionData](arkts-multimodalawareness-userstatus-useremotiondata-i-sys.md) |
+| [UserFaceAngleData](arkts-multimodalawareness-userstatus-userfaceangledata-i-sys.md) |
+| [UserFacesData](arkts-multimodalawareness-userstatus-userfacesdata-i-sys.md) |
+| [UserGesturesData](arkts-multimodalawareness-userstatus-usergesturesdata-i-sys.md) |
+| [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md) |
 <!--DelEnd-->
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [UserAgeGroup](arkts-multimodalawareness-userstatus-useragegroup-e.md) | Enumerates the user age groups, for example, child or adult. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [UserAgeGroup](arkts-multimodalawareness-userstatus-useragegroup-e.md) |
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [DeviceType](arkts-multimodalawareness-userstatus-devicetype-e-sys.md) | Enumerates device types. |
-| [ReminderLevel](arkts-multimodalawareness-userstatus-reminderlevel-e-sys.md) | Enumerates comfort reminder levels required for triggering specific alert ringtones. |
-| [UserStatusAtomicCap](arkts-multimodalawareness-userstatus-userstatusatomiccap-e-sys.md) | Enumerates user status atomic capabilities. |
-| [UserStatusFeature](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md) | Enumerates user status detection features. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DeviceType](arkts-multimodalawareness-userstatus-devicetype-e-sys.md) |
+| [ReminderLevel](arkts-multimodalawareness-userstatus-reminderlevel-e-sys.md) |
+| [UserStatusAtomicCap](arkts-multimodalawareness-userstatus-userstatusatomiccap-e-sys.md) |
+| [UserStatusFeature](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md) |
 <!--DelEnd-->
-

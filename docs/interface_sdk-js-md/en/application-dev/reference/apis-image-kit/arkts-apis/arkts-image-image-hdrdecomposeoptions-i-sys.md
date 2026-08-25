@@ -4,7 +4,7 @@ Describes the options for decomposing an HDR Pixelmap to a Picture containing an
 
 **Since:** 26.0.0
 
-<!--Device-image-interface HdrDecomposeOptions--><!--Device-image-interface HdrDecomposeOptions-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -28,9 +28,9 @@ Indicates the pixel format of the decomposed SDR Pixelmap and the gainmap. The f
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-HdrDecomposeOptions-desiredPixelFormat?: PixelMapFormat--><!--Device-HdrDecomposeOptions-desiredPixelFormat?: PixelMapFormat-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -48,11 +48,10 @@ Indicates generating a full-size gainmap or a 1/2 downscaled gainmap. Default va
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-HdrDecomposeOptions-isFullSizeGainmap?: boolean--><!--Device-HdrDecomposeOptions-isFullSizeGainmap?: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **System API:** This is a system API.
-

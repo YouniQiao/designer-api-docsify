@@ -14,25 +14,25 @@ function getTransientTaskInfo(): Promise<TransientTaskInfo>
 
 Obtains all transient task information, including the remaining quota of the current day. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-backgroundTaskManager-function getTransientTaskInfo(): Promise<TransientTaskInfo>--><!--Device-backgroundTaskManager-function getTransientTaskInfo(): Promise<TransientTaskInfo>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[TransientTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-transienttaskinfo-i.md)&gt; | Promise that returns all transient task information. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[TransientTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-transienttaskinfo-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [9900001](../errorcode-backgroundTaskMgr.md#9900001-caller-information-verification-failure-for-a-transient-task) | Caller information verification failed for a transient task. |
-| [9900003](../errorcode-backgroundTaskMgr.md#9900003-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; <br> 2. Failed to apply for memory. |
-| [9900004](../errorcode-backgroundTaskMgr.md#9900004-system-service-failure) | System service operation failed. |
+| Error Code ID |
+| --- |
+| [9900001](../errorcode-backgroundTaskMgr.md#9900001-caller-information-verification-failure-for-a-transient-task) |
+| [9900003](../errorcode-backgroundTaskMgr.md#9900003-parcel-operation-failure) |
+| [9900004](../errorcode-backgroundTaskMgr.md#9900004-system-service-failure) |
 
 **Examples**
 
@@ -50,4 +50,3 @@ try {
   console.error(`Operation getTransientTaskInfo failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
 }
 ```
-

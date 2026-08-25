@@ -4,7 +4,7 @@ Title height.@enum { number }
 
 **Since:** 9
 
-<!--Device-unnamed-declare enum TitleHeight--><!--Device-unnamed-declare enum TitleHeight-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ Title height when only main title is available.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-TitleHeight-MainOnly--><!--Device-TitleHeight-MainOnly-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,8 @@ Title height when main title and subtitle are both available.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-TitleHeight-MainWithSub--><!--Device-TitleHeight-MainWithSub-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

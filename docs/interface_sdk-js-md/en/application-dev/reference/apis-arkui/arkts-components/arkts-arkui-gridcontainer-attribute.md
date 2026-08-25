@@ -6,11 +6,11 @@ Defines the grid container attribute from inheritance Column@extends ColumnAttri
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-**Substitutes:** grid_col/GridColAttribute and grid_row/GridRowAttribute
-
-<!--Device-unnamed-declare class GridContainerAttribute--><!--Device-unnamed-declare class GridContainerAttribute-End-->
+**Substitutes:** [grid_col/GridColAttribute](arkts-arkui-gridcol-attribute.md#gridcolattribute)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,4 +18,3 @@ Defines the grid container attribute from inheritance Column@extends ColumnAttri
 
 ```TypeScript
 ```
-

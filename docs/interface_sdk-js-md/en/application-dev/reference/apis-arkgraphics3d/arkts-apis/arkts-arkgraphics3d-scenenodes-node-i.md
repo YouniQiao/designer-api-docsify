@@ -4,9 +4,9 @@ The 3D scene consists of nodes in a tree hierarchy, where each node implements a
 
 **Inheritance/Implementation:** Node extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface Node--><!--Device-unnamed-export interface Node-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,23 +18,23 @@ getNodeByPath(path: string): Node | null
 
 Obtains a node by path. If no node is obtained, null is returned.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Node-getNodeByPath(path: string): Node | null--><!--Device-Node-getNodeByPath(path: string): Node | null-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| path | string | Yes | Path in the scene node tree. Each layer is separated by a slash (/). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [path](#path) | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Returns the node object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null |
 
 **Examples**
 
@@ -63,9 +63,9 @@ Child node of the node and null if it does not exist. This is a read-only proper
 
 **Type:** [Container](arkts-arkgraphics3d-scenenodes-container-i.md)&lt;[Node](arkts-arkgraphics3d-scenenodes-node-i.md)&gt;
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Node-readonly children: Container<Node>--><!--Device-Node-readonly children: Container<Node>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -79,9 +79,9 @@ Layer mask of a node.
 
 **Type:** [LayerMask](arkts-arkgraphics3d-scenenodes-layermask-i.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Node-readonly layerMask: LayerMask--><!--Device-Node-readonly layerMask: LayerMask-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -95,9 +95,9 @@ Node type.
 
 **Type:** [NodeType](arkts-arkgraphics3d-scenenodes-nodetype-e.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Node-readonly nodeType: NodeType--><!--Device-Node-readonly nodeType: NodeType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -111,9 +111,9 @@ Parent node of the node and null if it does not exist.
 
 **Type:** [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Node-readonly parent: Node | null--><!--Device-Node-readonly parent: Node | null-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -127,9 +127,9 @@ Node path.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Node-readonly path: string--><!--Device-Node-readonly path: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -143,9 +143,9 @@ Node position, in scene units of the world coordinate system (for example, cm, m
 
 **Type:** [Position3](arkts-arkgraphics3d-position3-t.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Node-position: Position3--><!--Device-Node-position: Position3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -159,9 +159,9 @@ Rotation angle of a node.
 
 **Type:** [Quaternion](arkts-arkgraphics3d-scenetypes-quaternion-i.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Node-rotation: Quaternion--><!--Device-Node-rotation: Quaternion-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -175,9 +175,9 @@ Node scale.
 
 **Type:** [Scale3](arkts-arkgraphics3d-scale3-t.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Node-scale: Scale3--><!--Device-Node-scale: Scale3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -191,9 +191,8 @@ Whether a node is visible. true if visible, false otherwise.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Node-visible: boolean--><!--Device-Node-visible: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

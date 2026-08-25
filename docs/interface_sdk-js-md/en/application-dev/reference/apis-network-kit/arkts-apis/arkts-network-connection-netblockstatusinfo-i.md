@@ -2,9 +2,9 @@
 
 Obtains the network block status information.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-connection-export interface NetBlockStatusInfo--><!--Device-connection-export interface NetBlockStatusInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -24,9 +24,9 @@ Whether the current network is blocked. The value **true** indicates that the ne
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NetBlockStatusInfo-blocked: boolean--><!--Device-NetBlockStatusInfo-blocked: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -40,9 +40,8 @@ Network handle.
 
 **Type:** NetHandle
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-NetBlockStatusInfo-netHandle: NetHandle--><!--Device-NetBlockStatusInfo-netHandle: NetHandle-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
-

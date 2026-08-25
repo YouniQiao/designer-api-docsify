@@ -4,7 +4,7 @@ Enumeration of MemberPurchaseType.@enum { string }
 
 **Since:** 23
 
-<!--Device-avMusicTemplate-enum MemberPurchaseType--><!--Device-avMusicTemplate-enum MemberPurchaseType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -18,9 +18,9 @@ normal.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-MemberPurchaseType-NORMAL = 'normal'--><!--Device-MemberPurchaseType-NORMAL = 'normal'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -34,9 +34,8 @@ banner.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MemberPurchaseType-BANNER = 'banner'--><!--Device-MemberPurchaseType-BANNER = 'banner'-End-->
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-

@@ -4,7 +4,7 @@ Describe the GET_REPORT data is received from remote host.
 
 **Since:** 23
 
-<!--Device-hid-interface GetReportData--><!--Device-hid-interface GetReportData-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -17,36 +17,36 @@ import { hid } from '@kit.ConnectivityKit';
 ## bufferSize
 
 ```TypeScript
-bufferSize: int
+bufferSize: number
 ```
 
 bufferSize of GET_REPORT data, maximum number of octets to transfer during data phase.
 
-**Type:** int
+**Type:** number
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-GetReportData-bufferSize: int--><!--Device-GetReportData-bufferSize: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## id
 
 ```TypeScript
-id: int
+id: number
 ```
 
 id of GET_REPORT data.
 
-**Type:** int
+**Type:** number
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
-<!--Device-GetReportData-id: int--><!--Device-GetReportData-id: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -62,9 +62,8 @@ reportType of GET_REPORT data.
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-GetReportData-type: ReportType--><!--Device-GetReportData-type: ReportType-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

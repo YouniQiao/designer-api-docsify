@@ -2,9 +2,9 @@
 
 USB key PIN authentication request.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-certificateManagerDialog-export interface UkeyAuthRequest--><!--Device-certificateManagerDialog-export interface UkeyAuthRequest-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
@@ -24,11 +24,10 @@ Unique identifier of the USB Key credential. The value contains up to 256 bytes.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UkeyAuthRequest-keyUri: string--><!--Device-UkeyAuthRequest-keyUri: string-End-->
-
 **System capability:** SystemCapability.Security.CertificateManagerDialog
-

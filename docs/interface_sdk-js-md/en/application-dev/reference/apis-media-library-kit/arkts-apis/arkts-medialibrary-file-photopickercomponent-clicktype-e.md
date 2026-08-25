@@ -4,7 +4,7 @@ Enumerates the click operation types.
 
 **Since:** 12
 
-<!--Device-unnamed-export declare enum ClickType--><!--Device-unnamed-export declare enum ClickType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ Select (select an image or click a camera item).
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-ClickType-SELECTED = 0--><!--Device-ClickType-SELECTED = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,8 @@ Deselect (deselect an image).
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ClickType-DESELECTED = 1--><!--Device-ClickType-DESELECTED = 1-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

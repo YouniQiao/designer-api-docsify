@@ -8,16 +8,16 @@ type OnConnectFn = (elementName: ElementName, remote: rpc.IRemoteObject) => void
 
 **起始版本：** 23
 
-<!--Device-unnamed-type OnConnectFn = (elementName: ElementName, remote: rpc.IRemoteObject) => void--><!--Device-unnamed-type OnConnectFn = (elementName: ElementName, remote: rpc.IRemoteObject) => void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| elementName | [ElementName](arkts-ability-elementname-i.md) | 是 | 目标Ability的elementName。 |
-| remote | rpc.IRemoteObject | 是 | 用于与目标Ability进行IPC通信的IRemoteObject实例。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| elementName | [ElementName](arkts-ability-elementname-i.md) | 是 |
+| [remote](../../apis-driver-development-kit/arkts-apis/arkts-driverdevelopment-devicemanager-remotedevicedriver-i.md) | rpc.IRemoteObject | 是 |
 
 **示例**
 
@@ -52,4 +52,3 @@ class EntryAbility extends UIAbility {
   }
 }
 ```
-

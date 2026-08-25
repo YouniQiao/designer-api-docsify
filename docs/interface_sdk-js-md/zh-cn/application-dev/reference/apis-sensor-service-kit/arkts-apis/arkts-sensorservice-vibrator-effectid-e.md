@@ -7,9 +7,9 @@
 > [vibrator.isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md)&lt;
 &gt; sup&gt;10+&lt;/sup&gt;或[vibrator.isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md)接口查询当前设备是否支持该预置效果。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-vibrator-enum EffectId--><!--Device-vibrator-enum EffectId-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -21,9 +21,8 @@ EFFECT_CLOCK_TIMER = 'haptic.clock.timer'
 
 描述用户调整计时器时的振动效果。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-EffectId-EFFECT_CLOCK_TIMER = 'haptic.clock.timer'--><!--Device-EffectId-EFFECT_CLOCK_TIMER = 'haptic.clock.timer'-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
-

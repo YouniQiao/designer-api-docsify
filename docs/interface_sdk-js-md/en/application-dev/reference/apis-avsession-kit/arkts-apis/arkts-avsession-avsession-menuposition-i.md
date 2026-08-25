@@ -2,9 +2,9 @@
 
 Position definition of one component on which the menu will bind and popup.
 
-**Since:** 24
+**Since:** 22
 
-<!--Device-avSession-interface MenuPosition--><!--Device-avSession-interface MenuPosition-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -22,13 +22,13 @@ height: int
 
 Component height, uint is vp.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 24
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 24.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
-<!--Device-MenuPosition-height: int--><!--Device-MenuPosition-height: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -40,13 +40,13 @@ width: int
 
 Component width, uint is vp.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 24
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 24.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
-<!--Device-MenuPosition-width: int--><!--Device-MenuPosition-width: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -58,13 +58,13 @@ x: int
 
 Coordinate x of the position of the component, uint is vp.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 24
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 24.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
-<!--Device-MenuPosition-x: int--><!--Device-MenuPosition-x: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -76,13 +76,12 @@ y: int
 
 Coordinate y of the position of the component, uint is vp.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 24
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 24.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
-<!--Device-MenuPosition-y: int--><!--Device-MenuPosition-y: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
-

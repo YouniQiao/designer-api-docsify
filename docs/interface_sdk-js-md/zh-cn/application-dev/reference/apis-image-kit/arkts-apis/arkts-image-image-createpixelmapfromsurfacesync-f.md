@@ -14,32 +14,32 @@ function createPixelMapFromSurfaceSync(surfaceId: string, region: Region): Pixel
 
 Creates a PixelMap object from surface id.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-image-function createPixelMapFromSurfaceSync(surfaceId: string, region: Region): PixelMap--><!--Device-image-function createPixelMapFromSurfaceSync(surfaceId: string, region: Region): PixelMap-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| surfaceId | string | 是 | surface id. |
-| region | Region | 是 | The region to surface. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| surfaceId | string | 是 |
+| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| PixelMap | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
+| 类型 |
+| --- |
+| [PixelMap](arkts-image-image-pixelmap-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980105](../errorcode-image.md#62980105-图片获取数据错误) | Failed to get the data. |
-| [62980178](../errorcode-image.md#62980178-pixelmap创建失败) | Failed to create the PixelMap. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [62980105](../errorcode-image.md#62980105-图片获取数据错误) |
+| [62980178](../errorcode-image.md#62980178-pixelmap创建失败) |
 
 **示例**
 
@@ -112,33 +112,32 @@ function createPixelMapFromSurfaceSync(surfaceId: string): PixelMap
 
 Creates a PixelMap object from surface id.
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-image-function createPixelMapFromSurfaceSync(surfaceId: string): PixelMap--><!--Device-image-function createPixelMapFromSurfaceSync(surfaceId: string): PixelMap-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| surfaceId | string | 是 | surface id. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| surfaceId | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| PixelMap | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
+| 类型 |
+| --- |
+| [PixelMap](arkts-image-image-pixelmap-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980105](../errorcode-image.md#62980105-图片获取数据错误) | Failed to get the data. |
-| [62980178](../errorcode-image.md#62980178-pixelmap创建失败) | Failed to create the PixelMap. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [62980105](../errorcode-image.md#62980105-图片获取数据错误) |
+| [62980178](../errorcode-image.md#62980178-pixelmap创建失败) |
 
 **示例**
 
 参见 [createPixelMapFromSurfaceSync](#createpixelmapfromsurfacesync)
-

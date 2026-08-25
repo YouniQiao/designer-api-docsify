@@ -4,7 +4,7 @@ WebSocket连接成功后的详细信息。
 
 **起始版本：** 26.0.0
 
-<!--Device-webSocket-export interface WebSocketOpenInfo--><!--Device-webSocket-export interface WebSocketOpenInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -26,9 +26,9 @@ message: string
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-WebSocketOpenInfo-message: string--><!--Device-WebSocketOpenInfo-message: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -44,27 +44,26 @@ protocol?: string
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-WebSocketOpenInfo-protocol?: string--><!--Device-WebSocketOpenInfo-protocol?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## status
 
 ```TypeScript
-status: int
+status: number
 ```
 
 服务器返回的状态码。例如：101表示建链成功并升级为websocket协议。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-WebSocketOpenInfo-status: int--><!--Device-WebSocketOpenInfo-status: int-End-->
-
 **系统能力：** SystemCapability.Communication.NetStack
-

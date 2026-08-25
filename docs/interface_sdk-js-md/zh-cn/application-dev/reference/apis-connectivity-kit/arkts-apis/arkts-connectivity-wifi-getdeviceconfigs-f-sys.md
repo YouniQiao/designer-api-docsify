@@ -16,13 +16,13 @@ function getDeviceConfigs(): Array<WifiDeviceConfig>
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [getDeviceConfigs](arkts-connectivity-wifimanager-getdeviceconfigs-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.GET_WIFI_CONFIG
-
-<!--Device-wifi-function getDeviceConfigs(): Array<WifiDeviceConfig>--><!--Device-wifi-function getDeviceConfigs(): Array<WifiDeviceConfig>-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -30,9 +30,9 @@ function getDeviceConfigs(): Array<WifiDeviceConfig>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;WifiDeviceConfig&gt; | 网络配置信息的数组。 |
+| 类型 |
+| --- |
+| Array & lt;WifiDeviceConfig & gt; |
 
 **示例**
 
@@ -46,4 +46,3 @@ try {
     console.error("failed:" + JSON.stringify(error));
 }
 ```
-

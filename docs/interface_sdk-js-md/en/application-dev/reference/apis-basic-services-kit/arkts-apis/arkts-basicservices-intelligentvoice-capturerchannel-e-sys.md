@@ -2,9 +2,9 @@
 
 Enumerates capturer channel. @enum {number}
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-intelligentVoice-enum CapturerChannel--><!--Device-intelligentVoice-enum CapturerChannel-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -18,9 +18,9 @@ CAPTURER_CHANNEL_1 = 0x1 << 0
 
 Capturer channel 1.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-CapturerChannel-CAPTURER_CHANNEL_1 = 0x1 << 0--><!--Device-CapturerChannel-CAPTURER_CHANNEL_1 = 0x1 << 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -34,9 +34,9 @@ CAPTURER_CHANNEL_2 = 0x1 << 1
 
 Capturer channel 2.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-CapturerChannel-CAPTURER_CHANNEL_2 = 0x1 << 1--><!--Device-CapturerChannel-CAPTURER_CHANNEL_2 = 0x1 << 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -50,9 +50,9 @@ CAPTURER_CHANNEL_3 = 0x1 << 2
 
 Capturer channel 3.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-CapturerChannel-CAPTURER_CHANNEL_3 = 0x1 << 2--><!--Device-CapturerChannel-CAPTURER_CHANNEL_3 = 0x1 << 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -66,11 +66,10 @@ CAPTURER_CHANNEL_4 = 0x1 << 3
 
 Capturer channel 4.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-CapturerChannel-CAPTURER_CHANNEL_4 = 0x1 << 3--><!--Device-CapturerChannel-CAPTURER_CHANNEL_4 = 0x1 << 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
-

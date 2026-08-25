@@ -16,21 +16,21 @@ function readNdefTag(): Promise<string>
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [read](arkts-connectivity-connectedtag-read-f.md)
 
 **需要权限：** ohos.permission.NFC_TAG
 
-<!--Device-connectedTag-function readNdefTag(): Promise<string>--><!--Device-connectedTag-function readNdefTag(): Promise<string>-End-->
-
 **系统能力：** SystemCapability.Communication.ConnectedTag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回读取有源标签内容的列表。 |
+| 类型 |
+| --- |
+| Promise & lt;string & gt; |
 
 **示例**
 
@@ -68,23 +68,22 @@ function readNdefTag(callback: AsyncCallback<string>): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [read](arkts-connectivity-connectedtag-read-f.md)
 
 **需要权限：** ohos.permission.NFC_TAG
 
-<!--Device-connectedTag-function readNdefTag(callback: AsyncCallback<string>): void--><!--Device-connectedTag-function readNdefTag(callback: AsyncCallback<string>): void-End-->
-
 **系统能力：** SystemCapability.Communication.ConnectedTag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当读取成功时data为读取到有源标签的内容；否则为err错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
 
 **示例**
 
 参见 [readNdefTag](#readndeftag)
-

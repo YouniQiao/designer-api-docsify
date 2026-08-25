@@ -14,11 +14,11 @@ function addSerialRight(tokenId: int, portId: int): void
 
 Adds the permission to an application for accessing the serial port device. serialManager.requestSerialRight triggers a dialog box to request user authorization. addSerialRight does not trigger a dialog box but directly adds the device access permission for the application. After the application exits, the access permission on the serial port device is automatically removed. After the application is restarted, you need to request the permission again.
 
-**Since:** 23
+**Since:** 19
+
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_USB_CONFIG
-
-<!--Device-serialManager-function addSerialRight(tokenId: int, portId: int): void--><!--Device-serialManager-function addSerialRight(tokenId: int, portId: int): void-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -26,21 +26,21 @@ Adds the permission to an application for accessing the serial port device. seri
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| tokenId | int | Yes | ID of the token that requires the access permission. |
-| portId | int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| tokenId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| [portId](arkts-basicservices-serialmanager-serialport-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |  |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |  |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
-| [14400005](../errorcode-usb.md#14400005-database-operation-exception) |  |
-| [31400001](../errorcode-usb.md#31400001-serial-port-service-error) |  |
-| [31400003](../errorcode-usb.md#31400003-port-number-not-exist) |  |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14400005](../errorcode-usb.md#14400005-database-operation-exception) |
+| [31400001](../errorcode-usb.md#31400001-serial-port-service-error) |
+| [31400003](../errorcode-usb.md#31400003-port-number-not-exist) |
 
 **Examples**
 
@@ -76,4 +76,3 @@ function addSerialRight() {
   });
 }
 ```
-

@@ -1,11 +1,18 @@
 # PropertyDescriptorMap
 
-**Since:** -1
-
-<!--Device-unnamed-interface PropertyDescriptorMap--><!--Device-unnamed-interface PropertyDescriptorMap-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
+## [key: PropertyKey]
+
+```TypeScript
+[key: PropertyKey]: PropertyDescriptor
+```
+
+**Type:** PropertyDescriptor
+
+**ArkTS mode:** 

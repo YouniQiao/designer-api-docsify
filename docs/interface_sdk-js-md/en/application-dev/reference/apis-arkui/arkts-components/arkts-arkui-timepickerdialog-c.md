@@ -4,7 +4,7 @@ A time picker dialog box is a dialog box that allows users to select a time from
 
 **Since:** 8
 
-<!--Device-unnamed-declare class TimePickerDialog--><!--Device-unnamed-declare class TimePickerDialog-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,23 +21,22 @@ static show(options?: TimePickerDialogOptions)
 
 Shows a time picker dialog box.  
 **NOTE：**
-- Since API version 10, you can use the [showTimePickerDialog](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#showtimepickerdialog) API in [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md), which ensures that the time picker dialog box is shown in the intended UI instance.
+- Since API version 10, you can use the [showTimePickerDialog](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#showtimepickerdialog) API in [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md), which ensures that the time picker dialog box is shown in the intended UI instance.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 18
 
-**Substitutes:** [showTimePickerDialog](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#showtimepickerdialog)
+**Substitutes:** [showTimePickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#showtimepickerdialog)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-TimePickerDialog-static show(options?: TimePickerDialogOptions)--><!--Device-TimePickerDialog-static show(options?: TimePickerDialogOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [TimePickerDialogOptions](arkts-arkui-timepickerdialogoptions-i.md) | No | Parameters of the time picker dialog box. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [TimePickerDialogOptions](arkts-arkui-timepickerdialogoptions-i.md) | No |

@@ -6,7 +6,7 @@ The universal attributes are supported.Universal events, such as the click event
 
 **Since:** 10
 
-<!--Device-unnamed-declare class UIExtensionComponentAttribute--><!--Device-unnamed-declare class UIExtensionComponentAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,4 +16,3 @@ The universal attributes are supported.Universal events, such as the click event
 
 ```TypeScript
 ```
-

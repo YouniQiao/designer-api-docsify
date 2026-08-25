@@ -2,9 +2,9 @@
 
 **Since:** 3
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface DeleteStorageOptions--><!--Device-unnamed-export interface DeleteStorageOptions-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
@@ -21,15 +21,13 @@ complete?: () => void
 
 Called when the execution is completed.
 
-**Type:** () =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-DeleteStorageOptions-complete?: () => void--><!--Device-DeleteStorageOptions-complete?: () => void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
@@ -41,15 +39,38 @@ fail?: (data: string, code: number) => void
 
 Called when the stored content fails to be deleted.
 
-**Type:** (data: string, code: number) =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-DeleteStorageOptions-fail?: (data: string, code: number) => void--><!--Device-DeleteStorageOptions-fail?: (data: string, code: number) => void-End-->
+**System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | string | Yes |
+| code | number | Yes |
+
+## success
+
+```TypeScript
+success?: () => void
+```
+
+Called when the stored content is deleted successfully.
+
+**Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
+**Deprecated since:** 6
+
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
@@ -65,31 +86,10 @@ Content index. the value contains a maximum of 32 characters and cannot contain 
 
 **Since:** 3
 
-**Deprecated since:** 6
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-DeleteStorageOptions-key: string--><!--Device-DeleteStorageOptions-key: string-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
-
-## success
-
-```TypeScript
-success?: () => void
-```
-
-Called when the stored content is deleted successfully.
-
-**Type:** () =&gt; void
-
-**Since:** 3
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-DeleteStorageOptions-success?: () => void--><!--Device-DeleteStorageOptions-success?: () => void-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
-

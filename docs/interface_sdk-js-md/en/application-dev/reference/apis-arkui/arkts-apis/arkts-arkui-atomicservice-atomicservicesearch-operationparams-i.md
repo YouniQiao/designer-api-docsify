@@ -4,7 +4,7 @@ Sets initialization parameters of the function area.
 
 **Since:** 18
 
-<!--Device-unnamed-export interface OperationParams--><!--Device-unnamed-export interface OperationParams-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,9 +26,9 @@ Auxiliary item on the right of the search area. Default value: **undefined**.
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
-<!--Device-OperationParams-auxiliaryItem?: OperationOption--><!--Device-OperationParams-auxiliaryItem?: OperationOption-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,9 +44,8 @@ Independent item on the right of the search area. Default value: **undefined**.
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-OperationParams-independentItem?: OperationOption--><!--Device-OperationParams-independentItem?: OperationOption-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

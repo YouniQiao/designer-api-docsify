@@ -2,9 +2,9 @@
 
 **Since:** 3
 
-**Deprecated since:** 7
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface ShowNotificationOptions--><!--Device-unnamed-export interface ShowNotificationOptions-End-->
+**Deprecated since:** 7
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -26,9 +26,9 @@ Action triggered when the notification is clicked.This API is deprecated since A
 
 **Since:** 3
 
-**Deprecated since:** 7
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-ShowNotificationOptions-clickAction?: ActionResult--><!--Device-ShowNotificationOptions-clickAction?: ActionResult-End-->
+**Deprecated since:** 7
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -44,9 +44,9 @@ Notification content.
 
 **Since:** 3
 
-**Deprecated since:** 7
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-ShowNotificationOptions-contentText?: string--><!--Device-ShowNotificationOptions-contentText?: string-End-->
+**Deprecated since:** 7
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -62,9 +62,8 @@ Notification title.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 7
 
-<!--Device-ShowNotificationOptions-contentTitle?: string--><!--Device-ShowNotificationOptions-contentTitle?: string-End-->
-
 **System capability:** SystemCapability.Notification.Notification
-

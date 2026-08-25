@@ -10,9 +10,7 @@
 
 **起始版本：** 24
 
-**装饰器类型：** @ObservedV2
-
-<!--Device-unnamed-export class RowLayoutAlgorithm--><!--Device-unnamed-export class RowLayoutAlgorithm-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,31 +24,35 @@ constructor(option?: RowLayoutAlgorithmOptions)
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-RowLayoutAlgorithm-constructor(option?: RowLayoutAlgorithmOptions)--><!--Device-RowLayoutAlgorithm-constructor(option?: RowLayoutAlgorithmOptions)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| option | [RowLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-rowlayoutalgorithmoptions-i.md) | 否 | 水平方向线性布局算法的构造入参，设置布局算法的间距、主轴对齐方式、交叉轴对齐方式及主轴排列方向。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| option | [RowLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-rowlayoutalgorithmoptions-i.md) | 否 |
 
 ## alignItems
 
+```TypeScript
+public alignItems?: VerticalAlign
+```
+
 所有子组件在垂直方向上的对齐格式。默认值：VerticalAlign.Center非法值：按默认值处理。装饰器类型：@Trace
 
-**类型：** [VerticalAlign](../../apis-default/arkts-apis/arkts-enums-verticalalign-e.md)
+**类型：** [VerticalAlign](arkts-arkui-enums-verticalalign-e.md)
 
 **起始版本：** 24
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -58,11 +60,13 @@ constructor(option?: RowLayoutAlgorithmOptions)
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-RowLayoutAlgorithm-@Trace public alignItems?: VerticalAlign--><!--Device-RowLayoutAlgorithm-@Trace public alignItems?: VerticalAlign-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## isReverse
+
+```TypeScript
+public isReverse?: boolean
+```
 
 子组件在水平方向上的排列是否反转。取值为true表示子组件在水平方向上反转排列，由于水平方向受通用属性direction影响，如果 direction属性生效，再做一次反转。取值为false表示子组件在水平方向上正序排列。默认值：false非法值：按默认值处理。装饰器类型：@Trace
 
@@ -70,47 +74,51 @@ constructor(option?: RowLayoutAlgorithmOptions)
 
 **起始版本：** 24
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-RowLayoutAlgorithm-@Trace public isReverse?: boolean--><!--Device-RowLayoutAlgorithm-@Trace public isReverse?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## justifyContent
 
+```TypeScript
+public justifyContent?: FlexAlign
+```
+
 所有子组件在水平方向上的对齐格式。默认值：FlexAlign.Start非法值：按默认值处理。装饰器类型：@Trace
 
-**类型：** [FlexAlign](../../apis-default/arkts-apis/arkts-enums-flexalign-e.md)
+**类型：** [FlexAlign](arkts-arkui-enums-flexalign-e.md)
 
 **起始版本：** 24
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-RowLayoutAlgorithm-@Trace public justifyContent?: FlexAlign--><!--Device-RowLayoutAlgorithm-@Trace public justifyContent?: FlexAlign-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## space
 
+```TypeScript
+public space?: LengthMetrics
+```
+
 横向布局元素水平方向间距。默认值：LengthMetrics.vp(0)非法值：按默认值处理。装饰器类型：@Trace
 
-**类型：** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 24
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -118,7 +126,4 @@ constructor(option?: RowLayoutAlgorithmOptions)
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-RowLayoutAlgorithm-@Trace public space?: LengthMetrics--><!--Device-RowLayoutAlgorithm-@Trace public space?: LengthMetrics-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

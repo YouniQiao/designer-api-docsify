@@ -16,21 +16,21 @@ function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>
 
 **起始版本：** 23
 
-<!--Device-systemSoundManager-function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>--><!--Device-systemSoundManager-function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;SystemSoundPlayer \| null&gt; | 成功返回系统音效播放器对象，失败返回null。 |
+| 类型 |
+| --- |
+| Promise & lt;SystemSoundPlayer \ | null & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [5400101](../../apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| 错误码ID |
+| --- |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
 
 **示例**
 
@@ -46,4 +46,3 @@ systemSoundManager.createSystemSoundPlayer().then((systemSoundPlayerInstance) =>
   console.error(`Failed to create the system sound player. Code: ${err.code}, message: ${err.message}`);
 });
 ```
-

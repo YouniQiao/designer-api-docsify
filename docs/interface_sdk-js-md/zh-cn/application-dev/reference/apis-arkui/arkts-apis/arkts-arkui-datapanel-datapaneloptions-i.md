@@ -1,0 +1,63 @@
+# DataPanelOptions
+
+数据面板选项。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## max
+
+```TypeScript
+max?: double
+```
+
+max大于0时，表示数据的最大值。 - max小于等于0时，max等于value数组各项的和，按比例显示。 默认值：100。
+
+**类型：** double
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## type
+
+```TypeScript
+type?: DataPanelType
+```
+
+数据面板的类型（不支持动态修改）。 默认值：DataPanelType.Circle。
+
+**类型：** [DataPanelType](arkts-arkui-datapanel-datapaneltype-e.md)
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## values
+
+```TypeScript
+values: double[]
+```
+
+数据值列表，最多包含9个数据，大于9个数据则取前9个数据。若数据值小于0则置为0。
+
+**类型：** double[]
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full

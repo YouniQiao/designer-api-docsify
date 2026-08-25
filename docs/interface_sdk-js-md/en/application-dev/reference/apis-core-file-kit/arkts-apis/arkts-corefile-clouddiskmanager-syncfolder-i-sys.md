@@ -2,9 +2,9 @@
 
 Encapsulates the sync root information.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-cloudDiskManager-interface SyncFolder--><!--Device-cloudDiskManager-interface SyncFolder-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
@@ -26,9 +26,9 @@ Bundle name of the sync root.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-SyncFolder-bundleName: string--><!--Device-SyncFolder-bundleName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
@@ -44,9 +44,9 @@ Custom alias displayed in the File Manager list. The default value is **undefine
 
 **Type:** string
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-SyncFolder-customAlias?: string--><!--Device-SyncFolder-customAlias?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
@@ -60,11 +60,11 @@ displayNameResId?: int
 
 Resource ID, which can be mapped to the alias displayed in the File Manager list. The default value is **undefined**.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-SyncFolder-displayNameResId?: int--><!--Device-SyncFolder-displayNameResId?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
@@ -80,9 +80,9 @@ URI of the sync root.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-SyncFolder-path: string--><!--Device-SyncFolder-path: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
@@ -98,11 +98,10 @@ State of the sync root.
 
 **Type:** [SyncFolderState](arkts-corefile-clouddiskmanager-syncfolderstate-e-sys.md)
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-SyncFolder-state: SyncFolderState--><!--Device-SyncFolder-state: SyncFolderState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
 **System API:** This is a system API.
-

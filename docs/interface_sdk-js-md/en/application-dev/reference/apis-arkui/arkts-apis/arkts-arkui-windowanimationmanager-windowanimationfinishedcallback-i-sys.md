@@ -2,9 +2,9 @@
 
 Window animation finished callback.@interface WindowAnimationFinishedCallback
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-windowAnimationManager-export interface WindowAnimationFinishedCallback--><!--Device-windowAnimationManager-export interface WindowAnimationFinishedCallback-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -24,9 +24,9 @@ onAnimationFinish(): void
 
 The function of window animation finished callback.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-WindowAnimationFinishedCallback-onAnimationFinish(): void--><!--Device-WindowAnimationFinishedCallback-onAnimationFinish(): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -35,4 +35,3 @@ The function of window animation finished callback.
 **Examples**
 
 For details, see the sample code under windowAnimationManager.setController.
-

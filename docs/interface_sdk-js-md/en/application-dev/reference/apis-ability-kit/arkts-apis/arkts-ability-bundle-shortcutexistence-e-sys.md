@@ -4,9 +4,9 @@ Result returned when querying whether a shortcut exists.
 
 **Since:** 9
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-bundle-export enum ShortcutExistence--><!--Device-bundle-export enum ShortcutExistence-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -22,9 +22,9 @@ Exists.
 
 **Since:** 9
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ShortcutExistence-SHORTCUT_EXISTENCE_EXISTS = 0--><!--Device-ShortcutExistence-SHORTCUT_EXISTENCE_EXISTS = 0-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -40,9 +40,9 @@ Does not exist.
 
 **Since:** 9
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ShortcutExistence-SHORTCUT_EXISTENCE_NOT_EXISTS = 1--><!--Device-ShortcutExistence-SHORTCUT_EXISTENCE_NOT_EXISTS = 1-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -58,11 +58,10 @@ Unknown.
 
 **Since:** 9
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ShortcutExistence-SHORTCUT_EXISTENCE_UNKNOW = 2--><!--Device-ShortcutExistence-SHORTCUT_EXISTENCE_UNKNOW = 2-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **System API:** This is a system API.
-

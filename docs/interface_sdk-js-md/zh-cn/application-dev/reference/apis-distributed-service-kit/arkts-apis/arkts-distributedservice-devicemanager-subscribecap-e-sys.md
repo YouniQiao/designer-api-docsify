@@ -4,9 +4,9 @@
 
 **起始版本：** 7
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-deviceManager-enum SubscribeCap--><!--Device-deviceManager-enum SubscribeCap-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -22,9 +22,9 @@ DDMP能力，后续会被废弃。
 
 **起始版本：** 7
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-SubscribeCap-SUBSCRIBE_CAPABILITY_DDMP = 0--><!--Device-SubscribeCap-SUBSCRIBE_CAPABILITY_DDMP = 0-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -40,11 +40,10 @@ OSD能力。
 
 **起始版本：** 7
 
-**废弃版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-SubscribeCap-SUBSCRIBE_CAPABILITY_OSD = 1--><!--Device-SubscribeCap-SUBSCRIBE_CAPABILITY_OSD = 1-End-->
+**废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
-

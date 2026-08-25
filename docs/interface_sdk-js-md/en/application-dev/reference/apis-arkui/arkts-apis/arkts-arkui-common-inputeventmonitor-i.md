@@ -1,0 +1,11 @@
+# InputEventMonitor
+
+Defines the input event monitor identifier.Important Notes: - This object is created and returned by the system as a unique identifier for the listener. - The object is an empty object with no accessible members. - Developers cannot actively construct this object, it can only be obtained through the registration interface. - Used for subsequent unregistration to verify identity.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

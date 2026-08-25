@@ -2,9 +2,9 @@
 
 Defines the download configuration.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-eSIM-export interface DownloadConfiguration--><!--Device-eSIM-export interface DownloadConfiguration-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -28,9 +28,9 @@ Whether to forcibly deactivate the current profile during profile switching.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DownloadConfiguration-forceDisableProfile: boolean--><!--Device-DownloadConfiguration-forceDisableProfile: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -46,9 +46,9 @@ Whether user authorization is obtained to implement the profile policy rule. The
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DownloadConfiguration-isPprAllowed: boolean--><!--Device-DownloadConfiguration-isPprAllowed: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -64,11 +64,10 @@ Whether to enable the profile after successful download. The value **true** mean
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DownloadConfiguration-switchAfterDownload: boolean--><!--Device-DownloadConfiguration-switchAfterDownload: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
-

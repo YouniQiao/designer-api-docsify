@@ -2,9 +2,9 @@
 
 射线检测参数配置，用于定义射线检测的行为。@interface RaycastParameters
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-unnamed-export interface RaycastParameters--><!--Device-unnamed-export interface RaycastParameters-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -18,9 +18,8 @@ rootNode?: Node
 
 **类型：** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-RaycastParameters-rootNode?: Node--><!--Device-RaycastParameters-rootNode?: Node-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

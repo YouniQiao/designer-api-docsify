@@ -9,7 +9,7 @@ import { connection } from '@kit.NetworkKit';
 ## getConnectOwnerUid
 
 ```TypeScript
-function getConnectOwnerUid(protocol: ProtocolType, local: NetAddress, remote: NetAddress): Promise<int>
+function getConnectOwnerUid(protocol: ProtocolType, local: NetAddress, remote: NetAddress): Promise<number>
 ```
 
 用于查询发起指定网络连接的应用UID。使用Promise异步回调。
@@ -21,35 +21,35 @@ function getConnectOwnerUid(protocol: ProtocolType, local: NetAddress, remote: N
 
 **起始版本：** 23
 
-**需要权限：** ohos.permission.GET_NETWORK_INFO
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
-<!--Device-connection-function getConnectOwnerUid(protocol: ProtocolType, local: NetAddress, remote: NetAddress): Promise<int>--><!--Device-connection-function getConnectOwnerUid(protocol: ProtocolType, local: NetAddress, remote: NetAddress): Promise<int>-End-->
+**需要权限：** ohos.permission.GET_NETWORK_INFO
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| protocol | ProtocolType | 是 | 网络协议的类型。 |
-| local | NetAddress | 是 | 源网络地址。 |
-| remote | NetAddress | 是 | 目标网络地址。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| protocol | [ProtocolType](arkts-network-connection-protocoltype-e.md) | 是 |
+| local | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 |
+| [remote](../../apis-driver-development-kit/arkts-apis/arkts-driverdevelopment-devicemanager-remotedevicedriver-i.md) | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise对象，返回应用程序的UID。如果不存在匹配的UID则返回-1。 |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100301](../errorcode-net-connection.md#2100301-调用方身份验证不通过非vpn应用) | Incorrect usage in non-VPN application. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100301](../errorcode-net-connection.md#2100301-调用方身份验证不通过非vpn应用) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
 **示例**
 
@@ -66,4 +66,3 @@ connection.getConnectOwnerUid(protocol, local, remote).then((uid) => {
   console.error(`Failed to get ConnectOwnerUid. errorCode: ${error.code} message:${error.message}`);
 });
 ```
-

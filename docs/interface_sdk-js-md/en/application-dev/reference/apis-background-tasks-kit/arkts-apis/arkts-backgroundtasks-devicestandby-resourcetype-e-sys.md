@@ -2,9 +2,9 @@
 
 The type of exemption resources requested by the application.@enum { int }
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-deviceStandby-export enum ResourceType--><!--Device-deviceStandby-export enum ResourceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -18,9 +18,9 @@ NETWORK = 1
 
 The resource for non-standby network access.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ResourceType-NETWORK = 1--><!--Device-ResourceType-NETWORK = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -34,9 +34,9 @@ RUNNING_LOCK = 1 << 1
 
 The resource for non-standby cpu running-lock.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ResourceType-RUNNING_LOCK = 1 << 1--><!--Device-ResourceType-RUNNING_LOCK = 1 << 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -50,9 +50,9 @@ TIMER = 1 << 2
 
 The resource for non-standby timer.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ResourceType-TIMER = 1 << 2--><!--Device-ResourceType-TIMER = 1 << 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -66,9 +66,9 @@ WORK_SCHEDULER = 1 << 3
 
 The resource for non-standby workscheduler.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ResourceType-WORK_SCHEDULER = 1 << 3--><!--Device-ResourceType-WORK_SCHEDULER = 1 << 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -82,9 +82,9 @@ AUTO_SYNC = 1 << 4
 
 The resource for non-standby automatic synchronization.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ResourceType-AUTO_SYNC = 1 << 4--><!--Device-ResourceType-AUTO_SYNC = 1 << 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -98,9 +98,9 @@ PUSH = 1 << 5
 
 The resource for non-standby push-kit.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ResourceType-PUSH = 1 << 5--><!--Device-ResourceType-PUSH = 1 << 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -114,11 +114,10 @@ FREEZE = 1 << 6
 
 The resource for non-standby freezing application.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ResourceType-FREEZE = 1 << 6--><!--Device-ResourceType-FREEZE = 1 << 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
 **System API:** This is a system API.
-

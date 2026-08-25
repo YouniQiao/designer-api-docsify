@@ -10,7 +10,12 @@ import { AVCastPicker } from '@kit.AVSessionKit';
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [AVCastPicker](arkts-avsession-multimedia-avcastpicker-avcastpicker-s.md) | A picker view to show available streaming device list. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AVCastPicker](arkts-avsession-multimedia-avcastpicker-avcastpicker-s.md) |
 
+### Types
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [OnPickerStateCallback](arkts-avsession-onpickerstatecallback-t.md) |

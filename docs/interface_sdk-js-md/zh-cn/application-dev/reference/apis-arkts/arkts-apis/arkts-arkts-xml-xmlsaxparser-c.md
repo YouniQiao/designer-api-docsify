@@ -7,7 +7,7 @@ XmlSAXParser类用于以流式方式解析XML文本。适用于需要边读取�
 
 **起始版本：** 24
 
-<!--Device-xml-class XmlSAXParser--><!--Device-xml-class XmlSAXParser-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -32,20 +32,20 @@ constructor(inputStream: stream.Readable, encoding?: string)
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-XmlSAXParser-constructor(inputStream: stream.Readable, encoding?: string)--><!--Device-XmlSAXParser-constructor(inputStream: stream.Readable, encoding?: string)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| inputStream | stream.Readable | 是 | 用于读取XML数据的可读流实例。 |
-| encoding | string | 否 | 编码格式，默认为'utf-8'（目前仅支持'utf-8'）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| inputStream | stream.Readable | 是 |
+| encoding | string | 否 |
 
 **示例**
 
@@ -119,19 +119,19 @@ parse(xmlSAXHandler: XmlSAXHandler): void
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-XmlSAXParser-parse(xmlSAXHandler: XmlSAXHandler): void--><!--Device-XmlSAXParser-parse(xmlSAXHandler: XmlSAXHandler): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| xmlSAXHandler | [XmlSAXHandler](arkts-arkts-xml-xmlsaxhandler-i.md) | 是 | SAX处理器对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| xmlSAXHandler | [XmlSAXHandler](arkts-arkts-xml-xmlsaxhandler-i.md) | 是 |
 
 **示例**
 
@@ -232,4 +232,3 @@ let handler: xml.XmlSAXHandler = {
 
 saxParser.parse(handler);
 ```
-

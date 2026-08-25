@@ -2,9 +2,9 @@
 
 Describes the contents of the bluetooth scan results.
 
-**Since:** 23
+**Since:** 16
 
-<!--Device-geoLocationManager-export interface BluetoothScanResult--><!--Device-geoLocationManager-export interface BluetoothScanResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -24,9 +24,9 @@ Connectable of the scanned device
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 16
 
-<!--Device-BluetoothScanResult-connectable: boolean--><!--Device-BluetoothScanResult-connectable: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -40,9 +40,9 @@ The raw data of broadcast packet
 
 **Type:** ArrayBuffer
 
-**Since:** 23
+**Since:** 16
 
-<!--Device-BluetoothScanResult-data?: ArrayBuffer--><!--Device-BluetoothScanResult-data?: ArrayBuffer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -56,9 +56,9 @@ Address of the scanned device
 
 **Type:** string
 
-**Since:** 23
+**Since:** 16
 
-<!--Device-BluetoothScanResult-deviceId: string--><!--Device-BluetoothScanResult-deviceId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -72,9 +72,9 @@ The local name of the scanned device
 
 **Type:** string
 
-**Since:** 23
+**Since:** 16
 
-<!--Device-BluetoothScanResult-deviceName: string--><!--Device-BluetoothScanResult-deviceName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -86,11 +86,10 @@ rssi: int
 
 RSSI of the scanned device
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 16
 
-<!--Device-BluetoothScanResult-rssi: int--><!--Device-BluetoothScanResult-rssi: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
-

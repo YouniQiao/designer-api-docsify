@@ -2,9 +2,9 @@
 
 描述采集trace线程的类型，包括主线程和所有线程。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-hidebug-enum TraceFlag--><!--Device-hidebug-enum TraceFlag-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -16,9 +16,9 @@ MAIN_THREAD = 1
 
 只采集当前应用主线程。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-TraceFlag-MAIN_THREAD = 1--><!--Device-TraceFlag-MAIN_THREAD = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -30,9 +30,8 @@ ALL_THREADS = 2
 
 采集当前应用下所有线程。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-TraceFlag-ALL_THREADS = 2--><!--Device-TraceFlag-ALL_THREADS = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
-

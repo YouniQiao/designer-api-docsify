@@ -2,9 +2,9 @@
 
 Defines a key-value pair for DRM metrics.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-drm-interface StatisticKeyValue--><!--Device-drm-interface StatisticKeyValue-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -24,11 +24,11 @@ Name of the metric.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-StatisticKeyValue-name: string--><!--Device-StatisticKeyValue-name: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -42,11 +42,10 @@ Value of the metric.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-StatisticKeyValue-value: string--><!--Device-StatisticKeyValue-value: string-End-->
-
 **System capability:** SystemCapability.Multimedia.Drm.Core
-

@@ -16,13 +16,13 @@ function reconnect(): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [reconnect](arkts-connectivity-wifimanager-reconnect-f-sys.md)
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
-
-<!--Device-wifi-function reconnect(): boolean--><!--Device-wifi-function reconnect(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -30,9 +30,9 @@ function reconnect(): boolean
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true:操作成功，false:操作失败。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -45,4 +45,3 @@ try {
     console.error("failed:" + JSON.stringify(error));
 }
 ```
-

@@ -4,9 +4,7 @@ Declare struct ExceptionPromptV2 higher-order component. The exception prompt co
 
 **Since:** 26.0.0
 
-**Decorator:** @ComponentV2
-
-<!--Device-unnamed-export declare struct ExceptionPromptV2--><!--Device-unnamed-export declare struct ExceptionPromptV2-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,6 +14,22 @@ Declare struct ExceptionPromptV2 higher-order component. The exception prompt co
 import { MarginTypeV2, PromptOptionsV2, PromptOptionsV2Config, ExceptionPromptV2 } from '@kit.ArkUI';
 ```
 
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## onActionTextClick
 
 ```TypeScript
@@ -24,17 +38,13 @@ onActionTextClick?: OnActionTextClickCallback
 
 Callback invoked when the icon on the right is clicked.
 
-**Type:** [OnActionTextClickCallback](../../apis-default/arkts-apis/arkts-onactiontextclickcallback-t.md)
-
 **Since:** 26.0.0
 
-**Decorator:** @Event
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ExceptionPromptV2-@Event  onActionTextClick?: OnActionTextClickCallback--><!--Device-ExceptionPromptV2-@Event  onActionTextClick?: OnActionTextClickCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,17 +56,13 @@ onTipClick?: OnTipClickCallback
 
 Callback invoked when the prompt text on the left is clicked.
 
-**Type:** [OnTipClickCallback](../../apis-default/arkts-apis/arkts-ontipclickcallback-t.md)
-
 **Since:** 26.0.0
 
-**Decorator:** @Event
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ExceptionPromptV2-@Event  onTipClick?: OnTipClickCallback--><!--Device-ExceptionPromptV2-@Event  onTipClick?: OnTipClickCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,17 +74,14 @@ options: PromptOptionsV2
 
 ExceptionPromptV2 configuration.
 
-**Type:** [PromptOptionsV2](../../apis-default/arkts-apis/arkts-arkui-advanced-exceptionpromptv2-promptoptionsv2-c.md)
+**Type:** [PromptOptionsV2](arkts-arkui-arkui-advanced-exceptionpromptv2-promptoptionsv2-c.md)
 
 **Since:** 26.0.0
 
-**Decorator:** @Param
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ExceptionPromptV2-@Param  options: PromptOptionsV2--><!--Device-ExceptionPromptV2-@Param  options: PromptOptionsV2-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,7 +4,7 @@ Provides information about the delete operation and the deleted content.
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface RichEditorDeleteValue--><!--Device-unnamed-declare interface RichEditorDeleteValue-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Direction of the delete operation.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RichEditorDeleteValue-direction: RichEditorDeleteDirection--><!--Device-RichEditorDeleteValue-direction: RichEditorDeleteDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ Length of the deleted content.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RichEditorDeleteValue-length: number--><!--Device-RichEditorDeleteValue-length: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,11 +65,11 @@ Offset of the deleted content.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RichEditorDeleteValue-offset: number--><!--Device-RichEditorDeleteValue-offset: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,11 +85,10 @@ Information about the deleted text or image span.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-RichEditorDeleteValue-richEditorDeleteSpans: Array<RichEditorTextSpanResult | RichEditorImageSpanResult>--><!--Device-RichEditorDeleteValue-richEditorDeleteSpans: Array<RichEditorTextSpanResult | RichEditorImageSpanResult>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

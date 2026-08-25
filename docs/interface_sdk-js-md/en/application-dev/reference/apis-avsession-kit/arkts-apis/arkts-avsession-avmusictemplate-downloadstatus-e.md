@@ -4,7 +4,7 @@ Enumeration of DownloadStatus.@enum { int }
 
 **Since:** 23
 
-<!--Device-avMusicTemplate-enum DownloadStatus--><!--Device-avMusicTemplate-enum DownloadStatus-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -18,9 +18,9 @@ DOWNLOAD_SUCCESS
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-DownloadStatus-DOWNLOAD_SUCCESS = 0--><!--Device-DownloadStatus-DOWNLOAD_SUCCESS = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -34,9 +34,9 @@ DOWNLOADING
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-DownloadStatus-DOWNLOADING = 1--><!--Device-DownloadStatus-DOWNLOADING = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -50,9 +50,8 @@ DOWNLOAD_FAIL
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DownloadStatus-DOWNLOAD_FAIL = 2--><!--Device-DownloadStatus-DOWNLOAD_FAIL = 2-End-->
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-

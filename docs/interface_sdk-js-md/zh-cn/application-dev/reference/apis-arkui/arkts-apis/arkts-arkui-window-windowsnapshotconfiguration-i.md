@@ -2,9 +2,9 @@
 
 主窗口截图的配置项。
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-window-interface WindowSnapshotConfiguration--><!--Device-window-interface WindowSnapshotConfiguration-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -24,9 +24,8 @@ useCache?: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-WindowSnapshotConfiguration-useCache?: boolean--><!--Device-WindowSnapshotConfiguration-useCache?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
-

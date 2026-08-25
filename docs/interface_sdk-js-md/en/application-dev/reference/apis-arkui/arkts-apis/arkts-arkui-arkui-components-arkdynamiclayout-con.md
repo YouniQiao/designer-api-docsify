@@ -12,13 +12,13 @@ Defines the dynamic layout container component, which supports dynamically switc
 
 **Since:** 24
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
-
-<!--Device-unnamed-export declare const DynamicLayout: DynamicLayoutInterface--><!--Device-unnamed-export declare const DynamicLayout: DynamicLayoutInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,13 +32,12 @@ Defines DynamicLayout Component instance.
 
 **Since:** 24
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
-<!--Device-unnamed-export declare const DynamicLayoutInstance: DynamicLayoutAttribute--><!--Device-unnamed-export declare const DynamicLayoutInstance: DynamicLayoutAttribute-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

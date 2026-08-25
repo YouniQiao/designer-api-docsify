@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-inputEventClient-interface TouchController--><!--Device-inputEventClient-interface TouchController-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -24,34 +24,34 @@ touchDown(touch: TouchPoint): Promise<void>
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-TouchController-touchDown(touch: TouchPoint): Promise<void>--><!--Device-TouchController-touchDown(touch: TouchPoint): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| touch | TouchPoint | 是 | 与屏幕接触的触点信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| touch | [TouchPoint](../../apis-arkui/arkts-apis/arkts-arkui-touchpoint-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | Invalid input event sequence. Possible causes: <br> 1. The touch point is touching the display; 2. The touch point ID is not within the valid range [0,9]. |
-| [4300002](../errorcode-inputeventclient.md#4300002-显示器不存在) | The display does not exist. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
+| [4300002](../errorcode-inputeventclient.md#4300002-显示器不存在) |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
 
 **示例**
 
@@ -116,33 +116,33 @@ touchMove(touch: TouchPoint): Promise<void>
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-TouchController-touchMove(touch: TouchPoint): Promise<void>--><!--Device-TouchController-touchMove(touch: TouchPoint): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| touch | TouchPoint | 是 | 需要移动的触点信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| touch | [TouchPoint](../../apis-arkui/arkts-apis/arkts-arkui-touchpoint-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | Invalid input event sequence. Possible causes: <br> 1. The touch point is not touching the display; 2. The touch point ID is not within the valid range [0,9]. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
 
 **示例**
 
@@ -158,35 +158,34 @@ touchUp(touch: TouchPoint): Promise<void>
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-TouchController-touchUp(touch: TouchPoint): Promise<void>--><!--Device-TouchController-touchUp(touch: TouchPoint): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| touch | TouchPoint | 是 | 即将离开屏幕的触点信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| touch | [TouchPoint](../../apis-arkui/arkts-apis/arkts-arkui-touchpoint-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | Invalid input event sequence. Possible causes: <br> 1. The touch point is not touching the display; 2. The touch point ID is not within the valid range [0,9]. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
 
 **示例**
 
 参见[touchDown](#touchdown)示例。
-

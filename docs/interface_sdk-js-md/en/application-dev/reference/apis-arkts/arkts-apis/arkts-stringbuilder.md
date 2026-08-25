@@ -9,7 +9,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [StringBuilder](arkts-arkts-stringbuilder-c.md) | Performance-oriented class for string construction |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [StringBuilder](arkts-arkts-stringbuilder-c.md) |

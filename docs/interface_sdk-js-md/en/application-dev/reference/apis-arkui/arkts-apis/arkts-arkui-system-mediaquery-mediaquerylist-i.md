@@ -1,12 +1,10 @@
 # MediaQueryList
 
-Defines the MediaQuery list info.@interface MediaQueryList
+Represents media query list information.
 
-**Since:** 23
+**Since:** 3
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export interface MediaQueryList--><!--Device-unnamed-export interface MediaQueryList-End-->
+**ArkTS mode:** ArkTS-Dyn since version 3; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,23 +20,57 @@ import { SystemMediaQuery, MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 addListener(callback: (event: MediaQueryEvent) => void): void
 ```
 
-Adds a listening function to MediaQueryList. The listening function must be added before onShow is called, that is, added to the onInit or onReady function.
+Adds a listener for this **MediaQueryList** object. The listener must be added before **onShow** is called, that is, it must be added in the **onInit** or **onReady** API.
 
-**Since:** 23
+**Since:** 3
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 3; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MediaQueryList-addListener(callback: (event: MediaQueryEvent) => void): void--><!--Device-MediaQueryList-addListener(callback: (event: MediaQueryEvent) => void): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (event: MediaQueryEvent) =&gt; void | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | (event: MediaQueryEvent) = & gt; void | Yes |
+
+**Examples**
+
+```TypeScript
+import mediaquery, { MediaQueryEvent } from '@system.mediaquery';
+let mMediaQueryList = mediaquery.matchMedia('(max-width: 466)');
+
+function maxWidthMatch(e: MediaQueryEvent): void {
+  if(e.matches){
+    // do something
+  }
+}
+mMediaQueryList.addListener(maxWidthMatch);
+```
+
+## onchange
+
+```TypeScript
+onchange?: (matches: boolean) => void
+```
+
+Callback invoked when the match result changes. **matches** indicates whether the media query condition is met. The value **true** means that the query condition is met, and **false** means the opposite.
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn since version 3; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [matches](#matches) | boolean | Yes |
 
 ## removeListener
 
@@ -46,23 +78,35 @@ Adds a listening function to MediaQueryList. The listening function must be adde
 removeListener(callback: (event: MediaQueryEvent) => void): void
 ```
 
-Removes a listening function from MediaQueryList.
+Removes the listener for this **MediaQueryList** object.
 
-**Since:** 23
+**Since:** 3
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 3; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MediaQueryList-removeListener(callback: (event: MediaQueryEvent) => void): void--><!--Device-MediaQueryList-removeListener(callback: (event: MediaQueryEvent) => void): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (event: MediaQueryEvent) =&gt; void | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | (event: MediaQueryEvent) = & gt; void | Yes |
+
+**Examples**
+
+```TypeScript
+import mediaquery, { MediaQueryEvent } from '@system.mediaquery';
+let mMediaQueryList = mediaquery.matchMedia('(max-width: 466)');
+
+function maxWidthMatch(e: MediaQueryEvent): void {
+  if(e.matches){
+    // do something
+  }
+}
+mMediaQueryList.removeListener(maxWidthMatch);
+```
 
 ## matches
 
@@ -70,17 +114,15 @@ Removes a listening function from MediaQueryList.
 matches?: boolean
 ```
 
-Whether the query is successful. True if the query condition is matched successfully, false otherwise. This parameter is read-only.
+Matching result. The value **true** means that the query condition is met, and **false** means the opposite.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 3
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 3; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MediaQueryList-matches?: boolean--><!--Device-MediaQueryList-matches?: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,37 +132,14 @@ Whether the query is successful. True if the query condition is matched successf
 media?: string
 ```
 
-Serialized media query condition. This parameter is read-only.
+Serialized media query condition.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 3
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 3; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MediaQueryList-media?: string--><!--Device-MediaQueryList-media?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onchange
-
-```TypeScript
-onchange?: (matches: boolean) => void
-```
-
-Called when the matches value changes.
-
-**Type:** (matches: boolean) =&gt; void
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MediaQueryList-onchange?: (matches: boolean) => void--><!--Device-MediaQueryList-onchange?: (matches: boolean) => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-

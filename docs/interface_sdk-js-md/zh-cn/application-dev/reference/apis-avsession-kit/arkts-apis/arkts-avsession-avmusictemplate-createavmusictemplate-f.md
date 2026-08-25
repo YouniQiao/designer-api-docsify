@@ -16,28 +16,27 @@ function createAVMusicTemplate(accessType: AVMusicTemplateType): AVMusicTemplate
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-avMusicTemplate-function createAVMusicTemplate(accessType: AVMusicTemplateType): AVMusicTemplate--><!--Device-avMusicTemplate-function createAVMusicTemplate(accessType: AVMusicTemplateType): AVMusicTemplate-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| accessType | [AVMusicTemplateType](arkts-avsession-avmusictemplate-avmusictemplatetype-e.md) | 是 | 音频模板类型。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [accessType](../../apis-telephony-kit/arkts-apis/arkts-telephony-esim-accessrule-i-sys.md) | [AVMusicTemplateType](arkts-avsession-avmusictemplate-avmusictemplatetype-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AVMusicTemplate](arkts-avsession-avmusictemplate-avmusictemplate-c.md) | 音频模板对象，可用于获取会话ID。 |
+| 类型 |
+| --- |
+| [AVMusicTemplate](arkts-avsession-avmusictemplate-avmusictemplate-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function createAVMusicTemplate can not work correctly due to limited device capabilities. |
-| [35000001](../errorcode-avmusictemplate.md#35000001-音频模板创建失败) | Failed to create the AVMusicTemplate. |
-
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000001](../errorcode-avmusictemplate.md#35000001-音频模板创建失败) |

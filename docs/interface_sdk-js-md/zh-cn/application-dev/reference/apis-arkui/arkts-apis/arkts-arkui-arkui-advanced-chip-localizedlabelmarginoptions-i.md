@@ -4,7 +4,7 @@ LocalizedLabelMarginOptions用于定义本地化文本与左右侧图标之间�
 
 **起始版本：** 12
 
-<!--Device-unnamed-export interface LocalizedLabelMarginOptions--><!--Device-unnamed-export interface LocalizedLabelMarginOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,11 @@ end?: LengthMetrics
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LocalizedLabelMarginOptions-end?: LengthMetrics--><!--Device-LocalizedLabelMarginOptions-end?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,11 +46,10 @@ start?: LengthMetrics
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-LocalizedLabelMarginOptions-start?: LengthMetrics--><!--Device-LocalizedLabelMarginOptions-start?: LengthMetrics-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 Enumerates coordinate correction modes.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-unnamed-export declare enum FixedMode--><!--Device-unnamed-export declare enum FixedMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -18,9 +18,9 @@ NONE = 0
 
 Normal mode.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-FixedMode-NONE = 0--><!--Device-FixedMode-NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -34,11 +34,10 @@ AUTO = 1
 
 One-handed mode.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-FixedMode-AUTO = 1--><!--Device-FixedMode-AUTO = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 **System API:** This is a system API.
-

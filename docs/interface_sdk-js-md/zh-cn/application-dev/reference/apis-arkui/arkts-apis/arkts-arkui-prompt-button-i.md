@@ -4,11 +4,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-**替代接口：** [Button](../../apis-default/arkts-apis/arkts-promptaction-button-i.md)
-
-<!--Device-prompt-interface Button--><!--Device-prompt-interface Button-End-->
+**替代接口：** [Button](arkts-arkui-promptaction-button-i.md)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,11 @@ color: string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-**替代接口：** [color](../../apis-default/arkts-apis/arkts-promptaction-button-i.md#color)
-
-<!--Device-Button-color: string--><!--Device-Button-color: string-End-->
+**替代接口：** [color](arkts-arkui-promptaction-button-i.md#color)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,11 +50,10 @@ text: string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-**替代接口：** [text](../../apis-default/arkts-apis/arkts-promptaction-button-i.md#text)
-
-<!--Device-Button-text: string--><!--Device-Button-text: string-End-->
+**替代接口：** [text](arkts-arkui-promptaction-button-i.md#text)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

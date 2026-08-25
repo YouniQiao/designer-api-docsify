@@ -10,9 +10,9 @@
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-unnamed-declare namespace dlpSetDlpFeature--><!--Device-unnamed-declare namespace dlpSetDlpFeature-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -29,25 +29,24 @@ import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [setDlpFeature(设置数据防泄漏入口)](arkts-dataprotection-dlpsetdlpfeature-setdlpfeature-f-sys.md) | 设置DLP特性开关状态。使用Promise异步回调。调用成功后，DLP特性开关将设置为指定状态，系统将根据该状态启用或禁用DLP保护功能。当特性开关处于开启状态时，右键单击支持加密的文件，右键菜单中会显示“加密保护”选项。可加密类型包括：.txt，.pdf，.xls，.xlsx，.ppt，.pptx，.doc，.docx。企业策略开启或关闭数据防泄漏功能时使用此接口。 |
+| 名称 |
+| --- |
+| [setDlpFeature(设置数据防泄漏入口)](arkts-dataprotection-dlpsetdlpfeature-setdlpfeature-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [DLPFeatureInfo(设置数据防泄漏入口)](arkts-dataprotection-dlpsetdlpfeature-dlpfeatureinfo-i-sys.md) | DLP特性开关的状态信息。 |
-| [StatusInfoResult(设置数据防泄漏入口)](arkts-dataprotection-dlpsetdlpfeature-statusinforesult-i-sys.md) | DLP特性开关状态设置的结果信息。 |
+| 名称 |
+| --- |
+| [DLPFeatureInfo(设置数据防泄漏入口)](arkts-dataprotection-dlpsetdlpfeature-dlpfeatureinfo-i-sys.md) |
+| [StatusInfoResult(设置数据防泄漏入口)](arkts-dataprotection-dlpsetdlpfeature-statusinforesult-i-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [DlpFeatureStatus(设置数据防泄漏入口)](arkts-dataprotection-dlpsetdlpfeature-dlpfeaturestatus-e-sys.md) | DLP特性开关状态的枚举。 |
+| 名称 |
+| --- |
+| [DlpFeatureStatus(设置数据防泄漏入口)](arkts-dataprotection-dlpsetdlpfeature-dlpfeaturestatus-e-sys.md) |
 <!--DelEnd-->
-

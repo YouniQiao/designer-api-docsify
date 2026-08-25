@@ -4,7 +4,7 @@ Defines whether decoding follows data blocks.
 
 **Since:** 11
 
-<!--Device-util-interface DecodeWithStreamOptions--><!--Device-util-interface DecodeWithStreamOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,9 +26,8 @@ Whether to allow data blocks in subsequent **decodeWithStream()**. If data is pr
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-DecodeWithStreamOptions-stream?: boolean--><!--Device-DecodeWithStreamOptions-stream?: boolean-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

@@ -4,7 +4,7 @@ Defines query parameters.
 
 **Since:** 15
 
-<!--Device-netFirewall-interface RequestParam--><!--Device-netFirewall-interface RequestParam-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -26,7 +26,7 @@ Sorting method. This parameter can be used to sort firewall rules only by name.
 
 **Since:** 15
 
-<!--Device-RequestParam-orderField: NetFirewallOrderField--><!--Device-RequestParam-orderField: NetFirewallOrderField-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -42,39 +42,38 @@ Sorting order type.
 
 **Since:** 15
 
-<!--Device-RequestParam-orderType: NetFirewallOrderType--><!--Device-RequestParam-orderType: NetFirewallOrderType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## page
 
 ```TypeScript
-page: int
+page: number
 ```
 
 Page number. The value range is [1,1000].
 
-**Type:** int
+**Type:** number
 
 **Since:** 15
 
-<!--Device-RequestParam-page: int--><!--Device-RequestParam-page: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## pageSize
 
 ```TypeScript
-pageSize: int
+pageSize: number
 ```
 
 Page size. The value range is [1,50].
 
-**Type:** int
+**Type:** number
 
 **Since:** 15
 
-<!--Device-RequestParam-pageSize: int--><!--Device-RequestParam-pageSize: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
-

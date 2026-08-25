@@ -9,7 +9,6 @@
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [Permissions(Defines all permissions.)](arkts-ability-permissions-t.md) | Indicates permissions. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Permissions(Defines all permissions.)](arkts-ability-permissions-t.md) |

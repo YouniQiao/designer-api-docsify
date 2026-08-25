@@ -8,7 +8,7 @@ Indicates the context of the accessibility extension. For details, see [Accessib
 
 **Since:** 10
 
-<!--Device-unnamed-export type AccessibilityExtensionContext = _AccessibilityExtensionContext.default--><!--Device-unnamed-export type AccessibilityExtensionContext = _AccessibilityExtensionContext.default-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -25,4 +25,3 @@ class EntryAbility extends AccessibilityExtensionAbility {
   } 
 }
 ```
-

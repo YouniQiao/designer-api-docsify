@@ -2,9 +2,9 @@
 
 Represents window information.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-inputMethodEngine-export interface WindowInfo--><!--Device-inputMethodEngine-export interface WindowInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -24,9 +24,9 @@ Rectangular area of the window.
 
 **Type:** window.Rect
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-WindowInfo-rect: window.Rect--><!--Device-WindowInfo-rect: window.Rect-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -40,9 +40,8 @@ Window status type.
 
 **Type:** window.WindowStatusType
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-WindowInfo-status: window.WindowStatusType--><!--Device-WindowInfo-status: window.WindowStatusType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 7
 
-<!--Device-unnamed-declare enum FormDimension--><!--Device-unnamed-declare enum FormDimension-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,7 +20,7 @@ Dimension_1_2 = 0
 
 **起始版本：** 7
 
-<!--Device-FormDimension-Dimension_1_2 = 0--><!--Device-FormDimension-Dimension_1_2 = 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,7 +36,7 @@ Dimension_2_2 = 1
 
 **起始版本：** 7
 
-<!--Device-FormDimension-Dimension_2_2 = 1--><!--Device-FormDimension-Dimension_2_2 = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,7 +52,7 @@ Dimension_2_4 = 2
 
 **起始版本：** 7
 
-<!--Device-FormDimension-Dimension_2_4 = 2--><!--Device-FormDimension-Dimension_2_4 = 2-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,7 +68,7 @@ Dimension_4_4 = 3
 
 **起始版本：** 7
 
-<!--Device-FormDimension-Dimension_4_4 = 3--><!--Device-FormDimension-Dimension_4_4 = 3-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,9 +85,9 @@ Dimension_2_1
 
 **起始版本：** 9
 
-**废弃版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-FormDimension-Dimension_2_1--><!--Device-FormDimension-Dimension_2_1-End-->
+**废弃版本：** 20
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -103,7 +103,7 @@ DIMENSION_1_1 = 6
 
 **起始版本：** 11
 
-<!--Device-FormDimension-DIMENSION_1_1 = 6--><!--Device-FormDimension-DIMENSION_1_1 = 6-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -119,7 +119,7 @@ DIMENSION_6_4 = 7
 
 **起始版本：** 12
 
-<!--Device-FormDimension-DIMENSION_6_4 = 7--><!--Device-FormDimension-DIMENSION_6_4 = 7-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -135,7 +135,7 @@ DIMENSION_2_3 = 8
 
 **起始版本：** 18
 
-<!--Device-FormDimension-DIMENSION_2_3 = 8--><!--Device-FormDimension-DIMENSION_2_3 = 8-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -151,9 +151,8 @@ DIMENSION_3_3 = 9
 
 **起始版本：** 18
 
-<!--Device-FormDimension-DIMENSION_3_3 = 9--><!--Device-FormDimension-DIMENSION_3_3 = 9-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
-

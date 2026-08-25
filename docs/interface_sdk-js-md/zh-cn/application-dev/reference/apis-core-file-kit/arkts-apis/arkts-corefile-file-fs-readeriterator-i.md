@@ -4,7 +4,7 @@
 
 **起始版本：** 11
 
-<!--Device-unnamed-declare interface ReaderIterator--><!--Device-unnamed-declare interface ReaderIterator-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -26,23 +26,23 @@ next(): ReaderIteratorResult
 
 **起始版本：** 11
 
-<!--Device-ReaderIterator-next(): ReaderIteratorResult--><!--Device-ReaderIterator-next(): ReaderIteratorResult-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ReaderIteratorResult](arkts-corefile-file-fs-readeriteratorresult-i.md) | 文件读取迭代器返回结果。 |
+| 类型 |
+| --- |
+| [ReaderIteratorResult](arkts-corefile-file-fs-readeriteratorresult-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900005 | I/O error |
-| 13900037 | No data available |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900005 |
+| 13900037 |
+| 13900042 |
 
 **示例**
 
@@ -84,4 +84,3 @@ fileIo.readLines(filePath, options).then((readerIterator:fileIo.ReaderIterator) 
   console.error(`Failed to read lines. Code: ${err.code}, message: ${err.message}`);
 });
 ```
-

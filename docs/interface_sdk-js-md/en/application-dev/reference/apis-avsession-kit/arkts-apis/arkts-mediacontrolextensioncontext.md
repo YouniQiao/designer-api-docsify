@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [MediaControlExtensionContext](arkts-avsession-mediacontrolextensioncontext-c.md) | The context of media control extension. It allows access to UIExtension-specific resources.@extends UIExtensionContext |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [MediaControlExtensionContext](arkts-avsession-mediacontrolextensioncontext-c.md) |

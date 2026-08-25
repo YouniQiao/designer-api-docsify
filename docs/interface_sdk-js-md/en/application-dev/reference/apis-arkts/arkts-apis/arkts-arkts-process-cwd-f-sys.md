@@ -16,7 +16,7 @@ Return the current work directory;
 
 **Since:** 7
 
-<!--Device-process-function cwd(): string--><!--Device-process-function cwd(): string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -24,7 +24,6 @@ Return the current work directory;
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Return the current work directory. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |

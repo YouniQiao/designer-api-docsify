@@ -2,9 +2,9 @@
 
 延迟任务回调，当满足调度条件或调度结束时，系统会回调应用WorkSchedulerExtensionAbility中 [onWorkStart()](#onworkstart)或 [onWorkStop()](#onworkstop)的方法。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-declare class WorkSchedulerExtensionAbility--><!--Device-unnamed-declare class WorkSchedulerExtensionAbility-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -22,19 +22,19 @@ onWorkStart(work: workScheduler.WorkInfo): void
 
 开始延迟任务调度回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-WorkSchedulerExtensionAbility-onWorkStart(work: workScheduler.WorkInfo): void--><!--Device-WorkSchedulerExtensionAbility-onWorkStart(work: workScheduler.WorkInfo): void-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| work | workScheduler.WorkInfo | 是 | 要添加到执行队列的任务。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| work | workScheduler.WorkInfo | 是 |
 
 **示例**
 
@@ -74,19 +74,19 @@ onWorkStop(work: workScheduler.WorkInfo): void
 
 结束延迟任务调度回调。当延迟任务2分钟超时或应用调用[stopWork](arkts-backgroundtasks-workscheduler-stopwork-f.md) 接口取消任务时，触发该回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-WorkSchedulerExtensionAbility-onWorkStop(work: workScheduler.WorkInfo): void--><!--Device-WorkSchedulerExtensionAbility-onWorkStop(work: workScheduler.WorkInfo): void-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| work | workScheduler.WorkInfo | 是 | 执行队列中要结束回调的任务。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| work | workScheduler.WorkInfo | 是 |
 
 **示例**
 
@@ -128,11 +128,10 @@ WorkSchedulerExtension的上下文环境，继承自ExtensionContext。
 
 **类型：** [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md)
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-WorkSchedulerExtensionAbility-context: WorkSchedulerExtensionContext--><!--Device-WorkSchedulerExtensionAbility-context: WorkSchedulerExtensionContext-End-->
-
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
-

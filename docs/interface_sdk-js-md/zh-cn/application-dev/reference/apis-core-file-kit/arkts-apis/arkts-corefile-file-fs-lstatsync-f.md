@@ -18,36 +18,36 @@ declare function lstatSync(path: string): Stat
 
 **起始版本：** 9
 
-<!--Device-unnamed-declare function lstatSync(path: string): Stat--><!--Device-unnamed-declare function lstatSync(path: string): Stat-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 文件的应用沙箱路径或URI。<br>**说明：**从API version 22开始，支持传入URI。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| path | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Stat](arkts-corefile-file-fs-stat-i.md) | 表示文件的具体信息。 |
+| 类型 |
+| --- |
+| [Stat](arkts-corefile-file-fs-stat-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900002 | No such file or directory |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900018 | Not a directory |
-| 13900030 | File name too long |
-| 13900033 | Too many symbolic links encountered |
-| 13900038 | Value too large for defined data type |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900002 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900018 |
+| 13900030 |
+| 13900033 |
+| 13900038 |
+| 13900042 |
 
 **示例**
 
@@ -56,4 +56,3 @@ let filePath = pathDir + "/linkToFile";
 let fileStat = fileIo.lstatSync(filePath);
 console.info(`Succeeded in getting symbolic link info, the size of file is ${fileStat.size}`);
 ```
-

@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export class PromiseFulfilledResult--><!--Device-unnamed-export class PromiseFulfilledResult-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,11 +23,9 @@ constructor()
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PromiseFulfilledResult-constructor()--><!--Device-PromiseFulfilledResult-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -43,19 +39,17 @@ constructor(value: T)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PromiseFulfilledResult-constructor(value: T)--><!--Device-PromiseFulfilledResult-constructor(value: T)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | T | 是 | 已解析的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | T | 是 |
 
 ## status
 
@@ -69,11 +63,9 @@ Promise的状态。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PromiseFulfilledResult-status: string--><!--Device-PromiseFulfilledResult-status: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -89,11 +81,8 @@ value: T
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-PromiseFulfilledResult-value: T--><!--Device-PromiseFulfilledResult-value: T-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

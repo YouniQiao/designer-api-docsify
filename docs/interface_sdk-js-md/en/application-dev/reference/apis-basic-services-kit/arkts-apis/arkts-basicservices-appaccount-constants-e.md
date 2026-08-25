@@ -2,9 +2,9 @@
 
 Enumerates the constants.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-appAccount-enum Constants--><!--Device-appAccount-enum Constants-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -18,11 +18,11 @@ Operation of adding an account implicitly.Note: This API is supported since API 
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ACTION_CREATE_ACCOUNT_IMPLICITLY](#action_create_account_implicitly)
-
-<!--Device-Constants-ACTION_ADD_ACCOUNT_IMPLICITLY = 'addAccountImplicitly'--><!--Device-Constants-ACTION_ADD_ACCOUNT_IMPLICITLY = 'addAccountImplicitly'-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -36,11 +36,11 @@ Authentication operation.Note: This API is supported since API version 8 and dep
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ACTION_AUTH](#action_auth)
-
-<!--Device-Constants-ACTION_AUTHENTICATE = 'authenticate'--><!--Device-Constants-ACTION_AUTHENTICATE = 'authenticate'-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -52,9 +52,9 @@ ACTION_CREATE_ACCOUNT_IMPLICITLY = "createAccountImplicitly"
 
 Operation of creating an account implicitly.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Constants-ACTION_CREATE_ACCOUNT_IMPLICITLY = "createAccountImplicitly"--><!--Device-Constants-ACTION_CREATE_ACCOUNT_IMPLICITLY = "createAccountImplicitly"-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -66,9 +66,9 @@ ACTION_AUTH = "auth"
 
 Authentication operation.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Constants-ACTION_AUTH = "auth"--><!--Device-Constants-ACTION_AUTH = "auth"-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -80,9 +80,9 @@ ACTION_VERIFY_CREDENTIAL = "verifyCredential"
 
 Operation of verifying credentials.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Constants-ACTION_VERIFY_CREDENTIAL = "verifyCredential"--><!--Device-Constants-ACTION_VERIFY_CREDENTIAL = "verifyCredential"-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -94,9 +94,9 @@ ACTION_SET_AUTHENTICATOR_PROPERTIES = "setAuthenticatorProperties"
 
 Operation of setting authenticator properties.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Constants-ACTION_SET_AUTHENTICATOR_PROPERTIES = "setAuthenticatorProperties"--><!--Device-Constants-ACTION_SET_AUTHENTICATOR_PROPERTIES = "setAuthenticatorProperties"-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -108,9 +108,9 @@ KEY_NAME = "name"
 
 Name of the application account.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-Constants-KEY_NAME = "name"--><!--Device-Constants-KEY_NAME = "name"-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -122,9 +122,9 @@ KEY_OWNER = "owner"
 
 Bundle name of the application account owner.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-Constants-KEY_OWNER = "owner"--><!--Device-Constants-KEY_OWNER = "owner"-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -136,9 +136,9 @@ KEY_TOKEN = "token"
 
 Token.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-Constants-KEY_TOKEN = "token"--><!--Device-Constants-KEY_TOKEN = "token"-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -150,9 +150,9 @@ KEY_ACTION = "action"
 
 Operation.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-Constants-KEY_ACTION = "action"--><!--Device-Constants-KEY_ACTION = "action"-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -164,9 +164,9 @@ KEY_AUTH_TYPE = "authType"
 
 Authentication type.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-Constants-KEY_AUTH_TYPE = "authType"--><!--Device-Constants-KEY_AUTH_TYPE = "authType"-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -178,9 +178,9 @@ KEY_SESSION_ID = "sessionId"
 
 Session ID.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-Constants-KEY_SESSION_ID = "sessionId"--><!--Device-Constants-KEY_SESSION_ID = "sessionId"-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -192,9 +192,9 @@ KEY_CALLER_PID = "callerPid"
 
 PID of the caller.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-Constants-KEY_CALLER_PID = "callerPid"--><!--Device-Constants-KEY_CALLER_PID = "callerPid"-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -206,9 +206,9 @@ KEY_CALLER_UID = "callerUid"
 
 UID of the caller.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-Constants-KEY_CALLER_UID = "callerUid"--><!--Device-Constants-KEY_CALLER_UID = "callerUid"-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -220,9 +220,9 @@ KEY_CALLER_BUNDLE_NAME = "callerBundleName"
 
 Bundle name of the caller.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-Constants-KEY_CALLER_BUNDLE_NAME = "callerBundleName"--><!--Device-Constants-KEY_CALLER_BUNDLE_NAME = "callerBundleName"-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -234,9 +234,9 @@ KEY_REQUIRED_LABELS = "requiredLabels"
 
 Required labels.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Constants-KEY_REQUIRED_LABELS = "requiredLabels"--><!--Device-Constants-KEY_REQUIRED_LABELS = "requiredLabels"-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -248,9 +248,8 @@ KEY_BOOLEAN_RESULT = "booleanResult"
 
 Return value of the Boolean type.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Constants-KEY_BOOLEAN_RESULT = "booleanResult"--><!--Device-Constants-KEY_BOOLEAN_RESULT = "booleanResult"-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
-

@@ -4,11 +4,11 @@ Enumerates the KV store security levels.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** SecurityLevel
-
-<!--Device-distributedData-enum SecurityLevel--><!--Device-distributedData-enum SecurityLevel-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -22,9 +22,9 @@ No security level is set for the KV store (deprecated).
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SecurityLevel-NO_LEVEL = 0--><!--Device-SecurityLevel-NO_LEVEL = 0-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -38,9 +38,9 @@ The KV store security level is public (deprecated).
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-SecurityLevel-S0 = 1--><!--Device-SecurityLevel-S0 = 1-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -54,11 +54,11 @@ Low security level. If data leakage occurs, minor impact will be caused. For exa
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** S1
-
-<!--Device-SecurityLevel-S1 = 2--><!--Device-SecurityLevel-S1 = 2-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -72,11 +72,11 @@ Medium security level. If data leakage occurs, moderate impact will be caused. F
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** S2
-
-<!--Device-SecurityLevel-S2 = 3--><!--Device-SecurityLevel-S2 = 3-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -90,11 +90,11 @@ High security level. If data leakage occurs, major impact will be caused. For ex
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** S3
-
-<!--Device-SecurityLevel-S3 = 5--><!--Device-SecurityLevel-S3 = 5-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -108,11 +108,10 @@ Critical security level. If data leakage occurs, severe impact will be caused. F
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** S4
 
-<!--Device-SecurityLevel-S4 = 6--><!--Device-SecurityLevel-S4 = 6-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
-

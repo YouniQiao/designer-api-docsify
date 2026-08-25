@@ -8,14 +8,13 @@ Media favorite type addFavorite & removeFavorite.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-avMusicTemplate-type MediaFavoriteType = 'addFavorite' | 'removeFavorite'--><!--Device-avMusicTemplate-type MediaFavoriteType = 'addFavorite' | 'removeFavorite'-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-| Type | Description |
-| --- | --- |
-| 'addFavorite' |  |
-| 'removeFavorite' |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'addFavorite' |
+| 'removeFavorite' |

@@ -2,9 +2,9 @@
 
 Represents the domain account information.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-osAccount-interface DomainAccountInfo--><!--Device-osAccount-interface DomainAccountInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -24,9 +24,9 @@ Domain account ID.This is a system API and is **undefined** by default.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-DomainAccountInfo-accountId?: string--><!--Device-DomainAccountInfo-accountId?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -42,11 +42,10 @@ Whether the domain account has been authenticated. The value **true** means that
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-DomainAccountInfo-isAuthenticated?: boolean--><!--Device-DomainAccountInfo-isAuthenticated?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-

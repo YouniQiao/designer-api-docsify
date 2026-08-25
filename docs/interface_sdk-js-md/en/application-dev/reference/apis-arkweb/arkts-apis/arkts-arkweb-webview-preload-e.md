@@ -4,7 +4,7 @@ Enumerates how the player preloads media data.
 
 **Since:** 12
 
-<!--Device-webview-enum Preload--><!--Device-webview-enum Preload-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,9 +18,9 @@ No media data is preloaded.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Preload-NONE = 0--><!--Device-Preload-NONE = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -34,9 +34,9 @@ Only the metadata of the media is preloaded.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Preload-METADATA = 1--><!--Device-Preload-METADATA = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -50,9 +50,8 @@ A sufficient amount of media data is preloaded to ensure smooth playback
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-Preload-AUTO = 2--><!--Device-Preload-AUTO = 2-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

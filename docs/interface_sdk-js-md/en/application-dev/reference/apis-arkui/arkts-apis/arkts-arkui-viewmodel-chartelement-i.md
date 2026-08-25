@@ -6,7 +6,7 @@ The &lt;chart&gt; component displays line charts, gauge charts, and bar charts.@
 
 **Since:** 4
 
-<!--Device-unnamed-export interface ChartElement--><!--Device-unnamed-export interface ChartElement-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -39,15 +39,14 @@ Data is dynamiconlyally added to an existing data sequence. The target sequence 
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-ChartElement-append(params: {    /**     * Set the data subscript of the line chart to be updated.     *     * @type { number }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @famodelonly     * @since 4 dynamiconly     */    serial: number;    /**     * Set the new data.     *     * @type { Array<number> }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @famodelonly     * @since 4 dynamiconly     */    data: Array<number>;  }): void--><!--Device-ChartElement-append(params: {    /**     * Set the data subscript of the line chart to be updated.     *     * @type { number }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @famodelonly     * @since 4 dynamiconly     */    serial: number;    /**     * Set the new data.     *     * @type { Array<number> }     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @famodelonly     * @since 4 dynamiconly     */    data: Array<number>;  }): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| params | {     /**      * Set the data subscript of the line chart to be updated.      *      * @type { number }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @famodelonly      * @since 4 dynamiconly      */     serial: number;     /**      * Set the new data.      *      * @type { Array&lt;number&gt; }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @famodelonly      * @since 4 dynamiconly      */     data: Array&lt;number&gt;;   } | Yes |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| params | {     /**      * Set the data subscript of the line chart to be updated.      *      * @type { number }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @famodelonly      * @since 4 dynamiconly      */     serial: number;     /**      * Set the new data.      *      * @type { Array & lt;number & gt; }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @famodelonly      * @since 4 dynamiconly      */     data: Array & lt;number & gt;;   } | Yes |

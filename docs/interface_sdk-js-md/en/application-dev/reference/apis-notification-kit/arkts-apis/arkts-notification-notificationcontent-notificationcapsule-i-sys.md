@@ -5,9 +5,9 @@ Describes the notification capsule, which is used to display the capsule form in
 > **NOTE：**&gt;
 > The actual display effect depends on the device capabilities and the notification center UI style.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-unnamed-export interface NotificationCapsule--><!--Device-unnamed-export interface NotificationCapsule-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -21,9 +21,9 @@ Buttons of the notification capsule of an instant task. A maximum of two buttons
 
 **Type:** Array&lt;[NotificationIconButton](arkts-notification-notificationcontent-notificationiconbutton-i-sys.md)&gt;
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-NotificationCapsule-capsuleButtons?: Array<NotificationIconButton>--><!--Device-NotificationCapsule-capsuleButtons?: Array<NotificationIconButton>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -39,9 +39,9 @@ Extended text of the capsule. This parameter is left empty by default.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-NotificationCapsule-content?: string--><!--Device-NotificationCapsule-content?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -55,13 +55,12 @@ time?: int
 
 Display duration of the notification capsule of an instant task. The default value is **0**. Unit: second.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-NotificationCapsule-time?: int--><!--Device-NotificationCapsule-time?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

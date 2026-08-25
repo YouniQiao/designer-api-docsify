@@ -2,9 +2,9 @@
 
 Enum for nnrt device type
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-mindSporeLite-export enum NNRTDeviceType--><!--Device-mindSporeLite-export enum NNRTDeviceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -16,11 +16,11 @@ NNRTDEVICE_OTHERS = 0
 
 Devices that are not CPU, GPU, or dedicated accelerator
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NNRTDeviceType-NNRTDEVICE_OTHERS = 0--><!--Device-NNRTDeviceType-NNRTDEVICE_OTHERS = 0-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -32,11 +32,11 @@ NNRTDEVICE_CPU = 1
 
 CPU device
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NNRTDeviceType-NNRTDEVICE_CPU = 1--><!--Device-NNRTDeviceType-NNRTDEVICE_CPU = 1-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -48,11 +48,11 @@ NNRTDEVICE_GPU = 2
 
 GPU device
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NNRTDeviceType-NNRTDEVICE_GPU = 2--><!--Device-NNRTDeviceType-NNRTDEVICE_GPU = 2-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -64,11 +64,10 @@ NNRTDEVICE_ACCELERATOR = 3
 
 Dedicated hardware accelerator
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NNRTDeviceType-NNRTDEVICE_ACCELERATOR = 3--><!--Device-NNRTDeviceType-NNRTDEVICE_ACCELERATOR = 3-End-->
-
 **System capability:** SystemCapability.AI.MindSporeLite
-

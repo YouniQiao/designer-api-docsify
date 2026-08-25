@@ -6,7 +6,7 @@
 
 **起始版本：** 22
 
-<!--Device-unnamed-declare class UIPickerComponentAttribute--><!--Device-unnamed-declare class UIPickerComponentAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,19 +25,19 @@ canLoop(isLoop: Optional<boolean>)
 
 **起始版本：** 22
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-UIPickerComponentAttribute-canLoop(isLoop: Optional<boolean>): UIPickerComponentAttribute--><!--Device-UIPickerComponentAttribute-canLoop(isLoop: Optional<boolean>): UIPickerComponentAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isLoop | Optional&lt;boolean&gt; | 是 | 是否可循环滚动。 <br>- true：可循环滚动。 <br>- false：不可循环滚动。 <br>默认值：true <br>当isLoop的值为undefined时，使用默认值。 <br>当子组件个数小于或等于可见选项数量 （由[displayedItemCount](#displayeditemcount)设置，默认为7）时，无论isLoop设置为true 还是false，都不会循环滚动。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| isLoop | Optional & lt;boolean & gt; | 是 |
 
 ## displayedItemCount
 
@@ -49,19 +49,19 @@ displayedItemCount(count: Optional<int>)
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-UIPickerComponentAttribute-displayedItemCount(count: Optional<int>): UIPickerComponentAttribute--><!--Device-UIPickerComponentAttribute-displayedItemCount(count: Optional<int>): UIPickerComponentAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| count | Optional&lt;int&gt; | 是 | 可见选项数量。 <br>取值范围：[2, 9]内的整数。 <br>设置小数时，使用向下取整后的整数。 <br>设置偶数时，自动转为大于该值的奇数（例如2变为3、8变为9）。 <br>设置不在取值范围内时，使用默认值7行。 <br>当count的值为undefined时，使用默认值7行。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| count | Optional & lt;number & gt; | 是 |
 
 ## enableHapticFeedback
 
@@ -74,19 +74,19 @@ enableHapticFeedback(enable: Optional<boolean>)
 
 **起始版本：** 22
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-UIPickerComponentAttribute-enableHapticFeedback(enable: Optional<boolean>): UIPickerComponentAttribute--><!--Device-UIPickerComponentAttribute-enableHapticFeedback(enable: Optional<boolean>): UIPickerComponentAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enable | Optional&lt;boolean&gt; | 是 | 设置是否开启触控反馈。 <br>- true：开启触控反馈。 <br>- false：不开启触控反馈。 <br>默认值：true <br>当enable的值为undefined时，使用默认值。 <br>开启后，是否存在触控反馈取决于系统硬件支持情况。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| enable | Optional & lt;boolean & gt; | 是 |
 
 ## itemHeight
 
@@ -98,19 +98,19 @@ itemHeight(height: Optional<LengthMetrics>)
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-UIPickerComponentAttribute-itemHeight(height: Optional<LengthMetrics>): UIPickerComponentAttribute--><!--Device-UIPickerComponentAttribute-itemHeight(height: Optional<LengthMetrics>): UIPickerComponentAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| height | Optional&lt;LengthMetrics&gt; | 是 | 选项高度。 <br>单位：与[LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)一致。 <br>取值范围：[40vp, 64vp] <br>设置小于40vp或大于64vp时，使用默认值40vp。 <br>当height的值为undefined时，使用默认值40vp。 <br>不支持“百分比”类型。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| height | Optional & lt;LengthMetrics & gt; | 是 |
 
 ## onChange
 
@@ -127,19 +127,19 @@ onChange(callback: Optional<OnUIPickerComponentCallback>)
 
 **起始版本：** 22
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-UIPickerComponentAttribute-onChange(callback: Optional<OnUIPickerComponentCallback>): UIPickerComponentAttribute--><!--Device-UIPickerComponentAttribute-onChange(callback: Optional<OnUIPickerComponentCallback>): UIPickerComponentAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Optional&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | 是 | 当选中项发生变化时触发的回调函数。 <br>当callback的值为undefined时，不使用回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Optional&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | 是 |
 
 ## onScrollStop
 
@@ -159,19 +159,19 @@ onScrollStop(callback: Optional<OnUIPickerComponentCallback>)
 
 **起始版本：** 22
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-UIPickerComponentAttribute-onScrollStop(callback: Optional<OnUIPickerComponentCallback>): UIPickerComponentAttribute--><!--Device-UIPickerComponentAttribute-onScrollStop(callback: Optional<OnUIPickerComponentCallback>): UIPickerComponentAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Optional&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | 是 | 当选择器滑动停止时触发的回调函数。当callback的值为undefined时， 不使用回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Optional&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | 是 |
 
 ## selectionIndicator
 
@@ -183,17 +183,16 @@ selectionIndicator(style: Optional<PickerIndicatorStyle>)
 
 **起始版本：** 22
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-UIPickerComponentAttribute-selectionIndicator(style: Optional<PickerIndicatorStyle>): UIPickerComponentAttribute--><!--Device-UIPickerComponentAttribute-selectionIndicator(style: Optional<PickerIndicatorStyle>): UIPickerComponentAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| style | Optional&lt;[PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md)&gt; | 是 | 选中项指示器的样式。 <br>默认值： <br>{<br>type: PickerIndicatorType.BACKGROUND, <br>borderRadius: {<br>value:12, <br>unit:LengthUnit.vp <br>}, <br>backgroundColor: 'sys.color.comp_background_tertiary'<br>} <br>当style的值为undefined时，使用默认值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| style | Optional&lt;[PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md)&gt; | 是 |

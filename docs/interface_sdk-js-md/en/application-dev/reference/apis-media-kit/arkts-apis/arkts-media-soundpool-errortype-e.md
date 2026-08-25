@@ -2,9 +2,9 @@
 
 Enumerates the error types (used to distinguish error stages).
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-unnamed-export enum ErrorType--><!--Device-unnamed-export enum ErrorType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -16,9 +16,9 @@ LOAD_ERROR = 1
 
 An error occurred during resource loading.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ErrorType-LOAD_ERROR = 1--><!--Device-ErrorType-LOAD_ERROR = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -30,9 +30,8 @@ PLAY_ERROR = 2
 
 An error occurred during resource playback.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ErrorType-PLAY_ERROR = 2--><!--Device-ErrorType-PLAY_ERROR = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
-

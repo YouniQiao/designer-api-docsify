@@ -6,7 +6,7 @@
 
 **起始版本：** 10
 
-<!--Device-unnamed-declare interface GeometryInfo--><!--Device-unnamed-declare interface GeometryInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,11 @@ borderWidth: EdgeWidth
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-GeometryInfo-borderWidth: EdgeWidth--><!--Device-GeometryInfo-borderWidth: EdgeWidth-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,11 +47,11 @@ margin: Margin
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-GeometryInfo-margin: Margin--><!--Device-GeometryInfo-margin: Margin-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -63,15 +63,14 @@ padding: Padding
 
 父组件（自定义组件）padding信息。 单位为： vp。
 
-**类型：** Padding
+**类型：** [Padding](../arkts-apis/arkts-arkui-units-padding-i.md)
 
 **起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-GeometryInfo-padding: Padding--><!--Device-GeometryInfo-padding: Padding-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

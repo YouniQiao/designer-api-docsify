@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-connection-export interface ProbeResultInfo--><!--Device-connection-export interface ProbeResultInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -17,36 +17,35 @@ import { connection } from '@kit.NetworkKit';
 ## lossRate
 
 ```TypeScript
-lossRate: int
+lossRate: number
 ```
 
 丢包率，取值范围[0, 100]。例如，100表示100%丢包，50表示50%丢包。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-ProbeResultInfo-lossRate: int--><!--Device-ProbeResultInfo-lossRate: int-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## rtt
 
 ```TypeScript
-rtt: int[]
+rtt: number[]
 ```
 
 往返时间（RTT），单位为毫秒。对目的主机发送多个探测报文，探测报文数量由[queryProbeResult](arkts-network-connection-queryproberesult-f.md)接口中duration参数决定。数组元素依次为 这些探测报文RTT中最小值、平均值、最大值、标准差。
 
-**类型：** int[]
+**类型：** number[]
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ProbeResultInfo-rtt: int[]--><!--Device-ProbeResultInfo-rtt: int[]-End-->
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
-

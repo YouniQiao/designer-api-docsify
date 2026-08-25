@@ -2,9 +2,9 @@
 
 Get the bundle statistics.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-storageStatistics-export interface BundleStats--><!--Device-storageStatistics-export interface BundleStats-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -22,11 +22,11 @@ appSize: long
 
 The size of application installation data. <br>Unit: Byte.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-BundleStats-appSize: long--><!--Device-BundleStats-appSize: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -38,11 +38,11 @@ cacheSize: long
 
 The size of application cache data. <br>Unit: Byte.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-BundleStats-cacheSize: long--><!--Device-BundleStats-cacheSize: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -54,11 +54,10 @@ dataSize: long
 
 The size of application local data, distributed data and database data. <br>Unit: Byte.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-BundleStats-dataSize: long--><!--Device-BundleStats-dataSize: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
-

@@ -6,13 +6,12 @@ export type NotificationCheckRequest = _NotificationCheckRequest
 
 Describes the notification authentication information.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-notificationManager-export type NotificationCheckRequest = _NotificationCheckRequest--><!--Device-notificationManager-export type NotificationCheckRequest = _NotificationCheckRequest-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
 
 **Property type:** _NotificationCheckRequest
-

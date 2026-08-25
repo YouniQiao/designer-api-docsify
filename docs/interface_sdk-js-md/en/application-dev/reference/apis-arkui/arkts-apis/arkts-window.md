@@ -1,6 +1,19 @@
 # @ohos.window
 
-Window manager.
+The Window module provides basic window management capabilities, such as creating and destroying the current window,
+ setting properties for the current window, and managing and scheduling windows.
+ This module provides the following common window-related functions:
+ - [Window](arkts-arkui-window-n.md): window instance, which is the basic unit managed by the window manager.
+ - [WindowStage](arkts-arkui-window-windowstage-i.md): window manager that manages windows.
+ > **NOTE**
+ >
+ > - This topic describes only system APIs provided by the module. For details about its public APIs, see
+ > [@ohos.window (Window)](arkts-arkui-window-n.md).
+ >
+ > - For the system capability SystemCapability.Window.SessionManager, use
+ > canIUse() to check whether the device supports this system
+ > capability and the corresponding APIs.
+
 
 ## Modules to Import
 
@@ -12,29 +25,28 @@ import { window } from '@kit.ArkUI';
 
 ### Namespaces
 
-| Name | Description |
-| --- | --- |
-| [window](arkts-arkui-window-n.md) | Window manager. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [window](arkts-arkui-window-n.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [Callback](arkts-arkui-window-callback-i.md) | Defines the window callback. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Callback](arkts-arkui-window-callback-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [Callback](arkts-arkui-callback-t.md) | Defines the window callback. |
-| [WindowAnimationCurveParam](arkts-arkui-windowanimationcurveparam-t.md) | Defines the window animation curve param. |
-| [WindowEventListener](arkts-arkui-windoweventlistener-t.md) | Callback function for window event |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Callback](arkts-arkui-callback-t.md) |
+| [WindowAnimationCurveParam](arkts-arkui-windowanimationcurveparam-t.md) |
+| [WindowEventListener](arkts-arkui-windoweventlistener-t.md) |
 
 <!--Del-->
 ### Types(System API)
 
-| Name | Description |
-| --- | --- |
-| [TransitionControllerCallback](arkts-arkui-transitioncontrollercallback-t-sys.md) | Callback function for transition controller |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [TransitionControllerCallback](arkts-arkui-transitioncontrollercallback-t-sys.md) |
 <!--DelEnd-->
-

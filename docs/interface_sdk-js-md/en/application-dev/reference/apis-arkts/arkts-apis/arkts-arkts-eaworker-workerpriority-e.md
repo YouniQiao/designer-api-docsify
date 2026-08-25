@@ -4,9 +4,7 @@ Represents the priority levels for an EAWorker
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export enum WorkerPriority--><!--Device-unnamed-export enum WorkerPriority-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -20,11 +18,9 @@ Idle priority
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WorkerPriority-PRIORITY_IDLE = 0--><!--Device-WorkerPriority-PRIORITY_IDLE = 0-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -38,11 +34,9 @@ Low priority
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WorkerPriority-PRIORITY_LOW = 1--><!--Device-WorkerPriority-PRIORITY_LOW = 1-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -56,11 +50,9 @@ Default priority
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WorkerPriority-PRIORITY_DEFAULT = 2--><!--Device-WorkerPriority-PRIORITY_DEFAULT = 2-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -74,11 +66,9 @@ High priority
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WorkerPriority-PRIORITY_HIGH = 3--><!--Device-WorkerPriority-PRIORITY_HIGH = 3-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -92,11 +82,9 @@ Deadline request priority
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WorkerPriority-PRIORITY_DEADLINE_REQUEST = 4--><!--Device-WorkerPriority-PRIORITY_DEADLINE_REQUEST = 4-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -110,11 +98,8 @@ User interaction priority
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WorkerPriority-PRIORITY_USER_INTERACTION = 5--><!--Device-WorkerPriority-PRIORITY_USER_INTERACTION = 5-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

@@ -7,11 +7,11 @@ UiTest框架通过By类提供了丰富的控件特征描述API，用于进行控
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [On](arkts-test-uitest-on-c.md)
-
-<!--Device-unnamed-declare class By--><!--Device-unnamed-declare class By-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -35,25 +35,25 @@ clickable(b?: boolean): By
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [clickable](arkts-test-uitest-on-c.md#clickable)
-
-<!--Device-By-clickable(b?: boolean): By--><!--Device-By-clickable(b?: boolean): By-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| b | boolean | 否 | 指定控件可点击状态。true：可点击。false：不可点击。默认为true。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| b | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件的可点击状态属性的By对象。 |
+| 类型 |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **示例**
 
@@ -84,25 +84,25 @@ enabled(b?: boolean): By
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [enabled](arkts-test-uitest-on-c.md#enabled)
-
-<!--Device-By-enabled(b?: boolean): By--><!--Device-By-enabled(b?: boolean): By-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| b | boolean | 否 | 指定控件使能状态。true：使能。false：未使能。默认为true。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| b | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件的使能状态属性的By对象。 |
+| 类型 |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **示例**
 
@@ -133,25 +133,25 @@ focused(b?: boolean): By
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [focused](arkts-test-uitest-on-c.md#focused)
-
-<!--Device-By-focused(b?: boolean): By--><!--Device-By-focused(b?: boolean): By-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| b | boolean | 否 | 控件获焦状态。true：获焦。false：未获焦。默认为true。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| b | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件的获焦状态属性的By对象。 |
+| 类型 |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **示例**
 
@@ -182,25 +182,25 @@ id(id: number): By
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [id](arkts-test-uitest-on-c.md#id)(id: string)
-
-<!--Device-By-id(id: number): By--><!--Device-By-id(id: number): By-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| id | number | 是 | 指定控件的id值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [id](#id) | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件id属性的By对象。 |
+| 类型 |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **示例**
 
@@ -238,25 +238,25 @@ isAfter(by: By): By
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [isAfter](arkts-test-uitest-on-c.md#isafter)(on: On)
-
-<!--Device-By-isAfter(by: By): By--><!--Device-By-isAfter(by: By): By-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| by | [By](arkts-test-uitest-by-c.md) | 是 | 特征控件的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| by | [By](arkts-test-uitest-by-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件位于给出的特征属性控件之后的By对象。 |
+| 类型 |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **示例**
 
@@ -289,25 +289,25 @@ isBefore(by: By): By
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [isBefore](arkts-test-uitest-on-c.md#isbefore)(on: On)
-
-<!--Device-By-isBefore(by: By): By--><!--Device-By-isBefore(by: By): By-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| by | [By](arkts-test-uitest-by-c.md) | 是 | 特征控件的属性。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| by | [By](arkts-test-uitest-by-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件位于给出的特征属性控件之前的By对象。 |
+| 类型 |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **示例**
 
@@ -340,25 +340,25 @@ key(key: string): By
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [id](arkts-test-uitest-on-c.md#id)(id: string)
-
-<!--Device-By-key(key: string): By--><!--Device-By-key(key: string): By-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | string | 是 | 指定控件的Key值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [key](#key) | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件key值属性的By对象。 |
+| 类型 |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **示例**
 
@@ -382,25 +382,25 @@ scrollable(b?: boolean): By
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [scrollable](arkts-test-uitest-on-c.md#scrollable)
-
-<!--Device-By-scrollable(b?: boolean): By--><!--Device-By-scrollable(b?: boolean): By-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| b | boolean | 否 | 控件可滑动状态。true：可滑动。false：不可滑动。默认为true。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| b | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件的可滑动状态属性的By对象。 |
+| 类型 |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **示例**
 
@@ -431,25 +431,25 @@ selected(b?: boolean): By
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [selected](arkts-test-uitest-on-c.md#selected)
-
-<!--Device-By-selected(b?: boolean): By--><!--Device-By-selected(b?: boolean): By-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| b | boolean | 否 | 指定控件被选中状态。true：被选中。false：未被选中。默认为true。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| b | boolean | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件的被选中状态属性的By对象。 |
+| 类型 |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **示例**
 
@@ -480,26 +480,26 @@ text(txt: string, pattern?: MatchPattern): By
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [text](arkts-test-uitest-on-c.md#text)
-
-<!--Device-By-text(txt: string, pattern?: MatchPattern): By--><!--Device-By-text(txt: string, pattern?: MatchPattern): By-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| txt | string | 是 | 指定控件文本，用于匹配目标控件文本。 |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 | 指定的文本匹配模式，默认为[EQUALS](arkts-test-uitest-matchpattern-e.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| txt | string | 是 |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件文本属性的By对象。 |
+| 类型 |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **示例**
 
@@ -530,25 +530,25 @@ type(tp: string): By
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [type](arkts-test-uitest-on-c.md#type)(tp: string)
-
-<!--Device-By-type(tp: string): By--><!--Device-By-type(tp: string): By-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| tp | string | 是 | 指定控件类型。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| tp | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件的控件类型属性的By对象。 |
+| 类型 |
+| --- |
+| [By](arkts-test-uitest-by-c.md) |
 
 **示例**
 
@@ -572,4 +572,3 @@ import { By, BY } from '@kit.TestKit';
 
 let by: By = BY.type('Button'); // 使用静态构造器BY创建by对象，指定目标控件的控件类型属性。
 ```
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-userStatus-export enum UserStatusFeature--><!--Device-userStatus-export enum UserStatusFeature-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -20,9 +20,9 @@ GESTURES_RECOGNITION = 5
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-UserStatusFeature-GESTURES_RECOGNITION = 5--><!--Device-UserStatusFeature-GESTURES_RECOGNITION = 5-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -38,9 +38,9 @@ ANTI_MISTOUCH = 6
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-UserStatusFeature-ANTI_MISTOUCH = 6--><!--Device-UserStatusFeature-ANTI_MISTOUCH = 6-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -56,9 +56,9 @@ QUICK_GESTURES_RECOGNITION = 7
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-UserStatusFeature-QUICK_GESTURES_RECOGNITION = 7--><!--Device-UserStatusFeature-QUICK_GESTURES_RECOGNITION = 7-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -74,9 +74,9 @@ FACE_RELATIVE_POSITION_RECOGNITION = 8
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-UserStatusFeature-FACE_RELATIVE_POSITION_RECOGNITION = 8--><!--Device-UserStatusFeature-FACE_RELATIVE_POSITION_RECOGNITION = 8-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -92,9 +92,9 @@ QUICK_FACE_RELATIVE_POSITION_RECOGNITION = 9
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-UserStatusFeature-QUICK_FACE_RELATIVE_POSITION_RECOGNITION = 9--><!--Device-UserStatusFeature-QUICK_FACE_RELATIVE_POSITION_RECOGNITION = 9-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -110,9 +110,9 @@ HAND_GAZE_COORDINATION = 11
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-UserStatusFeature-HAND_GAZE_COORDINATION = 11--><!--Device-UserStatusFeature-HAND_GAZE_COORDINATION = 11-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -128,9 +128,9 @@ USER_BLOWING_STATUS = 12
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-UserStatusFeature-USER_BLOWING_STATUS = 12--><!--Device-UserStatusFeature-USER_BLOWING_STATUS = 12-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -146,9 +146,9 @@ USER_MOOD = 13
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-UserStatusFeature-USER_MOOD = 13--><!--Device-UserStatusFeature-USER_MOOD = 13-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -164,9 +164,9 @@ COMFORT_REMINDER = 15
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-UserStatusFeature-COMFORT_REMINDER = 15--><!--Device-UserStatusFeature-COMFORT_REMINDER = 15-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -182,9 +182,9 @@ ENV_SOUND = 17
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-UserStatusFeature-ENV_SOUND = 17--><!--Device-UserStatusFeature-ENV_SOUND = 17-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -200,11 +200,10 @@ EXT_SCREEN_ANTI_MISTOUCH = 19
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-UserStatusFeature-EXT_SCREEN_ANTI_MISTOUCH = 19--><!--Device-UserStatusFeature-EXT_SCREEN_ANTI_MISTOUCH = 19-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
-

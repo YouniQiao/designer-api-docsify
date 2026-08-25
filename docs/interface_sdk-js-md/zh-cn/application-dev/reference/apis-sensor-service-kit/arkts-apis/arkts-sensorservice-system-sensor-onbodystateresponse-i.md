@@ -4,11 +4,11 @@
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** [WearDetectionResponse](arkts-sensorservice-sensor-weardetectionresponse-i.md)
-
-<!--Device-unnamed-export interface OnBodyStateResponse--><!--Device-unnamed-export interface OnBodyStateResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -30,13 +30,12 @@ value: boolean
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** [value](arkts-sensorservice-sensor-weardetectionresponse-i.md#value)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-OnBodyStateResponse-value: boolean--><!--Device-OnBodyStateResponse-value: boolean-End-->
-
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
-

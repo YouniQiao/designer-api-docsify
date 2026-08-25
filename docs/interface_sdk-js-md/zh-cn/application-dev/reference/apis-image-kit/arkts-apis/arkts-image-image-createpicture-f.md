@@ -14,29 +14,29 @@ function createPicture(mainPixelmap : PixelMap): Picture
 
 通过主图的PixelMap创建一个Picture对象。由于图片占用内存较大，所以当Picture对象使用完成后，应主动调用[release](arkts-image-image-picture-i.md#release)方法及时释放内存。释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-image-function createPicture(mainPixelmap : PixelMap): Picture--><!--Device-image-function createPicture(mainPixelmap : PixelMap): Picture-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mainPixelmap | PixelMap | 是 | 主图的PixelMap。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mainPixelmap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Picture](arkts-image-image-picture-i.md) | 返回Picture对象。 |
+| 类型 |
+| --- |
+| [Picture](arkts-image-image-picture-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -112,4 +112,3 @@ async function CreatePictureFunc(imageSource: image.ImageSource): void {
   }
 }
 ```
-

@@ -2,9 +2,9 @@
 
 Describes upload file information.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-intelligentVoice-interface UploadFile--><!--Device-intelligentVoice-interface UploadFile-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -26,9 +26,9 @@ Files content.
 
 **Type:** Array&lt;ArrayBuffer&gt;
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-UploadFile-filesContent: Array<ArrayBuffer>--><!--Device-UploadFile-filesContent: Array<ArrayBuffer>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -44,9 +44,9 @@ Files description.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-UploadFile-filesDescription: string--><!--Device-UploadFile-filesDescription: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -62,11 +62,10 @@ Report file type.
 
 **Type:** [UploadFileType](arkts-basicservices-intelligentvoice-uploadfiletype-e-sys.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-UploadFile-type: UploadFileType--><!--Device-UploadFile-type: UploadFileType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
-

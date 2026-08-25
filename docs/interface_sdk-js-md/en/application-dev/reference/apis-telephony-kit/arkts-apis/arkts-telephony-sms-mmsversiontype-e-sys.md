@@ -2,9 +2,9 @@
 
 Enumerates MMS versions.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sms-export enum MmsVersionType--><!--Device-sms-export enum MmsVersionType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -18,9 +18,9 @@ MMS_VERSION_1_0 = 0x10
 
 MMS version 1_0.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsVersionType-MMS_VERSION_1_0 = 0x10--><!--Device-MmsVersionType-MMS_VERSION_1_0 = 0x10-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -34,9 +34,9 @@ MMS_VERSION_1_1 = 0x11
 
 MMS version 1_1.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsVersionType-MMS_VERSION_1_1 = 0x11--><!--Device-MmsVersionType-MMS_VERSION_1_1 = 0x11-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -50,9 +50,9 @@ MMS_VERSION_1_2 = 0x12
 
 MMS version 1_2.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsVersionType-MMS_VERSION_1_2 = 0x12--><!--Device-MmsVersionType-MMS_VERSION_1_2 = 0x12-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -66,11 +66,10 @@ MMS_VERSION_1_3 = 0x13
 
 MMS version 1_3.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsVersionType-MMS_VERSION_1_3 = 0x13--><!--Device-MmsVersionType-MMS_VERSION_1_3 = 0x13-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
-

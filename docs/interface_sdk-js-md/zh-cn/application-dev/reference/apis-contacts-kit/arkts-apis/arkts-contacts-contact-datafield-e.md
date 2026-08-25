@@ -4,7 +4,7 @@
 
 **起始版本：** 15
 
-<!--Device-contact-enum DataField--><!--Device-contact-enum DataField-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -18,9 +18,9 @@ PHONE = 1
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
-<!--Device-DataField-PHONE = 1--><!--Device-DataField-PHONE = 1-End-->
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -34,9 +34,9 @@ ORGANIZATION = 2
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
-<!--Device-DataField-ORGANIZATION = 2--><!--Device-DataField-ORGANIZATION = 2-End-->
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -50,9 +50,8 @@ EMAIL = 0
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
-<!--Device-DataField-EMAIL = 0--><!--Device-DataField-EMAIL = 0-End-->
-
 **系统能力：** SystemCapability.Applications.Contacts
-

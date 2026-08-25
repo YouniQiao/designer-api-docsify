@@ -6,11 +6,10 @@ export type Rotation3 = Vec3
 
 Rotation of an object in 3D space. The type is a three-dimensional vector in the unit of radian (rad). The value can be any value.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export type Rotation3 = Vec3--><!--Device-unnamed-export type Rotation3 = Vec3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Property type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
-

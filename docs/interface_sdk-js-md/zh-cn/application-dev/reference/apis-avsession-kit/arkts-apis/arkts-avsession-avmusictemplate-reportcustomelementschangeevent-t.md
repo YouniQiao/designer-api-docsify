@@ -9,17 +9,16 @@ type ReportCustomElementsChangeEvent = (actionType: ActionType, customType: Cust
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-avMusicTemplate-type ReportCustomElementsChangeEvent = (actionType: ActionType, customType: CustomType,    customElement: CustomElement) => void--><!--Device-avMusicTemplate-type ReportCustomElementsChangeEvent = (actionType: ActionType, customType: CustomType,    customElement: CustomElement) => void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| actionType | ActionType | 是 | 操作类型 |
-| customType | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md) | 是 | 自定义信息类型 |
-| customElement | [CustomElement](arkts-avsession-avmusictemplate-customelement-i.md) | 是 | 自定义数据 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| actionType | [ActionType](arkts-avsession-avmusictemplate-actiontype-t.md) | 是 |
+| customType | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md) | 是 |
+| customElement | [CustomElement](arkts-avsession-avmusictemplate-customelement-i.md) | 是 |

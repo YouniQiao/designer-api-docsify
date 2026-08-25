@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export class AtomicFloat--><!--Device-unnamed-export class AtomicFloat-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,26 +23,24 @@ compareAndSwap(expected: float, val: float): float
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicFloat-compareAndSwap(expected: float, val: float): float--><!--Device-AtomicFloat-compareAndSwap(expected: float, val: float): float-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| expected | float | 是 | 预期的当前值。 |
-| val | float | 是 | 匹配成功时要写入的新值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| expected | float | 是 |
+| val | float | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| float | 修改前的旧值。 |
+| 类型 |
+| --- |
+| float |
 
 ## constructor
 
@@ -56,19 +52,17 @@ constructor(val: float)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicFloat-constructor(val: float)--><!--Device-AtomicFloat-constructor(val: float)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | float | 是 | 初始值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | float | 是 |
 
 ## exchange
 
@@ -80,25 +74,23 @@ exchange(val: float): float
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicFloat-exchange(val: float): float--><!--Device-AtomicFloat-exchange(val: float): float-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | float | 是 | 要写入的新值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | float | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| float | 更新前的旧值。 |
+| 类型 |
+| --- |
+| float |
 
 ## fetchAdd
 
@@ -110,25 +102,23 @@ fetchAdd(val: float): float
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicFloat-fetchAdd(val: float): float--><!--Device-AtomicFloat-fetchAdd(val: float): float-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | float | 是 | 执行加法运算的操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | float | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| float | 加法执行前的旧值。 |
+| 类型 |
+| --- |
+| float |
 
 ## fetchSub
 
@@ -140,25 +130,23 @@ fetchSub(val: float): float
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicFloat-fetchSub(val: float): float--><!--Device-AtomicFloat-fetchSub(val: float): float-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | float | 是 | 执行减法运算的操作数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | float | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| float | 减法执行前的旧值。 |
+| 类型 |
+| --- |
+| float |
 
 ## isLockFree
 
@@ -170,19 +158,17 @@ static isLockFree(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicFloat-static isLockFree(): boolean--><!--Device-AtomicFloat-static isLockFree(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true表示无锁实现，false表示内部可能使用阻塞式同步机制。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## load
 
@@ -194,19 +180,17 @@ load(): float
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicFloat-load(): float--><!--Device-AtomicFloat-load(): float-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| float | 当前保存的值。 |
+| 类型 |
+| --- |
+| float |
 
 ## store
 
@@ -218,17 +202,14 @@ store(val: float): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtomicFloat-store(val: float): void--><!--Device-AtomicFloat-store(val: float): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | float | 是 | 要写入的新值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | float | 是 |

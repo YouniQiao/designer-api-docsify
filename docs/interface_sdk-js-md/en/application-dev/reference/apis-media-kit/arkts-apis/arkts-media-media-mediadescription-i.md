@@ -4,9 +4,7 @@ Provides the container definition for media description key-value pairs.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-media-interface MediaDescription--><!--Device-media-interface MediaDescription-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -15,6 +13,24 @@ Provides the container definition for media description key-value pairs.
 ```TypeScript
 import { media } from '@kit.MediaKit';
 ```
+
+## [key: string]
+
+```TypeScript
+[key: string]: Object
+```
+
+key:value pair, key see @MediaDescriptionKey .
+
+**Type:** Object
+
+**Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Multimedia.Media.Core
 
 **Examples**
 
@@ -47,4 +63,3 @@ media.createAVPlayer((err: BusinessError, player: media.AVPlayer) => {
   }
 });
 ```
-

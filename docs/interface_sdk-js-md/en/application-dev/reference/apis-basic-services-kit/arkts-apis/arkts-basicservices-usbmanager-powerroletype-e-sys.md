@@ -2,9 +2,9 @@
 
 Enumerates power role types.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-usbManager-export enum PowerRoleType--><!--Device-usbManager-export enum PowerRoleType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -18,9 +18,9 @@ NONE = 0
 
 No function.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-PowerRoleType-NONE = 0--><!--Device-PowerRoleType-NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -34,9 +34,9 @@ SOURCE = 1
 
 External power supply
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-PowerRoleType-SOURCE = 1--><!--Device-PowerRoleType-SOURCE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -50,11 +50,10 @@ SINK = 2
 
 Internal power supply
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-PowerRoleType-SINK = 2--><!--Device-PowerRoleType-SINK = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
-

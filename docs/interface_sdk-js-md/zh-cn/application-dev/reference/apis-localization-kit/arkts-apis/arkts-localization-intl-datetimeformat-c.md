@@ -4,11 +4,11 @@
 
 **起始版本：** 6
 
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
-
-<!--Device-intl-export class DateTimeFormat--><!--Device-intl-export class DateTimeFormat-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -28,6 +28,8 @@ constructor()
 
 **起始版本：** 8
 
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)
@@ -35,8 +37,6 @@ constructor()
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-DateTimeFormat-constructor()--><!--Device-DateTimeFormat-constructor()-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -146,6 +146,8 @@ constructor(locale: string | Array<string>, options?: DateTimeOptions)
 
 **起始版本：** 6
 
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)
@@ -154,16 +156,14 @@ constructor(locale: string | Array<string>, options?: DateTimeOptions)
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-DateTimeFormat-constructor(locale: string | Array<string>, options?: DateTimeOptions)--><!--Device-DateTimeFormat-constructor(locale: string | Array<string>, options?: DateTimeOptions)-End-->
-
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
-| options | DateTimeOptions | 否 | 创建时间日期格式化对象时可设置的配置项。 <br>若所有选项均未设置时，year、month、day三个属性的默认值为numeric。 <br>默认值：所有属性都取默认值时的配置项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locale | string \| Array & lt;string & gt; | 是 |
+| options | [DateTimeOptions](arkts-localization-intl-datetimeoptions-i.md) | 否 |
 
 **示例**
 
@@ -179,6 +179,8 @@ format(date: Date): string
 
 **起始版本：** 6
 
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormat.format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format)
@@ -187,21 +189,19 @@ format(date: Date): string
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-DateTimeFormat-format(date: Date): string--><!--Device-DateTimeFormat-format(date: Date): string-End-->
-
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| date | Date | 是 | 时间日期。 <br>**说明：** <br>月份从0开始计数，0表示一月。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| date | Date | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 格式化后的时间日期字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -252,6 +252,8 @@ formatRange(startDate: Date, endDate: Date): string
 
 **起始版本：** 6
 
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormat.formatRange](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange)
@@ -260,22 +262,20 @@ formatRange(startDate: Date, endDate: Date): string
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-DateTimeFormat-formatRange(startDate: Date, endDate: Date): string--><!--Device-DateTimeFormat-formatRange(startDate: Date, endDate: Date): string-End-->
-
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| startDate | Date | 是 | 时间日期的开始。 <br>**说明：** <br>月份从0开始计数，0表示一月。 |
-| endDate | Date | 是 | 时间日期的结束。 <br>**说明：** <br>月份从0开始计数，0表示一月。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| startDate | Date | 是 |
+| endDate | Date | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 格式化后的时间日期段字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -306,6 +306,8 @@ resolvedOptions(): DateTimeOptions
 
 **起始版本：** 6
 
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+
 **废弃版本：** 20
 
 **替代接口：** [Intl.DateTimeFormat.resolvedOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions)
@@ -314,15 +316,13 @@ resolvedOptions(): DateTimeOptions
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-DateTimeFormat-resolvedOptions(): DateTimeOptions--><!--Device-DateTimeFormat-resolvedOptions(): DateTimeOptions-End-->
-
 **系统能力：** SystemCapability.Global.I18n
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| DateTimeOptions | 时间日期格式化对象设置的配置项。 |
+| 类型 |
+| --- |
+| [DateTimeOptions](arkts-localization-intl-datetimeoptions-i.md) |
 
 **示例**
 
@@ -365,4 +365,3 @@ let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat('en-GB', { 
 let options: intl.RelativeTimeFormatResolvedOptions = formatter.resolvedOptions();
 let style: string = options.style; // style = 'short'
 ```
-

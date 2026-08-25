@@ -2,9 +2,9 @@
 
 Describe bundle version@interface BundleVersion
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-unnamed-export interface BundleVersion--><!--Device-unnamed-export interface BundleVersion-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -24,13 +24,13 @@ code: long
 
 Indicates bundle's version code.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BundleVersion-code: long--><!--Device-BundleVersion-code: long-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -44,11 +44,10 @@ Indicates bundle's version name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BundleVersion-name: string--><!--Device-BundleVersion-name: string-End-->
-
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
-

@@ -16,11 +16,11 @@ Queries the space usage of the **\/data** directory on the user device. This API
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-storageStatistics-function listUserdataDirInfo(): Promise<Array<UserdataDirInfo>>--><!--Device-storageStatistics-function listUserdataDirInfo(): Promise<Array<UserdataDirInfo>>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -28,18 +28,18 @@ Queries the space usage of the **\/data** directory on the user device. This API
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;[UserdataDirInfo](arkts-corefile-storagestatistics-userdatadirinfo-i-sys.md)&gt;&gt; | Promise used to return the space usage of the **\/data** directory on the user device. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;Array&lt;[UserdataDirInfo](arkts-corefile-storagestatistics-userdatadirinfo-i-sys.md)&gt;&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| 13600001 | IPC error. |
-| 13600015 | Failed to traverse the query data partition directory. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13600001 |
+| 13600015 |
 
 **Examples**
 
@@ -53,4 +53,3 @@ storageStatistics.listUserdataDirInfo().then((dirInfos: storageStatistics.Userda
   console.error(`listUserdataDirInfo failed with err, code is: ${err.code}, message is: ${err.message}`);
 });
 ```
-

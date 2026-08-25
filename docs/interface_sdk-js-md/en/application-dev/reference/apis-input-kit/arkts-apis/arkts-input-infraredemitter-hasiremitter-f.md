@@ -16,24 +16,24 @@ Checks whether the device has an infrared transmitter. This API uses a promise t
 
 **Since:** 23
 
-**Required permissions:** ohos.permission.MANAGE_INPUT_INFRARED_EMITTER
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-infraredEmitter-function hasIrEmitter(): Promise<boolean>--><!--Device-infraredEmitter-function hasIrEmitter(): Promise<boolean>-End-->
+**Required permissions:** ohos.permission.MANAGE_INPUT_INFRARED_EMITTER
 
 **System capability:** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** is returned if the device has an infrared emitter, and **false** is returned if the device does not have an infrared emitter. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
 
 **Examples**
 
@@ -57,4 +57,3 @@ struct Index {
   }
 }
 ```
-

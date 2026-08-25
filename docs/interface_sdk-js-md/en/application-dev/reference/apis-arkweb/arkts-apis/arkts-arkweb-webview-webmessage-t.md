@@ -4,18 +4,17 @@
 type WebMessage = ArrayBuffer | string
 ```
 
-Defines the data types supported by [onMessageEventExt](../../apis-default/arkts-apis/arkts-webview-webmessageport-i.md#onmessageeventext).
+Defines the data types supported by [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onmessageeventext).
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 9.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-webview-type WebMessage = ArrayBuffer | string--><!--Device-webview-type WebMessage = ArrayBuffer | string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 9.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-| Type | Description |
-| --- | --- |
-| ArrayBuffer | String type. [since 11] |
-| string | Binary type. [since 11] |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArrayBuffer |
+| string |

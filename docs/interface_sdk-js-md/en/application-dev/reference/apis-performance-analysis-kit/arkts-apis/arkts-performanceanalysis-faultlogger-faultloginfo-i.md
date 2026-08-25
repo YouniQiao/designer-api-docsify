@@ -4,9 +4,9 @@ Defines the data structure of the fault log information.
 
 **Since:** 8
 
-**Deprecated since:** 18
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-FaultLogger-interface FaultLogInfo--><!--Device-FaultLogger-interface FaultLogInfo-End-->
+**Deprecated since:** 18
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -28,9 +28,9 @@ Full log text.
 
 **Since:** 8
 
-**Deprecated since:** 18
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-FaultLogInfo-fullLog: string--><!--Device-FaultLogInfo-fullLog: string-End-->
+**Deprecated since:** 18
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -46,9 +46,9 @@ Module on which the fault occurred.
 
 **Since:** 8
 
-**Deprecated since:** 18
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-FaultLogInfo-module: string--><!--Device-FaultLogInfo-module: string-End-->
+**Deprecated since:** 18
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -64,9 +64,9 @@ Process ID of the faulty process.
 
 **Since:** 8
 
-**Deprecated since:** 18
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-FaultLogInfo-pid: number--><!--Device-FaultLogInfo-pid: number-End-->
+**Deprecated since:** 18
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -82,9 +82,9 @@ Reason for the fault.
 
 **Since:** 8
 
-**Deprecated since:** 18
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-FaultLogInfo-reason: string--><!--Device-FaultLogInfo-reason: string-End-->
+**Deprecated since:** 18
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -100,9 +100,9 @@ Summary of the fault.
 
 **Since:** 8
 
-**Deprecated since:** 18
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-FaultLogInfo-summary: string--><!--Device-FaultLogInfo-summary: string-End-->
+**Deprecated since:** 18
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -118,9 +118,9 @@ Millisecond-level timestamp when the log was generated.
 
 **Since:** 8
 
-**Deprecated since:** 18
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-FaultLogInfo-timestamp: number--><!--Device-FaultLogInfo-timestamp: number-End-->
+**Deprecated since:** 18
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -136,9 +136,9 @@ Fault type.
 
 **Since:** 8
 
-**Deprecated since:** 18
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-FaultLogInfo-type: FaultType--><!--Device-FaultLogInfo-type: FaultType-End-->
+**Deprecated since:** 18
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -154,9 +154,8 @@ User ID of the faulty process.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 18
 
-<!--Device-FaultLogInfo-uid: number--><!--Device-FaultLogInfo-uid: number-End-->
-
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
-

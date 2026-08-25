@@ -2,9 +2,9 @@
 
 Describes the geographical location.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sensor-interface LocationOptions--><!--Device-sensor-interface LocationOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -22,11 +22,11 @@ altitude: double
 
 Altitude, in m.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-LocationOptions-altitude: double--><!--Device-LocationOptions-altitude: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -38,11 +38,11 @@ latitude: double
 
 Latitude, in degrees.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-LocationOptions-latitude: double--><!--Device-LocationOptions-latitude: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -54,11 +54,10 @@ longitude: double
 
 Longitude, in degrees.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-LocationOptions-longitude: double--><!--Device-LocationOptions-longitude: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
-

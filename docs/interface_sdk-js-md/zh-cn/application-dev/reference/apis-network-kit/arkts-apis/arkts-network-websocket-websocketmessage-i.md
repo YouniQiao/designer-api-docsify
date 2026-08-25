@@ -2,9 +2,9 @@
 
 从指定客户端接收到的消息，包括客户端的信息和数据。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-webSocket-export interface WebSocketMessage--><!--Device-webSocket-export interface WebSocketMessage-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -24,9 +24,9 @@ clientConnection: WebSocketConnection
 
 **类型：** [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-WebSocketMessage-clientConnection: WebSocketConnection--><!--Device-WebSocketMessage-clientConnection: WebSocketConnection-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -40,9 +40,8 @@ data: string | ArrayBuffer
 
 **类型：** string \| ArrayBuffer
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-WebSocketMessage-data: string | ArrayBuffer--><!--Device-WebSocketMessage-data: string | ArrayBuffer-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
-

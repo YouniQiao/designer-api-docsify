@@ -21,28 +21,28 @@ function bulkTransfer(
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [bulkTransfer](arkts-basicservices-usbmanager-bulktransfer-f.md)
-
-<!--Device-usb-function bulkTransfer(    pipe: USBDevicePipe,    endpoint: USBEndpoint,    buffer: Uint8Array,    timeout?: number  ): Promise<number>--><!--Device-usb-function bulkTransfer(    pipe: USBDevicePipe,    endpoint: USBEndpoint,    buffer: Uint8Array,    timeout?: number  ): Promise<number>-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pipe | USBDevicePipe | 是 | 用于确定设备。 |
-| endpoint | USBEndpoint | 是 | 用于确定传输的端口。 |
-| buffer | Uint8Array | 是 | 用于写入或读取的缓冲区。 |
-| timeout | number | 否 | 超时时间（单位：ms），可选参数，默认为0不超时。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [pipe](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md) | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | 是 |
+| [endpoint](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md) | 是 |
+| buffer | Uint8Array | 是 |
+| timeout | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;number&gt; | Promise对象，获取传输或接收到的数据块大小。失败返回-1。 |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **示例**
 
@@ -54,4 +54,3 @@ usb.bulkTransfer(devicepipe, endpoint, buffer).then((ret) => {
  console.info(`bulkTransfer = ${ret}`);
 });
 ```
-

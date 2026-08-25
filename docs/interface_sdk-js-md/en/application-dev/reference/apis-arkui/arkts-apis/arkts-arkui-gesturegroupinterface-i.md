@@ -4,7 +4,7 @@ Combined gestures integrate two or more gestures into a compound gesture, suppor
 
 **Since:** 7
 
-<!--Device-unnamed-interface GestureGroupInterface--><!--Device-unnamed-interface GestureGroupInterface-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -13,7 +13,7 @@ Combined gestures integrate two or more gestures into a compound gesture, suppor
 ```TypeScript
 ```
 
-## constructor
+## [[Call]]
 
 ```TypeScript
 (mode: GestureMode, ...gesture: GestureType[]): GestureGroupInterface
@@ -23,24 +23,24 @@ Return to Obtain GestureGroup.
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-GestureGroupInterface-(mode: GestureMode, ...gesture: GestureType[]): GestureGroupInterface--><!--Device-GestureGroupInterface-(mode: GestureMode, ...gesture: GestureType[]): GestureGroupInterface-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | [GestureMode](arkts-arkui-gesturemode-e.md) | Yes |  |
-| gesture | [GestureType](arkts-arkui-gesturetype-t.md)[] | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mode | [GestureMode](arkts-arkui-gesturemode-e.md) | Yes |
+| gesture | [GestureType](arkts-arkui-gesturetype-t.md)[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |
 
 ## onCancel
 
@@ -52,21 +52,20 @@ Triggered when a tap cancellation event is received after a gesture is recognize
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-GestureGroupInterface-onCancel(event: () => void): GestureGroupInterface--><!--Device-GestureGroupInterface-onCancel(event: () => void): GestureGroupInterface-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | () =&gt; void | Yes | Callback for the gesture event. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | () = & gt; void | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |

@@ -6,11 +6,11 @@ Defines a reminder for an alarm.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ReminderRequestAlarm](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md)
-
-<!--Device-reminderAgent-interface ReminderRequestAlarm--><!--Device-reminderAgent-interface ReminderRequestAlarm-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -32,11 +32,11 @@ Days of a week when the reminder repeats. The value ranges from 1 to 7, correspo
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** daysOfWeek
-
-<!--Device-ReminderRequestAlarm-daysOfWeek?: Array<number>--><!--Device-ReminderRequestAlarm-daysOfWeek?: Array<number>-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -52,11 +52,11 @@ Hour portion of the reminder time.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** hour
-
-<!--Device-ReminderRequestAlarm-hour: number--><!--Device-ReminderRequestAlarm-hour: number-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -72,11 +72,10 @@ Minute portion of the reminder time.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** minute
 
-<!--Device-ReminderRequestAlarm-minute: number--><!--Device-ReminderRequestAlarm-minute: number-End-->
-
 **System capability:** SystemCapability.Notification.ReminderAgent
-

@@ -2,9 +2,9 @@
 
 枚举所查询策略信息对应的授权模式。@enum { int } policyType
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-fileShare-export enum PolicyType--><!--Device-fileShare-export enum PolicyType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -16,9 +16,9 @@ TEMPORARY_TYPE = 0
 
 临时授权。
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-PolicyType-TEMPORARY_TYPE = 0--><!--Device-PolicyType-TEMPORARY_TYPE = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -30,9 +30,8 @@ PERSISTENT_TYPE = 1
 
 持久化授权。
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-PolicyType-PERSISTENT_TYPE = 1--><!--Device-PolicyType-PERSISTENT_TYPE = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
-

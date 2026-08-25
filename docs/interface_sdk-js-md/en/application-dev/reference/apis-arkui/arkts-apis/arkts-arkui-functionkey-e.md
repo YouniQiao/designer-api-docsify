@@ -4,7 +4,7 @@ Enumerates the input method function keys.
 
 **Since:** 10
 
-<!--Device-unnamed-declare enum FunctionKey--><!--Device-unnamed-declare enum FunctionKey-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Esc key on the keyboard.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FunctionKey-ESC--><!--Device-FunctionKey-ESC-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ F1 key on the keyboard.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FunctionKey-F1--><!--Device-FunctionKey-F1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ F2 key on the keyboard.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FunctionKey-F2--><!--Device-FunctionKey-F2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,11 @@ F3 key on the keyboard.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FunctionKey-F3--><!--Device-FunctionKey-F3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,11 +90,11 @@ F4 key on the keyboard.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FunctionKey-F4--><!--Device-FunctionKey-F4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,11 +108,11 @@ F5 key on the keyboard.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FunctionKey-F5--><!--Device-FunctionKey-F5-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,11 +126,11 @@ F6 key on the keyboard.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FunctionKey-F6--><!--Device-FunctionKey-F6-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -144,11 +144,11 @@ F7 key on the keyboard.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FunctionKey-F7--><!--Device-FunctionKey-F7-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -162,11 +162,11 @@ F8 key on the keyboard.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FunctionKey-F8--><!--Device-FunctionKey-F8-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -180,11 +180,11 @@ F9 key on the keyboard.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FunctionKey-F9--><!--Device-FunctionKey-F9-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -198,11 +198,11 @@ F10 key on the keyboard.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FunctionKey-F10--><!--Device-FunctionKey-F10-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -216,11 +216,11 @@ F11 key on the keyboard.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FunctionKey-F11--><!--Device-FunctionKey-F11-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -234,11 +234,11 @@ F12 key on the keyboard.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FunctionKey-F12--><!--Device-FunctionKey-F12-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -252,11 +252,11 @@ Tab key on the keyboard.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FunctionKey-TAB--><!--Device-FunctionKey-TAB-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -270,11 +270,11 @@ Up arrow key on the keyboard.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FunctionKey-DPAD_UP--><!--Device-FunctionKey-DPAD_UP-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -288,11 +288,11 @@ Down arrow key on the keyboard.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FunctionKey-DPAD_DOWN--><!--Device-FunctionKey-DPAD_DOWN-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -306,11 +306,11 @@ Left arrow key on the keyboard.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FunctionKey-DPAD_LEFT--><!--Device-FunctionKey-DPAD_LEFT-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -324,11 +324,10 @@ Right arrow key on the keyboard.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-FunctionKey-DPAD_RIGHT--><!--Device-FunctionKey-DPAD_RIGHT-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

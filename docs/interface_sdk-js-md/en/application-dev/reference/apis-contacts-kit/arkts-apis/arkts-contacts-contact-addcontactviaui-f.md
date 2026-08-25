@@ -16,34 +16,34 @@ Calls the API for adding a contact to open the UI. This API uses a promise to re
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
-<!--Device-contact-function addContactViaUI(context: Context, contact: Contact): Promise<number>--><!--Device-contact-function addContactViaUI(context: Context, contact: Contact): Promise<number>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Applications.Contacts
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. |
+| [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
+| [contact](arkts-contact.md) | [Contact](arkts-contacts-contact-contact-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result, which is the contact ID. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | The specified SystemCapability name was not found. |
-| [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
-| [16700102](../errorcode-contacts.md#16700102-database-data-addition-deletion-or-modification-failed) | Failed to set value to contacts data. |
-| [16700103](../errorcode-contacts.md#16700103-operation-canceled) | User cancel. |
+| Error Code ID |
+| --- |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16700001](../errorcode-contacts.md#16700001-system-internal-error) |
+| [16700102](../errorcode-contacts.md#16700102-database-data-addition-deletion-or-modification-failed) |
+| [16700103](../errorcode-contacts.md#16700103-operation-canceled) |
 
 **Examples**
 
@@ -70,4 +70,3 @@ promise.then((data) => {
     console.error(`Failed to add Contact via UI. Code: ${err.code}, message: ${err.message}`);
   });
 ```
-

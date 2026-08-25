@@ -6,7 +6,7 @@ Represents optional configuration items for the SymbolNumberFormat object. Defin
 
 **Since:** 26.0.0
 
-<!--Device-i18n-export interface SymbolNumberFormatOptions--><!--Device-i18n-export interface SymbolNumberFormatOptions-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -28,11 +28,11 @@ Grouping Separator symbol of localized number part, such as "," of "10,000".
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-SymbolNumberFormatOptions-groupingSeparator?: string | undefined--><!--Device-SymbolNumberFormatOptions-groupingSeparator?: string | undefined-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -48,11 +48,11 @@ Infinity symbol of localized number part, such as "∞".
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-SymbolNumberFormatOptions-infinity?: string | undefined--><!--Device-SymbolNumberFormatOptions-infinity?: string | undefined-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -68,11 +68,11 @@ Minus sign of localized number part, such as "-".
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-SymbolNumberFormatOptions-minusSign?: string | undefined--><!--Device-SymbolNumberFormatOptions-minusSign?: string | undefined-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -88,11 +88,11 @@ NaN symbol of localized number part, such as "null".
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-SymbolNumberFormatOptions-nan?: string | undefined--><!--Device-SymbolNumberFormatOptions-nan?: string | undefined-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -108,11 +108,11 @@ Plus sign of localized number part, such as "+".
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-SymbolNumberFormatOptions-plusSign?: string | undefined--><!--Device-SymbolNumberFormatOptions-plusSign?: string | undefined-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -128,11 +128,10 @@ Zero symbol of localized number part, such as "0".
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-SymbolNumberFormatOptions-zero?: string | undefined--><!--Device-SymbolNumberFormatOptions-zero?: string | undefined-End-->
-
 **System capability:** SystemCapability.Global.I18n
-

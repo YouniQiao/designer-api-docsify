@@ -1,4 +1,4 @@
-# @ohos.advertising.AdComponent
+# @ohos.advertising.AdComponent(广告展示组件)
 
 ## 导入模块
 
@@ -10,7 +10,6 @@ import { AdComponent } from '@kit.AdsKit';
 
 ### 结构体
 
-| 名称 | 说明 |
-| --- | --- |
-| [AdComponent](arkts-ads-advertising-adcomponent-adcomponent-s.md) | 本模块提供展示广告的能力，覆盖了原生、贴片、开屏等广告样式。 |
-
+| 名称 |
+| --- |
+| [AdComponent(广告展示组件)](arkts-ads-advertising-adcomponent-adcomponent-s.md) |

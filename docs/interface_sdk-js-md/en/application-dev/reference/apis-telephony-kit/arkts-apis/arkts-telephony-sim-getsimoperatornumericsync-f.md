@@ -14,23 +14,23 @@ function getSimOperatorNumericSync(slotId: int): string
 
 Obtains the home PLMN ID of the SIM card in the specified slot. This API returns the result synchronously.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-sim-function getSimOperatorNumericSync(slotId: int): string--><!--Device-sim-function getSimOperatorNumericSync(slotId: int): string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Home PLMN ID of the SIM card in the specified slot. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -40,4 +40,3 @@ import { sim } from '@kit.TelephonyKit';
 let numeric: string = sim.getSimOperatorNumericSync(0);
 console.info(`the sim operator numeric is:` + numeric);
 ```
-

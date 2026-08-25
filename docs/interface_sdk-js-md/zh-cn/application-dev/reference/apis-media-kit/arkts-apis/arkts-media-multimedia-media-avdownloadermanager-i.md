@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-interface AVDownloaderManager--><!--Device-unnamed-interface AVDownloaderManager-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -24,23 +24,23 @@ addAVDownloadTask(source: MediaSource): string
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVDownloaderManager-addAVDownloadTask(source: MediaSource): string--><!--Device-AVDownloaderManager-addAVDownloadTask(source: MediaSource): string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| source | [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | 是 | 媒体资源描述，至少包含资源URL。 <br>值不能为null。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| source | [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 成功添加的离线下载任务ID。 |
+| 类型 |
+| --- |
+| string |
 
 ## allowsCellularAccess
 
@@ -52,17 +52,17 @@ allowsCellularAccess(value: boolean): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVDownloaderManager-allowsCellularAccess(value: boolean): void--><!--Device-AVDownloaderManager-allowsCellularAccess(value: boolean): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean | 是 | 是否允许在蜂窝网络环境下进行下载。true：允许在蜂窝网络环境下下载。- false：不允许在蜂窝网络环境下下载（默认）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | boolean | 是 |
 
 ## getDownloadTasks
 
@@ -74,17 +74,17 @@ getDownloadTasks(): Array<string>
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVDownloaderManager-getDownloadTasks(): Array<string>--><!--Device-AVDownloaderManager-getDownloadTasks(): Array<string>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;string&gt; | 若任务管理器中存在任务，返回任务ID数组；否则返回空数组。 |
+| 类型 |
+| --- |
+| Array & lt;string & gt; |
 
 ## getTaskCacheDirectory
 
@@ -96,32 +96,38 @@ getTaskCacheDirectory(taskId: string): string
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVDownloaderManager-getTaskCacheDirectory(taskId: string): string--><!--Device-AVDownloaderManager-getTaskCacheDirectory(taskId: string): string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| taskId | string | 是 | 要查询缓存目录的离线下载任务ID。取值应为当前管理器中已存在的任务ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| taskId | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 离线下载任务的缓存目录在磁盘上的路径。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | If the specified ID is not in the manager, an error is returned. |
+| 错误码ID |
+| --- |
+| [5400108](../errorcode-media.md#5400108-参数超过取值范围) |
 
 ## getTaskProgress
 
+ArkTS-Dyn:
+```TypeScript
+getTaskProgress(taskId: string): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getTaskProgress(taskId: string): double
 ```
@@ -130,29 +136,29 @@ getTaskProgress(taskId: string): double
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVDownloaderManager-getTaskProgress(taskId: string): double--><!--Device-AVDownloaderManager-getTaskProgress(taskId: string): double-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| taskId | string | 是 | 要查询进度的离线下载任务ID。取值应为当前管理器中已存在的任务ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| taskId | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | 下载进度比例值。 <br>取值范围：[0.0, 1.0]，若返回值为-1，表示资源大小未知。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | If the specified ID is not in the manager, an error is returned. |
+| 错误码ID |
+| --- |
+| [5400108](../errorcode-media.md#5400108-参数超过取值范围) |
 
 ## getTaskStatus
 
@@ -164,29 +170,29 @@ getTaskStatus(taskId: string): AVDownloadTaskState
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVDownloaderManager-getTaskStatus(taskId: string): AVDownloadTaskState--><!--Device-AVDownloaderManager-getTaskStatus(taskId: string): AVDownloadTaskState-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| taskId | string | 是 | 要查询状态的离线下载任务ID。取值应为当前管理器中已存在的任务ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| taskId | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AVDownloadTaskState](arkts-media-avdownloadtaskstate-t.md) | 指定任务的下载状态。 |
+| 类型 |
+| --- |
+| [AVDownloadTaskState](arkts-media-avdownloadtaskstate-t.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | If the specified ID is not in the manager, an error is returned. |
+| 错误码ID |
+| --- |
+| [5400108](../errorcode-media.md#5400108-参数超过取值范围) |
 
 ## offProgressChange
 
@@ -198,17 +204,17 @@ offProgressChange(callback?: OnAVDownloadProgressChangeHandle): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVDownloaderManager-offProgressChange(callback?: OnAVDownloadProgressChangeHandle): void--><!--Device-AVDownloaderManager-offProgressChange(callback?: OnAVDownloadProgressChangeHandle): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [OnAVDownloadProgressChangeHandle](arkts-media-onavdownloadprogresschangehandle-t.md) | 否 | 进度变化事件的处理函数，必须是通过onProgressChange注册过的处理函数。 <br>默认值：不指定此参数时，取消注册该事件的所有处理函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [OnAVDownloadProgressChangeHandle](arkts-media-onavdownloadprogresschangehandle-t.md) | 否 |
 
 ## offStatusChange
 
@@ -220,17 +226,17 @@ offStatusChange(callback?: OnAVDownloadTaskStateHandle): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVDownloaderManager-offStatusChange(callback?: OnAVDownloadTaskStateHandle): void--><!--Device-AVDownloaderManager-offStatusChange(callback?: OnAVDownloadTaskStateHandle): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [OnAVDownloadTaskStateHandle](arkts-media-onavdownloadtaskstatehandle-t.md) | 否 | 状态变化事件的处理函数，必须是通过onStatusChange注册过的处理函数。 <br>默认值：不指定此参数时，取消注册该事件的所有处理函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [OnAVDownloadTaskStateHandle](arkts-media-onavdownloadtaskstatehandle-t.md) | 否 |
 
 ## onProgressChange
 
@@ -242,17 +248,17 @@ onProgressChange(callback: OnAVDownloadProgressChangeHandle): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVDownloaderManager-onProgressChange(callback: OnAVDownloadProgressChangeHandle): void--><!--Device-AVDownloaderManager-onProgressChange(callback: OnAVDownloadProgressChangeHandle): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [OnAVDownloadProgressChangeHandle](arkts-media-onavdownloadprogresschangehandle-t.md) | 是 | 进度变化事件的处理函数。由应用实现。 <br>第一个参数为下载任务ID，第二个参数为下载进度值。 <br>进度值取值范围为-1或[0.0, 1.0]。-1表示资源大小未知。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [OnAVDownloadProgressChangeHandle](arkts-media-onavdownloadprogresschangehandle-t.md) | 是 |
 
 ## onStatusChange
 
@@ -264,17 +270,17 @@ onStatusChange(callback: OnAVDownloadTaskStateHandle): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVDownloaderManager-onStatusChange(callback: OnAVDownloadTaskStateHandle): void--><!--Device-AVDownloaderManager-onStatusChange(callback: OnAVDownloadTaskStateHandle): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [OnAVDownloadTaskStateHandle](arkts-media-onavdownloadtaskstatehandle-t.md) | 是 | 状态变化事件的处理函数。由应用实现。 <br>第一个参数为状态变化的任务ID，第二个参数为任务的新状态。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [OnAVDownloadTaskStateHandle](arkts-media-onavdownloadtaskstatehandle-t.md) | 是 |
 
 ## pauseDownloadTask
 
@@ -286,24 +292,24 @@ pauseDownloadTask(taskId?: string): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVDownloaderManager-pauseDownloadTask(taskId?: string): void--><!--Device-AVDownloaderManager-pauseDownloadTask(taskId?: string): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| taskId | string | 否 | 要暂停的离线下载任务ID。 <br>默认值：不指定此参数时，暂停所有下载任务。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| taskId | string | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | If the specified ID is not in the offline download task manager. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| 错误码ID |
+| --- |
+| [5400108](../errorcode-media.md#5400108-参数超过取值范围) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## release
 
@@ -315,9 +321,9 @@ release(): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVDownloaderManager-release(): void--><!--Device-AVDownloaderManager-release(): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -561,23 +567,23 @@ removeDownloadTask(taskId?: string): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVDownloaderManager-removeDownloadTask(taskId?: string): void--><!--Device-AVDownloaderManager-removeDownloadTask(taskId?: string): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| taskId | string | 否 | 要移除的离线下载任务ID。 <br>默认值：不指定此参数时，移除所有离线下载任务。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| taskId | string | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | If the specified ID is not in the offline download task manager. |
+| 错误码ID |
+| --- |
+| [5400108](../errorcode-media.md#5400108-参数超过取值范围) |
 
 ## resumeDownloadTask
 
@@ -589,27 +595,33 @@ resumeDownloadTask(taskId?: string): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVDownloaderManager-resumeDownloadTask(taskId?: string): void--><!--Device-AVDownloaderManager-resumeDownloadTask(taskId?: string): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| taskId | string | 否 | 要恢复的离线下载任务ID，任务需处于已暂停状态。 <br>默认值：不指定此参数时，恢复所有已暂停的离线下载任务。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| taskId | string | 否 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | If the specified ID is not in the offline download task manager. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| 错误码ID |
+| --- |
+| [5400108](../errorcode-media.md#5400108-参数超过取值范围) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## setRequestTimeout
 
+ArkTS-Dyn:
+```TypeScript
+setRequestTimeout(timeout: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setRequestTimeout(timeout: int): void
 ```
@@ -618,15 +630,14 @@ setRequestTimeout(timeout: int): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-AVDownloaderManager-setRequestTimeout(timeout: int): void--><!--Device-AVDownloaderManager-setRequestTimeout(timeout: int): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| timeout | int | 是 | 超时时间，单位为毫秒。 <br>取值限定为整数。 <br>如果值大于0，表示超时时间，取值范围(0, +∞)。 <br>如果值小于等于0，表示无超时限制，建议根据业务场景设置合理的超时时间以避免任务长时间挂起。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| timeout | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |

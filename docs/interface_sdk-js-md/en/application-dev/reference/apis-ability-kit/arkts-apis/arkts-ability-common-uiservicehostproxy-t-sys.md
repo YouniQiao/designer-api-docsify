@@ -1,22 +1,22 @@
 # UIServiceHostProxy (System API)
 
 ```TypeScript
-export type UIServiceHostProxy = _UIServiceHostProxy
+export type UIServiceHostProxy = _UIServiceHostProxy.default
 ```
 
 Level-2 module UIServiceHostProxy.
 
-**Since:** 23
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-common-export type UIServiceHostProxy = _UIServiceHostProxy--><!--Device-common-export type UIServiceHostProxy = _UIServiceHostProxy-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
 
-**Property type:** _UIServiceHostProxy
+**Property type:** _UIServiceHostProxy.default
 
 **Examples**
 
@@ -40,4 +40,3 @@ let autoFillExtensionContext: common.AutoFillExtensionContext;
 let uiServiceExtensionContext: common.UIServiceExtensionContext;
 let uiServiceHostProxy: common.UIServiceHostProxy;
 ```
-

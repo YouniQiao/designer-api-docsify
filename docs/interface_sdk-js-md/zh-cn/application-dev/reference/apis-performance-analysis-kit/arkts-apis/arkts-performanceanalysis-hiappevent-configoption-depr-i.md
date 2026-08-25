@@ -4,11 +4,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md)
-
-<!--Device-hiAppEvent-interface ConfigOption--><!--Device-hiAppEvent-interface ConfigOption-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -29,11 +29,11 @@ disable?: boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [disable](arkts-performanceanalysis-hiappevent-configoption-i.md#disable)
-
-<!--Device-ConfigOption-disable?: boolean--><!--Device-ConfigOption-disable?: boolean-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -49,11 +49,10 @@ maxStorage?: string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [maxStorage](arkts-performanceanalysis-hiappevent-configoption-i.md#maxstorage)
 
-<!--Device-ConfigOption-maxStorage?: string--><!--Device-ConfigOption-maxStorage?: string-End-->
-
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-

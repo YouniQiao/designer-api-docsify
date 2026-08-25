@@ -9,7 +9,7 @@ Sets the spacing between child components of the **Column** component.
 
 **Since:** 18
 
-<!--Device-unnamed-interface ColumnOptions--><!--Device-unnamed-interface ColumnOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +30,10 @@ Vertical spacing between two adjacent child components. This parameter has no ef
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-ColumnOptions-space?: string | number--><!--Device-ColumnOptions-space?: string | number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

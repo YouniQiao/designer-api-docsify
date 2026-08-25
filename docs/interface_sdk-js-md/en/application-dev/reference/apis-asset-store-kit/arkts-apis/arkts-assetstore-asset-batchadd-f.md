@@ -16,37 +16,36 @@ Adds assets in batches based on an attributes array. To set [IS_PERSISTENT](arkt
 
 **Since:** 26.0.0
 
-<!--Device-asset-function batchAdd(attributesArray: Array<AssetMap>): Promise<BatchResult>--><!--Device-asset-function batchAdd(attributesArray: Array<AssetMap>): Promise<BatchResult>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| attributesArray | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of assets to be added. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| attributesArray | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[BatchResult](arkts-assetstore-asset-batchresult-i.md)&gt; | The result of the batch operation, including error information for adding failed assets, if there are any failures. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[BatchResult](arkts-assetstore-asset-batchresult-i.md)&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
-| [24000005](../errorcode-asset.md#24000005-incorrect-screen-lock-status) | The screen lock status does not match. |
-| [24000006](../errorcode-asset.md#24000006-insufficient-memory) | Insufficient memory. |
-| [24000007](../errorcode-asset.md#24000007-asset-corrupted) | The asset is corrupted. |
-| [24000008](../errorcode-asset.md#24000008-database-operation-failed) | The database operation failed. |
-| [24000009](../errorcode-asset.md#24000009-cryptographic-operation-failed) | The cryptography operation failed. |
-| [24000010](../errorcode-asset.md#24000010-ipc-failed) | IPC failed. |
-| [24000011](../errorcode-asset.md#24000011-bundle-manager-service-abnormal) | Calling the Bundle Manager service failed. |
-| [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) | Calling the OS Account service failed. |
-| [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) | Calling the Access Token service failed. |
-| [24000014](../errorcode-asset.md#24000014-file-operation-failed) | The file operation failed. |
-| [24000015](../errorcode-asset.md#24000015-failed-to-obtain-the-system-time) | Getting the system time failed. |
-| [24000019](../errorcode-asset.md#24000019-inconsistent-attribute-values) | Each value of [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#require_attr_encrypted) in the array is not consistent. |
-
+| Error Code ID |
+| --- |
+| [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) |
+| [24000005](../errorcode-asset.md#24000005-incorrect-screen-lock-status) |
+| [24000006](../errorcode-asset.md#24000006-insufficient-memory) |
+| [24000007](../errorcode-asset.md#24000007-asset-corrupted) |
+| [24000008](../errorcode-asset.md#24000008-database-operation-failed) |
+| [24000009](../errorcode-asset.md#24000009-cryptographic-operation-failed) |
+| [24000010](../errorcode-asset.md#24000010-ipc-failed) |
+| [24000011](../errorcode-asset.md#24000011-bundle-manager-service-abnormal) |
+| [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) |
+| [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) |
+| [24000014](../errorcode-asset.md#24000014-file-operation-failed) |
+| [24000015](../errorcode-asset.md#24000015-failed-to-obtain-the-system-time) |
+| [24000019](../errorcode-asset.md#24000019-inconsistent-attribute-values) |

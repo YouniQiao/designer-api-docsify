@@ -4,9 +4,9 @@
 
 **起始版本：** 9
 
-**废弃版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-unnamed-declare namespace fileExtensionInfo--><!--Device-unnamed-declare namespace fileExtensionInfo-End-->
+**废弃版本：** 23
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -22,16 +22,15 @@ import { fileExtensionInfo } from '@kit.CoreFileKit';
 
 ### 命名空间
 
-| 名称 | 说明 |
-| --- | --- |
-| [DeviceFlag](arkts-corefile-fileextensioninfo-deviceflag-n.md) | 组成RootInfo中的deviceFlags字段，通过与运算判断是否具备某种能力。 |
-| [DocumentFlag](arkts-corefile-fileextensioninfo-documentflag-n.md) | 组成FileInfo中的mode字段，通过与运算判断是否具备某种能力。 |
+| 名称 |
+| --- |
+| [DeviceFlag](arkts-corefile-fileextensioninfo-deviceflag-n.md) |
+| [DocumentFlag](arkts-corefile-fileextensioninfo-documentflag-n.md) |
 
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [DeviceType](arkts-corefile-fileextensioninfo-devicetype-e-sys.md) | 组成RootInfo中的deviceType字段，表明此设备的类型。 |
+| 名称 |
+| --- |
+| [DeviceType](arkts-corefile-fileextensioninfo-devicetype-e-sys.md) |
 <!--DelEnd-->
-

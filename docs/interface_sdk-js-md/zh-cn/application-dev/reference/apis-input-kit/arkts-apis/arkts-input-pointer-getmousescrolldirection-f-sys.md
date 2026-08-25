@@ -16,9 +16,9 @@ function getMouseScrollDirection(): Promise<boolean>
 
 **起始版本：** 24
 
-**需要权限：** ohos.permission.INPUT_DEVICE_CONTROLLER
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-pointer-function getMouseScrollDirection(): Promise<boolean>--><!--Device-pointer-function getMouseScrollDirection(): Promise<boolean>-End-->
+**需要权限：** ohos.permission.INPUT_DEVICE_CONTROLLER
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -26,17 +26,17 @@ function getMouseScrollDirection(): Promise<boolean>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示鼠标滚轮滚动方向与手指方向一致；返回false表示鼠标滚轮滚动方向与手指方向相反。默认为true。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
 
 **示例**
 
@@ -96,4 +96,3 @@ struct Index {
   }
 }
 ```
-

@@ -14,17 +14,17 @@ function getCallState(callback: AsyncCallback<CallState>): void
 
 获取当前通话状态。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-call-function getCallState(callback: AsyncCallback<CallState>): void--><!--Device-call-function getCallState(callback: AsyncCallback<CallState>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CallState&gt; | 是 | 回调函数，异步返回获取到的通话状态。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CallState&gt; | 是 |
 
 **示例**
 
@@ -59,19 +59,18 @@ function getCallState(): Promise<CallState>
 
 获取当前通话状态。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-call-function getCallState(): Promise<CallState>--><!--Device-call-function getCallState(): Promise<CallState>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;CallState&gt; | 以Promise形式异步返回获取到的通话状态。 |
+| 类型 |
+| --- |
+| Promise & lt;CallState & gt; |
 
 **示例**
 
 参见 [getCallState](#getcallstate)
-

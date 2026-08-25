@@ -4,9 +4,7 @@ Resolved segmenter options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-Intl-export interface ResolvedSegmenterOptions--><!--Device-Intl-export interface ResolvedSegmenterOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,11 +25,9 @@ Granularity option.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ResolvedSegmenterOptions-granularity: SegmenterGranularity--><!--Device-ResolvedSegmenterOptions-granularity: SegmenterGranularity-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -47,11 +43,8 @@ Locale identifier.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ResolvedSegmenterOptions-locale: string--><!--Device-ResolvedSegmenterOptions-locale: string-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

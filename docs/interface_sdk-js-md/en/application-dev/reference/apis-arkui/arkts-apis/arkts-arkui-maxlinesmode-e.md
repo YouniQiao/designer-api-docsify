@@ -4,7 +4,7 @@ Enumerates the display effects of the **TextArea** component when text exceeds t
 
 **Since:** 20
 
-<!--Device-unnamed-declare enum MaxLinesMode--><!--Device-unnamed-declare enum MaxLinesMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Text is clipped when it exceeds the maximum number of lines.
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-MaxLinesMode-CLIP = 0--><!--Device-MaxLinesMode-CLIP = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ Text can be scrolled when it exceeds the maximum number of lines.
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-MaxLinesMode-SCROLL = 1--><!--Device-MaxLinesMode-SCROLL = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -2,9 +2,9 @@
 
 Describes the configuration parameters for raycasting, defining the behavior of raycasting.@interface RaycastParameters
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-unnamed-export interface RaycastParameters--><!--Device-unnamed-export interface RaycastParameters-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,9 +18,8 @@ Limits the detection scope to this node and its child nodes. If this parameter i
 
 **Type:** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RaycastParameters-rootNode?: Node--><!--Device-RaycastParameters-rootNode?: Node-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

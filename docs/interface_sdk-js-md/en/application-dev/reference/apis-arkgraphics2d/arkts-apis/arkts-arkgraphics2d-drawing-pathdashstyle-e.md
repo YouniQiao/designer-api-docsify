@@ -2,9 +2,9 @@
 
 Enumerates the drawing styles for path effects. | Name | Value| Description | | ------ | - | ------------------ | | TRANSLATE | 0 | Translates only, not rotating with the path.| | ROTATE | 1 | Rotates with the path.| | MORPH | 2 | Rotates with the path and stretches or compresses at turns to enhance smoothness.|
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-drawing-enum PathDashStyle--><!--Device-drawing-enum PathDashStyle-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -16,9 +16,9 @@ TRANSLATE = 0
 
 Translates only, not rotating with the path.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PathDashStyle-TRANSLATE = 0--><!--Device-PathDashStyle-TRANSLATE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -30,9 +30,9 @@ ROTATE = 1
 
 Rotates with the path.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PathDashStyle-ROTATE = 1--><!--Device-PathDashStyle-ROTATE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -44,9 +44,8 @@ MORPH = 2
 
 Rotates with the path and stretches or compresses at turns to enhance smoothness.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-PathDashStyle-MORPH = 2--><!--Device-PathDashStyle-MORPH = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
-

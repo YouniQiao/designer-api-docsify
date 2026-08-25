@@ -2,9 +2,9 @@
 
 Enumerates report types.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sms-export enum ReportType--><!--Device-sms-export enum ReportType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -18,9 +18,9 @@ MMS_YES = 128
 
 YES
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ReportType-MMS_YES = 128--><!--Device-ReportType-MMS_YES = 128-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -34,11 +34,10 @@ MMS_NO = 129
 
 NO
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-ReportType-MMS_NO = 129--><!--Device-ReportType-MMS_NO = 129-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
-

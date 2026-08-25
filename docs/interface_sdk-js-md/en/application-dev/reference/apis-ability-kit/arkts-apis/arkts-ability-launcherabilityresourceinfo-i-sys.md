@@ -5,9 +5,9 @@ The module provides resource information of the entry ability of an application,
 > **NOTE：**&gt;
 > The APIs provided by this module are system APIs.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-unnamed-export interface LauncherAbilityResourceInfo--><!--Device-unnamed-export interface LauncherAbilityResourceInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -23,9 +23,9 @@ Name of the entry ability.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-LauncherAbilityResourceInfo-readonly abilityName: string--><!--Device-LauncherAbilityResourceInfo-readonly abilityName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -39,11 +39,11 @@ readonly appIndex: int
 
 Index of an application clone.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-LauncherAbilityResourceInfo-readonly appIndex: int--><!--Device-LauncherAbilityResourceInfo-readonly appIndex: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -59,9 +59,9 @@ Bundle name of the application.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-LauncherAbilityResourceInfo-readonly bundleName: string--><!--Device-LauncherAbilityResourceInfo-readonly bundleName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -70,16 +70,16 @@ Bundle name of the application.
 ## drawableDescriptor
 
 ```TypeScript
-readonly drawableDescriptor: DrawableDescriptor | null
+readonly drawableDescriptor: DrawableDescriptor
 ```
 
-Indicates the drawable descriptor of this ability icon
+**drawableDescriptor** object of the application icon.
 
-**Type:** [DrawableDescriptor](../../apis-default/arkts-apis/arkts-arkui-drawabledescriptor-drawabledescriptor-c.md) \| null
+**Type:** [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-LauncherAbilityResourceInfo-readonly drawableDescriptor: DrawableDescriptor | null--><!--Device-LauncherAbilityResourceInfo-readonly drawableDescriptor: DrawableDescriptor | null-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -95,9 +95,9 @@ Application icon, which is encoded using Base64.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-LauncherAbilityResourceInfo-readonly icon: string--><!--Device-LauncherAbilityResourceInfo-readonly icon: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -113,9 +113,9 @@ Application label.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-LauncherAbilityResourceInfo-readonly label: string--><!--Device-LauncherAbilityResourceInfo-readonly label: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -131,11 +131,10 @@ Module name of the application.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-LauncherAbilityResourceInfo-readonly moduleName: string--><!--Device-LauncherAbilityResourceInfo-readonly moduleName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
 **System API:** This is a system API.
-

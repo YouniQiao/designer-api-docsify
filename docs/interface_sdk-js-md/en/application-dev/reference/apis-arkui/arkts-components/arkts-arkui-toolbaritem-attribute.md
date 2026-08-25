@@ -4,9 +4,9 @@ The universal attributes are not supported.
 
 **Since:** 20
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-unnamed-declare class ToolBarItemAttribute--><!--Device-unnamed-declare class ToolBarItemAttribute-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -14,4 +14,3 @@ The universal attributes are not supported.
 
 ```TypeScript
 ```
-

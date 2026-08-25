@@ -4,7 +4,7 @@ VPN连接对象。在调用VpnConnection的方法前，需要先通过vpnExt.cre
 
 **起始版本：** 11
 
-<!--Device-vpnExtension-export interface VpnConnection--><!--Device-vpnExtension-export interface VpnConnection-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -24,32 +24,32 @@ addRoute(routes: RouteInfo[], vpnId?: string): Promise<void>
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-VpnConnection-addRoute(routes: RouteInfo[], vpnId?: string): Promise<void>--><!--Device-VpnConnection-addRoute(routes: RouteInfo[], vpnId?: string): Promise<void>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| routes | RouteInfo[] | 是 | VPN接口的路由数组。 |
-| vpnId | string | 否 | vpn唯一标识 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| routes | [RouteInfo[]](arkts-network-vpnextension-routeinfo-t.md) | 是 |
+| vpnId | string | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 函数返回的promise。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) | Invalid parameter value. |
-| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
 
 ## create
 
@@ -65,32 +65,32 @@ create(config: VpnConfig): Promise<int>
 
 **起始版本：** 11
 
-<!--Device-VpnConnection-create(config: VpnConfig): Promise<int>--><!--Device-VpnConnection-create(config: VpnConfig): Promise<int>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| config | VpnConfig | 是 | 指定VPN网络的配置信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| config | [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | 以 Promise 形式返回获取结果，返回指定虚拟网卡的文件描述符 fd。 |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) | Invalid parameter value. |
-| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
-| [2203001](../errorcode-net-vpn.md#2203001-vpn创建失败) | VPN creation denied, please check the user type. |
-| [2203002](../errorcode-net-vpn.md#2203002-vpn已存在) | VPN exist already, please execute destroy first. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
+| [2203001](../errorcode-net-vpn.md#2203001-vpn创建失败) |
+| [2203002](../errorcode-net-vpn.md#2203002-vpn已存在) |
 
 **示例**
 
@@ -181,32 +181,32 @@ delRoute(routes: RouteInfo[], vpnId?: string): Promise<void>
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-VpnConnection-delRoute(routes: RouteInfo[], vpnId?: string): Promise<void>--><!--Device-VpnConnection-delRoute(routes: RouteInfo[], vpnId?: string): Promise<void>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| routes | RouteInfo[] | 是 | VPN接口的路由数组。 |
-| vpnId | string | 否 | vpn唯一标识。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| routes | [RouteInfo[]](arkts-network-vpnextension-routeinfo-t.md) | 是 |
+| vpnId | string | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 函数返回的promise。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) | Invalid parameter value. |
-| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
 
 ## destroy
 
@@ -218,23 +218,23 @@ destroy(): Promise<void>
 
 **起始版本：** 11
 
-<!--Device-VpnConnection-destroy(): Promise<void>--><!--Device-VpnConnection-destroy(): Promise<void>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
 
 **示例**
 
@@ -286,28 +286,28 @@ destroy(vpnId: string): Promise<void>
 
 **起始版本：** 20
 
-<!--Device-VpnConnection-destroy(vpnId: string): Promise<void>--><!--Device-VpnConnection-destroy(vpnId: string): Promise<void>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| vpnId | string | 是 | vpn唯一标识。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| vpnId | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [19900001](../errorcode-net-vpn.md#19900001-无效参数) | Invalid parameter value. |
-| [19900002](../errorcode-net-vpn.md#19900002-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [19900001](../errorcode-net-vpn.md#19900001-无效参数) |
+| [19900002](../errorcode-net-vpn.md#19900002-系统内部错误) |
 
 **示例**
 
@@ -326,22 +326,22 @@ generateVpnId(): Promise<string>
 
 **起始版本：** 20
 
-<!--Device-VpnConnection-generateVpnId(): Promise<string>--><!--Device-VpnConnection-generateVpnId(): Promise<string>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | 以Promise形式返回获取结果，返回vpnId。 |
+| 类型 |
+| --- |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [19900001](../errorcode-net-vpn.md#19900001-无效参数) | Invalid parameter value. |
-| [19900002](../errorcode-net-vpn.md#19900002-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [19900001](../errorcode-net-vpn.md#19900001-无效参数) |
+| [19900002](../errorcode-net-vpn.md#19900002-系统内部错误) |
 
 **示例**
 
@@ -373,31 +373,31 @@ protect(socketFd: int): Promise<void>
 
 **起始版本：** 11
 
-<!--Device-VpnConnection-protect(socketFd: int): Promise<void>--><!--Device-VpnConnection-protect(socketFd: int): Promise<void>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| socketFd | int | 是 | 指定保护的 socketfd，该文件描述符通过 [getSocketFd](arkts-network-socket-tcpsocket-i.md#getsocketfd)获取。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| socketFd | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) | Invalid parameter value. |
-| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
-| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
-| [2203004](../errorcode-net-vpn.md#2203004-无效描述符) | Invalid socket file descriptor. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) |
+| [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
+| [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
+| [2203004](../errorcode-net-vpn.md#2203004-无效描述符) |
 
 **示例**
 
@@ -441,15 +441,15 @@ protectProcessNet(): Promise<void>
 
 **起始版本：** 22
 
-<!--Device-VpnConnection-protectProcessNet(): Promise<void>--><!--Device-VpnConnection-protectProcessNet(): Promise<void>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
@@ -479,4 +479,3 @@ export default class MyVpnExtAbility  extends VpnExtensionAbility {
   }
 }
 ```
-

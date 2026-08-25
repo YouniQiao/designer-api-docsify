@@ -10,7 +10,7 @@ frequency and improves performance.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare interface MouseHistoricalPoint--><!--Device-unnamed-declare interface MouseHistoricalPoint-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,180 +22,179 @@ frequency and improves performance.
 ## displayX
 
 ```TypeScript
-displayX: double
+displayX: number
 ```
 
 X coordinate of the mouse pointer relative to the upper-left corner of the entire screen.Unit: vp
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-MouseHistoricalPoint-displayX: double--><!--Device-MouseHistoricalPoint-displayX: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## displayY
 
 ```TypeScript
-displayY: double
+displayY: number
 ```
 
 Y coordinate of the mouse pointer relative to the upper-left corner of the entire screen.Unit: vp
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-MouseHistoricalPoint-displayY: double--><!--Device-MouseHistoricalPoint-displayY: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## globalDisplayX
 
 ```TypeScript
-globalDisplayX: double
+globalDisplayX: number
 ```
 
 X coordinate of the mouse position in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).Unit: vp
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-MouseHistoricalPoint-globalDisplayX: double--><!--Device-MouseHistoricalPoint-globalDisplayX: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## globalDisplayY
 
 ```TypeScript
-globalDisplayY: double
+globalDisplayY: number
 ```
 
 Y coordinate of the mouse position in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).Unit: vp
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-MouseHistoricalPoint-globalDisplayY: double--><!--Device-MouseHistoricalPoint-globalDisplayY: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## timestamp
 
 ```TypeScript
-timestamp: long
+timestamp: number
 ```
 
 Timestamp of the mouse event.Unit: ns
 
-**Type:** long
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-MouseHistoricalPoint-timestamp: long--><!--Device-MouseHistoricalPoint-timestamp: long-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## windowX
 
 ```TypeScript
-windowX: double
+windowX: number
 ```
 
 X coordinate of the mouse pointer relative to the upper-left corner of the application window.Unit: vp
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-MouseHistoricalPoint-windowX: double--><!--Device-MouseHistoricalPoint-windowX: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## windowY
 
 ```TypeScript
-windowY: double
+windowY: number
 ```
 
 Y coordinate of the mouse pointer relative to the upper-left corner of the application window.Unit: vp
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-MouseHistoricalPoint-windowY: double--><!--Device-MouseHistoricalPoint-windowY: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
 X coordinate of the mouse pointer relative to the upper-left corner of the clicked component.Unit: vp
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-MouseHistoricalPoint-x: double--><!--Device-MouseHistoricalPoint-x: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
 Y coordinate of the mouse pointer relative to the upper-left corner of the clicked component.Unit: vp
 
-**Type:** double
+**Type:** number
 
 **Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-MouseHistoricalPoint-y: double--><!--Device-MouseHistoricalPoint-y: double-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

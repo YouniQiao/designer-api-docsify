@@ -14,11 +14,9 @@ function getBatteryConfig(sceneName: string): string
 
 按场景名称查询电池配置。调用该接口后，系统将根据传入的场景名称查找并返回对应的电池充电配置值。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-batteryInfo-function getBatteryConfig(sceneName: string): string--><!--Device-batteryInfo-function getBatteryConfig(sceneName: string): string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -26,22 +24,23 @@ function getBatteryConfig(sceneName: string): string
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sceneName | string | 是 | 电池充电配置的场景名称，用于查询特定的充电配置场景。支持的场景名称由系统定义。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [sceneName](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-unifiedgroupinfo-i-sys.md) | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回指定场景的电池充电配置值；如果该场景不存在或未配置，则返回空字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [5100101](../errorcode-battery-info.md#5100101-连接服务失败) | Failed to connect to the service. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5100101](../errorcode-battery-info.md#5100101-连接服务失败) |
 
 **示例**
 
@@ -55,4 +54,3 @@ try {
   console.error('getBatteryConfig failed, err: ' + err);
 }
 ```
-

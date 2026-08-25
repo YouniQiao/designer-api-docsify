@@ -2,9 +2,9 @@
 
 Enumerates the result codes.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-eSIM-export enum ResultCode--><!--Device-eSIM-export enum ResultCode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -18,9 +18,9 @@ RESULT_SOLVABLE_ERRORS = -2
 
 Solving of the solvable errors required.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_SOLVABLE_ERRORS = -2--><!--Device-ResultCode-RESULT_SOLVABLE_ERRORS = -2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -34,9 +34,9 @@ RESULT_MUST_DISABLE_PROFILE = -1
 
 Disabling of the active profile required.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_MUST_DISABLE_PROFILE = -1--><!--Device-ResultCode-RESULT_MUST_DISABLE_PROFILE = -1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -50,9 +50,9 @@ RESULT_OK = 0
 
 Operation success.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_OK = 0--><!--Device-ResultCode-RESULT_OK = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -66,9 +66,9 @@ RESULT_GET_EID_FAILED = 201
 
 Failed to obtain the EID.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_GET_EID_FAILED = 201--><!--Device-ResultCode-RESULT_GET_EID_FAILED = 201-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -82,9 +82,9 @@ RESULT_ACTIVATION_CODE_CHANGED = 203
 
 Activation code changed upon user confirmation.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_ACTIVATION_CODE_CHANGED = 203--><!--Device-ResultCode-RESULT_ACTIVATION_CODE_CHANGED = 203-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -98,9 +98,9 @@ RESULT_ACTIVATION_CODE_INVALID = 204
 
 Invalid activation code.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_ACTIVATION_CODE_INVALID = 204--><!--Device-ResultCode-RESULT_ACTIVATION_CODE_INVALID = 204-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -114,9 +114,9 @@ RESULT_SMDP_ADDRESS_INVALID = 205
 
 Invalid SM-DP+ server address.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_SMDP_ADDRESS_INVALID = 205--><!--Device-ResultCode-RESULT_SMDP_ADDRESS_INVALID = 205-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -130,9 +130,9 @@ RESULT_EUICC_INFO_INVALID = 206
 
 Invalid eUICC information.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_EUICC_INFO_INVALID = 206--><!--Device-ResultCode-RESULT_EUICC_INFO_INVALID = 206-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -146,9 +146,9 @@ RESULT_TLS_HANDSHAKE_FAILED = 207
 
 TLS handshake failed.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_TLS_HANDSHAKE_FAILED = 207--><!--Device-ResultCode-RESULT_TLS_HANDSHAKE_FAILED = 207-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -162,9 +162,9 @@ RESULT_CERTIFICATE_IO_ERROR = 208
 
 Certificate network connection error.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_CERTIFICATE_IO_ERROR = 208--><!--Device-ResultCode-RESULT_CERTIFICATE_IO_ERROR = 208-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -178,9 +178,9 @@ RESULT_CERTIFICATE_RESPONSE_TIMEOUT = 209
 
 Invalid certificate address or response timeout.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_CERTIFICATE_RESPONSE_TIMEOUT = 209--><!--Device-ResultCode-RESULT_CERTIFICATE_RESPONSE_TIMEOUT = 209-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -194,9 +194,9 @@ RESULT_AUTHENTICATION_FAILED = 210
 
 Authentication failed.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_AUTHENTICATION_FAILED = 210--><!--Device-ResultCode-RESULT_AUTHENTICATION_FAILED = 210-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -210,9 +210,9 @@ RESULT_RESPONSE_HTTP_FAILED = 211
 
 HTTP response failed.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_RESPONSE_HTTP_FAILED = 211--><!--Device-ResultCode-RESULT_RESPONSE_HTTP_FAILED = 211-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -226,9 +226,9 @@ RESULT_CONFIRMATION_CODE_INCORRECT = 212
 
 Incorrect confirmation code.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_CONFIRMATION_CODE_INCORRECT = 212--><!--Device-ResultCode-RESULT_CONFIRMATION_CODE_INCORRECT = 212-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -242,9 +242,9 @@ RESULT_EXCEEDED_CONFIRMATION_CODE_TRY_LIMIT = 213
 
 Maximum confirmation code retries reached.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_EXCEEDED_CONFIRMATION_CODE_TRY_LIMIT = 213--><!--Device-ResultCode-RESULT_EXCEEDED_CONFIRMATION_CODE_TRY_LIMIT = 213-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -258,9 +258,9 @@ RESULT_NO_PROFILE_ON_SERVER = 214
 
 No downloadable profile available on the server.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_NO_PROFILE_ON_SERVER = 214--><!--Device-ResultCode-RESULT_NO_PROFILE_ON_SERVER = 214-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -274,9 +274,9 @@ RESULT_TRANSACTION_ID_INVALID = 215
 
 Invalid transaction ID.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_TRANSACTION_ID_INVALID = 215--><!--Device-ResultCode-RESULT_TRANSACTION_ID_INVALID = 215-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -290,9 +290,9 @@ RESULT_SERVER_ADDRESS_INVALID = 216
 
 Invalid server address.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_SERVER_ADDRESS_INVALID = 216--><!--Device-ResultCode-RESULT_SERVER_ADDRESS_INVALID = 216-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -306,9 +306,9 @@ RESULT_GET_BOUND_PROFILE_PACKAGE_FAILED = 217
 
 Failed to obtain the BPP.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_GET_BOUND_PROFILE_PACKAGE_FAILED = 217--><!--Device-ResultCode-RESULT_GET_BOUND_PROFILE_PACKAGE_FAILED = 217-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -322,9 +322,9 @@ RESULT_USER_CANCEL_DOWNLOAD = 218
 
 Download cancelled by the user.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_USER_CANCEL_DOWNLOAD = 218--><!--Device-ResultCode-RESULT_USER_CANCEL_DOWNLOAD = 218-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -338,9 +338,9 @@ RESULT_SERVER_UNAVAILABLE = 220
 
 Carrier server unavailable.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_SERVER_UNAVAILABLE = 220--><!--Device-ResultCode-RESULT_SERVER_UNAVAILABLE = 220-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -354,9 +354,9 @@ RESULT_PROFILE_NON_DELETE = 223
 
 File deletion not allowed by the PPR rule.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_PROFILE_NON_DELETE = 223--><!--Device-ResultCode-RESULT_PROFILE_NON_DELETE = 223-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -370,9 +370,9 @@ RESULT_SMDP_ADDRESS_INCORRECT = 226
 
 Incorrect SMDP server address.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_SMDP_ADDRESS_INCORRECT = 226--><!--Device-ResultCode-RESULT_SMDP_ADDRESS_INCORRECT = 226-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -386,9 +386,9 @@ RESULT_ANALYZE_AUTHENTICATION_SERVER_RESPONSE_FAILED = 228
 
 Failed to parse the server authentication response.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_ANALYZE_AUTHENTICATION_SERVER_RESPONSE_FAILED = 228--><!--Device-ResultCode-RESULT_ANALYZE_AUTHENTICATION_SERVER_RESPONSE_FAILED = 228-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -402,9 +402,9 @@ RESULT_ANALYZE_AUTHENTICATION_CLIENT_RESPONSE_FAILED = 229
 
 Failed to parse the client authentication response.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_ANALYZE_AUTHENTICATION_CLIENT_RESPONSE_FAILED = 229--><!--Device-ResultCode-RESULT_ANALYZE_AUTHENTICATION_CLIENT_RESPONSE_FAILED = 229-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -418,9 +418,9 @@ RESULT_ANALYZE_AUTHENTICATION_CLIENT_MATCHING_ID_REFUSED = 231
 
 Failed to parse the client authentication response because the matching ID was rejected.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_ANALYZE_AUTHENTICATION_CLIENT_MATCHING_ID_REFUSED = 231--><!--Device-ResultCode-RESULT_ANALYZE_AUTHENTICATION_CLIENT_MATCHING_ID_REFUSED = 231-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -434,9 +434,9 @@ RESULT_PROFILE_TYPE_ERROR_AUTHENTICATION_STOPPED = 233
 
 Authentication stopped due to incorrect profile type.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_PROFILE_TYPE_ERROR_AUTHENTICATION_STOPPED = 233--><!--Device-ResultCode-RESULT_PROFILE_TYPE_ERROR_AUTHENTICATION_STOPPED = 233-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -450,9 +450,9 @@ RESULT_CARRIER_SERVER_REFUSED_ERRORS = 249
 
 Rejection cause code of the carrier server, which is 3.8.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_CARRIER_SERVER_REFUSED_ERRORS = 249--><!--Device-ResultCode-RESULT_CARRIER_SERVER_REFUSED_ERRORS = 249-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -466,9 +466,9 @@ RESULT_CERTIFICATE_INVALID = 251
 
 Invalid certificate.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_CERTIFICATE_INVALID = 251--><!--Device-ResultCode-RESULT_CERTIFICATE_INVALID = 251-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -482,9 +482,9 @@ RESULT_OUT_OF_MEMORY = 263
 
 Failed to install the profile due to insufficient memory.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_OUT_OF_MEMORY = 263--><!--Device-ResultCode-RESULT_OUT_OF_MEMORY = 263-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -498,9 +498,9 @@ RESULT_PPR_FORBIDDEN = 268
 
 Operation not allowed by the PPR rule.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_PPR_FORBIDDEN = 268--><!--Device-ResultCode-RESULT_PPR_FORBIDDEN = 268-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -514,9 +514,9 @@ RESULT_NOTHING_TO_DELETE = 270
 
 No configuration file for deletion.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_NOTHING_TO_DELETE = 270--><!--Device-ResultCode-RESULT_NOTHING_TO_DELETE = 270-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -530,9 +530,9 @@ RESULT_PPR_NOT_MATCH = 276
 
 PPR rule mismatch.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_PPR_NOT_MATCH = 276--><!--Device-ResultCode-RESULT_PPR_NOT_MATCH = 276-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -546,9 +546,9 @@ RESULT_CAT_BUSY = 283
 
 Session in progress.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_CAT_BUSY = 283--><!--Device-ResultCode-RESULT_CAT_BUSY = 283-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -562,9 +562,9 @@ RESULT_PROFILE_EID_INVALID = 284
 
 eSIM profile in use or invalid.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_PROFILE_EID_INVALID = 284--><!--Device-ResultCode-RESULT_PROFILE_EID_INVALID = 284-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -578,9 +578,9 @@ RESULT_DOWNLOAD_TIMEOUT = 287
 
 Download timeout.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_DOWNLOAD_TIMEOUT = 287--><!--Device-ResultCode-RESULT_DOWNLOAD_TIMEOUT = 287-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -594,11 +594,10 @@ RESULT_SGP_22_OTHER = 400
 
 Other errors defined in SGP.22.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResultCode-RESULT_SGP_22_OTHER = 400--><!--Device-ResultCode-RESULT_SGP_22_OTHER = 400-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
-

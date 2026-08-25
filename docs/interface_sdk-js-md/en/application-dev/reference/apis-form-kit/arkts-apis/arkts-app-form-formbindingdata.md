@@ -2,9 +2,9 @@
 
 The **FormBindingData** module provides APIs for widget data binding. You can use the APIs to create a **FormBindingData** object and obtain related information.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-declare namespace formBindingData--><!--Device-unnamed-declare namespace formBindingData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -18,15 +18,14 @@ import { formBindingData } from '@kit.FormKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md) | Creates a **FormBindingData** object. |
-| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md) | Create an FormBindingData instance. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md) |
+| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md) | Defines the createFormBindingData result interface. |
-| [ProxyData](arkts-form-formbindingdata-proxydata-i.md) | Defines the form proxy data. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md) |
+| [ProxyData](arkts-form-formbindingdata-proxydata-i.md) |

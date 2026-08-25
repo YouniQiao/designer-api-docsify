@@ -2,9 +2,9 @@
 
 Describes the event indicating that the audio session state changes.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-audio-interface AudioSessionStateChangedEvent--><!--Device-audio-interface AudioSessionStateChangedEvent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -24,9 +24,8 @@ Hint for the audio session state change.
 
 **Type:** [AudioSessionStateChangeHint](arkts-audio-audio-audiosessionstatechangehint-e.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-AudioSessionStateChangedEvent-stateChangeHint: AudioSessionStateChangeHint--><!--Device-AudioSessionStateChangedEvent-stateChangeHint: AudioSessionStateChangeHint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
-

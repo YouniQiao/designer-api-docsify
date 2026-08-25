@@ -2,9 +2,9 @@
 
 窗口矩形区域坐标系类型。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-window-enum RectType--><!--Device-window-enum RectType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -16,11 +16,11 @@ RELATIVE_TO_SCREEN  = 0
 
 窗口矩形区域相对于屏幕坐标系。
 
-**起始版本：** 23
+**起始版本：** 19
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
-<!--Device-RectType-RELATIVE_TO_SCREEN  = 0--><!--Device-RectType-RELATIVE_TO_SCREEN  = 0-End-->
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -32,11 +32,10 @@ RELATIVE_TO_PARENT_WINDOW = 1
 
 窗口矩形区域相对于父窗口坐标系。
 
-**起始版本：** 23
+**起始版本：** 19
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
-<!--Device-RectType-RELATIVE_TO_PARENT_WINDOW = 1--><!--Device-RectType-RELATIVE_TO_PARENT_WINDOW = 1-End-->
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
-

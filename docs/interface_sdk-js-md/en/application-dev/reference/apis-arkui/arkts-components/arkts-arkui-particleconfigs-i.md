@@ -4,7 +4,7 @@ Defines the particle configs.@interface ParticleConfigs
 
 **Since:** 10
 
-<!--Device-unnamed-interface ParticleConfigs--><!--Device-unnamed-interface ParticleConfigs-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Image particle configuration.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ParticleConfigs-[ParticleType.IMAGE]: ImageParticleParameters--><!--Device-ParticleConfigs-[ParticleType.IMAGE]: ImageParticleParameters-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ Point particle configuration.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ParticleConfigs-[ParticleType.POINT]: PointParticleParameters--><!--Device-ParticleConfigs-[ParticleType.POINT]: PointParticleParameters-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

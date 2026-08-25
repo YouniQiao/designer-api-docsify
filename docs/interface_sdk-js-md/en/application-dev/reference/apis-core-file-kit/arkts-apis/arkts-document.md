@@ -11,17 +11,16 @@ document
 
 ### Namespaces
 
-| Name | Description |
-| --- | --- |
-| [document](arkts-corefile-document-depr-n.md) | document |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [document](arkts-corefile-document-depr-n.md) |
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [choose](arkts-corefile-document-choose-f.md) | Chooses files of the specified types. This API uses a promise to return the result. |
-| [choose](arkts-corefile-document-choose-f.md) | Chooses a file. This API uses an asynchronous callback to return the result. |
-| [choose](arkts-corefile-document-choose-f.md) | Chooses files of the specified types. This API uses an asynchronous callback to return the result. |
-| [show](arkts-corefile-document-show-f.md) | Opens a file. This API uses a promise to return the result. |
-| [show](arkts-corefile-document-show-f.md) | Opens a file. This API uses an asynchronous callback to return the result. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [choose](arkts-corefile-document-choose-f.md) |
+| [choose](arkts-corefile-document-choose-f.md) |
+| [choose](arkts-corefile-document-choose-f.md) |
+| [show](arkts-corefile-document-show-f.md) |
+| [show](arkts-corefile-document-show-f.md) |

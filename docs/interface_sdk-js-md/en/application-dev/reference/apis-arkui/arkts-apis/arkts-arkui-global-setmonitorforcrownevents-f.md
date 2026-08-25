@@ -10,15 +10,14 @@ Sets a digital crown events listener for current page, only be supported on the 
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-unnamed-export declare function setMonitorForCrownEvents(handler: Function): void--><!--Device-unnamed-export declare function setMonitorForCrownEvents(handler: Function): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| handler | Function | Yes | Indicates the function to be called when the crown event trigger. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| handler | Function | Yes |

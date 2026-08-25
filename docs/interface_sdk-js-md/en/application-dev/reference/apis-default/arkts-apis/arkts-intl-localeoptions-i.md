@@ -1,8 +1,6 @@
 # LocaleOptions
 
-**Since:** -1
-
-<!--Device-Intl-interface LocaleOptions--><!--Device-Intl-interface LocaleOptions-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -19,9 +17,7 @@ A string containing the language, and the script and region if available.
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-LocaleOptions-baseName?: string--><!--Device-LocaleOptions-baseName?: string-End-->
+**ArkTS mode:** 
 
 ## calendar
 
@@ -33,9 +29,7 @@ The part of the Locale that indicates the locale's calendar era.
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-LocaleOptions-calendar?: string--><!--Device-LocaleOptions-calendar?: string-End-->
+**ArkTS mode:** 
 
 ## caseFirst
 
@@ -47,9 +41,7 @@ Flag that defines whether case is taken into account for the locale's collation 
 
 **Type:** LocaleCollationCaseFirst
 
-**Since:** -1
-
-<!--Device-LocaleOptions-caseFirst?: LocaleCollationCaseFirst--><!--Device-LocaleOptions-caseFirst?: LocaleCollationCaseFirst-End-->
+**ArkTS mode:** 
 
 ## collation
 
@@ -61,9 +53,7 @@ The collation type used for sorting
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-LocaleOptions-collation?: string--><!--Device-LocaleOptions-collation?: string-End-->
+**ArkTS mode:** 
 
 ## hourCycle
 
@@ -75,9 +65,7 @@ The time keeping format convention used by the locale.
 
 **Type:** LocaleHourCycleKey
 
-**Since:** -1
-
-<!--Device-LocaleOptions-hourCycle?: LocaleHourCycleKey--><!--Device-LocaleOptions-hourCycle?: LocaleHourCycleKey-End-->
+**ArkTS mode:** 
 
 ## language
 
@@ -89,9 +77,7 @@ The primary language subtag associated with the locale.
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-LocaleOptions-language?: string--><!--Device-LocaleOptions-language?: string-End-->
+**ArkTS mode:** 
 
 ## numberingSystem
 
@@ -103,9 +89,7 @@ The numeral system used by the locale.
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-LocaleOptions-numberingSystem?: string--><!--Device-LocaleOptions-numberingSystem?: string-End-->
+**ArkTS mode:** 
 
 ## numeric
 
@@ -117,9 +101,7 @@ Flag that defines whether the locale has special collation handling for numeric 
 
 **Type:** boolean
 
-**Since:** -1
-
-<!--Device-LocaleOptions-numeric?: boolean--><!--Device-LocaleOptions-numeric?: boolean-End-->
+**ArkTS mode:** 
 
 ## region
 
@@ -131,9 +113,7 @@ The region of the world (usually a country) associated with the locale. Possible
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-LocaleOptions-region?: string--><!--Device-LocaleOptions-region?: string-End-->
+**ArkTS mode:** 
 
 ## script
 
@@ -145,7 +125,4 @@ The script used for writing the particular language used in the locale. Possible
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-LocaleOptions-script?: string--><!--Device-LocaleOptions-script?: string-End-->
-
+**ArkTS mode:** 

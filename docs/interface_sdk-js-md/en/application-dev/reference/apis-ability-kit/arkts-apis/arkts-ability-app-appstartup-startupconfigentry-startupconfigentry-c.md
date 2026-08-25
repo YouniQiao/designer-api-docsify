@@ -2,9 +2,9 @@
 
 The module provides the capability to configure [AppStartup](../../../application-models/app-startup.md).
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-declare class StartupConfigEntry--><!--Device-unnamed-declare class StartupConfigEntry-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AppStartup
 
@@ -24,17 +24,17 @@ Called if the HAP of the AbilityStage has [defined the AppStartup configuration 
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-StartupConfigEntry-onConfig?(): StartupConfig--><!--Device-StartupConfigEntry-onConfig?(): StartupConfig-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AppStartup
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | AppStartup configuration. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) |
 
 **Examples**
 
@@ -77,17 +77,17 @@ Called when startup initialization to configure startup mode.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-StartupConfigEntry-onConfig(): StartupConfig--><!--Device-StartupConfigEntry-onConfig(): StartupConfig-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AppStartup
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | The developer returns a startup configuration. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) |
 
 **Examples**
 
@@ -101,25 +101,25 @@ onRequestCustomMatchRule(want: Want): string
 
 Called if the HAP of the AbilityStage has [defined the AppStartup configuration file](../../../application-models/app-startup.md#defining-startup-parameter-configuration). This callback is triggered after StartupConfigEntry.onConfig but before [AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate).You can use this callback to return different custom matching rules based on parameters in the Want object passed by the caller to start the UIAbility. . AppStartup matches these rules with the **customization** field in **matchRules** of the startup task configuration. If a match is successful, the task is executed automatically. For details about the matching rules, see [Adding Task Matching Rules](../../../application-models/app-startup.md#adding-task-matching-rules).This API is typically used in scenarios where tasks cannot be matched directly using URI, action, or intent name rules. It allows for further refinement of matching rules.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StartupConfigEntry-onRequestCustomMatchRule(want: Want): string--><!--Device-StartupConfigEntry-onRequestCustomMatchRule(want: Want): string-End-->
 
 **System capability:** SystemCapability.Ability.AppStartup
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Custom matching rule, which is used to determine whether to automatically execute the task. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -137,4 +137,3 @@ export default class MyStartupConfigEntry extends StartupConfigEntry {
   }
 }
 ```
-

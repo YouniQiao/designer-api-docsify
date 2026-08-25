@@ -2,9 +2,9 @@
 
 网络链路信息。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-connection-export interface LinkAddress--><!--Device-connection-export interface LinkAddress-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -24,9 +24,9 @@ address: NetAddress
 
 **类型：** NetAddress
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-LinkAddress-address: NetAddress--><!--Device-LinkAddress-address: NetAddress-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -38,11 +38,10 @@ prefixLength: int
 
 链路地址前缀的长度。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-LinkAddress-prefixLength: int--><!--Device-LinkAddress-prefixLength: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
-

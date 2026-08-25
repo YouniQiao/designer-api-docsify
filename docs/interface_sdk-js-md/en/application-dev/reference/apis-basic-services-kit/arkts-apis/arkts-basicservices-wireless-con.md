@@ -8,11 +8,11 @@ const AIRPLANE_MODE_RADIOS: string
 
 Indicates the list of radio signals to be disabled when airplane mode is enabled. Multiple radio signals are separated by commas (,).&lt;ul&gt; &lt;li&gt;{@code BLUETOOTH_RADIO} - Bluetooth is disabled in airplane mode. &lt;li&gt;{@code CELL_RADIO} - Cellular radio is disabled in airplane mode. &lt;li&gt;{@code NFC_RADIO} - NFC is disabled in airplane mode. &lt;li&gt;{@code WIFI_RADIO} - Wi-Fi is disabled in airplane mode. &lt;/ul&gt;
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
-
-<!--Device-wireless-const AIRPLANE_MODE_RADIOS: string--><!--Device-wireless-const AIRPLANE_MODE_RADIOS: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -24,11 +24,11 @@ const BLUETOOTH_DISCOVER_ABILITY_STATUS: string
 
 Specifies whether the device can be discovered or connected by other devices through Bluetooth.If the value is {@code 0}, the device cannot be connected or discovered. If the value is {@code 1}, the device can be connected but cannot be discovered. If the value is {@code 2}, the device can be connected and discovered.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
-
-<!--Device-wireless-const BLUETOOTH_DISCOVER_ABILITY_STATUS: string--><!--Device-wireless-const BLUETOOTH_DISCOVER_ABILITY_STATUS: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -40,11 +40,11 @@ const BLUETOOTH_DISCOVER_TIMEOUT: string
 
 Indicates the duration (in seconds) that the device can be discovered through Bluetooth.<p>After the duration expires, the device cannot be discovered through Bluetooth.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
-
-<!--Device-wireless-const BLUETOOTH_DISCOVER_TIMEOUT: string--><!--Device-wireless-const BLUETOOTH_DISCOVER_TIMEOUT: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -56,11 +56,11 @@ const BLUETOOTH_RADIO: string
 
 A constant of {@code AIRPLANE_MODE_RADIOS} to indicate that Bluetooth is disabled in airplane mode.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
-
-<!--Device-wireless-const BLUETOOTH_RADIO: string--><!--Device-wireless-const BLUETOOTH_RADIO: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -72,11 +72,11 @@ const BLUETOOTH_STATUS: string
 
 Specifies whether Bluetooth is enabled.<p>If the value is {@code true}, Bluetooth is enabled. If the value is {@code false}, Bluetooth is disabled.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
-
-<!--Device-wireless-const BLUETOOTH_STATUS: string--><!--Device-wireless-const BLUETOOTH_STATUS: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -88,11 +88,11 @@ const CELL_RADIO: string
 
 A constant of {@code AIRPLANE_MODE_RADIOS} to indicate that cellular radio is disabled in airplane mode.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
-
-<!--Device-wireless-const CELL_RADIO: string--><!--Device-wireless-const CELL_RADIO: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -104,11 +104,11 @@ const NFC_RADIO: string
 
 A constant of {@code AIRPLANE_MODE_RADIOS} to indicate that NFC is disabled in airplane mode.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
-
-<!--Device-wireless-const NFC_RADIO: string--><!--Device-wireless-const NFC_RADIO: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -120,11 +120,11 @@ const OWNER_LOCKDOWN_WIFI_CFG: string
 
 Specifies whether the Wi-Fi configuration created by the application of the device owner should be locked down.<p>If the value is {@code true}, the Wi-Fi configuration should be locked down. If the value is {@code false}, the Wi-Fi configuration should not be locked down.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
-
-<!--Device-wireless-const OWNER_LOCKDOWN_WIFI_CFG: string--><!--Device-wireless-const OWNER_LOCKDOWN_WIFI_CFG: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -136,11 +136,11 @@ const WIFI_DHCP_MAX_RETRY_COUNT: string
 
 Indicates the maximum number of attempts to obtain an IP address from the DHCP server.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
-
-<!--Device-wireless-const WIFI_DHCP_MAX_RETRY_COUNT: string--><!--Device-wireless-const WIFI_DHCP_MAX_RETRY_COUNT: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -152,11 +152,11 @@ const WIFI_RADIO: string
 
 A constant of {@code AIRPLANE_MODE_RADIOS} to indicate that Wi-Fi is disabled in airplane mode.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
-
-<!--Device-wireless-const WIFI_RADIO: string--><!--Device-wireless-const WIFI_RADIO: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -168,11 +168,11 @@ const WIFI_STATUS: string
 
 Specifies whether Wi-Fi is enabled.<p>If the value is {@code true}, Wi-Fi is enabled. If the value is {@code false}, Wi-Fi is disabled.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
-
-<!--Device-wireless-const WIFI_STATUS: string--><!--Device-wireless-const WIFI_STATUS: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -184,11 +184,11 @@ const WIFI_TO_MOBILE_DATA_AWAKE_TIMEOUT: string
 
 Indicates the maximum duration to hold a wake lock when waiting for the mobile data connection to establish after the Wi-Fi connection is disconnected.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
-
-<!--Device-wireless-const WIFI_TO_MOBILE_DATA_AWAKE_TIMEOUT: string--><!--Device-wireless-const WIFI_TO_MOBILE_DATA_AWAKE_TIMEOUT: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -200,11 +200,10 @@ const WIFI_WATCHDOG_STATUS: string
 
 Specifies whether Wi-Fi watchdog is enabled.<p>If the value is {@code true}, Wi-Fi watchdog is enabled. If the value is {@code false}, Wi-Fi watchdog is disabled.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
 
-<!--Device-wireless-const WIFI_WATCHDOG_STATUS: string--><!--Device-wireless-const WIFI_WATCHDOG_STATUS: string-End-->
-
 **System capability:** SystemCapability.Applications.Settings.Core
-

@@ -1,0 +1,65 @@
+# TextClockConfiguration
+
+TextClockConfiguration used by text clock content modifier
+
+**Inheritance/Implementation:** TextClockConfiguration extends CommonConfiguration<TextClockConfiguration>
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## started
+
+```TypeScript
+started: boolean
+```
+
+TextClock is started or not.
+
+**Type:** boolean
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## timeValue
+
+```TypeScript
+timeValue: long
+```
+
+The time of the TextClock.
+
+**Type:** long
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## timeZoneOffset
+
+```TypeScript
+timeZoneOffset: double
+```
+
+Specifies the current time zone. The valid value is an integer ranging from - 14 to 12, Where a negative value indicates the eastern time zone, for example, -8.
+
+**Type:** double
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

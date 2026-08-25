@@ -4,9 +4,9 @@ A special duplex stream that supports data conversion and result output. The **T
 
 **Inheritance/Implementation:** Transform extends [Duplex](arkts-arkts-stream-duplex-c.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-stream-export class Transform--><!--Device-stream-export class Transform-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -24,11 +24,11 @@ constructor()
 
 A constructor used to create a **Transform** object.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Transform-constructor()--><!--Device-Transform-constructor()-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -65,19 +65,19 @@ doFlush(callback: Function): void
 
 Called at the end of the stream to process the remaining data. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Transform-doFlush(callback: Function): void--><!--Device-Transform-doFlush(callback: Function): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | Function | Yes | Callback function. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | Function | Yes |
 
 **Examples**
 
@@ -111,21 +111,21 @@ doTransform(chunk: string, encoding: string, callback: Function): void
 
 Converts or processes input data chunks and uses a callback to notify that the processing is complete.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-Transform-doTransform(chunk: string, encoding: string, callback: Function): void--><!--Device-Transform-doTransform(chunk: string, encoding: string, callback: Function): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| chunk | string | Yes | Data to write. |
-| encoding | string | Yes | Encoding format. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
-| callback | Function | Yes | Callback function. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| chunk | string | Yes |
+| encoding | string | Yes |
+| callback | Function | Yes |
 
 **Examples**
 
@@ -146,4 +146,3 @@ class TestTransform extends stream.Transform {
 let tr = new TestTransform();
 tr.write("hello");
 ```
-

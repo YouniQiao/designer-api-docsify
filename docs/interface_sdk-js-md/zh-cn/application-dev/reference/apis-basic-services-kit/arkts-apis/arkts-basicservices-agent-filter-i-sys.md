@@ -2,9 +2,9 @@
 
 过滤条件。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-agent-interface Filter--><!--Device-agent-interface Filter-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -24,11 +24,10 @@ Specify the package name of an application. Only for advanced search, common sea
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Filter-bundle?: string--><!--Device-Filter-bundle?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **系统接口：** 此接口为系统接口。
-

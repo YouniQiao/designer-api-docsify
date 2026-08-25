@@ -4,7 +4,7 @@
 
 **起始版本：** 18
 
-<!--Device-asset-enum WrapType--><!--Device-asset-enum WrapType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -18,7 +18,7 @@ NEVER = 0
 
 **起始版本：** 18
 
-<!--Device-WrapType-NEVER = 0--><!--Device-WrapType-NEVER = 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -32,7 +32,6 @@ TRUSTED_ACCOUNT = 1
 
 **起始版本：** 18
 
-<!--Device-WrapType-TRUSTED_ACCOUNT = 1--><!--Device-WrapType-TRUSTED_ACCOUNT = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.Security.Asset
-

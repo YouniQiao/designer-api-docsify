@@ -2,9 +2,9 @@
 
 枚举，音频流使用类型。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-audio-enum StreamUsage--><!--Device-audio-enum StreamUsage-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -16,11 +16,11 @@ STREAM_USAGE_UNKNOWN = 0
 
 未知类型。从API version 12开始，该接口支持在原子化服务中使用。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StreamUsage-STREAM_USAGE_UNKNOWN = 0--><!--Device-StreamUsage-STREAM_USAGE_UNKNOWN = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -34,11 +34,11 @@ STREAM_USAGE_MEDIA = 1
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
-**替代接口：** [STREAM_USAGE_AUDIOBOOK](#stream_usage_audiobook)
-
-<!--Device-StreamUsage-STREAM_USAGE_MEDIA = 1--><!--Device-StreamUsage-STREAM_USAGE_MEDIA = 1-End-->
+**替代接口：** [STREAM_USAGE_MUSIC](#stream_usage_music)
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -50,11 +50,11 @@ STREAM_USAGE_MUSIC = 1
 
 音乐。从API version 12开始，该接口支持在原子化服务中使用。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StreamUsage-STREAM_USAGE_MUSIC = 1--><!--Device-StreamUsage-STREAM_USAGE_MUSIC = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -66,11 +66,11 @@ STREAM_USAGE_VOICE_COMMUNICATION = 2
 
 VoIP语音通话（该流类型起播时，会触发开启3A算法）。从API version 12开始，该接口支持在原子化服务中使用。
 
-**起始版本：** 23
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StreamUsage-STREAM_USAGE_VOICE_COMMUNICATION = 2--><!--Device-StreamUsage-STREAM_USAGE_VOICE_COMMUNICATION = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -82,11 +82,11 @@ STREAM_USAGE_VOICE_ASSISTANT = 3
 
 语音播报。从API version 12开始，该接口支持在原子化服务中使用。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StreamUsage-STREAM_USAGE_VOICE_ASSISTANT = 3--><!--Device-StreamUsage-STREAM_USAGE_VOICE_ASSISTANT = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -98,11 +98,11 @@ STREAM_USAGE_ALARM = 4
 
 闹钟。从API version 12开始，该接口支持在原子化服务中使用。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StreamUsage-STREAM_USAGE_ALARM = 4--><!--Device-StreamUsage-STREAM_USAGE_ALARM = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -114,11 +114,11 @@ STREAM_USAGE_VOICE_MESSAGE = 5
 
 语音消息。从API version 12开始，该接口支持在原子化服务中使用。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StreamUsage-STREAM_USAGE_VOICE_MESSAGE = 5--><!--Device-StreamUsage-STREAM_USAGE_VOICE_MESSAGE = 5-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -132,11 +132,11 @@ STREAM_USAGE_NOTIFICATION_RINGTONE = 6
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [STREAM_USAGE_RINGTONE](#stream_usage_ringtone)
-
-<!--Device-StreamUsage-STREAM_USAGE_NOTIFICATION_RINGTONE = 6--><!--Device-StreamUsage-STREAM_USAGE_NOTIFICATION_RINGTONE = 6-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -148,11 +148,11 @@ STREAM_USAGE_RINGTONE = 6
 
 铃声。从API version 12开始，该接口支持在原子化服务中使用。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StreamUsage-STREAM_USAGE_RINGTONE = 6--><!--Device-StreamUsage-STREAM_USAGE_RINGTONE = 6-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -164,11 +164,11 @@ STREAM_USAGE_NOTIFICATION = 7
 
 通知音。从API version 12开始，该接口支持在原子化服务中使用。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StreamUsage-STREAM_USAGE_NOTIFICATION = 7--><!--Device-StreamUsage-STREAM_USAGE_NOTIFICATION = 7-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -180,11 +180,11 @@ STREAM_USAGE_ACCESSIBILITY = 8
 
 无障碍。从API version 12开始，该接口支持在原子化服务中使用。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StreamUsage-STREAM_USAGE_ACCESSIBILITY = 8--><!--Device-StreamUsage-STREAM_USAGE_ACCESSIBILITY = 8-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -196,11 +196,11 @@ STREAM_USAGE_MOVIE = 10
 
 电影或视频。从API version 12开始，该接口支持在原子化服务中使用。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StreamUsage-STREAM_USAGE_MOVIE = 10--><!--Device-StreamUsage-STREAM_USAGE_MOVIE = 10-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -212,11 +212,11 @@ STREAM_USAGE_GAME = 11
 
 游戏。从API version 12开始，该接口支持在原子化服务中使用。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StreamUsage-STREAM_USAGE_GAME = 11--><!--Device-StreamUsage-STREAM_USAGE_GAME = 11-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -228,11 +228,11 @@ STREAM_USAGE_AUDIOBOOK = 12
 
 有声读物（包括听书、相声、评书）、听新闻、播客等。从API version 12开始，该接口支持在原子化服务中使用。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StreamUsage-STREAM_USAGE_AUDIOBOOK = 12--><!--Device-StreamUsage-STREAM_USAGE_AUDIOBOOK = 12-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -244,11 +244,11 @@ STREAM_USAGE_NAVIGATION = 13
 
 导航。从API version 12开始，该接口支持在原子化服务中使用。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StreamUsage-STREAM_USAGE_NAVIGATION = 13--><!--Device-StreamUsage-STREAM_USAGE_NAVIGATION = 13-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -260,11 +260,10 @@ STREAM_USAGE_VIDEO_COMMUNICATION = 17
 
 VoIP视频通话（该流类型起播时，会触发开启3A算法）。从API version 12开始，该接口支持在原子化服务中使用。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-StreamUsage-STREAM_USAGE_VIDEO_COMMUNICATION = 17--><!--Device-StreamUsage-STREAM_USAGE_VIDEO_COMMUNICATION = 17-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
-

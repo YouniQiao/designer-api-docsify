@@ -9,30 +9,27 @@ Relative time format unit.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Intl-export type RelativeTimeFormatUnit = 'year' | 'years' | 'quarter' | 'quarters' | 'month' | 'months' | 'week' |        'weeks' | 'day' | 'days' | 'hour' | 'hours' | 'minute' | 'minutes' | 'second' | 'seconds'--><!--Device-Intl-export type RelativeTimeFormatUnit = 'year' | 'years' | 'quarter' | 'quarters' | 'month' | 'months' | 'week' |        'weeks' | 'day' | 'days' | 'hour' | 'hours' | 'minute' | 'minutes' | 'second' | 'seconds'-End-->
-
 **System capability:** SystemCapability.Utils.Lang
 
-| Type | Description |
-| --- | --- |
-| 'year' |  |
-| 'years' |  |
-| 'quarter' |  |
-| 'quarters' |  |
-| 'month' |  |
-| 'months' |  |
-| 'week' |  |
-| 'weeks' |  |
-| 'day' |  |
-| 'days' |  |
-| 'hour' |  |
-| 'hours' |  |
-| 'minute' |  |
-| 'minutes' |  |
-| 'second' |  |
-| 'seconds' |  |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| 'year' |
+| 'years' |
+| 'quarter' |
+| 'quarters' |
+| 'month' |
+| 'months' |
+| 'week' |
+| 'weeks' |
+| 'day' |
+| 'days' |
+| 'hour' |
+| 'hours' |
+| 'minute' |
+| 'minutes' |
+| 'second' |
+| 'seconds' |

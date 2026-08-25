@@ -4,9 +4,9 @@ Corresponds to a file, including its metadata and data and the file's manifest d
 
 **Inheritance/Implementation:** File extends [FileMeta](arkts-corefile-backup-filemeta-i-sys.md), [FileData](arkts-corefile-backup-filedata-i-sys.md), [FileManifestData](arkts-corefile-backup-filemanifestdata-i-sys.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-backup-interface File--><!--Device-backup-interface File-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -17,4 +17,3 @@ Corresponds to a file, including its metadata and data and the file's manifest d
 ```TypeScript
 import { backup } from '@kit.CoreFileKit';
 ```
-

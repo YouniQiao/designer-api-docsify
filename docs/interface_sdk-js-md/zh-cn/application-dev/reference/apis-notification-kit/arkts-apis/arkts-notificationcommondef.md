@@ -4,9 +4,8 @@
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [BundleOption(Some common definitions)](arkts-notification-notificationcommondef-bundleoption-i.md) | 描述BundleOption信息，即应用的包信息。 |
-| [GrantedBundleInfo(Some common definitions)](arkts-notification-notificationcommondef-grantedbundleinfo-i.md) | 描述已授权的包信息。 |
-| [UserGrantSetting(Some common definitions)](arkts-notification-notificationcommondef-usergrantsetting-i.md) | 描述用户授权的设置信息。 |
-
+| 名称 |
+| --- |
+| [BundleOption(Some common definitions)](arkts-notification-notificationcommondef-bundleoption-i.md) |
+| [GrantedBundleInfo(Some common definitions)](arkts-notification-notificationcommondef-grantedbundleinfo-i.md) |
+| [UserGrantSetting(Some common definitions)](arkts-notification-notificationcommondef-usergrantsetting-i.md) |

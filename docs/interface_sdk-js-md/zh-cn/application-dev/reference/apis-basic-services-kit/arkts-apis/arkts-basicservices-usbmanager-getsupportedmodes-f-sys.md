@@ -16,11 +16,11 @@ function getSupportedModes(portId: number): PortModeType
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 12
 
 **替代接口：** [getPortSupportModes](arkts-basicservices-usbmanager-getportsupportmodes-f-sys.md)(portId: int)
-
-<!--Device-usbManager-function getSupportedModes(portId: number): PortModeType--><!--Device-usbManager-function getSupportedModes(portId: number): PortModeType-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -28,21 +28,21 @@ function getSupportedModes(portId: number): PortModeType
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| portId | number | 是 | USB端口号，取值范围为非负整数，可通过[getPortList](arkts-basicservices-usbmanager-getportlist-f-sys.md)获取端口列表后得到。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| PortModeType | 支持的模式列表的组合掩码。 |
+| 类型 |
+| --- |
+| [PortModeType](arkts-basicservices-usb-portmodetype-e-sys.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified.<br>2.Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -50,4 +50,3 @@ function getSupportedModes(portId: number): PortModeType
 // 获取端口ID为0的端口支持的模式
 let ret: usbManager.PortModeType = usbManager.getSupportedModes(0);
 ```
-

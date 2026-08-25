@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [ColumnModifier](arkts-arkui-columnmodifier-c.md) | Defines Column Modifier@implements ColumnAttribute, AttributeModifier&lt;ColumnAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ColumnModifier](arkts-arkui-columnmodifier-c.md) |

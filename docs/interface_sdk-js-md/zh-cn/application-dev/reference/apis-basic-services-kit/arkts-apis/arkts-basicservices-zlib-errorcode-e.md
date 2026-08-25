@@ -4,9 +4,9 @@
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-zlib-export enum ErrorCode--><!--Device-zlib-export enum ErrorCode-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -18,9 +18,9 @@ ERROR_CODE_OK = 0
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ErrorCode-ERROR_CODE_OK = 0--><!--Device-ErrorCode-ERROR_CODE_OK = 0-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -32,9 +32,8 @@ ERROR_CODE_ERRNO = -1
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-<!--Device-ErrorCode-ERROR_CODE_ERRNO = -1--><!--Device-ErrorCode-ERROR_CODE_ERRNO = -1-End-->
-
 **系统能力：** SystemCapability.BundleManager.Zlib
-

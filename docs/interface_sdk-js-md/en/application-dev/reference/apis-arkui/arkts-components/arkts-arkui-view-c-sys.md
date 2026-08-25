@@ -4,7 +4,7 @@ View
 
 **Since:** 7
 
-<!--Device-unnamed-declare class View--><!--Device-unnamed-declare class View-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,9 +25,9 @@ Just use for generate tsbundle
 
 **Since:** 7
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-View-create(value: any): any--><!--Device-View-create(value: any): any-End-->
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,13 +35,12 @@ Just use for generate tsbundle
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | any | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | any | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| any |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| any |

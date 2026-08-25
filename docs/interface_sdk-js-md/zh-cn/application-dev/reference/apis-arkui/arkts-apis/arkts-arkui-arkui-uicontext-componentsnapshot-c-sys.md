@@ -9,7 +9,7 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-export class ComponentSnapshot--><!--Device-unnamed-export class ComponentSnapshot-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,9 +36,9 @@ getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
 
 **起始版本：** 20
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为26.0.0。
 
-<!--Device-ComponentSnapshot-getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,    options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>--><!--Device-ComponentSnapshot-getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,    options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,26 +46,26 @@ getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| start | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | 是 | 范围开始的组件的ID。 |
-| end | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | 是 | 范围结束的组件的ID。 |
-| isStartRect | boolean | 是 | 范围是否以开始组件的外接矩形为准。<br/>true表示以开始组件的外接矩形为准，false表示以结束组件的外接矩形为准。<br/>默认值为true。 |
-| options | componentSnapshot.SnapshotOptions | 否 | 截图相关的自定义参数，不支持region参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| start | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | 是 |
+| end | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | 是 |
+| isStartRect | boolean | 是 |
+| options | componentSnapshot.SnapshotOptions | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;image.PixelMap&gt; | Result of the snapshot. |
+| 类型 |
+| --- |
+| Promise & lt;image.PixelMap & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Invalid ID detected. |
-| [160003](../errorcode-snapshot.md#160003-截图选项中设置的色彩空间或动态范围模式不受支持) | Unsupported color space or dynamic range mode in snapshot options.<br>**适用版本：** 23+ |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [160003](../errorcode-snapshot.md#160003-截图选项中设置的色彩空间或动态范围模式不受支持) |
 
 **示例**
 
@@ -140,4 +140,3 @@ struct SnapshotExample {
   }
 }
 ```
-

@@ -6,9 +6,9 @@
 > - 本模块接口为系统接口。&gt;
 > - 由于系统参数都是各个系统服务的内部信息和控制参数，每个系统参数都有各自不同的DAC（Discretionary Access Control，自主访问控制）和MAC（Mandatory Access Control，强制访问控制）访问控制权限，三方应用不能使用此类接口。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-declare namespace systemParameterEnhance--><!--Device-unnamed-declare namespace systemParameterEnhance-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -25,14 +25,13 @@ import { systemParameterEnhance } from '@kit.BasicServicesKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [get](arkts-basicservices-systemparameterenhance-get-f-sys.md) | 获取系统参数key对应的值，使用callback异步回调。 |
-| [get](arkts-basicservices-systemparameterenhance-get-f-sys.md) | 获取系统参数key对应的值，使用callback异步回调。 |
-| [get](arkts-basicservices-systemparameterenhance-get-f-sys.md) | 获取系统参数key对应的值，使用Promise异步回调。 |
-| [getSync](arkts-basicservices-systemparameterenhance-getsync-f-sys.md) | 获取系统参数key对应的值。 |
-| [set](arkts-basicservices-systemparameterenhance-set-f-sys.md) | 设置系统参数key对应的值，使用callback异步回调。 |
-| [set](arkts-basicservices-systemparameterenhance-set-f-sys.md) | 设置系统参数key对应的值，使用Promise异步回调。 |
-| [setSync](arkts-basicservices-systemparameterenhance-setsync-f-sys.md) | 设置系统参数key对应的值。 |
+| 名称 |
+| --- |
+| [get](arkts-basicservices-systemparameterenhance-get-f-sys.md) |
+| [get](arkts-basicservices-systemparameterenhance-get-f-sys.md) |
+| [get](arkts-basicservices-systemparameterenhance-get-f-sys.md) |
+| [getSync](arkts-basicservices-systemparameterenhance-getsync-f-sys.md) |
+| [set](arkts-basicservices-systemparameterenhance-set-f-sys.md) |
+| [set](arkts-basicservices-systemparameterenhance-set-f-sys.md) |
+| [setSync](arkts-basicservices-systemparameterenhance-setsync-f-sys.md) |
 <!--DelEnd-->
-

@@ -2,9 +2,9 @@
 
 在调用WebSocketServer方法前，需要先通过[webSocket.createWebSocketServer](arkts-network-websocket-createwebsocketserver-f.md)创建一个 WebSocketServer。
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-webSocket-export interface WebSocketServer--><!--Device-webSocket-export interface WebSocketServer-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -22,33 +22,33 @@ close(connection: WebSocketConnection, options?: webSocket.WebSocketCloseOptions
 
 关闭指定websocket连接。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 19
+
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INTERNET
-
-<!--Device-WebSocketServer-close(connection: WebSocketConnection, options?: webSocket.WebSocketCloseOptions): Promise<boolean>--><!--Device-WebSocketServer-close(connection: WebSocketConnection, options?: webSocket.WebSocketCloseOptions): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| connection | [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md) | 是 | 客户端信息，包括客户端的ip地址和端口号port。 |
-| options | [webSocket.WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | 否 | 关闭WebSocket连接时，可选参数的类型和说明。 <br>- 错误码默认：200。原因值默认：Websocket connect failed。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [connection](arkts-net-connection.md) | [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md) | 是 |
+| options | [webSocket.WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | promise对象。返回true表示关闭请求创建成功；返回false表示关闭请求创建失败。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| 2302006 | websocket connection does not exist. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| 2302006 |
 
 **示例**
 
@@ -250,25 +250,25 @@ listAllConnections(): WebSocketConnection[]
 > **说明：**&gt;
 > 该接口为异步调用，返回结果需通过await关键字等待异步操作完成，以确保正确获取到所有客户端连接信息。
 
-**起始版本：** 23
+**起始版本：** 19
+
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INTERNET
-
-<!--Device-WebSocketServer-listAllConnections(): WebSocketConnection[]--><!--Device-WebSocketServer-listAllConnections(): WebSocketConnection[]-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)[] | an array consists connections from all clients. |
+| 类型 |
+| --- |
+| [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)[] |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -353,39 +353,6 @@ localServer.onConnect((connection: webSocket.WebSocketConnection) => {
 });
 ```
 
-## off('close')
-
-```TypeScript
-off(type: 'close', callback?: ClientConnectionCloseCallback): void
-```
-
-取消订阅WebSocketServer的关闭事件，使用callback异步回调。
-
-> **说明：**&gt;
-> 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
-
-**起始版本：** 19
-
-<!--Device-WebSocketServer-off(type: 'close', callback?: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-off(type: 'close', callback?: ClientConnectionCloseCallback): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'close' | 是 | 事件回调类型，支持的事件为'close'，当offclose()调用完成，取消订阅连接关闭事件成功。 |
-| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | 否 | 回调函数。 <br>close：close错误码；reason：错误码说明。 |
-
-**示例**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let localServer = webSocket.createWebSocketServer();
-localServer.off('close');
-```
-
 ## off('connect')
 
 ```TypeScript
@@ -399,16 +366,16 @@ off(type: 'connect', callback?: Callback<WebSocketConnection>): void
 
 **起始版本：** 19
 
-<!--Device-WebSocketServer-off(type: 'connect', callback?: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-off(type: 'connect', callback?: Callback<WebSocketConnection>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'connect' | 是 | 事件回调类型，支持的事件为'connect'，当offconnect()调用完成，取消监听连接事件成功。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 否 | 回调函数。连接的客户端信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'connect' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 否 |
 
 **示例**
 
@@ -417,39 +384,6 @@ import { webSocket } from '@kit.NetworkKit';
 
 let localServer = webSocket.createWebSocketServer();
 localServer.off('connect');
-```
-
-## off('error')
-
-```TypeScript
-off(type: 'error', callback?: ErrorCallback): void
-```
-
-取消订阅WebSocketServer的Error事件，使用callback异步回调。
-
-> **说明：**&gt;
-> 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
-
-**起始版本：** 19
-
-<!--Device-WebSocketServer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-WebSocketServer-off(type: 'error', callback?: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'error' | 是 | 事件回调类型，支持的事件为'error'，当offerror()调用完成，取消订阅error事件成功。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。默认值：200。 |
-
-**示例**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let localServer = webSocket.createWebSocketServer();
-localServer.off('error');
 ```
 
 ## off('messageReceive')
@@ -465,16 +399,16 @@ off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void
 
 **起始版本：** 19
 
-<!--Device-WebSocketServer-off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'messageReceive' | 是 | 事件回调类型，支持的事件为'messageReceive'，当offmessageReceive()调用完成，取消订阅接收客户端消息成功。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 否 | 从指定客户端接收到的消息，包括客户端的信息和数据。 <br>- clientconnection：客户端信息。 <br>- data：客户端发送的消息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'messageReceive' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 否 |
 
 **示例**
 
@@ -483,6 +417,72 @@ import { webSocket } from '@kit.NetworkKit';
 
 let localServer = webSocket.createWebSocketServer();
 localServer.off('messageReceive');
+```
+
+## off('close')
+
+```TypeScript
+off(type: 'close', callback?: ClientConnectionCloseCallback): void
+```
+
+取消订阅WebSocketServer的关闭事件，使用callback异步回调。
+
+> **说明：**&gt;
+> 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+
+**起始版本：** 19
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'close' | 是 |
+| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | 否 |
+
+**示例**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let localServer = webSocket.createWebSocketServer();
+localServer.off('close');
+```
+
+## off('error')
+
+```TypeScript
+off(type: 'error', callback?: ErrorCallback): void
+```
+
+取消订阅WebSocketServer的Error事件，使用callback异步回调。
+
+> **说明：**&gt;
+> 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+
+**起始版本：** 19
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'error' | 是 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
+
+**示例**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let localServer = webSocket.createWebSocketServer();
+localServer.off('error');
 ```
 
 ## offConnect
@@ -495,16 +495,16 @@ offConnect(callback?: Callback<WebSocketConnection>): void
 
 **起始版本：** 23
 
-<!--Device-WebSocketServer-offConnect(callback?: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-offConnect(callback?: Callback<WebSocketConnection>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** 
 - API版本23+：SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 否 | the callback used to return the result.<br>**起始版本：** 23 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 否 |
 
 **示例**
 
@@ -529,16 +529,16 @@ offMessageReceive(callback?: Callback<WebSocketMessage>): void
 
 **起始版本：** 23
 
-<!--Device-WebSocketServer-offMessageReceive(callback?: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-offMessageReceive(callback?: Callback<WebSocketMessage>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** 
 - API版本23+：SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 否 | the callback used to return the result.<br>**起始版本：** 23 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 否 |
 
 **示例**
 
@@ -563,15 +563,15 @@ Cancels listening for events that a connection from a given client has been clos
 
 **起始版本：** 26.0.0
 
-<!--Device-WebSocketServer-offWebSocketServerClose(callback?: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-offWebSocketServerClose(callback?: ClientConnectionCloseCallback): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | 否 | the callback used to return the result. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | 否 |
 
 **示例**
 
@@ -596,16 +596,16 @@ offWebSocketServerError(callback?: ErrorCallback): void
 
 **起始版本：** 23
 
-<!--Device-WebSocketServer-offWebSocketServerError(callback?: ErrorCallback): void--><!--Device-WebSocketServer-offWebSocketServerError(callback?: ErrorCallback): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** 
 - API版本23+：SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | the callback used to return the result.<br>**起始版本：** 23 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
 
 **示例**
 
@@ -621,38 +621,6 @@ localServer.offWebSocketServerError(callback);
 localServer.offWebSocketServerError();
 ```
 
-## on('close')
-
-```TypeScript
-on(type: 'close', callback: ClientConnectionCloseCallback): void
-```
-
-订阅WebSocketServer的关闭事件，使用callback异步回调。
-
-**起始版本：** 19
-
-<!--Device-WebSocketServer-on(type: 'close', callback: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-on(type: 'close', callback: ClientConnectionCloseCallback): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'close' | 是 | 事件回调类型，支持的事件为'close'，当onclose()调用完成，连接关闭成功。 |
-| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | 是 | 回调函数。 <br>close：close错误码；reason：错误码说明。 |
-
-**示例**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let localServer = webSocket.createWebSocketServer();
-localServer.on('close', (clientConnection: webSocket.WebSocketConnection, closeReason: webSocket.CloseResult) => {
-  console.info(`client close, client: ${clientConnection}, closeReason: Code: ${closeReason.code}, reason: ${closeReason.reason}`);
-});
-```
-
 ## on('connect')
 
 ```TypeScript
@@ -663,16 +631,16 @@ on(type: 'connect', callback: Callback<WebSocketConnection>): void
 
 **起始版本：** 19
 
-<!--Device-WebSocketServer-on(type: 'connect', callback: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-on(type: 'connect', callback: Callback<WebSocketConnection>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'connect' | 是 | 事件回调类型，支持的事件为'connect'，当onconnect()调用完成，客户端与服务端建链成功。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 是 | 回调函数。连接的客户端信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'connect' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 是 |
 
 **示例**
 
@@ -686,6 +654,70 @@ localServer.on('connect', (connection: webSocket.WebSocketConnection) => {
 });
 ```
 
+## on('messageReceive')
+
+```TypeScript
+on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void
+```
+
+订阅WebSocketServer的接收客户端消息的事件，使用callback异步回调。
+
+**起始版本：** 19
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'messageReceive' | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 是 |
+
+**示例**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let localServer = webSocket.createWebSocketServer();
+localServer.on('messageReceive', (message: webSocket.WebSocketMessage) => {
+  console.info(`on message received, client: ${message.clientConnection}, data: ${message.data}`);
+});
+```
+
+## on('close')
+
+```TypeScript
+on(type: 'close', callback: ClientConnectionCloseCallback): void
+```
+
+订阅WebSocketServer的关闭事件，使用callback异步回调。
+
+**起始版本：** 19
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'close' | 是 |
+| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | 是 |
+
+**示例**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let localServer = webSocket.createWebSocketServer();
+localServer.on('close', (clientConnection: webSocket.WebSocketConnection, closeReason: webSocket.CloseResult) => {
+  console.info(`client close, client: ${clientConnection}, closeReason: Code: ${closeReason.code}, reason: ${closeReason.reason}`);
+});
+```
+
 ## on('error')
 
 ```TypeScript
@@ -696,16 +728,16 @@ on(type: 'error', callback: ErrorCallback): void
 
 **起始版本：** 19
 
-<!--Device-WebSocketServer-on(type: 'error', callback: ErrorCallback): void--><!--Device-WebSocketServer-on(type: 'error', callback: ErrorCallback): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'error' | 是 | 事件回调类型，支持的事件为'error'，当onerror()调用完成，error事件发生。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'error' | 是 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
 
 **示例**
 
@@ -719,38 +751,6 @@ localServer.on('error', (err: BusinessError) => {
 });
 ```
 
-## on('messageReceive')
-
-```TypeScript
-on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void
-```
-
-订阅WebSocketServer的接收客户端消息的事件，使用callback异步回调。
-
-**起始版本：** 19
-
-<!--Device-WebSocketServer-on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'messageReceive' | 是 | 事件回调类型，支持的事件为'messageReceive'，当onmessageReceive()调用完成，接收到客户端消息成功。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 是 | 回调函数。 <br>clientconnection:客户端信息，data:客户端发送的数据消息。 |
-
-**示例**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let localServer = webSocket.createWebSocketServer();
-localServer.on('messageReceive', (message: webSocket.WebSocketMessage) => {
-  console.info(`on message received, client: ${message.clientConnection}, data: ${message.data}`);
-});
-```
-
 ## onConnect
 
 ```TypeScript
@@ -761,16 +761,16 @@ onConnect(callback: Callback<WebSocketConnection>): void
 
 **起始版本：** 23
 
-<!--Device-WebSocketServer-onConnect(callback: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-onConnect(callback: Callback<WebSocketConnection>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** 
 - API版本23+：SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 是 | the callback used to return the result.<br>**起始版本：** 23 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 是 |
 
 **示例**
 
@@ -794,16 +794,16 @@ onMessageReceive(callback: Callback<WebSocketMessage>): void
 
 **起始版本：** 23
 
-<!--Device-WebSocketServer-onMessageReceive(callback: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-onMessageReceive(callback: Callback<WebSocketMessage>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** 
 - API版本23+：SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 是 | the callback used to return the result.<br>**起始版本：** 23 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 是 |
 
 **示例**
 
@@ -826,15 +826,15 @@ Enables listening for events that a connection from a given client has been clos
 
 **起始版本：** 26.0.0
 
-<!--Device-WebSocketServer-onWebSocketServerClose(callback: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-onWebSocketServerClose(callback: ClientConnectionCloseCallback): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | 是 | the callback function when a client connection is closed. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | 是 |
 
 **示例**
 
@@ -857,16 +857,16 @@ onWebSocketServerError(callback: ErrorCallback): void
 
 **起始版本：** 23
 
-<!--Device-WebSocketServer-onWebSocketServerError(callback: ErrorCallback): void--><!--Device-WebSocketServer-onWebSocketServerError(callback: ErrorCallback): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** 
 - API版本23+：SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | the callback used to return the result.<br>**起始版本：** 23 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
 
 **示例**
 
@@ -891,33 +891,33 @@ send(data: string | ArrayBuffer, connection: WebSocketConnection): Promise<boole
 > **说明：**&gt;
 > send接口必须在监听到connect事件后才可以调用。
 
-**起始版本：** 23
+**起始版本：** 19
+
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INTERNET
-
-<!--Device-WebSocketServer-send(data: string | ArrayBuffer, connection: WebSocketConnection): Promise<boolean>--><!--Device-WebSocketServer-send(data: string | ArrayBuffer, connection: WebSocketConnection): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | string \| ArrayBuffer | 是 | 服务端发送消息的数据，同时支持string（字符串）和ArrayBuffer（二进制）类型。最大支持发送5242864字节数据(即5 * 1024 * 1024 - 16)，超过该大小会返回401错误码。 |
-| connection | [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md) | 是 | 发送的客户端信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | string \| ArrayBuffer | 是 |
+| [connection](arkts-net-connection.md) | [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | promise对象。返回true表示发送请求创建成功；返回false表示发送请求创建失败。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| 2302006 | websocket connection does not exist. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| 2302006 |
 
 **示例**
 
@@ -1131,36 +1131,36 @@ start(config: WebSocketServerConfig): Promise<boolean>
 > **说明：**&gt;
 > 在多次调用该接口时，应避免监听同一端口。
 
-**起始版本：** 24
+**起始版本：** 19
+
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为24。
 
 **需要权限：** ohos.permission.INTERNET
-
-<!--Device-WebSocketServer-start(config: WebSocketServerConfig): Promise<boolean>--><!--Device-WebSocketServer-start(config: WebSocketServerConfig): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| config | [WebSocketServerConfig](arkts-network-websocket-websocketserverconfig-i.md) | 是 | 启动websocketServer服务器。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| config | [WebSocketServerConfig](arkts-network-websocket-websocketserverconfig-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | promise对象。返回true表示服务器启动成功；返回false表示服务启动失败。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2302002](../errorcode-net-webSocket.md#2302002-websocket-证书不存在) | Websocket certificate file does not exist. |
-| [2302004](../errorcode-net-webSocket.md#2302004-websocketserver-无法在指定的nic网络接口上进行网络监听) | Can't listen on the given NIC. |
-| [2302005](../errorcode-net-webSocket.md#2302005-websocketserver-无法在指定的端口上进行网络监听) | Can't listen on the given Port. |
-| [2302999](../errorcode-net-webSocket.md#2302999-内部错误) | Websocket other unknown error. |
-| [2302007](../errorcode-net-webSocket.md#2302007-websocketserver当前监听的端口已被占用) | Websocket port already occupied.<br>**适用版本：** 24+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2302002](../errorcode-net-webSocket.md#2302002-websocket-证书不存在) |
+| [2302004](../errorcode-net-webSocket.md#2302004-websocketserver-无法在指定的nic网络接口上进行网络监听) |
+| [2302005](../errorcode-net-webSocket.md#2302005-websocketserver-无法在指定的端口上进行网络监听) |
+| [2302999](../errorcode-net-webSocket.md#2302999-内部错误) |
+| [2302007](../errorcode-net-webSocket.md#2302007-websocketserver当前监听的端口已被占用) |
 
 **示例**
 
@@ -1223,25 +1223,25 @@ stop(): Promise<boolean>
 
 停止服务端服务。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 19
+
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INTERNET
-
-<!--Device-WebSocketServer-stop(): Promise<boolean>--><!--Device-WebSocketServer-stop(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | promise对象。返回true表示停止服务端service请求创建成功；返回false表示停止服务端service请求创建失败。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 **示例**
 
@@ -1311,4 +1311,3 @@ localServer.stop().then((success: boolean) => {
   }
 });
 ```
-

@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [LoadingProgressModifier](arkts-arkui-loadingprogressmodifier-c.md) | Defines LoadingProgress Modifier |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [LoadingProgressModifier](arkts-arkui-loadingprogressmodifier-c.md) |

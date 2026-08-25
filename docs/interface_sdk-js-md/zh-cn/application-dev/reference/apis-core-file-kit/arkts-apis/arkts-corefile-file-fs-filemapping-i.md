@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-declare interface FileMapping--><!--Device-unnamed-declare interface FileMapping-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -26,25 +26,25 @@ capacity(): number
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-FileMapping-capacity(): number--><!--Device-FileMapping-capacity(): number-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 文件映射区的容量，单位为Byte。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
+| 错误码ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900052 |
 
 **示例**
 
@@ -68,19 +68,19 @@ flip(): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-FileMapping-flip(): void--><!--Device-FileMapping-flip(): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
+| 错误码ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900052 |
 
 **示例**
 
@@ -111,25 +111,25 @@ getLimit(): number
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-FileMapping-getLimit(): number--><!--Device-FileMapping-getLimit(): number-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 当前可读写区域上界值，单位为Byte。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
+| 错误码ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900052 |
 
 **示例**
 
@@ -153,25 +153,25 @@ getPosition(): number
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-FileMapping-getPosition(): number--><!--Device-FileMapping-getPosition(): number-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 文件映射区的当前位置，单位为Byte。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
+| 错误码ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900052 |
 
 **示例**
 
@@ -195,28 +195,28 @@ msync(): Promise<void>
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-FileMapping-msync(): Promise<void>--><!--Device-FileMapping-msync(): Promise<void>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回值。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
-| 13900055 | Mmap operation not supported |
+| 错误码ID |
+| --- |
+| 13900011 |
+| 13900014 |
+| 13900020 |
+| 13900050 |
+| 13900052 |
+| 13900055 |
 
 **示例**
 
@@ -320,35 +320,35 @@ msync(position: number, length: number): Promise<void>
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-FileMapping-msync(position: number, length: number): Promise<void>--><!--Device-FileMapping-msync(position: number, length: number): Promise<void>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| position | number | 是 | 期望同步的起始位置，单位为Byte。 |
-| length | number | 是 | 期望同步的数据长度，单位为Byte。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| position | number | 是 |
+| length | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回值。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
-| 13900055 | Mmap operation not supported |
+| 错误码ID |
+| --- |
+| 13900011 |
+| 13900014 |
+| 13900020 |
+| 13900050 |
+| 13900052 |
+| 13900055 |
 
 **示例**
 
@@ -364,22 +364,22 @@ msyncSync(): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-FileMapping-msyncSync(): void--><!--Device-FileMapping-msyncSync(): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
-| 13900055 | Mmap operation not supported |
+| 错误码ID |
+| --- |
+| 13900011 |
+| 13900014 |
+| 13900020 |
+| 13900050 |
+| 13900052 |
+| 13900055 |
 
 **示例**
 
@@ -427,29 +427,29 @@ msyncSync(position: number, length: number): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-FileMapping-msyncSync(position: number, length: number): void--><!--Device-FileMapping-msyncSync(position: number, length: number): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| position | number | 是 | 期望同步的起始位置，单位为Byte。 |
-| length | number | 是 | 期望同步的数据长度，单位为Byte。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| position | number | 是 |
+| length | number | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
-| 13900055 | Mmap operation not supported |
+| 错误码ID |
+| --- |
+| 13900011 |
+| 13900014 |
+| 13900020 |
+| 13900050 |
+| 13900052 |
+| 13900055 |
 
 **示例**
 
@@ -465,34 +465,34 @@ read(buffer: ArrayBuffer, length?: number): number
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-FileMapping-read(buffer: ArrayBuffer, length?: number): number--><!--Device-FileMapping-read(buffer: ArrayBuffer, length?: number): number-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于保存读取到的文件数据的缓冲区。 |
-| length | number | 否 | 期望读取数据的长度，单位为Byte。默认缓冲区长度。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| buffer | ArrayBuffer | 是 |
+| length | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回实际读取的数据长度，单位为Byte。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
-| 13900052 | Mmap buffer released |
-| 13900054 | Mmap buffer is inaccessible |
+| 错误码ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900051 |
+| 13900052 |
+| 13900054 |
 
 **示例**
 
@@ -959,35 +959,35 @@ read(position: number, buffer: ArrayBuffer, length?: number): number
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-FileMapping-read(position: number, buffer: ArrayBuffer, length?: number): number--><!--Device-FileMapping-read(position: number, buffer: ArrayBuffer, length?: number): number-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| position | number | 是 | 期望读取的起始位置，单位为Byte。 |
-| buffer | ArrayBuffer | 是 | 用于保存读取到的文件数据的缓冲区。 |
-| length | number | 否 | 期望读取数据的长度，单位为Byte。默认缓冲区长度。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| position | number | 是 |
+| buffer | ArrayBuffer | 是 |
+| length | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回实际读取的数据长度，单位为Byte。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
-| 13900052 | Mmap buffer released |
-| 13900054 | Mmap buffer is inaccessible |
+| 错误码ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900051 |
+| 13900052 |
+| 13900054 |
 
 **示例**
 
@@ -1003,25 +1003,25 @@ remaining(): number
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-FileMapping-remaining(): number--><!--Device-FileMapping-remaining(): number-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 剩余可读或可写的字节数，单位为Byte。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
+| 错误码ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900052 |
 
 **示例**
 
@@ -1048,25 +1048,25 @@ setLimit(limit: number): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-FileMapping-setLimit(limit: number): void--><!--Device-FileMapping-setLimit(limit: number): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| limit | number | 是 | 要设置的可读写区域上界值，单位为Byte。取值需大于等于0，且小于等于当前[capacity](#capacity)。 若所设值小于文件映射区的当前位置，则当前位置将自动调整至该值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| limit | number | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
+| 错误码ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900052 |
 
 **示例**
 
@@ -1090,25 +1090,25 @@ setPosition(position: number): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-FileMapping-setPosition(position: number): void--><!--Device-FileMapping-setPosition(position: number): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| position | number | 是 | 期望设置的目标位置，单位为Byte。必须为非负数且不大于当前可读写上界的limit，可通过[getLimit()](#getlimit)获得可读写上界的limit。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| position | number | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900052 | Mmap buffer released |
+| 错误码ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900052 |
 
 **示例**
 
@@ -1132,24 +1132,24 @@ unmap(): Promise<void>
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-FileMapping-unmap(): Promise<void>--><!--Device-FileMapping-unmap(): Promise<void>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回值。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
+| 错误码ID |
+| --- |
+| 13900020 |
+| 13900050 |
 
 **示例**
 
@@ -1204,18 +1204,18 @@ unmapSync(): void
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-FileMapping-unmapSync(): void--><!--Device-FileMapping-unmapSync(): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
+| 错误码ID |
+| --- |
+| 13900020 |
+| 13900050 |
 
 **示例**
 
@@ -1241,35 +1241,35 @@ write(data: ArrayBuffer, length?: number): number
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-FileMapping-write(data: ArrayBuffer, length?: number): number--><!--Device-FileMapping-write(data: ArrayBuffer, length?: number): number-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | ArrayBuffer | 是 | 待写入文件的缓冲区数据。 |
-| length | number | 否 | 期望写入数据的长度，单位为Byte。默认缓冲区长度。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | ArrayBuffer | 是 |
+| length | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回实际写入的长度，单位为Byte。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
-| 13900052 | Mmap buffer released |
-| 13900053 | Read-only mmap buffer |
-| 13900054 | Mmap buffer is inaccessible |
+| 错误码ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900051 |
+| 13900052 |
+| 13900053 |
+| 13900054 |
 
 **示例**
 
@@ -1718,38 +1718,37 @@ write(position: number, data: ArrayBuffer, length?: number): number
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-FileMapping-write(position: number, data: ArrayBuffer, length?: number): number--><!--Device-FileMapping-write(position: number, data: ArrayBuffer, length?: number): number-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| position | number | 是 | 期望写入的起始位置，单位为Byte。 |
-| data | ArrayBuffer | 是 | 待写入文件的缓冲区数据。 |
-| length | number | 否 | 期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| position | number | 是 |
+| data | ArrayBuffer | 是 |
+| length | number | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 返回实际写入的长度，单位为Byte。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
-| 13900052 | Mmap buffer released |
-| 13900053 | Read-only mmap buffer |
-| 13900054 | Mmap buffer is inaccessible |
+| 错误码ID |
+| --- |
+| 13900020 |
+| 13900050 |
+| 13900051 |
+| 13900052 |
+| 13900053 |
+| 13900054 |
 
 **示例**
 
 参见 [write](#write)
-

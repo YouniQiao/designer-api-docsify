@@ -14,11 +14,11 @@ function stopOptimizeSpace(): void
 
 同步方法停止图库云图资源空间优化，和startOptimizeSpace配对使用。
 
-**起始版本：** 23
+**起始版本：** 17
+
+**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
-
-<!--Device-cloudSync-function stopOptimizeSpace(): void--><!--Device-cloudSync-function stopOptimizeSpace(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -26,12 +26,12 @@ function stopOptimizeSpace(): void
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| 13600001 | IPC error. |
-| 22400005 | Inner error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| 13600001 |
+| 22400005 |
 
 **示例**
 
@@ -68,4 +68,3 @@ let callback = (data:cloudSync.OptimizeSpaceProgress): void => {
 cloudSync.startOptimizeSpace(para, callback);
 cloudSync.stopOptimizeSpace();   // 停止空间优化
 ```
-

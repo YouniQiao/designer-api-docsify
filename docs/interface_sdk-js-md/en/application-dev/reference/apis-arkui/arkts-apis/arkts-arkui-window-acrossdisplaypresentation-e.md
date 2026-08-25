@@ -4,7 +4,7 @@ Enum for across-display policy used when maximizing in the half-folded state of 
 
 **Since:** 26.0.0
 
-<!--Device-window-enum AcrossDisplayPresentation--><!--Device-window-enum AcrossDisplayPresentation-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -18,9 +18,9 @@ Indicates following the current acrossDisplayPresentation. If the acrossDisplayP
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AcrossDisplayPresentation-FOLLOW_ACROSS_DISPLAY_SETTING = 0--><!--Device-AcrossDisplayPresentation-FOLLOW_ACROSS_DISPLAY_SETTING = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -34,9 +34,9 @@ In the half-folded state of the device, the window could directly enter the acro
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AcrossDisplayPresentation-ENTER_ACROSS_DISPLAY_MODE = 1--><!--Device-AcrossDisplayPresentation-ENTER_ACROSS_DISPLAY_MODE = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -50,9 +50,8 @@ In the half-folded state of the device, the window exits across-display mode and
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AcrossDisplayPresentation-EXIT_ACROSS_DISPLAY_MODE = 2--><!--Device-AcrossDisplayPresentation-EXIT_ACROSS_DISPLAY_MODE = 2-End-->
-
 **System capability:** SystemCapability.Window.SessionManager
-

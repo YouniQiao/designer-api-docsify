@@ -4,7 +4,7 @@ Sets the type of the input tool applicable to the touch target.
 
 **Since:** 22
 
-<!--Device-unnamed-declare enum ResponseRegionSupportedTool--><!--Device-unnamed-declare enum ResponseRegionSupportedTool-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ All input tool types.
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-ResponseRegionSupportedTool-ALL = 0--><!--Device-ResponseRegionSupportedTool-ALL = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Finger.
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-ResponseRegionSupportedTool-FINGER = 1--><!--Device-ResponseRegionSupportedTool-FINGER = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ Stylus.
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-ResponseRegionSupportedTool-PEN = 2--><!--Device-ResponseRegionSupportedTool-PEN = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,10 @@ Mouse.
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-ResponseRegionSupportedTool-MOUSE = 3--><!--Device-ResponseRegionSupportedTool-MOUSE = 3-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

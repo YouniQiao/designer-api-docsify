@@ -4,7 +4,7 @@ Enumerates the types of screens.
 
 **Since:** 26.0.0
 
-<!--Device-screen-enum ScreenType--><!--Device-screen-enum ScreenType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -20,9 +20,9 @@ The built-in, on-board screen that is physically integrated into the device.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ScreenType-BUILT_IN = 0--><!--Device-ScreenType-BUILT_IN = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -38,9 +38,9 @@ An external physical display connected via a wired interface.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ScreenType-EXTERNAL = 1--><!--Device-ScreenType-EXTERNAL = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -56,11 +56,10 @@ An virtual display created by software, typically used for screen casting, scree
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-ScreenType-VIRTUAL = 2--><!--Device-ScreenType-VIRTUAL = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
-

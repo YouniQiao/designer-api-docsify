@@ -4,7 +4,7 @@ Component content cover dismiss
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface DismissContentCoverAction--><!--Device-unnamed-declare interface DismissContentCoverAction-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Callback invoked when the modal is dismissed. Call this API when you need to exi
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DismissContentCoverAction-dismiss: Callback<void>--><!--Device-DismissContentCoverAction-dismiss: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ Type of operation that triggers the dismiss of the modal.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-DismissContentCoverAction-reason: DismissReason--><!--Device-DismissContentCoverAction-reason: DismissReason-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

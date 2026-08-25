@@ -4,7 +4,7 @@ JsGeolocation is the authorization response object provided to the app when the 
 
 **Since:** 8
 
-<!--Device-unnamed-declare class JsGeolocation--><!--Device-unnamed-declare class JsGeolocation-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -23,9 +23,9 @@ Constructor of JsGeolocation. The constructor itself is not directly called by t
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-JsGeolocation-constructor()--><!--Device-JsGeolocation-constructor()-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -39,17 +39,16 @@ Sets the geolocation permission status of a web page. This method must be called
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-JsGeolocation-invoke(origin: string, allow: boolean, retain: boolean): void--><!--Device-JsGeolocation-invoke(origin: string, allow: boolean, retain: boolean): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| origin | string | Yes | Web origin that initiates the location permission request, used to identify the source of a geolocation request from a specific website. <br>The origin format must comply with the format defined in RFC 6454. |
-| allow | boolean | Yes | Geolocation permission status. <br>The value **true** means to enable the geolocation permission, and **false** means the opposite. |
-| retain | boolean | Yes | Whether to allow the location permission state to be saved to the system. The location permissions saved to the system can be managed through the [GeolocationPermissions](../../apis-default/arkts-apis/arkts-webview-geolocationpermissions-c.md) API. <br>The value **true** indicates that the location permission state is saved to the system, and **false** indicates that it is not saved to the system. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| origin | string | Yes |
+| allow | boolean | Yes |
+| retain | boolean | Yes |

@@ -6,11 +6,11 @@ type OnContinueDoneCallback = (result: int) => void
 
 Callback function on continue mission done.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-type OnContinueDoneCallback = (result: int) => void--><!--Device-unnamed-type OnContinueDoneCallback = (result: int) => void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -18,7 +18,6 @@ Callback function on continue mission done.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| result | int | Yes | The result code of continue mission. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| result | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |

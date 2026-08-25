@@ -4,7 +4,7 @@ Defines the callback information triggered when the web page loading ends, inclu
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface OnPageEndEvent--><!--Device-unnamed-declare interface OnPageEndEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -25,9 +25,8 @@ URL of the page after the web page is loaded.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-OnPageEndEvent-url: string--><!--Device-OnPageEndEvent-url: string-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

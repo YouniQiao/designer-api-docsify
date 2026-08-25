@@ -16,25 +16,25 @@ Obtains the system configuration.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getSystemConfig](arkts-arkts-process-processmanager-c.md#getsystemconfig)
-
-<!--Device-process-function getSystemConfig(name: number): number--><!--Device-process-function getSystemConfig(name: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | number | Yes | System configuration parameter name. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | System configuration obtained. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -48,4 +48,3 @@ let pro = new process.ProcessManager();
 let _SC_ARG_MAX = 0;
 let pres = pro.getSystemConfig(_SC_ARG_MAX);
 ```
-

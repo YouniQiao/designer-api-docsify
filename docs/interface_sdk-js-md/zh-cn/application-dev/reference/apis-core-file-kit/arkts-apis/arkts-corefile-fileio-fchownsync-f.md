@@ -15,19 +15,19 @@ declare function fchownSync(fd: number, uid: number, gid: number): void
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-unnamed-declare function fchownSync(fd: number, uid: number, gid: number): void--><!--Device-unnamed-declare function fchownSync(fd: number, uid: number, gid: number): void-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| fd | number | 是 | 待改变文件的文件描述符。 |
-| uid | number | 是 | 文件所有者的UID。 |
-| gid | number | 是 | 文件所有组的GID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| fd | number | 是 |
+| uid | number | 是 |
+| gid | number | 是 |
 
 **示例**
 
@@ -37,4 +37,3 @@ let fd = fileio.openSync(filePath);
 let stat = fileio.statSync(filePath);
 fileio.fchownSync(fd, stat.uid, stat.gid);
 ```
-

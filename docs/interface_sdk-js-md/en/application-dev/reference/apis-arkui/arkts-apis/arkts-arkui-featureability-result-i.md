@@ -2,9 +2,9 @@
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-unnamed-export interface Result--><!--Device-unnamed-export interface Result-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -20,9 +20,9 @@ Result code.
 
 **Since:** 5
 
-**Deprecated since:** 8
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
-<!--Device-Result-code: number--><!--Device-Result-code: number-End-->
+**Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -38,9 +38,8 @@ Returned data.
 
 **Since:** 5
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
+
 **Deprecated since:** 8
 
-<!--Device-Result-data: object--><!--Device-Result-data: object-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
-

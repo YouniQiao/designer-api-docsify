@@ -8,12 +8,11 @@ type ActivityType = 'still' | 'relativeStill'
 
 **起始版本：** 9
 
-<!--Device-stationary-type ActivityType = 'still' | 'relativeStill'--><!--Device-stationary-type ActivityType = 'still' | 'relativeStill'-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Stationary
 
-| 类型 | 说明 |
-| --- | --- |
-| 'still' | 绝对静止。 |
-| 'relativeStill' | 相对静止。 |
-
+| 类型 |
+| --- |
+| 'still' |
+| 'relativeStill' |

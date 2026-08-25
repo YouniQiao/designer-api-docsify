@@ -2,9 +2,9 @@
 
 清理本地云相关数据时的Action，为枚举类型。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-cloudSyncManager-enum Action--><!--Device-cloudSyncManager-enum Action-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -18,9 +18,9 @@ RETAIN_DATA = 0
 
 仅清除云端标识，保留本地缓存文件。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Action-RETAIN_DATA = 0--><!--Device-Action-RETAIN_DATA = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -34,11 +34,10 @@ CLEAR_DATA = 1
 
 清除云端标识信息，若存在本地缓存文件，一并删除。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-Action-CLEAR_DATA = 1--><!--Device-Action-CLEAR_DATA = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **系统接口：** 此接口为系统接口。
-

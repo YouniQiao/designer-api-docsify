@@ -2,9 +2,9 @@
 
 Enumerates the PBKDF2 algorithms for the database. Use the enum name rather than the enum value.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-relationalStore-enum KdfAlgo--><!--Device-relationalStore-enum KdfAlgo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -16,9 +16,9 @@ KDF_SHA1 = 0
 
 KDF_SHA1: PBKDF2_HMAC_SHA1 algorithm.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-KdfAlgo-KDF_SHA1 = 0--><!--Device-KdfAlgo-KDF_SHA1 = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -30,9 +30,9 @@ KDF_SHA256 = 1
 
 KDF_SHA256: PBKDF2_HMAC_SHA256 algorithm.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-KdfAlgo-KDF_SHA256 = 1--><!--Device-KdfAlgo-KDF_SHA256 = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -44,9 +44,8 @@ KDF_SHA512 = 2
 
 KDF_SHA512: PBKDF2_HMAC_SHA512 algorithm.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-KdfAlgo-KDF_SHA512 = 2--><!--Device-KdfAlgo-KDF_SHA512 = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-

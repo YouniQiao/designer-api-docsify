@@ -8,11 +8,10 @@ const LOCAL_NETWORK_ID: string
 
 Define local device network id for audio.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-audio-const LOCAL_NETWORK_ID: string--><!--Device-audio-const LOCAL_NETWORK_ID: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
-

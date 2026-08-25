@@ -8,22 +8,33 @@ import { WithEnv, WithEnvAttribute} from '@kit.ArkUI';
 
 ## Summary
 
+### Functions
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [WithEnv(Define the WithEnv component that allows setting environment properties for child components.)](arkts-arkui-arkui-withenv-withenv-f.md) |
+
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [WithEnvAttribute(Define the WithEnv component that allows setting environment properties for child components.)](arkts-arkui-arkui-withenv-withenvattribute-c.md) | Define the WithEnv attribute functions. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [WithEnvAttribute(Define the WithEnv component that allows setting environment properties for child components.)](arkts-arkui-arkui-withenv-withenvattribute-c.md) |
+
+### Interfaces
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [WithEnvAttribute(Define the WithEnv component that allows setting environment properties for child components.)](arkts-arkui-arkui-withenv-withenvattribute-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [WithEnvInterface(Define the WithEnv component that allows setting environment properties for child components.)](arkts-arkui-withenvinterface-t.md) | Define the WithEnv component's type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [WithEnvInterface(Define the WithEnv component that allows setting environment properties for child components.)](arkts-arkui-withenvinterface-t.md) |
 
 ### Constants
 
-| Name | Description |
-| --- | --- |
-| [WithEnv(Define the WithEnv component that allows setting environment properties for child components.)](arkts-arkui-arkui-withenv-con.md#withenv) | Define the WithEnv component that allows setting environment properties for child components. |
-| [WithEnvInstance(Define the WithEnv component that allows setting environment properties for child components.)](arkts-arkui-arkui-withenv-con.md#withenvinstance) | Define WithEnv Logic Component Instance. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [WithEnv(Define the WithEnv component that allows setting environment properties for child components.)](arkts-arkui-arkui-withenv-con.md#withenv) |
+| [WithEnvInstance(Define the WithEnv component that allows setting environment properties for child components.)](arkts-arkui-arkui-withenv-con.md#withenvinstance) |

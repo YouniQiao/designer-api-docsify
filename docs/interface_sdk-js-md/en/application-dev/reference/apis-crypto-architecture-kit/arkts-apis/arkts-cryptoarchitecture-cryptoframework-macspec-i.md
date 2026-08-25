@@ -5,9 +5,9 @@ Represents the message authentication code (MAC) parameters. You need to constru
 > **NOTE：**&gt;
 > **algName** specifies the MAC algorithm to use. It is mandatory.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-cryptoFramework-interface MacSpec--><!--Device-cryptoFramework-interface MacSpec-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Mac
 
@@ -27,11 +27,10 @@ Algorithm to use.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-MacSpec-algName: string--><!--Device-MacSpec-algName: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Mac
-

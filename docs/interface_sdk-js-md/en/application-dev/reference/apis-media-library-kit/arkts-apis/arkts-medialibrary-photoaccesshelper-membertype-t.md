@@ -6,17 +6,16 @@ type MemberType = int | long | double | string | boolean
 
 Defines the types of the PhotoAsset members.The member types are the union of the types listed in the following table.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-photoAccessHelper-type MemberType = int | long | double | string | boolean--><!--Device-photoAccessHelper-type MemberType = int | long | double | string | boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-| Type | Description |
-| --- | --- |
-| int | The member value is an integer. |
-| long | The member value is a long integer. |
-| double | The member value is a decimal number. |
-| string | The member value is any string. |
-| boolean | The member value is true or false. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| int |
+| long |
+| double |
+| string |
+| boolean |

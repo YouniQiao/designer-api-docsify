@@ -17,21 +17,20 @@ Enables or disables the Hyper Snap performance optimization for the application.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-hyperSnapManager-function setHyperSnapEnabled(enableFlag : boolean): void--><!--Device-hyperSnapManager-function setHyperSnapEnabled(enableFlag : boolean): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enableFlag | boolean | Yes | Indicates the desired optimization state: - `true`: Indicates the application's compatibility with Hyper Snap optimization (system may apply when appropriate) - `false`: Disables Hyper Snap; uses standard cold-start process. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [enableFlag](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hitracechain-enableflag-f.md) | boolean | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 16000150 | Failed to send request to system service. |
-
+| Error Code ID |
+| --- |
+| 16000150 |

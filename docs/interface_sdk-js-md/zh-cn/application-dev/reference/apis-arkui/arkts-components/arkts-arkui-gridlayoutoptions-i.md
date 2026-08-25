@@ -4,7 +4,7 @@ Grid布局选项。其中，irregularIndexes和onGetIrregularSizeByIndex可对�
 
 **起始版本：** 10
 
-<!--Device-unnamed-declare interface GridLayoutOptions--><!--Device-unnamed-declare interface GridLayoutOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -12,6 +12,55 @@ Grid布局选项。其中，irregularIndexes和onGetIrregularSizeByIndex可对�
 
 ```TypeScript
 ```
+
+## onGetIrregularSizeByIndex
+
+```TypeScript
+onGetIrregularSizeByIndex?: (index: number) => [number, number]
+```
+
+配合irregularIndexes使用，设置不规则GridItem占用的行数和列数。开发者可为irregularIndexes中指明的index对应的GridItem设置占用的行数和列数。在API version 12之前，垂直 滚动Grid不支持GridItem占多行，水平滚动Grid不支持GridItem占多列。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
+
+## onGetRectByIndex
+
+```TypeScript
+onGetRectByIndex?: (index: number) => [number, number, number, number]
+```
+
+设置指定索引index对应的GridItem的位置及大小[rowStart,columnStart,rowSpan,columnSpan]。其中rowStart为行起始位置，columnStart为列起始位置，无单位。rowSpan为GridItem占用的行数，columnSpan为GridItem占用的列数，无单位。rowStart和columnStart取大于等于0的自然数，若取负数时，rowStart和columnStart默认为0。rowSpan和columnSpan取大于等于1的自然数，若取小数则向下取整，若小于1则按1计算。  
+**说明：**第一种情况：某个GridItem发现给它指定的起始位置被占据了，则从起始位置[0,0]开始按顺序从左到右，从上到下寻找起始的放置位置。第二种情况：如果起始位置没有被占据，但其他位置被占据了，无法显示全部的GridItem大小，则只会布局一部分。
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
 
 ## irregularIndexes
 
@@ -27,52 +76,11 @@ irregularIndexes?: number[]
 
 **起始版本：** 10
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-GridLayoutOptions-irregularIndexes?: number[]--><!--Device-GridLayoutOptions-irregularIndexes?: number[]-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onGetIrregularSizeByIndex
-
-```TypeScript
-onGetIrregularSizeByIndex?: (index: number) => [number, number]
-```
-
-配合irregularIndexes使用，设置不规则GridItem占用的行数和列数。开发者可为irregularIndexes中指明的index对应的GridItem设置占用的行数和列数。在API version 12之前，垂直 滚动Grid不支持GridItem占多行，水平滚动Grid不支持GridItem占多列。
-
-**类型：** (index: number) =&gt; [number, number]
-
-**起始版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-GridLayoutOptions-onGetIrregularSizeByIndex?: (index: number) => [number, number]--><!--Device-GridLayoutOptions-onGetIrregularSizeByIndex?: (index: number) => [number, number]-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onGetRectByIndex
-
-```TypeScript
-onGetRectByIndex?: (index: number) => [number, number, number, number]
-```
-
-设置指定索引index对应的GridItem的位置及大小[rowStart,columnStart,rowSpan,columnSpan]。其中rowStart为行起始位置，columnStart为列起始位置，无单位。rowSpan为GridItem占用的行数，columnSpan为GridItem占用的列数，无单位。rowStart和columnStart取大于等于0的自然数，若取负数时，rowStart和columnStart默认为0。rowSpan和columnSpan取大于等于1的自然数，若取小数则向下取整，若小于1则按1计算。  
-**说明：**第一种情况：某个GridItem发现给它指定的起始位置被占据了，则从起始位置[0,0]开始按顺序从左到右，从上到下寻找起始的放置位置。第二种情况：如果起始位置没有被占据，但其他位置被占据了，无法显示全部的GridItem大小，则只会布局一部分。
-
-**类型：** (index: number) =&gt; [number, number, number, number]
-
-**起始版本：** 11
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-GridLayoutOptions-onGetRectByIndex?: (index: number) => [number, number, number, number]--><!--Device-GridLayoutOptions-onGetRectByIndex?: (index: number) => [number, number, number, number]-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,11 +96,10 @@ regularSize: [number, number]
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-GridLayoutOptions-regularSize: [number, number]--><!--Device-GridLayoutOptions-regularSize: [number, number]-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,11 +4,11 @@ Want是对象间信息传递的载体, 可以用于应用组件间的信息传�
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [Want](arkts-ability-app-ability-want-want-c.md)
-
-<!--Device-unnamed-export declare interface Want--><!--Device-unnamed-export declare interface Want-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -24,11 +24,11 @@ abilityName?: string
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [abilityName](arkts-ability-app-ability-want-want-c.md#abilityname)
-
-<!--Device-Want-abilityName?: string--><!--Device-Want-abilityName?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -44,11 +44,11 @@ action?: string
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [action](arkts-ability-app-ability-want-want-c.md#action)
-
-<!--Device-Want-action?: string--><!--Device-Want-action?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -64,11 +64,11 @@ bundleName?: string
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [bundleName](arkts-ability-app-ability-want-want-c.md#bundlename)
-
-<!--Device-Want-bundleName?: string--><!--Device-Want-bundleName?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -84,11 +84,11 @@ deviceId?: string
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [deviceId](arkts-ability-app-ability-want-want-c.md#deviceid)
-
-<!--Device-Want-deviceId?: string--><!--Device-Want-deviceId?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -104,11 +104,11 @@ entities?: Array<string>
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [entities](arkts-ability-app-ability-want-want-c.md#entities)
-
-<!--Device-Want-entities?: Array<string>--><!--Device-Want-entities?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -124,11 +124,11 @@ flags?: number
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [flags](arkts-ability-app-ability-want-want-c.md#flags)
-
-<!--Device-Want-flags?: number--><!--Device-Want-flags?: number-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -145,11 +145,11 @@ parameters?: { [key: string]: any }
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [parameters](arkts-ability-app-ability-want-want-c.md#parameters)
-
-<!--Device-Want-parameters?: { [key: string]: any }--><!--Device-Want-parameters?: { [key: string]: any }-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -165,11 +165,11 @@ type?: string
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [type](arkts-ability-app-ability-want-want-c.md#type)
-
-<!--Device-Want-type?: string--><!--Device-Want-type?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -185,11 +185,10 @@ uri?: string
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** [uri](arkts-ability-app-ability-want-want-c.md#uri)
 
-<!--Device-Want-uri?: string--><!--Device-Want-uri?: string-End-->
-
 **系统能力：** SystemCapability.Ability.AbilityBase
-

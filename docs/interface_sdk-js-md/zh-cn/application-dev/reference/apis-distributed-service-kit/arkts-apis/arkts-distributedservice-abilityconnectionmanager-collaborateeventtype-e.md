@@ -2,9 +2,9 @@
 
 协同事件类型的枚举。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-abilityConnectionManager-enum CollaborateEventType--><!--Device-abilityConnectionManager-enum CollaborateEventType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -16,11 +16,11 @@ SEND_FAILURE = 0
 
 表示任务发送失败。
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-CollaborateEventType-SEND_FAILURE = 0--><!--Device-CollaborateEventType-SEND_FAILURE = 0-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -32,11 +32,10 @@ COLOR_SPACE_CONVERSION_FAILURE = 1
 
 表示色彩空间转换失败。
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-CollaborateEventType-COLOR_SPACE_CONVERSION_FAILURE = 1--><!--Device-CollaborateEventType-COLOR_SPACE_CONVERSION_FAILURE = 1-End-->
-
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
-

@@ -2,9 +2,9 @@
 
 应用程序安装卸载哈希参数信息。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-installer-export interface HashParam--><!--Device-installer-export interface HashParam-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -26,9 +26,9 @@ hashValue: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-HashParam-hashValue: string--><!--Device-HashParam-hashValue: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -44,11 +44,10 @@ moduleName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-HashParam-moduleName: string--><!--Device-HashParam-moduleName: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
-

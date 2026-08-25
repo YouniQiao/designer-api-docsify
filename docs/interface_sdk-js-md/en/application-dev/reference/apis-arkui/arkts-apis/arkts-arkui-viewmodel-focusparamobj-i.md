@@ -4,7 +4,7 @@ Defines the focus param.@interface FocusParamObj
 
 **Since:** 3
 
-<!--Device-unnamed-export interface FocusParamObj--><!--Device-unnamed-export interface FocusParamObj-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -20,9 +20,8 @@ Whether needs to focus
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-FocusParamObj-focus: boolean--><!--Device-FocusParamObj-focus: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
-

@@ -16,15 +16,15 @@ Obtains an [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i
 
 **Since:** 9
 
-<!--Device-inputMethodEngine-function getInputMethodAbility(): InputMethodAbility--><!--Device-inputMethodEngine-function getInputMethodAbility(): InputMethodAbility-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) | InputMethodAbility** instance. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) |
 
 **Examples**
 
@@ -43,17 +43,16 @@ Get InputMethodAbility object to subscribe events about IME.
 
 **Since:** 23
 
-<!--Device-inputMethodEngine-function getInputMethodAbility(): InputMethodAbility | null--><!--Device-inputMethodEngine-function getInputMethodAbility(): InputMethodAbility | null-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) \| null | the object of the InputMethodAbility. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) \| null |
 
 **Examples**
 
 See [getInputMethodAbility](#getinputmethodability)
-

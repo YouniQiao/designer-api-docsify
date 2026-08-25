@@ -4,7 +4,7 @@ ChipGroupV2IconItemConfig定义了尾部图标项的配置，用于设置尾部�
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-export interface ChipGroupV2IconItemConfig--><!--Device-unnamed-export interface ChipGroupV2IconItemConfig-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,11 @@ accessibilityDescription?: ResourceStr
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroupV2IconItemConfig-accessibilityDescription?: ResourceStr--><!--Device-ChipGroupV2IconItemConfig-accessibilityDescription?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,11 +48,11 @@ accessibilityLevel?: string
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroupV2IconItemConfig-accessibilityLevel?: string--><!--Device-ChipGroupV2IconItemConfig-accessibilityLevel?: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,11 +68,11 @@ accessibilityText?: ResourceStr
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroupV2IconItemConfig-accessibilityText?: ResourceStr--><!--Device-ChipGroupV2IconItemConfig-accessibilityText?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,11 +88,11 @@ action: Callback<void>
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipGroupV2IconItemConfig-action: Callback<void>--><!--Device-ChipGroupV2IconItemConfig-action: Callback<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -102,17 +102,16 @@ action: Callback<void>
 icon: ChipV2ImageIconConfig
 ```
 
-自定义尾部图标，设置后会在ChipGroupV2尾部区域显示指定的图标。如果想动态修改图标尺寸，那么必须在引入[ChipGroupV2IconGroupSuffix](../../apis-default/arkts-apis/arkts-arkui-advanced-chipgroupv2-chipgroupv2icongroupsuffix-s.md)时，使用 [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)类型，并通过该类型提供的方法设置图标尺寸属性，例如通过fontSize或 size方法动态调整尺寸值。
+自定义尾部图标，设置后会在ChipGroupV2尾部区域显示指定的图标。如果想动态修改图标尺寸，那么必须在引入[ChipGroupV2IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2icongroupsuffix-s.md)时，使用 [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)类型，并通过该类型提供的方法设置图标尺寸属性，例如通过fontSize或 size方法动态调整尺寸值。
 
 **类型：** [ChipV2ImageIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md)
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ChipGroupV2IconItemConfig-icon: ChipV2ImageIconConfig--><!--Device-ChipGroupV2IconItemConfig-icon: ChipV2ImageIconConfig-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

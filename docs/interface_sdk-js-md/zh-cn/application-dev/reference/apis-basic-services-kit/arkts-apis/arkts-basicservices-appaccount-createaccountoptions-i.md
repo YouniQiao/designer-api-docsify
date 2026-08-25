@@ -2,9 +2,9 @@
 
 表示创建账号的选项。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-appAccount-interface CreateAccountOptions--><!--Device-appAccount-interface CreateAccountOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -24,9 +24,8 @@ customData?: Record<string, string>
 
 **类型：** Record&lt;string, string&gt;
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-CreateAccountOptions-customData?: Record<string, string>--><!--Device-CreateAccountOptions-customData?: Record<string, string>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
-

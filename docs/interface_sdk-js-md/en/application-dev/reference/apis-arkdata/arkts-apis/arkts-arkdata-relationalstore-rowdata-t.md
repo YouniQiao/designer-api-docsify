@@ -8,11 +8,10 @@ Indicates a row of data with an array.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-relationalStore-type RowData = Array<ValueType>--><!--Device-relationalStore-type RowData = Array<ValueType>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Property type:** Array&lt;ValueType&gt;
-

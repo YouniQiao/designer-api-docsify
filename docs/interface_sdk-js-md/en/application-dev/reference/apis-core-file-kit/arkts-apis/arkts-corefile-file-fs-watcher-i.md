@@ -4,7 +4,7 @@ Provides APIs for observing the changes of files or directories. Before using th
 
 **Since:** 10
 
-<!--Device-unnamed-export interface Watcher--><!--Device-unnamed-export interface Watcher-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -26,28 +26,28 @@ Starts listening.
 
 **Since:** 10
 
-<!--Device-Watcher-start(): void--><!--Device-Watcher-start(): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900002 | No such file or directory |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900020 | Invalid argument |
-| 13900021 | File table overflow |
-| 13900022 | Too many open files |
-| 13900025 | No space left on device |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900002 |
+| 13900005 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900015 |
+| 13900018 |
+| 13900020 |
+| 13900021 |
+| 13900022 |
+| 13900025 |
+| 13900030 |
+| 13900042 |
 
 **Examples**
 
@@ -68,28 +68,28 @@ Stops listening and removes the **Watcher** object.
 
 **Since:** 10
 
-<!--Device-Watcher-stop(): void--><!--Device-Watcher-stop(): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900002 | No such file or directory |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900020 | Invalid argument |
-| 13900021 | File table overflow |
-| 13900022 | Too many open files |
-| 13900025 | No space left on device |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900002 |
+| 13900005 |
+| 13900008 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900015 |
+| 13900018 |
+| 13900020 |
+| 13900021 |
+| 13900022 |
+| 13900025 |
+| 13900030 |
+| 13900042 |
 
 **Examples**
 
@@ -99,4 +99,3 @@ let watcher = fs.createWatcher(filePath, 0xfff, () => {});
 watcher.start();
 watcher.stop();
 ```
-

@@ -8,11 +8,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [PermissionDef](arkts-ability-permissiondef-i-sys.md)
-
-<!--Device-unnamed-export interface PermissionDef--><!--Device-unnamed-export interface PermissionDef-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -32,11 +32,11 @@ descriptionId: number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** descriptionId
-
-<!--Device-PermissionDef-descriptionId: number--><!--Device-PermissionDef-descriptionId: number-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -56,11 +56,11 @@ grantMode: number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** grantMode
-
-<!--Device-PermissionDef-grantMode: number--><!--Device-PermissionDef-grantMode: number-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -80,11 +80,11 @@ labelId: number
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** labelId
-
-<!--Device-PermissionDef-labelId: number--><!--Device-PermissionDef-labelId: number-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -104,13 +104,12 @@ permissionName: string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** permissionName
 
-<!--Device-PermissionDef-permissionName: string--><!--Device-PermissionDef-permissionName: string-End-->
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
-

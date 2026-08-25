@@ -1,12 +1,12 @@
-# @ohos.arkui.inspector
+# @ohos.arkui.inspector(Layout Callback)
 
 Used to do observer layout and draw event for component.
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
-<!--Device-unnamed-declare namespace inspector--><!--Device-unnamed-declare namespace inspector-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,13 +20,15 @@ import { inspector } from '@kit.ArkUI';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md) | Sets the component after layout or draw criteria and returns the corresponding listening handle |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [createComponentObserver(Layout Callback)](arkts-arkui-inspector-createcomponentobserver-f.md) |
+| [getInspectorByKey(Layout Callback)](arkts-arkui-inspector-getinspectorbykey-f.md) |
+| [getInspectorTree(Layout Callback)](arkts-arkui-inspector-getinspectortree-f.md) |
+| [sendEventByKey(Layout Callback)](arkts-arkui-inspector-sendeventbykey-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | The ComponentObserver is used to listen for layout, draw and drawChildren events. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ComponentObserver(Layout Callback)](arkts-arkui-inspector-componentobserver-i.md) |

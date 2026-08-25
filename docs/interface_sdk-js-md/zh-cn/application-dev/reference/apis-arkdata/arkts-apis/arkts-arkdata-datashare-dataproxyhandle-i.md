@@ -2,9 +2,9 @@
 
 数据代理操作句柄的实例，可使用此实例访问或管理共享配置信息。在调用DataProxyHandle提供的方法前，需要先通过 [createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md)构建一个实例。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-dataShare-interface DataProxyHandle--><!--Device-dataShare-interface DataProxyHandle-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -22,33 +22,33 @@ delete(uris: string[], config: DataProxyConfig): Promise<DataProxyResult[]>
 
 根据URI删除指定的共享配置项。使用Promise异步回调。只有配置发布方能删除共享配置项。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DataProxyHandle-delete(uris: string[], config: DataProxyConfig): Promise<DataProxyResult[]>--><!--Device-DataProxyHandle-delete(uris: string[], config: DataProxyConfig): Promise<DataProxyResult[]>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uris | string[] | 是 | 表示需要删除的共享配置对应的URI数组。**说明：** 1. API版本26.0.0之前，数组最大长度为32；从API版本26.0.0开始，数组最大长度 为64。2. URI固定格式为`"datashareproxy://{bundleName}/{path}"`，其中bundleName为配置发布方应用的bundleName，path可随意填写，但同一应用内 不允许重复，字符串长度不超过256个字节。 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 表示数据代理操作的配置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uris | string[] | 是 |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; | Promise对象。返回批量操作的结果数组。 |
+| 类型 |
+| --- |
+| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| 错误码ID |
+| --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
 
 **示例**
 
@@ -172,30 +172,30 @@ deleteMyPublishedData(config: DataProxyConfig): Promise<DataProxyResult[]>
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-DataProxyHandle-deleteMyPublishedData(config: DataProxyConfig): Promise<DataProxyResult[]>--><!--Device-DataProxyHandle-deleteMyPublishedData(config: DataProxyConfig): Promise<DataProxyResult[]>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 表示数据代理操作的配置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; | Promise对象。返回批量操作的结果数组。 |
+| 类型 |
+| --- |
+| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| 错误码ID |
+| --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
 
 **示例**
 
@@ -220,33 +220,33 @@ get(uris: string[], config: DataProxyConfig): Promise<DataProxyGetResult[]>
 
 根据URI获取指定的共享配置项。使用Promise异步回调。只有发布者和允许列表中指定的应用可以访问该共享配置项。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DataProxyHandle-get(uris: string[], config: DataProxyConfig): Promise<DataProxyGetResult[]>--><!--Device-DataProxyHandle-get(uris: string[], config: DataProxyConfig): Promise<DataProxyGetResult[]>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uris | string[] | 是 | 表示需要获取的共享配置的URI数组。**说明：** 1. API版本26.0.0之前，数组最大长度为32；从API版本26.0.0开始，数组最大长度为6 4。2. URI固定格式为`"datashareproxy://{bundleName}/{path}"`，其中bundleName为配置发布方应用的bundleName，path可随意填写，但同一应用内不允 许重复，字符串长度不超过256个字节。 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 表示数据代理操作的配置。从API版本26.0.0开始，获取的共享配置项的值长度不能超出 [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md)中maxValueLength字段配置的最大长度限制。超出限制时，对应获取操作结果的返回值状态码 [DataProxyErrorCode](arkts-arkdata-datashare-dataproxyerrorcode-e.md)为OVER_LIMIT。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uris | string[] | 是 |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[DataProxyGetResult](arkts-arkdata-datashare-dataproxygetresult-i.md)[]&gt; | Promise对象。返回批量获取操作的结果数组。 |
+| 类型 |
+| --- |
+| Promise&lt;[DataProxyGetResult](arkts-arkdata-datashare-dataproxygetresult-i.md)[]&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| 错误码ID |
+| --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
 
 **示例**
 
@@ -275,35 +275,35 @@ getValues(uri: string, config: DataProxyConfig): Promise<ValueType[]>
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-DataProxyHandle-getValues(uri: string, config: DataProxyConfig): Promise<ValueType[]>--><!--Device-DataProxyHandle-getValues(uri: string, config: DataProxyConfig): Promise<ValueType[]>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uri | string | 是 | 表示要操作的数据所对应的URI。 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 数据代理操作的配置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uri | string | 是 |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[ValueType](arkts-arkdata-valuetype-t.md)[]&gt; | Promise对象，用于返回URI下所有值的数组。 |
+| 类型 |
+| --- |
+| Promise&lt;[ValueType](arkts-arkdata-valuetype-t.md)[]&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI does not exist. |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
-| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) | No permission to access the data specified by the URI. |
+| 错误码ID |
+| --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700011](../errorcode-datashare.md#15700011-uri不存在) |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
+| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) |
 
-## off_dataChange
+## off
 
 ```TypeScript
 off(
@@ -318,33 +318,33 @@ off(
 
 **起始版本：** 20
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-DataProxyHandle-off(      event: 'dataChange',      uris: string[],      config: DataProxyConfig,      callback?: AsyncCallback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-off(      event: 'dataChange',      uris: string[],      config: DataProxyConfig,      callback?: AsyncCallback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | 'dataChange' | 是 | 订阅的事件/回调类型，支持的事件为'dataChange'。 |
-| uris | string[] | 是 | 表示要取消订阅的共享配置对应的URI数组。**说明：** 1. API版本26.0.0之前，数组最大长度为32；从API版本26.0.0开始，数组最大长 度为64。2. URI固定格式为`"datashareproxy://{bundleName}/{path}"`，其中bundleName为配置发布方应用的bundleName，path可随意填写，但同一应用 内不允许重复，字符串长度不超过256个字节。 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 表示数据代理操作的配置。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 否 | 回调函数。表示指定取消订阅的callback通知，如果为空、undefined或null，则取消订阅这些 URI下所有的通知事件。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | 'dataChange' | 是 |
+| uris | string[] | 是 |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] | 批量操作的结果数组。 |
+| 类型 |
+| --- |
+| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| 错误码ID |
+| --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
 
 **示例**
 
@@ -383,32 +383,32 @@ Deregisters observers to observe proxy data change specified by the given URIs.
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-DataProxyHandle-offDataChange(      uris: string[],      config: DataProxyConfig,      callback?: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-offDataChange(      uris: string[],      config: DataProxyConfig,      callback?: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uris | string[] | 是 | Indicates the uris of the data to operate. |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | Indicates the configuration of the data proxy operation. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 否 | The callback function when data changes. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uris | string[] | 是 |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] | : The operation result. |
+| 类型 |
+| --- |
+| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| 错误码ID |
+| --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
 
 **示例**
 
@@ -455,7 +455,7 @@ if (dataShareHelper !== undefined) {
 }
 ```
 
-## on_dataChange
+## on
 
 ```TypeScript
 on(
@@ -470,33 +470,33 @@ on(
 
 **起始版本：** 20
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
-<!--Device-DataProxyHandle-on(      event: 'dataChange',      uris: string[],      config: DataProxyConfig,      callback: AsyncCallback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-on(      event: 'dataChange',      uris: string[],      config: DataProxyConfig,      callback: AsyncCallback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | 'dataChange' | 是 | 订阅的事件/回调类型，支持的事件为'dataChange'，当配置发布方修改配置时，触发该事件。 |
-| uris | string[] | 是 | 表示要订阅的共享配置对应的URI数组。**说明：** 1. API版本26.0.0之前，数组最大长度为32；从API版本26.0.0开始，数组最大长度为 64。2. URI固定格式为`"datashareproxy://{bundleName}/{path}"`，其中bundleName为配置发布方应用的bundleName，path可随意填写，但同一应用内不 允许重复，字符串长度不超过256个字节。 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 表示数据代理操作的配置。从API版本26.0.0开始，当变更的共享配置内容长度超过 [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md)中maxValueLength字段配置的最大长度限制时，该共享配置内容会被截断。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 是 | 回调函数。当配置发布方修改配置时会回调该函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| event | 'dataChange' | 是 |
+| uris | string[] | 是 |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] | 批量操作的结果数组。 |
+| 类型 |
+| --- |
+| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| 错误码ID |
+| --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
 
 **示例**
 
@@ -535,32 +535,32 @@ Registers observers to observe proxy data change specified by the given URIs.
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
-<!--Device-DataProxyHandle-onDataChange(      uris: string[],      config: DataProxyConfig,      callback: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-onDataChange(      uris: string[],      config: DataProxyConfig,      callback: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uris | string[] | 是 | Indicates the uris of the data to operate. |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | Indicates the configuration of the data proxy operation. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 是 | The callback function when data changes. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uris | string[] | 是 |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] | : The operation result. |
+| 类型 |
+| --- |
+| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| 错误码ID |
+| --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
 
 **示例**
 
@@ -613,33 +613,33 @@ publish(data: ProxyData[], config: DataProxyConfig): Promise<DataProxyResult[]>
 
 发布共享配置项。使用Promise异步回调。发布后，发布者和允许列表中指定的应用可以访问该共享配置项。如果要发布的URI已经存在，则更新对应的共享配置项。如果发布的配置项中存在任一URI的长度超出上限或者格式校验失败，则当前发 布操作失败。只有发布者才允许更新共享配置项。API版本26.0.0之前，每个应用支持最多32个共享配置；从API版本26.0.0开始，每个应用支持最多64个共享配置。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DataProxyHandle-publish(data: ProxyData[], config: DataProxyConfig): Promise<DataProxyResult[]>--><!--Device-DataProxyHandle-publish(data: ProxyData[], config: DataProxyConfig): Promise<DataProxyResult[]>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | ProxyData[] | 是 | 表示需要创建或者更新的共享配置项数组。API版本26.0.0之前，数组最大长度为32；从API版本26.0.0开始，数组最大长度为64。 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 表示数据代理操作的配置。从API版本26.0.0开始，如果发布的配置项中存在任一值的长度超过 [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md)中maxValueLength字段配置的最大长度限制，则当前发布操作失败。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | [ProxyData[]](arkts-arkdata-datashare-proxydata-i.md) | 是 |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; | Promise对象。返回批量操作的结果数组。 |
+| 类型 |
+| --- |
+| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| 错误码ID |
+| --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
 
 **示例**
 
@@ -711,6 +711,12 @@ if (dataShareHelper != undefined) {
 
 ## putValue
 
+ArkTS-Dyn:
+```TypeScript
+putValue(uri: string, key: number, value: ValueType, config: DataProxyConfig): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 putValue(uri: string, key: int, value: ValueType, config: DataProxyConfig): Promise<void>
 ```
@@ -719,38 +725,44 @@ putValue(uri: string, key: int, value: ValueType, config: DataProxyConfig): Prom
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-DataProxyHandle-putValue(uri: string, key: int, value: ValueType, config: DataProxyConfig): Promise<void>--><!--Device-DataProxyHandle-putValue(uri: string, key: int, value: ValueType, config: DataProxyConfig): Promise<void>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uri | string | 是 | 表示要操作的数据所对应的URI。 |
-| key | int | 是 | 添加的值所对应的Key，对同一个应用来说是唯一的。 <br>取值范围为全体整数。 |
-| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 待添加的值。 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 数据代理操作的配置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uri | string | 是 |
+| key | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI does not exist. |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
-| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) | No permission to access the data specified by the URI. |
+| 错误码ID |
+| --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700011](../errorcode-datashare.md#15700011-uri不存在) |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
+| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) |
 
 ## removeValue
 
+ArkTS-Dyn:
+```TypeScript
+removeValue(uri: string, key: number, config: DataProxyConfig): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 removeValue(uri: string, key: int, config: DataProxyConfig): Promise<void>
 ```
@@ -759,32 +771,31 @@ removeValue(uri: string, key: int, config: DataProxyConfig): Promise<void>
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-DataProxyHandle-removeValue(uri: string, key: int, config: DataProxyConfig): Promise<void>--><!--Device-DataProxyHandle-removeValue(uri: string, key: int, config: DataProxyConfig): Promise<void>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uri | string | 是 | 表示要操作的数据所对应的URI。 |
-| key | int | 是 | 添加的值所对应的key。 <br>取值范围为全体整数。 |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 数据代理操作的配置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uri | string | 是 |
+| key | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI does not exist. |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
-| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) | No permission to access the data specified by the URI. |
-
+| 错误码ID |
+| --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700011](../errorcode-datashare.md#15700011-uri不存在) |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
+| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) |

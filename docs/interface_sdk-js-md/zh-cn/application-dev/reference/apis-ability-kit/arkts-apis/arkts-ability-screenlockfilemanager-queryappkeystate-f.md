@@ -14,24 +14,24 @@ function queryAppKeyState(): KeyStatus
 
 以同步方法查询调用方应用锁屏下敏感数据密钥的状态。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-screenLockFileManager-function queryAppKeyState(): KeyStatus--><!--Device-screenLockFileManager-function queryAppKeyState(): KeyStatus-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.ScreenLockFileManager
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [KeyStatus](arkts-ability-screenlockfilemanager-keystatus-e.md) | 锁屏下敏感数据密钥的状态。 |
+| 类型 |
+| --- |
+| [KeyStatus](arkts-ability-screenlockfilemanager-keystatus-e.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | The specified SystemCapability name was not found. |
-| [29300002](../errorcode-screenLockFileManager.md#29300002-系统服务工作异常) | The system ability works abnormally. |
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [29300002](../errorcode-screenLockFileManager.md#29300002-系统服务工作异常) |
 
 **示例**
 
@@ -130,4 +130,3 @@ try {
     hilog.error(0x0000, 'testTag', 'queryAppKeyState failed: %{public}s', message);
 }
 ```
-

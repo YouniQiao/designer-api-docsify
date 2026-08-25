@@ -4,7 +4,7 @@ ConsoleMessage的日志来源。
 
 **起始版本：** 23
 
-<!--Device-unnamed-declare enum ConsoleMessageSource--><!--Device-unnamed-declare enum ConsoleMessageSource-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -18,7 +18,7 @@ XML = 0
 
 **起始版本：** 23
 
-<!--Device-ConsoleMessageSource-XML = 0--><!--Device-ConsoleMessageSource-XML = 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -32,7 +32,7 @@ JAVASCRIPT = 1
 
 **起始版本：** 23
 
-<!--Device-ConsoleMessageSource-JAVASCRIPT = 1--><!--Device-ConsoleMessageSource-JAVASCRIPT = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -46,7 +46,7 @@ NETWORK = 2
 
 **起始版本：** 23
 
-<!--Device-ConsoleMessageSource-NETWORK = 2--><!--Device-ConsoleMessageSource-NETWORK = 2-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -60,7 +60,7 @@ CONSOLE_API = 3
 
 **起始版本：** 23
 
-<!--Device-ConsoleMessageSource-CONSOLE_API = 3--><!--Device-ConsoleMessageSource-CONSOLE_API = 3-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -74,7 +74,7 @@ STORAGE = 4
 
 **起始版本：** 23
 
-<!--Device-ConsoleMessageSource-STORAGE = 4--><!--Device-ConsoleMessageSource-STORAGE = 4-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -88,7 +88,7 @@ RENDERING = 5
 
 **起始版本：** 23
 
-<!--Device-ConsoleMessageSource-RENDERING = 5--><!--Device-ConsoleMessageSource-RENDERING = 5-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -102,7 +102,7 @@ SECURITY = 6
 
 **起始版本：** 23
 
-<!--Device-ConsoleMessageSource-SECURITY = 6--><!--Device-ConsoleMessageSource-SECURITY = 6-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -116,7 +116,7 @@ OTHER = 7
 
 **起始版本：** 23
 
-<!--Device-ConsoleMessageSource-OTHER = 7--><!--Device-ConsoleMessageSource-OTHER = 7-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -130,7 +130,7 @@ DEPRECATION = 8
 
 **起始版本：** 23
 
-<!--Device-ConsoleMessageSource-DEPRECATION = 8--><!--Device-ConsoleMessageSource-DEPRECATION = 8-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -144,7 +144,7 @@ service worker，shared worker里面的错误，比如service worker navigation 
 
 **起始版本：** 23
 
-<!--Device-ConsoleMessageSource-WORKER = 9--><!--Device-ConsoleMessageSource-WORKER = 9-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -158,7 +158,7 @@ VIOLATION = 10
 
 **起始版本：** 23
 
-<!--Device-ConsoleMessageSource-VIOLATION = 10--><!--Device-ConsoleMessageSource-VIOLATION = 10-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -172,7 +172,7 @@ INTERVENTION = 11
 
 **起始版本：** 23
 
-<!--Device-ConsoleMessageSource-INTERVENTION = 11--><!--Device-ConsoleMessageSource-INTERVENTION = 11-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -186,7 +186,6 @@ RECOMMENDATION = 12
 
 **起始版本：** 23
 
-<!--Device-ConsoleMessageSource-RECOMMENDATION = 12--><!--Device-ConsoleMessageSource-RECOMMENDATION = 12-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-

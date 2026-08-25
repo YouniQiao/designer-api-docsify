@@ -2,9 +2,9 @@
 
 Enumerates the cloud enhancement states.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-photoAccessHelper-enum CloudEnhancementState--><!--Device-photoAccessHelper-enum CloudEnhancementState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ UNAVAILABLE = 0
 
 Cloud enhancement is unavailable.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-CloudEnhancementState-UNAVAILABLE = 0--><!--Device-CloudEnhancementState-UNAVAILABLE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,9 @@ AVAILABLE
 
 Cloud enhancement is available.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-CloudEnhancementState-AVAILABLE--><!--Device-CloudEnhancementState-AVAILABLE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,9 +50,9 @@ EXECUTING
 
 Cloud enhancement is being executed.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-CloudEnhancementState-EXECUTING--><!--Device-CloudEnhancementState-EXECUTING-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -66,11 +66,10 @@ COMPLETED
 
 Cloud enhancement has been completed.
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-CloudEnhancementState-COMPLETED--><!--Device-CloudEnhancementState-COMPLETED-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

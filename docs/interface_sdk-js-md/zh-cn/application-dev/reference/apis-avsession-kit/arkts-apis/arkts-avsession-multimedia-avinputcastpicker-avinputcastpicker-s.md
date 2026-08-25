@@ -4,9 +4,7 @@
 
 **起始版本：** 20
 
-**装饰器类型：** @Component
-
-<!--Device-unnamed-export declare struct AVInputCastPicker--><!--Device-unnamed-export declare struct AVInputCastPicker-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVInputCast
 
@@ -16,6 +14,36 @@
 import { AVInputCastPicker } from '@kit.AVSessionKit';
 ```
 
+## build
+
+```TypeScript
+build(): void
+```
+
+构造组件。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVInputCast
+
+## onStateChange
+
+```TypeScript
+onStateChange?: OnPickerStateCallback
+```
+
+设备列表状态变更回调。
+
+**起始版本：** 20
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVInputCast
+
 ## customPicker
 
 ```TypeScript
@@ -24,15 +52,13 @@ customPicker?: CustomBuilder
 
 自定义样式。建议开发者自定义组件样式，可有效提升组件渲染性能。
 
-**类型：** [CustomBuilder](../../apis-default/arkts-apis/arkts-custombuilder-t.md)
+**类型：** [CustomBuilder](../../apis-arkui/arkts-apis/arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 20
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVInputCastPicker-@Prop  customPicker?: CustomBuilder--><!--Device-AVInputCastPicker-@Prop  customPicker?: CustomBuilder-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVInputCast
 
@@ -46,11 +72,8 @@ onStateChange?: OnPickerStateCallback
 
 **类型：** [OnPickerStateCallback](arkts-avsession-onpickerstatecallback-t.md)
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVInputCastPicker-onStateChange?: OnPickerStateCallback--><!--Device-AVInputCastPicker-onStateChange?: OnPickerStateCallback-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVInputCast
-

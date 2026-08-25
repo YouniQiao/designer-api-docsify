@@ -2,9 +2,9 @@
 
 Defines network link information.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-connection-export interface LinkAddress--><!--Device-connection-export interface LinkAddress-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -24,9 +24,9 @@ Link address.
 
 **Type:** NetAddress
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-LinkAddress-address: NetAddress--><!--Device-LinkAddress-address: NetAddress-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -38,11 +38,10 @@ prefixLength: int
 
 Length of the link address prefix.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-LinkAddress-prefixLength: int--><!--Device-LinkAddress-prefixLength: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 9
 
-<!--Device-stationary-interface ActivityResponse--><!--Device-stationary-interface ActivityResponse-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Stationary
 
@@ -26,7 +26,6 @@ state: ActivityState
 
 **起始版本：** 9
 
-<!--Device-ActivityResponse-state: ActivityState--><!--Device-ActivityResponse-state: ActivityState-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Stationary
-

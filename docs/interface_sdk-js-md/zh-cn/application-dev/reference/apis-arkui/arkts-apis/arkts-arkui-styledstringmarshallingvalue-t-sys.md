@@ -8,13 +8,12 @@ declare type StyledStringMarshallingValue = UserDataSpan
 
 **起始版本：** 19
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
-<!--Device-unnamed-declare type StyledStringMarshallingValue = UserDataSpan--><!--Device-unnamed-declare type StyledStringMarshallingValue = UserDataSpan-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
 
 **属性类型：** [UserDataSpan](arkts-arkui-userdataspan-c.md)
-

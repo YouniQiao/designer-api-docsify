@@ -4,7 +4,7 @@ Enumerates the account types.
 
 **Since:** 10
 
-<!--Device-calendarManager-enum CalendarType--><!--Device-calendarManager-enum CalendarType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -18,9 +18,9 @@ Local account.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-CalendarType-LOCAL = 'local'--><!--Device-CalendarType-LOCAL = 'local'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -34,9 +34,9 @@ Email account.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-CalendarType-EMAIL = 'email'--><!--Device-CalendarType-EMAIL = 'email'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -50,9 +50,9 @@ Birthday account.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-CalendarType-BIRTHDAY = 'birthday'--><!--Device-CalendarType-BIRTHDAY = 'birthday'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -66,9 +66,9 @@ CalDAV account.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-CalendarType-CALDAV = 'caldav'--><!--Device-CalendarType-CALDAV = 'caldav'-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -82,9 +82,8 @@ Subscription account.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-CalendarType-SUBSCRIBED = 'subscribed'--><!--Device-CalendarType-SUBSCRIBED = 'subscribed'-End-->
-
 **System capability:** SystemCapability.Applications.CalendarData
-

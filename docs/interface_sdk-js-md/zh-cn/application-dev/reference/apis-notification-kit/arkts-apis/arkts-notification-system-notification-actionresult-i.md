@@ -2,9 +2,9 @@
 
 **起始版本：** 3
 
-**废弃版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-unnamed-export interface ActionResult--><!--Device-unnamed-export interface ActionResult-End-->
+**废弃版本：** 7
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -26,9 +26,9 @@ abilityName: string
 
 **起始版本：** 3
 
-**废弃版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-ActionResult-abilityName: string--><!--Device-ActionResult-abilityName: string-End-->
+**废弃版本：** 7
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -44,9 +44,9 @@ bundleName: string
 
 **起始版本：** 3
 
-**废弃版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-ActionResult-bundleName: string--><!--Device-ActionResult-bundleName: string-End-->
+**废弃版本：** 7
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -62,9 +62,8 @@ uri: string
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 7
 
-<!--Device-ActionResult-uri: string--><!--Device-ActionResult-uri: string-End-->
-
 **系统能力：** SystemCapability.Notification.Notification
-

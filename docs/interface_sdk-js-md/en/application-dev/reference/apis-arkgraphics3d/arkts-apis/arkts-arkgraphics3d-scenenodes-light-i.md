@@ -4,9 +4,9 @@ Light node, which inherits from Node.@extends Node @interface Light
 
 **Inheritance/Implementation:** Light extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface Light--><!--Device-unnamed-export interface Light-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -20,9 +20,9 @@ Color.
 
 **Type:** [Color](arkts-arkgraphics3d-scenetypes-color-i.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Light-color: Color--><!--Device-Light-color: Color-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -36,9 +36,9 @@ Whether the light is used. true if used, false otherwise.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Light-enabled: boolean--><!--Device-Light-enabled: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -50,11 +50,11 @@ intensity: double
 
 Light density in candelas (cd) with a value range of real numbers greater than 0.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Light-intensity: double--><!--Device-Light-intensity: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -68,9 +68,9 @@ Light type.
 
 **Type:** [LightType](arkts-arkgraphics3d-scenenodes-lighttype-e.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Light-readonly lightType: LightType--><!--Device-Light-readonly lightType: LightType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -84,9 +84,8 @@ Whether the shadow effect is enabled. true if enabled, false otherwise.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Light-shadowEnabled: boolean--><!--Device-Light-shadowEnabled: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

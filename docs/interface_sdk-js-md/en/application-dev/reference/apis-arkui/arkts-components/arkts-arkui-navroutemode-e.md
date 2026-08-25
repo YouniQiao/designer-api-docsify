@@ -6,11 +6,11 @@ Defines the routing policy.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 13
 
-**Substitutes:** NavPathStack and navDestination
-
-<!--Device-unnamed-declare enum NavRouteMode--><!--Device-unnamed-declare enum NavRouteMode-End-->
+**Substitutes:** NavPathStack
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,6 +24,8 @@ The new navigation destination page replaces the current one. The current page i
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 13
 
 **Substitutes:** LaunchMode
@@ -31,8 +33,6 @@ The new navigation destination page replaces the current one. The current page i
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-NavRouteMode-PUSH_WITH_RECREATE--><!--Device-NavRouteMode-PUSH_WITH_RECREATE-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +46,8 @@ The new navigation destination page overwrites the current one. The current page
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 13
 
 **Substitutes:** LaunchMode
@@ -53,8 +55,6 @@ The new navigation destination page overwrites the current one. The current page
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-NavRouteMode-PUSH--><!--Device-NavRouteMode-PUSH-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +68,8 @@ The new navigation destination page replaces the current one. The current page i
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 13
 
 **Substitutes:** LaunchMode
@@ -76,7 +78,4 @@ The new navigation destination page replaces the current one. The current page i
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-NavRouteMode-REPLACE--><!--Device-NavRouteMode-REPLACE-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

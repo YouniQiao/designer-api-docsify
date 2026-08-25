@@ -15,25 +15,25 @@ Obtains file status based on the file descriptor. This API returns the result sy
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [statSync](arkts-corefile-file-fs-statsync-f.md)
-
-<!--Device-unnamed-declare function fstatSync(fd: number): Stat--><!--Device-unnamed-declare function fstatSync(fd: number): Stat-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fd | number | Yes | File descriptor of the file whose status is to be obtained. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fd | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Stat](arkts-corefile-fileio-stat-depr-i.md) | Detailed file status obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Stat](arkts-corefile-fileio-stat-depr-i.md) |
 
 **Examples**
 
@@ -42,4 +42,3 @@ let filePath = pathDir + "/test.txt";
 let fd = fileio.openSync(filePath);
 let stat = fileio.fstatSync(fd);
 ```
-

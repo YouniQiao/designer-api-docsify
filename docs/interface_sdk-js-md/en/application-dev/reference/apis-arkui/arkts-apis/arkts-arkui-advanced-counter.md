@@ -10,24 +10,31 @@ import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.Ar
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [CommonOptions](arkts-arkui-arkui-advanced-counter-commonoptions-c.md) | Defines the common options. |
-| [CounterOptions](arkts-arkui-arkui-advanced-counter-counteroptions-c.md) | Defines the counter options. |
-| [DateData](arkts-arkui-arkui-advanced-counter-datedata-c.md) | Defines the date data. |
-| [DateStyleOptions](arkts-arkui-arkui-advanced-counter-datestyleoptions-c.md) | Defines the date style options. |
-| [InlineStyleOptions](arkts-arkui-arkui-advanced-counter-inlinestyleoptions-c.md) | Defines the inline style options. |
-| [NumberStyleOptions](arkts-arkui-arkui-advanced-counter-numberstyleoptions-c.md) | Defines the number style options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CommonOptions](arkts-arkui-arkui-advanced-counter-commonoptions-c.md) |
+| [CounterOptions](arkts-arkui-arkui-advanced-counter-counteroptions-c.md) |
+| [DateData](arkts-arkui-arkui-advanced-counter-datedata-c.md) |
+| [DateStyleOptions](arkts-arkui-arkui-advanced-counter-datestyleoptions-c.md) |
+| [InlineStyleOptions](arkts-arkui-arkui-advanced-counter-inlinestyleoptions-c.md) |
+| [NumberStyleOptions](arkts-arkui-arkui-advanced-counter-numberstyleoptions-c.md) |
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [CounterComponent](arkts-arkui-arkui-advanced-counter-countercomponent-s.md) | Defines Counter Component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CounterComponent](arkts-arkui-arkui-advanced-counter-countercomponent-s.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [CounterType](arkts-arkui-arkui-advanced-counter-countertype-e.md) | Enum for the counter type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CounterType](arkts-arkui-arkui-advanced-counter-countertype-e.md) |
 
+### Types
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [OnCounterHoverCallback](arkts-arkui-oncounterhovercallback-t.md) |
+| [OnDateCounterChangeCallback](arkts-arkui-ondatecounterchangecallback-t.md) |
+| [OnInlineCounterChange](arkts-arkui-oninlinecounterchange-t.md) |

@@ -4,11 +4,11 @@ Represents control transfer parameters.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 18
 
 **Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md)
-
-<!--Device-usbManager-interface USBControlParams--><!--Device-usbManager-interface USBControlParams-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -30,11 +30,11 @@ Buffer for writing or reading data.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 18
 
 **Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md)
-
-<!--Device-USBControlParams-data: Uint8Array--><!--Device-USBControlParams-data: Uint8Array-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -50,11 +50,11 @@ Index of the request parameter.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 18
 
 **Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md)
-
-<!--Device-USBControlParams-index: number--><!--Device-USBControlParams-index: number-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -70,11 +70,11 @@ Control request type.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 18
 
 **Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md)
-
-<!--Device-USBControlParams-reqType: USBControlRequestType--><!--Device-USBControlParams-reqType: USBControlRequestType-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -90,11 +90,11 @@ Request type.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 18
 
 **Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md)
-
-<!--Device-USBControlParams-request: number--><!--Device-USBControlParams-request: number-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -110,11 +110,11 @@ Request target type.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 18
 
 **Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md)
-
-<!--Device-USBControlParams-target: USBRequestTargetType--><!--Device-USBControlParams-target: USBRequestTargetType-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -130,11 +130,10 @@ Request parameter.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 18
 
 **Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md)
 
-<!--Device-USBControlParams-value: number--><!--Device-USBControlParams-value: number-End-->
-
 **System capability:** SystemCapability.USB.USBManager
-

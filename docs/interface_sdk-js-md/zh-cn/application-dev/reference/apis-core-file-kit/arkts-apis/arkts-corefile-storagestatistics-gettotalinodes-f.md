@@ -16,24 +16,24 @@ function getTotalInodes(): Promise<long>
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-storageStatistics-function getTotalInodes(): Promise<long>--><!--Device-storageStatistics-function getTotalInodes(): Promise<long>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;long&gt; | Promise对象，返回文件系统inode资源总量。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;long & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13600001 | IPC error. |
-| 13600016 | Failed to query the inode information of the data partition. |
+| 错误码ID |
+| --- |
+| 13600001 |
+| 13600016 |
 
 **示例**
 
@@ -60,4 +60,3 @@ storageStatistics.getTotalInodes().then((totalInodes: long) => {
   console.error(`getTotalInodes failed. Code: ${err.code}, message: ${err.message}`);
 });
 ```
-

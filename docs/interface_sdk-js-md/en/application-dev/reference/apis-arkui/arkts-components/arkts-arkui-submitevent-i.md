@@ -4,7 +4,7 @@ Defines the user submission event.
 
 **Since:** 11
 
-<!--Device-unnamed-declare interface SubmitEvent--><!--Device-unnamed-declare interface SubmitEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,11 +23,11 @@ Maintains the editable state of the text box when called.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SubmitEvent-keepEditableState(): void--><!--Device-SubmitEvent-keepEditableState(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,11 +43,10 @@ Text in the text box.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-SubmitEvent-text: string--><!--Device-SubmitEvent-text: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

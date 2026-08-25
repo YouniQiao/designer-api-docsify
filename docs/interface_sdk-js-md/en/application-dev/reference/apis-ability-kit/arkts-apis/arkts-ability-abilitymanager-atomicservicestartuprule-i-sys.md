@@ -2,9 +2,9 @@
 
 Describes the rule for launching an embedded atomic service.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-abilityManager-export interface AtomicServiceStartupRule--><!--Device-abilityManager-export interface AtomicServiceStartupRule-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -26,9 +26,9 @@ Whether launching the embedded atomic service is allowed. **true** if allowed, *
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-AtomicServiceStartupRule-isEmbeddedAllowed: boolean--><!--Device-AtomicServiceStartupRule-isEmbeddedAllowed: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -44,11 +44,10 @@ Whether launching the atomic service is allowed. **true** if allowed, **false** 
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-AtomicServiceStartupRule-isOpenAllowed: boolean--><!--Device-AtomicServiceStartupRule-isOpenAllowed: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
-

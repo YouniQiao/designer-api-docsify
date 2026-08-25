@@ -1,16 +1,17 @@
 # SignatureInfo
 
 ```TypeScript
-export type SignatureInfo = _SignatureInfo
+export type SignatureInfo = _BundleInfo.SignatureInfo
 ```
 
 Defines the signature information of the bundle.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-bundleManager-export type SignatureInfo = _SignatureInfo--><!--Device-bundleManager-export type SignatureInfo = _SignatureInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _SignatureInfo
-
+**Property type:** _BundleInfo.SignatureInfo

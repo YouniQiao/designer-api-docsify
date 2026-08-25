@@ -4,9 +4,9 @@ The context of an ability or an application. It allows access to application-spe
 
 **Inheritance/Implementation:** BackupExtensionContext extends ExtensionContext
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-declare class BackupExtensionContext--><!--Device-unnamed-declare class BackupExtensionContext-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -28,9 +28,8 @@ Indicates backup dir.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BackupExtensionContext-readonly backupDir: string--><!--Device-BackupExtensionContext-readonly backupDir: string-End-->
-
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
-

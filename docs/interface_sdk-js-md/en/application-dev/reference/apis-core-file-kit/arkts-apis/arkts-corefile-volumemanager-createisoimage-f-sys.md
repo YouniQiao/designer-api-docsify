@@ -16,11 +16,11 @@ Creates an ISO image from a volume. This API uses a promise to return the result
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-volumeManager-function createIsoImage(volumeId: string, filePath: string): Promise<void>--><!--Device-volumeManager-function createIsoImage(volumeId: string, filePath: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -28,27 +28,26 @@ Creates an ISO image from a volume. This API uses a promise to return the result
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| volumeId | string | Yes | Volume ID. |
-| filePath | string | Yes | File path for the ISO image. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| volumeId | string | Yes |
+| filePath | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| 13600001 | IPC error. |
-| 13600002 | Not supported filesystem. |
-| 13600005 | Incorrect volume state. |
-| 13600010 | The input parameter is invalid. |
-| 13600024 | Empty disc. |
-| 13600025 | Failed to write the ISO file. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13600001 |
+| 13600002 |
+| 13600005 |
+| 13600010 |
+| 13600024 |
+| 13600025 |

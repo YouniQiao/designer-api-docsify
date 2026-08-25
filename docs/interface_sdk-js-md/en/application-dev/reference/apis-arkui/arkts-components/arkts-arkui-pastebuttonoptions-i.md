@@ -14,7 +14,7 @@ Defines options for the paste button, including icon, text and button type.
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface PasteButtonOptions--><!--Device-unnamed-declare interface PasteButtonOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,11 +35,11 @@ Shape of the **PasteButton** component. Default value: ButtonType.Capsule.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PasteButtonOptions-buttonType?: ButtonType--><!--Device-PasteButtonOptions-buttonType?: ButtonType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -55,11 +55,11 @@ Icon style of the **PasteButton** component. Default value: No icon is displayed
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PasteButtonOptions-icon?: PasteIconStyle--><!--Device-PasteButtonOptions-icon?: PasteIconStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -75,11 +75,10 @@ Text on the **PasteButton** component. Default value: No text description is dis
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-PasteButtonOptions-text?: PasteDescription--><!--Device-PasteButtonOptions-text?: PasteDescription-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

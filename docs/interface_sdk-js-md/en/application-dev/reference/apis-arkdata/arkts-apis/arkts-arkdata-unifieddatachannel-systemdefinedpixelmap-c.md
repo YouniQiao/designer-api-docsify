@@ -4,13 +4,9 @@ Represents the image data type corresponding to [PixelMap](../../apis-image-kit/
 
 **Inheritance/Implementation:** SystemDefinedPixelMap extends [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)
 
-**Since:** 23
+**Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-unifiedDataChannel-class SystemDefinedPixelMap--><!--Device-unifiedDataChannel-class SystemDefinedPixelMap-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -19,6 +15,26 @@ Represents the image data type corresponding to [PixelMap](../../apis-image-kit/
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
+
+## rawData
+
+```TypeScript
+set rawData(value: Uint8Array)
+```
+
+Indicates the raw data of pixel map
+
+**Type:** Uint8Array
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **Examples**
 
@@ -61,4 +77,3 @@ image.createPixelMap(color, opts, (error, pixelMap) => {
   }
 })
 ```
-

@@ -16,16 +16,16 @@ Unsubscribes from the pre-download error events. This API uses an asynchronous c
 
 **Since:** 23
 
-<!--Device-cacheDownload-function offDownloadError(url: string, callback?: Callback<DownloadError>): void--><!--Device-cacheDownload-function offDownloadError(url: string, callback?: Callback<DownloadError>): void-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string | Yes | URL to be unregistered, with a maximum of 8192 bytes. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[DownloadError](arkts-basicservices-cachedownload-downloaderror-i.md)&gt; | No | Callback used to return the error information about the pre- download. If this parameter is left blank, all error callback functions of the URL are unregistered. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| url | string | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[DownloadError](arkts-basicservices-cachedownload-downloaderror-i.md)&gt; | No |
 
 **Examples**
 
@@ -46,4 +46,3 @@ try {
   console.error(`Failed to download the resource. err code: ${err.code}, err message: ${err.message}`);
 }
 ```
-

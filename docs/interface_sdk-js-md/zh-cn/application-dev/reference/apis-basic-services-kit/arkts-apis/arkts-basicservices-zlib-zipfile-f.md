@@ -21,27 +21,27 @@ function zipFile(inFile: string, outFile: string, options: Options): Promise<voi
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [compressFile](arkts-basicservices-zlib-compressfile-f.md)(inFile: string, outFile: string, options: Options, callback: AsyncCallback&lt;void&gt;)
-
-<!--Device-zlib-function zipFile(inFile: string, outFile: string, options: Options): Promise<void>--><!--Device-zlib-function zipFile(inFile: string, outFile: string, options: Options): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| inFile | string | 是 | 指定压缩的文件夹路径或者文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考FA模型， Stage模型。 |
-| outFile | string | 是 | 指定压缩结果的文件路径（文件的扩展名zip）。 |
-| options | Options | 是 | 压缩的可选参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| inFile | string | 是 |
+| outFile | string | 是 |
+| options | [Options](arkts-basicservices-zlib-options-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回值。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **示例**
 
@@ -63,4 +63,3 @@ zlib.zipFile(inFile, outFile, options).then((data: void) => {
   console.error('error is ' + JSON.stringify(err));
 });
 ```
-

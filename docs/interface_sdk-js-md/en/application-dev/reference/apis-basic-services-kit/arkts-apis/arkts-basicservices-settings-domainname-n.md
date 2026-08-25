@@ -2,9 +2,9 @@
 
 Provide domain name for query.@namespace domainName
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-settings-namespace domainName--><!--Device-settings-namespace domainName-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -18,16 +18,15 @@ import { settings } from '@kit.BasicServicesKit';
 
 ### Constants
 
-| Name | Description |
-| --- | --- |
-| [DEVICE_SHARED](arkts-basicservices-domainname-con.md#device_shared) | Provide the domain name for device shared Key.<p>This constants is a domain name for device level shared key. |
-| [USER_PROPERTY](arkts-basicservices-domainname-con.md#user_property) | Provide the domain name for user property.<p>This constants is a domain name for user level key. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DEVICE_SHARED](arkts-basicservices-domainname-con.md#device_shared) |
+| [USER_PROPERTY](arkts-basicservices-domainname-con.md#user_property) |
 
 <!--Del-->
 ### Constants(System API)
 
-| Name | Description |
-| --- | --- |
-| [USER_SECURITY](arkts-basicservices-domainname-con-sys.md#user_security) | Provide the domain name for user security property.<p>This constants is a domain name for user security level key. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [USER_SECURITY](arkts-basicservices-domainname-con-sys.md#user_security) |
 <!--DelEnd-->
-

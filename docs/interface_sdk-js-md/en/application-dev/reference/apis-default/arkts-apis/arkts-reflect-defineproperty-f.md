@@ -13,19 +13,17 @@ function defineProperty(target: object, propertyKey: PropertyKey, attributes: Pr
 
 Adds a property to an object, or modifies attributes of an existing property.
 
-**Since:** -1
-
-<!--Device-Reflect-function defineProperty(target: object, propertyKey: PropertyKey, attributes: PropertyDescriptor & ThisType<any>): boolean--><!--Device-Reflect-function defineProperty(target: object, propertyKey: PropertyKey, attributes: PropertyDescriptor & ThisType<any>): boolean-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | object | Yes |  |
-| propertyKey | PropertyKey | Yes |  |
-| attributes | PropertyDescriptor & ThisType&lt;any&gt; | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | object | Yes |
+| propertyKey | [PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md) | Yes |
+| attributes | PropertyDescriptor & ThisType & lt;any & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

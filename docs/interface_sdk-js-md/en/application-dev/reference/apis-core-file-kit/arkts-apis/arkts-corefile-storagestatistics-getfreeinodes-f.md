@@ -16,24 +16,24 @@ Get the free inodes.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-storageStatistics-function getFreeInodes(): Promise<long>--><!--Device-storageStatistics-function getFreeInodes(): Promise<long>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;long&gt; | return Promise |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;long & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13600001 | IPC error. |
-| 13600016 | Failed to query the inode information of the data partition. |
+| Error Code ID |
+| --- |
+| 13600001 |
+| 13600016 |
 
 **Examples**
 
@@ -46,4 +46,3 @@ storageStatistics.getFreeInodes().then((freeInodes: number) => {
   console.error(`getFreeInodes failed. Code: ${err.code}, Message: ${err.message}`);
 });
 ```
-

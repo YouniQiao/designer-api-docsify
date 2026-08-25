@@ -4,7 +4,6 @@
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [Content](arkts-arkui-content-c.md) | 定义ComponentContent和NodeContent基类。 |
-
+| 名称 |
+| --- |
+| [Content](arkts-arkui-content-c.md) |

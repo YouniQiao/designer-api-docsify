@@ -6,9 +6,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-unnamed-export class RegExp--><!--Device-unnamed-export class RegExp-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,26 +25,24 @@ RegExp构造函数的调用签名，用于创建新的RegExp实例。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExp-public static $_invoke(pattern: string, flags?: string): RegExp--><!--Device-RegExp-public static $_invoke(pattern: string, flags?: string): RegExp-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pattern | string | 是 | 正则表达式模式。 |
-| flags | string | 否 | 正则表达式的标志位。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | string | 是 |
+| [flags](#flags) | string | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RegExp | 新创建的RegExp实例。 |
+| 类型 |
+| --- |
+| RegExp |
 
 ## $_invoke
 
@@ -58,26 +54,24 @@ RegExp构造函数的调用签名，用于创建新的RegExp实例。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExp-public static $_invoke(pattern: RegExp | string, flags?: string): RegExp--><!--Device-RegExp-public static $_invoke(pattern: RegExp | string, flags?: string): RegExp-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pattern | RegExp \| string | 是 | 正则表达式模式，或另一个RegExp实例。 |
-| flags | string | 否 | 正则表达式的标志位。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | RegExp \| string | 是 |
+| [flags](#flags) | string | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RegExp | 新创建的RegExp实例。 |
+| 类型 |
+| --- |
+| RegExp |
 
 ## $_invoke
 
@@ -89,25 +83,23 @@ RegExp构造函数的调用签名，用于创建新的RegExp实例。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExp-public static $_invoke(pattern: RegExp | string): RegExp--><!--Device-RegExp-public static $_invoke(pattern: RegExp | string): RegExp-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pattern | RegExp \| string | 是 | 正则表达式模式，或另一个RegExp实例。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | RegExp \| string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RegExp | 新创建的RegExp实例。 |
+| 类型 |
+| --- |
+| RegExp |
 
 ## advanceStringIndex
 
@@ -119,27 +111,25 @@ public static advanceStringIndex(s: string, index: int, unicode: boolean): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExp-public static advanceStringIndex(s: string, index: int, unicode: boolean): int--><!--Device-RegExp-public static advanceStringIndex(s: string, index: int, unicode: boolean): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| s | string | 是 | 原始字符串。 |
-| index | int | 是 | 当前索引。 <br>取值约束：应为整数。 |
-| unicode | boolean | 是 | 是否启用Unicode模式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| s | string | 是 |
+| index | int | 是 |
+| [unicode](#unicode) | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 下一个索引。 |
+| 类型 |
+| --- |
+| int |
 
 ## constructor
 
@@ -151,20 +141,18 @@ constructor(pattern: string, flags?: string)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExp-constructor(pattern: string, flags?: string)--><!--Device-RegExp-constructor(pattern: string, flags?: string)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pattern | string | 是 | 模式的描述。 |
-| flags | string | 否 | 所使用标志位的描述。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | string | 是 |
+| [flags](#flags) | string | 否 |
 
 ## constructor
 
@@ -176,20 +164,18 @@ constructor(regexp: RegExp, flags?: string)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExp-constructor(regexp: RegExp, flags?: string)--><!--Device-RegExp-constructor(regexp: RegExp, flags?: string)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| regexp | RegExp | 是 | 另一个正则表达式。 |
-| flags | string | 否 | 所使用标志位的描述。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| regexp | RegExp | 是 |
+| [flags](#flags) | string | 否 |
 
 ## constructor
 
@@ -201,20 +187,18 @@ constructor(regexp: RegExp | string, flags?: string)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExp-constructor(regexp: RegExp | string, flags?: string)--><!--Device-RegExp-constructor(regexp: RegExp | string, flags?: string)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| regexp | RegExp \| string | 是 | 正则表达式的模式，或另一个RegExp实例。 |
-| flags | string | 否 | 所使用标志位的描述。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| regexp | RegExp \| string | 是 |
+| [flags](#flags) | string | 否 |
 
 ## exec
 
@@ -226,26 +210,24 @@ public exec(str: string, index: int): RegExpExecArray | null
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExp-public exec(str: string, index: int): RegExpExecArray | null--><!--Device-RegExp-public exec(str: string, index: int): RegExpExecArray | null-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| str | string | 是 | 待匹配的字符串。 |
-| index | int | 是 | 开始匹配的索引。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| str | string | 是 |
+| index | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RegExpExecArray](arkts-arkts-regexp-regexpexecarray-c.md) \| null | 匹配成功时返回包含匹配结果的数组， 否则返回null。 |
+| 类型 |
+| --- |
+| [RegExpExecArray](arkts-arkts-regexp-regexpexecarray-c.md) \| null |
 
 ## exec
 
@@ -257,25 +239,23 @@ public exec(str: string): RegExpExecArray | null
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExp-public exec(str: string): RegExpExecArray | null--><!--Device-RegExp-public exec(str: string): RegExpExecArray | null-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| str | string | 是 | 待匹配的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| str | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RegExpExecArray](arkts-arkts-regexp-regexpexecarray-c.md) \| null | 匹配成功时返回包含匹配结果的数组， 否则返回null。 |
+| 类型 |
+| --- |
+| [RegExpExecArray](arkts-arkts-regexp-regexpexecarray-c.md) \| null |
 
 ## match
 
@@ -287,25 +267,23 @@ public match(str: string): RegExpMatchArray | null
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExp-public match(str: string): RegExpMatchArray | null--><!--Device-RegExp-public match(str: string): RegExpMatchArray | null-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| str | string | 是 | 待匹配的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| str | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md) \| null | 找到匹配时返回包含所有匹配结果的数组， 否则返回null。 |
+| 类型 |
+| --- |
+| [RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md) \| null |
 
 ## matchAll
 
@@ -317,25 +295,23 @@ public matchAll(str: string): IterableIterator<RegExpMatchArray>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExp-public matchAll(str: string): IterableIterator<RegExpMatchArray>--><!--Device-RegExp-public matchAll(str: string): IterableIterator<RegExpMatchArray>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| str | string | 是 | 待匹配的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| str | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md)&gt; | 遍历所有匹配结果的迭代器。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md)&gt; |
 
 ## replace
 
@@ -347,26 +323,24 @@ public replace(str: string, replaceValue: string): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExp-public replace(str: string, replaceValue: string): string--><!--Device-RegExp-public replace(str: string, replaceValue: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| str | string | 是 | 原始字符串。 |
-| replaceValue | string | 是 | 用于替换的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| str | string | 是 |
+| replaceValue | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 替换后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## replace
 
@@ -378,26 +352,24 @@ public replace(str: string, replacer: (substr: string, args: Object[]) => string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExp-public replace(str: string, replacer: (substr: string, args: Object[]) => string): string--><!--Device-RegExp-public replace(str: string, replacer: (substr: string, args: Object[]) => string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| str | string | 是 | 原始字符串。 |
-| replacer | (substr: string, args: Object[]) =&gt; string | 是 | 用于生成新子串的函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| str | string | 是 |
+| replacer | (substr: string, args: Object[]) = & gt; string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 替换后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## search
 
@@ -409,25 +381,23 @@ public search(str: string): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExp-public search(str: string): int--><!--Device-RegExp-public search(str: string): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| str | string | 是 | 待搜索的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| str | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 找到匹配时返回其起始索引，否则返回-1。 |
+| 类型 |
+| --- |
+| int |
 
 ## split
 
@@ -439,26 +409,24 @@ public split(str: string, limit: Int | undefined): string[]
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExp-public split(str: string, limit: Int | undefined): string[]--><!--Device-RegExp-public split(str: string, limit: Int | undefined): string[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| str | string | 是 | 待分割的字符串。 |
-| limit | Int \| undefined | 是 | 限制返回数组的最大长度。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| str | string | 是 |
+| limit | Int \| undefined | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string[] | 分割后得到的子串数组。 |
+| 类型 |
+| --- |
+| string[] |
 
 ## test
 
@@ -470,25 +438,23 @@ public test(str: string): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExp-public test(str: string): boolean--><!--Device-RegExp-public test(str: string): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| str | string | 是 | 与正则表达式进行匹配的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| str | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果该字符串存在匹配则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## toString
 
@@ -500,17 +466,194 @@ public toString(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RegExp-public toString(): string--><!--Device-RegExp-public toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 该正则表达式的字符串表示。 |
+| 类型 |
+| --- |
+| string |
 
+## dotAll
+
+```TypeScript
+get dotAll(): boolean
+```
+
+获取dotAll标志位，表示'.'是否匹配换行符。
+
+**类型：** boolean
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## flags
+
+```TypeScript
+get flags(): string
+```
+
+获取正则表达式的标志位。
+
+**类型：** string
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## global
+
+```TypeScript
+get global(): boolean
+```
+
+获取global标志位，表示是否执行全局匹配。
+
+**类型：** boolean
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## hasIndices
+
+```TypeScript
+get hasIndices(): boolean
+```
+
+获取hasIndices标志位，表示是否包含匹配子串的索引信息。
+
+**类型：** boolean
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## ignoreCase
+
+```TypeScript
+get ignoreCase(): boolean
+```
+
+获取ignoreCase标志位，表示是否忽略大小写。
+
+**类型：** boolean
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## multiline
+
+```TypeScript
+get multiline(): boolean
+```
+
+获取multiline标志位，表示是否执行多行匹配。
+
+**类型：** boolean
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## source
+
+```TypeScript
+get source(): string
+```
+
+返回包含该正则表达式源文本的字符串。
+
+**类型：** string
+
+**起始版本：** 24
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## sticky
+
+```TypeScript
+get sticky(): boolean
+```
+
+获取sticky标志位，表示是否执行粘性匹配。
+
+**类型：** boolean
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## unicode
+
+```TypeScript
+get unicode(): boolean
+```
+
+获取unicode标志位，表示是否启用Unicode模式。
+
+**类型：** boolean
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## unicodeSets
+
+```TypeScript
+get unicodeSets(): boolean
+```
+
+获取unicodeSets标志位，表示是否启用Unicode集合模式。
+
+**类型：** boolean
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang

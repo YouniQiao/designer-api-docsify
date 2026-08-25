@@ -2,9 +2,9 @@
 
 Provides OverflowRequest about request/cancel form's overflow
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-formInfo-interface OverflowRequest--><!--Device-formInfo-interface OverflowRequest-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -26,9 +26,9 @@ The form id about request/cancel overflow animation
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-OverflowRequest-formId: string--><!--Device-OverflowRequest-formId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -44,9 +44,9 @@ Whether the form request or cancel overflow animation
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-OverflowRequest-isOverflow: boolean--><!--Device-OverflowRequest-isOverflow: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -62,11 +62,10 @@ The form's overflow animation parameter
 
 **Type:** [OverflowInfo](arkts-form-forminfo-overflowinfo-i.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-OverflowRequest-overflowInfo?: OverflowInfo--><!--Device-OverflowRequest-overflowInfo?: OverflowInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
-

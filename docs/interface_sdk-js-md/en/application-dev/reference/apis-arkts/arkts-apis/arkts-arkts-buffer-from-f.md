@@ -14,25 +14,25 @@ function from(array: double[]): Buffer
 
 Creates a **Buffer** object with the specified array.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-buffer-function from(array: double[]): Buffer--><!--Device-buffer-function from(array: double[]): Buffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| array | double[] | Yes | Array to create a **Buffer** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| array | ArkTS-Dyn: number[]<br>ArkTS-Sta：double[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Buffer | Buffer** object created. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Buffer |
 
 **Examples**
 
@@ -97,31 +97,31 @@ Creates a **Buffer** object of the specified length that shares memory with Arra
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-buffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): Buffer--><!--Device-buffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): Buffer-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arrayBuffer | ArrayBuffer \| SharedArrayBuffer | Yes | ArrayBuffer** or **SharedArrayBuffer** object whose memory is to be shared. |
-| byteOffset | number | No | Byte offset. The default value is **0**. |
-| length | number | No | Length of the **Buffer** object to create, in bytes. The default value is **arrayBuffer.byteLength** minus **byteOffset**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [arrayBuffer](arkts-arkts-buffer-blob-c.md) | ArrayBuffer \| SharedArrayBuffer | Yes |
+| byteOffset | number | No |
+| length | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Buffer | Buffer** object created. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Buffer |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[byteOffset/length]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [byteOffset/length] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -138,31 +138,31 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-buffer-function from(arrayBuffer: ArrayBuffer, byteOffset?: int, length?: int): Buffer--><!--Device-buffer-function from(arrayBuffer: ArrayBuffer, byteOffset?: int, length?: int): Buffer-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arrayBuffer | ArrayBuffer | Yes | The ArrayBuffer to create a view from |
-| byteOffset | int | No | byteOffset [byteOffset = 0] Index of first byte to expose The value should be an integer. |
-| length | int | No | length [length = arrayBuffer.byteLength - byteOffset] Number of bytes to expose The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [arrayBuffer](arkts-arkts-buffer-blob-c.md) | ArrayBuffer | Yes |
+| byteOffset | int | No |
+| length | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Buffer | Return a view of the ArrayBuffer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Buffer |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[byteOffset/length]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [byteOffset/length] |
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 **Examples**
 
@@ -177,25 +177,25 @@ function from(buffer: Buffer | Uint8Array): Buffer
 
 Copies the data of a passed **Buffer** object to create a new **Buffer** object and returns the new one. Creates a **Buffer** object based on the memory of a passed **Uint8Array** object and returns the new object, maintaining the memory association of the data.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-buffer-function from(buffer: Buffer | Uint8Array): Buffer--><!--Device-buffer-function from(buffer: Buffer | Uint8Array): Buffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | Buffer \| Uint8Array | Yes | Target object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [buffer](arkts-buffer.md) | Buffer \| Uint8Array | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Buffer | Buffer** object created. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Buffer |
 
 **Examples**
 
@@ -210,27 +210,27 @@ function from(object: Object, offsetOrEncoding: int | string, length: int): Buff
 
 Creates a **Buffer** object based on the specified object.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-buffer-function from(object: Object, offsetOrEncoding: int | string, length: int): Buffer--><!--Device-buffer-function from(object: Object, offsetOrEncoding: int | string, length: int): Buffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| object | Object | Yes | Object that supports **Symbol.toPrimitive** or **valueOf()**. |
-| offsetOrEncoding | int \| string | Yes | Byte offset or encoding format. |
-| length | int | Yes | Length of the **Buffer** object to create, in bytes. This parameter is valid only when the return value of **valueOf()** of **object** is **ArrayBuffer**. Value range: 0 &lt;= length &lt;= ArrayBuffer.byteLength. Error 10200001 is reported if a value outside this range is reported. In other cases, you can set this parameter to any value of the number type. This parameter does not affect the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| object | Object | Yes |
+| offsetOrEncoding | ArkTS-Dyn: number \| string<br>ArkTS-Sta：int \ | string | Yes |
+| length | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Buffer | Buffer** object created. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Buffer |
 
 **Examples**
 
@@ -245,28 +245,27 @@ function from(string: String, encoding?: BufferEncoding): Buffer
 
 Creates a **Buffer** object based on a string in the given encoding format.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-buffer-function from(string: String, encoding?: BufferEncoding): Buffer--><!--Device-buffer-function from(string: String, encoding?: BufferEncoding): Buffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| string | String | Yes | String. |
-| encoding | BufferEncoding | No | Encoding format. The default value is **'utf8'**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| string | String | Yes |
+| encoding | BufferEncoding | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Buffer | Buffer** object created. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Buffer |
 
 **Examples**
 
 See [from](#from)
-

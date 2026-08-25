@@ -4,9 +4,7 @@ Function
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export interface Function--><!--Device-unnamed-export interface Function-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,23 +23,38 @@ Calls the function with the specified arguments.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Function-unsafeCall(...r: FixedArray<Any>): Any--><!--Device-Function-unsafeCall(...r: FixedArray<Any>): Any-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| r | FixedArray&lt;Any&gt; | Yes | the arguments. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| r | FixedArray & lt;Any & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Any | the result of the call. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Any |
 
+## name
+
+```TypeScript
+get name(): string
+```
+
+Gets the name of the function.
+
+**Type:** string
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang

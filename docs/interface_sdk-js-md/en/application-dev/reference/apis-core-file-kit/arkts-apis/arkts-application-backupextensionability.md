@@ -12,21 +12,20 @@ import { BundleVersion } from '@kit.CoreFileKit';
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [BackupExtensionAbility](arkts-corefile-application-backupextensionability-backupextensionability-c.md) | Class to be override for backup extension ability. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BackupExtensionAbility](arkts-corefile-application-backupextensionability-backupextensionability-c.md) |
 
 <!--Del-->
 ### Classes(System API)
 
-| Name | Description |
-| --- | --- |
-| [BackupExtensionAbility](arkts-corefile-application-backupextensionability-backupextensionability-c-sys.md) | Class to be override for backup extension ability. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BackupExtensionAbility](arkts-corefile-application-backupextensionability-backupextensionability-c-sys.md) |
 <!--DelEnd-->
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | Describe bundle version@interface BundleVersion |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) |

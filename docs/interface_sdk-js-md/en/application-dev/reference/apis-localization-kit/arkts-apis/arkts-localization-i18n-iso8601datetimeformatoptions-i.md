@@ -4,7 +4,7 @@ Represents optional configuration items for the ISO8601DateTimeFormat object. Th
 
 **Since:** 26.0.0
 
-<!--Device-i18n-export interface ISO8601DateTimeFormatOptions--><!--Device-i18n-export interface ISO8601DateTimeFormatOptions-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -26,11 +26,11 @@ The ISO 8601 date format to format. The value can be: "calendar", the format is 
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ISO8601DateTimeFormatOptions-dateFormat?: 'calendar' | 'ordinal' | 'week'--><!--Device-ISO8601DateTimeFormatOptions-dateFormat?: 'calendar' | 'ordinal' | 'week'-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -46,11 +46,11 @@ Check if need to show time zone part. Default value is true that show time zone.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ISO8601DateTimeFormatOptions-displayTimeZone?: boolean--><!--Device-ISO8601DateTimeFormatOptions-displayTimeZone?: boolean-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -66,11 +66,11 @@ The date time separator style. The value can be: "extended": with -/:, "basic": 
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ISO8601DateTimeFormatOptions-separatorStyle?: 'extended' | 'basic'--><!--Device-ISO8601DateTimeFormatOptions-separatorStyle?: 'extended' | 'basic'-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -86,11 +86,11 @@ The ISO 8601 time precision to format. The value can be: "dateOnly", "hours", "m
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ISO8601DateTimeFormatOptions-timePrecision?: 'dateOnly' | 'hours' | 'minutes' | 'seconds' | 'milliSeconds'--><!--Device-ISO8601DateTimeFormatOptions-timePrecision?: 'dateOnly' | 'hours' | 'minutes' | 'seconds' | 'milliSeconds'-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -106,11 +106,10 @@ TimeZone object used to format date, default value UTC.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ISO8601DateTimeFormatOptions-timeZone?: TimeZone--><!--Device-ISO8601DateTimeFormatOptions-timeZone?: TimeZone-End-->
-
 **System capability:** SystemCapability.Global.I18n
-

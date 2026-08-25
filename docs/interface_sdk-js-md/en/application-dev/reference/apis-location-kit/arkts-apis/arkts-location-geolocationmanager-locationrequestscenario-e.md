@@ -2,9 +2,9 @@
 
 Enum for location scenario.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-geoLocationManager-export enum LocationRequestScenario--><!--Device-geoLocationManager-export enum LocationRequestScenario-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -16,11 +16,11 @@ UNSET = 0x300
 
 Default scenario.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-LocationRequestScenario-UNSET = 0x300--><!--Device-LocationRequestScenario-UNSET = 0x300-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -32,11 +32,11 @@ NAVIGATION = 0x301
 
 Navigation scenario. High positioning precision and real-time performance are required.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-LocationRequestScenario-NAVIGATION = 0x301--><!--Device-LocationRequestScenario-NAVIGATION = 0x301-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -48,11 +48,11 @@ TRAJECTORY_TRACKING = 0x302
 
 Trajectory tracking scenario. High positioning precision is required.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-LocationRequestScenario-TRAJECTORY_TRACKING = 0x302--><!--Device-LocationRequestScenario-TRAJECTORY_TRACKING = 0x302-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -64,11 +64,11 @@ CAR_HAILING = 0x303
 
 Car hailing scenario. High positioning precision and real-time performance are required.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-LocationRequestScenario-CAR_HAILING = 0x303--><!--Device-LocationRequestScenario-CAR_HAILING = 0x303-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -80,11 +80,11 @@ DAILY_LIFE_SERVICE = 0x304
 
 Daily life scenarios. Low requirements on positioning precision and real-time performance.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-LocationRequestScenario-DAILY_LIFE_SERVICE = 0x304--><!--Device-LocationRequestScenario-DAILY_LIFE_SERVICE = 0x304-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -96,11 +96,10 @@ NO_POWER = 0x305
 
 Power saving scenarios.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-LocationRequestScenario-NO_POWER = 0x305--><!--Device-LocationRequestScenario-NO_POWER = 0x305-End-->
-
 **System capability:** SystemCapability.Location.Location.Core
-

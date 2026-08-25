@@ -16,11 +16,11 @@ Gets the operation progress of a volume. This API uses a promise to return the r
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-volumeManager-function getOpProcess(volumeId: string): Promise<int>--><!--Device-volumeManager-function getOpProcess(volumeId: string): Promise<int>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -28,23 +28,22 @@ Gets the operation progress of a volume. This API uses a promise to return the r
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| volumeId | string | Yes | Volume ID. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| volumeId | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;int&gt; | Promise used to return the operation progress. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| 13600001 | IPC error. |
-| 13600002 | Not supported filesystem. |
-| 13600010 | The input parameter is invalid. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13600001 |
+| 13600002 |
+| 13600010 |

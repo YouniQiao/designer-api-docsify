@@ -2,9 +2,9 @@
 
 网络信号强度信息对象。
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-radio-export interface SignalInformation--><!--Device-radio-export interface SignalInformation-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -22,11 +22,11 @@ dBm: int
 
 网络信号强度，范围为[-140, 140]，超出范围返回错误。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-SignalInformation-dBm: int--><!--Device-SignalInformation-dBm: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -38,11 +38,11 @@ signalLevel: int
 
 网络信号强度等级，范围为[0, 5]，超出范围返回错误。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-SignalInformation-signalLevel: int--><!--Device-SignalInformation-signalLevel: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -56,9 +56,8 @@ signalType: NetworkType
 
 **类型：** NetworkType
 
-**起始版本：** 23
+**起始版本：** 6
 
-<!--Device-SignalInformation-signalType: NetworkType--><!--Device-SignalInformation-signalType: NetworkType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
-

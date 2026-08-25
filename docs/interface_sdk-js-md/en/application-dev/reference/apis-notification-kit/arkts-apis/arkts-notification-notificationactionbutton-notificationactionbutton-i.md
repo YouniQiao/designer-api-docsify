@@ -2,25 +2,25 @@
 
 The **NotificationActionButton** module defines the action buttons displayed in a notification. It is used to add interactive action buttons in NotificationRequest, allowing users to trigger a **WantAgent** action by tapping the button. This module is used when you need to provide interactive action buttons (such as **Reply** and **Mark as read**) in a notification.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-export interface NotificationActionButton--><!--Device-unnamed-export interface NotificationActionButton-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 ## extras
 
 ```TypeScript
-extras?: Record<string, RecordData>
+extras?: { [key: string]: any }
 ```
 
 Extension information of the button. The default value is empty. It is used to store custom extension data of the button. An application can add any key-value pair information as needed, such as the specific identifier and additional data of the button.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** { [key: string]: any }
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationActionButton-extras?: Record<string, RecordData>--><!--Device-NotificationActionButton-extras?: Record<string, RecordData>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -34,9 +34,9 @@ Title of the button, displayed on the action button of the notification. The str
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationActionButton-title: string--><!--Device-NotificationActionButton-title: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -50,9 +50,9 @@ User input object. This parameter is left empty by default. ID entered by a subs
 
 **Type:** [NotificationUserInput](arkts-notification-notificationuserinput-notificationuserinput-i.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-NotificationActionButton-userInput?: NotificationUserInput--><!--Device-NotificationActionButton-userInput?: NotificationUserInput-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -66,9 +66,8 @@ wantAgent: WantAgent
 
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-NotificationActionButton-wantAgent: WantAgent--><!--Device-NotificationActionButton-wantAgent: WantAgent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
-

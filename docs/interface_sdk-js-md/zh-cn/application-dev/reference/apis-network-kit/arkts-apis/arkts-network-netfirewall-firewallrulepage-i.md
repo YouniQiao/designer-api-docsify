@@ -4,7 +4,7 @@
 
 **起始版本：** 15
 
-<!--Device-netFirewall-interface FirewallRulePage--><!--Device-netFirewall-interface FirewallRulePage-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -26,55 +26,54 @@ data: Array<NetFirewallRule>
 
 **起始版本：** 15
 
-<!--Device-FirewallRulePage-data: Array<NetFirewallRule>--><!--Device-FirewallRulePage-data: Array<NetFirewallRule>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## page
 
 ```TypeScript
-page: int
+page: number
 ```
 
 当前页码，值范围：[1,1000]。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 15
 
-<!--Device-FirewallRulePage-page: int--><!--Device-FirewallRulePage-page: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## pageSize
 
 ```TypeScript
-pageSize: int
+pageSize: number
 ```
 
 页面大小，值范围：[1, 50]。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 15
 
-<!--Device-FirewallRulePage-pageSize: int--><!--Device-FirewallRulePage-pageSize: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## totalPage
 
 ```TypeScript
-totalPage: int
+totalPage: number
 ```
 
 总页数，值范围：[1,1000]。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 15
 
-<!--Device-FirewallRulePage-totalPage: int--><!--Device-FirewallRulePage-totalPage: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
-

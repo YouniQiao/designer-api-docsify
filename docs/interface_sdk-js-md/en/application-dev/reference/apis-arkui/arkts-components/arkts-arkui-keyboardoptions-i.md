@@ -4,7 +4,7 @@ Sets whether to support keyboard avoidance.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface KeyboardOptions--><!--Device-unnamed-declare interface KeyboardOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,10 @@ Whether to support keyboard avoidance. **true** to support, **false** otherwise.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-KeyboardOptions-supportAvoidance?: boolean--><!--Device-KeyboardOptions-supportAvoidance?: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

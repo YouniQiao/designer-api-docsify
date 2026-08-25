@@ -15,7 +15,6 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [GesturePoint(Gesture Point)](arkts-accessibility-accessibility-gesturepoint-gesturepoint-c.md) | Represents a gesture touch point, which is the basic unit that constitutes a GesturePath node and is used to define the touch position in the gesture trajectory for accessibility gesture injection. For details about how to use it, see [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md). |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [GesturePoint(Gesture Point)](arkts-accessibility-accessibility-gesturepoint-gesturepoint-c.md) |

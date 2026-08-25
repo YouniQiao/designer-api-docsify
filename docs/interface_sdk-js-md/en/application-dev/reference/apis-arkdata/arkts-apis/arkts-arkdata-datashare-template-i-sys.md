@@ -2,9 +2,9 @@
 
 Defines the struct of the template used in a subscription.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-dataShare-interface Template--><!--Device-dataShare-interface Template-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -22,15 +22,15 @@ import { dataShare } from '@kit.ArkData';
 predicates: Record<string, string>
 ```
 
-Predicates to use. When [**on**](arkts-arkdata-datashare-datasharehelper-i-sys.md#ondatachange) is called, the predicates are used to generate data. This parameter applies only to RDB data storage.
+Predicates to use. When **on** is called, the predicates are used to generate data. This parameter applies only to RDB data storage.
 
 **Type:** Record&lt;string, string&gt;
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Template-predicates: Record<string, string>--><!--Device-Template-predicates: Record<string, string>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -48,11 +48,11 @@ Template scheduler SQL, which is embedded with a custom function. Currently, the
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Template-scheduler: string--><!--Device-Template-scheduler: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -64,17 +64,16 @@ Template scheduler SQL, which is embedded with a custom function. Currently, the
 update?: string
 ```
 
-Update SQL statement of a specified template. The default value is an empty string. When [on](arkts-arkdata-datashare-datasharehelper-i-sys.md#ondatachange) is called, the **update** parameter is used to update data. This parameter applies only to RDB data storage.
+Update SQL statement of a specified template. The default value is an empty string. When on is called, the **update** parameter is used to update data. This parameter applies only to RDB data storage.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Template-update?: string--><!--Device-Template-update?: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **System API:** This is a system API.
-

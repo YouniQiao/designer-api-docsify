@@ -45,12 +45,12 @@
 > [@Component](../../../ui/state-management/arkts-create-custom-components.md#component)修饰的自定义组件、
 > NodeContainer以及
 > NodeContainer下挂载的FrameNode和
-> [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md)。&gt;
+> [RenderNode](arkts-arkui-rendernode-c.md)。&gt;
 > - 使用方式可参考[同层渲染绘制](../../../web/web-same-layer.md)。
 
 **起始版本：** 11
 
-<!--Device-unnamed-export declare enum NodeRenderType--><!--Device-unnamed-export declare enum NodeRenderType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,11 +64,11 @@ RENDER_TYPE_DISPLAY = 0
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NodeRenderType-RENDER_TYPE_DISPLAY = 0--><!--Device-NodeRenderType-RENDER_TYPE_DISPLAY = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,11 +82,10 @@ RENDER_TYPE_TEXTURE = 1
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-NodeRenderType-RENDER_TYPE_TEXTURE = 1--><!--Device-NodeRenderType-RENDER_TYPE_TEXTURE = 1-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

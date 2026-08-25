@@ -7,15 +7,13 @@
 - It is used as a search criterion when APIs of the RDB store and KV store are called. In this scenario, use the corresponding predicate based on the database type.  
 <!--DelEnd-->
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-declare namespace dataSharePredicates--><!--Device-unnamed-declare namespace dataSharePredicates-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
-
-**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -27,15 +25,14 @@ import { dataSharePredicates } from '@kit.ArkData';
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Provides APIs for setting different **DataSharePredicates** objects. This type is not multi-thread safe. If a **DataSharePredicates** instance is operated by multiple threads at the same time in an application, use a lock for it. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
 
 <!--Del-->
 ### Classes(System API)
 
-| Name | Description |
-| --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c-sys.md) | Provides APIs for setting different **DataSharePredicates** objects. This type is not multi-thread safe. If a **DataSharePredicates** instance is operated by multiple threads at the same time in an application, use a lock for it. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c-sys.md) |
 <!--DelEnd-->
-

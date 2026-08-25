@@ -1,15 +1,13 @@
 # FinalizationRegistryConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface FinalizationRegistryConstructor--><!--Device-unnamed-interface FinalizationRegistryConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
+## [[Construct]]
 
 ```TypeScript
 new<T>(cleanupCallback: (heldValue: T) => void): FinalizationRegistry<T>
@@ -17,20 +15,18 @@ new<T>(cleanupCallback: (heldValue: T) => void): FinalizationRegistry<T>
 
 Creates a finalization registry with an associated cleanup callback
 
-**Since:** -1
-
-<!--Device-FinalizationRegistryConstructor-new<T>(cleanupCallback: (heldValue: T) => void): FinalizationRegistry<T>--><!--Device-FinalizationRegistryConstructor-new<T>(cleanupCallback: (heldValue: T) => void): FinalizationRegistry<T>-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| cleanupCallback | (heldValue: T) =&gt; void | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| cleanupCallback | (heldValue: T) = & gt; void | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## prototype
 
 ```TypeScript
@@ -39,7 +35,4 @@ readonly prototype: FinalizationRegistry<any>
 
 **Type:** [FinalizationRegistry](arkts-lib-es2021-weakref-finalizationregistry-i.md)&lt;any&gt;
 
-**Since:** -1
-
-<!--Device-FinalizationRegistryConstructor-readonly prototype: FinalizationRegistry<any>--><!--Device-FinalizationRegistryConstructor-readonly prototype: FinalizationRegistry<any>-End-->
-
+**ArkTS mode:** 

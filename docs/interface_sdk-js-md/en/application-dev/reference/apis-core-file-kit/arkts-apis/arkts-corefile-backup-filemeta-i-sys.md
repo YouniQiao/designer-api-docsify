@@ -2,9 +2,9 @@
 
 Corresponding to a file's metadata. FileMeta is useful when doing IPC with the backup service.@interface FileMeta
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-backup-interface FileMeta--><!--Device-backup-interface FileMeta-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -26,9 +26,9 @@ Indicates the name of a bundle.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-FileMeta-bundleName: string--><!--Device-FileMeta-bundleName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -44,9 +44,9 @@ Indicates a uri to a file.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-FileMeta-uri: string--><!--Device-FileMeta-uri: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -64,11 +64,10 @@ Indicates uris to files.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-FileMeta-uris?: Array<string>--><!--Device-FileMeta-uris?: Array<string>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
-

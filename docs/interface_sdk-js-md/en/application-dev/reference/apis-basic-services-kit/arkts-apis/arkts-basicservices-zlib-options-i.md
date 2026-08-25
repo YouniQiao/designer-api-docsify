@@ -2,9 +2,9 @@
 
 Defines options used to compress or decompress a ZIP file.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-zlib-interface Options--><!--Device-zlib-interface Options-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -26,11 +26,11 @@ Indicates whether to keep the top-level source folder in the compressed file.The
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-Options-keepTopLevelFolder?: boolean--><!--Device-Options-keepTopLevelFolder?: boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -44,11 +44,11 @@ Compression level specified for compression or decompression.
 
 **Type:** [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md)
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Options-level?: CompressLevel--><!--Device-Options-level?: CompressLevel-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -62,11 +62,11 @@ Memory level specified for compression.
 
 **Type:** [MemLevel](arkts-basicservices-zlib-memlevel-e.md)
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Options-memLevel?: MemLevel--><!--Device-Options-memLevel?: MemLevel-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -80,11 +80,11 @@ Serial or parallel strategy specified for compression or decompression.
 
 **Type:** [ParallelStrategy](arkts-basicservices-zlib-parallelstrategy-e.md)
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-Options-parallel?: ParallelStrategy--><!--Device-Options-parallel?: ParallelStrategy-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -98,11 +98,11 @@ Separator strategy for the file path in the compressed package specified for dec
 
 **Type:** [PathSeparatorStrategy](arkts-basicservices-zlib-pathseparatorstrategy-e.md)
 
-**Since:** 23
+**Since:** 21
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
-<!--Device-Options-pathSeparatorStrategy?: PathSeparatorStrategy--><!--Device-Options-pathSeparatorStrategy?: PathSeparatorStrategy-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -116,11 +116,10 @@ Compression strategy specified for compression.
 
 **Type:** [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md)
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-Options-strategy?: CompressStrategy--><!--Device-Options-strategy?: CompressStrategy-End-->
-
 **System capability:** SystemCapability.BundleManager.Zlib
-

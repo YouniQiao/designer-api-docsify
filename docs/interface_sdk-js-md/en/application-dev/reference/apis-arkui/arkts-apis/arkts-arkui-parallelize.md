@@ -9,15 +9,14 @@
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [ParallelizeUI](arkts-arkui-arkui-parallelize-parallelizeui-f.md) | Define the constructor of ParallelizeUI. |
-| [ParallelizeUI](arkts-arkui-arkui-parallelize-parallelizeui-f.md) | Define the constructor of ParallelizeUI. |
-| [ParallelizeUI](arkts-arkui-arkui-parallelize-parallelizeui-f.md) | On-demand parallel item creation for List and Grid. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ParallelizeUI](arkts-arkui-arkui-parallelize-parallelizeui-f.md) |
+| [ParallelizeUI](arkts-arkui-arkui-parallelize-parallelizeui-f.md) |
+| [ParallelizeUI](arkts-arkui-arkui-parallelize-parallelizeui-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ParallelOption](arkts-arkui-arkui-parallelize-paralleloption-i.md) | Describe the options for the ParallelizeUI.@interface ParallelOption |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ParallelOption](arkts-arkui-arkui-parallelize-paralleloption-i.md) |

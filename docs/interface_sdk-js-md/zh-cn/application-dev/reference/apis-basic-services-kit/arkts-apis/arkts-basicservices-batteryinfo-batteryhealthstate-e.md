@@ -1,12 +1,10 @@
 # BatteryHealthState
 
-表示电池健康状态的枚举。@enum { int }
+表示电池健康状态的枚举。
 
-**起始版本：** 23
+**起始版本：** 6
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-batteryInfo-export enum BatteryHealthState--><!--Device-batteryInfo-export enum BatteryHealthState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -18,11 +16,9 @@ UNKNOWN
 
 表示电池健康状态未知。
 
-**起始版本：** 23
+**起始版本：** 6
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-BatteryHealthState-UNKNOWN--><!--Device-BatteryHealthState-UNKNOWN-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -34,11 +30,9 @@ GOOD
 
 表示电池健康状态为正常。
 
-**起始版本：** 23
+**起始版本：** 6
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-BatteryHealthState-GOOD--><!--Device-BatteryHealthState-GOOD-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -50,11 +44,9 @@ OVERHEAT
 
 表示电池健康状态为过热。
 
-**起始版本：** 23
+**起始版本：** 6
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-BatteryHealthState-OVERHEAT--><!--Device-BatteryHealthState-OVERHEAT-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -66,11 +58,9 @@ OVERVOLTAGE
 
 表示电池健康状态为过压。
 
-**起始版本：** 23
+**起始版本：** 6
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-BatteryHealthState-OVERVOLTAGE--><!--Device-BatteryHealthState-OVERVOLTAGE-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -82,11 +72,9 @@ COLD
 
 表示电池健康状态为低温。
 
-**起始版本：** 23
+**起始版本：** 6
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-BatteryHealthState-COLD--><!--Device-BatteryHealthState-COLD-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -98,11 +86,8 @@ DEAD
 
 表示电池健康状态为失效，即电池已无法正常使用。
 
-**起始版本：** 23
+**起始版本：** 6
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-BatteryHealthState-DEAD--><!--Device-BatteryHealthState-DEAD-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
-

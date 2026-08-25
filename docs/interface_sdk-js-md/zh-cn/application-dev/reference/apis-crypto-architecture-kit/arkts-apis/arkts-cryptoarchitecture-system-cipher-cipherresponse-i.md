@@ -4,11 +4,11 @@
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 11
 
 **替代接口：** Cipher
-
-<!--Device-unnamed-export interface CipherResponse--><!--Device-unnamed-export interface CipherResponse-End-->
 
 **系统能力：** SystemCapability.Security.Cipher
 
@@ -30,11 +30,10 @@ text: string
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 11
 
 **替代接口：** Cipher
 
-<!--Device-CipherResponse-text: string--><!--Device-CipherResponse-text: string-End-->
-
 **系统能力：** SystemCapability.Security.Cipher
-

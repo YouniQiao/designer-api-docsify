@@ -1,12 +1,12 @@
 # TimeOptions
 
-TimeOptions defines options for the time picker.Inherits from [CommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-datepickercomponent-commonoptions-c.md).
+TimeOptions defines options for the time picker.Inherits from [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md).
 
-**Inheritance/Implementation:** TimeOptions extends [CommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-datepickercomponent-commonoptions-c.md)
+**Inheritance/Implementation:** TimeOptions extends [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export declare class TimeOptions--><!--Device-unnamed-export declare class TimeOptions-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,17 +24,17 @@ format?: TimeFormat
 
 Defines the format of the time picker.Default value: TimeFormat.HOUR_MINUTE
 
-**Type:** [TimeFormat](../../apis-default/arkts-apis/arkts-arkui-advanced-datepickercomponent-timeformat-e.md)
+**Type:** [TimeFormat](arkts-arkui-arkui-advanced-datepickercomponent-timeformat-e.md)
 
 **Default:** TimeFormat.HOUR_MINUTE
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-TimeOptions-format?: TimeFormat--><!--Device-TimeOptions-format?: TimeFormat-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ Default value: false
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-TimeOptions-useMilitaryTime?: boolean--><!--Device-TimeOptions-useMilitaryTime?: boolean-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

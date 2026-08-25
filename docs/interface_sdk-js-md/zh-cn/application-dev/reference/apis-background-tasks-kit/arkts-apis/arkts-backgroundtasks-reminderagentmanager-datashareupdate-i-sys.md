@@ -2,9 +2,9 @@
 
 更新数据库需要的参数信息。数据提供方需要在module.json5中的proxyData节点定义要共享的表的标识，读写权限和基本信息。配置方式请见 [数据提供方应用的开发](../../../database/share-data-by-silent-access-sys.md#数据提供方应用的开发)。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-reminderAgentManager-interface DataShareUpdate--><!--Device-reminderAgentManager-interface DataShareUpdate-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -24,11 +24,11 @@ equalTo: Record<string, double | string | boolean>
 
 指示筛选条件，当前仅支持通过等于筛选。
 
-**类型：** Record&lt;string, double \| string \| boolean&gt;
+**类型：** ArkTS-Dyn: Record&lt;string, number \| string \| boolean&gt;  <br>ArkTS-Sta：Record&lt;string, double \| string \| boolean&gt;
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-DataShareUpdate-equalTo: Record<string, double | string | boolean>--><!--Device-DataShareUpdate-equalTo: Record<string, double | string | boolean>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -44,9 +44,9 @@ uri: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-DataShareUpdate-uri: string--><!--Device-DataShareUpdate-uri: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -62,11 +62,10 @@ value: ValuesBucket
 
 **类型：** [ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-valuesbucket-t.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-DataShareUpdate-value: ValuesBucket--><!--Device-DataShareUpdate-value: ValuesBucket-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **系统接口：** 此接口为系统接口。
-

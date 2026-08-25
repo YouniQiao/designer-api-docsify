@@ -4,7 +4,7 @@
 
 **起始版本：** 10
 
-<!--Device-omapi-enum ServiceState--><!--Device-omapi-enum ServiceState-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -18,7 +18,7 @@ SE服务状态已断开。
 
 **起始版本：** 10
 
-<!--Device-ServiceState-DISCONNECTED = 0--><!--Device-ServiceState-DISCONNECTED = 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -32,7 +32,6 @@ SE服务状态已连接。
 
 **起始版本：** 10
 
-<!--Device-ServiceState-CONNECTED = 1--><!--Device-ServiceState-CONNECTED = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
-

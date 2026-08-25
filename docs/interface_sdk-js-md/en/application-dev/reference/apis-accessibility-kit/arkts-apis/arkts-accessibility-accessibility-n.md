@@ -1,10 +1,10 @@
-# accessibility
+# accessibility(Accessibility)
 
 This module provides accessibility features, including obtaining the accessibility application list, obtaining the accessibility application enabling state, obtaining the captions configuration, sending accessibility events, and listening for accessibility application state changes.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-declare namespace accessibility--><!--Device-unnamed-declare namespace accessibility-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -19,87 +19,86 @@ import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, Injec
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [isOpenAccessibility](arkts-accessibility-accessibility-isopenaccessibility-f.md) | Checks whether an accessibility application is enabled. This API uses an asynchronous callback to return the result. |
-| [isOpenAccessibility](arkts-accessibility-accessibility-isopenaccessibility-f.md) | Checks whether an accessibility application is enabled. This API uses a promise to return the result. |
-| [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md) | Checks whether any accessibility application has been enabled in the system.To obtain information about accessibility applications in the system, you are advised to use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md). |
-| [isOpenTouchGuide](arkts-accessibility-accessibility-isopentouchguide-f.md) | Checks whether touch guide mode is enabled. This API uses an asynchronous callback to return the result. |
-| [isOpenTouchGuide](arkts-accessibility-accessibility-isopentouchguide-f.md) | Checks whether touch guide mode is enabled. This API uses a promise to return the result. |
-| [isOpenTouchGuideSync](arkts-accessibility-accessibility-isopentouchguidesync-f.md) | Checks whether touch guide mode is enabled. |
-| [isScreenReaderOpenSync](arkts-accessibility-accessibility-isscreenreaderopensync-f.md) | Checks whether screen reader mode is enabled. |
-| [getAbilityLists](arkts-accessibility-accessibility-getabilitylists-f.md) | Obtains the accessibility application list. This API uses an asynchronous callback to return the result. |
-| [getAbilityLists](arkts-accessibility-accessibility-getabilitylists-f.md) | Obtains the accessibility application list. This API uses a promise to return the result. |
-| [getAccessibilityExtensionList](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md) | Obtains the accessibility application list. This API uses a promise to return the result. |
-| [getAccessibilityExtensionList](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md) | Obtains the accessibility application list. This API uses an asynchronous callback to return the result. |
-| [getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md) | Query the list of accessibility applications in the current system, which can be queried by criteria.This API is the synchronous version of [accessibility.getAccessibilityExtensionList](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md) (asynchronous version). They have the same functionality. Use this API if you need to obtain the result immediately. Use the asynchronous version if you need to query in non-blocking scenarios. |
-| [sendEvent](arkts-accessibility-accessibility-sendevent-f.md) | Sends an accessibility event. The event will be distributed to registered accessibility extension applications that match the event type for response. This API uses an asynchronous callback to return the result. |
-| [sendEvent](arkts-accessibility-accessibility-sendevent-f.md) | Sends an accessibility event. The event will be distributed to registered accessibility extension applications that match the event type for response. This API uses a promise to return the result. |
-| [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md) | Sends an accessibility event. The event will be distributed to registered accessibility applications that match the event type for response. This API uses an asynchronous callback to return the result. |
-| [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md) | Sends an accessibility event. The event will be distributed to registered accessibility extension applications that match the event type for response. This API uses a promise to return the result. |
-| [getTouchModeSync](arkts-accessibility-accessibility-gettouchmodesync-f.md) | Obtains the single-tap/double-tap operation mode in touch guide mode. This can be used to adjust the app's interaction response mode based on the current operation mode (for example, responding directly to taps in single- tap mode, or requiring double-tap confirmation in double-tap mode). |
-| [on_accessibilityStateChange](arkts-accessibility-accessibility-onaccessibilitystatechange-f.md) | Subscribes to the state changes of the accessibility application. This API uses an asynchronous callback to return the result.To obtain information about accessibility applications in the system, you are advised to use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md). |
-| [onAccessibilityStateChange](arkts-accessibility-accessibility-onaccessibilitystatechange-f.md) | Register the observe of the accessibility state changed. |
-| [on_touchGuideStateChange](arkts-accessibility-accessibility-ontouchguidestatechange-f.md) | Subscribes to the state changes of touch guide mode. This API uses an asynchronous callback to return the result.To obtain information about accessibility applications in the system, you are advised to use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md). |
-| [onTouchGuideStateChange](arkts-accessibility-accessibility-ontouchguidestatechange-f.md) | Register the observe of the touchGuide state changed. |
-| [on_screenReaderStateChange](arkts-accessibility-accessibility-onscreenreaderstatechange-f.md) | Subscribes to the state changes of screen reader mode. This API uses an asynchronous callback to return the result. |
-| [onScreenReaderStateChange](arkts-accessibility-accessibility-onscreenreaderstatechange-f.md) | Register the observe of the screen reader state changed. |
-| [on_touchModeChange](arkts-accessibility-accessibility-ontouchmodechange-f.md) | Subscribes to the single-tap/double-tap operation mode change event in touch guide mode. This API uses an asynchronous callback to return the result. |
-| [onTouchModeChange](arkts-accessibility-accessibility-ontouchmodechange-f.md) | Register the observe of the touch mode changed. |
-| [off_accessibilityStateChange](arkts-accessibility-accessibility-offaccessibilitystatechange-f.md) | Unsubscribes from the state changes of the accessibility application. This API uses an asynchronous callback to return the result. |
-| [offAccessibilityStateChange](arkts-accessibility-accessibility-offaccessibilitystatechange-f.md) | Unregister the observe of the accessibility state changed. |
-| [off_touchGuideStateChange](arkts-accessibility-accessibility-offtouchguidestatechange-f.md) | Unsubscribes from the state changes of touch guide mode. This API uses an asynchronous callback to return the result. |
-| [offTouchGuideStateChange](arkts-accessibility-accessibility-offtouchguidestatechange-f.md) | Unregister the observe of the touchGuide state changed. |
-| [off_screenReaderStateChange](arkts-accessibility-accessibility-offscreenreaderstatechange-f.md) | Unsubscribes from the state changes of screen reader mode. This API uses an asynchronous callback to return the result. |
-| [offScreenReaderStateChange](arkts-accessibility-accessibility-offscreenreaderstatechange-f.md) | Unregister the observe of the screen reader state changed. |
-| [off_touchModeChange](arkts-accessibility-accessibility-offtouchmodechange-f.md) | Unsubscribes from the single-tap/double-tap operation mode change event in touch guide mode. This API uses an asynchronous callback to return the result. |
-| [offTouchModeChange](arkts-accessibility-accessibility-offtouchmodechange-f.md) | Unregister the observe of the touch mode changed. |
-| [getCaptionsManager](arkts-accessibility-accessibility-getcaptionsmanager-f.md) | Obtains a **CaptionsManager** instance. |
-| [onAnimationReduceStateChange](arkts-accessibility-accessibility-onanimationreducestatechange-f.md) | Subscribes to the state changes of animation reduction mode. This API uses an asynchronous callback to return the result. |
-| [offAnimationReduceStateChange](arkts-accessibility-accessibility-offanimationreducestatechange-f.md) | Unsubscribes from the state changes in animation reduction mode. This API uses an asynchronous callback to return the result. |
-| [isAnimationReduceEnabledSync](arkts-accessibility-accessibility-isanimationreduceenabledsync-f.md) | Checks whether animation reduction mode is enabled.This API is the synchronous version of [accessibility.isAnimationReduceEnabled](arkts-accessibility-accessibility-isanimationreduceenabled-f.md) (asynchronous version). They have the same functionality. Use this API if you need to obtain the result immediately. Use the asynchronous version if you need to query in non-blocking scenarios. |
-| [isAnimationReduceEnabled](arkts-accessibility-accessibility-isanimationreduceenabled-f.md) | Checks whether animation reduction mode is enabled. This API uses a promise to return the result. |
-| [onFlashReminderStateChange](arkts-accessibility-accessibility-onflashreminderstatechange-f.md) | Subscribes to the state changes of flash alerts mode. This API uses an asynchronous callback to return the result. |
-| [offFlashReminderStateChange](arkts-accessibility-accessibility-offflashreminderstatechange-f.md) | Unsubscribes from the state changes in flash alerts mode. This API uses an asynchronous callback to return the result. |
-| [isFlashReminderEnabledSync](arkts-accessibility-accessibility-isflashreminderenabledsync-f.md) | Checks whether flash alerts mode is enabled.This API is the synchronous version of [accessibility.isFlashReminderEnabled](arkts-accessibility-accessibility-isflashreminderenabled-f.md) (asynchronous version). They have the same functionality. Use this API if you need to obtain the result immediately. Use the asynchronous version if you need to query in non-blocking scenarios. |
-| [isFlashReminderEnabled](arkts-accessibility-accessibility-isflashreminderenabled-f.md) | Checks whether flash alerts mode is enabled. This API uses a promise to return the result. |
-| [onAudioMonoStateChange](arkts-accessibility-accessibility-onaudiomonostatechange-f.md) | Subscribes to the state changes of mono audio mode. This API uses an asynchronous callback to return the result. |
-| [offAudioMonoStateChange](arkts-accessibility-accessibility-offaudiomonostatechange-f.md) | Unsubscribes from the state changes in mono audio mode. This API uses an asynchronous callback to return the result. |
-| [isAudioMonoEnabledSync](arkts-accessibility-accessibility-isaudiomonoenabledsync-f.md) | Checks whether mono audio mode is enabled.This API is the synchronous version of [accessibility.isAudioMonoEnabled](arkts-accessibility-accessibility-isaudiomonoenabled-f.md) (asynchronous version). They have the same functionality. Use this API if you need to obtain the result immediately. Use the asynchronous version if you need to query in non-blocking scenarios. |
-| [isAudioMonoEnabled](arkts-accessibility-accessibility-isaudiomonoenabled-f.md) | Checks whether mono audio mode is enabled. This API uses a promise to return the result. |
-| [isSeniorModeEnabled](arkts-accessibility-accessibility-isseniormodeenabled-f.md) | Checks whether the senior mode is enabled. This API uses a promise to return the result. |
-| [onSeniorModeStateChange](arkts-accessibility-accessibility-onseniormodestatechange-f.md) | Subscribes to the state changes of the senior mode. This API uses an asynchronous callback to return the result. |
-| [offSeniorModeStateChange](arkts-accessibility-accessibility-offseniormodestatechange-f.md) | Unsubscribes from the state changes of the senior mode. This API uses an asynchronous callback to return the result. |
-| [onSeniorModeStateChangeForSelf](arkts-accessibility-accessibility-onseniormodestatechangeforself-f.md) | Subscribes to the "senior mode" change event of the app itself. This API uses an asynchronous callback to return the result.Unlike [accessibility.onSeniorModeStateChange](arkts-accessibility-accessibility-onseniormodestatechange-f.md), which listens for system-level senior mode state changes, this API only monitors the state of the app itself. |
-| [offSeniorModeStateChangeForSelf](arkts-accessibility-accessibility-offseniormodestatechangeforself-f.md) | Unsubscribes from the "senior mode" change event of the app itself. This API uses an asynchronous callback to return the result. |
-| [getSeniorModeStateForSelf](arkts-accessibility-accessibility-getseniormodestateforself-f.md) | Checks whether the app has "senior mode" enabled. This API uses a promise to return the result.Unlike [accessibility.isSeniorModeEnabled](arkts-accessibility-accessibility-isseniormodeenabled-f.md), which checks whether the system-level senior mode is enabled, this API only queries the state of the app itself. |
-| [setSeniorModeStateForSelf](arkts-accessibility-accessibility-setseniormodestateforself-f.md) | Sets whether the app has "senior mode" enabled. This API uses a promise to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [isOpenAccessibility(Accessibility)](arkts-accessibility-accessibility-isopenaccessibility-f.md) |
+| [isOpenAccessibility(Accessibility)](arkts-accessibility-accessibility-isopenaccessibility-f.md) |
+| [isOpenAccessibilitySync(Accessibility)](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md) |
+| [isOpenTouchGuide(Accessibility)](arkts-accessibility-accessibility-isopentouchguide-f.md) |
+| [isOpenTouchGuide(Accessibility)](arkts-accessibility-accessibility-isopentouchguide-f.md) |
+| [isOpenTouchGuideSync(Accessibility)](arkts-accessibility-accessibility-isopentouchguidesync-f.md) |
+| [isScreenReaderOpenSync(Accessibility)](arkts-accessibility-accessibility-isscreenreaderopensync-f.md) |
+| [getAbilityLists(Accessibility)](arkts-accessibility-accessibility-getabilitylists-f.md) |
+| [getAbilityLists(Accessibility)](arkts-accessibility-accessibility-getabilitylists-f.md) |
+| [getAccessibilityExtensionList(Accessibility)](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md) |
+| [getAccessibilityExtensionList(Accessibility)](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md) |
+| [getAccessibilityExtensionListSync(Accessibility)](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md) |
+| [sendEvent(Accessibility)](arkts-accessibility-accessibility-sendevent-f.md) |
+| [sendEvent(Accessibility)](arkts-accessibility-accessibility-sendevent-f.md) |
+| [sendAccessibilityEvent(Accessibility)](arkts-accessibility-accessibility-sendaccessibilityevent-f.md) |
+| [sendAccessibilityEvent(Accessibility)](arkts-accessibility-accessibility-sendaccessibilityevent-f.md) |
+| [getTouchModeSync(Accessibility)](arkts-accessibility-accessibility-gettouchmodesync-f.md) |
+| [on(Accessibility)](arkts-accessibility-accessibility-on-f.md#onaccessibilitystatechange) |
+| [onAccessibilityStateChange(Accessibility)](arkts-accessibility-accessibility-onaccessibilitystatechange-f.md) |
+| [on(Accessibility)](arkts-accessibility-accessibility-on-f.md#ontouchguidestatechange) |
+| [onTouchGuideStateChange(Accessibility)](arkts-accessibility-accessibility-ontouchguidestatechange-f.md) |
+| [on(Accessibility)](arkts-accessibility-accessibility-on-f.md#onscreenreaderstatechange) |
+| [onScreenReaderStateChange(Accessibility)](arkts-accessibility-accessibility-onscreenreaderstatechange-f.md) |
+| [on(Accessibility)](arkts-accessibility-accessibility-on-f.md#ontouchmodechange) |
+| [onTouchModeChange(Accessibility)](arkts-accessibility-accessibility-ontouchmodechange-f.md) |
+| [off(Accessibility)](arkts-accessibility-accessibility-off-f.md#offaccessibilitystatechange) |
+| [offAccessibilityStateChange(Accessibility)](arkts-accessibility-accessibility-offaccessibilitystatechange-f.md) |
+| [off(Accessibility)](arkts-accessibility-accessibility-off-f.md#offtouchguidestatechange) |
+| [offTouchGuideStateChange(Accessibility)](arkts-accessibility-accessibility-offtouchguidestatechange-f.md) |
+| [off(Accessibility)](arkts-accessibility-accessibility-off-f.md#offscreenreaderstatechange) |
+| [offScreenReaderStateChange(Accessibility)](arkts-accessibility-accessibility-offscreenreaderstatechange-f.md) |
+| [off(Accessibility)](arkts-accessibility-accessibility-off-f.md#offtouchmodechange) |
+| [offTouchModeChange(Accessibility)](arkts-accessibility-accessibility-offtouchmodechange-f.md) |
+| [getCaptionsManager(Accessibility)](arkts-accessibility-accessibility-getcaptionsmanager-f.md) |
+| [onAnimationReduceStateChange(Accessibility)](arkts-accessibility-accessibility-onanimationreducestatechange-f.md) |
+| [offAnimationReduceStateChange(Accessibility)](arkts-accessibility-accessibility-offanimationreducestatechange-f.md) |
+| [isAnimationReduceEnabledSync(Accessibility)](arkts-accessibility-accessibility-isanimationreduceenabledsync-f.md) |
+| [isAnimationReduceEnabled(Accessibility)](arkts-accessibility-accessibility-isanimationreduceenabled-f.md) |
+| [onFlashReminderStateChange(Accessibility)](arkts-accessibility-accessibility-onflashreminderstatechange-f.md) |
+| [offFlashReminderStateChange(Accessibility)](arkts-accessibility-accessibility-offflashreminderstatechange-f.md) |
+| [isFlashReminderEnabledSync(Accessibility)](arkts-accessibility-accessibility-isflashreminderenabledsync-f.md) |
+| [isFlashReminderEnabled(Accessibility)](arkts-accessibility-accessibility-isflashreminderenabled-f.md) |
+| [onAudioMonoStateChange(Accessibility)](arkts-accessibility-accessibility-onaudiomonostatechange-f.md) |
+| [offAudioMonoStateChange(Accessibility)](arkts-accessibility-accessibility-offaudiomonostatechange-f.md) |
+| [isAudioMonoEnabledSync(Accessibility)](arkts-accessibility-accessibility-isaudiomonoenabledsync-f.md) |
+| [isAudioMonoEnabled(Accessibility)](arkts-accessibility-accessibility-isaudiomonoenabled-f.md) |
+| [isSeniorModeEnabled(Accessibility)](arkts-accessibility-accessibility-isseniormodeenabled-f.md) |
+| [onSeniorModeStateChange(Accessibility)](arkts-accessibility-accessibility-onseniormodestatechange-f.md) |
+| [offSeniorModeStateChange(Accessibility)](arkts-accessibility-accessibility-offseniormodestatechange-f.md) |
+| [onSeniorModeStateChangeForSelf(Accessibility)](arkts-accessibility-accessibility-onseniormodestatechangeforself-f.md) |
+| [offSeniorModeStateChangeForSelf(Accessibility)](arkts-accessibility-accessibility-offseniormodestatechangeforself-f.md) |
+| [getSeniorModeStateForSelf(Accessibility)](arkts-accessibility-accessibility-getseniormodestateforself-f.md) |
+| [setSeniorModeStateForSelf(Accessibility)](arkts-accessibility-accessibility-setseniormodestateforself-f.md) |
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [EventInfo](arkts-accessibility-accessibility-eventinfo-c.md) | Defines the accessibility event information, which describes UI changes or interaction events. It is used as a parameter of [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md) to define the event type and trigger action. The sent accessibility event will be distributed by the system to registered accessibility applications that match the event type for response. For details, see [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [EventInfo(Accessibility)](arkts-accessibility-accessibility-eventinfo-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [CaptionsManager](arkts-accessibility-accessibility-captionsmanager-i.md) | Manages captions configuration. Before calling any method of **CaptionsManager**, call [accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md) to obtain a **CaptionsManager** instance. |
-| [CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md) | Describes the style of captions. |
-| [AccessibilityAbilityInfo](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md) | Provides information about an accessibility application. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CaptionsManager(Accessibility)](arkts-accessibility-accessibility-captionsmanager-i.md) |
+| [CaptionsStyle(Accessibility)](arkts-accessibility-accessibility-captionsstyle-i.md) |
+| [AccessibilityAbilityInfo(Accessibility)](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | Enumerates the types of accessibility applications. |
-| [Action](arkts-accessibility-accessibility-action-t.md) | Target actions supported by the app. Target actions that require configuration parameters are indicated in the description column of each action in the table below. |
-| [EventType](arkts-accessibility-accessibility-eventtype-t.md) | Accessibility event types. |
-| [WindowUpdateType](arkts-accessibility-accessibility-windowupdatetype-t.md) | Window update type. |
-| [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | Enumerates the states of an accessibility application. |
-| [Capability](arkts-accessibility-accessibility-capability-t.md) | Enumerates the capabilities of an accessibility application. |
-| [TextMoveUnit](arkts-accessibility-accessibility-textmoveunit-t.md) | Enumerates the movement units for traversing the node text. |
-| [CaptionsFontEdgeType](arkts-accessibility-accessibility-captionsfontedgetype-t.md) | Enumerates the font edge types of captions. |
-| [CaptionsFontFamily](arkts-accessibility-accessibility-captionsfontfamily-t.md) | Enumerates the font families of captions. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AbilityType(Accessibility)](arkts-accessibility-accessibility-abilitytype-t.md) |
+| [Action(Accessibility)](arkts-accessibility-accessibility-action-t.md) |
+| [EventType(Accessibility)](arkts-accessibility-accessibility-eventtype-t.md) |
+| [WindowUpdateType(Accessibility)](arkts-accessibility-accessibility-windowupdatetype-t.md) |
+| [AbilityState(Accessibility)](arkts-accessibility-accessibility-abilitystate-t.md) |
+| [Capability(Accessibility)](arkts-accessibility-accessibility-capability-t.md) |
+| [TextMoveUnit(Accessibility)](arkts-accessibility-accessibility-textmoveunit-t.md) |
+| [CaptionsFontEdgeType(Accessibility)](arkts-accessibility-accessibility-captionsfontedgetype-t.md) |
+| [CaptionsFontFamily(Accessibility)](arkts-accessibility-accessibility-captionsfontfamily-t.md) |

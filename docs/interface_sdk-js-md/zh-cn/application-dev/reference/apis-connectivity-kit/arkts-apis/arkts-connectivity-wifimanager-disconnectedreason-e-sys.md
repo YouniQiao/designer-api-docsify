@@ -2,9 +2,9 @@
 
 WLAN断开原因。 @enum { int }
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-wifiManager-enum DisconnectedReason--><!--Device-wifiManager-enum DisconnectedReason-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -18,9 +18,9 @@ DISC_REASON_DEFAULT = 0
 
 默认原因
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-DisconnectedReason-DISC_REASON_DEFAULT = 0--><!--Device-DisconnectedReason-DISC_REASON_DEFAULT = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -34,9 +34,9 @@ DISC_REASON_WRONG_PWD = 1
 
 密码错误
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-DisconnectedReason-DISC_REASON_WRONG_PWD = 1--><!--Device-DisconnectedReason-DISC_REASON_WRONG_PWD = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -50,11 +50,10 @@ DISC_REASON_CONNECTION_FULL = 2
 
 路由器的连接数已达到最大数量限制
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-DisconnectedReason-DISC_REASON_CONNECTION_FULL = 2--><!--Device-DisconnectedReason-DISC_REASON_CONNECTION_FULL = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
-

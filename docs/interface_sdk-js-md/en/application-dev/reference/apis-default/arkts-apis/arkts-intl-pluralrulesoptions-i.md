@@ -1,8 +1,6 @@
 # PluralRulesOptions
 
-**Since:** -1
-
-<!--Device-Intl-interface PluralRulesOptions--><!--Device-Intl-interface PluralRulesOptions-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,9 +15,7 @@ localeMatcher?: "lookup" | "best fit" | undefined
 
 **Type:** "lookup" \| "best fit" \| undefined
 
-**Since:** -1
-
-<!--Device-PluralRulesOptions-localeMatcher?: "lookup" | "best fit" | undefined--><!--Device-PluralRulesOptions-localeMatcher?: "lookup" | "best fit" | undefined-End-->
+**ArkTS mode:** 
 
 ## maximumFractionDigits
 
@@ -29,9 +25,7 @@ maximumFractionDigits?: number | undefined
 
 **Type:** number \| undefined
 
-**Since:** -1
-
-<!--Device-PluralRulesOptions-maximumFractionDigits?: number | undefined--><!--Device-PluralRulesOptions-maximumFractionDigits?: number | undefined-End-->
+**ArkTS mode:** 
 
 ## maximumSignificantDigits
 
@@ -41,9 +35,7 @@ maximumSignificantDigits?: number | undefined
 
 **Type:** number \| undefined
 
-**Since:** -1
-
-<!--Device-PluralRulesOptions-maximumSignificantDigits?: number | undefined--><!--Device-PluralRulesOptions-maximumSignificantDigits?: number | undefined-End-->
+**ArkTS mode:** 
 
 ## minimumFractionDigits
 
@@ -53,9 +45,7 @@ minimumFractionDigits?: number | undefined
 
 **Type:** number \| undefined
 
-**Since:** -1
-
-<!--Device-PluralRulesOptions-minimumFractionDigits?: number | undefined--><!--Device-PluralRulesOptions-minimumFractionDigits?: number | undefined-End-->
+**ArkTS mode:** 
 
 ## minimumIntegerDigits
 
@@ -65,9 +55,7 @@ minimumIntegerDigits?: number | undefined
 
 **Type:** number \| undefined
 
-**Since:** -1
-
-<!--Device-PluralRulesOptions-minimumIntegerDigits?: number | undefined--><!--Device-PluralRulesOptions-minimumIntegerDigits?: number | undefined-End-->
+**ArkTS mode:** 
 
 ## minimumSignificantDigits
 
@@ -77,9 +65,7 @@ minimumSignificantDigits?: number | undefined
 
 **Type:** number \| undefined
 
-**Since:** -1
-
-<!--Device-PluralRulesOptions-minimumSignificantDigits?: number | undefined--><!--Device-PluralRulesOptions-minimumSignificantDigits?: number | undefined-End-->
+**ArkTS mode:** 
 
 ## type
 
@@ -89,7 +75,4 @@ type?: PluralRuleType | undefined
 
 **Type:** PluralRuleType \| undefined
 
-**Since:** -1
-
-<!--Device-PluralRulesOptions-type?: PluralRuleType | undefined--><!--Device-PluralRulesOptions-type?: PluralRuleType | undefined-End-->
-
+**ArkTS mode:** 

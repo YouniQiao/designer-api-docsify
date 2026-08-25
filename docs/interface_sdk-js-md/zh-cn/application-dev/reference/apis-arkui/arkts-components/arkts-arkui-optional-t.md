@@ -8,18 +8,17 @@ declare type Optional<T> = T | undefined
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-unnamed-declare type Optional<T> = T | undefined--><!--Device-unnamed-declare type Optional<T> = T | undefined-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 | 说明 |
-| --- | --- |
-| T | 表示泛型T所指定的类型。 |
-| undefined | 表示该类型声明的对象是undefined。 |
-
+| 类型 |
+| --- |
+| T |
+| undefined |

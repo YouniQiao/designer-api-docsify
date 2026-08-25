@@ -4,9 +4,9 @@
 
 **继承/实现关系：** Camera extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export interface Camera--><!--Device-unnamed-export interface Camera-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -20,15 +20,15 @@ getProjectionMatrix(): Mat4x4
 
 **起始版本：** 23
 
-<!--Device-Camera-getProjectionMatrix(): Mat4x4--><!--Device-Camera-getProjectionMatrix(): Mat4x4-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) | 返回相机的投影矩阵。 |
+| 类型 |
+| --- |
+| [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) |
 
 **示例**
 
@@ -63,15 +63,15 @@ getViewMatrix(): Mat4x4
 
 **起始版本：** 23
 
-<!--Device-Camera-getViewMatrix(): Mat4x4--><!--Device-Camera-getViewMatrix(): Mat4x4-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) | 返回相机的视图矩阵。 |
+| 类型 |
+| --- |
+| [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) |
 
 **示例**
 
@@ -104,24 +104,24 @@ raycast(viewPosition: Vec2, params: RaycastParameters): Promise<RaycastResult[]>
 
 从屏幕指定位置发射射线，检测并返回所有命中的3D物体信息。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Camera-raycast(viewPosition: Vec2, params: RaycastParameters): Promise<RaycastResult[]>--><!--Device-Camera-raycast(viewPosition: Vec2, params: RaycastParameters): Promise<RaycastResult[]>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| viewPosition | [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) | 是 | 使用屏幕归一化坐标，取值范围为[0, 1]。其中(0,0)表示Component3D控件的左上角，(1,1)表示Component3D控件的右下角。 |
-| params | [RaycastParameters](arkts-arkgraphics3d-scene-raycastparameters-i.md) | 是 | 射线检测的配置参数（如检测范围、过滤节点等）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| viewPosition | [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) | 是 |
+| params | [RaycastParameters](arkts-arkgraphics3d-scene-raycastparameters-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[RaycastResult](arkts-arkgraphics3d-scene-raycastresult-i.md)[]&gt; | Promise对象，返回命中的结果数组（按距离从近到远排序），若无命中则返回空数组。 |
+| 类型 |
+| --- |
+| Promise&lt;[RaycastResult](arkts-arkgraphics3d-scene-raycastresult-i.md)[]&gt; |
 
 **示例**
 
@@ -247,9 +247,9 @@ clearColor: Color | null
 
 **类型：** [Color](arkts-arkgraphics3d-scenetypes-color-i.md) \| null
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Camera-clearColor: Color | null--><!--Device-Camera-clearColor: Color | null-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -263,9 +263,9 @@ readonly effects: Container<Effect>
 
 **类型：** [Container](arkts-arkgraphics3d-scenenodes-container-i.md)&lt;[Effect](arkts-arkgraphics3d-sceneresources-effect-i.md)&gt;
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-Camera-readonly effects: Container<Effect>--><!--Device-Camera-readonly effects: Container<Effect>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -279,9 +279,9 @@ enabled: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Camera-enabled: boolean--><!--Device-Camera-enabled: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -293,11 +293,11 @@ farPlane: double
 
 远平面，单位为世界坐标系下的场景单位（比如cm、m、km等），取值大于nearPlane。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Camera-farPlane: double--><!--Device-Camera-farPlane: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -309,11 +309,11 @@ fov: double
 
 视场，单位为弧度（rad），取值范围为(0, π)。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Camera-fov: double--><!--Device-Camera-fov: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -329,9 +329,9 @@ msaa?: boolean
 
 **默认值：** false
 
-**起始版本：** 23
+**起始版本：** 22
 
-<!--Device-Camera-msaa?: boolean--><!--Device-Camera-msaa?: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -343,11 +343,11 @@ nearPlane: double
 
 近平面，单位为世界坐标系下的场景单位（比如cm、m、km等），取值大于0。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Camera-nearPlane: double--><!--Device-Camera-nearPlane: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -361,9 +361,9 @@ postProcess: PostProcessSettings | null
 
 **类型：** [PostProcessSettings](arkts-arkgraphics3d-scenepostprocesssettings-postprocesssettings-i.md) \| null
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Camera-postProcess: PostProcessSettings | null--><!--Device-Camera-postProcess: PostProcessSettings | null-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -379,9 +379,8 @@ renderingPipeline?: RenderingPipelineType
 
 **默认值：** RenderingPipelineType.FORWARD_LIGHTWEIGHT
 
-**起始版本：** 23
+**起始版本：** 21
 
-<!--Device-Camera-renderingPipeline?: RenderingPipelineType--><!--Device-Camera-renderingPipeline?: RenderingPipelineType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

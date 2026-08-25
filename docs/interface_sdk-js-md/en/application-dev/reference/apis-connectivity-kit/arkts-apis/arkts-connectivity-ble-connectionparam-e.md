@@ -4,7 +4,7 @@ GATT connection parameters.
 
 **Since:** 22
 
-<!--Device-ble-enum ConnectionParam--><!--Device-ble-enum ConnectionParam-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -18,9 +18,9 @@ low power mode.
 
 **Since:** 22
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-ConnectionParam-LOW_POWER = 1--><!--Device-ConnectionParam-LOW_POWER = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -34,9 +34,9 @@ balanced power mode.
 
 **Since:** 22
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-ConnectionParam-BALANCED = 2--><!--Device-ConnectionParam-BALANCED = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -50,9 +50,8 @@ Use the highest connection parameters.
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ConnectionParam-HIGH = 3--><!--Device-ConnectionParam-HIGH = 3-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

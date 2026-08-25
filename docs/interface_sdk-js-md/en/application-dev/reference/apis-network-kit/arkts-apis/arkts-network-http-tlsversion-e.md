@@ -2,9 +2,9 @@
 
 Enumerates TLS versions.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-http-export enum TlsVersion--><!--Device-http-export enum TlsVersion-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -16,11 +16,11 @@ TLS_V_1_0 = 4
 
 TLS version 1.0.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-TlsVersion-TLS_V_1_0 = 4--><!--Device-TlsVersion-TLS_V_1_0 = 4-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -32,11 +32,11 @@ TLS_V_1_1 = 5
 
 TLS version 1.1.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-TlsVersion-TLS_V_1_1 = 5--><!--Device-TlsVersion-TLS_V_1_1 = 5-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -48,11 +48,11 @@ TLS_V_1_2 = 6
 
 TLS version 1.2.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-TlsVersion-TLS_V_1_2 = 6--><!--Device-TlsVersion-TLS_V_1_2 = 6-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -64,11 +64,10 @@ TLS_V_1_3 = 7
 
 TLS version 1.3.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-TlsVersion-TLS_V_1_3 = 7--><!--Device-TlsVersion-TLS_V_1_3 = 7-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Communication.NetStack
-

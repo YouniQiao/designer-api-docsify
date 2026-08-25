@@ -2,9 +2,9 @@
 
 Indicates the version check result.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-update-export interface CheckResult--><!--Device-update-export interface CheckResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -26,9 +26,9 @@ Whether a new version is available. The value **true** indicates that a new vers
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-CheckResult-isExistNewVersion: boolean--><!--Device-CheckResult-isExistNewVersion: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -44,11 +44,10 @@ Information about the new version.
 
 **Type:** [NewVersionInfo](arkts-basicservices-update-newversioninfo-i-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-CheckResult-newVersionInfo: NewVersionInfo--><!--Device-CheckResult-newVersionInfo: NewVersionInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
-

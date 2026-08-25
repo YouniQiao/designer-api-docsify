@@ -2,9 +2,9 @@
 
 Describes the audio and video recording profile.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-media-interface AVRecorderProfile--><!--Device-media-interface AVRecorderProfile-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -24,11 +24,10 @@ Whether to enable video encoding policy to quality stable encoding.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-AVRecorderProfile-enableStableQualityMode?: boolean--><!--Device-AVRecorderProfile-enableStableQualityMode?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 **System API:** This is a system API.
-

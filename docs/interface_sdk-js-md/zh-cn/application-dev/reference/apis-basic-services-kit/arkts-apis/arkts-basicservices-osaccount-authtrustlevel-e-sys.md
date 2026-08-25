@@ -2,9 +2,9 @@
 
 表示认证结果的受信任级别的枚举。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-osAccount-enum AuthTrustLevel--><!--Device-osAccount-enum AuthTrustLevel-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -18,9 +18,9 @@ ATL1 = 10000
 
 信任级别 1。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-AuthTrustLevel-ATL1 = 10000--><!--Device-AuthTrustLevel-ATL1 = 10000-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -34,9 +34,9 @@ ATL2 = 20000
 
 信任级别 2。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-AuthTrustLevel-ATL2 = 20000--><!--Device-AuthTrustLevel-ATL2 = 20000-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -50,9 +50,9 @@ ATL3 = 30000
 
 信任级别 3。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-AuthTrustLevel-ATL3 = 30000--><!--Device-AuthTrustLevel-ATL3 = 30000-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -66,11 +66,10 @@ ATL4 = 40000
 
 信任级别 4。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-AuthTrustLevel-ATL4 = 40000--><!--Device-AuthTrustLevel-ATL4 = 40000-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
-

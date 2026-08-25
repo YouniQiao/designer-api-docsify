@@ -6,7 +6,7 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 8
 
-<!--Device-unnamed-declare class ToggleAttribute--><!--Device-unnamed-declare class ToggleAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,19 +25,19 @@ Creates a content modifier.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ToggleAttribute-contentModifier(modifier: ContentModifier<ToggleConfiguration>): ToggleAttribute--><!--Device-ToggleAttribute-contentModifier(modifier: ContentModifier<ToggleConfiguration>): ToggleAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| modifier | ContentModifier&lt;[ToggleConfiguration](arkts-arkui-toggleconfiguration-i.md)&gt; | Yes | Content modifier to apply to the current component.<br> **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| modifier | ContentModifier&lt;[ToggleConfiguration](arkts-arkui-toggleconfiguration-i.md)&gt; | Yes |
 
 ## onChange
 
@@ -49,19 +49,19 @@ Triggered when the toggle status changes.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ToggleAttribute-onChange(callback: (isOn: boolean) => void): ToggleAttribute--><!--Device-ToggleAttribute-onChange(callback: (isOn: boolean) => void): ToggleAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (isOn: boolean) =&gt; void | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | (isOn: boolean) = & gt; void | Yes |
 
 ## selectedColor
 
@@ -73,19 +73,19 @@ Sets the background color of the component when it is turned on.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ToggleAttribute-selectedColor(value: ResourceColor): ToggleAttribute--><!--Device-ToggleAttribute-selectedColor(value: ResourceColor): ToggleAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | ResourceColor | Yes | Background color of the component when it is turned on.<br>Default value:<br>When **ToggleType** is set to **Switch**, the default value is **\\$r('sys.color.ohos_id_color_emphasize')**.<br>When **ToggleType** is set to **Checkbox**, the default value is **\\$r('sys.color.ohos_id_color_emphasize')**.<br> When **ToggleType** is set to **Button**, the default value is **\\$r('sys.color.ohos_id_color_emphasize')** with the opacity of **\\$r('sys.float.ohos_id_alpha_highlight_bg')**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
 
 ## switchPointColor
 
@@ -97,19 +97,19 @@ Sets the color of the circular slider when the component is of the **Switch** ty
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ToggleAttribute-switchPointColor(color: ResourceColor): ToggleAttribute--><!--Device-ToggleAttribute-switchPointColor(color: ResourceColor): ToggleAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| color | ResourceColor | Yes | Color of the circular slider when the component is of the **Switch** type.<br> Default value: **\\$r('sys.color.ohos_id_color_foreground_contrary') |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
 
 ## switchStyle
 
@@ -121,17 +121,16 @@ Sets the style for the component of the **Switch** type. This attribute is valid
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ToggleAttribute-switchStyle(value: SwitchStyle): ToggleAttribute--><!--Device-ToggleAttribute-switchStyle(value: SwitchStyle): ToggleAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [SwitchStyle](arkts-arkui-switchstyle-i.md) | Yes | Style of the component of the **Switch** type. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | [SwitchStyle](arkts-arkui-switchstyle-i.md) | Yes |

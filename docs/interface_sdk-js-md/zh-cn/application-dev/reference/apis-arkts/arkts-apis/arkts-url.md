@@ -8,9 +8,9 @@ URL是统一资源定位符，本模块提供了常用的工具函数，实现�
 > **说明：**&gt;
 > - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
 
-**起始版本：** 23
+**起始版本：** 7
 
-<!--Device-unnamed-declare namespace url--><!--Device-unnamed-declare namespace url-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -24,15 +24,14 @@ import { url } from '@kit.ArkTS';
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [URL(URL字符串解析)](arkts-arkts-url-url-c.md) | 用于解析和构造完整URL。 |
-| [URLParams(URL字符串解析)](arkts-arkts-url-urlparams-c.md) | URLParams是一个用于解析、构造和操作URL参数的实用类。该类提供了统一的接口来处理URL查询参数。 |
-| [URLSearchParams(URL字符串解析)](arkts-arkts-url-urlsearchparams-c.md) | URLSearchParams接口定义了一些处理URL查询字符串的实用方法，从API version 9开始废弃，建议使用[URLParams](arkts-arkts-url-urlparams-c.md)。 |
+| 名称 |
+| --- |
+| [URL(URL字符串解析)](arkts-arkts-url-url-c.md) |
+| [URLParams(URL字符串解析)](arkts-arkts-url-urlparams-c.md) |
+| [URLSearchParams(URL字符串解析)](arkts-arkts-url-urlsearchparams-c.md) |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-| [UrlCbFn(URL字符串解析)](arkts-arkts-url-urlcbfn-t.md) | [forEach](arkts-arkts-url-urlparams-c.md#foreach)函数所需的回调函数。 |
-
+| 名称 |
+| --- |
+| [UrlCbFn(URL字符串解析)](arkts-arkts-url-urlcbfn-t.md) |

@@ -4,7 +4,7 @@
 
 **起始版本：** 11
 
-<!--Device-dlpPermission-export interface DLPManagerResult--><!--Device-dlpPermission-export interface DLPManagerResult-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -26,9 +26,9 @@ resultCode: number
 
 **起始版本：** 11
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
-<!--Device-DLPManagerResult-resultCode: number--><!--Device-DLPManagerResult-resultCode: number-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -44,9 +44,8 @@ want: Want
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DLPManagerResult-want: Want--><!--Device-DLPManagerResult-want: Want-End-->
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
-

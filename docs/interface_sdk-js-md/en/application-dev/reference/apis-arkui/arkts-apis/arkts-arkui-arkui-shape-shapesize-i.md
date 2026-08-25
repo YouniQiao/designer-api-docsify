@@ -4,7 +4,7 @@ Describes the size of a shape.
 
 **Since:** 12
 
-<!--Device-unnamed-interface ShapeSize--><!--Device-unnamed-interface ShapeSize-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,13 +26,13 @@ Height of the shape.When the parameter type is number, the valid value range is 
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-ShapeSize-height?: number | string--><!--Device-ShapeSize-height?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,13 +48,12 @@ Width of the shape.When the parameter type is number, the valid value range is 0
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-ShapeSize-width?: number | string--><!--Device-ShapeSize-width?: number | string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

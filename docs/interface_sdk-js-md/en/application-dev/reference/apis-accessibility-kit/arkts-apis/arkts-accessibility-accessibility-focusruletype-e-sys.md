@@ -4,7 +4,7 @@ Enumerates the focus rule types.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export enum FocusRuleType--><!--Device-unnamed-export enum FocusRuleType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -20,9 +20,9 @@ Default focus type. Nodes are not filtered by a specific type, and all nodes can
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-FocusRuleType-DEFAULT = 1--><!--Device-FocusRuleType-DEFAULT = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -38,9 +38,9 @@ Focus by link type, for example, elements on a web page that can be tapped to na
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-FocusRuleType-FOCUS_BY_LINK = 2--><!--Device-FocusRuleType-FOCUS_BY_LINK = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -56,11 +56,10 @@ Focus by title type, for example, heading elements at various levels on a page.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-FocusRuleType-FOCUS_BY_TITLE = 3--><!--Device-FocusRuleType-FOCUS_BY_TITLE = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
-

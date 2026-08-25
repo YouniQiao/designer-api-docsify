@@ -20,19 +20,18 @@ Uninitializes the active tag resources.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-<!--Device-connectedTag-function uninit(): boolean--><!--Device-connectedTag-function uninit(): boolean-End-->
-
 **System capability:** SystemCapability.Communication.ConnectedTag
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true**: The uninstallation is successful. <br>**false**: The uninstallation fails. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

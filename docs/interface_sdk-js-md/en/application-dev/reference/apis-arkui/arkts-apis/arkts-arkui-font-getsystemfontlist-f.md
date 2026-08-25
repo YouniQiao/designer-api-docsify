@@ -17,10 +17,12 @@ Obtains this system font list.This API only takes effect on PCs/2-in-1 devices a
 > **NOTE：**&gt;
 > - Since API version 10, you can use the
 > [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in
-> [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Font](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated with
+> [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Font](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated with
 > the current UI context.
 
 **Since:** 10
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 18
 
@@ -30,15 +32,13 @@ Obtains this system font list.This API only takes effect on PCs/2-in-1 devices a
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-font-function getSystemFontList(): Array<string>--><!--Device-font-function getSystemFontList(): Array<string>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;string&gt; | List of supported fonts. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;string & gt; |
 
 **Examples**
 
@@ -63,4 +63,3 @@ struct FontExample {
   }
 }
 ```
-

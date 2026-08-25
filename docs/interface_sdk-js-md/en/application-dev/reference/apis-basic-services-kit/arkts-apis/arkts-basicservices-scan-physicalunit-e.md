@@ -2,9 +2,9 @@
 
 Enumerates the physical units.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-scan-enum PhysicalUnit--><!--Device-scan-enum PhysicalUnit-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -16,9 +16,9 @@ SCAN_UNIT_NONE = 0
 
 No unit.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-PhysicalUnit-SCAN_UNIT_NONE = 0--><!--Device-PhysicalUnit-SCAN_UNIT_NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -30,9 +30,9 @@ SCAN_UNIT_PIXEL = 1
 
 Pixel unit.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-PhysicalUnit-SCAN_UNIT_PIXEL = 1--><!--Device-PhysicalUnit-SCAN_UNIT_PIXEL = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -44,9 +44,9 @@ SCAN_UNIT_BIT = 2
 
 Bit unit.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-PhysicalUnit-SCAN_UNIT_BIT = 2--><!--Device-PhysicalUnit-SCAN_UNIT_BIT = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -58,9 +58,9 @@ SCAN_UNIT_MM = 3
 
 Millimeter unit.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-PhysicalUnit-SCAN_UNIT_MM = 3--><!--Device-PhysicalUnit-SCAN_UNIT_MM = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -72,9 +72,9 @@ SCAN_UNIT_DPI = 4
 
 DPI unit.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-PhysicalUnit-SCAN_UNIT_DPI = 4--><!--Device-PhysicalUnit-SCAN_UNIT_DPI = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -86,9 +86,9 @@ SCAN_UNIT_PERCENT = 5
 
 Percentage unit.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-PhysicalUnit-SCAN_UNIT_PERCENT = 5--><!--Device-PhysicalUnit-SCAN_UNIT_PERCENT = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -100,9 +100,8 @@ SCAN_UNIT_MICROSECOND = 6
 
 Microsecond unit.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-PhysicalUnit-SCAN_UNIT_MICROSECOND = 6--><!--Device-PhysicalUnit-SCAN_UNIT_MICROSECOND = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
-

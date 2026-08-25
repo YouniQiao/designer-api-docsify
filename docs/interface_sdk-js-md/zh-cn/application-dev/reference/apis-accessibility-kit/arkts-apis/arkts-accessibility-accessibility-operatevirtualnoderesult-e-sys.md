@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-export enum OperateVirtualNodeResult--><!--Device-unnamed-export enum OperateVirtualNodeResult-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -20,9 +20,9 @@ SUCCESS = 0
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-OperateVirtualNodeResult-SUCCESS = 0--><!--Device-OperateVirtualNodeResult-SUCCESS = 0-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -38,9 +38,9 @@ ACCESSIBILITY_ELEMENT_NOT_EXIST = 1
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-OperateVirtualNodeResult-ACCESSIBILITY_ELEMENT_NOT_EXIST = 1--><!--Device-OperateVirtualNodeResult-ACCESSIBILITY_ELEMENT_NOT_EXIST = 1-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -56,9 +56,9 @@ CANNOT_MODIFY_ROOT_NODE = 2
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-OperateVirtualNodeResult-CANNOT_MODIFY_ROOT_NODE = 2--><!--Device-OperateVirtualNodeResult-CANNOT_MODIFY_ROOT_NODE = 2-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -74,9 +74,9 @@ ACCESSIBILITY_PROPERTY_IS_EMPTY = 3
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-OperateVirtualNodeResult-ACCESSIBILITY_PROPERTY_IS_EMPTY = 3--><!--Device-OperateVirtualNodeResult-ACCESSIBILITY_PROPERTY_IS_EMPTY = 3-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -92,9 +92,9 @@ ALLOCATE_ID_FAILED = 4
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-OperateVirtualNodeResult-ALLOCATE_ID_FAILED = 4--><!--Device-OperateVirtualNodeResult-ALLOCATE_ID_FAILED = 4-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -110,9 +110,9 @@ VIRTUAL_NODE_PARAMETER_IS_EMPTY = 5
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-OperateVirtualNodeResult-VIRTUAL_NODE_PARAMETER_IS_EMPTY = 5--><!--Device-OperateVirtualNodeResult-VIRTUAL_NODE_PARAMETER_IS_EMPTY = 5-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -128,9 +128,9 @@ INTERNAL_ERROR = 6
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-OperateVirtualNodeResult-INTERNAL_ERROR = 6--><!--Device-OperateVirtualNodeResult-INTERNAL_ERROR = 6-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -146,11 +146,10 @@ VIRTUAL_NODE_NOT_SUPPORTED = 7
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-OperateVirtualNodeResult-VIRTUAL_NODE_NOT_SUPPORTED = 7--><!--Device-OperateVirtualNodeResult-VIRTUAL_NODE_NOT_SUPPORTED = 7-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
-

@@ -4,13 +4,13 @@ Configuring parameters in reverse geocode requests@interface ReverseGeoCodeReque
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ReverseGeoCodeRequest](arkts-location-geolocationmanager-reversegeocoderequest-i.md)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-geolocation-export interface ReverseGeoCodeRequest--><!--Device-geolocation-export interface ReverseGeoCodeRequest-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -30,11 +30,11 @@ latitude: number
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [latitude](arkts-location-geolocationmanager-reversegeocoderequest-i.md#latitude)
-
-<!--Device-ReverseGeoCodeRequest-latitude: number--><!--Device-ReverseGeoCodeRequest-latitude: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -48,11 +48,11 @@ locale?: string
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [locale](arkts-location-geolocationmanager-reversegeocoderequest-i.md#locale)
-
-<!--Device-ReverseGeoCodeRequest-locale?: string--><!--Device-ReverseGeoCodeRequest-locale?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -66,11 +66,11 @@ longitude: number
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [longitude](arkts-location-geolocationmanager-reversegeocoderequest-i.md#longitude)
-
-<!--Device-ReverseGeoCodeRequest-longitude: number--><!--Device-ReverseGeoCodeRequest-longitude: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -84,11 +84,10 @@ maxItems?: number
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [maxItems](arkts-location-geolocationmanager-reversegeocoderequest-i.md#maxitems)
 
-<!--Device-ReverseGeoCodeRequest-maxItems?: number--><!--Device-ReverseGeoCodeRequest-maxItems?: number-End-->
-
 **System capability:** SystemCapability.Location.Location.Geocoder
-

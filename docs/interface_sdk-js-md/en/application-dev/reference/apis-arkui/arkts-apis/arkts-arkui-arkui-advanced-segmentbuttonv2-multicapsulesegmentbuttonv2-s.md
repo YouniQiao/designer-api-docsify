@@ -4,9 +4,7 @@ Defines the segmented button with multi capsule style.
 
 **Since:** 18
 
-**Decorator:** @ComponentV2
-
-<!--Device-unnamed-export declare struct MultiCapsuleSegmentButtonV2--><!--Device-unnamed-export declare struct MultiCapsuleSegmentButtonV2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,6 +13,24 @@ Defines the segmented button with multi capsule style.
 ```TypeScript
 import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesChange, SegmentButtonV2Item, SegmentButtonV2Items, TabSegmentButtonV2, CapsuleSegmentButtonV2, MultiCapsuleSegmentButtonV2 } from '@kit.ArkUI';
 ```
+
+## $selectedIndexes
+
+```TypeScript
+$selectedIndexes: OnSelectedIndexesChange
+```
+
+Callback invoked when the selected item changes.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## build
 
@@ -26,33 +42,11 @@ Sets the build function of the segmented button.
 
 **Since:** 18
 
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-build(): void--><!--Device-MultiCapsuleSegmentButtonV2-build(): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## $selectedIndexes
-
-```TypeScript
-$selectedIndexes: OnSelectedIndexesChange
-```
-
-Callback invoked when the selected item changes.
-
-**Type:** [OnSelectedIndexesChange](arkts-arkui-onselectedindexeschange-t.md)
-
-**Since:** 18
-
-**Decorator:** @Event
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Event    $selectedIndexes: OnSelectedIndexesChange--><!--Device-MultiCapsuleSegmentButtonV2-@Event    $selectedIndexes: OnSelectedIndexesChange-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,13 +62,11 @@ Background blur style of segmented button items.Default value: **undefined**This
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemBackgroundBlurStyle?: BlurStyle--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemBackgroundBlurStyle?: BlurStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,13 +82,11 @@ Background blur style options of segmented button items.Default value: **undefin
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemBackgroundBlurStyleOptions?: BackgroundBlurStyleOptions--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemBackgroundBlurStyleOptions?: BackgroundBlurStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,13 +102,11 @@ Background color of unselected segmented button items.Default value: **\$r('sys.
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemBackgroundColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemBackgroundColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -134,13 +122,11 @@ Background effect of segmented button items.Default value: **undefined**This pro
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemBackgroundEffect?: BackgroundEffectOptions--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemBackgroundEffect?: BackgroundEffectOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -156,13 +142,11 @@ Border radius of segmented button items.Value range: [0, +∞)Default value: **\
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemBorderRadius?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemBorderRadius?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -179,13 +163,11 @@ Font color of unselected segmented button items.Default value: **\$r('sys.color.
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemFontColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemFontColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -202,13 +184,11 @@ Font size of unselected segmented button items.Value range: [0, +∞)Default val
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemFontSize?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemFontSize?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -225,13 +205,11 @@ Font weight of unselected segmented button items.Default value: **FontWeight.Med
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemFontWeight?: FontWeight--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemFontWeight?: FontWeight-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -248,13 +226,11 @@ Icon color of unselected segmented button items.Default value: **\$r('sys.color.
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemIconFillColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemIconFillColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -271,13 +247,11 @@ Image-type icon size of segmented button items.Value range: [0, +∞)Default val
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemIconSize?: SizeT<LengthMetrics>--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemIconSize?: SizeT<LengthMetrics>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -294,13 +268,11 @@ Maximum font scale factor of the segmented button item text.Value range: [1, 2]D
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemMaxFontScale?: number | Resource--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemMaxFontScale?: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -317,13 +289,11 @@ Minimum font scale factor of the segmented button item text.Value range: [0, 1]D
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemMinFontScale?: number | Resource--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemMinFontScale?: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -340,13 +310,11 @@ Minimum height of the segmented button item.Value range: [0, +∞)Default value:
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemMinHeight?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemMinHeight?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -362,13 +330,11 @@ Padding of the segmented button item.Default value: **{top: LengthMetrics.resour
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemPadding?: LocalizedPadding--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemPadding?: LocalizedPadding-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -384,13 +350,11 @@ Items of the segmented button.If the value is **undefined**, the option informat
 
 **Since:** 18
 
-**Decorator:** @Require, @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Require    @Param    readonly items: SegmentButtonV2Items--><!--Device-MultiCapsuleSegmentButtonV2-@Require    @Param    readonly items: SegmentButtonV2Items-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -406,13 +370,11 @@ Background color of the selected segmented button item.Default value: **\$r('sys
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedBackgroundColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedBackgroundColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -429,13 +391,11 @@ Font color of the selected segmented button item.Default value: **\$r('sys.color
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedFontColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedFontColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -452,13 +412,11 @@ Font size of the selected segmented button item.Value range: [0, +∞)Default va
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedFontSize?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedFontSize?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -475,13 +433,11 @@ Font weight of the selected segmented button item.Default value: **FontWeight.Me
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedFontWeight?: FontWeight--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedFontWeight?: FontWeight-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -498,13 +454,11 @@ Icon color of the selected segmented button item.Default value: **\$r('sys.color
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedIconFillColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedIconFillColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -521,13 +475,11 @@ HM Symbol icon color of the selected segmented button item.Default value: **\$r(
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedSymbolFontColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSelectedSymbolFontColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -544,13 +496,11 @@ Space between segmented button items.Value range: [0, +∞)Default value: **Leng
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSpace?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSpace?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -567,13 +517,11 @@ HM Symbol icon color of unselected segmented button items.Default value: **\$r('
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSymbolFontColor?: ColorMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSymbolFontColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -590,13 +538,11 @@ HM Symbol icon size of segmented button items.Value range: [0, +∞)Default valu
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSymbolFontSize?: LengthMetrics--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly itemSymbolFontSize?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -612,13 +558,11 @@ Language direction of the segmented button.Default value: **Direction.Auto**If t
 
 **Since:** 18
 
-**Decorator:** @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly languageDirection?: Direction--><!--Device-MultiCapsuleSegmentButtonV2-@Param    readonly languageDirection?: Direction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -634,13 +578,11 @@ Callback invoked when a segmented button item is clicked.
 
 **Since:** 18
 
-**Decorator:** @Event
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-MultiCapsuleSegmentButtonV2-@Event    onItemClicked?: Callback<number>--><!--Device-MultiCapsuleSegmentButtonV2-@Event    onItemClicked?: Callback<number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -657,13 +599,10 @@ Array of indexes of the selected segmented button items. The index is zero-based
 
 **Since:** 18
 
-**Decorator:** @Require, @Param
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-MultiCapsuleSegmentButtonV2-@Require    @Param    readonly selectedIndexes: number[]--><!--Device-MultiCapsuleSegmentButtonV2-@Require    @Param    readonly selectedIndexes: number[]-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

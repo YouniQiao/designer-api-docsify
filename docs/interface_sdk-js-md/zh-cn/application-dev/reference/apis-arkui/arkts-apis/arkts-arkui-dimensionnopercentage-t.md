@@ -8,19 +8,18 @@ declare type DimensionNoPercentage = PX | VP | FP | LPX | Resource
 
 **起始版本：** 11
 
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-unnamed-declare type DimensionNoPercentage = PX | VP | FP | LPX | Resource--><!--Device-unnamed-declare type DimensionNoPercentage = PX | VP | FP | LPX | Resource-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-| 类型 | 说明 |
-| --- | --- |
-| PX | 长度类型，用于描述以px为单位的长度。 |
-| VP | 长度类型，用于描述以vp为单位的长度。 |
-| FP | 长度类型，用于描述以fp为单位的长度。 |
-| LPX | 长度类型，用于描述以lpx为单位的长度。 |
-| Resource | 资源引用类型，用于设置组件属性的值。 |
-
+| 类型 |
+| --- |
+| [PX](arkts-arkui-px-t.md) |
+| [VP](arkts-arkui-vp-t.md) |
+| [FP](arkts-arkui-fp-t.md) |
+| [LPX](arkts-arkui-lpx-t.md) |
+| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |

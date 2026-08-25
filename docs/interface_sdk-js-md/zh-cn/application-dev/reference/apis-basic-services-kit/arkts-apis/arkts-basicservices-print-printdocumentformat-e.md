@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-print-enum PrintDocumentFormat--><!--Device-print-enum PrintDocumentFormat-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -18,9 +18,9 @@ DOCUMENT_FORMAT_AUTO = 0
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_AUTO = 0--><!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_AUTO = 0-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -34,9 +34,9 @@ DOCUMENT_FORMAT_JPEG = 1
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_JPEG = 1--><!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_JPEG = 1-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -50,9 +50,9 @@ DOCUMENT_FORMAT_PDF = 2
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_PDF = 2--><!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_PDF = 2-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -66,9 +66,9 @@ DOCUMENT_FORMAT_POSTSCRIPT = 3
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_POSTSCRIPT = 3--><!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_POSTSCRIPT = 3-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -82,9 +82,9 @@ DOCUMENT_FORMAT_TEXT = 4
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_TEXT = 4--><!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_TEXT = 4-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -98,9 +98,8 @@ DOCUMENT_FORMAT_RAW = 5
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_RAW = 5--><!--Device-PrintDocumentFormat-DOCUMENT_FORMAT_RAW = 5-End-->
-
 **系统能力：** SystemCapability.Print.PrintFramework
-

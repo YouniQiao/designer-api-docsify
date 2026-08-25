@@ -12,9 +12,7 @@ This module provides the capability of displaying ads, covering native, roll, sp
 
 **Since:** 11
 
-**Decorator:** @Component
-
-<!--Device-unnamed-declare struct AdComponent--><!--Device-unnamed-declare struct AdComponent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -23,6 +21,22 @@ This module provides the capability of displaying ads, covering native, roll, sp
 ```TypeScript
 import { AdComponent } from '@kit.AdsKit';
 ```
+
+## adRenderer
+
+```TypeScript
+adRenderer?: () => void
+```
+
+Application self-rendered ad style. The application self-rendered ad style is a restricted capability. For details, please consult [Traffic Monetization Official Website Customer Support](https://developer.huawei.com/consumer/en/doc/monetize/ support-0000001061434261).
+
+**Since:** 12
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+**System capability:** SystemCapability.Advertising.Ads
 
 ## build
 
@@ -34,29 +48,9 @@ A constructor used to create an **AdComponent** object.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AdComponent-build(): void--><!--Device-AdComponent-build(): void-End-->
-
-**System capability:** SystemCapability.Advertising.Ads
-
-## adRenderer
-
-```TypeScript
-adRenderer?: () => void
-```
-
-Application self-rendered ad style. The application self-rendered ad style is a restricted capability. For details, please consult [Traffic Monetization Official Website Customer Support](https://developer.huawei.com/consumer/en/doc/monetize/ support-0000001061434261).
-
-**Type:** () =&gt; void
-
-**Since:** 12
-
-**Decorator:** @BuilderParam
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-AdComponent-@BuilderParam  adRenderer?: () => void--><!--Device-AdComponent-@BuilderParam  adRenderer?: () => void-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -72,9 +66,9 @@ Array of ad objects.NOTE: For non-roll ad types, the component only displays the
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-AdComponent-ads: advertising.Advertisement[]--><!--Device-AdComponent-ads: advertising.Advertisement[]-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -90,9 +84,9 @@ Ad display parameters.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-AdComponent-displayOptions: advertising.AdDisplayOptions--><!--Device-AdComponent-displayOptions: advertising.AdDisplayOptions-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -108,9 +102,9 @@ Callback for ad status changes.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-AdComponent-interactionListener: advertising.AdInteractionListener--><!--Device-AdComponent-interactionListener: advertising.AdInteractionListener-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -126,11 +120,9 @@ Used to provide the playback status of roll ads externally. Set to 1 for playing
 
 **Since:** 15
 
-**Decorator:** @Prop
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-AdComponent-@Prop  rollPlayState?: number--><!--Device-AdComponent-@Prop  rollPlayState?: number-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -219,4 +211,3 @@ struct Index {
   }
 }
 ```
-

@@ -9,17 +9,16 @@ The report custom elements change event.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-avMusicTemplate-type ReportCustomElementsChangeEvent = (actionType: ActionType, customType: CustomType,    customElement: CustomElement) => void--><!--Device-avMusicTemplate-type ReportCustomElementsChangeEvent = (actionType: ActionType, customType: CustomType,    customElement: CustomElement) => void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| actionType | ActionType | Yes | action type |
-| customType | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md) | Yes | custom type |
-| customElement | [CustomElement](arkts-avsession-avmusictemplate-customelement-i.md) | Yes | custom element |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| actionType | [ActionType](arkts-avsession-avmusictemplate-actiontype-t.md) | Yes |
+| customType | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md) | Yes |
+| customElement | [CustomElement](arkts-avsession-avmusictemplate-customelement-i.md) | Yes |

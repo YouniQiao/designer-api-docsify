@@ -2,9 +2,9 @@
 
 当前XML解析信息。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-xml-interface ParseInfo--><!--Device-xml-interface ParseInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -16,25 +16,31 @@ import { xml } from '@kit.ArkTS';
 
 ## getAttributeCount
 
+ArkTS-Dyn:
+```TypeScript
+getAttributeCount(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getAttributeCount(): int
 ```
 
 ArkTS-Sta: getAttributeCount(): int当前开始标记的属性数量，用于遍历和处理XML属性。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ParseInfo-getAttributeCount(): int--><!--Device-ParseInfo-getAttributeCount(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 当前开始标记的属性数量，用于遍历和处理XML属性。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -58,25 +64,31 @@ console.info(str);
 
 ## getColumnNumber
 
+ArkTS-Dyn:
+```TypeScript
+getColumnNumber(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getColumnNumber(): int
 ```
 
 ArkTS-Sta: getColumnNumber(): int获取当前列号，从1开始计数。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ParseInfo-getColumnNumber(): int--><!--Device-ParseInfo-getColumnNumber(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 当前元素的列号（从1开始），用于定位XML解析位置。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -100,6 +112,12 @@ console.info(str);
 
 ## getDepth
 
+ArkTS-Dyn:
+```TypeScript
+getDepth(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getDepth(): int
 ```
@@ -109,19 +127,19 @@ ArkTS-Sta: getDepth(): int获取元素的当前深度。
 > **说明：**&gt;
 > 标签内的空白事件深度与标签的深度保持一致。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ParseInfo-getDepth(): int--><!--Device-ParseInfo-getDepth(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 元素的嵌套深度（从0开始），用于判断XML层级结构。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -149,25 +167,31 @@ console.info(str);
 
 ## getLineNumber
 
+ArkTS-Dyn:
+```TypeScript
+getLineNumber(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getLineNumber(): int
 ```
 
 ArkTS-Sta: getLineNumber(): int获取当前行号，从1开始。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ParseInfo-getLineNumber(): int--><!--Device-ParseInfo-getLineNumber(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 当前元素的行号（从1开始），用于定位XML解析位置。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **示例**
 
@@ -197,19 +221,19 @@ getName(): string
 
 获取当前元素名称。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ParseInfo-getName(): string--><!--Device-ParseInfo-getName(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 当前元素的名称（不包含命名空间前缀），用于标识XML元素。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -239,19 +263,19 @@ getNamespace(): string
 
 获取当前元素的命名空间。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ParseInfo-getNamespace(): string--><!--Device-ParseInfo-getNamespace(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回当前元素的命名空间。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -285,19 +309,19 @@ getPrefix(): string
 
 获取当前元素的命名空间前缀。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ParseInfo-getPrefix(): string--><!--Device-ParseInfo-getPrefix(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回当前元素的命名空间前缀，如果元素没有命名空间前缀则返回空字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -331,19 +355,19 @@ getText(): string
 
 获取当前事件的文本内容。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ParseInfo-getText(): string--><!--Device-ParseInfo-getText(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 当前事件的文本内容（如标签值、注释等），用于获取解析的XML数据。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -373,19 +397,19 @@ isEmptyElementTag(): boolean
 
 判断当前元素是否为空元素。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ParseInfo-isEmptyElementTag(): boolean--><!--Device-ParseInfo-isEmptyElementTag(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回true，表示当前元素为空元素。返回false，表示当前元素为非空元素。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -419,19 +443,19 @@ isWhitespace(): boolean
 
 判断当前事件是否只包含空格字符。
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ParseInfo-isWhitespace(): boolean--><!--Device-ParseInfo-isWhitespace(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回true，表示当前文本事件仅包含空格字符。返回false，表示当前文本事件包含非空格字符。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -456,4 +480,3 @@ that.parseXml(options);
 console.info(str);
 // key:0 value:true key:2 value:false key:2 value:true key:10 value:true key:3 value:true key:3 value:true key:1 value:true
 ```
-

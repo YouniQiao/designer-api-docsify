@@ -14,11 +14,11 @@ function enableHotspot(): void
 
 Enable Wi-Fi hotspot function. This method is asynchronous. After the Wi-Fi hotspot is enabled, Wi-Fi may be disabled.
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
-
-<!--Device-wifiManager-function enableHotspot(): void--><!--Device-wifiManager-function enableHotspot(): void-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -26,12 +26,12 @@ Enable Wi-Fi hotspot function. This method is asynchronous. After the Wi-Fi hots
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) | Operation failed. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) |
 
 **Examples**
 
@@ -44,4 +44,3 @@ try {
     console.error("failed:" + JSON.stringify(error));
 }
 ```
-

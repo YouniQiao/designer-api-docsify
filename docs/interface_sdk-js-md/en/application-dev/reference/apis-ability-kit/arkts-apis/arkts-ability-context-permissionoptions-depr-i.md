@@ -2,7 +2,7 @@
 
 **Since:** 7
 
-<!--Device-unnamed-interface PermissionOptions--><!--Device-unnamed-interface PermissionOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -20,9 +20,9 @@ Process ID.
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-PermissionOptions-pid?: number--><!--Device-PermissionOptions-pid?: number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -40,9 +40,8 @@ User ID.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-PermissionOptions-uid?: number--><!--Device-PermissionOptions-uid?: number-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-

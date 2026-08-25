@@ -4,9 +4,9 @@
 
 **起始版本：** 9
 
-**废弃版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-fileExtensionInfo-enum DeviceType--><!--Device-fileExtensionInfo-enum DeviceType-End-->
+**废弃版本：** 23
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -22,11 +22,11 @@ DEVICE_LOCAL_DISK = 1
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DeviceType-DEVICE_LOCAL_DISK = 1--><!--Device-DeviceType-DEVICE_LOCAL_DISK = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -42,11 +42,11 @@ DEVICE_SHARED_DISK = 2
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DeviceType-DEVICE_SHARED_DISK = 2--><!--Device-DeviceType-DEVICE_SHARED_DISK = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -62,11 +62,11 @@ DEVICE_SHARED_TERMINAL = 3
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DeviceType-DEVICE_SHARED_TERMINAL = 3--><!--Device-DeviceType-DEVICE_SHARED_TERMINAL = 3-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -82,11 +82,11 @@ DEVICE_NETWORK_NEIGHBORHOODS = 4
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DeviceType-DEVICE_NETWORK_NEIGHBORHOODS = 4--><!--Device-DeviceType-DEVICE_NETWORK_NEIGHBORHOODS = 4-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -102,11 +102,11 @@ MTP设备。
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DeviceType-DEVICE_EXTERNAL_MTP = 5--><!--Device-DeviceType-DEVICE_EXTERNAL_MTP = 5-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -122,11 +122,11 @@ USB设备。
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DeviceType-DEVICE_EXTERNAL_USB = 6--><!--Device-DeviceType-DEVICE_EXTERNAL_USB = 6-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -142,13 +142,12 @@ DEVICE_EXTERNAL_CLOUD = 7
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DeviceType-DEVICE_EXTERNAL_CLOUD = 7--><!--Device-DeviceType-DEVICE_EXTERNAL_CLOUD = 7-End-->
-
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
-

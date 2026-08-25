@@ -4,13 +4,13 @@ Defines the callback invoked when the acceleration sensor data changes.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
-
-<!--Device-unnamed-export interface AccelerometerResponse--><!--Device-unnamed-export interface AccelerometerResponse-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -32,6 +32,8 @@ Acceleration on the x-axis.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [x](arkts-sensorservice-sensor-accelerometerresponse-i.md#x)
@@ -39,8 +41,6 @@ Acceleration on the x-axis.
 **Required permissions:** ohos.permission.ACCELEROMETER
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-AccelerometerResponse-x: number--><!--Device-AccelerometerResponse-x: number-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -56,6 +56,8 @@ Acceleration on the y-axis.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [y](arkts-sensorservice-sensor-accelerometerresponse-i.md#y)
@@ -63,8 +65,6 @@ Acceleration on the y-axis.
 **Required permissions:** ohos.permission.ACCELEROMETER
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-AccelerometerResponse-y: number--><!--Device-AccelerometerResponse-y: number-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -80,6 +80,8 @@ Acceleration on the z-axis.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [z](arkts-sensorservice-sensor-accelerometerresponse-i.md#z)
@@ -88,7 +90,4 @@ Acceleration on the z-axis.
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-AccelerometerResponse-z: number--><!--Device-AccelerometerResponse-z: number-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
-

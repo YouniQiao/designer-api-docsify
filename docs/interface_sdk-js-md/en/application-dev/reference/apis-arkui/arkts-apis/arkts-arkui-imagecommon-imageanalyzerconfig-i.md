@@ -4,9 +4,7 @@ Image AI analysis configuration item.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare interface ImageAnalyzerConfig--><!--Device-unnamed-export declare interface ImageAnalyzerConfig-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +20,8 @@ Image AI analysis type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ImageAnalyzerConfig-types: ImageAnalyzerType[]--><!--Device-ImageAnalyzerConfig-types: ImageAnalyzerType[]-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

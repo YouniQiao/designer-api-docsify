@@ -4,7 +4,7 @@ The module defines the child process information. The information can be obtaine
 
 **Since:** 26.1.0
 
-<!--Device-unnamed-export interface ChildProcessInformation--><!--Device-unnamed-export interface ChildProcessInformation-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -16,13 +16,13 @@ parentPid: int
 
 PID of the parent process of the child process.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-ChildProcessInformation-parentPid: int--><!--Device-ChildProcessInformation-parentPid: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -34,13 +34,13 @@ pid: int
 
 PID of the child process.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-ChildProcessInformation-pid: int--><!--Device-ChildProcessInformation-pid: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -56,9 +56,8 @@ Process name of the child process.
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ChildProcessInformation-processName: string--><!--Device-ChildProcessInformation-processName: string-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-

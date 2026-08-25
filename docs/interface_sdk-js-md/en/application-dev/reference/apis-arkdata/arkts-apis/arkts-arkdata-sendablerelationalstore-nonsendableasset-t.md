@@ -8,9 +8,8 @@ Represents the asset (such as a document, image, or video) that cannot be passed
 
 **Since:** 12
 
-<!--Device-sendableRelationalStore-type NonSendableAsset = relationalStore.Asset--><!--Device-sendableRelationalStore-type NonSendableAsset = relationalStore.Asset-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Property type:** relationalStore.Asset
-

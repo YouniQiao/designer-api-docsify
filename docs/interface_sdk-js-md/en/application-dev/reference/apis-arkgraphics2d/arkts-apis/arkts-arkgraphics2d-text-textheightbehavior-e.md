@@ -2,9 +2,9 @@
 
 Enumerates the text height modifier patterns.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-text-enum TextHeightBehavior--><!--Device-text-enum TextHeightBehavior-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -16,11 +16,11 @@ ALL = 0x0
 
 Allows the first line of the paragraph to rise and the last line to drop.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-TextHeightBehavior-ALL = 0x0--><!--Device-TextHeightBehavior-ALL = 0x0-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,11 +32,11 @@ DISABLE_FIRST_ASCENT = 0x1
 
 Prevents the first line of a paragraph from rising.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-TextHeightBehavior-DISABLE_FIRST_ASCENT = 0x1--><!--Device-TextHeightBehavior-DISABLE_FIRST_ASCENT = 0x1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -48,11 +48,11 @@ DISABLE_LAST_ASCENT = 0x2
 
 Prevents the last line of a paragraph from dropping.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-TextHeightBehavior-DISABLE_LAST_ASCENT = 0x2--><!--Device-TextHeightBehavior-DISABLE_LAST_ASCENT = 0x2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -64,11 +64,10 @@ DISABLE_ALL = 0x1 | 0x2
 
 Prevents the first line of the paragraph to rise and the last line to drop.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-TextHeightBehavior-DISABLE_ALL = 0x1 | 0x2--><!--Device-TextHeightBehavior-DISABLE_ALL = 0x1 | 0x2-End-->
-
 **System capability:** SystemCapability.Graphics.Drawing
-

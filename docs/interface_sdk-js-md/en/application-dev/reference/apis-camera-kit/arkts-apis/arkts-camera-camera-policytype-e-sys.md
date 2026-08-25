@@ -2,9 +2,9 @@
 
 Enumerates the policy types.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-camera-enum PolicyType--><!--Device-camera-enum PolicyType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -18,11 +18,10 @@ PRIVACY = 1
 
 Privacy.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-PolicyType-PRIVACY = 1--><!--Device-PolicyType-PRIVACY = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

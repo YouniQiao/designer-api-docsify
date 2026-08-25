@@ -16,24 +16,24 @@ function format(format: string, ...args: Object[]): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
-<!--Device-util-function format(format: string, ...args: Object[]): string--><!--Device-util-function format(format: string, ...args: Object[]): string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| format | string | 是 | 格式化字符串，可以包含零个或多个占位符，用于指定要插入的参数的位置和格式。 |
-| args | Object[] | 是 | 替换format参数中占位符的数据，此参数缺失时，直接返回格式化字符串本身。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [format](#format) | string | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Object[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 格式化后的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -168,4 +168,3 @@ formattedString = util.format('John finished %d%% of the %s', percentage, arg);
 console.info(formattedString);
 // 输出结果：John finished 80% of the homework
 ```
-

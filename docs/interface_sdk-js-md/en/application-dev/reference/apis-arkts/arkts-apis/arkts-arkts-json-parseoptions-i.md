@@ -4,7 +4,7 @@ Describes the parsing options, which can define the mode for processing BigInt.
 
 **Since:** 12
 
-<!--Device-json-interface ParseOptions--><!--Device-json-interface ParseOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,9 +26,8 @@ Mode for processing BigInt.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ParseOptions-bigIntMode: BigIntMode--><!--Device-ParseOptions-bigIntMode: BigIntMode-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

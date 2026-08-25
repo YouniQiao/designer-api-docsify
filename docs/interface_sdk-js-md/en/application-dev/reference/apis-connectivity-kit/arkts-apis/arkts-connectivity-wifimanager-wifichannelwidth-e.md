@@ -2,9 +2,9 @@
 
 Describes the wifi channel width. @enum { int }
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-wifiManager-enum WifiChannelWidth--><!--Device-wifiManager-enum WifiChannelWidth-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -16,9 +16,9 @@ WIDTH_20MHZ = 0
 
 20MHz.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-WifiChannelWidth-WIDTH_20MHZ = 0--><!--Device-WifiChannelWidth-WIDTH_20MHZ = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -30,9 +30,9 @@ WIDTH_40MHZ = 1
 
 40MHz.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-WifiChannelWidth-WIDTH_40MHZ = 1--><!--Device-WifiChannelWidth-WIDTH_40MHZ = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -44,9 +44,9 @@ WIDTH_80MHZ = 2
 
 80MHz.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-WifiChannelWidth-WIDTH_80MHZ = 2--><!--Device-WifiChannelWidth-WIDTH_80MHZ = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -58,9 +58,9 @@ WIDTH_160MHZ = 3
 
 160MHz.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-WifiChannelWidth-WIDTH_160MHZ = 3--><!--Device-WifiChannelWidth-WIDTH_160MHZ = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -72,9 +72,9 @@ WIDTH_80MHZ_PLUS = 4
 
 80MHz plus.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-WifiChannelWidth-WIDTH_80MHZ_PLUS = 4--><!--Device-WifiChannelWidth-WIDTH_80MHZ_PLUS = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -86,9 +86,8 @@ WIDTH_INVALID
 
 Invalid.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-WifiChannelWidth-WIDTH_INVALID--><!--Device-WifiChannelWidth-WIDTH_INVALID-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
-

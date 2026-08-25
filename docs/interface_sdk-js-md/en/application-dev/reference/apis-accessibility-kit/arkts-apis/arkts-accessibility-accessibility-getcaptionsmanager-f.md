@@ -17,17 +17,17 @@ Obtains a **CaptionsManager** instance.
 
 **Since:** 8
 
-**Deprecated since:** 12
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-accessibility-function getCaptionsManager(): CaptionsManager--><!--Device-accessibility-function getCaptionsManager(): CaptionsManager-End-->
+**Deprecated since:** 12
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [CaptionsManager](arkts-accessibility-accessibility-captionsmanager-i.md) | Captions configuration. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [CaptionsManager](arkts-accessibility-accessibility-captionsmanager-i.md) |
 
 **Examples**
 
@@ -36,4 +36,3 @@ import { accessibility } from '@kit.AccessibilityKit';
 
 let captionsManager = accessibility.getCaptionsManager();
 ```
-

@@ -4,9 +4,9 @@
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-unnamed-declare namespace videoProcessing--><!--Device-unnamed-declare namespace videoProcessing-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
@@ -20,21 +20,20 @@ import { videoProcessing } from '@kit.MediaKit';
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [createVideoProcessor(提供视频画质处理能力。)](arkts-media-videoprocessing-createvideoprocessor-f.md) | 创建视频处理实例。 |
+| 名称 |
+| --- |
+| [createVideoProcessor(提供视频画质处理能力。)](arkts-media-videoprocessing-createvideoprocessor-f.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [VideoProcessor(提供视频画质处理能力。)](arkts-media-videoprocessing-videoprocessor-i.md) | 提供VideoProcessor类型，包括AIHDR相关功能。 |
-| [VideoProcessorAiHdrStatus(提供视频画质处理能力。)](arkts-media-videoprocessing-videoprocessoraihdrstatus-i.md) | 提供AIHDR功能状态。 |
-| [VideoProcessorStatus(提供视频画质处理能力。)](arkts-media-videoprocessing-videoprocessorstatus-i.md) | 提供统一的视频处理功能状态。 |
+| 名称 |
+| --- |
+| [VideoProcessor(提供视频画质处理能力。)](arkts-media-videoprocessing-videoprocessor-i.md) |
+| [VideoProcessorAiHdrStatus(提供视频画质处理能力。)](arkts-media-videoprocessing-videoprocessoraihdrstatus-i.md) |
+| [VideoProcessorStatus(提供视频画质处理能力。)](arkts-media-videoprocessing-videoprocessorstatus-i.md) |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-| [VideoProcessorStatusCallback(提供视频画质处理能力。)](arkts-media-videoprocessing-videoprocessorstatuscallback-t.md) | 视频处理功能状态变化的回调类型。 |
-
+| 名称 |
+| --- |
+| [VideoProcessorStatusCallback(提供视频画质处理能力。)](arkts-media-videoprocessing-videoprocessorstatuscallback-t.md) |

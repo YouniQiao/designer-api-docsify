@@ -16,19 +16,19 @@ function showToast(options: ShowToastOptions): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** showToast
-
-<!--Device-prompt-function showToast(options: ShowToastOptions): void--><!--Device-prompt-function showToast(options: ShowToastOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | ShowToastOptions | 是 | 文本弹窗选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | 是 |
 
 **示例**
 
@@ -39,4 +39,3 @@ prompt.showToast({
   duration: 2000
 });
 ```
-

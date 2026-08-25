@@ -16,22 +16,21 @@ Obtains the serial port list. This API returns the result asynchronously through
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-serial-function getSerialPortList(): Promise<SerialPort[]>--><!--Device-serial-function getSerialPortList(): Promise<SerialPort[]>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;SerialPort[]&gt; | Promise used to return the list of serial port devices. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;SerialPort[] & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-
+| Error Code ID |
+| --- |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
+| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) |

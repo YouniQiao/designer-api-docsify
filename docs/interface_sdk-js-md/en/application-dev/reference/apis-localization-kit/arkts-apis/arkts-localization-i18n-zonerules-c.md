@@ -2,9 +2,9 @@
 
 Queries the time zone transition rule.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-i18n-export class ZoneRules--><!--Device-i18n-export class ZoneRules-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -16,31 +16,37 @@ import { i18n } from '@kit.LocalizationKit';
 
 ## nextTransition
 
+ArkTS-Dyn:
+```TypeScript
+public nextTransition(date?: number): ZoneOffsetTransition
+```
+
+ArkTS-Sta:
 ```TypeScript
 public nextTransition(date?: double): ZoneOffsetTransition
 ```
 
 Obtains the **nextTransition** object for the specified time.
 
-**Since:** 23
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-ZoneRules-public nextTransition(date?: double): ZoneOffsetTransition--><!--Device-ZoneRules-public nextTransition(date?: double): ZoneOffsetTransition-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| date | double | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| date | ArkTS-Dyn: number<br>ArkTS-Sta：double | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ZoneOffsetTransition](arkts-localization-i18n-zoneoffsettransition-c.md) | ZoneOffsetTransition** object for next transition. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ZoneOffsetTransition](arkts-localization-i18n-zoneoffsettransition-c.md) |
 
 **Examples**
 
@@ -55,4 +61,3 @@ let date = new Date(2025, 4, 13);
 // Obtain the next time zone transition for Tijuana after May 13, 2025.
 let zoneOffsetTransition: i18n.ZoneOffsetTransition = zoneRules.nextTransition(date.getTime());
 ```
-

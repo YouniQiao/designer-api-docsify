@@ -4,7 +4,7 @@ The childprocess object can be used to create a new process.
 
 **Since:** 7
 
-<!--Device-process-export interface ChildProcess--><!--Device-process-export interface ChildProcess-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,7 +26,7 @@ Close the target process
 
 **Since:** 7
 
-<!--Device-ChildProcess-close(): void--><!--Device-ChildProcess-close(): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -42,7 +42,7 @@ Return it as 'Uint8Array of the stderr until EOF
 
 **Since:** 7
 
-<!--Device-ChildProcess-getErrorOutput(): Promise<Uint8Array>--><!--Device-ChildProcess-getErrorOutput(): Promise<Uint8Array>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -50,9 +50,9 @@ Return it as 'Uint8Array of the stderr until EOF
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Uint8Array&gt; | Return subprocess standard error output. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Uint8Array & gt; |
 
 ## getOutput
 
@@ -64,7 +64,7 @@ Return it as 'Uint8Array' of the stdout until EOF
 
 **Since:** 7
 
-<!--Device-ChildProcess-getOutput(): Promise<Uint8Array>--><!--Device-ChildProcess-getOutput(): Promise<Uint8Array>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -72,9 +72,9 @@ Return it as 'Uint8Array' of the stdout until EOF
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Uint8Array&gt; | Return subprocess standard output. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;Uint8Array & gt; |
 
 ## kill
 
@@ -86,7 +86,7 @@ Send a signal to process
 
 **Since:** 7
 
-<!--Device-ChildProcess-kill(signal: number | string): void--><!--Device-ChildProcess-kill(signal: number | string): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -94,9 +94,9 @@ Send a signal to process
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| signal | number \| string | Yes | Number or string represents the signal sent. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [signal](arkts-arkts-locks-asynclockoptions-c.md) | number \| string | Yes |
 
 **Examples**
 
@@ -121,7 +121,7 @@ Return 'number' is the target process exit code
 
 **Since:** 7
 
-<!--Device-ChildProcess-wait(): Promise<number>--><!--Device-ChildProcess-wait(): Promise<number>-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -129,9 +129,9 @@ Return 'number' is the target process exit code
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;number&gt; | Return the target process exit code. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;number & gt; |
 
 ## exitCode
 
@@ -145,7 +145,7 @@ Return exitCode is the exit code of the current child process
 
 **Since:** 7
 
-<!--Device-ChildProcess-readonly exitCode: number--><!--Device-ChildProcess-readonly exitCode: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -163,7 +163,7 @@ Return boolean is whether the current process signal is sent successfully
 
 **Since:** 7
 
-<!--Device-ChildProcess-readonly killed: boolean--><!--Device-ChildProcess-readonly killed: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -181,7 +181,7 @@ Return pid is the pid of the current process
 
 **Since:** 7
 
-<!--Device-ChildProcess-readonly pid: number--><!--Device-ChildProcess-readonly pid: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -199,9 +199,8 @@ Return ppid is the pid of the current child process
 
 **Since:** 7
 
-<!--Device-ChildProcess-readonly ppid: number--><!--Device-ChildProcess-readonly ppid: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **System API:** This is a system API.
-

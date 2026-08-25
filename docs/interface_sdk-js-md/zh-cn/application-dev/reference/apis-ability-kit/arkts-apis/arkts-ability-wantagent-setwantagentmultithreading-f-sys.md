@@ -14,11 +14,11 @@ function setWantAgentMultithreading(isMultithreadingSupported: boolean) : void
 
 开启或者关闭WantAgent多线程传递功能。
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-wantAgent-function setWantAgentMultithreading(isMultithreadingSupported: boolean) : void--><!--Device-wantAgent-function setWantAgentMultithreading(isMultithreadingSupported: boolean) : void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -26,16 +26,16 @@ function setWantAgentMultithreading(isMultithreadingSupported: boolean) : void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isMultithreadingSupported | boolean | 是 | 表示是否开启多线程传递功能。true表示开启，false表示关闭。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| isMultithreadingSupported | boolean | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -155,4 +155,3 @@ try {
   console.error(`Failed to get wantAgent. Code is ${err.code}. Message is ${err.message}.`);
 }
 ```
-

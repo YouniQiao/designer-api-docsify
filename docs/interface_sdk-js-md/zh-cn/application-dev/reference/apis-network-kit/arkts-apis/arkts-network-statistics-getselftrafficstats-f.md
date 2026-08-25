@@ -22,31 +22,31 @@ function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>
 
 **起始版本：** 22
 
-<!--Device-statistics-function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>--><!--Device-statistics-function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| networkInfo | NetworkInfo | 是 | 指定查询的网络信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| networkInfo | [NetworkInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-cachedownload-networkinfo-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md)&gt; | Promise对象，返回应用历史流量统计信息。 |
+| 类型 |
+| --- |
+| Promise&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-| [2103017](../errorcode-net-statistics.md#2103017-读取数据库失败) | Failed to read the database. |
-| [2103019](../errorcode-net-statistics.md#2103019-时间戳无效) | The timestamp in param is invalid. |
+| 错误码ID |
+| --- |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
+| [2103017](../errorcode-net-statistics.md#2103017-读取数据库失败) |
+| [2103019](../errorcode-net-statistics.md#2103019-时间戳无效) |
 
 **示例**
 
@@ -67,4 +67,3 @@ statistics.getSelfTrafficStats(networkInfo).then((stats: statistics.NetStatsInfo
     console.error('getSelfTrafficStats error. code: ' + `${err.code}` + ', message: ' + `${err.message}`);
 });
 ```
-

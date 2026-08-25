@@ -6,7 +6,7 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare class RepeatAttribute--><!--Device-unnamed-declare class RepeatAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,27 +30,27 @@ each(itemGenerator: (repeatItem: RepeatItem<T>) => void): RepeatAttribute<T>
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-RepeatAttribute-each(itemGenerator: (repeatItem: RepeatItem<T>) => void): RepeatAttribute<T>--><!--Device-RepeatAttribute-each(itemGenerator: (repeatItem: RepeatItem<T>) => void): RepeatAttribute<T>-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| itemGenerator | (repeatItem: RepeatItem&lt;T&gt;) =&gt; void | 是 | 组件生成函数。repeatItem：将item（arr数组中的数据项）和index（数据项索引）组合到一起的状态变量。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| itemGenerator | (repeatItem: RepeatItem & lt;T & gt;) = & gt; void | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
+| 类型 |
+| --- |
+| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |
 
 **示例**
 
@@ -73,27 +73,27 @@ key(keyGenerator: (item: T, index: number) => string): RepeatAttribute<T>
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-RepeatAttribute-key(keyGenerator: (item: T, index: number) => string): RepeatAttribute<T>--><!--Device-RepeatAttribute-key(keyGenerator: (item: T, index: number) => string): RepeatAttribute<T>-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| keyGenerator | (item: T, index: number) =&gt; string | 是 | 键值生成函数。 <br>item：`arr`数组中的数据项，可选。缺省时默认忽略该参数，请勿在闭包函数的实现中使用该参数，否则会编译报错。 <br>index：`arr`数组中的数据项索引，可选。缺省时默认忽略该参数，请勿在闭包函数的实现中使用该参数，否则会编译报错。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| keyGenerator | (item: T, index: number) = & gt; string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
+| 类型 |
+| --- |
+| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |
 
 **示例**
 
@@ -118,27 +118,27 @@ template(type: string, itemBuilder: RepeatItemBuilder<T>, templateOptions?: Temp
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RepeatAttribute-template(type: string, itemBuilder: RepeatItemBuilder<T>, templateOptions?: TemplateOptions): RepeatAttribute<T>--><!--Device-RepeatAttribute-template(type: string, itemBuilder: RepeatItemBuilder<T>, templateOptions?: TemplateOptions): RepeatAttribute<T>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | string | 是 | 当前模板类型标识，需与templateId()的返回值相匹配，用于确定数据项使用哪个模板进行渲染。 |
-| itemBuilder | [RepeatItemBuilder](arkts-arkui-repeatitembuilder-t.md)&lt;T&gt; | 是 | 组件生成函数，用于渲染当前template对应的子组件。repeatItem为携带item（数据项）与index（索引）的组合状态变量，请 勿将`RepeatItem`参数拆开使用。 |
-| templateOptions | [TemplateOptions](arkts-arkui-templateoptions-i.md) | 否 | 当前模板配置项。当需要自定义模板配置（如设置模板缓存池中可缓存子组件节点的最大数量cachedCount等）时传入此参数；不传入时默认值为 undefined，Repeat将使用默认模板配置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | string | 是 |
+| itemBuilder | [RepeatItemBuilder](arkts-arkui-repeatitembuilder-t.md)&lt;T&gt; | 是 |
+| templateOptions | [TemplateOptions](arkts-arkui-templateoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
+| 类型 |
+| --- |
+| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |
 
 **示例**
 
@@ -169,25 +169,25 @@ templateId(typedFunc: TemplateTypedFunc<T>): RepeatAttribute<T>
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RepeatAttribute-templateId(typedFunc: TemplateTypedFunc<T>): RepeatAttribute<T>--><!--Device-RepeatAttribute-templateId(typedFunc: TemplateTypedFunc<T>): RepeatAttribute<T>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| typedFunc | [TemplateTypedFunc](arkts-arkui-templatetypedfunc-t.md)&lt;T&gt; | 是 | 生成当前数据项对应的template type。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| typedFunc | [TemplateTypedFunc](arkts-arkui-templatetypedfunc-t.md)&lt;T&gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
+| 类型 |
+| --- |
+| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |
 
 **示例**
 
@@ -218,25 +218,25 @@ virtualScroll(virtualScrollOptions?: VirtualScrollOptions): RepeatAttribute<T>
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RepeatAttribute-virtualScroll(virtualScrollOptions?: VirtualScrollOptions): RepeatAttribute<T>--><!--Device-RepeatAttribute-virtualScroll(virtualScrollOptions?: VirtualScrollOptions): RepeatAttribute<T>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| virtualScrollOptions | [VirtualScrollOptions](arkts-arkui-virtualscrolloptions-i.md) | 否 | 虚拟滚动配置项。当需要自定义虚拟滚动配置（如设置期望加载的数据项总数、复用功能、内存优化策略等）时传入此参数；不传入时默 认值为undefined，Repeat将使用默认配置（totalCount取数据源长度、reusable默认为true等）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| virtualScrollOptions | [VirtualScrollOptions](arkts-arkui-virtualscrolloptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
+| 类型 |
+| --- |
+| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |
 
 **示例**
 
@@ -249,4 +249,3 @@ List() {
     .virtualScroll()
 }
 ```
-

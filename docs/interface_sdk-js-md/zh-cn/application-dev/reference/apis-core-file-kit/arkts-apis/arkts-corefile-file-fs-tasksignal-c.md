@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-export class TaskSignal--><!--Device-unnamed-export class TaskSignal-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -26,17 +26,17 @@ cancel(): void
 
 **起始版本：** 12
 
-<!--Device-TaskSignal-cancel(): void--><!--Device-TaskSignal-cancel(): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900010 | Try again |
-| 13900012 | Permission denied by the file system |
-| 13900043 | No task can be canceled. |
+| 错误码ID |
+| --- |
+| 13900010 |
+| 13900012 |
+| 13900043 |
 
 **示例**
 
@@ -132,25 +132,25 @@ onCancel(): Promise<string>
 
 **起始版本：** 12
 
-**废弃版本：** 24
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-TaskSignal-onCancel(): Promise<string>--><!--Device-TaskSignal-onCancel(): Promise<string>-End-->
+**废弃版本：** 24
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | Promise对象。最后一个拷贝的文件路径。 |
+| 类型 |
+| --- |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| 13900004 |
+| 13900008 |
+| 13900042 |
 
 **示例**
 
@@ -160,4 +160,3 @@ import { TaskSignal } from '@kit.CoreFileKit';
 let copySignal: fileIo.TaskSignal = new TaskSignal();
 copySignal.onCancel();
 ```
-

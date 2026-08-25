@@ -4,11 +4,11 @@
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 11
 
 **替代接口：** [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md)
-
-<!--Device-userAuth-interface AuthEvent--><!--Device-userAuth-interface AuthEvent-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -28,19 +28,19 @@ callback(result: EventInfo): void
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 11
 
 **替代接口：** [onResult](arkts-userauthentication-userauth-iauthcallback-i.md#onresult)(result: UserAuthResult)
-
-<!--Device-AuthEvent-callback(result: EventInfo): void--><!--Device-AuthEvent-callback(result: EventInfo): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| result | EventInfo | 是 | 返回的认证结果信息或提示信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| result | [EventInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-update-eventinfo-i-sys.md) | 是 |
 
 **示例**
 
@@ -88,4 +88,3 @@ try {
   // do error.
 }
 ```
-

@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [CommonModifier](arkts-arkui-commonmodifier-c.md) | Defines Common Modifier@extends CommonAttribute @implements AttributeModifier&lt;CommonAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CommonModifier](arkts-arkui-commonmodifier-c.md) |

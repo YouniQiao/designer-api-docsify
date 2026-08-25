@@ -2,9 +2,9 @@
 
 Provides information about an input device.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputDevice-interface InputDeviceData--><!--Device-inputDevice-interface InputDeviceData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -24,9 +24,9 @@ Axis information of the input device.
 
 **Type:** Array&lt;[AxisRange](arkts-input-inputdevice-axisrange-i.md)&gt;
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-InputDeviceData-axisRanges: Array<AxisRange>--><!--Device-InputDeviceData-axisRanges: Array<AxisRange>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -38,11 +38,11 @@ bus: int
 
 Bus type of the input device. By default, the bus type reported by the input device prevails.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-InputDeviceData-bus: int--><!--Device-InputDeviceData-bus: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -54,13 +54,13 @@ displayId?: int
 
 Indicates the bound target displayId.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-InputDeviceData-displayId?: int--><!--Device-InputDeviceData-displayId?: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -72,11 +72,11 @@ id: int
 
 Unique ID of the input device. If a physical device is repeatedly plugged and unplugged, its ID may change.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-InputDeviceData-id: int--><!--Device-InputDeviceData-id: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -92,7 +92,7 @@ Whether the input device is a local device.The value **true** indicates that the
 
 **Since:** 23
 
-<!--Device-InputDeviceData-isLocal?: boolean--><!--Device-InputDeviceData-isLocal?: boolean-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -108,7 +108,7 @@ Whether the input device is a virtual device.The value **true** indicates that t
 
 **Since:** 23
 
-<!--Device-InputDeviceData-isVirtual?: boolean--><!--Device-InputDeviceData-isVirtual?: boolean-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -122,9 +122,9 @@ Name of the input device.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-InputDeviceData-name: string--><!--Device-InputDeviceData-name: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -138,9 +138,9 @@ Physical address of the input device.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-InputDeviceData-phys: string--><!--Device-InputDeviceData-phys: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -152,11 +152,11 @@ product: int
 
 Product information of the input device.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-InputDeviceData-product: int--><!--Device-InputDeviceData-product: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -170,9 +170,9 @@ Input sources supported by the input device, including the keyboard, mouse, touc
 
 **Type:** Array&lt;SourceType&gt;
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-InputDeviceData-sources: Array<SourceType>--><!--Device-InputDeviceData-sources: Array<SourceType>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -186,9 +186,9 @@ Unique ID of the input device.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-InputDeviceData-uniq: string--><!--Device-InputDeviceData-uniq: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -200,11 +200,11 @@ vendor: int
 
 Vendor information of the input device.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-InputDeviceData-vendor: int--><!--Device-InputDeviceData-vendor: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -216,11 +216,10 @@ version: int
 
 Version information of the input device.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-InputDeviceData-version: int--><!--Device-InputDeviceData-version: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
-

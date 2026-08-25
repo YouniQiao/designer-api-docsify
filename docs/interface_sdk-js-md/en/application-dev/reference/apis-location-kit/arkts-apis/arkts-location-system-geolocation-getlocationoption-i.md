@@ -2,13 +2,13 @@
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-unnamed-export interface GetLocationOption--><!--Device-unnamed-export interface GetLocationOption-End-->
 
 **System capability:** SystemCapability.Location.Location.Lite
 
@@ -26,9 +26,9 @@ complete?: () => void
 
 Called when the execution is completed.
 
-**Type:** () =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
@@ -36,9 +36,60 @@ Called when the execution is completed.
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-GetLocationOption-complete?: () => void--><!--Device-GetLocationOption-complete?: () => void-End-->
+**System capability:** SystemCapability.Location.Location.Lite
+
+## fail
+
+```TypeScript
+fail?: (data: string, code: number) => void
+```
+
+Called when the location types fail to be obtained
+
+**Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
+**Deprecated since:** 9
+
+**Substitutes:** callback
+
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Location.Location.Lite
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | string | Yes |
+| code | number | Yes |
+
+## success
+
+```TypeScript
+success?: (data: GeolocationResponse) => void
+```
+
+Called when the geographic location is obtained.
+
+**Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
+**Deprecated since:** 9
+
+**Substitutes:** callback
+
+**Model restriction:** This API can be used only in the FA model.
+
+**System capability:** SystemCapability.Location.Location.Lite
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | [GeolocationResponse](arkts-location-system-geolocation-geolocationresponse-i.md) | Yes |
 
 ## coordType
 
@@ -52,55 +103,11 @@ Coordinate system type. Available types can be obtained using getSupportedCoordT
 
 **Since:** 3
 
-**Deprecated since:** 9
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-GetLocationOption-coordType?: string--><!--Device-GetLocationOption-coordType?: string-End-->
-
-**System capability:** SystemCapability.Location.Location.Lite
-
-## fail
-
-```TypeScript
-fail?: (data: string, code: number) => void
-```
-
-Called when the location types fail to be obtained
-
-**Type:** (data: string, code: number) =&gt; void
-
-**Since:** 3
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
-**Substitutes:** callback
-
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-GetLocationOption-fail?: (data: string, code: number) => void--><!--Device-GetLocationOption-fail?: (data: string, code: number) => void-End-->
-
-**System capability:** SystemCapability.Location.Location.Lite
-
-## success
-
-```TypeScript
-success?: (data: GeolocationResponse) => void
-```
-
-Called when the geographic location is obtained.
-
-**Type:** (data: GeolocationResponse) =&gt; void
-
-**Since:** 3
-
-**Deprecated since:** 9
-
-**Substitutes:** callback
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-GetLocationOption-success?: (data: GeolocationResponse) => void--><!--Device-GetLocationOption-success?: (data: GeolocationResponse) => void-End-->
 
 **System capability:** SystemCapability.Location.Location.Lite
 
@@ -116,13 +123,12 @@ Timeout duration, in milliseconds. For the rich device, the default value is 300
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** [timeoutMs](arkts-location-geolocationmanager-currentlocationrequest-i.md#timeoutms)
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-GetLocationOption-timeout?: number--><!--Device-GetLocationOption-timeout?: number-End-->
-
 **System capability:** SystemCapability.Location.Location.Lite
-

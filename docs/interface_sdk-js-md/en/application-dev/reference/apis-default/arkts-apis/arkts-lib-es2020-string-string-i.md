@@ -1,8 +1,6 @@
 # String
 
-**Since:** -1
-
-<!--Device-unnamed-interface String--><!--Device-unnamed-interface String-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,17 +15,15 @@ matchAll(regexp: RegExp): IterableIterator<RegExpMatchArray>
 
 Matches a string with a regular expression, and returns an iterable of matches containing the results of that search.
 
-**Since:** -1
-
-<!--Device-String-matchAll(regexp: RegExp): IterableIterator<RegExpMatchArray>--><!--Device-String-matchAll(regexp: RegExp): IterableIterator<RegExpMatchArray>-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| regexp | RegExp | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| regexp | RegExp | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

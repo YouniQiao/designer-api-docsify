@@ -2,9 +2,9 @@
 
 Defines the data loading policy for the data sender in the lazy loading scenario.If both **loadHandler** and **delayedDataLoadHandler** are passed, **delayedDataLoadHandler** is preferentially used, and **loadHandler** does not take effect.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-unifiedDataChannel-interface DataLoadParams--><!--Device-unifiedDataChannel-interface DataLoadParams-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -14,26 +14,6 @@ Defines the data loading policy for the data sender in the lazy loading scenario
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
-## dataLoadInfo
-
-```TypeScript
-dataLoadInfo: DataLoadInfo
-```
-
-Indicates data loading information.
-
-**Type:** [DataLoadInfo](arkts-arkdata-unifieddatachannel-dataloadinfo-i.md)
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-DataLoadParams-dataLoadInfo: DataLoadInfo--><!--Device-DataLoadParams-dataLoadInfo: DataLoadInfo-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
 ## delayedDataLoadHandler
 
 ```TypeScript
@@ -42,15 +22,13 @@ delayedDataLoadHandler?: DelayedDataLoadHandler
 
 Indicates the callback function for deferred and non-blocking data loading. This handler is optional. If it is provided, it will take precedence over the synchronous DataLoadHandler (i.e., DataLoadHandler will be ignored).
 
-**Type:** [DelayedDataLoadHandler](arkts-arkdata-unifieddatachannel-delayeddataloadhandler-t.md)
+**Since:** 22
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-DataLoadParams-delayedDataLoadHandler?: DelayedDataLoadHandler--><!--Device-DataLoadParams-delayedDataLoadHandler?: DelayedDataLoadHandler-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -62,15 +40,32 @@ loadHandler: DataLoadHandler
 
 Indicates the callback function for loading data.
 
-**Type:** [DataLoadHandler](arkts-arkdata-unifieddatachannel-dataloadhandler-t.md)
+**Since:** 20
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-DataLoadParams-loadHandler: DataLoadHandler--><!--Device-DataLoadParams-loadHandler: DataLoadHandler-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## dataLoadInfo
+
+```TypeScript
+dataLoadInfo: DataLoadInfo
+```
+
+Indicates data loading information.
+
+**Type:** [DataLoadInfo](arkts-arkdata-unifieddatachannel-dataloadinfo-i.md)
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core

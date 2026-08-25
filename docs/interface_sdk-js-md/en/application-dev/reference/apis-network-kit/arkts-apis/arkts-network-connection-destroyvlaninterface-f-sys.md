@@ -9,7 +9,7 @@ import { connection } from '@kit.NetworkKit';
 ## destroyVlanInterface
 
 ```TypeScript
-function destroyVlanInterface(ifName: string, vlanId: int): Promise<void>
+function destroyVlanInterface(ifName: string, vlanId: number): Promise<void>
 ```
 
 Deletes a VLAN specified by **vlanId** from a specified Ethernet NIC. This API uses a promise to return the result.
@@ -20,11 +20,11 @@ Deletes a VLAN specified by **vlanId** from a specified Ethernet NIC. This API u
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-connection-function destroyVlanInterface(ifName: string, vlanId: int): Promise<void>--><!--Device-connection-function destroyVlanInterface(ifName: string, vlanId: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -32,26 +32,26 @@ Deletes a VLAN specified by **vlanId** from a specified Ethernet NIC. This API u
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| ifName | string | Yes | NIC name. |
-| vlanId | int | Yes | VLAN ID. The value range is [0, 4094]. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| ifName | string | Yes |
+| vlanId | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Nonsystem applications use system APIs. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [2100400](../errorcode-net-connection.md#2100400-incorrect-nic-name-non-ethernet) | The input network interface name is incorrect. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [2100400](../errorcode-net-connection.md#2100400-incorrect-nic-name-non-ethernet) |
 
 **Examples**
 
@@ -66,4 +66,3 @@ connection.destroyVlanInterface(ifName, vlanId).then(() => {
   console.error(`Failed to destroy vlan. Code:${error.code}, message:${error.message}`);
 });
 ```
-

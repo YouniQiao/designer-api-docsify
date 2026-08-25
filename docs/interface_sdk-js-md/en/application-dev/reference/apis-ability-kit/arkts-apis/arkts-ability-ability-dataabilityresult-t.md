@@ -8,11 +8,10 @@ Defines the level-2 module DataAbilityResult.
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ability-export type DataAbilityResult = _DataAbilityResult--><!--Device-ability-export type DataAbilityResult = _DataAbilityResult-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Property type:** _DataAbilityResult
-

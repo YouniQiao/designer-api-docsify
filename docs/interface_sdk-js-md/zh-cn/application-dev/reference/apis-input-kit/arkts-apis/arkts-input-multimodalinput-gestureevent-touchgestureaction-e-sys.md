@@ -2,9 +2,9 @@
 
 触摸屏手势类型。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-unnamed-export declare enum TouchGestureAction--><!--Device-unnamed-export declare enum TouchGestureAction-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -18,9 +18,9 @@ SWIPE_DOWN = 0
 
 多指向下滑动。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-TouchGestureAction-SWIPE_DOWN = 0--><!--Device-TouchGestureAction-SWIPE_DOWN = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -34,9 +34,9 @@ SWIPE_UP = 1
 
 多指向上滑动。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-TouchGestureAction-SWIPE_UP = 1--><!--Device-TouchGestureAction-SWIPE_UP = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -50,9 +50,9 @@ SWIPE_LEFT = 2
 
 多指向左滑动。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-TouchGestureAction-SWIPE_LEFT = 2--><!--Device-TouchGestureAction-SWIPE_LEFT = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -66,9 +66,9 @@ SWIPE_RIGHT = 3
 
 多指向右滑动。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-TouchGestureAction-SWIPE_RIGHT = 3--><!--Device-TouchGestureAction-SWIPE_RIGHT = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -82,9 +82,9 @@ PINCH_CLOSED = 4
 
 多指捏合。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-TouchGestureAction-PINCH_CLOSED = 4--><!--Device-TouchGestureAction-PINCH_CLOSED = 4-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -98,9 +98,9 @@ PINCH_OPENED = 5
 
 多指张开。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-TouchGestureAction-PINCH_OPENED = 5--><!--Device-TouchGestureAction-PINCH_OPENED = 5-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -114,11 +114,10 @@ GESTURE_END = 6
 
 手势结束。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-TouchGestureAction-GESTURE_END = 6--><!--Device-TouchGestureAction-GESTURE_END = 6-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **系统接口：** 此接口为系统接口。
-

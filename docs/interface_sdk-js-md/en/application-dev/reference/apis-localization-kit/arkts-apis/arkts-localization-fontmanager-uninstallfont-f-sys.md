@@ -14,11 +14,11 @@ function uninstallFont(fullName: string): Promise<int>
 
 Uninstalls an installed font file from the system font library by font name. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 19
+
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_FONT
-
-<!--Device-fontManager-function uninstallFont(fullName: string): Promise<int>--><!--Device-fontManager-function uninstallFont(fullName: string): Promise<int>-End-->
 
 **System capability:** SystemCapability.Global.FontManager
 
@@ -26,25 +26,25 @@ Uninstalls an installed font file from the system font library by font name. Thi
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fullName | string | Yes | Name of the font to be uninstalled. You can open the .ttf or .ttc font file to obtain the name. <br>The font name is case-sensitive. Ensure that it exactly matches the actual font name. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fullName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;int&gt; | Promise used to return the uninstallation result. <br>- The value **0** indicates that the uninstallation is successful and the font has been removed from the system font library. <br>- Any other value indicates that the uninstallation failed. Troubleshoot based on the error code. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [31100107](../errorcode-font-manager.md#31100107-uninstalled-font-file-not-exist) | The font file does not exist. |
-| [31100108](../errorcode-font-manager.md#31100108-failed-to-delete-font-file) | Failed to delete the font file. |
-| [31100109](../errorcode-font-manager.md#31100109-uninstallation-failed-due-to-other-errors) | The system ability works abnormally. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [31100107](../errorcode-font-manager.md#31100107-uninstalled-font-file-not-exist) |
+| [31100108](../errorcode-font-manager.md#31100108-failed-to-delete-font-file) |
+| [31100109](../errorcode-font-manager.md#31100109-uninstallation-failed-due-to-other-errors) |
 
 **Examples**
 
@@ -61,4 +61,3 @@ async uninstallFont() {
   return;
 }
 ```
-

@@ -14,9 +14,9 @@ function notifyMetadataBindingEvent(bundleName: string): Promise<string>
 
 Transfers metadata to the application or service that calls the encoding API. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-metadataBinding-function notifyMetadataBindingEvent(bundleName: string): Promise<string>--><!--Device-metadataBinding-function notifyMetadataBindingEvent(bundleName: string): Promise<string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.MetadataBinding
 
@@ -24,22 +24,22 @@ Transfers metadata to the application or service that calls the encoding API. Th
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name used to obtain the application link. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bundleName | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Promise used to return the application link information of the current page. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API. |
-| [32100001](../errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [32100001](../errorcode-metadataBinding.md#32100001-file-creation-failed) |
 
 **Examples**
 
@@ -54,4 +54,3 @@ metadataBinding.notifyMetadataBindingEvent(bundleName).then((appLink:string)=>{
   console.error("notify metadata error" + error);
 });
 ```
-

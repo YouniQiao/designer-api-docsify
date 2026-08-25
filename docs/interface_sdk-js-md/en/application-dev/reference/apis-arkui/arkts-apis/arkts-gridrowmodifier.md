@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [GridRowModifier](arkts-arkui-gridrowmodifier-c.md) | Defines GridRow Modifier@implements GridRowAttribute, AttributeModifier&lt;GridRowAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [GridRowModifier](arkts-arkui-gridrowmodifier-c.md) |

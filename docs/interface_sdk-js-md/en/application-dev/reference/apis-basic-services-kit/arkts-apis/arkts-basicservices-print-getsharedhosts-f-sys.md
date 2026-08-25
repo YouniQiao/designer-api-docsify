@@ -16,11 +16,11 @@ Get all available shared hosts.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-print-function getSharedHosts(): Promise<SharedHost[]>--><!--Device-print-function getSharedHosts(): Promise<SharedHost[]>-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -28,14 +28,13 @@ Get all available shared hosts.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[SharedHost](arkts-basicservices-print-sharedhost-i.md)[]&gt; | Promise that resolves with the list of shared hosts. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[SharedHost](arkts-basicservices-print-sharedhost-i.md)[]&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

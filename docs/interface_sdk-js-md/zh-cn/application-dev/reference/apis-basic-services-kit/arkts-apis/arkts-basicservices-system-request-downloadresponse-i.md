@@ -2,11 +2,11 @@
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 9
 
 **替代接口：** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md)
-
-<!--Device-unnamed-export interface DownloadResponse--><!--Device-unnamed-export interface DownloadResponse-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -28,11 +28,10 @@ token: string
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 9
 
 **替代接口：** tid
 
-<!--Device-DownloadResponse-token: string--><!--Device-DownloadResponse-token: string-End-->
-
 **系统能力：** SystemCapability.MiscServices.Download
-

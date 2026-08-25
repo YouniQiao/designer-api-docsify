@@ -8,7 +8,7 @@ Defines the callback type used in registering to listen for PrinterState. The va
 
 **Since:** 23
 
-<!--Device-print-type PrinterStateChangeCallback = (state: PrinterState, info: PrinterInfo) => void--><!--Device-print-type PrinterStateChangeCallback = (state: PrinterState, info: PrinterInfo) => void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -16,8 +16,7 @@ Defines the callback type used in registering to listen for PrinterState. The va
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| state | [PrinterState](arkts-basicservices-print-printerstate-e.md) | Yes | the state of printer |
-| info | [PrinterInfo](arkts-basicservices-print-printerinfo-i-sys.md) | Yes | the information of the latest printer |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| state | [PrinterState](arkts-basicservices-print-printerstate-e.md) | Yes |
+| info | [PrinterInfo](arkts-basicservices-print-printerinfo-i.md) | Yes |

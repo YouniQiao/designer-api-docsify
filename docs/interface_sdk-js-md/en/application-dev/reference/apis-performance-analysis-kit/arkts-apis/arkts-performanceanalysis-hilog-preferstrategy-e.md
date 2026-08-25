@@ -2,9 +2,9 @@
 
 Enumerates the preference strategies.
 
-**Since:** 23
+**Since:** 21
 
-<!--Device-hilog-enum PreferStrategy--><!--Device-hilog-enum PreferStrategy-End-->
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
@@ -16,11 +16,11 @@ UNSET_LOGLEVEL = 0
 
 The setting is cleared. The system-controlled minimum log level takes effect.
 
-**Since:** 23
+**Since:** 21
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
-<!--Device-PreferStrategy-UNSET_LOGLEVEL = 0--><!--Device-PreferStrategy-UNSET_LOGLEVEL = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
@@ -32,11 +32,11 @@ PREFER_CLOSE_LOG = 1
 
 The larger value of the new log level and the system-controlled minimum log level takes effect.
 
-**Since:** 23
+**Since:** 21
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
-<!--Device-PreferStrategy-PREFER_CLOSE_LOG = 1--><!--Device-PreferStrategy-PREFER_CLOSE_LOG = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
@@ -48,11 +48,11 @@ PREFER_OPEN_LOG = 2
 
 The smaller value of the new log level and the system-controlled minimum log level takes effect.
 
-**Since:** 23
+**Since:** 21
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
-<!--Device-PreferStrategy-PREFER_OPEN_LOG = 2--><!--Device-PreferStrategy-PREFER_OPEN_LOG = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
@@ -78,4 +78,3 @@ The log result is as follows:
 08-07 23:50:01.532   13694-13694   A00001/testTag                  com.example.hilogDemo  E     this is an error level log, id: 3
 08-07 23:50:01.532   13694-13694   A00001/testTag                  com.example.hilogDemo  I     this is an info level log, id: 5
 ```
-

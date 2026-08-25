@@ -14,11 +14,11 @@ function setAutoTimeStatus(status: boolean): Promise<void>
 
 设置自动设置时间开关状态，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 21
+
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TIME
-
-<!--Device-systemDateTime-function setAutoTimeStatus(status: boolean): Promise<void>--><!--Device-systemDateTime-function setAutoTimeStatus(status: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
 
@@ -26,24 +26,24 @@ function setAutoTimeStatus(status: boolean): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| status | boolean | 是 | 设置自动设置时间开关状态。<br/>- true：表示打开自动设置时间开关。 <br/>- false：表示关闭自动设置时间开关。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| status | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [13000001](../errorcode-time.md#13000001-网络或操作系统异常) | Network connection error or OS error. Possible causes: 1. System memory is insufficient; 2. Calls the underlying system interface failed. |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [13000001](../errorcode-time.md#13000001-网络或操作系统异常) |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
 
 **示例**
 
@@ -80,4 +80,3 @@ try {
   console.error(`Failed to set autotime. message: ${error.message}, code: ${error.code}`);
 }
 ```
-

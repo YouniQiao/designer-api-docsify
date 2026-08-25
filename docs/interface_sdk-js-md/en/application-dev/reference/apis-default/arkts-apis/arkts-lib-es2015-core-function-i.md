@@ -1,8 +1,6 @@
 # Function
 
-**Since:** -1
-
-<!--Device-unnamed-interface Function--><!--Device-unnamed-interface Function-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -19,7 +17,4 @@ Returns the name of the function. Function names are read-only and can not be ch
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-Function-readonly name: string--><!--Device-Function-readonly name: string-End-->
-
+**ArkTS mode:** 

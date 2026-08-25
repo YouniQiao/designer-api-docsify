@@ -22,26 +22,25 @@ Notifies the system of the extensible authentication result.
 
 **Since:** 20
 
-**Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-eap-function replyCustomEapData(result: CustomResult, data: EapData): void--><!--Device-eap-function replyCustomEapData(result: CustomResult, data: EapData): void-End-->
+**Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| result | [CustomResult](arkts-network-eap-customresult-e.md) | Yes | Extensible authentication result. |
-| data | [EapData](arkts-network-eap-eapdata-i.md) | Yes | EAP data. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| result | [CustomResult](arkts-network-eap-customresult-e.md) | Yes |
+| data | [EapData](arkts-network-eap-eapdata-i.md) | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [33200004](../errorcode-net-eap.md#33200004-invalid-eap-result-value) | Invalid result |
-| [33200005](../errorcode-net-eap.md#33200005-invalid-data-length) | Invalid size of eap data |
-| [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) | netmanager stop |
-| [33200099](../errorcode-net-eap.md#33200099-internal-program-error) | internal error |
-
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [33200004](../errorcode-net-eap.md#33200004-invalid-eap-result-value) |
+| [33200005](../errorcode-net-eap.md#33200005-invalid-data-length) |
+| [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) |
+| [33200099](../errorcode-net-eap.md#33200099-internal-program-error) |

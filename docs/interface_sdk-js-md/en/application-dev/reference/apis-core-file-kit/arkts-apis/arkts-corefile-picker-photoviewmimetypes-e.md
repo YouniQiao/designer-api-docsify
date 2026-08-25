@@ -4,11 +4,11 @@ Enumerates the media file types that can be selected.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 12
 
 **Substitutes:** [PhotoViewMIMETypes](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md)
-
-<!--Device-picker-export enum PhotoViewMIMETypes--><!--Device-picker-export enum PhotoViewMIMETypes-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -22,13 +22,13 @@ Image.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 18
 
 **Substitutes:** [IMAGE_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#image_type)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PhotoViewMIMETypes-IMAGE_TYPE = 'image/*'--><!--Device-PhotoViewMIMETypes-IMAGE_TYPE = 'image/*'-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -42,13 +42,13 @@ Video.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 18
 
 **Substitutes:** [VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#video_type)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PhotoViewMIMETypes-VIDEO_TYPE = 'video/*'--><!--Device-PhotoViewMIMETypes-VIDEO_TYPE = 'video/*'-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -62,13 +62,12 @@ Image and video.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 18
 
 **Substitutes:** [IMAGE_VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#image_video_type)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-PhotoViewMIMETypes-IMAGE_VIDEO_TYPE = '*/*'--><!--Device-PhotoViewMIMETypes-IMAGE_VIDEO_TYPE = '*/*'-End-->
-
 **System capability:** SystemCapability.FileManagement.UserFileService
-

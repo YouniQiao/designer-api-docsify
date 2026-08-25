@@ -2,9 +2,9 @@
 
 Defines the MMI code result.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-call-export enum MmiCodeResult--><!--Device-call-export enum MmiCodeResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -18,9 +18,9 @@ MMI_CODE_SUCCESS = 0
 
 Success.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MmiCodeResult-MMI_CODE_SUCCESS = 0--><!--Device-MmiCodeResult-MMI_CODE_SUCCESS = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -34,11 +34,10 @@ MMI_CODE_FAILED = 1
 
 Failure.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-MmiCodeResult-MMI_CODE_FAILED = 1--><!--Device-MmiCodeResult-MMI_CODE_FAILED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
-

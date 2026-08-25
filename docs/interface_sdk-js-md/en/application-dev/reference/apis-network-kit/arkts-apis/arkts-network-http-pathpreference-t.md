@@ -13,13 +13,12 @@ Enumerates the types of networks specified in an HTTP request.
 
 **Since:** 23
 
-<!--Device-http-export type PathPreference = 'auto' | 'primaryCellular' | 'secondaryCellular'--><!--Device-http-export type PathPreference = 'auto' | 'primaryCellular' | 'secondaryCellular'-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-| Type | Description |
-| --- | --- |
-| 'auto' | Specifies the default network connection in an HTTP request. |
-| 'primaryCellular' | Specifies the default cellular network connection in an HTTP request when the cellular network is activated. |
-| 'secondaryCellular' | Specifies the cellular network connection of the secondary SIM card in an HTTP request when dual cellular networks are activated. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'auto' |
+| 'primaryCellular' |
+| 'secondaryCellular' |

@@ -4,7 +4,7 @@ Enumeration of AVMusicTemplate type.@enum { string }
 
 **Since:** 23
 
-<!--Device-avMusicTemplate-enum AVMusicTemplateType--><!--Device-avMusicTemplate-enum AVMusicTemplateType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -18,9 +18,8 @@ Smart_car.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AVMusicTemplateType-DEFAULT = 'smartCar'--><!--Device-AVMusicTemplateType-DEFAULT = 'smartCar'-End-->
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-

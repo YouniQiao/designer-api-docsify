@@ -9,7 +9,7 @@ Defines options for constructing a **PluginComponent**.
 
 **Since:** 9
 
-<!--Device-unnamed-declare interface PluginComponentOptions--><!--Device-unnamed-declare interface PluginComponentOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,7 +32,7 @@ Data passed to the **PluginComponent** provider.
 
 **Since:** 9
 
-<!--Device-PluginComponentOptions-data: any--><!--Device-PluginComponentOptions-data: any-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,9 +50,8 @@ Template of the **PluginComponent**, which is bound to the component defined by 
 
 **Since:** 9
 
-<!--Device-PluginComponentOptions-template: PluginComponentTemplate--><!--Device-PluginComponentOptions-template: PluginComponentTemplate-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

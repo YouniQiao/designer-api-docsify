@@ -2,9 +2,9 @@
 
 Describes the profile of depth data. It inherits from [Profile](arkts-camera-camera-profile-i.md).
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-camera-interface DepthProfile--><!--Device-camera-interface DepthProfile-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -26,9 +26,9 @@ Accuracy of the depth data, which can be either relative accuracy or absolute ac
 
 **类型：** [DepthDataAccuracy](arkts-camera-camera-depthdataaccuracy-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-DepthProfile-readonly dataAccuracy: DepthDataAccuracy--><!--Device-DepthProfile-readonly dataAccuracy: DepthDataAccuracy-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -44,9 +44,9 @@ Camera output format.
 
 **类型：** [CameraFormat](arkts-camera-camera-cameraformat-e.md)
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-DepthProfile-readonly format: CameraFormat--><!--Device-DepthProfile-readonly format: CameraFormat-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -62,11 +62,10 @@ Depth data resolution.
 
 **类型：** Size
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-DepthProfile-readonly size: Size--><!--Device-DepthProfile-readonly size: Size-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
-

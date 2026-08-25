@@ -4,7 +4,7 @@ Provides an interface for the options for the floating bar width of the tab widt
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-interface FloatingTabBarWidth--><!--Device-unnamed-interface FloatingTabBarWidth-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ The bar width of the large devices. It cannot be set in percentage.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-FloatingTabBarWidth-largeBarWidth?: Length--><!--Device-FloatingTabBarWidth-largeBarWidth?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ The bar width of the medium devices. It cannot be set in percentage.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-FloatingTabBarWidth-mediumBarWidth?: Length--><!--Device-FloatingTabBarWidth-mediumBarWidth?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,11 +65,10 @@ The bar width of the small devices. It cannot be set in percentage.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-FloatingTabBarWidth-smallBarWidth?: Length--><!--Device-FloatingTabBarWidth-smallBarWidth?: Length-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

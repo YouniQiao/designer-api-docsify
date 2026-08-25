@@ -7,11 +7,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md)
-
-<!--Device-audio-interface AudioInterrupt--><!--Device-audio-interface AudioInterrupt-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -33,11 +33,11 @@ contentType: ContentType
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** rendererInfo
-
-<!--Device-AudioInterrupt-contentType: ContentType--><!--Device-AudioInterrupt-contentType: ContentType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -53,11 +53,11 @@ pauseWhenDucked: boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [hintType](arkts-audio-audio-interruptevent-i.md#hinttype)
-
-<!--Device-AudioInterrupt-pauseWhenDucked: boolean--><!--Device-AudioInterrupt-pauseWhenDucked: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -73,11 +73,10 @@ streamUsage: StreamUsage
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** rendererInfo
 
-<!--Device-AudioInterrupt-streamUsage: StreamUsage--><!--Device-AudioInterrupt-streamUsage: StreamUsage-End-->
-
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
-

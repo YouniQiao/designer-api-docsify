@@ -2,9 +2,9 @@
 
 The state of Wi-Fi connection enumeration.@enum { int }
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-wifiManager-export enum ConnState--><!--Device-wifiManager-export enum ConnState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -16,9 +16,9 @@ SCANNING
 
 The device is searching for an available AP.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ConnState-SCANNING--><!--Device-ConnState-SCANNING-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -30,9 +30,9 @@ CONNECTING
 
 The Wi-Fi connection is being set up.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ConnState-CONNECTING--><!--Device-ConnState-CONNECTING-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -44,9 +44,9 @@ AUTHENTICATING
 
 The Wi-Fi connection is being authenticated.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ConnState-AUTHENTICATING--><!--Device-ConnState-AUTHENTICATING-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -58,9 +58,9 @@ OBTAINING_IPADDR
 
 The IP address of the Wi-Fi connection is being obtained.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ConnState-OBTAINING_IPADDR--><!--Device-ConnState-OBTAINING_IPADDR-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -72,9 +72,9 @@ CONNECTED
 
 The Wi-Fi connection has been set up.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ConnState-CONNECTED--><!--Device-ConnState-CONNECTED-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -86,9 +86,9 @@ DISCONNECTING
 
 The Wi-Fi connection is being torn down.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ConnState-DISCONNECTING--><!--Device-ConnState-DISCONNECTING-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -100,9 +100,9 @@ DISCONNECTED
 
 The Wi-Fi connection has been torn down.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ConnState-DISCONNECTED--><!--Device-ConnState-DISCONNECTED-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -114,9 +114,8 @@ UNKNOWN
 
 Failed to set up the Wi-Fi connection.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ConnState-UNKNOWN--><!--Device-ConnState-UNKNOWN-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
-

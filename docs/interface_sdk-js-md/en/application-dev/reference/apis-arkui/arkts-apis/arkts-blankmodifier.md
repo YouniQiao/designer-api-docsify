@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [BlankModifier](arkts-arkui-blankmodifier-c.md) | Defines Blank Modifier@extends BlankAttribute @implements AttributeModifier&lt;BlankAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BlankModifier](arkts-arkui-blankmodifier-c.md) |

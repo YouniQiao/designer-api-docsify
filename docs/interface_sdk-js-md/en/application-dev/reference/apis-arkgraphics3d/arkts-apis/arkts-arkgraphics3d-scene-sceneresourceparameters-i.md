@@ -2,9 +2,9 @@
 
 Describes the scene resource parameters (name and uri), which are used to provide the name of a scene resource and the path of the resource file required in the 3D scene.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface SceneResourceParameters--><!--Device-unnamed-export interface SceneResourceParameters-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,9 +18,9 @@ Name of the scene resource. It is customizable.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SceneResourceParameters-name: string--><!--Device-SceneResourceParameters-name: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -34,9 +34,9 @@ Path of the resource file required in the 3D scene. The default value is undefin
 
 **Type:** ResourceStr
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SceneResourceParameters-uri?: ResourceStr--><!--Device-SceneResourceParameters-uri?: ResourceStr-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -64,4 +64,3 @@ function createShaderPromise(): Promise<Shader> {
   });
 }
 ```
-

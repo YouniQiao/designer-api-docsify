@@ -1,8 +1,6 @@
 # DataView
 
-**Since:** -1
-
-<!--Device-unnamed-interface DataView--><!--Device-unnamed-interface DataView-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,7 +15,4 @@ readonly [Symbol.toStringTag]: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-DataView-readonly [Symbol.toStringTag]: string--><!--Device-DataView-readonly [Symbol.toStringTag]: string-End-->
-
+**ArkTS mode:** 

@@ -17,27 +17,27 @@ function cancelSerialRight(portId: int): void
 - 需要先调用[getPortList](arkts-basicservices-serialmanager-getportlist-f.md)获取端口号 - 需要先调用[requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md)申请访问权限  
 **相关方法：** - [requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md)：申请访问权限 - [hasSerialRight](arkts-basicservices-serialmanager-hasserialright-f.md)：检查是否有访问权限
 
-**起始版本：** 23
+**起始版本：** 19
 
-<!--Device-serialManager-function cancelSerialRight(portId: int): void--><!--Device-serialManager-function cancelSerialRight(portId: int): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| portId | int | 是 | 端口号，来自[getPortList](arkts-basicservices-serialmanager-getportlist-f.md)返回的 [SerialPort](arkts-basicservices-serialmanager-serialport-i.md)对象，必须使用getPortList返回的有效端口号，传入无效值时抛出错误码31400003异常。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [portId](arkts-basicservices-serialmanager-serialport-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |  |
-| [14400005](../errorcode-usb.md#14400005-数据库操作异常) |  |
-| [31400001](../errorcode-usb.md#31400001-串口服务异常) |  |
-| [31400002](../errorcode-usb.md#31400002-没有串口设备访问权限) |  |
-| [31400003](../errorcode-usb.md#31400003-端口号不存在) |  |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [14400005](../errorcode-usb.md#14400005-数据库操作异常) |
+| [31400001](../errorcode-usb.md#31400001-串口服务异常) |
+| [31400002](../errorcode-usb.md#31400002-没有串口设备访问权限) |
+| [31400003](../errorcode-usb.md#31400003-端口号不存在) |
 
 **示例**
 
@@ -78,4 +78,3 @@ async function cancelSerialRightExample() {
   }
 }
 ```
-

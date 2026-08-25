@@ -15,9 +15,9 @@ Represents a custom communication object. <br> <br>
 &gt; 
 > If this object is unregistered, its [onTerminated](#onterminated) callback will be triggered.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-inputMethod-interface MessageHandler--><!--Device-inputMethod-interface MessageHandler-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -25,73 +25,6 @@ Represents a custom communication object. <br> <br>
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-```
-
-## onMessage
-
-```TypeScript
-onMessage(msgId: string, msgParam?: ArrayBuffer): void
-```
-
-This method is called when a custom message is received.
-
-**Since:** 15
-
-<!--Device-MessageHandler-onMessage(msgId: string, msgParam?: ArrayBuffer): void--><!--Device-MessageHandler-onMessage(msgId: string, msgParam?: ArrayBuffer): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| msgId | string | Yes | the identifier of the message. |
-| msgParam | ArrayBuffer | No | the parameter of the custom message. |
-
-**Examples**
-
-```TypeScript
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-
-let messageHandler: inputMethod.MessageHandler = {
-  onTerminated(): void {
-    console.info('OnTerminated.');
-  },
-  onMessage(msgId: string, msgParam?: ArrayBuffer): void {
-    console.info('recv message.');
-  }
-};
-inputMethodController.recvMessage(messageHandler);
-```
-
-## onTerminated
-
-```TypeScript
-onTerminated(): void
-```
-
-This method is called when a new message handler is set.
-
-**Since:** 15
-
-<!--Device-MessageHandler-onTerminated(): void--><!--Device-MessageHandler-onTerminated(): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Examples**
-
-```TypeScript
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-
-let messageHandler: inputMethod.MessageHandler = {
-  onTerminated(): void {
-    console.info('OnTerminated.');
-  },
-  onMessage(msgId: string, msgParam?: ArrayBuffer): void {
-    console.info('recv message.');
-  }
-};
-inputMethodController.recvMessage(messageHandler);
 ```
 
 ## onMessage
@@ -111,13 +44,82 @@ Receives custom data sent by the input method application. <br> <br>
 &gt; 
 > The **msgId** parameter is mandatory, and the **msgParam** parameter is optional. If only the custom **msgId** data is received, confirm it with the data sender.
 
-**Type:** OnMessageCallback
-
 **Since:** 23
 
-<!--Device-MessageHandler-onMessage: OnMessageCallback--><!--Device-MessageHandler-onMessage: OnMessageCallback-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Examples**
+
+```TypeScript
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+
+let messageHandler: inputMethod.MessageHandler = {
+  onTerminated(): void {
+    console.info('OnTerminated.');
+  },
+  onMessage(msgId: string, msgParam?: ArrayBuffer): void {
+    console.info('recv message.');
+  }
+};
+inputMethodController.recvMessage(messageHandler);
+```
+
+## onMessage
+
+```TypeScript
+onMessage(msgId: string, msgParam?: ArrayBuffer): void
+```
+
+This method is called when a custom message is received.
+
+**Since:** 15
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [msgId](../../apis-network-kit/arkts-apis/arkts-network-eap-eapdata-i.md) | string | Yes |
+| msgParam | ArrayBuffer | No |
+
+**Examples**
+
+See [onMessage](#onmessage)
+
+## onTerminated
+
+```TypeScript
+onTerminated(): void
+```
+
+This method is called when a new message handler is set.
+
+**Since:** 15
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Examples**
+
+```TypeScript
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+
+let messageHandler: inputMethod.MessageHandler = {
+  onTerminated(): void {
+    console.info('OnTerminated.');
+  },
+  onMessage(msgId: string, msgParam?: ArrayBuffer): void {
+    console.info('recv message.');
+  }
+};
+inputMethodController.recvMessage(messageHandler);
+```
 
 ## onTerminated
 
@@ -140,7 +142,6 @@ Listens for MessageHandler termination. <br> <br>
 
 **Since:** 23
 
-<!--Device-MessageHandler-onTerminated: Callback<void>--><!--Device-MessageHandler-onTerminated: Callback<void>-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

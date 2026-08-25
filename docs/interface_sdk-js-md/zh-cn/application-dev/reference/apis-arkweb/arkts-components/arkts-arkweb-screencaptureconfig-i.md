@@ -4,7 +4,7 @@
 
 **起始版本：** 10
 
-<!--Device-unnamed-declare interface ScreenCaptureConfig--><!--Device-unnamed-declare interface ScreenCaptureConfig-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -25,9 +25,8 @@ Web屏幕捕获模式。
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ScreenCaptureConfig-captureMode: WebCaptureMode--><!--Device-ScreenCaptureConfig-captureMode: WebCaptureMode-End-->
-
 **系统能力：** SystemCapability.Web.Webview.Core
-

@@ -2,9 +2,9 @@
 
 Defines additional options for binding an input method.
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-inputMethodEngine-export interface AttachOptions--><!--Device-inputMethodEngine-export interface AttachOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -24,9 +24,9 @@ Whether to enable the simple keyboard. This attribute is set by the edit box app
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-AttachOptions-isSimpleKeyboardEnabled?: boolean--><!--Device-AttachOptions-isSimpleKeyboardEnabled?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -40,9 +40,8 @@ Reason for requesting the keyboard. This attribute is set by the edit box applic
 
 **Type:** RequestKeyboardReason
 
-**Since:** 23
+**Since:** 19
 
-<!--Device-AttachOptions-requestKeyboardReason?: RequestKeyboardReason--><!--Device-AttachOptions-requestKeyboardReason?: RequestKeyboardReason-End-->
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

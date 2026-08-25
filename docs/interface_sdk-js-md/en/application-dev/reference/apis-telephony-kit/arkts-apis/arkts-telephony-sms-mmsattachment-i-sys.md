@@ -2,9 +2,9 @@
 
 Defines the attachment of an MMS message.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sms-export interface MmsAttachment--><!--Device-sms-export interface MmsAttachment-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -26,9 +26,9 @@ Character set.
 
 **Type:** [MmsCharSets](arkts-telephony-sms-mmscharsets-e-sys.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsAttachment-charset?: MmsCharSets--><!--Device-MmsAttachment-charset?: MmsCharSets-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -44,9 +44,9 @@ Content disposition.
 
 **Type:** [DispositionType](arkts-telephony-sms-dispositiontype-e-sys.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsAttachment-contentDisposition: DispositionType--><!--Device-MmsAttachment-contentDisposition: DispositionType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -62,9 +62,9 @@ Content ID.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsAttachment-contentId: string--><!--Device-MmsAttachment-contentId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -80,9 +80,9 @@ Content location.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsAttachment-contentLocation: string--><!--Device-MmsAttachment-contentLocation: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -98,9 +98,9 @@ Encoding for content transfer.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsAttachment-contentTransferEncoding: string--><!--Device-MmsAttachment-contentTransferEncoding: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -116,9 +116,9 @@ Content type.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsAttachment-contentType: string--><!--Device-MmsAttachment-contentType: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -134,9 +134,9 @@ File name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsAttachment-fileName?: string--><!--Device-MmsAttachment-fileName?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -150,11 +150,11 @@ inBuff?: Array<int>
 
 Whether the message is in the buffer.
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsAttachment-inBuff?: Array<int>--><!--Device-MmsAttachment-inBuff?: Array<int>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -170,9 +170,9 @@ Whether the synchronized multimedia integration language is used.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsAttachment-isSmil: boolean--><!--Device-MmsAttachment-isSmil: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -188,11 +188,10 @@ Path.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-MmsAttachment-path?: string--><!--Device-MmsAttachment-path?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
-

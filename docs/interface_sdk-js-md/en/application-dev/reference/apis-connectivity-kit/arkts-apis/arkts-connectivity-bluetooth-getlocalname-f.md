@@ -16,25 +16,24 @@ Obtains the Bluetooth local name of a device.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getLocalName](arkts-connectivity-bluetoothmanager-getlocalname-f.md)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
-<!--Device-bluetooth-function getLocalName(): string--><!--Device-bluetooth-function getLocalName(): string-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Returns the name the device. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
 ```TypeScript
 let localName : string = bluetooth.getLocalName();
 ```
-

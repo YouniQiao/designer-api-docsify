@@ -4,7 +4,7 @@ This interface is used to notify the listener of personalized spatialization ena
 
 **Since:** 26.0.0
 
-<!--Device-audio-interface AudioPersonalizedSpatialEnabledChangeForAnyDevice--><!--Device-audio-interface AudioPersonalizedSpatialEnabledChangeForAnyDevice-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -28,9 +28,9 @@ Audio device description.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AudioPersonalizedSpatialEnabledChangeForAnyDevice-deviceDescriptor: AudioDeviceDescriptor--><!--Device-AudioPersonalizedSpatialEnabledChangeForAnyDevice-deviceDescriptor: AudioDeviceDescriptor-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -48,11 +48,10 @@ Personalized spatialization enable state.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-AudioPersonalizedSpatialEnabledChangeForAnyDevice-enabled: boolean--><!--Device-AudioPersonalizedSpatialEnabledChangeForAnyDevice-enabled: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
-

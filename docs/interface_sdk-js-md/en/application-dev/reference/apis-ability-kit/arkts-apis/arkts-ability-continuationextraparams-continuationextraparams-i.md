@@ -4,9 +4,9 @@ The ContinuationExtraParams module provides the filter parameters required by th
 
 **Since:** 8
 
-**Deprecated since:** 22
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-unnamed-export interface ContinuationExtraParams--><!--Device-unnamed-export interface ContinuationExtraParams-End-->
+**Deprecated since:** 22
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
@@ -22,13 +22,13 @@ Authentication information.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ContinuationExtraParams-authInfo?: Record<string, Object>--><!--Device-ContinuationExtraParams-authInfo?: Record<string, Object>-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
@@ -44,13 +44,13 @@ Continuation mode.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ContinuationExtraParams-continuationMode?: continuationManager.ContinuationMode--><!--Device-ContinuationExtraParams-continuationMode?: continuationManager.ContinuationMode-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
@@ -66,13 +66,13 @@ Device filtering description.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ContinuationExtraParams-description?: string--><!--Device-ContinuationExtraParams-description?: string-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
@@ -88,13 +88,13 @@ Device type.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ContinuationExtraParams-deviceType?: Array<string>--><!--Device-ContinuationExtraParams-deviceType?: Array<string>-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
@@ -110,13 +110,13 @@ Device filtering parameter.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ContinuationExtraParams-filter?: any--><!--Device-ContinuationExtraParams-filter?: any-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
@@ -132,13 +132,12 @@ Name of the target bundle.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ContinuationExtraParams-targetBundle?: string--><!--Device-ContinuationExtraParams-targetBundle?: string-End-->
-
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
-

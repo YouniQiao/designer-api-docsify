@@ -8,11 +8,11 @@ Represents the result returned.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)
-
-<!--Device-huks-export interface HuksResult--><!--Device-huks-export interface HuksResult-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -34,9 +34,9 @@ Reserved field.Note: This API is deprecated since API version 9. No substitute A
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HuksResult-certChains?: Array<string>--><!--Device-HuksResult-certChains?: Array<string>-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -52,9 +52,9 @@ Reserved field.Note: This API is deprecated since API version 9. No substitute A
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HuksResult-errorCode: number--><!--Device-HuksResult-errorCode: number-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -70,9 +70,9 @@ Reserved field.Note: This API is deprecated since API version 9. No substitute A
 
 **Since:** 8
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HuksResult-outData?: Uint8Array--><!--Device-HuksResult-outData?: Uint8Array-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -88,9 +88,8 @@ Reserved field.Note: This API is deprecated since API version 9. No substitute A
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-<!--Device-HuksResult-properties?: Array<HuksParam>--><!--Device-HuksResult-properties?: Array<HuksParam>-End-->
-
 **System capability:** SystemCapability.Security.Huks.Extension
-

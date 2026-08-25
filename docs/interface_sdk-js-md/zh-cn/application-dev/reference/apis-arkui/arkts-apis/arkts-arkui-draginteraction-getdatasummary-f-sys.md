@@ -14,9 +14,9 @@ function getDataSummary(): Array<Summary>
 
 获取所有拖拽对象的摘要。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-dragInteraction-function getDataSummary(): Array<Summary>--><!--Device-dragInteraction-function getDataSummary(): Array<Summary>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Drag
 
@@ -24,15 +24,15 @@ function getDataSummary(): Array<Summary>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;Summary&gt; | 所有拖拽对象的数据摘要，包含拖拽对象的类型和数据长度。 |
+| 类型 |
+| --- |
+| Array & lt;Summary & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -40,4 +40,3 @@ function getDataSummary(): Array<Summary>
 let summary: Array<dragInteraction.Summary> = dragInteraction.getDataSummary();
 console.info(`Drag interaction summary: ${summary}`);
 ```
-

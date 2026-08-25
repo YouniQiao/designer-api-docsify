@@ -8,17 +8,16 @@ type CommandDataType = int | string | boolean
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-inputMethodSystemPanelManager-type CommandDataType = int | string | boolean--><!--Device-inputMethodSystemPanelManager-type CommandDataType = int | string | boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。
 
-| 类型 | 说明 |
-| --- | --- |
-| int |  |
-| string |  |
-| boolean |  |
-
+| 类型 |
+| --- |
+| int |
+| string |
+| boolean |

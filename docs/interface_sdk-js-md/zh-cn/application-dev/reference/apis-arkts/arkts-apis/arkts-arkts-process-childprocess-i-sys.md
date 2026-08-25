@@ -4,7 +4,7 @@ childprocess 对象可用于创建新的进程。
 
 **起始版本：** 7
 
-<!--Device-process-export interface ChildProcess--><!--Device-process-export interface ChildProcess-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -26,7 +26,7 @@ close(): void
 
 **起始版本：** 7
 
-<!--Device-ChildProcess-close(): void--><!--Device-ChildProcess-close(): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -42,7 +42,7 @@ getErrorOutput(): Promise<Uint8Array>
 
 **起始版本：** 7
 
-<!--Device-ChildProcess-getErrorOutput(): Promise<Uint8Array>--><!--Device-ChildProcess-getErrorOutput(): Promise<Uint8Array>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -50,9 +50,9 @@ getErrorOutput(): Promise<Uint8Array>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Uint8Array&gt; | 返回子进程的标准错误输出。 |
+| 类型 |
+| --- |
+| Promise & lt;Uint8Array & gt; |
 
 ## getOutput
 
@@ -64,7 +64,7 @@ getOutput(): Promise<Uint8Array>
 
 **起始版本：** 7
 
-<!--Device-ChildProcess-getOutput(): Promise<Uint8Array>--><!--Device-ChildProcess-getOutput(): Promise<Uint8Array>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -72,9 +72,9 @@ getOutput(): Promise<Uint8Array>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Uint8Array&gt; | 返回子进程的标准输出。 |
+| 类型 |
+| --- |
+| Promise & lt;Uint8Array & gt; |
 
 ## kill
 
@@ -86,7 +86,7 @@ kill(signal: number | string): void
 
 **起始版本：** 7
 
-<!--Device-ChildProcess-kill(signal: number | string): void--><!--Device-ChildProcess-kill(signal: number | string): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -94,9 +94,9 @@ kill(signal: number | string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| signal | number \| string | 是 | number 或 string，表示发送的信号。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [signal](arkts-arkts-locks-asynclockoptions-c.md) | number \| string | 是 |
 
 **示例**
 
@@ -124,7 +124,7 @@ wait(): Promise<number>
 
 **起始版本：** 7
 
-<!--Device-ChildProcess-wait(): Promise<number>--><!--Device-ChildProcess-wait(): Promise<number>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -132,9 +132,9 @@ wait(): Promise<number>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;number&gt; | 返回目标进程的退出码。 |
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
 
 ## exitCode
 
@@ -148,7 +148,7 @@ readonly exitCode: number
 
 **起始版本：** 7
 
-<!--Device-ChildProcess-readonly exitCode: number--><!--Device-ChildProcess-readonly exitCode: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -166,7 +166,7 @@ readonly killed: boolean
 
 **起始版本：** 7
 
-<!--Device-ChildProcess-readonly killed: boolean--><!--Device-ChildProcess-readonly killed: boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -184,7 +184,7 @@ readonly pid: number
 
 **起始版本：** 7
 
-<!--Device-ChildProcess-readonly pid: number--><!--Device-ChildProcess-readonly pid: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -202,9 +202,8 @@ readonly ppid: number
 
 **起始版本：** 7
 
-<!--Device-ChildProcess-readonly ppid: number--><!--Device-ChildProcess-readonly ppid: number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。
-

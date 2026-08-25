@@ -14,9 +14,9 @@ function isRequestPublishFormSupported(callback: AsyncCallback<boolean>): void
 
 查询是否可以发布卡片到卡片使用方，使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-formProvider-function isRequestPublishFormSupported(callback: AsyncCallback<boolean>): void--><!--Device-formProvider-function isRequestPublishFormSupported(callback: AsyncCallback<boolean>): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -24,18 +24,18 @@ function isRequestPublishFormSupported(callback: AsyncCallback<boolean>): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 返回查询结果的回调函数。 <br>true: 表示可以发布卡片到卡片使用方。 <br>false: 表示不可以发布卡片到卡片使用方。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) |
 
 **示例**
 
@@ -207,9 +207,9 @@ function isRequestPublishFormSupported(): Promise<boolean>
 
 查询是否可以发布卡片到卡片使用方，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-formProvider-function isRequestPublishFormSupported(): Promise<boolean>--><!--Device-formProvider-function isRequestPublishFormSupported(): Promise<boolean>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -217,19 +217,18 @@ function isRequestPublishFormSupported(): Promise<boolean>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回是否可以发布卡片到卡片使用方的结果。 <br>true: 表示可以发布卡片到卡片使用方。 <br>false: 表示不可以发布卡片到卡片使用方。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) |
 
 **示例**
 
 参见 [isRequestPublishFormSupported](#isrequestpublishformsupported)
-

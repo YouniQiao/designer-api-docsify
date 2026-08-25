@@ -2,9 +2,9 @@
 
 Describes the result of check notifications.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-notificationManager-export interface NotificationCheckResult--><!--Device-notificationManager-export interface NotificationCheckResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -26,13 +26,13 @@ Result code.
 **0**: display.  
 **1**: no display.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
-
-<!--Device-NotificationCheckResult-code: int--><!--Device-NotificationCheckResult-code: int-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -48,13 +48,12 @@ Result.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
-
-<!--Device-NotificationCheckResult-message: string--><!--Device-NotificationCheckResult-message: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

@@ -4,7 +4,7 @@ Enumerates the credential change types.
 
 **Since:** 23
 
-<!--Device-osAccount-enum CredentialChangeType--><!--Device-osAccount-enum CredentialChangeType-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -20,7 +20,7 @@ A credential is added.
 
 **Since:** 23
 
-<!--Device-CredentialChangeType-ADD_CREDENTIAL = 1--><!--Device-CredentialChangeType-ADD_CREDENTIAL = 1-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -36,7 +36,7 @@ A credential is updated.
 
 **Since:** 23
 
-<!--Device-CredentialChangeType-UPDATE_CREDENTIAL = 2--><!--Device-CredentialChangeType-UPDATE_CREDENTIAL = 2-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -52,9 +52,8 @@ A credential is deleted.
 
 **Since:** 23
 
-<!--Device-CredentialChangeType-DELETE_CREDENTIAL = 3--><!--Device-CredentialChangeType-DELETE_CREDENTIAL = 3-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 15
 
-<!--Device-netFirewall-interface NetFirewallRule--><!--Device-netFirewall-interface NetFirewallRule-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -26,23 +26,23 @@ action: FirewallRuleAction
 
 **起始版本：** 15
 
-<!--Device-NetFirewallRule-action: FirewallRuleAction--><!--Device-NetFirewallRule-action: FirewallRuleAction-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## appUid
 
 ```TypeScript
-appUid?: int
+appUid?: number
 ```
 
 应用程序或服务UID。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 15
 
-<!--Device-NetFirewallRule-appUid?: int--><!--Device-NetFirewallRule-appUid?: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -58,7 +58,7 @@ description?: string
 
 **起始版本：** 15
 
-<!--Device-NetFirewallRule-description?: string--><!--Device-NetFirewallRule-description?: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -74,7 +74,7 @@ direction: NetFirewallRuleDirection
 
 **起始版本：** 15
 
-<!--Device-NetFirewallRule-direction: NetFirewallRuleDirection--><!--Device-NetFirewallRule-direction: NetFirewallRuleDirection-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -90,7 +90,7 @@ DNS：当type=RULE_DNS时有效，否则将被忽略。当type=RULE_DNS时，该
 
 **起始版本：** 15
 
-<!--Device-NetFirewallRule-dns?: NetFirewallDnsParams--><!--Device-NetFirewallRule-dns?: NetFirewallDnsParams-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -106,23 +106,23 @@ domains?: Array<NetFirewallDomainParams>
 
 **起始版本：** 15
 
-<!--Device-NetFirewallRule-domains?: Array<NetFirewallDomainParams>--><!--Device-NetFirewallRule-domains?: Array<NetFirewallDomainParams>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## id
 
 ```TypeScript
-id?: int
+id?: number
 ```
 
 防火墙规则的ID。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 15
 
-<!--Device-NetFirewallRule-id?: int--><!--Device-NetFirewallRule-id?: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -138,9 +138,9 @@ interface?: string
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
-<!--Device-NetFirewallRule-interface?: string--><!--Device-NetFirewallRule-interface?: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -156,7 +156,7 @@ isEnabled: boolean
 
 **起始版本：** 15
 
-<!--Device-NetFirewallRule-isEnabled: boolean--><!--Device-NetFirewallRule-isEnabled: boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -172,7 +172,7 @@ localIps?: Array<NetFirewallIpParams>
 
 **起始版本：** 15
 
-<!--Device-NetFirewallRule-localIps?: Array<NetFirewallIpParams>--><!--Device-NetFirewallRule-localIps?: Array<NetFirewallIpParams>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -188,7 +188,7 @@ localPorts?: Array<NetFirewallPortParams>
 
 **起始版本：** 15
 
-<!--Device-NetFirewallRule-localPorts?: Array<NetFirewallPortParams>--><!--Device-NetFirewallRule-localPorts?: Array<NetFirewallPortParams>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -204,23 +204,23 @@ name: string
 
 **起始版本：** 15
 
-<!--Device-NetFirewallRule-name: string--><!--Device-NetFirewallRule-name: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## protocol
 
 ```TypeScript
-protocol?: int
+protocol?: number
 ```
 
 协议，包含TCP：6，UDP：17。当type=RULE_IP时有效。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 15
 
-<!--Device-NetFirewallRule-protocol?: int--><!--Device-NetFirewallRule-protocol?: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -236,7 +236,7 @@ remoteIps?: Array<NetFirewallIpParams>
 
 **起始版本：** 15
 
-<!--Device-NetFirewallRule-remoteIps?: Array<NetFirewallIpParams>--><!--Device-NetFirewallRule-remoteIps?: Array<NetFirewallIpParams>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -252,7 +252,7 @@ remotePorts?: Array<NetFirewallPortParams>
 
 **起始版本：** 15
 
-<!--Device-NetFirewallRule-remotePorts?: Array<NetFirewallPortParams>--><!--Device-NetFirewallRule-remotePorts?: Array<NetFirewallPortParams>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -268,23 +268,22 @@ type: NetFirewallRuleType
 
 **起始版本：** 15
 
-<!--Device-NetFirewallRule-type: NetFirewallRuleType--><!--Device-NetFirewallRule-type: NetFirewallRuleType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## userId
 
 ```TypeScript
-userId: int
+userId: number
 ```
 
 系统用户ID，只能是存在的用户ID。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 15
 
-<!--Device-NetFirewallRule-userId: int--><!--Device-NetFirewallRule-userId: int-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
-

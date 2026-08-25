@@ -6,7 +6,7 @@ Defines user face angle data.
 
 **Since:** 26.0.0
 
-<!--Device-userStatus-export interface UserFaceAngleData--><!--Device-userStatus-export interface UserFaceAngleData-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -30,11 +30,10 @@ Network ID of device that user head is facing. The maximum length is 128.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-UserFaceAngleData-hpeNetworkId: string--><!--Device-UserFaceAngleData-hpeNetworkId: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
-

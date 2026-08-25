@@ -9,7 +9,6 @@
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [Array](arkts-arkts-array-c.md) | 表示与JS API兼容的数组。 |
-
+| 名称 |
+| --- |
+| [Array](arkts-arkts-array-c.md) |

@@ -4,7 +4,7 @@ Defines **options** used in the APIs.
 
 **Since:** 8
 
-<!--Device-huks-export interface HuksOptions--><!--Device-huks-export interface HuksOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -26,9 +26,9 @@ Tag.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-HuksOptions-inData?: Uint8Array--><!--Device-HuksOptions-inData?: Uint8Array-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -44,9 +44,8 @@ Tag.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-HuksOptions-properties?: Array<HuksParam>--><!--Device-HuksOptions-properties?: Array<HuksParam>-End-->
-
 **System capability:** SystemCapability.Security.Huks.Core
-

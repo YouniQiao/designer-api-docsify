@@ -2,9 +2,9 @@
 
 Describes the properties of the status bar. These properties are returned when you query the status bar's configuration details.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-window-interface StatusBarProperty--><!--Device-window-interface StatusBarProperty-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -24,11 +24,10 @@ Color of the text on the status bar. The value is in ARGB format, for example, *
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-StatusBarProperty-contentColor: string--><!--Device-StatusBarProperty-contentColor: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Window.SessionManager
-

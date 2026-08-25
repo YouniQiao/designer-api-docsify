@@ -4,7 +4,7 @@ Frame interpolation status of blankless loading.
 
 **Since:** 23
 
-<!--Device-webview-enum BlanklessFrameInterpolationState--><!--Device-webview-enum BlanklessFrameInterpolationState-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,9 +18,9 @@ Frame interpolation succeeded.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-BlanklessFrameInterpolationState-FRAME_INTERPOLATION_SUCCEEDED = 0--><!--Device-BlanklessFrameInterpolationState-FRAME_INTERPOLATION_SUCCEEDED = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -34,9 +34,9 @@ Frame interpolation failed.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-BlanklessFrameInterpolationState-FRAME_INTERPOLATION_FAILED = 1--><!--Device-BlanklessFrameInterpolationState-FRAME_INTERPOLATION_FAILED = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -50,9 +50,8 @@ The frame interpolation is removed.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BlanklessFrameInterpolationState-FRAME_INTERPOLATION_REMOVED = 2--><!--Device-BlanklessFrameInterpolationState-FRAME_INTERPOLATION_REMOVED = 2-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 9
 
-<!--Device-picker-class DocumentSelectOptions--><!--Device-picker-class DocumentSelectOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -24,13 +24,10 @@ themeColor?: CustomColors
 
 **类型：** [CustomColors](../../apis-arkui/arkts-apis/arkts-arkui-customcolors-t.md)
 
-**起始版本：** 23
+**起始版本：** 18
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DocumentSelectOptions-themeColor?: CustomColors--><!--Device-DocumentSelectOptions-themeColor?: CustomColors-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
-

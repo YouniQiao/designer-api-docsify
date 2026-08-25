@@ -4,7 +4,7 @@ JsGeolocation是Web组件在收到网页地理位置权限请求时，提供给�
 
 **起始版本：** 8
 
-<!--Device-unnamed-declare class JsGeolocation--><!--Device-unnamed-declare class JsGeolocation-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -23,9 +23,9 @@ JsGeolocation的构造函数。构造函数本身不直接被应用调用，通�
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-JsGeolocation-constructor()--><!--Device-JsGeolocation-constructor()-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -39,17 +39,16 @@ invoke(origin: string, allow: boolean, retain: boolean): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-JsGeolocation-invoke(origin: string, allow: boolean, retain: boolean): void--><!--Device-JsGeolocation-invoke(origin: string, allow: boolean, retain: boolean): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| origin | string | 是 | 发起地理位置权限请求的网页源，用于标识特定网站的地理位置请求来源。 <br>origin格式必须遵循RFC 6454中定义的格式。 |
-| allow | boolean | 是 | 设置的地理位置权限状态。 <br>true表示开启地理位置权限，false表示不开启地理位置权限。 |
-| retain | boolean | 是 | 是否允许将地理位置权限状态保存到系统中。可通过 [GeolocationPermissions](../arkts-apis/arkts-arkweb-webview-geolocationpermissions-c.md)接口管理保存到系统的地理位置权限。 <br>true表示保存地理位置权限状态到系统，false表示不保存到系统。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| origin | string | 是 |
+| allow | boolean | 是 |
+| retain | boolean | 是 |

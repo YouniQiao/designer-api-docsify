@@ -14,11 +14,11 @@ function startStream(streamId: int): void
 
 Start Streaming
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-abilityConnectionManager-function startStream(streamId: int): void--><!--Device-abilityConnectionManager-function startStream(streamId: int): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -26,17 +26,17 @@ Start Streaming
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| streamId | int | Yes | Indicates the ID of a transport stream. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| streamId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [32300002](../errorcode-device-manager.md#32300002-stream-receive-end-not-started) | The stream at the receive end is not started. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [32300002](../errorcode-device-manager.md#32300002-stream-receive-end-not-started) |
 
 **Examples**
 
@@ -48,4 +48,3 @@ let sessionId = 100;
 hilog.info(0x0000, 'testTag', 'startStream called');
 abilityConnectionManager.startStream(sessionId)
 ```
-

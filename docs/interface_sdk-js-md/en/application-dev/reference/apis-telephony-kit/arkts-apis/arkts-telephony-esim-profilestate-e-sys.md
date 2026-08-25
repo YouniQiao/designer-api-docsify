@@ -2,9 +2,9 @@
 
 Enumerates the profile states.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-eSIM-export enum ProfileState--><!--Device-eSIM-export enum ProfileState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -18,9 +18,9 @@ PROFILE_STATE_UNSPECIFIED = -1
 
 Profile status unspecified.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ProfileState-PROFILE_STATE_UNSPECIFIED = -1--><!--Device-ProfileState-PROFILE_STATE_UNSPECIFIED = -1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -34,9 +34,9 @@ PROFILE_STATE_DISABLED = 0
 
 Profile disabled.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ProfileState-PROFILE_STATE_DISABLED = 0--><!--Device-ProfileState-PROFILE_STATE_DISABLED = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -50,11 +50,10 @@ PROFILE_STATE_ENABLED = 1
 
 Profile enabled.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ProfileState-PROFILE_STATE_ENABLED = 1--><!--Device-ProfileState-PROFILE_STATE_ENABLED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
-

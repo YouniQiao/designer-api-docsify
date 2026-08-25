@@ -4,7 +4,7 @@
 
 **起始版本：** 8
 
-<!--Device-unnamed-declare namespace wifiext--><!--Device-unnamed-declare namespace wifiext-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
 
@@ -18,19 +18,18 @@ import { wifiext } from '@kit.ConnectivityKit';
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [disableHotspot](arkts-connectivity-wifiext-disablehotspot-f.md) | 去使能WLAN热点。 |
-| [enableHotspot](arkts-connectivity-wifiext-enablehotspot-f.md) | 使能WLAN热点。 |
-| [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md) | 获取功率模式。 |
-| [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md) | 获取功率模式。 |
-| [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md) | 获取支持的功率模式。 |
-| [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md) | 获取支持的功率模式。 |
-| [setPowerModel](arkts-connectivity-wifiext-setpowermodel-f.md) | 设置功率模式。 |
+| 名称 |
+| --- |
+| [disableHotspot](arkts-connectivity-wifiext-disablehotspot-f.md) |
+| [enableHotspot](arkts-connectivity-wifiext-enablehotspot-f.md) |
+| [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md) |
+| [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md) |
+| [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md) |
+| [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md) |
+| [setPowerModel](arkts-connectivity-wifiext-setpowermodel-f.md) |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-| [PowerModel](arkts-connectivity-wifiext-powermodel-e.md) | 表示功率模式的枚举。@enum { number } PowerModel |
-
+| 名称 |
+| --- |
+| [PowerModel](arkts-connectivity-wifiext-powermodel-e.md) |

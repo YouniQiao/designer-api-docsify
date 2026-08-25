@@ -2,9 +2,9 @@
 
 设备日志事件返回值的枚举。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-avSession-enum DeviceLogEventCode--><!--Device-avSession-enum DeviceLogEventCode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -18,9 +18,9 @@ DEVICE_LOG_FULL = 1
 
 日志已满。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-DeviceLogEventCode-DEVICE_LOG_FULL = 1--><!--Device-DeviceLogEventCode-DEVICE_LOG_FULL = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -34,11 +34,10 @@ DEVICE_LOG_EXCEPTION = 2
 
 日志写入异常。
 
-**起始版本：** 23
+**起始版本：** 13
 
-<!--Device-DeviceLogEventCode-DEVICE_LOG_EXCEPTION = 2--><!--Device-DeviceLogEventCode-DEVICE_LOG_EXCEPTION = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
-

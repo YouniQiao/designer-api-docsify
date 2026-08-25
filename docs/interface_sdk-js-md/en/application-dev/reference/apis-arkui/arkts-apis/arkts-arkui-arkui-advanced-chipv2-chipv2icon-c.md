@@ -4,9 +4,7 @@ Defines chipV2 icon.
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
-
-<!--Device-unnamed-export abstract class ChipV2Icon--><!--Device-unnamed-export abstract class ChipV2Icon-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +24,10 @@ The constructor of ChipV2Icon
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Icon-constructor()--><!--Device-ChipV2Icon-constructor()-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -16,25 +16,25 @@ Translates this matrix object along the x, y, and z axes.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 10
 
 **Substitutes:** [translate](arkts-arkui-matrix4-matrix4transit-i.md#translate)
-
-<!--Device-matrix4-function translate(options: TranslateOption): Matrix4Transit--><!--Device-matrix4-function translate(options: TranslateOption): Matrix4Transit-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | Yes | Translation configuration. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Matrix4Transit | Matrix object after translation. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Matrix4Transit](arkts-arkui-matrix4transit-t.md) |
 
 **Examples**
 
@@ -57,4 +57,3 @@ struct Test {
   }
 }
 ```
-

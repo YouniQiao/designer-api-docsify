@@ -5,7 +5,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-inputEventClient-interface MouseController--><!--Device-inputEventClient-interface MouseController-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -17,6 +17,12 @@ import { inputEventClient } from '@kit.InputKit';
 
 ## beginAxis
 
+ArkTS-Dyn:
+```TypeScript
+beginAxis(axis: Axis, value: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 beginAxis(axis: Axis, value: int): Promise<void>
 ```
@@ -25,34 +31,34 @@ beginAxis(axis: Axis, value: int): Promise<void>
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-MouseController-beginAxis(axis: Axis, value: int): Promise<void>--><!--Device-MouseController-beginAxis(axis: Axis, value: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | 是 | 轴类型。 |
-| value | int | 是 | 轴值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | 是 |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The axis event is in progress. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
 
 **示例**
 
@@ -101,33 +107,33 @@ endAxis(axis: Axis): Promise<void>
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-MouseController-endAxis(axis: Axis): Promise<void>--><!--Device-MouseController-endAxis(axis: Axis): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | 是 | 轴类型。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The axis event is not in progress. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
 
 **示例**
 
@@ -135,6 +141,12 @@ endAxis(axis: Axis): Promise<void>
 
 ## moveTo
 
+ArkTS-Dyn:
+```TypeScript
+moveTo(displayId: number, displayX: number, displayY: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 moveTo(displayId: int, displayX: int, displayY: int): Promise<void>
 ```
@@ -143,35 +155,35 @@ moveTo(displayId: int, displayX: int, displayY: int): Promise<void>
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-MouseController-moveTo(displayId: int, displayX: int, displayY: int): Promise<void>--><!--Device-MouseController-moveTo(displayId: int, displayX: int, displayY: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| displayId | int | 是 | 目标显示器ID。 |
-| displayX | int | 是 | 目标位置相对于显示器左边缘的X坐标，单位为像素（px）。若超出显示器有效范围，则实际坐标值会规约到有效范围[0, 显示器宽度-1]。 |
-| displayY | int | 是 | 目标位置相对于显示器上边缘的Y坐标，单位为像素（px）。若超出显示器有效范围，则实际坐标值会规约到有效范围[0, 显示器高度-1]。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| displayX | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| displayY | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300002](../errorcode-inputeventclient.md#4300002-显示器不存在) | The display does not exist. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [4300002](../errorcode-inputeventclient.md#4300002-显示器不存在) |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
 
 **示例**
 
@@ -212,33 +224,33 @@ pressButton(button: Button): Promise<void>
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-MouseController-pressButton(button: Button): Promise<void>--><!--Device-MouseController-pressButton(button: Button): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| button | [Button](arkts-input-multimodalinput-mouseevent-button-e.md) | 是 | 要按下的鼠标按键。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| button | [Button](arkts-input-multimodalinput-mouseevent-button-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The mouse button is already pressed. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
 
 **示例**
 
@@ -283,33 +295,33 @@ releaseButton(button: Button): Promise<void>
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-MouseController-releaseButton(button: Button): Promise<void>--><!--Device-MouseController-releaseButton(button: Button): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| button | [Button](arkts-input-multimodalinput-mouseevent-button-e.md) | 是 | 要抬起的鼠标按键。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| button | [Button](arkts-input-multimodalinput-mouseevent-button-e.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The mouse button is not pressed. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
 
 **示例**
 
@@ -317,6 +329,12 @@ releaseButton(button: Button): Promise<void>
 
 ## updateAxis
 
+ArkTS-Dyn:
+```TypeScript
+updateAxis(axis: Axis, value: number): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 updateAxis(axis: Axis, value: int): Promise<void>
 ```
@@ -325,36 +343,35 @@ updateAxis(axis: Axis, value: int): Promise<void>
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-MouseController-updateAxis(axis: Axis, value: int): Promise<void>--><!--Device-MouseController-updateAxis(axis: Axis, value: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | 是 | 轴类型。 |
-| value | int | 是 | 轴值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | 是 |
+| value | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The axis event is not in progress. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
 
 **示例**
 
 参见[beginAxis](#beginaxis)示例。
-

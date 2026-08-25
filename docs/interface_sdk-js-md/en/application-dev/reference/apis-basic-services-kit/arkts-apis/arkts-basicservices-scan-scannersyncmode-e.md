@@ -2,9 +2,9 @@
 
 Enumerates the scanner sync codes.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-scan-enum ScannerSyncMode--><!--Device-scan-enum ScannerSyncMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -16,9 +16,9 @@ UPDATE_STR = 'update'
 
 Update code, which indicates that the scanner ID changes.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScannerSyncMode-UPDATE_STR = 'update'--><!--Device-ScannerSyncMode-UPDATE_STR = 'update'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -30,9 +30,8 @@ DELETE_STR = 'delete'
 
 Deletion code, which indicates that the scanner is offline.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-ScannerSyncMode-DELETE_STR = 'delete'--><!--Device-ScannerSyncMode-DELETE_STR = 'delete'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
-

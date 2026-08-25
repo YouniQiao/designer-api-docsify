@@ -10,15 +10,14 @@ import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Animator](arkts-arkui-animator-animator-c.md) | Creates an **Animator** object. |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Defines a simple animation parameter object. Unlike **AnimatorOptions**, this object comes with some default values for certain animation parameters, so you do not have to set them manually. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Animator](arkts-arkui-animator-animator-c.md) |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Animator options. |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Defines the animator result. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) |
+| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) |

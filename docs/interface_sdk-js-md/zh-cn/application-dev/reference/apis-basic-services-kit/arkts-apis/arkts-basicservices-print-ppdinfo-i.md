@@ -4,7 +4,7 @@
 
 **起始版本：** 24
 
-<!--Device-print-interface PpdInfo--><!--Device-print-interface PpdInfo-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -26,9 +26,9 @@ manufacturer: string
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-PpdInfo-manufacturer: string--><!--Device-PpdInfo-manufacturer: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -44,9 +44,9 @@ nickName: string
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-PpdInfo-nickName: string--><!--Device-PpdInfo-nickName: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -62,9 +62,8 @@ ppdName: string
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-PpdInfo-ppdName: string--><!--Device-PpdInfo-ppdName: string-End-->
-
 **系统能力：** SystemCapability.Print.PrintFramework
-

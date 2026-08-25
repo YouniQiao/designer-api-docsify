@@ -4,13 +4,12 @@
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [Environment](arkts-arkui-environment-environment-c.md) | Environment具体使用说明，详见[Environment(设备环境查询)](../../../ui/state-management/arkts-environment.md) |
+| 名称 |
+| --- |
+| [Environment](arkts-arkui-environment-environment-c.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [EnvPropsOptions](arkts-arkui-environment-envpropsoptions-i.md) | Defining the EnvPropsOptions interface |
-
+| 名称 |
+| --- |
+| [EnvPropsOptions](arkts-arkui-environment-envpropsoptions-i.md) |

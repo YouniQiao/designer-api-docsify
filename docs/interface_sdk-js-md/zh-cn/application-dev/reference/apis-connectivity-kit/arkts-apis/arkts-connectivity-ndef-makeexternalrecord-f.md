@@ -14,31 +14,30 @@ function makeExternalRecord(domainName: string, type: string, externalData: int[
 
 根据应用程序特定的外部数据，构建NDEF标签的Record。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ndef-function makeExternalRecord(domainName: string, type: string, externalData: int[]): NdefRecord--><!--Device-ndef-function makeExternalRecord(domainName: string, type: string, externalData: int[]): NdefRecord-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| domainName | string | 是 | 外部数据发布组织的域名，一般是应用程序的包名。 |
-| type | string | 是 | 外部数据的指定类型。 |
-| externalData | int[] | 是 | 外部数据内容，每个number十六进制表示，范围是0x00~0xFF。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [domainName](../../apis-mdm-kit/arkts-apis/arkts-mdm-networkmanager-domainfilterrule-i.md) | string | 是 |
+| type | string | 是 |
+| externalData | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [NdefRecord](arkts-connectivity-tag-ndefrecord-i.md) | NDEF标签的Record，详见NDEF技术规范《NFCForum-TS-NDEF_1.0》。 |
+| 类型 |
+| --- |
+| [NdefRecord](arkts-connectivity-tag-ndefrecord-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |

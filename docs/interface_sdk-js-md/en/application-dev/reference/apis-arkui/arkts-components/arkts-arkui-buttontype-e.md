@@ -30,7 +30,7 @@ Enumerates the button types.
 
 **Since:** 7
 
-<!--Device-unnamed-declare enum ButtonType--><!--Device-unnamed-declare enum ButtonType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,11 +44,11 @@ Capsule-type button (the round corner is half of the height by default).
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ButtonType-Capsule--><!--Device-ButtonType-Capsule-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,11 +62,11 @@ Circular button.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ButtonType-Circle--><!--Device-ButtonType-Circle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -80,11 +80,11 @@ Normal button, with no rounded corners by default.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ButtonType-Normal--><!--Device-ButtonType-Normal-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,13 +98,12 @@ Rounded rectangle button (default value: when **controlSize** is **NORMAL**, the
 
 **Since:** 15
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 15.
 
-<!--Device-ButtonType-ROUNDED_RECTANGLE = 3--><!--Device-ButtonType-ROUNDED_RECTANGLE = 3-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

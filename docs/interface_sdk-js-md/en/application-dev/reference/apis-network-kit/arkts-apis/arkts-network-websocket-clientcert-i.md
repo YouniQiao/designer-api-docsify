@@ -2,9 +2,9 @@
 
 Defines the client certificate type.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-webSocket-export interface ClientCert--><!--Device-webSocket-export interface ClientCert-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -24,9 +24,9 @@ Path of the certificate file.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ClientCert-certPath: string--><!--Device-ClientCert-certPath: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -40,9 +40,9 @@ Password of the certificate key file. The default value is an empty string.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ClientCert-keyPassword?: string--><!--Device-ClientCert-keyPassword?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -56,9 +56,8 @@ Path of the certificate key file.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-ClientCert-keyPath: string--><!--Device-ClientCert-keyPath: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
-

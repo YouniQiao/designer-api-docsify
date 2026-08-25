@@ -8,23 +8,30 @@ import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
 
 ## Summary
 
+### Functions
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArcScrollBar](arkts-arkui-arkui-arcscrollbar-arcscrollbar-f.md) |
+| [ArcScrollBar](arkts-arkui-arkui-arcscrollbar-arcscrollbar-f.md) |
+
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md) | Defines the arc scroll bar attribute functions. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ArcScrollBarInterface](arkts-arkui-arkui-arcscrollbar-arcscrollbarinterface-i.md) | The **ArcScrollBar** component is designed to be used together with scrollable components such as ArcList, List, Grid, Scroll, and WaterFlow. |
-| [ArcScrollBarOptions](arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) | Represents the parameters used to construct an **ArcScrollBar** component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-i.md) |
+| [ArcScrollBarInterface](arkts-arkui-arkui-arcscrollbar-arcscrollbarinterface-i.md) |
+| [ArcScrollBarOptions](arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) |
 
 ### Constants
 
-| Name | Description |
-| --- | --- |
-| [ArcScrollBar](arkts-arkui-arkui-arcscrollbar-con.md#arcscrollbar) | The **ArcScrollBar** component is designed to be used together with scrollable components such as ArcList, List, Grid, Scroll, and WaterFlow. |
-| [ArcScrollBarInstance](arkts-arkui-arkui-arcscrollbar-con.md#arcscrollbarinstance) | Defines ArcScrollBar Component instance. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArcScrollBar](arkts-arkui-arkui-arcscrollbar-con.md#arcscrollbar) |
+| [ArcScrollBarInstance](arkts-arkui-arkui-arcscrollbar-con.md#arcscrollbarinstance) |

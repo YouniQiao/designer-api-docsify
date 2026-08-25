@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-distributedDeviceManager-interface DiscoverySuccessResult--><!--Device-distributedDeviceManager-interface DiscoverySuccessResult-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -26,7 +26,6 @@ device: DeviceBasicInfo
 
 **起始版本：** 23
 
-<!--Device-DiscoverySuccessResult-device: DeviceBasicInfo--><!--Device-DiscoverySuccessResult-device: DeviceBasicInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
-

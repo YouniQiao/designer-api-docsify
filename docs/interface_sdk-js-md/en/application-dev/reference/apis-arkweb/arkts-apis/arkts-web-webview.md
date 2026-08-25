@@ -4,7 +4,7 @@ This module provides the capability to manage web modules.@namespace webview
 
 **Since:** 9
 
-<!--Device-unnamed-declare namespace webview--><!--Device-unnamed-declare namespace webview-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,112 +18,116 @@ import { webview } from '@kit.ArkWeb';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [once_string](arkts-arkweb-webview-oncestring-f.md#once_string) | Registers a one-time callback for web events of the specified type. Currently, only **webInited** is supported. This callback is triggered when the Web engine initialization is complete.When the first **Web** component is loaded in an app, the Web engine is initialized, and the once() callback is not triggered when other **Web** components are subsequently loaded in the same app. When the app destroys the last **Web** component, if the first **Web** component is loaded again, the app re-enters the Web engine initialization process. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [once](arkts-arkweb-webview-once-f.md) |
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [AdsBlockManager](arkts-arkweb-webview-adsblockmanager-c.md) | AdsBlockManager is a class in the ArkWeb framework used to manage the ad filtering feature of Web components. It provides capabilities such as setting ad filtering rules, managing domain AllowedList/DisallowedList, and controlling filtering policies. All Web components in each app share a single AdsBlockManager static class. Developers can use this class to inject ad filtering configuration files that conform to the universal EasyList syntax into Web components and flexibly control the ad filtering status for specific websites.The core mechanism of AdsBlockManager is based on a two-tier AllowedList/DisallowedList strategy using domain suffix matching: the DisallowedList is used to disable ad filtering for specific websites, while the AllowedList has a higher priority and can re-enable ad filtering for certain subdomains within the scope of the DisallowedList. After successful internal parsing, ad filtering rules are persistently stored and do not need to be set again after an app restart. However, they are not persistent and must be reconfigured after an app restart. |
-| [BackForwardCacheOptions](arkts-arkweb-webview-backforwardcacheoptions-c.md) | Implements a **BackForwardCacheOptions** object to set back-forward cache options of the **Web** component. |
-| [BackForwardCacheSupportedFeatures](arkts-arkweb-webview-backforwardcachesupportedfeatures-c.md) | BackForwardCacheSupportedFeatures is a configuration class in the ArkWeb framework used to selectively allow pages that use specific web features to enter the Back/Forward Cache (BFCache). By default, pages using features such as native embed or media takeover are blocked from entering BFCache, because the browser cannot safely save and restore these complex states bound to system controls. By setting the properties in this class, developers can explicitly allow pages with these features to enter BFCache, but they must manage the lifecycle of the related system controls themselves to avoid resource leaks. For the complete sample code, see [enableBackForwardCache](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#enablebackforwardcache). |
-| [GeolocationPermissions](arkts-arkweb-webview-geolocationpermissions-c.md) | GeolocationPermissions is the geolocation permission management object for the Web component. It provides management capabilities such as querying, authorizing, and deleting saved geolocation permission statuses in the Web component. With GeolocationPermissions, an app can pre-authorize access for a specific origin before a web page initiates a geolocation request, and can also proactively query or clear saved permission records without relying on the pop-up authorization flow when a web page requests permission.GeolocationPermissions is suitable for scenarios where proactive management of Web component geolocation permissions is required. For example, an app may want to pre-authorize trusted websites to access geolocation, avoiding authorization prompts on each visit; or an app may need to clear geolocation permission records that are no longer needed by the user. The following permissions are required for accessing geolocation: ohos.permission.LOCATION, ohos.permission.APPROXIMATELY_LOCATION, and ohos.permission.LOCATION_IN_BACKGROUND. For details about the permissions, see [Development Guide for Location Permission Application](../../../device/location/location-permission-guidelines.md). |
-| [JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md) | JsMessageExt is a data class in the ArkWeb framework used to encapsulate the result returned after executing a JavaScript script through the [runJavaScriptExt](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#runjavascriptext) API. Unlike the conventional runJavaScript API, runJavaScriptExt supports richer return value types, and JsMessageExt provides a type-safe way to access these diverse return results. Developers first obtain the data type through the getType method of JsMessageExt, and then call the corresponding get method to retrieve the specific value.JsMessageExt supports parsing of multiple JavaScript return value types: string (getString), number (getNumber), boolean (getBoolean), raw binary data (getArrayBuffer), array (getArray), and more. When the obtained data type does not match the actual stored type (for example, calling getString on a numeric type), error code 17100014 is thrown. Starting from API version 22, JsMessageExt also provides the getErrorDescription method for obtaining exception information during JavaScript execution. If the return value is of the object type, it is uniformly formatted into a description string. |
-| [MediaSourceInfo](arkts-arkweb-webview-mediasourceinfo-c.md) | Implements a **MediaSourceInfo** object to provide the information about the media source. |
-| [NativeMediaPlayerSurfaceInfo](arkts-arkweb-webview-nativemediaplayersurfaceinfo-c.md) | NativeMediaPlayerSurfaceInfo uses enableNativeMediaPlayer to configure the surface information for same-layer rendering. This class allows an app to take over the web media playback functionality, configuring the surface ID and position information to integrate web media content with the app UI through same-layer rendering and enhance the media playback experience. |
-| [PdfData](arkts-arkweb-webview-pdfdata-c.md) | PdfData is a class used by the Web component to encapsulate the PDF data stream generated from a web page. When an app needs to save the web page content loaded by the Web component in PDF format, the [createPdf](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#createpdf) method of [WebviewController](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md) is used to convert the web page content into a PDF data stream, which is returned as a PdfData object in a callback or promise. The app then obtains the data stream in Uint8Array format through the pdfArrayBuffer method of PdfData and writes the data to a local PDF file using file I/O APIs.PdfData is applicable to scenarios such as saving web page content offline and generating web page PDF reports. Before using it, load the Web component and ensure that the web page content has been rendered, and then call createPdf to generate the PDF data stream. |
-| [PrefetchOptions](arkts-arkweb-webview-prefetchoptions-c.md) | PrefetchOptions is a configuration class in the ArkWeb framework for customizing web page prefetch behavior. It is set through the prefetch-related API of [prefetchPage](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#prefetchpage), and the customizable settings include whether to ignore Cache-Control: no-store in the response header and the minimum time interval between two prefetches. |
-| [ProxyConfig](arkts-arkweb-webview-proxyconfig-c.md) | ProxyConfig is a class in the ArkWeb framework used to configure network proxy rules. It works with [ProxyController](../../apis-default/arkts-apis/arkts-webview-proxycontroller-c.md) to implement proxy control over network requests of all Web components in an app. Through ProxyConfig, developers can flexibly define various proxy rules: specifying a particular proxy server for specific URLs, specifying direct server connections for certain URLs, defining rules to bypass the proxy, and more. |
-| [ProxyController](arkts-arkweb-webview-proxycontroller-c.md) | ProxyController is a static class in the ArkWeb framework used to manage the proxy configuration of all Web components in an app. With ProxyController, developers can uniformly set or remove proxy configurations for all Web requests in the app, which is suitable for scenarios where Web traffic needs to be routed to a specific proxy server (such as enterprise network environments, content filtering, and traffic monitoring).ProxyController provides two core methods: **applyProxyOverride** is used to apply a proxy configuration, which accepts a [ProxyConfig](../../apis-default/arkts-apis/arkts-webview-proxyconfig-c.md) object and a callback function for successful proxy setup; **removeProxyOverride** is used to remove the current proxy configuration and restore the default network connection. Note that the proxy setting or removal does not take effect immediately. Before loading a page, wait for the callback function to be triggered. The callback function is invoked on the UI thread. |
-| [ProxyRule](arkts-arkweb-webview-proxyrule-c.md) | ProxyRule is a class for read-only proxy rule information in the ArkWeb framework, obtained through the [getProxyRules](../../apis-default/arkts-apis/arkts-webview-proxyconfig-c.md#getproxyrules) method. When a developer configures proxy rules through ProxyConfig, the configured rule list can be obtained through getProxyRules, with each rule corresponding to a ProxyRule object used to query the detailed information of the rule.ProxyRule provides two methods: getSchemeFilter is used to obtain the protocol filter corresponding to the proxy rule (such as MATCH_ALL_SCHEMES, MATCH_HTTP, MATCH_HTTPS, etc.), and getUrl is used to obtain the proxy server URL information specified in the proxy rule. The ProxyRule object is read-only, created by the system when configuring proxy rules, and the app can only query its content but cannot modify it. |
-| [UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md) | UserAgentBrandVersion is a data class in the ArkWeb framework used to configure the brand name and version number in User-Agent client hints, and is used together with [UserAgentMetadata](../../apis-default/arkts-apis/arkts-webview-useragentmetadata-c.md). In the User-Agent Client Hints mechanism, the browser reports brand and version information to the server through request headers such as Sec-CH-UA-Full-Version-List. UserAgentBrandVersion is used to define a single brand entry in it.UserAgentBrandVersion provides methods for setting and obtaining the brand name and version number: setBrand/ getBrand are used to set and obtain the brand name (for example, "ArkWeb"), setMajorVersion/getMajorVersion are used to set and obtain the major version number (for example, "126"), and setFullVersion/getFullVersion are used to set and obtain the full version number (for example, "126.0.0.0"). An app can customize the browser identity information reported by the Web component to the server by modifying these values. |
-| [UserAgentMetadata](arkts-arkweb-webview-useragentmetadata-c.md) | UserAgentMetadata is a class in the ArkWeb framework used to configure the complete metadata for User-Agent Client Hints. User-Agent Client Hints is a modern HTTP request header mechanism that reports client information to the server through a set of Sec-CH-UA series headers, replacing the traditional User-Agent string to achieve more secure and more granular browser identity identification. Through UserAgentMetadata, apps can customize all client information fields reported by the Web component to the server. |
-| [WebCookieManager](arkts-arkweb-webview-webcookiemanager-c.md) | WebCookieManager is the cookie manager for Web components, providing global management capabilities for cookies in Web components. With this class, developers can obtain, set, save, and clear cookies, as well as control cookie permissions. All methods of this class are static, and all Web components in an app share a single WebCookieManager instance. The cookie format complies with the [RFC6265](https://www.rfc-editor.org/info/rfc6265/) standard.When browsing web pages in Privacy Mode, data such as cookies and caches are not written to local persistent storage. After the Web component in Privacy Mode is destroyed, this data is cleared and not retained. |
-| [WebDataBase](arkts-arkweb-webview-webdatabase-c.md) | Implements a **WebDataBase** object. |
-| [WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md) | WebDownloadDelegate is a delegate class in the ArkWeb framework used to listen for and handle download task events of the Web component. When a web page in the Web component triggers a file download (for example, when the user taps a download link or the **startDownload** method is called), the download task state changes are notified to the app through the callback APIs of this class. Developers register a **WebDownloadDelegate** instance with the Web component through **setDownloadDelegate** to take over the complete lifecycle management of the download process.WebDownloadDelegate defines four download lifecycle callbacks: [onBeforeDownload](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md#onbeforedownload) is invoked before the download starts, and the app must call [WebDownloadItem.start](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md#start) in this callback and specify a download path; otherwise, the download remains in the PENDING state. [onDownloadUpdated](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md#ondownloadupdated) is invoked during the download process, providing updated information such as the download progress (percentage) and the number of bytes received. [onDownloadFinish](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md#ondownloadfinish) is invoked when the download is complete. [onDownloadFailed](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md#ondownloadfailed) is invoked when the download fails, and the failed task can be saved through [WebDownloadItem.serialize](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md#serialize) for later recovery. |
-| [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md) | WebDownloadItem is a class in the ArkWeb framework used to represent and manage a single download task. Through the callback parameters of [WebDownloadDelegate](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md), an app can obtain a WebDownloadItem instance and then query and control the download task, including starting the download to a specified path, querying the download progress and status, pausing/resuming/canceling the task, and serializing failed tasks for later recovery. |
-| [WebDownloadManager](arkts-arkweb-webview-webdownloadmanager-c.md) | WebDownloadManager is a static management class for download tasks of the Web component in the ArkWeb framework. It manages all file download processes triggered by the Web component. Developers can use this class to set a download delegate to receive download progress callbacks and resume failed download tasks. All methods of this class are static methods and take effect globally within the entire app.WebDownloadManager works together with [WebDownloadDelegate](../../apis-default/arkts-apis/arkts-webview-webdownloaddelegate-c.md) and [WebDownloadItem](../../apis-default/arkts-apis/arkts-webview-webdownloaditem-c.md): WebDownloadManager is responsible for lifecycle management and delegate setting of download tasks, WebDownloadDelegate reports download progress and status change events to the app layer, and WebDownloadItem represents a single download task entity, supporting operations such as pause, resume, and cancel. |
-| [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) | WebHttpBodyStream is an HTTP request body data stream object used to read the request body data of POST, PUT, and other requests in custom scheme interception scenarios. This object is obtained through the getHttpBodyStream method of WebSchemeHandlerRequest and supports data of the BYTES, FILE, BLOB, and CHUNKED types. Developers can use this API to read uplink data in a custom protocol interceptor, enabling inspection or forwarding of the request body. Note: Other APIs in this class can be called only after [initialize](../../apis-default/arkts-apis/arkts-webview-webhttpbodystream-c.md#initialize) succeeds.WebHttpBodyStream works in conjunction with [WebSchemeHandlerRequest](../../apis-default/arkts-apis/arkts-webview-webschemehandlerrequest-c.md): WebSchemeHandlerRequest represents the intercepted request, and WebHttpBodyStream represents the HTTP body data stream of that request. By reading data from the stream, developers can obtain the complete request body content. |
-| [WebMessageExt](arkts-arkweb-webview-webmessageext-c.md) | Implements a **WebMessageExt** object that received and sent by the [WebMessagePort](../../apis-default/arkts-apis/arkts-webview-webmessageport-i.md) API. |
-| [WebResourceHandler](arkts-arkweb-webview-webresourcehandler-c.md) | WebResourceHandler is a handler used to return the result of an intercepted request to the **Web** component in custom scheme interception scenarios. After **WebSchemeHandler** decides to intercept a request, the developer uses **WebResourceHandler** to provide a custom response header (**didReceiveResponse**) and response body data (**didReceiveResponseBody**) to the **Web** component, and notifies the request of completion (**didFinish**) or failure (**didFail**). **didFail** supports an overloaded method (API version 20 and later) to simplify the error handling process. This API enables the app layer to fully customize the response to network requests.  **WebResourceHandler** works with [WebSchemeHandler](../../apis-default/arkts-apis/arkts-webview-webschemehandler-c.md) and [WebSchemeHandlerResponse](../../apis-default/arkts-apis/arkts-webview-webschemehandlerresponse-c.md): the **onRequestStart** callback of **WebSchemeHandler** receives a **WebResourceHandler** instance, the developer constructs a **WebSchemeHandlerResponse** object, passes the response header and response body data through **didReceiveResponse** and **didReceiveResponseBody** of **WebResourceHandler**, and finally calls **didFinish** or **didFail** to end the request. |
-| [WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md) | WebSchemeHandler is an interceptor class used to intercept network requests for a specified scheme (protocol), supporting scenarios such as custom protocol handling, local resource substitution, and specific request interception. Developers implement the onRequestStart callback to decide whether to intercept a request, and intercepted requests can have custom response content returned through WebResourceHandler. The WebSchemeHandler instance is registered to a specified scheme through the [setWebSchemeHandler](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setwebschemehandler) method of WebviewController, thereby intercepting and processing all requests for that scheme.WebSchemeHandler works in conjunction with [WebSchemeHandlerRequest](../../apis-default/arkts-apis/arkts-webview-webschemehandlerrequest-c.md), [WebResourceHandler](../../apis-default/arkts-apis/arkts-webview-webresourcehandler-c.md), and [WebSchemeHandlerResponse](../../apis-default/arkts-apis/arkts-webview-webschemehandlerresponse-c.md): the onRequestStart callback receives a WebSchemeHandlerRequest (information about the intercepted request) and a WebResourceHandler (the handler used to return a custom response), and returns a boolean value indicating whether to intercept. onRequestStop is triggered when the request ends (only for intercepted requests) and is used for resource cleanup. |
-| [WebSchemeHandlerRequest](arkts-arkweb-webview-webschemehandlerrequest-c.md) | The WebSchemeHandlerRequest class defines a wrapper object for resource requests intercepted through WebSchemeHandler. When a developer registers a custom protocol handler (WebSchemeHandler), the Web kernel creates a WebSchemeHandlerRequest instance and passes it to the callback method upon intercepting a request matching the protocol. This object provides the following request information query methods: getting request header information, request URL, request method, source URL, determining whether it is a main frame request, whether it is associated with a user gesture, getting the request body stream, resource type, and the frame URL that triggered the request, so as to determine whether to intercept the request and construct a corresponding response. |
-| [WebSchemeHandlerResponse](arkts-arkweb-webview-webschemehandlerresponse-c.md) | WebSchemeHandlerResponse is a class used to construct HTTP response data in custom scheme interception scenarios. Developers use this class to create a Response object, set properties such as HTTP status code, status text, MIME type, character set, custom response headers, network error code, and redirection URL, and then return the custom response to the Web component through WebResourceHandler. This class is the core data carrier for custom resource interception.WebSchemeHandlerResponse is used together with WebResourceHandler: the developer constructs a WebSchemeHandlerResponse object and fills in the response properties, and then sends the response header to the intercepted request through the didReceiveResponse method of WebResourceHandler. |
-| [WebStorage](arkts-arkweb-webview-webstorage-c.md) | Implements a **WebStorage** object to manage the Web SQL database and HTML5 Web Storage APIs. All **Web** components in an application share a **WebStorage** object. |
-| [WebviewController](arkts-arkweb-webview-webviewcontroller-c.md) | WebviewController is the core controller for various behaviors of the **Web** component, providing extensive functions such as page loading and navigation control, JavaScript interaction, lifecycle management, scroll control, page zoom and content search, message port communication, and cache and certificate management. A WebviewController object can control only one **Web** component, and methods on WebviewController (except static methods) can be called only after the **Web** component is bound to WebviewController. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AdsBlockManager](arkts-arkweb-webview-adsblockmanager-c.md) |
+| [BackForwardCacheOptions](arkts-arkweb-webview-backforwardcacheoptions-c.md) |
+| [BackForwardCacheSupportedFeatures](arkts-arkweb-webview-backforwardcachesupportedfeatures-c.md) |
+| [GeolocationPermissions](arkts-arkweb-webview-geolocationpermissions-c.md) |
+| [JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md) |
+| [MediaSourceInfo](arkts-arkweb-webview-mediasourceinfo-c.md) |
+| [NativeMediaPlayerSurfaceInfo](arkts-arkweb-webview-nativemediaplayersurfaceinfo-c.md) |
+| [PdfData](arkts-arkweb-webview-pdfdata-c.md) |
+| [PrefetchOptions](arkts-arkweb-webview-prefetchoptions-c.md) |
+| [ProxyConfig](arkts-arkweb-webview-proxyconfig-c.md) |
+| [ProxyController](arkts-arkweb-webview-proxycontroller-c.md) |
+| [ProxyRule](arkts-arkweb-webview-proxyrule-c.md) |
+| [UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md) |
+| [UserAgentMetadata](arkts-arkweb-webview-useragentmetadata-c.md) |
+| [WebCookieManager](arkts-arkweb-webview-webcookiemanager-c.md) |
+| [WebDataBase](arkts-arkweb-webview-webdatabase-c.md) |
+| [WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md) |
+| [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md) |
+| [WebDownloadManager](arkts-arkweb-webview-webdownloadmanager-c.md) |
+| [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) |
+| [WebMessageExt](arkts-arkweb-webview-webmessageext-c.md) |
+| [WebResourceHandler](arkts-arkweb-webview-webresourcehandler-c.md) |
+| [WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md) |
+| [WebSchemeHandlerRequest](arkts-arkweb-webview-webschemehandlerrequest-c.md) |
+| [WebSchemeHandlerResponse](arkts-arkweb-webview-webschemehandlerresponse-c.md) |
+| [WebStorage](arkts-arkweb-webview-webstorage-c.md) |
+| [WebviewController](arkts-arkweb-webview-webviewcontroller-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [BackForwardList](arkts-arkweb-webview-backforwardlist-i.md) | BackForwardList is an interface in the ArkWeb framework for accessing the browsing history list of a Web component. It is obtained through the [getBackForwardEntries](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getbackforwardentries) method. This interface provides read-only access to the page navigation history. Developers can obtain basic information about the current history list (the current index and the total number of history entries), as well as detailed information about a specific history item by index.@interface BackForwardList [since 9 - 11] |
-| [BlanklessFrameInterpolationInfo](arkts-arkweb-webview-blanklessframeinterpolationinfo-i.md) | White-Screen-Free Loading frame interpolation status information, which is used as the callback input parameter in [BlanklessLoadingParam](../../apis-default/arkts-apis/arkts-webview-blanklessloadingparam-i.md). |
-| [BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md) | Prediction information about the first screen loading of the page, mainly including the predicted first screen similarity, predicted first screen loading duration, and predicted error code. The app determines whether to enable the White-Screen-Free Loading frame interpolation scheme based on this information. |
-| [BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md) | Loading parameters of the White-Screen-Free Loading frame interpolation scheme. |
-| [CacheOptions](arkts-arkweb-webview-cacheoptions-i.md) | Represents a configuration object for precompiling JavaScript in the **Web** component to generate bytecode cache, which is designed to control the updating of the bytecode cache. |
-| [HistoryItem](arkts-arkweb-webview-historyitem-i.md) | Describes a historical page record.@interface HistoryItem [since 9 - 11] |
-| [HitTestValue](arkts-arkweb-webview-hittestvalue-i.md) | Provides the element information of the area being clicked. For the sample code, see [getLastHitTest](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#getlasthittest). |
-| [MediaInfo](arkts-arkweb-webview-mediainfo-i.md) | Represents a **MediaInfo** object used as a parameter of the [CreateNativeMediaPlayerCallback](../../apis-default/arkts-apis/arkts-webview-createnativemediaplayercallback-t.md) callback. The object contains information about media on the web page. The application may create, based on the information, a player that takes over media playback of the web page. |
-| [NativeMediaPlayerBridge](arkts-arkweb-webview-nativemediaplayerbridge-i.md) | NativeMediaPlayerBridge is the return value type of the [CreateNativeMediaPlayerCallback](../../apis-default/arkts-apis/arkts-webview-createnativemediaplayercallback-t.md) callback function. It is an interface class between the player that takes over web page media and the ArkWeb kernel. The ArkWeb kernel uses an object of this interface class to control the player created by the app to take over web page media. This interface allows the app to use a custom media player to take over media content playback in web pages. It also supports player suspension and resumption mechanisms. |
-| [NativeMediaPlayerHandler](arkts-arkweb-webview-nativemediaplayerhandler-i.md) | NativeMediaPlayerHandler is the parameter of the [CreateNativeMediaPlayerCallback](../../apis-default/arkts-apis/arkts-webview-createnativemediaplayercallback-t.md) callback function. When an app uses [NativeMediaPlayerBridge](../../apis-default/arkts-apis/arkts-webview-nativemediaplayerbridge-i.md) to take over web media playback, it must synchronize various player state changes to the ArkWeb kernel in real time. This ensures that the web JavaScript can obtain the correct player state. The ArkWeb kernel converts these states into standard HTML5 Media Events and triggers the event listeners registered in the web page, thereby ensuring the normal functioning of the web page. |
-| [OfflineResourceMap](arkts-arkweb-webview-offlineresourcemap-i.md) | Implements an **OfflineResourceMap** object, which is used to set information related to local offline resources that will be injected into memory cache through the [injectOfflineResources](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#injectofflineresources) API. The ArkWeb engine will generate resource caches based on this information and control the validity period of the cache accordingly. |
-| [PdfConfiguration](arkts-arkweb-webview-pdfconfiguration-i.md) | Input parameter of the [createPdf](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#createpdf) function. |
-| [RectEvent](arkts-arkweb-webview-rectevent-i.md) | Defines a rectangle. |
-| [RequestInfo](arkts-arkweb-webview-requestinfo-i.md) | Describes the information about the resource request sent by the **Web** component. |
-| [ScrollOffset](arkts-arkweb-webview-scrolloffset-i.md) | Represents the current scrolling offset of a web page. |
-| [SecurityParams](arkts-arkweb-webview-securityparams-i.md) | Security feature option configuration. This class provides a set of boolean switches for controlling the enablement status of specific Web features in the ArkWeb kernel. By disabling non-essential high-risk modules (such as JIT compilation, WebAssembly, and WebGL), you can reduce the attack surface and lower potential exploit risks. All properties are optional, with the default value false (not disabled). Configure them based on your specific business scenarios. |
-| [SnapshotInfo](arkts-arkweb-webview-snapshotinfo-i.md) | Provides information used to obtain a full drawing result. |
-| [SnapshotResult](arkts-arkweb-webview-snapshotresult-i.md) | Represents a full drawing result. |
-| [WebCustomScheme](arkts-arkweb-webview-webcustomscheme-i.md) | Defines a custom URL scheme.@interface WebCustomScheme [since 9 - 11] |
-| [WebHeader](arkts-arkweb-webview-webheader-i.md) | Describes the request/response header returned by the **Web** component.@interface WebHeader [since 9 - 11] |
-| [WebHttpCookie](arkts-arkweb-webview-webhttpcookie-i.md) | Defines cookie-related fields. |
-| [WebMessagePort](arkts-arkweb-webview-webmessageport-i.md) | WebMessagePort is a message port interface in the Web component used for bidirectional communication between the app side (ArkTS) and the HTML5 side (JavaScript). A pair of associated ports is created through createWebMessagePorts, with one port sent to the HTML5 side and the other retained on the app side, enabling cross- runtime message passing. WebMessagePort supports two message protocols: the basic protocol uses WebMessage as the message carrier (postMessageEvent/onMessageEvent), and the extended protocol uses WebMessageExt to support richer data types (postMessageEventExt/onMessageEventExt).@interface WebMessagePort [since 9 - 11] |
-| [WebStorageOrigin](arkts-arkweb-webview-webstorageorigin-i.md) | Provides usage information of the Web SQL Database.@interface WebStorageOrigin [since 9 - 11] |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BackForwardList](arkts-arkweb-webview-backforwardlist-i.md) |
+| [BlanklessFrameInterpolationInfo](arkts-arkweb-webview-blanklessframeinterpolationinfo-i.md) |
+| [BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md) |
+| [BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md) |
+| [CacheOptions](arkts-arkweb-webview-cacheoptions-i.md) |
+| [HistoryItem](arkts-arkweb-webview-historyitem-i.md) |
+| [HitTestValue](arkts-arkweb-webview-hittestvalue-i.md) |
+| [MediaInfo](arkts-arkweb-webview-mediainfo-i.md) |
+| [NativeMediaPlayerBridge](arkts-arkweb-webview-nativemediaplayerbridge-i.md) |
+| [NativeMediaPlayerHandler](arkts-arkweb-webview-nativemediaplayerhandler-i.md) |
+| [OfflineResourceMap](arkts-arkweb-webview-offlineresourcemap-i.md) |
+| [PdfConfiguration](arkts-arkweb-webview-pdfconfiguration-i.md) |
+| [RectEvent](arkts-arkweb-webview-rectevent-i.md) |
+| [RequestInfo](arkts-arkweb-webview-requestinfo-i.md) |
+| [ScrollOffset](arkts-arkweb-webview-scrolloffset-i.md) |
+| [SecurityParams](arkts-arkweb-webview-securityparams-i.md) |
+| [SnapshotInfo](arkts-arkweb-webview-snapshotinfo-i.md) |
+| [SnapshotResult](arkts-arkweb-webview-snapshotresult-i.md) |
+| [WebCustomScheme](arkts-arkweb-webview-webcustomscheme-i.md) |
+| [WebHeader](arkts-arkweb-webview-webheader-i.md) |
+| [WebHttpCookie](arkts-arkweb-webview-webhttpcookie-i.md) |
+| [WebMessagePort](arkts-arkweb-webview-webmessageport-i.md) |
+| [WebStorageOrigin](arkts-arkweb-webview-webstorageorigin-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [ArkWebEngineVersion](arkts-arkweb-webview-arkwebengineversion-e.md) | For ArkWeb kernel versions, see [Adaptation Guide for the M114 Kernel on OpenHarmony 6.0](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/web/ReleaseNote/CompatibleWithLegacyWebEngine_6.0.md) and [Adaptation Guide for the M132 Kernel on OpenHarmony 7.0](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/web/ReleaseNote/CompatibleWithLegacyWebEngine_7.0.md). |
-| [BlanklessFrameInterpolationState](arkts-arkweb-webview-blanklessframeinterpolationstate-e.md) | Frame interpolation status of blankless loading. |
-| [ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md) | Binding state between WebviewController and the Web component. |
-| [JsMessageType](arkts-arkweb-webview-jsmessagetype-e.md) | Enumerates the data types of the results returned after the [runJavaScriptExt](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#runjavascriptext) API is executed. |
-| [MediaError](arkts-arkweb-webview-mediaerror-e.md) | Enumerates the error types of the player. |
-| [MediaPlaybackState](arkts-arkweb-webview-mediaplaybackstate-e.md) | Enumerates the playback control states of the current web page. |
-| [MediaType](arkts-arkweb-webview-mediatype-e.md) | Enumerates the media types. |
-| [NetworkState](arkts-arkweb-webview-networkstate-e.md) | Enumerates the network statuses of the player. |
-| [OfflineResourceType](arkts-arkweb-webview-offlineresourcetype-e.md) | Enumerates the offline resource types corresponding to the [OfflineResourceMap](../../apis-default/arkts-apis/arkts-webview-offlineresourcemap-i.md) object. |
-| [PlaybackStatus](arkts-arkweb-webview-playbackstatus-e.md) | Enumerates the playback statuses of the player, which is an input parameter of the [handleStatusChanged](../../apis-default/arkts-apis/arkts-webview-nativemediaplayerhandler-i.md#handlestatuschanged) API. |
-| [Preload](arkts-arkweb-webview-preload-e.md) | Enumerates how the player preloads media data. |
-| [PressureLevel](arkts-arkweb-webview-pressurelevel-e.md) | Enumerates the memory pressure levels. When an application clears the cache occupied by the **Web** component, the **Web** kernel releases the cache based on the memory pressure level. |
-| [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | Enumerates the schemes that use the proxy. |
-| [ReadyState](arkts-arkweb-webview-readystate-e.md) | Enumerates the cache states of the player. |
-| [RenderProcessMode](arkts-arkweb-webview-renderprocessmode-e.md) | Enumerates the ArkWeb renderer subprocess mode types. You can select the appropriate mode based on the app's requirements for memory usage and renderer process isolation. |
-| [ScrollbarMode](arkts-arkweb-webview-scrollbarmode-e.md) | Enumerates the global scrollbar modes in the web page. |
-| [ScrollType](arkts-arkweb-webview-scrolltype-e.md) | Enumerates the scroll types for [setScrollable](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setscrollable). |
-| [SecureDnsMode](arkts-arkweb-webview-securednsmode-e.md) | Enumerates the modes in which the **Web** component uses HTTPDNS. |
-| [SecurityLevel](arkts-arkweb-webview-securitylevel-e.md) | Enumerates the security levels of the web page. |
-| [SiteIsolationMode](arkts-arkweb-webview-siteisolationmode-e.md) | The site isolation mechanism isolates websites from different origins in different renderer subprocesses, reducing the cross-origin attack surface. For example, in the original process model on PC, each tab corresponds to one renderer subprocess. After site isolation is enabled, iframes from different origins run in independent renderer subprocesses. |
-| [SourceType](arkts-arkweb-webview-sourcetype-e.md) | Enumerates the media source types. |
-| [SuspendType](arkts-arkweb-webview-suspendtype-e.md) | Enumerates the suspension types of the player. |
-| [UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md) | Enumerates the user device forms. |
-| [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md) | Enumerates the error codes of the blankless loading. |
-| [WebDestroyMode](arkts-arkweb-webview-webdestroymode-e.md) | Enumerates the destroy modes of the **Web** component. When the Web component is destroyed, the destroy mode affects the resource release time of the Web kernel, such as the JavaScript running context and rendering context. |
-| [WebDownloadErrorCode](arkts-arkweb-webview-webdownloaderrorcode-e.md) | Enumerates the download task error codes. |
-| [WebDownloadState](arkts-arkweb-webview-webdownloadstate-e.md) | Enumerates the states of a download task. |
-| [WebHitTestType](arkts-arkweb-webview-webhittesttype-e.md) | Enumerates the node types that the cursor hits. |
-| [WebHttpCookieSameSitePolicy](arkts-arkweb-webview-webhttpcookiesamesitepolicy-e.md) | Enumerates the policies for sending cookies in cross-site requests. |
-| [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | Enumerates the data types supported by the [WebMessagePort](../../apis-default/arkts-apis/arkts-webview-webmessageport-i.md) API. |
-| [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) | Enumerates the types of requested resources. |
-| [WebSoftKeyboardBehaviorMode](arkts-arkweb-webview-websoftkeyboardbehaviormode-e.md) | Enumerates the behavior modes of the web soft keyboard. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArkWebEngineVersion](arkts-arkweb-webview-arkwebengineversion-e.md) |
+| [BlanklessFrameInterpolationState](arkts-arkweb-webview-blanklessframeinterpolationstate-e.md) |
+| [ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md) |
+| [JsMessageType](arkts-arkweb-webview-jsmessagetype-e.md) |
+| [MediaError](arkts-arkweb-webview-mediaerror-e.md) |
+| [MediaPlaybackState](arkts-arkweb-webview-mediaplaybackstate-e.md) |
+| [MediaType](arkts-arkweb-webview-mediatype-e.md) |
+| [NetworkState](arkts-arkweb-webview-networkstate-e.md) |
+| [OfflineResourceType](arkts-arkweb-webview-offlineresourcetype-e.md) |
+| [PlaybackStatus](arkts-arkweb-webview-playbackstatus-e.md) |
+| [Preload](arkts-arkweb-webview-preload-e.md) |
+| [PressureLevel](arkts-arkweb-webview-pressurelevel-e.md) |
+| [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) |
+| [ReadyState](arkts-arkweb-webview-readystate-e.md) |
+| [RenderProcessMode](arkts-arkweb-webview-renderprocessmode-e.md) |
+| [ScrollbarMode](arkts-arkweb-webview-scrollbarmode-e.md) |
+| [ScrollType](arkts-arkweb-webview-scrolltype-e.md) |
+| [SecureDnsMode](arkts-arkweb-webview-securednsmode-e.md) |
+| [SecurityLevel](arkts-arkweb-webview-securitylevel-e.md) |
+| [SiteIsolationMode](arkts-arkweb-webview-siteisolationmode-e.md) |
+| [SourceType](arkts-arkweb-webview-sourcetype-e.md) |
+| [SuspendType](arkts-arkweb-webview-suspendtype-e.md) |
+| [UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md) |
+| [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md) |
+| [WebDestroyMode](arkts-arkweb-webview-webdestroymode-e.md) |
+| [WebDownloadErrorCode](arkts-arkweb-webview-webdownloaderrorcode-e.md) |
+| [WebDownloadState](arkts-arkweb-webview-webdownloadstate-e.md) |
+| [WebHitTestType](arkts-arkweb-webview-webhittesttype-e.md) |
+| [WebHttpCookieSameSitePolicy](arkts-arkweb-webview-webhttpcookiesamesitepolicy-e.md) |
+| [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) |
+| [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) |
+| [WebSoftKeyboardBehaviorMode](arkts-arkweb-webview-websoftkeyboardbehaviormode-e.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md) | Parameter of the [onCreateNativeMediaPlayer](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#oncreatenativemediaplayer) method. A callback invoked when the webpage needs to play media, used to create a player to take over media playback in the webpage. Through this takeover mechanism, the app can use a custom player to implement special features or optimize performance. |
-| [OnProxyConfigChangeCallback](arkts-arkweb-webview-onproxyconfigchangecallback-t.md) | Callback invoked when the proxy configuration changes. A successful callback indicates that the proxy settings are applied successfully. |
-| [WebMessage](arkts-arkweb-webview-webmessage-t.md) | Defines the data types supported by [onMessageEventExt](../../apis-default/arkts-apis/arkts-webview-webmessageport-i.md#onmessageeventext). |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md) |
+| [OneParamFn](arkts-arkweb-webview-oneparamfn-t.md) |
+| [OnProxyConfigChangeCallback](arkts-arkweb-webview-onproxyconfigchangecallback-t.md) |
+| [ResumePlayerFn](arkts-arkweb-webview-resumeplayerfn-t.md) |
+| [SuspendPlayerFn](arkts-arkweb-webview-suspendplayerfn-t.md) |
+| [UpdateRectFn](arkts-arkweb-webview-updaterectfn-t.md) |
+| [WebMessage](arkts-arkweb-webview-webmessage-t.md) |
+| [ZeroParamFn](arkts-arkweb-webview-zeroparamfn-t.md) |

@@ -14,11 +14,11 @@ function getStations(): Array<StationInfo>
 
 Obtain the list of stations that are connected to the Wi-Fi hotspot. This method can only be used on a device that serves as a Wi-Fi hotspot.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.MANAGE_WIFI_HOTSPOT
-
-<!--Device-wifiManager-function getStations(): Array<StationInfo>--><!--Device-wifiManager-function getStations(): Array<StationInfo>-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -26,18 +26,18 @@ Obtain the list of stations that are connected to the Wi-Fi hotspot. This method
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Array&lt;StationInfo&gt; | the list of clients that are connected to the Wi-Fi hotspot. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;StationInfo & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) | Operation failed. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) |
 
 **Examples**
 
@@ -51,4 +51,3 @@ try {
   console.error("failed:" + JSON.stringify(error));
 }
 ```
-

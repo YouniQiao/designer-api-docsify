@@ -8,7 +8,7 @@
 
 **Since:** 18
 
-<!--Device-unnamed-interface FolderStackOptions--><!--Device-unnamed-interface FolderStackOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,11 +29,10 @@ Array of IDs of child components that will be moved to the upper half screen in 
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-FolderStackOptions-upperItems?: Array<string>--><!--Device-FolderStackOptions-upperItems?: Array<string>-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

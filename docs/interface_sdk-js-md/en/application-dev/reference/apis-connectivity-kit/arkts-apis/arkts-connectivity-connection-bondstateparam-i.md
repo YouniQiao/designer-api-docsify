@@ -2,9 +2,9 @@
 
 Describes the class of a bluetooth device.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-connection-interface BondStateParam--><!--Device-connection-interface BondStateParam-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -24,11 +24,11 @@ Cause of unbond.
 
 **Type:** [UnbondCause](arkts-connectivity-connection-unbondcause-e.md)
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BondStateParam-cause: UnbondCause--><!--Device-BondStateParam-cause: UnbondCause-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -44,9 +44,9 @@ Cause message of unbond.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-BondStateParam-causeMessage?: string--><!--Device-BondStateParam-causeMessage?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -60,11 +60,11 @@ Address of a Bluetooth device.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BondStateParam-deviceId: string--><!--Device-BondStateParam-deviceId: string-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -78,11 +78,10 @@ Profile connection state of the device.
 
 **Type:** BondState
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BondStateParam-state: BondState--><!--Device-BondStateParam-state: BondState-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

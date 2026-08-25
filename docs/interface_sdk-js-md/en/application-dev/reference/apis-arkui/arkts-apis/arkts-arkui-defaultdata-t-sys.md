@@ -8,13 +8,12 @@ Used for ide.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-unnamed-type DefaultData<T> = object--><!--Device-unnamed-type DefaultData<T> = object-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **System API:** This is a system API.
 
 **Property type:** object
-

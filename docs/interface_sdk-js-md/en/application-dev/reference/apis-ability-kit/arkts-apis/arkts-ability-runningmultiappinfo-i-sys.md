@@ -2,9 +2,9 @@
 
 The RunningMultiAppInfo module defines the information of an application in multi-app mode in the running state.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface RunningMultiAppInfo--><!--Device-unnamed-export interface RunningMultiAppInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -20,9 +20,9 @@ Bundle name of the application.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-RunningMultiAppInfo-bundleName: string--><!--Device-RunningMultiAppInfo-bundleName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -38,9 +38,9 @@ Multi-app mode.
 
 **Type:** [MultiAppMode](arkts-ability-multiappmode-e-sys.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-RunningMultiAppInfo-mode: MultiAppMode--><!--Device-RunningMultiAppInfo-mode: MultiAppMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -56,9 +56,9 @@ Information about application clones with the specific bundle name in the runnin
 
 **Type:** Array&lt;[RunningAppClone](arkts-ability-runningappclone-i-sys.md)&gt;
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-RunningMultiAppInfo-runningAppClones?: Array<RunningAppClone>--><!--Device-RunningMultiAppInfo-runningAppClones?: Array<RunningAppClone>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -74,9 +74,9 @@ Information about a multi-instance application with the specific bundle name in 
 
 **Type:** Array&lt;[RunningMultiInstanceInfo](arkts-ability-runningmultiinstanceinfo-i-sys.md)&gt;
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-RunningMultiAppInfo-runningMultiInstances?: Array<RunningMultiInstanceInfo>--><!--Device-RunningMultiAppInfo-runningMultiInstances?: Array<RunningMultiInstanceInfo>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -102,4 +102,3 @@ try {
   console.error(`getRunningMultiAppInfo error, code: ${code}, msg:${msg}`);
 }
 ```
-

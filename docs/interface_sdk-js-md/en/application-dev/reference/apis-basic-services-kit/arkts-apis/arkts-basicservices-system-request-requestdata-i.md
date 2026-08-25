@@ -2,11 +2,11 @@
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** [RequestData](arkts-basicservices-request-requestdata-i.md)
-
-<!--Device-unnamed-export interface RequestData--><!--Device-unnamed-export interface RequestData-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -28,11 +28,11 @@ Name of the form element.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** name
-
-<!--Device-RequestData-name: string--><!--Device-RequestData-name: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -48,11 +48,10 @@ Value of the form element.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 9
 
 **Substitutes:** value
 
-<!--Device-RequestData-value: string--><!--Device-RequestData-value: string-End-->
-
 **System capability:** SystemCapability.MiscServices.Upload
-

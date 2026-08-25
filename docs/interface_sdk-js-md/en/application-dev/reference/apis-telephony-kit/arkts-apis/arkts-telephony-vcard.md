@@ -1,10 +1,10 @@
-# @ohos.telephony.vcard
+# @ohos.telephony.vcard(VCard)
 
 VCard is a file format standard for electronic business cards. It contains information such as names, addresses, phone numbers, URLs, logos, and photos. The VCard module provides the VCard management functions, including importing VCard files to the contact database and exporting contact data to VCard files.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-unnamed-declare namespace vcard--><!--Device-unnamed-declare namespace vcard-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -16,32 +16,25 @@ import { vcard } from '@kit.TelephonyKit';
 
 ## Summary
 
-<!--Del-->
-### Functions(System API)
+### Functions
 
-| Name | Description |
-| --- | --- |
-| [exportVCard](arkts-telephony-vcard-exportvcard-f-sys.md) | Exports contacts as a vcard file (VCF). This API uses an asynchronous callback to return the result. |
-| [exportVCard](arkts-telephony-vcard-exportvcard-f-sys.md) | Exports contacts as a vcard file (VCF). This API uses a promise to return the result. |
-| [exportVCard](arkts-telephony-vcard-exportvcard-f-sys.md) | Exports contacts as a vcard file (VCF). This API uses an asynchronous callback to return the result. |
-| [importVCard](arkts-telephony-vcard-importvcard-f-sys.md) | Imports a VCard file (that is, **.vcf** file) to the contact database. This API uses an asynchronous callback to return the result. |
-| [importVCard](arkts-telephony-vcard-importvcard-f-sys.md) | Imports a VCard file (that is, **.vcf** file) to the contact database. This API uses a promise to return the result. |
-| [importVCard](arkts-telephony-vcard-importvcard-f-sys.md) | Imports a VCard file (that is, **.vcf** file) to the contact database. This API uses an asynchronous callback to return the result. |
-<!--DelEnd-->
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [exportVCard(VCard)](arkts-telephony-vcard-exportvcard-f.md) |
+| [exportVCard(VCard)](arkts-telephony-vcard-exportvcard-f.md) |
+| [exportVCard(VCard)](arkts-telephony-vcard-exportvcard-f.md) |
+| [importVCard(VCard)](arkts-telephony-vcard-importvcard-f.md) |
+| [importVCard(VCard)](arkts-telephony-vcard-importvcard-f.md) |
+| [importVCard(VCard)](arkts-telephony-vcard-importvcard-f.md) |
 
-<!--Del-->
-### Interfaces(System API)
+### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [VCardBuilderOptions](arkts-telephony-vcard-vcardbuilderoptions-i-sys.md) | Defines the VCard information. |
-<!--DelEnd-->
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [VCardBuilderOptions(VCard)](arkts-telephony-vcard-vcardbuilderoptions-i.md) |
 
-<!--Del-->
-### Enums(System API)
+### Enums
 
-| Name | Description |
-| --- | --- |
-| [VCardType](arkts-telephony-vcard-vcardtype-e-sys.md) | Enumerates VCard versions. |
-<!--DelEnd-->
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [VCardType(VCard)](arkts-telephony-vcard-vcardtype-e.md) |

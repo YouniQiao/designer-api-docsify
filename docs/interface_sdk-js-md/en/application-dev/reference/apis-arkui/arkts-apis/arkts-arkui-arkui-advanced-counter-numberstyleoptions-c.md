@@ -6,7 +6,7 @@ Defines the number style options.
 
 **Since:** 11
 
-<!--Device-unnamed-declare class NumberStyleOptions--><!--Device-unnamed-declare class NumberStyleOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,6 +15,78 @@ Defines the number style options.
 ```TypeScript
 import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
 ```
+
+## onBlurDecrease
+
+```TypeScript
+onBlurDecrease?: () => void
+```
+
+Trigger an event when the decrease button loses focus.
+
+**Since:** 11
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onBlurIncrease
+
+```TypeScript
+onBlurIncrease?: () => void
+```
+
+Trigger an event when the increase button loses focus.
+
+**Since:** 11
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onFocusDecrease
+
+```TypeScript
+onFocusDecrease?: () => void
+```
+
+Trigger an event when the decrease button gets focus.
+
+**Since:** 11
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onFocusIncrease
+
+```TypeScript
+onFocusIncrease?: () => void
+```
+
+Trigger an event when the increase button gets focus.
+
+**Since:** 11
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## label
 
@@ -28,91 +100,82 @@ Set the label of the counter component.
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NumberStyleOptions-label?: ResourceStr--><!--Device-NumberStyleOptions-label?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onBlurDecrease
 
 ```TypeScript
-onBlurDecrease?: () => void
+onBlurDecrease?: VoidCallback
 ```
 
-Trigger an event when the decrease button loses focus.
+Trigger a event when the decreased button lose focus.
 
-**Type:** () =&gt; void
+**Type:** VoidCallback
 
-**Since:** 11
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NumberStyleOptions-onBlurDecrease?: () => void--><!--Device-NumberStyleOptions-onBlurDecrease?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onBlurIncrease
 
 ```TypeScript
-onBlurIncrease?: () => void
+onBlurIncrease?: VoidCallback
 ```
 
-Trigger an event when the increase button loses focus.
+Trigger a event when the increased button lose focus.
 
-**Type:** () =&gt; void
+**Type:** VoidCallback
 
-**Since:** 11
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NumberStyleOptions-onBlurIncrease?: () => void--><!--Device-NumberStyleOptions-onBlurIncrease?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onFocusDecrease
 
 ```TypeScript
-onFocusDecrease?: () => void
+onFocusDecrease?: VoidCallback
 ```
 
-Trigger an event when the decrease button gets focus.
+Trigger a event when the decreased button got focus.
 
-**Type:** () =&gt; void
+**Type:** VoidCallback
 
-**Since:** 11
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NumberStyleOptions-onFocusDecrease?: () => void--><!--Device-NumberStyleOptions-onFocusDecrease?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onFocusIncrease
 
 ```TypeScript
-onFocusIncrease?: () => void
+onFocusIncrease?: VoidCallback
 ```
 
-Trigger an event when the increase button gets focus.
+Trigger a event when the increased button got focus.
 
-**Type:** () =&gt; void
+**Type:** VoidCallback
 
-**Since:** 11
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NumberStyleOptions-onFocusIncrease?: () => void--><!--Device-NumberStyleOptions-onFocusIncrease?: () => void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

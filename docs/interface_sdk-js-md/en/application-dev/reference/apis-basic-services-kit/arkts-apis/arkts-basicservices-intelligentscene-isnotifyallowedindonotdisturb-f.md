@@ -16,26 +16,26 @@ Checks whether calling bundle is allow notify(e.g. sound & vibration) when syste
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Required permissions:** ohos.permission.GET_DONOTDISTURB_STATE
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-intelligentScene-function isNotifyAllowedInDoNotDisturb(): Promise<boolean>--><!--Device-intelligentScene-function isNotifyAllowedInDoNotDisturb(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Applications.IntelligentScene
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Returns whether notify in Do Not Disturb mode is Allowed. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [35200001](../errorcode-intelligentScene.md#35200001-internal-error) | Internal error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [35200001](../errorcode-intelligentScene.md#35200001-internal-error) |
 
 **Examples**
 
@@ -54,4 +54,3 @@ if (isNotifyAllowedInDoNotDisturb) {
   console.info('Not allowed to notify in doNotDisturb state or doNotDisturb is closed');
 }
 ```
-

@@ -9,11 +9,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [distributedBundleManager](arkts-bundle-distributedbundlemanager.md)
-
-<!--Device-unnamed-declare namespace distributedBundle--><!--Device-unnamed-declare namespace distributedBundle-End-->
 
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 
@@ -30,11 +30,10 @@ import { distributedBundle } from '@kit.AbilityKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [getRemoteAbilityInfo](arkts-ability-distributedbundle-getremoteabilityinfo-f-sys.md) | 根据给定的ElementName获取有关远程设备AbilityInfo信息，使用callback异步回调。 |
-| [getRemoteAbilityInfo](arkts-ability-distributedbundle-getremoteabilityinfo-f-sys.md) | 根据给定的ElementName获取有关远程设备AbilityInfo信息，使用Promise异步回调。 |
-| [getRemoteAbilityInfos](arkts-ability-distributedbundle-getremoteabilityinfos-f-sys.md) | 根据给定的ElementName获取有关远程设备AbilityInfos信息，使用callback异步回调。 |
-| [getRemoteAbilityInfos](arkts-ability-distributedbundle-getremoteabilityinfos-f-sys.md) | 根据给定的ElementName获取有关远程设备AbilityInfos信息，使用Promise异步回调。 |
+| 名称 |
+| --- |
+| [getRemoteAbilityInfo](arkts-ability-distributedbundle-getremoteabilityinfo-f-sys.md) |
+| [getRemoteAbilityInfo](arkts-ability-distributedbundle-getremoteabilityinfo-f-sys.md) |
+| [getRemoteAbilityInfos](arkts-ability-distributedbundle-getremoteabilityinfos-f-sys.md) |
+| [getRemoteAbilityInfos](arkts-ability-distributedbundle-getremoteabilityinfos-f-sys.md) |
 <!--DelEnd-->
-

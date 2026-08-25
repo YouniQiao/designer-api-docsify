@@ -4,7 +4,7 @@ Enumerates the logical link connection states with a remote device.
 
 **Since:** 26.0.0
 
-<!--Device-nearlinkConstant-export enum AcbState--><!--Device-nearlinkConstant-export enum AcbState-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -18,9 +18,9 @@ Disconnected.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-AcbState-DISCONNECTED = 0--><!--Device-AcbState-DISCONNECTED = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -34,9 +34,9 @@ Connected.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-AcbState-CONNECTED = 1--><!--Device-AcbState-CONNECTED = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -50,9 +50,8 @@ Connected, with link encrypted.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AcbState-ENCRYPTED = 2--><!--Device-AcbState-ENCRYPTED = 2-End-->
-
 **System capability:** SystemCapability.Communication.NearLink.Base
-

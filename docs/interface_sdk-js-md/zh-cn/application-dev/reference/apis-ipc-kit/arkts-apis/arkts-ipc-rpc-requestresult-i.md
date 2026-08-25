@@ -2,9 +2,9 @@
 
 发送请求的响应结果。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-rpc-interface RequestResult--><!--Device-rpc-interface RequestResult-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -22,11 +22,11 @@ code: int
 
 消息代码。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-RequestResult-code: int--><!--Device-RequestResult-code: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -40,9 +40,9 @@ data: MessageSequence
 
 **类型：** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-RequestResult-data: MessageSequence--><!--Device-RequestResult-data: MessageSequence-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -54,11 +54,11 @@ errCode: int
 
 错误码。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-RequestResult-errCode: int--><!--Device-RequestResult-errCode: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -72,9 +72,8 @@ reply: MessageSequence
 
 **类型：** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-RequestResult-reply: MessageSequence--><!--Device-RequestResult-reply: MessageSequence-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
-

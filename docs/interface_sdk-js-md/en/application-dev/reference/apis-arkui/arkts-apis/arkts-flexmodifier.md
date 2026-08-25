@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [FlexModifier](arkts-arkui-flexmodifier-c.md) | Defines Flex Modifier@implements FlexAttribute, AttributeModifier&lt;FlexAttribute&gt; |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FlexModifier](arkts-arkui-flexmodifier-c.md) |

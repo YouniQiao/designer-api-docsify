@@ -1,4 +1,4 @@
-# @ohos.arkui.advanced.SegmentButtonV2
+# @ohos.arkui.advanced.SegmentButtonV2(api/@ohos.arkui.advanced.SegmentedButton.d.ts)
 
 ## Modules to Import
 
@@ -10,38 +10,28 @@ import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesCha
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [SegmentButtonV2Item](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2item-c.md) | Defines segmented button item. |
-| [SegmentButtonV2Items](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md) | Represents items of the **SegmentButtonV2** component.This parameter is inherited from Array\&lt;[SegmentButtonV2Item](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md)&gt;. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SegmentButtonV2Item(api/@ohos.arkui.advanced.SegmentedButton.d.ts)](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2item-c.md) |
+| [SegmentButtonV2Items(api/@ohos.arkui.advanced.SegmentedButton.d.ts)](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md) |
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [CapsuleSegmentButtonV2](arkts-arkui-arkui-advanced-segmentbuttonv2-capsulesegmentbuttonv2-s.md) | Defines the segmented button with capsule style. |
-| [MultiCapsuleSegmentButtonV2](arkts-arkui-arkui-advanced-segmentbuttonv2-multicapsulesegmentbuttonv2-s.md) | Defines the segmented button with multi capsule style. |
-| [TabSegmentButtonV2](arkts-arkui-arkui-advanced-segmentbuttonv2-tabsegmentbuttonv2-s.md) | Defines segmented button with tab style. |
-
-<!--Del-->
-### Structs(System API)
-
-| Name | Description |
-| --- | --- |
-| [CapsuleSegmentButtonV2](arkts-arkui-arkui-advanced-segmentbuttonv2-capsulesegmentbuttonv2-s-sys.md) | Defines the segmented button with capsule style. |
-| [TabSegmentButtonV2](arkts-arkui-arkui-advanced-segmentbuttonv2-tabsegmentbuttonv2-s-sys.md) | Defines segmented button with tab style. |
-<!--DelEnd-->
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CapsuleSegmentButtonV2(api/@ohos.arkui.advanced.SegmentedButton.d.ts)](arkts-arkui-arkui-advanced-segmentbuttonv2-capsulesegmentbuttonv2-s.md) |
+| [MultiCapsuleSegmentButtonV2(api/@ohos.arkui.advanced.SegmentedButton.d.ts)](arkts-arkui-arkui-advanced-segmentbuttonv2-multicapsulesegmentbuttonv2-s.md) |
+| [TabSegmentButtonV2(api/@ohos.arkui.advanced.SegmentedButton.d.ts)](arkts-arkui-arkui-advanced-segmentbuttonv2-tabsegmentbuttonv2-s.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [SegmentButtonV2ItemOptions](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2itemoptions-i.md) | Defines segmented button item options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SegmentButtonV2ItemOptions(api/@ohos.arkui.advanced.SegmentedButton.d.ts)](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2itemoptions-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [OnSelectedIndexChange](arkts-arkui-onselectedindexchange-t.md) | Defines a callback invoked when the selected segmented button item changes. |
-| [OnSelectedIndexesChange](arkts-arkui-onselectedindexeschange-t.md) | Defines a callback invoked when the selected segmented button items change. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [OnSelectedIndexChange(api/@ohos.arkui.advanced.SegmentedButton.d.ts)](arkts-arkui-onselectedindexchange-t.md) |
+| [OnSelectedIndexesChange(api/@ohos.arkui.advanced.SegmentedButton.d.ts)](arkts-arkui-onselectedindexeschange-t.md) |

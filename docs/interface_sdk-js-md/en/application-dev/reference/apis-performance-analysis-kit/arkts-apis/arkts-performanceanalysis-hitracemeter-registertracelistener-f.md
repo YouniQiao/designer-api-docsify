@@ -20,25 +20,25 @@ Registers a callback to notify whether the application trace capture is enabled.
 > Therefore, you are advised not to register or deregister callbacks containing time-consuming operations in the
 > main thread of the application to avoid application freeze.
 
-**Since:** 23
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
-<!--Device-hiTraceMeter-function registerTraceListener(callback: TraceEventListener): int--><!--Device-hiTraceMeter-function registerTraceListener(callback: TraceEventListener): int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [TraceEventListener](arkts-performanceanalysis-hitracemeter-traceeventlistener-t.md) | Yes | Registered callback. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [TraceEventListener](arkts-performanceanalysis-hitracemeter-traceeventlistener-t.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Callback registration status.&gt;= 0: The registration is successful. The callback index for deregistration is returned. The index ranges from 0 to 9. **-1**: The maximum number of callbacks has been reached. **-2**: Invalid parameter. The parameter is not of the **TraceEventListener** type. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -58,4 +58,3 @@ if (index < 0) {
     // Handle exceptions.
 }
 ```
-

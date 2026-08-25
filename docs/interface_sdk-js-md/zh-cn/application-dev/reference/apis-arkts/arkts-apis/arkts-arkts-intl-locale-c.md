@@ -6,9 +6,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-Intl-export class Locale--><!--Device-Intl-export class Locale-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,20 +25,18 @@ public constructor(tag: BCP47LanguageTag | Locale, options?: LocaleOptions)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Locale-public constructor(tag: BCP47LanguageTag | Locale, options?: LocaleOptions)--><!--Device-Locale-public constructor(tag: BCP47LanguageTag | Locale, options?: LocaleOptions)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| tag | [BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md) \| Locale | 是 | 标签。 |
-| options | LocaleOptions | 否 | 选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| tag | [BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md) \| [Locale](../../apis-localization-kit/arkts-apis/arkts-localization-intl-locale-c.md) | 是 |
+| options | [LocaleOptions](arkts-arkts-intl-localeoptions-i.md) | 否 |
 
 ## defaultTag
 
@@ -52,19 +48,17 @@ public static defaultTag(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Locale-public static defaultTag(): string--><!--Device-Locale-public static defaultTag(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 默认标签。 |
+| 类型 |
+| --- |
+| string |
 
 ## initLocale
 
@@ -76,11 +70,9 @@ public initLocale(): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Locale-public initLocale(): void--><!--Device-Locale-public initLocale(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -94,25 +86,23 @@ public isTagValid(tag: string): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Locale-public isTagValid(tag: string): int--><!--Device-Locale-public isTagValid(tag: string): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| tag | string | 是 | 标签。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| tag | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 合法时返回1，否则返回0。 |
+| 类型 |
+| --- |
+| int |
 
 ## langList
 
@@ -124,19 +114,17 @@ public langList(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Locale-public langList(): string--><!--Device-Locale-public langList(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 语言列表。 |
+| 类型 |
+| --- |
+| string |
 
 ## maximize
 
@@ -148,19 +136,17 @@ public maximize(): Locale
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Locale-public maximize(): Locale--><!--Device-Locale-public maximize(): Locale-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Locale | 信息补全后的区域设置。 |
+| 类型 |
+| --- |
+| [Locale](../../apis-localization-kit/arkts-apis/arkts-localization-intl-locale-c.md) |
 
 ## maximizeInfo
 
@@ -172,25 +158,23 @@ public maximizeInfo(lang: string): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Locale-public maximizeInfo(lang: string): string--><!--Device-Locale-public maximizeInfo(lang: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| lang | string | 是 | 语言。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [lang](arkts-arkts-lang-n.md) | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 补全后的信息。 |
+| 类型 |
+| --- |
+| string |
 
 ## minimize
 
@@ -202,19 +186,17 @@ public minimize(): Locale
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Locale-public minimize(): Locale--><!--Device-Locale-public minimize(): Locale-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Locale | 信息精简后的区域设置。 |
+| 类型 |
+| --- |
+| [Locale](../../apis-localization-kit/arkts-apis/arkts-localization-intl-locale-c.md) |
 
 ## numberingSystemList
 
@@ -226,19 +208,17 @@ public numberingSystemList(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Locale-public numberingSystemList(): string--><!--Device-Locale-public numberingSystemList(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 记数系统列表。 |
+| 类型 |
+| --- |
+| string |
 
 ## parseTagImpl
 
@@ -250,25 +230,23 @@ public parseTagImpl(tag: string): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Locale-public parseTagImpl(tag: string): string--><!--Device-Locale-public parseTagImpl(tag: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| tag | string | 是 | 标签。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| tag | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 解析得到的标签。 |
+| 类型 |
+| --- |
+| string |
 
 ## regionList
 
@@ -280,19 +258,17 @@ public regionList(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Locale-public regionList(): string--><!--Device-Locale-public regionList(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 地区列表。 |
+| 类型 |
+| --- |
+| string |
 
 ## scriptList
 
@@ -304,19 +280,17 @@ public scriptList(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Locale-public scriptList(): string--><!--Device-Locale-public scriptList(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 文字列表。 |
+| 类型 |
+| --- |
+| string |
 
 ## toString
 
@@ -328,17 +302,174 @@ public toString(): BCP47LanguageTag
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Locale-public toString(): BCP47LanguageTag--><!--Device-Locale-public toString(): BCP47LanguageTag-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md) | 区域设置标识符。 |
+| 类型 |
+| --- |
+| [BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md) |
 
+## baseName
+
+```TypeScript
+public get baseName(): string | undefined
+```
+
+获取基础名称。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## calendar
+
+```TypeScript
+public get calendar(): string | undefined
+```
+
+获取日历。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## caseFirst
+
+```TypeScript
+public get caseFirst(): string | undefined
+```
+
+获取大小写优先规则。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## collation
+
+```TypeScript
+public get collation(): string | undefined
+```
+
+获取排序规则。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## hourCycle
+
+```TypeScript
+public get hourCycle(): string | undefined
+```
+
+获取小时制。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## language
+
+```TypeScript
+public get language(): string | undefined
+```
+
+获取语言。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## numberingSystem
+
+```TypeScript
+public get numberingSystem(): string | undefined
+```
+
+获取记数系统。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## numeric
+
+```TypeScript
+public get numeric(): boolean | undefined
+```
+
+获取数值排序选项。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## region
+
+```TypeScript
+public get region(): string | undefined
+```
+
+获取地区。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## script
+
+```TypeScript
+public get script(): string | undefined
+```
+
+获取文字。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang

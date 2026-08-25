@@ -16,19 +16,19 @@ Inverts this matrix object.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 10
 
 **Substitutes:** [invert](arkts-arkui-matrix4-matrix4transit-i.md#invert)
-
-<!--Device-matrix4-function invert(): Matrix4Transit--><!--Device-matrix4-function invert(): Matrix4Transit-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Matrix4Transit | Inverse matrix object of the current matrix. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Matrix4Transit](arkts-arkui-matrix4transit-t.md) |
 
 **Examples**
 
@@ -60,4 +60,3 @@ struct Tests {
   }
 }
 ```
-

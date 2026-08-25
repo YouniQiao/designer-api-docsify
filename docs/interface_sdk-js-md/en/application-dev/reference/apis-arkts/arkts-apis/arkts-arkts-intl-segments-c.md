@@ -6,9 +6,7 @@ Segments iterator class.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-Intl-export class Segments--><!--Device-Intl-export class Segments-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,19 +25,17 @@ Returns itself as the iterator.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Segments-public $_iterator(): IterableIterator<SegmentData>--><!--Device-Segments-public $_iterator(): IterableIterator<SegmentData>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;[SegmentData](arkts-arkts-intl-segmentdata-i.md)&gt; | the iterator. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator&lt;[SegmentData](arkts-arkts-intl-segmentdata-i.md)&gt; |
 
 ## constructor
 
@@ -51,19 +47,17 @@ Creates a new Segments iterator.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Segments-public constructor(parent: SegmentData[])--><!--Device-Segments-public constructor(parent: SegmentData[])-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| parent | [SegmentData](arkts-arkts-intl-segmentdata-i.md)[] | Yes | the parent segments array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| parent | [SegmentData](arkts-arkts-intl-segmentdata-i.md)[] | Yes |
 
 ## next
 
@@ -75,17 +69,14 @@ Returns the next result in the segments iterator.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Segments-public next(): IteratorResult<SegmentData>--><!--Device-Segments-public next(): IteratorResult<SegmentData>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IteratorResult&lt;[SegmentData](arkts-arkts-intl-segmentdata-i.md)&gt; | the next iteration result. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IteratorResult&lt;[SegmentData](arkts-arkts-intl-segmentdata-i.md)&gt; |

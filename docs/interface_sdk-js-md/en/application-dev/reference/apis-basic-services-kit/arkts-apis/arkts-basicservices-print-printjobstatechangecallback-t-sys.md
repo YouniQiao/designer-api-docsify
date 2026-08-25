@@ -8,7 +8,7 @@ Defines the callback type used in registering to listen for PrintJobState. The v
 
 **Since:** 23
 
-<!--Device-print-type PrintJobStateChangeCallback = (state: PrintJobState, job: PrintJob) => void--><!--Device-print-type PrintJobStateChangeCallback = (state: PrintJobState, job: PrintJob) => void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -16,8 +16,7 @@ Defines the callback type used in registering to listen for PrintJobState. The v
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| state | [PrintJobState](arkts-basicservices-print-printjobstate-e.md) | Yes | the state of print job |
-| job | [PrintJob](arkts-basicservices-print-printjob-i.md) | Yes | the information of the print job |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| state | [PrintJobState](arkts-basicservices-print-printjobstate-e.md) | Yes |
+| job | [PrintJob](arkts-basicservices-print-printjob-i.md) | Yes |

@@ -16,35 +16,35 @@ function getUpdateResult(admin: Want, version: string): Promise<UpdateResult>
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-systemManager-function getUpdateResult(admin: Want, version: string): Promise<UpdateResult>--><!--Device-systemManager-function getUpdateResult(admin: Want, version: string): Promise<UpdateResult>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| version | string | 是 | 更新包版本号。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
+| version | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[UpdateResult](arkts-mdm-systemmanager-updateresult-i.md)&gt; | Promise对象，返回系统更新结果。 |
+| 类型 |
+| --- |
+| Promise&lt;[UpdateResult](arkts-mdm-systemmanager-updateresult-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -64,4 +64,3 @@ systemManager.getUpdateResult(wantTemp, "1.0").then((result:systemManager.Update
   console.error(`Get update result failed. Code is ${error.code},message is ${error.message}`);
 });
 ```
-

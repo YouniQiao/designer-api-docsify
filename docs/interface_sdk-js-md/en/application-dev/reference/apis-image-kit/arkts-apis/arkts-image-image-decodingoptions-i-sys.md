@@ -2,9 +2,9 @@
 
 Describes the image decoding options.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-image-interface DecodingOptions--><!--Device-image-interface DecodingOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -24,11 +24,10 @@ Image quality.
 
 **Type:** ResolutionQuality
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-DecodingOptions-resolutionQuality?: ResolutionQuality--><!--Device-DecodingOptions-resolutionQuality?: ResolutionQuality-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **System API:** This is a system API.
-

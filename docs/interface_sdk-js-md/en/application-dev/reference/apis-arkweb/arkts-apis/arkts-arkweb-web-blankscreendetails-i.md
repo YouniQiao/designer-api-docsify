@@ -1,0 +1,25 @@
+# BlankScreenDetails
+
+The details of this blank screen detection result.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## detectedContentfulNodesCount
+
+```TypeScript
+detectedContentfulNodesCount?: int
+```
+
+The count of detected contentful nodes. This value only exists when developers configure a threshold.
+
+**Type:** int
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**System capability:** SystemCapability.Web.Webview.Core

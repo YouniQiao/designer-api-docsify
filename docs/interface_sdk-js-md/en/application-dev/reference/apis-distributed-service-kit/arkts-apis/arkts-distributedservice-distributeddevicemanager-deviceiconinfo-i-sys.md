@@ -2,9 +2,9 @@
 
 Defines the device icon information.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-distributedDeviceManager-interface DeviceIconInfo--><!--Device-distributedDeviceManager-interface DeviceIconInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -26,9 +26,9 @@ Icon.
 
 **Type:** ArrayBuffer
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DeviceIconInfo-icon: ArrayBuffer--><!--Device-DeviceIconInfo-icon: ArrayBuffer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -44,9 +44,9 @@ Image type. This parameter has a fixed value of **ID**, indicating the product's
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DeviceIconInfo-imageType: string--><!--Device-DeviceIconInfo-imageType: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -62,9 +62,9 @@ Internal product model. This parameter is left unspecified by default.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DeviceIconInfo-internalModel?: string--><!--Device-DeviceIconInfo-internalModel?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -80,9 +80,9 @@ Product ID.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DeviceIconInfo-productId: string--><!--Device-DeviceIconInfo-productId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -99,9 +99,9 @@ Image specification name. Value:
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DeviceIconInfo-specName: string--><!--Device-DeviceIconInfo-specName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -117,9 +117,9 @@ Sub-product ID. This parameter is left unspecified by default.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DeviceIconInfo-subProductId?: string--><!--Device-DeviceIconInfo-subProductId?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -135,11 +135,10 @@ URL.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-DeviceIconInfo-url: string--><!--Device-DeviceIconInfo-url: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
-

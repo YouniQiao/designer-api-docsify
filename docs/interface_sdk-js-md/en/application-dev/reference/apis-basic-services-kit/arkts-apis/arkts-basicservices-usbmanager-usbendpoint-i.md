@@ -6,9 +6,9 @@ Represents the USB endpoint from which data is sent or received. You can obtain 
 > The host controller schedules the endpoint based on the endpoint type.&gt;
 > The transmission characteristics are determined by the type during protocol layer packaging.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-usbManager-interface USBEndpoint--><!--Device-usbManager-interface USBEndpoint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -26,11 +26,11 @@ address: int
 
 Endpoint address.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-USBEndpoint-address: int--><!--Device-USBEndpoint-address: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -42,11 +42,11 @@ attributes: int
 
 Endpoint attributes.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-USBEndpoint-attributes: int--><!--Device-USBEndpoint-attributes: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -60,9 +60,9 @@ Endpoint direction.
 
 **Type:** USBRequestDirection
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-USBEndpoint-direction: USBRequestDirection--><!--Device-USBEndpoint-direction: USBRequestDirection-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -78,7 +78,7 @@ Endpoint address.
 
 **Since:** 23
 
-<!--Device-USBEndpoint-endpointAddr: int--><!--Device-USBEndpoint-endpointAddr: int-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -90,11 +90,11 @@ interfaceId: int
 
 Unique ID of the interface to which the endpoint belongs.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-USBEndpoint-interfaceId: int--><!--Device-USBEndpoint-interfaceId: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -106,11 +106,11 @@ interval: int
 
 Endpoint interval.Unit: milliseconds.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-USBEndpoint-interval: int--><!--Device-USBEndpoint-interval: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -122,11 +122,11 @@ maxPacketSize: int
 
 Maximum size of data packets on the endpoint.Unit: bytes.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-USBEndpoint-maxPacketSize: int--><!--Device-USBEndpoint-maxPacketSize: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -142,7 +142,7 @@ Endpoint number.
 
 **Since:** 9
 
-<!--Device-USBEndpoint-number: number--><!--Device-USBEndpoint-number: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -154,11 +154,10 @@ type: int
 
 Endpoint type. For details, see [UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-USBEndpoint-type: int--><!--Device-USBEndpoint-type: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
-

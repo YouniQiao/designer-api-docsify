@@ -4,9 +4,9 @@ Enumerates the media used for device discovery.
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-deviceManager-enum ExchangeMedium--><!--Device-deviceManager-enum ExchangeMedium-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -22,9 +22,9 @@ Automatic.
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ExchangeMedium-AUTO = 0--><!--Device-ExchangeMedium-AUTO = 0-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -40,9 +40,9 @@ Bluetooth.
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ExchangeMedium-BLE = 1--><!--Device-ExchangeMedium-BLE = 1-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -58,9 +58,9 @@ Wi-Fi.
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ExchangeMedium-COAP = 2--><!--Device-ExchangeMedium-COAP = 2-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -76,11 +76,10 @@ USB.
 
 **Since:** 7
 
-**Deprecated since:** 11
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-ExchangeMedium-USB = 3--><!--Device-ExchangeMedium-USB = 3-End-->
+**Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
-

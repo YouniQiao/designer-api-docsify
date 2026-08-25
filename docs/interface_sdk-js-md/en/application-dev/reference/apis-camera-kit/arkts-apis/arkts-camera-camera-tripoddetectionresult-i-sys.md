@@ -4,9 +4,9 @@ TripodDetectionResult extends [SceneFeatureDetectionResult](arkts-camera-camera-
 
 **Inheritance/Implementation:** TripodDetectionResult extends [SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md)
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-camera-interface TripodDetectionResult--><!--Device-camera-interface TripodDetectionResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -28,11 +28,10 @@ Tripod status.
 
 **Type:** [TripodStatus](arkts-camera-camera-tripodstatus-e-sys.md)
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-TripodDetectionResult-readonly tripodStatus: TripodStatus--><!--Device-TripodDetectionResult-readonly tripodStatus: TripodStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

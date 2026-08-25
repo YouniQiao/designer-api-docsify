@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-text-enum TextProcessState--><!--Device-text-enum TextProcessState-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -18,11 +18,11 @@ INIT = 0
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextProcessState-INIT = 0--><!--Device-TextProcessState-INIT = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -36,11 +36,11 @@ INDEXED = 1
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextProcessState-INDEXED = 1--><!--Device-TextProcessState-INDEXED = 1-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -54,11 +54,11 @@ SHAPED = 2
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextProcessState-SHAPED = 2--><!--Device-TextProcessState-SHAPED = 2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -72,11 +72,11 @@ LINE_BROKEN = 3
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextProcessState-LINE_BROKEN = 3--><!--Device-TextProcessState-LINE_BROKEN = 3-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -90,11 +90,11 @@ FORMATTED = 4
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextProcessState-FORMATTED = 4--><!--Device-TextProcessState-FORMATTED = 4-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -108,11 +108,11 @@ PAINT = 5
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextProcessState-PAINT = 5--><!--Device-TextProcessState-PAINT = 5-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -126,11 +126,10 @@ UPDATE_ATTRIBUTE = 6
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-TextProcessState-UPDATE_ATTRIBUTE = 6--><!--Device-TextProcessState-UPDATE_ATTRIBUTE = 6-End-->
-
 **系统能力：** SystemCapability.Graphics.Drawing
-

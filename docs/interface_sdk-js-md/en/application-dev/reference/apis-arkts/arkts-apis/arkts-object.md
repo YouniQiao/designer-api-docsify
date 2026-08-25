@@ -9,13 +9,12 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Object](arkts-arkts-object-c.md) | Common ancestor amongst all other classes |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Object](arkts-arkts-object-c.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [object](arkts-arkts-object-t.md) | `object` is an alias for type `Object` |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [object](arkts-arkts-object-t.md) |

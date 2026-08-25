@@ -2,9 +2,9 @@
 
 Defines the reset options.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-eSIM-export enum ResetOption--><!--Device-eSIM-export enum ResetOption-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -18,9 +18,9 @@ DELETE_OPERATIONAL_PROFILES = 1
 
 Deletion of all operational profiles.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResetOption-DELETE_OPERATIONAL_PROFILES = 1--><!--Device-ResetOption-DELETE_OPERATIONAL_PROFILES = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -34,9 +34,9 @@ DELETE_FIELD_LOADED_TEST_PROFILES = 1 << 1
 
 Deletion of the downloaded test profiles.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResetOption-DELETE_FIELD_LOADED_TEST_PROFILES = 1 << 1--><!--Device-ResetOption-DELETE_FIELD_LOADED_TEST_PROFILES = 1 << 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -50,11 +50,10 @@ RESET_DEFAULT_SMDP_ADDRESS = 1 << 2
 
 Resetting of the default SM-DP+ address.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ResetOption-RESET_DEFAULT_SMDP_ADDRESS = 1 << 2--><!--Device-ResetOption-RESET_DEFAULT_SMDP_ADDRESS = 1 << 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
-

@@ -4,9 +4,7 @@ Enumeration of possible JSON value types. Used to identify the type of a JsonEle
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-jsonx-export enum JsonType--><!--Device-jsonx-export enum JsonType-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -20,11 +18,9 @@ No value, distinct from Null.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonType-JsonUndefined = 0--><!--Device-JsonType-JsonUndefined = 0-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -38,11 +34,9 @@ A JSON object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonType-JsonObject = 1--><!--Device-JsonType-JsonObject = 1-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -56,11 +50,9 @@ A JSON array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonType-JsonArray = 2--><!--Device-JsonType-JsonArray = 2-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -74,11 +66,9 @@ A JSON string.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonType-JsonString = 3--><!--Device-JsonType-JsonString = 3-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -92,11 +82,9 @@ A JSON number.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonType-JsonNumber = 4--><!--Device-JsonType-JsonNumber = 4-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -110,11 +98,9 @@ A JSON value true.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonType-JsonTrue = 5--><!--Device-JsonType-JsonTrue = 5-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -128,11 +114,9 @@ A JSON value false.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-JsonType-JsonFalse = 6--><!--Device-JsonType-JsonFalse = 6-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -146,11 +130,8 @@ A JSON value null.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-JsonType-JsonNull = 7--><!--Device-JsonType-JsonNull = 7-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

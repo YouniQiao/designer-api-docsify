@@ -7,11 +7,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
-
-<!--Device-unnamed-declare enum SizeType--><!--Device-unnamed-declare enum SizeType-End-->
+**替代接口：** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Auto = 0
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
-
-<!--Device-SizeType-Auto = 0--><!--Device-SizeType-Auto = 0-End-->
+**替代接口：** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,11 +43,11 @@ XS
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
-
-<!--Device-SizeType-XS--><!--Device-SizeType-XS-End-->
+**替代接口：** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,11 +61,11 @@ SM
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
-
-<!--Device-SizeType-SM--><!--Device-SizeType-SM-End-->
+**替代接口：** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -79,11 +79,11 @@ MD
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
-
-<!--Device-SizeType-MD--><!--Device-SizeType-MD-End-->
+**替代接口：** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -97,11 +97,10 @@ LG
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
-
-<!--Device-SizeType-LG--><!--Device-SizeType-LG-End-->
+**替代接口：** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

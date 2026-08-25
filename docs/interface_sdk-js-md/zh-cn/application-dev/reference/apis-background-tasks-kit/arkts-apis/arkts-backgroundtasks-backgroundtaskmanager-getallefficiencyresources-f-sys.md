@@ -14,9 +14,9 @@ function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>
 
 获取已申请的所有能效资源信息，如能效资源类型等，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-backgroundTaskManager-function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>--><!--Device-backgroundTaskManager-function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -24,18 +24,18 @@ function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[EfficiencyResourcesInfo](arkts-backgroundtasks-backgroundtaskmanager-efficiencyresourcesinfo-i-sys.md)[]&gt; | Promise对象，返回所有能效资源信息。 |
+| 类型 |
+| --- |
+| Promise&lt;[EfficiencyResourcesInfo](arkts-backgroundtasks-backgroundtaskmanager-efficiencyresourcesinfo-i-sys.md)[]&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [18700001](../errorcode-backgroundTaskMgr.md#18700001-资源申请接口信息校验失败) | Caller information verification failed for an energy resource request. |
-| [18700002](../errorcode-backgroundTaskMgr.md#18700002-parcel读写操作失败) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; <br> 2. Failed to apply for memory. |
-| [18700004](../errorcode-backgroundTaskMgr.md#18700004-系统服务失败) | System service operation failed. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [18700001](../errorcode-backgroundTaskMgr.md#18700001-资源申请接口信息校验失败) |
+| [18700002](../errorcode-backgroundTaskMgr.md#18700002-parcel读写操作失败) |
+| [18700004](../errorcode-backgroundTaskMgr.md#18700004-系统服务失败) |
 
 **示例**
 
@@ -72,4 +72,3 @@ try {
   console.error(`Operation getAllEfficiencyResources failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
 }
 ```
-

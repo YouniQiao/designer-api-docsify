@@ -6,7 +6,7 @@
 
 **起始版本：** 21
 
-<!--Device-unnamed-export default class WebNativeMessagingExtensionAbility--><!--Device-unnamed-export default class WebNativeMessagingExtensionAbility-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -26,17 +26,17 @@ Web原生消息连接建立时回调此方法。在此回调中，可以获取�
 
 **起始版本：** 21
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
-<!--Device-WebNativeMessagingExtensionAbility-onConnectNative(info: ConnectionInfo): void--><!--Device-WebNativeMessagingExtensionAbility-onConnectNative(info: ConnectionInfo): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| info | [ConnectionInfo](../../apis-default/arkts-apis/arkts-web-webnativemessagingextensionability-connectioninfo-i.md) | 是 | 连接信息对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| info | [ConnectionInfo](arkts-arkweb-web-webnativemessagingextensionability-connectioninfo-i.md) | 是 |
 
 **示例**
 
@@ -82,9 +82,9 @@ WebNativeMessagingExtensionAbility销毁时回调。在此回调中，可以释�
 
 **起始版本：** 21
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
-<!--Device-WebNativeMessagingExtensionAbility-onDestroy(): void--><!--Device-WebNativeMessagingExtensionAbility-onDestroy(): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -127,17 +127,17 @@ Web原生消息连接断开时回调此方法。在此回调中，可以释放�
 
 **起始版本：** 21
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
-<!--Device-WebNativeMessagingExtensionAbility-onDisconnectNative(info: ConnectionInfo): void--><!--Device-WebNativeMessagingExtensionAbility-onDisconnectNative(info: ConnectionInfo): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| info | [ConnectionInfo](../../apis-default/arkts-apis/arkts-web-webnativemessagingextensionability-connectioninfo-i.md) | 是 | 连接信息对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| info | [ConnectionInfo](arkts-arkweb-web-webnativemessagingextensionability-connectioninfo-i.md) | 是 |
 
 **示例**
 
@@ -179,13 +179,12 @@ context: WebNativeMessagingExtensionContext
 
 当前Web原生消息扩展Ability的上下文。
 
-**类型：** [WebNativeMessagingExtensionContext](../../apis-default/arkts-apis/arkts-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md)
+**类型：** [WebNativeMessagingExtensionContext](arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md)
 
 **起始版本：** 21
 
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-WebNativeMessagingExtensionAbility-context: WebNativeMessagingExtensionContext--><!--Device-WebNativeMessagingExtensionAbility-context: WebNativeMessagingExtensionContext-End-->
-
 **系统能力：** SystemCapability.Web.Webview.Core
-

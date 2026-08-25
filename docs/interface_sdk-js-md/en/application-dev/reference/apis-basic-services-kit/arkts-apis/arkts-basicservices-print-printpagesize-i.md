@@ -2,9 +2,9 @@
 
 Defines the size of the printed page.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-print-interface PrintPageSize--><!--Device-print-interface PrintPageSize-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -22,11 +22,11 @@ height: int
 
 Page height, in millimeters.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintPageSize-height: int--><!--Device-PrintPageSize-height: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -40,9 +40,9 @@ Paper size ID.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintPageSize-id: string--><!--Device-PrintPageSize-id: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -56,9 +56,9 @@ Paper size name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintPageSize-name: string--><!--Device-PrintPageSize-name: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -70,11 +70,10 @@ width: int
 
 Page width, in millimeters.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PrintPageSize-width: int--><!--Device-PrintPageSize-width: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
-

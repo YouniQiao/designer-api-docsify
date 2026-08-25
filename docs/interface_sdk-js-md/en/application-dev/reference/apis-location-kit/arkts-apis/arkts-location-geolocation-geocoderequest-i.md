@@ -4,13 +4,13 @@ Configuring parameters in geocode requests@interface GeoCodeRequest
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [GeoCodeRequest](arkts-location-geolocationmanager-geocoderequest-i.md)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-geolocation-export interface GeoCodeRequest--><!--Device-geolocation-export interface GeoCodeRequest-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -30,11 +30,11 @@ description: string
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [description](arkts-location-geolocationmanager-geocoderequest-i.md#description)
-
-<!--Device-GeoCodeRequest-description: string--><!--Device-GeoCodeRequest-description: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -48,11 +48,11 @@ locale?: string
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [locale](arkts-location-geolocationmanager-geocoderequest-i.md#locale)
-
-<!--Device-GeoCodeRequest-locale?: string--><!--Device-GeoCodeRequest-locale?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -66,11 +66,11 @@ maxItems?: number
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [maxItems](arkts-location-geolocationmanager-geocoderequest-i.md#maxitems)
-
-<!--Device-GeoCodeRequest-maxItems?: number--><!--Device-GeoCodeRequest-maxItems?: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -84,11 +84,11 @@ maxLatitude?: number
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [maxLatitude](arkts-location-geolocationmanager-geocoderequest-i.md#maxlatitude)
-
-<!--Device-GeoCodeRequest-maxLatitude?: number--><!--Device-GeoCodeRequest-maxLatitude?: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -102,11 +102,11 @@ maxLongitude?: number
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [maxLongitude](arkts-location-geolocationmanager-geocoderequest-i.md#maxlongitude)
-
-<!--Device-GeoCodeRequest-maxLongitude?: number--><!--Device-GeoCodeRequest-maxLongitude?: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -120,11 +120,11 @@ minLatitude?: number
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [minLatitude](arkts-location-geolocationmanager-geocoderequest-i.md#minlatitude)
-
-<!--Device-GeoCodeRequest-minLatitude?: number--><!--Device-GeoCodeRequest-minLatitude?: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -138,11 +138,10 @@ minLongitude?: number
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [minLongitude](arkts-location-geolocationmanager-geocoderequest-i.md#minlongitude)
 
-<!--Device-GeoCodeRequest-minLongitude?: number--><!--Device-GeoCodeRequest-minLongitude?: number-End-->
-
 **System capability:** SystemCapability.Location.Location.Geocoder
-

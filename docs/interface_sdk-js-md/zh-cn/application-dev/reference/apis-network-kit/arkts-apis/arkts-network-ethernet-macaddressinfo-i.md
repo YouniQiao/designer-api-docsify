@@ -4,7 +4,7 @@
 
 **起始版本：** 14
 
-<!--Device-ethernet-export interface MacAddressInfo--><!--Device-ethernet-export interface MacAddressInfo-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -26,7 +26,7 @@ iface: string
 
 **起始版本：** 14
 
-<!--Device-MacAddressInfo-iface: string--><!--Device-MacAddressInfo-iface: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -42,7 +42,6 @@ macAddress: string
 
 **起始版本：** 14
 
-<!--Device-MacAddressInfo-macAddress: string--><!--Device-MacAddressInfo-macAddress: string-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
-

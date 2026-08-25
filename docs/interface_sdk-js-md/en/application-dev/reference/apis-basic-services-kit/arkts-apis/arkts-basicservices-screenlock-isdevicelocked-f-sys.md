@@ -14,9 +14,9 @@ function isDeviceLocked(userId: int): boolean
 
 Check whether the device is currently locked and the screenlock requires an identity to authenticate and unlock.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-screenLock-function isDeviceLocked(userId: int): boolean--><!--Device-screenLock-function isDeviceLocked(userId: int): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
@@ -24,21 +24,20 @@ Check whether the device is currently locked and the screenlock requires an iden
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| userId | int | Yes | Os account local userId. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the device is currently locked. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [13200002](../errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) | The screenlock management service is abnormal. |
-| 13200004 | The userId is not same as the caller, and is not allowed for the caller. |
-
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [13200002](../errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) |
+| 13200004 |

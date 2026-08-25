@@ -4,7 +4,7 @@ Socket代理类型。
 
 **起始版本：** 18
 
-<!--Device-socket-export enum ProxyTypes--><!--Device-socket-export enum ProxyTypes-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -18,7 +18,7 @@ NONE = 0
 
 **起始版本：** 18
 
-<!--Device-ProxyTypes-NONE = 0--><!--Device-ProxyTypes-NONE = 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -32,7 +32,6 @@ SOCKS5 = 1
 
 **起始版本：** 18
 
-<!--Device-ProxyTypes-SOCKS5 = 1--><!--Device-ProxyTypes-SOCKS5 = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.Communication.NetStack
-

@@ -20,34 +20,34 @@ function queryTraceRoute(destination: string, option?: TraceRouteOptions): Promi
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **需要权限：** ohos.permission.INTERNET and ohos.permission.ACCESS_NET_TRACE_INFO and ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-connection-function queryTraceRoute(destination: string, option?: TraceRouteOptions): Promise<TraceRouteInfo[]>--><!--Device-connection-function queryTraceRoute(destination: string, option?: TraceRouteOptions): Promise<TraceRouteInfo[]>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| destination | string | 是 | 目标域名或IP地址，例如www.example.com、8.8.8.8。 |
-| option | [TraceRouteOptions](arkts-network-connection-tracerouteoptions-i.md) | 否 | 路由跟踪的选项参数，缺省则使用默认配置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [destination](arkts-network-connection-routeinfo-i.md) | string | 是 |
+| option | [TraceRouteOptions](arkts-network-connection-tracerouteoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[TraceRouteInfo](arkts-network-connection-tracerouteinfo-i.md)[]&gt; | Promise对象，返回路由跟踪信息数组。 |
+| 类型 |
+| --- |
+| Promise&lt;[TraceRouteInfo](arkts-network-connection-tracerouteinfo-i.md)[]&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | Internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
 **示例**
 
@@ -67,4 +67,3 @@ connection.queryTraceRoute(dest, options).then((data: connection.TraceRouteInfo[
     console.error(`Failed to get request. Code:${err.code}, message:${err.message}`);
 });
 ```
-

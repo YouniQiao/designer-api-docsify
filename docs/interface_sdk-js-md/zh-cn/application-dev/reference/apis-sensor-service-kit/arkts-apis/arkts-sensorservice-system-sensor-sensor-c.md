@@ -2,11 +2,11 @@
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
 **替代接口：** [sensor/sensor](arkts-sensor.md)
-
-<!--Device-unnamed-export default class Sensor--><!--Device-unnamed-export default class Sensor-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -26,21 +26,21 @@ static getOnBodyState(options: GetOnBodyStateOptions): void
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
 **替代接口：** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#wear_detection)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-Sensor-static getOnBodyState(options: GetOnBodyStateOptions): void--><!--Device-Sensor-static getOnBodyState(options: GetOnBodyStateOptions): void-End-->
-
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [GetOnBodyStateOptions](arkts-sensorservice-system-sensor-getonbodystateoptions-i.md) | 是 | 获取传感器所在设备佩戴状态时调用。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [GetOnBodyStateOptions](arkts-sensorservice-system-sensor-getonbodystateoptions-i.md) | 是 |
 
 ## subscribeAccelerometer
 
@@ -52,28 +52,28 @@ static subscribeAccelerometer(options: subscribeAccelerometerOptions): void
 
 > **说明：**&gt;
 > 除Lite Wearable外，从API version 8开始，建议使用
-> [ACCELEROMETER](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> ACCELEROMETER
 > 替代。
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
-**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;, options?: Options)
+**替代接口：** [on](arkts-sensorservice-sensor-on-f.md)(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;, options?: Options)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-Sensor-static subscribeAccelerometer(options: subscribeAccelerometerOptions): void--><!--Device-Sensor-static subscribeAccelerometer(options: subscribeAccelerometerOptions): void-End-->
-
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [subscribeAccelerometerOptions](arkts-sensorservice-system-sensor-subscribeaccelerometeroptions-i.md) | 是 | 用于设置加速度传感器订阅的参数，包括回调频率和回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [subscribeAccelerometerOptions](arkts-sensorservice-system-sensor-subscribeaccelerometeroptions-i.md) | 是 |
 
 ## subscribeBarometer
 
@@ -85,26 +85,26 @@ static subscribeBarometer(options: SubscribeBarometerOptions): void
 
 > **说明：**&gt;
 > 除Lite Wearable外，从API version 8开始，建议使用
-> [BAROMETER](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> BAROMETER
 > 替代。
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
-**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback&lt;BarometerResponse&gt;, options?: Options)
+**替代接口：** [on](arkts-sensorservice-sensor-on-f.md)(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback&lt;BarometerResponse&gt;, options?: Options)
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-Sensor-static subscribeBarometer(options: SubscribeBarometerOptions): void--><!--Device-Sensor-static subscribeBarometer(options: SubscribeBarometerOptions): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [SubscribeBarometerOptions](arkts-sensorservice-system-sensor-subscribebarometeroptions-i.md) | 是 | 当气压计传感器数据发生变化时调用。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [SubscribeBarometerOptions](arkts-sensorservice-system-sensor-subscribebarometeroptions-i.md) | 是 |
 
 ## subscribeCompass
 
@@ -116,10 +116,12 @@ static subscribeCompass(options: SubscribeCompassOptions): void
 
 > **说明：**&gt;
 > 除Lite Wearable外，从API version 8开始，建议使用
-> [ORIENTATION](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> ORIENTATION
 > 替代。
 
 **起始版本：** 3
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 8
 
@@ -127,15 +129,13 @@ static subscribeCompass(options: SubscribeCompassOptions): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-Sensor-static subscribeCompass(options: SubscribeCompassOptions): void--><!--Device-Sensor-static subscribeCompass(options: SubscribeCompassOptions): void-End-->
-
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [SubscribeCompassOptions](arkts-sensorservice-system-sensor-subscribecompassoptions-i.md) | 是 | 用于设置罗盘传感器订阅的参数，包括回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [SubscribeCompassOptions](arkts-sensorservice-system-sensor-subscribecompassoptions-i.md) | 是 |
 
 ## subscribeDeviceOrientation
 
@@ -147,27 +147,27 @@ static subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): v
 
 > **说明：**&gt;
 > 除Lite Wearable外，从API version 8开始，建议使用
-> [ORIENTATION](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> ORIENTATION
 > 替代。
 **设备行为差异**：该接口在Wearable、Lite Wearable中可正常调用，在其他设备类型中无效果。
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
-**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback&lt;OrientationResponse&gt;, options?: Options)
+**替代接口：** [on](arkts-sensorservice-sensor-on-f.md)(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback&lt;OrientationResponse&gt;, options?: Options)
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-Sensor-static subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): void--><!--Device-Sensor-static subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [SubscribeDeviceOrientationOptions](arkts-sensorservice-system-sensor-subscribedeviceorientationoptions-i.md) | 是 | 用于设置设备方向传感器订阅的参数，包括回调频率和回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [SubscribeDeviceOrientationOptions](arkts-sensorservice-system-sensor-subscribedeviceorientationoptions-i.md) | 是 |
 
 ## subscribeGyroscope
 
@@ -179,28 +179,28 @@ static subscribeGyroscope(options: SubscribeGyroscopeOptions): void
 
 > **说明：**&gt;
 > 除Lite Wearable外，从API version 8开始，建议使用
-> [GYROSCOPE](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> GYROSCOPE
 > 替代。
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
-**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback&lt;GyroscopeResponse&gt;, options?: Options)
+**替代接口：** [on](arkts-sensorservice-sensor-on-f.md)(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback&lt;GyroscopeResponse&gt;, options?: Options)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-Sensor-static subscribeGyroscope(options: SubscribeGyroscopeOptions): void--><!--Device-Sensor-static subscribeGyroscope(options: SubscribeGyroscopeOptions): void-End-->
-
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [SubscribeGyroscopeOptions](arkts-sensorservice-system-sensor-subscribegyroscopeoptions-i.md) | 是 | 用于设置陀螺仪传感器订阅的参数，包括回调频率和回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [SubscribeGyroscopeOptions](arkts-sensorservice-system-sensor-subscribegyroscopeoptions-i.md) | 是 |
 
 ## subscribeHeartRate
 
@@ -212,28 +212,28 @@ static subscribeHeartRate(options: SubscribeHeartRateOptions): void
 
 > **说明：**&gt;
 > 除Lite Wearable外，从API version 8开始，建议使用
-> [HEART_RATE](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> HEART_RATE
 > 替代。
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
-**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback&lt;HeartRateResponse&gt;, options?: Options)
+**替代接口：** [on](arkts-sensorservice-sensor-on-f.md)(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback&lt;HeartRateResponse&gt;, options?: Options)
 
 **需要权限：** ohos.permission.READ_HEALTH_DATA
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-Sensor-static subscribeHeartRate(options: SubscribeHeartRateOptions): void--><!--Device-Sensor-static subscribeHeartRate(options: SubscribeHeartRateOptions): void-End-->
-
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [SubscribeHeartRateOptions](arkts-sensorservice-system-sensor-subscribeheartrateoptions-i.md) | 是 | 当心率传感器数据发生变化时调用。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [SubscribeHeartRateOptions](arkts-sensorservice-system-sensor-subscribeheartrateoptions-i.md) | 是 |
 
 ## subscribeLight
 
@@ -245,11 +245,13 @@ static subscribeLight(options: SubscribeLightOptions): void
 
 > **说明：**&gt;
 > 除Lite Wearable外，从API version 8开始，建议使用
-> [AMBIENT_LIGHT](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> AMBIENT_LIGHT
 > 替代。
 **设备行为差异**：该接口在Wearable、Lite Wearable中可正常调用，在其他设备类型中无效果。
 
 **起始版本：** 3
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 8
 
@@ -257,15 +259,13 @@ static subscribeLight(options: SubscribeLightOptions): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-Sensor-static subscribeLight(options: SubscribeLightOptions): void--><!--Device-Sensor-static subscribeLight(options: SubscribeLightOptions): void-End-->
-
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [SubscribeLightOptions](arkts-sensorservice-system-sensor-subscribelightoptions-i.md) | 是 | 当环境光传感器数据发生变化时调用。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [SubscribeLightOptions](arkts-sensorservice-system-sensor-subscribelightoptions-i.md) | 是 |
 
 ## subscribeOnBodyState
 
@@ -277,26 +277,26 @@ static subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void
 
 > **说明：**&gt;
 > 除Lite Wearable外，从API version 8开始，建议使用
-> [WEAR_DETECTION](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> WEAR_DETECTION
 > 替代。
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
-**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;, options?: Options)
+**替代接口：** [on](arkts-sensorservice-sensor-on-f.md)(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;, options?: Options)
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-Sensor-static subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void--><!--Device-Sensor-static subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [SubscribeOnBodyStateOptions](arkts-sensorservice-system-sensor-subscribeonbodystateoptions-i.md) | 是 | 当佩戴状态改变时调用。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [SubscribeOnBodyStateOptions](arkts-sensorservice-system-sensor-subscribeonbodystateoptions-i.md) | 是 |
 
 ## subscribeProximity
 
@@ -308,11 +308,13 @@ static subscribeProximity(options: SubscribeProximityOptions): void
 
 > **说明：**&gt;
 > 从 API version 3开始支持，从API version 8开始废弃。除Lite Wearable外，建议使用
-> [PROXIMITY](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> PROXIMITY
 > 替代。
 **设备行为差异**：该接口在Wearable、Lite Wearable中可正常调用，在其他设备类型中无效果。
 
 **起始版本：** 3
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 8
 
@@ -320,15 +322,13 @@ static subscribeProximity(options: SubscribeProximityOptions): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-Sensor-static subscribeProximity(options: SubscribeProximityOptions): void--><!--Device-Sensor-static subscribeProximity(options: SubscribeProximityOptions): void-End-->
-
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [SubscribeProximityOptions](arkts-sensorservice-system-sensor-subscribeproximityoptions-i.md) | 是 | 用于设置距离传感器订阅的参数，包括回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [SubscribeProximityOptions](arkts-sensorservice-system-sensor-subscribeproximityoptions-i.md) | 是 |
 
 ## subscribeStepCounter
 
@@ -340,28 +340,28 @@ static subscribeStepCounter(options: SubscribeStepCounterOptions): void
 
 > **说明：**&gt;
 > 除Lite Wearable外，从API version 8开始，建议使用
-> [PEDOMETER](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
+> PEDOMETER
 > 替代。
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
-**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback&lt;PedometerResponse&gt;, options?: Options)
+**替代接口：** [on](arkts-sensorservice-sensor-on-f.md)(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback&lt;PedometerResponse&gt;, options?: Options)
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-Sensor-static subscribeStepCounter(options: SubscribeStepCounterOptions): void--><!--Device-Sensor-static subscribeStepCounter(options: SubscribeStepCounterOptions): void-End-->
-
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [SubscribeStepCounterOptions](arkts-sensorservice-system-sensor-subscribestepcounteroptions-i.md) | 是 | 当步进计数器传感器数据发生变化时调用。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [SubscribeStepCounterOptions](arkts-sensorservice-system-sensor-subscribestepcounteroptions-i.md) | 是 |
 
 ## unsubscribeAccelerometer
 
@@ -373,20 +373,20 @@ static unsubscribeAccelerometer(): void
 
 > **说明：**&gt;
 > 除Lite Wearable外，从API version 8开始，建议使用
-> [ACCELEROMETER](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> ACCELEROMETER
 > 替代。
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
-**替代接口：** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback?: Callback&lt;AccelerometerResponse&gt;)
+**替代接口：** [off](arkts-sensorservice-sensor-off-f.md)(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback?: Callback&lt;AccelerometerResponse&gt;)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-Sensor-static unsubscribeAccelerometer(): void--><!--Device-Sensor-static unsubscribeAccelerometer(): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -400,18 +400,18 @@ static unsubscribeBarometer(): void
 
 > **说明：**&gt;
 > 除Lite Wearable外，从API version 8开始，建议使用
-> [BAROMETER](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> BAROMETER
 > 替代。
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
-**替代接口：** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback&lt;BarometerResponse&gt;)
+**替代接口：** [off](arkts-sensorservice-sensor-off-f.md)(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback&lt;BarometerResponse&gt;)
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-Sensor-static unsubscribeBarometer(): void--><!--Device-Sensor-static unsubscribeBarometer(): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -425,18 +425,18 @@ static unsubscribeCompass(): void
 
 > **说明：**&gt;
 > 除Lite Wearable外，从API version 8开始，建议使用
-> [ORIENTATION](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> ORIENTATION
 > 替代。
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
-**替代接口：** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
+**替代接口：** [off](arkts-sensorservice-sensor-off-f.md)(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-Sensor-static unsubscribeCompass(): void--><!--Device-Sensor-static unsubscribeCompass(): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -450,19 +450,19 @@ static unsubscribeDeviceOrientation(): void
 
 > **说明：**&gt;
 > 除Lite Wearable外，从API version 8开始，建议使用
-> [ORIENTATION](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> ORIENTATION
 > 替代。
 **设备行为差异**：该接口在Wearable、Lite Wearable中可正常调用，在其他设备类型中无效果。
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
-**替代接口：** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
+**替代接口：** [off](arkts-sensorservice-sensor-off-f.md)(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-Sensor-static unsubscribeDeviceOrientation(): void--><!--Device-Sensor-static unsubscribeDeviceOrientation(): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -476,20 +476,20 @@ static unsubscribeGyroscope(): void
 
 > **说明：**&gt;
 > 除Lite Wearable外，从API version 8开始，建议使用
-> [GYROSCOPE](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> GYROSCOPE
 > 替代。
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
-**替代接口：** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback?: Callback&lt;GyroscopeResponse&gt;)
+**替代接口：** [off](arkts-sensorservice-sensor-off-f.md)(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback?: Callback&lt;GyroscopeResponse&gt;)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-Sensor-static unsubscribeGyroscope(): void--><!--Device-Sensor-static unsubscribeGyroscope(): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -503,20 +503,20 @@ static unsubscribeHeartRate(): void
 
 > **说明：**&gt;
 > 除Lite Wearable外，从API version 8开始，建议使用
-> [HEART_RATE](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> HEART_RATE
 > 替代。
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
-**替代接口：** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback?: Callback&lt;HeartRateResponse&gt;)
+**替代接口：** [off](arkts-sensorservice-sensor-off-f.md)(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback?: Callback&lt;HeartRateResponse&gt;)
 
 **需要权限：** ohos.permission.READ_HEALTH_DATA
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-Sensor-static unsubscribeHeartRate(): void--><!--Device-Sensor-static unsubscribeHeartRate(): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -530,19 +530,19 @@ static unsubscribeLight(): void
 
 > **说明：**&gt;
 > 除Lite Wearable外，从API version 8开始，建议使用
-> [AMBIENT_LIGHT](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> AMBIENT_LIGHT
 > 替代。
 **设备行为差异**：该接口在Wearable、Lite Wearable中可正常调用，在其他设备类型中无效果。
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
-**替代接口：** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback&lt;LightResponse&gt;)
+**替代接口：** [off](arkts-sensorservice-sensor-off-f.md)(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback&lt;LightResponse&gt;)
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-Sensor-static unsubscribeLight(): void--><!--Device-Sensor-static unsubscribeLight(): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -556,18 +556,18 @@ static unsubscribeOnBodyState(): void
 
 > **说明：**&gt;
 > 除Lite Wearable外，从API version 8开始，建议使用
-> [WEAR_DETECTION](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> WEAR_DETECTION
 > 替代。
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
-**替代接口：** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback&lt;WearDetectionResponse&gt;)
+**替代接口：** [off](arkts-sensorservice-sensor-off-f.md)(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback&lt;WearDetectionResponse&gt;)
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-Sensor-static unsubscribeOnBodyState(): void--><!--Device-Sensor-static unsubscribeOnBodyState(): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -581,19 +581,19 @@ static unsubscribeProximity(): void
 
 > **说明：**&gt;
 > 除Lite Wearable外，从API version 8开始，建议使用
-> [PROXIMITY](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> PROXIMITY
 > 替代。
 **设备行为差异**：该接口在Wearable、Lite Wearable中可正常调用，在其他设备类型中无效果。
 
 **起始版本：** 3
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 8
 
 **替代接口：** [PROXIMITY](arkts-sensorservice-sensor-sensorid-e.md#proximity)
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-Sensor-static unsubscribeProximity(): void--><!--Device-Sensor-static unsubscribeProximity(): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -607,20 +607,19 @@ static unsubscribeStepCounter(): void
 
 > **说明：**&gt;
 > 除Lite Wearable外，从API version 8开始，建议使用
-> [PEDOMETER](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)
+> PEDOMETER
 > 替代。
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 8
 
-**替代接口：** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback?: Callback&lt;PedometerResponse&gt;)
+**替代接口：** [off](arkts-sensorservice-sensor-off-f.md)(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback?: Callback&lt;PedometerResponse&gt;)
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-Sensor-static unsubscribeStepCounter(): void--><!--Device-Sensor-static unsubscribeStepCounter(): void-End-->
-
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
-

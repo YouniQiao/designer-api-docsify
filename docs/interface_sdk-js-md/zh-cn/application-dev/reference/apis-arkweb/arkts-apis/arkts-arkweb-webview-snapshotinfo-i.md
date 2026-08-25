@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-webview-interface SnapshotInfo--><!--Device-webview-interface SnapshotInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -26,9 +26,9 @@ snapshot的id，用于标识本次全量绘制请求，便于在回调结果中�
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-SnapshotInfo-id?: string--><!--Device-SnapshotInfo-id?: string-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -44,9 +44,8 @@ Web绘制的尺寸，最多支持16000px * 16000px，长度单位支持px、vp�
 
 **起始版本：** 12
 
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SnapshotInfo-size?: SizeOptions--><!--Device-SnapshotInfo-size?: SizeOptions-End-->
-
 **系统能力：** SystemCapability.Web.Webview.Core
-

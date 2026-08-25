@@ -5,7 +5,7 @@
 
 **起始版本：** 11
 
-<!--Device-unnamed-declare interface ResizableOptions--><!--Device-unnamed-declare interface ResizableOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,11 @@ lattice?: DrawingLattice
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ResizableOptions-lattice?: DrawingLattice--><!--Device-ResizableOptions-lattice?: DrawingLattice-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,15 +44,14 @@ slice?: EdgeWidths
 边框宽度类型，用于描述组件边框不同方向的宽度。  
 **说明：**只有当bottom和right同时大于0时，该属性生效。当设置了top时，图片顶部拉伸，图片的像素值保持不变。当设置了right时，图片右部拉伸，图片的像素值保持不变。当设置了bottom时，图片底部拉伸，图片的像素值保持不变。当设置了left时，图片左部拉伸，图片的像素值保持不变。每个方向的宽度默认值为0，传入数字时默认单位为vp。设置了EdgeWidths后的效果如图1（设置EdgeWidths效果图）所示。单位：vp
 
-**类型：** EdgeWidths
+**类型：** [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md)
 
 **起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ResizableOptions-slice?: EdgeWidths--><!--Device-ResizableOptions-slice?: EdgeWidths-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

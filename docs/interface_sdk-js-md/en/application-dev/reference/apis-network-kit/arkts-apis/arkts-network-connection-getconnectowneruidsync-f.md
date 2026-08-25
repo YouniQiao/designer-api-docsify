@@ -9,7 +9,7 @@ import { connection } from '@kit.NetworkKit';
 ## getConnectOwnerUidSync
 
 ```TypeScript
-function getConnectOwnerUidSync(protocol: ProtocolType, local: NetAddress, remote: NetAddress): int
+function getConnectOwnerUidSync(protocol: ProtocolType, local: NetAddress, remote: NetAddress): number
 ```
 
 Queries the UID of the application that initiates a specified network connection. This API returns the result synchronously.
@@ -25,37 +25,37 @@ Queries the UID of the application that initiates a specified network connection
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-connection-function getConnectOwnerUidSync(protocol: ProtocolType, local: NetAddress, remote: NetAddress): int--><!--Device-connection-function getConnectOwnerUidSync(protocol: ProtocolType, local: NetAddress, remote: NetAddress): int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| protocol | ProtocolType | Yes | Type of a network protocol. |
-| local | NetAddress | Yes | Source network address. |
-| remote | NetAddress | Yes | Destination network address. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| protocol | [ProtocolType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-hid-protocoltype-e.md) | Yes |
+| local | [NetAddress](arkts-network-connection-netaddress-i.md) | Yes |
+| [remote](../../apis-driver-development-kit/arkts-apis/arkts-driverdevelopment-devicemanager-remotedevicedriver-i.md) | [NetAddress](arkts-network-connection-netaddress-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | UID of an application. If no matching UID is found, -1 is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100301](../errorcode-net-connection.md#2100301-failed-to-authenticate-the-caller-non-vpn-application) | Incorrect usage in non-VPN application. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100301](../errorcode-net-connection.md#2100301-failed-to-authenticate-the-caller-non-vpn-application) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
 **Examples**
 
@@ -74,4 +74,3 @@ try {
   console.error(`getConnectOwnerUid failed. errorCode: ${err.code} message:${err.message}`);
 }
 ```
-

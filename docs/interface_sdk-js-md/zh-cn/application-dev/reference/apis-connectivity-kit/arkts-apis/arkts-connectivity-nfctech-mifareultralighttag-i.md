@@ -4,9 +4,9 @@ MifareUltralightTag 提供对MIFARE Ultralight属性和I/O操作的访问，继�
 
 **继承/实现关系：** MifareUltralightTag extends TagSession
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-unnamed-export interface MifareUltralightTag--><!--Device-unnamed-export interface MifareUltralightTag-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -18,19 +18,19 @@ getType(): tag.MifareUltralightType
 
 获取MIFARE Ultralight标签的类型。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MifareUltralightTag-getType(): tag.MifareUltralightType--><!--Device-MifareUltralightTag-getType(): tag.MifareUltralightType-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| tag.MifareUltralightType | MIFARE Ultralight标签的类型。 |
+| 类型 |
+| --- |
+| tag.MifareUltralightType |
 
 **示例**
 
@@ -52,42 +52,48 @@ console.info("mifareUltralight getType: " + getType);
 
 ## readMultiplePages
 
+ArkTS-Dyn:
+```TypeScript
+readMultiplePages(pageIndex: number): Promise<number[]>
+```
+
+ArkTS-Sta:
 ```TypeScript
 readMultiplePages(pageIndex: int): Promise<int[]>
 ```
 
 读取标签的4页数据，共16字节的数据。每个页面数据大小为4字节。使用Promise异步回调
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MifareUltralightTag-readMultiplePages(pageIndex: int): Promise<int[]>--><!--Device-MifareUltralightTag-readMultiplePages(pageIndex: int): Promise<int[]>-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pageIndex | int | 是 | 要读取页面的索引，从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pageIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int[]&gt; | Promise对象。以Promise形式返回读取的4页的数据，共16字节。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: Promise & lt;number[] & gt;<br>ArkTS-Sta：Promise & lt;int[] & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
@@ -151,37 +157,43 @@ function nfcTechDemo() {
 
 ## readMultiplePages
 
+ArkTS-Dyn:
+```TypeScript
+readMultiplePages(pageIndex: number, callback: AsyncCallback<number[]>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 readMultiplePages(pageIndex: int, callback: AsyncCallback<int[]>): void
 ```
 
 读取标签的4页数据，共16字节的数据。每个页面数据大小为4字节。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MifareUltralightTag-readMultiplePages(pageIndex: int, callback: AsyncCallback<int[]>): void--><!--Device-MifareUltralightTag-readMultiplePages(pageIndex: int, callback: AsyncCallback<int[]>): void-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pageIndex | int | 是 | 要读取页面的索引，从0开始。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | 是 | 以callback形式异步返回页操作结果。返回读取到的数据，共16字节。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pageIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The Tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
@@ -189,43 +201,49 @@ readMultiplePages(pageIndex: int, callback: AsyncCallback<int[]>): void
 
 ## writeSinglePage
 
+ArkTS-Dyn:
+```TypeScript
+writeSinglePage(pageIndex: number, data: number[]): Promise<void>
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeSinglePage(pageIndex: int, data: int[]): Promise<void>
 ```
 
 写入一页数据，数据大小为4字节。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MifareUltralightTag-writeSinglePage(pageIndex: int, data: int[]): Promise<void>--><!--Device-MifareUltralightTag-writeSinglePage(pageIndex: int, data: int[]): Promise<void>-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pageIndex | int | 是 | 要写入页面的索引，从0开始。 |
-| data | int[] | 是 | 要写入页面的数据内容，必须是4个字节大小。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pageIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| data | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
@@ -291,40 +309,45 @@ function nfcTechDemo() {
 
 ## writeSinglePage
 
+ArkTS-Dyn:
+```TypeScript
+writeSinglePage(pageIndex: number, data: number[], callback: AsyncCallback<void>): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 writeSinglePage(pageIndex: int, data: int[], callback: AsyncCallback<void>): void
 ```
 
 写入一页数据，数据大小为4字节。使用callback异步回调。
 
-**起始版本：** 23
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MifareUltralightTag-writeSinglePage(pageIndex: int, data: int[], callback: AsyncCallback<void>): void--><!--Device-MifareUltralightTag-writeSinglePage(pageIndex: int, data: int[], callback: AsyncCallback<void>): void-End-->
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pageIndex | int | 是 | 要写入页面的索引，从0开始。 |
-| data | int[] | 是 | 要写入页面的数据内容，必须是4个字节大小。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当写入数据成功时，err为undefined，否则为错误对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pageIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| data | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) | The Tag I/O operation failed.<br>**适用版本：** 12+ |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
+| [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
 **示例**
 
 参见 [writeSinglePage](#writesinglepage)
-

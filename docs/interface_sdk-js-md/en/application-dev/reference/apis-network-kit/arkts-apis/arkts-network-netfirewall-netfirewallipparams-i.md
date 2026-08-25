@@ -4,7 +4,7 @@ Defines the IP parameters of the firewall rule. The IP address type can be IPv4 
 
 **Since:** 15
 
-<!--Device-netFirewall-interface NetFirewallIpParams--><!--Device-netFirewall-interface NetFirewallIpParams-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -26,7 +26,7 @@ IP address. This parameter is mandatory and valid only when type is set to **1**
 
 **Since:** 15
 
-<!--Device-NetFirewallIpParams-address?: string--><!--Device-NetFirewallIpParams-address?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -42,40 +42,40 @@ End IP address. This parameter is mandatory and valid only when type is set to *
 
 **Since:** 15
 
-<!--Device-NetFirewallIpParams-endIp?: string--><!--Device-NetFirewallIpParams-endIp?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## family
 
 ```TypeScript
-family?: int
+family?: number
 ```
 
 **1**: IPv4.  
 **2**: IPv6.The default value is **IPv4**. Other values are not supported currently.
 
-**Type:** int
+**Type:** number
 
 **Since:** 15
 
-<!--Device-NetFirewallIpParams-family?: int--><!--Device-NetFirewallIpParams-family?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## mask
 
 ```TypeScript
-mask?: int
+mask?: number
 ```
 
 IPv4: subnet mask.IPv6: address prefix.This parameter is mandatory and valid only when type is set to **1**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 15
 
-<!--Device-NetFirewallIpParams-mask?: int--><!--Device-NetFirewallIpParams-mask?: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -91,24 +91,23 @@ Start IP address. This parameter is mandatory and valid only when type is set to
 
 **Since:** 15
 
-<!--Device-NetFirewallIpParams-startIp?: string--><!--Device-NetFirewallIpParams-startIp?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## type
 
 ```TypeScript
-type: int
+type: number
 ```
 
 **1**: IP address or subnet. In this case, the **address** and **mask** fields must be specified. When a single IP address is used, the **mask** field must be set to **32**.  
 **2**: IP address segment. In this case, the **startIp** and **endIp** fields must be specified.
 
-**Type:** int
+**Type:** number
 
 **Since:** 15
 
-<!--Device-NetFirewallIpParams-type: int--><!--Device-NetFirewallIpParams-type: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
-

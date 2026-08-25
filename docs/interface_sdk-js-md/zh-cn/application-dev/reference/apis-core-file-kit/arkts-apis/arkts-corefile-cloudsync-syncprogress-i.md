@@ -2,9 +2,9 @@
 
 端云同步过程。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-cloudSync-interface SyncProgress--><!--Device-cloudSync-interface SyncProgress-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -24,9 +24,9 @@ error: ErrorType
 
 **类型：** ErrorType
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SyncProgress-error: ErrorType--><!--Device-SyncProgress-error: ErrorType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -40,9 +40,8 @@ state: SyncState
 
 **类型：** [SyncState](arkts-corefile-cloudsync-syncstate-e.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SyncProgress-state: SyncState--><!--Device-SyncProgress-state: SyncState-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-

@@ -10,14 +10,13 @@ import { Battery, BatteryResponse, GetStatusOptions } from '@kit.BasicServicesKi
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [Battery](arkts-basicservices-system-battery-battery-c.md) | The module allows you to query the charging status and remaining power of a device. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Battery](arkts-basicservices-system-battery-battery-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [BatteryResponse](arkts-basicservices-system-battery-batteryresponse-i.md) | Defines a response that returns the charging status and remaining power of the device. |
-| [GetStatusOptions](arkts-basicservices-system-battery-getstatusoptions-i.md) | Object that contains the API calling result. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BatteryResponse](arkts-basicservices-system-battery-batteryresponse-i.md) |
+| [GetStatusOptions](arkts-basicservices-system-battery-getstatusoptions-i.md) |

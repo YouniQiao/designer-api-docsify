@@ -10,9 +10,9 @@ The module provides basic APIs for manipulating Picture in Picture (PiP). For ex
 > canIUse() to check whether the device supports this system
 > capability and the corresponding APIs.
 
-**Since:** 26.0.0
+**Since:** 11
 
-<!--Device-unnamed-declare namespace PiPWindow--><!--Device-unnamed-declare namespace PiPWindow-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -26,61 +26,60 @@ import { PiPWindow } from '@kit.ArkUI';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [create](arkts-arkui-pipwindow-create-f.md) | Creates a PiP controller. This API uses a promise to return the result. |
-| [create](arkts-arkui-pipwindow-create-f.md) | Creates a PiP controller. This API uses **typeNode** to add a custom UI node for PiP. This API uses a promise to return the result. |
-| [isPiPEnabled](arkts-arkui-pipwindow-ispipenabled-f.md) | Checks whether the current device supports the PiP feature. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [create](arkts-arkui-pipwindow-create-f.md) |
+| [create](arkts-arkui-pipwindow-create-f.md) |
+| [isPiPEnabled](arkts-arkui-pipwindow-ispipenabled-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md) | Describes the parameters in the callback of the action event of the PiP controller. |
-| [PiPConfiguration](arkts-arkui-pipwindow-pipconfiguration-i.md) | Defines the parameters for creating a PiP controller. |
-| [PiPController](arkts-arkui-pipwindow-pipcontroller-i.md) | Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-pipwindow-create-f.md) to create a PiPController instance. |
-| [PiPWindowInfo](arkts-arkui-pipwindow-pipwindowinfo-i.md) | Describes the PiP window information. |
-| [PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md) | Describes the size of a PiP window. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md) |
+| [PiPConfiguration](arkts-arkui-pipwindow-pipconfiguration-i.md) |
+| [PiPController](arkts-arkui-pipwindow-pipcontroller-i.md) |
+| [PiPWindowInfo](arkts-arkui-pipwindow-pipwindowinfo-i.md) |
+| [PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md) |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [PiPController](arkts-arkui-pipwindow-pipcontroller-i-sys.md) | Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-pipwindow-create-f.md) to create a PiPController instance. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PiPController](arkts-arkui-pipwindow-pipcontroller-i-sys.md) |
 <!--DelEnd-->
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [PiPControlStatus](arkts-arkui-pipwindow-pipcontrolstatus-e.md) | Enumerates the statuses of components displayed on the PiP controller. |
-| [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md) | Enumerates the types of components displayed on the PiP controller. |
-| [PiPState](arkts-arkui-pipwindow-pipstate-e.md) | Enumerates the PiP states. |
-| [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) | Enumerates the PiP template types. |
-| [VideoCallControlGroup](arkts-arkui-pipwindow-videocallcontrolgroup-e.md) | Enumerates the video call component groups. They are used only when [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) is set to **VIDEO_CALL**. |
-| [VideoLiveControlGroup](arkts-arkui-pipwindow-videolivecontrolgroup-e.md) | Enumerates the live video component groups. They are used only when [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) is set to **VIDEO_LIVE**. |
-| [VideoMeetingControlGroup](arkts-arkui-pipwindow-videomeetingcontrolgroup-e.md) | Enumerates the video meeting component groups. They are used only when [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) is set to **VIDEO_MEETING**. |
-| [VideoPlayControlGroup](arkts-arkui-pipwindow-videoplaycontrolgroup-e.md) | Enumerates the video playback component groups. They are used only when [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) is set to **VIDEO_PLAY**. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PiPControlStatus](arkts-arkui-pipwindow-pipcontrolstatus-e.md) |
+| [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md) |
+| [PiPState](arkts-arkui-pipwindow-pipstate-e.md) |
+| [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) |
+| [VideoCallControlGroup](arkts-arkui-pipwindow-videocallcontrolgroup-e.md) |
+| [VideoLiveControlGroup](arkts-arkui-pipwindow-videolivecontrolgroup-e.md) |
+| [VideoMeetingControlGroup](arkts-arkui-pipwindow-videomeetingcontrolgroup-e.md) |
+| [VideoPlayControlGroup](arkts-arkui-pipwindow-videoplaycontrolgroup-e.md) |
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e-sys.md) | Enumerates the PiP template types. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e-sys.md) |
 <!--DelEnd-->
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) | Describes the action event callback of the PiP controller. |
-| [PiPActionEventType](arkts-arkui-pipwindow-pipactioneventtype-t.md) | Enumerates the types of action events of the PiP controller. |
-| [PiPCallActionEvent](arkts-arkui-pipwindow-pipcallactionevent-t.md) | Defines the PiP action event in a video call. |
-| [PiPControlGroup](arkts-arkui-pipwindow-pipcontrolgroup-t.md) | Describes the optional component groups of the PiP controller. An application can configure whether to display these optional components. This API must match [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) when being used. Otherwise, the [create](arkts-arkui-pipwindow-create-f.md) API returns error code 401. |
-| [PiPLiveActionEvent](arkts-arkui-pipwindow-pipliveactionevent-t.md) | Defines the PiP action event in a live. |
-| [PiPMeetingActionEvent](arkts-arkui-pipwindow-pipmeetingactionevent-t.md) | Defines the PiP action event in a video meeting. |
-| [PiPVideoActionEvent](arkts-arkui-pipwindow-pipvideoactionevent-t.md) | Defines the PiP action event during video playback. |
-| [StateChangeCallback](arkts-arkui-pipwindow-statechangecallback-t.md) | Describe picture-in-picture stage change event callback. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) |
+| [PiPActionEventType](arkts-arkui-pipwindow-pipactioneventtype-t.md) |
+| [PiPCallActionEvent](arkts-arkui-pipwindow-pipcallactionevent-t.md) |
+| [PiPControlGroup](arkts-arkui-pipwindow-pipcontrolgroup-t.md) |
+| [PiPLiveActionEvent](arkts-arkui-pipwindow-pipliveactionevent-t.md) |
+| [PiPMeetingActionEvent](arkts-arkui-pipwindow-pipmeetingactionevent-t.md) |
+| [PiPVideoActionEvent](arkts-arkui-pipwindow-pipvideoactionevent-t.md) |
+| [StateChangeCallback](arkts-arkui-pipwindow-statechangecallback-t.md) |

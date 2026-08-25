@@ -11,9 +11,9 @@ childProcessManager模块提供子进程管理能力，支持子进程创建和�
 ### 规格限制  
 - 通过本模块中定义的创建子进程的接口和native_child_process.h中定义的创建子进程的接口启动的子进程总数最大为512个（系统资源充足情况下）， 其中startChildProcess接口在SELF_FORK模式下启动的子进程不计入总数内。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-unnamed-declare namespace childProcessManager--><!--Device-unnamed-declare namespace childProcessManager-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -27,18 +27,17 @@ import { childProcessManager } from '@kit.AbilityKit';
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [isArkChildProcessSupported](arkts-ability-childprocessmanager-isarkchildprocesssupported-f.md) | 查询是否允许调用者在此设备上创建ArkTS子进程 |
-| [isNativeChildProcessSupported](arkts-ability-childprocessmanager-isnativechildprocesssupported-f.md) | 查询是否允许调用者在此设备上创建Native子进程 |
-| [startArkChildProcess](arkts-ability-childprocessmanager-startarkchildprocess-f.md) | 启动[ArkTS子进程](../../../application-models/ability-terminology.md#arkts子进程)。使用Promise异步回调。 |
-| [startChildProcess](arkts-ability-childprocessmanager-startchildprocess-f.md) | 启动[ArkTS子进程](../../../application-models/ability-terminology.md#arkts子进程)。使用Promise异步回调。 |
-| [startChildProcess](arkts-ability-childprocessmanager-startchildprocess-f.md) | 启动[ArkTS子进程](../../../application-models/ability-terminology.md#arkts子进程)。使用callback异步回调。 |
-| [startNativeChildProcess](arkts-ability-childprocessmanager-startnativechildprocess-f.md) | 启动[Native子进程](../../../application-models/ability-terminology.md#native子进程)。使用Promise异步回调。 |
+| 名称 |
+| --- |
+| [isArkChildProcessSupported](arkts-ability-childprocessmanager-isarkchildprocesssupported-f.md) |
+| [isNativeChildProcessSupported](arkts-ability-childprocessmanager-isnativechildprocesssupported-f.md) |
+| [startArkChildProcess](arkts-ability-childprocessmanager-startarkchildprocess-f.md) |
+| [startChildProcess](arkts-ability-childprocessmanager-startchildprocess-f.md) |
+| [startChildProcess](arkts-ability-childprocessmanager-startchildprocess-f.md) |
+| [startNativeChildProcess](arkts-ability-childprocessmanager-startnativechildprocess-f.md) |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-| [StartMode](arkts-ability-childprocessmanager-startmode-e.md) | 子进程启动模式枚举。 |
-
+| 名称 |
+| --- |
+| [StartMode](arkts-ability-childprocessmanager-startmode-e.md) |

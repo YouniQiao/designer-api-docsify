@@ -2,9 +2,9 @@
 
 Defines the Gallery widget information.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-photoAccessHelper-interface FormInfo--><!--Device-photoAccessHelper-interface FormInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,9 +26,9 @@ Widget ID, which is provided when a widget is created in Gallery.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-FormInfo-formId: string--><!--Device-FormInfo-formId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -44,11 +44,10 @@ URI of the image bound to the widget. When a widget is created, **uri** can be e
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-FormInfo-uri: string--><!--Device-FormInfo-uri: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

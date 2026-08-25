@@ -2,9 +2,9 @@
 
 Photo defines a full-quality image object.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-camera-interface Photo--><!--Device-camera-interface Photo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -24,9 +24,9 @@ Depth data.
 
 **Type:** [DepthData](arkts-camera-camera-depthdata-i-sys.md)
 
-**Since:** 23
+**Since:** 13
 
-<!--Device-Photo-depthData?: DepthData--><!--Device-Photo-depthData?: DepthData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -42,11 +42,10 @@ Raw image.
 
 **Type:** image.Image
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Photo-raw?: image.Image--><!--Device-Photo-raw?: image.Image-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

@@ -2,9 +2,9 @@
 
 发送彩信的参数。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-sms-export interface MmsParams--><!--Device-sms-export interface MmsParams-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -26,9 +26,9 @@ data: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-MmsParams-data: string--><!--Device-MmsParams-data: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -44,9 +44,9 @@ mmsc: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-MmsParams-mmsc: string--><!--Device-MmsParams-mmsc: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -62,9 +62,9 @@ mmsConfig?: MmsConfig
 
 **类型：** [MmsConfig](arkts-telephony-sms-mmsconfig-i-sys.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-MmsParams-mmsConfig?: MmsConfig--><!--Device-MmsParams-mmsConfig?: MmsConfig-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -79,13 +79,12 @@ slotId: int
 用于发送短信的SIM卡槽ID：  
 - 0：卡槽1 - 1：卡槽2
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-MmsParams-slotId: int--><!--Device-MmsParams-slotId: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
-

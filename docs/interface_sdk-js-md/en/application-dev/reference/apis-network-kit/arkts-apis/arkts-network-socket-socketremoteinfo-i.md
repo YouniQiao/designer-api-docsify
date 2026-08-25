@@ -4,7 +4,7 @@ Defines information about the socket connection.
 
 **Since:** 7
 
-<!--Device-socket-export interface SocketRemoteInfo--><!--Device-socket-export interface SocketRemoteInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -26,7 +26,7 @@ Peer IP address.
 
 **Since:** 7
 
-<!--Device-SocketRemoteInfo-address: string--><!--Device-SocketRemoteInfo-address: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -44,39 +44,38 @@ The default value is **IPv4**.
 
 **Since:** 7
 
-<!--Device-SocketRemoteInfo-family: 'IPv4' | 'IPv6'--><!--Device-SocketRemoteInfo-family: 'IPv4' | 'IPv6'-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## port
 
 ```TypeScript
-port: int
+port: number
 ```
 
 Port number. The value ranges from **0** to **65535**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 7
 
-<!--Device-SocketRemoteInfo-port: int--><!--Device-SocketRemoteInfo-port: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## size
 
 ```TypeScript
-size: int
+size: number
 ```
 
 Length of the server response message, in bytes.
 
-**Type:** int
+**Type:** number
 
 **Since:** 7
 
-<!--Device-SocketRemoteInfo-size: int--><!--Device-SocketRemoteInfo-size: int-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
-

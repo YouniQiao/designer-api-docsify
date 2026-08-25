@@ -1,18 +1,17 @@
 # SkillUrl
 
 ```TypeScript
-export type SkillUrl = _SkillUri
+export type SkillUrl = _Skill.SkillUri
 ```
 
 Defines the SkillUri information.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-bundleManager-export type SkillUrl = _SkillUri--><!--Device-bundleManager-export type SkillUrl = _SkillUri-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _SkillUri
-
+**Property type:** _Skill.SkillUri

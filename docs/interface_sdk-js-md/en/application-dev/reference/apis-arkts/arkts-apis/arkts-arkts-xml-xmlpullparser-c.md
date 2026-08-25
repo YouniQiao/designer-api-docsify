@@ -2,9 +2,9 @@
 
 The XmlPullParser interface is used to parse the existing xml file.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-xml-class XmlPullParser--><!--Device-xml-class XmlPullParser-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -22,20 +22,20 @@ constructor(buffer: ArrayBuffer | DataView, encoding?: string)
 
 Creates and returns an XmlPullParser object.
 
-**Since:** 23
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-XmlPullParser-constructor(buffer: ArrayBuffer | DataView, encoding?: string)--><!--Device-XmlPullParser-constructor(buffer: ArrayBuffer | DataView, encoding?: string)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer \| DataView | Yes | A instance, the new XmlPullParser with. |
-| encoding | string | No | [encoding='utf8'] this is its encoding. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buffer | ArrayBuffer \| DataView | Yes |
+| encoding | string | No |
 
 **Examples**
 
@@ -67,21 +67,21 @@ Starts parsing the XML file.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 14
 
 **Substitutes:** [parseXml](#parsexml)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-XmlPullParser-parse(option: ParseOptions): void--><!--Device-XmlPullParser-parse(option: ParseOptions): void-End-->
-
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| option | ParseOptions | Yes | Parse options for XmlPullParser, the interface including two Boolean variables and three callback functions. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | Yes |
 
 **Examples**
 
@@ -123,17 +123,16 @@ parseXml(option: ParseOptions): void
 
 Parses XML information.
 
-**Since:** 23
+**Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
-<!--Device-XmlPullParser-parseXml(option: ParseOptions): void--><!--Device-XmlPullParser-parseXml(option: ParseOptions): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| option | ParseOptions | Yes | XML parsing options. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | Yes |

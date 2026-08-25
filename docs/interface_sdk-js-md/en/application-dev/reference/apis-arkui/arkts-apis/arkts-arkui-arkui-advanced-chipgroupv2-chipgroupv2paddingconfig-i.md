@@ -4,7 +4,7 @@ Defines ChipGroupV2 padding config.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export interface ChipGroupV2PaddingConfig--><!--Device-unnamed-export interface ChipGroupV2PaddingConfig-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,11 @@ Bottom of chip group padding.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipGroupV2PaddingConfig-bottom: Length--><!--Device-ChipGroupV2PaddingConfig-bottom: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,11 +46,10 @@ Top of chip group padding.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2PaddingConfig-top: Length--><!--Device-ChipGroupV2PaddingConfig-top: Length-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

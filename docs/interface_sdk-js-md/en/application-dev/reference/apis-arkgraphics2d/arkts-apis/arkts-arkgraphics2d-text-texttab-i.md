@@ -2,9 +2,9 @@
 
 Implements a paragraph-style text tab, which stores the alignment mode and position.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-text-interface TextTab--><!--Device-text-interface TextTab-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -24,11 +24,11 @@ Text alignment method after the tab character in a paragraph. It supports the LE
 
 **Type:** TextAlign
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-TextTab-alignment: TextAlign--><!--Device-TextTab-alignment: TextAlign-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -40,17 +40,16 @@ location: double
 
 Alignment position of the text following the tab character. The value is a floating point number, in px. The minimum value is 1.0. When the value is less than 1.0, the tab character is replaced with a space.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-TextTab-location: double--><!--Device-TextTab-location: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Examples**
 
 alignment is CENTER, location is 200, and the text is "12/t345".
-

@@ -1,34 +1,30 @@
 # WeakMapConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface WeakMapConstructor--><!--Device-unnamed-interface WeakMapConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
+## [[Construct]]
 
 ```TypeScript
 new <K extends object = object, V = any>(entries?: readonly [K, V][] | null): WeakMap<K, V>
 ```
 
-**Since:** -1
-
-<!--Device-WeakMapConstructor-new <K extends object = object, V = any>(entries?: readonly [K, V][] | null): WeakMap<K, V>--><!--Device-WeakMapConstructor-new <K extends object = object, V = any>(entries?: readonly [K, V][] | null): WeakMap<K, V>-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| entries | readonly [K, V][] \| null | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| entries | readonly [K, V][] \| null | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## prototype
 
 ```TypeScript
@@ -37,7 +33,4 @@ readonly prototype: WeakMap<object, any>
 
 **Type:** WeakMap&lt;object, any&gt;
 
-**Since:** -1
-
-<!--Device-WeakMapConstructor-readonly prototype: WeakMap<object, any>--><!--Device-WeakMapConstructor-readonly prototype: WeakMap<object, any>-End-->
-
+**ArkTS mode:** 

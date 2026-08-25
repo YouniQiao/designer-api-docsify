@@ -2,9 +2,9 @@
 
 WLAN IP类型枚举。@enum { int }
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-wifiManager-enum IpType--><!--Device-wifiManager-enum IpType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -18,9 +18,9 @@ STATIC
 
 使用静态配置的IP设置
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-IpType-STATIC--><!--Device-IpType-STATIC-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -34,9 +34,9 @@ DHCP
 
 使用动态配置的IP设置
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-IpType-DHCP--><!--Device-IpType-DHCP-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -50,11 +50,10 @@ UNKNOWN
 
 未分配IP详情
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-IpType-UNKNOWN--><!--Device-IpType-UNKNOWN-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
-

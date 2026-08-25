@@ -4,9 +4,9 @@ RgbaColor definition
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-wallpaper-interface RgbaColor--><!--Device-wallpaper-interface RgbaColor-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -19,72 +19,71 @@ import { wallpaper } from '@kit.BasicServicesKit';
 ## alpha
 
 ```TypeScript
-alpha: long
+alpha: number
 ```
 
 The range is 0 to 255.
 
-**Type:** long
+**Type:** number
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-RgbaColor-alpha: long--><!--Device-RgbaColor-alpha: long-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 ## blue
 
 ```TypeScript
-blue: long
+blue: number
 ```
 
 The range is 0 to 255.
 
-**Type:** long
+**Type:** number
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-RgbaColor-blue: long--><!--Device-RgbaColor-blue: long-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 ## green
 
 ```TypeScript
-green: long
+green: number
 ```
 
 The range is 0 to 255.
 
-**Type:** long
+**Type:** number
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-RgbaColor-green: long--><!--Device-RgbaColor-green: long-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 ## red
 
 ```TypeScript
-red: long
+red: number
 ```
 
 The range is 0 to 255.
 
-**Type:** long
+**Type:** number
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
-<!--Device-RgbaColor-red: long--><!--Device-RgbaColor-red: long-End-->
-
 **System capability:** SystemCapability.MiscServices.Wallpaper
-

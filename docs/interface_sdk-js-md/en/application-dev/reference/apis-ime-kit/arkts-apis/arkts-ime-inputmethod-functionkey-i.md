@@ -2,9 +2,9 @@
 
 Describes the type of the input method function key.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-inputMethod-export interface FunctionKey--><!--Device-inputMethod-export interface FunctionKey-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -24,9 +24,8 @@ Function type represented by the Enter key of the input method.
 
 **Type:** EnterKeyType
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-FunctionKey-enterKeyType: EnterKeyType--><!--Device-FunctionKey-enterKeyType: EnterKeyType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

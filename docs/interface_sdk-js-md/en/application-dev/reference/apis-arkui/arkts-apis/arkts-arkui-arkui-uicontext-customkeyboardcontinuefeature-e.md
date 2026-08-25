@@ -4,7 +4,7 @@ Enum of CustomKeyboardContinueFeature
 
 **Since:** 23
 
-<!--Device-unnamed-export const enum CustomKeyboardContinueFeature--><!--Device-unnamed-export const enum CustomKeyboardContinueFeature-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Enable custom keyboard continuation.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-CustomKeyboardContinueFeature-ENABLED = 0--><!--Device-CustomKeyboardContinueFeature-ENABLED = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ Disable custom keyboard continuation.
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-CustomKeyboardContinueFeature-DISABLED = 1--><!--Device-CustomKeyboardContinueFeature-DISABLED = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

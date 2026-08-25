@@ -4,7 +4,7 @@ Enum of text height adaptation
 
 **起始版本：** 10
 
-<!--Device-unnamed-declare enum TextHeightAdaptivePolicy--><!--Device-unnamed-declare enum TextHeightAdaptivePolicy-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Priority is given to using the maxLines attribute to adapt the text height. If t
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextHeightAdaptivePolicy-MAX_LINES_FIRST = 0--><!--Device-TextHeightAdaptivePolicy-MAX_LINES_FIRST = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Priority is given to using the minFontSize attribute to adapt the text height. I
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextHeightAdaptivePolicy-MIN_FONT_SIZE_FIRST = 1--><!--Device-TextHeightAdaptivePolicy-MIN_FONT_SIZE_FIRST = 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ Priority is given to using the layout constraint to adapt the text height. If th
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-TextHeightAdaptivePolicy-LAYOUT_CONSTRAINT_FIRST = 2--><!--Device-TextHeightAdaptivePolicy-LAYOUT_CONSTRAINT_FIRST = 2-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

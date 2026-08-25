@@ -8,11 +8,10 @@ Describes partial information about the **wantAgent** in the notification reques
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-notificationManager-export type NotificationParameters = _NotificationParameters--><!--Device-notificationManager-export type NotificationParameters = _NotificationParameters-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **Property type:** _NotificationParameters
-

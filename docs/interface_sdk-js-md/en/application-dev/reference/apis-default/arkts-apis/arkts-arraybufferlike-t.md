@@ -4,9 +4,6 @@
 type ArrayBufferLike = ArrayBufferTypes[keyof ArrayBufferTypes]
 ```
 
-**Since:** -1
-
-<!--Device-unnamed-type ArrayBufferLike = ArrayBufferTypes[keyof ArrayBufferTypes]--><!--Device-unnamed-type ArrayBufferLike = ArrayBufferTypes[keyof ArrayBufferTypes]-End-->
+**ArkTS mode:** 
 
 **Property type:** ArrayBufferTypes[keyof ArrayBufferTypes]
-

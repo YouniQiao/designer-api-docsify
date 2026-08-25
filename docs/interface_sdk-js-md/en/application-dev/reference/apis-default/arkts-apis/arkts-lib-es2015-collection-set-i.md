@@ -1,8 +1,6 @@
 # Set
 
-**Since:** -1
-
-<!--Device-unnamed-interface Set--><!--Device-unnamed-interface Set-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,29 +15,25 @@ add(value: T): this
 
 Appends a new element with a specified value to the end of the Set.
 
-**Since:** -1
-
-<!--Device-Set-add(value: T): this--><!--Device-Set-add(value: T): this-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | T | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## clear
 
 ```TypeScript
 clear(): void
 ```
 
-**Since:** -1
-
-<!--Device-Set-clear(): void--><!--Device-Set-clear(): void-End-->
+**ArkTS mode:** 
 
 ## delete
 
@@ -49,20 +43,18 @@ delete(value: T): boolean
 
 Removes a specified value from the Set.
 
-**Since:** -1
-
-<!--Device-Set-delete(value: T): boolean--><!--Device-Set-delete(value: T): boolean-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | T | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## forEach
 
 ```TypeScript
@@ -71,16 +63,14 @@ forEach(callbackfn: (value: T, value2: T, set: Set<T>) => void, thisArg?: any): 
 
 Executes a provided function once per each value in the Set object, in insertion order.
 
-**Since:** -1
-
-<!--Device-Set-forEach(callbackfn: (value: T, value2: T, set: Set<T>) => void, thisArg?: any): void--><!--Device-Set-forEach(callbackfn: (value: T, value2: T, set: Set<T>) => void, thisArg?: any): void-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (value: T, value2: T, set: Set&lt;T&gt;) =&gt; void | Yes |  |
-| thisArg | any | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (value: T, value2: T, set: Set & lt;T & gt;) = & gt; void | Yes |
+| thisArg | any | No |
 
 ## has
 
@@ -88,20 +78,18 @@ Executes a provided function once per each value in the Set object, in insertion
 has(value: T): boolean
 ```
 
-**Since:** -1
-
-<!--Device-Set-has(value: T): boolean--><!--Device-Set-has(value: T): boolean-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | T | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | T | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## size
 
 ```TypeScript
@@ -110,7 +98,4 @@ readonly size: number
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-Set-readonly size: number--><!--Device-Set-readonly size: number-End-->
-
+**ArkTS mode:** 

@@ -8,11 +8,11 @@ Ability组件类型。
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [AbilityType](arkts-ability-bundlemanager-abilitytype-e.md)
-
-<!--Device-bundle-export enum AbilityType--><!--Device-bundle-export enum AbilityType-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -26,9 +26,9 @@ UNKNOWN = 0
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-AbilityType-UNKNOWN = 0--><!--Device-AbilityType-UNKNOWN = 0-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -40,11 +40,11 @@ PAGE = 1
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [PAGE](arkts-ability-bundlemanager-abilitytype-e.md#page)
-
-<!--Device-AbilityType-PAGE = 1--><!--Device-AbilityType-PAGE = 1-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -56,11 +56,11 @@ SERVICE = 2
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [SERVICE](arkts-ability-bundlemanager-abilitytype-e.md#service)
-
-<!--Device-AbilityType-SERVICE = 2--><!--Device-AbilityType-SERVICE = 2-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -72,11 +72,10 @@ DATA = 3
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [DATA](arkts-ability-bundlemanager-abilitytype-e.md#data)
 
-<!--Device-AbilityType-DATA = 3--><!--Device-AbilityType-DATA = 3-End-->
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework
-

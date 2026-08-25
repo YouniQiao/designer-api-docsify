@@ -2,9 +2,9 @@
 
 Provides the CPU device info
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-mindSporeLite-interface CpuDevice--><!--Device-mindSporeLite-interface CpuDevice-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -24,11 +24,11 @@ The precision mode
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-CpuDevice-precisionMode?: string--><!--Device-CpuDevice-precisionMode?: string-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -40,13 +40,13 @@ threadAffinityCoreList?: int[]
 
 The thread affinity core list
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-CpuDevice-threadAffinityCoreList?: int[]--><!--Device-CpuDevice-threadAffinityCoreList?: int[]-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -60,11 +60,11 @@ The thread affinity mode
 
 **Type:** [ThreadAffinityMode](arkts-mindsporelite-mindsporelite-threadaffinitymode-e.md)
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-CpuDevice-threadAffinityMode?: ThreadAffinityMode--><!--Device-CpuDevice-threadAffinityMode?: ThreadAffinityMode-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -76,13 +76,13 @@ threadNum?: int
 
 The thread num
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-CpuDevice-threadNum?: int--><!--Device-CpuDevice-threadNum?: int-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -97,4 +97,3 @@ context.cpu.threadAffinityMode = 0;
 context.cpu.precisionMode = 'preferred_fp16';
 context.cpu.threadAffinityCoreList = [0, 1, 2];
 ```
-

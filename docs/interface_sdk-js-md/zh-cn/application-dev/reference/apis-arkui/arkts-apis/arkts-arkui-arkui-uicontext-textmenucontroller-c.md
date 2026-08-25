@@ -7,7 +7,7 @@ TextMenuController用于控制文本选择菜单的行为，支持设置菜单�
 
 **起始版本：** 16
 
-<!--Device-unnamed-export class TextMenuController--><!--Device-unnamed-export class TextMenuController-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -57,19 +57,19 @@ static disableMenuItems(items: Array<TextMenuItemId>): void
 
 **起始版本：** 20
 
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextMenuController-static disableMenuItems(items: Array<TextMenuItemId>): void--><!--Device-TextMenuController-static disableMenuItems(items: Array<TextMenuItemId>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| items | Array&lt;TextMenuItemId&gt; | 是 | 禁用菜单项的列表。仅支持禁用系统服务菜单项（复制、剪切、全选、粘贴除外），禁用一级菜单项会同时禁用其所有二级菜单项，不支持直接禁用二级菜单项。 。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| items | Array & lt;TextMenuItemId & gt; | 是 |
 
 **示例**
 
@@ -150,19 +150,19 @@ static disableSystemServiceMenuItems(disable: boolean): void
 
 **起始版本：** 20
 
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextMenuController-static disableSystemServiceMenuItems(disable: boolean): void--><!--Device-TextMenuController-static disableSystemServiceMenuItems(disable: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| disable | boolean | 是 | 是否禁用系统服务菜单项。true表示禁用，false表示不禁用。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| disable | boolean | 是 |
 
 **示例**
 
@@ -219,19 +219,19 @@ setMenuOptions(options: TextMenuOptions): void
 
 **起始版本：** 16
 
+**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本16开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextMenuController-setMenuOptions(options: TextMenuOptions): void--><!--Device-TextMenuController-setMenuOptions(options: TextMenuOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [TextMenuOptions](arkts-arkui-textcommon-textmenuoptions-i.md) | 是 | 设置菜单选项，用于控制文本选择菜单的显示模式。 <br>默认值：{showMode: TextMenuShowMode.DEFAULT}。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [TextMenuOptions](arkts-arkui-textcommon-textmenuoptions-i.md) | 是 |
 
 **示例**
 
@@ -273,4 +273,3 @@ struct Index {
   }
 }
 ```
-

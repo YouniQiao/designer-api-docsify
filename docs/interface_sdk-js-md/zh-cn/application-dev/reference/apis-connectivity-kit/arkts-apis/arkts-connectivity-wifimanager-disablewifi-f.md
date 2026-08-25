@@ -14,22 +14,22 @@ function disableWifi(): void
 
 关闭WLAN。
 
-**起始版本：** 23
+**起始版本：** 20
+
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and (ohos.permission.MANAGE_WIFI_CONNECTION or ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION)
-
-<!--Device-wifiManager-function disableWifi(): void--><!--Device-wifiManager-function disableWifi(): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [2501000](../errorcode-wifi.md#2501000-sta内部异常) | Operation failed. |
-| [2501004](../errorcode-wifi.md#2501004-服务关闭失败) | Operation failed because the service is being opened. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [2501000](../errorcode-wifi.md#2501000-sta内部异常) |
+| [2501004](../errorcode-wifi.md#2501004-服务关闭失败) |
 
 **示例**
 
@@ -42,4 +42,3 @@ import { wifiManager } from '@kit.ConnectivityKit';
     console.error(`disableWifi failed. ${error.message}`);
   }
 ```
-

@@ -16,11 +16,11 @@ function usbFunctionsFromString(funcs: string): number
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 9
 
 **替代接口：** [usbFunctionsFromString](arkts-basicservices-usbmanager-usbfunctionsfromstring-f-sys.md)
-
-<!--Device-usb-function usbFunctionsFromString(funcs: string): number--><!--Device-usb-function usbFunctionsFromString(funcs: string): number-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -28,15 +28,15 @@ function usbFunctionsFromString(funcs: string): number
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| funcs | string | 是 | 字符串形式的功能列表。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| funcs | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 转化后的功能列表对应的数字掩码。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -44,4 +44,3 @@ function usbFunctionsFromString(funcs: string): number
 let funcs = "acm";
 let ret = usb.usbFunctionsFromString(funcs);
 ```
-

@@ -2,9 +2,9 @@
 
 Defines image source initialization options.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-image-interface SourceOptions--><!--Device-image-interface SourceOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -26,11 +26,10 @@ SVG resource limit level used when parsing and rendering an SVG image. The limit
 
 **Since:** 26.1.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
-<!--Device-SourceOptions-svgResourceLimitLevel?: SVGResourceLimitLevel--><!--Device-SourceOptions-svgResourceLimitLevel?: SVGResourceLimitLevel-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **System API:** This is a system API.
-

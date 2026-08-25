@@ -1,11 +1,11 @@
-# @ohos.net.statistics
+# @ohos.net.statistics(Traffic Management)
 
 The Traffic Management module provides the capability to obtain device network traffic data. This module supports querying packet traffic usage from multiple dimensions, for example:  
 - Obtaining the uplink/downlink traffic data of a specified NIC. - Obtaining the total traffic data of all NICs, facilitating the viewing of overall device network usage. - Obtaining the traffic data of a specified application based on the application UID, helping you monitor the network resource consumption of applications. - Obtaining traffic statistics for a specified socket, providing a data foundation for fine-grained network performance analysis. - Obtaining the historical traffic usage of an application within a specified time period, facilitating the analysis of long-term network usage trends of the application.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-unnamed-declare namespace statistics--><!--Device-unnamed-declare namespace statistics-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -19,86 +19,90 @@ import { statistics } from '@kit.NetworkKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getAllRxBytes](arkts-network-statistics-getallrxbytes-f.md) | Obtains the total downlink traffic (in bytes) of all NICs from the last startup to the time when this API is called. This API uses an asynchronous callback to return the result. |
-| [getAllRxBytes](arkts-network-statistics-getallrxbytes-f.md) | Obtains the total downlink traffic (in bytes) of all NICs from the last startup to the time when this API is called. This API uses a promise to return the result. |
-| [getAllTxBytes](arkts-network-statistics-getalltxbytes-f.md) | Obtains the total uplink traffic of all NICs (in bytes) from the last startup to the time when this API is called. This API uses an asynchronous callback to return the result. |
-| [getAllTxBytes](arkts-network-statistics-getalltxbytes-f.md) | Obtains the total uplink traffic (in bytes) of all NICs from the last startup to the time when this API is called. This API uses a promise to return the result. |
-| [getCellularRxBytes](arkts-network-statistics-getcellularrxbytes-f.md) | Obtains the total downlink traffic (in bytes) of the NIC corresponding to the currently connected cellular network from the last startup to the time when this API is called. This API uses an asynchronous callback to return the result. |
-| [getCellularRxBytes](arkts-network-statistics-getcellularrxbytes-f.md) | Obtains the total downlink traffic (in bytes) of the NIC corresponding to the currently connected cellular network from the last startup to the time when this API is called. This API uses a promise to return the result. |
-| [getCellularTxBytes](arkts-network-statistics-getcellulartxbytes-f.md) | Obtains the total uplink traffic (in bytes) of the NIC corresponding to the currently connected cellular network from the last startup to the time when this API is called. This API uses an asynchronous callback to return the result. |
-| [getCellularTxBytes](arkts-network-statistics-getcellulartxbytes-f.md) | Obtains the total uplink traffic (in bytes) of the NIC corresponding to the currently connected cellular network from the last startup to the time when this API is called. This API uses a promise to return the result. |
-| [getIfaceRxBytes](arkts-network-statistics-getifacerxbytes-f.md) | Obtains the total downlink traffic of the specified NIC from the last startup to the time when this API is called (in bytes). This API uses an asynchronous callback to return the result. |
-| [getIfaceRxBytes](arkts-network-statistics-getifacerxbytes-f.md) | Obtains the total downlink traffic (in bytes) of the specified NIC from the last startup to the time when this API is called. This API uses a promise to return the result. |
-| [getIfaceTxBytes](arkts-network-statistics-getifacetxbytes-f.md) | Obtains the total uplink traffic (in bytes) of the specified NIC from the last startup to the time when this API is called. This API uses an asynchronous callback to return the result. |
-| [getIfaceTxBytes](arkts-network-statistics-getifacetxbytes-f.md) | Obtains the total uplink traffic (in bytes) of the specified NIC from the last startup to the time when this API is called. This API uses a promise to return the result. |
-| [getSelfTrafficStats](arkts-network-statistics-getselftrafficstats-f.md) | Obtains the traffic statistics of the specified application on the specified network within the specified period. This API uses a promise to return the result. |
-| [getSockfdRxBytes](arkts-network-statistics-getsockfdrxbytes-f.md) | Obtains the downlink traffic (in bytes) of the specified socket. This API uses an asynchronous callback to return the result. |
-| [getSockfdRxBytes](arkts-network-statistics-getsockfdrxbytes-f.md) | Obtains the downlink traffic (in bytes) of the specified socket. This API uses a promise to return the result. |
-| [getSockfdTxBytes](arkts-network-statistics-getsockfdtxbytes-f.md) | Obtains the uplink traffic of the specified socket (in bytes). This API uses an asynchronous callback to return the result. |
-| [getSockfdTxBytes](arkts-network-statistics-getsockfdtxbytes-f.md) | Obtains the uplink traffic (in bytes) of the specified socket. This API uses a promise to return the result. |
-| [getUidRxBytes](arkts-network-statistics-getuidrxbytes-f.md) | Obtains the total downlink traffic (in bytes) of the specified application from the last startup to the time when this API is called. This API uses an asynchronous callback to return the result. |
-| [getUidRxBytes](arkts-network-statistics-getuidrxbytes-f.md) | Obtains the total downlink traffic (in bytes) of the specified application from the last startup to the time when this API is called. This API uses a promise to return the result. |
-| [getUidTxBytes](arkts-network-statistics-getuidtxbytes-f.md) | Obtains the total uplink traffic (in bytes) of the specified application from the last startup to the time when this API is called. This API uses an asynchronous callback to return the result. |
-| [getUidTxBytes](arkts-network-statistics-getuidtxbytes-f.md) | Obtains the total uplink traffic of the specified application from the last startup to the time when this API is called (in bytes). This API uses a promise to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getAllRxBytes(Traffic Management)](arkts-network-statistics-getallrxbytes-f.md) |
+| [getAllRxBytes(Traffic Management)](arkts-network-statistics-getallrxbytes-f.md) |
+| [getAllTxBytes(Traffic Management)](arkts-network-statistics-getalltxbytes-f.md) |
+| [getAllTxBytes(Traffic Management)](arkts-network-statistics-getalltxbytes-f.md) |
+| [getCellularRxBytes(Traffic Management)](arkts-network-statistics-getcellularrxbytes-f.md) |
+| [getCellularRxBytes(Traffic Management)](arkts-network-statistics-getcellularrxbytes-f.md) |
+| [getCellularTxBytes(Traffic Management)](arkts-network-statistics-getcellulartxbytes-f.md) |
+| [getCellularTxBytes(Traffic Management)](arkts-network-statistics-getcellulartxbytes-f.md) |
+| [getIfaceRxBytes(Traffic Management)](arkts-network-statistics-getifacerxbytes-f.md) |
+| [getIfaceRxBytes(Traffic Management)](arkts-network-statistics-getifacerxbytes-f.md) |
+| [getIfaceTxBytes(Traffic Management)](arkts-network-statistics-getifacetxbytes-f.md) |
+| [getIfaceTxBytes(Traffic Management)](arkts-network-statistics-getifacetxbytes-f.md) |
+| [getSelfTrafficStats(Traffic Management)](arkts-network-statistics-getselftrafficstats-f.md) |
+| [getSockfdRxBytes(Traffic Management)](arkts-network-statistics-getsockfdrxbytes-f.md) |
+| [getSockfdRxBytes(Traffic Management)](arkts-network-statistics-getsockfdrxbytes-f.md) |
+| [getSockfdTxBytes(Traffic Management)](arkts-network-statistics-getsockfdtxbytes-f.md) |
+| [getSockfdTxBytes(Traffic Management)](arkts-network-statistics-getsockfdtxbytes-f.md) |
+| [getUidRxBytes(Traffic Management)](arkts-network-statistics-getuidrxbytes-f.md) |
+| [getUidRxBytes(Traffic Management)](arkts-network-statistics-getuidrxbytes-f.md) |
+| [getUidTxBytes(Traffic Management)](arkts-network-statistics-getuidtxbytes-f.md) |
+| [getUidTxBytes(Traffic Management)](arkts-network-statistics-getuidtxbytes-f.md) |
 
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [getMonthTrafficStats](arkts-network-statistics-getmonthtrafficstats-f-sys.md) | Get this month traffic data of the cellular network. |
-| [getTrafficPlanInfo](arkts-network-statistics-gettrafficplaninfo-f-sys.md) | Get traffic plan info. |
-| [getTrafficStatsByIface](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md) | Obtains the historical data traffic of the specified NIC. This API uses an asynchronous callback to return the result. |
-| [getTrafficStatsByIface](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md) | Obtains the historical data traffic of the specified NIC. This API uses a promise to return the result.  \| Name \| Type \| Mandatory\| Description \| \| --------- \| ------------------------- \| ---- \| --------------------------------------------------- \| \| ifaceInfo \| [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) \| Yes \| NIC information. For details, see [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md).\| |
-| [getTrafficStatsByNetwork](arkts-network-statistics-gettrafficstatsbynetwork-f-sys.md) | Obtains the traffic statistics of all applications on the specified network within the specified period. This API uses a promise to return the result. |
-| [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md) | Obtains the historical data traffic of the specified application. This API uses an asynchronous callback to return the result. |
-| [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md) | Obtains the historical data traffic of the specified application. This API uses a promise to return the result. |
-| [getTrafficStatsByUidNetwork](arkts-network-statistics-gettrafficstatsbyuidnetwork-f-sys.md) | Obtains the traffic statistics of the specified application on the specified network within the specified period. This method uses a promise to return the result. |
-| [off_netStatsChange](arkts-network-statistics-offnetstatschange-f-sys.md) | Unsubscribes from traffic change events. This API uses an asynchronous callback to return the result. |
-| [offNetStatsChange](arkts-network-statistics-offnetstatschange-f-sys.md) | Unregister notifications of network traffic updates. |
-| [on_netStatsChange](arkts-network-statistics-onnetstatschange-f-sys.md) | Subscribes to traffic change events. This API uses an asynchronous callback to return the result. |
-| [onNetStatsChange](arkts-network-statistics-onnetstatschange-f-sys.md) | Register notifications of network traffic updates. |
-| [setCalibrationTraffic](arkts-network-statistics-setcalibrationtraffic-f-sys.md) | Sets traffic calibration data. You can use this API to set traffic data during traffic calibration. This API uses a promise to return the result. |
-| [setTrafficPlanInfo](arkts-network-statistics-settrafficplaninfo-f-sys.md) | Set traffic plan info. |
-| [updateIfacesStats](arkts-network-statistics-updateifacesstats-f-sys.md) | Updates network interface statistics data. |
-| [updateStatsData](arkts-network-statistics-updatestatsdata-f-sys.md) | Updates network statistics data. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getMonthTrafficStats(Traffic Management)](arkts-network-statistics-getmonthtrafficstats-f-sys.md) |
+| [getTrafficPlanInfo(Traffic Management)](arkts-network-statistics-gettrafficplaninfo-f-sys.md) |
+| [getTrafficStatsByIface(Traffic Management)](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md) |
+| [getTrafficStatsByIface(Traffic Management)](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md) | Obtains the historical data traffic of the specified NIC. This API uses a promise to return the result.  \| Name \| Type \| Mandatory\| Description \| \| --------- \| ------------------------- \| ---- \| --------------------------------------------------- \| \| ifaceInfo \| [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) \| Yes \| NIC information. For details, see [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md).\|
+| [getTrafficStatsByNetwork(Traffic Management)](arkts-network-statistics-gettrafficstatsbynetwork-f-sys.md) |
+| [getTrafficStatsByUid(Traffic Management)](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md) |
+| [getTrafficStatsByUid(Traffic Management)](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md) |
+| [getTrafficStatsByUidNetwork(Traffic Management)](arkts-network-statistics-gettrafficstatsbyuidnetwork-f-sys.md) |
+| [off(Traffic Management)](arkts-network-statistics-off-f-sys.md#offnetstatschange) |
+| [offNetStatsChange(Traffic Management)](arkts-network-statistics-offnetstatschange-f-sys.md) |
+| [on(Traffic Management)](arkts-network-statistics-on-f-sys.md#onnetstatschange) |
+| [onNetStatsChange(Traffic Management)](arkts-network-statistics-onnetstatschange-f-sys.md) |
+| [setCalibrationTraffic(Traffic Management)](arkts-network-statistics-setcalibrationtraffic-f-sys.md) |
+| [setTrafficPlanInfo(Traffic Management)](arkts-network-statistics-settrafficplaninfo-f-sys.md) |
+| [updateIfacesStats(Traffic Management)](arkts-network-statistics-updateifacesstats-f-sys.md) |
+| [updateStatsData(Traffic Management)](arkts-network-statistics-updatestatsdata-f-sys.md) |
 <!--DelEnd-->
+
+### Interfaces
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [NetStatsInfo(Traffic Management)](arkts-network-statistics-netstatsinfo-i.md) |
+| [NetworkInfo(Traffic Management)](arkts-network-statistics-networkinfo-i.md) |
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) | Defines the parameters for querying historical traffic of an NIC. |
-| [NetStatsChangeInfo](arkts-network-statistics-netstatschangeinfo-i-sys.md) | Defines the NIC status and usage of an application. |
-| [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) | Defines the historical traffic information. |
-| [NetStatsInfoSequenceItem](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md) | Parameters for an [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) with start time and end time. |
-| [NetworkInfo](arkts-network-statistics-networkinfo-i-sys.md) | Defines the network information. |
-| [UidInfo](arkts-network-statistics-uidinfo-i-sys.md) | Defines the parameters for querying historical traffic of an application. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [IfaceInfo(Traffic Management)](arkts-network-statistics-ifaceinfo-i-sys.md) |
+| [NetStatsChangeInfo(Traffic Management)](arkts-network-statistics-netstatschangeinfo-i-sys.md) |
+| [NetStatsInfoSequenceItem(Traffic Management)](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md) |
+| [UidInfo(Traffic Management)](arkts-network-statistics-uidinfo-i-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Enums(System API)
 
-| Name | Description |
-| --- | --- |
-| [TrafficPlanParam](arkts-network-statistics-trafficplanparam-e-sys.md) | Defines the fields related to the traffic plan. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [TrafficPlanParam(Traffic Management)](arkts-network-statistics-trafficplanparam-e-sys.md) |
 <!--DelEnd-->
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [NetBearType](arkts-network-statistics-netbeartype-t.md) | Defines the network type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [NetBearType(Traffic Management)](arkts-network-statistics-netbeartype-t.md) |
 
 <!--Del-->
 ### Types(System API)
 
-| Name | Description |
-| --- | --- |
-| [NetStatsInfoSequence](arkts-network-statistics-netstatsinfosequence-t-sys.md) | Array of [NetStatsInfoSequenceItem](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md). |
-| [UidNetStatsInfo](arkts-network-statistics-uidnetstatsinfo-t-sys.md) | [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) for every UID. Key is UID. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [NetStatsInfoSequence(Traffic Management)](arkts-network-statistics-netstatsinfosequence-t-sys.md) |
+| [UidNetStatsInfo(Traffic Management)](arkts-network-statistics-uidnetstatsinfo-t-sys.md) |
 <!--DelEnd-->
-

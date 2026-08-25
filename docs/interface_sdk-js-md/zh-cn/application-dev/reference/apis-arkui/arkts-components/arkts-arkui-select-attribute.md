@@ -6,7 +6,7 @@
 
 **起始版本：** 8
 
-<!--Device-unnamed-declare class SelectAttribute--><!--Device-unnamed-declare class SelectAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,19 +28,19 @@ arrowModifier(modifier: Optional<SymbolGlyphModifier>)
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-arrowModifier(modifier: Optional<SymbolGlyphModifier>): SelectAttribute--><!--Device-SelectAttribute-arrowModifier(modifier: Optional<SymbolGlyphModifier>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| modifier | Optional&lt;SymbolGlyphModifier&gt; | 是 | 在Select组件上，定制Select按钮下拉箭头图标样式的方法。 <br/> 当modifier的值为undefined时， 不自定义下拉箭头图标样式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| modifier | Optional & lt;SymbolGlyphModifier & gt; | 是 |
 
 ## arrowPosition
 
@@ -52,19 +52,19 @@ arrowPosition(value: ArrowPosition)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-arrowPosition(value: ArrowPosition): SelectAttribute--><!--Device-SelectAttribute-arrowPosition(value: ArrowPosition): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [ArrowPosition](arkts-arkui-arrowposition-e.md) | 是 | 下拉菜单项的文本与箭头之间的对齐方式。<br/>默认值：ArrowPosition.END |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | [ArrowPosition](arkts-arkui-arrowposition-e.md) | 是 |
 
 ## arrowPosition
 
@@ -76,19 +76,19 @@ arrowPosition(position: Optional<ArrowPosition>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-arrowPosition(position: Optional<ArrowPosition>): SelectAttribute--><!--Device-SelectAttribute-arrowPosition(position: Optional<ArrowPosition>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| position | Optional&lt;[ArrowPosition](arkts-arkui-arrowposition-e.md)&gt; | 是 | 下拉菜单项的文本与箭头之间的对齐方式。<br/>当position的值为undefined时，默认值：ArrowPosition.END |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| position | Optional&lt;[ArrowPosition](arkts-arkui-arrowposition-e.md)&gt; | 是 |
 
 ## avoidance
 
@@ -100,19 +100,19 @@ avoidance(mode: AvoidanceMode)
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-avoidance(mode: AvoidanceMode): SelectAttribute--><!--Device-SelectAttribute-avoidance(mode: AvoidanceMode): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mode | [AvoidanceMode](arkts-arkui-avoidancemode-e.md) | 是 | 设置下拉菜单的避让模式。<br/>默认值：AvoidanceMode.COVER_TARGET |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mode | [AvoidanceMode](arkts-arkui-avoidancemode-e.md) | 是 |
 
 ## controlSize
 
@@ -124,19 +124,19 @@ controlSize(value: ControlSize)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-controlSize(value: ControlSize): SelectAttribute--><!--Device-SelectAttribute-controlSize(value: ControlSize): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ControlSize | 是 | Select组件的尺寸。<br/>默认值：ControlSize.NORMAL |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | [ControlSize](#controlsize) | 是 |
 
 ## controlSize
 
@@ -148,19 +148,19 @@ controlSize(size: Optional<ControlSize>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-controlSize(size: Optional<ControlSize>): SelectAttribute--><!--Device-SelectAttribute-controlSize(size: Optional<ControlSize>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| size | Optional&lt;ControlSize&gt; | 是 | Select组件的尺寸。<br/>当size的值为undefined时，默认值为ControlSize.NORMAL。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| size | Optional & lt;ControlSize & gt; | 是 |
 
 ## divider
 
@@ -172,19 +172,19 @@ divider(options: Optional<DividerOptions> | null)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-divider(options: Optional<DividerOptions> | null): SelectAttribute--><!--Device-SelectAttribute-divider(options: Optional<DividerOptions> | null): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | Optional&lt;DividerOptions&gt; \| null | 是 | 1.设置DividerOptions，则按设置的样式显示分割线。<br/>默认值：<br/>{<br/> strokeWidth: '1px' , <br/>color: '#33182431'<br/>}<br/>2.设置为null时，不显示分割线。<br/>3.strokeWidth设置过宽时，会覆盖文字。分割线会从每一个 Item底部开始，同时向上向下画分割线。<br/>4.startMargin和endMargin的默认值与不设置divider属性时的分割线样式保持一致。startMargin和endMargin的和与 optionWidth的值相等时，不显示分割线。 startMargin和endMargin的和超过optionWidth的值时，按照默认样式显示分割线。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | Optional & lt;DividerOptions & gt; \ | null | 是 |
 
 ## dividerStyle
 
@@ -196,19 +196,19 @@ dividerStyle(style: Optional<DividerStyleOptions>)
 
 **起始版本：** 19
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-dividerStyle(style: Optional<DividerStyleOptions>): SelectAttribute--><!--Device-SelectAttribute-dividerStyle(style: Optional<DividerStyleOptions>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| style | Optional&lt;DividerStyleOptions&gt; | 是 | 1.设置DividerStyleOptions，则按设置的样式显示分割线。<br/>默认值：<br/>{<br/>strokeWidth: '1px' , <br/>color: '#33182431'<br/>}<br/>2.设置为null或undefined时，展示默认分割线。<br/>3.当mode为FLOAT_ABOVE_MENU时， strokeWidth设置过宽时，会覆盖文字。分割线会从每一个Item底部开始，同时向上向下画分割线。当mode为EMBEDDED_IN_MENU时，分割线在Menu中展开，独立占用高度。<br/>4.startMargin和endMargin的默认值与不设置divider属性时的分割线样式保持一致。startMargin和endMargin的和与optionWidth的值相等时，不显示分割线。startMargin和 endMargin的和超过optionWidth的值时，按照默认样式显示分割线。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| style | Optional & lt;DividerStyleOptions & gt; | 是 |
 
 ## font
 
@@ -220,17 +220,17 @@ font(value: Font)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SelectAttribute-font(value: Font): SelectAttribute--><!--Device-SelectAttribute-font(value: Font): SelectAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Font | 是 | 下拉按钮本身的文本样式。<br/>API version 11及以前默认值：<br/>{<br/>size:  `\\$r('sys.float.ohos_id_text_size_button1')`,<br/>weight: FontWeight.Medium<br/>} <br/>API version 12以后，如果设置 controlSize的值为：controlSize.SMALL，size默认值是`\\$r('sys.float.ohos_id_text_size_button2')`，否则为 `\\$r('sys.float.ohos_id_text_size_button1')`。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | [Font](#font) | 是 |
 
 ## font
 
@@ -242,19 +242,19 @@ font(selectFont: Optional<Font>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-font(selectFont: Optional<Font>): SelectAttribute--><!--Device-SelectAttribute-font(selectFont: Optional<Font>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| selectFont | Optional&lt;Font&gt; | 是 | 下拉按钮本身的文本样式。<br/>如果设置controlSize的值为：controlSize.SMALL，size默认值是 `\\$r('sys.float.ohos_id_text_size_button2')`，否则为`\\$r('sys.float.ohos_id_text_size_button1')`。<br/>当selectFont的值为 undefined时，恢复为系统文本样式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| selectFont | Optional & lt;Font & gt; | 是 |
 
 ## fontColor
 
@@ -266,17 +266,17 @@ fontColor(value: ResourceColor)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SelectAttribute-fontColor(value: ResourceColor): SelectAttribute--><!--Device-SelectAttribute-fontColor(value: ResourceColor): SelectAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceColor | 是 | 下拉按钮本身的文本颜色。<br/>默认值：`\\$r('sys.color.ohos_id_color_text_primary')`混合 `\\$r('sys.color.ohos_id_alpha_content_primary')`的透明度。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
 
 ## fontColor
 
@@ -288,19 +288,19 @@ fontColor(resColor: Optional<ResourceColor>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-fontColor(resColor: Optional<ResourceColor>): SelectAttribute--><!--Device-SelectAttribute-fontColor(resColor: Optional<ResourceColor>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resColor | Optional&lt;ResourceColor&gt; | 是 | 下拉按钮本身的文本颜色。<br/>当resColor的值为undefined时，默认值： `\\$r('sys.color.ohos_id_color_text_primary')`混合`\\$r('sys.color.ohos_id_alpha_content_primary')`的透明度。<br/>当value的值 为undefined时，维持上次取值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| resColor | Optional & lt;ResourceColor & gt; | 是 |
 
 ## keyboardAvoidMode
 
@@ -312,19 +312,19 @@ keyboardAvoidMode(mode: Optional<MenuKeyboardAvoidMode>)
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-keyboardAvoidMode(mode: Optional<MenuKeyboardAvoidMode>): SelectAttribute--><!--Device-SelectAttribute-keyboardAvoidMode(mode: Optional<MenuKeyboardAvoidMode>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mode | Optional&lt;MenuKeyboardAvoidMode&gt; | 是 | 设置下拉菜单是否避让软键盘。取值为undefined时，按照MenuKeyboardAvoidMode.NONE处理，不避让软键盘。各枚举值的具体效果参见MenuKeyboardAvoidMode枚举说明。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mode | Optional & lt;MenuKeyboardAvoidMode & gt; | 是 |
 
 ## menuAlign
 
@@ -336,20 +336,20 @@ menuAlign(alignType: MenuAlignType, offset?: Offset)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-menuAlign(alignType: MenuAlignType, offset?: Offset): SelectAttribute--><!--Device-SelectAttribute-menuAlign(alignType: MenuAlignType, offset?: Offset): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| alignType | [MenuAlignType](arkts-arkui-menualigntype-e.md) | 是 | 对齐方式类型。<br/>默认值：MenuAlignType.START |
-| offset | Offset | 否 | 按照对齐类型对齐后，下拉菜单相对下拉按钮的偏移量。dx控制水平方向偏移，dy控制垂直方向偏移。<br/> 默认值：{dx: 0, dy: 0} |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [alignType](../arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | [MenuAlignType](arkts-arkui-menualigntype-e.md) | 是 |
+| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | 否 |
 
 ## menuAlign
 
@@ -361,20 +361,20 @@ menuAlign(alignType: Optional<MenuAlignType>, offset?: Offset)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-menuAlign(alignType: Optional<MenuAlignType>, offset?: Offset): SelectAttribute--><!--Device-SelectAttribute-menuAlign(alignType: Optional<MenuAlignType>, offset?: Offset): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| alignType | Optional&lt;[MenuAlignType](arkts-arkui-menualigntype-e.md)&gt; | 是 | 对齐方式类型。<br/>当alignType的值为undefined时，默认值：MenuAlignType.START |
-| offset | Offset | 否 | 按照对齐类型对齐后，下拉菜单相对下拉按钮的偏移量。<br/> 默认值：{dx: 0, dy: 0} |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [alignType](../arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | Optional&lt;[MenuAlignType](arkts-arkui-menualigntype-e.md)&gt; | 是 |
+| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | 否 |
 
 ## menuBackgroundBlurStyle
 
@@ -389,19 +389,19 @@ menuBackgroundBlurStyle(value: BlurStyle)
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-menuBackgroundBlurStyle(value: BlurStyle): SelectAttribute--><!--Device-SelectAttribute-menuBackgroundBlurStyle(value: BlurStyle): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | BlurStyle | 是 | 下拉菜单的背景模糊材质。<br/>默认值：BlurStyle.COMPONENT_ULTRA_THICK |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | [BlurStyle](arkts-arkui-blurstyle-e.md) | 是 |
 
 ## menuBackgroundBlurStyle
 
@@ -413,19 +413,19 @@ menuBackgroundBlurStyle(style: Optional<BlurStyle>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-menuBackgroundBlurStyle(style: Optional<BlurStyle>): SelectAttribute--><!--Device-SelectAttribute-menuBackgroundBlurStyle(style: Optional<BlurStyle>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| style | Optional&lt;BlurStyle&gt; | 是 | 下拉菜单的背景模糊材质。<br/>当style的值为undefined时，默认值：BlurStyle.COMPONENT_ULTRA_THICK |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| style | Optional & lt;BlurStyle & gt; | 是 |
 
 ## menuBackgroundBlurStyleOptions
 
@@ -437,19 +437,19 @@ menuBackgroundBlurStyleOptions(blurStyle: Optional<BackgroundBlurStyleOptions>)
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-menuBackgroundBlurStyleOptions(blurStyle: Optional<BackgroundBlurStyleOptions>): SelectAttribute--><!--Device-SelectAttribute-menuBackgroundBlurStyleOptions(blurStyle: Optional<BackgroundBlurStyleOptions>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| blurStyle | Optional&lt;BackgroundBlurStyleOptions&gt; | 是 | 设置Select组件的背景模糊效果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| blurStyle | Optional & lt;BackgroundBlurStyleOptions & gt; | 是 |
 
 ## menuBackgroundColor
 
@@ -464,19 +464,19 @@ menuBackgroundColor(value: ResourceColor)
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-menuBackgroundColor(value: ResourceColor): SelectAttribute--><!--Device-SelectAttribute-menuBackgroundColor(value: ResourceColor): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceColor | 是 | 下拉菜单的背景色。<br/>默认值：<br/>API version 11之前，默认值为\\$r('sys.color.ohos_id_color_card_bg')。 <br/>API version 11及之后，默认值为Color.Transparent。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
 
 ## menuBackgroundColor
 
@@ -488,19 +488,19 @@ menuBackgroundColor(resColor: Optional<ResourceColor>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-menuBackgroundColor(resColor: Optional<ResourceColor>): SelectAttribute--><!--Device-SelectAttribute-menuBackgroundColor(resColor: Optional<ResourceColor>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resColor | Optional&lt;ResourceColor&gt; | 是 | 下拉菜单的背景色。<br/>当resColor的值为undefined时，默认值为Color.Transparent。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| resColor | Optional & lt;ResourceColor & gt; | 是 |
 
 ## menuBackgroundEffect
 
@@ -512,19 +512,19 @@ menuBackgroundEffect(effect: Optional<BackgroundEffectOptions>)
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-menuBackgroundEffect(effect: Optional<BackgroundEffectOptions>): SelectAttribute--><!--Device-SelectAttribute-menuBackgroundEffect(effect: Optional<BackgroundEffectOptions>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| effect | Optional&lt;BackgroundEffectOptions&gt; | 是 | 设置Select组件的背景属性，包括：模糊半径、亮度、饱和度和颜色。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| effect | Optional & lt;BackgroundEffectOptions & gt; | 是 |
 
 ## menuItemContentModifier
 
@@ -539,19 +539,19 @@ menuItemContentModifier(modifier: ContentModifier<MenuItemConfiguration>)
 
 **起始版本：** 12
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-menuItemContentModifier(modifier: ContentModifier<MenuItemConfiguration>): SelectAttribute--><!--Device-SelectAttribute-menuItemContentModifier(modifier: ContentModifier<MenuItemConfiguration>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| modifier | ContentModifier&lt;[MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)&gt; | 是 | 在Select组件上，定制下拉菜单项内容区的方法。<br/>modifier：内容修改器，开发者需要自定义 class实现ContentModifier接口。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| modifier | ContentModifier&lt;[MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)&gt; | 是 |
 
 ## menuItemContentModifier
 
@@ -566,19 +566,19 @@ menuItemContentModifier(modifier: Optional<ContentModifier<MenuItemConfiguration
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-menuItemContentModifier(modifier: Optional<ContentModifier<MenuItemConfiguration>>): SelectAttribute--><!--Device-SelectAttribute-menuItemContentModifier(modifier: Optional<ContentModifier<MenuItemConfiguration>>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| modifier | Optional&lt;ContentModifier&lt;[MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)&gt;&gt; | 是 | 在Select组件上，定制下拉菜单项内容区的方法。<br/>modifier：内容修改 器，开发者需要自定义class实现ContentModifier接口。<br/>当modifier的值为undefined或null时，不使用内容修改器。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| modifier | Optional&lt;ContentModifier&lt;[MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)&gt;&gt; | 是 |
 
 ## menuOutline
 
@@ -590,19 +590,19 @@ menuOutline(outline: MenuOutlineOptions)
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-menuOutline(outline: MenuOutlineOptions): SelectAttribute--><!--Device-SelectAttribute-menuOutline(outline: MenuOutlineOptions): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| outline | [MenuOutlineOptions](arkts-arkui-menuoutlineoptions-i.md) | 是 | 下拉菜单框的外描边样式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| outline | [MenuOutlineOptions](arkts-arkui-menuoutlineoptions-i.md) | 是 |
 
 ## minKeyboardAvoidDistance
 
@@ -614,19 +614,19 @@ minKeyboardAvoidDistance(distance: Optional<LengthMetrics>)
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-minKeyboardAvoidDistance(distance: Optional<LengthMetrics>): SelectAttribute--><!--Device-SelectAttribute-minKeyboardAvoidDistance(distance: Optional<LengthMetrics>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| distance | Optional&lt;LengthMetrics&gt; | 是 | 设置下拉菜单避让软键盘的最小距离。设置为负数、undefined时，按照8vp处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| distance | Optional & lt;LengthMetrics & gt; | 是 |
 
 ## onSelect
 
@@ -638,17 +638,17 @@ onSelect(callback: (index: number, value: string) => void)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SelectAttribute-onSelect(callback: (index: number, value: string) => void): SelectAttribute--><!--Device-SelectAttribute-onSelect(callback: (index: number, value: string) => void): SelectAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (index: number, value: string) =&gt; void | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (index: number, value: string) = & gt; void | 是 |
 
 ## onSelect
 
@@ -660,19 +660,19 @@ onSelect(callback: Optional<OnSelectCallback>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-onSelect(callback: Optional<OnSelectCallback>): SelectAttribute--><!--Device-SelectAttribute-onSelect(callback: Optional<OnSelectCallback>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | Optional&lt;[OnSelectCallback](arkts-arkui-onselectcallback-t.md)&gt; | 是 | 下拉菜单选中某一项的回调。<br/>当callback的值为undefined时，不使用回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | Optional&lt;[OnSelectCallback](arkts-arkui-onselectcallback-t.md)&gt; | 是 |
 
 ## optionBgColor
 
@@ -684,17 +684,17 @@ optionBgColor(value: ResourceColor)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SelectAttribute-optionBgColor(value: ResourceColor): SelectAttribute--><!--Device-SelectAttribute-optionBgColor(value: ResourceColor): SelectAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceColor | 是 | 下拉菜单项的背景色。<br/>默认值：<br/>API version 11之前，默认值为Color.White。<br/>API version 11及之后，默认 值为Color.Transparent。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
 
 ## optionBgColor
 
@@ -706,19 +706,19 @@ optionBgColor(resColor: Optional<ResourceColor>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-optionBgColor(resColor: Optional<ResourceColor>): SelectAttribute--><!--Device-SelectAttribute-optionBgColor(resColor: Optional<ResourceColor>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resColor | Optional&lt;ResourceColor&gt; | 是 | 下拉菜单项的背景色。<br/>当resColor的值为undefined时，下拉菜单项的背景色为Color.White。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| resColor | Optional & lt;ResourceColor & gt; | 是 |
 
 ## optionFont
 
@@ -730,17 +730,17 @@ optionFont(value: Font)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SelectAttribute-optionFont(value: Font): SelectAttribute--><!--Device-SelectAttribute-optionFont(value: Font): SelectAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Font | 是 | 下拉菜单项的文本样式。<br/>默认值：<br/>{<br/>size: \\$r('sys.float.ohos_id_text_size_body1'),<br/>weight:  FontWeight.Regular<br/>} |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | [Font](#font) | 是 |
 
 ## optionFont
 
@@ -752,19 +752,19 @@ optionFont(selectFont: Optional<Font>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-optionFont(selectFont: Optional<Font>): SelectAttribute--><!--Device-SelectAttribute-optionFont(selectFont: Optional<Font>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| selectFont | Optional&lt;Font&gt; | 是 | 下拉菜单项的文本样式。<br/>当selectFont的值为undefined时，默认值：<br/>{<br/>size: \\$r('sys.float.ohos_id_text_size_body1'),<br/>weight: FontWeight.Regular<br/>} |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| selectFont | Optional & lt;Font & gt; | 是 |
 
 ## optionFontColor
 
@@ -776,17 +776,17 @@ optionFontColor(value: ResourceColor)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SelectAttribute-optionFontColor(value: ResourceColor): SelectAttribute--><!--Device-SelectAttribute-optionFontColor(value: ResourceColor): SelectAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceColor | 是 | 下拉菜单项的文本颜色。<br/>默认值：\\$r('sys.color.ohos_id_color_text_primary') |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
 
 ## optionFontColor
 
@@ -798,19 +798,19 @@ optionFontColor(resColor: Optional<ResourceColor>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-optionFontColor(resColor: Optional<ResourceColor>): SelectAttribute--><!--Device-SelectAttribute-optionFontColor(resColor: Optional<ResourceColor>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resColor | Optional&lt;ResourceColor&gt; | 是 | 下拉菜单项的文本颜色。<br/>当resColor的值为undefined时，默认值：\\$r('sys.color.ohos_id_color_text_primary') |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| resColor | Optional & lt;ResourceColor & gt; | 是 |
 
 ## optionHeight
 
@@ -822,19 +822,19 @@ optionHeight(value: Dimension)
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-optionHeight(value: Dimension): SelectAttribute--><!--Device-SelectAttribute-optionHeight(value: Dimension): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Dimension | 是 | 下拉菜单显示的最大高度。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 是 |
 
 ## optionHeight
 
@@ -846,19 +846,19 @@ optionHeight(height: Optional<Dimension>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-optionHeight(height: Optional<Dimension>): SelectAttribute--><!--Device-SelectAttribute-optionHeight(height: Optional<Dimension>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| height | Optional&lt;Dimension&gt; | 是 | 下拉菜单显示的最大高度。<br/>当height的值为undefined时，属性不生效，下拉菜单最大高度设为默认值，即下拉菜单最大高度默认值为屏幕可用 高度的80%。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| height | Optional & lt;Dimension & gt; | 是 |
 
 ## optionTextModifier
 
@@ -873,19 +873,19 @@ optionTextModifier(modifier: Optional<TextModifier>)
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-optionTextModifier(modifier: Optional<TextModifier>): SelectAttribute--><!--Device-SelectAttribute-optionTextModifier(modifier: Optional<TextModifier>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| modifier | Optional&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | 是 | 在Select组件上，定制Select下拉菜单未选中项文本样式的方法。 <br/> 当modifier的值为undefined时，不自定义下拉菜单 未选中项的文本样式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| modifier | Optional&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | 是 |
 
 ## optionWidth
 
@@ -897,19 +897,19 @@ optionWidth(value: Dimension | OptionWidthMode )
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-optionWidth(value: Dimension | OptionWidthMode ): SelectAttribute--><!--Device-SelectAttribute-optionWidth(value: Dimension | OptionWidthMode ): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Dimension \| OptionWidthMode | 是 | 下拉菜单项的宽度。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | Dimension \| [OptionWidthMode](../arkts-apis/arkts-arkui-optionwidthmode-e.md) | 是 |
 
 ## optionWidth
 
@@ -921,19 +921,19 @@ optionWidth(width: Optional<Dimension | OptionWidthMode> )
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-optionWidth(width: Optional<Dimension | OptionWidthMode> ): SelectAttribute--><!--Device-SelectAttribute-optionWidth(width: Optional<Dimension | OptionWidthMode> ): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| width | Optional&lt;Dimension \| OptionWidthMode&gt; | 是 | 下拉菜单项的宽度。<br/>当width的值为undefined时，属性无效，菜单项宽度设为默认值，即2栅格。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| width | Optional & lt;Dimension \ | OptionWidthMode & gt; | 是 |
 
 ## selected
 
@@ -945,17 +945,17 @@ selected(value: number | Resource)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SelectAttribute-selected(value: number | Resource): SelectAttribute--><!--Device-SelectAttribute-selected(value: number | Resource): SelectAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number \| Resource | 是 | 下拉菜单初始选项的索引，索引值从0开始。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
 
 ## selected
 
@@ -967,19 +967,19 @@ selected(numCount: Optional<number | Resource>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-selected(numCount: Optional<number | Resource>): SelectAttribute--><!--Device-SelectAttribute-selected(numCount: Optional<number | Resource>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| numCount | Optional&lt;number \| Resource&gt; | 是 | 下拉菜单初始选项的索引，索引值从0开始。<br/>当numCount的值为undefined或null时，选中第一项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| numCount | Optional & lt;number \ | Resource & gt; | 是 |
 
 ## selectedOptionBgColor
 
@@ -991,17 +991,17 @@ selectedOptionBgColor(value: ResourceColor)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SelectAttribute-selectedOptionBgColor(value: ResourceColor): SelectAttribute--><!--Device-SelectAttribute-selectedOptionBgColor(value: ResourceColor): SelectAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceColor | 是 | 下拉菜单选中项的背景色。<br/>默认值：`\\$r('sys.color.ohos_id_color_component_activated')`混合 `\\$r('sys.color.ohos_id_alpha_highlight_bg')`的透明度。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
 
 ## selectedOptionBgColor
 
@@ -1013,19 +1013,19 @@ selectedOptionBgColor(resColor: Optional<ResourceColor>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-selectedOptionBgColor(resColor: Optional<ResourceColor>): SelectAttribute--><!--Device-SelectAttribute-selectedOptionBgColor(resColor: Optional<ResourceColor>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resColor | Optional&lt;ResourceColor&gt; | 是 | 下拉菜单选中项的背景色。<br/>当resColor的值为undefined时，默认值： `\\$r('sys.color.ohos_id_color_component_activated')`混合`\\$r('sys.color.ohos_id_alpha_highlight_bg')`的透明度。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| resColor | Optional & lt;ResourceColor & gt; | 是 |
 
 ## selectedOptionFont
 
@@ -1037,17 +1037,17 @@ selectedOptionFont(value: Font)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SelectAttribute-selectedOptionFont(value: Font): SelectAttribute--><!--Device-SelectAttribute-selectedOptionFont(value: Font): SelectAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Font | 是 | 下拉菜单选中项的文本样式。<br/>默认值：<br/>{<br/>size: \\$r('sys.float.ohos_id_text_size_body1'),<br/>weight:  FontWeight.Regular<br/>} |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | [Font](#font) | 是 |
 
 ## selectedOptionFont
 
@@ -1059,19 +1059,19 @@ selectedOptionFont(selectFont: Optional<Font>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-selectedOptionFont(selectFont: Optional<Font>): SelectAttribute--><!--Device-SelectAttribute-selectedOptionFont(selectFont: Optional<Font>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| selectFont | Optional&lt;Font&gt; | 是 | 下拉菜单选中项的文本样式。<br/>当selectFont的值为undefined时，默认值：<br/>{<br/>size: \\$r('sys.float.ohos_id_text_size_body1'),<br/>weight: FontWeight.Regular<br/>} |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| selectFont | Optional & lt;Font & gt; | 是 |
 
 ## selectedOptionFontColor
 
@@ -1083,17 +1083,17 @@ selectedOptionFontColor(value: ResourceColor)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SelectAttribute-selectedOptionFontColor(value: ResourceColor): SelectAttribute--><!--Device-SelectAttribute-selectedOptionFontColor(value: ResourceColor): SelectAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceColor | 是 | 下拉菜单选中项的文本颜色。<br/>默认值：\\$r('sys.color.ohos_id_color_text_primary_activated') |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
 
 ## selectedOptionFontColor
 
@@ -1105,19 +1105,19 @@ selectedOptionFontColor(resColor: Optional<ResourceColor>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-selectedOptionFontColor(resColor: Optional<ResourceColor>): SelectAttribute--><!--Device-SelectAttribute-selectedOptionFontColor(resColor: Optional<ResourceColor>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resColor | Optional&lt;ResourceColor&gt; | 是 | 下拉菜单选中项的文本颜色。<br/>当resColor的值为undefined时，默认值为\\$r('sys.color.ohos_id_color_text_primary_activated')。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| resColor | Optional & lt;ResourceColor & gt; | 是 |
 
 ## selectedOptionTextModifier
 
@@ -1132,19 +1132,19 @@ selectedOptionTextModifier(modifier: Optional<TextModifier>)
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-selectedOptionTextModifier(modifier: Optional<TextModifier>): SelectAttribute--><!--Device-SelectAttribute-selectedOptionTextModifier(modifier: Optional<TextModifier>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| modifier | Optional&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | 是 | 设置下拉菜单项选中项的文本样式。<br/>开发者可以根据需要管理和维护文本的样式进行设置。 <br/> 当modifier的值为 undefined时，不自定义下拉菜单项选中项的文本样式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| modifier | Optional&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | 是 |
 
 ## showDefaultSelectedIcon
 
@@ -1156,19 +1156,19 @@ showDefaultSelectedIcon(show: boolean)
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-showDefaultSelectedIcon(show: boolean): SelectAttribute--><!--Device-SelectAttribute-showDefaultSelectedIcon(show: boolean): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| show | boolean | 是 | 是否显示默认选定的图标。<br/>true：显示默认选择的图标；false：不显示默认选择的图标，通过突出显示背景色来表示选中。<br/>默认值：false<br/>当show为 true时，若设置了selectedOptionBgColor选中项的背景色时，则同时显示选中项的背景色和默认选定的图标；若未通过selectedOptionBgColor设置选中项的背景色时，不突出显示背景色，只显示默认 选定的图标。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| show | boolean | 是 |
 
 ## showInSubWindow
 
@@ -1180,19 +1180,19 @@ showInSubWindow(showInSubWindow: Optional<boolean>)
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-showInSubWindow(showInSubWindow: Optional<boolean>): SelectAttribute--><!--Device-SelectAttribute-showInSubWindow(showInSubWindow: Optional<boolean>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| showInSubWindow | Optional&lt;boolean&gt; | 是 | 设置下拉菜单是否显示在子窗中。<br>true代表下拉菜单显示在子窗中。<br>false代表下拉菜单不显示在子窗中。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [showInSubWindow](#showinsubwindow) | Optional & lt;boolean & gt; | 是 |
 
 ## space
 
@@ -1204,19 +1204,19 @@ space(value: Length)
 
 **起始版本：** 10
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-space(value: Length): SelectAttribute--><!--Device-SelectAttribute-space(value: Length): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Length | 是 | 下拉菜单项的文本与箭头的间距。<br/>默认值：8<br/>**说明：** 设置string类型时，不支持百分比。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
 
 ## space
 
@@ -1228,19 +1228,19 @@ space(spaceLength: Optional<Length>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-space(spaceLength: Optional<Length>): SelectAttribute--><!--Device-SelectAttribute-space(spaceLength: Optional<Length>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| spaceLength | Optional&lt;Length&gt; | 是 | 下拉菜单项的文本与箭头之间的间距。<br/>当spaceLength的值为undefined时，默认值：8 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| spaceLength | Optional & lt;Length & gt; | 是 |
 
 ## textModifier
 
@@ -1255,19 +1255,19 @@ textModifier(modifier: Optional<TextModifier>)
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-textModifier(modifier: Optional<TextModifier>): SelectAttribute--><!--Device-SelectAttribute-textModifier(modifier: Optional<TextModifier>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| modifier | Optional&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | 是 | 在Select组件上，定制按钮文本样式的方法。 <br/> 当modifier的值为undefined时，不自定义文本样式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| modifier | Optional&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | 是 |
 
 ## value
 
@@ -1279,17 +1279,17 @@ value(value: ResourceStr)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-SelectAttribute-value(value: ResourceStr): SelectAttribute--><!--Device-SelectAttribute-value(value: ResourceStr): SelectAttribute-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | ResourceStr | 是 | 下拉按钮本身的文本内容。<br/>**说明：** 文本长度大于列宽时，文本被截断。<br>**起始版本：** 11 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 |
 
 ## value
 
@@ -1301,17 +1301,16 @@ value(resStr: Optional<ResourceStr>)
 
 **起始版本：** 18
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SelectAttribute-value(resStr: Optional<ResourceStr>): SelectAttribute--><!--Device-SelectAttribute-value(resStr: Optional<ResourceStr>): SelectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resStr | Optional&lt;ResourceStr&gt; | 是 | 下拉按钮本身的文本内容。<br/>当resStr的值为undefined时维持上次取值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| resStr | Optional & lt;ResourceStr & gt; | 是 |

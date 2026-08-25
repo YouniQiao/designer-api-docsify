@@ -2,37 +2,43 @@
 
 用于定义节点的图层掩码。@interface LayerMask
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export interface LayerMask--><!--Device-unnamed-export interface LayerMask-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## getEnabled
 
+ArkTS-Dyn:
+```TypeScript
+getEnabled(index: number): boolean
+```
+
+ArkTS-Sta:
 ```TypeScript
 getEnabled(index: int): boolean
 ```
 
 获取指定图层下标图层掩码的使能状态。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-LayerMask-getEnabled(index: int): boolean--><!--Device-LayerMask-getEnabled(index: int): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 要使能图层的下标，值域为大于等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 返回特定下标的图层是否使能。true表示使用图层掩码，false表示不使用。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -58,24 +64,30 @@ function layerMask(): void {
 
 ## setEnabled
 
+ArkTS-Dyn:
+```TypeScript
+setEnabled(index: number, enabled: boolean): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 setEnabled(index: int, enabled: boolean): void
 ```
 
 将特定下标的图层掩码使能。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-LayerMask-setEnabled(index: int, enabled: boolean): void--><!--Device-LayerMask-setEnabled(index: int, enabled: boolean): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 要使能图层的下标，值域为大于等于0的整数。 |
-| enabled | boolean | 是 | 要设置的使能状态。true表示使用图层掩码，false表示不使用。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| enabled | boolean | 是 |
 
 **示例**
 
@@ -98,4 +110,3 @@ function layerMask(): void {
   });
 }
 ```
-

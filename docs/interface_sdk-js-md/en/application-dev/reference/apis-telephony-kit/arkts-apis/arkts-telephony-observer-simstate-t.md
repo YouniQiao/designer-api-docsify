@@ -6,11 +6,10 @@ type SimState = sim.SimState
 
 SIM card state.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-observer-type SimState = sim.SimState--><!--Device-observer-type SimState = sim.SimState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Property type:** sim.SimState
-

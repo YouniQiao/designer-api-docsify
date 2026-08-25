@@ -6,14 +6,13 @@ type ChangedType = 'add' | 'remove'
 
 Enumerates hot swap events.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-inputDevice-type ChangedType = 'add' | 'remove'--><!--Device-inputDevice-type ChangedType = 'add' | 'remove'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
-| Type | Description |
-| --- | --- |
-| 'add' | Device insertion. |
-| 'remove' | Device removal. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'add' |
+| 'remove' |

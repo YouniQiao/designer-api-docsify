@@ -6,7 +6,7 @@ TCPSocket连接的其他属性。继承自[ExtraOptionsBase](arkts-network-socke
 
 **起始版本：** 7
 
-<!--Device-socket-export interface TCPExtraOptions--><!--Device-socket-export interface TCPExtraOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -28,7 +28,7 @@ keepAlive?: boolean
 
 **起始版本：** 7
 
-<!--Device-TCPExtraOptions-keepAlive?: boolean--><!--Device-TCPExtraOptions-keepAlive?: boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -44,25 +44,25 @@ OOBInline?: boolean
 
 **起始版本：** 7
 
-<!--Device-TCPExtraOptions-OOBInline?: boolean--><!--Device-TCPExtraOptions-OOBInline?: boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## socketLinger
 
 ```TypeScript
-socketLinger?: {on: boolean, linger: int}
+socketLinger?: {on: boolean, linger: number}
 ```
 
 socket是否继续逗留。  
 - on：是否逗留（true：逗留；false：不逗留）。 - linger：逗留时长，单位毫秒（ms），取值范围为0~65535。  
 当入参on设置为true时，才需要设置。
 
-**类型：** {on: boolean, linger: int}
+**类型：** {on: boolean, linger: number}
 
 **起始版本：** 7
 
-<!--Device-TCPExtraOptions-socketLinger?: {on: boolean, linger: int}--><!--Device-TCPExtraOptions-socketLinger?: {on: boolean, linger: int}-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -78,9 +78,9 @@ tcpFastOpen?: boolean
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
-<!--Device-TCPExtraOptions-tcpFastOpen?: boolean--><!--Device-TCPExtraOptions-tcpFastOpen?: boolean-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -96,7 +96,6 @@ TCPSocket连接是否无时延。默认为false。true：无时延；false：有
 
 **起始版本：** 7
 
-<!--Device-TCPExtraOptions-TCPNoDelay?: boolean--><!--Device-TCPExtraOptions-TCPNoDelay?: boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
-

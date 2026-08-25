@@ -21,6 +21,8 @@ function getDragPreview(): DragPreview
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **废弃版本：** 18
 
 **替代接口：** getDragPreview
@@ -29,13 +31,10 @@ function getDragPreview(): DragPreview
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-dragController-function getDragPreview(): DragPreview--><!--Device-dragController-function getDragPreview(): DragPreview-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [DragPreview](arkts-arkui-dragcontroller-dragpreview-c.md) | 一个代表拖拽背板的对象，提供背板样式设置的接口，在OnDrop和OnDragEnd回调中使用不生效。 |
-
+| 类型 |
+| --- |
+| [DragPreview](arkts-arkui-dragcontroller-dragpreview-c.md) |

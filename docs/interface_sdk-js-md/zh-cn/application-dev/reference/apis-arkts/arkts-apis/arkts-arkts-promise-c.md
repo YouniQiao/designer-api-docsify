@@ -6,9 +6,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export class Promise--><!--Device-unnamed-export class Promise-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,25 +25,23 @@ static all<U>(promises: FixedArray<PromiseLike<U> | U | undefined>): Promise<Arr
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Promise-static all<U>(promises: FixedArray<PromiseLike<U> | U | undefined>): Promise<Array<Awaited<U>>>--><!--Device-Promise-static all<U>(promises: FixedArray<PromiseLike<U> | U | undefined>): Promise<Array<Awaited<U>>>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| promises | FixedArray&lt;PromiseLike&lt;U&gt; \| U \| undefined&gt; | 是 | 要等待的Promise数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| promises | FixedArray & lt;PromiseLike & lt;U & gt; \ | U \| undefined & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;Awaited&lt;U&gt;&gt;&gt; | 用于返回Array&lt;Awaited<U>&gt;的Promise。 |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;Awaited & lt;U & gt; & gt; & gt; |
 
 ## all
 
@@ -57,25 +53,23 @@ static all<U>(promises: Iterable<PromiseLike<U> | U>): Promise<Array<Awaited<U>>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Promise-static all<U>(promises: Iterable<PromiseLike<U> | U>): Promise<Array<Awaited<U>>>--><!--Device-Promise-static all<U>(promises: Iterable<PromiseLike<U> | U>): Promise<Array<Awaited<U>>>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| promises | Iterable&lt;PromiseLike&lt;U&gt; \| U&gt; | 是 | 要等待的Promise可迭代对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| promises | Iterable & lt;PromiseLike & lt;U & gt; \ | U & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;Awaited&lt;U&gt;&gt;&gt; | 用于返回Array&lt;Awaited<U>&gt;的Promise。 |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;Awaited & lt;U & gt; & gt; & gt; |
 
 ## allSettled
 
@@ -88,25 +82,23 @@ static allSettled<U>(promises: FixedArray<PromiseLike<U> | U | undefined>):
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Promise-static allSettled<U>(promises: FixedArray<PromiseLike<U> | U | undefined>):        Promise<PromiseSettledResult<Awaited<U>>[]>--><!--Device-Promise-static allSettled<U>(promises: FixedArray<PromiseLike<U> | U | undefined>):        Promise<PromiseSettledResult<Awaited<U>>[]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| promises | FixedArray&lt;PromiseLike&lt;U&gt; \| U \| undefined&gt; | 是 | 要等待的Promise数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| promises | FixedArray & lt;PromiseLike & lt;U & gt; \ | U \| undefined & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[PromiseSettledResult](arkts-arkts-promisesettledresult-t.md)&lt;Awaited&lt;U&gt;&gt;[]&gt; | 用于返回 PromiseSettledResult&lt;Awaited<U>&gt;[]的Promise。 |
+| 类型 |
+| --- |
+| Promise&lt;[PromiseSettledResult](arkts-arkts-promisesettledresult-t.md)&lt;Awaited&lt;U&gt;&gt;[]&gt; |
 
 ## allSettled
 
@@ -118,25 +110,23 @@ static allSettled<U>(promises: Iterable<PromiseLike<U> | U>): Promise<PromiseSet
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Promise-static allSettled<U>(promises: Iterable<PromiseLike<U> | U>): Promise<PromiseSettledResult<Awaited<U>>[]>--><!--Device-Promise-static allSettled<U>(promises: Iterable<PromiseLike<U> | U>): Promise<PromiseSettledResult<Awaited<U>>[]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| promises | Iterable&lt;PromiseLike&lt;U&gt; \| U&gt; | 是 | 要等待的Promise可迭代对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| promises | Iterable & lt;PromiseLike & lt;U & gt; \ | U & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[PromiseSettledResult](arkts-arkts-promisesettledresult-t.md)&lt;Awaited&lt;U&gt;&gt;[]&gt; | 用于返回 PromiseSettledResult&lt;Awaited<U>&gt;[]的Promise。 |
+| 类型 |
+| --- |
+| Promise&lt;[PromiseSettledResult](arkts-arkts-promisesettledresult-t.md)&lt;Awaited&lt;U&gt;&gt;[]&gt; |
 
 ## any
 
@@ -148,25 +138,23 @@ static any<U>(promises: FixedArray<PromiseLike<U> | U | undefined>): Promise<Awa
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Promise-static any<U>(promises: FixedArray<PromiseLike<U> | U | undefined>): Promise<Awaited<U>>--><!--Device-Promise-static any<U>(promises: FixedArray<PromiseLike<U> | U | undefined>): Promise<Awaited<U>>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| promises | FixedArray&lt;PromiseLike&lt;U&gt; \| U \| undefined&gt; | 是 | 要等待的Promise数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| promises | FixedArray & lt;PromiseLike & lt;U & gt; \ | U \| undefined & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Awaited&lt;U&gt;&gt; | 用于返回Awaited&lt;U&gt;的Promise。 |
+| 类型 |
+| --- |
+| Promise & lt;Awaited & lt;U & gt; & gt; |
 
 ## any
 
@@ -178,25 +166,23 @@ static any<U>(promises: Iterable<PromiseLike<U> | U>): Promise<Awaited<U>>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Promise-static any<U>(promises: Iterable<PromiseLike<U> | U>): Promise<Awaited<U>>--><!--Device-Promise-static any<U>(promises: Iterable<PromiseLike<U> | U>): Promise<Awaited<U>>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| promises | Iterable&lt;PromiseLike&lt;U&gt; \| U&gt; | 是 | 要等待的Promise可迭代对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| promises | Iterable & lt;PromiseLike & lt;U & gt; \ | U & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Awaited&lt;U&gt;&gt; | 用于返回Awaited&lt;U&gt;的Promise。 |
+| 类型 |
+| --- |
+| Promise & lt;Awaited & lt;U & gt; & gt; |
 
 ## catch
 
@@ -208,25 +194,23 @@ catch<U = never>(onRejected: () => PromiseLike<U> | U): Promise<Awaited<T | U>>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Promise-catch<U = never>(onRejected: () => PromiseLike<U> | U): Promise<Awaited<T | U>>--><!--Device-Promise-catch<U = never>(onRejected: () => PromiseLike<U> | U): Promise<Awaited<T | U>>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| onRejected | () =&gt; PromiseLike&lt;U&gt; \| U | 是 | Promise拒绝时执行的回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| onRejected | () = & gt; PromiseLike & lt;U & gt; \ | U | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Awaited&lt;T \| U&gt;&gt; | 用于返回Awaited&lt;T \| U&gt;的Promise。 |
+| 类型 |
+| --- |
+| Promise & lt;Awaited & lt;T \ | U & gt; & gt; | 用于返回Awaited & lt;T \ |
 
 ## catch
 
@@ -238,25 +222,23 @@ catch<U = never>(onRejected?: (error: Error) => PromiseLike<U> | U): Promise<Awa
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Promise-catch<U = never>(onRejected?: (error: Error) => PromiseLike<U> | U): Promise<Awaited<T | U>>--><!--Device-Promise-catch<U = never>(onRejected?: (error: Error) => PromiseLike<U> | U): Promise<Awaited<T | U>>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| onRejected | (error: Error) =&gt; PromiseLike&lt;U&gt; \| U | 否 | Promise拒绝时执行的回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| onRejected | (error: Error) = & gt; PromiseLike & lt;U & gt; \ | U | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Awaited&lt;T \| U&gt;&gt; | 用于返回Awaited&lt;T \| U&gt;的Promise。 |
+| 类型 |
+| --- |
+| Promise & lt;Awaited & lt;T \ | U & gt; & gt; | 用于返回Awaited & lt;T \ |
 
 ## constructor
 
@@ -269,19 +251,17 @@ constructor(callback: (resolve: (value: PromiseLike<T> | T) => void,
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Promise-constructor(callback: (resolve: (value: PromiseLike<T> | T) => void,        reject: (error: Error) => void) => void)--><!--Device-Promise-constructor(callback: (resolve: (value: PromiseLike<T> | T) => void,        reject: (error: Error) => void) => void)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | (resolve: (value: PromiseLike&lt;T&gt; \| T) =&gt; void,         reject: (error: Error) =&gt; void) =&gt; void | 是 | 要执行的回调函数，接收resolve和reject两个函数作为参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (resolve: (value: PromiseLike & lt;T & gt; \ | T) = & gt; void,         reject: (error: Error) = & gt; void) = & gt; void | 是 |
 
 ## finally
 
@@ -293,25 +273,23 @@ finally<U = T>(onFinally?: () => PromiseLike<U> | U): Promise<Awaited<T>>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Promise-finally<U = T>(onFinally?: () => PromiseLike<U> | U): Promise<Awaited<T>>--><!--Device-Promise-finally<U = T>(onFinally?: () => PromiseLike<U> | U): Promise<Awaited<T>>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| onFinally | () =&gt; PromiseLike&lt;U&gt; \| U | 否 | Promise完成时执行的回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| onFinally | () = & gt; PromiseLike & lt;U & gt; \ | U | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Awaited&lt;T&gt;&gt; | 用于返回Awaited&lt;T&gt;的Promise。 |
+| 类型 |
+| --- |
+| Promise & lt;Awaited & lt;T & gt; & gt; |
 
 ## race
 
@@ -323,25 +301,23 @@ static race<U>(promises: FixedArray<PromiseLike<U> | U | undefined>): Promise<Aw
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Promise-static race<U>(promises: FixedArray<PromiseLike<U> | U | undefined>): Promise<Awaited<U>>--><!--Device-Promise-static race<U>(promises: FixedArray<PromiseLike<U> | U | undefined>): Promise<Awaited<U>>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| promises | FixedArray&lt;PromiseLike&lt;U&gt; \| U \| undefined&gt; | 是 | 要等待的Promise数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| promises | FixedArray & lt;PromiseLike & lt;U & gt; \ | U \| undefined & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Awaited&lt;U&gt;&gt; | 用于返回Awaited&lt;U&gt;的Promise。 |
+| 类型 |
+| --- |
+| Promise & lt;Awaited & lt;U & gt; & gt; |
 
 ## race
 
@@ -353,25 +329,23 @@ static race<U>(promises: Iterable<PromiseLike<U> | U>): Promise<Awaited<U>>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Promise-static race<U>(promises: Iterable<PromiseLike<U> | U>): Promise<Awaited<U>>--><!--Device-Promise-static race<U>(promises: Iterable<PromiseLike<U> | U>): Promise<Awaited<U>>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| promises | Iterable&lt;PromiseLike&lt;U&gt; \| U&gt; | 是 | 要等待的Promise可迭代对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| promises | Iterable & lt;PromiseLike & lt;U & gt; \ | U & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Awaited&lt;U&gt;&gt; | 用于返回Awaited&lt;U&gt;的Promise。 |
+| 类型 |
+| --- |
+| Promise & lt;Awaited & lt;U & gt; & gt; |
 
 ## reject
 
@@ -383,19 +357,17 @@ static reject(): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Promise-static reject(): Promise<void>--><!--Device-Promise-static reject(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回值的Promise。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 ## reject
 
@@ -407,25 +379,23 @@ static reject<U = never>(error: Error): Promise<Awaited<U>>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Promise-static reject<U = never>(error: Error): Promise<Awaited<U>>--><!--Device-Promise-static reject<U = never>(error: Error): Promise<Awaited<U>>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| error | Error | 是 | 拒绝原因。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| error | Error | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Awaited&lt;U&gt;&gt; | 用于返回Awaited&lt;U&gt;的Promise。 |
+| 类型 |
+| --- |
+| Promise & lt;Awaited & lt;U & gt; & gt; |
 
 ## resolve
 
@@ -437,19 +407,17 @@ static resolve(): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Promise-static resolve(): Promise<void>--><!--Device-Promise-static resolve(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回值的Promise。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 ## resolve
 
@@ -461,25 +429,23 @@ static resolve<U>(value: PromiseLike<U> | U): Promise<Awaited<U>>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Promise-static resolve<U>(value: PromiseLike<U> | U): Promise<Awaited<U>>--><!--Device-Promise-static resolve<U>(value: PromiseLike<U> | U): Promise<Awaited<U>>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | PromiseLike&lt;U&gt; \| U | 是 | 解析值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | PromiseLike & lt;U & gt; \ | U | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Awaited&lt;U&gt;&gt; | 用于返回Awaited&lt;U&gt;的Promise。 |
+| 类型 |
+| --- |
+| Promise & lt;Awaited & lt;U & gt; & gt; |
 
 ## then
 
@@ -491,25 +457,23 @@ then<U = T>(onFulfilled: () => PromiseLike<U> | U): Promise<Awaited<U>>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Promise-then<U = T>(onFulfilled: () => PromiseLike<U> | U): Promise<Awaited<U>>--><!--Device-Promise-then<U = T>(onFulfilled: () => PromiseLike<U> | U): Promise<Awaited<U>>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| onFulfilled | () =&gt; PromiseLike&lt;U&gt; \| U | 是 | Promise解析时执行的回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| onFulfilled | () = & gt; PromiseLike & lt;U & gt; \ | U | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Awaited&lt;U&gt;&gt; | 用于返回Awaited&lt;U&gt;的Promise。 |
+| 类型 |
+| --- |
+| Promise & lt;Awaited & lt;U & gt; & gt; |
 
 ## then
 
@@ -521,25 +485,23 @@ then(_onFulfilled?: undefined): Promise<Awaited<T>>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Promise-then(_onFulfilled?: undefined): Promise<Awaited<T>>--><!--Device-Promise-then(_onFulfilled?: undefined): Promise<Awaited<T>>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| _onFulfilled | undefined | 否 | 传入undefined以跳过解析处理。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| _onFulfilled | undefined | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Awaited&lt;T&gt;&gt; | 用于返回Awaited&lt;T&gt;的Promise。 |
+| 类型 |
+| --- |
+| Promise & lt;Awaited & lt;T & gt; & gt; |
 
 ## then
 
@@ -552,24 +514,21 @@ then<U = T, E = never>(onFulfilled: (value: T) => PromiseLike<U> | U,
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Promise-then<U = T, E = never>(onFulfilled: (value: T) => PromiseLike<U> | U,        onRejected?: (error: Error) => PromiseLike<E> | E): Promise<Awaited<U | E>>--><!--Device-Promise-then<U = T, E = never>(onFulfilled: (value: T) => PromiseLike<U> | U,        onRejected?: (error: Error) => PromiseLike<E> | E): Promise<Awaited<U | E>>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| onFulfilled | (value: T) =&gt; PromiseLike&lt;U&gt; \| U | 是 | Promise解析时执行的回调函数。 |
-| onRejected | (error: Error) =&gt; PromiseLike&lt;E&gt; \| E | 否 | Promise拒绝时执行的回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| onFulfilled | (value: T) = & gt; PromiseLike & lt;U & gt; \ | U | 是 |
+| onRejected | (error: Error) = & gt; PromiseLike & lt;E & gt; \ | E | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Awaited&lt;U \| E&gt;&gt; | 用于返回Awaited&lt;U \| E&gt;的Promise。 |
-
+| 类型 |
+| --- |
+| Promise & lt;Awaited & lt;U \ | E & gt; & gt; | 用于返回Awaited & lt;U \ |

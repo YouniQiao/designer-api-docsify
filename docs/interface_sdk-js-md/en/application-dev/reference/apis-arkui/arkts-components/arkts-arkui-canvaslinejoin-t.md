@@ -8,17 +8,16 @@ Defines the type of join between two non-zero-length segments (lines, arcs, and 
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-unnamed-declare type CanvasLineJoin = "bevel" | "miter" | "round"--><!--Device-unnamed-declare type CanvasLineJoin = "bevel" | "miter" | "round"-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-| Type | Description |
-| --- | --- |
-| "bevel" | The intersection is a triangle. The rectangular corner of each line is independent. |
-| "miter" | The intersection has a miter corner by extending the outside edges of the lines until they meet. You can view the effect of this attribute in **miterLimit**. |
-| "round" | The intersection is a sector, whose radius at the rounded corner is equal to the line width. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| "bevel" |
+| "miter" |
+| "round" |

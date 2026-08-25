@@ -9,9 +9,7 @@ Counter组件用于精确调节数值，支持列表型、紧凑型、数值内�
 
 **起始版本：** 11
 
-**装饰器类型：** @Component
-
-<!--Device-unnamed-declare struct CounterComponent--><!--Device-unnamed-declare struct CounterComponent-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,6 +18,23 @@ Counter组件用于精确调节数值，支持列表型、紧凑型、数值内�
 ```TypeScript
 import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
 ```
+
+## build
+
+```TypeScript
+build(): void
+```
+
+build函数用于构造Counter高级组件。  
+**ArkTS模式：** 该接口仅适用于ArkTS-Sta。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## options
 
@@ -33,13 +48,10 @@ options: CounterOptions
 
 **起始版本：** 11
 
-**装饰器类型：** @Prop
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-CounterComponent-@Prop  options: CounterOptions--><!--Device-CounterComponent-@Prop  options: CounterOptions-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

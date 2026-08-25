@@ -4,9 +4,9 @@ FileUri represents the uri of the file.@extends uri.URI
 
 **Inheritance/Implementation:** FileUri extends uri.URI
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-fileUri-class FileUri--><!--Device-fileUri-class FileUri-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService
 
@@ -24,28 +24,28 @@ constructor(uriOrPath: string)
 
 Constructor for obtaining the instance of the FileUri class.
 
-**Since:** 23
+**Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
-<!--Device-FileUri-constructor(uriOrPath: string)--><!--Device-FileUri-constructor(uriOrPath: string)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.FileManagement.AppFileService
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uriOrPath | string | Yes | Uri or Path. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uriOrPath | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900005 | I/O error |
-| 13900020 | Invalid argument |
-| 13900042 | Unknown error |
-| 14300002 | Invalid uri |
+| Error Code ID |
+| --- |
+| 13900005 |
+| 13900020 |
+| 13900042 |
+| 14300002 |
 
 **Examples**
 
@@ -64,27 +64,27 @@ getFullDirectoryUri(): string
 
 Get the full directory uri where the file URI is located
 
-**Since:** 23
+**Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
-<!--Device-FileUri-getFullDirectoryUri(): string--><!--Device-FileUri-getFullDirectoryUri(): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.FileManagement.AppFileService
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Return the directory uri |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900002 |
+| 13900012 |
+| 13900042 |
 
 **Examples**
 
@@ -108,25 +108,25 @@ isRemoteUri(): boolean
 
 Check whether the incoming URI is a remote URI
 
-**Since:** 23
+**Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
-<!--Device-FileUri-isRemoteUri(): boolean--><!--Device-FileUri-isRemoteUri(): boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.FileManagement.AppFileService
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Return true or false |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900042 |
 
 **Examples**
 
@@ -152,17 +152,17 @@ Converts this URI into an encoded string.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-FileUri-toString(): string--><!--Device-FileUri-toString(): string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | URI in a serialized string. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Examples**
 
@@ -172,3 +172,20 @@ let fileUriObject = new fileUri.FileUri(path);
 console.info("The uri of FileUri is " + fileUriObject.toString());
 ```
 
+## name
+
+```TypeScript
+get name(): string
+```
+
+Obtains the file name of uri.
+
+**Type:** string
+
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+**System capability:** SystemCapability.FileManagement.AppFileService

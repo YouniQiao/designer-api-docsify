@@ -16,25 +16,25 @@ function cancel(task: Task): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
-<!--Device-taskpool-function cancel(task: Task): void--><!--Device-taskpool-function cancel(task: Task): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| task | Task | 是 | 需要取消执行的任务。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200015](../errorcode-utils.md#10200015-取消不存在的任务错误) | The task to cancel does not exist. |
-| [10200016](../errorcode-utils.md#10200016-取消正在执行的任务错误) | The task to cancel is being executed.<br>**适用版本：** 9 - 17 |
-| [10200055](../errorcode-utils.md#10200055-异步任务被取消) | The asyncRunner task has been canceled.<br>**适用版本：** 18+ |
+| 错误码ID |
+| --- |
+| [10200015](../errorcode-utils.md#10200015-取消不存在的任务错误) |
+| [10200016](../errorcode-utils.md#10200016-取消正在执行的任务错误) |
+| [10200055](../errorcode-utils.md#10200055-异步任务被取消) |
 
 **示例**
 
@@ -127,23 +127,23 @@ function cancel(group: TaskGroup): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
-<!--Device-taskpool-function cancel(group: TaskGroup): void--><!--Device-taskpool-function cancel(group: TaskGroup): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | 是 | 需要取消执行的任务组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200018](../errorcode-utils.md#10200018-取消不存在的任务组错误) | The task group to cancel does not exist. |
+| 错误码ID |
+| --- |
+| [10200018](../errorcode-utils.md#10200018-取消不存在的任务组错误) |
 
 **示例**
 
@@ -160,26 +160,25 @@ function cancel(taskId: number): void
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
-<!--Device-taskpool-function cancel(taskId: number): void--><!--Device-taskpool-function cancel(taskId: number): void-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| taskId | number | 是 | 需要取消执行的任务的ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| taskId | number | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200015](../errorcode-utils.md#10200015-取消不存在的任务错误) | The task to cancel does not exist. |
-| [10200055](../errorcode-utils.md#10200055-异步任务被取消) | The asyncRunner task has been canceled. |
+| 错误码ID |
+| --- |
+| [10200015](../errorcode-utils.md#10200015-取消不存在的任务错误) |
+| [10200055](../errorcode-utils.md#10200055-异步任务被取消) |
 
 **示例**
 
 参见 [cancel](#cancel)
-

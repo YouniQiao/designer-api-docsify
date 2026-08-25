@@ -8,11 +8,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md)
-
-<!--Device-bundle-enum BundleFlag--><!--Device-bundle-enum BundleFlag-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -26,11 +26,11 @@ GET_BUNDLE_DEFAULT = 0x00000000
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [GET_BUNDLE_INFO_DEFAULT](arkts-ability-bundlemanager-bundleflag-e.md#get_bundle_info_default)
-
-<!--Device-BundleFlag-GET_BUNDLE_DEFAULT = 0x00000000--><!--Device-BundleFlag-GET_BUNDLE_DEFAULT = 0x00000000-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -44,11 +44,11 @@ GET_BUNDLE_WITH_ABILITIES = 0x00000001
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [GET_BUNDLE_INFO_WITH_ABILITY](arkts-ability-bundlemanager-bundleflag-e.md#get_bundle_info_with_ability)
-
-<!--Device-BundleFlag-GET_BUNDLE_WITH_ABILITIES = 0x00000001--><!--Device-BundleFlag-GET_BUNDLE_WITH_ABILITIES = 0x00000001-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -62,11 +62,11 @@ GET_ABILITY_INFO_WITH_PERMISSION = 0x00000002
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-**替代接口：** [GET_ABILITY_INFO_WITH_PERMISSION](arkts-ability-bundlemanager-abilityflag-e-sys.md#get_ability_info_with_permission)
-
-<!--Device-BundleFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000002--><!--Device-BundleFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000002-End-->
+**替代接口：** [GET_ABILITY_INFO_WITH_PERMISSION](arkts-ability-bundlemanager-abilityflag-e.md#get_ability_info_with_permission)
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -80,11 +80,11 @@ GET_ABILITY_INFO_WITH_APPLICATION = 0x00000004
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
-**替代接口：** [GET_ABILITY_INFO_WITH_APPLICATION](arkts-ability-bundlemanager-abilityflag-e-sys.md#get_ability_info_with_application)
-
-<!--Device-BundleFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000004--><!--Device-BundleFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000004-End-->
+**替代接口：** [GET_ABILITY_INFO_WITH_APPLICATION](arkts-ability-bundlemanager-abilityflag-e.md#get_ability_info_with_application)
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -98,9 +98,9 @@ GET_APPLICATION_INFO_WITH_PERMISSION = 0x00000008
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-BundleFlag-GET_APPLICATION_INFO_WITH_PERMISSION = 0x00000008--><!--Device-BundleFlag-GET_APPLICATION_INFO_WITH_PERMISSION = 0x00000008-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -114,11 +114,11 @@ GET_BUNDLE_WITH_REQUESTED_PERMISSION = 0x00000010
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION](arkts-ability-bundlemanager-bundleflag-e.md#get_bundle_info_with_requested_permission)
-
-<!--Device-BundleFlag-GET_BUNDLE_WITH_REQUESTED_PERMISSION = 0x00000010--><!--Device-BundleFlag-GET_BUNDLE_WITH_REQUESTED_PERMISSION = 0x00000010-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -132,9 +132,9 @@ GET_ALL_APPLICATION_INFO = 0xFFFF0000
 
 **起始版本：** 7
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-BundleFlag-GET_ALL_APPLICATION_INFO = 0xFFFF0000--><!--Device-BundleFlag-GET_ALL_APPLICATION_INFO = 0xFFFF0000-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -148,11 +148,11 @@ GET_ABILITY_INFO_WITH_METADATA = 0x00000020
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-**替代接口：** [GET_ABILITY_INFO_WITH_METADATA](arkts-ability-bundlemanager-abilityflag-e-sys.md#get_ability_info_with_metadata)
-
-<!--Device-BundleFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000020--><!--Device-BundleFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000020-End-->
+**替代接口：** [GET_ABILITY_INFO_WITH_METADATA](arkts-ability-bundlemanager-abilityflag-e.md#get_ability_info_with_metadata)
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -166,9 +166,9 @@ GET_APPLICATION_INFO_WITH_METADATA = 0x00000040
 
 **起始版本：** 8
 
-**废弃版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
-<!--Device-BundleFlag-GET_APPLICATION_INFO_WITH_METADATA = 0x00000040--><!--Device-BundleFlag-GET_APPLICATION_INFO_WITH_METADATA = 0x00000040-End-->
+**废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -182,11 +182,11 @@ GET_ABILITY_INFO_SYSTEMAPP_ONLY = 0x00000080
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-**替代接口：** [GET_ABILITY_INFO_ONLY_SYSTEM_APP](arkts-ability-bundlemanager-abilityflag-e-sys.md#get_ability_info_only_system_app)
-
-<!--Device-BundleFlag-GET_ABILITY_INFO_SYSTEMAPP_ONLY = 0x00000080--><!--Device-BundleFlag-GET_ABILITY_INFO_SYSTEMAPP_ONLY = 0x00000080-End-->
+**替代接口：** [GET_ABILITY_INFO_ONLY_SYSTEM_APP](arkts-ability-bundlemanager-abilityflag-e.md#get_ability_info_only_system_app)
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -200,11 +200,11 @@ GET_ABILITY_INFO_WITH_DISABLE = 0x00000100
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-**替代接口：** [GET_ABILITY_INFO_WITH_DISABLE](arkts-ability-bundlemanager-abilityflag-e-sys.md#get_ability_info_with_disable)
-
-<!--Device-BundleFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000100--><!--Device-BundleFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000100-End-->
+**替代接口：** [GET_ABILITY_INFO_WITH_DISABLE](arkts-ability-bundlemanager-abilityflag-e.md#get_ability_info_with_disable)
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -218,9 +218,8 @@ GET_APPLICATION_INFO_WITH_DISABLE = 0x00000200
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
-<!--Device-BundleFlag-GET_APPLICATION_INFO_WITH_DISABLE = 0x00000200--><!--Device-BundleFlag-GET_APPLICATION_INFO_WITH_DISABLE = 0x00000200-End-->
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework
-

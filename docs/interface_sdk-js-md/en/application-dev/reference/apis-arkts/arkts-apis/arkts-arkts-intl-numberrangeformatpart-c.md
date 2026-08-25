@@ -4,9 +4,7 @@ Number range format part.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-Intl-export class NumberRangeFormatPart--><!--Device-Intl-export class NumberRangeFormatPart-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,19 +23,16 @@ The constructor.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NumberRangeFormatPart-constructor(type: NumberFormatPartTypes, value: string, source: 'startRange' | 'endRange' | 'shared')--><!--Device-NumberRangeFormatPart-constructor(type: NumberFormatPartTypes, value: string, source: 'startRange' | 'endRange' | 'shared')-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | NumberFormatPartTypes | Yes |  |
-| value | string | Yes |  |
-| source | 'startRange' \| 'endRange' \| 'shared' | Yes |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | [NumberFormatPartTypes](arkts-arkts-intl-numberformatparttypes-t.md) | Yes |
+| value | string | Yes |
+| source | 'startRange' \| 'endRange' \| 'shared' | Yes |

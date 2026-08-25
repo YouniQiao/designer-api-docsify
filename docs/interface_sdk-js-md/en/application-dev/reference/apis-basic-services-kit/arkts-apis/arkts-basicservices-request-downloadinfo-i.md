@@ -2,9 +2,9 @@
 
 Defines the download task information, which is the callback parameter of the [getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo) API.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-request-interface DownloadInfo--><!--Device-request-interface DownloadInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -24,9 +24,9 @@ Description of the download task.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-DownloadInfo-description: string--><!--Device-DownloadInfo-description: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -38,11 +38,11 @@ downloadedBytes: long
 
 Real-time download size, in bytes.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-DownloadInfo-downloadedBytes: long--><!--Device-DownloadInfo-downloadedBytes: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -54,11 +54,11 @@ downloadId: long
 
 Download task ID.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-DownloadInfo-downloadId: long--><!--Device-DownloadInfo-downloadId: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -72,9 +72,9 @@ Name of the download task.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-DownloadInfo-downloadTitle: string--><!--Device-DownloadInfo-downloadTitle: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -86,11 +86,11 @@ downloadTotalBytes: long
 
 Total size of the files to download, in bytes.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-DownloadInfo-downloadTotalBytes: long--><!--Device-DownloadInfo-downloadTotalBytes: long-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -100,13 +100,13 @@ Total size of the files to download, in bytes.
 failedReason: int
 ```
 
-Cause of the download failure. The value can be any constant in [Download Error Codes](arkts-basicservices-request-n.md#constants).
+Cause of the download failure. The value can be any constant in [Download Error Codes](../../../reference/apis-basic-services-kit/js-apis-request.md#constants).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-DownloadInfo-failedReason: int--><!--Device-DownloadInfo-failedReason: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -120,9 +120,9 @@ Name of the downloaded file.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-DownloadInfo-fileName: string--><!--Device-DownloadInfo-fileName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -136,9 +136,9 @@ URI of the saved file.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-DownloadInfo-filePath: string--><!--Device-DownloadInfo-filePath: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -148,13 +148,13 @@ URI of the saved file.
 pausedReason: int
 ```
 
-Cause of download pause. The value can be any constant in [Causes of Download Pause](arkts-basicservices-request-n.md#constants).
+Cause of download pause. The value can be any constant in [Causes of Download Pause](../../../reference/apis-basic-services-kit/js-apis-request.md#constants).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-DownloadInfo-pausedReason: int--><!--Device-DownloadInfo-pausedReason: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -164,13 +164,13 @@ Cause of download pause. The value can be any constant in [Causes of Download Pa
 status: int
 ```
 
-Download task status code. The value can be any constant in [Download Task Status Codes](arkts-basicservices-request-n.md#constants).
+Download task status code. The value can be any constant in [Download Task Status Codes](../../../reference/apis-basic-services-kit/js-apis-request.md#constants).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-DownloadInfo-status: int--><!--Device-DownloadInfo-status: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -184,9 +184,8 @@ URI of the downloaded file.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-DownloadInfo-targetURI: string--><!--Device-DownloadInfo-targetURI: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
-

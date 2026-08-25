@@ -2,9 +2,9 @@
 
 提供承载数据网络能力的实例。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-connection-export interface NetSpecifier--><!--Device-connection-export interface NetSpecifier-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -24,11 +24,11 @@ bearerPrivateIdentifier?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NetSpecifier-bearerPrivateIdentifier?: string--><!--Device-NetSpecifier-bearerPrivateIdentifier?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -42,11 +42,11 @@ netCapabilities: NetCapabilities
 
 **类型：** [NetCapabilities](arkts-network-connection-netcapabilities-i.md)
 
-**起始版本：** 23
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NetSpecifier-netCapabilities: NetCapabilities--><!--Device-NetSpecifier-netCapabilities: NetCapabilities-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -103,4 +103,3 @@ wifiManager.addCandidateConfig(config,(error,networkId) => {
   });
 });
 ```
-

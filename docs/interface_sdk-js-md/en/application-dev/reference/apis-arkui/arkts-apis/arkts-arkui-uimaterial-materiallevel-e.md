@@ -4,7 +4,7 @@ Enumerates the material levels, which indicate the computing power level of the 
 
 **Since:** 26.0.0
 
-<!--Device-uiMaterial-enum MaterialLevel--><!--Device-uiMaterial-enum MaterialLevel-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Material level of devices with high-level computing power.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-MaterialLevel-EXQUISITE = 0--><!--Device-MaterialLevel-EXQUISITE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Material level of devices with mid-level computing power.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-MaterialLevel-GENTLE = 1--><!--Device-MaterialLevel-GENTLE = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ Material level of devices with low-level computing power.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-MaterialLevel-SMOOTH = 2--><!--Device-MaterialLevel-SMOOTH = 2-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

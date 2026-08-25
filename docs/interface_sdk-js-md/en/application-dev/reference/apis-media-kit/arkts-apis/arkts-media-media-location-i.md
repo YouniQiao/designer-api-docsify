@@ -2,9 +2,9 @@
 
 Provides the geographical location definitions for media resources.
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-media-interface Location--><!--Device-media-interface Location-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -22,11 +22,11 @@ latitude: double
 
 Latitude.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-Location-latitude: double--><!--Device-Location-latitude: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -38,11 +38,10 @@ longitude: double
 
 Longitude.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 6
 
-<!--Device-Location-longitude: double--><!--Device-Location-longitude: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
-

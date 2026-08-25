@@ -2,9 +2,9 @@
 
 Enumerates the corner positions of a rounded rectangle.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-drawing-enum CornerPos--><!--Device-drawing-enum CornerPos-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -16,9 +16,9 @@ TOP_LEFT_POS = 0
 
 Top left corner of the rounded rectangle.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-CornerPos-TOP_LEFT_POS = 0--><!--Device-CornerPos-TOP_LEFT_POS = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -30,9 +30,9 @@ TOP_RIGHT_POS = 1
 
 Top right corner of the rounded rectangle.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-CornerPos-TOP_RIGHT_POS = 1--><!--Device-CornerPos-TOP_RIGHT_POS = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -44,9 +44,9 @@ BOTTOM_RIGHT_POS = 2
 
 Bottom right corner of the rounded rectangle.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-CornerPos-BOTTOM_RIGHT_POS = 2--><!--Device-CornerPos-BOTTOM_RIGHT_POS = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -58,9 +58,8 @@ BOTTOM_LEFT_POS = 3
 
 Bottom left corner of the rounded rectangle.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-CornerPos-BOTTOM_LEFT_POS = 3--><!--Device-CornerPos-BOTTOM_LEFT_POS = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
-

@@ -4,7 +4,7 @@ Configures preview menu options, supporting the vibration effect when the menu p
 
 **Since:** 20
 
-<!--Device-unnamed-declare interface PreviewMenuOptions--><!--Device-unnamed-declare interface PreviewMenuOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -27,7 +27,6 @@ Vibration effect when the menu is displayed. The **ohos.permission.VIBRATE** per
 
 **Since:** 20
 
-<!--Device-PreviewMenuOptions-hapticFeedbackMode?: HapticFeedbackMode--><!--Device-PreviewMenuOptions-hapticFeedbackMode?: HapticFeedbackMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

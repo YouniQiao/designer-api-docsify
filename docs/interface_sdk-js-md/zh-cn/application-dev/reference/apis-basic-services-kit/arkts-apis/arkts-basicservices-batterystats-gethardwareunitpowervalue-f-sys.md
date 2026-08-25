@@ -14,9 +14,9 @@ function getHardwareUnitPowerValue(type: ConsumptionType): double
 
 根据耗电类型获取硬件单元的耗电量，单位毫安时。适用于需要精确耗电数值的场景。如需比较不同硬件单元耗电占比，请使用[getHardwareUnitPowerPercent](arkts-basicservices-batterystats-gethardwareunitpowerpercent-f-sys.md)获取相对百分比。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-batteryStats-function getHardwareUnitPowerValue(type: ConsumptionType): double--><!--Device-batteryStats-function getHardwareUnitPowerValue(type: ConsumptionType): double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
@@ -24,23 +24,23 @@ function getHardwareUnitPowerValue(type: ConsumptionType): double
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [ConsumptionType](arkts-basicservices-batterystats-consumptiontype-e-sys.md) | 是 | 电量消耗类型，用于指定要查询的硬件单元耗电类型。可选值参见[ConsumptionType](arkts-basicservices-batterystats-consumptiontype-e-sys.md)， 如CONSUMPTION_TYPE_SCREEN用于查询屏幕耗电、CONSUMPTION_TYPE_BLUETOOTH用于查询蓝牙耗电、 CONSUMPTION_TYPE_WIFI用于查询无线网耗电等。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | [ConsumptionType](arkts-basicservices-batterystats-consumptiontype-e-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | 电量消耗类型对应硬件的耗电量，单位毫安时。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [4600101](../errorcode-batteryStatistics.md#4600101-连接服务失败) | Failed to connect to the service. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [4600101](../errorcode-batteryStatistics.md#4600101-连接服务失败) |
 
 **示例**
 
@@ -52,4 +52,3 @@ try {
     console.error('get battery statistics percent of hardware failed, err: ' + err);
 }
 ```
-

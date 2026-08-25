@@ -4,7 +4,7 @@ Interface defining shared device information
 
 **Since:** 24
 
-<!--Device-print-interface SharedHost--><!--Device-print-interface SharedHost-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -26,9 +26,9 @@ IP address of the shared device.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-SharedHost-ip: string--><!--Device-SharedHost-ip: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -44,9 +44,9 @@ Share name of the shared device.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-SharedHost-shareName: string--><!--Device-SharedHost-shareName: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -62,9 +62,8 @@ Workgroup name of the shared device.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SharedHost-workgroupName: string--><!--Device-SharedHost-workgroupName: string-End-->
-
 **System capability:** SystemCapability.Print.PrintFramework
-

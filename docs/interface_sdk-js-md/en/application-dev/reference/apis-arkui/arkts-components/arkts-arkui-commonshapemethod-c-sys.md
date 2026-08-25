@@ -6,7 +6,7 @@ CommonShapeMethod@extends CommonMethod&lt;T&gt;
 
 **Since:** 11
 
-<!--Device-unnamed-declare class CommonShapeMethod--><!--Device-unnamed-declare class CommonShapeMethod-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,9 +25,9 @@ constructor.
 
 **Since:** 9
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-CommonShapeMethod-constructor()--><!--Device-CommonShapeMethod-constructor()-End-->
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,4 +43,3 @@ function MyBuilder(value: string, size: number) {
 }
 let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(MyBuilder);
 ```
-

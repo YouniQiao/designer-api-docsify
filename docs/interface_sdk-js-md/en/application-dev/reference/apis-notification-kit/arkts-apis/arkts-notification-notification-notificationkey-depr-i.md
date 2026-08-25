@@ -4,9 +4,9 @@ Notification key.
 
 **Since:** 7
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-notification-export interface NotificationKey--><!--Device-notification-export interface NotificationKey-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -27,11 +27,11 @@ Notification ID.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** NotificationKey
-
-<!--Device-NotificationKey-id: number--><!--Device-NotificationKey-id: number-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -47,11 +47,10 @@ Notification label.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** NotificationKey
 
-<!--Device-NotificationKey-label?: string--><!--Device-NotificationKey-label?: string-End-->
-
 **System capability:** SystemCapability.Notification.Notification
-

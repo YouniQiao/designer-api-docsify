@@ -4,7 +4,7 @@ Sets or returns the layout size and position of the component.
 
 **Since:** 11
 
-<!--Device-unnamed-export declare interface Frame--><!--Device-unnamed-export declare interface Frame-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,11 +20,11 @@ Component height.Unit: vp.Value range: [0, +∞).
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Frame-height: number--><!--Device-Frame-height: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,11 +40,11 @@ Component width.Unit: vp.Value range: [0, +∞).
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Frame-width: number--><!--Device-Frame-width: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,11 +60,11 @@ Horizontal position.Unit: vp.Value range: (-∞, +∞).
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Frame-x: number--><!--Device-Frame-x: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -80,11 +80,10 @@ Vertical position.Unit: vp.Value range: (-∞, +∞).
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-Frame-y: number--><!--Device-Frame-y: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

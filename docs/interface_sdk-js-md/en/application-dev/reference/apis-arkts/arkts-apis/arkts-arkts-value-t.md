@@ -6,17 +6,16 @@ type Value = string | double | Decimal
 
 The type used to denote decimal value
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-unnamed-type Value = string | double | Decimal--><!--Device-unnamed-type Value = string | double | Decimal-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
-| Type | Description |
-| --- | --- |
-| string |  |
-| double |  |
-| Decimal |  |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+| double |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |

@@ -14,17 +14,17 @@ function getGwpAsanGrayscaleState(): int
 
 Obtain the remaining days of GWP-ASan grayscale for your application.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-hidebug-function getGwpAsanGrayscaleState(): int--><!--Device-hidebug-function getGwpAsanGrayscaleState(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | The remaining days of GWP-ASan grayscale. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -34,4 +34,3 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 let remainDays: number = hidebug.getGwpAsanGrayscaleState();
 console.info(`remainDays: ${remainDays}`);
 ```
-

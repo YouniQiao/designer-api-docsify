@@ -8,9 +8,9 @@ const CURSOR_DOWN: int
 
 The caret moves downward.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-inputMethodEngine-const CURSOR_DOWN: int--><!--Device-inputMethodEngine-const CURSOR_DOWN: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -22,9 +22,9 @@ const CURSOR_LEFT: int
 
 The caret moves leftward.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-inputMethodEngine-const CURSOR_LEFT: int--><!--Device-inputMethodEngine-const CURSOR_LEFT: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -36,9 +36,9 @@ const CURSOR_RIGHT: int
 
 The caret moves rightward.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-inputMethodEngine-const CURSOR_RIGHT: int--><!--Device-inputMethodEngine-const CURSOR_RIGHT: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -50,9 +50,9 @@ const CURSOR_UP: int
 
 The caret moves upward.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-inputMethodEngine-const CURSOR_UP: int--><!--Device-inputMethodEngine-const CURSOR_UP: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -64,9 +64,9 @@ const DISPLAY_MODE_FULL: int
 
 The edit box is displayed in full screen.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const DISPLAY_MODE_FULL: int--><!--Device-inputMethodEngine-const DISPLAY_MODE_FULL: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -78,9 +78,9 @@ const DISPLAY_MODE_PART: int
 
 The edit box is displayed in half-screen mode.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const DISPLAY_MODE_PART: int--><!--Device-inputMethodEngine-const DISPLAY_MODE_PART: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -92,9 +92,9 @@ const ENTER_KEY_TYPE_DONE: int
 
 Key that indicates that a task or input is complete.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_DONE: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_DONE: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -106,9 +106,9 @@ const ENTER_KEY_TYPE_GO: int
 
 Key that executes a command or navigates to a specific location.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_GO: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_GO: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -120,9 +120,9 @@ const ENTER_KEY_TYPE_NEWLINE: int
 
 Key that inserts a new line.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEWLINE: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEWLINE: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -134,9 +134,9 @@ const ENTER_KEY_TYPE_NEXT: int
 
 Key that moves the focus to the next item in a sequence.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEXT: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEXT: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -148,9 +148,9 @@ const ENTER_KEY_TYPE_PREVIOUS: int
 
 Key that moves the focus to the previous item in a sequence.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_PREVIOUS: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_PREVIOUS: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -162,9 +162,9 @@ const ENTER_KEY_TYPE_SEARCH: int
 
 Key that initiates a search operation.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEARCH: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEARCH: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -176,9 +176,9 @@ const ENTER_KEY_TYPE_SEND: int
 
 Key that sends the text to its target.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEND: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEND: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -190,9 +190,9 @@ const ENTER_KEY_TYPE_UNSPECIFIED: int
 
 No function is specified for the key.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_UNSPECIFIED: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_UNSPECIFIED: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -204,9 +204,9 @@ const FLAG_SELECTING: int
 
 The edit box is being selected.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const FLAG_SELECTING: int--><!--Device-inputMethodEngine-const FLAG_SELECTING: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -218,9 +218,9 @@ const FLAG_SINGLE_LINE: int
 
 The edit box allows only single-line input.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const FLAG_SINGLE_LINE: int--><!--Device-inputMethodEngine-const FLAG_SINGLE_LINE: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -232,9 +232,9 @@ const OPTION_ASCII: int
 
 ASCII values are allowed.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const OPTION_ASCII: int--><!--Device-inputMethodEngine-const OPTION_ASCII: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -246,9 +246,9 @@ const OPTION_AUTO_CAP_CHARACTERS: int
 
 Characters are allowed.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const OPTION_AUTO_CAP_CHARACTERS: int--><!--Device-inputMethodEngine-const OPTION_AUTO_CAP_CHARACTERS: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -260,9 +260,9 @@ const OPTION_AUTO_CAP_SENTENCES: int
 
 Sentences are allowed.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const OPTION_AUTO_CAP_SENTENCES: int--><!--Device-inputMethodEngine-const OPTION_AUTO_CAP_SENTENCES: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -274,9 +274,9 @@ const OPTION_AUTO_WORDS: int
 
 Words are allowed.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const OPTION_AUTO_WORDS: int--><!--Device-inputMethodEngine-const OPTION_AUTO_WORDS: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -288,9 +288,9 @@ const OPTION_MULTI_LINE: int
 
 Multiple lines are allowed.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const OPTION_MULTI_LINE: int--><!--Device-inputMethodEngine-const OPTION_MULTI_LINE: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -302,9 +302,9 @@ const OPTION_NO_FULLSCREEN: int
 
 Half-screen style.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const OPTION_NO_FULLSCREEN: int--><!--Device-inputMethodEngine-const OPTION_NO_FULLSCREEN: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -316,9 +316,9 @@ const OPTION_NONE: int
 
 No input attribute is specified.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const OPTION_NONE: int--><!--Device-inputMethodEngine-const OPTION_NONE: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -330,9 +330,9 @@ const PATTERN_DATETIME: int
 
 Date edit box.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const PATTERN_DATETIME: int--><!--Device-inputMethodEngine-const PATTERN_DATETIME: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -344,9 +344,9 @@ const PATTERN_EMAIL: int
 
 Email edit box.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const PATTERN_EMAIL: int--><!--Device-inputMethodEngine-const PATTERN_EMAIL: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -358,11 +358,11 @@ const PATTERN_NEW_PASSWORD: int
 
 New password edit box.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-inputMethodEngine-const PATTERN_NEW_PASSWORD: int--><!--Device-inputMethodEngine-const PATTERN_NEW_PASSWORD: int-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -374,9 +374,9 @@ const PATTERN_NULL: int
 
 Any type of edit box.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const PATTERN_NULL: int--><!--Device-inputMethodEngine-const PATTERN_NULL: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -388,9 +388,9 @@ const PATTERN_NUMBER: int
 
 Number edit box.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const PATTERN_NUMBER: int--><!--Device-inputMethodEngine-const PATTERN_NUMBER: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -402,11 +402,11 @@ const PATTERN_NUMBER_DECIMAL: int
 
 Edit box for numbers with decimal points.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-inputMethodEngine-const PATTERN_NUMBER_DECIMAL: int--><!--Device-inputMethodEngine-const PATTERN_NUMBER_DECIMAL: int-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -418,11 +418,11 @@ const PATTERN_ONE_TIME_CODE: int
 
 Verification code edit box.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-inputMethodEngine-const PATTERN_ONE_TIME_CODE: int--><!--Device-inputMethodEngine-const PATTERN_ONE_TIME_CODE: int-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -434,9 +434,9 @@ const PATTERN_PASSWORD: int
 
 Password edit box.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const PATTERN_PASSWORD: int--><!--Device-inputMethodEngine-const PATTERN_PASSWORD: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -448,9 +448,9 @@ const PATTERN_PASSWORD_NUMBER: int
 
 Numeric password edit box.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-inputMethodEngine-const PATTERN_PASSWORD_NUMBER: int--><!--Device-inputMethodEngine-const PATTERN_PASSWORD_NUMBER: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -462,9 +462,9 @@ const PATTERN_PASSWORD_SCREEN_LOCK: int
 
 Screen lock password edit box.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-inputMethodEngine-const PATTERN_PASSWORD_SCREEN_LOCK: int--><!--Device-inputMethodEngine-const PATTERN_PASSWORD_SCREEN_LOCK: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -476,9 +476,9 @@ const PATTERN_PHONE: int
 
 Phone number edit box.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const PATTERN_PHONE: int--><!--Device-inputMethodEngine-const PATTERN_PHONE: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -490,9 +490,9 @@ const PATTERN_TEXT: int
 
 Text edit box.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const PATTERN_TEXT: int--><!--Device-inputMethodEngine-const PATTERN_TEXT: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -504,9 +504,9 @@ const PATTERN_URI: int
 
 URI edit box.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-inputMethodEngine-const PATTERN_URI: int--><!--Device-inputMethodEngine-const PATTERN_URI: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -518,11 +518,11 @@ const PATTERN_USER_NAME: int
 
 User name edit box.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-inputMethodEngine-const PATTERN_USER_NAME: int--><!--Device-inputMethodEngine-const PATTERN_USER_NAME: int-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -534,9 +534,8 @@ const WINDOW_TYPE_INPUT_METHOD_FLOAT: int
 
 The input method is displayed in a floating window.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-inputMethodEngine-const WINDOW_TYPE_INPUT_METHOD_FLOAT: int--><!--Device-inputMethodEngine-const WINDOW_TYPE_INPUT_METHOD_FLOAT: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

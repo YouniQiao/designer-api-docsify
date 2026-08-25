@@ -1,10 +1,10 @@
-# @ohos.graphics.sendableColorSpaceManager
+# @ohos.graphics.sendableColorSpaceManager(Sendable Color Space Management)
 
 This module provides APIs for creating and managing sendable color space objects and obtaining basic attributes of sendable color spaces. It is applicable to scenarios where color space information needs to be transferred between multiple threads. It solves the problem that color management objects cannot be shared across threads, improving the efficiency and consistency of color processing.
 
 **Since:** 12
 
-<!--Device-unnamed-declare namespace sendableColorSpaceManager--><!--Device-unnamed-declare namespace sendableColorSpaceManager-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -18,20 +18,19 @@ import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [create](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md) | Creates a criterion color space management instance that is sendable. |
-| [create](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md) | Creates a custom color space object that is sendable. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [create(Sendable Color Space Management)](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md) |
+| [create(Sendable Color Space Management)](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | Implements management of color space objects. ColorSpaceManager is a core class used to manage and operate color space objects. It provides functions such as obtaining the color space type, white point value, and gamma value, and supports transfer between concurrent ArkTS instances.Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md) to create a color space manager. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ColorSpaceManager(Sendable Color Space Management)](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [ISendable](arkts-arkgraphics2d-sendablecolorspacemanager-isendable-t.md) | The ISendable type alias is defined to align with the API specifications of the current module. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ISendable(Sendable Color Space Management)](arkts-arkgraphics2d-sendablecolorspacemanager-isendable-t.md) |

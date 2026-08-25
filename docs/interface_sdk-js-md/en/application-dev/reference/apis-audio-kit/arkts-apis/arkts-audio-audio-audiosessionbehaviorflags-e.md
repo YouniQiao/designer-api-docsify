@@ -4,7 +4,7 @@ Enumerates audio session behavior flags.
 
 **Since:** 24
 
-<!--Device-audio-enum AudioSessionBehaviorFlags--><!--Device-audio-enum AudioSessionBehaviorFlags-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -18,9 +18,9 @@ Default behavior, used to clear behavior settings.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-AudioSessionBehaviorFlags-DEFAULT_BEHAVIOR = 0x00000000--><!--Device-AudioSessionBehaviorFlags-DEFAULT_BEHAVIOR = 0x00000000-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -34,9 +34,9 @@ When the system needs to stop or pause the audio stream, it performs a forced mu
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-AudioSessionBehaviorFlags-MUTE_WHEN_INTERRUPTED = 0x00000002--><!--Device-AudioSessionBehaviorFlags-MUTE_WHEN_INTERRUPTED = 0x00000002-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -50,9 +50,8 @@ When the system needs to stop the audio stream, it performs a pause instead. In 
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AudioSessionBehaviorFlags-PAUSE_WHEN_INTERRUPTED = 0x00000004--><!--Device-AudioSessionBehaviorFlags-PAUSE_WHEN_INTERRUPTED = 0x00000004-End-->
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
-

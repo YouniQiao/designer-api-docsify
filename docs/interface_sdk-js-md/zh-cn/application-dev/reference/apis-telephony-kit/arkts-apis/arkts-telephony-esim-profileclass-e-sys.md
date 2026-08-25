@@ -2,9 +2,9 @@
 
 配置文件类。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-eSIM-export enum ProfileClass--><!--Device-eSIM-export enum ProfileClass-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -18,9 +18,9 @@ PROFILE_CLASS_UNSPECIFIED = -1
 
 未设置配置文件类。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-ProfileClass-PROFILE_CLASS_UNSPECIFIED = -1--><!--Device-ProfileClass-PROFILE_CLASS_UNSPECIFIED = -1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -34,9 +34,9 @@ PROFILE_CLASS_TEST = 0
 
 测试配置文件。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-ProfileClass-PROFILE_CLASS_TEST = 0--><!--Device-ProfileClass-PROFILE_CLASS_TEST = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -50,9 +50,9 @@ PROFILE_CLASS_PROVISIONING = 1
 
 预加载在eUICC上的配置文件。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-ProfileClass-PROFILE_CLASS_PROVISIONING = 1--><!--Device-ProfileClass-PROFILE_CLASS_PROVISIONING = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -66,11 +66,10 @@ PROFILE_CLASS_OPERATIONAL = 2
 
 可预加载或下载的操作配置文件。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-ProfileClass-PROFILE_CLASS_OPERATIONAL = 2--><!--Device-ProfileClass-PROFILE_CLASS_OPERATIONAL = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
-

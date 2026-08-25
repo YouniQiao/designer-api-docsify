@@ -2,9 +2,9 @@
 
 Describes the callback for a single system bar.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-window-interface SystemBarRegionTint--><!--Device-window-interface SystemBarRegionTint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -26,9 +26,9 @@ Background color of the system bar. The value is a hexadecimal RGB or ARGB color
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-SystemBarRegionTint-backgroundColor?: string--><!--Device-SystemBarRegionTint-backgroundColor?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -44,9 +44,9 @@ Color of the text on the system bar. The default value is **'0xE5FFFFFF'**.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-SystemBarRegionTint-contentColor?: string--><!--Device-SystemBarRegionTint-contentColor?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -62,9 +62,9 @@ Whether the system bar is displayed. **true** if displayed, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-SystemBarRegionTint-isEnable?: boolean--><!--Device-SystemBarRegionTint-isEnable?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -80,9 +80,9 @@ Current position and size of the system bar. The default value is {0,0,0,0}.
 
 **Type:** Rect
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-SystemBarRegionTint-region?: Rect--><!--Device-SystemBarRegionTint-region?: Rect-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -98,11 +98,10 @@ Type of the system bar whose properties are changed. Only the status bar and nav
 
 **Type:** WindowType
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-SystemBarRegionTint-type: WindowType--><!--Device-SystemBarRegionTint-type: WindowType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
-

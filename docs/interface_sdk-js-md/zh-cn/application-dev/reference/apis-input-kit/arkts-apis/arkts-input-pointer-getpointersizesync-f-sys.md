@@ -14,9 +14,9 @@ function getPointerSizeSync(): int
 
 获取鼠标光标大小，使用同步方式返回结果。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-pointer-function getPointerSizeSync(): int--><!--Device-pointer-function getPointerSizeSync(): int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -24,15 +24,15 @@ function getPointerSizeSync(): int
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 鼠标光标大小，范围为[1, 7]。 |
+| 类型 |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 **示例**
 
@@ -86,4 +86,3 @@ struct Index {
   }
 }
 ```
-

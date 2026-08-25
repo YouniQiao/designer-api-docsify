@@ -4,7 +4,7 @@ Specifies the target node for component binding.
 
 **Since:** 18
 
-<!--Device-unnamed-export interface TargetInfo--><!--Device-unnamed-export interface TargetInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,11 +29,11 @@ Unique ID of the custom component where the target node is located. When the abo
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-TargetInfo-componentId?: number--><!--Device-TargetInfo-componentId?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,11 +49,10 @@ Target node for binding popups or menus.<br>**NOTE：**<br>1. When **id** is a n
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-TargetInfo-id: string | number--><!--Device-TargetInfo-id: string | number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

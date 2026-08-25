@@ -4,13 +4,13 @@ Provides information about geographic locations@interface Location
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [Location](arkts-location-geolocationmanager-location-i.md)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-geolocation-export interface Location--><!--Device-geolocation-export interface Location-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -32,13 +32,13 @@ Indicates location accuracy, in meters.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [accuracy](arkts-location-geolocationmanager-location-i.md#accuracy)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-Location-accuracy: number--><!--Device-Location-accuracy: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -54,13 +54,13 @@ Indicates additional information.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [additions](arkts-location-geolocationmanager-location-i.md#additions)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-Location-additions?: Array<string>--><!--Device-Location-additions?: Array<string>-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -76,13 +76,13 @@ Indicates the amount of additional descriptive information.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [additionSize](arkts-location-geolocationmanager-location-i.md#additionsize)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-Location-additionSize?: number--><!--Device-Location-additionSize?: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -98,13 +98,13 @@ Indicates location altitude, in meters.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [altitude](arkts-location-geolocationmanager-location-i.md#altitude)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-Location-altitude: number--><!--Device-Location-altitude: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -120,13 +120,13 @@ Indicates direction information.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [direction](arkts-location-geolocationmanager-location-i.md#direction)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-Location-direction: number--><!--Device-Location-direction: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -142,13 +142,13 @@ Indicates latitude information. A positive value indicates north latitude, and a
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [latitude](arkts-location-geolocationmanager-location-i.md#latitude)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-Location-latitude: number--><!--Device-Location-latitude: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -164,13 +164,13 @@ Indicates Longitude information. A positive value indicates east longitude , and
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [longitude](arkts-location-geolocationmanager-location-i.md#longitude)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-Location-longitude: number--><!--Device-Location-longitude: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -186,13 +186,13 @@ Indicates speed, in m/s.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [speed](arkts-location-geolocationmanager-location-i.md#speed)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-Location-speed: number--><!--Device-Location-speed: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -208,13 +208,13 @@ Indicates location timestamp since boot.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [timeSinceBoot](arkts-location-geolocationmanager-location-i.md#timesinceboot)
 
 **Required permissions:** ohos.permission.LOCATION
-
-<!--Device-Location-timeSinceBoot: number--><!--Device-Location-timeSinceBoot: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -230,13 +230,12 @@ Indicates location timestamp in the UTC format.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [timeStamp](arkts-location-geolocationmanager-location-i.md#timestamp)
 
 **Required permissions:** ohos.permission.LOCATION
 
-<!--Device-Location-timeStamp: number--><!--Device-Location-timeStamp: number-End-->
-
 **System capability:** SystemCapability.Location.Location.Core
-

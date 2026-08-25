@@ -4,7 +4,7 @@ Describes the animation information of the **Tabs** component.
 
 **Since:** 11
 
-<!--Device-unnamed-declare interface TabsAnimationEvent--><!--Device-unnamed-declare interface TabsAnimationEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,11 +27,11 @@ Offset of the currently displayed element relative to the start position of the 
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TabsAnimationEvent-currentOffset: number--><!--Device-TabsAnimationEvent-currentOffset: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,11 +49,11 @@ Offset of the target element relative to the start position of the **Tabs** comp
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TabsAnimationEvent-targetOffset: number--><!--Device-TabsAnimationEvent-targetOffset: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -71,11 +71,10 @@ Hands-off velocity at the beginning of the animation. Unit: vp/s.Default value: 
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-TabsAnimationEvent-velocity: number--><!--Device-TabsAnimationEvent-velocity: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

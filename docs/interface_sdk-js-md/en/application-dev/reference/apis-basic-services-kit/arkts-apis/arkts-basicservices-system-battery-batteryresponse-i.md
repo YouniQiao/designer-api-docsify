@@ -4,9 +4,9 @@ Defines a response that returns the charging status and remaining power of the d
 
 **Since:** 3
 
-**Deprecated since:** 6
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface BatteryResponse--><!--Device-unnamed-export interface BatteryResponse-End-->
+**Deprecated since:** 6
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Lite
 
@@ -22,17 +22,17 @@ import { Battery, BatteryResponse, GetStatusOptions } from '@kit.BasicServicesKi
 charging: boolean
 ```
 
-Whether the battery is being charged. The value **true** indicates that the battery is being charged; **false** indicates the opposite. The default value is **false**.Note: This API is no longer maintained since API version 6 except for lite wearables. You are advised to use batteryInfo.chargingStatus instead.
+Whether the battery is being charged. The value **true** indicates that the battery is being charged; **false** indicates the opposite. The default value is **false**.Note: This API is no longer maintained since API version 6 except for lite wearables. You are advised to use [batteryInfo.chargingStatus](../../../reference/apis-basic-services-kit/js-apis-battery-info.md#constants) instead.
 
 **Type:** boolean
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 6
 
-**Substitutes:** [chargingStatus](arkts-basicservices-batteryinfo-chargingstatus-f.md)
-
-<!--Device-BatteryResponse-charging: boolean--><!--Device-BatteryResponse-charging: boolean-End-->
+**Substitutes:** [chargingStatus](arkts-basicservices-batteryinfo-con.md#chargingstatus)
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Lite
 
@@ -42,17 +42,16 @@ Whether the battery is being charged. The value **true** indicates that the batt
 level: number
 ```
 
-Current battery level in percent, which ranges from **0.00** to **1.00**.Note: This API is no longer maintained since API version 6 except for lite wearables. You are advised to use batteryInfo.batterySOC instead.
+Current battery level in percent, which ranges from **0.00** to **1.00**.Note: This API is no longer maintained since API version 6 except for lite wearables. You are advised to use [batteryInfo.batterySOC](../../../reference/apis-basic-services-kit/js-apis-battery-info.md#constants) instead.
 
 **Type:** number
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 6
 
-**Substitutes:** [batterySOC](arkts-basicservices-batteryinfo-batterysoc-f.md)
-
-<!--Device-BatteryResponse-level: number--><!--Device-BatteryResponse-level: number-End-->
+**Substitutes:** [batterySOC](arkts-basicservices-batteryinfo-con.md#batterysoc)
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Lite
-

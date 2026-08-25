@@ -2,9 +2,9 @@
 
 Enumerates the font hinting types.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-drawing-enum FontHinting--><!--Device-drawing-enum FontHinting-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -16,11 +16,11 @@ NONE = 0
 
 No font hinting is used.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-FontHinting-NONE = 0--><!--Device-FontHinting-NONE = 0-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,11 +32,11 @@ SLIGHT = 1
 
 Slight font hinting is used to improve contrast.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-FontHinting-SLIGHT = 1--><!--Device-FontHinting-SLIGHT = 1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -48,11 +48,11 @@ NORMAL = 2
 
 Normal font hinting is used to improve contrast.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-FontHinting-NORMAL = 2--><!--Device-FontHinting-NORMAL = 2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -64,11 +64,10 @@ FULL = 3
 
 Full font hinting is used to improve contrast.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-FontHinting-FULL = 3--><!--Device-FontHinting-FULL = 3-End-->
-
 **System capability:** SystemCapability.Graphics.Drawing
-

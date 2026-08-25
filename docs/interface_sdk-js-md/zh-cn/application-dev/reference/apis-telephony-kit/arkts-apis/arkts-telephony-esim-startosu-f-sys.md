@@ -14,11 +14,11 @@ function startOsu(slotId: int): Promise<OsuStatus>
 
 如果指定卡槽的操作系统不是最新的，则执行操作系统升级。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_ESIM_STATE
-
-<!--Device-eSIM-function startOsu(slotId: int): Promise<OsuStatus>--><!--Device-eSIM-function startOsu(slotId: int): Promise<OsuStatus>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -26,26 +26,26 @@ function startOsu(slotId: int): Promise<OsuStatus>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[OsuStatus](arkts-telephony-esim-osustatus-e-sys.md)&gt; | Promise对象，返回操作系统升级的状态。<br/> 1. 正在升级。 <br/> 2. 升级失败。<br/> 3. 升级成功。<br/> 4. 当前版本是 最新版本。<br/> 5. 升级服务不可用。 |
+| 类型 |
+| --- |
+| Promise&lt;[OsuStatus](arkts-telephony-esim-osustatus-e-sys.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3120001](../errorcode-telephony.md#3120001-服务连接失败) | Service connection failed. |
-| [3120002](../errorcode-telephony.md#3120002-系统内部错误) | System internal error. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [3120001](../errorcode-telephony.md#3120001-服务连接失败) |
+| [3120002](../errorcode-telephony.md#3120002-系统内部错误) |
 
 **示例**
 
@@ -59,4 +59,3 @@ eSIM.startOsu(1).then(() => {
     console.error(`startOsu, ErrorState: err->${JSON.stringify(err)}`);
 });
 ```
-

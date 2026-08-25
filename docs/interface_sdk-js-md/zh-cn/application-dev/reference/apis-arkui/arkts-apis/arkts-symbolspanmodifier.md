@@ -4,7 +4,6 @@
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [SymbolSpanModifier](arkts-arkui-symbolspanmodifier-c.md) | Defines ContainerSpan Modifier |
-
+| 名称 |
+| --- |
+| [SymbolSpanModifier](arkts-arkui-symbolspanmodifier-c.md) |

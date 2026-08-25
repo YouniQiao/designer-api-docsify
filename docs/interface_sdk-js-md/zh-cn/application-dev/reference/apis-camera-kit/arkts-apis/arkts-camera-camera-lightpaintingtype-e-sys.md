@@ -2,9 +2,9 @@
 
 Enumerates the types of light painting shutter modes.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-camera-enum LightPaintingType--><!--Device-camera-enum LightPaintingType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -18,9 +18,9 @@ TRAFFIC_TRAILS = 0
 
 Traffic trails.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-LightPaintingType-TRAFFIC_TRAILS = 0--><!--Device-LightPaintingType-TRAFFIC_TRAILS = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -34,9 +34,9 @@ STAR_TRAILS = 1
 
 Star trails.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-LightPaintingType-STAR_TRAILS = 1--><!--Device-LightPaintingType-STAR_TRAILS = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -50,9 +50,9 @@ SILKY_WATER = 2
 
 Silky water.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-LightPaintingType-SILKY_WATER = 2--><!--Device-LightPaintingType-SILKY_WATER = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -66,11 +66,10 @@ LIGHT_GRAFFITI = 3
 
 Light graffiti.
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-LightPaintingType-LIGHT_GRAFFITI = 3--><!--Device-LightPaintingType-LIGHT_GRAFFITI = 3-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
-

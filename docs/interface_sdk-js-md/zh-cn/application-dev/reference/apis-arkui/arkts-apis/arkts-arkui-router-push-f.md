@@ -20,19 +20,19 @@ function push(options: RouterOptions): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl)(options: router.RouterOptions)
-
-<!--Device-router-function push(options: RouterOptions): void--><!--Device-router-function push(options: RouterOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | RouterOptions | 是 | 跳转页面描述信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | 是 |
 
 **示例**
 
@@ -62,4 +62,3 @@ router.push({
   params: new RouterParams('message', [123, 456, 789])
 });
 ```
-

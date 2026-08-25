@@ -21,33 +21,33 @@ function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPic
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-image-function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPictureInfo,    allocatorType?: AllocatorType, pixels?: ArrayBuffer): AuxiliaryPicture--><!--Device-image-function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPictureInfo,    allocatorType?: AllocatorType, pixels?: ArrayBuffer): AuxiliaryPicture-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| auxiliaryPictureInfo | [AuxiliaryPictureInfo](arkts-image-image-auxiliarypictureinfo-i.md) | 是 | 辅助图图像信息。 <br>- 输入的ArrayBuffer的pixelFormat和最终创建出的辅助图的实际pixelFormat需与auxiliaryPictureInfo中指定的pixelFormat保持一致。 <br>- 当AuxiliaryPictureType为GAINMAP时，AllocatorType仅支持传入AUTO/DMA。 <br>- 当传入SHARE_MEMORY时，返回错误码7600205。 |
-| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | 否 | 图像解码的内存类型，AUTO及默认情况下按照DMA处理。 |
-| pixels | ArrayBuffer | 否 | 以buffer形式存放的图像数据。 <br>当未提供ArrayBuffer参数时，默认创建空白辅助图。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| auxiliaryPictureInfo | [AuxiliaryPictureInfo](arkts-image-image-auxiliarypictureinfo-i.md) | 是 |
+| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | 否 |
+| [pixels](arkts-image-image-positionarea-i.md) | ArrayBuffer | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) | 如果操作成功，则返回AuxiliaryPicture实例。 |
+| 类型 |
+| --- |
+| [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7600205](../errorcode-image.md#7600205-不支持的内存格式或像素格式) | Unsupported allocator type, e.g., use shared memory to create a gainmap as only DMA supported hdr metadata. |
-| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter, size.height or size.width is less than or equal to 0. |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) | Alloc memory failed. |
+| 错误码ID |
+| --- |
+| [7600205](../errorcode-image.md#7600205-不支持的内存格式或像素格式) |
+| [7600206](../errorcode-image.md#7600206-无效参数) |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) |
 
 **示例**
 
@@ -61,4 +61,3 @@ function CreateAuxiliaryPictureUsingAllocator(info: image.AuxiliaryPictureInfo, 
   }
 }
 ```
-

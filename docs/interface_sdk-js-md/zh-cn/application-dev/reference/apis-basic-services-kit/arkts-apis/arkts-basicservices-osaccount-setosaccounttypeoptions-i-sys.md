@@ -4,7 +4,7 @@
 
 **起始版本：** 24
 
-<!--Device-osAccount-interface SetOsAccountTypeOptions--><!--Device-osAccount-interface SetOsAccountTypeOptions-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -28,9 +28,8 @@ token?: Uint8Array
 
 **起始版本：** 24
 
-<!--Device-SetOsAccountTypeOptions-token?: Uint8Array--><!--Device-SetOsAccountTypeOptions-token?: Uint8Array-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
-

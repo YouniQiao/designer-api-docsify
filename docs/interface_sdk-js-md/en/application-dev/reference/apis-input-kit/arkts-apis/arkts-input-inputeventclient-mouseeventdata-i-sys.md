@@ -2,9 +2,9 @@
 
 Defines the mouse event data.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-inputEventClient-interface MouseEventData--><!--Device-inputEventClient-interface MouseEventData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -26,9 +26,9 @@ Mouse event.
 
 **Type:** [MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-MouseEventData-mouseEvent: MouseEvent--><!--Device-MouseEventData-mouseEvent: MouseEvent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -44,11 +44,10 @@ Whether to use global coordinates to calculate the injected mouse event. The def
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-MouseEventData-useGlobalCoordinate? : boolean--><!--Device-MouseEventData-useGlobalCoordinate? : boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **System API:** This is a system API.
-

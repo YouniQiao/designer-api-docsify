@@ -1,18 +1,17 @@
 # ModuleConfigInfo (System API)
 
 ```TypeScript
-export type ModuleConfigInfo = _ModuleConfigInfo
+export type ModuleConfigInfo = _PackInfo.ModuleConfigInfo
 ```
 
 Defines the module configuration information of the bundle.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-freeInstall-export type ModuleConfigInfo = _ModuleConfigInfo--><!--Device-freeInstall-export type ModuleConfigInfo = _ModuleConfigInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
 
-**Property type:** _ModuleConfigInfo
-
+**Property type:** _PackInfo.ModuleConfigInfo

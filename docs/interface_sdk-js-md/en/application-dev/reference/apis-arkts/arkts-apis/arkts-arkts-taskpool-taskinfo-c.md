@@ -4,7 +4,7 @@ Describes the internal information about a task.
 
 **Since:** 10
 
-<!--Device-taskpool-class TaskInfo--><!--Device-taskpool-class TaskInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,9 +26,9 @@ Duration that the task has been executed, in ms. The default value is **0**. If 
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-TaskInfo-duration?: number--><!--Device-TaskInfo-duration?: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -44,9 +44,9 @@ Task name. You are advised not to change the value.<br> This API can be used in 
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-TaskInfo-name: string--><!--Device-TaskInfo-name: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -64,9 +64,9 @@ Task state. You are advised not to change the value.<br> This API can be used in
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-TaskInfo-state: State--><!--Device-TaskInfo-state: State-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -84,9 +84,8 @@ Task ID, which is globally unique by default. You are advised not to change the 
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-TaskInfo-taskId: number--><!--Device-TaskInfo-taskId: number-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

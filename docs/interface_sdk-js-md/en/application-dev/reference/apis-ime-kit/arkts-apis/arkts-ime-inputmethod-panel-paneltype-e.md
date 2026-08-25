@@ -2,9 +2,9 @@
 
 Enumerates the types of the input method panel.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-unnamed-export enum PanelType--><!--Device-unnamed-export enum PanelType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -16,9 +16,9 @@ SOFT_KEYBOARD = 0
 
 Soft keyboard.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PanelType-SOFT_KEYBOARD = 0--><!--Device-PanelType-SOFT_KEYBOARD = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -30,9 +30,8 @@ STATUS_BAR
 
 Status bar.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PanelType-STATUS_BAR--><!--Device-PanelType-STATUS_BAR-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

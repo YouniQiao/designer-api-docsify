@@ -4,11 +4,11 @@ The module defines the running information of a process. The information can be 
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ProcessInformation/ProcessInformation](arkts-ability-processinformation-i.md)
-
-<!--Device-unnamed-export interface ProcessRunningInfo--><!--Device-unnamed-export interface ProcessRunningInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -26,11 +26,11 @@ Names of all running bundles in the process.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [bundleNames](arkts-ability-processinformation-i.md#bundlenames)
-
-<!--Device-ProcessRunningInfo-bundleNames: Array<string>--><!--Device-ProcessRunningInfo-bundleNames: Array<string>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -48,11 +48,11 @@ Process ID.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [pid](arkts-ability-processinformation-i.md#pid)
-
-<!--Device-ProcessRunningInfo-pid: number--><!--Device-ProcessRunningInfo-pid: number-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -70,11 +70,11 @@ Process name.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [processName](arkts-ability-processinformation-i.md#processname)
-
-<!--Device-ProcessRunningInfo-processName: string--><!--Device-ProcessRunningInfo-processName: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -92,11 +92,10 @@ UID of the application.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [uid](arkts-ability-processinformation-i.md#uid)
 
-<!--Device-ProcessRunningInfo-uid: number--><!--Device-ProcessRunningInfo-uid: number-End-->
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
-

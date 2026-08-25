@@ -4,7 +4,7 @@ CurrentOffsetResultValue@interface CurrentOffsetResultValue
 
 **Since:** 4
 
-<!--Device-unnamed-export interface CurrentOffsetResultValue--><!--Device-unnamed-export interface CurrentOffsetResultValue-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,9 +20,9 @@ Scrolling offset in the x-axis, in px.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-CurrentOffsetResultValue-x: number--><!--Device-CurrentOffsetResultValue-x: number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,9 +38,8 @@ Scrolling offset in the y-axis, in px.
 
 **Since:** 4
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-CurrentOffsetResultValue-y: number--><!--Device-CurrentOffsetResultValue-y: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [ImageModifier](arkts-arkui-imagemodifier-c.md) | Defines Image Modifier@implements { ImageAttribute, AttributeModifier&lt;ImageAttribute&gt; } |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ImageModifier](arkts-arkui-imagemodifier-c.md) |

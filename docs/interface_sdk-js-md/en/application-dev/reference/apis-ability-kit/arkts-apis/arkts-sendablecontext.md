@@ -4,7 +4,6 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [SendableContext](arkts-ability-sendablecontext-i.md) | SendableContext complies with the [Sendable protocol](../../../arkts-utils/arkts-sendable.md#sendable-protocol) and inherits from lang.ISendable. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [SendableContext](arkts-ability-sendablecontext-i.md) |

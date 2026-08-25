@@ -2,9 +2,9 @@
 
 Defines the DND time type.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-notificationManager-export enum DoNotDisturbType--><!--Device-notificationManager-export enum DoNotDisturbType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -18,9 +18,9 @@ TYPE_NONE = 0
 
 Non-DND.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DoNotDisturbType-TYPE_NONE = 0--><!--Device-DoNotDisturbType-TYPE_NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -34,9 +34,9 @@ TYPE_ONCE = 1
 
 One-shot DND at the specified time segment (only considering the hour and minute).
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DoNotDisturbType-TYPE_ONCE = 1--><!--Device-DoNotDisturbType-TYPE_ONCE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -50,9 +50,9 @@ TYPE_DAILY = 2
 
 Daily DND at the specified time segment (only considering the hour and minute).
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DoNotDisturbType-TYPE_DAILY = 2--><!--Device-DoNotDisturbType-TYPE_DAILY = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -66,11 +66,10 @@ TYPE_CLEARLY = 3
 
 DND at the specified time segment (with the hour, day, and month specified).
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DoNotDisturbType-TYPE_CLEARLY = 3--><!--Device-DoNotDisturbType-TYPE_CLEARLY = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-

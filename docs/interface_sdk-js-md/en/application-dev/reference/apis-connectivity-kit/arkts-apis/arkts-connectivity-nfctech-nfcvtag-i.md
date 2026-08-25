@@ -5,33 +5,39 @@ Provides APIs to access NFC-V (ISO 15693) properties and perform I/O operations 
 
 **Inheritance/Implementation:** NfcVTag extends TagSession
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-export interface NfcVTag--><!--Device-unnamed-export interface NfcVTag-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## getDsfId
 
+ArkTS-Dyn:
+```TypeScript
+getDsfId(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getDsfId(): int
 ```
 
 Obtains the data storage format identifier (DSFID) from this NFC-V tag.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NfcVTag-getDsfId(): int--><!--Device-NfcVTag-getDsfId(): int-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | DSFID obtained, which consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -45,25 +51,31 @@ console.info("nfcV dsfId: " + dsfId);
 
 ## getResponseFlags
 
+ArkTS-Dyn:
+```TypeScript
+getResponseFlags(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 getResponseFlags(): int
 ```
 
 Obtains the response flags from this NFC-V tag.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NfcVTag-getResponseFlags(): int--><!--Device-NfcVTag-getResponseFlags(): int-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Response flags obtained, which consist of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -74,4 +86,3 @@ import { tag } from '@kit.ConnectivityKit';
 let responseFlags : number = nfcV.getResponseFlags();
 console.info("nfcV responseFlags: " + responseFlags);
 ```
-

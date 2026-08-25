@@ -2,9 +2,9 @@
 
 Provide interfaces related to debugger access and obtaining CPU, memory and other virtual machine information during runtime for JS programs@namespace hidebug
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-declare namespace hidebug--><!--Device-unnamed-declare namespace hidebug-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -18,83 +18,82 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 ### Namespaces
 
-| Name | Description |
-| --- | --- |
-| [tags](arkts-performanceanalysis-hidebug-tags-n.md) | Provide trace tags@namespace tags |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [tags](arkts-performanceanalysis-hidebug-tags-n.md) |
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getNativeHeapSize](arkts-performanceanalysis-hidebug-getnativeheapsize-f.md) | Obtains the total number of bytes occupied by the total space (**uordblks** + **fordblks**, which are obtained from **mallinfo**) held by a process, which is measured by the memory allocator. |
-| [getNativeHeapAllocatedSize](arkts-performanceanalysis-hidebug-getnativeheapallocatedsize-f.md) | Obtains the total number of bytes occupied by the total allocated space (**uordblks**, which is obtained from **mallinfo**) held by a process, which is measured by the memory allocator. |
-| [getNativeHeapFreeSize](arkts-performanceanalysis-hidebug-getnativeheapfreesize-f.md) | Obtains the total number of bytes occupied by the total free space (**fordblks**, which is obtained from **mallinfo**) held by a process, which is measured by the memory allocator. |
-| [getVss](arkts-performanceanalysis-hidebug-getvss-f.md) | Obtains the virtual set size used by the application process. This API is implemented by multiplying the value of **size** (number of memory pages) in the **\/proc/{pid}/statm** node by the page size (4 KB per page). |
-| [getPss](arkts-performanceanalysis-hidebug-getpss-f.md) | Obtains the size of the physical memory actually used by the application process. This API is implemented by summing up the values of **Pss** and **SwapPss** in the **\/proc/{pid}/smaps_rollup** node. |
-| [getSharedDirty](arkts-performanceanalysis-hidebug-getshareddirty-f.md) | Obtains the size of the shared dirty memory of a process. This API is implemented by reading the value of **Shared_Dirty** in the **\/proc/{pid}/smaps_rollup** node. |
-| [getPrivateDirty](arkts-performanceanalysis-hidebug-getprivatedirty-f.md) | Obtains the size of the private dirty memory of a process. This API is implemented by reading the value of **Private_Dirty** in the **\/proc/{pid}/smaps_rollup** node. |
-| [getCpuUsage](arkts-performanceanalysis-hidebug-getcpuusage-f.md) | Obtains the CPU usage of a process. |
-| [startProfiling](arkts-performanceanalysis-hidebug-startprofiling-f.md) | Starts the VM profiling method. **startProfiling(filename: string)** and **stopProfiling()** are called in pairs. **startProfiling(filename: string)** always occurs before **stopProfiling()**. You are advised not to call either of these methods repeatedly. Otherwise, an exception may occur. |
-| [stopProfiling](arkts-performanceanalysis-hidebug-stopprofiling-f.md) | Stops the VM profiling method. **stopProfiling()** and **startProfiling(filename: string)** are called in pairs. **startProfiling(filename: string)** always occurs before **stopProfiling()**. You are advised not to call either of these methods repeatedly. Otherwise, an exception may occur. |
-| [dumpHeapData](arkts-performanceanalysis-hidebug-dumpheapdata-f.md) | Exports the VM heap data and generates a filename.heapsnapshot file. The input parameter is a user-defined file name, excluding the file suffix. The generated file is in the files folder under the application directory. Such as "/data/accounts/account_0/appdata/[package name]/files/xxx.heapsnapshot". |
-| [startJsCpuProfiling](arkts-performanceanalysis-hidebug-startjscpuprofiling-f.md) | Starts the VM profiling method. **startJsCpuProfiling(filename: string)** and **stopJsCpuProfiling()** are called in pairs. **startJsCpuProfiling(filename: string)** always occurs before **stopJsCpuProfiling()**. You are advised not to call either of these methods repeatedly. Otherwise, an exception may occur. |
-| [stopJsCpuProfiling](arkts-performanceanalysis-hidebug-stopjscpuprofiling-f.md) | Stops the VM profiling method. **stopJsCpuProfiling()** and **startJsCpuProfiling(filename: string)** are called in pairs. **startJsCpuProfiling()** always occurs before **stopJsCpuProfiling()**. You are advised not to call either of these methods repeatedly. Otherwise, an exception may occur. |
-| [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md) | Dumps VM heap data. |
-| [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md) | Exports the heap data. The input parameter is a user-defined file name, excluding the file suffix. The generated file is in the files folder under the application directory. |
-| [getServiceDump](arkts-performanceanalysis-hidebug-getservicedump-f.md) | Obtains system service information. It need dump permission. This API can be called only by system application. |
-| [getSystemCpuUsage](arkts-performanceanalysis-hidebug-getsystemcpuusage-f.md) | Obtains the CPU usage of the system. |
-| [getAppThreadCpuUsage](arkts-performanceanalysis-hidebug-getappthreadcpuusage-f.md) | Obtains the CPU usage of application threads. |
-| [getSystemMemInfo](arkts-performanceanalysis-hidebug-getsystemmeminfo-f.md) | Obtains system memory information. This API is implemented by reading data from the **\/proc/meminfo** node. |
-| [getAppNativeMemInfo](arkts-performanceanalysis-hidebug-getappnativememinfo-f.md) | Obtains the memory information of the application process. This API is implemented by reading data from the **\/proc/{pid}/smaps_rollup and /proc/{pid}/statm** node. |
-| [getAppMemoryLimit](arkts-performanceanalysis-hidebug-getappmemorylimit-f.md) | Obtains the memory limit of an application process. |
-| [getAppVMMemoryInfo](arkts-performanceanalysis-hidebug-getappvmmemoryinfo-f.md) | Obtains VM memory information. |
-| [getAppVMObjectUsedSize](arkts-performanceanalysis-hidebug-getappvmobjectusedsize-f.md) | Obtains the VM memory size occupied by ArkTS objects. |
-| [getAppNativeMemInfoAsync](arkts-performanceanalysis-hidebug-getappnativememinfoasync-f.md) | Obtains the memory information of application processes by reading the data of the **\/proc/{pid}/smaps_rollup** and **\/proc/{pid}/statm** nodes. This API uses a promise to return the result. |
-| [getAppNativeMemInfoWithCache](arkts-performanceanalysis-hidebug-getappnativememinfowithcache-f.md) | Obtains the memory information of the application process. This API uses the cache mechanism and has higher performance than the **getAppNativeMemInfo** API. The cache is valid for 5 minutes. |
-| [startAppTraceCapture](arkts-performanceanalysis-hidebug-startapptracecapture-f.md) | Starts automatic trace collection in a specified scope. This API is a supplement to the HiTrace module. The performance consumption during trace collection increases with the collection scope. Therefore, before using this API, you are advised to run the **hitrace** command to capture trace logs and select the key scope of trace collection to improve the API performance. **startAppTraceCapture()** and [stopAppTraceCapture()](arkts-performanceanalysis-hidebug-stopapptracecapture-f.md) must be called in pairs. Repeat calling of **startAppTraceCapture()** will cause exceptions. Trace collection consumes a lot of performance resources. Therefore, call **stopAppTraceCapture()** immediately after trace collection is complete.When an application calls **startAppTraceCapture()** to collect trace data and the size of the data exceeds the value of **limitSize**, the system automatically calls **stopAppTraceCapture()** to stop trace collection. Therefore, if **limitSize** is set improperly, the generated trace data is insufficient for fault analysis. Therefore, you need to evaluate the value of **limitSize** as required.Evaluation method: limitSize = Expected trace collection duration x Unit trace traffic.Expected trace collection duration: You can determine the duration based on the fault scenario. The unit is second.Unit trace traffic: Size of trace data generated by an application per second, in KB/s. The recommended value is 30 0 KB/s. You are advised to use the actual value of your application.To obtain the unit trace traffic of an application, you can call **startAppTraceCapture()** with **limitSize** set to the maximum value 500 MB. After **N** seconds, call **stopAppTraceCapture()** to stop the collection and check the size **S** (KB) of the trace data. The unit trace traffic is **S**\/**N** (KB/s). |
-| [stopAppTraceCapture](arkts-performanceanalysis-hidebug-stopapptracecapture-f.md) | Stops application trace collection. Use [startAppTraceCapture()](arkts-performanceanalysis-hidebug-startapptracecapture-f.md) to start collection before calling this API. If this API is called before trace collection or it is repeatedly called, an exception will occur.If **startAppTraceCapture ()** is called without a properly specified **limitSize**, the size of the generated trace may exceed the **limitSize** value, causing the system to automatically call **stopAppTraceCapture()**. In this case, if **stopAppTraceCapture()** is called again, an error code 11400105 will be displayed. |
-| [requestTrace](arkts-performanceanalysis-hidebug-requesttrace-f.md) | Requests trace collection with the specified configuration. |
-| [getVMRuntimeStats](arkts-performanceanalysis-hidebug-getvmruntimestats-f.md) | Obtains the system GC statistics. |
-| [getVMRuntimeStat](arkts-performanceanalysis-hidebug-getvmruntimestat-f.md) | Obtains the specified system GC statistics based on parameters. |
-| [setAppResourceLimit](arkts-performanceanalysis-hidebug-setappresourcelimit-f.md) | Sets the number of FDs, number of threads, JS memory, or native memory limit of the application. |
-| [isDebugState](arkts-performanceanalysis-hidebug-isdebugstate-f.md) | Obtains the debugging state of an application process. |
-| [getGraphicsMemory](arkts-performanceanalysis-hidebug-getgraphicsmemory-f.md) | Obtains the total GPU memory size (**gl** + **graph**) of the application. This API uses a promise to return the result. |
-| [getGraphicsMemorySync](arkts-performanceanalysis-hidebug-getgraphicsmemorysync-f.md) | Obtains the total GPU memory size (GL + graph) of an application in synchronous mode. |
-| [getGraphicsMemorySummary](arkts-performanceanalysis-hidebug-getgraphicsmemorysummary-f.md) | Obtains the size of the GPU memory summary. This API uses a promise to return the result. |
-| [setJsRawHeapTrimLevel](arkts-performanceanalysis-hidebug-setjsrawheaptrimlevel-f.md) | Sets the raw heap snapshot trimming level for the current process. |
-| [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md) | Dumps the original heap snapshot of the VM for the current thread and generates a .rawheap file. This API uses a promise to return the result. The file can be converted into a heapsnapshot file using rawheap-translator for parsing. |
-| [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md) | Dumps the original heap snapshot of the VM for the current thread. The API uses a promise to return the path of the.rawheap file. You can use rawheap-translator to convert the generated file into a .heapsnapshot file for parsing. The generated file will be stored in a folder within the application directory. However, since this file is usually large, the system imposes restrictions on the frequency and number of calls to this function. Consequently, you might fail to obtain the dump file due to quota limitations. These failures will persist until the quota is regularly refreshed by the system. Therefore, it is advisable to delete the file immediately after you have finished processing it. Moreover, it is recommended that you use this function in the gray - release version. |
-| [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md) | Dump the raw heap snapshot of the JavaScript Virtual Machine for the current thread.The generated file will be stored in a folder within the application directory. However, since this file is usually large, the system imposes restrictions on the frequency and number of calls to this function. Consequently, you might fail to obtain the dump file due to quota limitations. These failures will persist until the quota is regularly refreshed by the system. Therefore, it is advisable to delete the file immediately after you have finished processing it. Moreover, it is recommended that you use this function in the gray - release version. |
-| [enableGwpAsanGrayscale](arkts-performanceanalysis-hidebug-enablegwpasangrayscale-f.md) | Enable the GWP-ASAN grayscale of your application. |
-| [disableGwpAsanGrayscale](arkts-performanceanalysis-hidebug-disablegwpasangrayscale-f.md) | Disables GWP-ASan. This API is used to cancel the custom configuration and restore the default parameter [GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md). |
-| [getGwpAsanGrayscaleState](arkts-performanceanalysis-hidebug-getgwpasangrayscalestate-f.md) | Obtain the remaining days of GWP-ASan grayscale for your application. |
-| [setProcDumpInSharedOOM](arkts-performanceanalysis-hidebug-setprocdumpinsharedoom-f.md) | Changes the dump heap snapshot from the thread-level to the process-level. |
-| [getRssInfo](arkts-performanceanalysis-hidebug-getrssinfo-f.md) | Obtains the physical memory information of application process. This API is implemented by reading data from the /proc/{pid}/status node. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getNativeHeapSize](arkts-performanceanalysis-hidebug-getnativeheapsize-f.md) |
+| [getNativeHeapAllocatedSize](arkts-performanceanalysis-hidebug-getnativeheapallocatedsize-f.md) |
+| [getNativeHeapFreeSize](arkts-performanceanalysis-hidebug-getnativeheapfreesize-f.md) |
+| [getVss](arkts-performanceanalysis-hidebug-getvss-f.md) |
+| [getPss](arkts-performanceanalysis-hidebug-getpss-f.md) |
+| [getSharedDirty](arkts-performanceanalysis-hidebug-getshareddirty-f.md) |
+| [getPrivateDirty](arkts-performanceanalysis-hidebug-getprivatedirty-f.md) |
+| [getCpuUsage](arkts-performanceanalysis-hidebug-getcpuusage-f.md) |
+| [startProfiling](arkts-performanceanalysis-hidebug-startprofiling-f.md) |
+| [stopProfiling](arkts-performanceanalysis-hidebug-stopprofiling-f.md) |
+| [dumpHeapData](arkts-performanceanalysis-hidebug-dumpheapdata-f.md) |
+| [startJsCpuProfiling](arkts-performanceanalysis-hidebug-startjscpuprofiling-f.md) |
+| [stopJsCpuProfiling](arkts-performanceanalysis-hidebug-stopjscpuprofiling-f.md) |
+| [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md) |
+| [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md) |
+| [getServiceDump](arkts-performanceanalysis-hidebug-getservicedump-f.md) |
+| [getSystemCpuUsage](arkts-performanceanalysis-hidebug-getsystemcpuusage-f.md) |
+| [getAppThreadCpuUsage](arkts-performanceanalysis-hidebug-getappthreadcpuusage-f.md) |
+| [getSystemMemInfo](arkts-performanceanalysis-hidebug-getsystemmeminfo-f.md) |
+| [getAppNativeMemInfo](arkts-performanceanalysis-hidebug-getappnativememinfo-f.md) |
+| [getAppMemoryLimit](arkts-performanceanalysis-hidebug-getappmemorylimit-f.md) |
+| [getAppVMMemoryInfo](arkts-performanceanalysis-hidebug-getappvmmemoryinfo-f.md) |
+| [getAppVMObjectUsedSize](arkts-performanceanalysis-hidebug-getappvmobjectusedsize-f.md) |
+| [getAppNativeMemInfoAsync](arkts-performanceanalysis-hidebug-getappnativememinfoasync-f.md) |
+| [getAppNativeMemInfoWithCache](arkts-performanceanalysis-hidebug-getappnativememinfowithcache-f.md) |
+| [startAppTraceCapture](arkts-performanceanalysis-hidebug-startapptracecapture-f.md) |
+| [stopAppTraceCapture](arkts-performanceanalysis-hidebug-stopapptracecapture-f.md) |
+| [requestTrace](arkts-performanceanalysis-hidebug-requesttrace-f.md) |
+| [getVMRuntimeStats](arkts-performanceanalysis-hidebug-getvmruntimestats-f.md) |
+| [getVMRuntimeStat](arkts-performanceanalysis-hidebug-getvmruntimestat-f.md) |
+| [setAppResourceLimit](arkts-performanceanalysis-hidebug-setappresourcelimit-f.md) |
+| [isDebugState](arkts-performanceanalysis-hidebug-isdebugstate-f.md) |
+| [getGraphicsMemory](arkts-performanceanalysis-hidebug-getgraphicsmemory-f.md) |
+| [getGraphicsMemorySync](arkts-performanceanalysis-hidebug-getgraphicsmemorysync-f.md) |
+| [getGraphicsMemorySummary](arkts-performanceanalysis-hidebug-getgraphicsmemorysummary-f.md) |
+| [setJsRawHeapTrimLevel](arkts-performanceanalysis-hidebug-setjsrawheaptrimlevel-f.md) |
+| [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md) |
+| [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md) |
+| [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md) |
+| [enableGwpAsanGrayscale](arkts-performanceanalysis-hidebug-enablegwpasangrayscale-f.md) |
+| [disableGwpAsanGrayscale](arkts-performanceanalysis-hidebug-disablegwpasangrayscale-f.md) |
+| [getGwpAsanGrayscaleState](arkts-performanceanalysis-hidebug-getgwpasangrayscalestate-f.md) |
+| [setProcDumpInSharedOOM](arkts-performanceanalysis-hidebug-setprocdumpinsharedoom-f.md) |
+| [getRssInfo](arkts-performanceanalysis-hidebug-getrssinfo-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ThreadCpuUsage](arkts-performanceanalysis-hidebug-threadcpuusage-i.md) | Describes the CPU usage of a thread.@interface ThreadCpuUsage |
-| [SystemMemInfo](arkts-performanceanalysis-hidebug-systemmeminfo-i.md) | Describes the system memory information, including the total memory, free memory, and available memory.@interface SystemMemInfo |
-| [NativeMemInfo](arkts-performanceanalysis-hidebug-nativememinfo-i.md) | Describes memory information of the application process.@interface NativeMemInfo |
-| [MemoryLimit](arkts-performanceanalysis-hidebug-memorylimit-i.md) | Defines the memory limit of the application process.@interface MemoryLimit |
-| [VMMemoryInfo](arkts-performanceanalysis-hidebug-vmmemoryinfo-i.md) | Describes the VM memory information.@interface VMMemoryInfo |
-| [RequestTraceConfig](arkts-performanceanalysis-hidebug-requesttraceconfig-i.md) | Describes the trace request configuration. |
-| [GraphicsMemorySummary](arkts-performanceanalysis-hidebug-graphicsmemorysummary-i.md) | Describes the GPU memory data of an application, including the GL and Graph parts.@interface GraphicsMemorySummary |
-| [GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md) | GwpAsan Options.@interface GwpAsanOptions |
-| [RssInfo](arkts-performanceanalysis-hidebug-rssinfo-i.md) | Describes the physical memory information of the application process.@interface RssInfo |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ThreadCpuUsage](arkts-performanceanalysis-hidebug-threadcpuusage-i.md) |
+| [SystemMemInfo](arkts-performanceanalysis-hidebug-systemmeminfo-i.md) |
+| [NativeMemInfo](arkts-performanceanalysis-hidebug-nativememinfo-i.md) |
+| [MemoryLimit](arkts-performanceanalysis-hidebug-memorylimit-i.md) |
+| [VMMemoryInfo](arkts-performanceanalysis-hidebug-vmmemoryinfo-i.md) |
+| [RequestTraceConfig](arkts-performanceanalysis-hidebug-requesttraceconfig-i.md) |
+| [GraphicsMemorySummary](arkts-performanceanalysis-hidebug-graphicsmemorysummary-i.md) |
+| [GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md) |
+| [RssInfo](arkts-performanceanalysis-hidebug-rssinfo-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [TraceFlag](arkts-performanceanalysis-hidebug-traceflag-e.md) | Describes types of trace collection threads, including the main thread and all threads.@enum { int } |
-| [JsRawHeapTrimLevel](arkts-performanceanalysis-hidebug-jsrawheaptrimlevel-e.md) | Trimming level of raw heap snapshot.@enum { number } |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [TraceFlag](arkts-performanceanalysis-hidebug-traceflag-e.md) |
+| [JsRawHeapTrimLevel](arkts-performanceanalysis-hidebug-jsrawheaptrimlevel-e.md) |
 
 ### Types
 
-| Name | Description |
-| --- | --- |
-| [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md) | Describes the key-value pair used to store GC statistics. This type does not support multi-thread operations. If this type is operated by multiple threads at the same time in an application, use a lock for it. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md) |

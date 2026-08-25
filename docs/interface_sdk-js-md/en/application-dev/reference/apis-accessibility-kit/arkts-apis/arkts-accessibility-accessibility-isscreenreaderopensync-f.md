@@ -15,21 +15,21 @@ function isScreenReaderOpenSync(): boolean
 
 Checks whether screen reader mode is enabled.
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
-<!--Device-accessibility-function isScreenReaderOpenSync(): boolean--><!--Device-accessibility-function isScreenReaderOpenSync(): boolean-End-->
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Vision
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the screen reader is enabled. Returns **true** if the screen reader is enabled; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -38,4 +38,3 @@ import { accessibility } from '@kit.AccessibilityKit';
 
 let status: boolean = accessibility.isScreenReaderOpenSync();
 ```
-

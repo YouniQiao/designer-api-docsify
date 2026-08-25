@@ -1,8 +1,6 @@
 # NumberFormatPart
 
-**Since:** -1
-
-<!--Device-Intl-interface NumberFormatPart--><!--Device-Intl-interface NumberFormatPart-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,9 +15,7 @@ type: NumberFormatPartTypes
 
 **Type:** NumberFormatPartTypes
 
-**Since:** -1
-
-<!--Device-NumberFormatPart-type: NumberFormatPartTypes--><!--Device-NumberFormatPart-type: NumberFormatPartTypes-End-->
+**ArkTS mode:** 
 
 ## value
 
@@ -29,7 +25,4 @@ value: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-NumberFormatPart-value: string--><!--Device-NumberFormatPart-value: string-End-->
-
+**ArkTS mode:** 

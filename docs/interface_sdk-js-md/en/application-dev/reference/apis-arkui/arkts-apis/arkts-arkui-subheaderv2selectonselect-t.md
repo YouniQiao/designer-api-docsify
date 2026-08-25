@@ -8,18 +8,17 @@ Defines the callback invoked when an item in the drop-down list box is selected.
 
 **Since:** 18
 
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-unnamed-export type SubHeaderV2SelectOnSelect = (selectedIndex: number, selectedContent?: string) => void--><!--Device-unnamed-export type SubHeaderV2SelectOnSelect = (selectedIndex: number, selectedContent?: string) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| selectedIndex | number | Yes | Index of the selected drop-down menu option. |
-| selectedContent | string | No | Content of the selected drop-down menu option. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| selectedIndex | number | Yes |
+| selectedContent | string | No |

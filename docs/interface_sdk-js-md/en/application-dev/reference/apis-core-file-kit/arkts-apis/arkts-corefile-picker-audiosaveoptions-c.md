@@ -4,7 +4,7 @@ Defines the options for saving audio clips.
 
 **Since:** 9
 
-<!--Device-picker-class AudioSaveOptions--><!--Device-picker-class AudioSaveOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -20,15 +20,14 @@ import { picker } from '@kit.CoreFileKit';
 newFileNames?: Array<string>
 ```
 
-File names of the audio clips to save. If this parameter is not specified, the user needs to enter the file names.
+Name of the document to save. If this parameter is not specified, the user needs to enter the file name.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 9
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-AudioSaveOptions-newFileNames?: Array<string>--><!--Device-AudioSaveOptions-newFileNames?: Array<string>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
-

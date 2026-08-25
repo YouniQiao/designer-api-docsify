@@ -6,7 +6,7 @@ The definition of Banner.@extends MediaEntity @interface Banner
 
 **Since:** 23
 
-<!--Device-avMusicTemplate-interface Banner--><!--Device-avMusicTemplate-interface Banner-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -28,9 +28,8 @@ Is support one play
 
 **Since:** 23
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Banner-isSupportOnePlay: boolean--><!--Device-Banner-isSupportOnePlay: boolean-End-->
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-

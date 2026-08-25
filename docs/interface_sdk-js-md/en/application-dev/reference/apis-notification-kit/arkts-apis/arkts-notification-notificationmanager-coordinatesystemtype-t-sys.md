@@ -8,13 +8,12 @@ Enumerates the coordinate systems of a geofence.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-notificationManager-export type CoordinateSystemType = _CoordinateSystemType--><!--Device-notificationManager-export type CoordinateSystemType = _CoordinateSystemType-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
 
 **Property type:** _CoordinateSystemType
-

@@ -4,12 +4,9 @@
 type NumberFormatPartTypes = ES2018NumberFormatPartType | ES2020NumberFormatPartType
 ```
 
-**Since:** -1
+**ArkTS mode:** 
 
-<!--Device-Intl-type NumberFormatPartTypes = ES2018NumberFormatPartType | ES2020NumberFormatPartType--><!--Device-Intl-type NumberFormatPartTypes = ES2018NumberFormatPartType | ES2020NumberFormatPartType-End-->
-
-| Type | Description |
-| --- | --- |
-| ES2018NumberFormatPartType |  |
-| ES2020NumberFormatPartType |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ES2018NumberFormatPartType](../../apis-arkts/arkts-apis/arkts-arkts-intl-es2018numberformatparttype-t.md) |
+| [ES2020NumberFormatPartType](../../apis-arkts/arkts-apis/arkts-arkts-intl-es2020numberformatparttype-t.md) |

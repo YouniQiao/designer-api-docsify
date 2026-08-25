@@ -4,7 +4,6 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | The module defines the result code and data returned to the caller when a started UIAbility is terminated. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) |

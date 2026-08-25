@@ -4,7 +4,7 @@ HTTP拦截器链。
 
 **起始版本：** 22
 
-<!--Device-http-export class HttpInterceptorChain--><!--Device-http-export class HttpInterceptorChain-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -27,31 +27,31 @@ public addChain(chain: HttpInterceptor[]): boolean
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
-<!--Device-HttpInterceptorChain-public addChain(chain: HttpInterceptor[]): boolean--><!--Device-HttpInterceptorChain-public addChain(chain: HttpInterceptor[]): boolean-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| chain | [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] | 是 | 拦截器实例组成的拦截链，支持传入单个或者多个不同类型的拦截器。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| chain | [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 拦截器是否添加成功。true表示拦截器添加成功，false表示拦截器没有添加成功。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 2300801 | Parameter type not supported by the interceptor. |
-| 2300802 | Duplicated interceptor type in the chain. |
-| [2300999](../errorcode-net-http.md#2300999-内部错误) | Internal error. |
+| 错误码ID |
+| --- |
+| 2300801 |
+| 2300802 |
+| [2300999](../errorcode-net-http.md#2300999-内部错误) |
 
 **示例**
 
@@ -117,30 +117,30 @@ public apply(httpRequest: HttpRequest): boolean
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
-<!--Device-HttpInterceptorChain-public apply(httpRequest: HttpRequest): boolean--><!--Device-HttpInterceptorChain-public apply(httpRequest: HttpRequest): boolean-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| httpRequest | HttpRequest | 是 | 要发起HTTP请求的[HttpRequest](arkts-network-http-httprequest-i.md)。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| httpRequest | [HttpRequest](arkts-network-http-httprequest-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 拦截器是否附加成功。true表示拦截器附加成功，false表示拦截器没有附加成功。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 2300801 | Parameter type not supported by the interceptor. |
-| [2300999](../errorcode-net-http.md#2300999-内部错误) | Internal error. |
+| 错误码ID |
+| --- |
+| 2300801 |
+| [2300999](../errorcode-net-http.md#2300999-内部错误) |
 
 **示例**
 
@@ -217,17 +217,17 @@ public getChain(): HttpInterceptor[]
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
-<!--Device-HttpInterceptorChain-public getChain(): HttpInterceptor[]--><!--Device-HttpInterceptorChain-public getChain(): HttpInterceptor[]-End-->
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] | 返回通过[addChain]{ |
+| 类型 |
+| --- |
+| [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] |
 
 **示例**
 
@@ -272,4 +272,3 @@ import { http } from '@kit.NetworkKit';
 
 let interceptorChain = new http.HttpInterceptorChain();
 ```
-

@@ -2,9 +2,9 @@
 
 The **thermal** module provides thermal level-related callback and query APIs to obtain the information required for thermal control.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-unnamed-declare namespace thermal--><!--Device-unnamed-declare namespace thermal-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.ThermalManager
 
@@ -18,18 +18,17 @@ import { thermal } from '@kit.BasicServicesKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [getLevel](arkts-basicservices-thermal-getlevel-f.md) | Obtains the current thermal level. |
-| [getThermalLevel](arkts-basicservices-thermal-getthermallevel-f.md) | Obtains the current thermal level. |
-| [registerThermalLevelCallback](arkts-basicservices-thermal-registerthermallevelcallback-f.md) | Registers a callback to be invoked when the thermal level changes. This API uses an asynchronous callback to return the result. |
-| [subscribeThermalLevel](arkts-basicservices-thermal-subscribethermallevel-f.md) | Subscribes to the thermal level changes. This API uses an asynchronous callback to return the result. |
-| [unregisterThermalLevelCallback](arkts-basicservices-thermal-unregisterthermallevelcallback-f.md) | Unregisters from the thermal level changes. This API uses an asynchronous callback to return the result. |
-| [unsubscribeThermalLevel](arkts-basicservices-thermal-unsubscribethermallevel-f.md) | Unsubscribes from the thermal level changes. This API uses an asynchronous callback to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getLevel](arkts-basicservices-thermal-getlevel-f.md) |
+| [getThermalLevel](arkts-basicservices-thermal-getthermallevel-f.md) |
+| [registerThermalLevelCallback](arkts-basicservices-thermal-registerthermallevelcallback-f.md) |
+| [subscribeThermalLevel](arkts-basicservices-thermal-subscribethermallevel-f.md) |
+| [unregisterThermalLevelCallback](arkts-basicservices-thermal-unregisterthermallevelcallback-f.md) |
+| [unsubscribeThermalLevel](arkts-basicservices-thermal-unsubscribethermallevel-f.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md) | Enumerates thermal levels. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md) |

@@ -1,18 +1,17 @@
 # PhotoEditorExtensionContext
 
 ```TypeScript
-export type PhotoEditorExtensionContext = _PhotoEditorExtensionContext
+export type PhotoEditorExtensionContext = _PhotoEditorExtensionContext.default
 ```
 
 The context of an photo editor extension ability.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-common-export type PhotoEditorExtensionContext = _PhotoEditorExtensionContext--><!--Device-common-export type PhotoEditorExtensionContext = _PhotoEditorExtensionContext-End-->
-
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
-**Property type:** _PhotoEditorExtensionContext
-
+**Property type:** _PhotoEditorExtensionContext.default

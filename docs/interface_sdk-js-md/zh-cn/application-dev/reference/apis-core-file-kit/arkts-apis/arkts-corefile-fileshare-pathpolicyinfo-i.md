@@ -2,9 +2,9 @@
 
 需要查询的文件或目录的信息。@interface PathPolicyInfo
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-fileShare-export interface PathPolicyInfo--><!--Device-fileShare-export interface PathPolicyInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -24,9 +24,9 @@ operationMode: OperationMode
 
 **类型：** [OperationMode](arkts-corefile-fileshare-operationmode-e.md)
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-PathPolicyInfo-operationMode: OperationMode--><!--Device-PathPolicyInfo-operationMode: OperationMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -40,9 +40,8 @@ path: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-PathPolicyInfo-path: string--><!--Device-PathPolicyInfo-path: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
-

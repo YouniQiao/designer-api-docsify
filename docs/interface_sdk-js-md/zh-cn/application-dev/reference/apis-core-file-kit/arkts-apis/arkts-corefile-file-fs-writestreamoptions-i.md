@@ -4,7 +4,7 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-export interface WriteStreamOptions--><!--Device-unnamed-export interface WriteStreamOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -22,7 +22,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 mode?: number
 ```
 
-创建文件可写流的选项，必须指定如下选项中的一个，默认只写方式创建：  
+创建文件可写流的[选项](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode)，必须指定如下选项中的一个，默认只写方式创建：  
 - OpenMode.READ_ONLY(0o0)：只读。  
 - OpenMode.WRITE_ONLY(0o1)：只写。  
 - OpenMode.READ_WRITE(0o2)：读写。  
@@ -39,7 +39,7 @@ mode?: number
 
 **起始版本：** 12
 
-<!--Device-WriteStreamOptions-mode?: number--><!--Device-WriteStreamOptions-mode?: number-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -55,7 +55,6 @@ start?: number
 
 **起始版本：** 12
 
-<!--Device-WriteStreamOptions-start?: number--><!--Device-WriteStreamOptions-start?: number-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
-

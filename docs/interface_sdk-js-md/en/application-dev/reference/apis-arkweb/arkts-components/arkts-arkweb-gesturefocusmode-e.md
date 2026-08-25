@@ -4,7 +4,7 @@ Enumerates the focus modes.
 
 **Since:** 20
 
-<!--Device-unnamed-declare enum GestureFocusMode--><!--Device-unnamed-declare enum GestureFocusMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,7 +18,7 @@ The **Web** component applies for the focus when it is touched, long-pressed, sw
 
 **Since:** 20
 
-<!--Device-GestureFocusMode-DEFAULT = 0--><!--Device-GestureFocusMode-DEFAULT = 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,7 +32,6 @@ The **Web** component applies for the focus only when it is touched and long-pre
 
 **Since:** 20
 
-<!--Device-GestureFocusMode-GESTURE_TAP_AND_LONG_PRESS = 1--><!--Device-GestureFocusMode-GESTURE_TAP_AND_LONG_PRESS = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

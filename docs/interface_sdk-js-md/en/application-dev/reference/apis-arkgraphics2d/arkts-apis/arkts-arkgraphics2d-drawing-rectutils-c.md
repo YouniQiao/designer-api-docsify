@@ -10,9 +10,9 @@ This module provides tools for processing rectangles. Use scenarios:
 > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-drawing-class RectUtils--><!--Device-drawing-class RectUtils-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -24,29 +24,35 @@ import { drawing } from '@kit.ArkGraphics2D';
 
 ## centerX
 
+ArkTS-Dyn:
+```TypeScript
+static centerX(rect: common2D.Rect): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 static centerX(rect: common2D.Rect): double
 ```
 
 Obtains the X coordinate of the rectangle center.
 
-**Since:** 24
+**Since:** 20
 
-<!--Device-RectUtils-static centerX(rect: common2D.Rect): double--><!--Device-RectUtils-static centerX(rect: common2D.Rect): double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rect | common2D.Rect | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | X coordinate of the rectangle center. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **Examples**
 
@@ -59,29 +65,35 @@ let x = drawing.RectUtils.centerX(rect);
 
 ## centerY
 
+ArkTS-Dyn:
+```TypeScript
+static centerY(rect: common2D.Rect): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 static centerY(rect: common2D.Rect): double
 ```
 
 Obtains the Y coordinate of the rectangle center.
 
-**Since:** 24
+**Since:** 20
 
-<!--Device-RectUtils-static centerY(rect: common2D.Rect): double--><!--Device-RectUtils-static centerY(rect: common2D.Rect): double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rect | common2D.Rect | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | Y coordinate of the rectangle center. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **Examples**
 
@@ -100,24 +112,24 @@ static contains(rect: common2D.Rect, other: common2D.Rect): boolean
 
 Checks whether a rectangle completely contains another rectangle.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RectUtils-static contains(rect: common2D.Rect, other: common2D.Rect): boolean--><!--Device-RectUtils-static contains(rect: common2D.Rect, other: common2D.Rect): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
-| other | common2D.Rect | Yes | Another rectangle object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rect | common2D.Rect | Yes |
+| other | common2D.Rect | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether a rectangle completely contains another rectangle. **true** means yes; **false** otherwise. An empty rectangle does not contain any other rectangle. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -158,33 +170,39 @@ console.info('isContains: ', isContains);
 
 ## contains
 
+ArkTS-Dyn:
+```TypeScript
+static contains(rect: common2D.Rect, left: number, top: number, right: number, bottom: number): boolean
+```
+
+ArkTS-Sta:
 ```TypeScript
 static contains(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): boolean
 ```
 
 Checks whether a rectangle completely contains another rectangle (which is marked by the coordinates of the upper left and lower right corners).
 
-**Since:** 24
+**Since:** 20
 
-<!--Device-RectUtils-static contains(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): boolean--><!--Device-RectUtils-static contains(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
-| left | double | Yes | X coordinate of the upper left corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| top | double | Yes | Y coordinate of the upper left corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
-| right | double | Yes | X coordinate of the lower right corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| bottom | double | Yes | Y coordinate of the lower right corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rect | common2D.Rect | Yes |
+| left | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| top | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| right | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| bottom | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether a rectangle completely contains another rectangle defined by the coordinates of its upper left and lower right corners. **true** means yes; **false** otherwise. An empty rectangle does not contain any other rectangle. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -192,31 +210,37 @@ See [contains](#contains)
 
 ## contains
 
+ArkTS-Dyn:
+```TypeScript
+static contains(rect: common2D.Rect, x: number, y: number): boolean
+```
+
+ArkTS-Sta:
 ```TypeScript
 static contains(rect: common2D.Rect, x: double, y: double): boolean
 ```
 
 Checks whether a rectangle completely contains a specified point.
 
-**Since:** 24
+**Since:** 20
 
-<!--Device-RectUtils-static contains(rect: common2D.Rect, x: double, y: double): boolean--><!--Device-RectUtils-static contains(rect: common2D.Rect, x: double, y: double): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
-| x | double | Yes | X coordinate of a point. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| y | double | Yes | Y coordinate of a point. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rect | common2D.Rect | Yes |
+| x | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| y | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the rectangle completely contains the point **(x, y)**. **true** means yes; **false** otherwise. An empty rectangle does not contain any point. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -224,29 +248,35 @@ See [contains](#contains)
 
 ## getHeight
 
+ArkTS-Dyn:
+```TypeScript
+static getHeight(rect: common2D.Rect): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 static getHeight(rect: common2D.Rect): double
 ```
 
 Obtains the height of a rectangle.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RectUtils-static getHeight(rect: common2D.Rect): double--><!--Device-RectUtils-static getHeight(rect: common2D.Rect): double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rect | common2D.Rect | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | Height of the rectangle. If the top boundary is greater than the bottom, the height is negative. If the top boundary is less than the bottom, the height is positive. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **Examples**
 
@@ -272,29 +302,35 @@ let height = drawing.RectUtils.getHeight(rect);
 
 ## getWidth
 
+ArkTS-Dyn:
+```TypeScript
+static getWidth(rect: common2D.Rect): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 static getWidth(rect: common2D.Rect): double
 ```
 
 Obtains the width of a rectangle.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RectUtils-static getWidth(rect: common2D.Rect): double--><!--Device-RectUtils-static getWidth(rect: common2D.Rect): double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rect | common2D.Rect | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | Width of a rectangle. If the left boundary is greater than the right, the width is negative. If the left boundary is less than the right, the width is positive. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：double |
 
 **Examples**
 
@@ -328,27 +364,33 @@ console.info('width:', width);
 
 ## inset
 
+ArkTS-Dyn:
+```TypeScript
+static inset(rect: common2D.Rect, left: number, top: number, right: number, bottom: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 static inset(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void
 ```
 
 Adds the input left, top, right, and bottom values to the left, top, right, and bottom boundaries of a specified rectangle, respectively.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RectUtils-static inset(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void--><!--Device-RectUtils-static inset(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
-| left | double | Yes | Value to be added to the left boundary of the rectangle (X coordinate of the upper left corner of the rectangle). The value is a floating point number. **0** indicates that no operation is performed. A positive number indicates addition, and a negative number indicates subtraction. |
-| top | double | Yes | Value to be added to the top boundary of the rectangle (Y coordinate of the upper left corner of the rectangle). The value is a floating point number. **0** indicates that no operation is performed. A positive number indicates addition, and a negative number indicates subtraction. |
-| right | double | Yes | Value to be added to the right boundary of the rectangle (X coordinate of the lower right corner of the rectangle). The value is a floating point number. **0** indicates that no operation is performed. A positive number indicates addition, and a negative number indicates subtraction. |
-| bottom | double | Yes | Value to be added to the bottom boundary of the rectangle (Y coordinate of the lower right corner of the rectangle). The value is a floating point number. **0** indicates that no operation is performed. A positive number indicates addition, and a negative number indicates subtraction. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rect | common2D.Rect | Yes |
+| left | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| top | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| right | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| bottom | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Examples**
 
@@ -371,24 +413,24 @@ static intersect(rect: common2D.Rect, other: common2D.Rect): boolean
 
 Calculates the intersection of two rectangles and updates the intersection result to the rectangle represented by the first input parameter.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RectUtils-static intersect(rect: common2D.Rect, other: common2D.Rect): boolean--><!--Device-RectUtils-static intersect(rect: common2D.Rect, other: common2D.Rect): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Original rectangle used to calculate the intersection. |
-| other | common2D.Rect | Yes | Another rectangle used to calculate the intersection. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rect | common2D.Rect | Yes |
+| other | common2D.Rect | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether two rectangles have an intersection. **true** means yes; **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -413,23 +455,23 @@ static isEmpty(rect: common2D.Rect): boolean
 
 Checks whether a rectangle is empty (the left boundary is greater than or equal to the right boundary or the top boundary is greater than or equal to the bottom boundary).
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RectUtils-static isEmpty(rect: common2D.Rect): boolean--><!--Device-RectUtils-static isEmpty(rect: common2D.Rect): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object to be checked. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rect | common2D.Rect | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the rectangle is empty. **true** means yes; **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -489,24 +531,24 @@ static isEqual(rect: common2D.Rect, other: common2D.Rect): boolean
 
 Checks whether two rectangles are equal.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RectUtils-static isEqual(rect: common2D.Rect, other: common2D.Rect): boolean--><!--Device-RectUtils-static isEqual(rect: common2D.Rect, other: common2D.Rect): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Original rectangle. |
-| other | common2D.Rect | Yes | Another rectangle. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rect | common2D.Rect | Yes |
+| other | common2D.Rect | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether two rectangles are equal. **true** means yes; **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -571,24 +613,24 @@ static isIntersect(rect: common2D.Rect, other: common2D.Rect): boolean
 
 Checks whether two rectangles intersect.
 
-**Since:** 24
+**Since:** 20
 
-<!--Device-RectUtils-static isIntersect(rect: common2D.Rect, other: common2D.Rect): boolean--><!--Device-RectUtils-static isIntersect(rect: common2D.Rect, other: common2D.Rect): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Original rectangle used to calculate the intersection. |
-| other | common2D.Rect | Yes | Another rectangle used to calculate the intersection. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rect | common2D.Rect | Yes |
+| other | common2D.Rect | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether two rectangles have an intersection. **true** means yes; **false** otherwise. If the two rectangles only overlap on the edge or intersect at a point, **false** is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -611,21 +653,21 @@ Copies a rectangle.
 
 **Since:** 20
 
-<!--Device-RectUtils-static makeCopy(src: common2D.Rect): common2D.Rect--><!--Device-RectUtils-static makeCopy(src: common2D.Rect): common2D.Rect-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | common2D.Rect | Yes | Rectangle to be copied. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | common2D.Rect | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| common2D.Rect | Created rectangle. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| common2D.Rect |
 
 **Examples**
 
@@ -650,21 +692,21 @@ Makes a deep copy of a 2D rectangular object.
 
 **Since:** 24
 
-<!--Device-RectUtils-static makeCopy(src: common2D.Rect): common2D.Rect | undefined--><!--Device-RectUtils-static makeCopy(src: common2D.Rect): common2D.Rect | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | common2D.Rect | Yes | Indicates the source rectangle to copy. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | common2D.Rect | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| common2D.Rect \| undefined | Returns an Rect object has the same boundary coordinates with the source. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| common2D.Rect \| undefined |
 
 **Examples**
 
@@ -680,15 +722,15 @@ Creates a rectangle with the top, bottom, left, and right boundary coordinates a
 
 **Since:** 20
 
-<!--Device-RectUtils-static makeEmpty(): common2D.Rect--><!--Device-RectUtils-static makeEmpty(): common2D.Rect-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| common2D.Rect | Created rectangle object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| common2D.Rect |
 
 **Examples**
 
@@ -708,15 +750,15 @@ Makes an uninitialized 2D rectangular object with zero dimensions and origin at 
 
 **Since:** 24
 
-<!--Device-RectUtils-static makeEmpty(): common2D.Rect | undefined--><!--Device-RectUtils-static makeEmpty(): common2D.Rect | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| common2D.Rect \| undefined | Returns an empty Rect object with all coordinates (left, top, right, bottom) set to 0. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| common2D.Rect \| undefined |
 
 **Examples**
 
@@ -732,24 +774,24 @@ Creates a rectangle with specified top, bottom, left, and right boundaries.
 
 **Since:** 20
 
-<!--Device-RectUtils-static makeLtrb(left: number, top: number, right: number, bottom: number): common2D.Rect--><!--Device-RectUtils-static makeLtrb(left: number, top: number, right: number, bottom: number): common2D.Rect-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| left | number | Yes | X coordinate of the upper left corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| top | number | Yes | Y coordinate of the upper left corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
-| right | number | Yes | X coordinate of the lower right corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| bottom | number | Yes | Y coordinate of the lower right corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| left | number | Yes |
+| top | number | Yes |
+| right | number | Yes |
+| bottom | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| common2D.Rect | Created rectangle. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| common2D.Rect |
 
 **Examples**
 
@@ -769,24 +811,24 @@ Makes a 2D rectangular object from boundary coordinates.
 
 **Since:** 24
 
-<!--Device-RectUtils-static makeLtrb(left: double, top: double, right: double, bottom: double): common2D.Rect | undefined--><!--Device-RectUtils-static makeLtrb(left: double, top: double, right: double, bottom: double): common2D.Rect | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| left | double | Yes | Indicates the X-coordinate of the left edge. |
-| top | double | Yes | Indicates the Y-coordinate of the top edge. |
-| right | double | Yes | Indicates the X-coordinate of the right edge. |
-| bottom | double | Yes | Indicates the Y-coordinate of the bottom edge. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| left | double | Yes |
+| top | double | Yes |
+| right | double | Yes |
+| bottom | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| common2D.Rect \| undefined | Returns an Rect object with the specific coordinates (left, top, right, bottom). |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| common2D.Rect \| undefined |
 
 **Examples**
 
@@ -794,25 +836,31 @@ See [makeLtrb](#makeltrb)
 
 ## offset
 
+ArkTS-Dyn:
+```TypeScript
+static offset(rect: common2D.Rect, dx: number, dy: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 static offset(rect: common2D.Rect, dx: double, dy: double): void
 ```
 
 Translates a rectangle.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RectUtils-static offset(rect: common2D.Rect, dx: double, dy: double): void--><!--Device-RectUtils-static offset(rect: common2D.Rect, dx: double, dy: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle to be translated. |
-| dx | double | Yes | Horizontal translation distance. The value is a floating point number. **0** indicates no translation. A negative value indicates translation to the left, and a positive value indicates translation to the right. |
-| dy | double | Yes | Vertical translation distance. The value is a floating point number. **0** indicates no translation. A negative value indicates translation upwards, and a positive value indicates translation downwards. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rect | common2D.Rect | Yes |
+| dx | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| dy | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Examples**
 
@@ -871,25 +919,31 @@ roundRect.offset(100, 100);
 
 ## offsetTo
 
+ArkTS-Dyn:
+```TypeScript
+static offsetTo(rect: common2D.Rect, newLeft: number, newTop: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 static offsetTo(rect: common2D.Rect, newLeft: double, newTop: double): void
 ```
 
 Translates a rectangle to a specified position.
 
-**Since:** 24
+**Since:** 20
 
-<!--Device-RectUtils-static offsetTo(rect: common2D.Rect, newLeft: double, newTop: double): void--><!--Device-RectUtils-static offsetTo(rect: common2D.Rect, newLeft: double, newTop: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle to be translated. |
-| newLeft | double | Yes | X coordinate of the position to which the rectangle is translated. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| newTop | double | Yes | Y coordinate of the position to which the rectangle is translated. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rect | common2D.Rect | Yes |
+| newLeft | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| newTop | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Examples**
 
@@ -912,17 +966,17 @@ static setEmpty(rect: common2D.Rect): void
 
 Sets the left, right, top, and bottom boundaries of the rectangle to **0**.
 
-**Since:** 24
+**Since:** 20
 
-<!--Device-RectUtils-static setEmpty(rect: common2D.Rect): void--><!--Device-RectUtils-static setEmpty(rect: common2D.Rect): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Empty rectangle object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rect | common2D.Rect | Yes |
 
 **Examples**
 
@@ -956,27 +1010,33 @@ class DrawingRenderNode extends RenderNode {
 
 ## setLtrb
 
+ArkTS-Dyn:
+```TypeScript
+static setLtrb(rect: common2D.Rect, left: number, top: number, right: number, bottom: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 static setLtrb(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void
 ```
 
 Updates the top, bottom, left, and right boundary values of the existing rectangle using the input top, bottom, left, and right values, respectively.
 
-**Since:** 24
+**Since:** 20
 
-<!--Device-RectUtils-static setLtrb(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void--><!--Device-RectUtils-static setLtrb(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
-| left | double | Yes | X coordinate of the upper left corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| top | double | Yes | Y coordinate of the upper left corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
-| right | double | Yes | X coordinate of the lower right corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| bottom | double | Yes | Y coordinate of the lower right corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rect | common2D.Rect | Yes |
+| left | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| top | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| right | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| bottom | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Examples**
 
@@ -999,18 +1059,18 @@ static setRect(rect: common2D.Rect, other: common2D.Rect): void
 
 Assigns the existing rectangle with another rectangle.
 
-**Since:** 24
+**Since:** 20
 
-<!--Device-RectUtils-static setRect(rect: common2D.Rect, other: common2D.Rect): void--><!--Device-RectUtils-static setRect(rect: common2D.Rect, other: common2D.Rect): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Original rectangle. |
-| other | common2D.Rect | Yes | Another rectangle. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rect | common2D.Rect | Yes |
+| other | common2D.Rect | Yes |
 
 **Examples**
 
@@ -1060,17 +1120,17 @@ static sort(rect: common2D.Rect): void
 
 If the rectangle is reversed (that is, the left boundary is greater than the right boundary or the top boundary is greater than the bottom boundary), the top and bottom (left and right) boundary values of the rectangle are exchanged, so that the top boundary is less than the bottom boundary (the left boundary is less than the right boundary). If the rectangle is not reversed (that is, the left boundary is less than or equal to the right boundary or the top boundary is less than or equal to the bottom boundary), no operation is performed.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RectUtils-static sort(rect: common2D.Rect): void--><!--Device-RectUtils-static sort(rect: common2D.Rect): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Rectangle object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rect | common2D.Rect | Yes |
 
 **Examples**
 
@@ -1093,18 +1153,18 @@ static union(rect: common2D.Rect, other: common2D.Rect): void
 
 Calculates the union of two rectangles and updates the union result to the rectangle represented by the first input parameter. If the first input parameter is empty, the union result is updated to the rectangle represented by the second input parameter. If the second input parameter is empty, no operation is performed.
 
-**Since:** 24
+**Since:** 20
 
-<!--Device-RectUtils-static union(rect: common2D.Rect, other: common2D.Rect): void--><!--Device-RectUtils-static union(rect: common2D.Rect, other: common2D.Rect): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | Original rectangle used to calculate the union. |
-| other | common2D.Rect | Yes | Another rectangle used to calculate the union. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rect | common2D.Rect | Yes |
+| other | common2D.Rect | Yes |
 
 **Examples**
 
@@ -1119,4 +1179,3 @@ console.info('rect.top: ', rect.top);
 console.info('rect.right: ', rect.right);
 console.info('rect.bottom: ', rect.bottom);
 ```
-

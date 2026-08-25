@@ -4,7 +4,6 @@
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md) | The module defines the operation result on DataAbilities. When you call executeBatch to operate the database, the operation result is returned through the DataAbilityResult object. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md) |

@@ -4,7 +4,7 @@ Defines the spacing between the localized text and the left and right icons.
 
 **Since:** 12
 
-<!--Device-unnamed-export interface LocalizedLabelMarginOptions--><!--Device-unnamed-export interface LocalizedLabelMarginOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +26,11 @@ Spacing between the text and the right icon. This parameter cannot be set in per
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-LocalizedLabelMarginOptions-end?: LengthMetrics--><!--Device-LocalizedLabelMarginOptions-end?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,11 +46,10 @@ Spacing between the text and the left icon. This parameter cannot be set in perc
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-LocalizedLabelMarginOptions-start?: LengthMetrics--><!--Device-LocalizedLabelMarginOptions-start?: LengthMetrics-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

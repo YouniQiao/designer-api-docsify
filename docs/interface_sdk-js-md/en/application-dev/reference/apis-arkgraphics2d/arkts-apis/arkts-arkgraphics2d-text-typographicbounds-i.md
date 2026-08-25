@@ -14,9 +14,9 @@ Describes the typographic boundaries of a text line. These boundaries depend on 
 > !
 > [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-text-interface TypographicBounds--><!--Device-text-interface TypographicBounds-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -34,13 +34,13 @@ ascent: double
 
 Ascent height of a text line, which is a floating-point value in physical pixels (px).
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-TypographicBounds-ascent: double--><!--Device-TypographicBounds-ascent: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -52,13 +52,13 @@ descent: double
 
 Descent height of a text line, which is a floating-point value in physical pixels (px).
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-TypographicBounds-descent: double--><!--Device-TypographicBounds-descent: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -70,13 +70,13 @@ leading: double
 
 Leading of a text line, which is a floating-point value in physical pixels (px).
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-TypographicBounds-leading: double--><!--Device-TypographicBounds-leading: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -88,13 +88,12 @@ width: double
 
 Total width of the layout boundary, which is a floating-point value in physical pixels (px).
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-TypographicBounds-width: double--><!--Device-TypographicBounds-width: double-End-->
-
 **System capability:** SystemCapability.Graphics.Drawing
-

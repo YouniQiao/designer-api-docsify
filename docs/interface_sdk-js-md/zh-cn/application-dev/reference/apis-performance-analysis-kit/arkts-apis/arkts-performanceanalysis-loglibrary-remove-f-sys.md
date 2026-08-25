@@ -14,11 +14,11 @@ function remove(logType: string, logName: string): void
 
 以同步方法删除指定日志类型的指定文件。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.WRITE_HIVIEW_SYSTEM
-
-<!--Device-logLibrary-function remove(logType: string, logName: string): void--><!--Device-logLibrary-function remove(logType: string, logName: string): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
@@ -26,19 +26,19 @@ function remove(logType: string, logName: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| logType | string | 是 | 日志类型字符串，例如"FAULTLOG", "BETACLUB", "REMOTELOG"等。 |
-| logName | string | 是 | 日志文件名称。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| logType | string | 是 |
+| logName | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid argument. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
-| [21300001](../errorcode-loglibrary-sys.md#21300001-指定文件不存在) | Source file does not exists |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [21300001](../errorcode-loglibrary-sys.md#21300001-指定文件不存在) |
 
 **示例**
 
@@ -72,4 +72,3 @@ try {
   console.error(`error code: ${err?.code}, error msg: ${err?.message}`);
 }
 ```
-

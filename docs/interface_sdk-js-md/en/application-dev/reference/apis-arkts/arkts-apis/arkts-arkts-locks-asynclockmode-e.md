@@ -4,7 +4,7 @@ Mode of lock operations.
 
 **Since:** 12
 
-<!--Device-locks-enum AsyncLockMode--><!--Device-locks-enum AsyncLockMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -18,9 +18,9 @@ Shared lock operation. The operation could reenter if this mode is specified.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-AsyncLockMode-SHARED = 1--><!--Device-AsyncLockMode-SHARED = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -34,9 +34,8 @@ Exclusive lock operation. If this mode is specified, the operation is executed o
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AsyncLockMode-EXCLUSIVE = 2--><!--Device-AsyncLockMode-EXCLUSIVE = 2-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

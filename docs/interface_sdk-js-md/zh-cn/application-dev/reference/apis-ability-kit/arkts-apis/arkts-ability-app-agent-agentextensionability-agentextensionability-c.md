@@ -10,7 +10,7 @@ AgentExtensionAbility继承自[ExtensionAbility](arkts-ability-app-ability-exten
 
 **起始版本：** 24
 
-<!--Device-unnamed-declare class AgentExtensionAbility--><!--Device-unnamed-declare class AgentExtensionAbility-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -30,20 +30,20 @@ onAuth(proxy: AgentHostProxy, handshakeData: string): void
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AgentExtensionAbility-onAuth(proxy: AgentHostProxy, handshakeData: string): void--><!--Device-AgentExtensionAbility-onAuth(proxy: AgentHostProxy, handshakeData: string): void-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | 是 | [AgentHostProxy](arkts-ability-agenthostproxy-i.md)对象，用于向客户端发送安全认 证请求。 |
-| handshakeData | string | 是 | 表示接收到的安全认证数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | 是 |
+| handshakeData | string | 是 |
 
 ## onConnect
 
@@ -55,20 +55,20 @@ onConnect(want: Want, proxy: AgentHostProxy): void
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AgentExtensionAbility-onConnect(want: Want, proxy: AgentHostProxy): void--><!--Device-AgentExtensionAbility-onConnect(want: Want, proxy: AgentHostProxy): void-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 当前AgentExtensionAbility相关的[Want](arkts-ability-app-ability-want-want-c.md)类型信息，包括Ability名称、Bundle名称 等。 |
-| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | 是 | [AgentHostProxy](arkts-ability-agenthostproxy-i.md)对象，用于与客户端进行通信。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
+| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | 是 |
 
 ## onCreate
 
@@ -80,19 +80,19 @@ onCreate(want: Want): void
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AgentExtensionAbility-onCreate(want: Want): void--><!--Device-AgentExtensionAbility-onCreate(want: Want): void-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 当前AgentExtensionAbility相关的[Want](arkts-ability-app-ability-want-want-c.md)类型信息，包括Ability名称、Bundle名称 等。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
 
 ## onData
 
@@ -104,20 +104,20 @@ onData(proxy: AgentHostProxy, data: string): void
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AgentExtensionAbility-onData(proxy: AgentHostProxy, data: string): void--><!--Device-AgentExtensionAbility-onData(proxy: AgentHostProxy, data: string): void-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | 是 | [AgentHostProxy](arkts-ability-agenthostproxy-i.md)对象，用于与客户端进行通信。 |
-| data | string | 是 | 表示接收到的数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | 是 |
+| data | string | 是 |
 
 ## onDestroy
 
@@ -129,11 +129,11 @@ onDestroy(): void
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AgentExtensionAbility-onDestroy(): void--><!--Device-AgentExtensionAbility-onDestroy(): void-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -147,20 +147,20 @@ onDisconnect(want: Want, proxy: AgentHostProxy): void
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AgentExtensionAbility-onDisconnect(want: Want, proxy: AgentHostProxy): void--><!--Device-AgentExtensionAbility-onDisconnect(want: Want, proxy: AgentHostProxy): void-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 当前AgentExtensionAbility相关的[Want](arkts-ability-app-ability-want-want-c.md)类型信息，包括Ability名称、Bundle名称 等。 |
-| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | 是 | [AgentHostProxy](arkts-ability-agenthostproxy-i.md)对象，用于与客户端进行通信。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
+| proxy | [AgentHostProxy](arkts-ability-agenthostproxy-i.md) | 是 |
 
 ## context
 
@@ -174,11 +174,10 @@ AgentExtensionAbility的上下文环境，继承自[ExtensionContext](arkts-abil
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AgentExtensionAbility-context: AgentExtensionContext--><!--Device-AgentExtensionAbility-context: AgentExtensionContext-End-->
-
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-

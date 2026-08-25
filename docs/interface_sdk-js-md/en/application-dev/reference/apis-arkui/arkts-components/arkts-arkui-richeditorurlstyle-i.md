@@ -4,7 +4,7 @@ URL information.
 
 **Since:** 19
 
-<!--Device-unnamed-declare interface RichEditorUrlStyle--><!--Device-unnamed-declare interface RichEditorUrlStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,10 @@ URL.Default value: **undefined**
 
 **Since:** 19
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-RichEditorUrlStyle-url?: ResourceStr--><!--Device-RichEditorUrlStyle-url?: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

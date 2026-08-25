@@ -16,9 +16,9 @@ function stopSecurityEventCollector(rule: CollectorRule): void
 
 **起始版本：** 12
 
-**需要权限：** ohos.permission.QUERY_SECURITY_EVENT
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
-<!--Device-securityGuard-function stopSecurityEventCollector(rule: CollectorRule): void--><!--Device-securityGuard-function stopSecurityEventCollector(rule: CollectorRule): void-End-->
+**需要权限：** ohos.permission.QUERY_SECURITY_EVENT
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 
@@ -26,15 +26,14 @@ function stopSecurityEventCollector(rule: CollectorRule): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rule | [CollectorRule](arkts-securityguard-securityguard-collectorrule-i-sys.md) | 是 | 采集规则。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| rule | [CollectorRule](arkts-securityguard-securityguard-collectorrule-i-sys.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | check permission fail. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | non-system application uses the system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |

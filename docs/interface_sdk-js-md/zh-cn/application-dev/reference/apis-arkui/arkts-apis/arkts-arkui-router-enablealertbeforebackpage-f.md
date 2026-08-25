@@ -20,19 +20,19 @@ function enableAlertBeforeBackPage(options: EnableAlertOptions): void
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [showAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#showalertbeforebackpage)
-
-<!--Device-router-function enableAlertBeforeBackPage(options: EnableAlertOptions): void--><!--Device-router-function enableAlertBeforeBackPage(options: EnableAlertOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md) | 是 | 文本弹窗信息描述。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md) | 是 |
 
 **示例**
 
@@ -43,4 +43,3 @@ router.enableAlertBeforeBackPage({
   message: 'Message Info'
 });
 ```
-

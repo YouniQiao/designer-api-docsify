@@ -14,28 +14,28 @@ function getUserDownloadDir(): string
 
 Obtains the sandbox path of the pre-authorized **Download** directory.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 11: ohos.permission.READ_WRITE_DOWNLOAD_DIRECTORY
-
-<!--Device-Environment-function getUserDownloadDir(): string--><!--Device-Environment-function getUserDownloadDir(): string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.Environment.FolderObtain
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | Sandbox path of the **Download** directory obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken.<br>**Applicable version:** 11 |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 13900042 | Unknown error. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| 13900042 |
 
 **Examples**
 
@@ -50,4 +50,3 @@ function getUserDownloadDirExample() {
   }
 }
 ```
-

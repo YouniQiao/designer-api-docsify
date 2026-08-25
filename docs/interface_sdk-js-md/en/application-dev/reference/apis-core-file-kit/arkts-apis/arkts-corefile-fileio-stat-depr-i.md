@@ -4,11 +4,11 @@ Provides detailed file information. Before calling a method of the **Stat** clas
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [Stat](arkts-corefile-file-fs-stat-i.md)
-
-<!--Device-unnamed-declare interface Stat--><!--Device-unnamed-declare interface Stat-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -27,19 +27,19 @@ Checks whether this file is a block special file. A block special file supports 
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [isBlockDevice](arkts-corefile-file-fs-stat-i.md#isblockdevice)
-
-<!--Device-Stat-isBlockDevice(): boolean--><!--Device-Stat-isBlockDevice(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if it is a block special file; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -63,19 +63,19 @@ Checks whether this file is a character special file. A character special file s
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [isCharacterDevice](arkts-corefile-file-fs-stat-i.md#ischaracterdevice)
-
-<!--Device-Stat-isCharacterDevice(): boolean--><!--Device-Stat-isCharacterDevice(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if it is a character special file; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -99,19 +99,19 @@ Checks whether this file is a directory.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [isDirectory](arkts-corefile-file-fs-stat-i.md#isdirectory)
-
-<!--Device-Stat-isDirectory(): boolean--><!--Device-Stat-isDirectory(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if it is a directory; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -135,19 +135,19 @@ Checks whether this file is a named pipe (or FIFO). Named pipes are used for int
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [isFIFO](arkts-corefile-file-fs-stat-i.md#isfifo)
-
-<!--Device-Stat-isFIFO(): boolean--><!--Device-Stat-isFIFO(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if it is a named pipe; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -171,19 +171,19 @@ Checks whether this file is a regular file.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [isFile](arkts-corefile-file-fs-stat-i.md#isfile)
-
-<!--Device-Stat-isFile(): boolean--><!--Device-Stat-isFile(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if it is a regular file; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -207,19 +207,19 @@ Checks whether this file is a socket.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [isSocket](arkts-corefile-file-fs-stat-i.md#issocket)
-
-<!--Device-Stat-isSocket(): boolean--><!--Device-Stat-isSocket(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if it is a socket; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -243,19 +243,19 @@ Checks whether this file is a symbolic link.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [isSymbolicLink](arkts-corefile-file-fs-stat-i.md#issymboliclink)
-
-<!--Device-Stat-isSymbolicLink(): boolean--><!--Device-Stat-isSymbolicLink(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if it is a symbolic link; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -281,11 +281,11 @@ Time when the file was last accessed. The value is the number of seconds elapsed
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [atime](arkts-corefile-file-fs-stat-i.md#atime)
-
-<!--Device-Stat-readonly atime: number--><!--Device-Stat-readonly atime: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -301,9 +301,9 @@ Number of blocks occupied by a file. Each block is 512 bytes.
 
 **Since:** 6
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-Stat-readonly blocks: number--><!--Device-Stat-readonly blocks: number-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -319,11 +319,11 @@ Time of the last status change of the file. The value is the number of seconds e
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [ctime](arkts-corefile-file-fs-stat-i.md#ctime)
-
-<!--Device-Stat-readonly ctime: number--><!--Device-Stat-readonly ctime: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -339,9 +339,9 @@ Major device number.
 
 **Since:** 6
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-Stat-readonly dev: number--><!--Device-Stat-readonly dev: number-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -357,11 +357,11 @@ ID of the user group of the file.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [gid](arkts-corefile-file-fs-stat-i.md#gid)
-
-<!--Device-Stat-readonly gid: number--><!--Device-Stat-readonly gid: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -377,11 +377,11 @@ File identifier, which varies with files on the same device.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** ino
-
-<!--Device-Stat-readonly ino: number--><!--Device-Stat-readonly ino: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -397,11 +397,11 @@ File type and permissions. The first four bits indicate the file type, and the l
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [mode](arkts-corefile-file-fs-stat-i.md#mode)
-
-<!--Device-Stat-readonly mode: number--><!--Device-Stat-readonly mode: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -417,11 +417,11 @@ Time when the file content was last modified. The value is the number of seconds
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [mtime](arkts-corefile-file-fs-stat-i.md#mtime)
-
-<!--Device-Stat-readonly mtime: number--><!--Device-Stat-readonly mtime: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -437,9 +437,9 @@ Number of hard links in the file.
 
 **Since:** 6
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-Stat-readonly nlink: number--><!--Device-Stat-readonly nlink: number-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -455,9 +455,9 @@ Minor device number.
 
 **Since:** 6
 
-**Deprecated since:** 9
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-Stat-readonly rdev: number--><!--Device-Stat-readonly rdev: number-End-->
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -473,11 +473,11 @@ File size, in bytes. This parameter is valid only for regular files.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [size](arkts-corefile-file-fs-stat-i.md#size)
-
-<!--Device-Stat-readonly size: number--><!--Device-Stat-readonly size: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -493,11 +493,10 @@ ID of the file owner.
 
 **Since:** 6
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
+
 **Deprecated since:** 9
 
 **Substitutes:** [uid](arkts-corefile-file-fs-stat-i.md#uid)
 
-<!--Device-Stat-readonly uid: number--><!--Device-Stat-readonly uid: number-End-->
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
-

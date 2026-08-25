@@ -12,9 +12,9 @@ Called when the WindowScene is used.
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-WindowSceneInterface-(persistentId: number): WindowSceneAttribute--><!--Device-WindowSceneInterface-(persistentId: number): WindowSceneAttribute-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,9 +22,8 @@ Called when the WindowScene is used.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| persistentId | number | Yes | indicates the persistent identifier of WindowScene. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| persistentId | number | Yes |
 
 ## Summary
-

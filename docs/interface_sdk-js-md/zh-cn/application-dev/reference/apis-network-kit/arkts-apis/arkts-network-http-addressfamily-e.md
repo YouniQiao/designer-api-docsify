@@ -4,7 +4,7 @@
 
 **起始版本：** 15
 
-<!--Device-http-export enum AddressFamily--><!--Device-http-export enum AddressFamily-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -18,7 +18,7 @@ DEFAULT = 'CURL_IPRESOLVE_WHATEVER'
 
 **起始版本：** 15
 
-<!--Device-AddressFamily-DEFAULT = 'CURL_IPRESOLVE_WHATEVER'--><!--Device-AddressFamily-DEFAULT = 'CURL_IPRESOLVE_WHATEVER'-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -32,7 +32,7 @@ ONLY_V4 = 'CURL_IPRESOLVE_V4'
 
 **起始版本：** 15
 
-<!--Device-AddressFamily-ONLY_V4 = 'CURL_IPRESOLVE_V4'--><!--Device-AddressFamily-ONLY_V4 = 'CURL_IPRESOLVE_V4'-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -46,7 +46,6 @@ ONLY_V6 = 'CURL_IPRESOLVE_V6'
 
 **起始版本：** 15
 
-<!--Device-AddressFamily-ONLY_V6 = 'CURL_IPRESOLVE_V6'--><!--Device-AddressFamily-ONLY_V6 = 'CURL_IPRESOLVE_V6'-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetStack
-

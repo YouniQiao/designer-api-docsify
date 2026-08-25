@@ -4,7 +4,7 @@
 
 **起始版本：** 10
 
-<!--Device-dlpPermission-export enum ActionFlagType--><!--Device-dlpPermission-export enum ActionFlagType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -18,7 +18,7 @@ ACTION_VIEW = 0x00000001
 
 **起始版本：** 10
 
-<!--Device-ActionFlagType-ACTION_VIEW = 0x00000001--><!--Device-ActionFlagType-ACTION_VIEW = 0x00000001-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -32,7 +32,7 @@ ACTION_SAVE = 0x00000002
 
 **起始版本：** 10
 
-<!--Device-ActionFlagType-ACTION_SAVE = 0x00000002--><!--Device-ActionFlagType-ACTION_SAVE = 0x00000002-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -46,7 +46,7 @@ ACTION_SAVE_AS = 0x00000004
 
 **起始版本：** 10
 
-<!--Device-ActionFlagType-ACTION_SAVE_AS = 0x00000004--><!--Device-ActionFlagType-ACTION_SAVE_AS = 0x00000004-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -60,7 +60,7 @@ ACTION_EDIT = 0x00000008
 
 **起始版本：** 10
 
-<!--Device-ActionFlagType-ACTION_EDIT = 0x00000008--><!--Device-ActionFlagType-ACTION_EDIT = 0x00000008-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -74,7 +74,7 @@ ACTION_SCREEN_CAPTURE = 0x00000010
 
 **起始版本：** 10
 
-<!--Device-ActionFlagType-ACTION_SCREEN_CAPTURE = 0x00000010--><!--Device-ActionFlagType-ACTION_SCREEN_CAPTURE = 0x00000010-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -88,7 +88,7 @@ ACTION_SCREEN_SHARE = 0x00000020
 
 **起始版本：** 10
 
-<!--Device-ActionFlagType-ACTION_SCREEN_SHARE = 0x00000020--><!--Device-ActionFlagType-ACTION_SCREEN_SHARE = 0x00000020-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -102,7 +102,7 @@ ACTION_SCREEN_RECORD = 0x00000040
 
 **起始版本：** 10
 
-<!--Device-ActionFlagType-ACTION_SCREEN_RECORD = 0x00000040--><!--Device-ActionFlagType-ACTION_SCREEN_RECORD = 0x00000040-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -116,7 +116,7 @@ ACTION_COPY = 0x00000080
 
 **起始版本：** 10
 
-<!--Device-ActionFlagType-ACTION_COPY = 0x00000080--><!--Device-ActionFlagType-ACTION_COPY = 0x00000080-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -130,7 +130,7 @@ ACTION_PRINT = 0x00000100
 
 **起始版本：** 10
 
-<!--Device-ActionFlagType-ACTION_PRINT = 0x00000100--><!--Device-ActionFlagType-ACTION_PRINT = 0x00000100-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -144,7 +144,7 @@ ACTION_EXPORT = 0x00000200
 
 **起始版本：** 10
 
-<!--Device-ActionFlagType-ACTION_EXPORT = 0x00000200--><!--Device-ActionFlagType-ACTION_EXPORT = 0x00000200-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -158,7 +158,6 @@ ACTION_PERMISSION_CHANGE = 0x00000400
 
 **起始版本：** 10
 
-<!--Device-ActionFlagType-ACTION_PERMISSION_CHANGE = 0x00000400--><!--Device-ActionFlagType-ACTION_PERMISSION_CHANGE = 0x00000400-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
-

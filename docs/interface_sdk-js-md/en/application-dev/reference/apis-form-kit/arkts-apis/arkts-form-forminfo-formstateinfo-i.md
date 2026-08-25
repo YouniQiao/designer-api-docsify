@@ -2,9 +2,9 @@
 
 Provides state information about a form.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-formInfo-interface FormStateInfo--><!--Device-formInfo-interface FormStateInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -24,11 +24,11 @@ Obtains the form state.
 
 **Type:** FormState
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FormStateInfo-formState: FormState--><!--Device-FormStateInfo-formState: FormState-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -42,11 +42,10 @@ Obtains the want form .
 
 **Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-FormStateInfo-want: Want--><!--Device-FormStateInfo-want: Want-End-->
-
 **System capability:** SystemCapability.Ability.Form
-

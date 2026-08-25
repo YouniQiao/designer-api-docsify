@@ -14,19 +14,19 @@ function createChecksum(): Promise<Checksum>
 
 创建校验对象。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-zlib-function createChecksum(): Promise<Checksum>--><!--Device-zlib-function createChecksum(): Promise<Checksum>-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Checksum](arkts-basicservices-zlib-checksum-i.md)&gt; | Promise对象。返回校验对象实例。 |
+| 类型 |
+| --- |
+| Promise&lt;[Checksum](arkts-basicservices-zlib-checksum-i.md)&gt; |
 
 **示例**
 
@@ -37,4 +37,3 @@ zlib.createChecksum().then((data) => {
   console.info('createChecksum success');
 })
 ```
-

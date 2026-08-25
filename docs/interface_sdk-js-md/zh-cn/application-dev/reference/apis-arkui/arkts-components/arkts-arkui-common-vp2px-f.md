@@ -15,6 +15,8 @@ Converts a value in vp units to a value in px. By default, the virtual pixel rat
 
 **起始版本：** 11
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
+
 **废弃版本：** 18
 
 **替代接口：** vp2px
@@ -23,19 +25,16 @@ Converts a value in vp units to a value in px. By default, the virtual pixel rat
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-unnamed-declare function vp2px(value: number): number--><!--Device-unnamed-declare function vp2px(value: number): number-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number | 是 | Value range of value: (-∞, +∞). |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | Value range of the return value: (-∞, +∞). |
-
+| 类型 |
+| --- |
+| number |

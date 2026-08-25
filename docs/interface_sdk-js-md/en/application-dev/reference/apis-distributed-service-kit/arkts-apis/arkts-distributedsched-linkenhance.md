@@ -1,12 +1,12 @@
-# @ohos.distributedsched.linkEnhance
+# @ohos.distributedsched.linkEnhance(Enhanced Connection)
 
 The **linkEnhance** module delivers highly efficient Bluetooth connectivity and data transmission capabilities, significantly enhancing the cross-device connection stability. By employing a multi-channel merging algorithm, it addresses issues such as unstable connections and limited number of connections of classic Bluetooth. This enhances cross-device data transmission capabilities and improves user experience.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-declare namespace linkEnhance--><!--Device-unnamed-declare namespace linkEnhance-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -20,16 +20,15 @@ import { linkEnhance } from '@kit.DistributedServiceKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [createConnection](arkts-distributedservice-linkenhance-createconnection-f.md) | Creates a **Connection** object on the device that functions as the client. After the **Connection** object is created, subscribe to **on('connectResult')** and call **connect()** to initiate a connection request to the server. After the connection is successful, call **sendData()** to send data. If the connection is not required, call **close()** to destroy the **Connection** object to release resources. |
-| [createServer](arkts-distributedservice-linkenhance-createserver-f.md) | Creates a **Server** object. After **start()** is called, the device can be connected to other devices as a server. After using the object, call **close()** to destroy the **Server** object to release resources. To use the object again, you need to create another **Server** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [createConnection(Enhanced Connection)](arkts-distributedservice-linkenhance-createconnection-f.md) |
+| [createServer(Enhanced Connection)](arkts-distributedservice-linkenhance-createserver-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [Connection](arkts-distributedservice-linkenhance-connection-i.md) | Represents a **Connection** object, which provides methods for connecting to and disconnecting from a peer device, obtaining the device's ID, sending data, and registering or unregistering event callbacks. |
-| [ConnectResult](arkts-distributedservice-linkenhance-connectresult-i.md) | Represents the connection result, which is returned after the client calls **connect()**. |
-| [Server](arkts-distributedservice-linkenhance-server-i.md) | Represents a **Server** object, which provides methods for starting, stopping, and closing the server, and registering or unregistering event callbacks. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Connection(Enhanced Connection)](arkts-distributedservice-linkenhance-connection-i.md) |
+| [ConnectResult(Enhanced Connection)](arkts-distributedservice-linkenhance-connectresult-i.md) |
+| [Server(Enhanced Connection)](arkts-distributedservice-linkenhance-server-i.md) |

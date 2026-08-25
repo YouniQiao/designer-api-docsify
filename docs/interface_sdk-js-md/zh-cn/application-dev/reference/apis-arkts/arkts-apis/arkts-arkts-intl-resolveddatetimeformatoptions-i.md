@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-Intl-export interface ResolvedDateTimeFormatOptions--><!--Device-Intl-export interface ResolvedDateTimeFormatOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,11 +25,9 @@ calendar: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ResolvedDateTimeFormatOptions-calendar: string--><!--Device-ResolvedDateTimeFormatOptions-calendar: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -47,11 +43,9 @@ dateStyle?: 'full' | 'long' | 'medium' | 'short'
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ResolvedDateTimeFormatOptions-dateStyle?: 'full' | 'long' | 'medium' | 'short'--><!--Device-ResolvedDateTimeFormatOptions-dateStyle?: 'full' | 'long' | 'medium' | 'short'-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -67,11 +61,9 @@ day?: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ResolvedDateTimeFormatOptions-day?: string--><!--Device-ResolvedDateTimeFormatOptions-day?: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -87,11 +79,9 @@ dayPeriod?: 'narrow' | 'short' | 'long'
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ResolvedDateTimeFormatOptions-dayPeriod?: 'narrow' | 'short' | 'long'--><!--Device-ResolvedDateTimeFormatOptions-dayPeriod?: 'narrow' | 'short' | 'long'-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -107,11 +97,9 @@ era?: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ResolvedDateTimeFormatOptions-era?: string--><!--Device-ResolvedDateTimeFormatOptions-era?: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -127,11 +115,9 @@ formatMatcher?: 'basic' | 'best fit'
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ResolvedDateTimeFormatOptions-formatMatcher?: 'basic' | 'best fit'--><!--Device-ResolvedDateTimeFormatOptions-formatMatcher?: 'basic' | 'best fit'-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -147,11 +133,9 @@ fractionalSecondDigits?: double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ResolvedDateTimeFormatOptions-fractionalSecondDigits?: double--><!--Device-ResolvedDateTimeFormatOptions-fractionalSecondDigits?: double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -167,11 +151,9 @@ hour?: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ResolvedDateTimeFormatOptions-hour?: string--><!--Device-ResolvedDateTimeFormatOptions-hour?: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -187,11 +169,9 @@ hour12?: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ResolvedDateTimeFormatOptions-hour12?: boolean--><!--Device-ResolvedDateTimeFormatOptions-hour12?: boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -207,11 +187,9 @@ hourCycle?: 'h11' | 'h12' | 'h23' | 'h24'
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ResolvedDateTimeFormatOptions-hourCycle?: 'h11' | 'h12' | 'h23' | 'h24'--><!--Device-ResolvedDateTimeFormatOptions-hourCycle?: 'h11' | 'h12' | 'h23' | 'h24'-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -227,11 +205,9 @@ locale: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ResolvedDateTimeFormatOptions-locale: string--><!--Device-ResolvedDateTimeFormatOptions-locale: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -247,11 +223,9 @@ minute?: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ResolvedDateTimeFormatOptions-minute?: string--><!--Device-ResolvedDateTimeFormatOptions-minute?: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -267,11 +241,9 @@ month?: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ResolvedDateTimeFormatOptions-month?: string--><!--Device-ResolvedDateTimeFormatOptions-month?: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -287,11 +259,9 @@ numberingSystem: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ResolvedDateTimeFormatOptions-numberingSystem: string--><!--Device-ResolvedDateTimeFormatOptions-numberingSystem: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -307,11 +277,9 @@ second?: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ResolvedDateTimeFormatOptions-second?: string--><!--Device-ResolvedDateTimeFormatOptions-second?: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -327,11 +295,9 @@ timeStyle?: 'full' | 'long' | 'medium' | 'short'
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ResolvedDateTimeFormatOptions-timeStyle?: 'full' | 'long' | 'medium' | 'short'--><!--Device-ResolvedDateTimeFormatOptions-timeStyle?: 'full' | 'long' | 'medium' | 'short'-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -347,11 +313,9 @@ timeZone: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ResolvedDateTimeFormatOptions-timeZone: string--><!--Device-ResolvedDateTimeFormatOptions-timeZone: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -367,11 +331,9 @@ timeZoneName?: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ResolvedDateTimeFormatOptions-timeZoneName?: string--><!--Device-ResolvedDateTimeFormatOptions-timeZoneName?: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -387,11 +349,9 @@ weekday?: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ResolvedDateTimeFormatOptions-weekday?: string--><!--Device-ResolvedDateTimeFormatOptions-weekday?: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -407,11 +367,8 @@ year?: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ResolvedDateTimeFormatOptions-year?: string--><!--Device-ResolvedDateTimeFormatOptions-year?: string-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-connection-export enum ProtocolType--><!--Device-connection-export enum ProtocolType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -18,7 +18,7 @@ TCP网络协议。
 
 **起始版本：** 23
 
-<!--Device-ProtocolType-PROTO_TYPE_TCP = 6--><!--Device-ProtocolType-PROTO_TYPE_TCP = 6-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -32,7 +32,6 @@ UDP网络协议。
 
 **起始版本：** 23
 
-<!--Device-ProtocolType-PROTO_TYPE_UDP = 17--><!--Device-ProtocolType-PROTO_TYPE_UDP = 17-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
-

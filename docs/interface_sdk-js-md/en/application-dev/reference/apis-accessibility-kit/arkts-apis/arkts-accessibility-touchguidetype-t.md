@@ -8,13 +8,12 @@ Enumerates the touch exploration event types. Touch exploration is an interactio
 
 **Since:** 9
 
-<!--Device-unnamed-type TouchGuideType = 'touchBegin' | 'touchEnd' | 'touchGuideGesture'--><!--Device-unnamed-type TouchGuideType = 'touchBegin' | 'touchEnd' | 'touchGuideGesture'-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-| Type | Description |
-| --- | --- |
-| 'touchBegin' | Start of touch. |
-| 'touchEnd' | End of touch. |
-| 'touchGuideGesture' | Represents a touch exploration gesture. [since 26.0.0] |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'touchBegin' |
+| 'touchEnd' |
+| 'touchGuideGesture' |

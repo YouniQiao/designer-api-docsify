@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-drawing-enum VertexMode--><!--Device-drawing-enum VertexMode-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -18,7 +18,7 @@ TRIANGLES_VERTEXMODE = 0
 
 **起始版本：** 23
 
-<!--Device-VertexMode-TRIANGLES_VERTEXMODE = 0--><!--Device-VertexMode-TRIANGLES_VERTEXMODE = 0-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -32,7 +32,7 @@ TRIANGLESSTRIP_VERTEXMODE = 1
 
 **起始版本：** 23
 
-<!--Device-VertexMode-TRIANGLESSTRIP_VERTEXMODE = 1--><!--Device-VertexMode-TRIANGLESSTRIP_VERTEXMODE = 1-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -46,7 +46,6 @@ TRIANGLESFAN_VERTEXMODE = 2
 
 **起始版本：** 23
 
-<!--Device-VertexMode-TRIANGLESFAN_VERTEXMODE = 2--><!--Device-VertexMode-TRIANGLESFAN_VERTEXMODE = 2-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
-

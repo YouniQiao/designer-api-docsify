@@ -2,9 +2,9 @@
 
 Describes spatial device state.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-audio-interface AudioSpatialDeviceState--><!--Device-audio-interface AudioSpatialDeviceState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -26,9 +26,9 @@ Spatial device address.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AudioSpatialDeviceState-address: string--><!--Device-AudioSpatialDeviceState-address: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -44,9 +44,9 @@ Whether the spatial device supports head tracking.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AudioSpatialDeviceState-isHeadTrackingSupported: boolean--><!--Device-AudioSpatialDeviceState-isHeadTrackingSupported: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -62,9 +62,9 @@ Whether the spatial device supports spatial rendering.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AudioSpatialDeviceState-isSpatializationSupported: boolean--><!--Device-AudioSpatialDeviceState-isSpatializationSupported: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -80,9 +80,9 @@ Spatial device type.
 
 **Type:** [AudioSpatialDeviceType](arkts-audio-audio-audiospatialdevicetype-e-sys.md)
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-AudioSpatialDeviceState-spatialDeviceType: AudioSpatialDeviceType--><!--Device-AudioSpatialDeviceState-spatialDeviceType: AudioSpatialDeviceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -100,4 +100,3 @@ let spatialDeviceState: audio.AudioSpatialDeviceState = {
   spatialDeviceType: audio.AudioSpatialDeviceType.SPATIAL_DEVICE_TYPE_IN_EAR_HEADPHONE
 };
 ```
-

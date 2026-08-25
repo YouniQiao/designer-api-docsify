@@ -2,9 +2,9 @@
 
 Defines custom cursor configuration.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-pointer-interface CursorConfig--><!--Device-pointer-interface CursorConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -24,9 +24,8 @@ Whether to adjust the cursor size based on system settings. The value **true** m
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-CursorConfig-followSystem : boolean--><!--Device-CursorConfig-followSystem : boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
-

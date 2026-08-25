@@ -8,9 +8,8 @@ Enumerates carrier call states.
 
 **Since:** 23
 
-<!--Device-observer-type CCallState = call.CCallState--><!--Device-observer-type CCallState = call.CCallState-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Property type:** call.CCallState
-

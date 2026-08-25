@@ -4,11 +4,11 @@ Defines the options for creating a **PluralRules** object. Since API version 9, 
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.PluralRulesOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#options)
-
-<!--Device-intl-export interface PluralRulesOptions--><!--Device-intl-export interface PluralRulesOptions-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -30,27 +30,29 @@ Locale matching algorithm. The value can be **lookup** or **best fit**.The defau
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.PluralRulesOptions.localeMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#localematcher)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PluralRulesOptions-localeMatcher?: string--><!--Device-PluralRulesOptions-localeMatcher?: string-End-->
-
 **System capability:** SystemCapability.Global.I18n
 
 ## maximumFractionDigits
 
 ```TypeScript
-maximumFractionDigits?: int
+maximumFractionDigits?: number
 ```
 
 Maximum number of digits in the fraction part of a number. The value ranges from **1** to **21**.The default value is **3**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 20
 
@@ -58,21 +60,21 @@ Maximum number of digits in the fraction part of a number. The value ranges from
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PluralRulesOptions-maximumFractionDigits?: int--><!--Device-PluralRulesOptions-maximumFractionDigits?: int-End-->
-
 **System capability:** SystemCapability.Global.I18n
 
 ## maximumSignificantDigits
 
 ```TypeScript
-maximumSignificantDigits?: int
+maximumSignificantDigits?: number
 ```
 
 Maximum number of the least significant digits. The value ranges from **1** to **21**.The default value is **21**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 20
 
@@ -80,21 +82,21 @@ Maximum number of the least significant digits. The value ranges from **1** to *
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PluralRulesOptions-maximumSignificantDigits?: int--><!--Device-PluralRulesOptions-maximumSignificantDigits?: int-End-->
-
 **System capability:** SystemCapability.Global.I18n
 
 ## minimumFractionDigits
 
 ```TypeScript
-minimumFractionDigits?: int
+minimumFractionDigits?: number
 ```
 
 Minimum number of digits in the fraction part of a number. The value ranges from **0** to **20**.The default value is **0**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 20
 
@@ -102,21 +104,21 @@ Minimum number of digits in the fraction part of a number. The value ranges from
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PluralRulesOptions-minimumFractionDigits?: int--><!--Device-PluralRulesOptions-minimumFractionDigits?: int-End-->
-
 **System capability:** SystemCapability.Global.I18n
 
 ## minimumIntegerDigits
 
 ```TypeScript
-minimumIntegerDigits?: int
+minimumIntegerDigits?: number
 ```
 
 Minimum number of digits allowed in the integer part of a number. The value ranges from **1** to **21**.The default value is **1**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 20
 
@@ -124,29 +126,27 @@ Minimum number of digits allowed in the integer part of a number. The value rang
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PluralRulesOptions-minimumIntegerDigits?: int--><!--Device-PluralRulesOptions-minimumIntegerDigits?: int-End-->
-
 **System capability:** SystemCapability.Global.I18n
 
 ## minimumSignificantDigits
 
 ```TypeScript
-minimumSignificantDigits?: int
+minimumSignificantDigits?: number
 ```
 
 Minimum number of the least significant digits. The value ranges from **1** to **21**.The default value is **1**.
 
-**Type:** int
+**Type:** number
 
 **Since:** 8
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.PluralRulesOptions.minimumSignificantDigits](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#minimumsignificantdigits)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PluralRulesOptions-minimumSignificantDigits?: int--><!--Device-PluralRulesOptions-minimumSignificantDigits?: int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -162,13 +162,12 @@ Collation type. The value can be **cardinal** or **ordinal**.The default value i
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.PluralRulesOptions.type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#type)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PluralRulesOptions-type?: string--><!--Device-PluralRulesOptions-type?: string-End-->
-
 **System capability:** SystemCapability.Global.I18n
-

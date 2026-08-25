@@ -2,9 +2,9 @@
 
 用于设置场景。Scene采用树状层次结构组织场景节点，根节点（root）作为场景的入口。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export declare class Scene--><!--Device-unnamed-export declare class Scene-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -18,23 +18,23 @@ cloneNode(node: Node, parent: Node, name: string): Node | null
 
 **起始版本：** 23
 
-<!--Device-Scene-cloneNode(node: Node, parent: Node, name: string): Node | null--><!--Device-Scene-cloneNode(node: Node, parent: Node, name: string): Node | null-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 被克隆的节点。 |
-| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 被克隆的节点在当前所在场景中的目标父节点。被克隆的节点node和目标父节点parent需要属于同一个场景scene。 |
-| name | string | 是 | 克隆节点的名称，由开发者自定义，无特殊要求。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 |
+| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 |
+| name | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | 返回克隆节点。克隆失败则返回null。 |
+| 类型 |
+| --- |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null |
 
 **示例**
 
@@ -66,24 +66,24 @@ createComponent(node: Node, name: string): Promise<SceneComponent>
 
 在指定节点上创建新的组件，根据组件名称异步创建并附加到节点上，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Scene-createComponent(node: Node, name: string): Promise<SceneComponent>--><!--Device-Scene-createComponent(node: Node, name: string): Promise<SceneComponent>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 组件需要附加到的节点。 |
-| name | string | 是 | 要创建的组件名称，由各插件定义有效名称。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 |
+| name | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md)&gt; | Promise对象，返回新创建的场景组件。 |
+| 类型 |
+| --- |
+| Promise&lt;[SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md)&gt; |
 
 **示例**
 
@@ -117,9 +117,9 @@ destroy(): void
 
 销毁场景，释放所有的场景资源。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Scene-destroy(): void--><!--Device-Scene-destroy(): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -148,24 +148,24 @@ getComponent(node: Node, name: string): SceneComponent | null
 
 根据指定的组件名称，从给定节点上获取对应的组件实例。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Scene-getComponent(node: Node, name: string): SceneComponent | null--><!--Device-Scene-getComponent(node: Node, name: string): SceneComponent | null-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 组件附加的节点。 |
-| name | string | 是 | 需要获取的组件名称，必须为系统预定义或已注册的自定义组件名称，且需符合命名规范。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 |
+| name | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) \| null | 返回对应名称的组件对象，若未找到则返回null。 |
+| 类型 |
+| --- |
+| [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) \| null |
 
 **示例**
 
@@ -199,17 +199,17 @@ static getDefaultRenderContext(): RenderContext | null
 
 获取当前图形对象所关联的渲染上下文。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-Scene-static getDefaultRenderContext(): RenderContext | null--><!--Device-Scene-static getDefaultRenderContext(): RenderContext | null-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) \| null | 返回当前对象关联的渲染上下文，若对象尚未关联任何渲染上下文，则返回null。 |
+| 类型 |
+| --- |
+| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) \| null |
 
 **示例**
 
@@ -235,24 +235,24 @@ getNodeByPath(path: string, type?: NodeType): Node | null
 
 通过路径获取节点。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Scene-getNodeByPath(path: string, type?: NodeType): Node | null--><!--Device-Scene-getNodeByPath(path: string, type?: NodeType): Node | null-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 场景节点层次中的路径。每层之间使用'/'符号进行分割。 |
-| type | [NodeType](arkts-arkgraphics3d-scenenodes-nodetype-e.md) | 否 | 预期返回的节点类型。当需要确保返回特定类型的节点时传入此参数，不传入时返回路径上找到的第一个节点（不限制类型）。默认值为空。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| path | string | 是 |
+| type | [NodeType](arkts-arkgraphics3d-scenenodes-nodetype-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | 返回请求节点的实例，如果没有找到或者找到的节点类型与传入的参数不相符则返回空。 |
+| 类型 |
+| --- |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null |
 
 **示例**
 
@@ -279,17 +279,17 @@ getResourceFactory(): SceneResourceFactory
 
 获取场景资源工厂对象。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Scene-getResourceFactory(): SceneResourceFactory--><!--Device-Scene-getResourceFactory(): SceneResourceFactory-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [SceneResourceFactory](arkts-arkgraphics3d-scene-sceneresourcefactory-i.md) | 返回场景资源工厂对象。 |
+| 类型 |
+| --- |
+| [SceneResourceFactory](arkts-arkgraphics3d-scene-sceneresourcefactory-i.md) |
 
 **示例**
 
@@ -316,25 +316,25 @@ importNode(name: string, node: Node, parent: Node | null): Node
 
 一般用于从其他场景导入节点。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-Scene-importNode(name: string, node: Node, parent: Node | null): Node--><!--Device-Scene-importNode(name: string, node: Node, parent: Node | null): Node-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 导入节点后的名称，由开发者自定义，无特殊要求。 |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 被导入的节点。 |
-| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | 是 | 被导入节点在新场景中的父节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 |
+| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 被导入的节点。 |
+| 类型 |
+| --- |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) |
 
 **示例**
 
@@ -368,25 +368,25 @@ importScene(name: string, scene: Scene, parent: Node | null): Node
 
 在当前场景中导入其他场景。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-Scene-importScene(name: string, scene: Scene, parent: Node | null): Node--><!--Device-Scene-importScene(name: string, scene: Scene, parent: Node | null): Node-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 导入场景的根节点名称，由开发者自定义，无特殊要求。 |
-| scene | [Scene](arkts-arkgraphics3d-scene-c.md) | 是 | 被导入的场景。 |
-| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | 是 | 被导入场景在新场景中的父节点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| scene | [Scene](arkts-arkgraphics3d-scene-c.md) | 是 |
+| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 被导入场景的根节点。 |
+| 类型 |
+| --- |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) |
 
 **示例**
 
@@ -414,23 +414,23 @@ static load(uri? : ResourceStr): Promise<Scene>
 
 通过传入的资源路径加载资源，使用Promise异步回调。 调用后，应该在Scene使用完毕时调用destroy释放资源，否则可能导致资源泄漏。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-Scene-static load(uri? : ResourceStr): Promise<Scene>--><!--Device-Scene-static load(uri? : ResourceStr): Promise<Scene>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uri | ResourceStr | 否 | 待加载的模型文件资源路径，默认值为undefined。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; | Promise对象，返回场景对象。 |
+| 类型 |
+| --- |
+| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; |
 
 **示例**
 
@@ -498,23 +498,23 @@ renderFrame(params?: RenderParameters): boolean
 
 通过该接口可以实现按需渲染，例如控制渲染帧率。
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-Scene-renderFrame(params?: RenderParameters): boolean--><!--Device-Scene-renderFrame(params?: RenderParameters): boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| params | [RenderParameters](arkts-arkgraphics3d-scene-renderparameters-i.md) | 否 | 渲染参数，默认值为undefined。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| params | [RenderParameters](arkts-arkgraphics3d-scene-renderparameters-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 渲染被成功调度返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -534,3 +534,66 @@ function RenderFrameTest() {
 }
 ```
 
+## animations
+
+```TypeScript
+get animations(): Animation[]
+```
+
+动画数组，用于保存3D场景中的动画对象。@return { Animation[] } @readonly
+
+**类型：** [Animation](arkts-arkgraphics3d-sceneresources-animation-i.md)[]
+
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.ArkUi.Graphics3D
+
+## environment
+
+```TypeScript
+set environment(value: Environment)
+```
+
+环境对象。
+
+**类型：** [Environment](arkts-arkgraphics3d-sceneresources-environment-i.md)
+
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.ArkUi.Graphics3D
+
+## renderConfiguration
+
+```TypeScript
+get renderConfiguration(): RenderConfiguration
+```
+
+渲染配置接口。
+
+**类型：** [RenderConfiguration](arkts-arkgraphics3d-scene-renderconfiguration-i.md)
+
+**起始版本：** 23
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
+**系统能力：** SystemCapability.ArkUi.Graphics3D
+
+## root
+
+```TypeScript
+get root(): Node | null
+```
+
+3D场景树根节点。@return { Node | null } @readonly
+
+**类型：** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
+
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.ArkUi.Graphics3D

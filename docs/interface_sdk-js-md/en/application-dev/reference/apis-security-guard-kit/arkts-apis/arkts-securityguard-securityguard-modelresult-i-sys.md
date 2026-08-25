@@ -4,7 +4,7 @@ Provides the ModelResult type.
 
 **Since:** 12
 
-<!--Device-securityGuard-interface ModelResult--><!--Device-securityGuard-interface ModelResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -28,9 +28,8 @@ The result of security model.
 
 **Since:** 12
 
-<!--Device-ModelResult-result: string--><!--Device-ModelResult-result: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
-

@@ -1,8 +1,6 @@
 # ResolvedNumberFormatOptions
 
-**Since:** -1
-
-<!--Device-Intl-interface ResolvedNumberFormatOptions--><!--Device-Intl-interface ResolvedNumberFormatOptions-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,9 +15,7 @@ currency?: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ResolvedNumberFormatOptions-currency?: string--><!--Device-ResolvedNumberFormatOptions-currency?: string-End-->
+**ArkTS mode:** 
 
 ## locale
 
@@ -29,9 +25,7 @@ locale: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ResolvedNumberFormatOptions-locale: string--><!--Device-ResolvedNumberFormatOptions-locale: string-End-->
+**ArkTS mode:** 
 
 ## maximumFractionDigits
 
@@ -41,9 +35,7 @@ maximumFractionDigits: number
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-ResolvedNumberFormatOptions-maximumFractionDigits: number--><!--Device-ResolvedNumberFormatOptions-maximumFractionDigits: number-End-->
+**ArkTS mode:** 
 
 ## maximumSignificantDigits
 
@@ -53,9 +45,7 @@ maximumSignificantDigits?: number
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-ResolvedNumberFormatOptions-maximumSignificantDigits?: number--><!--Device-ResolvedNumberFormatOptions-maximumSignificantDigits?: number-End-->
+**ArkTS mode:** 
 
 ## minimumFractionDigits
 
@@ -65,9 +55,7 @@ minimumFractionDigits: number
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-ResolvedNumberFormatOptions-minimumFractionDigits: number--><!--Device-ResolvedNumberFormatOptions-minimumFractionDigits: number-End-->
+**ArkTS mode:** 
 
 ## minimumIntegerDigits
 
@@ -77,9 +65,7 @@ minimumIntegerDigits: number
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-ResolvedNumberFormatOptions-minimumIntegerDigits: number--><!--Device-ResolvedNumberFormatOptions-minimumIntegerDigits: number-End-->
+**ArkTS mode:** 
 
 ## minimumSignificantDigits
 
@@ -89,9 +75,7 @@ minimumSignificantDigits?: number
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-ResolvedNumberFormatOptions-minimumSignificantDigits?: number--><!--Device-ResolvedNumberFormatOptions-minimumSignificantDigits?: number-End-->
+**ArkTS mode:** 
 
 ## numberingSystem
 
@@ -101,9 +85,7 @@ numberingSystem: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ResolvedNumberFormatOptions-numberingSystem: string--><!--Device-ResolvedNumberFormatOptions-numberingSystem: string-End-->
+**ArkTS mode:** 
 
 ## roundingIncrement
 
@@ -113,9 +95,7 @@ roundingIncrement?: number
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-ResolvedNumberFormatOptions-roundingIncrement?: number--><!--Device-ResolvedNumberFormatOptions-roundingIncrement?: number-End-->
+**ArkTS mode:** 
 
 ## roundingMode
 
@@ -125,9 +105,7 @@ roundingMode?: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ResolvedNumberFormatOptions-roundingMode?: string--><!--Device-ResolvedNumberFormatOptions-roundingMode?: string-End-->
+**ArkTS mode:** 
 
 ## roundingPriority
 
@@ -137,9 +115,7 @@ roundingPriority?: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ResolvedNumberFormatOptions-roundingPriority?: string--><!--Device-ResolvedNumberFormatOptions-roundingPriority?: string-End-->
+**ArkTS mode:** 
 
 ## style
 
@@ -149,9 +125,7 @@ style: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-ResolvedNumberFormatOptions-style: string--><!--Device-ResolvedNumberFormatOptions-style: string-End-->
+**ArkTS mode:** 
 
 ## useGrouping
 
@@ -161,7 +135,4 @@ useGrouping: boolean
 
 **Type:** boolean
 
-**Since:** -1
-
-<!--Device-ResolvedNumberFormatOptions-useGrouping: boolean--><!--Device-ResolvedNumberFormatOptions-useGrouping: boolean-End-->
-
+**ArkTS mode:** 

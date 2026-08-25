@@ -2,9 +2,9 @@
 
 Enumerates the audio states.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-audio-enum AudioState--><!--Device-audio-enum AudioState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -16,9 +16,9 @@ STATE_INVALID = -1
 
 Invalid state.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-AudioState-STATE_INVALID = -1--><!--Device-AudioState-STATE_INVALID = -1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -30,9 +30,9 @@ STATE_NEW = 0
 
 Creating instance state.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-AudioState-STATE_NEW = 0--><!--Device-AudioState-STATE_NEW = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -44,9 +44,9 @@ STATE_PREPARED = 1
 
 Prepared.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-AudioState-STATE_PREPARED = 1--><!--Device-AudioState-STATE_PREPARED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -58,9 +58,9 @@ STATE_RUNNING = 2
 
 Running.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-AudioState-STATE_RUNNING = 2--><!--Device-AudioState-STATE_RUNNING = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -72,9 +72,9 @@ STATE_STOPPED = 3
 
 Stopped.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-AudioState-STATE_STOPPED = 3--><!--Device-AudioState-STATE_STOPPED = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -86,9 +86,9 @@ STATE_RELEASED = 4
 
 Released.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-AudioState-STATE_RELEASED = 4--><!--Device-AudioState-STATE_RELEASED = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -100,9 +100,8 @@ STATE_PAUSED = 5
 
 Paused.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-AudioState-STATE_PAUSED = 5--><!--Device-AudioState-STATE_PAUSED = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
-

@@ -13,26 +13,26 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 export function hint(val: string, pattern?: MatchPattern): On
 ```
 
-Specifies the hint for the target Component.
+指定目标控件的提示文本属性，返回 On 对象自身。
 
 **起始版本：** 23
 
-<!--Device-ON-export function hint(val: string, pattern?: MatchPattern): On--><!--Device-ON-export function hint(val: string, pattern?: MatchPattern): On-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| val | string | 是 | the hint value. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 | the [MatchPattern](arkts-test-uitest-matchpattern-e.md) of the text value,Set it default [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) if null or undefined. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| val | string | 是 |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | this { |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **示例**
 
@@ -42,4 +42,3 @@ import { MatchPattern, On, ON } from '@kit.TestKit';
 
 let on: On = ON.hint('welcome', MatchPattern.EQUALS); // 使用静态构造器ON创建On对象，指定目标控件的提示文本属性。
 ```
-

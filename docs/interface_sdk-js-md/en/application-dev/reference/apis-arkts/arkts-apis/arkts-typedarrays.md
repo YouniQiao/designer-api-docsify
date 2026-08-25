@@ -9,12 +9,11 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [BigInt64Array(TypedArrays static methods declaration)](arkts-arkts-typedarrays-bigint64array-c.md) | class BigInt64Array |
-| [Float32Array(TypedArrays static methods declaration)](arkts-arkts-typedarrays-float32array-c.md) | class Float32Array |
-| [Float64Array(TypedArrays static methods declaration)](arkts-arkts-typedarrays-float64array-c.md) | class Float64Array |
-| [Int16Array(TypedArrays static methods declaration)](arkts-arkts-typedarrays-int16array-c.md) | class Int16Array |
-| [Int32Array(TypedArrays static methods declaration)](arkts-arkts-typedarrays-int32array-c.md) | class Int32Array |
-| [Int8Array(TypedArrays static methods declaration)](arkts-arkts-typedarrays-int8array-c.md) | class Int8Array |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BigInt64Array(TypedArrays static methods declaration)](arkts-arkts-typedarrays-bigint64array-c.md) |
+| [Float32Array(TypedArrays static methods declaration)](arkts-arkts-typedarrays-float32array-c.md) |
+| [Float64Array(TypedArrays static methods declaration)](arkts-arkts-typedarrays-float64array-c.md) |
+| [Int16Array(TypedArrays static methods declaration)](arkts-arkts-typedarrays-int16array-c.md) |
+| [Int32Array(TypedArrays static methods declaration)](arkts-arkts-typedarrays-int32array-c.md) |
+| [Int8Array(TypedArrays static methods declaration)](arkts-arkts-typedarrays-int8array-c.md) |

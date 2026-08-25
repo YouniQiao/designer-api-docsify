@@ -4,7 +4,7 @@ Enumerates symbol effect types. Once applied, the symbol effect becomes active i
 
 **Since:** 11
 
-<!--Device-unnamed-declare enum SymbolEffectStrategy--><!--Device-unnamed-declare enum SymbolEffectStrategy-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +18,13 @@ No effect (default value).
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-SymbolEffectStrategy-NONE = 0--><!--Device-SymbolEffectStrategy-NONE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,13 +38,13 @@ Scale effect as a whole.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
-
-<!--Device-SymbolEffectStrategy-SCALE = 1--><!--Device-SymbolEffectStrategy-SCALE = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,13 +58,12 @@ Hierarchical effect.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-<!--Device-SymbolEffectStrategy-HIERARCHICAL = 2--><!--Device-SymbolEffectStrategy-HIERARCHICAL = 2-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

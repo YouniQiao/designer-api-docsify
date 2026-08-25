@@ -12,7 +12,6 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 
 ### Namespaces
 
-| Name | Description |
-| --- | --- |
-| [bluetoothManager](arkts-connectivity-bluetoothmanager-n.md) | Provides methods to operate or manage Bluetooth. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [bluetoothManager](arkts-connectivity-bluetoothmanager-n.md) |

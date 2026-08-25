@@ -4,7 +4,7 @@ Enumerates the user authentication types.
 
 **Since:** 9
 
-<!--Device-huks-export enum HuksUserAuthType--><!--Device-huks-export enum HuksUserAuthType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -18,9 +18,9 @@ Fingerprint authentication.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-HuksUserAuthType-HUKS_USER_AUTH_TYPE_FINGERPRINT = 1 << 0--><!--Device-HuksUserAuthType-HUKS_USER_AUTH_TYPE_FINGERPRINT = 1 << 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -34,9 +34,9 @@ Facial authentication.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-HuksUserAuthType-HUKS_USER_AUTH_TYPE_FACE = 1 << 1--><!--Device-HuksUserAuthType-HUKS_USER_AUTH_TYPE_FACE = 1 << 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -50,9 +50,9 @@ PIN authentication.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-HuksUserAuthType-HUKS_USER_AUTH_TYPE_PIN = 1 << 2--><!--Device-HuksUserAuthType-HUKS_USER_AUTH_TYPE_PIN = 1 << 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -66,9 +66,8 @@ TUI PIN authentication. <!--Del-->(Currently not supported.)<!--DelEnd-->
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-HuksUserAuthType-HUKS_USER_AUTH_TYPE_TUI_PIN = 1 << 5--><!--Device-HuksUserAuthType-HUKS_USER_AUTH_TYPE_TUI_PIN = 1 << 5-End-->
-
 **System capability:** SystemCapability.Security.Huks.Extension
-

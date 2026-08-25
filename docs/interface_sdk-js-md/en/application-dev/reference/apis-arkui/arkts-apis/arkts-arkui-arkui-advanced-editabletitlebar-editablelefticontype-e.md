@@ -4,7 +4,7 @@ Declaration of the left icon type.
 
 **Since:** 10
 
-<!--Device-unnamed-export declare enum EditableLeftIconType--><!--Device-unnamed-export declare enum EditableLeftIconType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Back.
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-EditableLeftIconType-Back = 0--><!--Device-EditableLeftIconType-Back = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ Cancel.
 
 **Since:** 10
 
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-EditableLeftIconType-Cancel = 1--><!--Device-EditableLeftIconType-Cancel = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

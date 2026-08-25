@@ -4,13 +4,13 @@
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
 **替代接口：** [GyroscopeResponse](arkts-sensorservice-sensor-gyroscoperesponse-i.md)
 
 **需要权限：** ohos.permission.GYROSCOPE
-
-<!--Device-unnamed-export interface GyroscopeResponse--><!--Device-unnamed-export interface GyroscopeResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -32,6 +32,8 @@ x轴的旋转角速度。单位：rad/s（弧度/秒）。取值范围：取值�
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
 **替代接口：** [x](arkts-sensorservice-sensor-gyroscoperesponse-i.md#x)
@@ -39,8 +41,6 @@ x轴的旋转角速度。单位：rad/s（弧度/秒）。取值范围：取值�
 **需要权限：** ohos.permission.GYROSCOPE
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-GyroscopeResponse-x: number--><!--Device-GyroscopeResponse-x: number-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -56,6 +56,8 @@ y轴的旋转角速度。单位：rad/s（弧度/秒）。取值范围：取值�
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
 **替代接口：** [y](arkts-sensorservice-sensor-gyroscoperesponse-i.md#y)
@@ -63,8 +65,6 @@ y轴的旋转角速度。单位：rad/s（弧度/秒）。取值范围：取值�
 **需要权限：** ohos.permission.GYROSCOPE
 
 **模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-GyroscopeResponse-y: number--><!--Device-GyroscopeResponse-y: number-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -80,6 +80,8 @@ z轴的旋转角速度。单位：rad/s（弧度/秒）。取值范围：取值�
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 8
 
 **替代接口：** [z](arkts-sensorservice-sensor-gyroscoperesponse-i.md#z)
@@ -88,7 +90,4 @@ z轴的旋转角速度。单位：rad/s（弧度/秒）。取值范围：取值�
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
-<!--Device-GyroscopeResponse-z: number--><!--Device-GyroscopeResponse-z: number-End-->
-
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
-

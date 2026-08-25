@@ -6,7 +6,7 @@ Provides APIs to manage albums.
 
 **Since:** 12
 
-<!--Device-sendablePhotoAccessHelper-interface Album--><!--Device-sendablePhotoAccessHelper-interface Album-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,24 +26,24 @@ Commits the modification on the album attributes to the database. This API uses 
 
 **Since:** 12
 
-**Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-Album-commitModify(): Promise<void>--><!--Device-Album-commitModify(): Promise<void>-End-->
+**Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 14000011 | Internal system error |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| 14000011 |
 
 **Examples**
 
@@ -111,22 +111,22 @@ Converts this Sendable album to a non-Sendable album.
 
 **Since:** 12
 
-<!--Device-Album-convertToPhotoAlbum(): photoAccessHelper.Album--><!--Device-Album-convertToPhotoAlbum(): photoAccessHelper.Album-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| photoAccessHelper.Album | Album of the non-Sendable type. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| photoAccessHelper.Album |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 14000011 | Internal system error |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| 14000011 |
 
 **Examples**
 
@@ -171,7 +171,7 @@ Number of image assets in the album
 
 **Since:** 12
 
-<!--Device-Album-readonly imageCount?: number--><!--Device-Album-readonly imageCount?: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -187,7 +187,6 @@ Number of video assets in the album
 
 **Since:** 12
 
-<!--Device-Album-readonly videoCount?: number--><!--Device-Album-readonly videoCount?: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

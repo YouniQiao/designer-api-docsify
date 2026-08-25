@@ -4,11 +4,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 23
 
 **替代接口：** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md)
-
-<!--Device-unnamed-declare class WebCookie--><!--Device-unnamed-declare class WebCookie-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -27,13 +27,13 @@ WebCookie的构造函数。
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 23
 
 **替代接口：** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-WebCookie-constructor()--><!--Device-WebCookie-constructor()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -47,11 +47,11 @@ saveCookie()
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [saveCookieAsync](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md#savecookieasync)
-
-<!--Device-WebCookie-saveCookie()--><!--Device-WebCookie-saveCookie()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -65,11 +65,10 @@ setCookie()
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** setCookie
 
-<!--Device-WebCookie-setCookie()--><!--Device-WebCookie-setCookie()-End-->
-
 **系统能力：** SystemCapability.Web.Webview.Core
-

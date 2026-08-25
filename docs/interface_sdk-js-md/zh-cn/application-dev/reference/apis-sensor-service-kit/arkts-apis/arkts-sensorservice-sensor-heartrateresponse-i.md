@@ -4,9 +4,9 @@
 
 **继承/实现关系：** HeartRateResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-sensor-interface HeartRateResponse--><!--Device-sensor-interface HeartRateResponse-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -24,11 +24,10 @@ heartRate: double
 
 用户的心率数值。单位：bpm（beats per minute，每分钟心跳次数）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-HeartRateResponse-heartRate: double--><!--Device-HeartRateResponse-heartRate: double-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
-

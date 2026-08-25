@@ -4,7 +4,7 @@ Defines cookie-related fields.
 
 **Since:** 23
 
-<!--Device-webview-interface WebHttpCookie--><!--Device-webview-interface WebHttpCookie-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -26,7 +26,7 @@ Domain names that can access the cookie.
 
 **Since:** 23
 
-<!--Device-WebHttpCookie-domain: string--><!--Device-WebHttpCookie-domain: string-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -42,7 +42,7 @@ Expiration time of the cookie. For details about the time format, see [Date](htt
 
 **Since:** 23
 
-<!--Device-WebHttpCookie-expiresDate: string--><!--Device-WebHttpCookie-expiresDate: string-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -58,7 +58,7 @@ Whether the cookie can be accessed only through HTTP requests.The value **true**
 
 **Since:** 23
 
-<!--Device-WebHttpCookie-isHttpOnly: boolean--><!--Device-WebHttpCookie-isHttpOnly: boolean-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -74,7 +74,7 @@ Whether the cookie can be sent only through HTTPS.The value **true** means the c
 
 **Since:** 23
 
-<!--Device-WebHttpCookie-isSecure: boolean--><!--Device-WebHttpCookie-isSecure: boolean-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -90,7 +90,7 @@ Whether the cookie is a session cookie.The value **true** indicates that the coo
 
 **Since:** 23
 
-<!--Device-WebHttpCookie-isSessionCookie: boolean--><!--Device-WebHttpCookie-isSessionCookie: boolean-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -106,7 +106,7 @@ Name of the cookie.
 
 **Since:** 23
 
-<!--Device-WebHttpCookie-name: string--><!--Device-WebHttpCookie-name: string-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -122,7 +122,7 @@ Path of the cookie.
 
 **Since:** 23
 
-<!--Device-WebHttpCookie-path: string--><!--Device-WebHttpCookie-path: string-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -134,11 +134,11 @@ samesitePolicy: WebHttpCookieSameSitePolicy
 
 Same-site policy of the cookie.
 
-**Type:** [WebHttpCookieSameSitePolicy](../../apis-default/arkts-apis/arkts-webview-webhttpcookiesamesitepolicy-e.md)
+**Type:** [WebHttpCookieSameSitePolicy](arkts-arkweb-webview-webhttpcookiesamesitepolicy-e.md)
 
 **Since:** 23
 
-<!--Device-WebHttpCookie-samesitePolicy: WebHttpCookieSameSitePolicy--><!--Device-WebHttpCookie-samesitePolicy: WebHttpCookieSameSitePolicy-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -154,7 +154,6 @@ Value of the cookie.
 
 **Since:** 23
 
-<!--Device-WebHttpCookie-value: string--><!--Device-WebHttpCookie-value: string-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

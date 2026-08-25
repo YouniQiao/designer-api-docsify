@@ -6,14 +6,13 @@ export type WindowType = 'application' | 'system'
 
 Enumerates the window types.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export type WindowType = 'application' | 'system'--><!--Device-unnamed-export type WindowType = 'application' | 'system'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-| Type | Description |
-| --- | --- |
-| 'application' | Application window. |
-| 'system' | System window. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'application' |
+| 'system' |

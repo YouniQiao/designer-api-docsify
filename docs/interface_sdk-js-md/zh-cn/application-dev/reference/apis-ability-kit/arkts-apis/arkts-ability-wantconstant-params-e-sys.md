@@ -2,9 +2,9 @@
 
 want的Params操作的常量。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-wantConstant-export enum Params--><!--Device-wantConstant-export enum Params-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -16,9 +16,9 @@ DLP_PARAMS_SANDBOX = 'ohos.dlp.params.sandbox'
 
 指示沙盒标志的参数的操作。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Params-DLP_PARAMS_SANDBOX = 'ohos.dlp.params.sandbox'--><!--Device-Params-DLP_PARAMS_SANDBOX = 'ohos.dlp.params.sandbox'-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -32,9 +32,9 @@ DLP_PARAMS_BUNDLE_NAME = 'ohos.dlp.params.bundleName'
 
 指示DLP Bundle名称的参数的操作。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Params-DLP_PARAMS_BUNDLE_NAME = 'ohos.dlp.params.bundleName'--><!--Device-Params-DLP_PARAMS_BUNDLE_NAME = 'ohos.dlp.params.bundleName'-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -48,9 +48,9 @@ DLP_PARAMS_MODULE_NAME = 'ohos.dlp.params.moduleName'
 
 指示DLP模块名称的参数的操作。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Params-DLP_PARAMS_MODULE_NAME = 'ohos.dlp.params.moduleName'--><!--Device-Params-DLP_PARAMS_MODULE_NAME = 'ohos.dlp.params.moduleName'-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -64,9 +64,9 @@ DLP_PARAMS_ABILITY_NAME = 'ohos.dlp.params.abilityName'
 
 指示DLP能力名称的参数的操作。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Params-DLP_PARAMS_ABILITY_NAME = 'ohos.dlp.params.abilityName'--><!--Device-Params-DLP_PARAMS_ABILITY_NAME = 'ohos.dlp.params.abilityName'-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -80,9 +80,9 @@ DLP_PARAMS_INDEX = 'ohos.dlp.params.index'
 
 指示DLP索引参数的操作。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-Params-DLP_PARAMS_INDEX = 'ohos.dlp.params.index'--><!--Device-Params-DLP_PARAMS_INDEX = 'ohos.dlp.params.index'-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -96,9 +96,9 @@ HIDE_SENSITIVE_TYPE = 'ohos.media.params.hideSensitiveType'
 
 指示隐藏敏感信息的类型。
 
-**起始版本：** 23
+**起始版本：** 15
 
-<!--Device-Params-HIDE_SENSITIVE_TYPE = 'ohos.media.params.hideSensitiveType'--><!--Device-Params-HIDE_SENSITIVE_TYPE = 'ohos.media.params.hideSensitiveType'-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -112,11 +112,11 @@ ASSERT_FAULT_SESSION_ID = 'ohos.ability.params.asssertFaultSessionId'
 
 指示AssertFault的会话ID。
 
-**起始版本：** 23
+**起始版本：** 12
+
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Params-ASSERT_FAULT_SESSION_ID = 'ohos.ability.params.asssertFaultSessionId'--><!--Device-Params-ASSERT_FAULT_SESSION_ID = 'ohos.ability.params.asssertFaultSessionId'-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -132,11 +132,10 @@ UI_EXTENSION_ROOT_TOKEN = 'ohos.param.uiExtension.rootHostToken'
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Params-UI_EXTENSION_ROOT_TOKEN = 'ohos.param.uiExtension.rootHostToken'--><!--Device-Params-UI_EXTENSION_ROOT_TOKEN = 'ohos.param.uiExtension.rootHostToken'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 **系统接口：** 此接口为系统接口。
-

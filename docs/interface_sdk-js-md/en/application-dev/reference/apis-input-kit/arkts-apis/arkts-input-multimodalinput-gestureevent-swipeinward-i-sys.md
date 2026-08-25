@@ -2,9 +2,9 @@
 
 Defines an inward swipe event.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export declare interface SwipeInward--><!--Device-unnamed-export declare interface SwipeInward-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -26,9 +26,9 @@ Type of the inward swipe event. The value is fixed at **SwipeInward**.
 
 **Type:** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SwipeInward-type: ActionType--><!--Device-SwipeInward-type: ActionType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -42,11 +42,11 @@ x: int
 
 X-coordinate of the swipe event trigger point, in pixels.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SwipeInward-x: int--><!--Device-SwipeInward-x: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -60,13 +60,12 @@ y: int
 
 Y-coordinate of the swipe event trigger point, in pixels.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-SwipeInward-y: int--><!--Device-SwipeInward-y: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 **System API:** This is a system API.
-

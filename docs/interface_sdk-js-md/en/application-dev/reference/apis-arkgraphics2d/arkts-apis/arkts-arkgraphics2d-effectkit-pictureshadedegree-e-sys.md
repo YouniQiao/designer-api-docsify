@@ -2,9 +2,9 @@
 
 Enumerates the shade degrees of image colors.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-effectKit-enum PictureShadeDegree--><!--Device-effectKit-enum PictureShadeDegree-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -18,9 +18,9 @@ UNKNOWN_SHADE_DEGREE_PICTURE = 0
 
 Default value. The shade degree of the image color is unknown.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-PictureShadeDegree-UNKNOWN_SHADE_DEGREE_PICTURE = 0--><!--Device-PictureShadeDegree-UNKNOWN_SHADE_DEGREE_PICTURE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -34,9 +34,9 @@ EXTREMELY_LIGHT_PICTURE = 1
 
 The shade degree of the image color is extremely light.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-PictureShadeDegree-EXTREMELY_LIGHT_PICTURE = 1--><!--Device-PictureShadeDegree-EXTREMELY_LIGHT_PICTURE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -50,9 +50,9 @@ VERY_LIGHT_PICTURE = 2
 
 The shade degree of the image color is very light.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-PictureShadeDegree-VERY_LIGHT_PICTURE = 2--><!--Device-PictureShadeDegree-VERY_LIGHT_PICTURE = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -66,9 +66,9 @@ LIGHT_PICTURE = 3
 
 The shade degree of the image color is light.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-PictureShadeDegree-LIGHT_PICTURE = 3--><!--Device-PictureShadeDegree-LIGHT_PICTURE = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -82,9 +82,9 @@ MODERATE_SHADE_PICTURE = 4
 
 The shade degree of the image color is moderate.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-PictureShadeDegree-MODERATE_SHADE_PICTURE = 4--><!--Device-PictureShadeDegree-MODERATE_SHADE_PICTURE = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -98,9 +98,9 @@ DARK_PICTURE = 5
 
 The shade degree of the image color is dark.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-PictureShadeDegree-DARK_PICTURE = 5--><!--Device-PictureShadeDegree-DARK_PICTURE = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -114,11 +114,10 @@ EXTREMELY_DARK_PICTURE = 6
 
 The shade degree of the image color is extremely dark.
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-PictureShadeDegree-EXTREMELY_DARK_PICTURE = 6--><!--Device-PictureShadeDegree-EXTREMELY_DARK_PICTURE = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **System API:** This is a system API.
-

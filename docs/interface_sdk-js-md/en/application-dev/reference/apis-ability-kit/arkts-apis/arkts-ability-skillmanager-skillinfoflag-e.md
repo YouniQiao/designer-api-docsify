@@ -4,7 +4,7 @@ Enumeration of flags used to control what content is populated in a SkillInfo. M
 
 **Since:** 26.0.0
 
-<!--Device-skillManager-export enum SkillInfoFlag--><!--Device-skillManager-export enum SkillInfoFlag-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -18,11 +18,11 @@ Used to obtain the default SkillInfo.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-SkillInfoFlag-GET_SKILL_INFO_DEFAULT = 0x00000000--><!--Device-SkillInfoFlag-GET_SKILL_INFO_DEFAULT = 0x00000000-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -36,11 +36,11 @@ Used to obtain the SkillInfo containing description.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-SkillInfoFlag-GET_SKILL_INFO_WITH_DESCRIPTION = 0x00000001--><!--Device-SkillInfoFlag-GET_SKILL_INFO_WITH_DESCRIPTION = 0x00000001-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -54,11 +54,11 @@ Used to obtain the SkillInfo containing srcEntries.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-SkillInfoFlag-GET_SKILL_INFO_WITH_SRC_ENTRIES = 0x00000002--><!--Device-SkillInfoFlag-GET_SKILL_INFO_WITH_SRC_ENTRIES = 0x00000002-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -72,11 +72,11 @@ Used to obtain the SkillInfo containing permissions.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-SkillInfoFlag-GET_SKILL_INFO_WITH_PERMISSIONS = 0x00000004--><!--Device-SkillInfoFlag-GET_SKILL_INFO_WITH_PERMISSIONS = 0x00000004-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -90,11 +90,10 @@ Used to obtain the permissions declared under requestPermissions in the module m
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-SkillInfoFlag-GET_SKILL_INFO_WITH_REQUEST_PERMISSIONS = 0x00000008--><!--Device-SkillInfoFlag-GET_SKILL_INFO_WITH_REQUEST_PERMISSIONS = 0x00000008-End-->
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
-

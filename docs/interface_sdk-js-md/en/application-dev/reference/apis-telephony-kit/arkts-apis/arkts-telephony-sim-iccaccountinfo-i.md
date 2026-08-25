@@ -2,9 +2,9 @@
 
 Defines the ICC account information.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-sim-export interface IccAccountInfo--><!--Device-sim-export interface IccAccountInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -24,9 +24,9 @@ ICCID number.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-IccAccountInfo-iccId: string--><!--Device-IccAccountInfo-iccId: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -42,9 +42,9 @@ Whether the card is activated.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-IccAccountInfo-isActive: boolean--><!--Device-IccAccountInfo-isActive: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -59,9 +59,9 @@ Whether the SIM card is an eSIM.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-IccAccountInfo-isEsim: boolean--><!--Device-IccAccountInfo-isEsim: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -75,9 +75,9 @@ SIM card display name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-IccAccountInfo-showName: string--><!--Device-IccAccountInfo-showName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -91,9 +91,9 @@ SIM card display number.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-IccAccountInfo-showNumber: string--><!--Device-IccAccountInfo-showNumber: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -105,11 +105,11 @@ simId: int
 
 SIM card ID.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-IccAccountInfo-simId: int--><!--Device-IccAccountInfo-simId: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -121,11 +121,10 @@ slotIndex: int
 
 Card slot ID.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-IccAccountInfo-slotIndex: int--><!--Device-IccAccountInfo-slotIndex: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
-

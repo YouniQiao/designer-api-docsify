@@ -8,13 +8,12 @@ Represents the AgentProxy type.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-common-export type AgentProxy = _AgentProxy--><!--Device-common-export type AgentProxy = _AgentProxy-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
 
 **Property type:** _AgentProxy
-

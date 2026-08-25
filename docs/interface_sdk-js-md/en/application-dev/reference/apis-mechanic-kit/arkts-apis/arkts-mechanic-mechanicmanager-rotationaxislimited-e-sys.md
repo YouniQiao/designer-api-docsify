@@ -2,9 +2,9 @@
 
 Enumerates the rotation axis limit states. @enum { int }
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-mechanicManager-export enum RotationAxisLimited--><!--Device-mechanicManager-export enum RotationAxisLimited-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -18,9 +18,9 @@ NOT_LIMITED = 0
 
 Not limited.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RotationAxisLimited-NOT_LIMITED = 0--><!--Device-RotationAxisLimited-NOT_LIMITED = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -34,9 +34,9 @@ NEGATIVE_LIMITED = 1
 
 Negative limited.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RotationAxisLimited-NEGATIVE_LIMITED = 1--><!--Device-RotationAxisLimited-NEGATIVE_LIMITED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -50,11 +50,10 @@ POSITIVE_LIMITED = 2
 
 Positive limited.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-RotationAxisLimited-POSITIVE_LIMITED = 2--><!--Device-RotationAxisLimited-POSITIVE_LIMITED = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
-

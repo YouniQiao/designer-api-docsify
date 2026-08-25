@@ -1,12 +1,10 @@
 # ArkListOptions
 
-Defines the arc list options.
+Provides basic parameters for creating an **ArcList** component.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-unnamed-export declare interface ArkListOptions--><!--Device-unnamed-export declare interface ArkListOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -19,36 +17,36 @@ import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@k
 ## header
 
 ```TypeScript
-header?: ComponentContentBase
+header?: ComponentContent
 ```
 
-Describes the header.
+Header component.
 
-**Type:** [ComponentContentBase](../../apis-default/arkts-apis/arkts-componentcontent-componentcontentbase-c.md)
+**Type:** ComponentContent
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-ArkListOptions-header?: ComponentContentBase--><!--Device-ArkListOptions-header?: ComponentContentBase-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## initialIndex
 
 ```TypeScript
-initialIndex?: int
+initialIndex?: number
 ```
 
-Describes the index of initial item, the default value is 0. The value should be an integer.
+Item displayed at the beginning of the viewport when the **ArcList** component is loaded for the first time, that is, the first item to be displayed.<br/>Default value: **0**<br/> **NOTE：**<br/>If the set value is a negative number or is greater than the index of the last item, the value is invalid. In this case, the default value will be used.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-ArkListOptions-initialIndex?: int--><!--Device-ArkListOptions-initialIndex?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -58,15 +56,14 @@ Describes the index of initial item, the default value is 0. The value should be
 scroller?: Scroller
 ```
 
-Describes the controller for scrollable container.
+Controller of the scrollable component. After being bound to **ArcList**, the controller can control the scrolling of **ArcList**.<br/>**NOTE：**<br/>The scroller cannot be bound to other scrollable components.
 
 **Type:** Scroller
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
-<!--Device-ArkListOptions-scroller?: Scroller--><!--Device-ArkListOptions-scroller?: Scroller-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
-

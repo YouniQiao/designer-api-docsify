@@ -15,17 +15,17 @@ function removeStorageFromCacheSync(path: string): void
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
 **替代接口：** removePreferencesFromCache
 
-<!--Device-storage-function removeStorageFromCacheSync(path: string): void--><!--Device-storage-function removeStorageFromCacheSync(path: string): void-End-->
-
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 应用程序内部数据存储路径。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| path | string | 是 |
 
 **示例**
 
@@ -41,4 +41,3 @@ context.getFilesDir().then((filePath) => {
     data_storage.removeStorageFromCacheSync(path + '/mystore');
 });
 ```
-

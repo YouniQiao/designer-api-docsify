@@ -4,7 +4,7 @@
 
 **起始版本：** 24
 
-<!--Device-relationalStore-enum DistributedOrigin--><!--Device-relationalStore-enum DistributedOrigin-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -20,9 +20,9 @@ ORI_LOCAL = 0
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-DistributedOrigin-ORI_LOCAL = 0--><!--Device-DistributedOrigin-ORI_LOCAL = 0-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -38,9 +38,9 @@ ORI_CLOUD = 1
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-DistributedOrigin-ORI_CLOUD = 1--><!--Device-DistributedOrigin-ORI_CLOUD = 1-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -56,11 +56,10 @@ ORI_REMOTE = 2
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-DistributedOrigin-ORI_REMOTE = 2--><!--Device-DistributedOrigin-ORI_REMOTE = 2-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **系统接口：** 此接口为系统接口。
-

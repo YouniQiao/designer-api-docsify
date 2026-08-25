@@ -4,9 +4,9 @@ Animation resource, which inherits from SceneResource.@extends SceneResource @in
 
 **Inheritance/Implementation:** Animation extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface Animation--><!--Device-unnamed-export interface Animation-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,9 +18,9 @@ finish(): void
 
 Finishes the playing of the animation and sets its progress of 1 (finished).
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Animation-finish(): void--><!--Device-Animation-finish(): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -50,17 +50,17 @@ onFinished(callback: Callback<void>): void
 
 Called when the animation playback is complete or the finish API is called.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Animation-onFinished(callback: Callback<void>): void--><!--Device-Animation-onFinished(callback: Callback<void>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback function. The return value is null. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
 
 **Examples**
 
@@ -90,17 +90,17 @@ onStarted(callback: Callback<void>): void
 
 Called when the animation starts to play. The start operation is triggered by calling start or restart.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Animation-onStarted(callback: Callback<void>): void--><!--Device-Animation-onStarted(callback: Callback<void>): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback function. The return value is null. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
 
 **Examples**
 
@@ -130,9 +130,9 @@ pause(): void
 
 Pauses the animation. The animation remains in the current playing progress.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Animation-pause(): void--><!--Device-Animation-pause(): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -162,9 +162,9 @@ restart(): void
 
 Plays the animation from the beginning.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Animation-restart(): void--><!--Device-Animation-restart(): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -188,23 +188,29 @@ function restart(): void {
 
 ## seek
 
+ArkTS-Dyn:
+```TypeScript
+seek(position: number): void
+```
+
+ArkTS-Sta:
 ```TypeScript
 seek(position: double): void
 ```
 
 Plays the animation from the specified position.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Animation-seek(position: double): void--><!--Device-Animation-seek(position: double): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| position | double | Yes | Position from which the animation playback starts. The value range is [0, 1]. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| position | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
 
 **Examples**
 
@@ -232,9 +238,9 @@ start(): void
 
 Plays the animation based on the current progress.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Animation-start(): void--><!--Device-Animation-start(): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -264,9 +270,9 @@ stop(): void
 
 Stops playing the animation and sets its progress to 0 (not started).
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Animation-stop(): void--><!--Device-Animation-stop(): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -296,11 +302,11 @@ readonly duration: double
 
 Animation duration, in seconds. The value must be greater than or equal to 0.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Animation-readonly duration: double--><!--Device-Animation-readonly duration: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -314,9 +320,9 @@ Whether the animation is enabled. true if enabled, false otherwise.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Animation-enabled: boolean--><!--Device-Animation-enabled: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -328,11 +334,11 @@ readonly progress: double
 
 Playing progress of the animation. The value range is [0, 1].
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Animation-readonly progress: double--><!--Device-Animation-readonly progress: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -346,9 +352,9 @@ Whether the animation is running. true if running, false otherwise.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Animation-readonly running: boolean--><!--Device-Animation-readonly running: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -360,11 +366,10 @@ speed?: double
 
 Playback speed factor of the animation. The default value is 1.0, indicating that the animation is played at normal speed. If the value is negative, the animation plays in reverse.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Animation-speed?: double--><!--Device-Animation-speed?: double-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
-

@@ -6,7 +6,7 @@ animation element@extends Element @interface AnimationElement
 
 **Since:** 4
 
-<!--Device-unnamed-export interface AnimationElement--><!--Device-unnamed-export interface AnimationElement-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,9 +20,9 @@ Cancels the animation.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-AnimationElement-cancel(): void--><!--Device-AnimationElement-cancel(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,9 +36,9 @@ Ends the animation.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-AnimationElement-finish(): void--><!--Device-AnimationElement-finish(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,9 +52,9 @@ Pauses the animation.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-AnimationElement-pause(): void--><!--Device-AnimationElement-pause(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,9 +68,9 @@ Starts the animation.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-AnimationElement-play(): void--><!--Device-AnimationElement-play(): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,9 +84,8 @@ Plays the animation in reverse direction.
 
 **Since:** 4
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-AnimationElement-reverse(): void--><!--Device-AnimationElement-reverse(): void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

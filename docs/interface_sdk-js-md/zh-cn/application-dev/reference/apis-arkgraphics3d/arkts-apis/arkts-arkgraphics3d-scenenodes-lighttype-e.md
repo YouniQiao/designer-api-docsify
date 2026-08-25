@@ -2,9 +2,9 @@
 
 光源类型枚举。@enum { int }
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export enum LightType--><!--Device-unnamed-export enum LightType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -16,9 +16,9 @@ DIRECTIONAL = 1
 
 平行光类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-LightType-DIRECTIONAL = 1--><!--Device-LightType-DIRECTIONAL = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -30,9 +30,8 @@ SPOT = 2
 
 聚光灯类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-LightType-SPOT = 2--><!--Device-LightType-SPOT = 2-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-

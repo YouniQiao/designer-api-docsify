@@ -4,7 +4,7 @@ Defines the type of the IP address to be queried.
 
 **Since:** 23
 
-<!--Device-connection-export interface QueryOptions--><!--Device-connection-export interface QueryOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -26,7 +26,6 @@ Type of the IP address to be queried. The default value is **FAMILY_TYPE_ALL**.
 
 **Since:** 23
 
-<!--Device-QueryOptions-family?: FamilyType--><!--Device-QueryOptions-family?: FamilyType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
-

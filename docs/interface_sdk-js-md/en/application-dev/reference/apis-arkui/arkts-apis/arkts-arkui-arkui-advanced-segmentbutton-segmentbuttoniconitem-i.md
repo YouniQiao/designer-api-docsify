@@ -7,7 +7,7 @@ Icon button information.
 
 **Since:** 11
 
-<!--Device-unnamed-interface SegmentButtonIconItem--><!--Device-unnamed-interface SegmentButtonIconItem-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,11 +31,11 @@ Accessibility description, which is used to explain component operations to user
 
 **Since:** 13
 
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-SegmentButtonIconItem-accessibilityDescription?: ResourceStr--><!--Device-SegmentButtonIconItem-accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -57,11 +57,11 @@ Accessibility level, which is used to set whether the current component can be r
 
 **Since:** 13
 
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-SegmentButtonIconItem-accessibilityLevel?: string--><!--Device-SegmentButtonIconItem-accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -77,11 +77,11 @@ Icon of the unselected item.If the value is undefined, no icon is displayed.
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SegmentButtonIconItem-icon: ResourceStr--><!--Device-SegmentButtonIconItem-icon: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -99,11 +99,11 @@ Accessibility text of the unselected item.The default value is an empty string.I
 
 **Since:** 13
 
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
-
-<!--Device-SegmentButtonIconItem-iconAccessibilityText?: ResourceStr--><!--Device-SegmentButtonIconItem-iconAccessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -119,11 +119,11 @@ Icon of the selected item.If the value is undefined, no icon is displayed.
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SegmentButtonIconItem-selectedIcon: ResourceStr--><!--Device-SegmentButtonIconItem-selectedIcon: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -141,11 +141,10 @@ Accessibility text of the selected item.The default value is an empty string.If 
 
 **Since:** 13
 
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
-<!--Device-SegmentButtonIconItem-selectedIconAccessibilityText?: ResourceStr--><!--Device-SegmentButtonIconItem-selectedIconAccessibilityText?: ResourceStr-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

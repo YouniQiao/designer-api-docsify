@@ -16,7 +16,7 @@ function chdir(dir: string): void
 
 **起始版本：** 7
 
-<!--Device-process-function chdir(dir: string): void--><!--Device-process-function chdir(dir: string): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -24,7 +24,6 @@ function chdir(dir: string): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dir | string | 是 | 要切换到的路径。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dir | string | 是 |

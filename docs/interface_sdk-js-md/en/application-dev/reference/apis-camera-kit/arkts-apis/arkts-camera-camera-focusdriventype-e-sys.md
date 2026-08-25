@@ -2,9 +2,9 @@
 
 Enumerates the focus drive types.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-camera-enum FocusDrivenType--><!--Device-camera-enum FocusDrivenType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -18,9 +18,9 @@ AUTO = 0
 
 Automatic.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-FocusDrivenType-AUTO = 0--><!--Device-FocusDrivenType-AUTO = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -34,11 +34,10 @@ FACE = 1
 
 Face-driven.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-FocusDrivenType-FACE = 1--><!--Device-FocusDrivenType-FACE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

@@ -16,9 +16,9 @@ Obtains the device information (such as the vendor name, product name, and maxim
 
 **Since:** 20
 
-**Required permissions:** ohos.permission.GET_NETWORK_INFO
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-ethernet-function getEthernetDeviceInfos(): Promise<Array<EthernetDeviceInfos>>--><!--Device-ethernet-function getEthernetDeviceInfos(): Promise<Array<EthernetDeviceInfos>>-End-->
+**Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -26,17 +26,17 @@ Obtains the device information (such as the vendor name, product name, and maxim
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;[EthernetDeviceInfos](arkts-network-ethernet-ethernetdeviceinfos-i-sys.md)&gt;&gt; | Promise used to return the result. If the operation is successful, the Ethernet device information list is returned. If the operation fails, an error code is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;Array&lt;[EthernetDeviceInfos](arkts-network-ethernet-ethernetdeviceinfos-i-sys.md)&gt;&gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) |
 
 **Examples**
 
@@ -53,4 +53,3 @@ ethernet.getEthernetDeviceInfos().then((data: Array<ethernet.EthernetDeviceInfos
   console.error("getEthernetDeviceInfos err = " + err.code);
 });
 ```
-

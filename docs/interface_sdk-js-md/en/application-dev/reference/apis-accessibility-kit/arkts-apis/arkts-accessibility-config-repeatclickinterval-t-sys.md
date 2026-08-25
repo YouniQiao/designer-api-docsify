@@ -6,19 +6,18 @@ type RepeatClickInterval = 'Shortest' | 'Short' | 'Medium' | 'Long' | 'Longest'
 
 Ignore repeated clicks at different time intervals.The configuration takes effect when the ignore repeated click feature is enabled ([ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignorerepeatclick) is set to **true**). When the ignore repeated click feature is disabled ([ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignorerepeatclick) is set to **false**), the configuration does not take effect.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-config-type RepeatClickInterval = 'Shortest' | 'Short' | 'Medium' | 'Long' | 'Longest'--><!--Device-config-type RepeatClickInterval = 'Shortest' | 'Short' | 'Medium' | 'Long' | 'Longest'-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
 
-| Type | Description |
-| --- | --- |
-| 'Shortest' | Shortest. |
-| 'Short' | Short. |
-| 'Medium' | Medium. |
-| 'Long' | Long. |
-| 'Longest' | Longest. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'Shortest' |
+| 'Short' |
+| 'Medium' |
+| 'Long' |
+| 'Longest' |

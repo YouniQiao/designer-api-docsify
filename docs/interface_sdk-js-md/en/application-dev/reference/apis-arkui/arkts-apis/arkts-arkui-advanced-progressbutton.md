@@ -10,13 +10,12 @@ import { ProgressButton } from '@kit.ArkUI';
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [ProgressButton](arkts-arkui-arkui-advanced-progressbutton-progressbutton-s.md) | Declare Component ProgressButton |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ProgressButton](arkts-arkui-arkui-advanced-progressbutton-progressbutton-s.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ProgressButtonColorOptions](arkts-arkui-arkui-advanced-progressbutton-progressbuttoncoloroptions-i.md) | Declare Color options of the ProgressButton.@interface ProgressButtonColorOptions |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ProgressButtonColorOptions](arkts-arkui-arkui-advanced-progressbutton-progressbuttoncoloroptions-i.md) |

@@ -4,7 +4,7 @@ Enum for DownloadDescription@enum { number }
 
 **Since:** 12
 
-<!--Device-unnamed-export declare enum DownloadLayoutDirection--><!--Device-unnamed-export declare enum DownloadLayoutDirection-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +18,9 @@ Layout direction is HORIZONTAL.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-DownloadLayoutDirection-HORIZONTAL = 0--><!--Device-DownloadLayoutDirection-HORIZONTAL = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,9 +34,8 @@ Layout direction is VERTICAL.
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-DownloadLayoutDirection-VERTICAL = 1--><!--Device-DownloadLayoutDirection-VERTICAL = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

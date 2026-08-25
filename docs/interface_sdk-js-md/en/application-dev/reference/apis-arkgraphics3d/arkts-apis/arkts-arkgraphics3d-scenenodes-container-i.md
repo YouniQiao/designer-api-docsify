@@ -2,9 +2,9 @@
 
 Container for defining scene nodes. It provides a way to group scene nodes into a hierarchy.@interface Container
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-unnamed-export interface Container--><!--Device-unnamed-export interface Container-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -16,17 +16,17 @@ append(item: T): void
 
 Appends a node to the container.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Container-append(item: T): void--><!--Device-Container-append(item: T): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| item | T | Yes | Object of the T type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| item | T | Yes |
 
 **Examples**
 
@@ -58,9 +58,9 @@ clear(): void
 
 Clears all nodes in the container.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Container-clear(): void--><!--Device-Container-clear(): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -88,23 +88,29 @@ function clear(): void {
 
 ## count
 
+ArkTS-Dyn:
+```TypeScript
+count(): number
+```
+
+ArkTS-Sta:
 ```TypeScript
 count(): int
 ```
 
 Obtains the number of nodes in the container.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Container-count(): int--><!--Device-Container-count(): int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Number of nodes in the container. The value is a non-negative integer. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| ArkTS-Dyn: number<br>ArkTS-Sta：int |
 
 **Examples**
 
@@ -129,29 +135,35 @@ function count(): void {
 
 ## get
 
+ArkTS-Dyn:
+```TypeScript
+get(index: number): T | null
+```
+
+ArkTS-Sta:
 ```TypeScript
 get(index: int): T | null
 ```
 
 Obtains a node of a given index. If no node is obtained, null is returned.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Container-get(index: int): T | null--><!--Device-Container-get(index: int): T | null-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | Index of the node. The value is an integer greater than or equal to 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| T \| null | Object obtained. If no object is obtained, null is returned. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| T \| null |
 
 **Examples**
 
@@ -181,18 +193,18 @@ insertAfter(item: T, sibling: T | null): void
 
 Inserts the object after the sibling node.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Container-insertAfter(item: T, sibling: T | null): void--><!--Device-Container-insertAfter(item: T, sibling: T | null): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| item | T | Yes | Node to be inserted. |
-| sibling | T \| null | Yes | Sibling node. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| item | T | Yes |
+| sibling | T \| null | Yes |
 
 **Examples**
 
@@ -224,17 +236,17 @@ remove(item: T): void
 
 Removes a node.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-Container-remove(item: T): void--><!--Device-Container-remove(item: T): void-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| item | T | Yes | Node to remove. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| item | T | Yes |
 
 **Examples**
 
@@ -257,4 +269,3 @@ function remove(): void {
   });
 }
 ```
-

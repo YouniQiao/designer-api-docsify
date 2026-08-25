@@ -8,11 +8,11 @@ const DEFAULT_TTS_PITCH: string
 
 Indicates the default pitch of the text-to-speech (TTS) engine.<p>100 = 1x. If the value is set to {@code 200}, the frequency is twice the normal sound frequency.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
-
-<!--Device-TTS-const DEFAULT_TTS_PITCH: string--><!--Device-TTS-const DEFAULT_TTS_PITCH: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -24,11 +24,11 @@ const DEFAULT_TTS_RATE: string
 
 Indicates the default speech rate of the TTS engine. 100 = 1x.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
-
-<!--Device-TTS-const DEFAULT_TTS_RATE: string--><!--Device-TTS-const DEFAULT_TTS_RATE: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -40,11 +40,11 @@ const DEFAULT_TTS_SYNTH: string
 
 Indicates the default TTS engine.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
-
-<!--Device-TTS-const DEFAULT_TTS_SYNTH: string--><!--Device-TTS-const DEFAULT_TTS_SYNTH: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -56,11 +56,10 @@ const ENABLED_TTS_PLUGINS: string
 
 Indicates the list of activated plug-in packages used for TTS. Multiple plug-in packages are separated by spaces.
 
-**Since:** 23
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
 
-<!--Device-TTS-const ENABLED_TTS_PLUGINS: string--><!--Device-TTS-const ENABLED_TTS_PLUGINS: string-End-->
-
 **System capability:** SystemCapability.Applications.Settings.Core
-

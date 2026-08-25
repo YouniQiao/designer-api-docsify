@@ -4,7 +4,7 @@ Defines the Blob related options parameters.
 
 **Since:** 23
 
-<!--Device-buffer-interface BlobOptions--><!--Device-buffer-interface BlobOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,9 +26,9 @@ How to output a string ending with '\ n' as' transparent or native . The default
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
-<!--Device-BlobOptions-endings?: string--><!--Device-BlobOptions-endings?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -44,9 +44,8 @@ Blob content type. The default parameter is' '.
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-BlobOptions-type?: string--><!--Device-BlobOptions-type?: string-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

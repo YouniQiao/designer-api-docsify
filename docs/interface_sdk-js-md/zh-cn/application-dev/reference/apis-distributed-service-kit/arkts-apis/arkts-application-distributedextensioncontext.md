@@ -1,4 +1,4 @@
-# @ohos.application.DistributedExtensionContext
+# @ohos.application.DistributedExtensionContext(Distributed Extension Context)
 
 ## 导入模块
 
@@ -10,7 +10,6 @@ import { DistributedExtensionContext } from '@kit.DistributedServiceKit';
 
 ### 类
 
-| 名称 | 说明 |
-| --- | --- |
-| [DistributedExtensionContext](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md) | 用于分布式扩展功能的实现。 |
-
+| 名称 |
+| --- |
+| [DistributedExtensionContext(Distributed Extension Context)](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md) |

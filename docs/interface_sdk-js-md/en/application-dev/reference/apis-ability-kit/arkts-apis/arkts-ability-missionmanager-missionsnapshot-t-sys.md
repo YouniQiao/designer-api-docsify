@@ -6,13 +6,12 @@ export type MissionSnapshot = _MissionSnapshot
 
 Mission snapshot corresponding to mission.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-missionManager-export type MissionSnapshot = _MissionSnapshot--><!--Device-missionManager-export type MissionSnapshot = _MissionSnapshot-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
 
 **Property type:** _MissionSnapshot
-

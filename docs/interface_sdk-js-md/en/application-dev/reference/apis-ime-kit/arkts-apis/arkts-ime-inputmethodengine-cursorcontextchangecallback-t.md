@@ -8,15 +8,14 @@ The callback of 'cursorContextChange' event.
 
 **Since:** 23
 
-<!--Device-inputMethodEngine-export type CursorContextChangeCallback = (x: double, y: double, height: double) => void--><!--Device-inputMethodEngine-export type CursorContextChangeCallback = (x: double, y: double, height: double) => void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | double | Yes | the left point of the cursor, unit is px. |
-| y | double | Yes | the top point of the cursor, unit is px. |
-| height | double | Yes | the height of the cursor, unit is px. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | double | Yes |
+| y | double | Yes |
+| height | double | Yes |

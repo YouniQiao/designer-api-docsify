@@ -4,7 +4,7 @@ Enumerates the advertising states.
 
 **Since:** 26.0.0
 
-<!--Device-advertising-enum AdvertisingState--><!--Device-advertising-enum AdvertisingState-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -18,9 +18,9 @@ Advertising started.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-AdvertisingState-STARTED = 1--><!--Device-AdvertisingState-STARTED = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -34,9 +34,8 @@ Advertising stopped.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AdvertisingState-STOPPED = 2--><!--Device-AdvertisingState-STOPPED = 2-End-->
-
 **System capability:** SystemCapability.Communication.NearLink.Base
-

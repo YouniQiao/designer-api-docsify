@@ -2,9 +2,9 @@
 
 Enumerates mouse event types.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export declare enum Action--><!--Device-unnamed-export declare enum Action-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -16,9 +16,9 @@ CANCEL = 0
 
 Canceled. The down event of the mouse is interrupted unexpectedly and does not close normally. For example, the **CANCEL** event is triggered when the mouse button is pressed but not released, the window transitions to the background, or an abnormal destruction occurs.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Action-CANCEL = 0--><!--Device-Action-CANCEL = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -30,9 +30,9 @@ MOVE = 1
 
 Moving of the mouse pointer.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Action-MOVE = 1--><!--Device-Action-MOVE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -44,9 +44,9 @@ BUTTON_DOWN = 2
 
 Mouse button press.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Action-BUTTON_DOWN = 2--><!--Device-Action-BUTTON_DOWN = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -58,9 +58,9 @@ BUTTON_UP = 3
 
 Mouse button release.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Action-BUTTON_UP = 3--><!--Device-Action-BUTTON_UP = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -72,9 +72,9 @@ AXIS_BEGIN = 4
 
 Beginning of the mouse axis event.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Action-AXIS_BEGIN = 4--><!--Device-Action-AXIS_BEGIN = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -86,9 +86,9 @@ AXIS_UPDATE = 5
 
 Updating of the mouse axis event.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Action-AXIS_UPDATE = 5--><!--Device-Action-AXIS_UPDATE = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -100,9 +100,9 @@ AXIS_END = 6
 
 Mouse axis event ended.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-Action-AXIS_END = 6--><!--Device-Action-AXIS_END = 6-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -114,9 +114,9 @@ ACTION_DOWN = 7
 
 Touchpad press.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Action-ACTION_DOWN = 7--><!--Device-Action-ACTION_DOWN = 7-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -128,9 +128,8 @@ ACTION_UP = 8
 
 Touchpad release.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-Action-ACTION_UP = 8--><!--Device-Action-ACTION_UP = 8-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
-

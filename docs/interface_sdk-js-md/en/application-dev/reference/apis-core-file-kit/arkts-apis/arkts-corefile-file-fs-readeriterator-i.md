@@ -4,7 +4,7 @@ Provides a **ReaderIterator** object. Before calling APIs of **ReaderIterator**,
 
 **Since:** 11
 
-<!--Device-unnamed-declare interface ReaderIterator--><!--Device-unnamed-declare interface ReaderIterator-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -26,23 +26,23 @@ Obtains the **ReaderIterator** result.
 
 **Since:** 11
 
-<!--Device-ReaderIterator-next(): ReaderIteratorResult--><!--Device-ReaderIterator-next(): ReaderIteratorResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ReaderIteratorResult](arkts-corefile-file-fs-readeriteratorresult-i.md) | ReaderIteratorResult** object obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ReaderIteratorResult](arkts-corefile-file-fs-readeriteratorresult-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900005 | I/O error |
-| 13900037 | No data available |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900005 |
+| 13900037 |
+| 13900042 |
 
 **Examples**
 
@@ -61,4 +61,3 @@ fs.readLines(filePath, options).then((readerIterator: fs.ReaderIterator) => {
   console.error("readLines failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
-

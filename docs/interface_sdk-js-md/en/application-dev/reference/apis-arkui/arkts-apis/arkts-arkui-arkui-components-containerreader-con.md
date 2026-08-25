@@ -10,13 +10,13 @@ Defines ContainerReader Component. A component that analyzes container dimension
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
-
-<!--Device-unnamed-export declare const ContainerReader: ContainerReaderInterface--><!--Device-unnamed-export declare const ContainerReader: ContainerReaderInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,13 +30,12 @@ Defines ContainerReader Component instance. Provides access to ContainerReader c
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
-<!--Device-unnamed-export declare const ContainerReaderInstance: ContainerReaderAttribute--><!--Device-unnamed-export declare const ContainerReaderInstance: ContainerReaderAttribute-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

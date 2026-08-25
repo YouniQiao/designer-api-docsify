@@ -15,34 +15,34 @@ function getMainWindowSnapshot(windowId: Array<int>, config: WindowSnapshotConfi
 
 获取一个或多个指定windowId的主窗口截图，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 21
+
+**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CUSTOM_SCREEN_CAPTURE
-
-<!--Device-window-function getMainWindowSnapshot(windowId: Array<int>, config: WindowSnapshotConfiguration):    Promise<Array<image.PixelMap | undefined>>--><!--Device-window-function getMainWindowSnapshot(windowId: Array<int>, config: WindowSnapshotConfiguration):    Promise<Array<image.PixelMap | undefined>>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| windowId | Array&lt;int&gt; | 是 | 需要获取截图的主窗口ID列表。可通过 [window.getAllMainWindowInfo()](arkts-arkui-window-getallmainwindowinfo-f.md)获取到主窗口windowId。当windowId为null、undefined、小于0、存 在重复值或数量超过512个时，返回错误码401；当windowId大于0但不存在对应窗口时，返回undefined。 |
-| config | [WindowSnapshotConfiguration](arkts-arkui-window-windowsnapshotconfiguration-i.md) | 是 | 获取窗口截图时的配置信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| windowId | ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;int & gt; | 是 |
+| config | [WindowSnapshotConfiguration](arkts-arkui-window-windowsnapshotconfiguration-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;image.PixelMap \| undefined&gt;&gt; | Promise对象。截图的PixelMap列表，按传入的窗口ID数组的顺序排列。当窗口ID合法但无法找到对应的主窗口时 ，返回undefined。 |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;image.PixelMap \ | undefined & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
 **示例**
 
@@ -177,4 +177,3 @@ function reqPermissionsFromUser(permissions: Array<Permissions>, context: common
   })
 }
 ```
-

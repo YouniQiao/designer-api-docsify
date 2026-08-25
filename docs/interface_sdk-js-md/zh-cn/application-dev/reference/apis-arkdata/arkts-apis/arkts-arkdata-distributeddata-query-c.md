@@ -4,11 +4,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** Query
-
-<!--Device-distributedData-class Query--><!--Device-distributedData-class Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -27,19 +27,19 @@ and(): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** and
-
-<!--Device-Query-and(): Query--><!--Device-Query-and(): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回查询对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -66,19 +66,19 @@ beginGroup(): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** beginGroup
-
-<!--Device-Query-beginGroup(): Query--><!--Device-Query-beginGroup(): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -105,11 +105,11 @@ constructor()
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** constructor
-
-<!--Device-Query-constructor()--><!--Device-Query-constructor()-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -130,25 +130,25 @@ deviceId(deviceId: string): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** deviceId
-
-<!--Device-Query-deviceId(deviceId: string): Query--><!--Device-Query-deviceId(deviceId: string): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| deviceId | string | 是 | 指示查询的设备ID。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [deviceId](#deviceid) | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -172,19 +172,19 @@ endGroup(): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** endGroup
-
-<!--Device-Query-endGroup(): Query--><!--Device-Query-endGroup(): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -211,26 +211,26 @@ equalTo(field: string, value: number | string | boolean): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** equalTo
-
-<!--Device-Query-equalTo(field: string, value: number | string | boolean): Query--><!--Device-Query-equalTo(field: string, value: number | string | boolean): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
-| value | number \| string \| boolean | 是 | 表示指定的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | number \| string \| boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -255,19 +255,19 @@ getSqlLike(): string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** getSqlLike
-
-<!--Device-Query-getSqlLike(): string--><!--Device-Query-getSqlLike(): string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回一个字段列中包含对应子串的结果。 |
+| 类型 |
+| --- |
+| string |
 
 **示例**
 
@@ -291,26 +291,26 @@ greaterThan(field: string, value: number | string | boolean): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** greaterThan
-
-<!--Device-Query-greaterThan(field: string, value: number | string | boolean): Query--><!--Device-Query-greaterThan(field: string, value: number | string | boolean): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
-| value | number \| string \| boolean | 是 | 表示指定的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | number \| string \| boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -335,26 +335,26 @@ greaterThanOrEqualTo(field: string, value: number | string): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** greaterThanOrEqualTo
-
-<!--Device-Query-greaterThanOrEqualTo(field: string, value: number | string): Query--><!--Device-Query-greaterThanOrEqualTo(field: string, value: number | string): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
-| value | number \| string | 是 | 表示指定的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | number \| string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -379,26 +379,26 @@ inNumber(field: string, valueList: number[]): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** inNumber
-
-<!--Device-Query-inNumber(field: string, valueList: number[]): Query--><!--Device-Query-inNumber(field: string, valueList: number[]): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
-| valueList | number[] | 是 | 表示指定的值列表。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| valueList | number[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -423,26 +423,26 @@ inString(field: string, valueList: string[]): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** inString
-
-<!--Device-Query-inString(field: string, valueList: string[]): Query--><!--Device-Query-inString(field: string, valueList: string[]): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
-| valueList | string[] | 是 | 表示指定的字符串值列表。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| valueList | string[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -467,25 +467,25 @@ isNotNull(field: string): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** isNotNull
-
-<!--Device-Query-isNotNull(field: string): Query--><!--Device-Query-isNotNull(field: string): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -510,25 +510,25 @@ isNull(field: string): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** isNull
-
-<!--Device-Query-isNull(field: string): Query--><!--Device-Query-isNull(field: string): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -553,26 +553,26 @@ lessThan(field: string, value: number | string): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** lessThan
-
-<!--Device-Query-lessThan(field: string, value: number | string): Query--><!--Device-Query-lessThan(field: string, value: number | string): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
-| value | number \| string | 是 | 表示指定的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | number \| string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -597,26 +597,26 @@ lessThanOrEqualTo(field: string, value: number | string): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** lessThanOrEqualTo
-
-<!--Device-Query-lessThanOrEqualTo(field: string, value: number | string): Query--><!--Device-Query-lessThanOrEqualTo(field: string, value: number | string): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
-| value | number \| string | 是 | 表示指定的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | number \| string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -641,26 +641,26 @@ like(field: string, value: string): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** like
-
-<!--Device-Query-like(field: string, value: string): Query--><!--Device-Query-like(field: string, value: string): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
-| value | string | 是 | 表示指定的字符串值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -685,26 +685,26 @@ limit(total: number, offset: number): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** limit
-
-<!--Device-Query-limit(total: number, offset: number): Query--><!--Device-Query-limit(total: number, offset: number): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| total | number | 是 | 表示指定的结果数。 |
-| offset | number | 是 | 表示起始位置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| total | number | 是 |
+| offset | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -732,26 +732,26 @@ notEqualTo(field: string, value: number | string | boolean): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** notEqualTo
-
-<!--Device-Query-notEqualTo(field: string, value: number | string | boolean): Query--><!--Device-Query-notEqualTo(field: string, value: number | string | boolean): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
-| value | number \| string \| boolean | 是 | 表示指定的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | number \| string \| boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -776,26 +776,26 @@ notInNumber(field: string, valueList: number[]): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** notInNumber
-
-<!--Device-Query-notInNumber(field: string, valueList: number[]): Query--><!--Device-Query-notInNumber(field: string, valueList: number[]): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
-| valueList | number[] | 是 | 表示指定的值列表。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| valueList | number[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -820,26 +820,26 @@ notInString(field: string, valueList: string[]): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** notInString
-
-<!--Device-Query-notInString(field: string, valueList: string[]): Query--><!--Device-Query-notInString(field: string, valueList: string[]): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
-| valueList | string[] | 是 | 表示指定的字符串值列表。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| valueList | string[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -864,19 +864,19 @@ or(): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** or
-
-<!--Device-Query-or(): Query--><!--Device-Query-or(): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回查询对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -903,25 +903,25 @@ orderByAsc(field: string): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** orderByAsc
-
-<!--Device-Query-orderByAsc(field: string): Query--><!--Device-Query-orderByAsc(field: string): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -947,25 +947,25 @@ orderByDesc(field: string): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** orderByDesc
-
-<!--Device-Query-orderByDesc(field: string): Query--><!--Device-Query-orderByDesc(field: string): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -991,25 +991,25 @@ prefixKey(prefix: string): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** prefixKey
-
-<!--Device-Query-prefixKey(prefix: string): Query--><!--Device-Query-prefixKey(prefix: string): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| prefix | string | 是 | 表示指定的键前缀。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| prefix | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -1035,19 +1035,19 @@ reset(): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** reset
-
-<!--Device-Query-reset(): Query--><!--Device-Query-reset(): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回重置的Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -1074,25 +1074,25 @@ setSuggestIndex(index: string): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** setSuggestIndex
-
-<!--Device-Query-setSuggestIndex(index: string): Query--><!--Device-Query-setSuggestIndex(index: string): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | string | 是 | 指示要设置的索引。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -1118,26 +1118,26 @@ unlike(field: string, value: string): Query
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** unlike
-
-<!--Device-Query-unlike(field: string, value: string): Query--><!--Device-Query-unlike(field: string, value: string): Query-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 表示指定字段，不能包含' ^ '。 |
-| value | string | 是 | 表示指定的字符串值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Query | 返回Query对象。 |
+| 类型 |
+| --- |
+| [Query](arkts-arkdata-distributeddata-query-c.md) |
 
 **示例**
 
@@ -1151,4 +1151,3 @@ try {
     console.log("duplicated calls should be ok :" + e);
 }
 ```
-

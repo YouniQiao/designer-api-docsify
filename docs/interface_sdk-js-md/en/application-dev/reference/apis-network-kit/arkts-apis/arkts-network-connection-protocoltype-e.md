@@ -4,7 +4,7 @@ Enumerates network protocol types.
 
 **Since:** 23
 
-<!--Device-connection-export enum ProtocolType--><!--Device-connection-export enum ProtocolType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -18,7 +18,7 @@ TCP network protocol.
 
 **Since:** 23
 
-<!--Device-ProtocolType-PROTO_TYPE_TCP = 6--><!--Device-ProtocolType-PROTO_TYPE_TCP = 6-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -32,7 +32,6 @@ UDP network protocol.
 
 **Since:** 23
 
-<!--Device-ProtocolType-PROTO_TYPE_UDP = 17--><!--Device-ProtocolType-PROTO_TYPE_UDP = 17-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
-

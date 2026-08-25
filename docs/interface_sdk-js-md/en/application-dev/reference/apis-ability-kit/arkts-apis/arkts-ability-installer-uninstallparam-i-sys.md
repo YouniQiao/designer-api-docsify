@@ -2,9 +2,9 @@
 
 Defines the parameters required for the uninstall of a shared bundle.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-installer-export interface UninstallParam--><!--Device-installer-export interface UninstallParam-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -26,9 +26,9 @@ Name of the shared bundle.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-UninstallParam-bundleName: string--><!--Device-UninstallParam-bundleName: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -42,13 +42,12 @@ versionCode?: int
 
 Version number of the shared bundle. By default, no value is passed, and all shared bundles of the specified name are uninstalled.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-UninstallParam-versionCode?: int--><!--Device-UninstallParam-versionCode?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
-

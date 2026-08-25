@@ -4,7 +4,7 @@ Acl state change result.
 
 **Since:** 26.0.0
 
-<!--Device-connection-interface AclStateResult--><!--Device-connection-interface AclStateResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -26,9 +26,9 @@ The virtual address of a Bluetooth device. For example, "11:22:33:AA:BB:FF".
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-AclStateResult-deviceId: string--><!--Device-AclStateResult-deviceId: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -44,9 +44,8 @@ Acl state of the device.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AclStateResult-state: AclState--><!--Device-AclStateResult-state: AclState-End-->
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-

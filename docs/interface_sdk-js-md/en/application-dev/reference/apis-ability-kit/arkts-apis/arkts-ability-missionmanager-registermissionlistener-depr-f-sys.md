@@ -15,13 +15,13 @@ Registers a listener to observe the mission status.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-ability-missionmanager-onmission-f-sys.md)
+**Substitutes:** [on](arkts-ability-missionmanager-on-f-sys.md)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
-
-<!--Device-missionManager-function registerMissionListener(listener: MissionListener): number--><!--Device-missionManager-function registerMissionListener(listener: MissionListener): number-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -29,15 +29,15 @@ Registers a listener to observe the mission status.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| listener | [MissionListener](arkts-ability-missionlistener-i-sys.md) | Yes | Mission status listener to register. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| listener | [MissionListener](arkts-ability-missionlistener-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Index of the mission status listener, which is created by the system and allocated when the listener is registered. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -69,4 +69,3 @@ let listenerId = missionManager.registerMissionListener({
   }
 });
 ```
-

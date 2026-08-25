@@ -4,7 +4,7 @@ Defines domain name parameters of a firewall rule. Currently, Chinese domain nam
 
 **Since:** 15
 
-<!--Device-netFirewall-interface NetFirewallDomainParams--><!--Device-netFirewall-interface NetFirewallDomainParams-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -26,7 +26,7 @@ If **isWildcard** is set to **false**, the complete domain name, for example, "w
 
 **Since:** 15
 
-<!--Device-NetFirewallDomainParams-domain: string--><!--Device-NetFirewallDomainParams-domain: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -42,7 +42,6 @@ Whether to contain wildcards. The value **true** means to contain wildcards; and
 
 **Since:** 15
 
-<!--Device-NetFirewallDomainParams-isWildcard: boolean--><!--Device-NetFirewallDomainParams-isWildcard: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
-

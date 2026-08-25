@@ -4,7 +4,7 @@ Enumerates user status detection features.
 
 **Since:** 26.0.0
 
-<!--Device-userStatus-export enum UserStatusFeature--><!--Device-userStatus-export enum UserStatusFeature-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -20,9 +20,9 @@ Gesture recognition feature (100ms reporting interval).
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-UserStatusFeature-GESTURES_RECOGNITION = 5--><!--Device-UserStatusFeature-GESTURES_RECOGNITION = 5-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -38,9 +38,9 @@ Anti-mistouch detection feature.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-UserStatusFeature-ANTI_MISTOUCH = 6--><!--Device-UserStatusFeature-ANTI_MISTOUCH = 6-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -56,9 +56,9 @@ Quick gesture recognition feature (20ms reporting interval).
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-UserStatusFeature-QUICK_GESTURES_RECOGNITION = 7--><!--Device-UserStatusFeature-QUICK_GESTURES_RECOGNITION = 7-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -74,9 +74,9 @@ Face relative position recognition feature (100ms reporting interval).
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-UserStatusFeature-FACE_RELATIVE_POSITION_RECOGNITION = 8--><!--Device-UserStatusFeature-FACE_RELATIVE_POSITION_RECOGNITION = 8-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -92,9 +92,9 @@ Quick face relative position recognition feature (20ms reporting interval).
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-UserStatusFeature-QUICK_FACE_RELATIVE_POSITION_RECOGNITION = 9--><!--Device-UserStatusFeature-QUICK_FACE_RELATIVE_POSITION_RECOGNITION = 9-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -110,9 +110,9 @@ Hand-eye coordination (attention) recognition feature.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-UserStatusFeature-HAND_GAZE_COORDINATION = 11--><!--Device-UserStatusFeature-HAND_GAZE_COORDINATION = 11-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -128,9 +128,9 @@ User blowing status detection feature.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-UserStatusFeature-USER_BLOWING_STATUS = 12--><!--Device-UserStatusFeature-USER_BLOWING_STATUS = 12-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -146,9 +146,9 @@ User mood detection feature.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-UserStatusFeature-USER_MOOD = 13--><!--Device-UserStatusFeature-USER_MOOD = 13-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -164,9 +164,9 @@ Comfort reminder detection feature.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-UserStatusFeature-COMFORT_REMINDER = 15--><!--Device-UserStatusFeature-COMFORT_REMINDER = 15-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -182,9 +182,9 @@ Environmental sound detection feature.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-UserStatusFeature-ENV_SOUND = 17--><!--Device-UserStatusFeature-ENV_SOUND = 17-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -200,11 +200,10 @@ External screen anti-mistouch detection feature.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-UserStatusFeature-EXT_SCREEN_ANTI_MISTOUCH = 19--><!--Device-UserStatusFeature-EXT_SCREEN_ANTI_MISTOUCH = 19-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
-

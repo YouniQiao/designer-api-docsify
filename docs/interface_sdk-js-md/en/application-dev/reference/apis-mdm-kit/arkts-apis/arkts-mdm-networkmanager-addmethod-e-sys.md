@@ -4,7 +4,7 @@ Enumerates the methods used to add the network packets.
 
 **Since:** 10
 
-<!--Device-networkManager-enum AddMethod--><!--Device-networkManager-enum AddMethod-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -20,9 +20,9 @@ Append the packet.
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-AddMethod-APPEND = 0--><!--Device-AddMethod-APPEND = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -38,11 +38,10 @@ Insert the packet.
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-AddMethod-INSERT = 1--><!--Device-AddMethod-INSERT = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
-

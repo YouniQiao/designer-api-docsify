@@ -4,7 +4,7 @@
 
 **起始版本：** 11
 
-<!--Device-unnamed-export default class AbilityForegroundStateObserver--><!--Device-unnamed-export default class AbilityForegroundStateObserver-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -20,7 +20,7 @@ onAbilityStateChanged(abilityStateData: AbilityStateData): void
 
 **起始版本：** 11
 
-<!--Device-AbilityForegroundStateObserver-onAbilityStateChanged(abilityStateData: AbilityStateData): void--><!--Device-AbilityForegroundStateObserver-onAbilityStateChanged(abilityStateData: AbilityStateData): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -28,9 +28,9 @@ onAbilityStateChanged(abilityStateData: AbilityStateData): void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| abilityStateData | [AbilityStateData](arkts-ability-abilitystatedata-c.md) | 是 | Ability状态信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| abilityStateData | [AbilityStateData](arkts-ability-abilitystatedata-c.md) | 是 |
 
 **示例**
 
@@ -76,4 +76,3 @@ try {
   console.error(`error code: ${code}, error msg: ${message}`);
 }
 ```
-

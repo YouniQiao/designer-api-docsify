@@ -1,76 +1,68 @@
 # BigInt64ArrayConstructor
 
-**Since:** -1
-
-<!--Device-unnamed-interface BigInt64ArrayConstructor--><!--Device-unnamed-interface BigInt64ArrayConstructor-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
 ```TypeScript
 ```
 
-## constructor
+## [[Construct]]
 
 ```TypeScript
 new(length?: number): BigInt64Array
 ```
 
-**Since:** -1
-
-<!--Device-BigInt64ArrayConstructor-new(length?: number): BigInt64Array--><!--Device-BigInt64ArrayConstructor-new(length?: number): BigInt64Array-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| length | number | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| length | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-## constructor
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+## [[Construct]]
 
 ```TypeScript
 new(array: Iterable<bigint>): BigInt64Array
 ```
 
-**Since:** -1
-
-<!--Device-BigInt64ArrayConstructor-new(array: Iterable<bigint>): BigInt64Array--><!--Device-BigInt64ArrayConstructor-new(array: Iterable<bigint>): BigInt64Array-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| array | Iterable&lt;bigint&gt; | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| array | Iterable & lt;bigint & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-## constructor
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+## [[Construct]]
 
 ```TypeScript
 new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): BigInt64Array
 ```
 
-**Since:** -1
-
-<!--Device-BigInt64ArrayConstructor-new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): BigInt64Array--><!--Device-BigInt64ArrayConstructor-new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): BigInt64Array-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | ArrayBufferLike | Yes |  |
-| byteOffset | number | No |  |
-| length | number | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buffer | [ArrayBufferLike](../../apis-arkts/arkts-apis/arkts-arkts-arraybufferlike-t.md) | Yes |
+| byteOffset | number | No |
+| length | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## from
 
 ```TypeScript
@@ -79,42 +71,38 @@ from(arrayLike: ArrayLike<bigint>): BigInt64Array
 
 Creates an array from an array-like or iterable object.
 
-**Since:** -1
-
-<!--Device-BigInt64ArrayConstructor-from(arrayLike: ArrayLike<bigint>): BigInt64Array--><!--Device-BigInt64ArrayConstructor-from(arrayLike: ArrayLike<bigint>): BigInt64Array-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;bigint&gt; | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arrayLike | ArrayLike & lt;bigint & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## from
 
 ```TypeScript
 from<U>(arrayLike: ArrayLike<U>, mapfn: (v: U, k: number) => bigint, thisArg?: any): BigInt64Array
 ```
 
-**Since:** -1
-
-<!--Device-BigInt64ArrayConstructor-from<U>(arrayLike: ArrayLike<U>, mapfn: (v: U, k: number) => bigint, thisArg?: any): BigInt64Array--><!--Device-BigInt64ArrayConstructor-from<U>(arrayLike: ArrayLike<U>, mapfn: (v: U, k: number) => bigint, thisArg?: any): BigInt64Array-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;U&gt; | Yes |  |
-| mapfn | (v: U, k: number) =&gt; bigint | Yes |  |
-| thisArg | any | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arrayLike | ArrayLike & lt;U & gt; | Yes |
+| mapfn | (v: U, k: number) = & gt; bigint | Yes |
+| thisArg | any | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## of
 
 ```TypeScript
@@ -123,20 +111,18 @@ of(...items: bigint[]): BigInt64Array
 
 Returns a new array from a set of elements.
 
-**Since:** -1
-
-<!--Device-BigInt64ArrayConstructor-of(...items: bigint[]): BigInt64Array--><!--Device-BigInt64ArrayConstructor-of(...items: bigint[]): BigInt64Array-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| items | bigint[] | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| items | bigint[] | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## BYTES_PER_ELEMENT
 
 ```TypeScript
@@ -147,9 +133,7 @@ The size in bytes of each element in the array.
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-BigInt64ArrayConstructor-readonly BYTES_PER_ELEMENT: number--><!--Device-BigInt64ArrayConstructor-readonly BYTES_PER_ELEMENT: number-End-->
+**ArkTS mode:** 
 
 ## prototype
 
@@ -159,7 +143,4 @@ readonly prototype: BigInt64Array
 
 **Type:** [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md)
 
-**Since:** -1
-
-<!--Device-BigInt64ArrayConstructor-readonly prototype: BigInt64Array--><!--Device-BigInt64ArrayConstructor-readonly prototype: BigInt64Array-End-->
-
+**ArkTS mode:** 

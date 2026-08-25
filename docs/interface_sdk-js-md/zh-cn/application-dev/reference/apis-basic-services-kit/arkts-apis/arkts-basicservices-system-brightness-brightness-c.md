@@ -4,9 +4,9 @@
 
 **起始版本：** 3
 
-**废弃版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-unnamed-export default class Brightness--><!--Device-unnamed-export default class Brightness-End-->
+**废弃版本：** 7
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -26,17 +26,17 @@ static getMode(options?: GetBrightnessModeOptions): void
 
 **起始版本：** 3
 
-**废弃版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-Brightness-static getMode(options?: GetBrightnessModeOptions): void--><!--Device-Brightness-static getMode(options?: GetBrightnessModeOptions): void-End-->
+**废弃版本：** 7
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [GetBrightnessModeOptions](arkts-basicservices-system-brightness-getbrightnessmodeoptions-i.md) | 否 | 获取屏幕亮度模式的参数对象。可选，默认为空。不传入此参数时，将无法通过回调接收模式查询结果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [GetBrightnessModeOptions](arkts-basicservices-system-brightness-getbrightnessmodeoptions-i.md) | 否 |
 
 **示例**
 
@@ -115,17 +115,17 @@ static getValue(options?: GetBrightnessOptions): void
 
 **起始版本：** 3
 
-**废弃版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-Brightness-static getValue(options?: GetBrightnessOptions): void--><!--Device-Brightness-static getValue(options?: GetBrightnessOptions): void-End-->
+**废弃版本：** 7
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [GetBrightnessOptions](arkts-basicservices-system-brightness-getbrightnessoptions-i.md) | 否 | 获取屏幕亮度的参数对象。可选，默认为空。不传入此参数时，将无法通过回调接收亮度查询结果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [GetBrightnessOptions](arkts-basicservices-system-brightness-getbrightnessoptions-i.md) | 否 |
 
 **示例**
 
@@ -206,19 +206,19 @@ static setKeepScreenOn(options?: SetKeepScreenOnOptions): void
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 7
 
 **替代接口：** setWindowKeepScreenOn
-
-<!--Device-Brightness-static setKeepScreenOn(options?: SetKeepScreenOnOptions): void--><!--Device-Brightness-static setKeepScreenOn(options?: SetKeepScreenOnOptions): void-End-->
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [SetKeepScreenOnOptions](arkts-basicservices-system-brightness-setkeepscreenonoptions-i.md) | 否 | 设置屏幕常亮的参数对象。可选，默认为空。不传入此参数时，无法设置屏幕常亮状态，接口调用无实际效果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [SetKeepScreenOnOptions](arkts-basicservices-system-brightness-setkeepscreenonoptions-i.md) | 否 |
 
 **示例**
 
@@ -298,17 +298,17 @@ static setMode(options?: SetBrightnessModeOptions): void
 
 **起始版本：** 3
 
-**废弃版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-Brightness-static setMode(options?: SetBrightnessModeOptions): void--><!--Device-Brightness-static setMode(options?: SetBrightnessModeOptions): void-End-->
+**废弃版本：** 7
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [SetBrightnessModeOptions](arkts-basicservices-system-brightness-setbrightnessmodeoptions-i.md) | 否 | 设置屏幕亮度模式的参数对象。可选，默认为空。不传入此参数时，无法设置亮度模式，接口调用无实际效果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [SetBrightnessModeOptions](arkts-basicservices-system-brightness-setbrightnessmodeoptions-i.md) | 否 |
 
 **示例**
 
@@ -388,19 +388,19 @@ static setValue(options?: SetBrightnessOptions): void
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 7
 
 **替代接口：** [setValue](arkts-basicservices-brightness-setvalue-f-sys.md)
-
-<!--Device-Brightness-static setValue(options?: SetBrightnessOptions): void--><!--Device-Brightness-static setValue(options?: SetBrightnessOptions): void-End-->
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [SetBrightnessOptions](arkts-basicservices-system-brightness-setbrightnessoptions-i.md) | 否 | 设置屏幕亮度的参数对象。可选，默认为空。不传入此参数时，无法设置亮度值，接口调用无实际效果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [SetBrightnessOptions](arkts-basicservices-system-brightness-setbrightnessoptions-i.md) | 否 |
 
 **示例**
 
@@ -469,4 +469,3 @@ export default {
     },
 }
 ```
-

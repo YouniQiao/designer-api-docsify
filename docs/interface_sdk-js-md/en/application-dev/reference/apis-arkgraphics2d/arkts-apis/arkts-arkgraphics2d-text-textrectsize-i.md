@@ -4,7 +4,7 @@ Represents the text rectangle size, which is used to describe the width and heig
 
 **Since:** 24
 
-<!--Device-text-interface TextRectSize--><!--Device-text-interface TextRectSize-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -22,15 +22,15 @@ height: double
 
 Height of the text rectangle, which is a floating-point value in physical pixels (px).
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-TextRectSize-height: double--><!--Device-TextRectSize-height: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -42,15 +42,14 @@ width: double
 
 Width of the text rectangle, which is a floating-point value in physical pixels (px).
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
-<!--Device-TextRectSize-width: double--><!--Device-TextRectSize-width: double-End-->
-
 **System capability:** SystemCapability.Graphics.Drawing
-

@@ -4,7 +4,7 @@ Defines the prompt info of button.@interface Button
 
 **Since:** 11
 
-<!--Device-unnamed-export interface Button--><!--Device-unnamed-export interface Button-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,9 +26,9 @@ Defines the color of button.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-Button-color: string--><!--Device-Button-color: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,9 +44,8 @@ Defines the button info.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-Button-text: string--><!--Device-Button-text: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -5,13 +5,13 @@ Sets the target component for focus movement based on key presses. If it is not 
 > **NOTE：**&gt;
 > Directly using **focusControl** can lead to the issue of
 > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the
-> [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object using the **getUIContext()** API and then obtain the
+> [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) object using the **getUIContext()** API and then obtain the
 > **focusControl** bound to the instance using the
-> [getFocusController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getfocuscontroller) API.
+> [getFocusController](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getfocuscontroller) API.
 
 **Since:** 18
 
-<!--Device-unnamed-declare interface FocusMovement--><!--Device-unnamed-declare interface FocusMovement-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,11 +32,11 @@ ID of the component to focus on when **Shift+Tab** is pressed.The default value 
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-FocusMovement-backward?: string--><!--Device-FocusMovement-backward?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,11 +52,11 @@ ID of the component to focus on when the down arrow key is pressed.The default v
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-FocusMovement-down?: string--><!--Device-FocusMovement-down?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +72,11 @@ ID of the component to focus on when the **Tab** key is pressed.The default valu
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-FocusMovement-forward?: string--><!--Device-FocusMovement-forward?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,11 +92,11 @@ ID of the component to focus on when the left arrow key is pressed.The default v
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-FocusMovement-left?: string--><!--Device-FocusMovement-left?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,11 +112,11 @@ ID of the component to focus on when the right arrow key is pressed.The default 
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-FocusMovement-right?: string--><!--Device-FocusMovement-right?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -132,11 +132,10 @@ ID of the component to focus on when the up arrow key is pressed.The default val
 
 **Since:** 18
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-FocusMovement-up?: string--><!--Device-FocusMovement-up?: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

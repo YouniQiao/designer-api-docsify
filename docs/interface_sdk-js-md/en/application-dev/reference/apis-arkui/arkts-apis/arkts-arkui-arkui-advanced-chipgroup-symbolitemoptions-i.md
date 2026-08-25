@@ -4,7 +4,7 @@ Suffix icon option type of ChipGroup.
 
 **Since:** 14
 
-<!--Device-unnamed-export interface SymbolItemOptions--><!--Device-unnamed-export interface SymbolItemOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -13,6 +13,24 @@ Suffix icon option type of ChipGroup.
 ```TypeScript
 import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
 ```
+
+## action
+
+```TypeScript
+action: VoidCallback
+```
+
+Action of the trailing symbol item.
+
+**Since:** 14
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityDescription
 
@@ -26,11 +44,11 @@ Accessible description of the trailing symbol item. You can provide comprehensiv
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-SymbolItemOptions-accessibilityDescription?: ResourceStr--><!--Device-SymbolItemOptions-accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,11 +70,11 @@ Accessibility level of the trailing symbol item. It determines whether the trail
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-SymbolItemOptions-accessibilityLevel?: string--><!--Device-SymbolItemOptions-accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,11 +90,11 @@ Accessibility text of the trailing symbol item. If a trailing symbol item does n
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-SymbolItemOptions-accessibilityText?: ResourceStr--><!--Device-SymbolItemOptions-accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,17 +104,15 @@ Accessibility text of the trailing symbol item. If a trailing symbol item does n
 action: VoidCallback
 ```
 
-Action of the trailing symbol item.
+Called when the symbol item is clicked.
 
 **Type:** VoidCallback
 
-**Since:** 14
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-SymbolItemOptions-action: VoidCallback--><!--Device-SymbolItemOptions-action: VoidCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,11 +128,10 @@ Settings of the trailing symbol item.
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-SymbolItemOptions-symbol: SymbolGlyphModifier--><!--Device-SymbolItemOptions-symbol: SymbolGlyphModifier-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

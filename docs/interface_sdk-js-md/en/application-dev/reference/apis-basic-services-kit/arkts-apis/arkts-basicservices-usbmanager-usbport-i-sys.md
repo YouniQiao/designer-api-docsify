@@ -2,9 +2,9 @@
 
 Represents a USB port.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-usbManager-interface USBPort--><!--Device-usbManager-interface USBPort-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -24,11 +24,11 @@ id: int
 
 Unique identifier of a USB port.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-USBPort-id: int--><!--Device-USBPort-id: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -44,9 +44,9 @@ USB port role.
 
 **Type:** USBPortStatus
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-USBPort-status: USBPortStatus--><!--Device-USBPort-status: USBPortStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -62,11 +62,10 @@ Numeric mask combination for the supported mode list.
 
 **Type:** PortModeType
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-USBPort-supportedModes: PortModeType--><!--Device-USBPort-supportedModes: PortModeType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
-

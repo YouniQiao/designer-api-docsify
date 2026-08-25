@@ -16,12 +16,14 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 > **NOTE：**&gt;
 > - Since API version 11, you can use the
-> [getDragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getdragcontroller) API in
-> [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the
-> [DragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-dragcontroller-c.md) object associated with the current UI context.&gt;
+> [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in
+> [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the
+> [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) object associated with the current UI context.&gt;
 > - For optimal drag and drop performance, limit the number of drag previews.
 
 **Since:** 11
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 18
 
@@ -31,33 +33,31 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-dragController-function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: DragInfo): DragAction--><!--Device-dragController-function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: DragInfo): DragAction-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| customArray | Array&lt;CustomBuilder \| DragItemInfo&gt; | Yes | Object to be dragged. |
-| dragInfo | [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | Yes | Drag information. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| customArray | Array & lt;CustomBuilder \ | DragItemInfo & gt; | Yes |
+| dragInfo | [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [DragAction](arkts-arkui-dragcontroller-dragaction-i.md) | DragAction** object, which is used to subscribe to drag state changes and start the drag service. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DragAction](arkts-arkui-dragcontroller-dragaction-i.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
 
 **Examples**
 
-You are advised to use the [getDragController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getdragcontroller) to obtain the DragController object associated with the current UI context.
+You are advised to use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) to obtain the DragController object associated with the current UI context.
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';
@@ -162,4 +162,3 @@ struct DragControllerPage {
   }
 }
 ```
-

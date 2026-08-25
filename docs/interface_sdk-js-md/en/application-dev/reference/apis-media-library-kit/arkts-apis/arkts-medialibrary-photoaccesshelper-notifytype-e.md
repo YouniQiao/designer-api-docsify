@@ -2,9 +2,9 @@
 
 Enumerates the notification event types.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-photoAccessHelper-enum NotifyType--><!--Device-photoAccessHelper-enum NotifyType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -16,9 +16,9 @@ NOTIFY_ADD
 
 A file asset or album is added.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-NotifyType-NOTIFY_ADD--><!--Device-NotifyType-NOTIFY_ADD-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -30,9 +30,9 @@ NOTIFY_UPDATE
 
 A file asset or album is updated.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-NotifyType-NOTIFY_UPDATE--><!--Device-NotifyType-NOTIFY_UPDATE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -44,9 +44,9 @@ NOTIFY_REMOVE
 
 A file asset or album is removed.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-NotifyType-NOTIFY_REMOVE--><!--Device-NotifyType-NOTIFY_REMOVE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -58,9 +58,9 @@ NOTIFY_ALBUM_ADD_ASSET
 
 A file asset is added to the album.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-NotifyType-NOTIFY_ALBUM_ADD_ASSET--><!--Device-NotifyType-NOTIFY_ALBUM_ADD_ASSET-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -72,9 +72,8 @@ NOTIFY_ALBUM_REMOVE_ASSET
 
 A file asset is removed from the album.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-NotifyType-NOTIFY_ALBUM_REMOVE_ASSET--><!--Device-NotifyType-NOTIFY_ALBUM_REMOVE_ASSET-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

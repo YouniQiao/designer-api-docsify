@@ -4,7 +4,7 @@ Information about the text to be inserted.
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface RichEditorInsertValue--><!--Device-unnamed-declare interface RichEditorInsertValue-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Offset of the text to be inserted.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RichEditorInsertValue-insertOffset: number--><!--Device-RichEditorInsertValue-insertOffset: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ Content of the text to be inserted.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-RichEditorInsertValue-insertValue: string--><!--Device-RichEditorInsertValue-insertValue: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,11 +65,10 @@ Content of the preview text to be inserted.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-RichEditorInsertValue-previewText?: string--><!--Device-RichEditorInsertValue-previewText?: string-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

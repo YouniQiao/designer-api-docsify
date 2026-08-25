@@ -7,9 +7,9 @@
 > - 本模块使用屏幕物理像素单位px。&gt;
 > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-drawing-class ImageFilter--><!--Device-drawing-class ImageFilter-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -29,29 +29,29 @@ static createBlendImageFilter(mode: BlendMode, background: ImageFilter, foregrou
 
 **起始版本：** 20
 
-<!--Device-ImageFilter-static createBlendImageFilter(mode: BlendMode, background: ImageFilter, foreground: ImageFilter): ImageFilter--><!--Device-ImageFilter-static createBlendImageFilter(mode: BlendMode, background: ImageFilter, foreground: ImageFilter): ImageFilter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mode | BlendMode | 是 | 颜色混合模式。 |
-| background | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 | 在混合模式中作为目标色的滤波器。 |
-| foreground | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 | 在混合模式中作为源色的滤波器。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | 是 |
+| background | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 |
+| foreground | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回按照指定混合模式叠加后的图像滤波器。 |
+| 类型 |
+| --- |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+| 错误码ID |
+| --- |
+| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
 
 **示例**
 
@@ -99,29 +99,29 @@ static createBlendImageFilter(mode: BlendMode, background: ImageFilter, foregrou
 
 **起始版本：** 24
 
-<!--Device-ImageFilter-static createBlendImageFilter(mode: BlendMode, background: ImageFilter, foreground: ImageFilter): ImageFilter | undefined--><!--Device-ImageFilter-static createBlendImageFilter(mode: BlendMode, background: ImageFilter, foreground: ImageFilter): ImageFilter | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mode | BlendMode | 是 | 颜色混合模式。 |
-| background | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 | 在混合模式中作为目标色的滤波器。 |
-| foreground | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 | 在混合模式中作为源色的滤波器。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | 是 |
+| background | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 |
+| foreground | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | 返回按照指定混合模式叠加后的图像滤波器。 |
+| 类型 |
+| --- |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+| 错误码ID |
+| --- |
+| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
 
 **示例**
 
@@ -138,30 +138,30 @@ static createBlurImageFilter(sigmaX: number, sigmaY: number,
 
 **起始版本：** 12
 
-<!--Device-ImageFilter-static createBlurImageFilter(sigmaX: number, sigmaY: number,        tileMode: TileMode, imageFilter?: ImageFilter | null): ImageFilter--><!--Device-ImageFilter-static createBlurImageFilter(sigmaX: number, sigmaY: number,        tileMode: TileMode, imageFilter?: ImageFilter | null): ImageFilter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sigmaX | number | 是 | 表示沿x轴方向上高斯模糊的标准差，必须大于0，该参数为浮点数。单位为物理像素px。 |
-| sigmaY | number | 是 | 表示沿y轴方向上高斯模糊的标准差，必须大于0，该参数为浮点数。单位为物理像素px。 |
-| tileMode | TileMode | 是 | 表示在边缘处应用的平铺模式。 |
-| imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 | 要与当前图像滤波器叠加的输入滤波器，默认为null，表示直接将当前图像滤波器作用于原始图像。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sigmaX | number | 是 |
+| sigmaY | number | 是 |
+| tileMode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | 是 |
+| imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回创建的模糊图像滤波器。 |
+| 类型 |
+| --- |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -182,30 +182,30 @@ static createBlurImageFilter(sigmaX: double, sigmaY: double,
 
 **起始版本：** 23
 
-<!--Device-ImageFilter-static createBlurImageFilter(sigmaX: double, sigmaY: double,        tileMode: TileMode, imageFilter?: ImageFilter | null): ImageFilter | undefined--><!--Device-ImageFilter-static createBlurImageFilter(sigmaX: double, sigmaY: double,        tileMode: TileMode, imageFilter?: ImageFilter | null): ImageFilter | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sigmaX | double | 是 | 表示沿x轴方向上高斯模糊的标准差，必须大于0，该参数为浮点数。单位为物理像素px。 |
-| sigmaY | double | 是 | 表示沿y轴方向上高斯模糊的标准差，必须大于0，该参数为浮点数。单位为物理像素px。 |
-| tileMode | TileMode | 是 | 表示在边缘处应用的平铺模式。 |
-| imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 | 要与当前图像滤波器叠加的输入滤波器，默认为null，表示直接将当前图像滤波器作用于原始图像。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sigmaX | double | 是 |
+| sigmaY | double | 是 |
+| tileMode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | 是 |
+| imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | 返回创建的模糊图像滤波器。创建失败时返回undefined。 |
+| 类型 |
+| --- |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -221,22 +221,22 @@ static createComposeImageFilter(cOuter: ImageFilter, cInner: ImageFilter): Image
 
 **起始版本：** 20
 
-<!--Device-ImageFilter-static createComposeImageFilter(cOuter: ImageFilter, cInner: ImageFilter): ImageFilter--><!--Device-ImageFilter-static createComposeImageFilter(cOuter: ImageFilter, cInner: ImageFilter): ImageFilter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| cOuter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 | 在级联中，作为第二级的滤波器，处理第一级滤波器的输出。如果第二级滤波器为空，第一级滤波器不为空，最后输出第一级滤波器的结果。两级滤波器不能同时为空。 |
-| cInner | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 | 在级联中，作为第一级的滤波器，直接处理图像的原始内容。如果第一级滤波器为空，第二级滤波器不为空，最后输出第二级滤波器的结果。两级滤波器不能同时为空。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| cOuter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 |
+| cInner | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回级联后的图像滤波器。 |
+| 类型 |
+| --- |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) |
 
 **示例**
 
@@ -295,22 +295,22 @@ static createComposeImageFilter(cOuter: ImageFilter, cInner: ImageFilter): Image
 
 **起始版本：** 24
 
-<!--Device-ImageFilter-static createComposeImageFilter(cOuter: ImageFilter, cInner: ImageFilter): ImageFilter | undefined--><!--Device-ImageFilter-static createComposeImageFilter(cOuter: ImageFilter, cInner: ImageFilter): ImageFilter | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| cOuter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 | 在级联中，作为第二级的滤波器，处理第一级滤波器的输出。如果第二级滤波器为空，第一级滤波器不为空，最后输出第一级滤波器的结果。两级滤波器不能同时为空。 |
-| cInner | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 | 在级联中，作为第一级的滤波器，直接处理图像的原始内容。如果第一级滤波器为空，第二级滤波器不为空，最后输出第二级滤波器的结果。两级滤波器不能同时为空。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| cOuter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 |
+| cInner | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | 返回级联后的图像滤波器。 |
+| 类型 |
+| --- |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined |
 
 **示例**
 
@@ -326,28 +326,28 @@ static createFromColorFilter(colorFilter: ColorFilter, imageFilter?: ImageFilter
 
 **起始版本：** 12
 
-<!--Device-ImageFilter-static createFromColorFilter(colorFilter: ColorFilter, imageFilter?: ImageFilter | null): ImageFilter--><!--Device-ImageFilter-static createFromColorFilter(colorFilter: ColorFilter, imageFilter?: ImageFilter | null): ImageFilter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| colorFilter | ColorFilter | 是 | 表示颜色滤波器。 |
-| imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 | 要与当前图像滤波器叠加的输入滤波器，默认为null，表示直接将当前图像滤波器作用于原始图像。<br>**起始版本：** 20 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| colorFilter | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 是 |
+| imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回颜色滤波器叠加后的图像滤波器。 |
+| 类型 |
+| --- |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -381,28 +381,28 @@ static createFromColorFilter(colorFilter: ColorFilter, imageFilter?: ImageFilter
 
 **起始版本：** 23
 
-<!--Device-ImageFilter-static createFromColorFilter(colorFilter: ColorFilter, imageFilter?: ImageFilter | null): ImageFilter | undefined--><!--Device-ImageFilter-static createFromColorFilter(colorFilter: ColorFilter, imageFilter?: ImageFilter | null): ImageFilter | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| colorFilter | ColorFilter | 是 | 表示颜色滤波器。 |
-| imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 | 要与当前图像滤波器叠加的输入滤波器。 当不传该参数，或者imageFilter传入undefined时，默认为null，表示直接将当前图像滤波器作用于原始图像。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| colorFilter | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 是 |
+| imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | 返回颜色滤波器叠加后的图像滤波器。创建失败时返回undefined。 |
+| 类型 |
+| --- |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -418,23 +418,23 @@ static createFromImage(pixelmap: image.PixelMap, srcRect?: common2D.Rect | null,
 
 **起始版本：** 20
 
-<!--Device-ImageFilter-static createFromImage(pixelmap: image.PixelMap, srcRect?: common2D.Rect | null, dstRect?: common2D.Rect | null): ImageFilter--><!--Device-ImageFilter-static createFromImage(pixelmap: image.PixelMap, srcRect?: common2D.Rect | null, dstRect?: common2D.Rect | null): ImageFilter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pixelmap | image.PixelMap | 是 | 图像对象。 |
-| srcRect | common2D.Rect \| null | 否 | 可选参数，默认为null。此滤波器要使用的图像的像素区域，如果为null，则使用pixelmap全部区域。 |
-| dstRect | common2D.Rect \| null | 否 | 可选参数，默认为null。要进行渲染的区域，如果为null，则和srcRect保持一致。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pixelmap | image.PixelMap | 是 |
+| srcRect | common2D.Rect \| null | 否 |
+| dstRect | common2D.Rect \| null | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回基于图像创建的图像滤波器。 |
+| 类型 |
+| --- |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) |
 
 **示例**
 
@@ -524,23 +524,23 @@ static createFromImage(pixelmap: image.PixelMap, srcRect?: common2D.Rect | null,
 
 **起始版本：** 24
 
-<!--Device-ImageFilter-static createFromImage(pixelmap: image.PixelMap, srcRect?: common2D.Rect | null, dstRect?: common2D.Rect | null): ImageFilter | undefined--><!--Device-ImageFilter-static createFromImage(pixelmap: image.PixelMap, srcRect?: common2D.Rect | null, dstRect?: common2D.Rect | null): ImageFilter | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pixelmap | image.PixelMap | 是 | 图像对象。 |
-| srcRect | common2D.Rect \| null | 否 | 可选参数，默认为null。此滤波器要使用的图像的像素区域，如果为null，则使用pixelmap全部区域。 |
-| dstRect | common2D.Rect \| null | 否 | 可选参数，默认为null。要进行渲染的区域，如果为null，则和srcRect保持一致。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pixelmap | image.PixelMap | 是 |
+| srcRect | common2D.Rect \| null | 否 |
+| dstRect | common2D.Rect \| null | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | 返回基于图像创建的图像滤波器。 |
+| 类型 |
+| --- |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined |
 
 **示例**
 
@@ -556,21 +556,21 @@ static createFromShaderEffect(shader: ShaderEffect): ImageFilter
 
 **起始版本：** 20
 
-<!--Device-ImageFilter-static createFromShaderEffect(shader: ShaderEffect): ImageFilter--><!--Device-ImageFilter-static createFromShaderEffect(shader: ShaderEffect): ImageFilter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| shader | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 是 | 表示应用于图像的着色器效果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| shader | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回基于着色器创建的图像滤波器。 |
+| 类型 |
+| --- |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) |
 
 **示例**
 
@@ -609,21 +609,21 @@ static createFromShaderEffect(shader: ShaderEffect): ImageFilter | undefined
 
 **起始版本：** 24
 
-<!--Device-ImageFilter-static createFromShaderEffect(shader: ShaderEffect): ImageFilter | undefined--><!--Device-ImageFilter-static createFromShaderEffect(shader: ShaderEffect): ImageFilter | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| shader | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 是 | 表示应用于图像的着色器效果。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| shader | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | 返回基于着色器创建的图像滤波器。 |
+| 类型 |
+| --- |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined |
 
 **示例**
 
@@ -639,23 +639,23 @@ static createOffsetImageFilter(dx: number, dy: number, input?: ImageFilter | nul
 
 **起始版本：** 20
 
-<!--Device-ImageFilter-static createOffsetImageFilter(dx: number, dy: number, input?: ImageFilter | null): ImageFilter--><!--Device-ImageFilter-static createOffsetImageFilter(dx: number, dy: number, input?: ImageFilter | null): ImageFilter-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dx | number | 是 | 水平方向的平移距离，该参数为浮点数。单位为物理像素px。 |
-| dy | number | 是 | 竖直方向的平移距离，该参数为浮点数。单位为物理像素px。 |
-| input | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 | 需要进行平移的滤波器。默认为null，如果为null，则将无滤波效果的绘制结果进行平移。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dx | number | 是 |
+| dy | number | 是 |
+| input | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回偏移后的图像滤波器。 |
+| 类型 |
+| --- |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) |
 
 **示例**
 
@@ -677,25 +677,24 @@ static createOffsetImageFilter(dx: double, dy: double, input?: ImageFilter | nul
 
 **起始版本：** 24
 
-<!--Device-ImageFilter-static createOffsetImageFilter(dx: double, dy: double, input?: ImageFilter | null): ImageFilter | undefined--><!--Device-ImageFilter-static createOffsetImageFilter(dx: double, dy: double, input?: ImageFilter | null): ImageFilter | undefined-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dx | double | 是 | 水平方向的平移距离，该参数为浮点数。单位为物理像素px。 |
-| dy | double | 是 | 竖直方向的平移距离，该参数为浮点数。单位为物理像素px。 |
-| input | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 | 需要进行平移的滤波器。默认为null，如果为null，则将无滤波效果的绘制结果进行平移。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| dx | double | 是 |
+| dy | double | 是 |
+| input | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | 返回偏移后的图像滤波器。 |
+| 类型 |
+| --- |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined |
 
 **示例**
 
 参见 [createOffsetImageFilter](#createoffsetimagefilter)
-

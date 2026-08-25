@@ -2,9 +2,9 @@
 
 Describes the curved area on a waterfall display.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-display-interface WaterfallDisplayAreaRects--><!--Device-display-interface WaterfallDisplayAreaRects-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -24,11 +24,11 @@ Rectangle of the curved area at the bottom of the waterfall display.
 
 **Type:** Rect
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-WaterfallDisplayAreaRects-readonly bottom: Rect--><!--Device-WaterfallDisplayAreaRects-readonly bottom: Rect-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -42,11 +42,11 @@ Rectangle of the curved area on the left of the waterfall display.
 
 **Type:** Rect
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-WaterfallDisplayAreaRects-readonly left: Rect--><!--Device-WaterfallDisplayAreaRects-readonly left: Rect-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -60,11 +60,11 @@ Rectangle of the curved area on the right of the waterfall display.
 
 **Type:** Rect
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-WaterfallDisplayAreaRects-readonly right: Rect--><!--Device-WaterfallDisplayAreaRects-readonly right: Rect-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -78,11 +78,10 @@ Rectangle of the curved area on the top of the waterfall display.
 
 **Type:** Rect
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-WaterfallDisplayAreaRects-readonly top: Rect--><!--Device-WaterfallDisplayAreaRects-readonly top: Rect-End-->
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
-

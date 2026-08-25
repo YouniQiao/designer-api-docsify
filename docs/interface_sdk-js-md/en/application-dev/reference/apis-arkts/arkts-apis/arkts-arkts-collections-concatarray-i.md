@@ -11,7 +11,7 @@ An array-like object that can be concatenated. This API extends **ISendable**.
 
 **Since:** 12
 
-<!--Device-collections-interface ConcatArray--><!--Device-collections-interface ConcatArray-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -31,23 +31,23 @@ Concatenates all elements in this array into a string, with a given separator.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-ConcatArray-join(separator?: string): string--><!--Device-ConcatArray-join(separator?: string): string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| separator | string | No | Separator to be used. If no value is passed in, a comma (,) is used as the separator. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| separator | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | String obtained. If the array is empty, an empty string is returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## slice
 
@@ -59,24 +59,40 @@ Selects a range of elements in this array to create an array.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-ConcatArray-slice(start?: number, end?: number): ConcatArray<T>--><!--Device-ConcatArray-slice(start?: number, end?: number): ConcatArray<T>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| start | number | No | Start index of the range. If a negative number is passed in, it refers to the index of 'start + array.length' The default value is '0'. |
-| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of 'end + array.length'. The default value is the length of the ArkTS array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| start | number | No |
+| end | number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ConcatArray&lt;T&gt; | New array containing the selected elements. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| ConcatArray & lt;T & gt; |
+
+## [index: number]
+
+```TypeScript
+readonly [index: number]: T
+```
+
+Returns the element at a given index in this ConcatArray.
+
+**Type:** T
+
+**Since:** 12
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
+**System capability:** SystemCapability.Utils.Lang
 
 ## length
 
@@ -90,9 +106,8 @@ Number of elements in a ConcatArray.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ConcatArray-readonly length: number--><!--Device-ConcatArray-readonly length: number-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

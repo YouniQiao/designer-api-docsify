@@ -6,15 +6,14 @@ export type ProxyConfiguration = 'system' | 'no-proxy' | HttpProxy
 
 Represents the HTTP proxy configuration.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-webSocket-export type ProxyConfiguration = 'system' | 'no-proxy' | HttpProxy--><!--Device-webSocket-export type ProxyConfiguration = 'system' | 'no-proxy' | HttpProxy-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-| Type | Description |
-| --- | --- |
-| 'system' | The default network proxy is used. |
-| 'no-proxy' | No network proxy is used. |
-| HttpProxy | The specified network proxy is used. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'system' |
+| 'no-proxy' |
+| [HttpProxy](arkts-network-ethernet-httpproxy-t.md) |

@@ -4,7 +4,7 @@ Represents the text layout result.
 
 **Since:** 24
 
-<!--Device-text-interface TextLayoutResult--><!--Device-text-interface TextLayoutResult-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -26,11 +26,11 @@ Rectangle size of the paragraph after layout.
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-TextLayoutResult-correctRect: TextRectSize--><!--Device-TextLayoutResult-correctRect: TextRectSize-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -46,11 +46,10 @@ Array of character ranges that can be completely displayed after text layout cal
 
 **Since:** 24
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
-<!--Device-TextLayoutResult-fitStrRange: Array<Range>--><!--Device-TextLayoutResult-fitStrRange: Array<Range>-End-->
-
 **System capability:** SystemCapability.Graphics.Drawing
-

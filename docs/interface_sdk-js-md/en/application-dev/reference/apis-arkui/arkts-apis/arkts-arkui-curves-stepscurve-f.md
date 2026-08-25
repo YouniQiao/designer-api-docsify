@@ -9,31 +9,35 @@ import { curves } from '@kit.ArkUI';
 ## stepsCurve
 
 ```TypeScript
-export function stepsCurve(count: int, end: boolean): ICurve
+function stepsCurve(count: number, end: boolean): ICurve
 ```
 
 Creates a step curve.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-curves-export function stepsCurve(count: int, end: boolean): ICurve--><!--Device-curves-export function stepsCurve(count: int, end: boolean): ICurve-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| count | int | Yes | Number of steps. The value must be a positive integer.<br>Value range: [1, INT_MAX]. <p>**NOTE：**: <br>A value less than 1 evaluates to the value **1**. </p> |
-| end | boolean | Yes | Whether jumping occurs when the interpolation ends. **true**: Jumping occurs when the interpolation ends. **false**: Jumping occurs when the interpolation starts. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| count | number | Yes |
+| end | boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| ICurve | Interpolation curve. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ICurve](arkts-arkui-curves-icurve-i.md) |
 
+**Examples**
+
+```TypeScript
+import { curves } from '@kit.ArkUI';
+curves.stepsCurve(9, true)  // Create a step curve.
+```

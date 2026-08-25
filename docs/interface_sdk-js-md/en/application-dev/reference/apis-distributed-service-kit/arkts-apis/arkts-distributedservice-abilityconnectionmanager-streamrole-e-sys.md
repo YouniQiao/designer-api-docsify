@@ -2,9 +2,9 @@
 
 Stream transmission role.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-abilityConnectionManager-export enum StreamRole--><!--Device-abilityConnectionManager-export enum StreamRole-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -18,11 +18,11 @@ SOURCE = 0
 
 This status indicates the stream is a send stream.
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StreamRole-SOURCE = 0--><!--Device-StreamRole-SOURCE = 0-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -36,13 +36,12 @@ SINK = 1
 
 This status indicates the stream is a receive stream.
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-StreamRole-SINK = 1--><!--Device-StreamRole-SINK = 1-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **System API:** This is a system API.
-

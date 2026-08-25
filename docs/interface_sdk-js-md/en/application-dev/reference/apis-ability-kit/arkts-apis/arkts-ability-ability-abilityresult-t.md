@@ -8,11 +8,10 @@ Defines the level-2 module AbilityResult.
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ability-export type AbilityResult = _AbilityResult--><!--Device-ability-export type AbilityResult = _AbilityResult-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
 **Property type:** _AbilityResult
-

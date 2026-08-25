@@ -1,8 +1,6 @@
 # DataView
 
-**Since:** -1
-
-<!--Device-unnamed-interface DataView--><!--Device-unnamed-interface DataView-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,21 +15,19 @@ getFloat32(byteOffset: number, littleEndian?: boolean): number
 
 Gets the Float32 value at the specified byte offset from the start of the view. There is no alignment constraint; multi-byte values may be fetched from any offset.
 
-**Since:** -1
-
-<!--Device-DataView-getFloat32(byteOffset: number, littleEndian?: boolean): number--><!--Device-DataView-getFloat32(byteOffset: number, littleEndian?: boolean): number-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | number | Yes |  |
-| littleEndian | boolean | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | number | Yes |
+| littleEndian | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## getFloat64
 
 ```TypeScript
@@ -40,21 +36,19 @@ getFloat64(byteOffset: number, littleEndian?: boolean): number
 
 Gets the Float64 value at the specified byte offset from the start of the view. There is no alignment constraint; multi-byte values may be fetched from any offset.
 
-**Since:** -1
-
-<!--Device-DataView-getFloat64(byteOffset: number, littleEndian?: boolean): number--><!--Device-DataView-getFloat64(byteOffset: number, littleEndian?: boolean): number-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | number | Yes |  |
-| littleEndian | boolean | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | number | Yes |
+| littleEndian | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## getInt16
 
 ```TypeScript
@@ -63,21 +57,19 @@ getInt16(byteOffset: number, littleEndian?: boolean): number
 
 Gets the Int16 value at the specified byte offset from the start of the view. There is no alignment constraint; multi-byte values may be fetched from any offset.
 
-**Since:** -1
-
-<!--Device-DataView-getInt16(byteOffset: number, littleEndian?: boolean): number--><!--Device-DataView-getInt16(byteOffset: number, littleEndian?: boolean): number-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | number | Yes |  |
-| littleEndian | boolean | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | number | Yes |
+| littleEndian | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## getInt32
 
 ```TypeScript
@@ -86,21 +78,19 @@ getInt32(byteOffset: number, littleEndian?: boolean): number
 
 Gets the Int32 value at the specified byte offset from the start of the view. There is no alignment constraint; multi-byte values may be fetched from any offset.
 
-**Since:** -1
-
-<!--Device-DataView-getInt32(byteOffset: number, littleEndian?: boolean): number--><!--Device-DataView-getInt32(byteOffset: number, littleEndian?: boolean): number-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | number | Yes |  |
-| littleEndian | boolean | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | number | Yes |
+| littleEndian | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## getInt8
 
 ```TypeScript
@@ -109,20 +99,18 @@ getInt8(byteOffset: number): number
 
 Gets the Int8 value at the specified byte offset from the start of the view. There is no alignment constraint; multi-byte values may be fetched from any offset.
 
-**Since:** -1
-
-<!--Device-DataView-getInt8(byteOffset: number): number--><!--Device-DataView-getInt8(byteOffset: number): number-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | number | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## getUint16
 
 ```TypeScript
@@ -131,21 +119,19 @@ getUint16(byteOffset: number, littleEndian?: boolean): number
 
 Gets the Uint16 value at the specified byte offset from the start of the view. There is no alignment constraint; multi-byte values may be fetched from any offset.
 
-**Since:** -1
-
-<!--Device-DataView-getUint16(byteOffset: number, littleEndian?: boolean): number--><!--Device-DataView-getUint16(byteOffset: number, littleEndian?: boolean): number-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | number | Yes |  |
-| littleEndian | boolean | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | number | Yes |
+| littleEndian | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## getUint32
 
 ```TypeScript
@@ -154,21 +140,19 @@ getUint32(byteOffset: number, littleEndian?: boolean): number
 
 Gets the Uint32 value at the specified byte offset from the start of the view. There is no alignment constraint; multi-byte values may be fetched from any offset.
 
-**Since:** -1
-
-<!--Device-DataView-getUint32(byteOffset: number, littleEndian?: boolean): number--><!--Device-DataView-getUint32(byteOffset: number, littleEndian?: boolean): number-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | number | Yes |  |
-| littleEndian | boolean | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | number | Yes |
+| littleEndian | boolean | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## getUint8
 
 ```TypeScript
@@ -177,20 +161,18 @@ getUint8(byteOffset: number): number
 
 Gets the Uint8 value at the specified byte offset from the start of the view. There is no alignment constraint; multi-byte values may be fetched from any offset.
 
-**Since:** -1
-
-<!--Device-DataView-getUint8(byteOffset: number): number--><!--Device-DataView-getUint8(byteOffset: number): number-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | number | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
 ## setFloat32
 
 ```TypeScript
@@ -199,17 +181,15 @@ setFloat32(byteOffset: number, value: number, littleEndian?: boolean): void
 
 Stores an Float32 value at the specified byte offset from the start of the view.
 
-**Since:** -1
-
-<!--Device-DataView-setFloat32(byteOffset: number, value: number, littleEndian?: boolean): void--><!--Device-DataView-setFloat32(byteOffset: number, value: number, littleEndian?: boolean): void-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | number | Yes |  |
-| value | number | Yes |  |
-| littleEndian | boolean | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | number | Yes |
+| value | number | Yes |
+| littleEndian | boolean | No |
 
 ## setFloat64
 
@@ -219,17 +199,15 @@ setFloat64(byteOffset: number, value: number, littleEndian?: boolean): void
 
 Stores an Float64 value at the specified byte offset from the start of the view.
 
-**Since:** -1
-
-<!--Device-DataView-setFloat64(byteOffset: number, value: number, littleEndian?: boolean): void--><!--Device-DataView-setFloat64(byteOffset: number, value: number, littleEndian?: boolean): void-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | number | Yes |  |
-| value | number | Yes |  |
-| littleEndian | boolean | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | number | Yes |
+| value | number | Yes |
+| littleEndian | boolean | No |
 
 ## setInt16
 
@@ -239,17 +217,15 @@ setInt16(byteOffset: number, value: number, littleEndian?: boolean): void
 
 Stores an Int16 value at the specified byte offset from the start of the view.
 
-**Since:** -1
-
-<!--Device-DataView-setInt16(byteOffset: number, value: number, littleEndian?: boolean): void--><!--Device-DataView-setInt16(byteOffset: number, value: number, littleEndian?: boolean): void-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | number | Yes |  |
-| value | number | Yes |  |
-| littleEndian | boolean | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | number | Yes |
+| value | number | Yes |
+| littleEndian | boolean | No |
 
 ## setInt32
 
@@ -259,17 +235,15 @@ setInt32(byteOffset: number, value: number, littleEndian?: boolean): void
 
 Stores an Int32 value at the specified byte offset from the start of the view.
 
-**Since:** -1
-
-<!--Device-DataView-setInt32(byteOffset: number, value: number, littleEndian?: boolean): void--><!--Device-DataView-setInt32(byteOffset: number, value: number, littleEndian?: boolean): void-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | number | Yes |  |
-| value | number | Yes |  |
-| littleEndian | boolean | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | number | Yes |
+| value | number | Yes |
+| littleEndian | boolean | No |
 
 ## setInt8
 
@@ -279,16 +253,14 @@ setInt8(byteOffset: number, value: number): void
 
 Stores an Int8 value at the specified byte offset from the start of the view.
 
-**Since:** -1
-
-<!--Device-DataView-setInt8(byteOffset: number, value: number): void--><!--Device-DataView-setInt8(byteOffset: number, value: number): void-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | number | Yes |  |
-| value | number | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | number | Yes |
+| value | number | Yes |
 
 ## setUint16
 
@@ -298,17 +270,15 @@ setUint16(byteOffset: number, value: number, littleEndian?: boolean): void
 
 Stores an Uint16 value at the specified byte offset from the start of the view.
 
-**Since:** -1
-
-<!--Device-DataView-setUint16(byteOffset: number, value: number, littleEndian?: boolean): void--><!--Device-DataView-setUint16(byteOffset: number, value: number, littleEndian?: boolean): void-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | number | Yes |  |
-| value | number | Yes |  |
-| littleEndian | boolean | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | number | Yes |
+| value | number | Yes |
+| littleEndian | boolean | No |
 
 ## setUint32
 
@@ -318,17 +288,15 @@ setUint32(byteOffset: number, value: number, littleEndian?: boolean): void
 
 Stores an Uint32 value at the specified byte offset from the start of the view.
 
-**Since:** -1
-
-<!--Device-DataView-setUint32(byteOffset: number, value: number, littleEndian?: boolean): void--><!--Device-DataView-setUint32(byteOffset: number, value: number, littleEndian?: boolean): void-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | number | Yes |  |
-| value | number | Yes |  |
-| littleEndian | boolean | No |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | number | Yes |
+| value | number | Yes |
+| littleEndian | boolean | No |
 
 ## setUint8
 
@@ -338,16 +306,14 @@ setUint8(byteOffset: number, value: number): void
 
 Stores an Uint8 value at the specified byte offset from the start of the view.
 
-**Since:** -1
-
-<!--Device-DataView-setUint8(byteOffset: number, value: number): void--><!--Device-DataView-setUint8(byteOffset: number, value: number): void-End-->
+**ArkTS mode:** 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| byteOffset | number | Yes |  |
-| value | number | Yes |  |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [byteOffset](#byteoffset) | number | Yes |
+| value | number | Yes |
 
 ## buffer
 
@@ -357,9 +323,7 @@ readonly buffer: ArrayBuffer
 
 **Type:** ArrayBuffer
 
-**Since:** -1
-
-<!--Device-DataView-readonly buffer: ArrayBuffer--><!--Device-DataView-readonly buffer: ArrayBuffer-End-->
+**ArkTS mode:** 
 
 ## byteLength
 
@@ -369,9 +333,7 @@ readonly byteLength: number
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-DataView-readonly byteLength: number--><!--Device-DataView-readonly byteLength: number-End-->
+**ArkTS mode:** 
 
 ## byteOffset
 
@@ -381,7 +343,4 @@ readonly byteOffset: number
 
 **Type:** number
 
-**Since:** -1
-
-<!--Device-DataView-readonly byteOffset: number--><!--Device-DataView-readonly byteOffset: number-End-->
-
+**ArkTS mode:** 

@@ -4,11 +4,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md)
-
-<!--Device-rdb-class RdbPredicates--><!--Device-rdb-class RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -27,19 +27,19 @@ and(): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [and](arkts-arkdata-relationalstore-rdbpredicates-c.md#and)
-
-<!--Device-RdbPredicates-and(): RdbPredicates--><!--Device-RdbPredicates-and(): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回带有和条件的Rdb谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -60,26 +60,26 @@ beginsWith(field: string, value: string): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [beginsWith](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginswith)
-
-<!--Device-RdbPredicates-beginsWith(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-beginsWith(field: string, value: string): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | string | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了以指定字符串开头条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -98,19 +98,19 @@ beginWrap(): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [beginWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginwrap)
-
-<!--Device-RdbPredicates-beginWrap(): RdbPredicates--><!--Device-RdbPredicates-beginWrap(): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回带有左括号的Rdb谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -134,27 +134,27 @@ between(field: string, low: ValueType, high: ValueType): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [between](arkts-arkdata-relationalstore-rdbpredicates-c.md#between)
-
-<!--Device-RdbPredicates-between(field: string, low: ValueType, high: ValueType): RdbPredicates--><!--Device-RdbPredicates-between(field: string, low: ValueType, high: ValueType): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| low | ValueType | 是 | 指示与谓词匹配的最小值。 |
-| high | ValueType | 是 | 指示要与谓词匹配的最大值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
+| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了在给定范围内条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -173,19 +173,19 @@ constructor(name: string)
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md)
-
-<!--Device-RdbPredicates-constructor(name: string)--><!--Device-RdbPredicates-constructor(name: string)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 数据库表名，不能为空字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
 
 **示例**
 
@@ -203,26 +203,26 @@ contains(field: string, value: string): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [contains](arkts-arkdata-relationalstore-rdbpredicates-c.md#contains)
-
-<!--Device-RdbPredicates-contains(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-contains(field: string, value: string): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | string | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了包含指定值条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -241,19 +241,19 @@ distinct(): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [distinct](arkts-arkdata-relationalstore-rdbpredicates-c.md#distinct)
-
-<!--Device-RdbPredicates-distinct(): RdbPredicates--><!--Device-RdbPredicates-distinct(): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回可用于过滤重复记录的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -272,26 +272,26 @@ endsWith(field: string, value: string): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [endsWith](arkts-arkdata-relationalstore-rdbpredicates-c.md#endswith)
-
-<!--Device-RdbPredicates-endsWith(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-endsWith(field: string, value: string): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | string | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了以指定字符串结尾条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -310,19 +310,19 @@ endWrap(): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [endWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#endwrap)
-
-<!--Device-RdbPredicates-endWrap(): RdbPredicates--><!--Device-RdbPredicates-endWrap(): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回带有右括号的Rdb谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -346,26 +346,26 @@ equalTo(field: string, value: ValueType): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [equalTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#equalto)
-
-<!--Device-RdbPredicates-equalTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-equalTo(field: string, value: ValueType): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了等于指定值条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -384,26 +384,26 @@ glob(field: string, value: string): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [glob](arkts-arkdata-relationalstore-rdbpredicates-c.md#glob)
-
-<!--Device-RdbPredicates-glob(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-glob(field: string, value: string): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | string | 是 | 指示要与谓词匹配的值，长度不超过1024字节 <br>支持通配符，*表示0个、1个或多个数字或字符，?表示1个数字或字符。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了匹配指定通配符模式条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -422,26 +422,26 @@ greaterThan(field: string, value: ValueType): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [greaterThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterthan)
-
-<!--Device-RdbPredicates-greaterThan(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-greaterThan(field: string, value: ValueType): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了大于指定值条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -460,26 +460,26 @@ greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [greaterThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterthanorequalto)
-
-<!--Device-RdbPredicates-greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了大于或等于指定值条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -498,25 +498,25 @@ groupBy(fields: Array<string>): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [groupBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#groupby)
-
-<!--Device-RdbPredicates-groupBy(fields: Array<string>): RdbPredicates--><!--Device-RdbPredicates-groupBy(fields: Array<string>): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| fields | Array&lt;string&gt; | 是 | 指定分组依赖的列名，不能为空字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [fields](arkts-arkdata-cloudextension-table-i-sys.md) | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回分组查询列的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -535,26 +535,26 @@ in(field: string, value: Array<ValueType>): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [in](arkts-arkdata-relationalstore-rdbpredicates-c.md#in)
-
-<!--Device-RdbPredicates-in(field: string, value: Array<ValueType>): RdbPredicates--><!--Device-RdbPredicates-in(field: string, value: Array<ValueType>): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | Array&lt;ValueType&gt; | 是 | 以ValueType型数组形式指定的要匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | Array & lt;ValueType & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了值在给定范围内条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -573,19 +573,19 @@ inAllDevices(): RdbPredicates
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [inAllDevices](arkts-arkdata-relationalstore-rdbpredicates-c.md#inalldevices)
-
-<!--Device-RdbPredicates-inAllDevices(): RdbPredicates--><!--Device-RdbPredicates-inAllDevices(): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了所有远程设备同步条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -609,25 +609,25 @@ inDevices(devices: Array<string>): RdbPredicates
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [inDevices](arkts-arkdata-relationalstore-rdbpredicates-c.md#indevices)
-
-<!--Device-RdbPredicates-inDevices(devices: Array<string>): RdbPredicates--><!--Device-RdbPredicates-inDevices(devices: Array<string>): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| devices | Array&lt;string&gt; | 是 | 指定的组网内的远程设备ID，不能为空字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| devices | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了指定远程设备同步条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -664,25 +664,25 @@ indexedBy(field: string): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [indexedBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#indexedby)
-
-<!--Device-RdbPredicates-indexedBy(field: string): RdbPredicates--><!--Device-RdbPredicates-indexedBy(field: string): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 索引列的名称，不能为空字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回具有指定索引列的RdbPredicates。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -701,31 +701,31 @@ isNotNull(field: string): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [isNotNull](arkts-arkdata-relationalstore-rdbpredicates-c.md#isnotnull)
-
-<!--Device-RdbPredicates-isNotNull(field: string): RdbPredicates--><!--Device-RdbPredicates-isNotNull(field: string): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了值不为null条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -744,25 +744,25 @@ isNull(field: string): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [isNull](arkts-arkdata-relationalstore-rdbpredicates-c.md#isnull)
-
-<!--Device-RdbPredicates-isNull(field: string): RdbPredicates--><!--Device-RdbPredicates-isNull(field: string): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了值为null条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -781,26 +781,26 @@ lessThan(field: string, value: ValueType): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [lessThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessthan)
-
-<!--Device-RdbPredicates-lessThan(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-lessThan(field: string, value: ValueType): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了小于指定值条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -819,26 +819,26 @@ lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [lessThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessthanorequalto)
-
-<!--Device-RdbPredicates-lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了小于或等于指定值条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -857,26 +857,26 @@ like(field: string, value: string): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [like](arkts-arkdata-relationalstore-rdbpredicates-c.md#like)
-
-<!--Device-RdbPredicates-like(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-like(field: string, value: string): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | string | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了类似指定字符串条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -895,25 +895,25 @@ limitAs(value: number): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [limitAs](arkts-arkdata-relationalstore-rdbpredicates-c.md#limitas)
-
-<!--Device-RdbPredicates-limitAs(value: number): RdbPredicates--><!--Device-RdbPredicates-limitAs(value: number): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number | 是 | 最大数据记录数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回可用于设置最大数据记录数的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -932,27 +932,27 @@ notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [notBetween](arkts-arkdata-relationalstore-rdbpredicates-c.md#notbetween)
-
-<!--Device-RdbPredicates-notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates--><!--Device-RdbPredicates-notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| low | ValueType | 是 | 指示与谓词匹配的最小值。 |
-| high | ValueType | 是 | 指示要与谓词匹配的最大值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
+| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了超出给定范围条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -971,26 +971,26 @@ notEqualTo(field: string, value: ValueType): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [notEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#notequalto)
-
-<!--Device-RdbPredicates-notEqualTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-notEqualTo(field: string, value: ValueType): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了不等于指定值条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -1009,26 +1009,26 @@ notIn(field: string, value: Array<ValueType>): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [notIn](arkts-arkdata-relationalstore-rdbpredicates-c.md#notin)
-
-<!--Device-RdbPredicates-notIn(field: string, value: Array<ValueType>): RdbPredicates--><!--Device-RdbPredicates-notIn(field: string, value: Array<ValueType>): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | Array&lt;ValueType&gt; | 是 | 以ValueType数组形式指定的要匹配的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
+| value | Array & lt;ValueType & gt; | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了值超出给定范围内条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -1047,25 +1047,25 @@ offsetAs(rowOffset: number): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [offsetAs](arkts-arkdata-relationalstore-rdbpredicates-c.md#offsetas)
-
-<!--Device-RdbPredicates-offsetAs(rowOffset: number): RdbPredicates--><!--Device-RdbPredicates-offsetAs(rowOffset: number): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rowOffset | number | 是 | 返回结果的起始位置，取值为正整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| rowOffset | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回具有指定返回结果起始位置的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -1084,19 +1084,19 @@ or(): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [or](arkts-arkdata-relationalstore-rdbpredicates-c.md#or)
-
-<!--Device-RdbPredicates-or(): RdbPredicates--><!--Device-RdbPredicates-or(): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回带有或条件的Rdb谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -1117,25 +1117,25 @@ orderByAsc(field: string): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [orderByAsc](arkts-arkdata-relationalstore-rdbpredicates-c.md#orderbyasc)
-
-<!--Device-RdbPredicates-orderByAsc(field: string): RdbPredicates--><!--Device-RdbPredicates-orderByAsc(field: string): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了按升序排序条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -1154,25 +1154,25 @@ orderByDesc(field: string): RdbPredicates
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [orderByDesc](arkts-arkdata-relationalstore-rdbpredicates-c.md#orderbydesc)
-
-<!--Device-RdbPredicates-orderByDesc(field: string): RdbPredicates--><!--Device-RdbPredicates-orderByDesc(field: string): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名，不能为空字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| field | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| RdbPredicates | 返回配置了按降序排序条件的谓词。 |
+| 类型 |
+| --- |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **示例**
 
@@ -1180,4 +1180,3 @@ orderByDesc(field: string): RdbPredicates
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
 predicates.orderByDesc("AGE")
 ```
-

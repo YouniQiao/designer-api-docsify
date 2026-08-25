@@ -5,9 +5,9 @@
 > **说明：**&gt;
 > - 本模块接口为系统接口。
 
-**起始版本：** 23
+**起始版本：** 8
 
-<!--Device-unnamed-declare namespace batteryStats--><!--Device-unnamed-declare namespace batteryStats-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
@@ -24,29 +24,28 @@ import { batteryStats } from '@kit.BasicServicesKit';
 <!--Del-->
 ### 函数（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [getAppPowerPercent](arkts-basicservices-batterystats-getapppowerpercent-f-sys.md) | 获取应用的耗电百分比，该百分比表示应用耗电量占总耗电量的比例。 |
-| [getAppPowerValue](arkts-basicservices-batterystats-getapppowervalue-f-sys.md) | 获取应用的耗电量，单位毫安时。适用于需要精确耗电数值的场景。如需比较不同应用耗电占比，请使用[getAppPowerPercent](arkts-basicservices-batterystats-getapppowerpercent-f-sys.md)获取相对百分比。 |
-| [getBatteryStats](arkts-basicservices-batterystats-getbatterystats-f-sys.md) | 获取耗电信息列表，用于电池监控应用查看各应用及硬件的耗电情况。使用Promise异步回调。 |
-| [getBatteryStats](arkts-basicservices-batterystats-getbatterystats-f-sys.md) | 获取耗电信息列表，用于电池监控应用查看各应用及硬件的耗电情况。使用callback异步回调。 |
-| [getHardwareUnitPowerPercent](arkts-basicservices-batterystats-gethardwareunitpowerpercent-f-sys.md) | 根据耗电类型获取硬件单元的耗电百分比，该百分比表示指定硬件单元耗电量占总耗电量的比例。 |
-| [getHardwareUnitPowerValue](arkts-basicservices-batterystats-gethardwareunitpowervalue-f-sys.md) | 根据耗电类型获取硬件单元的耗电量，单位毫安时。适用于需要精确耗电数值的场景。如需比较不同硬件单元耗电占比，请使用[getHardwareUnitPowerPercent](arkts-basicservices-batterystats-gethardwareunitpowerpercent-f-sys.md)获取相对百分比。 |
+| 名称 |
+| --- |
+| [getAppPowerPercent](arkts-basicservices-batterystats-getapppowerpercent-f-sys.md) |
+| [getAppPowerValue](arkts-basicservices-batterystats-getapppowervalue-f-sys.md) |
+| [getBatteryStats](arkts-basicservices-batterystats-getbatterystats-f-sys.md) |
+| [getBatteryStats](arkts-basicservices-batterystats-getbatterystats-f-sys.md) |
+| [getHardwareUnitPowerPercent](arkts-basicservices-batterystats-gethardwareunitpowerpercent-f-sys.md) |
+| [getHardwareUnitPowerValue](arkts-basicservices-batterystats-gethardwareunitpowervalue-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [BatteryStatsInfo](arkts-basicservices-batterystats-batterystatsinfo-i-sys.md) | 设备软硬件的耗电信息。 |
+| 名称 |
+| --- |
+| [BatteryStatsInfo](arkts-basicservices-batterystats-batterystatsinfo-i-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [ConsumptionType](arkts-basicservices-batterystats-consumptiontype-e-sys.md) | 表示电量消耗类型的枚举值。 |
+| 名称 |
+| --- |
+| [ConsumptionType](arkts-basicservices-batterystats-consumptiontype-e-sys.md) |
 <!--DelEnd-->
-

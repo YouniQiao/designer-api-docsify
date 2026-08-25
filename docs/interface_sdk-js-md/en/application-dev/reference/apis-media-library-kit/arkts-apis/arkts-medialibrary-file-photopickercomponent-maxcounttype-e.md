@@ -4,7 +4,7 @@ Enumerates the types of the maximum count.
 
 **Since:** 12
 
-<!--Device-unnamed-export declare enum MaxCountType--><!--Device-unnamed-export declare enum MaxCountType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ Total number of media assets (images and videos) that can be selected.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-MaxCountType-TOTAL_MAX_COUNT = 0--><!--Device-MaxCountType-TOTAL_MAX_COUNT = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,9 @@ Total number of images that can be selected. The value cannot be greater than **
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
-<!--Device-MaxCountType-PHOTO_MAX_COUNT = 1--><!--Device-MaxCountType-PHOTO_MAX_COUNT = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,9 +50,8 @@ Total number of videos that can be selected. The value cannot be greater than **
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-MaxCountType-VIDEO_MAX_COUNT = 2--><!--Device-MaxCountType-VIDEO_MAX_COUNT = 2-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

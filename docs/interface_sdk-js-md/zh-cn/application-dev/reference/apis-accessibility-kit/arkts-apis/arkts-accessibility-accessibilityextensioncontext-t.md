@@ -8,7 +8,7 @@ export type AccessibilityExtensionContext = _AccessibilityExtensionContext.defau
 
 **起始版本：** 10
 
-<!--Device-unnamed-export type AccessibilityExtensionContext = _AccessibilityExtensionContext.default--><!--Device-unnamed-export type AccessibilityExtensionContext = _AccessibilityExtensionContext.default-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -25,4 +25,3 @@ class EntryAbility extends AccessibilityExtensionAbility {
   } 
 }
 ```
-

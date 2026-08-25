@@ -4,9 +4,7 @@ class Uint16Array
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-<!--Device-unnamed-export class Uint16Array--><!--Device-unnamed-export class Uint16Array-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,25 +23,23 @@ Returns an instance of number at passed index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public $_get(i: int): double--><!--Device-Uint16Array-public $_get(i: int): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| i | int | Yes | index to look at <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| i | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | the raw numeric value at index. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## $_iterator
 
@@ -55,19 +51,17 @@ Iteratorable interface implementation
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public $_iterator(): IterableIterator<double>--><!--Device-Uint16Array-public $_iterator(): IterableIterator<double>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;double&gt; | iterator that yields each element in order. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;double & gt; |
 
 ## $_set
 
@@ -79,20 +73,18 @@ Assigns val as element on index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public $_set(index: int, val: int): void--><!--Device-Uint16Array-public $_set(index: int, val: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | index to change <br>The value should be an integer. |
-| val | int | Yes | value to set <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| val | int | Yes |
 
 ## $_set
 
@@ -104,20 +96,18 @@ Assigns val as element on index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public $_set(index: int, val: double): void--><!--Device-Uint16Array-public $_set(index: int, val: double): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | index to change <br>The value should be an integer. |
-| val | double | Yes | value to set |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| val | double | Yes |
 
 ## at
 
@@ -129,25 +119,23 @@ Returns an instance of primitive type at passed index if index is correct.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public at(index: int): double | undefined--><!--Device-Uint16Array-public at(index: int): double | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | index to look at <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double \| undefined | the element at the index, or undefined if out of bounds. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double \| undefined |
 
 ## constructor
 
@@ -159,11 +147,9 @@ Creates an empty Uint16Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public constructor()--><!--Device-Uint16Array-public constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -177,19 +163,17 @@ Creates an Uint16Array with respect to length.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public constructor(length: int)--><!--Device-Uint16Array-public constructor(length: int)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| length | int | Yes | Number of elements <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [length](#length) | int | Yes |
 
 ## constructor
 
@@ -201,19 +185,17 @@ Creates an Uint16Array with respect to length.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public constructor(length: double)--><!--Device-Uint16Array-public constructor(length: double)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| length | double | Yes | Number of elements |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [length](#length) | double | Yes |
 
 ## constructor
 
@@ -225,19 +207,17 @@ Creates an Uint16Array from FixedArray&lt;int&gt;
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public constructor(numbers: FixedArray<int>)--><!--Device-Uint16Array-public constructor(numbers: FixedArray<int>)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| numbers | FixedArray&lt;int&gt; | Yes | data initializer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| numbers | FixedArray & lt;int & gt; | Yes |
 
 ## constructor
 
@@ -249,19 +229,17 @@ Creates an Uint16Array from FixedArray&lt;double&gt;
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public constructor(numbers: FixedArray<double>)--><!--Device-Uint16Array-public constructor(numbers: FixedArray<double>)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| numbers | FixedArray&lt;double&gt; | Yes | data initializer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| numbers | FixedArray & lt;double & gt; | Yes |
 
 ## constructor
 
@@ -273,19 +251,17 @@ Creates an Uint16Array from Array&lt;int&gt;
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public constructor(numbers: Array<int>)--><!--Device-Uint16Array-public constructor(numbers: Array<int>)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| numbers | Array&lt;int&gt; | Yes | data initializer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| numbers | Array & lt;int & gt; | Yes |
 
 ## constructor
 
@@ -297,19 +273,17 @@ Creates a copy of Uint16Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public constructor(other: Uint16Array)--><!--Device-Uint16Array-public constructor(other: Uint16Array)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | Uint16Array | Yes | data initializer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| other | Uint16Array | Yes |
 
 ## constructor
 
@@ -321,19 +295,17 @@ Creates an Uint16Array with respect to data accessed via Iterable&lt;double&gt; 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public constructor(elements: Iterable<double>)--><!--Device-Uint16Array-public constructor(elements: Iterable<double>)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| elements | Iterable&lt;double&gt; | Yes | data initializer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [elements](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-pagemediaentity-i.md) | Iterable & lt;double & gt; | Yes |
 
 ## constructor
 
@@ -345,21 +317,19 @@ Creates an Uint16Array with respect to data, byteOffset and length.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public constructor(buf: ArrayBufferLike, byteOffset: int, length: int)--><!--Device-Uint16Array-public constructor(buf: ArrayBufferLike, byteOffset: int, length: int)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | ArrayBufferLike | Yes | data initializer |
-| byteOffset | int | Yes | byte offset from begin of the buf <br>The value should be an integer. |
-| length | int | Yes | size of elements of type int in newly created Uint16Array <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | [ArrayBufferLike](arkts-arkts-arraybufferlike-t.md) | Yes |
+| [byteOffset](#byteoffset) | int | Yes |
+| [length](#length) | int | Yes |
 
 ## constructor
 
@@ -371,20 +341,18 @@ Creates an Uint16Array with respect to buf and byteOffset.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public constructor(buf: ArrayBuffer, byteOffset: int)--><!--Device-Uint16Array-public constructor(buf: ArrayBuffer, byteOffset: int)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | data initializer |
-| byteOffset | int | Yes | byte offset from begin of the buf <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | ArrayBuffer | Yes |
+| [byteOffset](#byteoffset) | int | Yes |
 
 ## constructor
 
@@ -396,21 +364,19 @@ Creates an Uint16Array with respect to data, byteOffset and length.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public constructor(buf: ArrayBuffer, byteOffset: double | undefined, length: double | undefined)--><!--Device-Uint16Array-public constructor(buf: ArrayBuffer, byteOffset: double | undefined, length: double | undefined)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | data initializer |
-| byteOffset | double \| undefined | Yes | byte offset from begin of the buf |
-| length | double \| undefined | Yes | size of elements of type int in newly created Uint16Array |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | ArrayBuffer | Yes |
+| [byteOffset](#byteoffset) | double \| undefined | Yes |
+| [length](#length) | double \| undefined | Yes |
 
 ## constructor
 
@@ -422,20 +388,18 @@ Creates an Uint16Array with respect to buf and byteOffset.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public constructor(buf: ArrayBuffer, byteOffset: double)--><!--Device-Uint16Array-public constructor(buf: ArrayBuffer, byteOffset: double)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | data initializer |
-| byteOffset | double | Yes | byte offset from begin of the buf |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | ArrayBuffer | Yes |
+| [byteOffset](#byteoffset) | double | Yes |
 
 ## constructor
 
@@ -447,19 +411,17 @@ Creates an Uint16Array with respect to buf.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public constructor(buf: ArrayLike<double> | ArrayBuffer)--><!--Device-Uint16Array-public constructor(buf: ArrayLike<double> | ArrayBuffer)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | ArrayLike&lt;double&gt; \| ArrayBuffer | Yes | data initializer |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | ArrayLike & lt;double & gt; \ | ArrayBuffer | Yes |
 
 ## copyWithin
 
@@ -471,27 +433,25 @@ Makes a copy of internal elements to targetPos from startPos to endPos.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public copyWithin(target: int, start: int, end?: int): Uint16Array--><!--Device-Uint16Array-public copyWithin(target: int, start: int, end?: int): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | int | Yes | insert index to place copied elements |
-| start | int | Yes | start index to begin copy from |
-| end | int | No | last index to end copy from, excluded. Defaults to the array length. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | int | Yes |
+| start | int | Yes |
+| end | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | the modified Uint16Array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## copyWithin
 
@@ -503,25 +463,23 @@ Makes a copy of internal elements to targetPos from begin to end of Uint16Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public copyWithin(target: int): Uint16Array--><!--Device-Uint16Array-public copyWithin(target: int): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| target | int | Yes | insert index to place copied elements <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| target | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | the modified Uint16Array. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## entries
 
@@ -533,19 +491,17 @@ Returns an array of key, value pairs for every entry in the Uint16Array
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public entries(): IterableIterator<[int, double]>--><!--Device-Uint16Array-public entries(): IterableIterator<[int, double]>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;[int, double]&gt; | iterator over [index, value] pairs for each element. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;[int, double] & gt; |
 
 ## every
 
@@ -557,25 +513,23 @@ Determines whether the specified callback function returns true for all elements
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public every(predicate: (element: double, index: int, array: Uint16Array) => boolean): boolean--><!--Device-Uint16Array-public every(predicate: (element: double, index: int, array: Uint16Array) => boolean): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (element: double, index: int, array: Uint16Array) =&gt; boolean | Yes | A function that accepts three arguments. The every method calls the predicate function for each element in the array until the predicate returns a false, or until the end of the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (element: double, index: int, array: Uint16Array) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true unless predicate function returns a false for an array element, in which case false is immediately returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## fill
 
@@ -587,27 +541,25 @@ Fills the Uint16Array with specified value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public fill(value: int, start?: int, end?: int): Uint16Array--><!--Device-Uint16Array-public fill(value: int, start?: int, end?: int): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | int | Yes | new value. |
-| start | int | No | start index to begin fill from. Defaults to 0. |
-| end | int | No | last index to end fill from, excluded. Defaults to the array length. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | int | Yes |
+| start | int | No |
+| end | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | modified Uint16Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## fill
 
@@ -619,27 +571,25 @@ Fills the Uint16Array with specified value
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public fill(value: double, start?: int, end?: int): Uint16Array--><!--Device-Uint16Array-public fill(value: double, start?: int, end?: int): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | new value. |
-| start | int | No | start index to begin fill from. Defaults to 0. <br>The value should be an integer. |
-| end | int | No | last index to end fill from, excluded. Defaults to the array length. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | double | Yes |
+| start | int | No |
+| end | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | modified Uint16Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## filter
 
@@ -651,25 +601,23 @@ Creates a new Uint16Array from current Uint16Array based on a condition fn.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public filter(fn: (val: double, index: int, array: Uint16Array) => boolean): Uint16Array--><!--Device-Uint16Array-public filter(fn: (val: double, index: int, array: Uint16Array) => boolean): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fn | (val: double, index: int, array: Uint16Array) =&gt; boolean | Yes | the condition to apply for each element |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fn | (val: double, index: int, array: Uint16Array) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | a new Uint16Array with the elements that pass the test. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## find
 
@@ -681,25 +629,23 @@ Returns the value of the first element in the array where predicate is true, and
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public find(predicate: (value: double, index: int, array: Uint16Array) => boolean): double | undefined--><!--Device-Uint16Array-public find(predicate: (value: double, index: int, array: Uint16Array) => boolean): double | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: double, index: int, array: Uint16Array) =&gt; boolean | Yes | find calls predicate once for each element of the array, in ascending order, until it finds one where predicate returns true. If such an element is found, find immediately returns that element value. Otherwise, find returns undefined |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: double, index: int, array: Uint16Array) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double \| undefined | the found element, or undefined if no element matches. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double \| undefined |
 
 ## findIndex
 
@@ -711,25 +657,23 @@ Returns the index of the first element in the array where predicate is true, and
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public findIndex(predicate: (value: double, index: int, obj: Uint16Array) => boolean): int--><!--Device-Uint16Array-public findIndex(predicate: (value: double, index: int, obj: Uint16Array) => boolean): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (value: double, index: int, obj: Uint16Array) =&gt; boolean | Yes | find calls predicate once for each element of the array, in ascending order, until it finds one where predicate returns true. If such an element is found, findIndex immediately returns that element index. Otherwise, findIndex returns -1 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: double, index: int, obj: Uint16Array) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | Index of the first matched element |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## findLast
 
@@ -741,25 +685,23 @@ Returns the last element in the Uint16Array that satisfies the given predicate.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public findLast(fn: (val: double, index: int, array: Uint16Array) => boolean): double--><!--Device-Uint16Array-public findLast(fn: (val: double, index: int, array: Uint16Array) => boolean): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fn | (val: double, index: int, array: Uint16Array) =&gt; boolean | Yes | A function to test each element. Called with (value, index, array). Should return true for the element to be found. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fn | (val: double, index: int, array: Uint16Array) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | the last element that satisfies the predicate. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## findLastIndex
 
@@ -771,25 +713,23 @@ Returns the index of the last element in the Uint16Array that satisfies the give
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public findLastIndex(fn: (val: double, index: int, array: Uint16Array) => boolean): int--><!--Device-Uint16Array-public findLastIndex(fn: (val: double, index: int, array: Uint16Array) => boolean): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fn | (val: double, index: int, array: Uint16Array) =&gt; boolean | Yes | A function to test each element. Called with (value, index, array). Should return true for the element to be found. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fn | (val: double, index: int, array: Uint16Array) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | the index of the last element that satisfies the predicate, -1 otherwise. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## forEach
 
@@ -801,19 +741,17 @@ Calls the given callback function once for each element in the Uint16Array, in a
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public forEach(callbackfn: (value: double, index: int, array: Uint16Array) => void): void--><!--Device-Uint16Array-public forEach(callbackfn: (value: double, index: int, array: Uint16Array) => void): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (value: double, index: int, array: Uint16Array) =&gt; void | Yes | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (value: double, index: int, array: Uint16Array) = & gt; void | Yes |
 
 ## from
 
@@ -825,25 +763,23 @@ Creates an array from an object of FixedArray&lt;int&gt;.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public static from(arr: FixedArray<int>): Uint16Array--><!--Device-Uint16Array-public static from(arr: FixedArray<int>): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | FixedArray&lt;int&gt; | Yes | An instance of the FixedArray type to convert to an array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | FixedArray & lt;int & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | A new Uint16Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## from
 
@@ -855,25 +791,23 @@ Creates an array from a set of type std.core.Set&lt;int&gt;.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public static from(set: Set<int>): Uint16Array--><!--Device-Uint16Array-public static from(set: Set<int>): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| set | Set&lt;int&gt; | Yes | A set object to convert to an array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [set](#set) | Set & lt;int & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | A new Uint16Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## from
 
@@ -885,25 +819,23 @@ Creates an array from an array of the same type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public static from(arr: Uint16Array): Uint16Array--><!--Device-Uint16Array-public static from(arr: Uint16Array): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | Uint16Array | Yes | An array to convert to a new array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | Uint16Array | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | A new Uint16Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## from
 
@@ -915,25 +847,23 @@ Creates an array from an array of the same up to the signedness type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public static from(arr: Int16Array): Uint16Array--><!--Device-Uint16Array-public static from(arr: Int16Array): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | Int16Array | Yes | An array to convert to a new array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | Int16Array | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | A new Uint16Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## from
 
@@ -945,25 +875,23 @@ Creates an array from an object of std.core.Array&lt;int&gt;.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public static from(arr: Array<int>): Uint16Array--><!--Device-Uint16Array-public static from(arr: Array<int>): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | Array&lt;int&gt; | Yes | An instance of the std.core.Array type to convert to an array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | Array & lt;int & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | A new Uint16Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## from
 
@@ -975,25 +903,23 @@ Creates an array from an array-like object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public static from(arr: ArrayLike<double>): Uint16Array--><!--Device-Uint16Array-public static from(arr: ArrayLike<double>): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | ArrayLike&lt;double&gt; | Yes | An array-like object to convert to an array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | ArrayLike & lt;double & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | A new Uint16Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## from
 
@@ -1005,26 +931,24 @@ Creates an array from an array-like object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public static from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: double) => number): Uint16Array--><!--Device-Uint16Array-public static from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: double) => number): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; | Yes | An array-like object to convert to an array. |
-| mapfn | (v: T, k: double) =&gt; number | Yes | A mapping function to call on every element of the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arrayLike | ArrayLike & lt;T & gt; | Yes |
+| mapfn | (v: T, k: double) = & gt; number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | A new Uint16Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## from
 
@@ -1036,26 +960,24 @@ Creates an array from an iterable object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public static from(arrayLike: Iterable<double>, mapfn?: (v: double, k: double) => number): Uint16Array--><!--Device-Uint16Array-public static from(arrayLike: Iterable<double>, mapfn?: (v: double, k: double) => number): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arrayLike | Iterable&lt;double&gt; | Yes | An iterable object to convert to an array. |
-| mapfn | (v: double, k: double) =&gt; number | No | A mapping function to call on every element of the array. Defaults to the identity function (returns the element unchanged). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arrayLike | Iterable & lt;double & gt; | Yes |
+| mapfn | (v: double, k: double) = & gt; number | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | A new Uint16Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## includes
 
@@ -1067,26 +989,24 @@ Determines whether Uint16Array includes a certain element, returning true or fal
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public includes(searchElement: int, fromIndex: int): boolean--><!--Device-Uint16Array-public includes(searchElement: int, fromIndex: int): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | int | Yes | The element to search for <br>The value should be an integer. |
-| fromIndex | int | Yes | The position in this array at which to begin searching for searchElement <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | int | Yes |
+| fromIndex | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if searchElement is in Uint16Array, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## includes
 
@@ -1098,25 +1018,23 @@ Determines whether Uint16Array includes a certain element, returning true or fal
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public includes(searchElement: int): boolean--><!--Device-Uint16Array-public includes(searchElement: int): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | int | Yes | The element to search for. The search starts at index 0. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if searchElement is in Uint16Array, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## includes
 
@@ -1128,26 +1046,24 @@ Determines whether Uint16Array includes a certain element, returning true or fal
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public includes(searchElement: double, fromIndex?: int): boolean--><!--Device-Uint16Array-public includes(searchElement: double, fromIndex?: int): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | double | Yes | The element to search for. |
-| fromIndex | int | No | The position in this array at which to begin searching. Defaults to 0. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | double | Yes |
+| fromIndex | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | true if searchElement is in Uint16Array, false otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## indexOf
 
@@ -1159,25 +1075,23 @@ Returns the index of the first occurrence of a value in Uint16Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public indexOf(searchElement: int): int--><!--Device-Uint16Array-public indexOf(searchElement: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | int | Yes | The value to locate in the array. The search starts at index 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | index of element if present, -1 otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## indexOf
 
@@ -1189,26 +1103,24 @@ Returns the index of the first occurrence of a value in Uint16Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public indexOf(searchElement: int, fromIndex: int): int--><!--Device-Uint16Array-public indexOf(searchElement: int, fromIndex: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | int | Yes | The value to locate in the array. |
-| fromIndex | int | Yes | The array index at which to begin the search. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | int | Yes |
+| fromIndex | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | index of element if present, -1 otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## indexOf
 
@@ -1220,26 +1132,24 @@ Returns the index of the first occurrence of a value in Uint16Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public indexOf(searchElement: double, fromIndex?: int): int--><!--Device-Uint16Array-public indexOf(searchElement: double, fromIndex?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | double | Yes | The value to locate in the array. |
-| fromIndex | int | No | The array index at which to begin the search. Defaults to 0. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | double | Yes |
+| fromIndex | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | index of element if present, -1 otherwise |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## join
 
@@ -1251,25 +1161,23 @@ Adds all the elements of an array separated by the specified separator string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public join(separator?: string): string--><!--Device-Uint16Array-public join(separator?: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| separator | string | No | A string used to separate one element of an array from the next in the resulting string. If omitted, the array elements are separated with a comma. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| separator | string | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | a string of all array elements joined by the separator. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## keys
 
@@ -1281,19 +1189,17 @@ Returns an list of indices in the Uint16Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public keys(): IterableIterator<int>--><!--Device-Uint16Array-public keys(): IterableIterator<int>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;int&gt; | iterator over the array indices. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;int & gt; |
 
 ## lastIndexOf
 
@@ -1305,25 +1211,23 @@ Returns the index of the last occurrence of a value in Uint16Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public lastIndexOf(searchElement: int): int--><!--Device-Uint16Array-public lastIndexOf(searchElement: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | int | Yes | The value to locate in the array. The search begins at index length - 1. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | right-most index of searchElement. It must be less than length. -1 if not found |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## lastIndexOf
 
@@ -1335,25 +1239,23 @@ Returns the index of the last occurrence of a value in Uint16Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public lastIndexOf(searchElement: double): int--><!--Device-Uint16Array-public lastIndexOf(searchElement: double): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | double | Yes | The value to locate in the array. The search begins at index length - 1. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | right-most index of searchElement. It must be less than length. -1 if not found |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## lastIndexOf
 
@@ -1365,26 +1267,24 @@ Returns the index of the last occurrence of a value in Uint16Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public lastIndexOf(searchElement: int, fromIndex: int): int--><!--Device-Uint16Array-public lastIndexOf(searchElement: int, fromIndex: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | int | Yes | The value to locate in the array. |
-| fromIndex | int | Yes | The array index at which to begin the search. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | int | Yes |
+| fromIndex | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | right-most index of searchElement. It must be less or equal than fromIndex. -1 if not found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## lastIndexOf
 
@@ -1396,26 +1296,24 @@ Returns the index of the last occurrence of a value in Uint16Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public lastIndexOf(searchElement: double, fromIndex: int | undefined): int--><!--Device-Uint16Array-public lastIndexOf(searchElement: double, fromIndex: int | undefined): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| searchElement | double | Yes | The value to locate in the array. |
-| fromIndex | int \| undefined | Yes | The array index at which to begin the search. If fromIndex is undefined, the search starts at index 0. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| searchElement | double | Yes |
+| fromIndex | int \| undefined | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| int | right-most index of searchElement. It must be less or equal than fromIndex. -1 if not found. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| int |
 
 ## map
 
@@ -1427,25 +1325,23 @@ Creates a new Uint16Array using fn(arr[i]) over all elements of current Uint16Ar
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public map(fn: (val: double, index: int, array: Uint16Array) => double): Uint16Array--><!--Device-Uint16Array-public map(fn: (val: double, index: int, array: Uint16Array) => double): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| fn | (val: double, index: int, array: Uint16Array) =&gt; double | Yes | a function to apply for each element of current Uint16Array |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fn | (val: double, index: int, array: Uint16Array) = & gt; double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | a new Uint16Array with each element being the result of the callback function. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## of
 
@@ -1457,19 +1353,17 @@ Returns a new array from a set of elements.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public static of(): Uint16Array--><!--Device-Uint16Array-public static of(): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | a new Uint16Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## of
 
@@ -1481,25 +1375,23 @@ Returns a new array from a set of elements.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public static of(...items: FixedArray<int>): Uint16Array--><!--Device-Uint16Array-public static of(...items: FixedArray<int>): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| items | FixedArray&lt;int&gt; | Yes | a set of elements to include in the new array object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| items | FixedArray & lt;int & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | a new Uint16Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## of
 
@@ -1511,25 +1403,23 @@ Returns a new array from a set of elements.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public static of(...items: FixedArray<double>): Uint16Array--><!--Device-Uint16Array-public static of(...items: FixedArray<double>): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| items | FixedArray&lt;double&gt; | Yes | a set of elements to include in the new array object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| items | FixedArray & lt;double & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | a new Uint16Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## reduce
 
@@ -1542,26 +1432,24 @@ Calls the specified callback function for all the elements in an array. The retu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public reduce<U = double>( callbackfn: (previousValue: U, currentValue: double, currentIndex: int,        array: Uint16Array) => U, initialValue: U): U--><!--Device-Uint16Array-public reduce<U = double>( callbackfn: (previousValue: U, currentValue: double, currentIndex: int,        array: Uint16Array) => U, initialValue: U): U-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: double, currentIndex: int,         array: Uint16Array) =&gt; U | Yes | A function that accepts four arguments. The reduce method calls the callbackfn function one time for each element in the array. |
-| initialValue | U | Yes | The parameter which value is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (previousValue: U, currentValue: double, currentIndex: int,         array: Uint16Array) = & gt; U | Yes |
+| initialValue | U | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| U | the accumulated result from the last call to the callback function. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| U |
 
 ## reduce
 
@@ -1574,25 +1462,23 @@ Calls the specified callback function for all the elements in an array. The retu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public reduce(callbackfn: (previousValue: double, currentValue: double, currentIndex: int,        array: Uint16Array) => double): double--><!--Device-Uint16Array-public reduce(callbackfn: (previousValue: double, currentValue: double, currentIndex: int,        array: Uint16Array) => double): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: double, currentValue: double, currentIndex: int,         array: Uint16Array) =&gt; double | Yes | A function that accepts four arguments. The reduce method calls the callbackfn function one time for each element in the array. The first call to the callbackfn function provides array first element value as an argument |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (previousValue: double, currentValue: double, currentIndex: int,         array: Uint16Array) = & gt; double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | the accumulated result from the last call to the callback function. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## reduceRight
 
@@ -1606,26 +1492,24 @@ Calls the specified callback function for all the elements in an array, in desce
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public reduceRight<U = double>(        callbackfn: (previousValue: U, currentValue: double, currentIndex: int, array: Uint16Array) => U,        initialValue: U): U--><!--Device-Uint16Array-public reduceRight<U = double>(        callbackfn: (previousValue: U, currentValue: double, currentIndex: int, array: Uint16Array) => U,        initialValue: U): U-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: double, currentIndex: int, array: Uint16Array) =&gt; U | Yes | A function that accepts four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
-| initialValue | U | Yes | The parameter which value is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (previousValue: U, currentValue: double, currentIndex: int, array: Uint16Array) = & gt; U | Yes |
+| initialValue | U | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| U | the accumulated result from the last call to the callback function. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| U |
 
 ## reduceRight
 
@@ -1638,25 +1522,23 @@ Calls the specified callback function for all the elements in an array, in desce
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public reduceRight(callbackfn: (previousValue: double, currentValue: double, currentIndex: int,        array: Uint16Array) => double): double--><!--Device-Uint16Array-public reduceRight(callbackfn: (previousValue: double, currentValue: double, currentIndex: int,        array: Uint16Array) => double): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callbackfn | (previousValue: double, currentValue: double, currentIndex: int,         array: Uint16Array) =&gt; double | Yes | A function that accepts four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. The first call to the callbackfn function provides array last element value as an argument |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackfn | (previousValue: double, currentValue: double, currentIndex: int,         array: Uint16Array) = & gt; double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| double | the accumulated result from the last call to the callback function. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| double |
 
 ## reverse
 
@@ -1668,19 +1550,17 @@ Creates a new Uint16Array using reversed data from the current one
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public reverse(): Uint16Array--><!--Device-Uint16Array-public reverse(): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | a new Uint16Array with the elements in reverse order. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## set
 
@@ -1692,20 +1572,18 @@ Assigns val as element on index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public set(insertPos: int, val: int): void--><!--Device-Uint16Array-public set(insertPos: int, val: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| insertPos | int | Yes | index to change <br>The value should be an integer. |
-| val | int | Yes | value to set <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| insertPos | int | Yes |
+| val | int | Yes |
 
 ## set
 
@@ -1717,20 +1595,18 @@ Assigns val as element on index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public set(insertPos: int, val: double): void--><!--Device-Uint16Array-public set(insertPos: int, val: double): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| insertPos | int | Yes | index to change <br>The value should be an integer. |
-| val | double | Yes | value to set |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| insertPos | int | Yes |
+| val | double | Yes |
 
 ## set
 
@@ -1742,20 +1618,18 @@ Copies all elements of arr to the current Uint16Array starting from insertPos.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public set(arr: FixedArray<int>, insertPos: int): void--><!--Device-Uint16Array-public set(arr: FixedArray<int>, insertPos: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | FixedArray&lt;int&gt; | Yes | array to copy data from |
-| insertPos | int | Yes | start index where data from arr will be inserted <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | FixedArray & lt;int & gt; | Yes |
+| insertPos | int | Yes |
 
 ## set
 
@@ -1767,20 +1641,18 @@ Copies all elements of arr to the current Uint16Array starting from insertPos.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public set(arr: FixedArray<double>, insertPos: int): void--><!--Device-Uint16Array-public set(arr: FixedArray<double>, insertPos: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | FixedArray&lt;double&gt; | Yes | array to copy data from |
-| insertPos | int | Yes | start index where data from arr will be inserted <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | FixedArray & lt;double & gt; | Yes |
+| insertPos | int | Yes |
 
 ## set
 
@@ -1792,19 +1664,17 @@ Copies all elements of arr to the current Uint16Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public set(arr: FixedArray<int>): void--><!--Device-Uint16Array-public set(arr: FixedArray<int>): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | FixedArray&lt;int&gt; | Yes | array to copy data from |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | FixedArray & lt;int & gt; | Yes |
 
 ## set
 
@@ -1816,19 +1686,17 @@ Copies all elements of arr to the current Uint16Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public set(arr: FixedArray<double>): void--><!--Device-Uint16Array-public set(arr: FixedArray<double>): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| arr | FixedArray&lt;double&gt; | Yes | array to copy data from |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| arr | FixedArray & lt;double & gt; | Yes |
 
 ## set
 
@@ -1840,19 +1708,17 @@ Copies all elements of arr to the current Uint16Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public set(array: Uint16Array): void--><!--Device-Uint16Array-public set(array: Uint16Array): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| array | Uint16Array | Yes | array to copy data from |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| array | Uint16Array | Yes |
 
 ## set
 
@@ -1864,20 +1730,18 @@ Copies all elements of arr to the current Uint16Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public set(array: Uint16Array, offset: int): void--><!--Device-Uint16Array-public set(array: Uint16Array, offset: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| array | Uint16Array | Yes | array to copy data from |
-| offset | int | Yes | start index where data from arr will be inserted <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| array | Uint16Array | Yes |
+| offset | int | Yes |
 
 ## set
 
@@ -1889,20 +1753,18 @@ Copies elements from an ArrayLike object to the Uint16Array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public set(array: ArrayLike<double>, offset: int = 0): void--><!--Device-Uint16Array-public set(array: ArrayLike<double>, offset: int = 0): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| array | ArrayLike&lt;double&gt; | Yes | An ArrayLike object containing the elements to copy. |
-| offset | int | Yes | Optional. The offset into the target array at which to begin writing values from the source array. The default value is 0. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| array | ArrayLike & lt;double & gt; | Yes |
+| offset | int | Yes |
 
 ## slice
 
@@ -1914,26 +1776,24 @@ Creates a slice of current Uint16Array using range [begin, end]
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public slice(begin?: int, end?: int): Uint16Array--><!--Device-Uint16Array-public slice(begin?: int, end?: int): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| begin | int | No | start - index to be taken into slice. Defaults to 0. |
-| end | int | No | last index to be taken into slice. Defaults to the array length. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| begin | int | No |
+| end | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | a new Uint16Array with elements of current Uint16Array[begin;end), where end index is excluded |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## slice
 
@@ -1945,25 +1805,23 @@ Creates a slice of current Uint16Array using range [begin, this.lengthInt].
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public slice(begin: int): Uint16Array--><!--Device-Uint16Array-public slice(begin: int): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| begin | int | Yes | start index to be taken into slice. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| begin | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | a new Uint16Array with elements of current Uint16Array[begin, this.lengthInt]. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## some
 
@@ -1975,25 +1833,23 @@ Determines whether the specified callback function returns true for any element 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public some(predicate: (element: double, index: int, array: Uint16Array) => boolean): boolean--><!--Device-Uint16Array-public some(predicate: (element: double, index: int, array: Uint16Array) => boolean): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | (element: double, index: int, array: Uint16Array) =&gt; boolean | Yes | A function that accepts three arguments. The some method calls the predicate function for each element in the array until the predicate returns a true or until the end of the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (element: double, index: int, array: Uint16Array) = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | false unless predicate function returns true for an array element, in which case true is immediately returned. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 ## sort
 
@@ -2005,19 +1861,17 @@ Sorts in-place by numeric value in ascending order.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public sort(): this--><!--Device-Uint16Array-public sort(): this-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| this | sorted Uint16Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| this |
 
 ## sort
 
@@ -2029,25 +1883,23 @@ Sorts in-place
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public sort(compareFn?: (a: double, b: double) => int): this--><!--Device-Uint16Array-public sort(compareFn?: (a: double, b: double) => int): this-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| compareFn | (a: double, b: double) =&gt; int | No | comparator used to determine the order of the elements. compareFn returns a negative value if first argument is less than second argument, zero if they're equal and a positive value otherwise. Defaults to an ascending numeric sort. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| compareFn | (a: double, b: double) = & gt; int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| this | sorted Uint16Array |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| this |
 
 ## subarray
 
@@ -2059,26 +1911,24 @@ Creates a new Uint16Array that shares the same underlying ArrayBuffer as the cur
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public subarray(begin?: int, end?: int): Uint16Array--><!--Device-Uint16Array-public subarray(begin?: int, end?: int): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| begin | int | No | start index, inclusive. Defaults to 0. |
-| end | int | No | last index, exclusive. Defaults to the array length. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| begin | int | No |
+| end | int | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | a new Uint16Array with the same underlying Buffer |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## toLocaleString
 
@@ -2090,26 +1940,24 @@ Converts this object to a locale-specific string representation
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string--><!--Device-Uint16Array-public toLocaleString(locales?: Intl.LocalesArgument, options?: object): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locales | Intl.LocalesArgument | No | A string with a BCP 47 language tag, or an array of such strings. |
-| options | object | No | An object with some or all of the properties of the Intl.NumberFormat options. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| locales | Intl.LocalesArgument | No |
+| options | object | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | result of the locale-specific conversion |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## toReversed
 
@@ -2121,19 +1969,17 @@ Returns a new Uint16Array with the elements in reverse order. The original array
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public toReversed(): Uint16Array--><!--Device-Uint16Array-public toReversed(): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | a new Uint16Array with the elements reversed. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## toSorted
 
@@ -2145,19 +1991,17 @@ Creates a sorted copy
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public toSorted(): Uint16Array--><!--Device-Uint16Array-public toSorted(): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | a sorted copy |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## toString
 
@@ -2169,19 +2013,17 @@ Returns a string representing the elements of the Uint16Array, separated by comm
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public toString(): string--><!--Device-Uint16Array-public toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string | a comma-separated string of the array elements. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
 
 ## valueOf
 
@@ -2193,19 +2035,17 @@ Returns the primitive value of the Uint16Array, which is the array object itself
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public valueOf(): Uint16Array--><!--Device-Uint16Array-public valueOf(): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | the Uint16Array object itself. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## values
 
@@ -2217,19 +2057,17 @@ Returns array values iterator
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public values(): IterableIterator<double>--><!--Device-Uint16Array-public values(): IterableIterator<double>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| IterableIterator&lt;double&gt; | iterator that yields each element in order. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| IterableIterator & lt;double & gt; |
 
 ## with
 
@@ -2241,26 +2079,24 @@ Returns a new Uint16Array with the element at the given index replaced by the gi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public with(index: int, value: int): Uint16Array--><!--Device-Uint16Array-public with(index: int, value: int): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | index to change. <br>The value should be an integer. |
-| value | int | Yes | value to set. <br>The value should be an integer. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| value | int | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | a new Uint16Array with the element at index replaced. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## with
 
@@ -2272,26 +2108,24 @@ Returns a new Uint16Array with the element at the given index replaced by the gi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint16Array-public with(index: int, value: double): Uint16Array--><!--Device-Uint16Array-public with(index: int, value: double): Uint16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | int | Yes | index to change <br>The value should be an integer. |
-| value | double | Yes | value to set |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | int | Yes |
+| value | double | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint16Array | a new Uint16Array with the element at index replaced. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint16Array |
 
 ## buffer
 
@@ -2305,11 +2139,41 @@ Underlying Buffer.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Uint16Array-public readonly buffer: ArrayBuffer--><!--Device-Uint16Array-public readonly buffer: ArrayBuffer-End-->
+**System capability:** SystemCapability.Utils.Lang
+
+## byteLength
+
+```TypeScript
+public get byteLength(): int
+```
+
+Number of bytes used
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Utils.Lang
+
+## byteOffset
+
+```TypeScript
+public get byteOffset(): int
+```
+
+Byte offset within the underlying Buffer
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2325,11 +2189,25 @@ Number of bytes occupied by each element
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Uint16Array-public static readonly BYTES_PER_ELEMENT: int = 2--><!--Device-Uint16Array-public static readonly BYTES_PER_ELEMENT: int = 2-End-->
+**System capability:** SystemCapability.Utils.Lang
+
+## length
+
+```TypeScript
+public get length(): int
+```
+
+The number of elements stored in the Uint16Array.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2345,11 +2223,8 @@ String \"Uint16Array\", representing the type name of this typed array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Uint16Array-public readonly name: string = 'Uint16Array'--><!--Device-Uint16Array-public readonly name: string = 'Uint16Array'-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

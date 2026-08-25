@@ -7,11 +7,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)
-
-<!--Device-appAccount-interface OAuthTokenInfo--><!--Device-appAccount-interface OAuthTokenInfo-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -33,11 +33,11 @@ authType: string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [authType](arkts-basicservices-appaccount-authtokeninfo-i.md#authtype)
-
-<!--Device-OAuthTokenInfo-authType: string--><!--Device-OAuthTokenInfo-authType: string-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -53,11 +53,10 @@ token: string
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [token](arkts-basicservices-appaccount-authtokeninfo-i.md#token)
 
-<!--Device-OAuthTokenInfo-token: string--><!--Device-OAuthTokenInfo-token: string-End-->
-
 **系统能力：** SystemCapability.Account.AppAccount
-

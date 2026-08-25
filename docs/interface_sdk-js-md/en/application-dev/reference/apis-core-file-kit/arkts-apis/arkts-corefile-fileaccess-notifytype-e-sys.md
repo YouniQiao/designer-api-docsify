@@ -4,9 +4,9 @@ Enumerates the notification types.
 
 **Since:** 10
 
-**Deprecated since:** 23
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-fileAccess-enum NotifyType--><!--Device-fileAccess-enum NotifyType-End-->
+**Deprecated since:** 23
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -22,11 +22,11 @@ File added.See examples 2 and 3 of **registerObserver**.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NotifyType-NOTIFY_ADD = 0--><!--Device-NotifyType-NOTIFY_ADD = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -42,11 +42,11 @@ File deleted.See examples 1 and 2 of **unregisterObserver(uri: string, callback:
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NotifyType-NOTIFY_DELETE = 1--><!--Device-NotifyType-NOTIFY_DELETE = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -62,11 +62,11 @@ File or directory moved in (for example, **rename()** is performed on a file or 
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NotifyType-NOTIFY_MOVED_TO = 2--><!--Device-NotifyType-NOTIFY_MOVED_TO = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -82,11 +82,11 @@ File or directory moved out (for example, **rename()** is performed on a file or
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NotifyType-NOTIFY_MOVED_FROM = 3--><!--Device-NotifyType-NOTIFY_MOVED_FROM = 3-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -102,11 +102,11 @@ File moved (for example, the target file or directory is renamed or moved).See e
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NotifyType-NOTIFY_MOVE_SELF = 4--><!--Device-NotifyType-NOTIFY_MOVE_SELF = 4-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -122,11 +122,11 @@ Device goes online.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-NotifyType-NOTIFY_DEVICE_ONLINE = 5--><!--Device-NotifyType-NOTIFY_DEVICE_ONLINE = 5-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -142,13 +142,12 @@ Device goes offline.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NotifyType-NOTIFY_DEVICE_OFFLINE = 6--><!--Device-NotifyType-NOTIFY_DEVICE_OFFLINE = 6-End-->
-
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
-

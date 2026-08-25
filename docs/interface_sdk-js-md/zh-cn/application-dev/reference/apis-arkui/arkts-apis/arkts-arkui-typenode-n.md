@@ -4,9 +4,9 @@ typeNode提供创建具体类型的FrameNode能力，可通过FrameNode的基础
 
 **起始版本：** 12
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
-<!--Device-unnamed-export namespace typeNode--><!--Device-unnamed-export namespace typeNode-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -14,131 +14,255 @@ typeNode提供创建具体类型的FrameNode能力，可通过FrameNode的基础
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Text类型的FrameNode节点。使用typeNode创建Text节点时，当传入的UIContext对应的UI实例销毁后，调用该接口会返回一个无效的FrameNode节点，无法正常挂载和显示。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取Text节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [bindController](arkts-arkui-typenode-bindcontroller-f.md) | 将文本控制器TextController绑定到[Text](arkts-arkui-typenode-text-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言 访问，则抛出异常。该接口不支持声明式方式创建的节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Column类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取Column节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Row类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取Row节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Stack类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取Stack节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建GridRow类型的FrameNode节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建GridCol类型的FrameNode节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Flex类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取Flex节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Swiper类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取Swiper节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [bindController](arkts-arkui-typenode-bindcontroller-f.md) | 将控制器SwiperController绑定到[Swiper](arkts-arkui-typenode-swiper-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果 不支持跨语言访问，则抛出异常。该接口不支持声明式方式创建的节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Progress类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取Progress节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Scroll类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取Scroll节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [getEvent](arkts-arkui-typenode-getevent-f.md) | 获取Scroll节点中持有的UIScrollEvent对象，用于设置滚动事件。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。设置的滚动 事件与声明式定义的事件平行；设置的滚动事件不覆盖原有的声明式事件。同时设置两个事件回调的时候，优先回调声明式事件。 |
-| [bindController](arkts-arkui-typenode-bindcontroller-f.md) | 将滚动控制器Scroller绑定到[Scroll](arkts-arkui-typenode-scroll-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异 常。从API version 26.0.0开始，该接口支持声明式方式创建的节点，API version 26.0.0以下版本不支持。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建RelativeContainer类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取RelativeContainer节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Divider类型的FrameNode节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建LoadingProgress类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取LoadingProgress节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访 问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Search类型的FrameNode节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Blank类型的FrameNode节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Image类型的FrameNode节点。使用typeNode创建Image节点时，当传入的UIContext对应的UI实例销毁后，调用该接口会返回一个无效的FrameNode节点，无法正常挂载和显示。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取Image节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建List类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取List节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [bindController](arkts-arkui-typenode-bindcontroller-f.md) | 将滚动控制器Scroller绑定到[List](arkts-arkui-typenode-list-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从 API version 26.0.0开始，该接口支持声明式方式创建的节点，API version 26.0.0以下版本不支持。 |
-| [getEvent](arkts-arkui-typenode-getevent-f.md) | 获取List节点中持有的UIListEvent对象，用于设置滚动事件。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。设置的滚动事件与声 明式定义的事件平行；设置的滚动事件不覆盖原有的声明式事件。同时设置两个事件回调的时候，优先回调声明式事件。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建ListItem类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取ListItem节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建TextInput类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取TextInput节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [bindController](arkts-arkui-typenode-bindcontroller-f.md) | 将输入框控制器TextInputController绑定到[TextInput](arkts-arkui-typenode-textinput-t.md)节点。若该节点非ArkTS语言创建，则需 要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API版本26.0.0开始，该接口支持声明式方式创建的节点，API版本26.0.0以下版本不支持。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Button类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取Button节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建ListItemGroup类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取ListItemGroup节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建WaterFlow类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取WaterFlow节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [bindController](arkts-arkui-typenode-bindcontroller-f.md) | 将滚动控制器Scroller绑定到[WaterFlow](arkts-arkui-typenode-waterflow-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访 问，则抛出异常。从API version 26.0.0开始，该接口支持声明式方式创建的节点，API version 26.0.0以下版本不支持。 |
-| [getEvent](arkts-arkui-typenode-getevent-f.md) | 获取[WaterFlow](arkts-arkui-typenode-waterflow-t.md)节点中持有的UIWaterFlowEvent对象，用于设置滚动事件。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则 返回undefined。该接口不支持声明式方式创建的节点。设置的滚动事件与声明式定义的事件平行；设置的滚动事件不覆盖原有的声明式事件。同时设置两个事件回调的时候，优先回调声明式事件。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建FlowItem类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取FlowItem节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建XComponent类型的FrameNode节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 按照options中的配置参数创建XComponent类型的FrameNode节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 按照parameters中的配置参数创建XComponent类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取XComponent节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Checkbox类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取Checkbox节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建CheckboxGroup类型的FrameNode节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Radio类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取Radio节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Rating类型的FrameNode节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Select类型的FrameNode节点。使用typeNode创建Select节点时，当传入的UIContext对应的UI实例销毁后，调用该接口会返回一个无效的FrameNode节点，无法正常挂载和显示。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Slider类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取Slider节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Toggle类型的FrameNode节点。使用typeNode创建Toggle节点时，当传入的UIContext对应的UI实例销毁后，调用该接口会返回一个无效的FrameNode节点，无法正常挂载和显示。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取Toggle节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Marquee类型的FrameNode节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建TextArea类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取TextArea节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [bindController](arkts-arkui-typenode-bindcontroller-f.md) | 将输入框控制器TextAreaController绑定到[TextArea](arkts-arkui-typenode-textarea-t.md)节点。若该节点非ArkTS语言创建，则需要设置是 否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API版本26.0.0开始，该接口支持声明式方式创建的节点，API版本26.0.0以下版本不支持。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建SymbolGlyph类型的FrameNode节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建QRCode类型的FrameNode节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Badge类型的FrameNode节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建TextClock类型的FrameNode节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建TextTimer类型的FrameNode节点。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建Grid类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取Grid节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
-| [bindController](arkts-arkui-typenode-bindcontroller-f.md) | 将滚动控制器Scroller绑定到[Grid](arkts-arkui-typenode-grid-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从 API version 26.0.0开始，该接口支持声明式方式创建的节点，API version 26.0.0以下版本不支持。 |
-| [getEvent](arkts-arkui-typenode-getevent-f.md) | 获取Grid节点中持有的UIGridEvent对象，用于设置滚动事件。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。设置的滚动事件与声 明式定义的事件平行；设置的滚动事件不覆盖原有的声明式事件。同时设置两个事件回调的时候，优先回调声明式事件。 |
-| [createNode](arkts-arkui-typenode-createnode-f.md) | 创建GridItem类型的FrameNode节点。 |
-| [getAttribute](arkts-arkui-typenode-getattribute-f.md) | 获取GridItem节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。 |
+| 名称 |
+| --- |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [bindController](arkts-arkui-typenode-bindcontroller-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [bindController](arkts-arkui-typenode-bindcontroller-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [getEvent](arkts-arkui-typenode-getevent-f.md) |
+| [bindController](arkts-arkui-typenode-bindcontroller-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [bindController](arkts-arkui-typenode-bindcontroller-f.md) |
+| [getEvent](arkts-arkui-typenode-getevent-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [bindController](arkts-arkui-typenode-bindcontroller-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [bindController](arkts-arkui-typenode-bindcontroller-f.md) |
+| [getEvent](arkts-arkui-typenode-getevent-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [bindController](arkts-arkui-typenode-bindcontroller-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [bindController](arkts-arkui-typenode-bindcontroller-f.md) |
+| [getEvent](arkts-arkui-typenode-getevent-f.md) |
+| [createNode](arkts-arkui-typenode-createnode-f.md) |
+| [getAttribute](arkts-arkui-typenode-getattribute-f.md) |
+| [createColumnNode](arkts-arkui-typenode-createcolumnnode-f.md) |
+| [getColumnAttribute](arkts-arkui-typenode-getcolumnattribute-f.md) |
+| [createRowNode](arkts-arkui-typenode-createrownode-f.md) |
+| [getRowAttribute](arkts-arkui-typenode-getrowattribute-f.md) |
+| [createStackNode](arkts-arkui-typenode-createstacknode-f.md) |
+| [getStackAttribute](arkts-arkui-typenode-getstackattribute-f.md) |
+| [createGridRowNode](arkts-arkui-typenode-creategridrownode-f.md) |
+| [createGridColNode](arkts-arkui-typenode-creategridcolnode-f.md) |
+| [createFlexNode](arkts-arkui-typenode-createflexnode-f.md) |
+| [getFlexAttribute](arkts-arkui-typenode-getflexattribute-f.md) |
+| [createRelativeContainerNode](arkts-arkui-typenode-createrelativecontainernode-f.md) |
+| [getRelativeContainerAttribute](arkts-arkui-typenode-getrelativecontainerattribute-f.md) |
+| [createDividerNode](arkts-arkui-typenode-createdividernode-f.md) |
+| [createLoadingProgressNode](arkts-arkui-typenode-createloadingprogressnode-f.md) |
+| [getLoadingProgressAttribute](arkts-arkui-typenode-getloadingprogressattribute-f.md) |
+| [createBlankNode](arkts-arkui-typenode-createblanknode-f.md) |
+| [createImageNode](arkts-arkui-typenode-createimagenode-f.md) |
+| [getImageAttribute](arkts-arkui-typenode-getimageattribute-f.md) |
+| [createListNode](arkts-arkui-typenode-createlistnode-f.md) |
+| [getListAttribute](arkts-arkui-typenode-getlistattribute-f.md) |
+| [getListEvent](arkts-arkui-typenode-getlistevent-f.md) |
+| [bindListController](arkts-arkui-typenode-bindlistcontroller-f.md) |
+| [createListItemNode](arkts-arkui-typenode-createlistitemnode-f.md) |
+| [getListItemAttribute](arkts-arkui-typenode-getlistitemattribute-f.md) |
+| [createListItemGroupNode](arkts-arkui-typenode-createlistitemgroupnode-f.md) |
+| [getListItemGroupAttribute](arkts-arkui-typenode-getlistitemgroupattribute-f.md) |
+| [createProgressNode](arkts-arkui-typenode-createprogressnode-f.md) |
+| [getProgressAttribute](arkts-arkui-typenode-getprogressattribute-f.md) |
+| [createScrollNode](arkts-arkui-typenode-createscrollnode-f.md) |
+| [bindScrollController](arkts-arkui-typenode-bindscrollcontroller-f.md) |
+| [getScrollAttribute](arkts-arkui-typenode-getscrollattribute-f.md) |
+| [getScrollEvent](arkts-arkui-typenode-getscrollevent-f.md) |
+| [createTextClockNode](arkts-arkui-typenode-createtextclocknode-f.md) |
+| [createTextTimerNode](arkts-arkui-typenode-createtexttimernode-f.md) |
+| [createGridNode](arkts-arkui-typenode-creategridnode-f.md) |
+| [getGridAttribute](arkts-arkui-typenode-getgridattribute-f.md) |
+| [getGridEvent](arkts-arkui-typenode-getgridevent-f.md) |
+| [bindGridController](arkts-arkui-typenode-bindgridcontroller-f.md) |
+| [createGridItemNode](arkts-arkui-typenode-creategriditemnode-f.md) |
+| [getGridItemAttribute](arkts-arkui-typenode-getgriditemattribute-f.md) |
+| [createWaterFlowNode](arkts-arkui-typenode-createwaterflownode-f.md) |
+| [getWaterFlowAttribute](arkts-arkui-typenode-getwaterflowattribute-f.md) |
+| [getWaterFlowEvent](arkts-arkui-typenode-getwaterflowevent-f.md) |
+| [bindWaterFlowController](arkts-arkui-typenode-bindwaterflowcontroller-f.md) |
+| [createFlowItemNode](arkts-arkui-typenode-createflowitemnode-f.md) |
+| [getFlowItemAttribute](arkts-arkui-typenode-getflowitemattribute-f.md) |
+| [createTextNode](arkts-arkui-typenode-createtextnode-f.md) |
+| [getTextAttribute](arkts-arkui-typenode-gettextattribute-f.md) |
+| [bindTextController](arkts-arkui-typenode-bindtextcontroller-f.md) |
+| [createSearchNode](arkts-arkui-typenode-createsearchnode-f.md) |
+| [createTextInputNode](arkts-arkui-typenode-createtextinputnode-f.md) |
+| [getTextInputAttribute](arkts-arkui-typenode-gettextinputattribute-f.md) |
+| [bindTextInputController](arkts-arkui-typenode-bindtextinputcontroller-f.md) |
+| [createTextAreaNode](arkts-arkui-typenode-createtextareanode-f.md) |
+| [getTextAreaAttribute](arkts-arkui-typenode-gettextareaattribute-f.md) |
+| [bindTextAreaController](arkts-arkui-typenode-bindtextareacontroller-f.md) |
+| [createSymbolGlyphNode](arkts-arkui-typenode-createsymbolglyphnode-f.md) |
+| [createQRCodeNode](arkts-arkui-typenode-createqrcodenode-f.md) |
+| [createBadgeNode](arkts-arkui-typenode-createbadgenode-f.md) |
+| [createMarqueeNode](arkts-arkui-typenode-createmarqueenode-f.md) |
+| [createSwiperNode](arkts-arkui-typenode-createswipernode-f.md) |
+| [getSwiperAttribute](arkts-arkui-typenode-getswiperattribute-f.md) |
+| [bindSwiperController](arkts-arkui-typenode-bindswipercontroller-f.md) |
+| [createXComponentNodeDefault](arkts-arkui-typenode-createxcomponentnodedefault-f.md) |
+| [createXComponentNodeWithOptions](arkts-arkui-typenode-createxcomponentnodewithoptions-f.md) |
+| [createXComponentNodeWithNativeParameters](arkts-arkui-typenode-createxcomponentnodewithnativeparameters-f.md) |
+| [getXComponentAttribute](arkts-arkui-typenode-getxcomponentattribute-f.md) |
+| [createButtonNode](arkts-arkui-typenode-createbuttonnode-f.md) |
+| [getButtonAttribute](arkts-arkui-typenode-getbuttonattribute-f.md) |
+| [createCheckboxNode](arkts-arkui-typenode-createcheckboxnode-f.md) |
+| [getCheckboxAttribute](arkts-arkui-typenode-getcheckboxattribute-f.md) |
+| [createCheckboxGroupNode](arkts-arkui-typenode-createcheckboxgroupnode-f.md) |
+| [createRadioNode](arkts-arkui-typenode-createradionode-f.md) |
+| [getRadioAttribute](arkts-arkui-typenode-getradioattribute-f.md) |
+| [createRatingNode](arkts-arkui-typenode-createratingnode-f.md) |
+| [createSelectNode](arkts-arkui-typenode-createselectnode-f.md) |
+| [createSliderNode](arkts-arkui-typenode-createslidernode-f.md) |
+| [getSliderAttribute](arkts-arkui-typenode-getsliderattribute-f.md) |
+| [createToggleNode](arkts-arkui-typenode-createtogglenode-f.md) |
+| [getToggleAttribute](arkts-arkui-typenode-gettoggleattribute-f.md) |
+
+### 类
+
+| 名称 |
+| --- |
+| [ColumnFrameNode](arkts-arkui-typenode-columnframenode-c.md) |
+| [RowFrameNode](arkts-arkui-typenode-rowframenode-c.md) |
+| [StackFrameNode](arkts-arkui-typenode-stackframenode-c.md) |
+| [GridRowFrameNode](arkts-arkui-typenode-gridrowframenode-c.md) |
+| [GridColFrameNode](arkts-arkui-typenode-gridcolframenode-c.md) |
+| [FlexFrameNode](arkts-arkui-typenode-flexframenode-c.md) |
+| [RelativeContainerFrameNode](arkts-arkui-typenode-relativecontainerframenode-c.md) |
+| [DividerFrameNode](arkts-arkui-typenode-dividerframenode-c.md) |
+| [LoadingProgressFrameNode](arkts-arkui-typenode-loadingprogressframenode-c.md) |
+| [BlankFrameNode](arkts-arkui-typenode-blankframenode-c.md) |
+| [ImageFrameNode](arkts-arkui-typenode-imageframenode-c.md) |
+| [ListFrameNode](arkts-arkui-typenode-listframenode-c.md) |
+| [ListItemFrameNode](arkts-arkui-typenode-listitemframenode-c.md) |
+| [ListItemGroupFrameNode](arkts-arkui-typenode-listitemgroupframenode-c.md) |
+| [ProgressFrameNode](arkts-arkui-typenode-progressframenode-c.md) |
+| [ScrollFrameNode](arkts-arkui-typenode-scrollframenode-c.md) |
+| [TextClockFrameNode](arkts-arkui-typenode-textclockframenode-c.md) |
+| [TextTimerFrameNode](arkts-arkui-typenode-texttimerframenode-c.md) |
+| [GridFrameNode](arkts-arkui-typenode-gridframenode-c.md) |
+| [GridItemFrameNode](arkts-arkui-typenode-griditemframenode-c.md) |
+| [WaterFlowFrameNode](arkts-arkui-typenode-waterflowframenode-c.md) |
+| [FlowItemFrameNode](arkts-arkui-typenode-flowitemframenode-c.md) |
+| [TextFrameNode](arkts-arkui-typenode-textframenode-c.md) |
+| [SearchFrameNode](arkts-arkui-typenode-searchframenode-c.md) |
+| [TextInputFrameNode](arkts-arkui-typenode-textinputframenode-c.md) |
+| [TextAreaFrameNode](arkts-arkui-typenode-textareaframenode-c.md) |
+| [SymbolGlyphFrameNode](arkts-arkui-typenode-symbolglyphframenode-c.md) |
+| [QRCodeFrameNode](arkts-arkui-typenode-qrcodeframenode-c.md) |
+| [BadgeFrameNode](arkts-arkui-typenode-badgeframenode-c.md) |
+| [MarqueeFrameNode](arkts-arkui-typenode-marqueeframenode-c.md) |
+| [SwiperFrameNode](arkts-arkui-typenode-swiperframenode-c.md) |
+| [XComponentFrameNode](arkts-arkui-typenode-xcomponentframenode-c.md) |
+| [ButtonFrameNode](arkts-arkui-typenode-buttonframenode-c.md) |
+| [CheckboxFrameNode](arkts-arkui-typenode-checkboxframenode-c.md) |
+| [CheckboxGroupFrameNode](arkts-arkui-typenode-checkboxgroupframenode-c.md) |
+| [RadioFrameNode](arkts-arkui-typenode-radioframenode-c.md) |
+| [RatingFrameNode](arkts-arkui-typenode-ratingframenode-c.md) |
+| [SelectFrameNode](arkts-arkui-typenode-selectframenode-c.md) |
+| [SliderFrameNode](arkts-arkui-typenode-sliderframenode-c.md) |
+| [ToggleFrameNode](arkts-arkui-typenode-toggleframenode-c.md) |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-| [Text](arkts-arkui-typenode-text-t.md) | Text类型的FrameNode节点类型。不允许添加子组件。 |
-| [Column](arkts-arkui-typenode-column-t.md) | Column类型的FrameNode节点类型。 |
-| [Row](arkts-arkui-typenode-row-t.md) | Row类型的FrameNode节点类型。 |
-| [Stack](arkts-arkui-typenode-stack-t.md) | Stack类型的FrameNode节点类型。 |
-| [GridRow](arkts-arkui-typenode-gridrow-t.md) | GridRow类型的FrameNode节点类型。只允许添加GridCol类型子组件。 |
-| [GridCol](arkts-arkui-typenode-gridcol-t.md) | GridCol类型的FrameNode节点类型。不允许添加子组件。 |
-| [Flex](arkts-arkui-typenode-flex-t.md) | Flex类型的FrameNode节点类型。 |
-| [Swiper](arkts-arkui-typenode-swiper-t.md) | Swiper类型的FrameNode节点类型。 |
-| [Progress](arkts-arkui-typenode-progress-t.md) | Progress类型的FrameNode节点类型。不允许添加子组件。 |
-| [Scroll](arkts-arkui-typenode-scroll-t.md) | Scroll类型的FrameNode节点类型。允许添加一个子组件。 |
-| [RelativeContainer](arkts-arkui-typenode-relativecontainer-t.md) | RelativeContainer类型的FrameNode节点类型。 |
-| [Divider](arkts-arkui-typenode-divider-t.md) | Divider类型的FrameNode节点类型。不允许添加子组件。 |
-| [LoadingProgress](arkts-arkui-typenode-loadingprogress-t.md) | LoadingProgress类型的FrameNode节点类型。不允许添加子组件。 |
-| [Search](arkts-arkui-typenode-search-t.md) | Search类型的FrameNode节点类型。 |
-| [Blank](arkts-arkui-typenode-blank-t.md) | Blank类型的FrameNode节点类型。不允许添加子组件。 |
-| [Image](arkts-arkui-typenode-image-t.md) | Image类型的FrameNode节点类型。不允许添加子组件。 |
-| [List](arkts-arkui-typenode-list-t.md) | List类型的FrameNode节点类型。只允许添加[ListItem](arkts-arkui-typenode-listitem-t.md)、[ListItemGroup](arkts-arkui-typenode-listitemgroup-t.md)类型子组件。 |
-| [ListItem](arkts-arkui-typenode-listitem-t.md) | ListItem类型的FrameNode节点类型。 |
-| [TextInput](arkts-arkui-typenode-textinput-t.md) | TextInput类型的FrameNode节点类型。 |
-| [Button](arkts-arkui-typenode-button-t.md) | Button类型的FrameNode节点类型。以子组件模式创建允许添加一个子组件。以label模式创建不可以添加子组件。 |
-| [ListItemGroup](arkts-arkui-typenode-listitemgroup-t.md) | ListItemGroup类型的FrameNode节点类型。只允许添加ListItem类型子组件。 |
-| [WaterFlow](arkts-arkui-typenode-waterflow-t.md) | WaterFlow类型的FrameNode节点类型。只允许添加FlowItem类型子组件。 |
-| [FlowItem](arkts-arkui-typenode-flowitem-t.md) | FlowItem类型的FrameNode节点类型。允许添加一个子组件。 |
-| [XComponent](arkts-arkui-typenode-xcomponent-t.md) | XComponent类型的FrameNode节点类型。 |
-| [Checkbox](arkts-arkui-typenode-checkbox-t.md) | Checkbox类型的FrameNode节点类型。 |
-| [CheckboxGroup](arkts-arkui-typenode-checkboxgroup-t.md) | CheckboxGroup类型的FrameNode节点类型。 |
-| [Radio](arkts-arkui-typenode-radio-t.md) | Radio类型的FrameNode节点类型。 |
-| [Rating](arkts-arkui-typenode-rating-t.md) | Rating类型的FrameNode节点类型。 |
-| [Select](arkts-arkui-typenode-select-t.md) | Select类型的FrameNode节点类型。 |
-| [Slider](arkts-arkui-typenode-slider-t.md) | Slider类型的FrameNode节点类型。 |
-| [Toggle](arkts-arkui-typenode-toggle-t.md) | Toggle类型的FrameNode节点类型。 |
-| [Marquee](arkts-arkui-typenode-marquee-t.md) | Marquee类型的FrameNode节点类型。 |
-| [TextArea](arkts-arkui-typenode-textarea-t.md) | TextArea类型的FrameNode节点类型。 |
-| [SymbolGlyph](arkts-arkui-typenode-symbolglyph-t.md) | SymbolGlyph类型的FrameNode节点类型。 |
-| [QRCode](arkts-arkui-typenode-qrcode-t.md) | QRCode类型的FrameNode节点类型。 |
-| [Badge](arkts-arkui-typenode-badge-t.md) | Badge类型的FrameNode节点类型。 |
-| [TextClock](arkts-arkui-typenode-textclock-t.md) | TextClock类型的FrameNode节点类型。 |
-| [TextTimer](arkts-arkui-typenode-texttimer-t.md) | TextTimer类型的FrameNode节点类型。 |
-| [Grid](arkts-arkui-typenode-grid-t.md) | Grid类型的FrameNode节点类型。 |
-| [GridItem](arkts-arkui-typenode-griditem-t.md) | GridItem类型的FrameNode节点类型。 |
-
+| 名称 |
+| --- |
+| [Text](arkts-arkui-typenode-text-t.md) |
+| [Column](arkts-arkui-typenode-column-t.md) |
+| [Row](arkts-arkui-typenode-row-t.md) |
+| [Stack](arkts-arkui-typenode-stack-t.md) |
+| [GridRow](arkts-arkui-typenode-gridrow-t.md) |
+| [GridCol](arkts-arkui-typenode-gridcol-t.md) |
+| [Flex](arkts-arkui-typenode-flex-t.md) |
+| [Swiper](arkts-arkui-typenode-swiper-t.md) |
+| [Progress](arkts-arkui-typenode-progress-t.md) |
+| [Scroll](arkts-arkui-typenode-scroll-t.md) |
+| [RelativeContainer](arkts-arkui-typenode-relativecontainer-t.md) |
+| [Divider](arkts-arkui-typenode-divider-t.md) |
+| [LoadingProgress](arkts-arkui-typenode-loadingprogress-t.md) |
+| [Search](arkts-arkui-typenode-search-t.md) |
+| [Blank](arkts-arkui-typenode-blank-t.md) |
+| [Image](arkts-arkui-typenode-image-t.md) |
+| [List](arkts-arkui-typenode-list-t.md) |
+| [ListItem](arkts-arkui-typenode-listitem-t.md) |
+| [TextInput](arkts-arkui-typenode-textinput-t.md) |
+| [Button](arkts-arkui-typenode-button-t.md) |
+| [ListItemGroup](arkts-arkui-typenode-listitemgroup-t.md) |
+| [WaterFlow](arkts-arkui-typenode-waterflow-t.md) |
+| [FlowItem](arkts-arkui-typenode-flowitem-t.md) |
+| [XComponent](arkts-arkui-typenode-xcomponent-t.md) |
+| [Checkbox](arkts-arkui-typenode-checkbox-t.md) |
+| [CheckboxGroup](arkts-arkui-typenode-checkboxgroup-t.md) |
+| [Radio](arkts-arkui-typenode-radio-t.md) |
+| [Rating](arkts-arkui-typenode-rating-t.md) |
+| [Select](arkts-arkui-typenode-select-t.md) |
+| [Slider](arkts-arkui-typenode-slider-t.md) |
+| [Toggle](arkts-arkui-typenode-toggle-t.md) |
+| [Marquee](arkts-arkui-typenode-marquee-t.md) |
+| [TextArea](arkts-arkui-typenode-textarea-t.md) |
+| [SymbolGlyph](arkts-arkui-typenode-symbolglyph-t.md) |
+| [QRCode](arkts-arkui-typenode-qrcode-t.md) |
+| [Badge](arkts-arkui-typenode-badge-t.md) |
+| [TextClock](arkts-arkui-typenode-textclock-t.md) |
+| [TextTimer](arkts-arkui-typenode-texttimer-t.md) |
+| [Grid](arkts-arkui-typenode-grid-t.md) |
+| [GridItem](arkts-arkui-typenode-griditem-t.md) |

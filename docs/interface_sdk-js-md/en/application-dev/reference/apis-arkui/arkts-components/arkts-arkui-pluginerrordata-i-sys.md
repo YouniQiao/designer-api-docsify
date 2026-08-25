@@ -9,7 +9,7 @@ Data provided when the error occurs.
 
 **Since:** 9
 
-<!--Device-unnamed-declare interface PluginErrorData--><!--Device-unnamed-declare interface PluginErrorData-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,7 +32,7 @@ Error code.
 
 **Since:** 9
 
-<!--Device-PluginErrorData-errcode: number--><!--Device-PluginErrorData-errcode: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,9 +50,8 @@ Error message.
 
 **Since:** 9
 
-<!--Device-PluginErrorData-msg: string--><!--Device-PluginErrorData-msg: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

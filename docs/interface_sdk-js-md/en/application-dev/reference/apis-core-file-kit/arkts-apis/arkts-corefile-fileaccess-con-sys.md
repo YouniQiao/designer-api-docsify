@@ -10,13 +10,12 @@ Indicates the root uri of the device
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-fileAccess-const DEVICES_URI = 'file://docs'--><!--Device-fileAccess-const DEVICES_URI = 'file://docs'-End-->
-
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
-

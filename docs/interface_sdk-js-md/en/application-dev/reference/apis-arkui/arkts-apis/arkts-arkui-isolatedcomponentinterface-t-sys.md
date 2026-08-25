@@ -8,9 +8,9 @@ Provide an interface for the IsolatedComponent, which is used to render UI of ot
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-unnamed-declare type IsolatedComponentInterface = (options: IsolatedOptions) => IsolatedComponentAttribute--><!--Device-unnamed-declare type IsolatedComponentInterface = (options: IsolatedOptions) => IsolatedComponentAttribute-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +18,12 @@ Provide an interface for the IsolatedComponent, which is used to render UI of ot
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [IsolatedOptions](arkts-arkui-isolatedoptions-i-sys.md) | Yes | Construction configuration of IsolatedComponentAttribute |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [IsolatedOptions](arkts-arkui-isolatedoptions-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [IsolatedComponentAttribute](arkts-arkui-isolatedcomponentattribute-c-sys.md) | Attribute of IsolatedComponent |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [IsolatedComponentAttribute](arkts-arkui-isolatedcomponentattribute-c-sys.md) |

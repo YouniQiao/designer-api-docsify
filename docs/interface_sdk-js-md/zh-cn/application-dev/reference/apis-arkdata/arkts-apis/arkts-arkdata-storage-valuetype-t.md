@@ -8,13 +8,12 @@ type ValueType = number | string | boolean
 
 **起始版本：** 6
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
+
 **废弃版本：** 9
 
-<!--Device-storage-type ValueType = number | string | boolean--><!--Device-storage-type ValueType = number | string | boolean-End-->
-
-| 类型 | 说明 |
-| --- | --- |
-| number | 表示值类型为数字。 |
-| string | 表示值类型为字符串。 |
-| boolean | 表示值类型为布尔值。 |
-
+| 类型 |
+| --- |
+| number |
+| string |
+| boolean |

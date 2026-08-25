@@ -2,9 +2,9 @@
 
 Enumerates the types of download tasks.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-photoAccessHelper-enum CloudMediaDownloadType--><!--Device-photoAccessHelper-enum CloudMediaDownloadType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ DOWNLOAD_FORCE = 0
 
 High-priority download, without the need for the device to switch to screen-off charging mode.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CloudMediaDownloadType-DOWNLOAD_FORCE = 0--><!--Device-CloudMediaDownloadType-DOWNLOAD_FORCE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,11 +34,10 @@ DOWNLOAD_GENTLE = 1
 
 Low-priority download, demanding that device be in screen-off charging mode.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-CloudMediaDownloadType-DOWNLOAD_GENTLE = 1--><!--Device-CloudMediaDownloadType-DOWNLOAD_GENTLE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-

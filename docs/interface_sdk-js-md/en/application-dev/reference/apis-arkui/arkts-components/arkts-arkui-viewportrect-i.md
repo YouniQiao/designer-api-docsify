@@ -8,7 +8,7 @@ Describes the options of the viewport.
 
 **Since:** 18
 
-<!--Device-unnamed-declare interface ViewportRect--><!--Device-unnamed-declare interface ViewportRect-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,11 +29,11 @@ Height of the viewport. The value must be greater than or equal to 0.Default val
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ViewportRect-height?: Length--><!--Device-ViewportRect-height?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,11 +49,11 @@ Width of the viewport. The value must be greater than or equal to 0.Default valu
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ViewportRect-width?: Length--><!--Device-ViewportRect-width?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,11 +69,11 @@ Horizontal coordinate of the start point of the viewport.Default value: **0**Def
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-ViewportRect-x?: Length--><!--Device-ViewportRect-x?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -89,11 +89,10 @@ Vertical coordinate of the start point of the viewport.Default value: **0**Defau
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-ViewportRect-y?: Length--><!--Device-ViewportRect-y?: Length-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,9 +4,9 @@ Returns the file read, including the file content.
 
 **Since:** 3
 
-**Deprecated since:** 10
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface FileReadArrayBufferResponse--><!--Device-unnamed-export interface FileReadArrayBufferResponse-End-->
+**Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -27,9 +27,8 @@ Data read.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 10
 
-<!--Device-FileReadArrayBufferResponse-buffer: Uint8Array--><!--Device-FileReadArrayBufferResponse-buffer: Uint8Array-End-->
-
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
-

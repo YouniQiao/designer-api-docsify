@@ -4,7 +4,7 @@ Image layout information.
 
 **Since:** 11
 
-<!--Device-unnamed-interface RichEditorLayoutStyle--><!--Device-unnamed-interface RichEditorLayoutStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Radius of the rounded corners of the component.If of the **Dimension** type, thi
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorLayoutStyle-borderRadius?: Dimension | BorderRadiuses--><!--Device-RichEditorLayoutStyle-borderRadius?: Dimension | BorderRadiuses-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ Margins in different directions of the component.When the parameter is of the **
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-RichEditorLayoutStyle-margin?: Dimension | Margin--><!--Device-RichEditorLayoutStyle-margin?: Dimension | Margin-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

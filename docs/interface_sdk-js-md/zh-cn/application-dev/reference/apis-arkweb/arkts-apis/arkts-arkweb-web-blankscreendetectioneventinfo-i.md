@@ -1,0 +1,57 @@
+# BlankScreenDetectionEventInfo
+
+Defines the blank screen detection event info.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+## blankScreenDetails
+
+```TypeScript
+blankScreenDetails?: BlankScreenDetails
+```
+
+The details of this detection result.
+
+**类型：** [BlankScreenDetails](arkts-arkweb-web-blankscreendetails-i.md)
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+## blankScreenReason
+
+```TypeScript
+blankScreenReason: DetectedBlankScreenReason
+```
+
+The reason why we consider this page is blank.
+
+**类型：** [DetectedBlankScreenReason](arkts-arkweb-web-detectedblankscreenreason-e.md)
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+## url
+
+```TypeScript
+url: string
+```
+
+The url of detected blank screen page.
+
+**类型：** string
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+
+**系统能力：** SystemCapability.Web.Webview.Core

@@ -23,29 +23,29 @@ function restartSelfAtomicService(context: Context): void
 
 **起始版本：** 20
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-abilityManager-function restartSelfAtomicService(context: Context): void--><!--Device-abilityManager-function restartSelfAtomicService(context: Context): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | 是 | 当前Ability的上下文。<br>**说明：**当前仅支持 [UIAbilityContext](arkts-ability-uiabilitycontext-c.md)。&lt;/br&gt; |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [Context](arkts-ability-context-c.md) | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000064](../errorcode-ability.md#16000064-重启应用频繁) | Restart too frequently. Try again at least 3s later. |
-| [16000086](../errorcode-ability.md#16000086-传入的context不是uiabilitycontext) | The context is not UIAbilityContext. |
-| [16000090](../errorcode-ability.md#16000090-调用方不是原子化服务) | The caller is not an atomic service. |
+| 错误码ID |
+| --- |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000064](../errorcode-ability.md#16000064-重启应用频繁) |
+| [16000086](../errorcode-ability.md#16000086-传入的context不是uiabilitycontext) |
+| [16000090](../errorcode-ability.md#16000090-调用方不是原子化服务) |
 
 **示例**
 
@@ -65,4 +65,3 @@ export default class EntryAbility extends EmbeddableUIAbility {
   }
 }
 ```
-

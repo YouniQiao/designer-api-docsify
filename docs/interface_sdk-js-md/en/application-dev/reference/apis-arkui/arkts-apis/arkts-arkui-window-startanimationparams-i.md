@@ -2,9 +2,9 @@
 
 Describes the parameters for the startup animation.The configuration is valid only for transitions between different abilities within the same application.The configuration is valid only full-screen applications.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-window-interface StartAnimationParams--><!--Device-window-interface StartAnimationParams-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -24,9 +24,8 @@ The type of window animation
 
 **Type:** [AnimationType](arkts-arkui-window-animationtype-e.md)
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-StartAnimationParams-type: AnimationType--><!--Device-StartAnimationParams-type: AnimationType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
-

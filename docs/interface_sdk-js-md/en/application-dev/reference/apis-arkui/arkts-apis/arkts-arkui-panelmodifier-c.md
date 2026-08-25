@@ -6,9 +6,9 @@ Defines Panel Modifier@extends PanelAttribute @implements AttributeModifier&lt;P
 
 **Since:** 12
 
-**Deprecated since:** 20
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-unnamed-export declare class PanelModifier--><!--Device-unnamed-export declare class PanelModifier-End-->
+**Deprecated since:** 20
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,17 +22,16 @@ Defines the normal update attribute function.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Deprecated since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PanelModifier-applyNormalAttribute?(instance: PanelAttribute): void--><!--Device-PanelModifier-applyNormalAttribute?(instance: PanelAttribute): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| instance | [PanelAttribute](../arkts-components/arkts-arkui-panel-attribute.md) | Yes |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| instance | [PanelAttribute](../arkts-components/arkts-arkui-panel-attribute.md) | Yes |

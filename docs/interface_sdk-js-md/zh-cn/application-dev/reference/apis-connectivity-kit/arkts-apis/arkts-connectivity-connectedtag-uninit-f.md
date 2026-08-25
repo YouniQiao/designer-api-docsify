@@ -16,19 +16,18 @@ function uninit(): boolean
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md)
 
 **需要权限：** ohos.permission.NFC_TAG
 
-<!--Device-connectedTag-function uninit(): boolean--><!--Device-connectedTag-function uninit(): boolean-End-->
-
 **系统能力：** SystemCapability.Communication.ConnectedTag
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：卸载操作成功。  <br>false：卸载操作失败。 |
-
+| 类型 |
+| --- |
+| boolean |

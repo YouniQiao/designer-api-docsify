@@ -18,34 +18,34 @@ Resets a USB peripheral.
 > Previous configurations and APIs will be reset. Ensure that the related services have been completed before
 > calling this API.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-usbManager-function resetUsbDevice(pipe: USBDevicePipe): boolean--><!--Device-usbManager-function resetUsbDevice(pipe: USBDevicePipe): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pipe | USBDevicePipe | Yes | USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain its value. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [pipe](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md) | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the device is reset successfully; returns **false** otherwise. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [14400001](../errorcode-usb.md#14400001-usb-device-connection-denied) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
-| [14400008](../errorcode-usb.md#14400008-no-device-disconnected) | No such device(it may have been disconnected). |
-| [14400010](../errorcode-usb.md#14400010-unrecognized-error) | Other USB error. Possible causes:<br>1.Unrecognized discard error code. |
-| [14400013](../errorcode-usb.md#14400013-parameter-validity-check-failed) | The USBDevicePipe validity check failed. Possible causes:<br>1.The input parameters fail the validation check.<br>2.The call chain used to obtain the input parameters is not reasonable. |
-| [14400004](../errorcode-usb.md#14400004-service-exception) |  |
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [14400001](../errorcode-usb.md#14400001-usb-device-connection-denied) |
+| [14400008](../errorcode-usb.md#14400008-no-device-disconnected) |
+| [14400010](../errorcode-usb.md#14400010-unrecognized-error) |
+| [14400013](../errorcode-usb.md#14400013-parameter-validity-check-failed) |
+| [14400004](../errorcode-usb.md#14400004-service-exception) |
 
 **Examples**
 
@@ -67,4 +67,3 @@ function resetUsbDevice() {
   }
 }
 ```
-

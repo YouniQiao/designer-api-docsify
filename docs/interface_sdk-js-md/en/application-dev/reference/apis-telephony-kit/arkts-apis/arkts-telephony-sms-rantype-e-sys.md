@@ -2,9 +2,9 @@
 
 RAN type.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-sms-export enum RanType--><!--Device-sms-export enum RanType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -18,9 +18,9 @@ TYPE_GSM = 1
 
 GSM
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-RanType-TYPE_GSM = 1--><!--Device-RanType-TYPE_GSM = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -34,11 +34,10 @@ TYPE_CDMA = 2
 
 CMDA
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-RanType-TYPE_CDMA = 2--><!--Device-RanType-TYPE_CDMA = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
-

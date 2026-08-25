@@ -4,13 +4,13 @@ Defines a **HeartRateResponse** object.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [HeartRateResponse](arkts-sensorservice-sensor-heartrateresponse-i.md)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
-
-<!--Device-unnamed-export interface HeartRateResponse--><!--Device-unnamed-export interface HeartRateResponse-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -32,6 +32,8 @@ Heart rate.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [heartRate](arkts-sensorservice-sensor-heartrateresponse-i.md#heartrate)
@@ -40,7 +42,4 @@ Heart rate.
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-HeartRateResponse-heartRate: number--><!--Device-HeartRateResponse-heartRate: number-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
-

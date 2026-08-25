@@ -9,7 +9,6 @@
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [ArrayLike](arkts-arkts-arraylike-i.md) | 表示具有length属性且可通过索引访问的对象。 |
-
+| 名称 |
+| --- |
+| [ArrayLike](arkts-arkts-arraylike-i.md) |

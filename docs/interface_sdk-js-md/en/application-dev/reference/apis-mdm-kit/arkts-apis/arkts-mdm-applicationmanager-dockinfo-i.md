@@ -4,7 +4,7 @@ Describes information about an application in the shortcut bar.
 
 **Since:** 24
 
-<!--Device-applicationManager-interface DockInfo--><!--Device-applicationManager-interface DockInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -26,9 +26,9 @@ Ability name of the application.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-DockInfo-abilityName: string--><!--Device-DockInfo-abilityName: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -44,9 +44,9 @@ Bundle name of the application.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-DockInfo-bundleName: string--><!--Device-DockInfo-bundleName: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -62,9 +62,8 @@ Location index of the application in the shortcut bar.
 
 **Since:** 24
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DockInfo-index: number--><!--Device-DockInfo-index: number-End-->
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-

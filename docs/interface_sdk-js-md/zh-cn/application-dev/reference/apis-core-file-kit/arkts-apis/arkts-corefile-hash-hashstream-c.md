@@ -4,9 +4,9 @@ HashStream类是用于创建数据的哈希摘要的实用工具。由 [createHa
 
 **继承/实现关系：** HashStream extends [stream.Transform](../../apis-arkts/arkts-apis/arkts-arkts-stream-transform-c.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-hash-class HashStream--><!--Device-hash-class HashStream-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -24,24 +24,24 @@ digest(): string
 
 计算传递给哈希处理的所有数据的摘要，返回最终的哈希值。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-HashStream-digest(): string--><!--Device-HashStream-digest(): string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回数据的哈希值。该哈希值表示为十六进制数字串，所有字母均大写。 |
+| 类型 |
+| --- |
+| string |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 13900042 |
 
 **示例**
 
@@ -63,24 +63,24 @@ update(data: ArrayBuffer): void
 
 使用给定的数据更新哈希内容，可多次调用。每次调用的数据将被追加到已计算的哈希内容中，最终通过digest方法获取完整的哈希摘要。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-HashStream-update(data: ArrayBuffer): void--><!--Device-HashStream-update(data: ArrayBuffer): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | ArrayBuffer | 是 | 待计算哈希值的数据，以ArrayBuffer形式传入。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | ArrayBuffer | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error |
-| 13900042 | Unknown error |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 13900042 |
 
 **示例**
 
@@ -93,4 +93,3 @@ const hashResult = hs.digest();
 // 88A00F46836CD629D0B79DE98532AFDE3AEAD79A5C53E4848102F433046D0106
 console.info(`Succeeded in calculating file hash. hashResult: ${hashResult}`);
 ```
-

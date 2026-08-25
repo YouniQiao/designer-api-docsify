@@ -1,20 +1,34 @@
-# DLPProperty (System API)
+# DLPProperty
 
 Represents the authorization information.
 
-**Since:** 10
+**Since:** 21
 
-<!--Device-dlpPermission-export interface DLPProperty--><!--Device-dlpPermission-export interface DLPProperty-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
-
-**System API:** This is a system API.
 
 ## Modules to Import
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 ```
+
+## actionUponExpiry
+
+```TypeScript
+actionUponExpiry?: ActionType
+```
+
+Whether the file can be opened after the permission expires (with the editing permission). This parameter is valid only when **expireTime** is not empty. This parameter is left empty by default.
+
+**Type:** ActionType
+
+**Since:** 21
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
+**System capability:** SystemCapability.Security.DataLossPrevention
 
 ## allowedOpenCount
 
@@ -28,7 +42,39 @@ Number of allowed opening times. The default value is **0**. No value range rest
 
 **Since:** 21
 
-<!--Device-DLPProperty-allowedOpenCount?: number--><!--Device-DLPProperty-allowedOpenCount?: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
+
+**System capability:** SystemCapability.Security.DataLossPrevention
+
+## authUserList
+
+```TypeScript
+authUserList?: Array<AuthUser>
+```
+
+List of users who are authorized to access the DLP file. By default, this parameter is left blank.
+
+**Type:** Array&lt;[AuthUser](arkts-dataprotection-dlppermission-authuser-i.md)&gt;
+
+**Since:** 21
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
+**System capability:** SystemCapability.Security.DataLossPrevention
+
+## contactAccount
+
+```TypeScript
+contactAccount: string
+```
+
+Account of the contact. The value contains 1 to 255 bytes. If the value is out of range, error code 401 is thrown.
+
+**Type:** string
+
+**Since:** 21
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -44,9 +90,41 @@ Validity period for file viewing, in seconds. The default value is 0. After the 
 
 **Since:** 23
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DLPProperty-countdown?: number--><!--Device-DLPProperty-countdown?: number-End-->
+**System capability:** SystemCapability.Security.DataLossPrevention
+
+## everyoneAccessList
+
+```TypeScript
+everyoneAccessList?: Array<DLPFileAccess>
+```
+
+Permission granted to everyone. This parameter is left blank by default.
+
+**Type:** Array&lt;[DLPFileAccess](arkts-dataprotection-dlppermission-dlpfileaccess-e.md)&gt;
+
+**Since:** 21
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
+**System capability:** SystemCapability.Security.DataLossPrevention
+
+## expireTime
+
+```TypeScript
+expireTime?: number
+```
+
+Timestamp when the file permission has expired. This parameter is left blank by default. The value must be greater than or equal to 0. If the value is out of range, an error code is thrown. Unit: s.
+
+**Type:** number
+
+**Since:** 21
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -62,9 +140,9 @@ Extended attribute of a DLP file. This parameter is left empty by default.
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
-<!--Device-DLPProperty-extensionFields?: Record<string, Object>--><!--Device-DLPProperty-extensionFields?: Record<string, Object>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -80,7 +158,71 @@ System account ID. This parameter is left empty by default. The value contains a
 
 **Since:** 21
 
-<!--Device-DLPProperty-fileId?: string--><!--Device-DLPProperty-fileId?: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
+
+**System capability:** SystemCapability.Security.DataLossPrevention
+
+## offlineAccess
+
+```TypeScript
+offlineAccess: boolean
+```
+
+Whether the file can be accessed offline. **true**: yes; **false**: no.
+
+**Type:** boolean
+
+**Since:** 21
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
+**System capability:** SystemCapability.Security.DataLossPrevention
+
+## ownerAccount
+
+```TypeScript
+ownerAccount: string
+```
+
+Account of the owner who can set the permission. The value contains 1 to 255 bytes. If the value is out of range, error code 401 is thrown.
+
+**Type:** string
+
+**Since:** 21
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
+**System capability:** SystemCapability.Security.DataLossPrevention
+
+## ownerAccountID
+
+```TypeScript
+ownerAccountID: string
+```
+
+Account ID of the owner. The value contains a maximum of 255 bytes. If the value is out of range, error code 401 is thrown.
+
+**Type:** string
+
+**Since:** 21
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
+**System capability:** SystemCapability.Security.DataLossPrevention
+
+## ownerAccountType
+
+```TypeScript
+ownerAccountType: AccountType
+```
+
+Account type of the owner.
+
+**Type:** [AccountType](arkts-dataprotection-dlppermission-accounttype-e.md)
+
+**Since:** 21
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -96,7 +238,6 @@ Whether watermarks are required. **true**: yes; **false**: no. This parameter is
 
 **Since:** 23
 
-<!--Device-DLPProperty-waterMarkConfig?: boolean--><!--Device-DLPProperty-waterMarkConfig?: boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
-

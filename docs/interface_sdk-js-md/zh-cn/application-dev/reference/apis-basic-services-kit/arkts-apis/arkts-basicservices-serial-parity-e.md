@@ -4,7 +4,7 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-serial-enum Parity--><!--Device-serial-enum Parity-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.BusManager.Serial
 
@@ -18,9 +18,9 @@ NONE = 'none'
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Parity-NONE = 'none'--><!--Device-Parity-NONE = 'none'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BusManager.Serial
 
@@ -34,9 +34,9 @@ EVEN = 'even'
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Parity-EVEN = 'even'--><!--Device-Parity-EVEN = 'even'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BusManager.Serial
 
@@ -50,9 +50,9 @@ ODD = 'odd'
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Parity-ODD = 'odd'--><!--Device-Parity-ODD = 'odd'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BusManager.Serial
 
@@ -66,9 +66,9 @@ MARK = 'mark'
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-Parity-MARK = 'mark'--><!--Device-Parity-MARK = 'mark'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BusManager.Serial
 
@@ -82,9 +82,8 @@ SPACE = 'space'
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Parity-SPACE = 'space'--><!--Device-Parity-SPACE = 'space'-End-->
-
 **系统能力：** SystemCapability.BusManager.Serial
-

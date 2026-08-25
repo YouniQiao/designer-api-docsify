@@ -2,9 +2,9 @@
 
 创建富文本显示的数字格式化对象时的可选配置项。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-i18n-export interface StyledNumberFormatOptions--><!--Device-i18n-export interface StyledNumberFormatOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -24,11 +24,11 @@ decimal?: TextStyle
 
 **类型：** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
 
-**起始版本：** 23
+**起始版本：** 18
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-StyledNumberFormatOptions-decimal?: TextStyle--><!--Device-StyledNumberFormatOptions-decimal?: TextStyle-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -42,11 +42,11 @@ fraction?: TextStyle
 
 **类型：** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
 
-**起始版本：** 23
+**起始版本：** 18
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-StyledNumberFormatOptions-fraction?: TextStyle--><!--Device-StyledNumberFormatOptions-fraction?: TextStyle-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -60,11 +60,11 @@ integer?: TextStyle
 
 **类型：** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
 
-**起始版本：** 23
+**起始版本：** 18
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-StyledNumberFormatOptions-integer?: TextStyle--><!--Device-StyledNumberFormatOptions-integer?: TextStyle-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -78,11 +78,10 @@ unit?: TextStyle
 
 **类型：** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
 
-**起始版本：** 23
+**起始版本：** 18
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
-<!--Device-StyledNumberFormatOptions-unit?: TextStyle--><!--Device-StyledNumberFormatOptions-unit?: TextStyle-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
-

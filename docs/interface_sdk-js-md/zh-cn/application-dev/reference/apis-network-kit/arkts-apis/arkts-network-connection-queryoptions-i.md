@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-connection-export interface QueryOptions--><!--Device-connection-export interface QueryOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -26,7 +26,6 @@ family?: FamilyType
 
 **起始版本：** 23
 
-<!--Device-QueryOptions-family?: FamilyType--><!--Device-QueryOptions-family?: FamilyType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
-

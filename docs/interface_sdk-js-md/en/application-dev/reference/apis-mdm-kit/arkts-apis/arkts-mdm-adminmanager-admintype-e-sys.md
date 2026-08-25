@@ -4,7 +4,7 @@ Enumerates the types of device administrator applications.
 
 **Since:** 15
 
-<!--Device-adminManager-export enum AdminType--><!--Device-adminManager-export enum AdminType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -18,7 +18,7 @@ After a common device administrator application is enabled, it can be uninstalle
 
 **Since:** 9
 
-<!--Device-AdminType-ADMIN_TYPE_NORMAL = 0x00--><!--Device-AdminType-ADMIN_TYPE_NORMAL = 0x00-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -34,9 +34,8 @@ After a super device administrator application is enabled, it cannot be uninstal
 
 **Since:** 9
 
-<!--Device-AdminType-ADMIN_TYPE_SUPER = 0x01--><!--Device-AdminType-ADMIN_TYPE_SUPER = 0x01-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
-

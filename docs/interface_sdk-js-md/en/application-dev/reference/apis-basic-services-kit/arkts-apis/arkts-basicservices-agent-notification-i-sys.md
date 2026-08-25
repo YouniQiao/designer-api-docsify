@@ -2,9 +2,9 @@
 
 Describes the custom information of the notification bar.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-agent-interface Notification--><!--Device-agent-interface Notification-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -24,11 +24,10 @@ Disables the notification. If the value is false, a notification will be display
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Notification-disable?: boolean--><!--Device-Notification-disable?: boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **System API:** This is a system API.
-

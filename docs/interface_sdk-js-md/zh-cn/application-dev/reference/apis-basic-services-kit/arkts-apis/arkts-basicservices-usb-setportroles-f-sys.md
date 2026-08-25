@@ -16,11 +16,11 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 9
 
 **替代接口：** [setPortRoles](arkts-basicservices-usbmanager-setportroles-f-sys.md)
-
-<!--Device-usb-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<boolean>--><!--Device-usb-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -28,17 +28,17 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| portId | number | 是 | 端口号。 |
-| powerRole | PowerRoleType | 是 | 充电的角色。 |
-| dataRole | DataRoleType | 是 | 数据传输的角色。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | 是 |
+| powerRole | [PowerRoleType](arkts-basicservices-usb-powerroletype-e-sys.md) | 是 |
+| dataRole | [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回设置成功与否的结果。true表示设置成功，false表示设置失败。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **示例**
 
@@ -50,4 +50,3 @@ usb.setPortRoles(portId, usb.PowerRoleType.SOURCE, usb.DataRoleType.HOST).then((
     console.error('usb setPortRoles failed: ' + err.code + ' message: ' + err.message);
 });
 ```
-

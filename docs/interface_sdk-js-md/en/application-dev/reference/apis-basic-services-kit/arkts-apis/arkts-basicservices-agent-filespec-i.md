@@ -2,9 +2,9 @@
 
 Provides the file information of a table item.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-agent-interface FileSpec--><!--Device-agent-interface FileSpec-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -24,25 +24,27 @@ Content type of the file. The default value is the file name extension. This opt
 
 **Type:** string
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-FileSpec-contentType?: string--><!--Device-FileSpec-contentType?: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## extras
 
 ```TypeScript
-extras?: Record<string, string>
+extras?: object
 ```
 
-The extras for the file information.
+Additional information. This parameter is not included in HTTP requests. The default value is empty.
 
-**Type:** Record&lt;string, string&gt;
+**Type:** object
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-FileSpec-extras?: Record<string, string>--><!--Device-FileSpec-extras?: Record<string, string>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -56,11 +58,11 @@ File name. The default value is obtained from the file path.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FileSpec-filename?: string--><!--Device-FileSpec-filename?: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -76,13 +78,13 @@ MIME type of the file, which is obtained from the file name. The default value i
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 18
 
 **Substitutes:** [contentType](#contenttype)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-FileSpec-mimeType?: string--><!--Device-FileSpec-mimeType?: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -106,11 +108,10 @@ Example: **file://media/Photo/path/to/file.img**. Only foreground tasks are supp
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-FileSpec-path: string--><!--Device-FileSpec-path: string-End-->
-
 **System capability:** SystemCapability.Request.FileTransferAgent
-

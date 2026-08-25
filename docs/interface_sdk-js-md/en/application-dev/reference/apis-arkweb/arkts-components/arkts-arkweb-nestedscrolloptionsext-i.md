@@ -4,7 +4,7 @@ Sets the nested scrolling rules of the **Web** component, supporting scrolling o
 
 **Since:** 14
 
-<!--Device-unnamed-declare interface NestedScrollOptionsExt--><!--Device-unnamed-declare interface NestedScrollOptionsExt-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -25,7 +25,7 @@ Nested scrolling options when the component scrolls down.Default value: **Nested
 
 **Since:** 14
 
-<!--Device-NestedScrollOptionsExt-scrollDown?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollDown?: NestedScrollMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -41,7 +41,7 @@ Nested scrolling options when the component scrolls left.Default value: **Nested
 
 **Since:** 14
 
-<!--Device-NestedScrollOptionsExt-scrollLeft?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollLeft?: NestedScrollMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -57,7 +57,7 @@ Nested scrolling options when the component scrolls right.Default value: **Neste
 
 **Since:** 14
 
-<!--Device-NestedScrollOptionsExt-scrollRight?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollRight?: NestedScrollMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -73,7 +73,6 @@ Nested scrolling options when the component scrolls up.Default value: **NestedSc
 
 **Since:** 14
 
-<!--Device-NestedScrollOptionsExt-scrollUp?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollUp?: NestedScrollMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

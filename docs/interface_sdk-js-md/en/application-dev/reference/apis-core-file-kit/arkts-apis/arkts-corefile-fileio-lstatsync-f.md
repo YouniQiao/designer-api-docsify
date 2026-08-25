@@ -15,25 +15,25 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [lstatSync](arkts-corefile-file-fs-lstatsync-f.md)
-
-<!--Device-unnamed-declare function lstatSync(path: string): Stat--><!--Device-unnamed-declare function lstatSync(path: string): Stat-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the target file. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| path | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Stat](arkts-corefile-fileio-stat-depr-i.md) | File information obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Stat](arkts-corefile-fileio-stat-depr-i.md) |
 
 **Examples**
 
@@ -41,4 +41,3 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 let filePath = pathDir + "/test.txt";
 let stat = fileio.lstatSync(filePath);
 ```
-

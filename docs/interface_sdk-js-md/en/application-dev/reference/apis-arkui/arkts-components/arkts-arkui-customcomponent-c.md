@@ -6,7 +6,7 @@ Custom Component@extends CommonAttribute [since 7 - 17] @extends BaseCustomCompo
 
 **Since:** 7
 
-<!--Device-unnamed-declare class CustomComponent--><!--Device-unnamed-declare class CustomComponent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,19 +25,19 @@ aboutToReuse Method
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-CustomComponent-aboutToReuse?(params: Record<string, Object | undefined | null>): void--><!--Device-CustomComponent-aboutToReuse?(params: Record<string, Object | undefined | null>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| params | Record&lt;string, Object \| undefined \| null&gt; | Yes | Custom component init params.<br>**Since:** 20 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| params | Record & lt;string, Object \ | undefined \| null & gt; | Yes |
 
 ## onLayout
 
@@ -49,22 +49,22 @@ Invoked when the custom component lays out its child components. Through this ca
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** onPlaceChildren
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-CustomComponent-onLayout?(children: Array<LayoutChild>, constraint: ConstraintSizeOptions): void--><!--Device-CustomComponent-onLayout?(children: Array<LayoutChild>, constraint: ConstraintSizeOptions): void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| children | Array&lt;[LayoutChild](arkts-arkui-layoutchild-i.md)&gt; | Yes | Child component layout information. |
-| constraint | ConstraintSizeOptions | Yes | Size constraint of the parent component. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| children | Array&lt;[LayoutChild](arkts-arkui-layoutchild-i.md)&gt; | Yes |
+| constraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes |
 
 ## onMeasure
 
@@ -76,20 +76,19 @@ Invoked when the custom component needs to determine its size. Through this call
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 10
 
 **Substitutes:** [onMeasureSize](arkts-arkui-basecustomcomponent-c.md#onmeasuresize)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-CustomComponent-onMeasure?(children: Array<LayoutChild>, constraint: ConstraintSizeOptions): void--><!--Device-CustomComponent-onMeasure?(children: Array<LayoutChild>, constraint: ConstraintSizeOptions): void-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| children | Array&lt;[LayoutChild](arkts-arkui-layoutchild-i.md)&gt; | Yes | Child component layout information. |
-| constraint | ConstraintSizeOptions | Yes | Size constraint of the parent component. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| children | Array&lt;[LayoutChild](arkts-arkui-layoutchild-i.md)&gt; | Yes |
+| constraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes |

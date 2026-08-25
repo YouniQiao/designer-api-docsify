@@ -5,9 +5,9 @@ The module provides APIs for you to install, uninstall, and recover bundles on d
 > **NOTE：**&gt;
 > The APIs provided by this module are system APIs.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-declare namespace installer--><!--Device-unnamed-declare namespace installer-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -24,27 +24,26 @@ import { installer } from '@kit.AbilityKit';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md) | Obtains a BundleInstaller object. This API uses an asynchronous callback to return the result. |
-| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md) | Obtains a BundleInstaller object. This API uses a promise to return the result. |
-| [getBundleInstallerSync](arkts-ability-installer-getbundleinstallersync-f-sys.md) | Obtains a BundleInstaller object. This API is a synchronous API. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md) |
+| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md) |
+| [getBundleInstallerSync](arkts-ability-installer-getbundleinstallersync-f-sys.md) |
 <!--DelEnd-->
 
 <!--Del-->
 ### Interfaces(System API)
 
-| Name | Description |
-| --- | --- |
-| [BundleInstaller](arkts-ability-installer-bundleinstaller-i-sys.md) | Bundle installer interface, include install uninstall recover. |
-| [CreateAppCloneParam](arkts-ability-installer-createappcloneparam-i-sys.md) | Describes the parameters used for creating an application clone. |
-| [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md) | Describes the parameters used for destroying an application clone. |
-| [HashParam](arkts-ability-installer-hashparam-i-sys.md) | Defines the hash parameters for bundle installation and uninstall. |
-| [InstallParam](arkts-ability-installer-installparam-i-sys.md) | Defines the parameters that need to be specified for bundle installation, uninstall, or recovering. |
-| [Parameters](arkts-ability-installer-parameters-i-sys.md) | Describes the extended parameter information. |
-| [PGOParam](arkts-ability-installer-pgoparam-i-sys.md) | Defines the parameters of the PGO configuration file. |
-| [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) | Defines the parameters for installing or uninstalling a plugin. |
-| [UninstallParam](arkts-ability-installer-uninstallparam-i-sys.md) | Defines the parameters required for the uninstall of a shared bundle. |
-| [VerifyCodeParam](arkts-ability-installer-verifycodeparam-i-sys.md) | Defines the information about the code signature file. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BundleInstaller](arkts-ability-installer-bundleinstaller-i-sys.md) |
+| [CreateAppCloneParam](arkts-ability-installer-createappcloneparam-i-sys.md) |
+| [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md) |
+| [HashParam](arkts-ability-installer-hashparam-i-sys.md) |
+| [InstallParam](arkts-ability-installer-installparam-i-sys.md) |
+| [Parameters](arkts-ability-installer-parameters-i-sys.md) |
+| [PGOParam](arkts-ability-installer-pgoparam-i-sys.md) |
+| [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) |
+| [UninstallParam](arkts-ability-installer-uninstallparam-i-sys.md) |
+| [VerifyCodeParam](arkts-ability-installer-verifycodeparam-i-sys.md) |
 <!--DelEnd-->
-

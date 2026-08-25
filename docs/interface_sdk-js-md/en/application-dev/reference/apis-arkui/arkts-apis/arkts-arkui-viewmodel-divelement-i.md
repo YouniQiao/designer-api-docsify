@@ -6,7 +6,7 @@ The &lt;div&gt; component provides a div container.@extends Element @interface D
 
 **Since:** 6
 
-<!--Device-unnamed-export interface DivElement--><!--Device-unnamed-export interface DivElement-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,17 +20,17 @@ Returns the offset of the current scrolling. The return value type is Object.
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-DivElement-getScrollOffset(): ScrollOffset--><!--Device-DivElement-getScrollOffset(): ScrollOffset-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [ScrollOffset](arkts-arkui-viewmodel-scrolloffset-i.md) |  |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ScrollOffset](arkts-arkui-viewmodel-scrolloffset-i.md) |
 
 ## scrollBy
 
@@ -42,15 +42,14 @@ Scrolls the div for a certain distance.
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-DivElement-scrollBy(data: ScrollParam): void--><!--Device-DivElement-scrollBy(data: ScrollParam): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | [ScrollParam](arkts-arkui-viewmodel-scrollparam-i.md) | Yes |  |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | [ScrollParam](arkts-arkui-viewmodel-scrollparam-i.md) | Yes |

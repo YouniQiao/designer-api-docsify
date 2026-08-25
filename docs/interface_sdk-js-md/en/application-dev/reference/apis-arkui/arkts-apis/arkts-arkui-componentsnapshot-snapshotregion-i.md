@@ -1,12 +1,10 @@
 # SnapshotRegion
 
-Defines the target region information for snapshot taking.
+Defines the rectangular region for capturing the component snapshot.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-componentSnapshot-export interface SnapshotRegion--><!--Device-componentSnapshot-export interface SnapshotRegion-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,80 +17,79 @@ import { componentSnapshot } from '@kit.ArkUI';
 ## bottom
 
 ```TypeScript
-bottom: double
+bottom: number
 ```
 
-Bottom side position of Rectangle, in PX.
+Y-coordinate of the lower right corner of the rectangular region.Unit: px.Value range: [0, Component height].
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SnapshotRegion-bottom: double--><!--Device-SnapshotRegion-bottom: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## left
 
 ```TypeScript
-left: double
+left: number
 ```
 
-Left side position of rectangle, in PX.
+X-coordinate of the upper left corner of the rectangular region.Unit: px.Value range: [0, Component width].
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SnapshotRegion-left: double--><!--Device-SnapshotRegion-left: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## right
 
 ```TypeScript
-right: double
+right: number
 ```
 
-Right side position of Rectangle, in PX.
+X-coordinate of the lower right corner of the rectangular region.Unit: px.Value range: [0, Component width].
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SnapshotRegion-right: double--><!--Device-SnapshotRegion-right: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## top
 
 ```TypeScript
-top: double
+top: number
 ```
 
-Top side position of Rectangle, in PX.
+Y-coordinate of the upper left corner of the rectangular region.Unit: px.Value range: [0, Component height].
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SnapshotRegion-top: double--><!--Device-SnapshotRegion-top: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

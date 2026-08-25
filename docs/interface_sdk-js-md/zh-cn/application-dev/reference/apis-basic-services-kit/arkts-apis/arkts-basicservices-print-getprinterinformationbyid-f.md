@@ -14,32 +14,32 @@ function getPrinterInformationById(printerId: string): Promise<PrinterInformatio
 
 根据打印机id获取打印机信息，使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 14
+
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PRINT
-
-<!--Device-print-function getPrinterInformationById(printerId: string): Promise<PrinterInformation>--><!--Device-print-function getPrinterInformationById(printerId: string): Promise<PrinterInformation>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| printerId | string | 是 | 表示待获取信息的打印机id。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| printerId | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[PrinterInformation](arkts-basicservices-print-printerinformation-i.md)&gt; | Promise对象，返回打印机信息。 |
+| 类型 |
+| --- |
+| Promise&lt;[PrinterInformation](arkts-basicservices-print-printerinformation-i.md)&gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 **示例**
 
@@ -54,4 +54,3 @@ print.getPrinterInformationById(printerId).then((printerInformation : print.Prin
     console.error('getPrinterInformationById error : ' + JSON.stringify(error));
 })
 ```
-

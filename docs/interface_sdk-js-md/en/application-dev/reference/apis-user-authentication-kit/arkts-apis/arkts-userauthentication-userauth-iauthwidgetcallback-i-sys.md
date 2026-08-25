@@ -2,9 +2,9 @@
 
 Defines the callback of the authentication widget. The authentication widget uses this callback to obtain commands sent by the user authentication framework and perform corresponding authentication operations based on the command content.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-userAuth-interface IAuthWidgetCallback--><!--Device-userAuth-interface IAuthWidgetCallback-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -26,7 +26,7 @@ Triggered to receive commands from the user authentication framework. The user a
 
 **Since:** 10
 
-<!--Device-IAuthWidgetCallback-sendCommand(cmdData: string): void--><!--Device-IAuthWidgetCallback-sendCommand(cmdData: string): void-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -34,9 +34,9 @@ Triggered to receive commands from the user authentication framework. The user a
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| cmdData | string | Yes | Command data. It is a JSON string, containing the command content sent by the user authentication framework to the authentication widget. The JSON structure contains fields based on the command type. Common fields include **commandType** (string, command type), **authType** (array, authentication type list), and **result** (number, authentication result code). The widget needs to parse the data and perform the corresponding operations based on the command type. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| cmdData | string | Yes |
 
 **Examples**
 
@@ -68,13 +68,14 @@ sendCommand: AuthWidgetCallbackSendCommandFunc
 
 Called to return the command sent from the user authentication framework to the user authentication widget.
 
-**Type:** [AuthWidgetCallbackSendCommandFunc](arkts-userauthentication-userauth-authwidgetcallbacksendcommandfunc-t-sys.md)
-
 **Since:** 23
 
-<!--Device-IAuthWidgetCallback-sendCommand: AuthWidgetCallbackSendCommandFunc--><!--Device-IAuthWidgetCallback-sendCommand: AuthWidgetCallbackSendCommandFunc-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **System API:** This is a system API.
 
+**Examples**
+
+See [sendCommand](#sendcommand)

@@ -4,11 +4,11 @@ Defines the content of data change notifications, including inserted data, updat
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** ChangeNotification
-
-<!--Device-distributedData-interface ChangeNotification--><!--Device-distributedData-interface ChangeNotification-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -29,11 +29,11 @@ Data deleted.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** deleteEntries
-
-<!--Device-ChangeNotification-deleteEntries: Entry[]--><!--Device-ChangeNotification-deleteEntries: Entry[]-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -49,11 +49,11 @@ UUID of the device.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** deviceId
-
-<!--Device-ChangeNotification-deviceId: string--><!--Device-ChangeNotification-deviceId: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -69,11 +69,11 @@ Data inserted.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** insertEntries
-
-<!--Device-ChangeNotification-insertEntries: Entry[]--><!--Device-ChangeNotification-insertEntries: Entry[]-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -89,11 +89,10 @@ Data updated.
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** updateEntries
 
-<!--Device-ChangeNotification-updateEntries: Entry[]--><!--Device-ChangeNotification-updateEntries: Entry[]-End-->
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
-

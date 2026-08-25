@@ -16,29 +16,29 @@ function createMediaSourceWithDirectory(path: string): Promise< MediaSource | un
 
 **起始版本：** 26.0.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-unnamed-function createMediaSourceWithDirectory(path: string): Promise< MediaSource | undefined>--><!--Device-unnamed-function createMediaSourceWithDirectory(path: string): Promise< MediaSource | undefined>-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 用于创建媒体源的目录路径信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| path | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[MediaSource](arkts-media-multimedia-media-mediasource-i.md) \| undefined&gt; | Promise对象。成功时返回MediaSource实例，失败时返回undefined。 |
+| 类型 |
+| --- |
+| Promise&lt;[MediaSource](arkts-media-multimedia-media-mediasource-i.md) \| undefined & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [5411007](../errorcode-media.md#5411007-无可用资源) | The directory specified by the path parameter does not exist or inaccessible. |
+| 错误码ID |
+| --- |
+| [5411007](../errorcode-media.md#5411007-无可用资源) |
 
 **示例**
 
@@ -57,4 +57,3 @@ async function test() {
   });
 }
 ```
-

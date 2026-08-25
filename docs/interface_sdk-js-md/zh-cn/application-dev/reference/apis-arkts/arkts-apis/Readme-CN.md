@@ -53,9 +53,9 @@
   - [isIsolatedProcess](arkts-arkts-process-isisolatedprocess-f.md)
   - [kill](arkts-arkts-process-kill-f.md)
   <!--Del-->
-  - [off_string(系统接口)](arkts-arkts-process-offstring-f-sys.md)<!--DelEnd-->
+  - [off(系统接口)](arkts-arkts-process-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on_string(系统接口)](arkts-arkts-process-onstring-f-sys.md)<!--DelEnd-->
+  - [on(系统接口)](arkts-arkts-process-on-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [runCmd(系统接口)](arkts-arkts-process-runcmd-f-sys.md)<!--DelEnd-->
   - [uptime](arkts-arkts-process-uptime-f.md)
@@ -138,6 +138,7 @@
   - [MultithreadingDetectionOptions](arkts-arkts-util-multithreadingdetectionoptions-i.md)
   - [ScopeComparable](arkts-arkts-util-scopecomparable-i.md)
   - [TextDecoderOptions](arkts-arkts-util-textdecoderoptions-i.md)
+  - [PromisifiedFunc](arkts-arkts-util-promisifiedfunc-t.md)
   - [ScopeType](arkts-arkts-util-scopetype-t.md)
   - [Type](arkts-arkts-util-type-e.md)
 - [@ohos.util.ArrayList](arkts-util-arraylist.md)
@@ -265,11 +266,10 @@
     - [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)
   - [BuiltinArray](arkts-arkts-builtinarray-t.md)
   - [BuiltinMap](arkts-arkts-builtinmap-t.md)
-- [@arkts.collections](arkts-collections.md)
-  - [BitVector](arkts-arkts-collections-bitvector-c.md)
 - [@arkts.lang](arkts-lang.md)
   - [lang](arkts-arkts-lang-n.md)
     - [ISendable](arkts-arkts-lang-isendable-i.md)
+  - [Retention](arkts-arkts-lang-retention-i.md)
   - [RetentionPolicy](arkts-arkts-lang-retentionpolicy-e.md)
 - [@arkts.math.Decimal](arkts-math-decimal.md)
   - [Decimal](arkts-arkts-math-decimal-decimal-c.md)
@@ -535,8 +535,12 @@
 - [Json](arkts-json.md)
   - [JSON](arkts-arkts-json-json-c.md)
   - [JsonParseError](arkts-arkts-json-jsonparseerror-c.md)
+  - [JSONParseIgnore](arkts-arkts-json-jsonparseignore-i.md)
+  - [JSONRename](arkts-arkts-json-jsonrename-i.md)
   - [JsonReplacer](arkts-arkts-json-jsonreplacer-i.md)
   - [JsonSerializable](arkts-arkts-json-jsonserializable-i.md)
+  - [JSONStringifyGetter](arkts-arkts-json-jsonstringifygetter-i.md)
+  - [JSONStringifyIgnore](arkts-arkts-json-jsonstringifyignore-i.md)
   - [JsonRecordType](arkts-arkts-jsonrecordtype-t.md)
 - [Jsonx](arkts-jsonx.md)
   - [JsonElement](arkts-arkts-jsonx-jsonelement-c.md)
@@ -598,6 +602,8 @@
   - [RegExpExecArray](arkts-arkts-regexp-regexpexecarray-c.md)
   - [RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md)
   - [RegExpResultArray](arkts-arkts-regexp-regexpresultarray-c.md)
+- [retention](arkts-retention.md)
+  - [Retention](arkts-arkts-retention-retention-i.md)
 - [Set](arkts-set.md)
   - [Set](arkts-arkts-set-c.md)
   - [ReadonlySet](arkts-arkts-set-readonlyset-i.md)

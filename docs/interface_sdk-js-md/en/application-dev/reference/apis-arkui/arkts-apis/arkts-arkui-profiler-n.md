@@ -4,7 +4,7 @@ Profiler tools for inspectors.@namespace Profiler
 
 **Since:** 8
 
-<!--Device-unnamed-declare namespace Profiler--><!--Device-unnamed-declare namespace Profiler-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,9 +20,8 @@ Profiler tools for inspectors.@namespace Profiler
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [registerVsyncCallback](arkts-arkui-profiler-registervsynccallback-f-sys.md) | Registers vsync callback for profiler. |
-| [unregisterVsyncCallback](arkts-arkui-profiler-unregistervsynccallback-f-sys.md) | Unregisters vsync callback. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [registerVsyncCallback](arkts-arkui-profiler-registervsynccallback-f-sys.md) |
+| [unregisterVsyncCallback](arkts-arkui-profiler-unregistervsynccallback-f-sys.md) |
 <!--DelEnd-->
-

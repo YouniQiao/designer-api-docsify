@@ -4,7 +4,7 @@ Enumerates the types of additional operation to perform.
 
 **Since:** 12
 
-<!--Device-asset-enum OperationType--><!--Device-asset-enum OperationType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -18,7 +18,7 @@ Sync.
 
 **Since:** 12
 
-<!--Device-OperationType-NEED_SYNC = 0--><!--Device-OperationType-NEED_SYNC = 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -32,7 +32,6 @@ Logout.
 
 **Since:** 12
 
-<!--Device-OperationType-NEED_LOGOUT = 1--><!--Device-OperationType-NEED_LOGOUT = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.Asset
-

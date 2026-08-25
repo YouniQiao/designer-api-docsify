@@ -4,13 +4,10 @@
 type LocaleCollationCaseFirst = "upper" | "lower" | "false"
 ```
 
-**Since:** -1
+**ArkTS mode:** 
 
-<!--Device-Intl-type LocaleCollationCaseFirst = "upper" | "lower" | "false"--><!--Device-Intl-type LocaleCollationCaseFirst = "upper" | "lower" | "false"-End-->
-
-| Type | Description |
-| --- | --- |
-| "upper" |  |
-| "lower" |  |
-| "false" |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| "upper" |
+| "lower" |
+| "false" |

@@ -1,10 +1,10 @@
 # FontInfo
 
-**起始版本：** 23
+字体的详细信息。
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**起始版本：** 10
 
-<!--Device-font-interface FontInfo--><!--Device-font-interface FontInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,13 +24,13 @@ family: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-FontInfo-family: string--><!--Device-FontInfo-family: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,13 +44,13 @@ fullName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-FontInfo-fullName: string--><!--Device-FontInfo-fullName: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,13 +64,13 @@ italic: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-FontInfo-italic: boolean--><!--Device-FontInfo-italic: boolean-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,13 +84,13 @@ monoSpace: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-FontInfo-monoSpace: boolean--><!--Device-FontInfo-monoSpace: boolean-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,13 +104,13 @@ path: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-FontInfo-path: string--><!--Device-FontInfo-path: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -124,13 +124,13 @@ postScriptName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-FontInfo-postScriptName: string--><!--Device-FontInfo-postScriptName: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -144,13 +144,13 @@ subfamily: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-FontInfo-subfamily: string--><!--Device-FontInfo-subfamily: string-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -164,53 +164,85 @@ symbolic: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-FontInfo-symbolic: boolean--><!--Device-FontInfo-symbolic: boolean-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## weight
 
 ```TypeScript
-weight: int
+weight: number
 ```
 
-系统字体的字重。取值范围：[100,900]，取值间隔为100，分别对应 FontWeight枚举中的值。默认值：100
+系统字体的字重。取值范围：[100,900]，取值间隔为100，分别对应[FontWeight](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontweight-e.md)枚举中的值。默认值：100
 
-**类型：** int
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-FontInfo-weight: int--><!--Device-FontInfo-weight: int-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## width
 
 ```TypeScript
-width: int
+width: number
 ```
 
-系统字体的宽度。取值范围：[1,9]，取值间隔为1，分别对应FontWidth枚 举中的值。
+系统字体的宽度。取值范围：[1,9]，取值间隔为1，分别对应[FontWidth](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontwidth-e.md)枚举中的值。
 
-**类型：** int
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** ArkTS-Sta起始版本为23。
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-FontInfo-width: int--><!--Device-FontInfo-width: int-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**示例**
+
+直接使用font可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，推荐通过使用[UIContext](./arkts-apis-uicontext-uicontext.md)中的[getFont](./arkts-apis-uicontext-uicontext.md#getfont)方法获取当前UI上下文关联的[Font](arkts-apis-uicontext-font.md)对象。
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct FontExample {
+  private fontInfo = this.getUIContext().getFont().getFontByName('');
+
+  build() {
+    Column() {
+      Button('getFontByName')
+        .onClick(() => {
+          this.fontInfo =
+            this.getUIContext().getFont().getFontByName('HarmonyOS Sans Italic');
+          console.info('getFontByName(): path = ' + this.fontInfo.path);
+          console.info('getFontByName(): postScriptName = ' + this.fontInfo.postScriptName);
+          console.info('getFontByName(): fullName = ' + this.fontInfo.fullName);
+          console.info('getFontByName(): family = ' + this.fontInfo.family);
+          console.info('getFontByName(): subfamily = ' + this.fontInfo.subfamily);
+          console.info('getFontByName(): weight = ' + this.fontInfo.weight);
+          console.info('getFontByName(): width = ' + this.fontInfo.width);
+          console.info('getFontByName(): italic = ' + this.fontInfo.italic);
+          console.info('getFontByName(): monoSpace = ' + this.fontInfo.monoSpace);
+          console.info('getFontByName(): symbolic = ' + this.fontInfo.symbolic);
+        })
+    }.width('100%')
+  }
+}
+```

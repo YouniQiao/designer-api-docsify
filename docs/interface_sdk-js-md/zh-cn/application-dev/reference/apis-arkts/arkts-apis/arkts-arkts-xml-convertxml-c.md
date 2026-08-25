@@ -4,7 +4,7 @@ ConvertXML类提供将XML文本转换为JavaScript对象的能力。 推荐使�
 
 **起始版本：** 8
 
-<!--Device-xml-class ConvertXML--><!--Device-xml-class ConvertXML-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -29,26 +29,26 @@ convert(xml: string, options?: ConvertOptions): Object
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [fastConvertToJSObject](#fastconverttojsobject)
-
-<!--Device-ConvertXML-convert(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-convert(xml: string, options?: ConvertOptions): Object-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| xml | string | 是 | XML文本，需符合XML语法规范，若包含"&"字符，请使用实体引用"&amp;"替换。 |
-| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | 否 | 转换选项，用于自定义XML转换行为。不传入时使用ConvertOptions各属性的默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [xml](arkts-convertxml.md) | string | 是 |
+| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Object | 转换后的JavaScript对象，包含解析后的XML结构信息，具体属性键名由ConvertOptions定义。 |
+| 类型 |
+| --- |
+| Object |
 
 **示例**
 
@@ -99,34 +99,34 @@ convertToJSObject(xml: string, options?: ConvertOptions): Object
 
 **起始版本：** 9
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
+
 **废弃版本：** 14
 
 **替代接口：** [fastConvertToJSObject](#fastconverttojsobject)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ConvertXML-convertToJSObject(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-convertToJSObject(xml: string, options?: ConvertOptions): Object-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| xml | string | 是 | XML文本，需符合XML语法规范，若包含"&"字符，请使用实体引用"&amp;"替换。 |
-| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | 否 | 转换选项，用于自定义XML转换行为。不传入时使用ConvertOptions各属性的默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [xml](arkts-convertxml.md) | string | 是 |
+| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Object | 转换后的JavaScript对象，包含解析后的XML结构信息，具体属性键名由ConvertOptions定义。 |
+| 类型 |
+| --- |
+| Object |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200002](../errorcode-utils.md#10200002-参数解析错误) | Invalid xml string. |
+| 错误码ID |
+| --- |
+| [10200002](../errorcode-utils.md#10200002-参数解析错误) |
 
 **示例**
 
@@ -185,30 +185,30 @@ fastConvertToJSObject(xml: string, options?: ConvertOptions): Object
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
-<!--Device-ConvertXML-fastConvertToJSObject(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-fastConvertToJSObject(xml: string, options?: ConvertOptions): Object-End-->
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| xml | string | 是 | XML文本，需符合XML语法规范，若包含"&"字符，请使用实体引用"&amp;"替换。 单元素文本内容超过10M时，输出异常日志并返回仅包含XML声明的基础Object，建议使用largeConvertToJSObject替代。 |
-| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | 否 | 转换选项，用于自定义XML转换行为。不传入时使用ConvertOptions各属性的默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [xml](arkts-convertxml.md) | string | 是 |
+| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Object | 转换后的JavaScript对象，用于提供解析后的XML结构信息，具体属性键名由ConvertOptions定义，可通过配置键名访问XML各组件的映射数据。 |
+| 类型 |
+| --- |
+| Object |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200002](../errorcode-utils.md#10200002-参数解析错误) | Invalid xml string. |
+| 错误码ID |
+| --- |
+| [10200002](../errorcode-utils.md#10200002-参数解析错误) |
 
 **示例**
 
@@ -264,32 +264,32 @@ largeConvertToJSObject(xml: string, options?: ConvertOptions): Object
 
 **起始版本：** 23
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ConvertXML-largeConvertToJSObject(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-largeConvertToJSObject(xml: string, options?: ConvertOptions): Object-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| xml | string | 是 | XML文本，需符合XML语法规范，若包含"&"字符，请使用实体引用"&amp;"替换。 |
-| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | 否 | 转换选项，用于自定义XML转换行为。不传入时使用ConvertOptions各属性的默认值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [xml](arkts-convertxml.md) | string | 是 |
+| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Object | 转换后的JavaScript对象，包含解析后的XML结构信息，具体属性键名由ConvertOptions定义。 |
+| 类型 |
+| --- |
+| Object |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [10200002](../errorcode-utils.md#10200002-参数解析错误) | Invalid xml string. |
+| 错误码ID |
+| --- |
+| [10200002](../errorcode-utils.md#10200002-参数解析错误) |
 
 **示例**
 
@@ -338,4 +338,3 @@ try {
 // 输出(宽泛型)
 // {"_declaration":{"_attributes":{"version":"1.0","encoding":"utf-8"}},"_elements":[{"_type":"instruction","_name":"custom-pi","_instruction":"processing=\"example\""},{"_type":"element","_name":"catalog","_attributes":{"id":"books"},"_elements":[{"_type":"comment","_comment":" Bestseller Example "},{"_type":"element","_name":"book","_parent":"catalog","_attributes":{"category":"fiction","ref":"B101"},"_elements":[{"_type":"element","_name":"title","_parent":"book","_elements":[{"_type":"text","_text":"Echoes & Whispers"}]},{"_type":"element","_name":"price","_parent":"book","_attributes":{"unit":"USD"},"_elements":[{"_type":"text","_text":"19.99"}]},{"_type":"element","_name":"descr","_parent":"book","_elements":[{"_type":"cdata","_cdata":"<b>suspense</b>novel & Legendary Stories"}]},{"_type":"element","_name":"popular","_parent":"book"}]}]}]}
 ```
-

@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [TextPickerModifier](arkts-arkui-textpickermodifier-c.md) | Defines TextPicker Modifier@implements { TextPickerAttribute, AttributeModifier&lt;TextPickerAttribute&gt; } |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [TextPickerModifier](arkts-arkui-textpickermodifier-c.md) |

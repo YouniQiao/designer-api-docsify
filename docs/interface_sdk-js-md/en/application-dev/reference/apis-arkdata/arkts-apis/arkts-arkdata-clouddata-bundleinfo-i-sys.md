@@ -4,7 +4,7 @@ Bundle information configuration.
 
 **Since:** 26.0.0
 
-<!--Device-cloudData-interface BundleInfo--><!--Device-cloudData-interface BundleInfo-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -28,9 +28,9 @@ Indicates the name of the application.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-BundleInfo-bundleName: string--><!--Device-BundleInfo-bundleName: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -48,11 +48,10 @@ Indicates the store ID.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-BundleInfo-storeId?: string--><!--Device-BundleInfo-storeId?: string-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
-

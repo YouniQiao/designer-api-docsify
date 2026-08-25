@@ -14,17 +14,17 @@ function isDebugState(): boolean
 
 Obtains the debugging state of an application process.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-hidebug-function isDebugState(): boolean--><!--Device-hidebug-function isDebugState(): boolean-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| boolean | Whether the Ark or native layer of the application process is in the debugging state. The value **true** indicates that the layer is in the debugging state, and **false** indicates the opposite. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
 
 **Examples**
 
@@ -33,4 +33,3 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 console.info(`isDebugState = ${hidebug.isDebugState()}`)
 ```
-

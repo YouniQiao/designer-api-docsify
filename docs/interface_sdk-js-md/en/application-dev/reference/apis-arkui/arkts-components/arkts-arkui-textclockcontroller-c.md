@@ -5,11 +5,12 @@ Implements the controller of the **TextClock** component. You can bind the contr
 ## Objects to Import
 
 ```ts
-controller: TextClockController = new TextClockController() ```
+controller: TextClockController = new TextClockController()
+```
 
 **Since:** 8
 
-<!--Device-unnamed-declare class TextClockController--><!--Device-unnamed-declare class TextClockController-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +29,11 @@ A constructor used to create a **TextClockController** instance.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-TextClockController-constructor()--><!--Device-TextClockController-constructor()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,11 +47,11 @@ Starts the **&lt;TextClock\&gt;** component.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-TextClockController-start()--><!--Device-TextClockController-start()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,11 +65,10 @@ Stops the **&lt;TextClock\&gt;** component.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
-<!--Device-TextClockController-stop()--><!--Device-TextClockController-stop()-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

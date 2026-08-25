@@ -16,11 +16,11 @@ function setInterfaceUp(ifaceName: string): Promise<void>
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
+
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-connection-function setInterfaceUp(ifaceName: string): Promise<void>--><!--Device-connection-function setInterfaceUp(ifaceName: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -28,21 +28,20 @@ function setInterfaceUp(ifaceName: string): Promise<void>
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| ifaceName | string | 是 | 网卡名。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [ifaceName](arkts-network-ethernet-ethernetdeviceinfos-i-sys.md) | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |

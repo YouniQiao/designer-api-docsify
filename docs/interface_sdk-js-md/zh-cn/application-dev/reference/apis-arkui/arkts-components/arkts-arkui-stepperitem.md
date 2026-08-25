@@ -23,13 +23,13 @@ StepperItem()
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 22
 
 **替代接口：** SwiperAttribute
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-StepperItemInterface-(): StepperItemAttribute--><!--Device-StepperItemInterface-(): StepperItemAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -37,6 +37,5 @@ StepperItem()
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-
+| 名称 |
+| --- |

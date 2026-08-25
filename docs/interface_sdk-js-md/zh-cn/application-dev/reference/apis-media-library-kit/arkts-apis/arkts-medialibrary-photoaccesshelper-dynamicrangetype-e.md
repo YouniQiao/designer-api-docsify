@@ -2,9 +2,9 @@
 
 枚举，媒体文件的动态范围类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-photoAccessHelper-export enum DynamicRangeType--><!--Device-photoAccessHelper-export enum DynamicRangeType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -16,9 +16,9 @@ SDR = 0
 
 标准动态范围类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-DynamicRangeType-SDR = 0--><!--Device-DynamicRangeType-SDR = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -30,9 +30,8 @@ HDR = 1
 
 高动态范围类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-DynamicRangeType-HDR = 1--><!--Device-DynamicRangeType-HDR = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

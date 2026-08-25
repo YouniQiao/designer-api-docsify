@@ -2,9 +2,9 @@
 
 Enumerates the network sharing states of an NIC.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-sharing-export enum SharingIfaceState--><!--Device-sharing-export enum SharingIfaceState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
@@ -18,9 +18,9 @@ SHARING_NIC_SERVING = 1
 
 Network sharing is in progress.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SharingIfaceState-SHARING_NIC_SERVING = 1--><!--Device-SharingIfaceState-SHARING_NIC_SERVING = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
@@ -34,9 +34,9 @@ SHARING_NIC_CAN_SERVER = 2
 
 Network sharing is supported.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SharingIfaceState-SHARING_NIC_CAN_SERVER = 2--><!--Device-SharingIfaceState-SHARING_NIC_CAN_SERVER = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
@@ -50,11 +50,10 @@ SHARING_NIC_ERROR = 3
 
 An error occurred during network sharing.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-SharingIfaceState-SHARING_NIC_ERROR = 3--><!--Device-SharingIfaceState-SHARING_NIC_ERROR = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
-

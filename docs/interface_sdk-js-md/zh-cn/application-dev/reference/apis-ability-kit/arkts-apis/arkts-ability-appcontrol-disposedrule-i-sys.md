@@ -2,9 +2,9 @@
 
 标识拦截规则。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-appControl-export interface DisposedRule--><!--Device-appControl-export interface DisposedRule-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -26,9 +26,9 @@ componentType: ComponentType
 
 **类型：** ComponentType
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-DisposedRule-componentType: ComponentType--><!--Device-DisposedRule-componentType: ComponentType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -44,9 +44,9 @@ controlType: ControlType
 
 **类型：** [ControlType](arkts-ability-appcontrol-controltype-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-DisposedRule-controlType: ControlType--><!--Device-DisposedRule-controlType: ControlType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -62,9 +62,9 @@ disposedType: DisposedType
 
 **类型：** [DisposedType](arkts-ability-appcontrol-disposedtype-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-DisposedRule-disposedType: DisposedType--><!--Device-DisposedRule-disposedType: DisposedType-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -80,9 +80,9 @@ elementList: Array<ElementName>
 
 **类型：** Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt;
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-DisposedRule-elementList: Array<ElementName>--><!--Device-DisposedRule-elementList: Array<ElementName>-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -96,11 +96,11 @@ priority: int
 
 拦截规则的优先级，用于规则列表查询结果排序。取值为整数，数值越小，优先级越高，排序越靠前。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-DisposedRule-priority: int--><!--Device-DisposedRule-priority: int-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -116,11 +116,10 @@ want: Want
 
 **类型：** [Want](arkts-ability-app-ability-want-want-c.md)
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-DisposedRule-want: Want--><!--Device-DisposedRule-want: Want-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
-

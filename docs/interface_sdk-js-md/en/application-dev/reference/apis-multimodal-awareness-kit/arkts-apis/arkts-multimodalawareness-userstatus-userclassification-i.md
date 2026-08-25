@@ -2,11 +2,11 @@
 
 Defines the user age group detection result.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Deprecated since:** 24
-
-<!--Device-userStatus-export interface UserClassification--><!--Device-userStatus-export interface UserClassification-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -26,11 +26,11 @@ User age group, for example, child or adult.
 
 **Type:** [UserAgeGroup](arkts-multimodalawareness-userstatus-useragegroup-e.md)
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Deprecated since:** 24
-
-<!--Device-UserClassification-ageGroup?: UserAgeGroup--><!--Device-UserClassification-ageGroup?: UserAgeGroup-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -44,11 +44,10 @@ Confidence of the detection result. The value is a floating point number ranging
 
 **Type:** float
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Deprecated since:** 24
 
-<!--Device-UserClassification-confidence?: float--><!--Device-UserClassification-confidence?: float-End-->
-
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
-

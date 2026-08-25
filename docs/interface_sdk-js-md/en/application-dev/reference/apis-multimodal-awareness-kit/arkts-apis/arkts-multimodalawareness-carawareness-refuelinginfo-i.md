@@ -4,7 +4,7 @@ Interface for refueling response info.
 
 **Since:** 26.1.0
 
-<!--Device-carAwareness-export interface RefuelingInfo--><!--Device-carAwareness-export interface RefuelingInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -26,11 +26,11 @@ Indicates refueling status.
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-RefuelingInfo-status: number--><!--Device-RefuelingInfo-status: number-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -46,11 +46,10 @@ Indicates timestamp . Unit: milliseconds.
 
 **Since:** 26.1.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
-<!--Device-RefuelingInfo-timestamp: number--><!--Device-RefuelingInfo-timestamp: number-End-->
-
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
-

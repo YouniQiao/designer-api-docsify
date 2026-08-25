@@ -8,7 +8,7 @@ Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md).Priorities 
 
 **Since:** 7
 
-<!--Device-unnamed-declare interface AlertDialogParamWithConfirm--><!--Device-unnamed-declare interface AlertDialogParamWithConfirm-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,9 +29,8 @@ Information about the confirm button. When the dialog box has focus and the **Ta
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-AlertDialogParamWithConfirm-confirm?: AlertDialogButtonBaseOptions--><!--Device-AlertDialogParamWithConfirm-confirm?: AlertDialogButtonBaseOptions-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

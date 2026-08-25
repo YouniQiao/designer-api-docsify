@@ -16,16 +16,16 @@ function onceGenericEventData<T>(eventId: string, callback: Callback<GenericEven
 
 **起始版本：** 23
 
-<!--Device-emitter-function onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-emitter-function onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Emitter
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| eventId | string | 是 | 单次订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| eventId | string | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 |
 
 **示例**
 
@@ -77,4 +77,3 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 
 emitter1.onceGenericEventData("eventId", callback);
 ```
-

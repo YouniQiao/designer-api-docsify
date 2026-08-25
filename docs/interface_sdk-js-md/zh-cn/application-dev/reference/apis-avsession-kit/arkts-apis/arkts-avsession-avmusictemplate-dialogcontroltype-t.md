@@ -8,16 +8,15 @@ type DialogControlType = 'open' | 'close' | 'refresh' | 'toast'
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-avMusicTemplate-type DialogControlType = 'open' | 'close' | 'refresh' | 'toast'--><!--Device-avMusicTemplate-type DialogControlType = 'open' | 'close' | 'refresh' | 'toast'-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-| 类型 | 说明 |
-| --- | --- |
-| 'open' |  |
-| 'close' |  |
-| 'refresh' |  |
-| 'toast' |  |
-
+| 类型 |
+| --- |
+| 'open' |
+| 'close' |
+| 'refresh' |
+| 'toast' |

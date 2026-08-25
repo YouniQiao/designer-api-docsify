@@ -4,7 +4,7 @@
 
 **起始版本：** 7
 
-<!--Device-contact-class ContactAttributes--><!--Device-contact-class ContactAttributes-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -26,9 +26,9 @@ attributes: Attribute[]
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-ContactAttributes-attributes: Attribute[]--><!--Device-ContactAttributes-attributes: Attribute[]-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -45,4 +45,3 @@ let contactAttributes: contact.ContactAttributes = {
     ]
 };
 ```
-

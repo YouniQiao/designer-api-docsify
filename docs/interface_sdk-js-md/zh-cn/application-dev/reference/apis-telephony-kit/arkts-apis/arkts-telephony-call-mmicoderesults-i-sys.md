@@ -2,9 +2,9 @@
 
 MMI码结果。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-call-export interface MmiCodeResults--><!--Device-call-export interface MmiCodeResults-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -26,9 +26,9 @@ MMI码消息。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-MmiCodeResults-message: string--><!--Device-MmiCodeResults-message: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -44,11 +44,10 @@ MMI码结果。
 
 **类型：** [MmiCodeResult](arkts-telephony-call-mmicoderesult-e-sys.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-MmiCodeResults-result: MmiCodeResult--><!--Device-MmiCodeResults-result: MmiCodeResult-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
-

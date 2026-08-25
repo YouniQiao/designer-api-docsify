@@ -4,9 +4,9 @@ Defines the information returned when the file copy operation fails. If the copy
 
 **Since:** 10
 
-**Deprecated since:** 23
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-fileAccess-interface CopyResult--><!--Device-fileAccess-interface CopyResult-End-->
+**Deprecated since:** 23
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -30,13 +30,13 @@ URI of the conflicting file. If the error is not caused by a file conflict, **de
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-CopyResult-destUri: string--><!--Device-CopyResult-destUri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -54,13 +54,13 @@ Error code.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-CopyResult-errCode: number--><!--Device-CopyResult-errCode: number-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -78,13 +78,13 @@ Error message.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-CopyResult-errMsg: string--><!--Device-CopyResult-errMsg: string-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -102,15 +102,14 @@ URI of the source file or directory.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CopyResult-sourceUri: string--><!--Device-CopyResult-sourceUri: string-End-->
-
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
-

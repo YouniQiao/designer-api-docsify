@@ -1,8 +1,6 @@
 # GeneratorFunction
 
-**Since:** -1
-
-<!--Device-unnamed-interface GeneratorFunction--><!--Device-unnamed-interface GeneratorFunction-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,7 +15,4 @@ readonly [Symbol.toStringTag]: string
 
 **Type:** string
 
-**Since:** -1
-
-<!--Device-GeneratorFunction-readonly [Symbol.toStringTag]: string--><!--Device-GeneratorFunction-readonly [Symbol.toStringTag]: string-End-->
-
+**ArkTS mode:** 

@@ -2,9 +2,9 @@
 
 Enum for geofence transition status.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-geoLocationManager-export enum GeofenceTransitionEvent--><!--Device-geoLocationManager-export enum GeofenceTransitionEvent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -16,11 +16,11 @@ GEOFENCE_TRANSITION_EVENT_APPROACHING_GEOFENCE = 8
 
 The device is approaching the geofence.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_APPROACHING_GEOFENCE = 8--><!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_APPROACHING_GEOFENCE = 8-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -34,11 +34,11 @@ GEOFENCE_TRANSITION_EVENT_LEAVING_GEOFENCE = 16
 
 The device is leaving the geofence.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_LEAVING_GEOFENCE = 16--><!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_LEAVING_GEOFENCE = 16-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -52,13 +52,12 @@ GEOFENCE_TRANSITION_EVENT_NEAR_WANDER = 32
 
 The device is approaching the fence from the outside and already very near to it for long time.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_NEAR_WANDER = 32--><!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_NEAR_WANDER = 32-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **System API:** This is a system API.
-

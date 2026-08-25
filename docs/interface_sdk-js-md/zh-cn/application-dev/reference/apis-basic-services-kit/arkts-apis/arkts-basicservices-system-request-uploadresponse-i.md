@@ -2,11 +2,11 @@
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 9
 
 **替代接口：** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md)
-
-<!--Device-unnamed-export interface UploadResponse--><!--Device-unnamed-export interface UploadResponse-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -28,11 +28,11 @@ code: number
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 9
 
 **替代接口：** statusCode
-
-<!--Device-UploadResponse-code: number--><!--Device-UploadResponse-code: number-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -48,11 +48,11 @@ data: string
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 9
 
 **替代接口：** extras
-
-<!--Device-UploadResponse-data: string--><!--Device-UploadResponse-data: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -68,11 +68,10 @@ headers: Object
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 9
 
 **替代接口：** headers
 
-<!--Device-UploadResponse-headers: Object--><!--Device-UploadResponse-headers: Object-End-->
-
 **系统能力：** SystemCapability.MiscServices.Upload
-

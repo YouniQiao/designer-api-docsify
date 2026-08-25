@@ -4,11 +4,11 @@ The universal attributes are not supported.The universal events are not supporte
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-unnamed-declare class WithThemeAttribute--><!--Device-unnamed-declare class WithThemeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,4 +16,3 @@ The universal attributes are not supported.The universal events are not supporte
 
 ```TypeScript
 ```
-

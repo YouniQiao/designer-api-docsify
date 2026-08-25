@@ -16,11 +16,11 @@ Obtains the mask combination for the supported mode list of a given USB port.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getSupportedModes](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md)
-
-<!--Device-usb-function getSupportedModes(portId: number): PortModeType--><!--Device-usb-function getSupportedModes(portId: number): PortModeType-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -28,19 +28,18 @@ Obtains the mask combination for the supported mode list of a given USB port.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| portId | number | Yes | Port number. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| PortModeType | Mask combination for the supported mode list. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PortModeType](arkts-basicservices-usb-portmodetype-e-sys.md) |
 
 **Examples**
 
 ```TypeScript
 let ret = usb.getSupportedModes(0);
 ```
-

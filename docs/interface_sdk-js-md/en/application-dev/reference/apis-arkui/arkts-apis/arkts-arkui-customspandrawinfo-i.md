@@ -4,7 +4,7 @@ Defines the CustomSpanDrawInfo interface.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface CustomSpanDrawInfo--><!--Device-unnamed-declare interface CustomSpanDrawInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Baseline offset of the line where the custom span is located.Unit: px
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CustomSpanDrawInfo-baseline: number--><!--Device-CustomSpanDrawInfo-baseline: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,11 @@ Bottom margin of the custom span relative to the **Text** component.Unit: px
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CustomSpanDrawInfo-lineBottom: number--><!--Device-CustomSpanDrawInfo-lineBottom: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,11 +65,11 @@ Top margin of the custom span relative to the **Text** component.Unit: px
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CustomSpanDrawInfo-lineTop: number--><!--Device-CustomSpanDrawInfo-lineTop: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,11 +85,10 @@ Offset of the custom span relative to the mounted component.Unit: px
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-CustomSpanDrawInfo-x: number--><!--Device-CustomSpanDrawInfo-x: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

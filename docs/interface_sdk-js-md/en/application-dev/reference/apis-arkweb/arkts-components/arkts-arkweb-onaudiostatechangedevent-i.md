@@ -4,7 +4,7 @@ Defines the callback information triggered when the audio playback status on the
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface OnAudioStateChangedEvent--><!--Device-unnamed-declare interface OnAudioStateChangedEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -25,9 +25,8 @@ Audio playback status on the current page. The value **true** means that audio i
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-OnAudioStateChangedEvent-playing: boolean--><!--Device-OnAudioStateChangedEvent-playing: boolean-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

@@ -4,7 +4,7 @@ Defines the HTTP interceptor API, which is used to define the interception proce
 
 **Since:** 22
 
-<!--Device-http-export interface HttpInterceptor--><!--Device-http-export interface HttpInterceptor-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -24,24 +24,24 @@ Intercepts the HTTP processing and modifies it as required.
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
-<!--Device-HttpInterceptor-interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Promise<ChainContinue>--><!--Device-HttpInterceptor-interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Promise<ChainContinue>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| reqContext | [HttpRequestContext](arkts-network-http-httprequestcontext-i.md) | Yes | the context of the target HTTP request. |
-| rspContext | HttpResponse | Yes | the context of the target HTTP response. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| reqContext | [HttpRequestContext](arkts-network-http-httprequestcontext-i.md) | Yes |
+| rspContext | [HttpResponse](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-httpresponse-i.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;[ChainContinue](arkts-network-http-chaincontinue-t.md)&gt; | Continues the HTTP processing or stops and returns an HTTP response. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[ChainContinue](arkts-network-http-chaincontinue-t.md)&gt; |
 
 **Examples**
 
@@ -93,9 +93,8 @@ The type of this interceptor. It defines when this intercptor would be called.
 
 **Since:** 22
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
+
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-HttpInterceptor-interceptorType: InterceptorType--><!--Device-HttpInterceptor-interceptorType: InterceptorType-End-->
-
 **System capability:** SystemCapability.Communication.NetStack
-

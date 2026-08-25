@@ -6,7 +6,7 @@
 
 **起始版本：** 12
 
-<!--Device-sendablePhotoAccessHelper-interface FetchResult--><!--Device-sendablePhotoAccessHelper-interface FetchResult-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,15 +26,15 @@ close(): void
 
 **起始版本：** 12
 
-<!--Device-FetchResult-close(): void--><!--Device-FetchResult-close(): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 14000011 | Internal system error |
+| 错误码ID |
+| --- |
+| 14000011 |
 
 **示例**
 
@@ -71,21 +71,21 @@ getAllObjects(): Promise<Array<T>>
 
 **起始版本：** 12
 
-<!--Device-FetchResult-getAllObjects(): Promise<Array<T>>--><!--Device-FetchResult-getAllObjects(): Promise<Array<T>>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;T&gt;&gt; | Promise对象，返回结果集中所有文件资产数组。 |
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;T & gt; & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 14000011 | Internal system error |
+| 错误码ID |
+| --- |
+| 14000011 |
 
 **示例**
 
@@ -118,21 +118,21 @@ getCount(): number
 
 **起始版本：** 12
 
-<!--Device-FetchResult-getCount(): number--><!--Device-FetchResult-getCount(): number-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 检索到的文件总数。 |
+| 类型 |
+| --- |
+| number |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 14000011 | Internal system error |
+| 错误码ID |
+| --- |
+| 14000011 |
 
 **示例**
 
@@ -165,21 +165,21 @@ getFirstObject(): Promise<T>
 
 **起始版本：** 12
 
-<!--Device-FetchResult-getFirstObject(): Promise<T>--><!--Device-FetchResult-getFirstObject(): Promise<T>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;T&gt; | Promise对象，返回结果集中第一个对象。 |
+| 类型 |
+| --- |
+| Promise & lt;T & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 14000011 | Internal system error |
+| 错误码ID |
+| --- |
+| 14000011 |
 
 **示例**
 
@@ -212,21 +212,21 @@ getLastObject(): Promise<T>
 
 **起始版本：** 12
 
-<!--Device-FetchResult-getLastObject(): Promise<T>--><!--Device-FetchResult-getLastObject(): Promise<T>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;T&gt; | Promise对象，返回结果集中最后一个对象。 |
+| 类型 |
+| --- |
+| Promise & lt;T & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 14000011 | Internal system error |
+| 错误码ID |
+| --- |
+| 14000011 |
 
 **示例**
 
@@ -259,21 +259,21 @@ getNextObject(): Promise<T>
 
 **起始版本：** 12
 
-<!--Device-FetchResult-getNextObject(): Promise<T>--><!--Device-FetchResult-getNextObject(): Promise<T>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;T&gt; | Promise对象，返回结果集中下一个对象。 |
+| 类型 |
+| --- |
+| Promise & lt;T & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 14000011 | Internal system error |
+| 错误码ID |
+| --- |
+| 14000011 |
 
 **示例**
 
@@ -307,28 +307,28 @@ getObjectByPosition(index: number): Promise<T>
 
 **起始版本：** 12
 
-<!--Device-FetchResult-getObjectByPosition(index: number): Promise<T>--><!--Device-FetchResult-getObjectByPosition(index: number): Promise<T>-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | number | 是 | 要获取的文件的索引，从0开始。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;T&gt; | Promise对象，返回结果集中指定索引的一个对象。 |
+| 类型 |
+| --- |
+| Promise & lt;T & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000011 | Internal system error |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| 14000011 |
 
 **示例**
 
@@ -361,21 +361,21 @@ isAfterLast(): boolean
 
 **起始版本：** 12
 
-<!--Device-FetchResult-isAfterLast(): boolean--><!--Device-FetchResult-isAfterLast(): boolean-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 当读到最后一条记录后，后续没有记录返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 14000011 | Internal system error |
+| 错误码ID |
+| --- |
+| 14000011 |
 
 **示例**
 
@@ -402,4 +402,3 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
   }
 }
 ```
-

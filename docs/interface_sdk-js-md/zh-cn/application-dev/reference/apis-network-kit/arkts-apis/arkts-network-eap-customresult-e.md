@@ -4,7 +4,7 @@
 
 **起始版本：** 20
 
-<!--Device-eap-enum CustomResult--><!--Device-eap-enum CustomResult-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -18,7 +18,7 @@ RESULT_FAIL = 0
 
 **起始版本：** 20
 
-<!--Device-CustomResult-RESULT_FAIL = 0--><!--Device-CustomResult-RESULT_FAIL = 0-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -32,7 +32,7 @@ RESULT_NEXT = 1
 
 **起始版本：** 20
 
-<!--Device-CustomResult-RESULT_NEXT = 1--><!--Device-CustomResult-RESULT_NEXT = 1-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -46,7 +46,6 @@ RESULT_FINISH = 2
 
 **起始版本：** 20
 
-<!--Device-CustomResult-RESULT_FINISH = 2--><!--Device-CustomResult-RESULT_FINISH = 2-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
-

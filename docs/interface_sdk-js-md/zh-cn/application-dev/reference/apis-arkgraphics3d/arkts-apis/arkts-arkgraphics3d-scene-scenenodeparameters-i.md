@@ -2,9 +2,9 @@
 
 场景节点参数对象，用于提供场景节点层次中的名称和路径。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export interface SceneNodeParameters--><!--Device-unnamed-export interface SceneNodeParameters-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -18,9 +18,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SceneNodeParameters-name: string--><!--Device-SceneNodeParameters-name: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -34,9 +34,9 @@ path?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-SceneNodeParameters-path?: string--><!--Device-SceneNodeParameters-path?: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -64,4 +64,3 @@ function createNodePromise() : Promise<Node> {
   });
 }
 ```
-

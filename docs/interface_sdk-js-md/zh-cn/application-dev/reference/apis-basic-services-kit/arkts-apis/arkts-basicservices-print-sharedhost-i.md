@@ -4,7 +4,7 @@
 
 **起始版本：** 24
 
-<!--Device-print-interface SharedHost--><!--Device-print-interface SharedHost-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -26,9 +26,9 @@ ip: string
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-SharedHost-ip: string--><!--Device-SharedHost-ip: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -44,9 +44,9 @@ shareName: string
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-SharedHost-shareName: string--><!--Device-SharedHost-shareName: string-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -62,9 +62,8 @@ workgroupName: string
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-SharedHost-workgroupName: string--><!--Device-SharedHost-workgroupName: string-End-->
-
 **系统能力：** SystemCapability.Print.PrintFramework
-

@@ -16,13 +16,13 @@ function enableHotspot(): boolean
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [enableHotspot](arkts-connectivity-wifimanager-enablehotspot-f-sys.md)
 
 **需要权限：** ohos.permission.MANAGE_WIFI_HOTSPOT
-
-<!--Device-wifi-function enableHotspot(): boolean--><!--Device-wifi-function enableHotspot(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
@@ -30,9 +30,9 @@ function enableHotspot(): boolean
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 操作成功时返回{ |
+| 类型 |
+| --- |
+| boolean |
 
 **示例**
 
@@ -45,4 +45,3 @@ try {
     console.error("failed:" + JSON.stringify(error));
 }
 ```
-

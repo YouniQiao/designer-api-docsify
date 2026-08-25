@@ -10,9 +10,7 @@
 
 **起始版本：** 24
 
-**装饰器类型：** @ObservedV2
-
-<!--Device-unnamed-export class StackLayoutAlgorithm--><!--Device-unnamed-export class StackLayoutAlgorithm-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,31 +24,35 @@ constructor(option?: StackLayoutAlgorithmOptions)
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-StackLayoutAlgorithm-constructor(option?: StackLayoutAlgorithmOptions)--><!--Device-StackLayoutAlgorithm-constructor(option?: StackLayoutAlgorithmOptions)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| option | [StackLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-stacklayoutalgorithmoptions-i.md) | 否 | 堆叠布局算法的构造入参，设置九宫格对齐格式。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| option | [StackLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-stacklayoutalgorithmoptions-i.md) | 否 |
 
 ## alignContent
 
+```TypeScript
+public alignContent?: LocalizedAlignment
+```
+
 设置子组件在堆叠布局算法中对齐格式。默认值：LocalizedAlignment.CENTER非法值：按默认值处理。装饰器类型：@Trace
 
-**类型：** [LocalizedAlignment](../../apis-default/arkts-apis/arkts-enums-localizedalignment-e.md)
+**类型：** [LocalizedAlignment](arkts-arkui-enums-localizedalignment-e.md)
 
 **起始版本：** 24
 
-**装饰器类型：** @Trace
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -58,7 +60,4 @@ constructor(option?: StackLayoutAlgorithmOptions)
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-StackLayoutAlgorithm-@Trace public alignContent?: LocalizedAlignment--><!--Device-StackLayoutAlgorithm-@Trace public alignContent?: LocalizedAlignment-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

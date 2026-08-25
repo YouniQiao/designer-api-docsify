@@ -4,7 +4,7 @@ Enumerates whether to enable overscroll mode.
 
 **Since:** 11
 
-<!--Device-unnamed-declare enum OverScrollMode--><!--Device-unnamed-declare enum OverScrollMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,9 +18,9 @@ Web overscroll mode disabled. Applicable to pages that do not require additional
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-OverScrollMode-NEVER = 0--><!--Device-OverScrollMode-NEVER = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -34,9 +34,8 @@ Web overscroll mode enabled. Applicable to pages that require enhanced scrolling
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-OverScrollMode-ALWAYS = 1--><!--Device-OverScrollMode-ALWAYS = 1-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

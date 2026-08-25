@@ -7,11 +7,11 @@
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [formBindingData](arkts-app-form-formbindingdata.md)
-
-<!--Device-unnamed-declare namespace formBindingData--><!--Device-unnamed-declare namespace formBindingData-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -24,13 +24,12 @@
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [createFormBindingData(卡片数据绑定类)](arkts-form-formbindingdata-createformbindingdata-depr-f.md#createformbindingdata) | 创建一个FormBindingData对象。 |
+| 名称 |
+| --- |
+| [createFormBindingData(卡片数据绑定类)](arkts-form-formbindingdata-createformbindingdata-depr-f.md#createformbindingdata) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [FormBindingData(卡片数据绑定类)](arkts-form-formbindingdata-formbindingdata-depr-i.md) | FormBindingData提供卡片数据绑定的能力，用于存储卡片需要展示的数据。 |
-
+| 名称 |
+| --- |
+| [FormBindingData(卡片数据绑定类)](arkts-form-formbindingdata-formbindingdata-depr-i.md) |

@@ -4,11 +4,11 @@ Defines the options for selecting images or videos.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 12
 
 **Substitutes:** [PhotoSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md)
-
-<!--Device-picker-class PhotoSelectOptions--><!--Device-picker-class PhotoSelectOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -30,13 +30,13 @@ Maximum number of media files that can be selected. The default value is **50**,
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 18
 
 **Substitutes:** maxSelectNumber
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PhotoSelectOptions-maxSelectNumber?: number--><!--Device-PhotoSelectOptions-maxSelectNumber?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -53,13 +53,12 @@ Media file types to select. If this parameter is not specified, **IMAGE_VIDEO_TY
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Deprecated since:** 18
 
 **Substitutes:** MIMEType
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-PhotoSelectOptions-MIMEType?: PhotoViewMIMETypes--><!--Device-PhotoSelectOptions-MIMEType?: PhotoViewMIMETypes-End-->
-
 **System capability:** SystemCapability.FileManagement.UserFileService
-

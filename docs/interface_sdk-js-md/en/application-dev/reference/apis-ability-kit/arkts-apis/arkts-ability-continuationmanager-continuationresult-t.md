@@ -8,6 +8,8 @@ Defines the device information returned by the continuation management entry.
 
 **Since:** 10
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
+
 **Deprecated since:** 22
 
 **Substitutes:** [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
@@ -16,9 +18,6 @@ Defines the device information returned by the continuation management entry.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-continuationManager-export type ContinuationResult = _ContinuationResult--><!--Device-continuationManager-export type ContinuationResult = _ContinuationResult-End-->
-
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 **Property type:** _ContinuationResult
-

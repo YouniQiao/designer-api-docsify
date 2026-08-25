@@ -2,9 +2,9 @@
 
 Enum for haptics mode in tone scenario.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-systemSoundManager-enum ToneHapticsMode--><!--Device-systemSoundManager-enum ToneHapticsMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -18,9 +18,9 @@ NONE = 0
 
 None haptics mode.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-ToneHapticsMode-NONE = 0--><!--Device-ToneHapticsMode-NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -34,9 +34,9 @@ SYNC = 1
 
 Haptics is synchronized with tone.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-ToneHapticsMode-SYNC = 1--><!--Device-ToneHapticsMode-SYNC = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -50,11 +50,10 @@ NON_SYNC = 2
 
 Haptics is out of synchronize with tone.
 
-**Since:** 23
+**Since:** 14
 
-<!--Device-ToneHapticsMode-NON_SYNC = 2--><!--Device-ToneHapticsMode-NON_SYNC = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
-

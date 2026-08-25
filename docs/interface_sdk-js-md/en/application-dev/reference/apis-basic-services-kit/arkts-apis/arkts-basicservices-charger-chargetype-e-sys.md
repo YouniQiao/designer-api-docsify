@@ -2,9 +2,9 @@
 
 Enumerates charging types.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-charger-export enum ChargeType--><!--Device-charger-export enum ChargeType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -18,9 +18,9 @@ NONE
 
 Unknown charging type.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ChargeType-NONE--><!--Device-ChargeType-NONE-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -34,9 +34,9 @@ WIRED_NORMAL
 
 Wired normal charging.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ChargeType-WIRED_NORMAL--><!--Device-ChargeType-WIRED_NORMAL-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -50,9 +50,9 @@ WIRED_QUICK
 
 Wired fast charging.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ChargeType-WIRED_QUICK--><!--Device-ChargeType-WIRED_QUICK-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -66,9 +66,9 @@ WIRED_SUPER_QUICK
 
 Wired super fast charging.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ChargeType-WIRED_SUPER_QUICK--><!--Device-ChargeType-WIRED_SUPER_QUICK-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -82,9 +82,9 @@ WIRELESS_NORMAL
 
 Wireless normal charging.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ChargeType-WIRELESS_NORMAL--><!--Device-ChargeType-WIRELESS_NORMAL-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -98,9 +98,9 @@ WIRELESS_QUICK
 
 Wireless fast charging.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ChargeType-WIRELESS_QUICK--><!--Device-ChargeType-WIRELESS_QUICK-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -114,11 +114,10 @@ WIRELESS_SUPER_QUICK
 
 Wireless super fast charging.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ChargeType-WIRELESS_SUPER_QUICK--><!--Device-ChargeType-WIRELESS_SUPER_QUICK-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 **System API:** This is a system API.
-

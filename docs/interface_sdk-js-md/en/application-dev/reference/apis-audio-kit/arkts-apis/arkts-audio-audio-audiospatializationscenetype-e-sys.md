@@ -2,9 +2,9 @@
 
 Describes a spatialization scene type group.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-audio-enum AudioSpatializationSceneType--><!--Device-audio-enum AudioSpatializationSceneType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -18,9 +18,9 @@ DEFAULT = 0
 
 Audio Spatialization Scene Type Default.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AudioSpatializationSceneType-DEFAULT = 0--><!--Device-AudioSpatializationSceneType-DEFAULT = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -34,9 +34,9 @@ MUSIC = 1
 
 Audio Spatialization Scene Type Music.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AudioSpatializationSceneType-MUSIC = 1--><!--Device-AudioSpatializationSceneType-MUSIC = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -50,9 +50,9 @@ MOVIE = 2
 
 Audio Spatialization Scene Type Movie.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AudioSpatializationSceneType-MOVIE = 2--><!--Device-AudioSpatializationSceneType-MOVIE = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -66,11 +66,10 @@ AUDIOBOOK = 3
 
 Audio Spatialization Scene Type Audio Book.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-AudioSpatializationSceneType-AUDIOBOOK = 3--><!--Device-AudioSpatializationSceneType-AUDIOBOOK = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
-

@@ -6,11 +6,10 @@ type ValuesBucket = Record<string, ValueType>
 
 Defines the types of the key and value in a KV pair.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-commonType-type ValuesBucket = Record<string, ValueType>--><!--Device-commonType-type ValuesBucket = Record<string, ValueType>-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
 **Property type:** Record&lt;string, ValueType&gt;
-

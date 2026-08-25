@@ -4,7 +4,7 @@ Defines the option of RequestFullWindow interface.
 
 **Since:** 3
 
-<!--Device-unnamed-export interface RequestFullWindowOptions--><!--Device-unnamed-export interface RequestFullWindowOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,9 +26,8 @@ Defines the number of animation options.
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-RequestFullWindowOptions-duration: number--><!--Device-RequestFullWindowOptions-duration: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

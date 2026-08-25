@@ -4,9 +4,9 @@ Defines a response that returns the screen brightness mode.
 
 **Since:** 3
 
-**Deprecated since:** 7
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
-<!--Device-unnamed-export interface BrightnessModeResponse--><!--Device-unnamed-export interface BrightnessModeResponse-End-->
+**Deprecated since:** 7
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -28,9 +28,8 @@ The value **0** indicates the manual adjustment mode, and the value **1** indica
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 7
 
-<!--Device-BrightnessModeResponse-mode: number--><!--Device-BrightnessModeResponse-mode: number-End-->
-
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
-

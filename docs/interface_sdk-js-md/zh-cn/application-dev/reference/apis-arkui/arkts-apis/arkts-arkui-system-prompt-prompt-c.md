@@ -3,11 +3,11 @@
 创建并显示文本提示框、对话框和操作菜单。
 
 > **说明：**&gt;
-> - 从API version 8 开始，该接口不再维护，推荐使用新接口[@ohos.promptAction (弹窗)](../../apis-default/arkts-apis/arkts-promptaction-n.md)。
+> - 从API version 8 开始，该接口不再维护，推荐使用新接口[@ohos.promptAction (弹窗)](arkts-arkui-promptaction-n.md)。
 
 **起始版本：** 3
 
-<!--Device-unnamed-export default class Prompt--><!--Device-unnamed-export default class Prompt-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,17 +27,17 @@ static showActionMenu(options: ShowActionMenuOptions): void
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
-<!--Device-Prompt-static showActionMenu(options: ShowActionMenuOptions): void--><!--Device-Prompt-static showActionMenu(options: ShowActionMenuOptions): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [ShowActionMenuOptions](arkts-arkui-system-prompt-showactionmenuoptions-i.md) | 是 | 定义ShowActionMenu的选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [ShowActionMenuOptions](arkts-arkui-system-prompt-showactionmenuoptions-i.md) | 是 |
 
 **示例**
 
@@ -79,17 +79,17 @@ static showDialog(options: ShowDialogOptions): void
 
 **起始版本：** 3
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-Prompt-static showDialog(options: ShowDialogOptions): void--><!--Device-Prompt-static showDialog(options: ShowDialogOptions): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [ShowDialogOptions](arkts-arkui-system-prompt-showdialogoptions-i.md) | 是 | 定义显示对话框的选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [ShowDialogOptions](arkts-arkui-system-prompt-showdialogoptions-i.md) | 是 |
 
 **示例**
 
@@ -128,17 +128,17 @@ static showToast(options: ShowToastOptions): void
 
 **起始版本：** 3
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-Prompt-static showToast(options: ShowToastOptions): void--><!--Device-Prompt-static showToast(options: ShowToastOptions): void-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | 是 | 定义ShowToast的选项。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | 是 |
 
 **示例**
 
@@ -154,4 +154,3 @@ class A{
 }
 export default new A()
 ```
-

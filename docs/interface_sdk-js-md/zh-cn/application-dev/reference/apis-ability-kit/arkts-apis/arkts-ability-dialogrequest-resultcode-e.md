@@ -2,9 +2,9 @@
 
 模态弹框请求结果码。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-dialogRequest-export enum ResultCode--><!--Device-dialogRequest-export enum ResultCode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -16,9 +16,9 @@ RESULT_OK = 0
 
 表示成功。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ResultCode-RESULT_OK = 0--><!--Device-ResultCode-RESULT_OK = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -30,9 +30,8 @@ RESULT_CANCEL = 1
 
 表示失败。
 
-**起始版本：** 23
+**起始版本：** 9
 
-<!--Device-ResultCode-RESULT_CANCEL = 1--><!--Device-ResultCode-RESULT_CANCEL = 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-

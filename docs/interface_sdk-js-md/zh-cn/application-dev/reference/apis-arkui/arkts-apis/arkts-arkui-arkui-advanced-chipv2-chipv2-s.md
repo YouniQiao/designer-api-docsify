@@ -4,9 +4,7 @@ ChipV2是提供丰富样式和交互能力的操作块组件，支持前缀图�
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @ComponentV2
-
-<!--Device-unnamed-export declare struct ChipV2--><!--Device-unnamed-export declare struct ChipV2-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +24,11 @@ build函数用于构造ChipV2高级组件的UI结构。
 
 **起始版本：** 26.0.0
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ChipV2-build(): void--><!--Device-ChipV2-build(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,13 +44,10 @@ readonly chipV2Options: ChipV2Options
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Require、@Param
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ChipV2-@Require  @Param  readonly chipV2Options: ChipV2Options--><!--Device-ChipV2-@Require  @Param  readonly chipV2Options: ChipV2Options-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

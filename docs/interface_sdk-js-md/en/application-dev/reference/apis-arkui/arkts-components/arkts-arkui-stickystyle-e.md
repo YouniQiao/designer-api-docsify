@@ -4,7 +4,7 @@ Enumerates the sticky styles.
 
 **Since:** 9
 
-<!--Device-unnamed-declare enum StickyStyle--><!--Device-unnamed-declare enum StickyStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ In the **ListItemGroup** component, the header is not pinned to the top, and the
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-StickyStyle-None = 0--><!--Device-StickyStyle-None = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ In the **ListItemGroup** component, the header is pinned to the top, and the foo
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-StickyStyle-Header = 1--><!--Device-StickyStyle-Header = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,11 @@ In the **ListItemGroup** component, the footer is pinned to the bottom, and the 
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-StickyStyle-Footer = 2--><!--Device-StickyStyle-Footer = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,13 +72,12 @@ In the **ListItemGroup** component, the header is pinned to the top, and the foo
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
 
-<!--Device-StickyStyle-BOTH = 3--><!--Device-StickyStyle-BOTH = 3-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

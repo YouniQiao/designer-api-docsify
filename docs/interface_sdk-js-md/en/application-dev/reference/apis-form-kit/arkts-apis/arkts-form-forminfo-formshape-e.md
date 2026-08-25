@@ -2,9 +2,9 @@
 
 Defines the FormShape enum.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-formInfo-enum FormShape--><!--Device-formInfo-enum FormShape-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -16,11 +16,11 @@ RECT = 1
 
 The rect shape.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-FormShape-RECT = 1--><!--Device-FormShape-RECT = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -32,11 +32,10 @@ CIRCLE = 2
 
 The circle shape.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-FormShape-CIRCLE = 2--><!--Device-FormShape-CIRCLE = 2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.Form
-

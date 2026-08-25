@@ -8,13 +8,12 @@ Defines a custom marshalling object for styled strings, which you need to define
 
 **Since:** 19
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
-<!--Device-unnamed-declare type StyledStringMarshallingValue = UserDataSpan--><!--Device-unnamed-declare type StyledStringMarshallingValue = UserDataSpan-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
 
 **Property type:** [UserDataSpan](arkts-arkui-userdataspan-c.md)
-

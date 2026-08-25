@@ -2,9 +2,9 @@
 
 互动卡片动效请求信息。
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-formInfo-interface OverflowRequest--><!--Device-formInfo-interface OverflowRequest-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -26,9 +26,9 @@ formId: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-OverflowRequest-formId: string--><!--Device-OverflowRequest-formId: string-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -44,9 +44,9 @@ isOverflow: boolean
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-OverflowRequest-isOverflow: boolean--><!--Device-OverflowRequest-isOverflow: boolean-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -62,11 +62,10 @@ overflowInfo?: OverflowInfo
 
 **类型：** [OverflowInfo](arkts-form-forminfo-overflowinfo-i.md)
 
-**起始版本：** 23
+**起始版本：** 20
 
-<!--Device-OverflowRequest-overflowInfo?: OverflowInfo--><!--Device-OverflowRequest-overflowInfo?: OverflowInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
-

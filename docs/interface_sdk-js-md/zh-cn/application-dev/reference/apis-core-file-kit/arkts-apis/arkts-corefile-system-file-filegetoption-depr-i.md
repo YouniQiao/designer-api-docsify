@@ -4,9 +4,9 @@
 
 **起始版本：** 3
 
-**废弃版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-unnamed-export interface FileGetOption--><!--Device-unnamed-export interface FileGetOption-End-->
+**废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -23,13 +23,11 @@ complete?: () => void
 
 接口调用结束的回调函数。
 
-**类型：** () =&gt; void
-
 **起始版本：** 3
 
-**废弃版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
-<!--Device-FileGetOption-complete?: () => void--><!--Device-FileGetOption-complete?: () => void-End-->
+**废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -41,15 +39,42 @@ fail?: (data: string, code: number) => void
 
 接口调用失败的回调函数。
 
-**类型：** (data: string, code: number) =&gt; void
-
 **起始版本：** 3
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 10
 
-<!--Device-FileGetOption-fail?: (data: string, code: number) => void--><!--Device-FileGetOption-fail?: (data: string, code: number) => void-End-->
+**系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | string | 是 |
+| code | number | 是 |
+
+## success
+
+```TypeScript
+success?: (file: FileResponse) => void
+```
+
+接口调用成功的回调函数。 返回[FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md#fileresponse)。
+
+**起始版本：** 3
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
+**废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | [FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md) | 是 |
 
 ## recursive
 
@@ -63,27 +88,9 @@ recursive?: boolean
 
 **起始版本：** 3
 
-**废弃版本：** 10
-
-<!--Device-FileGetOption-recursive?: boolean--><!--Device-FileGetOption-recursive?: boolean-End-->
-
-**系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
-
-## success
-
-```TypeScript
-success?: (file: FileResponse) => void
-```
-
-接口调用成功的回调函数。 返回[FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md#fileresponse)。
-
-**类型：** (file: FileResponse) =&gt; void
-
-**起始版本：** 3
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 10
-
-<!--Device-FileGetOption-success?: (file: FileResponse) => void--><!--Device-FileGetOption-success?: (file: FileResponse) => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -101,9 +108,8 @@ uri: string
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 10
 
-<!--Device-FileGetOption-uri: string--><!--Device-FileGetOption-uri: string-End-->
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
-

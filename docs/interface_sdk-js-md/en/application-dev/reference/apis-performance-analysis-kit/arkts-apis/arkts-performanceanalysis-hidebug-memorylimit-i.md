@@ -2,9 +2,9 @@
 
 Defines the memory limit of the application process.@interface MemoryLimit
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-hidebug-interface MemoryLimit--><!--Device-hidebug-interface MemoryLimit-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -24,9 +24,9 @@ The limit of the application process's resident set, in kilobyte
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MemoryLimit-rssLimit: bigint--><!--Device-MemoryLimit-rssLimit: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -40,9 +40,9 @@ The limit of the js vm heap size of current virtual machine, in kilobyte
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MemoryLimit-vmHeapLimit: bigint--><!--Device-MemoryLimit-vmHeapLimit: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -56,9 +56,9 @@ The limit of the total js vm heap size of process, in kilobyte
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MemoryLimit-vmTotalHeapSize: bigint--><!--Device-MemoryLimit-vmTotalHeapSize: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -72,9 +72,8 @@ The limit of the application process's virtual memory, in kilobyte
 
 **Type:** bigint
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-MemoryLimit-vssLimit: bigint--><!--Device-MemoryLimit-vssLimit: bigint-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
-

@@ -13,9 +13,9 @@
 &gt; - 需要灵活布局（如横屏模式、多窗口）时选择`FLAG_FLOATING`(1)，可通过`Panel.moveTo()`调整面板位置。 &lt;br
 &gt; - 需要独立候选词展示时选择`FLAG_CANDIDATE`(2)，但需开发者自行管理显隐逻辑。 <br>- 缺省配置：默认值为`FLAG_FIXED`(0)。在`PanelInfo`中不设置`flag`时，面板默认为固定态。 <br>- 注意事项：选择`FLAG_CANDIDATE`时，开发者必须自行实现候选词面板的显隐管理逻辑，否则面板将不会自动显示或隐藏。建议在用户开始输入时显示、在输入结束或选择候选词后隐藏。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-unnamed-export enum PanelFlag--><!--Device-unnamed-export enum PanelFlag-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -27,9 +27,9 @@ FLAG_FIXED = 0
 
 固定态面板类型。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-PanelFlag-FLAG_FIXED = 0--><!--Device-PanelFlag-FLAG_FIXED = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -41,9 +41,9 @@ FLAG_FLOATING
 
 悬浮态面板类型。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-PanelFlag-FLAG_FLOATING--><!--Device-PanelFlag-FLAG_FLOATING-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -55,9 +55,8 @@ FLAG_CANDIDATE
 
 候选词态面板类型。 <br> <br>- 当输入面板为候选词态时，面板为显示用户输入候选词的窗口。 <br>- 系统不会主动控制候选词态面板的显示和隐藏，需要开发者根据应用场景自行控制候选词态面板的显示和隐藏。
 
-**起始版本：** 23
+**起始版本：** 11
 
-<!--Device-PanelFlag-FLAG_CANDIDATE--><!--Device-PanelFlag-FLAG_CANDIDATE-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
-

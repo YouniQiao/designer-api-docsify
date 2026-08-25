@@ -6,7 +6,7 @@ Defines the date style options.
 
 **Since:** 11
 
-<!--Device-unnamed-declare class DateStyleOptions--><!--Device-unnamed-declare class DateStyleOptions-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,6 +15,30 @@ Defines the date style options.
 ```TypeScript
 import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
 ```
+
+## onDateChange
+
+```TypeScript
+onDateChange?: (date: DateData) => void
+```
+
+Trigger an event when the date of the counter has been changed.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| date | [DateData](arkts-arkui-arkui-advanced-counter-datedata-c.md) | Yes |
 
 ## day
 
@@ -30,11 +54,11 @@ Set the day of the counter component.
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DateStyleOptions-day?: number--><!--Device-DateStyleOptions-day?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,31 +76,11 @@ Set the month of the counter component.
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DateStyleOptions-month?: number--><!--Device-DateStyleOptions-month?: number-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onDateChange
-
-```TypeScript
-onDateChange?: (date: DateData) => void
-```
-
-Trigger an event when the date of the counter has been changed.
-
-**Type:** (date: DateData) =&gt; void
-
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DateStyleOptions-onDateChange?: (date: DateData) => void--><!--Device-DateStyleOptions-onDateChange?: (date: DateData) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,11 +98,10 @@ Set the year of the counter component, ranges from 1 to 5000.
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-DateStyleOptions-year?: number--><!--Device-DateStyleOptions-year?: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

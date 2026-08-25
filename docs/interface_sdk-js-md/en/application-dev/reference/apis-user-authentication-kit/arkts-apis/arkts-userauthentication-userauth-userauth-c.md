@@ -4,11 +4,11 @@ Provides APIs for managing the **UserAuth** object.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)
-
-<!--Device-userAuth-class UserAuth--><!--Device-userAuth-class UserAuth-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -33,30 +33,30 @@ Starts user authentication. This API uses a callback to return the result.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [start](arkts-userauthentication-userauth-authinstance-i.md#start)
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
-<!--Device-UserAuth-auth(      challenge: Uint8Array,      authType: UserAuthType,      authTrustLevel: AuthTrustLevel,      callback: IUserAuthCallback    ): Uint8Array--><!--Device-UserAuth-auth(      challenge: Uint8Array,      authType: UserAuthType,      authTrustLevel: AuthTrustLevel,      callback: IUserAuthCallback    ): Uint8Array-End-->
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| challenge | Uint8Array | Yes | Challenge value, which can be passed in Uint8Array([]) format. |
-| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Yes | Authentication type. Currently, **FACE** and **FINGERPRINT** are supported. |
-| authTrustLevel | AuthTrustLevel | Yes | Authentication trust level. |
-| callback | IUserAuthCallback | Yes | Callback used to return the result. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| challenge | Uint8Array | Yes |
+| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Yes |
+| authTrustLevel | [AuthTrustLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes |
+| callback | [IUserAuthCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Uint8Array | Context ID, which is used as the input parameter of [cancelAuth]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Uint8Array |
 
 **Examples**
 
@@ -92,27 +92,27 @@ Cancels the authentication based on the context ID.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [cancel](arkts-userauthentication-userauth-authinstance-i.md#cancel)
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
-<!--Device-UserAuth-cancelAuth(contextID: Uint8Array): number--><!--Device-UserAuth-cancelAuth(contextID: Uint8Array): number-End-->
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| contextID | Uint8Array | Yes | Context ID, which is obtained by [auth](#auth). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| contextID | Uint8Array | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Returns **SUCCESS** if the cancellation is successful. Returns a [ResultCode]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -140,11 +140,11 @@ A constructor used to create a **UserAuth** instance.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md)
-
-<!--Device-UserAuth-constructor()--><!--Device-UserAuth-constructor()-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -166,28 +166,28 @@ Checks whether the specified authentication capability is supported.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md)
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
-<!--Device-UserAuth-getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLevel): number--><!--Device-UserAuth-getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLevel): number-End-->
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Yes | Authentication type. Currently, **FACE** and **FINGERPRINT** are supported. |
-| authTrustLevel | AuthTrustLevel | Yes | Authentication trust level. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Yes |
+| authTrustLevel | [AuthTrustLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Query result. If the authentication capability is supported, **SUCCESS** is returned. Otherwise, a [ResultCode]{ |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -224,19 +224,19 @@ Obtains the version of this authenticator.
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
-
-<!--Device-UserAuth-getVersion(): number--><!--Device-UserAuth-getVersion(): number-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| number | Authenticator version obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
 
 **Examples**
 
@@ -247,4 +247,3 @@ let auth = new userAuth.UserAuth();
 let version = auth.getVersion();
 console.info(`auth version = ${version}`);
 ```
-

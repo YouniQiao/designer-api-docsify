@@ -14,11 +14,11 @@ function distributeOperation(hashcode: string, operationInfo?: OperationInfo): P
 
 触发指定通知的跨设备协同操作（例如通知跨设备点击跳转、通知跨设备快捷回复等）。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
-
-<!--Device-notificationSubscribe-function distributeOperation(hashcode: string, operationInfo?: OperationInfo): Promise<void>--><!--Device-notificationSubscribe-function distributeOperation(hashcode: string, operationInfo?: OperationInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -26,26 +26,26 @@ function distributeOperation(hashcode: string, operationInfo?: OperationInfo): P
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| hashcode | string | 是 | 通知唯一ID。 |
-| operationInfo | OperationInfo | 否 | 跨设备协同操作信息，默认为空。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| hashcode | string | 是 |
+| [operationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-abilitytoolaccessctrl-permissionquery-i-sys.md) | [OperationInfo](arkts-notification-notificationsubscribe-operationinfo-i-sys.md) | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600010](../errorcode-notification.md#1600010-分布式操作失败) | Distributed operation failed. |
-| [1600021](../errorcode-notification.md#1600021-跨设备通信超时) | Distributed operation timed out. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1600010](../errorcode-notification.md#1600010-分布式操作失败) |
+| [1600021](../errorcode-notification.md#1600021-跨设备通信超时) |
 
 **示例**
 
@@ -83,4 +83,3 @@ notificationSubscribe.distributeOperation(hashcode, operationInfo).then(() => {
   console.error(`distributeOperation fail, code is ${error.code}, message is ${error.message}`);
 });
 ```
-

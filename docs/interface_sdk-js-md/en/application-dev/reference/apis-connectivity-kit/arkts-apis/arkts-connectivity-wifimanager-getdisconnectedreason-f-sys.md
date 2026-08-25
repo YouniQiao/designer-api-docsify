@@ -14,11 +14,11 @@ function getDisconnectedReason(): DisconnectedReason
 
 Obtain the latest disconnected reason.
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
-
-<!--Device-wifiManager-function getDisconnectedReason(): DisconnectedReason--><!--Device-wifiManager-function getDisconnectedReason(): DisconnectedReason-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -26,17 +26,17 @@ Obtain the latest disconnected reason.
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| DisconnectedReason | Returns the latest disconnected reason. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DisconnectedReason](arkts-connectivity-wifimanager-disconnectedreason-e-sys.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
 
 **Examples**
 
@@ -50,4 +50,3 @@ try {
   console.error("failed:" + JSON.stringify(error));
 }
 ```
-

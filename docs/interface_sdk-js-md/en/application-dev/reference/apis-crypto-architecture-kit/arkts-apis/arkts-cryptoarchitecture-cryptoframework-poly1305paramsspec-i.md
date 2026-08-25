@@ -16,9 +16,9 @@ Encapsulates the parameters for encryption or decryption using the ChaCha20-Poly
 
 **Inheritance/Implementation:** Poly1305ParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)
 
-**Since:** 23
+**Since:** 22
 
-<!--Device-cryptoFramework-interface Poly1305ParamsSpec--><!--Device-cryptoFramework-interface Poly1305ParamsSpec-End-->
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
 
@@ -38,11 +38,11 @@ Additional authenticated data.
 
 **Type:** DataBlob
 
-**Since:** 23
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
-<!--Device-Poly1305ParamsSpec-aad: DataBlob--><!--Device-Poly1305ParamsSpec-aad: DataBlob-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
 
@@ -56,11 +56,11 @@ Authentication tag, which is of 16 bytes.
 
 **Type:** DataBlob
 
-**Since:** 23
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
-<!--Device-Poly1305ParamsSpec-authTag: DataBlob--><!--Device-Poly1305ParamsSpec-authTag: DataBlob-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
 
@@ -74,11 +74,10 @@ Nonce (passed as the **iv** field), which is of 12 bytes.
 
 **Type:** DataBlob
 
-**Since:** 23
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
-<!--Device-Poly1305ParamsSpec-iv: DataBlob--><!--Device-Poly1305ParamsSpec-iv: DataBlob-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
-

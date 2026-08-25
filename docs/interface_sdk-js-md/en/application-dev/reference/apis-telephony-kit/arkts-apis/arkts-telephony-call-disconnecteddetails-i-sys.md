@@ -2,9 +2,9 @@
 
 Defines the call disconnection cause.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-call-export interface DisconnectedDetails--><!--Device-call-export interface DisconnectedDetails-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -26,9 +26,9 @@ Call ending message.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedDetails-message: string--><!--Device-DisconnectedDetails-message: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -44,11 +44,10 @@ Defines the call disconnection cause.
 
 **Type:** DisconnectedReason
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-DisconnectedDetails-reason: DisconnectedReason--><!--Device-DisconnectedDetails-reason: DisconnectedReason-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
-

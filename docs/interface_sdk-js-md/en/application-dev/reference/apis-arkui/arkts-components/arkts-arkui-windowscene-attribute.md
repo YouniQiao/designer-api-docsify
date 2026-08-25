@@ -6,7 +6,7 @@ Defines the attribute functions of WindowScene.@extends CommonMethod&lt;WindowSc
 
 **Since:** 10
 
-<!--Device-unnamed-declare class WindowSceneAttribute--><!--Device-unnamed-declare class WindowSceneAttribute-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,4 +16,3 @@ Defines the attribute functions of WindowScene.@extends CommonMethod&lt;WindowSc
 
 ```TypeScript
 ```
-

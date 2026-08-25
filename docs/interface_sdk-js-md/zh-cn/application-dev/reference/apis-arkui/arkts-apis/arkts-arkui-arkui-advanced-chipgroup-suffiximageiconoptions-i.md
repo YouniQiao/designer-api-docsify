@@ -6,7 +6,7 @@
 
 **起始版本：** 14
 
-<!--Device-unnamed-export interface SuffixImageIconOptions--><!--Device-unnamed-export interface SuffixImageIconOptions-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,6 +15,24 @@
 ```TypeScript
 import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
 ```
+
+## action
+
+```TypeScript
+action?: VoidCallback
+```
+
+后缀图标响应事件，用户点击后缀图标时触发回调。当需要为后缀图标添加自定义交互功能时设置此参数，如执行搜索、打开菜单、删除项等操作。值为undefined时，无后缀图标响应事件。
+
+**起始版本：** 14
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityDescription
 
@@ -28,11 +46,11 @@ accessibilityDescription?: ResourceStr
 
 **起始版本：** 14
 
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SuffixImageIconOptions-accessibilityDescription?: ResourceStr--><!--Device-SuffixImageIconOptions-accessibilityDescription?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,11 +68,11 @@ accessibilityLevel?: string
 
 **起始版本：** 14
 
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SuffixImageIconOptions-accessibilityLevel?: string--><!--Device-SuffixImageIconOptions-accessibilityLevel?: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,11 +88,11 @@ accessibilityText?: ResourceStr
 
 **起始版本：** 14
 
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SuffixImageIconOptions-accessibilityText?: ResourceStr--><!--Device-SuffixImageIconOptions-accessibilityText?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,17 +102,14 @@ accessibilityText?: ResourceStr
 action?: VoidCallback
 ```
 
-后缀图标响应事件，用户点击后缀图标时触发回调。当需要为后缀图标添加自定义交互功能时设置此参数，如执行搜索、打开菜单、删除项等操作。值为undefined时，无后缀图标响应事件。
+后缀图标响应事件。值为undefined时，无后缀图标响应事件。
 
 **类型：** VoidCallback
 
-**起始版本：** 14
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SuffixImageIconOptions-action?: VoidCallback--><!--Device-SuffixImageIconOptions-action?: VoidCallback-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

@@ -8,15 +8,14 @@ Indicates the event type of bundle change
 
 **Since:** 9
 
-<!--Device-bundleMonitor-type BundleChangedEvent = 'add' | 'update' | 'remove'--><!--Device-bundleMonitor-type BundleChangedEvent = 'add' | 'update' | 'remove'-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
 
-| Type | Description |
-| --- | --- |
-| 'add' |  |
-| 'update' |  |
-| 'remove' |  |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| 'add' |
+| 'update' |
+| 'remove' |

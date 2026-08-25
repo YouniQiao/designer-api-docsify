@@ -15,25 +15,25 @@ function removeStartupTaskResult(startupTask: string): void
 Removes the initialization result of a startup task or .so file preloading task.  
 - If a startup task name is passed, the initialization result of that startup task is removed. - If a .so file is passed, the .so file is set to the unloaded state, but the loaded .so file in the cache is not removed.
 
-**Since:** 23
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-startupManager-function removeStartupTaskResult(startupTask: string): void--><!--Device-startupManager-function removeStartupTaskResult(startupTask: string): void-End-->
 
 **System capability:** SystemCapability.Ability.AppStartup
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| startupTask | string | Yes | Name of the [StartupTask](../../apis-default/arkts-apis/arkts-app-appstartup-startuptask-startuptask-c.md) or name of the .so file to be preloaded. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| startupTask | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -73,4 +73,3 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
-

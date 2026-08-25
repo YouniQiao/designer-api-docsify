@@ -4,7 +4,7 @@ Describes the type of split ratio preference.@enum { number }
 
 **Since:** 26.0.0
 
-<!--Device-window-enum SplitRatioPreference--><!--Device-window-enum SplitRatioPreference-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -18,9 +18,9 @@ Equal split ratio preference of the window.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-SplitRatioPreference-EQUAL = 0--><!--Device-SplitRatioPreference-EQUAL = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -34,9 +34,9 @@ Set primary split window to a larger split ratio.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-SplitRatioPreference-PRIMARY_DOMINANT = 1--><!--Device-SplitRatioPreference-PRIMARY_DOMINANT = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -50,9 +50,8 @@ Set secondary split window to a larger split ratio.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SplitRatioPreference-SECONDARY_DOMINANT = 2--><!--Device-SplitRatioPreference-SECONDARY_DOMINANT = 2-End-->
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
-

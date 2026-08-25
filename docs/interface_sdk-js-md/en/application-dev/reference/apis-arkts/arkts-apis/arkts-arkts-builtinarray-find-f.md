@@ -16,26 +16,24 @@ Returns the value of the first element in the array where predicate is true, and
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function find(self: FixedArray<boolean>, predicate: (value: boolean, index: int, array: FixedArray<boolean>)    => boolean): Boolean | undefined--><!--Device-unnamed-export function find(self: FixedArray<boolean>, predicate: (value: boolean, index: int, array: FixedArray<boolean>)    => boolean): Boolean | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;boolean&gt; | Yes | The array to operate `find` on. |
-| predicate | (value: boolean, index: int, array: FixedArray&lt;boolean&gt;)     =&gt; boolean | Yes | A function to execute on each value in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;boolean & gt; | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: boolean, index: int, array: FixedArray & lt;boolean & gt;)     = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Boolean \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Boolean \| undefined |
 
 
 ## find
@@ -49,26 +47,24 @@ Returns the value of the first element in the array where predicate is true, and
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function find(self: FixedArray<byte>, predicate: (value: byte, index: int, array: FixedArray<byte>)     => boolean): Byte | undefined--><!--Device-unnamed-export function find(self: FixedArray<byte>, predicate: (value: byte, index: int, array: FixedArray<byte>)     => boolean): Byte | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;byte&gt; | Yes | The array to operate `find` on. |
-| predicate | (value: byte, index: int, array: FixedArray&lt;byte&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;byte & gt; | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: byte, index: int, array: FixedArray & lt;byte & gt;)      = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Byte \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Byte \| undefined |
 
 
 ## find
@@ -82,26 +78,24 @@ Returns the value of the first element in the array where predicate is true, and
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function find(self: FixedArray<short>, predicate: (value: short, index: int, array: FixedArray<short>)     => boolean): Short | undefined--><!--Device-unnamed-export function find(self: FixedArray<short>, predicate: (value: short, index: int, array: FixedArray<short>)     => boolean): Short | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;short&gt; | Yes | The array to operate `find` on. |
-| predicate | (value: short, index: int, array: FixedArray&lt;short&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;short & gt; | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: short, index: int, array: FixedArray & lt;short & gt;)      = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Short \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Short \| undefined |
 
 
 ## find
@@ -115,26 +109,24 @@ Returns the value of the first element in the array where predicate is true, and
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function find(self: FixedArray<int>, predicate: (value: int, index: int, array: FixedArray<int>)     => boolean): Int | undefined--><!--Device-unnamed-export function find(self: FixedArray<int>, predicate: (value: int, index: int, array: FixedArray<int>)     => boolean): Int | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;int&gt; | Yes | The array to operate `find` on. |
-| predicate | (value: int, index: int, array: FixedArray&lt;int&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;int & gt; | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: int, index: int, array: FixedArray & lt;int & gt;)      = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Int \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Int \| undefined |
 
 
 ## find
@@ -148,26 +140,24 @@ Returns the value of the first element in the array where predicate is true, and
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function find(self: FixedArray<long>, predicate: (value: long, index: int, array: FixedArray<long>)     => boolean): Long | undefined--><!--Device-unnamed-export function find(self: FixedArray<long>, predicate: (value: long, index: int, array: FixedArray<long>)     => boolean): Long | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;long&gt; | Yes | The array to operate `find` on. |
-| predicate | (value: long, index: int, array: FixedArray&lt;long&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;long & gt; | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: long, index: int, array: FixedArray & lt;long & gt;)      = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Long \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Long \| undefined |
 
 
 ## find
@@ -181,26 +171,24 @@ Returns the value of the first element in the array where predicate is true, and
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function find(self: FixedArray<float>, predicate: (value: float, index: int, array: FixedArray<float>)     => boolean): Float | undefined--><!--Device-unnamed-export function find(self: FixedArray<float>, predicate: (value: float, index: int, array: FixedArray<float>)     => boolean): Float | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;float&gt; | Yes | The array to operate `find` on. |
-| predicate | (value: float, index: int, array: FixedArray&lt;float&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;float & gt; | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: float, index: int, array: FixedArray & lt;float & gt;)      = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Float \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Float \| undefined |
 
 
 ## find
@@ -214,26 +202,24 @@ Returns the value of the first element in the array where predicate is true, and
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function find(self: FixedArray<double>, predicate: (value: double, index: int, array: FixedArray<double>)     => boolean): Double | undefined--><!--Device-unnamed-export function find(self: FixedArray<double>, predicate: (value: double, index: int, array: FixedArray<double>)     => boolean): Double | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;double&gt; | Yes | The array to operate `find` on. |
-| predicate | (value: double, index: int, array: FixedArray&lt;double&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;double & gt; | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: double, index: int, array: FixedArray & lt;double & gt;)      = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Double \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Double \| undefined |
 
 
 ## find
@@ -247,24 +233,21 @@ Returns the value of the first element in the array where predicate is true, and
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function find(self: FixedArray<char>, predicate: (value: char, index: int, array: FixedArray<char>)     => boolean): Char | undefined--><!--Device-unnamed-export function find(self: FixedArray<char>, predicate: (value: char, index: int, array: FixedArray<char>)     => boolean): Char | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| self | FixedArray&lt;char&gt; | Yes | The array to operate `find` on. |
-| predicate | (value: char, index: int, array: FixedArray&lt;char&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| self | FixedArray & lt;char & gt; | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: char, index: int, array: FixedArray & lt;char & gt;)      = & gt; boolean | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Char \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Char \| undefined |

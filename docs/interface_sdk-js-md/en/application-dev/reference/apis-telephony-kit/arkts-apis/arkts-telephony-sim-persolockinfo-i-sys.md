@@ -2,9 +2,9 @@
 
 Defines the personalized lock information.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-sim-export interface PersoLockInfo--><!--Device-sim-export interface PersoLockInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -26,9 +26,9 @@ Indicates the personalized lock type.
 
 **Type:** [PersoLockType](arkts-telephony-sim-persolocktype-e-sys.md)
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-PersoLockInfo-lockType: PersoLockType--><!--Device-PersoLockInfo-lockType: PersoLockType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -44,11 +44,10 @@ Indicates the password.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-PersoLockInfo-password: string--><!--Device-PersoLockInfo-password: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
-

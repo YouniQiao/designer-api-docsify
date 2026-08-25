@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-<!--Device-print-enum DocFlavor--><!--Device-print-enum DocFlavor-End-->
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -18,9 +18,9 @@ FILE_DESCRIPTOR = 0
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-DocFlavor-FILE_DESCRIPTOR = 0--><!--Device-DocFlavor-FILE_DESCRIPTOR = 0-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -34,9 +34,8 @@ BYTES = 1
 
 **起始版本：** 23
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DocFlavor-BYTES = 1--><!--Device-DocFlavor-BYTES = 1-End-->
-
 **系统能力：** SystemCapability.Print.PrintFramework
-

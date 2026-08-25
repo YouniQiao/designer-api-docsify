@@ -2,9 +2,9 @@
 
 Before a card with tags is read or written, **[TagInfo](#taginfo)** must be obtained to determine the tag technologies supported by the card. In this way, the application can invoke the correct API to communicate with the card.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-tag-export interface TagInfo--><!--Device-tag-export interface TagInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -26,13 +26,13 @@ Supported profiles.Note: This parameter is supported since API version 7 and dep
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [technology](#technology)
 
 **Required permissions:** ohos.permission.NFC_TAG
-
-<!--Device-TagInfo-supportedProfiles: number[]--><!--Device-TagInfo-supportedProfiles: number[]-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -44,15 +44,15 @@ technology: int[]
 
 Supported tag technologies. Each number is a constant indicating the supported technology.
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TagInfo-technology: int[]--><!--Device-TagInfo-technology: int[]-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -64,15 +64,14 @@ uid: int[]
 
 Tag unique identifier (UID), which consists of hexadecimal numbers ranging from **0x00** to **0xFF**.
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-TagInfo-uid: int[]--><!--Device-TagInfo-uid: int[]-End-->
-
 **System capability:** SystemCapability.Communication.NFC.Tag
-

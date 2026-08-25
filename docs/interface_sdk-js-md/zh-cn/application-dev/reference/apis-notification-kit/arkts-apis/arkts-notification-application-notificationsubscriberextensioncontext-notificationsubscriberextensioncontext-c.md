@@ -4,11 +4,11 @@ NotificationSubscriberExtensionContext模块提供通知订阅者扩展能力。
 
 **继承/实现关系：** NotificationSubscriberExtensionContext extends ExtensionContext
 
-**起始版本：** 23
+**起始版本：** 22
+
+**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-unnamed-export default class NotificationSubscriberExtensionContext--><!--Device-unnamed-export default class NotificationSubscriberExtensionContext-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -17,4 +17,3 @@ NotificationSubscriberExtensionContext模块提供通知订阅者扩展能力。
 ```TypeScript
 import { NotificationSubscriberExtensionContext } from '@kit.NotificationKit';
 ```
-

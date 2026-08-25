@@ -9,12 +9,14 @@ import { contact } from '@kit.ContactsKit';
 ## hasMatchedCallLog
 
 ```TypeScript
-function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: int): Promise<boolean>
+function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: number): Promise<boolean>
 ```
 
 检查是否有符合条件的通话记录，默认查询6小时以内的通话记录，仅针对运营商通话。使用Promise异步回调。
 
 **起始版本：** 24
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **需要权限：** ohos.permission.CHECK_CALL_LOG
 
@@ -22,31 +24,29 @@ function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: i
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
-<!--Device-contact-function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: int): Promise<boolean>--><!--Device-contact-function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: int): Promise<boolean>-End-->
-
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文Context。 |
-| phoneNumber | string | 是 | 联系人的电话号码。 |
-| minDuration | int | 是 | 最短通话时长，单位为秒，取值范围大于0。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
+| phoneNumber | string | 是 |
+| minDuration | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回是否有符合条件的通话记录，true代表有符合条件的，false代表没有。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [16700001](../errorcode-contacts.md#16700001-系统内部错误) | General error. |
-| [16700002](../errorcode-contacts.md#16700002-参数检查失败) | Invalid parameter value. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [16700001](../errorcode-contacts.md#16700001-系统内部错误) |
+| [16700002](../errorcode-contacts.md#16700002-参数检查失败) |
 
 **示例**
 
@@ -90,12 +90,14 @@ contact.hasMatchedCallLog(context, phoneNumber, minDuration).then((hasMatch:bool
 ## hasMatchedCallLog
 
 ```TypeScript
-function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: int, withinTime: int): Promise<boolean>
+function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: number, withinTime: number): Promise<boolean>
 ```
 
 检查是否有符合条件的通话记录，仅针对运营商通话。使用Promise异步回调。
 
 **起始版本：** 24
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **需要权限：** ohos.permission.CHECK_CALL_LOG
 
@@ -103,34 +105,31 @@ function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: i
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
-<!--Device-contact-function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: int, withinTime: int): Promise<boolean>--><!--Device-contact-function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: int, withinTime: int): Promise<boolean>-End-->
-
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文Context。 |
-| phoneNumber | string | 是 | 联系人的电话号码。 |
-| minDuration | int | 是 | 最短通话时长，单位为秒，取值范围大于0。 |
-| withinTime | int | 是 | 表示从当前时间开始计算，通话的起始时间和结束时间应在此时间范围内，单位为秒。最多可设置6小时，超过6小时的默认以6小时查询。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
+| phoneNumber | string | 是 |
+| minDuration | int | 是 |
+| withinTime | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回是否有符合条件的通话记录，true代表有符合条件的，false代表没有。 |
+| 类型 |
+| --- |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [16700001](../errorcode-contacts.md#16700001-系统内部错误) | General error. |
-| [16700002](../errorcode-contacts.md#16700002-参数检查失败) | Invalid parameter value. |
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [16700001](../errorcode-contacts.md#16700001-系统内部错误) |
+| [16700002](../errorcode-contacts.md#16700002-参数检查失败) |
 
 **示例**
 
 参见 [hasMatchedCallLog](#hasmatchedcalllog)
-

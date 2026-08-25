@@ -2,9 +2,9 @@
 
 打印错误代码的枚举。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-print-enum PrintErrorCode--><!--Device-print-enum PrintErrorCode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -16,9 +16,9 @@ E_PRINT_NONE = 0
 
 表示没有错误。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-PrintErrorCode-E_PRINT_NONE = 0--><!--Device-PrintErrorCode-E_PRINT_NONE = 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -30,9 +30,9 @@ E_PRINT_NO_PERMISSION = 201
 
 表示没有许可。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-PrintErrorCode-E_PRINT_NO_PERMISSION = 201--><!--Device-PrintErrorCode-E_PRINT_NO_PERMISSION = 201-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -44,9 +44,9 @@ E_PRINT_INVALID_PARAMETER = 401
 
 表示无效的参数。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-PrintErrorCode-E_PRINT_INVALID_PARAMETER = 401--><!--Device-PrintErrorCode-E_PRINT_INVALID_PARAMETER = 401-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -58,9 +58,9 @@ E_PRINT_GENERIC_FAILURE = 13100001
 
 表示一般打印失败。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-PrintErrorCode-E_PRINT_GENERIC_FAILURE = 13100001--><!--Device-PrintErrorCode-E_PRINT_GENERIC_FAILURE = 13100001-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -72,9 +72,9 @@ E_PRINT_RPC_FAILURE = 13100002
 
 表示RPC失败。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-PrintErrorCode-E_PRINT_RPC_FAILURE = 13100002--><!--Device-PrintErrorCode-E_PRINT_RPC_FAILURE = 13100002-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -86,9 +86,9 @@ E_PRINT_SERVER_FAILURE = 13100003
 
 表示打印服务失败。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-PrintErrorCode-E_PRINT_SERVER_FAILURE = 13100003--><!--Device-PrintErrorCode-E_PRINT_SERVER_FAILURE = 13100003-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -100,9 +100,9 @@ E_PRINT_INVALID_EXTENSION = 13100004
 
 表示打印扩展无效。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-PrintErrorCode-E_PRINT_INVALID_EXTENSION = 13100004--><!--Device-PrintErrorCode-E_PRINT_INVALID_EXTENSION = 13100004-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -114,9 +114,9 @@ E_PRINT_INVALID_PRINTER = 13100005
 
 表示打印机无效。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-PrintErrorCode-E_PRINT_INVALID_PRINTER = 13100005--><!--Device-PrintErrorCode-E_PRINT_INVALID_PRINTER = 13100005-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -128,9 +128,9 @@ E_PRINT_INVALID_PRINT_JOB = 13100006
 
 表示打印任务无效。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-PrintErrorCode-E_PRINT_INVALID_PRINT_JOB = 13100006--><!--Device-PrintErrorCode-E_PRINT_INVALID_PRINT_JOB = 13100006-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -142,9 +142,9 @@ E_PRINT_FILE_IO = 13100007
 
 表示文件输入/输出错误。
 
-**起始版本：** 23
+**起始版本：** 14
 
-<!--Device-PrintErrorCode-E_PRINT_FILE_IO = 13100007--><!--Device-PrintErrorCode-E_PRINT_FILE_IO = 13100007-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -156,9 +156,9 @@ E_PRINT_TOO_MANY_FILES = 13100010
 
 表示文件数量超过上限，当前上限99个。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-PrintErrorCode-E_PRINT_TOO_MANY_FILES = 13100010--><!--Device-PrintErrorCode-E_PRINT_TOO_MANY_FILES = 13100010-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -173,9 +173,9 @@ E_PRINT_SMB_LOGIN_LOCKOUT = 13100012
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-PrintErrorCode-E_PRINT_SMB_LOGIN_LOCKOUT = 13100012--><!--Device-PrintErrorCode-E_PRINT_SMB_LOGIN_LOCKOUT = 13100012-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -190,9 +190,9 @@ E_PRINT_SMB_CONNECTION_FAILURE = 13100013
 
 **起始版本：** 24
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
-<!--Device-PrintErrorCode-E_PRINT_SMB_CONNECTION_FAILURE = 13100013--><!--Device-PrintErrorCode-E_PRINT_SMB_CONNECTION_FAILURE = 13100013-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -207,9 +207,8 @@ E_PRINT_SMB_INVALID_CREDENTIALS = 13100014
 
 **起始版本：** 24
 
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-PrintErrorCode-E_PRINT_SMB_INVALID_CREDENTIALS = 13100014--><!--Device-PrintErrorCode-E_PRINT_SMB_INVALID_CREDENTIALS = 13100014-End-->
-
 **系统能力：** SystemCapability.Print.PrintFramework
-

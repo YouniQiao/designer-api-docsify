@@ -4,11 +4,11 @@
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 7
 
 **替代接口：** [notification/notification](arkts-notification.md)
-
-<!--Device-unnamed-declare class Notification--><!--Device-unnamed-declare class Notification-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -28,19 +28,19 @@ static show(options?: ShowNotificationOptions): void
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 7
 
 **替代接口：** [notification/notification](arkts-notification.md)
-
-<!--Device-Notification-static show(options?: ShowNotificationOptions): void--><!--Device-Notification-static show(options?: ShowNotificationOptions): void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [ShowNotificationOptions](arkts-notification-system-notification-shownotificationoptions-i.md) | 否 | 通知标题。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [ShowNotificationOptions](arkts-notification-system-notification-shownotificationoptions-i.md) | 否 |
 
 **示例**
 
@@ -59,4 +59,3 @@ let notificationObj: notification = {
   }
 }
 ```
-

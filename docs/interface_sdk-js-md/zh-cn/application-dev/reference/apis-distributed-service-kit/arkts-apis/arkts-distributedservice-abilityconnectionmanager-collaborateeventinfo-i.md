@@ -2,9 +2,9 @@
 
 协同事件信息。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-abilityConnectionManager-interface CollaborateEventInfo--><!--Device-abilityConnectionManager-interface CollaborateEventInfo-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -24,11 +24,11 @@ eventMsg?: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-CollaborateEventInfo-eventMsg?: string--><!--Device-CollaborateEventInfo-eventMsg?: string-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -42,11 +42,10 @@ eventType: CollaborateEventType
 
 **类型：** [CollaborateEventType](arkts-distributedservice-abilityconnectionmanager-collaborateeventtype-e.md)
 
-**起始版本：** 23
+**起始版本：** 18
+
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-CollaborateEventInfo-eventType: CollaborateEventType--><!--Device-CollaborateEventInfo-eventType: CollaborateEventType-End-->
-
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
-

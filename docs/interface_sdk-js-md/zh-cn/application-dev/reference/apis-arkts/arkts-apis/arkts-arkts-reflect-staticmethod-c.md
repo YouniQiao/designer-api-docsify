@@ -6,9 +6,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-reflect-class StaticMethod--><!--Device-reflect-class StaticMethod-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -27,25 +25,23 @@ equals(other: StaticMethod): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StaticMethod-equals(other: StaticMethod): boolean--><!--Device-StaticMethod-equals(other: StaticMethod): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | [StaticMethod](arkts-arkts-reflect-staticmethod-c.md) | 是 | 用于比较的另一个静态方法对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | [StaticMethod](arkts-arkts-reflect-staticmethod-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果两个对象指向同一方法则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## invoke
 
@@ -57,25 +53,23 @@ invoke(args?: FixedArray<Any>): Any
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StaticMethod-invoke(args?: FixedArray<Any>): Any--><!--Device-StaticMethod-invoke(args?: FixedArray<Any>): Any-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| args | FixedArray&lt;Any&gt; | 否 | 方法参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | FixedArray & lt;Any & gt; | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Any | 方法的返回值。对于`void`返回`undefined`。 |
+| 类型 |
+| --- |
+| Any |
 
 ## isAsyn
 
@@ -87,19 +81,17 @@ isAsyn(): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StaticMethod-isAsyn(): boolean--><!--Device-StaticMethod-isAsyn(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果是异步方法则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isGetter
 
@@ -111,19 +103,17 @@ isGetter(): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StaticMethod-isGetter(): boolean--><!--Device-StaticMethod-isGetter(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果是getter访问器则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isSetter
 
@@ -135,17 +125,14 @@ isSetter(): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-StaticMethod-isSetter(): boolean--><!--Device-StaticMethod-isSetter(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果是setter访问器则返回true，否则返回false。 |
-
+| 类型 |
+| --- |
+| boolean |

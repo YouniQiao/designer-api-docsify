@@ -16,13 +16,13 @@ Obtains the MAC address of a Wi-Fi device. Wi-Fi must be enabled.<p>The MAC addr
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 9
 
 **Substitutes:** [getDeviceMacAddress](arkts-connectivity-wifimanager-getdevicemacaddress-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_LOCAL_MAC and ohos.permission.GET_WIFI_INFO
-
-<!--Device-wifi-function getDeviceMacAddress(): string[]--><!--Device-wifi-function getDeviceMacAddress(): string[]-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -30,9 +30,9 @@ Obtains the MAC address of a Wi-Fi device. Wi-Fi must be enabled.<p>The MAC addr
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| string[] | Returns the MAC address of the Wi-Fi device. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string[] |
 
 **Examples**
 
@@ -46,4 +46,3 @@ try {
     console.error("failed:" + JSON.stringify(error));
 }
 ```
-

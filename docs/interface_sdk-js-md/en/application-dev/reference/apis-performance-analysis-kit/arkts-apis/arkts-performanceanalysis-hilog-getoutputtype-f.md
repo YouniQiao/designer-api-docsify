@@ -16,15 +16,14 @@ Returns the current output type of hilog.
 
 **Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-hilog-function getOutputType(): OutputType--><!--Device-hilog-function getOutputType(): OutputType-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [OutputType](arkts-performanceanalysis-hilog-outputtype-e.md) | current output type for hilog. |
-
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [OutputType](arkts-performanceanalysis-hilog-outputtype-e.md) |

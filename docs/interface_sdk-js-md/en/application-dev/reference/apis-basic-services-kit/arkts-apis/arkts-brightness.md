@@ -5,9 +5,9 @@ The **brightness** module provides an API for setting the screen brightness.
 > **NOTE：**&gt;
 > - The APIs provided by this module are system APIs.
 
-**Since:** 23
+**Since:** 7
 
-<!--Device-unnamed-declare namespace brightness--><!--Device-unnamed-declare namespace brightness-End-->
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager
 
@@ -24,9 +24,8 @@ import { brightness } from '@kit.BasicServicesKit';
 <!--Del-->
 ### Functions(System API)
 
-| Name | Description |
-| --- | --- |
-| [setValue](arkts-basicservices-brightness-setvalue-f-sys.md) | Sets the screen brightness. |
-| [setValue](arkts-basicservices-brightness-setvalue-f-sys.md) | Sets the screen brightness. This API is used for continuous brightness adjustment. To achieve a better performance, set **continuous** to **true** when you start, and set it to **false** after you finish. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [setValue](arkts-basicservices-brightness-setvalue-f-sys.md) |
+| [setValue](arkts-basicservices-brightness-setvalue-f-sys.md) |
 <!--DelEnd-->
-

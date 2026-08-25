@@ -4,7 +4,7 @@ Enumerates modes in which a popup responds when the keyboard is displayed.
 
 **Since:** 12
 
-<!--Device-unnamed-declare enum KeyboardAvoidMode--><!--Device-unnamed-declare enum KeyboardAvoidMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Automatically avoids the soft keyboard and compresses the height when reaching t
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyboardAvoidMode-DEFAULT = 0--><!--Device-KeyboardAvoidMode-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ Does not avoid the soft keyboard.
 
 **Since:** 12
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-KeyboardAvoidMode-NONE = 1--><!--Device-KeyboardAvoidMode-NONE = 1-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

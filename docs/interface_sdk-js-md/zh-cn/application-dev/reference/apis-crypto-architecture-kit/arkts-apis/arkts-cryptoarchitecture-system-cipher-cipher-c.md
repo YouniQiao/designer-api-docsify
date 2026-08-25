@@ -4,11 +4,11 @@
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 9
 
 **替代接口：** Cipher
-
-<!--Device-unnamed-export default class Cipher--><!--Device-unnamed-export default class Cipher-End-->
 
 **系统能力：** SystemCapability.Security.Cipher
 
@@ -28,19 +28,19 @@ static aes(options: CipherAesOptions): void
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 9
 
 **替代接口：** Cipher
-
-<!--Device-Cipher-static aes(options: CipherAesOptions): void--><!--Device-Cipher-static aes(options: CipherAesOptions): void-End-->
 
 **系统能力：** SystemCapability.Security.Cipher
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [CipherAesOptions](arkts-cryptoarchitecture-system-cipher-cipheraesoptions-i.md) | 是 | AES 加解密参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [CipherAesOptions](arkts-cryptoarchitecture-system-cipher-cipheraesoptions-i.md) | 是 |
 
 **示例**
 
@@ -101,19 +101,19 @@ static rsa(options: CipherRsaOptions): void
 
 **起始版本：** 3
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
+
 **废弃版本：** 9
 
 **替代接口：** Cipher
-
-<!--Device-Cipher-static rsa(options: CipherRsaOptions): void--><!--Device-Cipher-static rsa(options: CipherRsaOptions): void-End-->
 
 **系统能力：** SystemCapability.Security.Cipher
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [CipherRsaOptions](arkts-cryptoarchitecture-system-cipher-cipherrsaoptions-i.md) | 是 | RSA 加解密参数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [CipherRsaOptions](arkts-cryptoarchitecture-system-cipher-cipherrsaoptions-i.md) | 是 |
 
 **示例**
 
@@ -177,4 +177,3 @@ export default {
    }
 }
 ```
-

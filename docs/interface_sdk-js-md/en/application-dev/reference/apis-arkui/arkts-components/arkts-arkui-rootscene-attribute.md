@@ -6,9 +6,9 @@ Defines the attribute functions of RootScene.@extends CommonMethod&lt;RootSceneA
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
-<!--Device-unnamed-declare class RootSceneAttribute--><!--Device-unnamed-declare class RootSceneAttribute-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,4 +18,3 @@ Defines the attribute functions of RootScene.@extends CommonMethod&lt;RootSceneA
 
 ```TypeScript
 ```
-

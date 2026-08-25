@@ -8,11 +8,10 @@ System notification button.
 
 **Since:** 23
 
-<!--Device-notificationManager-export type NotificationIconButton = _NotificationIconButton--><!--Device-notificationManager-export type NotificationIconButton = _NotificationIconButton-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
 
 **Property type:** _NotificationIconButton
-

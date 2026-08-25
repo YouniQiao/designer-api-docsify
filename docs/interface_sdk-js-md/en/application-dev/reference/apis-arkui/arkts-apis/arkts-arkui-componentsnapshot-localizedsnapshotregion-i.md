@@ -1,12 +1,17 @@
 # LocalizedSnapshotRegion
 
-Defines the extra options for snapshot taking, if this is used, the start and end will be assigned to left and right value according to the layout direction of node automatically.
+Defines the rectangular region for capturing the component snapshot, with coordinates adjusted based on the layout direction (LTR or RTL).
 
-**Since:** 23
+> **NOTE：**&gt;
+> Directly using **componentSnapshot** can lead to the issue of
+> [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain a
+> **UIContext** instance using **getUIContext()**, and then obtain the associated **componentSnapshot** object
+> using
+> [getComponentSnapshot](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot).
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**Since:** 15
 
-<!--Device-componentSnapshot-export interface LocalizedSnapshotRegion--><!--Device-componentSnapshot-export interface LocalizedSnapshotRegion-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,80 +24,140 @@ import { componentSnapshot } from '@kit.ArkUI';
 ## bottom
 
 ```TypeScript
-bottom: double
+bottom: number
 ```
 
-Bottom side position of Rectangle, in PX.
+Y-coordinate of the lower right corner of the rectangular region.Unit: px.Value range: [0, Component height].
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-LocalizedSnapshotRegion-bottom: double--><!--Device-LocalizedSnapshotRegion-bottom: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## end
 
 ```TypeScript
-end: double
+end: number
 ```
 
-End side position of Rectangle, in PX.
+For LTR layouts: X-coordinate of the lower right corner of the rectangular region.For RTL layouts: X-coordinate of the lower left corner of the rectangular region.Unit: px.Value range: [0, Component width].
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-LocalizedSnapshotRegion-end: double--><!--Device-LocalizedSnapshotRegion-end: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## start
 
 ```TypeScript
-start: double
+start: number
 ```
 
-Start side position of rectangle, in PX
+For LTR layouts: X-coordinate of the upper left corner of the rectangular region.For RTL layouts: X-coordinate of the upper right corner of the rectangular region.Unit: px.Value range: [0, Component width].
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-LocalizedSnapshotRegion-start: double--><!--Device-LocalizedSnapshotRegion-start: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## top
 
 ```TypeScript
-top: double
+top: number
 ```
 
-Top side position of rectangle, in PX
+For LTR layouts: Y-coordinate of the upper left corner of the rectangular region.For RTL layouts: Y-coordinate of the upper right corner of the rectangular region.Unit: px.Value range: [0, Component height].
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-LocalizedSnapshotRegion-top: double--><!--Device-LocalizedSnapshotRegion-top: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+
+@Entry
+@Component
+struct SnapshotExample {
+  @State pixmap: image.PixelMap | undefined = undefined
+
+  build() {
+    Column() {
+      Row() {
+        Column() {
+          TextClock()
+          Button("Button ABCDE").type(ButtonType.Normal)
+          Row() {
+            Checkbox()
+            Text("√")
+            Text(" | ")
+            Checkbox()
+            Text("×")
+          }.align(Alignment.Start)
+
+          TextInput()
+        }
+        .align(Alignment.Start)
+        .id("component1")
+        .width("600px")
+        .height("600px")
+        .borderRadius(6)
+        .borderWidth(2)
+        .borderColor(Color.Green)
+
+      }
+
+      Button("get capture")
+        .onClick(() => {
+          try {
+            let pixelmap = this.getUIContext().getComponentSnapshot().getSync("component1",
+              {
+                scale: 2,
+                waitUntilRenderFinished: true,
+                region: {
+                  start: 20,
+                  top: 20,
+                  end: 200,
+                  bottom: 240
+                }
+              })
+            this.pixmap = pixelmap
+          } catch (error) {
+            console.error(`getSync errorCode:${error.code} message:${error.message}`)
+          }
+        }).margin(10)
+      Image(this.pixmap).border({ color: Color.Black, width: 2 }).width("600px")
+    }.width("100%").align(Alignment.Center)
+  }
+}
+```

@@ -4,7 +4,6 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [CalendarPickerModifier](arkts-arkui-calendarpickermodifier-c.md) | Defines CalendarPicker Modifier@implements { CalendarPickerAttribute, AttributeModifier&lt;CalendarPickerAttribute&gt; } |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [CalendarPickerModifier](arkts-arkui-calendarpickermodifier-c.md) |

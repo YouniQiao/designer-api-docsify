@@ -21,24 +21,24 @@ function connectAbility(request: Want, options: ConnectOptions): number
 
 **起始版本：** 7
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
-<!--Device-featureAbility-function connectAbility(request: Want, options: ConnectOptions): number--><!--Device-featureAbility-function connectAbility(request: Want, options: ConnectOptions): number-End-->
+**模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| request | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 表示被连接的ServiceAbility。 |
-| options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | 是 | 表示连接回调函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| request | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
+| options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| number | 连接的ServiceAbility的ID(ID从0开始自增，每连接成功一次ID加1)。 |
+| 类型 |
+| --- |
+| number |
 
 **示例**
 
@@ -66,4 +66,3 @@ let connectId = featureAbility.connectAbility(
   },
 );
 ```
-

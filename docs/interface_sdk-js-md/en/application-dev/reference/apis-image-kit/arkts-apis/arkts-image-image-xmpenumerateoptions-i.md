@@ -4,7 +4,7 @@ Describes XMP enumerate option parameters.
 
 **Since:** 26.0.0
 
-<!--Device-image-interface XMPEnumerateOptions--><!--Device-image-interface XMPEnumerateOptions-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -26,9 +26,9 @@ The option that controls recursive enabling.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-XMPEnumerateOptions-isRecursive?: boolean--><!--Device-XMPEnumerateOptions-isRecursive?: boolean-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -44,9 +44,8 @@ Whether to return only qualifier data. <br>Default value:false.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-XMPEnumerateOptions-onlyQualifier?: boolean--><!--Device-XMPEnumerateOptions-onlyQualifier?: boolean-End-->
-
 **System capability:** SystemCapability.Multimedia.Image.Core
-

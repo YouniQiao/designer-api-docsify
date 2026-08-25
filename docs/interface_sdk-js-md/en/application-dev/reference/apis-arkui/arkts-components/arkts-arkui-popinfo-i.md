@@ -4,7 +4,7 @@ Provides the callback information returned when a page is popped out of the rout
 
 **Since:** 11
 
-<!--Device-unnamed-declare interface PopInfo--><!--Device-unnamed-declare interface PopInfo-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Information about the current page when a back action is performed. The value is
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PopInfo-info: NavPathInfo--><!--Device-PopInfo-info: NavPathInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ Result returned when a back action is performed. You must customize the object.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PopInfo-result: Object--><!--Device-PopInfo-result: Object-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -8,9 +8,9 @@ type ContinuousAuthStatusCallback = (isAuthPassed: boolean, authTrustLevel?: Use
 
 **起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
-<!--Device-companionDeviceAuth-type ContinuousAuthStatusCallback = (isAuthPassed: boolean, authTrustLevel?: UserAuth.AuthTrustLevel) => void--><!--Device-companionDeviceAuth-type ContinuousAuthStatusCallback = (isAuthPassed: boolean, authTrustLevel?: UserAuth.AuthTrustLevel) => void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -18,8 +18,7 @@ type ContinuousAuthStatusCallback = (isAuthPassed: boolean, authTrustLevel?: Use
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isAuthPassed | boolean | 是 | 认证是否通过。true表示伴随设备认证通过，用户身份已确认；false表示认证未通过，用户身份未确认或认证已失效。 |
-| authTrustLevel | UserAuth.AuthTrustLevel | 否 | 伴随设备当前能达到的最高认证可信等级。值为ATL1（10000）、ATL2（20000）、ATL3（30000）或ATL4 （40000），等级越高表示认证安全性越强。 <br>**说明**： <br>仅当isAuthPassed为true时提供此参数；不提供时默认为undefined。 <br>典型操作需要的身份认证可信等级，具体请参见 [认证可信等级划分原则](../../../security/UserAuthenticationKit/user-authentication-overview.md#生物认证可信等级划分原则)。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| isAuthPassed | boolean | 是 |
+| authTrustLevel | UserAuth.AuthTrustLevel | 否 |

@@ -14,11 +14,11 @@ function updateFormSize(formId: string, newDimension: formInfo.FormDimension, ne
 
 Updates the size of the widget.
 
-**Since:** 23
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
-
-<!--Device-formHost-function updateFormSize(formId: string, newDimension: formInfo.FormDimension, newRect: formInfo.Rect): void--><!--Device-formHost-function updateFormSize(formId: string, newDimension: formInfo.FormDimension, newRect: formInfo.Rect): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -26,21 +26,21 @@ Updates the size of the widget.
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| formId | string | Yes | Widget ID. |
-| newDimension | formInfo.FormDimension | Yes | Widget dimension. For example, **Dimension_1_2** indicates a 1 x 2 widget. |
-| newRect | formInfo.Rect | Yes | Widget position information, including the X and Y coordinates of the widget's top-left corner, as well as its width and height. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| formId | string | Yes |
+| newDimension | formInfo.FormDimension | Yes |
+| newRect | formInfo.Rect | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | caller is not system app. |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
-| [16501001](../errorcode-form.md#16501001-widget-id-not-exist) | The ID of the form to be operated does not exist. |
-| [16501012](../errorcode-form.md#16501012-incorrect-widget-dimension) | The dimension parameter is incorrect |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16501001](../errorcode-form.md#16501001-widget-id-not-exist) |
+| [16501012](../errorcode-form.md#16501012-incorrect-widget-dimension) |
 
 **Examples**
 
@@ -62,4 +62,3 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
-

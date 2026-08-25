@@ -4,7 +4,7 @@ TransformObject@interface TransformObject
 
 **Since:** 4
 
-<!--Device-unnamed-export interface TransformObject--><!--Device-unnamed-export interface TransformObject-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,22 +18,22 @@ Defines a 2D transformation, using a matrix of six values..
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-TransformObject-matrix(scaleX: number, skewX: number, skewY: number, scaleY: number, translateX: number, translateY: number): void--><!--Device-TransformObject-matrix(scaleX: number, skewX: number, skewY: number, scaleY: number, translateX: number, translateY: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| scaleX | number | Yes | the scale value for x-axis |
-| skewX | number | Yes | the skew value for y-axis |
-| skewY | number | Yes | the skew value for x-axis |
-| scaleY | number | Yes | the scale value for y-axis |
-| translateX | number | Yes | the translate value for x-axis |
-| translateY | number | Yes | the translate value for y-axis |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [scaleX](#scalex) | number | Yes |
+| [skewX](arkts-arkui-viewmodel-transformobject-i.md) | number | Yes |
+| [skewY](arkts-arkui-viewmodel-transformobject-i.md) | number | Yes |
+| [scaleY](#scaley) | number | Yes |
+| [translateX](#translatex) | number | Yes |
+| [translateY](#translatey) | number | Yes |
 
 ## matrix3d
 
@@ -62,32 +62,32 @@ Defines a 3D transformation using a 4x4 matrix of 16 values.
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-TransformObject-matrix3d(    n00: number,    n01: number,    n02: number,    n03: number,    n10: number,    n11: number,    n12: number,    n13: number,    n20: number,    n21: number,    n22: number,    n23: number,    n30: number,    n31: number,    n32: number,    n33: number,  ): void--><!--Device-TransformObject-matrix3d(    n00: number,    n01: number,    n02: number,    n03: number,    n10: number,    n11: number,    n12: number,    n13: number,    n20: number,    n21: number,    n22: number,    n23: number,    n30: number,    n31: number,    n32: number,    n33: number,  ): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| n00 | number | Yes | the value of the 0 row and 0 column of the 4x4 matrix |
-| n01 | number | Yes | the value of the 0 row and 1 column of the 4x4 matrix |
-| n02 | number | Yes | the value of the 0 row and 2 column of the 4x4 matrix |
-| n03 | number | Yes | the value of the 0 row and 3 column of the 4x4 matrix |
-| n10 | number | Yes | the value of the 1 row and 0 column of the 4x4 matrix |
-| n11 | number | Yes | the value of the 1 row and 1 column of the 4x4 matrix |
-| n12 | number | Yes | the value of the 1 row and 2 column of the 4x4 matrix |
-| n13 | number | Yes | the value of the 1 row and 3 column of the 4x4 matrix |
-| n20 | number | Yes | the value of the 2 row and 0 column of the 4x4 matrix |
-| n21 | number | Yes | the value of the 2 row and 1 column of the 4x4 matrix |
-| n22 | number | Yes | the value of the 2 row and 2 column of the 4x4 matrix |
-| n23 | number | Yes | the value of the 2 row and 3 column of the 4x4 matrix |
-| n30 | number | Yes | the value of the 3 row and 0 column of the 4x4 matrix |
-| n31 | number | Yes | the value of the 3 row and 1 column of the 4x4 matrix |
-| n32 | number | Yes | the value of the 3 row and 2 column of the 4x4 matrix |
-| n33 | number | Yes | the value of the 3 row and 3 column of the 4x4 matrix |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| n00 | number | Yes |
+| n01 | number | Yes |
+| n02 | number | Yes |
+| n03 | number | Yes |
+| n10 | number | Yes |
+| n11 | number | Yes |
+| n12 | number | Yes |
+| n13 | number | Yes |
+| n20 | number | Yes |
+| n21 | number | Yes |
+| n22 | number | Yes |
+| n23 | number | Yes |
+| n30 | number | Yes |
+| n31 | number | Yes |
+| n32 | number | Yes |
+| n33 | number | Yes |
 
 ## perspective
 
@@ -99,17 +99,17 @@ Defines a perspective view for the 3D transformation element.
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-TransformObject-perspective(verticalDistance: number): void--><!--Device-TransformObject-perspective(verticalDistance: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| verticalDistance | number | Yes | the vertical distance from the observation point to the component plane. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| verticalDistance | number | Yes |
 
 ## rotate
 
@@ -121,17 +121,17 @@ Define the 2D rotation and specify the angle in the parameters.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-TransformObject-rotate(angle: number): void--><!--Device-TransformObject-rotate(angle: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| angle | number | Yes | the rotate value for z-axis |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| angle | number | Yes |
 
 ## rotate3d
 
@@ -143,20 +143,20 @@ Defines a 3D transformation for rotating the X / Y / Z axes.
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-TransformObject-rotate3d(x: number, y: number, z: number, angle: number): void--><!--Device-TransformObject-rotate3d(x: number, y: number, z: number, angle: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | number | Yes | the vector value of the x-axis |
-| y | number | Yes | the vector value of the y-axis |
-| z | number | Yes | the vector value of the z-axis |
-| angle | number | Yes | the rotate value for x&y&z vector. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | number | Yes |
+| y | number | Yes |
+| z | number | Yes |
+| angle | number | Yes |
 
 ## rotateX
 
@@ -168,17 +168,17 @@ Defines 3D transformations for rotating of the X axes.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-TransformObject-rotateX(angle: number): void--><!--Device-TransformObject-rotateX(angle: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| angle | number | Yes | the scale value for x-axis |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| angle | number | Yes |
 
 ## rotateY
 
@@ -190,17 +190,17 @@ Defines 3D transformations for rotating of the Y axes.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-TransformObject-rotateY(angle: number): void--><!--Device-TransformObject-rotateY(angle: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| angle | number | Yes | the scale value for y-axis |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| angle | number | Yes |
 
 ## rotateZ
 
@@ -212,17 +212,17 @@ Defines 3D transformations for rotating of the Z axes.
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-TransformObject-rotateZ(angle: number): void--><!--Device-TransformObject-rotateZ(angle: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| angle | number | Yes | the scale value for z-axis |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| angle | number | Yes |
 
 ## scale
 
@@ -234,18 +234,18 @@ Defines 2D transformations for scaling of the X and Y axes
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-TransformObject-scale(x: number, y: number): void--><!--Device-TransformObject-scale(x: number, y: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | number | Yes | the scale value for x-axis |
-| y | number | Yes | the scale value for y-axis |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | number | Yes |
+| y | number | Yes |
 
 ## scale3d
 
@@ -257,19 +257,19 @@ Defines 3D transformations for scaling of the X / Y / Z axes
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-TransformObject-scale3d(x: number, y: number, z: number): void--><!--Device-TransformObject-scale3d(x: number, y: number, z: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | number | Yes | the scale value for x-axis |
-| y | number | Yes | the scale value for y-axis |
-| z | number | Yes | the scale value for z-axis |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | number | Yes |
+| y | number | Yes |
+| z | number | Yes |
 
 ## scaleX
 
@@ -281,17 +281,17 @@ Defines 2D transformations for scaling of the X axes
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-TransformObject-scaleX(x: number): void--><!--Device-TransformObject-scaleX(x: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | number | Yes | the scale value for x-axis |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | number | Yes |
 
 ## scaleY
 
@@ -303,17 +303,17 @@ Defines 2D transformations for scaling of the Y axes
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-TransformObject-scaleY(y: number): void--><!--Device-TransformObject-scaleY(y: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| y | number | Yes | the scale value for y-axis |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| y | number | Yes |
 
 ## scaleZ
 
@@ -325,17 +325,17 @@ Defines 3D transformations for scaling of the Z axes
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-TransformObject-scaleZ(z: number): void--><!--Device-TransformObject-scaleZ(z: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| z | number | Yes | the scale value for z-axis |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| z | number | Yes |
 
 ## skew
 
@@ -347,18 +347,18 @@ Defines the 2D skew transition along the X and Y axes.
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-TransformObject-skew(xAngle: number, yAngle: number): void--><!--Device-TransformObject-skew(xAngle: number, yAngle: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| xAngle | number | Yes | the angle of inclination along the x axis. |
-| yAngle | number | Yes | the angle of inclination along the y axis. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| xAngle | number | Yes |
+| yAngle | number | Yes |
 
 ## skewX
 
@@ -370,17 +370,17 @@ Defines the 2D skew transition along the X axes.
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-TransformObject-skewX(angle: number): void--><!--Device-TransformObject-skewX(angle: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| angle | number | Yes | the angle of inclination along the x axis. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| angle | number | Yes |
 
 ## skewY
 
@@ -392,17 +392,17 @@ Defines the 2D skew transition along the Y axes.
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-TransformObject-skewY(angle: number): void--><!--Device-TransformObject-skewY(angle: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| angle | number | Yes | the angle of inclination along the y axis. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| angle | number | Yes |
 
 ## translate
 
@@ -414,18 +414,18 @@ Defines 2D transformations for translation of the X and Y axes
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-TransformObject-translate(x: number, y: number): void--><!--Device-TransformObject-translate(x: number, y: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | number | Yes | the translate value for x-axis |
-| y | number | Yes | the translate value for y-axis |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | number | Yes |
+| y | number | Yes |
 
 ## translate3d
 
@@ -437,19 +437,19 @@ Defines 3D transformations for translation of the X / Y / Z axes
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-TransformObject-translate3d(x: number, y: number, z: number): void--><!--Device-TransformObject-translate3d(x: number, y: number, z: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | number | Yes | the translate value for x-axis |
-| y | number | Yes | the translate value for y-axis |
-| z | number | Yes | the translate value for z-axis |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | number | Yes |
+| y | number | Yes |
+| z | number | Yes |
 
 ## translateX
 
@@ -461,17 +461,17 @@ Defines 2D transformations for translation of the X axes
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-TransformObject-translateX(x: number): void--><!--Device-TransformObject-translateX(x: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | number | Yes | the translate value for x-axis |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| x | number | Yes |
 
 ## translateY
 
@@ -483,17 +483,17 @@ Defines 2D transformations for translation of the Y axes
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-TransformObject-translateY(y: number): void--><!--Device-TransformObject-translateY(y: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| y | number | Yes | the translate value for y-axis |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| y | number | Yes |
 
 ## translateZ
 
@@ -505,15 +505,14 @@ Defines 3D transformations for translation of the Z axes
 
 **Since:** 6
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
-<!--Device-TransformObject-translateZ(z: number): void--><!--Device-TransformObject-translateZ(z: number): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| z | number | Yes | the translate value for z-axis |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| z | number | Yes |

@@ -2,9 +2,9 @@
 
 Enumerates the portrait effects.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-camera-enum PortraitEffect--><!--Device-camera-enum PortraitEffect-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -18,9 +18,9 @@ OFF = 0
 
 Disabled.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-PortraitEffect-OFF = 0--><!--Device-PortraitEffect-OFF = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -34,9 +34,9 @@ CIRCLES = 1
 
 Circles.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-PortraitEffect-CIRCLES = 1--><!--Device-PortraitEffect-CIRCLES = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -50,9 +50,9 @@ HEART = 2
 
 Heart-shaped.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PortraitEffect-HEART = 2--><!--Device-PortraitEffect-HEART = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -66,9 +66,9 @@ ROTATED = 3
 
 Rotated.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PortraitEffect-ROTATED = 3--><!--Device-PortraitEffect-ROTATED = 3-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -82,9 +82,9 @@ STUDIO = 4
 
 Studio light.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PortraitEffect-STUDIO = 4--><!--Device-PortraitEffect-STUDIO = 4-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -98,11 +98,10 @@ THEATER = 5
 
 Theater light.
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-PortraitEffect-THEATER = 5--><!--Device-PortraitEffect-THEATER = 5-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

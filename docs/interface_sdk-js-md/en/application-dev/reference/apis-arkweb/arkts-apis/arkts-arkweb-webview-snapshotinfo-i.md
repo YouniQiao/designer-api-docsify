@@ -4,7 +4,7 @@ Provides information used to obtain a full drawing result.
 
 **Since:** 12
 
-<!--Device-webview-interface SnapshotInfo--><!--Device-webview-interface SnapshotInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -26,9 +26,9 @@ ID of the snapshot, used to identify this full rendering request so that the cor
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-SnapshotInfo-id?: string--><!--Device-SnapshotInfo-id?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -44,9 +44,8 @@ Size of the Web rendering. The maximum supported size is 16000px * 16000px. The 
 
 **Since:** 12
 
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-SnapshotInfo-size?: SizeOptions--><!--Device-SnapshotInfo-size?: SizeOptions-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

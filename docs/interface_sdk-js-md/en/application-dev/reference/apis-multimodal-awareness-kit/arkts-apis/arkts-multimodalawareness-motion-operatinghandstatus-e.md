@@ -2,9 +2,9 @@
 
 Defines the status of the operating hand.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-motion-export enum OperatingHandStatus--><!--Device-motion-export enum OperatingHandStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -16,9 +16,9 @@ UNKNOWN_STATUS = 0
 
 Unknown status.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-OperatingHandStatus-UNKNOWN_STATUS = 0--><!--Device-OperatingHandStatus-UNKNOWN_STATUS = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -30,9 +30,9 @@ LEFT_HAND_OPERATED = 1
 
 Left hand in use.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-OperatingHandStatus-LEFT_HAND_OPERATED = 1--><!--Device-OperatingHandStatus-LEFT_HAND_OPERATED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -44,9 +44,8 @@ RIGHT_HAND_OPERATED = 2
 
 Right hand in use.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-OperatingHandStatus-RIGHT_HAND_OPERATED = 2--><!--Device-OperatingHandStatus-RIGHT_HAND_OPERATED = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
-

@@ -15,17 +15,14 @@ Cancel the specified timer.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta since version 24.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-function clearTimeout(timerId?: int | null): void--><!--Device-unnamed-function clearTimeout(timerId?: int | null): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| timerId | int \| null | No | The id of the timer returned from setTimeout, if pass empty or null or undefined will do nothing. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| timerId | int \| null | No |

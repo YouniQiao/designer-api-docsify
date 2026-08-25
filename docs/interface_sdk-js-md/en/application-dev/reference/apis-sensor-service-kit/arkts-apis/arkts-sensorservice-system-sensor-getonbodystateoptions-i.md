@@ -4,11 +4,11 @@ Defines the callback invoked upon change in the wearing state of the device that
 
 **Since:** 3
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
+
 **Deprecated since:** 8
 
 **Substitutes:** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#wear_detection)
-
-<!--Device-unnamed-export interface GetOnBodyStateOptions--><!--Device-unnamed-export interface GetOnBodyStateOptions-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -26,17 +26,15 @@ complete?: () => void
 
 Callback invoked when the API call is complete.
 
-**Type:** () =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 
-**Substitutes:** once
+**Substitutes:** [once](arkts-sensorservice-sensor-onceorientationchange-f.md)
 
 **Model restriction:** This API can be used only in the FA model.
-
-<!--Device-GetOnBodyStateOptions-complete?: () => void--><!--Device-GetOnBodyStateOptions-complete?: () => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -48,19 +46,24 @@ fail?: (data: string, code: number) => void
 
 Callback invoked when an API call fails.
 
-**Type:** (data: string, code: number) =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 
-**Substitutes:** once
+**Substitutes:** [once](arkts-sensorservice-sensor-onceorientationchange-f.md)
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-GetOnBodyStateOptions-fail?: (data: string, code: number) => void--><!--Device-GetOnBodyStateOptions-fail?: (data: string, code: number) => void-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | string | Yes |
+| code | number | Yes |
 
 ## success
 
@@ -70,17 +73,20 @@ success: (data: OnBodyStateResponse) => void
 
 Callback upon a successful API call.
 
-**Type:** (data: OnBodyStateResponse) =&gt; void
-
 **Since:** 3
+
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 
-**Substitutes:** once
+**Substitutes:** [once](arkts-sensorservice-sensor-onceorientationchange-f.md)
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-GetOnBodyStateOptions-success: (data: OnBodyStateResponse) => void--><!--Device-GetOnBodyStateOptions-success: (data: OnBodyStateResponse) => void-End-->
-
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | [OnBodyStateResponse](arkts-sensorservice-system-sensor-onbodystateresponse-i.md) | Yes |

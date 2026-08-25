@@ -2,9 +2,9 @@
 
 可解决错误码。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-eSIM-export enum SolvableErrors--><!--Device-eSIM-export enum SolvableErrors-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -18,9 +18,9 @@ SOLVABLE_ERROR_NEED_CONFIRMATION_CODE = 1 << 0
 
 下载过程需要用户输入确认码。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-SolvableErrors-SOLVABLE_ERROR_NEED_CONFIRMATION_CODE = 1 << 0--><!--Device-SolvableErrors-SOLVABLE_ERROR_NEED_CONFIRMATION_CODE = 1 << 0-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -34,11 +34,10 @@ SOLVABLE_ERROR_NEED_POLICY_RULE = 1 << 1
 
 下载过程需要用户同意才能允许配置文件策略规则。
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-SolvableErrors-SOLVABLE_ERROR_NEED_POLICY_RULE = 1 << 1--><!--Device-SolvableErrors-SOLVABLE_ERROR_NEED_POLICY_RULE = 1 << 1-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
-

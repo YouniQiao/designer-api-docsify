@@ -4,7 +4,7 @@ Enumerates the types of pages in **MultiNavigation**.
 
 **Since:** 14
 
-<!--Device-unnamed-export declare enum SplitPolicy--><!--Device-unnamed-export declare enum SplitPolicy-End-->
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Home page. Displayed in full-screen mode.
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-SplitPolicy-HOME_PAGE = 0--><!--Device-SplitPolicy-HOME_PAGE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ Detail page. Displayed in split-screen mode.
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-SplitPolicy-DETAIL_PAGE = 1--><!--Device-SplitPolicy-DETAIL_PAGE = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ Full-screen page. Displayed in full-screen mode.
 
 **Since:** 14
 
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-SplitPolicy-FULL_PAGE = 2--><!--Device-SplitPolicy-FULL_PAGE = 2-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,7 +4,7 @@ Authorization status.
 
 **Since:** 26.0.0
 
-<!--Device-abilityToolAccessCtrl-enum AuthStatus--><!--Device-abilityToolAccessCtrl-enum AuthStatus-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -20,7 +20,7 @@ Requires authorization.
 
 **Since:** 26.0.0
 
-<!--Device-AuthStatus-REQUIRE_AUTH = 0--><!--Device-AuthStatus-REQUIRE_AUTH = 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -36,7 +36,7 @@ Forbidden.
 
 **Since:** 26.0.0
 
-<!--Device-AuthStatus-FORBIDDEN = 1--><!--Device-AuthStatus-FORBIDDEN = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -52,7 +52,7 @@ Authorized.
 
 **Since:** 26.0.0
 
-<!--Device-AuthStatus-AUTHORIZED = 2--><!--Device-AuthStatus-AUTHORIZED = 2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -68,7 +68,7 @@ Restricted by policy, authorization not allowed.
 
 **Since:** 26.0.0
 
-<!--Device-AuthStatus-RESTRICTED = 3--><!--Device-AuthStatus-RESTRICTED = 3-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -84,9 +84,8 @@ Remote authorization restricted by policy.
 
 **Since:** 26.0.0
 
-<!--Device-AuthStatus-REMOTE_RESTRICTED = 4--><!--Device-AuthStatus-REMOTE_RESTRICTED = 4-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
-

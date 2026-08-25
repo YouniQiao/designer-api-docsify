@@ -4,20 +4,19 @@
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [ImageAnalyzerController](arkts-arkui-imagecommon-imageanalyzercontroller-c.md) | Image AI analysis controller. You can bind this object to a supported component and call supported methods through the controller. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ImageAnalyzerController](arkts-arkui-imagecommon-imageanalyzercontroller-c.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | Image AI analysis options. |
-| [ImageAnalyzerConfig](arkts-arkui-imagecommon-imageanalyzerconfig-i.md) | Image AI analysis configuration item. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) |
+| [ImageAnalyzerConfig](arkts-arkui-imagecommon-imageanalyzerconfig-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [ImageAnalyzerType](arkts-arkui-imagecommon-imageanalyzertype-e.md) | Image AI analysis type. When not set, subject recognition and text recognition are enabled by default. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ImageAnalyzerType](arkts-arkui-imagecommon-imageanalyzertype-e.md) |

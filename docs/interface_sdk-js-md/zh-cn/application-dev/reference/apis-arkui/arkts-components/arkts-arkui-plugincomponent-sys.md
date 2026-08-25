@@ -16,7 +16,7 @@ PluginComponent(options: PluginComponentOptions)
 
 **起始版本：** 9
 
-<!--Device-PluginComponentInterface-(options: PluginComponentOptions): PluginComponentAttribute--><!--Device-PluginComponentInterface-(options: PluginComponentOptions): PluginComponentAttribute-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,19 +24,19 @@ PluginComponent(options: PluginComponentOptions)
 
 **参数:**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [PluginComponentOptions](arkts-arkui-plugincomponentoptions-i-sys.md) | 是 | 插件组件选项 |
+| 参数名 | [类型](#类型) | 必填 |
+| --- | --- | --- |
+| options | [PluginComponentOptions](arkts-arkui-plugincomponentoptions-i-sys.md) | 是 |
 
 ## 汇总
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
+| 名称 |
+| --- |
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-
+| 名称 |
+| --- |
+| [PluginErrorCallback](arkts-arkui-pluginerrorcallback-t-sys.md) |

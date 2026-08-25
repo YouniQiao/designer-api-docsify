@@ -8,9 +8,9 @@ Lattice object. which is used to divide an image by lattice.
 > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
 > transitions.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-drawing-class Lattice--><!--Device-drawing-class Lattice-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -31,33 +31,33 @@ Divides the image into lattices. The lattices on both even columns and even rows
 
 **Since:** 12
 
-<!--Device-Lattice-static createImageLattice(xDivs: Array<number>, yDivs: Array<number>, fXCount: number, fYCount: number,        fBounds?: common2D.Rect | null, fRectTypes?: Array<RectType> | null, fColors?: Array<common2D.Color> | null): Lattice--><!--Device-Lattice-static createImageLattice(xDivs: Array<number>, yDivs: Array<number>, fXCount: number, fYCount: number,        fBounds?: common2D.Rect | null, fRectTypes?: Array<RectType> | null, fColors?: Array<common2D.Color> | null): Lattice-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| xDivs | Array&lt;number&gt; | Yes | Array of X coordinates used to divide the image. The value is an integer. |
-| yDivs | Array&lt;number&gt; | Yes | Array of Y coordinates used to divide the image. The value is an integer. |
-| fXCount | number | Yes | Size of the array that holds the X coordinates. The value range is [0, 5]. |
-| fYCount | number | Yes | Size of the array that holds the Y coordinates. The value range is [0, 5]. |
-| fBounds | common2D.Rect \| null | No | Source bounds to draw. The rectangle parameter must be an integer. The default value is the rectangle size of the original image. If the rectangle parameter is a decimal, the decimal part is discarded and converted into an integer. |
-| fRectTypes | Array&lt;RectType&gt; \| null | No | Array that holds the rectangle types. The default value is null. If this parameter is specified, the array size must be (fXCount + 1) * (fYCount + 1). |
-| fColors | Array&lt;common2D.Color&gt; \| null | No | Array that holds the colors used to fill the lattices. The default value is null. If this parameter is specified, the array size must be (fXCount + 1) * (fYCount + 1). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| xDivs | Array & lt;number & gt; | Yes |
+| yDivs | Array & lt;number & gt; | Yes |
+| fXCount | number | Yes |
+| fYCount | number | Yes |
+| fBounds | common2D.Rect \| null | No |
+| fRectTypes | Array & lt;RectType & gt; \ | null | No |
+| fColors | Array & lt;common2D.Color & gt; \ | null | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | Lattice** object obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -99,33 +99,33 @@ Divides the image into lattices. The lattices on both even columns and even rows
 
 **Since:** 23
 
-<!--Device-Lattice-static createImageLattice(xDivs: Array<int>, yDivs: Array<int>, fXCount: int, fYCount: int,        fBounds?: common2D.Rect | null, fRectTypes?: Array<RectType> | null, fColors?: Array<common2D.Color> | null): Lattice | undefined--><!--Device-Lattice-static createImageLattice(xDivs: Array<int>, yDivs: Array<int>, fXCount: int, fYCount: int,        fBounds?: common2D.Rect | null, fRectTypes?: Array<RectType> | null, fColors?: Array<common2D.Color> | null): Lattice | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| xDivs | Array&lt;int&gt; | Yes | Array of X coordinates used to divide the image. The value is an integer. |
-| yDivs | Array&lt;int&gt; | Yes | Array of Y coordinates used to divide the image. The value is an integer. |
-| fXCount | int | Yes | Size of the array that holds the X coordinates. The value range is [0, 5]. |
-| fYCount | int | Yes | Size of the array that holds the Y coordinates. The value range is [0, 5]. |
-| fBounds | common2D.Rect \| null | No | Source bounds to draw. The rectangle parameter must be an integer. The default value is the rectangle size of the original image. If the rectangle parameter is a decimal, the decimal part is discarded and converted into an integer. |
-| fRectTypes | Array&lt;RectType&gt; \| null | No | Array that holds the rectangle types. The default value is null. If this parameter is specified, the array size must be (fXCount + 1) * (fYCount + 1). |
-| fColors | Array&lt;common2D.Color&gt; \| null | No | Array that holds the colors used to fill the lattices. The default value is null. If this parameter is specified, the array size must be (fXCount + 1) * (fYCount + 1). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| xDivs | Array & lt;int & gt; | Yes |
+| yDivs | Array & lt;int & gt; | Yes |
+| fXCount | int | Yes |
+| fYCount | int | Yes |
+| fBounds | common2D.Rect \| null | No |
+| fRectTypes | Array & lt;RectType & gt; \ | null | No |
+| fColors | Array & lt;common2D.Color & gt; \ | null | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) \| undefined | Lattice object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) \| undefined |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -142,33 +142,33 @@ Divides the image into lattices. The lattices on both even columns and even rows
 
 **Since:** 18
 
-<!--Device-Lattice-static createImageLattice(xDivs: Array<number>, yDivs: Array<number>, fXCount: number, fYCount: number,        fBounds?: common2D.Rect | null, fRectTypes?: Array<RectType> | null, fColors?: Array<number> | null): Lattice--><!--Device-Lattice-static createImageLattice(xDivs: Array<number>, yDivs: Array<number>, fXCount: number, fYCount: number,        fBounds?: common2D.Rect | null, fRectTypes?: Array<RectType> | null, fColors?: Array<number> | null): Lattice-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| xDivs | Array&lt;number&gt; | Yes | Array of X coordinates used to divide the image. The value is an integer. |
-| yDivs | Array&lt;number&gt; | Yes | Array of Y coordinates used to divide the image. The value is an integer. |
-| fXCount | number | Yes | Size of the array that holds the X coordinates. The value range is [0, 5]. |
-| fYCount | number | Yes | Size of the array that holds the Y coordinates. The value range is [0, 5]. |
-| fBounds | common2D.Rect \| null | No | Source bounds to draw. The rectangle parameter must be an integer. The default value is the rectangle size of the original image. If the rectangle parameter is a decimal, the decimal part is discarded and converted into an integer. |
-| fRectTypes | Array&lt;RectType&gt; \| null | No | Array that holds the rectangle types. The default value is null. If this parameter is specified, the array size must be (fXCount + 1) * (fYCount + 1). |
-| fColors | Array&lt;number&gt; \| null | No | Array that holds the colors used to fill the lattices. Each color is represented by a 32-bit unsigned integer in hexadecimal ARGB format. The default value is null. If this parameter is specified, the array size must be (fXCount + 1) * (fYCount + 1). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| xDivs | Array & lt;number & gt; | Yes |
+| yDivs | Array & lt;number & gt; | Yes |
+| fXCount | number | Yes |
+| fYCount | number | Yes |
+| fBounds | common2D.Rect \| null | No |
+| fRectTypes | Array & lt;RectType & gt; \ | null | No |
+| fColors | Array & lt;number & gt; \ | null | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | Lattice** object obtained. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 **Examples**
 
@@ -185,31 +185,30 @@ Divides the image into lattices. The lattices on both even columns and even rows
 
 **Since:** 23
 
-<!--Device-Lattice-static createImageLatticeWithArrayInt(xDivs: Array<int>, yDivs: Array<int>, fXCount: int, fYCount: int,        fBounds?: common2D.Rect | null, fRectTypes?: Array<RectType> | null, fColors?: Array<int> | null): Lattice | undefined--><!--Device-Lattice-static createImageLatticeWithArrayInt(xDivs: Array<int>, yDivs: Array<int>, fXCount: int, fYCount: int,        fBounds?: common2D.Rect | null, fRectTypes?: Array<RectType> | null, fColors?: Array<int> | null): Lattice | undefined-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| xDivs | Array&lt;int&gt; | Yes | Array of X coordinates used to divide the image. The value is an integer. |
-| yDivs | Array&lt;int&gt; | Yes | Array of Y coordinates used to divide the image. The value is an integer. |
-| fXCount | int | Yes | Size of the array that holds the X coordinates. The value range is [0, 5]. |
-| fYCount | int | Yes | Size of the array that holds the Y coordinates. The value range is [0, 5]. |
-| fBounds | common2D.Rect \| null | No | Source bounds to draw. The rectangle parameter must be an integer. The default value is the rectangle size of the original image. If the rectangle parameter is a decimal, the decimal part is discarded and converted into an integer. |
-| fRectTypes | Array&lt;RectType&gt; \| null | No | Array that holds the rectangle types. The default value is null. If this parameter is specified, the array size must be (fXCount + 1) * (fYCount + 1). |
-| fColors | Array&lt;int&gt; \| null | No | Array that holds the colors used to fill the lattices. Each color is represented by a 32-bit unsigned integer in hexadecimal ARGB format. The default value is null. If this parameter is specified, the array size must be (fXCount + 1) * (fYCount + 1). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| xDivs | Array & lt;int & gt; | Yes |
+| yDivs | Array & lt;int & gt; | Yes |
+| fXCount | int | Yes |
+| fYCount | int | Yes |
+| fBounds | common2D.Rect \| null | No |
+| fRectTypes | Array & lt;RectType & gt; \ | null | No |
+| fColors | Array & lt;int & gt; \ | null | No |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) \| undefined | Lattice object. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) \| undefined |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
-
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

@@ -1,10 +1,10 @@
-# @ohos.multimedia.videoProcessingEngine
+# @ohos.multimedia.videoProcessingEngine(提供图像画质处理能力。)
 
 提供图像内容处理能力，包括图像缩放。 @namespace videoProcessingEngine
 
-**起始版本：** 23
+**起始版本：** 18
 
-<!--Device-unnamed-declare namespace videoProcessingEngine--><!--Device-unnamed-declare namespace videoProcessingEngine-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
@@ -18,21 +18,20 @@ import { videoProcessingEngine } from '@kit.ImageKit';
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [create](arkts-image-videoprocessingengine-create-f.md) | 创建图像处理实例。 |
-| [deinitializeEnvironment](arkts-image-videoprocessingengine-deinitializeenvironment-f.md) | 反初始化图像处理的全局环境。 |
-| [initializeEnvironment](arkts-image-videoprocessingengine-initializeenvironment-f.md) | 初始化图像处理的全局环境。 |
+| 名称 |
+| --- |
+| [create(提供图像画质处理能力。)](arkts-image-videoprocessingengine-create-f.md) |
+| [deinitializeEnvironment(提供图像画质处理能力。)](arkts-image-videoprocessingengine-deinitializeenvironment-f.md) |
+| [initializeEnvironment(提供图像画质处理能力。)](arkts-image-videoprocessingengine-initializeenvironment-f.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [ImageProcessor](arkts-image-videoprocessingengine-imageprocessor-i.md) | 提供ImageProcessor类型，包括图像处理功能。 |
+| 名称 |
+| --- |
+| [ImageProcessor(提供图像画质处理能力。)](arkts-image-videoprocessingengine-imageprocessor-i.md) |
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-| [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | 细节增强的处理质量等级。 @enum {int} |
-
+| 名称 |
+| --- |
+| [QualityLevel(提供图像画质处理能力。)](arkts-image-videoprocessingengine-qualitylevel-e.md) |

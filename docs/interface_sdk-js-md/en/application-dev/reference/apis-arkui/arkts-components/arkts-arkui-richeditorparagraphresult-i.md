@@ -4,7 +4,7 @@ Describes the returned paragraph information.
 
 **Since:** 11
 
-<!--Device-unnamed-declare interface RichEditorParagraphResult--><!--Device-unnamed-declare interface RichEditorParagraphResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,11 @@ Start and end positions of the paragraph.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-RichEditorParagraphResult-range: [number, number]--><!--Device-RichEditorParagraphResult-range: [number, number]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,11 +45,10 @@ Paragraph style.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-RichEditorParagraphResult-style: RichEditorParagraphStyle--><!--Device-RichEditorParagraphResult-style: RichEditorParagraphStyle-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

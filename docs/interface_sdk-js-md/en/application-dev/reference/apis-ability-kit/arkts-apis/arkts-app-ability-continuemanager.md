@@ -2,11 +2,11 @@
 
 The continueManager module provides capabilities for managing cross-device application migration. For example, it allows you to obtain the result of quickly launching the target application during the cross-device migration process.
 
-**Since:** 23
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-declare namespace continueManager--><!--Device-unnamed-declare namespace continueManager-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -20,22 +20,21 @@ import { continueManager } from '@kit.AbilityKit';
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [off_prepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md) | Unregisters the callback used to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result. |
-| [offPrepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md) | Unregister prepareContinue event. |
-| [on_prepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md) | Registers a callback to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result. |
-| [onPrepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md) | Register prepareContinue event, when the ability is configured with 'ContinueQuickStart' in the continueType, then can get the result of LaunchReason.PREPARE_CONTINUATION. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [off](arkts-ability-continuemanager-off-f.md#offpreparecontinue) |
+| [offPrepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md) |
+| [on](arkts-ability-continuemanager-on-f.md#onpreparecontinue) |
+| [onPrepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md) | Describes the quick start result returned by the callback. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [ContinueStateCode](arkts-ability-continuemanager-continuestatecode-e.md) | Enumerates the status codes of the quick start result. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ContinueStateCode](arkts-ability-continuemanager-continuestatecode-e.md) |

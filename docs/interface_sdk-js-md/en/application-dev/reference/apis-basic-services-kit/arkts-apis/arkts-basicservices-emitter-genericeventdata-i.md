@@ -2,9 +2,9 @@
 
 Describes the generic data carried by the emitted event.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-emitter-export interface GenericEventData--><!--Device-emitter-export interface GenericEventData-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Emitter
 
@@ -17,16 +17,17 @@ import { emitter } from '@kit.BasicServicesKit';
 ## data
 
 ```TypeScript
-data?: T | ESValue
+data?: T
 ```
 
-Data passed in the event. T: generic type.
+Data carried by the emitted event. **T** represents a generic type, which can be customized based on service requirements.
 
-**Type:** T \| ESValue
+**Type:** T
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-GenericEventData-data?: T | ESValue--><!--Device-GenericEventData-data?: T | ESValue-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Notification.Emitter
-

@@ -13,9 +13,7 @@ The **ComposeListItem** component is a container that presents a series of items
 
 **Since:** 10
 
-**Decorator:** @Component
-
-<!--Device-unnamed-export declare struct ComposeListItem--><!--Device-unnamed-export declare struct ComposeListItem-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,6 +22,22 @@ The **ComposeListItem** component is a container that presents a series of items
 ```TypeScript
 import { ComposeListItem, ContentItem, IconType, OperateButton, OperateCheck, OperateIcon, OperateItem } from '@kit.ArkUI';
 ```
+
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**Since:** 23
+
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## contentItem
 
@@ -37,13 +51,11 @@ Elements on the left and in the center.
 
 **Since:** 10
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ComposeListItem-@Prop  contentItem?: ContentItem--><!--Device-ComposeListItem-@Prop  contentItem?: ContentItem-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,13 +71,10 @@ Element on the right.
 
 **Since:** 10
 
-**Decorator:** @Prop
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ComposeListItem-@Prop  operateItem?: OperateItem--><!--Device-ComposeListItem-@Prop  operateItem?: OperateItem-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

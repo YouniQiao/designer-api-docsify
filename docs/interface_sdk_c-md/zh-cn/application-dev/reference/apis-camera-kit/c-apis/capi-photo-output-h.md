@@ -269,7 +269,7 @@ typedef void (*OH_PhotoOutput_PhotoAvailable)(Camera_PhotoOutput* photoOutput, O
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)\* photoOutput | 传递回调的拍照输出实例。 |
-| OH_PhotoNative\* photo | 回调传递的OH_PhotoNative。 |
+| [OH_PhotoNative](capi-oh-camera-oh-photonative.md)\* photo | 回调传递的OH_PhotoNative。 |
 
 ### OH_PhotoOutput_PhotoAssetAvailable()
 
@@ -288,7 +288,7 @@ typedef void (*OH_PhotoOutput_PhotoAssetAvailable)(Camera_PhotoOutput* photoOutp
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)\* photoOutput | 传递回调的拍照输出实例。 |
-| [OH_MediaAsset](../MediaLibraryKit/capi-mediaassetmanager-oh-mediaasset.md)\* photoAsset | 回调传递的媒体资源。 |
+| OH_MediaAsset\* photoAsset | 回调传递的媒体资源。 |
 
 ### OH_PhotoOutput_RegisterCallback()
 

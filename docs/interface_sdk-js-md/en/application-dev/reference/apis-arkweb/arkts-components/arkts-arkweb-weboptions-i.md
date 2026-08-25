@@ -4,7 +4,7 @@ Defines Web options through the [API](../../../reference/apis-arkweb/arkts-basic
 
 **Since:** 8
 
-<!--Device-unnamed-declare interface WebOptions--><!--Device-unnamed-declare interface WebOptions-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -25,9 +25,9 @@ Controller used to control various behaviors of the Web component, including pag
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
-<!--Device-WebOptions-controller: WebController | WebviewController--><!--Device-WebOptions-controller: WebController | WebviewController-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -43,7 +43,7 @@ Whether to convert mouse events to touch events. The value **true** indicates th
 
 **Since:** 22
 
-<!--Device-WebOptions-emulateTouchFromMouseEvent? : boolean--><!--Device-WebOptions-emulateTouchFromMouseEvent? : boolean-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -59,9 +59,9 @@ Whether the current Webview is created in incognito mode. The value **true** ind
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
-<!--Device-WebOptions-incognitoMode? : boolean--><!--Device-WebOptions-incognitoMode? : boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -77,9 +77,9 @@ Rendering mode of the current Web component. `RenderMode.ASYNC_RENDER` indicates
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
-<!--Device-WebOptions-renderMode? : RenderMode--><!--Device-WebOptions-renderMode? : RenderMode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -95,7 +95,7 @@ Token that specifies the shared render process for the current Web component. In
 
 **Since:** 12
 
-<!--Device-WebOptions-sharedRenderProcessToken? : string--><!--Device-WebOptions-sharedRenderProcessToken? : string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -105,15 +105,14 @@ Token that specifies the shared render process for the current Web component. In
 src: string | Resource
 ```
 
-Web page resource address. If a local resource file is accessed, use the resource protocol or \$rawfile resource reference. If a local resource file in the sandbox path outside the app package is loaded (HTML and TXT file types are supported), use file:// sandbox file path.src cannot be dynamically changed through a state variable (for example, @State). To change the address, reload the page through [loadUrl()](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#loadurl).
+Web page resource address. If a local resource file is accessed, use the resource protocol or \$rawfile resource reference. If a local resource file in the sandbox path outside the app package is loaded (HTML and TXT file types are supported), use file:// sandbox file path.src cannot be dynamically changed through a state variable (for example, @State). To change the address, reload the page through [loadUrl()](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl).
 
 **Type:** string \| Resource
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-WebOptions-src: string | Resource--><!--Device-WebOptions-src: string | Resource-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

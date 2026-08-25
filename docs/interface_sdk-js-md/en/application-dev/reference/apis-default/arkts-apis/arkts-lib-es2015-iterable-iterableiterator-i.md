@@ -1,10 +1,6 @@
 # IterableIterator
 
-**Inheritance/Implementation:** IterableIterator extends Iterator<T>
-
-**Since:** -1
-
-<!--Device-unnamed-interface IterableIterator--><!--Device-unnamed-interface IterableIterator-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -17,11 +13,9 @@
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-**Since:** -1
-
-<!--Device-IterableIterator-[Symbol.iterator](): IterableIterator<T>--><!--Device-IterableIterator-[Symbol.iterator](): IterableIterator<T>-End-->
+**ArkTS mode:** 
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |

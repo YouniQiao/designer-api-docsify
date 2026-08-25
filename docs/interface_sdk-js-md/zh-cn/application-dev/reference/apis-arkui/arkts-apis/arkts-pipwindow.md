@@ -8,9 +8,9 @@
 > - 针对系统能力SystemCapability.Window.SessionManager，请先使用
 > [canIUse()](arkts-arkui-global-caniuse-f.md)接口判断当前设备是否支持此syscap及对应接口。
 
-**起始版本：** 26.0.0
+**起始版本：** 11
 
-<!--Device-unnamed-declare namespace PiPWindow--><!--Device-unnamed-declare namespace PiPWindow-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -24,61 +24,60 @@ import { PiPWindow } from '@kit.ArkUI';
 
 ### 函数
 
-| 名称 | 说明 |
-| --- | --- |
-| [create](arkts-arkui-pipwindow-create-f.md) | 创建画中画控制器，使用Promise异步回调。 |
-| [create](arkts-arkui-pipwindow-create-f.md) | 创建画中画控制器，使用typeNode为画中画添加自定义UI节点。使用Promise异步回调。 |
-| [isPiPEnabled](arkts-arkui-pipwindow-ispipenabled-f.md) | 判断当前设备是否支持画中画功能。 |
+| 名称 |
+| --- |
+| [create](arkts-arkui-pipwindow-create-f.md) |
+| [create](arkts-arkui-pipwindow-create-f.md) |
+| [isPiPEnabled](arkts-arkui-pipwindow-ispipenabled-f.md) |
 
 ### 接口
 
-| 名称 | 说明 |
-| --- | --- |
-| [ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md) | 画中画控制面板控件动作回调的参数。 |
-| [PiPConfiguration](arkts-arkui-pipwindow-pipconfiguration-i.md) | 创建画中画控制器时的参数。 |
-| [PiPController](arkts-arkui-pipwindow-pipcontroller-i.md) | 画中画控制器实例。用于启动、停止画中画以及更新回调注册等。下列API示例中都需先使用[PiPWindow.create()](arkts-arkui-pipwindow-create-f.md)方法获取到PiPController实例，再通过此实例调用对应方 法。 |
-| [PiPWindowInfo](arkts-arkui-pipwindow-pipwindowinfo-i.md) | 画中画窗口信息。 |
-| [PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md) | 画中画窗口大小。 |
+| 名称 |
+| --- |
+| [ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md) |
+| [PiPConfiguration](arkts-arkui-pipwindow-pipconfiguration-i.md) |
+| [PiPController](arkts-arkui-pipwindow-pipcontroller-i.md) |
+| [PiPWindowInfo](arkts-arkui-pipwindow-pipwindowinfo-i.md) |
+| [PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md) |
 
 <!--Del-->
 ### 接口（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [PiPController](arkts-arkui-pipwindow-pipcontroller-i-sys.md) | 画中画控制器实例。用于启动、停止画中画以及更新回调注册等。下列API示例中都需先使用[PiPWindow.create()](arkts-arkui-pipwindow-create-f.md)方法获取到PiPController实例，再通过此实例调用对应方 法。 |
+| 名称 |
+| --- |
+| [PiPController](arkts-arkui-pipwindow-pipcontroller-i-sys.md) |
 <!--DelEnd-->
 
 ### 枚举
 
-| 名称 | 说明 |
-| --- | --- |
-| [PiPControlStatus](arkts-arkui-pipwindow-pipcontrolstatus-e.md) | 控制面板控件状态枚举。 |
-| [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md) | 控制面板控件类型枚举。 |
-| [PiPState](arkts-arkui-pipwindow-pipstate-e.md) | 画中画生命周期状态枚举。 |
-| [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) | 画中画模板类型枚举。 |
-| [VideoCallControlGroup](arkts-arkui-pipwindow-videocallcontrolgroup-e.md) | 视频通话控件组枚举。仅当[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) 为VIDEO_CALL时使用。 |
-| [VideoLiveControlGroup](arkts-arkui-pipwindow-videolivecontrolgroup-e.md) | 视频直播控件组枚举。仅当[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) 为VIDEO_LIVE时使用。 |
-| [VideoMeetingControlGroup](arkts-arkui-pipwindow-videomeetingcontrolgroup-e.md) | 视频会议控件组枚举。仅当[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) 为VIDEO_MEETING时使用。 |
-| [VideoPlayControlGroup](arkts-arkui-pipwindow-videoplaycontrolgroup-e.md) | 视频播放控件组枚举。仅当[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md)为VIDEO_PLAY时使用。 |
+| 名称 |
+| --- |
+| [PiPControlStatus](arkts-arkui-pipwindow-pipcontrolstatus-e.md) |
+| [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md) |
+| [PiPState](arkts-arkui-pipwindow-pipstate-e.md) |
+| [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) |
+| [VideoCallControlGroup](arkts-arkui-pipwindow-videocallcontrolgroup-e.md) |
+| [VideoLiveControlGroup](arkts-arkui-pipwindow-videolivecontrolgroup-e.md) |
+| [VideoMeetingControlGroup](arkts-arkui-pipwindow-videomeetingcontrolgroup-e.md) |
+| [VideoPlayControlGroup](arkts-arkui-pipwindow-videoplaycontrolgroup-e.md) |
 
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e-sys.md) | 画中画模板类型枚举。 |
+| 名称 |
+| --- |
+| [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e-sys.md) |
 <!--DelEnd-->
 
 ### 类型
 
-| 名称 | 说明 |
-| --- | --- |
-| [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) | 描述画中画控制面板控件动作事件回调。 |
-| [PiPActionEventType](arkts-arkui-pipwindow-pipactioneventtype-t.md) | 画中画控制面板控件动作事件类型，支持以下四种。 |
-| [PiPCallActionEvent](arkts-arkui-pipwindow-pipcallactionevent-t.md) | 视频通话控制事件类型。 |
-| [PiPControlGroup](arkts-arkui-pipwindow-pipcontrolgroup-t.md) | 画中画控制面板的可选控件组列表，应用可以配置是否显示可选控件。使用时必须和[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md)对应，否则 [create](arkts-arkui-pipwindow-create-f.md)接口抛出401错误码。 |
-| [PiPLiveActionEvent](arkts-arkui-pipwindow-pipliveactionevent-t.md) | 直播控制事件类型。 |
-| [PiPMeetingActionEvent](arkts-arkui-pipwindow-pipmeetingactionevent-t.md) | 视频会议控制事件类型。 |
-| [PiPVideoActionEvent](arkts-arkui-pipwindow-pipvideoactionevent-t.md) | 视频播放控制事件类型。 |
-| [StateChangeCallback](arkts-arkui-pipwindow-statechangecallback-t.md) | 描述画中画生命周期状态变化事件回调。 |
-
+| 名称 |
+| --- |
+| [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) |
+| [PiPActionEventType](arkts-arkui-pipwindow-pipactioneventtype-t.md) |
+| [PiPCallActionEvent](arkts-arkui-pipwindow-pipcallactionevent-t.md) |
+| [PiPControlGroup](arkts-arkui-pipwindow-pipcontrolgroup-t.md) |
+| [PiPLiveActionEvent](arkts-arkui-pipwindow-pipliveactionevent-t.md) |
+| [PiPMeetingActionEvent](arkts-arkui-pipwindow-pipmeetingactionevent-t.md) |
+| [PiPVideoActionEvent](arkts-arkui-pipwindow-pipvideoactionevent-t.md) |
+| [StateChangeCallback](arkts-arkui-pipwindow-statechangecallback-t.md) |

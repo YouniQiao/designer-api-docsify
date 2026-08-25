@@ -4,7 +4,7 @@ AtomicFile是一个用于对文件进行原子读写等操作的类。在写操�
 
 **起始版本：** 15
 
-<!--Device-unnamed-export class AtomicFile--><!--Device-unnamed-export class AtomicFile-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -26,21 +26,21 @@ constructor(path: string)
 
 **起始版本：** 15
 
-<!--Device-AtomicFile-constructor(path: string)--><!--Device-AtomicFile-constructor(path: string)-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 文件的沙箱路径。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| path | string | 是 |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |  |
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## delete
 
@@ -52,19 +52,19 @@ delete(): void
 
 **起始版本：** 15
 
-<!--Device-AtomicFile-delete(): void--><!--Device-AtomicFile-delete(): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900001 |  |
-| 13900002 |  |
-| 13900012 |  |
-| 13900027 |  |
-| 13900042 |  |
+| 错误码ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900012 |
+| 13900027 |
+| 13900042 |
 
 **示例**
 
@@ -131,15 +131,15 @@ failWrite(): void
 
 **起始版本：** 15
 
-<!--Device-AtomicFile-failWrite(): void--><!--Device-AtomicFile-failWrite(): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900042 |  |
+| 错误码ID |
+| --- |
+| 13900042 |
 
 **示例**
 
@@ -192,15 +192,15 @@ finishWrite(): void
 
 **起始版本：** 15
 
-<!--Device-AtomicFile-finishWrite(): void--><!--Device-AtomicFile-finishWrite(): void-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900042 |  |
+| 错误码ID |
+| --- |
+| 13900042 |
 
 **示例**
 
@@ -251,24 +251,24 @@ getBaseFile(): File
 
 **起始版本：** 15
 
-<!--Device-AtomicFile-getBaseFile(): File--><!--Device-AtomicFile-getBaseFile(): File-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [File](arkts-corefile-file-fs-file-i.md) | 打开的File对象。 |
+| 类型 |
+| --- |
+| [File](arkts-corefile-file-fs-file-i.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900002 |  |
-| 13900005 |  |
-| 13900012 |  |
-| 13900042 |  |
+| 错误码ID |
+| --- |
+| 13900002 |
+| 13900005 |
+| 13900012 |
+| 13900042 |
 
 **示例**
 
@@ -323,24 +323,24 @@ openRead(): ReadStream
 
 **起始版本：** 15
 
-<!--Device-AtomicFile-openRead(): ReadStream--><!--Device-AtomicFile-openRead(): ReadStream-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | 文件可读流。 |
+| 类型 |
+| --- |
+| [ReadStream](arkts-corefile-file-fs-readstream-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900001 |  |
-| 13900002 |  |
-| 13900012 |  |
-| 13900042 |  |
+| 错误码ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900012 |
+| 13900042 |
 
 **示例**
 
@@ -413,22 +413,22 @@ readFully(): ArrayBuffer
 
 **起始版本：** 15
 
-<!--Device-AtomicFile-readFully(): ArrayBuffer--><!--Device-AtomicFile-readFully(): ArrayBuffer-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| ArrayBuffer | 文件的全部内容。 |
+| 类型 |
+| --- |
+| ArrayBuffer |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900005 |  |
-| 13900042 |  |
+| 错误码ID |
+| --- |
+| 13900005 |
+| 13900042 |
 
 **示例**
 
@@ -493,25 +493,25 @@ startWrite(): WriteStream
 
 **起始版本：** 15
 
-<!--Device-AtomicFile-startWrite(): WriteStream--><!--Device-AtomicFile-startWrite(): WriteStream-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [WriteStream](arkts-corefile-file-fs-writestream-c.md) | 文件可写流。 |
+| 类型 |
+| --- |
+| [WriteStream](arkts-corefile-file-fs-writestream-c.md) |
 
 **错误码：**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900001 |  |
-| 13900002 |  |
-| 13900012 |  |
-| 13900027 |  |
-| 13900042 |  |
+| 错误码ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900012 |
+| 13900027 |
+| 13900042 |
 
 **示例**
 
@@ -554,4 +554,3 @@ try {
   console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
 }
 ```
-

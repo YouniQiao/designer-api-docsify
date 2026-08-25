@@ -4,7 +4,7 @@ Enumerates time display formats of the time picker.
 
 **Since:** 11
 
-<!--Device-unnamed-declare enum TimePickerFormat--><!--Device-unnamed-declare enum TimePickerFormat-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ Time format displaying hours and minutes.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TimePickerFormat-HOUR_MINUTE--><!--Device-TimePickerFormat-HOUR_MINUTE-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,10 @@ Time format displaying hours, minutes, and seconds.
 
 **Since:** 11
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-TimePickerFormat-HOUR_MINUTE_SECOND--><!--Device-TimePickerFormat-HOUR_MINUTE_SECOND-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

@@ -4,7 +4,7 @@ Enumerates the modes for saving images or videos.
 
 **Since:** 15
 
-<!--Device-unnamed-export declare enum SaveMode--><!--Device-unnamed-export declare enum SaveMode-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ Saves the image or video as a new one.
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 26.0.0.
 
-<!--Device-SaveMode-SAVE_AS = 0--><!--Device-SaveMode-SAVE_AS = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,8 @@ Replaces the original image or video. After the replacements, you can roll back 
 
 **Since:** 15
 
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 26.0.0.
+
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
-<!--Device-SaveMode-OVERWRITE = 1--><!--Device-SaveMode-OVERWRITE = 1-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

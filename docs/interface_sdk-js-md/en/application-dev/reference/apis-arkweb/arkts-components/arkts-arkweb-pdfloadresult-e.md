@@ -4,7 +4,7 @@ Defines the PDF page loading results, which identify various states and error ty
 
 **Since:** 20
 
-<!--Device-unnamed-declare enum PdfLoadResult--><!--Device-unnamed-declare enum PdfLoadResult-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,7 +18,7 @@ The PDF file is successfully loaded.
 
 **Since:** 20
 
-<!--Device-PdfLoadResult-LOAD_SUCCESS = 0--><!--Device-PdfLoadResult-LOAD_SUCCESS = 0-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,7 +32,7 @@ Failed to load the PDF file.
 
 **Since:** 20
 
-<!--Device-PdfLoadResult-PARSE_ERROR_FILE = 1--><!--Device-PdfLoadResult-PARSE_ERROR_FILE = 1-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -46,7 +46,7 @@ The PDF file format is not supported.
 
 **Since:** 20
 
-<!--Device-PdfLoadResult-PARSE_ERROR_FORMAT = 2--><!--Device-PdfLoadResult-PARSE_ERROR_FORMAT = 2-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -60,7 +60,7 @@ The PDF file password is incorrect.
 
 **Since:** 20
 
-<!--Device-PdfLoadResult-PARSE_ERROR_PASSWORD = 3--><!--Device-PdfLoadResult-PARSE_ERROR_PASSWORD = 3-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -74,7 +74,6 @@ Failed to process the PDF file.
 
 **Since:** 20
 
-<!--Device-PdfLoadResult-PARSE_ERROR_HANDLER = 4--><!--Device-PdfLoadResult-PARSE_ERROR_HANDLER = 4-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

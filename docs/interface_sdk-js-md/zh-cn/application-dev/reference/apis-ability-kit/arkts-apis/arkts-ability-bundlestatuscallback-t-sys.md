@@ -8,15 +8,14 @@ export type BundleStatusCallback = _BundleStatusCallback
 
 **起始版本：** 8
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
+
 **废弃版本：** 9
 
 **替代接口：** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)
-
-<!--Device-unnamed-export type BundleStatusCallback = _BundleStatusCallback--><!--Device-unnamed-export type BundleStatusCallback = _BundleStatusCallback-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
 
 **属性类型：** _BundleStatusCallback
-

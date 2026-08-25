@@ -16,11 +16,11 @@ Uninstalls all CA certificates trusted by the user. This API is called only by t
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
+
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_USER_TRUSTED_CERT
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-certificateManager-function uninstallAllUserTrustedCertificate() : Promise<void>--><!--Device-certificateManager-function uninstallAllUserTrustedCertificate() : Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -28,17 +28,17 @@ Uninstalls all CA certificates trusted by the user. This API is called only by t
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. <br>The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) |
 
 **Examples**
 
@@ -56,4 +56,3 @@ try {
   console.error(`Failed to uninstall all user trusted certificates. Code: ${error.code}, message: ${error.message}`);
 }
 ```
-

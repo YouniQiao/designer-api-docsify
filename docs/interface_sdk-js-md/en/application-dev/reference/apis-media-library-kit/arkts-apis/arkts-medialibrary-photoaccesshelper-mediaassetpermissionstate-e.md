@@ -4,7 +4,7 @@ Enumeration of permission level for an application to access asset.
 
 **Since:** 26.0.0
 
-<!--Device-photoAccessHelper-enum MediaAssetPermissionState--><!--Device-photoAccessHelper-enum MediaAssetPermissionState-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,9 +18,9 @@ Not media asset uri.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-MediaAssetPermissionState-URI_FORMAT_ERROR = 0--><!--Device-MediaAssetPermissionState-URI_FORMAT_ERROR = 0-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,9 +34,9 @@ Asset not exists.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-MediaAssetPermissionState-FILE_NOT_EXIST = 1--><!--Device-MediaAssetPermissionState-FILE_NOT_EXIST = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,9 +50,9 @@ The application has read permission when accessing the asset.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-MediaAssetPermissionState-READ_PERMISSION = 2--><!--Device-MediaAssetPermissionState-READ_PERMISSION = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -66,9 +66,8 @@ The application has no read permission when accessing the asset.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MediaAssetPermissionState-NO_READ_PERMISSION = 3--><!--Device-MediaAssetPermissionState-NO_READ_PERMISSION = 3-End-->
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-

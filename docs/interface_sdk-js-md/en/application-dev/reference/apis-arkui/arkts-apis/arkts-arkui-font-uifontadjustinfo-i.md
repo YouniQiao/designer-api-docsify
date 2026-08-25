@@ -1,10 +1,10 @@
 # UIFontAdjustInfo
 
-**Since:** 23
+UI font configuration of the system.
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**Since:** 11
 
-<!--Device-font-interface UIFontAdjustInfo--><!--Device-font-interface UIFontAdjustInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -17,40 +17,39 @@ import { font } from '@kit.ArkUI';
 ## to
 
 ```TypeScript
-to: int
+to: number
 ```
 
-Font weight displayed in the app
+Weight of the font displayed in the application.Valid values are **100**, **400**, **700**, and **900**.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIFontAdjustInfo-to: int--><!--Device-UIFontAdjustInfo-to: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## weight
 
 ```TypeScript
-weight: double
+weight: number
 ```
 
-Original weight of the font
+Original weight of the font.Valid values are **50**, **80**, **100**, and **200**.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIFontAdjustInfo-weight: double--><!--Device-UIFontAdjustInfo-weight: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

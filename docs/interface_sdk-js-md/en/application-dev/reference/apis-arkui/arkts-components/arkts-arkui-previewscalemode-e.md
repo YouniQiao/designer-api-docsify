@@ -4,7 +4,7 @@ Enumerates the scale modes of the preview image.
 
 **Since:** 20
 
-<!--Device-unnamed-declare enum PreviewScaleMode--><!--Device-unnamed-declare enum PreviewScaleMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +18,11 @@ The preview image automatically adjusts its width, height, and scale based on Pl
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-PreviewScaleMode-AUTO = 0--><!--Device-PreviewScaleMode-AUTO = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,11 +36,11 @@ The preview image retains its original size. However, the preview image may stil
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-PreviewScaleMode-CONSTANT = 1--><!--Device-PreviewScaleMode-CONSTANT = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +54,10 @@ The preview image maintains its aspect ratio when scaled.
 
 **Since:** 20
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-PreviewScaleMode-MAINTAIN = 2--><!--Device-PreviewScaleMode-MAINTAIN = 2-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

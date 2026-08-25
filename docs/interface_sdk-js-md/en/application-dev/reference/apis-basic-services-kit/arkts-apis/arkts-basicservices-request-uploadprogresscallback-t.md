@@ -8,14 +8,13 @@ The callback function for the download progress event.
 
 **Since:** 23
 
-<!--Device-request-export type UploadProgressCallback = (uploadedSize: long, totalSize: long) => void--><!--Device-request-export type UploadProgressCallback = (uploadedSize: long, totalSize: long) => void-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MiscServices.Upload
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uploadedSize | long | Yes | the length of uploaded data, in bytes |
-| totalSize | long | Yes | the length of data expected to be uploaded, in bytes. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uploadedSize | long | Yes |
+| totalSize | long | Yes |

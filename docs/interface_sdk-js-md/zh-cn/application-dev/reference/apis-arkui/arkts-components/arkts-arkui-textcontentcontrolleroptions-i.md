@@ -4,7 +4,7 @@ Defines the span options of TextContentController.@interface TextContentControll
 
 **起始版本：** 15
 
-<!--Device-unnamed-declare interface TextContentControllerOptions--><!--Device-unnamed-declare interface TextContentControllerOptions-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,11 +25,10 @@ the offset that add a text at.
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
-<!--Device-TextContentControllerOptions-offset?: number--><!--Device-TextContentControllerOptions-offset?: number-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

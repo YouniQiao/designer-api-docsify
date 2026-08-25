@@ -1,10 +1,10 @@
 # AbilityFirstFrameStateObserver（系统接口）
 
-定义了Ability首帧绘制完成事件监听对象，可以作为 [on](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate) 的入参，用于监听Ability首帧绘制完成事件。
+定义了Ability首帧绘制完成事件监听对象，可以作为 [on](arkts-ability-appmanager-on-f-sys.md#onabilityfirstframestate) 的入参，用于监听Ability首帧绘制完成事件。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-unnamed-export interface AbilityFirstFrameStateObserver--><!--Device-unnamed-export interface AbilityFirstFrameStateObserver-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -18,9 +18,9 @@ onAbilityFirstFrameDrawn(data: AbilityFirstFrameStateData): void
 
 Ability首帧绘制完成时触发的回调函数。
 
-**起始版本：** 23
+**起始版本：** 12
 
-<!--Device-AbilityFirstFrameStateObserver-onAbilityFirstFrameDrawn(data: AbilityFirstFrameStateData): void--><!--Device-AbilityFirstFrameStateObserver-onAbilityFirstFrameDrawn(data: AbilityFirstFrameStateData): void-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -28,9 +28,9 @@ Ability首帧绘制完成时触发的回调函数。
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | [AbilityFirstFrameStateData](arkts-ability-abilityfirstframestatedata-i-sys.md) | 是 | 表示首帧绘制完成时返回的数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | [AbilityFirstFrameStateData](arkts-ability-abilityfirstframestatedata-i-sys.md) | 是 |
 
 **示例**
 
@@ -79,4 +79,3 @@ try {
   console.error(`appmanager.on failed, err code: ${code}, err msg: ${msg}.`);
 }
 ```
-

@@ -15,25 +15,23 @@ Makes an array shallow copy
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function copyOf(src: FixedArray<boolean>): FixedArray<boolean>--><!--Device-unnamed-export function copyOf(src: FixedArray<boolean>): FixedArray<boolean>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | FixedArray&lt;boolean&gt; | Yes | The array to copy |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | FixedArray & lt;boolean & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;boolean&gt; | The copy of `src` |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;boolean & gt; |
 
 
 ## copyOf
@@ -46,25 +44,23 @@ Makes an array shallow copy
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function copyOf(src: FixedArray<byte>): FixedArray<byte>--><!--Device-unnamed-export function copyOf(src: FixedArray<byte>): FixedArray<byte>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | FixedArray&lt;byte&gt; | Yes | The array to copy |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | FixedArray & lt;byte & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;byte&gt; | The copy of `src` |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;byte & gt; |
 
 
 ## copyOf
@@ -77,25 +73,23 @@ Makes an array shallow copy
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function copyOf(src: FixedArray<short>): FixedArray<short>--><!--Device-unnamed-export function copyOf(src: FixedArray<short>): FixedArray<short>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | FixedArray&lt;short&gt; | Yes | The array to copy |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | FixedArray & lt;short & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;short&gt; | The copy of `src` |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;short & gt; |
 
 
 ## copyOf
@@ -108,25 +102,23 @@ Makes an array shallow copy
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function copyOf(src: FixedArray<int>): FixedArray<int>--><!--Device-unnamed-export function copyOf(src: FixedArray<int>): FixedArray<int>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | FixedArray&lt;int&gt; | Yes | The array to copy |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | FixedArray & lt;int & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;int&gt; | The copy of `src` |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;int & gt; |
 
 
 ## copyOf
@@ -139,25 +131,23 @@ Makes an array shallow copy
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function copyOf(src: FixedArray<long>): FixedArray<long>--><!--Device-unnamed-export function copyOf(src: FixedArray<long>): FixedArray<long>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | FixedArray&lt;long&gt; | Yes | The array to copy |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | FixedArray & lt;long & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;long&gt; | The copy of `src` |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;long & gt; |
 
 
 ## copyOf
@@ -170,25 +160,23 @@ Makes an array shallow copy
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function copyOf(src: FixedArray<float>): FixedArray<float>--><!--Device-unnamed-export function copyOf(src: FixedArray<float>): FixedArray<float>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | FixedArray&lt;float&gt; | Yes | The array to copy |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | FixedArray & lt;float & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;float&gt; | The copy of `src` |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;float & gt; |
 
 
 ## copyOf
@@ -201,25 +189,23 @@ Makes an array shallow copy
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function copyOf(src: FixedArray<double>): FixedArray<double>--><!--Device-unnamed-export function copyOf(src: FixedArray<double>): FixedArray<double>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | FixedArray&lt;double&gt; | Yes | The array to copy |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | FixedArray & lt;double & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;double&gt; | The copy of `src` |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;double & gt; |
 
 
 ## copyOf
@@ -232,25 +218,23 @@ Makes an array shallow copy
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function copyOf(src: FixedArray<char>): FixedArray<char>--><!--Device-unnamed-export function copyOf(src: FixedArray<char>): FixedArray<char>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | FixedArray&lt;char&gt; | Yes | The array to copy |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | FixedArray & lt;char & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;char&gt; | The copy of `src` |
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;char & gt; |
 
 
 ## copyOf
@@ -263,23 +247,20 @@ Makes an array shallow copy
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-export function copyOf(src: FixedArray<Any>): FixedArray<Any>--><!--Device-unnamed-export function copyOf(src: FixedArray<Any>): FixedArray<Any>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| src | FixedArray&lt;Any&gt; | Yes | The array to copy |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| src | FixedArray & lt;Any & gt; | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| FixedArray&lt;Any&gt; | The copy of `src` |
-
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| FixedArray & lt;Any & gt; |

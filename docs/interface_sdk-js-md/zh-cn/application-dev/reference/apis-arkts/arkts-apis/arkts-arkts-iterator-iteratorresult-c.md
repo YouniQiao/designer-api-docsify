@@ -4,9 +4,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-<!--Device-unnamed-export class IteratorResult--><!--Device-unnamed-export class IteratorResult-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,11 +23,9 @@ constructor()
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-IteratorResult-constructor()--><!--Device-IteratorResult-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -43,20 +39,18 @@ constructor(done: boolean, value: T | undefined)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-IteratorResult-constructor(done: boolean, value: T | undefined)--><!--Device-IteratorResult-constructor(done: boolean, value: T | undefined)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| done | boolean | 是 | 表示迭代是否已完成。 |
-| value | T \| undefined | 是 | 迭代器返回的元素值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [done](#done) | boolean | 是 |
+| [value](#value) | T \| undefined | 是 |
 
 ## constructor
 
@@ -68,19 +62,17 @@ constructor(value: T)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-IteratorResult-constructor(value: T)--><!--Device-IteratorResult-constructor(value: T)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | T | 是 | 迭代器返回的元素值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [value](#value) | T | 是 |
 
 ## done
 
@@ -94,11 +86,9 @@ done: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-IteratorResult-done: boolean--><!--Device-IteratorResult-done: boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -114,11 +104,8 @@ readonly value: T | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-IteratorResult-readonly value: T | undefined--><!--Device-IteratorResult-readonly value: T | undefined-End-->
-
 **系统能力：** SystemCapability.Utils.Lang
-

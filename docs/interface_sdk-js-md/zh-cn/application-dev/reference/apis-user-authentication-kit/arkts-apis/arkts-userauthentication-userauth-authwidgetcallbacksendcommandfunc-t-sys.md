@@ -8,7 +8,7 @@ type AuthWidgetCallbackSendCommandFunc = (cmdData: string) => void
 
 **起始版本：** 23
 
-<!--Device-userAuth-type AuthWidgetCallbackSendCommandFunc = (cmdData: string) => void--><!--Device-userAuth-type AuthWidgetCallbackSendCommandFunc = (cmdData: string) => void-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -16,7 +16,6 @@ type AuthWidgetCallbackSendCommandFunc = (cmdData: string) => void
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| cmdData | string | 是 | 用户身份认证框架向控件发送的命令。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| cmdData | string | 是 |

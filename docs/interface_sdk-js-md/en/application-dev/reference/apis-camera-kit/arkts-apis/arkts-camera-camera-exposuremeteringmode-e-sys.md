@@ -1,68 +1,12 @@
-# ExposureMeteringMode (System API)
+# ExposureMeteringMode
 
 Enumerates the exposure metering modes.
 
-**Since:** 23
+**Since:** 24
 
-<!--Device-camera-enum ExposureMeteringMode--><!--Device-camera-enum ExposureMeteringMode-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-## MATRIX
-
-```TypeScript
-MATRIX = 0
-```
-
-Matrix metering mode. A wide area of the screen is selected, which is ideal for shooting natural landscapes.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-ExposureMeteringMode-MATRIX = 0--><!--Device-ExposureMeteringMode-MATRIX = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-## CENTER
-
-```TypeScript
-CENTER = 1
-```
-
-Center-weighted metering mode. Metering is performed on the entire image, with the center allocated with the maximum weight, which is ideal for shooting portraits.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-ExposureMeteringMode-CENTER = 1--><!--Device-ExposureMeteringMode-CENTER = 1-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-## SPOT
-
-```TypeScript
-SPOT = 2
-```
-
-Spot metering mode. Metering is performed around 2.5% of the metering points, focusing on the light in a specific small area, such as the eyes of the subject.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-ExposureMeteringMode-SPOT = 2--><!--Device-ExposureMeteringMode-SPOT = 2-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
 
 ## CENTER_HIGHLIGHT_WEIGHTED
 
@@ -74,11 +18,10 @@ Center-weighted and highlight metering mode. This mode focuses on the highlight 
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
-<!--Device-ExposureMeteringMode-CENTER_HIGHLIGHT_WEIGHTED = 3--><!--Device-ExposureMeteringMode-CENTER_HIGHLIGHT_WEIGHTED = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
-

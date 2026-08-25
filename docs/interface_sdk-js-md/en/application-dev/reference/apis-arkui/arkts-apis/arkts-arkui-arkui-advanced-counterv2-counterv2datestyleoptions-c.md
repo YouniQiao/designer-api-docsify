@@ -2,11 +2,11 @@
 
 Defines the date style options.
 
-**Inheritance/Implementation:** CounterV2DateStyleOptions extends [CounterV2CommonOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-counterv2-counterv2commonoptions-c.md)
+**Inheritance/Implementation:** CounterV2DateStyleOptions extends [CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md)
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare class CounterV2DateStyleOptions--><!--Device-unnamed-declare class CounterV2DateStyleOptions-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,6 +16,24 @@ Defines the date style options.
 import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUI';
 ```
 
+## onDateChange
+
+```TypeScript
+onDateChange?: OnDateCounterV2ChangeCallback
+```
+
+Trigger an event when the date of the counter has been changed.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## day
 
 ```TypeScript
@@ -24,17 +42,17 @@ day?: int
 
 Set the day of the counter component.
 
-**Type:** int
+**Type:** number
 
 **Default:** 1
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CounterV2DateStyleOptions-day?: int--><!--Device-CounterV2DateStyleOptions-day?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,37 +64,17 @@ month?: int
 
 Set the month of the counter component.
 
-**Type:** int
+**Type:** number
 
 **Default:** 1
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CounterV2DateStyleOptions-month?: int--><!--Device-CounterV2DateStyleOptions-month?: int-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onDateChange
-
-```TypeScript
-onDateChange?: OnDateCounterV2ChangeCallback
-```
-
-Trigger an event when the date of the counter has been changed.
-
-**Type:** [OnDateCounterV2ChangeCallback](../../apis-default/arkts-apis/arkts-ondatecounterv2changecallback-t.md)
-
-**Since:** 26.0.0
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CounterV2DateStyleOptions-onDateChange?: OnDateCounterV2ChangeCallback--><!--Device-CounterV2DateStyleOptions-onDateChange?: OnDateCounterV2ChangeCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,17 +86,16 @@ year?: int
 
 Set the year of the counter component, ranges from 1 to 5000.
 
-**Type:** int
+**Type:** number
 
 **Default:** 1
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-CounterV2DateStyleOptions-year?: int--><!--Device-CounterV2DateStyleOptions-year?: int-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

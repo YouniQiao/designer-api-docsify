@@ -2,9 +2,9 @@
 
 Defines the result of the operation for subscribing to or unsubscribing from the data changes or published data.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-dataShare-interface OperationResult--><!--Device-dataShare-interface OperationResult-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -26,11 +26,11 @@ Key of the operation result.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-OperationResult-key: string--><!--Device-OperationResult-key: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -44,15 +44,14 @@ result: int
 
 Operation result. If the operation is successful, **0** is returned; otherwise, an error code is returned.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-<!--Device-OperationResult-result: int--><!--Device-OperationResult-result: int-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **System API:** This is a system API.
-

@@ -2,9 +2,9 @@
 
 Enumerates the types of buttons displayed for a reminder.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-reminderAgentManager-export enum ActionButtonType--><!--Device-reminderAgentManager-export enum ActionButtonType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -16,11 +16,10 @@ ACTION_BUTTON_TYPE_CUSTOM = 2
 
 Custom button.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-ActionButtonType-ACTION_BUTTON_TYPE_CUSTOM = 2--><!--Device-ActionButtonType-ACTION_BUTTON_TYPE_CUSTOM = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 **System API:** This is a system API.
-

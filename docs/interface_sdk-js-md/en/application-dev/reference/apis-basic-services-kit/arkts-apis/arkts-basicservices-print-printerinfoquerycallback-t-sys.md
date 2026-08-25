@@ -8,9 +8,9 @@ Defines the callback type used in registering to listen for printerInfoQuery eve
 
 **Since:** 24
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
-<!--Device-print-type PrinterInfoQueryCallback = (printerInfo: PrinterInformation, ppdInfo: PpdInfo[]) => void--><!--Device-print-type PrinterInfoQueryCallback = (printerInfo: PrinterInformation, ppdInfo: PpdInfo[]) => void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -18,8 +18,7 @@ Defines the callback type used in registering to listen for printerInfoQuery eve
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| printerInfo | [PrinterInformation](arkts-basicservices-print-printerinformation-i.md) | Yes | the printer info <br>Printer Information. |
-| ppdInfo | [PpdInfo](arkts-basicservices-print-ppdinfo-i.md)[] | Yes | all the printer ppd info <br>All the printer ppd info. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| printerInfo | [PrinterInformation](arkts-basicservices-print-printerinformation-i.md) | Yes |
+| ppdInfo | [PpdInfo](arkts-basicservices-print-ppdinfo-i.md)[] | Yes |

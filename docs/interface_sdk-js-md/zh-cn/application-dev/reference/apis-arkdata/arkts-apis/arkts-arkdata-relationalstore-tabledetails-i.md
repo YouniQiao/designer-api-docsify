@@ -2,9 +2,9 @@
 
 描述数据库表执行端云同步任务上传和下载的统计信息。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-relationalStore-interface TableDetails--><!--Device-relationalStore-interface TableDetails-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -24,9 +24,9 @@ download: Statistic
 
 **类型：** [Statistic](arkts-arkdata-relationalstore-statistic-i.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-TableDetails-download: Statistic--><!--Device-TableDetails-download: Statistic-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -40,9 +40,8 @@ upload: Statistic
 
 **类型：** [Statistic](arkts-arkdata-relationalstore-statistic-i.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-TableDetails-upload: Statistic--><!--Device-TableDetails-upload: Statistic-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-

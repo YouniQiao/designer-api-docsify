@@ -2,9 +2,9 @@
 
 Enumeration of current call state
 
-**Since:** 23
+**Since:** 11
 
-<!--Device-avSession-enum CallState--><!--Device-avSession-enum CallState-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -16,11 +16,11 @@ CALL_STATE_IDLE = 0
 
 Idle state.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CallState-CALL_STATE_IDLE = 0--><!--Device-CallState-CALL_STATE_IDLE = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -32,11 +32,11 @@ CALL_STATE_INCOMING = 1
 
 Incoming state.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CallState-CALL_STATE_INCOMING = 1--><!--Device-CallState-CALL_STATE_INCOMING = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -48,11 +48,11 @@ CALL_STATE_ACTIVE = 2
 
 Active state in calling.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CallState-CALL_STATE_ACTIVE = 2--><!--Device-CallState-CALL_STATE_ACTIVE = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -64,11 +64,11 @@ CALL_STATE_DIALING = 3
 
 Dialing state.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CallState-CALL_STATE_DIALING = 3--><!--Device-CallState-CALL_STATE_DIALING = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -80,11 +80,11 @@ CALL_STATE_WAITING = 4
 
 Waiting state.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CallState-CALL_STATE_WAITING = 4--><!--Device-CallState-CALL_STATE_WAITING = 4-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -96,11 +96,11 @@ CALL_STATE_HOLDING = 5
 
 Holding state.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CallState-CALL_STATE_HOLDING = 5--><!--Device-CallState-CALL_STATE_HOLDING = 5-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -112,11 +112,10 @@ CALL_STATE_DISCONNECTING = 6
 
 Disconnecting state.
 
-**Since:** 23
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-CallState-CALL_STATE_DISCONNECTING = 6--><!--Device-CallState-CALL_STATE_DISCONNECTING = 6-End-->
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
-

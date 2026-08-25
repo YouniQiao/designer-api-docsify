@@ -6,11 +6,11 @@ Defines AnimatorAttribute.@extends CommonMethod&lt;AnimatorAttribute&gt;
 
 **Since:** 7
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
+
 **Deprecated since:** 22
 
 **Substitutes:** createAnimator
-
-<!--Device-unnamed-declare class AnimatorAttribute--><!--Device-unnamed-declare class AnimatorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,4 +20,3 @@ Defines AnimatorAttribute.@extends CommonMethod&lt;AnimatorAttribute&gt;
 
 ```TypeScript
 ```
-

@@ -13,25 +13,25 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 export function isBefore(on: On): On
 ```
 
-Requires that the target Component which is before another Component that specified by the given [On](arkts-test-uitest-on-c.md) object,used to locate Component relatively.
+指定目标控件位于给出的特征属性控件之前，返回 On 对象自身。
 
 **起始版本：** 23
 
-<!--Device-ON-export function isBefore(on: On): On--><!--Device-ON-export function isBefore(on: On): On-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Test.UiTest
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 | describes the attribute requirements of Component which the target one is in front of. |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| on | [On](arkts-test-uitest-on-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | this { |
+| 类型 |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **示例**
 
@@ -50,4 +50,3 @@ import { By, BY } from '@kit.TestKit';
 // 使用静态构造器BY创建by对象，指定目标控件位于给出的特征属性控件之前。
 let by: By = BY.type('Button').isBefore(BY.text('123')); // 查找text为123之前的第一个Button组件。
 ```
-

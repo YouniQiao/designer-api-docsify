@@ -4,7 +4,7 @@ Enumerates the exposure states.
 
 **Since:** 26.0.0
 
-<!--Device-camera-enum ExposureState--><!--Device-camera-enum ExposureState-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -18,11 +18,11 @@ Focusing.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ExposureState-EXPOSURE_STATE_SCAN = 0--><!--Device-ExposureState-EXPOSURE_STATE_SCAN = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -36,11 +36,10 @@ Exposure converged.
 
 **Since:** 26.0.0
 
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ExposureState-EXPOSURE_STATE_CONVERGED = 1--><!--Device-ExposureState-EXPOSURE_STATE_CONVERGED = 1-End-->
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
-

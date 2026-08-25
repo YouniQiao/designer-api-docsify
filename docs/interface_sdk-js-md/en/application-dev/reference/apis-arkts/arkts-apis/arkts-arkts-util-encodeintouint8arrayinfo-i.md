@@ -4,7 +4,7 @@ Encrypted information, including the number of read characters and the number of
 
 **Since:** 11
 
-<!--Device-util-interface EncodeIntoUint8ArrayInfo--><!--Device-util-interface EncodeIntoUint8ArrayInfo-End-->
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,9 +26,9 @@ Number of characters that have been read.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
-<!--Device-EncodeIntoUint8ArrayInfo-read: number--><!--Device-EncodeIntoUint8ArrayInfo-read: number-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -44,9 +44,8 @@ Number of bytes that have been written.
 
 **Since:** 11
 
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-EncodeIntoUint8ArrayInfo-written: number--><!--Device-EncodeIntoUint8ArrayInfo-written: number-End-->
-
 **System capability:** SystemCapability.Utils.Lang
-

@@ -5,9 +5,9 @@
 > **说明：**&gt;
 > 本模块为系统接口。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-unnamed-declare namespace charger--><!--Device-unnamed-declare namespace charger-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -24,8 +24,7 @@ import { charger } from '@kit.BasicServicesKit';
 <!--Del-->
 ### 枚举（系统接口）
 
-| 名称 | 说明 |
-| --- | --- |
-| [ChargeType](arkts-basicservices-charger-chargetype-e-sys.md) | 表示充电类型的枚举。 |
+| 名称 |
+| --- |
+| [ChargeType](arkts-basicservices-charger-chargetype-e-sys.md) |
 <!--DelEnd-->
-

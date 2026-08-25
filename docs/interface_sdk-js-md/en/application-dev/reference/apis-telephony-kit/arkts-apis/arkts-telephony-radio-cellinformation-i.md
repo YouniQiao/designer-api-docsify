@@ -2,9 +2,9 @@
 
 Defines the cell information.
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-radio-export interface CellInformation--><!--Device-radio-export interface CellInformation-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -24,9 +24,9 @@ Network type of the cell.
 
 **Type:** NetworkType
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-CellInformation-networkType: NetworkType--><!--Device-CellInformation-networkType: NetworkType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -40,9 +40,8 @@ Signal information.
 
 **Type:** SignalInformation
 
-**Since:** 23
+**Since:** 8
 
-<!--Device-CellInformation-signalInformation: SignalInformation--><!--Device-CellInformation-signalInformation: SignalInformation-End-->
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
-

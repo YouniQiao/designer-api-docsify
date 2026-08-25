@@ -10,7 +10,6 @@ import { BackupExtensionContext } from '@kit.CoreFileKit';
 
 ### Classes
 
-| Name | Description |
-| --- | --- |
-| [BackupExtensionContext](arkts-corefile-file-backupextensioncontext-backupextensioncontext-c.md) | The context of an ability or an application. It allows access to application-specific resources. Can only be obtained through the ability.@extends ExtensionContext |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BackupExtensionContext](arkts-corefile-file-backupextensioncontext-backupextensioncontext-c.md) |

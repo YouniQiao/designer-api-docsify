@@ -4,11 +4,11 @@ The **FormBindingData** module provides APIs for widget data binding. You can us
 
 **Since:** 8
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
+
 **Deprecated since:** 9
 
 **Substitutes:** [formBindingData](arkts-app-form-formbindingdata.md)
-
-<!--Device-unnamed-declare namespace formBindingData--><!--Device-unnamed-declare namespace formBindingData-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -21,13 +21,12 @@ The **FormBindingData** module provides APIs for widget data binding. You can us
 
 ### Functions
 
-| Name | Description |
-| --- | --- |
-| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-depr-f.md#createformbindingdata) | Creates a **FormBindingData** object. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-depr-f.md#createformbindingdata) |
 
 ### Interfaces
 
-| Name | Description |
-| --- | --- |
-| [FormBindingData](arkts-form-formbindingdata-formbindingdata-depr-i.md) | Describes a **FormBindingData** object. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FormBindingData](arkts-form-formbindingdata-formbindingdata-depr-i.md) |

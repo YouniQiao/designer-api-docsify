@@ -4,7 +4,7 @@ Page flip mode of Swiper and Tabs on mouse wheel event.@enum { number } PageFlip
 
 **起始版本：** 15
 
-<!--Device-unnamed-declare enum PageFlipMode--><!--Device-unnamed-declare enum PageFlipMode-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +18,13 @@ Turn pages continuously according to the number of mouse wheel events.
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本15开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-PageFlipMode-CONTINUOUS = 0--><!--Device-PageFlipMode-CONTINUOUS = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,13 +38,12 @@ The page-turning animation remains unresponsive to other mouse wheel events unti
 
 **起始版本：** 15
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本15开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-PageFlipMode-SINGLE = 1--><!--Device-PageFlipMode-SINGLE = 1-End-->
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-

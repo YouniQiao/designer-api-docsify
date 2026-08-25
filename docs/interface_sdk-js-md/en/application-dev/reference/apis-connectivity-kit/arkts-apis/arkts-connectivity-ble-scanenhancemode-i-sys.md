@@ -4,7 +4,7 @@ Describes the configuration of scan enhance mode.
 
 **Since:** 26.0.0
 
-<!--Device-ble-interface ScanEnhanceMode--><!--Device-ble-interface ScanEnhanceMode-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -28,9 +28,9 @@ The mode of scan enhance.
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ScanEnhanceMode-enhanceMode: EnhanceMode--><!--Device-ScanEnhanceMode-enhanceMode: EnhanceMode-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -39,20 +39,19 @@ The mode of scan enhance.
 ## timeout
 
 ```TypeScript
-timeout: int
+timeout: number
 ```
 
 The duration of scan enhance. The value range is all integers.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-ScanEnhanceMode-timeout: int--><!--Device-ScanEnhanceMode-timeout: int-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
-

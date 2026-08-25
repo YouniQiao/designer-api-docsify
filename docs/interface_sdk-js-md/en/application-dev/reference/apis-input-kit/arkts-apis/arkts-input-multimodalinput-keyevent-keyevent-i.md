@@ -4,9 +4,9 @@ Key event.@interface KeyEvent [since 9 - 11]
 
 **Inheritance/Implementation:** KeyEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-unnamed-export declare interface KeyEvent--><!--Device-unnamed-export declare interface KeyEvent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -26,11 +26,11 @@ Key event type.
 
 **Type:** [Action](arkts-input-multimodalinput-keyevent-action-e.md)
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyEvent-action: Action--><!--Device-KeyEvent-action: Action-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -44,11 +44,11 @@ Whether altKey is being pressed.The value **true** indicates that the key is pre
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyEvent-altKey: boolean--><!--Device-KeyEvent-altKey: boolean-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -62,11 +62,11 @@ Whether capsLock is enabled.The value **true** indicates that capsLock is enable
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyEvent-capsLock: boolean--><!--Device-KeyEvent-capsLock: boolean-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -80,11 +80,11 @@ Whether ctrlKey is being pressed.The value **true** indicates that the key is pr
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyEvent-ctrlKey: boolean--><!--Device-KeyEvent-ctrlKey: boolean-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -98,11 +98,11 @@ Whether fnKey is being pressed.The value **true** indicates that the key is pres
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyEvent-fnKey: boolean--><!--Device-KeyEvent-fnKey: boolean-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -116,11 +116,11 @@ Defines a key.
 
 **Type:** [Key](arkts-input-multimodalinput-keyevent-key-i.md)
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyEvent-key: Key--><!--Device-KeyEvent-key: Key-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -134,11 +134,11 @@ List of pressed keys.
 
 **Type:** [Key](arkts-input-multimodalinput-keyevent-key-i.md)[]
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyEvent-keys: Key[]--><!--Device-KeyEvent-keys: Key[]-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -152,11 +152,11 @@ Whether logoKey is being pressed.The value **true** indicates that the key is pr
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyEvent-logoKey: boolean--><!--Device-KeyEvent-logoKey: boolean-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -170,11 +170,11 @@ Whether numLock is enabled.The value **true** indicates that numLock is enabled,
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyEvent-numLock: boolean--><!--Device-KeyEvent-numLock: boolean-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -188,11 +188,11 @@ Whether scrollLock is enabled.The value **true** indicates that scrollLock is en
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyEvent-scrollLock: boolean--><!--Device-KeyEvent-scrollLock: boolean-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -206,11 +206,11 @@ Whether shiftKey is being pressed.The value **true** indicates that the key is p
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyEvent-shiftKey: boolean--><!--Device-KeyEvent-shiftKey: boolean-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -222,13 +222,12 @@ unicodeChar: int
 
 Unicode character corresponding to the key.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-KeyEvent-unicodeChar: int--><!--Device-KeyEvent-unicodeChar: int-End-->
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
-

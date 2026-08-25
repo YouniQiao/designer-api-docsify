@@ -2,9 +2,9 @@
 
 标记模板的数据结构，TemplateId是在[addTemplate](arkts-arkdata-datashare-datasharehelper-i-sys.md#addtemplate)中自动生成的，在 [addTemplate](arkts-arkdata-datashare-datasharehelper-i-sys.md#addtemplate)后，可以使用模板id来标记模板。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-dataShare-interface TemplateId--><!--Device-dataShare-interface TemplateId-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -26,11 +26,11 @@ bundleNameOfOwner: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-TemplateId-bundleNameOfOwner: string--><!--Device-TemplateId-bundleNameOfOwner: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -46,13 +46,12 @@ subscriberId: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-TemplateId-subscriberId: string--><!--Device-TemplateId-subscriberId: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
-

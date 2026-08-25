@@ -1,14 +1,40 @@
-# AccountType（系统接口）
+# AccountType
 
 表示授权账号类型的枚举。
 
-**起始版本：** 10
+**起始版本：** 21
 
-<!--Device-dlpPermission-export enum AccountType--><!--Device-dlpPermission-export enum AccountType-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
-**系统接口：** 此接口为系统接口。
+## CLOUD_ACCOUNT
+
+```TypeScript
+CLOUD_ACCOUNT = 1
+```
+
+表示云账号。
+
+**起始版本：** 21
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
+**系统能力：** SystemCapability.Security.DataLossPrevention
+
+## DOMAIN_ACCOUNT
+
+```TypeScript
+DOMAIN_ACCOUNT = 2
+```
+
+表示域账号。
+
+**起始版本：** 21
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
+
+**系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## ENTERPRISE_ACCOUNT
 
@@ -20,7 +46,6 @@ ENTERPRISE_ACCOUNT = 4
 
 **起始版本：** 21
 
-<!--Device-AccountType-ENTERPRISE_ACCOUNT = 4--><!--Device-AccountType-ENTERPRISE_ACCOUNT = 4-End-->
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
-

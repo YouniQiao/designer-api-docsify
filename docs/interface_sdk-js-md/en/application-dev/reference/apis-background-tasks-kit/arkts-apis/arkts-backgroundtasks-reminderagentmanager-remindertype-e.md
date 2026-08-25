@@ -2,9 +2,9 @@
 
 Enumerates the reminder types.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-reminderAgentManager-export enum ReminderType--><!--Device-reminderAgentManager-export enum ReminderType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -16,9 +16,9 @@ REMINDER_TYPE_TIMER = 0
 
 Countdown reminder.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ReminderType-REMINDER_TYPE_TIMER = 0--><!--Device-ReminderType-REMINDER_TYPE_TIMER = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -30,9 +30,9 @@ REMINDER_TYPE_CALENDAR = 1
 
 Calendar reminder.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ReminderType-REMINDER_TYPE_CALENDAR = 1--><!--Device-ReminderType-REMINDER_TYPE_CALENDAR = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -44,9 +44,8 @@ REMINDER_TYPE_ALARM = 2
 
 Alarm reminder.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-ReminderType-REMINDER_TYPE_ALARM = 2--><!--Device-ReminderType-REMINDER_TYPE_ALARM = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
-

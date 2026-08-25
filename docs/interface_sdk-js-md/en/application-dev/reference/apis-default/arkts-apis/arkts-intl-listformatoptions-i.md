@@ -3,9 +3,7 @@
 An object with some or all properties of the `Intl.ListFormat` constructor `options` parameter.  
 [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat#parameters).
 
-**Since:** -1
-
-<!--Device-Intl-interface ListFormatOptions--><!--Device-Intl-interface ListFormatOptions-End-->
+**ArkTS mode:** 
 
 ## Modules to Import
 
@@ -22,9 +20,7 @@ The locale matching algorithm to use. For information about this option, see [In
 
 **Type:** ListFormatLocaleMatcher \| undefined
 
-**Since:** -1
-
-<!--Device-ListFormatOptions-localeMatcher?: ListFormatLocaleMatcher | undefined--><!--Device-ListFormatOptions-localeMatcher?: ListFormatLocaleMatcher | undefined-End-->
+**ArkTS mode:** 
 
 ## style
 
@@ -36,9 +32,7 @@ The length of the internationalized message.
 
 **Type:** ListFormatStyle \| undefined
 
-**Since:** -1
-
-<!--Device-ListFormatOptions-style?: ListFormatStyle | undefined--><!--Device-ListFormatOptions-style?: ListFormatStyle | undefined-End-->
+**ArkTS mode:** 
 
 ## type
 
@@ -50,7 +44,4 @@ The format of output message.
 
 **Type:** ListFormatType \| undefined
 
-**Since:** -1
-
-<!--Device-ListFormatOptions-type?: ListFormatType | undefined--><!--Device-ListFormatOptions-type?: ListFormatType | undefined-End-->
-
+**ArkTS mode:** 

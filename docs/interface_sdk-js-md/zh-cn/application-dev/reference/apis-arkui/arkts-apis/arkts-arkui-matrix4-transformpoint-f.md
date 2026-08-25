@@ -18,25 +18,25 @@ Matrix的坐标点转换函数，可以将当前的变换效果作用到一个�
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 10
 
 **替代接口：** [transformPoint](arkts-arkui-matrix4-matrix4transit-i.md#transformpoint)
-
-<!--Device-matrix4-function transformPoint(options: [number, number]): [number, number]--><!--Device-matrix4-function transformPoint(options: [number, number]): [number, number]-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [number, number] | 是 | 需要转换的坐标点。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| options | [number, number] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [number, number] | 返回矩阵变换后的Point对象。 |
+| 类型 |
+| --- |
+| [number, number] |
 
 **示例**
 
@@ -74,4 +74,3 @@ struct Test {
   }
 }
 ```
-

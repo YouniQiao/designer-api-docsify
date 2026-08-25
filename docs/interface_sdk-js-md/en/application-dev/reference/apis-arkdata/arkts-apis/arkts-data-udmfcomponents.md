@@ -10,13 +10,12 @@ import { ContentFormCard, FormType } from '@kit.ArkData';
 
 ### Structs
 
-| Name | Description |
-| --- | --- |
-| [ContentFormCard](arkts-arkdata-data-udmfcomponents-contentformcard-s.md) | Defines a content form card. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ContentFormCard](arkts-arkdata-data-udmfcomponents-contentformcard-s.md) |
 
 ### Enums
 
-| Name | Description |
-| --- | --- |
-| [FormType](arkts-arkdata-data-udmfcomponents-formtype-e.md) | Enumerates the form card types. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FormType](arkts-arkdata-data-udmfcomponents-formtype-e.md) |

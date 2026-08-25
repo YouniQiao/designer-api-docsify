@@ -2,9 +2,9 @@
 
 Enumerates the mechanical device types. @enum { int }
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-mechanicManager-export enum MechDeviceType--><!--Device-mechanicManager-export enum MechDeviceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -18,7 +18,7 @@ Desktop gimbal device.
 
 **Since:** 26.0.0
 
-<!--Device-MechDeviceType-DESKTOP_GIMBAL_DEVICE = 1--><!--Device-MechDeviceType-DESKTOP_GIMBAL_DEVICE = 1-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -34,9 +34,8 @@ Wheeled?mounted base device.
 
 **Since:** 26.0.0
 
-<!--Device-MechDeviceType-WHEELED_BASE_DEVICE = 2--><!--Device-MechDeviceType-WHEELED_BASE_DEVICE = 2-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
-

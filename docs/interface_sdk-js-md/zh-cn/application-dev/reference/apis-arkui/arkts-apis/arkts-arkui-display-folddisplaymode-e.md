@@ -8,9 +8,9 @@
 
 > 对于外屏只有简单的辅助显示作用的折叠产品，例如小折叠，内屏显示状态为FOLD_DISPLAY_MODE_MAIN，外屏显示状态为FOLD_DISPLAY_MODE_SUB。
 
-**起始版本：** 23
+**起始版本：** 10
 
-<!--Device-display-enum FoldDisplayMode--><!--Device-display-enum FoldDisplayMode-End-->
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -22,11 +22,11 @@ FOLD_DISPLAY_MODE_UNKNOWN = 0
 
 表示设备当前折叠显示模式未知。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_UNKNOWN = 0--><!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_UNKNOWN = 0-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -38,11 +38,11 @@ FOLD_DISPLAY_MODE_FULL = 1
 
 表示设备当前全屏显示。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_FULL = 1--><!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_FULL = 1-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -54,11 +54,11 @@ FOLD_DISPLAY_MODE_MAIN = 2
 
 表示设备当前主屏幕显示。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_MAIN = 2--><!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_MAIN = 2-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -70,11 +70,11 @@ FOLD_DISPLAY_MODE_SUB = 3
 
 表示设备当前子屏幕显示。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_SUB = 3--><!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_SUB = 3-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -86,11 +86,10 @@ FOLD_DISPLAY_MODE_COORDINATION
 
 表示设备当前双屏协同显示。
 
-**起始版本：** 23
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_COORDINATION--><!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_COORDINATION-End-->
-
 **系统能力：** SystemCapability.Window.SessionManager
-

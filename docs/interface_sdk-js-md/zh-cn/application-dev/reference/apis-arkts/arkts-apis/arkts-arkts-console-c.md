@@ -4,9 +4,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-unnamed-class Console--><!--Device-unnamed-class Console-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,19 +23,17 @@ assert(...vals: Any[]): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-assert(...vals: Any[]): void--><!--Device-Console-assert(...vals: Any[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| vals | Any[] | 是 | 条件为false时需要打印的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| vals | Any[] | 是 |
 
 ## count
 
@@ -49,19 +45,17 @@ count(label?: string): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-count(label?: string): void--><!--Device-Console-count(label?: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| label | string | 否 | 用于计数的标识。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| label | string | 否 |
 
 ## countReset
 
@@ -73,19 +67,17 @@ countReset(label?: string): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-countReset(label?: string): void--><!--Device-Console-countReset(label?: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| label | string | 否 | 待重置计数器的标识。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| label | string | 否 |
 
 ## debug
 
@@ -97,19 +89,17 @@ debug(...vals: Any[]): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-debug(...vals: Any[]): void--><!--Device-Console-debug(...vals: Any[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| vals | Any[] | 是 | 待打印的可变number的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| vals | Any[] | 是 |
 
 ## dir
 
@@ -121,19 +111,17 @@ dir(obj?: Any): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-dir(obj?: Any): void--><!--Device-Console-dir(obj?: Any): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| obj | Any | 否 | 待查看的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| obj | Any | 否 |
 
 ## dirxml
 
@@ -145,19 +133,17 @@ dirxml(...obj: Any[]): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-dirxml(...obj: Any[]): void--><!--Device-Console-dirxml(...obj: Any[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| obj | Any[] | 是 | 以XML形式展示的对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| obj | Any[] | 是 |
 
 ## error
 
@@ -169,19 +155,17 @@ error(...vals: Any[]): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-error(...vals: Any[]): void--><!--Device-Console-error(...vals: Any[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| vals | Any[] | 是 | 待打印的可变number的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| vals | Any[] | 是 |
 
 ## getInstance
 
@@ -193,19 +177,17 @@ public static getInstance(): Console
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public static getInstance(): Console--><!--Device-Console-public static getInstance(): Console-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| Console | Console的单例实例。 |
+| 类型 |
+| --- |
+| Console |
 
 ## group
 
@@ -217,19 +199,17 @@ group(...objs: Any[]): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-group(...objs: Any[]): void--><!--Device-Console-group(...objs: Any[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| objs | Any[] | 是 | 用于开启新日志分组的标识。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| objs | Any[] | 是 |
 
 ## groupCollapsed
 
@@ -241,19 +221,17 @@ group()方法的别名，在支持的环境中创建折叠分组。
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-groupCollapsed(...objs: Any[]): void--><!--Device-Console-groupCollapsed(...objs: Any[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| objs | Any[] | 是 | 用于创建折叠分组的标识。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| objs | Any[] | 是 |
 
 ## groupEnd
 
@@ -265,11 +243,9 @@ groupEnd(): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-groupEnd(): void--><!--Device-Console-groupEnd(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -283,19 +259,17 @@ info(...vals: Any[]): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-info(...vals: Any[]): void--><!--Device-Console-info(...vals: Any[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| vals | Any[] | 是 | 待打印的可变number的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| vals | Any[] | 是 |
 
 ## log
 
@@ -307,19 +281,17 @@ log(i: boolean): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-log(i: boolean): void--><!--Device-Console-log(i: boolean): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | boolean | 是 | 待打印到标准输出的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | boolean | 是 |
 
 ## log
 
@@ -331,19 +303,17 @@ log(i: byte): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-log(i: byte): void--><!--Device-Console-log(i: byte): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | byte | 是 | 待打印的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | byte | 是 |
 
 ## log
 
@@ -355,19 +325,17 @@ log(i: short): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-log(i: short): void--><!--Device-Console-log(i: short): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | short | 是 | 待打印的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | short | 是 |
 
 ## log
 
@@ -379,19 +347,17 @@ log(i: char): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-log(i: char): void--><!--Device-Console-log(i: char): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | char | 是 | 待打印的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | char | 是 |
 
 ## log
 
@@ -403,19 +369,17 @@ log(i: int): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-log(i: int): void--><!--Device-Console-log(i: int): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | int | 是 | 待打印的值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | int | 是 |
 
 ## log
 
@@ -427,19 +391,17 @@ log(i: long): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-log(i: long): void--><!--Device-Console-log(i: long): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | long | 是 | 待打印的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | long | 是 |
 
 ## log
 
@@ -451,19 +413,17 @@ log(i: float): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-log(i: float): void--><!--Device-Console-log(i: float): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | float | 是 | 待打印的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | float | 是 |
 
 ## log
 
@@ -475,19 +435,17 @@ log(i: double): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-log(i: double): void--><!--Device-Console-log(i: double): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | double | 是 | 待打印的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | double | 是 |
 
 ## log
 
@@ -499,19 +457,17 @@ log(i: string): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-log(i: string): void--><!--Device-Console-log(i: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | string | 是 | 待打印的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | string | 是 |
 
 ## log
 
@@ -523,11 +479,9 @@ log(): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-log(): void--><!--Device-Console-log(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -541,19 +495,17 @@ log(...vals: Any[]): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-log(...vals: Any[]): void--><!--Device-Console-log(...vals: Any[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| vals | Any[] | 是 | 待打印的可变number的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| vals | Any[] | 是 |
 
 ## print
 
@@ -565,19 +517,17 @@ public print(i: boolean): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public print(i: boolean): void--><!--Device-Console-public print(i: boolean): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | boolean | 是 | 待打印到标准输出的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | boolean | 是 |
 
 ## print
 
@@ -589,19 +539,17 @@ public print(i: byte): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public print(i: byte): void--><!--Device-Console-public print(i: byte): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | byte | 是 | 待打印到标准输出的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | byte | 是 |
 
 ## print
 
@@ -613,19 +561,17 @@ public print(i: short): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public print(i: short): void--><!--Device-Console-public print(i: short): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | short | 是 | 待打印到标准输出的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | short | 是 |
 
 ## print
 
@@ -637,19 +583,17 @@ public print(i: char): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public print(i: char): void--><!--Device-Console-public print(i: char): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | char | 是 | 待打印到标准输出的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | char | 是 |
 
 ## print
 
@@ -661,19 +605,17 @@ public print(i: int): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public print(i: int): void--><!--Device-Console-public print(i: int): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | int | 是 | 待打印到标准输出的值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | int | 是 |
 
 ## print
 
@@ -685,19 +627,17 @@ public print(i: long): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public print(i: long): void--><!--Device-Console-public print(i: long): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | long | 是 | 待打印到标准输出的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | long | 是 |
 
 ## print
 
@@ -709,19 +649,17 @@ public print(i: float): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public print(i: float): void--><!--Device-Console-public print(i: float): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | float | 是 | 待打印到标准输出的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | float | 是 |
 
 ## print
 
@@ -733,19 +671,17 @@ public print(i: double): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public print(i: double): void--><!--Device-Console-public print(i: double): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | double | 是 | 待打印到标准输出的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | double | 是 |
 
 ## print
 
@@ -757,19 +693,17 @@ public print(i: string): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public print(i: string): void--><!--Device-Console-public print(i: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | string | 是 | 待打印到标准输出的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | string | 是 |
 
 ## print
 
@@ -781,19 +715,17 @@ public print(i: Any): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public print(i: Any): void--><!--Device-Console-public print(i: Any): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | Any | 是 | 待打印到标准输出的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | Any | 是 |
 
 ## println
 
@@ -805,11 +737,9 @@ public println(): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public println(): void--><!--Device-Console-public println(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -823,19 +753,17 @@ public println(i: boolean): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public println(i: boolean): void--><!--Device-Console-public println(i: boolean): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | boolean | 是 | 待打印到标准输出的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | boolean | 是 |
 
 ## println
 
@@ -847,19 +775,17 @@ public println(i: byte): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public println(i: byte): void--><!--Device-Console-public println(i: byte): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | byte | 是 | 待打印到标准输出的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | byte | 是 |
 
 ## println
 
@@ -871,19 +797,17 @@ public println(i: short): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public println(i: short): void--><!--Device-Console-public println(i: short): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | short | 是 | 待打印到标准输出的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | short | 是 |
 
 ## println
 
@@ -895,19 +819,17 @@ public println(i: char): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public println(i: char): void--><!--Device-Console-public println(i: char): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | char | 是 | 待打印到标准输出的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | char | 是 |
 
 ## println
 
@@ -919,19 +841,17 @@ public println(i: int): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public println(i: int): void--><!--Device-Console-public println(i: int): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | int | 是 | 待打印到标准输出的值。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | int | 是 |
 
 ## println
 
@@ -943,19 +863,17 @@ public println(i: long): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public println(i: long): void--><!--Device-Console-public println(i: long): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | long | 是 | 待打印到标准输出的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | long | 是 |
 
 ## println
 
@@ -967,19 +885,17 @@ public println(i: float): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public println(i: float): void--><!--Device-Console-public println(i: float): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | float | 是 | 待打印到标准输出的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | float | 是 |
 
 ## println
 
@@ -991,19 +907,17 @@ public println(i: double): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public println(i: double): void--><!--Device-Console-public println(i: double): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | double | 是 | 待打印到标准输出的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | double | 是 |
 
 ## println
 
@@ -1015,19 +929,17 @@ public println(i: string): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public println(i: string): void--><!--Device-Console-public println(i: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | string | 是 | 待打印到标准输出的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | string | 是 |
 
 ## println
 
@@ -1039,19 +951,17 @@ public println(i: Any): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-public println(i: Any): void--><!--Device-Console-public println(i: Any): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| i | Any | 是 | 待打印到标准输出的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| i | Any | 是 |
 
 ## table
 
@@ -1063,19 +973,17 @@ table(...data: Any[]): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-table(...data: Any[]): void--><!--Device-Console-table(...data: Any[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | Any[] | 是 | 以表格形式展示的对象数组。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | Any[] | 是 |
 
 ## time
 
@@ -1087,19 +995,17 @@ time(label?: string): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-time(label?: string): void--><!--Device-Console-time(label?: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| label | string | 否 | 定时器的标识。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| label | string | 否 |
 
 ## timeEnd
 
@@ -1111,19 +1017,17 @@ timeEnd(label?: string): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-timeEnd(label?: string): void--><!--Device-Console-timeEnd(label?: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| label | string | 否 | 定时器的标识。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| label | string | 否 |
 
 ## timeLog
 
@@ -1135,20 +1039,18 @@ timeLog(label?: string, ...arguments: Object[]): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-timeLog(label?: string, ...arguments: Object[]): void--><!--Device-Console-timeLog(label?: string, ...arguments: Object[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| label | string | 否 | 定时器的标识。 |
-| arguments | Object[] | 是 | 附加的调试信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| label | string | 否 |
+| [arguments](arkts-arkts-taskpool-task-c.md) | Object[] | 是 |
 
 ## trace
 
@@ -1160,19 +1062,17 @@ trace(...data: Any[]): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-trace(...data: Any[]): void--><!--Device-Console-trace(...data: Any[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | Any[] | 是 | 附加的调试信息。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | Any[] | 是 |
 
 ## warn
 
@@ -1184,17 +1084,14 @@ warn(...vals: Any[]): void
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Console-warn(...vals: Any[]): void--><!--Device-Console-warn(...vals: Any[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| vals | Any[] | 是 | 待打印的可变number的值。 |
-
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| vals | Any[] | 是 |

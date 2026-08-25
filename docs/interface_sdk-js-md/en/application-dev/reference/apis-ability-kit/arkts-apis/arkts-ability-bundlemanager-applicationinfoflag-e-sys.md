@@ -2,9 +2,9 @@
 
 Enumerates the application information flag, which describes the status between an application and user.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-bundleManager-export enum ApplicationInfoFlag--><!--Device-bundleManager-export enum ApplicationInfoFlag-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -18,9 +18,9 @@ FLAG_INSTALLED = 0x00000001
 
 The application is installed for the specified user.
 
-**Since:** 23
+**Since:** 12
 
-<!--Device-ApplicationInfoFlag-FLAG_INSTALLED = 0x00000001--><!--Device-ApplicationInfoFlag-FLAG_INSTALLED = 0x00000001-End-->
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -34,9 +34,9 @@ FLAG_OTHER_INSTALLED = 0x00000010
 
 The application is installed for users other than the specified user.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-ApplicationInfoFlag-FLAG_OTHER_INSTALLED = 0x00000010--><!--Device-ApplicationInfoFlag-FLAG_OTHER_INSTALLED = 0x00000010-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -50,9 +50,9 @@ FLAG_PREINSTALLED_APP = 0x00000020
 
 The application is a preinstalled application.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-ApplicationInfoFlag-FLAG_PREINSTALLED_APP = 0x00000020--><!--Device-ApplicationInfoFlag-FLAG_PREINSTALLED_APP = 0x00000020-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -66,11 +66,10 @@ FLAG_PREINSTALLED_APP_UPDATE = 0x00000040
 
 The preinstalled application is updated.
 
-**Since:** 23
+**Since:** 15
 
-<!--Device-ApplicationInfoFlag-FLAG_PREINSTALLED_APP_UPDATE = 0x00000040--><!--Device-ApplicationInfoFlag-FLAG_PREINSTALLED_APP_UPDATE = 0x00000040-End-->
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
-

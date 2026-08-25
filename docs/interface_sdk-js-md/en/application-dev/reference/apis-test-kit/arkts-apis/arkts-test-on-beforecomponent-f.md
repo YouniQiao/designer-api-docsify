@@ -13,29 +13,28 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 export function beforeComponent(com: Component): On
 ```
 
-Requires that the target Component which is before another Component that specified by the given [Component](arkts-test-uitest-component-c.md) object,used to locate Component relatively.
+Specifies that the target component is located before the given feature component (parameter [Component](arkts-test-uitest-component-c.md)), and returns the On object itself.
 
 **Since:** 26.0.0
 
-<!--Device-ON-export function beforeComponent(com: Component): On--><!--Device-ON-export function beforeComponent(com: Component): On-End-->
+**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| com | [Component](arkts-test-uitest-component-c.md) | Yes | describes the Component which the target one is in front of. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| com | [Component](arkts-test-uitest-component-c.md) | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| [On](arkts-test-uitest-on-c.md) | this { |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [On](arkts-test-uitest-on-c.md) |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
-
+| Error Code ID |
+| --- |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |

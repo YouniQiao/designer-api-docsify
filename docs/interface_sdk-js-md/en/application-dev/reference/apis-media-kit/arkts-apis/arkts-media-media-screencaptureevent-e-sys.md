@@ -2,9 +2,9 @@
 
 Enumerates the states available for the system screen recorder.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-media-enum ScreenCaptureEvent--><!--Device-media-enum ScreenCaptureEvent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -18,9 +18,9 @@ SCREENCAPTURE_STARTED = 0
 
 The system screen recorder starts screen capture.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ScreenCaptureEvent-SCREENCAPTURE_STARTED = 0--><!--Device-ScreenCaptureEvent-SCREENCAPTURE_STARTED = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -34,9 +34,9 @@ SCREENCAPTURE_STOPPED = 1
 
 The system screen recorder stops screen capture.
 
-**Since:** 23
+**Since:** 18
 
-<!--Device-ScreenCaptureEvent-SCREENCAPTURE_STOPPED = 1--><!--Device-ScreenCaptureEvent-SCREENCAPTURE_STOPPED = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -52,9 +52,8 @@ The system screen recorder died.
 
 **Since:** 23
 
-<!--Device-ScreenCaptureEvent-SCREENCAPTURE_DIED = 2--><!--Device-ScreenCaptureEvent-SCREENCAPTURE_DIED = 2-End-->
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **System API:** This is a system API.
-

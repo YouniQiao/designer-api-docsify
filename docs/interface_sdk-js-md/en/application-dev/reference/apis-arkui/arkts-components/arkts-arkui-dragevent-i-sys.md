@@ -4,7 +4,7 @@ Provides information about the drag event.
 
 **Since:** 7
 
-<!--Device-unnamed-declare interface DragEvent--><!--Device-unnamed-declare interface DragEvent-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,9 +23,9 @@ Sets whether to enable the system's built-in drop animation effect. This API is 
 
 **Since:** 20
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
-<!--Device-DragEvent-enableInternalDropAnimation(configuration: string): void--><!--Device-DragEvent-enableInternalDropAnimation(configuration: string): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,17 +33,17 @@ Sets whether to enable the system's built-in drop animation effect. This API is 
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| configuration | string | Yes | the internal drop animation's configuration. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| configuration | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [190003](../errorcode-drag-event.md#190003-operation-not-allowed-in-the-current-phase) | Operation not allowed for current phase. |
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [190003](../errorcode-drag-event.md#190003-operation-not-allowed-in-the-current-phase) |
 
 ## executeFollowHandMorphDropAnimation
 
@@ -60,9 +60,9 @@ Sets a callback to be executed after the follow-hand morph drop animation is com
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-DragEvent-executeFollowHandMorphDropAnimation(onAnimationFinished: Callback<void>, animationOption?: string): void--><!--Device-DragEvent-executeFollowHandMorphDropAnimation(onAnimationFinished: Callback<void>, animationOption?: string): void-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,10 +70,10 @@ Sets a callback to be executed after the follow-hand morph drop animation is com
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| onAnimationFinished | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback triggered after the drag framework animation ends. |
-| animationOption | string | No | Drop animation parameters.<br>The parameter is a JSON string containing the following fields:<br>**CubicCurveEnable**: boolean, indicating whether to enable the cubic curve animation. Set to **true** to enable it, or **false** to disable it.<br>**SpringEnable**: boolean, indicating whether to enable the spring animation. Set to **true** to enable it, or **false** to disable it.<br> **dropAnimationCurve**: number[], indicating the drop animation curve parameters. Its meaning depends on **SpringEnable** and **CubicCurveEnable** (with **SpringEnable** having higher priority). When **SpringEnable** is **true**, the array length is 3, in the format of [response, dampingRatio, blendDuration], corresponding to the spring curve parameters of [curves.springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md). When **SpringEnable** is **false** and **CubicCurveEnable** is **true**, the array length is 4, in the format of [x1, y1, x2, y2], corresponding to the cubic Bezier curve control point parameters of [curves.cubicBezierCurve](../arkts-apis/arkts-arkui-curves-cubicbeziercurve-f.md).<br>**NOTE:** **SpringEnable** takes priority over **CubicCurveEnable**. When both are **true**, the spring animation prevails. When neither **SpringEnable** nor **CubicCurveEnable** is correctly set, the default spring animation is used.<br> **dropPosition**: number[], indicating the drop position coordinates. The array length is 2, in the format of [x, y], in px, representing the target position coordinates of the dragged element when it drops. Value range: (-∞, +∞).<br>**dropSize**: number[], indicating the drop size. The array length is 2, in the format of [width, height], in px, representing the target size of the dragged element when it drops. Value range: (0, +∞). |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| onAnimationFinished | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes |
+| animationOption | string | No |
 
 ## dragAnimationType
 
@@ -90,11 +90,10 @@ Sets the drag animation type. This attribute can only be set during the [onDragS
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
-<!--Device-DragEvent-dragAnimationType?: DragAnimationType--><!--Device-DragEvent-dragAnimationType?: DragAnimationType-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-

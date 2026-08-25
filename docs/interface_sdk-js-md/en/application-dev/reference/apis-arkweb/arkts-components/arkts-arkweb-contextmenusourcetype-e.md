@@ -4,7 +4,7 @@ Enumerates the event source types that trigger the context menu.
 
 **Since:** 9
 
-<!--Device-unnamed-declare enum ContextMenuSourceType--><!--Device-unnamed-declare enum ContextMenuSourceType-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -18,9 +18,9 @@ Other event sources.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ContextMenuSourceType-None = 0--><!--Device-ContextMenuSourceType-None = 0-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -34,9 +34,9 @@ Mouse event.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-ContextMenuSourceType-Mouse = 1--><!--Device-ContextMenuSourceType-Mouse = 1-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -50,9 +50,8 @@ Long press event.
 
 **Since:** 9
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ContextMenuSourceType-LongPress = 2--><!--Device-ContextMenuSourceType-LongPress = 2-End-->
-
 **System capability:** SystemCapability.Web.Webview.Core
-

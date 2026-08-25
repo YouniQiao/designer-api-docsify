@@ -4,7 +4,7 @@ Provides the event information when the first screen paint is detected, includin
 
 **Since:** 23
 
-<!--Device-unnamed-declare interface FirstScreenPaint--><!--Device-unnamed-declare interface FirstScreenPaint-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -25,7 +25,7 @@ Time when the first screen paint is completed for the page pointed to by url.Uni
 
 **Since:** 23
 
-<!--Device-FirstScreenPaint-firstScreenPaintTime: number--><!--Device-FirstScreenPaint-firstScreenPaintTime: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -41,7 +41,7 @@ Time when navigation starts for the page pointed to by url.Unit: ms.
 
 **Since:** 23
 
-<!--Device-FirstScreenPaint-navigationStartTime: number--><!--Device-FirstScreenPaint-navigationStartTime: number-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -57,7 +57,6 @@ URL of the first screen paint statistics.
 
 **Since:** 23
 
-<!--Device-FirstScreenPaint-url: string--><!--Device-FirstScreenPaint-url: string-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
-

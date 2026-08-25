@@ -4,7 +4,7 @@ interface of app lifecycle.@interface LifecycleApp
 
 **Since:** 7
 
-<!--Device-unnamed-export declare interface LifecycleApp--><!--Device-unnamed-export declare interface LifecycleApp-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -23,9 +23,9 @@ Called when the window display mode of this ability changes, for example, from f
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
-<!--Device-LifecycleApp-onWindowDisplayModeChanged?(isShownInMultiWindow: boolean, newConfig: resourceManager.Configuration): void--><!--Device-LifecycleApp-onWindowDisplayModeChanged?(isShownInMultiWindow: boolean, newConfig: resourceManager.Configuration): void-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -33,8 +33,7 @@ Called when the window display mode of this ability changes, for example, from f
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isShownInMultiWindow | boolean | Yes | Specifies whether this ability is currently in multi-window mode.The value {@code true} indicates the multi-window mode, and {@code false} indicates another mode. |
-| newConfig | resourceManager.Configuration | Yes | Indicates the new configuration information about Page ability. |
-
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| isShownInMultiWindow | boolean | Yes |
+| newConfig | resourceManager.Configuration | Yes |

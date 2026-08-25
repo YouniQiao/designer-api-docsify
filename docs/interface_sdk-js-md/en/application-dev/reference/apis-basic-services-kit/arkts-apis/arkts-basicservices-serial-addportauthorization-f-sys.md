@@ -16,9 +16,9 @@ Adds the permission for applications to access the serial port. This API is open
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
-<!--Device-serial-function addPortAuthorization(tokenId: string, deviceId: string): Promise<void>--><!--Device-serial-function addPortAuthorization(tokenId: string, deviceId: string): Promise<void>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
 
@@ -26,23 +26,22 @@ Adds the permission for applications to access the serial port. This API is open
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| tokenId | string | Yes | Token ID of the authorized application. |
-| deviceId | string | Yes | Serial port device ID. <br>For an onboard serial port, the value is portName. For a USB virtual serial port, the value is the combination of VID+PID+SN. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| tokenId | string | Yes |
+| deviceId | string | Yes |
 
 **Return value:**
 
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application |
-| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700002](../errorcode-busmanager-serial.md#35700002-parameter-error) | Invalid parameter. |
-| [35700008](../errorcode-busmanager-serial.md#35700008-permission-denied) | Permission denied. |
-
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) |
+| [35700002](../errorcode-busmanager-serial.md#35700002-parameter-error) |
+| [35700008](../errorcode-busmanager-serial.md#35700008-permission-denied) |

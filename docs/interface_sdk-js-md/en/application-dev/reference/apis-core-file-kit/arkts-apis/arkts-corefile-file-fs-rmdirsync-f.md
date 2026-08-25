@@ -21,34 +21,34 @@ Removes a directory and all its subdirectories and files synchronously.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
-<!--Device-unnamed-declare function rmdirSync(path: string): void--><!--Device-unnamed-declare function rmdirSync(path: string): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the directory. |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| path | string | Yes |
 
 **Error codes:**
 
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900013 | Bad address |
-| 13900014 | Device or resource busy |
-| 13900018 | Not a directory |
-| 13900020 | Invalid argument |
-| 13900027 | Read-only file system |
-| 13900030 | File name too long |
-| 13900032 | Directory not empty |
-| 13900042 | Unknown error |
+| Error Code ID |
+| --- |
+| 13900001 |
+| 13900002 |
+| 13900011 |
+| 13900012 |
+| 13900013 |
+| 13900014 |
+| 13900018 |
+| 13900020 |
+| 13900027 |
+| 13900030 |
+| 13900032 |
+| 13900042 |
 
 **Examples**
 
@@ -56,4 +56,3 @@ Removes a directory and all its subdirectories and files synchronously.
 let dirPath = pathDir + "/testDir";
 fs.rmdirSync(dirPath);
 ```
-

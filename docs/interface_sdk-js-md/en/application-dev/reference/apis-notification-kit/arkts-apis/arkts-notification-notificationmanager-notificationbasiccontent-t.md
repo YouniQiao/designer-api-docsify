@@ -6,11 +6,10 @@ export type NotificationBasicContent = _NotificationBasicContent
 
 Describes the normal text notification.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-notificationManager-export type NotificationBasicContent = _NotificationBasicContent--><!--Device-notificationManager-export type NotificationBasicContent = _NotificationBasicContent-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 **Property type:** _NotificationBasicContent
-

@@ -1,18 +1,17 @@
 # Skill
 
 ```TypeScript
-export type Skill = _Skill
+export type Skill = _Skill.Skill
 ```
 
 Defines the skill information.
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-bundleManager-export type Skill = _Skill--><!--Device-bundleManager-export type Skill = _Skill-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _Skill
-
+**Property type:** _Skill.Skill

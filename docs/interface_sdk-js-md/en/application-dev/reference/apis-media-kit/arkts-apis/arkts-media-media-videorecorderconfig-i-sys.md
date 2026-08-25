@@ -2,9 +2,9 @@
 
 Provides the video recorder configuration definitions.
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-media-interface VideoRecorderConfig--><!--Device-media-interface VideoRecorderConfig-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -26,9 +26,9 @@ audio source type, details see @AudioSourceType .
 
 **Type:** [AudioSourceType](arkts-media-media-audiosourcetype-e.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VideoRecorderConfig-audioSourceType?: AudioSourceType--><!--Device-VideoRecorderConfig-audioSourceType?: AudioSourceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -44,9 +44,9 @@ geographical location information.
 
 **Type:** Location
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VideoRecorderConfig-location?: Location--><!--Device-VideoRecorderConfig-location?: Location-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -62,9 +62,9 @@ video recorder profile, can get by "getVideoRecorderProfile", details see @Video
 
 **Type:** [VideoRecorderProfile](arkts-media-media-videorecorderprofile-i-sys.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VideoRecorderConfig-profile: VideoRecorderProfile--><!--Device-VideoRecorderConfig-profile: VideoRecorderProfile-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -78,11 +78,11 @@ rotation?: int
 
 Sets the video rotation angle in output file, and for the file to playback, in degrees. mp4 support. the range of rotation angle should be {0, 90, 180, 270}, default is 0.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VideoRecorderConfig-rotation?: int--><!--Device-VideoRecorderConfig-rotation?: int-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -98,9 +98,9 @@ video output uri.support two kind of uri now. format like: scheme + "://" + "con
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VideoRecorderConfig-url: string--><!--Device-VideoRecorderConfig-url: string-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -116,11 +116,10 @@ video source type, details see @VideoSourceType .
 
 **Type:** [VideoSourceType](arkts-media-media-videosourcetype-e.md)
 
-**Since:** 23
+**Since:** 9
 
-<!--Device-VideoRecorderConfig-videoSourceType: VideoSourceType--><!--Device-VideoRecorderConfig-videoSourceType: VideoSourceType-End-->
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
-

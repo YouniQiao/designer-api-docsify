@@ -2,9 +2,9 @@
 
 Enumerates the soft keyboard states of the input method.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-inputMethod-export enum KeyboardStatus--><!--Device-inputMethod-export enum KeyboardStatus-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -16,9 +16,9 @@ NONE = 0
 
 None.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-KeyboardStatus-NONE = 0--><!--Device-KeyboardStatus-NONE = 0-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -30,9 +30,9 @@ HIDE = 1
 
 Hidden.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-KeyboardStatus-HIDE = 1--><!--Device-KeyboardStatus-HIDE = 1-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -44,9 +44,8 @@ SHOW = 2
 
 Shown.
 
-**Since:** 23
+**Since:** 10
 
-<!--Device-KeyboardStatus-SHOW = 2--><!--Device-KeyboardStatus-SHOW = 2-End-->
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-

@@ -4,11 +4,11 @@
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
-
-<!--Device-reminderAgent-interface ReminderRequest--><!--Device-reminderAgent-interface ReminderRequest-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -30,11 +30,11 @@ actionButton?: [ActionButton?, ActionButton?]
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** actionButton
-
-<!--Device-ReminderRequest-actionButton?: [ActionButton?, ActionButton?]--><!--Device-ReminderRequest-actionButton?: [ActionButton?, ActionButton?]-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -50,11 +50,11 @@ content?: string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** content
-
-<!--Device-ReminderRequest-content?: string--><!--Device-ReminderRequest-content?: string-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -70,11 +70,11 @@ expiredContent?: string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** expiredContent
-
-<!--Device-ReminderRequest-expiredContent?: string--><!--Device-ReminderRequest-expiredContent?: string-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -90,11 +90,11 @@ maxScreenWantAgent?: MaxScreenWantAgent
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** maxScreenWantAgent
-
-<!--Device-ReminderRequest-maxScreenWantAgent?: MaxScreenWantAgent--><!--Device-ReminderRequest-maxScreenWantAgent?: MaxScreenWantAgent-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -110,11 +110,11 @@ notificationId?: number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** notificationId
-
-<!--Device-ReminderRequest-notificationId?: number--><!--Device-ReminderRequest-notificationId?: number-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -130,11 +130,11 @@ reminderType: ReminderType
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** reminderType
-
-<!--Device-ReminderRequest-reminderType: ReminderType--><!--Device-ReminderRequest-reminderType: ReminderType-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -150,11 +150,11 @@ ringDuration?: number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** ringDuration
-
-<!--Device-ReminderRequest-ringDuration?: number--><!--Device-ReminderRequest-ringDuration?: number-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -170,11 +170,11 @@ slotType?: notification.SlotType
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** slotType
-
-<!--Device-ReminderRequest-slotType?: notification.SlotType--><!--Device-ReminderRequest-slotType?: notification.SlotType-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -190,11 +190,11 @@ snoozeContent?: string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** snoozeContent
-
-<!--Device-ReminderRequest-snoozeContent?: string--><!--Device-ReminderRequest-snoozeContent?: string-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -210,11 +210,11 @@ snoozeTimes?: number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** snoozeTimes
-
-<!--Device-ReminderRequest-snoozeTimes?: number--><!--Device-ReminderRequest-snoozeTimes?: number-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -230,11 +230,11 @@ timeInterval?: number
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** timeInterval
-
-<!--Device-ReminderRequest-timeInterval?: number--><!--Device-ReminderRequest-timeInterval?: number-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -250,11 +250,11 @@ title?: string
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** title
-
-<!--Device-ReminderRequest-title?: string--><!--Device-ReminderRequest-title?: string-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -270,11 +270,10 @@ wantAgent?: WantAgent
 
 **起始版本：** 7
 
+**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
+
 **废弃版本：** 9
 
 **替代接口：** wantAgent
 
-<!--Device-ReminderRequest-wantAgent?: WantAgent--><!--Device-ReminderRequest-wantAgent?: WantAgent-End-->
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
-

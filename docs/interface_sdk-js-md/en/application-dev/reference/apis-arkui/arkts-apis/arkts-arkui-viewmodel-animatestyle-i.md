@@ -4,7 +4,7 @@ AnimateStyle@interface AnimateStyle
 
 **Since:** 4
 
-<!--Device-unnamed-export interface AnimateStyle--><!--Device-unnamed-export interface AnimateStyle-End-->
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,9 +20,9 @@ Background color applied to the component after the animation is executed. The d
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-AnimateStyle-backgroundColor: string--><!--Device-AnimateStyle-backgroundColor: string-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,9 +38,9 @@ The value format is "x y", in percentage or pixels. The first value indicates th
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-AnimateStyle-backgroundPosition: string--><!--Device-AnimateStyle-backgroundPosition: string-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,9 +56,9 @@ bottom offset applied to the component after the animation is executed.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-AnimateStyle-bottom: number--><!--Device-AnimateStyle-bottom: number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,9 +74,9 @@ Height value applied to the component after the animation is executed.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-AnimateStyle-height: number--><!--Device-AnimateStyle-height: number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,9 +92,9 @@ left offset applied to the component after the animation is executed.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-AnimateStyle-left: number--><!--Device-AnimateStyle-left: number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -110,9 +110,9 @@ The value of offset must be within (0.0,1.0] and sorted in ascending order if it
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-AnimateStyle-offset?: number--><!--Device-AnimateStyle-offset?: number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -128,9 +128,9 @@ Opacity applied to the component. The value ranges from 0 to 1. The default valu
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-AnimateStyle-opacity: number--><!--Device-AnimateStyle-opacity: number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -146,9 +146,9 @@ right offset applied to the component after the animation is executed.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-AnimateStyle-right: number--><!--Device-AnimateStyle-right: number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -164,9 +164,9 @@ top offset applied to the component after the animation is executed.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-AnimateStyle-top: number--><!--Device-AnimateStyle-top: number-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -182,9 +182,9 @@ Transformation type applied to an element.
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-AnimateStyle-transform: "none" | TransformObject--><!--Device-AnimateStyle-transform: "none" | TransformObject-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -200,9 +200,9 @@ Origin position of the transformed element. The first value indicates the x-axis
 
 **Since:** 4
 
-**Model restriction:** This API can be used only in the FA model.
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
-<!--Device-AnimateStyle-transformOrigin: string--><!--Device-AnimateStyle-transformOrigin: string-End-->
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -218,9 +218,8 @@ Width value applied to the component after the animation is executed.
 
 **Since:** 4
 
+**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
+
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-AnimateStyle-width: number--><!--Device-AnimateStyle-width: number-End-->
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-

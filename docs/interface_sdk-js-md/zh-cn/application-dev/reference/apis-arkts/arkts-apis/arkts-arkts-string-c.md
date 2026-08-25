@@ -4,9 +4,7 @@ Unicode字符串。
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-<!--Device-unnamed-export class String--><!--Device-unnamed-export class String-End-->
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,25 +23,23 @@ $_get(index: int): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-$_get(index: int): string--><!--Device-String-$_get(index: int): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 待查看的索引。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 该索引处的字符串值。 |
+| 类型 |
+| --- |
+| string |
 
 ## $_invoke
 
@@ -55,19 +51,17 @@ static $_invoke(): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-static $_invoke(): string--><!--Device-String-static $_invoke(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 新的字符串实例。 |
+| 类型 |
+| --- |
+| string |
 
 ## $_invoke
 
@@ -79,25 +73,23 @@ static $_invoke(value: boolean): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-static $_invoke(value: boolean): string--><!--Device-String-static $_invoke(value: boolean): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean | 是 | 待转换为字符串的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | boolean | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 新的字符串实例。 |
+| 类型 |
+| --- |
+| string |
 
 ## $_invoke
 
@@ -109,25 +101,23 @@ static $_invoke(value: byte): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-static $_invoke(value: byte): string--><!--Device-String-static $_invoke(value: byte): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | byte | 是 | 待转换为字符串的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | byte | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 新的字符串实例。 |
+| 类型 |
+| --- |
+| string |
 
 ## $_invoke
 
@@ -139,25 +129,23 @@ static $_invoke(value: char): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-static $_invoke(value: char): string--><!--Device-String-static $_invoke(value: char): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | char | 是 | 待转换为字符串的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | char | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 新的字符串实例。 |
+| 类型 |
+| --- |
+| string |
 
 ## $_invoke
 
@@ -169,25 +157,23 @@ static $_invoke(value: short): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-static $_invoke(value: short): string--><!--Device-String-static $_invoke(value: short): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | short | 是 | 待转换为字符串的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | short | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 新的字符串实例。 |
+| 类型 |
+| --- |
+| string |
 
 ## $_invoke
 
@@ -199,25 +185,23 @@ static $_invoke(value: int): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-static $_invoke(value: int): string--><!--Device-String-static $_invoke(value: int): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | int | 是 | 待转换为字符串的值。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 新的字符串实例。 |
+| 类型 |
+| --- |
+| string |
 
 ## $_invoke
 
@@ -229,25 +213,23 @@ static $_invoke(value: long): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-static $_invoke(value: long): string--><!--Device-String-static $_invoke(value: long): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | long | 是 | 待转换为字符串的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | long | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 新的字符串实例。 |
+| 类型 |
+| --- |
+| string |
 
 ## $_invoke
 
@@ -259,25 +241,23 @@ static $_invoke(value: float): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-static $_invoke(value: float): string--><!--Device-String-static $_invoke(value: float): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | float | 是 | 待转换为字符串的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | float | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 新的字符串实例。 |
+| 类型 |
+| --- |
+| string |
 
 ## $_invoke
 
@@ -289,25 +269,23 @@ static $_invoke(value: double): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-static $_invoke(value: double): string--><!--Device-String-static $_invoke(value: double): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | double | 是 | 待转换为字符串的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 新的字符串实例。 |
+| 类型 |
+| --- |
+| string |
 
 ## $_invoke
 
@@ -319,25 +297,23 @@ static $_invoke(value: Any): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-static $_invoke(value: Any): string--><!--Device-String-static $_invoke(value: Any): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | Any | 是 | 待转换为字符串的值，可以是Object或null。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | Any | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 新的字符串实例。 |
+| 类型 |
+| --- |
+| string |
 
 ## $_iterator
 
@@ -349,19 +325,17 @@ public $_iterator(): IterableIterator<string>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public $_iterator(): IterableIterator<string>--><!--Device-String-public $_iterator(): IterableIterator<string>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | 该字符串的迭代器。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; |
 
 ## anchor
 
@@ -373,25 +347,23 @@ anchor()方法创建将字符串嵌入带name属性的&lt;a&gt;元素（&lt;a na
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public anchor(name: string): string--><!--Device-String-public anchor(name: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 锚点名称。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 以&lt;a name="name"&gt;开始标签起始的字符串 （name中的双引号会被替换为&quot;）， 随后是文本str，最后是&lt;/a&gt;结束标签。 |
+| 类型 |
+| --- |
+| string |
 
 ## at
 
@@ -403,25 +375,23 @@ at()方法接受一个整数值，返回由指定偏移位置处单个UTF-16码�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public at(index: int): string | undefined--><!--Device-String-public at(index: int): string | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 转换后的位置索引。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string \| undefined | 由指定位置处单个UTF-16码元构成的字符串。 如果给定索引不存在，则返回undefined。 |
+| 类型 |
+| --- |
+| string \| undefined |
 
 ## big
 
@@ -433,19 +403,17 @@ big()方法创建将字符串嵌入&lt;big&gt;元素（&lt;big&gt;str&lt;/big&gt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public big(): string--><!--Device-String-public big(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 嵌入到&lt;big&gt;元素中的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## blink
 
@@ -457,19 +425,17 @@ blink()方法创建将字符串嵌入&lt;blink&gt;元素（&lt;blink&gt;str&lt;/
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public blink(): string--><!--Device-String-public blink(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 嵌入到&lt;blink&gt;元素中的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## bold
 
@@ -481,19 +447,17 @@ bold()方法创建将字符串嵌入&lt;b&gt;元素（&lt;b&gt;str&lt;/b&gt;）�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public bold(): string--><!--Device-String-public bold(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 嵌入到&lt;b&gt;元素中的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## charAt
 
@@ -505,25 +469,23 @@ public charAt(index: int): char
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public charAt(index: int): char--><!--Device-String-public charAt(index: int): char-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 字符串内部char数组中的索引。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| char | 该索引处的char值。 |
+| 类型 |
+| --- |
+| char |
 
 ## charCodeAt
 
@@ -535,25 +497,23 @@ charCodeAt()方法返回0到65535之间的整数，表示给定索引处的 UTF-
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public charCodeAt(index: int): int--><!--Device-String-public charCodeAt(index: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 下标，取值必须为[0, string.length-1]范围内的整数。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 指定索引处的UTF-16码元值。 |
+| 类型 |
+| --- |
+| int |
 
 ## codePointAt
 
@@ -565,25 +525,23 @@ public codePointAt(index: int): int | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public codePointAt(index: int): int | undefined--><!--Device-String-public codePointAt(index: int): int | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | int | 是 | 可能构成代理对的索引。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int \| undefined | 指定索引处的码点。 |
+| 类型 |
+| --- |
+| int \| undefined |
 
 ## codePointCount
 
@@ -595,26 +553,24 @@ public codePointCount(begin: int, end: int): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public codePointCount(begin: int, end: int): int--><!--Device-String-public codePointCount(begin: int, end: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| begin | int | 是 | 起始索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| end | int | 是 | 结束索引（不包含）。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| begin | int | 是 |
+| end | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 完整码点的数量。 |
+| 类型 |
+| --- |
+| int |
 
 ## codePointCount
 
@@ -626,26 +582,24 @@ public codePointCount(begin: double, end: double): double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public codePointCount(begin: double, end: double): double--><!--Device-String-public codePointCount(begin: double, end: double): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| begin | double | 是 | 起始索引。 |
-| end | double | 是 | 结束索引（不包含）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| begin | double | 是 |
+| end | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| double | 完整码点的数量。 |
+| 类型 |
+| --- |
+| double |
 
 ## compareTo
 
@@ -657,25 +611,23 @@ public compareTo(other: string): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public compareTo(other: string): int--><!--Device-String-public compareTo(other: string): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| other | string | 是 | 用于比较的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| other | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 比较结果。 |
+| 类型 |
+| --- |
+| int |
 
 ## concat
 
@@ -687,25 +639,23 @@ public concat(s: string): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public concat(s: string): string--><!--Device-String-public concat(s: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| s | string | 是 | 待连接的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| s | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 由this + strings[0] + ... + strings[string.length - 1]连接而成的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## concat
 
@@ -717,26 +667,24 @@ concat(s1: string, s2: string): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-concat(s1: string, s2: string): string--><!--Device-String-concat(s1: string, s2: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| s1 | string | 是 |  |
-| s2 | string | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| s1 | string | 是 |
+| s2 | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 连接后的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## concat
 
@@ -748,27 +696,25 @@ concat(s1: string, s2: string, s3: string): string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-concat(s1: string, s2: string, s3: string): string--><!--Device-String-concat(s1: string, s2: string, s3: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| s1 | string | 是 |  |
-| s2 | string | 是 |  |
-| s3 | string | 是 |  |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| s1 | string | 是 |
+| s2 | string | 是 |
+| s3 | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 连接后的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## concat
 
@@ -780,25 +726,23 @@ public concat(...strings: string[]): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public concat(...strings: string[]): string--><!--Device-String-public concat(...strings: string[]): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| strings | string[] | 是 | 待连接的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| strings | string[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 连接后得到的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## constructor
 
@@ -810,11 +754,9 @@ constructor()
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-constructor()--><!--Device-String-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -828,19 +770,17 @@ constructor(data: FixedArray<char>)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-constructor(data: FixedArray<char>)--><!--Device-String-constructor(data: FixedArray<char>)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | FixedArray&lt;char&gt; | 是 | 初始化数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | FixedArray & lt;char & gt; | 是 |
 
 ## constructor
 
@@ -852,19 +792,17 @@ constructor(otherStr: string)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-constructor(otherStr: string)--><!--Device-String-constructor(otherStr: string)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| otherStr | string | 是 | 初始化数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| otherStr | string | 是 |
 
 ## constructor
 
@@ -876,19 +814,17 @@ constructor(object: Any)
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-constructor(object: Any)--><!--Device-String-constructor(object: Any)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| object | Any | 是 | 初始化数据。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| object | Any | 是 |
 
 ## contains
 
@@ -900,26 +836,24 @@ public contains(str: string, fromIndex: int): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public contains(str: string, fromIndex: int): boolean--><!--Device-String-public contains(str: string, fromIndex: int): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| str | string | 是 | 待查找的字符串。 <br>取值约束：最小长度为0。 |
-| fromIndex | int | 是 | 开始查找的索引。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| str | string | 是 |
+| fromIndex | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果该字符串包含str则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## contains
 
@@ -931,26 +865,24 @@ public contains(str: string, fromIndex: double): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public contains(str: string, fromIndex: double): boolean--><!--Device-String-public contains(str: string, fromIndex: double): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| str | string | 是 | 待查找的字符串。 |
-| fromIndex | double | 是 | 开始查找的索引。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| str | string | 是 |
+| fromIndex | double | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果该字符串包含str则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## contentEquals
 
@@ -962,25 +894,23 @@ public contentEquals(sb: StringBuilder): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public contentEquals(sb: StringBuilder): boolean--><!--Device-String-public contentEquals(sb: StringBuilder): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sb | [StringBuilder](arkts-arkts-stringbuilder-c.md) | 是 | 用于比较的StringBuilder。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sb | [StringBuilder](arkts-arkts-stringbuilder-c.md) | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果该StringBuilder的内容相同则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## endsWith
 
@@ -992,26 +922,24 @@ public endsWith(suffix: string, endPosition?: int): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public endsWith(suffix: string, endPosition?: int): boolean--><!--Device-String-public endsWith(suffix: string, endPosition?: int): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| suffix | string | 是 | 后缀字符串。 |
-| endPosition | int | 否 | 期望找到后缀的位置，默认值为str.length。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| suffix | string | 是 |
+| endPosition | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果该字符串以指定后缀结尾则返回true， 否则返回false（包括suffix长于被检查子串的情况）。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## equals
 
@@ -1023,25 +951,23 @@ public equals(to: Any): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public equals(to: Any): boolean--><!--Device-String-public equals(to: Any): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| to | Any | 是 | 用于比较的另一个对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| to | Any | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果两个字符串相等则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## fixed
 
@@ -1053,19 +979,17 @@ fixed()方法创建将字符串嵌入&lt;tt&gt;元素（&lt;tt&gt;str&lt;/tt&gt;
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public fixed(): string--><!--Device-String-public fixed(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 嵌入到&lt;tt&gt;元素中的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## fontcolor
 
@@ -1077,25 +1001,23 @@ fontcolor()方法创建将字符串嵌入&lt;font&gt;元素（&lt;font color="..
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public fontcolor(color: string): string--><!--Device-String-public fontcolor(color: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| color | string | 是 | 使用的颜色。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| color | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 嵌入到带color属性的&lt;font&gt;元素中的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## fontsize
 
@@ -1107,25 +1029,23 @@ fontsize()方法创建将字符串嵌入&lt;font&gt;元素（&lt;font size="..."
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public fontsize(size: int): string--><!--Device-String-public fontsize(size: int): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| size | int | 是 | 使用的字号。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| size | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 嵌入到带size属性的&lt;font&gt;元素中的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## fontsize
 
@@ -1137,25 +1057,23 @@ fontsize()方法创建将字符串嵌入&lt;font&gt;元素（&lt;font size="..."
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public fontsize(size: string): string--><!--Device-String-public fontsize(size: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| size | string | 是 | 使用的字号。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| size | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 嵌入到带size属性的&lt;font&gt;元素中的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## fromCharCode
 
@@ -1167,25 +1085,23 @@ public static fromCharCode(code: int): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public static fromCharCode(code: int): string--><!--Device-String-public static fromCharCode(code: int): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| code | int | 是 | 0到65535（0xFFFF）之间表示UTF-16码元的number值，或NaN。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| code | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 由指定UTF-16码元构成的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## fromCharCode
 
@@ -1197,25 +1113,23 @@ public static fromCharCode(...codes: int[]): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public static fromCharCode(...codes: int[]): string--><!--Device-String-public static fromCharCode(...codes: int[]): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| codes | int[] | 是 | 0到65535（0xFFFF）之间表示UTF-16码元的数值，或NaN。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| codes | int[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 由指定的一组UTF-16码元构成的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## fromCodePoint
 
@@ -1227,25 +1141,23 @@ public static fromCodePoint(...codePoints: int[]): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public static fromCodePoint(...codePoints: int[]): string--><!--Device-String-public static fromCodePoint(...codePoints: int[]): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| codePoints | int[] | 是 | 0到0x10FFFF（含端点）之间表示Unicode 码点的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| codePoints | int[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 由指定的一组码点创建的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## getBytes
 
@@ -1257,26 +1169,24 @@ public getBytes(begin: int, end: int): byte[]
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public getBytes(begin: int, end: int): byte[]--><!--Device-String-public getBytes(begin: int, end: int): byte[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| begin | int | 是 | 起始索引。 <br>取值约束：必须为大于或等于0的整数。 |
-| end | int | 是 | 结束索引（不包含）。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| begin | int | 是 |
+| end | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| byte[] | byte[]数组。 |
+| 类型 |
+| --- |
+| byte[] |
 
 ## getChars
 
@@ -1288,19 +1198,17 @@ public getChars(): char[]
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public getChars(): char[]--><!--Device-String-public getChars(): char[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| char[] | char[]数组。 |
+| 类型 |
+| --- |
+| char[] |
 
 ## getChars
 
@@ -1312,26 +1220,24 @@ public getChars(begin: int, end: int): char[]
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public getChars(begin: int, end: int): char[]--><!--Device-String-public getChars(begin: int, end: int): char[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| begin | int | 是 | 起始索引。 <br>取值约束：应为整数。 |
-| end | int | 是 | 结束索引（不包含）。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| begin | int | 是 |
+| end | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| char[] | char[]数组。 |
+| 类型 |
+| --- |
+| char[] |
 
 ## getLength
 
@@ -1343,19 +1249,17 @@ getLength(): int
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-getLength(): int--><!--Device-String-getLength(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 该字符串的长度。 |
+| 类型 |
+| --- |
+| int |
 
 ## getSubstitution
 
@@ -1368,30 +1272,28 @@ static getSubstitution(matched: string, str: string, position: int, captures: st
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-static getSubstitution(matched: string, str: string, position: int, captures: string[],        namedCaptures: Record<string, string | undefined> | undefined, replacement: string): string--><!--Device-String-static getSubstitution(matched: string, str: string, position: int, captures: string[],        namedCaptures: Record<string, string | undefined> | undefined, replacement: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| matched | string | 是 | 匹配到的字符串，即正则表达式匹配到的完整子串。 |
-| str | string | 是 | 执行替换操作的原始完整字符串。 |
-| position | int | 是 | 匹配子串在原始字符串str中的起始索引，从0开始计数。 <br>取值约束：必须为大于或等于0的整数。 |
-| captures | string[] | 是 | 捕获组匹配结果数组。 |
-| namedCaptures | Record&lt;string, string \| undefined&gt; \| undefined | 是 | 命名捕获组的映射 对象。 |
-| replacement | string | 是 | 替换模板字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| matched | string | 是 |
+| str | string | 是 |
+| position | int | 是 |
+| captures | string[] | 是 |
+| namedCaptures | Record & lt;string, string \ | undefined & gt; \ | undefined | 是 |
+| replacement | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 解析替换模板中所有替换模式后得到的最终 替换字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## includes
 
@@ -1403,26 +1305,24 @@ includes()方法执行区分大小写的查找，判断一个字符串是否 包
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public includes(searchString: string, position?: int): boolean--><!--Device-String-public includes(searchString: string, position?: int): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| searchString | string | 是 | 待查找的字符串。 |
-| position | int | 否 | 在该字符串中开始查找searchString的位置。 默认值为0，即从字符串开头开始查找。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| searchString | string | 是 |
+| position | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果在给定字符串中的任意位置找到待查找的字符串则返回true， 包括searchString为空字符串的情况；否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## indexOf
 
@@ -1434,25 +1334,23 @@ public indexOf(ch: char): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public indexOf(ch: char): int--><!--Device-String-public indexOf(ch: char): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| ch | char | 是 | 从字符串开头开始查找的字符。 该字符必须是合法的UTF-16码元（0到65535）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| ch | char | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 该字符从字符串开头计起的索引，未找到时返回-1。 |
+| 类型 |
+| --- |
+| int |
 
 ## indexOf
 
@@ -1464,26 +1362,24 @@ public indexOf(ch: char, fromIndex: int): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public indexOf(ch: char, fromIndex: int): int--><!--Device-String-public indexOf(ch: char, fromIndex: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| ch | char | 是 | 从字符串开头开始查找的字符。 该字符必须是合法的UTF-16码元（0到65535）。 |
-| fromIndex | int | 是 | 开始查找的位置。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| ch | char | 是 |
+| fromIndex | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 该字符从字符串开头计起的索引，未找到时返回-1。 |
+| 类型 |
+| --- |
+| int |
 
 ## indexOf
 
@@ -1495,26 +1391,24 @@ public indexOf(str: string, fromIndex?: int): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public indexOf(str: string, fromIndex?: int): int--><!--Device-String-public indexOf(str: string, fromIndex?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| str | string | 是 | 在该字符串中查找的子串。 如果传入空字符串，则返回fromIndex（fromIndex为undefined时返回0）。 |
-| fromIndex | int | 否 | 开始查找的位置。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| str | string | 是 |
+| fromIndex | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 该子串从字符串开头计起的索引，未找到时返回-1。 |
+| 类型 |
+| --- |
+| int |
 
 ## isCompressed
 
@@ -1526,19 +1420,17 @@ public isCompressed(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public isCompressed(): boolean--><!--Device-String-public isCompressed(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果s已压缩则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isEmpty
 
@@ -1550,19 +1442,17 @@ public isEmpty(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public isEmpty(): boolean--><!--Device-String-public isEmpty(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果为空则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## isWellFormed
 
@@ -1574,19 +1464,17 @@ string值的isWellFormed()方法返回一个boolean值，表示该字符串是�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public isWellFormed(): boolean--><!--Device-String-public isWellFormed(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果该字符串包含孤立代理项则返回true，否则返回false。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## italics
 
@@ -1598,19 +1486,17 @@ italics()方法创建将字符串嵌入&lt;i&gt;元素（&lt;i&gt;str&lt;/i&gt;�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public italics(): string--><!--Device-String-public italics(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 嵌入到&lt;i&gt;元素中的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## join
 
@@ -1622,26 +1508,24 @@ public static join(strings: string[], delim: string): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public static join(strings: string[], delim: string): string--><!--Device-String-public static join(strings: string[], delim: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| strings | string[] | 是 | 字符串数组。 |
-| delim | string | 是 | 各元素之间的分隔符。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| strings | string[] | 是 |
+| delim | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 由字符串数组和分隔符新建的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## join
 
@@ -1653,28 +1537,26 @@ public static join(strings: string[], delim: string, prefix: string, suffix: str
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public static join(strings: string[], delim: string, prefix: string, suffix: string): string--><!--Device-String-public static join(strings: string[], delim: string, prefix: string, suffix: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| strings | string[] | 是 | 字符串数组。 |
-| delim | string | 是 | 各元素之间的分隔符。 |
-| prefix | string | 是 | 每个元素前的前缀。 |
-| suffix | string | 是 | 每个元素后的后缀。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| strings | string[] | 是 |
+| delim | string | 是 |
+| prefix | string | 是 |
+| suffix | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 由字符串数组、前缀、后缀和分隔符新建的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## lastIndexOf
 
@@ -1686,26 +1568,24 @@ public lastIndexOf(ch: char, fromIndex: int): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public lastIndexOf(ch: char, fromIndex: int): int--><!--Device-String-public lastIndexOf(ch: char, fromIndex: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| ch | char | 是 | 从字符串末尾开始查找的字符。 |
-| fromIndex | int | 是 | 开始查找的位置。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| ch | char | 是 |
+| fromIndex | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 该字符从字符串开头计起的索引，未找到时返回-1。 |
+| 类型 |
+| --- |
+| int |
 
 ## lastIndexOf
 
@@ -1717,25 +1597,23 @@ public lastIndexOf(ch: char): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public lastIndexOf(ch: char): int--><!--Device-String-public lastIndexOf(ch: char): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| ch | char | 是 | 从字符串末尾开始查找的字符。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| ch | char | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 该字符从字符串开头计起的索引，未找到时返回-1。 |
+| 类型 |
+| --- |
+| int |
 
 ## lastIndexOf
 
@@ -1747,26 +1625,24 @@ public lastIndexOf(str: string, fromIndex?: int): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public lastIndexOf(str: string, fromIndex?: int): int--><!--Device-String-public lastIndexOf(str: string, fromIndex?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| str | string | 是 | 在该字符串中查找的子串。 |
-| fromIndex | int | 否 | 开始反向查找的位置。 为undefined时，从字符串末尾开始查找。 大于等于字符串长度时，从末尾开始查找。 为负数时，返回-1。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| str | string | 是 |
+| fromIndex | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 该子串从字符串开头计起的索引，未找到时返回-1。 |
+| 类型 |
+| --- |
+| int |
 
 ## link
 
@@ -1778,25 +1654,23 @@ link()方法创建将字符串嵌入&lt;a&gt;元素（&lt;a href="..."&gt;str&lt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public link(link: string): string--><!--Device-String-public link(link: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| link | string | 是 | 链接指向的URL。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [link](#link) | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 嵌入到带href属性的&lt;a&gt;元素中的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## localeCompare
 
@@ -1808,27 +1682,25 @@ public localeCompare(that: string, locale?: string | string[], options?: Intl.Co
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public localeCompare(that: string, locale?: string | string[], options?: Intl.CollatorOptions): int--><!--Device-String-public localeCompare(that: string, locale?: string | string[], options?: Intl.CollatorOptions): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| that | string | 是 | 用于比较的字符串。 |
-| locale | string \| string[] | 否 | 表示BCP47语言标签的字符串。 |
-| options | Intl.CollatorOptions | 否 | 包含比较选项的Intl.CollatorOptions。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| that | string | 是 |
+| locale | string \| string[] | 否 |
+| options | Intl.CollatorOptions | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 比较结果。 |
+| 类型 |
+| --- |
+| int |
 
 ## match
 
@@ -1840,25 +1712,23 @@ public match(implicitRegExp: string): RegExpMatchArray | null
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public match(implicitRegExp: string): RegExpMatchArray | null--><!--Device-String-public match(implicitRegExp: string): RegExpMatchArray | null-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| implicitRegExp | string | 是 | 正则表达式对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| implicitRegExp | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md) \| null | 如果regexp.global为true，则返回所有匹配完整正则 表达式的结果，但不包含捕获组； 否则仅返回第一个完整匹配及其相关的捕获组。 |
+| 类型 |
+| --- |
+| [RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md) \| null |
 
 ## match
 
@@ -1870,25 +1740,23 @@ public match(regexp: RegExp): RegExpMatchArray | null
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public match(regexp: RegExp): RegExpMatchArray | null--><!--Device-String-public match(regexp: RegExp): RegExpMatchArray | null-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| regexp | RegExp | 是 | 正则表达式对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| regexp | RegExp | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md) \| null | 如果regexp.global为true，则返回所有匹配完整正则 表达式的结果，但不包含捕获组； 否则仅返回第一个完整匹配及其相关的捕获组。 |
+| 类型 |
+| --- |
+| [RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md) \| null |
 
 ## match
 
@@ -1900,25 +1768,23 @@ public match(regexp: string | RegExp): RegExpMatchArray | null
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public match(regexp: string | RegExp): RegExpMatchArray | null--><!--Device-String-public match(regexp: string | RegExp): RegExpMatchArray | null-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| regexp | string \| RegExp | 是 | 正则表达式对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| regexp | string \| RegExp | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md) \| null | 如果regexp.global为true，则返回所有匹配完整正则 表达式的结果，但不包含捕获组； 否则仅返回第一个完整匹配及其相关的捕获组。 |
+| 类型 |
+| --- |
+| [RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md) \| null |
 
 ## matchAll
 
@@ -1930,25 +1796,23 @@ public matchAll(reg: RegExp): IterableIterator<RegExpMatchArray>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public matchAll(reg: RegExp): IterableIterator<RegExpMatchArray>--><!--Device-String-public matchAll(reg: RegExp): IterableIterator<RegExpMatchArray>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| reg | RegExp | 是 | 正则表达式对象。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| reg | RegExp | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md)&gt; | 所有匹配结果的迭代器。 |
+| 类型 |
+| --- |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md)&gt; |
 
 ## normalize
 
@@ -1960,25 +1824,23 @@ string值的normalize()方法返回该字符串的Unicode规范化形式。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public normalize(form?: string): string--><!--Device-String-public normalize(form?: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| form | string | 否 | 取值为'NFC'、'NFD'、'NFKC'或'NFKD'。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [form](../../apis-ability-kit/arkts-apis/arkts-ability-insightintentdriver-subintentinfoforconfiguration-i-sys.md) | string | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 该字符串的Unicode规范化形式。 |
+| 类型 |
+| --- |
+| string |
 
 ## padEnd
 
@@ -1990,25 +1852,23 @@ padEnd()方法使用给定字符串（必要时重复）填充当前字符串，
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public padEnd(maxLength: int): string--><!--Device-String-public padEnd(maxLength: int): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| maxLength | int | 是 | 填充完成后结果字符串的目标长度。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| maxLength | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 在当前字符串末尾填充padString后得到的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## padEnd
 
@@ -2020,26 +1880,24 @@ padEnd()方法使用给定字符串（必要时重复）填充当前字符串，
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public padEnd(maxLength: int, ch: char): string--><!--Device-String-public padEnd(maxLength: int, ch: char): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| maxLength | int | 是 | 填充完成后结果字符串的目标长度。 <br>取值约束：应为整数。 |
-| ch | char | 是 | 用于填充当前字符串的内容。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| maxLength | int | 是 |
+| ch | char | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 在当前字符串末尾填充padString后得到的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## padEnd
 
@@ -2051,26 +1909,24 @@ padEnd()方法使用给定字符串（必要时重复）填充当前字符串，
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public padEnd(maxLength: int, fillString?: string): string--><!--Device-String-public padEnd(maxLength: int, fillString?: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| maxLength | int | 是 | 填充完成后结果字符串的目标长度。 <br>取值约束：可以为任意整数。 |
-| fillString | string | 否 | 用于填充当前字符串的内容。如果不传入该参数， 则默认使用空格字符（U+0020）。如果fillString为空字符串，则不进行填充。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| maxLength | int | 是 |
+| fillString | string | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 在当前字符串末尾填充padString后得到的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## padLeft
 
@@ -2082,26 +1938,24 @@ public padLeft(pad: char, count: int): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public padLeft(pad: char, count: int): string--><!--Device-String-public padLeft(pad: char, count: int): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pad | char | 是 | 用于填充的字符（按需重复使用）。 该字符必须是合法的UTF-16码元（0到65535）。 |
-| count | int | 是 | 结果字符串的目标长度。 如果count小于或等于当前字符串长度，则返回原始字符串的副本。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pad | char | 是 |
+| count | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 在开头填充后得到的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## padRight
 
@@ -2113,26 +1967,24 @@ public padRight(pad: char, count: int): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public padRight(pad: char, count: int): string--><!--Device-String-public padRight(pad: char, count: int): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pad | char | 是 | 用于填充的字符（按需重复使用）。 该字符必须是合法的UTF-16码元（0到65535）。 |
-| count | int | 是 | 结果字符串的目标长度。 如果count小于或等于当前字符串长度，则返回原始字符串的副本。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| pad | char | 是 |
+| count | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 在末尾填充后得到的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## padStart
 
@@ -2144,26 +1996,24 @@ padStart()方法使用另一个字符串（必要时重复多次）填充当前�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public padStart(maxLength: int, ch: char): string--><!--Device-String-public padStart(maxLength: int, ch: char): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| maxLength | int | 是 | 结果字符串的目标长度。如果小于或等于 当前字符串的长度，则返回原始字符串的副本。 <br>取值约束：可以为任意整数。 |
-| ch | char | 是 | 用于填充的字符（按需重复使用）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| maxLength | int | 是 |
+| ch | char | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 在开头以指定字符填充后得到的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## padStart
 
@@ -2175,26 +2025,24 @@ padStart()方法使用另一个字符串（必要时重复多次）填充当前�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public padStart(maxLength: int, fillString?: string): string--><!--Device-String-public padStart(maxLength: int, fillString?: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| maxLength | int | 是 | 结果字符串的目标长度。如果小于或等于 当前字符串的长度，则返回原始字符串的副本。 <br>取值约束：应为整数。 |
-| fillString | string | 否 | 用于填充的字符串，不传入时默认使用空格字符（U+0020）。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| maxLength | int | 是 |
+| fillString | string | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 在开头以指定字符串填充后得到的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## repeat
 
@@ -2206,25 +2054,23 @@ public repeat(count: int): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public repeat(count: int): string--><!--Device-String-public repeat(count: int): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| count | int | 是 | 该字符串重复的次数。 <br>取值约束：必须为大于或等于0的整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| count | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 该字符串重复count次后得到的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## replace
 
@@ -2236,26 +2082,24 @@ public replace(searchValue: RegExp, replaceValue: string): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public replace(searchValue: RegExp, replaceValue: string): string--><!--Device-String-public replace(searchValue: RegExp, replaceValue: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| searchValue | RegExp | 是 | 匹配模式，可以是字符串或RegExp。 |
-| replaceValue | string | 是 | 用于替换的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| searchValue | RegExp | 是 |
+| replaceValue | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 替换后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## replace
 
@@ -2267,26 +2111,24 @@ public replace(searchValue: string, replaceValue: string): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public replace(searchValue: string, replaceValue: string): string--><!--Device-String-public replace(searchValue: string, replaceValue: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| searchValue | string | 是 | 匹配模式，可以是字符串或RegExp。 |
-| replaceValue | string | 是 | 用于替换的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| searchValue | string | 是 |
+| replaceValue | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 替换后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## replace
 
@@ -2298,26 +2140,24 @@ public replace(searchValue: string | RegExp, replaceValue: string): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public replace(searchValue: string | RegExp, replaceValue: string): string--><!--Device-String-public replace(searchValue: string | RegExp, replaceValue: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| searchValue | string \| RegExp | 是 | 匹配模式，可以是字符串或RegExp。 |
-| replaceValue | string | 是 | 用于替换的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| searchValue | string \| RegExp | 是 |
+| replaceValue | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 替换后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## replace
 
@@ -2329,26 +2169,24 @@ public replace(searchValue: RegExp, replacer: (substr: string, args: (Object | u
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public replace(searchValue: RegExp, replacer: (substr: string, args: (Object | undefined)[]) => string): string--><!--Device-String-public replace(searchValue: RegExp, replacer: (substr: string, args: (Object | undefined)[]) => string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| searchValue | RegExp | 是 | 匹配模式，可以是字符串或RegExp。 |
-| replacer | (substr: string, args: (Object \| undefined)[]) =&gt; string | 是 | 用于生成替换内容的函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| searchValue | RegExp | 是 |
+| replacer | (substr: string, args: (Object \| undefined)[]) = & gt; string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 替换后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## replace
 
@@ -2360,26 +2198,24 @@ public replace(searchValue: string, replacer: (substr: string, args: (Object | u
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public replace(searchValue: string, replacer: (substr: string, args: (Object | undefined)[]) => string): string--><!--Device-String-public replace(searchValue: string, replacer: (substr: string, args: (Object | undefined)[]) => string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| searchValue | string | 是 | 匹配模式，可以是字符串或RegExp。 |
-| replacer | (substr: string, args: (Object \| undefined)[]) =&gt; string | 是 | 用于生成替换内容的函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| searchValue | string | 是 |
+| replacer | (substr: string, args: (Object \| undefined)[]) = & gt; string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 替换后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## replace
 
@@ -2392,26 +2228,24 @@ public replace(searchValue: string | RegExp, replacer: (substr: string,
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public replace(searchValue: string | RegExp, replacer: (substr: string,         args: (Object | undefined)[]) => string): string--><!--Device-String-public replace(searchValue: string | RegExp, replacer: (substr: string,         args: (Object | undefined)[]) => string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| searchValue | string \| RegExp | 是 | 匹配模式，可以是字符串或RegExp。 |
-| replacer | (substr: string,          args: (Object \| undefined)[]) =&gt; string | 是 | 用于生成替换内容的函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| searchValue | string \| RegExp | 是 |
+| replacer | (substr: string,          args: (Object \| undefined)[]) = & gt; string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 替换后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## replaceAll
 
@@ -2423,26 +2257,24 @@ public replaceAll(searchValue: RegExp, replaceValue: string): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public replaceAll(searchValue: RegExp, replaceValue: string): string--><!--Device-String-public replaceAll(searchValue: RegExp, replaceValue: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| searchValue | RegExp | 是 | 匹配模式，可以是字符串或RegExp。 |
-| replaceValue | string | 是 | 用于替换的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| searchValue | RegExp | 是 |
+| replaceValue | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 替换后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## replaceAll
 
@@ -2454,26 +2286,24 @@ public replaceAll(searchValue: string, replaceValue: string): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public replaceAll(searchValue: string, replaceValue: string): string--><!--Device-String-public replaceAll(searchValue: string, replaceValue: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| searchValue | string | 是 | 匹配模式，可以是字符串或RegExp。 |
-| replaceValue | string | 是 | 用于替换的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| searchValue | string | 是 |
+| replaceValue | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 替换后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## replaceAll
 
@@ -2485,26 +2315,24 @@ public replaceAll(searchValue: string | RegExp, replaceValue: string): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public replaceAll(searchValue: string | RegExp, replaceValue: string): string--><!--Device-String-public replaceAll(searchValue: string | RegExp, replaceValue: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| searchValue | string \| RegExp | 是 | 匹配模式，可以是字符串或RegExp。 |
-| replaceValue | string | 是 | 用于替换的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| searchValue | string \| RegExp | 是 |
+| replaceValue | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 替换后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## replaceAll
 
@@ -2516,26 +2344,24 @@ public replaceAll(searchValue: RegExp, replacer: (substr: string, args: (Object 
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public replaceAll(searchValue: RegExp, replacer: (substr: string, args: (Object | undefined)[]) => string): string--><!--Device-String-public replaceAll(searchValue: RegExp, replacer: (substr: string, args: (Object | undefined)[]) => string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| searchValue | RegExp | 是 | 匹配模式，可以是字符串或RegExp。 |
-| replacer | (substr: string, args: (Object \| undefined)[]) =&gt; string | 是 | 用于生成替换内容的函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| searchValue | RegExp | 是 |
+| replacer | (substr: string, args: (Object \| undefined)[]) = & gt; string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 替换后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## replaceAll
 
@@ -2547,26 +2373,24 @@ public replaceAll(searchValue: string, replacer: (substr: string, args: (Object 
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public replaceAll(searchValue: string, replacer: (substr: string, args: (Object | undefined)[]) => string): string--><!--Device-String-public replaceAll(searchValue: string, replacer: (substr: string, args: (Object | undefined)[]) => string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| searchValue | string | 是 | 匹配模式，可以是字符串或RegExp。 |
-| replacer | (substr: string, args: (Object \| undefined)[]) =&gt; string | 是 | 用于生成替换内容的函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| searchValue | string | 是 |
+| replacer | (substr: string, args: (Object \| undefined)[]) = & gt; string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 替换后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## replaceAll
 
@@ -2579,26 +2403,24 @@ public replaceAll(searchValue: string | RegExp, replacer: (substr: string,
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public replaceAll(searchValue: string | RegExp, replacer: (substr: string,        args: (Object | undefined)[]) => string): string--><!--Device-String-public replaceAll(searchValue: string | RegExp, replacer: (substr: string,        args: (Object | undefined)[]) => string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| searchValue | string \| RegExp | 是 | 匹配模式，可以是字符串或RegExp。 |
-| replacer | (substr: string,         args: (Object \| undefined)[]) =&gt; string | 是 | 用于生成替换内容的函数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| searchValue | string \| RegExp | 是 |
+| replacer | (substr: string,         args: (Object \| undefined)[]) = & gt; string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 替换后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## replaceChar
 
@@ -2610,26 +2432,24 @@ public replaceChar(oldCh: char, newCh: char): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public replaceChar(oldCh: char, newCh: char): string--><!--Device-String-public replaceChar(oldCh: char, newCh: char): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| oldCh | char | 是 | 待替换的字符。 |
-| newCh | char | 是 | 用于替换的字符。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| oldCh | char | 是 |
+| newCh | char | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 替换字符后得到的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## search
 
@@ -2641,25 +2461,23 @@ public search(implicitRegExp: string): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public search(implicitRegExp: string): int--><!--Device-String-public search(implicitRegExp: string): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| implicitRegExp | string | 是 | 正则表达式对象，或可隐式转换为正则表达式的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| implicitRegExp | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 正则表达式与给定字符串首次匹配的索引。 返回值范围为[-1, string.length - 1]： - 未找到匹配时返回-1。 - 找到匹配时返回非负整数（0到string.length - 1），表示第一个 匹配子串的索引。 |
+| 类型 |
+| --- |
+| int |
 
 ## search
 
@@ -2671,25 +2489,23 @@ public search(regexp: RegExp): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public search(regexp: RegExp): int--><!--Device-String-public search(regexp: RegExp): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| regexp | RegExp | 是 | 正则表达式对象，或可隐式转换为正则表达式的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| regexp | RegExp | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 正则表达式与给定字符串首次匹配的索引， 未找到匹配时返回-1。 |
+| 类型 |
+| --- |
+| int |
 
 ## search
 
@@ -2701,25 +2517,23 @@ public search(regexp: string | RegExp): int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public search(regexp: string | RegExp): int--><!--Device-String-public search(regexp: string | RegExp): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| regexp | string \| RegExp | 是 | 正则表达式对象，或可隐式转换为正则表达式的值。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| regexp | string \| RegExp | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| int | 正则表达式与给定字符串首次匹配的索引， 未找到匹配时返回-1。 |
+| 类型 |
+| --- |
+| int |
 
 ## slice
 
@@ -2731,26 +2545,24 @@ slice()方法提取字符串中的一段并以新字符串返回， 不修改原
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public slice(begin?: int, end?: int): string--><!--Device-String-public slice(begin?: int, end?: int): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| begin | int | 否 | 起始索引。 <br>取值约束：应为整数。 |
-| end | int | 否 | 结束索引。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| begin | int | 否 |
+| end | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 从字符串中提取出的部分。 |
+| 类型 |
+| --- |
+| string |
 
 ## small
 
@@ -2762,19 +2574,17 @@ small()方法创建将字符串嵌入&lt;small&gt;元素（&lt;small&gt;str&lt;/
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public small(): string--><!--Device-String-public small(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 嵌入到&lt;small&gt;元素中的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## split
 
@@ -2786,26 +2596,24 @@ public split(separator: string, limit?: int): string[]
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public split(separator: string, limit?: int): string[]--><!--Device-String-public split(separator: string, limit?: int): string[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| separator | string | 是 | 用于分割的字符串。 |
-| limit | int | 否 | 返回数组的最大长度；如果为负数，则取Int.MAX_VALUE。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| separator | string | 是 |
+| limit | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string[] | 包含该字符串各子串的字符串数组。 |
+| 类型 |
+| --- |
+| string[] |
 
 ## split
 
@@ -2817,26 +2625,24 @@ public split(separator: RegExp, limit?: int): string[]
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public split(separator: RegExp, limit?: int): string[]--><!--Device-String-public split(separator: RegExp, limit?: int): string[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| separator | RegExp | 是 | 用于分割的RegExp。 |
-| limit | int | 否 | 返回数组的最大长度；如果为负数，则不做限制。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| separator | RegExp | 是 |
+| limit | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string[] | 包含该字符串各子串的字符串数组。 |
+| 类型 |
+| --- |
+| string[] |
 
 ## split
 
@@ -2848,26 +2654,24 @@ public split(separator: string | RegExp, limit?: int): string[]
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public split(separator: string | RegExp, limit?: int): string[]--><!--Device-String-public split(separator: string | RegExp, limit?: int): string[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| separator | string \| RegExp | 是 | 用于分割的字符串或RegExp。 |
-| limit | int | 否 | 返回数组的最大长度；如果为负数，则不做限制。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| separator | string \| RegExp | 是 |
+| limit | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string[] | 包含该字符串各子串的字符串数组。 |
+| 类型 |
+| --- |
+| string[] |
 
 ## startsWith
 
@@ -2879,26 +2683,24 @@ public startsWith(prefix: string, fromIndex?: int): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public startsWith(prefix: string, fromIndex?: int): boolean--><!--Device-String-public startsWith(prefix: string, fromIndex?: int): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| prefix | string | 是 | 前缀字符串。 |
-| fromIndex | int | 否 | 起始索引，默认值为0。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| prefix | string | 是 |
+| fromIndex | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果该子串以指定前缀开头则返回true， 否则返回false（包括prefix长于该子串的情况）。 |
+| 类型 |
+| --- |
+| boolean |
 
 ## strike
 
@@ -2910,19 +2712,17 @@ strike()方法创建将字符串嵌入&lt;strike&gt;元素（&lt;strike&gt;str&l
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public strike(): string--><!--Device-String-public strike(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 嵌入到&lt;strike&gt;元素中的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## sub
 
@@ -2934,19 +2734,17 @@ sub()方法创建将字符串嵌入&lt;sub&gt;元素（&lt;sub&gt;str&lt;/sub&gt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public sub(): string--><!--Device-String-public sub(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 嵌入到&lt;sub&gt;元素中的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## substr
 
@@ -2958,26 +2756,24 @@ substr()方法从指定索引开始，返回字符串中 指定数量字符所�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public substr(begin: int, length?: int): string--><!--Device-String-public substr(begin: int, length?: int): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| begin | int | 是 | 返回子串中第一个字符的索引。 <br>取值约束：应为整数。 |
-| length | int | 否 | 待提取的字符数量。如果不传入该参数，则默认提取 从`begin`到字符串末尾的全部字符。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| begin | int | 是 |
+| [length](#length) | int | 否 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 包含给定字符串中指定部分的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## substring
 
@@ -2989,25 +2785,23 @@ public substring(begin: int): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public substring(begin: int): string--><!--Device-String-public substring(begin: int): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| begin | int | 是 | 子串的起始位置。 <br>取值约束：应为整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| begin | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 该字符串的子串所构成的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## substring
 
@@ -3019,26 +2813,24 @@ public substring(begin: int, end: int): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public substring(begin: int, end: int): string--><!--Device-String-public substring(begin: int, end: int): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| begin | int | 是 | 子串的起始位置。 <br>取值约束：应为整数。 |
-| end | int | 是 | 子串的结束位置（不包含）。 <br>取值约束：可以为任意整数。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| begin | int | 是 |
+| end | int | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 该字符串的子串所构成的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## sup
 
@@ -3050,19 +2842,17 @@ sup()方法创建将字符串嵌入&lt;sup&gt;元素（&lt;sup&gt;str&lt;/sup&gt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public sup(): string--><!--Device-String-public sup(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 嵌入到&lt;sup&gt;元素中的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toLocaleLowerCase
 
@@ -3074,25 +2864,23 @@ toLocaleLowerCase()方法返回调用方字符串转换为小写后的值， 转
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public toLocaleLowerCase(locale: string): string--><!--Device-String-public toLocaleLowerCase(locale: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locale | string | 是 | 使用的区域设置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locale | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换为小写后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toLocaleLowerCase
 
@@ -3104,25 +2892,23 @@ toLocaleLowerCase()方法返回调用方字符串转换为小写后的值， 转
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public toLocaleLowerCase(locale: string[]): string--><!--Device-String-public toLocaleLowerCase(locale: string[]): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locale | string[] | 是 | 使用的区域设置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locale | string[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换为小写后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toLocaleLowerCase
 
@@ -3134,19 +2920,17 @@ toLocaleLowerCase()方法返回调用方字符串转换为小写后的值， 转
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public toLocaleLowerCase(): string--><!--Device-String-public toLocaleLowerCase(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换为小写后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toLocaleUpperCase
 
@@ -3158,25 +2942,23 @@ toLocaleUpperCase()方法返回调用方字符串转换为大写后的值， 转
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public toLocaleUpperCase(locale: string): string--><!--Device-String-public toLocaleUpperCase(locale: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locale | string | 是 | 使用的区域设置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locale | string | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换为大写后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toLocaleUpperCase
 
@@ -3188,25 +2970,23 @@ toLocaleUpperCase()方法返回调用方字符串转换为大写后的值， 转
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public toLocaleUpperCase(locale: string[]): string--><!--Device-String-public toLocaleUpperCase(locale: string[]): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locale | string[] | 是 | 使用的区域设置。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| locale | string[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换为大写后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toLocaleUpperCase
 
@@ -3218,19 +2998,17 @@ toLocaleUpperCase()方法返回调用方字符串转换为大写后的值， 转
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public toLocaleUpperCase(): string--><!--Device-String-public toLocaleUpperCase(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 转换为大写后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toLowerCase
 
@@ -3242,19 +3020,17 @@ public toLowerCase(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public toLowerCase(): string--><!--Device-String-public toLowerCase(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 所有字符转换为小写后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toString
 
@@ -3266,19 +3042,17 @@ toString()方法以原对象副本的形式返回给定字符串的 字符串表
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public toString(): string--><!--Device-String-public toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 原始字符串的副本。 |
+| 类型 |
+| --- |
+| string |
 
 ## toUpperCase
 
@@ -3290,19 +3064,17 @@ public toUpperCase(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public toUpperCase(): string--><!--Device-String-public toUpperCase(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 所有字符转换为大写后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## toWellFormed
 
@@ -3314,19 +3086,17 @@ string值的toWellFormed()方法返回一个字符串，其中该字符串的所
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public toWellFormed(): string--><!--Device-String-public toWellFormed(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 格式良好的字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## trim
 
@@ -3338,19 +3108,17 @@ public trim(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public trim(): string--><!--Device-String-public trim(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 去除空白后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## trim
 
@@ -3362,25 +3130,23 @@ public trim(remove: char[]): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public trim(remove: char[]): string--><!--Device-String-public trim(remove: char[]): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| remove | char[] | 是 | 包含待去除字符的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| remove | char[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 去除空白后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## trimEnd
 
@@ -3392,19 +3158,17 @@ trimEnd()方法去除字符串末尾的空白并返回新字符串， 不修改�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public trimEnd(): string--><!--Device-String-public trimEnd(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 去除末尾空白后得到的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## trimLeft
 
@@ -3416,19 +3180,17 @@ public trimLeft(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public trimLeft(): string--><!--Device-String-public trimLeft(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 去除左侧空白后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## trimLeft
 
@@ -3440,25 +3202,23 @@ public trimLeft(remove: char[]): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public trimLeft(remove: char[]): string--><!--Device-String-public trimLeft(remove: char[]): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| remove | char[] | 是 | 包含待去除字符的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| remove | char[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 去除左侧空白后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## trimRight
 
@@ -3470,19 +3230,17 @@ public trimRight(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public trimRight(): string--><!--Device-String-public trimRight(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 去除右侧空白后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## trimRight
 
@@ -3494,25 +3252,23 @@ public trimRight(remove: char[]): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public trimRight(remove: char[]): string--><!--Device-String-public trimRight(remove: char[]): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| remove | char[] | 是 | 包含待去除字符的字符串。 |
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| remove | char[] | 是 |
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 去除右侧空白后的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
 ## trimStart
 
@@ -3524,17 +3280,32 @@ trimStart()方法去除字符串开头的空白并返回新字符串， 不修�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-String-public trimStart(): string--><!--Device-String-public trimStart(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
-| 类型 | 说明 |
-| --- | --- |
-| string | 去除开头空白后得到的新字符串。 |
+| 类型 |
+| --- |
+| string |
 
+## length
+
+```TypeScript
+get length(): int
+```
+
+该字符串的长度。
+
+**类型：** int
+
+**起始版本：** 24
+
+**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Utils.Lang
